@@ -1,5 +1,5 @@
 ---
-title: 選取現有維度 （Cube 精靈） |Microsoft Docs
+title: 選取現有維度（Cube Wizard） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e02b4da19c3fe8cef9d31b304b1aeecdaa906bdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069519"
 ---
 # <a name="select-existing-dimensions-cube-wizard"></a>選取現有維度 (Cube 精靈)
   使用 **[選取現有維度]** 頁面，即可選取要包含在 Cube 中的現有維度。  
   
-## <a name="options"></a>選項  
- **Dimensions**  
+## <a name="options"></a>選項。  
+ **維度**  
  選取要包含在 Cube 中的維度。  
   
  只有可從這個精靈之 **[選取量值群組資料表]** 頁面上選取的量值群組中到達的維度才會顯示在此清單中。  
@@ -31,6 +31,6 @@ ms.locfileid: "66069519"
  根據預設，系統會選取所有維度。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的 Cube](multidimensional-models/cubes-in-multidimensional-models.md)  
+ [多維度模型中的 cube](multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

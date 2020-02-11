@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c8a7a607221599d599438352eab5add1cc94e5d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63186238"
 ---
 # <a name="synchronize-a-pull-subscription"></a>同步處理提取訂閱
@@ -36,13 +36,13 @@ ms.locfileid: "63186238"
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機訂閱]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您要同步處理的訂閱，然後按一下 **[檢視同步處理的狀態]** 。  
+3.  以滑鼠右鍵按一下您要同步處理的訂閱，然後按一下 **[檢視同步處理的狀態]**。  
   
-4.  在 [檢視同步處理的狀態 - \<訂閱者>:\<訂閱資料庫>]  對話方塊中，按一下 [啟動]  。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
+4.  在 [檢視同步處理的狀態 - **訂閱者>:\<訂閱資料庫>]\<** 對話方塊中，按一下 [啟動]****。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
   
-5.  按一下 [ **關閉**]。  
+5.  按一下 [關閉]  。  
   
-##  <a name="ReplProg"></a> Replication Agents  
+##  <a name="ReplProg"></a>複寫代理程式  
  提取訂閱可透過程式設計方式加以同步處理，以及視需要從命令提示字元叫用適當的複寫代理程式可執行檔加以同步處理。 叫用的複寫代理程式可執行檔取決於提取訂閱所屬的發行集類型。 如需詳細資訊，請參閱 [Replication Agents](agents/replication-agents-overview.md)。  
   
 > [!NOTE]  
@@ -52,15 +52,15 @@ ms.locfileid: "63186238"
   
 1.  從命令提示字元或批次檔中，執行 [distrib.exe](agents/replication-distribution-agent.md) 來啟動 **複寫散發代理程式**，並指定下列命令列引數：  
   
-    -   **-Publisher**  
+    -   **-發行者**  
   
     -   **-PublisherDB**  
   
-    -   **-Distributor**  
+    -   **-散發者**  
   
     -   **-DistributorSecurityMode** = **1**  
   
-    -   **-Subscriber**  
+    -   **-訂閱者**  
   
     -   **-SubscriberDB**  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63186238"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
+    -   **-DistributorSecurityMode** = **0**  
   
     -   **-PublisherLogin**  
   
@@ -92,19 +92,19 @@ ms.locfileid: "63186238"
   
 1.  從命令提示字元或批次檔中，執行 [replmerg.exe](agents/replication-merge-agent.md) 來啟動 **複寫合併代理程式**，並指定下列命令列引數：  
   
-    -   **-Publisher**  
+    -   **-發行者**  
   
     -   **-PublisherDB**  
   
     -   **-PublisherSecurityMode** = **1**  
   
-    -   **-Publication**  
+    -   **-發行集**  
   
-    -   **-Distributor**  
+    -   **-散發者**  
   
     -   **-DistributorSecurityMode** = **1**  
   
-    -   **-Subscriber**  
+    -   **-訂閱者**  
   
     -   **-SubscriberSecurityMode** = **1**  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63186238"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
+    -   **-DistributorSecurityMode** = **0**  
   
     -   **-PublisherLogin**  
   
@@ -132,7 +132,7 @@ ms.locfileid: "63186238"
   
     -   **-SubscriberSecurityMode** = **0**  
   
-###  <a name="TsqlExample"></a> 範例 (複寫代理程式)  
+###  <a name="TsqlExample"></a>範例（複寫代理程式）  
  下列範例會啟動散發代理程式，以同步處理提取訂閱。 所有的連接都是使用「Windows 驗證」所建立。  
   
  [!code-sql[HowTo#bat_synctranpullsub_10](../../snippets/tsql/SQL15/replication/howto/tsql/synctranpullsub_10.bat)]  
@@ -167,12 +167,12 @@ ms.locfileid: "63186238"
   
 4.  以下列其中一種方式啟動「訂閱者」上的「散發代理程式」：  
   
-    -   從步驟 2 的 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizeWithJob%2A> 執行個體上呼叫 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 方法。 此方法會以非同步方式啟動散發代理程式，並且控制項會在代理程式作業執行時立即傳回至應用程式。 您不可以針對「[!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] 訂閱者」呼叫此方法，或者如果訂閱是以 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 的 `false` 值 (預設值) 建立的，也不可以。  
+    -   從步驟 2 的 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizeWithJob%2A> 執行個體上呼叫 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 方法。 此方法會以非同步方式啟動散發代理程式，並且控制項會在代理程式作業執行時立即傳回至應用程式。 您不可以針對「[!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] 訂閱者」呼叫此方法，或者如果訂閱是以 `false` 的 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 值 (預設值) 建立的，也不可以。  
   
     -   從 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> 屬性取得 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> 類別的執行個體，並呼叫 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> 方法。 此方法會同步啟動代理程式，而控制項仍會停留於正在執行的代理程式作業。 在同步執行期間，您可以在代理程式執行時處理 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> 事件。  
   
         > [!NOTE]  
-        >  如果您指定的值`false`for <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> （預設值） 當您在建立提取訂閱，您也需要指定<xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A>， <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A>，並選擇性地<xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A>和<xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A>因為代理程式作業相關訂用帳戶的中繼資料中沒有[MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)。  
+        >  如果您在建立提取訂閱`false`時<xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A>為指定了的值（預設值），則還需要<xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A>指定、 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A>，以及選擇性<xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A>地和， <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A>因為[MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)中無法使用訂閱的代理程式作業相關中繼資料。  
   
 #### <a name="to-synchronize-a-pull-subscription-to-a-merge-publication"></a>若要同步處理合併式發行集的提取訂閱  
   
@@ -194,12 +194,12 @@ ms.locfileid: "63186238"
   
 4.  以下列其中一種方式啟動「訂閱者」上的「合併代理程式」：  
   
-    -   從步驟 2 的 <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizeWithJob%2A> 執行個體上呼叫 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 方法。 此方法會以非同步方式啟動合併代理程式，並且控制項會在代理程式作業執行時立即傳回至應用程式。 您不可以針對「[!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] 訂閱者」呼叫此方法，或者如果訂閱是以 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 的 `false` 值 (預設值) 建立的，也不可以。  
+    -   從步驟 2 的 <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizeWithJob%2A> 執行個體上呼叫 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 方法。 此方法會以非同步方式啟動合併代理程式，並且控制項會在代理程式作業執行時立即傳回至應用程式。 您不可以針對「[!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] 訂閱者」呼叫此方法，或者如果訂閱是以 `false` 的 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 值 (預設值) 建立的，也不可以。  
   
     -   從 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> 屬性取得 <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> 類別的執行個體，並呼叫 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> 方法。 此方法會同步啟動「合併代理程式」，而控制項仍會停留於正在執行的代理程式作業。 在同步執行期間，您可以在代理程式執行時處理 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> 事件。  
   
         > [!NOTE]  
-        >  如果您指定的值`false`for <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> （預設值） 當您在建立提取訂閱，您也需要指定<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>，及選擇性地<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>， <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>，以及<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A>因為代理程式作業相關中繼資料的訂用帳戶不適用於[MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)。  
+        >  如果您在建立提取訂閱`false`時<xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>為指定了的值（預設值），則也需要指定、 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>、 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>、 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>、、和（選擇性<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>）、、和<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> ，因為[MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)中無法使用訂閱的代理程式作業相關中繼資料。  
   
 ###  <a name="PShellExample"></a> 範例 (RMO)  
  此範例同步處理交易式發行集的提取訂閱，其中代理程式會使用代理程式作業非同步啟動。  
@@ -234,7 +234,7 @@ ms.locfileid: "63186238"
   
 ## <a name="see-also"></a>另請參閱  
  [同步處理資料](synchronize-data.md)   
- [建立提取訂閱](create-a-pull-subscription.md)   
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [複寫安全性最佳作法](security/replication-security-best-practices.md)  
   
   

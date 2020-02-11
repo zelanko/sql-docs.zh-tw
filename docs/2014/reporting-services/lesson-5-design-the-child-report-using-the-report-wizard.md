@@ -1,5 +1,5 @@
 ---
-title: 第 5 課：設計子報表使用報表精靈 |Microsoft Docs
+title: 第 5 課：使用報表精靈設計子報表 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661b4f3cc63eb0c19fddb53f872e940d1f9976e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108443"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>第 5 課：使用報表精靈設計子報表
@@ -26,29 +26,29 @@ ms.locfileid: "66108443"
   
 2.  以滑鼠右鍵按一下網站，然後選取 [新增項目]  。  
   
-3.  在 [**加入新項目**] 對話方塊中，按一下**報表精靈**，輸入報表檔的名稱，然後按一下**新增**。  
+3.  在 [**加入新專案**] 對話方塊中，按一下 [**報表 Wizard]**，輸入報表檔案的名稱，然後按一下 [**新增**]。  
   
      這樣會啟動 [報表精靈]。  
   
-4.  在 **資料集屬性**頁面上，於**資料來源**方塊中，按一下**DataSet2**。  
+4.  在 [資料**集屬性**] 頁面的 [**資料來源**] 方塊中，按一下 [ **DataSet2**]。  
   
      [可用資料集]  方塊會自動更新為您所建立的 DataTable。  
   
-5.  按一下 [下一步]  。  
+5.  按 [下一步]  。  
   
 6.  在 [排列欄位]  頁面中執行下列操作：  
   
     1.  將 **ProductID**、**PurchaseOrderID**、**PurchaseOrderDetailID**、**OrderQty**、**ReceivedQty**、**RejectedQty** 和 **StockedQty** 從 [可用欄位]  拖曳至 [值]  方塊。  
   
-    2.  按一下箭號旁**sum （productid)** ， **sum （purchaseorderid)** ， **sum （purchaseorderdetailid)** ， **sum （orderqty)** ， **Sum （receivedqty)** ， **sum （rejectedqty)** ，以及**sum （stockedqty)** 清除**總和**選取項目。  
+    2.  按一下 [ **sum （ProductID）**]、[ **sum （PurchaseOrderID）**]、 **[sum （PurchaseOrderDetailID）**]、 **[sum （OrderQty）**]、 **[Sum （ReceivedQty）**]、 **[sum （RejectedQty）**] 和 [sum **（StockedQty）** ] 旁的箭號，並清除 [**總和**] 選取專案。  
   
-7.  按一下 [**下一步]** 兩次，然後按一下**完成**以關閉**報表精靈**。  
+7.  按兩次 **[下一步**]，然後按一下 **[完成**] 以關閉**報表精靈**。  
   
      現在您已建立 .rdlc 檔。 此檔案會在報表設計師中開啟。 您設計的 Tablix 現在會顯示於設計介面中。  
   
 8.  在 .rdlc 檔開啟的情況下，執行下列操作加入參數：  
   
-    1.  按一下 **參數**中**報表資料**窗格中，然後再按一下**將參數加入**。  
+    1.  按一下 [**報表資料**] 窗格中的 [**參數**]，然後按一下 [**加入參數**]。  
   
     2.  在 [名稱]  方塊中，輸入 **productid**。  
   

@@ -14,18 +14,18 @@ ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da8dd850e62f46042287569f1e4bb8520b18151f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901649"
 ---
 # <a name="odbc-data-source-administrator"></a>ODBC 資料來源管理員
-Microsoft® ODBC 資料來源管理員會管理資料庫驅動程式和資料來源。 此應用程式位於下的 [Windows] 控制台中**系統管理工具**。 從 Windows 8 開始，圖示名為**ODBC 資料來源**，還有在 64 位元作業系統上的 32 位元和 64 位元版本。  
+Microsoft® ODBC 資料來源管理員會管理資料庫驅動程式和資料來源。 此應用程式位於 Windows 控制台的 [系統**管理工具**] 底下。 從 Windows 8 開始，圖示名為**ODBC 資料來源**，而在64位作業系統上有32位和64位版本。  
   
- 如需 ODBC 管理員的詳細程序資訊，請開啟[ODBC 資料來源管理員](https://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333)對話方塊，按一下**協助**。  
+ 如需詳細 ODBC 系統管理員程式的相關資訊，請開啟 [ [Odbc 資料來源管理員](https://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333)] 對話方塊，**然後按一下 [** 說明]。  
   
- 您可以使用 PowerShell 命令來管理驅動程式和資料來源。 如需有關這些 PowerShell 命令的詳細資訊，請參閱[Windows 資料存取元件的 PowerShell 命令](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx)。  
+ 您可以使用 PowerShell 命令來管理驅動程式和資料來源。 如需這些 PowerShell 命令的詳細資訊，請參閱[Windows 資料存取元件 PowerShell 命令](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx)。  
   
  此章節包含下列主題。  
   
@@ -35,6 +35,6 @@ Microsoft® ODBC 資料來源管理員會管理資料庫驅動程式和資料來
   
 -   [設定追蹤選項](../../odbc/admin/setting-tracing-options.md)  
   
--   [設定 ODBC 連接共用選項](../../odbc/admin/setting-odbc-connection-pooling-options.md)  
+-   [設定 ODBC 連線共用選項](../../odbc/admin/setting-odbc-connection-pooling-options.md)  
   
 -   [檢視驅動程式](../../odbc/admin/viewing-drivers.md)

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5a839fb7253c2e66e024872b74fadc114cd58ecf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106484"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>橫條圖 (報表產生器及 SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66106484"
   
  下圖顯示橫條圖。 橫條圖非常適合這個資料，因為全部三個數列都共用一個共同的時間週期，以便進行有效的比較。  
   
- ![橫條圖](../media/barchart.gif "橫條圖")  
+ ![橫條圖](../media/barchart.gif "長條圖")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -67,7 +67,7 @@ ms.locfileid: "66106484"
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [在圖表上格式化圖例 &#40;報表產生器及 SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [將斜面、浮凸與紋理樣式加入至圖表 &#40;報表產生器及 SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [教學課程：將橫條圖新增至報表 (報表產生器)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [教學課程：將橫條圖新增至報表](https://go.microsoft.com/fwlink/?LinkId=198042)  
+ [教學課程：將橫條圖加入至報表（報表產生器）](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [教學課程：將橫條圖加入至報表](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

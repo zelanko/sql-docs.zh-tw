@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0d725f95fc8e9de0865ad895abd860d5f03687b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662926"
 ---
 # <a name="database-event-category"></a>Database 事件類別目錄
@@ -32,7 +32,7 @@ ms.locfileid: "62662926"
 |-----------|-----------------|  
 |[Data File Auto Grow 事件類別](data-file-auto-grow-event-class.md)|表示資料檔案自動成長。 如果以外顯方式透過 ALTER DATABASE 讓資料檔案成長，則不會觸發這個事件。|  
 |[Data File Auto Shrink 事件類別](data-file-auto-shrink-event-class.md)|指出資料檔案已壓縮。|  
-|[資料庫鏡像連接事件類別](database-mirroring-connection-event-class.md)|為報告資料庫鏡像的傳輸連接狀態而產生的事件。|  
+|[Database Mirroring Connection 事件類別](database-mirroring-connection-event-class.md)|為報告資料庫鏡像的傳輸連接狀態而產生的事件。|  
 |[Database Mirroring State Change 事件類別](database-mirroring-state-change-event-class.md)|指出鏡像資料庫的狀態何時變更。|  
 |[Database Suspect Data Page 事件類別](database-suspect-data-page-event-class.md)|指出頁面何時加入至 **msdb** 資料庫中的 **suspect_pages** 資料表。|  
 |[Log File Auto Grow 事件類別](log-file-auto-grow-event-class.md)|表示記錄檔自動成長。 如果以外顯方式透過 ALTER DATABASE 讓記錄檔增長，則不會觸發這個事件。|  

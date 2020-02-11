@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_buffer_pool_extension_configuration (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_os_buffer_pool_extension_configuration （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38e4e1ad85a5e968d4b0bb33a3a72a829942585b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900215"
 ---
-# <a name="sysdmosbufferpoolextensionconfiguration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
+# <a name="sysdm_os_buffer_pool_extension_configuration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
@@ -35,14 +35,14 @@ ms.locfileid: "67900215"
   
 | 資料行名稱 | 資料類型 | 描述 |
 | :---------- | :-------- | :---------- |
-|路徑|**nvarchar**(256)|緩衝集區延伸模組快取的路徑和檔案名稱。 可為 Null。|  
+|path|**Nvarchar**（256）|緩衝集區延伸模組快取的路徑和檔案名稱。 可為 Null。|  
 |file_id|**int**|緩衝集區延伸模組檔案的識別碼。 不可為 Null。|  
-|state|**int**|緩衝集區延伸模組功能的狀態。 不可為 Null。<br /><br /> 0 - 緩衝集區延伸模組已停用<br /><br /> 1 - 緩衝集區延伸模組停用中<br /><br /> 2-保留供日後使用<br /><br /> 3 - 緩衝集區延伸模組啟用中<br /><br /> 4 - 保留供日後使用<br /><br /> 5 - 緩衝集區延伸模組已啟用|  
-|state_description|**nvarchar**(60)|描述緩衝集區延伸模組功能的狀態。 可為 Null。<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 5 = 已啟用緩衝集區延伸模組|
-|current_size_in_kb|**bigint**|緩衝集區延伸模組檔案的目前大小。 不可為 Null。|
+|state|**int**|緩衝集區延伸模組功能的狀態。 不可為 Null。<br /><br /> 0 - 緩衝集區延伸模組已停用<br /><br /> 1 - 緩衝集區延伸模組停用中<br /><br /> 2-保留供未來使用<br /><br /> 3 - 緩衝集區延伸模組啟用中<br /><br /> 4 - 保留供日後使用<br /><br /> 5 - 緩衝集區延伸模組已啟用|  
+|state_description|**Nvarchar**（60）|描述緩衝集區延伸模組功能的狀態。 可為 Null。<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 5 = 緩衝集區延伸模組已啟用|
+|current_size_in_kb|**Bigint**|緩衝集區延伸模組檔案的目前大小。 不可為 Null。|
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 ## <a name="examples"></a>範例  
@@ -67,6 +67,6 @@ WHERE is_in_bpool_extension <> 0
   
 ## <a name="see-also"></a>另請參閱  
  [緩衝集區延伸模組](../../database-engine/configure-windows/buffer-pool-extension.md)   
- [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
+ [dm_os_buffer_descriptors &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   
   

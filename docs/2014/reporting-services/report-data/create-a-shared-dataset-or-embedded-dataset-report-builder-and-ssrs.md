@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 208c5608037d99b9dc02f1ab7fefd151cd4bdecf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107430"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>建立共用資料集或內嵌資料集 (報表產生器及 SSRS)
@@ -43,24 +43,25 @@ ms.locfileid: "66107430"
   
 ### <a name="to-open-report-builder-and-create-a-shared-dataset"></a>若要開啟報表產生器，並建立共用資料集  
   
-1.  開啟報表產生器。 **[新增報表或資料集]** 窗格隨即開啟，如下圖所示：  
+1.  開啟報表產生器。 
+  **[新增報表或資料集]** 窗格隨即開啟，如下圖所示：  
   
      ![rs_NewSharedDataset](../media/rs-newshareddataset.gif "rs_NewSharedDataset")  
   
     > [!NOTE]  
-    >  如果 [New report or dataset pane (新增報表或資料集窗格)]  未出現，請從 [報表產生器] 按鈕按一下 [新增]  。  
+    >  如果 [New report or dataset pane (新增報表或資料集窗格)]**** 未出現，請從 [報表產生器] 按鈕按一下 [新增]****。  
   
-2.  在左窗格的 **[建立資料集]** 底下，按一下 **[共用資料集]** 。  
+2.  在左窗格的 **[建立資料集]** 底下，按一下 **[共用資料集]**。  
   
-3.  在右窗格中，按一下 **[瀏覽]** 從報表伺服器選取共用資料來源，然後按一下 **[建立]** 。 隨即開啟與共用資料來源相關聯的查詢設計工具。  
+3.  在右窗格中，按一下 **[瀏覽]** 從報表伺服器選取共用資料來源，然後按一下 **[建立]**。 隨即開啟與共用資料來源相關聯的查詢設計工具。  
   
 4.  在查詢設計工具中，指定要併入資料集的欄位。  
   
-5.  按一下 **「執行」** ( **!** ) 來執行查詢。  
+5.  按一下 **「執行」** (**!**) 來執行查詢。  
   
 6.  在 **[報表產生器]** 按鈕上，按一下 **[儲存]** 或 **[另存新檔]** ，將共用資料集儲存在報表伺服器上。  
   
-7.  若要結束報表產生器，請按一下 **[報表產生器]** ，然後按一下 **[結束報表產生器]** 。 若要處理報表，按一下 **[報表產生器]** ，然後按一下 **[新增]** 或 **[開啟]** 。  
+7.  若要結束報表產生器，請按一下 **[報表產生器]**，然後按一下 **[結束報表產生器]**。 若要處理報表，按一下 **[報表產生器]**，然後按一下 **[新增]** 或 **[開啟]**。  
   
 ### <a name="to-set-query-parameter-options"></a>若要設定查詢參數選項  
   
@@ -72,18 +73,19 @@ ms.locfileid: "66107430"
   
 4.  在 **[下列類型的項目]** 中，按一下下拉式清單中的資料集 (*.rsd)。  
   
-5.  選取共用資料集，然後按一下 **[開啟]** 。 隨即開啟關聯的查詢設計工具。  
+5.  選取共用資料集，然後按一下 **[開啟]**。 隨即開啟關聯的查詢設計工具。  
   
-6.  在功能區上，按一下 **[資料集屬性]** 。  
+6.  在功能區上，按一下 **[資料集屬性]**。  
   
-7.  按一下 **[參數]** 。 在這個頁面上，將預設值設定為常數或運算式，並將參數標示為唯讀、可為 Null 或 [從查詢中忽略]  。 如需詳細資訊，請參閱[資料集屬性對話方塊、參數 &#40;報表產生器&#41;](../dataset-properties-dialog-box-parameters-report-builder.md)。  
+7.  按一下 **[參數]** 。 在這個頁面上，將預設值設定為常數或運算式，並將參數標示為唯讀、可為 Null 或 [從查詢中忽略]****。 如需詳細資訊，請參閱[資料集屬性對話方塊、參數 &#40;報表產生器&#41;](../dataset-properties-dialog-box-parameters-report-builder.md)。  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
   
 ### <a name="to-create-a-dataset-from-a-sql-server-relational-database"></a>若要從 SQL Server 關聯式資料庫建立資料集  
   
-1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下資料來源的名稱，然後按一下 **[加入資料集]** 。 **[資料集屬性]** 對話方塊的 **[查詢]** 頁面隨即開啟。  
+1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下資料來源的名稱，然後按一下 **[加入資料集]**。 
+  **[資料集屬性]** 對話方塊的 **[查詢]** 頁面隨即開啟。  
   
 2.  在 **[名稱]** 中，輸入資料集名稱或是接受預設名稱。  
   
@@ -114,9 +116,9 @@ ms.locfileid: "66107430"
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
  [查詢設計工具 &#40;報表產生器&#41;](../query-designers-report-builder.md)   
- [對話方塊、窗格和精靈的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-datasets-ssrs.md)   
- [報表產生器中的資料連接、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [對話方塊、窗格和嚮導的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [將資料加入報表 &#40;報表產生器和 SSRS&#41;](report-datasets-ssrs.md)   
+ [報表產生器中的資料連線、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [內嵌和共用資料集 &#40;報表產生器和 SSRS&#41;](embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

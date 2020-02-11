@@ -1,5 +1,5 @@
 ---
-title: 建立工作階段範圍導出成員 (MDX) |Microsoft Docs
+title: 建立會話範圍匯出成員（MDX） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 701d7a49f7ddda60983a03723506442eac17866b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074544"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>建立工作階段範圍導出成員 (MDX)
@@ -40,7 +40,8 @@ CREATE [SESSION] MEMBER [<cube-name>.]<fully-qualified-member-name> AS <expressi
 <property-identifier> ::= VISIBLE | SOLVEORDER | SOLVE_ORDER | FORMAT_STRING | NON_EMPTY_BEHAVIOR <ole db member properties>  
 ```  
   
- 在 CREATE MEMBER 陳述式的語法中， `fully-qualified-member-name` 值是導出成員的完整名稱。 完整名稱包括與導出成員相關的維度或層級。 `expression` 值會在評估過運算式後，傳回導出成員的值。  
+ 在 CREATE MEMBER 陳述式的語法中， `fully-qualified-member-name` 值是導出成員的完整名稱。 完整名稱包括與導出成員相關的維度或層級。 
+  `expression` 值會在評估過運算式後，傳回導出成員的值。  
   
 ## <a name="create-member-example"></a>CREATE MEMBER 範例  
  以下範例使用 CREATE MEMBER 陳述式來建立 `LastFourStores` 導出成員。 此導出成員會傳回最後四間商店銷售的單位量總和，而且將可在 Cube 的整個工作階段中使用。  
@@ -52,6 +53,6 @@ sum(([Stores].[ByLocation].Lag(3) :
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [建立查詢範圍導出成員 &#40;MDX&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
+ [建立以查詢範圍計算的成員 &#40;MDX&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

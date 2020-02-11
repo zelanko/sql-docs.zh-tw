@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1f9750813d305834fe36f2c6ab7abfaa1d95075
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106764"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>加入矩形或容器 (報表產生器及 SSRS)
@@ -50,7 +50,7 @@ ms.locfileid: "66106764"
 2.  按一下 [框線]  按鈕旁的箭號，以便決定要變更矩形的哪一面。  
   
     > [!NOTE]  
-    >  如果您將線條樣式設定為**Double**和線條的寬度為 1 1/2 pt 或更窄，線條可能不會出現雙線當您在報表產生器、 報表設計師或報表管理員中，會在執行報表時。 當您將報表匯出為其他格式時才會出現雙線，例如 Microsoft Word 及 Acrobat PDF。  
+    >  如果將線條樣式設定為 [**雙**線]，而線條寬度為 1 1/2 pt 或更窄，當您在報表產生器、報表設計師或報表管理員中執行報表時，線條可能不會出現雙線。 當您將報表匯出為其他格式時才會出現雙線，例如 Microsoft Word 及 Acrobat PDF。  
   
 ## <a name="see-also"></a>另請參閱  
  [矩形和線條 &#40;報表產生器及 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   

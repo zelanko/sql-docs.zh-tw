@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 75b29477c7ead402f06c9df2505a84636b906978
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63163955"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>指定搜尋條件 (Visual Database Tools)
@@ -47,7 +47,7 @@ ms.locfileid: "63163955"
  查詢和檢視表設計工具藉由加入或修改 WHERE 子句，更新 [SQL 窗格](sql-pane-visual-database-tools.md) 中的 SQL 陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
- [輸入規則值中搜尋&#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+ [&#40;Visual Database Tools 輸入搜尋值的規則&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [指定搜尋準則 &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

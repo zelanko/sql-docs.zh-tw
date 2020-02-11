@@ -1,5 +1,5 @@
 ---
-title: 層級 (MDX) |Microsoft Docs
+title: 層級（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 24e15602593f9116d499345ffca093f86ecfa135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905638"
 ---
 # <a name="levels-mdx"></a>Levels (MDX)
@@ -42,9 +42,9 @@ Hierarchy_Expression.Levels( Level_Name )
  指定層級名稱的有效字串運算式。  
   
 ## <a name="remarks"></a>備註  
- 如果指定層級編號，則**層級**函式會傳回與指定的以零為起始位置相關聯的層級。  
+ 如果指定了層級編號，level**函數會**傳回與指定之以零為基底的位置相關聯的層級。  
   
- 如果指定層級的名稱，則**層級**函式會傳回指定層級。  
+ 如果指定了層級名稱，level**函數會**傳回指定的層級。  
   
 > [!NOTE]  
 >  對於使用者自訂函數，請使用字串運算式語法。  
@@ -52,7 +52,7 @@ Hierarchy_Expression.Levels( Level_Name )
 ## <a name="examples"></a>範例  
  下列範例說明每個**層級**函數的語法。  
   
-### <a name="numeric"></a>Numeric  
+### <a name="numeric"></a>數值  
  下列範例會傳回 Country 層級：  
   
 ```  
@@ -69,6 +69,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

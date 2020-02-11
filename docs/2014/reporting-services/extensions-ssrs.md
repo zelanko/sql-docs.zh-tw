@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 2e1f0dadca7a7bdb98f828ce33e617a0cce0e8cf
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67413129"
 ---
 # <a name="extensions-for-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 的延伸模組
@@ -57,9 +57,9 @@ ms.locfileid: "67413129"
   
 ## <a name="rendering-extensions"></a>轉譯延伸模組
 
- 轉譯延伸模組會將報表處理器的資料與配置資訊轉換成裝置特定格式。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含七個轉譯延伸模組：HTML、 Excel、 CSV、 XML、 Image、 PDF、 和[!INCLUDE[msCoName](../includes/msconame-md.md)]Word。  
+ 轉譯延伸模組會將報表處理器的資料與配置資訊轉換成裝置特定格式。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含七個轉譯延伸模組：HTML、Excel、CSV、XML、Image、PDF 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Word。  
   
-- **HTML 轉譯延伸模組** ：當您透過網頁瀏覽器向報表伺服器要求報表時，報表伺服器就會使用 HTML 轉譯延伸模組來轉譯報表。 HTML 轉譯延伸模組會使用 UTF-8 編碼來產生所有 HTML。 如需詳細資訊，請參閱 <<c0> [ 轉譯為 HTML&#40;報表產生器及 SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md)並[規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).</c0>  
+- **HTML 轉譯延伸模組** ：當您透過網頁瀏覽器向報表伺服器要求報表時，報表伺服器就會使用 HTML 轉譯延伸模組來轉譯報表。 HTML 轉譯延伸模組會使用 UTF-8 編碼來產生所有 HTML。 如需詳細資訊，請參閱轉譯[為 HTML &#40;報表產生器和 SSRS&#41;](report-builder/rendering-to-html-report-builder-and-ssrs.md)和[規劃 Reporting Services 和 Power View 瀏覽器支援 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)。  
   
 - **Excel 轉譯延伸模組** ：Excel 轉譯延伸模組會轉譯可在 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 或更新版本中檢視和修改的報表。 這個轉譯延伸模組會以二進位交換檔案格式 (BIFF) 建立檔案。 BIFF 是 Excel 資料的原生檔案格式。 在 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 中轉譯的報表支援任何試算表的所有可用功能。 如需詳細資訊，請參閱 [匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)中使用這項資料。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67413129"
   
 - **XML 轉譯延伸模組** ：XML 轉譯延伸模組將報表轉譯成 XML 檔案。 然後，這些 XML 檔案就可以供其他程式儲存或讀取。 您也可以使用 XSLT 轉換，將報表變成可供其他應用程式使用的另一種 XML 結構描述。 由 XML 轉譯延伸模組所產生的 XML 是以 UTF-8 編碼。 如需詳細資訊，請參閱 [匯出至 XML &#40;報表產生器及 SSRS&#41;](report-builder/exporting-to-xml-report-builder-and-ssrs.md)中使用這項資料。  
   
--   **影像轉譯延伸模組** ：影像轉譯延伸模組會將報表轉譯成點陣圖或中繼檔。 擴充功能可以轉譯報表，以下列格式：BMP、 EMF、 GIF、 JPEG、 PNG、 TIFF 和 WMF。 依預設，影像會轉譯成 TIFF 格式，可使用作業系統預設的影像檢視器來顯示 (例如，Windows 圖片和傳真檢視器)。 您可以從檢視器將影像傳送到印表機。 使用影像轉譯延伸模組來轉譯報表，以確保報表在每一個用戶端看起來皆一致。 (當使用者以 HTML 格式檢視報表時，報表的外觀會因使用者所用的瀏覽器版本、使用者的瀏覽器設定，以及可使用的字型而有所不同。)影像轉譯延伸模組會在伺服器上轉譯報表，因此所有的使用者皆會看到相同的影像。 因為報表是在伺服器上轉譯，報表中所使用的所有字型都必須安裝在伺服器上。 如需詳細資訊，請參閱 [匯出至影像檔 &#40;報表產生器及 SSRS&#41;](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)中使用這項資料。  
+-   **影像轉譯延伸模組** ：影像轉譯延伸模組會將報表轉譯成點陣圖或中繼檔。 此延伸模組可將報表轉譯成下列格式：BMP、EMF、GIF、JPEG、PNG、TIFF，以及 WMF。 依預設，影像會轉譯成 TIFF 格式，可使用作業系統預設的影像檢視器來顯示 (例如，Windows 圖片和傳真檢視器)。 您可以從檢視器將影像傳送到印表機。 使用影像轉譯延伸模組來轉譯報表，以確保報表在每一個用戶端看起來皆一致。 (當使用者以 HTML 格式檢視報表時，報表的外觀會因使用者所用的瀏覽器版本、使用者的瀏覽器設定，以及可使用的字型而有所不同)。影像轉譯延伸模組會在伺服器上轉譯報表，因此所有的使用者皆會看到相同的影像。 因為報表是在伺服器上轉譯，報表中所使用的所有字型都必須安裝在伺服器上。 如需詳細資訊，請參閱 [匯出至影像檔 &#40;報表產生器及 SSRS&#41;](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)中使用這項資料。  
   
 - **PDF 轉譯延伸模組** ：PDF 轉譯延伸模組會將報表轉譯成可在 Adobe Acrobat 6.0 或更新版本中開啟和檢視的 PDF 檔案。 如需詳細資訊，請參閱 [匯出至 PDF 檔案 &#40;報表產生器及 SSRS&#41;](report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)中使用這項資料。  
   

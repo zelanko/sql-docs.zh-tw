@@ -1,5 +1,5 @@
 ---
-title: 選擇連結頁面 （報表管理員） |Microsoft Docs
+title: 選擇連結頁面（報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109877"
 ---
 # <a name="choose-link-page-report-manager"></a>選擇連結頁面 (報表管理員)
@@ -22,7 +22,7 @@ ms.locfileid: "66109877"
   
  透過 [選擇連結] 頁面，您可以選擇不同的已發行報表，以便與連結報表搭配使用。 連結報表的其他設定 (例如安全性和參數設定) 不受連結資訊的變更所影響。 由於報表伺服器將不會驗證您的選項，因此請務必選擇與您在連結報表上指定之設定具有相同參數的報表。  
   
-## <a name="navigation"></a>巡覽  
+## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-choose-link-page"></a>若要開啟選擇連結頁面  
@@ -33,18 +33,18 @@ ms.locfileid: "66109877"
   
 3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該連結報表的 **[一般]** 屬性頁面。  
   
-4.  在 **[一般]** 索引標籤的屬性頁面上，按一下 **[變更連結]** 。  
+4.  在 **[一般]** 索引標籤的屬性頁面上，按一下 **[變更連結]**。  
   
-## <a name="options"></a>選項  
- **Location**  
+## <a name="options"></a>選項。  
+ **位置**  
  指定已發行報表的完整名稱，包括資料夾路徑和報表名稱。 您可以輸入報表的完整名稱，或使用樹狀檢視來導覽至您要使用的報表。  
   
  **樹狀檢視**  
  顯示報表伺服器資料夾階層中全部的資料夾。 若要使用樹狀檢視來填寫 **[位置]** 欄位，請按一下報表的名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [一般屬性頁面，報表 &#40;報表管理員&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [新增連結報表頁面 &#40;報表管理員&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
+ [一般屬性頁面、報表 &#40;報表管理員&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [新的連結報表頁面 &#40;報表管理員&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.fn_helpcollations & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.databases fn_helpcollations （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee626b9eef8cf2f2e80217b2a3709271a227f293
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67906118"
 ---
-# <a name="sysfnhelpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
+# <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  傳回一份所有支援的定序。  
+  傳回所有支援之定序的清單。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,21 +43,22 @@ fn_helpcollations ()
   
 ## <a name="tables-returned"></a>傳回的資料表
 
- **fn_helpcollations**傳回下列資訊。  
+ **fn_helpcollations**會傳回下列資訊。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |名稱|**sysname**|標準定序名稱|  
-|描述|**nvarchar(1000)**|定序的描述|  
+|描述|**Nvarchar （1000）**|定序的描述|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 Windows 定序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也支援有限的數目 (< 80) 的定序，稱為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定序時之前, 開發[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援 Windows 定序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序仍會支援回溯相容性，但不應用於新的開發工作。 如需 Windows 定序的詳細資訊，請參閱 [Windows 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)。 如需定序的詳細資訊，請參閱[定序和 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 Windows 定序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]也支援稱為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定序的有限數量（<80）定序，這些定序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是在支援的 Windows 定序之前所開發。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定序仍然支援回溯相容性，但不應用於新的開發工作。 如需 Windows 定序的詳細資訊，請參閱 [Windows 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)。 如需定序的詳細資訊，請參閱[定序和 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>範例
 
  下列範例會傳回開頭是 `L` 字母，而且是二進位排序定序的所有定序名稱。
 
 > [!Note]
-> 針對 fn_helpcollations （） 的 azure SQL 資料倉儲查詢必須在 master 資料庫中執行。  
+> 針對 fn_helpcollations （）的 Azure SQL 資料倉儲查詢必須在 master 資料庫中執行。  
   
 ```sql  
 SELECT Name, Description FROM fn_helpcollations()  
@@ -83,5 +84,5 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
 ## <a name="see-also"></a>另請參閱
 
 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
-[COLLATIONPROPERTY &#40;Transact SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
+[COLLATIONPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
 [Azure SQL 資料倉儲的資料庫定序支援](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  

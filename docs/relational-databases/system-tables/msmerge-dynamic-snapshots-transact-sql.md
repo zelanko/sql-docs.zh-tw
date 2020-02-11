@@ -1,5 +1,5 @@
 ---
-title: MSmerge_dynamic_snapshots (TRANSACT-SQL) |Microsoft Docs
+title: MSmerge_dynamic_snapshots （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5a6b0660635812a216525665832b0f16f64538b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67894942"
 ---
-# <a name="msmergedynamicsnapshots-transact-sql"></a>MSmerge_dynamic_snapshots (Transact-SQL)
+# <a name="msmerge_dynamic_snapshots-transact-sql"></a>MSmerge_dynamic_snapshots (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_dynamic_snapshots**資料表會追蹤每個資料分割定義合併式發行集使用參數化資料列篩選器篩選的資料快照集的位置。 這份資料表儲存在**發行集**資料庫。  
+  **MSmerge_dynamic_snapshots**資料表會使用參數化資料列篩選器，針對合併式發行集所定義的每個分割區，追蹤已篩選資料快照集的位置。 這份資料表儲存在**發行**集資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

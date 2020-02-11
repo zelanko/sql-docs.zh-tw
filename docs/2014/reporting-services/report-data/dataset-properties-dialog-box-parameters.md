@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d621895212e72479090363a980ddc00fa2b5a0c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107327"
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>資料集屬性對話方塊、參數
@@ -27,8 +27,8 @@ ms.locfileid: "66107327"
   
  如果有一個報表參數的預設值相依於另一個連結到查詢參數的報表參數，報表參數的順序 (出現在 [報表參數屬性]  對話方塊中的順序) 很重要。 稍後在清單中的報表參數可以參照先前在清單中的報表參數。 如需報表參數的詳細資訊，請參閱 [報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)。  
   
-## <a name="options"></a>選項  
- **[加入]**  
+## <a name="options"></a>選項。  
+ **加入**  
  將新的參數加入到清單中。  
   
  **刪除**  
@@ -48,7 +48,7 @@ ms.locfileid: "66107327"
   
 ## <a name="see-also"></a>另請參閱  
  [報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
- [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-datasets-ssrs.md)   
+ [將資料加入報表 &#40;報表產生器和 SSRS&#41;](report-datasets-ssrs.md)   
  [變更報表參數的順序 &#40;報表產生器及 SSRS&#41;](../report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
   

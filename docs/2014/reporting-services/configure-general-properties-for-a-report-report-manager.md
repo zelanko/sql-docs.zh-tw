@@ -1,5 +1,5 @@
 ---
-title: 設定報表 （報表管理員） 的一般屬性 |Microsoft Docs
+title: 設定報表的一般屬性（報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -14,49 +14,49 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cd0371497067f754166c33fb18022fe058cb88e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109744"
 ---
 # <a name="configure-general-properties-for-a-report-report-manager"></a>設定報表的一般屬性 (報表管理員)
     
 ### <a name="to-configure-general-report-properties"></a>若要設定一般報表屬性  
   
-1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)。  
+1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)。  
   
 2.  在報表管理員中，導覽至 **[內容]** 頁面。 導覽到您要設定一般屬性的報表，並開啟該報表。  
   
-3.  按一下 **[屬性]** 索引標籤。  
+3.  按一下 [屬性]  索引標籤。  
   
-     或者，如果**內容**頁面詳細資料檢視中，按一下 屬性頁面圖示：  
+     或者，如果 [**內容**] 頁面是在詳細資料檢視中，請按一下 [屬性頁] 圖示：  
   
-     ![屬性頁面圖示](media/prop.gif "屬性頁面圖示")  
+     ![屬性頁圖示](media/prop.gif "屬性頁面圖示")  
   
-4.  **一般**屬性頁隨即出現，以及您可以設定屬性，如下所示：  
+4.  [**一般**屬性] 頁面隨即顯示，而且您可以設定屬性，如下所示：  
   
-    -   在 [**屬性**] 區段中，您可以修改報表名稱和描述。  
+    -   在 [**屬性**] 區段中，您可以修改報告名稱和描述。  
   
-    -   您可以選取**在清單檢視中隱藏**核取方塊以隱藏項目，以預設的頁面配置 （清單檢視） 的排列項目頁面的下方開啟頁面時。  
+    -   您可以選取 [**在清單視圖中隱藏**] 核取方塊，在頁面以預設頁面配置（[清單視圖]）中開啟時隱藏專案，這會在頁面上和向下排列專案。  
   
-    -   在 **報表定義**區段中，按一下**編輯**擷取報表定義的複本。 您在本機對報表定義所做的修改不會儲存在報表伺服器上。  
+    -   在 [**報表定義**] 區段中，按一下 [**編輯**]，將報表定義的複本解壓縮。 您在本機對報表定義所做的修改不會儲存在報表伺服器上。  
   
-         或者，若要更新.rdl 檔案的報表定義，按一下**更新**。  
+         或者，若要從 .rdl 檔案更新報表定義，請按一下 [**更新**]。  
   
         > [!NOTE]  
         >  如果更新報表定義，必須在完成更新之後重設資料來源設定。  
   
-    -   使用**刪除**或是**移動**按鈕來刪除或移動報表。  
+    -   使用 [**刪除**] 或 [**移動**] 按鈕來刪除或移動報表。  
   
     -   您也可以建立連結報表。  
   
-5.  當您完成設定報表的一般屬性時，按一下**套用**。  
+5.  當您完成設定報表的一般屬性時，**請按一下 [** 套用]。  
   
 ## <a name="see-also"></a>另請參閱  
- [移動或刪除項目&#40;報表管理員&#41;](report-server/move-or-delete-an-item-report-manager.md)   
- [內容頁面 &#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [移動或刪除專案 &#40;報表管理員&#41;](report-server/move-or-delete-an-item-report-manager.md)   
+ [[內容] 頁面 &#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [一般屬性頁面，報表&#40;報表管理員&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
+ [一般屬性頁面、報表 &#40;報表管理員&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
   
   

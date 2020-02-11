@@ -18,10 +18,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a8523843633675fb9d0d319dac10417172832f8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482817"
 ---
 # <a name="members-master-data-services"></a>成員 (Master Data Services)
@@ -63,10 +63,10 @@ ms.locfileid: "65482817"
 |----------------------|-----------|  
 |建立新分葉成員。|[建立分葉成員 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|  
 |建立新合併成員。|[建立合併成員 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)|  
-|刪除現有的成員或集合。|[刪除成員或集合 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|  
-|重新啟用刪除的成員或集合。|[重新啟用成員或集合 &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
-|更新成員的屬性值。|[變更屬性類型 &#40;適用於 Excel 的 MDS 增益集&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
-|在階層中移動成員。|[在階層中移動成員&#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)|  
+|刪除現有的成員或集合。|[&#40;Master Data Services 刪除成員或集合&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|  
+|重新啟用刪除的成員或集合。|[&#40;Master Data Services 重新啟用成員或集合&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
+|更新成員的屬性值。|[變更適用于 Excel 的 MDS 增益集的屬性類型 &#40;&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
+|在階層中移動成員。|[在階層中移動成員 &#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
@@ -74,15 +74,15 @@ ms.locfileid: "65482817"
   
 -   [實體 &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   
--   [屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [Master Data Services &#40;的屬性&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
 -   [階層 &#40;Master Data Services&#41;](hierarchies-master-data-services.md)  
   
--   [集合 &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+-   [&#40;Master Data Services 的集合&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
--   [分葉權限 &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
+-   [分葉許可權 &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   
--   [合併的權限&#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
+-   [合併的許可權 &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   
 -   [篩選運算子 &#40;Master Data Services&#41;](../../2014/master-data-services/filter-operators-master-data-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_help_change_data_capture (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases sp_cdc_help_change_data_capture （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905168"
 ---
-# <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
+# <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   針對在目前資料庫中啟用異動資料擷取的每個資料表，傳回異動資料擷取組態。 每個來源資料表最多可傳回兩個資料列 (每個擷取執行個體一個資料列)。 並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中都無法異動資料擷取。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -45,19 +45,19 @@ sys.sp_cdc_help_change_data_capture
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @source_schema =] '*source_schema&lt*'  
- 這是來源資料表所屬的結構描述名稱。 *source_schema&lt*已**sysname**，預設值是 NULL。 當*source_schema&lt*指定，則*source_name*也必須指定。  
+ [ @source_schema = ]'*source_schema*'  
+ 這是來源資料表所屬的結構描述名稱。 *source_schema*是**sysname**，預設值是 Null。 當指定*source_schema*時，也必須指定*source_name* 。  
   
- 如果不是 NULL， *source_schema&lt*必須存在於目前的資料庫。  
+ 如果非 Null， *source_schema*必須存在於目前的資料庫中。  
   
- 如果*source_schema&lt*為非 NULL *source_name*也必須為非 NULL。  
+ 如果*source_schema*為非 null， *source_name*也必須是非 null。  
   
- [ @source_name =] '*source_name*'  
- 這是來源資料表的名稱。 *source_name*已**sysname**，預設值是 NULL。 當*source_name*指定，則*source_schema&lt*也必須指定。  
+ [ @source_name = ]'*source_name*'  
+ 這是來源資料表的名稱。 *source_name*是**sysname**，預設值是 Null。 當指定*source_name*時，也必須指定*source_schema* 。  
   
- 如果不是 NULL， *source_name*必須存在於目前的資料庫。  
+ 如果非 Null， *source_name*必須存在於目前的資料庫中。  
   
- 如果*source_name*為非 NULL *source_schema&lt*也必須為非 NULL。  
+ 如果*source_name*為非 null， *source_schema*也必須是非 null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -71,10 +71,11 @@ sys.sp_cdc_help_change_data_capture
 |capture_instance|**sysname**|擷取執行個體的名稱。|  
 |object_id|**int**|與來源資料表相關聯之變更資料表的識別碼。|  
 |source_object_id|**int**|來源資料表的識別碼。|  
-|start_lsn|**binary(10)**|代表查詢變更資料表之低端點的記錄序號 (LSN)。<br /><br /> NULL = 尚未建立低端點。|  
-|end_lsn|**binary(10)**|代表查詢變更資料表之高端點的 LSN。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，這個資料行一律是 NULL。|  
+|start_lsn|**binary （10）**|代表查詢變更資料表之低端點的記錄序號 (LSN)。<br /><br /> NULL = 尚未建立低端點。|  
+|end_lsn|**binary （10）**|代表查詢變更資料表之高端點的 LSN。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，這個資料行一律是 NULL。|  
 |supports_net_changes|**bit**|淨變更支援已啟用。|  
-|has_drop_pending|**bit**|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中不使用。|  
+|has_drop_pending|**bit**|
+  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中不使用。|  
 |role_name|**sysname**|用來控制變更資料之存取權的資料庫角色名稱。<br /><br /> NULL = 不使用角色。|  
 |index_name|**sysname**|在來源資料表中，用來唯一識別資料列的索引名稱。|  
 |filegroup_name|**sysname**|變更資料表所在的檔案群組名稱。<br /><br /> NULL = 變更資料表位於資料庫的預設檔案群組中。|  
@@ -83,10 +84,10 @@ sys.sp_cdc_help_change_data_capture
 |captured_column_list|**nvarchar(max)**|擷取的來源資料行清單。|  
   
 ## <a name="remarks"></a>備註  
- 當兩者*source_schema&lt*並*source_name*預設為 NULL，或明確設定為 NULL 時，此預存程序就會傳回所有資料庫的資訊，呼叫端已選取的擷取執行個體存取權。 當*source_schema&lt*並*source_name*為非 NULL 時，傳回特定具名之啟用資料表的唯一資訊。  
+ 當*source_schema*和*SOURCE_NAME*預設為 null，或明確設定為 null 時，這個預存程式會傳回呼叫端已選取存取權之所有資料庫捕捉實例的資訊。 當*source_schema*和*SOURCE_NAME*不是 Null 時，只會傳回特定已啟用資料表的相關資訊。  
   
-## <a name="permissions"></a>Permissions  
- 當*source_schema&lt*並*source_name*為 NULL 時，呼叫端的授權可讓您判斷哪些啟用的資料表會包含在結果集中。 呼叫端必須擁有擷取執行個體之所有擷取資料行的 SELECT 權限，以及要包含之資料表資訊的任何已定義控制角色中的成員資格。 db_owner 資料庫角色的成員可以檢視所有已定義之擷取執行個體的相關資訊。 要求特定啟用資料表的資訊時，就會針對具名資料表套用相同的 SELECT 和成員資格準則。  
+## <a name="permissions"></a>權限  
+ 當*source_schema*和*source_name*為 Null 時，呼叫端的授權會決定哪些已啟用的資料表會包含在結果集中。 呼叫端必須擁有擷取執行個體之所有擷取資料行的 SELECT 權限，以及要包含之資料表資訊的任何已定義控制角色中的成員資格。 db_owner 資料庫角色的成員可以檢視所有已定義之擷取執行個體的相關資訊。 要求特定啟用資料表的資訊時，就會針對具名資料表套用相同的 SELECT 和成員資格準則。  
   
 ## <a name="examples"></a>範例  
   

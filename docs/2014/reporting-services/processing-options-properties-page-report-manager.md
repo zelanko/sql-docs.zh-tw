@@ -1,5 +1,5 @@
 ---
-title: 處理選項屬性頁面 （報表管理員） |Microsoft Docs
+title: 處理選項屬性頁（報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f91cd8a93571b62f57933ff7556004f8c7b42a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108037"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>處理選項屬性頁面 (報表管理員)
   使用 [處理選項] 屬性頁面可以設定目前選取之報表的報表執行屬性。 這些選項會決定何時進行報表的資料處理。 您可以設定這些選項，以便在離峰時段擷取報表資料。 如果您的報表經常被存取，當多位使用者彼此會在短時間內存取相同的報表時，您就可以暫時快取副本，以避免等待時間。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供報表記錄、執行快照集和快取功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供報表記錄、執行快照集和快取功能。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
-## <a name="navigation"></a>巡覽  
+## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-processing-options-properties-page"></a>若要開啟處理選項屬性頁面  
@@ -36,19 +36,19 @@ ms.locfileid: "66108037"
   
 4.  選取 **[處理選項]** 索引標籤。  
   
-## <a name="options"></a>選項  
- **永遠使用最新的資料執行此報表**  
+## <a name="options"></a>選項。  
+ **永遠以最新的資料執行此報表**  
  如果您要在使用者選取報表時擷取報表資料，請使用此選項。 當使用者選取報表時，如果報表有快取副本，則傳回給使用者，否則會執行資料擷取和轉譯。  
   
  選取 **[不要快取此報表的暫存副本]** 就會永遠以最新的資料來執行報表。 開啟報表的每一位使用者都會觸發對資料來源的查詢，這些資料來源包含報表中使用的資料。  
   
- 選取  ，即可在使用者首先開啟報表時，將報表的暫存副本放入快取中。 在快取期間內執行此報表的後續使用者都會收到快取的報表副本。 快取通常會改善效能，因為報表是從快取傳回，而非再次處理。  
+ 選取 ****，即可在使用者首先開啟報表時，將報表的暫存副本放入快取中。 在快取期間內執行此報表的後續使用者都會收到快取的報表副本。 快取通常會改善效能，因為報表是從快取傳回，而非再次處理。  
   
  快取的報表最後一定會過期。 請指定要儲存快取之報表副本的分鐘數。 一旦暫存副本過期，系統就不會再從快取中傳回報表。 使用者下次開啟報表時，報表伺服器會重新處理報表，並將重新整理過的報表副本存到快取中。  
   
  您也可以使用排程使快取報表過期，以頻率來取代分鐘數。 例如，若要使快取報表在某日結束時過期，可以選取晚上某個特定時間，使副本在超過該時間之後過期。  
   
- **從報表執行快照集轉譯此報表**  
+ **從執行快照集轉譯此報表**  
  使用此選項即可在排程的時間內將已經儲存的報表當做快照集擷取。 當您選擇此選項時，可以將資料處理排程為於離峰時段進行。 不同於使用者開啟報表時才會建立的快取副本，快照集會定期建立而且後續會按照排程重新整理。 快照集不會過期；它們可一直執行服務，直到被較新的版本取代為止。  
   
  由報表執行設定的結果所產生的快照集，與報表記錄快照集具有相同特性。 其差異在於只能有一個報表執行快照集，但潛在地具有許多報表記錄快照集。 報表記錄快照集可從報表的 [記錄] 頁面存取，其中儲存不同的時間點存在之報表的許多執行個體。 相對地，使用者從資料夾存取報表執行快照集的方法，與存取使用中報表的方法相同。 對於報表執行快照集，沒有視覺提示可對使用者指出此報表是快照集。  

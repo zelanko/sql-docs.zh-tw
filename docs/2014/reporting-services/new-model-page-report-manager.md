@@ -1,5 +1,5 @@
 ---
-title: 新增模型頁面 （報表管理員） |Microsoft Docs
+title: 新增模型頁面（報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5b9fdcac2499cdf33d98ba636596218c14704f9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108213"
 ---
 # <a name="new-model-page-report-manager"></a>新增模型頁面 (報表管理員)
@@ -22,7 +22,7 @@ ms.locfileid: "66108213"
   
  您在報表管理員中產生的模型是以共用資料來源的結構描述為基礎。 系統會針對資料來源中的所有資料表和資料行建立實體、資料夾和欄位。 您無法排除這些項目，也無法設定決定模型產生方式的選項。 如果您想要自訂或修改模型，就必須改用模型設計師。  
   
-## <a name="navigation"></a>巡覽  
+## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-new-model-page"></a>若要開啟新增模型頁面  
@@ -37,11 +37,11 @@ ms.locfileid: "66108213"
   
     -   按一下 **[管理]** 開啟報表的 [一般] 屬性頁面。 然後，按一下 **[產生報表模型]** 開啟 [新增模型] 頁面。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **名稱**  
  指定模型的名稱。 名稱必須至少包含一個英數字元。 它也可以包含空格和某些符號。 指定名稱時，請勿使用下列字元：  
   
- ; ? : \@ & = + , $ / * \< > | " /  
+ ; ? ： \@ & = +，$/* \< > |" /  
   
  **說明**  
  顯示模型的描述。 透過報表管理員檢視這個項目的使用者會在瀏覽資料夾階層時看到此描述。  

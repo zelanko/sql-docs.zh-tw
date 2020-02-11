@@ -11,25 +11,28 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef0438dfa0750c2a516a801a2d81b5d1c0b49721
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106443"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>內建的全域和使用者參考 (報表產生器及 SSRS)
-  內建欄位集合包含 `Globals` 和 `User` 集合，代表在處理報表時 Reporting Services 所提供的全域值。 `Globals` 集合提供的值包括報表名稱、開始處理報表的時間，以及報表頁首及頁尾的目前頁碼。 `User` 集合則提供使用者識別碼和語言設定。 您可以在運算式中使用這些值以在報表中篩選結果。  
+  內建欄位集合包含 `Globals` 和 `User` 集合，代表在處理報表時 Reporting Services 所提供的全域值。 
+  `Globals` 集合提供的值包括報表名稱、開始處理報表的時間，以及報表頁首及頁尾的目前頁碼。 
+  `User` 集合則提供使用者識別碼和語言設定。 您可以在運算式中使用這些值以在報表中篩選結果。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>使用 Globals 集合  
- `Globals` 集合包含報表的全域變數。 這些變數在設計介面上會顯示為具有前置的 & (連字號)，例如 `[&ReportName]`。 下表描述 `Globals` 集合的成員。  
+ 
+  `Globals` 集合包含報表的全域變數。 這些變數在設計介面上會顯示為具有前置的 & (連字號)，例如 `[&ReportName]`。 下表描述 `Globals` 集合的成員。  
   
 |**成員**|**型別**|**說明**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|`DateTime`|報表開始執行的日期和時間。|  
-|PageNumber|`Integer`|相對於重設頁碼之分頁線的目前頁碼。 在開始處理報表時，初始值設為 1。 每個呈現之頁面的頁碼會遞增。<br /><br /> 到矩形、 資料區域、 資料區群組，或在 PageBreak 屬性中，對應的分頁符號內的數字頁面 ResetPageNumber 屬性設為`True`。 在 Tablix 資料行階層群組上不支援。<br /><br /> PageNumber 只能用於頁首或頁尾中的運算式。|  
+|PageNumber|`Integer`|相對於重設頁碼之分頁線的目前頁碼。 在開始處理報表時，初始值設為 1。 每個呈現之頁面的頁碼會遞增。<br /><br /> 若要針對矩形、資料區、資料區群組或地圖在分頁符號內的頁碼分頁，請在 PageBreak 屬性上將 ResetPageNumber 屬性設定為`True`。 在 Tablix 資料行階層群組上不支援。<br /><br /> PageNumber 只能用於頁首或頁尾中的運算式。|  
 |ReportFolder|`String`|報表所在之資料夾的完整路徑。 這不包括報表伺服器 URL。|  
 |ReportName|`String`|報表存放在報表伺服器資料庫的名稱。|  
 |ReportServerUrl|`String`|執行報表之報表伺服器的 URL。|  
@@ -39,7 +42,8 @@ ms.locfileid: "66106443"
 |OverallTotalPages|`Integer`|整個報表的總頁數。 這個值不會受到 ResetPageNumber 的影響。<br /><br /> OverallTotalPages 只能用於頁首或頁尾中的運算式。|  
 |RenderFormat|`RenderFormat`|目前轉譯要求的相關資訊。<br /><br /> 如需詳細資訊，請參閱下一節中的＜RenderFormat＞。|  
   
- `Globals` 集合的成員會傳回變數。 如果要在需要特定資料類型的運算式中使用這個集合的成員，必須先轉換變數。 例如，若要將執行時間變數轉換成日期格式，請使用 `=CDate(Globals!ExecutionTime)`。 如需詳細資訊，請參閱 [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)。  
+ 
+  `Globals` 集合的成員會傳回變數。 如果要在需要特定資料類型的運算式中使用這個集合的成員，必須先轉換變數。 例如，若要將執行時間變數轉換成日期格式，請使用 `=CDate(Globals!ExecutionTime)`。 如需詳細資訊，請參閱 [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)。  
   
 ### <a name="renderformat"></a>RenderFormat  
  下表描述 `RenderFormat` 的成員。  
@@ -57,24 +61,27 @@ ms.locfileid: "66106443"
   
      `=Globals.PageNumber & " of " & Globals.TotalPages`  
   
--   這個運算式提供報表的名稱及其執行時間。 時間格式採用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的簡短日期格式字串：  
+-   這個運算式提供報表的名稱及其執行時間。 時間的格式為簡短日期[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]的格式字串：  
   
      `=Globals.ReportName & ", dated " & Format(Globals.ExecutionTime, "d")`  
   
 -   這個放在所選資料行之 **[資料行可見性]** 對話方塊中的運算式，只會在報表匯出至 Excel 之後顯示資料行； 其他時候則會隱藏資料行。  
   
-     `EXCELOPENXML` 是指 Office 2007 隨附的 Excel 格式。 `EXCEL` 是指 Office 2003 隨附的 Excel 格式。  
+     
+  `EXCELOPENXML` 是指 Office 2007 隨附的 Excel 格式。 
+  `EXCEL` 是指 Office 2003 隨附的 Excel 格式。  
   
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>使用 User 集合  
- `User` 集合包含正在執行報表之使用者的相關資料。 您可以利用此集合來篩選出現在報表中的資料 (例如，只顯示目前使用者的資料)，或是在報表標題中顯示 UserID 或其他項目。 這些變數在設計介面上會顯示為具有前置的 & (連字號)，例如 `[&UserID]`。  
+ 
+  `User` 集合包含正在執行報表之使用者的相關資料。 您可以利用此集合來篩選出現在報表中的資料 (例如，只顯示目前使用者的資料)，或是在報表標題中顯示 UserID 或其他項目。 這些變數在設計介面上會顯示為具有前置的 & (連字號)，例如 `[&UserID]`。  
   
  下表描述 `User` 集合的成員。  
   
 |**成員**|**型別**|**說明**|  
 |----------------|--------------|---------------------|  
-|`Language`|`String`|執行報表之使用者的語言。 例如， `en-US` 。|  
+|`Language`|`String`|執行報表之使用者的語言。 例如： `en-US` 。|  
 |`UserID`|`String`|執行報表之使用者的識別碼。 如果您是使用 Windows 驗證，此值為目前使用者的網域帳戶。 這個值是由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安全性延伸模組所決定，此延伸模組可使用 Windows 驗證或自訂驗證。|  
   
  如需在報表中支援多國語言的詳細資訊，請參閱《 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 線上叢書 [》中](https://go.microsoft.com/fwlink/?LinkId=120955)文件集的＜適用於多語言或全域部署的解決方案設計考量＞。  

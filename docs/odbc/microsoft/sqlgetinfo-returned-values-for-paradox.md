@@ -17,24 +17,24 @@ ms.assetid: 543526fb-7c54-42f7-9371-926730ca5483
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8745580b1e478c2cfa9548887affb64e07322779
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67898822"
 ---
 # <a name="sqlgetinfo-returned-values-for-paradox"></a>Paradox 的 SQLGetInfo 傳回值
-下表列出 C 語言 #defines *fInfoType*引數和所傳回的對應值**SQLGetInfo**。 這項資訊可以擷取傳遞所列出的 C 語言 #defines **SQLGetInfo**中*fInfoType*引數。 如需詳細資訊，所傳回之值的相關**SQLGetInfo**，請參閱*ODBC 程式設計人員參考*。  
+下表列出*fInfoType*引數的 C 語言 #defines 和**SQLGetInfo**傳回的對應值。 藉由將列出的 C 語言 #defines 傳遞至*fInfoType*引數中的**SQLGetInfo** ，即可抓取這項資訊。 如需**SQLGetInfo**所傳回之值的詳細資訊，請參閱 ODBC 程式設計*人員參考*。  
   
 > [!NOTE]  
->  何處**SQLGetInfo**會傳回 32 位元遮罩，垂直列 (&#124;) 代表位元 OR 運算。  
+>  其中**SQLGetInfo**傳回32位位元遮罩，分隔號（&#124;）代表位 or。  
   
 |InfoType|傳回值|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|所有集合|  
+|SQL_AGGREGATE_FUNCTIONS|全部設定|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|多個值|  
 |SQL_ASYNC_MODE|0|  
@@ -44,11 +44,11 @@ ms.locfileid: "67898822"
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"\\"|  
-|SQL_CATALOG_TERM|「 目錄 」|  
+|SQL_CATALOG_TERM|Directory|  
 |SQL_CATALOG_USAGE|多個值|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
-|SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NON_NULL|  
+|SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NON_Null|  
 |SQL_CONVERT_BIGINT|0|  
 |SQL_CONVERT_BINARY|多個值|  
 |SQL_CONVERT_BIT|0|  
@@ -81,22 +81,22 @@ ms.locfileid: "67898822"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|從 Odbc.ini，DSN 或 「 」 如果中的 Odbc.ini 使用 DRIVER 關鍵字|  
-|SQL_DATA_SOURCE_READ_ONLY|"N"（這取決於資料來源）。|  
+|SQL_DATA_SOURCE_NAME|來自 Odbc 的 DSN，如果在 Odbc 中使用 DRIVER 關鍵字，則為 ""。|  
+|SQL_DATA_SOURCE_READ_ONLY|"N" （這取決於資料來源）。|  
 |SQL_DATABASE_NAME|目前的資料庫目錄|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|「 PARADOX"|  
+|SQL_DBMS_NAME|PARADOX|  
 |SQL_DBMS_VER|多個值|  
 |SQL_DDL_INDEX|多個值|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|處理由驅動程式管理員。|  
-|SQL_DRIVER_HENV|處理由驅動程式管理員。|  
-|SQL_DRIVER_HLIB|處理由驅動程式管理員。|  
-|SQL_DRIVER_HSTMT|處理由驅動程式管理員。|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_HDBC|由驅動程式管理員處理。|  
+|SQL_DRIVER_HENV|由驅動程式管理員處理。|  
+|SQL_DRIVER_HLIB|由驅動程式管理員處理。|  
+|SQL_DRIVER_HSTMT|由驅動程式管理員處理。|  
+|SQL_DRIVER_NAME|"OdbcJt32"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|「 4.00。*nnnn*」 (*nnnn*指定組建的日期)|  
+|SQL_DRIVER_VER|"4.00.*nnnn*" （*nnnn*指定組建日期）|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -111,7 +111,7 @@ ms.locfileid: "67898822"
 |SQL_GETDATA_EXTENSIONS|多個值|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|「\`"（反引號）|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" （後引號）|  
 |SQL_KEYWORDS|多個值|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -119,7 +119,7 @@ ms.locfileid: "67898822"
 |SQL_MAX_CHAR_LITERAL_LEN|255|  
 |SQL_MAX_COLUMN_NAME_LEN|25|  
 |SQL_MAX_COLUMNS_IN_GROUP_BY|10|  
-|SQL_MAX_COLUMNS_IN_INDEX|0 （未知或不適用限制）|  
+|SQL_MAX_COLUMNS_IN_INDEX|0（限制未知或不適用）|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
 |SQL_MAX_COLUMNS_IN_TABLE|255|  
@@ -141,9 +141,9 @@ ms.locfileid: "67898822"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|多個值|  
-|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ 一致性|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|從 驅動程式管理員|  
+|SQL_ODBC_VER|從驅動程式管理員|  
 |SQL_OJ_CAPABILITIES|多個值|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
@@ -155,12 +155,12 @@ ms.locfileid: "67898822"
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|多個值|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|「 PARADOX"|  
-|SQL_SPECIAL_CHARACTERS|"~\`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SERVER_NAME|PARADOX|  
+|SQL_SPECIAL_CHARACTERS|"~\`@ # $% ^& * _-+ =\\} {" ';：？/><,.! '[] &#124; "|  
 |SQL_STRING_FUNCTIONS|多個值|  
 |SQL_SUBQUERIES|多個值|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|「 資料表 」|  
+|SQL_TABLE_TERM|目錄|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|多個值|  

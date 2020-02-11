@@ -1,5 +1,5 @@
 ---
-title: 擷取 (MDX) |Microsoft Docs
+title: 解壓縮（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 26edefab1a81aebaa9bf63e69e24067428266de1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67906045"
 ---
 # <a name="extract-mdx"></a>Extract (MDX)
@@ -38,12 +38,12 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  傳回階層的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **擷取**函式會傳回一組，從擷取之階層元素的 tuple 所組成。 對於指定集合中的每個 Tuple，指定的階層成員會擷取至結果集中的新 Tuple。 此函數永遠會移除重複的 Tuple。  
+ **解壓縮**函式會傳回集合，其中包含已解壓縮之階層元素的元組。 對於指定集合中的每個 Tuple，指定的階層成員會擷取至結果集中的新 Tuple。 此函數永遠會移除重複的 Tuple。  
   
- **擷取**函式會執行相反動作[Crossjoin](../mdx/crossjoin-mdx.md)函式。  
+ **解壓縮**函數會執行[交叉](../mdx/crossjoin-mdx.md)聯結函式的相反動作。  
   
 ## <a name="examples"></a>範例  
- 下列查詢會示範如何使用**擷取**函式所傳回的 tuple 集合上**NonEmpty**函式：  
+ 下列查詢會顯示如何在非空白函**式所傳回**的一組元組上使用**解壓縮**函數：  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -78,6 +78,6 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

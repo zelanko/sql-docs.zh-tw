@@ -17,18 +17,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97cb83d54694a1c8334ef7a9f5dd9cd2bddc5d6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107727"
 ---
 # <a name="report-builder-f1-help"></a>報表產生器 F1 說明
-  本章節包含報表產生器精靈、 檢視、 窗格和對話方塊的說明。 按下 F1 或按一下 [說明] 按鈕，在對話方塊中，您也可以開啟說明。  
+  本節包含報表產生器嚮導、視圖、窗格和對話方塊的說明。 您也可以按下 F1 或按一下對話方塊中的 [說明] 按鈕，以開啟 [說明]。  
   
 ## <a name="see-also"></a>另請參閱  
- [對話方塊、 窗格和精靈 (F1) 的說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)[報表設計檢視&#40;報表產生器&#41;](report-design-view-report-builder.md)   
- [地圖精靈與地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](../report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
- [針對報表產生器進行疑難排解](../troubleshoot-report-builder.md)  
+ [對話方塊、窗格和嚮導的說明（F1）](../report-builder-help-for-dialog-boxes-panes-and-wizards.md) [報表設計檢視 &#40;報表產生器&#41;](report-design-view-report-builder.md)   
+ [Map Wizard 和地圖圖層 Wizard &#40;報表產生器和 SSRS&#41;](../report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
+ [疑難排解報表產生器](../troubleshoot-report-builder.md)  
   
   

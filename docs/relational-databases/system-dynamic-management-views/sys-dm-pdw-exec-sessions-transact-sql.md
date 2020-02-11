@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_exec_sessions (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_pdw_exec_sessions （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2019
 ms.prod: sql
@@ -13,37 +13,37 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4d559f7fb03b632fc5cfca573b2fedc72506fead
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899412"
 ---
-# <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
+# <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys.databases dm_pdw_exec_sessions （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  保留應用裝置上目前或最近開啟的所有工作階段的相關資訊。 它會列出每個工作階段的一個資料列。  
+  保存設備上目前或最近開啟之所有會話的相關資訊。 它會針對每個會話列出一個資料列。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|session_id|**nvarchar(32)**|（如果工作階段結束，而且查詢正在執行的終止時間），就會執行目前的查詢或最後一項查詢的識別碼。 此檢視的索引鍵。|在系統中的所有工作階段之間是唯一的。|  
-|status|**nvarchar(10)**|對於目前工作階段，識別是否在工作階段目前作用中或閒置。 對於過去的工作階段，工作階段狀態可能會顯示已關閉，或已終止 （如果已強制關閉工作階段）。|'ACTIVE'、 'CLOSED'、 'IDLE'，' 終止 '|  
-|request_id|**nvarchar(32)**|在目前的查詢或執行的最後一次查詢的識別碼。|在系統中的所有要求間是唯一的。 如果沒有任何已執行，則為 null。|  
-|security_id|**varbinary(85)**|執行工作階段之主體的安全性識別碼。||  
-|login_name|**nvarchar(128)**|執行工作階段的主體登入名稱。|任何符合使用者的命名慣例的字串。|  
-|login_time|**datetime**|日期和時間的使用者登入，並建立此工作階段。|有效**datetime**目前時間之前。|  
-|query_count|**int**|擷取自建立後已執行的查詢/requeststhis 工作階段的數目。|大於或等於 0。|  
-|is_transactional|**bit**|擷取工作階段是否為目前交易內與否。|自動認可為 0、 1 代表交易式。|  
-|client_id|**nvarchar(255)**|擷取工作階段的用戶端資訊。|任何有效的字串。|  
-|app_name|**nvarchar(255)**|擷取應用程式名稱資訊 （選擇性） 設定為在連線程序的一部分。|任何有效的字串。|  
-|sql_spid|**int**|SPID id 編號。 使用`session_id`此工作階段。 使用`sql_spid`加入的資料行**sys.dm_pdw_nodes_exec_sessions**。<br /><br /> **\*\* 警告\* \*** 這個資料行包含已關閉的 Spid。||  
+|session_id|**Nvarchar （32）**|目前查詢或最後一個查詢執行的識別碼（如果會話已終止，且查詢在終止時執行）。 此視圖的索引鍵。|系統中的所有會話都是唯一的。|  
+|status|**Nvarchar （10）**|針對目前的會話，識別會話目前為作用中或閒置。 對於過去的會話，會話狀態可能會顯示 [已關閉] 或 [已終止] （如果已強制關閉會話）。|「作用中」、「已關閉」、「閒置」、「已終止」|  
+|request_id|**Nvarchar （32）**|目前查詢或上次查詢執行的識別碼。|在系統的所有要求中都是唯一的。 如果未執行任何值，則為 Null。|  
+|security_id|**Varbinary （85）**|執行會話之主體的安全識別碼。||  
+|login_name|**nvarchar(128)**|執行會話之主體的登入名稱。|符合使用者命名慣例的任何字串。|  
+|login_time|**datetime**|使用者登入和此會話建立的日期和時間。|目前時間之前有效的**日期時間**。|  
+|query_count|**int**|捕捉自建立後已執行的查詢/requeststhis 會話數目。|大於或等於0。|  
+|is_transactional|**bit**|捕捉會話目前是否在交易中。|0表示自動認可，1代表交易。|  
+|client_id|**nvarchar(255)**|捕捉會話的用戶端資訊。|任何有效的字串。|  
+|app_name|**nvarchar(255)**|會在連接過程中，視需要設定的應用程式名稱資訊。|任何有效的字串。|  
+|sql_spid|**int**|SPID 的 id 編號。 使用`session_id`此會話。 使用資料`sql_spid`行聯結至**sys.databases dm_pdw_nodes_exec_sessions**。<br /><br /> ** \*警告\* \* **此資料行包含已關閉的 Spid。||  
   
- 這份檢視所保留的最大資料列的相關資訊，請參閱中的 [中繼資料] 區段[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主題。  
+ 如需此視圖所保留之最大資料列的詳細資訊，請參閱[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主題中的 Metadata 一節。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 `VIEW SERVER STATE` 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲和平行處理資料倉儲動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL 資料倉儲和平行處理資料倉儲動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

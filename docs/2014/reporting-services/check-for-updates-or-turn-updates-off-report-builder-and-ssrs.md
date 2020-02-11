@@ -1,5 +1,5 @@
 ---
-title: 檢查更新或關閉更新 （報表產生器及 SSRS） |Microsoft Docs
+title: 檢查更新或關閉更新（報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27942be9c32d4537f729adbd69df1c64a9c9ff6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109863"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>檢查更新或關閉更新 (報表產生器及 SSRS)
@@ -24,22 +24,22 @@ ms.locfileid: "66109863"
   
 ### <a name="to-turn-on-and-off-report-part-updates"></a>若要開啟和關閉報表組件更新  
   
-1.  按一下 [報表產生器] 按鈕，然後按一下**選項**。  
+1.  按一下 [報表產生器] 按鈕，然後按一下 [**選項**]。  
   
-2.  在 **選項**對話方塊的 **資源**索引標籤上，選取或清除**在我的報表中顯示的報表組件的更新**核取方塊。  
+2.  在 [**選項**] 對話方塊的 [**資源**] 索引標籤上，選取或清除 [在**我的報表中顯示報表元件的更新**] 核取方塊。  
   
 > [!NOTE]  
 >  這是使用者設定。 您所開啟的所有報表都會停用這項設定。  
   
 ### <a name="to-check-for-updates"></a>若要檢查更新  
   
--   以滑鼠右鍵按一下報表外面，或在報表主體中，在設計介面，然後按一下 **檢查是否有更新**。  
+-   以滑鼠右鍵按一下報表外部的設計介面，或在報表主體中，按一下 [**檢查更新**]。  
   
 ## <a name="see-also"></a>另請參閱  
  [報表組件 &#40;報表產生器及 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
- [發行與重新發行報表組件&#40;報表產生器及 SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
- [瀏覽報表組件及設定預設資料夾&#40;報表產生器及 SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
- [疑難排解報表組件&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [報表產生器和 SSRS &#40;發行和重新發佈報表元件&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
+ [流覽報表元件，並 &#40;報表產生器和 SSRS 設定預設資料夾&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
+ [&#40;報表產生器和 SSRS&#41;疑難排解報表元件](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [報表產生器中的報表組件和資料集](report-data/report-parts-and-datasets-in-report-builder.md)  
   
   

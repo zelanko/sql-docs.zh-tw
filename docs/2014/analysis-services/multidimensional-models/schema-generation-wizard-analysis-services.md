@@ -1,5 +1,5 @@
 ---
-title: 結構描述產生精靈 (Analysis Services) |Microsoft Docs
+title: 架構產生嚮導（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f8757044ba15f7b8c2567dd88e1ef3637d2e3f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073064"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>結構描述產生精靈 (Analysis Services)
+  
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 支援在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或資料庫內定義 OLAP 物件時，使用關聯式結構描述的兩個方法。 一般來說，您會根據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或資料庫內資料來源檢視中所建構的邏輯資料模型來定義 OLAP 物件。 這個資料來源檢視是根據一個或多個關聯式資料來源中的結構描述元素所定義，如資料來源檢視中所自訂的方式一樣。  
   
  或者，您可以先定義 OLAP 物件，再產生支援這些 OLAP 物件的資料來源檢視、資料來源及基礎關聯式資料庫結構描述。 此關聯式資料庫稱為主題領域資料庫。  
@@ -39,13 +40,13 @@ ms.locfileid: "66073064"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[使用結構描述產生精靈 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)|描述如何產生主題領域和暫存區域資料庫的結構描述。|  
+|[使用 [架構產生嚮導] &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)|描述如何產生主題領域和暫存區域資料庫的結構描述。|  
 |[了解資料庫結構描述](understanding-the-database-schemas.md)|描述針對主題領域和臨時區域資料庫產生的結構描述。|  
 |[了解累加式產生](understanding-incremental-generation.md)|描述結構描述產生精靈的累加產生能力。|  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的資料來源檢視](data-source-views-in-multidimensional-models.md)   
+ [多維度模型中的資料來源視圖](data-source-views-in-multidimensional-models.md)   
  [多維度模型中的資料來源](data-sources-in-multidimensional-models.md)   
- [支援的資料來源&#40;SSAS 多維度&#41;](supported-data-sources-ssas-multidimensional.md)  
+ [&#40;SSAS 多維度&#41;支援的資料來源](supported-data-sources-ssas-multidimensional.md)  
   
   

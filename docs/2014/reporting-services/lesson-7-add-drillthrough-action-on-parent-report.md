@@ -1,5 +1,5 @@
 ---
-title: 第 7 課：在父報表上加入鑽研動作 |Microsoft Docs
+title: 第 7 課：在父報表上新增鑽研動作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,32 +11,32 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 356ad7ed670ee13bbc6b4e2d7a86cb6095e79e10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108400"
 ---
-# <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>第 7 課：在父報表上新增鑽研動作
+# <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>第 7 課：在父報表上加入鑽研動作
   將 ReportViewer 控制項加入至網站應用程式後，下一步是要在父報表上加入鑽研動作。  
   
 ### <a name="to-add-drillthrough-action-on-the-parent-report"></a>若要在父報表上加入鑽研動作  
   
 1.  移至父報表。  
   
-2.  按一下值之文字方塊**名稱**。  
+2.  按一下保存 [**名稱**] 值的文字方塊。  
   
-3.  以滑鼠右鍵按一下 [] 文字方塊中，然後按一下**文字方塊內容**。  
+3.  以滑鼠右鍵按一下文字方塊，然後按一下 [**文字方塊屬性**]。  
   
 4.  移至 [動作]  索引標籤，然後選取 [移至報表]  選項。  
   
 5.  在 [指定報表]  區段中輸入子報表的名稱。  
   
-6.  按一下 **新增**下方**使用這些參數執行報表**一節。  
+6.  按一下 [**使用這些參數執行報表**] 區段底下的 [**新增**]。  
   
-7.  型別**productid**中**名稱**方塊，然後再按一下**ProductID**中**值**下拉式清單。  
+7.  在 [**名稱**] 方塊中輸入**productid** ，然後在 [**值**] 下拉式清單中按一下 [ **productid** ]。  
   
-8.  按一下  **Ok**才能完成。  
+8.  按一下 **[確定**] 以完成。  
   
 ## <a name="next-task"></a>下一項工作  
  您已成功在父報表上加入鑽研動作。 接下來您將針對您為子報表定義的資料表建立資料篩選。  

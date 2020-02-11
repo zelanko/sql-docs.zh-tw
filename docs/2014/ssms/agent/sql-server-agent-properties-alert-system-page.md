@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245746"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server Agent 屬性 (警示系統頁面)
-  使用此頁面來檢視和修改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示所傳送的訊息設定。  
+  使用此頁面來查看及修改[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示所傳送之訊息的設定。  
   
 ## <a name="options"></a>選項。  
- **郵件工作階段**  
+ **郵件會話**  
  此章節中的選項會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 郵件。  
   
  **啟用郵件設定檔**  
@@ -36,54 +36,54 @@ ms.locfileid: "63245746"
 >  在變更電子郵件系統之後，您必須重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務，才能使變更生效。  
   
  **郵件設定檔**  
- 設定設定檔供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用。 您也可以選取 [\<新增 Database Mail 設定檔>]  ，以建立新的設定檔。  
+ 設定設定檔供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用。 您也可以選取** \<[新增 Database Mail 設定檔 ...] >** 建立新的設定檔。  
   
- **呼叫器電子郵件**  
+ **呼機電子郵件**  
  本節中的選項可以讓您設定傳送到呼叫器號碼的電子郵件訊息，以搭配呼叫系統使用。  
   
- **呼叫器電子郵件位址格式**  
+ **尋呼程式電子郵件的位址格式**  
  此章節可以讓您指定位址格式，以及呼叫器電子郵件中所包含的主旨。  
   
- **收件者**  
- 指定訊息之 [收件者]  的選項  
+ **到行**  
+ 指定訊息之 [收件者]**** 的選項  
   
- **Prefix**  
- 在傳送到呼叫器的訊息之 [收件者]  的開頭處，輸入系統要求的任何固定文字。  
+ **前置詞**  
+ 在傳送到呼叫器的訊息之 [收件者]**** 的開頭處，輸入系統要求的任何固定文字。  
   
- **呼叫器**  
+ **尋呼**  
  在前置詞與後置詞之間包含訊息的電子郵件地址。  
   
  **後置詞**  
- 在傳送到呼叫器的訊息之 [收件者]  的結尾處，輸入呼叫器系統要求的任何固定文字。  
+ 在傳送到呼叫器的訊息之 [收件者]**** 的結尾處，輸入呼叫器系統要求的任何固定文字。  
   
- **副本**  
- 指定訊息之 [副本]  的選項。  
+ **抄送行**  
+ 指定訊息之 [副本]**** 的選項。  
   
- **Prefix**  
- 在傳送到呼叫器的訊息之 [副本]  的開頭處，輸入系統要求的任何固定文字。  
+ **前置詞**  
+ 在傳送到呼叫器的訊息之 [副本]**** 的開頭處，輸入系統要求的任何固定文字。  
   
- **呼叫器**  
+ **尋呼**  
  在前置詞與後置詞之間包含訊息的電子郵件地址。  
   
  **後置詞**  
- 在傳送到呼叫器的訊息之 [副本]  的結尾處，輸入呼叫器系統要求的任何固定文字。  
+ 在傳送到呼叫器的訊息之 [副本]**** 的結尾處，輸入呼叫器系統要求的任何固定文字。  
   
- **主旨**  
+ **主題**  
  指定訊息主旨的選項。  
   
- **Prefix**  
- 在傳送到呼叫器的訊息之 [主旨]  的開頭處，輸入呼叫器系統要求的任何固定文字。  
+ **前置詞**  
+ 在傳送到呼叫器的訊息之 [主旨]**** 的開頭處，輸入呼叫器系統要求的任何固定文字。  
   
  **後置詞**  
- 在傳送到呼叫器的訊息之 [主旨]  的結尾處，輸入呼叫器系統要求的任何固定文字。  
+ 在傳送到呼叫器的訊息之 [主旨]**** 的結尾處，輸入呼叫器系統要求的任何固定文字。  
   
- **在通知訊息中包含主體**  
+ **在通知訊息中包含電子郵件內文**  
  在傳送給呼叫器的訊息中，包含電子郵件訊息的主體。  
   
- **保全操作員**  
+ **Fail-安全操作員**  
  此章節可以讓您指定保全操作員的選項。  
   
- **啟用保全操作員**  
+ **啟用 fail 安全操作員**  
  指定保全操作員。  
   
  **運算子**  
@@ -96,16 +96,16 @@ ms.locfileid: "63245746"
  此章節可讓您啟動作業步驟 Token，這些 Token 可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示所執行的作業中使用。 如需有關作業步驟 Token 的詳細資訊，請參閱 [在作業步驟中使用 Token](use-tokens-in-job-steps.md)。  
   
 > [!IMPORTANT]  
->  在 Windows 事件記錄檔上具有寫入權限的任何 Windows 使用者，可以存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示所啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些 Token 包括： **$(A-DBN)** 、 **$(A-SVR)** 、 **$(A-ERR)** 、 **$(A-SEV)** 和 **$(A-MSG)** 。  
+>  在 Windows 事件記錄檔上具有寫入權限的任何 Windows 使用者，可以存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示所啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些 Token 包括： **$(A-DBN)**、 **$(A-SVR)**、 **$(A-ERR)**、 **$(A-SEV)** 和 **$(A-MSG)**。  
 >   
 >  如果您需要使用這些 Token，在啟用之前，請確定只有信任的 Windows 安全性群組的成員，例如 Administrators 群組，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在的電腦的事件記錄檔上才具有寫入權限。  
   
- **取代回應警示之所有作業的 Token**  
+ **將所有作業回應的權杖取代為警示**  
  選取此核取方塊，以允許在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 警示所啟動的作業上取代 Token。  
   
 ## <a name="see-also"></a>另請參閱  
- [運算子](operators.md)   
- [設定 SQL Server Agent Mail 使用 Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)   
+ [人員](operators.md)   
+ [設定 SQL Server Agent Mail 以使用 Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)   
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   
   

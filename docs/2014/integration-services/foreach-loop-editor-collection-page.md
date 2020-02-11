@@ -1,5 +1,5 @@
 ---
-title: Foreach 迴圈編輯器 （集合頁面） |Microsoft Docs
+title: Foreach 迴圈編輯器（集合頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
@@ -13,37 +13,37 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5b9396ab5a25bba979859ac685c4759b8b01c24d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66428807"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Foreach 迴圈編輯器 (集合頁面)
-  使用 [Foreach 迴圈編輯器]  對話方塊的 [集合]  頁面，即可指定列舉值類型和設定列舉值。  
+  使用 [Foreach 迴圈編輯器]**** 對話方塊的 [集合]**** 頁面，即可指定列舉值類型和設定列舉值。  
   
- 若要了解 Foreach 迴圈容器以及如何設定該容器，請參閱 [Foreach 迴圈容器](control-flow/foreach-loop-container.md)和[設定 Foreach 迴圈容器](../../2014/integration-services/configure-a-foreach-loop-container.md)。  
+ 若要了解 Foreach 迴圈容器以及如何設定該容器，請參閱 [Foreach 迴圈容器](control-flow/foreach-loop-container.md) 和 [設定 Foreach 迴圈容器](../../2014/integration-services/configure-a-foreach-loop-container.md)。  
   
 ## <a name="static-options"></a>靜態選項  
  **列舉值**  
  從清單中選取列舉值類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**Foreach 檔案列舉值**|列舉檔案。 選取這個值就會在 **[Foreach 檔案列舉值]** 區段中顯示動態選項。|  
-|**Foreach 項目列舉值**|列舉項目中的值。 選取這個值就會在 **[Foreach 項目列舉值]** 區段中顯示動態選項。|  
+|**Foreach 專案列舉值**|列舉項目中的值。 選取這個值就會在 **[Foreach 項目列舉值]** 區段中顯示動態選項。|  
 |**Foreach ADO 列舉值**|列舉資料表或資料表中的資料列。 選取這個值就會在 **[Foreach ADO 列舉值]** 區段中顯示動態選項。|  
-|**Foreach ADO.NET 結構描述資料列集列舉值**|列舉結構描述。 選取這個值就會在 **[Foreach ADO.NET 列舉值]** 區段中顯示動態選項。|  
+|**Foreach ADO.NET 架構資料列集列舉值**|列舉結構描述。 選取這個值就會在 **[Foreach ADO.NET 列舉值]** 區段中顯示動態選項。|  
 |**Foreach From Variable 列舉值**|列舉變數中的值。 選取這個值就會在 **[Foreach From Variable 列舉值]** 區段中顯示動態選項。|  
 |**Foreach NodeList 列舉值**|以 XML 文件列舉節點。 選取這個值就會在 **[Foreach NodeList 列舉值]** 區段中顯示動態選項。|  
 |**Foreach SMO 列舉值**|列舉 SMO 物件。 選取這個值就會在 **[Foreach SMO 列舉值]** 區段中顯示動態選項。|  
 |**Foreach Azure Blob 列舉值**|列舉指定 Blob 位置中的 Blob 檔案。 選取此值可在 **[Foreach ADO 列舉值]** 區段中顯示動態選項。|  
-|**Foreach ADLS 檔案列舉值**|列舉在 ADLS 上具有篩選條件中的檔案。 選取這個值就會在 [Foreach ADLS 檔案列舉值]  區段中顯示動態選項。|
+|**Foreach ADLS 檔案列舉值**|使用篩選準則列舉 ADLS 上的檔案。 選取這個值就會在 [Foreach ADLS 檔案列舉值]**** 區段中顯示動態選項。|
   
  **運算式**  
  按一下或展開 **[運算式]** ，即可檢視現有屬性運算式的清單。 按一下省略符號 **(...)** 按鈕以新增列舉值屬性的屬性運算式，或是編輯和評估現有的屬性運算式。  
   
- **相關主題：** [Integration Services &#40;SSIS&#41; 運算式](expressions/integration-services-ssis-expressions.md)、[屬性運算式編輯器](expressions/property-expressions-editor.md)、[運算式產生器](expressions/expression-builder.md)  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 運算式](expressions/integration-services-ssis-expressions.md)、[屬性運算式編輯器](expressions/property-expressions-editor.md)、[運算式](expressions/expression-builder.md)產生器    
   
 ## <a name="enumerator-dynamic-options"></a>列舉值動態選項  
   
@@ -72,18 +72,18 @@ ms.locfileid: "66428807"
 >   
 >  當您指定副檔名時，此列舉值也會傳回附加其他字元之相同副檔名的檔案 (這個行為與作業系統中 **dir** 命令的行為相同，而且此命令也會針對回溯相容性比較 8.3 檔案名稱)。列舉值的這個行為可能會導致非預期的結果。 例如，您只想要列舉 Excel 2003 檔案，而且指定了 "*.xls"。 不過，此列舉值也會傳回 Excel 2007 檔案，因為這些檔案的副檔名為 ".xlsx"。  
 >   
->  您可以使用運算式指定要包括在集合中的檔案，方法是展開 [集合]  頁面上的 [運算式]  ，選取 **FileSpec** 屬性，然後按一下省略符號按鈕 (...) 來新增屬性運算式。 如需動態選取所指定的檔案的詳細資訊，請參閱[SSIS-動態設定檔案遮罩：FileSpec](https://rajsudeep.blogspot.com/2010/09/ssisdynamically-set-file-mask-filespec.html)  
+>  您可以使用運算式指定要包括在集合中的檔案，方法是展開 [集合]**** 頁面上的 [運算式]****，選取 **FileSpec** 屬性，然後按一下省略符號按鈕 (...) 來新增屬性運算式。 如需動態選取所指定檔案的詳細資訊，請參閱[SSIS-動態設定檔案遮罩： FileSpec](https://rajsudeep.blogspot.com/2010/09/ssisdynamically-set-file-mask-filespec.html)  
   
  **完整**  
  選取即可擷取檔案名稱的完整路徑。 如果在檔案選項中指定萬用字元，則會傳回符合篩選的完整路徑。  
   
- **只有名稱**  
+ **僅名稱**  
  選取即可只擷取檔案名稱。 如果在檔案選項中指定萬用字元，則會傳回符合篩選的檔案名稱。  
   
  **名稱和副檔名**  
  選取即可擷取檔案名稱及其副檔名。 如果在檔案選項中指定萬用字元，則會傳回符合篩選的檔案名稱和副檔名。  
   
- **周遊子資料夾**  
+ **遍歷子資料夾**  
  選取即可在列舉中包含子資料夾。  
   
 ### <a name="enumerator--foreach-item-enumerator"></a>列舉值 = Foreach 項目列舉值  
@@ -91,7 +91,7 @@ ms.locfileid: "66428807"
   
  若要更新執行處理工作的屬性，則使用資料行的索引，您可以將變數對應至項目資料行。 列舉值項目中所定義之第一個資料行的索引值為 0，第二個資料行則為 1，以此類推。 每次重複迴圈時，都會更新變數值。 然後，會透過使用這些變數的屬性運算式來更新「執行處理」工作的 `Executable` 和 `WorkingDirectory` 屬性。  
   
- **定義 For Each 項目集合中的項目**  
+ **定義 For Each 專案集合中的專案**  
  提供資料表中每個資料行的值。  
   
 > [!NOTE]  
@@ -109,88 +109,88 @@ ms.locfileid: "66428807"
  **資料行**  
  按一下即可在項目中設定資料行的資料類型。  
   
- **相關主題：** [For Each 項目資料行對話方塊 UI 參考](../../2014/integration-services/for-each-item-columns-dialog-box-ui-reference.md)  
+ **相關主題：** [For Each 專案資料行對話方塊 UI 參考](../../2014/integration-services/for-each-item-columns-dialog-box-ui-reference.md)  
   
 ### <a name="enumerator--foreach-ado-enumerator"></a>列舉值 = Foreach ADO 列舉值  
  Foreach ADO 列舉值可用來列舉 ADO 或 ADO.NET 物件中的資料列或資料表，而這類物件是儲存在變數中。 例如，如果 Foreach 迴圈包括將資料集寫入變數的指令碼工作，您可以使用 Foreach ADO 列舉值來列舉該資料集中的資料列。 如果變數包含 ADO.NET 資料集，則可將列舉值設定成列舉多個資料表中的資料列，或設定成列舉資料表。  
   
  **ADO 物件來源變數**  
- 在清單中選取使用者定義變數，或按一下 [\<新增變數...>]  ，以建立新的變數。  
+ 在清單中選取使用者定義變數，或按一下 [\<新增變數...>]****，以建立新的變數。  
   
 > [!NOTE]  
 >  變數必須為物件資料類型，否則會發生錯誤。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)  
   
- **第一個資料表的資料列**  
+ **第一個資料表中的資料列**  
  選取此選項即可只列舉第一個資料表的資料列。  
   
- **所有資料表的資料列 (僅 ADO.NET 資料集)**  
+ **所有資料表中的資料列（僅限 ADO.NET dataset）**  
  選取即可列舉所有資料表的資料列。 唯有所有列舉的物件都是相同 ADO.NET 資料集的成員時，才可以使用此選項。  
   
- **所有資料表 (僅 ADO.NET 資料集)**  
+ **所有資料表（僅限 ADO.NET 資料集）**  
  選取即可只列舉資料表。  
   
 ### <a name="enumerator--foreach-adonet-schema-rowset-enumerator"></a>列舉值 = Foreach ADO.NET 結構描述資料列集列舉值  
  Foreach ADO.NET 結構描述資料列集列舉值可用來列舉所指定之資料來源的結構描述。 例如，如果 Foreach 迴圈包括「執行 SQL」工作，您可以使用 Foreach ADO.NET 結構描述資料列集列舉值來列舉結構描述 (例如 **AdventureWorks** 資料庫中的資料行)，以及使用「執行 SQL」工作來取得結構描述權限。  
   
  **[連接]**  
- 在清單中選 ADO.NET 連線管理員，或按一下 [\<新增連線...>]  ，以建立新的 ADO.NET 連線管理員。  
+ 在清單中選 ADO.NET 連線管理員，或按一下 [\<新增連線...>]****，以建立新的 ADO.NET 連線管理員。  
   
 > [!IMPORTANT]  
 >  ADO.NET 連接管理員必須使用 OLE DB 的 .NET 提供者。 如果連接到 SQL Server，則建議使用的提供者是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client，會列在 **[連接管理員]** 對話方塊的 **[OleDb 的 .Net 提供者]** 區段中。  
   
- **相關主題：** [ADO 連線管理員](connection-manager/ado-connection-manager.md)、[設定 ADO.NET 連線管理員](configure-ado-net-connection-manager.md)  
+ **相關主題：** [ADO 連接管理](connection-manager/ado-connection-manager.md)器、[設定 ADO.NET 連線管理員](configure-ado-net-connection-manager.md)  
   
- **結構描述**  
+ **Schema**  
  選取要列舉的結構描述。  
   
  **設定限制**  
  設定要套用至指定之結構描述的限制。  
   
- **相關主題：** [結構描述限制對話方塊](../../2014/integration-services/schema-restrictions-dialog-box.md)  
+ **相關主題：** [架構限制對話方塊](../../2014/integration-services/schema-restrictions-dialog-box.md)  
   
 ### <a name="enumerator--foreach-from-variable-enumerator"></a>列舉值 = Foreach From Variable 列舉值  
  Foreach From Variable 列舉值可用來列舉所指定之變數中可列舉的物件。 例如，如果 Foreach 迴圈包括執行查詢並將結果儲存在變數中的「執行 SQL」工作，您可以使用 Foreach From Variable 列舉值來列舉查詢結果。  
   
  **變數**  
- 在清單中選取變數，或按一下 [\<新增變數...>]  建立新的變數。  
+ 在清單中選取變數，或按一下\<[**新增變數 ...** ]> 建立新的變數。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)  
   
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>列舉值 = Foreach NodeList 列舉值  
  Foreach Nodelist 列舉值可用來列舉因為將 XPath 運算式套用至 XML 檔案而產生的 XML 節點集合。 例如，如果 Foreach 迴圈包括指令碼工作，則您可使用 Foreach NodeList 列舉值將符合 XPath 運算式條件的值從 XML 檔案傳送給該指令碼工作。  
   
- 套用至 XML 檔案的 XPath 運算式就是儲存在 OuterXPathString 屬性中的外部 XPath 作業。 如果 XPath 列舉類型設定為`ElementCollection`，則 Foreach NodeList 列舉值可以套用儲存在 InnerXPathString 屬性中的項目集合的內部 XPath 運算式。  
+ 套用至 XML 檔案的 XPath 運算式就是儲存在 OuterXPathString 屬性中的外部 XPath 作業。 如果 XPath 列舉類型設定為`ElementCollection`，則 Foreach NodeList 列舉值可以將儲存在 InnerXPathString 屬性中的內部 XPath 運算式套用至元素的集合。  
   
  若要深入了解 XML 文件和資料，請參閱 MSDN Library 中的[在 .NET Framework 內採用 XML](https://go.microsoft.com/fwlink/?LinkId=56214)。  
   
- **DocumentSourceType**  
+ **[Documentsourcetype]**  
  選取 XML 文件的來源類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
   
  **DocumentSource**  
- 如果 [DocumentSourceType]  設定為 [直接輸入]  ，請提供 XML 程式碼，或按一下省略符號 (...) 按鈕，以使用 [文件來源編輯器]  對話方塊來提供 XML。  
+ 如果 [DocumentSourceType]**** 設定為 [直接輸入]****，請提供 XML 程式碼，或按一下省略符號 (...) 按鈕，以使用 [文件來源編輯器]**** 對話方塊來提供 XML。  
   
- 如果 [DocumentSourceType]  設定為 [檔案連線]  ，請選取檔案連線管理員，或按一下 [\<新增連線...>]  ，以建立新的連線管理員。  
+ 如果 [DocumentSourceType]**** 設定為 [檔案連線]****，請選取檔案連線管理員，或按一下 [\<新增連線...>]****，以建立新的連線管理員。  
   
- **相關主題：** [檔案連線管理員](connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題：** [File 連線管理員](connection-manager/file-connection-manager.md)、檔案[連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 如果 [DocumentSourceType]  設定為 [變數]  ，請選取現有的變數，或按一下 [\<新增變數...>]  ，以建立新的變數。  
+ 如果 [DocumentSourceType]**** 設定為 [變數]****，請選取現有的變數，或按一下 [\<新增變數...>]****，以建立新的變數。  
   
- **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)。  
+ **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)，請[新增變數](../../2014/integration-services/add-variable.md)。  
   
  **EnumerationType**  
  從清單中選取列舉類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|**Navigator**|使用 XPathNavigator 列舉。|  
+|**導覽器**|使用 XPathNavigator 列舉。|  
 |**節點**|列舉 XPath 作業傳回的節點。|  
 |**NodeText**|列舉 XPath 作業傳回的文字節點。|  
 |`ElementCollection`|列舉 XPath 作業傳回的元素節點。|  
@@ -198,55 +198,56 @@ ms.locfileid: "66428807"
  **OuterXPathStringSourceType**  
  選取 XPath 字串的來源類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
   
  `OuterXPathString`  
- 如果 [OuterXPathStringSourceType]  設定為 [直接輸入]  ，請提供 XPath 字串。  
+ 如果 [OuterXPathStringSourceType]**** 設定為 [直接輸入]****，請提供 XPath 字串。  
   
- 如果 [OuterXPathStringSourceType]  設定為 [檔案連線]  ，請選取檔案連線管理員，或按一下 [\<新增連線...>]  ，以建立新的連線管理員。  
+ 如果 [OuterXPathStringSourceType]**** 設定為 [檔案連線]****，請選取檔案連線管理員，或按一下 [\<新增連線...>]****，以建立新的連線管理員。  
   
- **相關主題：** [檔案連線管理員](connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題：** [File 連線管理員](connection-manager/file-connection-manager.md)、檔案[連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 如果 [OuterXPathStringSourceType]  設定為 [變數]  ，請選取現有的變數，或按一下 [\<新增變數...>]  ，以建立新的變數。  
+ 如果 [OuterXPathStringSourceType]**** 設定為 [變數]****，請選取現有的變數，或按一下 [\<新增變數...>]****，以建立新的變數。  
   
- **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)。  
+ **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)，請[新增變數](../../2014/integration-services/add-variable.md)。  
   
  **InnerElementType**  
- 如果**EnumerationType**設定為`ElementCollection`，在清單中選取內部元素的類型。  
+ 如果 [ **EnumerationType** ] 設定`ElementCollection`為，請在清單中選取內部元素的類型。  
   
  **InnerXPathStringSourceType**  
  選取內部 XPath 字串的來源類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
   
  `InnerXPathString`  
- 如果 [InnerXPathStringSourceType]  設定為 [直接輸入]  ，請提供 XPath 字串。  
+ 如果 [InnerXPathStringSourceType]**** 設定為 [直接輸入]****，請提供 XPath 字串。  
   
- 如果 [InnerXPathStringSourceType]  設定為 [檔案連線]  ，請選取檔案連線管理員，或按一下 [\<新增連線...>]  ，以建立新的連線管理員。  
+ 如果 [InnerXPathStringSourceType]**** 設定為 [檔案連線]****，請選取檔案連線管理員，或按一下 [\<新增連線...>]****，以建立新的連線管理員。  
   
- **相關主題：** [檔案連線管理員](connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題：** [File 連線管理員](connection-manager/file-connection-manager.md)、檔案[連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 如果 [InnerXPathStringSourceType]  設定為 [變數]  ，請選取現有的變數，或按一下 [\<新增變數...>]  ，以建立新的變數。  
+ 如果 [InnerXPathStringSourceType]**** 設定為 [變數]****，請選取現有的變數，或按一下 [\<新增變數...>]****，以建立新的變數。  
   
- **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)。  
+ **相關主題：** [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)，請[新增變數](../../2014/integration-services/add-variable.md)。  
   
 ### <a name="enumerator--foreach-smo-enumerator"></a>列舉值 = Foreach SMO 列舉值  
  Foreach SMO 列舉值可用來列舉 SQL Server 管理物件 (SMO) 物件。 例如，如果 Foreach 迴圈包括「執行 SQL」工作，您可以使用 Foreach SMO 列舉值來列舉 **AdventureWorks** 資料庫中的資料表，並執行用來計算每個資料表中資料列數目的查詢。  
   
  **[連接]**  
- 選取現有的 ADO.NET 連線管理員，或按一下 [\<新增連線...>]  ，以建立新的連線管理員。  
+ 選取現有的 ADO.NET 連線管理員，或按一下 [\<新增連線...>]****，以建立新的連線管理員。  
   
- 相關主題：[ADO.NET 連線管理員](connection-manager/ado-net-connection-manager.md)、[設定 ADO.NET 連線管理員](configure-ado-net-connection-manager.md)  
+ 
+  [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)＞  
   
- **列舉**  
+ **列出**  
  指定要列舉的 SMO 物件。  
   
  **瀏覽**  
@@ -255,7 +256,8 @@ ms.locfileid: "66428807"
  **相關主題：** [選取 SMO 列舉對話方塊](../../2014/integration-services/select-smo-enumeration-dialog-box.md)  
   
 ### <a name="enumerator--foreach-azure-blob-enumerator"></a>列舉值 = Foreach Azure Blob 的列舉值  
- **Azure Blob 的列舉值**可讓 SSIS 封裝列舉指定 Blob 位置中的 Blob 檔案。 列舉之 Blob 檔案的名稱可以儲存在變數中，也可以用於 Foreach 迴圈容器中的工作中。  
+ 
+  **Azure Blob 的列舉值**可讓 SSIS 封裝列舉指定 Blob 位置中的 Blob 檔案。 列舉之 Blob 檔案的名稱可以儲存在變數中，也可以用於 Foreach 迴圈容器中的工作中。  
   
  **Azure 儲存體連線管理員**  
  選取現有的 Azure 儲存體連接管理員，或建立參考 Azure 儲存體帳戶的新連接管理員。  
@@ -271,10 +273,10 @@ ms.locfileid: "66428807"
  **Blob 名稱篩選**  
  指定名稱篩選條件以列舉具有特定名稱模式的檔案。 例如 MySheet*.xls\* 會包含 MySheet001.xls 及 MySheetABC.xlsx 一類的檔案。  
   
- **Blob 的起迄時間範圍篩選**  
+ **從/到篩選的 Blob 時間範圍**  
  指定時間範圍篩選條件。 這會列舉在 **TimeRangeFrom** 之後及在 **TimeRangeTo** 之前修改的檔案。  
-### <a name="enumerator--foreach-adls-file-enumerator"></a>列舉值 = Foreach ADLS 檔案列舉值  
-**ADLS 檔案列舉值**可讓 SSIS 封裝列舉在 ADLS 上具有篩選條件的檔案。 斜線 (`/`)-可以儲存在變數中並使用 「 Foreach 迴圈 」 容器內的工作中有前置詞的列舉檔案的完整路徑。
+### <a name="enumerator--foreach-adls-file-enumerator"></a> 列舉值 = Foreach ADLS 檔案列舉值  
+**ADLS 檔案列舉**值可讓 SSIS 封裝以篩選器列舉 ADLS 上的檔案。 以斜線（`/`）前置的列舉檔案完整路徑可以儲存在變數中，並用於 Foreach 迴圈容器內的工作中。
   
 **AzureDataLakeConnection**  
 指定 Azure Data Lake 連線管理員，或建立參考 ADLS 帳戶的新連線管理員。   
@@ -283,7 +285,7 @@ ms.locfileid: "66428807"
 指定要搜尋的 ADLS 目錄。
   
 **FileNamePattern**  
-指定檔案名稱篩選。 會列舉其名稱符合指定的模式的檔案。 支援萬用字元 `*` 和 `?`。 
+指定檔案名稱篩選。 只會列舉名稱符合指定模式的檔案。 支援萬用字元 `*` 和 `?`。 
   
 **SearchRecursively**  
 指定是否在指定的目錄內以遞迴方式搜尋。  
@@ -292,12 +294,12 @@ ms.locfileid: "66428807"
   
 -   bidn.com 上的部落格文章： [SSIS ForEach NodeList 列舉值](https://go.microsoft.com/fwlink/?LinkId=220671)。  
   
--   部落格文章[SSIS-動態設定檔案遮罩：FileSpec](https://rajsudeep.blogspot.com/2010/09/ssisdynamically-set-file-mask-filespec.html)。  
+-   Blog 專案， [SSIS-動態設定檔案遮罩： FileSpec](https://rajsudeep.blogspot.com/2010/09/ssisdynamically-set-file-mask-filespec.html)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Foreach 迴圈編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
- [Foreach 迴圈編輯器&#40;變數對應頁面&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
+ [[Foreach 迴圈編輯器] &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [Foreach 迴圈編輯器 &#40;變數對應頁面&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
  [運算式頁面](expressions/expressions-page.md)   
  [For 迴圈容器](control-flow/for-loop-container.md)  
   

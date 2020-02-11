@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3c36d070701712158587f283df0f55cffadac2ca
-ms.sourcegitcommit: d0d2505d3d517e7b3ea9c4aef4d6fd08aeb28d54
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67197590"
 ---
 # <a name="create-a-project"></a>建立專案
@@ -34,7 +34,7 @@ ms.locfileid: "67197590"
      在 [範本]  方塊中，請選取一個範本。 選取的專案範本的簡短描述會出現在 [範本]  方塊以下。  
   
      **名稱**  
-     請輸入您想要建立的指令碼專案名稱。 和專案具有相同名稱的資料夾也會建立於顯示在 [位置]  欄位中的位置。 針對某些專案，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會建立來源以及其他支援檔案，並將它們加入新專案資料夾。  
+     請輸入您想要建立的指令碼專案名稱。 和專案具有相同名稱的資料夾也會建立於顯示在 [位置]  欄位中的位置。 針對某些專案， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會建立來源以及其他支援檔案，並將它們加入新專案資料夾。  
   
     > [!NOTE]  
     >  針對某些專案類型，[名稱]  文字方塊無法使用，因為指定位置會設定名稱。 例如，Web 應用程式和 Web 服務位於 Web 伺服器上，並且從該伺服器上指定的虛擬目錄衍生出它們的名稱。  
@@ -91,15 +91,15 @@ ms.locfileid: "67197590"
   
 4.  按一下 [確定]  。  
   
- 您可以設定指令碼專案的名稱，但資料夾名稱由 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 建立，無法變更。 您可以使用 [新增專案]  對話方塊，為一組常用資料夾設定磁碟和路徑規格。 在方案總管  中，以滑鼠右鍵按一下方案，然後按一下 [新增]  。 指令碼專案資料夾的預設位置：C:\Documents and Settings\\使用者名稱  \My Documents\SQL Server Management Studio\Projects\\。  
+ 您可以設定指令碼專案的名稱，但資料夾名稱由 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 建立，無法變更。 您可以使用 [新增專案]  對話方塊，為一組常用資料夾設定磁碟和路徑規格。 在方案總管  中，以滑鼠右鍵按一下方案，然後按一下 [新增]  。 指令碼專案資料夾的預設位置是 C:\Documents and Settings\\<使用者名>  \My Documents\SQL Server Management Studio\Projects\\。  
   
 ## <a name="see-also"></a>另請參閱  
  [方案總管](solution-explorer.md)   
- [將現有的專案加入方案](add-an-existing-project-to-a-solution.md)   
- [將新的項目加入至專案](add-new-items-to-a-project.md)   
- [將現有的項目加入至專案](add-existing-items-to-a-project.md)   
+ [將現有的專案加入至方案](add-an-existing-project-to-a-solution.md)   
+ [將新專案新增至專案](add-new-items-to-a-project.md)   
+ [將現有專案加入至專案](add-existing-items-to-a-project.md)   
  [變更專案的預設位置](change-the-default-location-for-projects.md)   
- [移除或刪除項目或專案](remove-or-delete-an-item-or-project.md)   
+ [移除或刪除專案或專案](remove-or-delete-an-item-or-project.md)   
  [刪除方案](delete-a-solution.md)  
   
   

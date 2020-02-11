@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 236600f0a4ff2b77daaab2266b7e927e6858447b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106730"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>加入外部影像 (報表產生器及 SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66106730"
   
      若影像位在處於原生模式的報表伺服器上，請在 [使用此影像]  方塊中鍵入影像的相對路徑，例如 ../images/image1.jpg。  
   
-     在 SharePoint 整合的模式中或任何其他網站的報表伺服器上的影像，輸入完整的 URL 中的映像**使用此映像** 方塊中-例如 http://\<//<sharepoint 伺服器名稱 > /\<網站 > /Documents/images/image1.jpg。  
+     若為 SharePoint 整合模式之報表伺服器上的影像，或任何其他網站，請在 [**使用此影像**] 方塊中輸入影像的完整 URL，例如 HTTP://\<伺服器名稱>/\<site>/documents/images/image1.jpg。  
   
      如需詳細資訊，請參閱[指定外部項目的路徑 &#40;報表產生器及 SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66106730"
   
 ## <a name="see-also"></a>另請參閱  
  [在報表中內嵌影像 &#40;報表產生器及 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [加入背景影像 &#40;報表產生器及 SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)   
+ [新增背景影像 &#40;報表產生器及 SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)   
  [影像屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

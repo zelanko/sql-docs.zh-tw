@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 040d49e66e9feed4f8bc213c8189c8d41486b77d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107775"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>鍵盤快速鍵 (報表產生器)
@@ -60,7 +60,7 @@ ms.locfileid: "66107775"
 |剪下|CTRL+X、ALT+H+X|  
 |貼上|CTRL+V、ALT+H+V|  
 |全選。|CTRL+A|  
-|恢復|CTRL+Z、ALT+Z|  
+|復原|CTRL+Z、ALT+Z|  
 |取消復原|CTRL+Y、ALT+Y|  
 |放大。|CTRL+加號 (+)|  
 |縮小。|CTRL+減號 (-)|  

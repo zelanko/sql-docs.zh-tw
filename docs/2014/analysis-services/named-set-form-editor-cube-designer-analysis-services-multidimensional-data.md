@@ -1,5 +1,5 @@
 ---
-title: 命名集表單編輯器 （計算索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
+title: 命名集表單編輯器（計算索引標籤，Cube 設計師）（Analysis Services 多維度資料） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 861824359ff1cd9700f5acaa64d0b2155c870add
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072347"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>命名集表單編輯器 (計算索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
@@ -25,7 +25,7 @@ ms.locfileid: "66072347"
 > [!NOTE]  
 >  此窗格只會以表單檢視方式顯示。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **名稱**  
  鍵入命名集的名稱。  
   
@@ -38,14 +38,14 @@ ms.locfileid: "66072347"
 >  此選項必須包含有效的集合運算式。  
   
 ## <a name="see-also"></a>另請參閱  
- [計算](multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [建立命名的集](multidimensional-models/create-named-sets.md)   
- [Cube 設計師&#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [計算&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [工具列&#40;計算索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [指令碼組合管理&#40;計算索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [計算工具&#40;計算索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
- [導出成員表單編輯器&#40;計算索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [指令碼編輯器&#40;計算索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
+ [Acwp](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [建立命名集](multidimensional-models/create-named-sets.md)   
+ [Cube 設計工具 &#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [&#40;Cube 設計師的計算&#41; &#40;Analysis Services 多維度資料&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [工具列 &#40;計算] 索引標籤，Cube 設計師&#41; &#40;Analysis Services 多維度資料&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [腳本召集人 &#40;計算] 索引標籤、Cube 設計工具&#41; &#40;Analysis Services 多維度資料&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [計算工具 &#40;計算] 索引標籤，Cube 設計師&#41; &#40;Analysis Services 多維度資料&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
+ [匯出成員表單編輯器 &#40;計算] 索引標籤、Cube 設計工具&#41; &#40;Analysis Services 多維度資料&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [腳本編輯器 &#40;[計算] 索引標籤、Cube 設計工具&#41; &#40;Analysis Services 多維度資料&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

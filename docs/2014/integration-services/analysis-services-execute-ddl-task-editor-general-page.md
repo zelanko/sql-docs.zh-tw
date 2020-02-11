@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 執行 DDL 工作編輯器 （一般頁面） |Microsoft Docs
+title: Analysis Services 執行 DDL 工作編輯器（一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6a8178eeb65c83836a979d79c605260692b549cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061548"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Analysis Services 執行 DDL 工作編輯器 (一般頁面)
-  使用 [Analysis Services 執行 DDL 工作編輯器]  對話方塊的 [一般]  頁面，即可命名並描述 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行 DDL 工作。  
+  使用 [Analysis Services 執行 DDL 工作編輯器]**** 對話方塊的 [一般]**** 頁面，即可命名並描述 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行 DDL 工作。  
   
  若要了解這個工作，請參閱＜ [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **名稱**  
  提供 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行 DDL 工作的唯一名稱。 這個名稱是作為工作圖示中的標籤使用。  
   
@@ -38,10 +38,10 @@ ms.locfileid: "66061548"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Analysis Services 執行 DDL 工作編輯器 &#40;DDL 頁面&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
+ [Analysis Services &#40;DDL 頁面上執行 DDL 工作編輯器&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
  [運算式頁面](expressions/expressions-page.md)   
  [控制流程](control-flow/control-flow.md)   
- [Analysis Services 指令碼語言&#40;ASSL&#41;參考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Analysis Services 指令碼語言 &#40;ASSL&#41; 參考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
  [XML for Analysis &#40;XMLA&#41; 參考](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

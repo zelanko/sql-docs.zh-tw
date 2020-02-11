@@ -1,5 +1,5 @@
 ---
-title: 地圖檢視區屬性對話方塊、 最佳化 |Microsoft Docs
+title: 地圖區屬性對話方塊、優化 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1adbeccdedb8d80900047790d94ff35568460ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108283"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>地圖檢視區屬性對話方塊、最佳化
@@ -27,8 +27,8 @@ ms.locfileid: "66108283"
   
  按一下 **[運算式]** (*fx*) 按鈕來編輯設定選項值的運算式。  
   
-## <a name="options"></a>選項  
- **[效能]**  
+## <a name="options"></a>選項。  
+ **效能**  
  將指標朝 **[效能]** 滑近一點來簡化地圖並顯示較少的細節。  
   
  **品質**  
@@ -39,6 +39,6 @@ ms.locfileid: "66108283"
   
 ## <a name="see-also"></a>另請參閱  
  [地圖 &#40;報表產生器及 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [報表疑難排解：地圖報表 &#40;報表產生器及 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [報表疑難排解：地圖報表 &#40;報表產生器和 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c648a1f48396a40db0451de14facd342a8bfa797
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482895"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 功能及工作
@@ -26,9 +26,9 @@ ms.locfileid: "65482895"
   
 -   [實體 &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   
--   [屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [Master Data Services &#40;的屬性&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
--   [網域屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [以網域為基礎的屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
 -   [屬性群組 &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)  
   
@@ -40,11 +40,11 @@ ms.locfileid: "65482895"
   
 -   [交易 &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)  
   
--   [註解 &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
+-   [批註 &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
   
 -   [階層 &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)  
   
--   [集合 &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+-   [&#40;Master Data Services 的集合&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
 ## <a name="improve-data-quality"></a>改善資料品質  
   
@@ -60,15 +60,15 @@ ms.locfileid: "65482895"
   
 ## <a name="move-data"></a>移動資料  
   
--   [資料匯入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+-   [資料匯入 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
--   [將資料匯出&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
+-   [將資料匯出 &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
--   [部署模型 &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+-   [&#40;Master Data Services 部署模型&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
 ## <a name="develop-a-custom-application"></a>開發自訂應用程式  
   
--   [開發人員指南&#40;Master Data Services&#41;](develop/master-data-services-developer-documentation.md)  
+-   [開發人員指南 &#40;Master Data Services&#41;](develop/master-data-services-developer-documentation.md)  
   
 -   <xref:Microsoft.MasterDataServices>  
   

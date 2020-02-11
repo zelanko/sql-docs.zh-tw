@@ -1,5 +1,5 @@
 ---
-title: 加入 Cube 維度對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
+title: '[加入 Cube 維度] 對話方塊（Analysis Services 多維度資料） |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f147c438e16c00e0e1b979f2d3e2fe6e16cf7428
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062950"
 ---
 # <a name="add-cube-dimension-dialog-box-analysis-services---multidimensional-data"></a>加入 Cube 維度對話方塊 (Analysis Services - 多維度資料)
-  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [加入 Cube 維度]  對話方塊，即可將資料庫維度的參考加入 Cube。 您可以執行下列其中一個動作，來顯示 [加入 Cube 維度]  對話方塊：  
+  使用 ** 中的 [加入 Cube 維度]**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可將資料庫維度的參考加入 Cube。 您可以執行下列其中一個動作，來顯示 [加入 Cube 維度]**** 對話方塊：  
   
--   在 Cube 設計師之 [Cube 結構]  或 [維度使用方式]  索引標籤的 [工具列]  窗格中，按一下 [加入 Cube 維度]  。  
+-   在 Cube 設計師之 [Cube 結構]**** 或 [維度使用方式]**** 索引標籤的 [工具列]**** 窗格中，按一下 [加入 Cube 維度]****。  
   
--   在 Cube 設計師的 [Cube 結構]  索引標籤上，以滑鼠右鍵按一下 [維度]  窗格，然後從操作功能表中選取 [加入 Cube 維度]  。  
+-   在 Cube 設計師的 [Cube 結構]**** 索引標籤上，以滑鼠右鍵按一下 [維度]**** 窗格，然後從操作功能表中選取 [加入 Cube 維度]****。  
   
--   在 Cube 設計師的 [維度使用方式]  索引標籤上，以滑鼠右鍵按一下 [方格]  窗格，然後從操作功能表中選取 [加入 Cube 維度]  。  
+-   在 Cube 設計師的 [維度使用方式]**** 索引標籤上，以滑鼠右鍵按一下 [方格]**** 窗格，然後從操作功能表中選取 [加入 Cube 維度]****。  
   
 > [!NOTE]  
 >  每個 Cube 維度對量值群組只能有一個關聯性。 不過，如果 Cube 維度所依據的資料庫維度，在資料來源檢視中透過一個以上的關聯性與量值群組相關，則您可以建立一個以上的 Cube 維度並將其加入至 Cube。 此類維度被稱為角色扮演維度，且一般是和時間維度一起發生。  
@@ -41,6 +41,6 @@ ms.locfileid: "66062950"
 >  如果有依據相同資料庫維度之一個以上的 Cube 維度加入至一個 Cube，則其他的 Cube 維度會被稱為角色扮演維度。  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services 的設計工具和對話方塊 &#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

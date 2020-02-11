@@ -16,17 +16,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2fbc640573d6d897205e11dbc40d40210502ee60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109313"
 ---
 # <a name="delete-rows-dialog-box"></a>刪除資料列對話方塊
   使用 **[刪除資料列]** 對話方塊，即可從資料表、矩陣或清單資料區中刪除資料列。 如果是與群組相關聯的資料列，您也可以刪除群組定義。  
   
 ## <a name="options"></a>選項。  
- **刪除資料列和相關聯的群組**  
+ **刪除資料列和相關群組**  
  選擇此選項可刪除資料列和關聯的群組定義。  
   
  **只刪除資料列**  

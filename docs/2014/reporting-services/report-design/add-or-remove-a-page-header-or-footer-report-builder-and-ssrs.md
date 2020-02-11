@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 88a4cb2598b8c57813f3d2034434eeef31f49a76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106544"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>加入或移除頁首或頁尾 (報表產生器及 SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66106544"
   
     -   **矩形**  
   
-    -   **影像**  
+    -   **映像**  
   
 3.  以滑鼠右鍵按一下頁首，然後按一下 [頁首屬性]  來加入框線、背景影像、色彩，或調整頁首的寬度。 然後按一下 [確定]  。  
   

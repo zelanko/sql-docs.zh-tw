@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cf214691c2bcffeb617d3f7534fac94f8941db5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144482"
 ---
 # <a name="open-log-file-viewer"></a>開啟記錄檔檢視器
@@ -30,7 +30,7 @@ ms.locfileid: "63144482"
   
 -   作業記錄  
   
--   [SQL Server]  
+-   SQL Server  
   
 -   SQL Server Agent  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63144482"
 ##  <a name="BeforeYouBegin"></a> 權限  
  若要存取線上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的記錄檔，需要 securityadmin 固定伺服器角色的成員資格。  
   
- 若要存取離線 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的記錄檔，您必須具有 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空間以及儲存記錄檔之資料夾的讀取權限。 如需詳細資訊，請參閱 [檢視離線記錄檔](view-offline-log-files.md)主題的＜安全性＞一節。  
+ 若要存取離線 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的記錄檔，您必須具有 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空間以及儲存記錄檔之資料夾的讀取權限。 如需詳細資訊，請參閱 [檢視離線記錄檔](view-offline-log-files.md)主題中的＜安全性＞一節。  
   
 ### <a name="security"></a>安全性  
  需要 securityadmin 固定伺服器角色中的成員資格。  

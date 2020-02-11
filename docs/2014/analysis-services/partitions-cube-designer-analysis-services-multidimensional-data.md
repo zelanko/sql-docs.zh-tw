@@ -1,5 +1,5 @@
 ---
-title: 資料分割 （Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
+title: 資料分割（Cube 設計工具）（Analysis Services-多維度資料） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59a6bb7d661e7761e2c28259bf8d95ae05545fa1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072074"
 ---
 # <a name="partitions-cube-designer-analysis-services---multidimensional-data"></a>資料分割 (Cube 設計師) (Analysis Services - 多維度資料)
   使用 Cube 設計師中的 **[資料分割]** 索引標籤，即可建立和修改資料分割，包括 Cube 中每個量值群組的儲存、主動式快取以及回寫設定。  
   
- **[資料分割]** 索引標籤包含下列窗格：  
+ 
+  **[資料分割]** 索引標籤包含下列窗格：  
   
 ## <a name="panes"></a>窗格  
  **工具列**  
  使用工具列來執行索引標籤上的一般動作。  
   
  **量值群組**  
- 使用 [量值群組]  窗格，即可建立和修改 Cube 中每個量值群組的資料分割。  
+ 使用 [量值群組]**** 窗格，即可建立和修改 Cube 中每個量值群組的資料分割。  
   
   

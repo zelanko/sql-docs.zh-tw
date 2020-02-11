@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 617a4e01b3fd4f8dcbc6d929c2a26d483f2fa1ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108856"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>設定 URL (SSRS 組態管理員)
@@ -24,7 +24,8 @@ ms.locfileid: "66108856"
   
  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具可設定 URL， URL 的所有部分都會定義在這個工具中。 與舊版不同的是，Internet Information Services (IIS) 網站不再提供 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本中 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 應用程式的存取權。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供可在大多數部署狀況下順利運作的預設值，包括與其他 Web 服務和應用程式的並存部署。 預設 URL 會併入執行個體名稱，好讓在相同電腦上執行多個報表伺服器執行個體時的 URL 衝突風險降到最低。  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供可在大多數部署狀況下順利運作的預設值，包括與其他 Web 服務和應用程式的並存部署。 預設 URL 會併入執行個體名稱，好讓在相同電腦上執行多個報表伺服器執行個體時的 URL 衝突風險降到最低。  
   
  本主題提供下列工作的指示：  
   
@@ -34,9 +35,9 @@ ms.locfileid: "66108856"
   
 -   設定進階的 URL 屬性，以定義其他 URL。  
   
- 如需詳細資訊如何儲存和維護 Url 或是互通性問題，請參閱 <<c0> [ 關於 「 URL 保留項目和註冊&#40;SSRS 組態管理員&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)並[Install Reporting服務和 Internet Information Services 並排顯示&#40;SSRS 原生模式&#41;](install-reporting-and-internet-information-services-side-by-side.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。</c0> 若要檢閱 Reporting Services 安裝中常用的 URL 範例，請參閱本主題的＜ [URL 範例](#URLExamples) ＞。  
+ 如需有關如何儲存及維護 Url 或互通性問題的詳細資訊，請參閱[關於 Url 保留專案和註冊 &#40;ssrs Configuration Manager&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)和安裝 Reporting Services 和 Internet Information Services 《線上叢書》中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [的並行 &#40;ssrs 原生模式](install-reporting-and-internet-information-services-side-by-side.md)&#41;。 若要檢閱 Reporting Services 安裝中常用的 URL 範例，請參閱本主題的＜ [URL 範例](#URLExamples) ＞。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  在您建立或修改 URL 之前，請記住以下要點：  
   
 -   您在報表伺服器電腦上必須是本機管理員群組的成員。  
@@ -53,7 +54,7 @@ ms.locfileid: "66108856"
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到本機報表伺服器執行個體。  
   
-2.  按一下 **[Web 服務 URL]** 。  
+2.  按一下 **[Web 服務 URL]**。  
   
 3.  指定虛擬目錄。 此虛擬目錄名稱會識別哪一個應用程式將接收要求。 由於 IP 位址和通訊埠可由多個應用程式共用，所以此虛擬目錄名稱會指定哪一個應用程式要接收要求。  
   
@@ -61,17 +62,17 @@ ms.locfileid: "66108856"
   
      如果是報表伺服器 Web 服務，預設虛擬目錄名稱會是 **ReportServer**。  
   
-4.  指定可唯一識別網路上之報表伺服器電腦的 IP 位址。 如果您想要指定主機標頭，或針對相同的應用程式執行個體定義其他 URL，您必須按一下 **[進階]** 。 如需有關如何針對 URL 設定進階屬性的指示，請參閱本主題稍後的指示。 否則，請使用 **[Web 服務 URL]** 頁面，從下列值當中選取：  
+4.  指定可唯一識別網路上之報表伺服器電腦的 IP 位址。 如果您想要指定主機標頭，或針對相同的應用程式執行個體定義其他 URL，您必須按一下 **[進階]**。 如需有關如何針對 URL 設定進階屬性的指示，請參閱本主題稍後的指示。 否則，請使用 **[Web 服務 URL]** 頁面，從下列值當中選取：  
   
-    -   **[全部指派]** 會指定指派給電腦的任何一個 IP 位址都可以用於指向報表伺服器應用程式的 URL。 這個值也包含易記主機名稱 (如電腦名稱)，網域名稱伺服器可將該名稱解析為指派給電腦的 IP 位址。 這是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 的預設值。  
+    -   [**全部指派**] 會指定指派給電腦的任何 IP 位址都可以用於指向報表伺服器應用程式的 URL。 這個值也包含易記主機名稱 (如電腦名稱)，網域名稱伺服器可將該名稱解析為指派給電腦的 IP 位址。 這是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 的預設值。  
   
-    -   **[全未指派]** 會指定報表伺服器將會接收另一個應用程式尚未處理的任何要求。 建議您避免使用這個選項。 如果您選取這個選項，則另一個具有更強式 URL 保留項目的應用程式就可能會攔截要送給報表伺服器的要求。  
+    -   [**全部未指派**] 會指定報表伺服器將會接收另一個應用程式尚未處理的任何要求。 建議您避免使用這個選項。 如果您選取這個選項，則另一個具有更強式 URL 保留項目的應用程式就可能會攔截要送給報表伺服器的要求。  
   
-    -   **[127.0.0.1]** 是用來存取 localhost 的 IPv4 位址， 它可支援報表伺服器電腦上的本機管理。 如果您只選取這個值，則只有在本機登入報表伺服器電腦的使用者才會擁有此應用程式的存取權。  
+    -   **127.0.0.1**是用來存取 Localhost 的 IPv4 位址。 它可支援報表伺服器電腦上的本機管理。 如果您只選取這個值，則只有在本機登入報表伺服器電腦的使用者才會擁有此應用程式的存取權。  
   
-    -   **[::1]** 是 IPv6 格式的回送位址。  
+    -   **：： 1**是 IPv6 格式的回送位址。  
   
-    -   特定的 IP 位址也會出現在這個清單中。 IP 位址可以採用 IPv4 和 IPv6 格式。 *Nnn.nnn.nnn.nnn* 是電腦網路介面卡的 32 位元 IPv4 位址。 IPv6 位址為 128 位元，具有以冒號分隔的八個 4 位元組的欄位：\<前置詞>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
+    -   特定的 IP 位址也會出現在這個清單中。 IP 位址可以採用 IPv4 和 IPv6 格式。 *Nnn*是您電腦上的網路介面卡的32位 IPv4 位址。 IPv6 位址為 128 位元，具有以冒號分隔的八個 4 位元組的欄位：\<前置詞>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
   
          如果您有多張網路介面卡或是您的網路同時支援 IPv4 和 IPv6 位址，您將會看到多個 IP 位址。 如果您只選取一個 IP 位址，它會將應用程式存取限制為只有該 IP 位址 (以及網域名稱伺服器對應至該位址的任何主機名稱)。 您無法使用 localhost 來存取報表伺服器，而且也不能使用安裝於報表伺服器電腦上之其他網路卡的 IP 位址。 一般來說，如果您選取這個值，這是因為您正在設定多個同時也指定明確 IP 位址或主機名稱的 URL 保留項目 (例如，一個項目用於內部網路連接的網路介面卡，另一個項目用於外部網路連接)。  
   
@@ -95,15 +96,15 @@ ms.locfileid: "66108856"
   
 10. 按一下頁面 **[URL]** 區段中的連結來測試此 URL。 請注意，在您可以測試此 URL 之前，必須先建立及設定報表伺服器資料庫。 如需指示，請參閱[建立原生模式報表伺服器資料庫 &#40;SSRS 設定管理員&#41;](ssrs-report-server-create-a-native-mode-report-server-database.md)。  
   
-11. 此外，如果您的報表伺服器設定成使用 SharePoint 整合模式，請在 SharePoint 管理中心內設定報表伺服器 Web 服務 URL。 如需如何更新在 SharePoint 管理中心內的報表伺服器 Web 服務 URL 的詳細資訊，請參閱[設定和管理報表伺服器的&#40;Reporting Services SharePoint 模式&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md)和[Reporting Services 報表伺服器&#40;SharePoint 模式&#41;](../reporting-services-report-server-sharepoint-mode.md)。  
+11. 此外，如果您的報表伺服器設定成使用 SharePoint 整合模式，請在 SharePoint 管理中心內設定報表伺服器 Web 服務 URL。 如需如何在 SharePoint 管理中心內更新報表伺服器 Web 服務 URL 的詳細資訊，請參閱設定[和管理報表伺服器 &#40;Reporting Services Sharepoint 模式&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md)和[Reporting Services 報表伺服器 &#40;sharepoint 模式&#41;](../reporting-services-report-server-sharepoint-mode.md)。  
   
 ### <a name="to-create-a-url-reservation-for-report-manager"></a>為報表管理員建立 URL 保留項目  
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到報表伺服器執行個體。  
   
-2.  按一下 **[報表管理員 URL]** 。  
+2.  按一下 **[報表管理員 URL]**。  
   
-3.  指定虛擬目錄。 報表管理員會接聽與報表伺服器 Web 服務相同的 IP 位址和通訊埠。 如果您設定報表管理員指向不同的報表伺服器 Web 服務，您必須修改 RSReportServer.config 檔案中的報表管理員 URL 設定。 如需相關指示，請參閱 <<c0> [ 設定報表管理員&#40;原生模式&#41;](../report-server/configure-web-portal.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。</c0>  
+3.  指定虛擬目錄。 報表管理員會接聽與報表伺服器 Web 服務相同的 IP 位址和通訊埠。 如果您設定報表管理員指向不同的報表伺服器 Web 服務，您必須修改 RSReportServer.config 檔案中的報表管理員 URL 設定。 如需指示，請參閱《線上叢書》中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的[設定 &#40;原生模式&#41;報表管理員](../report-server/configure-web-portal.md)。  
   
 4.  如果您安裝了 SSL 憑證，就可以選取它，以便要求送給報表管理員的所有要求都透過 HTTPS 路由傳送。  
   
@@ -124,9 +125,9 @@ ms.locfileid: "66108856"
   
 #### <a name="to-set-advanced-properties-on-a-url"></a>設定 URL 的進階屬性  
   
-1.  在 **[Web 服務 URL]** 或 **[報表管理員 URL]** 頁面上，按一下 **[進階]** 。  
+1.  在 **[Web 服務 URL]** 或 **[報表管理員 URL]** 頁面上，按一下 **[進階]**。  
   
-2.  按一下 **[加入]** 。  
+2.  按一下 [新增]  。  
   
 3.  按一下 IP 位址或主機標頭名稱。 如果您指定主機標頭，請務必指定 DNS 服務可以解析的名稱。 如果您要指定公開可用的網域名稱，請包含整個 URL，包括 http://www 在內。  
   
@@ -139,7 +140,7 @@ ms.locfileid: "66108856"
 ## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>相同電腦上多個報表伺服器執行個體的 URL  
  如果您為多個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]執行個體保留 URL，您應該遵循命名慣例，好讓您可以避免命名衝突。 如需詳細資訊，請參閱[多重執行個體報表伺服器部署的 URL 保留項目 &#40;SSRS 組態管理員&#41;](url-reservations-for-multi-instance-report-server-deployments.md)。  
   
-##  <a name="URLExamples"></a> URL 組態的範例  
+##  <a name="URLExamples"></a>URL 設定的範例  
  下列清單顯示一些報表伺服器 URL 的範例：  
   
 -   http://localhost/reportserver  

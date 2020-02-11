@@ -10,30 +10,32 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
 ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63261075"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>設定報表伺服器服務帳戶 (SSRS 組態管理員)
 
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會實作成單一服務，其中包含報表伺服器 Web 服務、報表管理員，以及用於排程報表處理和訂閱傳遞的背景處理應用程式。 本主題將說明如何在一開始設定服務帳戶，以及如何使用 Reporting Services 組態工具來修改此帳戶或密碼。  
   
 ## <a name="initial-configuration"></a>初始組態
 
- 報表伺服器服務帳戶是在安裝期間所定義。 您可以在網域使用者帳戶或內建帳戶 (如 `NetworkService` 帳戶) 之下執行此服務。 沒有預設帳戶;您在中指定任何帳戶[伺服器組態-服務帳戶](../../sql-server/install/server-configuration-service-accounts.md)安裝精靈的頁面都會成為報表伺服器服務的初始帳戶。  
+ 報表伺服器服務帳戶是在安裝期間所定義。 您可以在網域使用者帳戶或內建帳戶 (如 `NetworkService` 帳戶) 之下執行此服務。 沒有預設帳戶;您在安裝精靈的 [[伺服器設定-服務帳戶](../../sql-server/install/server-configuration-service-accounts.md)] 頁面中指定的任何帳戶都會成為報表伺服器服務的初始帳戶。  
   
 > [!IMPORTANT]
 > 雖然報表伺服器 Web 服務和報表管理員為 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式，但是它們不會在 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 帳戶下執行。 單一服務架構會在相同的報表伺服器處理序識別內執行這兩個 ASP.NET 應用程式， 這是與舊版不同的重大變更，在舊版中，報表伺服器 Web 服務和報表管理員都是在 IIS 內指定的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 工作處理序識別內執行。
   
 ## <a name="changing-the-service-account"></a>變更服務帳戶
 
- 若要檢視及重新設定服務帳戶資訊，請務必使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具。 服務識別資訊會儲存在內部的多個位置。 使用此工具可確保每當您變更帳戶或密碼時，所有的參考也會隨著更新。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具會執行下列其他步驟，以確保報表伺服器保持可用：  
+ 若要檢視及重新設定服務帳戶資訊，請務必使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具。 服務識別資訊會儲存在內部的多個位置。 使用此工具可確保每當您變更帳戶或密碼時，所有的參考也會隨著更新。 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具會執行下列其他步驟，以確保報表伺服器保持可用：  
   
 - 自動將新帳戶加入本機電腦上所建立的報表伺服器群組中。 此群組是在保護 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 檔案安全的存取控制清單 (ACL) 中指定。  
   
-- 自動更新用來主控報表伺服器資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的登入權限。 新的帳戶會加入至 **RSExecRole**。  
+- 會自動更新用來主控報表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]伺服器資料庫之實例的登入許可權。 新的帳戶會加入至 **RSExecRole**。  
   
      舊帳戶的資料庫登入將不會自動移除。 請務必移除不再使用的帳戶。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的[管理報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../report-server/report-server-database-ssrs-native-mode.md)。  
   
@@ -44,7 +46,7 @@ ms.locfileid: "63261075"
     > [!NOTE]  
     > 如果報表伺服器是向外延展部署的一部分，則只有您更新的報表伺服器會受到影響。 部署中其他報表伺服器的加密金鑰，不會受到服務帳戶變更的影響。  
   
- 如需有關如何設定帳戶的指示，請參閱 <<c0> [ 設定的服務帳戶&#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)。</c0>  
+ 如需如何設定帳戶的指示，請參閱[Configure a Service account &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)。  
   
 ## <a name="choosing-an-account"></a>選擇帳戶
 
@@ -62,11 +64,11 @@ ms.locfileid: "63261075"
   
  本節中的下列指導方針和連結可以協助您決定最適合用於您的部署的方法。  
   
-- [服務帳戶&#40;SSRS 原生模式&#41;](../../sql-server/install/service-account-ssrs-native-mode.md)。  
+- [服務帳戶 &#40;SSRS 原生模式&#41;](../../sql-server/install/service-account-ssrs-native-mode.md)。  
   
-- 《SQL Server 線上叢書》中的[設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 。  
+- 在 SQL Server 線上叢書中[設定 Windows 服務帳戶和許可權](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
-- [The Services and Service Accounts Security Planning Guide](http://usergroup.doubletake.com/file_cabinet/download/0x000021733) (服務和服務帳戶安全性規劃指南)。  
+- [《服務與服務帳戶安全性規劃指南》](http://usergroup.doubletake.com/file_cabinet/download/0x000021733)。  
   
 ## <a name="updating-an-expired-password"></a>更新已過期的密碼
 
@@ -100,7 +102,7 @@ ms.locfileid: "63261075"
   
 3. 在 [Reporting Services] 區段中按一下 **[授與資料庫存取權]**。  
   
-4. 按一下 [確定] 。 [輸入認證] 對話方塊隨即出現。  
+4. 按一下 [確定]  。 [輸入認證] 對話方塊隨即出現。  
   
 5. 輸入使用者屬於裝載報表伺服器之電腦上的本機系統管理員群組成員的認證。 這些認證將針對擷取服務帳戶資訊的目的，用於報表伺服器電腦的一次連接。 為每個服務帳戶所建立的資料庫登入將會在 SharePoint 資料庫中更新。  
   
@@ -112,11 +114,11 @@ ms.locfileid: "63261075"
   
 9. 等候此服務停止。  
   
-10. 按一下 **[啟動]**。  
+10. 按一下 [開始]****。  
   
 > [!NOTE]  
 > SharePoint 產品與技術需要網域帳戶來處理類似 Reporting Services SharePoint 模式的服務組態。  
   
 ## <a name="next-steps"></a>後續步驟
 
- [設定服務帳戶&#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [服務帳戶&#40;SSRS 原生模式&#41;](../../sql-server/install/service-account-ssrs-native-mode.md) [設定報表伺服器 Url &#40;SSRS 組態Manager&#41; ](configure-report-server-urls-ssrs-configuration-manager.md) [Reporting Services 組態管理員&#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)
+ [設定服務帳戶 &#40;ssrs Configuration Manager&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [服務帳戶 &#40;Ssrs 原生模式&#41;](../../sql-server/install/service-account-ssrs-native-mode.md) [設定報表伺服器 url &#40;Ssrs Configuration Manager](configure-report-server-urls-ssrs-configuration-manager.md)&#41;Reporting Services 組態管理員 &#40;[原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)

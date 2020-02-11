@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c1cf33c00dc9bf0b2fbf588fea9793e0deabfc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106874"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>在報表中加入框線 (報表產生器及 SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66106874"
 1.  在頁首內以滑鼠右鍵按一下任何項目的外部，然後按一下 [頁首屬性]  。 以您所要的樣式，在 **[框線]** 索引標籤上加入左框線、上框線和右框線。  
   
     > [!NOTE]  
-    >  如果您不要在報表中使用頁首、 您可以將框線放在報表主體周圍，或是您可以新增標頭**插入** 索引標籤。  
+    >  如果您未在報表中使用標頭，可以將框線放在報表主體的周圍，或是從 [**插入**] 索引標籤加入標題。  
   
 2.  在設計介面上以滑鼠右鍵按一下主體內任何項目的外部，然後按一下 [主體屬性]  。 以您所要的樣式，在 **[框線]** 索引標籤上加入左框線和右框線。  
   

@@ -1,5 +1,5 @@
 ---
-title: 報表產生器選項 對話方塊中，設定 （報表產生器） |Microsoft Docs
+title: 報表產生器選項] 對話方塊中，設定（報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107620"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>報表產生器選項對話方塊、設定 (報表產生器)
-  按一下 **報表產生器**按鈕，然後按一下**選項**設定選項，以顯示最近使用的檔案和連線。 您也可以變更預設報表伺服器，或加入報表伺服器 (如果沒有預設值的話)。  
+  按一下 [**報表產生器**] 按鈕，然後按一下 [**選項**]，設定顯示最近使用的檔案和連線的選項。 您也可以變更預設報表伺服器，或加入報表伺服器 (如果沒有預設值的話)。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **預設使用此報表伺服器或 SharePoint 網站**  
@@ -46,6 +46,6 @@ ms.locfileid: "66107620"
  清除最近使用之網站和伺服器、共用資料集和共用資料來源連接以及文件的目前清單。  
   
 ## <a name="see-also"></a>另請參閱  
- [對話方塊、窗格和精靈的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [對話方塊、窗格和嚮導的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

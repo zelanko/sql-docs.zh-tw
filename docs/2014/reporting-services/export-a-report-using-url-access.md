@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69f340855e37ffde49aec0af096c094a142659d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109188"
 ---
 # <a name="export-a-report-using-url-access"></a>使用 URL 存取匯出報表
-  您可以選擇性地指定用於轉譯報表所使用的格式*rs: Format*參數。 例如，直接從原生模式報表伺服器取得報表的 PDF 副本。  
+  您可以使用*rs： format*參數，選擇性地指定用來轉譯報表的格式。 例如，直接從原生模式報表伺服器取得報表的 PDF 副本。  
   
 ```  
 http://myrshost/ReportServer?/myreport&rs:Format=PDF  

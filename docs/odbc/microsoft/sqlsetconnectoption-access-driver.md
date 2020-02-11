@@ -14,20 +14,20 @@ ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bea124a78e2a180180c59de3577fe1db7637e110
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67897789"
 ---
 # <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption (Access 驅動程式)
 > [!NOTE]  
->  本主題提供存取驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主題提供存取驅動程式特定的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
   
 |fOption|註解|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption 可以設 SQL_MODE_READ_ONLY 或 SQL_MODE_READ_WRITE。 不過，此驅動程式無法防止更新，如果 SQL_ACCESS_MODE 設 SQL_MODE_READ_ONLY。|  
-|SQL_AUTOCOMMIT|使用 Microsoft Access 驅動程式時，SQL_AUTOCOMMIT 選項可能會設定為 SQL_AUTOCOMMIT_ON 或 SQL_AUTOCOMMIT_OFF，因為 Microsoft Access 驅動程式支援交易 [1]。|  
+|SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption 可以設定為 SQL_MODE_READ_ONLY 或 SQL_MODE_READ_WRITE。 不過，如果 SQL_ACCESS_MODE 設定為 SQL_MODE_READ_ONLY，驅動程式不會阻止更新。|  
+|SQL_AUTOCOMMIT|使用 Microsoft Access 驅動程式時，[SQL_AUTOCOMMIT] 選項可能會設定為 [SQL_AUTOCOMMIT_ON] 或 [SQL_AUTOCOMMIT_OFF]，因為 Microsoft Access 驅動程式支援交易 [1]。|  
 |SQL_CURRENT_QUALIFIER|支援。|  
 |SQL_LOGIN_TIMEOUT|不支援。|  
 |SQL_OPT_TRACE|支援。|  
@@ -36,6 +36,6 @@ ms.locfileid: "67897789"
 |SQL_QUIET_MODE|不支援。|  
 |SQL_TRANSLATE_DLL|不支援。|  
 |SQL_TRANSLATION_OPTION|不支援。|  
-|SQL_TXN_ISOLATION|SQL_TXN_ISOLATION 總是 SQL_TXN_READ_COMMITTED。|  
+|SQL_TXN_ISOLATION|一律會 SQL_TXN_READ_COMMITTED SQL_TXN_ISOLATION。|  
   
- [Microsoft Access 驅動程式不支援 1] 不可部分完成交易。 認可時使用 Microsoft Access 驅動程式的交易，會認可交易的時間之間的值會寫入的時間是否存在有限的延遲到磁碟。 此延遲取決於 Microsoft Jet 引擎中固有的延遲。 在頁面上的逾時不會小於最小的值，即使 PageTimeout 選項設定的值如下。 如此一來，有已認可的資料不保證有穩定，因為可能會變更延遲期間。
+ [1] Microsoft Access 驅動程式不支援不可部分完成的交易。 使用 Microsoft Access 驅動程式來認可交易時，在認可交易的時間和將值寫入磁片的時間之間會有有限的延遲。 此延遲取決於 Microsoft Jet 引擎中的固有延遲。 頁面超時不會小於最小值，即使 PageTimeout 選項設定為低於該值也一樣。 因此，不保證認可的資料會穩定，因為可能會在延遲期間進行變更。

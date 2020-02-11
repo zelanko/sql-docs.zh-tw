@@ -1,5 +1,5 @@
 ---
-title: sys.dm_hadr_instance_node_map (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_hadr_instance_node_map （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: edd2ea7a215f01c25539753dff4bd170cf9d422f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900413"
 ---
-# <a name="sysdmhadrinstancenodemap-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
+# <a name="sysdm_hadr_instance_node_map-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  每個執行個體的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]裝載可用性複本聯結至 Alwayson 可用性群組，傳回裝載伺服器執行個體的 Windows Server 容錯移轉叢集 (WSFC) 節點的名稱。 這個動態管理檢視有下列用途：  
+  針對裝載已聯結[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]至其 Always On 可用性群組之可用性複本的每個實例，傳回裝載伺服器實例的 Windows Server 容錯移轉叢集（WSFC）節點名稱。 這個動態管理檢視有下列用途：  
   
 -   這個動態管理檢視適用於偵測有多個可用性複本裝載於同一個 WSFC 節點的可用性群組，如果可用性群組不正確地設定，在 FCI 容錯移轉後可能會發生此不支援的組態狀況。 如需詳細資訊，請參閱[容錯移轉叢集和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)。  
   
@@ -38,11 +38,11 @@ ms.locfileid: "67900413"
    
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**ag_resource_id**|**nvarchar(256)**|WSFC 中資源的可用性群組的唯一識別碼。|  
-|**instance_name**|**nvarchar(256)**|名稱-*伺服器*/*執行個體*-裝載可用性群組複本的伺服器執行個體。|  
+|**ag_resource_id**|**nvarchar(256)**|可用性群組的唯一識別碼，做為 WSFC 中的資源。|  
+|**instance_name**|**nvarchar(256)**|名稱-*伺服器*/*實例*-裝載可用性群組之複本的伺服器實例。|  
 |**node_name**|**nvarchar(256)**|WSFC 節點的名稱。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,5 +1,5 @@
 ---
-title: 備份與還原 Reporting Services SharePoint 服務應用程式 |Microsoft Docs
+title: 備份和還原 Reporting Services SharePoint 服務應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e061ea2394c2fdad1e7d37f56016c73d7787eda0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109946"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>備份與還原 Reporting Services SharePoint 服務應用程式
@@ -31,7 +31,7 @@ ms.locfileid: "66109946"
 ###  <a name="bkmk_Restrictions"></a> 限制事項  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式。 **需要執行其他步驟** ，且這些步驟記錄在本主題中。 目前備份程序 **不會** 將自動執行帳戶 (UEA) 或 Windows 驗證的加密金鑰和認證備份至 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料庫。  
+>  使用 SharePoint 備份和還原功能，就可以部分備份和還原 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式。 **需要其他步驟**，且步驟已記載于本主題中。 目前備份程序 **不會** 將自動執行帳戶 (UEA) 或 Windows 驗證的加密金鑰和認證備份至 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料庫。  
   
 ###  <a name="bkmk_recommendations"></a> 建議  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66109946"
   
 -   檢閱 SharePoint 備份記錄確實是在備份檔案所在的資料夾中建立。 這個檔案通常命名為 **spbackup.log**  
   
-##  <a name="bkmk_backup"></a> 備份服務應用程式  
+##  <a name="bkmk_backup"></a>備份服務應用程式  
  依序完成下列步驟：  
   
 1.  備份加密金鑰  
@@ -53,37 +53,37 @@ ms.locfileid: "66109946"
 ### <a name="backup-the-encryption-keys-using-central-administration"></a>使用管理中心備份加密金鑰  
  如需備份 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 加密金鑰的資訊，請參閱[管理 Reporting Services SharePoint 服務應用程式](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)的＜加密金鑰＞一節。  
   
-###  <a name="bkmk_centraladmin"></a> 使用 SharePoint 管理中心備份服務應用程式  
+###  <a name="bkmk_centraladmin"></a>使用 SharePoint 管理中心備份服務應用程式  
  若要備份服務應用程式，請完成下列步驟：  
   
 1.  在 [SharePoint 管理中心] 中，按一下 **[備份與還原]** 群組中的 **[執行備份]** 。  
   
-2.  在 **[共用服務]** 節點底下，展開 **[共用服務應用程式]** ，然後選取您的服務應用程式。 其類型會是 **[SQL Server Reporting Services 服務應用程式]** 。  
+2.  在 **[共用服務]** 節點底下，展開 **[共用服務應用程式]** ，然後選取您的服務應用程式。 其類型會是 **[SQL Server Reporting Services 服務應用程式]**。  
   
-3.  按一下 [下一步]  。  
+3.  按 [下一步]  。  
   
-4.  輸入 **[備份位置:]** 的路徑，然後按一下 **[開始備份]** 。  
+4.  輸入 **[備份位置:]** 的路徑，然後按一下 **[開始備份]**。  
   
-5.  重複上述程序，但是不要選取服務應用程式，而是展開 **[共用服務 Proxy]** 節點，然後選取服務應用程式 Proxy。 其類型會是 **[SQL Server Reporting Services 服務應用程式 Proxy]** 。  
+5.  重複上述程序，但是不要選取服務應用程式，而是展開 **[共用服務 Proxy]** 節點，然後選取服務應用程式 Proxy。 其類型會是 **[SQL Server Reporting Services 服務應用程式 Proxy]**。  
   
  如需詳細資訊，請參閱 SharePoint 文件中的下列主題：  
   
- SharePoint 文件中的[備份服務應用程式 (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748601.aspx)。  
+ [在 sharepoint 檔中備份服務應用程式（Sharepoint Foundation 2010）](https://msdn.microsoft.com/library/ee748601.aspx)。  
   
- [備份服務應用程式 (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
+ [備份服務應用程式（SharePoint Server 2010）](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>驗證執行帳戶和資料庫驗證  
- **執行帳戶：** 若要確認服務應用程式是否使用執行帳戶：  
+ **執行帳戶：** 若要確認您的服務應用程式是否使用執行帳戶：  
   
 1.  在 [SharePoint 管理中心] 的 **[應用程式管理]** 群組中，按一下 **[管理服務應用程式]** 。  
   
 2.  按一下服務應用程式的名稱，然後按一下 SharePoint 功能區中的 **[管理]** 。  
   
-3.  按一下 **[執行帳戶]** 。  
+3.  按一下 **[執行帳戶]**。  
   
 4.  如果設定了執行帳戶，則在還原服務應用程式備份時需要知道認證。 如果不知道正確的認證，請不要進行備份和還原程序。  
   
- **資料庫驗證：** 若要確認服務應用程式是否使用 Windows 驗證進行資料庫驗證：  
+ **資料庫驗證：** 若要確認您的服務應用程式是否使用 Windows 驗證進行資料庫驗證：  
   
 1.  在 [SharePoint 管理中心] 的 **[應用程式管理]** 群組中，按一下 **[管理服務應用程式]** 。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66109946"
   
 4.  如果設定了 Windows 驗證，則您必須知道認證，才能在還原之後設定服務應用程式。 如果不知道正確的認證，請不要進行備份和還原程序。  
   
-##  <a name="bkmk_restore"></a> 還原服務應用程式  
+##  <a name="bkmk_restore"></a>還原服務應用程式  
  依序完成下列步驟：  
   
 1.  還原 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式。  
@@ -106,23 +106,23 @@ ms.locfileid: "66109946"
   
 1.  在 [SharePoint 管理中心] 中，按一下 **[備份與還原]** 群組中的 **[從備份還原]** 。  
   
-2.  在 **[備份目錄位置]** 方塊中輸入備份檔案的路徑，然後按一下 **[重新整理]** 。  
+2.  在 **[備份目錄位置]** 方塊中輸入備份檔案的路徑，然後按一下 **[重新整理]**。  
   
-3.  從 **[上層元件]** 清單中選取服務應用程式備份，然後按 **[下一步]** 。  
+3.  從 **[上層元件]** 清單中選取服務應用程式備份，然後按 **[下一步]**。  
   
-4.  選取您的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 應用程式，然後按 **[下一步]** 。  
+4.  選取您的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 應用程式，然後按 **[下一步]**。  
   
 5.  在 **[登錄名稱與密碼]** 區段中，輸入登入名稱的密碼。 [登入名稱] 方塊應填入服務應用程式在備份之前使用的登入。  
   
-6.  按一下 **[開始還原]** 。  
+6.  按一下 **[開始還原]**。  
   
 7.  重複上述程序，但是不要還原服務應用程式，而是展開 **[共用服務]** 節點，然後展開 **[共用服務應用程式]** 節點。  
   
  如需詳細資訊，請參閱 SharePoint 文件中的下列主題：  
   
- [還原服務應用程式 (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx)。  
+ [還原服務應用程式（SharePoint Foundation 2010）](https://msdn.microsoft.com/library/ee748615.aspx)。  
   
- [Restore a service application (SharePoint Server 2010)](ttp://technet.microsoft.com/library/ee428305.aspx)(還原服務應用程式 (SharePoint Server 2010))。  
+ [還原服務應用程式（SharePoint Server 2010）](ttp://technet.microsoft.com/library/ee428305.aspx)。  
   
 ### <a name="restore-the-encryption-keys-using-central-administration"></a>使用管理中心還原加密金鑰  
  如需還原 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 加密金鑰的資訊，請參閱[管理 Reporting Services SharePoint 服務應用程式](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)的＜加密金鑰＞一節。  
@@ -134,13 +134,13 @@ ms.locfileid: "66109946"
   
 2.  按一下服務應用程式的名稱，然後按一下 SharePoint 功能區中的 **[管理]** 。  
   
-3.  按一下 **[執行帳戶]** 。  
+3.  按一下 **[執行帳戶]**。  
   
 4.  輸入帳戶、密碼，然後選取 **[指定執行帳戶]** 方塊。  
   
 5.  按一下 [確定]  。  
   
- **資料庫驗證：** 如果您的服務應用程式使用 Windows 驗證進行資料庫驗證完成下列步驟：  
+ **資料庫驗證：** 如果您的服務應用程式使用 Windows 驗證進行資料庫驗證，請完成下列步驟：  
   
 1.  在 [SharePoint 管理中心] 的 **[應用程式管理]** 群組中，按一下 **[管理服務應用程式]** 。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66109946"
   
 3.  檢閱 **[Reporting Services (SSRS) 服務資料庫]** 區段。  
   
-4.  選取 **[Windows 驗證]** 。  
+4.  選取 **[Windows 驗證]**。  
   
 5.  輸入帳戶和密碼。 選取 **[當做 Windows 認證使用]** (如果適用)。  
   

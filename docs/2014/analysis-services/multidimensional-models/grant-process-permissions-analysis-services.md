@@ -1,5 +1,5 @@
 ---
-title: 授與處理權限 (Analysis Services) |Microsoft Docs
+title: 授與處理許可權（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49b8a1c8ce566b18143b6b693a227fba4a5bd094
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074892"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>授與處理權限 (Analysis Services)
@@ -33,15 +33,15 @@ ms.locfileid: "66074892"
 ## <a name="set-processing-permissions-at-the-database-level"></a>設定資料庫層級的處理權限  
  本節說明如何針對資料庫中的所有 Cube、維度、採礦結構及採礦模型，由非管理員的使用者來啟用處理。  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體、開啟 [資料庫] 資料夾，然後選取資料庫。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體、開啟 [資料庫] 資料夾，然後選取資料庫。  
   
-2.  以滑鼠右鍵按一下**角色** | **新角色**。 輸入名稱和描述。  
+2.  以滑鼠右鍵按一下 [**角色** | ] [**新增角色**]。 輸入名稱和描述。  
   
-3.  在 **一般**窗格中，選取`Process Database`核取方塊。 此外，選取`Read Definition`，也會啟用互動式處理透過其中一種 SQL Server 工具，例如[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+3.  在 [**一般**] 窗格中， `Process Database`選取核取方塊。 此外，選取`Read Definition`也可以透過其中一個 SQL Server 工具（例如）啟用互動式處理[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-4.  在 [成員資格]  窗格中，新增擁有可處理這個資料庫中任何物件之權限的 Windows 使用者和群組帳戶。  
+4.  在 [成員資格]**** 窗格中，新增擁有可處理這個資料庫中任何物件之權限的 Windows 使用者和群組帳戶。  
   
-5.  按一下 [確定]  以完成角色定義。  
+5.  按一下 [確定]**** 以完成角色定義。  
   
 ## <a name="set-processing-permissions-on-individual-objects"></a>設定個別物件的處理權限  
  您可以設定個別 Cube、維度、資料採礦結構或模型的處理權限。  
@@ -50,49 +50,49 @@ ms.locfileid: "66074892"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體、開啟 [資料庫] 資料夾，然後選取資料庫。  
   
-2.  以滑鼠右鍵按一下**角色** | **新角色**。 輸入名稱和描述。  
+2.  以滑鼠右鍵按一下 [**角色** | ] [**新增角色**]。 輸入名稱和描述。  
   
-3.  在 **一般**窗格中，清除`Process Database`核取方塊。 資料庫權限會藉由將角色選項變成灰色或無法選取狀態，來覆寫設定較低層級物件之權限的能力。  
+3.  在 [**一般**] 窗格中， `Process Database`清除核取方塊。 資料庫權限會藉由將角色選項變成灰色或無法選取狀態，來覆寫設定較低層級物件之權限的能力。  
   
-     技術上來說，專屬的處理角色不需要任何資料庫權限。 但是，如果沒有`Read Definition`在資料庫層級中，您無法檢視中的資料庫[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，讓測試更為困難。  
+     技術上來說，專屬的處理角色不需要任何資料庫權限。 但是， `Read Definition`如果沒有資料庫層級，您就無法在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查看資料庫，讓測試變得更棘手。  
   
 4.  選取要處理的個別物件：  
   
-    -   在 [Cube]  窗格中，選取每個 Cube 的 [處理]  核取方塊。  
+    -   在 [Cube]**** 窗格中，選取每個 Cube 的 [處理]**** 核取方塊。  
   
-    -   在 [維度]  窗格中，選取 [所有資料庫維度]  ，然後選取每個維度的 [處理]  核取方塊。 或者，選取所有資料列，然後使用 Shift + 滑鼠左鍵來切換核取方塊選取項目。  
+    -   在 [維度]**** 窗格中，選取 [所有資料庫維度]****，然後選取每個維度的 [處理]**** 核取方塊。 或者，選取所有資料列，然後使用 Shift + 滑鼠左鍵來切換核取方塊選取項目。  
   
-5.  在 [成員資格]  窗格中，新增擁有權限可處理這些物件的 Windows 使用者和群組帳戶。  
+5.  在 [成員資格]**** 窗格中，新增擁有權限可處理這些物件的 Windows 使用者和群組帳戶。  
   
-6.  按一下 [確定]  以完成角色定義。  
+6.  按一下 [確定]**** 以完成角色定義。  
   
 ## <a name="test-processing"></a>測試處理  
   
-1.  按住 Shift 鍵並使用滑鼠右鍵按一下 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、選取 [以不同的使用者身分執行]  ，然後使用指派給您正在測試之角色的 Windows 帳戶連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體。  
+1.  按住 Shift 鍵並使用滑鼠右鍵按一下 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、選取 [以不同的使用者身分執行]****，然後使用指派給您正在測試之角色的 Windows 帳戶連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體。  
   
 2.  開啟 [資料庫] 資料夾，然後選取資料庫。 您將只會看見您的帳戶具有成員資格之角色可看見的資料庫。  
   
-3.  使用滑鼠右鍵按一下 Cube 或維度，然後選取 [處理]  。 選擇處理選項。 針對所有物件組合，測試所有選項。 如果因為遺漏物件而發生錯誤，請將物件新增到角色。  
+3.  使用滑鼠右鍵按一下 Cube 或維度，然後選取 [處理]****。 選擇處理選項。 針對所有物件組合，測試所有選項。 如果因為遺漏物件而發生錯誤，請將物件新增到角色。  
   
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>設定資料採礦結構的處理權限  
  您可以建立角色，授與權限來處理資料採礦結構。 其中包括處理所有採礦模型。  
   
- **鑽研**和`Read Definition`可用來瀏覽採礦模型和結構的權限是不可部分完成而且可以新增到相同的角色，或者分離到不同的角色。  
+ **** 導覽和結構`Read Definition`的流覽和許可權是不可部分完成的，而且可以加入至相同的角色，或分成不同的角色。  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體、開啟 [資料庫] 資料夾，然後選取資料庫。  
   
-2.  以滑鼠右鍵按一下**角色** | **新角色**。 輸入名稱和描述。 在 [一般]  窗格中，確定已取消選取資料庫權限核取方塊。 資料庫權限將會藉由將角色選項變成灰色或無法選取狀態，來覆寫設定較低層級物件之權限的能力。  
+2.  以滑鼠右鍵按一下 [**角色** | ] [**新增角色**]。 輸入名稱和描述。 在 [一般]**** 窗格中，確定已取消選取資料庫權限核取方塊。 資料庫權限將會藉由將角色選項變成灰色或無法選取狀態，來覆寫設定較低層級物件之權限的能力。  
   
-3.  在 [採礦結構]  窗格中，選取每個採礦結構的 [處理]  核取方塊。  
+3.  在 [採礦結構]**** 窗格中，選取每個採礦結構的 [處理]**** 核取方塊。  
   
-4.  在 [成員資格]  窗格中，新增擁有可處理這個資料庫中任何物件之權限的 Windows 使用者和群組帳戶。  
+4.  在 [成員資格]**** 窗格中，新增擁有可處理這個資料庫中任何物件之權限的 Windows 使用者和群組帳戶。  
   
-5.  按一下 [確定]  以完成角色定義。  
+5.  按一下 [確定]**** 以完成角色定義。  
   
 ## <a name="see-also"></a>另請參閱  
- [處理資料庫、 資料表或資料分割](../tabular-models/process-database-table-or-partition-analysis-services.md)   
+ [處理資料庫、資料表或資料分割](../tabular-models/process-database-table-or-partition-analysis-services.md)   
  [多維度模型物件處理](processing-a-multidimensional-model-analysis-services.md)   
- [授與資料庫權限 &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [授與物件中繼資料的讀取定義權限 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [授與資料庫許可權 &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
+ [授與物件中繼資料的讀取定義許可權 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

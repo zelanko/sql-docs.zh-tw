@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97f5d2045601f72c3536fbf2d4e469eb5eb20fbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071246"
 ---
 # <a name="powerpivot-data-access"></a>PowerPivot 資料存取
@@ -28,7 +28,7 @@ ms.locfileid: "66071246"
   
  在 SharePoint 伺服器陣列上，Excel Services 會使用本機 MSOLAP OLE DB 提供者連接到 PowerPivot 資料。 此提供者會將連接要求傳送到伺服器陣列中的 PowerPivot for SharePoint 伺服器。 該伺服器會載入資料、執行查詢，然後傳回結果集。  
   
-##  <a name="queryproc"></a> 在 SharePoint 中查詢 PowerPivot 資料  
+##  <a name="queryproc"></a>查詢 SharePoint 中的 PowerPivot 資料  
  當您從 SharePoint 文件庫檢視 PowerPivot 活頁簿時，會在伺服器陣列中的 Analysis Services 伺服器執行個體上，個別偵測、擷取及處理活頁簿內的 PowerPivot 資料，同時 Excel Services 會轉譯展示層。 您可以在瀏覽器視窗或在具有 PowerPivot 增益集的 Excel 2010 桌面應用程式中，檢視已完全處理的活頁簿。  
   
  下圖顯示查詢處理的要求如何透過伺服陣列移動。 因為 PowerPivot 資料是 Excel 2010 活頁簿的一部分，所以對於查詢處理的要求會在使用者從 SharePoint 文件庫開啟 Excel 活頁簿時發生，並與包含 PowerPivot 資料的樞紐分析表或樞紐分析圖互動。  

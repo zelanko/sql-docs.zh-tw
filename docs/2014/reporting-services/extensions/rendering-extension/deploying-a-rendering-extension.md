@@ -14,19 +14,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 138fd2b43b214e16d960bec9daabb84b0f820c6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63298596"
 ---
 # <a name="deploying-a-rendering-extension"></a>部署轉譯延伸模組
   在您撰寫 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表轉譯延伸模組並將其編譯成 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程式庫之後，需要使其可供報表伺服器和報表設計師探索。 若要這樣做，請將延伸模組複製到適當的目錄，並將項目加入適當的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態檔。  
   
 ## <a name="configuration-file-rendering-extension-element"></a>組態檔轉譯延伸模組元素  
- 在將轉譯延伸模組編譯成 .DLL 之後，您就可以將項目加入至 rsreportserver.config 檔案。 預設位置為 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<執行個體名稱>\Reporting Services\ReportServer。 父項目是 \<Render>。 Render 元素之下是代表每個轉譯延伸模組的 Extension 元素。 `Extension` 元素包含兩個屬性：Name 與 Type。  
+ 在將轉譯延伸模組編譯成 .DLL 之後，您就可以將項目加入至 rsreportserver.config 檔案。 預設位置為 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<執行個體名稱>\Reporting Services\ReportServer。 父項目是 \<Render>。 Render 元素之下是代表每個轉譯延伸模組的 Extension 元素。 
+  `Extension` 元素包含兩個屬性：Name 與 Type。  
   
- 下表描述的屬性`Extension`轉譯延伸模組的項目：  
+ 下表描述用於轉譯延伸模組之`Extension`元素的屬性：  
   
 |屬性|描述|  
 |---------------|-----------------|  
@@ -64,7 +65,7 @@ ms.locfileid: "63298596"
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     **Name** 值是轉譯延伸模組的唯一名稱。 **類型**的值是以逗號分隔的清單，包括 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 實作的完整命名空間項目，後面接著組件的名稱 (不包括 .dll 副檔名)。 根據預設，轉譯延伸模組是可見的。 若要隱藏延伸模組從使用者介面，例如報表管理員中，新增**Visible**屬性設定為`Extension`項目，並將它設定為`false`。  
+     **Name** 值是轉譯延伸模組的唯一名稱。 **類型**的值是以逗號分隔的清單，包括 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 實作的完整命名空間項目，後面接著組件的名稱 (不包括 .dll 副檔名)。 根據預設，轉譯延伸模組是可見的。 若要隱藏使用者介面的擴充功能（例如報表管理員），請將**Visible**屬性加入`Extension`至專案，並將其`false`設定為。  
   
 ## <a name="verifying-the-deployment"></a>確認部署  
  您也可以開啟報表管理員，然後確認延伸模組是否包含在報表可用匯出類型的清單中。  

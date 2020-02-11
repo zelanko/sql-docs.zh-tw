@@ -11,15 +11,15 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 3660ecee1271d4fd2673b0dfe9107a8fb5c52e88
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67413010"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>運算式 (報表產生器及 SSRS)
 
-報表中從頭到尾都廣泛利用運算式來擷取、計算、顯示、分組、排序、篩選、參數化及格式化資料。 許多報表項目屬性都可以設定為運算式。 運算式可協助您控制報表的內容、設計與互動性。 運算式會以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]撰寫、儲存在報表定義中，然後在您執行報表時由報表處理器評估。  
+報表中從頭到尾都廣泛利用運算式來擷取、計算、顯示、分組、排序、篩選、參數化及格式化資料。 許多報表項目屬性都可以設定為運算式。 運算式可協助您控制報表的內容、設計與互動性。 運算式會以[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]撰寫、儲存在報表定義中，並在您執行報表時由報表處理器進行評估。  
 
 報表與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office Excel 之類的應用程式不同，後者會直接使用工作表中的資料，而前者則使用資料預留位置的運算式。 若要從評估的運算式查看實際資料，您必須預覽報表。 當您執行報表時，報表處理器會評估每個運算式，因為它會結合資料與報表配置元素，例如資料表和圖表。  
 
@@ -29,7 +29,7 @@ ms.locfileid: "67413010"
 
 當您預覽報表時，報表處理器會結合資料表資料區與資料連接中的實際資料，並針對結果集中的每個資料列顯示資料表中的資料列。  
 
-若要手動輸入運算式，請在設計介面上選取項目，然後使用快速鍵功能表和對話方塊來設定此項目的屬性。 當您在下拉式清單中看到 ***(fx)*** 按鈕或 `<Expression>` 值時，就會知道可以將此屬性設定為運算式。 如需詳細資訊，請參閱[加入運算式 &#40;報表產生器及 SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)。  
+若要手動輸入運算式，請在設計介面上選取項目，然後使用快速鍵功能表和對話方塊來設定此項目的屬性。 當您在下拉式清單中看到 ***(fx)*** 按鈕或 `<Expression>` 值時，就會知道可以將此屬性設定為運算式。 如需詳細資訊，請參閱 [加入運算式 &#40;報表產生器及 SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)。  
 
 如需詳細資訊和範例，請參閱下列主題：  
 
@@ -37,31 +37,31 @@ ms.locfileid: "67413010"
 
 -   [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
 
--   [篩選方程式範例 &#40;報表產生器及 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [篩選方程式範例 &#40;報表產生器和 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
 
 -   [群組運算式範例 &#40;報表產生器及 SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)  
 
--   [教學課程&#40;報表產生器&#41;](../report-builder-tutorials.md)  
+-   [教學課程 &#40;報表產生器&#41;](../report-builder-tutorials.md)  
 
 -   [Reporting Services 教學課程 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
 
--   [報表範例 (報表產生器和 SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
+-   [報表範例（報表產生器及 SSRS）](https://go.microsoft.com/fwlink/?LinkId=198283)  
 
 若要開發複雜運算式或使用自訂程式碼或自訂組件的運算式，建議您使用 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中的報表設計師。 如需詳細資訊，請參閱 [報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
 
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
 
-##  <a name="Types"></a> 了解簡單和複雜運算式  
-運算式是以等號 (=) 當作開頭，而且是以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]撰寫。 運算式可以包含常數、運算子及內建值 (欄位、集合和函數) 和外部或自訂程式碼參考的組合。  
+##  <a name="Types"></a>瞭解簡單和複雜運算式  
+運算式是以等號（=）開頭，而且是以[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]撰寫。 運算式可以包含常數、運算子及內建值 (欄位、集合和函數) 和外部或自訂程式碼參考的組合。  
 
 您可以使用運算式來指定許多報表項目屬性的值。 最常見的屬性為文字方塊與預留位置文字的值。 如果文字方塊只包含一個運算式，該運算式通常就是文字方塊屬性的值。 如果文字方塊包含多個運算式，每個運算式都是文字方塊中的預留位置文字值。  
 
-根據預設，運算式在報表設計介面上會顯示成「簡單運算式」  或「複雜運算式」  。  
+根據預設，運算式在報表設計介面上會顯示成「簡單運算式」** 或「複雜運算式」**。  
 
--   **簡單** ：簡單運算式包含內建集合中單一項目的參考，例如資料集欄位、參數或內建欄位。 在設計介面上，簡單運算式會以方括號的形式出現。 例如， `[FieldName]` 相當於基礎運算式 `=Fields!FieldName.Value`。 當您建立報表配置，並將項目從 [報表資料] 窗格拖曳到設計介面時，系統會為您自動建立簡單運算式。 如需代表不同內建集合之符號的詳細資訊，請參閱 [了解簡單運算式中的字首符號](#DisplayText)。  
+-   **簡單**簡單運算式包含內建集合中單一專案的參考，例如資料集欄位、參數或內建欄位。 在設計介面上，簡單運算式會以方括號的形式出現。 例如， `[FieldName]` 相當於基礎運算式 `=Fields!FieldName.Value`。 當您建立報表配置，並將項目從 [報表資料] 窗格拖曳到設計介面時，系統會為您自動建立簡單運算式。 如需代表不同內建集合之符號的詳細資訊，請參閱 [了解簡單運算式中的字首符號](#DisplayText)。  
 
--   **複雜** ：複雜運算式包含多個內建參考、運算子和函數呼叫的參考。 當運算式值包含多個簡單參考時，複雜運算式會以 <\<Expr>> 的形式出現。 若要檢視運算式，請將滑鼠指標停留在該運算式上，然後使用工具提示。 若要編輯運算式，在 [運算式]  對話方塊中開啟該運算式。  
+-   **複雜**複雜運算式包含多個內建參考、運算子和函式呼叫的參考。 當運算式值包含多個簡單參考時，複雜運算式會以 <\<Expr>> 的形式出現。 若要檢視運算式，請將滑鼠指標停留在該運算式上，然後使用工具提示。 若要編輯運算式，在 [運算式]**** 對話方塊中開啟該運算式。  
 
 下圖同時針對文字方塊和預留位置文字顯示一般的簡單運算式和複雜運算式。  
 
@@ -73,11 +73,11 @@ ms.locfileid: "67413010"
 
 如需詳細資訊，請參閱 [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)(建立發票和表單的清單)。  
 
-## <a name="DisplayText"></a> 了解簡單運算式中的字首符號  
+## <a name="DisplayText"></a>瞭解簡單運算式中的前置詞符號  
 
 簡單運算式會使用符號來指示參考是指向欄位、參數、內建集合還是報表項目集合。 下表顯示了顯示和運算式文字的範例：  
 
-|項目|顯示文字範例|運算式文字範例|  
+|Item|顯示文字範例|運算式文字範例|  
 |----------|--------------------------|-----------------------------|  
 |資料集欄位|`[Sales]`<br /><br /> `[SUM(Sales)]`<br /><br /> `[FIRST(Store)]`|`=Fields!Sales.Value`<br /><br /> `=Sum(Fields!Sales.Value)`<br /><br /> `=First(Fields!Store.Value)`|  
 |報表參數|`[@Param]`<br /><br /> `[@Param.Label]`|`=Parameters!Param.Value`<br /><br /> `=Parameters!Param.Label`|  
@@ -86,7 +86,7 @@ ms.locfileid: "67413010"
 
 
 
-##  <a name="References"></a> 撰寫複雜運算式  
+##  <a name="References"></a>撰寫複雜運算式  
 運算式可以包含函數、運算子、常數、欄位、參數、內建集合的項目，以及內嵌自訂程式碼或自訂組件的參考。  
 
 > [!NOTE]
@@ -104,7 +104,7 @@ ms.locfileid: "67413010"
 
 
 
-##  <a name="Valid"></a> 驗證運算式  
+##  <a name="Valid"></a>驗證運算式  
 為特定的報表項目屬性建立運算式時，包含在運算式中的參考取決於報表項目屬性可以接受的值，以及評估屬性的範圍。 例如：  
 
 -   根據預設，運算式 [Sum] 會計算評估運算式時範圍內資料的總和。 若是資料表資料格，範圍則視資料列和資料行群組成員資格而定。 如需詳細資訊，請參閱 [總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
@@ -117,13 +117,13 @@ ms.locfileid: "67413010"
 
 ## <a name="Section"></a> 本節內容
 
-[加入運算式 &#40;報表產生器及 SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)  
+[&#40;報表產生器和 SSRS 新增運算式&#41;](add-an-expression-report-builder-and-ssrs.md)  
 
 [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
 
 [總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
 
-[運算式參考 &#40;報表產生器及 SSRS&#41;](expression-reference-report-builder-and-ssrs.md)  
+[運算式參考 &#40;報表產生器和 SSRS&#41;](expression-reference-report-builder-and-ssrs.md)  
 
 ## <a name="see-also"></a>另請參閱
 

@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9981a3ebeb1b67bda67509e2a08995fadb195abb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107303"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML 報表資料的元素路徑語法 (SSRS)
   在「報表設計師」中，可藉由定義區分大小寫的元素路徑來指定要用於 XML 資料來源中之報表的資料。 元素路徑會指出在 XML 資料來源中周遊 XML 階層式節點及其屬性的方法。 若要使用預設的元素路徑，請將資料集查詢或 XML `ElementPath` (屬於 XML `Query`) 保留空白。 由 XML 資料來源擷取資料時，具有文字值的元素節點以及元素節點屬性會變成結果集內的資料行。 執行查詢時，節點及屬性的值會變成資料列資料。 這些資料行會以資料集欄位集合的方式顯示在 [報表資料] 窗格中。 此主題描述元素路徑語法。  
   
 > [!NOTE]  
->  元素路徑與命名空間無關。 若要使用的命名空間中的項目路徑，使用包含 XML 的 XML 查詢語法`ElementPath`項目中所述[XML 查詢語法，XML 報表資料的&#40;SSRS&#41;](report-data-ssrs.md)。  
+>  元素路徑與命名空間無關。 若要在專案路徑中使用命名空間，請使用 XML 查詢語法，其中`ElementPath`包含 Xml[報表資料 &#40;SSRS&#41;的 xml 查詢語法](report-data-ssrs.md)中所述的 xml 元素。  
   
  下表描述定義元素路徑所使用的慣例。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66107303"
 |&#124; (分隔號)|會分隔語法項目， 您只能選擇其中一個項目。|  
 |`[ ] (brackets)`|選擇性的語法項目。 不要輸入方括號。|  
 |**{ }** (大括弧)|會分隔語法項目的參數。|  
-|[ **,** ...*n*]|指出先前項目可以重複 *n* 次。 以逗號分開各次出現項目。|  
+|[ **,** ...*n*]|指出先前項目可以重複 *n* 次。 以逗號分隔項目。|  
   
 ## <a name="syntax"></a>語法  
   
@@ -76,33 +76,38 @@ XMLLocalName :: =
 |----------|----------------|  
 |元素路徑|定義 XML 文件中周遊節點的順序，以便使用 XML 資料來源擷取資料集的欄位資料。|  
 |`ElementNode`|XML 文件中的 XML 節點。 節點是由標記指定，並存在於與其他節點構成的階層式關聯性中。 例如，\<Customers> 是根元素節點。 \<Customer> 是 \<Customers>的子元素。|  
-|`XMLName`|節點的名稱。 例如，Customers 節點的名稱為 Customers。 `XMLName` 可以使用命名空間識別碼做為前置詞，以確保所有節點的名稱都是唯一的。|  
+|`XMLName`|節點的名稱。 例如，Customers 節點的名稱為 Customers。 
+  `XMLName` 可以使用命名空間識別碼做為前置詞，以確保所有節點的名稱都是唯一的。|  
 |`Encoding`|指出本元素的 `Value` 是已編碼的 XML，需要加以解碼並加入做為此元素的子元素。|  
-|`FieldList`|定義用來擷取資料的元素與屬性組合。<br /><br /> 如果沒有指定，所有屬性和子元素都會做為欄位使用。 如果指定了空的欄位清單 ( **{}** )，就不會使用這個節點中的任何欄位。<br /><br /> `FieldList` 可能不會同時包含 `Value` 及 `Element` 或 `ElementNode`。|  
+|`FieldList`|定義用來擷取資料的元素與屬性組合。<br /><br /> 如果沒有指定，所有屬性和子元素都會做為欄位使用。 如果指定了空的欄位清單 ( **{}** )，就不會使用這個節點中的任何欄位。<br /><br /> 
+  `FieldList` 可能不會同時包含 `Value` 及 `Element` 或 `ElementNode`。|  
 |`Field`|指定擷取做為資料集欄位的資料。|  
-|`Attribute`|`ElementNode` 中名稱與值的配對。 例如，在項目節點\<客戶 ID ="1">，`ID`是屬性和`@ID(Integer)`相對應的 [資料] 欄位中傳回"1"為整數類型`ID`。|  
-|`Value`|元素的值。 `Value` 只能用於元素路徑中的最後一個 `ElementNode` 上。 例如，因為\<傳回 > 是一個分葉節點，如果您包含結尾的元素路徑的值`Return {@}`是`Chair`。|  
+|`Attribute`|
+  `ElementNode` 中名稱與值的配對。 \<例如，在元素 NODE Customer ID = "1" > 中， `ID`是一個屬性，並`@ID(Integer)`會在對應的資料欄位`ID`中傳回 "1" 做為整數類型。|  
+|`Value`|元素的值。 
+  `Value` 只能用於元素路徑中的最後一個 `ElementNode` 上。 例如，因為\<傳回> 是分葉節點，如果您將它包含在元素路徑的結尾，則的值`Return {@}`會是。 `Chair`|  
 |`Element`|具名子元素的值。 例如，Customers {}/Customer {}/LastName 只會擷取 LastName 元素的值。|  
 |`Type`|此元素建立之欄位所使用的選擇性資料類型。|  
-|`NamespacePrefix`|`NamespacePrefix` 是在 XML 查詢元素中定義。 如果 XML 查詢元素不存在，則會省略 XML `ElementPath` 中的命名空間。 如果有 XML 查詢元素，XML `ElementPath` 則會有選擇性的 `IgnoreNamespaces` 屬性。 如果 IgnoreNamespaces `true`，在 XML 中的命名空間`ElementPath`XML 文件也會被忽略。 如需詳細資訊，請參閱 [XML 報表資料的 XML 查詢語法 &#40;SSRS&#41;](report-data-ssrs.md)。|  
+|`NamespacePrefix`|
+  `NamespacePrefix` 是在 XML 查詢元素中定義。 如果 XML 查詢元素不存在，則會省略 XML `ElementPath` 中的命名空間。 如果有 XML 查詢元素，XML `ElementPath` 則會有選擇性的 `IgnoreNamespaces` 屬性。 如果 IgnoreNamespaces 為`true`，則 XML `ElementPath`和 xml 檔中的命名空間會被忽略。 如需詳細資訊，請參閱 [XML 報表資料的 XML 查詢語法 &#40;SSRS&#41;](report-data-ssrs.md)。|  
   
 ## <a name="example---no-namespaces"></a>範例 - 沒有命名空間  
  下列範例會使用 XML 文件 Customers.xml。 這個表格會顯示元素路徑語法的範例，並且以 XML 文件為資料來源，顯示在定義資料集的查詢中使用元素路徑的結果。  
   
- 當項目路徑是空的此查詢會使用預設的元素路徑的附註： 分葉節點集合的第一個路徑。 在第一個範例中，將元素路徑保留為空白相當於將元素路徑指定為 /Customers/Customer/Orders/Order。 路徑上的所有節點值和屬性都會傳回到結果集，而節點名稱和屬性會以資料集欄位的方式顯示。  
+ 請注意，當元素路徑是空的時，查詢會使用預設的元素路徑：第一個分葉節點集合的路徑。 在第一個範例中，將元素路徑保留為空白相當於將元素路徑指定為 /Customers/Customer/Orders/Order。 路徑上的所有節點值和屬性都會傳回到結果集，而節點名稱和屬性會以資料集欄位的方式顯示。  
   
--   *Empty*  
+-   *空*  
   
-    |單|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
+    |單|數量|ID|名字|姓氏|Customer.ID|xmlns|  
     |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
     |Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
-    |資料表|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
+    |Table|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
     |Sofa|2|8|Crystal|Hu|20|http://www.adventure-works.com|  
     |EndTables|2|15|Wyatt|Diaz|33|http://www.adventure-works.com|  
   
 -   `Customers {}/Customer`  
   
-    |FirstName|LastName|ID|  
+    |名字|姓氏|ID|  
     |---------------|--------------|--------|  
     |Bobby|Moore|11|  
     |Crystal|Hu|20|  
@@ -110,7 +115,7 @@ XMLLocalName :: =
   
 -   `Customers {}/Customer {}/LastName`  
   
-    |LastName|  
+    |姓氏|  
     |--------------|  
     |Moore|  
     |Hu|  
@@ -118,16 +123,16 @@ XMLLocalName :: =
   
 -   `Customers {}/Customer {}/Orders/Order {@,@Qty}`  
   
-    |單|Qty|  
+    |單|數量|  
     |-----------|---------|  
     |Chair|6|  
-    |資料表|1|  
+    |Table|1|  
     |Sofa|2|  
     |EndTables|2|  
   
 -   `Customers {}/Customer/Orders/Order{ @ID(Integer)}`  
   
-    |Order.ID|FirstName|LastName|ID|  
+    |Order.ID|名字|姓氏|ID|  
     |--------------|---------------|--------------|--------|  
     |1|Bobby|Moore|11|  
     |2|Bobby|Moore|11|  

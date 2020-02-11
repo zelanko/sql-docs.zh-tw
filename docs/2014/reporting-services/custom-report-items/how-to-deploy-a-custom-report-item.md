@@ -1,5 +1,5 @@
 ---
-title: HOW TO：部署自訂報表項目 |Microsoft Docs
+title: 如何：部署自訂報表項目 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b41519ee6a6d31be33d92c8fbdf2ab503c93ec1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265066"
 ---
-# <a name="how-to-deploy-a-custom-report-item"></a>HOW TO：部署自訂報表項目
+# <a name="how-to-deploy-a-custom-report-item"></a>如何：部署自訂報表項目
   若要在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中部署自訂報表項目，您必須修改報表伺服器組態檔，並將設計階段和執行階段元件組件複製到適當的報表設計師和報表伺服器應用程式資料夾中。  
   
 ### <a name="to-deploy-a-custom-report-item"></a>部署自訂報表項目  

@@ -1,5 +1,5 @@
 ---
-title: 模型項目安全性頁面 （報表管理員） |Microsoft Docs
+title: 模型專案安全性頁面（報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f45169a2fdc8fdc4d56cb27a8bf6348a3c3c1a29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108224"
 ---
 # <a name="model-item-security-page-report-manager"></a>模型項目安全性頁面 (報表管理員)
@@ -29,7 +29,7 @@ ms.locfileid: "66108224"
   
  您可以針對模型內部的實體、資料夾和個別欄位定義模型項目安全性。 由於模型會呈現此一龐大的安全性實體項目表面，因此模型會內建權限繼承，如此您可以透過相當少數的角色指派來保護大量項目的安全。 權限繼承是以下列項目為基礎：  
   
--   [模型]  
+-   模型  
   
 -   根節點  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66108224"
   
  若要開始作業，請在根節點上建立角色指派，然後在實體和資料夾上建立其他角色指派。 若要清除模型項目安全性，請清除 **[獨立保護此模型的個別模型項目]** 的核取方塊。 清除此核取方塊就會還原回從模型繼承的初始權限。  
   
-## <a name="navigation"></a>巡覽  
+## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-general-properties-page-for-a-report"></a>若要開啟報表的一般屬性頁面  
@@ -60,18 +60,18 @@ ms.locfileid: "66108224"
   
 4.  選取 **[模型項目安全性]** 索引標籤。  
   
-## <a name="options"></a>選項  
- **保護此模型的獨立的個別模型項目**  
+## <a name="options"></a>選項。  
+ **[獨立保護此模型的個別模型項目]**  
  按一下此核取方塊，即可啟用模型項目安全性。  
   
- **在模式中指定個別的模型項目的安全性**  
+ **指定模型中個別模型項目的安全性**  
  顯示模型中的所有項目。 您可以導覽模型命名空間，以選取要保護的項目。 您一次只能選取一個項目。 請務必在根節點上建立第一個角色指派，然後再繼續處理其他實體和資料夾。  
   
- **繼承父項目中的權限**  
+ **從父項目繼承權限**  
  按一下此選項，即可繼承父項目的安全性設定。  
   
- **指派讀取權限給下列使用者和群組 （以分號分隔）**  
- 按一下此選項，即可指定您正在定義存取權的使用者或群組帳戶。 如果您是使用預設安全性，則使用者和群組帳戶是 Windows 網域帳戶。 在這種格式指定帳戶： *\<網域 >\\< 帳戶\>* 。  
+ **指派讀取權限給下列使用者和群組 (用分號分隔)**  
+ 按一下此選項，即可指定您正在定義存取權的使用者或群組帳戶。 如果您是使用預設安全性，則使用者和群組帳戶是 Windows 網域帳戶。 請以此格式指定帳戶： * \<網域>\\<帳戶\>*。  
   
 ## <a name="see-also"></a>另請參閱  
  [Management Studio F1 說明中的報表伺服器](tools/report-server-in-management-studio-f1-help.md)  

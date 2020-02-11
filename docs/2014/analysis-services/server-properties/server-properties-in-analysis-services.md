@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 中設定伺服器屬性 |Microsoft Docs
+title: 在 Analysis Services 中設定伺服器屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,36 +19,37 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068894"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>在 Analysis Services 中設定伺服器屬性
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理員可以修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的預設伺服器組態屬性。 每一個執行個體都有自己的組態屬性，可以在同一部伺服器上與其他執行個體分開設定。  
   
  若要設定伺服器屬性，請使用 SQL Server Management Studio，或是編輯特定執行個體的 msmdsrv.ini 檔。  
   
  本主題包含下列幾節：  
   
- [設定伺服器 （執行個體） 屬性](#bkmk_config)  
+ [設定伺服器 (執行個體) 屬性](#bkmk_config)  
   
  [伺服器屬性參考](#bkmk_ref)  
   
-##  <a name="bkmk_config"></a> 設定伺服器 （執行個體） 屬性  
+##  <a name="bkmk_config"></a>設定伺服器（實例）屬性  
  SQL Server Management Studio 中的屬性頁包含可用屬性的子集，其中只會顯示較可能修改的屬性。 完整的屬性集可以在 msmdsrv.ini 檔中找到。  
   
 > [!NOTE]  
->  本主題沒有在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中記載部署組態屬性。 如需部署組態的詳細資訊，請參閱[指定方案部署的組態設定](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)。  
+>  本主題沒有在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中記載部署組態屬性。 如需部署設定的詳細資訊，請參閱[指定解決方案部署的設定](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)。  
   
 #### <a name="view-or-set-configuration-properties-in-management-studio"></a>在 Management Studio 中檢視或設定組態屬性  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
   
-     在物件總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，然後按一下 [屬性]  。 [一般] 頁面隨即顯示，其中顯示最常使用的屬性。  
+     在物件總管中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，然後按一下 [屬性]****。 [一般] 頁面隨即顯示，其中顯示最常使用的屬性。  
   
-2.  若要檢視其他屬性，請按一下頁面底部的 [顯示進階 (全部) 屬性]  核取方塊。  
+2.  若要檢視其他屬性，請按一下頁面底部的 [顯示進階 (全部) 屬性]**** 核取方塊。  
   
      只有表格式模式和多維度模式伺服器支援修改伺服器屬性。 如果您已安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，除非 Microsoft 產品支援工程師另有指示，否則請務必使用預設值。  
   
@@ -72,8 +73,9 @@ ms.locfileid: "66068894"
   
 4.  在您儲存檔案之後，必須重新啟動服務。  
   
-##  <a name="bkmk_ref"></a> 伺服器屬性參考  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態屬性對於微調您的系統而言很重要。 例如，若要使查詢記錄行為與您的需求一致，您可以設定相關屬性。  
+##  <a name="bkmk_ref"></a>伺服器屬性參考  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態屬性對於微調您的系統而言很重要。 例如，若要使查詢記錄行為與您的需求一致，您可以設定相關屬性。  
   
  下列主題說明各種 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態屬性：  
   
@@ -83,7 +85,7 @@ ms.locfileid: "66068894"
 |[資料採礦屬性](data-mining-properties.md)|資料採礦屬性控制要啟用和停用哪些資料採礦演算法。 依預設，會啟用所有的演算法。|  
 |DSO|不再支援 DSO。 DSO 屬性會遭到忽略。|  
 |[功能屬性](feature-properties.md)|與產品功能有關的功能屬性，大部分是進階屬性，包含控制伺服器執行個體間之連結的屬性。|  
-|[Filestore 屬性](filestore-properties.md)|檔案存放區屬性僅供進階使用。 其中包含進階記憶體管理設定。|  
+|[FileStore 屬性](filestore-properties.md)|檔案存放區屬性僅供進階使用。 其中包含進階記憶體管理設定。|  
 |[鎖定管理員屬性](lock-manager-properties.md)|鎖定管理員屬性定義與鎖定和逾時有關的伺服器行為。 這些屬性大部分僅供進階使用。|  
 |[記錄屬性](log-properties.md)|記錄屬性控制在伺服器上是否記錄事件、記錄於何處以及如何記錄。 這包含錯誤記錄、例外狀況記錄、飛行記錄器、查詢記錄和追蹤。|  
 |[記憶體屬性](memory-properties.md)|記憶體屬性控制伺服器如何使用記憶體。 這些屬性主要是供進階使用。|  
@@ -93,7 +95,7 @@ ms.locfileid: "66068894"
 |[執行緒集區屬性](thread-pool-properties.md)|執行緒集區屬性控制伺服器會建立多少執行緒。 這些屬性主要是進階屬性。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 執行個體管理](../instances/analysis-services-instance-management.md)   
+ [Analysis Services 實例管理](../instances/analysis-services-instance-management.md)   
  [指定方案部署的組態設定](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

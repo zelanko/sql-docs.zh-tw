@@ -1,5 +1,5 @@
 ---
-title: ADO NET 來源編輯器 （資料行頁面） |Microsoft Docs
+title: ADO NET 來源編輯器（資料行頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1eba4cb2f1f5c8825e9cae5751fe230fbe45a835
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061695"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>ADO NET 來源編輯器 (資料行頁面)
-  使用 [ADO NET 來源編輯器]  對話方塊的 [資料行]  頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
+  使用 [ADO NET 來源編輯器]**** 對話方塊的 [資料行]**** 頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
   
  若要深入了解 ADO NET 來源，請參閱＜ [ADO NET Source](data-flow/ado-net-source.md)＞。  
   
@@ -28,11 +28,11 @@ ms.locfileid: "66061695"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟具有 ADO NET 來源的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  在 [資料流程]  索引標籤上，按兩下 ADO NET 來源。  
+2.  在 [資料流程]**** 索引標籤上，按兩下 ADO NET 來源。  
   
-3.  在 **[ADO NET 來源編輯器]** 中，按一下 **[資料行]** 。  
+3.  在 **[ADO NET 來源編輯器]** 中，按一下 **[資料行]**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **可用的外部資料行**  
  在資料來源中檢視可用的外部資料行清單。 您無法使用此資料表來加入或刪除資料行。  
   

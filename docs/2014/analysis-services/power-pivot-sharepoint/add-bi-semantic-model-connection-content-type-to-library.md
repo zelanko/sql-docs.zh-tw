@@ -1,5 +1,5 @@
 ---
-title: 將 BI 語意模型連接內容類型新增至程式庫 (PowerPivot for SharePoint) |Microsoft Docs
+title: 將 BI 語義模型連接內容類型新增至程式庫（PowerPivot for SharePoint） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4712aba656fa111400e41566964cbd9719f778db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071972"
 ---
 # <a name="add-a-bi-semantic-model-connection-content-type-to-a-library-powerpivot-for-sharepoint"></a>將 BI 語意模型連接內容類型加入至文件庫 (PowerPivot for SharePoint)
@@ -23,45 +23,45 @@ ms.locfileid: "66071972"
 > [!NOTE]  
 >  如果您已經使用 SharePoint 資料連線庫，則會將 BI 語意模型連接內容類型自動加入至該連線庫範本。 如果您使用已經讓您建立新 BI 語意模型連接文件的資料連線庫，可以略過本節中的步驟。  
   
-##  <a name="bkmk_addtype"></a> 將內容類型加入至文件庫  
+##  <a name="bkmk_addtype"></a>將內容類型加入至文件庫  
  您必須至少有「管理清單」權限，才能加入並設定內容類型。 此權限內建在「設計」權限等級以上 (含)。  
   
- 包含文件庫的網站必須啟用 PowerPivot for SharePoint 的功能。 如需詳細資訊，請參閱 <<c0> [ 在管理中心為網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)。  
+ 包含文件庫的網站必須啟用 PowerPivot for SharePoint 的功能。 如需詳細資訊，請參閱為[管理中心的網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)。  
   
 1.  開啟要啟用 BI 語意模型連接內容類型的文件庫。  
   
-2.  在 SharePoint 功能區的 [文件庫工具] 中，按一下 **[文件庫]** 。  
+2.  在 SharePoint 功能區的 [文件庫工具] 中，按一下 **[文件庫]**。  
   
-3.  按一下 **[文件庫設定]** 。  
+3.  按一下 **[文件庫設定]**。  
   
-4.  按一下 [一般設定] 中的 **[進階設定]** 。  
+4.  按一下 [一般設定] 中的 **[進階設定]**。  
   
-5.  在 [內容類型] 的 [是否允許內容類型的管理?] 區段中按一下 **[是]** 。  
+5.  在 [內容類型] 的 [是否允許內容類型的管理?] 區段中按一下 **[是]**。  
   
 6.  按一下 [確定]  。  
   
-7.  在 [內容類型] 區段中，按一下 **[從現有的網站內容類型新增]** 。 如果您看不到此頁面，請回到網站中，按一下文件庫工具中的 **[文件庫]** ，然後按一下 **[文件庫設定]** 。  
+7.  在 [內容類型] 區段中，按一下 **[從現有的網站內容類型新增]**。 如果您看不到此頁面，請回到網站中，按一下文件庫工具中的 **[文件庫]** ，然後按一下 **[文件庫設定]**。  
   
-8.  在 [內容類型] 中，按一下 **[從現有的網站內容類型新增]** 。  
+8.  在 [內容類型] 中，按一下 **[從現有的網站內容類型新增]**。  
   
-9. 在 [從下列位置選取網站內容類型:] 中，選取 **[商業智慧]** 。  
+9. 在 [從下列位置選取網站內容類型:] 中，選取 **[商業智慧]**。  
   
-10. 在 [可用的網站內容類型] 中，按一下 **[BI 語意模型連接檔案]** ，然後按一下 **[加入]** ，將所選取的內容類型移到 [要新增的內容類型] 清單中。  
+10. 在 [可用的網站內容類型] 中，按一下 **[BI 語意模型連接檔案]**，然後按一下 **[加入]** ，將所選取的內容類型移到 [要新增的內容類型] 清單中。  
   
 11. 按一下 [確定]  。  
   
 12. 若要驗證您是否加入此內容類型，請回到文件庫，然後在文件庫功能區的文件區域上按一下 **[新文件]** 。 您應該會在 [新文件] 清單中看到 **[BI 語意模型連接檔案]** 。  
   
-     ![在 SharePoint 文件庫中的新文件子功能表](../media/ssas-bismconnection-new.gif "SharePoint 文件庫中的新文件子功能表")  
+     ![SharePoint 文件庫中的新文件子功能表](../media/ssas-bismconnection-new.gif "SharePoint 文件庫中的新文件子功能表")  
   
  在您為文件庫啟用 BI 語意模型連接內容類型之後，您可以建立連接來重新導向至可由 Excel 或 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 報表使用的商業語意模型資料。 從下列連結進行選擇，以深入了解下一個步驟：  
   
  [建立與 PowerPivot 活頁簿的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [C建立與表格式模型資料庫的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [建立與表格式模型資料庫的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [PowerPivot BI 語意模型連接&#40;.bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
+ [PowerPivot BI 語義模型連接 &#40;. bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
  [在 Excel 或 Reporting Services 使用 BI 語意模型連接](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
   

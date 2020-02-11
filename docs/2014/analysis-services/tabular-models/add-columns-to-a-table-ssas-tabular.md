@@ -1,5 +1,5 @@
 ---
-title: 將資料行加入資料表 (SSAS 表格式) |Microsoft Docs
+title: 將資料行加入至資料表（SSAS 表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a62460a63bab15499f9aeb4c6510c0e4a9652a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067773"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>將資料行加入至資料表 (SSAS 表格式)
@@ -35,7 +35,7 @@ ms.locfileid: "66067773"
   
 #### <a name="to-add-a-column-from-the-data-source-by-using-the-edit-table-properties-dialog-box"></a>使用 [編輯資料表屬性] 對話方塊從資料來源加入資料行  
   
-1.  在模型設計師中，按一下您要加入資料行的資料表，然後按一下 **[資料表]** 功能表，再按一下  **[資料表屬性]** 。  
+1.  在模型設計師中，按一下您要加入資料行的資料表，然後按一下 **[資料表]** 功能表，再按一下  **[資料表屬性]**。  
   
 2.  在 **[編輯資料表屬性]** 對話方塊的 [資料表預覽] 視窗中，選取您要加入的來源資料行，再按一下 [確定]。 目前包含在資料表定義中的資料行已經過檢查。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "66067773"
   
 #### <a name="to-create-a-calculated-column"></a>若要建立導出資料行  
   
-1.  在模型設計師的 [資料檢視] 中，選取您要加入新的空白導出資料行的資料表，然後捲動至最右側資料行，或按一下 [資料行]  功能表，再按一下 [加入資料行]  。  
+1.  在模型設計師的 [資料檢視] 中，選取您要加入新的空白導出資料行的資料表，然後捲動至最右側資料行，或按一下 [資料行]**** 功能表，再按一下 [加入資料行]****。  
   
-     若要在兩個現有的資料行之間建立新資料行，請以滑鼠右鍵按一下現有的資料行，然後按一下 [插入資料行]  。  
+     若要在兩個現有的資料行之間建立新資料行，請以滑鼠右鍵按一下現有的資料行，然後按一下 [插入資料行]****。  
   
 2.  在公式列中輸入 DAX 公式，以便為每個資料列加入屬性。  
   
@@ -55,14 +55,14 @@ ms.locfileid: "66067773"
   
 #### <a name="to-create-a-named-blank-column"></a>建立空白的具名資料行  
   
-1.  在模型設計師的 [資料檢視] 中，選取您要加入空白資料行的資料表，然後捲動至最右側資料行，或按一下 [資料行]  功能表，再按一下 [加入資料行]  。  
+1.  在模型設計師的 [資料檢視] 中，選取您要加入空白資料行的資料表，然後捲動至最右側資料行，或按一下 [資料行]**** 功能表，再按一下 [加入資料行]****。  
   
-     若要在兩個現有的資料行之間建立新資料行，請以滑鼠右鍵按一下現有的資料行，然後按一下 [插入資料行]  。  
+     若要在兩個現有的資料行之間建立新資料行，請以滑鼠右鍵按一下現有的資料行，然後按一下 [插入資料行]****。  
   
 2.  按一下頂端資料格，然後輸入名稱，再按 ENTER。  
   
 ## <a name="see-also"></a>另請參閱  
- [編輯資料表屬性對話方塊 &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
- [變更資料表、資料行或資料列篩選對應 &#40;SSAS 表格式&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+ [&#40;SSAS&#41;的 [編輯資料表屬性] 對話方塊](../edit-table-properties-dialog-box-ssas.md)   
+ [變更 &#40;SSAS 表格式&#41;的資料表、資料行或資料列篩選對應](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

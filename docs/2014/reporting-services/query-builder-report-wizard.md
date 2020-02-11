@@ -1,5 +1,5 @@
 ---
-title: 查詢產生器 （報表精靈） |Microsoft Docs
+title: 查詢產生器（報表精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8d289466fcff56a78172c54f24a093e0af169484
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108000"
 ---
 # <a name="query-builder-report-wizard"></a>查詢產生器 (報表精靈)
@@ -34,13 +34,13 @@ ms.locfileid: "66108000"
  您也可以從其他報表匯入查詢。  
   
 ## <a name="query-builder-options"></a>查詢產生器選項  
- **當成文字編輯**  
+ **當做文字編輯**  
  在以文字為基礎和圖形化查詢設計工具之間切換 (如果這兩種工具都適用於查詢的話)。  
   
  **匯入**  
- 開啟 [匯入查詢]  對話方塊，然後顯示任何可用報表的 .rdl 和 .sql 檔。 您可以依原狀使用匯入的查詢，也可以在查詢產生器中修改此查詢。  
+ 開啟 [匯入查詢]**** 對話方塊，然後顯示任何可用報表的 .rdl 和 .sql 檔。 您可以依原狀使用匯入的查詢，也可以在查詢產生器中修改此查詢。  
   
- **\!(Run)**  
+ **!進行**  
  執行查詢，如果查詢有效則傳回結果集。 請注意，如果這是一個運算式，則無法執行查詢。 若要驗證以運算式為基礎的查詢，您必須預覽報表。  
   
  **命令類型**  

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63313766"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>使用結果窗格中的資料 (Visual Database Tools)
@@ -115,12 +115,12 @@ ms.locfileid: "63313766"
 ### <a name="what-can-not-be-represented-fully"></a>何者無法完整表示  
  從資料庫傳回 [結果] 窗格的資料，大部份是由您所使用之資料來源的提供者控制。 [結果] 窗格未必能轉譯來自所有資料庫管理系統之資料。 此處的範例即有這種情形。  
   
--   通常二進位資料類型對於在 [結果] 窗格中工作的人不太有用，而且下載要花費很長的時間。 因此它們都由 *\<二進位資料>* 或是*Null*。  
+-   通常二進位資料類型對於在 [結果] 窗格中工作的人不太有用，而且下載要花費很長的時間。 因此，它們會以* \<二進位資料表示>* 或*Null*。  
   
--   有效位數與小數位數未必會被保留。 例如，[結果] 窗格支援 27 位數的有效位數。 若資料具有較高的有效位數的資料類型，資料可能會被截斷，或可能由 *\<無法讀取資料>* 。  
+-   有效位數與小數位數未必會被保留。 例如，[結果] 窗格支援 27 位數的有效位數。 如果資料的資料類型具有較高的有效位數，則資料可能會被截斷，或可能以* \<無法讀取資料>* 來表示。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行基本查詢作業&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
+ [使用 &#40;Visual Database Tools 的查詢來執行基本作業&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
  [指定搜尋準則 &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

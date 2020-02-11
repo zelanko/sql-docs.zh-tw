@@ -18,13 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8156e3d62e8aac027499ad1e267e1f6e14f5ef9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108684"
 ---
 # <a name="store-encrypted-report-server-data-ssrs-configuration-manager"></a>儲存加密的報表伺服器資料 (SSRS 組態管理員)
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會在報表伺服器資料庫和組態檔中儲存加密值。 大部份加密值是用於存取將資料提供給報表之外部資料來源的認證。 本主題將描述哪些值會進行加密、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中所使用的加密功能，以及您應該知道的其他預存機密資料類型。  
   
 ## <a name="encrypted-values"></a>加密值  
@@ -32,7 +33,7 @@ ms.locfileid: "66108684"
   
 -   連接資訊和認證 - 可供報表伺服器連接到儲存內部伺服器資料的報表伺服器資料庫。  
   
-     這些值是在安裝或報表伺服器組態過程中指定與加密。 您可以隨時使用 Reporting Services 組態工具或 **rsconfig** 公用程式，來更新連接資訊。 組態設定的加密，是以所有使用者都能使用之本機電腦的電腦層級金鑰執行。 加密的報表伺服器連接資訊，會儲存在 rsreportserver.config 檔案中 (其他組態檔並未包含加密的設定)。 如需詳細資訊，請參閱 [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)主題中受支援的版本。  
+     這些值是在安裝或報表伺服器組態過程中指定與加密。 您可以隨時使用 Reporting Services 組態工具或 **rsconfig** 公用程式，來更新連接資訊。 組態設定的加密，是以所有使用者都能使用之本機電腦的電腦層級金鑰執行。 加密的報表伺服器連接資訊，會儲存在 rsreportserver.config 檔案中 (其他組態檔並未包含加密的設定)。 如需詳細資訊，請參閱[將報表伺服器資料庫連接設定 &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
 -   預存認證 - 可供報表伺服器連接到將資料提供給報表的外部資料來源。  
   
@@ -49,7 +50,8 @@ ms.locfileid: "66108684"
      此值是在安裝或伺服器組態過程中建立，然後以加密值形式儲存在報表伺服器資料庫中。 報表伺服器 Windows 服務會使用此金鑰，將儲存在報表伺服器資料庫中的資料加密與解密。  
   
 ## <a name="encryption-functionality-in-reporting-services"></a>Reporting Services 中的加密功能  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用屬於 Windows 作業系統的加密函數。 對稱和非對稱加密均使用。  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用屬於 Windows 作業系統的加密函數。 對稱和非對稱加密均使用。  
   
  報表伺服器資料庫中的資料是利用對稱金鑰來加密。 每個報表伺服器資料庫均有單一對稱金鑰。 此對稱金鑰本身是利用 Windows 產生之非對稱金鑰組的公開金鑰來加密。 私密金鑰由報表伺服器 Windows 服務帳戶持有。  
   
@@ -62,7 +64,8 @@ ms.locfileid: "66108684"
  報表伺服器會儲存其他未加密的資料，可能包含您想要保護的機密資訊。 尤其是報表記錄快照集與報表執行快照集所包含的查詢結果，可能包含要供授權使用者使用的資料。 如果您在包含機密資料的報表使用快照集功能，請注意，可以開啟報表伺服器資料庫中之資料表的使用者，就有可能檢查資料表內容來檢視預存報表的部份。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不支援使用以使用者安全性識別為基礎之參數的報表的快取或報表記錄。  
+>  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不支援使用以使用者安全性識別為基礎之參數的報表的快取或報表記錄。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  

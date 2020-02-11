@@ -1,5 +1,5 @@
 ---
-title: 報表產生器說明的對話方塊、 窗格和精靈 |Microsoft Docs
+title: 對話方塊、窗格和嚮導的報表產生器說明 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3f9f6fa990aa3c976565968ccb69bb3d18c25f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107963"
 ---
 # <a name="report-builder-help-for-dialog-boxes-panes-and-wizards"></a>對話方塊、窗格和精靈的報表產生器說明
@@ -29,7 +29,7 @@ ms.locfileid: "66107963"
   
 ## <a name="see-also"></a>另請參閱  
  [報表設計檢視 &#40;報表產生器&#41;](report-builder/report-design-view-report-builder.md)   
- [地圖精靈與地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
- [針對報表產生器進行疑難排解](../../2014/reporting-services/troubleshoot-report-builder.md)  
+ [Map Wizard 和地圖圖層 Wizard &#40;報表產生器和 SSRS&#41;](report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
+ [疑難排解報表產生器](../../2014/reporting-services/troubleshoot-report-builder.md)  
   
   

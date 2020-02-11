@@ -1,5 +1,5 @@
 ---
-title: CDC 來源編輯器 （資料行頁面） |Microsoft Docs
+title: CDC 來源編輯器（資料行頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 980b9cf22e2c50cd1de3eb90a06e6496c01cc093
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061025"
 ---
 # <a name="cdc-source-editor-columns-page"></a>CDC 來源編輯器 (資料行頁面)
-  使用 [CDC 來源編輯器]  對話方塊的 [資料行]  頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
+  使用 [CDC 來源編輯器]**** 對話方塊的 [資料行]**** 頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
   
  若要了解有關 CDC 來源的詳細資訊，請參閱＜ [CDC Source](data-flow/cdc-source.md)＞。  
   
@@ -29,11 +29,11 @@ ms.locfileid: "66061025"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，開啟具有 CDC 來源的 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 封裝。  
   
-2.  在 [資料流程]  索引標籤中，按兩下 CDC 來源。  
+2.  在 [資料流程]**** 索引標籤中，按兩下 CDC 來源。  
   
-3.  在 **[CDC 來源編輯器]** 中，按一下 **[資料行]** 。  
+3.  在 **[CDC 來源編輯器]** 中，按一下 **[資料行]**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **可用的外部資料行**  
  資料來源中可用的外部資料行清單。 您無法使用此資料表來加入或刪除資料行。 請在來源中選取要使用的資料行。 選取的資料行就會依照選取的順序加入至 **[外部資料行]** 清單。  
   

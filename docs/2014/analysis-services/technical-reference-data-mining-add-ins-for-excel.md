@@ -1,5 +1,5 @@
 ---
-title: 技術參考 （資料採礦適用於 Excel 的增益集） |Microsoft Docs
+title: 技術參考（適用于 Excel 的資料採礦增益集） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdf32878788bd68f9f0da36500be75fed5b96691
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066221"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>技術參考 (適用於 Excel 的資料採礦增益集)
@@ -30,18 +30,18 @@ ms.locfileid: "66066221"
   
  如果您使用適用於 Excel 的資料採礦用戶端提供的精靈，就可以變更演算法參數並設定進階選項來自訂演算法處理資料的方式。  
   
--   [演算法參數&#40;SQL Server 資料採礦增益集&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
+-   [SQL Server 資料採礦增益集 &#40;的演算法參數&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
   
  **組態精靈說明**  
   
  組態精靈會在您初次開啟增益集時執行，以協助您連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器。 如果您對任何的步驟有疑問，請參閱此主題以取得其他說明。  
   
--   [伺服器組態公用程式&#40;資料採礦適用於 Excel 的增益集&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+-   [伺服器設定公用程式 &#40;適用于 Excel 的資料採礦增益集&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
 ## <a name="in-this-section"></a>本節內容  
- [資料採礦演算法&#40;SQL Server 資料採礦增益集&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)  
+ [資料採礦演算法 &#40;SQL Server 資料採礦增益集&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)  
   
- [伺服器組態公用程式&#40;資料採礦適用於 Excel 的增益集&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+ [伺服器設定公用程式 &#40;適用于 Excel 的資料採礦增益集&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
 ## <a name="related-sections"></a>相關章節  
   

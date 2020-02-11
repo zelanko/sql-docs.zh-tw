@@ -1,5 +1,5 @@
 ---
-title: 點選連結報表頁面 （報表管理員） |Microsoft Docs
+title: 點選連結報表頁面（報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109800"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>點選連結報表頁面 (報表管理員)
@@ -31,9 +31,9 @@ ms.locfileid: "66109800"
  雖然您可以選取任何能夠存取的報表，請只選取特別針對您正在設定之模型所建立的報表。  
   
 > [!NOTE]  
->  並非 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的所有版本都可使用點選連結報表。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如果您不確定您組織執行的是哪個版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，請連絡資料庫管理員。  
+>  並非 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的所有版本都可使用點選連結報表。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如果您不確定您組織執行的是哪個版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，請連絡資料庫管理員。  
   
-## <a name="navigation"></a>巡覽  
+## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-clickthrough-reports-page"></a>若要開啟點選連結報表頁面  
@@ -46,7 +46,7 @@ ms.locfileid: "66109800"
   
 4.  選取 **[點選連結]** 索引標籤。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **模型項目階層**  
  顯示模型命名空間中，您可以為其提供自訂報表的實體、資料夾和項目。  
   
@@ -57,6 +57,6 @@ ms.locfileid: "66109800"
  指定當使用者導覽需要多重執行個體資料的檢視時，要使用的自訂報表。 按一下瀏覽按鈕，即可選取您要使用的報表。  
   
 ## <a name="see-also"></a>另請參閱  
- [發佈報表](../../2014/reporting-services/publish-reports.md)  
+ [發行報表](../../2014/reporting-services/publish-reports.md)  
   
   

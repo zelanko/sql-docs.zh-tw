@@ -1,5 +1,5 @@
 ---
-title: 將報表連結至模型來做為點選連結報表 |Microsoft Docs
+title: 將報表連結至模型做為點選連結報表 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45b7695a9cd259d10155036ce1f9367a71e2fe72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108365"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>將報表連結至模型以做為點選連結報表
@@ -31,7 +31,7 @@ ms.locfileid: "66108365"
   
 1.  開啟 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 或更新版本。  
   
-2.  在網頁瀏覽器的網址列中，輸入報表管理員 URL。 根據預設，URL 為 http://\<*ComputerName*> / 報告。  
+2.  在網頁瀏覽器的網址列中，輸入報表管理員 URL。 根據預設，URL 為 HTTP://\<*ComputerName*>/reports。  
   
 ### <a name="to-create-a-customized-clickthrough-report"></a>建立自訂點選連結報表  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66108365"
   
 2.  按兩下報表模型。  
   
-3.  按一下 **[Clickthrough]** 。  
+3.  按一下 **[Clickthrough]**。  
   
 4.  選取您要附加自訂點選連結報表的目標實體。  
   
@@ -52,11 +52,11 @@ ms.locfileid: "66108365"
   
      若要在按一下所選實體的多個執行個體時顯示自訂報表，按一下多個執行個體報表的 **[瀏覽]** 按鈕。  
   
-6.  選取報表，然後按一下 **[確定]** 。  
+6.  選取報表，然後按一下 **[確定]**。  
   
-7.  按一下 **[套用]** 。  
+7.  按一下 [套用]  。  
   
 ## <a name="see-also"></a>另請參閱  
- [點選連結報表&#40;SSRS&#41;](reports/clickthrough-reports-ssrs.md)  
+ [&#40;SSRS&#41;的點選連結報表](reports/clickthrough-reports-ssrs.md)  
   
   

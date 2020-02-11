@@ -20,16 +20,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c992148017f6a3ecb383e85ad5bbfcc3a3ec3c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108913"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 的備份與還原作業
   此主題提供所有用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝中資料檔案的概觀，並說明備份這些檔案的時機與方法。 復原策略中最重要的部分，就是訂定報表伺服器資料庫檔案的備份與還原計劃。 但是，更加完整的復原策略應該要包括加密金鑰、自訂組件或延伸模組、組態檔以及報表和模型之來源檔案的備份。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
   
  備份和還原作業常用於移動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝的全部或一部分：  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66108913"
  如需備份和復原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫的詳細資訊，請參閱 [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
 > [!IMPORTANT]  
->  如果您的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 報表伺服器處於 SharePoint 模式，則要連接其他資料庫，包括 SharePoint 組態資料庫和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 警示資料庫。 在 SharePoint 模式下，系統會針對每個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式建立三個資料庫。 **reportserver**、 **reportservertempdb**和 **dataalerting** 資料庫。 如需詳細資訊，請參閱 [備份與還原 Reporting Services SharePoint 服務應用程式](../backup-and-restore-reporting-services-sharepoint-service-applications.md)  
+>  如果您的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 報表伺服器處於 SharePoint 模式，則要連接其他資料庫，包括 SharePoint 組態資料庫和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 警示資料庫。 在 SharePoint 模式下，系統會針對每個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式建立三個資料庫。 **reportserver**、 **reportservertempdb**和 **dataalerting** 資料庫。 如需詳細資訊[，請參閱備份和還原 Reporting Services SharePoint 服務應用程式](../backup-and-restore-reporting-services-sharepoint-service-applications.md)  
   
 ## <a name="backing-up-the-encryption-keys"></a>備份加密金鑰  
  當您第一次設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝時，應該要備份加密金鑰。 每次變更服務帳戶的身分或重新命名電腦時，您也應該同時備份加密金鑰。 如需詳細資訊，請參閱 [備份與還原 Reporting Services 加密金鑰](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。 針對 SharePoint 模式的報表伺服器，請參閱[管理 Reporting Services SharePoint 服務應用程式](../manage-a-reporting-services-sharepoint-service-application.md)的＜金鑰管理＞一節。  
@@ -85,9 +85,9 @@ ms.locfileid: "66108913"
 ## <a name="see-also"></a>另請參閱  
  [報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
  [Reporting Services 組態檔](../report-server/reporting-services-configuration-files.md)   
- [rskeymgmt 公用程式 &#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md)   
+ [&#40;SSRS&#41;的 rskeymgmt 公用程式](../tools/rskeymgmt-utility-ssrs.md)   
  [使用備份與還原複製資料庫](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
- [管理報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../report-server/administer-a-report-server-database-ssrs-native-mode.md)   
+ [&#40;SSRS 原生模式管理報表伺服器資料庫&#41;](../report-server/administer-a-report-server-database-ssrs-native-mode.md)   
  [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 設定 In-memory 或 DirectQuery 表格式模型資料庫的存取 |Microsoft Docs
+title: 設定表格式模型資料庫的記憶體內部或 DirectQuery 存取 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55a1a296e6a7b2a2155dea590be9321b22e73451
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067189"
 ---
 # <a name="configure-in-memory-or-directquery-access-for-a-tabular-model-database"></a>為表格式模型資料庫設定 In-Memory 或 DirectQuery 存取
   本主題描述如何變更已經部署之表格式模型的連接屬性，以便在 DirectQuery 模式中啟用此模型。  
   
- 如需有關這些屬性和組態的最常見的案例的詳細資訊，請參閱 < [DirectQuery 部署案例&#40;SSAS 表格式&#41;](../directquery-deployment-scenarios-ssas-tabular.md)。  
+ 如需有關這些屬性的詳細資訊，以及最常見案例的設定，請參閱[DirectQuery 部署案例 &#40;SSAS 表格式&#41;](../directquery-deployment-scenarios-ssas-tabular.md)。  
   
 ## <a name="requirements"></a>需求  
  在表格式模型中啟用 DirectQuery 模式為多步驟的程序。 您必須：  
@@ -41,9 +41,9 @@ ms.locfileid: "66067189"
   
 1.  在 SQL Server Management Studio 中，開啟部署模型的目標執行個體。  
   
-2.  在 [物件總管] 中，以滑鼠右鍵按一下模型資料庫的名稱，然後選取**屬性**。  
+2.  在物件總管中，以滑鼠右鍵按一下模型資料庫的名稱，然後選取 [**屬性**]。  
   
-3.  找出屬性， **DirectQueryMode**。 若要啟用關聯式資料來源，這個屬性必須設定為下列其中一個值：  
+3.  找出屬性（ **DirectQueryMode**）。 若要啟用關聯式資料來源，這個屬性必須設定為下列其中一個值：  
   
     -   **DirectQuery**  
   

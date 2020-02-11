@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 77be473f189d8574ebde74215569e700e80725b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253507"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>移除查詢結果的資料行 (Visual Database Tools)
@@ -39,10 +39,10 @@ ms.locfileid: "63253507"
 -   在 [SQL 窗格](sql-pane-visual-database-tools.md)中，從輸出清單移除資料行。  
   
 ## <a name="see-also"></a>另請參閱  
- [將資料行加入至查詢&#40;Visual Database Tools&#41;](add-columns-to-queries-visual-database-tools.md)   
- [從查詢移除資料行&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [排序及群組查詢結果&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [摘要查詢結果&#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [將資料行加入至查詢 &#40;Visual Database Tools&#41;](add-columns-to-queries-visual-database-tools.md)   
+ [從查詢中移除資料行 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [排序和分組查詢結果 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [&#40;Visual Database Tools&#41;匯總查詢結果](summarize-query-results-visual-database-tools.md)   
  [使用查詢執行基本作業 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

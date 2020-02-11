@@ -1,5 +1,5 @@
 ---
-title: 一般屬性頁面，資源 （報表管理員） |Microsoft Docs
+title: 一般屬性頁面、資源（報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23c920f436ae48c8eb4abd8ccd69097a06557907
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109119"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>一般屬性頁面，資源 (報表管理員)
@@ -22,7 +22,7 @@ ms.locfileid: "66109119"
   
  若要開啟此頁面，請選取資源，然後在頁面頂端按一下 **[屬性]** 索引標籤。  
   
-## <a name="navigation"></a>巡覽  
+## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-general-properties-page-for-a-resource"></a>若要開啟資源的一般屬性頁面  
@@ -33,9 +33,9 @@ ms.locfileid: "66109119"
   
 3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該資源的 [一般] 屬性頁面。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **名稱**  
- 指定資源的名稱。 名稱必須至少包含一個英數字元。 它也可以包含空格和某些符號。 請勿使用 ; ? : \@ & = +，$ / * \< > |"或 / 來指定名稱。  
+ 指定資源的名稱。 名稱必須至少包含一個英數字元。 它也可以包含空格和某些符號。 請勿使用 ; ? ： \@ & = +，$/* \< > |"或/指定名稱時。  
   
  **說明**  
  輸入資源的描述。 此描述顯示在有權存取此資源的使用者的 [內容] 頁面上。  
@@ -44,15 +44,15 @@ ms.locfileid: "66109119"
  選取這個選項可以對正在「報表管理員」中使用清單檢視模式的使用者隱藏資源。 清單檢視模式是瀏覽報表伺服器資料夾階層時的預設檢視格式。 在清單檢視中，項目名稱和描述會跨頁排列。 替代格式是詳細資料檢視。 詳細資料檢視會省略描述，但會包括項目的其他相關資訊。 雖然在清單檢視中可以隱藏項目，但在詳細資料檢視中則不行。 如果想要限制項目的存取，您必須建立角色指派。  
   
  **型別**  
- 指定資源的 MIME 類型。 此屬性是唯讀的。  
+ 指定資源的 MIME 類型。 這個屬性是唯讀的。  
   
- **Apply**  
+ **套用**  
  按一下即可儲存您的變更。  
   
  **刪除**  
  按一下即可從報表伺服器資料庫中移除資源。  
   
- **[移動]**  
+ **移動**  
  按一下即可在報表伺服器資料夾階層內重新定位資源。 按一下此按鈕會開啟 [移動項目] 頁面，您可在此瀏覽資料夾以選取新位置。  
   
  **取代**  
@@ -60,8 +60,8 @@ ms.locfileid: "66109119"
   
 ## <a name="see-also"></a>另請參閱  
  [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [檢視頁面，資源&#40;報表管理員&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
+ [View 頁面，&#40;報表管理員的資源&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   
- [安全性屬性頁面，項目 &#40;報表管理員&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
+ [安全性屬性頁面，&#40;報表管理員的專案&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
   
   

@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aeb0c6c47a9203a7124fbe5d9f4739c52ae430d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63246235"
 ---
 # <a name="sql-server-agent-properties-advanced-page"></a>SQL Server Agent 屬性 (進階頁面)
-  使用此頁面來檢視和修改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務的進階屬性。  
+  使用此頁面來查看和修改[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務的 advanced 屬性。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **SQL Server 事件轉送**  
  此類別目錄中的選項會啟動和設定事件轉送。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "63246235"
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行閒置 CPU 排程上的作業之前，平均 CPU 必須低於指定層級的時間量。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立及附加排程至作業](create-and-attach-schedules-to-jobs.md)   
+ [建立排程並將其附加至作業](create-and-attach-schedules-to-jobs.md)   
  [管理事件](manage-events.md)  
   
   

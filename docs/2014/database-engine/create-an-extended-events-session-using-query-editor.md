@@ -1,5 +1,5 @@
 ---
-title: 建立擴充的事件工作階段中使用查詢編輯器 |Microsoft Docs
+title: 使用查詢編輯器建立擴充事件會話 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065024"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>使用查詢編輯器建立擴充事件工作階段
-  您可以使用查詢編輯器來建立擴充事件工作階段，也可以在物件總管中建立工作階段。 在 [物件總管] 中，擴充的事件會提供兩個使用者介面，可用來建立、 修改及檢視事件工作階段資料-一個精靈，引導您完成事件工作階段的建立程序，並提供更進階的組態選項的新工作階段 UI。 您可以建立擴充事件工作階段來診斷 SQL Server 追蹤，以便解決下列問題：  
+  您可以使用查詢編輯器來建立擴充事件工作階段，也可以在物件總管中建立工作階段。 在物件總管中，擴充事件提供兩個使用者介面，您可以用來建立、修改及查看事件會話資料，此嚮導會引導您完成事件會話的建立程式，以及提供更多更先進設定選項的新會話 UI。 您可以建立擴充事件工作階段來診斷 SQL Server 追蹤，以便解決下列問題：  
   
 -   尋找最費時的查詢  
   
@@ -156,7 +156,7 @@ ms.locfileid: "66065024"
         WHERE package0.counter <= 5  
         ```  
   
-5.  加入所要的目標，其中將會處理及耗用事件資料。 使用下列格式：  
+5.  加入所要的目標，其中將會處理及耗用事件資料。 請使用下列格式：  
   
     ```  
     ADD TARGET package_name.target_name  
@@ -186,7 +186,8 @@ ms.locfileid: "66065024"
     > [!NOTE]  
     >  如需不同目標類型的相關資訊，請參閱 [SQL Server 擴充的事件目標](../../2014/database-engine/sql-server-extended-events-targets.md)。  
   
-6.  檢閱並加入任何其他組態選項。 例如，您可以設定選項，例如事件保留模式、事件在記憶體中緩衝處理多久，或是當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 啟動時事件工作階段是否應該自動啟動。 [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql) 主題會描述這些選項。 請注意，如果未指定這些選項，就會指派預設值。  
+6.  檢閱並加入任何其他組態選項。 例如，您可以設定選項，例如事件保留模式、事件在記憶體中緩衝處理多久，或是當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 啟動時事件工作階段是否應該自動啟動。 
+  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql) 主題會描述這些選項。 請注意，如果未指定這些選項，就會指派預設值。  
   
 7.  啟動工作階段。  
   

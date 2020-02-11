@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2201be33df4346ab2afa812828ab9655b0ed2be
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67793288"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>複寫資料分割資料表及索引
@@ -37,7 +37,7 @@ ms.locfileid: "67793288"
   
  與資料分割有關的第一組屬性是發行項結構描述選項，這些選項可決定是否應將資料分割物件複製到訂閱者。 可透過下列方式來設定這些結構描述選項：  
   
--   在新增發行集精靈的 **[發行項屬性]** 頁面中，或是在 [發行集屬性] 對話方塊中。 若要複製上表所列的物件，指定其值為`true`的屬性**複製資料表資料分割配置**並**複製索引資料分割配置**。 如需如何存取 [發行項屬性]  頁面的詳細資訊，請參閱[檢視和修改發行集屬性](view-and-modify-publication-properties.md)。  
+-   在新增發行集精靈的 **[發行項屬性]** 頁面中，或是在 [發行集屬性] 對話方塊中。 若要複製上表所列的物件，請`true`針對 [**複製資料表資料分割**配置] 和 [**複製索引資料分割**配置] 屬性指定的值。 如需如何存取 [發行項屬性]  頁面的詳細資訊，請參閱[檢視和修改發行集屬性](view-and-modify-publication-properties.md)。  
   
 -   藉由使用下列其中一個預存程序的 *schema_option* 參數：  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67793288"
   
  複寫會在初始同步處理期間將物件複製到訂閱者。 如果資料分割配置使用 PRIMARY 以外的檔案群組，這些檔案群組必須在初始同步處理之前存在於訂閱者上。  
   
- 在初始化訂閱者之後，資料變更會傳播到訂閱者，並套用到適當的資料分割。 但是，不支援資料分割配置的變更。 交易式與合併式複寫不支援複寫下列命令：ALTER PARTITION FUNCTION、 ALTER PARTITION SCHEME 或 ALTER INDEX 的 REBUILD WITH PARTITION 陳述式。  這些命令所關聯的變更不會自動複寫到訂閱者。 使用者必須在訂閱者中手動進行類似的變更。  
+ 在初始化訂閱者之後，資料變更會傳播到訂閱者，並套用到適當的資料分割。 但是，不支援資料分割配置的變更。 交易式及合併複寫無法複寫下列命令：ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME 或 ALTER INDEX 的 REBUILD WITH PARTITION 陳述式。  這些命令所關聯的變更不會自動複寫到訂閱者。 使用者必須在訂閱者中手動進行類似的變更。  
   
 ## <a name="replication-support-for-partition-switching"></a>資料分割切換的複寫支援  
  資料表資料分割的其中一個重要優點，就是能夠快速及有效率地在資料分割之間移動資料子集。 資料的移動是利用 SWITCH PARTITION 命令。 根據預設，當啟用資料表進行複寫時，會基於以下理由而封鎖 SWITCH PARTITION 作業：  
@@ -70,9 +70,9 @@ ms.locfileid: "67793288"
 ### <a name="enabling-partition-switching"></a>啟用資料分割切換  
  交易式發行集的下列屬性可讓使用者控制複寫環境中的資料分割切換行為：  
   
--   **\@allow_partition_switch**，當設定為`true`，SWITCH PARTITION 可以針對發行集資料庫來執行。  
+-   allow_partition_switch，當設定為`true`時，switch partition 可以針對發行集資料庫來執行。 ** \@ **  
   
--   **\@replicate_partition_switch**會決定 SWITCH PARTITION DDL 陳述式是否應該複寫到訂閱者。 此功能時才有效 **\@allow_partition_switch**設定為`true`。  
+-   replicate_partition_switch 決定是否應將 switch partition DDL 語句複寫至訂閱者。 ** \@ ** 只有當** \@allow_partition_switch**設定為`true`時，這個選項才有效。  
   
  您可以在建立發行集時使用 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 來設定這些屬性，或是在建立發行集之後使用 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) 來設定。 如前所述，合併式複寫不支援資料分割切換。 若要在已啟用合併式複寫的資料表上執行 SWITCH PARTITION，請從發行集中移除此資料表。  
   

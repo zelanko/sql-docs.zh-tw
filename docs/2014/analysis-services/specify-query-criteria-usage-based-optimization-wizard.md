@@ -1,5 +1,5 @@
 ---
-title: 指定查詢準則 （基於使用方式的最佳化精靈） |Microsoft Docs
+title: 指定查詢準則（基於使用方式的優化 Wizard） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41690da6a4a87bf79d411e2b467aeddfa56b5f00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068216"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>指定查詢準則 (基於使用方式的最佳化精靈)
@@ -40,22 +40,22 @@ ms.locfileid: "66068216"
  依據開始日期和時間篩選查詢記錄中的查詢。 在下拉式清單中選擇或輸入日期。  
   
 > [!NOTE]  
->  如果未選取 [結束日期]  ，則會考量查詢記錄中，符合此選項指定的日期和時間或之後的所有查詢。  
+>  如果未選取 [結束日期]****，則會考量查詢記錄中，符合此選項指定的日期和時間或之後的所有查詢。  
   
  **結束日期**  
  依據結束日期和時間篩選查詢記錄中的查詢。 在下拉式清單中選擇或輸入日期。  
   
 > [!NOTE]  
->  如果未選取 [開始日期]  ，則會考量查詢記錄中，符合在此選項指定的日期和時間或之前的所有查詢。  
+>  如果未選取 [開始日期]****，則會考量查詢記錄中，符合在此選項指定的日期和時間或之前的所有查詢。  
   
  **使用者**  
- 依據指定的使用者集合篩選查詢記錄中的查詢。 按一下省略符號 ( **...** ) 按鈕，即可顯示 [使用者選取]  對話方塊，並選擇用來篩選查詢的使用者。 如需 [使用者選取]  對話方塊的詳細資訊，請參閱[使用者選取對話方塊 &#40;Analysis Services - 多維度資料&#41;](user-selection-dialog-box-analysis-services-multidimensional-data.md)。  
+ 依據指定的使用者集合篩選查詢記錄中的查詢。 按一下省略符號 (**...**) 按鈕，即可顯示 [使用者選取]**** 對話方塊，並選擇用來篩選查詢的使用者。 如需 [使用者選取]**** 對話方塊的詳細資訊，請參閱[使用者選取對話方塊 &#40;Analysis Services - 多維度資料&#41;](user-selection-dialog-box-analysis-services-multidimensional-data.md)。  
   
  **最常使用查詢**  
  依據所選取資料分割最常執行之相異查詢的最高百分比，篩選查詢記錄中的查詢。 選擇或在文字方塊輸入百分比值。  
   
 ## <a name="see-also"></a>另請參閱  
- [基於使用方式的最佳化精靈 F1 說明](usage-based-optimization-wizard-f1-help.md)   
- [Analysis Services 精靈&#40;多維度資料&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [基於使用方式的優化嚮導 F1 說明](usage-based-optimization-wizard-f1-help.md)   
+ [Analysis Services 的 &#40;多維度資料的嚮導&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

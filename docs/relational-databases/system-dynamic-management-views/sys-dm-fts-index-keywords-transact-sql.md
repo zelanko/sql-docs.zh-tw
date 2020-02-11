@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_index_keywords (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_fts_index_keywords （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,21 +21,21 @@ ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e2b5631443603ea111c3ba154726ec3e6b39e0df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900942"
 ---
-# <a name="sysdmftsindexkeywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
+# <a name="sysdm_fts_index_keywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   針對指定的資料表傳回全文檢索索引之內容的相關資訊。  
   
- **sys.dm_fts_index_keywords**是動態管理函數。  
+ **dm_fts_index_keywords**是動態管理函數。  
   
 > [!NOTE]  
->  若要檢視較低層級的全文檢索索引資訊，請使用[sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)文件層級的動態管理函數。  
+>  若要查看較低層級的全文檢索索引資訊，請在檔層級使用[sys.databases dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)動態管理函數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,23 +45,23 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 ```  
   
 ## <a name="arguments"></a>引數  
- db_id('*database_name*')  
- 呼叫[db_id （)](../../t-sql/functions/db-id-transact-sql.md)函式。 此函式會接受資料庫名稱，並傳回資料庫識別碼，這**sys.dm_fts_index_keywords**用來尋找指定的資料庫。 如果省略 *database_name*，則會傳回目前的資料庫識別碼。  
+ db_id （'*database_name*'）  
+ [DB_ID （）](../../t-sql/functions/db-id-transact-sql.md)函數的呼叫。 此函式會接受資料庫名稱，並傳回資料庫識別碼， **dm_fts_index_keywords**用來尋找指定的資料庫。 如果省略 *database_name*，則會傳回目前的資料庫識別碼。  
   
- object_id('*table_name*')  
- 呼叫[object_id （)](../../t-sql/functions/object-id-transact-sql.md)函式。 此函數會接受資料表名稱並傳回資料表的資料表識別碼 (包含所要檢查的全文檢索索引)。  
+ object_id （'*table_name*'）  
+ [OBJECT_ID （）](../../t-sql/functions/object-id-transact-sql.md)函數的呼叫。 此函數會接受資料表名稱並傳回資料表的資料表識別碼 (包含所要檢查的全文檢索索引)。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**關鍵字**|**nvarchar(4000)**|儲存在全文檢索索引內部之關鍵字的十六進位表示法。<br /><br /> 注意:OxFF 代表指出檔案或資料集的結尾的特殊字元。|  
-|**display_term**|**nvarchar(4000)**|關鍵字的人們可讀取格式。 這個格式衍生自十六進位格式。<br /><br /> 注意:**Display_term**值 OxFF 是"END OF FILE"。|  
+|**關鍵字**|**nvarchar(4000)**|儲存在全文檢索索引內部之關鍵字的十六進位表示法。<br /><br /> 注意： OxFF 代表表示檔或資料集結尾的特殊字元。|  
+|**display_term**|**nvarchar(4000)**|關鍵字的人們可讀取格式。 這個格式衍生自十六進位格式。<br /><br /> 注意： OxFF 的**display_term**值為「檔案結尾」。|  
 |**column_id**|**int**|從中針對目前關鍵字進行全文檢索索引之資料行的識別碼。|  
 |**document_count**|**int**|包含目前詞彙的文件或資料列數目。|  
   
 ## <a name="remarks"></a>備註  
- 所傳回的資訊**sys.dm_fts_index_keywords**適合用來找出下列項目，以及其他項目：  
+ **Sys. dm_fts_index_keywords**所傳回的資訊可用於找出下列各項：  
   
 -   關鍵字是否屬於全文檢索索引的一部分。  
   
@@ -69,14 +69,14 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 -   全文檢索索引中的最常見關鍵字：  
   
-    -   **document_count**每個*keyword_value*相較於總**document_count**，文件計數為 0xFF。  
+    -   每個*keyword_value*的**document_count** ，相較于總**document_count**（0xff 的檔計數）。  
   
     -   一般而言，常見的關鍵字可能可以用於宣告成停用字詞。  
   
 > [!NOTE]  
->  **Document_count**由**sys.dm_fts_index_keywords**可能是較不精確的特定文件所傳回的計數**sys.dm_fts_index_keywords_by_document**或是**CONTAINS**查詢。 據估計，這類潛在錯誤應不到 1%。 這類錯誤可能是因為**document_id**兩次時它會繼續在索引片段中，或出現一次以上相同的資料列中的多個資料列時，才可能會被計算。 若要取得更精確的計數，特定文件，請使用**sys.dm_fts_index_keywords_by_document**或是**CONTAINS**查詢。  
+>  **Sys. dm_fts_index_keywords**所傳回的**document_count** ，對於特定檔而言，可能會比**sys. dm_fts_index_keywords_by_document**或**CONTAINS**查詢所傳回的計數較不精確。 據估計，這類潛在錯誤應不到 1%。 這項誤差可能會發生，因為**document_id**在索引片段中的多個資料列之間繼續計算兩次，或在相同的資料列中出現多次時。 若要為特定檔取得更精確的計數，請使用**sys.databases dm_fts_index_keywords_by_document**或**包含**查詢。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
@@ -90,7 +90,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [全文檢索搜尋和語意搜尋動態管理檢視和函式&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [全文檢索搜尋和語義搜尋動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [全文檢索搜尋](../../relational-databases/search/full-text-search.md)   
  [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
   

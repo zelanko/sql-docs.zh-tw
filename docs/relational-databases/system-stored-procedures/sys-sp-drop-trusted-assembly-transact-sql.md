@@ -1,5 +1,5 @@
 ---
-title: sys.sp_drop_trusted_assembly (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases sp_drop_trusted_assembly （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50385161b417d02db2dc44ad1172910d31f198b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905143"
 ---
-# <a name="sysspdroptrustedassembly-transact-sql"></a>sys.sp_drop_trusted_assembly & Amp;#40;transact-SQL&AMP;#41;  
+# <a name="syssp_drop_trusted_assembly-transact-sql"></a>sys.sp_drop_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-從伺服器上的受信任組件清單中卸除組件。
+從伺服器上的受信任元件清單中卸載元件。
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -43,20 +43,20 @@ sp_drop_trusted_assembly
 
 ## <a name="arguments"></a>引數
 
-[ @hash =] '*值*'  
-從伺服器的受信任組件清單中卸除組件的 SHA2_512 雜湊值。 啟用 clr 嚴格安全性時，即使是不帶正負號的組件或資料庫不會標示為值得信任，可能會載入受信任的組件。
+[ @hash = ]'*value*'  
+要從伺服器的信任元件清單中卸載之元件的 SHA2_512 雜湊值。 當 clr strict 安全性啟用時，即使元件不帶正負號或資料庫未標示為值得信任，也可能會載入受信任的元件。
 
 ## <a name="remarks"></a>備註  
 
-此程序中移除組件從[sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)。
+此程式會從 sys.databases 中移除元件[trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>權限
 
-需要的成員資格`sysadmin`固定的伺服器角色或`CONTROL SERVER`權限。
+需要固定伺服器角色`sysadmin`或`CONTROL SERVER`許可權中的成員資格。
 
 ## <a name="examples"></a>範例  
 
-下列範例會從伺服器的受信任組件清單，卸除組件雜湊。  
+下列範例會從伺服器的信任元件清單中卸載元件雜湊。  
 
 ```  
 EXEC sp_drop_trusted_assembly 
@@ -64,7 +64,7 @@ EXEC sp_drop_trusted_assembly
 ```  
 
 ## <a name="see-also"></a>另請參閱  
-  [sys.sp_add_trusted_assembly](sys-sp-add-trusted-assembly-transact-sql.md) [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) [卸除組件&#40;-SQL&AMP;#41;&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
+  [sp_add_trusted_assembly](sys-sp-add-trusted-assembly-transact-sql.md) [sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) [DROP assembly &#40;transact-sql&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
 

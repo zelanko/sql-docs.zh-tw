@@ -1,5 +1,5 @@
 ---
-title: 指定標記為日期資料表以搭配時間智慧使用 （SSAS 表格式） |Microsoft Docs
+title: 指定標記為日期資料表以搭配時間智慧使用（SSAS 表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27a03aaf94d518caa6b649b7ccd826e08798dacb
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284886"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>指定標記為日期資料表以搭配時間智慧使用 (SSAS 表格式)
@@ -36,7 +36,7 @@ ms.locfileid: "67284886"
   
 1.  在模型設計師中，按一下日期資料表。  
   
-2.  依序按一下 **[資料表]** 功能表、 **[日期]** 和 **Mark as [日期] [資料表]** 。  
+2.  按一下 [**資料表**] 功能表，然後按一下 [**日期**]，再按一下 [**標記為日期資料表**]。  
   
 3.  在 **[標記為日期資料表]** 對話方塊的 **[日期]** 清單方塊中，選取要當做唯一識別碼使用的資料行。 這個資料行必須包含唯一值而且應該屬於 Date 資料類型。 例如：  
   
@@ -51,7 +51,7 @@ ms.locfileid: "67284886"
 4.  必要時，請在事實資料表與日期資料表之間建立任何關聯性。  
   
 ## <a name="see-also"></a>另請參閱  
- [計算 &#40;SSAS 表格式&#41;](calculations-ssas-tabular.md)   
- [時間智慧函數&#40;DAX&#41;](/dax/time-intelligence-functions-dax)  
+ [&#40;SSAS 表格式&#41;的計算](calculations-ssas-tabular.md)   
+ [&#40;DAX&#41;的時間智慧函數](/dax/time-intelligence-functions-dax)  
   
   

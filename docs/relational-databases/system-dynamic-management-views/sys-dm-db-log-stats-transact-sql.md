@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_log_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_db_log_stats （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b23eea391c7de1f02eacec7f8c8625211dfeea3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004832"
 ---
-# <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats & Amp;#40;transact-SQL&AMP;#41;   
+# <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
-傳回資料庫的交易記錄檔的摘要層級屬性和資訊。 使用此資訊來監視和診斷的交易記錄健全狀況。   
+傳回資料庫交易記錄檔的摘要層級屬性和資訊。 使用這項資訊來監視和診斷交易記錄的健全狀況。   
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,10 +41,11 @@ ms.locfileid: "68004832"
   
 ## <a name="arguments"></a>引數  
 
-*database_id* |NULL |**預設**
+*database_id* |Null |**預設值**
 
-資料庫的識別碼。 `database_id` 為 `int`。 有效的輸入是資料庫的 ID 編號`NULL`，或`DEFAULT`。 預設為 `NULL`。 `NULL` 和`DEFAULT`是目前資料庫內容中的對等值。  
-內建函式[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。 當使用`DB_ID`如果沒有指定資料庫名稱，目前資料庫的相容性層級必須是 90 （含） 更高。
+資料庫的識別碼。 
+  `database_id` 為 `int`。 有效的輸入是資料庫、 `NULL`或`DEFAULT`的識別碼。 預設值為 `NULL`。 `NULL`和`DEFAULT`在目前資料庫的內容中是對等的值。  
+可以指定內建函數 [DB_ID](../../t-sql/functions/db-id-transact-sql.md)。 在未`DB_ID`指定資料庫名稱的情況下使用時，目前資料庫的相容性層級必須是90或更高。
 
   
 ## <a name="tables-returned"></a>傳回的資料表  
@@ -52,36 +53,36 @@ ms.locfileid: "68004832"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |database_id    |**int**    |資料庫識別碼 |  
-|recovery_model |**nvarchar(60)**   |   資料庫的復原模式。 可能的值包括： <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
-|log_min_lsn    |**nvarchar(24)**   |   目前的開始時間[記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)交易記錄檔中。|  
-|log_end_lsn    |**nvarchar(24)**   |   [記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)的交易記錄檔中的最後一個記錄檔記錄。|  
-|current_vlf_sequence_number    |**bigint** |   目前[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)當時執行的序號。|  
-|current_vlf_size_mb    |**float**  |   目前[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)大小以 mb 為單位。|   
-|total_vlf_count    |**bigint** |   總數[虛擬記錄檔 (Vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)交易記錄檔中。 |  
-|total_log_size_mb  |**float**  |   交易記錄總大小以 mb 為單位。 |  
-|active_vlf_count   |**bigint** |   作用中的總數[虛擬記錄檔 (Vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)交易記錄檔中。|  
-|active_log_size_mb |**float**  |   使用中交易記錄總大小以 mb 為單位。|  
-|log_truncation_holdup_reason   |**nvarchar(60)**   |   記錄截斷扣留的原因。 值是相同`log_reuse_wait_desc`資料行`sys.databases`。  (如需詳細說明這些值，請參閱[交易記錄](../../relational-databases/logs/the-transaction-log-sql-server.md))。 <br />可能的值包括： <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />複寫<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />其他暫時性 |  
-|log_backup_time    |**datetime**   |   上次交易記錄備份的時間。|   
-|log_backup_lsn |**nvarchar(24)**   |   最後一個交易記錄備份[記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|   
-|log_since_last_log_backup_mb   |**float**  |   記錄檔自上次備份交易記錄大小 MB[記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|  
-|log_checkpoint_lsn |**nvarchar(24)**   |   最後一個檢查點[記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|  
-|log_since_last_checkpoint_mb   |**float**  |   自最後一個檢查點記錄檔大小以 mb 為單位[記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|  
-|log_recovery_lsn   |**nvarchar(24)**   |   修復[記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)的資料庫。 如果`log_recovery_lsn`之前，檢查點 LSN`log_recovery_lsn`否則是最舊的使用中交易的 LSN，`log_recovery_lsn`是檢查點 LSN。|  
-|log_recovery_size_mb   |**float**  |   記錄檔的大小以 mb 為單位記錄檔復原後[記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|  
-|recovery_vlf_count |**bigint** |   總數[虛擬記錄檔 (Vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)復原，如果發生容錯移轉或伺服器重新啟動。 |  
+|recovery_model |**Nvarchar （60）**   |   資料庫的復原模式。 可能的值包括： <br /> 簡單<br /> BULK_LOGGED <br /> FULL |  
+|log_min_lsn    |**nvarchar(24)**   |   交易記錄檔中的目前起始[記錄序號（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。|  
+|log_end_lsn    |**nvarchar(24)**   |   交易記錄中最後一個記錄檔記錄的[記錄序號（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。|  
+|current_vlf_sequence_number    |**Bigint** |   執行時的目前[虛擬記錄檔（VLF）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)序號。|  
+|current_vlf_size_mb    |**float**  |   目前的[虛擬記錄檔（VLF）大小（](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)以 MB 為單位）。|   
+|total_vlf_count    |**Bigint** |   交易記錄檔中的[虛擬記錄檔（vlf）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)總數。 |  
+|total_log_size_mb  |**float**  |   交易記錄檔大小總計（以 MB 為單位）。 |  
+|active_vlf_count   |**Bigint** |   交易記錄中的作用中[虛擬記錄檔（vlf）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)總數。|  
+|active_log_size_mb |**float**  |   使用中交易記錄大小總計（以 MB 為單位）。|  
+|log_truncation_holdup_reason   |**Nvarchar （60）**   |   記錄截斷扣留原因。 值與的`log_reuse_wait_desc` `sys.databases`資料行相同。  （如需這些值的詳細說明，請參閱[交易記錄](../../relational-databases/logs/the-transaction-log-sql-server.md)）。 <br />可能的值包括： <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />複寫<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />其他暫時性 |  
+|log_backup_time    |**datetime**   |   前次交易歷史記錄備份時間。|   
+|log_backup_lsn |**nvarchar(24)**   |   前次交易歷史記錄備份[記錄序號（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|   
+|log_since_last_log_backup_mb   |**float**  |   前次交易歷史記錄備份[記錄序號（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)後的記錄檔大小（以 MB 為單位）。|  
+|log_checkpoint_lsn |**nvarchar(24)**   |   最後一個檢查點[記錄序號（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|  
+|log_since_last_checkpoint_mb   |**float**  |   自上一個檢查點[記錄序號（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)起的記錄大小（以 MB 為單位）。|  
+|log_recovery_lsn   |**nvarchar(24)**   |   資料庫的復原[記錄序號（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。 如果`log_recovery_lsn`在檢查點 lsn 之前發生`log_recovery_lsn` ，則是最舊的使用中`log_recovery_lsn`交易 LSN，否則為檢查點 lsn。|  
+|log_recovery_size_mb   |**float**  |   記錄檔恢復[記錄序號（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)後的記錄檔大小（MB）。|  
+|recovery_vlf_count |**Bigint** |   容錯移轉或伺服器重新開機時，要復原的[虛擬記錄檔（vlf）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)總數。 |  
 
 
 ## <a name="remarks"></a>備註
-當執行`sys.dm_db_log_stats`將針對參與可用性群組次要複本的資料庫，傳回上面所述的欄位的子集。  目前，只有`database_id`， `recovery_model`，和`log_backup_time`次要資料庫上執行時，會傳回。   
+`sys.dm_db_log_stats`針對參與可用性群組做為次要複本的資料庫執行時，只會傳回上述欄位的子集。  目前，針對`database_id`輔助`recovery_model`資料庫執行`log_backup_time`時，只會傳回、和。   
 
-## <a name="permissions"></a>Permissions  
-需要`VIEW DATABASE STATE`資料庫的權限。   
+## <a name="permissions"></a>權限  
+需要資料庫`VIEW DATABASE STATE`中的許可權。   
   
 ## <a name="examples"></a>範例  
 
-### <a name="a-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-high-number-of-vlfs"></a>A. 判斷資料庫在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Vlf 大量的執行個體   
-下列查詢會傳回 100 個以上的 Vlf 資料庫記錄檔中。 Vlf 數目很大，可能會影響資料庫啟動、 還原和復原時間。
+### <a name="a-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-high-number-of-vlfs"></a>A. 在具有大量 Vlf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的實例中判斷資料庫   
+下列查詢會傳回記錄檔中具有 100 Vlf 以上的資料庫。 大量的 Vlf 可能會影響資料庫啟動、還原和復原時間。
 
 ```sql  
 SELECT name AS 'Database Name', total_vlf_count AS 'VLF count' 
@@ -90,8 +91,8 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id)
 WHERE total_vlf_count  > 100;
 ```   
 
-### <a name="b-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-transaction-log-backups-older-than-4-hours"></a>B. 判斷資料庫在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]超過 4 小時的交易記錄備份的執行個體。   
-下列查詢判斷執行個體中的資料庫的最後一個記錄備份時間。
+### <a name="b-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-transaction-log-backups-older-than-4-hours"></a>B. 使用超過4小時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的交易記錄備份來判斷實例中的資料庫   
+下列查詢會決定實例中資料庫的最後一次記錄備份時間。
 
 ```sql  
 SELECT name AS 'Database Name', log_backup_time AS 'last log backup time' 
@@ -101,7 +102,7 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id);
 
 ## <a name="see-also"></a>另請參閱  
 [動態管理檢視與函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[與資料庫相關動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
+[資料庫相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[dm_db_log_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280381"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>資料分割資料行清單對話方塊 (Visual Database Tools)
@@ -28,7 +28,7 @@ ms.locfileid: "63280381"
  資料類型  
  顯示資料分割配置所定義的資料行資料類型。  
   
- 「資料行」  
+ 資料行  
  提供您選擇要套用資料分割函數之資料行的下拉式清單。  
   
 ## <a name="see-also"></a>另請參閱  

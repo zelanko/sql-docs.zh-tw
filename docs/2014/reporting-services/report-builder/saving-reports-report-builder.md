@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e21b1c9e48dcccf8b72a60fbd381aac3d878c0dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107624"
 ---
 # <a name="saving-reports-report-builder"></a>儲存報表 (報表產生器)
@@ -28,9 +28,9 @@ ms.locfileid: "66107624"
   
 -   使用報表記錄，將轉譯的報表版本儲存為歷程記錄複本。  
   
- 若要深入了解如何直接在報表伺服器上檢視及管理報表，請參閱[尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) 和 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](https://go.microsoft.com/fwlink/?LinkId=154888)》中的 [Reporting Services 報表伺服器 &#40;原生模式&#41;](../report-server/reporting-services-report-server-native-mode.md)。  
+ 若要深入了解如何直接在報表伺服器上檢視及管理報表，請參閱[尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) 和 msdn.microsoft.com 上《[](../report-server/reporting-services-report-server-native-mode.md)線上叢書》中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Reporting Services 報表伺服器 &#40;原生模式&#41;](https://go.microsoft.com/fwlink/?LinkId=154888)。  
   
-##  <a name="SavingReportDefinitions"></a> 儲存報表定義  
+##  <a name="SavingReportDefinitions"></a>儲存報表定義  
  雖然您可以將報表儲存到電腦，但是將報表儲存到報表伺服器會提供許多優點。  
   
  將報表儲存到報表伺服器會提供下列優點：  
@@ -52,7 +52,7 @@ ms.locfileid: "66107624"
 
   
 ##  <a name="ExportingAndSavingReports"></a> 匯出與儲存報表  
- 若您要封存的報表數量很少，請考慮將報表匯出，並將它儲存成檔案。 在您將報表匯出至應用程式 (例如 PDF 或 Excel) 後，可以將它另存新檔，並放在網路上一個受保護的共用目錄下。 或者，如果您想要在報表伺服器資料庫中，保留報表的所有複本 (不論何種格式)，您可以將已經儲存的 PDF 或 Excel 檔案，做為資源項目進行上傳。 如需有關匯出報表的詳細資訊，請參閱 <<c0> [ 匯出的報表&#40;報表產生器及 SSRS&#41; ](export-reports-report-builder-and-ssrs.md)並[上傳檔案或報表&#40;報表管理員&#41;](../reports/upload-a-file-or-report-report-manager.md)。</c0>  
+ 若您要封存的報表數量很少，請考慮將報表匯出，並將它儲存成檔案。 在您將報表匯出至應用程式 (例如 PDF 或 Excel) 後，可以將它另存新檔，並放在網路上一個受保護的共用目錄下。 或者，如果您想要在報表伺服器資料庫中，保留報表的所有複本 (不論何種格式)，您可以將已經儲存的 PDF 或 Excel 檔案，做為資源項目進行上傳。 如需匯出報表的詳細資訊，請參閱[匯出報表 &#40;報表產生器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)並[上傳檔案或報表 &#40;報表管理員&#41;](../reports/upload-a-file-or-report-report-manager.md)。  
   
 
   
@@ -72,15 +72,15 @@ ms.locfileid: "66107624"
   
 -   [將報表儲存至 SharePoint 文件庫 &#40;報表產生器&#41;](save-a-report-to-a-sharepoint-library-report-builder.md)  
   
--   [將報表儲存到您的電腦&#40;報表產生器&#41;](../save-reports-to-your-computer-report-builder.md)  
+-   [將報表儲存至您的電腦 &#40;報表產生器&#41;](../save-reports-to-your-computer-report-builder.md)  
   
 
   
 ## <a name="see-also"></a>另請參閱  
  [報表、報表組件和報表定義 &#40;報表產生器及 SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [安裝、 解除安裝與報表產生器支援](../install-uninstall-and-report-builder-support.md)   
+ [安裝、卸載和報表產生器支援](../install-uninstall-and-report-builder-support.md)   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [匯出報表&#40;報表產生器及 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [匯出報表 &#40;報表產生器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [列印報表 &#40;報表產生器及 SSRS&#41;](print-reports-report-builder-and-ssrs.md)  
   
   

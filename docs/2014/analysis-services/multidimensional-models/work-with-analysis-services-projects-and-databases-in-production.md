@@ -1,5 +1,5 @@
 ---
-title: 使用 Analysis Services 專案和在生產環境中的資料庫 |Microsoft Docs
+title: 在生產環境中使用 Analysis Services 專案和資料庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f46a518acb4ba647b5b7bf5503ef76af7b6b90d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072424"
 ---
 # <a name="working-with-analysis-services-projects-and-databases-in-a-production-environment"></a>在實際執行環境中搭配 Analysis Services 專案及資料庫使用
@@ -26,10 +26,10 @@ ms.locfileid: "66072424"
   
  您可使用 SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 工具中提供的幾個方法來避免這個情況所產生的問題。  
   
--   方法 1:每當變更的實際執行版本[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫，請使用[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]來建立新的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案為基礎的修改版本[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫。 這個新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案可以當作專案的主要副本簽入到原始檔控制系統中。 不論是在線上模式中使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 資料庫進行變更，這個方法都一樣有效。  
+-   方法 1：每當對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的實際執行版本進行變更時，請使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 來根據修改過的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫版本建立新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案。 這個新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案可以當作專案的主要副本簽入到原始檔控制系統中。 不論是在線上模式中使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 資料庫進行變更，這個方法都一樣有效。  
   
--   方法 2：只有進行變更的實際執行版本[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]在專案模式中。 在使用這個方法時，可以使用 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈] 中提供的選項來保留 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]所做的變更 (例如，安全性角色和儲存設定)。 如此可確保與設計有關的設定會保留在專案檔案中 (可以忽略儲存設定和安全性角色)，而且儲存設定和安全性角色會使用線上伺服器。  
+-   方法 2：在專案模式中使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，僅針對 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 資料庫的實際執行版本進行變更。 在使用這個方法時，可以使用 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈] 中提供的選項來保留 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]所做的變更 (例如，安全性角色和儲存設定)。 如此可確保與設計有關的設定會保留在專案檔案中 (可以忽略儲存設定和安全性角色)，而且儲存設定和安全性角色會使用線上伺服器。  
   
--   方法 3:只有進行變更的實際執行版本[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]在線上模式中。 因為這兩個工具只能與相同的線上伺服器一起運作，所以不可能會有未同步的不同版本。  
+-   方法 3：在線上模式中使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，僅針對 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 資料庫的實際執行版本進行變更。 因為這兩個工具只能與相同的線上伺服器一起運作，所以不可能會有未同步的不同版本。  
   
   

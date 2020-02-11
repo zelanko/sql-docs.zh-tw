@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b5f1297927510fe6f0f5b15ac185316687326ce6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482756"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>重新整理資料 (適用於 Excel 的 MDS 增益集)
@@ -40,20 +40,20 @@ ms.locfileid: "65482756"
 > -   當您重新整理時，系統會刪除 MDS 管理之資料格的註解。  
   
 ## <a name="how-to-refresh-mds-managed-data"></a>如何重新整理 MDS 管理的資料  
- 在功能區的 [連接和載入]  群組中，[重新整理]  按鈕有兩個選項，分別是 [全部重新整理]  和 [重新整理選取項目]  。 功能區按鈕的預設動作是 [全部重新整理]  。 若要使用來自伺服器的值重新整理整份工作表，按一下 [重新整理]  按鈕，或選擇 [全部重新整理]  選項。 若僅要重新整理工作表中的部分資料格，請選取資料格 (必須是一個連續的選取範圍)，然後選擇 [重新整理選取項目]  選項。  
+ 在功能區的 [連接和載入]**** 群組中，[重新整理]**** 按鈕有兩個選項，分別是 [全部重新整理]**** 和 [重新整理選取項目]****。 功能區按鈕的預設動作是 [全部重新整理]****。 若要使用來自伺服器的值重新整理整份工作表，按一下 [重新整理]**** 按鈕，或選擇 [全部重新整理]**** 選項。 若僅要重新整理工作表中的部分資料格，請選取資料格 (必須是一個連續的選取範圍)，然後選擇 [重新整理選取項目]**** 選項。  
   
 ## <a name="related-tasks"></a>相關工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫的連接。|[連接到 MDS 儲存機制 &#40;適用於 Excel 的 MDS 增益集&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫的連接。|[連接到適用于 Excel 的 mds 增益集 &#40;的 MDS 儲存機制&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |將 MDS 資料載入 Excel 中。|[將資料從 MDS 載入 Excel 中](export-data-to-excel-from-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
--   [連接 &#40;適用於 Excel 的 MDS 增益集&#41;](connections-mds-add-in-for-excel.md)  
+-   [適用于 Excel 的 MDS 增益集的連接 &#40;&#41;](connections-mds-add-in-for-excel.md)  
   
--   [載入資料&#40;MDS 增益集的 Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+-   [載入適用于 Excel 的 MDS 增益集&#41;的資料 &#40;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
 -   [適用於 Microsoft Excel 的 Master Data Services 增益集](master-data-services-add-in-for-microsoft-excel.md)  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c1e620bb0fd5cbf5ff6541fd1aa4a3552bd2eb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107862"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>使用瀏覽器尋找及檢視報表 (報表產生器及 SSRS)
@@ -42,22 +42,25 @@ ms.locfileid: "66107862"
   
 -   沒有其他指標的連結就是報表或模型。  
   
--   \<ds> 標記代表共用資料來源。  
+-   
+  \<ds> 標記代表共用資料來源。  
   
--   \<dir> 標記代表資料夾項目。  
+-   
+  \<dir> 標記代表資料夾項目。  
   
 -   副檔名代表資源。 副檔名可識別資源的 MIME 類型。 例如，.jpg 代表 JPEG 格式的影像。  
   
 ## <a name="typing-the-url-address-of-a-report"></a>輸入報表的 URL 位址  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援對報表伺服器上的特定項目進行 URL 存取。 URL 必須包含報表和命令的完整路徑，才能轉譯報表。 如果報表包含參數，您也必須指定開啟報表所需的任何值。 如果您要輸入的報表 URL 之路徑、參數值或轉譯延伸模組中含有空格，就必須將 URL 已編碼的字元納入 URL 中，才能獲得預期的結果。 下列範例呈現在報表 URL 中的路徑名稱、參數和轉譯延伸模組中含有空格時，所使用的編碼：  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援對報表伺服器上的特定項目進行 URL 存取。 URL 必須包含報表和命令的完整路徑，才能轉譯報表。 如果報表包含參數，您也必須指定開啟報表所需的任何值。 如果您要輸入的報表 URL 之路徑、參數值或轉譯延伸模組中含有空格，就必須將 URL 已編碼的字元納入 URL 中，才能獲得預期的結果。 下列範例呈現在報表 URL 中的路徑名稱、參數和轉譯延伸模組中含有空格時，所使用的編碼：  
   
  `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   
  URL 在 Internet Explorer 中的限制上限為 2,083 個字元。 如需詳細資訊，請參閱 [Internet Explorer 的 URL 長度上限](https://support.microsoft.com/kb/208427)。  
   
- 如需如何透過 URL 存取報表的詳細資訊，包括如何建構 URL 的資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](https://go.microsoft.com/fwlink/?linkid=121312)的＜URL 存取＞。  
+ 如需如何透過 URL 存取報表的詳細資訊，包括如何建構 URL 的資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](https://go.microsoft.com/fwlink/?linkid=121312) 的＜URL 存取＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [尋找及檢視報表在報表管理員中&#40;報表產生器及 SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [在報表管理員 &#40;報表產生器和 SSRS 中尋找及查看報表&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

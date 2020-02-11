@@ -15,29 +15,31 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3ba4d9ee2e0b92617c2d2bcadae3bf87c8b5414
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108643"
 ---
 # <a name="upgrade-a-report-server-database"></a>升級報表伺服器資料庫
   報表伺服器資料庫為一個或多個報表伺服器執行個體提供了儲存裝置。 由於報表伺服器資料庫結構描述可隨著每個新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]版本一起變更，所以此資料庫版本必須符合您所使用的報表伺服器執行個體版本。 在大多數情況下，報表伺服器資料庫可以自動升級，而不需要您採取特定的動作。  
   
- **原生模式：** 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式，報表伺服器資料庫實際上由組成的兩個具有預設名稱為"ReportServer 和 ReportServerTempDB"的資料庫。  
+ **原生模式：** 在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式中，報表伺服器資料庫實際上是由兩個預設名稱為 "ReportServer and ReportServerTempDB" 的資料庫所組成。  
   
- **SharePoint 模式：** 在  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式報表伺服器資料庫是實際的資料庫集合是針對每個執行個體建立[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服務應用程式。  
+ **SharePoint 模式：** 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式中，報表伺服器資料庫實際上是針對每個[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服務應用程式實例所建立的資料庫集合。  
   
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>升級原生模式報表伺服器資料庫的方法  
  下列清單會識別升級報表伺服器資料庫的狀況：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會升級報表伺服器的單一執行個體。 報表伺服器資料庫結構描述會在服務啟動之後自動升級，而且報表伺服器會判斷此資料庫結構描述是否與伺服器版本不符。  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會升級報表伺服器的單一執行個體。 報表伺服器資料庫結構描述會在服務啟動之後自動升級，而且報表伺服器會判斷此資料庫結構描述是否與伺服器版本不符。  
   
      當服務啟動時，報表伺服器會檢查資料庫結構描述版本，以便確認它是否符合伺服器版本。 如果資料庫結構描述版本是較舊的版本，它就會自動升級為報表伺服器所需的結構描述版本。 如果您還原或附加舊版的報表伺服器資料庫，自動升級會特別實用。 報表伺服器追蹤記錄檔中會輸入一則訊息，表示資料庫結構描述版本已升級。  
   
 -   當您選取要搭配新的報表伺服器執行個體使用的舊版時， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員會升級本機或遠端報表伺服器資料庫。 若為上述情況，您就必須在升級動作發生之前先進行確認。  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員不再提供個別的 [升級] 按鈕或升級指令碼。 這些功能從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始已過時，因為報表伺服器服務有自動升級功能。  
+     
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員不再提供個別的 [升級] 按鈕或升級指令碼。 這些功能從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始已過時，因為報表伺服器服務有自動升級功能。  
   
  在更新結構描述之後，便無法將此項升級回復成先前的版本。 一定要備份報表伺服器資料庫，以防之後需要重新建立先前的安裝。  
   
@@ -67,8 +69,8 @@ ms.locfileid: "66108643"
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [建立報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [變更資料庫精靈 &#40;SSRS 原生模式&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
- [升級和移轉 Reporting Services](upgrade-and-migrate-reporting-services.md)   
- [移轉 Reporting Services 安裝 &#40;原生模式&#41;](migrate-a-reporting-services-installation-native-mode.md)  
+ [&#40;SSRS 原生模式的變更資料庫 Wizard&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
+ [升級和遷移 Reporting Services](upgrade-and-migrate-reporting-services.md)   
+ [遷移 Reporting Services 安裝 &#40;原生模式&#41;](migrate-a-reporting-services-installation-native-mode.md)  
   
   

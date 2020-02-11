@@ -1,5 +1,5 @@
 ---
-title: 建立資料驅動訂閱頁面 （報表管理員） |Microsoft Docs
+title: 建立資料驅動訂閱頁面（報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109623"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>建立資料驅動訂閱頁面 (報表管理員)
@@ -25,9 +25,9 @@ ms.locfileid: "66109623"
  此頁面可供具有進階權限的使用者使用。 如果您要使用預設的安全性，資料驅動訂閱就不可以用於 [我的報表] 資料夾中的報表。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
-## <a name="navigation"></a>巡覽  
+## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-data-driven-subscription-page"></a>若要開啟資料驅動訂閱頁面  
@@ -38,7 +38,7 @@ ms.locfileid: "66109623"
   
 3.  在下拉式功能表中，按一下 **[管理]** 。 這樣就會開啟該報表的 **[一般]** 屬性頁面。  
   
-4.  選取 **[訂閱]** 索引標籤，然後按一下 **[新增資料驅動訂閱]** 。  
+4.  選取 **[訂閱]** 索引標籤，然後按一下 **[新增資料驅動訂閱]**。  
   
     > [!NOTE]  
     >  報表資料來源必須使用預存認證才能啟用此按鈕。  
@@ -48,11 +48,11 @@ ms.locfileid: "66109623"
  提供訂閱的描述。 訂閱中顯示的描述，會列在報表的 **[我的訂閱]** 和 **[訂閱]** 索引標籤中。  
   
  **指定通知收件者的方式**  
- 選取要用來散發報表的傳遞延伸模組。 每一個訂閱只能使用一個傳遞延伸模組。 下列是可以使用的選項：  
+ 選取要用來散發報表的傳遞延伸模組。 每一個訂閱只能使用一個傳遞延伸模組。 有下列選項可供使用：  
   
 -   選取 **[報表伺服器檔案共用]** ，即可將報表傳遞到檔案共用。 此報表會當做靜態檔案 (與報表伺服器中斷連接) 傳遞。 如需詳細資訊，請參閱＜ [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md)＞。  
   
--   選取 **[報表伺服器電子郵件]** ，即可將報表傳遞到電子郵件收件匣。 如需詳細資訊，請參閱＜ [E-Mail Delivery in Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md)＞。  
+-   選取 **[報表伺服器電子郵件]** ，即可將報表傳遞到電子郵件收件匣。 如需詳細資訊，請參閱 [Reporting Services 中的電子郵件傳遞](subscriptions/e-mail-delivery-in-reporting-services.md)。  
   
 -   選取 **[Null 傳遞提供者]** ，即可將報表傳遞到報表伺服器資料庫。 此選項會建立報表快照集。 當您想要依特定排程預先在報表伺服器上載入使用者特定報表快照集或參數化報表快照集時，請選擇此選項。 如需詳細資訊，請參閱 [快取報表 &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)的版本中預先載入快取的唯一方法。  
   
@@ -70,12 +70,12 @@ ms.locfileid: "66109623"
  **連接字串**  
  輸入用來連接到資料來源的連接字串。  
   
- **使用連線**  
+ **連接使用**  
  輸入連接到資料來源時使用的認證。 此認證以加密值儲存在報表伺服器資料庫中。  
   
  如果資料來源使用 Windows 驗證，請在指定連接時選取 **[當做 Windows 認證使用]** 。  
   
- 如果您要使用不驗證使用者連接的資料來源 (例如，如果資料來源是 XML 檔案的話)，請選取 [不需要認證]。 您先前必須已設定了自動執行帳戶，才能使用這個選項。 如需詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+ 如果您要使用不驗證使用者連接的資料來源 (例如，如果資料來源是 XML 檔案的話)，請選取 [不需要認證]。 您先前必須已設定了自動執行帳戶，才能使用這個選項。 如需詳細資訊，請參閱[&#40;SSRS Configuration Manager&#41;設定自動執行帳戶](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
 ## <a name="specify-a-query-page-3"></a>指定查詢 (第 3 頁)  
  您可以使用這個頁面來輸入擷取訂閱者資料的查詢。 為了獲得最佳結果，請先在 SQL Server Management Studio 中執行此查詢，然後再將它用於資料驅動訂閱中。 接著，您可以檢查結果，以便確認它是否包含所需的資訊。 辨識查詢結果的重點包括：  
@@ -84,21 +84,21 @@ ms.locfileid: "66109623"
   
 -   結果集中的資料列會決定產生的報表傳遞數目。 如果您有 10,000 個資料列，報表伺服器就會產生 10,000 個通知和傳遞。  
   
- **[資料集屬性]**  
+ **查詢**  
  指定擷取結果集的 SQL 查詢或命令，此結果集內每一位訂閱收件者都包含一個資料列。 在後續的頁面上，結果集會用於擴展資料驅動延伸模組的設定。  
   
  **逾時**  
  指定查詢逾時值。 這個值必須夠大，才能完成查詢處理。  
   
  **Validate**  
- 按一下 **[驗證]** 來確認查詢。 在繼續執行之前，查詢必須產生有效的結果。 如果您沒有按一下 **[驗證]** ，當您按 **[下一步]** 時就會驗證查詢。  
+ 按一下 **[驗證]** 來確認查詢。 在繼續執行之前，查詢必須產生有效的結果。 如果您沒有按一下 **[驗證]**，當您按 **[下一步]** 時就會驗證查詢。  
   
 ## <a name="set-delivery-options-page-4"></a>設定傳遞選項 (第 4 頁)  
  在第四個頁面中指定傳遞延伸模組選項。 在此頁面顯示的選項是由傳遞延伸模組傳遞來的。 指定這些選項的方式可能根據傳遞延伸模組呈現選項的方式而有所改變。 如果延伸模組沒有設定值，則此頁面不會顯示任何選項。  
   
-|選項|動作|  
+|選項|作法|  
 |-----------------|----------------|  
-|**指定靜態值**|在傳遞設定中使用常數值。 有些傳遞延伸模組提供可以選擇的靜態值。 例如，報表伺服器電子郵件傳遞會提供 **[IncludeReport]** 、 **[RenderFormat]** 、 **[優先權]** 和 **[包含連結]** 的值。|  
+|**指定靜態值**|在傳遞設定中使用常數值。 有些傳遞延伸模組提供可以選擇的靜態值。 例如，報表伺服器電子郵件傳遞會提供 **[IncludeReport]**、 **[RenderFormat]**、 **[優先權]** 和 **[包含連結]** 的值。|  
 |**從資料庫取值**|使用來自結果集的值。 結果集的資料行可用來提供訂閱者資料和報表參數值。|  
 |**沒有值**|忽略訂閱的設定。|  
   
@@ -108,8 +108,8 @@ ms.locfileid: "66109623"
  **檔案名稱**  
  指定報表的檔案名稱。 檔案共用傳遞延伸模組會將報表當做靜態應用程式檔案傳遞至共用資料夾。 在大部分情況下，您應該使用資料庫的值來建立檔案名稱。 根據您設定寫入模式的方式而定，使用靜態值將會導致每個新傳遞覆寫先前的傳遞。  
   
- **路徑**  
- 指定可透過網路連接存取的共用資料夾。 若要確認資料夾是否可存取，請按一下**執行**[開始] 功能表並以下列格式輸入資料夾路徑： \\ \\< 電腦名稱\>\\< sharedfoldername&gt\>.  
+ **Path**  
+ 指定可透過網路連接存取的共用資料夾。 若要確認資料夾可供存取，請按一下 [開始] 功能表上的 [**執行**]，並以\\ \\下列格式\> \\輸入資料夾\>路徑：<computername<sharedfoldername。  
   
  **轉譯格式**  
  指定檔案的輸出格式。 報表伺服器可以使用報表伺服器上安裝之轉譯延伸模組的應用程式格式來寫入檔案。  
@@ -121,7 +121,7 @@ ms.locfileid: "66109623"
  指定 True，即可附加符合您所選取之轉譯格式的副檔名。  
   
  **使用者名稱**  
- 輸入有權將檔案加入至共用資料夾，以下列格式的網域使用者帳戶：\<網域 >\\< 使用者名稱\>。  
+ 以下列格式輸入有權將檔案新增到共用資料夾的網域使用者帳戶： \<網域>\\<使用者名稱。\>  
   
  **密碼**  
  輸入帳戶的密碼。  
@@ -129,7 +129,7 @@ ms.locfileid: "66109623"
 ## <a name="set-parameters-page-5"></a>設定參數 (第 5 頁)  
  如果報表包含參數，您必須指定報表使用的參數值。 可以從訂閱者資料來源取得參數值 (例如，如果您有根據區域碼來參數化的區域業務報表，且區域資訊儲存在員工資料庫中，則您可以取得每一位員工的區域資訊)。  
   
-|選項|動作|  
+|選項|作法|  
 |-----------------|----------------|  
 |**指定靜態值**|若要對所有的訂閱者使用相同參數，請使用常數作為參數值。 如果此參數是多重值，您就可以從清單中選擇一個值。|  
 |**使用預設值**|某些報表包含所有或部分參數的預設值。 如果報表參數具有預設值，請按一下此核取方塊以使用預設值。|  
@@ -138,22 +138,22 @@ ms.locfileid: "66109623"
 ## <a name="specify-a-trigger-page-6"></a>指定觸發程序 (第 6 頁)  
  選取啟始訂閱處理的事件。  
   
-|選項|動作|  
+|選項|作法|  
 |-----------------|----------------|  
-|**在報表伺服器上更新報表資料時**|如果報表設定為當做執行快照集執行，您就可以指定在重新整理快照集時執行訂閱。|  
-|**為此訂用帳戶建立的排程上**|在指定的日期和時間執行訂閱。|  
+|**更新報表伺服器上的報表資料時**|如果報表設定為當做執行快照集執行，您就可以指定在重新整理快照集時執行訂閱。|  
+|**在為此訂閱建立的排程上**|在指定的日期和時間執行訂閱。|  
 |**在共用排程上**|使用共用排程提供的排程資訊來執行訂閱。|  
   
 ## <a name="schedule-a-subscription-page-7"></a>排程訂閱 (第 7 頁)  
  若要排程訂閱，您必須指定傳遞報表的頻率。 第一組選項指定頻率的類別 (每小時、每日、每週等)。 顯示的第二組選項以您的初始選擇為基礎。  
   
- **每小時**  
+ **次**  
  定義以每小時間隔執行的排程。  
   
- **每日**  
- 定義在所指定日期之特定時間執行的排程。 您可以透過下列方式指定日子：每個 *\<日期>* 、 每個工作天和每 *\<數目>* 天。 選擇一種方式就會使其他方式失效，即使其他日子看似已經選取也一樣。  
+ **次**  
+ 定義在所指定日期之特定時間執行的排程。 您可以透過下列方式指定天數：每* \<日>*、每個工作日，以及每個* \<>* 日的數目。 選擇一種方式就會使其他方式失效，即使其他日子看似已經選取也一樣。  
   
- **每週**  
+ **提交**  
  定義在每週間隔的指定時間執行的排程。 此間隔可以是整週 (例如每兩週) 或是其中的日期。  
   
  **每月**  
@@ -162,7 +162,7 @@ ms.locfileid: "66109623"
  **一次**  
  定義只執行一次的排程。 使用 **[開始和結束日期]** 區段，即可指定要執行排程的日期。 此排程在處理過後立即過期。  
   
- **開始和結束日期**  
+ **[開始和結束日期]**  
  指定決定排程生效的開始日期，以及決定排程過期的結束日期。 不會通知排程過期。 在結束日期之後，就不會再執行排程。  
   
 ## <a name="saving-the-subscription"></a>儲存訂閱  
@@ -171,8 +171,8 @@ ms.locfileid: "66109623"
 ## <a name="see-also"></a>另請參閱  
  [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
- [建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
- [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [&#40;SSRS 教學課程建立資料驅動訂閱&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [指定報表資料來源的認證和連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [訂閱與傳遞 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
   

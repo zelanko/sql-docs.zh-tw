@@ -1,5 +1,5 @@
 ---
-title: 新增項目加入 Integration Services 專案 |Microsoft Docs
+title: 將專案加入至 Integration Services 專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66b23e65542cd4f87818d6cc719dca59a9a4adec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062015"
 ---
 # <a name="add-an-item-to-an-integration-services-project"></a>將項目加入 Integration Services 專案
@@ -31,11 +31,11 @@ ms.locfileid: "66062015"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，開啟包含要在其中加入項目之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的方案。  
   
-2.  在方案總管中，以滑鼠右鍵按一下專案，指向 [加入]  ，然後執行下列其中之一：  
+2.  在方案總管中，以滑鼠右鍵按一下專案，指向 [加入]****，然後執行下列其中之一：  
   
-    -   按一下 [新增項目]  ，然後從 [加入新項目]  對話方塊的 [範本]  窗格中選取範本。  
+    -   按一下 [新增項目]****，然後從 [加入新項目]**** 對話方塊的 [範本]**** 窗格中選取範本。  
   
-    -   按一下 [現有項目]  ，在 [加入現有項目]  對話方塊中瀏覽，以找到您要加入專案的項目，然後按一下 [加入]  。  
+    -   按一下 [現有項目]****，在 [加入現有項目]**** 對話方塊中瀏覽，以找到您要加入專案的項目，然後按一下 [加入]****。  
   
 3.  新項目便會出現在 [方案總管] 中適當的資料夾內。  
   

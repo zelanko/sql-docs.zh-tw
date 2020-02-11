@@ -1,5 +1,5 @@
 ---
-title: 教學課程：Database Engine Tuning Advisor | Microsoft 文件
+title: 教學課程：Database Engine Tuning Advisor | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 484919274e7b7df3c49ce03668950807c3627d30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63268366"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>教學課程：Database Engine Tuning Advisor
@@ -28,13 +28,13 @@ ms.locfileid: "63268366"
 ## <a name="what-you-will-learn"></a>學習內容  
  這個教學課程將告訴您如何導覽 Database Engine Tuning Advisor GUI，以及如何利用這個 GUI 和 **dta** 公用程式來執行某些基本工作。 它包含下列課程：  
   
- [第 1 課：Database Engine Tuning Advisor 中的基本導覽](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [課程 1：Database Engine Tuning Advisor 中的基本導覽](../../relational-databases/performance/database-engine-tuning-advisor.md)  
  在這個課程中，您將熟悉新的 Database Engine Tuning Advisor GUI，以及學習如何設定顯示選項和配置。  
   
- [第 2 課：使用 Database Engine Tuning Advisor](lesson-2-using-database-engine-tuning-advisor.md)  
+ [課程 2：使用 Database Engine Tuning Advisor](lesson-2-using-database-engine-tuning-advisor.md)  
  在這個課程中，您將學會如何使用 Database Engine Tuning Advisor GUI 來執行基本微調工作。  
   
- [第 3 課：使用 dta 命令提示字元公用程式](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [課程 3：使用 dta 命令提示字元公用程式](lesson-3-using-the-dta-command-prompt-utility.md)  
  在這個課程中，您將學習如何啟動 **DTA** 命令提示字元公用程式，以及如何執行簡單的微調命令。  
   
 ## <a name="requirements"></a>需求  
@@ -50,6 +50,6 @@ ms.locfileid: "63268366"
 -   ＜[dta Utility](dta-utility.md) ＞提供有關命令提示字元公用程式的參考資料，以及可用來控制公用程式作業的選擇性 XML 檔案。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 1 課：Database Engine Tuning Advisor 中的基本導覽](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [課程 1：Database Engine Tuning Advisor 中的基本導覽](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

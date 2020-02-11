@@ -14,13 +14,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 408b6b605e14fd5e7aa52cd0df7fba13b225c20c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064824"
 ---
 # <a name="feature-reference-database-engine"></a>功能參考 (Database Engine)
+  
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 包含可用來建立、管理以及檢視資料庫物件與資料的數個工具和應用程式。 此外，還有您可以用來監視並疑難排解伺服器和資料庫效能，以及啟用和停用功能、服務與網路通訊協定的工具。 本節提供描述這些工具和應用程式之對話方塊的特定主題。  
   
  若要在工具或應用程式執行時存取使用者介面主題，請在開啟對話方塊、網頁或精靈之後，按下 F1 或是按一下 [說明]。  

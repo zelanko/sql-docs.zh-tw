@@ -1,5 +1,5 @@
 ---
-title: 加入資料表 (SSAS 表格式) |Microsoft Docs
+title: 加入資料表（SSAS 表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81c1d3d2f0a0098fea271a782af10fbd26245a28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067790"
 ---
 # <a name="add-a-table-ssas-tabular"></a>加入資料表 (SSAS 表格式)
@@ -24,22 +24,22 @@ ms.locfileid: "66067790"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後再按一下 **[現有連接]**。  
   
-2.  在 [現有連接] 頁面上，選取具有您想要加入之資料表的資料來源連接，然後按一下 [開啟]。  
+2.  在 [現有連接]**** 頁面上，選取具有您想要加入之資料表的資料來源連接，然後按一下 [開啟]****。  
   
-3.  在 [選取資料表和檢視表] 頁面上，選取您想要從資料來源加入至模型的資料表。  
+3.  在 [選取資料表和檢視表]**** 頁面上，選取您想要從資料來源加入至模型的資料表。  
   
     > [!NOTE]  
-    >  [選取資料表和檢視表] 頁面不會將顯示先前匯入的資料表顯示成已核取。  如果您選取了先前使用此連接來匯入的資料表，而且沒有為資料表提供不同的易記名稱，系統就會將 1 附加至易記名稱。 您不需要重新選取先前使用此連接來匯入的任何資料表。  
+    >  [選取資料表和檢視表]**** 頁面不會將顯示先前匯入的資料表顯示成已核取。  如果您選取了先前使用此連接來匯入的資料表，而且沒有為資料表提供不同的易記名稱，系統就會將 1 附加至易記名稱。 您不需要重新選取先前使用此連接來匯入的任何資料表。  
   
-4.  必要時，請使用 [預覽和篩選] 來單獨選取特定資料行或將篩選套用至要匯入的資料。  
+4.  必要時，請使用 [預覽和篩選]**** 來單獨選取特定資料行或將篩選套用至要匯入的資料。  
   
-5.  按一下 [完成] 已匯入新的資料表。  
+5.  按一下 [完成]**** 已匯入新的資料表。  
   
 > [!NOTE]  
 >  同時從單一資料來源匯入多個資料表時，系統將自動在模型中建立這些位於來源之資料表之間的任何關聯性。 不過，之後加入資料表時，您可能必須在模型中手動建立新加入資料表與先前匯入資料表之間的關聯性。  
   
 ## <a name="see-also"></a>另請參閱  
- [匯入資料 (SSAS 表格式)](../import-data-ssas-tabular.md)   
- [刪除資料表 (SSAS 表格式)](delete-a-table-ssas-tabular.md)  
+ [將資料匯入 &#40;SSAS 表格式&#41;](../import-data-ssas-tabular.md)   
+ [刪除 &#40;SSAS 表格式&#41;的資料表](delete-a-table-ssas-tabular.md)  
   
   

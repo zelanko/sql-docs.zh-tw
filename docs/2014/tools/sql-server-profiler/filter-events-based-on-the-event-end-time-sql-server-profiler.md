@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 48f0ada8740735e64fe57c35bc17553f59aa444c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184287"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>根據事件結束時間篩選事件 (SQL Server Profiler)
@@ -42,7 +42,7 @@ ms.locfileid: "63184287"
   
 5.  在 [事件選取範圍]  索引標籤上，按一下 [結束時間]  資料行，以啟動 [編輯篩選]  對話方塊。 您也可以用滑鼠右鍵按一下資料行標題，然後選取 [編輯資料行篩選]  。  
   
-6.  依序展開**Greater than**或**小於**，然後輸入`datetime`比較運算子下出現的欄位中的值。  
+6.  展開 [**大於**] 或 [**小於**]，然後`datetime`在比較運算子下方出現的欄位中輸入值。  
   
 ## <a name="see-also"></a>另請參閱  
  [[SQL Server Profiler]](sql-server-profiler.md)   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ddce07fd322948e16abb753f00b3e736026c0365
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109584"
 ---
 # <a name="csv-device-information-settings"></a>CSV 裝置資訊設定
@@ -32,7 +32,8 @@ ms.locfileid: "66109584"
 |`FieldDelimiter`|要放置於結果中的分隔符號字串。 預設值是逗號 (,)。 當以 URL 傳遞時，您應該在 URL 中編碼此裝置資訊的值。 例如，做為分隔符號的定位字元應該是 "%09"。<br /><br /> 您可以將預設欄位分隔符號變更為所需的任何字元，包括 TAB，方法是在組態檔中變更裝置資訊設定。 例如，若要使用 TAB，請將 FieldDelimiter 設定更新為 \<FieldDelimiter xml:space="preserve">[TAB]\</FieldDelimiter><br /><br /> 在範例 [TAB] 中是實際的定位字元，這表示空白會出現在組態檔中。 "xml:space" 屬性會告知剖析器以保留空白字元。|  
 |`FileExtension`|在結果上放置副檔名。 預設值是 `.CSV`。 如果同時指定 `FileExtension` 與 `Extension`，則 `FileExtension` 具有更高的優先順序。|  
 |**NoHeader**|表示標頭資料列是否從輸出排除。 預設值是 `false`。|  
-|`Qualifier`|要放在結果周圍的限定詞字串，包括欄位分隔符號或是記錄分隔符號。 如果結果包含分隔符號，則會重複限定詞。 `Qualifier` 設定必須不同於 `FieldDelimiter` 與 `RecordDelimiter` 設定。 預設值是引號 (")。|  
+|`Qualifier`|要放在結果周圍的限定詞字串，包括欄位分隔符號或是記錄分隔符號。 如果結果包含分隔符號，則會重複限定詞。 
+  `Qualifier` 設定必須不同於 `FieldDelimiter` 與 `RecordDelimiter` 設定。 預設值是引號 (")。|  
 |`RecordDelimiter`|放在每個記錄結尾處的記錄分隔符號。 預設值為 \<cr>\<lf>。|  
 |**SuppressLineBreaks**|指出是否從輸出中所含的資料移除分行符號。 預設值是 `false`。 如果值是 `true`、`FieldDelimiter`、`RecordDelimiter` 和`Qualifier`，則設定不能是空白字元。|  
 |`UseFormattedValues`|指出是否將格式字串放入 CSV 輸出。 當 `true` 是 `ExcelMode` 時，預設值是 `true`，否則為 `false`。|  

@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67793919"
 ---
-# <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
-  點對點複寫藉由維護多個伺服器執行個體之間的資料複本 (也稱為 *「節點」* ) 來提供向外延展和高可用性解決方案。 點對點複寫是以異動複寫為基礎，會以接近即時、交易式的方式傳播一致的變更。 如此可讓需要向外延展讀取作業的應用程式將來自用戶端的讀取散發到多個節點之間。 由於會以接近即時的方式在節點之間維護資料，所以點對點複寫會提供資料備援性，這樣可提高資料的可用性。  
+# <a name="peer-to-peer-transactional-replication"></a>點對點異動複寫
+  點對點複寫藉由維護多個伺服器執行個體之間的資料複本 (也稱為 *「節點」*) 來提供向外延展和高可用性解決方案。 點對點複寫是以異動複寫為基礎，會以接近即時、交易式的方式傳播一致的變更。 如此可讓需要向外延展讀取作業的應用程式將來自用戶端的讀取散發到多個節點之間。 由於會以接近即時的方式在節點之間維護資料，所以點對點複寫會提供資料備援性，這樣可提高資料的可用性。  
   
  請考慮 Web 應用程式。 這樣會在以下方面因為點對點複寫而獲益：  
   
@@ -61,7 +61,7 @@ ms.locfileid: "67793919"
   
 -   在左側，會在兩個伺服器之間分割更新。 舉例來說，如果資料庫包含產品目錄，您可以讓一個自訂應用程式將名稱以 A 到 M 開頭之產品的更新導向節點 **A** ，將名稱以 N 到 Z 開頭之產品的更新導向節點 **B** 。隨後，更新會再複寫到其他節點。  
   
--   在右側，所有的更新都會導向節點 **B**。更新會從這裡複寫到節點 **A**。如果 **B** 離線 (例如，為了進行維護)，應用程式伺服器就可以將所有活動導向 **A**。當 **B** 再次連線時，更新可以流向它，而且應用程式伺服器可將所有更新移回 **B**，或是繼續將更新導向 **A**。  
+-   在右側，所有更新都會導向至節點**B**。從該處，更新會複寫到節點**A**。如果**B**離線（例如，為了進行維護），應用程式伺服器可以將所有活動導向**A**。當**B**重新上線時，更新可以流向它，而應用程式伺服器可以將所有更新移回**B** ，或繼續將其導向**至。**  
   
  點對點複寫對以上兩種方法均支援，但是右側的中央更新範例也經常與標準異動複寫一起使用。  
   
@@ -72,11 +72,11 @@ ms.locfileid: "67793919"
   
  每一處都有資料庫和應用程式伺服器，供支援工程師輸入並更新有關客戶來電的資訊。 此拓撲是依時間分割， 因此更新就只會發生在目前正在營業的節點，隨後更新會流向其他參與資料庫。 此拓撲具有下列優點：  
   
--   獨立而不隔離：每個分公司可以插入、 更新或個別刪除資料但也共用資料，因為它會複寫到所有其他的參與資料庫。  
+-   獨立而不隔離：每一個分公司都可以獨立插入、更新或刪除資料，而且還可以共用資料，因為資料會複寫到所有其他的參與資料庫。  
   
 -   在發生失敗或要允許對一或多個參與資料庫進行維護時，具有更高的可用性。  
   
-     ![點對點複寫，三和四個節點](../media/repl-multinode-04.gif "點對點複寫，三和四個節點")  
+     ![點對點複寫，三或四個節點](../media/repl-multinode-04.gif "點對點複寫，三或四個節點")  
   
  上圖顯示如何將節點加入到三個節點的拓撲。 基於以下原因，可以在此案例中加入節點：  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67793919"
   
     -   物件名稱、物件結構描述和發行集名稱都應相同。  
   
-    -   發行集必須允許複寫結構描述變更 (這是發行集屬性 **replicate_ddl** 的 **1** 設定值，這是預設值)。如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../publish/make-schema-changes-on-publication-databases.md)。  
+    -   發行集必須允許複寫結構描述變更 （這是發行集屬性的設定值**1** ， **replicate_ddl**，這是預設設定）。如需詳細資訊，請參閱[對發行集資料庫進行架構變更](../publish/make-schema-changes-on-publication-databases.md)。  
   
     -   不支援資料列和資料行篩選。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "67793919"
   
 -   在建立任何訂閱前，必須先啟用點對點複寫的發行集。  
   
--   訂閱必須使用備份或藉由 [僅支援複寫]  選項進行初始化。 如需詳細資訊，請參閱 [不使用快照集初始化交易式訂閱](../initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
+-   訂閱必須使用備份或藉由 [僅支援複寫] **** 選項進行初始化。 如需詳細資訊，請參閱 [不使用快照集初始化交易式訂閱](../initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
   
 -   我們不建議您使用識別欄位。 使用識別時，您必須手動管理指派給每個參與資料庫中資料表的範圍。 如需詳細資訊，請參閱[複寫識別資料行](../publish/replicate-identity-columns.md)中的＜為手動識別範圍管理指派範圍＞一節。  
   
@@ -137,24 +137,24 @@ ms.locfileid: "67793919"
   
 -   散發代理程式參數 **-SubscriptionStreams** 和記錄讀取器代理程式參數 **-MaxCmdsInTran**。  
   
--   發行項屬性 **\@destination_owner**並 **\@destination_table**。  
+-   發行項屬性** \@destination_owner**和** \@destination_table**。  
 
 -   點對點異動複寫不支援建立點對點發行集的單向交易式訂閱
   
  下列屬性有特殊考量：  
   
--   發行集屬性 **\@allow_initialize_from_backup**需要的值為`true`。  
+-   發行集屬性** \@allow_initialize_from_backup**需要的`true`值。  
   
--   發行項屬性 **\@replicate_ddl**需要的值為`true`; **\@identityrangemanagementoption**需要的值為`manual`; 並 **\@狀態**需要該選項**24**設定。  
+-   發行項屬性** \@replicate_ddl**需要的`true`值為;identityrangemanagementoption 需要的`manual`值為; ** \@ **而** \@狀態**則需要設定選項**24** 。  
   
--   發行項屬性的值 **\@ins_cmd**，  **\@del_cmd**，以及 **\@upd_cmd**不能設為`SQL`。  
+-   發行項** \@** 屬性的值 ins_cmd、 ** \@del_cmd**和** \@upd_cmd**不能設定為。 `SQL`  
   
--   訂用帳戶屬性 **\@sync_type**需要的值為`none`或`automatic`。  
+-   ** \@Sync_type**的訂用帳戶屬性需要`none`或`automatic`的值。  
   
 ### <a name="maintenance-considerations"></a>維護考量  
  下列動作需要停止系統。 這表示停止所有節點上已發行之資料表的活動，並確定每個節點都已收到來自其他所有節點的所有變更。  
   
--   新增[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]節點至現有的拓撲  
+-   將[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]節點加入至現有的拓撲  
   
 -   將發行項新增至現有的發行集  
   

@@ -1,5 +1,5 @@
 ---
-title: 多維度模型方案 (SSAS) |Microsoft Docs
+title: 多維度模型方案（SSAS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 703080418566b761741575c69fb6be6a7572988e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073573"
 ---
 # <a name="multidimensional-model-solutions-ssas"></a>多維度模型方案 (SSAS)
@@ -28,7 +28,7 @@ ms.locfileid: "66073573"
  [多維度模型資料庫 &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
  描述如何定義 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。  
   
- [支援的資料來源&#40;SSAS 多維度&#41;](supported-data-sources-ssas-multidimensional.md)  
+ [&#40;SSAS 多維度&#41;支援的資料來源](supported-data-sources-ssas-multidimensional.md)  
  描述如何定義 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源物件。  
   
  [多維度模型中的資料來源檢視](data-source-views-in-multidimensional-models.md)  
@@ -37,13 +37,13 @@ ms.locfileid: "66073573"
  [多維度模型中的維度](dimensions-in-multidimensional-models.md)  
  描述如何設計 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 維度物件。  
   
- [多維度模型中的 Cube](cubes-in-multidimensional-models.md)  
+ [多維度模型中的 cube](cubes-in-multidimensional-models.md)  
  描述如何設計 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 物件。  
   
- [結構描述產生精靈 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
+ [架構產生嚮導 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
  描述如何在無現有的關聯式結構描述之下來設計多維度資料庫物件。  
   
  [Analysis Services 個人化延伸模組](extending-olap/analysis-services-personalization-extensions.md)  
- 描述如何針對 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]設計個人化延伸模組。  
+ 描述如何設計的[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]個人化延伸模組。  
   
   

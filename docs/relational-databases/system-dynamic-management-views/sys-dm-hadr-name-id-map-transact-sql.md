@@ -1,5 +1,5 @@
 ---
-title: sys.dm_hadr_name_id_map (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_hadr_name_id_map （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,16 +20,16 @@ ms.assetid: e07bb8a9-37de-4a39-a257-950d7c3ae8fb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4fc446efc410ff13d5697c7ab195e3e3895b4839
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900426"
 ---
-# <a name="sysdmhadrnameidmap-transact-sql"></a>sys.dm_hadr_name_id_map (Transact-SQL)
+# <a name="sysdm_hadr_name_id_map-transact-sql"></a>sys.dm_hadr_name_id_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Always On 可用性群組的對應，會顯示目前的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已經聯結至三個唯一識別碼： 可用性群組識別碼、 WSFC 資源識別碼和 WSFC 群組識別碼。 此對應的目的是要處理重新命名 WSFC 資源/群組的案例。  
+  顯示目前實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已聯結至三個唯一識別碼之 Always On 可用性群組的對應：可用性群組識別碼、WSFC 資源識別碼和 WSFC 群組識別碼。 此對應的目的是要處理重新命名 WSFC 資源/群組的案例。  
    
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "67900426"
 |**ag_resource_id**|**nvarchar(256)**|在 WSFC 叢集中做為資源之可用性群組的唯一識別碼。|  
 |**ag_group_id**|**nvarchar(256)**|可用性群組的唯一 WSFC 群組識別碼。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 ## <a name="see-also"></a>另請參閱  

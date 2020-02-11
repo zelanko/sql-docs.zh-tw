@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
-ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67624402"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解決記憶體不足問題
@@ -22,14 +22,14 @@ ms.locfileid: "67624402"
   
 ## <a name="covered-in-this-topic"></a>本主題所涵蓋的內容  
   
-|主題|總覽|  
+|主題|概觀|  
 |-----------|--------------|  
 | [解決由於 OOM 所造成的資料庫還原失敗](#resolve-database-restore-failures-due-to-oom) |若您收到錯誤訊息：「資料庫 '\<資料庫名稱>  ' 的還原作業因為資源集區 '\<資源集區名稱>  ' 中的記憶體不足而失敗」，該怎麼辦。|  
 | [解決低記憶體或 OOM 狀況對於工作負載的影響](#resolve-impact-of-low-memory-or-oom-conditions-on-the-workload)|如果您發現低記憶體問題對於效能造成負面影響，該怎麼辦。|  
 | [解決有足夠的記憶體可用但卻記憶體不足所造成的頁面配置失敗](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |若您收到錯誤訊息：「不允許資料庫 '\<資料庫名稱>  ' 的頁面配置，因為資源集區 '\<資源集區名稱>  ' 中的記憶體不足」，該怎麼辦。 ...」(前提是可用的記憶體足夠供執行作業)。|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>解決由於 OOM 所造成的資料庫還原失敗  
- 當您嘗試還原資料庫時可能會收到錯誤訊息：「 還原資料庫失敗的作業 ' *\<databaseName >* '因為資源集區中的記憶體不足' *\<辦 >* '。 」在可以成功還原資料庫之前，您必須提供更多可用的記憶體，以解決記憶體不足的問題。  
+ 當您嘗試還原資料庫時，可能會收到錯誤訊息：「資料庫 '*\<databaseName>*' 的還原作業失敗，因為資源集區 '*\<名稱>*' 中的記憶體不足。」在您成功還原資料庫之前，您必須藉由提供更多記憶體來解決記憶體不足的問題。  
   
  若要解決由於 OOM 所造成的復原失敗，請使用下列任何或所有方法來暫時增加復原作業可用的記憶體。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "67624402"
   
     > [!IMPORTANT]  
     >  如果伺服器是在 VM 上執行，而且不是專用的，請將 MIN_MEMORY_PERCENT 設成與 MAX_MEMORY_PERCENT 相同的值。   
-    > 請參閱主題[最佳做法：在 VM 環境使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)如需詳細資訊。  
+    > 如需詳細資訊，請參閱[最佳做法：在 VM 環境中使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)主題。  
   
     ```sql  
   
@@ -61,22 +61,22 @@ ms.locfileid: "67624402"
   
     ```  
   
-     如需有關 MAX_MEMORY_PERCENT 的最大值，請參閱主題章節[的可用記憶體最佳化資料表和索引的記憶體百分比](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes)
+     如需 MAX_MEMORY_PERCENT 最大值的詳細資訊，請參閱[適用于記憶體優化資料表和索引的記憶體百分比](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes)主題一節。
   
--   重新設定 [最大伺服器記憶體]  。  
-    如需設定 [最大伺服器記憶體]  的資訊，請參閱[使用記憶體組態選項最佳化伺服器效能](https://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx)主題。  
+-   重新設定 [最大伺服器記憶體]****。  
+    如需設定 [最大伺服器記憶體]**** 的資訊，請參閱[使用記憶體組態選項最佳化伺服器效能](https://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx)主題。  
   
 ## <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a>解決低記憶體或 OOM 狀況對於工作負載的影響  
  避免發生低記憶體或 OOM (記憶體不足) 的情況才是最上策。 良好的規劃和監視有助於避免 OOM 情況。 不過，最佳的規劃永遠無法預測實際發生的狀況，而最後可能會導致低記憶體或 OOM。 有兩個步驟可以從 OOM 中復原：  
   
-1.  [開啟 DAC (專用管理員連接)](#open-a-dac-dedicated-administrator-connection) 
+1.  [開啟 DAC （專用管理員連接）](#open-a-dac-dedicated-administrator-connection) 
   
 2.  [採取更正動作](#take-corrective-action) 
   
 ### <a name="open-a-dac-dedicated-administrator-connection"></a>開啟 DAC (專用管理員連接)  
  Microsoft SQL Server 提供了專用管理員連接 (DAC)。 即使伺服器對其他用戶端連接沒有回應，系統管理員也可以使用 DAC 來存取 SQL Server 資料庫引擎的執行中執行個體，以針對伺服器上的問題進行疑難排解。 您可以透過 `sqlcmd` 公用程式和 SQL Server Management Studio (SSMS) 使用 DAC。  
   
- 如需使用 `sqlcmd` 和 DAC 的指引，請參閱 [使用專用管理員連接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 如需透過 SSMS 使用 DAC 的指引，請參閱[How to:使用 SQL Server Management Studio 使用專用的管理員連接](https://msdn.microsoft.com/library/ms178068.aspx)。  
+ 如需使用 `sqlcmd` 和 DAC 的指引，請參閱 [使用專用管理員連接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 如需透過 SSMS 使用 DAC 的指引，請參閱 [如何：利用 SQL Server Management Studio 使用專用管理員連接](https://msdn.microsoft.com/library/ms178068.aspx)。  
   
 ### <a name="take-corrective-action"></a>採取更正動作  
  若要解決 OOM 狀況，您必須透過降低使用量，釋出現有的記憶體，或是將更多記憶體提供給記憶體中的資料表。  
@@ -95,7 +95,7 @@ ms.locfileid: "67624402"
   
 #### <a name="increase-available-memory"></a>增加可用的記憶體  
   
-##### <a name="increase-value-of-maxmemorypercent-on-the-resource-pool"></a>提高資源集區的 MAX_MEMORY_PERCENT 值  
+##### <a name="increase-value-of-max_memory_percent-on-the-resource-pool"></a>提高資源集區的 MAX_MEMORY_PERCENT 值  
  如果您尚未針對記憶體中的資料表建立具名資源集區，就應該先建立集區，並且將 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資料庫繫結至該集區。 如需如何建立 [資料庫並繫結至資源集區的指引，請參閱](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) 將包含記憶體最佳化資料表的資料庫繫結至資源集區 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 主題。  
   
  如果您的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資料庫已繫結至資源集區，您應該能夠提高集區可存取的記憶體百分比。 如需變更資源集區之 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 值的指引，請參閱 [變更現有集區上的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool) 子主題。  
@@ -105,7 +105,7 @@ ms.locfileid: "67624402"
   
 > [!IMPORTANT]  
 >  如果伺服器是在 VM 上執行，而且不是專用的，請將 MIN_MEMORY_PERCENT 與 MAX_MEMORY_PERCENT 設為相同值。   
-> 請參閱主題[最佳做法：在 VM 環境使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)如需詳細資訊。  
+> 如需詳細資訊，請參閱[最佳做法：在 VM 環境中使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)主題。  
   
 ```sql  
   
@@ -128,23 +128,23 @@ GO
  如需 MAX_MEMORY_PERCENT 之最大值的資訊，請參閱主題章節： [可用於記憶體最佳化資料表和索引的記憶體百分比](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes)。  
   
 ##### <a name="install-additional-memory"></a>安裝額外記憶體  
- 最佳的終極解決方案還是安裝額外的實體記憶體 (如果可行)。 如果您這樣做，請記住，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不太可能需要更多記憶體，所以您或許能夠一併提高 MAX_MEMORY_PERCENT 的值 (請參閱[變更現有集區上的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool) 子主題)，以便將大部分新安裝的記憶體提供給資源集區。  
+ 最佳的終極解決方案還是安裝額外的實體記憶體 (如果可行)。 如果您這樣做，請記住，您可能也會增加 MAX_MEMORY_PERCENT 的值（請參閱[變更現有集區的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)子主題），因為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不太可能需要更多記憶體，因此您可以將大部分新安裝的記憶體提供給資源集區。  
   
 > [!IMPORTANT]  
 >  如果伺服器是在 VM 上執行，而且不是專用的，請將 MIN_MEMORY_PERCENT 與 MAX_MEMORY_PERCENT 設為相同值。   
-> 請參閱主題[最佳做法：在 VM 環境使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)如需詳細資訊。  
+> 如需詳細資訊，請參閱[最佳做法：在 VM 環境中使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)主題。  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>解決有足夠的記憶體可用但卻記憶體不足所造成的頁面配置失敗  
- 如果您收到錯誤訊息: 「 不允許頁面配置，資料庫 ' *\<databaseName >* '因為資源集區中的記憶體不足' *\<名稱 >* '. 請參閱 '<https://go.microsoft.com/fwlink/?LinkId=330673>' 如需詳細資訊。 」 在錯誤記錄檔中，可用的實體記憶體已足夠配置頁面時，它可能是因為已停用的資源管理員。 若資源管理員已停用，MEMORYBROKER_FOR_RESERVE 會誘發不實的記憶體壓力。  
+ 如果您收到錯誤訊息：「不允許資料庫 '*\<databaseName>*' 的頁面配置，因為資源集區 '*\<名稱>*' 中的記憶體不足。 如需<https://go.microsoft.com/fwlink/?LinkId=330673>詳細資訊，請參閱 ' '。 在錯誤記錄檔中，可用的實體記憶體已足夠配置頁面時，它可能是因為已停用的資源管理員。 若資源管理員已停用，MEMORYBROKER_FOR_RESERVE 會誘發不實的記憶體壓力。  
   
  為了解決此問題，您必須啟用資源管理員。  
   
  如需使用物件總管、資源管理員屬性或 Transact-SQL 來啟用資源管理員之限制事項的資訊和指引，請參閱 [啟用資源管理員](https://technet.microsoft.com/library/bb895149.aspx) 。  
   
 ## <a name="see-also"></a>另請參閱  
- [為記憶體中的 OLTP 管理記憶體](../../database-engine/managing-memory-for-in-memory-oltp.md)   
- [監視與疑難排解記憶體使用量](monitor-and-troubleshoot-memory-usage.md)   
+ [管理記憶體內部 OLTP 的記憶體](../../database-engine/managing-memory-for-in-memory-oltp.md)   
+ [監視和疑難排解記憶體使用量](monitor-and-troubleshoot-memory-usage.md)   
  [資料庫並繫結至資源集區的指引，請參閱](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [最佳做法：在 VM 環境使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)  
+ [最佳做法：在 VM 環境中使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)  
   
   

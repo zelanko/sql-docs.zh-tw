@@ -1,5 +1,5 @@
 ---
-title: 我的訂閱頁面 （報表管理員） |Microsoft Docs
+title: 我的訂閱頁面（報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75d662f677ee2b6bbab8e445804ca7f142b5c034
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108193"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>我的訂閱頁面 (報表管理員)
-  使用 [我的訂閱] 頁面來檢視某個位置的所有訂閱。 從這個頁面中，您可以存取與修改或刪除擁有的任何訂閱。 您只擁有您所建立的訂閱。 您不可以存取其他使用者的訂閱，也不可以存取您有權使用但並未擁有的訂閱 (例如，如果您的名稱已經加入另一位使用者所定義的現有訂閱中)。 您不可以在此頁面建立訂閱。 如需建立訂用帳戶的詳細資訊，請參閱 <<c0> [ 新的訂用帳戶或編輯訂閱頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)。</c0>  
+  使用 [我的訂閱] 頁面來檢視某個位置的所有訂閱。 從這個頁面中，您可以存取與修改或刪除擁有的任何訂閱。 您只擁有您所建立的訂閱。 您不可以存取其他使用者的訂閱，也不可以存取您有權使用但並未擁有的訂閱 (例如，如果您的名稱已經加入另一位使用者所定義的現有訂閱中)。 您不可以在此頁面建立訂閱。 如需有關建立訂閱的詳細資訊，請參閱 [[新增訂閱] 或 [編輯訂閱] 頁面 &#40;報表管理員&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)。  
   
  在預設狀況下，依報表名稱的字母順序來排序訂閱。 按一下不同的資料行標題，變更訂閱的排序方式。 如果您沒有訂閱或者建立或管理訂閱的權限已停用，頁面上將不會出現任何訂閱。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
-## <a name="navigation"></a>巡覽  
+## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ### <a name="to-open-the-my-subscriptions-page"></a>若要開啟我的訂閱頁面  
@@ -37,14 +37,14 @@ ms.locfileid: "66108193"
     > [!NOTE]  
     >  [我的訂閱] 永遠可以使用，即使您沒有建立訂閱的權限。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **刪除**  
- 選取您要刪除的每一個訂閱旁邊的核取方塊，然後按一下 **[刪除]** 。  
+ 選取您要刪除的每一個訂閱旁邊的核取方塊，然後按一下 **[刪除]**。  
   
  **編輯**  
  按一下即可檢視或編輯訂閱。  
   
- **報表**  
+ **Report**  
  顯示在訂閱中指定的報表。 按一下報表名稱即可檢視報表。  
   
  **說明**  
@@ -53,8 +53,10 @@ ms.locfileid: "66108193"
  **資料夾**  
  顯示包含訂閱中指定之報表的資料夾。 按一下資料夾名稱即可檢視資料夾的內容。  
   
- **觸發程序**  
- 識別造成執行訂閱的條件。 **TimedSubscription** 觸發程序是以執行訂閱時定義的排程為基礎。 **SnapshotUpdated** 觸發程序是以報表快照集的更新為基礎。  
+ **界限**  
+ 識別造成執行訂閱的條件。 
+  **TimedSubscription** 觸發程序是以執行訂閱時定義的排程為基礎。 
+  **SnapshotUpdated** 觸發程序是以報表快照集的更新為基礎。  
   
  **最後執行**  
  顯示最後處理訂閱的時間。  

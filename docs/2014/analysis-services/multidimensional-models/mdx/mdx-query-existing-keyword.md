@@ -1,5 +1,5 @@
 ---
-title: EXISTING 關鍵字 (MDX) |Microsoft Docs
+title: EXISTING 關鍵字（MDX） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6c5e8dbe3e1b1ad44286bcbb79132010cad618a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073970"
 ---
 # <a name="existing-keyword-mdx"></a>EXISTING 關鍵字 (MDX)
@@ -39,7 +39,7 @@ Existing Set_Expression
  根據預設，會在包含集合成員的 Cube 內容內評估集合。 但是 `Existing` 關鍵字會強制在目前的內容內評估指定的集合。  
   
 ## <a name="example"></a>範例  
- 下列範例會根據使用 `Aggregate` 函數評估之使用者選取的 State-Province 成員值，傳回上一個時間週期銷售值衰退的轉售商計數。 但是 [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) 和 [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) 函數是用來傳回 Product 維度中產品類別目錄的衰退銷售值。 `Existing`關鍵字會強制在集合`Filter`函式來評估目前內容中-也就是，針對 State-province 屬性階層的 Washington 和 Oregon 成員。  
+ 下列範例會根據使用 `Aggregate` 函數評估之使用者選取的 State-Province 成員值，傳回上一個時間週期銷售值衰退的轉售商計數。 但是 [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) 和 [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) 函數是用來傳回 Product 維度中產品類別目錄的衰退銷售值。 `Existing`關鍵字會強制在目前的內容`Filter`中評估函式中的集合，也就是州/省屬性階層的華盛頓州和俄勒岡成員。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  
@@ -77,13 +77,13 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Count &#40;集合&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
+ [&#40;&#41; &#40;MDX&#41;設定計數](/sql/mdx/count-set-mdx)   
  [AddCalculatedMembers &#40;MDX&#41;](/sql/mdx/addcalculatedmembers-mdx)   
- [Aggregate &#40;MDX&#41;](/sql/mdx/aggregate-mdx)   
- [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx)   
- [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)   
+ [匯總 &#40;MDX&#41;](/sql/mdx/aggregate-mdx)   
+ [篩選 &#40;MDX&#41;](/sql/mdx/filter-mdx)   
+ [MDX&#41;的屬性 &#40;](/sql/mdx/properties-mdx)   
  [DrilldownLevel &#40;MDX&#41;](/sql/mdx/drilldownlevel-mdx)   
  [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
- [MDX 函數參考 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [Mdx 函數參考 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

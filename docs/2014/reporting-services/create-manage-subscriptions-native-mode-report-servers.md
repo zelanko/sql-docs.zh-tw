@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d6f18ff05cf6283e4358e8f8afd76a5858b0b41a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109602"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>建立及管理原生模式報表伺服器的訂閱
@@ -32,11 +32,11 @@ ms.locfileid: "66109602"
 -   「管理所有訂閱」工作可以讓使用者存取和修改所有的訂閱。 要建立資料驅動訂閱需要這個工作。 在預先定義的角色中，只有內容管理員角色包含這項工作。  
   
 ## <a name="disabling-subscriptions"></a>停用訂閱  
- 若要讓使用者無法建立訂閱，請從角色中清除「管理個別訂閱」工作。 當您移除這個工作後，[訂閱] 頁面就無法使用。 在報表管理員中，即使 [我的訂閱] 頁面原先含有訂閱，此時也會顯示空白 (無法刪除這個頁面)。 移除訂閱相關的工作會讓使用者無法建立與修改訂閱，但是不會刪除現有的訂閱。 現有的訂閱仍會繼續執行，直到您刪除這些訂閱為止。 如需有關刪除訂用帳戶的詳細資訊，請參閱[建立、 修改和刪除標準訂用帳戶&#40;原生模式的 Reporting Services&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
+ 若要讓使用者無法建立訂閱，請從角色中清除「管理個別訂閱」工作。 當您移除這個工作後，[訂閱] 頁面就無法使用。 在報表管理員中，即使 [我的訂閱] 頁面原先含有訂閱，此時也會顯示空白 (無法刪除這個頁面)。 移除訂閱相關的工作會讓使用者無法建立與修改訂閱，但是不會刪除現有的訂閱。 現有的訂閱仍會繼續執行，直到您刪除這些訂閱為止。 如需刪除訂閱的詳細資訊，請參閱[在原生模式中建立、修改和刪除標準訂閱 &#40;Reporting Services&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
   
- 若要停用報表伺服器上處理的訂用帳戶，您可以設定`ScheduleEventsAndReportDeliveryEnabled`屬性，以`False`中**Reporting Services 的介面區組態**facet 的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]原則為基礎的管理。 這樣做會讓所有排程的作業無法執行。 您無法單獨關閉報表伺服器的訂閱處理。  
+ 若要停用報表伺服器的訂閱處理，您可以在`ScheduleEventsAndReportDeliveryEnabled`以原則`False`為基礎之[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]管理的**Reporting Services facet 介面區**設定中，將屬性設為。 這樣做會讓所有排程的作業無法執行。 您無法單獨關閉報表伺服器的訂閱處理。  
   
- 如需有關如何取消處理報表伺服器的訂用帳戶的指示，請參閱 <<c0> [ 管理執行的處理序](subscriptions/manage-a-running-process.md)。  
+ 如需有關如何取消在報表伺服器上處理之訂閱的指示，請參閱[管理執行中的進程](subscriptions/manage-a-running-process.md)。  
   
 ## <a name="disabling-delivery-extensions"></a>停用傳遞延伸模組  
  在報表伺服器上安裝的所有傳遞延伸模組都會提供給有權建立給定報表之訂閱的任何使用者。 系統會自動提供和設定下列傳遞延伸模組：  
@@ -45,9 +45,9 @@ ms.locfileid: "66109602"
   
 -   SharePoint 文件庫 (只能從與 SharePoint 整合模式報表伺服器整合的 SharePoint 網站使用)  
   
- 您必須先設定電子郵件傳遞，然後才能使用它。 如果您沒有設定它，便無法使用它。 如需詳細資訊，請參閱 <<c0> [ 電子郵件傳遞設定報表伺服器&#40;SSRS 組態管理員&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。</c0>  
+ 您必須先設定電子郵件傳遞，然後才能使用它。 如果您沒有設定它，便無法使用它。 如需詳細資訊，請參閱[為電子郵件傳遞設定報表伺服器 &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
   
- 如果您想要關閉特定延伸模組，可以在 RSReportServer.config 檔中移除延伸模組項目。 如需詳細資訊，請參閱 < [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)並[電子郵件傳遞設定報表伺服器&#40;SSRS 組態管理員&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
+ 如果您想要關閉特定延伸模組，可以在 RSReportServer.config 檔中移除延伸模組項目。 如需詳細資訊，請參閱[Rsreportserver.config 設定檔](report-server/rsreportserver-config-configuration-file.md)和[設定報表伺服器以進行電子郵件傳遞 &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。  
   
  在您移除傳遞延伸模組之後，就無法再於報表管理員或 SharePoint 網站中使用它。 移除傳遞延伸模組可能會產生非使用中訂閱。 移除延伸模組之前，請務必刪除訂閱，或將它們設定為使用不同的傳遞延伸模組。  
   
@@ -65,6 +65,6 @@ ms.locfileid: "66109602"
  描述如何決定訂閱成功或失敗，以及在現有訂閱上所做報表變更的效果。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立、 修改及刪除標準訂用帳戶&#40;Reporting Services 原生模式&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)  
+ [以原生模式 &#40;Reporting Services 建立、修改和刪除標準訂閱&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 分析的 Excel （瀏覽器索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
+title: 在 Excel 中進行分析（瀏覽器索引標籤，Cube 設計師）（Analysis Services 多維度資料） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2833fb2ecbbac269442ce149cd5673abedcf83c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062370"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>在 Excel 中進行分析 (瀏覽器索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
-  **[在 Excel 中進行分析]** 提供 Cube 開發人員一種方式，可快速檢閱使用者所看到的專案外觀。 **[在 Excel 中進行分析]** 功能可開啟 Microsoft Excel、建立工作空間資料庫的資料來源連接，以及自動將樞紐分析表加入工作表。 此功能取代舊版 [瀏覽器] 索引標籤中提供內嵌樞紐分析表的 Office Web 元件。  
+  [**在 Excel 中進行分析**] 提供 cube 開發人員一種方式，可讓您快速查看專案對使用者的外觀。 
+  **[在 Excel 中進行分析]** 功能可開啟 Microsoft Excel、建立工作空間資料庫的資料來源連接，以及自動將樞紐分析表加入工作表。 此功能取代舊版 [瀏覽器] 索引標籤中提供內嵌樞紐分析表的 Office Web 元件。  
   
- **若要檢視 cube 資料：**  
+ **若要檢視 Cube 資料：**  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]的方案總管中，按兩下 Cube，在 Cube 設計師中加以開啟。  
   
@@ -33,7 +34,7 @@ ms.locfileid: "66062370"
   
 4.  按一下功能表列上的 Excel 圖示。  
   
-5.  當系統要求您啟用資料連接時，按一下 **[啟用]** 。 Excel 會使用目前的資料連接來開啟，並將樞紐分析表加入工作表中，讓您可以開始瀏覽資料。  
+5.  當系統要求您啟用資料連接時，按一下 **[啟用]**。 Excel 會使用目前的資料連接來開啟，並將樞紐分析表加入工作表中，讓您可以開始瀏覽資料。  
   
  您現在可透過將事實資料表中的量值拖曳至 [值] 區域，並將維度屬性拖曳至 [資料列] 和 [資料行] 區域，以互動方式建立樞紐分析表。 如果您有階層，可將它們加入至 [資料列] 或 [資料行] 區域。 您可以積存或向下鑽研階層，瀏覽不同層級的事實資料。  
   
@@ -44,16 +45,16 @@ ms.locfileid: "66062370"
   
  如需有關 **[在 Excel 中進行分析]** 功能的詳細資訊，請參閱以下資源：  
   
- [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [在 Excel 中分析 &#40;SSAS 表格式&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [在 Excel 中分析表格式模型 &#40;SSAS 表格式&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
+ [在 Excel 中分析方格式模型 &#40;SSAS 表格式&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
   
  [瀏覽 Cube 中的資料和中繼資料](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [瀏覽器&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
- [工具列&#40;瀏覽器索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [中繼資料&#40;瀏覽器索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [查詢和篩選&#40;瀏覽器索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)  
+ [瀏覽器 &#40;Cube 設計工具&#41; &#40;Analysis Services 多維度資料&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [工具列 &#40;瀏覽器索引標籤、Cube 設計工具&#41; &#40;Analysis Services 多維度資料&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [中繼資料 &#40;瀏覽器索引標籤、Cube 設計工具&#41; &#40;Analysis Services 多維度資料&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [查詢和篩選 &#40;瀏覽器索引標籤、Cube 設計工具&#41; &#40;Analysis Services 多維度資料&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   
