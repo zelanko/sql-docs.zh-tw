@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770853"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
@@ -113,7 +113,7 @@ ms.locfileid: "62770853"
   
 1.  將 WriteOption 屬性設為 [CreateOnce]  或 [CreateAlways]  ，然後執行一次迴圈的反覆運算。 檔案就會建立， 這可確保附加資料的中繼資料與該檔案相符。  
   
-2.  若要將 WriteOption 屬性重設**Append**並將 ValidateExternalMetadata 屬性設定為`False`。  
+2.  將 [WriteOption] 屬性重設為 [**附加**]， `False`並將 ValidateExternalMetadata 屬性設定為。  
   
  如果您使用 [TruncateAppend]  選項，而不是 [Append]  選項，它就會截斷在任何先前反覆運算中新增的資料列，然後附加新的資料列。 使用 [TruncateAppend]  選項也會要求資料符合檔案格式。  
   

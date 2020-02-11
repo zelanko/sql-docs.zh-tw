@@ -1,5 +1,5 @@
 ---
-title: ADO 事件具現化：Visual Basic |Microsoft Docs
+title: ADO 事件具現化： Visual Basic |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: dce0a2a3-326f-4aaf-a822-6c5549833afa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ead713a37d4ecf8bdfecd0d6c485684d1ad0777f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926073"
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>ADO 事件具現化：Visual Basic
-若要處理 ADO 事件，在 Microsoft® Visual Basic® 中的，您必須宣告模組層級變數 using **WithEvents**關鍵字。 變數可以宣告只為一部分的類別模組，而且必須在模組層級宣告。 這是不一樣嚴格，因為看似，不過，因為 Visual Basic**表單**物件也是類別。 最簡單的方式來處理 ADO 事件是要宣告使用變數**WithEvents**。 下列範例會處理**ConnectComplete**事件**連線**物件：  
+為了處理 Microsoft® Visual Basic®中的 ADO 事件，您必須使用**WithEvents**關鍵字來宣告模組層級變數。 變數只能宣告為類別模組的一部分，而且必須在模組層級宣告。 但這並不嚴格，因為 Visual Basic **Form**物件也是類別。 處理 ADO 事件最簡單的方式，就是使用**WithEvents**宣告變數。 下列範例會處理**連接**物件的**ConnectComplete**事件：  
   
 ```  
 ' BeginEventExampleVB02  
@@ -65,4 +65,4 @@ End Sub
 ' EndEventExampleVB02  
 ```  
   
- **連接**物件在宣告**表單**層級使用**WithEvents**關鍵字來啟用事件處理。 實際指派新建立物件的 Form_Load 事件處理常式**連接**物件*connEvent* ，然後開啟 連線。 當然，實際的應用程式一樣 Form_Load 事件處理常式比此處顯示更多的處理。
+ **連接**物件是在**表單**層級使用**WithEvents**關鍵字來進行宣告，以啟用事件處理。 Form_Load 事件處理常式實際上會建立物件，方法是將新的**連接**物件指派給*connEvent* ，然後開啟連接。 當然，實際的應用程式會在 Form_Load 事件處理常式中執行比此處顯示更多的處理。

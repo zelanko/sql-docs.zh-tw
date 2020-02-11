@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f807060994c2225dc1e6605344bbb3bd5d2709e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106235"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>常用的篩選 (報表產生器及 SSRS)
@@ -48,8 +48,8 @@ ms.locfileid: "66106235"
   
 |參數類型|(篩選) 運算式|運算子|值|資料類型|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
-|單一值|`[EmployeeID]`|=|`[@EmployeeID]`|Integer|  
-|多重值|`[EmployeeID]`|IN|`[@EmployeeID]`|Integer|  
+|單一值|`[EmployeeID]`|=|`[@EmployeeID]`|整數|  
+|多重值|`[EmployeeID]`|IN|`[@EmployeeID]`|整數|  
   
 ## <a name="see-also"></a>另請參閱  
  [報表參數 &#40;報表產生器和報表設計師&#41;](report-parameters-report-builder-and-report-designer.md)   

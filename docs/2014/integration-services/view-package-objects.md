@@ -20,32 +20,33 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78a9b551ae44348de1c007533be3606b33c974cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62926276"
 ---
 # <a name="view-package-objects"></a>檢視封裝物件
-  在「[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」中，[封裝總管]  索引標籤提供封裝的總管檢視。 此檢視反映 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 架構的容器階層。 封裝容器位於階層的頂端，您可以展開封裝以檢視其中的連接、可執行檔、事件處理常式、記錄提供者、優先順序條件約束和變數。  
+  在「[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」中，[封裝總管]**** 索引標籤提供封裝的總管檢視。 此檢視反映 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 架構的容器階層。 封裝容器位於階層的頂端，您可以展開封裝以檢視其中的連接、可執行檔、事件處理常式、記錄提供者、優先順序條件約束和變數。  
   
- 可執行檔 (封裝中的容器和工作) 可包含事件處理常式、優先順序條件約束和變數。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支援容器的巢狀階層，而「For 迴圈」、「Foreach 迴圈」和「時序」容器可包含其他可執行檔。  
+ 可執行檔 (封裝中的容器和工作) 可包含事件處理常式、優先順序條件約束和變數。 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支援容器的巢狀階層，而「For 迴圈」、「Foreach 迴圈」和「時序」容器可包含其他可執行檔。  
   
- 如果某個封裝包含資料流程，封裝總管  會列出「資料流程」工作，並包含一個列出資料流程元件的 [元件]  資料夾。  
+ 如果某個封裝包含資料流程，封裝總管**** 會列出「資料流程」工作，並包含一個列出資料流程元件的 [元件]**** 資料夾。  
   
- 藉由 [封裝總管]  索引標籤，您可以刪除封裝中的物件並存取 [屬性]  視窗以檢視物件屬性。  
+ 藉由 [封裝總管]**** 索引標籤，您可以刪除封裝中的物件並存取 [屬性]**** 視窗以檢視物件屬性。  
   
  下圖顯示簡單封裝的樹狀檢視。  
   
- ![[套件總管] 索引標籤的螢幕擷取畫面](media/packageexplorer.gif "[套件總管] 索引標籤的螢幕擷取畫面")  
+ ![封裝總管索引標籤的螢幕擷取畫面](media/packageexplorer.gif "封裝總管索引標籤的螢幕擷取畫面")  
   
 ### <a name="to-view-package-content"></a>檢視封裝內容  
   
--   [在套件總管中檢視套件物件](../../2014/integration-services/view-package-objects-in-package-explorer.md)  
+-   [在封裝總管中檢視封裝物件](../../2014/integration-services/view-package-objects-in-package-explorer.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](control-flow/integration-services-tasks.md)   
- [整合服務容器](control-flow/integration-services-containers.md)   
+ [Integration Services 容器](control-flow/integration-services-containers.md)   
  [優先順序條件約束](control-flow/precedence-constraints.md)   
  [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)   
  [Integration Services &#40;SSIS&#41; 事件處理常式](integration-services-ssis-event-handlers.md)   

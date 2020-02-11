@@ -1,5 +1,5 @@
 ---
-title: 一般檔案目的地編輯器 （對應頁面） |Microsoft Docs
+title: 一般檔案目的地編輯器（對應頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f91b32a292975ec19b21dbd855f6c5c182738aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058675"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>一般檔案目的地編輯器 (對應頁面)
-  使用 [一般檔案目的地編輯器]  對話方塊的 [對應]  頁面，即可將輸入資料行對應到目的地資料行。  
+  使用 [一般檔案目的地編輯器]**** 對話方塊的 [對應]**** 頁面，即可將輸入資料行對應到目的地資料行。  
   
- 若要深入了解一般檔案目的地，請參閱[一般檔案目的地](data-flow/flat-file-destination.md)。  
+ 若要深入了解一般檔案目的地，請參閱 [一般檔案目的地](data-flow/flat-file-destination.md)。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **可用的輸入資料行**  
  檢視可用的輸入資料行清單。 使用拖放作業，即可將可用的輸入資料行對應到目的地資料行。  
   
@@ -34,13 +34,13 @@ ms.locfileid: "66058675"
  檢視可用的目的地資料行清單。 使用拖放作業，即可將可用的目的地資料行對應到輸入資料行。  
   
  **輸入資料行**  
- 檢視在這個主題中稍早選取的輸入資料行。 您可以使用 **[可用的輸入資料行]** 清單來變更對應。 選取 [\<忽略>]  即可從輸出中將資料行排除。  
+ 檢視在這個主題中稍早選取的輸入資料行。 您可以使用 **[可用的輸入資料行]** 清單來變更對應。 選取** \<[略過>** ]，將資料行從輸出中排除。  
   
  **目的地資料行**  
  檢視每個可用的目的地資料行，不論是否已經對應。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [一般檔案目的地編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
+ [[一般檔案目的地編輯器] &#40;連線管理員] 頁面&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
   
   

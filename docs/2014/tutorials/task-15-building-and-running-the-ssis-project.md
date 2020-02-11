@@ -1,5 +1,5 @@
 ---
-title: 工作 15：建立和執行 SSIS 專案 |Microsoft Docs
+title: 工作15：建立和執行 SSIS 專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,39 +10,39 @@ ms.assetid: 13adf4e0-216a-4992-b13d-b7b1e1629e77
 ms.author: lle
 author: lrtoyou1223
 ms.openlocfilehash: 50b313f63ae434a96d6c0e38f3c8b600914c806d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66822990"
 ---
-# <a name="task-15-building-and-running-the-ssis-project"></a>工作 15：建置及執行 SSIS 專案
+# <a name="task-15-building-and-running-the-ssis-project"></a>工作 15：建立和執行 SSIS 專案
 
-  在這項工作中，您會建立及執行 SSIS 專案。 如果您有 64 位元版本的電腦上安裝 Excel 2010，您應該設定的值**Run64BitRuntime**要**False**的 Excel 來源才能運作。  
+  在這項工作中，您會建立及執行 SSIS 專案。 如果您的電腦上已安裝64位版本的 Excel 2010，則您應該將**Run64BitRuntime**的值設定為**False** ，excel 來源才能正常執行。  
   
-1.  在 [**方案總管] 中**] 視窗中，按一下**專案**功能表，然後按一下 [ **CleanseAndCurateSuppliers 屬性**。  
+1.  在 [**方案總管**] 視窗中，按一下功能表上的 [**專案**]，然後按一下 [ **CleanseAndCurateSuppliers 屬性**]。  
   
-2.  在 **屬性**對話方塊方塊中，展開**組態屬性**左邊，然後按一下 **偵錯**。  
+2.  在 [**屬性**] 對話方塊中，展開左側的 [設定**屬性**]，然後按一下 [**調試**]。  
   
-3.  設定**Run64BitRuntime**要**False**。  
+3.  將**Run64BitRuntime**設定為**False**。  
   
      ![CleanseAndCurateSuppliers 專案屬性](../../2014/tutorials/media/et-buildingandrunningthessisproject-01.jpg "CleanseAndCurateSuppliers 專案屬性")  
   
-4.  按一下 [ **[確定]** 以關閉**屬性**] 對話方塊。  
+4.  按一下 **[確定**] 關閉 [**屬性**] 對話方塊。  
   
-5.  按一下 **建置**功能表，然後按一下 **建立 CleanseAndCurateSuppliers**。 確定沒有任何建立錯誤。  
+5.  按一下功能表列上的 [**建立**]，然後按一下 [**建立 CleanseAndCurateSuppliers**]。 確定沒有任何建立錯誤。  
   
-6.  按一下 [**偵錯**] 功能表列上按一下**開始偵錯**。  
+6.  按一下功能表列上的 [ **Debug** ]，然後按一下 [**開始調試**]。  
   
-7.  檢閱中的訊息**進度**視窗，並確認該套件執行，且已成功結束。  
+7.  查看 [**進度**] 視窗中的訊息，並確認已成功執行和結束封裝。  
   
-     ![產生進度視窗](../../2014/tutorials/media/et-buildingandrunningthessisproject-02.jpg "產生進度視窗")  
+     ![進度視窗中的 [結果]](../../2014/tutorials/media/et-buildingandrunningthessisproject-02.jpg "進度視窗中的 [結果]")  
   
-     ![進度視窗中的最終狀態](../../2014/tutorials/media/et-buildingandrunningthessisproject-03.jpg "進度視窗中的最終狀態")  
+     ![進度視窗中的 [最後狀態]](../../2014/tutorials/media/et-buildingandrunningthessisproject-03.jpg "進度視窗中的 [最後狀態]")  
   
-8.  按一下 **偵錯**功能表，然後按一下 **停止偵錯**停止偵錯工作階段。 如果封裝失敗，您應該啟用資料檢視器，並查看資料如何在元件之間流動。  
+8.  按一下功能表列上的 [ **Debug** ]，然後按一下 [**停止調試**] 以停止調試進程。 如果封裝失敗，您應該啟用資料檢視器，並查看資料如何在元件之間流動。  
   
-## <a name="next-step"></a>下一個步驟  
- [工作 16:使用主資料管理員驗證](../../2014/tutorials/task-16-verifying-with-master-data-manager.md)  
+## <a name="next-step"></a>後續步驟  
+ [工作 16：使用主資料管理員驗證](../../2014/tutorials/task-16-verifying-with-master-data-manager.md)  
   
   

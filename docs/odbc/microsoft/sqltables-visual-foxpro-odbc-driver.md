@@ -1,5 +1,5 @@
 ---
-title: SQLTables (Visual FoxPro ODBC Driver) |Microsoft Docs
+title: SQLTables （Visual FoxPro ODBC Driver） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,25 +13,25 @@ ms.assetid: 69e2a038-5def-423f-91aa-8756e069dd2a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22e5f34a6accac3a2bb0d1ecefe7c1d5431cb562
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949000"
 ---
 # <a name="sqltables-visual-foxpro-odbc-driver"></a>SQLTables (Visual FoxPro ODBC Driver)
 > [!NOTE]  
->  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
   
  支援：完整  
   
- ODBC API 相容性：層級 1  
+ ODBC API 一致性：層級1  
   
- 傳回清單中的參數所指定的資料表名稱**SQLTables**陳述式。 如果未不指定任何參數，會傳回儲存在目前的資料來源中的資料表名稱。 驅動程式會傳回資訊當作結果集。  
+ 傳回**SQLTables**語句中的參數所指定的資料表名稱清單。 如果未指定任何參數，則會傳回儲存在目前資料來源中的資料表名稱。 驅動程式會以結果集的形式傳回信息。  
   
- 列舉型別呼叫將不會收到遠端檢視或本機的參數化的檢視的結果集項目。 不過，呼叫**SQLTables**與唯一的資料表名稱規範會發現這類檢視的相符項目如果存在具有該名稱，這可讓用來檢查是否有名稱衝突，再建立新的資料表 API。  
+ 列舉類型呼叫將不會收到遠端查看或本機參數化視圖的結果集專案。 不過，以唯一資料表名稱規範呼叫**SQLTables**時，會發現這類視圖的相符情況，如果有該名稱存在，這可讓 API 用來檢查建立新資料表之前的名稱衝突。  
   
 > [!NOTE]  
->  Visual FoxPro ODBC driver 區分[資料庫資料表](../../odbc/microsoft/visual-foxpro-terminology.md)並[免費資料表](../../odbc/microsoft/visual-foxpro-terminology.md)，即使這兩種類型的資料表會儲存在您的系統上相同的目錄。 如果您的資料來源是可用的資料表的目錄，Visual FoxPro ODBC Driver 不目錄或傳回與資料庫相關聯的任何資料表的名稱。  
+>  Visual FoxPro ODBC 驅動程式會區分[資料庫資料表](../../odbc/microsoft/visual-foxpro-terminology.md)和[可用的資料表](../../odbc/microsoft/visual-foxpro-terminology.md)，即使兩種類型的資料表都儲存在系統的相同目錄中。 如果您的資料來源是可用資料表的目錄，Visual FoxPro ODBC 驅動程式不會目錄或傳回與資料庫相關聯之任何資料表的名稱。  
   
- 如需詳細資訊，請參閱 < [SQLTables](../../odbc/reference/syntax/sqltables-function.md)中*ODBC 程式設計人員參考*。
+ 如需詳細資訊，請參閱 ODBC 程式設計*人員參考*中的[SQLTables](../../odbc/reference/syntax/sqltables-function.md) 。

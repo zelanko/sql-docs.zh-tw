@@ -1,5 +1,5 @@
 ---
-title: CompareBookmarks 方法範例 (VB) |Microsoft Docs
+title: CompareBookmarks 方法範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f14ad9d6605747b78109e517636e5864847881f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919600"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>CompareBookmarks 方法範例 (VB)
-此範例示範[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)方法。 除非特定的書籤是以某種方式特殊很少需要書籤的相對值。  
+這個範例示範[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)方法。 除非特定的書簽是特殊的，否則不需要書簽的相對值。  
   
- 將指定的隨機資料列[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)衍生自***作者***做為搜尋的目標資料表。 然後顯示相對於該目標的每個資料列的位置。  
+ 將衍生自***作者***資料表的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)亂數據列指定為搜尋的目標。 然後顯示相對於該目標的每個資料列的位置。  
   
 ```  
 'BeginCompareBookmarksVB  
@@ -133,6 +133,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [CompareBookmarks 方法 (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
+ [CompareBookmarks 方法（ADO）](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
  [CompareEnum](../../../ado/reference/ado-api/compareenum.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

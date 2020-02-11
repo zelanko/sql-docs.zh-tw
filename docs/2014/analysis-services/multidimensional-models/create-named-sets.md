@@ -1,5 +1,5 @@
 ---
-title: 建立命名的集 |Microsoft Docs
+title: 建立命名集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1fc4ab5d778535fdc4e2186c5bc88741b4367f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076135"
 ---
 # <a name="create-named-sets"></a>建立命名集
@@ -43,9 +43,9 @@ ms.locfileid: "66076135"
  您可以從 **[計算工具]** 窗格的 **[中繼資料]** 索引標籤中，將 Cube 元件複製或拖曳至 **[命名集表單編輯器]** 窗格的 **[運算式]** 方塊中。 您可以從 **[計算工具]** 窗格的 **[函數]** 索引標籤中，將函數複製或拖曳至 **[命名集表單編輯器]** 窗格的 **[運算式]** 方塊中。  
   
 > [!IMPORTANT]  
->  如果您藉由明確命名的集合中的成員建立的集合運算式，可將成員清單括在一對括號 ({})。  
+>  如果您藉由明確命名集合中的成員來建立集合運算式，請以一對大括弧（{}）括住成員清單。  
   
 ## <a name="see-also"></a>另請參閱  
- [Calculations in Multidimensional Models](calculations-in-multidimensional-models.md)  
+ [多維度模型中的計算](calculations-in-multidimensional-models.md)  
   
   

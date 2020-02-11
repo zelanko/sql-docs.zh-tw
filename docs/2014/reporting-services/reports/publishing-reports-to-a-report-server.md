@@ -24,14 +24,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c73e75bbdf458b27d0f879a91e72ececc832b88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102487"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>將報表發行至報表伺服器
-  在您設計和測試完報表或報表集之後，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的內建部署功能，將報表發行至實際報表伺服器。 您可以發行個別的報表或報表伺服器專案。 發行報表伺服器專案是發行多份報表最簡單的方式。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用這個詞彙*部署*，而不是一詞*發佈*。 這兩個詞可以互換。  
+  在您設計和測試完報表或報表集之後，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的內建部署功能，將報表發行至實際報表伺服器。 您可以發行個別的報表或報表伺服器專案。 發行報表伺服器專案是發行多份報表最簡單的方式。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]使用「*部署*」一詞，而不是「*發行*」一詞。 這兩個詞可以互換。  
   
  在您發行報表之前，您必須具有可執行此動作的權限。 權限是透過由您報表伺服器管理員所定義的角色安全性所決定。 發佈作業一般是透過「發行者」角色授與。  
   
@@ -40,12 +40,12 @@ ms.locfileid: "66102487"
 ## <a name="project-configurations"></a>專案組態  
  報表會在發行前建立，以確保只有有效的報表定義會發行到報表伺服器。 專案組態包括建立報表的屬性，例如，暫時儲存已建立之報表的資料夾，以及如何處理建立問題。 組態也包含您用來指定報表伺服器之位置與版本、報表伺服器上之資料夾的屬性。  
   
- 根據預設，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]提供三種專案組態：DebugLocal、 Debug 與 Release。 預設組態為 DebugLocal。 您通常可以使用 DebugLocal 組態在本機預覽視窗中檢視報表、使用 Debug 組態將報表發行至測試伺服器，以及使用 Release 組態將報表發行至實際伺服器。 在標準工具列上的方案組態下拉式清單中會顯示使用中的組態。 若要使用不同的組態，請從清單中進行選取。  
+ 根據預設，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供三種專案組態：DebugLocal、Debug 與 Release。 預設組態為 DebugLocal。 您通常可以使用 DebugLocal 組態在本機預覽視窗中檢視報表、使用 Debug 組態將報表發行至測試伺服器，以及使用 Release 組態將報表發行至實際伺服器。 在標準工具列上的方案組態下拉式清單中會顯示使用中的組態。 若要使用不同的組態，請從清單中進行選取。  
   
- 您的報表環境可能已安裝多部報表伺服器以及不同版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 您可以建立多個組態，然後根據部署狀況，使用不同的組態。 如需詳細資訊，請參閱 <<c0> [ 部署和版本支援 SQL Server Data Tools 中&#40;SSRS&#41; ](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)並[設定部署屬性&#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)。</c0>  
+ 您的報表環境可能已安裝多部報表伺服器以及不同版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 您可以建立多個組態，然後根據部署狀況，使用不同的組態。 如需詳細資訊，請參閱[SQL Server Data Tools &#40;SSRS&#41;中的部署和版本支援](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)，以及[&#40;Reporting Services&#41;設定部署屬性](../tools/set-deployment-properties-reporting-services.md)。  
   
 ## <a name="publishing-reports"></a>發行報表  
- 您可以發行單一報表或包含多個報表的報表伺服器專案。 如需有關發行報表的指示，請參閱[發行的報表](../publish-reports.md)。  
+ 您可以發行單一報表或包含多個報表的報表伺服器專案。 如需發行報表的相關指示，請參閱[發行報表](../publish-reports.md)。  
   
 ### <a name="publishing-a-single-report"></a>發行單一報表  
  如果您不要發行專案中的所有報表，可以只選擇發行單一報表。 若要這樣做，請選取部署報表的設定 (例如 Release 設定)，以滑鼠右鍵按一下報表，然後按一下 [部署]  。  

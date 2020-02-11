@@ -1,5 +1,5 @@
 ---
-title: 開發人員&#39;指南 （複寫） |Microsoft Docs
+title: 開發人員&#39;s 指南（複寫） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce595518fc33903a9438a9a702d19725fa605f9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721930"
 ---
-# <a name="developer39s-guide-replication"></a>開發人員&#39;指南 （複寫）
+# <a name="developer39s-guide-replication"></a>開發人員&#39;s 指南（複寫）
   以程式設計的方式設定、維護和監視複寫拓撲的能力，可讓您同時簡化重複的複寫工作，並改善複寫為主的應用程式之使用者經驗。 透過設計複寫的程式，一般使用者即可使用自訂的複寫功能，而不須熟悉複寫預存程序和複寫代理程式可執行檔，或是不須使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 實作的複寫使用者介面。  
   
  以下是您的應用程式可能從用程式存取複寫服務獲益的狀況：  
@@ -46,7 +46,7 @@ ms.locfileid: "62721930"
  [複寫管理物件概念](replication-management-objects-concepts.md)  
  說明使用 Replication Management Objects (RMO) 的概念。 這是一種 Managed 程式碼組件，用以封裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的複寫功能。  
   
- [複寫代理程式可執行檔概念](replication-agent-executables-concepts.md)  
+ [Replication Agent Executables Concepts](replication-agent-executables-concepts.md)  
  描述複寫代理程式可執行檔的使用。  
 
   

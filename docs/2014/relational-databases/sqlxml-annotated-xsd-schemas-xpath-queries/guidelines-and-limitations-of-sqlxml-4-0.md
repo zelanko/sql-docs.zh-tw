@@ -1,5 +1,5 @@
 ---
-title: 指導方針和限制的 SQLXML 4.0 |Microsoft Docs
+title: SQLXML 4.0 的指導方針和限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dec69250a728edbb61805528320670908a0671bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012723"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>SQLXML 4.0 的指導方針和限制
@@ -28,6 +28,6 @@ ms.locfileid: "66012723"
   
      您正在執行使用 SQLXML 4.0 以及與版本無關之 PROGID 的應用程式，而且您決定安裝某個其他軟體程式。 此程式可能會安裝舊版的 SQLXML。 您的應用程式可能會失敗，因為應用程式內與版本無關的 PROGIDS 現在指向舊版的 SQLXML，它不一定擁有您的應用程式所使用的 SQLXML 功能。  
   
--   如果基於任何原因，您不想要使用 SQLXMLOLEDB 提供者，並改為想要使用 SQLOLEDB 提供者用於 SQLXML 功能，設定**SQLXML Version**屬性為"SQLXML.4.0"。  
+-   如果您因為任何原因而不想使用 SQLXMLOLEDB 提供者，而想要使用 SQLXML 提供者的功能，請將**Sqlxml Version**屬性設定為 "sqlxml. 4.0"。  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 72641848fae53d745c0ccaff6f9e74e5cac52cda
-ms.sourcegitcommit: 7bea93b6f6b1ea029b05df9cdb22edd7aa6bac2b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75597495"
 ---
 # <a name="azure-sql-database-catalog-views"></a>Azure SQL Database 目錄檢視

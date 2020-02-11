@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4e23849b50e8cfa0a0e8d3ef6def4fbd159381c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770844"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 目的地編輯器 (連接管理員頁面)
@@ -33,7 +33,7 @@ ms.locfileid: "62770844"
   
 3.  在 **[SAP BW 目的地編輯器]** 中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 > [!NOTE]  
 >  如果您不知道設定目的地的所有必要值，可能必須詢問 SAP 系統管理員。  
@@ -59,7 +59,7 @@ ms.locfileid: "62770844"
  **型別**  
  輸入可識別 InfoSource 類型的單一字元。 下表列出可接受的單一字元值。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**D**|交易資料|  
 |**M**|主要資料|  

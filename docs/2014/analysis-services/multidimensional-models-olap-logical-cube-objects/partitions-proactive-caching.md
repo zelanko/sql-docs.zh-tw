@@ -1,5 +1,5 @@
 ---
-title: 主動式快取 （資料分割） |Microsoft Docs
+title: 主動式快取（資料分割） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c968cb8c75fc5f1fb8e77cc98d8c6a306a62115
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727272"
 ---
 # <a name="proactive-caching-partitions"></a>主動式快取 (資料分割)
@@ -43,7 +43,7 @@ ms.locfileid: "62727272"
  為了要將效能提升到最高，同時也減少延遲，也可以在不卸除目前 MOLAP 物件的情況下使用快取。 於是，查詢會繼續針對 MOLAP 物件提出，但資料則讀入新的快取中加以處理。 此方法提供更好的效能，但會導致在建立新快取時，查詢仍傳回舊資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [維度儲存](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
- [設定分割區儲存 &#40;Analysis Services - 多維度&#41;](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
+ [維度儲存體](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
+ [設定資料分割儲存體 &#40;Analysis Services-多維度&#41;](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   
   

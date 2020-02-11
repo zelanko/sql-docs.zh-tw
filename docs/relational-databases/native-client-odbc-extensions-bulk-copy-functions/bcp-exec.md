@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0767886191923c15f65bde7b9fe4bfb7d270b271
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782758"
 ---
 # <a name="bcp_exec"></a>bcp_exec
@@ -56,7 +56,7 @@ RETCODE bcp_exec (
   
  **bcp_exec**是唯一可能會在任何時間長度內待處理的大量複製函數。 因此，它是唯一支援非同步模式的大量複製函數。 若要設定非同步模式，請使用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) ，將 SQL_ATTR_ASYNC_ENABLE 設定為 SQL_ASYNC_ENABLE_ON，然後再呼叫**bcp_exec**。 若要測試是否完成，請使用相同的參數來呼叫**bcp_exec** 。 如果大量複製尚未完成， **bcp_exec**會傳回 SUCCEED_ASYNC。 它也會在*pnRowsProcessed*中傳回已傳送到伺服器之資料列數目的狀態計數。 到達批次的結尾之前，不會認可傳送至伺服器的資料列。  
   
- 如需從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]開始大量複製的重大變更相關資訊，請參閱[執行大量複製作業&#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
+ 如需從開始大量複製的重大變更相關資訊[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，請參閱[&#40;ODBC&#41;執行大量複製作業](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
   
 ## <a name="example"></a>範例  
  下列範例顯示如何使用**bcp_exec**：  
