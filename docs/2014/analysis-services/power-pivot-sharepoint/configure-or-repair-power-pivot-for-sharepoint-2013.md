@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac41915ab4b94f1b074874228a14f5ab6363604c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229354"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>設定或修復 PowerPivot for SharePoint 2013 (PowerPivot 組態工具)
@@ -33,7 +33,7 @@ ms.locfileid: "75229354"
   
  [用來設定伺服器的輸入值](#bkmk_input)  
   
- [接下來的步驟](#bkmk_nextsteps)  
+ [後續步驟](#bkmk_nextsteps)  
   
 ##  <a name="bkmk_before"></a>開始之前  
  
@@ -62,10 +62,10 @@ ms.locfileid: "75229354"
   
 ||描述|  
 |-|-----------------|  
-|**sha-1**|工作清單視窗。|  
+|**(1)**|工作清單視窗。|  
 |**2**|個別動作。|  
-|**第**|由組態工具建立的 Windows PowerShell 指令碼。|  
-|**4gb**|當您啟動驗證或執行動作時建立的記錄訊息。|  
+|**(3)**|由組態工具建立的 Windows PowerShell 指令碼。|  
+|**(4)**|當您啟動驗證或執行動作時建立的記錄訊息。|  
 |**第**|頁面的描述。|  
 |**7**|輸入參數|  
 |**utf-7**|在您驗證動作之後， **[執行]** 按鈕便會啟用。|  
@@ -112,7 +112,7 @@ ms.locfileid: "75229354"
   
  下表說明用於設定伺服器的值。  
   
-|Page|輸入值|來源|描述|  
+|頁面|輸入值|來源|描述|  
 |----------|-----------------|------------|-----------------|  
 |**設定或修復[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint**|預設帳戶|目前使用者|預設帳戶是用於在伺服器陣列中佈建共用服務的網域 Windows 使用者帳戶。 它可用來佈建下列項目：<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服務應用程式<br />Secure Store Service<br />Excel Services<br />Web 應用程式集區識別<br />網站集合管理員<br />
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 自動資料重新整理帳戶。<br /><br /> 根據預設，它使用目前使用者的網域帳戶。 除非您是針對評估和非實際執行目的設定伺服器，否則建議您取代預設值。 您稍後可以使用管理中心變更服務識別。 (選擇性) 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具中，為下列項目指定專用帳戶：<br /><br /> Web 應用程式，使用 [**建立預設 Web 應用程式**] 頁面（假設此工具正在為伺服器陣列建立 Web 應用程式）。<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]無人看管的資料重新整理帳戶，使用此工具中的 [**建立無人看管的資料**重新整理帳戶] 頁面。|  
@@ -122,9 +122,9 @@ ms.locfileid: "75229354"
 ||
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel Services ([伺服器名稱]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|使用者輸入|Excel Services 需要 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器才能啟用核心的 PowerPivot 功能。 您在此頁面上輸入的伺服器名稱也會加入至 **[設定 PowerPivot 伺服器]** 頁面上的清單。|  
 |**設定新的伺服器陣列**|資料庫伺服器<br /><br /> 伺服器陣列帳戶<br /><br /> 複雜密碼<br /><br /> SharePoint 管理中心通訊埠|預設值 (如果需要)|設定會預設為您在主頁面中輸入的內容。|  
-|**建立 PowerPivot 服務應用程式**|服務應用程式名稱|Default|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服務應用程式名稱：預設名稱為 [**預設的 PowerPivot 服務應用程式**]。 您可以在工具中取代為不同的值。|  
-||資料庫伺服器|Default|裝載 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式資料庫的資料庫伺服器。 預設伺服器名稱就是用於伺服器陣列的資料庫伺服器。 您可以用不同的值來取代預設伺服器名稱。|  
-||資料庫名稱|Default|要針對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式資料庫建立的資料庫名稱。 預設資料庫名稱以服務應用程式名稱為基礎，後面跟著 GUID，以確保名稱是唯一的。 您可以在工具中取代為不同的值。|  
+|**建立 PowerPivot 服務應用程式**|服務應用程式名稱|預設|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服務應用程式名稱：預設名稱為 [**預設的 PowerPivot 服務應用程式**]。 您可以在工具中取代為不同的值。|  
+||資料庫伺服器|預設|裝載 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式資料庫的資料庫伺服器。 預設伺服器名稱就是用於伺服器陣列的資料庫伺服器。 您可以用不同的值來取代預設伺服器名稱。|  
+||資料庫名稱|預設|要針對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式資料庫建立的資料庫名稱。 預設資料庫名稱以服務應用程式名稱為基礎，後面跟著 GUID，以確保名稱是唯一的。 您可以在工具中取代為不同的值。|  
 |**建立預設 Web 應用程式**|Web 應用程式名稱|預設值 (如果需要)|如果沒有任何 Web 應用程式存在，此工具會建立一個。 Web 應用程式會設定為傳統模式驗證，並且接聽通訊埠 80。 上傳檔案大小上限設為 2047，這是 SharePoint 所允許的最大值。 較大的上傳檔案大小是為了容納將上傳至伺服器的大型 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 檔案。|  
 ||URL|預設值 (如果需要)|此工具會根據伺服器名稱，使用與 SharePoint 相同的檔案命名慣例來建立 URL。|  
 ||應用程式集區|預設值 (如果需要)|此工具會在 IIS 中建立預設應用程式集區。|  

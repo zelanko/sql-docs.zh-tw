@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a09c2a57b76974758626a1847d5f0df3f8b7f55c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250594"
 ---
 # <a name="sql-server-execstatistics-object"></a>SQL Server 的 ExecStatistics 物件
@@ -34,7 +34,7 @@ ms.locfileid: "63250594"
   
  物件中的每個計數器均包含下列執行個體：  
   
-|項目|描述|  
+|Item|描述|  
 |----------|-----------------|  
 |**平均執行時間 (ms)**|選取的執行類型之平均執行時間。|  
 |**每秒累計執行時間 (ms)**|選取的執行類型之每秒彙總執行時間。|  

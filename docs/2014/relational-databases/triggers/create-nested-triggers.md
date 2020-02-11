@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ba5b5edf57bf877827fefe4f8764b8b71124a550
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196541"
 ---
 # <a name="create-nested-triggers"></a>建立巢狀觸發程序
@@ -35,7 +35,7 @@ ms.locfileid: "68196541"
   
  如果允許巢狀觸發程序，但鏈結中的觸發程序形成一個無限迴圈時，則觸發程序會因為超過巢狀層級而終止執行。  
   
- 您可利用巢狀觸發程序來執行實用的內部管理功能，如儲存被前一個觸發程序所影響的資料列備份。 例如，您可在 `PurchaseOrderDetail` 上建立觸發程序，其可儲存經 `PurchaseOrderDetail` 觸發程序所刪除的 `delcascadetrig` 資料列備份。 由於 `delcascadetrig` 觸發程序為作用中，刪除 `PurchaseOrderID` 的 `PurchaseOrderHeader` 1965，也會刪除 `PurchaseOrderDetail`對應的一或多個資料列。 若要儲存資料，您可在 `PurchaseOrderDetail` 上建立 DELETE 觸發程序，將刪除的資料儲存至另外建立的資料表 `del_save`。 例如:  
+ 您可利用巢狀觸發程序來執行實用的內部管理功能，如儲存被前一個觸發程序所影響的資料列備份。 例如，您可在 `PurchaseOrderDetail` 上建立觸發程序，其可儲存經 `PurchaseOrderDetail` 觸發程序所刪除的 `delcascadetrig` 資料列備份。 由於 `delcascadetrig` 觸發程序為作用中，刪除 `PurchaseOrderID` 的 `PurchaseOrderHeader` 1965，也會刪除 `PurchaseOrderDetail`對應的一或多個資料列。 若要儲存資料，您可在 `PurchaseOrderDetail` 上建立 DELETE 觸發程序，將刪除的資料儲存至另外建立的資料表 `del_save`。 例如：  
   
 ```  
 CREATE TRIGGER Purchasing.savedel  

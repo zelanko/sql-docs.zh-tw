@@ -1,5 +1,5 @@
 ---
-title: 將資料表從一個資料庫圖表複製到另一個 (Visual Database Tools) |Microsoft Docs
+title: 將資料表從一個資料庫關係圖複製到另一個（Visual Database Tools） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1b0d70a5d8121963d424f25eef517af7cde4ba7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720069"
 ---
 # <a name="copy-tables-from-one-database-diagrams-to-another-visual-database-tools"></a>將資料表從一個資料庫圖表複製至另一個資料庫圖表 (Visual Database Tools)
@@ -40,7 +40,7 @@ ms.locfileid: "62720069"
  在任一圖表中編輯資料表時，您所做的變更會同時反應在兩個圖表中。 同理，在任一圖表中儲存資料表，則任一圖表中的資料表都不會再被視為「已修改」。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用資料庫圖表&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [使用資料庫關係圖 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [將資料表新增至圖表 &#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)  
   
   

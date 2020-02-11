@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 976520f5000d3a0f96ee3bdea25bcc9802939d36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250421"
 ---
 # <a name="republish-data"></a>重新發行資料
@@ -43,9 +43,9 @@ ms.locfileid: "63250421"
   
  在下圖中，「發行者」與重新發行者都扮演其各自的本機「散發者」角色。 如果都設定為使用遠端「散發者」，每個「散發者」就必須如自己的「發行者」一樣，全部都在緩慢或昂貴通訊連結的同一邊。 「發行者」必須透過可靠、高速的通訊連結以連接到遠端「散發者」。  
   
- ![Republishing data](media/repl-06a.gif "Republishing data")  
+ ![重新發佈資料](media/repl-06a.gif "重新發佈資料")  
   
- 任何伺服器都可以同時扮演「發行者」與「訂閱者」的角色。 例如，請考慮下圖中的資料表發行集位於英國倫敦，而且必須散發到美國四個不同城市：芝加哥、 紐約、 聖地牙哥和西雅圖。 位於紐約的伺服器將被選來訂閱在倫敦產生的發行資料表，因為紐約網站符合這些條件：  
+ 任何伺服器都可以同時扮演「發行者」與「訂閱者」的角色。 例如，假設下圖中位於英國倫敦，而且必須散發到美國四個不同城市的資料表發行集：芝加哥、紐約、聖地牙哥和西雅圖。 位於紐約的伺服器將被選來訂閱在倫敦產生的發行資料表，因為紐約網站符合這些條件：  
   
 -   到倫敦的網路連結相當可靠。  
   
@@ -53,23 +53,23 @@ ms.locfileid: "63250421"
   
 -   從紐約到所有其他美國訂閱者網站有相當好的網路通訊線路。  
   
-     ![重新發行資料至分散的位置](media/repl-06.gif "重新發行資料至分散的位置")  
+     ![重新發佈資料至分散的位置](media/repl-06.gif "重新發佈資料至分散的位置")  
   
  複寫支援下表所示的重新發行案例。  
   
-|發行者|發行訂閱者|訂閱者|  
+|發行者|發行訂閱者|用戶|  
 |---------------|---------------------------|----------------|  
 |交易式發行集|交易式訂閱/交易式發行集|交易式訂閱|  
 |交易式發行集|交易式訂閱/合併式發行集<sup>1</sup>|合併訂閱|  
 |合併式發行集|合併訂閱/合併式發行集|合併訂閱|  
 |合併式發行集|合併訂閱/交易式發行集|交易式訂閱|  
   
- <sup>1</sup>應該設定`@published_in_tran_pub`合併式發行集的屬性。 依預設，異動複寫預期於訂閱者端的資料表會被視為唯讀資料表。 如果合併式複寫變更交易式訂閱中資料表的資料，就可能導致資料無法聚合。 若要避免此風險，建議合併式發行集中的任何此類資料表應指定為僅限下載。 這會防止合併式訂閱者將資料變更上傳至資料表。 如需詳細資訊，請參閱[使用僅限下載的發行項最佳化合併式複寫效能](merge/optimize-merge-replication-performance-with-download-only-articles.md)。  
+ <sup>1</sup>您應該設定合併`@published_in_tran_pub`式發行集的屬性。 依預設，異動複寫預期於訂閱者端的資料表會被視為唯讀資料表。 如果合併式複寫變更交易式訂閱中資料表的資料，就可能導致資料無法聚合。 若要避免此風險，建議合併式發行集中的任何此類資料表應指定為僅限下載。 這會防止合併式訂閱者將資料變更上傳至資料表。 如需詳細資訊，請參閱[使用僅限下載的發行項最佳化合併式複寫效能](merge/optimize-merge-replication-performance-with-download-only-articles.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [[設定散發]](configure-distribution.md)   
  [發行資料和資料庫物件](publish/publish-data-and-database-objects.md)   
- [訂閱發行集](subscribe-to-publications.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)   
  [初始化訂閱](initialize-a-subscription.md)   
  [同步處理資料](synchronize-data.md)  
   

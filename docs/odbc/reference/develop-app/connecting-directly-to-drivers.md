@@ -16,20 +16,20 @@ ms.assetid: f86e198f-a088-4401-9106-aa62a0eb8f6e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 44b9de304069849e965fc335e130ae57d9ec8bad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083159"
 ---
 # <a name="connecting-directly-to-drivers"></a>直接連線到驅動程式
-如所述[選擇資料來源或驅動程式](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)稍早在此區段中，某些應用程式不會希望完全使用資料來源。 相反地，他們想要直接連接到驅動程式。 **SQLDriverConnect**可讓應用程式直接連接到驅動程式但未指定資料來源。 就概念而言，就會在執行階段建立暫存的資料來源。  
+如同在本節稍早的[選擇資料來源或驅動程式](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)中所討論，有些應用程式根本不想使用資料來源。 相反地，他們想要直接連接到驅動程式。 **SQLDriverConnect**提供了一種方法，讓應用程式直接連接到驅動程式，而不需要指定資料來源。 在概念上，會在執行時間建立暫存資料來源。  
   
- 若要直接連接驅動程式，應用程式指定**驅動程式**而不是在連接字串中的關鍵字**DSN**關鍵字。 值**驅動程式**關鍵字是驅動程式的描述，所傳回的**SQLDrivers**。 例如，假設有描述 Paradox 驅動程式的驅動程式，以及需要包含資料檔案的目錄名稱。 若要連接到這個驅動程式，應用程式可能會使用其中一個下列的連接字串：  
+ 若要直接連接到驅動程式，應用程式會在連接字串中指定**driver**關鍵字，而不是使用**DSN**關鍵字。 **Driver**關鍵字的值是**SQLDrivers**所傳回之驅動程式的描述。 例如，假設驅動程式的 description 是 Paradox 驅動程式，而且需要包含資料檔案的目錄名稱。 若要連接到此驅動程式，應用程式可能會使用下列其中一個連接字串：  
   
 ```  
 DRIVER={Paradox Driver};Directory=C:\PARADOX;  
 DRIVER={Paradox Driver};  
 ```  
   
- 第一個字串，此驅動程式就不需要任何額外的資訊。 第二個字串，此驅動程式需要提示您輸入包含資料檔案的目錄名稱。
+ 使用第一個字串，驅動程式不需要任何額外的資訊。 使用第二個字串時，驅動程式必須提示輸入包含資料檔案的目錄名稱。

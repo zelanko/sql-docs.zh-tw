@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af4229037b9c34bbc9a0316ef073f294209be6d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629651"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>備份及還原複寫的資料庫
@@ -50,7 +50,7 @@ ms.locfileid: "62629651"
   
 -   發行者、散發者及所有訂閱者端的 **master** 與 **msdb** 系統資料庫。 這些資料庫應與其他每個及相關的複寫資料庫同時備份。 例如，在您備份發行集資料庫的同時，在發行者端備份 **master** 與 **msdb** 資料庫。 還原發行集資料庫時，請確定 **master** 與 **msdb** 資料庫的複寫組態與設定和發行集資料庫一致。  
   
- 如果您執行一般記錄備份，就必須在記錄備份中擷取任何複寫相關的變更。 如果不執行記錄備份，則每當與複寫相關的設定發生變更時，便應該執行備份。 如需詳細資訊，請參閱 [Common Actions Requiring an Updated Backup](common-actions-requiring-an-updated-backup.md)。  
+ 如果您執行一般記錄備份，就必須在記錄備份中擷取任何複寫相關的變更。 如果不執行記錄備份，則每當與複寫相關的設定發生變更時，便應該執行備份。 如需相關資訊，請參閱 [Common Actions Requiring an Updated Backup](common-actions-requiring-an-updated-backup.md)。  
   
 ## <a name="backup-and-restore-strategies"></a>備份與還原策略  
  備份與還原複寫拓撲中每個節點的策略，會因所用的複寫類型而異。 如需每種複寫類型的備份與還原策略之詳細資訊，請參閱下列主題：  
@@ -62,7 +62,7 @@ ms.locfileid: "62629651"
  請隨時將一份您現行複寫設定的指令碼存放在安全之處，作為復原策略的一部份。 如此一來，倘若伺服器發生錯誤或需要設定測試環境，您可藉由變更伺服器名稱參考來修改該指令碼，如此可幫助重新建立您的複寫設定。 除了將現行複寫設定撰寫成指令碼之外，您還必須撰寫可啟用及停用複寫的指令碼。 如需有關編寫複寫物件指令碼的詳細資訊，請參閱＜ [Scripting Replication](../scripting-replication.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 資料庫的備份和還原](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [SQL Server 資料庫的備份與還原](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   
   

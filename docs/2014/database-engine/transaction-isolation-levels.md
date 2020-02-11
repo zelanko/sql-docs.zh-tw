@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637781"
 ---
 # <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>記憶體優化資料表中的交易隔離等級
@@ -39,7 +39,7 @@ ms.locfileid: "73637781"
   
 -   明確使用存取記憶體最佳化資料表的較高的隔離等級提示 (例如，WITH (SNAPSHOT) )。  
   
--   指定 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 設定選項，可以將記憶體最佳化之資料表的隔離等級，設定為 SNAPSHOT (等同於在每個記憶體最佳化之資料表中加入 WITH(SNAPSHOT) 提示)。 如需 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`的詳細資訊，請參閱[ALTER DATABASE &#40;SET 選項 transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
+-   指定 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 設定選項，可以將記憶體最佳化之資料表的隔離等級，設定為 SNAPSHOT (等同於在每個記憶體最佳化之資料表中加入 WITH(SNAPSHOT) 提示)。 如需的詳細`MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`資訊，請參閱[ALTER DATABASE SET 選項 &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
   
  或者，如果工作階段的隔離等級為 READ COMMITTED，您可以使用自動認可交易。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73637781"
  如果是以磁碟為基礎的資料表，大部分的隔離等級保證都會使用鎖定來實作，透過封鎖來避免衝突。 如果是記憶體最佳化的資料表，則會使用衝突偵測機制來施行保證，以免需要進行鎖定。 例外狀況是磁碟資料表上的 SNAPSHOT 隔離。 這個實作方式類似於在記憶體最佳化的資料表上使用衝突偵測機制的 SNAPSHOT 隔離。  
   
  SNAPSHOT  
- 這個隔離等級會指定交易中任何陳述式所讀取的資料，都是交易開始時就存在之資料的交易一致性版本。 交易只能辨識交易開始之前所認可的資料修改。 在目前交易中執行的陳述式，看不到其他交易在目前交易開始之後所進行的資料修改。 交易中的陳述式會取得已認可之資料的快照集，如同資料在交易開始時的狀態。  
+ 這個隔離等級會指定交易中任何陳述式所讀取的資料，都是交易開始時就存在之資料的交易一致性版本。 交易只能辨識交易開始之前所認可的資料修改。 在目前交易中執行的陳述式無法看到在目前交易開始之後，其他交易所進行的資料修改。 交易中的陳述式會取得已認可之資料的快照集，如同資料在交易開始時的狀態。  
   
  寫入作業 (更新、插入和刪除) 永遠都會與其他交易完全隔離。 因此，SNAPSHOT 交易中的寫入作業可能會與其他交易的寫入作業發生衝突。 當目前交易嘗試更新或刪除目前交易開始之後由另一筆已認可的交易所更新或刪除的資料列時，此交易將會終止，並產生以下錯誤訊息。  
   
@@ -83,6 +83,6 @@ ms.locfileid: "73637781"
 ## <a name="see-also"></a>另請參閱  
  [瞭解記憶體優化資料表上的交易](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [具有記憶體優化資料表的交易隔離等級方針](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
- [經記憶體最佳化的資料表上交易的重試邏輯方針](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
+ [記憶體最佳化資料表交易的重試邏輯方針](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

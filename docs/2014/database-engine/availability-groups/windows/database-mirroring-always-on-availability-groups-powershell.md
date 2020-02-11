@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5fb67c488da5f01ac572ec78a369790fc9014513
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782984"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-alwayson-availability-groups-sql-server-powershell"></a>Create a Database Mirroring Endpoint for AlwaysOn Availability Groups (SQL Server PowerShell)
@@ -26,9 +26,9 @@ ms.locfileid: "72782984"
   
  **本主題內容**  
   
--   **Before you begin:**  [Security](#Security)  
+-   **開始之前：** [安全性](#Security)  
   
--   **若要使用下列項目建立資料庫鏡像端點：**  [PowerShell](#PowerShellProcedure)  
+-   **若要建立資料庫鏡像端點，請使用：**  [PowerShell](#PowerShellProcedure)  
   
 ## <a name="before-you-begin"></a>開始之前  
   
@@ -37,7 +37,7 @@ ms.locfileid: "72782984"
 > [!IMPORTANT]  
 >  RC4 演算法已被取代。 [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 我們建議您改用 AES。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要 CREATE ENDPOINT 權限或系統管理員 (sysadmin) 固定伺服器角色的成員資格。 如需詳細資訊，請參閱 [GRANT 端點權限 &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
@@ -47,8 +47,8 @@ ms.locfileid: "72782984"
   
 2.  使用 `New-SqlHadrEndpoint` 指令程式建立端點，然後使用 `Set-SqlHadrEndpoint` 啟動端點。  
   
-###  <a name="PShellExample"></a> 範例 (PowerShell)  
- 下列 PowerShell 命令會在 SQL Server 執行個體 (機器\\執行個體) 上建立資料庫鏡像端點。 此端點使用通訊埠 5022。  
+###  <a name="PShellExample"></a>範例（PowerShell）  
+ 下列 PowerShell 命令會在 SQL Server （*機器*\\*實例*）的實例上建立資料庫鏡像端點。 此端點使用通訊埠 5022。  
   
 > [!IMPORTANT]  
 >  這個範例只適用於目前缺少資料庫鏡像端點的伺服器執行個體。  
@@ -74,12 +74,12 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
 -   [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [在加入或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [在新增或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **若要檢視有關資料庫鏡像端點的資訊**  
   
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
 ## <a name="see-also"></a>另請參閱  
- [建立可用性群組 &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)   
- [AlwaysOn 可用性群組&#40;SQL Server 總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [&#40;Transact-sql 建立可用性群組&#41;](create-an-availability-group-transact-sql.md)   
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)  

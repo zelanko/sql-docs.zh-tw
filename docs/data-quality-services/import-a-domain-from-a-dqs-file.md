@@ -10,10 +10,10 @@ ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: f0a79169b3ee192af278aeb4465fb13d7a311783
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251591"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>從 .dqs 檔案匯入定義域
@@ -26,14 +26,14 @@ ms.locfileid: "75251591"
   
  當您匯入定義域時，此定義域的名稱依然與一開始匯出的定義域名稱相同，除非此定義域名稱已經存在 (此時 DQS 會在名稱中附加 "_1")。 如果您匯入的複合定義域所包含的個別定義域與現有定義域同名，這個情況也會成立。  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a>要求  
+###  <a name="Prerequisites"></a> 必要條件  
  若要從 .dqs 檔案匯入定義域，您必須已將一個單一定義域或是一個複合定義域 (包含多個單一定義域) 匯出到 .dqs 檔案。 此 .dqs 檔案只能包含一個定義域。 您也必須已建立及開啟知識庫，才能將定義域匯入其中。  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能從 .dqs 資料檔匯入定義域。  
   
 ##  <a name="Import"></a>從 dqs 檔案匯入定義域  

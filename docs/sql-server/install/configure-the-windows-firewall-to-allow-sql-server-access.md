@@ -1,7 +1,7 @@
 ---
-title: 設定 Windows 防火牆以允許 SQL Server 存取 | Microsoft Docs
-ms.custom: sqlfreshmay19
-ms.date: 05/15/2019
+title: 設定 Windows 防火牆
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: abae05ff73ff1da46bda029b32320a9deccfbf51
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 5e88b1543490bd0c44abbbdea12bf361ddf43419
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637973"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253470"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "73637973"
  
  下表將列出 [!INCLUDE[ssDE](../../includes/ssde-md.md)]常用的通訊埠。  
   
-|狀況|通訊埠|註解|  
+|狀況|連接埠|註解|  
 |--------------|----------|--------------|  
 |透過 TCP 執行的預設執行個體|TCP 通訊埠 1433|這是允許通過防火牆最常見的通訊埠。 它適用於 [!INCLUDE[ssDE](../../includes/ssde-md.md)]預設安裝的一般連接，或在電腦上唯一執行之執行個體的具名執行個體 (具名執行個體具有特殊考量。 請參閱本文稍後的[動態通訊埠](#BKMK_dynamic_ports)。)|  
 |含預設連接埠的具名執行個體|此 TCP 通訊埠是在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 啟動時決定的動態通訊埠。|請參閱下面「 [動態通訊埠](#BKMK_dynamic_ports)」一節的討論。 當您使用具名執行個體時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務可能會需要 UDP 通訊埠 1434。|  
@@ -131,15 +131,15 @@ ms.locfileid: "73637973"
 1. 從 [開始] 功能表，鍵入 *wf.msc*。 選取 [具有進階安全性的 Windows 防火牆]  。
 1. 在左窗格中，選取 [輸入規則]  。
 1. 在右窗格的 [動作]  下方，選取 [新增規則]  。[新增輸入規則精靈]  隨即開啟。
-1. 在 [規則類型]  上，選取 [程式]  。 選取 **[下一步]** 。
+1. 在 [規則類型]  上，選取 [程式]  。 選取 [下一步]  。
 1. 在 [程式]  上，選取 [這個程式路徑]  。 選取 [瀏覽]  以找出您的 SQL Server 執行個體。 此程式稱為 sqlservr.exe。 它通常位於：
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
 
-   選取 **[下一步]** 。
+   選取 [下一步]  。
 
 1. 在 [動作]  上，按一下 [允許連線]  。  
-1. 在 [設定檔] 中，加入所有三個設定檔。 選取 **[下一步]** 。
+1. 在 [設定檔] 中，加入所有三個設定檔。 選取 [下一步]  。
 1. 在 [名稱]  上，輸入規則的名稱。 選取 [完成]  。
 
 如需端點的詳細資訊，請參閱[設定 Database Engine 接聽多個 TCP 通訊埠](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)和[端點目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)。 
@@ -150,7 +150,7 @@ ms.locfileid: "73637973"
  
  下表將列出 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]常用的通訊埠。  
   
-|功能|通訊埠|註解|  
+|功能|連接埠|註解|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|TCP 通訊埠 2383 (預設執行個體)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]預設執行個體的標準通訊埠。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務|TCP 通訊埠 2382 (只有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 具名執行個體需要)|沒有指定通訊埠編號之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 具名執行個體的用戶端連接要求會被導向至通訊埠 2382，亦即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 所接聽的通訊埠。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 會將要求重新導向至具名執行個體所使用的通訊埠。|  
@@ -168,7 +168,7 @@ ms.locfileid: "73637973"
 
 下表將列出 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]常用的通訊埠。  
   
-|功能|通訊埠|註解|  
+|功能|連接埠|註解|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 服務|TCP 通訊埠 80|用於透過 URL 進行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 HTTP 連接。 建議您不要使用預先設定的規則 **World Wide Web 服務 (HTTP)** 。 如需詳細資訊，請參閱下面的「 [與其他防火牆規則的互動](#BKMK_other_rules) 」一節。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定成可透過 HTTPS 使用|TCP 通訊埠 443|用於透過 URL 進行 HTTPS 連接。 HTTPS 是使用安全通訊端層 (SSL) 的 HTTP 連接。 建議您不要使用預先設定的規則 **Secure World Wide Web 服務 (HTTPS)** 。 如需詳細資訊，請參閱下面的「 [與其他防火牆規則的互動](#BKMK_other_rules) 」一節。|  
@@ -178,7 +178,7 @@ ms.locfileid: "73637973"
 ###  <a name="BKMK_ssis"></a> Integration Services 所使用的通訊埠  
  下表將列出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務所使用的通訊埠。  
   
-|功能|通訊埠|註解|  
+|功能|連接埠|註解|  
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] 遠端程序呼叫 (MS RPC)<br /><br /> 由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行階段所使用。|TCP 通訊埠 135<br /><br /> 請參閱「 [通訊埠 135 的特殊考量](#BKMK_port_135)」|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會在通訊埠 135 上使用 DCOM。 服務控制管理員會使用通訊埠 135 來執行一些工作，例如啟動和停止 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務，以及將控制要求傳送至執行中服務。 您無法變更此通訊埠編號。<br /><br /> 只有當您要從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或自訂應用程式連接至 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 服務的遠端執行個體時，才需要開啟這個通訊埠。|  
   
@@ -187,7 +187,7 @@ ms.locfileid: "73637973"
 ###  <a name="BKMK_additional_ports"></a> 其他通訊埠和服務  
 下表將列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會相依的通訊埠和服務。  
   
-|狀況|通訊埠|註解|  
+|狀況|連接埠|註解|  
 |--------------|----------|--------------|  
 |Windows Management Instrumentation<br /><br /> 如需有關 WMI 的詳細資訊，請參閱＜ [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)＞。|WMI 會使用透過 DCOM 所指派的通訊埠，當做共用服務主機執行。 WMI 可能正在使用 TCP 通訊埠 135。<br /><br /> 請參閱「 [通訊埠 135 的特殊考量](#BKMK_port_135)」|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員會使用 WMI 來列出並管理服務。 建議您使用預先設定的規則群組 **Windows Management Instrumentation (WMI)** 。 如需詳細資訊，請參閱下面的「 [與其他防火牆規則的互動](#BKMK_other_rules) 」一節。|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC)|TCP 通訊埠 135<br /><br /> 請參閱「 [通訊埠 135 的特殊考量](#BKMK_port_135)」|如果應用程式使用分散式交易，您可能必須將防火牆設定成允許 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 傳輸在個別 MS DTC 執行個體之間，以及在 MS DTC 與資源管理員 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 之間流動。 我們建議您使用預先設定的規則群組 **[分散式交易協調器]** 。<br /><br /> 針對個別資源群組中的整個叢集設定單一共用 MS DTC 時，您應該將 sqlservr.exe 當成例外新增至防火牆。|  
