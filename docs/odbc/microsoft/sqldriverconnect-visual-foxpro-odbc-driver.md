@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect (Visual FoxPro ODBC Driver) |Microsoft Docs
+title: SQLDriverConnect （Visual FoxPro ODBC Driver） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,39 +13,39 @@ ms.assetid: 10492c8f-3a18-4971-9db8-879e878083b9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6fd8f3be1213a91195cd74a8b723629e2c5833f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053896"
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect (Visual FoxPro ODBC Driver)
 > [!NOTE]  
->  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
   
  支援：完整  
   
- ODBC API 相容性：層級 1  
+ ODBC API 一致性：層級1  
   
- 連接到現有的資料來源，這可以是[資料庫](../../odbc/microsoft/visual-foxpro-terminology.md)或是的目錄[免費資料表](../../odbc/microsoft/visual-foxpro-terminology.md)。 UID 和 PWD ODBC 屬性關鍵字會被忽略。 下表列出的其他支援的屬性關鍵字。  
+ 連接到現有的資料來源，它可以是[資料庫](../../odbc/microsoft/visual-foxpro-terminology.md)或[可用資料表](../../odbc/microsoft/visual-foxpro-terminology.md)的目錄。 ODBC 屬性關鍵字 UID 和 PWD 會被忽略。 下表列出其他支援的屬性關鍵字。  
   
-|ODBC 屬性關鍵字|屬性值|  
+|ODBC attribute 關鍵字|屬性值|  
 |----------------------------|---------------------|  
 |DSN||  
-|UID|Visual FoxPro ODBC Driver 被忽略，但不會產生錯誤。|  
-|PWD|Visual FoxPro ODBC Driver 被忽略，但不會產生錯誤。|  
-|驅動程式|名稱和位置的 Visual FoxPro ODBC Driver;實作由驅動程式管理員。|  
+|UID|由 Visual FoxPro ODBC 驅動程式忽略，但不會產生錯誤。|  
+|PWD|由 Visual FoxPro ODBC 驅動程式忽略，但不會產生錯誤。|  
+|驅動程式|Visual FoxPro ODBC 驅動程式的名稱和位置;由驅動程式管理員執行。|  
   
-|Visual FoxPro ODBC Driver 屬性關鍵字|屬性值|  
+|Visual FoxPro ODBC Driver attribute 關鍵字|屬性值|  
 |-------------------------------------------------|---------------------|  
-|BackgroundFetch|"Yes"或者"No"|  
-|自動分頁|「 電腦 」 或其他定序的順序。 如需支援的定序順序的清單，請參閱 <<c0> [ 設定定序](../../odbc/microsoft/set-collate-command.md)。|  
+|BackgroundFetch|「是」或「否」|  
+|自動分頁|「電腦」或其他定序序列。 如需支援的定序序列清單，請參閱[SET COLLATE](../../odbc/microsoft/set-collate-command.md)。|  
 |描述||  
-|排除|"Yes"或者"No"|  
-|SourceDB|完整的路徑的目錄，包含零個或多個[免費資料表](../../odbc/microsoft/visual-foxpro-terminology.md)，或為絕對路徑和檔案名稱[資料庫](../../odbc/microsoft/visual-foxpro-terminology.md)。|  
-|SourceType|「 雙位元組字元"或者"DBF"|  
-|Version||  
+|獨佔|「是」或「否」|  
+|SourceDB|包含零個或多個[可用資料表](../../odbc/microsoft/visual-foxpro-terminology.md)之目錄的完整路徑，或[資料庫](../../odbc/microsoft/visual-foxpro-terminology.md)的絕對路徑和檔案名。|  
+|SourceType|"DBC" 或 "DBF"|  
+|版本||  
   
- 如果未指定資料來源名稱，驅動程式管理員 會提示使用者輸入資訊 (視設定而定*fDriverCompletion*引數)，然後再繼續。 如果需要詳細資訊，Visual FoxPro ODBC Driver 就會顯示提示的對話方塊。  
+ 如果未指定資料來源名稱，驅動程式管理員會提示使用者提供資訊（視*fDriverCompletion*引數的設定而定），然後繼續進行。 如果需要詳細資訊，Visual FoxPro ODBC 驅動程式會顯示 [提示] 對話方塊。  
   
- 如需詳細資訊，請參閱 < [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md)中*ODBC 程式設計人員參考*。
+ 如需詳細資訊，請參閱 ODBC 程式設計*人員參考*中的[SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md) 。

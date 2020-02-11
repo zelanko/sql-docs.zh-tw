@@ -24,13 +24,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637826"
 ---
-# <a name="data-flow-performance-features"></a>Data Flow Performance Features
+# <a name="data-flow-performance-features"></a>資料流程效能的功能
   本主題提供有關如何設計 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝以避免常見效能問題的建議。 本主題同時也提供有關您可以用於疑難排解封裝效能之功能與工具的資訊。  
   
 ## <a name="configuring-the-data-flow"></a>設定資料流程  
@@ -75,12 +75,15 @@ ms.locfileid: "73637826"
  平行執行會改善具有多個實體或邏輯處理器之電腦的效能。 為了在封裝中支援平行執行不同的工作，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用兩種屬性：`MaxConcurrentExecutables` 和 `EngineThreads`。  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables 屬性  
- `MaxConcurrentExecutables` 屬性是封裝本身的屬性。 此屬性會定義可以同時執行多少工作。 預設值為 -1，表示實體或邏輯處理器的數目加上 2。  
+ 
+  `MaxConcurrentExecutables` 屬性是封裝本身的屬性。 此屬性會定義可以同時執行多少工作。 預設值為 -1，表示實體或邏輯處理器的數目加上 2。  
   
  若要了解此屬性的運作方式，請考慮具有三個「資料流程」工作的範例封裝。 如果您將 `MaxConcurrentExecutables` 設定為 3，全部三個「資料流程」工作都可以同時執行。 不過，這是假設每個「資料流程」工作都有 10 的來源到目的地的執行樹狀結構。 將 `MaxConcurrentExecutables` 設定為 3 不能確保每個「資料流程」工作內的執行樹狀結構都可以平行執行。  
   
 #### <a name="the-enginethreads-property"></a>EngineThreads 屬性  
- `EngineThreads` 屬性是每個「資料流程」工作的屬性。 此屬性會定義資料流程引擎可以平行建立並執行多少執行緒。 `EngineThreads` 屬性同樣適用於資料流程引擎針對來源所建立的來源執行緒，以及該引擎針對轉換和目的地所建立的工作者執行緒。 因此，將 `EngineThreads` 設定為 10 表示引擎最多可以建立 10 個來源執行緒與 10 個工作者執行緒。  
+ 
+  `EngineThreads` 屬性是每個「資料流程」工作的屬性。 此屬性會定義資料流程引擎可以平行建立並執行多少執行緒。 
+  `EngineThreads` 屬性同樣適用於資料流程引擎針對來源所建立的來源執行緒，以及該引擎針對轉換和目的地所建立的工作者執行緒。 因此，將 `EngineThreads` 設定為 10 表示引擎最多可以建立 10 個來源執行緒與 10 個工作者執行緒。  
   
  若要了解此屬性的運作方式，請考慮具有三個「資料流程」工作的範例封裝。 每個「資料流程」工作都包含 10 的來源到目的地的執行樹狀結構。 如果您將「資料流程」工作上的 EngineThreads 設定為 10，全部 30 個執行樹狀結構可能會同時執行。  
   
@@ -90,7 +93,7 @@ ms.locfileid: "73637826"
 ## <a name="configuring-individual-data-flow-components"></a>設定個別的資料流程元件  
  若要設定個別的資料流程元件以獲得較好的效能，有一些您可以遵循的一般指導方針。 針對每種資料流程元件，也有特定的指導方針：來源、轉換和目的地。  
   
-### <a name="general-guidelines"></a>一般指導方針  
+### <a name="general-guidelines"></a>一般準則  
  不管資料流程元件為何，都有兩個您應該遵循的一般指導方針來改善效能：最佳化查詢與避免不必要的字串。  
   
 #### <a name="optimize-queries"></a>最佳化查詢  
@@ -125,7 +128,7 @@ ms.locfileid: "73637826"
  使用本節中的建議來改善「彙總」、「模糊查閱」、「模糊群組」、「查閱」、「合併聯結」與「緩時變維度」轉換的效能。  
   
 #### <a name="aggregate-transformation"></a>彙總轉換  
- 「彙總」轉換包括 `Keys`、`KeysScale`、`CountDistinctKeys` 和 `CountDistinctScale` 屬性。 這些屬性會提升效能，其方式是讓轉換針對轉換所快取的資料來預先配置所需的記憶體數量。 如果您知道預期要從 [**群組依據**] 作業產生的精確或大約群組數，請分別設定 [`Keys`] 和 [`KeysScale`] 屬性。 如果您知道預期要從 [**相異計數**] 作業產生的精確或大約相異值數目，請分別設定 [`CountDistinctKeys`] 和 [`CountDistinctScale` 屬性]。  
+ 「彙總」轉換包括 `Keys`、`KeysScale`、`CountDistinctKeys` 和 `CountDistinctScale` 屬性。 這些屬性會提升效能，其方式是讓轉換針對轉換所快取的資料來預先配置所需的記憶體數量。 如果您知道預期要從 [**群組依據**] 作業產生的精確或大約群組數，請分別設定`Keys`和`KeysScale`屬性。 如果您知道預期要從 [**相異計數**] 作業產生的確切或近似相異值數目，請分別設定`CountDistinctKeys`和`CountDistinctScale`屬性。  
   
  如果必須在資料流程中建立多個彙總，您應考慮使用一個「彙總」轉換來建立多個彙總，而不是建立多個轉換。 當一個彙總就是其他彙總的子集時，這個方法能夠改善效能，因為轉換可以最佳化內部儲存體，並且只會掃描一次傳入的資料。 例如，如果彙總使用 GROUP BY 子句和 AVG 彙總，則將它們組合成一個轉換可以改進效能。 不過，在一個「彙總」轉換內執行多個彙總會序列化彙總作業，因此，當多個彙總必須個別計算時，可能不會改善效能。  
   
@@ -135,17 +138,17 @@ ms.locfileid: "73637826"
 #### <a name="lookup-transformation"></a>查閱轉換  
  輸入僅查閱所需資料行的 SELECT 陳述式可以將記憶體中的參考資料大小最小化。 這個選項的效能比選取會傳回大量不必要資料的整個資料表或檢視表更好。  
   
-#### <a name="merge-join-transformation"></a>合併聯結轉換  
+#### <a name="merge-join-transformation"></a>Merge Join Transformation  
  您再也不必設定 `MaxBuffersPerInput` 屬性的值，因為 Microsoft 已做出變更，降低合併聯結轉換會耗用過多記憶體的風險。 這個問題有時候會發生在合併聯結的多個輸入以不平均的速率產生資料時。  
   
-#### <a name="slowly-changing-dimension-transformation"></a>Slowly Changing Dimension Transformation  
+#### <a name="slowly-changing-dimension-transformation"></a>緩時變維度轉換  
  「緩時變維度精靈」和「緩時變維度精靈」轉換都是符合多數使用者需求的一般用途工具。 不過，精靈所產生的資料流程不會針對效能進行最佳化。  
   
  「緩時變維度」轉換中最緩慢的元件通常是一次針對一個單一資料列執行 UPDATE 的「OLE DB 命令」轉換。 因此，改善「緩時變維度」轉換效能最有效的方式就是取代「OLE DB 命令」轉換。 您可以將這些轉換取代為將要更新的所有資料列儲存到臨時資料表的目的地元件。 然後，您可以同時加入針對所有資料列執行以單一資料列集為基礎之 Transact-SQL UPDATE 的「執行 SQL」工作。  
   
  進階使用者可以針對緩時變維度處理，設計針對大維度進行最佳化的自訂資料流程。 如需此方式的討論和範例，請參閱＜ [專案 REAL：Business Intelligence ETL 設計練習](https://www.microsoft.com/download/details.aspx?id=14582)＞(英文) 白皮書中的「唯一的維度狀況」一節。  
   
-### <a name="destinations"></a>目的地  
+### <a name="destinations"></a>Destinations  
  為達成較佳的目的地效能，請考慮使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地並測試目的地的效能。  
   
 #### <a name="sql-server-destination"></a>SQL Server 目的地  
@@ -155,7 +158,9 @@ ms.locfileid: "73637826"
  您可能會發現將資料儲存至目的地所花費的時間超出預期。 若要識別速度很慢是否是因為目的地無法夠快地處理資料，您可以暫時使用「資料列計數器」轉換來取代目的地。 如果輸送量顯著提高，則很可能是正在載入資料的目的地導致速度變慢。  
   
 ### <a name="review-the-information-on-the-progress-tab"></a>檢視進度索引標籤上的資訊  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」會提供在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 **[進度]** 索引標籤會以執行順序列出工作和容器，並包含每個工作和容器 (包括封裝本身) 的開始與完成時間、警告及錯誤訊息。 此外，還會以執行順序列出資料流程元件，並包含有關進度 (以完成百分比顯示) 以及已經處理的資料列數目等資訊。  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」會提供在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 
+  **[進度]** 索引標籤會以執行順序列出工作和容器，並包含每個工作和容器 (包括封裝本身) 的開始與完成時間、警告及錯誤訊息。 此外，還會以執行順序列出資料流程元件，並包含有關進度 (以完成百分比顯示) 以及已經處理的資料列數目等資訊。  
   
  若要啟用或停用 **[進度]** 索引標籤上的訊息顯示，請在 **[SSIS]** 功能表上切換 **[偵錯進度報表]** 選項。 停用進度報告有助於在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中執行複雜封裝時改善效能。  
   
@@ -164,7 +169,7 @@ ms.locfileid: "73637826"
 -   [排序合併和合併聯結轉換的資料](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>相關內容  
- **文件和部落格文章**  
+ **文章和 Blog 文章**  
   
 -   technet.microsoft.com 上的技術文件： [SQL Server 2005 Integration Services：效能策略](https://go.microsoft.com/fwlink/?LinkId=98899)  
   
@@ -182,7 +187,7 @@ ms.locfileid: "73637826"
   
 -   blogs.msdn.com 上的部落格文章： [疑難排解 SSIS 封裝效能問題](https://go.microsoft.com/fwlink/?LinkId=238156)  
   
- **視訊**  
+ **視頻**  
   
 -   影片系列， [Designing and Tuning for Performance your SSIS packages in the Enterprise (SQL Video Series)](https://go.microsoft.com/fwlink/?LinkId=400878)(設計及微調企業中 SSIS 封裝的效能 (SQL 影片系列))  
   
@@ -198,6 +203,6 @@ ms.locfileid: "73637826"
   
 ## <a name="see-also"></a>另請參閱  
  [疑難排解封裝開發的工具](../troubleshooting/troubleshooting-tools-for-package-development.md)   
- [封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [套件執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

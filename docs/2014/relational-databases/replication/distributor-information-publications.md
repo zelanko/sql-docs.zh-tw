@@ -1,5 +1,5 @@
 ---
-title: '[散發者資訊] 對話方塊中 SQL Server 複寫 |Microsoft Docs'
+title: SQL Server 複寫 [散發者資訊] 對話方塊 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721356"
 ---
-# <a name="distributor-information-dialog-box"></a>散發者資訊 對話方塊 
-本主題提供有關**散發者**對話方塊 
+# <a name="distributor-information-dialog-box"></a>散發者資訊對話方塊 
+本主題**提供 [散發**者] 對話方塊的相關資訊 
 
-## <a name="publications"></a>[發行集]
+## <a name="publications"></a>發行集
 
   **[發行集]** 索引標籤可以提供在左窗格中所選取「散發者」之所有發行集的摘要資訊。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  顯示的資訊會與受到「散發者」支援的發行集相關，當中包括了包含「發行者」之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料行。 否則，當您在複寫監視器的「發行者」檢視中檢視發行集時，所提供的發行集資訊會與此處的發行集資訊相同。 如需有關 **[發行集]** 索引標籤中之資料行的詳細資訊，請參閱＜ [Publisher Information, Publications](publisher-information-publications.md)＞。  
 
 ## <a name="subscription-watch-list"></a>訂閱監看清單
@@ -51,7 +51,7 @@ ms.locfileid: "62721356"
   
  如需有關「快照集」、「佇列讀取器代理程式」和維護作業的詳細資訊，請參閱＜ [Publisher Information, Agents](publisher-information-agents.md)＞。 請注意，當您在 **[代理程式]** 索引標籤上檢視「散發者」的代理程式資訊時，「發行者」資訊也會顯示，以供「快照集」和「記錄讀取器」代理程式使用。 但是，在專供「散發者」檢視中之「散發者」使用的 **[代理程式]** 索引標籤中，您也可以選取 **[散發者代理程式]** 和 **[合併代理程式]** 。  
   
-### <a name="options"></a>選項  
+### <a name="options"></a>選項。  
  下列各節將描述這個索引標籤上針對「散發者代理程式」和「合併代理程式」顯示的資料。  
   
 ### <a name="distributor-agent"></a>[散發者代理程式]  
@@ -70,7 +70,7 @@ ms.locfileid: "62721356"
  **發行集**  
  與代理程式相關聯之發行集的名稱。  
   
- **訂閱**  
+ **訂用帳戶**  
  訂閱的名稱，格式應該為：[*SubscriberName*].[*Database*]。  
   
  **型別**  
@@ -100,7 +100,7 @@ ms.locfileid: "62721356"
  **平均命令數**  
  最近一次代理程式執行期間，每項交易的平均命令數目。  
   
-### <a name="merge-agent"></a>[合併代理程式]  
+### <a name="merge-agent"></a>合併代理程式  
  **狀態**  
  代理程式的狀態。 下列清單顯示可能的狀態值：  
   
@@ -116,7 +116,7 @@ ms.locfileid: "62721356"
  **發行集**  
  與代理程式相關聯之發行集的名稱。  
   
- **訂閱**  
+ **訂用帳戶**  
  訂閱的名稱，格式應該為：[*SubscriberName*].[*Database*]。  
   
  **型別**  

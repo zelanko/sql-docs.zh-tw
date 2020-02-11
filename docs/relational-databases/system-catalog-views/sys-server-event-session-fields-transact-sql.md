@@ -1,5 +1,5 @@
 ---
-title: sys.server_event_session_fields (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases server_event_session_fields （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 81d66f177c230d406fac9dae9373cf85da1837e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133215"
 ---
-# <a name="sysservereventsessionfields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
+# <a name="sysserver_event_session_fields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   針對事件和目標上明確設定的每一個可自訂資料行傳回資料列。  
@@ -36,10 +36,10 @@ ms.locfileid: "68133215"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件工作階段的識別碼。 不可為 Null。|  
 |object_id|**int**|這個欄位相關聯之物件的識別碼。 不可為 Null。|  
-|name|**sysname**|欄位的名稱。 不可為 Null。|  
+|NAME|**sysname**|欄位的名稱。 不可為 Null。|  
 |value|**sql_variant**|此欄位的值。 不可為 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 ## <a name="remarks"></a>備註  
@@ -47,8 +47,8 @@ ms.locfileid: "68133215"
   
 ||||  
 |-|-|-|  
-|來源|若要|關聯性|  
-|sys.server_event_session_actions.event_session_id|sys.server_event_sessions.event_session_id|多對一|  
+|從|至|關聯性|  
+|sys.server_event_session_actions.event_session_id|server_event_sessions. event_session_id|多對一|  
 |sys.server_event_session_actions.event_id<br /><br /> sys.server_event_session_actions.object_id<br /><br /> sys.server_event_session_actions.event_session_id|sys.server_event_session_events.event_session_id<br /><br /> sys.server_event_session_events.event_id|多對一|  
 |sys.server_event_session_actions.event_session_id<br /><br /> sys.server_event_session_actions.object_id|sys.server_event_session_targets.event_session_id<br /><br /> sys.server_event_session_targets.target_id|多對一|  
   

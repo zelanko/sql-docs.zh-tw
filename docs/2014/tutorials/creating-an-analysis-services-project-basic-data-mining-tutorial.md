@@ -1,5 +1,5 @@
 ---
-title: 建立 Analysis Services 專案 (基本資料採礦教學課程) |Microsoft Docs
+title: 建立 Analysis Services 專案（基本資料採礦教學課程） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,15 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a7fcece285a17e158fcdfe77ef00004afe637541
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69494036"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>建立 Analysis Services 專案 (基本資料採礦教學課程)
-  每個 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案都會在單一 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中定義物件。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫可包含許多不同類型的物件  
+  每[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]個專案都會在單一[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫中定義物件。 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫可包含許多不同類型的物件  
   
 -   多維度模型 (Cube)  
   
@@ -28,39 +29,40 @@ ms.locfileid: "69494036"
   
  請注意，您 **不需要** Cube 便能進行資料採礦。 如果您必須對現有的 Cube 進行資料採礦，就應該將資料採礦模型加入至您用來建立 Cube 的相同專案。 不過，大多數的用途情況下您都能根據關聯式資料來源 (例如資料倉儲) 建立模型，只要不涉及 Cube 即可有更好的效能。  
   
- 在本教學課程中，您將使用關聯式資料倉儲 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]做為資料來源。 您會將所有的資料採礦物件部署到名稱為 `BasicDataMining` 的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫，僅供用於資料採礦。  
+ 在本教學課程中，您將使用關聯式資料倉儲 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]做為資料來源。 您會將所有的資料採礦物件部署到名稱為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的 `BasicDataMining` 資料庫，僅供用於資料採礦。  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 預設會針對新專案使用 **localhost** 執行個體。 如果您要使用具名執行個體或不同的伺服器，您必須先建立並開啟專案，然後變更執行個體名稱。  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 預設會針對新專案使用 **localhost** 執行個體。 如果您要使用具名執行個體或不同的伺服器，您必須先建立並開啟專案，然後變更執行個體名稱。  
   
- 如需[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案的詳細資訊, 請參閱[建立 Analysis Services 專案](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)。  
+ 如需[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案的詳細資訊，請參閱[建立 Analysis Services 專案](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)。  
   
 ### <a name="to-create-an-analysis-services-project"></a>若要建立 Analysis Services 專案  
   
 1.  開啟 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
-2.  在 **[檔案]** 功能表上，指向 **[開新檔案]** ，再選取 **[專案]** 。  
+2.  在 **[檔案]** 功能表上，指向 **[開新檔案]**，再選取 **[專案]**。  
   
 3.  確認 **[專案類型]** 窗格中已選取 **[商業智慧專案]** 。  
   
-4.  在 **[範本]** 窗格中，選取 **[Analysis Services 多維度和資料採礦專案]** 。  
+4.  在 **[範本]** 窗格中，選取 **[Analysis Services 多維度和資料採礦專案]**。  
   
-5.  在 [**名稱**] 方塊中, 將新`BasicDataMining`專案命名為。  
+5.  在 [**名稱**] 方塊中，將新`BasicDataMining`專案命名為。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### <a name="to-change-the-instance-where-data-mining-objects-are-stored"></a>變更儲存資料採礦物件所在的執行個體  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的 **[專案]** 功能表上，選取 **[屬性]** 。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的 **[專案]** 功能表上，選取 **[屬性]**。  
   
-2.  在 **[屬性頁]** 窗格左邊的 **[組態屬性]** 底下，按一下 **[部署]** 。  
+2.  在 **[屬性頁]** 窗格左邊的 **[組態屬性]** 底下，按一下 **[部署]**。  
   
 3.  在 **[屬性頁]** 窗格右邊的 **[目標]** 底下，確認 **[伺服器]** 名稱是 **localhost**。 如果您要使用不同的執行個體，請輸入執行個體的名稱。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [建立資料來源&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [建立資料來源 &#40;基本資料採礦教學課程&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [建立 Analysis Services 專案 &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
+ [組建 Analysis Services 專案 &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
  [建立 Analysis Services 專案 &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt)  
   
   

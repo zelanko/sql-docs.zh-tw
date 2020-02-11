@@ -13,29 +13,29 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8319699dd58039b918f0715e5b2293a7990108f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057379"
 ---
 # <a name="odata-connection-manager-editor"></a>OData 連線管理員編輯器
-  使用 [OData 連線管理員編輯器]  對話方塊加入連線，或編輯現有的 OData 來源連線。  
+  使用 [OData 連線管理員編輯器] **** 對話方塊加入連線，或編輯現有的 OData 來源連線。  
   
 ## <a name="options"></a>選項。  
  **連線管理員名稱**  
  連接管理員的名稱。  
   
  **服務文件位置**  
- OData 服務的 URL。 例如： http://services.odata.org/V3/Northwind/Northwind.svc/ ＞。  
+ OData 服務的 URL。 例如： http://services.odata.org/V3/Northwind/Northwind.svc/ 。  
   
  **驗證**  
- 針對 [驗證]  選取 [Windows 驗證]  或 [使用此使用者名稱和密碼]  。 如果您選取第二個選項，請輸入 [使用者名稱]  和 [密碼]  。  
+ 針對 [驗證]**** 選取 [Windows 驗證]**** 或 [使用此使用者名稱和密碼]****。 如果您選取第二個選項，請輸入 [使用者名稱] **** 和 [密碼] ****。  
   
  **測試連接**  
  按一下此按鈕，測試 OData 來源的連接。  
   
 ## <a name="see-also"></a>另請參閱  
- [OData 連線管理員](connection-manager/odata-connection-manager.md)  
+ [OData 連接管理員](connection-manager/odata-connection-manager.md)  
   
   

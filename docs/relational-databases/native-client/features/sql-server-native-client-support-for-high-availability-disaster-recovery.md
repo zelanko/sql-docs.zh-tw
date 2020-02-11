@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b2cc984e4e519d9db0c0532ec5b1f917e18b4ec6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247406"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>高可用性/災害復原的 SQL Server Native Client 支援
@@ -110,7 +110,7 @@ ms.locfileid: "75247406"
   
  已加入一個 OLE DB 連接字串關鍵字來支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Native Client 中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：  
   
--   **應用程式意圖**  
+-   **應用程式的意圖**  
   
  如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中連接字串關鍵字的詳細資訊，請參閱[搭配 SQL Server Native Client 使用連接字串關鍵字](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   

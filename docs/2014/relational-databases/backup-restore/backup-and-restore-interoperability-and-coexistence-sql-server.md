@@ -1,5 +1,5 @@
 ---
-title: 備份與還原：互通性與共存性 (SQL Server) |Microsoft Docs
+title: 備份與還原：互通性與共存性 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922433"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>備份與還原：互通性與共存性 (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "62922433"
   
  如果在資料庫啟動期間發生問題，復原會失敗，且會將資料庫標示為 SUSPECT。 如果將問題隔離到檔案，資料庫管理員就可以使檔案離線，並嘗試重新啟動資料庫。 若要使檔案離線，您可以使用下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 陳述式：  
   
- ALTER DATABASE *database_name* MODIFY FILE (名稱 **=' *`filename`* '** 、 離線)  
+ ALTER database *database_name* MODIFY FILE （name **= '*`filename`*'**，OFFLINE）  
   
  如果啟動成功，任何包含離線檔案的檔案群組都會保持離線。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62922433"
  本節僅與包含多個檔案群組的完整模式資料庫有關。  
   
 > [!NOTE]  
->  未來的 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本將移除資料庫鏡像功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 。  
+>  未來的 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本將移除資料庫鏡像功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。  
   
  資料庫鏡像是增加資料庫可用性的軟體方案。 鏡像是以每個資料庫為基準實作，只適用於使用完整復原模式的資料庫。 如需詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62922433"
 >  若要散發資料庫中檔案群組子集的副本，請使用複寫：請只複寫檔案群組中您要複製到其他伺服器的物件。 如需複寫的詳細資訊，請參閱 [SQL Server 複寫](../../relational-databases/replication/sql-server-replication.md)。  
   
 ### <a name="creating-the-mirror-database"></a>建立鏡像資料庫  
- 鏡像資料庫是透過在鏡像伺服器上還原 (但不復原) 主體資料庫備份的方式所建立。 還原必須保留相同的資料庫名稱。 如需詳細資訊，請參閱 [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)中數個功能的備份和還原考量。  
+ 鏡像資料庫是透過在鏡像伺服器上還原 (但不復原) 主體資料庫備份的方式所建立。 還原必須保留相同的資料庫名稱。 如需詳細資訊，請參閱 [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
  您可以使用分次還原順序來建立鏡像資料庫 (只要有支援)。 不過，要等到還原了所有檔案群組，而且通常還要在時間點上將記錄備份還原到夠接近主體資料庫的時間點之後，才能開始進行鏡像。 如需詳細資訊，請參閱[分次還原 &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)。  
   
@@ -132,6 +132,6 @@ ms.locfileid: "62922433"
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 資料庫的備份與還原](back-up-and-restore-of-sql-server-databases.md)   
  [備份及還原複寫的資料庫](../replication/administration/back-up-and-restore-replicated-databases.md)   
- [使用中次要：在次要複本上備份&#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [作用中次要資料庫：次要複本上的備份 &#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

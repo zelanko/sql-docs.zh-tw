@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721199"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>為合併發行項實作商務邏輯處理常式
@@ -99,10 +99,10 @@ ms.locfileid: "62721199"
   
 1.  在發行者端，執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql)，以確定此組件尚未註冊為商務邏輯處理常式。  
   
-2.  在散發者上，執行[sp_registercustomresolver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)，指定的商務邏輯處理常式的易記名稱 **@article_resolver** ，值為`true`for **@is_dotnet_assembly** ，組件的名稱 **@dotnet_assembly_name** ，和完整類別的名稱會覆寫<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>如 **@dotnet_class_name** .  
+2.  在散發者上，執行[sp_registercustomresolver &#40;transact-sql&#41;，並](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)針對**@article_resolver**指定商務邏輯處理常式的易記名稱、 `true`針對指定、針對**@is_dotnet_assembly**指定元件**@dotnet_assembly_name**的名稱，並針對覆寫<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>的類別提供完整名稱。 **@dotnet_class_name**  
   
     > [!NOTE]  
-    >  如果此組件未部署在與合併代理程式可執行檔相同的目錄中、與同步啟動合併代理程式之應用程式相同的目錄中，或是全域組件快取 (GAC) 中，您就必須將 **@dotnet_assembly_name** ＞。 當您正在使用 Web 同步處理時，必須指定組件在 Web 伺服器上的位置。  
+    >  如果元件未部署在與合併代理程式可執行檔相同的目錄中、與同步啟動合併代理程式之應用程式相同的目錄中，或在全域組件快取（GAC）中，您就必須使用的元件名稱來指定完整路徑**@dotnet_assembly_name**。 當您正在使用 Web 同步處理時，必須指定組件在 Web 伺服器上的位置。  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>搭配新的資料表發行項使用商務邏輯處理常式  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62721199"
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>搭配現有的資料表發行項使用商務邏輯處理常式  
   
-1.  執行 [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)，並指定 **@publication** 、 **@article** 、 **@property** 的 **article_resolver** 值，以及 **@value** 的商務邏輯處理常式易記名稱。  
+1.  執行[sp_changemergearticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)、 **@publication**指定、 **@article**、的**article_resolver**值**@property**，以及的商務邏輯處理常式的易記名稱。 **@value**  
   
 ###  <a name="TsqlExample"></a> 範例 (複寫程式設計)  
  這個範例會示範建立稽核記錄的商務邏輯處理常式。  
@@ -182,7 +182,8 @@ ms.locfileid: "62721199"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> - 當您存取商務邏輯處理常式時所要使用的易記名稱。  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - `true` 的值。  
+    -   
+  <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - `true` 的值。  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>部署商務邏輯處理常式  
   

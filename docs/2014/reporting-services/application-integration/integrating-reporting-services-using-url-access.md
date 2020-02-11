@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fedf4ce3011d9caae9d673acf354265537115057
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126124"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>使用 URL 存取整合 Reporting Services
@@ -36,7 +36,7 @@ ms.locfileid: "63126124"
  描述如何使用 URL 存取將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 整合到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32 環境。  
   
 ## <a name="see-also"></a>另請參閱  
- [將 Reporting Services 整合到應用程式](../application-integration/integrating-reporting-services-into-applications.md)   
+ [將 Reporting Services 整合至應用程式](../application-integration/integrating-reporting-services-into-applications.md)   
  [URL 存取 &#40;SSRS&#41;](../url-access-ssrs.md)  
   
   

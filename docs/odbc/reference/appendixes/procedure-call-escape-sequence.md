@@ -1,5 +1,5 @@
 ---
-title: 程序呼叫逸出序列 |Microsoft Docs
+title: 程序呼叫 Escape 順序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,57 +15,57 @@ ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aa936eb9f8ef3328945d4ece63fb36432a5fd618
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100596"
 ---
 # <a name="procedure-call-escape-sequence"></a>程序呼叫逸出序列
-ODBC 會將逸出序列用於程序呼叫。 此逸出序列的語法如下所示：  
+ODBC 會使用逸出序列進行程序呼叫。 此 escape 序列的語法如下：  
   
- **{** [？ =]**呼叫** *程序名稱*[ **(** [*參數*] [，[*參數*]]... **)** ] **}**  
+ **{**[？ =]**呼叫***程式名稱*[**（**[*參數*] [，[*參數*]] .。。**)**]**}**  
   
- 在 backus-naur form，BNF 標記法中，語法如下所示：  
+ 在 BNF 標記法中，語法如下所示：  
   
- *ODBC 程序逸出*:: =  
+ *ODBC-程式-escape* ：： =  
   
- &#124;*ODBC-esc-啟動器*[？ =] 呼叫*程序 ODBC esc 鍵結束字元*  
+ &#124; *ODBC-esc-啟動器*[？ =] 呼叫程式*ODBC-esc-結束字元*  
   
- *procedure* ::= *procedure-name* &#124; *procedure-name* (*procedure-parameter-list*)  
+ *procedure* ：： = 程式*名稱*&#124;*程式名稱*（*程式-參數清單*）  
   
- *程序識別項*:: =*使用者定義名稱*  
+ 程式*識別碼*：： =*使用者定義名稱*  
   
- *程序名稱*:: =*程序識別項*  
+ *程式名稱*：： =*程式-識別碼*  
   
- &#124;*擁有者名稱*。*程序識別項*  
+ &#124;*擁有者名稱*。*程式識別碼*  
   
- &#124;*目錄名稱的目錄分隔符號* *程序識別項*  
+ &#124;*目錄-名稱目錄-分隔符號*程式 *-識別碼*  
   
- &#124;*目錄名稱的目錄分隔符號* [*擁有者名稱*]。*程序識別項*  
+ &#124;*目錄-名稱目錄-分隔符號*[*擁有者名稱*]。*程式識別碼*  
   
- （第三個的語法是資料來源不支援擁有者時，才有效）。  
+ （只有在資料來源不支援擁有者時，第三個語法才有效）。  
   
- *owner-name* ::= *user-defined-name*  
+ *owner-name* ：： =*使用者定義名稱*  
   
- *catalog-name* ::= *user-defined-name*  
+ *catalog-name* ：： =*使用者定義名稱*  
   
- *catalog-separator* ::= {*implementation-defined*}  
+ *catalog-separator* ：： = {*執行定義的*}  
   
- (經由傳回的目錄分隔符號**SQLGetInfo** SQL_CATALOG_NAME_SEPARATOR 資訊選項。)  
+ （使用 SQL_CATALOG_NAME_SEPARATOR 資訊選項，透過**SQLGetInfo**傳回目錄分隔符號）。  
   
- *procedure-parameter-list* ::= *procedure-parameter*  
+ *程式-參數清單*：： = 程式 *-參數*  
   
- &#124;*程序參數*，*程序參數清單*  
+ &#124; 程式*參數*、程式*參數清單*  
   
- *procedure-parameter* ::= *dynamic-parameter* &#124; *literal* &#124; *empty-string*  
+ *程式參數*：： =*動態參數*&#124;*常*值 &#124;*空字串*  
   
- *空字串*:: =  
+ *空字串*：： =  
   
- *起始 esc ODBC 端*:: = {  
+ *ODBC-esc-啟動器*：： = {  
   
- *ODBC esc 鍵結束字元*:: =}  
+ *ODBC-esc-結束字元*：： =}  
   
- （程序參數是否為空字串，此程序使用的預設值為該參數。）  
+ （如果程式參數是空字串，程式會使用該參數的預設值）。  
   
- 若要判斷資料來源支援程序及驅動程式支援 ODBC 的程序引動過程語法，應用程式可以呼叫**SQLGetInfo** SQL_PROCEDURES 資訊類型。
+ 若要判斷資料來源是否支援程式，而且該驅動程式支援 ODBC 程序呼叫語法，應用程式可以使用 SQL_PROCEDURES 資訊類型來呼叫**SQLGetInfo** 。

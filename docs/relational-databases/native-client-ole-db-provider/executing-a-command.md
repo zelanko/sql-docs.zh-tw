@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f4c641495f2232bd0710e810716459d29a7f357a
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761735"
 ---
 # <a name="executing-a-command"></a>執行命令
@@ -29,11 +29,13 @@ ms.locfileid: "73761735"
 
   建立資料來源的連接後，取用者會呼叫 **IDBCreateSession::CreateSession** 方法來建立工作階段。 此工作階段會當做命令、資料列集或交易 Factory 運作。  
   
- 若要直接使用個別的資料表或索引，取用者會要求 **IOpenRowset** 介面。 **IOpenRowset::OpenRowset** 方法會從單一基底資料表或索引開啟並傳回包含所有資料列的資料列集。  
+ 若要直接使用個別的資料表或索引，取用者會要求 **IOpenRowset** 介面。 
+  **IOpenRowset::OpenRowset** 方法會從單一基底資料表或索引開啟並傳回包含所有資料列的資料列集。  
   
  若要執行命令 (例如 SELECT \* FROM Authors)，取用者會要求 **IDBCreateCommand** 介面。 取用者可以執行**IDBCreateCommand：： CreateCommand**方法來建立命令物件，並要求**ICommandText**介面。 **ICommandText：： SetCommandText**方法是用來指定要執行的命令。  
   
- **Execute** 命令用於執行命令。 此命令可以是任何 SQL 陳述式或程序名稱。 並非所有命令都會產生結果集 (資料列集) 物件。 SELECT * FROM Authors 之類的命令會產生結果集。  
+ 
+  **Execute** 命令用於執行命令。 此命令可以是任何 SQL 陳述式或程序名稱。 並非所有命令都會產生結果集 (資料列集) 物件。 SELECT * FROM Authors 之類的命令會產生結果集。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立 SQL Server Native Client OLE DB 提供者應用程式](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  
