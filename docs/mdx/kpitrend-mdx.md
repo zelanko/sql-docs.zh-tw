@@ -1,5 +1,5 @@
 ---
-title: KPITrend (MDX) |Microsoft Docs
+title: KPITrend （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 26e33a84ff50fca00151dc124403bac9daa2d89d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905865"
 ---
 # <a name="kpitrend-mdx"></a>KPITrend (MDX)
@@ -54,6 +54,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
