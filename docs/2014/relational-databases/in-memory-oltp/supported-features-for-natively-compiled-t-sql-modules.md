@@ -1,5 +1,5 @@
 ---
-title: 支援原生編譯的預存程序建構 |Microsoft Docs
+title: 原生編譯預存程式中支援的結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155724"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>原生編譯的預存程序中支援的建構
-  本主題包含原生編譯的預存程序的支援功能的清單 ([CREATE PROCEDURE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
+  本主題包含原生編譯預存程式支援的功能清單（[CREATE PROCEDURE &#40;transact-sql&#41;](/sql/t-sql/statements/create-procedure-transact-sql)）：  
   
--   [原生編譯的預存程序的可程式性](#pncsp)  
+-   [原生編譯預存程序的程式設計功能](#pncsp)  
   
 -   [支援的運算子](#so)  
   
--   [原生編譯的預存程序中的內建函式](#bfncsp)  
+-   [原生編譯預存程序中的內建函數](#bfncsp)  
   
--   [原生編譯的預存程序的查詢介面區](#qsancsp)  
+-   [原生編譯預存程序中的查詢介面區](#qsancsp)  
   
 -   [稽核](#auditing)  
   
--   [資料表、 查詢和聯結提示](#tqh)  
+-   [資料表、查詢和聯結提示](#tqh)  
   
 -   [排序的限制](#los)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63155724"
   
  如需有關不支援之建構的完整資訊，請參閱＜ [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md)＞。 如需不支援功能的詳細資訊，請參閱 [記憶體中的 OLTP 不支援 Transact-SQL 建構](transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
   
-##  <a name="pncsp"></a> 原生編譯的預存程序的可程式性  
+##  <a name="pncsp"></a>原生編譯預存程式中的可程式性  
  支援下列功能：  
   
 -   BEGIN ATOMIC (在預存程序的外部層級)、LANGUAGE、ISOLATION LEVEL、DATEFORMAT 和 DATEFIRST。  
@@ -66,7 +66,7 @@ ms.locfileid: "63155724"
 ##  <a name="so"></a> 支援的運算子  
  下列為支援的運算子。  
   
--   [比較運算子&#40;TRANSACT-SQL&#41; ](/sql/t-sql/language-elements/comparison-operators-transact-sql) (例如，>， \<，> =、 和 < =) 所支援的條件 (IF、 時)。  
+-   條件（IF，WHILE）中支援[transact-sql&#41;&#40;的比較運算子](/sql/t-sql/language-elements/comparison-operators-transact-sql)（例如，>、 \<、>= 和 <=）。  
   
 -   一元運算子 (+、-)。  
   
@@ -78,28 +78,28 @@ ms.locfileid: "63155724"
   
 -   位元運算子 ~、&、| 和 ^  
   
-##  <a name="bfncsp"></a> 原生編譯的預存程序中的內建函式  
+##  <a name="bfncsp"></a>原生編譯預存程式中的內建函數  
  記憶體最佳化資料表上的預設條件約束和原生編譯預存程序中，支援下列函數。  
   
--   數學函數：ACOS、 ASIN、 ATAN、 ATN2、 COS、 COT、 度、 EXP、 記錄、 LOG10、 PI、 POWER、 弧度為單位、 RAND、 SIN、 SQRT、 SQUARE 和 TAN  
+-   數學函數：ACOS、ASIN、ATAN、ATN2、COS、COT、DEGREES、EXP、LOG、LOG10、PI、POWER、RADIANS、RAND、SIN、SQRT、SQUARE 和 TAN  
   
--   日期函數：CURRENT_TIMESTAMP、 DATEADD、 DATEDIFF、 DATEFROMPARTS、 DATEPART、 DATETIME2FROMPARTS、 DATETIMEFROMPARTS、 天、 EOMONTH、 GETDATE、 GETUTCDATE、 月、 SMALLDATETIMEFROMPARTS、 SYSDATETIME、 SYSUTCDATETIME 和 YEAR。  
+-   日期函數：CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME 和 YEAR。  
   
--   字串函式：LEN、 LTRIM、 RTRIM 和 SUBSTRING  
+-   字串函數：LEN、LTRIM、RTRIM 和 SUBSTRING  
   
 -   Identity 函數：SCOPE_IDENTITY  
   
 -   NULL 函數：ISNULL  
   
--   Uniqueidentifier 函數：NEWID 與 NEWSEQUENTIALID  
+-   Uniqueidentifier 函數：NEWID 和 NEWSEQUENTIALID  
   
--   錯誤函數：ERROR_LINE、 ERROR_MESSAGE、 ERROR_NUMBER、 ERROR_PROCEDURE、 ERROR_SEVERITY 和 ERROR_STATE  
+-   錯誤函數：ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE  
   
 -   轉換：CAST 和 CONVERT。 不支援 Unicode 和非 Unicode 字元字串 (n(var)char 和 (var)char) 之間的轉換。  
   
 -   系統函式：@@rowcount。 原生編譯預存程序內的陳述式會更新 @@rowcount，您可以在原生編譯預存程序中使用 @@rowcount，來判斷該原生編譯預存程序內最後執行之陳述式所影響的資料列數。 不過，@@rowcount 會在原生編譯預存程序開始及結束執行時重設為 0。  
   
-##  <a name="qsancsp"></a> 原生編譯的預存程序的查詢介面區  
+##  <a name="qsancsp"></a>原生編譯預存程式中的查詢介面區  
  支援下列功能：  
   
 -   BETWEEN  
@@ -108,31 +108,31 @@ ms.locfileid: "63155724"
   
 -   只有 SELECT 查詢支援 CROSS JOIN 和 INNER JOIN。  
   
--   選取清單中支援的運算式和[其中&#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/where-transact-sql)子句，如果他們使用支援的運算子。 如需目前支援的運算子清單，請參閱 [Supported Operators](#so) 。  
+-   選取清單中支援運算式，如果使用支援的運算子，則會在[&#40;transact-sql&#41;子句的位置](/sql/t-sql/queries/where-transact-sql)。 如需目前支援的運算子清單，請參閱 [Supported Operators](#so) 。  
   
 -   篩選器述詞 IS [NOT] NULL  
   
--   從\<記憶體最佳化的資料表 >  
+-   從\<記憶體優化資料表>  
   
--   [GROUP BY &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql)支援，以及彙總函式 AVG、 COUNT、 COUNT_BIG、 最小值、 最大值和總和。 nvarchar、char、varchar、varchar、varbinary 和 binary 類型不支援 MIN 和 MAX。 [ORDER BY 子句&#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-order-by-clause-transact-sql)支援[GROUP BY &#40;-&#41; ](/sql/t-sql/queries/select-group-by-transact-sql)如果 ORDER BY 清單中的運算式逐字顯示在 GROUP BY 清單。 例如，支援 GROUP BY a + b ORDER BY a + b，但不支援 GROUP BY a, b ORDER BY a + b。  
+-   支援[GROUP BY &#40;transact-sql&#41;](/sql/t-sql/queries/select-group-by-transact-sql) ，以及彙總函式 AVG、COUNT、COUNT_BIG、MIN、MAX 和 SUM。 nvarchar、char、varchar、varchar、varbinary 和 binary 類型不支援 MIN 和 MAX。 如果 ORDER BY 清單中的運算式逐字出現在 GROUP BY 清單中，則[order By 子句 &#40;transact-sql&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)就會受到[Group by &#40;transact-sql&#41;](/sql/t-sql/queries/select-group-by-transact-sql)的支援。 例如，支援 GROUP BY a + b ORDER BY a + b，但不支援 GROUP BY a, b ORDER BY a + b。  
   
 -   HAVING，受限於 WHERE 子句相同的運算式限制。  
   
 -   INSERT VALUES (每個陳述式一個資料列) 和 INSERT SELECT  
   
--   ORDER BY <sup>1</sup>  
+-   排序依據<sup>1</sup>  
   
 -   未參考資料行的述詞。  
   
 -   SELECT、UPDATE 和 DELETE  
   
--   頂端<sup>1</sup>  
+-   前<sup>1</sup>名  
   
 -   SELECT 清單中的變數指派。  
   
--   WHERE...與  
+-   WHERE .。。和  
   
- <sup>1</sup> ORDER BY 和 TOP 支援原生編譯的預存程序，但有一些限制：  
+ <sup>1</sup>原生編譯的預存程式支援 ORDER BY 和 TOP，但有一些限制：  
   
 -   不支援 `DISTINCT` 或 `SELECT` 子句中的 `ORDER BY`。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "63155724"
   
  如需有關稽核的詳細資訊，請參閱＜ [Create a Server Audit and Database Audit Specification](../security/auditing/create-a-server-audit-and-database-audit-specification.md)＞。  
   
-##  <a name="tqh"></a> 資料表、 查詢和聯結提示  
+##  <a name="tqh"></a>資料表、查詢和聯結提示  
  支援下列功能：  
   
 -   在資料表提示語法或查詢的 [OPTION 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/option-clause-transact-sql) 中的 INDEX、FORCESCAN 和 FORCESEEK 提示。  
@@ -167,18 +167,18 @@ ms.locfileid: "63155724"
   
 -   OPTIMIZE FOR  
   
- 如需詳細資訊，請參閱 <<c0> [ 提示&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/hints-transact-sql)。</c0>  
+ 如需詳細資訊，請參閱[transact-sql&#41;的提示 &#40;](/sql/t-sql/queries/hints-transact-sql)。  
   
 ##  <a name="los"></a> 排序的限制  
  在使用 [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) 的查詢中，您可以排序 8000 多個資料列。 但是沒有 [ORDER BY 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)，[TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 最多只能排序 8000 個資料列 (如果有聯結則資料列更少)。  
   
- 如果查詢同時使用 [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 運算子和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)，TOP 運算子最多可以指定 8192 個資料列。 如果您指定超過 8192 個資料列，您會收到錯誤訊息：**Msg 41398，層級 16，狀態 1、 程序 *\<程序名稱 >* ，行 *\<lineNumber >* 。 TOP 運算子可以傳回 8192 個資料列; 最多 *\<數字 >* 要求。**  
+ 如果查詢同時使用 [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 運算子和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)，TOP 運算子最多可以指定 8192 個資料列。 如果您指定超過 8192 個資料列，則會收到錯誤訊息：**Msg 41398，層級 16，狀態 1、程序 *\<程序名稱>* 、行 *\<行號>* 。TOP 運算子最多可以傳回 8192 個資料列；要求 *\<數字>* 。**  
   
  如果您沒有 TOP 子句，則可以使用 ORDER BY 排序任意數目的資料列。  
   
  如果您未使用 ORDER BY 子句，則可以使用任何整數值搭配 TOP 運算子。  
   
- 範例使用 TOP N = 8192:編譯  
+ TOP N = 8192 的範例：編譯  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -191,7 +191,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- 範例使用 TOP N > 8192:無法編譯。  
+ TOP N > 8192 的範例：編譯失敗。  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -220,7 +220,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **傳回的資料列的限制：** 有兩種情況下，可能會減少 TOP 運算子可以傳回的資料列數目：  
+ **傳回資料列的限制：** 有兩種情況可能會減少 TOP 運算子能夠傳回的資料列數目：  
   
 -   在查詢中使用 JOIN。  JOIN 對限制的影響取決於查詢計劃。  
   
