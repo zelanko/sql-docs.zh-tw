@@ -1,5 +1,5 @@
 ---
-title: Database Engine 預存程序 (TRANSACT-SQL) |Microsoft Docs
+title: 資料庫引擎預存程式（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/02/2015
 ms.prod: sql
@@ -17,15 +17,16 @@ ms.assetid: 2ce018e9-1a3b-4530-a87d-842456a555ad
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 40548043b601d2a2309d9d5180f1200228f11bb4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942419"
 ---
 # <a name="database-engine-stored-procedures-transact-sql"></a>Database Engine 預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體一般維護的下列系統預存程序。  
   
 |||  

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ff9785d18d46e9aaca26c768d1069c32d3d2e8b6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242616"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 程式設計概念
@@ -30,7 +30,7 @@ ms.locfileid: "75242616"
   
  本節會提供 SQLXML 4.0 的相關資訊。  
   
- [SQLXML 未安裝在 SQL Server](../../relational-databases/sqlxml/sqlxml-is-not-installed-in-sql-server.md)  
+ [SQLXML 不會安裝在 SQL Server 中](../../relational-databases/sqlxml/sqlxml-is-not-installed-in-sql-server.md)  
  說明如何安裝 SQLXML 4.0。  
   
  [SQLXML 4.0 SP1 的新增功能](../../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md)  

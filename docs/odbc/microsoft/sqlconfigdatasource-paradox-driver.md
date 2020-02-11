@@ -14,33 +14,33 @@ ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33cc778d921b90a460dab6bda352fd7627d2cf7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054068"
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource (Paradox 驅動程式)
 > [!NOTE]  
->  本主題提供 Paradox 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主題提供 Paradox 驅動程式特有的資訊。 如需此函數的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
   
- **SQLConfigDataSource**函式，用來新增、 修改或刪除資料來源以動態方式使用下列關鍵字。  
+ 用來以動態方式加入、修改或刪除資料來源的**SQLConfigDataSource**函數會使用下列關鍵字。  
   
 |關鍵字|描述|  
 |-------------|-----------------|  
-|COLLATINGSEQUENCE|欄位會排序順序。<br /><br /> 使用 Paradox 驅動程式時，序列可以是 ASCII （預設值）、 國際、 瑞典文-芬蘭文或挪威文-丹麥文。<br /><br /> 這會設定為相同的選項**定序順序**在安裝程式 對話方塊中。|  
-|DBQ|資料庫檔案的名稱。<br /><br /> 這會設定為相同的選項**資料庫**在安裝程式 對話方塊中。|  
+|COLLATINGSEQUENCE|排序欄位的順序。<br /><br /> 使用 Paradox 驅動程式時，順序可以是 ASCII （預設值）、國際、瑞典文、芬蘭文或挪威文-丹麥文。<br /><br /> 這會在 [安裝程式] 對話方塊中，將相同的選項設定為 [**排序次序**]。|  
+|DBQ|資料庫檔案的名稱。<br /><br /> 這會在 [安裝程式] 對話方塊中設定與**資料庫**相同的選項。|  
 |DEFAULTDIR|目錄的路徑規格。|  
-|DESCRIPTION|資料來源中資料的說明。<br /><br /> 這會設定為相同的選項**描述**在安裝程式 對話方塊中。|  
+|描述|資料來源中的資料描述。<br /><br /> 這會在 [安裝程式] 對話方塊中設定與 [**描述**] 相同的選項。|  
 |DRIVER|驅動程式 DLL 的路徑規格。|  
-|DRIVERID|驅動程式的整數識別碼。<br /><br /> 26 (paradox 3.x)<br /><br /> 282 (paradox 4.x)<br /><br /> 538 (paradox 5.x)|  
-|獨佔|判斷資料庫是否將會開啟以獨佔模式 （存取只有一位使用者一次），或共用 （存取多個使用者一次） 的模式。 可以是 true （獨佔模式） 或 false （共用模式）。<br /><br /> 這會設定為相同的選項**獨佔**在安裝程式 對話方塊中。|  
-|FIL|檔案類型 Paradox 3.x，Paradox 4.x 或 Paradox 5.x|  
-|檔案類型|文字驅動程式 （文字） 的檔案類型。|  
-|PAGETIMEOUT|指定的時間，以第二個方法，移除前頁面 （如果未使用） 會保留在緩衝區中的十分之一。 預設值為 600 的十分之一秒 （60 秒）。 請注意，此選項適用於使用 ODBC 驅動程式的所有資料來源。<br /><br /> 這會設定為相同的選項**頁面上的逾時**在安裝程式 對話方塊中。|  
-|PARADOXNETPATH|包含 Paradox 鎖定資料庫，因為它包含 PDOXUSRS.net 檔案的目錄的完整路徑 (Paradox 4。*x*) 或 PARADOX.net 檔案 (Paradox 5。*x*)。 如果目錄不包含其中一個檔案，Paradox 驅動程式會建立一個。 如需這些檔案的詳細資訊，請參閱 Paradox 文件。<br /><br /> 可以選取網路目錄之前，必須輸入 Paradox 使用者名稱。<br /><br /> 這會設定為相同的選項**選取 [網路目錄**在安裝程式] 對話方塊中。|  
-|PARADOXNETSTYLE|Paradox 驅動程式，網路存取存取 Paradox 資料時要使用的樣式： 其中一個 「 3.x"Paradox 3。*x*或 「 4.x"Paradox 4 for。*x*或 5。*x*。 可以設定為"3.x"或"4.x"Paradox 4 版本時。*x*或 5。*x*; 如果版本為 Paradox 3。*x*，樣式必須是"3.x"。<br /><br /> 這會設定為相同的選項**Net 樣式**在安裝程式 對話方塊中。|  
-|PARADOXUSERNAME|Paradox 驅動程式中，按一下 Paradox 使用者名稱。<br /><br /> 這會設定為相同的選項**使用者名**在安裝程式 對話方塊中。|  
-|PWD|密碼。<br /><br /> 這是一個選擇性的關鍵字，並將永遠不會寫入至檔案驅動程式。 它會在呼叫**SQLDriverConnect**針對受密碼保護 Paradox 檔案。 每當開啟資料表時，才有效用的密碼。 如果連接字串中傳遞沒有密碼，則該資料表建立沒有密碼。 如果資料表有不同的密碼，多個無法開啟相同的工作階段中，也不聯結的資料表。|  
-|READONLY|若要使檔案成為唯讀的;，則為 TRUE若要讓檔案不是唯讀，則為 FALSE。<br /><br /> 這會設定為相同的選項**Read Only**在安裝程式 對話方塊中。|  
-|執行緒|引擎使用的背景執行緒數目。 此值為 3，並無法變更。<br /><br /> 這會設定為相同的選項**執行緒**在安裝程式 對話方塊中。|
+|DRIVERID|驅動程式的整數識別碼。<br /><br /> 26（Paradox 3.x）<br /><br /> 282（Paradox 4.x）<br /><br /> 538（Paradox 5.x）|  
+|獲得|判斷資料庫是否會以獨佔模式開啟（一次只能由一個使用者存取）或共用模式（一次由一個以上的使用者存取）。 可以是 true （獨佔模式）或 false （共用模式）。<br /><br /> 這會在 [安裝程式] 對話方塊中，將相同的選項設定為 [**獨佔**]。|  
+|FIL|檔案類型 Paradox 7.x、Paradox 4.x 或 Paradox 5。x|  
+|類型|文字驅動程式的檔案類型（文字）。|  
+|PAGETIMEOUT|指定在移除之前，頁面（如果未使用）會保留在緩衝區中的一段時間，以十分之一秒為限。 預設值為600十分之一秒（60秒）。 請注意，此選項適用于使用 ODBC 驅動程式的所有資料來源。<br /><br /> 這會設定與 [設定] 對話方塊中**頁面超時**相同的選項。|  
+|PARADOXNETPATH|包含 Paradox 鎖定資料庫之目錄的完整路徑，因為它包含 PDOXUSRS.net 檔案（在 Paradox 4 中）。*x*）或 PARADOX.net 檔案（在 PARADOX 5 中。*x*）。 如果目錄不包含這些檔案的其中一個，則 Paradox 驅動程式會建立一個。 如需這些檔案的詳細資訊，請參閱 Paradox 檔。<br /><br /> 您必須先輸入 Paradox 使用者名稱，才可選取網路目錄。<br /><br /> 這會設定與 [設定] 對話方塊中的 [**選取網路目錄**] 相同的選項。|  
+|PARADOXNETSTYLE|若是 Paradox 驅動程式，存取 Paradox 資料時要使用的網路存取樣式： "3.x" 代表 Paradox 3。*x*或 "4. x" 的 Paradox 為4。*x*或5。*x*。 如果版本是 Paradox 4，可以設定為 "3. x" 或 "4.x"。*x*或5。*x*;如果版本是 Paradox 3，則為。*x*，樣式必須是 "3. x"。<br /><br /> 這會在 [安裝] 對話方塊中設定與**Net Style**相同的選項。|  
+|PARADOXUSERNAME|若是 Paradox 驅動程式，Paradox 的使用者名稱。<br /><br /> 這會在 [安裝程式] 對話方塊中，將相同的選項設定為 [**使用者名稱**]。|  
+|PWD|密碼。<br /><br /> 這是選擇性的關鍵字，驅動程式永遠不會將它寫入檔案。 在對密碼安全的 Paradox 檔案進行**SQLDriverConnect**的呼叫時，會使用它。 每當開啟資料表時，所使用的密碼就會是有效的。 如果未在連接字串中傳遞任何密碼，就不會為該資料表建立任何密碼。 如果資料表有不同的密碼，就無法在同一個會話中開啟多個，也無法聯結資料表。|  
+|READONLY|TRUE 表示將檔案設為唯讀;FALSE 表示讓檔案不是唯讀的。<br /><br /> 這會在 [安裝程式] 對話方塊中設定與 [**唯讀**] 相同的選項。|  
+|串接|要使用之引擎的背景執行緒數目。 這個值為3，而且無法變更。<br /><br /> 這會在 [安裝程式] 對話方塊中設定與**執行緒**相同的選項。|

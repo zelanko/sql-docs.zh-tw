@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: e88d3916f5122564b443bc3c439200526b1f2d5e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246905"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
@@ -37,10 +37,10 @@ ms.locfileid: "75246905"
   
 |資料行|資料類型|描述|  
 |----------------------------|---------------|-----------------|  
-|start_time|**從中**|UTC 時間，表示五分鐘報告間隔的開始。|  
-|end_time|**從中**|UTC 時間，表示五分鐘報告間隔的結束。|  
+|start_time|**datetime**|UTC 時間，表示五分鐘報告間隔的開始。|  
+|end_time|**datetime**|UTC 時間，表示五分鐘報告間隔的結束。|  
 |database_name|**nvarchar(128)**|使用者資料庫的名稱。|  
-|sku|**nvarchar(128)**|資料庫服務層。 以下是可能的值：<br /><br /> 基本<br /><br /> 標準<br /><br /> 進階<br /><br />一般用途<br /><br />商務關鍵性|  
+|sku|**nvarchar(128)**|資料庫服務層。 以下是可能的值：<br /><br /> 基本<br /><br /> 標準<br /><br /> Premium<br /><br />一般用途<br /><br />業務關鍵|  
 |storage_in_megabytes|**float**|時間週期內的最大儲存體大小（以 mb 為單位），包括資料庫資料、索引、預存程式和中繼資料。|  
 |avg_cpu_percent|**decimal （5，2）**|平均運算使用率，以服務層限制的百分比計算。|  
 |avg_data_io_percent|**decimal （5，2）**|根據服務層限制，計算平均 I/O 使用率的百分比。 如需超大規模資料庫資料庫，請參閱[資源使用量統計資料中的資料 IO](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)。|  

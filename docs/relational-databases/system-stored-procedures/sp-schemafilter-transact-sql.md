@@ -16,10 +16,10 @@ ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 231796d1678a19106eb89f3039cd755e8385082c
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73633011"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
@@ -39,13 +39,13 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publisher = ] 'publisher'` 是非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者的名稱。 *publisher*是**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'`這是非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者的名稱。 *publisher*是**sysname**，沒有預設值。  
   
-`[ @schema = ] 'schema'` 是架構的名稱。 *架構*是**sysname**，預設值是 Null。  
+`[ @schema = ] 'schema'`這是架構的名稱。 *架構*是**sysname**，預設值是 Null。  
   
-`[ @operation = ] 'operation'` 是要對此架構採取的動作。 *operation*是**Nvarchar （4）** ，它可以是下列值之一。  
+`[ @operation = ] 'operation'`這是要對此架構採取的動作。 *operation*是**Nvarchar （4）**，它可以是下列值之一。  
   
-|Value|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**載入**|將指定的結構描述加入不適合發行的結構描述清單中。|  
 |**下拉式**|從不適合發行的結構描述清單中，卸除指定的結構描述。|  
@@ -53,7 +53,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|說明|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**schemaname**|**sysname**|這是不適合發行的結構描述名稱。|  
   
@@ -63,7 +63,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>備註  
  **sp_schemafilter**只應用於異類發行者。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  只有在散發者端的**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_schemafilter**。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9efad50aeb778c4cae01145fb39dd10a71c42ca0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 328f3bc8106cd499326cfce79430fef7886cd9b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413561"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688201"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>匯出至 Microsoft Word (報表產生器及 SSRS)
 
@@ -53,7 +53,7 @@ ms.locfileid: "66413561"
 ##  <a name="DocumentProperties"></a> 文件屬性  
  Word 轉譯器會將下列中繼資料寫入到 DOCX 檔。  
   
-|報表元素屬性|Description|  
+|報表元素屬性|描述|  
 |-------------------------------|-----------------|  
 |Report Title (report title)|Title|  
 |Report.Author|作者|  
@@ -72,9 +72,9 @@ ms.locfileid: "66413561"
   
  發生這種情形的原因是，Word 轉譯器剖析分頁相關之欄位 (例如 **PageNumber** 和 **TotalPages** ) 的報表時，只處理簡單參考，但不處理函數呼叫。 在此例中，運算式呼叫 **ToString** 函數。 下列兩個運算式是對等的，當您在報表產生器或報表設計師中預覽報表，或在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站或 SharePoint 文件庫中轉譯發行的報表時，這兩個運算式都會正確轉譯。 不過，Word 轉譯器只會成功剖析第二個運算式，轉譯正確的頁碼。  
   
--   **複雜運算式：**  運算式為 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **複雜運算式：** 運算式為 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **具有文字往返的運算式：** 文字 **Average Sales**、運算式  `=Avg(Fields!YTDPurchase.Value, "Sales)`、文字 **Page Number**和運算式 `=Globals!PageNumber`  
+-   **具有文字往返的運算式：** 文字 **Average Sales** 和運算式 `=Avg(Fields!YTDPurchase.Value, "Sales)`，以及文字 **Page Number** 和運算式 `=Globals!PageNumber`  
   
  為避免這個問題，當您在頁尾和頁首中使用運算式時，請使用多個文字往返來代替一個複雜運算式。 下列兩個運算式是對等的。 第一個是複雜運算式，而第二個使用文字往返。 Word 轉譯器僅成功剖析第二個運算式。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "66413561"
 > [!IMPORTANT]  
 >  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) 轉譯延伸模組已被取代。 如需詳細資訊，請參閱 [SQL Server 2016 中 SQL Server Reporting Services 已被取代的功能](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)。  
   
- Word 轉譯器與已安裝 Word、Excel 和 PowerPoint 之 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 相容性套件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 相容。 如需詳細資訊，請參閱 [Microsoft Office Word、Excel 及 PowerPoint 檔案格式相容性套件](https://www.microsoft.com/download/details.aspx?id=12439)。  
+ Word 轉譯器與已安裝 Word、Excel 和 PowerPoint 之 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 相容性套件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 相容。 如需詳細資訊，請參閱 [Microsoft Office Word、Excel 及 PowerPoint 檔案格式相容性套件](https://www.microsoft.com/download/details.aspx?id=1285)。
   
  與 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 相容的舊版 Word 轉譯延伸模組已重新命名為 Word 2003。 根據預設，只能使用 Word 轉譯延伸模組。 您必須更新 Reporting Services 組態檔，才能使用 Word 2003 轉譯延伸模組。 Word 2003 轉譯器會產生 **application/vnd.ms-word** 內容類型的檔案，而檔案的副檔名為 .doc。  
   

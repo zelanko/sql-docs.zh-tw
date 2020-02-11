@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b00205a02b1455ad49eb17970193bd6ee46f13c0
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759287"
 ---
 # <a name="sparse-columns-support-ole-db"></a>疏鬆資料行支援 (OLE DB)
@@ -37,27 +37,30 @@ ms.locfileid: "73759287"
  系統也已經加入兩個額外的結構描述資料列集。 這些資料列集與 DBSCHEMA_COLUMNS 的結構相同，但傳回不同的內容。 DBSCHEMA_COLUMNS_EXTENDED 會傳回所有資料行而不管 **column_set** 成員資格為何。 DBSCHEMA_SPARSE_COLUMN_SET 僅會傳回屬於疏鬆 **column_set** 成員的資料行。  
   
 ## <a name="ole-db-datatypecompatibility-behavior"></a>OLE DB DataTypeCompatibility 行為  
- **DataTypeCompatibility = 80** （在連接字串中）的行為與 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 用戶端一致，如下所示：  
+ **DataTypeCompatibility = 80** （在連接字串中）的行為與[!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]用戶端一致，如下所示：  
   
 -   您看不到新的結構描述資料列集，而且在結構描述資料列集中沒有它們的資料列。  
   
 -   您看不到 COLUMNS 資料列集中的新資料行。  
   
--   **column_set** 資料行不會設定 DBCOLUMNFLAGS_SS_ISCOLUMNSET。  
+-   
+  **column_set** 資料行不會設定 DBCOLUMNFLAGS_SS_ISCOLUMNSET。  
   
--   **column_set** 資料行會設定 DBCOMPUTEMODE_NOTCOMPUTED。  
+-   
+  **column_set** 資料行會設定 DBCOMPUTEMODE_NOTCOMPUTED。  
   
 ## <a name="ole-db-support-for-sparse-columns"></a>疏鬆資料行的 OLE DB 支援  
  下列 OLE DB 介面會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中修改以支援疏鬆資料行：  
   
-|類型或成員函數|說明|  
+|類型或成員函數|描述|  
 |-----------------------------|-----------------|  
-|IColumnsInfo::GetColumnsInfo|在 **dwFlags** 中，系統會設定 *column_set* 資料行的新 DBCOLUMNFLAGS 旗標值 DBCOLUMNFLAGS_SS_ISCOLUMNSET。<br /><br /> **column_set** 資料行會設定 DBCOLUMNFLAGS_WRITE。|  
+|IColumnsInfo::GetColumnsInfo|在 **dwFlags** 中，系統會設定 *column_set* 資料行的新 DBCOLUMNFLAGS 旗標值 DBCOLUMNFLAGS_SS_ISCOLUMNSET。<br /><br /> 
+  **column_set** 資料行會設定 DBCOLUMNFLAGS_WRITE。|  
 |IColumsRowset::GetColumnsRowset|在 DBCOLUMN_FLAGS 中，系統會設定 **column_set** 資料行的新 DBCOLUMNFLAGS 旗標值 DBCOLUMNFLAGS_SS_ISCOLUMNSET。<br /><br /> DBCOLUMN_COMPUTEMODE 會針對 **column_set** 資料行，設定為 DBCOMPUTEMODE_DYNAMIC。|  
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS 會傳回兩個新的資料行：SS_IS_COLUMN_SET 和 SS_IS_SPARSE。<br /><br /> DBSCHEMA_COLUMNS 僅會傳回不屬於 **column_set** 成員的資料行。<br /><br /> 系統已加入兩個新的結構描述資料列集：DBSCHEMA_COLUMNS_EXTENDED 將會傳回所有資料行，而不管 **column_set** 成員資格的疏鬆度。 DBSCHEMA_SPARSE_COLUMN_SET 僅會傳回屬於 **column_set** 成員的資料行。 這些新的資料列集與 DBSCHEMA_COLUMNS 的資料行和限制相同。|  
 |IDBSchemaRowset::GetSchemas|IDBSchemaRowset::GetSchemas 在可用結構描述資料列集的清單中，包含用於新資料列集 DBSCHEMA_COLUMNS_EXTENDED 和 DBSCHEMA_SPARSE_COLUMN_SET 的 GUID。|  
 |ICommand::Execute|如果使用 **select \* from** *table*，它會傳回不屬於疏鬆 **column_set** 成員的所有資料行，加上包含屬於疏鬆 **column_set** 成員之所有非 Null 資料行值的 XML 資料行 (如果有的話)。|  
-|IOpenRowset::OpenRowset|IOpenRowset：： OpenRowset 會傳回具有與 ICommand：： Execute 相同之資料行的資料列集，並在相同的資料表上使用**select \*** 查詢。|  
+|IOpenRowset::OpenRowset|IOpenRowset：： OpenRowset 會傳回具有與 ICommand：： Execute 相同之資料行的資料列集，並在相同的資料表上使用**select \* **查詢。|  
 |ITableDefinition|對於疏鬆資料行或 **column_set** 資料行的這個介面，則沒有任何變更。 需要修改結構描述的應用程式必須直接執行適當的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。|  
   
 ## <a name="see-also"></a>另請參閱  

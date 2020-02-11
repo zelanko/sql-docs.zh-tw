@@ -1,5 +1,5 @@
 ---
-title: RowPosition 屬性 (ADO) |Microsoft Docs
+title: RowPosition 屬性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,14 +20,14 @@ ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a333a2be2728f3c0b412246b0a793dae64096ae5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931225"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition 屬性 (ADO)
-取得或設定 OLE DB **RowPosition**物件上的往返**ADORecordsetConstruction**物件。 當您使用**put_RowPosition**來設定**RowPosition**物件，產生**資料錄集**物件會使用**RowPosition**物件判斷目前的資料列。  
+取得或設定在**ADORecordsetConstruction**物件上/的 OLE DB **RowPosition**物件。 當您使用**put_RowPosition**設定**RowPosition**物件時，產生的**記錄集**物件會使用**RowPosition**物件來判斷目前的資料列。  
   
  讀取/寫入  
   
@@ -40,16 +40,16 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
   
 ## <a name="parameters"></a>參數  
  *ppRowPos*  
- OLE DB 指標**RowPosition**物件。  
+ OLE DB **RowPosition**物件的指標。  
   
  *PRowPos*  
  OLE DB **RowPosition**物件。  
   
 ## <a name="return-values"></a>傳回值  
- 此屬性的方法會傳回標準的 HRESULT 值，包括 S_OK 和 E_FAIL。  
+ 這個屬性方法會傳回標準 HRESULT 值，包括 S_OK 和 E_FAIL。  
   
 ## <a name="remarks"></a>備註  
- 當這個屬性設定時，如果**資料列集**物件上**RowPosition**物件是從不同**資料列集**物件上**資料錄集**物件，前者會覆寫後者。 相同的行為套用至目前**一章**的**RowPosition**以及。  
+ 當設定這個屬性時，如果**RowPosition**物件上的資料列**集**物件與**記錄集**物件**上的資料列集物件**不同，前者會覆寫後者。 相同的行為也適用于**RowPosition**的目前**章節**。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [ADORecordsetConstruction 介面](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)

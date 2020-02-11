@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eac36b2aaaa5cd3b28d5476c760bab3152c460f2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73789608"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
@@ -35,7 +35,7 @@ ms.locfileid: "73789608"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  呼叫 [BCPDone](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) 方法之後，您就無法針對 **IBCPSession** 介面呼叫任何其他作業。 唯一的可能性是呼叫 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法來起始新的大量複製作業。 這就類似於呼叫 [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) 方法。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -64,7 +64,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  您應該使用 BCP，透過下列命令將這份資料新增回資料表中：  
   
- **bcp master..fltest in outfile.dat -n -T -S** *server*  
+ **bcp master.。在 outfile 中 master..fltest in outfile.dat-n-T S** *伺服器*  
   
  編譯此範例時，將會需要指定 sqlncli11.lib。  
   

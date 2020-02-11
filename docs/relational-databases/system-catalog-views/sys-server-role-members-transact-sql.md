@@ -1,5 +1,5 @@
 ---
-title: sys.server_role_members (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases server_role_members （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11f39b29817716799ec693d6161135010c35a233
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133030"
 ---
-# <a name="sysserverrolemembers-transact-sql"></a>sys.server_role_members (Transact-SQL)
+# <a name="sysserver_role_members-transact-sql"></a>sys.server_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   針對每個固定和使用者定義伺服器角色的每個成員，各傳回一個資料列。  
@@ -37,10 +37,10 @@ ms.locfileid: "68133030"
 |**role_principal_id**|**int**|角色的伺服器主體識別碼。|  
 |**member_principal_id**|**int**|成員的伺服器主體識別碼。|  
   
- 若要新增或移除伺服器角色成員資格，請使用[ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)陳述式。  
+ 若要加入或移除伺服器角色成員資格，請使用[ALTER SERVER role &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)語句。  
   
-## <a name="permissions"></a>Permissions  
- 登入可以檢視他們自己的伺服器角色成員資格，而且可以檢視的 principal_id 固定的伺服器角色的成員。 若要檢視所有的伺服器角色成員資格，需要**檢視 DEFINITION ON SERVER ROLE**權限或成員資格**securityadmin**固定的伺服器角色。  
+## <a name="permissions"></a>權限  
+ 登入可以查看自己的伺服器角色成員資格，而且可以查看固定伺服器角色成員的 principal_id。 若要查看所有伺服器角色成員資格，需要**伺服器角色許可權的 VIEW DEFINITION**或**securityadmin**固定伺服器角色中的成員資格。  
   
  如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
@@ -59,7 +59,7 @@ JOIN sys.server_principals AS member
   
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [安全性目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性目錄檢視](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [伺服器層級角色](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

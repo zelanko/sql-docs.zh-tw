@@ -18,10 +18,10 @@ ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4215cda5bfc82f0c6d195f336a1099309ab18154
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255645"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>為 DQS 記錄檔設定嚴重性層級
@@ -42,11 +42,11 @@ ms.locfileid: "75255645"
   
  藉由設定各種 DQS 活動和模組的嚴重性層級，您會針對各自 DQS 活動或模組來篩選想要記錄的資訊以及寫入 DQS 記錄檔的資訊。 例如，如果您將 DQS 活動的嚴重性層級設定為 **[警告]**，只會記錄與 DQS 活動相關之警告和更高嚴重性層級的訊息 (錯誤和嚴重錯誤)。  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_administrator 角色，才能設定記錄嚴重性設定。  
   
 ##  <a name="ConfigureActivity"></a>在活動層級設定嚴重性層級  
@@ -63,7 +63,7 @@ ms.locfileid: "75255645"
     > [!NOTE]  
     >  預設會針對每一個活動選取 **[錯誤]** 。 這表示，預設會針對每一個活動將錯誤和嚴重訊息寫入 DQS 記錄檔中。  
   
-5.  按一下 **關閉**。  
+5.  按一下 [關閉]  。  
   
 ##  <a name="ConfigureModule"></a>設定模組層級的嚴重性等級（Advanced）  
  
@@ -89,7 +89,7 @@ ms.locfileid: "75255645"
   
 4.  必要時針對其他模組重複步驟 2 和 3。 您也可以在方格中加入或刪除資料列，方法是按一下 **[加入模組]** 和 **[移除模組]** 圖示。  
   
-5.  按一下 **關閉**。  
+5.  按一下 [關閉]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 DQS 記錄檔的進階設定](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  

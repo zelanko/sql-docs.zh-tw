@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 56ddfce4fc1812e99870c22eeb0e15be64c5decb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245628"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>SharePoint 模式的 Reporting Services 之硬體和軟體需求
@@ -27,9 +27,9 @@ ms.locfileid: "75245628"
   
 -   [Power View 需求](#bkmk_powerview)  
   
--   [詳細資訊](#bkmk_more_information)  
+-   [其他資訊](#bkmk_more_information)  
   
-##  <a name="bkmk_prereq"></a>要求  
+##  <a name="bkmk_prereq"></a> 必要條件  
   
 -   若為本機安裝，在 SharePoint 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝時登入的帳戶必須是本機作業系統中系統管理員群組的成員。 安裝程式帳戶不必是 SharePoint 伺服器陣列管理員群組的成員。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "75245628"
  請檢閱 Office.Microsoft.com 上最新的 [Power View 文件集](https://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) 。 
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 是 Microsoft Excel 2013 的一項功能，而且屬於適用於 Microsoft SharePoint Server 2010 和 2013 Enterprise 版之 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services 增益集的一部分。  
   
-##  <a name="bkmk_more_information"></a>詳細資訊
+##  <a name="bkmk_more_information"></a> 其他資訊
 
  如需 SharePoint 變更的相關資訊，請參閱[從 sharepoint 2010 變更為 sharepoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) （https://technet.microsoft.com/library/ff607742(office.15).aspx)。  
   

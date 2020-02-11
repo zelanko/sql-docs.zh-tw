@@ -2,7 +2,7 @@
 title: 設定 SQL Server 升級的重新執行
 description: 設定資料庫測試助理的 Distributed Replay
 ms.custom: seo-lt-2019
-ms.date: 11/21/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 2ef570f531bcd37a2a5f7be1f3a900c4b8a4c112
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.openlocfilehash: ae7c3c2a987d9fb048c1c3fa494978626abce06a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74317731"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761532"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>設定資料庫測試助理的 Distributed Replay
 
@@ -48,10 +48,12 @@ Distributed Replay 要求您在電腦之間使用共同的帳戶。 基於這項
 3. 開啟 services.msc，並移至**SQL Server Distributed Replay 控制器**服務。
 4. 以滑鼠右鍵按一下服務，然後選取 [**屬性**]。 將服務帳戶設定為在網路中控制器和用戶端電腦通用的帳戶。
 5. 選取 **[確定]** 以關閉 [**屬性**] 視窗。
-6. 從 services.msc 重新開機**SQL Server Distributed Replay 控制器**服務。 您也可以在命令列中執行下列命令，以重新開機服務：<br/>
-   `NET STOP "SQL Server Distributed Replay Controller"`<br/>
+6. 從 services.msc 重新開機**SQL Server Distributed Replay 控制器**服務。 您也可以在命令列中執行下列命令，以重新開機服務：
+
+   `NET STOP "SQL Server Distributed Replay Controller"`</br>
    `NET START "SQL Server Distributed Replay Controller"`
-7. 如需更多設定選項，請參閱[Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay)。
+
+如需更多設定選項，請參閱[Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay)。
 
 ## <a name="configure-dcom"></a>設定 DCOM
 
@@ -68,9 +70,10 @@ Distributed Replay 要求您在電腦之間使用共同的帳戶。 基於這項
 9. 新增即將開始重新執行的使用者。 授與使用者本機存取權限。 如果使用者打算從遠端存取控制器服務，請授與使用者遠端存取許可權。
 10. 選取 **[確定]** 以認可變更並返回 [**安全性**] 索引標籤。
 11. 選取 **[確定]** 以認可變更。
-12. 從 services.msc 重新開機 SQL Server Distributed Replay 控制器服務。 您也可以在命令列中執行下列命令，以重新開機服務：<br/>
-   `NET STOP "SQL Server Distributed Replay Controller"`<br/>
-   `NET START "SQL Server Distributed Replay Controller"`
+12. 從 services.msc 重新開機 SQL Server Distributed Replay 控制器服務。 您也可以在命令列中執行下列命令，以重新開機服務：
+
+    `NET STOP "SQL Server Distributed Replay Controller"`</br>
+    `NET START "SQL Server Distributed Replay Controller"`
 
 ## <a name="set-up-the-client-service"></a>設定用戶端服務
 
@@ -81,12 +84,16 @@ Distributed Replay 要求您在電腦之間使用共同的帳戶。 基於這項
 3. 以滑鼠右鍵按一下服務，然後選取 [**屬性**]。 將服務帳戶設定為網路中控制器和用戶端電腦通用的帳戶。
 4. 選取 **[確定]** 以關閉 [**屬性**] 視窗。 如果您略過 [SQL Server 安裝程式] 步驟來設定 Distributed Replay 用戶端，您可以透過設定檔進行設定。 在一般安裝中，設定檔位於 C:\Program Files （x86） \Microsoft SQL Server\<版本 \Tools\DReplayClient\DReplayClient.config.\>
 5. 請確定 Dreplayclient.exe 檔案包含控制器電腦的名稱，做為註冊的控制器。
-6. 從 services.msc 重新開機 SQL Server Distributed Replay 用戶端服務。 您也可以從命令列執行下列命令，以重新開機服務：<br/>
-    `NET STOP "SQL Server Distributed Replay Client"`<br/>
+6. 從 services.msc 重新開機 SQL Server Distributed Replay 用戶端服務。 您也可以從命令列執行下列命令，以重新開機服務：
+
+    `NET STOP "SQL Server Distributed Replay Client"`</br>
     `NET START "SQL Server Distributed Replay Client"`
-7. Distributed Replay 控制器記錄檔位於 C:\Program Files （x86） \Microsoft SQL Server\<版本 \Tools\DReplayClient\Log.\> 這些記錄會指出用戶端是否可以向控制器註冊其本身。
-8. 如果設定成功，記錄檔會顯示「已向控制器註冊 <控制器名稱\>」的訊息。
-9. 如需更多設定選項，請參閱[Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay)。
+
+    Distributed Replay 控制器記錄檔位於 C:\Program Files （x86） \Microsoft SQL Server\<版本 \Tools\DReplayClient\Log.\> 這些記錄會指出用戶端是否可以向控制器註冊其本身。
+
+    如果設定成功，記錄檔會顯示**已向控制器註冊的訊息 <控制器名稱\>**。
+
+如需更多設定選項，請參閱[Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay)。
 
 ## <a name="set-up-distributed-replay-administration-tools"></a>設定 Distributed Replay 管理工具
 

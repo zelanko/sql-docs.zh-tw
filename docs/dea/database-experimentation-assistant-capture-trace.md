@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 999fd3f6caca13ecd768a9560915c53c732af27c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258528"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831539"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>在資料庫測試助理中捕捉追蹤
 
@@ -125,7 +125,7 @@ SQL Server 中的查詢快取可能會影響評估結果。 我們建議您重�
 
 **問：我可以收集 XEvents 而不是追蹤，我可以重新執行 XEvents 嗎？**
 
-可以。 DEA 支援 XEvents。 下載最新版本的 DEA，並試試看。
+是。 DEA 支援 XEvents。 下載最新版本的 DEA，並試試看。
 
 ## <a name="troubleshoot-trace-captures"></a>疑難排解追蹤捕獲
 
@@ -133,7 +133,7 @@ SQL Server 中的查詢快取可能會影響評估結果。 我們建議您重�
 
 - 執行 SQL Server 的電腦名稱稱是有效的。 若要確認，請使用 SQL Server Management Studio （SSMS）嘗試連接到執行 SQL Server 的電腦。
 - 您的防火牆設定不會封鎖與執行 SQL Server 之電腦的連線。
-- 使用者具有 [blog 張貼重新執行][常見問題](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)中所列的許可權。
+- 使用者具有 [重新執行][常見問題](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay)中所列的許可權。
 - 追蹤名稱不會遵循標準變換慣例（Capture\_1）。 相反地，請嘗試追蹤名稱\_，例如 Capture 1A 或 Capture1。
 
 以下是您可能會看到的一些可能的錯誤，以及解決這些問題的解決方案：

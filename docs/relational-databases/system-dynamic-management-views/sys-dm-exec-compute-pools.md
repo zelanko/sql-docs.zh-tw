@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: d749b9a7d9689426bffafe20ee7ab46ce199ffbb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254606"
 ---
 # <a name="sysdm_exec_compute_pools-transact-sql"></a>sys.databases dm_exec_compute_pools （Transact-sql）
@@ -31,7 +31,7 @@ ms.locfileid: "75254606"
 
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|name|`sysname`|計算集區的名稱。 不可為 Null。 `default`傳回預設計算集區的。 |
+|NAME|`sysname`|計算集區的名稱。 不可為 Null。 `default`傳回預設計算集區的。 |
 |compute_pool_id|`int`|集區的唯一識別碼。 此視圖的索引鍵。|  
 |location|`sysname`|SQL Big 資料叢集中的控制器端點。 不可為 Null。 |
 

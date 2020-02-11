@@ -1,5 +1,5 @@
 ---
-title: ADO 事件具現化的語言 |Microsoft Docs
+title: 依語言的 ADO 事件具現化 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,18 +14,18 @@ ms.assetid: eded7e8c-a25f-46a6-bc2b-32d89a54d1bc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2881ca390aebc18cf5e80b390591c81a575c8de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926171"
 ---
 # <a name="ado-event-instantiation-by-language"></a>ADO 事件具現化 (依語言)
-每個程式語言會以不同的方式建立 ADO 事件的執行個體。 所有下列的範例中建立**ConnectComplete**事件處理常式。  
+每種程式設計語言都會以不同的方式建立 ADO 事件的實例。 下列所有範例都會建立**ConnectComplete**事件處理常式。  
   
 -   [Visual Basic](../../../ado/guide/data/ado-event-instantiation-visual-basic.md)  
   
--   [視覺化C++](../../../ado/guide/data/ado-event-instantiation-visual-c.md)  
+-   [Visual C++](../../../ado/guide/data/ado-event-instantiation-visual-c.md)  
   
 -   [VBScript](../../../ado/guide/data/ado-event-instantiation-vbscript.md)  
   

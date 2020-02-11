@@ -10,10 +10,10 @@ ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: b718cd04b5c6133d931a9bea03de0a78ebc7a886
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258838"
 ---
 # <a name="building-a-knowledge-base"></a>建立知識庫
@@ -39,7 +39,7 @@ ms.locfileid: "75258838"
 |工作描述|主題|  
 |----------------------|-----------|  
 |將知識匯入知識庫或是從知識庫匯出知識。|[匯入和匯出知識](../data-quality-services/importing-and-exporting-knowledge.md)|  
-|建立單一定義域，並將知識加入至定義域。|[管理網域](../data-quality-services/managing-a-domain.md)|  
+|建立單一定義域，並將知識加入至定義域。|[管理定義域](../data-quality-services/managing-a-domain.md)|  
 |建立複合定義域，並將知識加入至定義域。|[管理複合定義域](../data-quality-services/managing-a-composite-domain.md)|  
   
   

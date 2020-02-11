@@ -16,16 +16,16 @@ ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0245d492b7014b2dfc0097a9d3f2c9a7098eae51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925351"
 ---
 # <a name="examining-data"></a>檢查資料
-[取得資料](../../../ado/guide/data/getting-data.md)一節說明如何從資料來源擷取資料，做為一或多個**資料錄集**物件。 本節將討論**Recordset**的詳細資料，包括如何瀏覽**資料錄集**並檢視其資料。  
+[取得資料](../../../ado/guide/data/getting-data.md)一節說明如何以一或多個**記錄集**物件的形式，從資料來源中取出資料。 本節將更詳細地討論**記錄集**，包括如何流覽**記錄集**並查看其資料。  
   
- **資料錄集**支援各種[屬性和方法](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)供您瀏覽，以及檢查內含的資料。 這些功能會提供者而不同。 某些提供者可能不支援某些屬性或方法。  
+ **記錄集**支援各種[屬性和方法](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)，可讓您流覽及檢查中所包含的資料。 這些功能與提供者相關。 某些提供者可能不支援某些屬性或方法。  
   
  此章節包含下列主題。  
   

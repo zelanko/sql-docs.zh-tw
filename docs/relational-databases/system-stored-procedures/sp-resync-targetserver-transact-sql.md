@@ -1,5 +1,5 @@
 ---
-title: sp_resync_targetserver (TRANSACT-SQL) |Microsoft Docs
+title: sp_resync_targetserver （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 20eab8076d88941080898a21cb0d82cc1c667359
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67995483"
 ---
-# <a name="spresynctargetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
+# <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   重新同步處理指定目標伺服器中的所有多伺服器作業。  
@@ -40,19 +40,19 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @server_name = ] 'server'` 若要重新同步處理伺服器的名稱。 *server* 是 **sysname**，沒有預設值。 如果**所有**指定，則所有目標伺服器會重新同步都處理。  
+`[ @server_name = ] 'server'`要重新同步處理的伺服器名稱。 *伺服器*是**sysname**，沒有預設值。 如果指定**all** ，則會重新同步處理所有目標伺服器。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 報告的結果**sp_post_msx_operation**動作。  
+ 報告**sp_post_msx_operation**動作的結果。  
   
 ## <a name="remarks"></a>備註  
- **sp_resync_targetserver**會刪除目前的目標伺服器的指示集，並公佈一組新的目標伺服器下載。 這組新的指示由刪除所有多伺服器作業的指示所組成，後面接著目前鎖定這部目標伺服器的每項作業的插入動作。  
+ **sp_resync_targetserver**會刪除目標伺服器目前的指示集，並張貼新的集合供目標伺服器下載。 這組新的指示由刪除所有多伺服器作業的指示所組成，後面接著目前鎖定這部目標伺服器的每項作業的插入動作。  
   
-## <a name="permissions"></a>Permissions  
- 這個程序的執行權限預設會授與 **系統管理員 (sysadmin)** 固定伺服器角色的成員。  
+## <a name="permissions"></a>權限  
+ 執行此程式的許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
  下列範例會重新同步處理 `SEATTLE1` 目標伺服器。  
@@ -67,8 +67,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_help_downloadlist &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)   
- [sp_post_msx_operation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)   
+ [sp_help_downloadlist &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)   
+ [sp_post_msx_operation &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

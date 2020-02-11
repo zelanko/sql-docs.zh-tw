@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f832c4b55c8a039de440b08e6d2ed3350175e2a6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75231805"
 ---
 # <a name="installing-sql-server-native-client"></a>安裝 SQL Server Native Client
@@ -67,6 +67,6 @@ ms.locfileid: "75231805"
   
 ## <a name="see-also"></a>另請參閱  
  [使用 SQL Server Native Client 建立應用程式](installing-sql-server-native-client.md)   
- [安裝 how to 主題](../../../sql-server/install/installation-how-to-topics.md)  
+ [安裝的使用說明主題](../../../sql-server/install/installation-how-to-topics.md)  
   
   

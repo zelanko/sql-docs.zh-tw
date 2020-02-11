@@ -15,21 +15,21 @@ ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43004601845d3032d404c308b7b1fa4850f694ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022204"
 ---
 # <a name="using-concise-functions"></a>使用精簡函式
-有些 ODBC 函式隱含存取描述元。 應用程式撰寫者可能會發現它們比呼叫更方便**SQLSetDescField**或是**SQLGetDescField**。 這些函式會呼叫*精簡*函式，因為它們執行數項功能，包括設定或取得描述項欄位。 某些精簡函式可讓應用程式設定或擷取單一函式呼叫中的數個相關的描述項欄位。  
+某些 ODBC 函式會取得描述項的隱含存取權。 應用程式寫入器可能會發現它們比呼叫**SQLSetDescField**或**SQLGetDescField**更方便。 這些函數稱為精簡函式，因為它們會執行*一些函數，* 包括設定或取得描述項欄位。 某些精簡的函式可讓應用程式在單一函式呼叫中設定或抓取數個相關的描述項欄位。  
   
- 精簡函式可以呼叫未先擷取做為引數的描述項控制代碼。 這些函式使用的描述項欄位相關聯的陳述式控制代碼上呼叫。  
+ 在不先抓取描述項控制碼做為引數使用的情況下，可以呼叫精簡的函式。 這些函式會使用與語句控制碼相關聯的描述項欄位，其會在其上呼叫。  
   
- 精簡函式**SQLBindCol**並**SQLBindParameter**繫結的資料行或參數對應的描述項欄位設為其引數。 所有這些函式會執行更多的工作比只要設定描述元。 **SQLBindCol**並**SQLBindParameter**提供完整的資料行或動態參數繫結的規格。 應用程式可以不過，藉由呼叫變更繫結的個別詳細資料**SQLSetDescField**或是**SQLSetDescRec**和可以藉由提出適合呼叫的一系列完整地結合資料行或參數這些函式。  
+ 精簡的函式**SQLBindCol**和**SQLBindParameter**會藉由設定對應至其引數的描述項欄位來系結資料行或參數。 這些函式中的每一個都會執行比單純設定描述項更多的工作。 **SQLBindCol**和**SQLBindParameter**提供資料行或動態參數之系結的完整規格。 不過，應用程式可以藉由呼叫**SQLSetDescField**或**SQLSetDescRec**來變更系結的個別詳細資料，而且可以藉由對這些函式進行一系列適當的呼叫，來完全綁定資料行或參數。  
   
- 精簡函式**SQLColAttribute**， **SQLDescribeCol**， **SQLDescribeParam**， **SQLNumParams**，和**SQLNumResultCols**擷取描述項欄位中的值。  
+ 精簡的函數**SQLColAttribute**、 **SQLDescribeCol**、 **SQLDescribeParam**、 **SQLNumParams**和**SQLNumResultCols**會抓取描述項欄位中的值。  
   
- **SQLSetDescRec**並**SQLGetDescRec**是精簡的函式，一次呼叫，以設定或取得多個會影響到儲存體的資料行或參數的資料與資料類型的描述項欄位。 **SQLSetDescRec**是要變更的資料行或參數的資料，在一個步驟中的繫結的有效方式。  
+ **SQLSetDescRec**和**SQLGetDescRec**是精簡的函式，其中包含一個呼叫、設定或取得會影響資料行或參數資料之資料類型和儲存區的多個描述項欄位。 **SQLSetDescRec**是一種有效的方法，可以在一個步驟中變更資料行或參數資料的系結。  
   
- **SQLSetStmtAttr**並**SQLGetStmtAttr**做為在某些情況下的精簡函式。 (請參閱[描述項欄位](../../../odbc/reference/develop-app/descriptor-fields.md)。)
+ 在某些情況下， **SQLSetStmtAttr**和**SQLGetStmtAttr**會當做精簡的功能來提供。 （請參閱[描述項欄位](../../../odbc/reference/develop-app/descriptor-fields.md)）。

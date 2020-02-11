@@ -13,14 +13,14 @@ ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29ad7f3aa9347af77080b04fb309f8b50b95dbe4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925870"
 ---
 # <a name="command-object-parameters"></a>Command 物件參數
-先前所討論的主題[建立和執行簡單的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)。 針對使用更有趣[命令](../../../ado/reference/ado-api/command-object-ado.md)物件會顯示在下一個範例中，在其中具有已參數化 SQL 命令。 這項修改讓您能夠重複使用的命令，在不同的值中的參數每次的傳遞。 因為[備妥屬性](../../../ado/reference/ado-api/prepared-property-ado.md)屬性上的**命令**物件設定為**true**，ADO 需要編譯命令中指定的提供者[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)再執行第一次。 它也會保留在記憶體中已編譯的命令。 這會執行的命令稍微因為準備，但每次之後呼叫此命令時獲得效能的結果所需的額外負荷而執行的第一次。 因此，將會用一次以上時，才應該準備命令。  
+上一個主題討論了如何[建立和執行簡單的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)。 下一個範例會顯示更有趣的[命令](../../../ado/reference/ado-api/command-object-ado.md)物件用法，其中 SQL 命令已參數化。 這項修改可讓您重複使用命令，每次傳遞不同的參數值。 因為**命令**物件上的 [備妥的[屬性](../../../ado/reference/ado-api/prepared-property-ado.md)] 屬性設定為**true**，所以 ADO 會要求提供者先編譯[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)中指定的命令，然後才第一次執行。 它也會將已編譯的命令保留在記憶體中。 這會在第一次執行命令時稍微減緩執行，因為準備它需要額外負荷，但是之後每次呼叫命令時，效能就會提升。 因此，只有在使用超過一次的情況下，才應該準備命令。  
   
 ```  
 'BeginManualParamCmd  
@@ -118,4 +118,4 @@ End Function
 'EndNewConnection  
 ```  
   
- 並非所有提供者支援準備的命令。 如果提供者不支援命令準備，它就可能會傳回錯誤，因為這個屬性設定為 **，則為 True**。 如果它不會傳回錯誤，它會略過準備的命令並將設定要求**已準備**屬性設**false**。
+ 並非所有提供者都支援備妥的命令。 如果提供者不支援命令準備，則一旦此屬性設定為**True**時，可能會傳回錯誤。 如果未傳回錯誤，則會忽略準備命令的要求，並將**備**妥的屬性設定為**false**。

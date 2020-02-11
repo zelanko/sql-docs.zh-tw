@@ -1,5 +1,5 @@
 ---
-title: AppendChunk 和 GetChunk 方法範例 （VC + +） |Microsoft Docs
+title: AppendChunk 和 GetChunk 方法範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51aa99be-d5ca-46ac-8b3f-1b03ce4f0b2a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e68bbb558a3cc7fef9428fd63a4fecc4881c997d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 991c295f5437d16ed10aafeacf184722046941a8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920613"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76922556"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vc"></a>AppendChunk 和 GetChunk 方法範例 (VC++)
-這個範例會使用[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)並[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)方法，以從另一筆記錄的資料填入影像欄位。  
+這個範例會使用[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)和[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)方法，將另一筆記錄中的資料填入影像欄位。  
   
 ```  
 // BeginAppendChunkCpp.cpp  
@@ -183,7 +183,7 @@ void AppendChunkX() {
       while (lngOffSet < lngLogoSize) {  
          varChunk = pRstPubInfo->Fields->Item["logo"]->GetChunk(ChunkSize);  
   
-         // Copy the data only upto the Actual Size of Field.    
+         // Copy the data only up to the Actual Size of Field.    
          for (long index = 0 ; index <= (ChunkSize - 1) ; index++) {  
             hr = SafeArrayGetElement(varChunk.parray, &index, &chData);  
             if (SUCCEEDED(hr)) {  
@@ -266,6 +266,6 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [AppendChunk 方法 (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
+ [AppendChunk 方法（ADO）](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
  [GetChunk 方法 (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)

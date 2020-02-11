@@ -1,11 +1,7 @@
 ---
-title: 如何：使用結構描述比較來比較不同的資料庫定義 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 使用結構描述比較，比較不同的資料庫定義
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.schemacompare.SchemaCompareOptionsDialog
@@ -16,14 +12,19 @@ f1_keywords:
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce83808ac5953902f8f655c619f87feeffa4e8c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: f31d543906e4bfedb16e412be703ebc8cd797a04
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097507"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226845"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>如何：使用結構描述比較，比較不同的資料庫定義
+
 SQL Server Data Tools (SSDT) 包含結構描述比較公用程式，可讓您用來比較兩項資料庫定義。  比較的來源與目標可以是下列項目的任意組合：連接的資料庫、SQL Server 資料庫專案或快照集，或是 .dacpac 檔案。  比較的結果會顯示為必須對目標採取的一組動作，以讓目標能與來源相同。  比較完成之後，您就可以直接更新目標 (若目標為專案或資料庫) 或產生具有相同效果的更新指令碼。  
   
 來源與目標之間的差異會顯示在方格中以方便檢閱。  您可以由結果方格或指令碼表單中向內切入，檢閱每項差異。  接著還可選擇性地排除特定差異。  

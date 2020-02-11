@@ -33,21 +33,21 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a71a5c756953c6b70e51422b5c1032b117eb7785
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246714"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 大量載入物件模型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 大量載入物件模型是由 sqlxmlbulkload.sqlxmlbulkload.4.0 物件所組成。 這個物件支援下列方法和屬性。  
   
-## <a name="methods"></a>Methods  
+## <a name="methods"></a>方法  
  執行  
  使用當做參數提供的結構描述檔案和資料檔案 (或資料流) 大量載入資料。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>屬性  
  BulkLoad  
  指定是否應該執行大量載入。 如果您只想要產生架構（請參閱後面的 SchemaGen、SGDropTables 和 SGUseID 屬性），而不是執行大量載入，這個屬性就很有用。 這是布林屬性。 當屬性設定為 TRUE 時，XML 大量載入會執行。 設定為 FALSE 時，XML 大量載入則不會執行。  
   

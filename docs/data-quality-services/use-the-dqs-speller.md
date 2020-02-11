@@ -10,10 +10,10 @@ ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 087d7c7636b456e9cba07eb16abdd135abb43c4e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257752"
 ---
 # <a name="use-the-dqs-speller"></a>使用 DQS 拼字檢查
@@ -34,14 +34,14 @@ ms.locfileid: "75257752"
   
  拼字檢查只適用於包含字串資料類型的單一定義域。 單一定義域中具有字串資料類型的所有值都會傳送給拼字檢查進行驗證。 拼字檢查不適用於複合定義域，也不適用於字串、混合值 (例如不含空格的字母和數字)、羅馬數字、單一字元及只包含大寫字母之值的類型以外的定義域。  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a>要求  
+###  <a name="Prerequisites"></a> 必要條件  
  若要執行拼字檢查，您必須已在 [知識探索] 或 [定義域管理] 活動中開啟知識庫和定義域；此定義域以及您執行所在的頁面上必須啟用拼字檢查；也必須針對定義域指定語言屬性。  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能執行拼字檢查。  
   
 ##  <a name="Enable"></a>啟用拼寫器  

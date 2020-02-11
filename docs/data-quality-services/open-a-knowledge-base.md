@@ -12,10 +12,10 @@ ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 91f5e7effe54b9955537d90d639a820b5428a5c3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246013"
 ---
 # <a name="open-a-knowledge-base"></a>開啟知識庫
@@ -24,14 +24,14 @@ ms.locfileid: "75246013"
 
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中開啟現有的知識庫，並預備此知識庫進行定義域管理、知識探索或是加入比對原則。  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a>要求  
+###  <a name="Prerequisites"></a> 必要條件  
  若要開啟知識庫，必須已建立該知識庫，而且它必須已發行 (如果是由另一個人建立) 或關閉 (如果是由您建立)。  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能開啟知識庫。  
   
 ##  <a name="Open"></a>開啟知識庫  
@@ -53,7 +53,7 @@ ms.locfileid: "75246013"
   
     -   選取 **[比對原則]** 建立比對原則，並將其加入至知識庫。  
   
-5.  按一下 [開啟]****。  
+5.  按一下 **[開啟]** 。  
   
     > [!NOTE]  
     >  若要開啟知識庫，您也可以在知識庫上按一下滑鼠右鍵，然後按一下 [開啟]。 內容功能表中的其他命令可讓您以另一個名稱儲存、解除鎖定、捨棄工作、重新命名或顯示其屬性。  

@@ -14,10 +14,10 @@ ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 6edcf577b7783662a02efc3531ac02c2535ef078
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245421"
 ---
 # <a name="manage-dqs-log-files"></a>管理 DQS 記錄檔
@@ -78,14 +78,14 @@ ms.locfileid: "75245421"
   [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] 元件記錄檔位於 %APPDATA%\SSDQS\Log。 
   [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] 記錄檔包含與伺服器記錄檔類似的一組資訊，但適用於 [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)]。  
   
-##  <a name="RT"></a>相關工作  
+##  <a name="RT"></a> 相關工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|描述如何使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]來設定 DQS 記錄檔的記錄嚴重性設定。|[設定 DQS 記錄檔的嚴重性層級](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
+|描述如何使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]來設定 DQS 記錄檔的記錄嚴重性設定。|[為 DQS 記錄檔設定嚴重性層級](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
 |描述如何手動設定 DQS 記錄檔的進階設定。|[設定 DQS 記錄檔的進階設定](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [DQS 管理](../data-quality-services/dqs-administration.md)  
+ [dqs 管理](../data-quality-services/dqs-administration.md)  
   
   

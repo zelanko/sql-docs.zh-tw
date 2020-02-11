@@ -17,10 +17,10 @@ ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6c5c3c2573465072de0d1f0a7c08d47df5d387b6
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75321796"
 ---
 # <a name="sp_mschange_snapshot_agent_properties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "75321796"
 
   變更在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更新版本散發者上執行之快照集代理程式作業的屬性。 當發行者執行於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 的執行個體時，系統會利用這個預存程序來變更屬性。 這個預存程序執行於散發資料庫的散發者端。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [transact-sql 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -67,9 +67,9 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
 |值|描述|  
 |-----------|-----------------|  
-|**sha-1**|單次|  
+|**1**|單次|  
 |**2**|隨選|  
-|**4gb**|每天|  
+|**4**|每天|  
 |**8**|每週|  
 |**十大**|每月|  
 |**20**|每月，相對於頻率間隔|  
@@ -81,9 +81,9 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
 |值|描述|  
 |-----------|-----------------|  
-|**sha-1**|單次|  
+|**1**|單次|  
 |**2**|秒|  
-|**4gb**|分鐘|  
+|**4**|分鐘|  
 |**8**|小時|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`這是*frequency_subday*的間隔。 *frequency_subday_interval*是**int**，沒有預設值。  
@@ -142,6 +142,6 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  只有在散發者端的**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_MSchange_snapshot_agent_properties**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addpublication_snapshot &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)  
+ [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)  
   
   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80f8f63b4ddb3e8641ef503a615d57c63be35164
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243274"
 ---
 # <a name="start-the-sqlcmd-utility"></a>啟動 sqlcmd 公用程式
@@ -55,6 +55,6 @@ ms.locfileid: "75243274"
     >  輸入的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會儲存在緩衝區。 當遇到 GO 命令時，這些陳述式會當做批次來執行。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 sqlcmd 執行 Transact-sql 腳本檔案](sqlcmd-run-transact-sql-script-files.md)  
+ [使用 sqlcmd 執行 Transact-SQL 指令碼檔案](sqlcmd-run-transact-sql-script-files.md)  
   
   

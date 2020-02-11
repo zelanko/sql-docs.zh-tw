@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89db7def474b26ffd25da1495e3efaf0e1af43dd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232685"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>SSIS 教學課程：部署封裝
@@ -75,13 +75,13 @@ ms.locfileid: "75232685"
  **完成本教學課程的估計時間：** 2 小時  
   
 ## <a name="lessons-in-this-tutorial"></a>本教學課程中的課程  
- [第1課：準備建立部署配套](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
+ [第 1 課：準備建立部署配套](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
  在這一課中，您會建立一個新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，並且將封裝和其他必要檔案加入至專案中，以開始部署 ETL 方案。  
   
- [第2課：建立部署配套](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+ [第 2 課：建立部署配套](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
  在這一課中，您會建立部署公用程式，並且確認部署配套包含所有必要的檔案。  
   
- [第3課：安裝封裝](../integration-services/lesson-3-install-ssis-package.md)  
+ [第 3 課：安裝封裝](../integration-services/lesson-3-install-ssis-package.md)  
  在這一課中，您會將部署配套複製到目標電腦上、安裝封裝，然後執行封裝。  
   
 ![Integration Services 圖示（小型）](media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  

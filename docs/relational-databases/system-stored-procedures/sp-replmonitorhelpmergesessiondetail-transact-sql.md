@@ -17,10 +17,10 @@ ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b5e29916d4dc8419311c9639cc5321b1cf391940
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75321616"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "75321616"
 
   傳回有關用來監視合併式複寫之特定複寫合併代理程式工作階段的詳細發行項層級資訊。 結果集包含在工作階段期間同步處理的每個發行項各一個詳細資料列。 同時也包含代表工作階段初始化的一個資料列，以及摘要工作階段之上傳和下載階段的資料列。 這個預存程序執行於散發資料庫的散發者端，或訂閱資料庫的訂閱者端。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [transact-sql 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,12 +46,12 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |-----------------|---------------|-----------------|  
 |**PhaseID**|**int**|這是同步處理工作階段的階段，它可以是下列其中一項：<br /><br /> **0** = 初始化或摘要資料列<br /><br /> **1** = 上傳<br /><br /> **2** = 下載|  
 |**ArticleName**|**sysname**|這是正在同步處理的發行項名稱。 **ArticleName**也包含結果集中不代表發行項詳細資料之資料列的摘要資訊。|  
-|**百分比**|**十**|針對目前執行中或已失敗的工作階段，指出套用在給定發行項詳細資料列的總變更量之百分比。|  
-|**RelativeCost**|**十**|指出同步處理發行項所花的時間，相當於該工作階段同步處理總時間的百分比。|  
-|**期限**|**int**|代理程式工作階段的長度。|  
-|**插入**|**int**|工作階段中的插入數。|  
-|**Update**|**int**|工作階段中的更新數。|  
-|**刪除**|**int**|工作階段中的刪除數。|  
+|**百分比**|**decimal**|針對目前執行中或已失敗的工作階段，指出套用在給定發行項詳細資料列的總變更量之百分比。|  
+|**RelativeCost**|**decimal**|指出同步處理發行項所花的時間，相當於該工作階段同步處理總時間的百分比。|  
+|**有效期間**|**int**|代理程式工作階段的長度。|  
+|**Inserts**|**int**|工作階段中的插入數。|  
+|**更新**|**int**|工作階段中的更新數。|  
+|**Deletes**|**int**|工作階段中的刪除數。|  
 |**衝突**|**int**|工作階段所發生的衝突數。|  
 |**錯誤識別碼**|**int**|工作階段錯誤的識別碼。|  
 |**SeqNo**|**int**|結果集中的工作階段順序。|  

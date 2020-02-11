@@ -31,10 +31,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0d61f3262d68bcc14abc6b03f83c53ed3a8ba95
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232085"
 ---
 # <a name="database-lifecycle-management"></a>資料庫生命週期管理
@@ -48,6 +48,6 @@ ms.locfileid: "75232085"
  [Azure 首頁](https://www.windowsazure.com/)   
  [Azure 開發人員中心](https://www.windowsazure.com/develop/overview/)   
  [Azure 管理中心](https://www.windowsazure.com/manage/overview/)   
- [Azure 小組 Blog](https://www.windowsazure.com/community/blog/)   
+ [Azure 團隊部落格](https://www.windowsazure.com/community/blog/)   
  [Azure 支援選項](https://www.windowsazure.com/support/contact/)  
   

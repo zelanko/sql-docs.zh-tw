@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1883e88b03b205a2fb272a7cb890c79c607b29fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232299"
 ---
 # <a name="creating-an-assembly"></a>建立組件
@@ -137,6 +137,6 @@ WITH PERMISSION_SET = UNSAFE;
  [改變元件](altering-an-assembly.md)   
  [卸載元件](dropping-an-assembly.md)   
  [CLR 整合代碼啟用安全性](../security/clr-integration-code-access-security.md)   
- [可信任的資料庫屬性](../../security/trustworthy-database-property.md)   
+ [TRUSTWORTHY 資料庫屬性](../../security/trustworthy-database-property.md)   
  [允許部分信任的呼叫端](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
   

@@ -9,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/15/2019
-ms.openlocfilehash: 3305e682f6ccbbee4ac9710e29ae522eb7339910
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: a5f9e9b52186a2d4569ac30a591ae95acfa36101
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241206"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75656585"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>比較不同 Microsoft 環境中的商業智慧功能
 
@@ -60,7 +60,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 商業智慧可
 
  **<sup>1</sup>**  [Microsoft Power BI](https://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba)。  
   
- **<sup>2</sup>**  [以 PowerPivot 活頁簿做為資料來源](https://blogs.technet.com/b/excel_services__powerpivot_for_sharepoint_support_blog/archive/2013/02/15/powerpivot-workbook-as-a-data-source.aspx)  
+ **<sup>2</sup>**  [以 PowerPivot 活頁簿做為資料來源](https://support.office.com/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-A9C2C6E2-CC49-4976-A7D7-40896795D045)  
   
  **<sup>3</sup>**  [跨商業智慧（BI）工具](https://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx)的行動支援和[規劃 Reporting Services 和 Power View 瀏覽器支援（Reporting Services 2014）](https://msdn.microsoft.com/library/ms156511.aspx)。  
   

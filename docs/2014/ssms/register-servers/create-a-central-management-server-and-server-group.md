@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 17c1e63789e9c2069d8fdecd8bd62b64bf8a886d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244664"
 ---
 # <a name="create-a-central-management-server-and-server-group-sql-server-management-studio"></a>建立中央管理伺服器與伺服器群組 (SQL Server Management Studio)
@@ -26,26 +26,26 @@ ms.locfileid: "75244664"
 >  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本無法指定為中央管理伺服器。  
   
- **本主題中的**  
+ **本主題內容**  
   
 -   **開始之前：**  
   
-     [安全級](#Security)  
+     [安全性](#Security)  
   
 -   **若要建立中央管理伺服器和伺服器群組，請使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
  msdb 資料庫中的兩個資料庫角色會授與中央管理伺服器的存取權。 只有 ServerGroupAdministratorRole 角色的成員可以管理中央管理伺服器。 您需要 ServerGroupReaderRole 角色的成員資格才能連接至中央管理伺服器。  
   
  由於中央管理伺服器所維護的連接會在使用者的內容中執行，所以使用 Windows 驗證時，已註冊之伺服器上的有效權限可能會不同。 例如，雖然使用者可能是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A 執行個體上系統管理員 (sysadmin) 固定伺服器角色的成員，但是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B 執行個體上具有有限的權限。  
   
-##  <a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  下列程序描述如何執行下列步驟。  
   
 1.  建立中央管理伺服器。  
@@ -54,7 +54,7 @@ ms.locfileid: "75244664"
   
 #### <a name="create-a-central-management-server"></a>建立中央管理伺服器  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **[檢視]** 功能表中，按一下 **[已註冊的伺服器]**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **[檢視]** 功能表中，按一下 **[已註冊的伺服器]** 。  
   
 2.  在 [已註冊的伺服器] 中，展開 [Database Engine]****，以滑鼠右鍵按一下 [中央管理伺服器]****，然後按一下 [註冊中央管理伺服器]****。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75244664"
   
 6.  按一下 **[測試]** 測試連接。  
   
-7.  按一下 [儲存]****。 
+7.  按一下 [檔案]  。 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會出現在 **[中央管理伺服器]** 資料夾底下。  
   
 #### <a name="create-a-new-server-group-and-add-servers-to-the-group"></a>建立新的伺服器群組並將伺服器加入至群組  

@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75231800"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>第6課：將資料庫從內部部署的來源機器遷移至 Azure 中的目的地機器
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>第 6 課：在 Azure 中將資料庫從內部部署來源電腦移轉至目的地電腦
   本課程假設您已有另一個 SQL Server，其可能位於另一個內部部署電腦或 Azure 中的虛擬機器。 如需有關如何在 Azure 中建立 SQL Server 虛擬機器的詳細資訊，請參閱[在 azure 上布建 SQL Server 虛擬機器](https://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)。 在 Azure 中布建 SQL Server 虛擬機器之後，請確定您可以透過另一部電腦中的 SQL Server Management Studio，連接到這部虛擬機器中 SQL Server 的實例。  
   
  這個課程同樣假設您已完成下列步驟：  
@@ -128,7 +128,7 @@ ms.locfileid: "75231800"
   
 1.  在物件總管**** 中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [資料庫]****，然後按一下 [新增資料庫]****。 然後，以滑鼠右鍵按一下 [TestDB1]。 按一下 [工作]，然後按一下 [卸離]。 在 [卸離] 對話方塊視窗中，選取 [卸除連接]。 按一下 [確定]****。  
+2.  以滑鼠右鍵按一下 [資料庫]  ，然後按一下 [新增資料庫]  。 然後，以滑鼠右鍵按一下 [TestDB1]。 按一下 [工作]，然後按一下 [卸離]。 在 [卸離] 對話方塊視窗中，選取 [卸除連接]。 按一下 [確定]  。  
   
 3.  連接到具有 SQL Server 2014 CTP2 或更新版本的目的地電腦。 若要準備目的地電腦，您需要在目的地電腦上建立 SQL Server 認證，並指向放置 TestDB1 的相同容器。 如果您要在同一部電腦上重新附加，則不需要建立另一個認證。  
   
@@ -140,11 +140,11 @@ ms.locfileid: "75231800"
   
      針對 [檔案名]，輸入`TestDB1Data.mdf`：。  
   
-6.  按一下 [確定]****。  
+6.  按一下 [確定]  。  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-6-7.gif "SQL 14 CTP2")  
   
  **下一課：**  
   
- [第7課：將資料檔案移至 Azure 儲存體](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [第 7 課：將資料檔案移至 Azure 儲存體](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   

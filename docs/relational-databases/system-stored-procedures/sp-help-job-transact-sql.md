@@ -18,10 +18,10 @@ ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 29870a0ffb3d2c3b1872acbb40266aef0d16b62c
-ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75546561"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "75546561"
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 用來執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的自動化活動之作業的相關資訊。  
   
  
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [transact-sql 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -63,7 +63,7 @@ sp_help_job { [ @job_id = ] job_id
   
 |值|描述|  
 |-----------|-----------------|  
-|**這**|作業各方面的資訊|  
+|**ALL**|作業各方面的資訊|  
 |**任務**|作業資訊|  
 |**預定**|排程資訊|  
 |**步驟**|作業步驟資訊|  
@@ -84,10 +84,10 @@ sp_help_job { [ @job_id = ] job_id
 |值|描述|  
 |-----------|-----------------|  
 |**0**|只傳回未閒置或暫停的作業。|  
-|**sha-1**|執行中。|  
+|**1**|執行中。|  
 |**2**|正在等候執行緒。|  
 |**第**|在重試之間。|  
-|**4gb**|閒置。|  
+|**4**|閒置。|  
 |**第**|已暫停。|  
 |**utf-7**|正在執行完成動作。|  
   
@@ -109,8 +109,8 @@ sp_help_job { [ @job_id = ] job_id
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|作業的唯一識別碼。|  
 |**originating_server**|**Nvarchar （30）**|作業的來源伺服器名稱。|  
-|**檔案名**|**sysname**|作業的名稱。|  
-|**後**|**Tinyint**|指出是否啟用作業，以便執行。|  
+|**name**|**sysname**|作業的名稱。|  
+|**後**|**tinyint**|指出是否啟用作業，以便執行。|  
 |**描述**|**nvarchar(512)**|作業的描述。|  
 |**start_step_id**|**int**|應該作為執行起點的作業步驟識別碼。|  
 |**category**|**sysname**|作業類別目錄。|  
@@ -123,8 +123,8 @@ sp_help_job { [ @job_id = ] job_id
 |**notify_netsend_operator**|**sysname**|傳送網路訊息時所用的電腦或使用者名稱。|  
 |**notify_page_operator**|**sysname**|傳送呼叫時所用的電腦或使用者名稱。|  
 |**delete_level**|**int**|**位元遮罩**，指出在哪些情況下，應該在作業完成時刪除作業。 可能的值與**notify_level_eventlog**相同。|  
-|**date_created**|**從中**|作業的建立日期。|  
-|**date_modified**|**從中**|上次修改作業的日期。|  
+|**date_created**|**datetime**|作業的建立日期。|  
+|**date_modified**|**datetime**|上次修改作業的日期。|  
 |**version_number**|**int**|作業的版本 (會在作業每次修改時自動更新)。|  
 |**last_run_date**|**int**|上次開始執行作業的日期。|  
 |**last_run_time**|**int**|上次開始執行作業的時間。|  
@@ -150,11 +150,11 @@ sp_help_job { [ @job_id = ] job_id
 |**step_name**|**sysname**|步驟的名稱。|  
 |**子系統**|**Nvarchar （40）**|在其中執行步驟命令的子系統。|  
 |**命令**|**Nvarchar （3200）**|要執行的命令。|  
-|**旗幟**|**Nvarchar （4000）**|控制步驟行為之值的**位元遮罩**。|  
+|**旗幟**|**nvarchar(4000)**|控制步驟行為之值的**位元遮罩**。|  
 |**cmdexec_success_code**|**int**|在**CmdExec**步驟中，這是成功命令的進程結束碼。|  
-|**on_success_action**|**Nvarchar （4000）**|作業成功時要執行什麼動作。<br /><br /> **1** = 結束並成功。<br /><br /> **2** = 結束但失敗。<br /><br /> **3** = 移至下一個步驟。<br /><br /> **4** = 移至步驟。|  
+|**on_success_action**|**nvarchar(4000)**|作業成功時要執行什麼動作。<br /><br /> **1** = 結束並成功。<br /><br /> **2** = 結束但失敗。<br /><br /> **3** = 移至下一個步驟。<br /><br /> **4** = 移至步驟。|  
 |**on_success_step_id**|**int**|如果**on_success_action**是**4**，這就表示要執行的下一個步驟。|  
-|**on_fail_action**|**Nvarchar （4000）**|步驟失敗時所採取的動作。 值與**on_success_action**相同。|  
+|**on_fail_action**|**nvarchar(4000)**|步驟失敗時所採取的動作。 值與**on_success_action**相同。|  
 |**on_fail_step_id**|**int**|如果**on_fail_action**是**4**，這就表示要執行的下一個步驟。|  
 |**伺服器**|**sysname**|已保留。|  
 |**database_name**|**sysname**|如果是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步驟，這就是命令執行所在的資料庫。|  
@@ -187,8 +187,8 @@ sp_help_job { [ @job_id = ] job_id
 |**active_end_date**|**int**|停止執行作業的日期。|  
 |**active_start_time**|**int**|在 active_start_date 上開始執行作業的時間 **。**|  
 |**active_end_time**|**int**|**Active_end_date**上的作業結束執行時間。|  
-|**date_created**|**從中**|排程的建立日期。|  
-|**schedule_description**|**Nvarchar （4000）**|排程的英文描述 (若要求的話)。|  
+|**date_created**|**datetime**|排程的建立日期。|  
+|**schedule_description**|**nvarchar(4000)**|排程的英文描述 (若要求的話)。|  
 |**next_run_date**|**int**|排程下次執行作業的日期。|  
 |**next_run_time**|**int**|排程下次執行作業的時間。|  
 |**schedule_uid**|**uniqueidentifier**|排程的識別碼。|  
@@ -200,12 +200,12 @@ sp_help_job { [ @job_id = ] job_id
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|目標伺服器識別碼。|  
 |**server_name**|**Nvarchar （30）**|目標伺服器的電腦名稱。|  
-|**enlist_date**|**從中**|將目標伺服器編列到主要伺服器的日期。|  
-|**last_poll_date**|**從中**|目標伺服器前次輪詢主要伺服器的日期。|  
+|**enlist_date**|**datetime**|將目標伺服器編列到主要伺服器的日期。|  
+|**last_poll_date**|**datetime**|目標伺服器前次輪詢主要伺服器的日期。|  
 |**last_run_date**|**int**|在這部目標伺服器中上次開始執行作業的日期。|  
 |**last_run_time**|**int**|在這部目標伺服器中上次開始執行作業的時間。|  
 |**last_run_duration**|**int**|前次在這部目標伺服器執行作業的持續時間。|  
-|**last_run_outcome**|**Tinyint**|前次在這部伺服器執行作業的結果：<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **3** = 已取消<br /><br /> **5** = 未知|  
+|**last_run_outcome**|**tinyint**|前次在這部伺服器執行作業的結果：<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **3** = 已取消<br /><br /> **5** = 未知|  
 |**last_outcome_message**|**nvarchar(1024)**|前次在這部目標伺服器執行作業的結果訊息。|  
   
 ## <a name="permissions"></a>權限  
@@ -266,6 +266,6 @@ GO
  [sp_add_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_delete_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_update_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
- [&#40;Transact-sql&#41;的系統預存程式](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

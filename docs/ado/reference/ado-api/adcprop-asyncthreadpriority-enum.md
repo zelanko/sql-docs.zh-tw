@@ -1,5 +1,5 @@
 ---
-title: ADCPROP_ASYNCTHREADPRIORITY_ENUM | Microsoft Docs
+title: ADCPROP_ASYNCTHREADPRIORITY_ENUM |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,32 +16,32 @@ ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22a8cd4bb8d1bdddbaaa68e92349d9c728557ac0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921460"
 ---
-# <a name="adcpropasyncthreadpriorityenum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
-對於使用 RDS[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件時，指定擷取資料的非同步執行緒的執行優先權。  
+# <a name="adcprop_asyncthreadpriority_enum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
+對於 RDS[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，指定抓取資料之非同步執行緒的執行優先權。  
   
- 使用這些常數**資料錄集**"**背景執行緒優先順序**「 動態屬性，這是參考 ADO-OLE DB 動態屬性索引中，記載於[Microsoft OLE DB 的資料指標服務](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)文件。  
+ 使用這些常數搭配**記錄集**「**背景執行緒優先順序**」動態屬性，這會在 ADO 對 OLE DB 動態屬性索引中參考，並記載于[適用于 OLE DB 檔的 Microsoft 資料指標服務](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)中。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adPriorityAboveNormal**|4|設定之間正常和最高的優先權。|  
-|**adPriorityBelowNormal**|2|最低與一般之間設定優先權。|  
-|**adPriorityHighest**|5|設定最高的可能優先權。|  
-|**AdPriorityLowest**|1|設定優先順序到最低的可能。|  
-|**adPriorityNormal**|3|設定為 normal 的優先權。|  
+|**adPriorityAboveNormal**|4|設定 [一般] 和 [最高] 之間的優先順序。|  
+|**adPriorityBelowNormal**|2|設定 [最低] 和 [一般] 之間的優先順序。|  
+|**adPriorityHighest**|5|將優先順序設定為最高的可能。|  
+|**AdPriorityLowest**|1|將優先順序設定為最低可能。|  
+|**adPriorityNormal**|3|將優先順序設定為 [一般]。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- 封裝： **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
+ Package： **.com. wfc. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
-|AdoEnums.AdcPropAsyncThreadPriority.ABOVENORMAL|  
-|AdoEnums.AdcPropAsyncThreadPriority.BELOWNORMAL|  
-|AdoEnums.AdcPropAsyncThreadPriority.HIGHEST|  
-|AdoEnums.AdcPropAsyncThreadPriority.LOWEST|  
-|AdoEnums.AdcPropAsyncThreadPriority.NORMAL|
+|AdoEnums. AdcPropAsyncThreadPriority. ABOVENORMAL|  
+|AdoEnums. AdcPropAsyncThreadPriority. BELOWNORMAL|  
+|AdoEnums. AdcPropAsyncThreadPriority. 最高|  
+|AdoEnums. AdcPropAsyncThreadPriority。最低|  
+|AdoEnums. AdcPropAsyncThreadPriority. NORMAL|

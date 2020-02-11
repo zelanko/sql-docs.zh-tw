@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98f2ee047bccf7cd3843fe34aaf8f5caec0dc11a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257472"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>資料類型轉換和 sql： datatype 注釋（SQLXML 4.0）
@@ -43,11 +43,11 @@ ms.locfileid: "75257472"
 |XSD 資料類型|SQL Server 轉換|  
 |-------------------|---------------------------|  
 |Boolean|CONVERT(bit, COLUMN)|  
-|日期|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
+|Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|時間|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |All others|No additional conversion|  
   
 > [!NOTE]  
@@ -58,31 +58,31 @@ ms.locfileid: "75257472"
   
 |SQL Server 資料類型|XSD 資料類型|  
 |--------------------------|-------------------|  
-|**bigint**|**前提**|  
-|**二**|**base64Binary**|  
-|**一些**|**true**|  
+|**Bigint**|**前提**|  
+|**binary**|**base64Binary**|  
+|**bit**|**boolean**|  
 |**char**|**字串**|  
-|**從中**|**從中**|  
-|**十**|**十**|  
-|**float**|**兩**|  
-|**包**|**base64Binary**|  
+|**datetime**|**從中**|  
+|**decimal**|**decimal**|  
+|**float**|**double**|  
+|**image**|**base64Binary**|  
 |**int**|**int**|  
-|**money**|**十**|  
-|**Nchar**|**字串**|  
-|**Ntext**|**字串**|  
+|**money**|**decimal**|  
+|**nchar**|**字串**|  
+|**ntext**|**字串**|  
 |**nvarchar**|**字串**|  
-|**數值**|**十**|  
+|**數值**|**decimal**|  
 |**即時**|**float**|  
-|**Smalldatetime**|**從中**|  
-|**smallint**|**短缺**|  
-|**smallmoney**|**十**|  
+|**smalldatetime**|**從中**|  
+|**smallint**|**short**|  
+|**SMALLMONEY**|**decimal**|  
 |**sql_variant**|**字串**|  
 |**sysname**|**字串**|  
-|**文字**|**字串**|  
-|**戳**|**從中**|  
-|**Tinyint**|**unsignedByte**|  
-|**Varbinary**|**base64Binary**|  
-|**Varchar**|**字串**|  
+|**text**|**字串**|  
+|**timestamp**|**從中**|  
+|**tinyint**|**unsignedByte**|  
+|**varbinary**|**base64Binary**|  
+|**varchar**|**字串**|  
 |**uniqueidentifier**|**字串**|  
   
 ## <a name="sqldatatype-annotation"></a>sql:datatype 註解  

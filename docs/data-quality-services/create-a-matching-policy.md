@@ -14,10 +14,10 @@ ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3a50b48b4c498020b3428af2eca2c9d045187682
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251791"
 ---
 # <a name="create-a-matching-policy"></a>建立比對原則
@@ -28,14 +28,14 @@ ms.locfileid: "75251791"
   
  比對原則建立作業會在三個階段執行：識別資料來源並將定義域對應至資料行的對應程序、建立一個或多個比對規則並個別測試每一個比對規則的比對原則程序，以及一起執行所有比對規則，並在滿意這些規則的情況下將此原則加入至知識庫的比對結果程序。 以上每一個程序都是在比對原則活動精靈的個別頁面中執行，好讓您來回移到不同的頁面、重新執行此程序，並退出特定比對原則程序，然後返回該程序的相同階段。 在一起測試所有規則之後，您可以視需要返回 **[比對原則]** 頁面、調整個別規則、再次個別測試規則，然後返回 **[比對結果]** 頁面，再次一起執行所有規則。 DQS 會提供有關來源資料、比對規則和比對結果的統計資料，以便您做出有關比對原則的明智決定，好讓您精簡此原則。  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a>要求  
+###  <a name="Prerequisites"></a> 必要條件  
  如果來源資料為 Excel 檔案，則 Microsoft Excel 必須安裝在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 電腦上。 否則，您將無法在對應階段選取此 Excel 檔案。 由 Microsoft Excel 建立的檔案可以具有 .xlsx、.xls 或 .csv 的副檔名。 如果使用 64 位元版本的 Excel，則僅支援 Excel 2003 檔案 (.xls)；Excel 2007 或 2010 檔案 (.xlsx) 不受支援。 如果您使用 64 位元版本的 Excel 2007 或 2010，請將檔案儲存為 .xls 檔案或 .csv 檔案，或是改為安裝 32 位元版本的 Excel。  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能建立比對原則。  
   
 ##  <a name="MatchingRules"></a>如何設定比對規則參數  
@@ -62,7 +62,7 @@ ms.locfileid: "75251791"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[新增知識庫]** ，在新的知識庫中建立比對原則。 輸入知識庫的名稱和描述，並視需要設定 **[建立知識庫來源]** 。 為此活動按一下 **[比對原則]** 。 按 **[下一步]** 以繼續。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[新增知識庫]** ，在新的知識庫中建立比對原則。 輸入知識庫的名稱和描述，並視需要設定 **[建立知識庫來源]** 。 為此活動按一下 **[比對原則]** 。 按 [下一步]  繼續進行。  
   
 3.  按一下 **[開啟知識庫]** ，在現有的知識庫中建立或修改比對原則。 選取知識庫，並選取 **[比對原則]**，然後按 **[下一步]**。 您也可以按一下 **[最近使用的知識庫]** 底下的知識庫。 如果您開啟已關閉的知識庫，而且正在處理比對原則，您將會進入比對原則活動已關閉的階段 (如同知識庫資料表中知識庫的 **[狀態]** 資料行或 **[最近使用的知識庫]** 底下的知識庫名稱所指示)。 如果您開啟的知識庫包含比對原則而且已完成，您將會前往 **[比對原則]** 頁面。 如果您開啟的知識庫不包含比對原則而且已完成，您將會前往 **[對應]** 頁面。  
   

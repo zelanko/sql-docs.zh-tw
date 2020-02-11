@@ -15,23 +15,24 @@ ms.assetid: 5bc7e26e-28ad-4198-a40d-8b2c648ba304
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d75bbf1c4d468a0d6c3872a220566d667b059a5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937490"
 ---
 # <a name="transaction-promotion"></a>交易升級
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  交易*促銷*說明可以為完全可散發之交易自動升級，視需要的輕量型本機交易。 當 Managed 預存程序在伺服器的資料庫交易內叫用時，Common Language Runtime (CLR) 程式碼會在本機交易的環境中執行。  如果遠端伺服器的連接是在交易資料庫內開啟的，則會將遠端伺服器的連接編列至分散式交易，而且會將本機交易自動升級為分散式交易。 因此，交易升級可以藉由直到需要時才建立分散式交易的方式，將分散式交易的負擔降至最低。 交易升級是自動的如果已使用已啟用**登錄**關鍵字，而且不需要開發人員的介入。 .NET Framework Data Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援交易升級，透過.NET Framework 中的類別處理**System.Data.SqlClient**命名空間。  
+  交易*升級*描述輕量的本機交易，可以視需要自動升級為完全可散發的交易。 當 Managed 預存程序在伺服器的資料庫交易內叫用時，Common Language Runtime (CLR) 程式碼會在本機交易的環境中執行。  如果遠端伺服器的連接是在交易資料庫內開啟的，則會將遠端伺服器的連接編列至分散式交易，而且會將本機交易自動升級為分散式交易。 因此，交易升級可以藉由直到需要時才建立分散式交易的方式，將分散式交易的負擔降至最低。 交易升級是自動的，如果已使用**登錄關鍵字啟用**，則不需要開發人員介入。 的 .NET Framework Data Provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可提供交易升級的支援，並透過 .NET Framework **SqlClient**命名空間中的類別來處理。  
   
 ## <a name="the-enlist-keyword"></a>編列關鍵字  
- **ConnectionString**屬性**SqlConnection**物件支援**登錄**關鍵字，指出是否**System.Data.SqlClient**偵測到交易內容，並自動登記分散式異動中的連接。 如果此關鍵字設定為 True (預設值)，則會在開啟之執行緒的目前交易內容中自動編列連接。 如果此關鍵字設定為 False，則 SqlClient 連接不會與分散式交易進行互動。 如果**登錄**中未指定連接字串，在開啟連接時偵測到，在分散式交易中自動登記連接。  
+ **SqlConnection**物件的**ConnectionString**屬性支援**登錄關鍵字，** 這會指出**SqlClient**是否偵測到交易內容，並自動在分散式交易中登記連接。 如果此關鍵字設定為 True (預設值)，則會在開啟之執行緒的目前交易內容中自動編列連接。 如果此關鍵字設定為 False，則 SqlClient 連接不會與分散式交易進行互動。 如果在連接字串中未指定登錄 **，當連接**開啟時，連接會自動登記在分散式交易中。  
   
 ## <a name="distributed-transactions"></a>分散式交易  
- 分散式交易通常會消耗大量的系統資源。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 會管理此類交易，並整合在這些交易中存取的所有資源管理員。 交易升級，相反地，是一種特殊形式的**System.Transactions**交易可有效地委派工作給簡單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]交易。 **System.Transactions**， **System.Data.SqlClient**，和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]協調參與處理交易，並視需要將其提升為完全分散式交易的工作。  
+ 分散式交易通常會消耗大量的系統資源。 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 會管理此類交易，並整合在這些交易中存取的所有資源管理員。 另一方面，交易升級是系統的特殊形式 **。交易**交易可有效地將工作委派給簡單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的交易。 **** **SqlClient**，並協調處理交易時所涉及的工作[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並視需要將它升級為完整的分散式交易。  
   
- 使用交易升級的好處是，當連接開啟透過有效**TransactionScope**交易，而沒有其他連接會開啟，將交易認可為輕量型交易，而非會產生完全分散式交易的額外負擔。 如需詳細資訊**TransactionScope**，請參閱[使用 System.Transactions](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md)。  
+ 使用交易升級的優點是，當使用作用中的**TransactionScope**交易開啟連接，且未開啟其他連接時，交易會認可為輕量交易，而不會產生完整分散式交易的額外負擔。 如需**TransactionScope**的詳細資訊，請參閱[使用 System. 交易](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [CLR 整合和交易](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  

@@ -12,10 +12,10 @@ ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: ae87b9daebdef6b81c4d96abc253820cf7cb8228
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75558139"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>使用 DQSInstaller.exe 匯出及匯入 DQS 知識庫
@@ -62,6 +62,6 @@ dqsinstaller.exe -importkbs c:\DQSBackup.dqsb
  [執行 Dqsinstaller.exe 完成 Data Quality Server 安裝](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [安裝 Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [將知識庫匯出至 dqs 檔案](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
- [從 dqs 檔案匯入知識庫](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  
+ [從 .dqs 檔案匯入知識庫](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  
   
   

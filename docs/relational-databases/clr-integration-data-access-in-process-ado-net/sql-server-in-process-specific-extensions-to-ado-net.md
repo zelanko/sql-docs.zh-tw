@@ -19,10 +19,10 @@ ms.assetid: 781b812e-eb14-472a-85fa-aa4cdb929bee
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f3c1729d216a1456551da3699c286385694e558a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258173"
 ---
 # <a name="sql-server-in-process-specific-extensions-to-adonet"></a>ADO.NET 的 SQL Server 同處理序特定擴充
@@ -30,13 +30,13 @@ ms.locfileid: "75258173"
   ADO.NET 有四個專門用於同處理序的主要功能擴充。 下列主題將詳細說明這些擴充功能。  
   
 ## <a name="in-this-section"></a>本節內容  
- [SqlCoNtext 物件](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  
+ [SqlContext 物件](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  
  此類別會摘要執行 Managed 程式碼同處理序之 SQL Server 常式呼叫者的內容，藉以存取其他延伸模組。  
   
  [SqlPipe 物件](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)  
  此類別包含可將表格式結果和訊息傳送到用戶端的常式。  
   
- [SqlTriggerCoNtext 物件](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)  
+ [SqlTriggerContext 物件](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)  
  此類別提供執行觸發程序之內容的相關資訊。  
   
  [SqlDataRecord 物件](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)  

@@ -1,5 +1,5 @@
 ---
-title: sys.server_audit_specification_details (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases server_audit_specification_details （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,37 +20,37 @@ ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 43f5a4ca7dbad88fe98734576fd23368cc280fa2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125024"
 ---
-# <a name="sysserverauditspecificationdetails-transact-sql"></a>sys.server_audit_specification_details (Transact-SQL)
+# <a name="sysserver_audit_specification_details-transact-sql"></a>sys.server_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  包含伺服器執行個體上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 稽核內之伺服器稽核規格詳細資料 (動作) 的資訊。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。 如需所有 audit_action_id 和名稱，請查詢[sys.dm_audit_actions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)。  
+  包含伺服器執行個體上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 稽核內之伺服器稽核規格詳細資料 (動作) 的資訊。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。 如需所有 audit_action_id 及其名稱的清單，請查詢[sys.databases&#41;dm_audit_actions &#40;transact-sql ](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |server_specification_id|**int**|稽核伺服器規格的識別碼。|  
 |audit_action_id|**int**|稽核動作的識別碼|  
 |audit_action_name|**sysname**|稽核動作的群組名稱或名稱|  
-|class|**tinyint**|已保留|  
-|class_desc|**nvarchar(60)**|已保留|  
-|major_id|**int**|已保留|  
-|minor_id|**int**|已保留|  
-|audited_principal_id|**int**|已保留|  
-|audited_result|**nvarchar(60)**|稽核的結果：<br /><br /> - SUCCESS AND FAILURE<br /><br /> - SUCCESS<br /><br /> - FAILURE|  
+|class|**tinyint**|Reserved|  
+|class_desc|**Nvarchar （60）**|Reserved|  
+|major_id|**int**|Reserved|  
+|minor_id|**int**|Reserved|  
+|audited_principal_id|**int**|Reserved|  
+|audited_result|**Nvarchar （60）**|稽核的結果：<br /><br /> - SUCCESS AND FAILURE<br /><br /> - SUCCESS<br /><br /> - FAILURE|  
 |is_group|**bit**|稽核的物件是否為群組：<br /><br /> 0 - 不是群組<br /><br /> 1 - 群組|  
   
-## <a name="permissions"></a>Permissions  
- 具有主體**ALTER ANY SERVER AUDIT**或是**VIEW ANY DEFINITION**權限可以存取這份目錄檢視。 此外，不應拒絕主體**VIEW ANY DEFINITION**權限。  
+## <a name="permissions"></a>權限  
+ 具有**ALTER ANY SERVER AUDIT**或**VIEW any DEFINITION**許可權的主體可存取此目錄檢視。 此外，主體不得被拒絕**VIEW ANY DEFINITION**許可權。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [安全性目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性目錄檢視](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

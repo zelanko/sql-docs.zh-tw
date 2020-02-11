@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228471"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>示範記憶體中 OLTP 的 AdventureWorks 延伸模組
@@ -33,8 +33,7 @@ ms.locfileid: "75228471"
   
 -   安裝範例及執行工作負載示範的[必要條件](#Prerequisites)  
   
--   
-  [安裝以 AdventureWorks 為基礎的 In-Memory OLTP 範例](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的指示  
+-   [安裝以 AdventureWorks 為基礎的 In-Memory OLTP 範例](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的指示  
   
 -   [範例資料表和程式的描述](#Descriptionofthesampletablesandprocedures)-這包括[!INCLUDE[hek_2](../includes/hek-2-md.md)]範例中新增至 AdventureWorks 之資料表和程式的描述，以及將一些原始 AdventureWorks 資料表遷移至記憶體優化的考慮。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "75228471"
   
 -   [範例中的記憶體和磁碟空間使用量](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a>要求  
+##  <a name="Prerequisites"></a> 必要條件  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM-評估版、開發人員或企業版  
   
@@ -122,7 +121,7 @@ ms.locfileid: "75228471"
   
         4.  按一下 [執行] 按鈕以執行腳本  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a>範例資料表和程式的描述  
+##  <a name="Descriptionofthesampletablesandprocedures"></a> 範例資料表和程序描述  
  此範例以 AdventureWorks 中的現有資料表為基礎，為產品和銷售訂單建立新資料表。 新資料表的結構描述類似現有的資料表，但有一些差異 (如下所述)。  
   
  新的記憶體最佳化資料表具有後置詞 '_inmem'。 此範例也會包含具有後置詞 '_ondisk' 的對應資料表，這些資料表可用來在系統上的記憶體最佳化資料表與磁碟資料表之間，進行一對一的效能比較。  
@@ -181,14 +180,13 @@ ms.locfileid: "75228471"
   
  Sales.SalesOrderHeader_inmem  
   
--   記憶體優化的資料表支援*預設條件約束*，而我們目前遷移的預設條件約束也是如此。 不過，原始資料表 Sales.SalesOrderHeader 包含兩個預設條件約束，會擷取資料行 OrderDate 和 ModifiedDate 的目前日期。 在具有大量並行的高輸送量訂單處理工作負載中，任何全域資源都可能會成為競爭重點。 系統時間即為這類全域資源。根據觀察，執行插入銷售訂單的 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 工作負載時，系統時間可能會成為瓶頸，特別是在需要針對銷售訂單標頭的多個資料行擷取系統時間，並同時擷取銷售訂單詳細資料時。 這個問題已在此範例中獲得解決，只對每個插入的銷售訂單擷取一次系統時間，然後在預存程序 Sales.usp_InsertSalesOrder_inmem 中，將此值做為 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 的日期時間資料行使用。  
+-   記憶體最佳化資料表支援「預設條件約束」  ，且大部分的預設條件約束在移轉後會保持原狀。 不過，原始資料表 Sales.SalesOrderHeader 包含兩個預設條件約束，會擷取資料行 OrderDate 和 ModifiedDate 的目前日期。 在具有大量並行的高輸送量訂單處理工作負載中，任何全域資源都可能會成為競爭重點。 系統時間即為這類全域資源。根據觀察，執行插入銷售訂單的 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 工作負載時，系統時間可能會成為瓶頸，特別是在需要針對銷售訂單標頭的多個資料行擷取系統時間，並同時擷取銷售訂單詳細資料時。 這個問題已在此範例中獲得解決，只對每個插入的銷售訂單擷取一次系統時間，然後在預存程序 Sales.usp_InsertSalesOrder_inmem 中，將此值做為 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 的日期時間資料行使用。  
   
--   *別名 udt* -原始資料表使用兩個別名使用者定義資料類型（udt） dbo。OrderNumber 和 dbo。AccountNumber，分別適用于 PurchaseOrderNumber 和 AccountNumber 資料行。 
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 不支援在記憶體最佳化資料表中使用別名 UDT，因此新資料表會分別使用系統資料類型 Nvarchar(25) 和 Nvarchar(15)。  
+-   *別名 udt* -原始資料表使用兩個別名使用者定義資料類型（udt） dbo。OrderNumber 和 dbo。AccountNumber，分別適用于 PurchaseOrderNumber 和 AccountNumber 資料行。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 不支援在記憶體最佳化資料表中使用別名 UDT，因此新資料表會分別使用系統資料類型 Nvarchar(25) 和 Nvarchar(15)。  
   
--   *索引鍵中可為 null*的資料行-在原始資料表中，資料行 SalesPersonID 可為 null，而在新的資料表中，資料行不可為 null，而且具有值（-1）的預設條件約束。 這是因為記憶體最佳化資料表上的索引不可以在索引鍵中有可為 Null 的資料行，在此情況下，-1 會代替 NULL 值。  
+-   「索引鍵中的資料行可為 Null」  - 在原始資料表中，資料行 SalesPersonID 可為 Null，但是在新資料表中，資料行不可為 Null，且預設條件約束必須帶有值 (-1)。 這是因為記憶體最佳化資料表上的索引不可以在索引鍵中有可為 Null 的資料行，在此情況下，-1 會代替 NULL 值。  
   
--   *計算資料行*-省略計算資料行 SalesOrderNumber 和 TotalDue，因為[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]不支援記憶體優化資料表中的計算資料行。 新檢視 Sales.vSalesOrderHeader_extended_inmem 會反映資料行 SalesOrderNumber 和 TotalDue。 因此，如果需要這些資料行，您可以使用此檢視。  
+-   「計算資料行」  - 由於 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 不支援在記憶體最佳化資料表中使用計算資料行，因此會省略計算資料行 SalesOrderNumber 和 TotalDue。 新檢視 Sales.vSalesOrderHeader_extended_inmem 會反映資料行 SalesOrderNumber 和 TotalDue。 因此，如果需要這些資料行，您可以使用此檢視。  
   
 -   中[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]的記憶體優化資料表不支援*Foreign key 條件約束*。 此外，SalesOrderHeader_inmem 是範例工作負載中的作用資料表，而外部索引鍵條件約束需要對所有 DML 作業進行額外的處理，因為它需要查閱這些條件約束中參考的其他所有資料表。 因此，此處的假設是應用程式會確保參考完整性，但插入資料列時不會驗證參考完整性。 您可以使用預存程序 dbo.usp_ValidateIntegrity 驗證此資料表中資料的參考完整性，其指令碼如下：  
   
@@ -204,15 +202,15 @@ ms.locfileid: "75228471"
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   *Rowguid* -已省略 rowguid 資料行。 記憶體最佳化資料表支援 uniqueidentifier，但是 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]不支援 ROWGUIDCOL 選項。 這類資料行通常會用於合併式複寫或具有 filestream 資料行的資料表。 此範例不包含這兩者。  
+-   *Rowguid* - Rowguid 資料行會遭到省略。 記憶體最佳化資料表支援 uniqueidentifier，但是 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]不支援 ROWGUIDCOL 選項。 這類資料行通常會用於合併式複寫或具有 filestream 資料行的資料表。 此範例不包含這兩者。  
   
  Sales.SalesOrderDetail  
   
--   *預設條件約束*-類似于 SalesOrderHeader，不會遷移需要系統日期/時間的預設條件約束，而是由插入銷售訂單的預存程式負責在第一次插入時插入目前的系統日期/時間。  
+-   *預設條件約束* - 類似 SalesOrderHeader，預設條件約束要求不得移轉系統日期/時間，而是由插入銷售訂單的預存程序在第一次插入時，負責插入目前的系統日期/時間。  
   
--   *計算資料行*-因為中[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]的記憶體優化資料表不支援計算資料行，所以未遷移計算資料行 LineTotal。 若要存取此資料行，請使用 Sales.vSalesOrderDetail_extended_inmem 檢視。  
+-   *計算資料行* - 由於 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中的記憶體最佳化資料表不支援計算資料行，因此不會移轉計算資料行 LineTotal。 若要存取此資料行，請使用 Sales.vSalesOrderDetail_extended_inmem 檢視。  
   
--   *Rowguid* -已省略 rowguid 資料行。 如需詳細資訊，請參閱 SalesOrderHeader 資料表的描述。  
+-   *Rowguid* - Rowguid 資料行會遭到省略。 如需詳細資訊，請參閱 SalesOrderHeader 資料表的描述。  
   
 -   如需有關「檢查條件約束」 ** 和「外部索引鍵條件約束」 ** 的詳細資訊，請參閱 SalesOrderHeader 的描述。 下列指令碼可用來驗證此資料表的網域和參考完整性：  
   
@@ -223,11 +221,11 @@ ms.locfileid: "75228471"
   
  Production.Product  
   
--   *別名 udt* -原始資料表會使用使用者定義資料類型 dbo。旗標，它相當於系統資料類型位。 移轉的資料表會改用 bit 資料類型。  
+-   *別名 UDT* - 原始資料表使用使用者定義資料類型 dbo.Flag，相當於系統資料類型 bit。 移轉的資料表會改用 bit 資料類型。  
   
 -   *BIN2 定序*-資料行名稱和 ProductNumber 會包含在索引鍵中，因此必須在中[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]具有 BIN2 定序。 此處的假設是應用程式不依賴定序規格，例如區分大小寫。  
   
--   *Rowguid* -已省略 rowguid 資料行。 如需詳細資訊，請參閱 SalesOrderHeader 資料表的描述。  
+-   *Rowguid* - Rowguid 資料行會遭到省略。 如需詳細資訊，請參閱 SalesOrderHeader 資料表的描述。  
   
 -   *唯一*的、 *Check*和*Foreign Key 條件約束*的考慮方式有兩種：預存程式 Product. usp_InsertProduct_inmem 和 Product. usp_DeleteProduct_inmem 可用來插入和刪除產品;這些程式會驗證網域和參考完整性，如果違反完整性，將會失敗。 此外，下列指令碼可用來驗證網域和參考完整性的現狀：  
   
@@ -247,7 +245,7 @@ ms.locfileid: "75228471"
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   *Rowguid* -已省略 rowguid 資料行。 如需詳細資訊，請參閱 SalesOrderHeader 資料表的描述。  
+-   *Rowguid* - Rowguid 資料行會遭到省略。 如需詳細資訊，請參閱 SalesOrderHeader 資料表的描述。  
   
  Sales.SpecialOfferProduct  
   
@@ -258,7 +256,7 @@ ms.locfileid: "75228471"
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   *Rowguid* -已省略 rowguid 資料行。 如需詳細資訊，請參閱 SalesOrderHeader 資料表的描述。  
+-   *Rowguid* - Rowguid 資料行會遭到省略。 如需詳細資訊，請參閱 SalesOrderHeader 資料表的描述。  
   
 #### <a name="considerations-for-indexes-on-memory-optimized-tables"></a>記憶體最佳化資料表上索引的考量  
  記憶體最佳化資料表的基準索引為 NONCLUSTERED 索引，支援點查閱 (等號比較述詞的索引搜尋)、範圍掃描 (不等號比較述詞的索引搜尋)、完整索引掃描及依序掃描。 此外，NONCLUSTERED 索引支援搜尋索引鍵的前置資料行。 事實上，記憶體最佳化的 NONCLUSTERED 索引支援以磁碟為基礎之 NONCLUSTERED 索引支援的所有作業，唯一的例外狀況是回溯掃描。 因此，使用 NONCLUSTERED 索引對您的索引而言是安全的選擇。  
@@ -311,48 +309,44 @@ ms.locfileid: "75228471"
   
     -   輸出參數：  
   
-        -   
-  @SalesOrderID int - 剛插入之銷售訂單的 SalesOrderID  
+        -   @SalesOrderID int - 剛插入之銷售訂單的 SalesOrderID  
   
     -   輸入參數 (必要)：  
   
-        -   @DueDatedatetime2  
+        -   @DueDate datetime2  
   
-        -   @CustomerIDint  
+        -   @CustomerID int  
   
-        -   @BillToAddressIDint  
+        -   @BillToAddressID [int]  
   
-        -   @ShipToAddressIDint  
+        -   @ShipToAddressID [int]  
   
-        -   @ShipMethodIDint  
+        -   @ShipMethodID [int]  
   
         -   
   @SalesOrderDetails Sales.SalesOrderDetailType_inmem - 包含訂單明細項目的 TVP  
   
     -   輸入參數 (選擇性)：  
   
-        -   @StatusTinyint  
+        -   @Status [tinyint]  
   
-        -   @OnlineOrderFlag一些  
+        -   @OnlineOrderFlag [bit]  
   
-        -   
-  @PurchaseOrderNumber [nvarchar](25\)  
+        -   @PurchaseOrderNumber [nvarchar](25\)  
   
-        -   
-  @AccountNumber [nvarchar](15\)  
+        -   @AccountNumber [nvarchar](15\)  
   
-        -   @SalesPersonIDint  
+        -   @SalesPersonID [int]  
   
-        -   @TerritoryIDint  
+        -   @TerritoryID [int]  
   
-        -   @CreditCardIDint  
+        -   @CreditCardID [int]  
   
-        -   
-  @CreditCardApprovalCode [varchar](15\)  
+        -   @CreditCardApprovalCode [varchar](15\)  
   
-        -   @CurrencyRateIDint  
+        -   @CurrencyRateID [int]  
   
-        -   @CommentNvarchar  
+        -   @Comment nvarchar(128)  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_inmem  
   
@@ -392,7 +386,7 @@ ms.locfileid: "75228471"
   
     -   此程序依賴協助程式程序 dbo.usp_GenerateCKCheck、dbo.usp_GenerateFKCheck 和 dbo.GenerateUQCheck 來產生執行完整性檢查所需的 T-SQL。  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a>使用工作負載示範的效能測量  
+##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> 使用工作負載示範的效能度量  
  Ostress 是由 [!INCLUDE[msCoName](../includes/msconame-md.md)] CSS [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援小組所開發的命令列工具。 此工具可用來平行執行查詢或執行預存程序。 您可以設定平行執行給定 T-SQL 陳述式的執行緒數目，以及指定此執行緒上應該執行陳述式的次數，ostress 會加快執行緒的速度，並平行執行所有執行緒上的陳述式。 所有執行緒完成執行之後，ostress 會報告所有執行緒完成執行所花費的時間。  
   
 ### <a name="installing-ostress"></a>安裝 ostress  
@@ -498,7 +492,7 @@ ostress.exe -n10 -r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od S
   
  我們使用執行工作負載之後由 ostress.exe 報告的經過時間，做為工作負載的效能度量。  
   
-##### <a name="memory-optimized-tables"></a>記憶體最佳化資料表  
+##### <a name="memory-optimized-tables"></a>記憶體最佳化的資料表  
  首先執行記憶體最佳化資料表上的工作負載。 下列命令會開啟 100 個執行緒，每個執行緒執行 5,000 次反覆運算。  每次反覆運算會將 20 個銷售訂單插入個別交易。 每次反覆運算會插入 20 個訂單，以彌補使用資料庫產生要插入之資料的情況。 這樣會產生總計 20 * 5,000 \* 100 = 10,000,000 個銷售訂單的插入。  
   
  開啟 RML CMD 命令提示字元，然後執行下列命令：  
@@ -542,10 +536,9 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
   
  視硬體而定，此作業可能需要幾分鐘才能執行。  
   
- 建議每次執行示範之後將其重設。 由於此工作負載只能插入，每次執行會耗用更多記憶體，因此需要重設以防止記憶體不足。 
-  [執行工作負載之後的記憶體使用量](#Memoryutilizationafterrunningtheworkload)章節中會討論執行後的記憶體耗用量。  
+ 建議每次執行示範之後將其重設。 由於此工作負載只能插入，每次執行會耗用更多記憶體，因此需要重設以防止記憶體不足。 [執行工作負載之後的記憶體使用量](#Memoryutilizationafterrunningtheworkload)章節中會討論執行後的記憶體耗用量。  
   
-###  <a name="Troubleshootingslow-runningtests"></a>針對執行緩慢的測試進行疑難排解  
+###  <a name="Troubleshootingslow-runningtests"></a> 為執行緩慢的測試疑難排解  
  測試結果通常會隨硬體而有所不同，也會隨測試執行中使用並行的程度而有所不同。 如果結果不如預期，可注意下列幾點：  
   
 -   並行交易數目：在單一執行緒上執行工作負載時，透過 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 提升的效能可能不到兩倍。 只有在高度並行的情況下，閂鎖競爭才會成為嚴重的問題。  
@@ -555,14 +548,14 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
   
     -   徵兆：執行磁碟資料表上的工作負載時，如果 CPU 使用率很高，並不是指競爭很多，而是指缺少並行。  
   
--   記錄磁碟機的速度：如果記錄磁碟機跟不上系統中的交易輸送量層級，工作負載會在記錄 IO 上成為瓶頸。 雖然 [!INCLUDE[hek_2](../includes/hek-2-md.md)]的記錄效率較高，一旦記錄 IO 成為瓶頸，將會限制可能提升的效能。  
+-   記錄磁碟機的速度：如果記錄磁碟機跟不上系統中的交易輸送量層級，則工作負載會在記錄 IO 上成為瓶頸。 雖然 [!INCLUDE[hek_2](../includes/hek-2-md.md)]的記錄效率較高，一旦記錄 IO 成為瓶頸，將會限制可能提升的效能。  
   
     -   徵兆：執行記憶體最佳化資料表上的工作負載時，如果 CPU 使用率離 100% 有段距離或急起急落，可能會發生記錄 IO 瓶頸。 您可以開啟資源監視器並查看記錄磁碟機的佇列長度，以確認是否發生此瓶頸。  
   
-##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a>範例中的記憶體和磁碟空間使用量  
+##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> 範例中的記憶體和磁碟空間使用量  
  以下將描述範例資料庫之記憶體和磁碟空間使用量的預期結果。 我們也將顯示在具有 16 個邏輯核心的測試伺服器上看到的結果。  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a>記憶體優化資料表的記憶體使用量  
+###  <a name="Memoryutilizationforthememory-optimizedtables"></a> 記憶體最佳化資料表的記憶體使用量  
   
 #### <a name="overall-utilization-of-the-database"></a>資料庫的整體使用情況  
  下列查詢可用來取得系統中 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 的總記憶體使用量。  
@@ -578,11 +571,11 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**type**|**檔案名**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|94|  
+|**type**|**name**|**pages_MB**|  
+|MEMORYCLERK_XTP|預設|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|預設|0|  
+|MEMORYCLERK_XTP|預設|0|  
   
  預設記憶體 Clerk 包含全系統記憶體結構，且規模相對較小。 使用者資料庫 (在本例中為識別碼 5 的資料庫) 的記憶體 Clerk 約為 900MB。  
   
@@ -615,7 +608,7 @@ WHERE t.type='U'
   
  此處值得注意的是，與資料表資料大小相較下，配置給索引的記憶體大小。 這是因為範例中的雜湊索引會預留大小以容納較大的資料。 請注意，雜湊索引有固定的大小，因此其大小不會隨資料表中的資料大小增加。  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a>執行工作負載之後的記憶體使用量  
+####  <a name="Memoryutilizationafterrunningtheworkload"></a> 執行工作負載之後的記憶體使用量  
  插入 1,000 萬個銷售訂單之後，總記憶體使用量會類似如下：  
   
 ```  
@@ -627,11 +620,11 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**type**|**檔案名**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|146|  
+|**type**|**name**|**pages_MB**|  
+|MEMORYCLERK_XTP|預設|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|預設|0|  
+|MEMORYCLERK_XTP|預設|0|  
   
  如您所見， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 針對範例資料庫中的記憶體最佳化資料表和索引使用小於 8GB 的記憶體。  
   
@@ -673,11 +666,11 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**type**|**檔案名**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|2261|  
+|**type**|**name**|**pages_MB**|  
+|MEMORYCLERK_XTP|預設|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|預設|0|  
+|MEMORYCLERK_XTP|預設|0|  
   
  這是預期的結果：當交易式工作負載執行時，才會回收記憶體。  
   
@@ -692,11 +685,11 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**type**|**檔案名**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|1863|  
+|**type**|**name**|**pages_MB**|  
+|MEMORYCLERK_XTP|預設|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|預設|0|  
+|MEMORYCLERK_XTP|預設|0|  
   
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>記憶體最佳化資料表的磁碟使用狀況  
  您可以使用下列查詢，找到給定時間下，資料庫的檢查點檔案在磁碟上的整體大小：  
@@ -723,7 +716,7 @@ WHERE f.type=N'FX'
   
 ||  
 |-|  
-|**磁片大小（MB）**|  
+|**在磁碟上的大小 (MB)**|  
 |2312|  
   
  如您所見，檢查點檔案在磁碟上的大小與實際資料大小差距懸殊，磁碟上的大小是 2.3GB，而實際資料大小則接近 30MB。  
@@ -749,7 +742,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**計數**|**磁片大小 MB**|  
+|**state_desc**|**file_type_desc**|**計數**|**在磁碟上的大小 (MB)**|  
 |已預先建立|DATA|16|2048|  
 |已預先建立|DELTA|16|128|  
 |建構中|DATA|1|128|  
@@ -771,7 +764,7 @@ WHERE f.type=N'FX'
   
 ||  
 |-|  
-|**磁片大小（MB）**|  
+|**在磁碟上的大小 (MB)**|  
 |8828|  
   
  在磁碟上的大小接近 9GB，與記憶體中的資料大小更接近。  
@@ -795,7 +788,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**計數**|**磁片大小 MB**|  
+|**state_desc**|**file_type_desc**|**計數**|**在磁碟上的大小 (MB)**|  
 |已預先建立|DATA|16|2048|  
 |已預先建立|DELTA|16|128|  
 |建構中|DATA|1|128|  
@@ -819,7 +812,7 @@ WHERE f.type=N'FX'
   
 ||  
 |-|  
-|**磁片大小（MB）**|  
+|**在磁碟上的大小 (MB)**|  
 |11839|  
   
  接近 12GB，明顯大於重設示範之前的 9GB。 這是因為已開始合併某些檢查點檔案，但尚未安裝部分合併目標，且尚未清除部分合併來源檔案 (如下所示)：  
@@ -841,7 +834,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**計數**|**磁片大小 MB**|  
+|**state_desc**|**file_type_desc**|**計數**|**在磁碟上的大小 (MB)**|  
 |已預先建立|DATA|16|2048|  
 |已預先建立|DELTA|16|128|  
 |使用中|DATA|38|5152|  
@@ -874,7 +867,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**計數**|**磁片大小 MB**|  
+|**state_desc**|**file_type_desc**|**計數**|**在磁碟上的大小 (MB)**|  
 |已預先建立|DATA|16|2048|  
 |已預先建立|DELTA|16|128|  
 |建構中|DATA|2|268|  
@@ -885,5 +878,5 @@ ORDER BY state, file_type
  在本例中，有兩個檢查點檔案組在「建構中」狀態，這表示多組檔案已移至「建構中」狀態，這可能是由於工作負載中有高度並行所致。 多個並行執行緒會同時要求一個新的檔案組，因此會將一組檔案從「已預先建立」移至「建構中」。  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體內部 OLTP &#40;記憶體內部優化&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

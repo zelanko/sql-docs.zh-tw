@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 50b051cf2780fc1a94830c461d9ae30674bb7dad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481148"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>備份及還原 DQS 資料庫
@@ -30,7 +30,7 @@ ms.locfileid: "65481148"
   
 -   確定沒有任何使用者登入 DQS 伺服器。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
   
@@ -38,7 +38,7 @@ ms.locfileid: "65481148"
   
 -   您必須擁有 DQS_MAIN 資料庫的 dqs_administrator 角色，才能在 DQS 中終止任何執行中的活動或停止任何執行中的處理序。  
   
-##  <a name="BackupRestore"></a> 備份及還原 DQS 資料庫  
+##  <a name="BackupRestore"></a>備份和還原 DQS 資料庫  
   
 1.  啟動 Microsoft SQL Server Management Studio，並連接到適當的 SQL Server 執行個體。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "65481148"
   
 6.  中斷連接目前的 SQL Server 執行個體，並連接到您想要還原這些資料庫的 SQL Server 執行個體。  
   
-7.  還原 DQS_MAIN 資料庫。 若要還原的 SQL Server 資料庫的逐步指示，請參閱[還原資料庫備份&#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)。  
+7.  還原 DQS_MAIN 資料庫。 如需還原 SQL Server 資料庫的逐步指示，請參閱將[資料庫備份還原 &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)。  
   
 8.  還原 DQS_PROJECTS 資料庫。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65481148"
   
 10. 在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後按一下 **[新增查詢]**。  
   
-11. 在 [查詢編輯器] 視窗中複製以下 SQL 陳述式，並使用您在 DQS 安裝期間為資料庫主要金鑰提供的密碼來取代 <密碼>*\<*：  
+11. 在 [查詢編輯器] 視窗中，複製下列 SQL 語句，並將* \<password>* 取代為您在 DQS 安裝期間為資料庫主要金鑰提供的密碼：  
   
     ```  
     USE [DQS_MAIN]  
@@ -70,7 +70,7 @@ ms.locfileid: "65481148"
   
     ```  
   
-12. 按 F5 執行陳述式。 檢查 **[結果]** 窗格，確認陳述式是否皆已成功地執行。  
+12. 按 F5 執行陳述式。 檢查 [**結果**] 窗格，確認語句是否已順利執行。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理 DQS 資料庫](../../2014/data-quality-services/manage-dqs-databases.md)  

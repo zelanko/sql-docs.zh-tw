@@ -10,10 +10,10 @@ ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: b7a9d9ce36a3419883adae9050ffabd0d1f9b012
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252193"
 ---
 # <a name="install-data-quality-services"></a>安裝 Data Quality Services
@@ -68,7 +68,7 @@ ms.locfileid: "75252193"
 ##  <a name="DQSInstallation"></a>Data Quality Services 安裝工作  
  您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 安裝程式安裝 DQS 元件。 當您執行 SQL Server 安裝程式時，必須執行一連串的安裝精靈頁面，依據您的需求選取適當的選項。 下表只列出安裝精靈中的部分頁面，您在這些頁面中選取的選項將會影響 DQS 的安裝：  
   
-|Page|動作|  
+|頁面|動作|  
 |----------|------------|  
 |特徵選取|選取：<br /><br /> **資料庫引擎服務**下的[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]**資料品質服務**，以安裝。 <br />如果您選取 [Data Quality Services]**** 核取方塊，SQL Server 安裝程式會複製位於電腦上 SQL Server 執行個體目錄底下的 Installer 檔案 DQSInstaller.exe。 在您完成 SQL Server 安裝程式之後，必須執行這個檔案才能「完成」**[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 的安裝。 此外，您也必須執行一些額外的步驟來設定 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，然後才能使用它。 如需詳細資訊，請參閱 [安裝後工作](#PostInstallationTasks)。<br /><br /> **** 要安裝[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]的 Data Quality Client。<br /><br /> (建議) [管理工具 - 基本]**** 底下的 [管理工具 - 完整]****，以安裝 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 此工具可為您提供圖形使用者介面以管理 SQL Server 執行個體，並且協助您在安裝後執行額外的工作，如下一節中所列。|  
 |資料庫引擎組態|按一下 [加入目前使用者]****，將使用者的 Windows 帳戶加入系統管理員固定伺服器角色。 您稍後必須能夠執行 DQSInstaller.exe 檔案以完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝。|  

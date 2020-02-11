@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9192afa87b3a035bbc048fa2476c18c1673a7a39
-ms.sourcegitcommit: 3ec48823bee1c092ce2aba6011b95174de03fb65
+ms.openlocfilehash: 71864b1670d61448b48e3acdc89d9c2d231c782d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926954"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244411"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 說明與意見反應
 
@@ -22,7 +22,7 @@ ms.locfileid: "68926954"
 
 ## <a name="contact-microsoft-support"></a>連絡 Microsoft 支援服務
 
-擁有支援方案的客戶可以向 Microsoft 支援服務[開啟票證](https://support.microsoft.com/en-us/hub/4343728/support-for-business)。  檢閱[適用於商業的支援選項](https://support.microsoft.com/en-us/help/4341255/support-for-business)以取得詳細資訊。 
+擁有支援方案的客戶可以向 Microsoft 支援服務[開啟票證](https://support.microsoft.com/hub/4343728/support-for-business)。  檢閱[適用於商業的支援選項](https://support.microsoft.com/help/4341255/support-for-business)以取得詳細資訊。 
 
 沒有支援方案的客戶可以詢問社群以取得協助，或是在 [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback) 透過 UserVoice 提交 Bug。
 
@@ -63,7 +63,7 @@ ms.locfileid: "68926954"
 - **Azure Data Studio 問題**：[Azure Data Studio GitHub](https://github.com/microsoft/azuredatastudio/issues)
  
 
-###  <a name="sql-server-documentation"></a>SQL Server 文件
+###  <a name="sql-server-documentation"></a>SQL Server 文件集
 
 與 SQL Server 內容小組連絡的最佳方式是透過 Git 問題。 您將在我們的大部分頁面底部找到提交 Git 問題的選項： 
 

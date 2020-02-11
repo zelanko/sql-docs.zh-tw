@@ -14,18 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 49b121f776ec6a9d363236fab03a1da2228311a6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244803"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>語法組的自動比對
   語法組的自動比對會提供有關必須成對編碼的語法元素是否正確配對的立即回應給您。 這就是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中的分隔符號比對、Analysis Services XMLA 查詢編輯器中的大括號比對，以及 MDX 和 DMX 編輯器中的括號比對。  
   
 ## <a name="database-engine-query-editor-delimiter-matching"></a>Database Engine 查詢編輯器的分隔符號比對  
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器會比對可識別程式碼區塊界限的分隔符號。 比對是以兩種方式完成：  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器會比對可識別程式碼區塊界限的分隔符號。 比對是以兩種方式完成：  
   
 -   當您完成輸入配對中的第二個分隔符號時，編輯器就會反白顯示配對中的兩個分隔符號。  
   
@@ -37,9 +36,9 @@ ms.locfileid: "75244803"
 |開頭分隔符號|結束分隔符號|  
 |--------------------|-----------------------|  
 |**(**|**)**|  
-|**起點**|**成品**|  
-|**開始試用**|**結束試用**|  
-|**開始 CATCH**|**結束 CATCH**|  
+|**BEGIN**|**END**|  
+|**BEGIN TRY**|**END TRY**|  
+|**BEGIN CATCH**|**END CATCH**|  
   
  自動分隔符號比對不會辨識括號識別碼 ([ObjectName]) 或引號識別碼 ("ObjectName") 的分隔符號。 配對比對不會比對字串常值 ('string') 的單引號分隔符號，因為色彩編碼已經提供字串是否已分隔的視覺指示。  
   

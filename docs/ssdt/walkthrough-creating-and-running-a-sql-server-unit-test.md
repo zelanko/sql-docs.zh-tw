@@ -1,23 +1,24 @@
 ---
-title: 逐步解說：建立及執行 SQL Server 單元測試 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 建立及執行 SQL Server 單元測試
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d8ed1dbfa5ffcb61200f7838753dc1681f8c6509
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0bca0d4e70c1b147e5c0231936d588cc914bb1d6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141211"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242701"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>逐步解說：建立及執行 SQL Server 單元測試
+
 在這個逐步解說中，您要建立 SQL Server 單元測試，以確認數個預存程序的行為。 您可以建立 SQL Server 單元測試，協助識別可能會導致不正確之應用程式行為的程式碼缺失。 您可以執行 SQL Server 單元測試和應用程式測試，作為自動化測試套件的一部分。  
   
 在本逐步解說中，您將會執行下列工作：  
@@ -720,8 +721,8 @@ ms.locfileid: "68141211"
   
     |測試|預期的結果|  
     |--------|-------------------|  
-    |Sales_uspPlaceNewOrderTest|成功|  
-    |Sales_uspShowOrderDetailsTest|成功|  
+    |Sales_uspPlaceNewOrderTest|通過|  
+    |Sales_uspShowOrderDetailsTest|通過|  
     |Sales_uspFillOrderTest|失敗並顯示下列錯誤：「ScalarValueCondition 條件 (scalarValueCondition2) 失敗: ResultSet 1 資料列 1 資料行 1: 值不相符，實際為 '-100'，預期為 '100'。」發生這個錯誤的原因是預存程序的定義包含次要錯誤。|  
   
     接下來，您將更正錯誤並重新執行測試。  
@@ -981,7 +982,7 @@ ms.locfileid: "68141211"
   
     測試成功，表示程序會在應該失敗時失敗。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
 在典型的專案，您會定義其他單元測試，以確認所有重要資料庫物件都會正常運作。 當測試集合完成後，您會將這些測試簽入「版本控制」(Version Control)，與小組成員共用。  
   
 在建立基準之後，您可以建立及修改資料庫物件，然後建立關聯的測試，以確認變更是否會中斷預期行為。  

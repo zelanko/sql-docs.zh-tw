@@ -1,5 +1,5 @@
 ---
-title: 參數 (ADO-WFC 語法) |Microsoft Docs
+title: 參數（ADO-WFC 語法） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22f9d928cf008396346067a3e166fa281be4093d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931719"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parameter (ADO - WFC 語法)
-## <a name="package-commswfcdata"></a>封裝 com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>封裝 .com. wfc. 資料  
   
 ### <a name="constructor"></a>建構函式  
   
@@ -65,13 +65,13 @@ public AdoProperties getProperties()
 ```  
   
 ## <a name="parameter-accessor-methods"></a>參數存取子方法  
- [值](../../../ado/reference/ado-api/value-property-ado.md)屬性[參數](../../../ado/reference/ado-api/parameter-object.md)物件取得或設定該物件的內容。 內容被以一種可以指派值的物件和數種資料類型的 VARIANT。  
+ [Parameter](../../../ado/reference/ado-api/parameter-object.md)物件的[Value](../../../ado/reference/ado-api/value-property-ado.md)屬性會取得或設定該物件的內容。 內容會以 VARIANT 表示，這是一種可指派值的物件類型，以及數種資料類型的任何一種。  
   
- ADO/WFC 實作**值**屬性**getValue**方法，以傳回 VARIANT 的物件; 而**setValue**方法，後者會採用當做引數的 VARIANT。 變化是以特定語言，例如 Microsoft Visual Basic 高效率。  
+ ADO/WFC 會使用**getValue**方法來執行**Value**屬性，它會傳回 VARIANT 物件;和**setValue**方法，其採用 VARIANT 做為引數。 在某些語言（例如 Microsoft Visual Basic）中，變體非常有效率。  
   
- 除了**值**屬性，ADO/WFC 提供*存取子*來取得和設定的內容中使用 Java 資料類型的方法**參數**物件。 大部分的這些方法都有名稱格式**取得**_資料類型_或是**設定**_DataType_。  
+ 除了**Value**屬性，ADO/WFC 還提供使用 JAVA 資料類型的*存取*子方法，以取得和設定**參數**物件的內容。 這些方法大多都具有格式為**get**_datatype_或**set**_datatype_的名稱。  
   
- 還有一個值得注意的例外狀況：沒有任何**getNull**屬性; 相反地，沒有**isNull**傳回布林值，指出欄位是否為 null 的屬性。  
+ 有一個值得注意的例外狀況：沒有**getNull**屬性;相反地，有一個**isNull**屬性會傳回布林值，指出欄位是否為 null。  
   
 ```  
 public boolean getBoolean()  

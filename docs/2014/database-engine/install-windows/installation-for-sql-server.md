@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 96afef098b711c65e1bcb46d5f687c95061f2c94
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228405"
 ---
 # <a name="installation-for-sql-server-2014"></a>SQL Server 2014 安裝
@@ -68,10 +68,10 @@ ms.locfileid: "75228405"
  [安裝 SQL Server 2014](install-sql-server.md)  
  說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的安裝選項。  
   
- [升級至 SQL Server 2014](upgrade-sql-server.md)  
+ [升級為 SQL Server 2014](upgrade-sql-server.md)  
  說明用以升級至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的選項。  
   
- [卸載 SQL Server 2014](../../sql-server/install/uninstall-sql-server.md)  
+ [解除安裝 SQL Server 2014](../../sql-server/install/uninstall-sql-server.md)  
  說明解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]的程序。  
   
  [SQL Server 容錯移轉叢集安裝](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
@@ -84,7 +84,7 @@ ms.locfileid: "75228405"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式文件中的這一節將說明如何安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
 ## <a name="related-sections"></a>相關章節  
- [安裝 how to 主題](../../sql-server/install/installation-how-to-topics.md)  
+ [安裝的使用說明主題](../../sql-server/install/installation-how-to-topics.md)  
  提供如何從安裝精靈、從命令提示字元、使用組態檔及使用 SysPrep 安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的程序性主題連結。  
   
  [安裝 SharePoint &#40;PowerPivot 和 Reporting Services 的 SQL Server BI 功能&#41;](../../sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
@@ -95,5 +95,5 @@ ms.locfileid: "75228405"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 安裝的新功能](../../sql-server/install/what-s-new-in-sql-server-installation.md)   
- [安裝 SQL Server 2014 的硬體和軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   

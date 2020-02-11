@@ -17,10 +17,10 @@ ms.author: rajpo
 manager: jroth
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6f9d3d97d939586683015f38ab17c00dd03ca122
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253506"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>使用 Data Migration Assistant，評估遷移至 Azure SQL Database 的 SQL Server 資料資產是否就緒
@@ -72,11 +72,11 @@ Azure Migrate 專案用來儲存從您要評估或遷移的環境中收集到的
    > [!NOTE]
    > 當您建立專案時，您必須加入至少一個評估或遷移工具。
 
-8. 在 [**選取評估工具**] 索引標籤上， **Azure Migrate：資料庫評估**會顯示為要新增的評估工具。 如果您目前不需要評估工具，請選取 [**立即略過新增評估工具**] 核取方塊。 選取 [下一步]****。
+8. 在 [**選取評估工具**] 索引標籤上， **Azure Migrate：資料庫評估**會顯示為要新增的評估工具。 如果您目前不需要評估工具，請選取 [**立即略過新增評估工具**] 核取方塊。 選取 [下一步]  。
 
     ![Azure Migrate-選取 [評估工具] 索引標籤](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-assessment-tool.png)
 
-9. 在 [**選取遷移工具**] 索引標籤上， **Azure Migrate：資料庫移轉**會顯示為要新增的遷移工具。 如果您目前不需要遷移工具，請選取 [**立即略過新增遷移工具**]。 選取 [下一步]****。
+9. 在 [**選取遷移工具**] 索引標籤上， **Azure Migrate：資料庫移轉**會顯示為要新增的遷移工具。 如果您目前不需要遷移工具，請選取 [**立即略過新增遷移工具**]。 選取 [下一步]  。
 
     ![Azure Migrate-選取 [遷移工具] 索引標籤](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-migration-tool.png)
 
@@ -102,7 +102,7 @@ Azure Migrate 專案用來儲存從您要評估或遷移的環境中收集到的
 
     如果您要將內部部署 SQL Server 實例升級至較新版本的 SQL Server 或裝載在 Azure VM 上的 SQL Server，請將來源和目標伺服器類型設定為 [ **SQL Server**]。 將 [目標伺服器類型] 設定為 [Azure SQL Database （PaaS）目標就緒評量的**Azure SQL Database 受控執行個體**。
 
-3. 選取 [建立]****。
+3. 選取 [建立]  。
 
    ![Azure Migrate Data Migration Assistant 介面](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-interface.png)
 
@@ -116,7 +116,7 @@ Azure Migrate 專案用來儲存從您要評估或遷移的環境中收集到的
 
    ![Azure Migrate-Data Migration Assistant-評量選項畫面](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-options-screen.png)
 
-2. 選取 [下一步]****。
+2. 選取 [下一步]  。
 
 ### <a name="add-databases-to-assess"></a>新增要評估的資料庫
 
@@ -181,6 +181,6 @@ Azure Migrate 專案用來儲存從您要評估或遷移的環境中收集到的
 
 ## <a name="see-also"></a>另請參閱
 
-* [Data Migration Assistant （DMA）](../dma/dma-overview.md)
+* [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 * [Data Migration Assistant：設定](../dma/dma-configurationsettings.md)
 * [Data Migration Assistant：最佳做法](../dma/dma-bestpractices.md)

@@ -13,41 +13,41 @@ ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84b90e2c1338c38538d0c33779fb8e3f5cf2af79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922952"
 ---
 # <a name="basic-rds-programming-model"></a>基本 RDS 程式設計模型
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- RDS 解決下列環境中存在的應用程式：用戶端應用程式會指定將在伺服器與要傳回的所需的資訊所需的參數執行的程式。 在指定的資料來源，以提升存取伺服器上叫用的程式擷取的資訊、 選擇性地處理資料，和將產生的資訊傳回用戶端應用程式的表單，它可以輕鬆地使用。 RDS 可讓您執行下列動作順序的方法：  
+ RDS 會解決存在於下列環境中的應用程式：用戶端應用程式會指定將在伺服器上執行的程式，以及傳回所需資訊所需的參數。 在伺服器上叫用的程式會取得指定資料來源的存取權、抓取資訊，並選擇性地處理資料，然後將產生的資訊以容易使用的形式傳回至用戶端應用程式。 RDS 提供執行下列動作順序的方法：  
   
--   指定要在伺服器上，叫用的程式，並取得用來從用戶端參考它。 (有時稱為 「 此參照*proxy*。 它代表遠端伺服器的程式。 用戶端應用程式會 「 呼叫 」 proxy 視為就像是本機的程式，但它實際上會叫用的遠端伺服器的程式。）  
+-   指定要在伺服器上叫用的程式，並取得從用戶端參考它的方式。 （此參考有時稱為*proxy*。 它代表遠端伺服器程式。 用戶端應用程式會「呼叫」 proxy，如同它是本機程式一樣，但實際上會叫用遠端伺服器程式）。  
   
--   叫用伺服器程式。 將參數傳遞至伺服器程式識別資料來源以及要發出的命令。 （伺服器程式實際上會使用 ADO 來存取資料來源。 ADO 使用其中一個指定的參數，進行連線並發行另一個參數中指定的命令。）  
+-   叫用伺服器程式。 將參數傳遞給識別資料來源的伺服器程式，以及要發出的命令。 （伺服器程式實際上會使用 ADO 來取得資料來源的存取權。 ADO 會使用其中一個指定的參數進行連接，然後發出另一個參數中指定的命令。）  
   
--   伺服器程式會取得[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)從資料來源的物件。 （選擇性）**資料錄集**物件在伺服器上處理。  
+-   伺服器程式會從資料來源取得[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 （選擇性）在伺服器上處理**記錄集**物件。  
   
--   伺服器程式會傳回最後**資料錄集**用戶端應用程式的物件。  
+-   伺服器程式會將最終的**記錄集**物件傳回至用戶端應用程式。  
   
--   在用戶端**資料錄集**物件放入容易使用的視覺控制項的表單。  
+-   在用戶端上，**記錄集**物件會放入可供視覺控制項輕鬆使用的表單中。  
   
--   修改**資料錄集**物件傳送至伺服器的程式，可使用它們來更新資料來源。  
+-   對**記錄集**物件所做的任何修改都會傳送回伺服器程式，這會使用它們來更新資料來源。  
   
- 這個程式設計模型包含特定的便利功能。 如果您不需要複雜的伺服器程式存取資料來源，如果您提供必要的連接和命令參數，RDS 會自動擷取指定的資料，使用簡單的預設伺服器計劃。  
+ 此程式設計模型包含某些便利功能。 如果您不需要複雜的伺服器程式來存取資料來源，而且您提供必要的連接和命令參數，則 RDS 會自動以簡單的預設伺服器程式來取得指定的資料。  
   
- 如果您需要更複雜的處理，您可以指定自己的自訂伺服器程式。 比方說，自訂伺服器計劃有 ADO 的完整功能，其可供使用，因為它無法連接到數個不同的資料來源、 一些複雜的方式，結合他們的資料，然後傳回用戶端應用程式的 簡單、 已處理的結果。  
+ 如果您需要更複雜的處理，您可以指定自己的自訂伺服器程式。 例如，由於自訂伺服器程式具有 ADO 的全部強大功能，因此它可以連接到數個不同的資料來源，以某種複雜的方式結合其資料，然後將一個簡單的已處理結果傳回給用戶端應用程式。  
   
- 最後，如果您的需求將會是某處之間，ADO 現在支援自訂的預設伺服器程式的行為。  
+ 最後，如果您的需求介於其間的某個位置，ADO 現在支援自訂預設伺服器程式的行為。  
   
 ## <a name="see-also"></a>另請參閱  
- [RDS 程式設計模型詳述](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
+ [RDS 程式設計模型詳細資料](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
  [RDS 案例](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [RDS 提供使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
+ [Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [RDS 使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

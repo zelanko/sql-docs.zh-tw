@@ -1,5 +1,5 @@
 ---
-title: 使用 sqlconnect 進行連接 |Microsoft Docs
+title: 連接 SQLConnect |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e37cef235949473beb52e0836553ca16316bc744
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083117"
 ---
 # <a name="connecting-with-sqlconnect"></a>使用 SQLConnect 進行連線
-**SQLConnect**是最簡單的連線函式。 它需要資料來源名稱，並接受選擇性的使用者識別碼和密碼。 它適用於應用程式的硬式編碼的資料來源名稱，不需要使用者識別碼或密碼。 也可以運作良好的應用程式想要控制自己 「 外觀與風格 」 或，都沒有使用者介面。 這類應用程式可以建立一份使用資料來源**SQLDataSources**會提示使用者輸入資料來源、 使用者識別碼和密碼，然後呼叫**SQLConnect**。  
+**SQLConnect**是最簡單的連接功能。 它需要資料來源名稱，並接受選擇性的使用者識別碼和密碼。 它適用于將資料來源名稱硬式編碼，且不需要使用者識別碼或密碼的應用程式。 它也適用于想要控制自己的「外觀」或沒有使用者介面的應用程式。 這類應用程式可以使用**SQLDataSources**建立資料來源的清單、提示使用者輸入資料來源、使用者識別碼和密碼，然後呼叫**SQLConnect**。  
   
- 下列範例會連接到 Northwind 資料庫中，使用 DSN，northwind 應用程式，並從所有員工 資料表中的記錄會都擷取所有的名字和姓氏欄位。  
+ 下列範例會使用稱為 Northwind 的 DSN 來連接到 Northwind 資料庫，並從 Employees 資料表中的所有記錄抓取所有名字和姓氏欄位。  
   
 ```  
 // Connecting_with_SQLConnect.cpp  

@@ -19,10 +19,10 @@ ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 666e7fdbc080af3ed259dae978bd782e437eae2e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75557800"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project---data-quality-services-dqs"></a>開啟、解除鎖定、重新命名及刪除資料品質專案-Data Quality Services （DQS）
@@ -31,9 +31,9 @@ ms.locfileid: "75557800"
 
   此主題描述如何使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 管理資料品質專案，例如開啟、解除鎖定、重新命名和刪除資料品質專案。  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="LimitationsRestrictions"></a>限制事項  
+###  <a name="LimitationsRestrictions"></a> 限制事項  
   
 -   您無法開啟另一個使用者所建立且已鎖定的專案。  
   
@@ -43,12 +43,12 @@ ms.locfileid: "75557800"
   
 -   您只能解除鎖定由您建立的資料品質專案。  
   
-###  <a name="Prerequisites"></a>要求  
+###  <a name="Prerequisites"></a> 必要條件  
  您至少必須有一個資料品質專案可供管理。  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_kb_operator 角色，才能管理資料品質專案。  
   
 ##  <a name="Open"></a>開啟資料品質專案  
@@ -98,6 +98,6 @@ ms.locfileid: "75557800"
   
 3.  在 **[開啟專案]** 畫面中，以滑鼠右鍵按一下您所建立且解除鎖定的資料品質專案，然後按一下快速鍵功能表中的 **[刪除]** 。  
   
-4.  確認訊息隨即出現。 按一下 [是]****。  
+4.  確認訊息隨即出現。 按一下 [是]  。  
   
   

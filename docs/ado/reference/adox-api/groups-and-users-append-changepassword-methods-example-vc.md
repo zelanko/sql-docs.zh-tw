@@ -1,5 +1,5 @@
 ---
-title: 群組和 Users Append、 ChangePassword 方法範例 （VC + +） |Microsoft Docs
+title: 群組和使用者附加、ChangePassword 方法範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ff06ece1485ce8f140e1295e8bee3036cc1686a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a98b92b4aaad14ec507b10a345bb8200b1169f0d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966198"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918077"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Groups 和 Users Append、ChangePassword 方法範例 (VC++)
-此範例示範[Append](../../../ado/reference/adox-api/append-method-adox-groups.md)方法[群組](../../../ado/reference/adox-api/groups-collection-adox.md)，以及[附加](../../../ado/reference/adox-api/append-method-adox-users.md)方法[使用者](../../../ado/reference/adox-api/users-collection-adox.md)藉由新增新的[群組](../../../ado/reference/adox-api/group-object-adox.md)和新[使用者](../../../ado/reference/adox-api/user-object-adox.md)系統。 新**群組**附加至**群組**的新集合**使用者**。 因此，新**使用者**新增至**群組**。 此外， [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)方法用來指定**使用者**密碼。  
+這個範例會示範[群組](../../../ado/reference/adox-api/groups-collection-adox.md)的[append](../../../ado/reference/adox-api/append-method-adox-groups.md)方法，以及[使用者](../../../ado/reference/adox-api/users-collection-adox.md)的[append](../../../ado/reference/adox-api/append-method-adox-users.md)方法，其方式是將新的[群組](../../../ado/reference/adox-api/group-object-adox.md)和新的[使用者](../../../ado/reference/adox-api/user-object-adox.md)新增至系統。 新**群組**會附加至新**使用者**的 [**群組**] 集合。 因此，新的**使用者**會新增至**群組**。 此外， [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)方法是用來指定**使用者**密碼。  
   
 > [!NOTE]
->  如果您要連接到資料來源提供者支援 Windows 驗證，您應該指定**Trusted_Connection = yes**或是**Integrated Security = SSPI**而非使用者 ID 和密碼連接字串中的資訊。  
+>  如果您要連接到支援 Windows 驗證的資料來源提供者，您應該在連接字串中指定**Trusted_Connection = yes**或**整合式安全性 = SSPI** ，而不是使用者識別碼和密碼資訊。  
   
 ```  
 // BeginGroupCpp.cpp  
@@ -124,7 +124,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in include files...." << endl;  
+      cout << "Error occurred in include files...." << endl;  
    }  
   
    ::CoUninitialize();  

@@ -13,10 +13,10 @@ ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4b85846202ef1cd8a30012dddb2c88803c901d16
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728805"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>將多個條件加入至商務規則 (Master Data Services)
@@ -33,42 +33,42 @@ ms.locfileid: "73728805"
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 -   商務規則必須存在。 如需詳細資訊，請參閱[建立及發行商務規則 &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)。  
   
 ### <a name="to-add-multiple-conditions-to-a-business-rule"></a>若要將多個條件加入至商務規則  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
-2.  從功能表列，指向 [管理]，然後按一下 [商務規則]。  
+2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]**。  
   
-3.  在 [商務規則] 頁面上，從 [模型] 下拉式清單選取模型。  
+3.  在 [**商務規則]/** 頁面上，從 [**模型**] 下拉式清單中選取模型。  
   
-4.  從 [實體] 下拉式清單中，選取實體。  
+4.  從 [實體] **** 下拉式清單選取實體。  
   
-5.  從 [成員類型] 下拉式清單中，選取成員的類型。  
+5.  從 [成員類型]**** 下拉式清單中，選取成員的類型。  
   
 6.  按一下您想要編輯之商務規則的資料列。  
   
-7.  按一下 **[編輯]** 。  
+7.  按一下 **[編輯]**。  
   
-8.  在 [If] 區塊下，從左側的邏輯運算子下拉式清單中選取 [AND/OR/ NOT]。  
+8.  在 [If]**** 區塊下，從左側的邏輯運算子下拉式清單中選取 [AND/OR/ NOT]****。  
   
-9. 按一下 **[新增]** 。 面板隨即顯示。  
+9. 按一下 [新增]  。 面板隨即出現。  
   
-10. 從 [屬性] 下拉式清單中選取屬性。  
+10. 從 [屬性] **** 下拉式清單中，選取屬性。  
   
-11. 從 [運算子] 下拉式清單中選取條件。  
+11. 從 [運算子]**** 下拉式清單中選取條件。  
   
 12. 完成所有必要的欄位。  
   
-13. 按一下 **[儲存]** 。 新的資料列就會新增至 [If] 方格中。  
+13. 按一下 [檔案]  。 新的資料列就會新增至 [If]**** 方格中。  
   
 14. 或者若要加入更多條件，請完成步驟 8-13。  
   
     > [!TIP]  
-    >  若要刪除條件，請選取條件並以滑鼠右鍵按一下它，然後按一下 [刪除]。  
+    >  若要刪除條件，請選取條件並以滑鼠右鍵按一下它，然後按一下 [刪除]****。  
   
     > [!TIP]  
     >  您可以選取多個條件，並按一下滑鼠右鍵將它們集合在邏輯運算子內，或取消群組特定邏輯運算子內的條件。  

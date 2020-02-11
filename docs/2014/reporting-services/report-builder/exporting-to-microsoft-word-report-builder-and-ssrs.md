@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a2808ff3bb6cfab084854a8d9cd7cf5511dfd0fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244495"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>匯出至 Microsoft Word (報表產生器及 SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "75244495"
   
  在 Word 中不會轉譯新聞稿樣式資料行的報表。 也不會轉譯報表主體與頁面背景影像和色彩。  
   
-##  <a name="Pagination"></a>分頁  
+##  <a name="Pagination"></a> 分頁  
  在 Word 中開啟報表後，Word 會根據頁面大小，再次為整個報表分頁。 分頁可能會使分頁符號插入到您不想加入的位置，而且在某些情況下，可能會讓匯出的報表在資料列中有兩個接續的分頁符號，或者加入了空白頁。 您可以調整頁面邊界，藉以嘗試變更 Word 的分頁。  
   
  此轉譯器僅支援邏輯分頁符號。  
@@ -60,9 +60,9 @@ ms.locfileid: "75244495"
   
 |報表元素屬性|描述|  
 |-------------------------------|-----------------|  
-|Report Title (report title)|標題|  
+|Report Title (report title)|Title|  
 |Report.Author|作者|  
-|Report.Description|評價|  
+|Report.Description|註解|  
   
 ##  <a name="ReportHeadersFooters"></a>頁首和頁尾  
  系統會將頁首和頁尾轉譯為 Word 中的頁首和頁尾區域。 如果表示報表頁面總數的報表頁碼或運算式出現在頁首或頁尾中，它們會轉譯成 Word 欄位，讓正確的頁碼顯示在轉譯的報表中。 如果是在報表中設定頁首或頁尾高度，Word 就無法支援這個設定。 在某些情況下，PrintOnFirstPage 屬性可以指定是否在報表第一頁列印頁首和頁尾文字。 如果轉譯的報表有多頁，而且每頁只包含一個單一區段，則您可以將 PrintOnFirstPage 設為 False，就會隱藏第一頁上的文字，否則，不管 PrintOnFirstPage 屬性的值為何，都會列印文字。  
@@ -83,7 +83,7 @@ ms.locfileid: "75244495"
   
  為避免這個問題，當您在頁尾和頁首中使用運算式時，請使用多個文字往返來代替一個複雜運算式。 下列兩個運算式是對等的。 第一個是複雜運算式，而第二個使用文字往返。 Word 轉譯器僅成功剖析第二個運算式。  
   
-##  <a name="Interactivity"></a>互動性  
+##  <a name="Interactivity"></a> 互動性  
  Word 中支援某些互動元素。 下列是特定行為的描述。  
   
 ### <a name="show-and-hide"></a>顯示與隱藏  
@@ -188,13 +188,13 @@ ms.locfileid: "75244495"
 ##  <a name="Differences"></a>Word 和 Word 2003 轉譯器之間的差異  
  透過 Word 或 Word 2003 轉譯器所轉譯的報表通常無法用肉眼分辨。 不過，您可能會注意到 Word 或 Word 2003 這兩個格式之間的小差異。  
   
-##  <a name="DeviceInfo"></a>裝置資訊設定  
+##  <a name="DeviceInfo"></a> 裝置資訊設定  
  您可以變更此轉譯器的某些預設值，例如，省略超連結和鑽研連結或是在進行轉譯時，展開忽略原始的項目狀態而切換的所有項目，方法是，變更裝置資訊設定。 如需詳細資訊，請參閱 [Word Device Information Settings](../word-device-information-settings.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services &#40;報表產生器和 SSRS 中的分頁&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [轉譯行為 &#40;報表產生器和 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [&#40;報表產生器和 SSRS 轉譯報表專案&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [報表產生器和 SSRS &#40;資料表、矩陣和清單&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
+ [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [轉譯行為 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 運算式 (MDX) |Microsoft Docs
+title: 運算式（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893591"
 ---
 # <a name="expressions-mdx"></a>運算式 (MDX)
@@ -25,14 +25,14 @@ ms.locfileid: "68893591"
   
  簡單運算式可以是下列運算式之一：  
   
- 常數  
+ 持續性  
  常數在 MDX 中是代表單一特定值的符號。 字串、數值及日期值可以轉譯成常數。 和數值常數不同，字串及日期常數必須以單引號 (') 字元分隔。  
   
  純量函數  
  在 MDX 中，純量函數會傳回評估內容內的單一值。 因為不只會在單一資料元素上，也會反覆在一群資料元素 (例如，資料格或成員) 上評估大部份的 MDX 運算式、陳述式及指令碼，所以此特性對了解 MDX 如何解析純量函數很重要。 但是，在評估純量函數時，此函數一般會檢閱單一資料元素。  
   
  物件識別碼  
- 因為多維度資料的本質，所以 MDX 是物件導向的。 物件識別碼在 MDX 中視為簡單運算式。 如需識別碼的詳細資訊,[請&#40;參閱&#41;識別碼 MDX](../mdx/identifiers-mdx.md)。  
+ 因為多維度資料的本質，所以 MDX 是物件導向的。 物件識別碼在 MDX 中視為簡單運算式。 如需識別碼的詳細資訊，請參閱[MDX&#41;&#40;的識別碼](../mdx/identifiers-mdx.md)。  
   
  複雜運算式可以從上述項目利用運算子聯結的組合來建立。  
   
@@ -84,7 +84,7 @@ WHERE [Product].[Category].[Bikes]
 |[使用空白值](../mdx/working-with-empty-values.md)|描述什麼是空白值，以及如何處理這類的值。|  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 語言參考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
+ [Mdx 語言參考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 查詢基本概念 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   
   

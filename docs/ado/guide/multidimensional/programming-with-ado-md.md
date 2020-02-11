@@ -13,17 +13,17 @@ ms.assetid: c826b9b5-0d78-43a2-8174-5844db62a93c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ee0aa11dcc9b73f6c0a174714852f76f383fb45
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923179"
 ---
 # <a name="programming-with-ado-md"></a>使用 ADO MD 進行程式設計
-若要使用您的開發工具中的 ADO MD，您應該建立 ADO MD 型別程式庫的參考。 ADO MD 程式庫的描述是 Microsoft ActiveX Data Objects （多維度） 的程式庫。 ADO MD 程式庫檔案名稱 msadomd.dll，且程式識別碼 (ProgID) 是 「 ADOMD"。 如需如何建立程式庫參考的詳細資訊，請參閱您的開發工具的文件。  
+若要搭配使用 ADO MD 與您的開發工具，您應該建立 ADO MD 類型程式庫的參考。 ADO MD 程式庫的描述是 Microsoft ActiveX Data Objects （多維度）程式庫。 ADO MD 程式庫檔案名為 msadomd，而程式識別碼（ProgID）為 "ADOMD"。 如需如何建立程式庫參考的詳細資訊，請參閱開發工具的檔。  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO （多維度） (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [多維度的結構描述和資料的概觀](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
- [使用 ADO MD 使用 ADO](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
+ [ADO （多維度）（ADO MD）](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
+ [多維度架構和資料的總覽](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
+ [使用 ADO 搭配 ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
  [使用多維度資料](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)

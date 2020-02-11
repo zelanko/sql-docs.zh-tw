@@ -15,10 +15,10 @@ ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 02adc815ee969af43b56e51966ded1b1fde6f101
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244153"
 ---
 # <a name="perform-knowledge-discovery"></a>執行知識探索
@@ -29,14 +29,14 @@ ms.locfileid: "75244153"
   
  知識探索是由精靈驅動的程序，其中包含必須各自完成的三個步驟。  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a>要求  
+###  <a name="Prerequisites"></a> 必要條件  
  如果您執行探索的來源資料在 Excel 檔案中，則 Microsoft Excel 必須安裝在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 電腦上。 否則，您將無法在對應階段選取此 Excel 檔案。 由 Microsoft Excel 建立的檔案可以具有 .xlsx、.xls 或 .csv 的副檔名。 如果使用 64 位元版本的 Excel，則僅支援 Excel 2003 檔案 (.xls)；Excel 2007 或 2010 檔案 (.xlsx) 不受支援。 如果您使用 64 位元版本的 Excel 2007 或 2010，請將檔案儲存為 .xls 檔案或 .csv 檔案，或是改為安裝 32 位元版本的 Excel。  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能建立知識庫。  
   
 ##  <a name="FirstStep"></a>第一步：開始知識探索  
@@ -188,7 +188,7 @@ ms.locfileid: "75244153"
   
 8.  **從 excel 匯入定義域值**：若要從 excel 試算表加入新的值，請按一下 [匯**入值**] 圖示的向下箭號，然後選取 [**從 excel 匯入定義域值**]。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]**。 如需詳細資訊，請參閱 [將 Excel 檔案中的值匯入定義域中](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)。  
   
-9. 匯**入專案值**：按一下 [匯**入值**] 圖示的向下箭號，然後選取 [匯**入專案值**]，即可從資料品質專案加入新的值。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]**。 選取要匯入的值來自於哪一個專案，然後按一下 **[確定]**。 隨即顯示匯入的值。 按一下 **[完成]**。 如需詳細資訊，請參閱＜將專案值匯入定義域＞。  
+9. 匯**入專案值**：按一下 [匯**入值**] 圖示的向下箭號，然後選取 [匯**入專案值**]，即可從資料品質專案加入新的值。 輸入檔案名稱，並在適當情況下選取 **[使用第一個資料列做為標頭]** ，然後按一下 **[確定]**。 選取要匯入的值來自於哪一個專案，然後按一下 **[確定]**。 隨即顯示匯入的值。 按一下 [完成]  。 如需詳細資訊，請參閱＜將專案值匯入定義域＞。  
   
 10. **刪除選取的定義域值**：選取值，然後按一下 [**刪除選取的定義域值**] 按鈕，即可從定義域中移除一個或多個現有的值。 DQS_NULL 的項目無法刪除，所以如果您選擇多個要刪除的值，而且 DQS_NULL 的項目是其中一個，此作業將會失敗。  
   

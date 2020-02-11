@@ -1,5 +1,5 @@
 ---
-title: 群組集合 (ADOX) |Microsoft Docs
+title: Groups 集合（ADOX） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,39 +18,39 @@ ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e39be3cf32f04a60e554928f66cdc6123322f19c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966184"
 ---
 # <a name="groups-collection-adox"></a>Groups 集合 (ADOX)
-包含所有預存[群組](../../../ado/reference/adox-api/group-object-adox.md)目錄或使用者的物件。  
+包含目錄或使用者的所有儲存的[群組](../../../ado/reference/adox-api/group-object-adox.md)物件。  
   
 ## <a name="remarks"></a>備註  
- **群組**的集合[目錄](../../../ado/reference/adox-api/catalog-object-adox.md)代表所有類別目錄的群組帳戶。 **群組**收集[使用者](../../../ado/reference/adox-api/user-object-adox.md)表示只將使用者所屬的群組。  
+ [目錄](../../../ado/reference/adox-api/catalog-object-adox.md)的**Groups**集合代表所有目錄的群組帳戶。 [使用者](../../../ado/reference/adox-api/user-object-adox.md)的**Groups**集合只代表使用者所屬的群組。  
   
- [Append](../../../ado/reference/adox-api/append-method-adox-groups.md)方法**群組**集合都是唯一的 ADOX。 您可以：  
+ **群組**集合的[APPEND](../../../ado/reference/adox-api/append-method-adox-groups.md)方法對於 ADOX 而言是唯一的。 您可以：  
   
--   將新的安全性群組新增至集合**Append**方法。  
+-   使用**Append**方法，將新的安全性群組新增至集合。  
   
- 其餘的屬性和方法是標準的 ADO 集合。 您可以：  
+ 其餘的屬性和方法都是 ADO 集合的標準。 您可以：  
   
--   存取集合中的群組[項目](../../../ado/reference/ado-api/item-property-ado.md)屬性。  
+-   使用[Item](../../../ado/reference/ado-api/item-property-ado.md)屬性存取集合中的群組。  
   
--   傳回與集合中包含的群組數目[計數](../../../ado/reference/ado-api/count-property-ado.md)屬性。  
+-   傳回集合中包含[Count](../../../ado/reference/ado-api/count-property-ado.md)屬性的群組數目。  
   
--   從集合中移除群組[刪除](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法。  
+-   使用[Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法從集合中移除群組。  
   
--   更新以反映與目前的資料庫結構描述集合中的物件[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)方法。  
+-   更新集合中的物件，以使用[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法來反映目前的資料庫架構。  
   
 > [!NOTE]
->  附加之前**群組**物件**群組**集合**使用者**物件**群組**物件具有相同[名稱](../../../ado/reference/adox-api/name-property-adox.md)為要附加的一個必須已存在於**群組**的集合**目錄**。  
+>  將**群組**物件附加至**使用者**物件的**groups**集合之前，與要附加的**群組物件**[名稱](../../../ado/reference/adox-api/name-property-adox.md)相同，必須已經存在於**目錄**的**群組**集合中。  
   
  本章節包含下列主題。  
   
 -   [Groups 集合屬性、方法和事件](../../../ado/reference/adox-api/groups-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Catalog 物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Catalog 物件（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Group 物件 (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)

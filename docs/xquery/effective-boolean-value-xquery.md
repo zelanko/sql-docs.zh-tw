@@ -1,5 +1,5 @@
 ---
-title: 有效的布林值 (XQuery) |Microsoft Docs
+title: 有效的布林值（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4eb94e51896e08f60389edde0c2a6cd0461e8538
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67929951"
 ---
 # <a name="effective-boolean-value-xquery"></a>有效的布林值 (XQuery)
@@ -37,7 +37,7 @@ ms.locfileid: "67929951"
   
 -   邏輯運算式  
   
--   [無法運作](../xquery/functions-on-boolean-values-not-function.md)  
+-   [Not 函數](../xquery/functions-on-boolean-values-not-function.md)  
   
 -   FLWOR 運算式的 WHERE 子句  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67929951"
   
 -   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
   
- 下列是有效布林值的範例。 當**如果**運算式的處理、 有效的布林值條件的決定。 因為 `/a[1]` 會傳回空的序列，所以有效布林值為 False。 傳回的結果會是具有一個文字節點 (False) 的 XML。  
+ 下列是有效布林值的範例。 處理**if**運算式時，會判斷條件的有效布林值。 因為 `/a[1]` 會傳回空的序列，所以有效布林值為 False。 傳回的結果會是具有一個文字節點 (False) 的 XML。  
   
 ```  
 value is false  
@@ -64,15 +64,16 @@ SELECT @x.query('if (/a[1]) then "true" else "false"')
 go  
 ```  
   
- 在查詢具類型**xml**資料行或變數，您可以有布林類型的節點。 **Data （)** 在此情況下會傳回布林值。 如果查詢運算式傳回的布林值為 True，則有效布林值即為 True，如下個範例所示。 範例中也說明下列各項：  
+ 查詢具類型的**xml**資料行或變數時，您可以有 Boolean 類型的節點。 在此情況下，**資料（）** 會傳回布林值。 如果查詢運算式傳回的布林值為 True，則有效布林值即為 True，如下個範例所示。 範例中也說明下列各項：  
   
--   建立 XML 結構描述集合。 項目\<b > 在集合中是屬於布林類型。  
+-   建立 XML 結構描述集合。 集合中\<的元素 b> 是布林類型。  
   
--   具型別**xml**變數已建立並查詢。  
+-   建立並查詢具類型的**xml**變數。  
   
--   `data(/b[1])` 運算式會傳回布林值 True。 因此，此情況中的有效布林值是 True。  
+-   
+  `data(/b[1])` 運算式會傳回布林值 True。 因此，此情況中的有效布林值是 True。  
   
--   運算式`data(/b[2])`傳回布林值 false。 因此，此情況中的有效布林值是 False。  
+-   運算式`data(/b[2])`會傳回布林值 false。 因此，此情況中的有效布林值是 False。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
@@ -90,6 +91,6 @@ go
   
 ## <a name="see-also"></a>另請參閱  
  [XQuery 基本概念](../xquery/xquery-basics.md)   
- [FLWOR 陳述式和反覆項目&#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
+ [FLWOR 語句和反復專案 &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
   
   

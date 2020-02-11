@@ -22,12 +22,12 @@ ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 310ab4f332c3262b20e73211f5ec3d4a5f19786a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d779c02d895088cff2ae59aff6722acd8db79adf
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66101937"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76971397"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>在原生模式報表伺服器上授與權限
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用以角色為基礎的授權和驗證子系統來決定能夠在報表伺服器上執行作業及存取項目的人員。 以角色為基礎的授權，將使用者或群組可以執行的動作集分類成角色。 驗證是以內建的 Windows 驗證或您提供的自訂驗證模組為基礎。 您可以使用預先定義或自訂的角色搭配任何一種驗證類型。  
@@ -41,7 +41,7 @@ ms.locfileid: "66101937"
   
 1.  檢閱預先定義的角色來判斷您是否能夠依原狀使用它們。 如果您需要調整工作或定義其他角色，就應該先進行這些作業，然後再指派使用者至特定角色。 如需各個角色的詳細資訊，請參閱 [Predefined Roles](role-definitions-predefined-roles.md)。  
   
-2.  確認哪些使用者和群組需要存取報表伺服器，以及所存取的層級。 多數使用者都應指派至 **[瀏覽者]** 角色或 **[報表產生器]** 角色。 **[發行者]** 角色則應指派給較少數的使用者。 只有非常少數的使用者才應指派至 **[內容管理員]**。  
+2.  確認哪些使用者和群組需要存取報表伺服器，以及所存取的層級。 多數使用者都應指派至 **[瀏覽者]** 角色或 **[報表產生器]** 角色。 **[發行者]** 角色則應指派給較少數的使用者。 只有非常少數的使用者才應指派至 **[內容管理員]** 。  
   
 3.  您可以使用報表管理員，針對需要存取權的每個使用者或群組，指派 [主資料夾] 資料夾 (這是報表伺服器資料夾階層的最上層資料夾) 的角色。  
   
@@ -53,10 +53,8 @@ ms.locfileid: "66101937"
 >  如果您設定報表伺服器在 SharePoint 整合模式中執行，您必須在 SharePoint 網站上設定權限，授與報表伺服器項目的存取權。 如需詳細資訊，請參閱 [授與 SharePoint 網站上報表伺服器項目的權限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)。  
   
 ## <a name="who-sets-permissions"></a>誰設定權限  
- 一開始，只有屬於本機管理員群組成員的使用者可以存取報表伺服器。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 已安裝二個預設角色指派，其將項目層級及系統層級的存取權授與本機管理員群組的成員。 這些內建角色指派會將報表伺服器存取權授與其他使用者並管理報表伺服器項目。 您無法刪除內建的角色指派。 本機管理員一律擁有完全管理報表伺服器執行個體的權限。  
-  
- 由於報表伺服器的完整權限包括項目層級和系統層級的權限，因此本機管理員會被指派至下列角色：  
-  
+ 一開始，只有屬於本機管理員群組成員的使用者可以存取報表伺服器。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 已安裝二個預設角色指派，其將項目層級及系統層級的存取權授與本機管理員群組的成員。 本機系統管理員可以使用這些內建角色指派，將報表伺服器存取權授與其他使用者，並管理報表伺服器專案。 您無法刪除內建的角色指派。 本機管理員一律擁有完全管理報表伺服器執行個體的權限。  
+ 
  您必須進行其他組態設定，然後才能管理執行 Windows Vista 或 Windows Server 2008 之本機電腦上的報表伺服器執行個體。 如需詳細資訊，請參閱 [設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
 ## <a name="how-permissions-are-stored"></a>權限的儲存方式  
@@ -74,7 +72,7 @@ ms.locfileid: "66101937"
  [Predefined Roles](role-definitions-predefined-roles.md)   
  [授與 SharePoint 網站上報表伺服器項目的權限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [使用報表伺服器驗證](authentication-with-the-report-server.md)   
- (create-and-manage-role-assignments.md)   
+ （create-and-manage-role-assignments.md）   
  [Reporting Services 安全性與保護](reporting-services-security-and-protection.md)   
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   

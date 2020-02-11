@@ -1,5 +1,5 @@
 ---
-title: 實作注意事項 |Microsoft Docs
+title: 執行附注 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: 7ec14b9c-69b8-4c6e-838a-88d1ebdc8725
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 95b60ba35a867135cfc1f823e08b1a99f0262ca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135738"
 ---
-# <a name="implementation-notes"></a>實作注意事項
+# <a name="implementation-notes"></a>實作附註
 > [!IMPORTANT]  
->  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
   
- 本章節描述如何實作 ODBC 資料指標程式庫。 它說明資料指標程式庫會維護其快取、 執行 SQL 陳述式，並實作 ODBC 函數的方式。  
+ 本節說明如何實作為 ODBC 資料指標程式庫。 它會描述資料指標程式庫如何維護其快取、執行 SQL 語句，以及實作用 ODBC 函式。  
   
  此章節包含下列主題。  
   

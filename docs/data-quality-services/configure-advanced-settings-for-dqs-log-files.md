@@ -13,10 +13,10 @@ ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: f4c0431afb7d1c2de0fc5e4fae5e7c7c25639002
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255606"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>設定 DQS 記錄檔的進階設定
@@ -28,11 +28,11 @@ ms.locfileid: "75255606"
 > [!NOTE]  
 >  這些活動無法使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]來執行，而且僅適用於進階使用者。  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
   
 -   您的 Windows 使用者帳戶必須是 SQL Server 執行個體上系統管理員 (sysadmin) 固定伺服器角色的成員，才能修改 DQS_MAIN 資料庫中 A_CONFIGURATION 資料表的組態設定。  
   
@@ -125,6 +125,6 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
 3.  進行所需的變更，然後儲存檔案，即可套用新的記錄變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定 DQS 記錄檔的嚴重性層級](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)  
+ [為 DQS 記錄檔設定嚴重性層級](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)  
   
   

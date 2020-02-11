@@ -1,5 +1,5 @@
 ---
-title: 連接到 Azure 儲存體 (還原) |Microsoft Docs
+title: 連接到 Azure 儲存體（還原） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,26 +13,26 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6fbb57fe629797e34cc7c61f224d65d46d4e66cd
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154767"
 ---
-# <a name="connect-to-azure-storage-restore"></a>連接到 Azure 儲存體 (還原)
-  此對話方塊可讓您指定 Azure 儲存體帳戶資訊的連線, 以便在 Azure 儲存體帳戶中取出檔案儲存體。 指定所需的資訊之後, 按一下 **[連線]** 以建立與 Azure 儲存體的連接。  
+# <a name="connect-to-azure-storage-restore"></a>連線到 Azure 儲存體 (還原)
+  此對話方塊可讓您指定 Azure 儲存體帳戶資訊的連線，以擷取儲存在 Azure 儲存體帳戶中的檔案。 指定必要資訊之後，按一下 [連接]  建立 Azure 儲存體的連線。  
   
 ## <a name="azure-storage-account"></a>Azure 儲存體帳戶  
  **儲存體帳戶**  
- 選取 [], 輸入或貼上您想要使用的 Azure 儲存體帳戶名稱。 下拉式方塊會列出先前使用的帳戶。  
+ 選取、輸入或貼上您想要使用的 Azure 儲存體帳戶名稱。 下拉式方塊會列出先前使用的帳戶。  
   
  **帳戶金鑰**  
  指定 Azure 儲存體帳戶存取金鑰。  
   
- [使用安全端點 (HTTPS)] 核取方塊  
- 選取此選項以建立與 Azure 儲存體的安全連線 (建議使用)。  
+ [使用安全端點 (HTTPS)]  核取方塊  
+ 選取此選項，以確保 Azure 儲存體的安全連線 (建議使用)。  
   
- [儲存帳戶金鑰]核取方塊  
+ [儲存帳戶金鑰]  核取方塊  
  如果您想要 SQL Server 記住此儲存體帳戶的存取金鑰，請選取此核取方塊。  
   
 ### <a name="sql-credential"></a>SQL 認證  
@@ -40,6 +40,6 @@ ms.locfileid: "70154767"
  選取符合儲存體帳戶和帳戶金鑰資訊的現有 SQL 認證。  
   
  **建立新認證**  
- 選取此選項，以使用儲存體帳戶和帳戶金鑰資訊建立新認證。 在 [認證名稱] 欄位中指定新認證的名稱。  
+ 選取此選項，以使用儲存體帳戶和帳戶金鑰資訊建立新認證。 在 [認證名稱]  欄位中指定新認證的名稱。  
   
   

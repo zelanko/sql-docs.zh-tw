@@ -15,21 +15,21 @@ ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f7bf7e77f892f10de17402b59e732523d58fbc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036556"
 ---
 # <a name="choosing-an-sql-grammar"></a>選擇 SQL 文法
-首先要建構 SQL 陳述式時決定是要使用的文法。 除了可從各種不同的標準組織，例如 Open Group、 ANSI 和 ISO、 文法幾乎每個 DBMS 廠商會定義它自己的文法，其中每個標準略有不同。  
+在建立 SQL 語句時，第一個要做的決定是要使用哪一個文法。 除了可從各種標準本文取得的文法，例如開放式群組、ANSI 和 ISO，幾乎每個 DBMS 廠商都會定義自己的文法，而每個都有不同的標準。  
   
- [附錄 C：SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)，告訴您所有的 ODBC 驅動程式必須支援的最小 SQL 文法。 此文法是 SQL-92 的項目層級的子集。 驅動程式可能支援其他符合中繼、 完整 或 FIPS 127-2 過渡期的層級定義的 SQL-92 的文法。 如需詳細資訊，請參閱 < [SQL 最小文法](../../../odbc/reference/appendixes/sql-minimum-grammar.md)附錄 c:SQL 文法和 SQL-92。  
+ [附錄 C： Sql 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)描述所有 ODBC 驅動程式都必須支援的最低 SQL 文法。 此文法是 SQL-92 進入層級的子集。 驅動程式可能會支援額外的文法，以符合 SQL-92 所定義的中繼、完整或 FIPS 127-2 轉換層級。 如需詳細資訊，請參閱附錄 C： SQL 文法和 SQL-92 中的[Sql 最低文法](../../../odbc/reference/appendixes/sql-minimum-grammar.md)。  
   
- 附錄 C 也會定義*逸出序列*包含常用的語言功能，例如外部聯結中，標準的文法，未涵蓋的 SQL-92 文法。 如需詳細資訊，請參閱 < [ODBC 逸出序列](../../../odbc/reference/appendixes/odbc-escape-sequences.md)附錄 c:SQL 文法，以及[逸出序列](../../../odbc/reference/develop-app/escape-sequences.md)稍後這一節。  
+ 附錄 C 也會針對常用的語言功能（例如外部聯結）定義包含非 SQL-92 文法所涵蓋之標準文法的*逸出序列*。 如需詳細資訊，請參閱本節稍後的附錄 C： SQL 文法和[Escape 序列](../../../odbc/reference/develop-app/escape-sequences.md)中的[ODBC Escape 序列](../../../odbc/reference/appendixes/odbc-escape-sequences.md)。  
   
- 文法會選擇會影響此驅動程式如何處理陳述式。 SQL-92 SQL 和特定 DBMS 的 SQL ODBC 定義的逸出序列，則必須修改驅動程式。 由於大部分的 SQL 文法會依據一或多個各種標準，因此大部分的驅動程式就會執行幾乎沒有任何工作，以符合此需求。 它通常只包含搜尋所定義的逸出序列的 ODBC 和它們取代為特定 DBMS 的文法。 當驅動程式遇到它無法辨識的文法時，它會假設文法的 DBMS 特定作業，並傳遞不需要修改資料來源，以便執行的 SQL 陳述式。  
+ 所選擇的文法會影響驅動程式處理語句的方式。 驅動程式必須將 SQL-92 SQL 和 ODBC 定義的逸出序列修改為 DBMS 特定的 SQL。 因為大部分的 SQL 文法都是以一或多個不同的標準為基礎，所以大部分的驅動程式幾乎不需要任何工作就能滿足這項需求。 通常只會包含搜尋 ODBC 所定義的 escape 序列，並以 DBMS 特定文法來取代它們。 當驅動程式發現文法無法辨識時，它會假設文法是 DBMS 專屬的，並在不修改資料來源的情況下傳遞 SQL 語句來執行。  
   
- 因此，實際上有兩個選擇的文法，若要使用： SQL-92 文法 （和 ODBC 逸出序列） 及特定 DBMS 的文法。 兩個 SQL-92 文法是互通性最佳、 的因此互通性的所有應用程式應該使用它。 不具互通性的應用程式可以使用 SQL-92 文法或特定 DBMS 的文法。 DBMS 專屬文法會有兩個優點：它們可以利用任何未涵蓋的 SQL-92 的功能，它們是稍微更快，因為驅動程式不需要加以修改。 後者的功能可以藉由 SQL_ATTR_NOSCAN 陳述式屬性，這會停止將驅動程式搜尋和取代逸出序列從部分強制執行。  
+ 因此，實際上有兩個要使用的文法選擇： SQL-92 文法（和 ODBC 轉義順序）和 DBMS 特定文法。 在這兩個中，只有 SQL-92 文法可互通，因此所有互通的應用程式都應該使用它。 無法互通的應用程式可以使用 SQL-92 文法或 DBMS 特定的文法。 DBMS 特定的文法有兩個優點：它們可以利用 SQL-92 未涵蓋的任何功能，而且速度會更快，因為驅動程式不需要修改它們。 您可以藉由設定 SQL_ATTR_NOSCAN 語句屬性來部分強制執行後者的功能，這會停止驅動程式搜尋並取代 escape 序列。  
   
- 如果使用 SQL-92 文法，則應用程式可以探索如何修改驅動程式透過呼叫**SQLNativeSql**。 偵錯應用程式時，這是很有用。 **SQLNativeSql**接受 SQL 陳述式，並傳回它之後，驅動程式已修改過它。 此函式是在核心介面一致性層級，因為它支援所有的驅動程式。
+ 如果使用的是 SQL-92 文法，應用程式可以藉由呼叫**SQLNativeSql**來探索驅動程式修改的方式。 這在偵錯工具時通常很有用。 **SQLNativeSql**會接受 SQL 語句，並在驅動程式修改它之後傳回它。 因為此函式是在核心介面一致性層級中，所以所有驅動程式都支援此功能。

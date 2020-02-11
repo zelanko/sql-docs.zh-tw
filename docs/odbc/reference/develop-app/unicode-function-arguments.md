@@ -14,10 +14,10 @@ ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88ce592ebbf5a1b44d55b1b3119ef96e713112bc
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74833022"
 ---
 # <a name="unicode-function-arguments"></a>Unicode 函式引數
@@ -74,4 +74,4 @@ ODBC 3.5 （或更新版本）驅動程式管理員同時支援 ANSI 和 Unicode
   
 -   [Unicode 驅動程式](../../../odbc/reference/develop-app/unicode-drivers.md)  
   
--   [驅動程式管理員中的函數對應](../../../odbc/reference/develop-app/function-mapping-in-the-driver-manager.md)
+-   [驅動程式管理員中的函式對應](../../../odbc/reference/develop-app/function-mapping-in-the-driver-manager.md)

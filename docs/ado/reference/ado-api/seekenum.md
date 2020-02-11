@@ -16,28 +16,28 @@ ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 886825b4d32354572a5162487add419b00ec35d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931061"
 ---
 # <a name="seekenum"></a>SeekEnum
-指定的型別[搜尋](../../../ado/reference/ado-api/seek-method.md)來執行。  
+指定要執行的[搜尋](../../../ado/reference/ado-api/seek-method.md)類型。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adSeekFirstEQ**|1|搜尋的第一個索引鍵相等*Parentkeyvalue*。|  
-|**adSeekLastEQ**|2|搜尋等於最後一個索引鍵*Parentkeyvalue*。|  
-|**adSeekAfterEQ**|4|搜尋可能索引鍵相等*Parentkeyvalue*或後方會有發生該相符項目。|  
-|**adSeekAfter**|8|後方的位置搜尋索引鍵相符*Parentkeyvalue*時可能發生。|  
-|**adSeekBeforeEQ**|16|搜尋可能索引鍵相等*Parentkeyvalue*或之前其中時可能發生的相符項目。|  
-|**adSeekBefore**|32|之前搜尋的索引鍵，其中相符*Parentkeyvalue*時可能發生。|  
+|**adSeekFirstEQ**|1|搜尋等於*配置*的第一個索引鍵。|  
+|**adSeekLastEQ**|2|搜尋等於*配置*的最後一個索引鍵。|  
+|**adSeekAfterEQ**|4|搜尋等於*配置*的索引鍵，或在發生相符的位置之後。|  
+|**adSeekAfter**|8|在出現與*配置*相符的位置之後搜尋索引鍵。|  
+|**adSeekBeforeEQ**|16|搜尋等於*配置*的索引鍵，或只在發生相符的位置之前。|  
+|**adSeekBefore**|32|在出現與*配置*相符的位置之前，搜尋索引鍵。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- 封裝： **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
+ Package： **.com. wfc. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums.Seek.FIRSTEQ|  
 |AdoEnums.Seek.LASTEQ|  
@@ -46,5 +46,5 @@ ms.locfileid: "67931061"
 |AdoEnums.Seek.BEFOREEQ|  
 |AdoEnums.Seek.BEFORE|  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Seek 方法](../../../ado/reference/ado-api/seek-method.md)

@@ -1,5 +1,5 @@
 ---
-title: 在 視覺效果中處理錯誤C++|Microsoft Docs
+title: 處理 Visual C++ 中的錯誤 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,15 +16,15 @@ ms.assetid: b7576f07-020a-45f7-9e79-b5756f33f7ab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb9eb29a78c3ec5f47e3ff09641ba04ca01d204a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925122"
 ---
 # <a name="handling-errors-in-visual-c"></a>處理 Visual C++ 的錯誤
-在 COM 中，大部分的作業會傳回 HRESULT 傳回碼指出函數是否已順利完成。 #Import 指示詞會產生每個 「 原始 」 的方法或屬性周圍的包裝函式程式碼，並檢查傳回的 HRESULT。 如果 HRESULT 指出失敗，包裝函式程式碼會擲回的 COM 錯誤的 HRESULT 傳回碼的呼叫 _com_issue_errorex() 做為引數。 COM 錯誤物件可以陷入**try / catch**區塊。 （為了效率的因素，攔截 _com_error 物件的參考）。  
+在 COM 中，大部分的作業會傳回 HRESULT 傳回碼，指出函數是否已順利完成。 #Import 指示詞會針對每個「原始」方法或屬性產生包裝函式程式碼，並檢查傳回的 HRESULT。 如果 HRESULT 指出失敗，包裝函式程式碼會呼叫 _com_issue_errorex （）並以 HRESULT 傳回碼做為引數，以擲回 COM 錯誤。 可以在**try-catch**區塊中攔截 COM 錯誤物件。 （為了提高效率，請攔截 _com_error 物件的參考）。  
   
- 請記住，這些是 ADO 錯誤： 有人從 ADO 作業失敗。 基礎提供者所傳回的錯誤會顯示為**錯誤**中的物件**連線**物件的**錯誤**集合。  
+ 請記住，這些是 ADO 錯誤：這是因為 ADO 作業失敗所造成。 基礎提供者傳回的錯誤會在**連接**物件的**錯誤**集合中顯示為**錯誤**物件。  
   
- #Import 指示詞只會建立用於方法和屬性在 ADO.dll 中宣告的錯誤處理常式。 不過，您可以利用這個相同的錯誤處理機制撰寫您自己的錯誤檢查巨集或內嵌函式。 請參閱範例主題 C++® 延伸模組。
+ #Import 指示詞只會為 ADO 中所宣告的方法和屬性建立錯誤處理常式。 不過，您可以藉由撰寫自己的錯誤檢查宏或內嵌函式，來利用這個相同的錯誤處理機制。 如需範例，請參閱 Visual C++®延伸模組主題。

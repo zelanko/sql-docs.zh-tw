@@ -21,10 +21,10 @@ ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d9da0f09c2506e0d596a485aee112f9f188b6d12
-ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74947150"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
@@ -41,16 +41,16 @@ ms.locfileid: "74947150"
 |kpid|**smallint**|Windows 執行緒識別碼。|  
 |blocked|**smallint**|封鎖要求之工作階段的識別碼。 如果這個資料行是 NULL，表示要求沒有被封鎖，或者封鎖工作階段的工作階段資訊無法使用 (或無法識別)。<br /><br /> -2 = 封鎖資源是由被遺棄的分散式交易所擁有。<br /><br /> -3 = 封鎖資源是由延遲的復原交易所擁有。<br /><br /> -4 = 由於內部閂鎖狀態轉換，而無法判斷封鎖閂鎖擁有者的工作階段識別碼。|  
 |waittype|**binary （2）**|已保留。|  
-|waittime|**bigint**|目前的等候時間 (以毫秒為單位)。<br /><br /> 0 = 處理序未在等待中。|  
+|waittime|**Bigint**|目前的等候時間 (以毫秒為單位)。<br /><br /> 0 = 處理序未在等待中。|  
 |lastwaittype|**Nchar （32）**|一個指出上次或目前等待類型之名稱的字串。|  
 |waitresource|**Nchar （256）**|鎖定資源的文字表示法。|  
 |dbid|**smallint**|處理序目前所使用的資料庫識別碼。|  
 |UID|**smallint**|執行命令的使用者識別碼。 如果使用者和角色數目超過 32,767 個，則會造成溢位或傳回 NULL。|  
 |cpu|**int**|處理序的累計 CPU 時間。 不論 SET STATISTICS TIME 選項設為 ON 或 OFF，所有處理序的這個項目都會更新。|  
-|physical_io|**bigint**|處理序的累計磁碟讀取和寫入。|  
+|physical_io|**Bigint**|處理序的累計磁碟讀取和寫入。|  
 |memusage|**int**|在程序快取中目前配置給此處理序的頁數。 負數表示處理序正在釋放其他處理序配置的記憶體。|  
-|login_time|**從中**|用戶端處理序登入伺服器的時間。|  
-|last_batch|**從中**|上次用戶端處理序執行遠端預存程序呼叫或 EXECUTE 陳述式的時間。|  
+|login_time|**datetime**|用戶端處理序登入伺服器的時間。|  
+|last_batch|**datetime**|上次用戶端處理序執行遠端預存程序呼叫或 EXECUTE 陳述式的時間。|  
 |ecid|**smallint**|用來唯一識別代表單一處理序操作之子執行緒的執行內容識別碼。|  
 |open_tran|**smallint**|處理序的開啟交易數目。|  
 |status|**Nchar （30）**|處理序識別碼狀態。 可能的值包括：<br /><br /> ****  = 休眠[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在重設會話。<br /><br /> **正在**執行 = 會話正在執行一或多個批次。 啟用 Multiple Active Result Set (MARS) 之後，工作階段就可以執行多個批次。 如需詳細資訊，請參閱[使用 Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。<br /><br /> **background** = 會話正在執行背景工作，例如鎖死偵測。<br /><br /> **rollback** = 會話在進程中有交易回復。<br /><br /> **暫**止 = 會話正在等候工作者執行緒變成可用。<br /><br /> 可**執行 = 會話**中的工作在等候取得時間配量時，位於排程器的可執行佇列中。<br /><br /> **spinloop** = 會話中的工作正在等候 spinlock 變成可用狀態。<br /><br /> 已**暫停**= 會話正在等候事件（例如 i/o）完成。|  

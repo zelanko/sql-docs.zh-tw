@@ -1,5 +1,5 @@
 ---
-title: 巡覽資料 |Microsoft Docs
+title: 流覽資料 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0b58000da5f29824fbfdd134a701088775c90af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924789"
 ---
 # <a name="navigating-through-data"></a>巡覽資料
-**資料錄集**支援各種方法和屬性，以瀏覽結果的資料集。 我們透過少數的情況下，使用我們的範例，來檢查這項功能**資料錄集**物件。  
+**記錄集**支援各種方法和屬性，以流覽結果資料集。 我們會透過範例**記錄集**物件的幾個案例來檢查這項功能。  
   
  此章節包含下列主題。  
   
