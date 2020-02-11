@@ -1,5 +1,5 @@
 ---
-title: Catalog 物件屬性、 方法和事件 |Microsoft Docs
+title: Catalog 物件屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32321406d6de6aad4674bdea6ea9a5c086369259
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967043"
 ---
 # <a name="catalog-object-properties-methods-and-events"></a>Catalog 物件屬性、方法和事件
@@ -25,11 +25,11 @@ ms.locfileid: "67967043"
   
  [群組集合](../../../ado/reference/adox-api/groups-collection-adox.md)  
   
- [Procedures 集合](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+ [程式集合](../../../ado/reference/adox-api/procedures-collection-adox.md)  
   
- [Tables 集合](../../../ado/reference/adox-api/tables-collection-adox.md)  
+ [資料表集合](../../../ado/reference/adox-api/tables-collection-adox.md)  
   
- [使用者集合](../../../ado/reference/adox-api/users-collection-adox.md)  
+ [Users 集合](../../../ado/reference/adox-api/users-collection-adox.md)  
   
  [Views 集合](../../../ado/reference/adox-api/views-collection-adox.md)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67967043"
   
  [SetObjectOwner 方法](../../../ado/reference/adox-api/setobjectowner-method.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>事件  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

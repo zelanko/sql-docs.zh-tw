@@ -15,17 +15,17 @@ ms.assetid: d6a91cd6-3905-4e3a-98ab-37fce893dbe1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 597abe268979852d754e2e3e86ae81daa8f3fed8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019073"
 ---
 # <a name="cursor-library-cache"></a>資料指標程式庫快取
 > [!IMPORTANT]  
->  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
   
- 每個資料列的結果集中的資料，資料指標程式庫會快取每個繫結的資料行，每個繫結的資料行中的資料長度與資料列的狀態的資料。 資料指標程式庫使用的快取這兩個中的值，傳回透過**SQLFetch**並**SQLFetchScroll**並建構搜尋陳述式中的定位作業。 如需詳細資訊，請參閱 <<c0> [ 建構搜尋的陳述式](../../../odbc/reference/appendixes/constructing-searched-statements.md)。  
+ 針對結果集中的每個資料列，資料指標程式庫會快取每個系結資料行的資料、每個系結資料行中的資料長度，以及資料列的狀態。 資料指標程式庫會使用快取中的值，透過**SQLFetch**和**SQLFetchScroll**傳回，並針對定位作業來建立搜尋的語句。 如需詳細資訊，請參閱[建立搜尋的語句](../../../odbc/reference/appendixes/constructing-searched-statements.md)。  
   
  此章節包含下列主題。  
   

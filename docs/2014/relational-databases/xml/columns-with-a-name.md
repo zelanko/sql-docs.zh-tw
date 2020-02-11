@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a57f4b1a56c3a23c9be8957f97fa7b352f9674a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638162"
 ---
 # <a name="columns-with-a-name"></a>有名稱的資料行
@@ -33,7 +33,7 @@ ms.locfileid: "62638162"
 -   一個資料行具有不同的名稱。  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>資料行名稱以 \@ 符號開頭  
- 如果資料行名稱的開頭 at 符號 (\@)，而且不包含斜線 （/） 的屬性 <`row`> 會建立具有對應的資料行值的項目。 例如，以下查詢會傳回兩個資料行 (\@PmId、Name) 的資料列集。 在產生的 XML 中，**PmId** 屬性會加入對應的 <`row`> 元素中，並會將 ProductModelID 值指派給該元素。  
+ 如果資料行名稱是以 @ 符號\@開頭，而且不包含斜線（/），則會建立具有對應資料行值 <`row`> 元素的屬性。 例如，以下查詢會傳回兩個資料行 (\@PmId、Name) 的資料列集。 在產生的 XML 中，**PmId** 屬性會加入對應的 <`row`> 元素中，並會將 ProductModelID 值指派給該元素。  
   
 ```  
   
@@ -66,7 +66,7 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>資料行名稱不是以 \@ 符號開頭  
- 如果資料行名稱開頭不 at 符號 (\@)、 不是其中一個 XPath 節點測試中，而且不包含斜線 （/），是資料列元素的子元素的 XML 項目 <`row`> 根據預設，會建立。  
+ 如果資料行名稱不是以 @ 符號開頭（\@），就不是其中一個 XPath 節點測試，而且不包含斜線（/），而是資料列元素之子專案的 XML 專案，<`row`> 預設為建立。  
   
  下列查詢指定資料行名稱，也就是結果。 因此，<`result`> 子元素會加入 <`row`> 元素。  
   
@@ -83,7 +83,7 @@ for xml PATH
 </row>  
 ```  
   
- 下列查詢會針對 **xml** 類型的 Instructions 資料行指定之 XQuery 所傳回的 XML，指定資料行名稱 ManuWorkCenterInformation。 因此，將以 <`row`> 元素的子元素加入 <`ManuWorkCenterInformation`> 元素。  
+ 下列查詢會針對 **xml** 類型的 Instructions 資料行指定之 XQuery 所傳回的 XML，指定資料行名稱 ManuWorkCenterInformation。 因此，將以 <`ManuWorkCenterInformation`> 元素的子元素加入 <`row`> 元素。  
   
 ```  
 SELECT   
@@ -128,7 +128,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- 該資料行名稱是在 PATH 模式中建構 XML 時當做路徑使用。 包含員工識別碼值的資料行名稱開頭 '\@'。因此，屬性 (attribute) **EmpID**，新增至 <`row`> 項目。 在指出階層的資料行名稱中，所有其他的資料行都包含斜線 ('/')。 產生的 XML 在 <`row`> 元素底下將有 <`EmpName`> 子元素，而且 <`EmpName`> 子元素將有 <`First`>、<`Middle`> 及 <`Last`> 子元素。  
+ 該資料行名稱是在 PATH 模式中建構 XML 時當做路徑使用。 包含員工識別碼值的資料行名稱是以 '\@' 開頭。因此，會將屬性**EmpID**新增至 <`row`> 元素。 在指出階層的資料行名稱中，所有其他的資料行都包含斜線 ('/')。 產生的 XML 在 <`EmpName`> 元素底下將有 <`row`> 子元素，而且 <`EmpName`> 子元素將有 <`First`>、<`Middle`> 及 <`Last`> 子元素。  
   
 ```  
 <row EmpID="1">  

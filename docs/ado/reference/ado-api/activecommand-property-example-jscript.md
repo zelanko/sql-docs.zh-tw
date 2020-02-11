@@ -1,5 +1,5 @@
 ---
-title: ActiveCommand 屬性範例 (JScript) |Microsoft Docs
+title: ActiveCommand 屬性範例（JScript） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ad96904c913cadc451bc7d4c67fb5e4f8c59c70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921666"
 ---
 # <a name="activecommand-property-example-jscript"></a>ActiveCommand 屬性範例 (JScript)
-此範例示範[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)屬性。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**ActiveCommandJS.asp**。  
+這個範例會示範[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)屬性。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，然後將它儲存為**ActiveCommandJS。**  
   
 ```  
 <!-- BeginActiveCommandJS -->  
@@ -126,6 +126,6 @@ if (strName.length > 0)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ActiveCommand 屬性 (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [ActiveCommand 屬性（ADO）](../../../ado/reference/ado-api/activecommand-property-ado.md)   
+ [Command 物件（ADO）](../../../ado/reference/ado-api/command-object-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

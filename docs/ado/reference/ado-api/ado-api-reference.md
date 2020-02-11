@@ -13,16 +13,16 @@ ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9e3c71d7233e75e0c97cacf6ec35d86bd4c8df31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921224"
 ---
 # <a name="ado-api-reference"></a>ADO API 參考
-ADO 文件的本節包含主題中的每一個 ADO 物件、 集合、 屬性、 動態屬性、 方法、 事件和列舉型別。 此外，它包含一份 ADO 語法索引，以搭配 Microsoft VisualC++和 Windows Foundation 類別 (WCF)。  
+ADO 檔的這一節包含每個 ADO 物件、集合、屬性、動態屬性、方法、事件和列舉的主題。 此外，它還包含一份要與 Microsoft Visual C++ 和 Windows Foundation 類別（WFC）搭配使用的 ADO 語法索引清單。  
   
- 如需詳細資訊，搜尋索引中的特定主題，或參閱下列主題：  
+ 如需詳細資訊，請搜尋索引中的特定主題，或參考下列主題：  
   
 -   [ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)  
   
@@ -45,8 +45,8 @@ ADO 文件的本節包含主題中的每一個 ADO 物件、 集合、 屬性、
 -   [ADO 程式碼範例](../../../ado/reference/ado-api/ado-code-examples.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [附錄 D：ADO 範例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
+ [附錄 D： ADO 範例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
+ [Microsoft ActiveX Data Objects （ADO）](../../../ado/microsoft-activex-data-objects-ado.md)   
  [附錄 C：使用 ADO 進行程式設計](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
  [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)   
  [ADO 歷程記錄](../../../ado/guide/ado-history.md)

@@ -1,5 +1,5 @@
 ---
-title: 檢視物件屬性、 方法和事件 |Microsoft Docs
+title: View 物件屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: 02b5ba88-cacd-4a68-881b-974824ea4a04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 01ddab58c594991cf38fb6da66dc2b77692c3daa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964818"
 ---
 # <a name="view-object-properties-methods-and-events"></a>View 物件屬性、方法和事件
@@ -32,7 +32,7 @@ ms.locfileid: "67964818"
 ## <a name="methods"></a>方法  
  無。  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>事件  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,5 +1,5 @@
 ---
-title: 執行預存程序 (OLE DB) |Microsoft Docs
+title: 執行預存程式（OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0102fa66e65fa11f47eec9f49cd1fa90fb11f877
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638763"
 ---
 # <a name="running-stored-procedures-ole-db"></a>執行預存程序 (OLE DB)
@@ -34,7 +34,7 @@ ms.locfileid: "62638763"
   
 -   增加的功能。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援三種機制，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]預存程序用來傳回資料：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]預存程式用來傳回資料的三種機制：  
   
 -   程序中的每個 SELECT 陳述式都會產生一個結果集。  
   
@@ -44,11 +44,11 @@ ms.locfileid: "62638763"
   
  應用程式必須能夠處理預存程序中的所有這些輸出。  
   
- 不同的 OLE DB 提供者在結果處理期間，會在不同時間傳回輸出參數和傳回值。 如果是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者、 輸出參數和傳回碼，才會提供取用者已經擷取或取消預存程序所傳回的結果集之後。 傳回碼和輸出參數會由來自伺服器的最後一個 TDS 封包傳回。  
+ 不同的 OLE DB 提供者在結果處理期間，會在不同時間傳回輸出參數和傳回值。 如果是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，在取用者抓取或取消預存程式所傳回的結果集之前，不會提供輸出參數和傳回碼。 傳回碼和輸出參數會由來自伺服器的最後一個 TDS 封包傳回。  
   
  當它傳回輸出參數和傳回碼時，提供者會使用 DBPROP_OUTPUTPARAMETERAVAILABILITY 屬性來報告。 這個屬性位於 DBPROPSET_DATASOURCEINFO 屬性集中。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會將 DBPROP_OUTPUTPARAMETERAVAILABILITY 屬性設定為 DBPROPVAL_OA_ATROWRELEASE，表示傳回碼和輸出參數不之前會傳回結果集是處理或釋出。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會將 DBPROP_OUTPUTPARAMETERAVAILABILITY 屬性設定為 DBPROPVAL_OA_ATROWRELEASE，以指出在處理或釋放結果集之前，不會傳回傳回碼和輸出參數。  
   
 ## <a name="see-also"></a>另請參閱  
  [預存程序](stored-procedures.md)  

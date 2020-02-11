@@ -18,14 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4036e38a0d0eb5e76934fa119b3bcc37342062a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520284"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>設定 Web 服務的 URL 屬性
-  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 應用程式中，您隨時都可以修改目前將應用程式導向的報表伺服器 Web 服務之目標基礎 URL。 若要這樣做，請直接設定服務物件的 **Url** 屬性。 例如：  
+  您隨時都可以在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]應用程式中修改應用程式目前導向之報表伺服器 Web 服務的基底 URL。 若要這樣做，請直接設定服務物件的 **Url** 屬性。 例如：  
   
 ```vb  
 Dim rs As New ReportingService2010()  

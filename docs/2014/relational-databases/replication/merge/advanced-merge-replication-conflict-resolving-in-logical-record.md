@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ba249d99c991fafc377aee019d666b9fa11df8b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629907"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Detecting and Resolving Conflicts in Logical Records
-  本主題涵蓋使用邏輯記錄時，可能會用到的衝突偵測和衝突解決方法之不同組合。 如果多個節點變更了相同的資料，或合併式複寫在複寫變更時遇到某種類型的錯誤 (例如，條件約束違規)，則合併式複寫中就會發生衝突。 如需衝突偵測和解決的詳細資訊，請參閱＜ [進階合併式複寫衝突偵測與解決](advanced-merge-replication-conflict-detection-and-resolution.md)＞。  
+  本主題涵蓋使用邏輯記錄時，可能會用到的衝突偵測和衝突解決方法之不同組合。 如果多個節點變更了相同的資料，或合併式複寫在複寫變更時遇到某種類型的錯誤 (例如，條件約束違規)，則合併式複寫中就會發生衝突。 如需衝突偵測和解決的詳細資訊，請參閱＜ [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)＞。  
   
- 若要指定發行項的衝突追蹤與解決層級，請參閱＜ [指定合併發行項的衝突追蹤與解決層級](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution)＞。  
+ 若要指定發行項的衝突追蹤與解決層級，請參閱＜ [Specify the Conflict Tracking and Resolution Level for Merge Articles](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution)＞。  
   
 ## <a name="conflict-detection"></a>衝突偵測  
  偵測邏輯記錄衝突的方法是由兩個發行項屬性所決定： **column_tracking** 和 **logical_record_level_conflict_detection**。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 及更新版本也支援邏輯記錄層級的偵測。  

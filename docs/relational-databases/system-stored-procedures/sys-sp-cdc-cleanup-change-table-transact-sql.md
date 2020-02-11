@@ -21,10 +21,10 @@ ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 51c0af34fb3158cc5032ee9ef53abce22d8ecc3a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72909324"
 ---
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
@@ -45,34 +45,34 @@ sys.sp_cdc_cleanup_change_table
 ```  
   
 ## <a name="arguments"></a>引數  
- [@capture_instance =]'*capture_instance*'  
+ [ @capture_instance = ]'*capture_instance*'  
  是與變更資料表相關聯之擷取執行個體的名稱。 *capture_instance*是**sysname**，沒有預設值，而且不能是 Null。  
   
  *capture_instance*必須為存在於目前資料庫中的 capture 實例命名。  
   
- [@low_water_mark =]*low_water_mark*  
- 這是一個記錄序號（LSN），用來當做*capture 實例*的新下限標準。 *low_water_mark*是**binary （10）** ，沒有預設值。  
+ [ @low_water_mark = ]*low_water_mark*  
+ 這是一個記錄序號（LSN），用來當做*capture 實例*的新下限標準。 *low_water_mark*是**binary （10）**，沒有預設值。  
   
  如果此值為非 null，它就必須顯示為[cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)資料表中目前專案的 start_lsn 值。 如果 cdc.lsn_time_mapping 中的其他項目與新下限標準所識別的項目共用相同的認可時間，系統就會選擇與該項目群組相關聯的最小 LSN 做為下限標準。  
   
  如果將此值明確設定為 Null，則會使用*capture 實例*目前的*下限*標準來定義清除作業的上限。  
   
- [@threshold=][*刪除閾值*]  
+ [ @threshold= ][*刪除閾值*]  
  是可以使用單一清除陳述式來刪除的最大刪除項目數。 *delete_threshold*是**Bigint**，預設值是5000。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  sys.sp_cdc_cleanup_change_table 會執行下列作業：  
   
-1.  如果 @low_water_mark 參數不是 Null，它會將*capture 實例*start_lsn 的值設定為新的*下限*標準。  
+1.  如果@low_water_mark參數不是 Null，它會將*capture 實例*的 start_lsn 值設定為新的*下限*標準。  
   
     > [!NOTE]  
-    >  新下限標準可能不是預存程序呼叫中指定的下限標準。 如果 cdc.lsn_time_mapping 資料表中的其他項目共用相同的認可時間，系統就會選取在項目群組中表示的最小 start_lsn 做為已調整的下限標準。 如果 @low_water_mark 參數為 Null，或目前的下限標準大於新的 lowwatermark，則會將 capture 實例的 start_lsn 值保持不變。  
+    >  新下限標準可能不是預存程序呼叫中指定的下限標準。 如果 cdc.lsn_time_mapping 資料表中的其他項目共用相同的認可時間，系統就會選取在項目群組中表示的最小 start_lsn 做為已調整的下限標準。 如果@low_water_mark參數為 Null，或目前的下限標準大於新的 lowwatermark，則會將 capture 實例的 start_lsn 值保持不變。  
   
 2.  然後，系統會刪除 __$start_lsn 值小於下限標準的變更資料表項目。 此 delete threshold 是用來限制在單一交易中刪除的資料列數目。 雖然系統會回報無法成功刪除項目，但是不會影響對擷取執行個體下限標準所做的任何變更，因為這些變更可能已經根據呼叫完成了。  
 
@@ -80,18 +80,18 @@ sys.sp_cdc_cleanup_change_table
   
 -   清除代理程式作業回報刪除失敗。  
   
-     管理員可以明確執行這個預存程序來重試失敗的作業。 若要針對指定的 capture 實例重試清除，請執行 sys. sp_cdc_cleanup_change_table，並為 @low_water_mark 參數指定 Null。  
+     管理員可以明確執行這個預存程序來重試失敗的作業。 若要針對指定的 capture 實例重試清除，請執行 sys. sp_cdc_cleanup_change_table，並為@low_water_mark參數指定 Null。  
   
 -   清除代理程式作業所使用的簡單保留性原則不足。  
   
      因為這個預存程序會針對單一擷取執行個體執行清除作業，所以它可用來建立自訂清除策略，以便為個別擷取執行個體修改清除規則。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 db_owner 固定資料庫角色中的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  
- [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [sys.fn_cdc_get_min_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
- [sys.fn_cdc_increment_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  
+ [cdc. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [fn_cdc_get_min_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+ [fn_cdc_increment_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  
   
   

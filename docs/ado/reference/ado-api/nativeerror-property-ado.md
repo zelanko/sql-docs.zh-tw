@@ -1,5 +1,5 @@
 ---
-title: NativeError 屬性 (ADO) |Microsoft Docs
+title: NativeError 屬性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,24 +18,24 @@ ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 42888190dcd7b5e41987e6e8ec7194242549aa9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918023"
 ---
 # <a name="nativeerror-property-ado"></a>NativeError 屬性 (ADO)
-指出提供者特有的錯誤程式碼給定[錯誤](../../../ado/reference/ado-api/error-object.md)物件。  
+指出給定[錯誤](../../../ado/reference/ado-api/error-object.md)物件的提供者特定錯誤碼。  
   
 ## <a name="return-value"></a>傳回值  
- 傳回**長**值，指出錯誤的程式碼。  
+ 傳回指出錯誤碼的**長**數值。  
   
 ## <a name="remarks"></a>備註  
- 使用**NativeError**屬性，以擷取特定的資料庫特定錯誤資訊**錯誤**物件。 比方說，當用於 OLE DB 的 Microsoft ODBC 提供者與 Microsoft SQL Server 資料庫，源自於 SQL Server 的原生錯誤碼通過 ODBC 和 ODBC 提供者的 ado **NativeError**屬性。  
+ 您可以使用**NativeError**屬性來抓取特定**錯誤**物件的資料庫特定錯誤資訊。 例如，搭配 Microsoft SQL Server 資料庫使用 OLE DB 的 Microsoft ODBC 提供者時，源自 SQL Server 的原生錯誤碼會透過 ODBC 和 ODBC 提供者傳遞至 ADO **NativeError**屬性。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Error 物件](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [描述、 HelpContext、 HelpFile、 NativeError、 數目、 來源和 SQLState 屬性範例 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [描述、 HelpContext、 HelpFile、 NativeError、 數目、 來源和 SQLState 屬性範例 （VC + +）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [Description、HelpCoNtext、內容説明、NativeError、Number、Source 和 SQLState 屬性範例（VB）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Description、HelpCoNtext、內容説明、NativeError、Number、Source 和 SQLState 屬性範例（VC + +）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   

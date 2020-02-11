@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626146"
 ---
 # <a name="sql-server-replication"></a>SQL Server 複寫
@@ -43,22 +43,22 @@ ms.locfileid: "62626146"
 ## <a name="publishing-and-distribution"></a>發行和散發  
   
 -   [設定發行和散發](configure-publishing-and-distribution.md)   
--   [檢視和修改發行集屬性](publish/view-and-modify-publication-properties.md)   
+-   [檢視及修改發行集屬性](publish/view-and-modify-publication-properties.md)   
 -   [停用發行和散發](disable-publishing-and-distribution.md)  
   
 ## <a name="publications-and-articles"></a>發行集和發行項 
   
--   [Create a Publication](publish/create-a-publication.md)    
+-   [建立發行集](publish/create-a-publication.md)    
 -   [定義發行項](publish/define-an-article.md)   
--   [檢視和修改發行集屬性](publish/view-and-modify-publication-properties.md)   
+-   [檢視及修改發行集屬性](publish/view-and-modify-publication-properties.md)   
 -   [檢視和修改發行項屬性](publish/view-and-modify-article-properties.md)    
 -   [刪除發行集](publish/delete-a-publication.md)   
 -   [刪除發行項](publish/delete-an-article.md)    
--   [從 Oracle 資料庫建立發行集](publish/create-a-publication-from-an-oracle-database.md)   
--   [設定訂閱的到期時間](publish/set-the-expiration-period-for-subscriptions.md)  
--   [指定結構描述選項](publish/specify-schema-options.md)  
--   [複寫結構描述變更](publish/replicate-schema-changes.md)    
--   [管理識別資料行](publish/manage-identity-columns.md)   
+-   [從 Oracle Database 建立發行集](publish/create-a-publication-from-an-oracle-database.md)   
+-   [設定訂閱的逾期期限](publish/set-the-expiration-period-for-subscriptions.md)  
+-   [指定架構選項](publish/specify-schema-options.md)  
+-   [複寫架構變更](publish/replicate-schema-changes.md)    
+-   [管理識別欄位](publish/manage-identity-columns.md)   
 -   [設定合併式發行集的相容性層級](publish/set-the-compatibility-level-for-merge-publications.md)  
   
 ### <a name="snapshot-options"></a>快照集選項  
@@ -69,15 +69,15 @@ ms.locfileid: "62626146"
 ### <a name="filter-data"></a>篩選資料  
   
 -   [定義及修改資料行篩選](publish/define-and-modify-a-column-filter.md)    
--   [定義及修改靜態資料列篩選](publish/define-and-modify-a-static-row-filter.md)    
--   [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
--   [最佳化參數化資料列篩選](publish/optimize-parameterized-row-filters.md)    
+-   [定義和修改靜態資料列篩選](publish/define-and-modify-a-static-row-filter.md)    
+-   [針對合併發行項定義及修改參數化資料列篩選](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
+-   [優化參數化資料列篩選](publish/optimize-parameterized-row-filters.md)    
 -   [定義和修改合併發行項之間的聯結篩選](publish/define-and-modify-a-join-filter-between-merge-articles.md)  
   
 ### <a name="transactional-replication-options"></a>異動複寫選項  
   
 -   [設定對交易式發行項之資料變更的傳播方法](publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)    
--   [啟用交易式發行集的更新訂閱](publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   [啟用交易式發行集的可更新訂閱](publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
 ### <a name="merge-replication-options"></a>合併式複寫選項  
   
@@ -102,16 +102,16 @@ ms.locfileid: "62626146"
   
 -   [建立和套用初始快照集](create-and-apply-the-initial-snapshot.md)   
 -   [使用參數化篩選建立合併式發行集的快照集](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
--   [Initialize a Transactional Subscription 從備份](initialize-a-transactional-subscription-from-a-backup.md)    
+-   [從備份初始化交易式訂閱](initialize-a-transactional-subscription-from-a-backup.md)    
 -   [手動初始化訂閱](initialize-a-subscription-manually.md)    
 -   [同步處理提取訂閱](synchronize-a-pull-subscription.md)    
 -   [同步處理發送訂閱](synchronize-a-push-subscription.md)   
 -   [重新初始化訂閱](reinitialize-a-subscription.md)    
--   [同步處理期間執行指令碼](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
+-   [在同步處理期間執行指令碼](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
 -   [為合併發行項實作商務邏輯處理常式](implement-a-business-logic-handler-for-a-merge-article.md)  
 -   [偵錯商務邏輯處理常式 &#40;複寫程式設計&#41;](debug-a-business-logic-handler-replication-programming.md)    
--   [同步處理期間控制觸發程序和條件約束的行為](control-behavior-of-triggers-and-constraints-in-synchronization.md)    
--   [為合併發行項實作自訂衝突解析程式](implement-a-custom-conflict-resolver-for-a-merge-article.md)  
+-   [在同步處理期間控制觸發程式和條件約束的行為](control-behavior-of-triggers-and-constraints-in-synchronization.md)    
+-   [針對合併發行項實作自訂衝突解析程式](implement-a-custom-conflict-resolver-for-a-merge-article.md)  
   
 ## <a name="administeration"></a>Administeration 
   
@@ -120,19 +120,19 @@ ms.locfileid: "62626146"
 -   [使用參數化篩選管理合併式發行集的資料分割](publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)    
 -   [將資料大量載入合併式發行集中的資料表](bulk-load-data-into-tables-in-a-merge-publication.md)    
 -   [清除合併中繼資料](administration/clean-up-merge-metadata-replication-transact-sql-programming.md)    
--   [為合併發行項執行的虛擬更新](administration/perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming.md)    
--   [檢視複寫的命令和散發資料庫中的其他資訊](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [為異動複寫啟用協調的備份](administration/enable-coordinated-backups-for-transactional-replication.md)   
--   [管理對等項目-拓撲](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
+-   [執行合併發行項的虛擬更新](administration/perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming.md)    
+-   [在散發資料庫中查看複寫的命令和其他資訊](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [為異動複寫啟用協調備份](administration/enable-coordinated-backups-for-transactional-replication.md)   
+-   [管理點對點拓撲](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
 -   [停止複寫拓撲](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
 -   [設定 Oracle 發行者的交易集作業](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
--   [升級複寫指令碼](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
+-   [升級複寫腳本](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
-## <a name="monitor"></a>監視器
+## <a name="monitor"></a>監視
   
 -   [允許非管理員使用複寫監視器](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [以程式設計方式監視複寫](monitor/programmatically-monitor-replication.md)    
--   [檢視複寫的命令和散發資料庫中的其他資訊](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [在散發資料庫中查看複寫的命令和其他資訊](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
 -   [檢視合併式發行集的衝突資訊](view-conflict-information-for-merge-publications.md) 
 -   [針對異動複寫測量延遲及驗證連接](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

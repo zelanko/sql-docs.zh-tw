@@ -1,5 +1,5 @@
 ---
-title: 'Issasynchstatus:: Abort (OLE DB) |Microsoft Docs'
+title: ISSAsynchStatus：： Abort （OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b61f5e3e44f9584fc3f93efb521585e3173b6c1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638718"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
@@ -36,13 +36,13 @@ HRESULT Abort(
 ```  
   
 ## <a name="arguments"></a>引數  
- *hChapter*[in]  
- 要中止作業之章節的控制代碼。 如果所呼叫的物件不是資料列集物件或者作業不適用於章節，呼叫端必須將*hChapter*為 DB_NULL_HCHAPTER。  
+ *hchapter 設定*[in]  
+ 要中止作業之章節的控制代碼。 如果所呼叫的物件不是資料列集物件，或作業不適用於某個章節，則呼叫端必須將*hchapter 設定*設定為 DB_Null_HCHAPTER。  
   
  *eOperation*[in]  
  要中止的作業。 這應該為下列值：  
   
- DBASYNCHOP_OPEN 取消的要求適用於非同步開啟或母體擴展的資料列集或資料來源物件的非同步初始化。  
+ DBASYNCHOP_OPEN：取消的要求適用於非同步開啟或擴展資料列集，或是非同步初始化資料來源物件。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  S_OK  
@@ -58,16 +58,16 @@ HRESULT Abort(
  發生了提供者特定的錯誤。  
   
  E_INVALIDARG  
- *HChapter*參數不是 DB_NULL_HCHAPTER 或*eOperation*不是 DBASYNCH_OPEN。  
+ *Hchapter 設定*參數不 DB_Null_HCHAPTER，或*eOperation*不 DBASYNCH_OPEN。  
   
  E_UNEXPECTED  
- **Issasynchstatus:: Abort**上的資料來源物件上呼叫**idbinitialize:: Initialize**尚未呼叫，或尚未完成。  
+ 在尚未呼叫**IDBInitialize：： Initialize**的資料來源物件上呼叫**ISSAsynchStatus：： Abort** ，或尚未完成。  
   
- 已在呼叫 **IDBInitialize::Initialize** 的資料來源物件上呼叫 **ISSAsynchStatus::Abort**，但是接著在初始化之前將它取消，或是它已經逾時。資料來源物件仍是尚未初始化。  
+ 在呼叫了**IDBInitialize：： Initialize**的資料來源物件上呼叫了**ISSAsynchStatus：： Abort** ，但後來在初始化之前取消，或已超時。資料來源物件仍未初始化。  
   
- **Issasynchstatus:: Abort**所在的資料列集上呼叫**itransaction:: Commit**或**itransaction:: Abort**先前已呼叫，以及資料列集未存留在認可或中止，且在廢止狀態。  
+ 在先前呼叫了**ITransaction：： Commit**或**ITransaction：： abort**的資料列集上呼叫**ISSAsynchStatus：： Abort** ，而且資料列集不會存留在 Commit 或 Abort，而且處於廢止狀態。  
   
- 已在資料列集上呼叫 **ISSAsynchStatus::Abort**，這個資料列集已在其初始化階段非同步地取消。 此資料列集處於廢止狀態。  
+ 已在初始化階段中以非同步方式取消的資料列集上呼叫**ISSAsynchStatus：： Abort** 。 此資料列集處於廢止狀態。  
   
 ## <a name="remarks"></a>備註  
  中止資料列集或資料來源物件的初始化可能會讓該資料列集或資料來源物件處於廢止狀態，因此造成 **IUnknown** 方法以外的所有方法都會傳回 E_UNEXPECTED。 當發生這個情況時，取用者唯一可行的動作就是釋放此資料列集或資料來源物件。  

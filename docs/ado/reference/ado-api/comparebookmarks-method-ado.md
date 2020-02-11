@@ -1,5 +1,5 @@
 ---
-title: CompareBookmarks 方法 (ADO) |Microsoft Docs
+title: CompareBookmarks 方法（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,14 +18,14 @@ ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d737c2f031fa3ba630eabb7e52dff0e056c3390
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919592"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks 方法 (ADO)
-比較兩個書籤，並傳回它們相對值的指示。  
+比較兩個書簽，並傳回其相對值的指示。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,30 +35,30 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 傳回[CompareEnum](../../../ado/reference/ado-api/compareenum.md)值，指出他們的書籤所表示的兩筆記錄的相對的資料列位置。  
+ 傳回[CompareEnum](../../../ado/reference/ado-api/compareenum.md)值，指出由其書簽表示之兩筆記錄的相對資料列位置。  
   
 #### <a name="parameters"></a>參數  
  *Bookmark1*  
- 第一個資料列的書籤。  
+ 第一個資料列的書簽。  
   
  *Bookmark2*  
- 第二個資料列的書籤。  
+ 第二列的書簽。  
   
 ## <a name="remarks"></a>備註  
- 書籤必須套用至相同[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)物件，或**資料錄集**物件及其[複製](../../../ado/reference/ado-api/clone-method-ado.md)。 您無法可靠地比較來自不同的書籤**資料錄集**物件，即使它們已建立從相同的原始碼或命令。 也可以比較的書籤**資料錄集**其基礎的提供者不支援比較的物件。  
+ 書簽必須套用至相同的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，或**記錄集**物件及其[複製](../../../ado/reference/ado-api/clone-method-ado.md)。 您無法可靠地比較來自不同**記錄集**物件的書簽，即使它們是從相同的來源或命令所建立。 您也不能比較其基礎提供者不支援比較之**記錄集**物件的書簽。  
   
- 書籤可唯一識別中的資料列**資料錄集**物件。 使用[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)要取得其書籤的目前資料列的屬性。  
+ 書簽可唯一識別**記錄集**物件中的資料列。 使用目前資料列的 [[書簽](../../../ado/reference/ado-api/bookmark-property-ado.md)] 屬性來取得其書簽。  
   
- 由於書籤的資料類型是每個提供者特有的 ADO 會公開為**Variant**。 例如，SQL Server 的書籤都屬於型別 DBTYPE_R8 (**Double**)。 ADO 會公開做為這個型別**Variant**使用的子型別**Double**。  
+ 由於書簽的資料類型是每個提供者特有的，因此 ADO 會將它公開為**Variant**。 例如，SQL Server 書簽的類型為 DBTYPE_R8 （**Double**）。 ADO 會以**Double**的子類型，將此型別公開為**Variant** 。  
   
- 當比較的書籤，ADO 就不會嘗試任何類型的強制型轉。 值會直接傳遞給提供者發生的比較。 如果書籤傳遞給**CompareBookmarks**方法儲存在不同類型的變數，它會產生下列型別不符的錯誤：「 引數屬於錯誤類型、 超出可接受的範圍，或與彼此衝突。 」  
+ 比較書簽時，ADO 不會嘗試任何類型的強制型轉。 這些值只會傳遞給發生比較的提供者。 如果傳遞至**CompareBookmarks**方法的書簽儲存在不同類型的變數中，它可能會產生下列類型不符的錯誤：「引數的類型錯誤、不在可接受的範圍內，或彼此衝突」。  
   
- 不是有效或格式不正確的書籤會造成錯誤。  
+ 無效或格式不正確的書簽將會造成錯誤。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [CompareBookmarks 方法範例 (VB)](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)   
- [CompareBookmarks 方法範例 （VC + +）](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
+ [CompareBookmarks 方法範例（VB）](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)   
+ [CompareBookmarks 方法範例（VC + +）](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
  [Bookmark 屬性 (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)

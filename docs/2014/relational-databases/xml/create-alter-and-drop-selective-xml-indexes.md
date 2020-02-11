@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a95fa1c010197d0107c757198d9db7eaf8d3c42e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637596"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>建立、修改和卸除選擇性 XML 索引
@@ -24,7 +24,7 @@ ms.locfileid: "62637596"
   
 ##  <a name="create"></a> 建立選擇性 XML 索引  
   
-### <a name="how-to-create-a-selective-xml-index"></a>HOW TO：建立選擇性 XML 索引  
+### <a name="how-to-create-a-selective-xml-index"></a>如何：建立選擇性 XML 索引  
  **使用 Transact-SQL 建立選擇性 XML 索引**  
  透過呼叫 CREATE SELECTIVE XML INDEX 陳述式的方式建立選擇性 XML 索引。 如需詳細資訊，請參閱 [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-selective-xml-index-transact-sql)。  
   
@@ -48,13 +48,13 @@ FOR(
   
 ##  <a name="alter"></a> 修改選擇性 XML 索引  
   
-### <a name="how-to-alter-a-selective-xml-index"></a>HOW TO：修改選擇性 XML 索引  
+### <a name="how-to-alter-a-selective-xml-index"></a>如何：修改選擇性 XML 索引  
  **使用 Transact-SQL 修改選擇性 XML 索引**  
  透過呼叫 ALTER INDEX 陳述式的方式修改現有的選擇性 XML 索引。 如需詳細資訊，請參閱 [ALTER INDEX &#40;選擇性 XML 索引&#41;](../indexes/indexes.md)。  
   
  **範例**  
   
- 下列範例顯示 ALTER INDEX 陳述式。 此陳述式會將路徑 `'/a/b/m'` 加入索引的 XQuery 部分，並且從 [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-selective-xml-index-transact-sql) 主題的範例中所建立索引的 SQL 部分刪除路徑 `'/a/b/e'`。 要刪除的路徑是以建立時提供的名稱識別。  
+ 下列範例顯示 ALTER INDEX 陳述式。 此陳述式會將路徑 `'/a/b/m'` 加入索引的 XQuery 部分，並且從 `'/a/b/e'`CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;[ 主題的範例中所建立索引的 SQL 部分刪除路徑 ](/sql/t-sql/statements/create-selective-xml-index-transact-sql)。 要刪除的路徑是以建立時提供的名稱識別。  
   
 ```sql  
 ALTER INDEX sxi_index  
@@ -70,7 +70,7 @@ FOR
   
 ##  <a name="drop"></a> 卸除選擇性 XML 索引  
   
-### <a name="how-to-drop-a-selective-xml-index"></a>HOW TO：卸除選擇性 XML 索引  
+### <a name="how-to-drop-a-selective-xml-index"></a>如何：卸除選擇性 XML 索引  
  **使用 Transact-SQL 卸除選擇性 XML 索引**  
  透過呼叫 DROP INDEX 陳述式的方式卸除選擇性 XML 索引。 如需詳細資訊，請參閱 [DROP INDEX &#40;選擇性 XML 索引&#41;](/sql/t-sql/statements/drop-index-selective-xml-indexes)。  
   

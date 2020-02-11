@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 867c341443b7ce1c459806eaac5427a06a8bbebe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473229"
 ---
 # <a name="logon-triggers"></a>登入觸發程序
@@ -54,7 +54,7 @@ ms.locfileid: "62473229"
   
 ## <a name="related-tasks"></a>相關工作  
   
-|工作|主題|  
+|Task|主題|  
 |----------|-----------|  
 |描述如何建立登入觸發程序。 登入觸發程序可以從任何資料庫建立，但會在伺服器層級註冊並儲存在 **master** 資料庫中。|[CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)|  
 |描述如何修改登入觸發程序。|[ALTER TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-trigger-transact-sql)|  

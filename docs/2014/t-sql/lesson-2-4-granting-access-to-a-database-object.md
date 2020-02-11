@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19381b0c5dbe690a60b2c536a8da759205c08c31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643450"
 ---
 # <a name="granting-access-to-a-database-object"></a>授與資料庫物件的存取權
-  如果是管理員，可以從 **Products** 資料表和 **vw_Names** 檢視中執行 SELECT，也可以執行 **pr_Names** 程序，但是 Mary 則無權這麼做。 若要授與 Mary 必要的權限，請使用 GRANT 陳述式。  
+  身為系統管理員，您可以從**Products**資料表和**VW_NAMES** view 執行 SELECT，然後執行**pr_Names**程式;不過，Mary 不能。 若要授與 Mary 必要的權限，請使用 GRANT 陳述式。  
   
 ### <a name="procedure-title"></a>程序標題  
   
@@ -40,10 +40,10 @@ ms.locfileid: "62643450"
  您必須具有 EXECUTE 權限，才能執行預存程序。 若要存取和變更資料，則必須具有 SELECT、INSERT、UPDATE 和 DELETE 權限。 GRANT 陳述式也可以用來授與其他權限，例如建立資料表的權限。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [摘要：資料庫物件上設定權限](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
+ [摘要：設定資料庫物件的權限](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
- [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)  
+ [REVOKE &#40;Transact-sql&#41;](/sql/t-sql/statements/revoke-transact-sql)  
   
   

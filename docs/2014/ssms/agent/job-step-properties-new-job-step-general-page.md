@@ -1,5 +1,5 @@
 ---
-title: 作業步驟屬性：新增作業步驟 （一般頁面） |Microsoft Docs
+title: 作業步驟屬性：新增作業步驟（一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510952"
 ---
 # <a name="job-step-properties-new-job-step-general-page"></a>作業步驟屬性：新增作業步驟 (一般頁面)
-  使用此頁面來檢視和變更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式作業步驟的屬性，或定義新的作業步驟。  
+  使用此頁面來查看和變更[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟的屬性，或定義新的作業步驟。  
   
- 若要導覽至此頁面，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管中，展開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，以滑鼠右鍵按一下 [作業]  ，按一下 [新增作業]  ，選取 [步驟]  頁面，然後按一下 [新增]  。 您也可用滑鼠右鍵按一下物件總管中的作業，按一下 [屬性]  、選取 [步驟]  頁面，然後按一下 [新增]  、[插入]  或 [編輯]  ，以導覽至此頁面。  
+ 若要導覽至此頁面，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管中，展開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，以滑鼠右鍵按一下 [作業]****，按一下 [新增作業]****，選取 [步驟]**** 頁面，然後按一下 [新增]****。 您也可用滑鼠右鍵按一下物件總管中的作業，按一下 [屬性]****、選取 [步驟]**** 頁面，然後按一下 [新增]****、[插入]**** 或 [編輯]****，以導覽至此頁面。  
   
 ## <a name="options"></a>選項。  
  **步驟名稱**  
@@ -32,12 +32,12 @@ ms.locfileid: "62510952"
  設定作業步驟使用的子系統。 根據您選擇的子系統，會顯示定義作業步驟變更的選項。  
   
  **執行身分**  
- 設定作業步驟的 Proxy 帳戶。 系統管理員 (sysadmin) 固定伺服器角色的成員也會指定 [SQL 代理程式服務帳戶]  。  
+ 設定作業步驟的 Proxy 帳戶。 系統管理員 (sysadmin) 固定伺服器角色的成員也會指定 [SQL 代理程式服務帳戶]****。  
   
- **[資料庫備份]**  
+ **Database**  
  設定作業步驟執行所在的資料庫。 並非所有作業步驟類型都可使用這個選項。  
   
- **Command**  
+ **命令**  
  設定作業步驟執行的命令。  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Transact-SQL 作業步驟的選項  
@@ -53,7 +53,7 @@ ms.locfileid: "62510952"
  **貼上**  
  貼上剪貼簿的內容。  
   
- **剖析**  
+ **分析**  
  檢查命令的語法。  
   
 ## <a name="options-for-activex-script-job-steps"></a>ActiveX 指令碼作業步驟的選項  
@@ -83,7 +83,7 @@ ms.locfileid: "62510952"
  貼上剪貼簿的內容。  
   
 ## <a name="options-for-operating-system-cmdexec-job-steps"></a>作業系統 (CmdExec) 作業步驟的選項  
- **成功命令的處理序結束碼**  
+ **成功命令的進程結束代碼**  
  輸入命令傳回表示成功的結束碼。  
   
  **開啟**  
@@ -105,7 +105,7 @@ ms.locfileid: "62510952"
  **全選**  
  選取指令碼的文字。  
   
- **[複製]**  
+ **複製**  
  複製選取的文字。  
   
  **貼上**  
@@ -132,7 +132,7 @@ ms.locfileid: "62510952"
  貼上剪貼簿的內容。  
   
 ## <a name="options-for-replication-queue-reader-job-steps"></a>複寫佇列讀取器作業步驟的選項  
- **[資料庫備份]**  
+ **Database**  
  作業步驟將使用的資料庫。  
   
  **全選**  
@@ -184,7 +184,7 @@ ms.locfileid: "62510952"
  **Server**  
  選取作業步驟執行所在的伺服器。  
   
- **資料庫**  
+ **Database**  
  作業步驟將使用的資料庫。  
   
  **開啟**  
@@ -214,30 +214,31 @@ ms.locfileid: "62510952"
 -   **SSIS 封裝存放區**  
   
  **Server**  
- 輸入儲存 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝的伺服器名稱。 唯有當 [套件來源]  指定 [SQL Server]  或 [SSIS 套件存放區]  時，才能使用此選項。  
+ 輸入儲存 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝的伺服器名稱。 唯有當 [套件來源]**** 指定 [SQL Server]**** 或 [SSIS 套件存放區]**** 時，才能使用此選項。  
   
- **[使用 Windows 驗證]**  
+ **使用 Windows 驗證**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 驗證登入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
- **[使用 SQL Server 驗證]**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果選取這種驗證方法，請輸入適當的 [使用者名稱]  和 [密碼]  。  
+ **使用 SQL Server 驗證**  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果選取這種驗證方法，請輸入適當的 [使用者名稱]**** 和 [密碼]****。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供驗證的目的在提供回溯相容性。 為了提升安全性，如果可能的話請使用 Windows 驗證。  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供驗證的目的在提供回溯相容性。 為了提升安全性，如果可能的話請使用 Windows 驗證。  
   
- **封裝**  
+ **套件**  
  輸入封裝的位置。  
   
 > [!IMPORTANT]  
->  對於受密碼保護的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 套件，按一下 [組態]  索引標籤，在 [套件密碼]  對話方塊中輸入密碼。 否則，執行受密碼保護之封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業將會失敗。  
+>  對於受密碼保護的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 套件，按一下 [組態]**** 索引標籤，在 [套件密碼]**** 對話方塊中輸入密碼。 否則，執行受密碼保護之封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業將會失敗。  
   
 ### <a name="configurations-tab"></a>組態索引標籤  
  指定 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝的組態選項。 當選取這個索引標籤時，可以使用下列選項。  
   
- **組態檔**  
+ **設定檔**  
  列出封裝的組態檔。  
   
- **[加入]**  
+ **加入**  
  加入封裝的組態檔。  
   
  **移除**  
@@ -255,7 +256,7 @@ ms.locfileid: "62510952"
  **命令檔**  
  列出封裝的命令檔。  
   
- **[加入]**  
+ **加入**  
  加入命令檔。  
   
  **移除**  
@@ -282,13 +283,13 @@ ms.locfileid: "62510952"
 ### <a name="execution-options-tab"></a>執行選項索引標籤  
  檢視或變更在此索引標籤上之封裝的執行選項。  
   
- **發生驗證警告時封裝就失敗**  
+ **驗證警告時失敗的封裝**  
  如果發生驗證警告時要使封裝執行失敗，請選取此選項。  
   
- **驗證封裝但不執行**  
+ **驗證封裝而不執行**  
  作業步驟要驗證但不執行封裝時，請選取此選項。  
   
- **最大並行可執行檔數目**  
+ **並行可執行檔數目上限**  
  可以同時執行的最大可執行檔數目。  
   
  **啟用封裝檢查點**  
@@ -300,10 +301,10 @@ ms.locfileid: "62510952"
  **...**  
  瀏覽以尋找封裝檢查點檔案。  
   
- **覆寫重新啟動選項**  
+ **覆寫重新開機選項**  
  若要為此作業步驟指定不同於封裝中所指定的重新啟動選項時，請選取此選項。  
   
- **重新啟動選項**  
+ **重新開機選項**  
  選取封裝重新啟動時要採取的動作。  
   
 ### <a name="logging-tab"></a>記錄索引標籤  
@@ -312,7 +313,7 @@ ms.locfileid: "62510952"
  **記錄提供者**  
  選取記錄提供者的 ClassID。  
   
- **組態字串**  
+ **設定字串**  
  輸入記錄提供者的組態字串。  
   
  **移除**  
@@ -324,7 +325,7 @@ ms.locfileid: "62510952"
  **屬性路徑**  
  檢視或變更屬性的路徑。  
   
- **值**  
+ **ReplTest1**  
  檢視或變更屬性的值。  
   
  **移除**  
@@ -333,19 +334,19 @@ ms.locfileid: "62510952"
 ### <a name="verification-tab"></a>驗證索引標籤  
  選取在此索引標籤上之作業步驟的驗證選項。  
   
- **只執行簽署的封裝**  
+ **僅執行已簽署的套件**  
  只執行已經簽署的封裝。 選取此選項時，如果封裝未簽署，作業步驟就會失敗。  
   
  **確認封裝組建**  
  只執行具有特定組建編號的封裝。 選取此選項時，如果封裝沒有指定的組建編號，作業步驟就會失敗。  
   
- **建置**  
+ **Build**  
  輸入封裝的組建編號。  
   
- **確認封裝識別碼**  
+ **確認套件識別碼**  
  只執行具有特定識別碼的封裝。 選取此選項時，如果封裝沒有指定的識別碼，作業步驟就會失敗。  
   
- **封裝識別碼**  
+ **套件識別碼**  
  輸入封裝識別碼。  
   
  **確認版本識別碼**  
@@ -360,7 +361,7 @@ ms.locfileid: "62510952"
  **還原原始選項**  
  使用此對話方塊中所設定的命令列選項。  
   
- **手動編輯命令列**  
+ **手動編輯命令行**  
  指定命令列視窗中的選項。  
   
  **命令列**  

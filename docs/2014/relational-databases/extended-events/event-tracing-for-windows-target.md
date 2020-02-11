@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519302"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件追蹤目標
@@ -50,11 +50,11 @@ ms.locfileid: "62519302"
   
 |選項|允許的值|描述|  
 |------------|--------------------|-----------------|  
-|default_xe_session_name|最多 256 個字元的任何字串。 此為選擇性的值。|擴充事件工作階段名稱。 根據預設，這個名稱是 XE_DEFAULT_ETW_SESSION。|  
-|default_etw_session_logfile_path|最多 256 個字元的任何字串。 此為選擇性的值。|擴充事件工作階段之記錄檔的路徑。 根據預設，這個路徑是 %TEMP%\ XEEtw.etl。|  
-|default_etw_session_logfile_size_mb|任何不帶正負號的整數。 此為選擇性的值。|擴充事件工作階段的記錄檔案大小 (以 MB 為單位)。 預設值是 20 MB。|  
-|default_etw_session_buffer_size_kb|任何不帶正負號的整數。 此為選擇性的值。|擴充事件工作階段的記憶體中緩衝區大小 (以 KB 為單位)。 預設值是 128 KB。|  
-|重試次數|任何不帶正負號的整數。|在卸除事件之前，重試將此事件發行給 ETW 子系統的次數。 預設值是 0。|  
+|default_xe_session_name|最多 256 個字元的任何字串。 此為選用值。|擴充事件工作階段名稱。 根據預設，這個名稱是 XE_DEFAULT_ETW_SESSION。|  
+|default_etw_session_logfile_path|最多 256 個字元的任何字串。 此為選用值。|擴充事件工作階段之記錄檔的路徑。 根據預設，這個路徑是 %TEMP%\ XEEtw.etl。|  
+|default_etw_session_logfile_size_mb|任何不帶正負號的整數。 此為選用值。|擴充事件工作階段的記錄檔案大小 (以 MB 為單位)。 預設值是 20 MB。|  
+|default_etw_session_buffer_size_kb|任何不帶正負號的整數。 此為選用值。|擴充事件工作階段的記憶體中緩衝區大小 (以 KB 為單位)。 預設值是 128 KB。|  
+|重試|任何不帶正負號的整數。|在卸除事件之前，重試將此事件發行給 ETW 子系統的次數。 預設值是 0。|  
   
  這些設定都是選擇性的。 ETW 目標會使用這些設定的預設值。  
   

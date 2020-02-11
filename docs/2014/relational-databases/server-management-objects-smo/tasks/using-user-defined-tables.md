@@ -13,22 +13,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2b780dfd75d998a9e3f6e382890b8318b958688d
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72781815"
 ---
 # <a name="using-user-defined-tables"></a>使用使用者定義的資料表
   使用者定義的資料表表示表格式資訊。 當您將表格式資料傳遞到預存程序或使用者定義函數時，這些資料表會當做參數。 使用者定義的資料表不能用於表示資料庫資料表中的資料行。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database> 物件具有 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 屬性，這個屬性會參考 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 物件。 該集合中的每個 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 物件都有一個**Columns**屬性，它會參考列出使用者定義資料表中之資料行的 <xref:Microsoft.SqlServer.Management.Smo.Column> 物件集合。 請使用 Add 方法將資料行加入至使用者定義資料表。  
+ 物件具有參考<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>物件<xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A>的屬性。 <xref:Microsoft.SqlServer.Management.Smo.Database> 該<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>集合中的每個物件都有一個**Columns**屬性，它會<xref:Microsoft.SqlServer.Management.Smo.Column>參考列出使用者定義資料表中之資料行的物件集合。 請使用 Add 方法將資料行加入至使用者定義資料表。  
   
  當您使用 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 物件定義新的使用者定義資料表時，需要根據其中一個資料行提供資料行和主要金鑰。  
   
- 使用者定義資料表類型在建立後就不能改變。 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 不支援 Alter 方法。 使用者定義資料表類型可以具有檢查條件約束，但某些檢查作業會擲回例外狀況，因為類型是無法改變的。  
+ 使用者定義資料表類型在建立後就不能改變。 
+  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 不支援 Alter 方法。 使用者定義資料表類型可以具有檢查條件約束，但某些檢查作業會擲回例外狀況，因為類型是無法改變的。  
   
- <xref:Microsoft.SqlServer.Management.Smo.DataType> 類別會用於指定與資料行和參數相關聯的資料類型。 請使用這個類型，將使用者定義資料表類型指定為使用者定義函數和預存程序的參數。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.DataType> 類別會用於指定與資料行和參數相關聯的資料類型。 請使用這個類型，將使用者定義資料表類型指定為使用者定義函數和預存程序的參數。  
   
 ## <a name="examples"></a>範例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

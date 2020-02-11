@@ -1,5 +1,5 @@
 ---
-title: 控制變更資料錄集的基底資料表 (ADO) |Microsoft Docs
+title: 控制記錄集基表的變更（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,38 +16,38 @@ ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b70920cd223223d5efb14925a6808168ca9cc16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911671"
 ---
-# <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>唯一資料表、 唯一的結構描述，唯一目錄動態屬性 (ADO)
-可讓您以緊密控制特定的基底資料表中的修改[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，而形成多個基底資料表的聯結作業。  
+# <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>唯一的資料表、唯一的架構、唯一的目錄屬性-動態（ADO）
+可讓您在多個基表上，針對聯結作業所形成的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)內的特定基表，進一步控制其修改。  
   
--   **唯一資料表**指定基底資料表的更新、 插入和刪除允許的名稱。  
+-   **唯一資料表**指定允許更新、插入和刪除的基表名稱。  
   
--   **唯一的結構描述**指定*結構描述*，或資料表的擁有者的名稱。  
+-   [**唯一架構**] 指定資料表的*架構*或擁有者的名稱。  
   
--   **唯一的型錄**指定*目錄*，或包含資料表之資料庫的名稱。  
+-   **唯一目錄**：指定*目錄*，或包含資料表的資料庫名稱。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回**字串**是資料表、 結構描述或目錄名稱的值。  
+ 設定或傳回**字串**值，這是資料表、架構或目錄的名稱。  
   
 ## <a name="remarks"></a>備註  
- 它的目錄、 結構描述和資料表名稱可唯一識別所需的基底資料表。 當**唯一資料表**屬性設定，值**唯一的結構描述**或**唯一目錄**屬性用來尋找基底資料表。 它是主要，但並非必要，該其中之一或兩者**唯一的結構描述**和**唯一目錄**之前，先設定屬性**唯一資料表**屬性設定。  
+ 所需的基表是以其目錄、架構和資料表名稱來唯一識別。 設定**Unique table**屬性時，會使用 [**唯一架構**] 或 [**唯一目錄**] 屬性的值來尋找基表。 這是預期的，但並非必要，必須在設定**Unique Table**屬性之前，設定**唯一的架構**和**唯一的目錄**屬性。  
   
- 主索引鍵**唯一資料表**整個的主索引鍵會被視為**資料錄集**。 這是需要主索引鍵的任何方法中使用的索引鍵。  
+ **唯一資料表**的主要索引鍵會被視為整個**記錄集**的主鍵。 這是用於任何需要主鍵之方法的索引鍵。  
   
- 雖然**唯一資料表**設定，則[刪除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)方法會影響已命名的資料表。 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)，[重新同步處理](../../../ado/reference/ado-api/resync-method.md)， [Update](../../../ado/reference/ado-api/update-method.md)，以及[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法會影響任何適當的基底資料表**資料錄集**。  
+ 當設定**Unique 資料表**時， [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)方法只會影響已命名的資料表。 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)、 [Resync](../../../ado/reference/ado-api/resync-method.md)、 [Update](../../../ado/reference/ado-api/update-method.md)和[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法會影響**記錄集**的任何適當基礎基表。  
   
- **唯一資料表**進行任何自訂的重新同步處理之前，必須指定。 如果**唯一資料表**未指定，[重新同步處理命令](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)屬性會有任何作用。  
+ 在執行任何自訂重新同步處理之前，必須先指定**唯一資料表**。 如果尚未指定**唯一資料表**，[重新[同步命令](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)] 屬性將不會有任何作用。  
   
- 如果找不到唯一的基底資料表，就會產生執行階段錯誤。  
+ 如果找不到唯一的基表，就會產生執行階段錯誤。  
   
- 這些動態屬性會附加至**Recordset**物件[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合時[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**adUseClient**。  
+ 當[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**adUseClient**時，這些動態屬性都會附加至**記錄集**物件[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  

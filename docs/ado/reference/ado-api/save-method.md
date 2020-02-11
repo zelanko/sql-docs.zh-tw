@@ -1,5 +1,5 @@
 ---
-title: Save 方法 |Microsoft Docs
+title: 儲存方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ec1601749b6537484cead17c50492de131932ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931179"
 ---
 # <a name="save-method"></a>Save 方法
-節省[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)檔案中或[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。  
+將[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)儲存在檔案或[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)物件中。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,40 +35,40 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>參數  
  *目的地*  
- 選擇性。 A **Variant** ，表示檔案的完整路徑名稱所在**資料錄集**儲存，或參考**Stream**物件。  
+ 選擇性。 **Variant** ，代表要儲存**記錄集**之檔案的完整路徑名稱，或**資料流程**物件的參考。  
   
  *PersistFormat*  
- 選擇性。 A [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md)值，指定要在其中格式**資料錄集**（XML 或 ADTG） 儲存。 預設值是**adPersistADTG**。  
+ 選擇性。 [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md)值，指定儲存**記錄集**的格式（XML 或 ADTG）。 預設值為**adPersistADTG**。  
   
 ## <a name="remarks"></a>備註  
- [Save 方法](../../../ado/reference/ado-api/save-method.md)可以只開啟時叫用方法**資料錄集**。 使用[Open 方法 (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法，以更新版本還原**Recordset**從*目的地*。  
+ 只能在開啟的**記錄集**上叫用[Save 方法](../../../ado/reference/ado-api/save-method.md)方法。 使用[Open 方法（ADO Recordset）](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法，稍後從*目的地*還原**記錄集**。  
   
- 如果[篩選條件屬性](../../../ado/reference/ado-api/filter-property.md)屬性實際上是針對**資料錄集**，則會儲存的資料列篩選器之下存取。 如果**資料錄集**為階層式，則目前的子系**資料錄集**並儲存它的子系，包括父代**資料錄集**。 如果子系的 Save 方法**資料錄集**是呼叫，子系和所有子系都會儲存，但不是父代。  
+ 如果[篩選器屬性](../../../ado/reference/ado-api/filter-property.md)屬性對**記錄集**有效，則只會儲存篩選器底下可存取的資料列。 如果**記錄集**是階層式，則會儲存目前的子**記錄集**和其子系，包括父**記錄集**。 如果呼叫子**記錄集**的 Save 方法，則會儲存子系及其所有子系，但父系則不會。  
   
- 第一次您儲存**Recordset**，選擇性地指定*目的地*。 如果您省略*目的地*，將會設定為值的來源屬性的名稱建立新的檔案**資料錄集**。  
+ 第一次儲存**記錄集**時，可以選擇是否要指定*目的地*。 如果您省略*目的地*，將會建立新的檔案，並將名稱設定為**記錄集**之 Source 屬性的值。  
   
- 省略*目的地*當您後續呼叫**儲存**之後會發生第一次儲存或執行階段錯誤。 如果您後續呼叫**儲存**的新*目的地*，則**資料錄集**儲存到新的目的地。 不過，新的目的地和原始目的地將會同時開啟。  
+ 當您後續呼叫**儲存**後第一次儲存時，請省略*目的地*，否則會發生執行階段錯誤。 如果您隨後使用新的*目的地*呼叫 [**儲存**]，則會將**記錄集**儲存至新的目的地。 不過，新的目的地和原始目的地皆會開啟。  
   
- **儲存**不會關閉**Recordset**或*目的地*，因此您可以繼續使用**資料錄集**並儲存您最新的變更。 *目的地*保持開啟，直到**資料錄集**已關閉。  
+ [**儲存**] 不會關閉**記錄集**或*目的地*，因此您可以繼續使用**記錄集**，並儲存最新的變更。 *目的地*會保持開啟狀態，直到**記錄集**關閉為止。  
   
- 基於安全性，原因**儲存**方法允許只使用執行 Microsoft Internet explorer 的指令碼的低和自訂安全性設定。  
+ 基於安全性的理由， **Save**方法只允許從 Microsoft Internet Explorer 所執行的腳本使用低和自訂安全性設定。  
   
- 如果**儲存**時的非同步呼叫方法**Recordset**提取、 執行，或更新作業正在進行中，然後**儲存**等待非同步作業已完成。  
+ 如果在進行非同步**記錄集**提取、執行或更新作業時呼叫**save**方法，則會等到非同步作業完成後，再**儲存**等候。  
   
- 記錄會儲存開頭的第一個資料列**資料錄集**。 當**儲存**方法執行完成後，目前的資料列位置移至第一個資料列**資料錄集**。  
+ 記錄會從**記錄集**的第一個資料列開始儲存。 當**Save**方法完成時，目前的資料列位置會移到**記錄集**的第一個資料列。  
   
- 為了獲得最佳結果，請設定[CursorLocation 屬性 (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設**adUseClient**具有**儲存**。 如果您的提供者不支援的功能來儲存所需的所有**資料錄集**物件，資料指標服務會提供該功能。  
+ 為獲得最佳結果，請將[CursorLocation 屬性（ADO）](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為 [ **adUseClient** ]，並使用 [**儲存**]。 如果您的提供者不支援儲存**記錄集**物件所需的所有功能，則資料指標服務會提供該功能。  
   
- 當**資料錄集**與一起保存**CursorLocation**屬性設定為**adUseServer**，更新功能，如**資料錄集**限制。 一般而言，只有單一資料表更新、 插入和刪除允許 （取決於提供者功能）。 [重新同步處理方法](../../../ado/reference/ado-api/resync-method.md)方法也會在此組態中無法使用。  
+ 當**記錄**集保存並將**CursorLocation**屬性設定為**adUseServer**時，**記錄集**的更新功能會受到限制。 一般來說，只允許單一資料表的更新、插入和刪除（相依于提供者功能）。 此設定中也無法使用[Resync 方法](../../../ado/reference/ado-api/resync-method.md)方法。  
   
 > [!NOTE]
->  儲存**Recordset**具有**欄位**型別的**adVariant**， **adIDispatch**，或**adIUnknown**是不支援的 ADO，而且可能會導致無法預期的結果。  
+>  ADO 不支援儲存具有**adVariant**、 **adIDispatch**或**AdIUnknown**類型**欄位**的**記錄集**，而且可能會導致無法預期的結果。  
   
- 只會篩選條件字串的形式 (例如 OrderDate > ' 12/31/1999年 ') 會影響保存的內容**資料錄集**。 陣列建立的篩選**書籤**或使用中的值[FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)不會影響保存的內容**資料錄集**。 這些規則適用於**資料錄集**建立與用戶端或伺服器端資料指標。  
+ 只有條件字串形式的篩選（例如，訂購單 > ' 12/31/1999 '）會影響保存的**記錄集**內容。 使用**書簽**陣列或使用[FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)中的值所建立的篩選，將不會影響保存之**記錄集**的內容。 這些規則適用于以用戶端或伺服器端資料指標建立的**記錄集**。  
   
- 因為*目的地*參數可以接受任何支援的 OLE DB IStream 介面的物件，您可以將儲存**資料錄集**直接至 ASP 回應物件。 如需詳細資訊，請參閱**XML 資料錄集保存案例**。  
+ 因為*Destination*參數可以接受任何支援 OLE DB IStream 介面的物件，所以您可以將**記錄集**直接儲存到 ASP Response 物件。 如需詳細資訊，請參閱**XML 記錄集持續性案例**。  
   
- 您也可以儲存**資料錄集**MSXML DOM 物件的執行個體的 XML 格式，做為下列 Visual Basic 程式碼所示：  
+ 您也可以將 XML 格式的**記錄集**儲存至 MSXML DOM 物件的實例，如下列 Visual Basic 程式碼所示：  
   
 ```  
 Dim xDOM As New MSXML.DOMDocument  
@@ -83,19 +83,19 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 ```  
   
 > [!NOTE]
->  以 XML 格式儲存階層式資料錄集 （資料圖形） 時，適用兩個的限制。 如果無法儲存成 XML 階層**資料錄集**包含擱置的更新，您不能以參數化的方式儲存和階層式**資料錄集**。  
+>  以 XML 格式儲存階層式記錄集（資料圖形）時，適用兩項限制。 如果階層式**記錄集**包含暫止的更新，您就無法儲存到 XML，而且您無法儲存參數化的階層式**記錄集**。  
   
- A**資料錄集**儲存在 XML 格式會儲存使用 utf-8 格式。 當這類檔案載入至 ADO Stream 時，Stream 物件不會嘗試開啟**資料錄集**從資料流除非資料流的字元集屬性設定為 utf-8 格式的適當值。  
+ 以 XML 格式儲存的**記錄集會**使用 utf-8 格式儲存。 將這類檔案載入 ADO 資料流程時，除非資料流程的 [字元集] 屬性設定為 UTF-8 格式的適當值，否則資料流程物件不會嘗試從資料流程開啟**記錄集**。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
   
 |||  
 |-|-|  
 |[Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [Save 和 Open 方法範例 (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
- [Save 和 Open 方法範例 （VC + +）](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
- [Open 方法 (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Open 方法 (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+ [Save 和 Open 方法範例（VB）](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
+ [Save 和 Open 方法範例（VC + +）](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
+ [Open 方法（ADO Recordset）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Open 方法（ADO Stream）](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [SaveToFile 方法](../../../ado/reference/ado-api/savetofile-method.md)

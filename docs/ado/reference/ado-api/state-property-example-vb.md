@@ -1,5 +1,5 @@
 ---
-title: 狀態屬性範例 (VB) |Microsoft Docs
+title: State 屬性範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 9da6db50-d9bb-47e1-ae8b-be3c9b88cf9a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e9c497d8e417ccfcc74df2b21043446c2ce9860
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916849"
 ---
 # <a name="state-property-example-vb"></a>State 屬性範例 (VB)
-這個範例會使用[狀態](../../../ado/reference/ado-api/state-property-ado.md)屬性，以顯示一則訊息，而非同步連接所開啟，並執行非同步命令。  
+這個範例會使用[State](../../../ado/reference/ado-api/state-property-ado.md)屬性，在非同步連接開啟和非同步命令執行時顯示訊息。  
   
 ```  
 'BeginStateVB  
@@ -108,5 +108,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [State 屬性 (ADO)](../../../ado/reference/ado-api/state-property-ado.md)

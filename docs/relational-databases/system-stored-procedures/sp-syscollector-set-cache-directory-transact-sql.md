@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_set_cache_directory (TRANSACT-SQL) |Microsoft Docs
+title: sp_syscollector_set_cache_directory （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: affa8825053f1123c3fae5518f006e2172b9be39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03236c2882cad61e42ffa0fcdeb322d4ada53c2a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010675"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76910041"
 ---
-# <a name="spsyscollectorsetcachedirectory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
+# <a name="sp_syscollector_set_cache_directory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   指定在收集而來的資料上傳到管理資料倉儲之前，儲存這些資料的目錄。  
@@ -40,21 +40,21 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @cache_directory = ] 'cache_directory'` 收集的資料會暫時儲存在檔案系統中的目錄。 *cache_directory*已**nvarchar(255)** ，預設值是 NULL。 如果沒有指定任何值，則會使用預設暫存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄。  
+`[ @cache_directory = ] 'cache_directory'`檔案系統中暫時儲存所收集資料的目錄。 *cache_directory*是**Nvarchar （255）**，預設值是 Null。 如果沒有指定任何值，則會使用預設暫存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- 您必須先停用資料收集器，然後再變更快取目錄組態。 如果資料收集器為啟用狀態，這個預存程序就會失敗。 如需詳細資訊，請參閱 <<c0> [ 啟用或停用資料收集](../../relational-databases/data-collection/enable-or-disable-data-collection.md)，並[管理資料收集](../../relational-databases/data-collection/manage-data-collection.md)。  
+ 您必須先停用資料收集器，然後再變更快取目錄組態。 如果資料收集器為啟用狀態，這個預存程序就會失敗。 如需詳細資訊，請參閱[啟用或停用資料收集](../../relational-databases/data-collection/enable-or-disable-data-collection.md)和[管理資料收集](../../relational-databases/data-collection/manage-data-collection.md)。  
   
- 在執行 sp_syscollector_set_cache_directory 時候不需要有指定的目錄；不過，必須先建立目錄，才能成功地快取和上傳資料。 我們建議在執行這個預存程序之前，先建立目錄。  
+ 執行 sp_syscollector_set_cache_directory 時，指定的目錄不需要存在;不過，在建立目錄之前，無法成功快取和上傳資料。 我們建議在執行這個預存程序之前，先建立目錄。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 dc_admin (具有 EXECUTE 權限) 固定資料庫角色中的成員資格，才能執行此程序。  
   
 ## <a name="examples"></a>範例  
- 下列範例會停用資料收集器、 設定資料收集器的快取目錄`D:\tempdata`，然後再啟用資料收集器。  
+ 下列範例會停用資料收集器、將資料收集器的快取目錄`D:\tempdata`設定為，然後再啟用資料收集器。  
   
 ```sql  
 USE msdb;  
@@ -69,6 +69,6 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [資料收集器預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
+ [sp_syscollector_set_cache_window &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
   
   

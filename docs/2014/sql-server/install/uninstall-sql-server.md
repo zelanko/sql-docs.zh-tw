@@ -1,5 +1,5 @@
 ---
-title: 解除安裝 SQL Server 2014 |Microsoft Docs
+title: 卸載 SQL Server 2014 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d81180c9cbadec8816c401bc6b8c8d200e76e28b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470186"
 ---
 # <a name="uninstall-sql-server-2014"></a>解除安裝 SQL Server 2014
@@ -47,6 +47,6 @@ ms.locfileid: "62470186"
 ## <a name="see-also"></a>另請參閱  
  [規劃 SQL Server 安裝](planning-a-sql-server-installation.md)   
  [安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)   
- [升級到 SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [升級為 SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   

@@ -13,38 +13,38 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473047"
 ---
 # <a name="post-download-instructions"></a>公佈下載指示
   使用此頁面指定目標伺服器的下載指示。  
   
-## <a name="options"></a>選項  
- **指示類型**  
+## <a name="options"></a>選項。  
+ **指令類型**  
  指定要公佈的下載指示類型。  
   
  **說明**  
  檢視下載指示的描述。  
   
  **輪詢間隔**  
- 設定目標伺服器的輪詢間隔。 僅適用於 [設定輪詢間隔]  指示。  
+ 設定目標伺服器的輪詢間隔。 僅適用於 [設定輪詢間隔]**** 指示。  
   
  **所有目標伺服器**  
  選取此選項將下載指示公佈到所有目標伺服器。  
   
- **下列目標伺服器**  
+ **這些目標伺服器**  
  選取此選項將下載指示公佈到選取的目標伺服器。  
   
- **Select**  
+ **請**  
  指定目標伺服器應該接收下載指示。  
   
  **目標伺服器**  
  檢視目標伺服器的名稱。  
   
- **本地時間**  
+ **當地時間**  
  檢視目標伺服器的本地時區日期和時間。  
   
  **輪詢間隔**  

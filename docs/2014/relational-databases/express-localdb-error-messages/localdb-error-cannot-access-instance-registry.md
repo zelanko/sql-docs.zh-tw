@@ -1,5 +1,5 @@
 ---
-title: LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY | Microsoft Docs
+title: LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f109379c49689ba3118a41b414e7a6e1cd3e9027
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520198"
 ---
-# <a name="localdberrorcannotaccessinstanceregistry"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY
+# <a name="localdb_error_cannot_access_instance_registry"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|262|  
 |事件來源|SQL Server 本機資料庫執行階段 12.0|  
 |元件|本機資料庫執行階段 API|  

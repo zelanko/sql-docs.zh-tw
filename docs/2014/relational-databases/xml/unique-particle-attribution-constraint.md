@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f6361e3e6a295398bdd88d56a6c70a79e92b526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467414"
 ---
 # <a name="unique-particle-attribution-constraint"></a>唯一物件屬性條件約束
@@ -80,11 +80,11 @@ ms.locfileid: "62467414"
 ## <a name="finding-more-information"></a>尋找詳細資訊  
  下列文件是由全球資訊網協會 (W3C) 所發行，其中包含唯一物件屬性條件約束的技術說明：  
   
- 「 XML 結構描述第 1 部分：結構第二版，W3C 提出的編輯的建議 」:  
+ ＜XML 結構描述第一部份：結構第二版，W3C 提出的編輯建議＞(英文)：  
   
--   Section 3.8.6:模型群組結構描述元件條件約束  
+-   第 3.8.6 節：模型群組結構描述元件的條件約束 (Section 3.8.6: Constraints on Model Group Schema Components)  
   
--   附錄 h:分析的唯一物件屬性條件約束 （非基準）  
+-   附錄 H：唯一物件屬性條件約束的分析 (非標準的) (Appendix H: Analysis of the Unique Particle Attribution Constraint (non-normative))  
   
  若要查看文件，請瀏覽 [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881)。  
   

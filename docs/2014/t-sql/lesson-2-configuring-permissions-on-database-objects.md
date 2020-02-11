@@ -1,5 +1,5 @@
 ---
-title: 第 2 課：資料庫物件上設定權限 |Microsoft Docs
+title: 第 2 課：設定資料庫物件的權限 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 940b33cda3158e98c9fee519ea12f1193e615bca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62642584"
 ---
 # <a name="lesson-2-configuring-permissions-on-database-objects"></a>第 2 課：設定資料庫物件的權限
@@ -32,7 +32,7 @@ ms.locfileid: "62642584"
   
 -   [授與資料庫物件的存取權](lesson-2-4-granting-access-to-a-database-object.md)  
   
--   [摘要：資料庫物件上設定權限](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
+-   [摘要：設定資料庫物件的權限](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [建立登入](lesson-2-1-creating-a-login.md)  

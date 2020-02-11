@@ -1,5 +1,5 @@
 ---
-title: 擴充預存程序的執行特性 |Microsoft Docs
+title: 擴充預存程式的執行特性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d21f002ca6b7ea185df2e01f66abf0e1ef5cfd1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62512212"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>擴充預存程序的執行特性
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]請改用 CLR 整合。  
   
  擴充預存程序的執行具有下列特性：  
   
--   安全性內容下執行擴充預存程序函式[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   擴充預存程式函數會在的安全性內容[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]下執行。  
   
 -   擴充預存程序函數會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的處理序空間中執行。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62512212"
   
 -  
   
- 擴充預存程序載入 DLL 之後，DLL 仍保持載入狀態之前的伺服器的位址空間[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已停止或系統管理員明確卸載 DLL 使用 DBCC *DLL_name* （免費）。  
+ 載入擴充預存程式 DLL 之後，DLL 會保持載入伺服器的位址空間中，直到停止， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或系統管理員使用 DBCC *DLL_name* （FREE）明確卸載 DLL 為止。  
   
  擴充預存程序可以使用 EXECUTE 陳述式，從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 當做預存程序執行：  
   
@@ -47,20 +47,20 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 ```  
   
 ## <a name="parameters"></a>參數  
- \@ *retval*  
+ \@*retval*  
  這是傳回值。  
   
- \@ *param1*  
+ \@*param1*  
  這是輸入參數。  
   
- \@ *param2*  
+ \@*param2*  
  這是輸入/輸出參數。  
   
 > [!CAUTION]  
 >  擴充預存程序會提供效能增強功能並擴充 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 不過，由於擴充預存程序 DLL 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共用相同的位址空間，因此問題程序可能會對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 運作造成不利的影響。 雖然擴充預存程序 DLL 擲回的例外會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理，還是有可能使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料區域受損。 基於安全性考量，只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員可以將擴充預存程序加入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 這些程序應該經過徹底測試，才能進行安裝。  
   
 ## <a name="see-also"></a>另請參閱  
- [擴充預存程序程式設計](database-engine-extended-stored-procedures-programming.md)   
+ [擴充預存程式程式設計](database-engine-extended-stored-procedures-programming.md)   
  [查詢 SQL Server 中安裝的擴充預存程序](querying-extended-stored-procedures-installed-in-sql-server.md)  
   
   

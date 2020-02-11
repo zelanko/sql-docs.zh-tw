@@ -13,17 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626045"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>使用原則式管理來監視和強制最佳做法
-  以原則為基礎的管理可讓您監視的最佳作法[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供一組原則檔讓您當做最佳作法原則來匯入，然後針對包含執行個體、執行個體物件、資料庫或資料庫物件的目標集來評估原則。 您可以手動評估原則、設定原則來根據排程評估目標集，或是設定原則來根據事件評估目標集。 如需原則式管理的詳細資訊，請參閱 [使用原則式管理來管理伺服器](administer-servers-by-using-policy-based-management.md)。  
+  以原則為基礎的管理可讓您監視的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]最佳作法。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供一組原則檔讓您當做最佳作法原則來匯入，然後針對包含執行個體、執行個體物件、資料庫或資料庫物件的目標集來評估原則。 您可以手動評估原則、設定原則來根據排程評估目標集，或是設定原則來根據事件評估目標集。 如需原則式管理的詳細資訊，請參閱 [使用原則式管理來管理伺服器](administer-servers-by-using-policy-based-management.md)。  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Database Engine 的原則和規則  
- 下表列出隨附安裝的原則[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和包含每個原則評估之最佳作法規則的相關資訊。 這些原則會儲存為 XML 檔案，而且必須匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需如何匯入原則的詳細資訊，請參閱 [匯入原則式管理原則](import-a-policy-based-management-policy.md)。  
+ 下表列出安裝所包含的原則， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並包含每個原則所評估之最佳作法規則的相關資訊。 這些原則會儲存為 XML 檔案，而且必須匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需如何匯入原則的詳細資訊，請參閱 [匯入原則式管理原則](import-a-policy-based-management-policy.md)。  
   
 |原則名稱|最佳作法規則|  
 |-----------------|------------------------|  
@@ -38,8 +39,8 @@ ms.locfileid: "62626045"
 |Guest 權限|[使用者資料庫的 Guest 權限](guest-permissions-on-user-databases.md)|  
 |上次成功備份日期|[過期的備份](outdated-backup.md)|  
 |未對外授予伺服器權限|[伺服器 public 權限](server-public-permissions.md)|  
-|SQL Server 32 位元 Affinity Mask 重疊|[正確的 Affinity Mask 和 Affinity 輸入的輸出遮罩重疊](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
-|SQL Server 64 位元 Affinity Mask 重疊|[正確的 Affinity Mask 和 Affinity 輸入的輸出遮罩重疊](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|SQL Server 32 位相似性遮罩重迭|[正確的親和性遮罩和相似性輸入輸出遮罩重迭](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|SQL Server 64 位元 Affinity Mask 重疊|[正確的親和性遮罩和相似性輸入輸出遮罩重迭](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |SQL Server Affinity Mask|[保留 Affinity Mask 預設值](keep-the-affinity-mask-default-value.md)|  
 |SQL Server 已封鎖的處理序臨界值|[增加或停用 Blocked Process Threshold](increase-or-disable-blocked-process-threshold.md)|  
 |SQL Server 預設追蹤|[預設追蹤記錄檔已停用](default-trace-log-files-disabled.md)|  
@@ -48,7 +49,7 @@ ms.locfileid: "62626045"
 |SQL Server 登入模式|[選擇驗證模式](../security/choose-an-authentication-mode.md)|  
 |SQL Server 平行處理原則的最大程度|[設定平行處理原則的最大程度選項來取得最佳效能](set-the-max-degree-of-parallelism-option-for-optimal-performance.md)|  
 |32 位元 SQL Server 2000 的 SQL Server 最大工作者執行緒|[確認最大工作者執行緒設定](verify-max-worker-threads-setting.md)|  
-|64 位元 SQL Server 2000 的 SQL Server 最大工作者執行緒|[驗證最大工作者執行緒設定](verify-max-worker-threads-setting.md)|  
+|64 位元 SQL Server 2000 的 SQL Server 最大工作者執行緒|[確認最大工作者執行緒設定](verify-max-worker-threads-setting.md)|  
 |SQL Server 2005 和更新版本的 SQL Server 最大工作者執行緒|[確認最大工作者執行緒設定](verify-max-worker-threads-setting.md)|  
 |SQL Server 網路封包大小|[網路封包大小不應超過 8060 個位元組](network-packet-size-should-not-exceed-8060-bytes.md)|  
 |SQL Server 密碼逾期|[SQL Server 登入密碼逾期](sql-server-login-password-expiration.md)|  
@@ -60,7 +61,7 @@ ms.locfileid: "62626045"
 |Windows 事件記錄檔叢集磁碟資源損毀錯誤|[偵測到 SCSI 主機介面卡問題](detect-scsi-host-adapter-issues.md)|  
 |Windows 事件記錄檔裝置驅動程式控制項錯誤|[裝置驅動程式控制項錯誤](device-driver-control-error.md)|  
 |Windows 事件記錄檔裝置未就緒錯誤|[裝置未就緒錯誤](device-not-ready-error.md)|  
-|Windows 事件記錄檔失敗的 I/O 要求錯誤|[偵測失敗的輸入的輸出要求](detect-failed-input-and-output-requests.md)|  
+|Windows 事件記錄檔失敗的 I/O 要求錯誤|[偵測失敗的輸入輸出要求](detect-failed-input-and-output-requests.md)|  
 |Windows 事件記錄檔 I/O 延遲警告|[檢查磁碟輸入輸出子系統的 IO 延遲問題](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
 |Windows 事件記錄檔硬分頁錯誤期間的 I/O 錯誤|[硬性分頁錯誤期間的輸入和輸出錯誤](input-and-output-error-during-hard-page-fault.md)|  
 |Windows 事件記錄檔讀取重試錯誤|[檢查磁碟輸入輸出子系統的讀取重試問題](check-disk-input-output-subsystem-for-read-retry-problems.md)|  

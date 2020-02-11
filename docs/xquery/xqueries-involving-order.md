@@ -1,5 +1,5 @@
 ---
-title: 與順序有關的 Xquery |Microsoft Docs
+title: 涉及訂單的 Xquery |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946116"
 ---
 # <a name="xqueries-involving-order"></a>與順序有關的 XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  關聯式資料庫沒有順序的概念。 例如，您不能提出像「從資料庫取得第一個客戶」之類的要求。 不過，您可以在 查詢 XML 文件，並擷取第一個\<客戶 > 項目。 如此一來，您會一直擷取相同客戶。  
+  關聯式資料庫沒有順序的概念。 例如，您不能提出像「從資料庫取得第一個客戶」之類的要求。 不過，您可以查詢 XML 檔並抓取第一個\<Customer> 元素。 如此一來，您會一直擷取相同客戶。  
   
  此主題依據節點出現在文件中的順序來說明查詢。  
   
@@ -59,13 +59,13 @@ WHERE ProductModelID=7
   
  請注意下列項目是從上一個查詢而來：  
   
--   大括號括住的運算式由其評估結果取代。 如需詳細資訊，請參閱 < [XML 建構&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)。  
+-   大括號括住的運算式由其評估結果取代。 如需詳細資訊，請參閱[XML 結構 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)。  
   
--   **@\*** 擷取第二個工作中心位置的所有的屬性。  
+-   **@\*** 抓取第二個工作中心位置的所有屬性。  
   
--   FLWOR 反覆運算 (FOR...RETURN) 擷取所有 <`step`> 子元素的第二個工作中心位置。  
+-   FLWOR 反復專案（適用于 .。。RETURN）抓取第二個`step`工作中心位置的所有 <> 子項目。  
   
--   [: Column （） 函數 (XQuery)](../xquery/xquery-extension-functions-sql-column.md)正在建構的 XML 中包含的關聯式值。  
+-   [Sql： column （）函數（XQuery）](../xquery/xquery-extension-functions-sql-column.md)包含所要建立之 XML 中的關聯式值。  
   
  以下是結果：  
   
@@ -81,7 +81,7 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- 上一個查詢只擷取文字節點。 如果您想要將整個 <`step`> 元素傳回相反的移除**string （)** 函式的查詢：  
+ 上一個查詢只擷取文字節點。 如果您想要改為`step`傳回整個 <> 元素，請從查詢中移除**string （）** 函數：  
   
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. 在第二個工作中心位置尋找所有用來製造產品的材料和工具  
  針對特定產品型號，下列查詢會在製造過程的工作中心位置順序中，擷取在第二個工作中心位置所使用的工具和材料。  
@@ -115,7 +115,7 @@ where ProductModelID=7
   
  請注意下列項目是從上一個查詢而來：  
   
--   此查詢會建構 < Loca`tion`> 項目並擷取其屬性值從資料庫。  
+-   查詢會將 <Loca`tion`> 元素，並從資料庫中抓取其屬性值。  
   
 -   它使用兩個 FLWOR (for...return) 反覆運算：一個擷取工具，另一個擷取使用的材料。  
   
@@ -137,7 +137,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. 從產品目錄中擷取前兩個產品的功能描述  
- 針對特定產品型號，此查詢會擷取前的兩個功能描述從 <`Features`> 產品型號目錄中的項目。  
+ 針對特定的產品模型，查詢會從產品型號目錄中的 <`Features`> 元素抓取前兩個功能描述。  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -157,9 +157,9 @@ where ProductModelID=19
   
  請注意下列項目是從上一個查詢而來：  
   
- 查詢主體建構 XML 來包含 <`ProductModel`> 具有 ProductModelID 和 ProductModelName 屬性的項目。  
+ 查詢主體會建立 XML，其中包含具有`ProductModel` ProductModelID 和 ProductModelName 屬性的 <> 元素。  
   
--   此查詢會使用 FOR...RETURN 迴圈來擷取產品型號功能描述。 **Position （)** 函式用來擷取前兩個功能。  
+-   查詢會使用 FOR .。。傳回迴圈以取得產品型號功能描述。 **Position （）** 函數是用來抓取前兩個功能。  
   
  以下是結果：  
   
@@ -181,7 +181,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>D. 在產品的製造過程中的第一個工作中心位置尋找所使用的前兩個工具  
- 針對產品型號，此查詢會在製造過程的工作中心位置序列的第一個工作中心位置傳回所使用的前兩個工具。 查詢針對製造指示儲存在所指定**指示**資料行**Production.ProductModel**資料表。  
+ 針對產品型號，此查詢會在製造過程的工作中心位置序列的第一個工作中心位置傳回所使用的前兩個工具。 查詢是針對儲存在**ProductModel**資料表之 [**指示**] 資料行中的製造指示來指定。  
   
 ```sql
 SELECT Instructions.query('  
@@ -217,7 +217,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="e-find-the-last-two-manufacturing-steps-at-the-first-work-center-location-in-the-manufacturing-of-a-specific-product"></a>E. 在特定產品之製造過程的第一個工作中心位置尋找最後兩個製造步驟  
- 此查詢會使用**last （)** 函式來擷取最後兩個製造步驟。  
+ 查詢會使用**last （）** 函數來抓取最後兩個製造步驟。  
   
 ```sql
 SELECT Instructions.query('   
@@ -248,6 +248,6 @@ where ProductModelID=7
 ## <a name="see-also"></a>另請參閱  
  [XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 語言參考 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
- [XML 建構&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
+ [&#40;XQuery&#41;的 XML 結構](../xquery/xml-construction-xquery.md)  
   
   

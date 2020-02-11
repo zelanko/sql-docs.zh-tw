@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a15690eb5aff48ec0f72df16e8342ed5c0522c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524058"
 ---
 # <a name="create-clr-functions"></a>建立 CLR 函數
-  您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體內部建立資料庫物件，這個物件是透過使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 建立的組件來撰寫。 可以利用 Common Language Runtime 所提供的豐富程式設計模型的資料庫物件，包含彙總函式、函數、預存程序、觸發程序以及類型。  
+  您可以在的實例內建立資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此實例是在以[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime （CLR）建立的元件中進行程式設計的。 可以利用 Common Language Runtime 所提供的豐富程式設計模型的資料庫物件，包含彙總函式、函數、預存程序、觸發程序以及類型。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立 CLR 函數包含下列步驟：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62524058"
 ## <a name="accessing-external-resources"></a>存取外部資源  
  CLR 函數可用以存取外部資源，例如，檔案、網路資源、Web Service、其他資料庫 (包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的遠端執行個體)。 這可透過使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]中的各種類別來達成，例如 `System.IO`、 `System.WebServices`、 `System.Sql`等等。 包含這類函數的組件應該至少使用 EXTERNAL_ACCESS 權限來設定才能達成此目的。 如需詳細資訊，請參閱 [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)支援的語言，將函數定義成類別的靜態方法。 SQL Client Managed Provider 可用以存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的遠端執行個體。 不過，在 CLR 函數中不支援回送連接到原始伺服器。  
   
- **若要建立、修改或卸除 SQL Server 中的組件**  
+ **在 SQL Server 中建立、修改或卸載元件**  
   
 -   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)  
   
@@ -56,10 +56,10 @@ ms.locfileid: "62524058"
  CLR 函數可用來透過 Managed 程式碼中的 PInvoke 存取機器碼 (Unmanaged 程式碼)，例如使用 C 或 C++ 撰寫的程式碼 (如需詳細資訊，請參閱 [從 Managed 程式碼呼叫原生函數](https://go.microsoft.com/fwlink/?LinkID=181929) )。 如此可讓您重複使用舊版程式碼 (如 CLR UDF) 或是使用機器碼撰寫關鍵效能 UDF。 這樣的處理方式需要 UNSAFE 組件。 如需了解使用 UNSAFE 組件的注意事項，請參閱 [CLR 整合程式碼存取安全性](../clr-integration/security/clr-integration-code-access-security.md) 。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立使用者定義函數 &#40;Database Engine&#41;](create-user-defined-functions-database-engine.md)   
- [建立使用者定義彙總](create-user-defined-aggregates.md)   
+ [建立使用者定義函數 &#40;資料庫引擎&#41;](create-user-defined-functions-database-engine.md)   
+ [建立使用者定義匯總](create-user-defined-aggregates.md)   
  [執行使用者定義函數](execute-user-defined-functions.md)   
- [檢視使用者定義函數](view-user-defined-functions.md)   
+ [View 使用者自訂函數](view-user-defined-functions.md)   
  [Common Language Runtime &#40;CLR&#41; 整合程式設計概念](../clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

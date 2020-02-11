@@ -1,5 +1,5 @@
 ---
-title: 集合 (ADO for VisualC++語法) |Microsoft Docs
+title: 集合（ADO for Visual C++ 語法） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,10 +18,10 @@ ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f18884c7a1aabe138408cca7eb529f4f21120330
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919915"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Collections (ADO for Visual C++ 語法)
@@ -87,7 +87,7 @@ get_Item(VARIANT Index, ADOField **ppvObject);
   
 -   [Item 屬性 (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="errors"></a>錯誤  
+## <a name="errors"></a>Errors  
   
 ### <a name="methods"></a>方法  
   
@@ -141,7 +141,7 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
 -   [Item 屬性 (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Errors 集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Fields 集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [參數集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Errors 集合（ADO）](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Fields 集合（ADO）](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Parameters 集合（ADO）](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties 集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

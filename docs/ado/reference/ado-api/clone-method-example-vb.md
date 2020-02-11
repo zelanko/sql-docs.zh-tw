@@ -1,5 +1,5 @@
 ---
-title: Clone 方法範例 (VB) |Microsoft Docs
+title: Clone 方法範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 64cb1753-e074-4a2d-8b74-7c35f3f6f64d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 05bd5c203b252909ad4707681aff49181bfde162
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920008"
 ---
 # <a name="clone-method-example-vb"></a>Clone 方法範例 (VB)
-這個範例會使用[複製品](../../../ado/reference/ado-api/clone-method-ado.md)方法建立的複本[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)然後讓每個複本的記錄指標放在個別的使用者。  
+這個範例會使用[Clone](../../../ado/reference/ado-api/clone-method-ado.md)方法來建立[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的複本，然後讓使用者獨立放置每個複本的記錄指標。  
   
 ```  
 'BeginCloneVB  
@@ -128,5 +128,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Clone 方法 (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
+ [Clone 方法（ADO）](../../../ado/reference/ado-api/clone-method-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

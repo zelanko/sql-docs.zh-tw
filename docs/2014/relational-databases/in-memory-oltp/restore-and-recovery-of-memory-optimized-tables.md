@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9560249e07cbd360914b5dab21eb68dc8e7f013f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467242"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>記憶體最佳化資料表的還原與復原
@@ -40,7 +40,7 @@ ms.locfileid: "62467242"
   
 -   將資料檔案做為資料流。  一旦建立差異對應篩選，就會使用與邏輯 CPU 數目相等的執行緒數目讀取資料檔案。 每個讀取資料檔案的執行緒都會讀取資料列、檢查相關聯的差異對應，並且只有在資料列未標示為已刪除時，才會將該資料列插入資料表。 在下述情況下，復原的這個部分可能繫於 CPU。  
   
- ![記憶體最佳化的資料表。](../../database-engine/media/memory-optimized-tables.gif "記憶體最佳化的資料表。")  
+ ![記憶體優化資料表。](../../database-engine/media/memory-optimized-tables.gif "記憶體最佳化資料表。")  
   
  記憶體最佳化資料表通常能夠以 I/O 速度載入記憶體中，但是在某些情況下將資料列載入記憶體中的速度會變慢。 這些特定情況包括：  
   

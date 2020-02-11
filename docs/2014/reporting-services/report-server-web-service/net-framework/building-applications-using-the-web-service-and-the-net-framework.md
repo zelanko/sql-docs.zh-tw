@@ -21,18 +21,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5136c67077ff90e7bbbd66ae72fed891267ba7a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520340"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Building Applications Using the Web Service and the .NET Framework
-  透過 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，您可以使用熟悉的程式設計建構，例如方法、基本類型以及使用者定義的複雜類型，來使用 Web 服務。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 包含您可用以建立 Web 服務用戶端的基礎結構與工具，而這些用戶端可呼叫任何全球資訊網協會 (W3C) 符合標準的 Web 服務。  
+  使用， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]您可以使用熟悉的程式設計結構，例如方法、基本類型，以及使用者定義的複雜類型，來處理 Web 服務。 
+  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 包含您可用以建立 Web 服務用戶端的基礎結構與工具，而這些用戶端可呼叫任何全球資訊網協會 (W3C) 符合標準的 Web 服務。  
   
  報表伺服器 Web 服務用戶端是與使用簡易物件存取通訊協定 (SOAP) 訊息的報表伺服器，進行通訊的任何元件或是應用程式。  
   
- **若要使用 .NET Framework 來建立報表伺服器 Web 服務用戶端，請遵循以下基本步驟：**  
+ **若要使用 .NET Framework 建立報表伺服器 Web 服務用戶端，請遵循下列基本步驟：**  
   
 1.  建立 Web 服務的 Proxy 類別。  
   
@@ -50,10 +51,10 @@ ms.locfileid: "62520340"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[建立 Web 服務 Proxy](creating-the-web-service-proxy.md)|描述使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 將 Proxy 類別新增至專案的方法。|  
+|[建立 Web 服務 Proxy](creating-the-web-service-proxy.md)|描述使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]將 proxy 類別加入至您的專案的方式。|  
 |[Web 服務驗證](web-service-authentication.md)|描述如何驗證報表伺服器 Web 服務的呼叫。|  
-|[呼叫 Web 服務方法](calling-web-service-methods.md)|描述如何使用 SOAP API 呼叫 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中的 Web 服務方法。|  
-|[設定 Web 服務的 Url 屬性](setting-the-url-property-of-the-web-service.md)|說明如何在建立 Web 參考之後，以程式設計方式將 Web 服務 Proxy 導向新伺服器 URL。|  
+|[呼叫 Web 服務方法](calling-web-service-methods.md)|描述如何使用 SOAP API 呼叫中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]的 Web 服務方法。|  
+|[設定 Web 服務的 URL 屬性](setting-the-url-property-of-the-web-service.md)|說明如何在建立 Web 參考之後，以程式設計方式將 Web 服務 Proxy 導向新伺服器 URL。|  
 |[提供 Web 服務方法引數](supplying-web-service-method-arguments.md)|描述如何叫用 Web 服務方法並提供方法引數。|  
 |[省略選擇性 Web 服務物件的值](omitting-values-for-optional-web-service-objects.md)|描述如何為選擇性 Web 服務物件省略值。|  
 |[使用安全的 Web 服務方法](using-secure-web-service-methods.md)|描述 **SecureConnectionLevel** 設定，以及它影響 Reporting Services SOAP API 使用方式的方法。|  

@@ -14,24 +14,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 650fe0fe02841c55caf0cfba864eb739386ca48a
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783150"
 ---
 # <a name="use-my-subscriptions"></a>使用我的訂閱
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表管理員包含 [**我的訂閱**] 頁面，將您所有的訂用帳戶組織成一個位置。 您可以使用 [我的訂閱] 來檢視、修改和刪除現有的訂閱。 然而，無法用它來建立訂閱。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]報表管理員包含 [**我的訂閱**] 頁面，可將您的所有訂用帳戶組織成一個位置。 您可以使用 [我的訂閱] 來檢視、修改和刪除現有的訂閱。 然而，無法用它來建立訂閱。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 原生模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]原生模式|  
   
  在 [我的訂閱] 中，您可以依資料夾、報表、描述、觸發程序、上次執行或狀態來排序訂閱。 除了 [上次執行] 依時間順序以外，所有值都依字母順序排序。  
   
  [我的訂閱] 僅顯示您所建立的訂閱。 即使您已經加入成為其他使用者擁有之訂閱的訂閱者，它一樣不會列出其他使用者擁有的訂閱，也不會顯示資料驅動訂閱。  
   
- 您無法依名稱搜尋訂閱，也無法根據觸發程序資訊、狀態資訊等等來搜尋訂閱。 如需詳細資訊，請參閱[在原生模式&#40; &#41;中建立、修改和刪除標準訂閱 Reporting Services](create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
+ 您無法依名稱搜尋訂閱，也無法根據觸發程序資訊、狀態資訊等等來搜尋訂閱。 如需詳細資訊，請參閱[在原生模式中建立、修改和刪除標準訂閱 &#40;Reporting Services&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
   
 ## <a name="how-to-use-my-subscriptions"></a>如何使用我的訂閱  
  我的訂閱可以透過報表管理員使用。 若要存取我的訂閱，請按一下 [報表管理員全域] 工具列上的 [**我的訂閱**]。  

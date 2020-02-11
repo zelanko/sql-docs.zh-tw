@@ -16,27 +16,27 @@ ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d828c2b9b49138cc4dfd6345d90e70c333554fe0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947436"
 ---
 # <a name="xactattributeenum"></a>XactAttributeEnum
-指定的交易屬性[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件。  
+指定[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件的交易屬性。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adXactAbortRetaining**|262144|會保留中止執行藉由呼叫[RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)自動啟動新的交易。 並非所有提供者支援這個行為。|  
-|**adXactCommitRetaining**|131072|藉由呼叫執行保留認可[CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)自動啟動新的交易。 並非所有提供者支援這個行為。|  
+|**adXactAbortRetaining**|262144|藉由呼叫[RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)來自動啟動新的交易，以執行保留中止。 並非所有提供者都支援此行為。|  
+|**adXactCommitRetaining**|131072|藉由呼叫[CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)來自動啟動新的交易，藉以執行保留的認可。 並非所有提供者都支援此行為。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- 封裝： **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
+ Package： **.com. wfc. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums.XactAttribute.ABORTRETAINING|  
 |AdoEnums.XactAttribute.COMMITRETAINING|  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Attributes 屬性 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

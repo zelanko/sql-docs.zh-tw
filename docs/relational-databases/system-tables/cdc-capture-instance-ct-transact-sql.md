@@ -1,5 +1,5 @@
 ---
-title: cdc.&lt;capture_instance&gt;_CT （Transact-sql） |Microsoft Docs
+title: cdc.&lt;capture_instance&gt;_CT （transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
@@ -18,46 +18,46 @@ ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6595fa2a2462463b9ecc64778af1d72e588477d8
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72908400"
 ---
-# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>cdc.&lt;capture_instance&gt;_CT （Transact-sql）
+# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>cdc.&lt;capture_instance&gt;_CT （transact-sql）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   這是在來源資料表啟用異動資料擷取時所建立的變更資料表。 此資料表會針對在來源資料表上執行的每個插入和刪除作業傳回一個資料列，而且會針對在來源資料表上執行的每個更新作業傳回兩個資料列。 如果在啟用來源資料表時沒有指定變更資料表的名稱，就會衍生此名稱。 名稱的格式為 cdc。*capture_instance*_CT，其中*capture_instance*是來源資料表的架構名稱，以及格式*schema_table*的來源資料表名稱。 例如，如果已針對變更資料捕獲啟用**AdventureWorks**範例資料庫中的資料表**Person** ，則衍生的變更資料表名稱會是**cdc。Person_Address_CT**。  
   
- 我們建議您不要**直接查詢系統資料表**。 相反地，請執行[cdc. fn_cdc_get_all_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)和[cdc. fn_cdc_get_net_changes_](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) < capture_instance 函數。  
+ 我們建議您不要**直接查詢系統資料表**。 相反地，請執行[cdc. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)和[cdc. fn_cdc_get_net_changes_](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance 函數。  
   
 
   
-|資料行名稱|[名稱]|描述|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**__$start_lsn**|**binary(10)**|與變更之認可交易相關聯的記錄序號 (LSN)。<br /><br /> 在相同交易中認可的所有變更都會共用相同的認可 LSN。 例如，如果來源資料表上的刪除作業會移除兩個數據列，則變更資料表會包含兩個數據列，每個資料列都有相同的 **__ $ start_lsn**值。|  
-|**__ $ end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，這個資料行一律是 NULL。|  
-|**__$seqval**|**binary(10)**|用來排序交易內資料列變更的序列值。|  
-|**__$operation**|**int**|識別與變更相關聯的資料操作語言 (DML) 作業。 可以是下列其中一項：<br /><br /> 1 = 刪除<br /><br /> 2 = 插入<br /><br /> 3 = 更新 (舊的值)<br /><br /> 執行更新陳述式之前，資料行資料具有資料列值。<br /><br /> 4 = 更新 (新的值)<br /><br /> 執行更新陳述式之後，資料行資料具有資料列值。|  
-|**__$update_mask**|**varbinary(128)**|位元遮罩，可根據變更資料表的資料行序數識別這些變更的資料行。|  
-|*\<擷取的來源資料表資料行>*|變化|變更資料表中的其餘資料行都是建立擷取執行個體時，在來源資料表中識別成擷取資料行的資料行。 如果擷取的資料行清單中沒有指定任何資料行，這個資料表就會包含來源資料表中的所有資料行。|  
+|**__ $ start_lsn**|**binary （10）**|與變更之認可交易相關聯的記錄序號 (LSN)。<br /><br /> 在相同交易中認可的所有變更都會共用相同的認可 LSN。 例如，如果來源資料表上的刪除作業會移除兩個數據列，則變更資料表會包含兩個數據列，每個資料列都有相同的 **__ $ start_lsn**值。|  
+|**__ $ end_lsn**|**binary （10）**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，這個資料行一律是 NULL。|  
+|**__ $ seqval**|**binary （10）**|用來排序交易內資料列變更的序列值。|  
+|**__ $ operation**|**int**|識別與變更相關聯的資料操作語言 (DML) 作業。 可以是下列其中一項：<br /><br /> 1 = 刪除<br /><br /> 2 = 插入<br /><br /> 3 = 更新 (舊的值)<br /><br /> 執行更新陳述式之前，資料行資料具有資料列值。<br /><br /> 4 = 更新 (新的值)<br /><br /> 執行更新陳述式之後，資料行資料具有資料列值。|  
+|**__ $ update_mask**|**Varbinary （128）**|位元遮罩，可根據變更資料表的資料行序數識別這些變更的資料行。|  
+|*\<已捕獲的來源資料表資料行>*|視情況而異|變更資料表中的其餘資料行都是建立擷取執行個體時，在來源資料表中識別成擷取資料行的資料行。 如果擷取的資料行清單中沒有指定任何資料行，這個資料表就會包含來源資料表中的所有資料行。|  
 |**__ $ command_id** |**int** |追蹤交易內的作業順序。 |  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 
-`__$command_id` 的資料行是在2012到2016版的累計更新中引進的資料行。 如需版本及下載資訊，請參閱知識庫文章3030352，網址為[：在您啟用 Microsoft SQL Server 資料庫的變更資料捕獲後，已更新的資料列排序變更資料表的順序不正確](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)。  如需詳細資訊，請參閱[在升級至最新的 CU 以取得 SQL Server 2012、2014和2016之後，CDC 功能可能會中斷](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)。
+資料`__$command_id`行是在版本2012到2016的累計更新中引進的資料行。 如需版本及下載資訊，請參閱知識庫文章3030352，網址為[：在您啟用 Microsoft SQL Server 資料庫的變更資料捕獲後，已更新的資料列排序變更資料表的順序不正確](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)。  如需詳細資訊，請參閱[在升級至最新的 CU 以取得 SQL Server 2012、2014和2016之後，CDC 功能可能會中斷](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)。
 
 ## <a name="captured-column-data-types"></a>擷取資料行資料類型  
  包含在這個資料表中的擷取資料行與對應的來源資料行具有相同的資料類型和值，但下列情況除外：  
   
--   **時間戳記**資料行定義為**binary （8）** 。  
+-   **時間戳記**資料行定義為**binary （8）**。  
   
 -   **標識**列會定義為**int**或**Bigint**。  
   
  不過，這些資料行中的值與來源資料行的值相同。  
   
 ### <a name="large-object-data-types"></a>大型物件資料類型  
- 當 __ $ operation = 1 或 \_\_$operation = 3 時，資料類型為**image**、 **text**和**Ntext**的資料行一律會被指派**Null**值。 除非資料行在更新期間變更，否則在 \_\_$operation = 3 時，會將資料類型為**Varbinary （max）** 、 **Varchar （max）** 或**Nvarchar （max）** 的資料行指派**為 Null**值。 當 \_\_$operation = 1 時，這些資料行會在刪除時指派其值。 包含在 capture 實例中的計算資料行一律會有**Null**值。  
+ 當 __ $ operation = 1 \_ \_或 $operation = 3 時，資料類型為**image**、 **text**和**Ntext**的資料行一律會被指派**Null**值。 \_ \_除非資料行在更新期間變更，否則在 $operation = 3 的情況下，將會為**Varbinary （max）**、 **Varchar （max）** 或**Nvarchar （max）** 資料類型的資料行指派**Null**值。 當\_ \_$operation = 1 時，這些資料行會在刪除時指派其值。 包含在 capture 實例中的計算資料行一律會有**Null**值。  
   
  根據預設，在單一 INSERT、UPDATE、WRITETEXT 或 UPDATETEXT 陳述式中可加入至擷取資料行的大小上限為 65,536 個位元組或 64 KB。 若要增加此大小以支援更大的 LOB 資料，請使用[設定最大文字複寫大小伺服器設定選項](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)，以指定較大的大小上限。 如需詳細資訊，請參閱 [設定 max text repl size 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "72908400"
  若為插入和刪除作業，就會設定更新遮罩中的所有位元。 若為更新作業，就會同時修改更新舊值與更新新值資料列中的更新遮罩，以便反映在更新期間變更的資料行。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_cdc_enable_table &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys. sp_cdc_get_ddl_history &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
+ [sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sp_cdc_get_ddl_history &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   
   

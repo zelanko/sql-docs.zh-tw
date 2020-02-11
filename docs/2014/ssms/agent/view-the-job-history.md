@@ -17,20 +17,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ba38b6a3c425972ef0b893d302df78e3d835f85
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783393"
 ---
 # <a name="view-the-job-history"></a>檢視作業記錄
-  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業記錄。  
+  本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、或 SQL Server 管理物件， [!INCLUDE[tsql](../../includes/tsql-md.md)]在中查看代理程式作業記錄。  
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要使用下列項目檢視作業記錄：**  
+-   **若要使用下列內容來查看作業記錄：**  
   
      [Transact-SQL](#SSMS)  
   
@@ -51,11 +51,11 @@ ms.locfileid: "72783393"
   
 2.  展開 **[SQL Server Agent]** ，然後展開 **[作業]** 。  
   
-3.  以滑鼠右鍵按一下作業，然後按一下 **[檢視記錄]** 。  
+3.  以滑鼠右鍵按一下作業，然後按一下 **[檢視記錄]**。  
   
 4.  在 [記錄檔檢視器] 中檢視作業記錄。  
   
-5.  若要更新作業記錄，請按一下 **[重新整理]** 。 若要檢視較少的資料列，請按一下 **[篩選]** 按鈕，並輸入篩選參數。  
+5.  若要更新作業記錄，請按一下 **[重新整理]**。 若要檢視較少的資料列，請按一下 **[篩選]** 按鈕，並輸入篩選參數。  
   
 ##  <a name="TSQL"></a> 使用 Transact-SQL  
   
@@ -65,7 +65,7 @@ ms.locfileid: "72783393"
   
 2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```sql
     -- lists all job information for the NightlyBackups job.  
@@ -80,6 +80,6 @@ ms.locfileid: "72783393"
  如需詳細資訊，請參閱[sp_help_jobhistory &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql)。  
   
 ##  <a name="SMO"></a>使用 SQL Server 管理物件  
- **若要檢視作業記錄**  
+ **若要查看作業歷程記錄**  
   
  使用所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell，呼叫 `EnumHistory` 類別的 `Job` 方法。 如需詳細資訊，請參閱 [SQL Server 管理物件 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  

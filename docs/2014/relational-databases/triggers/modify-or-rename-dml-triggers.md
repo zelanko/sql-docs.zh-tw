@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 824ea1587955884f10a53579865d2029cc63eefc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473219"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>修改或重新命名 DML 觸發程序
@@ -32,7 +32,7 @@ ms.locfileid: "62473219"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法修改或重新命名 DML 觸發程序：**  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62473219"
   
     -   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  變更 DML 觸發程序需要定義觸發程序的資料表或檢視表的 ALTER 權限。  
@@ -73,11 +73,11 @@ ms.locfileid: "62473219"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開您要的資料庫，展開 **[資料表]**，然後展開包含您要修改之觸發程序的資料表。  
+2.  展開您要的資料庫，展開 **[資料表]** ，然後展開包含您要修改之觸發程序的資料表。  
   
-3.  展開 **[觸發程序]**，以滑鼠右鍵按一下要修改的觸發程序，再按一下 **[修改]**。  
+3.  展開 **[觸發程序]** ，以滑鼠右鍵按一下要修改的觸發程序，再按一下 **[修改]** 。  
   
-4.  修改觸發程序，然後按一下 **[執行]**。  
+4.  修改觸發程序，然後按一下 **[執行]** 。  
   
 #### <a name="to-rename-a-dml-trigger"></a>若要重新命名 DML 觸發程序  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62473219"
   
 1.  連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  複製下列範例並貼入查詢中。 執行第一個範例，建立當使用者嘗試在 `SalesPersonQuotaHistory` 資料表中加入或變更資料時，將使用者定義訊息列印到用戶端的 DML 觸發程序。 執行 [ALTER TRIGGER](/sql/t-sql/statements/alter-trigger-transact-sql) 陳述式修改觸發程式，使它只在 `INSERT` 活動上引發。 這個觸發程序很有用，因為它會提醒使用者在這份資料表中更新或插入資料列，以便同時通知 `Compensation` 部門。  
   
@@ -125,9 +125,9 @@ GO
   
 1.  連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會使用 [DROP TRIGGER](/sql/t-sql/statements/drop-trigger-transact-sql) 和 [ALTER TRIGGER](/sql/t-sql/statements/alter-trigger-transact-sql) 陳述式將 `Sales.bonus_reminder` 觸發程序重新命名為 `Sales.bonus_reminder_2`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會使用 [DROP TRIGGER](/sql/t-sql/statements/drop-trigger-transact-sql) 和 [ALTER TRIGGER](/sql/t-sql/statements/alter-trigger-transact-sql) 陳述式將 `Sales.bonus_reminder` 觸發程序重新命名為 `Sales.bonus_reminder_2`。  
   
 ```sql  
 USE AdventureWorks2012;  

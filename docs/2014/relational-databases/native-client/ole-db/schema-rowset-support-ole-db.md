@@ -1,5 +1,5 @@
 ---
-title: 結構描述資料列集支援 (OLE DB) |Microsoft Docs
+title: 架構資料列集支援（OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,25 +17,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83b6ea8594d22527f2f9b87a77d70671c5724111
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62625955"
 ---
 # <a name="schema-rowset-support-ole-db"></a>結構描述資料列集支援 (OLE DB)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者也支援從連結伺服器傳回的結構描述資訊時處理[!INCLUDE[tsql](../../../includes/tsql-md.md)]分散式查詢。  
+  Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB 提供者在處理[!INCLUDE[tsql](../../../includes/tsql-md.md)]分散式查詢時，也支援從連結伺服器傳回架構資訊。  
   
 > [!NOTE]  
 >  雖然 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援同義字，但是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 不會傳回同義字的中繼資料。  
   
- 下表清單結構描述資料列和所支援之限制資料行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者。  
+ 下表列出 Native Client OLE DB 提供者所[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援的架構資料列集和限制資料行。  
   
 |結構描述資料列集|限制資料行|  
 |-------------------|-------------------------|  
 |DBSCHEMA_CATALOGS|CATALOG_NAME|  
 |DBSCHEMA_COLUMN_PRIVILEGES|支援所有的限制。<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
-|DBSCHEMA_COLUMNS|支援所有的限制。<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> 下列其他的資料行為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 專屬的：<br /><br /> -COLUMN_LCID，這是定序的地區設定識別碼。 COLUMN_LCID 與 Windows LCID 的值相同。<br />-Column_compflags 會定義所支援的定序的比較。 資料格式和 DBPROB_FINDCOMPAREOPS 相同。<br />-COLUMN_SORTID，這是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]排序定序的樣式。<br />-COLUMN_TDSCOLLATION，這是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料行的定序。<br />-SYS.COMPUTER_COLUMNS，如果資料行為計算資料行和 VARIANT_FALSE 否則即為 VARIANT_TRUE。|  
+|DBSCHEMA_COLUMNS|支援所有的限制。<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> 下列其他的資料行為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 專屬的：<br /><br /> -COLUMN_LCID，這是定序的地區設定識別碼。 COLUMN_LCID 與 Windows LCID 的值相同。<br />-COLUMN_COMPFLAGS 定義定序支援的比較。 資料格式和 DBPROB_FINDCOMPAREOPS 相同。<br />-COLUMN_SORTID，這是定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]序的排序樣式。<br />-COLUMN_TDSCOLLATION，這是資料[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]行的定序。<br />-IS_COMPUTED，如果資料行是計算資料行，則為 VARIANT_TRUE，否則為 VARIANT_FALSE。|  
 |DBSCHEMA_FOREIGN_KEYS|支援所有的限制。<br /><br /> PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |DBSCHEMA_INDEXES|支援限制 1、2、3 及 5。<br /><br /> TABLE_CATALOG TABLE_SCHEMA INDEX_NAME TABLE_NAME|  
 |DBSCHEMA_PRIMARY_KEYS|支援所有的限制。<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
@@ -52,7 +52,7 @@ ms.locfileid: "62625955"
 ## <a name="in-this-section"></a>本節內容  
  [結構描述資料列集中的分散式查詢支援](schema-rowsets-distributed-query-support.md)  
   
- [LINKEDSERVERS 資料列集&#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
+ [LINKEDSERVERS 資料列集 &#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)   

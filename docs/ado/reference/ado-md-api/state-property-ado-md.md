@@ -1,5 +1,5 @@
 ---
-title: 狀態屬性 (ADO MD) |Microsoft Docs
+title: State 屬性（ADO MD） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,24 +17,24 @@ ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0c11bb74b62d54b1e2489cba5dd7cd35ee376a41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949150"
 ---
 # <a name="state-property-ado-md"></a>State 屬性 (ADO MD)
-表示資料格集的目前狀態。  
+表示集的目前狀態。  
   
 ## <a name="return-values"></a>傳回值  
- 傳回**長**整數，表示目前的狀況[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)物件，並處於唯讀狀態。 下列是有效值： **adStateClosed** (0) 和**adStateOpen** (1)。  
+ 傳回**長**整數，表示[集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)區分物件的目前條件，而且是唯讀的。 下列是有效的值： **adStateClosed** （0）和**adStateOpen** （1）。  
   
 ## <a name="remarks"></a>備註  
- 若要使用[ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md)常數的名稱，您必須在專案中參考 ADO 型別程式庫。 請參閱[使用的 ADO 使用 ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)如需詳細資訊。  
+ 若要使用[ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md)常數名稱，您的專案中必須參考 ADO 類型程式庫。 如需詳細資訊，請參閱搭配[使用 ADO 與 ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md) 。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Cellset 物件 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Close 方法 (ADO MD)](../../../ado/reference/ado-md-api/close-method-ado-md.md)   
+ [Close 方法（ADO MD）](../../../ado/reference/ado-md-api/close-method-ado-md.md)   
  [Open 方法 (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)

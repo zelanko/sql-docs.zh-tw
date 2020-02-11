@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bcdc2af7f67c1ea4bda49e09cfe92eda43c9dea3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524124"
 ---
 # <a name="manage-trigger-security"></a>管理觸發程序安全性
@@ -34,7 +34,7 @@ ms.locfileid: "62524124"
   
  `GO`  
   
- 這個觸發程序所代表的意義是，只要有權執行 `GRANT CONTROL SERVER` 陳述式的使用者 (例如 **sysadmin** 固定伺服器角色的成員) 執行 `ALTER TABLE` 陳述式，就會授與 `JohnDoe` `CONTROL SERVER` 權限。 換句話說，雖然 `JohnDoe` 無法授與 `CONTROL SERVER` 權限給自己，不過他可以啟用觸發程序程式碼，以便授與自己在提升權限的情況下執行的權限。 DML 與 DDL 觸發程序都曝露於此種安全性威脅下。  
+ 這個觸發程序所代表的意義是，只要有權執行 `GRANT CONTROL SERVER` 陳述式的使用者 (例如 **sysadmin** 固定伺服器角色的成員) 執行 `ALTER TABLE` 陳述式，就會授與 `JohnDoe``CONTROL SERVER` 權限。 換句話說，雖然 `JohnDoe` 無法授與 `CONTROL SERVER` 權限給自己，不過他可以啟用觸發程序程式碼，以便授與自己在提升權限的情況下執行的權限。 DML 與 DDL 觸發程序都曝露於此種安全性威脅下。  
   
 ## <a name="trigger-security-best-practices"></a>觸發程序安全性最佳作法  
  您可以採用下列措施來防止觸發程序的程式碼在提升權限的情況下執行：  

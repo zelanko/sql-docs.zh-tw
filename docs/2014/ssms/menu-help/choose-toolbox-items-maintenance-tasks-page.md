@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24dfd1f587db8d652390be27fa2307a8500c3145
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470045"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>選擇工具箱項目 (維護工作頁面)
   [自訂工具箱]  對話方塊的這個索引標籤，會顯示所有已在您電腦上註冊的維護工作元件清單，而且可讓您變更工具箱中所顯示的項目。 您可以從 [工具]  功能表開啟 [自訂工具箱]  對話方塊。 若要排序元件的清單，請選取任何資料行標題。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  [維護工作]  索引標籤包含下列資料行資訊。  
   
  **名稱**  
@@ -43,7 +43,7 @@ ms.locfileid: "62470045"
  **語言**  
  元件的語言。  
   
- **版本(Version)**  
+ **版本**  
  元件的版本。  
   
   

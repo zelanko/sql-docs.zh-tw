@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c320db0f568b7182a48e5b1719f68d17ade11629
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688895"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>記憶體最佳化資料表中的資料表和資料列大小
@@ -34,7 +34,7 @@ ms.locfileid: "72688895"
   
  下圖說明包含索引和資料列的資料表，這些索引和資料列各自擁有資料列標頭和主體：  
   
- ![記憶體最佳化資料表。](../../database-engine/media/hekaton-guide-1.gif "記憶體優化的資料表。")  
+ ![記憶體優化的資料表。](../../database-engine/media/hekaton-guide-1.gif "記憶體最佳化資料表。")  
 由索引和資料列組成之記憶體最佳化的資料表。  
   
  資料表的記憶體中大小 (以位元組為單位) 計算如下：  
@@ -70,9 +70,9 @@ ms.locfileid: "72688895"
   
  下表描述資料列主體大小的計算，指定為 [實際資料列主體大小] = SUM([淺層類型的大小]) + 2 + 2 * [深層類型資料行數目]。  
   
-|章節|大小|註解|  
+|區段|大小|註解|  
 |-------------|----------|--------------|  
-|淺層類型資料行|SUM([淺層類型的大小])<br /><br /> **個別類型的大小如下所示：**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> 數值（有效位數 < = 18 &#124; ）8<br /><br /> Time &#124; 8<br /><br /> 數值（精確度 > 18） &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
+|淺層類型資料行|SUM([淺層類型的大小])<br /><br /> **個別類型的大小如下所示：**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> 數值（有效位數 <= 18） &#124; 8<br /><br /> Time &#124; 8<br /><br /> 數值（精確度>18） &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
 |淺層資料行填補|可能的值為：<br /><br /> 如果有深層類型資料行且淺層資料行的資料大小總計為奇數，則為 1。<br /><br /> 否則為 0|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
 |深層類型資料行的位移陣列|可能的值為：<br /><br /> 如果沒有深層類型資料行則為 0<br /><br /> 否則為 2 + 2 * [深層類型資料行數目]|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
 |NULL 陣列|[可為 null 的資料行數目] / 8，無條件進位到完整的位元組。|陣列中每個可為 null 的資料行都有一個位元。 這個位元會無條件進位到完整的位元組。|  
@@ -82,7 +82,7 @@ ms.locfileid: "72688895"
 |可變長度的深層類型資料行 [計算的大小]|SUM([可變長度的深層類型資料行計算的大小])<br /><br /> 每個資料行計算的大小如下所示：<br /><br /> i 代表 varchar(i) 和 varbinary(i)<br /><br /> 2 * i 代表 nvarchar(i)|這個資料列只會套用至 [計算的資料列主體大小]。<br /><br /> 可變長度的深層類型資料行為 varchar(i)、nvarchar(i) 或 varbinary(i) 類型的資料行。 計算的大小是由資料行的最大長度 (i) 所決定。|  
 |可變長度的深層類型資料行 [實際大小]|SUM([可變長度的深層類型資料行的實際大小])<br /><br /> 每個資料行的實際大小如下所示：<br /><br /> n (n 是儲存在資料行中的字元數) 代表 varchar(i)。<br /><br /> 2 * n (n 是儲存在資料行中的字元數) 代表 nvarchar(i)。<br /><br /> n (n 是儲存在資料行中的位元組數) 代表 varbinary(i)。|這個資料列只會套用至 [實際資料列主體大小]。<br /><br /> 實際大小是由儲存在資料列的資料行中的資料所決定。|  
   
-##  <a name="bkmk_RowStructure"></a> 資料列結構  
+##  <a name="bkmk_RowStructure"></a>資料列結構  
  記憶體最佳化資料表中的資料列具有下列元件：  
   
 -   資料列標頭包含實作資料列版本設定所需的時間戳記。 資料列標頭也包含索引指標，用來實作雜湊值區的資料列鏈結 (如上文所述)。  
@@ -91,13 +91,13 @@ ms.locfileid: "72688895"
   
  下圖說明有兩個索引的資料表之資料列結構：  
   
- ![具有兩個索引之資料表的資料列結構。](../../database-engine/media/hekaton-tables-4.gif "具有兩個索引之資料表的資料列結構。")  
+ ![資料表有兩個索引的資料列結構。](../../database-engine/media/hekaton-tables-4.gif "資料表有兩個索引的資料列結構。")  
   
  開始和結束時間戳記表示特定資料列版本有效的期間。 在這個間隔中啟動的交易可以看到這個資料列版本。 如需詳細資料，請參閱 [Transactions in Memory-Optimized Tables](memory-optimized-tables.md) (記憶體最佳化的資料表中的交易)。  
   
  索引指標指向屬於雜湊值區之鏈結中的下一個資料列。 下圖說明有兩個資料行 (姓名、城市) 之資料表的結構，其中包含兩個索引，一個是姓名資料行的索引，另一個是城市資料行的索引。  
   
- ![具有兩個數據行和索引的資料表結構。](../../database-engine/media/hekaton-tables-5.gif "具有兩個數據行和索引的資料表結構。")  
+ ![有兩個資料行和索引的資料表結構。](../../database-engine/media/hekaton-tables-5.gif "有兩個資料行和索引的資料表結構。")  
   
  在此圖中，John 和 Jane 名稱已雜湊到第一個貯體。 Susan 已雜湊到第二個貯體。 Beijing 和 Bogota 城市已雜湊到第一個貯體。 Paris 和 Prague 已雜湊到第二個貯體。  
   
@@ -113,24 +113,24 @@ ms.locfileid: "72688895"
   
 -   第二個貯體：(John, Paris)、(Jane, Prague)  
   
- 結束時間戳記&#x221e; （無限大）表示這是目前有效的資料列版本。 自從這個資料列版本寫入後，資料列尚未更新或刪除。  
+ 結束時間戳記 &#x221e; （無限大）表示這是目前有效的資料列版本。 自從這個資料列版本寫入後，資料列尚未更新或刪除。  
   
  對於大於 200 的時間，資料表包含下列資料列：  
   
-|[名稱]|[縣/市]|  
+|名稱|City|  
 |----------|----------|  
-|John|Beijing|  
+|John|北京|  
 |Jane|Prague|  
   
  不過，開始時間為 100 的任何使用中交易都會看到下列版本的資料表：  
   
-|[名稱]|[縣/市]|  
+|名稱|City|  
 |----------|----------|  
-|John|Paris|  
+|John|巴黎|  
 |Jane|Prague|  
 |Susan|Bogata|  
   
-##  <a name="bkmk_ExampleComputation"></a> 範例：資料表和資料列大小計算  
+##  <a name="bkmk_ExampleComputation"></a>範例：資料表和資料列大小計算  
  若是雜湊索引，實際值區計數會無條件進位到最接近的二乘冪。 例如，如果指定的 bucket_count 是 100000，則索引的實際值區計數為 131072。  
   
  假設 Orders 資料表具有下列定義：  
@@ -222,7 +222,7 @@ select * from sys.dm_db_xtp_table_memory_stats
 where object_id = object_id('dbo.Orders')  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [Memory-Optimized Tables](memory-optimized-tables.md)  
+## <a name="see-also"></a>另請參閱  
+ [記憶體最佳化資料表](memory-optimized-tables.md)  
   
   

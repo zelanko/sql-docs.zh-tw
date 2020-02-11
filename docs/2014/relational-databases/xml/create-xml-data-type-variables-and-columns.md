@@ -14,14 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637991"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>建立 XML 資料類型變數與資料行
-  `xml` 資料類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的內建資料類型，而且與其他內建類型有些相似，例如 `int` 與 `varchar`。 如同其他內建的類型，您可以使用`xml`資料類型作為資料行類型，當您建立資料表作為變數類型、 參數類型、 函式傳回類型，或在[CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
+  
+  `xml` 資料類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的內建資料類型，而且與其他內建類型有些相似，例如 `int` 與 `varchar`。 如同其他內建類型，當您建立資料表作為變數`xml`類型、參數類型、函數傳回類型，或是在[CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)中時，您可以使用資料類型做為資料行類型。  
   
 ## <a name="creating-columns-and-variables"></a>建立資料行和變數  
  若要在資料表中建立 `xml` 類型資料行，請使用 `CREATE TABLE` 陳述式，如下列範例所示：  
@@ -66,7 +67,8 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也支援在 `xml` 類型之資料行上的 NULL 和 NOT NULL 條件約束。 例如：  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也支援在 `xml` 類型之資料行上的 NULL 和 NOT NULL 條件約束。 例如：  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
@@ -87,7 +89,8 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   COLLATE  
   
-     XML 可自行提供編碼。 定序僅適用於字串類型。 `xml` 資料類型不是字串類型。 但它確實具有字串表示法，並允許轉換成字串資料類型，以及從字串資料類型轉換回來。  
+     XML 可自行提供編碼。 定序僅適用於字串類型。 
+  `xml` 資料類型不是字串類型。 但它確實具有字串表示法，並允許轉換成字串資料類型，以及從字串資料類型轉換回來。  
   
 -   RULE  
   
@@ -127,9 +130,9 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>相同或相異的資料表  
- `xml`可以建立資料類型資料行，在資料表中含有其他關聯式資料行，或在個別的資料表，與主資料表有外部索引鍵關聯性。  
+ 您`xml`可以在包含其他關聯式資料行的資料表中，或在與主資料表具有外鍵關聯性的個別資料表中，建立資料類型資料行。  
   
- 建立`xml`當下列條件之一成立時，相同資料表中的資料類型資料行：  
+ 當下列`xml`其中一個條件成立時，請在相同的資料表中建立資料類型資料行：  
   
 -   您的應用程式在 XML 資料行上執行資料擷取，而且不需要 XML 資料行的 XML 索引。  
   

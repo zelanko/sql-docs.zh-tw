@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 384b5cc158600848dbca6528a4c8c39250a23908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629176"
 ---
 # <a name="clean-up-merge-metadata-replication-transact-sql-programming"></a>清除合併中繼資料 (複寫 Transact-SQL 程式設計)
@@ -29,7 +29,7 @@ ms.locfileid: "62629176"
   
 1.  在發行集資料庫的「發行者」端，執行 [sp_mergemetadataretentioncleanup](/sql/relational-databases/system-stored-procedures/sp-mergemetadataretentioncleanup-transact-sql)。  
   
-2.  (選擇性) 請注意在步驟 1 中從 [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql)、 [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql)和 [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql) 系統資料表所移除的資料列數目 (分別以 **@num_genhistory_rows**、 **@num_contents_rows**和 **@num_tombstone_rows** 輸出參數傳回)。  
+2.  選擇性請注意在步驟1中從[MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql)、 [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql)和[MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql)系統資料表中移除的資料列數目，分別**@num_genhistory_rows**在、 **@num_contents_rows**和**@num_tombstone_rows**輸出參數中傳回。  
   
 3.  在「訂閱者」端重複步驟 1 和 2，以清除訂閱者資料庫上的中繼資料。  
   

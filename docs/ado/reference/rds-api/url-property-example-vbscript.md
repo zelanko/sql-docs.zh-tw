@@ -1,5 +1,5 @@
 ---
-title: URL 屬性範例 (VBScript) |Microsoft Docs
+title: URL 屬性範例（VBScript） |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +15,17 @@ ms.assetid: 6ae5ac50-c88c-4262-b7ab-f2b3de382a0b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a7cdfd5b91caa52b3c2de3d0775ecf7d706b1a73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963230"
 ---
 # <a name="url-property-example-vbscript"></a>URL 屬性範例 (VBScript)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下列程式碼示範如何設定**URL**指定.asp 檔案會接著處理變更提交至資料來源的用戶端上的屬性。  
+ 下列程式碼示範如何在用戶端上設定**URL**屬性，以指定一個 .asp 檔案，該檔案接著會處理將變更提交至資料來源的程式。  
   
 ```  
 <!-- BeginURLClientVBS -->  
@@ -100,7 +100,7 @@ End Sub
 <!-- EndURLClientVBS -->  
 ```  
   
- 伺服器端程式碼存在於**URLServerVBS.asp**提交更新**資料錄集**到資料來源。  
+ 存在於**URLServerVBS**中的伺服器端程式碼會將更新的**記錄集**提交至資料來源。  
   
 ```  
 <!-- BeginURLServerVBS -->  

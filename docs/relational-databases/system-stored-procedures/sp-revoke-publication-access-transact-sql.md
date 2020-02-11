@@ -1,5 +1,5 @@
 ---
-title: sp_revoke_publication_access (TRANSACT-SQL) |Microsoft Docs
+title: sp_revoke_publication_access （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 84ed9e77-991f-4fa5-a21f-7c6bfec1b3e3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2724a62f6bf55941edbaa206728f9352e8fce5c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67941729"
 ---
-# <a name="sprevokepublicationaccess-transact-sql"></a>sp_revoke_publication_access (Transact-SQL)
+# <a name="sp_revoke_publication_access-transact-sql"></a>sp_revoke_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   從發行集存取清單中移除登入。 這個預存程序執行於發行集資料庫的發行者端。  
@@ -37,25 +37,25 @@ sp_revoke_publication_access [ @publication = ] 'publication' , [ @login = ] 'lo
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'` 是要存取的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'`這是要存取的發行集名稱。 *發行*集是**sysname**，沒有預設值。  
   
-`[ @login = ] 'login'` 這是登入識別碼。 *登入*已**sysname**，沒有預設值。  
+`[ @login = ] 'login'`這是登入識別碼。 *login*是**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_revoke_publication_access**用於快照式、 交易式和合併式複寫。  
+ **sp_revoke_publication_access**用於快照式、交易式和合併式複寫中。  
   
  **sp_revoke_publication_access**可以重複呼叫。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_revoke_publication_access**。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_revoke_publication_access**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
- [sp_help_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
- [保護發行者](../../relational-databases/replication/security/secure-the-publisher.md)   
+ [sp_grant_publication_access &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
+ [sp_help_publication_access &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
+ [保護髮行者](../../relational-databases/replication/security/secure-the-publisher.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

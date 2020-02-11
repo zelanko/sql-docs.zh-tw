@@ -11,19 +11,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6a983d8c4488cf9830a3dd7b63a6ad8d3fe1e5fc
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637626"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>UTF8 字串使用者自訂資料類型 (UDT)
   SQL Server 的 UTF8String 範例會示範使用者定義資料類型的實作。 此範例示範 UTF8 使用者自訂資料類型的實作，即擴充資料庫的類型系統來為 UTF8 編碼值提供儲存體。 此類型也會實作程式碼，在 Unicode 與 UTF8 之間轉換字串。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網站[免費取得 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網站[免費取得 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
   
 -   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員[網站](https://go.microsoft.com/fwlink/?linkid=62796)取得 AdventureWorks 資料庫  
   
@@ -78,7 +79,7 @@ ms.locfileid: "73637626"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-10. 將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 測試命令腳本複製到檔案中，並將它儲存為範例目錄中的 `test.sql`。  
+10. 將[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令腳本複製到檔案中，並將`test.sql`它儲存成範例目錄中的。  
   
 11. 使用下列命令來執行測試指令碼  
   
@@ -906,6 +907,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [通用語言執行平台 &#40;CLR&#41; 整合的使用案例和範例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Common Language Runtime &#40;CLR&#41; 整合的使用案例和範例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

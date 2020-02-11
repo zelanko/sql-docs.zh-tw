@@ -17,21 +17,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: decf503b7da6fb4e3f3a3846a714b1062255f1a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520373"
 ---
 # <a name="creating-the-web-service-proxy"></a>建立 Web 服務 Proxy
   用戶端與 Web 服務可以使用 SOAP 訊息來進行通訊，這會以 XML 來封裝輸入與輸出參數。 Proxy 類別會將參數對應至 XML 元素，然後透過網路傳送 SOAP 訊息。 以此方式，Proxy 類別可讓您免於在 SOAP 層級與 Web 服務通訊，並可讓您在任何支援 SOAP 與 Web 服務 Proxy 的開發環境中，叫用 Web 服務方法。  
   
- 有兩種方式可以將 Proxy 類別新增至使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的開發專案：使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的 WSDL 工具，以及在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中新增 Web 參考。 下列小節針對這個主題進行更詳細的討論。  
+ 有兩種方式可以使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]將 proxy 類別加入至您的開發專案：使用中的 WSDL 工具[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，以及在中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]加入 Web 參考。 下列小節針對這個主題進行更詳細的討論。  
   
 ## <a name="adding-the-proxy-using-the-wsdl-tool"></a>使用 WSDL 工具加入 Proxy  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 包含 Web 服務描述語言工具 (Wsdl.exe)，這可讓您在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 開發環境中產生要使用的 Web 服務 Proxy。 使用支援 Web 服務的語言 (目前 C# 與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) 來建立用戶端 Proxy 的最常見方式是使用 WSDL 工具。  
+ 
+  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 包含 Web 服務描述語言工具 (Wsdl.exe)，這可讓您在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 開發環境中產生要使用的 Web 服務 Proxy。 以支援 Web 服務的語言（目前的 c # 和[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]）建立用戶端 proxy 的最常見方式，是使用 WSDL 工具。  
   
- **使用 Wsdl.exe 將 Proxy 類別新增至專案**  
+ **使用 Wsdl.exe 將 proxy 類別加入至您的專案**  
   
 1.  從命令提示，使用 Wsdl.exe 來建立 Proxy 類別，(至少) 將 URL 指定為報表伺服器 Web 服務。  
   
@@ -66,17 +67,18 @@ ReportingService2010 service = new ReportingService2010();
  如需有關 Wsdl.exe 工具 (包括其完整的語法) 的詳細資訊，請參閱 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 文件集中的＜Web 服務描述語言工具＞。 如需 Web 服務 Proxy 的完整說明，請參閱 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 文件集中的＜建立 XML Web 服務 Proxy＞。  
   
 ## <a name="adding-the-proxy-using-a-web-reference-in-visual-studio"></a>使用 Visual Studio 中的 Web 參考來加入 Proxy  
- Web 參考可讓專案取用一個或多個 Web 服務。 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 可讓使用者遵循一些簡單的步驟，將 Web 服務參考加入專案中。  
+ Web 參考可讓專案取用一個或多個 Web 服務。 
+  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 可讓使用者遵循一些簡單的步驟，將 Web 服務參考加入專案中。  
   
- **將 Web 參考新增至專案**  
+ **若要將 Web 參考加入至專案**  
   
 1.  在**方案總管**中，選取將取用 Web 服務的專案。  
   
-2.  在 [專案]  功能表上，按一下 [新增 Web 參考]  。  
+2.  在 [專案]**** 功能表上，按一下 [新增 Web 參考]****。  
   
-     [新增 Web 參考]  對話方塊隨即開啟。  
+     [新增 Web 參考]**** 對話方塊隨即開啟。  
   
-3.  在 [URL]  欄位中，輸入報表伺服器 Web 服務的完整路徑。  
+3.  在 [URL]**** 欄位中，輸入報表伺服器 Web 服務的完整路徑。  
   
      報表伺服器 Web 服務的報表執行端點之簡化的 URL，可能如下所示：  
   
@@ -93,11 +95,11 @@ ReportingService2010 service = new ReportingService2010();
   
 4.  請確認您的專案可以使用報表伺服器 Web 服務，而且您有適當的權限可以存取報表伺服器。  
   
-5.  在 [Web 參考名稱]  欄位中，輸入在程式碼中將以程式設計方式存取報表伺服器 Web 服務所使用的名稱。  
+5.  在 [Web 參考名稱]**** 欄位中，輸入在程式碼中將以程式設計方式存取報表伺服器 Web 服務所使用的名稱。  
   
-6.  選取 [新增參考]  按鈕，在應用程式中建立對 Web 服務的參考。  
+6.  選取 [新增參考]**** 按鈕，在應用程式中建立對 Web 服務的參考。  
   
-     [Web 參考名稱]  欄位中所指定名稱的新參考，將出現於**方案總管**中使用中專案的 [Web 參考] 節點之下。  
+     [Web 參考名稱]**** 欄位中所指定名稱的新參考，將出現於**方案總管**中使用中專案的 [Web 參考] 節點之下。  
   
 7.  在**方案總管**中，展開 [Web 參考] 資料夾，以寫下在專案中項目的可用 Web 參考類別之命名空間。  
   
@@ -118,7 +120,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials
   
 ```  
   
- 您也可以將 **using** (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中為**匯入**) 指示詞新增報表伺服器 Web 服務參考。 如果您使用這個指示詞，就不需要完全符合命名空間的類型。 若要這樣做，請將下列程式碼加入檔案中：  
+ 您也可以將 **using** (在 ** 中為**匯入[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) 指示詞新增報表伺服器 Web 服務參考。 如果您使用這個指示詞，就不需要完全符合命名空間的類型。 若要這樣做，請將下列程式碼加入檔案中：  
   
 ```vb  
 Import myNamespace.myReferenceName  

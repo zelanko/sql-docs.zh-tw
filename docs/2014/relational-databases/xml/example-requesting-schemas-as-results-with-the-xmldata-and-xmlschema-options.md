@@ -1,5 +1,5 @@
 ---
-title: 範例使用 XMLDATA 和 XMLSCHEMA 選項來要求結構描述作為結果 | Microsoft Docs
+title: 範例：使用 XMLDATA 和 XMLSCHEMA 選項要求結構描述當作結果 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2a18dd84f5f0a83cc3c6f42bf664c178c1ba6b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637924"
 ---
-# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>範例使用 XMLDATA 和 XMLSCHEMA 選項來要求結構描述作為結果
+# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>範例：使用 XMLDATA 和 XMLSCHEMA 選項要求結構描述當做結果
   下列查詢會傳回用於描述文件結構的 XML-DATA 結構描述。  
   
 ## <a name="example"></a>範例  
@@ -52,7 +52,7 @@ GO
 ```  
   
 > [!NOTE]
->  <`Schema`> 會宣告為命名空間。 為了在不同 FOR XML 查詢中要求多個 XML-Data 結構描述時避免命名空間衝突，所以在每次執行查詢時都會變更命名空間識別碼 (此範例中為 `Schema1` )。 命名空間識別項組成**Schema_n_** 何處 **_n_** 是一個整數。  
+>  <`Schema`> 會宣告為命名空間。 為了在不同 FOR XML 查詢中要求多個 XML-Data 結構描述時避免命名空間衝突，所以在每次執行查詢時都會變更命名空間識別碼 (此範例中為 `Schema1` )。 命名空間識別碼是由**Schema_n_** 組成，其中**_n_** 是整數。  
   
  指定 `XMLSCHEMA` 選項，則可要求結果傳回 XSD 結構描述。  
   
@@ -124,6 +124,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 FOR XML 的 RAW 模式](use-raw-mode-with-for-xml.md)  
+ [搭配 FOR XML 使用 RAW 模式](use-raw-mode-with-for-xml.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b893480036b607dc1e6639ed9f50232520663879
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473015"
 ---
 # <a name="visual-database-tools-f1-help"></a>Visual Database Tools F1 說明
@@ -25,7 +25,7 @@ ms.locfileid: "62473015"
  若要存取對話方塊主題，請在對話方塊開啟並取得焦點時按 F1。 若要存取屬性視窗主題，請在 [屬性] 視窗中按一下，再按 F1。  
   
 ## <a name="see-also"></a>另請參閱  
- [設計資料表&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [設計資料表 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

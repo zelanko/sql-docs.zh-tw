@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 1e05ad220147e7f46bfaa66127fcc492aaeae6a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927181"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
@@ -56,7 +56,7 @@ WITH
  *route_name*  
  這是要變更的路由名稱。 您不可指定伺服器、資料庫和結構描述名稱。  
   
- 取代所有提及的  
+ WITH  
  導入定義所改變之路由的子句。  
   
  SERVICE_NAME **='** _service\_name_ **'**  
@@ -128,7 +128,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  自主資料庫無法使用這個選項。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  儲存路由的路由表是可利用 **sys.routes** 目錄檢視來讀取的中繼資料表。 您只能利用 CREATE ROUTE、ALTER ROUTE 和 DROP ROUTE 陳述式來更新路由表。  
   
  ALTER ROUTE 命令所未指定的子句會維持不變。 因此，您無法變更 (ALTER) 路由來指定路由不逾時、路由符合任何服務名稱，或是路由符合任何 Broker 執行個體。 若要變更路由的這些特性，您必須卸除現有的路由，再以新的資訊建立新的路由。  

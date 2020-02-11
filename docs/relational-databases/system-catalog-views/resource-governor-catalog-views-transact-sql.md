@@ -1,5 +1,5 @@
 ---
-title: Resource Governor 目錄檢視 (TRANSACT-SQL) |Microsoft Docs
+title: Resource Governor 目錄 Views （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2016
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bb0a38e0-4eb2-49bf-bba8-750fb706d06e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 20d8b284106bf3f8cfbcd7a69cf57d3fd59d7d82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018370"
 ---
 # <a name="resource-governor-catalog-views-transact-sql"></a>資源管理員目錄檢視 (Transact-SQL)
@@ -29,11 +29,11 @@ ms.locfileid: "68018370"
   
 |||  
 |-|-|  
-|[sys.resource_governor_configuration &#40;-SQL&AMP;&#41;&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-configuration-transact-sql.md)|[sys.resource_governor_resource_pools &#40;-SQL&AMP;&#41;&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)|  
-|[sys.resource_governor_external_resource_pools &#40;-SQL&AMP;&#41;&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)|[sys.resource_governor_workload_groups &#40;-SQL&AMP;&#41;&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)|  
+|[resource_governor_configuration &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-configuration-transact-sql.md)|[resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)|  
+|[resource_governor_external_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)|[resource_governor_workload_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [Resource Governor 相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)   
+ [Resource Governor 相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)   
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)  
   
   

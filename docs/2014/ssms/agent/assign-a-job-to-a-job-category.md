@@ -18,21 +18,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473199"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>將作業指派至作業類別目錄
-  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業指派到作業類別目錄。  
+  本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQL Server 管理物件， [!INCLUDE[tsql](../../includes/tsql-md.md)]在中將 Agent 作業指派至作業類別目錄。  
   
  作業類別目錄可幫助您組織作業，以便於篩選與分組。 例如，您可以將所有的資料庫備份作業整理在資料庫維護類別中。 您可以將作業指派到內建的作業類別目錄，您也可以建立使用者自訂的作業類別目錄，然後將作業指派給它。  
   
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
   
   
@@ -47,9 +47,9 @@ ms.locfileid: "62473199"
   
 3.  按一下加號展開 **[作業]** 資料夾。  
   
-4.  以滑鼠右鍵按一下要編輯的作業，然後選取 [屬性]  。  
+4.  以滑鼠右鍵按一下要編輯的作業，然後選取 [屬性]****。  
   
-5.  在 [作業屬性 - <作業名稱>]   對話方塊，從 [類別目錄]  清單中選取您要指派給作業的作業類別目錄。  
+5.  在 [**作業屬性-**_job_name_ ] 對話方塊的 [**類別目錄**] 清單中，選取您要指派給作業的作業類別目錄。  
   
 6.  按一下 [確定]  。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "62473199"
     GO  
     ```  
   
- 如需詳細資訊，請參閱 < [sp_update_job &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)。  
+ 如需詳細資訊，請參閱[sp_update_job &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)。  
   
   
   
-##  <a name="SMO"></a> 使用 SQL Server 管理物件  
+##  <a name="SMO"></a>使用 SQL Server 管理物件  
  **若要將作業指派至作業類別目錄**  
   
  透過所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell，使用 `JobCategory` 類別。  

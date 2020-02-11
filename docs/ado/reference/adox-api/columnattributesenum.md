@@ -16,19 +16,19 @@ ms.assetid: cd0db27a-1080-40af-a491-3893e7bef9cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc20ff68e90d504a6eed69d4845cacc0e3e687be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966886"
 ---
 # <a name="columnattributesenum"></a>ColumnAttributesEnum
-指定的特性[資料行](../../../ado/reference/adox-api/column-object-adox.md)。  
+指定資料[行](../../../ado/reference/adox-api/column-object-adox.md)的特性。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adColFixed**|1|資料行是固定的長度。|  
-|**adColNullable**|2|資料行可能包含 null 值。|  
+|**adColFixed**|1|資料行是固定長度。|  
+|**adColNullable**|2|此資料行可能包含 null 值。|  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Attributes 屬性 (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)

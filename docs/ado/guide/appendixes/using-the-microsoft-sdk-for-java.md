@@ -1,5 +1,5 @@
 ---
-title: 使用 Microsoft SDK for Java |Microsoft Docs
+title: 使用適用于 JAVA 的 Microsoft SDK |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,40 +14,40 @@ ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0e6c5f2eb5ad792141e77122ff9e132d97f62ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926461"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>使用 Microsoft SDK for Java
 
 > [!IMPORTANT]
-> Microsoft 在 2004 年 1 月停止支援的 Visual J + +。
+> Microsoft 已于2004年1月終止支援 Visual j + +。
 
-Microsoft SDK for Java 是 Microsoft Internet Explorer 環境的開發人員套件。 工具、 資訊和範例可協助您開發的 Java 程式及 JDK 1.1 和 Microsoft Win32 虛擬機器 (Microsoft VM) 為基礎的小程式。 Microsoft SDK for Java 未繫結至 Microsoft Visual J + +。 若要下載此 SDK，請按一下這裡。  
+Microsoft SDK for JAVA 是 Microsoft Internet Explorer 環境的開發人員套件。 提供工具、資訊和範例，以協助您根據 JDK 1.1 和 Microsoft Win32 虛擬機器（Microsoft VM）開發 JAVA 程式和 applet。 Microsoft SDK for JAVA 並未系結至 Microsoft Visual j + +。 若要下載此 SDK，請按一下這裡。  
   
- Jactivex.exe 公用程式會從類型程式庫產生類別，但只能在命令列上叫用。 這項功能並未整合到 Visual J + + 開發環境。 不同於 Java 型別程式庫精靈所產生類別，您可以逐步執行由 SDK 所建立的類別包裝函式。 這是適用於偵錯您的程式碼如何使用 ADO 包裝函式類別。  
+ Jactivex 公用程式會從類型程式庫產生類別，但只能在命令列上叫用。 這項功能並未與 Visual c + + 開發環境整合。 不同于 JAVA 類型程式庫 Wizard 所產生的類別，您可以逐步執行 SDK 所建立的類別包裝函式。 這適用于偵錯工具代碼使用 ADO 包裝函式類別的方式。  
   
- 這項機制會讀取 ADO 型別程式庫，並產生您可以具現化您的應用程式內的類別。 在下列位置產生這些類別： \\< windows 目錄\>\Java\trustlib\msado15。  
+ 此機制會讀取 ADO 類型程式庫，並產生您可以在應用程式中具現化的類別。 它會在下列位置產生這些類別： \\<windows 目錄\>\JAVA\trustlib\msado15。  
   
- 在 Java 中使用 Microsoft SDK for Java 建立 ADO 應用程式是基本上類似，從來源程式碼的觀點來看使用 Java 型別程式庫精靈。 範例程式碼，請參閱[ADO Java 類別包裝函式](../../../ado/guide/appendixes/ado-java-class-wrappers.md)。 您如何一開始，如下列步驟所示產生包裝函式類別位於唯一的真正差異。  
+ 使用適用于 JAVA 的 Microsoft SDK，在 JAVA 中建立 ADO 應用程式基本上完全相同，從原始程式碼的觀點，到使用 JAVA 類型程式庫 Wizard。 如需範例程式碼，請參閱[ADO JAVA 類別包裝](../../../ado/guide/appendixes/ado-java-class-wrappers.md)函式。 唯一的真正差異在於，您會在第一個位置產生包裝函式類別，如下列步驟所示。  
   
-### <a name="to-create-an-ado-project-with-the-microsoft-sdk-for-java"></a>若要使用 Microsoft SDK for Java 建立 ADO 專案  
+### <a name="to-create-an-ado-project-with-the-microsoft-sdk-for-java"></a>若要使用 Microsoft SDK for JAVA 建立 ADO 專案  
   
-1.  在命令提示字元執行下列命令。 您必須設定要包含 Microsoft SDK for Java 的 Bin 目錄的路徑，或從該位置執行命令。 一般來說，Microsoft SDK for Java 被安裝在與 Visual Studio 相同的位置。 這是單一命令陳述式。  
+1.  在命令提示字元中執行下列命令。 您必須設定路徑以包含 Microsoft SDK for JAVA Bin 目錄，或從該位置執行命令。 一般來說，Microsoft SDK for JAVA 會安裝在與 Visual Studio 相同的位置。 這是單一命令語句。  
   
     ```java
     \<path to DevStudio>\<path to Java SDK>\bin\JactiveX.exe /javatlb "C:\program files\common files\system\ado\msado15.dll"  
     ```  
   
-2.  執行下列命令來編譯產生的類別。 /G:t 切換開啟偵錯符號的產生，因此您可以追蹤程式。Java 的符號。 表示發行組建中移除它。  
+2.  執行下列命令來編譯產生的類別。 /G： t 參數會開啟產生的偵錯工具符號，讓您可以追蹤至。JAVA 符號。 將它移除發行組建。  
   
     ```java
     jvc /g:t c:\<windows>\Java\trustlib\msado15\*.Java  
     ```  
   
-3.  若要使用這些檔案，開啟您的專案中 Visual J + +。 從**專案**功能表上，選擇**加入至專案**。 選取 **檔案**，並將所有加。產生 trustlib\msado15 目錄至您的專案中的 JAVA 檔案。  
+3.  若要使用這些檔案，請在 Visual j + + 中開啟您的專案。 從 [**專案**] 功能表中，選擇 [**加入至專案**]。 選取 **[** 檔案]，然後新增所有。在 trustlib\msado15 目錄中為您的專案產生的 JAVA 檔案。  
   
 ## <a name="see-also"></a>另請參閱  
  [ADO Java 類別包裝函式](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   

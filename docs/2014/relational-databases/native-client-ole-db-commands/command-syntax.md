@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00ab769ee2051edc499d586ab7d5ee1fa47dd854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468215"
 ---
 # <a name="command-syntax"></a>命令語法
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會識別 DBGUID_SQL 巨集所指定的命令語法。 針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，此規範表示 ODBC SQL、 ISO 的混合物和[!INCLUDE[tsql](../../includes/tsql-md.md)]是有效的語法。 例如，下列 SQL 陳述式會使用 ODBC SQL 逸出序列來指定 LCASE 字串函數：  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會辨識 DBGUID_SQL 宏指定的命令語法。 對於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，此規範表示 ODBC SQL、ISO 和[!INCLUDE[tsql](../../includes/tsql-md.md)]的混合物是有效的語法。 例如，下列 SQL 陳述式會使用 ODBC SQL 逸出序列來指定 LCASE 字串函數：  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  
@@ -35,10 +35,10 @@ SELECT customerid={fn LCASE(CustomerID)} FROM Customers
 SELECT customerid=LOWER(CustomerID) FROM Customers  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者處理任一種陳述式成功時指定為命令的文字時，才形式。  
+ 當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定為命令的文字時，Native Client OLE DB 提供者會成功處理任一種語句的形式。  
   
 ## <a name="stored-procedures"></a>預存程序  
- 執行時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預存程序使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者命令，命令文字中使用 ODBC CALL 逸出序列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會使用的遠端程序呼叫機制[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來最佳化命令處理。 例如，下列 ODBC SQL 陳述式是比 [!INCLUDE[tsql](../../includes/tsql-md.md)] 形式慣用的命令文字：  
+ 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 提供者命令來執行預存程式時，請使用命令文字中的 ODBC 呼叫 escape 順序。 接著[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，Native Client OLE DB 提供者會使用的遠端程序呼叫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機制來優化命令處理。 例如，下列 ODBC SQL 陳述式是比 [!INCLUDE[tsql](../../includes/tsql-md.md)] 形式慣用的命令文字：  
   
 -   ODBC SQL  
   

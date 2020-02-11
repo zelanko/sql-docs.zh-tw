@@ -18,10 +18,10 @@ ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d6952d245dfc9083c7cfa6e6d36ad991ffd24654
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72909133"
 ---
 # <a name="sp_fulltext_semantic_unregister_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "72909133"
   
  這個陳述式不會卸離資料庫或從檔案系統移除實體資料庫檔案。 在取消註冊資料庫之後，您可以卸離資料庫並且刪除實體資料庫檔案。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [transact-sql 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,23 +60,23 @@ GO
 
  如需詳細資訊，請參閱 [安裝及設定語意搜尋](../../relational-databases/search/install-and-configure-semantic-search.md)。  
   
-## <a name="metadata"></a>[中繼資料]  
- 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例上安裝之語意語言統計資料資料庫的詳細資訊，請查詢目錄[fulltext_semantic_language_statistics_database &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
+## <a name="metadata"></a>中繼資料  
+ 如需有關在實例上安裝之語意語言統計資料資料庫的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]詳細資訊，請查詢目錄檢視[Sys.databases fulltext_semantic_language_statistics_database &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
  需要 CONTROL SERVER 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例顯示如何藉由呼叫**sp_fulltext_semantic_unregister_language_statistics_db**來取消註冊語意語言統計資料資料庫。  
+ 下列範例顯示如何藉由呼叫**sp_fulltext_semantic_unregister_language_statistics_db**，取消註冊語意語言統計資料資料庫。  
   
 ```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安裝及設定語意搜尋](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

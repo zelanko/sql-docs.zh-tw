@@ -1,5 +1,5 @@
 ---
-title: StayInSync 屬性範例 (VB) |Microsoft Docs
+title: StayInSync 屬性範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a97ff4191aa065ece5af53087295e13885209d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930810"
 ---
 # <a name="stayinsync-property-example-vb"></a>StayInSync 屬性範例 (VB)
-此範例示範如何[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)屬性可協助存取的資料列，以階層[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+這個範例會示範[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)屬性如何協助存取階層式[記錄集中](../../../ado/reference/ado-api/recordset-object-ado.md)的資料列。  
   
- 外部迴圈會顯示每位作者的名字和姓氏、 狀態和識別。 附加**資料錄集**每個資料列擷取自[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)集合並且會自動指派給**rstTitleAuthor**由**StayInSync**屬性時的父代**資料錄集**移至新的資料列。 內部迴圈中附加資料錄集顯示每個資料列的四個欄位。  
+ 外部迴圈會顯示每位作者的名字和姓氏、狀態和識別。 每個資料列的附加**記錄集會**從[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合中抓取，每當父**記錄集**移至新的資料列時， **StayInSync**屬性就會自動指派給**rstTitleAuthor** 。 內部迴圈會顯示附加之記錄集中每個資料列的四個欄位。  
   
 ```  
 'BeginStayInSyncVB  
@@ -90,6 +90,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Fields 集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Fields 集合（ADO）](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [StayInSync 屬性](../../../ado/reference/ado-api/stayinsync-property.md)

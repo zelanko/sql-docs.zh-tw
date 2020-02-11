@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea50de3955ab152cbd92d5fd50ef8b2281a67eb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62518648"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>將裝置資訊設定傳遞至轉譯延伸模組
@@ -42,7 +42,7 @@ ms.locfileid: "62518648"
 </DeviceInfo>  
 ```  
   
- 當報表轉譯為 HTML 片段時，報表的內容會包含在 TABLE 元素內，而不會使用 HTML 或 BODY 元素。 您可以使用 HTML 片段來將報表整合到現有的 HTML 文件中。 如需有關 HTML 輸出的裝置資訊設定的詳細資訊，請參閱＜ [HTML Device Information Settings](../../html-device-information-settings.md)＞。  
+ 當報表轉譯為 HTML 片段時，報表的內容會包含在 TABLE 元素內，而不會使用 HTML 或 BODY 元素。 您可以使用 HTML 片段來將報表整合到現有的 HTML 文件中。 如需 HTML 輸出之裝置資訊設定的詳細資訊，請參閱 [HTML 裝置資訊設定](../../html-device-information-settings.md)。  
   
 ## <a name="passing-device-information-using-url-access"></a>使用 URL 存取傳遞裝置資訊  
  您也可以透過 URL 存取來傳遞裝置資訊設定。 裝置資訊設定會當做 URL 參數傳遞。 下列的 URL 存取字串可以傳遞至報表伺服器以產生轉譯的報表 (沒有 HTML 檢視器工具列)。  

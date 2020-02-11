@@ -15,17 +15,17 @@ ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 92b978e3019e6dfbabcf4421f53a111c7d520112
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952132"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Microsoft Visual Basic 中的 ADOX 程式碼範例
-這些主題提供可協助您了解如何使用 ADOX 程式碼範例。 使用 Microsoft Visual Basic 撰寫所有程式碼範例。  
+這些主題提供範例程式碼，可協助您瞭解如何使用 ADOX。 所有程式碼範例都是使用 Microsoft Visual Basic 來撰寫。  
   
 > [!NOTE]
->  您的程式碼編輯器中，貼上整個程式碼範例中的，從以 End Sub，子。 如果您使用部分的範例，或遺失段落格式時，此範例可能無法正確執行。  
+>  將完整的程式碼範例（從 Sub 到 End Sub）貼入程式碼編輯器中。 如果您使用部分範例，或段落格式遺失，則此範例可能無法正確執行。  
   
 ## <a name="methods"></a>方法  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67952132"
   
 -   [Indexes Append 方法範例 (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)  
   
--   [Keys Append 方法、 索引鍵的型別、 RelatedColumn、 RelatedTable 和 UpdateRule 屬性範例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
+-   [Keys Append 方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule 屬性範例（VB）](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
   
 -   [Procedures Append 方法範例 (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)  
   
@@ -67,9 +67,9 @@ ms.locfileid: "67952132"
   
 -   [Command 和 CommandText 屬性範例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)  
   
--   [Command 屬性，參數集合範例 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)  
+-   [Command 屬性、Parameters 集合範例（VB）](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)  
   
--   [CommandText 屬性，檢視集合範例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)  
+-   [CommandText 屬性，Views 集合範例（VB）](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)  
   
 -   [DateCreated 和 DateModified 屬性範例 (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)  
   
@@ -79,9 +79,9 @@ ms.locfileid: "67952132"
   
 -   [IndexNulls 屬性範例 (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)  
   
--   [金鑰類型、 RelatedColumn、 RelatedTable，和 UpdateRule 屬性、 索引鍵 Append 方法範例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
+-   [金鑰類型、RelatedColumn、RelatedTable 和 UpdateRule 屬性、索引鍵附加方法範例（VB）](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
   
--   [Name 屬性、 Columns 和 Tables Append 方法範例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)  
+-   [Name 屬性、資料行和資料表附加方法範例（VB）](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)  
   
 -   [NumericScale 和 Precision 屬性範例 (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)  
   
@@ -91,7 +91,7 @@ ms.locfileid: "67952132"
   
 -   [SortOrder 屬性範例 (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)  
   
--   [資料表類型 Connection Close 方法、 屬性範例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)  
+-   [資料表類型屬性，連接關閉方法，範例（VB）](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)  
   
 ## <a name="collections"></a>集合  
   

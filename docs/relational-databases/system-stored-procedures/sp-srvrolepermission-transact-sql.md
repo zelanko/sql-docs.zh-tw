@@ -1,5 +1,5 @@
 ---
-title: sp_srvrolepermission (TRANSACT-SQL) |Microsoft Docs
+title: sp_srvrolepermission （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6613c4e94ce8c802e45fe003ac73e51b3f38072b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032816"
 ---
-# <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
+# <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   顯示固定伺服器角色的權限。  
@@ -42,11 +42,11 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @srvrolename = ] 'role'` 是為其傳回的權限的固定的伺服器角色的名稱。 *角色*已**sysname**，預設值是 NULL。 如果未指定角色，則會傳回所有固定伺服器角色的權限。 *角色*可以有下列值之一。  
+`[ @srvrolename = ] 'role'`這是傳回許可權之固定伺服器角色的名稱。 *role*是**sysname**，預設值是 Null。 如果未指定角色，則會傳回所有固定伺服器角色的權限。 *角色*可以有下列其中一個值。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**sysadmin**|系統管理員|  
+|**系統管理員 (sysadmin)**|系統管理員|  
 |**securityadmin**|安全性管理員|  
 |**serveradmin**|伺服器管理員|  
 |**setupadmin**|安裝管理員|  
@@ -63,14 +63,14 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**ServerRole**|**sysname**|固定伺服器角色的名稱|  
-|**權限**|**sysname**|與相關聯的權限**ServerRole**|  
+|**權限**|**sysname**|與**ServerRole**相關聯的許可權|  
   
 ## <a name="remarks"></a>備註  
- 列出的權限包括可以執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以及固定伺服器角色成員可以執行的其他特殊活動。 若要顯示固定的伺服器角色的清單，請執行**sp_helpsrvrole**。  
+ 列出的權限包括可以執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，以及固定伺服器角色成員可以執行的其他特殊活動。 若要顯示固定伺服器角色的清單，請執行**sp_helpsrvrole**。  
   
- **Sysadmin**固定的伺服器角色擁有的所有其他固定的伺服器角色的權限。  
+ **系統管理員（sysadmin** ）固定伺服器角色具有所有其他固定伺服器角色的許可權。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  
@@ -82,10 +82,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_dropsrvrolemember &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [sp_helpsrvrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性預存程式](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
+ [sp_dropsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
+ [sp_helpsrvrole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
