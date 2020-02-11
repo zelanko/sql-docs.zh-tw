@@ -15,14 +15,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b68531b962b10785927c6212b2483f2d9c1d7d3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62698823"
 ---
 # <a name="create-clr-triggers"></a>建立 CLR 觸發程序
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，您可以在內部建立資料庫物件，這些物件是透過使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 建立的組件所撰寫的。 可以使用 CLR 所提供之豐富程式設計模型的資料庫物件，包括 DML 觸發程序、DDL 觸發程序、預存程序、函數、彙總函式以及類型。  
+  您可以在內[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]建立資料庫物件，其在中是以 common language runtime [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] （CLR）所建立的元件進行程式設計。 可以使用 CLR 所提供之豐富程式設計模型的資料庫物件，包括 DML 觸發程序、DDL 觸發程序、預存程序、函數、彙總函式以及類型。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立 CLR 觸發程序 (DML 或 DDL) 包含下列步驟：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62698823"
 >  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中部署 SQL Server 專案，便會在已指定給專案的資料庫中註冊組件。 部署專案也會在資料庫中，為所有以 `SqlTrigger` 屬性註解的方法建立 CLR 觸發程序。 如需詳細資訊，請參閱 [Deploying CLR Database Objects](../clr-integration/deploying-clr-database-objects.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 CLR 程式碼的功能預設為關閉。 您可以建立、修改和卸除參考 Managed 程式碼模組的物件，但是除非使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_configure (Transact-SQL) [來啟用](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) clr enabled 選項 [，否則在](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)中將無法執行這些參考。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 CLR 程式碼的功能預設為關閉。 您可以建立、改變和卸載參考 managed 程式碼模組的資料庫物件，但是除非使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [sp_configure （transact-sql）](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)來啟用[clr enabled 選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)，否則不會在中執行這些參考。  
   
  **若要建立、修改或卸除組件**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62698823"
   
 -   [DROP ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-assembly-transact-sql)  
   
- **若要建立 CLR 觸發程序**  
+ **若要建立 CLR 觸發程式**  
   
 -   [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)  
   

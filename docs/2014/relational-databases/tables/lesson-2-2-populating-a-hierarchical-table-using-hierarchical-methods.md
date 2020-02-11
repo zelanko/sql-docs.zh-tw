@@ -15,28 +15,31 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ec81ae3a078846ad9288fe75eab9fe30d547a4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110055"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>使用階層式方法擴展階層式資料表
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 行銷部門有 8 名員工。 員工層級如下：  
+  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]有8名員工在行銷部門工作。 員工層級如下：  
   
- **David**( **EmployeeID** 6) 是行銷經理。 **David**管理三名行銷專員：  
+ **David**，**員工**6 是行銷經理。 
+  **David**管理三名行銷專員：  
   
--   **Sariya**( **EmployeeID** 46)  
+-   **Sariya**，**員工**46  
   
--   **John**( **EmployeeID** 271)  
+-   **John**，**員工**271  
   
--   **Jill**( **EmployeeID** 119)  
+-   **Jill**，**員工**119  
   
- **Sariya** 管理行銷助理**Wanida** ( **EmployeeID**269)， **John** 管理行銷助理**Mary** ( **EmployeeID**272)。  
+ 
+  **Sariya** 管理行銷助理**Wanida** ( **EmployeeID**269)， **John** 管理行銷助理**Mary** ( **EmployeeID**272)。  
   
 ### <a name="to-insert-the-root-of-the-hierarchy-tree"></a>插入階層樹狀結構的根目錄  
   
-1.  下列範例會將行銷經理 **David** 插入階層根目錄的資料表中。 **OrdLevel** 資料行為計算資料行。 因此，不是 INSERT 陳述式的一部分。 第一筆記錄使用 [GetRoot()](/sql/t-sql/data-types/getroot-database-engine) 方法，將這個第一筆記錄擴展為階層的根目錄。  
+1.  下列範例會將行銷經理 **David** 插入階層根目錄的資料表中。 
+  **OrdLevel** 資料行為計算資料行。 因此，不是 INSERT 陳述式的一部分。 第一筆記錄使用 [GetRoot()](/sql/t-sql/data-types/getroot-database-engine) 方法，將這個第一筆記錄擴展為階層的根目錄。  
   
     ```  
     INSERT HumanResources.EmployeeOrg (OrgNode, EmployeeID, EmpName, Title)  
@@ -64,7 +67,8 @@ ms.locfileid: "66110055"
   
 ### <a name="to-insert-a-subordinate-employee"></a>插入從屬員工  
   
-1.  **David** 管理 **Sariya**。 若要插入**Sariya**節點，您必須建立適當**OrgNode**資料類型的值`hierarchyid`。 下列程式碼會建立 `hierarchyid` 資料類型的變數，並使用資料表的 OrgNode 根目錄值擴展。 然後，搭配 [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) 方法使用該變數來插入從屬節點的資料列。 `GetDescendant` 會採用兩個引數。 檢閱下列引數值的選項：  
+1.  **Sariya**報告至**David**。 若要插入**Sariya 的**節點，您必須建立適當**** 的資料類型`hierarchyid`OrgNode 值。 下列程式碼會建立 `hierarchyid` 資料類型的變數，並使用資料表的 OrgNode 根目錄值擴展。 然後，搭配 [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) 方法使用該變數來插入從屬節點的資料列。 
+  `GetDescendant` 會採用兩個引數。 檢閱下列引數值的選項：  
   
     -   如果父系為 NULL， `GetDescendant` 會傳回 NULL。  
   

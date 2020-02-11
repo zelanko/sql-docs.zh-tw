@@ -15,33 +15,33 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b7c992f8b33e2eb96b0e6ea7eec1f58beaf8aefd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62511823"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Unicode 資料和伺服器字碼頁
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]請改用 CLR 整合。  
   
  擴充預存程序 API 會針對 Unicode 資料而啟用，但不會針對 Unicode 中繼資料啟用。 #define Unicode 指示詞在擴充預存程序 API 上沒有任何效果。  
   
- 所有由擴充預存程序 API 所傳回的或藉由擴充預存程序應用程式而提供給擴充預存程序 API 的中繼資料，都假設位在伺服器多位元組字碼頁中。 擴充預存程序 API 伺服器應用程式的預設字碼頁為的電腦上執行應用程式，可以藉由呼叫取得的 ANSI 字碼頁**srv_pfield**欄位參數設定為 SRV_SPROC_CODEPAGE。  
+ 所有由擴充預存程序 API 所傳回的或藉由擴充預存程序應用程式而提供給擴充預存程序 API 的中繼資料，都假設位在伺服器多位元組字碼頁中。 擴充預存程式 API 伺服器應用程式的預設字碼頁是執行應用程式之電腦的 ANSI 字碼頁，可以藉由呼叫**srv_pfield**並將 field 參數設定為 SRV_SPROC_CODEPAGE 來取得。  
   
  如果擴充預存程序 API 應用程式已啟用 Unicode，則您必須先將 Unicode 中繼資料的資料行名稱、錯誤訊息等等轉換為多位元組資料，才能將此資料傳遞給擴充預存程序 API。  
   
 ## <a name="example"></a>範例  
  下列擴充預存程序提供所討論的 Unicode 轉換的範例。 請注意：  
   
--   資料行的資料會以 Unicode 資料，以傳遞**srv_describe**因為資料行描述為 srvnvarchar。  
+-   資料行會以 Unicode 資料的形式傳遞至**srv_describe** ，因為 SRVNVARCHAR 描述該資料行。  
   
--   資料行名稱中繼資料會傳遞至**srv_describe**以多位元組資料。  
+-   資料行名稱中繼資料會傳遞至**srv_describe**做為多位元組資料。  
   
-     擴充預存程序呼叫**srv_pfield**欄位參數設定為 SRV_SPROC_CODEPAGE 取得的多位元組字碼頁[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+     擴充預存程式會呼叫**srv_pfield**並將 field 參數設定為 SRV_SPROC_CODEPAGE，以取得的多位元組[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字碼頁。  
   
--   錯誤訊息會傳遞給**srv_sendmsg**以多位元組資料。  
+-   錯誤訊息會以多位元組資料的形式傳遞至**srv_sendmsg** 。  
   
     ```  
     __declspec(dllexport) RETCODE proc1 (SRV_PROC *srvproc)  
@@ -150,6 +150,6 @@ ms.locfileid: "62511823"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [srv_wsendmsg&#40;擴充預存程序 API&#41;](../extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
+ [srv_wsendmsg &#40;擴充預存程式 API&#41;](../extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
   
   

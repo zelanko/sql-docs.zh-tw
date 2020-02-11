@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f5aeb8a5eda8e4e49e478cbc53cd0ad90e3cc890
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095471"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB 標頭和版本資訊
@@ -45,7 +45,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions]  
 ```  
   
- 在此機碼下會列出機碼清單，其中每個機碼各代表電腦上已安裝的每個 LocalDB 版本。 這些索引鍵的每一個都是以 LocalDB 版本號碼命名，格式為 *\<主要版本 >* 。 *\<次要版本 >* （例如，[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的機碼名稱為13.0）。 在每個版本機碼下會列出 `InstanceAPIPath` 名稱/值組，定義隨該版本安裝之 SQLUserInstance.dll 檔案的完整路徑。 下列範例顯示已安裝 LocalDB 版本11.0 和13.0 之電腦的登錄專案：  
+ 在此機碼下會列出機碼清單，其中每個機碼各代表電腦上已安裝的每個 LocalDB 版本。 這些索引鍵的每一個都是以 [ * \<主要版本>*] 格式的 LocalDB 版本號碼來命名。次要版本>（例如，名為13.0 的金鑰[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ）。 * \< * 在每個版本機碼下會列出 `InstanceAPIPath` 名稱/值組，定義隨該版本安裝之 SQLUserInstance.dll 檔案的完整路徑。 下列範例顯示已安裝 LocalDB 版本11.0 和13.0 之電腦的登錄專案：  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions\13.0]  
@@ -54,7 +54,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
 "InstanceAPIPath"="C:\\Program Files\\Microsoft SQL Server\\130\\LocalDB\\Binn\\SqlUserInstance.dll"]  
 ```  
   
- 用戶端提供者必須在所有已安裝的版本之間尋找最新版本，並從相關聯的 `InstanceAPIPath` 值載入**Sqluserinstance.dll** DLL 檔案。  
+ 用戶端提供者必須在所有已安裝的版本之間尋找最新**** 版本，並從相關聯`InstanceAPIPath`的值載入 sqluserinstance.dll DLL 檔案。  
   
 ### <a name="wow64-mode-on-64-bit-windows"></a>64 位元 Windows 上的 WOW64 模式  
  LocalDB 的 64 位元安裝包含一組額外的登錄機碼，可讓在 Windows-32-on-Windows-64 (WOW64) 模式下執行的 32 位元應用程式使用 LocalDB。 具體而言，在 64 位元 Windows 上，LocalDB MSI 會建立下列登錄機碼：  
@@ -67,7 +67,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
   
 ```  
   
- 64-讀取 `Installed Versions` 金鑰的程式會看到指向64位版本的**Sqluserinstance.dll** DLL 的值，而 32-bit 程式（在 WOW64 模式的64位 Windows 上執行）會自動重新導向至位於 `Wow6432Node` hive 底下的 `Installed Versions` 機碼。 此機碼包含指向32位版本之**Sqluserinstance.dll** DLL 的值。  
+ 64- `Installed Versions`讀取金鑰的程式會看到指向64位版本的**sqluserinstance.dll** DLL 的值，而 32-bit 程式（在以 WOW64 模式在64位 Windows 上執行`Installed Versions` ）會自動重新導向至位於`Wow6432Node` hive 底下的機碼。 此機碼包含指向32位版本之**Sqluserinstance.dll** DLL 的值。  
   
 ## <a name="using-localdb_define_proxy_functions"></a>使用 LOCALDB_DEFINE_PROXY_FUNCTIONS  
  LocalDB 實例 API 會定義名為 LOCALDB_DEFINE_PROXY_FUNCTIONS 的常數，以自動探索和載入**Sqluserinstance.dll** DLL。  

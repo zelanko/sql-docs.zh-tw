@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f76ba993508807e57e73d5e53ea25a4cbe382529
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727436"
 ---
 # <a name="write-enabled-dimensions"></a>可寫入維度
@@ -28,9 +28,10 @@ ms.locfileid: "62727436"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
- 維度中的資料通常是唯讀的； 但是在某些狀況下，您可能會希望維度是可寫入的。 在  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，寫入-維度讓商務使用者能夠修改維度的內容，並了解變更的立即影響維度的階層。 以單一資料表為根據的任何維度皆可寫入； 在可寫入維度中，商務使用者和管理員可以變更、移動、加入及刪除此維度中的屬性成員。 這些更新指*維度回寫*。  
+ 維度中的資料通常是唯讀的； 但是在某些狀況下，您可能會希望維度是可寫入的。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可寫入維度讓商務使用者能夠修改維度的內容，並查看變更對維度階層的立即影響。 以單一資料表為根據的任何維度皆可寫入； 在可寫入維度中，商務使用者和管理員可以變更、移動、加入及刪除此維度中的屬性成員。 這些更新統稱為*維度回寫*。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援所有維度屬性上的維度回寫，並修改維度的任何成員。 如果是可寫入的 Cube 或資料分割，會將更新儲存在與 Cube 來源資料表分開的回寫資料表中。 不過，針對可寫入維度，更新會直接記錄在維度的資料表中。 而且，如果可寫入維度是包含在有多個資料分割的 Cube 中，其中部分或全部資料來源具有維度資料表的副本，則在回寫程序中只更新原始維度資料表。  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援所有維度屬性上的維度回寫，並修改維度的任何成員。 如果是可寫入的 Cube 或資料分割，會將更新儲存在與 Cube 來源資料表分開的回寫資料表中。 不過，針對可寫入維度，更新會直接記錄在維度的資料表中。 而且，如果可寫入維度是包含在有多個資料分割的 Cube 中，其中部分或全部資料來源具有維度資料表的副本，則在回寫程序中只更新原始維度資料表。  
   
  可寫入維度和可寫入 Cube 的功能不同，但可互補。 可寫入維度讓商務使用者有能力更新成員，而可寫入 Cube 則讓他們有能力更新資料格值。 雖然這兩個功能是互補的，但您並不需要將二者組合使用。 維度不一定要包含在 Cube 中，照樣可發生維度回寫。 可寫入維度也可包括於非可寫入的 Cube 中。 使用不同的程序來讓維度和 Cube 可寫入，並維護它們的安全性。  
   
@@ -61,7 +62,7 @@ ms.locfileid: "62727436"
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫維度屬性](database-dimension-properties.md)   
- [可寫入的資料分割](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [維度 &#40;Analysis Services-多維度資料 &#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [可寫入的磁碟分割](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [維度 &#40;Analysis Services 多維資料&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

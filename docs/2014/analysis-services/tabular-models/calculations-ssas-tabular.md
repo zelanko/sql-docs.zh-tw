@@ -1,5 +1,5 @@
 ---
-title: 計算 (SSAS 表格式) |Microsoft Docs
+title: 計算（SSAS 表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9412d01809402dfa23c116c93c80e0ab32bee747
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284910"
 ---
 # <a name="calculations-ssas-tabular"></a>計算 (SSAS 表格式)
@@ -24,9 +24,9 @@ ms.locfileid: "67284910"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[了解表格式模型中的 DAX &#40;SSAS 表格式&#41;](understanding-dax-in-tabular-models-ssas-tabular.md)|描述 Data Analysis Expressions (DAX) 公式語言，可用來在表格式模型中建立導出資料行、量值和資料列篩選的計算。|  
-|[在 DirectQuery 模式中的公式相容性](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|描述差異、列出 DirectQuery 模式不支援的函數，並且列出受支援但可能會傳回不同結果的函數。|  
-|[Data Analysis Expressions &#40;DAX&#41;參考](/dax/data-analysis-expressions-dax-reference)|本節提供 DAX 語法、運算子和函數的詳細描述。|  
+|[瞭解表格式模型中的 DAX &#40;SSAS 表格式&#41;](understanding-dax-in-tabular-models-ssas-tabular.md)|描述 Data Analysis Expressions (DAX) 公式語言，可用來在表格式模型中建立導出資料行、量值和資料列篩選的計算。|  
+|[DirectQuery 模式中的公式相容性](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|描述差異、列出 DirectQuery 模式不支援的函數，並且列出受支援但可能會傳回不同結果的函數。|  
+|[&#40;DAX&#41; 參考的資料分析運算式](/dax/data-analysis-expressions-dax-reference)|本節提供 DAX 語法、運算子和函數的詳細描述。|  
   
 > [!NOTE]  
 >  本節中不提供建立計算的逐步工作。 由於計算是在導出資料行、量值和資料列篩選 (依角色) 中指定，因此在與這些功能相關的工作中，會提供建立 DAX 公式的指示。 如需詳細資訊，請參閱[建立導出資料行 &#40;SSAS 表格式&#41;](ssas-calculated-columns-create-a-calculated-column.md)、[建立及管理量值 &#40;SSAS 表格式&#41;](measures-ssas-tabular.md) 和[建立及管理角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)。  
