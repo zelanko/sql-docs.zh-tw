@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8edec14b380a4df9868c97e9b4d9db4feefc4dd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282106"
 ---
 # <a name="create-a-new-solution"></a>建立新方案
@@ -26,7 +26,7 @@ ms.locfileid: "63282106"
   
 ### <a name="to-create-a-new-solution-and-project"></a>建立新的方案和專案  
   
-1.  在 [檔案]  功能表中，指向 [新增]  ，然後按一下 [專案]  。  
+1.  在 **[檔案]** 功能表上，指向 **[開新檔案]** ，然後按一下 **[專案]** 。  
   
 2.  在 [新增專案]  對話方塊中，按一下某個專案類型。  
   

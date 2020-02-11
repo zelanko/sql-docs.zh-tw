@@ -1,5 +1,5 @@
 ---
-title: 解除安裝單機版報表產生器 （報表產生器） |Microsoft Docs
+title: 卸載單機版的報表產生器（報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108654"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>解除安裝單機版報表產生器 (報表產生器)
@@ -30,7 +30,7 @@ ms.locfileid: "66108654"
   
 2.  在 [控制台] 中，按一下 **[程式和功能]** 。  
   
-3.  在 [名稱]  清單中找出 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 報表產生器，然後按一下它。  
+3.  在 [名稱][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 清單中找出 **** 報表產生器，然後按一下它。  
   
 4.  按一下 **[解除安裝]** 。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66108654"
   
 1.  在 **[開始]** 功能表上，按一下 **[執行]** 。  
   
-2.  在 **開啟**文字方塊中，輸入 `cmd.`  
+2.  在 [**開啟**] 文字方塊中，輸入`cmd.`  
   
 3.  在 [命令提示字元] 視窗中，導覽至包含 ReportBuilder3_x86.msi 的資料夾。  
   
@@ -52,10 +52,10 @@ ms.locfileid: "66108654"
   
  `msiexec /x ReportBuilder3_x86.msi /quiet /l*v c:\junk\install.log`  
   
-1.  按 **Enter**鍵。  
+1.  按 **Enter** 鍵。  
   
 ## <a name="see-also"></a>另請參閱  
- [安裝、 解除安裝與報表產生器支援](../install-uninstall-and-report-builder-support.md)   
- [安裝單機版本報表產生器的&#40;報表產生器&#41;](install-report-builder.md)  
+ [安裝、卸載和報表產生器支援](../install-uninstall-and-report-builder-support.md)   
+ [安裝獨立版本的報表產生器 &#40;報表產生器&#41;](install-report-builder.md)  
   
   

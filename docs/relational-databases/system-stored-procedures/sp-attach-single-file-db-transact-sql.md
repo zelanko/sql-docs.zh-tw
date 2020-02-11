@@ -1,5 +1,5 @@
 ---
-title: sp_attach_single_file_db (TRANSACT-SQL) |Microsoft Docs
+title: sp_attach_single_file_db （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b285b5032c1ccde03ef8bd3f287d6b7f60eb0ffc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046176"
 ---
-# <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
+# <a name="sp_attach_single_file_db-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  將只有一個資料檔的資料庫附加至目前的伺服器。 **sp_attach_single_file_db**不能與多個資料檔案。  
+  將只有一個資料檔的資料庫附加至目前的伺服器。 **sp_attach_single_file_db**不能與多個資料檔案搭配使用。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我們建議您改用 CREATE DATABASE *database_name* FOR ATTACH 改。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。 請勿在複寫資料庫上使用此程序。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]我們建議您改用 CREATE DATABASE *database_name*來進行附加。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。 請勿在複寫資料庫上使用此程序。  
   
 > [!IMPORTANT]  
 >  建議您不要附加或還原來源不明或來源不受信任的資料庫。 這種資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際執行伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。  
@@ -46,9 +46,9 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @dbname = ] 'dbname'` 是要連接到伺服器之資料庫的名稱。 名稱必須是唯一的。 *dbname*已**sysname**，預設值是 NULL。  
+`[ @dbname = ] 'dbname'`這是要附加至伺服器的資料庫名稱。 名稱必須是唯一的。 *dbname*是**sysname**，預設值是 Null。  
   
-`[ @physname = ] 'physical_name'` 是實體的名稱，包括路徑之資料庫檔案。 *physical_name*已**nvarchar(260)** ，預設值是 NULL。  
+`[ @physname = ] 'physical_name'`這是資料庫檔案的機構名稱，包括路徑。 *physical_name*是**Nvarchar （260）**，預設值是 Null。  
   
 > [!NOTE]  
 >  這個引數對應到 CREATE DATABASE 陳述式的 FILENAME 參數。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
@@ -62,17 +62,17 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  None  
   
 ## <a name="remarks"></a>備註  
- 使用**sp_attach_single_file_db**只能在先前卸離從伺服器使用明確的資料庫上**sp_detach_db**作業或對已複製的資料庫。  
+ 只有在先前使用明確**sp_detach_db**作業或複製的資料庫卸離伺服器的資料庫上，才使用**sp_attach_single_file_db** 。  
   
- **sp_attach_single_file_db**只適用於具有單一記錄檔的資料庫。 當**sp_attach_single_file_db**將資料庫附加到伺服器，它會建置新的記錄檔。 如果資料庫是唯讀的，就會在先前的位置建立記錄檔。  
+ **sp_attach_single_file_db**只適用于具有單一記錄檔的資料庫。 當**sp_attach_single_file_db**將資料庫附加到伺服器時，它會建立新的記錄檔。 如果資料庫是唯讀的，就會在先前的位置建立記錄檔。  
   
 > [!NOTE]  
 >  無法卸離或附加資料庫快照集。  
   
  請勿在複寫資料庫上使用此程序。  
   
-## <a name="permissions"></a>Permissions  
- 如需附加資料庫時，如何處理權限資訊，請參閱[CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+## <a name="permissions"></a>權限  
+ 如需如何在附加資料庫時處理許可權的詳細資訊，請參閱[CREATE database &#40;SQL Server transact-sql&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
  下列範例會卸離 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]，再從 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中，將一個檔案附加至目前的伺服器。  
@@ -88,8 +88,8 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sp_detach_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_helpfile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

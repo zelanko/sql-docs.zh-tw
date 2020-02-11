@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 43974e2ae8becb5ad24daf0c52246a71c890bce2
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74822159"
 ---
 # <a name="syspdw_table_distribution_properties-transact-sql"></a>sys.databases pdw_table_distribution_properties （Transact-sql）
@@ -27,7 +27,7 @@ ms.locfileid: "74822159"
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |**object_id**|**int**|已指定三個屬性之資料表的識別碼。||  
-|**distribution_policy**|**Tinyint**|0 = 未定義<br /><br /> 1 = 無<br /><br /> 2 = 雜湊<br /><br /> 3 = 複寫<br /><br /> 4 = ROUND_ROBIN||  
+|**distribution_policy**|**tinyint**|0 = 未定義<br /><br /> 1 = 無<br /><br /> 2 = 雜湊<br /><br /> 3 = 複寫<br /><br /> 4 = ROUND_ROBIN||  
 |**distribution_policy_desc**|**Nvarchar （60）**|未定義、無、雜湊、複寫、ROUND_ROBIN|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]傳回雜湊、ROUND_ROBIN 或複寫。|  
   
 ## <a name="see-also"></a>另請參閱  

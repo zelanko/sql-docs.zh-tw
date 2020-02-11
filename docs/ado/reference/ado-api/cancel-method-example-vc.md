@@ -1,5 +1,5 @@
 ---
-title: Cancel 方法範例 （VC + +） |Microsoft Docs
+title: Cancel 方法範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 7e0eaa39-0c24-4d8c-87e8-f9c4fd3455e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88d211c825bd9d1c3aa0c76dc26778f18108ff07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920170"
 ---
 # <a name="cancel-method-example-vc"></a>Cancel 方法範例 (VC++)
-這個範例會使用[取消](../../../ado/reference/ado-api/cancel-method-ado.md)方法來取消上一個執行的命令[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件的連接是否忙碌中。  
+這個範例會使用[cancel](../../../ado/reference/ado-api/cancel-method-ado.md)方法來取消在連線物件上執行的命令（[如果連接忙碌](../../../ado/reference/ado-api/connection-object-ado.md)中）。  
   
 ```  
 // CancelMethodExample.cpp  
@@ -141,5 +141,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Cancel 方法 (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
+ [Cancel 方法（ADO）](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: 選項 （設計工具-資料表和資料庫設計工具頁面） |Microsoft Docs
+title: 選項（設計工具-資料表和資料庫設計工具頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0157b94227a36db7f1f961ab0b0a69518a8163b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283665"
 ---
-# <a name="options-designers-table-and-database-designers-page"></a>選項 （設計工具-資料表和資料庫設計工具頁面）
+# <a name="options-designers-table-and-database-designers-page"></a>選項（設計工具-資料表和資料庫設計工具頁面）
   使用此頁面來決定設計師的預設行為。 若要存取設定，請在 [工具]  功能表上按一下 [選項]  、展開 [設計工具]  資料夾，然後按一下 [資料表設計工具]  。  
   
 ## <a name="uielement-list"></a>UIElement 清單  

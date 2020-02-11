@@ -1,5 +1,5 @@
 ---
-title: 疑難排解工具封裝連接 |Microsoft Docs
+title: 疑難排解工具套件連接 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8bb86d738aed61743defa3261318e2eb7536aa84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766161"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>疑難排解工具封裝連接
@@ -70,6 +70,6 @@ ms.locfileid: "62766161"
   
 ## <a name="see-also"></a>另請參閱  
  [疑難排解封裝開發的工具](troubleshooting-tools-for-package-development.md)   
- [封裝執行的疑難排解工具](troubleshooting-tools-for-package-execution.md)  
+ [套件執行的疑難排解工具](troubleshooting-tools-for-package-execution.md)  
   
   

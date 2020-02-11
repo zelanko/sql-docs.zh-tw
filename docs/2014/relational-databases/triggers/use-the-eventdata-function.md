@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524250"
 ---
 # <a name="use-the-eventdata-function"></a>使用 EVENTDATA 函數
@@ -49,7 +49,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- DDL 觸發程序中的 `EVENTDATA()` 陳述式，會擷取到不容許的 `CREATE TABLE` 陳述式文字。 做法是使用 XQuery 陳述`xml`產生的 EVENTDATA 和擷取資料\<CommandText > 項目。 如需詳細資訊，請參閱 [XQuery 語言參考 &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)。  
+ DDL 觸發程序中的 `EVENTDATA()` 陳述式，會擷取到不容許的 `CREATE TABLE` 陳述式文字。 針對 EVENTDATA 所產生的`xml`資料使用 XQuery 語句，並抓取\<CommandText> 專案，即可達成此目的。 如需詳細資訊，請參閱 [XQuery 語言參考 &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)。  
   
 > [!CAUTION]  
 >  EVENTDATA 會擷取 CREATE_SCHEMA 事件的資料，以及對應之 CREATE SCHEMA 定義的 <schema_element> (如果有的話)。 此外，EVENTDATA 還會將 <schema_element> 定義識別為個別事件。 因此，在 CREATE_SCHEMA 事件和 CREATE SCHEMA 定義之 <schema_element> 代表的事件上建立的 DDL 觸發程序，可能會傳回相同的事件資料兩次，例如 `TSQLCommand` 資料。 例如，假設在 CREATE_SCHEMA 和 CREATE_TABLE 兩個事件上建立 DDL 觸發程序，並執行下列批次：  
@@ -125,9 +125,10 @@ GO
 ```  
   
 > [!NOTE]  
->  若要傳回事件資料，我們建議您使用 XQuery `value()` 方法，而不要使用 `query()` 方法。 `query()` 方法會在輸出中傳回 XML 和逸出連字號的歸位字元和換行字元 (CRLF) 執行個體，而 `value()` 方法則會轉譯在輸出中看不到的 CRLF 執行個體。  
+>  若要傳回事件資料，我們建議您使用 XQuery `value()` 方法，而不要使用 `query()` 方法。 
+  `query()` 方法會在輸出中傳回 XML 和逸出連字號的歸位字元和換行字元 (CRLF) 執行個體，而 `value()` 方法則會轉譯在輸出中看不到的 CRLF 執行個體。  
   
- [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中則提供了相似的 DDL 觸發程序範例。 若要取得此範例，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來尋找 [Database Triggers] 資料夾。 這個資料夾位在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 [可程式性]  資料夾下。 以滑鼠右鍵按一下 [ddlDatabaseTriggerLog]  ，然後選取 [編寫資料庫觸發程序的指令碼為]  。 依預設，會停用 DDL 觸發程序 **ddlDatabaseTriggerLog**。  
+ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中則提供了相似的 DDL 觸發程序範例。 若要取得此範例，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來尋找 [Database Triggers] 資料夾。 這個資料夾位在  **資料庫的 [可程式性]** [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料夾下。 以滑鼠右鍵按一下 [ddlDatabaseTriggerLog]  ，然後選取 [編寫資料庫觸發程序的指令碼為]  。 依預設，會停用 DDL 觸發程序 **ddlDatabaseTriggerLog**。  
   
 ## <a name="see-also"></a>另請參閱  
  [DDL 事件](../triggers/ddl-events.md)   

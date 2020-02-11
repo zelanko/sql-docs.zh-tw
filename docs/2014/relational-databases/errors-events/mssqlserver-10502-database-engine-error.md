@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42b4a39678e4b85e581bca7e1b9e085c6f4620f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870670"
 ---
-# <a name="mssqlserver10502"></a>MSSQLSERVER_10502
+# <a name="mssqlserver_10502"></a>MSSQLSERVER_10502
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|10502|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -39,8 +39,8 @@ ms.locfileid: "62870670"
  請卸除現有計畫指南後，再建立新的計畫指南。  
   
 ## <a name="see-also"></a>另請參閱  
- [計畫指南](../performance/plan-guides.md)   
- [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [計劃指南](../performance/plan-guides.md)   
+ [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   
   

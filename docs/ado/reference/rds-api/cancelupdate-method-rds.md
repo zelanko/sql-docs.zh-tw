@@ -1,5 +1,5 @@
 ---
-title: CancelUpdate 方法 (RDS) |Microsoft Docs
+title: CancelUpdate 方法（RDS） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +14,17 @@ ms.assetid: 76d8a6e9-bc6c-4ea0-8e7a-2bae5ed06650
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ea3be9a06d41718271fee2480da1bf58081c1f07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964596"
 ---
 # <a name="cancelupdate-method-rds"></a>CancelUpdate 方法 (RDS)
-取消目前的或新資料列所做的變更[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
+取消對[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的目前或新資料列所做的任何變更。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,22 +35,22 @@ DataControl.CancelUpdate
   
 #### <a name="parameters"></a>參數  
  *DataControl*  
- 物件變數，表示[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件。  
+ 代表 RDS 的物件變數[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件。  
   
 ## <a name="remarks"></a>備註  
- OLE DB 會保留原始值的複本及變更的快取的資料指標服務。 當您呼叫**CancelUpdate**、 快取的變更會重設為空的和任何繫結的控制項，會與原始資料重新整理。  
+ OLE DB 的資料指標服務會保留原始值和變更快取的複本。 當您呼叫**CancelUpdate**時，變更的快取會重設為空白，而且任何繫結控制項都會以原始資料重新整理。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [CancelUpdate 方法範例 (VBScript)](../../../ado/reference/rds-api/cancelupdate-method-example-vbscript.md)   
+ [CancelUpdate 方法範例（VBScript）](../../../ado/reference/rds-api/cancelupdate-method-example-vbscript.md)   
  [通訊錄命令按鈕](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
- [Cancel 方法 (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [Cancel 方法 (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
- [CancelBatch 方法 (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [CancelUpdate 方法 (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Refresh 方法 (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   
+ [Cancel 方法（ADO）](../../../ado/reference/ado-api/cancel-method-ado.md)   
+ [Cancel 方法（RDS）](../../../ado/reference/rds-api/cancel-method-rds.md)   
+ [CancelBatch 方法（ADO）](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
+ [CancelUpdate 方法（ADO）](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
+ [Refresh 方法（RDS）](../../../ado/reference/rds-api/refresh-method-rds.md)   
  [SubmitChanges 方法 (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
 

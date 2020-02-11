@@ -1,5 +1,5 @@
 ---
-title: IDBProperties (OLE DB) |Microsoft Docs
+title: IDBProperties （OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3b6dada26e15fc83d890b270ad553eb051bb08fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62692186"
 ---
 # <a name="idbproperties-ole-db"></a>IDBProperties (OLE DB)
-  OLE DB 標準規格允許提供者將 VT_EMPTY 指定給 `DBPROPINFO::vValues`。 不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 一律會傳回 VT_EMPTY，當您呼叫`IDBProperties::GetPropertyInfo`與`DBPROPSET_ROWSETALL`來擷取資料列集屬性。  
+  OLE DB 標準規格允許提供者將 VT_EMPTY 指定給 `DBPROPINFO::vValues`。 不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當您呼叫`IDBProperties::GetPropertyInfo` with `DBPROPSET_ROWSETALL`來抓取資料列集屬性時，Native Client OLE DB 一律會傳回 VT_EMPTY。  
   
 ## <a name="see-also"></a>另請參閱  
- [介面&#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
+ [介面 &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
   
   

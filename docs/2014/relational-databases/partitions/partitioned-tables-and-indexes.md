@@ -16,14 +16,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f96f82919b9f4a130ce8a533e6ffcf31e765f5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65092045"
 ---
 # <a name="partitioned-tables-and-indexes"></a>分割資料表與索引
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援資料表和索引資料分割。 資料分割資料表和索引的資料，已分成可以在資料庫中的多個檔案群組之間分佈的單位。 資料是以水平方式分割，因此資料列的群組可對應至個別的資料分割。 單一索引或資料表的所有分割區必須在同一個資料庫中。 在資料上執行查詢或更新時，資料表或索引會被視為單一邏輯實體。 並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用資料分割資料表和索引。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援資料表和索引資料分割。 資料分割資料表和索引的資料，已分成可以在資料庫中的多個檔案群組之間分佈的單位。 資料是以水平方式分割，因此資料列的群組可對應至個別的資料分割。 單一索引或資料表的所有分割區必須在同一個資料庫中。 在資料上執行查詢或更新時，資料表或索引會被視為單一邏輯實體。 並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用資料分割資料表和索引。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 預設最多支援 15,000 個資料分割。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]之前版本中，資料分割數目預設限制為 1,000。在 x86 型系統上，可以建立超過 1000 個資料分割的資料表或索引，但不予支援。  
@@ -37,7 +37,9 @@ ms.locfileid: "65092045"
   
 -   您可以提升查詢效能，不過這要視您經常執行的查詢類型和硬體組態而定。 例如，因為您可以聯結分割區本身，則在資料表中的分割資料行相同時，查詢最佳化工具可以更快速地處理兩個以上資料分割資料表之間的等聯結 (Equi-Join) 查詢。  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在為 I/O 作業執行資料排序時，會先依資料分割排序資料。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一次會存取一台磁碟機，而這樣會降低效能。 若要改善資料排序效能，請設定 RAID，以將分割區的資料檔案分割到多個磁碟上。 利用這種方式，雖然 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍然會依資料分割排序資料，但它可以同時存取每個資料分割的所有磁碟機。  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在為 I/O 作業執行資料排序時，會先依資料分割排序資料。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一次會存取一台磁碟機，而這樣會降低效能。 若要改善資料排序效能，請設定 RAID，以將分割區的資料檔案分割到多個磁碟上。 利用這種方式，雖然 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍然會依資料分割排序資料，但它可以同時存取每個資料分割的所有磁碟機。  
   
      此外，您可以啟用分割區層級的鎖定擴大 (而非整個資料表) 來提升效能。 這可以減少資料表上的鎖定競爭。  
   
@@ -69,7 +71,7 @@ ms.locfileid: "65092045"
  查詢最佳化工具用來只存取相關分割區以滿足查詢篩選準則的程序。  
   
 ## <a name="performance-guidelines"></a>效能方針  
- 15,000 個分割區中新的且較高的限制會影響記憶體、資料分割索引作業、DBCC 命令和查詢。 此節描述將分割區數目增加為超過 1,000 個的效能含意，並視需要提供解決方案。 具有最大分割區數目增加為 15,000 的限制，就可以較長時間地儲存資料。 不過，您只應該保留必要的資料，並維護效能與分割區數目之間的平衡。  
+ 15,000 個分割區中新的且較高的限制會影響記憶體、資料分割索引作業、DBCC 命令和查詢。 此節描述將分割區數目增加為超過 1,000 個的效能含意，並視需要提供解決方案。 具有最大分割區數目增加為 15,000 的限制，就可以較長時間地儲存資料。 不過，您只應該保留必要的資料，並維護效能與資料分割數目之間的平衡。  
   
 ### <a name="memory-usage-and-guidelines"></a>記憶體使用量和方針  
  如果正在使用大量分割區，則建議您至少使用 16 GB 的 RAM。 如果系統的記憶體不足，則資料操作語言 (DML) 陳述式、資料定義語言 (DDL) 陳述式和其他作業可能會因記憶體不足而失敗。 RAM 為 16 GB 且執行許多記憶體密集處理序的系統，可能會在針對大量分割區執行的作業時記憶體不足。 因此，記憶體愈多 (超過 16 GB)，發生效能和記憶體問題的機會可能就愈少。  
@@ -111,12 +113,12 @@ ms.locfileid: "65092045"
   
 -   [使用 SQL Server 2008 的資料分割資料表和索引策略](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
   
--   [如何實作自動滑動視窗](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
+-   [如何執行自動滑動視窗](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
 -   [大量載入至資料分割資料表](https://msdn.microsoft.com/library/cc966380.aspx)  
   
 -   [分割資料表和索引上的查詢處理增強功能](https://msdn.microsoft.com/library/ms345599.aspx)  
   
--   [建立大規模關聯式資料倉儲的前 10 大最佳作法](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
+-   [建立大規模關聯式資料倉儲的十大最佳作法](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   
   

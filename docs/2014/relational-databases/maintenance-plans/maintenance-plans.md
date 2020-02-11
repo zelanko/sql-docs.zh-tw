@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0643c6fbf8e9a6aa649d4d335117bcb4f5b35208
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206848"
 ---
 # <a name="maintenance-plans"></a>維護計畫
@@ -44,7 +44,7 @@ ms.locfileid: "68206848"
 ## <a name="maintenace-plan-functionality"></a>維護計畫功能  
  您可以建立維護計畫來執行下列工作：  
   
--   以新的填滿因數重建索引，重新整理資料以及索引頁上的資料。 使用新的填滿因數重建索引時，可以確保資料庫頁面包含平均分佈的資料量和可用空間。 也可以在未來快速擴展。 如需詳細資訊，請參閱[指定索引的填滿因素](../indexes/specify-fill-factor-for-an-index.md)。  
+-   以新的填滿因數重建索引，重新整理資料以及索引頁上的資料。 使用新的填滿因數重建索引時，可以確保資料庫頁面包含平均分佈的資料量和可用空間。 也可以在未來快速擴展。 如需詳細資訊，請參閱 [指定索引的填滿因素](../indexes/specify-fill-factor-for-an-index.md)。  
   
 -   藉由移除空的資料庫頁面來壓縮資料檔案。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68206848"
   
 |||  
 |-|-|  
-|**描述**|**主題**|  
+|**說明**|**主題**|  
 |描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建立維護計畫。|[建立維護計畫](create-a-maintenance-plan.md)|  
 |描述如何使用維護計畫設計介面建立維護計畫。|[建立維護計畫 &#40;維護計畫設計介面&#41;](create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
 |記載 [物件總管] 中可用的維護計畫功能。|[維護計畫節點 &#40;物件總管&#41;](../../ssms/object/object-explorer.md)|  

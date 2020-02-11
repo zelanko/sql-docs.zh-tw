@@ -43,14 +43,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47bf324dd757661a6f49f18b28f810c87ca1419e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242114"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>[產生和發佈指令碼]
-  您可以使用 [**產生和發佈腳本] Wizard**來建立腳本，以便在[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]或[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]實例之間傳送資料庫。 您可以針對區域網路上 Database Engine 執行個體的資料庫產生指令碼，或是從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]產生指令碼。 產生的指令碼可以在另一個 Database Engine 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]執行個體上執行。 您也可以使用此精靈，將資料庫內容直接發行到使用資料庫發行服務所建立的 Web 服務。 您可以針對整個資料庫建立指令碼，或將它限制為特定物件。  
+  您可以使用 [產生和發佈指令碼精靈]  建立指令碼，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 執行個體之間傳送資料庫。 您可以針對區域網路上 Database Engine 執行個體的資料庫產生指令碼，或是從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]產生指令碼。 產生的指令碼可以在另一個 Database Engine 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]執行個體上執行。 您也可以使用此精靈，將資料庫內容直接發行到使用資料庫發行服務所建立的 Web 服務。 您可以針對整個資料庫建立指令碼，或將它限制為特定物件。  
   
 1.  **開始之前：**  [發行至託管服務](#PubHostSvc)、[許可權](#Permissions)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "75242114"
   
  若要將資料庫發佈至 Web 主控服務，請選取精靈之 **[設定指令碼編寫選項]** 頁面上的 **[發佈到 Web 服務]** 選項。  
   
-###  <a name="Permissions"></a>無權  
+###  <a name="Permissions"></a> 權限  
  發行資料庫的最低權限是來源資料庫上 db_ddladmin 固定資料庫角色中的成員資格。 將資料庫指令碼發行至位於主控提供者之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的最低權限是目標資料庫上 db_ddladmin 固定資料庫角色中的成員資格。  
   
  此外，使用者也必須提供使用者名稱和密碼來存取主控提供者帳戶，以便使用此精靈發行。 您必須先在主控提供者處建立目標資料庫，然後再發行來源資料庫。 發行會覆寫現有資料庫中的物件。  
@@ -80,28 +80,28 @@ ms.locfileid: "75242114"
   
     -   [簡介頁面](#Introduction)  
   
-    -   [[選擇物件] 頁面](#ChooseObjects)  
+    -   [選擇物件頁面](#ChooseObjects)  
   
-    -   [設定腳本編寫選項頁面](#SetScriptOpt)  
+    -   [設定指令碼編寫選項頁面](#SetScriptOpt)  
   
-    -   [[Advanced 腳本選項] 頁面](#AdvScriptOpt)  
+    -   [進階編寫指令碼選項頁面](#AdvScriptOpt)  
   
     -   [管理提供者頁面](#MgProviders)  
   
-    -   [[Advanced 發行選項] 頁面](#AdvPubOpts)  
+    -   [進階發佈選項頁面](#AdvPubOpts)  
   
-    -   [[提供者設定] 頁面](#ProvConfig)  
+    -   [提供者組態頁面](#ProvConfig)  
   
     -   [摘要頁面](#Summary)  
   
-    -   [[儲存或發佈腳本] 頁面](#SavePubScripts)  
+    -   [儲存或發佈指令碼頁面](#SavePubScripts)  
   
-###  <a name="Introduction"></a>簡介頁面  
+###  <a name="Introduction"></a> 簡介頁面  
  此頁面描述用於產生或發佈指令碼的步驟。  
   
- **不要再顯示此頁面**-下次啟動 [**產生和發佈腳本] 嚮導**時，略過此頁面。  
+ [不要再顯示此頁面]  - 下次啟動 [產生和發佈指令碼精靈]  時會略過此頁面。  
   
- **下一步 >** -繼續進行 [**選擇方法**] 頁面。  
+ **下一步 >** - 繼續進行至 [選擇方法]  頁面。  
   
  **取消**-結束嚮導，而不從資料庫中產生或發佈腳本。  
   
@@ -110,13 +110,13 @@ ms.locfileid: "75242114"
   
  **編寫整個資料庫選項**：按一下即可針對資料庫中的所有物件產生腳本，並包含資料庫本身的腳本。  
   
- **選取特定的資料庫物件**：按一下即可限制 wizard 只針對您所選資料庫中的特定物件產生腳本。  
+ **選取特定的資料庫物件** ：按一下即可限制此精靈只針對所選擇資料庫中的特定物件產生指令碼。  
   
--   **資料庫物件**：至少選取一個要包含在腳本中的物件。  
+-   **資料庫物件** ：至少選取一個要包含在指令碼中的物件。  
   
--   **全選**-選取所有可用的核取方塊。  
+-   **全選** ：選取所有可用的核取方塊。  
   
--   **全部取消選取**-清除所有核取方塊。 然後，您至少必須選取一個資料庫物件才能繼續。  
+-   **取消全選** ：清除所有的核取方塊。 然後，您至少必須選取一個資料庫物件才能繼續。  
   
 ###  <a name="SetScriptOpt"></a>設定腳本編寫選項頁面  
  您可以使用這個頁面來指定要讓精靈將指令碼儲存至所選擇的位置，還是使用這些指令碼，將資料庫物件發行至遠端 Web 主控提供者。 若要發行，您必須能夠存取使用資料庫發行服務 Web 服務所安裝的 Web 服務。  
@@ -163,7 +163,7 @@ ms.locfileid: "75242114"
   
 -   **包含描述性標頭**-當**為 True**時，會將描述性批註加入至腳本，將腳本分隔為每個物件的區段。 預設值是 **False**。  
   
--   **包含 IF NOT exists** ：當**為 True**時，腳本會包含語句來檢查物件是否已存在於資料庫中，如果物件已經存在，則不會嘗試建立新的物件。 預設值是 **False**。  
+-   **包含 IF NOT exists** ：當**為 True**時，腳本會包含語句來檢查物件是否已存在於資料庫中，如果物件已經存在，則不會嘗試建立新的物件。 預設值為 **False**。  
   
 -   **包含系統條件約束名稱**-當**為 False**時，在源資料庫上自動命名之條件約束的預設值會在目標資料庫上自動重新命名。 設定為 **[True]** 時，來源和目標資料庫的條件約束會具有相同的名稱。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "75242114"
   
 -   **編寫**登入的腳本：要編寫腳本的物件是資料庫使用者時，這個選項會建立使用者相依的登入。 預設值是 **False**。  
   
--   **編寫物件層級許可權的腳本**：包含用來設定資料庫物件之許可權的腳本。 預設值是 **False**。  
+-   **編寫物件層級許可權的腳本**：包含用來設定資料庫物件之許可權的腳本。 預設值為 **False**。  
   
 -   **編寫統計資料的腳本**：設定為 [**編寫統計資料的腳本]** 時，這個選項會包含在物件上重新建立統計資料的`CREATE STATISTICS`語句。 
   **[編寫統計資料和長條圖的指令碼]** 選項也會建立長條圖資訊。 預設值為 **[不要編寫統計資料的指令碼]**。 如需詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)。  
@@ -247,7 +247,7 @@ ms.locfileid: "75242114"
   
 3.  **發佈預設**值：包含用來在資料表資料行中設定預設值的預設物件。 預設值為**True**。 如需詳細資訊，請參閱 [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql)。  
   
-4.  **發行相依物件**-發行在執行所選取物件的腳本時必須存在的任何物件。 預設值為**True**。  
+4.  **發行相依物件**-發行在執行所選取物件的腳本時必須存在的任何物件。 預設值為 **True**。  
   
 5.  **發行擴充屬性**：如果物件具有擴充屬性，則會在傳送至提供者進行發行的腳本中包含擴充屬性。 預設值為**True**。  
   
@@ -272,7 +272,7 @@ ms.locfileid: "75242114"
   
  **資料表/視圖選項**：下列選項只適用于資料表或 views。  
   
-1.  **發行 check 條件約束**：在發佈程式`CHECK`中包含建立條件約束。 預設值為**True**。 
+1.  **發行 check 條件約束**：在發佈程式`CHECK`中包含建立條件約束。 預設值為 **True**。 
   `CHECK` 條件約束會要求輸入資料表的資料必須符合某些指定的條件。 如需相關資訊，請參閱 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
   
 2.  **發佈外鍵**：在發佈程式中包含建立外鍵的功能。 預設值為**True**。 外部索引鍵指出並強制執行資料表之間的關聯性。 如需詳細資訊，請參閱 [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md)。  
@@ -281,7 +281,7 @@ ms.locfileid: "75242114"
   
 4.  **發行索引**-在發行進程中包含資料表的索引。 預設值為**True**。 索引可協助您快速尋找資料。  
   
-5.  **發佈主鍵**-在發佈程式中包含建立主鍵的功能。 預設值為**True**。 主索引鍵可唯一識別資料表的每個資料列。 如需詳細資訊，請參閱 [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md)。  
+5.  **發佈主鍵**-在發佈程式中包含建立主鍵的功能。 預設值為 **True**。 主索引鍵可唯一識別資料表的每個資料列。 如需詳細資訊，請參閱 [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md)。  
   
 6.  **發行觸發**程式-包含在發佈過程中建立 DML 觸發程式。 預設值為**True**。 DML 觸發程序是以程式設計當資料庫伺服器發生資料操作語言 (DML) 事件時所執行的動作。 如需詳細資訊，請參閱 [DML Triggers](../triggers/dml-triggers.md)。  
   
@@ -324,8 +324,8 @@ ms.locfileid: "75242114"
   
  **取消**-復原您在此對話方塊中所做的所有變更，並返回 wizard。  
   
-###  <a name="Summary"></a>摘要頁面  
- 這個頁面會摘要列出您在此精靈中所選取的選項。 若要變更選項，請按 **[上一步]**。 若要開始產生即將儲存或發行的指令碼，請按 **[下一步]**。  
+###  <a name="Summary"></a> 摘要頁面  
+ 這個頁面會摘要列出您在此精靈中所選取的選項。 若要變更選項，請按 **[上一步]** 。 若要開始產生即將儲存或發行的指令碼，請按 **[下一步]**。  
   
  **檢查您的選擇**-顯示您針對 wizard 的每一頁所做的選擇。 請展開節點以查看對應頁面的選取選項。  
   
@@ -334,14 +334,14 @@ ms.locfileid: "75242114"
   
  **詳細資料**-查看 [**動作**] 資料行，以查看 wizard 的進度。 產生指令碼之後，此精靈會根據您的選項，將指令碼儲存至檔案，或使用它們來發行至 Web 服務。 當每個步驟都已完成之後，若要查看對應步驟的結果，請按一下 **[結果]** 欄中的值。  
   
- **儲存報表**：按一下即可將 wizard 進度的結果儲存至檔案。  
+ **儲存報表** ：按一下即可將精靈進度的結果儲存至檔案。  
   
  **取消**：在處理完成之前或是發生錯誤時，按一下即可關閉嚮導。  
   
- **完成**：在處理完成之後，或發生錯誤時，按一下即可關閉嚮導。  
+ **完成** ：在處理完成之後或是發生錯誤時，按一下即可關閉精靈。  
   
 ## <a name="see-also"></a>另請參閱  
  [安裝 SMO](../server-management-objects-smo/installing-smo.md)   
- [將資料庫複製到其他伺服器](../databases/copy-databases-to-other-servers.md)  
+ [複製資料庫至其他伺服器](../databases/copy-databases-to-other-servers.md)  
   
   

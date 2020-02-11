@@ -21,15 +21,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c15c8920d2a0188a7dbe517149dc369dea95522e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760713"
 ---
 # <a name="profiling-odbc-driver-performance"></a>分析 ODBC 驅動程式效能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式可以分析兩種類型的效能資料：  
   
 -   長時間執行的查詢。  
@@ -67,11 +68,11 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   應用程式設定檔  
   
--   [連接]  
+-   Connection  
   
--   Network  
+-   網路  
   
--   time  
+-   Time  
   
  在下表中，SQLPERF 資料結構內的欄位描述也會套用到效能記錄檔中記錄的統計資料。  
   
@@ -100,7 +101,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |CurrentStmtCount|目前在驅動程式中開啟的所有連接上開啟的陳述式控制代碼數目。|  
 |MaxOpenStmt|在 SQL_PERF_START 之後，同時開啟之陳述式控制代碼的最大數目。|  
 |SumOpenStmt|在 SQL_PERF_START 之後，已經開啟之陳述式控制代碼的數目。|  
-|**連接統計資料：**||  
+|**連接統計資料**||  
 |CurrentConnectionCount|應用程式已經在伺服器上開啟之作用中連接控制代碼的目前數目。|  
 |MaxConnectionsOpened|在 SQL_PERF_START 之後開啟之並行連接控制代碼的最大數目。|  
 |SumConnectionsOpened|在 SQL_PERF_START 之後，已經開啟之連接控制代碼的數目總和。|  
@@ -121,7 +122,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msNetworkServerTime|驅動程式花在等待伺服器回覆的累計時間。|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Native Client &#40;ODBC&#41; ](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [分析 ODBC 驅動程式效能的使用說明主題&#40;odbc&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [分析 ODBC 驅動程式效能的使用說明主題 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

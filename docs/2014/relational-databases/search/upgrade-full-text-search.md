@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010954"
 ---
 # <a name="upgrade-full-text-search"></a>升級全文檢索搜尋
@@ -32,15 +32,15 @@ ms.locfileid: "66010954"
   
 -   [全文檢索升級選項](#FT_Upgrade_Options)  
   
--   [考量選擇全文檢索升級選項](#Choosing_Upgade_Option)  
+-   [選擇全文檢索升級選項的考慮](#Choosing_Upgade_Option)  
   
 -   [將資料庫升級為 SQL Server 2014 時移轉全文檢索索引](#Upgrade_Db)  
   
--   [SQL Server 2005 全文檢索目錄還原至 SQL Server 2014 的考量](#Considerations_for_Restore)  
+-   [將 SQL Server 2005 全文檢索目錄還原至 SQL Server 2014 的考量](#Considerations_for_Restore)  
   
 -   [將 SQL Server 2005 資料庫附加至 SQL Server 2014](#Attaching_2005_ft_catalogs)  
   
-##  <a name="Upgrade_Server"></a> 升級伺服器執行個體  
+##  <a name="Upgrade_Server"></a>升級伺服器實例  
  進行就地升級時， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的執行個體會與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並存安裝，而資料會進行移轉。 如果舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已安裝全文檢索搜尋，系統就會自動安裝新版全文檢索搜尋。 並存安裝表示下列各個元件可存在於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體層級。  
   
  斷詞工具、字幹分析器和篩選  
@@ -50,14 +50,15 @@ ms.locfileid: "66010954"
  全文檢索篩選背景程式主機處理序可安全無虞地載入並驅動用於索引和查詢的擴充外部元件，例如斷詞工具、字幹分析器和篩選，而無損全文檢索引擎的完整性。 伺服器執行個體會針對所有多執行緒篩選使用多執行緒處理序，而針對所有單一執行緒篩選使用單一執行緒處理序。  
   
 > [!NOTE]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 針對 FDHOST 啟動器服務 (MSSQLFDLauncher) 導入了服務帳戶。 這個服務會將服務帳戶資訊傳播至特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的篩選背景程式主機處理序。 如需設定服務帳戶的相關資訊，請參閱 [設定全文檢索篩選背景程式啟動器的服務帳戶](set-the-service-account-for-the-full-text-filter-daemon-launcher.md)。  
+>  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 針對 FDHOST 啟動器服務 (MSSQLFDLauncher) 導入了服務帳戶。 這個服務會將服務帳戶資訊傳播至特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的篩選背景程式主機處理序。 如需設定服務帳戶的相關資訊，請參閱 [設定全文檢索篩選背景程式啟動器的服務帳戶](set-the-service-account-for-the-full-text-filter-daemon-launcher.md)。  
   
  在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中，每個全文檢索索引都位於屬於檔案群組、具有實體路徑而且被視為資料庫檔案的全文檢索目錄中。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中，全文檢索目錄是包含一組全文檢索索引的邏輯或虛擬物件。 因此，新的全文檢索目錄不會被視為具有實體路徑的資料庫檔案。 不過，在升級含有資料檔案的任何全文檢索目錄期間，系統會在相同的磁碟上建立新的檔案群組。 這會在升級之後保留舊磁碟 I/O 行為。 如果根路徑存在，則任何來自該目錄的全文檢索索引都會放置於新的檔案群組中。 如果舊的全文檢索目錄路徑無效，升級作業就會將全文檢索索引保留在與基底資料表相同的檔案群組中，或是保留在分割區資料表的主要檔案群組中。  
   
 > [!NOTE]  
->  指定全文檢索目錄繼續正常運作的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 陳述式。  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)]指定全文檢索目錄的 DDL 語句會繼續正常運作。  
   
-##  <a name="FT_Upgrade_Options"></a> 全文檢索升級選項  
+##  <a name="FT_Upgrade_Options"></a>全文檢索升級選項  
  將伺服器執行個體升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]時，使用者介面可讓您選擇下列其中一個全文檢索升級選項。  
   
  匯入  
@@ -70,18 +71,19 @@ ms.locfileid: "66010954"
   
  如需有關匯入全文檢索索引之影響的詳細資訊，請參閱本主題後面的「選擇全文檢索升級選項的考量」。  
   
- Rebuild  
+ 重建  
  全文檢索目錄會使用新的增強斷詞工具重建。 重建索引可能需要一些時間，而且在升級之後可能需要相當多的 CPU 和記憶體。  
   
  重設  
  重設全文檢索目錄。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]進行升級時，全文檢索目錄檔案會遭到移除，但是全文檢索目錄和全文檢索索引的中繼資料則會保留。 在升級之後，所有的全文檢索索引都會停用變更追蹤，而且不會自動啟動搜耙。 當您在升級完成之後手動發出完整母體擴展之前，此目錄將會維持空白狀態。  
   
-##  <a name="Choosing_Upgade_Option"></a> 考量選擇全文檢索升級選項  
+##  <a name="Choosing_Upgade_Option"></a>選擇全文檢索升級選項的考慮  
  當您為升級作業選擇升級選項時，請考慮下列事項：  
   
 -   您需要查詢結果中的一致性嗎？  
   
-     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 會安裝新的斷詞工具，供全文索引與語意搜尋之用。 編製索引及查詢時皆可使用斷詞工具。 如不重建全文索引目錄，可能會造成搜尋結果不一致。 當您發出全文索引查詢，尋找在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 斷詞工具中與目前之斷詞工具中斷詞方式相異的片語，可能會無法擷取含有該片語的文件或資料列。 這是索引片語所使用的分解邏輯與查詢所用者不相同所致。 此方案會使用新的斷詞工具重新擴展 (重建) 全文索引目錄，讓索引與查詢時的行為一致。 您可以選擇 [重建] 選項以完成這個作業，也可以在選擇 [匯入] 選項之後手動重建。  
+     
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 會安裝新的斷詞工具，供全文索引與語意搜尋之用。 編製索引及查詢時皆可使用斷詞工具。 如不重建全文索引目錄，可能會造成搜尋結果不一致。 當您發出全文索引查詢，尋找在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 斷詞工具中與目前之斷詞工具中斷詞方式相異的片語，可能會無法擷取含有該片語的文件或資料列。 這是索引片語所使用的分解邏輯與查詢所用者不相同所致。 此方案會使用新的斷詞工具重新擴展 (重建) 全文索引目錄，讓索引與查詢時的行為一致。 您可以選擇 [重建] 選項以完成這個作業，也可以在選擇 [匯入] 選項之後手動重建。  
   
 -   是否有任何全文檢索索引建立在整數全文檢索索引鍵資料行上？  
   
@@ -104,7 +106,8 @@ ms.locfileid: "66010954"
  如需斷詞工具的詳細資訊，請參閱 [設定及管理搜尋的斷詞工具與字幹分析器](configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
 ## <a name="upgrading-noise-word-files-to-stoplists"></a>將非搜尋字檔案升級為停用字詞表  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 非搜尋字已取代為 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中的停用字詞。 當資料庫從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升級為 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]時，便不再使用非搜尋字檔案。 不過，這些舊的非搜尋字檔案會儲存在 FTDATA\ FTNoiseThesaurusBak 資料夾中，而且您之後可以在更新或建立對應的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 停用字詞表時使用它們。  
+ 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 非搜尋字已取代為 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中的停用字詞。 當資料庫從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升級為 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]時，便不再使用非搜尋字檔案。 不過，這些舊的非搜尋字檔案會儲存在 FTDATA\ FTNoiseThesaurusBak 資料夾中，而且您之後可以在更新或建立對應的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 停用字詞表時使用它們。  
   
  從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升級之後：  
   
@@ -128,18 +131,20 @@ ms.locfileid: "66010954"
   
  對於已經從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]匯入的全文檢索目錄而言，此全文檢索目錄仍然是位於其檔案群組中的資料庫檔案。 全文檢索目錄的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 備份程序仍然適用，但是 MSFTESQL 服務不存在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中。 如需 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 程序的相關資訊，請參閱《SQL Server 2005 線上叢書》中的 [備份與還原全文檢索目錄](https://go.microsoft.com/fwlink/?LinkId=209154) 。  
   
-##  <a name="Upgrade_Db"></a> 升級資料庫時移轉全文檢索索引 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
- 您可以使用附加、還原或 [複製資料庫精靈]，將舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料庫檔案和全文檢索目錄升級為現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 伺服器執行個體。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 系統會匯入、重設或重建全文檢索索引 (如果有的話)。 **upgrade_option** 伺服器屬性會控制此伺服器執行個體在這些資料庫升級期間所使用的全文檢索升級選項。  
+##  <a name="Upgrade_Db"></a>將資料庫升級至時，遷移全文檢索索引[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ 您可以使用附加、還原或 [複製資料庫精靈]，將舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料庫檔案和全文檢索目錄升級為現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 伺服器執行個體。 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 系統會匯入、重設或重建全文檢索索引 (如果有的話)。 
+  **upgrade_option** 伺服器屬性會控制此伺服器執行個體在這些資料庫升級期間所使用的全文檢索升級選項。  
   
  當您將任何 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫附加、還原或複製到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]時，該資料庫會立即可用，然後自動升級。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入] 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。  
   
- **變更伺服器執行個體的全文檢索升級行為**  
+ **變更伺服器實例的全文檢索升級行為**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]:使用 [sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql) 的 **upgrade\_option** 動作  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]：使用[sp\_全文\_檢索服務](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)的**\_升級選項**動作  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **：** 使用 [伺服器屬性]  對話方塊的 [全文檢索升級選項]  。 如需詳細資訊，請參閱 [管理及監視伺服器執行個體的全文檢索搜尋](manage-and-monitor-full-text-search-for-a-server-instance.md)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**:** 使用 [**伺服器屬性**] 對話方塊的 [**全文檢索升級選項**]。 如需詳細資訊，請參閱 [管理及監視伺服器執行個體的全文檢索搜尋](manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
-##  <a name="Considerations_for_Restore"></a> 還原 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文檢索目錄的考量 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="Considerations_for_Restore"></a>將[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]全文檢索目錄還原至的考慮[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  將全文檢索資料從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的其中一種方法是將完整資料庫備份還原至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  匯入 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文檢索目錄時，您可以備份和還原資料庫與目錄檔案。 此行為與 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的行為相同：  
@@ -150,7 +155,7 @@ ms.locfileid: "66010954"
   
  如需備份和還原 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文檢索目錄的詳細資訊，請參閱《 [線上叢書》中的](https://go.microsoft.com/fwlink/?LinkId=121052) 備份與還原全文檢索目錄 [和](https://go.microsoft.com/fwlink/?LinkId=121053)檔案備份、還原及全文檢索目錄 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中還原資料庫時，系統會針對此全文檢索目錄建立新的資料庫檔案。 這個檔案的預設名稱為 ftrow_*catalog-name*.ndf。 例如，如果您的 *catalog-name* 是 `cat1`， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫檔案的預設名稱會是 `ftrow_cat1.ndf`。 但是，如果預設名稱已經用於目標目錄中，新的資料庫檔案就會命名為 `ftrow_`*catalog-name*`{`*GUID*`}.ndf`，其中 *GUID* 是新檔案的全域唯一識別碼。  
+ 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中還原資料庫時，系統會針對此全文檢索目錄建立新的資料庫檔案。 這個檔案的預設名稱為 ftrow_*catalog-name*.ndf。 例如，如果您的 *catalog-name* 是 `cat1`， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫檔案的預設名稱會是 `ftrow_cat1.ndf`。 但是，如果預設名稱已經用於目標目錄中，新的資料庫檔案就會命名為`ftrow_` *catalog-name*`{`*guid*`}.ndf`，其中*guid*是新檔案的全域唯一識別碼。  
   
  匯入目錄之後，會更新 **sys.database_files** 和 **sys.master_files**以移除目錄項目，而且 **sys.fulltext_catalogs** 中的 **path** 資料行會設成 NULL。  
   
@@ -158,7 +163,7 @@ ms.locfileid: "66010954"
   
 -   [完整資料庫備份 &#40;SQL Server&#41;](../backup-restore/full-database-backups-sql-server.md)  
   
--   [交易記錄備份 &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md) (僅限完整復原模式)  
+-   [&#40;SQL Server&#41;的交易記錄備份](../backup-restore/transaction-log-backups-sql-server.md)（僅限完整復原模式）  
   
  **還原資料庫備份**  
   
@@ -167,11 +172,12 @@ ms.locfileid: "66010954"
 -   [完整資料庫還原 &#40;完整復原模式&#41;](../backup-restore/complete-database-restores-full-recovery-model.md)  
   
 ### <a name="example"></a>範例  
- 下列範例會在 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 陳述式中使用 MOVE 子句來還原名為 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的 `ftdb1`資料庫。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫、記錄和目錄檔案都會移至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 伺服器執行個體上的新位置，如下所示：  
+ 下列範例會在 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 陳述式中使用 MOVE 子句來還原名為 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的 `ftdb1`資料庫。 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫、記錄和目錄檔案都會移至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 伺服器執行個體上的新位置，如下所示：  
   
 -   資料庫檔案 `ftdb1.mdf`會移至 `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL12.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`。  
   
--   記錄檔 `ftdb1_log.ldf`會移至記錄磁碟機上的記錄目錄： *log_drive*`:\`*log_directory*`\ftdb1_log.ldf`。  
+-   記錄`ftdb1_log.ldf`檔會移至記錄磁片磁碟機上的記錄檔目錄， *log_drive*`:\`*log_directory*`\ftdb1_log.ldf`。  
   
 -   對應至 `sysft_cat90` 目錄的目錄檔案會移至 `C:\temp`。 匯入全文檢索索引之後，它們會自動放置於資料庫檔案 C:\ftrow_sysft_cat90.ndf 中，而且系統會刪除 C:\temp。  
   
@@ -182,17 +188,17 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
     MOVE N'sysft_cat90' TO N'C:\temp';  
 ```  
   
-##  <a name="Attaching_2005_ft_catalogs"></a> 附加 SQL Server 2005 資料庫 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="Attaching_2005_ft_catalogs"></a>將 SQL Server 2005 資料庫附加至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中，全文檢索目錄是參考一組全文檢索索引的邏輯概念。 全文檢索目錄是不屬於任何檔案群組的虛擬物件。 不過，當您將包含全文檢索目錄檔案的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫附加至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 伺服器執行個體時，系統就會從先前的位置附加這些目錄檔案以及其他資料庫檔案，此行為與 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的行為相同。  
   
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 上，每個所附加之全文檢索目錄的狀態都與從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中卸離資料庫時的狀態相同。 如果卸離作業暫停了任何全文檢索索引母體擴展，就會在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]上繼續進行母體擴展，而且全文檢索索引會變成可用於全文檢索搜尋。  
   
- 如果 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 找不到全文檢索目錄檔案，或者在附加作業期間移動了全文檢索檔案，但沒有指定新的位置，此行為就會取決於選取的全文檢索升級選項。 如果全文檢索升級選項是 [匯入]  或 [重建]  ，系統就會重建附加的全文檢索目錄。 如果全文檢索升級選項是 [重設]  ，系統就會重設附加的全文檢索目錄。  
+ 如果 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 找不到全文檢索目錄檔案，或者在附加作業期間移動了全文檢索檔案，但沒有指定新的位置，此行為就會取決於選取的全文檢索升級選項。 如果全文檢索升級選項是 [匯入]**** 或 [重建]****，系統就會重建附加的全文檢索目錄。 如果全文檢索升級選項是 [重設]****，系統就會重設附加的全文檢索目錄。  
   
  如需卸離和附加資料庫的詳細資訊，請參閱[資料庫卸離和附加 &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)、[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)、[sp_attach_db](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql) 和 [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)。  
   
 ## <a name="see-also"></a>另請參閱  
- [全文檢索搜尋使用者入門](get-started-with-full-text-search.md)   
+ [全文檢索搜尋入門](get-started-with-full-text-search.md)   
  [設定及管理搜尋的斷詞工具與字幹分析器](configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [設定及管理搜尋的篩選](configure-and-manage-filters-for-search.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 其他語言的錯誤處理 |Microsoft Docs
+title: 處理其他語言的錯誤 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.assetid: 8c57f35e-3c04-4f17-bf3e-3ad053951530
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 83d9430dc368a3dc9eb93719f9698b0d39b1385b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925161"
 ---
 # <a name="handling-errors-in-other-languages"></a>處理其他語言的錯誤
-到目前為止，這一節已說明從 Microsoft® Visual Basic® 觀點來看的錯誤。 本節的其餘部分將提供 Visual Basic 以外的語言中的錯誤處理的概觀。  
+到目前為止，本節討論了 Microsoft® Visual Basic®觀點的錯誤。 本節的其餘部分將概述 Visual Basic 以外的語言中的錯誤處理。  
   
  此章節包含下列主題。  
   

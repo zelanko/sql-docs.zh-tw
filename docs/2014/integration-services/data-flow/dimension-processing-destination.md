@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f4aaaef619e0f8ae5810e70e9a6707c6213268d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890562"
 ---
 # <a name="dimension-processing-destination"></a>維度處理目的地
-  「維度處理」目的地會載入及處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 維度。 如需維度的詳細資訊，請參閱[維度 &#40;Analysis Services - 多維度資料&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data)。  
+  「維度處理」目的地會載入及[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]處理維度。 如需維度的詳細資訊，請參閱[維度 &#40;Analysis Services - 多維度資料&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data)。  
   
  「維度處理」目的地包含下列功能：  
   
@@ -46,11 +46,11 @@ ms.locfileid: "68890562"
   
  如需有關 **[維度處理目的地編輯器]** 對話方塊中可設定之屬性的詳細資訊，請按一下下列主題之一：  
   
--   [維度處理目的地編輯器 &#40;連接管理員頁面&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
+-   [維度處理目的地編輯器 &#40;連線管理員頁面&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
   
 -   [維度處理目的地編輯器 &#40;對應頁面&#41;](../dimension-processing-destination-editor-mappings-page.md)  
   
--   [維度處理目的地編輯器 &#40;進階頁面&#41;](../dimension-processing-destination-editor-advanced-page.md)  
+-   [維度處理目的地編輯器 &#40;Advanced Page&#41;](../dimension-processing-destination-editor-advanced-page.md)  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按一下下列其中一個主題：  
   

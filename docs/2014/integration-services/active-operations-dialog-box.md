@@ -1,5 +1,5 @@
 ---
-title: Active Operations Dialog Box |Microsoft Docs
+title: 作用中的作業對話方塊 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062215"
 ---
 # <a name="active-operations-dialog-box"></a>作用中的作業對話方塊
@@ -37,13 +37,13 @@ ms.locfileid: "66062215"
   
 2.  連接 Microsoft SQL Server Database Engine  
   
-3.  在 [物件總管] 中，展開 **[Integration Services]** 節點，再以滑鼠右鍵按一下 **[SSISDB]**，然後按一下 **[作用中的作業]**。  
+3.  在 [物件總管] 中，展開 **[Integration Services]** 節點，再以滑鼠右鍵按一下 **[SSISDB]** ，然後按一下 **[作用中的作業]** 。  
   
 ##  <a name="options"></a> 設定選項  
   
 ### <a name="options"></a>選項。  
  **型別**  
- 指定作業的類型。 以下是可能的值為**型別**欄位和 TRANSACT-SQL 的 operations_type 資料行中的對應值`catalog.operations`檢視。  
+ 指定作業的類型。 以下是 [**類型**] 欄位的可能值，以及 transact-sql `catalog.operations`視圖的 [operations_type] 資料行中的對應值。  
   
 |||  
 |-|-|  

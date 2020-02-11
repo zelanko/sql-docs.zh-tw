@@ -14,10 +14,10 @@ ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 065a8869eff0e88cee5bf0bb110a948f709743d7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251662"
 ---
 # <a name="dqs-administration"></a>dqs 管理
@@ -51,7 +51,7 @@ ms.locfileid: "75251662"
  
   **中的** [活動監控] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 畫面會顯示關於在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上執行之每個活動的詳細資訊。 資料管理人主要使用這個畫面，對 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 應用程式連接的 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 上執行的所有活動執行高階監視。 這個畫面不提供任何系統層級的監視。 此外，這個畫面也可以讓 DQS 系統管理員透過終止正在執行的活動或停止活動中正在執行的程序 (如有需要)，控制某個活動或某個活動中的程序。 系統會顯示知識探索、定義域管理、比對原則、清理、比對，以及 SQL Server Integration Services (SSIS) 式清理的資料。  
   
-### <a name="configuration"></a>設定  
+### <a name="configuration"></a>組態  
  
   **中的** [組態] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 畫面可讓 DQS 系統管理員進行下列操作：  
   
@@ -78,13 +78,13 @@ ms.locfileid: "75251662"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|描述如何監控 DQS 中的活動。|[監視 DQS 活動](../data-quality-services/monitor-dqs-activities.md)|  
+|描述如何監控 DQS 中的活動。|[監控 DQS 活動](../data-quality-services/monitor-dqs-activities.md)|  
 |描述如何在 DQS 中設定參考資料設定。|[設定 DQS 使用參考資料](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
 |描述如何設定清理與比對活動的臨界值。|[設定清理和比對的臨界值](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
 |描述如何啟用或停用 DQS 中的通知。|[在 DQS 中啟用或停用分析通知](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
-|描述如何根據事件的嚴重性層級設定 DQS 記錄。|[設定 DQS 記錄檔的嚴重性層級](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
+|描述如何根據事件的嚴重性層級設定 DQS 記錄。|[為 DQS 記錄檔設定嚴重性層級](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
 |描述如何設定 DQS 記錄的進階設定。|[設定 DQS 記錄檔的進階設定](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
-|描述如何備份與還原 DQS 資料庫。|[備份與還原 DQS 資料庫](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
+|描述如何備份與還原 DQS 資料庫。|[備份及還原 DQS 資料庫](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |描述如何卸離及附加 DQS 資料庫。|[卸離和附加 DQS 資料庫](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
 ## <a name="see-also"></a>另請參閱  

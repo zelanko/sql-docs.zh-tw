@@ -13,10 +13,10 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 89c71bd3864fcaa682d3587a54fc2b32c26e5659
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255587"
 ---
 # <a name="create-a-composite-domain"></a>建立複合定義域
@@ -29,14 +29,14 @@ ms.locfileid: "75255587"
   
  在您建立複合定義域之後，可以變更複合定義域的屬性、將參考資料服務附加至定義域、建立跨定義域規則或建立值關聯。 若要這樣做，請在 **[定義域管理]** 頁面的 **[定義域]** 清單中選取複合定義域，然後選取適當的索引標籤。  
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a>要求  
+###  <a name="Prerequisites"></a> 必要條件  
  為了建立複合定義域，您必須已經建立及開啟知識庫，而且至少已經建立兩個單一定義域，以便將其加入至複合定義域。  
   
-###  <a name="Security"></a>安全級  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a>無權  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能建立複合定義域。  
   
 ##  <a name="ParsingKnowledgeDiscoveryActivity"></a>在知識探索活動中建立複合定義域  
@@ -69,7 +69,7 @@ ms.locfileid: "75255587"
   
 6.  在 **[定義域清單]** 中，選取將屬於複合定義域之一部分的定義域，並按一下向右箭號，將其移到 **[複合定義域中的定義域]** 資料表。  
   
-7.  按一下 [確定]****。  
+7.  按一下 [確定]  。  
   
 ##  <a name="CompositeDomainProperties"></a>設定複合定義域屬性  
   
@@ -77,7 +77,7 @@ ms.locfileid: "75255587"
   
 2.  在 **[定義域清單]** 中，選取將屬於複合定義域之一部分的定義域，並按一下向右箭號，將其移到 **[複合定義域中的定義域]** 資料表。 這是單一定義域的清單，您可將其加入至您所建立的複合定義域。 只有已經建立而且尚未加入至現有複合定義域的單一定義域才可使用。 單一定義域不能加入至知識庫內一個以上的複合定義域，而且複合定義域不能加入至另一個複合定義域。  
   
-3.  按一下 **[進階]**。  
+3.  按一下 **[進階]** 。  
   
 4.  針對 **[剖析方法]** 選取下列其中一項：  
   

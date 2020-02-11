@@ -18,16 +18,16 @@ ms.assetid: 4202165e-b89c-47a5-ae59-0c98988caad5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 753489fe50b6d36f2ac6a6ef1167ecf8f1a6d976
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019429"
 ---
 # <a name="installing-and-configuring"></a>安裝和設定
-若要下載 Visual FoxPro ODBC Driver，請參閱[Visual FoxPro ODBC Driver 下載網站](https://go.microsoft.com/fwlink/?LinkId=121318)。  
+若要下載 Visual FoxPro ODBC 驅動程式，請參閱[Visual FOXPRO Odbc driver 下載網站](https://go.microsoft.com/fwlink/?LinkId=121318)。  
   
- 本節包含可協助您安裝和設定 Microsoft Visual FoxPro ODBC Driver 的下列主題：  
+ 本節包含下列主題，可協助您安裝和設定 Microsoft Visual FoxPro ODBC 驅動程式：  
   
 -   [系統需求](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)  
   
@@ -37,4 +37,4 @@ ms.locfileid: "68019429"
   
 -   [ODBC Visual FoxPro 設定對話方塊](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)  
   
- 若要下載此驅動程式，請參閱[Visual FoxPro ODBC Driver 下載網站](https://go.microsoft.com/fwlink/?LinkId=121318)。
+ 若要下載驅動程式，請參閱[Visual FOXPRO ODBC driver 下載網站](https://go.microsoft.com/fwlink/?LinkId=121318)。

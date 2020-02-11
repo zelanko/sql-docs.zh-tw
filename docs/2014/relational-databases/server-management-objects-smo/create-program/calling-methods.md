@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c3a004d30a5edb20da77e6f93bf51a94472419b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192166"
 ---
 # <a name="calling-methods"></a>呼叫方法
-  方法會執行特定工作相關的物件，例如發出`Checkpoint`上的資料庫，或要求的執行個體的登入的列舉的清單[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  方法會執行與物件相關的特定工作，例如`Checkpoint`在資料庫上發出，或要求實例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的登入列舉清單。  
   
  方法會在物件上執行作業。 方法可以採用參數，而且通常有一個傳回值。 傳回值可以是簡單資料類型、複雜物件，或包含許多成員的結構。  
   
@@ -55,7 +55,8 @@ db.Create();
  }  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-basic"></a>在 Visual Basic 中搭配參數使用 SMO 方法  
- <xref:Microsoft.SqlServer.Management.Smo.Table> 物件有一個稱為 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A> 的方法。 此方法需要指定 `FillFactor`的數值參數。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Table> 物件有一個稱為 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A> 的方法。 此方法需要指定 `FillFactor`的數值參數。  
   
 ```  
 Dim srv As Server  
@@ -66,7 +67,8 @@ tb.RebuildIndexes(70)
 ```  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-c"></a>在 Visual C# 中搭配參數使用 SMO 方法  
- <xref:Microsoft.SqlServer.Management.Smo.Table> 物件有一個稱為 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A> 的方法。 此方法需要指定 `FillFactor`的數值參數。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Table> 物件有一個稱為 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A> 的方法。 此方法需要指定 `FillFactor`的數值參數。  
   
 ```  
 {   
@@ -81,7 +83,8 @@ tb.RebuildIndexes(70);
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-basic"></a>在 Visual Basic 中使用傳回 DataTable 物件的列舉方法  
  本節描述如何呼叫列舉方法，以及如何處理傳回之 <xref:System.Data.DataTable> 物件中的資料。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法會傳回 <xref:System.Data.DataTable> 物件，此物件需要進一步導覽，才能存取有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的所有可用定序資訊。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法會傳回 <xref:System.Data.DataTable> 物件，此物件需要進一步導覽，才能存取有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的所有可用定序資訊。  
   
 ```  
 'Connect to the local, default instance of SQL Server.  
@@ -105,7 +108,9 @@ Next
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-c"></a>在 Visual C# 中使用傳回 DataTable 物件的列舉方法  
  本節描述如何呼叫列舉方法，以及如何處理傳回之 <xref:System.Data.DataTable> 物件中的資料。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法會傳回系統 <xref:System.Data.DataTable> 物件。 <xref:System.Data.DataTable> 物件需要進一步導覽，才能存取有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的所有可用定序資訊。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 方法會傳回系統 <xref:System.Data.DataTable> 物件。 
+  <xref:System.Data.DataTable> 物件需要進一步導覽，才能存取有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的所有可用定序資訊。  
   
 ```  
 //Connect to the local, default instance of SQL Server.   
@@ -129,12 +134,14 @@ foreach ( r in d.Rows) {
 ```  
   
 ## <a name="constructing-an-object-in-visual-basic"></a>在 Visual Basic 中建構物件  
- 任何物件的建構函式都可以使用 `New` 運算子來呼叫。 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件建構函式會超載，而範例中所使用的 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件建構函式版本會採用兩個參數：資料庫所屬的 <xref:Microsoft.SqlServer.Management.Smo.Server> 父物件，以及代表新資料庫名稱的字串。  
+ 任何物件的建構函式都可以使用 `New` 運算子來呼叫。 
+  <xref:Microsoft.SqlServer.Management.Smo.Database> 物件建構函式會超載，而範例中所使用的 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件建構函式版本會採用兩個參數：資料庫所屬的 <xref:Microsoft.SqlServer.Management.Smo.Server> 父物件，以及代表新資料庫名稱的字串。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBMethods4](SMO How to#SMO_VBMethods4)]  -->  
   
 ## <a name="constructing-an-object-in-visual-c"></a>在 Visual C# 中建構物件  
- 任何物件的建構函式都可以使用 `New` 運算子來呼叫。 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件建構函式會超載，而範例中所使用的 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件建構函式版本會採用兩個參數：資料庫所屬的 <xref:Microsoft.SqlServer.Management.Smo.Server> 父物件，以及代表新資料庫名稱的字串。  
+ 任何物件的建構函式都可以使用 `New` 運算子來呼叫。 
+  <xref:Microsoft.SqlServer.Management.Smo.Database> 物件建構函式會超載，而範例中所使用的 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件建構函式版本會採用兩個參數：資料庫所屬的 <xref:Microsoft.SqlServer.Management.Smo.Server> 父物件，以及代表新資料庫名稱的字串。  
   
 ```  
 {   
@@ -156,12 +163,14 @@ Console.WriteLine(d.Name);
 ```  
   
 ## <a name="copying-an-smo-object-in-visual-basic"></a>在 Visual Basic 中複製 SMO 物件  
- 此程式碼範例使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法來建立 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件的複本。 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接。  
+ 此程式碼範例使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法來建立 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件的複本。 
+  <xref:Microsoft.SqlServer.Management.Smo.Server> 物件代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VCMethods6](SMO How to#SMO_VCMethods6)]  -->  
   
 ## <a name="copying-an-smo-object-in-visual-c"></a>在 Visual C# 中複製 SMO 物件  
- 此程式碼範例使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法來建立 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件的複本。 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接。  
+ 此程式碼範例使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法來建立 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件的複本。 
+  <xref:Microsoft.SqlServer.Management.Smo.Server> 物件代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接。  
   
 ```  
 {   

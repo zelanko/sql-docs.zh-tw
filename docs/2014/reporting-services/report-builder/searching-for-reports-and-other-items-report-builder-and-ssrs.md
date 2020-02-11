@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 76746ade9222257bcea6962c180ea12a01ff8afa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107644"
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>搜尋報表和其他項目 (報表產生器及 SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66107644"
 > [!NOTE]  
 >  執行檔案系統的搜尋，不會傳回報表伺服器所管理項目的搜尋結果。  
   
--   若要在報表管理員中搜尋項目，請在頁首的 [搜尋]  文字方塊中鍵入搜尋字串。 搜尋會由資料夾階層的最上層節點開始，然後沿著每一個分支繼續搜尋。 如果您沒有存取特定分支的權限，則會略過該分支。 這適用於其他使用者專屬的 [我的報表] 資料夾，以及通常無法使用的其他資料夾。 只有您有權檢視的報表和項目，才會包含在搜尋結果中。  
+-   若要在報表管理員中搜尋項目，請在頁首的 [搜尋]**** 文字方塊中鍵入搜尋字串。 搜尋會由資料夾階層的最上層節點開始，然後沿著每一個分支繼續搜尋。 如果您沒有存取特定分支的權限，則會略過該分支。 這適用於其他使用者專屬的 [我的報表] 資料夾，以及通常無法使用的其他資料夾。 只有您有權檢視的報表和項目，才會包含在搜尋結果中。  
   
 -   若要依名稱或描述來搜尋項目，請指定想要符合的完整或部分文字。 搜尋字串不區分大小寫。 您不可以使用搜尋運算子，例如加號 (+) 或減號 (-)，來要求或排除搜尋準則。  
   
@@ -33,9 +33,9 @@ ms.locfileid: "66107644"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [在報表管理員中尋找及檢視報表 &#40;報表產生器及 SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)   
- [使用我的報表 &#40;報表產生器及 SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)   
+ [在報表管理員 &#40;報表產生器和 SSRS 中尋找及查看報表&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)   
+ [使用我的報表 &#40;報表產生器和 SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [開啟及關閉報表 &#40;報表管理員&#41;](../reports/open-and-close-a-report-report-manager.md)  
+ [開啟並關閉報表 &#40;報表管理員&#41;](../reports/open-and-close-a-report-report-manager.md)  
   
   

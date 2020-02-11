@@ -1,5 +1,5 @@
 ---
-title: xp_logevent (TRANSACT-SQL) |Microsoft Docs
+title: xp_logevent （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 77275ee539a6367d7e2e04d03354155a5eff721d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68116635"
 ---
-# <a name="xplogevent-transact-sql"></a>xp_logevent (Transact-SQL)
+# <a name="xp_logevent-transact-sql"></a>xp_logevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  使用者定義的訊息記錄在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄檔和 Windows 事件檢視器中。 xp_logevent 可用來傳送警示，而不需要將訊息傳送至用戶端。  
+  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄檔和 Windows 事件檢視器中記錄使用者定義的訊息。 xp_logevent 可以用來傳送警示，而不需要傳送訊息給用戶端。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +42,11 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  *error_number*  
  這是使用者自訂的錯誤號碼 (大於 50,000)。 最大值是 2147483647 (2^31 - 1)。  
   
- **'** *訊息* **'**  
+ **'** *message* **'**  
  這是字元字串，最多 2048 個字元。  
   
  **'** *嚴重性* **'**  
- 是三個字元字串的其中一個：INFORMATIONAL、 WARNING 或 ERROR。 *嚴重性*是選擇性的預設值為 INFORMATIONAL。  
+ 這是三個字元字串的其中一個：INFORMATIONAL、WARNING 或 ERROR。 *嚴重性*是選擇性的，預設值是資訊。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -57,9 +57,9 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  `The command(s) completed successfully.`  
   
 ## <a name="remarks"></a>備註  
- 當您將傳送來自[!INCLUDE[tsql](../../includes/tsql-md.md)]程序、 觸發程序、 批次，並依此類推，而不是 xp_logevent 中使用 RAISERROR 陳述式。 xp_logevent 不會呼叫用戶端的訊息處理常式或 set @@ERROR。 若要將訊息寫入 Windows 事件檢視器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中，請執行 RAISERROR 陳述式。  
+ 當您從[!INCLUDE[tsql](../../includes/tsql-md.md)]程式、觸發程式、批次等傳送訊息時，請使用 RAISERROR 語句，而不是 xp_logevent。 xp_logevent 不會呼叫用戶端的訊息處理常式或設定 @@ERROR。 若要將訊息寫入 Windows 事件檢視器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中，請執行 RAISERROR 陳述式。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 master 資料庫中 db_owner 固定資料庫角色中的成員資格，或系統管理員 (sysadmin) 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
@@ -77,9 +77,9 @@ EXEC xp_logevent 60000, @@MESSAGE, informational;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
+ [PRINT &#40;Transact-sql&#41;](../../t-sql/language-elements/print-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [一般擴充預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
+ [&#40;Transact-sql 的一般擴充預存程式&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

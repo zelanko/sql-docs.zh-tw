@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 24a180fde90ff406d40a0f0c89bf82dfe5138b88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097865"
 ---
-# <a name="connectionpoolsize-property-wmi-msreportserverconfigurationsetting"></a>ConnectionPoolSize 屬性 (WMI MSReportServer_ConfigurationSetting)
+# <a name="connectionpoolsize-property-wmi-msreportserver_configurationsetting"></a>ConnectionPoolSize 屬性 (WMI MSReportServer_ConfigurationSetting)
   報表伺服器用來與主控報表伺服器資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體進行通訊的連接集區大小。 唯讀。  
   
 ## <a name="syntax"></a>語法  
@@ -39,13 +39,13 @@ public UInt32 ConnectionPoolSize;
 ```  
   
 ## <a name="property-values"></a>屬性值  
- 唯讀**整數**會傳回值的物件`768`。  
+ 唯讀的**整數**物件，會傳回的`768`值。  
   
 ## <a name="example-code"></a>範例程式碼  
  [MSReportServer_ConfigurationSetting 類別](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

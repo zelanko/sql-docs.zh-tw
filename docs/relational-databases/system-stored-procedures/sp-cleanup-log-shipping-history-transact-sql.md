@@ -1,5 +1,5 @@
 ---
-title: sp_cleanup_log_shipping_history (TRANSACT-SQL) |Microsoft Docs
+title: sp_cleanup_log_shipping_history （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7470baabb9a35a923995d8306b314f9272de0b5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070373"
 ---
-# <a name="spcleanuplogshippinghistory-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-SQL)
+# <a name="sp_cleanup_log_shipping_history-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   這個預存程序會根據保留期限來清除本機和監視伺服器的記錄。  
@@ -41,9 +41,9 @@ sp_cleanup_log_shipping_history
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @agent_id = ] 'agent_id',` 備份的主要識別碼或來複製或還原的次要識別碼。 *agent_id*已**uniqueidentifier**不能是 NULL。  
+`[ @agent_id = ] 'agent_id',`用於備份的主要識別碼，或用於複製或還原的次要識別碼。 *agent_id*是**uniqueidentifier** ，不能是 Null。  
   
-`[ @agent_type = ] 'agent_type'` 記錄傳送作業的類型。 0 = 備份、1 = 複製、2 = 還原。 *agent_type*已**tinyint**不能是 NULL。  
+`[ @agent_type = ] 'agent_type'`記錄傳送作業的類型。 0 = 備份、1 = 複製、2 = 還原。 *agent_type*是**Tinyint** ，不能是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -52,10 +52,10 @@ sp_cleanup_log_shipping_history
  無。  
   
 ## <a name="remarks"></a>備註  
- **sp_cleanup_log_shipping_history**必須從執行**主要**任何記錄傳送伺服器上的資料庫。 這個預存程序會清除本機和遠端副本**log_shipping_monitor_history_detail**並**log_shipping_monitor_error_detail**根據歷程記錄保留期限。  
+ **sp_cleanup_log_shipping_history**必須從任何記錄傳送伺服器上的**master**資料庫中執行。 這個預存程式會根據歷程記錄保留期限，清除**log_shipping_monitor_history_detail**和**log_shipping_monitor_error_detail**的本機和遠端複本。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
   
 ## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

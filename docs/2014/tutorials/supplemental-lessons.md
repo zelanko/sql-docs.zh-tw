@@ -10,11 +10,11 @@ ms.assetid: 2018456f-b4a6-496c-89fb-043c62d8b82e
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 9a6565fb4b9736fa710054582a2293d6b102a0da
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 70640df678dcd6ee48145912504e542d62e2ae75
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891313"
 ---
 # <a name="supplemental-lessons"></a>補充課程
@@ -28,6 +28,6 @@ ms.locfileid: "68891313"
 |課程|完成時間|  
 |------------|----------------------|  
 |[使用資料列篩選器實作動態安全性](../../2014/tutorials/implement-dynamic-security-by-using-row-filters.md)|30|  
-|[設定 Power View 報表的報表屬性](https://docs.microsoft.com/analysis-services/supplemental-lesson-configure-reporting-properties-for-power-view-reports)|30|  
+|[設定 Power View 報表的報表屬性](../analysis-services/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)|30|  
   
   

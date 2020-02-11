@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 9591b483380d8bfcaea8404cccfa0279d3bcc035
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957192"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>使用 Azure Key Vault 進行可延伸金鑰管理 (SQL Server)
@@ -50,7 +50,7 @@ ms.locfileid: "74957192"
   
  下列影像摘要說明使用金鑰保存庫的 EKM 處理流程。 影像中的程序步驟數字並非用以比對遵循影像的安裝步驟數字。  
   
- ![使用 Azure 金鑰保存庫的 SQL Server EKM](../../../database-engine/media/ekm-using-azure-key-vault.png "使用 Azure 金鑰保存庫的 SQL Server EKM")  
+ ![使用 Azure Key Vault 的 SQL Server EKM](../../../database-engine/media/ekm-using-azure-key-vault.png "使用 Azure Key Vault 的 SQL Server EKM")  
   
 ##  <a name="Step1"></a>步驟1：設定要供 SQL Server 使用的 Key Vault  
  下列步驟可用來設定金鑰保存庫，以搭配 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 提供加密金鑰保護。 組織中可能已使用保存庫。 當保存庫不存在時，可由組織中指定來管理加密金鑰的 Azure 系統管理員建立保存庫、在保存庫中產生非對稱金鑰，然後再授權 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用金鑰。 透過檢閱 [開始使用 Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)及 PowerShell [Azure Key Vault Cmdlet](https://docs.microsoft.com/powershell/module/azurerm.keyvault) 參考，讓自己熟悉如何使用金鑰保存庫服務。  
@@ -100,7 +100,7 @@ ms.locfileid: "74957192"
   
      Azure Key Vault 文件的連結  
   
-    -   [什麼是 Azure Key Vault？](https://go.microsoft.com/fwlink/?LinkId=521401)  
+    -   [什麼是 Azure 金鑰保存庫？](https://go.microsoft.com/fwlink/?LinkId=521401)  
   
     -   [開始使用 Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)  
   
@@ -123,13 +123,12 @@ ms.locfileid: "74957192"
   
 ##  <a name="Step3"></a>步驟3：設定 SQL Server 使用 Key Vault 的 EKM 提供者  
   
-###  <a name="Permissions"></a>無權  
+###  <a name="Permissions"></a> 權限  
  若要完成這整個程序，需要 CONTROL SERVER 權限或 **sysadmin** 固定伺服器角色中的成員資格。 特定動作需要下列權限：  
   
 -   若要建立密碼編譯提供者，需要 CONTROL SERVER 權限或 **sysadmin** 固定伺服器角色中的成員資格。  
   
--   若要變更組態選項及執行 RECONFIGURE 陳述式，您必須取得 ALTER SETTINGS 伺服器層級的權限。 
-  **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
+-   若要變更組態選項及執行 RECONFIGURE 陳述式，您必須取得 ALTER SETTINGS 伺服器層級的權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
 -   若要建立認證，需要 ALTER ANY CREDENTIAL 權限。  
   
@@ -209,17 +208,17 @@ ms.locfileid: "74957192"
   
  如需詳細資訊，請參閱下列：  
   
--   [sp_configure &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+-   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
--   [建立 &#40;Transact-sql&#41;的密碼編譯提供者](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
+-   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
   
--   [&#40;Transact-sql&#41;建立認證](/sql/t-sql/statements/create-credential-transact-sql)  
+-   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
--   [建立非對稱金鑰 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
+-   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
   
--   [建立登入 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-login-transact-sql)  
+-   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
--   [ALTER LOGIN &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
+-   [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
   
 ## <a name="examples"></a>範例  
   
@@ -284,9 +283,9 @@ ms.locfileid: "74957192"
   
      如需詳細資訊，請參閱下列：  
   
-    -   [建立資料庫加密金鑰 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+    -   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
-    -   [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
+    -   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
 ###  <a name="ExampleB"></a>範例 B：使用 Key Vault 中的非對稱金鑰來加密備份  
  自 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]開始，支援加密備份。 下列範例如何建立及還原以資料加密金鑰加密的備份，這個資料加密金鑰受到金鑰保存庫中非對稱金鑰的保護。  
@@ -351,10 +350,10 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [建立 &#40;Transact-sql&#41;的密碼編譯提供者](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
- [&#40;Transact-sql&#41;建立認證](/sql/t-sql/statements/create-credential-transact-sql)   
- [建立非對稱金鑰 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
- [建立對稱金鑰 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
+ [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
  [可延伸金鑰管理 &#40;EKM&#41;](extensible-key-management-ekm.md)   
  [使用 EKM 啟用 TDE](enable-tde-on-sql-server-using-ekm.md)   
  [備份加密](../../backup-restore/backup-encryption.md)   

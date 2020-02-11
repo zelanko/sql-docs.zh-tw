@@ -1,5 +1,5 @@
 ---
-title: 影響分析對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
+title: 影響分析對話方塊（Analysis Services-多維度資料） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080746"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>影響分析對話方塊 (Analysis Services - 多維度資料)
@@ -36,9 +36,9 @@ ms.locfileid: "66080746"
  顯示可能需要處理之相依性物件的類型。  
   
  **影響類型**  
- 顯示處理 [處理]  對話方塊中的物件時，會對相依物件造成的影響。 下表列出可能的處理效果，並註解每一個處理的結果是會導致警告或錯誤。  
+ 顯示處理 [處理]**** 對話方塊中的物件時，會對相依物件造成的影響。 下表列出可能的處理效果，並註解每一個處理的結果是會導致警告或錯誤。  
   
-|影響|Message|  
+|影響|訊息|  
 |------------|-------------|  
 |將清除物件 (取消處理)|警告|  
 |物件將失效|錯誤|  
@@ -47,11 +47,11 @@ ms.locfileid: "66080746"
 |將捨棄索引|警告|  
 |將處理非子物件|警告|  
   
- **處理程序物件**  
+ **處理物件**  
  選取您要進行處理作業的相依性物件。 完成處理作業之後，必須處理未選取的相依性物件。 否則它們將無法使用。  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [處理序 對話方塊&#40;Analysis Services-多維度資料&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
+ [Analysis Services 的設計工具和對話方塊 &#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [進程對話方塊 &#40;Analysis Services-多維度資料&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

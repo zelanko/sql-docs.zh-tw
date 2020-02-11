@@ -1,5 +1,5 @@
 ---
-title: 檢視集合 (ADOX) |Microsoft Docs
+title: Views 集合（ADOX） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,39 +17,39 @@ ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cec2462f8726e7c580a7d6755394c6c3f07c85b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964776"
 ---
 # <a name="views-collection-adox"></a>Views 集合 (ADOX)
-包含所有[檢視](../../../ado/reference/adox-api/view-object-adox.md)的目錄物件。  
+包含目錄的所有[View](../../../ado/reference/adox-api/view-object-adox.md)物件。  
   
 ## <a name="remarks"></a>備註  
- [Append](../../../ado/reference/adox-api/append-method-adox-views.md)方法**檢視**集合都是唯一的 ADOX。 您可以：  
+ **Views**集合的[APPEND](../../../ado/reference/adox-api/append-method-adox-views.md)方法對於 ADOX 而言是唯一的。 您可以：  
   
--   將新的檢視加入至集合**Append**方法。  
+-   使用**Append**方法，將新的視圖加入至集合。  
   
- 其餘的屬性和方法是標準的 ADO 集合。 您可以：  
+ 其餘的屬性和方法都是 ADO 集合的標準。 您可以：  
   
--   集合中具有檢視存取[項目](../../../ado/reference/ado-api/item-property-ado.md)屬性。  
+-   使用[Item](../../../ado/reference/ado-api/item-property-ado.md)屬性存取集合中的 view。  
   
--   傳回包含在集合中的檢視次數[計數](../../../ado/reference/ado-api/count-property-ado.md)屬性。  
+-   使用[Count](../../../ado/reference/ado-api/count-property-ado.md)屬性傳回集合中包含的視圖數目。  
   
--   從集合移除檢視[刪除](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法。  
+-   使用[Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法從集合中移除視圖。  
   
--   更新以反映與目前的資料庫結構描述集合中的物件[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)方法。  
+-   更新集合中的物件，以使用[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法來反映目前的資料庫架構。  
   
  本章節包含下列主題。  
   
 -   [Views 集合屬性、方法和事件](../../../ado/reference/adox-api/views-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [檢視和 Fields 集合範例 (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [Views Append 方法範例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Views 集合、 CommandText 屬性範例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
- [Views Delete 方法範例 (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
- [Views Refresh 方法範例 (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
- [Catalog 物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Views 和 Fields 集合範例（VB）](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
+ [Views Append 方法範例（VB）](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
+ [Views 集合、CommandText 屬性範例（VB）](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
+ [Views Delete 方法範例（VB）](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
+ [Views Refresh 方法範例（VB）](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
+ [Catalog 物件（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [View 物件 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)

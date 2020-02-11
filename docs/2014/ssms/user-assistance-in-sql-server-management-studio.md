@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74684453"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio 中的使用者協助
@@ -69,7 +69,7 @@ ms.locfileid: "74684453"
   
 #### <a name="to-enable-online-search"></a>啟用線上搜尋  
   
-1.  在 **[工具]** 功能表上，按一下 **[選項]**。 在 [選項]**** 對話方塊中，展開 [環境]**** 和 [說明]**** 節點 (必要的話)，再按一下 [線上]****。  
+1.  在 **[工具]** 功能表上，按一下 **[選項]** 。 在 [選項]**** 對話方塊中，展開 [環境]**** 和 [說明]**** 節點 (必要的話)，再按一下 [線上]****。  
   
 2.  在 [載入說明內容時]**** 區域中，選取線上選項。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "74684453"
   
 4.  如果 [Codezone 社群]**** 是您選取的其中一個搜尋提供者，請在 [Codezone 社群]**** 清單中選取及清除適當的項目。  
   
-5.  按一下 [確定]****。  
+5.  按一下 [確定]  。  
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>從 [搜尋] 頁面搜尋 MSDN Online 和 SQL Server 焦點社群  
   

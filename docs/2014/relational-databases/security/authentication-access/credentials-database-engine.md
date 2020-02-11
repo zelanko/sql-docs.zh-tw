@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d42f93735723c81baf837736bfabcda2b1707aae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011833"
 ---
 # <a name="credentials-database-engine"></a>認證 (Database Engine)
@@ -35,10 +35,10 @@ ms.locfileid: "63011833"
   
  系統認證會自動建立並與特定端點關聯。 系統認證的名稱是以兩個雜湊符號 (##) 開頭。  
   
- 如需有關認證的詳細資訊，請參閱 < [sys.credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)目錄檢視。  
+ 如需認證的詳細資訊，請參閱[sys. 認證](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)目錄檢視。  
   
 ## <a name="related-content"></a>相關內容  
- [建立認證](../authentication-access/create-a-credential.md)[建立認證&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
+ [建立認證](../authentication-access/create-a-credential.md)[建立認證 &#40;transact-sql&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
  [保護 SQL Server 的安全](../securing-sql-server.md)  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: bc9b053b62a19cbe2c234f87010ae2a9652fb95c
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74200440"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>初始組態 (PowerPivot for SharePoint)
@@ -24,7 +24,7 @@ ms.locfileid: "74200440"
   
  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  SharePoint 伺服器先使用 SharePoint 安裝程式中的伺服器陣列安裝選項加以安裝。 使用內建資料庫的獨立 SharePoint 伺服器不予支援。 如需詳細資訊，請參閱[在 SharePoint 2010 伺服器陣列中使用 SQL SERVER BI 功能的指導](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)方針。  
   
 > [!IMPORTANT]  
@@ -75,7 +75,7 @@ ms.locfileid: "74200440"
   
 5.  在 [**部署至？**] 中，選取您要加入 PowerPivot 功能支援的 SharePoint web 應用程式。  
   
-6.  按一下 [確定]****。  
+6.  按一下 [確定]  。  
   
 7.  針對其他也支援 PowerPivot 資料存取的 SharePoint Web 應用程式重複以上步驟。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "74200440"
   
 7.  保留預設核取方塊，將服務應用程式 Proxy 加入到預設的服務連接清單。  
   
-8.  按一下 [確定]****。  
+8.  按一下 [確定]  。  
   
 9. 按一下您剛才建立的 Excel Services 應用程式。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "74200440"
   
 13. 清除 [**在資料重新整理時警告**] 核取方塊，以允許預覽 PowerPivot 圖庫中個別工作表的影像。 如果您選擇保留警告，而活頁簿設定指定在開啟時重新整理，您可能會得到警告的單一預覽影像，而不是活頁簿中的頁面。  
   
-14. 按一下 [確定]****。  
+14. 按一下 [確定]  。  
   
 ##  <a name="SSS"></a>步驟5：啟用 Secure Store Service 並設定資料重新整理  
  PowerPivot for SharePoint 需要 Secure Store Service 來儲存認證和無人看管的執行帳戶，以便重新整理資料。 您可以判斷是否已經啟用 Secure Store Service，其方式是確認它是否出現在服務應用程式清單內。  
@@ -190,7 +190,7 @@ ms.locfileid: "74200440"
   
 4.  輸入複雜密碼，然後進行確認。 此複雜密碼將用來加入其他安全存放共用服務應用程式。  
   
-5.  按一下 [確定]****。  
+5.  按一下 [確定]  。  
   
 ##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>第 3 部分：設定自動 PowerPivot 資料重新整理帳戶  
  在資料重新整理期間使用外部資料存取時，通常需要針對 PowerPivot 資料存取建立自動資料重新整理帳戶。 例如，如果未啟用 Kerberos，您必須建立一個自動帳戶，PowerPivot 服務可以使用此帳戶來連接外部資料來源。  
@@ -216,7 +216,7 @@ ms.locfileid: "74200440"
   
 4.  在您找到**PowerPivot 整合網站集合功能**之前，請向下流覽頁面。  
   
-5.  按一下 [啟動]****。  
+5.  按一下 [啟用]  。  
   
 6.  開啟每個網站並按一下 [**網站動作**]，為其他網站集合重複執行。  
   
@@ -258,7 +258,7 @@ ms.locfileid: "74200440"
   
 6.  在 [伺服器名稱] 中，輸入** \<伺服器名稱> \powerpivot**，其中** \<伺服器名稱>** 是具有 PowerPivot for SharePoint 安裝的電腦名稱稱。  
   
-7.  按一下 [連接]****。  
+7.  按一下 [ **連接**]。  
   
 8.  在物件總管中，按一下 [**資料庫**] 以查看已載入的 PowerPivot 資料檔案清單。  
   

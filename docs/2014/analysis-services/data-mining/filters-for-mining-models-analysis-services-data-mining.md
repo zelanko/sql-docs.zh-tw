@@ -1,5 +1,5 @@
 ---
-title: 採礦模型的篩選 (Analysis Services-資料採礦) |Microsoft Docs
+title: 適用于採礦模型的篩選（Analysis Services 資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084433"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>採礦模型的篩選 (Analysis Services - 資料採礦)
@@ -43,14 +43,14 @@ ms.locfileid: "66084433"
   
 -   使用資料採礦設計師中的 **[採礦模型]** 索引標籤並搭配篩選編輯器對話方塊來建立條件。  
   
--   輸入篩選運算式直接將`Filter`採礦模型的屬性。  
+-   直接在「採礦模型」的`Filter`屬性中輸入篩選運算式。  
   
 -   使用分析管理物件 (AMO)，以程式設計方式設定模型的篩選條件。  
   
 ### <a name="creating-model-filters-using-data-mining-designer"></a>使用資料採礦設計師來建立模型篩選  
  您可以變更採礦模型的 `Filter` 屬性，藉以在資料採礦設計師中篩選模型。 您可以直接在 **[屬性]** 窗格中輸入篩選運算式，也可以開啟篩選對話方塊來建立條件。  
   
- 目前提供了兩個篩選對話方塊。 第一個對話方塊可讓您建立套用至案例資料表的條件。 如果資料來源包含多份資料表，您首先要選取一份資料表，然後選取資料行並指定套用至該資料行的運算子與條件。 您可以使用來連結多個條件`AND` / `OR`運算子。 可用來定義值的運算子會因資料行包含離散值或連續值而不同。 例如，如果包含連續值，您就可以使用 `greater than` 和 `less than` 運算子。 不過，如果包含離散值，您就只能使用 `= (equal to)`、`!= (not equal to)` 和 `is null` 運算子。  
+ 目前提供了兩個篩選對話方塊。 第一個對話方塊可讓您建立套用至案例資料表的條件。 如果資料來源包含多份資料表，您首先要選取一份資料表，然後選取資料行並指定套用至該資料行的運算子與條件。 您可以使用`AND` / `OR`運算子來連結多個條件。 可用來定義值的運算子會因資料行包含離散值或連續值而不同。 例如，如果包含連續值，您就可以使用 `greater than` 和 `less than` 運算子。 不過，如果包含離散值，您就只能使用 `= (equal to)`、`!= (not equal to)` 和 `is null` 運算子。  
   
 > [!NOTE]  
 >  不支援 `LIKE` 關鍵字。 如果您想要加入多個離散屬性，就必須建立不同的條件，然後使用 `OR` 運算子來連結它們。  
@@ -62,7 +62,7 @@ ms.locfileid: "66084433"
   
  例如，如果您的案例資料表與客戶有關，而且巢狀資料表顯示某位客戶已經購買的產品，您就可以在巢狀資料表篩選中使用下列語法，藉以針對已經購買特定項目的客戶建立篩選： `[ProductName]='Water Bottle' OR ProductName='Water Bottle Cage'`。  
   
- 您也可以使用 `EXISTS` 或 `NOT EXISTS` 關鍵字和子查詢，藉以篩選巢狀資料表中是否存在特定值。 這可讓您建立 `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`等條件。 如果巢狀資料表至少有一個資料列包含 `EXISTS SELECT(<subquery>)` 值，`Water Bottle` 就會傳回 `true`。  
+ 您也可以使用 `EXISTS` 或 `NOT EXISTS` 關鍵字和子查詢，藉以篩選巢狀資料表中是否存在特定值。 這可讓您建立 `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`等條件。 如果巢狀資料表至少有一個資料列包含 `EXISTS SELECT(<subquery>)` 值，`true` 就會傳回 `Water Bottle`。  
   
  您可以結合案例資料表的條件與巢狀資料表的條件。 例如，下列語法包含案例資料表的條件 (`Age > 30` )、巢狀資料表的子查詢 (`EXISTS (SELECT * FROM Products)`)，以及巢狀資料表的多項條件 (`WHERE ProductName='Milk'  AND Quantity>2`) )。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66084433"
 ### <a name="how-can-i-tell-whether-a-filter-is-being-used"></a>我要如何判斷是否使用篩選？  
  有多種方法可判斷篩選是否套用到模型：  
   
--   在設計工具中，按一下**採礦模型**索引標籤上，開啟**屬性**，並檢視`Filter`採礦模型的屬性。  
+-   在設計工具中，按一下 [**採礦模型**] 索引標籤，開啟 [ `Filter` **屬性**]，然後查看 [採礦模型] 的屬性。  
   
 -   DMV、DMSCHEMA_MINING_MODELS 會輸出包含篩選文字的資料行。 您可以針對 DMV 使用以下查詢來傳回模型的名稱以及其篩選：  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66084433"
 ### <a name="how-can-i-save-a-filter"></a>如何儲存篩選？  
  篩選運算式會儲存成指令碼，並且與相關聯的採礦模型或巢狀資料表一起儲存。 如果您刪除了篩選文字，就只能手動重新建立篩選運算式，才能加以還原。 因此，如果您建立複雜的篩選運算式，就應該建立篩選文字的備份副本。  
   
-### <a name="why-cant-i-see-any-effects-from-the-filter"></a>為什麼看不到任何篩選條件的影響？  
+### <a name="why-cant-i-see-any-effects-from-the-filter"></a>為什麼我看不到篩選準則的任何影響？  
  每當您變更或加入篩選運算式時，就必須重新處理結構和模型，然後才能檢視篩選的效果。  
   
 ### <a name="why-do-i-see-filtered-attributes-in-prediction-query-results"></a>為什麼在預測查詢結果中看到已篩選的屬性？  
@@ -121,7 +121,7 @@ ms.locfileid: "66084433"
  如需在測試採礦模型時如何使用模型篩選的資訊，請參閱 [Choose an Accuracy Chart Type and Set Chart Options](choose-an-accuracy-chart-type-and-set-chart-options.md)(選擇精確度圖表類型及設定圖表選項)。  
   
 ## <a name="see-also"></a>另請參閱  
- [模型篩選語法和範例 &#40;Analysis Services - 資料採礦&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [測試及驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)  
+ [模型篩選語法和範例 &#40;Analysis Services-資料採礦&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)  
   
   

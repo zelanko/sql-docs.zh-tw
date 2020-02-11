@@ -1,5 +1,5 @@
 ---
-title: 發行集資訊，警告 （合併式發行集，SQL Server 2005 和更新版本） |Microsoft Docs
+title: 發行集資訊，警告（合併式發行集，SQL Server 2005 和更新版本） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f849394a4a77091f92ee66857b4d5263875fdea3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021690"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>發行集資訊，警告 (合併式發行集，SQL Server 2005 和更新的版本)
@@ -61,7 +61,7 @@ ms.locfileid: "63021690"
  **警告**  
  與臨界值相關聯之警告的描述。  
   
- **臨界值**  
+ **閾值**  
  指定臨界值的值。  
   
  **[設定警示]**  

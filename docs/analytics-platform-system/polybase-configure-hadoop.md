@@ -1,5 +1,5 @@
 ---
-title: 存取外部資料： Hadoop-PolyBase
+title: 存取外部資料：Hadoop - PolyBase
 description: 說明如何在平行處理資料倉儲中設定 PolyBase，以連線至外部 Hadoop。
 author: mzaman1
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
 ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245386"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>設定 PolyBase 存取 Hadoop 中的外部資料
 
 本文說明如何在 AP 設備上使用 PolyBase 來查詢 Hadoop 中的外部資料。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Cloudera 分散式 Hadoop (CDH)。 Hadoop 的新版本遵循 "Major.Minor.Version" 模式，並且支援所支援主要和次要版本內的所有版本。 支援下列 Hadoop 提供者：
  - Linux/Windows Server 上的 Hortonworks HDP 1.3  
@@ -340,7 +340,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
   
 ![SSDT 中的 PolyBase 物件](media/polybase/external-tables-datasource.png)  
 
-## <a name="next-steps"></a>接下來的步驟
+## <a name="next-steps"></a>後續步驟
 
 如需 Hadoop 安全性設定，請參閱[設定 hadoop 安全性](polybase-configure-hadoop-security.md)。<br>
 如需有關 PolyBase 的詳細資訊，請參閱[什麼是 PolyBase？](../relational-databases/polybase/polybase-guide.md)。 

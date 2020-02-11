@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022241"
 ---
 # <a name="non-sql-server-subscribers"></a>非 SQL Server 訂閱者
@@ -35,12 +35,12 @@ ms.locfileid: "63022241"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
-|[資料庫]|作業系統|提供者|  
+|資料庫|作業系統|提供者|  
 |--------------|----------------------|--------------|  
 |Oracle|Oracle 支援的所有平台|Oracle OLE DB 提供者 (由 Oracle 提供)|  
 |IBM DB2|MVS、AS400、Unix、Linux 與 Windows (不包括 9.x)|Microsoft Host Integration Server (HIS) OLE DB 提供者|  
   
- 如需建立 Oracle 和 IBM DB2, 之訂閱的詳細資訊，請參閱＜ [Oracle Subscribers](oracle-subscribers.md) ＞和＜ [IBM DB2 Subscribers](ibm-db2-subscribers.md)建立方案。  
+ 如需建立 Oracle 和 IBM DB2, 之訂閱的詳細資訊，請參閱＜ [Oracle 訂閱者](oracle-subscribers.md) ＞和＜ [IBM DB2 Subscribers](ibm-db2-subscribers.md)建立方案。  
   
 ## <a name="considerations-for-non-sql-server-subscribers"></a>非 SQL Server 訂閱者之考量  
  當複寫到非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」時，請記住下列考量：  
@@ -49,11 +49,11 @@ ms.locfileid: "63022241"
   
 -   複寫支援將資料表和索引檢視做為資料表發行至非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」(索引檢視無法複寫為索引檢視)。  
   
--   在「新增發行集精靈」中建立發行集，然後使用 [發行集屬性] 對話方塊為非「SQL Server 訂閱者」啟用此發行集時，不會為非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」指定訂閱資料庫中所有物件的擁有者，而對於「 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」，會設為發行集資料庫中對應物件的擁有者。  
+-   在 [新增發行集] 中建立發行集，然後使用 [發行集屬性] 對話方塊為非 SQL Server 的訂閱者啟用時，不會為非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]訂閱者」指定訂閱資料庫中所有物件的擁有[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]者，而對於「訂閱者」，則會設定為發行集資料庫中對應物件的擁有者。  
   
 -   如果發行集要擁有「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」和非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」，則在建立「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」的任何訂閱前，必須為非「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」啟用發行集。  
   
--   依預設，由「快照集代理程式」為非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」產生的指令碼會在 CREATE TABLE 語法中使用未加引號的識別碼。 因此，名稱為 test 的已發行資料表會複寫為 TEST。 若要使用與發行集資料庫中資料表相同的大小寫，請使用「散發代理程式」的 **-QuotedIdentifier** 參數。 如果發行的物件名稱 (如資料表、資料行或條件約束) 包含空格或非「 **訂閱者」端之資料庫版本中的保留字，則還必須使用** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 參數。 如需有關此參數的詳細資訊，請參閱＜ [Replication Distribution Agent](../agents/replication-distribution-agent.md)＞。  
+-   依預設，由「快照集代理程式」為非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」產生的指令碼會在 CREATE TABLE 語法中使用未加引號的識別碼。 因此，名稱為 test 的已發行資料表會複寫為 TEST。 若要使用與發行集資料庫中資料表相同的大小寫，請使用「散發代理程式」的 **-QuotedIdentifier** 參數。 如果發行的物件名稱 (如資料表、資料行或條件約束) 包含空格或非「 **訂閱者」端之資料庫版本中的保留字，則還必須使用** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 參數。 如需有關此參數的詳細資訊，請參閱＜ [複寫散發代理程式](../agents/replication-distribution-agent.md)＞。  
   
 -   「散發代理程式」執行時所用的帳戶必須具有 OLE DB 提供者安裝目錄的讀取權限。  
   
@@ -69,11 +69,11 @@ ms.locfileid: "63022241"
   
 -   如果在發行集中新增或刪除發行項，則必須重新初始化非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」的訂閱。  
   
--   所有非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」支援的條件約束僅為：NULL 和 NOT NULL。 主索引鍵條件約束複寫為唯一的索引。  
+-   所有非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」支援之條件約束僅為：NULL 和 NOT NULL。 主索引鍵條件約束複寫為唯一的索引。  
   
 -   不同資料庫以不同方式處理值 NULL，這會影響空白值、空字串和 NULL 的表示方式。 進而會影響插入到定義了唯一條件約束的資料行之值的行為。 例如，Oracle 在視為唯一的資料行中允許有多個 NULL 值，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在唯一的資料行中只允許有一個 NULL 值。  
   
-     另一個因素是，當資料行定義為 NOT NULL 時，如何處理 NULL 值、空字串和空白值。 如需為「Oracle 訂閱者」解決此問題的詳細資訊，請參閱＜ [Oracle Subscribers](oracle-subscribers.md)＞。  
+     另一個因素是，當資料行定義為 NOT NULL 時，如何處理 NULL 值、空字串和空白值。 如需為「Oracle 訂閱者」解決此問題的詳細資訊，請參閱＜ [Oracle 訂閱者](oracle-subscribers.md)＞。  
   
 -   移除訂閱時，與複寫相關的中繼資料 (交易序號資料表) 不會從非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者刪除。  
   
@@ -87,7 +87,8 @@ ms.locfileid: "63022241"
   
 ### <a name="replication-feature-support"></a>複寫功能支援  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供兩種訂閱類型：發送訂閱和提取訂閱。 非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」必須使用發送訂閱，該訂閱中「散發代理程式」在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端執行。  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供兩種訂閱類型：發送訂閱和提取訂閱。 非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」必須使用發送訂閱，該訂閱中「散發代理程式」在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端執行。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供兩種快照集格式：原生 bcp 模式以及字元模式。 非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」需要字元模式快照集。  
   

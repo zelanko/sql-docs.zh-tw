@@ -12,23 +12,23 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 18798dece1c801ad0cc4854b7fccc15529a56d5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056456"
 ---
-# <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking （SQL 資料倉儲）
+# <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking （SQL 資料倉儲）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  使用**sp_pdw_log_user_data_masking**若要啟用使用者資料遮罩中[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔。 使用者資料遮罩會影響應用裝置上的所有資料庫的陳述式。  
+  使用**sp_pdw_log_user_data_masking** ，在活動記錄中[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]啟用使用者資料遮罩。 使用者資料遮罩會影響設備上所有資料庫上的語句。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔受到**sp_pdw_log_user_data_masking**確定[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔。 **sp_pdw_log_user_data_masking**不會影響資料庫交易記錄檔，或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]錯誤記錄檔。  
+>  受[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] **sp_pdw_log_user_data_masking**影響的活動記錄是特定[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]的活動記錄。 **sp_pdw_log_user_data_masking**不會影響資料庫交易記錄檔[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或錯誤記錄檔。  
   
- **背景：** 在預設組態[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔包含完整[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式，以及在某些情況下可以包含使用者資料包含 operations**插入**， **UPDATE**，和**選取**陳述式。 如果發生在應用裝置上的問題，這可讓分析造成問題，而不需要重現問題的原因。 若要防止使用者資料寫入至[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄，客戶可以選擇使用此預存程序開啟使用者資料遮罩。 陳述式仍會寫入至[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔，但所有可能包含使用者資料的陳述式中的常值會加上遮罩; 取代一些預先定義的常數值。  
+ **背景：**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]在預設設定活動記錄中包含完整[!INCLUDE[tsql](../../includes/tsql-md.md)]的語句，而且在某些情況下，可以包含**INSERT**、 **UPDATE**和**SELECT**語句等作業中包含的使用者資料。 在設備上發生問題時，這會允許分析造成問題的狀況，而不需要重現問題。 為了避免將使用者資料寫入[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄，客戶可以選擇使用這個預存程式來開啟使用者資料遮罩。 這些語句仍然會寫入[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄中，但是語句中可能包含使用者資料的所有常值都會被遮罩;已取代為一些預先定義的常數值。  
   
- 在應用裝置上啟用透明資料加密時，遮罩中的使用者資料[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔會自動開啟。  
+ 在設備上啟用透明資料加密時，會自動開啟 [活動記錄] [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]中的使用者資料遮罩。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,34 +39,34 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```  
   
 #### <a name="parameters"></a>參數  
-`[ @masking_mode = ] masking_mode` 判斷是否已啟用透明資料加密記錄使用者資料遮罩。 *masking_mode*已**int**，而且可以是下列值之一：  
+`[ @masking_mode = ] masking_mode`決定是否啟用透明資料加密記錄使用者資料遮罩。 *masking_mode*是**int**，而且可以是下列其中一個值：  
   
--   0 = 停用，使用者資料會出現在[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔。  
+-   0 = 已停用，使用者資料會[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]出現在活動記錄中。  
   
--   1 = 啟用，使用者資料陳述式出現在[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔，但使用者資料已遮罩。  
+-   1 = 已啟用，使用者資料語句會出現[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]在活動記錄中，但使用者資料已遮罩。  
   
--   2 = 陳述式包含使用者資料不會寫入至[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔。  
+-   2 = 包含使用者資料的[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]語句不會寫入活動記錄中。  
   
- 執行**sp_pdw_ log_user_data_masking**沒有參數傳回做為純量結果集的應用裝置上的 TDE 記錄使用者資料遮罩的目前狀態。  
+ 不使用參數執行**sp_pdw_ log_user_data_masking** ，會以純量結果集的形式傳回設備上 TDE 記錄使用者資料遮罩的目前狀態。  
   
 ## <a name="remarks"></a>備註  
- 遮罩中的使用者資料[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]預先定義的常值中的活動記錄的常值的可取代**選取**和 DML 陳述式，因為它們可以包含使用者資料。 設定*masking_mode* 1 不會加上遮罩中繼資料，例如資料行名稱或資料表名稱。 設定*masking_mode*為 2 會在命令提示字元中移除陳述式與中繼資料，例如資料行名稱或資料表名稱。  
+ 活動記錄中[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]的使用者資料遮罩可讓您使用**SELECT**和 DML 語句中預先定義的常數值來取代常值，因為它們可以包含使用者資料。 將*masking_mode*設定為1並不會遮罩中繼資料，例如資料行名稱或資料表名稱。 將*masking_mode*設定為2時，會移除含有中繼資料的語句，例如資料行名稱或資料表名稱。  
   
- 遮罩中的使用者資料[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔實作方式如下：  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄中的使用者資料遮罩會以下列方式執行：  
   
--   遮罩中的 TDE 」 和 「 使用者資料[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔預設會關閉。 陳述式將不會自動遮罩如果設備上未啟用資料庫加密。  
+-   預設會關閉活動記錄中[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]的 TDE 和使用者資料遮罩。 如果設備上未啟用資料庫加密，將不會自動遮罩這些語句。  
   
--   在應用裝置上啟用 TDE 時，也將會自動開啟中之使用者的資料遮罩[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔。  
+-   在設備上啟用 TDE 會自動開啟活動記錄中[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]的使用者資料遮罩。  
   
--   停用 TDE 不會影響使用者資料遮罩中[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔。  
+-   停用 TDE 不會影響活動記錄中[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]的使用者資料遮罩。  
   
--   您可以明確地啟用使用者資料在遮罩[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]使用的活動記錄**sp_pdw_log_user_data_masking**程序。  
+-   您可以使用**sp_pdw_log_user_data_masking**程式，在活動[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]記錄中明確啟用使用者資料遮罩。  
   
-## <a name="permissions"></a>Permissions  
- 需要的成員資格**sysadmin**固定資料庫角色，或**CONTROL SERVER**權限。  
+## <a name="permissions"></a>權限  
+ 需要**系統管理員（sysadmin** ）固定資料庫角色中的成員資格，或**CONTROL SERVER**許可權。  
   
 ## <a name="example"></a>範例  
- 下列範例會啟用 TDE 記錄檔的使用者資料遮罩應用裝置上。  
+ 下列範例會在設備上啟用 TDE 記錄使用者資料遮罩。  
   
 ```  
 EXEC sp_pdw_log_user_data_masking 1;  

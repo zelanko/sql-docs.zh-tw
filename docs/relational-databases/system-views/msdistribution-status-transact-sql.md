@@ -1,5 +1,5 @@
 ---
-title: MSdistribution_status (TRANSACT-SQL) |Microsoft Docs
+title: MSdistribution_status （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 90d447de-3a4a-4f3e-aeab-e8fff6348361
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8a589583eeef4974a1e3a59bdaec8b63cedb36bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68129584"
 ---
-# <a name="msdistributionstatus-transact-sql"></a>MSdistribution_status (Transact-SQL)
+# <a name="msdistribution_status-transact-sql"></a>MSdistribution_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSdistribution_status**檢視會顯示有關散發資料庫中狀態命令的其他資訊。 這份檢視儲存在散發資料庫中。  
+  [ **MSdistribution_status** ] 視圖會公開散發資料庫中狀態命令的其他資訊。 這份檢視儲存在散發資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -37,7 +37,7 @@ ms.locfileid: "68129584"
 |**DelivCmdsInDistDB**|**int**|傳遞給訂閱者的命令數。|  
   
 ## <a name="see-also"></a>另請參閱  
- [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

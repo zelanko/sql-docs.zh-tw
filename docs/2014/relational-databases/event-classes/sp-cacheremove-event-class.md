@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ec9f519b6326b0c2188663b558ff099cac75c78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63058084"
 ---
 # <a name="spcacheremove-event-class"></a>SP:CacheRemove 事件類別
@@ -34,7 +34,7 @@ ms.locfileid: "63058084"
 |DatabaseName|`nvarchar`|執行預存程序之資料庫的名稱。|35|是|  
 |EventClass|`int`|事件類型 = 36。|27|否|  
 |EventSequence|`int`|要求中的給定事件順序。|51|否|  
-|EventSubClass|`int`|事件子類別的類型：<br /><br /> 1 = 1=compplan 移除。 已從快取移除編譯的查詢計畫。<br /><br /> 2 = 程序快取排清。 從程序快取中移除所有的項目。|21|是|  
+|EventSubClass|`int`|事件子類別的類型：<br /><br /> 1 = Compplan Remove。 已從快取移除編譯的查詢計畫。<br /><br /> 2 = Proc 快取排清。 從程序快取中移除所有的項目。|21|是|  
 |GroupID|`int`|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
 |HostName|`nvarchar`|執行用戶端的電腦名稱。 如果用戶端提供主機名稱，這個資料行就會擴展。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |IsSystem|`int`|指出事件是發生在系統處理序或使用者處理序。 1 = 系統，0 = 使用者。|60|是|  

@@ -15,20 +15,20 @@ ms.assetid: 3328f2f1-b34a-472f-82cf-ad49768ff061
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9e531149af21facd80e9e6ddab19a76c3bdc0fa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088139"
 ---
 # <a name="using-microsoft-internet-information-services"></a>使用 Microsoft Internet Information Services
 > [!IMPORTANT]  
->  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用所提供的 ODBC 驅動程式。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 Oracle 所提供的 ODBC 驅動程式。  
   
- 如果您無法從連接中的 IIS 指令碼 （特別是當您收到 ORA 12641 錯誤），請將下面這一行加入 Sqlnet.ora 檔案：  
+ 如果您無法從 IIS 腳本內連接（特別是當您收到 TNSNAMES.ORA-12641 錯誤時），請將下行新增至 Sqlnet.ora. tnsnames.ora 檔案：  
   
 ```  
 SQLNET.AUTHENTICATION_SERVICES = (none)  
 ```  
   
- 這會停用安全的網路服務，因此您可以使用匿名驗證來進行連接。
+ 這會停用安全網絡服務，讓您可以使用匿名驗證進行連接。
