@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 73e991f46f2cadb0fe7e7e9d10e6e616d2d634c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270725"
 ---
 # <a name="sort-columns"></a>排序資料行
@@ -26,11 +26,11 @@ ms.locfileid: "63270725"
   
 2.  在方格的第二個資料列中，從 **[資料行名稱]** 資料行中選取 **[連接類型]** ，然後從 **[排序順序]** 資料行中選取值。  
   
-## <a name="options"></a>選項  
- **[狀態]**  
+## <a name="options"></a>選項。  
+ **資料行名稱**  
  您想要用來排序的資料行名稱。 您可以針對一或多個資料行進行排序。 不過，您無法針對 **[發行集]** 索引標籤上的 **[目前的平均效能]** 或 **[目前最差效能]** 資料行進行排序，因為這些資料行值的計算方式不同。  
   
- **[排序順序]**  
+ **排序次序**  
  請指定 **[遞增]** 或 **[遞減]** 值。  
   
  **全部清除**  
