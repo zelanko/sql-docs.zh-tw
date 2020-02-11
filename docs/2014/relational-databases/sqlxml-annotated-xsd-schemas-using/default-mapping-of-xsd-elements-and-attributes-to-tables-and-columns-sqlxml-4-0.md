@@ -1,5 +1,5 @@
 ---
-title: XSD 元素和屬性對資料表和資料行 (SQLXML 4.0) 的預設對應 |Microsoft Docs
+title: XSD 元素和屬性對資料表和資料行的預設對應（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -27,20 +27,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 404ae57711a7d8376774c4e5340017f784b916e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013875"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和屬性對資料表和資料行的預設對應 (SQLXML 4.0)
   根據預設，XSD 註解式結構描述中的複雜類型元素會對應到指定之資料庫中具有相同名稱的資料表 (檢視表)，而簡單類型的元素或屬性會對應到資料表中具有相同名稱的資料行。  
   
 ## <a name="examples"></a>範例  
- 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-default-mapping"></a>A. 指定預設對應  
- 在這個範例的 XDR 結構描述中不會指定任何註解。 **\<Person.Contact >** 元素屬於複雜類型，因此，對應至 AdventureWorks 資料庫中的 Person.Contact 資料表的預設值。 所有屬性 (ContactID，FirstName，LastName) 的 **\<Person.Contact >** 項目都屬於簡單類型，而且對應到 Person.Contact 資料表中相同名稱的資料行的預設值。  
+ 在這個範例的 XDR 結構描述中不會指定任何註解。 Person. Contact>元素屬於複雜類型，因此預設會對應到 AdventureWorks 資料庫中的 Person 和 Contact 資料表。 ** \< ** ** \<>person**的所有屬性（ContactID、FirstName、LastName）都是簡單類型，而且預設會對應至 person 資料表中具有相同名稱的資料行。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -77,7 +77,7 @@ ms.locfileid: "66013875"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  部分結果集如下：  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66013875"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. 將 XML 元素對應至資料庫資料行  
- 在此範例中，因為沒有使用註解，因此也會發生預設對應。 **\<Person.Contact >** 元素屬於複雜類型，並將對應至具有相同名稱在資料庫中的資料表。 項目 **\<FirstName >** 並 **\<LastName >** 而**EmployeeID**屬性都屬於簡單類型，因此，對應至具有相同名稱的資料行。 此範例與先前範例唯一的差別在於，這些元素用於對應 FirstName 和 LastName 欄位。  
+ 在此範例中，因為沒有使用註解，因此也會發生預設對應。 Person. Contact>元素屬於複雜型別，而且會對應至資料庫中具有相同名稱的資料表。 ** \< ** 元素** \<FirstName>** 和** \<LastName>** ，而「**員工**名稱」屬性則是簡單類型，因此會對應到具有相同名稱的資料行。 此範例與先前範例唯一的差別在於，這些元素用於對應 FirstName 和 LastName 欄位。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -130,7 +130,7 @@ ms.locfileid: "66013875"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  部分結果集如下：  
   
@@ -145,7 +145,7 @@ ms.locfileid: "66013875"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. 將 XML 元素對應至 XML 資料類型資料行  
- 在此範例中，因為沒有使用註解，因此也會發生預設對應。 **\<Production.ProductModel >** 元素屬於複雜類型，並將對應至具有相同名稱在資料庫中的資料表。 **ProductModelID**屬性屬於簡單類型，因此，對應至具有相同名稱的資料行。 此範例與先前範例唯一的差別在於 **\<指示 >** 項目對應至使用的資料行`xml`使用的資料型別`xsd:anyType`型別。  
+ 在此範例中，因為沒有使用註解，因此也會發生預設對應。 ProductModel>元素屬於複雜類型，而且會對應至資料庫中具有相同名稱的資料表。 ** \< ** **ProductModelID**屬性屬於簡單類型，因此會對應到具有相同名稱的資料行。 這個與先前範例的唯一差異在於，>專案的** \<指示**是使用`xml` `xsd:anyType`類型對應到使用資料類型的資料行。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -161,7 +161,8 @@ ms.locfileid: "66013875"
 </xsd:schema>  
 ```  
   
- `xml` 資料類型是在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中導入。  
+ 
+  `xml` 資料類型是在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中導入。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>針對結構描述測試範例 XPath 查詢  
   
@@ -185,7 +186,7 @@ ms.locfileid: "66013875"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  部分結果集如下：  
   
@@ -204,8 +205,8 @@ ctions">
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [註解式結構描述安全性考量&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [&#40;SQLXML 4.0&#41;的批註式架構安全性考慮](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
  [XML 資料 &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)   
- [SQLXML 4.0 支援 xml 資料類型](../sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
+ [xml 資料類型在 SQLXML 4.0 中的支援](../sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   
   

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 37d0edcabdb0171c8ca83c79080d59fdd8aafb76
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284947"
 ---
 # <a name="execute-package-task"></a>執行封裝工作
@@ -44,7 +44,7 @@ ms.locfileid: "67284947"
  「執行封裝」工作可以執行包含父封裝之相同專案中所含的子封裝。 您可以透過將 **[ReferenceType]** 屬性設定為 **[專案參考]** ，然後設定 **[PackageNameFromProjectReference]** 屬性，以便從專案中選取子封裝。  
   
 > [!NOTE]  
->  [ReferenceType]  選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]  。 如需轉換的詳細資訊，請參閱 [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md) (將專案部署至 Integration Services 伺服器)。  
+>  [ReferenceType]  選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]  。 如需轉換的詳細資訊，請參閱 [將專案部署至 Integration Services 伺服器](../deploy-projects-to-integration-services-server.md)。  
   
  「執行封裝」工作也可執行儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 資料庫中的封裝，以及儲存在檔案系統中的封裝。 此工作使用 OLE DB 連接管理員連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，或使用檔案連接管理員存取檔案系統。 如需詳細資訊，請參閱＜ [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md) ＞和＜ [般檔案連線管理員](../connection-manager/flat-file-connection-manager.md)＞。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67284947"
   
  或者，有時您可能希望父封裝和子封裝當作一個單位一起失敗，或是不要產生其他處理序的額外負擔。 例如，如果子處理序失敗，而父封裝處理序中的後續處理取決於子處理序的成功，則子封裝應該在父封裝的處理序中執行。  
   
- 根據預設，「 執行封裝 」 工作的 ExecuteOutOfProcess 屬性設為`False`，並執行相同的處理序與父封裝中的子封裝。 如果您將此屬性設定為 `True`，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 此外，如果您將此屬性設定為 `True`，則無法在僅限工具安裝中偵錯封裝。 您必須安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 如需詳細資訊，請參閱 [安裝 Integration Services](../install-windows/install-integration-services.md)。  
+ 根據預設，「執行封裝」工作的 ExecuteOutOfProcess 屬性會設定為`False`，而且子封裝會在與父封裝相同的進程中執行。 如果您將此屬性設定為 `True`，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 此外，如果您將此屬性設定為 `True`，則無法在僅限工具安裝中偵錯封裝。 您必須安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 如需詳細資訊，請參閱 [安裝 Integration Services](../install-windows/install-integration-services.md)。  
   
 ## <a name="extending-transactions"></a>延伸交易  
  父封裝使用的交易可延伸至子封裝；因此，這兩種封裝執行的工作都能認可或回復。 例如，根據子封裝執行的資料庫插入，可以認可或回復父封裝所執行的資料庫插入，反之亦然。 如需詳細資訊，請參閱＜ [繼承的事務](../inherited-transactions.md)＞。  
@@ -97,14 +97,14 @@ ms.locfileid: "67284947"
  如需詳細資訊，請參閱 [在子封裝中使用變數和參數的值](../use-the-values-of-variables-and-parameters-in-a-child-package.md)。  
   
 ### <a name="accessing-parent-package-variables"></a>存取父封裝變數  
- 子封裝可藉由使用指令碼工作存取父封裝變數。 當你在 [指令碼工作編輯器]  的 [指令碼]  頁面上輸入父封裝變數的名稱時，變數名稱中請勿加上 **User:** 。 否則，在您執行父封裝時子封裝會找不到該變數。 如需使用指令碼工作存取父封裝變數的詳細資訊，請參閱此部落格文章中， [SSIS:存取父封裝中的變數](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)。  
+ 子封裝可藉由使用指令碼工作存取父封裝變數。 當你在 [指令碼工作編輯器]  的 [指令碼]  頁面上輸入父封裝變數的名稱時，變數名稱中請勿加上 **User:** 。 否則，在您執行父封裝時子封裝會找不到該變數。 如需使用腳本工作存取父封裝變數的詳細資訊，請參閱此 blog 專案[： SSIS .. 存取父封裝中的變數](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)。  
   
 ## <a name="configuring-the-execute-package-task"></a>設定執行封裝工作  
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Execute Package Task Editor](../execute-package-task-editor.md)  
+-   [執行封裝工作編輯器](../execute-package-task-editor.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   
@@ -114,6 +114,6 @@ ms.locfileid: "67284947"
   
 ## <a name="related-content"></a>相關內容  
 
-部落格文章[SSIS:存取父封裝中的變數](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)，andyleonard.blog 上。 
+Blog 專案（SSIS）：在 andyleonard 上[存取父封裝中的變數](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)。 
   
   
