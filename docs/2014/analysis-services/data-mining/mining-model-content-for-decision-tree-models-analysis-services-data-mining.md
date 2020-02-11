@@ -1,5 +1,5 @@
 ---
-title: 決策樹模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft Docs
+title: 決策樹模型的採礦模型內容（Analysis Services 資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee2142c117a2e46b024a7e2bd639e6739ffd00ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083665"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
   本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法的模型專用的採礦模型內容。 如需適用於所有模型類型的一般採礦模型內容說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。 請務必記住，Microsoft 決策樹演算法是一種混合式演算法，可以建立功能非常不同的模型：決策樹可以代表關聯、規則，甚至線性迴歸。 樹狀結構基本上相同，但是您解譯資訊的方式將取決於建立模型的目的。  
   
-##  <a name="bkmk_Top"></a> 了解決策樹模型的結構  
+##  <a name="bkmk_Top"></a>瞭解決策樹模型的結構  
  決策樹模型擁有代表模型及其中繼資料的單一父節點。 父節點下為獨立的樹狀結構，代表您選取的可預測屬性。 例如，如果您設定決策樹模型來預測客戶是否會購買某樣東西，而且提供性別和收入的輸入，此模型就會建立購買屬性的單一樹狀結構，其中包含針對性別和收入相關條件分類的許多分支。  
   
  不過，如果您接著要加入個別的可預測屬性來參與顧客獎勵計畫，此演算法將會在父節點下建立兩個個別的樹狀結構。 其中一個樹狀結構包含購買的分析，而另一個樹狀結構則包含顧客獎勵計畫的分析。  如果您使用決策樹演算法來建立關聯模型，此演算法會為每個要進行預測的產品建立一個個別的樹狀結構，而且該樹狀結構會包含可選取之目標屬性的其他所有產品組合。  
@@ -32,7 +32,7 @@ ms.locfileid: "66083665"
 > [!NOTE]  
 >  如果您的模型包含多個樹狀結構，可以在 **[Microsoft 樹狀檢視器]** 中，一次僅檢視一個樹狀結構。 不過，在 **[一般內容樹狀檢視器]** 中，相同模型中的所有樹狀結構會同時顯示出來。  
   
- ![結構的決策樹模型內容](../media/modelcontentstructure-dt.gif "的決策樹模型內容結構")  
+ ![決策樹的模型內容結構](../media/modelcontentstructure-dt.gif "決策樹的模型內容結構")  
   
  每個可預測屬性的樹狀結構所包含的資訊會描述您選擇的輸入資料行如何影響該特定可預測屬性和結果。 每個樹狀結構開頭都是一個包含可預測屬性的節點 (NODE_TYPE = 9)，後面接著代表輸入屬性的一連串節點 (NODE_TYPE = 10)。 屬性會對應到案例層級的資料行或巢狀資料表資料行的值，這通常是巢狀資料表之 `Key` 資料行中的值。  
   
@@ -45,9 +45,10 @@ ms.locfileid: "66083665"
  Microsoft 決策樹演算法不允許使用連續資料類型當做輸入，因此，如果任何資料行有連續數值資料類型，就會將這些值離散化。 此演算法會在所有連續屬性的分岔點執行自己的離散化。  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會自動選擇儲存連續屬性的方法，不過，您可以控制如何將輸入中的連續值離散化，方法是，將採礦結構資料行的內容類型設定為 `Discretized`，然後設定 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 或 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 屬性。  
+>  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會自動選擇儲存連續屬性的方法，不過，您可以控制如何將輸入中的連續值離散化，方法是，將採礦結構資料行的內容類型設定為 `Discretized`，然後設定 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 或 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 屬性。  
   
-##  <a name="bkmk_ModelContent"></a> 決策樹模型的模型內容  
+##  <a name="bkmk_ModelContent"></a>決策樹模型的模型內容  
  本節僅針對採礦模型內容中與決策樹模型具有特定相關的資料行，提供詳細資料和範例。 如需結構描述資料列集中一般用途資料行的資訊，以及採礦模型術語的說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
   
  MODEL_CATALOG  
@@ -63,7 +64,7 @@ ms.locfileid: "66083665"
  永遠與 NODE_UNIQUE_NAME 相同。  
   
  NODE_UNIQUE_NAME  
- 節點在模型內的唯一識別項。 這項值不能被改變。  
+ 節點在模型內的唯一識別項。 無法變更此值。  
   
  若是決策樹模型，唯一名稱遵循下列慣例，這個慣例不適用於所有演算法：  
   
@@ -75,10 +76,10 @@ ms.locfileid: "66083665"
 |節點類型|描述|  
 |---------------|-----------------|  
 |1 (模型)|模型的根節點。|  
-|2 (樹狀結構)|在模型中分類樹狀結構的父節點。 標示為 **「All」** 。|  
+|2 (樹狀結構)|在模型中分類樹狀結構的父節點。 標示為 **「All」**。|  
 |3 (內部)|內部分支的標頭，可在分類樹狀結構或迴歸樹狀結構中找到。|  
 |4 (分佈)|分葉節點，可在分類樹狀結構或迴歸樹狀結構中找到。|  
-|25 (迴歸樹狀結構)|在模型內迴歸樹狀結構的父節點。 標示為 **「All」** 。|  
+|25 (迴歸樹狀結構)|在模型內迴歸樹狀結構的父節點。 標示為 **「All」**。|  
   
  NODE_CAPTION  
  提供顯示用途的好記名稱。  
@@ -90,15 +91,15 @@ ms.locfileid: "66083665"
  CHILDREN_CARDINALITY  
  節點所擁有子系數目的估計。  
   
- **父節點** ：指出已製作模型之可預測屬性的數目。 每個可預測的屬性都會建立一個樹狀結構。  
+ **父節點**表示已模型化之可預測屬性的數目。 每個可預測的屬性都會建立一個樹狀結構。  
   
- **樹狀節點** ：每個樹狀結構的 **All** 節點都會告訴您目標屬性使用多少個值。  
+ **樹狀節點**每個樹狀結構的**All 節點都會**告訴您目標屬性使用多少個值。  
   
 -   如果目標屬性是離散的，該值等於 `Missing` 狀態的相異值數目加 1。  
   
 -   如果可預測的屬性是連續的，此值會告訴您有多少值區用於製作連續屬性的模型。  
   
- **分葉節點** ：永遠為 0。  
+ 分**葉節點**一律為0。  
   
  PARENT_UNIQUE_NAME  
  節點之父系的唯一名稱。 任何根層級的節點都會傳回 NULL。  
@@ -133,15 +134,15 @@ ms.locfileid: "66083665"
  NODE_DISTRIBUTION  
  包含節點之機率長條圖的資料表。 此資料表中的資訊會隨著可預測屬性為連續或離散變數而有所不同。  
   
- **模型根節點** ：此資料表是空的。  
+ **模型根節點**此資料表是空的。  
   
- **(All) 節點** ：包含完整模型的摘要。  
+ **（全部）節點**包含整個模型的摘要。  
   
- **內部節點** ：包含其分葉節點的彙總統計資料。  
+ **內部節點**包含其分葉節點的匯總統計資料。  
   
- **分葉節點** ：假設路徑中的所有條件都引導至目前的分葉節點，則包含預測結果的支援與機率。  
+ 分**葉節點**包含預測結果的支援和機率，並將路徑中的所有條件導向至目前的分葉節點。  
   
- **迴歸節點** ：包含代表輸入和可預測屬性間關聯性的迴歸公式。  
+ **回歸節點**包含回歸公式，表示輸入和可預測屬性之間的關聯性。  
   
  如需詳細資訊，請參閱＜ [離散屬性的節點分佈](#bkmk_NodeDist_Discrete) ＞和＜ [連續屬性的節點分佈](#bkmk_RegressionNodes)＞。  
   
@@ -171,12 +172,12 @@ ms.locfileid: "66083665"
   
  每個內部樹狀節點都包含分葉節點，可提供給定目前分類結果的細分結果。 例如，您可能有一個代表 Age >= 30，而且 Gender = Male 的內部節點。 此群組的節點會顯示此類別中購買的客戶數目，或者未購買的客戶數目。 例如，分類可能包含下列樹狀結構分岔：  
   
-|內部樹狀結構|「分岔」|  
+|內部樹狀結構|Split|  
 |-------------------|-----------|  
 |Age >= 30|Age >= 30 而且 Gender = Male|  
 ||Age >= 30 而且 Gender = Female|  
 |Age < 30|Age < 30 而且 Gender = Male|  
-||年齡\<30 而且 Gender = Female|  
+||年齡\< 30 和性別 = 女性|  
   
  當您使用決策樹模型進行預測時，此模型會採用您所提供的屬性當做引數，然後遵照屬性的路徑向下到樹狀結構。 一般而言，所有預測都會到分葉，而內部節點則僅用於分類。  
   
@@ -184,23 +185,23 @@ ms.locfileid: "66083665"
   
  如果可預測的屬性是連續數字，此演算法會嘗試建立迴歸公式，以製作可預測屬性和輸入之間關聯性的模型。  
   
-###  <a name="NodeCaption"></a> 節點標題與節點描述  
+###  <a name="NodeCaption"></a>節點標題與節點描述  
  在決策樹模型中，節點標題與節點描述包含類似的資訊。 不過，節點描述更為完整，而且在您向分葉節點移得更近時，會包含更多資訊。 節點標題與節點描述都是當地語系化的字串。  
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|顯示區別相對於父節點之該特定節點的屬性。 節點標題會定義以母體為基礎之分岔條件的子區段。 例如，如果分岔位於 [Age]，而且它是三向分岔，三個節點可能的子系的節點標題"[Age] < 40"、"40 < = [Age] \< 50"，"[Age] > = 50"。|  
+|**NODE_CAPTION**|顯示區別相對於父節點之該特定節點的屬性。 節點標題會定義以母體為基礎之分岔條件的子區段。 例如，如果分割是在 [Age]，而它是三向分割，則三個子節點的節點標題可能是 "[Age] < 40"、"40 <= [Age] \< 50"、"[Age] >= 50"。|  
 |**NODE_DESCRIPTION**|包含區別各節點之屬性的完整清單，從模型父節點開始。 例如，Product name = Apple 而且 Color = Red。|  
   
-###  <a name="NodeRule"></a> 節點規則與臨界規則  
+###  <a name="NodeRule"></a>節點規則與臨界規則  
  NODE_RULE 和 MARGINAL_RULE 資料行包含與 NODE_CAPTION 和 NODE_DESCRIPTION 資料行相同的資訊，但是將資訊表示為 XML 片段。 節點規則為 XML 版本的完整路徑，而臨界規則會指出最近的分岔。  
   
  以 XML 片段表示的屬性可以很簡單，也可以很複雜。 簡單的屬性包含模型資料行的名稱以及屬性的值。 如果模型資料行包含巢狀資料表，巢狀資料表屬性會以資料表名稱、索引鍵值和屬性的串連表示。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援 2.0 版的 PMML 標準，其擴充模組支援巢狀資料表的使用。 如果您的資料包含巢狀資料表，而且您要產生 PMML 版本的模型，模型中包含預測的所有元素都會標示為闊重模組。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支援2.0 版的 PMML standard，其中包含支援使用嵌套資料表的延伸模組。 如果您的資料包含巢狀資料表，而且您要產生 PMML 版本的模型，模型中包含預測的所有元素都會標示為闊重模組。  
   
-###  <a name="bkmk_NodeDist_Discrete"></a> 離散屬性的節點分佈  
+###  <a name="bkmk_NodeDist_Discrete"></a>離散屬性的節點分佈  
  在決策樹模型中，NODE_DISTRIBUTION 資料表包含實用的統計資料。 不過，統計資料的類型取決於樹狀結構預測離散屬性還是連續屬性。 本節描述離散屬性之節點分佈統計資料的意義。  
   
 #### <a name="attribute-name-and-attribute-value"></a>屬性名稱與屬性值  
@@ -225,13 +226,14 @@ ms.locfileid: "66083665"
 |Age < 30|40|Age < 30 而且 Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 而且 Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- 在所有模型中進行小調整就可以計算可能的遺漏值。 若是連續屬性，每個值範圍以狀態表示 (例如，Age \<Lt;30、age = 30，和 Age > 30) 和機率計算方式如下： 狀態存在 (值 = 1)，其他特定狀態存在 (值 = 0)，狀態會是`Missing`. 如需如何調整機率來表示遺漏值的詳細資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。  
+ 在所有模型中進行小調整就可以計算可能的遺漏值。 針對連續屬性，每個值或值範圍都會以狀態表示（例如，Age \<30、age = 30 和 Age >30），而且機率的計算方式如下：狀態存在（值 = 1），其他狀態存在（值 = 0），狀態為。 `Missing` 如需如何調整機率來表示遺漏值的詳細資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。  
   
  每個節點的機率幾乎都直接從分佈計算，如下所示：  
   
  機率 = (狀態的支援 + 先前狀態的支援) / (節點支援加上先前節點支援)  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用每個節點的機率比較已儲存的機率與先前的機率來判斷父節點到子節點的路徑是否表示堅定的推斷。  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用每個節點的機率比較已儲存的機率與先前的機率來判斷父節點到子節點的路徑是否表示堅定的推斷。  
   
  進行預測時，分佈的機率必須與節點的機率對稱，使機率平穩。 例如，如果樹狀結構中的分岔以 9000/1000 的比例分隔案例，該樹狀結構就非常不對稱。 因此，來自小分支的預測加權不應該與來自包含多個案例之分支的預測加權相同。  
   
@@ -252,7 +254,7 @@ ms.locfileid: "66083665"
   
  如果模型包含連續的可預測屬性，樹狀結構可能也包含對迴歸公式而言唯一的值類型。 如需用於迴歸樹狀結構之實值型別的清單，請參閱[線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
-###  <a name="NodeScore"></a> 節點分數  
+###  <a name="NodeScore"></a>節點分數  
  節點分數代表樹狀結構每個層級上稍微不同的資訊。 一般而言，此分數是一個數值，可告訴您條件式分割所達成的分岔效果。 此值會以雙線表示，其中的值越大越好。  
   
  根據定義，模型節點與所有分葉節點的節點分數都為 0。  
@@ -261,17 +263,17 @@ ms.locfileid: "66083665"
   
  若是樹狀結構中的其他所有節點 (分葉節點除外)，每個節點的分數都代表目前節點的最佳分岔準則，減去父節點的分岔準則。 父節點的分岔準則通常永遠比任何其中一個子節點的分岔準則好。 那是因為理論上決策樹模型會先針對最重要的屬性分岔。  
   
- 計算分岔準則的方式有很多，端視您選擇的演算法參數而定。 如何針對每個計分方法計算分數不在本主題的討論範圍內。 如需詳細資訊，請參閱 「[學習 Bayesian 網路：組合的知識與統計資料](https://go.microsoft.com/fwlink/?LinkId=45963)"上[!INCLUDE[msCoName](../../includes/msconame-md.md)]研究的網站。  
+ 計算分岔準則的方式有很多，端視您選擇的演算法參數而定。 如何針對每個計分方法計算分數不在本主題的討論範圍內。 如需詳細資訊，請參閱[參考資料網站上的＜](https://go.microsoft.com/fwlink/?LinkId=45963)了解 Bayesian 網路：知識與統計資料的組合 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ＞。  
   
 > [!NOTE]  
 >  如果您建立的決策樹模型同時擁有連續和離散的可預測屬性，您將會在 (All) 節點中看到代表每個樹狀結構類型完全不同的分數。 每個模型都應該分別考量，而且用於計分迴歸的方法與用於計分分類的方法完全不同。 節點分數值無法進行比較。  
   
-##  <a name="bkmk_RegressionNodes"></a> 決策樹模型中的迴歸節點  
+##  <a name="bkmk_RegressionNodes"></a>決策樹模型中的回歸節點  
  如果決策樹模型包含可預測的屬性與連續的數值資料，Microsoft 決策樹演算法會嘗試在資料中，找出已預測狀態與輸入變數間關聯性為線性的區域。 如果演算法成功找出線性關聯性，該演算法就會建立一個代表線性迴歸的特殊樹狀結構 (NODE_TYPE = 25)。 這些迴歸樹狀節點比代表離散值的節點更為複雜。  
   
  一般而言，迴歸會將連續相依 (可預測的變數) 中的變更對應為輸入中變更的功能。 如果相依變數有任何連續輸入，而且輸入和已預測值之間的關聯性夠穩定，可以當做線條圖計算，迴歸的節點就會包含公式。  
   
- 不過，如果輸入和已預測值之間的關聯性為 *「非線性的」* (Nonlinear)，就會建立分岔，如同標準決策樹一樣。 例如，假設 A 是可預測的屬性，而 B 和 C 是輸入，其中 C 是連續的值類型。 如果 A 和 C 之間的關聯性在部分資料中相當穩定，但在部分資料中並不穩定，此演算法將會建立分岔來表示不同的資料區域。  
+ 不過，如果輸入和已預測值之間的關聯性為 *「非線性的」*(Nonlinear)，就會建立分岔，如同標準決策樹一樣。 例如，假設 A 是可預測的屬性，而 B 和 C 是輸入，其中 C 是連續的值類型。 如果 A 和 C 之間的關聯性在部分資料中相當穩定，但在部分資料中並不穩定，此演算法將會建立分岔來表示不同的資料區域。  
   
 |分岔條件|節點的結果|  
 |---------------------|--------------------|  
@@ -282,7 +284,7 @@ ms.locfileid: "66083665"
  如需迴歸節點的詳細資訊，請參閱[線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [&#40;Analysis Services 的採礦模型內容-資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)   
  [資料採礦模型檢視器](data-mining-model-viewers.md)   
  [資料採礦查詢](data-mining-queries.md)   
  [Microsoft 決策樹演算法](microsoft-decision-trees-algorithm.md)  

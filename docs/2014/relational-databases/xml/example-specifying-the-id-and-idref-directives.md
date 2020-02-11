@@ -1,5 +1,5 @@
 ---
-title: 範例指定 ID 和 IDREF 指示詞 | Microsoft Docs
+title: 範例：指定 ID 和 IDREF 指示詞 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f985745f450b402781685ded5c0a655e3f4e497c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704835"
 ---
-# <a name="example-specifying-the-id-and-idref-directives"></a>範例指定 ID 和 IDREF 指示詞
-  此範例幾乎與＜ [指定 ELEMENTXSINIL 指示詞](example-specifying-the-elementxsinil-directive.md) ＞範例相同。 唯一的差異在於查詢會指定 **ID** 和 **IDREF** 指示詞。 這些指示詞會覆寫 <`OrderHeader`> 和 <`OrderDetail`> 元素中的 **SalesPersonID** 屬性類型。 這會形成內部文件連結。 您需要結構描述，才能查看被覆寫的類型。 因此，查詢會在 FOR XML 子句中指定 **XMLDATA** 選項，以擷取結構描述。  
+# <a name="example-specifying-the-id-and-idref-directives"></a>範例：指定 ID 和 IDREF 指示詞
+  此範例幾乎與＜ [指定 ELEMENTXSINIL 指示詞](example-specifying-the-elementxsinil-directive.md) ＞範例相同。 唯一的差異在於查詢會指定 **ID** 和 **IDREF** 指示詞。 這些指示詞會覆寫 < **> 和 <** > 元素中的 `OrderHeader`SalesPersonID`OrderDetail` 屬性類型。 這會形成內部文件連結。 您需要結構描述，才能查看被覆寫的類型。 因此，查詢會在 FOR XML 子句中指定 **XMLDATA** 選項，以擷取結構描述。  
   
 ```  
 USE AdventureWorks2012;  
@@ -70,7 +70,7 @@ ORDER BY [OrderHeader!1!SalesOrderID!id], [SalesPerson!2!SalesPersonID],
 FOR XML EXPLICIT, XMLDATA  
 ```  
   
- 以下是部份結果。 請注意在結構描述中，**ID** 和 **IDREF** 指示詞已覆寫 <`OrderHeader`> 和 <`OrderDetail`> 元素中 **SalesOrderID** 屬性的資料類型。 如果您移除這些指示詞，結構描述就會傳回這些屬性的原始類型。  
+ 以下是部份結果。 請注意在結構描述中，**ID** 和 **IDREF** 指示詞已覆寫 < **> 和 <** > 元素中 `OrderHeader`SalesOrderID`OrderDetail` 屬性的資料類型。 如果您移除這些指示詞，結構描述就會傳回這些屬性的原始類型。  
   
 ```  
 <Schema name="Schema1" xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">  

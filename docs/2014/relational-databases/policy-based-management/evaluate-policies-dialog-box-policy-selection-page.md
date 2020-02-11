@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705131"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>評估原則對話方塊，原則選取頁面
   使用此對話方塊可評估以原則為基礎的管理原則。 您可以藉由選取 **[評估結果]** 頁面，將原則套用到目標集內不符合原則的項目。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **Source**  
  指定原則的來源。 若要變更來源，請按一下 [瀏覽]\( **...** ) 按鈕，開啟 **[選取來源]** 對話方塊。  
   
@@ -32,13 +32,13 @@ ms.locfileid: "62705131"
  **Server**  
  選取此選項可連接包含您想要之原則的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體。  
   
- **原則：原則**  
+ **原則: 原則**  
  按一下此選項可開啟指定之原則的原則對話方塊。  
   
- **原則：類別目錄**  
+ **原則: 類別目錄**  
  此原則的類別目錄。 這個方塊是唯讀的。  
   
- **原則：Facet**  
+ **原則: Facet**  
  此原則所實作的 Facet。 這個方塊是唯讀的。  
   
  **評估**  

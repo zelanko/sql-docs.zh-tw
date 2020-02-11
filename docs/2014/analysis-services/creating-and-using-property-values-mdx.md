@@ -1,5 +1,5 @@
 ---
-title: 建立和使用屬性值 (MDX) |Microsoft Docs
+title: 建立和使用屬性值（MDX） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1be27b268e46a874678618104c199ae294f392f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086693"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>建立和使用屬性值 (MDX)
@@ -38,6 +38,6 @@ ms.locfileid: "66086693"
  如需資料格屬性及如何使用資料格屬性的詳細資訊，請參閱[使用資料格屬性 &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查詢基本概念 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

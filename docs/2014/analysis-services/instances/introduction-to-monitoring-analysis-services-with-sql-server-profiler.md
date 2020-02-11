@@ -1,5 +1,5 @@
 ---
-title: 若要使用 SQL Server Profiler 監視 Analysis Services 簡介 |Microsoft Docs
+title: 使用 SQL Server Profiler 監視 Analysis Services 簡介 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3146f5a9f3e22753cc86c07b609d997be580b9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079800"
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>使用 SQL Server Profiler 監視 Analysis Services 簡介
-  您可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來監視由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體產生的事件。 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以執行下列動作：  
+  您可以使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來監視由實例產生的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]事件。 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以執行下列動作：  
   
 -   監視 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體的效能。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "66079800"
 -   在螢幕上顯示有關擷取事件的資料，或擷取有關每個事件的資料並儲存到檔案或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中，以供未來分析或播放使用。 當您重新執行資料時，可以即時或逐步返回儲存的事件，如同最初發生時一般。  
   
 ## <a name="using-sql-server-profiler"></a>使用 SQL Server Profiler  
- 若要使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來建立或重新執行追蹤，您必須是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器角色的成員。 如果您是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器角色的成員，就可以從 [開始]  功能表上的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 程式集啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 若要使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來建立或重新執行追蹤，您必須是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器角色的成員。 如果您是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器角色的成員，就可以從 [開始][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 功能表上的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 程式集啟動 **。  
   
- 當您使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 時，請注意下列事項：  
+ 當您使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]時，請注意下列事項：  
   
 -   追蹤定義會使用 CREATE 陳述式與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫一同儲存。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66079800"
 -   當 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 停止並重新啟動時，追蹤可以繼續執行。  
   
     > [!NOTE]  
-    >  密碼不會顯示在追蹤事件，而是會取代所\* \* \* \* \* \*事件中。  
+    >  追蹤事件中不會顯示密碼，但會\* \* \* \* \* \*在事件中取代。  
   
  為了達到最佳效能，請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 只監視您需要的事件。 監視太多事件會增加負擔，並導致追蹤檔案或資料表變得過於龐大，尤其在進行長期追蹤時。 另外，請使用篩選來限制收集的資料量，以防止追蹤檔案變得太大。  
   

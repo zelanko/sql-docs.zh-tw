@@ -1,5 +1,5 @@
 ---
-title: 已停止的 SQL Server 2014 中的 Analysis Services 功能 |Microsoft Docs
+title: SQL Server 2014 中已停止的 Analysis Services 功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,23 +17,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 616c39d03ff8081c209a80dcca912d831bcef1ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081679"
 ---
 # <a name="discontinued-analysis-services-functionality-in-sql-server-2014"></a>SQL Server 2014 中已停止的 Analysis Services 功能
   本主題描述 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中不再可用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>
+  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]
   
-|Category|已被取代的功能|取代|  
+  
+|類別|已被取代的功能|取代|  
 |--------------|------------------------|-----------------|  
-|本機 Cube|InsertInto 連接字串屬性|填入本機 Cube 的原始連接字串語法已被 Create Global Cube 陳述式取代。 如需詳細資訊，請參閱 <<c0> [ 建立 GLOBAL CUBE 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)。</c0>|  
-|本機 Cube|CreateCube 連接字串屬性|填入本機 Cube 的原始連接字串語法已被 Create Global Cube 陳述式取代。 如需詳細資訊，請參閱 <<c0> [ 建立 GLOBAL CUBE 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)。</c0>|  
+|本機 Cube|InsertInto 連接字串屬性|填入本機 Cube 的原始連接字串語法已被 Create Global Cube 陳述式取代。 如需詳細資訊，請參閱[CREATE GLOBAL CUBE 語句 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)。|  
+|本機 Cube|CreateCube 連接字串屬性|填入本機 Cube 的原始連接字串語法已被 Create Global Cube 陳述式取代。 如需詳細資訊，請參閱[CREATE GLOBAL CUBE 語句 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)。|  
 |資料採礦|SQL Server 2000 PMML|SQL Server 2000 PMML 功能會產生擁有專屬延伸模組的一種 PMML，以支援由資料採礦演算法所提供，而在 PMML 規格中沒有的獨特功能。 在 SQL Server 2005 中，Analysis Services 已將 PMML 功能更新為較新的 PMML 2.1 標準。 因此不再需要 SQL Server 2000 中加入的專屬延伸模組 (不過，在這個版本中仍支援)。|  
-|MDX 陳述式|Create Action 陳述式|包含此陳述式是為了回溯相容性 (Backward Compatibility) 的需要。 此陳述式已被 Action 物件取代。 如需有關如何建立動作中的最新版本[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，請參閱 <<c2> [ 動作&#40;Analysis Services-多維度資料&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)。</c2>|  
+|MDX 陳述式|Create Action 陳述式|包含此陳述式是為了回溯相容性 (Backward Compatibility) 的需要。 此陳述式已被 Action 物件取代。 如需如何在最新版本中建立動作的詳細[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資訊，請參閱[&#40;Analysis Services 多維度資料&#41;的動作](multidimensional-models/actions-analysis-services-multidimensional-data.md)。|  
   
 ## <a name="discontinued-features-in-previous-releases"></a>之前的版本已停止的功能  
  已不再使用移轉精靈 (用來將 SQL Server 2000 Analysis Services 資料庫移轉至較新版本)，因為已不再支援 SQL Server 2000。  

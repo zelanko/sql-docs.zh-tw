@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661755"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>屬性視窗 F1 說明 (Management Studio)
@@ -35,7 +35,7 @@ ms.locfileid: "62661755"
   
  視特定屬性的需求而定，[屬性]  視窗會顯示不同類型的編輯欄位。 以灰色顯示的屬性是唯讀屬性。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **物件名稱**  
  列出目前選取的物件。 只有來自使用中編輯器或設計師的物件才可見。  
   

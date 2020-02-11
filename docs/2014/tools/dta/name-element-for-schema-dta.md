@@ -1,5 +1,5 @@
 ---
-title: 命名元素 (DTA) 的結構描述 |Microsoft Docs
+title: 架構的 Name 元素（DTA） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01b536c24661ce223e91cbe791c70529558388ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657272"
 ---
 # <a name="name-element-for-schema-dta"></a>結構描述的 Name 元素 (DTA)
@@ -38,7 +38,7 @@ ms.locfileid: "62657272"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|**資料類型和長度**|`string`，在 1 和 255 個字元之間。|  
+|**資料類型和長度**|`string`，介於1到255個字元之間|  
 |**預設值**|無。|  
 |**出現次數**|每個 **Schema** 元素需要使用這個元素一次。|  
   

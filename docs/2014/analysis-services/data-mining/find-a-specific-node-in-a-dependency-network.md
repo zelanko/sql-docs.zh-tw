@@ -1,5 +1,5 @@
 ---
-title: 相依性網路中尋找特定節點 |Microsoft Docs
+title: 在相依性網路中尋找特定節點 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f27398948ed2c89578921bf6404244bcf5072652
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084380"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>在相依性網路中尋找特定節點
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 採礦模型中的相依性網路可包含許多節點，因此難以找到您感興趣的資料。 若要解決此問題，您可以使用資料採礦設計師之 **[相依性網路]** 索引標籤上的 **[尋找節點]** 對話方塊，來搜尋特定節點。  
+  在「 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]採礦模型」中的相依性網路可包含許多節點，因此難以找到您感興趣的資料。 若要解決此問題，您可以使用資料採礦設計師之 **[相依性網路]** 索引標籤上的 **[尋找節點]** 對話方塊，來搜尋特定節點。  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>若要在相依性網路中尋找特定節點  
   
@@ -37,6 +37,6 @@ ms.locfileid: "66084380"
 3.  從清單中選取正確的節點，然後按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型檢視器工作和操作說明](mining-model-viewer-tasks-and-how-tos.md)  
+ [採礦模型檢視器工作和使用說明](mining-model-viewer-tasks-and-how-tos.md)  
   
   

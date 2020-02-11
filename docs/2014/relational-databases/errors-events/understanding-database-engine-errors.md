@@ -16,25 +16,27 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f8f7264b63417d9dc337aec62ee5734dcf8ad98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761675"
 ---
 # <a name="understanding-database-engine-errors"></a>了解 Database Engine 錯誤
-  下表描述 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 所引發之錯誤的屬性。  
+  所[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]引發的錯誤具有下表中所述的屬性。  
   
 |屬性|描述|  
 |---------------|-----------------|  
 |錯誤號碼|每一則錯誤訊息都有唯一的錯誤號碼。|  
 |錯誤訊息字串|錯誤訊息包含錯誤原因的診斷資訊。 許多錯誤訊息都有用來插入資訊 (例如產生錯誤的物件名稱) 的替代變數。|  
 |Severity|嚴重性指出錯誤的嚴重程度。 嚴重性低 (例如 1 或 2) 的錯誤是參考訊息或低階警告。 嚴重性高的錯誤指出應該儘快處理的問題。 如需有關嚴重性的詳細資訊，請參閱 [Database Engine 錯誤嚴重性](database-engine-error-severities.md)。|  
-|State|對於 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，程式碼的多個點都可能會產生某些錯誤訊息。 例如，在許多不同情況下，都有可能產生 1105 錯誤。 每個產生錯誤的特定狀況，都會指派唯一的狀態碼。<br /><br /> 檢視內含已知問題之資訊的資料庫時 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫)，可以使用狀態碼來判斷所記錄的問題與您遇到的錯誤是否相同。 例如，如果知識庫文件描述狀態為 2 的 1105 錯誤，而您收到之 1105 錯誤訊息的狀態為 3，則錯誤原因可能不是文件中所報告的原因。<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 支援工程師也可以使用錯誤中的狀態碼，來找出原始程式碼中引發錯誤碼的位置。 這項資訊可能會提供如何診斷問題的其他想法。|  
+|State|對於 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，程式碼的多個點都可能會產生某些錯誤訊息。 例如，在許多不同情況下，都有可能產生 1105 錯誤。 每個產生錯誤的特定狀況，都會指派唯一的狀態碼。<br /><br /> 檢視內含已知問題之資訊的資料庫時 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫)，可以使用狀態碼來判斷所記錄的問題與您遇到的錯誤是否相同。 例如，如果知識庫文件描述狀態為 2 的 1105 錯誤，而您收到之 1105 錯誤訊息的狀態為 3，則錯誤原因可能不是文件中所報告的原因。<br /><br /> 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 支援工程師也可以使用錯誤中的狀態碼，來找出原始程式碼中引發錯誤碼的位置。 這項資訊可能會提供如何診斷問題的其他想法。|  
 |程序名稱|這是發生錯誤之預存程序或觸發程序的名稱。|  
 |行號|指出批次、預存程序、觸發程序或函數中的哪個陳述式產生錯誤。|  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體中的所有系統和使用者自訂的錯誤訊息都包含在 **sys.messages** 目錄檢視中。 您可以使用 RAISERROR 陳述式，將使用者自訂的錯誤傳回給應用程式。  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體中的所有系統和使用者自訂的錯誤訊息都包含在 **sys.messages** 目錄檢視中。 您可以使用 RAISERROR 陳述式，將使用者自訂的錯誤傳回給應用程式。  
   
  所有資料庫 API (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** 命名空間、ActiveX Data Objects (ADO)、OLE DB 和開放式資料庫連接 (ODBC)) 都會報告基本錯誤屬性。 這項資訊包括錯誤號碼和訊息字串。 不過，並非所有 API 都會報告所有其他錯誤屬性。  
   

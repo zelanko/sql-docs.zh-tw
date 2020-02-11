@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663481"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>CPU Threshold Exceeded 事件類別
@@ -36,7 +36,7 @@ ms.locfileid: "62663481"
 |EventSubClass|`int`|CPU 限制違規。|21|是|  
 |GroupID|`int`|發生違規的群組識別碼。|66|是|  
 |OwnerID|`int`|導致違規之處理序的 SPID。|58|是|  
-|SPID|`int`|引發此事件之伺服器處理序的識別碼。<br /><br /> 注意:如果系統執行緒 CPU 使用量驗證為背景工作，這可能不同於實際的使用者 SPID。|12|是|  
+|SPID|`int`|引發此事件之伺服器處理序的識別碼。<br /><br /> 注意：如果系統執行緒將 CPU 使用量驗證為背景工作，這個識別碼可能會與實際的使用者 SPID 不同。|12|是|  
 |StartTime|`datetime`|引發此事件的時間。|14|是|  
   
 ## <a name="see-also"></a>另請參閱  

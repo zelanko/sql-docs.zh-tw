@@ -1,5 +1,5 @@
 ---
-title: Proxy 帳戶屬性和新 Proxy 帳戶 （主體索引標籤） |Microsoft Docs
+title: Proxy 帳戶屬性和新的 Proxy 帳戶（主體索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f97e8fec31f6011b7a2769753bed35e4ab62b47b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650219"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-principals-tab"></a>Proxy 帳戶屬性及新增 Proxy 帳戶 (主體索引標籤)
-  使用此頁面來檢視或變更可以在作業步驟中使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶的主體。  
+  使用此頁面來查看或變更可以在作業步驟中使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy 帳戶的主體。  
   
 ## <a name="options"></a>選項。  
  **Proxy 帳戶主體**  
  列出可以使用此 Proxy 帳戶的主體。  
   
- **[加入]**  
+ **加入**  
  將主體加入清單中。  
   
  **移除**  

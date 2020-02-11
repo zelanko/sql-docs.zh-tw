@@ -1,5 +1,5 @@
 ---
-title: 選取量值 （Cube 精靈） |Microsoft Docs
+title: 選取量值（Cube Wizard） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c8ea7af0102e9525eac15420a960ec357f9062e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069453"
 ---
 # <a name="select-measures-cube-wizard"></a>選取量值 (Cube 精靈)
@@ -31,9 +31,9 @@ ms.locfileid: "66069453"
  若要變更量值群組或量值的名稱，請按一下其名稱，然後輸入新的名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [Cube 精靈 F1 說明](cube-wizard-f1-help.md)   
- [Cube 物件&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
- [多維度模型中的 Cube](multidimensional-models/cubes-in-multidimensional-models.md)   
+ [Cube Wizard F1 說明](cube-wizard-f1-help.md)   
+ [Cube 物件 &#40;Analysis Services 多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [多維度模型中的 cube](multidimensional-models/cubes-in-multidimensional-models.md)   
  [多維度模型中的維度](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

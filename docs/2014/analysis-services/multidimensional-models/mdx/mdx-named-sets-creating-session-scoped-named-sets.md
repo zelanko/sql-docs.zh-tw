@@ -1,5 +1,5 @@
 ---
-title: 建立工作階段範圍命名集 (MDX) |Microsoft Docs
+title: 建立會話範圍命名集（MDX） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 545bbdb171388f06c28644e0b8caa48db95e7e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074051"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>建立工作階段範圍命名集 (MDX)
@@ -38,7 +38,8 @@ CREATE SESSION SET [CURRENTCUBE. | <cube name>.]<Set Identifier> AS <Set Express
  在 CREATE SET 語法中， `cube name` 參數包含命名集成員的 Cube 名稱。 如果未指定 `cube name` 參數，目前的 Cube 就會做為包含命名集成員的 Cube 使用。 此外， `Set_Identifier` 參數包含命名集的別名，以及包含命名集別名將會參考之集合運算式的 `Set_Expression` 參數。  
   
 ## <a name="create-set-example"></a>CREATE SET 範例  
- 以下範例使用 CREATE SET 陳述式，根據 Store Cube 建立 `SetCities_2_3` 命名集。 `SetCities_2_3` 命名集的成員是在 City 2 及 City 3 內的商店。  
+ 以下範例使用 CREATE SET 陳述式，根據 Store Cube 建立 `SetCities_2_3` 命名集。 
+  `SetCities_2_3` 命名集的成員是在 City 2 及 City 3 內的商店。  
   
 ```  
 create Session set [Store].[SetCities_2_3] as  

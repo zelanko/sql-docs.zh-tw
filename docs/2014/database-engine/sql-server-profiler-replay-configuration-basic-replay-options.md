@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler-重新執行組態 （基本重新執行選項） |Microsoft Docs
+title: SQL Server Profiler-重新執行設定（基本重新執行選項） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,29 +15,31 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ea9517047321f54734b3ccd8d072ba8f3f23152
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089723"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>SQL Server Profiler - 重新執行組態 (基本重新執行選項)
   在 **[重新執行組態]** 對話方塊中，使用 **[基本重新執行選項]** 頁面來指定如何重新執行追蹤檔案或資料表。  
   
- 若要檢視這個視窗，請使用 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 開啟包含用以重新執行的適當事件之追蹤檔案或資料表。 如需詳細資訊，請參閱 [Replay Requirements](../tools/sql-server-profiler/replay-requirements.md)。 在追蹤檔案或資料表開啟期間，請在 **[重新執行]** 功能表上按一下 **[啟動]** ，然後連接到想要重新執行追蹤的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體。  
+ 若要檢視這個視窗，請使用 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 開啟包含用以重新執行的適當事件之追蹤檔案或資料表。 如需詳細資訊，請參閱 [Replay Requirements](../tools/sql-server-profiler/replay-requirements.md)。 在追蹤檔案或資料表開啟期間，請在 **[重新執行]** 功能表上按一下 **[啟動]**，然後連接到想要重新執行追蹤的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **重新執行伺服器**  
  顯示要連接以重新執行的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體。  
   
- **變更...**  
- 啟動 [連接到伺服器]  對話方塊，以連接到另一部伺服器。  
+ **變更 .。。**  
+ 啟動 [連接到伺服器]**** 對話方塊，以連接到另一部伺服器。  
   
  **儲存至檔案**  
- 將重新執行結果儲存至檔案。 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 會顯示標準檔案對話方塊，您可以在此指定檔案的儲存位置。  
+ 將重新執行結果儲存至檔案。 
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 會顯示標準檔案對話方塊，您可以在此指定檔案的儲存位置。  
   
  **儲存至資料表**  
- 將重新執行結果儲存至資料表。 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 會顯示資料表選取項目對話方塊，您可以在此指定資料表的儲存位置。  
+ 將重新執行結果儲存至資料表。 
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 會顯示資料表選取項目對話方塊，您可以在此指定資料表的儲存位置。  
   
  **重新執行執行緒的數目**  
  指定要同時使用的重新執行執行緒的數目。 較高的數目會在重新執行期間消耗較多資源，但是重新執行速度較快而且更並行。  

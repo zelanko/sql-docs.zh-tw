@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18cc4dfd6f1d17340cc06803367737b841bade70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075606"
 ---
 # <a name="define-database-dimensions"></a>定義資料庫維度
-  使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的維度設計師來設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或資料庫中的現有資料庫維度。 您可以使用 [維度設計師] 執行下列動作：  
+  使用中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [維度設計師] 來設定[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案或資料庫中的現有資料庫維度。 您可以使用 [維度設計師] 執行下列動作：  
   
 -   設定維度層級屬性 (Property)。  
   
@@ -42,14 +42,14 @@ ms.locfileid: "66075606"
   
 |索引標籤|描述|  
 |---------|-----------------|  
-|**維度結構**|使用此索引標籤，以使用結構的維度來檢查或建立資料來源檢視結構描述的維度，可使用屬性，以及組織使用者定義階層中的屬性。|  
+|**維度結構**|使用此索引標籤來處理維度的結構-以檢查或建立維度的資料來源視圖架構、使用屬性，以及組織使用者自訂階層中的屬性。|  
 |**屬性關聯性**|使用這個索引標籤，即可建立、修改或刪除維度的屬性關聯性。|  
 |**翻譯**|使用此索引標籤，以不同語言加入及編輯維度中繼資料的翻譯。|  
-|**瀏覽器**|使用此索引標籤，檢查已處理維度的成員，以及檢閱維度中繼資料的翻譯。|  
+|**[瀏覽器]**|使用此索引標籤，檢查已處理維度的成員，以及檢閱維度中繼資料的翻譯。|  
   
  下列主題描述可以在 [維度設計師] 中執行的工作。  
   
- [維度屬性內容參考](dimension-attribute-properties-reference.md)  
+ [維度屬性 (attribute) 屬性 (property) 參考](dimension-attribute-properties-reference.md)  
  描述如何定義及設定維度屬性。  
   
  [建立使用者定義階層](user-defined-hierarchies-create.md)  

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1103e1715c01cfc868c59af17ee0f95fa7cedff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661682"
 ---
 # <a name="create-delete-queries-visual-database-tools"></a>建立刪除查詢 (Visual Database Tools)
@@ -48,7 +48,7 @@ ms.locfileid: "62661682"
  執行刪除查詢時， [結果窗格](results-pane-visual-database-tools.md)不會報告任何結果。 但是畫面會出現訊息，指出已經刪除的資料列數目。  
   
 ## <a name="see-also"></a>另請參閱  
- [支援的查詢類型&#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
+ [支援的查詢類型 &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
  [設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

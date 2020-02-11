@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f040c9907574bba718827999bb9c0fbb432a0bd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761438"
 ---
 # <a name="delete-tables-database-engine"></a>刪除資料表 (Database Engine)
@@ -34,7 +34,7 @@ ms.locfileid: "62761438"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目來刪除資料表：**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62761438"
   
 -   對於參考已卸除之資料表的任何檢視表或預存程序，您必須明確刪除或修改它們，以便移除資料表的參考。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表所屬結構描述的 ALTER 權限、資料表的 CONTROL 權限，或 **db_ddladmin** 固定資料庫角色成員資格。  
@@ -69,7 +69,7 @@ ms.locfileid: "62761438"
   
 2.  在資料表上按一下滑鼠右鍵，再從快速鍵功能表中選擇 [刪除]  。  
   
-3.  訊息方塊會提示您確認是否刪除。 按一下 [ **是**]。  
+3.  訊息方塊會提示您確認是否刪除。 按一下 [是]  。  
   
     > [!NOTE]  
     >  刪除資料表會自動移除它的所有關聯性。  

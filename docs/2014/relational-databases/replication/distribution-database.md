@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 283fd67d14d57c3d1d5d60dd9d8de2a159ca6d5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721369"
 ---
 # <a name="distribution-database"></a>散發資料庫
@@ -26,9 +26,9 @@ ms.locfileid: "62721369"
   
 ## <a name="options"></a>選項。  
  **散發資料庫名稱**  
- 輸入散發資料庫的名稱。 散發資料庫的預設名稱為「distribution」。 如果您指定名稱，則名稱最多為 128 個字元、必須在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中是唯一的，而且必須符合識別碼的規則。 如需詳細資訊，請參閱＜ [Database Identifiers](../databases/database-identifiers.md)＞。  
+ 輸入散發資料庫的名稱。 散發資料庫的預設名稱為「distribution」。 如果您指定名稱，則名稱最多可以是128個字元，而且在實例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]內必須是唯一的，而且必須符合識別碼的規則。 如需詳細資訊，請參閱＜ [Database Identifiers](../databases/database-identifiers.md)＞。  
   
- **[散發資料庫檔案的資料夾]** 和 **[散發資料庫記錄檔的資料夾]**  
+ 散發資料庫檔案的**資料夾**，以及**散發資料庫記錄**檔的資料夾  
  輸入散發資料庫和記錄檔的路徑。 路徑必須參考對散發者而言是本機的磁碟機，而且以本機磁碟機代號開始，然後是冒號 (例如，C:)。 對應的磁碟機代號和網路路徑無效。  
   
 > [!NOTE]  

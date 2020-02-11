@@ -1,5 +1,5 @@
 ---
-title: 註冊的伺服器群組中的 Analysis Services 執行個體 |Microsoft Docs
+title: 在伺服器群組中註冊 Analysis Services 實例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29ecf740948d9e02d258a5daa03859d3867eb463
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079652"
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>註冊伺服器群組中的 Analysis Services 執行個體
   如果您有大量 Analysis Services 伺服器執行個體，可以在 Management Studio 建立伺服器群組，讓伺服器管理變得更輕鬆。 伺服器群組的目的是在管理工作空間內提供一組相關伺服器之間的接近性。 例如，假設您負責管理十個不同的 Analysis Services 執行個體。 依伺服器模式、開機時間準則，或依部門或地區的伺服器群組方式，可讓檢視及連接到共用相同特性的執行個體更輕鬆。 您還可以加入有助於記住伺服器用法的描述性資訊。  
   
- ![具有成員伺服器已註冊伺服器窗格](../media/ssas-ssms-registerserver.gif "具有成員伺服器已註冊的伺服器 窗格")  
+ ![具有成員伺服器之已註冊的伺服器窗格](../media/ssas-ssms-registerserver.gif "具有成員伺服器之已註冊的伺服器窗格")  
   
  可以用階層式結構來建立伺服器群組。 [本機伺服器群組] 是根節點， 它永遠包含本機電腦上執行的 Analysis Services 執行個體。 您可以將遠端伺服器加入至任何群組，包括本機群組。  
   

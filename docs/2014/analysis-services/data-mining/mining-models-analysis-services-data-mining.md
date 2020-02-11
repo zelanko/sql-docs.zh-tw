@@ -1,5 +1,5 @@
 ---
-title: 採礦模型 (Analysis Services-資料採礦) |Microsoft Docs
+title: 採礦模型（Analysis Services 資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 087322555ade5738ae3b4831488b6aa6e62b44a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083444"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>採礦模型 (Analysis Services - 資料採礦)
-  「採礦模型」  透過將演算法套用至資料來建立，但是採礦模型不只是演算法或中繼資料容器，還是可以套用至新資料以產生預測並推斷關聯性的一組資料、統計資料及模式。  
+  「採礦模型」** 透過將演算法套用至資料來建立，但是採礦模型不只是演算法或中繼資料容器，還是可以套用至新資料以產生預測並推斷關聯性的一組資料、統計資料及模式。  
   
  本節說明資料採礦模型及其用途：模型的基本架構和結構、採礦模型的屬性，以及建立及使用採礦模型的方式。  
   
@@ -39,39 +39,40 @@ ms.locfileid: "66083444"
   
  [處理採礦模型](#bkmk_mdlProcess)  
   
- [檢視和查詢採礦模型](#bkmk_mdlView)  
+ [查看和查詢採礦模型](#bkmk_mdlView)  
   
-##  <a name="bkmk_mdlArch"></a> 採礦模型架構  
+##  <a name="bkmk_mdlArch"></a>採礦模型架構  
  資料採礦模型會從採礦結構取得資料，然後使用資料採礦演算法分析該資料。 採礦結構與採礦模型是不同的物件。 採礦結構會儲存定義資料來源的資訊。 採礦模型會儲存資料統計處理衍生的資訊，例如，分析結果所發現的模式。  
   
  採礦模型在採礦結構提供的資料經過處理與分析前是空的。 採礦模型經過處理之後，包含中繼資料、結果，以及回到採礦結構的繫結。  
   
- ![模型包含中繼資料、 模式和繫結](../media/dmcon-modelarch2.gif "模型包含中繼資料、 模式和繫結")  
+ ![包含中繼資料、模式和繫結](../media/dmcon-modelarch2.gif "包含中繼資料、模式和繫結")  
   
- 中繼資料會指定模型的名稱與儲存模型的伺服器，以及模型的定義，包括建立模型所使用之採礦結構的資料行、處理模型時套用之任何篩選的定義，以及分析資料所使用的演算法。 所有這些選擇的資料行和其資料類型、 篩選和演算法的大大影響分析的結果。  
+ 中繼資料會指定模型的名稱與儲存模型的伺服器，以及模型的定義，包括建立模型所使用之採礦結構的資料行、處理模型時套用之任何篩選的定義，以及分析資料所使用的演算法。 所有這些選擇-資料行及其資料類型、篩選和演算法，對分析的結果具有強大的影響。  
   
- 例如，您可以使用相同的資料建立多個模型，可能包括使用叢集演算法、決策樹演算法及貝氏機率分類演算法。 每種模型類型會建立不同的模式、項目集、規則或公式集，以供您進行預測。 每種演算法通常會以不同的方式來分析資料，因此產生之模型的「內容」  也會組織成不同的結構。 在其中一種模型類型中，資料和模式可能會分組成「叢集」  ，而在另一種模型類型中，資料可能會組織成樹狀目錄、分支，以及分割與定義資料的規則。  
+ 例如，您可以使用相同的資料建立多個模型，可能包括使用叢集演算法、決策樹演算法及貝氏機率分類演算法。 每種模型類型會建立不同的模式、項目集、規則或公式集，以供您進行預測。 每種演算法通常會以不同的方式來分析資料，因此產生之模型的「內容」** 也會組織成不同的結構。 在其中一種模型類型中，資料和模式可能會分組成「叢集」**，而在另一種模型類型中，資料可能會組織成樹狀目錄、分支，以及分割與定義資料的規則。  
   
- 模型也會受到定型所依據之資料的影響：如果您以不同的方式篩選資料，或在分析期間使用不同的種子，即使是在相同採礦結構上定型的模型也可能產生不同的結果。 不過，如果實際的資料不儲存在僅限模型儲存摘要統計資料，而實際位於採礦結構中的資料。 如果您在定型模型時所使用的資料上建立篩選，篩選定義會與模型物件儲存在一起。  
+ 模型也會受到定型所依據之資料的影響：如果您以不同的方式篩選資料，或在分析期間使用不同的種子，即使是在相同採礦結構上定型的模型也可能產生不同的結果。 不過，實際的資料並不會儲存在模型中，只會儲存摘要統計資料，而實際資料則位於「採礦結構」中。 如果您在定型模型時所使用的資料上建立篩選，篩選定義會與模型物件儲存在一起。  
   
  此模型包含一組繫結，會指回採礦結構中快取的資料。 如果資料已經在結構中快取，而且尚未在處理後快取，這些繫結就可以讓您從結果向下鑽研到支援結果的案例。 不過，實際的資料會儲存在結構快取中，而非模型中。  
   
  [採礦模型架構](#bkmk_mdlArch)  
   
-##  <a name="bkmk_mdlDefine"></a> 定義資料採礦模型  
+##  <a name="bkmk_mdlDefine"></a>定義資料採礦模型  
  您可以使用下列一般步驟建立資料採礦模型：  
   
 -   建立基礎採礦結構，並包含可能需要的資料行。  
   
 -   選取最適合分析工作的演算法。  
   
--   選擇使用在模型中，並指定其應該如何使用可用來的資料行結構的資料行包含您想要預測的結果，哪些資料行僅用於輸入，依此類推。  
+-   從結構中選擇要用於模型的資料行，並指定應該如何使用這些資料行-哪一個資料行包含您想要預測的結果、哪些資料行僅供輸入，依此類推。  
   
 -   選擇性地設定演算法處理之微調的參數。  
   
--   以「處理」  結構和模型的資料擴展模型。  
+-   以「處理」** 結構和模型的資料擴展模型。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供下列工具協助您管理採礦模型：  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供下列工具協助您管理採礦模型：  
   
 -   資料採礦精靈可協助您建立結構與相關的採礦模型。 這是最簡單的使用方法。 此精靈會自動建立所需的採礦結構，並協助您設定重要的設定。  
   
@@ -83,22 +84,24 @@ ms.locfileid: "66083444"
   
  [採礦模型架構](#bkmk_mdlArch)  
   
-##  <a name="bkmk_mdlProps"></a> 採礦模型屬性  
+##  <a name="bkmk_mdlProps"></a>採礦模型屬性  
  每個採礦模型都擁有定義模型及其中繼資料的屬性。 這些包括名稱、描述、上次處理模型的日期、模型的權限，以及用於定型之資料的任何篩選。  
   
  每個採礦模型也都擁有衍生自採礦結構的屬性，以及描述模型所使用資料之資料行的屬性。 如果模型使用的任何資料行是巢狀資料表，該資料行也可以套用個別的篩選。  
   
  此外，每個採礦模型都包含兩個特殊的屬性： <xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> 和 <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A>。  
   
--   **演算法屬性** ：指定建立模型所使用的演算法。 可用的演算法取決於您所使用的提供者。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的演算法清單，請參閱 [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)。 `Algorithm` 屬性會套用到採礦模型，而且每一個模型只能設定一次。 您可以在稍後變更演算法，但是如果採礦模型中的某些資料行未受到您所選擇的演算法所支援，這些資料行可能會變成無效。 您一定要在變更此屬性之後重新處理模型。  
+-   **演算法屬性**指定用來建立模型的演算法。 可用的演算法取決於您所使用的提供者。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的演算法清單，請參閱 [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)。 
+  `Algorithm` 屬性會套用到採礦模型，而且每一個模型只能設定一次。 您可以在稍後變更演算法，但是如果採礦模型中的某些資料行未受到您所選擇的演算法所支援，這些資料行可能會變成無效。 您一定要在變更此屬性之後重新處理模型。  
   
--   **Usage 屬性** ：定義此模型要如何使用每一個資料行。 您可以將資料行使用方式定義為 `Input`、`Predict`、`Predict Only` 或 `Key`。 `Usage` 屬性會套用到個別採礦模型，而且必須針對模型中所包含的每一個資料行來個別設定。 如果此結構包含模型中未使用的資料行，使用方式會設定為 `Ignore`。 您想包含在採礦結構中但不想用於分析的資料範例可能包括客戶名稱或電子郵件地址。 如此一來，您可以稍後再查詢，而不需要包含在分析階段期間。  
+-   **Usage 屬性**定義模型如何使用每個資料行。 您可以將資料行使用方式定義為 `Input`、`Predict`、`Predict Only` 或 `Key`。 
+  `Usage` 屬性會套用到個別採礦模型，而且必須針對模型中所包含的每一個資料行來個別設定。 如果此結構包含模型中未使用的資料行，使用方式會設定為 `Ignore`。 您想包含在採礦結構中但不想用於分析的資料範例可能包括客戶名稱或電子郵件地址。 如此一來，您可以稍後再查詢，而不需要包含在分析階段期間。  
   
  您可以在建立採礦模型後，變更採礦模型屬性的值。 不過，即使是採礦模型名稱的任何變更都需要您重新處理模型。 重新處理模型後，您可能會看到不同的結果。  
   
  [採礦模型架構](#bkmk_mdlArch)  
   
-##  <a name="bkmk_mdlCols"></a> 採礦模型資料行  
+##  <a name="bkmk_mdlCols"></a>採礦模型資料行  
  採礦模型包含從採礦結構中定義的資料行取得的資料行。 您可以從採礦結構中選擇要用於模型的資料行，您也可以建立採礦結構資料行的複本，然後為其重新命名或變更其用法。 在建立模型的過程中，您也必須定義模型使用資料行的方式； 包括資料行是否為索引鍵資料行、資料行是否用於預測，或者演算法是否可以忽略資料行等資訊。  
   
  當您建立模型時，建議您仔細檢閱結構中的資料，僅將對分析有意義的資料行加入至模型，而不是自動加入每一個可用的資料行。 例如，您應該避免包含重複相同資料的多個資料行，您也應該避免使用擁有最多唯一值的資料行。 如果您認為不應該使用資料行，就不需要從採礦結構或採礦模型中刪除，但是您可以在資料行上，只設定一個旗標，指定在建立模型時應該忽略該資料行。 這表示資料行會保留在採礦結構中，但不會在採礦模型中使用。 如果您啟用從模型鑽研到採礦結構，則可以在稍後從資料行擷取資訊。  
@@ -109,15 +112,15 @@ ms.locfileid: "66083444"
   
  [採礦模型架構](#bkmk_mdlArch)  
   
-##  <a name="bkmk_mdlProcess"></a> 處理採礦模型  
+##  <a name="bkmk_mdlProcess"></a>處理採礦模型  
  資料採礦模型在處理之前是一個空物件。 當您處理模型時，如果有在模型中定義篩選，而且經過演算法分析，結構所快取的資料會透過該篩選傳遞。 演算法會計算一組描述資料的摘要統計資料、識別資料內的規則和模式，然後使用這些規則和模式來擴展模型。  
   
  採礦模型經過處理之後會包含有關透過分析所找到之資料和模式的許多資訊，包括統計資料、規則及迴歸公式。 您可以使用自訂檢視器瀏覽這些資訊，也可以建立資料採礦查詢擷取這些資訊並用於分析及簡報。  
   
  [採礦模型架構](#bkmk_mdlArch)  
   
-##  <a name="bkmk_mdlView"></a> 檢視和查詢採礦模型  
- 在您處理模型之後，就可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的自訂檢視器來瀏覽該模型。 For  
+##  <a name="bkmk_mdlView"></a>查看和查詢採礦模型  
+ 在您處理模型之後，就可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的自訂檢視器來瀏覽該模型。 針對  
   
  您也可以根據採礦模型建立查詢以進行預測，或者擷取模型中繼資料或模型建立的模式。 您可以使用資料採礦擴充模組 (DMX) 建立查詢。  
   
@@ -125,26 +128,26 @@ ms.locfileid: "66083444"
   
 |主題|連結|  
 |------------|-----------|  
-|了解如何建立可支援多個採礦模型的採礦結構。 了解資料行在模型中的使用方式。|[採礦結構資料行](mining-structure-columns.md)<br /><br /> [採礦模型資料行](mining-model-columns.md)<br /><br /> [內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)|  
-|了解不同的演算法，以及選擇的演算法如何影響模型內容。|[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
-|了解您現在可以在模型上設定影響其組成和行為的屬性。|[採礦模型屬性](mining-model-properties.md)<br /><br /> [模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)|  
-|了解資料採礦的程式設計介面。|[使用分析管理物件 &#40;AMO&#41; 來開發](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)<br /><br /> [資料採礦延伸模組 &#40;DMX&#41; 參考](/sql/dmx/data-mining-extensions-dmx-reference)|  
+|了解如何建立可支援多個採礦模型的採礦結構。 了解資料行在模型中的使用方式。|[採礦結構資料行](mining-structure-columns.md)<br /><br /> [採礦模型資料行](mining-model-columns.md)<br /><br /> [&#40;資料採礦&#41;的內容類型](content-types-data-mining.md)|  
+|了解不同的演算法，以及選擇的演算法如何影響模型內容。|[&#40;Analysis Services 的採礦模型內容-資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [資料採礦演算法 &#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
+|了解您現在可以在模型上設定影響其組成和行為的屬性。|[採礦模型屬性](mining-model-properties.md)<br /><br /> [資料採礦&#41;的模型旗標 &#40;](modeling-flags-data-mining.md)|  
+|了解資料採礦的程式設計介面。|[流量分析管理物件 &#40;AMO 進行開發&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)<br /><br /> [資料採礦延伸模組 &#40;DMX&#41; 參考](/sql/dmx/data-mining-extensions-dmx-reference)|  
 |了解如何在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中使用自訂資料採礦檢視器。|[資料採礦模型檢視器](data-mining-model-viewers.md)|  
 |檢視您可以對資料採礦模型使用的不同查詢類型範例。|[資料採礦查詢](data-mining-queries.md)|  
   
 ## <a name="related-tasks"></a>相關工作  
  使用下列連結以取得使用資料採礦模型的其他特定資訊  
   
-|工作|連結|  
+|Task|連結|  
 |----------|----------|  
-|加入及刪除採礦模型|[將採礦模型新增至現有的採礦結構](add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [從採礦結構刪除採礦模型](delete-a-mining-model-from-a-mining-structure.md)|  
-|使用採礦模型資料行|[從採礦模型排除資料行](exclude-a-column-from-a-mining-model.md)<br /><br /> [建立模型資料行的別名](create-an-alias-for-a-model-column.md)<br /><br /> [變更採礦模型中的資料行分隔](change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [在模型中指定當做迴歸輸入變數使用的資料行](specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|改變模型屬性|[變更採礦模型的屬性](change-the-properties-of-a-mining-model.md)<br /><br /> [將篩選套用至採礦模型](apply-a-filter-to-a-mining-model.md)<br /><br /> [從採礦模型中刪除篩選](delete-a-filter-from-a-mining-model.md)<br /><br /> [針對採礦模型啟用鑽研](enable-drillthrough-for-a-mining-model.md)<br /><br /> [檢視或變更演算法參數](view-or-change-algorithm-parameters.md)|  
-|複製、 移動或管理模型|[建立採礦模型的複本](make-a-copy-of-a-mining-model.md)<br /><br /> [複製採礦模型的檢視](copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx)<br /><br /> [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx)|  
+|加入及刪除採礦模型|[將採礦模型加入至現有的採礦結構](add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [從採礦結構刪除採礦模型](delete-a-mining-model-from-a-mining-structure.md)|  
+|使用採礦模型資料行|[從採礦模型排除資料行](exclude-a-column-from-a-mining-model.md)<br /><br /> [建立模型資料行的別名](create-an-alias-for-a-model-column.md)<br /><br /> [變更採礦模型中的資料行離散化](change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [在模型中指定當做迴歸輸入變數使用的資料行](specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|改變模型屬性|[變更採礦模型的屬性](change-the-properties-of-a-mining-model.md)<br /><br /> [將篩選套用至採礦模型](apply-a-filter-to-a-mining-model.md)<br /><br /> [從採礦模型刪除篩選](delete-a-filter-from-a-mining-model.md)<br /><br /> [針對採礦模型啟用鑽研](enable-drillthrough-for-a-mining-model.md)<br /><br /> [檢視或變更演算法參數](view-or-change-algorithm-parameters.md)|  
+|複製。 移動或管理模型|[建立採礦模型的複本](make-a-copy-of-a-mining-model.md)<br /><br /> [複製採礦模型的檢視](copy-a-view-of-a-mining-model.md)<br /><br /> [匯出 &#40;DMX&#41;](/sql/dmx/export-dmx)<br /><br /> [匯入 &#40;DMX&#41;](/sql/dmx/import-dmx)|  
 |以資料擴展模型，或更新模型中的資料|[處理採礦模型](process-a-mining-model.md)|  
 |使用 OLAP 模型|[建立資料採礦維度](create-a-data-mining-dimension.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫物件 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [資料庫物件 &#40;Analysis Services 多維度資料&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 圖表索引標籤 （採礦模型檢視器） |Microsoft Docs
+title: 圖表索引標籤（採礦模型檢視器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088180"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>圖表索引標籤 (採礦模型檢視器)
-  使用 [圖表]  窗格，即可顯示用於定型時間序列模型的歷程記錄資料以及預測值。 圖表的垂直軸代表序列的值，而水平軸代表時間。 虛線代表未來預測。  
+  使用 [圖表]**** 窗格，即可顯示用於定型時間序列模型的歷程記錄資料以及預測值。 圖表的垂直軸代表序列的值，而水平軸代表時間。 虛線代表未來預測。  
   
- **如需詳細資訊：** [Microsoft 時間序列演算法](data-mining/microsoft-time-series-algorithm.md)，[瀏覽模型，使用 Microsoft 時間序列檢視器](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ **如需詳細資訊：** [Microsoft 時間序列演算法](data-mining/microsoft-time-series-algorithm.md)、[使用 microsoft 時間序列檢視器流覽模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -31,7 +31,7 @@ ms.locfileid: "66088180"
  **採礦模型**  
  在目前採礦結構中選擇採礦模型。 採礦模型會在其關聯的檢視器中開啟。  
   
- **Viewer**  
+ **檢視器**  
  選擇檢視器以瀏覽選取的採礦模型。 可以使用自訂的時間序列模型檢視器，或 [!INCLUDE[msCoName](../includes/msconame-md.md)] 採礦內容檢視器。 還可以使用外掛程式檢視器 (如果有)。  
   
  **放大**  
@@ -44,7 +44,7 @@ ms.locfileid: "66088180"
  縮小圖表直到整個圖表納入螢幕內。  
   
  **Abs**  
- 在兩個圖表檢視之間切換：在預設檢視中，數字相對於整體分佈來繪製圖形 (以百分比表示)。 如果您按一下 [Abs]  ，則會將數字做為絕對值繪製圖形。  
+ 在兩個圖表檢視之間切換：在預設檢視中，數字相對於整體分佈來繪製圖形 (以百分比表示)。 如果您按一下 [Abs]****，則會將數字做為絕對值繪製圖形。  
   
  **將圖表複製到剪貼簿**  
  將完整圖表複製到剪貼簿。  
@@ -59,8 +59,8 @@ ms.locfileid: "66088180"
  開啟對話方塊，您可以在此處選取要包含在檢視器中的數列。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [採礦模型檢視器 &#40;資料採礦模型設計師&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [資料採礦演算法 &#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [&#40;資料採礦模型設計工具的採礦模型檢視器&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [資料採礦模型檢視器](data-mining/data-mining-model-viewers.md)  
   
   

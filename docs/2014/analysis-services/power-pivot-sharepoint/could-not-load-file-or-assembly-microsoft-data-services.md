@@ -1,5 +1,5 @@
 ---
-title: 無法載入檔案或組件&#39;Microsoft.AnalysisServices.SharePoint.Integration&#39; |Microsoft Docs
+title: 無法載入 Microsoft.analysisservices 的檔案或元件 &#39;。整合&#39; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 42c7b7e876f244831920be390d97c88412eed63f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071670"
 ---
-# <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>無法載入檔案或組件&#39;Microsoft.AnalysisServices.SharePoint.Integration&#39;
+# <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>無法載入 Microsoft.analysisservices 的檔案或元件 &#39;。整合&#39;
   在擁有 PowerPivot for SharePoint 的 SharePoint 2010 環境中，如果 PowerPivot 的應用程式層級方案並未正確部署，將會發生這個錯誤。  
   
 ## <a name="details"></a>詳細資料  
@@ -25,7 +25,7 @@ ms.locfileid: "66071670"
 |||  
 |-|-|  
 |適用於|PowerPivot for SharePoint|  
-|產品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|產品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|Powerpivotwebapp 方案未部署或是未正確部署。|  
 |訊息文字|無法載入檔案或組件 'Microsoft.AnalysisServices.SharePoint.Integration'|  
   
@@ -35,11 +35,11 @@ ms.locfileid: "66071670"
 ## <a name="user-action"></a>使用者動作  
  部署方案套件。  
   
-1.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器陣列方案]** 。  
+1.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器陣列方案]**。  
   
-2.  按一下 [Powerpivotwebapp]  。  
+2.  按一下 [Powerpivotwebapp]****。  
   
-3.  按一下 **[部署方案]** 。  
+3.  按一下 **[部署方案]**。  
   
 4.  選擇發生這個錯誤的 Web 應用程式。 如果有一個以上的 Web 應用程式，請針對所有應用程式重新部署此方案。  
   

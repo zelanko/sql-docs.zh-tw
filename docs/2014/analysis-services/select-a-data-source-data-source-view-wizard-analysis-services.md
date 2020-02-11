@@ -1,5 +1,5 @@
 ---
-title: 選取資料來源 （資料來源檢視精靈） (Analysis Services) |Microsoft Docs
+title: 選取資料來源（資料來源視圖 Wizard）（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: be1ceb4135118197317e7b8a320c7a82d09ffda5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069855"
 ---
 # <a name="select-a-data-source-data-source-view-wizard-analysis-services"></a>選取資料來源 (資料來源檢視精靈) (Analysis Services)
@@ -34,12 +34,12 @@ ms.locfileid: "66069855"
  **資料來源屬性**  
  從目前選取之資料來源的連接字串中列出提供者資訊。  
   
- **新的資料來源**  
+ **新增資料來源**  
  開啟資料來源精靈，可以在其中建立要加入至專案的新資料來源。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料來源檢視精靈 F1 說明&#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
- [多維度模型中的資料來源檢視](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [資料來源精靈 F1 說明&#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  
+ [資料來源 View Wizard F1 說明 &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
+ [多維度模型中的資料來源視圖](multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [資料來源 Wizard F1 說明 &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  
   
   

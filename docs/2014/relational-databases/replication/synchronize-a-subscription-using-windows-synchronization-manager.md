@@ -1,5 +1,5 @@
 ---
-title: 同步處理訂用帳戶使用 Windows Synchronization Manager (Windows Synchronization Manager) |Microsoft Docs
+title: 使用 Windows 同步處理管理員同步處理訂閱（Windows 同步處理管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745757"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>使用 Windows Synchronization Manager 同步處理訂閱 (Windows Synchronization Manager)
-  如果 Microsoft[!INCLUDE[msCoName](../../includes/msconame-md.md)] 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows Synchronization Manager 在相同的電腦上執行，則 Synchronization Manager 只能用於同步處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的訂閱 (它也可以用於同步處理離線檔案和網頁)。 若要使用 Synchronization Manager：  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 同步處理管理員只能用來同步處理 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行集的訂閱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （如果是在與同步處理管理員相同的電腦上執行）（也可以用來同步處理離線檔案和網頁）。 若要使用 Synchronization Manager：  
   
-1.  使用 Windows Synchronization Manager 在 [訂閱屬性 - \<訂閱者>:  \<訂閱資料庫>] 對話方塊中，啟用提取訂閱的同步處理。 如需存取此對話方塊的詳細資訊，請參閱[檢視及修改提取訂閱屬性](view-and-modify-pull-subscription-properties.md)。  
+1.  在 [訂閱屬性 - **訂閱者>: \<訂閱資料庫>]\<** 對話方塊中，啟用同步處理提取訂閱與 Windows Synchronization Manager。 如需存取此對話方塊的詳細資訊，請參閱[檢視及修改提取訂閱屬性](view-and-modify-pull-subscription-properties.md)。  
   
 2.  透過 Windows 中的 **[開始]** 功能表存取 Synchronization Manager。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62745757"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>若要使用 Windows Synchronization Manager 啟用提取訂閱同步處理  
   
-1.  在 [一般]  頁面上 (位於 [訂閱屬性 - \<訂閱者>:  \<訂閱資料庫>] 對話方塊中)，針對 [使用 Windows Synchronization Manager]  選項選取 [啟用]  值。  
+1.  在 [訂閱屬性 - **訂閱者>: **訂閱資料庫>]**\< 對話方塊的 [一般]\<** 頁面中，針對 [使用 Windows Synchronization Manager]**** 選項選取 [啟用]****。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -42,23 +42,23 @@ ms.locfileid: "62745757"
   
 1.  請利用下列其中一種方法來啟動 Synchronization Manager：  
   
-    -   在 Internet Explorer 中，按一下 **[工具]** ，然後按一下 **[同步處理]** 。  
+    -   在 Internet Explorer 中，按一下 **[工具]**，然後按一下 **[同步處理]**。  
   
-    -   按一下 **[開始]** ，依序指向 **[程式集]** (或 **[程式集]** ) 和 **[附屬應用程式]** ，然後按一下 **[同步處理]** 。  
+    -   按一下 **[開始]**，依序指向 **[程式集]** (或 **[程式集]**) 和 **[附屬應用程式]**，然後按一下 **[同步處理]**。  
   
-    -   按一下 **[開始]** ，然後按一下 **[執行]** 在 [**執行**] 對話方塊中，輸入`mobsync.exe`中**開啟**欄位，，然後按一下 **[確定]** 。  
+    -   按一下 [**開始**]，然後按一下 [**執行]。** 在 [**執行**] 對話方塊的 [ `mobsync.exe` **開啟**] 欄位中輸入，然後按一下 **[確定]**。  
   
 2.  在 **[要同步處理的項目]** 對話方塊中，選取要同步處理的訂閱。 訂閱會列在電腦上安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之下。  
   
-3.  按一下 **[同步處理]** 。  
+3.  按一下 **[同步處理]**。  
   
 ### <a name="to-reinitialize-a-pull-subscription-with-synchronization-manager"></a>若要使用 Synchronization Manager 重新初始化提取訂閱  
   
-1.  在 **[要同步處理的項目]** 對話方塊中，選取訂閱，然後按一下 **[屬性]** 。  
+1.  在 **[要同步處理的項目]** 對話方塊中，選取訂閱，然後按一下 **[屬性]**。  
   
-2.  在 **[SQL Server 訂閱屬性]** 對話方塊中，按一下 **[重新初始化訂閱]** 。  
+2.  在 **[SQL Server 訂閱屬性]** 對話方塊中，按一下 **[重新初始化訂閱]**。  
   
-3.  按一下 [ **是**]。  
+3.  按一下 [是]  。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -69,15 +69,15 @@ ms.locfileid: "62745757"
   
 ### <a name="to-set-properties-for-a-pull-subscription-in-synchronization-manager"></a>若要在 Synchronization Manager 中設定提取訂閱的屬性  
   
-1.  在 **[要同步處理的項目]** 對話方塊中，選取訂閱，然後按一下 **[屬性]** 。  
+1.  在 **[要同步處理的項目]** 對話方塊中，選取訂閱，然後按一下 **[屬性]**。  
   
 2.  在下列索引標籤中檢視並修改屬性：  
   
-    -   **識別**  
+    -   **發現**  
   
-    -   **[訂閱者登入]** 、 **[散發者登入]** 和 **[發行者登入]** (僅用於合併式複寫)  
+    -   **訂閱者登**入、散發者**登**入和**發行者登**入（僅適用于合併式複寫）  
   
-    -   **[Web 伺服器資訊]** (用於執行 SQL Server 2005 或更新版本之「訂閱者」端的合併訂閱)  
+    -   **Web 服務器資訊**（適用于執行 SQL Server 2005 或更新版本之訂閱者上的合併訂閱）  
   
     -   **其他**  
   
@@ -87,9 +87,9 @@ ms.locfileid: "62745757"
   
 ### <a name="to-remove-a-pull-subscription-from-synchronization-manager"></a>若要從 Synchronization Manager 中移除提取訂閱  
   
-1.  在 **[要同步處理的項目]** 對話方塊中，選取訂閱，然後按一下 **[屬性]** 。  
+1.  在 **[要同步處理的項目]** 對話方塊中，選取訂閱，然後按一下 **[屬性]**。  
   
-2.  在 **[SQL Server 訂閱屬性]** 對話方塊中按一下 **[移除訂閱]** 。  
+2.  在 **[SQL Server 訂閱屬性]** 對話方塊中按一下 **[移除訂閱]**。  
   
 3.  在 **[移除訂閱]** 對話方塊中選取一個選項。  
   
@@ -103,18 +103,18 @@ ms.locfileid: "62745757"
   
 3.  選擇性地編輯任何在「互動解決器」中顯示的資料行，然後按下列其中一個按鈕，以解決衝突：  
   
-    -   **[接受建議]**  
+    -   **接受建議**  
   
-    -   **[接受發行者]**  
+    -   **接受發行者**  
   
-    -   **[接受訂閱者]**  
+    -   **接受訂閱者**  
   
-    -   **[自動解決所有衝突]** (會解決目前所有的衝突，而無需進一步的輸入)  
+    -   **自動解決所有問題**（所有目前的衝突都已解決，但不含進一步的輸入）  
   
      選取的資料列然後會被套用到「發行者」和 (或)「訂閱者」；在後續同步處理期間，它會傳播到其他節點。  
   
 > [!NOTE]  
->  僅當編輯為針對解決方案所選取之資料列的一部分時，才會被套用。 例如，如果您在 **[發行者]** 下進行了編輯，然後按一下 **[接受訂閱者]** ，則編輯會被捨棄。  
+>  僅當編輯為針對解決方案所選取之資料列的一部分時，才會被套用。 例如，如果您在 **[發行者]** 下進行了編輯，然後按一下 **[接受訂閱者]**，則編輯會被捨棄。  
   
 ## <a name="see-also"></a>另請參閱  
  [互動式衝突解決方法](merge/advanced-merge-replication-conflict-interactive-resolution.md)  

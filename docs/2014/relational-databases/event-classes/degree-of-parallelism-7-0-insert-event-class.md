@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56a87741b104a49f98a3cba05dc65d911774774d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662896"
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Degree of Parallelism (7.0 Insert) 事件類別
@@ -31,7 +31,7 @@ ms.locfileid: "62662896"
 |資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
-|**BinaryData**|**image**|用來完成處理序的 CPU 數量，根據的值如下：<br /><br /> 0x00000000:表示執行序列計畫。<br /><br /> 0x01000000 表示序列中執行的平行計畫。<br /><br /> > = 0x02000000:表示以平行方式執行的平行計畫。|2|否|  
+|**BinaryData**|**image**|用來完成處理序的 CPU 數量，根據的值如下：<br /><br /> 0x00000000：表示在序列中執行的序列計畫。<br /><br /> 0x01000000 表示在序列中執行的平行計畫。<br /><br /> >= 0x02000000：指出平行執行的平行計畫。|2|否|  
 |**ClientProcessID**|**int**|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|9|是|  
 |**DatabaseID**|**int**|由 USE database 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE database 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |**DatabaseName**|**nvarchar**|正在執行使用者陳述式的資料庫名稱。|35|是|  

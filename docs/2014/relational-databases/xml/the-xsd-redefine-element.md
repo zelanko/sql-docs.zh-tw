@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e9fa3dedafc05406dcc521429130f98a215d294
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679968"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>&lt;xsd:redefine&gt; 項目
-  W3C XSD **redefine** 元素支援重新定義結構描述的元件。 不過，支援此指示詞可能會使效能，並也要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新驗證的所有執行個體`xml`與重新定義結構描述相關聯的資料類型。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援此元素。 伺服器將會拒絕包含 **\<xsd:redefine>** 項目的 XML 結構描述。  
+  W3C XSD **redefine** 元素支援重新定義結構描述的元件。 不過，對此指示詞的支援可能會耗用很高的效能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，而且也需要重新`xml`驗證與重新定義的架構相關聯之資料類型的所有實例。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援此元素。 伺服器將會拒絕包含 **\<xsd:redefine>** 項目的 XML 結構描述。  
   
  若要更新結構描述或是其元件，您可以改為執行下列動作：  
   

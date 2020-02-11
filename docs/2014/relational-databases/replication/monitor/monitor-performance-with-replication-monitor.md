@@ -20,14 +20,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e69b1d6ca838334c36ff94037473e5fda45cce43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667214"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>使用複寫監視器監視效能
-  「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器」可讓您使用下列方法來監視異動複寫與合併式複寫的效能：  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 「複寫監視器」可讓您以下列方式監視異動複寫和合併式複寫的效能：  
   
 -   設定警告和臨界值  
   
@@ -44,20 +44,20 @@ ms.locfileid: "62667214"
   
 -   超過指定的延遲 (交易受發行者認可與對應交易受訂閱者認可之間所經過的時間)。  
   
-     這可以套用於異動複寫。 若已達到或超過指定臨界值，狀態顯示為 **[效能嚴重不足]** 。  
+     這可以套用於異動複寫。 若已達到或超過指定臨界值，狀態顯示為 **[效能嚴重不足]**。  
   
 -   超過指定的同步處理時間。  
   
-     這可以套用於合併式複寫。 若已達到或超過指定臨界值，狀態顯示為 **[長期執行合併]** 。 您可以為撥號連接和區域網路 (LAN) 連接指定不同的臨界值。  
+     這可以套用於合併式複寫。 若已達到或超過指定臨界值，狀態顯示為 **[長期執行合併]**。 您可以為撥號連接和區域網路 (LAN) 連接指定不同的臨界值。  
   
 -   在給定時間內處理的資料列數達不到指定數目。  
   
-     這可以套用於合併式複寫。 若已達到或超過指定臨界值，狀態顯示為 **[效能嚴重不足]** 。 您可以為撥號連接和 LAN 連接指定不同的臨界值。  
+     這可以套用於合併式複寫。 若已達到或超過指定臨界值，狀態顯示為 **[效能嚴重不足]**。 您可以為撥號連接和 LAN 連接指定不同的臨界值。  
   
  如需相關資訊，請參閱 [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)。  
   
 ## <a name="view-performance-measurements"></a>檢視效能度量  
- 複寫監視器在發行集的 **[目前的平均效能]** 和 **[目前最差效能]** 資料行，以及訂閱的 **[效能]** 資料行，顯示異動複寫與合併式複寫的效能品質的值。 這些值為：  
+ 複寫監視器在發行集的 **[目前的平均效能]** 和 **[目前最差效能]** 資料行，以及訂閱的 **[效能]** 資料行，顯示異動複寫與合併式複寫的效能品質的值。 值如下：  
   
 -   非常好  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62667214"
   
 -   對於異動複寫，效能品質由延遲臨界值決定。 如果不設定臨界值，則不顯示值。 下表顯示了臨界值和效能品質值之間的交互關聯。 例如，如果將臨界值設定為 60 秒，而實際延遲為 30 秒，則延遲為臨界值的 50%，結果值為「好」。  
   
-    |非常好|好|普通|差|嚴重|  
+    |非常好|好|普通|差|重大|  
     |---------------|----------|----------|----------|--------------|  
     |0 - 34%|35 - 59%|60 - 84%|85 - 99%|100% +|  
   
@@ -88,10 +88,10 @@ ms.locfileid: "62667214"
  如需有關檢視訂閱資訊的詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="determine-latency-with-tracer-tokens"></a>使用追蹤 Token 判斷延遲  
- 異動複寫可允許您藉由在發行集資料庫的交易記錄中插入 Token (少量資料)，並記錄到達散發者和訂閱者所需花費的時間，以測量系統中的延遲。 Token 亦可讓您識別資料是否未到達散發者或訂閱者。 如需相關資訊，請參閱 [針對異動複寫測量延遲及驗證連接](measure-latency-and-validate-connections-for-transactional-replication.md)。  
+ 異動複寫可允許您藉由在發行集資料庫的交易記錄中插入 Token (少量資料)，並記錄到達散發者和訂閱者所需花費的時間，以測量系統中的延遲。 Token 亦可讓您識別資料是否未到達散發者或訂閱者。 如需相關資訊，請參閱 [Measure Latency and Validate Connections for Transactional Replication](measure-latency-and-validate-connections-for-transactional-replication.md)。  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>檢視合併式複寫的詳細同步處理效能  
- 針對合併式複寫，複寫監視器於同步處理時顯示每個已處理發行項的詳細資訊，包括每個處理階段花費的時間 (上傳變更、下載變更等等)。 這樣有助於找出導致過慢的特定資料表，同時也是解決合併訂閱效能問題的最佳地點。 如需有關檢視詳細統計資料的詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](view-information-and-perform-tasks-replication-monitor.md)。  
+ 針對合併式複寫，複寫監視器於同步處理時顯示每個已處理發行項的詳細資訊，包括每個處理階段花費的時間 (上傳變更、下載變更等等)。 這樣有助於找出導致過慢的特定資料表，同時也是解決合併訂閱效能問題的最佳地點。 如需有關查看詳細統計資料的詳細資訊，請參閱[使用複寫監視器來查看資訊及執行](view-information-and-perform-tasks-replication-monitor.md)工作。  
   
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>檢視異動複寫的交易和傳遞時間  
  對於異動複寫，「複寫監視器」會顯示有關下列內容的資訊：尚未散發到「訂閱者」之散發資料庫中的交易數，以及散發這些交易的預估時間。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](view-information-and-perform-tasks-replication-monitor.md)。  

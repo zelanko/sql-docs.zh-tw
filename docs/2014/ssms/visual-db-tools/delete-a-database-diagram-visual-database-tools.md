@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b8e3854d98833354fd859d687bfa7e85e99601de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670441"
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>刪除資料庫圖表 (Visual Database Tools)
@@ -33,7 +33,7 @@ ms.locfileid: "62670441"
   
 3.  在快速鍵功能表上選擇 [刪除]  。  
   
-4.  會出現訊息提示您確認是否刪除。 選擇 [ **是**]。  
+4.  會出現訊息提示您確認是否刪除。 選擇 [是]  。  
   
  資料庫圖表已從資料庫中刪除。 在您刪除資料庫圖表時，圖表內的資料表並未遭到刪除。  
   

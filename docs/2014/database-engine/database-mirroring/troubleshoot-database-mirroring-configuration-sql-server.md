@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b99fb881fc6bf09aa848bd41a42f8254e5f3acd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754206"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>疑難排解資料庫鏡像組態 (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "62754206"
 > [!NOTE]  
 >  確定您符合所有 [資料庫鏡像的必要條件](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)。  
   
-|問題|總結|  
+|問題|摘要|  
 |-----------|-------------|  
 |錯誤訊息 1418|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訊息指出無法連繫伺服器網路位址或該位址不存在，並建議您確認網路位址名稱，然後重新發出命令。 如需詳細資訊，請參閱 [MSSQLSERVER_1418](../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md) 主題。|  
 |[帳戶](#Accounts)|討論正確設定在底下執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之帳戶的需求。|  
@@ -37,7 +37,7 @@ ms.locfileid: "62754206"
 |[網路存取](#NetworkAccess)|說明每個伺服器執行個體要透過 TCP 來存取其他伺服器執行個體之通訊埠的需求。|  
 |[鏡像資料庫的準備工作](#MirrorDbPrep)|摘要說明準備鏡像資料庫以便開始進行鏡像作業的需求。|  
 |[失敗的檔案建立作業](#FailedCreateFileOp)|描述如何回應失敗的檔案建立作業。|  
-|[使用 Transact-SQL 啟動鏡像](#StartDbm)|描述 ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** 陳述式的必要順序。|  
+|[使用 Transact-SQL 啟動鏡像](#StartDbm)|描述 ALTER DATABASE *database_name* SET PARTNER **= '***partner_server***'** 語句的必要順序。|  
 |[跨資料庫交易](#CrossDbTxns)|自動容錯移轉可能導致自動以及可能不正確地解決有疑問的交易。 因此，資料庫鏡像不支援跨資料庫交易。|  
   
 ##  <a name="Accounts"></a> 帳戶  
@@ -51,7 +51,7 @@ ms.locfileid: "62754206"
   
 2.  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用本機系統帳戶以服務的方式執行，您必須使用憑證進行驗證。 如需詳細資訊，請參閱[使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
   
-##  <a name="Endpoints"></a> 端點  
+##  <a name="Endpoints"></a> Endpoints  
  必須正確設定端點。  
   
 1.  確定每個伺服器執行個體 (主體伺服器、鏡像伺服器和任何見證) 都有資料庫鏡像端點。 如需詳細資訊，請參閱 [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql) 以及[建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) 或[使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) (根據驗證格式而定)。  
@@ -142,7 +142,7 @@ ms.locfileid: "62754206"
  如需詳細資訊，請參閱[移除資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)、[準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)、[使用 Windows 驗證建立資料庫鏡像工作階段 &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)、[使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) 或[使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)。  
   
 ##  <a name="StartDbm"></a> 使用 Transact-SQL 啟動鏡像  
- ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** 陳述式發出的順序非常重要。  
+ ALTER DATABASE *database_name* SET PARTNER **= '***partner_server***'** 語句發出的順序非常重要。  
   
 1.  第一個陳述式必須在鏡像伺服器上執行。 發出這個陳述式時，鏡像伺服器並不會嘗試聯繫任何其他伺服器執行個體。 鏡像伺服器卻會指示其資料庫等到主體伺服器聯繫上鏡像伺服器為止。  
   
@@ -166,6 +166,6 @@ ms.locfileid: "62754206"
   
 ## <a name="see-also"></a>另請參閱  
  [設定資料庫鏡像 &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
- [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)  
+ [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)  
   
   

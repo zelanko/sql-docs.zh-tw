@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2ecd6ec8584eb4031e7d2c8a0af95204a930498
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721839"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;代理程式設定檔名稱&gt; 屬性
   請使用 **[代理程式設定檔屬性]** 對話方塊，即可檢視設定檔中、每一個代理程式參數所指定的值，以及修改使用者自訂設定檔的值。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **名稱**  
  設定檔的名稱。  
   
@@ -40,14 +40,14 @@ ms.locfileid: "62721839"
   
 -   [Replication Distribution Agent](agents/replication-distribution-agent.md)  
   
--   [複寫合併代理程式](agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](agents/replication-merge-agent.md)  
   
 -   [複寫佇列讀取器代理程式](agents/replication-queue-reader-agent.md)  
   
  **預設值**  
  每一個代理程式參數的預設值。  
   
- **值**  
+ **ReplTest1**  
  設定檔中指定的參數值。 此欄位為使用者自訂設定檔中可編輯的欄位。  
   
  **[只顯示這個設定檔中使用的參數]**  

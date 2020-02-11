@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92ceb297f1004770903f4eadd7323bfef98e7cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62711463"
 ---
 # <a name="cursor-properties"></a>資料指標屬性
@@ -32,6 +32,6 @@ ms.locfileid: "62711463"
 -   [資料指標交易隔離等級](cursor-transaction-isolation-level.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [使用資料指標&#40;ODBC&#41;](../using-cursors-odbc.md)  
+ [&#40;ODBC&#41;使用資料指標](../using-cursors-odbc.md)  
   
   

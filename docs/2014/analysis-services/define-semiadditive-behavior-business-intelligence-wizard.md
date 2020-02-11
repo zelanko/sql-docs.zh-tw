@@ -1,5 +1,5 @@
 ---
-title: 定義局部加總行為 （商業智慧精靈） |Microsoft Docs
+title: 定義局部加總行為（商業智慧 Wizard） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 161e2cb9dd9eeae4f2ed369b77ab0799ae12a33a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081996"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>定義局部加總行為 (商業智慧精靈)
-  使用 [定義局部加總行為]  頁面，即可啟用或停用量值的局部加總行為。 局部加總行為會決定 Cube 所包含的維度，將如何在時間維度上進行彙總。  
+  使用 [定義局部加總行為]**** 頁面，即可啟用或停用量值的局部加總行為。 局部加總行為會決定 Cube 所包含的維度，將如何在時間維度上進行彙總。  
   
 > [!NOTE]  
 >  除了 Standard 版中提供的 LastChild 之外，只有商業智慧或 Enterprise 版中提供局部加總行為。 此外，由於局部加總行為只會定義在量值上，而不會定義在維度上，如果此行為之前是從維度設計師啟動，或是以滑鼠右鍵按一下 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中方案總管的某維度來啟動，則此頁面將不會出現在商業智慧精靈中。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **關閉局部加總行為**  
  停用 Cube 所包含之所有量值中的局部加總行為。  
   
- **精靈已偵測到\<維度名稱 > 帳戶維度，其中包含局部加總的成員。伺服器會彙總此維度，依據每一個帳戶類型指定的局部加總行為的成員。**  
+ **Wizard 已偵測到\<維度名稱> 帳戶維度，其中包含局部加總成員。伺服器會根據為每個帳戶類型指定的局部加總行為，來匯總此維度的成員。**  
  針對包含局部加總成員的帳戶維度，啟用局部加總行為。 選取此選項會將參考帳戶維度之量值群組中所有量值的彙總函式設定為 `ByAccount`。  
   
  如需帳戶維度的詳細資訊，請參閱 [建立父子式類型維度的財務帳戶](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)。  
@@ -40,7 +40,7 @@ ms.locfileid: "66081996"
  **量值**  
  顯示 Cube 所包含之量值的名稱。  
   
- **局部加總的函式**  
+ **局部加總函數**  
  為選取的量值選取彙總函式。 下表列出可用的彙總函式。  
   
 |值|描述|  
@@ -59,11 +59,11 @@ ms.locfileid: "66081996"
 |`Sum`|使用 `Sum` 函數來進行彙總。|  
   
 > [!NOTE]  
->  唯有在選取 [定義個別成員的局部加總行為]  之後，才適用於針對此選項所做的選擇。  
+>  唯有在選取 [定義個別成員的局部加總行為]**** 之後，才適用於針對此選項所做的選擇。  
   
 ## <a name="see-also"></a>另請參閱  
- [商業智慧精靈 F1 說明](business-intelligence-wizard-f1-help.md)   
- [Cube 設計師&#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [維度設計師&#40;Analysis Services-多維度資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [商業智慧 Wizard F1 說明](business-intelligence-wizard-f1-help.md)   
+ [Cube 設計工具 &#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [維度設計師 &#40;Analysis Services 多維資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Partitioning 元素 (DTA) |Microsoft Docs
+title: 分割元素（DTA） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: acf6d033595952186b411ef0e547858f8b59771b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657233"
 ---
 # <a name="partitioning-element-dta"></a>Partitioning 元素 (DTA)
@@ -38,7 +38,8 @@ ms.locfileid: "62657233"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|**資料類型和長度**|`string`，沒有最大長度。|  
+|**資料類型和長度**|
+  `string`，沒有最大長度。|  
 |**允許的值**|**NONE**<br /> 沒有資料分割。<br /><br /> **FULL**<br /> 完整的資料分割。 (增強效能。)<br /><br /> **ALIGNED**<br /> 只有對齊的資料分割。 (增強管理功能。)<br /><br /> 這個元素只能使用這些值的其中之一。<br /><br /> **ALIGNED** 表示在 Database Engine Tuning Advisor 所產生的建議中，每個提出的索引都完全依照索引定義基礎資料表的相同方式來分割。 索引檢視表中的非叢集索引會對齊索引檢視表。|  
 |**預設值**|**NONE**|  
 |**出現次數**|除非使用 `TuningOptions` 元素，否則，`DropOnlyMode` 元素需要使用這個元素一次。 如果使用 `DropOnlyMode`，您便無法使用 `Partitioning`。 這些元素互斥。|  

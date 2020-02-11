@@ -1,5 +1,5 @@
 ---
-title: 正在完成精靈 （Cube 精靈） |Microsoft Docs
+title: 正在完成嚮導（Cube Wizard） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c0d0f99ebd4fcd45d456cb25d256e230ec1194d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087722"
 ---
 # <a name="completing-the-wizard-cube-wizard"></a>正在完成精靈 (Cube 精靈)
   使用 **[正在完成精靈]** 頁面，即可命名並預覽在精靈完成後所建立的 Cube。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **Cube 名稱**  
  鍵入 Cube 的名稱。  
   
@@ -30,8 +30,8 @@ ms.locfileid: "66087722"
  顯示在精靈完成後所建立之 Cube 的結構。  
   
 ## <a name="see-also"></a>另請參閱  
- [Cube 物件&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
- [多維度模型中的 Cube](multidimensional-models/cubes-in-multidimensional-models.md)   
+ [Cube 物件 &#40;Analysis Services 多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [多維度模型中的 cube](multidimensional-models/cubes-in-multidimensional-models.md)   
  [多維度模型中的維度](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

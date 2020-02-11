@@ -1,5 +1,5 @@
 ---
-title: 查詢用於建立採礦模型的參數 |Microsoft Docs
+title: 查詢用來建立採礦模型的參數 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 69301cf56a4102acd54d11b9f5849ea58b141e03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083042"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>查詢用於建立採礦模型的參數
@@ -28,10 +28,10 @@ ms.locfileid: "66083042"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟包含所要查詢之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體。  
   
-2.  以滑鼠右鍵按一下執行個體名稱，選取 [新增查詢]  ，然後選取 [DMX]  。  
+2.  以滑鼠右鍵按一下執行個體名稱，選取 [新增查詢]****，然後選取 [DMX]****。  
   
     > [!NOTE]  
-    >  您也可以使用 [MDX]  範本針對資料採礦模型建立查詢。  
+    >  您也可以使用 [MDX]**** 範本針對資料採礦模型建立查詢。  
   
 3.  如果執行個體包含多個資料庫，請從工具列中的 **[可用的資料庫]** 清單選取包含您要查詢之模型的資料庫。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66083042"
   
 2.  在 [物件總管] 中，選取所要的採礦模型，然後將它拖曳到 [DMX 查詢] 窗格內的單引號中。  
   
-3.  按 F5, 或按一下 **[執行]** 。  
+3.  按 F5, 或按一下 **[執行]**。  
   
 ## <a name="example"></a>範例  
  下列程式碼會傳回用來建立您在 [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)中所建立之採礦模型的參數清單。 這些參數所包含的明確值，會用於伺服器的提供者所提供之採礦服務使用的任何預設值。  
@@ -67,7 +67,7 @@ WHERE MODEL_NAME = 'TM Clustering'
  CLUSTER_COUNT=10,CLUSTER_SEED=0,CLUSTERING_METHOD=1,MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_STATES=100,MINIMUM_SUPPORT=1,MODELLING_CARDINALITY=10,SAMPLE_SIZE=50000,STOPPING_TOLERANCE=10  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦查詢工作和使用說明](data-mining-query-tasks-and-how-tos.md)   
+ [資料採礦查詢工作和操作說明](data-mining-query-tasks-and-how-tos.md)   
  [資料採礦查詢](data-mining-queries.md)  
   
   

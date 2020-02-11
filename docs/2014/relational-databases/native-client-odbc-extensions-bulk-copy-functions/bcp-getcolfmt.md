@@ -1,5 +1,5 @@
 ---
-title: bcp_getcolfmt | Microsoft Docs
+title: bcp_getcolfmt |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db8b433652829b16890552a70bd1e0d08d1c1bc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689083"
 ---
-# <a name="bcpgetcolfmt"></a>bcp_getcolfmt
+# <a name="bcp_getcolfmt"></a>bcp_getcolfmt
   用來尋找資料行格式屬性值。  
   
 ## <a name="syntax"></a>語法  
@@ -57,7 +57,7 @@ pcbLen
  *hdbc*  
  這是已啟用大量複製的 ODBC 連接控制代碼。  
   
- *field*  
+ *欄位*  
  這是擷取屬性的資料行編號。  
   
  *property*  
@@ -76,14 +76,14 @@ pcbLen
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- 資料行格式屬性值會列在[bcp_setcolfmt](bcp-setcolfmt.md)主題。 資料行格式屬性值為藉由呼叫**bcp_setcolfmt**函式，而**bcp_getcolfmt**函式用來尋找資料行格式屬性值。  
+ 資料行格式屬性值列在[bcp_setcolfmt](bcp-setcolfmt.md)主題中。 資料行格式屬性值是藉由呼叫**bcp_setcolfmt**函數來設定，而**bcp_getcolfmt**函數則是用來尋找資料行格式屬性值。  
   
- 當連接到的行為變更可能會觀察到[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]（或更新版本） 伺服器電腦上，相較於先前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本。 如需詳細資訊，請參閱 <<c0> [ 中繼資料探索](../native-client/features/metadata-discovery.md)。  
+ 相較于舊版[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，連接到（或更新版本）伺服器電腦時，可能會觀察到行為變更。 如需詳細資訊，請參閱[中繼資料探索](../native-client/features/metadata-discovery.md)。  
   
-## <a name="bcpgetcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_getcolfmt 對於增強型日期和時間功能的支援  
- 搭配使用的型別`BCP_FMT_TYPE`日期/時間類型的屬性中所指定[增強型日期和時間類型的大量複製變更&#40;OLE DB 和 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
+## <a name="bcp_getcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_getcolfmt 對於增強型日期和時間功能的支援  
+ 與日期/時間類型`BCP_FMT_TYPE`的屬性搭配使用的類型，會如[針對增強型日期和時間類型的大量複製變更中所指定 &#40;OLE DB 和 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
   
- 如需詳細資訊，請參閱 <<c0> [ 日期和時間改善&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。</c0>  
+ 如需詳細資訊，請參閱[ODBC&#41;&#40;的日期和時間改善](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [大量複製函數](sql-server-driver-extensions-bulk-copy-functions.md)  

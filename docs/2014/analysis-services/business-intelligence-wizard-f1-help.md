@@ -1,5 +1,5 @@
 ---
-title: 商業智慧精靈 F1 說明 |Microsoft Docs
+title: 商業智慧 Wizard F1 說明 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25496be8f8cfc877b72ab6fd511446d9e194e2b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088395"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>商業智慧精靈 F1 說明
@@ -46,59 +46,59 @@ ms.locfileid: "66088395"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [選擇增強功能&#40;商業智慧精靈&#41;](choose-enhancement-business-intelligence-wizard.md)  
+-   [選擇 [增強功能] &#40;[商業智慧] [Wizard&#41;](choose-enhancement-business-intelligence-wizard.md)  
   
--   [選擇時間計算&#40;商業智慧精靈&#41;](choose-time-calculations-business-intelligence-wizard.md)  
+-   [選擇 &#40;商業智慧 Wizard&#41;的時間計算](choose-time-calculations-business-intelligence-wizard.md)  
   
--   [定義計算範圍&#40;商業智慧精靈&#41;](define-scope-of-calculations-business-intelligence-wizard.md)  
+-   [定義 &#40;商業智慧 Wizard&#41;的計算範圍](define-scope-of-calculations-business-intelligence-wizard.md)  
   
--   [定義帳戶智慧&#40;維度&#41;&#40;商業智慧精靈&#41;](define-account-intelligence-dimension-business-intelligence-wizard.md)  
+-   [定義 &#40;維度&#41; &#40;商業智慧 Wizard 的帳戶智慧&#41;](define-account-intelligence-dimension-business-intelligence-wizard.md)  
   
--   [設定維度屬性&#40;商業智慧精靈&#41;](configure-dimension-attributes-business-intelligence-wizard.md)  
+-   [&#40;商業智慧 Wizard 設定維度屬性&#41;](configure-dimension-attributes-business-intelligence-wizard.md)  
   
--   [定義帳戶智慧&#40;商業智慧精靈&#41;](define-account-intelligence-business-intelligence-wizard.md)  
+-   [定義 &#40;商業智慧 Wizard 的帳戶智慧&#41;](define-account-intelligence-business-intelligence-wizard.md)  
   
--   [設定維度智慧選項&#40;商業智慧精靈&#41;](set-dimension-intelligence-options-business-intelligence-wizard.md)  
+-   [&#40;商業智慧 Wizard 設定維度智慧選項&#41;](set-dimension-intelligence-options-business-intelligence-wizard.md)  
   
--   [定義維度智慧&#40;商業智慧精靈&#41;](define-dimension-intelligence-business-intelligence-wizard.md)  
+-   [&#40;商業智慧 Wizard&#41;定義維度智慧](define-dimension-intelligence-business-intelligence-wizard.md)  
   
--   [指定一元運算子&#40;維度&#41;&#40;商業智慧精靈&#41;](specify-a-unary-operator-dimension-business-intelligence-wizard.md)  
+-   [&#41; &#40;商業智慧嚮導中指定一元運算子 &#40;維度&#41;](specify-a-unary-operator-dimension-business-intelligence-wizard.md)  
   
--   [指定一元運算子&#40;商業智慧精靈&#41;](specify-a-unary-operator-business-intelligence-wizard.md)  
+-   [&#40;商業智慧 Wizard 指定一元運算子&#41;](specify-a-unary-operator-business-intelligence-wizard.md)  
   
--   [建立自訂成員公式&#40;維度&#41;&#40;商業智慧精靈&#41;](create-a-custom-member-formula-dimension-business-intelligence-wizard.md)  
+-   [建立自訂成員公式 &#40;維度&#41; &#40;商業智慧 Wizard&#41;](create-a-custom-member-formula-dimension-business-intelligence-wizard.md)  
   
--   [建立自訂成員公式&#40;商業智慧精靈&#41;](create-a-custom-member-formula-business-intelligence-wizard.md)  
+-   [&#40;商業智慧 Wizard 建立自訂成員公式&#41;](create-a-custom-member-formula-business-intelligence-wizard.md)  
   
--   [指定屬性排列方式&#40;維度&#41;&#40;商業智慧精靈&#41;](specify-attribute-ordering-dimension-business-intelligence-wizard.md)  
+-   [指定 &#40;維度&#41; &#40;商業智慧 Wizard 的屬性排序&#41;](specify-attribute-ordering-dimension-business-intelligence-wizard.md)  
   
--   [指定屬性排列方式&#40;商業智慧精靈&#41;](specify-attribute-ordering-business-intelligence-wizard.md)  
+-   [&#40;商業智慧 Wizard&#41;指定屬性排序](specify-attribute-ordering-business-intelligence-wizard.md)  
   
--   [啟用維度回寫&#40;維度&#41;&#40;商業智慧精靈&#41;](enable-dimension-writeback-dimension-business-intelligence-wizard.md)  
+-   [啟用維度回寫 &#40;維度&#41; &#40;商業智慧 Wizard&#41;](enable-dimension-writeback-dimension-business-intelligence-wizard.md)  
   
--   [啟用維度回寫&#40;商業智慧精靈&#41;](enable-dimension-writeback-business-intelligence-wizard.md)  
+-   [啟用維度回寫 &#40;商業智慧 Wizard&#41;](enable-dimension-writeback-business-intelligence-wizard.md)  
   
--   [定義局部加總行為&#40;商業智慧精靈&#41;](define-semiadditive-behavior-business-intelligence-wizard.md)  
+-   [在商業智慧 Wizard &#40;定義局部加總行為&#41;](define-semiadditive-behavior-business-intelligence-wizard.md)  
   
--   [設定貨幣轉換選項&#40;商業智慧精靈&#41;](set-currency-conversion-options-business-intelligence-wizard.md)  
+-   [&#40;商業智慧 Wizard 設定貨幣轉換選項&#41;](set-currency-conversion-options-business-intelligence-wizard.md)  
   
--   [選取 [成員]&#40;商業智慧精靈&#41;](select-members-business-intelligence-wizard.md)  
+-   [選取商業智慧 Wizard &#40;成員&#41;](select-members-business-intelligence-wizard.md)  
   
--   [選取轉換類型&#40;商業智慧精靈&#41;](select-conversion-type-business-intelligence-wizard.md)  
+-   [&#40;商業智慧 Wizard&#41;的 [選取轉換類型]](select-conversion-type-business-intelligence-wizard.md)  
   
--   [定義本地貨幣參考&#40;商業智慧精靈&#41;](define-local-currency-reference-business-intelligence-wizard.md)  
+-   [定義 &#40;商業智慧 Wizard 的當地貨幣參考&#41;](define-local-currency-reference-business-intelligence-wizard.md)  
   
--   [指定報表貨幣&#40;商業智慧精靈&#41;](specify-reporting-currencies-business-intelligence-wizard.md)  
+-   [&#40;商業智慧 Wizard 指定報表貨幣&#41;](specify-reporting-currencies-business-intelligence-wizard.md)  
   
--   [定義貨幣轉換&#40;商業智慧精靈&#41;](define-currency-conversion-business-intelligence-wizard.md)  
+-   [&#40;商業智慧 Wizard 定義貨幣轉換&#41;](define-currency-conversion-business-intelligence-wizard.md)  
   
--   [選取資料行 對話方塊&#40;商業智慧精靈&#41;](select-a-column-dialog-box-business-intelligence-wizard.md)  
+-   [&#40;商業智慧 Wizard&#41;選取 [資料行] 對話方塊](select-a-column-dialog-box-business-intelligence-wizard.md)  
   
--   [完成精靈&#40;商業智慧精靈&#41;](completing-the-wizard-business-intelligence-wizard.md)  
+-   [完成 Wizard &#40;商業智慧 Wizard&#41;](completing-the-wizard-business-intelligence-wizard.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Cube 設計師&#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [維度設計師&#40;Analysis Services-多維度資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
- [Analysis Services 精靈&#40;多維度資料&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Cube 設計工具 &#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [維度設計師 &#40;Analysis Services 多維資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
+ [Analysis Services 的 &#40;多維度資料的嚮導&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

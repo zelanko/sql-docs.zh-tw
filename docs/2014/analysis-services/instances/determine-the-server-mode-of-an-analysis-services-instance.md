@@ -1,5 +1,5 @@
 ---
-title: 判斷伺服器模式的 Analysis Services 執行個體 |Microsoft Docs
+title: 判斷 Analysis Services 實例的伺服器模式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff9ac19c0b605266de5eca69dd0f410f0d8fbdd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080056"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>判斷 Analysis Services 執行個體的伺服器模式
-  Analysis Services 可以安裝在三種伺服器模式之一：多維度和資料的採礦 （預設）、 PowerPivot for SharePoint，以及表格式。 Analysis Services 執行個體的伺服器模式是在安裝期間您選擇安裝伺服器選項時決定。  
+  Analysis Services 可安裝為以下三種伺服器模式之一：多維度和資料採礦 (預設模式)、PowerPivot for SharePoint，以及表格式。 Analysis Services 執行個體的伺服器模式是在安裝期間您選擇安裝伺服器選項時決定。  
   
  伺服器模式決定您所建立和部署的方案類型。 如果您沒有安裝伺服器軟體並且想要知道伺服器的安裝模式，可以使用本主題中的資訊來判斷模式。 如需特定模式下功能可用性的詳細資訊，請參閱[比較表格式和多維度解決方案 &#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md)。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "66080056"
 ## <a name="server-icons-in-object-explorer"></a>物件總管中的伺服器圖示  
  判斷伺服器模式最簡單的方法是在 SQL Server Management Studio 中連接到伺服器，並且在物件總管中注意伺服器名稱旁的圖示。 下圖顯示以多維度、表格式和 PowerPivot 模式部署的三個 Analysis Services 執行個體：  
   
- ![物件總管圖示，每個伺服器模式](../media/ssas-ssms-servermodes.gif "每個伺服器模式的物件總管 圖示")  
+ ![每個伺服器模式的物件總管圖示](../media/ssas-ssms-servermodes.gif "每個伺服器模式的物件總管圖示")  
   
 ## <a name="viewing-deploymentmode-property-in-msmdsrvini-file"></a>檢視 MSMDSRV.INI 檔案中的 DeploymentMode 屬性  
  或者，您可以在每個 Analysis Services 執行個體中的 msmdsrv.ini 檔案檢查 `DeploymentMode` 屬性。 此屬性的值會識別伺服器模式。 有效值為 0 (多維度)、1 (SharePoint) 或 2 (表格式)。 您必須是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 系統管理員 (亦即伺服器角色的成員)，才能開啟 msmdsrv.ini 檔案。 此檔案包含結構化 XML。 您可以使用記事本或任何文字編輯器來檢視此檔案。  
@@ -36,7 +36,8 @@ ms.locfileid: "66080056"
 >  請不要變更 `DeploymentMode` 屬性的值。 不支援在安裝伺服器後手動變更此屬性。  
   
 ## <a name="about-the-deploymentmode-property"></a>關於 DeploymentMode 屬性  
- `DeploymentMode` 屬性會判斷 Analysis Services 伺服器執行個體的運作內容。 這個屬性被指在對話方塊、 訊息和文件中的 「 伺服器模式 」。 此屬性是由安裝程式根據您安裝 Analysis Services 的方式初始化。 此屬性應該僅被視為內部屬性，永遠使用安裝程式所指定的值。  
+ 
+  `DeploymentMode` 屬性會判斷 Analysis Services 伺服器執行個體的運作內容。 在對話方塊、訊息和檔中，此屬性稱為「伺服器模式」。 此屬性是由安裝程式根據您安裝 Analysis Services 的方式初始化。 此屬性應該僅被視為內部屬性，永遠使用安裝程式所指定的值。  
   
  這個屬性的有效值包括：  
   
@@ -50,11 +51,11 @@ ms.locfileid: "66080056"
   
 ## <a name="see-also"></a>另請參閱  
  [以表格式模式安裝 Analysis Services](install-windows/install-analysis-services.md)   
- [以多維度及資料採礦模式安裝 Analysis Services](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
+ [以多維度和資料採礦模式安裝 Analysis Services](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [PowerPivot for SharePoint 2010 安裝](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
  [連接到 Analysis Services](connect-to-analysis-services.md)   
- [表格式模型方案 &#40;SSAS 表格式&#41;](../tabular-model-solutions-ssas-tabular.md)   
- [多維度模型方案 &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [採礦模型 &#40;Analysis Services - 資料採礦&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
+ [&#40;SSAS 表格式&#41;的表格式模型方案](../tabular-model-solutions-ssas-tabular.md)   
+ [&#40;SSAS&#41;的多維度模型方案](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [&#40;Analysis Services 的採礦模型-資料採礦&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
   
   

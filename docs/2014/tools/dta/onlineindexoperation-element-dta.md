@@ -1,5 +1,5 @@
 ---
-title: OnlineIndexOperation 元素 (DTA) |Microsoft Docs
+title: OnlineIndexOperation 元素（DTA） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9bb877ae48153d4fabae13170eb5f072218012d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657213"
 ---
 # <a name="onlineindexoperation-element-dta"></a>OnlineIndexOperation 元素 (DTA)
@@ -38,7 +38,8 @@ ms.locfileid: "62657213"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|**資料類型和長度**|`string`，沒有最大長度。|  
+|**資料類型和長度**|
+  `string`，沒有最大長度。|  
 |**允許的值**|**OFF**<br /> 不能在線上建立任何建議的實體設計結構。<br /><br /> **ON**<br /> 可以在線上建立所有建議的實體設計結構。<br /><br /> **MIXED**<br /> Database Engine Tuning Advisor 嘗試建議在可能的情況下，能夠在線上建立的實體設計結構。<br /><br /> 這個元素使用這些值的其中之一。 如果在線上建立索引，就會在它的物件定義上附加關鍵字 **ONLINE = ON** 。|  
 |**預設值**|無。|  
 |**出現次數**|選擇性。 如果使用這個元素的話，`TuningOptions` 元素只能使用這個元素一次。|  

@@ -1,5 +1,5 @@
 ---
-title: 資料採礦模型設計師 (Analysis Services-資料採礦) |Microsoft Docs
+title: 資料採礦模型設計工具（Analysis Services 資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4af526dd7ced7a5116e6727ffd2b5ebd3b998bcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086404"
 ---
 # <a name="data-mining-model-designer-analysis-services---data-mining"></a>資料採礦模型設計工具 (Analysis Services - 資料採礦)
@@ -26,19 +26,19 @@ ms.locfileid: "66086404"
   
  如需如何建立資料採礦模型的逐步解說，請參閱下列教學課程和主題：  
   
--   [基本資料採礦教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)  
+-   [資料採礦基本教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [建立及查詢使用 DMX 資料採礦模型：教學課程&#40;Analysis Services-資料採礦&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [使用 DMX 建立和查詢資料採礦模型：教學課程 &#40;Analysis Services-資料採礦&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
--   [資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+-   [資料採礦嚮導 &#40;Analysis Services 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
 -   [資料採礦概念](data-mining/data-mining-concepts.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦結構 檢視&#40;資料採礦模型設計工具&#41;](mining-structure-view-data-mining-model-designer.md)   
- [採礦模型檢視&#40;資料採礦模型設計工具&#41;](mining-models-view-data-mining-model-designer.md)   
- [採礦模型檢視器 &#40;資料採礦模型設計師&#41;](mining-model-viewers-data-mining-model-designer.md)   
- [採礦精確度圖表設計師&#40;資料採礦&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [預測查詢產生器&#40;資料採礦&#41;](prediction-query-builder-data-mining.md)  
+ [&#40;資料採礦模型設計工具的「採礦結構視圖」&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [[採礦模型] 視圖 &#40;資料採礦模型設計工具&#41;](mining-models-view-data-mining-model-designer.md)   
+ [&#40;資料採礦模型設計工具的採礦模型檢視器&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [&#40;資料採礦&#41;的挖掘精確度圖表設計工具](mining-accuracy-chart-designer-data-mining.md)   
+ [預測查詢產生器 &#40;資料採礦&#41;](prediction-query-builder-data-mining.md)  
   
   

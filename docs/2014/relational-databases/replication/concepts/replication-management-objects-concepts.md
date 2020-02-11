@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721790"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
@@ -35,7 +35,7 @@ ms.locfileid: "62721790"
  [設定散發](../configure-distribution.md)  
  本節中的主題示範如何使用 RMO 來設定發行與散發。  
   
- [Create a Publication](../publish/create-a-publication.md)  
+ [建立發行集](../publish/create-a-publication.md)  
  本章節中的主題示範如何使用 RMO 來建立、刪除和修改發行集與發行項。  
   
  [訂閱發行集](../subscribe-to-publications.md)  
@@ -140,7 +140,7 @@ ms.locfileid: "62721790"
     ```  
   
 ## <a name="connecting-to-a-replication-server"></a>連接至複寫伺服器  
- RMO 程式設計物件需要使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別的執行個體，來建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接。 這個伺服器連接會獨立於任何 RMO 程式設計物件之外建立。 接著會在執行個體建立期間將它傳遞到 RMO 物件，或是將它指派到物件的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性。 以此方式，就可以個別建立和管理 RMO 程式設計物件與連接物件執行個體，而且多個 RMO 程式設計物件可以重複使用單一連接物件。 下列規則適用於應用程式伺服器的連接：  
+ RMO 程式設計物件需要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 類別的執行個體，來建立 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 執行個體的連接。 這個伺服器連接會獨立於任何 RMO 程式設計物件之外建立。 接著會在執行個體建立期間將它傳遞到 RMO 物件，或是將它指派到物件的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性。 以此方式，就可以個別建立和管理 RMO 程式設計物件與連接物件執行個體，而且多個 RMO 程式設計物件可以重複使用單一連接物件。 下列規則適用於應用程式伺服器的連接：  
   
 -   連接的所有屬性是針對指定的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件所定義。  
   

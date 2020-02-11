@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743486"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>建立連結的伺服器 (SQL Server Database Engine)
@@ -32,12 +32,12 @@ ms.locfileid: "62743486"
   
  連結之伺服器的功能以及所需的引數可能會大大地改變。 本主題中的範例會提供一般範例，但不會描述所有選項。 如需詳細資訊，請參閱 [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)的資料。  
   
-##  <a name="Security"></a> 安全性  
+##  <a name="Security"></a> Security  
   
-### <a name="permissions"></a>Permissions  
- 使用時[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式，需要`ALTER ANY LINKED SERVER`中的成員資格的伺服器上的權限**setupadmin**固定的伺服器角色。 使用時[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]需要`CONTROL SERVER`權限或成員資格**sysadmin**固定的伺服器角色。  
+### <a name="permissions"></a>權限  
+ 使用[!INCLUDE[tsql](../../includes/tsql-md.md)]語句時，需要`ALTER ANY LINKED SERVER`伺服器的許可權或**setupadmin**固定伺服器角色中的成員資格。 使用[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]時， `CONTROL SERVER`需要**系統管理員（sysadmin** ）固定伺服器角色的許可權或成員資格。  
   
-##  <a name="Procedures"></a> 如何建立連結的伺服器  
+##  <a name="Procedures"></a>如何建立連結的伺服器  
  您可以使用下列任一項：  
   
 -   [Transact-SQL](#SSMSProcedure)  
@@ -48,11 +48,11 @@ ms.locfileid: "62743486"
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>若要使用 SQL Server Management Studio 建立與另一個 SQL Server 執行個體的連結伺服器  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，展開 **[伺服器物件]** ，以滑鼠右鍵按一下 **[連結的伺服器]** ，然後按一下 **[新增連結的伺服器]** 。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，展開 **[伺服器物件]**，以滑鼠右鍵按一下 **[連結的伺服器]**，然後按一下 **[新增連結的伺服器]**。  
   
 2.  在 **[一般]** 頁面的 **[連結的伺服器]** 方塊中，輸入您要連結之 **[SQL Server]** 的執行個體名稱。  
   
-     **[SQL Server]**  
+     **SQL Server**  
      將連結的伺服器識別為 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。 如果您使用這個定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連結之伺服器的方法， **[連結的伺服器]** 中所指定的名稱就必須是伺服器的網路名稱。 另外，從伺服器擷取的任何資料表，都會是來自已連結伺服器上之登入所定義的預設資料庫。  
   
      **其他資料來源**  
@@ -70,51 +70,52 @@ ms.locfileid: "62743486"
      **提供者字串**  
      輸入對應至資料來源之 OLE DB 提供者的唯一程式設計識別碼 (PROGID)。 如需有效提供者字串的範例，請參閱 [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)的資料。  
   
-     **Location**  
+     **位置**  
      依 OLE DB 提供者的解譯，輸入資料庫的位置。  
   
      **目錄**  
      輸入連接到 OLE DB 提供者時，要使用的目錄名稱。  
   
-     若要測試連接到連結伺服器的能力，在 [物件總管] 中，以滑鼠右鍵按一下連結伺服器，然後按一下 **[測試連接]** 。  
+     若要測試連接到連結伺服器的能力，在 [物件總管] 中，以滑鼠右鍵按一下連結伺服器，然後按一下 **[測試連接]**。  
   
     > [!NOTE]  
     >  如果 **[SQL Server]** 的執行個體是預設的執行個體，請輸入裝載 **[SQL Server]** 執行個體之電腦的名稱。 如果 **SQL Server** 是具名執行個體，請輸入電腦的名稱和執行個體的名稱，例如 **Accounting\SQLExpress**。  
   
-3.  在 [伺服器類型]  區域中，選取 [SQL Server]  表示連結的伺服器是 **SQL Server** 的另一個執行個體。  
+3.  在 [伺服器類型]**** 區域中，選取 [SQL Server]**** 表示連結的伺服器是 **SQL Server** 的另一個執行個體。  
   
-4.  在 **[安全性]** 頁面上，指定原始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線到連結的伺服器時將使用的安全性內容。 在使用者使用其網域登入進行連線的網域環境中，選取 [使用登入的目前安全性內容建立]  通常是最佳選擇。 當使用者使用 **[SQL Server]** 登入連線到原始 **[SQL Server]** 時，最佳選擇通常是選取 **[使用此安全性內容]** ，然後提供所需的認證在連結的伺服器進行驗證。  
+4.  在 **[安全性]** 頁面上，指定原始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線到連結的伺服器時將使用的安全性內容。 在使用者使用其網域登入進行連線的網域環境中，選取 **[使用登入的目前安全性內容建立**] 通常是最佳選擇。 當使用者使用 **[SQL Server]** 登入連線到原始 **[SQL Server]** 時，最佳選擇通常是選取 **[使用此安全性內容]**，然後提供所需的認證在連結的伺服器進行驗證。  
   
      **本機登入**  
      指定可以連接到連結伺服器的本機登入。 本機登入可以是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入或 Windows 驗證登入。 使用這份清單可限制與特定登入的連接，或允許某些登入連接成不同的登入。  
   
-     **Impersonate**  
+     **偽裝**  
      將使用者名稱和密碼從本機登入傳送給連結伺服器。 若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，則遠端伺服器上必須要有名稱和密碼完全相同的登入。 若為 Windows 登入，則登入必須是連結伺服器上的有效登入。  
   
      若要使用模擬，則組態必須符合委派需求。  
   
      **遠端使用者**  
-     使用遠端使用者以對應未定義於 **[本機登入]** 中的使用者。 **[遠端使用者]** 必須是遠端伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入。  
+     使用遠端使用者以對應未定義於 **[本機登入]** 中的使用者。 
+  **[遠端使用者]** 必須是遠端伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入。  
   
      **遠端密碼**  
      指定遠端使用者的密碼。  
   
-     **[加入]**  
+     **加入**  
      加入新的本機登入。  
   
      **移除**  
      移除現有的本機登入。  
   
-     **不建立**  
+     **不進行**  
      指定不會為未定義於清單中的登入建立連接。  
   
-     **不使用安全性內容建立**  
+     **不使用安全性內容進行**  
      指定不會使用安全性內容為未定義於清單中的登入建立連接。  
   
      **使用登入的目前安全性內容建立**  
      指定使用登入的目前安全性內容為未定義於清單中的登入建立連接。 如果使用 Windows 驗證連接到本機伺服器，則會使用您的 Windows 認證來連接到遠端伺服器。 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連接到本機伺服器，則會使用登入名稱和密碼來連接到遠端伺服器。 在此情況下，遠端伺服器上必須要有名稱和密碼完全相同的登入。  
   
-     **使用此安全性內容建立**  
+     **使用此安全性內容進行**  
      指定使用 **[遠端登入]** 和 **[指定密碼]** 方塊中所指定的登入和密碼為未定義於清單中的登入建立連接。 遠端登入必須是遠端伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入。  
   
 5.  (選擇性) 若要檢視或指定伺服器選項，請按一下 **[伺服器選項]**  頁面。  
@@ -138,7 +139,7 @@ ms.locfileid: "62743486"
   
      如果為 True，針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源會使用遠端資料行的定序，而針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源會使用定序名稱中所指定的定序。  
   
-     如果為 False，分散式查詢一律會使用本機伺服器的預設定序，而定序名稱與遠端資料行的定序則會被忽略。 預設值為 False。  
+     如果為 False，分散式查詢一律會使用本機伺服器的預設定序，而定序名稱與遠端資料行的定序則會被忽略。 預設值為 false。  
   
      **定序名稱**  
      如果使用遠端定序為 True，並且資料來源不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源，請指定遠端資料來源所使用的定序名稱。 這個名稱必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所支援的定序之一。  
@@ -160,13 +161,14 @@ ms.locfileid: "62743486"
      **啟用分散式交易的升級**  
      使用此選項，透過 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 交易，保護伺服器對伺服器程序的動作。 此選項為 TRUE 時，呼叫遠端預存程序就會啟動分散式交易，而且會利用 MS DTC 來編列這項交易。 如需詳細資訊，請參閱 [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)的資料。  
   
-6.  按一下 **[確定]** 。  
+6.  按一下 [確定]  。  
   
 ##### <a name="to-view-the-provider-options"></a>若要檢視提供者選項  
   
 -   若要檢視提供者提供的選項，請按一下 **[提供者選項]** 頁面。  
   
-     所有提供者的可用選項並不相同。 例如，某些資料類型有索引可用，而某些可能沒有。 使用這個對話方塊來幫助 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 了解提供者的功能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會安裝某些共用的資料提供者，不過當提供資料的產品變更時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所安裝的該提供者不一定支援所有的最新功能。 提供資料之產品功能的最佳資源來源是該產品的說明文件。  
+     所有提供者的可用選項並不相同。 例如，某些資料類型有索引可用，而某些可能沒有。 使用這個對話方塊來幫助 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 了解提供者的功能。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會安裝某些共用的資料提供者，不過當提供資料的產品變更時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所安裝的該提供者不一定支援所有的最新功能。 提供資料之產品功能的最佳資源來源是該產品的說明文件。  
   
      **動態參數**  
      表示提供者允許在參數化查詢時使用 '?' 參數標記語法。 這個選項只有在提供者支援 **IcommandWithParameters** 介面，並支援 '?' 作為參數標記時才能設定。 設定這個選項允許 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 針對提供者執行參數化查詢。 針對提供者執行參數化查詢的能力，對於某些查詢而言可以達到較佳的效能。  
@@ -174,22 +176,25 @@ ms.locfileid: "62743486"
      **巢狀查詢**  
      表示該提供者允許 FROM 子句中使用巢狀  `SELECT` 陳述式。 設定這個選項允許 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向需要在 FROM 子句中包含巢狀 SELECT 陳述式的提供者委派某些查詢。  
   
-     **限層級零**  
+     **僅限層級零**  
      只會針對提供者叫用層級 0 的 OLE DB 介面。  
   
-     **允許 Inprocess**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許提供者被具現化為同處理序伺服器。 未設定此選項時，預設的行為便是將提供者具現化於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序之外。 將提供者起始於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序之外可以保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序不會受到提供者發生錯誤的影響。 當提供者具現化於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序之外時，便不允許對要參考的長資料行 (`text`、`ntext` 或 `image`) 進行更新或插入。  
+     **允許進程間**  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許提供者被具現化為同處理序伺服器。 未設定此選項時，預設的行為便是將提供者具現化於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序之外。 將提供者起始於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序之外可以保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序不會受到提供者發生錯誤的影響。 當提供者具現化於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序之外時，便不允許對要參考的長資料行 (`text`、`ntext` 或 `image`) 進行更新或插入。  
   
      **非交易更新**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 即使 **ITransactionLocal** 無法使用，仍然允許更新。 如果已啟用此選項，則針對提供者的更新便無法復原，因為提供者不支援交易。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]即使**ITransactionLocal**無法使用，仍然允許更新。 如果已啟用此選項，則針對提供者的更新便無法復原，因為提供者不支援交易。  
   
      **索引為存取路徑**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 嘗試使用提供者的索引來提取資料。 依預設值，索引只用於中繼資料，絕不會開啟  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 嘗試使用提供者的索引來提取資料。 依預設值，索引只用於中繼資料，絕不會開啟  
   
      **不允許特定存取**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許透過 OPENROWSET 與 OPENDATASOURCE 函數對 OLE DB 提供者進行特定存取。 未設定此選項時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也不會允許特定存取。  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許透過 OPENROWSET 與 OPENDATASOURCE 函數對 OLE DB 提供者進行特定存取。 未設定此選項時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也不會允許特定存取。  
   
-     **支援 'Like' 運算子**  
+     **支援 ' Like ' 運算子**  
      表示該提供者支援使用 LIKE 關鍵字的查詢。  
   
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
@@ -220,7 +225,7 @@ ms.locfileid: "62743486"
   
     ```  
   
-##  <a name="FollowUp"></a> 後續操作：若要建立連結的伺服器之後所採取的步驟  
+##  <a name="FollowUp"></a>後續操作：建立連結的伺服器之後所採取的步驟  
   
 #### <a name="to-test-the-linked-server"></a>若要測試連結的伺服器  
   

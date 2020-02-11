@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 10a63e84fcad55b6dfaec286d0d47b686d395f5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62693517"
 ---
 # <a name="clientnetworkprotocol-class"></a>ClientNetworkProtocol 類別
-  [ClientNetworkProtocol 類別](clientnetworkprotocol-class.md)代表網路上允許的執行個體通訊的用戶端執行個體安裝的通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]透過網路。  
+  [ClientNetworkProtocol 類別](clientnetworkprotocol-class.md)代表安裝在用戶端實例上的網路通訊協定，允許透過網路與的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例進行通訊。  
   
- 具有[ClientNetworkProtocol 類別](clientnetworkprotocol-class.md)，您可以執行下列工作：  
+ 使用[ClientNetworkProtocol 類別](clientnetworkprotocol-class.md)，您可以執行下列工作：  
   
 -   設定索引值，以便從通訊協定清單中選取用戶端網路通訊協定。  
   

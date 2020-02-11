@@ -1,5 +1,5 @@
 ---
-title: 大量複製資料，從程式變數 (ODBC) |Microsoft Docs
+title: 從程式變數（ODBC）大量資料複製 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3489e7a925ec09f84397ea27e5a749180999a9fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753640"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>從程式變數中大量複製資料 (ODBC)
-  此範例會示範如何使用大量複製函數，透過 `bcp_bind` 和 `bcp_sendrow` 從程式變數大量複製資料到 SQL Server (為了簡化這個範例會移除錯誤檢查程式碼)。  
+  此範例會示範如何使用大量複製函數，透過 `bcp_bind` 和 `bcp_sendrow` 從程式變數大量複製資料到 SQL Server  (為了簡化這個範例會移除錯誤檢查程式碼)。  
   
  此範例是針對 ODBC 3.0 版或更新版本所開發。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62753640"
   
 3.  連接到 SQL Server。  
   
-4.  呼叫[bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)設定下列資訊：  
+4.  呼叫[bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)以設定下列資訊：  
   
     -   要進行大量複製之來源或目標資料表或檢視表的名稱。  
   
@@ -43,22 +43,22 @@ ms.locfileid: "62753640"
   
     -   要接收任何大量複製錯誤訊息的資料檔案名稱 (如果您不需要訊息檔案，請指定 NULL)。  
   
-    -   複製的方向：從資料表或檢視應用程式從應用程式檢視或資料表或 DB_OUT DB_IN。  
+    -   複製的方向：DB_IN (從應用程式到檢視表或資料表) 或 DB_OUT (從資料表或檢視表到應用程式)。  
   
-5.  呼叫[bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)行繫結至程式變數大量複製中的每一個資料行。  
+5.  針對大量複製中的每個資料行呼叫[bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) ，以將資料行系結至程式變數。  
   
-6.  填入程式變數與資料，並呼叫[bcp_sendrow](../../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)傳送的資料列。  
+6.  使用資料填入程式變數，並呼叫[bcp_sendrow](../../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)來傳送資料列。  
   
-7.  已傳送數個資料列之後，請呼叫[bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)至已傳送的資料列的檢查點。 它是個不錯的做法，呼叫[bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)至少一次每 1000 個資料列。  
+7.  傳送數個數據列之後，請呼叫[bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)來檢查已傳送的資料列。 最好至少為每1000個數據列呼叫[bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)一次。  
   
-8.  已傳送所有資料列之後，請呼叫[bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)完成作業。  
+8.  傳送所有資料列之後，請呼叫[bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)以完成作業。  
   
- 您可以在大量複製作業期間變更的位置和長度的程式變數，藉由呼叫[bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)並[bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)。 使用[bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)來設定各種大量複製選項。 使用[bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)傳送`text`， `ntext`，和`image`線段，才能在伺服器中的資料。  
+ 您可以藉由呼叫[bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)和[bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)，在大量複製作業期間改變程式變數的位置和長度。 使用[bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)來設定各種大量複製選項。 使用[bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) ，將`text`區段`ntext`中的`image` 、和資料傳送至伺服器。  
   
 ## <a name="example"></a>範例  
  IA64 不支援此範例。  
   
- 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫 (您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案) 首頁下載 AdventureWorks 範例資料庫)。此資料來源必須以作業系統提供的 ODBC 驅動程式為基礎 (驅動程式名稱為 "SQL Server")。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
+ 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫  （您可以從[Microsoft SQL Server 範例和 [社區專案](https://go.microsoft.com/fwlink/?LinkID=85384)] 首頁下載 AdventureWorks 範例資料庫）。此資料來源必須以作業系統所提供的 ODBC 驅動程式為基礎（驅動程式名稱為 "SQL Server"）。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
@@ -301,7 +301,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [利用 SQL Server ODBC 驅動程式如何主題大量複製的&#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [使用 SQL Server ODBC 驅動程式的大量複製如何 &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [從程式變數中大量複製](../../native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   
   

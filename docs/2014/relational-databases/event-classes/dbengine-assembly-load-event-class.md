@@ -12,11 +12,11 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 184d08a213dfe796421b379fbb1e3deccd0c56e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66090865"
 ---
 # <a name="assembly-load-event-class"></a>Assembly Load 事件類別
-  請參閱[assembly load 事件-類別](../../database-engine/assembly-load-event-class.md)。  
+  請參閱[元件-載入事件類別](../../database-engine/assembly-load-event-class.md)。  

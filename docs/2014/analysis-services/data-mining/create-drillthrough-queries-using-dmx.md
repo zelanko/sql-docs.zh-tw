@@ -1,5 +1,5 @@
 ---
-title: 使用 DMX 建立鑽研查詢 |Microsoft Docs
+title: 使用 DMX 建立鑽取查詢 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f28d0503497fd066de2d328e75813f7b77026b2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085243"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>使用 DMX 建立鑽研查詢
@@ -44,7 +44,7 @@ WHERE [Model Region] = 'M200 Pacific'
  請注意，在這則範例中，別名已用來重新命名結構資料行。 如果您沒有指派別名給結構資料行，就會傳回名為 'Expression' 的資料行。 這是所有未命名資料行的預設行為。  
   
 ## <a name="see-also"></a>另請參閱  
- [鑽研查詢 &#40;資料採礦&#41;](drillthrough-queries-data-mining.md)   
+ [資料採礦&#41;&#40;的鑽取查詢](drillthrough-queries-data-mining.md)   
  [採礦結構的鑽研](drillthrough-on-mining-structures.md)  
   
   

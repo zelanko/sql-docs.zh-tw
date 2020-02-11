@@ -1,5 +1,5 @@
 ---
-title: 瀏覽模型，使用 Microsoft 一般內容樹狀檢視器 |Microsoft Docs
+title: 使用 Microsoft 一般內容樹狀檢視器來流覽模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bb080721ccb3e5b5aef190eda3d1088df09762c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086073"
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>使用 Microsoft 一般內容樹狀檢視器瀏覽模型
+  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般採礦模型內容檢視器能針對採礦演算法所找到的模式提供詳細的資訊，也可以用來存取在分析程序期間所產生的各種統計資料。 資訊的量及類型是根據使用的演算法而定，但可能包含下列類別：  
   
 -   資料區段和它們的特性。  
@@ -33,7 +34,8 @@ ms.locfileid: "66086073"
  檢視這項資訊有助於更了解分析的結果。 您也可以識別微調的方法，然後重新培訓模型， 或者決定使用不同的演算法進行重新培訓。  
   
 ## <a name="viewing-mining-model-content"></a>檢視採礦模型內容  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容檢視器會從採礦模型的 *「內容結構描述資料列集」* (Content Schema Rowset) 顯示資料行、規則、屬性 (Property)、屬性 (Attribute)、節點和其他內容。 內容結構描述資料列集是一般性架構，用來展示有關資料採礦模型內容的詳細資訊。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容檢視器會從採礦模型的 *「內容結構描述資料列集」* (Content Schema Rowset) 顯示資料行、規則、屬性 (Property)、屬性 (Attribute)、節點和其他內容。 內容結構描述資料列集是一般性架構，用來展示有關資料採礦模型內容的詳細資訊。  
   
  此詳細資訊包含在一個 HTML 資料表中，該資料表將模型中的模式、叢集或樹狀表示為節點。 您可以按一下各節點，然後將其展開以查看詳細資料，例如公式或數值屬性的相異值計數。 您也可以瀏覽節點之間的父子式關聯性。  
   
@@ -50,6 +52,6 @@ SELECT * FROM [<mining model name>].CONTENT
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
- [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [資料採礦演算法 &#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

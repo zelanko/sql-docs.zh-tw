@@ -1,5 +1,5 @@
 ---
-title: 匯入從資料摘要 (SSAS 表格式) |Microsoft Docs
+title: 從資料摘要匯入（SSAS 表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcb3a1cbcabc66492bbd780be4716ce69f15de37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080564"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>從資料摘要匯入 (SSAS 表格式)
@@ -22,7 +22,7 @@ ms.locfileid: "66080564"
   
  本主題包含下列幾節：  
   
--   [了解從資料摘要匯入](#prereq)  
+-   [瞭解從資料摘要匯入](#prereq)  
   
 -   [從 Azure DataMarket 資料集匯入資料](#azure)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66080564"
   
 -   [從 Reporting Services 報表匯入資料摘要](#importreport)  
   
-##  <a name="prereq"></a> 了解從資料摘要匯入  
+##  <a name="prereq"></a>瞭解從資料摘要匯入  
  您可以從下列類型的資料摘要，將資料匯入表格式模型：  
   
  **Reporting Services 報表**  
@@ -46,14 +46,14 @@ ms.locfileid: "66080564"
   
  在匯入期間，資料摘要的資料只會加入模型一次。 若要從摘要取得已更新的資料，您可從模型設計師重新整理資料，或者在將模型部署到 Analysis Services 的實際執行個體之後，為模型設定資料重新整理排程。 如需詳細資訊，請參閱 [處理資料 &#40;SSAS 表格式&#41;](process-data-ssas-tabular.md)。  
   
-##  <a name="azure"></a> 從 Azure DataMarket 資料集匯入資料  
+##  <a name="azure"></a>從 Azure DataMarket 資料集匯入資料  
  您可以從 Azure DataMarket 匯入資料做為模型中的資料表。  
   
 #### <a name="to-import-data-from-an-azure-datamarket-dataset"></a>從 Azure DataMarket 資料集匯入資料  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後按一下 **[從資料來源匯入]** 。 [資料表匯入精靈] 隨即開啟。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後按一下 **[從資料來源匯入]**。 [資料表匯入精靈] 隨即開啟。  
   
-2.  在 **[連接到資料來源]** 頁面上，選取 **[資料摘要]** 底下的 **[Azure DataMarket 資料集]** ，然後按 **[下一步]** 。  
+2.  在 **[連接到資料來源]** 頁面上，選取 **[資料摘要]** 底下的 **[Azure DataMarket 資料集]**，然後按 **[下一步]**。  
   
 3.  在 **[連接到 Azure DataMarket 資料集]** 頁面的 **[易記名稱]** 中，輸入所要存取之摘要的描述性名稱。 如果您要匯入多個摘要或資料來源，使用連接描述性名稱可有助於記住連接的使用方式。  
   
@@ -65,26 +65,26 @@ ms.locfileid: "66080564"
   
 7.  按 **[下一步]** 繼續執行匯入作業。  
   
-8.  在 **[模擬資訊]** 頁面中，指定 Analysis Services 在重新整理資料時將用來連接資料來源的憑證，然後按 **[下一步]** 。 這些憑證和帳號金鑰不同。  
+8.  在 **[模擬資訊]** 頁面中，指定 Analysis Services 在重新整理資料時將用來連接資料來源的憑證，然後按 **[下一步]**。 這些憑證和帳號金鑰不同。  
   
 9. 在精靈的 **[選取資料表和檢視表]** 頁面中，在 **[易記名稱]** 欄位輸入描述性名稱，讓該名稱指出匯入之後將包含此資料的資料表以便於識別。  
   
 10. 按一下 **[預覽和篩選]** 來檢閱資料和變更資料行選取項目。 您不能限制匯入報表資料摘要中的資料列，但是可以藉由清除核取方塊移除資料行。 按一下 [確定]  。  
   
-11. 在 **[選取資料表和檢視表]** 頁面中，按一下 **[完成]** 。  
+11. 在 **[選取資料表和檢視表]** 頁面中，按一下 **[完成]**。  
   
-##  <a name="importdata"></a> 從公用或公司資料來源匯入資料摘要  
+##  <a name="importdata"></a>從公用或公司資料來源匯入資料摘要  
  您可以存取公用摘要，或建立自訂摘要服務，從專屬或舊版資料庫系統產生 Atom 摘要。  
   
 #### <a name="to-import-data-from-public-or-corporate-data-feeds"></a>從公用或公司資料摘要匯入資料  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後按一下 **[從資料來源匯入]** 。 [資料表匯入精靈] 隨即開啟。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後按一下 **[從資料來源匯入]**。 [資料表匯入精靈] 隨即開啟。  
   
-2.  在 **[連接到資料來源]** 頁面上，選取 **[資料摘要]** 底下的 **[其他摘要]** ，然後按 **[下一步]** 。  
+2.  在 **[連接到資料來源]** 頁面上，選取 **[資料摘要]** 底下的 **[其他摘要]**，然後按 **[下一步]**。  
   
 3.  在 **[連接到資料摘要]** 頁面中，輸入所要存取之摘要的描述性名稱。 如果您要匯入多個摘要或資料來源，使用連接描述性名稱可有助於記住連接的使用方式。  
   
-4.  在 **[資料摘要 URL]** 中，輸入資料摘要的位址。 有效值包括以下的值：  
+4.  在 **[資料摘要 URL]** 中，輸入資料摘要的位址。 有效值如下：  
   
     1.  包含 Atom 資料的 XML 文件。 例如，下列 URL 會指向 Open Government Data Initiative 網站上的公用摘要：  
   
@@ -103,26 +103,26 @@ ms.locfileid: "66080564"
   
 6.  按 **[下一步]** 繼續執行匯入作業。  
   
-7.  在 **[模擬資訊]** 頁面中，指定 Analysis Services 在重新整理資料時將用來連接資料來源的憑證，然後按 **[下一步]** 。  
+7.  在 **[模擬資訊]** 頁面中，指定 Analysis Services 在重新整理資料時將用來連接資料來源的憑證，然後按 **[下一步]**。  
   
 8.  在精靈的 **[選取資料表和檢視表]** 頁面中，以描述性名稱取代 **[易記名稱]** 欄位中的「資料摘要內容」，讓該名稱指出匯入之後將包含此資料的資料表以便於識別。  
   
 9. 按一下 **[預覽和篩選]** 來檢閱資料和變更資料行選取項目。 您不能限制匯入報表資料摘要中的資料列，但是可以藉由清除核取方塊移除資料行。 按一下 [確定]  。  
   
-10. 在 **[選取資料表和檢視表]** 頁面中，按一下 **[完成]** 。  
+10. 在 **[選取資料表和檢視表]** 頁面中，按一下 **[完成]**。  
   
-##  <a name="importlist"></a> 從 SharePoint 清單匯入資料摘要  
- 您可以匯入 (SharePoint) 功能區上有 [匯出為資料摘要]  按鈕的任何 SharePoint 清單。 您可以按一下此按鈕，將清單匯出為摘要。  
+##  <a name="importlist"></a>從 SharePoint 清單匯入資料摘要  
+ 您可以匯入 (SharePoint) 功能區上有 [匯出為資料摘要]**** 按鈕的任何 SharePoint 清單。 您可以按一下此按鈕，將清單匯出為摘要。  
   
 #### <a name="to-import-data-feeds-from-a-sharepoint-list"></a>從 SharePoint 清單匯入資料摘要  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後按一下 **[從資料來源匯入]** 。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後按一下 **[從資料來源匯入]**。  
   
-2.  在 **[連接到資料來源]** 頁面上，選取 **[資料摘要]** 底下的 **[其他資料摘要]** ，然後按 **[下一步]** 。  
+2.  在 **[連接到資料來源]** 頁面上，選取 **[資料摘要]** 底下的 **[其他資料摘要]**，然後按 **[下一步]**。  
   
 3.  在 **[連接到資料摘要]** 頁面中，輸入所要存取之摘要的描述性名稱。 如果您要匯入多個摘要或資料來源，使用連接描述性名稱可能有助於記住連接的使用方式。  
   
-4.  在資料摘要 URL 輸入至清單資料服務的位址取代\<伺服器名稱 > 的 SharePoint 伺服器的實際名稱：  
+4.  在 [資料摘要 URL] 中，輸入清單資料服務的位址， \<將伺服器名稱> 取代為 SharePoint 伺服器的實際名稱：  
   
     ```  
     http://<server-name>/_vti_bin/listdata.svc  
@@ -132,7 +132,7 @@ ms.locfileid: "66080564"
   
 6.  按 **[下一步]** 繼續執行匯入作業。  
   
-7.  在 **[模擬資訊]** 頁面中，指定 Analysis Services 在重新整理資料時將用來連接資料來源的憑證，然後按 **[下一步]** 。  
+7.  在 **[模擬資訊]** 頁面中，指定 Analysis Services 在重新整理資料時將用來連接資料來源的憑證，然後按 **[下一步]**。  
   
 8.  在精靈的 **[選取資料表和檢視表]** 頁面中，選取您要匯入的清單。  
   
@@ -141,24 +141,24 @@ ms.locfileid: "66080564"
   
 9. 按一下 **[預覽和篩選]** 來檢閱資料和變更資料行選取項目。 您不能限制匯入報表資料摘要中的資料列，但是可以藉由清除核取方塊移除資料行。 按一下 [確定]  。  
   
-10. 在 **[選取資料表和檢視表]** 頁面中，按一下 **[完成]** 。  
+10. 在 **[選取資料表和檢視表]** 頁面中，按一下 **[完成]**。  
   
-##  <a name="importreport"></a> 從 Reporting Services 報表匯入資料摘要  
+##  <a name="importreport"></a>從 Reporting Services 報表匯入資料摘要  
  如果您具備 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Reporting Services 部署，則可以使用 Atom 轉譯延伸模組，從現有的報表中產生資料摘要。  
   
 #### <a name="to-import-report-data-from-a-published-reporting-services-report"></a>從已發行的 Reporting Services 報表匯入報表資料  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後按一下 **[從資料來源匯入]** 。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，按一下 **[模型]** 功能表，然後按一下 **[從資料來源匯入]**。  
   
-2.  在 **[連接到資料來源]** 頁面上，選取 **[資料摘要]** 底下的 **[報表]** ，然後按 **[下一步]** 。  
+2.  在 **[連接到資料來源]** 頁面上，選取 **[資料摘要]** 底下的 **[報表]**，然後按 **[下一步]**。  
   
 3.  在 [連接到 Microsoft SQL Server Reporting Services 報表] 頁面的 [易記連接名稱] 中，輸入所要存取之摘要的描述性名稱。 如果您要匯入多個資料來源，使用連接的描述性名稱可能有助於記住連接的使用方式。  
   
 4.  按一下 **[瀏覽]** 以選取報表伺服器。  
   
-     如果您定期使用報表伺服器上的報表，該伺服器可能會列在 **[最近使用的網站和伺服器]** 中。 否則，在 [名稱] 中輸入報表伺服器的位址，然後按一下 **[開啟]** 來瀏覽報表伺服器網站上的資料夾。 報表伺服器的範例位址可能是 http://\<電腦名稱 > / reportserver。  
+     如果您定期使用報表伺服器上的報表，該伺服器可能會列在 **[最近使用的網站和伺服器]** 中。 否則，在 [名稱] 中輸入報表伺服器的位址，然後按一下 **[開啟]** 來瀏覽報表伺服器網站上的資料夾。 報表伺服器的範例位址可能是 HTTP://\<computername>/reportserver。  
   
-5.  選取報表，並按一下 **[開啟]** 。 或者，您可以在 **[名稱]** 文字方塊中貼上報表的連結，包括完整的路徑和報表名稱。 「資料表匯入精靈」會連接到報表，並在預覽區域中呈現出來。  
+5.  選取報表，並按一下 **[開啟]**。 或者，您可以在 **[名稱]** 文字方塊中貼上報表的連結，包括完整的路徑和報表名稱。 「資料表匯入精靈」會連接到報表，並在預覽區域中呈現出來。  
   
      如果報表有使用參數，您就必須指定參數，否則就無法建立報表連接。 這樣做的時候，只有與參數值相關的資料列才會匯入到資料摘要中。  
   
@@ -169,13 +169,13 @@ ms.locfileid: "66080564"
         > [!NOTE]  
         >  檢視報表將您所選取的參數和資料摘要定義儲存在一起。  
   
-     選擇性地按一下 [進階]  ，為報表設定提供者專屬的屬性。  
+     選擇性地按一下 [進階]****，為報表設定提供者專屬的屬性。  
   
 6.  按一下 **[測試連接]** 確認可以將報表當做資料摘要使用。 或者，您也可以按一下 **[進階]** 來確認 **[內嵌服務文件]** 屬性包含指定資料摘要連接的內嵌 XML。  
   
 7.  按 **[下一步]** 繼續執行匯入作業。  
   
-8.  在 **[模擬資訊]** 頁面中，指定 Analysis Services 在重新整理資料時將用來連接資料來源的憑證，然後按 **[下一步]** 。  
+8.  在 **[模擬資訊]** 頁面中，指定 Analysis Services 在重新整理資料時將用來連接資料來源的憑證，然後按 **[下一步]**。  
   
 9. 在精靈的 **[選取資料表和檢視表]** 頁面中，選取要匯入做為資料之報表組件旁邊的核取方塊。  
   
@@ -187,13 +187,13 @@ ms.locfileid: "66080564"
   
 11. 按一下 **[預覽和篩選]** 來檢閱資料和變更資料行選取項目。 您不能限制匯入報表資料摘要中的資料列，但是可以藉由清除核取方塊移除資料行。 按一下 [確定]  。  
   
-12. 在 **[選取資料表和檢視表]** 頁面中，按一下 **[完成]** 。  
+12. 在 **[選取資料表和檢視表]** 頁面中，按一下 **[完成]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [支援的資料來源 &#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [支援的資料類型 &#40;SSAS 表格式&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
- [模擬 &#40;SSAS 表格式&#41;](tabular-models/impersonation-ssas-tabular.md)   
- [處理資料 &#40;SSAS 表格式&#41;](process-data-ssas-tabular.md)   
- [匯入資料 &#40;SSAS 表格式&#41;](import-data-ssas-tabular.md)  
+ [&#40;SSAS 表格式&#41;支援的資料來源](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [&#40;SSAS 表格式&#41;支援的資料類型](tabular-models/data-types-supported-ssas-tabular.md)   
+ [&#40;SSAS 表格式&#41;的模擬](tabular-models/impersonation-ssas-tabular.md)   
+ [&#40;SSAS 表格式&#41;處理資料](process-data-ssas-tabular.md)   
+ [將資料匯入 &#40;SSAS 表格式&#41;](import-data-ssas-tabular.md)  
   
   

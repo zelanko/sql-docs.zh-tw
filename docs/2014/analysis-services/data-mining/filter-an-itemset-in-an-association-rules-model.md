@@ -1,5 +1,5 @@
 ---
-title: 篩選項目集在關聯規則模型 |Microsoft Docs
+title: 篩選關聯規則模型中的專案集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bef576a32bebc1c80b2ded8ee4831696811ba819
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084354"
 ---
 # <a name="filter-an-itemset-in-an-association-rules-model"></a>篩選關聯規則模型中的項目集
@@ -30,11 +30,11 @@ ms.locfileid: "66084354"
   
 2.  在 **[篩選項目集]** 方塊中輸入規則條件。 例如，規則條件可能是 "Touring-1000 = existing"。  
   
-3.  按一下 **[輸入]** 。  
+3.  按一下 **[輸入]**。  
   
  現在項目集經過篩選後，只顯示包含所選項目的那些項目集。 此方塊不區分大小寫。 篩選會儲存在記憶體中，這樣您就可以從清單中選取舊篩選。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型檢視器工作和操作說明](mining-model-viewer-tasks-and-how-tos.md)  
+ [採礦模型檢視器工作和使用說明](mining-model-viewer-tasks-and-how-tos.md)  
   
   

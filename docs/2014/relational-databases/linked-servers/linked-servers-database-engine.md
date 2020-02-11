@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c2909eeebde268b52ecaeff5a20a982831e7569
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743495"
 ---
 # <a name="linked-servers-database-engine"></a>連結的伺服器 (Database Engine)
@@ -44,12 +44,13 @@ ms.locfileid: "62743495"
   
 -   OLE DB 資料來源  
   
- 「OLE DB 提供者」  是一種 DLL，可管理特定資料來源並與其互動。 「OLE DB 資料來源」  則識別可透過 OLE DB 存取的特定資料庫。 雖然透過連結伺服器定義來查詢的資料來源通常都是資料庫，不過，各種檔案及檔案格式都有 OLE DB 提供者的存在。 其中包括文字檔、工作表資料，以及全文檢索內容搜尋的結果。  
+ 「OLE DB 提供者」** 是一種 DLL，可管理特定資料來源並與其互動。 「OLE DB 資料來源」** 則識別可透過 OLE DB 存取的特定資料庫。 雖然透過連結伺服器定義來查詢的資料來源通常都是資料庫，不過，各種檔案及檔案格式都有 OLE DB 提供者的存在。 其中包括文字檔、工作表資料，以及全文檢索內容搜尋的結果。  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者 (PROGID：SQLNCLI11) 是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的官方 OLE DB 提供者。  
+ Native Client OLE DB 提供者（PROGID： SQLNCLI11）是的官方 OLE DB 提供者[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散式查詢是專為處理任何實作必要 OLE DB 介面的 OLE DB 提供者而設計； 不過， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 只有針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native OLE DB 提供者以及某些其他提供者測試過。  
+>  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散式查詢是專為處理任何實作必要 OLE DB 介面的 OLE DB 提供者而設計； 不過， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 只有針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native OLE DB 提供者以及某些其他提供者測試過。  
   
 ## <a name="linked-server-details"></a>連結伺服器詳細資料  
  下圖說明連結伺服器組態的基本設定。  
@@ -76,25 +77,25 @@ ms.locfileid: "62743495"
   
 -   藉由執行 **sp_dropserver**來刪除連結伺服器的定義。 您也可以使用這個預存程序來移除遠端伺服器。  
   
- 您也可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 來定義連結伺服器。 在物件總管中，以滑鼠右鍵按一下 [伺服器物件]  ，選取 [新增]  ，然後選取 [連結伺服器]  。 您可以用滑鼠右鍵按一下連結伺服器名稱，並選取 [刪除]  ，以刪除連結伺服器定義。  
+ 您也可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]來定義連結伺服器。 在物件總管中，以滑鼠右鍵按一下 [伺服器物件]****，選取 [新增]****，然後選取 [連結伺服器]****。 您可以用滑鼠右鍵按一下連結伺服器名稱，並選取 [刪除]****，以刪除連結伺服器定義。  
   
- 當您對連結伺服器執行分散式查詢時，所要查詢的每個資料來源均需包含完整的四部分資料表名稱。 這個四部分名稱應該是在表單_linked_server_name.catalog_ **。 _`schema`_ .** _object_name_。  
+ 當您對連結伺服器執行分散式查詢時，所要查詢的每個資料來源均需包含完整的四部分資料表名稱。 這四部分名稱的格式應為_linked_server_name. catalog_**_`schema`_.。**_object_name_。  
   
 > [!NOTE]  
 >  連結的伺服器可以定義為指回 (回送，Loopback) 到定義它們的伺服器上。 回送伺服器最適合用於測試針對單一伺服器網路使用分散式查詢的應用程式。 回送連結的伺服器主要用於測試，而且不支援許多作業，例如分散式交易。  
   
 ## <a name="related-tasks"></a>相關工作  
- [建立連結的伺服器 &#40;SQL Server Database Engine&#41;](create-linked-servers-sql-server-database-engine.md)  
+ [建立連結的伺服器 &#40;SQL Server 資料庫引擎&#41;](create-linked-servers-sql-server-database-engine.md)  
   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)  
   
- [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql)  
+ [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql)  
   
- [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql)  
+ [sp_dropserver &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql)  
   
 ## <a name="related-content"></a>相關內容  
- [sys.servers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql)  
+ [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql)  
   
- [sp_linkedservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-linkedservers-transact-sql)  
+ [sp_linkedservers &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-linkedservers-transact-sql)  
   
   

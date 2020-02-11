@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d55bd667909721a68d51bcd1db7128b809118843
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755283"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>SMO 和 DMO XPs 伺服器組態選項
@@ -29,7 +29,7 @@ ms.locfileid: "62755283"
 |0|無法使用 SMO XP。|  
 |1|可使用 SMO XP。 這是預設值。|  
   
- 這項設定會立即生效。  
+ 設定會立即生效。  
   
 ## <a name="examples"></a>範例  
  下列範例會啟用 SMO 擴充預存程序。  

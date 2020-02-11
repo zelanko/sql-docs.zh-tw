@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679796"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>指定選擇性 XML 索引的路徑和最佳化提示
@@ -378,7 +378,7 @@ WHERE T.xmldata.exist('
   
  您可以使用 node() 最佳化指定評估一般查詢時不需要其值的節點。 這個提示可在一般查詢只需評估節點是否存在時，減少儲存需求 (根據預設，選擇性 XML 索引會儲存所有已升級節點的值，但是不包括複雜的節點類型)。  
   
- 參考下列範例：  
+ 請考慮下列範例：  
   
 ```sql  
 SELECT T.record FROM myXMLTable T  

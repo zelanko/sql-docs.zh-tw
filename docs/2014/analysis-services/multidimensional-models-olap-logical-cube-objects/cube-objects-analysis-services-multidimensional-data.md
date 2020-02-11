@@ -1,5 +1,5 @@
 ---
-title: Cube 物件 (Analysis Services-多維度資料) |Microsoft Docs
+title: Cube 物件（Analysis Services-多維度資料） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc9b813f5310acad9d6dfa2b844adae6168fc1f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62702640"
 ---
 # <a name="cube-objects-analysis-services---multidimensional-data"></a>Cube 物件 (Analysis Services - 多維度資料)
@@ -24,7 +24,7 @@ ms.locfileid: "62702640"
 ## <a name="introducing-cube-objects"></a>Cube 物件簡介  
  簡單的 <xref:Microsoft.AnalysisServices.Cube> 物件是由以下項目所組成：基本資訊、維度和量值群組。 基本資訊包括 Cube 的名稱、Cube 的預設量值、資料來源、儲存模式等等。  
   
- Dimensions 集合包含在 Cube 中使用的一組來自資料庫維度集合的實際維度。 所有維度都必須先定義在資料庫的維度集合中，才能在 Cube 中參考。 私用維度不適用於[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
+ Dimensions 集合包含在 Cube 中使用的一組來自資料庫維度集合的實際維度。 所有維度都必須先定義在資料庫的維度集合中，才能在 Cube 中參考。 無法在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用私用維度。  
   
  量值群組是 Cube 中的量值集合。 量值群組是具有共同資料來源檢視及共同一組維度的量值集合。 量值群組是量值的處理單位；量值群組可以個別處理，然後進行瀏覽。  
   
@@ -33,17 +33,17 @@ ms.locfileid: "62702640"
 |||  
 |-|-|  
 |主題||  
-|[動作 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
+|[&#40;Analysis Services 多維度資料的動作&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
 |[彙總和彙總設計](aggregations-and-aggregation-designs.md)||  
 |[計算](calculations.md)||  
-|[Cube 資料格&#40;Analysis Services-多維度資料&#41;](cube-cells-analysis-services-multidimensional-data.md)||  
+|[Cube 資料格 &#40;Analysis Services 多維度資料&#41;](cube-cells-analysis-services-multidimensional-data.md)||  
 |[Cube 屬性](cube-properties-multidimensional-model-programming.md)||  
-|[Cube 儲存區&#40;Analysis Services-多維度資料&#41;](cube-storage-analysis-services-multidimensional-data.md)||  
+|[Cube 儲存體 &#40;Analysis Services-多維度資料&#41;](cube-storage-analysis-services-multidimensional-data.md)||  
 |[Cube 翻譯](cube-translations.md)||  
 |[維度關聯性](dimension-relationships.md)||  
-|[多維度模型中的關鍵效能指標 &#40;KPI&#41;](../multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
+|[多維度模型中 &#40;Kpi&#41; 的關鍵效能指標](../multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
 |[量值和量值群組](../multidimensional-models/measures-and-measure-groups.md)||  
-|[資料分割 &#40;Analysis Services - 多維度資料&#41;](partitions-analysis-services-multidimensional-data.md)||  
+|[分割區 &#40;Analysis Services 多維度資料&#41;](partitions-analysis-services-multidimensional-data.md)||  
 |[檢視方塊](perspectives.md)||  
   
   

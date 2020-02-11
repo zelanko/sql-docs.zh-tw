@@ -1,5 +1,5 @@
 ---
-title: Workload 元素 (DTA) |Microsoft Docs
+title: 工作負載元素（DTA） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e81ea0aac9cfe7676abba18bc7dffb2e1561597b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678716"
 ---
 # <a name="workload-element-dta"></a>Workload 元素 (DTA)
@@ -57,7 +57,7 @@ ms.locfileid: "62678716"
  每個微調工作階段都必須指定一個工作負載。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例會指定**MyDatabase.MyDBOwner.TuningTable001**追蹤資料表`Workload`項目。 搭配 SQL Server Profiler 使用微調範本來建立 **TuningTable001** ，並將這份追蹤輸出儲存成一份資料表。  
+ 下列程式碼範例會指定`Workload`元素的**MyDatabase. mydatabase.mydbowner.tuningtable001. TuningTable001**追蹤資料表。 搭配 SQL Server Profiler 使用微調範本來建立 **TuningTable001** ，並將這份追蹤輸出儲存成一份資料表。  
   
 ```  
 <DTAXML ...>  

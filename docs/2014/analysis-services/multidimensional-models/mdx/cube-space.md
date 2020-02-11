@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074704"
 ---
 # <a name="cube-space"></a>Cube 空間
   「Cube 空間」是 Cube 屬性階層中具有 Cube 量值之成員的乘積。 因此，Cube 空間是由 Cube 所有屬性階層成員和 Cube 量值的組合乘積所決定，定義了 Cube 的大小上限。 請務必注意，此空間包含屬性階層成員的所有可能組合，甚至還包含在真實世界中被視為不可能的組合，例如城市為巴黎而國家/地區為英國、西班牙、日本、印度或其他地方的組合。  
   
 ## <a name="autoexists-and-cube-space"></a>自動存在和 Cube 空間  
- 「自動存在」的概念將此 Cube 空間限制於實際存在的資料格。 維度中屬性階層的成員可能不與相同維度中另一個屬性階層的成員同時存在。  
+ 「自動存在」** 的概念將此 Cube 空間限制於實際存在的資料格。 維度中屬性階層的成員可能不與相同維度中另一個屬性階層的成員同時存在。  
   
  例如，如果 Cube 有 City 屬性階層、Country 屬性階層及 Internet Sales Amount 量值，此 Cube 的空間只會包含同時存在的成員。 例如，如果 City 屬性階層包含紐約、倫敦、巴黎、東京及墨爾本等城市，並且 Country 屬性階層包含美國、英國、法國、日本及澳洲等國家 (地區)，則 Cube 的空間不會包含巴黎和美國交集的空間 (資料格)。  
   
@@ -55,7 +55,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  請注意，0 是用來指定資料行軸，為 axis(0) (即資料行軸) 的縮寫。  
   
- 上述查詢只會針對查詢中每個屬性階層之同時存在的成員傳回資料格。 上述查詢也可以寫入使用新 * 的 variant [ \* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx)函式。  
+ 上述查詢只會針對查詢中每個屬性階層之同時存在的成員傳回資料格。 先前的查詢也可以使用[ \* （交叉聯結）（MDX）](/sql/mdx/crossjoin-mdx)函數的新 * 變體來撰寫。  
   
 ```  
 SELECT   
@@ -78,7 +78,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  所傳回的資料格值將會相同，不過結果集中的中繼資料將會不同。 例如，在上述查詢中，Country 階層已移至 slicer 座標軸 (在 WHERE 子句中)，因此不會明確出現在結果集中。  
   
- 上述這三個查詢示範了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中自動存在行為的作用。  
+ 這三個先前的查詢都會示範中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]自動存在行為的作用。  
   
 ## <a name="user-defined-hierarchies-and-cube-space"></a>使用者自訂階層和 Cube 空間  
  在本主題的先前範例中，我們都是使用屬性階層來定義 Cube 空間中的位置。 然而，您也可以利用使用者自訂階層 (已經根據維度中的屬性階層加以定義)，定義 Cube 空間中的位置。 使用者自訂階層是由屬性階層組成的階層，設計目的為幫助使用者瀏覽 Cube 資料。  
@@ -98,7 +98,7 @@ WHERE Measures.[Internet Sales Amount]
   
  在上述查詢中，Customer 維度內的 Customer Geography 使用者自訂階層是用來定義 Cube 空間中的位置 (先前是使用屬性階層加以定義)。 使用屬性階層或使用者自訂階層，都可以定義 Cube 空間中的相同位置。  
   
-##  <a name="AttribRelationships"></a> 屬性關聯性和 Cube 空間  
+##  <a name="AttribRelationships"></a>屬性關聯性和 Cube 空間  
  定義相關屬性之間的屬性關聯性後，不僅查詢效能會因著建立適當彙總而提高，與屬性階層成員同時出現的相關屬性階層成員也會因此受影響。 例如，當您定義的 Tuple 包含 City 屬性階層的成員，並且該 Tuple 沒有明確定義 Country 屬性階層成員，您可能預期預設的 Country 屬性階層成員將會是 Country 屬性階層的相關成員。 然而，只有在 City 屬性階層和 Country 屬性階層之間已定義屬性關聯性時，這個狀況才會屬實。  
   
  下列範例會傳回查詢中沒有明確包含之相關屬性階層的成員。  
@@ -112,7 +112,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  請注意，`WITH`關鍵字搭配[CurrentMember (MDX)](/sql/mdx/current-mdx)並[Name (MDX)](/sql/mdx/members-string-mdx)函式來建立查詢中所使用的導出的成員。 如需詳細資訊，請參閱[基本 MDX 查詢 &#40;MDX&#41;](mdx-query-the-basic-query.md)。  
+>  請注意， `WITH`關鍵字會與[CurrentMember （Mdx）](/sql/mdx/current-mdx)和[Name （mdx）](/sql/mdx/members-string-mdx)函數搭配使用，以建立要在查詢中使用的匯出成員。 如需詳細資訊，請參閱[基本 MDX 查詢 &#40;MDX&#41;](mdx-query-the-basic-query.md)。  
   
  在上述查詢中，會傳回與 State 屬性階層之每個成員相關的 Country 屬性階層的成員名稱。 預期的 Country 成員會出現 (因為 City 和 Country 屬性之間已定義屬性關聯性)。 然而，如果相同維度中的多個屬性階層之間沒有定義屬性關聯性，則會傳回 (全部) 成員，如下列查詢所說明。  
   
@@ -129,12 +129,12 @@ FROM [Adventure Works]
 ## <a name="calculation-context"></a>計算內容  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 的關鍵概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [Tuples](tuples.md)   
+ [MDX 中的重要概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [得到](tuples.md)   
  [自動存在](autoexists.md)   
- [使用成員、Tuple 和集合 &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [視覺化總計和非視覺化總計](visual-totals-and-non-visual-totals.md)   
- [MDX 語言參考 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [多維度運算式 &#40;MDX&#41 參考](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [使用成員、元組和集合 &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [視覺效果總計和非視覺化總計](visual-totals-and-non-visual-totals.md)   
+ [Mdx 語言參考 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [&#40;MDX&#41; 參考的多維度運算式](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

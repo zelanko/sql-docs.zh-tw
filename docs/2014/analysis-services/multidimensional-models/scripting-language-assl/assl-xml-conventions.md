@@ -25,10 +25,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736391"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 慣例
@@ -36,9 +36,9 @@ ms.locfileid: "62736391"
   
  為了表示物件階層，ASSL 使用下列 XML 慣例：  
   
--   所有物件和屬性都被都以項目，但 'xml: lang' 等標準 XML 屬性除外。  
+-   所有物件和屬性都是以元素表示，但標準 XML 屬性（例如 ' XML： lang '）除外。  
   
--   元素名稱與列舉值的 Microsoft.NET Framework 命名慣例的 pascal 命名法大小寫不使用底線。  
+-   元素名稱與列舉值都會遵循 Microsoft .NET Framework 所採用之 Pascal 大小寫 (不使用底線) 的命名慣例。  
   
 -   所有值的大小寫都會保留。 列舉值也會區分大小寫。  
   
@@ -117,14 +117,14 @@ ms.locfileid: "62736391"
   
  ``  
   
-## <a name="data-types"></a>資料型別  
+## <a name="data-types"></a>資料類型  
  Analysis Services 使用下列標準 XML 結構描述定義語言 (XSD) 資料類型：  
   
  `Int`  
- -231 到 231-1 的範圍中整數值。  
+ 介於-231 到 231-1 範圍的整數值。  
   
  `Long`  
- -263 到 263-1 的範圍中整數值。  
+ 介於-263 到 263-1 範圍的整數值。  
   
  `String`  
  符合下列全域規則的字串值：  
@@ -135,10 +135,12 @@ ms.locfileid: "62736391"
   
 -   保留內部空白字元。  
   
- `Name` 與 `ID` 屬性對於字串元素中的有效字元具有特殊限制。 如需詳細資訊`Name`並`ID`慣例，請參閱[ASSL 物件和物件特性](assl-objects-and-object-characteristics.md)。  
+ 
+  `Name` 與 `ID` 屬性對於字串元素中的有效字元具有特殊限制。 如需`Name`和`ID`慣例的詳細資訊，請參閱[ASSL 物件和物件特性](assl-objects-and-object-characteristics.md)。  
   
  `DateTime`  
- A`DateTime`從.NET Framework 的結構。 `DateTime` 值不可以是 NULL。 `DataTime` 資料類型支援的最低日期是 1601 年 1 月 1 日，可供程式設計人員做為 `DateTime.MinValue` 來使用。 出現支援的最低日期即表示您遺漏了 `DateTime` 值。  
+ .NET Framework `DateTime`中的結構。 `DateTime`值不可以是 Null。 
+  `DataTime` 資料類型支援的最低日期是 1601 年 1 月 1 日，可供程式設計人員做為 `DateTime.MinValue` 來使用。 出現支援的最低日期即表示您遺漏了 `DateTime` 值。  
   
  `Boolean`  
  只有兩個值的列舉，例如 {true, false} 或是 {0, 1}。  
@@ -150,8 +152,8 @@ ms.locfileid: "62736391"
 |-------------------|-------------------|  
 |`Boolean`|False|  
 |`String`|"" (空字串)|  
-|`Integer` 或 `Long`|0 (零)|  
-|`Timestamp`|12:00:00 AM，1/1/0001 (對應至.NET Frameworks `System.DateTime` 0 刻度)|  
+|`Integer`或`Long`|0 (零)|  
+|`Timestamp`|12:00:00 AM、1/1/0001 （對應至0刻度的 .NET `System.DateTime` framework）|  
   
  有顯示但為空的元素會解譯成具有 Null 字串值，而不是預設值。  
   
@@ -178,6 +180,6 @@ ms.locfileid: "62736391"
   
  `</Dimension>`  
   
- 如需有關繼承的預設值的詳細資訊，請參閱 < [ASSL 物件和物件特性](assl-objects-and-object-characteristics.md)。  
+ 如需繼承預設值的詳細資訊，請參閱[ASSL 物件和物件特性](assl-objects-and-object-characteristics.md)。  
   
   

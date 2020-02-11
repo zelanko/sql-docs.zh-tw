@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a06f177f541e6bca5eb24da5e8a709673ab7d5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62710803"
 ---
 # <a name="run-queries-visual-database-tools"></a>執行查詢 (Visual Database Tools)
@@ -40,7 +40,7 @@ ms.locfileid: "62710803"
  如果您建立更新、INSERT FROM、INSERT INTO、刪除或製成資料表 (Make Table) 查詢，[查詢和檢視設計師] 會顯示訊息，指示查詢影響多少資料列。  
   
 ## <a name="see-also"></a>另請參閱  
- [在 [結果] 窗格中的資料搭配使用&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [使用 [結果] 窗格中的資料 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [使用查詢執行基本作業 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

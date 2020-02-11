@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c9d0deb3567daa64afb46c96a4e93c9da9c0972a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670839"
 ---
 # <a name="manage-change-tracking-sql-server"></a>管理變更追蹤 (SQL Server)
@@ -51,7 +51,7 @@ ms.locfileid: "62670839"
 ## <a name="understanding-change-tracking-overhead"></a>了解變更追蹤負擔  
  在針對資料表啟用變更追蹤時，某些管理作業會受到影響。 下表將列出這些作業以及您應該考量的影響。  
   
-|運算|啟用變更追蹤時|  
+|作業|啟用變更追蹤時|  
 |---------------|-------------------------------------|  
 |DROP TABLE|針對卸除的資料表移除了所有變更追蹤資訊。|  
 |ALTER TABLE DROP CONSTRAINT|嘗試卸除 PRIMARY KEY 條件約束但卻失敗。 在可以卸除 PRIMARY KEY 條件約束之前，必須先停用變更追蹤。|  
@@ -110,6 +110,6 @@ sp_spaceused 'sys.syscommittab'
  [sys.change_tracking_tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables)   
  [追蹤資料變更 &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
  [關於變更追蹤 &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)   
- [使用變更資料 &#40;SQL Server&#41;](work-with-change-data-sql-server.md)  
+ [使用異動資料 &#40;SQL Server&#41;](work-with-change-data-sql-server.md)  
   
   

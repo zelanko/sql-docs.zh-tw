@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bf6e9bb278417d69be0ec0a99cb1c47d88ffddff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62664024"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped 事件類別
@@ -48,16 +48,17 @@ ms.locfileid: "62664024"
 |ObjectId|`int`|轉寄訊息的存留時間值。|22|否|  
 |ObjectName|`nvarchar`|轉寄訊息的訊息識別碼。|34|否|  
 |OwnerName|`nvarchar`|訊息目的地之 Broker 執行個體識別碼。|37|否|  
-|RoleName|`nvarchar`|交談控制代碼的角色。 它是下列項目之一：<br /><br /> 起始端。 此 Broker 起始了交談。<br /><br /> Target。 此 Broker 是交談的目標。|38|否|  
+|RoleName|`nvarchar`|交談控制代碼的角色。 值為下列其中之一：<br /><br /> 起始端。 此 Broker 起始了交談。<br /><br /> Target。 此 Broker 是交談的目標。|38|否|  
 |ServerName|`nvarchar`|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
 |Severity|`int`|事件中文字的嚴重性編號。|29|否|  
 |SPID|`int`|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
 |State|`int`|指出產生事件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原始程式碼內的位置。 每個可能產生此事件的位置都有不同的狀態碼。 Microsoft 支援工程師可以使用此狀態碼來尋找產生事件的位置。|30|否|  
-|成功|`int`|訊息已經存留的時間量。 當此值大於或等於存留時間時，就會卸除訊息。|23|否|  
+|Success|`int`|訊息已經存留的時間量。 當此值大於或等於存留時間時，就會卸除訊息。|23|否|  
 |TargetLoginName|`nvarchar`|將轉寄訊息的目的網路位址。|42|否|  
 |TargetUserName|`nvarchar`|訊息的起始端服務名稱。|39|否|  
-|TextData|`ntext`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 卸除訊息的原因描述。|1|是|  
+|TextData|`ntext`|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 卸除訊息的原因描述。|1|是|  
 |Transaction ID|`bigint`|系統指派的交易識別碼。|4|否|  
   
  此事件的 TextData 資料行包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 卸除訊息的原因描述。  

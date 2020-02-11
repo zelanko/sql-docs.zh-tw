@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92793adcf2fd04b1dac0c26933c1d5969a31f1a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083094"
 ---
 # <a name="process-a-mining-structure"></a>處理採礦結構
@@ -28,7 +28,7 @@ ms.locfileid: "66083094"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
--   XMLA:處理程序命令  
+-   XMLA：處理命令  
   
  如需如何處理個別模型的資訊，請參閱 [處理採礦模型](process-a-mining-model.md)。  
   
@@ -36,17 +36,17 @@ ms.locfileid: "66083094"
   
 1.  從 **中的** [採礦模型] **功能表項目選取** [處理採礦結構和所有模型] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。  
   
-     如果您變更了結構，在處理模型之前，會提示您重新部署結構。 按一下 [ **是**]。  
+     如果您變更了結構，在處理模型之前，會提示您重新部署結構。 按一下 [是]  。  
   
-2.  按一下 [**執行**中**處理採礦結構 –\<結構 >** ] 對話方塊。  
+2.  按一下 [**處理採礦結構- \<結構>** ] 對話方塊中的 [**執行**]。  
   
      隨即開啟 **[處理進度]** 對話方塊，以顯示模型處理的詳細資料。  
   
 3.  在模型完成處理之後，按一下 **[處理進度]** 對話方塊中的 **[關閉]** 。  
   
-4.  按一下 [**關閉**中**處理採礦結構 –\<結構 >** ] 對話方塊。  
+4.  在 [**處理採礦結構- \<結構>** ] 對話方塊中，按一下 [**關閉**]。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦結構工作和操作說明](mining-structure-tasks-and-how-tos.md)  
+ [採礦結構工作和使用說明](mining-structure-tasks-and-how-tos.md)  
   
   

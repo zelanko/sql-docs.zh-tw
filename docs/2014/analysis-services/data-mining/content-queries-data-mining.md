@@ -1,5 +1,5 @@
 ---
-title: 內容查詢 （資料採礦） |Microsoft Docs
+title: 內容查詢（資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f6b20c32ee955023ea24af2f70a83a7793ba1d64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085645"
 ---
 # <a name="content-queries-data-mining"></a>內容查詢 (資料採礦)
@@ -30,13 +30,13 @@ ms.locfileid: "66085645"
   
  [範例](#bkmk_Examples)  
   
--   [關聯模型的內容查詢](#bkmk_Assoc)  
+-   [關聯模型上的內容查詢](#bkmk_Assoc)  
   
--   [決策樹模型的內容查詢](#bkmk_DecTree)  
+-   [決策樹模型上的內容查詢](#bkmk_DecTree)  
   
  [使用查詢結果](#bkmk_Results)  
   
-##  <a name="bkmk_ContentQuery"></a> 基本內容查詢  
+##  <a name="bkmk_ContentQuery"></a>基本內容查詢  
  您可以使用預測查詢產生器建立內容查詢、使用 SQL Server Management Studio 隨附的 DMX 內容查詢範本，或是直接以 DMX 撰寫查詢。 與預測查詢不同的是，您不需要聯結外部資料，因此可以輕鬆撰寫內容查詢。  
   
  本節提供您可以建立的內容查詢類型概觀。  
@@ -45,7 +45,7 @@ ms.locfileid: "66085645"
   
 -   模型的查詢可以傳回模式、屬性清單、公式等。  
   
-###  <a name="bkmk_Structure"></a> 結構和案例資料的查詢  
+###  <a name="bkmk_Structure"></a>結構和案例資料的查詢  
  DMX 支援對用來建立採礦結構和模型的快取資料進行查詢。 當您定義採礦結構時，預設會建立此快取，並在您處理結構或模型時擴展快取。  
   
 > [!WARNING]  
@@ -58,12 +58,12 @@ ms.locfileid: "66085645"
   
  使用此陳述式可從用來建立模型的案例資料中，擷取指定的資料行。 您必須具有模型的鑽研權限，才能執行此查詢。  
   
- **檢視所有包含在結構中的資料。**  
+ **查看結構中包含的所有資料**  
  `SELECT FROM <structure>.CASES`  
   
  使用此陳述式可檢視所有包含在結構中的資料，包括未包含在特定採礦模型中的資料行。 您必須具有模型及結構的鑽研權限，才能從採礦結構中擷取資料。  
   
- **取得值範圍**  
+ **取得值的範圍**  
  `SELECT DISTINCT RangeMin(<column>), RangeMax(<column>) FROM <model>`  
   
  使用此陳述式可尋找連續資料行或 DISCRETIZED 資料行值區的最小值、最大值及平均值。  
@@ -83,12 +83,12 @@ ms.locfileid: "66085645"
   
  使用此陳述式可取得保留給與特定結構相關之測試採礦模型的資料。  
   
- **從特定模型模式鑽研到基礎案例資料**  
+ **從特定模型模式到基礎案例資料的鑽取**  
  `SELECT FROM <model>.CASESWHERE IsTrainingCase() AND IsInNode(<node>)`  
   
  使用此陳述式可從定型模型中擷取詳細的案例資料。 您必須指定特定節點：例如，您必須知道叢集的節點識別碼、決策樹的特定分支等。此外，您也必須擁有模型的鑽研權限，才能執行此查詢。  
   
-###  <a name="bkmk_Patterns"></a> 模型模式、統計資料及屬性的查詢  
+###  <a name="bkmk_Patterns"></a>模型模式、統計資料和屬性的查詢  
  資料採礦模型的內容有多種用途。 您可以使用模型內容查詢執行以下作業：  
   
 -   擷取公式或機率來進行自己的計算。  
@@ -105,17 +105,17 @@ ms.locfileid: "66085645"
   
  下列範例顯示用來建立模型內容查詢的一些常見模式：  
   
- **取得模型中的模式**  
+ **從模型取得模式**  
  `SELECT FROM <model>.CONTENT`  
   
  使用此陳述式可擷取模型中特定節點的詳細資訊。 視演算法類型而定，節點可以包含規則和公式、支援和變異數統計資料等等。  
   
- **擷取定型模型中所使用的屬性**  
+ **取出定型模型中使用的屬性**  
  `CALL System.GetModelAttributes(<model>)`  
   
  使用此預存程序可擷取模型所使用的屬性清單。 例如，這項資訊可用於決定因特徵選取而刪除的屬性。  
   
- **擷取儲存在資料採礦維度中的內容**  
+ **取得儲存在資料採礦維度中的內容**  
  `SELECT FROM <model>.DIMENSIONCONTENT`  
   
  使用此陳述式可從資料採礦維度中擷取資料。  
@@ -124,7 +124,7 @@ ms.locfileid: "66085645"
   
  如果您開發自己的外掛程式演算法，可以使用此陳述式來確認用於測試的模型內容。  
   
- **取得模型的 PMML 表示**  
+ **取得模型的 PMML 標記法**  
  `SELECT * FROM <model>.PMML`  
   
  取得以 PMML 格式表示模型的 XML 文件。 並非所有模型類型都受到支援。  
@@ -134,8 +134,9 @@ ms.locfileid: "66085645"
   
  本節提供幾個範例，以便說明演算法的選擇如何影響模型內所儲存的資訊類型。 如需採礦模型內容以及每一個模型類型特有之內容的詳細資訊，請參閱 [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)。  
   
-###  <a name="bkmk_Assoc"></a> 範例 1：關聯模型的內容查詢  
- `SELECT FROM <model>.CONTENT`陳述式會根據您所查詢的模型類型傳回不同種類的資訊。 如果是關聯模型，資訊的主要片段為 *「節點類型」* (Node Type)。 節點類似於模型內容中資訊的容器。 在關聯模型中，代表規則之節點的 NODE_TYPE 值為 8，而代表項目集之節點的 NODE_TYPE 值則為 7。  
+###  <a name="bkmk_Assoc"></a>範例1：關聯模型的內容查詢  
+ 
+  `SELECT FROM <model>.CONTENT`陳述式會根據您所查詢的模型類型傳回不同種類的資訊。 如果是關聯模型，資訊的主要片段為 *「節點類型」*(Node Type)。 節點類似於模型內容中資訊的容器。 在關聯模型中，代表規則之節點的 NODE_TYPE 值為 8，而代表項目集之節點的 NODE_TYPE 值則為 7。  
   
  因此，下列查詢會傳回前 10 個項目集，並依照支援排序 (預設的排序)。  
   
@@ -144,7 +145,7 @@ SELECT TOP 10 NODE_DESCRIPTION, NODE_PROBABILITY, SUPPORT
 FROM <model>.CONTENT WHERE NODE_TYPE = 7  
 ```  
   
- 下列查詢會根據這項資訊。 此查詢會傳回三個資料行： 節點、 完整的規則和項目集右側產品的識別碼-也就是預測為與某些其他產品相關聯的項目集一部分的產品。  
+ 下列查詢會根據這項資訊。 此查詢會傳回三個數據行：節點的識別碼、完整的規則以及專案集右側的產品，也就是預測為與其他產品相關聯的產品，做為專案集的一部分。  
   
 ```  
 SELECT FLATTENED NODE_UNIQUE_NAME, NODE_DESCRIPTION,  
@@ -166,7 +167,7 @@ ORDER BY NODE_SUPPORT DESC
   
  如需詳細範例，請參閱 [關聯模型查詢範例](association-model-query-examples.md)。  
   
-###  <a name="bkmk_DecTree"></a> 範例 2：決策樹模型的內容查詢  
+###  <a name="bkmk_DecTree"></a>範例2：決策樹模型的內容查詢  
  決策樹模型可用於預測及分類。  此範例假設您正在使用模型預測結果，但是您也會想要查明哪些因素或規則可用來分類結果。  
   
  在決策樹模型中，節點是用來表示樹狀節點和分葉節點。 每一個節點的標題都會包含結果路徑的描述。 因此，若要追蹤任何特定結果的路徑，您需要識別包含該結果的節點，然後取得該節點的詳細資料。  
@@ -190,13 +191,13 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
  如需詳細範例，請參閱 [決策樹模型查詢範例](decision-trees-model-query-examples.md)。  
   
-##  <a name="bkmk_Results"></a> 使用查詢結果  
+##  <a name="bkmk_Results"></a>使用查詢結果  
  如範例所示，內容查詢主要會傳回表格式資料列集，但也可能包含巢狀資料行中的資訊。 您可以扁平化傳回的資料列集，但是這麼做會讓結果使用起來更複雜。 特別是 NODE_DISTRIBUTION 節點的內容是以巢狀方式內嵌，但是包含了許多有關模型的有趣資訊。  
   
  如需有關如何使用階層式資料列集的詳細資訊，請參閱 MSDN 上的 OLEDB 規格。  
   
 ## <a name="see-also"></a>另請參閱  
- [了解 DMX Select 陳述式](/sql/dmx/understanding-the-dmx-select-statement)   
+ [瞭解 DMX Select 語句](/sql/dmx/understanding-the-dmx-select-statement)   
  [資料採礦查詢](data-mining-queries.md)  
   
   
