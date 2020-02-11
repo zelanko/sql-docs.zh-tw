@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0dc08151d47bee9190f199e187db25a3b5dd6de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662060"
 ---
 # <a name="showplan-statistics-profile-event-class"></a>Showplan Statistics Profile 事件類別
-  當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 SQL 陳述式時，會發生 Showplan Statistics Profile 事件類別。 包含的資訊是 Showplan XML Statistics Profile 事件類別中可用資訊的子集。  
+  執行 SQL 語句時[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，會發生顯示計畫統計資料設定檔事件類別。 包含的資訊是 Showplan XML Statistics Profile 事件類別中可用資訊的子集。  
   
  Showplan Statistics Profile 事件類別會顯示完整的編譯時間資料；包含 Showplan Statistics Profile 的追蹤會造成顯著的效能負擔。 若要減少此問題，此事件類別請限用於追蹤對特定問題的短期監視。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62662060"
 |ApplicationName|`nvarchar`|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |BinaryData|`image`|查詢的預估成本。|2|否|  
 |ClientProcessID|`int`|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|9|是|  
-|DatabaseID|`int`|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 如果在追蹤中擷取 ServerName 資料行，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
+|DatabaseID|`int`|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]如果在追蹤中捕捉到 ServerName 資料行，而且伺服器可供使用，則會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |DatabaseName|`nvarchar`|正在執行使用者陳述式的資料庫名稱。|35|是|  
 |EventClass|`int`|事件類型 = 98。|27|否|  
 |EventSequence|`int`|要求中的給定事件順序。|51|否|  

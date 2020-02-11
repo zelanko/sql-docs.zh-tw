@@ -16,13 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2888f34c1e4c4103845d07e569a0dbabeb2e4caa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225546"
 ---
 # <a name="bulk-copy-functions"></a>大量複製函數
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專用大量複製 API 延伸模組可讓用戶端應用程式在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中，快速加入或擷取資料列。  
   
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 時，您可以參考 SQLNCLI11.LIB 和 SQLNCLI.H 中的大量複製函數 (BCP)。  
@@ -68,7 +69,7 @@ ms.locfileid: "63225546"
 -   [bcp_writefmt](bcp-writefmt.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 驅動程式延伸模組](../../database-engine/dev-guide/sql-server-driver-extensions.md)   
- [執行大量複製作業&#40;ODBC&#41;](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+ [SQL Server 驅動程式擴充功能](../../database-engine/dev-guide/sql-server-driver-extensions.md)   
+ [&#40;ODBC&#41;執行大量複製作業](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   
