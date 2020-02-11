@@ -1,5 +1,5 @@
 ---
-title: 與階層有關的 Xquery |Microsoft Docs
+title: 涉及階層的 Xquery |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,23 +16,23 @@ ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946109"
 ---
 # <a name="xqueries-involving-hierarchy"></a>與階層有關的 XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  大部分**xml**類型資料行中的**AdventureWorks**資料庫是半結構化文件。 因此，儲存在每一個資料列中的文件看起來都不同。 此主題的查詢範例說明如何從這些不同的文件中擷取資訊。  
+  **AdventureWorks**資料庫中大部分的**xml**類型資料行都是半結構化檔。 因此，儲存在每一個資料列中的文件看起來都不同。 此主題的查詢範例說明如何從這些不同的文件中擷取資訊。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. 從製造指示文件中，擷取工作中心位置以及這些位置上的第一個製造步驟  
- 對於 產品型號 7 」，此查詢會建構 XML 包含 <`ManuInstr`> 項目，與**ProductModelID**並**ProductModelName**屬性，以及一個或多個 <`Location`>子項目。  
+ 若為產品型號7，查詢會使用**ProductModelID**和 ProductModelName 屬性`ManuInstr` ，以及一或多個**** <`Location`> 子項目，來建立包含 <> 元素的 XML。  
   
- 每個 <`Location`> 項目有自己的屬性和一個 <`step`> 子元素。 這個 <`step`> 子元素是工作中心位置的第一個製造步驟。  
+ 每個`Location` <> 元素都有自己的屬性集，以及`step`一個 <> 子項目。 這個 <`step`> 子項目是工作中心位置的第一個製造步驟。  
   
 ```sql
 SELECT Instructions.query('  
@@ -55,15 +55,15 @@ WHERE ProductModelID=7
   
  請注意下列項目是從上一個查詢而來：  
   
--   **命名空間**中的關鍵字[XQuery 初構](../xquery/modules-and-prologs-xquery-prolog.md)定義的命名空間前置詞。 稍後在查詢主體中會使用此前置詞。  
+-   [XQuery](../xquery/modules-and-prologs-xquery-prolog.md)初構中的**namespace**關鍵字定義了命名空間前置詞。 稍後在查詢主體中會使用此前置詞。  
   
 -   內容切換 Token {) 和 (} 是用來將 XML 建構的查詢切換至查詢評估。  
   
--   **: Column （)** 用來包含所建構的 XML 中的關聯式值。  
+-   **Sql： column （）** 是用來在所結構化的 XML 中包含關聯式值。  
   
--   在建構 <`Location`> 項目，$wc/@* 擷取所有工作中心位置屬性。  
+-   在建立 <`Location`> 元素時，$wc/@ * 會抓取所有的工作中心位置屬性。  
   
--   **String （)** 函式傳回的字串值從 <`step`> 項目。  
+-   **String （）** 函式會傳回 <`step`> 元素的字串值。  
   
  以下是部份結果：  
   
@@ -84,7 +84,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. 在 AdditionalContactInfo 資料行中尋找所有電話號碼  
- 下列查詢會搜尋整個階層，來擷取特定客戶連絡人的其他電話號碼 <`telephoneNumber`> 項目。 因為 <`telephoneNumber`> 項目可以出現在任何位置的階層，此查詢使用階和自身運算子 (/ /) 在搜尋。  
+ 下列查詢會藉由搜尋整個階層中的 <`telephoneNumber`> 元素，來抓取特定客戶連絡人的其他電話號碼。 因為 <`telephoneNumber`> 元素可以出現在階層中的任何位置，所以查詢會在搜尋中使用下階和自我運算子（//）。  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -111,13 +111,13 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- 若要擷取只有最上層的電話號碼，尤其是 <`telephoneNumber`> 子元素 <`AdditionalContactInfo`>，在查詢中的 FOR 運算式變更為  
+ 若只要取出最上層的電話號碼，特別是 <`telephoneNumber`> <`AdditionalContactInfo`> 的子項目，則查詢中的 FOR 運算式會變更為  
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   
 ## <a name="see-also"></a>另請參閱  
  [XQuery 基本概念](../xquery/xquery-basics.md)   
- [XML 建構&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
+ [&#40;XQuery&#41;的 XML 結構](../xquery/xml-construction-xquery.md)   
  [XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  
   
   
