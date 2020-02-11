@@ -1,5 +1,5 @@
 ---
-title: Member 物件屬性、 方法和事件 |Microsoft Docs
+title: Member 物件屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb8efcb41ea0a82f11351e5a439ee8b9cf7a053e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949487"
 ---
 # <a name="member-object-properties-methods-and-events"></a>Member 物件屬性、方法和事件
@@ -25,7 +25,7 @@ ms.locfileid: "67949487"
   
  [ChildCount 屬性](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)  
   
- [Children 屬性](../../../ado/reference/ado-md-api/children-property-ado-md.md)  
+ [子系屬性](../../../ado/reference/ado-md-api/children-property-ado-md.md)  
   
  [Description 屬性](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
   
@@ -43,14 +43,14 @@ ms.locfileid: "67949487"
   
  [屬性集合](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [類型屬性](../../../ado/reference/ado-md-api/type-property-ado-md.md)  
+ [Type 屬性](../../../ado/reference/ado-md-api/type-property-ado-md.md)  
   
  [UniqueName 屬性](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>方法  
  無。  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>事件  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,5 +1,5 @@
 ---
-title: Close 方法 (ADO) |Microsoft Docs
+title: Close 方法（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,14 +18,14 @@ ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8a1d153d1433a377bb488366111b75a986365132
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919937"
 ---
 # <a name="close-method-ado"></a>Close 方法 (ADO)
-關閉開啟的物件和任何相依的物件。  
+關閉開啟的物件和任何相依物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,25 +35,25 @@ object.Close
 ```  
   
 ## <a name="remarks"></a>備註  
- 使用**關閉**方法以關閉[連線](../../../ado/reference/ado-api/connection-object-ado.md)，則[記錄](../../../ado/reference/ado-api/record-object-ado.md)，則[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，或[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件若要釋出的任何相關聯的系統資源。 關閉物件不會將它從記憶體中; 中移除您可以變更其屬性設定，然後稍後再重新開啟它。 若要完全消除從記憶體物件，關閉物件，然後將物件變數設*Nothing* （在 Visual Basic)。  
+ 使用**close**方法關閉[連接](../../../ado/reference/ado-api/connection-object-ado.md)、[記錄](../../../ado/reference/ado-api/record-object-ado.md)、[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)或[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)物件，以釋放任何相關聯的系統資源。 關閉物件並不會將它從記憶體中移除;您可以變更其屬性設定，稍後再重新開啟它。 若要完全排除記憶體中的物件，請關閉物件，然後將物件變數設定為 [*無*] （在 Visual Basic 中）。  
   
-## <a name="connection"></a>連接  
- 使用**關閉** 方法以關閉**連線**物件也會關閉任何作用**資料錄集**與連接相關聯的物件。 A[命令](../../../ado/reference/ado-api/command-object-ado.md)相關聯的物件**連線**會保存您在關閉的物件，但它不會再相關聯**連接**物件，也就是其[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)屬性會設定為**Nothing**。 此外，**命令**物件的[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)集合將會清除任何提供者定義的參數。  
+## <a name="connection"></a>Connection  
+ 使用**close**方法關閉**連接**物件也會關閉與連接相關聯的任何作用中**記錄集**物件。 與您正在關閉的**連接**物件相關聯的[命令](../../../ado/reference/ado-api/command-object-ado.md)物件將會保存，但不會再與**Connection**物件相關聯。也就是說，其[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)屬性會設定為 [**無**]。 此外，**命令**物件的[parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)集合也會清除任何提供者定義的參數。  
   
- 您可以於稍後呼叫[開啟](../../../ado/reference/ado-api/open-method-ado-connection.md)方法，以重新建立在相同的或其他資料來源的連接。 雖然**連線**物件關閉時，需要開啟連接至資料來源之任何方法會產生錯誤。  
+ 您稍後可以呼叫[Open](../../../ado/reference/ado-api/open-method-ado-connection.md)方法來重新建立與相同或另一個資料來源的連接。 當**連接**物件關閉時，呼叫任何需要開啟資料來源連接的方法，都會產生錯誤。  
   
- 關閉**連接**物件時沒有開放**資料錄集**連接上的物件回復任何暫止的變更在所有**資料錄集**物件。 明確地關閉**連接**物件 (呼叫**關閉**方法) 進行交易時產生錯誤。 如果**連線**物件就被踢出範圍，當交易正在進行時，ADO 會自動回復交易。  
+ 當連接上有開啟的**記錄集**物件時，關閉**連接**物件會復原所有**記錄集**物件中的任何暫止變更。 當交易正在進行時，明確關閉**連接**物件（呼叫**Close**方法）會產生錯誤。 當交易正在進行時，如果**連接**物件超出範圍，ADO 會自動回復交易。  
   
-## <a name="recordset-record-stream"></a>資料錄集、 記錄、 Stream  
- 使用**關閉**方法以關閉**Recordset**，**記錄**，或**Stream**物件釋放相關聯的資料和任何的獨佔存取權您可能必須透過這個特定的物件資料。 您可以於稍後呼叫[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法來重新開啟的物件相同，或修改的屬性。  
+## <a name="recordset-record-stream"></a>記錄集、記錄、資料流程  
+ 使用**close**方法關閉**記錄集**、**記錄**或**資料流程**物件，會釋出相關聯的資料，以及您對該特定物件所擁有之資料的任何獨佔存取權。 您稍後可以呼叫[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法，以相同或已修改的屬性來重新開啟物件。  
   
- 雖然**資料錄集**物件關閉時，呼叫任何需要即時的資料指標的方法會產生錯誤。  
+ 當**記錄集**物件關閉時，呼叫任何需要即時資料指標的方法會產生錯誤。  
   
- 在立即更新模式中進行編輯時，呼叫**關閉**方法會產生錯誤; 相反地，呼叫[更新](../../../ado/reference/ado-api/update-method.md)或是[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法第一次。 如果您關閉**Recordset**物件在批次更新模式中，所有的變更，自上次[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)呼叫將會遺失。  
+ 如果在立即更新模式中進行編輯，則呼叫**Close**方法會產生錯誤;相反地，請先呼叫[Update](../../../ado/reference/ado-api/update-method.md)或[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法。 如果您在批次更新模式中關閉**記錄集**物件，最後一個[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)呼叫之後的所有變更都會遺失。  
   
- 如果您使用[複製品](../../../ado/reference/ado-api/clone-method-ado.md)方法來建立已開啟的副本**資料錄集**物件時，關閉原始或複本不會影響任何其他複本。  
+ 如果您使用[Clone](../../../ado/reference/ado-api/clone-method-ado.md)方法來建立開啟**記錄集**物件的複本，關閉原始或複製不會影響任何其他複本。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
   
 |||  
 |-|-|  
@@ -61,9 +61,9 @@ object.Close
 |[Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [Open 和 Close 方法範例 (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
- [Open 和 Close 方法範例 (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
- [Open 和 Close 方法範例 （VC + +）](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
- [Open 方法 (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open 方法 (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Open 和 Close 方法範例（VB）](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
+ [Open 和 Close 方法範例（VBScript）](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
+ [Open 和 Close 方法範例（VC + +）](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
+ [Open 方法（ADO Connection）](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Open 方法（ADO Recordset）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Save 方法](../../../ado/reference/ado-api/save-method.md)

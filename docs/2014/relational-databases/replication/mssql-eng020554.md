@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63057118"
 ---
-# <a name="mssqleng020554"></a>MSSQL_ENG020554
+# <a name="mssql_eng020554"></a>MSSQL_ENG020554
     
 ## <a name="message-details"></a>訊息詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|20554|  
 |事件來源|MSSQLSERVER|  
 |元件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
@@ -52,25 +52,25 @@ ms.locfileid: "63057118"
   
      在「複寫監視器」中檢查錯誤詳細資料，然後重新啟動代理程式 (如果它已停止)。 錯誤詳細資料可能會提供有關代理程式無法正確執行之原因的額外資訊。 如果代理程式在執行，請勿停止並重新啟動代理程式，因為這樣可能會使問題惡化。 如需有關檢視代理程式狀態以及複寫監視器中的錯誤詳細資料，請參閱下列主題：  
   
-    -   快照集代理程式、 記錄讀取器代理程式和佇列讀取器代理程式，請參閱[View Information and Perform Tasks 使用 「 複寫監視器](monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+    -   如需快照集代理程式、記錄讀取器代理程式和佇列讀取器代理程式，請參閱[使用複寫監視器來查看資訊及執行](monitor/view-information-and-perform-tasks-replication-monitor.md)工作。  
   
-    -   針對散發代理程式和合併代理程式，請參閱[View Information and Perform Tasks 使用 「 複寫監視器](monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+    -   如需散發代理程式和合併代理程式，請參閱[使用複寫監視器來查看資訊及執行](monitor/view-information-and-perform-tasks-replication-monitor.md)工作。  
   
 -   如果因代理程式正忙而頻繁出現此錯誤：  
   
      您可能需要重新設計應用程式，以縮短代理程式的處理時間。  
   
-     您可以使用 **[作業屬性]** 對話方塊增加檢查代理程式狀態的間隔。 如需存取此對話方塊中，複寫作業的詳細資訊，請參閱[View Information and Perform Tasks 使用 「 複寫監視器](monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     您可以使用 **[作業屬性]** 對話方塊增加檢查代理程式狀態的間隔。 如需針對複寫作業存取此對話方塊的詳細資訊，請參閱[使用複寫監視器來查看資訊及執行](monitor/view-information-and-perform-tasks-replication-monitor.md)工作。  
   
 -   如果代理程式無法登入拓撲中的某台電腦：  
   
-     建議將 **-LoginTimeOut** 值設定為小於複寫代理程式檢查作業執行的時間間隔。 在某些情況下， **-LoginTimeOut** 的值之所以設定得高，是因為會導致登入逾時的網路問題。如果 **-LoginTimeOut** 設定得較低，則複寫會報告其他特定的問題，讓您可以對由權限、網路問題或其他問題導致的登入問題進行疑難排解。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
+     建議將 **-LoginTimeOut** 值設定為小於複寫代理程式檢查作業執行的時間間隔。 在某些情況下， **-LoginTimeOut**的值會設定為較高，因為導致登入超時的網路問題。如果 **-LoginTimeOut**設定得較低，則複寫會報告更特定的錯誤，讓您能夠針對許可權、網路問題或其他問題所導致的登入問題進行疑難排解。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱  
   
     -   [處理複寫代理程式設定檔](agents/replication-agent-profiles.md)  
   
-    -   [檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [查看及修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](concepts/replication-agent-executables-concepts.md)的最小和最大記憶體數量。  
+    -   複寫[代理程式可執行檔概念](concepts/replication-agent-executables-concepts.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫代理程式管理](agents/replication-agent-administration.md)   
@@ -79,6 +79,6 @@ ms.locfileid: "63057118"
  [複寫記錄讀取器代理程式](agents/replication-log-reader-agent.md)   
  [複寫合併代理程式](agents/replication-merge-agent.md)   
  [複寫佇列讀取器代理程式](agents/replication-queue-reader-agent.md)   
- [複寫快照集代理程式](agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   
   

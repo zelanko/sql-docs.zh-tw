@@ -1,5 +1,5 @@
 ---
-title: HOW TO：檢視 Upgrade Advisor 報表 |Microsoft Docs
+title: 如何：查看 Upgrade Advisor 報表 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0ae231e380530f11d4c97a917927ed62e99fb47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094800"
 ---
-# <a name="how-to-view-an-upgrade-advisor-report"></a>HOW TO：檢視 Upgrade Advisor 報表
+# <a name="how-to-view-an-upgrade-advisor-report"></a>如何：檢視 Upgrade Advisor 報表
   Upgrade Advisor 會針對您選取要分析的每個元件建立報表。 此主題描述如何從 Upgrade Advisor 開始頁面檢視 Upgrade Advisor 報表。  
   
 > [!IMPORTANT]  
@@ -31,29 +31,29 @@ ms.locfileid: "66094800"
   
 ### <a name="to-view-a-report"></a>若要檢視報表  
   
-1.  按一下 **開始**，按一下**所有程式**，按一下  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** ，然後按一下 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**。  
+1.  依序按一下 [**開始**]、[ **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]****所有程式**]、[]，然後按一下** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Upgrade Advisor**]。  
   
-2.  在 Upgrade Advisor 開始頁面上，按一下**啟動 Upgrade Advisor 報表檢視器**。  
+2.  在 Upgrade Advisor 開始頁面上，按一下 [**啟動 Upgrade Advisor 報表檢視器]**。  
   
 3.  若要選取電腦上預設位置中的報表：  
   
-    1.  在  **Server**清單中，選取伺服器。  
+    1.  在 [**伺服器**] 清單中，選取伺服器。  
   
-    2.  在 **執行個體或元件**清單中，選取的元件 / 執行個體的組合。  
+    2.  在 [**實例或元件**] 清單中，選取 [元件] 或 [元件/實例] 組合。  
   
      若要選取另一個位置的報表：  
   
-    1.  按一下 **開啟報表**連結。  
+    1.  按一下 [**開啟報表**] 連結。  
   
     2.  瀏覽至報表位置，然後按兩下 XML 檔。  
   
-     Upgrade Advisor 最多儲存先前分析的五個報表做為歷程記錄。 若要檢視這些報表，請按一下**報表**下拉式清單方塊中，然後選取報表。 這些報表是依其產生時的時間戳記列出。  
+     Upgrade Advisor 最多儲存先前分析的五個報表做為歷程記錄。 若要查看這些報表，請按一下 [**報表**] 下拉式清單方塊，然後選取報表。 這些報表是依其產生時的時間戳記列出。  
   
      報表包含所有已偵測之問題的下列詳細資料：  
   
-    -   **重要性**，表示已修正此問題的重要性。  
+    -   [**重要性**]，表示修正問題的重要程度。  
   
-    -   **修正**，這表示是否您應該 （或必須） 修正此問題之前或之後升級至[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 之前或之後移轉應用程式或資料，或任何時間。  
+    -   **修正**時機，這表示您應該（或必須）在升級至[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]之前或之後，或在遷移應用程式或資料之前或之後，或在任何時間之前，修正此問題。  
   
     -   問題的簡短描述。  
   
@@ -63,20 +63,20 @@ ms.locfileid: "66094800"
   
 6.  若要檢視特定項目的詳細資料，請按一下該項目。 問題的描述隨即顯示，並提供其他選項：  
   
-    -   若要檢視的物件，其中找到此問題，請按一下**顯示受影響的物件**。  
+    -   若要查看找到這個問題的物件，請按一下 [**顯示受影響的物件**]。  
   
-    -   若要檢視問題的說明，請按一下**告訴我更多關於此問題，以及如何解決它**。  
+    -   若要查看問題的說明，請按一下 [**告訴我有關此問題的詳細資訊] 和 [解決方法**]。  
   
-    -   若要將標示為已解決，當您再次檢視報表時，會隱藏問題，問題選取**此問題已解決**。  
+    -   若要將問題標示為已解決，這會在您再次查看報表時隱藏問題，請選取 [**此問題已解決**]。  
   
 > [!NOTE]  
->  報表可能會包含無法偵測之問題的項目。 這些是無法偵測或是會產生過多誤判結果的問題。 按一下 **告訴我更多關於此問題，以及如何解決它**連結來查看元件無法偵測之問題的清單。  
+>  報表可能會包含無法偵測之問題的項目。 這些是無法偵測或是會產生過多誤判結果的問題。 按一下 [**告訴我有關此問題的詳細資訊] 和 [如何解決它**] 連結，以查看元件的無法偵測問題清單。  
   
 ## <a name="see-also"></a>另請參閱  
- [如何：將報表匯出](../../../2014/sql-server/install/how-to-export-reports.md)   
- [如何：執行 Upgrade Advisor 分析精靈](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [如何：匯出報表](../../../2014/sql-server/install/how-to-export-reports.md)   
+ [如何：執行 Upgrade Advisor 分析嚮導](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [解決升級問題](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [Upgrade Advisor 的如何主題](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
- [使用升級建議程式](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [Upgrade Advisor 的 how to 主題](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
+ [使用 Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

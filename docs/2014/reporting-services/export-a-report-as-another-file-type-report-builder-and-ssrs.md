@@ -1,5 +1,5 @@
 ---
-title: 將報表匯出為其他檔案類型 （報表產生器及 SSRS） |Microsoft Docs
+title: 將報表匯出為另一種檔案類型（報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6da8c1190c07d3df930a2d83937e3a5ec39da32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109175"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>將報表匯出為其他檔案類型 (報表產生器及 SSRS)
@@ -27,11 +27,11 @@ ms.locfileid: "66109175"
   
 1.  預覽報表。  
   
-2.  在功能區上按一下 **[匯出]** 。  
+2.  在功能區上按一下 **[匯出]**。  
   
 3.  選取要使用的格式。  
   
-     **[另存新檔]** 對話方塊隨即開啟。 依預設，檔案名稱就是您匯出之報表的名稱。 您可以選擇變更檔案名稱。  
+     [另存新檔]**** 對話方塊隨即開啟。 依預設，檔案名稱就是您匯出之報表的名稱。 您可以選擇變更檔案名稱。  
   
 4.  導覽至您儲存匯出之報表的位置，然後將它開啟。  
   
@@ -50,43 +50,43 @@ ms.locfileid: "66109175"
   
 4.  選取要使用的格式。  
   
-5.  按一下 **[匯出]** 。  
+5.  按一下 [匯出]****。  
   
      此時會出現一個訊息，詢問您要開啟還是儲存檔案。  
   
-6.  若要以選取的匯出格式檢視報表，按一下 **[開啟]** 。  
+6.  若要以選取的匯出格式檢視報表，按一下 **[開啟]**。  
   
-     \-或-  
+     \- 或 -  
   
-     若要以選取的匯出格式立即儲存報表，按一下 **[儲存]** 。  
+     若要以選取的匯出格式立即儲存報表，按一下 **[儲存]**。  
   
-     使用與您選擇之格式相關聯的應用程式，顯示或儲存報表。 如果您按一下 **[儲存]** ，系統會提示您儲存報表的位置。  
+     使用與您選擇之格式相關聯的應用程式，顯示或儲存報表。 如果您按一下 **[儲存]**，系統會提示您儲存報表的位置。  
   
-     **注意** ：如果因為您沒有與此檔案類型相關聯的程式而無法以您所選擇的格式開啟報表，系統將會提示您儲存匯出的報表，或在線上尋找一個程式來開啟該報表。  
+     **注意**如果程式因為您沒有與此檔案類型相關聯的程式而無法以您所選擇的格式開啟報表，系統將會提示您儲存匯出的報表，或在線上尋找程式來開啟報表。  
   
 ### <a name="to-export-a-report-as-another-file-type-in-a-sharepoint-library"></a>若要在 SharePoint 文件庫中將報表匯出為其他檔案類型  
   
 1.  預覽報表。  
   
-2.  在工具列上，按一下 **[動作]** ，指向 **[匯出]** ，然後選取您要使用的格式。  
+2.  在工具列上，按一下 **[動作]**，指向 **[匯出]**，然後選取您要使用的格式。  
   
      隨即開啟 **[檔案下載]** 對話方塊。  
   
-3.  若要以選取的匯出格式檢視報表，按一下 **[開啟]** 。  
+3.  若要以選取的匯出格式檢視報表，按一下 **[開啟]**。  
   
-     \-或-  
+     \- 或 -  
   
-     若要以選取的匯出格式立即儲存報表，按一下 **[儲存]** 。  
+     若要以選取的匯出格式立即儲存報表，按一下 **[儲存]**。  
   
-     使用與您選擇之格式相關聯的應用程式，顯示或儲存報表。 如果您按一下 **[儲存]** ，系統會提示您儲存報表的位置。  
+     使用與您選擇之格式相關聯的應用程式，顯示或儲存報表。 如果您按一下 **[儲存]**，系統會提示您儲存報表的位置。  
   
      您可以選擇變更匯出之報表的檔案名稱。  
   
-     **注意** ：如果因為您沒有與此檔案類型相關聯的程式而無法以您所選擇的格式開啟報表，系統將會提示您儲存匯出的報表，或在線上尋找一個程式來開啟該報表。  
+     **注意**如果程式因為您沒有與此檔案類型相關聯的程式而無法以您所選擇的格式開啟報表，系統將會提示您儲存匯出的報表，或在線上尋找程式來開啟報表。  
   
 ## <a name="see-also"></a>另請參閱  
- [匯出報表&#40;報表產生器及 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
+ [匯出報表 &#40;報表產生器和 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能&#40;報表產生器及 SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
   
   

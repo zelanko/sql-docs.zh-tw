@@ -1,5 +1,5 @@
 ---
-title: MDX 資料操作陳述式 (MDX) |Microsoft Docs
+title: MDX 資料動作陳述式（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f0aa7017cd82dce5da8d3424ed67565e9fda101c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68003518"
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>MDX 資料操作陳述式 (MDX)
@@ -24,15 +24,15 @@ ms.locfileid: "68003518"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[CALL 陳述式&#40;MDX&#41;](../mdx/mdx-data-manipulation-call.md)|在目前範圍中或選擇性在指定 Cube 上，執行會傳回空值的預存程序。|  
-|[CLEAR CALCULATIONS 陳述式&#40;MDX&#41;](../mdx/mdx-data-manipulation-clear-calculations.md)|移除 Cube 的所有計算，並使 Cube 回到計算行程 0。|  
-|[DRILLTHROUGH 陳述式&#40;MDX&#41;](../mdx/mdx-data-manipulation-drillthrough.md)|擷取用於在 Cube 建立指定資料格的資料列集。|  
-|[SELECT 陳述式 &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)|擷取指定 Cube 的資料。|  
-|[UPDATE CUBE 陳述式&#40;MDX&#41;](../mdx/mdx-data-manipulation-update-cube.md)|更新 Cube 內指定的分葉或非分葉資料格的值，選擇性地跨相依分葉資料格，配置指定的非分葉頁資料格的值。|  
+|[&#40;MDX&#41;的 CALL 語句](../mdx/mdx-data-manipulation-call.md)|在目前範圍中或選擇性在指定 Cube 上，執行會傳回空值的預存程序。|  
+|[&#40;MDX&#41;的 CLEAR 計算語句](../mdx/mdx-data-manipulation-clear-calculations.md)|移除 Cube 的所有計算，並使 Cube 回到計算行程 0。|  
+|[MDX&#41;&#40;的鑽取語句](../mdx/mdx-data-manipulation-drillthrough.md)|擷取用於在 Cube 建立指定資料格的資料列集。|  
+|[SELECT 語句 &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)|擷取指定 Cube 的資料。|  
+|[&#40;MDX&#41;的 UPDATE CUBE 語句](../mdx/mdx-data-manipulation-update-cube.md)|更新 Cube 內指定的分葉或非分葉資料格的值，選擇性地跨相依分葉資料格，配置指定的非分葉頁資料格的值。|  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 陳述式參考&#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
- [MDX 資料定義陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [MDX 指令碼陳述式 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [Mdx 語句參考 &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
+ [Mdx 資料定義語句 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Mdx 腳本語句 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

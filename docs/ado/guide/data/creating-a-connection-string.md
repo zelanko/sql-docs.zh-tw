@@ -14,43 +14,43 @@ ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925768"
 ---
 # <a name="creating-a-connection-string"></a>建立連接字串
-連接字串是由以分號分隔的引數/值組 （也就是 「 參數 」） 清單所組成。 例如:  
+連接字串是由引數/值組的清單（也就是參數）所組成，並以分號分隔。 例如：  
   
 ```syntax
 "arg1=val1; arg2=val2; ... argN=valN;"  
 ```  
   
- 所有參數必須能夠都辨識 ADO 或指定的提供者。  
+ ADO 或指定的提供者都必須識別所有參數。  
   
- ADO 可辨識的連接字串中的下列五個引數。  
+ ADO 會辨識連接字串中的下列五個引數。  
   
 |引數|描述|  
 |--------------|-----------------|  
-|*提供者*|指定要用於連線提供者的名稱。|  
-|*檔案名稱*|指定提供者特定檔案名稱 （例如，保存的資料來源物件） 包含預設的連接資訊。|  
-|*URL*|指定的連接字串做為識別的資源，例如檔案或目錄的絕對 URL。|  
-|*遠端提供者*|指定開啟用戶端連接時使用的提供者的名稱。 （僅限遠端資料服務。）|  
-|*遠端伺服器*|指定要開啟用戶端連線時所使用的伺服器的路徑名稱。 （僅限遠端資料服務。）|  
+|*提供者*|指定要用於連接的提供者名稱。|  
+|*檔案名*|指定包含預設連接資訊的提供者特定檔案（例如保存的資料來源物件）的名稱。|  
+|*連結*|將連接字串指定為識別資源（例如檔案或目錄）的絕對 URL。|  
+|*遠端提供者*|指定開啟用戶端連接時所要使用的提供者名稱。 （僅限遠端資料服務）。|  
+|*遠端伺服器*|指定要在開啟用戶端連接時使用的伺服器路徑名稱。 （僅限遠端資料服務）。|  
   
- 其他引數會傳遞給提供者中名為*提供者*引數，而不進行任何處理由 ADO。  
+ 其他引數會傳遞至*provider*引數中指定的提供者，而不會由 ADO 進行任何處理。  
   
- HelloData 應用程式中的[HelloData:簡單的 ADO 應用程式](../../../ado/guide/data/hellodata-a-simple-ado-application.md)使用下列連接字串：  
+ HelloData 中的 HelloData 應用程式[：簡單的 ADO 應用程式](../../../ado/guide/data/hellodata-a-simple-ado-application.md)使用了下列連接字串：  
   
 ```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
   
- 在此連接字串中，ADO 會辨識只`"Provider=SQLOLEDB"`參數，指定 Microsoft OLE DB Provider for SQL Server 做為 ADO 資料來源。 其餘的引數/值組， `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"`，會逐字給這個提供者。 型別和這類參數的有效性是特定提供者。 如需有效的參數，可在連接字串中傳遞資訊，請參閱個別提供者的文件。  
+ 在此連接字串中，ADO 只會`"Provider=SQLOLEDB"`辨識參數，以將 SQL Server 的 Microsoft OLE DB 提供者指定為 ADO 資料來源。 其餘的引數/值`"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"`組會逐字傳遞給此提供者。 這類參數的類型和有效性是提供者特有的。 如需可在連接字串中傳遞之有效參數的相關資訊，請參閱個別提供者的檔。  
   
- 根據 OLE DB Provider for SQL Server 文件，您可以使用 「 伺服器 」 取代為*資料來源*參數和 「 資料庫 」，如*Initial Catalog*參數。 因此，下列連接字串會產生與上面相同的結果：  
+ 根據 SQL Server 檔的 OLE DB 提供者，您可以將*資料來源*參數和 "Database" 的 "Server" 取代為*初始目錄*參數。 因此，下列連接字串會產生與上方相同的結果：  
   
 ```vb
 m_sConnStr = "Provider=SQLOLEDB;Server=MySqlServer;" & _  

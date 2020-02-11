@@ -1,5 +1,5 @@
 ---
-title: 備妥屬性範例 （VC + +） |Microsoft Docs
+title: 備妥的屬性範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58da870e9c65be459e6bd4a8c35bb84aef325c61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917587"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared 屬性範例 (VC++)
-此範例示範[已準備](../../../ado/reference/ado-api/prepared-property-ado.md)藉由開啟兩個屬性[命令](../../../ado/reference/ado-api/command-object-ado.md)物件-一個已備妥，另一個尚未備妥。  
+這個範例會藉由開啟兩個[命令](../../../ado/reference/ado-api/command-object-ado.md)物件（一個已備妥，一個尚未備妥）來示範[備](../../../ado/reference/ado-api/prepared-property-ado.md)妥的屬性。  
   
 ## <a name="example"></a>範例  
   
@@ -141,8 +141,8 @@ void PrintComError(_com_error &e) {
 ```  
   
  **效能結果：**  
-**尚未備妥：0.016 秒**  
-**準備：    0.016 秒**   
+**未備妥：0.016 秒**  
+**已備妥：0.016 秒**   
 ## <a name="see-also"></a>另請參閱  
- [Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Command 物件（ADO）](../../../ado/reference/ado-api/command-object-ado.md)   
  [Prepared 屬性 (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: 將屬性加入維度 |Microsoft Docs
+title: 將屬性加入至維度 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,22 +17,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 70817c567b77af2bfdb7d715683ae6081fda442b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077424"
 ---
 # <a name="add-an--attribute-to-a-dimension"></a>將屬性加入維度中
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以手動或自動將屬性加入至維度中。  
+  您可以在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]自動或手動將屬性加入至維度。  
   
  若要自動建立屬性，在 **之維度設計師的** [維度結構] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]索引標籤上，選取您要對應到屬性的資料行，然後從 **[資料來源檢視]** 窗格中將該資料行拖曳至 **[屬性]** 窗格中。 這樣會建立一個對應到該資料行的屬性，並將資料行的相同名稱指定給屬性。 如果已有使用該名稱的屬性， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會對第一個重複名稱加入從 "1" 開始的序號後置詞。  
   
- 若要手動建立屬性，請將 **[屬性]** 窗格設為方格檢視。 在方格中的最後一個資料列的 [名稱] 欄中，按一下 **\<新屬性 >** 項目。 輸入新屬性的名稱。 這樣子所建立的屬性，不對應到其所有屬性均為預設值的資料行。 您可以在 **的** [屬性] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 視窗中，設定新屬性的 **KeyColumns** 屬性來設定對應。  
+ 若要手動建立屬性，請將 **[屬性]** 窗格設為方格檢視。 在方格最後一個資料列的 [名稱] 資料行中，按一下** \<新的屬性>** 專案]。 輸入新屬性的名稱。 這樣子所建立的屬性，不對應到其所有屬性均為預設值的資料行。 您可以在 **的** [屬性] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 視窗中，設定新屬性的 **KeyColumns** 屬性來設定對應。  
   
  如需詳細資訊，請參閱 [自動定義新屬性](attribute-properties-define-a-new-attribute-automatically.md)、 [手動定義新屬性](../define-a-new-attribute-manually.md)、 [繫結屬性與名稱資料行](attribute-properties-bind-an-attribute-to-a-name-column.md)及 [修改屬性 (attribute) 的 KeyColumn 屬性 (property)](attribute-properties-modify-the-keycolumn-property.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [維度屬性 (Attribute) 屬性 (Property) 參考](dimension-attribute-properties-reference.md)  
+ [維度屬性 (attribute) 屬性 (property) 參考](dimension-attribute-properties-reference.md)  
   
   

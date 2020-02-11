@@ -1,5 +1,5 @@
 ---
-title: 將 DB2 資料移轉至 SQL Server (DB2ToSQL) |Microsoft Docs
+title: 將 DB2 資料移轉至 SQL Server （DB2ToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,92 +10,92 @@ ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 9cc7b3dd309dfac9e35021ca3234ca66483181e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68074098"
 ---
-# <a name="migrating-db2-data-into-sql-server-db2tosql"></a>將 DB2 資料移轉到 SQL Server (DB2ToSQL)
-您已成功同步處理與已轉換的物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以將資料從 DB2，以便移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+# <a name="migrating-db2-data-into-sql-server-db2tosql"></a>將 DB2 資料移轉至 SQL Server （DB2ToSQL）
+當您成功地同步處理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已轉換的物件之後，您可以將資料從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DB2 遷移至。  
   
 > [!IMPORTANT]  
-> 如果伺服器端資料移轉引擎所使用的引擎，然後，您可以將移轉資料之前您必須安裝 SSMA DB2 延伸模組組件和執行 SSMA 的電腦上的 DB2 提供者。 也必須執行的 SQL Server Agent 服務。 如需如何安裝此延伸模組組件的詳細資訊，請參閱[SQL Server 上安裝 SSMA 元件](https://msdn.microsoft.com/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
+> 如果所使用的引擎是伺服器端資料移轉引擎，則在您可以遷移資料之前，您必須在執行 SSMA 的電腦上安裝 SSMA for DB2 Extension Pack 和 DB2 提供者。 SQL Server Agent 服務也必須正在執行。 如需有關如何安裝延伸模組套件的詳細資訊，請參閱[在 SQL Server 上安裝 SSMA 元件](https://msdn.microsoft.com/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
   
-## <a name="setting-migration-options"></a>移轉選項的設定  
-然後再移轉資料到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，檢閱中的專案移轉選項**專案設定** 對話方塊。  
+## <a name="setting-migration-options"></a>設定遷移選項  
+將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，請在 [**專案設定**] 對話方塊中，檢查項目遷移選項。  
   
--   使用此對話方塊中，您可以設定選項，例如移轉批次大小、 資料表鎖定、 條件約束檢查，null 值的處理和身分識別值的處理。 如需將專案移轉設定的詳細資訊，請參閱[專案設定 （移轉）](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae)。  
+-   藉由使用此對話方塊，您可以設定選項，例如遷移批次大小、資料表鎖定、條件約束檢查、null 值處理和識別值處理。 如需專案遷移設定的詳細資訊，請參閱[專案設定（遷移）](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae)。  
   
--   **移轉引擎**中**專案設定**對話方塊，可讓使用者能夠執行使用的資料移轉引擎的兩種類型的移轉程序：  
+-   [**專案設定**] 對話方塊中的 [**遷移引擎**] 可讓使用者使用兩種類型的資料移轉引擎來執行遷移程式：  
   
-    1.  用戶端端資料移轉引擎  
+    1.  用戶端資料移轉引擎  
   
     2.  伺服器端資料移轉引擎  
   
-**用戶端端資料移轉：**  
+**用戶端資料移轉：**  
   
--   若要起始用戶端上的資料移轉，請選取**用戶端端資料移轉引擎**選項**專案設定** 對話方塊。  
+-   若要在用戶端起始資料移轉，請在 [**專案設定**] 對話方塊中選取 [**用戶端資料移轉引擎**] 選項。  
   
--   在 **專案設定**，則**用戶端端資料移轉引擎**選項設定。  
+-   在 [**專案設定**] 中，已設定 [**用戶端資料移轉引擎**] 選項。  
   
     > [!NOTE]  
-    > **用戶端資料移轉引擎**位於 SSMA 應用程式內，因此，就不相依於延伸模組套件的可用性。  
+    > **用戶端資料移轉引擎**位於 SSMA 應用程式內，因此不會相依于延伸模組套件的可用性。  
   
 **伺服器端資料移轉：**  
   
--   在伺服器端資料移轉期間，引擎會位於目標資料庫。 它可透過延伸模組套件進行安裝。 如需有關如何安裝此延伸模組組件的詳細資訊，請參閱[SQL Server 上安裝 SSMA 元件](https://msdn.microsoft.com/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
+-   在伺服器端資料移轉期間，引擎位於目標資料庫上。 它是透過延伸模組套件進行安裝。 如需有關如何安裝延伸模組套件的詳細資訊，請參閱[在 SQL Server 上安裝 SSMA 元件](https://msdn.microsoft.com/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
   
--   若要起始移轉的伺服器端上，選取**伺服器端資料移轉引擎**選項**專案設定** 對話方塊。  
+-   若要在伺服器端起始遷移，請在 [**專案設定**] 對話方塊中選取 [**伺服器端資料移轉引擎**] 選項。  
   
 ## <a name="migrating-data-to-sql-server"></a>將資料移轉至 SQL Server  
-移轉的資料會移至 DB2 資料表中的資料列的資料大量載入作業[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在交易中的資料表。 載入資料列數目[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每一筆交易中已將專案設定中。  
+遷移資料是大量載入作業，可將 DB2 資料表中的資料列移至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]交易中的資料表。 在每個交易[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中載入的資料列數目，會在專案設定中設定。  
   
-若要檢視移轉訊息，請確定 [輸出] 窗格為可見。 否則，從**檢視**功能表上，選取**輸出**。  
+若要查看遷移訊息，請確定 [輸出] 窗格是可見的。 否則，請從 [ **View** ] 功能表選取 [**輸出**]。  
   
-**若要將資料移轉**  
+**遷移資料**  
   
-1.  驗證下列各項：  
+1.  請確認下列事項：  
   
-    -   執行 SSMA 的電腦上安裝的 DB2 提供者。  
+    -   DB2 提供者會安裝在執行 SSMA 的電腦上。  
   
-    -   您已同步處理已轉換的物件與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。  
+    -   您已將已轉換的物件與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫同步處理。  
   
-2.  在 DB2 中繼資料總管 中，選取包含您想要移轉之資料的物件：  
+2.  在 [DB2 中繼資料瀏覽器] 中，選取包含您要遷移之資料的物件：  
   
-    -   若要將所有結構描述的資料移轉，選取核取方塊旁**結構描述**。  
+    -   若要遷移所有架構的資料，請選取 [**架構**] 旁的核取方塊。  
   
-    -   若要將資料移轉，或省略個別資料表，第一次展開結構描述中，依序展開**資料表**，然後選取或清除資料表旁邊的核取方塊。  
+    -   若要遷移資料或省略個別的資料表，請先展開架構，展開 [**資料表**]，然後選取或清除資料表旁的核取方塊。  
   
-3.  若要將資料移轉，兩種情況下發生：  
+3.  若要遷移資料，會發生兩種情況：  
   
-    **用戶端端資料移轉：**  
+    **用戶端資料移轉：**  
   
-    -   執行**用戶端端資料移轉**，選取**用戶端端資料移轉引擎**選項**專案設定** 對話方塊。  
+    -   若要執行**用戶端資料移轉**，請在 [**專案設定**] 對話方塊中選取 [**用戶端資料移轉引擎**] 選項。  
   
     **伺服器端資料移轉：**  
   
-    -   之前在伺服器端執行資料移轉，請確定：  
+    -   在伺服器端執行資料移轉之前，請確定：  
   
-        1.  執行個體上安裝 SSMA for DB2 的延伸模組套件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+        1.  SSMA for DB2 延伸模組套件會安裝在實例上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-        2.  SQL Server 執行個體上執行的 SQL Server Agent 服務。  
+        2.  SQL Server Agent 服務正在 SQL Server 的實例上執行。  
   
-    -   執行**伺服器端資料移轉**，選取**伺服器端資料移轉引擎**選項**專案設定** 對話方塊。  
+    -   針對執行**伺服器端資料移轉**，請在 [**專案設定**] 對話方塊中選取 [**伺服器端資料移轉引擎**] 選項。  
   
-4.  以滑鼠右鍵按一下**結構描述**在 DB2 中繼資料總管，然後按一下**移轉資料**。 您也可以將移轉資料的個別物件或類別目錄的物件：以滑鼠右鍵按一下物件或其父資料夾;選取 **移轉資料**選項。  
+4.  以滑鼠右鍵按一下 DB2 Metadata Explorer 中的 [**架構**]，然後按一下 [**遷移資料**]。 您也可以遷移個別物件或物件類別的資料：以滑鼠右鍵按一下物件或其父資料夾;選取 [**遷移資料**] 選項。  
   
     > [!NOTE]  
-    > 如果執行個體上未安裝 SSMA for DB2 的延伸模組套件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而且如果**伺服器端資料移轉引擎**已選取，然後同時將資料移轉到目標資料庫，發生下列錯誤：' SQL Server 上找不到 SSMA 資料移轉的元件，無法進行伺服器端資料移轉。 請檢查是否已正確安裝延伸模組組件 '。 按一下 **取消**終止資料移轉。  
+    > 如果的實例上未安裝 SSMA for DB2 延伸模組套件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而且已選取 [**伺服器端資料移轉引擎**]，則在將資料移轉至目標資料庫時，會發生下列錯誤：「在 SQL Server 上找不到 SSMA 資料移轉元件，將無法進行伺服器端資料移轉。 請檢查是否已正確安裝延伸模組套件」。 按一下 [**取消**] 以終止資料移轉。  
   
-5.  在 [**連接到 DB2** ] 對話方塊中，輸入連線認證，然後再按一下**Connect**。 如需有關如何連接到 DB2 的詳細資訊，請參閱[連接至 DB2 資料庫&#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
+5.  在 [**連接到 DB2** ] 對話方塊中，輸入連接認證，然後按一下 **[連接]**。 如需連接到 DB2 的詳細資訊，請參閱[連接到 Db2 資料庫 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   
-    連接到目標資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，輸入中的連接認證**連接到 SQL Server**  對話方塊中，然後按一下**Connect**。 如需有關連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[連接到 SQL Server](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)  
+    若要連接到目標資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請在 [**連接到 SQL Server** ] 對話方塊中輸入連接認證，然後按一下 [**連接]**。 如需有關連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的詳細資訊，請參閱[連接到 SQL Server](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)  
   
-    訊息會出現在**輸出**窗格。 移轉完成時，**資料移轉報告**隨即出現。 如果未移轉任何資料，按一下包含錯誤，資料列，然後按一下**詳細資料**。 當您完成報表時，請按一下**關閉**。 如需有關資料移轉報告的詳細資訊，請參閱[（SSMA 常見） 的資料移轉報告](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    訊息將會出現在 [**輸出**] 窗格中。 當遷移完成時，就會顯示**資料移轉報表**。 如果有任何資料未遷移，請按一下包含錯誤的資料列，然後按一下 [**詳細**資料]。 當您完成報表時，請按一下 [**關閉**]。 如需資料移轉報告的詳細資訊，請參閱[資料移轉報告（SSMA 一般）](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
-> 做為目標資料庫使用 SQL Express 版本時，允許只能用戶端端資料移轉，並不支援伺服器端資料移轉。  
+> 當 SQL Express edition 做為目標資料庫使用時，只允許用戶端資料移轉，而且不支援伺服器端資料移轉。  
   
 ## <a name="see-also"></a>另請參閱  
 [將 DB2 資料移轉至 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  

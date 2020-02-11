@@ -1,5 +1,5 @@
 ---
-title: 產生階層式資料錄集 |Microsoft Docs
+title: 組裝階層式記錄集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,16 +16,16 @@ ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fcdb630f2391f685080ac594cfdb537edf626a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925329"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>產生階層式資料錄集
-下列範例示範如何使用資料成形文法定義父系、 子節點及孫系的資料行建立階層式資料錄集，而不需要基礎資料來源**資料錄集**。  
+下列範例顯示如何使用資料成形文法來定義父代、子系和孫**記錄集**的資料行，以製作沒有基礎資料來源的階層式記錄集。  
   
- 若要建立階層式**資料錄集**，您必須指定[Microsoft Data Shaping Service 的 OLE DB （ADO 服務提供者）](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape)，而且您可以指定資料提供者值為 NONE 中連接字串參數[開放](../../../ado/reference/ado-api/open-method-ado-connection.md)方法[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件。 如需詳細資訊，請參閱 <<c0> [ 的資料成形所需的提供者](../../../ado/guide/data/required-providers-for-data-shaping.md)。  
+ 若要製作階層式**記錄集**，您必須指定[OLE DB （ADO 服務提供者）（MSDataShape）的 Microsoft 資料成形服務](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)，而且可以在[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件之[Open](../../../ado/reference/ado-api/open-method-ado-connection.md)方法的連接字串參數中指定 NONE 的 Data Provider 值。 如需詳細資訊，請參閱[資料成形的必要提供者](../../../ado/guide/data/required-providers-for-data-shaping.md)。  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -52,11 +52,11 @@ strShape = _
 rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1  
 ```  
   
- 一旦**資料錄集**已傳遞，它可以是填入、 操作，或保存至檔案。  
+ 一旦建立了**記錄集**，就可以填入、操作或保存在檔案中。  
   
 ## <a name="see-also"></a>另請參閱  
- [存取階層式資料錄集中的資料列](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [正式 Shape 文法](../../../ado/guide/data/formal-shape-grammar.md)   
+ [存取階層式記錄集中的資料列](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+ [正式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [資料成形所需的提供者](../../../ado/guide/data/required-providers-for-data-shaping.md)   
  [Shape APPEND 子句](../../../ado/guide/data/shape-append-clause.md)   
  [一般 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3b43bbae1dfec9b7d97677b033c50d21635e6537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754832"
 ---
 # <a name="database-mirroring-history"></a>資料庫鏡像記錄
@@ -26,11 +26,11 @@ ms.locfileid: "62754832"
   
 -   [啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **伺服器執行個體**  
  正在報告記錄的伺服器執行個體名稱。  
   
- **[資料庫備份]**  
+ **Database**  
  正在報告之記錄所屬的資料庫名稱。  
   
  **依下列項目篩選清單**  
@@ -62,14 +62,14 @@ ms.locfileid: "62754832"
 > [!NOTE]  
 >  這個對話方塊不會自動重新整理記錄清單。 若要重新整理清單，請按一下 **[重新整理]** 或選擇其他篩選選項。 只有 **sysadmin** 固定伺服器角色的成員才能更新鏡像記錄。  
   
- **記錄**  
+ **History**  
  顯示記錄清單。 按一下資料行標題，就會依據該資料行排序方格。 此清單包含下列資料行：  
   
 |資料行名稱|描述|  
 |-----------------|-----------------|  
 |**記錄的時間**|記錄資料列的時間戳記。|  
 |**角色**|對這個資料庫而言，伺服器執行個體目前的鏡像角色，可為 [主體] 或 [鏡像]。|  
-|**鏡像狀態**|資料庫狀態：<br /><br /> 已中斷連接<br /><br /> 暫止容錯移轉<br /><br /> 已暫停<br /><br /> 已同步處理<br /><br /> 正在同步處理<br /><br /> Unknown|  
+|**鏡像狀態**|資料庫狀態：<br /><br /> 已中斷連接<br /><br /> 暫止容錯移轉<br /><br /> 暫止<br /><br /> 已同步處理<br /><br /> 正在同步處理<br /><br /> Unknown|  
 |**見證連接**|資料庫鏡像工作階段中的見證連接狀態，可為 [已連接] 或 [已中斷連接]。 如果沒有見證，則此值為 NULL。|  
 |**未傳送的記錄**|主體伺服器執行個體上傳送佇列中未傳送記錄的大小 (以 KB 為單位)。|  
 |**傳送的時間**|主體伺服器執行個體將目前在傳送佇列中的記錄，傳送到鏡像伺服器執行個體所需的大約時間量 ( *傳送速率*)。 由於內送交易的速率可能會有極大的差異，因此傳送記錄的時間只是估計值。 但是，傳送速率對於粗略估計手動容錯移轉所需的時間可能會很有用。|  

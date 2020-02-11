@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78573a21a5aa6a719a9bb55d0ee17bf9837258f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63277076"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>篩選設定 (物件總管與公用程式總管)
@@ -34,7 +34,7 @@ ms.locfileid: "63277076"
   
      篩選會顯示屬性和值完全相符的項目。  
   
--   **包含**  
+-   **Contains**  
   
      篩選會顯示屬性包含值的項目。 屬性可以包含其他文字。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63277076"
   
      適用於日期，此篩選會顯示日期早於或晚於所提供之兩個日期的項目。 選取 [不介於]  並按下 TAB 鍵跳離 [運算子]  資料行，即可新增另一個資料列，以輸入第二個日期。  
   
- **值**  
+ **ReplTest1**  
  輸入要和屬性比較的值。 針對日期，按一下向下鍵以顯示用來選取日期的日曆。  
   
  **清除篩選**  

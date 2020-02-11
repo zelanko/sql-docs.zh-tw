@@ -1,5 +1,5 @@
 ---
-title: MSmerge_sessions (TRANSACT-SQL) |Microsoft Docs
+title: MSmerge_sessions （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 041b8a9123781ca270c3970a04c620b691e85230
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106348"
 ---
-# <a name="msmergesessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
+# <a name="msmerge_sessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_sessions**資料表包含記錄資料列先前的合併代理程式作業工作階段的結果。 每次執行合併代理程式時，都會在這個資料中加入一個新的資料列。 這份資料表儲存在散發資料庫中。  
+  **MSmerge_sessions**資料表包含具有先前合併代理程式作業會話結果的歷程記錄資料列。 每次執行合併代理程式時，都會在這個資料中加入一個新的資料列。 這份資料表儲存在散發資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -35,7 +35,7 @@ ms.locfileid: "68106348"
 |**agent_id**|**int**|合併代理程式的識別碼。|  
 |**start_time**|**datetime**|作業開始執行的時間。|  
 |**end_time**|**datetime**|作業執行完成的時間。|  
-|**duration**|**int**|這個作業工作階段的累加持續時間 (以秒為單位)。|  
+|**期限**|**int**|這個作業工作階段的累加持續時間 (以秒為單位)。|  
 |**delivery_time**|**int**|套用變更批次所花的秒數。|  
 |**upload_time**|**int**|將變更上傳到發行者所花的秒數。|  
 |**download_time**|**int**|將變更下載到訂閱者所花的秒數。|  
@@ -56,14 +56,14 @@ ms.locfileid: "68106348"
 |**download_rows_retried**|**int**|下載到訂閱者且已重試的資料列數。|  
 |**schema_changes**|**int**|工作階段期間所套用的結構描述變更數目。|  
 |**metadata_rows_cleanedup**|**int**|工作階段期間在期間，清除中繼資料的資料列數。|  
-|**runstatus**|**int**|執行狀態如下：<br /><br /> **1** = 開始時間。<br /><br /> **2** = 成功。<br /><br /> **3** = 進行中。<br /><br /> **4** = 閒置。<br /><br /> **5** = 重試。<br /><br /> **6** = 失敗。|  
+|**runstatus**|**int**|執行狀態如下：<br /><br /> **1** = 開始。<br /><br /> **2** = 成功。<br /><br /> **3** = 進行中。<br /><br /> **4** = 閒置。<br /><br /> **5** = 重試。<br /><br /> **6** = 失敗。|  
 |**estimated_upload_changes**|**int**|發行者端必須套用的估計變更數目。|  
 |**estimated_download_changes**|**int**|訂閱者端必須套用的估計變更數目。|  
-|**connection_type**|**int**|上傳期間所用的連接：<br /><br /> **1** = 區域網路 (LAN)。<br /><br /> **2** = 撥號網路連接。<br /><br /> **3** = web 同步處理。|  
+|**connection_type**|**int**|上傳期間所用的連接：<br /><br /> **1** = 區域網路（LAN）。<br /><br /> **2** = 撥號網路連接。<br /><br /> **3** = Web 同步處理。|  
 |**timestamp**|**timestamp**|這份資料表的時間戳記資料行。|  
   
 ## <a name="see-also"></a>另請參閱  
- [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

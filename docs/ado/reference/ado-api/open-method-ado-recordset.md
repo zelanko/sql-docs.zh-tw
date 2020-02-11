@@ -1,5 +1,5 @@
 ---
-title: Open 方法 (ADO Recordset) |Microsoft Docs
+title: Open 方法（ADO Recordset） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16142f200e6fd6e7c141b4f1fe6d45fe8917bc28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931909"
 ---
 # <a name="open-method-ado-recordset"></a>Open 方法 (ADO Recordset)
-在開啟資料指標[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
+在[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件上開啟資料指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,82 +35,82 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
 #### <a name="parameters"></a>參數  
  *Source*  
- 選擇性。 A **Variant**評估為有效[命令](../../../ado/reference/ado-api/command-object-ado.md)物件，SQL 陳述式、 資料表名稱、 預存程序呼叫、 URL 或檔案的名稱或[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件，包含持續儲存[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+ 選擇性。 評估為有效[命令](../../../ado/reference/ado-api/command-object-ado.md)物件、SQL 語句、資料表名稱、預存程序呼叫、URL，或包含持續儲存之[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)之檔案或[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)物件名稱的**Variant** 。  
   
  *ActiveConnection*  
- 選擇性。 任一**Variant**評估為有效[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件的變數名稱，或**字串**包含[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)參數。  
+ 選擇性。 判斷值為有效[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件變數名稱的**Variant** ，或包含[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)參數的**字串**。  
   
  *CursorType*  
- 選擇性。 A [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)值，決定資料指標開啟時，應該使用提供者的型別**資料錄集**。 預設值是**adOpenForwardOnly**。  
+ 選擇性。 [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)值，決定在開啟**記錄集**時，提供者應該使用的資料指標類型。 預設值為**adOpenForwardOnly**。  
   
  *LockType*  
- 選擇性。 A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)值，決定使用哪種類型的鎖定 （並行） 提供者應該開啟時**資料錄集**。 預設值是**Recordset**。  
+ 選擇性。 [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)值，決定在開啟**記錄集**時，提供者應該使用的鎖定類型（並行）。 預設值為**adLockReadOnly**。  
   
- *選項。*  
- 選擇性。 A**長**值，指出提供者應該如何評估*來源*引數，如果它代表的項目以外的其他**命令**物件，或是**資料錄集**應該從先前儲存的位置的檔案還原。 可以是一或多個[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)或是[的執行方式](../../../ado/reference/ado-api/executeoptionenum.md)可與位元的 OR 運算子結合的值。  
-  
-> [!NOTE]
->  如果您開啟**Recordset**從**Stream**包含保存**資料錄集**，並使用[的執行方式](../../../ado/reference/ado-api/executeoptionenum.md)值**adAsyncFetchNonBlocking**會有任何作用，但會同步和封鎖提取。  
+ *選項*  
+ 選擇性。 **Long**值，指出提供者應該如何評估*來源*引數（如果它代表**Command**物件以外的專案），或者應該從先前儲存的檔案還原**記錄集**。 可以是一個或多個[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)或[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)值，可以與位 or 運算子結合。  
   
 > [!NOTE]
->  **ExecuteOpenEnum**的值**adExecuteNoRecords**或是**adExecuteStream**不應使用**開啟**。  
+>  如果您從包含持續性**記錄集**的**資料流程**開啟**記錄集**，使用**adAsyncFetchNonBlocking**的[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)值將不會有任何作用;提取將會同步並封鎖。  
+  
+> [!NOTE]
+>  **AdExecuteNoRecords**或**adExecuteStream**的**ExecuteOpenEnum**值不應與**Open**搭配使用。  
   
 ## <a name="remarks"></a>備註  
- ADO 的預設游標**資料錄集**是位於伺服器上的順向、 唯讀資料指標。  
+ ADO**記錄集**的預設資料指標是位於伺服器上的順向唯讀資料指標。  
   
- 使用**開放**方法**Recordset**物件開啟資料指標，表示記錄基底資料表、 查詢，或先前儲存的結果**資料錄集**。  
+ 在**記錄集**物件上使用**Open**方法會開啟一個資料指標，代表基表的記錄、查詢的結果，或先前儲存的**記錄集**。  
   
- 使用選擇性*來源*引數來指定資料來源，使用下列其中之一：**命令**物件變數，SQL 陳述式、 預存程序、 資料表名稱、 URL 或完整檔案路徑名稱。 如果*來源*是檔案的路徑名稱，它可以是完整路徑 ("c:\dir\file.rst 」) 的相對路徑 ("...\file.rst")，或 URL ("<https://files/file.rst>」)。  
+ 使用選擇性的*來源*引數，以使用下列其中一種方法來指定資料來源：**命令**物件變數、SQL 語句、預存程式、資料表名稱、URL 或完整的檔案路徑名稱。 如果*Source*是檔案路徑名稱，它可以是完整路徑（"c:\dir\file.rst"），也就是相對路徑（".。\file.rst "）或 URL （"<https://files/file.rst>"）。  
   
- 它不是個不錯的主意，使用*來源*引數**開啟**方法，以執行動作查詢不會傳回記錄，因為沒有任何簡單的方法，以判斷呼叫是否成功。 **資料錄集**傳回這類查詢將會關閉。 若要執行的查詢，不會傳回記錄，例如 SQL INSERT 陳述式，呼叫[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法**命令**物件或[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。  
+ 使用**Open**方法的*Source*引數來執行不會傳回記錄的動作查詢並不是個好主意，因為沒有簡單的方法可以判斷呼叫是否成功。 這類查詢所傳回的**記錄集**將會關閉。 若要執行不會傳回記錄的查詢（例如 SQL INSERT 語句），請改為呼叫**命令**物件的[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法或[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件的[execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法。  
   
- *ActiveConnection*引數對應至[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)屬性，並指定要開啟的連線中**資料錄集**物件。 如果您傳遞連接定義為這個引數時，ADO 會開啟新的連線，使用指定的參數。 開啟之後**資料錄集**使用所設定的用戶端資料指標[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設**adUseClient**，您可以變更這個屬性，以傳送的值另一個提供者的更新。 或您可以將此屬性設定為**Nothing** (Microsoft Visual Basic 中) 或 NULL 中斷**資料錄集**從任何提供者。 變更*ActiveConnection*伺服器端資料指標會產生錯誤，不過。  
+ *ActiveConnection*引數會對應至[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)屬性，並指定要在哪個連接中開啟**記錄集**物件。 如果您傳遞這個引數的連接定義，ADO 就會使用指定的參數來開啟新的連接。 當您藉由將[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**adUseClient**，以用戶端資料指標開啟**記錄集**之後，您可以變更此屬性的值，以將更新傳送至另一個提供者。 或者，您可以將此屬性設定為 [**無**] （在 Microsoft Visual Basic 中）或 [Null]，將**記錄集**與任何提供者中斷連接。 不過，變更伺服器端資料指標的*ActiveConnection*會產生錯誤。  
   
- 直接對應到屬性的其他引數**Recordset**物件 (*來源*， *CursorType*，以及*LockType*)，屬性的引數的關聯性如下所示：  
+ 對於直接對應至**記錄集**物件屬性（*來源*、 *CursorType*和*LockType*）的其他引數，屬性的引數關聯性如下所示：  
   
--   屬性是讀取/寫入之前**資料錄集**開啟物件。  
+-   在開啟**記錄集**物件之前，會先讀取/寫入屬性。  
   
--   除非您傳遞的相對應的引數，執行時，會使用的屬性設定**開啟**方法。 如果您傳遞的引數，它會覆寫對應的屬性設定，而且屬性設定會更新引數值。  
+-   除非您在執行**Open**方法時傳遞對應的引數，否則會使用屬性設定。 如果您傳遞引數，它會覆寫對應的屬性設定，而屬性設定會以引數值進行更新。  
   
--   在您開啟之後**資料錄集**物件，這些屬性會變成唯讀。  
-  
-> [!NOTE]
->  **ActiveConnection**屬性是唯讀**Recordset**物件，而其[來源](../../../ado/reference/ado-api/source-property-ado-recordset.md)屬性設定為有效**命令**物件，即使**資料錄集**物件未開啟。  
-  
- 如果您傳遞**命令**物件中*來源*引數以及傳遞*ActiveConnection*引數，則會發生錯誤。 **ActiveConnection**屬性**命令**物件必須已設定為有效**連接**物件或連接字串。  
-  
- 如果傳遞的項目以外**命令**物件中*來源*引數，您可以使用*選項*引數，以最佳化的評估*來源*引數。 如果*選項*引數未定義時，您可能會感覺到的效能，因為 ADO 必須進行呼叫以判斷引數是否 SQL 陳述式、 預存程序、 URL 或資料表名稱的提供者。 如果您知道*來源*您所使用，設定型別的*選項*引數會指示 ADO，直接跳到相關的程式碼。 如果*選項*引數不符合*來源*輸入時，發生錯誤。  
-  
- 如果您傳遞**Stream**物件中*來源*引數，您應該不將資訊傳入其他引數。 這樣會產生錯誤。 **ActiveConnection**資訊不是保留時**Recordset**從開啟**Stream**。  
-  
- 預設值*選項*引數是**adCmdFile**如果沒有連接相關聯**資料錄集**。 這通常會是大小寫，持續儲存**資料錄集**物件。  
-  
- 如果資料來源會不傳回任何記錄，提供者會設定兩者[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)並[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)屬性，以**True**，和目前的記錄位置會是未定義。 您仍然可以將新資料加入此空白**資料錄集**物件如果資料指標類型可讓它。  
-  
- 當您透過開啟完成您的作業**Recordset**物件，請使用[關閉](../../../ado/reference/ado-api/close-method-ado.md)方法來釋放任何相關聯的系統資源。 關閉物件不會將它從記憶體中; 中移除您可以變更其屬性設定，並使用**開啟**稍後再重新開啟它的方法。 若要完全排除記憶體中的物件，設定為物件變數*Nothing*。  
-  
- 再**ActiveConnection**屬性設定，請呼叫**開啟**若要建立的執行個體的任何運算元使用**資料錄集**附加欄位，以建立**資料錄集**[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)集合。  
-  
- 如果您已將[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設**adUseClient**，您可以擷取資料列，以非同步方式在兩種方式之一。 建議的方法是將*選項*要**adAsyncFetch**。 或者，您可以使用中，「 非同步資料列集處理 」 的動態屬性[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合，但相關的擷取的事件不會遺失您未設定*選項*參數**adAsyncFetch**。  
+-   在您開啟**記錄集**物件之後，這些屬性會變成隻讀。  
   
 > [!NOTE]
->  背景擷取 MS 遠端提供者中支援只能透過**開放**方法的*選項*參數。  
+>  如果**記錄**集物件的[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)屬性設定為有效的**Command**物件，則**ActiveConnection**屬性會是唯讀的，即使**記錄集**物件並未開啟也是一樣。  
+  
+ 如果您在*來源*引數中傳遞**命令**物件，並同時傳遞*ActiveConnection*引數，就會發生錯誤。 **命令**物件的**ActiveConnection**屬性必須已經設定為有效的**連接**物件或連接字串。  
+  
+ 如果您在*source*引數中傳遞**命令**物件以外的專案，您可以使用*Options*引數來優化*source*引數的評估。 如果未定義*Options*引數，您可能會遇到效能降低的情況，因為 ADO 必須呼叫提供者，以判斷引數是 SQL 語句、預存程式、URL 或資料表名稱。 如果您知道您所使用的*來源*類型，設定*Options*引數會指示 ADO 直接跳到相關的程式碼。 如果*選項*引數不符合*來源*類型，則會發生錯誤。  
+  
+ 如果您在*來源*引數中傳遞**資料流程**物件，則不應該將資訊傳遞到其他引數中。 這樣會產生錯誤。 從**資料流程**開啟**記錄集**時，不會保留**ActiveConnection**資訊。  
+  
+ 如果沒有與**記錄集**相關聯的連接， *Options*引數的預設值會是**adCmdFile** 。 這通常會是持久儲存之**記錄集**物件的情況。  
+  
+ 如果資料來源未傳回任何記錄，則提供者會將[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)和[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)屬性設為**True**，而目前的記錄位置為 undefined。 如果游標類型允許，您仍然可以將新的資料加入此空的**記錄集**物件。  
+  
+ 當您完成開啟的**記錄集**物件的作業時，請使用[Close](../../../ado/reference/ado-api/close-method-ado.md)方法來釋放任何相關聯的系統資源。 關閉物件並不會將它從記憶體中移除;您可以變更其屬性設定，並使用**open**方法，稍後再重新開啟它。 若要完全排除記憶體中的物件，請將物件變數設為 [*無*]。  
+  
+ 設定**ActiveConnection**屬性之前，請呼叫**Open**而不使用運算元，以建立藉由將欄位附加至**記錄集**[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)集合而建立之**記錄集**的實例。  
+  
+ 如果您已將[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**adUseClient**，您可以使用下列兩種方式的其中一種非同步地抓取資料列。 建議的方法是將*選項*設定為**adAsyncFetch**。 或者，您可以使用[Properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合中的「非同步資料列集處理」動態屬性，但如果您未將*Options*參數設定為**adAsyncFetch**，則相關的抓取事件可能會遺失。  
   
 > [!NOTE]
->  使用 http 配置 Url 將會自動叫用[Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 如需詳細資訊，請參閱 <<c0> [ 絕對和相對 Url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
+>  只有透過**Open**方法的*Options*參數，才支援 MS 遠端提供者中的背景提取。  
   
- 某些的組合[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)並[的執行方式](../../../ado/reference/ado-api/executeoptionenum.md)值不是有效。 了解哪種選項都無法結合的資訊，請參閱主題[的執行方式](../../../ado/reference/ado-api/executeoptionenum.md)，並[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)。  
+> [!NOTE]
+>  使用 HTTP 配置的 Url 會自動叫用[Microsoft OLE DB 提供者以進行網際網路發佈](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 如需詳細資訊，請參閱[絕對和相對 url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
   
-## <a name="applies-to"></a>適用於  
+ [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)和[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)值的某些組合無效。 如需無法結合哪些選項的相關資訊，請參閱[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)和[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)的主題。  
+  
+## <a name="applies-to"></a>套用至  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Open 和 Close 方法範例 (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
- [Open 和 Close 方法範例 (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
- [Open 和 Close 方法範例 （VC + +）](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
- [Save 和 Open 方法範例 (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
- [Open 方法 (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open 方法 （ADO 記錄）](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Open 方法 (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+ [Open 和 Close 方法範例（VB）](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
+ [Open 和 Close 方法範例（VBScript）](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
+ [Open 和 Close 方法範例（VC + +）](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
+ [Save 和 Open 方法範例（VB）](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
+ [Open 方法（ADO Connection）](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Open 方法（ADO Record）](../../../ado/reference/ado-api/open-method-ado-record.md)   
+ [Open 方法（ADO Stream）](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [OpenSchema 方法](../../../ado/reference/ado-api/openschema-method.md)   
  [Save 方法](../../../ado/reference/ado-api/save-method.md)

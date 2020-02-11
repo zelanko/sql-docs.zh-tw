@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf5b7cd9ea96adf4dc2bab781b087f7c5a117ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102504"
 ---
 # <a name="publishing-data-sources-and-reports"></a>發行資料來源與報表
   發行報表前，您應該預覽報表以查看報表執行時的外觀。 您可以持續精簡設計，直到您滿意其結果為止。  
   
- 設計並測試報表之後，您可能想要與其他人共用該報表。 若要共用報表，您必須將其發行或 *「部署」* (Deploy) 至報表伺服器或 SharePoint 網站。 報表經過發行之後，具備報表伺服器或 SharePoint 網站之權限的使用者都可以執行您的報表。 此外，具備報表伺服器之管理員權限的使用者可以訂閱報表，讓報表可以定期更新並傳送給使用者。  
+ 設計並測試報表之後，您可能想要與其他人共用該報表。 若要共用報表，您必須將其發行或 *「部署」*(Deploy) 至報表伺服器或 SharePoint 網站。 報表經過發行之後，具備報表伺服器或 SharePoint 網站之權限的使用者都可以執行您的報表。 此外，具備報表伺服器之管理員權限的使用者可以訂閱報表，讓報表可以定期更新並傳送給使用者。  
   
  如果您使用共用資料來源來建立報表，您需要將報表發行到與該報表相同的位置。 共用資料來源跟報表一樣，可以在報表伺服器上個別管理。  
   
@@ -39,12 +39,12 @@ ms.locfileid: "66102504"
  描述如何將報表發行到 SharePoint 網站。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [將資料加入至報表&#40;報表產生器及 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
- [頁面配置和轉譯 &#40;報表產生器及 SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
- [將資料加入至報表&#40;報表產生器及 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+ [Reporting Services 中的資料連線、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [將資料加入報表 &#40;報表產生器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+ [頁面配置和轉譯 &#40;報表產生器和 SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [將資料加入報表 &#40;報表產生器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [匯出報表&#40;報表產生器及 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
+ [匯出報表 &#40;報表產生器和 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
  [列印報表 &#40;報表產生器及 SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md)  
   
   

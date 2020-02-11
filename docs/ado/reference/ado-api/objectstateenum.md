@@ -1,5 +1,5 @@
 ---
-title: ObjectStateEnum | Microsoft Docs
+title: ObjectStateEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,27 +16,27 @@ ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 708d146aaa40d873e0a519c860a047d4b1f93161
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931920"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
-指定物件是否為開啟或關閉、 連接到資料來源，執行命令，或擷取資料。  
+指定物件為開啟或關閉、連接至資料來源、執行命令，或抓取資料。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
 |**adStateClosed**|0|指出物件已關閉。|  
 |**adStateOpen**|1|指出物件已開啟。|  
-|**adStateConnecting**|2|指出物件連接。|  
-|**adStateExecuting**|4|表示物件正在執行命令。|  
-|**adStateFetching**|8|表示要擷取之物件的資料列的。|  
+|**adStateConnecting**|2|指出物件正在連接。|  
+|**adStateExecuting**|4|指出物件正在執行命令。|  
+|**adStateFetching**|8|表示正在抓取物件的資料列。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- 封裝： **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
+ Package： **.com. wfc. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums.ObjectState.CLOSED|  
 |AdoEnums.ObjectState.OPEN|  
@@ -44,7 +44,7 @@ ms.locfileid: "67931920"
 |AdoEnums.ObjectState.EXECUTING|  
 |AdoEnums.ObjectState.FETCHING|  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
   
 |||  
 |-|-|  

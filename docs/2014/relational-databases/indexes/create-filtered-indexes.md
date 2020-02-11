@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de9a9d71a90f33db85636b1bd0344023f1a86c91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155381"
 ---
 # <a name="create-filtered-indexes"></a>建立篩選的索引
@@ -48,7 +48,7 @@ ms.locfileid: "63155381"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法建立篩選的索引：**  
   
@@ -90,7 +90,7 @@ ms.locfileid: "63155381"
   
 -   如果在篩選索引的篩選索引運算式中指定的比較運算子產生隱含或明確的資料轉換，則如果該轉換是發生在比較運算子的左側，就會發生錯誤。 解決方案是以資料轉換運算子 (CAST 或 CONVERT) 在比較運算子的右側寫下篩選索引運算式。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。 若要修改篩選索引運算式，請使用 CREATE INDEX WITH DROP_EXISTING。  
@@ -109,13 +109,13 @@ ms.locfileid: "63155381"
   
 5.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
-6.  按一下 [索引鍵資料行]  下的 [新增...]  。  
+6.  在 [**索引鍵資料行**] 下，按一下 [**新增**]。  
   
-7.  在 [從 <資料表名稱>  選取資料行]  對話方塊中，選取要加入唯一索引之一或多個資料表資料行的核取方塊。  
+7.  在 [**從**_Table_name_選取資料行] 對話方塊中，選取要加入至唯一索引之資料表資料行的核取方塊。  
   
 8.  按一下 [確定]  。  
   
-9. 在 [篩選]  頁面的 [篩選運算式]  底下，輸入要用來建立篩選索引的 SQL 運算式。  
+9. 在 [**篩選**] 頁面的 [**篩選運算式**] 底下，輸入您將用來建立篩選索引的 SQL 運算式。  
   
 10. 按一下 [確定]  。  
   
@@ -180,6 +180,6 @@ ms.locfileid: "63155381"
     GO  
     ```  
   
- 如需詳細資訊，請參閱 [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)。  
+ 如需詳細資訊，請參閱[CREATE INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/create-index-transact-sql)。  
   
   

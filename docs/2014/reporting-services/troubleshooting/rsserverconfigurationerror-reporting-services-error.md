@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 19778bce64e5779471e78b8c4305e1bd6315c0ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099213"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Reporting Services 錯誤
@@ -47,12 +47,12 @@ ms.locfileid: "66099213"
 ## <a name="user-action"></a>使用者動作  
  如果當您在手動編輯組態檔之後開始發生這個錯誤，請移除您的變更並輸入之前的值，或者如果您有備份則還原舊版。  
   
- 若要檢閱伴隨著其他錯誤訊息資訊`rsServerConfiguration`錯誤，請檢閱位於 \Microsoft SQL Server\MSRS12 報表伺服器追蹤記錄檔。\<執行個體名稱 > services\logfiles。 如需詳細資訊，請參閱 [Reporting Services 記錄檔和來源](../report-server/reporting-services-log-files-and-sources.md)。  
+ 若要查看`rsServerConfiguration`錯誤伴隨的其他錯誤訊息資訊，請參閱報表伺服器追蹤記錄檔，這些檔案位於 \Microsoft SQL Server\MSRS12。\<instancename > \reporting services\logfiles 如需詳細資訊，請參閱 [Reporting Services 記錄檔和來源](../report-server/reporting-services-log-files-and-sources.md)。  
   
 ## <a name="internal-only"></a>僅供內部使用  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態檔](../report-server/reporting-services-configuration-files.md)   
- [修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
+ [修改 Reporting Services 設定檔 &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
   
   

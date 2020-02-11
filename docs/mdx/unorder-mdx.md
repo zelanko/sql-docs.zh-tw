@@ -1,5 +1,5 @@
 ---
-title: Unorder (MDX) |Microsoft Docs
+title: Unorder （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 954a71c8ca2e96d905892d77ff12b7270deded5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097263"
 ---
 # <a name="unorder-mdx"></a>Unorder (MDX)
@@ -32,9 +32,9 @@ Unorder(Set_Expression)
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **Unorder**函式會移除任何順序在集合中包含的任何其他函式或陳述式，這類 tuple[順序](../mdx/order-mdx.md)函式。 排序所傳回集合中 tuple **Unorder**函式為不定。  
+ **Unorder**函數會移除任何其他函式或語句（例如[Order](../mdx/order-mdx.md)函式）包含在集合中的元組上的任何順序。 **Unorder**函數所傳回之集合中的元組順序不確定。  
   
- **Unorder**函式用於以做為提示的集合處理的查詢最佳化。 如果集合內的 tuple 順序在計算或查詢並不重要，使用**Unorder**函式可提供在此情況下提升效能。 例如， [NonEmpty (MDX)](../mdx/nonempty-mdx.md)函式可能會進一步提供給此函式的集合沒有排序時執行比[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]需要保留順序，雖然使用[!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]，查詢處理器會嘗試執行這個函式會自動供許多函式，例如**總和**並**彙總**。 使用的效能優勢**Unorder**僅能展現數百萬 tuple 所組成的大型集合。  
+ **Unorder**函數是用來做為設定處理之查詢優化的提示。 如果集合中的元組順序對於計算或查詢而言不重要，使用**Unorder**函數可在這種情況下提供效能優勢。 例如，當提供給這個函式的集合未排序時，非空白[（MDX）](../mdx/nonempty-mdx.md)函數的執行效能[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可能會比需要保留順序更[!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]好，不過，查詢處理器會嘗試為許多函數（例如**Sum**和**Aggregate**）自動執行此函數。 使用**Unorder**的效能優勢，只有在由數百萬個元組組成的極大型集合上才有可能明顯。  
   
 ## <a name="example"></a>範例  
  下列虛擬程式碼說明這個函數的語法。  
@@ -44,6 +44,6 @@ NonEmpty (UnOrder (<set_expression>))
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

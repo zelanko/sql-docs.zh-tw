@@ -1,5 +1,5 @@
 ---
-title: Cube 選取範圍 對話方塊 |Microsoft Docs
+title: '[選取 Cube] 對話方塊 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa45de225ac1de636bc9e9b14cec9d1ab4512316
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109570"
 ---
 # <a name="cube-selection-dialog-box"></a>選取 Cube 對話方塊
@@ -25,6 +25,6 @@ ms.locfileid: "66109570"
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services MDX 查詢設計工具使用者介面](report-data/analysis-services-mdx-query-designer-user-interface.md)   
- [MDX 的 Analysis Services 連接類型 &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
+ [適用于 MDX &#40;SSRS 的 Analysis Services 連線類型&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
   
   

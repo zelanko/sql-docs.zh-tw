@@ -1,5 +1,5 @@
 ---
-title: sys.dm_cryptographic_provider_keys (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_cryptographic_provider_keys （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44ee5c5ff44928c2f2b9e775eae41aea77fed87a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086221"
 ---
-# <a name="sysdmcryptographicproviderkeys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
+# <a name="sysdm_cryptographic_provider_keys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回可延伸金鑰管理 (EKM) 提供者所提供之金鑰的相關資訊。  
@@ -49,13 +49,13 @@ dm_cryptographic_provider_keys ( provider_id )
 |-----------------|---------------|-----------------|  
 |**key_id**|**int**|提供者之金鑰的識別碼。|  
 |**key_name**|**nvarchar(512)**|提供者之金鑰的名稱。|  
-|**key_thumbprint**|**varbinary(32)**|金鑰之提供者的指模。|  
+|**key_thumbprint**|**Varbinary （32）**|金鑰之提供者的指模。|  
 |**algorithm_id**|**int**|提供者之演算法的識別碼。|  
 |**algorithm_tag**|**int**|提供者之演算法的標記。|  
-|**key_type**|**nchar(256)**|提供者之金鑰的類型。|  
+|**key_type**|**Nchar （256）**|提供者之金鑰的類型。|  
 |**key_length**|**int**|提供者之金鑰的長度。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  查詢此檢視時，它會利用提供者驗證使用者內容，並列舉使用者可以看到的所有金鑰。  
   
  如果使用者無法利用 EKM 提供者驗證，將不會傳回任何金鑰資訊。  

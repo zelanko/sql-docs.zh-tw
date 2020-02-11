@@ -1,5 +1,5 @@
 ---
-title: 第 1 課：建立 RDL 結構描述 Visual Studio 專案 |Microsoft Docs
+title: 第1課：建立 RDL 架構 Visual Studio 專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678516"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>第 1 課：建立 RDL 結構描述 Visual Studio 專案
-  在這個教學課程中，您會建立簡單的主控台應用程式。 本教學課程假設您正在開發中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]。  
+  在這個教學課程中，您會建立簡單的主控台應用程式。 本教學課程假設您是在[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]中進行開發。  
   
 > [!NOTE]  
 >  當您存取在 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services 上執行的報表伺服器 Web 服務時，必須將 "_SQLExpress" 附加至 "ReportServer" 路徑。 例如：  
@@ -27,7 +27,7 @@ ms.locfileid: "62678516"
   
 ### <a name="to-create-the-web-service-proxy"></a>若要建立 Web 服務 Proxy  
   
-1.  從**開始**功能表上，選取**所有程式**、 Microsoft Visual Studio，然後**Visual Studio Tools**，然後**Visual Studio 2010 命令提示字元**.  
+1.  在 [**開始**] 功能表中，依序選取 [**所有程式**] 和 [Microsoft Visual Studio]，然後**Visual Studio Tools**]，然後**Visual Studio 2010 命令提示**字元]。  
   
 2.  如果您是使用 C#，請在命令提示字元視窗中執行下列命令：  
   
@@ -45,29 +45,29 @@ ms.locfileid: "62678516"
   
 ### <a name="to-create-a-console-application"></a>若要建立主控台應用程式  
   
-1.  上**檔案**功能表上，指向**新增**，然後按一下**專案**以開啟**新專案** 對話方塊。  
+1.  在 [**檔案**] 功能表上，指向 [**新增**]，然後按一下 [**專案**] 以開啟 [**新增專案**] 對話方塊。  
   
-2.  在左窗格中，在**已安裝的範本**，按一下**Visual Basic**或**Visual C#** 節點，然後選取專案的類別類型從展開的清單。  
+2.  在左窗格的 [**已安裝的範本**] 底下，按一下 [ **Visual Basic** ] 或 [ **Visual c #** ] 節點，然後從展開的清單中選取專案類型的類別。  
   
-3.  選擇**主控台應用程式**專案類型。  
+3.  選擇 [**主控台應用程式**] 專案類型。  
   
-4.  在 **名稱**方塊中，輸入您專案的名稱。 輸入名稱`SampleRDLSchema`。  
+4.  在 [**名稱**] 方塊中，輸入專案的名稱。 輸入 [名稱`SampleRDLSchema`]。  
   
-5.  在 **位置**方塊中，輸入您想要用來儲存您的專案，或按一下 的路徑**瀏覽**瀏覽至資料夾。  
+5.  在 [**位置**] 方塊中，輸入您要儲存專案的路徑，或按一下 **[流覽]** 以流覽至資料夾。  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 您的專案的摺疊的檢視會顯示在 [方案總管] 中。  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]專案的折迭視圖會顯示在方案總管中。  
   
-7.  在 [專案]  功能表上，按一下 [新增現有項目]  。  
+7.  在 [專案]**** 功能表上，按一下 [新增現有項目]****。  
   
-8.  巡覽至的位置，為.cs 或.vb 檔案來產生，然後選取檔案，然後按一下 **新增**。  
+8.  流覽至您產生的 .cs 或 .vb 檔案的位置，然後選取該檔案，再按一下 [**新增**]。  
   
      您也必須加入 <xref:System.Web.Services> 命名空間的參考，才能讓 Web 參考運作。  
   
-9. 在 專案 功能表中，按一下 **加入參考**。  
+9. 在 [專案] 功能表上，按一下 [**加入參考**]。  
   
-     在**加入參考**對話方塊中，於 **.NET**索引標籤上，選取**System.Web.Services**，然後按一下**確定**。  
+     在 [**加入參考**] 對話方塊的 [ **.net** ] 索引標籤中，選取 [ **System.web**]，然後按一下 **[確定]**。  
   
-     如需如何連接到報表伺服器 Web 服務的詳細資訊，請參閱[使用 Web 服務和.NET Framework 建置應用程式](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)。  
+     如需如何連接到報表伺服器 Web 服務的詳細資訊，請參閱[使用 Web 服務和 .NET Framework 建立應用程式](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)。  
   
 10. 在 [方案總管] 中，展開專案節點。 您會看到含有預設名稱 Program.cs (在 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中則為 Module1.vb) 的程式碼檔案已加入專案中。  
   
@@ -197,10 +197,10 @@ ms.locfileid: "62678516"
     ```  
   
 ## <a name="next-lesson"></a>下一課  
- 在下一課，您將使用 XML 結構描述定義工具 (Xsd.exe)，從 RDL 結構描述產生類別，並將類別包含在專案之中。 請參閱[第 2 課：使用 xsd 工具的 RDL 結構描述產生類別](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)。  
+ 在下一課，您將使用 XML 結構描述定義工具 (Xsd.exe)，從 RDL 結構描述產生類別，並將類別包含在專案之中。 請參閱[第2課：使用 Xsd 工具，從 RDL 架構產生類別](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用從 RDL 結構描述產生的類別更新報表&#40;SSRS 教學課程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [使用從 RDL 架構產生的類別更新報表 &#40;SSRS 教學課程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [報表定義語言 &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   
