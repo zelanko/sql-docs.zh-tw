@@ -1,5 +1,5 @@
 ---
-title: GetPathLocator & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: GetPathLocator （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4cec490522f8bacc774213ec1af5cce1af0eefef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910257"
 ---
 # <a name="getpathlocator-transact-sql"></a>GetPathLocator (Transact-SQL)
@@ -38,9 +38,9 @@ GetPathLocator(filenamespace_path)
   
 ## <a name="arguments"></a>引數  
  *filenamespace_path*  
- FileTable 中的命名空間路徑。 命名空間路徑的類型是**nvarchar （max)** 。  
+ FileTable 中的命名空間路徑。 命名空間路徑的類型為**Nvarchar （max）**。  
   
- 當資料庫屬於 Alwayson 可用性群組，則**GetPathLocator**函式會接受虛擬網路名稱 (VNN) 或電腦名稱。  
+ 當資料庫屬於 Always On 可用性群組時， **GetPathLocator**函數會接受虛擬網路名稱（VNN）或電腦名稱稱。  
   
 ## <a name="return-type"></a>傳回類型  
  **hierarchyid**  
@@ -49,7 +49,7 @@ GetPathLocator(filenamespace_path)
  如需詳細資訊，請參閱 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)。  
   
 ## <a name="examples"></a>範例  
- 您可以使用**GetPathLocator**函式，當您從檔案伺服器的移轉檔案至 FileTable。 在這個案例中，您要將檔案移入 FileTable，然後用 FileTable UNC 路徑取代每個檔案的原始 UNC 路徑。 如需完整範例，請參閱 <<c0> [ 將檔案載入 Filetable](../../relational-databases/blob/load-files-into-filetables.md)。  
+ 當您要將檔案伺服器的檔案遷移至 FileTable 時，可以使用**GetPathLocator**函數。 在這個案例中，您要將檔案移入 FileTable，然後用 FileTable UNC 路徑取代每個檔案的原始 UNC 路徑。 如需完整範例，請參閱將檔案[載入 filetable](../../relational-databases/blob/load-files-into-filetables.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 FileTable 中的目錄與路徑](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  

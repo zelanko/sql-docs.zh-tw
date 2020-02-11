@@ -1,5 +1,5 @@
 ---
-title: Refresh 方法範例 （VC + +） |Microsoft Docs
+title: Refresh 方法範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58bc25f41171e4258347522efe7a02f2620cfd82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917268"
 ---
 # <a name="refresh-method-example-vc"></a>Refresh 方法範例 (VC++)
-此範例示範如何使用[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)方法，以重新整理[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)預存程序的集合[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  
+這個範例示範如何使用[refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法來重新整理預存程式[命令](../../../ado/reference/ado-api/command-object-ado.md)物件的[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。  
   
 ## <a name="example"></a>範例  
   
@@ -224,7 +224,7 @@ void PrintComError(_com_error &e) {
 25  
 ```  
   
-## <a name="sample-output"></a>範例輸出  
+## <a name="sample-output"></a>取樣輸出  
   
 ```  
 Authors with 25 percent royalty  
@@ -234,6 +234,6 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [參數集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Command 物件（ADO）](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Parameters 集合（ADO）](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

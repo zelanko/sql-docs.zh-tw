@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d39cfd6ca3eba8222dda09a83fdd809bb7d00e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915048"
 ---
-# <a name="mssqlserver207"></a>MSSQLSERVER_207
+# <a name="mssqlserver_207"></a>MSSQLSERVER_207
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|207|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -53,7 +53,7 @@ ms.locfileid: "62915048"
   
     1.  FROM  
   
-    2.  ON  
+    2.  開啟  
   
     3.  JOIN  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62915048"
   
     9. DISTINCT  
   
-    10. ORDER BY  
+    10. 排序依據  
   
     11. 頂端  
   
@@ -115,7 +115,7 @@ ms.locfileid: "62915048"
     GROUP BY Year;  
     ```  
   
--   MERGE 陳述式中的 WHEN NOT MATCHED BY SOURCE 子句參考了可存取的值。 請修改 MERGE 陳述式，讓 WHEN NOT MATCHED BY SOURCE 子句中的來源資料表至少會傳回一個資料列。 例如，您可能必須加入或修訂針對該子句所指定的搜尋條件。 或者，您也可以修改子句，以便指定沒有參考來源資料表的值。 例如， `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>` 。  
+-   MERGE 陳述式中的 WHEN NOT MATCHED BY SOURCE 子句參考了可存取的值。 請修改 MERGE 陳述式，讓 WHEN NOT MATCHED BY SOURCE 子句中的來源資料表至少會傳回一個資料列。 例如，您可能必須加入或修訂針對該子句所指定的搜尋條件。 或者，您也可以修改子句，以便指定沒有參考來源資料表的值。 例如： `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>` 。  
   
 ## <a name="see-also"></a>另請參閱  
  [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)   

@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_current_xevent_settings (TRANSACT-SQL) |Microsoft Docs
+title: managed_backup. fn_get_current_xevent_settings （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4133f8bb64d5d7e2e2b511c2128b9ddbca1fa550
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910239"
 ---
-# <a name="managedbackupfngetcurrentxeventsettings-transact-sql"></a>managed_backup.fn_get_current_xevent_settings & Amp;#40;transact-SQL&AMP;#41;
+# <a name="managed_backupfn_get_current_xevent_settings-transact-sql"></a>managed_backup. fn_get_current_xevent_settings （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   針對 Smart Admn 支援的每個擴充事件類型各傳回 1 個資料列。  
@@ -51,13 +51,13 @@ smart_admin.fn_get_current_xevent_settings ()
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |Event_name|NVARCHAR(128)|擴充事件類型|  
-|is_configurable|NVARCHAR(128)|此值設為**真**是否可設定事件，否則會設定為**False**。|  
+|is_configurable|NVARCHAR(128)|如果事件是可設定的，則會設為**True** ，否則會設為**False**。|  
 |is_enabled|NVARCHAR(128)|如果已啟用事件，則設定為 True；如果未啟用，則設定為 False。 使用 smart_admin.sp_set_parameter 可啟用偵錯事件。|  
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
- 需要**選取**函式的權限。  
+### <a name="permissions"></a>權限  
+ 需要函數的**SELECT**許可權。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回所有擴充事件及其目前狀態。  
