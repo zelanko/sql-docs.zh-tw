@@ -1,5 +1,5 @@
 ---
-title: 傳送結果集至伺服器 （擴充預存程序 API） |Microsoft Docs
+title: 將結果集傳送到伺服器（擴充預存程式 API） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,24 +14,24 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a58c8eca585bbbe2c935c524840bc465992d45c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62511843"
 ---
 # <a name="sending-result-sets-to-the-server-extended-stored-procedure-api"></a>將結果集傳送到伺服器 (擴充預存程序 API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]請改用 CLR 整合。  
   
- 傳送結果集時[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，擴充預存程序應該呼叫適當的 API，如下所示：  
+ 將結果集傳送至[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，擴充預存程式應該呼叫適當的 API，如下所示：  
   
--   **Srv_sendmsg**之前或之後與已傳送所有資料列 （如果有的話），可能會以任何順序呼叫函式**srv_sendrow**。 所有訊息必須都傳送至用戶端，以都傳送完成狀態之前**srv_senddone**。  
+-   在使用**srv_sendrow**傳送所有資料列（如果有的話）之前或之後，可依任何順序呼叫**srv_sendmsg**函數。 在以**srv_senddone**傳送完成狀態之前，所有訊息都必須傳送至用戶端。  
   
--   系統會針對傳送到用戶端的每個資料列，呼叫 **srv_sendrow** 函式一次。 所有資料列必須傳送至用戶端之前任何訊息、 狀態值或完成狀態會傳送**srv_sendmsg**，則**srv_status**引數**srv_pfield**，或**srv_senddone**。  
+-   系統會針對傳送到用戶端的每個資料列，呼叫 **srv_sendrow** 函式一次。 所有的資料列都必須先傳送給用戶端，才會使用**srv_sendmsg**、 **srv_pfield**的**srv_status**引數或**srv_senddone**來傳送任何訊息、狀態值或完成狀態。  
   
--   尚未定義其資料行的資料列傳送**srv_describe**導致應用程式引發參考用錯誤訊息，並傳回給用戶端失敗。 在此情況下，不會傳送資料列。  
+-   傳送尚未以**srv_describe**定義之所有資料行的資料列，會導致應用程式引發參考用錯誤訊息，並將失敗傳回給用戶端。 在此情況下，不會傳送資料列。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立擴充預存程序](creating-extended-stored-procedures.md)  

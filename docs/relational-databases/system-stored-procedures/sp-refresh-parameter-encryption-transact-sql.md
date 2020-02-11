@@ -1,5 +1,5 @@
 ---
-title: sp_refresh_parameter_encryption (TRANSACT-SQL) |Microsoft Docs
+title: sp_refresh_parameter_encryption （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002458"
 ---
-# <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption & Amp;&#40;transact-SQL&AMP;&#41;
+# <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-更新指定的非結構描述繫結預存程序、 使用者定義函數、 檢視、 DML 觸發程序、 資料庫層級 DDL 觸發程序，或目前資料庫中的伺服器層級 DDL 觸發程序參數的 Always Encrypted 中繼資料。 
+更新目前資料庫中指定非架構系結預存程式、使用者定義函數、view、DML 觸發程式、資料庫層級 DDL 觸發程式或伺服器層級 DDL 觸發程式之參數的 Always Encrypted 中繼資料。 
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,9 +46,10 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>引數
 
-`[ @name = ] 'module_name'` 是預存程序、 使用者定義函數、 檢視、 DML 觸發程序、 資料庫層級 DDL 觸發程序或伺服器層級 DDL 觸發程序的名稱。 *module_name*不能是 common language runtime (CLR) 預存程序或 CLR 函式。 *module_name*不可進行結構描述繫結。 *module_name*是`nvarchar`，沒有預設值。 *module_name*可以是多重部分識別碼，但只能參考目前資料庫中的物件。
+`[ @name = ] 'module_name'`這是預存程式、使用者定義函數、view、DML 觸發程式、資料庫層級 DDL 觸發程式或伺服器層級 DDL 觸發程式的名稱。 *module_name*不可以是 common language RUNTIME （CLR）預存程式或 CLR 函數。 *module_name*不可以是架構系結。 *module_name*是`nvarchar`，沒有預設值。 *module_name*可以是多部分的識別碼，但只能參考目前資料庫中的物件。
 
-`[ @namespace = ] ' < class > '` 為指定的模組類別。 當*module_name* DDL 觸發程序，`<class>`需要。 `<class>` 為 `nvarchar(20)`。 有效輸入如下`DATABASE_DDL_TRIGGER`和`SERVER_DDL_TRIGGER`。    
+`[ @namespace = ] ' < class > '`這是指定之模組的類別。 當*module_name*是 DDL 觸發程式時`<class>` ，則為必要。 
+  `<class>` 為 `nvarchar(20)`。 有效的輸入`DATABASE_DDL_TRIGGER`為`SERVER_DDL_TRIGGER`和。    
 
 ## <a name="return-code-values"></a>傳回碼值  
 
@@ -57,34 +58,34 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="remarks"></a>備註
 
-如果也可能會過期，加密中繼資料模組的參數：   
-* [加密] 屬性已更新模組參考的資料表中的資料行。 比方說，已經卸除資料行，並已新增新的資料行，與相同的名稱，但不同的加密類型、 加密金鑰或加密演算法。  
-* 模組參考另一個模組使用過期的參數加密中繼資料。  
+模組的參數加密中繼資料可能會過時，如果：   
+* 模組參考之資料表中資料行的加密屬性已更新。 例如，已經卸載資料行，而且已新增不同的加密類型、加密金鑰或加密演算法的新資料行。  
+* 模組參考了具有過期參數加密中繼資料的另一個模組。  
 
-修改資料表的加密屬性，當`sp_refresh_parameter_encryption`應該執行的任何直接或間接參考資料表的模組。 這個預存程序可以呼叫這些模組，依任何順序，而不需要再移至其呼叫端的使用者第一次重新整理的內部模組。
+修改資料表的加密屬性時， `sp_refresh_parameter_encryption`應該直接或間接參考該資料表的任何模組執行。 這個預存程式可以依任何順序在那些模組上呼叫，而不需要使用者先重新整理內部模組，再移至其呼叫端。
 
-`sp_refresh_parameter_encryption` 不會影響任何權限，擴充屬性，或`SET`與物件相關聯的選項。 
+`sp_refresh_parameter_encryption`不會影響與物件相關聯的任何許可權`SET` 、擴充屬性或選項。 
 
 若要重新整理伺服器層級 DDL 觸發程序，請從任何資料庫的內容執行此預存程序。
 
 > [!NOTE]
->  當您執行時，會卸除與物件相關聯的任何簽章`sp_refresh_parameter_encryption`。
+>  當您執行`sp_refresh_parameter_encryption`時，會卸載與物件相關聯的任何簽章。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>權限
 
-需要`ALTER`在模組上的權限和`REFERENCES`任何 CLR 使用者定義型別和 XML 結構描述集合所參考的物件權限。   
+需要`ALTER`模組的許可權，以及`REFERENCES`物件所參考之任何 CLR 使用者自訂類型和 XML 架構集合的許可權。   
 
-當指定的模組是資料庫層級 DDL 觸發程序時，需要`ALTER ANY DATABASE DDL TRIGGER`目前資料庫中的權限。    
+當指定的模組是資料庫層級 DDL 觸發程式時， `ALTER ANY DATABASE DDL TRIGGER`需要目前資料庫的許可權。    
 
-伺服器層級 DDL 觸發程序指定的模組時，需要`CONTROL SERVER`權限。
+當指定的模組是伺服器層級 DDL 觸發程式時， `CONTROL SERVER`需要許可權。
 
-針對模組，以定義`EXECUTE AS`子句，`IMPERSONATE`指定的主體需要權限。 一般而言，重新整理物件不會變更其`EXECUTE AS`主體，除非模組以定義`EXECUTE AS USER`和主體現在解析成不同的使用者來得當時模組所建立的使用者名稱。
+對於以`EXECUTE AS`子句定義的模組， `IMPERSONATE`指定的主體上必須有許可權。 一般而言，重新整理物件並不會變更`EXECUTE AS`其主體，除非模組是使用`EXECUTE AS USER`所定義，而且主體的使用者名稱現在會解析為與建立模組時不同的使用者。
  
 ## <a name="examples"></a>範例
 
-下列範例會建立資料表和參考資料表的程序、 設定永遠加密，並再示範改變資料表，以及執行`sp_refresh_parameter_encryption`程序。  
+下列範例會建立資料表和參考資料表的程式，設定 Always Encrypted，然後示範如何改變數據表並`sp_refresh_parameter_encryption`執行程式。  
 
-先建立初始的資料表和參考資料表的預存程序。
+首先，建立初始資料表和參考資料表的預存程式。
 ```sql
 CREATE TABLE [Patients]([PatientID] [int] IDENTITY(1,1) NOT NULL,
     [SSN] [char](11), 
@@ -113,7 +114,7 @@ END;
 GO
 ```
 
-然後設定永遠加密金鑰。
+然後設定 Always Encrypted 金鑰。
 ```sql
 CREATE COLUMN MASTER KEY [CMK1]
 WITH
@@ -135,7 +136,7 @@ GO
 ```
 
 
-最後，我們將取代 SSN 資料行加密的資料行，然後再執行`sp_refresh_parameter_encryption`程序來更新 Always Encrypted 的元件。
+最後，我們會將 SSN 資料行取代為加密的資料行， `sp_refresh_parameter_encryption`然後執行程式來更新 Always Encrypted 的元件。
 ```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO
@@ -156,5 +157,5 @@ GO
 ## <a name="see-also"></a>另請參閱 
 
 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
-[Always Encrypted 精靈](../../relational-databases/security/encryption/always-encrypted-wizard.md)   
+[Always Encrypted Wizard](../../relational-databases/security/encryption/always-encrypted-wizard.md)   
 

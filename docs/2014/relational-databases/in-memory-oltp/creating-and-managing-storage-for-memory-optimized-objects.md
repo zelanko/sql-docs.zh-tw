@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1d6bb42e4b35a74ef2bd6eefb85ea81b0ed18e40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63073843"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>建立及管理記憶體最佳化物件的儲存體
@@ -32,7 +32,7 @@ ms.locfileid: "63073843"
   
  記憶體最佳化資料表的儲存體有下列索引鍵屬性︰  
   
--   所有記憶體最佳化資料表會都對應到記憶體最佳化檔案群組。 這個檔案群組是建置使用 filestream 檔案群組。  
+-   所有記憶體優化資料表都會對應到記憶體優化的檔案群組。 這個檔案群組是使用 filestream 檔案群組所建立。  
   
 -   沒有頁面，且資料以資料列保存。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63073843"
   
 -   和磁碟資料表不同，記憶體最佳化資料表的儲存體不壓縮。 將壓縮的 (資料列或頁面) 磁碟資料表移轉至記憶體最佳化資料表時，您必須考量大小的變更。  
   
--   記憶體最佳化資料表可以是耐久的，也可以是非耐久的。 您只需要設定儲存體的持久性記憶體最佳化資料表。  
+-   記憶體最佳化資料表可以是耐久的，也可以是非耐久的。 您只需要設定持久性記憶體優化資料表的儲存體。  
   
  本節將描述檢查點檔案組，以及有關記憶體最佳化資料表中資料的儲存方式等其他方面。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "63073843"
   
 -   [比較以磁碟為基礎的資料表儲存體和記憶體最佳化資料表儲存體](comparing-disk-based-table-storage-to-memory-optimized-table-storage.md)  
   
--   [針對資料檔案和差異檔案組的合併進行監視和疑難排解](../../database-engine/monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs.md)  
+-   [對資料檔案和差異檔案組的合併進行監視和疑難排解](../../database-engine/monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](in-memory-oltp-in-memory-optimization.md)  

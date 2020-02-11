@@ -1,5 +1,5 @@
 ---
-title: ErrorControl 屬性 （SqlService 類別） |Microsoft Docs
+title: ErrorControl 屬性（SqlService 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 89cdfa63bff88c4f4bb5954402034b31ad7f77ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63060982"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl 屬性 (SqlService 類別)
@@ -37,22 +37,22 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
+ *目標*  
  表示此服務的 [SqlService 類別](sqlservice-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  字串值，可指定當服務在啟動期間失敗時所報告的錯誤嚴重性。 下表顯示可能的值。  
   
- Ignore  
+ 略過  
  不通知使用者。  
   
- 一般  
+ 正常  
  通知使用者。  
   
  Severe  
  使用上次的正確組態重新啟動系統。  
   
- 嚴重  
+ 重大  
  系統嘗試以正確的組態重新啟動。  
   
  Unknown  

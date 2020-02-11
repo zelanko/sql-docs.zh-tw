@@ -17,14 +17,14 @@ ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4165dd51437f143351835bc1739ffb8279bd04ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952488"
 ---
 # <a name="functions-accepting-string-parameters"></a>接受字串參數的函式
-接受字串參數的所有函式會轉換成 Unicode。 （將匯出的函式的"W"形式）。位元組計數會轉換成這些適用的 ODBC api 的字元計數。 這適用於下列函數：  
+所有接受字串參數的函式都會轉換成 Unicode。 （將會匯出函數的 "W" 形式）。位元組計數會轉換成這些適用 ODBC Api 的字元計數。 這適用于下列函數：  
   
 -   **SQLConnect**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67952488"
   
 -   **SQLDescribeCol**  
   
--   **SQLError** (取代**SQLGetDiagField**)  
+-   **SQLError** （由**SQLGetDiagField**取代）  
   
 -   **SQLExecDirect**  
   
@@ -46,9 +46,9 @@ ms.locfileid: "67952488"
   
 -   **SQLGetInfo**  
   
--   **SQLGetStmtOption** (會變成**SQLGetStmtAttr**)  
+-   **SQLGetStmtOption** （變成**SQLGetStmtAttr**）  
   
--   **SQLSetStmtOption** (會變成**SQLSetStmtAttr**)  
+-   **SQLSetStmtOption** （變成**SQLSetStmtAttr**）  
   
 -   **SQLGetConnectOption**  
   

@@ -1,5 +1,5 @@
 ---
-title: Handler 屬性範例 (VB) |Microsoft Docs
+title: Handler 屬性範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,19 +15,19 @@ ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1a72e393716d3d24fdb9f0f95be9faae85651696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964109"
 ---
 # <a name="handler-property-example-vb"></a>Handler 屬性範例 (VB)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 此範例示範[RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件[處理常式](../../../ado/reference/rds-api/handler-property-rds.md)屬性。 (請參閱[DataFactory 自訂](../../../ado/guide/remote-data-service/datafactory-customization.md)如需詳細資訊。)  
+ 這個範例會示範[RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件[處理常式](../../../ado/reference/rds-api/handler-property-rds.md)屬性。 （如需詳細資訊，請參閱[DataFactory 自訂](../../../ado/guide/remote-data-service/datafactory-customization.md)）。  
   
- 假設下列各節中的參數檔案，Msdfmap.ini，位於伺服器上：  
+ 假設參數檔案（Msdfmap）中的下列區段位於伺服器上：  
   
 ```  
 [connect AuthorDataBase]  
@@ -37,7 +37,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- 您的程式碼看起來如下所示。 指派給命令[SQL](../../../ado/reference/rds-api/sql-property.md)屬性會比對***AuthorById***識別項，並將擷取的資料列，作者 Michael O'Leary。 **DataControl**物件**資料錄集**屬性會被指派至已中斷連線[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)純粹為程式碼撰寫的物件。  
+ 您的程式碼看起來如下所示。 指派給[SQL](../../../ado/reference/rds-api/sql-property.md)屬性的命令會符合***AuthorById***識別碼，並會抓取作者 Michael O'Leary 的資料列。 **DataControl**物件**記錄集**屬性會被指派給已中斷連線的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，純粹是編碼便利性。  
   
 ```  
 'BeginHandlerVB  
@@ -79,7 +79,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [DataControl 物件（RDS）](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Handler 屬性 (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)
 
 

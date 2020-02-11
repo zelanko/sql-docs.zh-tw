@@ -1,5 +1,5 @@
 ---
-title: 發行集資訊、 追蹤 Token （交易式發行集，SQL Server 2005 和更新版本） |Microsoft Docs
+title: 發行集資訊、追蹤 token （交易式發行集、SQL Server 2005 和更新版本） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 287d565947a13621fd3ba39cff6437ff76894c03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021691"
 ---
 # <a name="publication-information-tracer-tokens-transactional-publication-sql-server-2005-and-later"></a>發行集資訊、追蹤 Token (交易式發行集、SQL Server 2005 和更新的版本)
@@ -35,13 +35,13 @@ ms.locfileid: "63021691"
 ## <a name="options"></a>選項。  
  若要變更方格顯示資料的方式，請以滑鼠右鍵按一下方格，然後按一下下列其中一個選項：  
   
--   **排序**：在 [排序資料行]  對話方塊中排序一個或多個資料行。  
+-   **排序**：在 **[排序資料行]** 對話方塊中排序一個或多個資料行。  
   
--   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及這些資料行在 [選擇資料行]  對話方塊中的顯示順序。  
+-   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及在 **[選擇資料行]** 對話方塊中顯示這些資料行所依循的順序。  
   
--   **篩選**：根據 [篩選設定]  對話方塊中的資料行值，篩選方格中的資料列。  
+-   **篩選**：根據 **[篩選設定]** 對話方塊中的資料行值，篩選方格中的資料列。  
   
--   **清除篩選**：清除所有篩選設定方格。  
+-   **清除篩選**：清除方格的所有篩選設定。  
   
  篩選設定是每個方格特有的設定。 資料行選取和排序會套用至所有相同類型的方格，例如每個發行者的發行集方格。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "63021691"
 > [!NOTE]  
 >  追蹤 Token 資訊與其他記錄資料的保留時間週期相同，這會由散發資料庫的記錄保留期限控制。 如需變更散發資料庫屬性的詳細資訊，請參閱[檢視及修改散發者和發行者屬性](view-and-modify-distributor-and-publisher-properties.md)。  
   
- **訂閱**  
+ **訂用帳戶**  
  發行集之每個訂閱的名稱。  
   
  **發行者到散發者**  

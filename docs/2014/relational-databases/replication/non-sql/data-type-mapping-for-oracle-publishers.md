@@ -15,24 +15,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022647"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 發行者的資料類型對應
-  Oracle 資料類型與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型並非始終完全相符。 若有可能，將在發行 Oracle 資料表時自動選取相符的資料類型。 如果單一資料類型對應不清楚，將提供替代的資料類型對應。 如需有關如何選取替代對應的詳細資訊，請參閱本主題稍後的「指定替代資料類型對應」一節。  
+  Oracle 資料類型和[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料類型不一定會完全相符。 若有可能，將在發行 Oracle 資料表時自動選取相符的資料類型。 如果單一資料類型對應不清楚，將提供替代的資料類型對應。 如需有關如何選取替代對應的詳細資訊，請參閱本主題稍後的「指定替代資料類型對應」一節。  
   
  下表顯示了將資料從「Oracle 發行者」移至「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」時，資料類型在 Oracle 與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之間的預設對應方式。 「替代方案」一欄會指示替代對應是否可用。  
   
-|Oracle 資料類型|SQL Server 資料類型|替代方案|  
+|Oracle 資料類型|SQL Server 資料類型|替代項目|  
 |----------------------|--------------------------|------------------|  
 |BFILE|VARBINARY(MAX)|是|  
 |BLOB|VARBINARY(MAX)|是|  
 |CHAR([1-2000])|CHAR([1-2000])|是|  
 |CLOB|VARCHAR(MAX)|是|  
-|DATE|DATETIME|是|  
+|日期|DATETIME|是|  
 |FLOAT|FLOAT|否|  
 |FLOAT([1-53])|FLOAT([1-53])|否|  
 |FLOAT([54-126])|FLOAT|否|  
@@ -49,7 +49,7 @@ ms.locfileid: "63022647"
 |RAW([1-2000])|VARBINARY([1-2000])|否|  
 |real|FLOAT|否|  
 |ROWID|CHAR(18)|否|  
-|TIMESTAMP|DATETIME|是|  
+|timestamp|DATETIME|是|  
 |TIMESTAMP(0-7)|DATETIME|是|  
 |TIMESTAMP(8-9)|DATETIME|是|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|是|  
@@ -76,12 +76,13 @@ ms.locfileid: "63022647"
 -   使用 REF 的資料行  
   
 ### <a name="the-date-data-type"></a>DATE 資料類型  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的日期範圍是從 1753 A.D. 到 9999 A.D.，而 Oracle 的日期範圍則是從 4712 B.C. 到 4712 A.D. 如果 DATE 類型的資料行包含的值超出 SQL Server 的範圍，請為此資料行選取替代資料類型，也就是 VARCHAR(19)。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的日期範圍是從 1753 A.D. 到 9999 A.D.，而 Oracle 的日期範圍則是從 4712 B.C. 到 4712 A.D. 如果 DATE 類型的資料行包含的值超出 SQL Server 的範圍，請為此資料行選取替代資料類型，也就是 VARCHAR(19)。  
   
 ### <a name="float-and-number-types"></a>FLOAT 和 NUMBER 類型  
  在對應 FLOAT 和 NUMBER 資料類型期間指定的小數位數與有效位數，取決於為使用 Oracle 資料庫中資料類型的資料行指定的小數位數與有效位數。 位數 (Precision) 是指數字中總共的位數。 小數位數 (Scale) 則是指數字中小數點右方的位數。 例如 123.45 的位數是 5，小數位數是 2。  
   
- Oracle 允許將數字定義為小數位數大於有效位數，例如 NUMBER(4,5)，但 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 需要有效位數等於或大於小數位數。 若要確保沒有任何資料的截斷，如果小數位數大於有效位數，「 Oracle 發行者，有效位數設定等於小數位數在對應的資料類型時：NUMBER(4,5)，對應為 NUMERIC(5,5)。  
+ Oracle 允許將數字定義為小數位數大於有效位數，例如 NUMBER(4,5)，但 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 需要有效位數等於或大於小數位數。 若要確定沒有資料截斷，如果「Oracle 發行者」端的小數位數大於有效位數，則在對應資料類型時要將有效位數設定為等於小數位數：NUMBER(4,5) 將對應為 NUMERIC(5,5)。  
   
 > [!NOTE]  
 >  如果您沒有為 NUMBER 指定小數位數和有效位數，則 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設為使用最大小數位數 (8) 和有效位數 (38)。 建議您在 Oracle 中設定特定的小數位數和有效位數，以便在複寫資料時獲得更好的儲存容量和效能。  

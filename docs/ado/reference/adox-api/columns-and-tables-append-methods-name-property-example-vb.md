@@ -1,5 +1,5 @@
 ---
-title: 資料行和資料表 Append 方法、 Name 屬性範例 (VB) |Microsoft Docs
+title: Columns 和 Tables Append 方法、Name 屬性範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,10 +16,10 @@ ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 898efdf4fe33ec3ce08028bd00b5654947048255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966868"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Columns 和 Tables Append 方法、Name 屬性範例 (VB)
@@ -67,10 +67,10 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Append 方法 (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 方法 (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [資料行物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [資料行集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Name 屬性 (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
- [Table 物件 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
+ [Append 方法（ADOX Columns）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append 方法（ADOX Tables）](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Column 物件（ADOX）](../../../ado/reference/adox-api/column-object-adox.md)   
+ [Columns 集合（ADOX）](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Name 屬性（ADOX）](../../../ado/reference/adox-api/name-property-adox.md)   
+ [Table 物件（ADOX）](../../../ado/reference/adox-api/table-object-adox.md)   
  [Tables 集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)

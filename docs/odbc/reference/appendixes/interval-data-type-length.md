@@ -15,21 +15,21 @@ ms.assetid: e9eb38d8-f9db-4401-8c62-aa394054cbbf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a456db12ddb2594dc7b4c9e4f5c26e9cb4245621
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947583"
 ---
 # <a name="interval-data-type-length"></a>間隔資料類型長度
-下列規則用來決定間隔資料類型以字元為單位的長度。 長度是以字元數表示。 位元組數目，取決於的字元集。 的長度會包含下列的值加在一起：  
+下列規則是用來判斷 interval 資料類型的長度（以字元為單位）。 長度以字元數表示。 位元組數目取決於字元集。 長度包含下列新增的值：  
   
--   每個欄位不是前置欄位的間隔中的兩個字元。  
+-   間隔中不是前置欄位的每個欄位都有兩個字元。  
   
--   前置的欄位中，或隱含的開頭有效位數的字元數。 如果未指定的前置字元的有效位數，預設值為 2。  
+-   對於前置欄位，這是快速或隱含前置精確度的字元數。 如果未指定前置精確度，預設值為2。  
   
--   一個欄位之間的分隔符號字元。  
+-   欄位之間分隔符號的一個字元。  
   
--   其中一個加上明示或默示的秒數有效位數。 如果未指定秒數有效位數，預設值為 6。  
+-   一個加上快速或隱含的秒數有效位數。 如果未指定秒數有效位數，則預設值為6。  
   
- 每個間隔資料類型的特定資料行長度值包含在[資料行大小](../../../odbc/reference/appendixes/column-size.md)。
+ 每個間隔資料類型的特定資料行長度值會包含在資料[行大小](../../../odbc/reference/appendixes/column-size.md)中。

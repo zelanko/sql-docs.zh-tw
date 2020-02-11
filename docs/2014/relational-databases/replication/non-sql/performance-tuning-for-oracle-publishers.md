@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d735fc81e38354630eb4486bbf6ca2bdae570e6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022240"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Oracle 發行者的效能微調
@@ -24,7 +24,7 @@ ms.locfileid: "63022240"
   
  此外，還提供了兩個與效能有關的「Oracle 發行者」選項：  
   
--   指定適當的發行選項：Oracle 或 Oracle Gateway。  
+-   指定適當的發行選項：[Oracle] 或 [Oracle 閘道]。  
   
 -   設定交易集作業，以便用適當的間隔處理「發行者」端的變更。  
   

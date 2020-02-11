@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7cbc7981817a6c62db378976fe36a4dc753c6b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015879"
 ---
 # <a name="modify-a-stored-procedure"></a>修改預存程序
@@ -27,7 +27,7 @@ ms.locfileid: "63015879"
   
 -   **開始之前：** [限制事項](#Restrictions)、[安全性](#Security)  
   
--   **若要改變程序，使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **若要更改程序，請使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63015879"
   
  如果先前的程序定義是利用 WITH ENCRYPTION 或 WITH RECOMPILE 來建立的，只有在 ALTER PROCEDURE 陳述式包括這些選項時，才會啟用這些選項。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要程序的 ALTER PROCEDURE 權限。  
@@ -59,7 +59,7 @@ ms.locfileid: "63015879"
   
 4.  修改預存程序的文字。  
   
-5.  若要測試語法，請在 [查詢]  功能表上按一下 [剖析]  。  
+5.  若要測試語法，請在 **[查詢]** 功能表上按一下 **[剖析]** 。  
   
 6.  若要將所做的修改儲存至程序定義，請在 **[查詢]** 功能表上按一下 **[執行]** 。  
   

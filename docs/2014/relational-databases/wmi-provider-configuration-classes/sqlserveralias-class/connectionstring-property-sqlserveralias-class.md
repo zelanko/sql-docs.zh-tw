@@ -1,5 +1,5 @@
 ---
-title: ConnectionString 屬性 （SqlServerAlias 類別） |Microsoft Docs
+title: ConnectionString 屬性（SqlServerAlias 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 647fb88b6af501ad17dcf64738d72679f36e704e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035609"
 ---
 # <a name="connectionstring-property-sqlserveralias-class"></a>ConnectionString 屬性 (SqlServerAlias 類別)
@@ -37,8 +37,8 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
- A [SqlServerAlias 類別](sqlserveralias-class.md)物件，表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]別名。  
+ *目標*  
+ 代表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]別名的[SqlServerAlias 類別](sqlserveralias-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  一個字串，可指定用來為伺服器連接別名建立連接的連接字串。  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 08953ebc12d19ab7a91cc187b579b9313a385f3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894752"
 ---
 # <a name="extending-packages-with-scripting"></a>使用指令碼擴充封裝
@@ -26,7 +26,7 @@ ms.locfileid: "62894752"
   
  本節探索兩者中較簡單的選項：以指令碼擴充套件。  
   
- 指令碼工作和指令碼元件可讓您利用非常少量的編碼，同時擴充 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程和資料流程。 這兩個物件都使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 開發環境與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 程式設計語言，並且可從 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別庫提供的所有功能以及自訂組件獲益。 通常在開發自訂工作或自訂資料流程元件時，需要撰寫所有的基礎結構程式碼。指令碼工作和指令碼元件可讓開發人員不需要撰寫全部的基礎結構程式碼，即可建立自訂功能。  
+ 指令碼工作和指令碼元件可讓您利用非常少量的編碼，同時擴充 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程和資料流程。 這兩個物件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]都使用 Tools for Applications （VSTA）開發環境[!INCLUDE[msCoName](../../includes/msconame-md.md)]和 Visual Basic [!INCLUDE[msCoName](../../includes/msconame-md.md)]或 Visual c # 程式設計語言，並受益于[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]類別庫提供的所有功能，以及自訂群組件。 通常在開發自訂工作或自訂資料流程元件時，需要撰寫所有的基礎結構程式碼。指令碼工作和指令碼元件可讓開發人員不需要撰寫全部的基礎結構程式碼，即可建立自訂功能。  
   
 ## <a name="in-this-section"></a>本節內容  
  [比較指令碼工作和指令碼元件](../extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
@@ -38,13 +38,13 @@ ms.locfileid: "62894752"
  [參考指令碼解決方案中的其他組件](referencing-other-assemblies-in-scripting-solutions.md)  
  討論在指令碼專案中參考和使用外部組件與命名空間所需的步驟。  
   
- [以指令碼工作來擴充套件](../extending-packages-scripting/task/extending-the-package-with-the-script-task.md)  
+ [以指令碼工作擴充封裝](../extending-packages-scripting/task/extending-the-package-with-the-script-task.md)  
  討論如何透過使用指令碼工作建立自訂工作。 通常會在每個封裝執行時呼叫工作，或是在封裝開啟每個資料來源時呼叫一次。  
   
- [以指令碼元件來擴充資料流程](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
+ [Extending the Data Flow with the Script Component](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
  討論如何透過使用指令碼元件建立自訂資料流程來源、轉換和目的地。 資料流程元件通常會為處理的每個資料列呼叫一次。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  [Integration Services 錯誤和訊息參考](../integration-services-error-and-message-reference.md)  
  列出預先定義的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤碼，以及其符號名稱與描述。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62894752"
  [以程式設計方式建置套件](../building-packages-programmatically/building-packages-programmatically.md)  
  描述如何以程式設計方式建立、設定、執行、載入、儲存和管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的最新下載、文件、範例和影片以及社群中的選定方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的最新下載、文件、範例和影片以及社群中的選定方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

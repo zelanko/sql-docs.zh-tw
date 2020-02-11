@@ -1,5 +1,5 @@
 ---
-title: 作業類別目錄屬性和新增作業類別目錄 |Microsoft Docs
+title: 作業類別目錄屬性和新的作業類別目錄 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d6748956dcfe0b880ffe3b384e49a8ccc00ebf12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62936986"
 ---
 # <a name="job-categories-properties-and-new-job-category"></a>作業類別目錄屬性及新增作業類別目錄
@@ -26,13 +26,13 @@ ms.locfileid: "62936986"
  **名稱**  
  鍵入新作業類別目錄的名稱。 如果這是作業類別目錄屬性的對話方塊，就會顯示您正在檢視的類別目錄。  
   
- **此類別目錄中的作業**  
+ **此類別中的工作**  
  顯示此類別目錄中所有現有的作業。  
   
  **顯示所有作業**  
  列出所有作業。  
   
- **Select**  
+ **請**  
  勾選或清除它，來變更作業的類別目錄。  
   
  **作業**  

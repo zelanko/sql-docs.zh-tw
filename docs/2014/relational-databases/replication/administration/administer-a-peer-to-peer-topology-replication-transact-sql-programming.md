@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cabfb4cd21de54dad2be1323fd29d8bb3bf076
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629724"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>管理點對點拓撲 (複寫 Transact-SQL 程式設計)
@@ -37,10 +37,10 @@ ms.locfileid: "62629724"
   
 4.  使用 [bcp 公用程式](../../../tools/bcp-utility.md)，以手動方式在所有節點大量複製新資料表的資料。  
   
-5.  執行 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)，在拓撲中的每個節點建立新發行項。 如需詳細資訊，請參閱 [定義發行項](../publish/define-an-article.md)。  
+5.  執行 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) ，在拓撲中的每個節點建立新發行項。 如需詳細資訊，請參閱 [定義發行項](../publish/define-an-article.md)。  
   
     > [!NOTE]  
-    >  在執行 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 之後，複寫會將發行項自動新增至拓撲中的訂閱。  
+    >  在執行 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 之後，複寫會將發行項自動加入至拓撲中的訂閱。  
   
 6.  重新啟動拓撲中每個節點的「散發代理程式」。  
   
@@ -64,6 +64,6 @@ ms.locfileid: "62629724"
 ## <a name="see-also"></a>另請參閱  
  [複寫管理常見問題集](frequently-asked-questions-for-replication-administrators.md)   
  [SQL Server 資料庫的備份與還原](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [點對點異動複寫](../transactional/peer-to-peer-transactional-replication.md)  
+ [@loopback_detection](../transactional/peer-to-peer-transactional-replication.md)  
   
   

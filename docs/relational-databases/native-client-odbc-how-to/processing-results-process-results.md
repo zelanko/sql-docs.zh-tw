@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ebd41c30d72b86fe5344a15767648371a14f7a2f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73780913"
 ---
 # <a name="processing-results---process-results"></a>處理結果 - 處理結果
@@ -54,7 +54,7 @@ ms.locfileid: "73780913"
     > [!NOTE]  
     >  當結果集包含計算資料列時，每個計算資料列都可以提供為個別的結果集。 這些計算結果集會散佈在一般的資料列內，將一般的資料列分隔成多個結果集。  
   
-5.  您可以選擇使用 SQL_UNBIND 呼叫 [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)，以釋放任何繫結的資料行緩衝區。  
+5.  或者也可以使用 SQL_UNBIND 呼叫 [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)，以釋放任何繫結的資料行緩衝區。  
   
 6.  如果有其他可用的結果集，請到步驟 1。  
 
@@ -62,6 +62,6 @@ ms.locfileid: "73780913"
 >  若要在 [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) 傳回 SQL_NO_DATA 之前取消結果集的處理，請呼叫 [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[取出結果集資訊&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
+[&#40;ODBC&#41;中取出結果集資訊](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

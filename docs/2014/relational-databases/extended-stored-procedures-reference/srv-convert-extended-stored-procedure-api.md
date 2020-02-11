@@ -21,16 +21,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6bc430354ca8ef220caed882f1f8c7942b44d158
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127273"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (擴充預存程序 API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
   
  將資料從某個資料類型變成另一個資料類型。  
   
@@ -70,7 +71,7 @@ destlen
  *srctype*  
  指定要轉換之資料的資料類型。 此參數可以是任何擴充預存程序 API 資料類型。  
   
- *src*  
+ *原始檔案*  
  這是要轉換之資料的指標。 此參數可以是任何擴充預存程序 API 資料類型。  
   
  *srclen*  
@@ -91,7 +92,8 @@ destlen
  如果資料類型轉換成功，則為轉換之資料的長度 (以位元組為單位)。 當 **srv_convert** 遇到所不支援的轉換要求時，它會呼叫開發人員提供的錯誤處理常式 (如果有的話)、設定全域錯誤號碼，並傳回 -1。  
   
 ## <a name="remarks"></a>備註  
- **srv_willconvert** 函式會決定是否允許特定的轉換。  
+ 
+  **srv_willconvert** 函式會決定是否允許特定的轉換。  
   
  轉換成近似的數值資料類型 SRVFLT4 或 SRVFLT8 可能會造成部分有效位數遺失。 從近似的數值資料類型 SRVFLT4 或 SRVFLT8 轉換成 SRVCHAR 或 SRVTEXT 可能會造成部分有效位數遺失。  
   
@@ -103,7 +105,8 @@ destlen
   
  如需資料類型及擴充預存程序 API 資料類型轉換的描述，請參閱[資料類型 &#40;擴充預存程序 API&#41;](data-types-extended-stored-procedure-api.md)。  
   
- **srv_convert** 函式失敗的原因有好幾個：  
+ 
+  **srv_convert** 函式失敗的原因有好幾個：  
   
 -   無法使用要求的轉換。  
   
@@ -115,7 +118,7 @@ destlen
 >  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>另請參閱  
- [srv_setutype &#40;擴充預存程序 API&#41;](srv-setutype-extended-stored-procedure-api.md)   
- [srv_willconvert &#40;擴充預存程序 API&#41;](srv-willconvert-extended-stored-procedure-api.md)  
+ [srv_setutype &#40;擴充預存程式 API&#41;](srv-setutype-extended-stored-procedure-api.md)   
+ [srv_willconvert &#40;擴充預存程式 API&#41;](srv-willconvert-extended-stored-procedure-api.md)  
   
   

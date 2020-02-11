@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d71ea2d6a10755ef52e0cac37ddcd2385d82d9cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067609"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>設定資料庫圖表設計工具 (Visual Database Tools)
@@ -58,8 +58,8 @@ ms.locfileid: "63067609"
     9. sp_upgraddiagrams 預存程序  
   
 ## <a name="see-also"></a>另請參閱  
- [了解資料庫圖表擁有權&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [升級舊版資料庫圖表&#40;Visual Database Tools&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)   
+ [瞭解資料庫關係圖擁有權 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [升級舊版的資料庫關係圖 &#40;Visual Database Tools&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-authorization-transact-sql)  
   
   

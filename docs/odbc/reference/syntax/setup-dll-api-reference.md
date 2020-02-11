@@ -14,18 +14,18 @@ ms.assetid: f9d03f17-1c0d-4e7c-9c04-8c316e07ef25
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26e5c36b41f68627a634714cfa06525c99451450
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947059"
 ---
 # <a name="setup-dll-api-reference"></a>安裝程式 DLL API 參考
-本章節描述驅動程式安裝程式 DLL API，其中包含兩個函式的語法 (**ConfigDriver**並**ConfigDSN**)。 **ConfigDriver**並**ConfigDSN**可以是在驅動程式 DLL，或者在個別安裝程式 DLL。  
+本節說明驅動程式安裝程式 DLL API 的語法，其中包含兩個函式（**ConfigDriver**和**ConfigDSN**）。 **ConfigDriver**和**ConfigDSN**可以位於驅動程式 dll 或個別安裝程式 dll 中。  
   
- 此外，本章節描述轉譯程式安裝程式 DLL API，其中包含單一函式的語法 (**ConfigTranslator**)。 **ConfigTranslator**可以是轉譯程式 DLL 中，或者在個別安裝程式 DLL。  
+ 此外，本節也會說明 translator 安裝程式 DLL API 的語法，其中包含單一函式（**ConfigTranslator**）。 **ConfigTranslator**可以位於 translator dll 或個別安裝程式 dll 中。  
   
- 它引進的 ODBC 版本會標示每個函式。  
+ 每個函式都會標示其引進的 ODBC 版本。  
   
  此章節包含下列主題。  
   

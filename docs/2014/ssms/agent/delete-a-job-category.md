@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9bb392991afbb3707fafdb18a28cc3de53f97c78
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783194"
 ---
 # <a name="delete-a-job-category"></a>刪除作業類別目錄
-  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中刪除 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業類別目錄。  
+  本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQL Server 管理物件， [!INCLUDE[tsql](../../includes/tsql-md.md)]在中刪除 Agent 作業類別目錄。  
   
  作業類別目錄可幫助您組織作業，以便於篩選與分組。 例如，您可以將所有的資料庫備份作業整理在資料庫維護類別中。  
 
@@ -44,15 +44,15 @@ ms.locfileid: "72783194"
   
 2.  按一下加號展開 **[SQL Server Agent]** 。  
   
-3.  以滑鼠右鍵按一下 [作業] 資料夾，然後選取 [管理作業類別目錄]。  
+3.  以滑鼠右鍵按一下 [作業]**** 資料夾，然後選取 [管理作業類別目錄]****。  
   
-4.  在 [管理作業類別目錄 <伺服器名稱>] 對話方塊中，選取所要刪除的作業類別目錄。  
+4.  在 [**管理作業類別目錄**_server_name_ ] 對話方塊中，選取要刪除的作業類別目錄。  
   
 5.  按一下 **[刪除]** 。  
   
-6.  在 **[作業類別目錄]** 對話方塊中，按一下 **[是]** 。  
+6.  在 **[作業類別目錄]** 對話方塊中，按一下 **[是]**。  
   
-7.  關閉 [管理作業類別目錄 <伺服器名稱>] 對話方塊。  
+7.  關閉 [**管理作業類別目錄**_server_name_ ] 對話方塊。  
   
 ##  <a name="TSQL"></a> 使用 Transact-SQL  
   
@@ -62,7 +62,7 @@ ms.locfileid: "72783194"
   
 2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```sql
     -- deletes the job category named AdminJobs.  

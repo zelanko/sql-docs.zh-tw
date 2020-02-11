@@ -1,5 +1,5 @@
 ---
-title: core.sp_remove_collector_type (TRANSACT-SQL) |Microsoft Docs
+title: core. sp_remove_collector_type （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 88ceba25-e41a-405f-a416-bb68918a0024
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9c2b3bf93abd6acfad699f47344f05ddbc34e85a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942479"
 ---
-# <a name="corespremovecollectortype-transact-sql"></a>core.sp_remove_collector_type (Transact-SQL)
+# <a name="coresp_remove_collector_type-transact-sql"></a>core.sp_remove_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   從管理資料倉儲資料庫的 core.supported_collector_types 檢視表中移除項目。 此程序必須在管理資料倉儲資料庫的內容中執行。  
@@ -44,14 +44,14 @@ core.sp_remove_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @collector_type_uid = ] '*collector_type_uid*'  
- 收集器類型的 GUID。 *collector_type_uid 是否*已**uniqueidentifier**，沒有預設值。  
+ [ @collector_type_uid = ]'*collector_type_uid*'  
+ 收集器類型的 GUID。 *collector_type_uid*是**uniqueidentifier**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
-## <a name="permissions"></a>Permissions  
- 需要的成員資格**mdw_admin** （具有 EXECUTE 權限） 固定的資料庫角色。  
+## <a name="permissions"></a>權限  
+ 需要**mdw_admin** （具有 EXECUTE 許可權）固定資料庫角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會從 core.supported_collector_types 檢視表中移除一般 T-SQL 查詢收集器型別。  

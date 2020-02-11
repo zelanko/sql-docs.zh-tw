@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cb31bae59d95b01279a9fa84e02cd22c8017ca14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021744"
 ---
 # <a name="publication-database"></a>發行集資料庫
@@ -28,7 +28,7 @@ ms.locfileid: "63021744"
   
 -   執行 **sp_replicationdboption** 並將 [發行]  選項 (適用於快照集或交易式發行集) 或 [合併發行]  選項 (適用於合併式發行集) 設定為 [True]  。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **資料庫**  
  選取包含您要發行之資料與資料庫物件的資料庫名稱。  
   

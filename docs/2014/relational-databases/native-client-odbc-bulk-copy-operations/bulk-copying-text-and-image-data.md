@@ -1,5 +1,5 @@
 ---
-title: 大量複製 Text 與 Image 資料 |Microsoft Docs
+title: 大量複製文字和影像資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c468ec3cf52526192893458055cde857aeaa864d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067474"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>大量複製 Text 與 Image 資料
-  大型**文字**， **ntext**，並**映像**的值是使用複製的大量[bcp_moretext](../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)函式。 您撰寫程式碼[bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) for**文字**， **ntext**，或**映像**資料行*pData*指標設定NULL 表示資料將會得到**bcp_moretext**。 請務必指定確切的每個所提供的資料長度**文字**， **ntext**，或**映像**中每個大量複製資料列的資料行。 如果資料行資料的長度不同於指定的資料行長度[bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)，使用[bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)將長度設定為適當的值。 A [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)傳送所有非**文字**、 非-**ntext**，和非-**映像**資料; 您再呼叫**bcp_moretext**傳送**文字**， **ntext**，或**映像**個別單位中的資料。 大量複製函數決定，所有資料都傳送給目前**文字**， **ntext**，或**映像**資料行之資料的長度總和都傳送透過時**bcp_moretext**等於最新版本中指定的長度**bcp_collen**或是**bcp_bind**。  
+  大型**text**、 **Ntext**和**image**值會使用[bcp_moretext](../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)函數進行大量複製。 您會將**text**、 **Ntext**或**image**資料行的程式碼[bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) ，並將*pData*指標設定為 Null，表示將會提供**bcp_moretext**的資料。 請務必指定為每個大量複製資料列中的每個**text**、 **Ntext**或**image**資料行所提供的確切資料長度。 如果資料行的資料長度與[bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)中指定的資料行長度不同，請使用[bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)將長度設定為適當的值。 [Bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)傳送所有非**文字**、非**Ntext**和非**影像**的資料;接著，您可以呼叫**bcp_moretext** ，以不同的單位傳送**text**、 **Ntext**或**image**資料。 大量複製函數會在透過**bcp_moretext**傳送的資料長度總和等於最新**bcp_collen**或**bcp_bind**中指定的長度時，判斷所有資料都已傳送給目前的**text**、 **Ntext**或**image**資料行。  
   
- **bcp_moretext**沒有參數識別的資料行。 如果有多個**文字**， **ntext**，或**映像**中的資料列的資料行**bcp_moretext**作**文字**， **ntext**，或**映像**從具有最低的序號，並繼續進行，最高的序數數字的資料行的資料行的資料行。 **bcp_moretext**傳送的資料長度總和等於最新版本中指定的長度時，從一個資料行移至下一步**bcp_collen**或是**bcp_bind**目前的資料行。  
+ **bcp_moretext**沒有用來識別資料行的參數。 當資料列中有多個**text**、 **Ntext**或**image**資料行時， **bcp_moretext**會在**text**、 **Ntext**或**image**資料行上操作，並以具有最低序數的資料行為開頭，並繼續進行序號最高的資料行。 當所傳送資料的長度總和等於最新**bcp_collen**或目前資料行**bcp_bind**中指定的長度時， **bcp_moretext**會從一個資料行移到下一個。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行大量複製作業&#40;ODBC&#41;](performing-bulk-copy-operations-odbc.md)  
+ [&#40;ODBC&#41;執行大量複製作業](performing-bulk-copy-operations-odbc.md)  
   
   

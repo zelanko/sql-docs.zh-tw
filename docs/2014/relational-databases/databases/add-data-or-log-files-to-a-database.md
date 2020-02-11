@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917700"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>將資料或記錄檔加入資料庫
@@ -34,7 +34,7 @@ ms.locfileid: "62917700"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法，將資料或記錄檔加入資料庫：**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62917700"
   
 -   每個資料庫最多可以指定 32,767 個檔案和 32,767 個檔案群組。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  
@@ -71,7 +71,7 @@ ms.locfileid: "62917700"
   
 6.  選取檔案類型：資料或記錄檔。  
   
-7.  若是資料檔案，請選取檔案群組，其中的檔案應包含在清單中，或選取 [\<新增檔案群組>]  以建立新的檔案群組。 交易記錄檔無法放在檔案群組中。  
+7.  若是資料檔案，請選取檔案群組，其中的檔案應包含在清單中，或選取 [**新增檔案群組>]\<** 以建立新的檔案群組。 交易記錄檔無法放在檔案群組中。  
   
 8.  指定檔案的起始大小。 可根據預期的資料庫最大資料量，儘可能將資料檔設為最大。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "62917700"
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會將含有兩個檔案的檔案群組加入資料庫中。 此範例會在  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫中建立 `Test1FG1` 檔案群組，且會將兩個 5 MB 的檔案加入檔案群組中。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會將含有兩個檔案的檔案群組加入資料庫中。 此範例會在 `Test1FG1` 資料庫中建立 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 檔案群組，且會將兩個 5 MB 的檔案加入檔案群組中。  
   
  [!code-sql[DatabaseDDL#AlterDatabase2](../../snippets/tsql/SQL14/tsql/databaseddl/transact-sql/alterdatabase.sql#alterdatabase2)]  
   

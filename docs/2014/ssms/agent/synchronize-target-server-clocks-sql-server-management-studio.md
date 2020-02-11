@@ -17,13 +17,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 769b2b9caba541af3a1ea38e1969d8a6422950be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188769"
 ---
-# <a name="synchronize-target-server-clocks-sql-server-management-studio"></a>同步處理目標伺服器時鐘 (SQL Server Management Studio)
+# <a name="synchronize-target-server-clocks-sql-server-management-studio"></a>Synchronize Target Server Clocks (SQL Server Management Studio)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，將 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的目標伺服器的時鐘與主要伺服器的時鐘進行同步處理。 同步處理這些系統時鐘可以支援您的作業排程。  
   
  **本主題內容**  
@@ -32,7 +32,7 @@ ms.locfileid: "68188769"
   
      [安全性](#Security)  
   
--   **若要使用下列項目將目標伺服器的時鐘同步處理：**  
+-   **若要同步處理目標伺服器時鐘，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68188769"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
@@ -51,11 +51,11 @@ ms.locfileid: "68188769"
   
 1.  在 **[物件總管]** 中，按一下加號，展開要將目標伺服器的時鐘與主要伺服器的時鐘進行同步處理的伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]  、指向 [多伺服器管理]  ，然後選取 [管理目標伺服器]  。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]****、指向 [多伺服器管理]****，然後選取 [管理目標伺服器]****。  
   
-3.  在 **[管理目標伺服器]** 對話方塊中，按一下 **[公佈指示]** 。  
+3.  在 **[管理目標伺服器]** 對話方塊中，按一下 **[公佈指示]**。  
   
-4.  在 **[指示類型]** 清單中選取 **[同步處理時鐘]** 。  
+4.  在 **[指示類型]** 清單中選取 **[同步處理時鐘]**。  
   
 5.  在 **[收件者]** 下，執行下列其中一項：  
   
@@ -84,6 +84,6 @@ ms.locfileid: "68188769"
     GO  
     ```  
   
- 如需詳細資訊，請參閱 < [sp_resync_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)。  
+ 如需詳細資訊，請參閱[sp_resync_targetserver &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)。  
   
   

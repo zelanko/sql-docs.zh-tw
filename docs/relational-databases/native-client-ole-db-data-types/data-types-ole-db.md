@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fd73a7498914060757a9ce4e8137638440556ae3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73770749"
 ---
 # <a name="data-types-ole-db"></a>資料類型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者來執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句並處理結果，您必須知道 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者如何在系結中的參數或資料行時，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料類型對應至 OLE DB 資料類型資料列集，以及在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用**ITableDefinition**介面來建立資料表時。  
+  若要[!INCLUDE[tsql](../../includes/tsql-md.md)]使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供者來執行語句並處理結果，您必須知道[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供者在系結[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料列集中的參數或資料行時，如何將資料類型對應到 OLE DB 的資料類型，以及當它使用**ITableDefinition**介面[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在中建立資料表時。  
   
 ## <a name="in-this-section"></a>本節內容  
   

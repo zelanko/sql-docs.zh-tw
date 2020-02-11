@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 77a8a9ac44b35f338f978913985617e4f264ddb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62988057"
 ---
 # <a name="removing-a-rendering-extension"></a>移除轉譯延伸模組
-  若要移除[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]轉譯延伸模組，只要移除`Extension`項目，為您的轉譯延伸模組，從 rsreportserver.config 檔案，位於 **%ProgramFiles%\Microsoft SQL server\msrs10_50.<instancename>\reporting。\<執行個體名稱 > services\reportserver**資料夾。 如果您對報表設計工具，以及報表伺服器項目，移除`Extension`項目[RSReportDesigner Configuration File](../../report-server/rsreportdesigner-configuration-file.md)以及。 在移除組態資訊之後，轉譯延伸模組將無法再供元件使用。  
+  若要移除[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]轉譯延伸模組，請直接`Extension`從位於 **%ProgramFiles%\Microsoft SQL Server \ MSRS10_50 的 rsreportserver.config 中移除轉譯延伸模組的元素。\<實例名稱> \Reporting Services\ReportServer**資料夾。 如果您是報表設計師和報表伺服器的專案，請一併移除`Extension` [rsreportdesigner.config 設定檔](../../report-server/rsreportdesigner-configuration-file.md)中的元素。 在移除組態資訊之後，轉譯延伸模組將無法再供元件使用。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態檔](../../report-server/reporting-services-configuration-files.md)   

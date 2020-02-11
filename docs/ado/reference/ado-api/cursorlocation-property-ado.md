@@ -1,5 +1,5 @@
 ---
-title: CursorLocation 屬性 (ADO) |Microsoft Docs
+title: CursorLocation 屬性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,31 +17,31 @@ ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: afee71d4f37e2b3a27247fbeacf51dab66cc1e23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933281"
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation 屬性 (ADO)
-指出資料指標服務的位置。  
+表示資料指標服務的位置。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回**長**值，可以設定為其中一個[CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md)值。  
+ 設定或傳回可設定為其中一個[CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md)值的**Long**值。  
   
 ## <a name="remarks"></a>備註  
- 這個屬性可讓您選擇各種提供者可存取的資料指標程式庫。 通常，您可以選擇使用 伺服器上的 用戶端資料指標程式庫，或位於的其中一個。  
+ 這個屬性可讓您在提供者可存取的各種資料指標程式庫之間進行選擇。 通常，您可以選擇使用用戶端資料指標程式庫，或是位於伺服器上的其中一個。  
   
- 此屬性設定會影響已經設定的屬性時，才建立連線。 變更**CursorLocation**屬性具有不會影響現有的連線。  
+ 此屬性設定會影響只有在設定屬性之後才建立的連接。 變更**CursorLocation**屬性不會影響現有的連接。  
   
- 所傳回的資料指標[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法繼承此設定。 **資料錄集**物件會自動繼承此設定及其相關聯的連接。  
+ [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法所傳回的資料指標會繼承此設定。 **記錄集**物件將會自動從其相關聯的連接繼承此設定。  
   
- 這個屬性是讀取/寫入上[連接](../../../ado/reference/ado-api/connection-object-ado.md)或 已關閉[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，和唯讀模式開啟時**資料錄集**。  
+ 這個屬性在[連接](../../../ado/reference/ado-api/connection-object-ado.md)或封閉式[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)上是讀取/寫入，而在開啟的**記錄集**上是唯讀的。  
   
 > [!NOTE]
->  **遠端資料服務使用量**用戶端上使用時**資料錄集**或**連線**物件**CursorLocation**屬性只可以設定為**adUseClient**。  
+>  **遠端資料服務使用量**在用戶端**記錄集**或**連接**物件上使用時， **CursorLocation**屬性只能設定為**adUseClient**。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
   
 |||  
 |-|-|  

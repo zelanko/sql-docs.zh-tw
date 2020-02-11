@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011967"
 ---
 # <a name="create-a-server-role"></a>建立伺服器角色
@@ -32,7 +32,7 @@ ms.locfileid: "63011967"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要建立新的伺服器角色，可使用下列項目：**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63011967"
 ###  <a name="Restrictions"></a> 限制事項  
  不能將資料庫層級安全性實體授與伺服器角色。 若要建立資料庫角色，請參閱 [CREATE ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
   
@@ -69,13 +69,13 @@ ms.locfileid: "63011967"
   
 3.  以滑鼠右鍵按一下 [伺服器角色]  資料夾，然後選取 [新增伺服器角色...]  。  
   
-4.  在 **新的伺服器角色-** _server_role_name_對話方塊中，於**一般**頁面上，輸入新的伺服器角色中的名稱**伺服器角色名稱**方塊。  
+4.  在 [**新增伺服器角色-**_server_role_name_ ] 對話方塊的 [**一般**] 頁面上，于 [**伺服器角色名稱**] 方塊中輸入新伺服器角色的名稱。  
   
 5.  在 **[擁有者]** 方塊中，輸入將擁有新角色之伺服器主體的名稱。 或者，按一下省略符號 **(...)** ，開啟 [選取伺服器登入或角色]  對話方塊。  
   
 6.  在 [安全性實體]  底下，選取一或多個伺服器層級安全性實體。 已選取安全性實體時，您可以對這個伺服器角色授與或拒絕該安全性實體的權限。  
   
-7.  在 **權限：明確**方塊中，選取授與、 授與授與或拒絕選取之安全性實體此伺服器角色的權限的核取方塊。 如果不能授與或拒絕所有選取之安全性實體的權限，此權限表示為部分選取。  
+7.  在 **[權限: 明確]** 方塊中，選取核取方塊，對此伺服器角色授與、以授與選項授與 (grant with grant)，或拒絕所選取安全性實體的權限。 如果不能授與或拒絕所有選取之安全性實體的權限，此權限表示為部分選取。  
   
 8.  在 **[成員]** 頁面上，使用 **[加入]** 按鈕，將代表個人或群組的登入加入至新的伺服器角色。  
   

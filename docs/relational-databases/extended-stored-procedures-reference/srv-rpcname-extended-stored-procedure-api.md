@@ -20,17 +20,18 @@ ms.assetid: 0a1424e4-3319-4836-b8d8-5e0344cc683f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 48ff48b18cc945754b91dc14294569040b1e73fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005532"
 ---
 # <a name="srv_rpcname-extended-stored-procedure-api"></a>srv_rpcname (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
   
  傳回目前遠端預存程序的程序名稱元件。  
   
@@ -57,7 +58,7 @@ len
 ## <a name="returns"></a>傳回值  
  目前遠端預存程序之遠端預存程序名稱元件中以 Null 結尾字串的 DBCHAR 指標。 如果目前沒有遠端預存程序，則會傳回 NULL 且 *len* 設定為 - 1。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此函數只會傳回遠端預存程序的名稱。 這不包含擁有者、資料庫名稱和遠端預存程序號碼的選擇性規範。  
   
  由於沒有遠端預存程序時呼叫 **srv_rpcname** 是有效的做法 (不會出現任何參考用錯誤)，所以這個函式會提供一種方法來判斷遠端預存程序是否存在。  

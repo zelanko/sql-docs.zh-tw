@@ -1,5 +1,5 @@
 ---
-title: IsDescendant (DMX) |Microsoft 文件
+title: IsDescendant （DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7f6f3532165b8e958eb03cdf4954543159309a08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937720"
 ---
 # <a name="isdescendant-dmx"></a>IsDescendant (DMX)
@@ -31,7 +31,7 @@ IsDescendant(<NodeID>)
  Boolean 類型。  
   
 ## <a name="remarks"></a>備註  
- **IsDescendant**只會在[FROM&#60;模型&#62;。內容&#40;DMX&#41; ](../dmx/select-from-model-content-dmx.md)並[選取 從&#60;模型&#62;。DIMENSION_CONTENT &#40;DMX&#41; ](../dmx/select-from-model-dimension-content-dmx.md)查詢。  
+ **IsDescendant**僅用於[SELECT FROM &#60;model&#62;。&#40;DMX&#41;的內容](../dmx/select-from-model-content-dmx.md)，並[從 &#60;模型&#62; 中選取。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)查詢。  
   
 ## <a name="examples"></a>範例  
  下列範例根據 IsDescendant 函數指定的節點，傳回節點子系的所有案例。  
@@ -42,8 +42,8 @@ WHERE IsDescendant('00000000100')
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦延伸模組&#40;DMX&#41;函式參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [DMX&#41;的函數 &#40;](../dmx/functions-dmx.md)   
+ [&#40;DMX&#41;的一般預測函數](../dmx/general-prediction-functions-dmx.md)  
   
   

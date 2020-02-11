@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_set_cache_window (TRANSACT-SQL) |Microsoft Docs
+title: sp_syscollector_set_cache_window （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 80462381e058c4cb9107aa4ac07138e42d27e677
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010628"
 ---
-# <a name="spsyscollectorsetcachewindow-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
+# <a name="sp_syscollector_set_cache_window-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   設定在發生失敗的情況下嘗試進行資料上傳的次數。 在失敗時重試上傳可減少遺失所收集資料的風險。  
@@ -41,22 +41,22 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @cache_window = ] *cache_window*  
- 這是在不遺失資料的情況下，重試將資料上傳至管理資料倉儲，但卻失敗的次數。 *cache_window*已**int**預設值為 1。 *cache_window*可以有下列值之一：  
+ [ @cache_window = ]*cache_window*  
+ 這是在不遺失資料的情況下，重試將資料上傳至管理資料倉儲，但卻失敗的次數。 *cache_window*是**int** ，預設值是1。 *cache_window*可以具有下列其中一個值：  
   
 |值|描述|  
 |-----------|-----------------|  
 |-1|從先前上傳失敗中快取所有上傳資料。|  
 |0|不要從上傳失敗中快取任何資料。|  
-|*n*|從 n 次先前上傳失敗，快取資料所在*n* > = 1。|  
+|*n*|從 n 個先前的上傳失敗中快取資料，其中*n* >= 1。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 您必須先停用資料收集器，然後再變更快取視窗組態。 如果資料收集器為啟用狀態，這個預存程序就會失敗。 如需詳細資訊，請參閱 <<c0> [ 啟用或停用資料收集](../../relational-databases/data-collection/enable-or-disable-data-collection.md)，並[管理資料收集](../../relational-databases/data-collection/manage-data-collection.md)。  
+ 您必須先停用資料收集器，然後再變更快取視窗組態。 如果資料收集器為啟用狀態，這個預存程序就會失敗。 如需詳細資訊，請參閱[啟用或停用資料收集](../../relational-databases/data-collection/enable-or-disable-data-collection.md)和[管理資料收集](../../relational-databases/data-collection/manage-data-collection.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 dc_admin (具有 EXECUTE 權限) 固定資料庫角色中的成員資格，才能執行此程序。  
   
 ## <a name="examples"></a>範例  
@@ -74,6 +74,6 @@ EXECUTE dbo.sp_syscollector_enable_collector;
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_syscollector_set_cache_directory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)  
+ [sp_syscollector_set_cache_directory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)  
   
   

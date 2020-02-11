@@ -1,5 +1,5 @@
 ---
-title: 群組物件 (ADOX) |Microsoft Docs
+title: Group 物件（ADOX） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,32 +16,32 @@ ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b4b3de5f445ddd09bf7d069b0b93d82c6f8de978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966219"
 ---
 # <a name="group-object-adox"></a>Group 物件 (ADOX)
-代表可受保護的資料庫內的存取權限的群組帳戶。  
+代表在安全資料庫中具有存取權限的群組帳戶。  
   
 ## <a name="remarks"></a>備註  
- [群組](../../../ado/reference/adox-api/groups-collection-adox.md)的集合[目錄](../../../ado/reference/adox-api/catalog-object-adox.md)代表所有類別目錄的群組帳戶。 **群組**收集[使用者](../../../ado/reference/adox-api/user-object-adox.md)表示只將使用者所屬的群組。  
+ [目錄](../../../ado/reference/adox-api/catalog-object-adox.md)的[Groups](../../../ado/reference/adox-api/groups-collection-adox.md)集合代表所有目錄的群組帳戶。 [使用者](../../../ado/reference/adox-api/user-object-adox.md)的**Groups**集合只代表使用者所屬的群組。  
   
- 使用屬性、 集合和方法**群組**物件時，您可以：  
+ 使用**群組**物件的屬性、集合和方法，您可以：  
   
--   識別群組[名稱](../../../ado/reference/adox-api/name-property-adox.md)屬性。  
+-   識別具有[Name](../../../ado/reference/adox-api/name-property-adox.md)屬性的群組。  
   
--   判斷是否群組具有 「 讀取、 寫入或刪除權限[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)並[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)方法。  
+-   使用[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)和[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)方法，判斷群組是否具有讀取、寫入或刪除許可權。  
   
--   在具有群組的成員資格的使用者帳戶的存取[使用者](../../../ado/reference/adox-api/users-collection-adox.md)集合。  
+-   存取具有[使用者](../../../ado/reference/adox-api/users-collection-adox.md)集合之群組成員資格的使用者帳戶。  
   
--   存取提供者特有的屬性，與[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
+-   使用[properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合存取提供者特定的屬性。  
   
  本章節包含下列主題。  
   
 -   [Group 物件屬性、方法和事件](../../../ado/reference/adox-api/group-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [群組集合 (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
+ [Groups 集合（ADOX）](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Users 集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

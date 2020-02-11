@@ -1,5 +1,5 @@
 ---
-title: 選項 （SQL Server 物件總管-命令） |Microsoft Docs
+title: 選項（SQL Server 物件總管-命令） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999300"
 ---
-# <a name="options-sql-server-object-explorer-commands"></a>選項 （SQL Server 物件總管-命令）
+# <a name="options-sql-server-object-explorer-commands"></a>選項（SQL Server 物件總管-命令）
   當您以滑鼠右鍵按一下 [物件總管] 中的資料表或檢視時，即會出現可用來顯示資料表資料列的以下兩個選項：  
   
 -   **選取前 1000 個資料列**  
@@ -33,13 +33,13 @@ ms.locfileid: "62999300"
  使用 [一般指令碼選項]  對話方塊，以變更將會開啟的資料列數目。  
   
 ## <a name="general-scripting-options"></a>一般指令碼選項  
- **選取 [Top 值\<n > 筆稽核記錄] 命令**  
+ **[選取前\<n 個]> [Audit record] 命令的值**  
  指定要傳回的稽核資料列數目。 預設為 1000 個資料列。  
   
- **值編輯前的\<n > 資料列 命令**  
+ **[編輯前\<n 個> 個數據列] 命令的值**  
  指定當您編輯資料表中的資料列時，所要傳回的資料列數目。 預設為 200 個資料列。  
   
- **選取 [Top 值\<n > 資料列] 命令**  
+ **[選取前\<n 個> 個數據列] 命令的值**  
  指定在建立的查詢編輯器指令碼中所指定的傳回資料列數目。 預設為 1000 個資料列。  
   
 ## <a name="see-also"></a>另請參閱  

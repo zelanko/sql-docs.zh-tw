@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d58f3121cc55a05a564eaeb0975a8154e51a12c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960742"
 ---
 # <a name="oledb-event-category"></a>OLEDB 事件類別目錄
-  **OLEDB** 事件類別目錄包含一般 OLEDB 事件。  
+  **Oledb**事件類別目錄包含一般 OLEDB 事件。  
   
 ## <a name="in-this-section"></a>本節內容  
   

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921792"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>在不還原資料的情況下復原資料庫 (Transact-SQL)
@@ -63,7 +63,7 @@ RESTORE DATABASE AdventureWorks2012
   
  用於僅復原之檔案還原的 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 語法為：  
   
- RESTORE DATABASE *database_name* { FILE **=** _logical_file_name_ | FILEGROUP **=** _logical_filegroup_name_ }[ **,** ...*n* ] WITH RECOVERY  
+ 還原資料庫*database_name* {FILE **=** _logical_file_name_ |FILEGROUP **=** _logical_filegroup_name_ } [ **，**.。。*n* ] WITH RECOVERY  
   
  **範例**  
   

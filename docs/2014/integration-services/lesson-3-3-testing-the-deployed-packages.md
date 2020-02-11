@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 92055ceb4226406fe26d7ce23491c81606f292c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891806"
 ---
 # <a name="step-3-testing-the-deployed-packages"></a>步驟 3：測試部署的封裝
@@ -22,7 +22,8 @@ ms.locfileid: "62891806"
   
  在其他 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教學課程中，則是使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)][偵錯] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]功能表上的 **[開始偵錯]** 選項，在 **(** 的開發環境) 中執行封裝。 這時將會以不同的方式執行封裝。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了幾項工具，您可以用來在測試和實際執行環境中執行封裝，這些工具為：命令提示字元公用程式 `dtexec` 和「執行封裝公用程式」。 「執行封裝公用程式」是以 `dtexec` 為基礎所建立的圖形化工具。 這兩項工具都會立即執行封裝。 此外， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 還提供了 SQL Server Agent 的子系統，這套子系統是特別設計的，它會將封裝執行排程為 SQL Server Agent 作業中的一個步驟。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了幾項工具，您可以用來在測試和實際執行環境中執行封裝，這些工具為：命令提示字元公用程式 `dtexec` 和「執行封裝公用程式」。 「執行封裝公用程式」是以 `dtexec` 為基礎所建立的圖形化工具。 這兩項工具都會立即執行封裝。 此外， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 還提供了 SQL Server Agent 的子系統，這套子系統是特別設計的，它會將封裝執行排程為 SQL Server Agent 作業中的一個步驟。  
   
  您將會使用「執行封裝公用程式」來執行部署的封裝。 封裝將會直接使用，因此，您不必更新對話方塊中任何頁面上的資訊。 您將會從 [一般] 頁面開始執行封裝，這也就是「執行封裝公用程式」的第一個頁面。 如果需要，可以按一下其他頁面，以查看頁面中所包含的各封裝資訊。  
   
@@ -71,7 +72,7 @@ ms.locfileid: "62891806"
   
 2.  在 **[連接到伺服器]** 對話方塊中，從 **[伺服器類型]** 清單中選取 **[Database Engine]** ，並在 **[伺服器名稱]** 方塊中提供安裝教學課程封裝所在的伺服器名稱或是輸入 (local)，然後選取驗證模式。 如果要使用「SQL Server 驗證」，請提供使用者名稱和密碼。  
   
-3.  按一下 **[連接]** 。  
+3.  按一下 [ **連接**]。  
   
 4.  在查詢視窗中，輸入或貼上下列 SQL 陳述式：  
   
@@ -91,7 +92,7 @@ ms.locfileid: "62891806"
   
 2.  如果提示您重新連接，請在 **[連接到伺服器]** 對話方塊中，從 **[伺服器類型]** 清單中選取 **[Database Engine]** ，並在 **[伺服器名稱]** 方塊中提供安裝教學課程封裝所在的伺服器名稱或是輸入 (local)，然後選取驗證模式。 如果要使用「SQL Server 驗證」，請提供使用者名稱和密碼。  
   
-3.  按一下 **[連接]** 。  
+3.  按一下 [ **連接**]。  
   
 4.  在查詢視窗中，輸入或貼上下列 SQL 陳述式：  
   
@@ -103,7 +104,7 @@ ms.locfileid: "62891806"
   
      查詢會傳回 21 個資料列。 傳回結果是由 XML 資料檔 (orders.xml) 中的資料列所組成。 每一個資料列都是依國家/地區排序的摘要；資料列中會列出國家/地區的名稱、每個國家/地區的訂單數目，以及最新和最舊訂單的日期。  
   
-![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [dtexec 公用程式](packages/dtexec-utility.md)  

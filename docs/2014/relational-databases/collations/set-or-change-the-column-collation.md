@@ -14,16 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918975"
 ---
 # <a name="set-or-change-the-column-collation"></a>設定或變更資料行定序
   您可以透過為資料表中特定資料行指定不同的定序並使用下列其中一種方法，覆寫 `char`、`varchar`、`text`、`nchar`、`nvarchar` 和 `ntext` 資料的資料庫定序：  
   
--   [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 和 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)的 COLLATE 子句。 例如：  
+-   
+  [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 和 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)的 COLLATE 子句。 例如：  
   
     ```  
     CREATE TABLE dbo.MyTable  
@@ -36,9 +37,9 @@ ms.locfileid: "62918975"
     GO  
     ```  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 COLLATE 子句。 如需詳細資訊，請參閱 [定序與 Unicode 支援](collation-and-unicode-support.md)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 如需詳細資訊，請參閱 [定序與 Unicode 支援](collation-and-unicode-support.md)。  
   
--   使用`Column.Collation`屬性中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO)。  
+-   使用管理`Column.Collation`物件（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO）中的屬性。  
   
  如果目前下列任何一個項目參考資料行定序的話，就無法變更其定序：  
   
@@ -87,7 +88,7 @@ GO
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
- 因為**tempdb**會使用預設伺服器定序和`TestPermTab.Col1`使用不同的定序，SQL Server 傳回此錯誤訊息：「 無法解析定序衝突，'Latin1_General_CI_AS_KS_WS' 與 'Estonian_CS_AS' 中等作業。 」  
+ 因為 **tempdb** 使用預設伺服器定序，而 `TestPermTab.Col1` 使用不同的定序，所以 SQL Server 會傳回此錯誤訊息：「無法解析等於作業中，'Latin1_General_CI_AS_KS_WS' 與 'Estonian_CS_AS' 之間的定序衝突」。  
   
  為避免此錯誤，您可以使用以下任一種替代方法：  
   

@@ -1,5 +1,5 @@
 ---
-title: 連接的 Close 方法、 Table Type 屬性範例 (VB) |Microsoft Docs
+title: Connection Close 方法、Table Type 屬性範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4559a8d46852f37f2e828ce8f4abbd0e40845744
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966700"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Connection Close 方法、Table Type 屬性範例 (VB)
-設定[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)屬性設**Nothing**應該關閉目錄的連線。 相關聯的集合是空的。 從目錄中的結構描述物件所建立的任何物件會被遺棄。 任何已快取這些物件的屬性仍然可以使用，但嘗試讀取屬性需要呼叫提供者將會失敗。  
+將[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)屬性設定為 [**無**] 時，應該會關閉與目錄的連接。 相關聯的集合將會是空的。 從目錄中的架構物件建立的任何物件將會孤立。 已快取之物件上的任何屬性仍然可以使用，但嘗試讀取要求提供者呼叫的屬性將會失敗。  
   
 ```  
 ' BeginCloseConnectionVB  
@@ -66,17 +66,17 @@ End Sub
 ' EndCloseConnectionVB  
 ```  
   
- 關閉[連接](../../../ado/reference/ado-api/connection-object-ado.md)來開啟 類別目錄的物件應該要設定相同的效果**ActiveConnection**屬性設**Nothing**。  
+ 關閉用來開啟目錄的[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，其效果應該與將**ActiveConnection**屬性設定為 [**無**] 相同。  
   
 ```  
 Attribute VB_Name = "Connection"  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ActiveConnection 屬性 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog 物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [資料行物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [資料行集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Table 物件 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Tables 集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
+ [ActiveConnection 屬性（ADOX）](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
+ [Catalog 物件（ADOX）](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Column 物件（ADOX）](../../../ado/reference/adox-api/column-object-adox.md)   
+ [Columns 集合（ADOX）](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Table 物件（ADOX）](../../../ado/reference/adox-api/table-object-adox.md)   
+ [Tables 集合（ADOX）](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Type 屬性 (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

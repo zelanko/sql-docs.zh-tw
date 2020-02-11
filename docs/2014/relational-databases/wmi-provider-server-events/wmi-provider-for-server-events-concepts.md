@@ -1,5 +1,5 @@
 ---
-title: WMI 事件提供者伺服器概念 |Microsoft Docs
+title: 伺服器事件的 WMI 提供者概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a0ef44b57e092c13b4046b250c99fca5eaea101
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211575"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>伺服器事件的 WMI 提供者概念
@@ -39,7 +39,7 @@ ms.locfileid: "68211575"
  [範例：使用伺服器事件的 WMI 提供者建立 SQL Server Agent 警示](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  提供使用 WMI 提供者傳回在其上建立 SQL Server Agent 警示之追蹤事件資訊的範例。  
   
- [範例：使用.NET Framework 使用 WMI 事件提供者](sample-using-the-wmi-event-provider-with-the-net-framework.md)  
+ [範例：搭配 .NET Framework 使用 WMI 事件提供者](sample-using-the-wmi-event-provider-with-the-net-framework.md)  
  提供使用 WMI 提供者傳回 C# 應用程式中之事件資料的範例。  
   
  [伺服器事件類別和屬性的 WMI 提供者](wmi-provider-for-server-events-classes-and-properties.md)  

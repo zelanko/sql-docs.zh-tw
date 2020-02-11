@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022597"
 ---
 # <a name="configure-an-oracle-publisher"></a>設定 Oracle 發行者
@@ -26,7 +26,7 @@ ms.locfileid: "63022597"
   
 2.  對於您將發行的資料表，則在每個資料表上直接 (不透過角色) 將 SELECT 權限授與您在步驟一中建立的 Oracle 管理使用者。  
   
-3.  在「 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」上安裝 Oracle 用戶端軟體和 OLE DB 提供者，然後停止並重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 如果「散發者」在 64 位元平台上執行，則必須使用 Oracle OLE DB 提供者的 64 位元版本。  
+3.  在「散發者」上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安裝 Oracle 用戶端軟體和 OLE DB 提供者，然後停止[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]並重新啟動實例。 如果「散發者」在 64 位元平台上執行，則必須使用 Oracle OLE DB 提供者的 64 位元版本。  
   
 4.  在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端將 Oracle 資料庫設為「發行者」。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63022597"
 > [!NOTE]  
 >  用 **CASCADE** 選項來卸除 **MSSQLSERVERDISTRIBUTOR** 公用同義字和設定的 Oracle 複寫使用者，會從「Oracle 發行者」移除所有的複寫物件。  
   
- 在 Oracle 複寫使用者結構描述的安裝程式中會提供範例指令碼進行輔助。 安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 後，可在下列目錄中取得此指令碼： *\<磁碟機>* :\\\Program Files\Microsoft SQL Server\\ *\<執行個體名稱>* \MSSQL\Install\oracleadmin.sql。 它也包含在＜ [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md)＞主題中。  
+ 在 Oracle 複寫使用者結構描述的安裝程式中會提供範例指令碼進行輔助。 安裝之後，可在下列目錄中取得此腳本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]： * \<磁片磁碟機>*：\\\Program Files\Microsoft\\SQL Server*\<InstanceName>* \mssql\install\oracleadmin.sql。 它也包含在＜ [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md)＞主題中。  
   
  使用具有 DBA 權限的帳戶連接到 Oracle 資料庫並執行指令碼。 此指令碼會提示輸入複寫管理使用者結構描述的使用者與密碼，以及要在其中建立物件的預設資料表空間 (資料表空間必須已經存在於 Oracle 資料庫中)。 如需如何為物件指定其他資料表空間的資訊，請參閱[管理 Oracle 資料表空間](manage-oracle-tablespaces.md)。 可以選擇任何使用者名稱和增強式密碼，但是需將兩者都記下來，因為稍後當您將 Oracle 資料庫設為「發行者」時會提示需要此資訊。 建議僅將結構描僅用於複寫所需的物件；不要建立資料表來發行於此結構描述中。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63022597"
   
  在 Oracle Universal Installer 中，您將提供下列資訊：  
   
-|[資訊]|描述|  
+|資訊|描述|  
 |-----------------|-----------------|  
 |Oracle Home|這是到 Oracle 軟體之安裝目錄的路徑。 接受預設路徑 (C:\oracle\ora90 或類似路徑) 或輸入其他路徑。 如需有關 Oracle Home 的詳細資訊，請參閱本主題後面的「Oracle Home 的注意事項」。|  
 |Oracle Home 名稱|Oracle Home 路徑的別名。|  
@@ -97,9 +97,9 @@ ms.locfileid: "63022597"
   
  如果成功連接到「Oracle 發行者」，則嘗試使用與您建立之複寫管理使用者結構描述相關聯的帳戶和密碼登入資料庫。 當以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務使用的 Windows 帳戶執行時，必須執行下列項目：  
   
-1.  按一下 **[開始]** ，然後按一下 **[執行]** 。  
+1.  按一下 [開始]****，然後按一下 [執行]****。  
   
-2.  輸入 `cmd` ，然後按一下 **[確定]** 。  
+2.  輸入 `cmd` ，然後按一下 **[確定]**。  
   
 3.  在命令提示字元中，輸入：  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63022597"
   
 ## <a name="see-also"></a>另請參閱  
  [Oracle 發行者的管理考量](administrative-considerations-for-oracle-publishers.md)   
- [Oracle 發行者的資料類型對應](data-type-mapping-for-oracle-publishers.md)   
+ [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md)   
  [Oracle 發行相關術語字彙](glossary-of-terms-for-oracle-publishing.md)   
  [Oracle 發行概觀](oracle-publishing-overview.md)  
   

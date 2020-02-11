@@ -1,5 +1,5 @@
 ---
-title: SortOrder 屬性範例 (VB) |Microsoft Docs
+title: SortOrder 屬性範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4fe5c9bc18e0bc84dc8629ebc42227dad01ea3ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965194"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder 屬性範例 (VB)
-此範例示範[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)屬性[資料行](../../../ado/reference/adox-api/column-object-adox.md)的已附加至[資料行](../../../ado/reference/adox-api/columns-collection-adox.md)集合[索引](../../../ado/reference/adox-api/index-object-adox.md)。 程式碼中的國家/地區資料行附加遞增索引**員工**資料表，然後顯示記錄。 然後程式碼中的國家/地區資料行附加遞減索引**員工**資料表，並再次顯示的記錄。 遞增和遞減索引之間的差異會顯示。  
+這個範例會示範已附加至[索引](../../../ado/reference/adox-api/index-object-adox.md)之資料[行](../../../ado/reference/adox-api/columns-collection-adox.md)集合的資料[行](../../../ado/reference/adox-api/column-object-adox.md)的[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)屬性。 此程式碼會將遞增索引附加至**Employees**資料表中的 Country 資料行，然後顯示記錄。 然後，程式碼會將遞減索引附加至**employee 資料表的**Country 資料行，然後再次顯示記錄。 會顯示遞增和遞減索引之間的差異。  
   
 ```  
 ' BeginSortOrderVB  
@@ -137,7 +137,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料行物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [資料行集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Index 物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
+ [Column 物件（ADOX）](../../../ado/reference/adox-api/column-object-adox.md)   
+ [Columns 集合（ADOX）](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Index 物件（ADOX）](../../../ado/reference/adox-api/index-object-adox.md)   
  [SortOrder 屬性 (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)

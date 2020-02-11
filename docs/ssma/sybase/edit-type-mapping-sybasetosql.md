@@ -1,5 +1,5 @@
 ---
-title: 編輯類型對應 (SybaseToSQL) |Microsoft Docs
+title: 編輯類型對應（SybaseToSQL） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,40 +10,40 @@ ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: cd8dfbd7aa4205424c45861f6ada1113f76d344e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029168"
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>編輯類型對應 (SybaseToSQL)
-**編輯類型對應**對話方塊可讓您指定類型的來源和目的地的資料庫物件之間的對應方式。  
+[**編輯類型對應**] 對話方塊可讓您指定如何在來源與目的地資料庫物件之間對應類型。  
   
-您可以存取此對話方塊中，在幾個地方：  
+您可以在數個位置存取此對話方塊：  
   
--   當您選取來源資料庫或資料庫物件**型別對應**右邊的 [中繼資料總管] 會出現的索引標籤。 按一下 **新增**以加入新的型別對應，或按一下**編輯**若要變更現有的型別對應。  
+-   當您選取源資料庫或資料庫物件時，[**類型對應**] 索引標籤會出現在 [中繼資料] explorer 的右邊。 按一下 [**加入**] 以加入新的類型對應，或按一下 [**編輯**] 以變更現有的類型對應。  
   
--   在 **工具**功能表上，選取**專案設定**或是**預設專案設定**。 在出現的對話方塊中，選取**型別對應**。 按一下 **新增**以加入新的型別對應，或按一下**編輯**若要變更現有的型別對應。  
+-   在 [**工具**] 功能表上，選取 [**專案設定**] 或 [**預設專案設定**]。 在產生的對話方塊中，選取 [**類型對應**]。 按一下 [**加入**] 以加入新的類型對應，或按一下 [**編輯**] 以變更現有的類型對應。  
   
-資料表特定的型別對應會覆寫資料庫，以及專案型別對應。 特定資料庫的對應會覆寫專案對應。  
+資料表特定類型對應會覆寫資料庫和專案類型對應。 資料庫特定對應會覆寫專案對應。  
   
 ## <a name="options"></a>選項。  
 **來源類型**  
-選取來源資料類型對應至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。  
+選取要對應至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型的源資料類型。  
   
-下列欄位的可變長度資料類型時，會出現下**來源類型**:  
+如果資料類型的長度可變，下欄欄位會出現在 [**來源類型**] 底下：  
   
-**來源**  
-指定此對應的最小長度。 例如，對於**nchar**資料類型，您可以輸入 10，以指定此對應是範圍開始**nchar(10)** 。  
+**從**  
+指定此對應的最小長度。 例如，針對**Nchar**資料類型，您可以輸入10來指定此對應是針對從**Nchar （10）** 開始的範圍。  
   
-**To**  
-指定此對應的最大長度。 例如，對於**nchar**資料類型，您可以輸入以指定此對應是範圍結束時間的 20 **nchar(20)** 。  
+**自**  
+指定此對應的最大長度。 例如，針對**Nchar**資料類型，您可以輸入20來指定此對應是針對結束于**Nchar （20）** 的範圍。  
   
-**目標類型**  
-選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所對應至來源資料類型的資料類型。 SSMA 當建立資料表或預存程序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，來源資料類型會變更為此資料型別。  
+**目標型別**  
+選取源[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型對應的資料類型。 當 SSMA 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]建立資料表或預存程式時，源資料類型將會變更為此資料類型。  
   
-下列欄位的可變長度資料類型時，會出現下**目標類型**:  
+如果資料類型是可變長度，下欄欄位會出現在 [**目標型別**] 底下：  
   
-**Replace with**  
-指定此對應的目標長度。 例如，對於**nvarchar**資料類型，您可以輸入來指定指定的來源資料類型都應該對應至 20 **nvarchar(20)** 。  
+**取代為**  
+指定此對應的目標長度。 例如，針對**Nvarchar**資料類型，您可以輸入20，指定指定的源資料類型應對應至**Nvarchar （20）**。  
   

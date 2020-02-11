@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78a7f93dc2d906f86a83f1cfd2518b39cd73c9e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510020"
 ---
 # <a name="save-changes"></a>儲存變更
@@ -33,7 +33,7 @@ ms.locfileid: "62510020"
   
  先前儲存過的項目若有變更，就會自動儲存至它們在儲存體中的儲存位置。 如果尚未儲存項目，就會出現 [另存新檔]  對話方塊，提示您輸入新的儲存位置。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **要儲存下列項目的變更嗎？**  
  將儲存選取的項目。 可以選取和取消選取項目。  
   

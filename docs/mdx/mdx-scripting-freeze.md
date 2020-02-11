@@ -1,5 +1,5 @@
 ---
-title: FREEZE 陳述式 (MDX) |Microsoft Docs
+title: 凍結語句（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4738dab411fe55808034a6d9d81a16994089ea74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138292"
 ---
 # <a name="mdx-scripting---freeze"></a>MDX 指令碼 - FREEZE
@@ -32,7 +32,7 @@ FREEZE Subcube_Expression
  傳回 Subcube 的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **凍結**陳述式會鎖定指定 subcube 中的儲存格的值，防止在 MDX 中的後續陳述式無法變更其值在後續計算中的指令碼將傳遞。  
+ **凍結**語句會鎖定指定之子報表中的資料格值，讓 MDX 腳本中的後續語句無法在後續的計算行程中變更其值。  
   
  在下列範例中，A 與 B 代表 MDX 計算指令碼中的 Subcube：  
   
@@ -44,7 +44,7 @@ B = 3
   
  此時，A 與 B 都等於 3。  
   
- 我們現在插入**凍結**函式鎖定 A subcube 中的資料格：  
+ 我們現在會插入**凍結**函式，以鎖定子集中的資料格：  
   
 ```  
 B = 2;  
@@ -56,6 +56,6 @@ B = 3
  A 現在等於 2，而 B 等於 3。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 指令碼陳述式 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [Mdx 腳本語句 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

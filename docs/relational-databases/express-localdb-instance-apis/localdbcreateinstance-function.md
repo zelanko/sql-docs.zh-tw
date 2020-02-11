@@ -16,17 +16,17 @@ ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 297dd5ca109e7b35d8d74d5daf1f8b1c7fd06703
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126935"
 ---
 # <a name="localdbcreateinstance-function"></a>LocalDBCreateInstance 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   建立新的 SQL Server Express LocalDB 執行個體。  
   
- **標頭檔：** sqlncli.h  
+ **標頭檔：** sqlncli。h  
   
 ## <a name="syntax"></a>語法  
   
@@ -95,14 +95,14 @@ HRESULT LocalDBCreateInstance(
  執行個體組態已損毀。  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
- 發生意外的錯誤。 請參閱事件記錄檔，以取得詳細資料。  
+ 發生意外錯誤。 請參閱事件記錄檔，以取得詳細資料。  
   
 ## <a name="remarks"></a>備註  
  如果具有指定名稱且完整運作的 LocalDB 執行個體已經存在，且其版本等於或高於要求的版本，則結果為 S_OK。  
   
- 在現有的執行個體變成損毀，後續呼叫時的情況下**LocalDBCreateInstance** API 方法將會失敗。 您必須手動修復或明確刪除已損毀的執行個體，才可以再次使用這些執行個體。  
+ 在現有實例損毀的情況下，後續呼叫**LocalDBCreateInstance** API 方法將會失敗。 您必須手動修復或明確刪除已損毀的執行個體，才可以再次使用這些執行個體。  
   
- 使用 LocalDB API 的程式碼範例，請參閱 < [SQL Server Express LocalDB 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 如需使用 LocalDB API 的程式碼範例，請參閱[SQL Server Express Localdb 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Express LocalDB 標頭和版本資訊](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

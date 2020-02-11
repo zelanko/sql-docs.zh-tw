@@ -1,5 +1,5 @@
 ---
-title: SQL 屬性範例 (VBScript) |Microsoft Docs
+title: SQL 屬性範例（VBScript） |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +15,17 @@ ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4974d6509a0ba864f0159271d9c8cc90e2c4047
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963396"
 ---
 # <a name="sql-property-example-vbscript"></a>SQL 屬性範例 (VBScript)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下列程式碼示範如何設定[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) SQL 參數在設計階段和呼叫它來使用資料庫的資料感知控制項的繫結*Pubs*，其隨附於 Microsoft SQL Server。 若要測試的範例，請將下列程式碼複製到一般的 ASP 文件名為**SQLDesignVBS.asp** Web 伺服器上。  
+ 下列程式碼顯示如何設定[RDS。](../../../ado/reference/rds-api/datacontrol-object-rds.md)在設計階段 DataControl SQL 參數，並使用名為*Pubs*的資料庫將它系結至資料感知控制項，這會隨附于 Microsoft SQL Server。 若要測試範例，請將下列程式碼複製到 Web 服務器上名為**SQLDesignVBS**的一般 ASP 檔中。  
   
 ```  
 <!-- BeginSQLDesignVBS -->  
@@ -88,7 +88,7 @@ body {
 <!-- EndSQLDesignVBS -->  
 ```  
   
- 下列範例示範如何設定必要的參數的**rds。DataControl**在執行階段。 若要測試此範例中，剪下並貼入正常的 ASP 文件中的下列程式碼並將它命名**SQLRuntimeVBS.asp**。 ASP 指令碼會識別您的伺服器。  
+ 下列範例顯示如何設定 RDS 的必要參數 **。** 在執行時間 DataControl。 若要測試此範例，請將下列程式碼剪下並貼入一般 ASP 檔中，並將它命名為**SQLRuntimeVBS。** ASP 腳本會識別您的伺服器。  
   
 ```  
 <!-- BeginSQLRuntimeVBS -->  
@@ -175,7 +175,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [DataControl 物件（RDS）](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [SQL 屬性](../../../ado/reference/rds-api/sql-property.md)
 
 

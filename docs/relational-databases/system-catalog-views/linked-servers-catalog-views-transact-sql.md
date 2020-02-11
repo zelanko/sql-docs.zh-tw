@@ -1,5 +1,5 @@
 ---
-title: 連結的伺服器目錄檢視 (TRANSACT-SQL) |Microsoft Docs
+title: 連結的伺服器目錄 Views （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 06d53a67-7804-4f1f-8201-3e42dc48ba79
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 03d7058e0e378e3848fe51a2df56886cbb51bcd7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68127875"
 ---
 # <a name="linked-servers-catalog-views-transact-sql"></a>連結伺服器目錄檢視 (Transact-SQL)
@@ -34,6 +34,6 @@ ms.locfileid: "68127875"
   
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [系統檢視表&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [&#40;Transact-sql&#41;的系統檢視](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

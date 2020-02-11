@@ -1,5 +1,5 @@
 ---
-title: 路徑運算式步驟中指定軸 |Microsoft Docs
+title: 在路徑運算式步驟中指定軸 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,10 +22,10 @@ ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946486"
 ---
 # <a name="path-expressions---specifying-axis"></a>路徑運算式 - 指定軸
@@ -35,32 +35,32 @@ ms.locfileid: "67946486"
   
 -   軸  
   
--   A[節點測試](../xquery/path-expressions-specifying-node-test.md)  
+-   [節點測試](../xquery/path-expressions-specifying-node-test.md)  
   
--   [零或多個步驟限定詞 （選擇性）](../xquery/path-expressions-specifying-predicates.md)  
+-   [零或多個步驟限定詞 (選擇性)](../xquery/path-expressions-specifying-predicates.md)  
   
- 如需詳細資訊，請參閱 <<c0> [ 路徑運算式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)。</c0>  
+ 如需詳細資訊，請參閱[&#40;XQuery&#41;的路徑運算式](../xquery/path-expressions-xquery.md)。  
   
  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 XQuery 實作支援下列軸步。  
   
-|座標軸|描述|  
+|軸|描述|  
 |----------|-----------------|  
-|**child**|傳回內容節點的子系。|  
-|**descendant**|傳回內容節點的所有下階。|  
-|**parent**|傳回內容節點的父系。|  
-|**attribute**|傳回內容節點的屬性。|  
-|**self**|傳回內容節點本身。|  
-|**descendant-or-self**|傳回內容節點及內容節點的所有下階。|  
+|**子**|傳回內容節點的子系。|  
+|**子體**|傳回內容節點的所有下階。|  
+|**父**|傳回內容節點的父系。|  
+|**特性**|傳回內容節點的屬性。|  
+|**供電**|傳回內容節點本身。|  
+|**子代或自我**|傳回內容節點及內容節點的所有下階。|  
   
- 所有的這些軸，除了**父**座標軸，是順向軸。 **父**軸是反向軸，因為它會向後搜尋文件階層。 例如，相對路徑運算式 `child::ProductDescription/child::Summary` 有兩個步驟，而且每個步驟都指定 `child` 軸。 第一個步驟會擷取\<ProductDescription > 元素子系內容節點。 每個\<p > 項目 節點中，第二步會擷取\<摘要 > 元素節點子系。  
+ 除了**父**軸以外，所有這些軸都是順向軸。 **父**軸是反向軸，因為它會在檔階層中向後搜尋。 例如，相對路徑運算式 `child::ProductDescription/child::Summary` 有兩個步驟，而且每個步驟都指定 `child` 軸。 第一個步驟會抓取\<內容節點的 ProductDescription> 元素子系。 針對每\<個 ProductDescription> 元素節點，第二個步驟\<會抓取摘要> 元素節點子系。  
   
- 相對路徑運算式 `child::root/child::Location/attribute::LocationID` 有三步。 前兩步每個都會指定 `child` 軸，第三步會指定 `attribute` 軸。 針對製造指示 XML 文件中的執行時**Production.ProductModel**資料表，則運算式會傳回`LocationID`屬性\<位置 > 元素節點子系\<根 > 項目。  
+ 相對路徑運算式 `child::root/child::Location/attribute::LocationID` 有三步。 前兩步每個都會指定 `child` 軸，第三步會指定 `attribute` 軸。 針對**ProductModel**資料表中的製造指示 XML 檔執行時，運算式會傳回`LocationID` \< \<根> 元素> 專案節點子系的位置屬性。  
   
 ## <a name="examples"></a>範例  
- 本主題中的查詢範例是針對所指定**xml**類型資料行中的**AdventureWorks**資料庫。  
+ 本主題中的查詢範例是針對**AdventureWorks**資料庫中的**xml**類型資料行所指定。  
   
 ### <a name="a-specifying-a-child-axis"></a>A. 指定子軸  
- 針對特定產品型號，下列查詢會擷取\<功能 > 元素節點子系\<ProductDescription > 從產品目錄描述中儲存的項目節點`Production.ProductModel`資料表。  
+ 針對特定的產品型號，下列查詢會從儲存\<在`Production.ProductModel`資料表中的產品目錄描述\<，抓取 ProductDescription> 元素節點的功能> 元素節點子系。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -72,12 +72,12 @@ WHERE ProductModelID=19
   
  請注意下列項目是從上一個查詢而來：  
   
--   `query()`方法**xml**資料型別會指定路徑運算式。  
+-   Xml `query()`資料類型的**** 方法會指定路徑運算式。  
   
--   在路徑運算式中的步驟可指定 `child` 軸和節點名稱、`ProductDescription` 與 `Features` 做為節點測試。 如需節點測試的詳細資訊，請參閱 <<c0> [ 路徑運算式步驟中指定節點測試](../xquery/path-expressions-specifying-node-test.md)。  
+-   在路徑運算式中的步驟可指定 `child` 軸和節點名稱、`ProductDescription` 與 `Features` 做為節點測試。 如需節點測試的詳細資訊，請參閱[在路徑運算式步驟中指定節點測試](../xquery/path-expressions-specifying-node-test.md)。  
   
 ### <a name="b-specifying-descendant-and-descendant-or-self-axes"></a>B. 指定 descendant 與 descendant-or-self 軸  
- 下列使用 descendant 與 descendant-or-self 軸 此範例中的查詢針對所指定**xml**類型變數。 XML 執行個體已加以簡化，以便於能輕易地說明產生結果中的差異。  
+ 下列使用 descendant 與 descendant-or-self 軸 這個範例中的查詢是針對**xml**類型變數所指定。 XML 執行個體已加以簡化，以便於能輕易地說明產生結果中的差異。  
   
 ```  
 declare @x xml  
@@ -108,11 +108,11 @@ select @y
   
  在此運算式中，如果您為下列路徑運算式指定 descendant 軸：  
   
- `/child::a/child::b/descendant::*`您所要求的所有下階 <`b`> 項目節點。  
+ `/child::a/child::b/descendant::*`，您會要求 <`b`> 元素節點的所有下階。  
   
- 在節點測試中的星號 (*) 代表做為節點測試的節點名稱。 因此，descendant 軸、元素節點的主要節點類型將決定要傳回的節點類型。 也就是，運算式會傳回所有的元素節點。 但不會傳回文字節點。 如需有關主要節點類型和其關聯性與節點測試的詳細資訊，請參閱[在路徑運算式步驟中指定節點測試](../xquery/path-expressions-specifying-node-test.md)主題。  
+ 在節點測試中的星號 (*) 代表做為節點測試的節點名稱。 因此，descendant 軸、元素節點的主要節點類型將決定要傳回的節點類型。 也就是，運算式會傳回所有的元素節點。 但不會傳回文字節點。 如需主要節點類型及其與節點測試之關聯性的詳細資訊，請參閱[在路徑運算式步驟主題中指定節點測試](../xquery/path-expressions-specifying-node-test.md)。  
   
- 元素節點 <`c`> 和 <`d`> 會傳回，如下列結果所示：  
+ 會傳回 <`c`> 和 <`d`> 的元素節點，如下列結果所示：  
   
 ```  
 <c>text2  
@@ -121,7 +121,7 @@ select @y
 <d>text3</d>  
 ```  
   
- 如果您指定而不是 descendant 軸的下階或本身 」 座標軸`/child::a/child::b/descendant-or-self::*`傳回內容節點中，項目 <`b`>，以及其下階。  
+ 如果您指定子系或本身軸，而不是下階軸， `/child::a/child::b/descendant-or-self::*`則會傳回內容節點、元素`b` <> 和其子系。  
   
  以下是結果：  
   
@@ -139,7 +139,7 @@ select @y
 <d>text3</d>   
 ```  
   
- 下列範例查詢，針對**AdventureWorks**資料庫擷取的所有下階元素節點 <`Features`> 元素子系 <`ProductDescription`> 項目：  
+ 下列針對**AdventureWorks**資料庫的範例查詢會抓取 <`Features` `ProductDescription`> 專案之 <> 專案子系的所有子代元素節點：  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -151,9 +151,9 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="c-specifying-a-parent-axis"></a>C. 指定父軸  
- 下列查詢會傳回 <`Summary`> 元素子系 <`ProductDescription`> 產品目錄 XML 文件中的項目儲存在`Production.ProductModel`資料表。  
+ 下列查詢會傳回`Summary` `ProductDescription` `Production.ProductModel`資料表中儲存的產品目錄 XML 檔中，<> 專案的 <> 元素子系。  
   
- 此範例會使用父軸傳回父系的 <`Feature`> 項目，並擷取 <`Summary`> 元素子系 <`ProductDescription`> 項目。  
+ 這個範例會使用父軸傳回 <`Feature`> 專案的父系，並抓取 <`Summary` `ProductDescription`> 元素的 <> 專案子系。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -174,7 +174,7 @@ WHERE  ProductModelID=19
   
  在下列範例中提供了更有用的父軸範例。  
   
- 儲存在每個產品型號目錄描述**CatalogDescription**資料行**ProductModel**資料表具有`<ProductDescription>`具有項目`ProductModelID`屬性和`<Features>`子元素，如下列片段所示：  
+ 儲存在**ProductModel**資料表之**CatalogDescription**資料行中的每個產品型號目錄描述`<ProductDescription>`都具有具有`ProductModelID`屬性和`<Features>`子項目的元素，如下列片段所示：  
   
 ```  
 <ProductDescription ProductModelID="..." >  
@@ -186,14 +186,14 @@ WHERE  ProductModelID=19
 </ProductDescription>  
 ```  
   
- 此查詢在 FLWOR 陳述式中設定了 iterator 變數、`$f`，以傳回 `<Features>` 元素的元素子系。 如需詳細資訊，請參閱 < [FLWOR 陳述式和反覆項目&#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)。 對於每個功能，`return` 子句會以下列形式建構 XML：  
+ 此查詢在 FLWOR 陳述式中設定了 iterator 變數、`$f`，以傳回 `<Features>` 元素的元素子系。 如需詳細資訊，請參閱[FLWOR 語句和反復專案 &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)。 對於每個功能，`return` 子句會以下列形式建構 XML：  
   
 ```  
 <Feature ProductModelID="...">...</Feature>  
 <Feature ProductModelID="...">...</Feature>  
 ```  
   
- 若要新增`ProductModelID`針對每個`<Feature`> 項目，`parent`座標軸指定：  
+ 若要為`ProductModelID`每個`<Feature`> 專案加入， `parent`請指定軸：  
   
 ```  
 SELECT CatalogDescription.query('  

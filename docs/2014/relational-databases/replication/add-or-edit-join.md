@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5fb76e62e1816be53c312cc263053f854ad3b796
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62625925"
 ---
 # <a name="add-or-edit-join"></a>加入或編輯聯結
@@ -32,7 +32,7 @@ ms.locfileid: "62625925"
 > [!IMPORTANT]  
 >  聯結篩選可以包含無限數量的資料表，但如果篩選的資料表數量過多，會影響合併處理過程中的效能。 若您正在產生五個以上資料表的聯結篩選，請考慮其他方案：不要篩選小型、無法變更或主要為查詢資料表的資料表。 聯結篩選只能用於必須在訂閱者中分割的資料表之間。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  這個對話方塊包括三個步驟的處理程序，以在兩個資料表之間建立一個聯結篩選。 若要建立一個以上的聯結篩選，就必須執行此對話方塊一次以上。  
   
 1.  **確認已篩選的資料表並選取聯結的資料表**  
@@ -58,7 +58,7 @@ ms.locfileid: "62625925"
         > [!CAUTION]  
         >  選取此選項表示聯結篩選中的子資料表與父資料表之間的關聯性是一對一或一對多。 如果在父資料表中的聯結資料行有保證唯一性的條件約束，請僅選取此選項。 如果選項設定不正確，則資料可能發生非聚合的情況。  
   
-    -   僅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 依預設，合併式複寫在同步處理過程中會按逐個資料列的方式處理變更。 若要將相關的變更作為一個單位來處理，請選取 **[邏輯記錄]** 。 只有當發行項與發行集之使用邏輯記錄的需求均符合時，才可以使用此選項。 如需詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](merge/group-changes-to-related-rows-with-logical-records.md)中的＜使用邏輯記錄的考量＞一節。  
+    -   僅限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 依預設，合併式複寫在同步處理過程中會按逐個資料列的方式處理變更。 若要將相關的變更作為一個單位來處理，請選取 **[邏輯記錄]** 。 只有當發行項與發行集之使用邏輯記錄的需求均符合時，才可以使用此選項。 如需詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](merge/group-changes-to-related-rows-with-logical-records.md)中的＜使用邏輯記錄的考量＞一節。  
   
  您加入或編輯篩選之後，請按一下 **[確定]** 以儲存變更並關閉對話方塊。 您指定的篩選會被剖析，並會針對 SELECT 子句中的資料表執行。 如果篩選陳述式包含語法錯誤或其他問題，則系統會通知您，然後您可以編輯該篩選陳述式。  
   

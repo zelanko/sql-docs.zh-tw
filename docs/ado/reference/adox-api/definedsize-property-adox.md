@@ -1,5 +1,5 @@
 ---
-title: DefinedSize 屬性 (ADOX) |Microsoft Docs
+title: DefinedSize 屬性（ADOX） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,24 +20,24 @@ ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4f2777eeb23e7a78a1df757a9054a04c7f6f9df2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966445"
 ---
 # <a name="definedsize-property-adox"></a>DefinedSize 屬性 (ADOX)
-指出資料行指定最大大小。  
+表示資料行的指定大小上限。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定，並傳回**長**是以字元為單位的資料值的長度上限的值。  
+ 設定並傳回**長**數值，這是資料值的最大字元長度。  
   
 ## <a name="remarks"></a>備註  
  預設值為零 (0)。  
   
- 這個屬性是唯讀[資料行](../../../ado/reference/adox-api/column-object-adox.md)已經附加到集合的物件。  
+ 對於已經附加至集合的資料[行](../../../ado/reference/adox-api/column-object-adox.md)物件而言，這個屬性是唯讀的。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Column 物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,5 +1,5 @@
 ---
-title: 定量運算式 (XQuery) |Microsoft Docs
+title: 定量運算式（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,10 @@ ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1cdbff23d2158dec00b6b8d050d6a4a90341bd23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946379"
 ---
 # <a name="quantified-expressions-xquery"></a>定量運算式 (XQuery)
@@ -46,9 +46,9 @@ ms.locfileid: "67946379"
 ( some | every ) <variable> in <Expression> (,...) satisfies <Expression>  
 ```  
   
- 您可以在查詢中使用這些運算式，以明確地將存在或通用定量套用至一或多個時序中的運算式。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，`satisfies` 子句中的運算式必須產生下列其中一個：節點時序、空白時序或布林值。 該運算式所產生的有效布林值結果將用於定量中。 使用的存在定量**某些**會傳回 True，如果至少一個與數量詞繫結的值有符合的運算式，則為 True 的結果。 使用通用定量**每個**與數量詞繫結的所有值必須為 True。  
+ 您可以在查詢中使用這些運算式，以明確地將存在或通用定量套用至一或多個時序中的運算式。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，`satisfies` 子句中的運算式必須產生下列其中一個：節點時序、空白時序或布林值。 該運算式所產生的有效布林值結果將用於定量中。 如果數量詞所系結的至少一個值在滿足運算式中產生 True 結果，則使用**部分**的存在定量會傳回 true。 針對數量詞所系結的所有值，使用**每個**的通用定量都必須為 True。  
   
- 例如，下列查詢會檢查每個\<位置 > 項目，查看是否有 LocationID 屬性。  
+ 例如，下列查詢會檢查每個\<位置> 元素，以查看它是否有 LocationID 屬性。  
   
 ```  
 SELECT Instructions.query('  
@@ -64,13 +64,13 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- 因為 LocationID 是必要的屬性的\<位置 > 項目，您會收到預期的結果：  
+ 因為 LocationID 是\<Location> 元素的必要屬性，所以您會收到預期的結果：  
   
 ```  
 <Result>All work centers have Location ID</Result>   
 ```  
   
- 而不是使用[query （） 方法](../t-sql/xml/query-method-xml-data-type.md)，您可以使用[value （） 方法](../t-sql/xml/value-method-xml-data-type.md)關聯式的世界中，以傳回結果，如下列查詢所示。 如果所有的工作中心位置都有 LocationID 屬性，查詢將會傳回 True。 否則，查詢會傳回 False。  
+ 除了使用[query （）方法](../t-sql/xml/query-method-xml-data-type.md)，您可以使用[value （）方法](../t-sql/xml/value-method-xml-data-type.md)將結果傳回給關聯式世界，如下列查詢所示。 如果所有的工作中心位置都有 LocationID 屬性，查詢將會傳回 True。 否則，查詢會傳回 False。  
   
 ```  
 SELECT Instructions.value('  

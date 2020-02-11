@@ -1,5 +1,5 @@
 ---
-title: WillMove 和 MoveComplete 事件 (ADO) |Microsoft Docs
+title: WillMove 和 MoveComplete 事件（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,14 +20,14 @@ ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c91f3166b493ac1e2fada3e759cb107e34c7ca81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67945917"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove 和 MoveComplete 事件 (ADO)
-**WillMove**暫止的作業變更的目前位置之前，會呼叫事件[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 **MoveComplete**事件中的目前位置之後，呼叫**資料錄集**變更。  
+在暫止的作業變更[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)內的目前位置之前，會呼叫**WillMove**事件。 **MoveComplete**事件是在**記錄集**的目前位置變更後呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,31 +39,31 @@ MoveComplete adReason, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>參數  
  *adReason*  
- [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md)值，指定此事件的原因。 其值可以是**adRsnMoveFirst**， **adRsnMoveLast**， **adRsnMoveNext**， **adRsnMovePrevious**， **adRsnMove**，或**adRsnRequery**。  
+ [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md)值，指定此事件的原因。 其值可以是**adRsnMoveFirst**、 **adRsnMoveLast**、 **adRsnMoveNext**、 **adRsnMovePrevious**、 **adRsnMove**或**adRsnRequery**。  
   
  *pError*  
- [錯誤](../../../ado/reference/ado-api/error-object.md)物件。 說明如果發生錯誤的值*adStatus*是**adStatusErrorsOccurred**; 否則為未設定參數。  
+ [錯誤](../../../ado/reference/ado-api/error-object.md)物件。 它會描述*adStatus*的值為**adStatusErrorsOccurred**時所發生的錯誤。否則，就不會設定參數。  
   
  *adStatus*  
  [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)狀態值。  
   
- 當**WillMove**是呼叫，此參數設為**adStatusOK**如果造成事件的作業已順利完成。 它會設定為**adStatusCantDeny**如果此事件不能要求取消暫止的作業。  
+ 當呼叫**WillMove**時，如果造成事件的作業成功，此參數會設定為**adStatusOK** 。 如果此事件無法要求取消暫止的作業，則會設定為**adStatusCantDeny** 。  
   
- 當**MoveComplete**是呼叫，此參數設為**adStatusOK**如果造成事件的作業已順利完成，或**adStatusErrorsOccurred**如果作業失敗。  
+ 當呼叫**MoveComplete**時，如果造成事件的作業成功，此參數會設定為**adStatusOK** ，如果作業失敗，則設為**adStatusErrorsOccurred** 。  
   
- 再**WillMove**傳回，這個參數設定為**adStatusCancel**要求取消暫止的作業，或將此參數設定為**adStatusUnwantedEvent**若要避免後續的通知。  
+ 在**WillMove**傳回之前，請將此參數設定為**adStatusCancel**以要求取消暫止的作業，或將此參數設定為**adStatusUnwantedEvent** ，以防止後續的通知。  
   
- 再**MoveComplete**傳回，這個參數設定為**adStatusUnwantedEvent**以避免後續的通知。  
+ 在**MoveComplete**傳回之前，請將此參數設定為**adStatusUnwantedEvent** ，以防止後續的通知。  
   
  *pRecordset*  
- A[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 **資料錄集**如發生此事件。  
+ [記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 發生此事件的**記錄集**。  
   
 ## <a name="remarks"></a>備註  
- A **WillMove**或是**MoveComplete**因為下列原因可能會發生事件**資料錄集**作業：[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)，[移動](../../../ado/reference/ado-api/move-method-ado.md)， [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)，[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)，並[Requery](../../../ado/reference/ado-api/requery-method.md)。 這些事件可能會發生因為下列屬性：[篩選條件](../../../ado/reference/ado-api/filter-property.md)， [Index](../../../ado/reference/ado-api/index-property.md)，[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)， [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)，並[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)。 如果子系，也會發生這些事件**資料錄集**已**資料錄集**連線的事件和父代**資料錄集**移動。  
+ **WillMove**或**MoveComplete**事件可能會因為下列**記錄集**作業而發生： [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)、 [Move](../../../ado/reference/ado-api/move-method-ado.md)、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)和[Requery](../../../ado/reference/ado-api/requery-method.md)。 這些事件可能是因為下列屬性所造成： [Filter](../../../ado/reference/ado-api/filter-property.md)、 [Index](../../../ado/reference/ado-api/index-property.md)、 [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)、 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)和[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)。 如果子**記錄集**已連接**記錄集**事件並移動父**記錄集**，也會發生這些事件。  
   
- 您必須設定*adStatus*參數來**adStatusUnwantedEvent**每個可能*adReason*才能完全停止的任何事件的事件通知的值，包含*adReason*參數。  
+ 您必須針對每個可能的*adReason*值，將*adStatus*參數設定為**adStatusUnwantedEvent** ，才能完全停止包含*adReason*參數之任何事件的事件通知。  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [ADO 事件模型範例（VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

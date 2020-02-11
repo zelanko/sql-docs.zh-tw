@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e20363b7d26b2b668ca52d44615488e06573f730
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106381"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>變更圖表類型 (報表產生器及 SSRS)
-  當您先將圖表插入報表時，**選取圖表類型**對話方塊隨即出現。 如果您取消此對話方塊，預設會加入直條圖圖表類型。  
+  當您第一次將圖表插入報表時，[**選取圖表類型**] 對話方塊隨即出現。 如果您取消此對話方塊，預設會加入直條圖圖表類型。  
   
  在您設計報表的任何時間點，都可以將圖表類型變更為更適合報表的項目。 為資料選取正確的圖表類型非常重要，這樣才能正確加以解譯。 您應該了解每一個圖表的特性，以判斷哪一個圖表類型最適合您的資料。 如需詳細資訊，請參閱 [圖表類型 &#40;報表產生器及 SSRS&#41;](chart-types-report-builder-and-ssrs.md)。  
   

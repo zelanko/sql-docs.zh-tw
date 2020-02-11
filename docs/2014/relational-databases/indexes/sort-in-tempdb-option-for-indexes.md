@@ -18,13 +18,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49a10795cbb9177837960739890baebc221c0712
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035597"
 ---
-# <a name="sortintempdb-option-for-indexes"></a>索引的 SORT_IN_TEMPDB 選項
+# <a name="sort_in_tempdb-option-for-indexes"></a>索引的 SORT_IN_TEMPDB 選項
   當您建立或重建索引時，可將 SORT_IN_TEMPDB 選項設為 ON，以便指示 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用 **tempdb** 來儲存用來建立索引的中繼排序結果。 雖然此選項會增加建立索引所使用的暫存磁碟空間數量，但只要 **tempdb** 所在的磁碟集與使用者資料庫不同，該選項就會減少建立或重建索引所需的時間。 如需 **tempdb**的詳細資訊，請參閱 [設定 index create memory 伺服器組態選項](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)。  
   
 ## <a name="phases-of-index-building"></a>索引建立階段  
@@ -36,7 +36,7 @@ ms.locfileid: "63035597"
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將索引分葉資料列的排序結果，合併成一個排序好的資料流。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的排序合併元件將開始於每個排序結果的第一頁，找出所有頁面中的最低索引鍵，並將該分葉資料列傳送給索引建立元件。 接著處理第二低的索引鍵，然後處理第三低，其餘依此類推。 當最後一個分葉索引資料列從排序結果分頁中擷取出來之後，該處理序將切換到該排序結果的下一頁。 當排序結果範圍的所有分頁都處理好之後，該範圍將被釋出。 當每個分葉索引資料列被傳至索引建立元件之後，將被加入到緩衝區的分葉索引頁面中。 每個分葉分頁將在填滿時被寫入。 當分葉頁面被寫入時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 也會建立索引的上層。 每個上層索引分頁將在填滿時被寫入。  
   
-## <a name="sortintempdb-option"></a>SORT_IN_TEMPDB 選項  
+## <a name="sort_in_tempdb-option"></a>SORT_IN_TEMPDB 選項  
  若 SORT_IN_TEMPDB 設為 OFF，排序結果將儲存於目標檔案群組中。 在建立索引的第一階段中，交替的基底資料表頁面讀取作業與排序結果寫入作業，會將磁碟讀寫頭從一個磁碟區域移到另一個磁碟區域。 掃描資料頁時，讀寫頭將位於資料頁區域中。 當排序緩衝區已填滿，並且目前的排序結果必須寫入磁碟時，它們將移到可用空間的區域，接著當資料表頁面掃描繼續進行時，再移回資料頁區域。 第二階段中的讀寫頭移動量比較大。 這時候，排序處理序通常會交替讀取每個排序結果區域。 目標檔案群組中將會同時建立排序結果和新的索引頁面。 這表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在將讀取分散到各排序結果的同時，還必須定期跳到索引範圍，以在索引頁面填滿時寫入新的索引頁面。  
   
  若 SORT_IN_TEMPDB 選項設定為 ON，並且 **tempdb** 所在的磁碟集與目標檔案群組不同，那麼在第一階段中，發生資料頁讀取的磁碟將與寫入 **tempdb**中之排序工作區域的磁碟不同。 這代表資料索引鍵的磁碟讀取動作一般會繼續循序地穿過磁碟來進行處理，而寫入 **tempdb** 磁碟的動作一般也是循序，如同建立最後索引的寫入動作一樣。 即使其他使用者正在使用資料庫並存取個別的磁碟位址，讀取與寫入的整體模式也會因著指定了 SORT_IN_TEMPDB 而比沒有指定來得有效率。  
@@ -81,6 +81,6 @@ ms.locfileid: "63035597"
   
  [設定 index create memory 伺服器組態選項](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
   
- [索引 DDL 作業的磁碟空間需求](disk-space-requirements-for-index-ddl-operations.md)  
+ [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)  
   
   

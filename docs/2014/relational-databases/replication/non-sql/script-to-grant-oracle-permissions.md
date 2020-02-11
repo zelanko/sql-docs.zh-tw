@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7c61a21f149a50c4893c9c82d3624e0905a481b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022421"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>授與 Oracle 權限的指令碼
-  此主題中所提供的指令碼用於 Oracle 資料庫的組態期間，該資料庫會使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫發行資料。 安裝後，可在以下目錄中取得此指令碼： *\<磁碟機>* :\\\Program Files\Microsoft SQL Server\\ *\<執行個體名稱>* \MSSQL\Install\oracleadmin.sql。 如需設定 Oracle 資料庫的詳細資訊，請參閱[設定 Oracle 發行者](configure-an-oracle-publisher.md)。  
+  本主題中提供的腳本會在設定將使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]複寫發行資料的 Oracle 資料庫期間使用。 安裝之後，下列目錄也會提供此腳本： * \<磁片磁碟機>*：\\\Program Files\Microsoft SQL Server\\*\<InstanceName>* \mssql\install\oracleadmin.sql。 如需設定 Oracle 資料庫的詳細資訊，請參閱[設定 Oracle 發行者](configure-an-oracle-publisher.md)。  
   
 > [!NOTE]  
 >  此指令碼包括由異動複寫使用之觸發程序所需要的陳述式 `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`。 如果您僅使用快照式複寫，則從指令碼中移除此行。  
   
- **從 Oracle SQL\*Plus 公用程式執行指令碼**  
+ **若要從 Oracle SQL\*Plus 公用程式執行腳本**  
   
 1.  在「SQL Server 散發者」上，開啟 [命令提示字元] 視窗。  
   

@@ -18,10 +18,10 @@ ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6ed53a60bd0ef285468d71c4018ba7a4ed9cd8c6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660377"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>MultiIpConfigurationSupport 屬性 (ServerNetworkProtocol 類別)
@@ -36,15 +36,15 @@ object.MultiIpConfigurationSupport [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
- 代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例所使用之網路通訊協定的[ProtocolName 屬性（ServerNetworkProtocol 類別）](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md)物件。  
+ *目標*  
+ 代表實例所使用之[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]網路通訊協定的[ProtocolName 屬性（ServerNetworkProtocol 類別）](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- 指定伺服器網路通訊協定是否支援多個 IP 位址的布林值：如果伺服器網路通訊協定支援多個 IP 位址，則**為 true** ，如果不支援多個 ip 位址，則為**false** 。伺服器網路通訊協定。  
+ 指定伺服器網路通訊協定是否支援多個 IP 位址的布林值：如果伺服器網路通訊協定支援多個 IP 位址，**則為 true** ，如果伺服器網路通訊協定不支援多個 ip 位址，則為**false** 。  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定伺服器網路通訊協定和網路程式庫](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [設定伺服器網路通訊協定與網路程式庫](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

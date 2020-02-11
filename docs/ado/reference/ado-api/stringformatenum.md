@@ -1,5 +1,5 @@
 ---
-title: StringFormatEnum | Microsoft Docs
+title: StringFormatEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,25 +16,25 @@ ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85bef64902f014e7b5269d6df328128bc8fe8d6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937886"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
-擷取時指定的格式[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)做為字串。  
+指定以字串形式抓取[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)時的格式。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adClipString**|2|依資料列會分隔*RowDelimiter*，資料行*ColumnDelimiter*，和 null 值*NullExpr*。 這三個參數的[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法會只使用有效*StringFormat*的**adClipString**。|  
+|**adClipString**|2|藉由依*RowDelimiter*、依*ColumnDelimiter*的資料行，以及*NullExpr*的 null 值分隔資料列。 這三個[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法的參數僅適用于**adClipString**的*StringFormat* 。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- 封裝： **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
+ Package： **.com. wfc. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums.StringFormat.CLIPSTRING|  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [GetString 方法 (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)

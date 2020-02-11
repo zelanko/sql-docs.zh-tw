@@ -1,5 +1,5 @@
 ---
-title: 項目名稱的索引 (DTA) |Microsoft Docs
+title: Index 的 Name 元素（DTA） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fbf267591ccd85b31bd8436a773e2337e292d0b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62866213"
 ---
 # <a name="name-element-for-index-dta"></a>索引的 Name 元素 (DTA)
@@ -37,7 +37,8 @@ ms.locfileid: "62866213"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|**資料類型和長度**|`string`，沒有長度限制。|  
+|**資料類型和長度**|
+  `string`，沒有長度限制。|  
 |**預設值**|無。|  
 |**出現次數**|每個 `Index` 元素需要使用這個元素一次。|  
   

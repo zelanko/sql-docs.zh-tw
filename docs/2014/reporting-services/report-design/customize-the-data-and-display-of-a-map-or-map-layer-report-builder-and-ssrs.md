@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3cc939ac63f1b53e2d2d24d70edc5fe0798bcc51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106100"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自訂地圖或地圖圖層的資料和顯示 (報表產生器及 SSRS)
@@ -129,7 +129,7 @@ ms.locfileid: "66106100"
   
  群組運算式會指定與空間資料具有關聯性的分析資料如何針對圖層上的每個地圖元素進行彙總。 根據預設，群組運算式是針對空間資料與分析資料之間的關聯性指定的一組符合欄位組。 例如，對於顯示國家或地區之城市位置和人口數多寡的泡泡地圖，符合欄位包含城市名稱 [City] 和地區名稱 [Region]，因為可能會有多個城市擁有相同的名稱。 對應的群組運算式包含兩個欄位：[City] 和 [Region]。  
   
- 如需詳細資訊，請參閱 [Map Tips:How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991) (地圖提示：如何將形狀檔匯入 SQL Server 及彙總空間資料中)。  
+ 如需詳細資訊，請參閱 [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991)(地圖提示：如何將形狀檔匯入 SQL Server 及彙總空間資料中)。  
   
  
   

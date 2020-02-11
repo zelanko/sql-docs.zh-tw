@@ -1,5 +1,5 @@
 ---
-title: ALTER TABLE 陳述式限制 |Microsoft Docs
+title: ALTER TABLE 語句限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: f3e88f85-edf4-47cd-a822-292b106ddb34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1333cd6cd5946b7a3a70152e12f4d3decfa7fed0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138426"
 ---
 # <a name="alter-table-statement-limitations"></a>ALTER TABLE 陳述式限制
-DBASE 或 Paradox 驅動程式會使用時，在建立索引，並新增新的記錄，無法由 ALTER TABLE 陳述式變更資料表的結構，除非卸除索引和資料表的內容會被刪除之後。  
+使用 dBASE 或 Paradox 驅動程式時，一旦建立索引並加入新記錄之後，ALTER TABLE 語句就無法變更資料表的結構，除非卸載索引並刪除資料表的內容。  
   
- Microsoft Excel 或文字的驅動程式不支援 ALTER TABLE 陳述式。  
+ Microsoft Excel 或文字驅動程式不支援 ALTER TABLE 語句。  
   
 > [!NOTE]  
->  當您使用 Paradox 驅動程式而不需要實作 Borland Database Engine 時，不支援 ALTER TABLE 陳述式;僅讀取和附加允許陳述式。
+>  當您使用 Paradox 驅動程式，但未執行 Borland 資料庫引擎時，不支援 ALTER TABLE 語句;只允許 read 和 append 語句。

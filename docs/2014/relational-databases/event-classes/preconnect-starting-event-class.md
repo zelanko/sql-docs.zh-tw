@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0986e654430a47cc494bf1646c222b4888fc105b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033510"
 ---
 # <a name="preconnectstarting-event-class"></a>PreConnect:Starting 事件類別
@@ -37,7 +37,7 @@ ms.locfileid: "63033510"
   
 ## <a name="see-also"></a>另請參閱  
  [擴充事件](../extended-events/extended-events.md)   
- [PreConnect:Completed 事件類別](preconnect-completed-event-class.md)   
+ [PreConnect： Completed 事件類別](preconnect-completed-event-class.md)   
  [資源管理員](../resource-governor/resource-governor.md)  
   
   

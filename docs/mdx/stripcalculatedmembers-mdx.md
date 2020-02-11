@@ -1,5 +1,5 @@
 ---
-title: StripCalculatedMembers (MDX) |Microsoft Docs
+title: StripCalculatedMembers （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d4a29a8227fc7b0452f17d6da0c1f47d37738ed0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036807"
 ---
 # <a name="stripcalculatedmembers-mdx"></a>StripCalculatedMembers (MDX)
@@ -32,7 +32,7 @@ StripCalculatedMembers(Set_Expression)
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **StripCalculatedMembers**函式會移除一組中的導出的成員。 導出成員可以利用加入至一組[AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md)函式會傳回在伺服器上，定義的導出的成員或導出的成員已新增在查詢本身內，使用 WITH成員的語法。  
+ **StripCalculatedMembers**函數會從集合中移除匯出成員。 您可以使用[AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md)函數將匯出成員加入至集合，該函式會傳回伺服器上定義的匯出成員，或是使用 WITH 成員語法在查詢本身中加入的匯出成員。  
   
 ## <a name="example"></a>範例  
  下列範例會從查詢移除所有導出成員。  
@@ -78,6 +78,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011951"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>為主體授與權限
@@ -28,7 +28,7 @@ ms.locfileid: "63011951"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目為主體授與權限：**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63011951"
   
 -   設定要由結構描述擁有的類似安全性實體 (資料表、檢視表和程序)，然後授與結構描述的權限。 例如，薪資結構描述可能會擁有許多資料表、檢視表和預存程序。 只要授與此結構描述的存取權，就可以同時授與執行薪資功能的所有必要權限。 如需有關哪些安全性實體可以被授與權限的詳細資訊，請參閱＜ [Securables](../securables.md)＞。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  同意授權者 (或是指定了 AS 選項的主體) 必須具有指定了 GRANT OPTION 的權限本身，或是具有隱含目前正在授與權限的更高權限。 **系統管理員 (sysadmin)** 固定伺服器角色的成員也能夠授與任何權限。  
@@ -65,7 +65,7 @@ ms.locfileid: "63011951"
   
 4.  以滑鼠右鍵按一下預存程序，然後選取 [屬性]  。  
   
-5.  在 **預存程序屬性-** _stored_procedure_name>_ 對話方塊中，在 選取頁面上，選取**權限**。 使用此頁面將使用者或角色加入至預存程序，並指定這些使用者或角色擁有的權限。  
+5.  在 [**預存程式屬性-**_stored_procedure_name_ ] 對話方塊的 [選取頁面] 底下，選取 [**許可權**]。 使用此頁面將使用者或角色加入至預存程序，並指定這些使用者或角色擁有的權限。  
   
 6.  完成後，請按一下 **[確定]** 。  
   

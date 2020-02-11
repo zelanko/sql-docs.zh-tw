@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022518"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 發行者的設計考量與限制
@@ -47,7 +47,7 @@ ms.locfileid: "63022518"
   
 -   功能型索引  
   
--   預設值  
+-   Defaults  
   
 -   檢查條件約束  
   
@@ -103,7 +103,7 @@ ms.locfileid: "63022518"
   
  還需考慮下列問題：  
   
--   Oracle 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 對 NULL 的處理方式不同：對於允許 NULL 值並且包含在唯一條件約束或索引中的資料行，Oracle 允許多個資料列具有 NULL 值。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 則透過在同一資料行中只允許一個具有 NULL 值的資料列來強制其唯一性。 如果發行資料表在索引或條件約束中包含的任何資料行含有多個具有 NULL 值的資料列，則由於「訂閱者」端會發生條件約束違規，您將無法發行允許 NULL 的唯一條件約束或索引。  
+-   Oracle 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 對待 NULL 的方式不同：對於允許 NULL 值並且包含在唯一條件約束或索引中的資料行，Oracle 允許多個具有 NULL 值的資料列。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 則透過在同一資料行中只允許一個具有 NULL 值的資料列來強制其唯一性。 如果發行資料表在索引或條件約束中包含的任何資料行含有多個具有 NULL 值的資料列，則由於「訂閱者」端會發生條件約束違規，您將無法發行允許 NULL 的唯一條件約束或索引。  
   
 -   測試唯一性時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會忽略欄位的尾端空白，而 Oracle 則不會。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "63022518"
   
 -   標準異動複寫支援含多達 1000 個資料行的資料表。 Oracle 交易式發行集支援 995 個資料行 (複寫會在每個發行資料表中新增五個資料行)。  
   
--   定序子句會新增到 CREATE TABLE 陳述式中以啟用大小寫比較，此功能對主索引鍵和唯一條件約束很重要。 此行為由結構描述選項 0x1000 控制，該選項使用 [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 的 **@schema_option** 參數指定。  
+-   定序子句會新增到 CREATE TABLE 陳述式中以啟用大小寫比較，此功能對主索引鍵和唯一條件約束很重要。 此行為是使用架構選項0x1000 來控制，這是使用**@schema_option** [sp_addarticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)的參數所指定。  
   
 -   如果使用預存程序來設定或維護「Oracle 發行者」，請勿在明確交易中使用該程序。 用於連接到「Oracle 發行者」連結伺服器不支援此功能。  
   
@@ -142,14 +142,14 @@ ms.locfileid: "63022518"
 -   不支援已發行 Oracle 資料表的結構描述變更。 若要進行結構描述變更，請先卸除發行集，進行變更，然後再重新建立發行集和所有訂閱。  
   
     > [!NOTE]  
-    >  如果在發行資料表未發生任何活動時，執行結構描述的變更以及發行集和訂閱的後續卸除及重新建立，則可為訂閱指定 [僅支援複寫] 選項。 此選項可讓上述操作同步進行，無需將快照集複製到每個「訂閱者」端。 如需詳細資訊，請參閱[不使用快照集初始化交易式訂閱](../initialize-a-transactional-subscription-without-a-snapshot.md)。  
+    >  如果在發行資料表未發生任何活動時，執行結構描述的變更以及發行集和訂閱的後續卸除及重新建立，則可為訂閱指定 [僅支援複寫] 選項。 此選項可讓上述操作同步進行，無需將快照集複製到每個「訂閱者」端。 如需詳細資訊，請參閱 [不使用快照集初始化交易式訂閱](../initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
   
 ### <a name="replication-security-model"></a>複寫安全性模型  
  Oracle 發行的安全性模型與標準異動複寫的安全性模型相同，但有下列例外狀況：  
   
 -   「快照集代理程式」和「記錄讀取器代理程式」建立從「發散者」至「訂閱者」連接所使用的帳戶透過下列方法之一指定：  
   
-    -   [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) 的 **@security_mode** 參數 (如果使用「Oracle 驗證」，還要指定 **@login** 和 **@password** 的值)  
+    -   **@security_mode** [Sp_adddistpublisher &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)的參數（您也可以指定的**@login**值，以及**@password**是否使用 Oracle 驗證）  
   
     -   位於 SQL Server Management Studio 的 **[連接到伺服器]** 對話方塊中，會在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端設定「Oracle 發行者」時用到。  
   
@@ -157,13 +157,13 @@ ms.locfileid: "63022518"
   
 -   快照集代理程式和記錄讀取器代理程式建立連線所使用的帳戶無法使用 [sp_changedistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) 或透過屬性表進行變更，但可以變更密碼。  
   
--   如果將 [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) 的 **@security_mode** 參數值指定為 1 (Windows 整合式驗證)：  
+-   如果您為 sp_adddistpublisher 的**@security_mode**參數指定1（Windows 整合式驗證）值[&#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)：  
   
-    -   快照集代理程式和記錄讀取器代理程式所使用的處理帳戶和密碼 ([sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) 和 [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql) 的 **@job_login** 和 **@job_password** 參數) 必須與連接到 Oracle 發行者的帳戶和密碼相同。  
+    -   用於快照集代理程式和記錄讀取器代理程式**@job_login** **@job_password** （ [sp_addpublication_snapshot &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)和[sp_addlogreader_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)）的處理帳戶和密碼，必須與用來連接到「Oracle 發行者」的帳戶和密碼相同。  
   
-    -   您無法透過 [sp_changepublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) 或 [sp_changelogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql) 來變更 **@job_login** 參數，但可以變更密碼。  
+    -   您無法透過**@job_login** [sp_changepublication_snapshot &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql)或[sp_changelogreader_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql)變更參數，但可以變更密碼。  
   
- 如需有關複寫安全性的詳細資訊，請參閱 < [SQL Server 複寫安全性](../security/view-and-modify-replication-security-settings.md)。  
+ 如需複寫安全性的詳細資訊，請參閱[SQL Server 複寫安全性](../security/view-and-modify-replication-security-settings.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Oracle 發行者的管理考量](administrative-considerations-for-oracle-publishers.md)   

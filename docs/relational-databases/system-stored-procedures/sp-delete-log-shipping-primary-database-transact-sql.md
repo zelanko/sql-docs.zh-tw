@@ -18,10 +18,10 @@ ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aff19eabc5738e986fca1bf13f85130daead3217
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72909872"
 ---
 # <a name="sp_delete_log_shipping_primary_database-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
@@ -40,7 +40,7 @@ sp_delete_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @database = ] 'database'` 是記錄傳送主資料庫的名稱。 *資料庫*是**sysname**，沒有預設值，而且不能是 Null。  
+`[ @database = ] 'database'`這是記錄傳送主資料庫的名稱。 *資料庫*是**sysname**，沒有預設值，而且不能是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -48,7 +48,7 @@ sp_delete_log_shipping_primary_database
 ## <a name="result-sets"></a>結果集  
  無。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **sp_delete_log_shipping_primary_database**必須從主伺服器的**master**資料庫中執行。 這個預存程序會執行下列動作：  
   
 1.  刪除指定主要資料庫的備份作業。  
@@ -65,7 +65,7 @@ sp_delete_log_shipping_primary_database
   
 7.  在監視伺服器上呼叫**sp_delete_log_shipping_alert_job** 。  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
   
 ## <a name="examples"></a>範例  

@@ -14,22 +14,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990707"
 ---
 # <a name="extended-events"></a>擴充事件
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件具有可高度擴充及可高度設定的基礎結構，可以讓使用者視需要收集許多或部分的資訊來排除或識別效能問題。  
   
  您可以在 [SQL Server 擴充事件](https://blogs.msdn.com/b/extended_events/)網站上找到有關擴充事件的詳細資訊。  
   
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件的優點  
- 「擴充事件」是一種使用極少量效能資源的一種輕量型效能監視系統。 擴充事件提供了兩個圖形化使用者介面 ([新增工作階段精靈]  和 [新增工作階段]  )，用以建立、修改、顯示及分析您的工作階段資料。  
+ 「擴充事件」是一種使用極少量效能資源的一種輕量型效能監視系統。 擴充事件提供了兩個圖形化使用者介面（[**新增會話嚮導]** 和 [**新增會話**]）來建立、修改、顯示及分析您的會話資料。  
   
 ## <a name="extended-events-concepts"></a>擴充事件概念  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件是以現有的概念為建置基礎 (例如事件或事件取用者)、使用 Windows 事件追蹤的概念，並引進新的概念。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件是以現有的概念為建置基礎 (例如事件或事件取用者)、使用 Windows 事件追蹤的概念，並引進新的概念。  
   
  下表描述擴充事件的概念。  
   
@@ -99,10 +101,10 @@ ms.locfileid: "62990707"
   
 ## <a name="see-also"></a>另請參閱  
  [資料層應用程式](../data-tier-applications/data-tier-applications.md)   
- [SQL Server 物件與版本的 DAC 支援](../data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
+ [SQL Server 物件和版本的 DAC 支援](../data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
  [部署資料層應用程式](../data-tier-applications/deploy-a-data-tier-application.md)   
  [監視資料層應用程式](../data-tier-applications/monitor-data-tier-applications.md)   
  [擴充的事件動態管理檢視](../views/views.md)   
- [擴充事件目錄檢視&#40;TRANSACT-SQL&#41;](~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql  
+ [擴充事件目錄檢視 &#40;Transact-sql&#41;]（~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql  
   
   

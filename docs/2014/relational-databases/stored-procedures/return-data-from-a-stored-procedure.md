@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b11f924ce5692378896f1fd7d50186861abf223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140433"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>從預存程序傳回資料
@@ -27,7 +27,8 @@ ms.locfileid: "63140433"
  如果在程序定義中為參數指定 OUTPUT 關鍵字，程序就可以在結束時將參數目前的值傳回至呼叫端程式。 若要將參數值儲存在可供呼叫端程式使用的變數中，呼叫端程式在執行程序時必須使用 OUTPUT 關鍵字。 如需何種資料類型可做為輸出參數的詳細資訊，請參閱 [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)。  
   
 ### <a name="examples-of-output-parameter"></a>輸出參數範例  
- 下列範例示範的程序有一個輸入參數和一個輸出參數。 `@SalesPerson` 參數會接收呼叫端程式所指定的輸入值。 SELECT 陳述式使用傳入輸入參數的值，來取得正確的 `SalesYTD` 值。 SELECT 陳述式也會將值指派給 `@SalesYTD` 輸出參數，以便在程序結束時，將值傳回給呼叫端程式。  
+ 下列範例示範的程序有一個輸入參數和一個輸出參數。 
+  `@SalesPerson` 參數會接收呼叫端程式所指定的輸入值。 SELECT 陳述式使用傳入輸入參數的值，來取得正確的 `SalesYTD` 值。 SELECT 陳述式也會將值指派給 `@SalesYTD` 輸出參數，以便在程序結束時，將值傳回給呼叫端程式。  
   
 ```  
 USE AdventureWorks2012;  
@@ -71,10 +72,11 @@ GO
  呼叫程序時，如果您對參數指定 OUTPUT，但該參數在程序定義中並未使用 OUTPUT 來定義，則會出現錯誤訊息。 不過，您可以用輸出參數來執行程序，但在執行程序時不指定 OUTPUT。 這樣不會傳回錯誤，但您不能在呼叫程式中使用輸出值。  
   
 ### <a name="using-the-cursor-data-type-in-output-parameters"></a>在 OUTPUT 參數中使用 Cursor 資料類型  
- [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程序可以使用`cursor`資料類型只能針對 OUTPUT 參數。 如果`cursor`指定資料類型的參數，該程序定義中的參數必須指定 VARYING 和 OUTPUT 關鍵字。 參數可以指定為僅 OUTPUT，但如果在參數宣告中指定 VARYING 關鍵字，則必須是資料型別`cursor`和也必須指定 OUTPUT 關鍵字。  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)]程式只能使用輸出`cursor`參數的資料類型。 如果為`cursor`參數指定了資料類型，則必須在程序定義中指定該參數的不同和輸出關鍵字。 參數可以指定為僅 OUTPUT，但如果在參數宣告中指定了不同的關鍵字，則資料類型必須是`cursor` ，而且也必須指定 OUTPUT 關鍵字。  
   
 > [!NOTE]  
->  `cursor` 資料類型不可透過 OLE DB、ODBC、ADO 以及 DB-Library 之類的資料庫 API 繫結至應用程式變數。 因為必須先繫結 OUTPUT 參數，然後應用程式才能執行程序，所以不能從資料庫 API 呼叫具有 `cursor` OUTPUT 參數的程序。 只有當 `cursor` OUTPUT 變數指定給 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 本機 `cursor` 變數時，才可以從 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 批次、程序或觸發程序呼叫這些程序。  
+>  
+  `cursor` 資料類型不可透過 OLE DB、ODBC、ADO 以及 DB-Library 之類的資料庫 API 繫結至應用程式變數。 因為必須先繫結 OUTPUT 參數，然後應用程式才能執行程序，所以不能從資料庫 API 呼叫具有 `cursor` OUTPUT 參數的程序。 只有當 [!INCLUDE[tsql](../../../includes/tsql-md.md)] OUTPUT 變數指定給 `cursor` 本機 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 變數時，才可以從 `cursor` 批次、程序或觸發程序呼叫這些程序。  
   
 ### <a name="rules-for-cursor-output-parameters"></a>Cursor 輸出參數的規則  
  以下規則是有關程序執行時的 `cursor` 輸出參數：  
@@ -104,7 +106,7 @@ GO
     >  關閉的狀態只在傳回時有影響。 舉例來說，在程序執行到一半時關閉資料指標，之後又開啟，然後將該資料指標的結果集傳回至呼叫的批次、程序或觸發程序，這些都是有效的。  
   
 ### <a name="examples-of-cursor-output-parameters"></a>Cursor 輸出參數的範例  
- 在下列範例中，建立一個程序會指定輸出參數， `@currency`_`cursor`使用`cursor`資料型別。 然後在批次中呼叫程序。  
+ 在下列範例中，會建立使用`@currency` `cursor` `cursor`資料類型指定輸出參數 _ 的程式。 然後在批次中呼叫程序。  
   
  首先，建立在 Currency 資料表上宣告並隨後開啟資料指標的程序。  
   
@@ -145,14 +147,14 @@ GO
 ```  
   
 ## <a name="returning-data-using-a-return-code"></a>使用傳回碼傳回資料  
- 程序可以傳回稱為傳回碼的整數值，以指出程序的執行狀態。 若要為程序指定傳回碼，請使用 RETURN 陳述式。 就像使用 OUTPUT 參數一樣，若要在呼叫端程式中使用傳回碼，您必須在執行程序時將傳回碼儲存在變數中。 例如，指派變數`@result`資料型別的`int`用來儲存來自程序的傳回碼`my_proc`，例如：  
+ 程序可以傳回稱為傳回碼的整數值，以指出程序的執行狀態。 若要為程序指定傳回碼，請使用 RETURN 陳述式。 就像使用 OUTPUT 參數一樣，若要在呼叫端程式中使用傳回碼，您必須在執行程序時將傳回碼儲存在變數中。 例如，資料類型`@result` `int`的指派變數是用來儲存程式的傳回碼`my_proc`，例如：  
   
 ```  
 DECLARE @result int;  
 EXECUTE @result = my_proc;  
 ```  
   
- 傳回碼常用於程序的流程控制區塊中，以設定每個可能錯誤狀況的傳回碼值。 您可以在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式之後使用 @@ERROR，來偵測陳述式執行過程中是否曾發生錯誤。  
+ 傳回碼常用於程序的流程控制區塊中，以設定每個可能錯誤狀況的傳回碼值。 您可以在 @ERROR 陳述式之後使用 @[!INCLUDE[tsql](../../../includes/tsql-md.md)]，來偵測陳述式執行過程中是否曾發生錯誤。  
   
 ### <a name="examples-of-return-codes"></a>傳回碼的範例  
  下列範例顯示具有可為各種錯誤設定特別傳回碼值之錯誤處理的 `usp_GetSalesYTD` 程序。 下表顯示由程序指派給每個可能錯誤的整數值，以及每個值對應的意義。  
@@ -254,11 +256,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
- [PRINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/print-transact-sql)   
- [SET @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/set-local-variable-transact-sql)   
+ [DECLARE @local_variable &#40;transact-sql&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
+ [PRINT &#40;Transact-sql&#41;](/sql/t-sql/language-elements/print-transact-sql)   
+ [設定@local_variable &#40;transact-sql&#41;](/sql/t-sql/language-elements/set-local-variable-transact-sql)   
  [資料指標](../cursors.md)   
- [RETURN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/return-transact-sql)   
+ [傳回 &#40;Transact-sql&#41;](/sql/t-sql/language-elements/return-transact-sql)   
  [@@ERROR &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-transact-sql)  
   
   

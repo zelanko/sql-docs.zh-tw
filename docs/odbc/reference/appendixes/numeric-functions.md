@@ -1,5 +1,5 @@
 ---
-title: 數值函式 |Microsoft Docs
+title: 數值函數 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,48 +14,48 @@ ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e744d3de177197923540fc3101c58dcbb4d3490
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990735"
 ---
 # <a name="numeric-functions"></a>數值函數
-下表描述 ODBC 純量函式集合中包含的數值函式。 藉由呼叫**SQLGetInfo**具有*資訊類型*的 SQL_NUMERIC_FUNCTIONS，應用程式可以判斷驅動程式支援的數值函式。  
+下表描述包含在 ODBC 純量函數集內的數值函數。 藉由使用 SQL_NUMERIC_FUNCTIONS 的*資訊類型*呼叫**SQLGetInfo** ，應用程式可以判斷驅動程式支援哪些數值函數。  
   
- 所有的數值函式會傳回值的資料型別除了 ABS，SQL_FLOAT ROUND、 TRUNCATE、 符號、 樓層、 和上限，會傳回相同的資料值的類型做為輸入參數。  
+ 除了 ABS、ROUND、截斷、正負號、樓層和上限（傳回與輸入參數相同資料類型的值）以外，所有數值函數都會傳回資料類型 SQL_FLOAT 的值。  
   
- 引數可以分成*則 numeric_exp*可以是資料行的名稱，另一個的純量函式的結果或*數值 litera*l，其中可能表示基礎資料類型為 SQL_NUMERIC，SQL_DECIMAL SQL_TINYINT、 SQL_SMALLINT、 SQL_INTEGER、 SQL_BIGINT、 SQL_FLOAT、 SQL_REAL，還是 SQL_DOUBLE。  
+ 表示為*numeric_exp*的引數可以是資料行的名稱、另一個純量函數的結果，或*數值 litera*l，其中基礎資料類型可能會表示為 SQL_NUMERIC、SQL_DECIMAL、SQL_TINYINT、SQL_SMALLINT、SQL_INTEGER、SQL_BIGINT、SQL_FLOAT、SQL_REAL 或 SQL_DOUBLE。  
   
- 引數可以分成*float_exp*可以是資料行的名稱，另一個的純量函式的結果或*數值常值*，其中可以當做 SQL_FLOAT 表示基礎資料類型。  
+ 表示為*float_exp*的引數可以是資料行的名稱、另一個純量函數的結果，或*數值常*值，其中基礎資料類型可以表示為 SQL_FLOAT。  
   
- 引數可以分成*integer_exp*可以是資料行的名稱，另一個的純量函式的結果或*數值常值*，其中表示基礎資料類型，為 SQL_TINYINT，SQL_SMALLINT、 SQL_INTEGER 或 SQL_BIGINT。  
+ 表示為*integer_exp*的引數可以是資料行的名稱、另一個純量函數的結果，或*數值常*值，其中基礎資料類型可以表示為 SQL_TINYINT、SQL_SMALLINT、SQL_INTEGER 或 SQL_BIGINT。  
   
- 在 ODBC 3.0，才能符合 SQL-92 收錄 CURRENT_DATE、 CURRENT_TIME 和 CURRENT_TIMESTAMP 純量函式。  
+ ODBC 3.0 中已加入 CURRENT_DATE、CURRENT_TIME 和 CURRENT_TIMESTAMP 純量函數，以配合 SQL-92。  
   
-|函數|描述|  
+|函式|描述|  
 |--------------|-----------------|  
-|**ABS(** _numeric_exp_ **)**  (ODBC 1.0)|傳回數值的絕對值*則 numeric_exp*。|  
-|**ACOS(** _float_exp_ **)**  (ODBC 1.0)|傳回的反餘弦*float_exp*以角度，以弧度表示。|  
-|**ASIN(** _float_exp_ **)**  (ODBC 1.0)|傳回的反正弦*float_exp*以角度，以弧度表示。|  
-|**ATAN(** _float_exp_ **)**  (ODBC 1.0)|傳回的反正切*float_exp*以角度，以弧度表示。|  
-|**ATAN2(** _float_exp1_, _float_exp2_ **)**  (ODBC 2.0)|傳回的反正切*x*並*y*所指定的座標*float_exp1*並*float_exp2*分別角度，以弧度為單位來表示。|  
-|**CEILING(** _numeric_exp_ **)**  (ODBC 1.0)|傳回的最小整數，大於或等於*則 numeric_exp*。 傳回的值屬於相同的資料類型當做輸入參數。|  
-|**COS(** _float_exp_ **)**  (ODBC 1.0)|傳回的餘弦*float_exp*，其中*float_exp*是角度以弧度表示。|  
-|**COT(** _float_exp_ **)**  (ODBC 1.0)|餘切函數會傳回*float_exp*，其中*float_exp*是角度以弧度表示。|  
-|**DEGREES(** _numeric_exp_ **)**  (ODBC 2.0)|傳回從轉換的度數*則 numeric_exp*弧度為單位。|  
-|**EXP(** _float_exp_ **)**  (ODBC 1.0)|傳回指數值*float_exp*。|  
-|**FLOOR(** _numeric_exp_ **)**  (ODBC 1.0)|傳回小於或等於最大整數*則 numeric_exp*。 傳回的值屬於相同的資料類型當做輸入參數。|  
-|**LOG(** _float_exp_ **)**  (ODBC 1.0)|傳回自然對數*float_exp*。|  
-|**LOG10(** _float_exp_ **)**  (ODBC 2.0)|傳回基底 10 對數*float_exp*。|  
-|**MOD(** _integer_exp1_, _integer_exp2_ **)**  (ODBC 1.0)|傳回的餘數 （模數） *integer_exp1*除以*integer_exp2*。|  
-|**PI （)** (ODBC 1.0)|傳回 pi 的常數值為浮點值。|  
-|**POWER(** _numeric_exp_, _integer_exp_ **)**  (ODBC 2.0)|傳回的值*則 numeric_exp*冪*integer_exp*。|  
-|**RADIANS(** _numeric_exp_ **)**  (ODBC 2.0)|傳回從轉換的弧度的數目*則 numeric_exp*度。|  
-|**RAND(** [*integer_exp*] **)**  (ODBC 1.0)|傳回隨機浮點數的值，使用*integer_exp*做為選擇性的種子值。|  
-|**ROUND (** _則 numeric_exp_， _integer_exp_ **)** (ODBC 2.0)|傳回*則 numeric_exp*捨入到*integer_exp*會放在小數點右邊。 如果*integer_exp*是負數*則 numeric_exp 就*會捨入到&#124; *integer_exp* &#124;會放在小數點左邊。|  
-|**SIGN(** _numeric_exp_ **)**  (ODBC 1.0)|傳回的正負號的指標*則 numeric_exp*。 如果*則 numeric_exp*小於零，-1 會傳回。 如果*則 numeric_exp*等於零，就會傳回 0。 如果*則 numeric_exp*是小於或等於零，則傳回 1。|  
-|**SIN(** _float_exp_ **)**  (ODBC 1.0)|傳回正弦*float_exp*，其中*float_exp*是角度以弧度表示。|  
-|**SQRT(** _float_exp_ **)**  (ODBC 1.0)|傳回平方根*float_exp*。|  
-|**TAN(** _float_exp_ **)**  (ODBC 1.0)|傳回正切*float_exp*，其中*float_exp*是角度以弧度表示。|  
-|**TRUNCATE(** _numeric_exp_, _integer_exp_ **)**  (ODBC 2.0)|傳回*則 numeric_exp*截斷成*integer_exp*會放在小數點右邊。 如果*integer_exp*是負數*則 numeric_exp*會被截斷成&#124; *integer_exp* &#124;會放在小數點左邊。|
+|**ABS （** _numeric_exp_ **）** （ODBC 1.0）|傳回*numeric_exp*的絕對值。|  
+|**ACOS （** _float_exp_ **）** （ODBC 1.0）|以弧度表示的角度傳回*float_exp*的反余弦。|  
+|**ASIN （** _float_exp_ **）** （ODBC 1.0）|以弧度表示的角度傳回*float_exp*的反正弦。|  
+|**ATAN （** _float_exp_ **）** （ODBC 1.0）|傳回*float_exp*的反正切值（以弧度表示）。|  
+|**ATAN2 （** _float_exp1_， _float_exp2_**）** （ODBC 2.0）|傳回*x*和*y*座標的反正切值，分別由*float_exp1*和*float_exp2*指定為角度，以弧度表示。|  
+|**上限（** _numeric_exp_ **）** （ODBC 1.0）|傳回大於或等於*numeric_exp*的最小整數。 傳回值與輸入參數的資料類型相同。|  
+|**COS （** _float_exp_ **）** （ODBC 1.0）|傳回*float_exp*的余弦值，其中*float_exp*是以弧度表示的角度。|  
+|**COT （** _float_exp_ **）** （ODBC 1.0）|傳回*float_exp*的餘切，其中*float_exp*是以弧度表示的角度。|  
+|**度數（** _numeric_exp_ **）** （ODBC 2.0）|傳回從*numeric_exp*弧度轉換的度數數目。|  
+|**EXP （** _float_exp_ **）** （ODBC 1.0）|傳回*float_exp*的指數值。|  
+|**FLOOR （** _numeric_exp_ **）** （ODBC 1.0）|傳回小於或等於*numeric_exp*的最大整數。 傳回值與輸入參數的資料類型相同。|  
+|**LOG （** _float_exp_ **）** （ODBC 1.0）|傳回*float_exp*的自然對數。|  
+|**LOG10 （** _float_exp_ **）** （ODBC 2.0）|傳回*float_exp*的以10為底數的對數。|  
+|**MOD （** _integer_exp1_， _integer_exp2_**）** （ODBC 1.0）|傳回*integer_exp1*除以*integer_exp2*的餘數（模數）。|  
+|**PI （）** （ODBC 1.0）|傳回 pi 的常數值做為浮點值。|  
+|**POWER （** _numeric_exp_， _integer_exp_**）** （ODBC 2.0）|將*numeric_exp*的值傳回*integer_exp*的乘冪。|  
+|**弧度（** _numeric_exp_ **）** （ODBC 2.0）|傳回從*numeric_exp*度轉換的弧度數。|  
+|**RAND （**[*integer_exp*]**）** （ODBC 1.0）|使用*integer_exp*做為選擇性的種子值，傳回隨機的浮點值。|  
+|**ROUND （** _numeric_exp_， _integer_exp_**）** （ODBC 2.0）|傳回*numeric_exp*四捨五入至小數點右方*integer_exp*位置。 如果*integer_exp*為負數， *numeric_exp*會四捨五入為 &#124;*integer_exp*&#124; 位在小數點左邊。|  
+|**SIGN （** _numeric_exp_ **）** （ODBC 1.0）|傳回*numeric_exp*正負號的指標。 如果*numeric_exp*小於零，則會傳回-1。 如果*numeric_exp*等於零，則會傳回0。 如果*numeric_exp*大於零，則會傳回1。|  
+|**SIN （** _float_exp_ **）** （ODBC 1.0）|傳回*float_exp*的正弦值，其中*float_exp*是以弧度表示的角度。|  
+|**SQRT （** _float_exp_ **）** （ODBC 1.0）|傳回*float_exp*的平方根。|  
+|**TAN （** _float_exp_ **）** （ODBC 1.0）|傳回*float_exp*的正切函數，其中*float_exp*是以弧度表示的角度。|  
+|**截斷（** _numeric_exp_、 _integer_exp_**）** （ODBC 2.0）|傳回*numeric_exp*截斷為小數點右邊的*integer_exp*位置。 如果*integer_exp*為負數， *numeric_exp*會被截斷為 &#124;*integer_exp*&#124; 小數點左邊的位置。|

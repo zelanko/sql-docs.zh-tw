@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3235c9a9305e4476214add63f8710ba9de7b4c19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049146"
 ---
 # <a name="sort-rows-visual-database-tools"></a>排序資料列 (Visual Database Tools)
@@ -89,7 +89,7 @@ ms.locfileid: "63049146"
   
      注意，查詢會使用 `state` 做為次要排序資料行。 因此，如果有兩個州擁有相同數量的作者，該州將以字母順序排列。  
   
--   **您可以使用國際資料排序** ：也就是說，您可以使用定序慣例來排序資料行，這種定序慣例與該資料行的預設慣例不同。 比方說，您可以撰寫查詢來擷取所有書名的 Jaime Pati??o。 若要以字母順序顯示名稱，您可以使用西班牙文定序序列來排列名稱資料行。 產生的 SQL 將如下所示：  
+-   **您可以使用國際資料排序** ：也就是說，您可以使用定序慣例來排序資料行，這種定序慣例與該資料行的預設慣例不同。 例如，您可以撰寫查詢來 Jaime Pati？來抓取所有書名嗎？i/o. 若要以字母順序顯示名稱，您可以使用西班牙文定序序列來排列名稱資料行。 產生的 SQL 將如下所示：  
   
     ```  
     SELECT title  
@@ -111,7 +111,7 @@ ms.locfileid: "63049146"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [排序及群組查詢結果&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [排序和分組查詢結果 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

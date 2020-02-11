@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89fc6a74486cad96be0baee374721e06520acfcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015300"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>移轉至 In-Memory OLTP
@@ -24,11 +24,11 @@ ms.locfileid: "63015300"
   
 -   [記憶體最佳化 Advisor](memory-optimization-advisor.md)  
   
--   [原生編譯 Advisor](native-compilation-advisor.md)  
+-   [原生編譯建議程式](native-compilation-advisor.md)  
   
 -   [記憶體中的 OLTP 不支援 Transact-SQL 建構](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
--   [在經記憶體最佳化的資料表中實作 LOB 資料行](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)  
+-   [在記憶體最佳化資料表中實作 LOB 資料行](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)  
   
 -   [在記憶體最佳化資料表中實作 SQL_VARIANT](implementing-sql-variant-in-a-memory-optimized-table.md)  
   
@@ -44,10 +44,10 @@ ms.locfileid: "63015300"
   
 -   [在記憶體最佳化資料表中實作 IDENTITY](implementing-identity-in-a-memory-optimized-table.md)  
   
- 如需移轉方法的資訊，請參閱 [In-Memory OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。  
+ 如需有關遷移方法的詳細資訊，請參閱[記憶體內部 OLTP-一般工作負載模式和遷移考慮](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](in-memory-oltp-in-memory-optimization.md)   
+ [記憶體內部 OLTP &#40;記憶體內部優化&#41;](in-memory-oltp-in-memory-optimization.md)   
  [估計記憶體最佳化資料表的記憶體需求](memory-optimized-tables.md)  
   
   

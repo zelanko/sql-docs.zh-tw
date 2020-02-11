@@ -13,16 +13,16 @@ ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32c1905ffa7466da8c053cfb23a22cbc5d1a382e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939984"
 ---
 # <a name="ado-md-enumerated-constants"></a>ADO MD 列舉常數
-若要協助偵錯，ADO MD 列舉常數會列出每個常數的值。 不過，這個值會是 純粹諮詢，而且可能從 ADO MD 發行版本變更為另一個。 名稱，而非實際的值，列舉常數時，應該僅相依於您的程式碼。  
+為了協助進行偵錯工具，ADO MD 列舉常數會列出每個常數的值。 不過，這個值純粹是諮詢，而且可能會從 ADO MD 的某個版本變更為另一個。 您的程式碼應該只取決於列舉常數的名稱，而不是實際的值。  
   
- 下列列舉所定義。  
+ 已定義下列列舉。  
   
 -   [SchemaObjectTypeEnum](../../../ado/reference/ado-md-api/schemaobjecttypeenum.md)  
   

@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188751"
 ---
 # <a name="view-information-about-an-operator"></a>檢視關於操作員的資訊
-  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 操作員的詳細資訊。  
+  本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]，在中查看 Agent 操作員的相關資訊。  
   
  **本主題內容**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68188751"
   
      [安全性](#Security)  
   
--   **若要使用下列項目，檢視關於操作員的資訊：**  
+-   **若要使用下列程式來查看操作員的相關資訊：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -41,10 +41,10 @@ ms.locfileid: "68188751"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
- 依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
+ 根據預設，**系統管理員（sysadmin** ）固定伺服器角色的成員可以執行此預存程式。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
   
 -   **SQLAgentUserRole**  
   
@@ -64,15 +64,15 @@ ms.locfileid: "68188751"
   
 3.  按一下加號展開 **[操作員]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您要檢視的操作員，然後選取 [屬性]  。  
+4.  以滑鼠右鍵按一下您要檢視的操作員，然後選取 [屬性]****。  
   
-     如需 [<操作員名稱> 屬性]   對話方塊中之可用選項的詳細資訊，請參閱：  
+     如需 [ _operator_name_**屬性**] 對話方塊中所包含之可用選項的詳細資訊，請參閱：  
   
-    -   [操作員屬性和新的運算子&#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [操作員屬性和 New 運算子 &#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [運算子屬性：New 運算子&#40;通知頁面&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [操作員屬性：新的操作員 &#40;通知頁面&#41;](operator-properties-new-operator-notifications-page.md)  
   
-    -   [操作員屬性 &#40;記錄頁面&#41;](operator-properties-history-page.md)  
+    -   [&#40;歷程記錄頁面中的操作員屬性&#41;](operator-properties-history-page.md)  
   
 5.  完成後，請按一下 **[確定]** 。  
   
@@ -97,6 +97,6 @@ ms.locfileid: "68188751"
     GO  
     ```  
   
- 如需詳細資訊，請參閱 < [sp_help_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-operator-transact-sql)。  
+ 如需詳細資訊，請參閱[sp_help_operator &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-operator-transact-sql)。  
   
   

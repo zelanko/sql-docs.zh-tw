@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b05d3b02c4fcd0d90b0b96a1a32c792537818e1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999843"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>使用邏輯記錄分組相關資料列的變更
@@ -97,7 +97,7 @@ ms.locfileid: "62999843"
   
 -   對於邏輯記錄中包含的發行項，不支援使用商務邏輯處理常式或自訂解析程式進行自訂衝突解決。  
   
--   如果在包含了參數化篩選的發行集中使用邏輯記錄，您必須使用「訂閱者」資料分割的快照集來初始化「訂閱者」。 如果您使用其他方法初始化「訂閱者」，「合併代理程式」將失敗。 如需相關資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)。  
+-   如果在包含了參數化篩選的發行集中使用邏輯記錄，您必須使用「訂閱者」資料分割的快照集來初始化「訂閱者」。 如果您使用其他方法初始化「訂閱者」，「合併代理程式」將失敗。 如需詳細資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)。  
   
 -   「衝突檢視器」中不會顯示涉及邏輯記錄的衝突。 若要檢視這些衝突的相關資訊，請使用複寫預存程序。 如需詳細資訊，請參閱[檢視合併式發行集的衝突資訊 &#40;複寫 Transact-SQL 程式設計&#41;](../view-conflict-information-for-merge-publications.md)。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "62999843"
   
      例如，追蹤班級和學生的資料庫設計可能類似於：  
   
-     ![具有多個父系資料表的子系資料表](../media/logical-records-03.gif "具有多個父系資料表的子系資料表")  
+     ![具有超過一個父系資料表的子系資料表](../media/logical-records-03.gif "具有超過一個父系資料表的子系資料表")  
   
      無法使用邏輯記錄來代表此關聯性中的三個資料表，因為 **ClassMembers** 中的資料列並未與單一主索引鍵資料列相關聯。 資料表 **Classes** 和 **ClassMembers** 仍然可以組成邏輯記錄，資料表 **ClassMembers** 和 **Students**也可以，但是三個資料表一起則不行。  
   

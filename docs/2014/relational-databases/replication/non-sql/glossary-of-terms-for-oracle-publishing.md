@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa1959a4f0fa6a2afa2fdf585d0c82d1238a019b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022397"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Oracle 發行相關術語字彙
   在設定與管理 Oracle 發行時，應熟悉下列 Oracle 術語。 如需完整的 Oracle 術語清單，請參閱 Oracle 線上文件集。  
   
  按索引組織的資料表 (IOT)  
- 其資料按索引順序實際儲存在磁碟中的資料表；類似於具有叢集索引的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。 將 IOT 做為具有叢集索引的資料表複寫到「訂閱者」。  
+ 其資料在磁片上以索引順序實際排序的資料表;它類似[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]于具有叢集索引的資料表。 將 IOT 做為具有叢集索引的資料表複寫到「訂閱者」。  
   
  執行個體  
  Oracle 資料庫與執行個體相關聯。 執行個體包含記憶體與支援資料庫的背景處理序。 Oracle 執行個體始終對應到單一資料庫，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體可能包含多個資料庫。 也存在一個 Oracle 資料庫含有多個執行個體的情況。  
@@ -34,7 +34,7 @@ ms.locfileid: "63022397"
  ROWID  
  指向資料庫中特定資料列位置的指標。 因為使用 ROWID 擷取資料列比使用資料表掃描或索引要快，所以複寫在處理已發行的資料表變更時暫時使用 ROWID。  
   
- 序列  
+ 順序  
  用來產生唯一數字的資料庫物件。 複寫使用序列對已發行資料表的變更進行排序。  
   
  SQL\*Plus  
@@ -58,6 +58,6 @@ ms.locfileid: "63022397"
  [設定 Oracle 發行者](configure-an-oracle-publisher.md)   
  [在 Oracle 發行者上建立的物件](objects-created-on-the-oracle-publisher.md)   
  [非 SQL Server 發行者](non-sql-server-publishers.md)   
- [Oracle Publishing Overview](oracle-publishing-overview.md)  
+ [Oracle 發行概觀](oracle-publishing-overview.md)  
   
   

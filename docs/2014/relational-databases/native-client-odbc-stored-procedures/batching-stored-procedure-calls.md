@@ -1,5 +1,5 @@
 ---
-title: 批次預存程序呼叫 |Microsoft Docs
+title: 批次處理預存程序呼叫 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b50350006abba5085b11010f26aa88a89b07393f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205498"
 ---
 # <a name="batching-stored-procedure-calls"></a>批次預存程序呼叫
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式，自動批次處理伺服器在適當的預存程序呼叫。 只有在使用 ODBC CALL 逸出序列時，驅動程式才會執行此動作；它不會針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE 陳述式執行此動作。 批次預存程序呼叫可以減少往返伺服器的次數，並明顯增加效能。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驅動程式會在適當時，自動將預存程序呼叫分批批次處理至伺服器。 只有在使用 ODBC CALL 逸出序列時，驅動程式才會執行此動作；它不會針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE 陳述式執行此動作。 批次預存程序呼叫可以減少往返伺服器的次數，並明顯增加效能。  
   
- 當您執行包含多個 ODBC CALL 逸出序列的批次時，驅動程式會批次處理伺服器的程序呼叫。 搭配 ODBC CALL 逸出序列使用繫結的參數陣列時，它也會批次處理程序呼叫。 例如，如果您使用其中一個資料列取向或資料行取向參數繫結繫結具有五個元素的陣列至 ODBC CALL SQL 陳述式的參數時**SQLExecute**或是**SQLExecDirect**呼叫時，驅動程式會傳送到伺服器的五個程序呼叫的單一批次。  
+ 當您執行包含多個 ODBC CALL 逸出序列的批次時，驅動程式會批次處理伺服器的程序呼叫。 搭配 ODBC CALL 逸出序列使用繫結的參數陣列時，它也會批次處理程序呼叫。 例如，如果您使用資料列取向或資料行取向的參數系結，將具有五個元素的陣列系結至 ODBC CALL SQL 語句的參數，則在呼叫**SQLExecute**或**SQLExecDirect**時，驅動程式會將具有五個程序呼叫的單一批次傳送至伺服器。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行預存程序](running-stored-procedures.md)  

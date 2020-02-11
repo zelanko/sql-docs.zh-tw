@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952037"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Reporting Services 組態管理員 F1 說明主題 (SSRS 原生模式)
   本節提供 Reporting Services 組態管理員的 F1 說明。  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式。  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -34,13 +34,13 @@ ms.locfileid: "71952037"
   
 -   [Web 服務 URL](../../../2014/sql-server/install/web-service-url-ssrs-native-mode.md)  
   
--   [Advanced Multiple 網站設定](../../../2014/sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md)  
+-   [進階多重網站組態](../../../2014/sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md)  
   
--   [[資料庫備份]](../../../2014/sql-server/install/database-ssrs-native-mode.md)  
+-   [Database](../../../2014/sql-server/install/database-ssrs-native-mode.md)  
   
 -   [變更資料庫 Wizard](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
   
--   [變更認證嚮導](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)  
+-   [變更認證精靈](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)  
   
 -   [報表管理員 URL](../../../2014/sql-server/install/report-manager-url-ssrs-native-mode.md)  
   
@@ -57,6 +57,6 @@ ms.locfileid: "71952037"
 -   [向外延展部署](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 組態管理員&#40;del&#41;](reporting-services-configuration-manager-native-mode.md)  
+ [Reporting Services 組態管理員 &#40;del&#41;](reporting-services-configuration-manager-native-mode.md)  
   
   

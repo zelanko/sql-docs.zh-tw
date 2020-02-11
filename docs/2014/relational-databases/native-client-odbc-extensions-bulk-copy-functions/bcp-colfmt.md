@@ -1,5 +1,5 @@
 ---
-title: bcp_colfmt | Microsoft Docs
+title: bcp_colfmt |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065456"
 ---
-# <a name="bcpcolfmt"></a>bcp_colfmt
-  在使用者檔案中指定資料的來源或目標格式。 當做來源格式使用時**bcp_colfmt**指定現有的資料檔案做為大量複製中的資料來源的格式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表。 資料檔案當做目標格式使用時，會建立使用指定的資料行格式**bcp_colfmt**。  
+# <a name="bcp_colfmt"></a>bcp_colfmt
+  在使用者檔案中指定資料的來源或目標格式。 當做來源格式使用時， **bcp_colfmt**會將當做大量複製中資料來源使用之現有資料檔案的格式指定為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表。 當做目標格式使用時，會使用以**bcp_colfmt**指定的資料行格式建立資料檔案。  
   
 ## <a name="syntax"></a>語法  
   
@@ -68,19 +68,19 @@ idxServerCol
  這是使用者資料檔案中，要指定其格式的序數資料行編號。 第一個資料行是 1。  
   
  *eUserDataType*  
- 這是使用者檔案中，此資料行的資料類型。 如果不同於資料庫資料表中對應的資料行的資料類型 (*idxServerColumn*)，大量複製會將資料轉換的話。  
+ 這是使用者檔案中，此資料行的資料類型。 如果與資料庫資料表（*idxServerColumn*）中對應資料行的資料類型不同，大量複製就會轉換資料（如果可能的話）。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入 SQLXML 和 SQLUDT 資料類型語彙基元中的支援*eUserDataType*參數。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]在*eUserDataType*參數中引進了 SQLXML 和 SQLUDT 資料類型標記的支援。  
   
- *EUserDataType*參數會列舉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sqlncli.h 中的資料類型 token，不 ODBC C 資料類型列舉值列舉。 例如，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專屬類型 SQLCHARACTER 來指定字元字串 ODBC type SQL_C_CHAR。  
+ *EUserDataType*參數是由 sqlncli 中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型標記所列舉，而不是 ODBC C 資料類型枚舉器。 例如，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專屬類型 SQLCHARACTER 來指定字元字串 ODBC type SQL_C_CHAR。  
   
  若要指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的預設資料表示法，將此參數設定為 0。  
   
- 大量複製，共[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到檔案中，當*eUserDataType*為 SQLDECIMAL 或 sqlnumeric 時：  
+ 當 EUserDataType 為 SQLDECIMAL 或 SQLNUMERIC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，將大量複製** 到檔案中：  
   
--   如果來源資料行不是**十進位**或是**數值**，會使用預設有效位數和小數位數。  
+-   如果來源資料行不是**decimal**或**numeric**，就會使用預設的有效位數和小數位數。  
   
--   如果來源資料行是**十進位**或是**數值**，使用的有效位數和小數位數的來源資料行。  
+-   如果來源資料行是**小數**或**數值**，則會使用來源資料行的有效位數和小數位數。  
   
  *cbIndicator*  
  這是資料行資料內，長度/null 指標的長度 (以位元組為單位)。 有效的指標長度值為 0 (不使用指標時)、1、2、4 或 8。  
@@ -96,15 +96,16 @@ idxServerCol
  *cbUserData*  
  這是使用者檔案中此資料行之資料的最大長度 (以位元組為單位)，不包括任何長度指標或結束字元的長度。  
   
- 設定*cbUserData*為 SQL_NULL_DATA 表示資料檔案資料行中的所有值，或應該設定為 NULL。  
+ 將*cbUserData*設定為 SQL_Null_DATA 表示資料檔案欄位中的所有值都是，或應設定為 Null。  
   
- 設定*cbUserData*為 SQL_VARLEN_DATA 表示系統應該決定每個資料行中的資料長度。 對於某些資料行，這可能表示長度/null 指標會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複本之資料前產生，或者表示該指標應該會在複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料中出現。  
+ 將*cbUserData*設定為 SQL_VARLEN_DATA 表示系統應該決定每個資料行中的資料長度。 對於某些資料行，這可能表示長度/null 指標會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複本之資料前產生，或者表示該指標應該會在複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料中出現。  
   
- 針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字元和二進位資料類型*cbUserData*可以是 SQL_VARLEN_DATA、 SQL_NULL_DATA、 0 或某些正值。 如果*cbUserData*為 SQL_VARLEN_DATA，系統會使用長度指標，如果存在或結束字元順序來決定資料的長度。 如果同時提供長度指標與結束字元順序，大量複製會使用導致複製最少量資料者。 如果*cbUserData*為 SQL_VARLEN_DATA，資料類型是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字元或二進位類型，而且沒有長度指標和結束字元順序指定，則系統會傳回錯誤訊息。  
+ 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是字元和二進位資料類型， *cbUserData*可以是 SQL_VARLEN_DATA、SQL_Null_DATA、0或某個正數值。 如果*cbUserData*為 SQL_VARLEN_DATA，則系統會使用長度指標（如果有的話）或結束字元序列來決定資料的長度。 如果同時提供長度指標與結束字元順序，大量複製會使用導致複製最少量資料者。 如果*cbUserData*為 SQL_VARLEN_DATA，則資料類型為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字元或二進位類型，而且長度指標和結束字元順序都未指定，系統會傳回錯誤訊息。  
   
  如果 *cbUserData* 為 0 或正值，則系統會使用 *cbUserData* 當作最大的資料長度。 不過，如果除了正的 *cbUserData* 之外，也提供長度指標或結束字元順序，系統會使用導致複製最少量資料的方式決定資料長度。  
   
- *cbUserData* 值表示資料的位元組計數。 如果字元資料是以 Unicode 寬字元表示，則 *cbUserData* 正參數值表示字元數乘以每個字元的大小 (以位元組為單位)。  
+ 
+  *cbUserData* 值表示資料的位元組計數。 如果字元資料是以 Unicode 寬字元表示，則 *cbUserData* 正參數值表示字元數乘以每個字元的大小 (以位元組為單位)。  
   
  *pUserDataTerm*  
  這是要用於此資料行的結束字元順序。 此參數主要用於字元資料類型，因為其他所有類型都屬固定長度；如果是二進位資料，則需要一個長度指標，才能正確記錄出現的位元組數目。  
@@ -119,7 +120,7 @@ idxServerCol
  這是要用於此資料行的結束字元順序長度 (以位元組為單位)。 如果資料中沒有或不需要結束字元，將此值設定為 0。  
   
  *idxServerCol*  
- 這是資料行在資料庫資料表中的序數位置。 第一個資料行編號為 1。 資料行的序數位置由報告[SQLColumns](../native-client-odbc-api/sqlcolumns.md)。  
+ 這是資料行在資料庫資料表中的序數位置。 第一個資料行編號為 1。 資料行的序數位置是由[SQLColumns](../native-client-odbc-api/sqlcolumns.md)所報告。  
   
  如果此值為 0，大量複製在資料檔案中會忽略資料行。  
   
@@ -127,7 +128,7 @@ idxServerCol
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- **Bcp_colfmt**函式可讓您指定大量複製的使用者檔案格式。 針對大量複製，格式包含下列部分：  
+ **Bcp_colfmt**函數可讓您指定大量複製的使用者檔案格式。 針對大量複製，格式包含下列部分：  
   
 -   從使用者檔案資料行對應至資料庫資料行。  
   
@@ -141,24 +142,24 @@ idxServerCol
   
 -   選擇性結束位元組順序的長度。  
   
- 每次呼叫**bcp_colfmt**指定一個使用者檔案資料行的格式。 例如，若要變更為五個資料行的使用者資料檔中的三個資料行的預設設定，請先呼叫[bcp_columns](bcp-columns.md) **(5)** ，然後呼叫**bcp_colfmt**五次，其中三個呼叫會設定您的自訂格式。 針對其餘的兩個呼叫中，設定*eUserDataType*為 0，並將*cbIndicator*， *cbUserData*，以及*cbUserDataTerm*為 0，SQL_VARLEN資料 （_d)，和 0 分別。 此程序會複製全部五個資料行，其中三個為您自訂的格式，而另兩個為預設格式。  
+ **Bcp_colfmt**的每個呼叫都會指定一個使用者檔案資料行的格式。 例如，若要在五個數據行的使用者資料檔案中變更三個數據行的預設設定，請先呼叫[bcp_columns](bcp-columns.md)**（5）**，然後呼叫**bcp_colfmt**五次，其中三個呼叫會設定您的自訂格式。 針對剩餘的兩個呼叫，請將*eUserDataType*設定為0，並分別將*cbIndicator*、 *cbUserData*和*cbUserDataTerm*設定為0、SQL_VARLEN_DATA 和0。 此程序會複製全部五個資料行，其中三個為您自訂的格式，而另兩個為預設格式。  
   
- 針對*cbIndicator*，現在是有效的值為 8，表示大數值類型。 如果有針對其對應資料行是新最大類型的欄位指定前置詞，則僅能將該前置詞設定為 8。 如需詳細資訊，請參閱 < [bcp_bind](bcp-bind.md)。  
+ 若為*cbIndicator*，值為8表示大數數值型別現在有效。 如果有針對其對應資料行是新最大類型的欄位指定前置詞，則僅能將該前置詞設定為 8。 如需詳細資訊，請參閱[bcp_bind](bcp-bind.md)。  
   
- **Bcp_columns**任何呼叫之前，必須呼叫函式**bcp_colfmt**。  
+ 呼叫**bcp_colfmt**之前，必須先呼叫**bcp_columns**函式。  
   
- 您必須呼叫**bcp_colfmt**使用者檔案中的每個資料行一次。  
+ 您必須針對使用者檔案中的每個資料行呼叫一次**bcp_colfmt** 。  
   
- 呼叫**bcp_colfmt**一次以上的任何使用者檔案資料行導致錯誤。  
+ 針對任何使用者檔案資料行多次呼叫**bcp_colfmt**會造成錯誤。  
   
- 您不需要將使用者檔案中的所有資料複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 若要略過資料行，指定資料行設定資料格式*並將 idxServerCol*參數設為 0。 如果您要略過資料行，則必須指定其類型。  
+ 您不需要將使用者檔案中的所有資料複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 若要略過資料行，請將*並將 idxservercol*參數設定為0，以指定資料行的資料格式。 如果您要略過資料行，則必須指定其類型。  
   
- [Bcp_writefmt](bcp-writefmt.md)函式可以用來保存格式規格。  
+ [Bcp_writefmt](bcp-writefmt.md)函數可以用來保存格式規格。  
   
-## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_colfmt 支援增強的日期和時間功能  
- 針對資訊 aboutt 他型別搭配*eUserDataType*參數的日期/時間類型，請參閱[增強型日期和時間類型的大量複製變更&#40;OLE DB 和 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
+## <a name="bcp_colfmt-support-for-enhanced-date-and-time-features"></a>bcp_colfmt 支援增強的日期和時間功能  
+ 如需 aboutt 與日期/時間類型的*eUserDataType*參數搭配使用的資訊，請參閱[增強型日期和時間類型的大量複製變更 &#40;OLE DB 和 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
   
- 如需詳細資訊，請參閱 <<c0> [ 日期和時間改善&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。</c0>  
+ 如需詳細資訊，請參閱[ODBC&#41;&#40;的日期和時間改善](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [大量複製函數](sql-server-driver-extensions-bulk-copy-functions.md)  

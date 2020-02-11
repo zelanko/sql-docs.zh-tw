@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021941"
 ---
 # <a name="other-non-sql-server-subscribers"></a>其他非 SQL Server 訂閱者
-  如需[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援的非 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]訂閱者清單，請參閱＜ [Non-SQL Server Subscribers](non-sql-server-subscribers.md)＞。 本主題包含 ODBC 驅動程式和 OLE DB 提供者需求的資訊。  
+  如需所[!INCLUDE[msCoName](../../../includes/msconame-md.md)]支援的非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]訂閱者清單，請參閱[非 SQL Server 的訂閱者](non-sql-server-subscribers.md)。 本主題包含 ODBC 驅動程式和 OLE DB 提供者需求的資訊。  
   
 ## <a name="odbc-driver-requirements"></a>ODBC 驅動程式需求  
  ODBC 驅動程式：  
@@ -40,15 +40,15 @@ ms.locfileid: "63021941"
 ## <a name="replicating-using-ole-db-interfaces"></a>使用 OLE DB 介面進行複寫  
  OLE DB Provider 必須支援下列物件，才能進行異動複寫：  
   
--   **DataSource** 物件  
+-   **DataSource**物件  
   
--   **Session** 物件  
+-   **Session**物件  
   
--   **Command** 物件  
+-   **Command**物件  
   
--   **Rowset** 物件  
+-   資料列**集**物件  
   
--   **Error** 物件  
+-   **Error**物件  
   
 ### <a name="datasource-object-interfaces"></a>DataSource 物件介面  
  若要連接到某個資料來源，您必須具備下列介面：  
@@ -89,7 +89,7 @@ ms.locfileid: "63021941"
   
 -   **ICommandWithParameters**  
   
- 需要**IAccessor** 才能建立參數存取子 (Accessor)。 如果提供者支援 **IColumnRowset**， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 便會用此介面判斷某個資料行是否為識別欄位。  
+ 必須要有**IAccessor** ，才能建立參數存取子。 如果提供者支援**IColumnRowset**， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會使用該介面來判斷資料行是否為識別欄位。  
   
 ### <a name="rowset-object-interfaces"></a>Rowset 物件介面  
  以下是必要的介面：  
@@ -100,7 +100,7 @@ ms.locfileid: "63021941"
   
 -   **IColumnsInfo**  
   
- 應用程式必須在訂閱資料庫中建立的複寫資料表內，開啟一個資料列集。 **IColumnsInfo** 與 **IAccessor** 是存取此資料列集中的資料所必須具備的。  
+ 應用程式必須在訂閱資料庫中建立的複寫資料表內，開啟一個資料列集。 需要**IColumnsInfo**和**IAccessor** ，才能存取資料列集中的資料。  
   
 ### <a name="error-object-interfaces"></a>Error 物件介面  
  請使用以下介面來管理錯誤：  
@@ -114,6 +114,6 @@ ms.locfileid: "63021941"
  如需 OLE DB 提供者的詳細資訊，請參閱您 OLE DB 提供者所附的文件。  
   
 ## <a name="see-also"></a>另請參閱  
- [Non-SQL Server Subscribers](non-sql-server-subscribers.md)  
+ [非 SQL Server 訂閱者](non-sql-server-subscribers.md)  
   
   
