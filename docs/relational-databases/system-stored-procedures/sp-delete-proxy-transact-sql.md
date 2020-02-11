@@ -19,10 +19,10 @@ ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fd717f645b9e53d08f6dabbfc1ea5779c373056e
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305102"
 ---
 # <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
@@ -40,9 +40,9 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @proxy_id = ] id` 要移除之 proxy 的 proxy 識別碼。 *Proxy_id*是**int**，預設值是 Null。  
+`[ @proxy_id = ] id`要移除之 proxy 的 proxy 識別碼。 *Proxy_id*是**int**，預設值是 Null。  
   
-`[ @proxy_name = ] 'proxy_name'` 要移除之 proxy 的名稱。 *Proxy_name*是**sysname**，預設值是 Null。  
+`[ @proxy_name = ] 'proxy_name'`要移除之 proxy 的名稱。 *Proxy_name*是**sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
@@ -51,11 +51,11 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
  None  
   
 ## <a name="remarks"></a>備註  
- 必須指定 **\@proxy_name**或 **\@proxy_id** 。 如果同時指定了兩個引數，這兩個引數都必須參考相同的 Proxy，否則，預存程序會失敗。  
+ 必須指定** \@proxy_name**或** \@proxy_id** 。 如果同時指定了兩個引數，這兩個引數都必須參考相同的 Proxy，否則，預存程序會失敗。  
   
  如果作業步驟參考指定的 Proxy，就無法刪除這個 Proxy，預存程序會失敗。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  根據預設，只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_delete_proxy**。  
   
 ## <a name="examples"></a>範例  
@@ -71,6 +71,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
+ [sp_add_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
   
   

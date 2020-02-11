@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96267b98d7e17b920e0a7cee70b69e4c964584e4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798013"
 ---
 # <a name="copy-only-backups-sql-server"></a>只複製備份 (SQL Server)
-  *「只複製備份」* (Copy-only backup) 是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 通常，進行備份會變更資料庫，而且會影響往後其他備份的還原方式。 不過，偶爾為了特殊目的在不影響資料庫整體備份及還原程序的情況下進行備份，相當有用。 只複製備份即是供此目的之用。  
+  「*只複本備份*」是與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳統[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]備份順序無關的備份。 通常，進行備份會變更資料庫，而且會影響往後其他備份的還原方式。 不過，偶爾為了特殊目的在不影響資料庫整體備份及還原程序的情況下進行備份，相當有用。 只複製備份即是供此目的之用。  
   
  只複製備份的類型如下所示：  
   
@@ -41,25 +41,25 @@ ms.locfileid: "72798013"
  只複製備份會記錄在 **backupset** 資料表的 [is_copy_only](/sql/relational-databases/system-tables/backupset-transact-sql) 資料行中。  
   
 ## <a name="to-create-a-copy-only-backup"></a>若要建立只複製備份  
- 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 建立只複製備份。  
+ 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 PowerShell 建立只複製備份。  
   
 ###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-1.  在 [備份資料庫] 對話方塊的 [一般] 頁面上，選取 [只複製備份] 選項。  
+1.  在 [備份資料庫]**** 對話方塊的 [一般]**** 頁面上，選取 [只複製備份]**** 選項。  
   
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  基本的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 語法如下：  
   
 -   用於只複製完整備份：  
   
-     備份資料庫*database_name*至 \<backup_device *>* 。使用 COPY_ONLY 。  
+     備份資料庫*database_name*至\<backup_device*>* .。。使用 COPY_ONLY .。。  
   
     > [!NOTE]  
     >  指定 DIFFERENTIAL 選項時，COPY_ONLY 沒有任何作用。  
   
 -   用於只複製記錄備份：  
   
-     備份記錄*database_name*至 *\<* backup_device *>* 。使用 COPY_ONLY 。  
+     備份記錄*database_name*至*\<* backup_device*>* .。。使用 COPY_ONLY .。。  
   
 ###  <a name="PowerShellProcedure"></a> 使用 PowerShell  
   

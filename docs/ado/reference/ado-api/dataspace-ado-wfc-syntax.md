@@ -1,5 +1,5 @@
 ---
-title: DataSpace (ADO-WFC 語法) |Microsoft Docs
+title: 空間（ADO-WFC 語法） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,16 +14,16 @@ ms.assetid: 950d45d8-07de-467b-b255-f9a7b997204c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 569944991c029c091f0f17be4e5d943a893333a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919191"
 ---
 # <a name="dataspace-ado---wfc-syntax"></a>DataSpace (ADO - WFC 語法)
-**CreateObject**方法**DataSpace**類別會指定這兩個商務物件來處理用戶端應用程式要求 (*progid*) 和通訊協定與伺服器 (*連線*)。 **createObject**會傳回[ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)代表伺服器的物件。  
+「**空間**」類別的**createObject**方法會指定商務物件來處理用戶端應用程式要求（*progid*）和通訊協定和伺服器（*連接*）。 **createObject**會傳回代表伺服器的[ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)物件。  
   
-## <a name="package-commswfcdata"></a>封裝 com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>封裝 .com. wfc. 資料  
   
 ### <a name="constructor"></a>建構函式  
   

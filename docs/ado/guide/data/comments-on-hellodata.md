@@ -1,5 +1,5 @@
 ---
-title: HelloData 的註解 |Microsoft Docs
+title: HelloData 上的批註 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,64 +13,64 @@ ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2c4897f82ff8562c031ec3522f47cddebfb56eb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925801"
 ---
 # <a name="comments-on-hellodata"></a>HelloData 的註解
-HelloData 應用程式會逐步引導一般的 ADO 應用程式的基本作業： 取得、 檢查、 編輯和更新資料。 當您啟動應用程式時，按一下第一個按鈕中，**取得資料**。 這會執行**GetData**副程式。  
+HelloData 應用程式會逐步解說一般 ADO 應用程式的基本作業：取得、檢查、編輯和更新資料。 當您啟動應用程式時，請按一下第一個按鈕 [**取得資料**]。 這會**執行 [，** ] 副程式。  
   
 ## <a name="getdata"></a>GetData  
- **GetData**將有效的連接字串放入一個模組層級變數， *m_sConnStr*。 如需有關連接字串的詳細資訊，請參閱 <<c0> [ 建立的連接字串](../../../ado/guide/data/creating-a-connection-string.md)。  
+ [參數] 會將有效的連接**字串放入**模組層級變數中， *m_sConnStr*。 如需連接字串的詳細資訊，請參閱[建立連接字串](../../../ado/guide/data/creating-a-connection-string.md)。  
   
- 將指定的錯誤處理常式，使用 Visual Basic **OnError**陳述式。 如需有關在 ADO 中的錯誤處理的詳細資訊，請參閱[錯誤處理](../../../ado/guide/data/error-handling.md)。 新**連接**會建立物件，而**CursorLocation**屬性設定為**adUseClient**因為 HelloData 範例會建立*中斷連接資料錄集*。 這表示，只要從資料來源擷取資料，與資料來源的實體連接已中斷，但您仍然可以使用在本機快取資料您**資料錄集**物件。  
+ 使用 Visual Basic **OnError**語句來指派錯誤處理常式。 如需 ADO 中錯誤處理的詳細資訊，請參閱[錯誤處理](../../../ado/guide/data/error-handling.md)。 隨即建立新的**連接**物件，而且**CursorLocation**屬性會設定為**adUseClient** ，因為 HelloData 範例會建立*中斷連接的記錄集*。 這表示一旦從資料來源提取資料，與資料來源的實體連接就會中斷，但您仍然可以使用在**記錄集**物件本機快取的資料。  
   
- 在開啟連接之後，請將 SQL 字串指派給變數 (sSQL)。 然後建立新的執行個體**Recordset**物件， `m_oRecordset1`。 在下一行程式碼中，開啟**資料錄集**現有**連線**，並傳入`sSQL`做為來源**資料錄集**。 您有助於 ADO 讓 SQL 字串，判斷做為來源已通過**資料錄集**是藉由傳遞的命令的文字定義**adCmdText** 的最後一個引數中**資料錄集開放**方法。 這一行也會設定**LockType**並**CursorType**相關聯**資料錄集**。  
+ 在開啟連接之後，將 SQL 字串指派給變數（sSQL）。 然後建立新**記錄集**物件的實例`m_oRecordset1`。 在下一行程式碼中，透過現有的**連接**開啟**記錄集**，並傳入`sSQL`做為**記錄集**的來源。 您可以協助 ADO 判斷做為**記錄集**來源而傳遞的 SQL 字串是命令的文字定義，其方式是將最後一個引數中的**AdCmdText**傳遞至**記錄集的 Open**方法。 這一行也會設定與**記錄集**相關聯的**LockType**和**CursorType** 。  
   
- 程式碼集的下一行**MarshalOptions**屬性等於**adMarshalModifiedOnly**。 **MarshalOptions**指出哪些記錄應該封送處理至中介層 （或 Web 伺服器）。 如需有關如何封送處理的詳細資訊，請參閱 COM 文件。 當您使用**adMarshalModifiedOnly**與用戶端資料指標 ([CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) = **adUseClient**)，在修改過的記錄用戶端會回寫至中介層。 設定**MarshalOptions**要**adMarshalModifiedOnly**可以改善效能，因為較少的資料列封送處理。  
+ 下一行程式碼會將**MarshalOptions**屬性設定為等於**adMarshalModifiedOnly**。 **MarshalOptions**指出哪些記錄應該封送處理至仲介層（或 Web 服務器）。 如需封送處理的詳細資訊，請參閱 COM 檔。 當您使用**adMarshalModifiedOnly**搭配用戶端資料指標（[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) = **adUseClient**）時，只會將用戶端上已修改的記錄寫回中介層。 將**MarshalOptions**設定為**adMarshalModifiedOnly**可改善效能，因為封送處理的資料列較少。  
   
- 接下來，中斷**Recordset**藉由設定其**ActiveConnection**屬性等於**Nothing**。 如需詳細資訊，請參閱 「 中斷連線並重新連接資料錄集 」 一節中[更新和保存資料](../../../ado/guide/data/updating-and-persisting-data.md)。  
+ 接下來，將**記錄集**的**ActiveConnection**屬性設定為等於 [**無**]，將它中斷連接。 如需詳細資訊，請參閱[更新和保存資料](../../../ado/guide/data/updating-and-persisting-data.md)中的「中斷連接和重新連接記錄集」一節。  
   
- 關閉資料來源的連接，然後終結現有**連線**物件。 這會釋放它所使用的資源。  
+ 關閉資料來源的連接，並終結現有的**連接**物件。 這會釋出所耗用的資源。  
   
- 最後一個步驟是設定**Recordset**做為**DataSource** Microsoft DataGrid 控制項在表單上因此，您可以輕鬆地顯示從資料**資料錄集**上表單。  
+ 最後一個步驟是將**記錄**集設定為表單上 Microsoft DataGrid 控制項的資料**源**，讓您可以輕鬆地在表單上顯示**記錄集**的資料。  
   
- 按一下第二個按鈕中，**檢查資料**。 這會執行**ExamineData**副程式。  
+ 按一下第二個按鈕 [**檢查資料**]。 這會執行**ExamineData**副程式。  
   
 ## <a name="examinedata"></a>ExamineData  
- 各種方法和屬性，會使用 ExamineData**資料錄集**來顯示資料的相關資訊的物件**資料錄集**。 它會使用報告的記錄數目**RecordCount**屬性。 會循環**Recordset** ，並列印的值**AbsolutePosition**在表單上的 [顯示] 文字方塊中的屬性。 在迴圈中，值也同時**書籤**第三個記錄的屬性會放入變數的變數， *vBookmark*，以供稍後使用。  
+ ExamineData 會使用**recordset**物件的各種方法和屬性，來顯示**記錄集中**資料的相關資訊。 它會使用**RecordCount**屬性來報告記錄的數目。 它會對**記錄集**執行迴圈，並在表單上的 [顯示] 文字方塊中列印**AbsolutePosition**屬性的值。 此外，在迴圈中，第三筆記錄的 [**書簽**] 屬性值會放入變數變數*vBookmark*中，以供稍後使用。  
   
- 常式直接向後巡覽至使用先前儲存的書籤變數的第三個記錄。 此常式會呼叫**WalkFields**循環的副程式**欄位**的集合**資料錄集**，並顯示詳細說明每一個**欄位**集合中。  
+ 常式會使用稍早儲存的書簽變數，直接流覽回第三筆記錄。 常式會呼叫**WalkFields**副程式，這會迴圈處理**記錄集**的**Fields**集合，並顯示集合中每個**欄位**的詳細資料。  
   
- 最後， **ExamineData**會使用**篩選**屬性**資料錄集**只有這些記錄的畫面**CategoryId**等於2。 套用此篩選條件的結果會立即顯示在表單上的顯示格線項目。  
+ 最後， **ExamineData**會將記錄**集**的**Filter**屬性僅用於具有等於2之 [**類別**] 的記錄。 套用此篩選準則的結果會立即顯示在表單的顯示格線中。  
   
- 如需有關所示的功能**ExamineData**副程式，請參閱[檢查資料](../../../ado/guide/data/examining-data.md)。  
+ 如需**ExamineData**副程式中所顯示功能的詳細資訊，請參閱[檢查資料](../../../ado/guide/data/examining-data.md)。  
   
- 接下來，按一下 第三個按鈕中，**編輯資料**。 這會執行**EditData**副程式。  
+ 接下來，按一下第三個按鈕 [**編輯資料**]。 這會執行**EditData**副程式。  
   
 ## <a name="editdata"></a>EditData  
- 當程式碼進入**EditData**副程式**資料錄集**仍然篩選**CategoryId**等於 2，如此只有符合篩選準則的項目才會可見的。 第一次循環**Recordset** ，並增加每個可見的項目中的價格**資料錄集**百分之 10。 值**價格**欄位已變更設定**值**新的且有效的量等於該欄位的屬性。  
+ 當程式碼進入**EditData**副程式時，**記錄集**仍會在 [**類別**1] 上篩選為等於2，因此只會顯示符合篩選準則的專案。 它會先對**記錄集**執行迴圈，並將**記錄集**內每個可見專案的價格增加10%。 [**價格**] 欄位的值會藉由將該欄位的 [**值**] 屬性設定為等於新的有效數量來變更。  
   
- 請記住**資料錄集**已中斷連接資料來源。 中所做的變更**EditData**只對資料的本機快取副本。 如需詳細資訊，請參閱 <<c0> [ 編輯資料](../../../ado/guide/data/editing-data.md)。  
+ 請記住，**記錄集**已與資料來源中斷連接。 在**EditData**中所做的變更只會對本機快取的資料複本進行。 如需詳細資訊，請參閱[編輯資料](../../../ado/guide/data/editing-data.md)。  
   
- 所做的變更將不在資料來源上進行，直到您按一下第四個按鈕，**更新資料**。 這會執行**UpdateData**副程式。  
+ 除非您按一下第四個按鈕 [**更新資料**]，否則不會在資料來源上進行變更。 這會執行**UpdateData**副程式。  
   
 ## <a name="updatedata"></a>UpdateData  
- UpdateData 先移除已套用的篩選條件**資料錄集**。 程式碼會移除和重設`m_oRecordset1`做為**DataSource**表單上的 Microsoft 繫結 DataGrid 的以便未篩選**資料錄集**出現在資料格中。  
+ UpdateData 會先移除已套用至**記錄集**的篩選。 程式碼會移除並`m_oRecordset1`重設為表單上 Microsoft 系結 DataGrid 的**資料來源**，讓未篩選的**記錄集**出現在方格中。  
   
- 然後，程式碼會檢查以查看您是否可以將移向後**資料錄集**利用**支援**方法**adMovePrevious**引數。  
+ 然後，程式碼會使用**支援**方法搭配**adMovePrevious**引數，以查看您是否可以在**記錄集中**移動後置。  
   
- 常式會將移至第一個記錄使用**MoveFirst**方法，並顯示欄位的原始和目前值，藉由使用**OriginalValue**並**值**屬性**欄位**物件。 這些屬性連同**UnderlyingValue**屬性 （未使用此），會討論[正在更新及保存資料](../../../ado/guide/data/updating-and-persisting-data.md)。  
+ 常式會使用**MoveFirst**方法移至第一筆記錄，並使用**Field**物件的**OriginalValue**和**Value**屬性，顯示欄位的原始和目前值。 [更新和保存資料](../../../ado/guide/data/updating-and-persisting-data.md)中會討論這些屬性，以及**UnderlyingValue**屬性（此處未使用）。  
   
- 接下來，新**連線**物件是建立，用來重新建立資料來源的連接。 您重新連接**資料錄集**藉由設定新的資料來源**連線**作為**ActiveConnection**如**資料錄集**。 若要將更新傳送到伺服器，也就是程式碼會呼叫**UpdateBatch**上**資料錄集**。  
+ 接下來，會建立新的**連接**物件，並用來重新建立資料來源的連接。 將**記錄集**重新連接至資料來源，方法是將新的**連接**設定為**記錄集**的**ActiveConnection** 。 為了將更新傳送至伺服器，程式碼會在**記錄集**上呼叫**UpdateBatch** 。  
   
- 如果批次更新成功，模組層級旗標變數`m_flgPriceUpdated`，設定為 True。 這會提醒您更新版本，以清除所有對資料庫所做的變更。  
+ 如果批次更新成功，模組層級的旗標變數`m_flgPriceUpdated`會設定為 True。 這會提醒您稍後清除對資料庫所做的所有變更。  
   
- 最後，程式碼會將移回中的第一個資料錄**資料錄集**並顯示原始值和目前值。 值則會在呼叫之後是相同**UpdateBatch**。  
+ 最後，程式碼會移回**記錄集**內的第一筆記錄，並顯示原始和目前的值。 呼叫**UpdateBatch**之後，值會相同。  
   
- 如需如何更新資料的詳細資訊，包括時該怎麼做資料時的伺服器變更您**資料錄集**是中斷連接，請參閱[正在更新及保存資料](../../../ado/guide/data/updating-and-persisting-data.md)。  
+ 如需如何更新資料的詳細資訊，包括當您的**記錄集**中斷連接時，伺服器上的資料變更時該怎麼做，請參閱[更新和保存資料](../../../ado/guide/data/updating-and-persisting-data.md)。  
   
-## <a name="formunload"></a>Form_Unload  
- **Form_Unload**副程式十分重要的幾個原因。 首先，因為這是一個範例應用程式，Form_Unload 就會清除資料庫應用程式結束前所做的變更。 第二，程式碼會示範如何執行命令，直接從開放**連接**使用的物件**Execute**方法。 最後，它會顯示執行非資料列傳回查詢 （更新） 對資料來源的範例。
+## <a name="form_unload"></a>Form_Unload  
+ **Form_Unload**副程式很重要，原因如下。 首先，因為這是一個範例應用程式，Form_Unload 清除在應用程式結束之前對資料庫所做的變更。 第二，程式碼會顯示如何使用**Execute**方法，直接從開啟的**連接**物件執行命令。 最後，它會顯示一個範例，說明如何針對資料來源執行不會傳回資料列的查詢（更新查詢）。

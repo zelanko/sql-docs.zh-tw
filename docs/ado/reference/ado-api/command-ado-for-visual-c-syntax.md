@@ -1,5 +1,5 @@
 ---
-title: 命令 (ADO for VisualC++語法) |Microsoft Docs
+title: Command （ADO for Visual C++ 語法） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,10 +16,10 @@ ms.assetid: cf12cbd1-25f7-4bb5-aa94-0fe823b3b6d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 49a82682e619bb2a33e5c04e049b40ac4733f427
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919876"
 ---
 # <a name="command-ado-for-visual-c-syntax"></a>Command (ADO for Visual C++ 語法)

@@ -1,5 +1,5 @@
 ---
-title: SET ANSI 命令 |Microsoft Docs
+title: 設定 ANSI 命令 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d32e4dc27568b37f273ef654ebd45d26ca23e555
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997771"
 ---
 # <a name="set-ansi-command"></a>SET ANSI 命令
-判斷如何比較不同長度的字串之間進行與 = Visual FoxPro SQL 命令中的運算子。  
+決定如何使用 Visual FoxPro SQL 命令中的 = 運算子來建立不同長度之字串之間的比較。  
   
 ## <a name="syntax"></a>語法  
   
@@ -30,31 +30,31 @@ SET ANSI ON | OFF
 ```  
   
 ## <a name="arguments"></a>引數  
- ON  
- （預設驅動程式; Visual FoxPro 的預設值是 OFF）。較短的字串，含有空白所需的填補讓等於更長的字串長度。 這兩個字串則比較其整個長度的字元的字元。 這項比較，請考慮：  
+ 開啟  
+ （驅動程式的預設值; Visual FoxPro 的預設值為 OFF）。填補較短的字串，並將其設為等於較長字串長度所需的空白。 接著，兩個字串會針對其整個長度進行字元比較。 請考慮下列比較：  
   
 ```  
 'Tommy' = 'Tom'  
 ```  
   
- 結果為 False (。F.) 如果設定 ANSI 已開啟，因為當填補時，'Tom' 變成 'Tom' 和 'Tom' 和 'Tommy' 字串不相符的字元的字元。  
+ 結果為 False （。F.）如果 SET ANSI 是 on，因為在填補時，' Tom ' 會變成 ' Tom '，而字串 ' Tom ' 與 ' Tommy ' 不符合字元。  
   
- = = 運算子會使用這個方法來比較 Visual FoxPro SQL 命令中。  
+ = = 運算子會使用這個方法，在 Visual FoxPro SQL 命令中進行比較。  
   
  OFF  
- 指定以空白不填較短的字串。 比較兩個字串的字元，直到達到較短的字串結尾的字元。 這項比較，請考慮：  
+ 指定不以空白填補較短的字串。 兩個字串會針對字元進行比較，直到到達較短字串的結尾為止。 請考慮下列比較：  
   
 ```  
 'Tommy' = 'Tom'  
 ```  
   
- 結果為 True (。T.） 時設定的 ANSI 已關閉，因為比較之後就會停止 'Tom'。  
+ 結果為 True （。T.）當 SET ANSI 為 off 時，因為比較會在 ' Tom ' 之後停止。  
   
 ## <a name="remarks"></a>備註  
- 設定 ANSI 決定是否在較短的兩個字串填補以空白的 SQL 字串比較時。 並不會影響設定的 ANSI = = 運算子;當您使用 = = 運算子，較短的字串一律會填補以空白進行比較。  
+ SET ANSI 決定在進行 SQL 字串比較時，兩個字串中較短的是否會以空白填補。 SET ANSI 不會影響 = = 運算子;當您使用 = = 運算子時，較短的字串一律會以空格填補以進行比較。  
   
 ## <a name="string-order"></a>字串順序  
- 在 SQL 命令中，由左到右的順序來比較兩個字串是 irrelevantswitching 字串從一端 = 或 = = 運算子之間並不會影響比較的結果。  
+ 在 SQL 命令中，比較中兩個字串的由左至右順序會從 = 或 = 運算子的一端 irrelevantswitching 一個字串，而不會影響比較的結果。  
   
 ## <a name="see-also"></a>另請參閱  
  [SELECT-SQL 命令](../../odbc/microsoft/select-sql-command.md)   

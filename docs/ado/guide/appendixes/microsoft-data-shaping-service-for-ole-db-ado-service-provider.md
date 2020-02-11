@@ -1,5 +1,5 @@
 ---
-title: Microsoft 資料成形 OLE DB （ADO 服務提供者） 的服務 |Microsoft Docs
+title: 適用于 OLE DB 的 Microsoft 資料成形服務（ADO 服務提供者） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,41 +14,41 @@ ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ddef2feab633627c9549b73787faa1d104d69c5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926815"
 ---
-# <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft 資料成形 Service for OLE DB 概觀
+# <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>適用于 OLE DB 的 Microsoft 資料成形服務總覽
 > [!IMPORTANT]
->  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，應用程式應該使用 XML。
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，應用程式應該使用 XML。
 
- Microsoft Data Shaping Service 的 OLE DB 服務提供者支援階層式建構 （形狀）[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)從資料提供者的物件。
+ 適用于 OLE DB 服務提供者的 Microsoft 資料成形服務，支援從資料提供者結構化的階層式（成形）[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。
 
-## <a name="provider-keyword"></a>提供者關鍵字
- 要叫用 OLE DB Data Shaping Service，請連接字串中指定下列關鍵字和值。
+## <a name="provider-keyword"></a>Provider 關鍵字
+ 若要叫用 OLE DB 的資料成形服務，請在連接字串中指定下列關鍵字和值。
 
 ```vb
 "Provider=MSDataShape"
 ```
 
 ## <a name="dynamic-properties"></a>動態屬性
- 叫用此服務提供者時，加入下列的動態屬性[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)的集合[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件。
+ 叫用此服務提供者時，會將下列動態屬性加入至[Connection](../../../ado/reference/ado-api/connection-object-ado.md)物件的[properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合中。
 
 |動態屬性名稱|描述|
 |---------------------------|-----------------|
-|**唯一的重繪名稱**|指出是否**資料錄集**具有重複值的物件及其**調整形狀名稱**不允許屬性。 如果此動態屬性 **，則為 True**和新**資料錄集**建立與使用者指定的重繪同名的現有**資料錄集**，則新**資料錄集**修改物件的重繪名稱使其成為唯一。 如果這個屬性是**假**和新**資料錄集**建立具有相同的使用者指定的重繪名稱與現有**資料錄集**，這兩個**資料錄集**物件會具有相同的重繪名稱。 因此，兩者皆非**資料錄集**可重繪，只要這兩個資料錄集存在。<br /><br /> 屬性的預設值是**False**。|
-|**資料提供者**|表示將會提供圖形化的資料列提供者的名稱。 這個值可以是 NONE，如果提供者不會用來提供資料列。|
+|**唯一的重新調整名稱**|指出是否允許有重複值的**記錄集**物件重新**整形名稱**屬性。 如果這個動態屬性為**True** ，而且建立的新**記錄集**具有與現有**記錄集**相同的使用者指定重設名稱，則會修改新的**記錄集**物件的重新調整名稱，使其成為唯一的。 如果此屬性為**False** ，而且建立的新**記錄集**具有與現有**記錄集**相同的使用者指定重設名稱，這兩個**記錄集**物件將會有相同的重新調整名稱。 因此，只要兩個記錄集都存在，就不會改變**記錄集**。<br /><br /> 屬性的預設值為**False**。|
+|**資料提供者**|表示將提供要塑造之資料列的提供者名稱。 如果提供者不會用來提供資料列，這個值可以是 NONE。|
 
- 您也可以藉由指定其名稱為關鍵字的連接字串中設定可寫入的動態屬性。 例如，在 Microsoft Visual Basic 中，設定**資料提供者**動態屬性 」 MSDASQL 」 藉由指定：
+ 您也可以在連接字串中將其名稱指定為關鍵字，以設定可寫入的動態屬性。 例如，在 Microsoft Visual Basic 中，藉由指定下列內容，將**Data Provider**動態屬性設定為 "MSDASQL"：
 
 ```vb
 Dim cn as New ADODB.Connection
 cn.Open "Provider=MSDataShape;Data Provider=MSDASQL"
 ```
 
- 您也可以設定，或藉由指定其名稱為索引中擷取動態屬性[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)屬性。 例如，下列程式碼範例會取得並列印目前的值**資料提供者**動態屬性，然後設定新的值，如果 cn。DataProvider 已設為"MSDataShape 」 (直接或間接透過連接字串) 和未開啟連接：
+ 您也可以藉由指定屬性的名稱做為[Properties](../../../ado/reference/ado-api/properties-collection-ado.md)屬性的索引，來設定或抓取動態屬性。 例如，下列程式碼範例會取得並列印**Data Provider**動態屬性的目前值，然後設定新的值（如果 cn）。DataProvider 已設定為 "MSDataShape" （直接或間接透過連接字串），而且尚未開啟連接：
 
 ```vb
 Debug.Print cn.Properties("Data Provider")
@@ -56,7 +56,7 @@ cn.Properties("Data Provider") = "MSDASQL"
 ```
 
 > [!NOTE]
->  動態屬性**資料提供者**，可以設定只有在未開啟**連線**物件。 開啟連接時，一旦**資料提供者**屬性會變成唯讀。
+>  動態屬性**Data Provider**只能在未開啟的**連接**物件上設定。 一旦開啟連接， **Data Provider**屬性就會變成隻讀。
 
  如需資料成形的詳細資訊，請參閱[資料成形](../../../ado/guide/data/data-shaping-overview.md)。
 

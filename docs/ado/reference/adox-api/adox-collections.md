@@ -14,24 +14,24 @@ ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 453836f30e74dd604efe28d309ca69ea2ca26684
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928609"
 ---
 # <a name="adox-collections"></a>ADOX 集合
 
 |||  
 |-|-|  
-|[資料行](../../../ado/reference/adox-api/columns-collection-adox.md)|包含所有**資料行**資料表、 索引或索引鍵的物件。|  
-|[群組](../../../ado/reference/adox-api/groups-collection-adox.md)|包含所有預存**群組**目錄或使用者的物件。|  
-|[[索引]](../../../ado/reference/adox-api/indexes-collection-adox.md)|包含所有**Index**資料表的物件。|  
-|[[索引鍵]](../../../ado/reference/adox-api/keys-collection-adox.md)|包含所有**金鑰**資料表的物件。|  
-|[程序](../../../ado/reference/adox-api/procedures-collection-adox.md)|包含所有**程序**的目錄物件。|  
-|[資料表](../../../ado/reference/adox-api/tables-collection-adox.md)|包含所有**資料表**的目錄物件。|  
-|[使用者](../../../ado/reference/adox-api/users-collection-adox.md)|包含所有預存**使用者**目錄或群組的物件。|  
-|[檢視](../../../ado/reference/adox-api/views-collection-adox.md)|包含所有**檢視**的目錄物件。|  
+|[資料行](../../../ado/reference/adox-api/columns-collection-adox.md)|包含資料表、索引或索引鍵的所有資料**行**物件。|  
+|[群組](../../../ado/reference/adox-api/groups-collection-adox.md)|包含目錄或使用者的所有儲存的**群組**物件。|  
+|[索引數](../../../ado/reference/adox-api/indexes-collection-adox.md)|包含資料表的所有**索引**物件。|  
+|[索引鍵](../../../ado/reference/adox-api/keys-collection-adox.md)|包含資料表的所有索引**鍵**物件。|  
+|[程序](../../../ado/reference/adox-api/procedures-collection-adox.md)|包含目錄**的所有程式**物件。|  
+|[資料表](../../../ado/reference/adox-api/tables-collection-adox.md)|包含目錄的所有**資料表**物件。|  
+|[使用者](../../../ado/reference/adox-api/users-collection-adox.md)|包含目錄或群組的所有預存**使用者**物件。|  
+|[檢視](../../../ado/reference/adox-api/views-collection-adox.md)|包含目錄的所有**View**物件。|  
   
 ## <a name="see-also"></a>另請參閱  
  [ADOX API 參考](../../../ado/reference/adox-api/adox-api-reference.md)   

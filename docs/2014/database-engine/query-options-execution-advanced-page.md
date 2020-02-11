@@ -13,10 +13,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
 ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71199322"
 ---
 # <a name="query-options-execution-advanced-page"></a>查詢選項執行 (進階頁面)
@@ -29,7 +29,7 @@ ms.locfileid: "71199322"
 
 **設定 PARSEONLY**檢查每個查詢的語法，但不執行查詢。 依預設，會清除此選項。  
 
-**設定 CONCAT_Null_YIELDS_Null**選取此核取方塊時，串連現有值與的`NULL`查詢，一律`NULL`會傳回做為結果。 如果清除此核取方塊，現有的值與 `NULL` 串連，則會傳回現有的值。 預設會選取此選項。
+**設定 CONCAT_Null_YIELDS_Null**選取此核取方塊時，串連現有值與的`NULL`查詢，一律會傳回`NULL`做為結果。 如果清除此核取方塊，現有的值與 `NULL` 串連，則會傳回現有的值。 預設會選取此選項。
 
 **設定 ARITHABORT**當選取這個核取方塊時，當`INSERT`、 `DELETE`或`UPDATE`語句在運算式評估期間遇到算術錯誤（溢位、零除或網域錯誤）時，就會終止查詢或批次。 如果清除此核取方塊，在可能的情況下就會為該值提供 `NULL`，而查詢會繼續進行，並在結果中包含訊息。 請參閱線上叢書，以取得此行為的詳細描述。 預設會選取此選項。
   
@@ -66,4 +66,4 @@ ms.locfileid: "71199322"
 
 如需詳細資訊，請參閱[使用 secure 記憶體保護區](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions)和[secure 記憶體保護區證明](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation)Always Encrypted。
 
-**重設為預設值** 將此頁面上的所有值重設為原始預設值。
+**重設為預設值**將此頁面上的所有值重設為原始的預設值。

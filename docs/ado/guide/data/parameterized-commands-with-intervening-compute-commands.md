@@ -1,5 +1,5 @@
 ---
-title: 參數化命令與中介 COMPUTE 命令 |Microsoft Docs
+title: 使用中間計算命令的參數化命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,18 +16,18 @@ ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb6bc2b9f7e53caf28f44daf39815850940b9d3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924729"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>參數化命令與中介 COMPUTE 命令
-一般的參數化的圖形附加命令有一個子句，會建立父代**資料錄集**查詢命令與建立的子系的另一個子句**資料錄集**使用參數化的查詢命令-也就是將包含的參數預留位置的命令 (問號，"？")。 產生的形狀**資料錄集**有父代會佔用較高層級的兩個層級和子系會佔用低層級。  
+一般參數化圖形 APPEND 命令有一個子句，它會使用查詢命令建立父**記錄集**，而另一個子句會使用參數化查詢命令建立子**記錄集**，也就是包含參數預留位置的命令（問號，"？"）。 產生的成形**記錄集**有兩個層級，其中父代會佔用上層，而子系會佔用較低的層級。  
   
- 建立子子句**資料錄集**現在可能任意數目的巢狀圖形計算命令，其中最深的巢狀的命令包含參數化的查詢。 產生的形狀**資料錄集**有多個層級，父代所佔用的最上方的層級、 點陣圖最少的層級和任意數目的子系會佔用**資料錄集**所產生的 s圖形計算命令佔用的中介層級。  
+ 建立子**記錄集**的子句現在可能是任意數目的嵌套形狀計算命令，其中最深的嵌套命令包含參數化查詢。 產生的成形**記錄集**具有多個層級，其中父系會佔用最上層的層級，子系會佔用 lowermost 層級，而 shape 計算命令所產生的任意數目的**記錄集會**佔用仲介層級。  
   
- 典型的使用這項功能是要叫用的彙總函式和 shapeCOMPUTE 群組功能的命令建立中介**Recordset**物件的子系的分析資訊**資料錄集**. 此外，因為這是參數化的圖形命令時，每次之父代的章節資料行存取時，新的子系**資料錄集**可能擷取。 因為中介層級都衍生自子系，也是將計算的。  
+ 這項功能的典型用法是叫用 shapeCOMPUTE 命令的彙總函式和群組功能，以建立具有子**記錄集**相關分析資訊的中間**記錄集**物件。 此外，因為這是參數化圖形命令，所以每次存取父系的章節資料行時，可能會抓取新的子**記錄集**。 由於仲介層級衍生自子系，因此也會重新計算。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料成形範例](../../../ado/guide/data/data-shaping-example.md)

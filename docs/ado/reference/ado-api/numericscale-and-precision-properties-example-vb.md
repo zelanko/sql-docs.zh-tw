@@ -1,5 +1,5 @@
 ---
-title: NumericScale 和 Precision 屬性範例 (VB) |Microsoft Docs
+title: NumericScale 和 Precision 屬性範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf9fc4f0e96a714c8d00d2ffa9e36dea73e55fe1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932056"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale 和 Precision 屬性範例 (VB)
-這個範例會使用[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)並[有效位數](../../../ado/reference/ado-api/precision-property-ado.md)要顯示的數值小數位數與有效位數中的欄位屬性***折扣***資料表***Pubs***資料庫。  
+這個範例會使用[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)和[Precision](../../../ado/reference/ado-api/precision-property-ado.md)屬性，在***Pubs***資料庫的***折扣***資料表中顯示欄位的數值小數位數和有效位數。  
   
 ```  
 'BeginNumericScaleVB  
@@ -75,6 +75,6 @@ End Sub
   
 ## <a name="see-also"></a>另請參閱  
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
- [NumericScale 屬性 (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
- [參數物件](../../../ado/reference/ado-api/parameter-object.md)   
+ [NumericScale 屬性（ADO）](../../../ado/reference/ado-api/numericscale-property-ado.md)   
+ [Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)   
  [Precision 屬性 (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

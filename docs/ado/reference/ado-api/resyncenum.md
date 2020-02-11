@@ -16,27 +16,27 @@ ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a872ee5f4af49d9fbe97621a5d2549fd9472202
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931233"
 ---
 # <a name="resyncenum"></a>ResyncEnum
-指定基礎值會覆寫呼叫[Resync](../../../ado/reference/ado-api/resync-method.md)。  
+指定重新[同步](../../../ado/reference/ado-api/resync-method.md)的呼叫是否覆寫基礎值。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adResyncAllValues**|2|預設值。 會覆寫資料，並取消擱置中的更新。|  
-|**adResyncUnderlyingValues**|1|不會不會覆寫資料，並不會取消暫止的更新。|  
+|**adResyncAllValues**|2|預設。 會覆寫資料，並取消暫止的更新。|  
+|**adResyncUnderlyingValues**|1|不會覆寫資料，也不會取消暫止的更新。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- 封裝： **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
+ Package： **.com. wfc. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
 |AdoEnums.Resync.ALLVALUES|  
 |AdoEnums.Resync.UNDERLYINGVALUES|  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Resync 方法](../../../ado/reference/ado-api/resync-method.md)

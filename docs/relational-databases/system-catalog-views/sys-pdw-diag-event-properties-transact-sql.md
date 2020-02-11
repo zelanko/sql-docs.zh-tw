@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_diag_event_properties (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases pdw_diag_event_properties （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: fc14e2f03deb833d18a0d68be05deefe69842cf8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915004"
 ---
-# <a name="syspdwdiageventproperties-transact-sql"></a>sys.pdw_diag_event_properties (Transact-SQL)
+# <a name="syspdw_diag_event_properties-transact-sql"></a>sys.databases pdw_diag_event_properties （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  保留診斷事件相關聯屬性的相關資訊。  
+  保存哪些屬性與診斷事件相關聯的資訊。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|**event_name**|**nvarchar(255)**|特定的診斷事件的名稱。||  
+|**event_name**|**nvarchar(255)**|特定診斷事件的名稱。||  
 |**property_name**|**nvarchar(255)**|事件的屬性名稱。||  
   
 ## <a name="see-also"></a>另請參閱  

@@ -16,31 +16,31 @@ ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: decbc7c3b377234d91fe6b3e662d9449298041c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923607"
 ---
 # <a name="using-ado-for-internet-publishing"></a>使用 ADO 進行網際網路發佈
-[OLE DB Provider for Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)顯示存取搭配 ADO 的異質資料的特定範例。 雖然會專用於網際網路發佈提供者搭配使用這一節中的範例，示範的原則應該類似使用 ADO 與其他異質資料，例如電子郵件存放區提供者的提供者時。  
+[網際網路發佈的 OLE DB 提供者](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)會顯示使用 ADO 存取異質資料的特定範例。 雖然本節中的範例僅適用于使用網際網路發行提供者，但在將 ADO 與其他提供者搭配使用異質資料（例如電子郵件存放區的提供者）時，所示範的原則應該類似。  
   
 ## <a name="urls"></a>URL  
- 統一資源定位器 (Url) 可用來當做連接字串和命令文字的替代方式來指定資料來源 」 和 「 檔案和目錄的位置。 您可以使用 Url 與現有[連接](../../../ado/reference/ado-api/connection-object-ado.md)並**資料錄集**物件與**記錄**並**Stream**物件。  
+ 您可以使用統一資源定位器（Url）做為連接字串和命令文字的替代方法，以指定資料來源和檔案和目錄的位置。 您可以使用 Url 搭配現有的[連接](../../../ado/reference/ado-api/connection-object-ado.md)和**記錄集**物件，以及**記錄**和**資料流程**物件。  
   
- 如需如何使用 Url 的詳細資訊，請參閱[絕對和相對 Url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
+ 如需如何使用 Url 的詳細資訊，請參閱[絕對和相對 url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
   
 ## <a name="record-fields"></a>記錄欄位  
- 區別異質資料與同質資料之間的差別在於針對先前的功能，每個資料列的資料，或是**記錄**，可以有一組不同的資料行，或**欄位**。 同質性的資料，每個資料列會有相同的資料行集。 多個網際網路發佈提供者的特定欄位的詳細資訊，請參閱[記錄和 Provider-Supplied 額外欄位](../../../ado/guide/data/records-and-provider-supplied-fields.md)。  
+ 異質資料和同質資料之間的差異在於，前者的每個資料列或**記錄**都可以有一組不同的資料行或**欄位**。 針對同質資料，每個資料列都有相同的資料行集合。 如需有關網際網路發行提供者特定欄位的詳細資訊，請參閱[記錄和提供者提供的額外欄位](../../../ado/guide/data/records-and-provider-supplied-fields.md)。  
   
-### <a name="appending-new-fields"></a>附加新的欄位  
- 數個 ADO 物件已經過加強，才能搭配**記錄**並**Stream**物件。  
+### <a name="appending-new-fields"></a>附加新欄位  
+ 已增強數個 ADO 物件，可搭配**Record**和**Stream**物件一起使用。  
   
--   [欄位](../../../ado/reference/ado-api/fields-collection-ado.md)集合[附加](../../../ado/reference/ado-api/append-method-ado.md)方法，這個方法會建立，並將[欄位](../../../ado/reference/ado-api/field-object.md)物件集合，也可以指定的值**欄位**.  
+-   [Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合[Append](../../../ado/reference/ado-api/append-method-ado.md)方法會建立[欄位](../../../ado/reference/ado-api/field-object.md)物件，並將其加入至集合，也可以指定**欄位**的值。  
   
--   [更新](../../../ado/reference/ado-api/update-method.md)方法完成的新增或刪除的欄位集合。  
+-   [Update](../../../ado/reference/ado-api/update-method.md)方法會完成將欄位新增或刪除至集合的作業。  
   
--   為快顯和替代項目**Append**方法，您可以將值指派到未定義或先前刪除的欄位建立欄位。  
+-   您可以將值指派給未定義或先前已刪除的欄位，以建立欄位，做為**附加**方法的快捷方式和替代方案。  
   
  此章節包含下列主題。  
   
@@ -53,6 +53,6 @@ ms.locfileid: "67923607"
 -   [記錄和提供者提供的欄位](../../../ado/guide/data/records-and-provider-supplied-fields.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
+ [Record 物件（ADO）](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Stream 物件（ADO）](../../../ado/reference/ado-api/stream-object-ado.md)   
  [ADO 歷程記錄](../../../ado/guide/ado-history.md)

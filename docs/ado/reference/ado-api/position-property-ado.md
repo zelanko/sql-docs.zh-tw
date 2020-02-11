@@ -1,5 +1,5 @@
 ---
-title: 放置屬性 (ADO) |Microsoft Docs
+title: Position 屬性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,31 +16,31 @@ ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dba8636f07b88f1c05d465b844376c6ef3e61240
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931651"
 ---
 # <a name="position-property-ado"></a>Position 屬性 (ADO)
-指出目前的位置內[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。  
+表示[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)物件中目前的位置。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回**長**值，指定的位移，以從一開始的資料流目前位置的位元組數目。 預設值為 0，表示資料流中的第一個位元組。  
+ 設定或傳回**Long**值，指定從資料流程開頭到目前位置的位移（以位元組數為單位）。 預設值為0，表示資料流程中的第一個位元組。  
   
 ## <a name="remarks"></a>備註  
- 目前的位置可以移至的點，資料流結尾後面。 如果您指定目前的位置，為資料流結尾之外[大小](../../../ado/reference/ado-api/size-property-ado-stream.md)的**Stream**物件會隨之增加。 這種方式新增的任何新位元組將會是 null。  
+ 目前的位置可以移至資料流程結尾之後的點。 如果您指定的目前位置超出資料流程的結尾，**資料流程**物件的[大小](../../../ado/reference/ado-api/size-property-ado-stream.md)也會隨之增加。 以這種方式新增的任何新位元組都會是 null。  
   
 > [!NOTE]
->  **位置**一律量值的位元組。 對於使用多位元組字元集的文字資料流，乘以字元的大小，以判斷的字元數中的位置。 比方說，是雙位元組字集，第一個字元位於位置 0，位於位置 2，第三個字元的第二個字元在位置 4，依此類推。  
+>  **位置**一律會測量個位元組。 針對使用多位元組字元集的文字資料流程，將位置乘以字元大小，以決定字元數。 例如，如果是兩個位元組的字元集，第一個字元位於位置0，第二個字元位於位置2，第三個字元位於位置4，依此類推。  
   
 > [!NOTE]
->  負數的值不能變更中目前的位置**Stream**。 適用於僅正數**位置**。  
+>  負值不能用來變更**資料流程**中的目前位置。 只有正數可以用於**位置**。  
   
 > [!NOTE]
->  唯讀**Stream**物件，ADO 會傳回錯誤，如果**位置**設為值大於**大小**的**Stream**。 這不會變更的大小**Stream**，或改變**Stream**以任何方式的內容。 不過，執行此動作應避免，因為它會產生無意義**位置**值。  
+>  對於唯讀**資料流程**物件，如果**Position**設定為大於**資料流程****大小**的值，ADO 將不會傳回錯誤。 這不會變更**資料流程**的大小，也不會以任何方式改變**串流**內容。 不過，應該避免這麼做，因為它會產生無意義的**位置**值。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  

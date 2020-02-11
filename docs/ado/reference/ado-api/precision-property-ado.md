@@ -1,5 +1,5 @@
 ---
-title: Precision 屬性 (ADO) |Microsoft Docs
+title: Precision 屬性（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,32 +17,32 @@ ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26da0367e494bd74253b904393a2dad62308a608
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931633"
 ---
 # <a name="precision-property-ado"></a>Precision 屬性 (ADO)
-表示數值有效位數的程度[參數](../../../ado/reference/ado-api/parameter-object.md)物件或數值[欄位](../../../ado/reference/ado-api/field-object.md)物件。  
+表示[參數](../../../ado/reference/ado-api/parameter-object.md)物件或數值[欄位](../../../ado/reference/ado-api/field-object.md)物件中數值的有效位數程度。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回**位元組**值，指出用來代表值的數字的最大數目。  
+ 設定或傳回**位元組**值，指出用來表示值的最大位數。  
   
 ## <a name="remarks"></a>備註  
- 使用**有效位數**屬性來判斷用來表示一個數字值的數字的最大數目**參數**或是**欄位**物件。  
+ 使用**Precision**屬性來判斷用來表示數值**參數**或**欄位**物件值的最大位數。  
   
- 值會是讀取/寫入 on**參數**物件。  
+ **參數**物件上的值為讀取/寫入。  
   
- 針對**欄位**物件，**精確度**是通常是唯讀。 不過，對於新**欄位**附加到的物件[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)集合[記錄](../../../ado/reference/ado-api/record-object-ado.md)，**精確度**是只讀取/寫入之後[值](../../../ado/reference/ado-api/value-property-ado.md)屬性**欄位**已指定與此資料提供者已成功地加入新**欄位**藉由呼叫[更新](../../../ado/reference/ado-api/update-method.md)方法**欄位**集合。  
+ 對於**欄位**物件，**精確度**通常是唯讀的。 不過，對於已附加至[記錄](../../../ado/reference/ado-api/record-object-ado.md)之[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合的新**欄位**物件，只有在指定**欄位**的[Value](../../../ado/reference/ado-api/value-property-ado.md)屬性，且資料提供者已藉由呼叫**Fields**集合的[Update](../../../ado/reference/ado-api/update-method.md)方法成功加入新**欄位**之後，有效**位數**才會是讀取/寫入。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
   
 |||  
 |-|-|  
 |[Field 物件](../../../ado/reference/ado-api/field-object.md)|[Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [NumericScale 和 Precision 屬性範例 (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
- [NumericScale 和 Precision 屬性範例 （VC + +）](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
+ [NumericScale 和 Precision 屬性範例（VB）](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
+ [NumericScale 和 Precision 屬性範例（VC + +）](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
  [NumericScale 屬性 (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)

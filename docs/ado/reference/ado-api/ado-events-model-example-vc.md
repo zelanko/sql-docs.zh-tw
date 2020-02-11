@@ -1,5 +1,5 @@
 ---
-title: ADO 事件模型範例 （VC + +） |Microsoft Docs
+title: ADO 事件模型範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,38 +15,38 @@ ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1af45d9ac4674af98097083e2da89a217f17a58f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921019"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 事件模型範例 (VC++)
-視覺效果C++一節[ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)提供如何具現化 ADO 事件模型的一般描述。 以下是具現化所建立的環境內的事件模型的特定範例 **#import**指示詞。  
+Ado 事件具現[化（依語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)）的 Visual C++ 區段會提供如何具現化 ado 事件模型的一般描述。 以下是在 **#import**指示詞所建立的環境中，具現化事件模型的特定範例。  
   
- 一般的描述會使用**adoint.h**方法簽章的參考。 不過，一般的描述中的一些詳細資料而稍微藉由使用 **#import**指示詞：  
+ 一般描述會使用**adoint**做為方法簽章的參考。 不過，一般描述中的一些詳細資料會因使用 **#import**指示詞而稍微變更：  
   
--   **#Import**指示詞會解析**typedef**的方法簽章資料類型和修飾詞，以其基本形式。  
+-   **#Import**指示詞會解析其基本形式的**typedef**、方法簽章資料類型和修飾詞。  
   
--   必須覆寫的純虛擬方法都會全部加上"**raw_** "。  
+-   必須覆寫的純虛擬方法，其前面都會加上 "**raw_**"。  
   
- 部分程式碼只會反映程式碼撰寫樣式。  
+ 有些程式碼只會反映編碼樣式。  
   
--   指標**IUnknown**供**Advise**方法會明確呼叫取得**QueryInterface**。  
+-   **建議**方法所使用的**IUnknown**指標是透過呼叫**QueryInterface**來明確取得。  
   
--   您不需要明確撰寫程式碼中的類別定義解構函式。  
+-   您不需要在類別定義中明確地撰寫函式的程式碼。  
   
--   若要撰寫程式碼更強固的 QueryInterface，AddRef 和實作版本。  
+-   您可能想要撰寫更健全的 QueryInterface、AddRef 和 Release 的程式碼。  
   
--   **__Uuidof()** 指示詞廣泛使用，以取得的介面識別碼。  
+-   **__Uuidof （）** 指示詞會廣泛用來取得介面識別碼。  
   
  最後，此範例包含一些工作程式碼。  
   
--   此範例會寫入做為主控台應用程式。  
+-   此範例會撰寫為主控台應用程式。  
   
--   您應該將自己的程式碼註解，在 「`// Do some work`"。  
+-   您應該在批註 "`// Do some work`" 底下插入自己的程式碼。  
   
--   所有事件處理常式預設不進行任何動作，並進一步取消通知。 您應該將適當的程式碼插入您的應用程式，並視需要允許通知。  
+-   所有事件處理常式都預設為不執行任何動作，並取消進一步的通知。 您應該為應用程式插入適當的程式碼，並在必要時允許通知。  
   
 ```  
 // ADO_Events_Model_Example.cpp  

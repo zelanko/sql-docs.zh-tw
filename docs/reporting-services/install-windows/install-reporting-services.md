@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 749dfd8f7cce37aeeb9721af9f951caa6ab15dfd
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71952737"
 ---
 # <a name="install-sql-server-reporting-services"></a>安裝 SQL Server Reporting Services
@@ -93,11 +93,11 @@ SQL Server Reporting Services 安裝所涉及的伺服器元件包括儲存報�
 
 URL 保留項目是由前置詞、主機名稱、通訊埠和虛擬目錄所組成：
 
-|部分|Description|
+|部分|描述|
 |----------|-----------------|
-|Prefix|預設前置詞是 HTTP。 如果您之前安裝了安全通訊端層 (SSL) 憑證，安裝程式會嘗試建立使用 HTTPS 前置詞的 URL 保留項目。|
+|前置詞|預設前置詞是 HTTP。 如果您之前安裝了安全通訊端層 (SSL) 憑證，安裝程式會嘗試建立使用 HTTPS 前置詞的 URL 保留項目。|
 |主機名稱|預設主機名稱是強式萬用字元 (+)， 它會指定報表伺服器接受解析為電腦任何主機名稱之指定連接埠上的任何 HTTP 要求，包括 `https://<computername>/reportserver`、`https://localhost/reportserver` 或 `https://<IPAddress>/reportserver.`|
-|通訊埠|預設連接埠是 80。 如果您使用連接埠 80 以外的任何連接埠，當您在瀏覽器視窗中開啟入口網站時，就必須明確將此連接埠新增至 URL 中。|
+|連接埠|預設連接埠是 80。 如果您使用連接埠 80 以外的任何連接埠，當您在瀏覽器視窗中開啟入口網站時，就必須明確將此連接埠新增至 URL 中。|
 |虛擬目錄|根據預設，系統會建立虛擬目錄，報表伺服器 Web 服務使用 ReportServer 格式，入口網站使用 Reports 格式。 如果是報表伺服器 Web 服務，預設虛擬目錄會是 **reportserver**。 入口網站的預設虛擬目錄為 **reports**。|
 
 完整 URL 字串可能出現的範例如下：
@@ -112,7 +112,7 @@ URL 保留項目是由前置詞、主機名稱、通訊埠和虛擬目錄所組�
 
 您需要開啟已為 Web 服務 URL 和入口網站 URL 設定的 TCP 連接埠。 根據預設，這些是設定在 TCP 連接埠 80。
 
-## <a name="additional-configuration"></a>其他組態
+## <a name="additional-configuration"></a>其他設定
 
 - 若要設定與 Power BI 服務的整合，以便可將報表項目釘選到 Power BI 儀表板，請參閱[與 Power BI 服務整合](power-bi-report-server-integration-configuration-manager.md)。
 

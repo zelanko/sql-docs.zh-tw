@@ -1,5 +1,5 @@
 ---
-title: Save 和 Open 方法範例 （VC + +） |Microsoft Docs
+title: Save 和 Open 方法範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,16 +16,16 @@ ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 245affed25c7fb3d0ccc91504de0cfaaeee1807a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917068"
 ---
-# <a name="save-and-open-methods-example-vc"></a>Save 和 Open 方法範例 （VC + +）
-這三個範例示範如何[儲存](../../../ado/reference/ado-api/save-method.md)並**開啟**方法可以一起使用。  
+# <a name="save-and-open-methods-example-vc"></a>Save 和 Open 方法範例（VC + +）
+這三個範例會示範如何搭配使用[Save](../../../ado/reference/ado-api/save-method.md)和**Open**方法。  
   
- 假設您即將在出差的旅途上，並想要沿著從資料庫資料表。 您繼續之前，您存取資料，當做[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)並將它儲存在容易進行傳輸的表單。 當您抵達您的目的地時，存取**Recordset**為本機，中斷連接**資料錄集**。 若要變更**資料錄集**，然後重新儲存。 最後，當您重返首頁，再連接到資料庫並更新您所做的變更在路上。  
+ 假設您正在出差，而且想要從資料庫中取得資料表。 在您開始之前，您會以[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)的形式存取資料，並將其儲存為可傳送的格式。 當您抵達目的地時，您會以本機、離線式**記錄集**的身分存取**記錄集**。 您對**記錄集**進行變更，然後重新儲存。 最後，當您返回 home 時，您會再次連接到資料庫，並以您在路上所做的變更來更新它。  
   
 ```  
 // BeginSaveCpp.cpp  
@@ -261,6 +261,6 @@ bool FileExists() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Open 方法 (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Open 方法（ADO Recordset）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Save 方法](../../../ado/reference/ado-api/save-method.md)

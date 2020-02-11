@@ -1,5 +1,5 @@
 ---
-title: Cellset 範例 (VB) |Microsoft Docs
+title: 格集範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b099a1eb5d513285b33b26f5623f1e14b322731
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911584"
 ---
 # <a name="cellset-example-vb"></a>Cellset 範例 (VB)
-此 Visual Basic 專案會示範使用 ADO MD 來存取 cube 資料的基本概念。 它會顯示成員標題資料行和資料列的標頭，然後顯示格式的資料格集內的特定資料格的值。  
+此 Visual Basic 專案示範使用 ADO MD 來存取 cube 資料的基本概念。 它會顯示資料行和資料列標頭的成員標題，然後在資料格集內顯示特定儲存格的格式化值。  
   
 ```  
 Private Sub cmdCellSettoDebugWindow_Click()  

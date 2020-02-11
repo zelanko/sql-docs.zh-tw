@@ -1,5 +1,5 @@
 ---
-title: UPDATE CUBE 陳述式 (MDX) |Microsoft Docs
+title: UPDATE CUBE 語句（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f52dd59b67b42ad430df9bb1e9d00dce7ad6d697
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68003525"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX 資料操作 - UPDATE CUBE
 
 
-  UPDATE CUBE 陳述式可用來將資料寫回 Cube 中的任何資料格，再使用 SUM 彙總將其彙總至其父系。 如需詳細說明和範例，請參閱此部落格文章中的 < 了解配置":[建立回寫應用程式與 Analysis Services （部落格）](https://go.microsoft.com/fwlink/?LinkId=394977)。  
+  UPDATE CUBE 陳述式可用來將資料寫回 Cube 中的任何資料格，再使用 SUM 彙總將其彙總至其父系。 如需更多說明和範例，請參閱此 blog 文章中的「瞭解配置」：[使用 Analysis Services 建立回寫應用程式（blog）](https://go.microsoft.com/fwlink/?LinkId=394977)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,20 +53,20 @@ UPDATE [ CUBE ] Cube_Name
  傳回介於 0 和 1 間之十進位值的有效多維度運算式 (MDX) 數值運算式。  
   
 ## <a name="remarks"></a>備註  
- 您可以更新 Cube 內指定的分葉或非分葉資料格的值，選擇性地跨相依分葉資料格，配置指定的非分葉頁資料格的值。 由 Tuple 運算式指定的資料格可以是多維度空間的任何有效資料格 (亦即，資料格不需要是分葉資料格)。 不過，資料格必須能以彙總[總和](../mdx/sum-mdx.md)彙總函式，而且不得包含導出的成員用來識別資料格的 tuple 中。  
+ 您可以更新 Cube 內指定的分葉或非分葉資料格的值，選擇性地跨相依分葉資料格，配置指定的非分葉頁資料格的值。 由 Tuple 運算式指定的資料格可以是多維度空間的任何有效資料格 (亦即，資料格不需要是分葉資料格)。 不過，必須使用[Sum](../mdx/sum-mdx.md)彙總函式來匯總資料格，而且不能在用來識別資料格的元組中包含匯出成員。  
   
- 可能會認為**UPDATE CUBE**陳述式視為會自動產生一連串個別資料格回寫作業會積存到指定總和的分葉和非分葉資料格的副程式。  
+ 將**UPDATE CUBE**語句視為副程式，將會自動產生一系列個別的資料格回寫作業到分葉和非分葉資料格，並將其匯總成指定的總和，這可能會很有説明。  
   
  以下是配置方法的描述。  
   
- **USE_EQUAL_ALLOCATION:** 每個分葉資料格，提供給更新資料格將會指派為下列運算式為基礎的相等值。  
+ **USE_EQUAL_ALLOCATION：** 提供給更新資料格的每個分葉資料格，將根據下列運算式指派一個相等的值。  
   
 ```  
 <leaf cell value> =   
 <New Value> / Count(leaf cells that are contained in <tuple>)  
 ```  
   
- **USE_EQUAL_INCREMENT:** 每個分葉資料格，提供給更新資料格將會根據以下運算式變更。  
+ **USE_EQUAL_INCREMENT：** 提供給更新資料格的每個分葉資料格都會根據下列運算式進行變更。  
   
 ```  
 <leaf cell value> = <leaf cell value> +   
@@ -74,20 +74,20 @@ UPDATE [ CUBE ] Cube_Name
 Count(leaf cells contained in <tuple>)  
 ```  
   
- **USE_WEIGHTED_ALLOCATION:** 每個分葉資料格，提供給更新資料格將會指派為下列運算式為基礎的相等值。  
+ **USE_WEIGHTED_ALLOCATION：** 提供給更新資料格的每個分葉資料格，將會被指派一個以下列運算式為基礎的相等值。  
   
 ```  
 <leaf cell value> = < New Value> * Weight_Expression  
 ```  
   
- **USE_WEIGHTED_INCREMENT:** 每個分葉資料格，提供給更新資料格將會根據以下運算式變更。  
+ **USE_WEIGHTED_INCREMENT：** 提供給更新資料格的每個分葉資料格都會根據下列運算式進行變更。  
   
 ```  
 <leaf cell value> = <leaf cell value> +   
 (<New Value> - <existing value>)  * Weight_Expression  
 ```  
   
- 如果未指定加權運算式， **UPDATE CUBE**陳述式會隱含地使用下列運算式。  
+ 如果未指定權數運算式， **UPDATE CUBE**語句會隱含地使用下列運算式。  
   
 ```  
 Weight_Expression = <leaf cell value> / <existing value>  
@@ -98,7 +98,7 @@ Weight_Expression = <leaf cell value> / <existing value>
 > [!CAUTION]  
 >  用戶端應用程式必須同時考慮所有維度的配置，避免發生非預期的結果，包括不正確的積存值或不一致的資料。  
   
- 每個**UPDATE CUBE**配置都應該視為不可針對交易目的。 這代表，如果有任何配置作業因任何原因而失敗，例如公式有誤，或安全性違規，整個 UPDATE CUBE 作業將會失敗。 處理個別配置作業之前，會先製作資料的快照集，以確定計算結果正確。  
+ 每個**更新 CUBE**配置都應該視為不可部分完成，以供交易之用。 這代表，如果有任何配置作業因任何原因而失敗，例如公式有誤，或安全性違規，整個 UPDATE CUBE 作業將會失敗。 處理個別配置作業之前，會先製作資料的快照集，以確定計算結果正確。  
   
 > [!CAUTION]  
 >  在包含整數的量值上使用時，累加的四捨五入變更會導致 USE_WEIGHTED_ALLOCATION 方法傳回不精確的結果。  
@@ -108,6 +108,6 @@ Weight_Expression = <leaf cell value> / <existing value>
   
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [MDX 資料操作陳述式&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [Mdx&#41;&#40;mdx 資料動作陳述式](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

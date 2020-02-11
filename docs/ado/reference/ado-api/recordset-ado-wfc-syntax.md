@@ -1,5 +1,5 @@
 ---
-title: 資料錄集 (ADO-WFC 語法) |Microsoft Docs
+title: Recordset （ADO-WFC 語法） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: bd1f571e-007f-432e-ada1-5c3e436c1a22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58e0cde8798f73257a54be5cc95f64474334a153
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931383"
 ---
 # <a name="recordset-ado---wfc-syntax"></a>Recordset (ADO - WFC 語法)
-## <a name="package-commswfcdata"></a>封裝 com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>封裝 .com. wfc. 資料  
   
 ### <a name="constructors"></a>建構函式  
   
@@ -134,8 +134,8 @@ public com.ms.wfc.data.Fields getFields()
 public AdoProperties getProperties()  
 ```  
   
-### <a name="events"></a>Events  
- 如需有關 ADO/WFC 事件的詳細資訊，請參閱[ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)。  
+### <a name="events"></a>事件  
+ 如需 ADO/WFC 事件的詳細資訊，請參閱[依語言的 Ado 事件](../../../ado/guide/data/ado-event-instantiation-by-language.md)具現化。  
   
 ```  
 public void addOnEndOfRecordset(RecordsetEventHandler handler)  

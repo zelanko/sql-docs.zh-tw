@@ -13,17 +13,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 172c8cbf13b76c23cd9f4768aaf5162e923bc28d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154298"
 ---
 # <a name="connect-to-azure-storage"></a>連線到 Azure 儲存體
-  使用 [ **Azure 儲存體連接**] 對話方塊來指定儲存體帳戶, 並驗證您對 Azure 的連線。  
+  使用 [Azure 儲存體連線]  對話方塊，以指定儲存體帳戶並驗證 Azure 的連線。  
   
 ## <a name="options"></a>選項。  
- 指定下列有關您 Azure 帳戶的資訊, 然後按 **[下一步]** 繼續。  
+ 請指定有關 Azure 帳戶的下列資訊，然後按一下 [下一步]  繼續進行。  
   
 1.  **儲存體帳戶** - 指定儲存體帳戶名稱。  
   

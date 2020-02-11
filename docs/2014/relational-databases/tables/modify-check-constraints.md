@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 651b13121653f5627f59bc6a8a11f1e2e49c43b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211847"
 ---
 # <a name="modify-check-constraints"></a>修改檢查條件約束
@@ -39,7 +39,7 @@ ms.locfileid: "68211847"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
@@ -56,7 +56,7 @@ ms.locfileid: "68211847"
   
 4.  完成下表中的動作：  
   
-    |若要|請依照下列步驟：|  
+    |至|請依照下列步驟：|  
     |--------|------------------------|  
     |編輯條件約束運算式|在 **[運算式]** 欄位中輸入新的運算式。|  
     |重新命名條件約束|在 **[名稱]** 欄位中輸入新的名稱。|  
@@ -67,9 +67,9 @@ ms.locfileid: "68211847"
     > [!NOTE]  
     >  某些資料庫具有不同的檢查條件約束功能。  
   
-5.  按一下 [ **關閉**]。  
+5.  按一下 [關閉]  。  
   
-6.  在 [檔案]  功能表上，按一下 [儲存]  _table name_。  
+6.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改檢查條件約束**  

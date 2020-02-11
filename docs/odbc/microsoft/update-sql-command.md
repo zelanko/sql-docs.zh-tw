@@ -1,5 +1,5 @@
 ---
-title: UPDATE-SQL 命令 |Microsoft Docs
+title: 更新-SQL 命令 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0230329d10d2414724379d4b9d38c4851a031bca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67912337"
 ---
 # <a name="update---sql-command"></a>UPDATE - SQL 命令
-使用新值更新資料表中的記錄。  
+以新值更新資料表中的記錄。  
   
- Visual FoxPro ODBC Driver 支援原生 Visual FoxPro 語言語法，此命令。 驅動程式專屬資訊，請參閱**驅動程式備註**。  
+ Visual FoxPro ODBC 驅動程式支援此命令的原生 Visual FoxPro 語言語法。 如需驅動程式特定的資訊，請參閱**驅動程式備註**。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,26 +35,26 @@ SET Column_Name1 = eExpression1
 ```  
   
 ## <a name="arguments"></a>引數  
- 更新 [ *DatabaseName1 ！* ]*TableName1*  
- 指定的新值更新記錄的資料表。  
+ 更新 [ *DatabaseName1！*]*TableName1*  
+ 指定以新值更新記錄的資料表。  
   
- *DatabaseName1!* 指定包含資料表的資料來源所指定的資料庫以外的資料庫名稱。 您必須包括包含的資料表，如果資料庫不是目前資料庫的名稱。 之後的資料庫名稱和資料表名稱之前，請包含驚嘆號 （！） 分隔符號。  
+ *DatabaseName1!* 指定資料庫的名稱，而不是使用包含資料表的資料來源所指定的資料庫。 如果資料庫不是最新的，您必須包含包含資料表的資料庫名稱。 在資料庫名稱後面和資料表名稱前面加上驚嘆號（！）分隔符號。  
   
- 設定*Column_Name1*= *eExpression1*[， *Column_Name2*= *eExpression2*  
- 指定更新的資料行和其新的值。 如果您省略 WHERE 子句，資料行中的每個資料列會更新以相同的值。  
+ SET *Column_Name1*= *eExpression1*[， *Column_Name2*= *eExpression2*  
+ 指定已更新的資料行及其新值。 如果您省略 WHERE 子句，資料行中的每個資料列都會更新為相同的值。  
   
- 何處*FilterCondition1*[AND&#124;或者*FilterCondition2*...]  
- 指定的記錄，則會以新值更新。  
+ 其中*FilterCondition1*[AND &#124; OR *FilterCondition2*...]  
+ 指定以新值更新的記錄。  
   
- *FilterCondition*指定記錄必須符合使用新的值進行更新的準則。 例如，連接及篩選條件，您可以包含或 OR 運算子。 您也可以使用 NOT 運算子來反轉邏輯運算式的值，或者您可以使用**空**（) 來檢查是否有空白的欄位。  
+ *FilterCondition*指定記錄必須符合才能以新值更新的準則。 您可以視需要包含多個篩選準則，並使用 AND 或 OR 運算子來連接它們。 您也可以使用 NOT 運算子來反轉邏輯運算式的值，也可以使用**empty**（）來檢查空白欄位。  
   
 ## <a name="remarks"></a>備註  
- 更新-SQL 可以更新只會在單一資料表中的記錄。  
+ UPDATE-SQL 只能更新單一資料表中的記錄。  
   
- 不同於取代更新-SQL 會使用記錄鎖定更新資料表中的多筆記錄開啟的共用存取時。 這會減少記錄競爭情況，在多使用者的情況下，但可能會降低效能。 達到最佳效能，請開啟資料表的獨佔使用，或使用**FLOCK**（) 來鎖定資料表。  
+ 不同于 REPLACE，更新-SQL 會在針對共用存取所開啟的資料表中更新多筆記錄時，使用記錄鎖定。 這可減少多使用者情況的記錄爭用，但可能會降低效能。 為了達到最大效能，請開啟資料表以供獨佔使用，或使用**FLOCK**（）來鎖定資料表。  
   
 ## <a name="driver-remarks"></a>驅動程式備註  
- 當您的應用程式傳送至資料來源的 ODBC SQL 陳述式更新時，則 Visual FoxPro ODBC Driver 會將命令轉換 Visual FoxProUPDATE 命令，無需進行翻譯。  
+ 當您的應用程式將 ODBC SQL 語句更新傳送至資料來源時，Visual FoxPro ODBC 驅動程式會將命令轉換成 Visual FoxProUPDATE 命令，而不會轉譯。  
   
 ## <a name="see-also"></a>另請參閱  
  [DELETE-SQL 命令](../../odbc/microsoft/delete-sql-command.md)   

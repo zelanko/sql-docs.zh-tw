@@ -15,15 +15,15 @@ ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 40506ec971782c5e9108a34fd240faabcc2756b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925650"
 ---
 # <a name="data-providers"></a>資料提供者
-資料提供者會代表不同來源的資料，例如 SQL 資料庫、 編製索引-循序檔案、 試算表、 文件存放區和郵件檔。 提供者會公開一致地使用常見的抽象概念，稱為資料列集的資料。  
+資料提供者代表各種不同的資料來源，例如 SQL 資料庫、索引順序檔案、試算表、檔存放區和郵件檔案。 提供者會使用稱為資料列集的通用抽象概念來一致地公開資料。  
   
- ADO 是功能強大且靈活的因為它可以連線到任何數個不同的資料提供者，並仍會公開相同的程式設計模型，不論任何指定的提供者的特定功能。 不過，因為每個資料提供者是唯一的您的應用程式與 ADO 之間的互動方式會因資料提供者。  
+ ADO 的功能強大且有彈性，因為它可以連接到數種不同的資料提供者，而且仍然會公開相同的程式設計模型，不論任何指定的提供者的特定功能為何。 不過，因為每個資料提供者都是唯一的，所以您的應用程式與 ADO 互動的方式會因數據提供者而異。  
   
- 比方說，功能的 OLE DB Provider for SQL Server，用來存取 Microsoft SQL Server 資料庫，是相當不同的 Microsoft OLE DB Provider for Internet Publishing，用來存取檔案在 Web 伺服器上的存放區。
+ 例如，用於存取 Microsoft SQL Server 資料庫之 SQL Server 的 OLE DB 提供者功能和功能，與用來存取檔案的 Microsoft OLE DB 提供者（用來存取檔案）不同。儲存在 Web 服務器上。
