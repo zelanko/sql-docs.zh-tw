@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6a60f1b47c7015fa0fca27cc7ce68bf4d04b15d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105206"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Multilookup 函數 (報表產生器及 SSRS)
@@ -35,10 +35,10 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (`VariantArray`) - 在目前範圍中評估並指定要查閱之名稱或索引鍵集合的運算式。 例如，如果是多值參數 `=Parameters!IDs.value`。  
   
  *destination_expression*  
- (`Variant`) - 針對資料集中的每個資料列評估並指定要比對之名稱或索引鍵的運算式。 例如， `=Fields!ID.Value` 。  
+ (`Variant`) - 針對資料集中的每個資料列評估並指定要比對之名稱或索引鍵的運算式。 例如： `=Fields!ID.Value` 。  
   
  *result_expression*  
- (`Variant`) 會針對資料集中的資料列評估的運算式所在*source_expression* = *destination_expression*，並指定要擷取的值。 例如， `=Fields!Name.Value` 。  
+ （`Variant`）針對 dataset 中的資料列評估的運算式，其中*source_expression* = *destination_expression*，並指定要抓取的值。 例如： `=Fields!Name.Value` 。  
   
  *資料集 (dataset)*  
  指定報表中資料集名稱的常數。 例如，"Colors"。  
@@ -47,9 +47,11 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  傳回 `VariantArray` 或在沒有相符項目時傳回 `Nothing`。  
   
 ## <a name="remarks"></a>備註  
- 使用 `Multilookup` 可從具有一對一關係的每一組名稱/值組的資料集內擷取一組值。 `MultiLookup` 等於針對一組名稱或索引鍵呼叫 `Lookup`。 例如，如果是根據主索引鍵識別碼的多值參數，您可以在資料表中的文字方塊內使用運算式中的 `Multilookup`，從未繫結至參數或資料表的資料集擷取關聯的值。  
+ 使用 `Multilookup` 可從具有一對一關係的每一組名稱/值組的資料集內擷取一組值。 
+  `MultiLookup` 等於針對一組名稱或索引鍵呼叫 `Lookup`。 例如，如果是根據主索引鍵識別碼的多值參數，您可以在資料表中的文字方塊內使用運算式中的 `Multilookup`，從未繫結至參數或資料表的資料集擷取關聯的值。  
   
- `Multilookup` 會執行下列動作：  
+ 
+  `Multilookup` 會執行下列動作：  
   
 -   評估目前範圍中的來源運算式，並產生變數物件的陣列。  
   
@@ -59,7 +61,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  若要從具有一對一關聯性之名稱/值組的資料集中，擷取指定名稱的單一值，請使用 [Lookup 函式 &#40;報表產生器及 SSRS&#41;](report-builder-functions-lookup-function.md)。 若要從具有一對多關聯性之名稱/值組的資料集中，擷取某個名稱的多個值，請使用 [LookupSet 函式 &#40;報表產生器及 SSRS&#41;](report-builder-functions-lookupset-function.md)。  
   
- 系統會套用下列限制：  
+ 適用以下限制：  
   
 -   當套用所有篩選運算式之後，便會評估 `Multilookup`。  
   
@@ -69,7 +71,8 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   來源、目的地和結果運算式無法包含報表或群組變數的參考。  
   
--   `Multilookup` 不能當做下列報表項目的運算式使用：  
+-   
+  `Multilookup` 不能當做下列報表項目的運算式使用：  
   
     -   資料來源的動態連接字串。  
   
@@ -110,7 +113,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="example"></a>範例  
  假設 ProductColors 資料集包含色彩識別碼欄位 ColorID 及色彩值欄位 Color，如下表所示。  
   
-|ColorID|色彩|  
+|ColorID|Color|  
 |-------------|-----------|  
 |1|紅色|  
 |2|藍色|  

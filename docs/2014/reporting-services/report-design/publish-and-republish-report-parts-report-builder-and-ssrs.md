@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9178caad90bff142996247b1c5befe6dd47c4933
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105407"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>發行與重新發行報表組件 (報表產生器及 SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66105407"
   
      否則，按一下 [發行前檢閱並修改報表組件]  。  
   
-3.  編輯報表組件的名稱和描述：按兩下名稱可編輯名稱，而在 [描述]  欄位中按一下則可新增描述。  
+3.  編輯報表組件名稱和描述：按兩下名稱可以編輯名稱，而在 [描述]  欄位中按一下則可新增描述。  
   
     > [!NOTE]  
     >  最好提供報表組件名稱和描述，以協助使用者在搜尋時識別它。 若是完整路徑，報表組件名稱的最大長度為 260 個字元，包括伺服器上的資料夾名稱，後面接著報表組件的實際名稱。  
@@ -45,7 +45,7 @@ ms.locfileid: "66105407"
   
      發行報表組件之後，對話方塊會顯示成功發行的報表組件，以及未成功發行的報表組件。 您可以在 [發行報表組件]  對話方塊中，檢視無法發行之報表組件的詳細資料。  
   
-6.  按一下 [ **關閉**]。  
+6.  按一下 [關閉]  。  
   
 ### <a name="to-republish-a-report-part"></a>重新發行報表組件  
   
@@ -59,8 +59,8 @@ ms.locfileid: "66105407"
 ## <a name="see-also"></a>另請參閱  
  [報表組件 &#40;報表產生器及 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [報表產生器中的報表組件和資料集](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [疑難排解報表組件&#40;報表產生器及 SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [檢查更新或關閉更新&#40;報表產生器及 SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
+ [&#40;報表產生器和 SSRS&#41;疑難排解報表元件](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [檢查是否有更新，或關閉 &#40;報表產生器和 SSRS 的更新&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
  [瀏覽報表組件及設定預設資料夾 &#40;報表產生器及 SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   

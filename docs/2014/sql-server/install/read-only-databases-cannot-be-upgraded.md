@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 414b26cf860ab32bb11beaa1ccbef3316c68f557
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093364"
 ---
 # <a name="read-only-databases-cannot-be-upgraded"></a>無法升級唯讀資料庫
@@ -29,7 +29,7 @@ ms.locfileid: "66093364"
  已偵測到唯讀資料庫。 若要升級資料庫，安裝程式必須可以寫入資料庫。  
   
 ## <a name="corrective-action"></a>更正動作  
- 在沒有人使用資料庫，使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise Manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，或 ALTER DATABASE 陳述式變更為讀寫資料庫。 下列陳述式會將資料庫變更為可讀寫。  
+ 如果沒有人正在使用資料庫，請使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Manager、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]或 ALTER database 語句，將資料庫變更為讀寫。 下列陳述式會將資料庫變更為可讀寫。  
   
 ```  
 USE master;  
@@ -42,7 +42,7 @@ GO
  如需有關 ALTER DATABASE 陳述式的詳細資訊，請參閱《[!INCLUDE[tsql](../../includes/tsql-md.md)] 線上叢書》中的＜ALTER DATABASE ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])＞主題。  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
+ [資料庫引擎升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新的&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

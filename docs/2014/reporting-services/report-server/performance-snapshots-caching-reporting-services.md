@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a5fa14ad158d2b937ecd8c7fa706460ec8ee1aca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103594"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>效能、快照、快取 (Reporting Services)
-  報表伺服器的效能會受到一些因素組合的影響，包括硬體、存取報表的並行使用者數目、報表中的資料量，以及輸出格式。 若要了解安裝特有的效能因素以及哪些補救措施可產生所需的結果，您必須取得基準資料並執行測試。 如需有關工具和指導方針的詳細資訊，請參閱 MSDN 上的下列發行集：[Reporting Services 效能最佳化](https://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx)並[到 SQL Server 2005 Reporting Services 報表伺服器上執行負載測試中使用 Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkID=77519)。  
+  報表伺服器的效能會受到一些因素組合的影響，包括硬體、存取報表的並行使用者數目、報表中的資料量，以及輸出格式。 若要了解安裝特有的效能因素以及哪些補救措施可產生所需的結果，您必須取得基準資料並執行測試。 如需有關工具和指導方針的詳細資訊，請參閱下列 MSDN 出版品：＜ [Reporting Services 效能最佳化](https://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) ＞和＜ [在 SQL Server 2005 Reporting Services 報表伺服器上使用 Visual Studio 2005 執行負載測試](https://go.microsoft.com/fwlink/?LinkID=77519)＞。  
   
  要考慮的一般原則包括下列各項：  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66103594"
   
 -   如果採用特定格式之所有報表的處理速度很慢 (例如，轉譯成 PDF 時)，請考慮採用檔案共用傳遞、加入更多記憶體，或選擇不同的格式。  
   
--   若要了解處理某份報表和其他使用標準需要多久，請檢閱報表伺服器執行記錄。 如需詳細資訊，請參閱 <<c0> [ 報表伺服器執行記錄和 ExecutionLog3 檢視](report-server-executionlog-and-the-executionlog3-view.md)。  
+-   若要了解處理某份報表和其他使用標準需要多久，請檢閱報表伺服器執行記錄。 如需詳細資訊，請參閱[報表伺服器執行記錄和 ExecutionLog3 View](report-server-executionlog-and-the-executionlog3-view.md)。  
   
 -   如需有關如何透過微調記憶體管理組態設定來減少效能問題的詳細資訊，請參閱 [設定報表伺服器應用程式的可用記憶體](../report-server/configure-available-memory-for-report-server-applications.md)。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66103594"
  [設定報表伺服器應用程式的可用記憶體](../report-server/configure-available-memory-for-report-server-applications.md)  
  描述如何覆寫預設記憶體管理行為。  
   
- [快取多個報表 &#40;SSRS&#41;](caching-reports-ssrs.md)  
+ [快取報表 &#40;SSRS&#41;](caching-reports-ssrs.md)  
  描述報表伺服器上的報表快取行為。  
   
  [快取共用資料集 &#40;SSRS&#41;](cache-shared-datasets-ssrs.md)  

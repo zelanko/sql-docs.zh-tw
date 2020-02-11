@@ -13,17 +13,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c6599a087efa16a1fa83a37e1a26b362b971cbc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096460"
 ---
 # <a name="cluster-resource-group"></a>叢集資源群組
   使用 [叢集資源群組] 頁面，即可指定即將放置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 虛擬伺服器資源的磁碟。  
   
 ## <a name="options"></a>選項。  
- 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 叢集資源群組名稱。 您有兩個選項：  
+ 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 叢集資源群組名稱。 您有兩個選擇：  
   
 -   使用下拉式方塊來指定要使用的現有群組。  
   

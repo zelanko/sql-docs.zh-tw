@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fcab02cbe7f24da3567fdfa615a6595a268185ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105665"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>將 HTML 匯入至報表 (報表產生器及 SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66105665"
 > [!NOTE]  
 >  當您匯入包含 HTML 標記的文字時，資料一定要先由文字方塊進行剖析。 因為只支援一部分的 HTML 標記，所以顯示在轉譯報表中的 HTML 可能會與原始的 HTML 不同。  
   
- 若要快速開始作業，請參閱[教學課程：格式化文字 &#40;報表產生器&#41;](../tutorial-format-text-report-builder.md)。  
+ 若要快速開始使用，請參閱[教學課程：格式化文字 &#40;報表產生器&#41;](../tutorial-format-text-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -35,7 +35,7 @@ ms.locfileid: "66105665"
 ## <a name="supported-html-tags"></a>支援的 HTML 標籤  
  下列是在定義為預留位置文字時，會轉譯為 HTML 的標記完整清單：  
   
--   標頭、 樣式和區塊元素：\<H {n} >， \<d i v >， \<s p a n >，\<P >， \<l i >  
+-   Header、style 和 block 元素： \<H {n} >， \<DIV>， \<SPAN>，\<P>， \<LI>  
   
  所以其他的 HTML 標記都會在處理報表時遭到忽略。 如果預留位置文字中的運算式所代表的 HTML 沒有採用正確格式，則預留位置會轉譯為純文字。 所有 HTML 標記都不區分大小寫。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66105665"
   
     -   相對 CSS 長度單位會被忽略，而且不受支援。 不支援的單位包括 em、ex、px、%、rem。  
   
--   色彩  
+-   color  
   
 -   padding, padding-bottom, padding-top, padding-right, padding-left  
   
@@ -70,9 +70,9 @@ ms.locfileid: "66105665"
   
 -   格式不正確的 CSS 值會像格式不正確的 HTML 一樣遭到忽略。  
   
--   同一標記中同時存在屬性和 CSS 樣式屬性時，CSS 屬性擁有較高的優先權。 例如，如果文字是 **\<p style="text-align: right" align="left">** ，則只會套用 text-align 屬性而且文字會靠右對齊。  
+-   同一標記中同時存在屬性和 CSS 樣式屬性時，CSS 屬性擁有較高的優先權。 例如，如果文字是** \<p style = "text-align： right" align = "left" >**，則只會套用文字對齊屬性，而文字會靠右對齊。  
   
--   對於屬性和 CSS 樣式來說，如果某屬性指定了一次以上，則只會套用該屬性的最後一個執行個體。 例如，如果文字是 **\<p align="left" align="right">** ，則會靠右對齊文字。  
+-   對於屬性和 CSS 樣式來說，如果某屬性指定了一次以上，則只會套用該屬性的最後一個執行個體。 例如，如果文字是** \<p align = "left" align = "right" >**，則文字會靠右對齊。  
   
 ## <a name="see-also"></a>另請參閱  
  [轉譯為 HTML &#40;報表產生器及 SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  

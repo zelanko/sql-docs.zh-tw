@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ec051870966a3a8cf9d2d028d80a2fc36708ba28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106142"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>建立遞迴階層群組 (報表產生器及 SSRS)
@@ -50,13 +50,13 @@ ms.locfileid: "66106142"
     > [!NOTE]  
     >  如果看不到 [屬性] 窗格，請按一下 [檢視]  索引標籤上的 [屬性]  。  
   
-2.  在 [屬性] 窗格中，依序展開`Padding`節點中，按一下**左**，然後從下拉式清單中，選取 **\<運算式...> >** 。  
+2.  在 [屬性] 窗格中， `Padding`展開節點、按一下 [**左**]，然後從下拉式清單中選取** \<[運算式 ...] >**。  
   
 3.  在 [運算式] 窗格中，輸入下列運算式：  
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     Padding 屬性全都需要 *nnyy*格式的字串，其中 *nn* 是數字，而 *yy* 是測量單位。 此範例運算式會建立一個利用 `Level` 函數的字串，以便根據遞迴層級來增加填補大小。 例如，層級 1 的資料列會產生 (2 + (1\*10))=12pt 的填補，層級 3 的資料列會產生 (2 + (3\*10))=32pt 的填補。 如需`Level`函式，請參閱 <<c2> [ 層級](report-builder-functions-level-function.md)。  
+     Padding 屬性全都需要 *nnyy*格式的字串，其中 *nn* 是數字，而 *yy* 是測量單位。 此範例運算式會建立一個利用 `Level` 函數的字串，以便根據遞迴層級來增加填補大小。 例如，層級 1 的資料列會產生 (2 + (1\*10))=12pt 的填補，層級 3 的資料列會產生 (2 + (3\*10))=32pt 的填補。 如需函式`Level`的詳細資訊，請參閱[Level](report-builder-functions-level-function.md)。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

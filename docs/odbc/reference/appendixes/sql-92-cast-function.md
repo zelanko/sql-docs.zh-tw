@@ -15,24 +15,24 @@ ms.assetid: 982f09e5-8205-41b9-98b3-8f898e24743f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6682ae98f2da64f6936049bee96fe2fff2a84db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057064"
 ---
 # <a name="sql-92-cast-function"></a>SQL-92 CAST 函式
-**CAST**以 SQL-92 定義的函式相當於**轉換**在 ODBC 中定義的函式。 對等的函式的語法如下所示：  
+在 SQL-92 中定義的**CAST**函數相當於 ODBC 中定義的**CONVERT**函數。 對應函數的語法如下所示：  
   
 ```  
 { fn CONVERT (value-exp, data-type) } /* ODBC  
 CAST (value-exp AS data-type) /* SQL92  
 ```  
   
- SQL-92**轉型**函式會強制的資料類型可以轉換成的其他資料類型。 （如需詳細資訊，請參閱 SQL-92 規格）。**轉型**支援函式是 FIPS 過渡期的層級。  
+ SQL-92**轉換**函數會規定哪些資料類型可以轉換成其他資料類型。 （如需詳細資訊，請參閱 SQL-92 規格）。在 FIPS 過渡層級支援**CAST**函數。  
   
- 應用程式可以判斷支援**轉型**函式，如下所示：  
+ 應用程式可以判斷**CAST**函數的支援，如下所示：  
   
-1.  呼叫**SQLGetInfo** SQL_SQL_CONFORMANCE 資訊類型。 SQL_SC_FIPS127_2_TRANSITIONAL、 SQL_SC_SQL92_INTERMEDIATE 或 SQL_SC_SQL92_FULL，資訊類型的傳回值是否**轉型**支援函式。  
+1.  使用 SQL_SQL_CONFORMANCE 資訊類型來呼叫**SQLGetInfo** 。 如果資訊類型的傳回值是 SQL_SC_FIPS127_2_TRANSITIONAL、SQL_SC_SQL92_INTERMEDIATE 或 SQL_SC_SQL92_FULL，則支援**CAST**函數。  
   
-2.  如果 SQL_SC_ENTRY_LEVEL 或 0 SQL_SQL_CONFORMANCE 資訊類型的傳回值，呼叫**SQLGetInfo** SQL_SQL92_VALUE_EXPRESSIONS 資訊類型。 如果設定的 SQL_SVE_CAST 位元，則**轉型**支援函式。
+2.  如果 SQL_SQL_CONFORMANCE 資訊類型的傳回值 SQL_SC_ENTRY_LEVEL 或0，請使用 SQL_SQL92_VALUE_EXPRESSIONS 資訊類型來呼叫**SQLGetInfo** 。 如果已設定 SQL_SVE_CAST 位，則支援**CAST**函數。

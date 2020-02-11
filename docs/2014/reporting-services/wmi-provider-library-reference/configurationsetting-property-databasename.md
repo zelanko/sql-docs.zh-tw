@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5f1c639d3f70555d9b656d1d077a761f81ae953e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097760"
 ---
-# <a name="databasename-property-wmi-msreportserverconfigurationsetting"></a>DatabaseName 屬性 (WMI MSReportServer_ConfigurationSetting)
+# <a name="databasename-property-wmi-msreportserver_configurationsetting"></a>DatabaseName 屬性 (WMI MSReportServer_ConfigurationSetting)
   指定主控報表伺服器資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 唯讀。  
   
 ## <a name="syntax"></a>語法  
@@ -39,13 +39,14 @@ public string DatabaseName;
 ```  
   
 ## <a name="property-values"></a>屬性值  
- `String` 物件，其值代表報表伺服器資料庫的資料庫執行個體名稱。  
+ 
+  `String` 物件，其值代表報表伺服器資料庫的資料庫執行個體名稱。  
   
 ## <a name="example-code"></a>範例程式碼  
  [MSReportServer_ConfigurationSetting 類別](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

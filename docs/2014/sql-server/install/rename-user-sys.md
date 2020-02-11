@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce8656df63c9d415ca09b54ecb86b87aba8bd83a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092854"
 ---
 # <a name="rename-user-sys"></a>重新命名使用者 sys
-  Upgrade Advisor 偵測到的使用者名稱**sys**資料庫中。 這個名稱是保留的。 請在升級之前重新命名使用者。 如果使用者未重新命名，在升級程序之後，資料庫將處於可疑狀態，要等到資料庫連線後才可供使用。  
+  Upgrade Advisor 偵測到資料庫中有使用者名稱**sys** 。 這個名稱是保留的。 請在升級之前重新命名使用者。 如果使用者未重新命名，在升級程序之後，資料庫將處於可疑狀態，要等到資料庫連線後才可供使用。  
   
 ## <a name="component"></a>元件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
@@ -31,11 +31,11 @@ ms.locfileid: "66092854"
 ## <a name="corrective-action"></a>更正動作  
   
 ### <a name="before-upgrade-procedure"></a>升級前程序  
- 在升級中包含使用者的每個資料庫之前**sys**，執行下列動作：  
+ 在升級之前，請在包含使用者**sys**的每個資料庫中執行下列動作：  
   
 1.  建立新的使用者。  
   
-2.  使用下列的陳述式來顯示所有使用者授與的權限**sys**以及授與使用者**sys**。  
+2.  使用下列語句來顯示由使用者**sys**授與並授與使用者**sys**的擁有權限。  
   
     ```  
     -- Return permissions granted by user sys.  
@@ -44,16 +44,16 @@ ms.locfileid: "66092854"
     SELECT * FROM sysprotects WHERE uid = USER_ID('sys')  
     ```  
   
-3.  若要所擁有的所有物件的擁有權轉移**sys**新的使用者，以使用**sp_changeobjectowner**。  
+3.  若要將**sys**所擁有之所有物件的擁有權轉移給新的使用者，請使用**sp_changeobjectowner**。  
   
-4.  卸除使用者**sys**。  
+4.  卸載使用者**sys**。  
   
-5.  若要還原在步驟 2 中擷取原始的權限，使用 AS *new_user* GRANT 陳述式的子句。  
+5.  若要還原在步驟2中所捕獲的原始許可權，請使用 GRANT 語句的 AS *new_user*子句。  
   
 6.  修改指令碼以參考新使用者。 例如，包含 `SELECT * FROM sys.my`_`table` 等陳述式的指令碼必須變更為 `SELECT * FROM new_user.my_table`。  
   
 ### <a name="after-upgrade-procedure"></a>升級後程序  
- 如果使用者**sys**已升級之前無法重新命名，執行下列動作：  
+ 如果在升級之前未重新命名使用者**sys** ，請執行下列動作：  
   
 1.  執行陳述式 `ALTER DATABASE db_name SET ONLINE`。 資料庫將處於 SINGLE_USER 模式中。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66092854"
 3.  執行陳述式 `ALTER DATABASE db_name SET MULTI_USER`。  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
+ [資料庫引擎升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新的&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

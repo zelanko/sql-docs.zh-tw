@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc3cd0e7213426568a415e8b5f1b28475f0177e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105754"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>格式化文字和預留位置 (報表產生器及 SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66105754"
   
  在此圖中，文字方塊本身有框線，而且所有文字都位於相同的文字方塊中，但文字則有各種不同的格式。  
   
- 若要快速開始作業，請參閱[教學課程：格式化文字 &#40;報表產生器&#41;](../tutorial-format-text-report-builder.md)。  
+ 若要快速開始使用，請參閱[教學課程：格式化文字 &#40;報表產生器&#41;](../tutorial-format-text-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -45,14 +45,14 @@ ms.locfileid: "66105754"
   
 -   從 **[報表資料]** 窗格拖曳欄位，並將其放置到文字方塊中。 如果您拖曳報表主體上任何其他位置的運算式，就會建立包含預留位置的新文字方塊。 這個預留位置的值，將是對應至已卸除之欄位的欄位運算式。  
   
--   以滑鼠右鍵按一下文字方塊中的任一處，然後選取 [插入預留位置]。 您可以在 **[預留位置屬性]** 對話方塊中，指定運算式做為預留位置的值。 如需詳細資訊，請參閱 [預留位置屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)。  
+-   以滑鼠右鍵按一下文字方塊中的任一處，然後選取 [插入預留位置]****。 您可以在 **[預留位置屬性]** 對話方塊中，指定運算式做為預留位置的值。 如需詳細資訊，請參閱 [預留位置屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)。  
   
 -   將任何簡單或複雜的運算式輸入至文字方塊。 例如，如果您在文字方塊中輸入 **Name: [Name]** ， **[Name]** 文字將會顯示為代表運算式 `=Fields!Name.Value`的預留位置。  
   
 -   以等號 (=) 開始，在空白的文字方塊中輸入運算式。 當您將焦點從文字方塊移出時，所產生的運算式會轉換成您可以編輯的預留位置。 如果文字方塊不是空白的，或者文字方塊中的等號是插入第一個字元以外的位置，則系統會將等號視為字串常值而不會建立預留位置。 如需定義簡單與複雜運算式的詳細資訊，請參閱[報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)。  
   
 ## <a name="formatting-placeholders-and-static-text-in-a-text-box"></a>在文字方塊中格式化預留位置和靜態文字  
- 您可以使用 **[預留位置屬性]** 對話方塊來格式化預留位置。 您只能格式化整個預留位置，而不能格式化預留位置的區段。 如果想要查看基礎運算式，可以將指標暫停在預留位置上。 您可以藉由按兩下預留位置，或以滑鼠右鍵按一下預留位置後選取 [預留位置屬性]，來變更基礎運算式。 也可以在 **[預留位置屬性]** 對話方塊，使用 **[一般]** 中的 **[標籤]** 屬性來指定 UI 標籤。 這將是在設計階段為預留位置所顯示的文字。  
+ 您可以使用 **[預留位置屬性]** 對話方塊來格式化預留位置。 您只能格式化整個預留位置，而不能格式化預留位置的區段。 如果想要查看基礎運算式，可以將指標暫停在預留位置上。 您可以藉由按兩下預留位置，或以滑鼠右鍵按一下預留位置後選取 [預留位置屬性]****，來變更基礎運算式。 也可以在 **[預留位置屬性]** 對話方塊，使用 **[一般]** 中的 **[標籤]** 屬性來指定 UI 標籤。 這將是在設計階段為預留位置所顯示的文字。  
   
  ![rs_MixedTextnPlaceholder](../media/rs-mixedtextnplaceholder.gif "rs_MixedTextnPlaceholder")  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66105754"
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [格式化量測計上的標尺 &#40;報表產生器及 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [清單 &#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [預留位置屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [預留位置屬性對話方塊、一般 &#40;報表產生器和 SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
  [文字方塊 &#40;報表產生器及 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
   

@@ -17,16 +17,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eed9b1a0deb7e88c85283ea3dc7cab9bf893937f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102003"
 ---
 # <a name="create-and-manage-role-assignments"></a>建立和管理角色指派
+  
   *「角色指派」* (Role assignment) 是一種安全性原則，可決定使用者或群組是否能夠存取特定的報表伺服器項目或執行作業。 角色指派是由單一使用者或群組帳戶名稱以及一或多個角色定義所組成。  
   
- 角色指派的範圍設定為 *「項目層級」* 或 *「系統層級」*。  
+ 角色指派的範圍設定為 *「項目層級」* 或 *「系統層級」* 。  
   
 -   項目層級角色指派永遠是建立在特定項目的內容中或報表伺服器資料夾階層的分支中。 導覽至特定資料夾或項目，即可為其建立角色指派。  
   
@@ -41,7 +42,7 @@ ms.locfileid: "66102003"
   
  您必須是報表伺服器電腦上本機系統管理員群組的成員，才能建立角色指派。 您可以將其他使用者指派給 **「內容管理員」** 角色來委派該項責任。  
   
- 如需詳細資訊，請參閱 [將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](grant-user-access-to-a-report-server.md)。  
+ 如需詳細資訊，請參閱[將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](grant-user-access-to-a-report-server.md)。  
   
 ## <a name="creating-a-system-level-role-assignment"></a>建立系統層級角色指派  
  若要建立或管理系統層級角色指派，請使用報表管理員，並開啟 [站台設定] 頁面。  
@@ -60,7 +61,7 @@ ms.locfileid: "66102003"
  您一次僅能修改一個角色指派。 您無法執行全域搜尋與取代作業來變更角色定義名稱或角色指派設定，或者尋找所有包括特定使用者或群組的角色指派。  
   
 ## <a name="deleting-a-role-assignment"></a>刪除角色指派  
- 您可以選取要刪除之每個指派旁的核取方塊，然後按一下 **[刪除]**，以刪除角色指派。 也可以按一下 **[還原為父安全性]**，以刪除角色指派。 當您按一下此按鈕時，會刪除項目的現有角色指派，並以父項目提供的角色指派來取代。  
+ 您可以選取要刪除之每個指派旁的核取方塊，然後按一下 **[刪除]** ，以刪除角色指派。 也可以按一下 **[還原為父安全性]** ，以刪除角色指派。 當您按一下此按鈕時，會刪除項目的現有角色指派，並以父項目提供的角色指派來取代。  
   
 ## <a name="see-also"></a>另請參閱  
  [將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](grant-user-access-to-a-report-server.md)   

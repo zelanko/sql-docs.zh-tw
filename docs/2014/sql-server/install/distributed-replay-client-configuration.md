@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay Client 組態 |Microsoft Docs
+title: Distributed Replay 用戶端設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3eb00922b4f6e21dd4cfc8a46d8c0c27ed9a5be1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095480"
 ---
 # <a name="distributed-replay-client-configuration"></a>Distributed Replay Client 組態
-  您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 [Distributed Replay Client 組態]  頁面來指定您想要授與 Distributed Replay Client 服務之管理權限的使用者。  
+  您可以使用 ** 安裝精靈的 [Distributed Replay Client 組態]**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面來指定您想要授與 Distributed Replay Client 服務之管理權限的使用者。  
   
  擁有管理權限的使用者將可不受限制地存取 Distributed Replay Client 服務。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **控制器名稱**  
- 這是選擇性參數，而且預設值是\<*空白*>。  
+ 這是選擇性參數，預設值為\<*空白*>。  
   
- 針對 Distributed Replay Client 服務，輸入將與用戶端電腦進行通訊之控制器的名稱。 請注意下列事項：  
+ 針對 Distributed Replay Client 服務，輸入將與用戶端電腦進行通訊之控制器的名稱。 請注意：  
   
 -   名稱必須是完整網域名稱 (FQDN)。 例如，Microsoft 的產品階層中稱為 server1 的主機，其 FQDN 會是 server1.products.microsoft.com。  
   

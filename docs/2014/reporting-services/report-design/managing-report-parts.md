@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2de2ed783db4f717b86e94424b994f78d4eb75d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105592"
 ---
 # <a name="managing-report-parts"></a>管理報表組件
-  開頭[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，報表組件可以發行至報表伺服器，並重複使用在其他報表和其他使用者有適當的權限。  
+  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]從開始，報表元件可以發行至報表伺服器，並在其他報表中重複使用，如果其他使用者具有適當的許可權，則會重新使用。  
   
  報表組件可以由多個使用者重複使用，也可以在多個報表中重複使用。 使用者可以搜尋伺服器上的報表組件，並將其加入至報表中。  使用者也可以收到伺服器上報表組件更新的通知，然後重新發行新版本的報表組件。 這些報表撰寫動作可能會受報表服務安全性權限影響及控制。  本主題會檢閱報表組件位於伺服器上之後的屬性和行為。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "66105592"
  若要管理報表組件，您可以針對原生模式報表伺服器使用報表管理員，或是針對 SharePoint 整合模式報表伺服器使用應用程式頁面。  
   
 ### <a name="server-side-interaction-and-search"></a>伺服器端互動及搜尋  
- 報表組件可以發行到原生模式或 SharePoint 整合模式的報表伺服器。 使用者可以使用報表撰寫應用程式 (如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 報表產生器) 中的報表組件庫功能，尋找報表組件並將其加入至報表中。 當使用者搜尋報表組件時，不管伺服器是以何種模式安裝，搜尋都會查看報表伺服器目錄。  
+ 報表組件可以發行到原生模式或 SharePoint 整合模式的報表伺服器。 使用者可以使用報表撰寫應用程式（例如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]報表產生器）中的 [報表元件庫] 功能，尋找報表元件並將其加入至報表中。 當使用者搜尋報表組件時，不管伺服器是以何種模式安裝，搜尋都會查看報表伺服器目錄。  
   
  當報表組件從報表撰寫應用程式 (如報表產生器) 發行至 SharePoint 整合模式的報表伺服器時，報表伺服器目錄也會更新，而且會從組件庫搜尋以準確反映新的或更新的報表組件。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66105592"
   
 |動作|角色|  
 |-------------|----------|  
-|加入、刪除、編輯項目屬性、管理安全性，以及下載報表組件|完整控制|  
+|加入、刪除、編輯項目屬性、管理安全性，以及下載報表組件|完全控制|  
 |加入、刪除、編輯項目屬性，以及下載報表組件|設計<br /><br /> 參與|  
 |搜尋及重複使用|讀取<br /><br /> 僅檢視|  
   
@@ -92,10 +92,10 @@ ms.locfileid: "66105592"
   
 ## <a name="see-also"></a>另請參閱  
  [報表產生器中的報表組件和資料集](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [一般屬性頁面、 報表組件&#40;報表管理員&#41;](../general-properties-page-report-parts-report-manager.md)   
- [移動項目頁面&#40;報表管理員&#41;](../move-items-page-report-manager.md)   
+ [一般屬性頁面、報表元件 &#40;報表管理員&#41;](../general-properties-page-report-parts-report-manager.md)   
+ [移動專案頁面 &#40;報表管理員&#41;](../move-items-page-report-manager.md)   
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [疑難排解報表組件&#40;報表產生器及 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [&#40;報表產生器和 SSRS&#41;疑難排解報表元件](../report-parts-report-builder-and-ssrs.md)   
  [報表設計師中的報表組件 &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md)  
   
   

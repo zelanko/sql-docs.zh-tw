@@ -20,13 +20,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d3fc7ae8ad4c3018bcc512296a670fdaac3b64e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097360"
 ---
-# <a name="msreportserverconfigurationsetting-methods"></a>MSReportServer_ConfigurationSetting 方法
+# <a name="msreportserver_configurationsetting-methods"></a>MSReportServer_ConfigurationSetting 方法
   報表伺服器 WMI 提供者的 MSReportServer_ConfigurationSetting 類別會提供下列公用方法。  
   
 ## <a name="public-methods"></a>公用方法  
@@ -40,10 +40,10 @@ ms.locfileid: "66097360"
 |[GenerateDatabaseCreationScript](configurationsetting-method-generatedatabasecreationscript.md)|產生可用來建立報表伺服器資料庫的 SQL 指令碼。|  
 |[GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md)|產生可用來將報表伺服器資料庫之權限授與使用者的 SQL 指令碼。|  
 |[GenerateDatabaseUpgradeScript](configurationsetting-method-generatedatabaseupgradescript.md)|產生可用來升級報表伺服器資料庫的 SQL 指令碼。|  
-|[GetAdminSiteUrl 方法 &#40;WMI&#41;](configurationsetting-method-getadminsiteurl.md)|取得管理中心網站的絕對 URL。|  
+|[&#40;WMI&#41;的 GetAdminSiteUrl 方法](configurationsetting-method-getadminsiteurl.md)|取得管理中心網站的絕對 URL。|  
 |[GetDatabaseVersionDisplayName](configurationsetting-method-getdatabaseversiondisplayname.md)|取得給定報表伺服器資料庫版本字串的顯示名稱。|  
 |[InitializeReportServer](configurationsetting-method-initializereportserver.md)|初始化指定的報表伺服器執行個體。|  
-|[ListInstalledSharePointVersions 方法 &#40;WMI&#41;](configurationsetting-method-listinstalledsharepointversions.md)|傳回一組 Token，這些 Token 代表與報表伺服器安裝在同一部電腦上的 Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 版本。|  
+|[&#40;WMI&#41;的 ListInstalledSharePointVersions 方法](configurationsetting-method-listinstalledsharepointversions.md)|傳回一組權杖，這些 token 代表與報表伺服器[!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)]安裝[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]在同一[!INCLUDE[SPS2010](../../includes/sps2010-md.md)]部電腦上的 Microsoft、或版本。|  
 |[ListIPAddresses 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listipaddresses.md)|列出電腦的 IP 位址。|  
 |[ListReportServersInDatabase](configurationsetting-method-listreportserversindatabase.md)|傳回存在報表伺服器資料庫中之報表伺服器安裝的清單，不論這些安裝是否具有安全資訊的存取權都一樣。|  
 |[ListReservedURLs 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listreservedurls.md)|列出針對報表伺服器上所有應用程式保留的 URL。|  
@@ -66,6 +66,6 @@ ms.locfileid: "66097360"
 |[SetWindowsServiceIdentity](configurationsetting-method-setwindowsserviceidentity.md)|讓報表伺服器服務以指定之 Windows 使用者的身分執行，並且授與此帳戶足夠的檔案系統權限，以便允許報表伺服器運作。|  
   
 ## <a name="see-also"></a>另請參閱  
- [MSReportServer_ConfigurationSetting Class](msreportserver-configurationsetting-class.md)  
+ [MSReportServer_ConfigurationSetting 類別](msreportserver-configurationsetting-class.md)  
   
   

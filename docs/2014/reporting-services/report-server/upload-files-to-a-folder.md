@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5751941cb8912c527798c9aff5aaac1b46767fd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103075"
 ---
 # <a name="upload-files-to-a-folder"></a>上傳檔案到資料夾
@@ -52,14 +52,14 @@ ms.locfileid: "66103075"
   
  若要上傳檔案，請使用報表管理員。 您是否能夠上傳檔案到報表伺服器，是依您角色指派中的工作而定。 如果您使用預設安全性，本機管理員就可以將項目加入報表伺服器。 如果已啟用我的報表，則只要是有 [我的報表] 資料夾的使用者，都有權將項目上傳至該資料夾。 如果您使用自訂角色指派，角色指派就必須包括支援資料夾管理的工作。  
   
-|動作|包括下列工作|  
+|作法|包括下列工作|  
 |----------------|-------------------------|  
 |將 .rdl 檔案上傳至資料夾|管理報表|  
 |將任何檔案當成二進位物件上傳|管理資源|  
 |檢視資料夾的內容|檢視資源、檢視報表|  
   
 ## <a name="see-also"></a>另請參閱  
- [報表管理員&#40;SSRS 原生模式&#41;].../ 報表-manager-ssrs-原生-mode.md）   
+ [報表管理員 &#40;SSRS 原生模式&#41;].。/report-manager-ssrs-native-mode.md）   
  [在原生模式報表伺服器上授與權限](../security/granting-permissions-on-a-native-mode-report-server.md)   
  [工作和權限](../security/tasks-and-permissions.md)   
  [上傳檔案或報表 &#40;報表管理員&#41;](../reports/upload-a-file-or-report-report-manager.md)  

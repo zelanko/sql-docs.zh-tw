@@ -1,5 +1,5 @@
 ---
-title: 將文件上傳至 SharePoint 文件庫 (SharePoint 模式的 Reporting Services) |Microsoft Docs
+title: 將檔上傳至 SharePoint 文件庫（SharePoint 模式下的 Reporting Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 009d7527f71966003d02e5963de451fda9710ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098843"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>將文件上傳到 SharePoint 文件庫 (SharePoint 模式的 Reporting Services)
@@ -33,13 +33,13 @@ ms.locfileid: "66098843"
   
 ### <a name="to-add-a-report-definition-or-report-model-to-a-library"></a>將報表定義或報表模型加入至文件庫  
   
-1.  開啟文件庫或文件庫內的資料夾。 如果尚未開啟文件庫，請按一下 [快速啟動] 上的文件庫名稱。 如果找不到您的文件庫名稱，請先按一下 **[檢視所有網站內容]**，然後再按一下文件庫名稱。  
+1.  開啟文件庫或文件庫內的資料夾。 如果尚未開啟文件庫，請按一下 [快速啟動] 上的文件庫名稱。 如果找不到您的文件庫名稱，請先按一下 **[檢視所有網站內容]** ，然後再按一下文件庫名稱。  
   
-2.  在 [上傳] 功能表上，按一下 [上傳文件]。  
+2.  在 [上傳]  功能表上，按一下 [上傳文件]  。  
   
-3.  若要上傳單一報表或報表模型檔案，請選取報表定義 (.rdl) 或報表模型 (.smdl) 檔案，然後按一下 [確定]。  
+3.  若要上傳單一報表或報表模型檔案，請選取報表定義 (.rdl) 或報表模型 (.smdl) 檔案，然後按一下 [確定]****。  
   
-     如果報表定義使用共用資料來源 (.rsds) 檔案，將連接資訊儲存在外部資料來源中，您可以同時上傳 .rdl 和 .rsds 檔案。 若要這樣做，請按一下 [上傳多份文件]，指定要上傳的兩個檔案，然後按一下 [確定]。  
+     如果報表定義使用共用資料來源 (.rsds) 檔案，將連接資訊儲存在外部資料來源中，您可以同時上傳 .rdl 和 .rsds 檔案。 若要這樣做，請按一下 [上傳多份文件]****，指定要上傳的兩個檔案，然後按一下 [確定]****。  
   
  如果您上傳的報表包含共用資料來源、報表模型或子報表的參考，上傳檔案時，報表中的參考將會中斷。 如需如何重設參考的詳細資訊，請參閱[建立和管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)。  
   

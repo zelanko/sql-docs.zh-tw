@@ -1,5 +1,5 @@
 ---
-title: 報表參數概念 （報表產生器及 SSRS） |Microsoft Docs
+title: 報表參數概念（報表產生器和 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 70bb740b9f5948d077f0336e7e7bc14ed9902941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105081"
 ---
 # <a name="report-parameters-concept-report-builder-and-ssrs"></a>報表參數概念 (報表產生器及 SSRS)
@@ -44,8 +44,8 @@ ms.locfileid: "66105081"
  如果您打算建立報表快照集、記錄或已發行報表的訂閱，則必須了解報表參數如何影響報表的設計需求。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表撰寫概念 &#40;報表產生器及 SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [報表撰寫概念 &#40;報表產生器和 SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [教學課程：將參數新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [教學課程：將參數加入至報表 &#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 02735bafde927ba110de6465c5380987ddb6b5f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105622"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>互動式排序 (報表產生器及 SSRS)
@@ -29,11 +29,11 @@ ms.locfileid: "66105622"
   
 -   **要排序的項目：** 資料列或資料行？  
   
--   **排序依據的項目：** 顯示在資料表資料行中的欄位？ 未顯示的欄位？  
+-   **排序的依據：** 顯示在資料表資料行中的欄位？ 未顯示的欄位？  
   
--   **要排序的內容：** 例如，您可以針對下列項目進行排序：與資料列群組建立關聯的資料列、與資料行群組建立關聯的資料行、詳細資料列、父群組內的子群組，或是父群組和子群組一起。  
+-   **要排序的內容：** 例如，您可以針對下列項目進行排序：與資料列群組相關聯的資料列、與資料行群組相關聯的資料行、詳細資料列、父群組內的子群組，或是父群組和子群組一起。  
   
--   **要新增排序按鈕的文字方塊：** 在資料行標頭或群組資料列標頭中？  
+-   **要加入排序按鈕的文字方塊：** 在資料行標頭或群組資料列標頭？  
   
 -   **是否要同步處理多個資料區的排序：** 您可以設計一份報表，讓使用者切換排序次序時，也排序具有相同上階的其他資料區。  
   

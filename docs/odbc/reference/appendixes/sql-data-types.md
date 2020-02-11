@@ -15,84 +15,84 @@ ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4be0e017988670d740067011f775f8477037aa18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057036"
 ---
 # <a name="sql-data-types"></a>SQL 資料類型
-每個 DBMS 定義自己的 SQL 類型。 每個 ODBC 驅動程式會顯示只有這些 SQL 資料型別相關聯的 DBMS 所定義。 驅動程式的對應方式的相關資訊 DBMS SQL 類型對 ODBC 定義的 SQL 型別識別項和驅動程式將 DBMS SQL 類型對應至它自己的驅動程式專屬 SQL 型別識別項的方式透過呼叫傳回**SQLGetTypeInfo**。 驅動程式也會傳回 SQL 資料類型，描述資料類型的資料行和參數，透過呼叫時**SQLColAttribute**， **SQLColumns**， **SQLDescribeCol**，**SQLDescribeParam**， **SQLProcedureColumns**，並**SQLSpecialColumns**。  
+每個 DBMS 都會定義自己的 SQL 類型。 每個 ODBC 驅動程式只會公開相關聯之 DBMS 定義的 SQL 資料類型。 驅動程式如何將 DBMS SQL 類型對應至 ODBC 定義的 SQL 類型識別碼，以及驅動程式如何將 DBMS SQL 類型對應到自己的驅動程式特定 SQL 類型識別碼的資訊，會透過呼叫**SQLGetTypeInfo**來傳回。 當透過呼叫**SQLColAttribute**、 **SQLColumns**、 **SQLDescribeCol**、 **SQLDescribeParam**、 **SQLProcedureColumns**和**SQLSpecialColumns**來描述資料行和參數的資料類型時，驅動程式也會傳回 SQL 資料類型。  
   
 > [!NOTE]  
->  SQL 資料類型都包含在 SQL_DESC_ CONCISE_TYPE、 的 SQL_DESC_TYPE、 和 SQL_DESC_DATETIME_INTERVAL_CODE 的實作描述項欄位。 SQL 資料類型的特性包含實作描述項的 SQL_DESC_PRECISION、 SQL_DESC_SCALE、 SQL_DESC_LENGTH 和 SQL_DESC_OCTET_LENGTH 欄位中。 如需詳細資訊，請參閱 <<c0> [ 資料類型識別碼和描述元](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)本附錄中的更新版本。  
+>  SQL 資料類型包含在執行描述項的 SQL_DESC_ CONCISE_TYPE、SQL_DESC_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE 欄位中。 SQL 資料類型的特性包含在執行描述項的 [SQL_DESC_PRECISION]、[SQL_DESC_SCALE]、[SQL_DESC_LENGTH] 和 [SQL_DESC_OCTET_LENGTH] 欄位中。 如需詳細資訊，請參閱本附錄稍後的[資料類型識別碼和描述](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)元。  
   
- 指定的驅動程式和資料來源不一定支援本附錄中所定義的所有 SQL 資料類型。 SQL 資料類型的驅動程式的支援取決於驅動程式符合的 SQL-92 的層級。 若要判斷驅動程式支援的 SQL-92 語法層級，應用程式會呼叫**SQLGetInfo** SQL_SQL_CONFORMANCE 資訊類型。 此外，指定的驅動程式和資料來源可能支援其他的驅動程式專用的 SQL 資料類型。 若要判斷哪些資料類型的驅動程式支援，應用程式呼叫**SQLGetTypeInfo**。 如需驅動程式專用的 SQL 資料類型資訊，請參閱驅動程式的文件。 如需詳細資訊的特定資料來源中的資料類型，該資料來源的文件。  
+ 給定的驅動程式和資料來源不一定支援本附錄中定義的所有 SQL 資料類型。 驅動程式對 SQL 資料類型的支援取決於驅動程式符合的 SQL-92 層級。 為了判斷驅動程式支援的 SQL-92 文法層級，應用程式會使用 SQL_SQL_CONFORMANCE 資訊類型來呼叫**SQLGetInfo** 。 此外，指定的驅動程式和資料來源可能支援其他驅動程式特定的 SQL 資料類型。 為了判斷驅動程式支援的資料類型，應用程式會呼叫**SQLGetTypeInfo**。 如需有關驅動程式特定 SQL 資料類型的詳細資訊，請參閱驅動程式的檔。 如需特定資料來源中之資料類型的詳細資訊，請參閱該資料來源的檔集。  
   
 > [!IMPORTANT]  
->  在本附錄整個資料表會是唯一的指導方針和常用的顯示名稱、 範圍和 SQL 資料類型的限制。 指定的資料來源可能僅支援部分列出的資料類型，並支援的資料類型的特性可能不同於所列。  
+>  本附錄中的表格只是指導方針，並且會顯示 SQL 資料類型的一般使用名稱、範圍和限制。 給定的資料來源可能只支援部分列出的資料類型，而支援的資料類型的特性可能與列出的不同。  
   
- 下表列出所有的 SQL 資料類型的有效 SQL 型別識別項。 這個表格也列出的名稱和對應的資料類型從 SQL-92 的描述 （如果有的話）。  
+ 下表列出所有 SQL 資料類型的有效 SQL 類型識別碼。 資料表也會列出 SQL-92 （如果有的話）中對應資料類型的名稱和描述。  
   
-|[1] 的 SQL 類型識別碼|典型的 SQL 資料<br /><br /> type[2]|一般型別描述|  
+|SQL 類型識別碼 [1]|一般 SQL 資料<br /><br /> 類型 [2]|一般類型描述|  
 |------------------------------|------------------------------------|------------------------------|  
-|SQL_CHAR|CHAR(*n*)|字元的固定的字串長度的字串*n*。|  
-|SQL_VARCHAR|VARCHAR(*n*)|可變長度字元字串，最大字串長度*n*。|  
-|SQL_LONGVARCHAR|LONG VARCHAR|可變長度字元資料。 最大長度是資料來源而定。[9]|  
-|SQL_WCHAR|WCHAR(*n*)|固定的字串長度的 Unicode 字元字串*n*|  
-|SQL_WVARCHAR|VARWCHAR(*n*)|Unicode 可變長度字元字串的最大字串長度*n*|  
-|SQL_WLONGVARCHAR|LONGWVARCHAR|Unicode 可變長度字元資料。 最大長度是資料來源而定|  
-|SQL_DECIMAL|十進位 (*p*，*s*)|帶正負號的確切數值的有效位數至少*p*和小數位數*s。* （最大有效位數為驅動程式定義）。(1 < = *p* < = 15;*s* <= *p*)。 [4]|  
-|SQL_NUMERIC|數字 (*p*，*s*)|帶正負號的確切數值有效位數*p*和小數位數*s* (1 < = *p* < = 15;*s* <= *p*)。 [4]|  
-|SQL_SMALLINT|SMALLINT|確切的數值有效位數 5、 小數點位數為 0 (帶正負號:-32,768 < = *n* < = 32767，不帶正負號：0 < = *n* < = 65,535) [3]。|  
-|SQL_INTEGER|INTEGER|確切的數值有效位數 10 的值和小數點位數為 0 (帶正負號:-2 [31] < = *n* < = 2 [31]-1，不帶正負號：0 < = *n* < = 2 [32]-1) [3]。|  
-|SQL_REAL|real|帶正負號的概略數值其二進位整數位數為 24 （零或絕對值 10 [-38] 到 10[38])。|  
-|SQL_FLOAT|FLOAT(*p*)|帶正負號的概略數值二進位整數位數為至少*p*。 （最大有效位數為驅動程式定義）。[5]|  
-|SQL_DOUBLE|DOUBLE PRECISION|帶正負號的概略數值其二進位整數位數為 53 （零或絕對值 10 [-308] 到 10[308])。|  
-|SQL_BIT|BIT|單一位元的二進位資料。[8]|  
-|SQL_TINYINT|TINYINT|確切的數字位數為 3 的值和小數點位數為 0 (帶正負號:-128 < = *n* < = 127，不帶正負號：0 < = *n* < = 255) [3]。|  
-|SQL_BIGINT|bigint|確切的數值有效位數為 19 （如果帶正負號） 或 20 （如果不帶正負號）、 小數點位數為 0 (帶正負號:-2 [63] < = *n* < = 2 [63]-1，不帶正負號：0 < = *n* < = 2 [64]-1) [3]，[9]。|  
-|SQL_BINARY|BINARY(*n*)|固定長度的二進位資料*n*。 [9]|  
-|SQL_VARBINARY|VARBINARY(*n*)|可變長度二進位資料的最大長度*n*。 最大值是由使用者設定。[9]|  
-|SQL_LONGVARBINARY|長 VARBINARY|可變長度二進位資料。 最大長度是資料來源而定。[9]|  
-|SQL_TYPE_DATE[6]|DATE|年、 月和日等欄位，符合西曆的規則。 (請參閱[西曆的條件約束](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)稍後在本附錄中。)|  
-|SQL_TYPE_TIME[6]|時間 (*p*)|小時、 分鐘和具有有效的值為 00 到 23，有效的值時的 00 到 59 的分鐘數和有效的值為 00 到 61 秒的第二個欄位。 有效位數*p*表示秒數有效位數。|  
-|SQL_TYPE_TIMESTAMP[6]|TIMESTAMP(*p*)|年、 月、 日、 小時、 分鐘和第二個欄位，以有效的值為日期和時間資料類型所定義。|  
-|SQL_TYPE_UTCDATETIME|UTCDATETIME|年、 月、 日、 小時、 分鐘、 秒、 utchour 和 utcminute 欄位。 Utchour 和 utcminute 欄位具有 1/10 微秒的精確度。|  
-|SQL_TYPE_UTCTIME|UTCTIME|小時、 分鐘、 秒、 utchour 和 utcminute 欄位。 Utchour 和 utcminute 欄位具有 1/10 微秒的精確度...|  
-|SQL_INTERVAL_MONTH[7]|間隔月 (*p*)|兩個日期; 之間的月數*p*是間隔開頭有效位數。|  
-|SQL_INTERVAL_YEAR[7]|間隔年 (*p*)|兩個日期; 之間的年數*p*是間隔開頭有效位數。|  
-|SQL_INTERVAL_YEAR_TO_MONTH[7]|間隔年 (*p*) 個月|年數和兩個日期; 之間的月數*p*是間隔開頭有效位數。|  
-|SQL_INTERVAL_DAY[7]|INTERVAL DAY(*p*)|兩個日期; 之間的天數*p*是間隔開頭有效位數。|  
-|SQL_INTERVAL_HOUR[7]|間隔小時 (*p*)|兩個之間的小時數的日期/時間;*p*是間隔開頭有效位數。|  
-|SQL_INTERVAL_MINUTE[7]|間隔分鐘 (*p*)|兩個之間的分鐘數的日期/時間;*p*是間隔開頭有效位數。|  
-|SQL_INTERVAL_SECOND[7]|間隔第二個 (*p*，*q*)|兩個之間的秒數的日期/時間;*p*是間隔開頭有效位數並*q*的間隔秒數有效位數。|  
-|SQL_INTERVAL_DAY_TO_HOUR[7]|間隔日 (*p*) 小時的時間|兩個之間的天數或時數的數字日期/時間;*p*是間隔開頭有效位數。|  
-|SQL_INTERVAL_DAY_TO_MINUTE[7]|間隔日 (*p*) 分鐘的時間|天/小時/之間的分鐘數兩個日期/時間;*p*是間隔開頭有效位數。|  
-|SQL_INTERVAL_DAY_TO_SECOND[7]|間隔日 (*p*) 第二個 (*q*)|數天/小時/分鐘/秒之間兩個日期/時間;*p*是間隔開頭有效位數並*q*的間隔秒數有效位數。|  
-|SQL_INTERVAL_HOUR_TO_MINUTE[7]|間隔小時 (*p*) 分鐘的時間|小時/之間的分鐘數兩個日期/時間;*p*是間隔開頭有效位數。|  
-|SQL_INTERVAL_HOUR_TO_SECOND[7]|間隔小時 (*p*) 第二個 (*q*)|兩個小時/分鐘/秒鐘的日期/時間;*p*是間隔開頭有效位數並*q*的間隔秒數有效位數。|  
-|SQL_INTERVAL_MINUTE_TO_SECOND[7]|間隔分鐘 (*p*) 第二個 (*q*)|分鐘/之間的秒數兩個日期/時間;*p*是間隔開頭有效位數並*q*的間隔秒數有效位數。|  
-|SQL_GUID|GUID|固定的長度的 GUID。|  
+|SQL_CHAR|CHAR （*n*）|固定字串長度*n*的字元字串。|  
+|SQL_VARCHAR|VARCHAR （*n*）|最大字串長度為*n*的可變長度字元字串。|  
+|SQL_LONGVARCHAR|LONG VARCHAR|可變長度的字元資料。 最大長度是與資料來源相關的。9|  
+|SQL_WCHAR|WCHAR （*n*）|固定字串長度*n*的 Unicode 字元字串|  
+|SQL_WVARCHAR|VARWCHAR （*n*）|Unicode 可變長度字元字串，最大字串長度為*n*|  
+|SQL_WLONGVARCHAR|LONGWVARCHAR|Unicode 可變長度的字元資料。 最大長度是與資料來源相關|  
+|SQL_DECIMAL|DECIMAL （*p*，*s*）|帶正負號的精確數值，有效位數為至少*p*和 scale *s。* （最大有效位數是驅動程式定義的）。（1 <= *p* <= 15;*s* <= *p*）。4gb|  
+|SQL_NUMERIC|NUMERIC （*p*，*s*）|具有有效位數*p*和小數位數*s*的帶正負號、精確的數值（1 <= *p* <= 15;*s* <= *p*）。4gb|  
+|SQL_SMALLINT|SMALLINT|有效位數5且小數位數為0的精確數值（帶正負號：-32768 <= *n* <= 32767，不帶正負號： 0 <= *n* <= 65535） [3]。|  
+|SQL_INTEGER|INTEGER|精確度為10且小數位數為0的確切數值（帶正負號：-2 [31] <= *n* <= 2 [31]-1，不帶正負號： 0 <= *n* <= 2 [32]-1） [3]。|  
+|SQL_REAL|real|帶正負號、近似的數值，其二進位有效位數為24（零或絕對值 10 [-38] 到 10 [38]）。|  
+|SQL_FLOAT|FLOAT （*p*）|帶正負號、近似的數值，其二進位有效位數至少為*p*。 （最大有效位數是驅動程式定義的）。第|  
+|SQL_DOUBLE|DOUBLE PRECISION|帶正負號、近似的數值，其二進位有效位數為53（零或絕對值 10 [-308] 到 10 [308]）。|  
+|SQL_BIT|BIT|單一位的二進位資料。8|  
+|SQL_TINYINT|TINYINT|有效位數3且小數位數為0的確切數值（帶正負號：-128 <= *n* <= 127，不帶正負號： 0 <= *n* <= 255） [3]。|  
+|SQL_BIGINT|BIGINT|有效位數為19（如果帶正負號）或20（如果不帶正負號）且小數位數為0（帶正負號：-2 [63] <= *n* <= 2 [63]-1，不帶正負號： 0 <= *n* <= 2 [64]-1） [3]，[9] 的精確數值。|  
+|SQL_BINARY|BINARY （*n*）|固定長度*n*的二進位資料。9|  
+|SQL_VARBINARY|VARBINARY （*n*）|長度上限為*n*的可變長度二進位資料。 最大值是由使用者設定。9|  
+|SQL_LONGVARBINARY|長 VARBINARY|可變長度的二進位資料。 最大長度是與資料來源相關的。9|  
+|SQL_TYPE_DATE [6]|日期|[年]、[月] 和 [日] 欄位，符合西曆的規則。 （請參閱本附錄稍後[的西曆條件約束](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)）。|  
+|SQL_TYPE_TIME [6]|時間（*p*）|[小時]、[分] 和 [第二個] 欄位，其中包含小時00到23的有效值、00到59分鐘的有效值，以及00到61的有效值。 精確度*p*表示秒數有效位數。|  
+|SQL_TYPE_TIMESTAMP [6]|時間戳記（*p*）|Year、month、day、hour、minute 和 second 欄位，其有效值如日期和時間資料類型所定義。|  
+|SQL_TYPE_UTCDATETIME|DATETIMEOFFSET.UTCDATETIME|Year、month、day、hour、minute、second、utchour 和 utcminute 欄位。 Utchour 和 utcminute 欄位具有1/10 微秒的精確度。|  
+|SQL_TYPE_UTCTIME|UTCTIME|Hour、minute、second、utchour 和 utcminute 欄位。 Utchour 和 utcminute 欄位的精確度為1/10 微秒。|  
+|SQL_INTERVAL_MONTH [7]|間隔月份（*p*）|兩個日期之間的月數;*p*是間隔的有效位數。|  
+|SQL_INTERVAL_YEAR [7]|間隔年份（*p*）|兩個日期之間的年數。*p*是間隔的有效位數。|  
+|SQL_INTERVAL_YEAR_TO_MONTH [7]|間隔年份（*p*）至月|兩個日期之間的年份和月份數;*p*是間隔的有效位數。|  
+|SQL_INTERVAL_DAY [7]|間隔日（*p*）|兩個日期之間的天數。*p*是間隔的有效位數。|  
+|SQL_INTERVAL_HOUR [7]|間隔小時（*p*）|兩個日期/時間之間的時數*p*是間隔的有效位數。|  
+|SQL_INTERVAL_MINUTE [7]|間隔分鐘數（*p*）|兩個日期/時間之間的分鐘數。*p*是間隔的有效位數。|  
+|SQL_INTERVAL_SECOND [7]|間隔秒數（*p*、*q*）|兩個日期/時間之間的秒數。*p*是間隔的有效位數，而*q*是間隔秒數有效位數。|  
+|SQL_INTERVAL_DAY_TO_HOUR [7]|間隔日（*p*）到小時|兩個日期/時間之間的天數/小時數;*p*是間隔的有效位數。|  
+|SQL_INTERVAL_DAY_TO_MINUTE [7]|間隔日（*p*）到分鐘|兩個日期/時間之間的天數/小時/分鐘數;*p*是間隔的有效位數。|  
+|SQL_INTERVAL_DAY_TO_SECOND [7]|間隔日（*p*）到秒（*q*）|兩個日期/時間之間的天數/小時/分鐘數/秒;*p*是間隔的有效位數，而*q*是間隔秒數有效位數。|  
+|SQL_INTERVAL_HOUR_TO_MINUTE [7]|間隔小時（*p*）到分鐘|兩個日期/時間之間的時數/分鐘;*p*是間隔的有效位數。|  
+|SQL_INTERVAL_HOUR_TO_SECOND [7]|間隔小時（*p*）到秒（*q*）|兩個日期/時間之間的小時/分鐘數/秒;*p*是間隔的有效位數，而*q*是間隔秒數有效位數。|  
+|SQL_INTERVAL_MINUTE_TO_SECOND [7]|間隔分鐘數（*p*）到第二個（*q*）|兩個日期/時間之間的分鐘數/秒;*p*是間隔的有效位數，而*q*是間隔秒數有效位數。|  
+|SQL_GUID|GUID|固定長度的 GUID。|  
   
- [1] 這是藉由呼叫在 DATA_TYPE 資料行中傳回的值**SQLGetTypeInfo**。  
+ [1] 這是呼叫**SQLGetTypeInfo**時，在 DATA_TYPE 資料行中傳回的值。  
   
- [2] 這是呼叫所傳回的名稱以及建立參數的資料行中的值**SQLGetTypeInfo**。 [名稱] 欄位會傳回指定的位置-例如，CHAR-而建立的參數資料行傳回有效位數、 小數位數和長度等的建立參數的逗號分隔的清單。  
+ [2] 這是在名稱中傳回的值，並藉由呼叫**SQLGetTypeInfo**來建立 PARAMS 資料行。 [名稱] 資料行會傳回指定-例如 CHAR，而 [建立 PARAMS] 資料行會傳回以逗號分隔的建立參數清單，例如有效位數、小數位數和長度。  
   
- [3] 應用程式使用**SQLGetTypeInfo**或是**SQLColAttribute**來判斷是否有不帶正負號的特定資料型別或結果集內的特定資料行。  
+ [3] 應用程式會使用**SQLGetTypeInfo**或**SQLColAttribute**來判斷結果集內的特定資料類型或特定資料行是否不帶正負號。  
   
- [4] SQL_DECIMAL 和 SQL_NUMERIC 資料類型的差別只在於其精確度。 小數的有效位數 (*p*，*s*) 會實作定義小數點有效位數，不小於*p*，而數值的有效位數 (*p*，*s*) 完全等於*p*。  
+ [4] SQL_DECIMAL 和 SQL_NUMERIC 資料類型的差異只在於其精確度。 DECIMAL （*p*，*s*）的精確度是實值定義的十進位有效位數，其不小於*p*，而數值（*p*，*s*）的精確度則完全等於*p*。  
   
- [5] 取決於實作，SQL_FLOAT 的有效位數可以是 24 或 53： 如果它是 24，SQL_FLOAT 資料型別等同於 SQL_REAL;如果是 53，SQL_FLOAT 資料型別是 SQL_DOUBLE 相同。  
+ [5] 根據執行而定，SQL_FLOAT 的有效位數可以是24或53：如果是24，則 SQL_FLOAT 資料類型與 SQL_REAL 相同。如果是53，SQL_FLOAT 資料類型與 SQL_DOUBLE 相同。  
   
- [6] 在 ODBC *3.x*，SQL date、 time 和 timestamp 資料類型是 SQL_TYPE_DATE、 SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP，分別; 在 ODBC *2.x*的資料類型為 SQL_DATE、 SQL_TIME、 和 SQL_時間戳記。  
+ [6]*在 ODBC 3.x 中，SQL*日期、時間和時間戳記資料類型分別是 SQL_TYPE_DATE、SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP;在 ODBC *2.x 中，資料*類型是 SQL_DATE、SQL_TIME 和 SQL_TIMESTAMP。  
   
- [7] 如需間隔 SQL 資料類型的詳細資訊，請參閱[間隔資料類型](../../../odbc/reference/appendixes/interval-data-types.md)區段中的，稍後在本附錄中。  
+ [7] 如需間隔 SQL 資料類型的詳細資訊，請參閱本附錄稍後的[Interval 資料類型](../../../odbc/reference/appendixes/interval-data-types.md)一節。  
   
- [8] SQL_BIT 資料類型會有不同的特性，高於位元的型別，以 SQL-92。  
+ [8] SQL_BIT 資料類型與 SQL-92 中的 BIT 類型具有不同的特性。  
   
- [9] 這種資料類型會有以 SQL-92 沒有對應的資料類型。  
+ [9] 這個資料類型在 SQL-92 中沒有對應的資料類型。  
   
- 本節提供下列的範例。  
+ 本節提供下列範例。  
   
--   [範例 SQLGetTypeInfo 結果集](../../../odbc/reference/appendixes/example-sqlgettypeinfo-result-set.md)
+-   [SQLGetTypeInfo 結果集範例](../../../odbc/reference/appendixes/example-sqlgettypeinfo-result-set.md)

@@ -1,5 +1,5 @@
 ---
-title: '變更儲存格式類型 xs: datetime、 xs: date 和 xs: time |Microsoft Docs'
+title: Xs： dateTime、xs： date 和 xs： time 類型之儲存格式的變更 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f631783aad92757edd4faae41cd43c06c431887
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096611"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>針對 xs:dateTime、xs:date 和 xs:time 類型之儲存格式所做的變更
@@ -29,7 +29,7 @@ ms.locfileid: "66096611"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>描述  
- 中的儲存體格式[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]類型 xs: datetime、 xs: date 和 xs: time 已經變更為支援含或不含時區資訊的值而且允許保留的時區。  
+ 類型 xs： dateTime [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、xs： date 和 xs： time 的中的儲存格式已變更為支援具有或不含時區資訊的值，並允許保留時區。  
   
  如果 XML 結構描述集合參考其中一種類型，在升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之後，與此集合相關聯之所有資料行的 XML 索引都將停用。 您將能夠使用 SELECT 及/或 XQUERIES 來查詢它們，但是無法使用 XML 索引。 如果遇到負的年份值，將產生執行階段錯誤。  
   
@@ -186,6 +186,6 @@ EXECUTE DateTimeInvestigation 1;
  若要在升級之後於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 XML 索引，您必須針對使用 xs:date、xs:time 或 xs:dateTime 的資料行重建 XML 索引或重新設定 XML 資料行的類型。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫引擎升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
+ [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

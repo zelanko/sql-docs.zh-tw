@@ -1,5 +1,5 @@
 ---
-title: 報表屬性對話方塊、 程式碼 |Microsoft Docs
+title: 報表屬性對話方塊、程式碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ac600f2d8642162bb8f7a3c64b07933661715223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104454"
 ---
 # <a name="report-properties-dialog-box-code"></a>報表屬性對話方塊、程式碼
-  選取 **程式碼**上**報表屬性**對話方塊，即可定義報表內運算式要使用的自訂程式碼。  
+  選取 [**報表屬性**] 對話方塊上的 [程式**代碼**]，即可定義報表內的運算式所要使用的自訂程式碼。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **自訂程式碼**  
- 輸入報表內要使用的方法。 程式碼必須以 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]撰寫。  
+ 輸入報表內要使用的方法。 程式碼必須以[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]撰寫。  
   
 ## <a name="see-also"></a>另請參閱  
  [報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3d042530f69d34fde377ffc7c6e0a9200b9cc48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100913"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services 中的檔案共用傳遞
@@ -27,22 +27,22 @@ ms.locfileid: "66100913"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; SharePoint 模式|  
   
  本主題內容：  
   
--   [傳遞至共用資料夾報表的特性](#bkmk_Characteristics)  
+-   [傳遞給共用資料夾之報表的特性](#bkmk_Characteristics)  
   
--   [目標資料夾](#bkmk_target_folders)  
+-   [目的檔案夾](#bkmk_target_folders)  
   
 -   [檔案格式](#bkmk_file_formats)  
   
 -   [檔案選項](#bkmk_file_options)  
   
-##  <a name="bkmk_Characteristics"></a> 傳遞至共用資料夾報表的特性  
+##  <a name="bkmk_Characteristics"></a>傳遞至共用資料夾之報表的特性  
  傳遞給共用資料夾的報表屬於靜態檔案，這和報表伺服器所主控及管理的報表不同。 為報表定義的互動式功能不適用於以檔案形式儲存在檔案系統中的報表， 互動式功能是以靜態元素來表示。 例如，如果您傳遞矩陣報表，所產生的檔案會顯示報表的最上層檢視；您無法展開資料列和資料行來檢視支援的資料。 如果報表包括圖表，則使用預設呈現方式。 如果報表連結到其他報表，則連結會轉譯成靜態文字。 如果您想要在傳遞的報表中保留互動式功能，請改用電子郵件傳遞。 如需詳細資訊，請參閱 [Reporting Services 中的電子郵件傳遞](e-mail-delivery-in-reporting-services.md)。  
   
-##  <a name="bkmk_target_folders"></a> 目標資料夾  
+##  <a name="bkmk_target_folders"></a>目的檔案夾  
  定義使用檔案共用傳遞的訂閱時，必須指定現有的資料夾做為目標資料夾。 報表伺服器不會在檔案系統中建立資料夾。 您指定的資料夾必須可以透過網路連接來存取。  
   
  確認要檢視共用資料夾中報表的使用者擁有讀取權限。  
@@ -55,21 +55,21 @@ ms.locfileid: "66100913"
   
  建立資料夾時，請考慮您需要的連接限制。 雖然報表伺服器只需要兩個連接，但您必須包含足夠的連接來滿足其他想要開啟共用資料夾報表的使用者。  
   
-##  <a name="bkmk_file_formats"></a> 檔案格式  
+##  <a name="bkmk_file_formats"></a>檔案格式  
  可以使用各種檔案格式來轉譯報表，例如 HTML 或 Excel。 若要以特定的檔案格式儲存報表，請在建立您的訂閱時選取該轉譯格式。 例如，選擇 **[Excel]** 會將報表儲存為 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 檔案。 雖然您可以選擇任何支援的轉譯格式，當轉譯檔案時有些格式會運作的比較好。  
   
  若為檔案共用傳遞，請選擇以單一檔案傳遞報表的格式，其中所有影像和相關內容會包括在報表內。 適當的格式包括網頁封存、PDF、TIFF 和 Excel。 請避免使用 HTML4.0。 如果您的報表包含影像，HTML 4.0 格式就不會在檔案中包含這些影像。  
   
-##  <a name="bkmk_file_options"></a> 檔案選項  
+##  <a name="bkmk_file_options"></a>檔案選項  
  當您建立訂閱時，您可選擇選項來決定要如何建立檔案名稱以及在一段時間後，是否會以較新的版本來取代。 完整的檔案名稱有三個部分：名稱、副檔名，以及附加至檔案以建立唯一檔案名稱的文字或數字。 覆寫選項會決定要將文字或數字加入至檔案名稱。  
   
  檔案名稱是以報表名稱為依據，但是您可以提供訂閱中的自訂名稱。 副檔名為選擇性，但是如果您有指定副檔名，報表伺服器將會建立對應到轉譯格式的副檔名。  
   
  您可以指定覆寫選項，針對每一次報表傳遞重複使用相同的檔案名稱，或者也可以建立新的檔案。 若要覆寫檔案，您必須使用相同的檔案名稱和副檔名。  
   
- 有一個替代方式可以在每一次傳遞中建立唯一的檔案，就是在檔案名稱中加入時間戳記。 若要這樣做，請新增`@timestamp`變數加入檔案名稱 (例如 *CompanySales@timestamp* )。 使用這個方法時，會讓檔案名稱依照定義成為唯一的檔案名稱，所以絕對不會遭到覆寫。  
+ 有一個替代方式可以在每一次傳遞中建立唯一的檔案，就是在檔案名稱中加入時間戳記。 若要這樣做，請將 `@timestamp` 變數加入檔案名稱 (例如 *CompanySales@timestamp*)。 使用這個方法時，會讓檔案名稱依照定義成為唯一的檔案名稱，所以絕對不會遭到覆寫。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立、 修改及刪除標準訂用帳戶&#40;Reporting Services 原生模式&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  
+ [以原生模式 &#40;Reporting Services 建立、修改和刪除標準訂閱&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  
   
   

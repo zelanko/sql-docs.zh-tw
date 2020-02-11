@@ -1,5 +1,5 @@
 ---
-title: sys.external_tables (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases external_tables （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,40 +12,40 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c26dbafb76ecf318fa497e11ccac09e800691900
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054309"
 ---
-# <a name="sysexternaltables-transact-sql"></a>sys.external_tables & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysexternal_tables-transact-sql"></a>sys.databases external_tables （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  包含針對目前資料庫中每個外部資料表的資料列。  
+  針對目前資料庫中的每個外部資料表，各包含一個資料列。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|\<繼承資料行 >||如需這個檢視所繼承的資料行的清單，請參閱 < [j &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。||  
-|max_column_id_used|**int**|這份資料表用過的最大資料行識別碼。||  
+|\<繼承的資料行>||如需此視圖所繼承之資料行的清單，請參閱[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。||  
+|max_column_id_used|**int**|此資料表過去使用的最大資料行識別碼。||  
 |uses_ansi_nulls|**bit**|資料表是在 SET ANSI_NULLS 資料庫選項為 ON 的情況下加以建立。||  
-|data_source_id|**int**|外部資料來源的物件識別碼。||  
-|file_format_id|**int**|針對 HADOOP 的外部資料來源的外部資料表，這是外部檔案格式的物件識別碼。||  
-|location|**nvarchar(4000)**|透過 HADOOP 的外部資料來源的外部資料表，這是 HDFS 中的外部資料的路徑。||  
-|reject_type|**tinyint**|透過 HADOOP 的外部資料來源的外部資料表，這是查詢外部資料時，會計算已拒絕的資料列的方式。|值-已拒絕的資料列數目。<br /><br /> 百分比-已拒絕的資料列百分比。|  
-|reject_value|**float**|透過 HADOOP 的外部資料來源的外部資料表：<br /><br /> 針對*reject_type =* 值，這是在查詢失敗之前，先允許的資料列被拒絕的次數。<br /><br /> 針對*reject_type* = percentage，這是在查詢失敗之前，先允許的資料列拒絕的百分比。||  
-|reject_sample_value|**int**|針對*reject_type* = percentage，這是要載入，成功或失敗，然後才計算被拒絕的資料列百分比的資料列數目。|如果 reject_type = VALUE。|  
-|distribution_type|**int**|針對 SHARD_MAP_MANAGER 的外部資料來源的外部資料表，這是基底資料表的資料列的資料分佈。|0-分區化<br /><br /> 1-複寫<br /><br /> 2-循環配置資源|  
-|distribution_desc|**nvarchar(120)**|針對 SHARD_MAP_MANAGER 的外部資料來源的外部資料表，這是顯示為字串的散發類型。||  
-|sharding_column_id|**int**|針對 SHARD_MAP_MANAGER 的外部資料來源和分區化分佈的外部資料表，這是包含分區化索引鍵值的資料行的資料行識別碼。||  
-|remote_schema_name|**sysname**|針對 SHARD_MAP_MANAGER 的外部資料來源的外部資料表，這是基底資料表 （如果不同於其中定義外部資料表的結構描述） 在遠端資料庫所呈現的所在的結構描述。||  
-|remote_object_name|**sysname**|針對 SHARD_MAP_MANAGER 的外部資料來源的外部資料表，這是在遠端資料庫 （如果與外部資料表的名稱不同） 的基底資料表的名稱。||  
+|data_source_id|**int**|外部資料源的物件識別碼。||  
+|file_format_id|**int**|針對 HADOOP 外部資料源的外部資料表，這是外部檔案格式的物件識別碼。||  
+|location|**nvarchar(4000)**|針對 HADOOP 外部資料源的外部資料表，這是 HDFS 中外部資料的路徑。||  
+|reject_type|**tinyint**|若是透過 HADOOP 外部資料源的外部資料表，這就是在查詢外部資料時，拒絕的資料列計數的方式。|VALUE-拒絕的資料列數目。<br /><br /> 百分比-拒絕的資料列百分比。|  
+|reject_value|**float**|針對 HADOOP 外部資料源的外部資料表：<br /><br /> 針對*reject_type =* value，這是在查詢失敗前允許的資料列拒絕次數。<br /><br /> 針對*reject_type* = 百分比，這是在查詢失敗前允許的資料列拒絕百分比。||  
+|reject_sample_value|**int**|針對*reject_type* = 百分比，這是要在計算已拒絕的資料列百分比之前，成功或未成功載入的資料列數目。|如果 reject_type = 值，則為 Null。|  
+|distribution_type|**int**|若是透過 SHARD_MAP_MANAGER 外部資料源的外部資料表，這就是跨基礎基表的資料列資料散發。|0-分區化<br /><br /> 1-已複寫<br /><br /> 2-迴圈配置資源|  
+|distribution_desc|**Nvarchar （120）**|若是透過 SHARD_MAP_MANAGER 外部資料源的外部資料表，這是顯示為字串的散發類型。||  
+|sharding_column_id|**int**|對於透過 SHARD_MAP_MANAGER 外部資料源和分區化散發的外部資料表，這是包含分區化索引鍵值之資料行的資料行識別碼。||  
+|remote_schema_name|**sysname**|若是透過 SHARD_MAP_MANAGER 外部資料源的外部資料表，這就是基表所在的架構（如果不同于定義外部資料表的架構）。||  
+|remote_object_name|**sysname**|若是透過 SHARD_MAP_MANAGER 外部資料源的外部資料表，這就是遠端資料庫上的基表名稱（如果不同于外部資料表的名稱）。||  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  目錄檢視內中繼資料的可見性會限制在使用者所擁有的安全性實體，或已授與使用者某些權限的安全性實體。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.external_file_formats &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
- [sys.external_data_sources &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
+ [external_file_formats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
+ [external_data_sources &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
   

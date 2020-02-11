@@ -1,5 +1,5 @@
 ---
-title: 設定貼齊間隔為量測計 （報表產生器及 SSRS） |Microsoft Docs
+title: 設定量測計的貼齊間隔（報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e2a35e4d6fefb6830774ffd7b2c3bc13a5e097c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101371"
 ---
 # <a name="set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs"></a>設定量測計的貼齊間隔 (報表產生器及 SSRS)
@@ -30,13 +30,13 @@ ms.locfileid: "66101371"
 2.  開啟 [屬性] 窗格。  
   
     > [!NOTE]  
-    >  如果看不到 [屬性] 窗格，按一下**檢視**索引標籤，然後選取**屬性**核取方塊。  
+    >  如果看不到 [屬性] 窗格，請按一下 [**視圖**] 索引標籤，然後選取 [**屬性**] 核取方塊。  
   
-3.  在 **指標**屬性中，按一下 （...） 按鈕。 指標集合編輯器隨即開啟。  
+3.  在 [**指標**] 屬性中，按一下（...）按鈕。 指標集合編輯器隨即開啟。  
   
-4.  設定 **[snappingenabled]** 屬性設`True`。  
+4.  將**SnappingEnabled**屬性設定為`True`。  
   
-5.  設定 **[snappinginterval]** 代表貼齊間隔的值。 此指標將貼齊您已指定之值的最接近捨入倍數。  
+5.  將**SnappingInterval**設定為代表貼齊間隔的值。 此指標將貼齊您已指定之值的最接近捨入倍數。  
   
 ## <a name="see-also"></a>另請參閱  
  [格式化量測計上的標尺 &#40;報表產生器及 SSRS&#41;](report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   

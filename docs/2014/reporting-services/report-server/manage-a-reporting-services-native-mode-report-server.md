@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: da2eb97e5ce57a2e6a82dda3e264b33e1e3a3b11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103784"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>管理 Reporting Services 原生模式報表伺服器
@@ -47,7 +47,7 @@ ms.locfileid: "66103784"
  [設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  提供設定多個報表伺服器來共用報表伺服器資料庫的步驟。  
   
- [為電子郵件傳遞設定報表伺服器&#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [針對 &#40;SSRS Configuration Manager 的電子郵件傳遞設定報表伺服器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
  提供有關為電子郵件散發設定報表伺服器的步驟。  
   
  [設定供報表伺服器存取的防火牆](configure-a-firewall-for-report-server-access.md)  

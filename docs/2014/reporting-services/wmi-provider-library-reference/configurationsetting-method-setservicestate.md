@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21c8de3e6903a28ad8358431f5e455df31d3044e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097945"
 ---
-# <a name="setservicestate-method-wmi-msreportserverconfigurationsetting"></a>SetServiceState 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="setservicestate-method-wmi-msreportserver_configurationsetting"></a>SetServiceState 方法 (WMI MSReportServer_ConfigurationSetting)
   開啟和關閉報表伺服器 Windows 與 Web 服務。  
   
 ## <a name="syntax"></a>語法  
@@ -46,7 +46,7 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
  表示 Windows 服務狀態的 `Boolean` 值。 值為 `true` 會啟動報表伺服器 Windows 服務。值為 `false` 會停止 Windows 服務。  
   
  *EnableWebService*  
- A`Boolean`值，指出狀態的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Web 服務。 值為 `true` 會啟動報表伺服器 Web 服務。值為 `false` 會停止 Web 服務。  
+ 表示`Boolean` [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 服務狀態的值。 值為 `true` 會啟動報表伺服器 Web 服務。值為 `false` 會停止 Web 服務。  
   
  *EnableReportManager*  
  表示報表管理員所需狀態的 `Boolean` 值。  
@@ -60,7 +60,7 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

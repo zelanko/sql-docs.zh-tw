@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4a06a24525b3d9d0c4e4a5f3f0b749a7db70261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105173"
 ---
 # <a name="rownumber-function-report-builder-and-ssrs"></a>RowNumber 函數 (報表產生器及 SSRS)
@@ -32,10 +32,11 @@ RowNumber(scope)
   
 #### <a name="parameters"></a>參數  
  *範圍 (scope)*  
- (`String`) 資料集、資料區域或群組的名稱，或為 Null (在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中為 `Nothing`)，指定要在其中評估資料列數的內容。 `Nothing` 指定最外層的內容，這通常為報表資料集。  
+ (`String`) 資料集、資料區域或群組的名稱，或為 Null (在 `Nothing` 中為 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])，指定要在其中評估資料列數的內容。 
+  `Nothing` 指定最外層的內容，這通常為報表資料集。  
   
 ## <a name="remarks"></a>備註  
- `RowNumber` 傳回指定的範圍內的資料列的計數執行值，就如同[RunningValue](report-builder-functions-runningvalue-function.md)傳回彙總函式的執行中的值。 當您指定範圍時，可以指定何時要將資料列計數重設為 1。  
+ `RowNumber`傳回指定範圍內資料列計數的執行值，如同[RunningValue](report-builder-functions-runningvalue-function.md)傳回彙總函式的執行值。 當您指定範圍時，可以指定何時要將資料列計數重設為 1。  
   
  *scope* 不可為運算式。 *scope* 必須是包含範圍。 就一般範圍而言，從最外層到最內層的內含項目依序為報表資料集、資料區域、資料列群組或資料行群組。  
   

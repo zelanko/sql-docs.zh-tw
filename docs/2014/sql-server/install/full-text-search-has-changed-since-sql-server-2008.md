@@ -1,5 +1,5 @@
 ---
-title: 全文檢索搜尋已經變更自 SQL Server 2008 起 |Microsoft Docs
+title: 自 SQL Server 2008 之後，全文檢索搜尋已變更 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59591056d107e8cc53863ca537dc57aaba7f6d26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095153"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>自 SQL Server 2008 起，全文檢索搜尋已經變更
@@ -30,10 +30,10 @@ ms.locfileid: "66095153"
  我們也建議您在升級至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，檢閱《[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 線上叢書》中的全文檢索搜尋文件，以便了解突破性變更和最佳做法。  
   
 ## <a name="external-resources"></a>外部資源  
- [全文檢索搜尋回溯相容性](../../../2014/database-engine/full-text-search-backward-compatibility.md)  
+ [全文檢索搜尋的回溯相容性](../../../2014/database-engine/full-text-search-backward-compatibility.md)  
   
  [全文檢索搜尋升級](https://go.microsoft.com/fwlink/?LinkId=112291)  
   
- [全文檢索搜尋的重大變更](../../../2014/database-engine/breaking-changes-to-full-text-search.md)  
+ [對全文檢索搜尋的重大變更](../../../2014/database-engine/breaking-changes-to-full-text-search.md)  
   
   

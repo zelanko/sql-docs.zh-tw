@@ -1,5 +1,5 @@
 ---
-title: sys.services (TRANSACT-SQL) |Microsoft Docs
+title: sys. services （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,10 +20,10 @@ ms.assetid: 16d0b0c5-5cce-469b-aa3d-4b9248e0c085
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c19e65117a03de6b473eced3c7c1379943c851a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078665"
 ---
 # <a name="sysservices-transact-sql"></a>sys.services (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68078665"
 |**principal_id**|**int**|擁有這項服務的資料庫主體識別碼。 NULLABLE。|  
 |**service_queue_id**|**int**|這個服務所用佇列的物件識別碼。 不是 NULLABLE。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
   

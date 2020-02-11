@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfcfde7491252568ac8dc89b9ceb1da64c6497dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097887"
 ---
-# <a name="databaselogonaccount-property-wmi-msreportserverconfigurationsetting"></a>DatabaseLogonAccount 屬性 (WMI MSReportServer_ConfigurationSetting)
+# <a name="databaselogonaccount-property-wmi-msreportserver_configurationsetting"></a>DatabaseLogonAccount 屬性 (WMI MSReportServer_ConfigurationSetting)
   指定連接至報表伺服器資料庫時報表伺服器所使用的登入帳戶。 唯讀。  
   
 ## <a name="syntax"></a>語法  
@@ -47,10 +47,10 @@ public string DatabaseLogonAccount;
 ## <a name="remarks"></a>備註  
  這個屬性的有效值會因 [DatabaseLogonType](configurationsetting-property-databaselogontype.md) 屬性的值而不同。  
   
- 如果此屬性則會忽略[DatabaseLogonType](configurationsetting-property-databaselogontype.md)屬性設定為`2 (Service)`。  
+ 如果[DatabaseLogonType](configurationsetting-property-databaselogontype.md)屬性設定為`2 (Service)`，則會忽略這個屬性。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

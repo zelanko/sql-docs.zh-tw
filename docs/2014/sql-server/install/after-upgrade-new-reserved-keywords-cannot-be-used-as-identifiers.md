@@ -1,5 +1,5 @@
 ---
-title: 升級之後，新的保留關鍵字不能當做識別項 |Microsoft Docs
+title: 升級之後，新的保留關鍵字不能當做識別碼使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d187fbe95a75091b0cbcf4bf09225c5f60a9af01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096884"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>升級之後無法將保留關鍵字當做識別碼
@@ -49,14 +49,14 @@ ms.locfileid: "66096884"
   
 -   保留資料庫相容性層級設定 90 或更低。  
   
--   使用分隔識別碼來參考物件。 例如，陳述式`CREATE TABLE [MERGE] ([MERGE] int);`使用方括號來分隔物件名稱 MERGE。  
+-   使用分隔識別碼來參考物件。 例如，語句`CREATE TABLE [MERGE] ([MERGE] int);`會使用括弧來分隔物件名稱 MERGE。  
   
 ## <a name="external-resources"></a>外部資源  
- [保留的關鍵字&#40;Transact SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
+ [&#40;Transact-sql&#41;的保留關鍵字](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
   
  [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)  
   
- [分隔的識別碼 (Database Engine)](https://go.microsoft.com/fwlink/?LinkId=112509)  
+ [分隔識別碼 (Database Engine)](https://go.microsoft.com/fwlink/?LinkId=112509)  
   
  [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c7020cacbb8466b1113e514162337befae358549
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67792606"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>使用 Windows 驗證加入資料庫鏡像見證 (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67792606"
   
 ### <a name="to-establish-a-witness"></a>若要建立見證  
   
-1.  在見證伺服器執行個體上，確定資料庫鏡像有端點存在。 不管要支援的鏡像工作階段有多少個，伺服器執行個體都必須只有一個資料庫鏡像端點。 如果您想要使用此伺服器執行個體專門作為資料庫鏡像工作階段的見證，請指派見證角色給端點 (角色 **=** 見證)。 如果您打算使用這個伺服器執行個體，作為一或多個其他資料庫鏡像工作階段中的夥伴，請將端點的角色指派為 ALL。  
+1.  在見證伺服器執行個體上，確定資料庫鏡像有端點存在。 不管要支援的鏡像工作階段有多少個，伺服器執行個體都必須只有一個資料庫鏡像端點。 如果您想要在資料庫鏡像會話中以獨佔方式使用此伺服器實例做為見證，請將見證的角色指派給**=** 端點（角色見證）。 如果您打算使用這個伺服器執行個體，作為一或多個其他資料庫鏡像工作階段中的夥伴，請將端點的角色指派為 ALL。  
   
      若要執行 SET WITNESS 陳述式，資料庫鏡像工作階段必須已經啟動 (在夥伴之間)，而且見證端點的 STATE 必須設為 STARTED。  
   
@@ -52,17 +52,17 @@ ms.locfileid: "67792606"
   
 3.  連接到主體伺服器並執行以下陳述式：  
   
-     ALTER DATABASE *<database_name>* SET WITNESS **=** _<server_network_address>_  
+     ALTER database *<database_name>* 設定見證**=** _<server_network_address>_  
   
      其中 *<資料庫名稱>* 是要鏡像的資料庫名稱 (此名稱在兩個夥伴中都相同)，而 *<伺服器網路位址>* 是見證伺服器執行個體的伺服器網路位址。  
   
      伺服器網路位址的語法如下：  
   
-     TCP **://** \<_系統位址>_ **:** \<*通訊埠>*  
+     TCP：**//**\<_系統-位址>_ **：**\<*埠>*  
   
-     其中 \<系統位址>  是清楚識別目的地電腦系統的字串，\<通訊埠>  是夥伴伺服器執行個體之鏡像端點使用的通訊埠編號。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](specify-a-server-network-address-database-mirroring.md)。  
+     其中 \<系統位址>** 是清楚識別目的地電腦系統的字串，\<通訊埠>** 是夥伴伺服器執行個體之鏡像端點使用的通訊埠編號。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](specify-a-server-network-address-database-mirroring.md)。  
   
-     例如，在主體伺服器執行個體上，下列 ALTER DATABASE 陳述式會設定見證。 資料庫名稱是 **AdventureWorks**、系統位址是 DBSERVER3 (見證系統的名稱)，而見證之資料庫鏡像端點所使用的連接埠是 `7022`：  
+     例如，在主體伺服器執行個體上，下列 ALTER DATABASE 陳述式會設定見證。 資料庫名稱是**AdventureWorks**，系統位址是 DBSERVER3-見證系統的名稱，而見證的資料庫鏡像端點所使用的埠是`7022`：  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -127,11 +127,11 @@ ms.locfileid: "67792606"
  如需顯示安全性設定、準備鏡像資料庫、設定夥伴及新增見證的完整範例，請參閱[設定資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [使用 Windows 驗證允許資料庫鏡像的網路存取 &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
- [建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)   
- [從資料庫鏡像工作階段移除見證 &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)   
+ [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [允許使用 Windows 驗證 &#40;SQL Server&#41;的資料庫鏡像端點的網路存取](../database-mirroring-allow-network-access-windows-authentication.md)   
+ [建立適用于 Windows 驗證的資料庫鏡像端點 &#40;Transact-sql&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [使用 Windows 驗證建立資料庫鏡像會話 &#40;Transact-sql&#41;](database-mirroring-establish-session-windows-authentication.md)   
+ [從資料庫鏡像會話中移除見證 &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)   
  [資料庫鏡像見證](database-mirroring-witness.md)  
   
   

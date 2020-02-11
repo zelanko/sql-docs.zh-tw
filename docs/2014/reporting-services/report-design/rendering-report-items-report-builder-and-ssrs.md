@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ecd7088b9fe76b955cc40dd495d508878b9d0d96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105346"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendering Report Items (Report Builder and SSRS)
@@ -79,11 +79,11 @@ ms.locfileid: "66105346"
   
      頁首優先於頁尾。 內部重複的群組優先於外部群組。 設定 `RepeatWith` 屬性的項目中，與目標資料區域較近的項目優先於與資料區域較遠的項目。  
   
--   小型報表項目，例如文字方塊或矩形，明確的 KeepTogether 屬性設定為`true`。  
+-   具有明確的 [保持等式] 屬性設定為`true`的小型報表專案（例如文字方塊或矩形）。  
   
--   大型報表項目，例如子報表或非最內部的 tablix 成員，使用明確的 KeepTogether 屬性設定為`true`。  
+-   大型報表專案，例如子報表或非最內部的 tablix 成員，其明確的 [保持與] `true`屬性設定為。  
   
--   Tablix 資料區，其明確的 KeepTogether 屬性設定為`true`。  
+-   具有明確的保持屬性的 Tablix 資料區域會`true`設定為。  
   
 ### <a name="subreports"></a>子報表  
  子報表會轉譯為包含在個別報表 .rdl 檔案中定義之其他報表的矩形。 子報表檔案必須先發行到報表伺服器上，父報表才能進行存取。  

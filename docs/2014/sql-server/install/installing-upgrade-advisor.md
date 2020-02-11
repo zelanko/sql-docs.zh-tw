@@ -15,14 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7f70d1cbb879f8fc91e48478fb820b71b51bfd2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094319"
 ---
 # <a name="installing-upgrade-advisor"></a>安裝 Upgrade Advisor
-  安裝 SQL Server 2014 Upgrade Advisor 的位置會因您要分析的項目而不同。 Upgrade Advisor 支援所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的遠端分析，但 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]除外。 如果您不要掃描的執行個體[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，您可以在任何可以連線到的電腦上安裝 Upgrade Advisor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，且符合[Upgrade Advisor 必要條件](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)。 如果您要掃描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的執行個體，則必須將 Upgrade Advisor 安裝在報表伺服器上。  
+  安裝 SQL Server 2014 Upgrade Advisor 的位置會因您要分析的項目而不同。 Upgrade Advisor 支援所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的遠端分析，但 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]除外。 如果您未掃描的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]實例，您可以在任何可連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]且符合[Upgrade advisor 必要條件](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)的電腦上安裝 Upgrade Advisor。 如果您要掃描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的執行個體，則必須將 Upgrade Advisor 安裝在報表伺服器上。  
   
  執行 **SQLUA.msi** 檔，以便安裝 Upgrade Advisor。 您可以從命令提示字元進行自主式且自動化安裝。 請參閱＜ [Installing Upgrade Advisor from the Command Prompt](../../../2014/sql-server/install/installing-upgrade-advisor-from-the-command-prompt.md) ＞，以取得語法和範例。  
   

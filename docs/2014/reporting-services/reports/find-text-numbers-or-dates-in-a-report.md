@@ -1,5 +1,5 @@
 ---
-title: 報表 (Reporting Services SharePoint 整合模式) 中尋找文字、 數字或日期 |Microsoft Docs
+title: 在報表中尋找文字、數位或日期（SharePoint 整合模式中的 Reporting Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6cf40f4d3baa60caa0d9d44f372e41521497e33e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102673"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report-reporting-services-in-sharepoint-integrated-mode"></a>在報表中尋找文字、數字或日期 (SharePoint 整合模式的 Reporting Services)
@@ -38,11 +38,11 @@ ms.locfileid: "66102673"
   
      如果沒有看到報表工具列，表示系統已因為某種目的將工具列隱藏起來，而且您不能使用工具列提供的功能。 此工具列的顯示狀態是由報表檢視器 Web 組件上的屬性決定。  
   
-3.  按一下 **[尋找]**。  
+3.  按一下 **[尋找]** 。  
   
-4.  若要搜尋相同值的下一個出現位置，請按 **[下一個]**。  
+4.  若要搜尋相同值的下一個出現位置，請按 **[下一個]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [將報表檢視器 Web 組件加入網頁中 &#40;SharePoint 整合模式的 Reporting Services&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [將報表檢視器網頁組件加入至網頁 &#40;SharePoint 整合模式的 Reporting Services&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

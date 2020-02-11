@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3e9e871ab8bceebe2aa6507883fcac19c610db8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097595"
 ---
 # <a name="machineaccountidentity-property-wmi"></a>MachineAccountIdentity 屬性 (WMI)
@@ -33,10 +33,11 @@ public string MachineAccountIdentity;
 ```  
   
 ## <a name="property-values"></a>屬性值  
- `String` 值，包含安裝報表伺服器的電腦帳戶識別。  
+ 
+  `String` 值，包含安裝報表伺服器的電腦帳戶識別。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 屬性](msreportserver-configurationsetting-properties.md)  

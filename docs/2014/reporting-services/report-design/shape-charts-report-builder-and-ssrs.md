@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7194147f60fa039caab1f9a712b9f6f75e2617d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104951"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>形狀圖 (報表產生器及 SSRS)
@@ -29,9 +29,9 @@ ms.locfileid: "66104951"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="variations"></a>變數  
+## <a name="variations"></a>變化  
   
--   **金字塔圖**： 金字塔圖會顯示成比例的資料，讓圖表看起來像金字塔一樣。  
+-   **金字塔**。 金字塔圖會顯示成比例的資料，讓圖表看起來像金字塔一樣。  
   
 ## <a name="data-considerations-for-shape-charts"></a>形狀圖的資料考量  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66104951"
   
 -   形狀圖在按照排序順序顯示成比例的百分比時最有效。 不過，為了維持一致性，圖表預設不會排序資料集中的值。 若要最精確地將資料表示成漏斗圖或金字塔圖，請考慮從最高至最低排序值。 如需詳細資訊，請參閱 [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)(將互動式排序加入資料表或矩陣 (報表產生器及 SSRS))。  
   
--   計算比例時，Null、空值、負值與零值沒有效用。 因此，這些值不會顯示在形狀圖上。 如果您要在圖表上，以視覺方式表示這些值的類型，請將圖表類型變更為形狀圖之外的其他類型。 如需如何將空點加入至非形狀圖的詳細資訊，請參閱[新增空白點至圖表&#40;報表產生器及 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)。  
+-   計算比例時，Null、空值、負值與零值沒有效用。 因此，這些值不會顯示在形狀圖上。 如果您要在圖表上，以視覺方式表示這些值的類型，請將圖表類型變更為形狀圖之外的其他類型。 如需如何將空點加入非形狀圖的詳細資訊，請參閱[將空點加入圖表 &#40;報表產生器和 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)。  
   
 -   如果您要在形狀圖上使用自訂調色盤定義自己的色彩，請確認您的調色盤上有足夠的色彩，才能以其獨特的色彩反白顯示每個資料點。 如需詳細資訊，請參閱 [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
   

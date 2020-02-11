@@ -13,18 +13,18 @@ ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7daef4785a77df294a831d69089108cbb1d88489
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061479"
 ---
 # <a name="sqlgetpoolid-function"></a>SQLGetPoolID 函式
-**合規性**  
- 導入的版本：ODBC 3.81 標準合規性：ODBC  
+**標準**  
+ 引進的版本： ODBC 3.81 標準合規性： ODBC  
   
  **摘要**  
- **SQLGetPoolID**擷取集區識別碼。  
+ **SQLGetPoolID**會抓取集區識別碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,29 +37,29 @@ SQLRETURN  SQLGetPoolID (
   
 ## <a name="arguments"></a>引數  
  *hDbcInfoToken*  
- [輸入]包含所有的連接資訊的權杖控制代碼。  
+ 源包含所有連接資訊的權杖控制碼。  
   
  *pPoolID*  
- [輸出]集區識別碼，這用來識別的一組可交換使用的連接 （可能需要額外的重設）。  
+ 輸出集區識別碼，用來識別可交換使用的一組連接（可能需要額外的重設）。  
   
 ## <a name="returns"></a>傳回值  
- SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLGetPoolID**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，驅動程式管理員會使用**HandleType** SQL_HANDLE_DBC_INFO_TOKEN 的並**處理**的*hDbcInfoToken*。  
+ 當**SQLGetPoolID**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時，驅動程式管理員會使用 SQL_HANDLE_DBC_INFO_TOKEN 的**HandleType**和*hDbcInfoToken*的**控制碼**。  
   
 ## <a name="remarks"></a>備註  
- **SQLGetPoolID**用來取得提供一組連接資訊的集區識別碼 (從**SQLSetConnectAttrForDbcInfo**， **SQLSetDriverConnectInfo**，和**SQLSetConnectInfo**)。 此集區識別碼用來識別的一組可交換使用的連接 （可能需要額外的重設）。 集區識別碼將用來識別該群組的連線的連接集區中。  
+ **SQLGetPoolID**是用來取得指定一組連接資訊（從**SQLSetConnectAttrForDbcInfo**、 **SQLSetDriverConnectInfo**和**SQLSetConnectInfo**）的集區識別碼。 此集區識別碼是用來識別可交換使用的一組連接（可能需要額外的重設）。 集區識別碼將用來識別該連接群組的連接集區。  
   
- 只要驅動程式會傳回 SQL_ERROR 或 SQL_INVALID_HANDLE，驅動程式管理員會傳回錯誤至應用程式 (在[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)或是[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md))。  
+ 每當驅動程式傳回 SQL_ERROR 或 SQL_INVALID_HANDLE 時，驅動程式管理員會將錯誤傳回至應用程式（ [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)或[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)）。  
   
- 只要驅動程式會傳回 SQL_SUCCESS_WITH_INFO，驅動程式管理員會取得的診斷資訊*hDbcInfoToken*，並集中的應用程式會傳回 SQL_SUCCESS_WITH_INFO [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)並[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)。  
+ 每當驅動程式傳回 SQL_SUCCESS_WITH_INFO，驅動程式管理員就會從*hDbcInfoToken*取得診斷資訊，並將 SQL_SUCCESS_WITH_INFO 傳回至[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)和[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)中的應用程式。  
   
- 應用程式不應該直接呼叫此函式。 支援可感知驅動程式的連接共用的 ODBC 驅動程式必須實作此函式。  
+ 應用程式不應直接呼叫此函式。 支援可感知驅動程式之連接共用的 ODBC 驅動程式必須實作用此函式。  
   
- 包含 ODBC 驅動程式開發的 sqlspi.h。  
+ 包含適用于 ODBC 驅動程式開發的 sqlspi。  
   
 ## <a name="see-also"></a>另請參閱  
  [開發 ODBC 驅動程式](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [可感知驅動程式的連接共用](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
- [在 ODBC 驅動程式中開發連接集區覺察](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)
+ [驅動程式感知的連接共用](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
+ [在 ODBC 驅動程式中開發連線集區覺察](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

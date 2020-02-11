@@ -1,5 +1,5 @@
 ---
-title: 快照集選項屬性頁面 （報表管理員） |Microsoft Docs
+title: 快照集選項屬性頁面（報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a73f3be75a7f0cadf633943aeafffb7217d8e29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101154"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>快照集選項屬性頁面 (報表管理員)
   使用 [快照集選項] 屬性頁面可以排程要加入至報表記錄的報表快照集，以及設定報表記錄中儲存之報表快照集的數目限制。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 額外的資料庫服務](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱[其他資料庫服務](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices)。  
   
-## <a name="navigation"></a>巡覽  
+## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ### <a name="to-open-the-snapshot-options-properties-page-for-a-report"></a>若要開啟報表的快照集選項屬性頁面  
@@ -36,11 +36,11 @@ ms.locfileid: "66101154"
   
 4.  選取 **[快照集選項]** 索引標籤。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **允許手動建立報表記錄**  
  選取此核取方塊，即可視需要將快照集加入報表記錄中。 選取此核取方塊會使 **[新增快照集]** 按鈕出現在 [記錄] 頁面上。  
   
- **將所有報表執行快照集都儲存在報表記錄**  
+ **將所有報表執行快照集儲存至報表記錄**  
  選取此核取方塊，將根據報表執行屬性所建立的報表快照集，複製到報表記錄。 可以將報表執行屬性設定為，從產生的快照集來執行報表。 設定此報表記錄屬性，就可以將所有長期產生的報表快照集複本，放入報表記錄中作為保存。  
   
  **使用下列排程將快照集加入至報表記錄**  
@@ -57,7 +57,7 @@ ms.locfileid: "66101154"
   
  報表記錄會儲存在報表伺服器資料庫中。 如果您有想要保留記錄的大型報表或許多報表，請考慮限制報表記錄的數量，以便協助管理報表伺服器資料庫的磁碟空間需求。  
   
- **Apply**  
+ **套用**  
  按一下即可儲存您的變更。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,5 +1,5 @@
 ---
-title: 保留的關鍵字 |Microsoft Docs
+title: 保留關鍵字 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,35 +14,35 @@ ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057216"
 ---
 # <a name="reserved-keywords"></a>保留關鍵字
-以下是 ODBC 函數呼叫所用的保留字。 這些字並限制基礎的最小的 SQL 文法;不過，若要確保與支援核心 SQL 文法的驅動程式的相容性，應用程式應該避免使用任何這些關鍵字。 #**定義**值 SQL_ODBC_KEYWORDS 包含這些關鍵字的逗號分隔清單。  
+以下是 ODBC 函數呼叫所用的保留字。 這些單字不會限制最小的 SQL 文法;不過，為了確保與支援核心 SQL 文法的驅動程式相容，應用程式應該避免使用任何這些關鍵字。 #**Define**值 SQL_ODBC_KEYWORDS 包含這些關鍵字的逗號分隔清單。  
   
 |||  
 |-|-|  
 |ABSOLUTE|IS|  
-|ACTION|ISOLATION|  
+|動作|ISOLATION|  
 |ADA|JOIN|  
 |ADD|KEY|  
 |ALL|LANGUAGE|  
 |ALLOCATE|LAST|  
 |ALTER|LEADING|  
-|與|LEFT|  
+|AND|LEFT|  
 |ANY|LEVEL|  
 |ARE|LIKE|  
 |AS|LOCAL|  
 |ASC|LOWER|  
 |ASSERTION|MATCH|  
-|AT|MAX|  
-|AUTHORIZATION|MIN|  
-|AVG|MINUTE|  
+|AT|最大值|  
+|AUTHORIZATION|最小值|  
+|平均|MINUTE|  
 |BEGIN|MODULE|  
-|BETWEEN|MONTH|  
+|BETWEEN|月|  
 |BIT|NAMES|  
 |BIT_LENGTH|NATIONAL|  
 |BOTH|NATURAL|  
@@ -56,19 +56,19 @@ ms.locfileid: "68057216"
 |CHAR_LENGTH|NUMERIC|  
 |CHARACTER|OCTET_LENGTH|  
 |CHARACTER_LENGTH|OF|  
-|CHECK|ON|  
+|CHECK|開啟|  
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
-|COLLATION|或|  
+|COLLATION|OR|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
-|CONNECTION|重疊|  
+|CONNECTION|OVERLAPS|  
 |CONSTRAINT|PAD|  
-|CONSTRAINTS|PARTIAL|  
-|CONTINUE|PASCAL 命名法|  
-|CONVERT|位置|  
+|條件約束|PARTIAL|  
+|CONTINUE|PASCAL|  
+|CONVERT|移動|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
 |CREATE|PRESERVE|  
@@ -79,24 +79,24 @@ ms.locfileid: "68057216"
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
 |CURSOR|real|  
-|DATE|REFERENCES|  
+|日期|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
 |DEC|REVOKE|  
-|Decimal|RIGHT|  
+|DECIMAL|RIGHT|  
 |DECLARE|ROLLBACK|  
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|DELETE|SECOND|  
+|刪除|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
 |DIAGNOSTICS|SESSION_USER|  
 |DISCONNECT|SET|  
-|DISTINCT|SIZE|  
+|DISTINCT|大小|  
 |DOMAIN|SMALLINT|  
-|Double|SOME|  
+|DOUBLE|SOME|  
 |DROP|SPACE|  
 |ELSE|SQL|  
 |END|SQLCA|  
@@ -111,7 +111,7 @@ ms.locfileid: "68057216"
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
 |FETCH|TIME|  
-|FIRST|TIMESTAMP|  
+|FIRST|timestamp|  
 |FLOAT|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
 |FOREIGN|TO|  
@@ -127,9 +127,9 @@ ms.locfileid: "68057216"
 |GROUP|UPDATE|  
 |HAVING|UPPER|  
 |HOUR|USAGE|  
-|IDENTITY|使用者|  
+|身分識別|USER|  
 |IMMEDIATE|USING|  
-|IN|Value|  
+|IN|值|  
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  
@@ -137,9 +137,9 @@ ms.locfileid: "68057216"
 |INNER|WHEN|  
 |INPUT|WHENEVER|  
 |INSENSITIVE|WHERE|  
-|Insert|取代所有提及的|  
+|Insert|WITH|  
 |INT|WORK|  
 |INTEGER|WRITE|  
-|INTERSECT|YEAR|  
+|INTERSECT|年|  
 |INTERVAL|ZONE|  
 |INTO||

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa98b9f760485b80f4fa4ac74f3b8008dc3bbec3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099383"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services 錯誤的原因和解決方案
@@ -26,7 +26,7 @@ ms.locfileid: "66099383"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|錯誤|Message|  
+|錯誤|訊息|  
 |-----------|-------------|  
 |[rsAccessedDenied - Reporting Services 錯誤](rsaccesseddenied-reporting-services-error.md)|授與使用者 'mydomain\myAccount' 的權限不足，無法執行此作業。 (rsAccessDenied) (ReportingServicesLibrary)。|  
 |[rsInternalError - Reporting Services 錯誤](rsinternalerror-reporting-services-error.md)|報表伺服器發生內部錯誤。 請參閱錯誤記錄以取得更多詳細資料。|  

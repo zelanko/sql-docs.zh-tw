@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59fc4a9e46e0dbe0f88047a2804330ba1c6ba18d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106074"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>使用調色盤定義圖表的色彩 (報表產生器及 SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66106074"
   
 2.  在設計介面上，按一下圖表。 圖表物件的屬性會顯示在 [屬性] 窗格中。  
   
-3.  在 **圖表**區段中，如`Palette`屬性中，選取**自訂**。  
+3.  在 [**圖表**] 區段中， `Palette`針對屬性選取 [**自訂**]。  
   
 4.  在 CustomPaletteColors 屬性中，按一下 [編輯集合] \( **...** ) 按鈕。 **[ReportColorExpression 集合編輯器]** 便會開啟。  
   

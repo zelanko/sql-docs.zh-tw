@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea704f5ec6ab26db37bb56b86a42605ab50dd48b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106123"
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>建立遞迴階層群組 (報表產生器及 SSRS)
-  若要顯示遞迴資料，其中父系和子系之間的關聯性由資料集中的欄位，您可以將資料區群組運算式，根據子欄位，並將根據父欄位的父屬性。  
+  若要顯示遞迴資料，其中父代和子系之間的關聯性是以資料集中的欄位來表示，您可以根據子欄位設定資料區群組運算式，並根據父欄位來設定 Parent 屬性。  
   
  顯示階層式資料是遞迴階層群組的常見用法，例如組織圖中的員工。 此資料集包含員工和經理的清單，經理名稱也會出現在員工清單內。  
   
@@ -33,12 +33,12 @@ ms.locfileid: "66106123"
  如需詳細資訊，請參閱[在資料區中新增或刪除群組 &#40;報表產生器及 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) 和[建立遞迴階層群組 &#40;報表產生器及 SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)。  
   
 ### <a name="aggregate-functions-that-support-recursion"></a>支援遞迴的彙總函式  
- 您可以使用接受 *Recursive* 參數的 Reporting Services 彙總函式，針對遞迴階層計算摘要資料。 下列函數可接受`Recursive`做為參數：[Sum](report-builder-functions-sum-function.md)、[Avg](report-builder-functions-avg-function.md)、[Count](report-builder-functions-count-function.md)、[CountDistinct](report-builder-functions-countdistinct-function.md)、[CountRows](report-builder-functions-countrows-function.md)、[Max](report-builder-functions-max-function.md)、[Min](report-builder-functions-min-function.md)、[StDev](report-builder-functions-stdev-function.md)、[StDevP](report-builder-functions-stdevp-function.md)、[Sum](report-builder-functions-sum-function.md)、[Var](report-builder-functions-var-function.md), 和 [VarP](report-builder-functions-varp-function.md)。 如需詳細資訊，請參閱 [彙總函式參考 &#40;報表產生器和 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)。  
+ 您可以使用接受 *Recursive* 參數的 Reporting Services 彙總函式，針對遞迴階層計算摘要資料。 `Recursive`下列函數接受作為參數： [Sum](report-builder-functions-sum-function.md)、 [Avg](report-builder-functions-avg-function.md)、 [Count](report-builder-functions-count-function.md)、 [CountDistinct](report-builder-functions-countdistinct-function.md)、 [CountRows](report-builder-functions-countrows-function.md)、 [Max](report-builder-functions-max-function.md)、 [Min](report-builder-functions-min-function.md)、 [StDev](report-builder-functions-stdev-function.md)、 [StDevP](report-builder-functions-stdevp-function.md)、 [Sum](report-builder-functions-sum-function.md)、 [Var](report-builder-functions-var-function.md)和[VarP](report-builder-functions-varp-function.md)。 如需詳細資訊，請參閱 [彙總函式參考 &#40;報表產生器和 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料表、矩陣和清單 &#40;報表產生器和 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Tablix 資料區 &#40;報表產生器和 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
- [彙總函式參考 &#40;報表產生器和 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
+ [彙總函式參考 &#40;報表產生器及 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [資料表 &#40;報表產生器及 SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [矩陣 &#40;報表產生器及 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [清單 &#40;報表產生器及 SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

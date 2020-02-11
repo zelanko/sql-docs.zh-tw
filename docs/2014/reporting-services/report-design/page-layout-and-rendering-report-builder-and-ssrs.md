@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df28762c61f548b47c4da4a31fe1d1fd42fbf65a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105504"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>頁面配置和轉譯 (報表產生器及 SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66105504"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="PageLayout"></a> 頁面配置] 和 [報表項目  
+##  <a name="PageLayout"></a>頁面配置和報表專案  
  報表項目是指與不同類型的報表資料相關聯的配置元素。 資料表、矩陣、清單、圖表和量測計都是資料區報表項目，每一個都會連結到報表資料集。 處理報表時，資料區會展開到報表頁面的下方，以便顯示資料。 其他報表項目會連結到單一項目，並顯示單一項目。 **[影像]** 報表項目會連結到圖片。 **[文字方塊]** 報表項目包含類似標題或運算式的簡單文字，其中可以包含內建欄位、報表參數或資料集欄位的參考。 **[線條]** 和 **[矩形]** 報表項目則提供了報表頁面上的簡單圖形化元素。 **[矩形]** 也可以是其他報表項目的容器。 報表可以包含子報表。  
   
  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]時，您可以將報表項目放在設計介面上的任何地方。 您可以使用貼齊格線和調整大小的控點，以互動方式放置、展開及收縮報表項目的最初形狀。 您可以並排不同組的資料來放置資料區，甚至是不同格式的相同資料。 當您將報表項目放在設計介面上時，它會有預設的大小和形狀，而且與所有其他報表項目之間具有初始關聯性。 您可以交互放置許多報表項目，以便建立更複雜的報表設計。 例如，在資料表資料格中放置圖表或影像、在資料表資料格中放置資料表，以及在矩形中放置多個影像。 除了提供您想要讓報表呈現的組織和外觀以外，在矩形等容器中放置報表項目也有助於控制報表項目顯示在報表頁面上的方式。  
@@ -48,16 +48,16 @@ ms.locfileid: "66105504"
 ##  <a name="RenderingExtensions"></a> 轉譯器  
  Reporting Services 包含一組轉譯器 (也稱為轉譯延伸模組)，您可以使用這組轉譯器將報表匯出為不同的格式。 轉譯器有三種類型：  
   
--   **資料轉譯器** ：資料轉譯器會從報表移除所有格式與版面配置資訊，而僅顯示資料。 所產生的檔案可用於將原始報表資料匯入到其他檔案類型 (例如，Excel)、其他資料庫、XML 資料訊息，或是自訂應用程式。 可用的資料轉譯器是：CSV 和 XML。  
+-   **資料轉譯器** ：資料轉譯器會從報表移除所有格式與版面配置資訊，而僅顯示資料。 所產生的檔案可用於將原始報表資料匯入到其他檔案類型 (例如，Excel)、其他資料庫、XML 資料訊息，或是自訂應用程式。 可用的資料轉譯器為：CSV 和 XML。  
   
     > [!NOTE]  
     >  雖然它不提供直接匯出為不同格式的功能，但是 Atom 轉譯會從報表產生資料檔。  
   
--   **軟分頁轉譯器** ：軟分頁轉譯器會維持報表的版面配置和格式。 所產生的檔案最適合使用螢幕檢視與傳遞，例如，使用網頁。 可用的軟分頁符號轉譯器是：[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word、 網頁封存 (MHTML)，和 HTML。  
+-   **軟分頁轉譯器** ：軟分頁轉譯器會維持報表的版面配置和格式。 所產生的檔案最適合使用螢幕檢視與傳遞，例如，使用網頁。 可用的軟分頁轉譯器為： [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word、網頁封存 (MHTML)，以及 HTML。  
   
--   **手動分頁轉譯器** ：手動分頁轉譯器會維持報表的版面配置和格式。 所產生的檔案最適合一致的列印結果，或者以書本格式線上檢視報表。 可用的手動分頁符號轉譯器支援：TIFF 和 PDF。  
+-   **手動分頁轉譯器** ：手動分頁轉譯器會維持報表的版面配置和格式。 所產生的檔案最適合一致的列印結果，或者以書本格式線上檢視報表。 支援的可用手動分頁轉譯器為：TIFF 和 PDF。  
   
- 當您在報表產生器或報表設計師中預覽報表，或在報表管理員中執行報表時，報表一定會先以 HTML 轉譯。 在執行報表後，您可以將它匯出為其他的檔案格式。 如需詳細資訊，請參閱 <<c0> [ 匯出的報表&#40;報表產生器及 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)。</c0>  
+ 當您在報表產生器或報表設計師中預覽報表，或在報表管理員中執行報表時，報表一定會先以 HTML 轉譯。 在執行報表後，您可以將它匯出為其他的檔案格式。 如需詳細資訊，請參閱[匯出報表 &#40;報表產生器和 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)。  
   
   
   
@@ -121,6 +121,6 @@ ms.locfileid: "66105504"
   
 ## <a name="see-also"></a>另請參閱  
  [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [匯出報表&#40;報表產生器及 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
+ [匯出報表 &#40;報表產生器和 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

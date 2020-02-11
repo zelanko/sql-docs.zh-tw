@@ -1,5 +1,5 @@
 ---
-title: sp_change_log_shipping_secondary_primary (TRANSACT-SQL) |Microsoft Docs
+title: sp_change_log_shipping_secondary_primary （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 757d842dfe0521bd8195bf85e02a3ed0eee2b5b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045800"
 ---
-# <a name="spchangelogshippingsecondaryprimary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
+# <a name="sp_change_log_shipping_secondary_primary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   變更次要資料庫設定。  
@@ -47,25 +47,25 @@ sp_change_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @primary_server = ] 'primary_server'` 主要執行個體名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]記錄傳送組態中。 *primary_server*已**sysname**不能是 NULL。  
+`[ @primary_server = ] 'primary_server'`記錄傳送設定[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中之主要實例的名稱。 *primary_server*是**sysname** ，不能是 Null。  
   
-`[ @primary_database = ] 'primary_database'` 是主要伺服器上名稱。 *primary_database&lt*已**sysname**，沒有預設值。  
+`[ @primary_database = ] 'primary_database'`這是主伺服器上的資料庫名稱。 *primary_database*是**sysname**，沒有預設值。  
   
-`[ @backup_source_directory = ] 'backup_source_directory'` 儲存交易記錄備份檔案從主要伺服器的目錄。 *backup_source_directory*已**nvarchar(500)** 不能是 NULL。  
+`[ @backup_source_directory = ] 'backup_source_directory'`儲存主伺服器交易記錄備份檔案的目錄。 *backup_source_directory*是**Nvarchar （500）** ，不能是 Null。  
   
-`[ @backup_destination_directory = ] 'backup_destination_directory'` 備份檔案複製到其中的次要伺服器上的目錄。 *backup_destination_directory*已**nvarchar(500)** 不能是 NULL。  
+`[ @backup_destination_directory = ] 'backup_destination_directory'`將備份檔案複製到其中的次要伺服器目錄。 *backup_destination_directory*是**Nvarchar （500）** ，不能是 Null。  
   
-`[ @file_retention_period = ] 'file_retention_period'` 這是時間的以分鐘為單位中保留記錄長度。 *history_retention_period*已**int**，預設值是 NULL。 若未指定，則使用 14420。  
+`[ @file_retention_period = ] 'file_retention_period'`這是保留記錄的時間長度（以分鐘為單位）。 *history_retention_period*是**int**，預設值是 Null。 若未指定，則使用 14420。  
   
-`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` 用來連接到監視伺服器的安全性模式。  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'`用來連接到監視伺服器的安全性模式。  
   
  1 = Windows 驗證。  
   
- 0 =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 *monitor_server_security_mode&lt*已**元**不能是 NULL。  
+ 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 *monitor_server_security_mode*是**bit** ，不能是 Null。  
   
-`[ @monitor_server_login = ] 'monitor_server_login'` 是用來存取監視伺服器的使用者名稱。  
+`[ @monitor_server_login = ] 'monitor_server_login'`這是用來存取監視伺服器之帳戶的使用者名稱。  
   
-`[ @monitor_server_password = ] 'monitor_server_password'` 這是帳戶的用來存取監視伺服器密碼。  
+`[ @monitor_server_password = ] 'monitor_server_password'`這是用來存取監視伺服器之帳戶的密碼。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -74,14 +74,14 @@ sp_change_log_shipping_secondary_primary
  None  
   
 ## <a name="remarks"></a>備註  
- **sp_change_log_shipping_secondary_primary**必須從執行**主要**次要伺服器上的資料庫。 這個預存程序會執行下列動作：  
+ **sp_change_log_shipping_secondary_primary**必須從次要伺服器的**master**資料庫中執行。 這個預存程序會執行下列動作：  
   
-1.  在設定的變更**log_shipping_secondary**記錄。  
+1.  視需要變更**log_shipping_secondary**記錄中的設定。  
   
-2.  如果監視伺服器不是從次要伺服器，變更監視中的資料錄**log_shipping_monitor_secondary**監視伺服器使用提供的引數，如有必要。  
+2.  如果監視伺服器與次要伺服器不同，則會在監視伺服器上使用提供的引數來變更監視記錄**log_shipping_monitor_secondary** （如有必要）。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
   
 ## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

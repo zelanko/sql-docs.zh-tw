@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e4bb06da4582b5b93f027ac49c8b761705ad4b22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105691"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>影像、文字方塊、矩形和線條 (報表產生器及 SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66105691"
   
  **矩形** 可以當做圖形元素或其他報表項目的容器使用。 當做圖形元素使用時，矩形擁有的屬性與線條相同。 當做容器使用時，矩形可以當做其中所有報表項目的父容器。 將報表項目置於父容器，有助於控制這些項目在每個報表頁面上的顯示方式。  
   
- [影像 &#40;報表產生器及 SSRS&#41;](images-report-builder-and-ssrs.md)  
+ [影像 &#40;報表產生器和 SSRS&#41;](images-report-builder-and-ssrs.md)  
  影像會顯示報表中的二進位影像資料。 您可以提供影像來源。 來源可以是 Web 伺服器上所儲存影像的 URL 參考、內嵌影像資料的參考，或資料庫中二進位影像資料的參考。 報表產生器和報表設計師支援 .bmp、.jpeg、.gif 和 .png 檔案。  
   
 ## <a name="see-also"></a>另請參閱  

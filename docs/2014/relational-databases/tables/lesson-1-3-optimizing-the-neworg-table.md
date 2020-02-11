@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110066"
 ---
 # <a name="optimizing-the-neworg-table"></a>最佳化 NewOrg 資料表
-  **NewOrd**中所建立的資料表[使用現有的階層式資料填入資料表](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)工作包含所有員工資訊，並使用代表階層結構`hierarchyid`資料類型。 此工作會加入新索引以支援在 `hierarchyid` 資料行上進行搜尋。  
+  您在[使用現有的階層式資料填入資料表](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)工作中建立的`hierarchyid` **NewOrd**資料表包含所有員工資訊，並使用資料類型代表階層式結構。 此工作會加入新索引以支援在 `hierarchyid` 資料行上進行搜尋。  
   
 ## <a name="clustered-index"></a>叢集索引  
- `hierarchyid`資料行 (**OrgNode**) 是主索引鍵**NewOrg**資料表。 建立資料表時，它包含名為 **PK_NewOrg_OrgNode** 的叢集索引以強制 **OrgNode** 資料行的唯一性。 此叢集索引也支援深度優先的資料表搜尋。  
+ 資料`hierarchyid`行（**OrgNode**）是**NewOrg**資料表的主要索引鍵。 建立資料表時，它包含名為 **PK_NewOrg_OrgNode** 的叢集索引以強制 **OrgNode** 資料行的唯一性。 此叢集索引也支援深度優先的資料表搜尋。  
   
 ## <a name="nonclustered-index"></a>非叢集索引  
  此步驟會建立兩個非叢集索引來支援一般搜尋。  
@@ -95,7 +95,7 @@ ms.locfileid: "66110066"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     **EmployeeID**-優先索引：資料列會儲存在**EmployeeID**順序。  
+     「**員工 id**-第一個索引」：資料列會以「**員工**」順序儲存。  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -124,14 +124,17 @@ ms.locfileid: "66110066"
   
 #### <a name="to-drop-the-unnecessary-columns"></a>卸除不必要的資料行  
   
-1.  **ManagerID** 資料行代表員工/主管的關聯性，此種關聯性現在以 **OrgNode** 資料行代表。 如果其他應用程式不需要 **ManagerID** 資料行，請考慮使用下列陳述式卸除該資料行：  
+1.  
+  **ManagerID** 資料行代表員工/主管的關聯性，此種關聯性現在以 **OrgNode** 資料行代表。 如果其他應用程式不需要 **ManagerID** 資料行，請考慮使用下列陳述式卸除該資料行：  
   
     ```  
     ALTER TABLE NewOrg DROP COLUMN ManagerID ;  
     GO  
     ```  
   
-2.  **EmployeeID** 資料行也是多餘的。 **OrgNode** 資料行可唯一識別每個員工。 如果其他應用程式不需要 **EmployeeID** 資料行，請考慮使用下列程式碼先卸除索引，再卸除該資料行：  
+2.  
+  **EmployeeID** 資料行也是多餘的。 
+  **OrgNode** 資料行可唯一識別每個員工。 如果其他應用程式不需要 **EmployeeID** 資料行，請考慮使用下列程式碼先卸除索引，再卸除該資料行：  
   
     ```  
     DROP INDEX EmpIDs_unq ON NewOrg ;  

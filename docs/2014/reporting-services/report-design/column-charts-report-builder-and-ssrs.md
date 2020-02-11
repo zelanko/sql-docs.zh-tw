@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e8477b4e8e0e6c0fc6e4801a975b11d79dadf83f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106225"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Column Charts (Report Builder and SSRS)
@@ -41,13 +41,13 @@ ms.locfileid: "66106225"
   
 ## <a name="data-considerations-for-a-column-chart"></a>直條圖的資料考量  
   
--   橫條圖與直條圖通常用於顯示群組之間的比較。 如果在圖表上出現三個以上的數列，請考慮使用堆疊橫條圖或直條圖。 如果在圖表上有多個數列，您也可以將堆疊橫條圖或直條圖收集到多個群組中。 如需詳細資訊，請參閱 <<c0> [ 橫條圖&#40;報表產生器及 SSRS&#41; ](charts-report-builder-and-ssrs.md)並*直條圖*。</c0>  
+-   橫條圖與直條圖通常用於顯示群組之間的比較。 如果在圖表上出現三個以上的數列，請考慮使用堆疊橫條圖或直條圖。 如果在圖表上有多個數列，您也可以將堆疊橫條圖或直條圖收集到多個群組中。 如需詳細資訊，請參閱[橫條圖 &#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)和*直條圖*。  
   
 -   在直條圖中，用於水平顯示類別目錄軸標籤的空間較少。 如果您的類別目錄標籤比較長，請考慮使用橫條圖，或變更標籤的旋轉角度。  
   
 -   您可以在直條圖的個別直條上加入特殊的繪製樣式來增加其視覺效果。 繪製樣式包括楔形、浮凸、圓柱及深淺。 這些效果的設計可以改善平面圖表的外觀。 如果要使用立體圖表，您仍然可以套用繪製樣式，但是可能不會有相同的效果。 如需如何將繪製樣式加入橫條圖的詳細資訊，請參閱 [將斜面、浮凸與紋理樣式加入至圖表 &#40;報表產生器及 SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
   
--   直條圖的特點是，可以將您的圖表顯示為長條圖或帕累托圖。 若要這樣做，請將 ShowColumnAs 屬性設定為`Histogram`或是`Pareto`到 [屬性] 視窗中`true`。  
+-   直條圖的特點是，可以將您的圖表顯示為長條圖或帕累托圖。 若要這麼做，請將屬性視窗中`Histogram`的`Pareto` ShowColumnAs 屬性設定為`true`或。  
   
 ## <a name="see-also"></a>另請參閱  
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   

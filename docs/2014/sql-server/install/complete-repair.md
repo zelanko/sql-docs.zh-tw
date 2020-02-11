@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e25553d57aabf32713e1369c75602ea7e12818db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096143"
 ---
 # <a name="complete---repair"></a>完成 - 修復
-  使用**完成-修復**頁面，即可確認修復是否已完成。  
+  使用 [**完成修復**] 頁面，確認修復已完成。  
   
-## <a name="options"></a>選項  
- 這個對話方塊包含此作業之安裝程式記錄檔的連結。 若要繼續，請按一下**關閉**。  
+## <a name="options"></a>選項。  
+ 這個對話方塊包含此作業之安裝程式記錄檔的連結。 若要繼續，請按一下 [**關閉**]。  
   
   

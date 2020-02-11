@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f65926bf982574ee2ae856b5bc4138d065b534bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098327"
 ---
-# <a name="listsslcertificates-method-wmi-msreportserverconfigurationsetting"></a>ListSSLCertificates 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="listsslcertificates-method-wmi-msreportserver_configurationsetting"></a>ListSSLCertificates 方法 (WMI MSReportServer_ConfigurationSetting)
   傳回報表伺服器電腦上的憑證清單。  
   
 ## <a name="syntax"></a>語法  
@@ -37,13 +37,13 @@ public void ListSSLCertificates(out string[] CertificateHash,
 ```  
   
 ## <a name="parameters"></a>參數  
- *CertificateHash[]*  
+ *CertificateHash []*  
  [out] 憑證雜湊。  
   
- *CertName]*  
+ *CertName []*  
  [out] 憑證的名稱。  
   
- *HostName[]*  
+ *主機名稱 []*  
  [out] 憑證的主機名稱。  
   
  *長度*  
@@ -58,7 +58,7 @@ public void ListSSLCertificates(out string[] CertificateHash,
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

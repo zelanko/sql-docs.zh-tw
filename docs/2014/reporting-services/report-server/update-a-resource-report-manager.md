@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: be4fd9dc72a32c65465e3d226850eb18a494e783
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103060"
 ---
 # <a name="update-a-resource-report-manager"></a>更新資源 (報表管理員)
@@ -25,28 +25,28 @@ ms.locfileid: "66103060"
   
 ### <a name="to-update-a-resource"></a>若要更新資源  
   
-1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)。  
+1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)。  
   
 2.  在報表管理員中，導覽至或搜尋您要更新的資源。  
   
-3.  按一下資源，即可在 [檢視]  頁面中開啟資源。  
+3.  按一下資源，即可在 [檢視]**** 頁面中開啟資源。  
   
-4.  按一下 [屬性]  ，即可開啟 [一般]  屬性頁面。  
+4.  按一下 [屬性]****，即可開啟 [一般]**** 屬性頁面。  
   
-5.  按一下 [取代]  ，即可開啟 [匯入資源]  頁面。  
+5.  按一下 [取代]****，即可開啟 [匯入資源]**** 頁面。  
   
 6.  按一下 **[瀏覽]** 。  
   
 7.  選取您要用來取代目前資源的檔案。 您可以使用資源檔案的更新版本，或者指定不同名稱或檔案類型的檔案。  
   
-8.  按一下 [確定]  ，即可上傳資源檔案，關閉 [匯入資源]  頁面，並將您的變更儲存到報表伺服器。  
+8.  按一下 [確定]****，即可上傳資源檔案，關閉 [匯入資源]**** 頁面，並將您的變更儲存到報表伺服器。  
   
  如果您更新的資源包含在報表中所使用的影像，您就需要重新整理報表才看得到更新的影像。  
   
 ## <a name="see-also"></a>另請參閱  
- [內容頁面 &#40;報表管理員&#41;](../contents-page-report-manager.md)   
+ [[內容] 頁面 &#40;報表管理員&#41;](../contents-page-report-manager.md)   
  [上傳檔案頁面 &#40;報表管理員&#41;](../upload-file-page-report-manager.md)   
- [上傳檔案到資料夾](upload-files-to-a-folder.md)   
+ [將檔案上傳到資料夾](upload-files-to-a-folder.md)   
  [報表管理員 F1 說明](../report-manager-f1-help.md)  
   
   

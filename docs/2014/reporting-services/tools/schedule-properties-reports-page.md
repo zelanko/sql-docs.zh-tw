@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08fc68575e2515907f31e82cf3609d73da1c95d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099789"
 ---
 # <a name="schedule-properties-reports-page"></a>排程屬性 (報表頁面)
@@ -24,23 +24,23 @@ ms.locfileid: "66099789"
   
  雖然這個頁面會顯示使用此共用排程的每份報表，但是它不會指出在該單一報表內使用此共用排程的次數。 例如，假設 Company Sales 報表的 20 位不同訂閱者都使用相同的共用排程來觸發訂閱處理。 在此情況下，Company Sales 報表只會在此清單中顯示一次，即使報表具有共用排程的 20 個參考也一樣。  
   
- 若要開啟此頁面，請啟動[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，連接至報表伺服器，開啟**共用排程**資料夾，以滑鼠右鍵按一下共用的排程，請選取**屬性**，然後按一下 **報表**.  
+ 若要開啟此頁面， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]請啟動、連接至報表伺服器、開啟 [**共用**排程] 資料夾、以滑鼠右鍵按一下共用排程、選取 [**屬性**]，然後按一下 [**報表**]。  
   
 > [!NOTE]  
 >  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供此功能。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **資料夾**  
  指定報表的路徑。  
   
- **報表**  
+ **Report**  
  指定使用排程之報表的名稱。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立、修改和刪除共用排程](../subscriptions/create-modify-and-delete-schedules.md)   
- [排程](../subscriptions/schedules.md)   
+ [[排程]](../subscriptions/schedules.md)   
  [Management Studio F1 說明中的報表伺服器](report-server-in-management-studio-f1-help.md)   
  [連接至 Management Studio 中的報表伺服器](connect-to-a-report-server-in-management-studio.md)   
- [設定報表的一般屬性&#40;報表管理員&#41;](../configure-general-properties-for-a-report-report-manager.md)  
+ [設定報表的一般屬性 &#40;報表管理員&#41;](../configure-general-properties-for-a-report-report-manager.md)  
   
   

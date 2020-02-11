@@ -1,5 +1,5 @@
 ---
-title: lower-case 函數 (XQuery) |Microsoft Docs
+title: 小寫函數（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a80d869afe67317476a1d68c28afa5456a4a7366
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077662"
 ---
 # <a name="functions-on-string-values---lower-case"></a>字串值的相關函式 - lower-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Lower-case 函數中的每個字元的轉換 *$arg*成小寫對等。 Microsoft Windows Unicode 字碼元素的二進位大小寫轉換會指定字元如何轉換成小寫。 這項標準與 Unicode 字碼元素標準的對應有所不同。  
+  小寫函式會將 *$arg*中的每個字元轉換成其對等的小寫字母。 Microsoft Windows Unicode 字碼元素的二進位大小寫轉換會指定字元如何轉換成小寫。 這項標準與 Unicode 字碼元素標準的對應有所不同。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,12 +42,12 @@ fn:lower-case($arg as xs:string?) as xs:string
 |*$arg*|要轉換成小寫的字串值。|  
   
 ## <a name="remarks"></a>備註  
- 如果值 *$arg*是會傳回空的零長度字串。  
+ 如果 *$arg*的值是空的，則會傳回長度為零的字串。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. 將字串變更為大寫  
- 下列範例會變更輸入的字串 ' abcDEF ！@4' 為小寫。  
+ 下列範例會變更輸入字串 ' abcDEF！@4' 到小寫。  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  
@@ -123,6 +123,6 @@ where CatalogDescription.exist('
  `</Prod>`  
   
 ## <a name="see-also"></a>另請參閱  
- [針對 xml 資料類型的 XQuery 函式](../xquery/xquery-functions-against-the-xml-data-type.md)  
+ [針對 xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

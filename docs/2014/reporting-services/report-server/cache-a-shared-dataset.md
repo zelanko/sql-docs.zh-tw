@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c759eaf0fd18709e09eb64da6bfeb2d66a69f595
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104262"
 ---
 # <a name="cache-a-shared-dataset"></a>快取共用資料集
@@ -26,7 +26,7 @@ ms.locfileid: "66104262"
   
 ### <a name="to-schedule-the-expiration-of-a-cached-report"></a>若要排程快取報表的逾期  
   
-1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)。  
+1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)。  
   
 2.  在報表管理員中，導覽至您想要設定快取屬性的共用資料集、將滑鼠停留在該項目上，然後按一下下拉箭號。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66104262"
   
 6.  選取快取於 30 分鐘後過期的選項。 您也可以選擇讓快取在指定的排程時間過期。  
   
-7.  按一下 **[套用]** 。  
+7.  按一下 [套用]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理共用資料集](../report-data/manage-shared-datasets.md)  

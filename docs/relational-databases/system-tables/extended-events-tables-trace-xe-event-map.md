@@ -1,5 +1,5 @@
 ---
-title: trace_xe_event_map (TRANSACT-SQL) |Microsoft Docs
+title: trace_xe_event_map （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,22 +19,22 @@ ms.assetid: 537aa292-3540-47e8-be28-56dc01abc343
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 07810bcd1f43bd3fd2428361e5f429edb9c7c3d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056245"
 ---
-# <a name="extended-events-tables---tracexeeventmap"></a>擴充事件資料表 - trace_xe_event_map
+# <a name="extended-events-tables---trace_xe_event_map"></a>擴充事件資料表 - trace_xe_event_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  針對對應至 SQL 追蹤事件類別的每個「擴充事件」事件包含一個資料列。 這份資料表儲存在 master 資料庫的 sys 結構描述中。  
+  針對對應至 SQL 追蹤事件類別的每個「擴充事件」事件包含一個資料列。 此資料表儲存在主資料庫的 sys 架構中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |trace_event_id|**smallint**|正在對應之 SQL 追蹤事件類別的識別碼。|  
-|package_name|**nvarchar(60)**|對應事件所在之擴充事件封裝的名稱。|  
-|xe_event_name|**nvarchar(60)**|對應至 SQL 追蹤事件類別之「擴充事件」事件的名稱。|  
+|package_name|**Nvarchar （60）**|對應事件所在之擴充事件封裝的名稱。|  
+|xe_event_name|**Nvarchar （60）**|對應至 SQL 追蹤事件類別之「擴充事件」事件的名稱。|  
   
 ## <a name="remarks"></a>備註  
  您可以使用下列查詢來識別相當於 SQL 追蹤事件類別的「擴充事件」事件：  
@@ -57,7 +57,8 @@ LEFT JOIN sys.trace_xe_event_map AS xe
 WHERE xe.trace_event_id IS NULL  
 ```  
   
- 在先前查詢中，傳回的事件類別大部分都是稽核相關的。 我們建議您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 進行稽核。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 會使用擴充事件來協助建立稽核。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
+ 在先前查詢中，傳回的事件類別大部分都是稽核相關的。 我們建議您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 進行稽核。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 會使用擴充事件來協助建立稽核。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [trace_xe_action_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)  

@@ -1,5 +1,5 @@
 ---
-title: 選取色彩對話方塊 （報表產生器及 SSRS） |Microsoft Docs
+title: 選取色彩對話方塊（報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,24 +16,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6bcbbe828da811ace5df4feea5cfdf888e1e6ca5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101376"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>選取色彩對話方塊 (報表產生器及 SSRS)
   使用 **Select Color** 對話方塊，可以指定資料區或文字方塊內，單一資料格或多個資料格的背景色彩選項或圖表色彩選項。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **色彩選取器**  
  從指定如何選取色彩的三個選項選擇。  
   
--   **選擇器 - 色彩圓形** ：使用「色調/飽和/亮度」(HSB) 色彩值來選擇色彩。  
+-   **選擇器-色彩圓形**使用 [色調/飽和度/亮度（HSB）] 色彩值來選擇色彩。  
   
--   **選擇器 - 色彩方塊** ：使用「紅色/綠色/藍色」(RGB) 色彩值來選擇色彩。  
+-   **選擇器-色彩正方形**使用「紅色/綠色/藍色」（RGB）色彩值來選擇色彩。  
   
--   **調色盤 - 標準色彩** ：從預先定義的色彩值清單選擇色彩。  
+-   **調色板-標準色彩**從預先定義的色彩值清單中選擇色彩。  
   
  **色彩圓形**  
  用於 HSB 色彩，因為 HSB 值會對應到圓柱座標系統。 色調是實際的色彩、飽和度是色彩的純度，而亮度是相對亮度或暗度。  
@@ -46,7 +46,7 @@ ms.locfileid: "66101376"
  挑選色彩時，正方形的中心會決定色彩。 使用色彩滑動軸來變更所選色彩的範圍。 X 和 Y 座標代表其他兩種色彩。 例如，如果您挑選綠色，滑動軸會顯示綠色值的範圍，而 X 和 Y 座標則分別代表紅色和藍色值。  
   
  **標準的調色盤色彩**  
- 用於命名色彩[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]`KnownColor`列舉型別。  
+ 用於[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor`列舉中的命名色彩。  
   
  **色彩系統**  
  指定 RGB 或 HSB 色彩。 此選項會將顯示變更為顯示 RGB 或 HSB 值，這些值會在您將色彩圓形或色彩正方形用於 **[色彩選取器]** 時，以互動方式更新。  
@@ -65,7 +65,7 @@ ms.locfileid: "66101376"
  **Alpha**  
  色彩 α 或透明部分的十進位值。 啟用這個值時，您可以使用滑動軸參數來調整您需要的透明程度。  
   
- **色調**  
+ **Hue**  
  HSB 色彩色調的十進位值。 使用微調方塊來變更值，或輸入一個介於 0 和 255 之間的值。  
   
  **飽和度**  

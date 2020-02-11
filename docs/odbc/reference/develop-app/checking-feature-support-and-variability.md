@@ -16,15 +16,15 @@ ms.assetid: ff45f220-9b8b-4c44-82f8-a8e9913fffea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 21495e538a554a477336d1a92926c11fe762c5af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68062657"
 ---
 # <a name="checking-feature-support-and-variability"></a>檢查功能支援和變化性
-若要檢查功能的支援和變化，應用程式通常會呼叫**SQLGetInfo**， **SQLGetFunctions**，並**SQLGetTypeInfo**。 好的起點是驅動程式的 API 和 SQL 文法一致性層級。 其中說明所支援之功能的廣泛程度。 應用程式接著可以呼叫**SQLGetInfo**來判斷所支援或變化性的功能，其所需的其他選項**SQLGetFunctions**來判斷是否超過傳回需要函數支援的一致性層級，以及**SQLGetTypeInfo**來判斷支援哪些 SQL 資料類型。  
+若要檢查功能支援和變化性，應用程式通常會呼叫**SQLGetInfo**、 **SQLGetFunctions**和**SQLGetTypeInfo**。 驅動程式的 API 和 SQL 文法一致性層級是很好的起點。 這些描述廣泛的功能支援層級。 然後，應用程式可以使用其他選項來呼叫**SQLGetInfo** ，以判斷其所需的功能支援或變化性， **SQLGetFunctions**以判斷所需的函式超出傳回的一致性層級，並**SQLGetTypeInfo**判斷支援哪些 SQL 資料類型。  
   
- 應用程式可以藉由呼叫是否支援陳述式或連接屬性來判斷**SQLSetStmtAttr**或是**SQLSetConnectAttr**具有該屬性。 如果函數傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，被支援的屬性;如果它傳回 SQL_ERROR，而且 SQLSTATE HYC00 （未實作選擇性功能），不支援的屬性。  
+ 應用程式可以藉由呼叫**SQLSetStmtAttr**或**SQLSetConnectAttr**與該屬性，來判斷語句或連接屬性是否受到支援。 如果函數傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，則支援屬性;如果它傳回 SQL_ERROR 並 SQLSTATE HYC00 （未實作為選擇性功能），則不支援此屬性。  
   
- 應用程式也可以判斷數量有限的資訊，然後再連接到驅動程式，藉由呼叫**SQLDrivers**。
+ 應用程式也可以藉由呼叫**SQLDrivers**，在連接到驅動程式之前判斷有限的資訊數量。

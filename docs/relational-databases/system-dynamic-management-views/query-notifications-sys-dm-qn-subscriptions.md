@@ -1,5 +1,5 @@
 ---
-title: sys.dm_qn_subscriptions & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.databases dm_qn_subscriptions （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,30 +19,30 @@ ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061926"
 ---
-# <a name="query-notifications---sysdmqnsubscriptions"></a>查詢通知-sys.dm_qn_subscriptions
+# <a name="query-notifications---sysdm_qn_subscriptions"></a>查詢通知-sys. dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回有關伺服器之使用中查詢通知訂閱的資訊。 您可以使用這個檢視，檢查伺服器或指定資料庫中是否有使用中的訂閱，或檢查指定的伺服器主體。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|訂閱的識別碼。|  
+|**號**|**int**|訂閱的識別碼。|  
 |**database_id**|**int**|執行通知查詢的資料庫識別碼。 這個資料庫會儲存與這項訂閱有關的資訊。|  
-|**sid**|**varbinary(85)**|建立和擁有這項訂閱之伺服器主體的安全性識別碼。|  
+|**sid**|**Varbinary （85）**|建立和擁有這項訂閱之伺服器主體的安全性識別碼。|  
 |**object_id**|**int**|儲存訂閱參數相關資訊的內部資料表識別碼。|  
-|**建立**|**datetime**|建立訂閱的日期和時間。|  
-|**timeout**|**int**|訂閱的逾時 (以秒為單位)。 通知會標示為在過了這個時間之後引發。<br /><br /> 注意:實際的引發時間可能大於指定的逾時。不過，如果失效的變更訂用帳戶，就會發生在指定的逾時後，但引發的訂用帳戶時之前,[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可確保讓引發作業發生在已變更的時間。|  
-|**status**|**int**|指出訂閱的狀態。 如需狀態碼的清單，請參閱＜備註＞底下的表格。|  
+|**已**|**datetime**|建立訂閱的日期和時間。|  
+|**限制**|**int**|訂閱的逾時 (以秒為單位)。 通知會標示為在過了這個時間之後引發。<br /><br /> 注意：實際引發時間可能大於指定的超時時間。不過，如果在指定的超時時間之後（但在引發訂閱之前）發生使訂閱失效的變更， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]就會確保在進行變更時引發。|  
+|**狀態**|**int**|指出訂閱的狀態。 如需狀態碼的清單，請參閱＜備註＞底下的表格。|  
   
 ## <a name="relationship-cardinalities"></a>關聯性基數  
   
-|來源|若要|開啟|type|  
+|從|至|另一|類型|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|多對一|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|多對一|  
@@ -55,9 +55,9 @@ ms.locfileid: "68061926"
 |程式碼|次要狀態|資訊|  
 |----------|------------------|----------|  
 |65798|因為資料變更所以引發訂閱|插入觸發的訂閱|  
-|65799|因為資料變更所以引發訂閱|DELETE|  
-|65800|因為資料變更所以引發訂閱|Update|  
-|65801|因為資料變更所以引發訂閱|合併式|  
+|65799|因為資料變更所以引發訂閱|刪除|  
+|65800|因為資料變更所以引發訂閱|更新|  
+|65801|因為資料變更所以引發訂閱|合併|  
 |65802|因為資料變更所以引發訂閱|截斷資料表|  
 |66048|因為已超過逾時的設定所以引發訂閱|未定義的資訊模式|  
 |66315|因為物件變更所以引發訂閱|已經卸除物件或使用者|  
@@ -90,7 +90,7 @@ ms.locfileid: "68061926"
 |199168|訂閱使用中|未定義的資訊模式|  
 |199424|訂閱已初始化但尚未使用中|未定義的資訊模式|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 > [!NOTE]  
@@ -132,7 +132,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [查詢通知相關的動態管理檢視&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
- [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
+ [查詢通知相關的動態管理檢視 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
+ [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   
   

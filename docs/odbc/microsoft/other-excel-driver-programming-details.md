@@ -15,15 +15,15 @@ ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 464d454928b575e5151b09663d96b1f837356761
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043767"
 ---
 # <a name="other-excel-driver-programming-details"></a>其他 Excel 驅動程式的程式設計詳細資料
 > [!NOTE]  
->  本節提供 ODBC 函數和其他程式設計的詳細資料的 Excel 驅動程式專屬資訊。 如需函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本節提供有關 ODBC 函式和其他程式設計詳細資料的 Excel 驅動程式特定資訊。 如需函式的一般資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)底下的適當主題。  
   
  此章節包含下列主題。  
   

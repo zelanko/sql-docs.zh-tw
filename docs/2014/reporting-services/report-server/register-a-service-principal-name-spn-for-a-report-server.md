@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c88d8dd92fcedac2facff27f52492be5ccb74269
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103605"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>為報表伺服器註冊服務主要名稱 (SPN)
@@ -23,7 +23,7 @@ ms.locfileid: "66103605"
 ## <a name="about-spns"></a>關於 SPN  
  SPN 是使用 Kerberos 驗證之網路上某項服務的唯一識別碼。 它是由服務類別、主機名稱和通訊埠所組成。 在使用 Kerberos 驗證的網路上，伺服器的 SPN 必須在內建的電腦帳戶 (如 NetworkService 或 LocalSystem) 或使用者帳戶下註冊。 內建帳戶會自動註冊 SPN。 但是，當您在網域使用者帳戶下執行服務時，您必須針對您想要使用的帳戶手動註冊 SPN。  
   
- 若要建立 SPN，可以使用 **SetSPN** 命令列公用程式。 如需詳細資訊，請參閱下列內容：  
+ 若要建立 SPN，可以使用 **SetSPN** 命令列公用程式。 如需詳細資訊，請參閱下列：  
   
 -   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx) 。  
   
@@ -38,11 +38,13 @@ ms.locfileid: "66103605"
 Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>  
 ```  
   
- Windows Server 上提供**SetSPN** 。 `-s` 引數會在確認沒有重複存在之後加入 SPN。 **注意：-s** 從 Windows Server 2008 開始已可於 Windows Server 中使用。  
+ Windows Server 上提供**SetSPN** 。 
+  `-s` 引數會在確認沒有重複存在之後加入 SPN。 **注意：-s** 從 Windows Server 2008 開始已可於 Windows Server 中使用。  
   
- `HTTP` 為服務類別。 報表伺服器 Web 服務會在 HTTP.SYS 中執行。 依據產品建立適用於 HTTP 的 SPN 就是指相同電腦上在 HTTP.SYS 中執行的所有 Web 應用程式 (包括 IIS 內主控的應用程式) 都將根據網域使用者帳戶來被授與票證。 如果這些服務在不同的帳戶下執行，驗證要求將會失敗。 為了避免這個問題，請務必在相同的帳戶下設定所有要執行的 HTTP 應用程式，或是考慮為每一個應用程式建立主機標頭，然後再為每一個主機標頭建立個別的 SPN。 當您設定主機標頭時，不論 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態為何，都需要進行 DNS 變更。  
+ 
+  `HTTP` 為服務類別。 報表伺服器 Web 服務會在 HTTP.SYS 中執行。 依據產品建立適用於 HTTP 的 SPN 就是指相同電腦上在 HTTP.SYS 中執行的所有 Web 應用程式 (包括 IIS 內主控的應用程式) 都將根據網域使用者帳戶來被授與票證。 如果這些服務在不同的帳戶下執行，驗證要求將會失敗。 為了避免這個問題，請務必在相同的帳戶下設定所有要執行的 HTTP 應用程式，或是考慮為每一個應用程式建立主機標頭，然後再為每一個主機標頭建立個別的 SPN。 當您設定主機標頭時，不論 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態為何，都需要進行 DNS 變更。  
   
- 您為 \<電腦名稱  >、\<網域名稱  > 和 \<連接埠  > 指定的值，可識別裝載報表伺服器之電腦的唯一網路位址。 這個值可以是本機主機名稱或完整網域名稱 (FQDN)。 如果您只有一個網域，而且使用連接埠 80，即可在命令列中省略 \<網域名稱  > 和 \<連接埠  >。 \<網域使用者帳戶  > 是用以執行報表伺服器服務以及必須註冊 SPN 的使用者帳戶。  
+ 您為 \<電腦名稱**>、\<網域名稱**> 和 \<連接埠**> 指定的值，可識別裝載報表伺服器之電腦的唯一網路位址。 這個值可以是本機主機名稱或完整網域名稱 (FQDN)。 如果您只有一個網域，而且使用連接埠 80，即可在命令列中省略 \<網域名稱**> 和 \<連接埠**>。 \<網域使用者帳戶  > 是用以執行報表伺服器服務以及必須註冊 SPN 的使用者帳戶。  
   
 ## <a name="register-an-spn-for-domain-user-account"></a>為網域使用者帳戶註冊 SPN  
   
@@ -52,7 +54,7 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
   
 2.  以網域管理員的身分登入網域控制站。  
   
-3.  開啟 [命令提示字元] 視窗。  
+3.  開啟命令提示字元視窗。  
   
 4.  複製下列命令，使用對您的網路有效的實際值來取代預留位置值：  
   
@@ -62,7 +64,7 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
   
      例如： `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
   
-5.  執行此命令。  
+5.  執行命令。  
   
 6.  開啟 **RsReportServer.config** 檔，並找出 `<AuthenticationTypes>` 區段。  
   

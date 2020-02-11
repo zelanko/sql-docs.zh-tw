@@ -1,5 +1,5 @@
 ---
-title: IHarticles (TRANSACT-SQL) |Microsoft Docs
+title: IHarticles （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 45278a6d9501b75b624e11bbeb11d24d10e482c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056208"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **IHarticles**系統資料表包含每個發行項複寫從非 SQL Server 發行者使用目前散發者的一個資料列。 這份資料表儲存在散發資料庫中。  
+  **IHarticles**系統資料表會針對使用目前散發者從非 SQL Server 發行者所複寫的每個發行項，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
   
 ## <a name="definition"></a>定義  
   
@@ -36,40 +36,40 @@ ms.locfileid: "68056208"
 |**article_id**|**int**|提供發行項唯一識別碼的識別欄位。|  
 |**name**|**sysname**|發行項的相關聯名稱，在發行集內是唯一的。|  
 |**publication_id**|**smallint**|發行項所屬發行集的識別碼。|  
-|**table_id**|**int**|從發行之資料表的識別碼[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)。|  
+|**table_id**|**int**|從[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)發行之資料表的識別碼。|  
 |**publisher_id**|**smallint**|非 SQL Server 發行者的識別碼。|  
 |**creation_script**|**nvarchar(255)**|發行項的結構描述指令碼。|  
 |**del_cmd**|**nvarchar(255)**|當隨著資料表發行項而複寫刪除時，所用的複寫命令類型。 如需詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。|  
-|**filter**|**int**|此資料行未使用，且包含只是為了讓[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)檢視**IHarticles**相容於資料表[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)用於 SQL Server 文件 （檢視[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))。|  
+|**出**|**int**|此資料行不會使用，而且只包含來使**IHarticles**資料表的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖與用於 SQL Server 文章（[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)）的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖相容。|  
 |**filter_clause**|**ntext**|用來進行水平篩選且寫在非 SQL 發行者所能解譯的標準 Transact-SQL 中的發行項 WHERE 子句。|  
 |**ins_cmd**|**nvarchar(255)**|當隨著資料表發行項而複寫插入時，所用的複寫命令類型。 如需詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。|  
-|**pre_creation_cmd**|**tinyint**|當訂閱者端已有同名物件存在時，在套用初始快照集之前所執行的命令。<br /><br /> **0** = 無-不執行命令。<br /><br /> **1** = DROP-卸除目的地資料表。<br /><br /> **2** = DELETE-刪除目的地資料表中的資料。<br /><br /> **3** = TRUNCATE-截斷目的地資料表。|  
-|**status**|**tinyint**|發行項選項和狀態的位元遮罩，它可能是一或多個這些值的位元邏輯 OR 結果：<br /><br /> **0** = 無其他內容。<br /><br /> **1** = 作用。<br /><br /> **8** = 包含 INSERT 陳述式中的資料行名稱。<br /><br /> **16** = 使用參數化陳述式。<br /><br /> 例如，對於使用參數化陳述式的使用中發行項，這個資料行的值是 17。 0 值表示發行項不在使用中，且未定義任何其他屬性。|  
-|**type**|**tinyint**|發行項的類型：<br /><br /> **1** = 記錄式發行項。|  
+|**pre_creation_cmd**|**tinyint**|當訂閱者端已有同名物件存在時，在套用初始快照集之前所執行的命令。<br /><br /> **0** = 無-不執行命令。<br /><br /> **1** = 卸載目的地資料表。<br /><br /> **2** = 刪除-刪除目的地資料表中的資料。<br /><br /> **3** = 截斷-截斷目的地資料表。|  
+|**狀態**|**tinyint**|發行項選項和狀態的位元遮罩，它可能是一或多個這些值的位元邏輯 OR 結果：<br /><br /> **0** = 沒有其他屬性。<br /><br /> **1** = 使用中。<br /><br /> **8** = 在 INSERT 語句中包含資料行名稱。<br /><br /> **16** = 使用參數化語句。<br /><br /> 例如，對於使用參數化陳述式的使用中發行項，這個資料行的值是 17。 0 值表示發行項不在使用中，且未定義任何其他屬性。|  
+|**type**|**tinyint**|發行項的類型：<br /><br /> **1** = 以記錄為基礎的發行項。|  
 |**upd_cmd**|**nvarchar(255)**|當隨著資料表發行項而複寫更新時，所用的複寫命令類型。 如需詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。|  
-|**schema_option**|**binary(8)**|給定發行項之結構描述產生選項的點陣圖，它可能是一或多個這些值的位元邏輯 OR 結果：<br /><br /> **0x00** = 停用快照集代理程式的指令碼，並使用所提供的 CreationScript。<br /><br /> **0x01** = 產生物件的建立 （CREATE TABLE、 CREATE PROCEDURE 等等）。<br /><br /> **0x10** = 產生對應的叢集索引。<br /><br /> **0x40** = 產生對應的非叢集索引。<br /><br /> **0x80** = 包含宣告式參考完整性的主索引鍵。<br /><br /> **0x1000** = 複寫資料行層級定序。 注意:此選項來啟用區分大小寫的比較的 Oracle 發行者的預設設定。<br /><br /> **0x4000** = 複寫唯一索引鍵，如果資料表發行項上定義。<br /><br /> **0x8000** = 主索引鍵和唯一索引鍵的資料表發行項作為使用 ALTER TABLE 陳述式條件約束的複寫。|  
+|**schema_option**|**binary （8）**|給定發行項之結構描述產生選項的點陣圖，它可能是一或多個這些值的位元邏輯 OR 結果：<br /><br /> **0x00** = 停用快照集代理程式的腳本，並使用提供的 CreationScript。<br /><br /> **0x01** = 產生物件建立（CREATE TABLE、建立程式等等）。<br /><br /> **0x10** = 產生對應的叢集索引。<br /><br /> **0x40** = 產生對應的非叢集索引。<br /><br /> **0x80** = 在主鍵上包含宣告的參考完整性。<br /><br /> **0x1000** = 複寫資料行層級定序。 注意：預設會為 Oracle 發行者設定此選項，以啟用區分大小寫的比較。<br /><br /> **0x4000** = 如果在資料表發行項上定義了唯一索引鍵，則進行複寫。<br /><br /> **0x8000** = 複寫資料表發行項的主鍵和唯一索引鍵，做為使用 ALTER table 語句的條件約束。|  
 |**dest_owner**|**sysname**|目的地資料庫的資料表擁有者。|  
 |**dest_table**|**sysname**|目的地資料表的名稱。|  
 |**tablespace_name**|**nvarchar(255)**|識別發行項之記錄資料表所用的資料表空間。|  
-|**objid**|**int**|此資料行未使用，且包含只是為了讓[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)檢視**IHarticles**相容於資料表[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)用於 SQL Server 文件 （檢視[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))。|  
-|**sync_objid**|**int**|此資料行未使用，且包含只是為了讓[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)檢視**IHarticles**相容於資料表[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)用於 SQL Server 文件 （檢視[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))。|  
-|**description**|**nvarchar(255)**|發行項的描述性項目。|  
-|**publisher_status**|**int**|用來指出是否已定義的檢視定義已發行之發行項，藉由呼叫[sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。<br /><br /> **0** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)已呼叫。<br /><br /> **1** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)尚未呼叫。|  
+|**objid**|**int**|此資料行不會使用，而且只包含來使**IHarticles**資料表的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖與用於 SQL Server 文章（[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)）的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖相容。|  
+|**sync_objid**|**int**|此資料行不會使用，而且只包含來使**IHarticles**資料表的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖與用於 SQL Server 文章（[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)）的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖相容。|  
+|**描述**|**nvarchar(255)**|發行項的描述性項目。|  
+|**publisher_status**|**int**|這是用來指出是否已藉由呼叫[sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)來定義定義已發行文章的視圖。<br /><br /> **已呼叫 0** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) 。<br /><br /> **尚未呼叫 1** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) 。|  
 |**article_view_owner**|**nvarchar(255)**|記錄讀取器代理程式所用的發行者之同步處理物件的擁有者。|  
 |**article_view**|**nvarchar(255)**|記錄讀取器代理程式所用的發行者之同步處理物件。|  
-|**ins_scripting_proc**|**int**|此資料行未使用，且包含只是為了讓[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)檢視**IHarticles**相容於資料表[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)用於 SQL Server 文件 （檢視[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))。|  
-|**del_scripting_proc**|**int**|此資料行未使用，且包含只是為了讓[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)檢視**IHarticles**相容於資料表[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)用於 SQL Server 文件 （檢視[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))。|  
-|**upd_scripting_proc**|**int**|此資料行未使用，且包含只是為了讓[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)檢視**IHarticles**相容於資料表[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)用於 SQL Server 文件 （檢視[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))。|  
-|**custom_script**|**int**|此資料行未使用，且包含只是為了讓[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)檢視**IHarticles**相容於資料表[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)用於 SQL Server 文件 （檢視[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))。|  
-|**fire_triggers_on_snapshot**|**bit**|此資料行未使用，且包含只是為了讓[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)檢視**IHarticles**相容於資料表[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)用於 SQL Server 文件 （檢視[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))。|  
+|**ins_scripting_proc**|**int**|此資料行不會使用，而且只包含來使**IHarticles**資料表的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖與用於 SQL Server 文章（[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)）的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖相容。|  
+|**del_scripting_proc**|**int**|此資料行不會使用，而且只包含來使**IHarticles**資料表的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖與用於 SQL Server 文章（[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)）的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖相容。|  
+|**upd_scripting_proc**|**int**|此資料行不會使用，而且只包含來使**IHarticles**資料表的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖與用於 SQL Server 文章（[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)）的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖相容。|  
+|**custom_script**|**int**|此資料行不會使用，而且只包含來使**IHarticles**資料表的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖與用於 SQL Server 文章（[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)）的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖相容。|  
+|**fire_triggers_on_snapshot**|**bit**|此資料行不會使用，而且只包含來使**IHarticles**資料表的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖與用於 SQL Server 文章（[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)）的[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)視圖相容。|  
 |**instance_id**|**int**|識別已發行的資料表之發行項記錄的目前執行個體。|  
-|**use_default_datatypes**|**bit**|指出發行項是否使用預設資料類型對應;值為**1**表示使用預設資料類型對應。|  
+|**use_default_datatypes**|**bit**|指出發行項是否使用預設資料類型對應;值為**1**時，表示使用的是預設的資料類型對應。|  
   
 ## <a name="see-also"></a>另請參閱  
  [異質資料庫複寫](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [複寫檢視&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
+ [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [&#40;Transact-sql&#41;的複寫視圖](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_changearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
   
   

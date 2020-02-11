@@ -15,27 +15,27 @@ ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f40299dccc0313f662aeadfcb26b71326cdc6d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073898"
 ---
 # <a name="sqlgetinfo-support"></a>SQLGetInfo 支援
-當 ODBC 2。*x*應用程式會呼叫**SQLGetInfo** ODBC 3 *.x*驅動程式*資訊類型*必須支援下表中的引數。  
+當 ODBC 2。*x*應用程式會呼叫**SQLGetInfo**至 ODBC*3.x 驅動程式*，必須支援下表中的*InfoType*引數。  
   
 |*InfoType*|傳回值|  
 |----------------|-------------|  
-|SQL_ALTER_TABLE (ODBC 2.0)**附註：** 此資訊類型不是已被取代;在右邊的資料行的位元遮罩已被取代。|列舉中的子句 SQLINTEGER 位元遮罩**ALTER TABLE**資料來源所支援的陳述式。<br /><br /> 下列的位元遮罩用來判斷支援哪些子句：<br /><br /> SQL_AT_DROP_COLUMN = 支援卸除資料行的能力。 這會導致 cascade 還是限制行為是由驅動程式定義。 ODBC (2.0)<br /><br /> SQL_AT_ADD_COLUMN = 新增支援在單一的 ALTER TABLE 陳述式中的多個資料行的能力。 此位元不能與其他 SQL_AT_ADD_COLUMN_XXX 位元或 SQL_AT_CONSTRAINT_XXX 位元合併。 ODBC (2.0)|  
-|SQL_FETCH_DIRECTION (ODBC 1.0)<br /><br /> ODBC 1.0; 中導入的資訊類型它引進的版本會標示每一個位元遮罩。|SQLINTEGER 位元遮罩列舉支援的提取方向選項。<br /><br /> 下列的位元遮罩與旗標搭配用於決定支援的選項：<br /><br /> SQL_FD_FETCH_NEXT (ODBC 1.0) SQL_FD_FETCH_FIRST (ODBC 1.0) SQL_FD_FETCH_LAST (ODBC 1.0) SQL_FD_FETCH_PRIOR (ODBC 1.0) SQL_FD_FETCH_ABSOLUTE (ODBC 1.0) SQL_FD_FETCH_RELATIVE (ODBC 1.0) SQL_FD_FETCH_BOOKMARK (ODBC 2.0)|  
-|SQL_LOCK_TYPES (ODBC 2.0)|列舉支援的鎖定 SQLINTEGER 位元遮罩類型*fLock*中的引數**SQLSetPos**。<br /><br /> 下列的位元遮罩可搭配旗標來判斷支援哪些鎖定類型：<br /><br /> SQL_LCK_NO_CHANGE SQL_LCK_EXCLUSIVE SQL_LCK_UNLOCK|  
-|SQL_ODBC_API_CONFORMANCE (ODBC 1.0)|SQLSMALLINT 值，表示 ODBC 一致性層級。<br /><br /> SQL_OAC_NONE = 無<br /><br /> SQL_OAC_LEVEL1 = 支援的層級 1<br /><br /> SQL_OAC_LEVEL2 = 層級 2 支援|  
-|SQL_ODBC_SQL_CONFORMANCE (ODBC 1.0)|SQLSMALLINT 值，指出驅動程式支援的 SQL 文法。 請參閱[附錄 c:SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)SQL 一致性層級的定義。<br /><br /> SQL_OSC_MINIMUM = 支援的最小文法<br /><br /> SQL_OSC_CORE = 支援的核心文法<br /><br /> SQL_OSC_EXTENDED = 支援的延伸文法|  
-|SQL_POS_OPERATIONS (ODBC 2.0)|列舉中支援的作業 SQLINTEGER 位元遮罩**SQLSetPos**。<br /><br /> 下列的位元遮罩用來搭配旗標來判斷支援哪些選項：<br /><br /> SQL_POS_POSITION (ODBC 2.0) SQL_POS_REFRESH (ODBC 2.0) SQL_POS_UPDATE (ODBC 2.0) SQL_POS_DELETE (ODBC 2.0) SQL_POS_ADD (ODBC 2.0)|  
-|SQL_POSITIONED_STATEMENTS (ODBC 2.0)|列舉支援 SQLINTEGER 位元遮罩定點的 SQL 陳述式。<br /><br /> 下列的位元遮罩用來判斷支援哪些陳述式：<br /><br /> SQL_PS_POSITIONED_DELETE SQL_PS_POSITIONED_UPDATE SQL_PS_SELECT_FOR_UPDATE|  
-|SQL_SCROLL_CONCURRENCY (ODBC 1.0)|SQLINTEGER 位元遮罩列舉支援的資料指標的並行控制選項。<br /><br /> 下列的位元遮罩用來判斷支援哪些選項：<br /><br /> SQL_SCCO_READ_ONLY = 資料指標是唯讀的。 不允許任何更新。<br /><br /> SQL_SCCO_LOCK = 資料指標會使用鎖定不足以確保可以更新資料列的最低層級。<br /><br /> SQL_SCCO_OPT_ROWVER = 資料指標使用開放式並行存取控制，比較資料列版本，例如 SQLBase ROWID 或 Sybase 時間戳記。<br /><br /> SQL_SCCO_OPT_VALUES = 資料指標使用開放式並行存取控制，比較值。|  
-|SQL_STATIC_SENSITIVITY (ODBC 2.0)|SQLINTEGER 位元遮罩，列舉應用程式透過靜態或索引鍵集驅動資料指標所做的變更是否**SQLSetPos**或定位的 update 或 delete 陳述式可以偵測到該應用程式。<br /><br /> SQL_SS_ADDITIONS = 新增資料列會顯示資料指標;這些資料列可以捲動資料指標。 其中將這些資料列加入至游標處會驅動程式而異。<br /><br /> SQL_SS_DELETIONS = 已刪除資料列便無法再使用資料指標並不會讓結果集; 中的 「 漏洞 」從已刪除的資料列的資料指標捲動之後，就無法返回該資料列。<br /><br /> SQL_SS_UPDATES = 更新資料列會顯示資料指標;如果資料指標從捲動，並傳回更新的資料列，資料指標所傳回的資料是更新的資料，而不是原始的資料。 此選項會套用為靜態資料指標或更新不會更新索引鍵的索引鍵集驅動資料指標。 此選項不適用於動態資料指標，或在案例中混合資料指標中變更金鑰時在其中。<br /><br /> 應用程式是否可以偵測到結果集由其他使用者，在相同的應用程式，包括其他資料指標所做的變更取決於資料指標類型。|  
+|SQL_ALTER_TABLE （ODBC 2.0）**注意：** 此資訊類型未被取代;右側資料行中的位元遮罩已被取代。|SQLINTEGER 位元遮罩，列舉資料來源所支援之**ALTER TABLE**語句中的子句。<br /><br /> 下列位元遮罩是用來決定支援的子句：<br /><br /> SQL_AT_DROP_COLUMN = 支援放置資料行的功能。 這是由驅動程式定義，這會導致 cascade 或 restrict 行為。 （ODBC 2.0）<br /><br /> SQL_AT_ADD_COLUMN = 支援在單一 ALTER TABLE 語句中加入多個資料行的功能。 這個位不會與其他 SQL_AT_ADD_COLUMN_XXX 位或 SQL_AT_CONSTRAINT_XXX 位結合。 （ODBC 2.0）|  
+|SQL_FETCH_DIRECTION （ODBC 1.0）<br /><br /> 此資訊類型是在 ODBC 1.0 中引進的;每個位元遮罩都會標示其引進的版本。|SQLINTEGER 位元遮罩，用來列舉支援的 fetch 方向選項。<br /><br /> 下列位元遮罩會與旗標搭配使用，以判斷支援的選項：<br /><br /> SQL_FD_FETCH_NEXT （ODBC 1.0） SQL_FD_FETCH_FIRST （ODBC 1.0） SQL_FD_FETCH_LAST （ODBC 1.0） SQL_FD_FETCH_PRIOR （ODBC 1.0） SQL_FD_FETCH_ABSOLUTE （ODBC 1.0） SQL_FD_FETCH_RELATIVE （ODBC 1.0） SQL_FD_FETCH_BOOKMARK （ODBC 2.0）|  
+|SQL_LOCK_TYPES （ODBC 2.0）|SQLINTEGER 位元遮罩，列舉**SQLSetPos**中*fLock*引數支援的鎖定類型。<br /><br /> 下列位元遮罩會與旗標搭配使用，以判斷支援的鎖定類型：<br /><br /> SQL_LCK_NO_CHANGE SQL_LCK_EXCLUSIVE SQL_LCK_UNLOCK|  
+|SQL_ODBC_API_CONFORMANCE （ODBC 1.0）|指出 ODBC 一致性層級的 SQLSMALLINT 值。<br /><br /> SQL_OAC_NONE = 無<br /><br /> SQL_OAC_LEVEL1 = 支援層級1<br /><br /> SQL_OAC_LEVEL2 = 支援層級2|  
+|SQL_ODBC_SQL_CONFORMANCE （ODBC 1.0）|SQLSMALLINT 值，指出驅動程式支援的 SQL 文法。 如需 SQL 一致性層級的定義，請參閱[附錄 C： Sql 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。<br /><br /> SQL_OSC_MINIMUM = 支援的最低文法<br /><br /> SQL_OSC_CORE = 支援核心文法<br /><br /> SQL_OSC_EXTENDED = 支援的延伸文法|  
+|SQL_POS_OPERATIONS （ODBC 2.0）|SQLINTEGER 位元遮罩，列舉**SQLSetPos**中支援的作業。<br /><br /> 下列位元遮罩會與旗標搭配使用，以判斷支援的選項：<br /><br /> SQL_POS_POSITION （ODBC 2.0） SQL_POS_REFRESH （ODBC 2.0） SQL_POS_UPDATE （ODBC 2.0） SQL_POS_DELETE （ODBC 2.0） SQL_POS_ADD （ODBC 2.0）|  
+|SQL_POSITIONED_STATEMENTS （ODBC 2.0）|SQLINTEGER 位元遮罩，用來列舉支援的定位 SQL 語句。<br /><br /> 下列位元遮罩是用來決定支援的語句：<br /><br /> SQL_PS_POSITIONED_DELETE SQL_PS_POSITIONED_UPDATE SQL_PS_SELECT_FOR_UPDATE|  
+|SQL_SCROLL_CONCURRENCY （ODBC 1.0）|SQLINTEGER 位元遮罩，列舉資料指標所支援的並行控制選項。<br /><br /> 下列位元遮罩是用來決定支援的選項：<br /><br /> SQL_SCCO_READ_ONLY = 資料指標是唯讀的。 不允許任何更新。<br /><br /> SQL_SCCO_LOCK = 資料指標使用的最低層級鎖定足以確保資料列可以更新。<br /><br /> SQL_SCCO_OPT_ROWVER = 資料指標使用開放式並行存取控制，比較資料列版本，例如 SQLBase ROWID 或 Sybase 時間戳記。<br /><br /> SQL_SCCO_OPT_VALUES = 資料指標使用開放式並行存取控制，比較值。|  
+|SQL_STATIC_SENSITIVITY （ODBC 2.0）|SQLINTEGER 位元遮罩，用來列舉應用程式透過**SQLSetPos**或定位 update 或 delete 語句所做的變更，是否可由該應用程式偵測到靜態或索引鍵集導向的資料指標。<br /><br /> SQL_SS_ADDITIONS = 已加入的資料列會顯示在資料指標上;游標可以滾動到這些資料列。 將這些資料列加入至資料指標的位置與驅動程式相關。<br /><br /> SQL_SS_DELETIONS = 刪除的資料列無法再供資料指標使用，而且不會在結果集中留下「洞」;資料指標從已刪除的資料列滾動之後，就無法返回該資料列。<br /><br /> SQL_SS_UPDATES = 資料列的更新會顯示在資料指標上;如果資料指標從滾動到已更新的資料列，則游標所傳回的資料就是已更新的資料，而不是原始資料。 此選項只適用于未更新索引鍵的索引鍵集驅動資料指標上的靜態資料指標或更新。 此選項不適用於動態資料指標，或在混合資料指標中變更索引鍵的情況下。<br /><br /> 應用程式是否可以偵測其他使用者對結果集所做的變更（包括相同應用程式中的其他資料指標），取決於資料指標類型。|  
   
- ODBC 3 *.x*應用程式使用 ODBC 3 *.x*驅動程式不應該呼叫**SQLGetInfo**具有*資訊類型*引數中所述上述資料表，但應該使用 ODBC 3 *.x* *資訊類型*下列段落中列出的引數。 不是一對一*資訊類型*ODBC 2 中所使用的引數。*x*與所用的 ODBC 3 *.x*。 ODBC 3 *.x*應用程式使用 ODBC 2。*x*驅動程式，相反地，應該使用*資訊類型*先前所述的引數。  
+ 使用 ODBC 3.x*驅動程式的 odbc 3.x 應用程式*不** 應該使用上表所述的*InfoType*引數來呼叫**SQLGetInfo** ，但應該使用下列段落中所列** 的 odbc 3.x *InfoType*引數。 在 ODBC 2 中使用的*InfoType*引數之間沒有一對一的對應關係。*x*和 ODBC 3.x 中使用的 *。* 使用 ODBC 2 的 ODBC*3.x 應用程式。* 另一方面， *x*驅動程式應該使用先前所述的*InfoType*引數。  
   
- 上表中的資訊類型的一些已取代為資料指標屬性的資訊類型。 這些被取代的類型為 SQL_FETCH_DIRECTION、 SQL_LOCK_TYPES、 SQL_POS_OPERATIONS、 SQL_POSITIONED_STATEMENTS、 SQL_SCROLL_CONCURRENCY，以及 SQL_STATIC_SENSITIVITY 的資訊。 新的資料指標屬性類型是 SQL_XXX_CURSOR_ATTRIBUTES1and SQL_XXX_CURSOR_ATTRIBUTES2，其中 XXX 等於動態、 FORWARD_ONLY、 KEYSET_DRIVEN 或靜態。 每個新的型別表示單一的資料指標類型的驅動程式功能。 如需這些選項的詳細資訊，請參閱[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函式描述。
+ 上表中的某些資訊類型已被取代，以改用 cursor 屬性資訊類型。 這些已淘汰的資訊類型是 SQL_FETCH_DIRECTION、SQL_LOCK_TYPES、SQL_POS_OPERATIONS、SQL_POSITIONED_STATEMENTS、SQL_SCROLL_CONCURRENCY 和 SQL_STATIC_SENSITIVITY。 新的資料指標屬性類型 SQL_XXX_CURSOR_ATTRIBUTES1and SQL_XXX_CURSOR_ATTRIBUTES2，其中 XXX 等於 DYNAMIC、FORWARD_ONLY、KEYSET_DRIVEN 或 STATIC。 每個新的類型都會指出單一資料指標類型的驅動程式功能。 如需這些選項的詳細資訊，請參閱[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函數描述。

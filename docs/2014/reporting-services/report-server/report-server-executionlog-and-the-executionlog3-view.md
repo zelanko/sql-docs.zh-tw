@@ -1,5 +1,5 @@
 ---
-title: 報表伺服器執行記錄和 ExecutionLog3 檢視 |Microsoft Docs
+title: 報表伺服器執行記錄和 ExecutionLog3 視圖 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103465"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>報表伺服器執行記錄和 ExecutionLog3 檢視
@@ -67,7 +67,7 @@ ms.locfileid: "66103465"
   
  您必須依照先前步驟的說明啟用記錄，然後完成下列步驟：  
   
-1.  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的 [系統設定]  頁面中，尋找 [使用者定義]  區段。  
+1.  在  **服務應用程式的 [系統設定]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 頁面中，尋找 [使用者定義]  區段。  
   
 2.  將 [ExecutionLogLevel]  變更為 [verbose]  。 這個欄位是文字輸入欄位，而且兩個可能的值為 [verbose]  和 [normal]  。  
   
@@ -108,23 +108,23 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  下表描述在報表執行記錄中擷取的資料。  
   
-|「資料行」|描述|  
+|資料行|描述|  
 |------------|-----------------|  
 |InstanceName|處理要求的報表伺服器執行個體名稱。 如果您的環境具有多個報表伺服器，您可以分析 InstanceName 散發以監視並判斷網路負載平衡器是否依照預期方式在報表伺服器之間散發要求。|  
 |ItemPath|儲存報表或報表項目的路徑。|  
 |UserName|使用者識別碼。|  
 |ExecutionID|與要求相關聯的內部識別碼。 相同使用者工作階段上的要求會共用相同的執行識別碼。|  
-|RequestType|可能的值如下：<br />**Interactive**<br />**訂閱**<br /><br /> <br /><br /> 分析依 RequestType=Subscription 所篩選並且依 TimeStart 所排序的記錄資料可能會顯現訂閱使用量龐大的週期，而且您可能會想要將某些報表訂閱修改成不同的時間。|  
-|格式|轉譯格式。|  
+|RequestType|可能的值如下：<br />**互動式**<br />**訂用帳戶**<br /><br /> <br /><br /> 分析依 RequestType=Subscription 所篩選並且依 TimeStart 所排序的記錄資料可能會顯現訂閱使用量龐大的週期，而且您可能會想要將某些報表訂閱修改成不同的時間。|  
+|[格式]|轉譯格式。|  
 |參數|報表執行所使用的參數值。|  
-|ItemAction|可能的值如下：<br /><br /> **轉譯**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **執行**<br /><br /> **RenderEdit**|  
+|ItemAction|可能的值：<br /><br /> **轉譯**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **執行**<br /><br /> **RenderEdit**|  
 |TimeStart|指出報表處理持續期間的開始與結束時間。|  
 |TimeEnd||  
 |TimeDataRetrieval|擷取資料所花費的毫秒數。|  
 |TimeProcessing|處理報表所花費的毫秒數。|  
 |TimeRendering|轉譯報表所花費的毫秒數。|  
-|`Source`|報表執行的來源。 可能的值如下：<br /><br /> **Live**<br /><br /> **快取**:表示快取的執行，例如，查詢不會執行即時的資料集。<br /><br /> **快照式**<br /><br /> **記錄**<br /><br /> **臨機操作**:表示動態產生的報表基礎的模型鑽研報表，或者使用 處理與轉譯的報表伺服器的用戶端上預覽的報表產生器報表。<br /><br /> **工作階段**:表示已經建立的工作階段內的後續要求。  例如，初始要求是檢視頁面 1，而後續要求則是匯出到 Excel (包含目前的工作階段狀態)。<br /><br /> **Rdce**:表示報表定義自訂延伸模組。 RDCE 自訂延伸模組可以動態地自訂報表定義，然後在執行報表時將其傳遞至處理引擎。|  
-|[狀態]|狀態 (不是 rsSuccess 就是錯誤碼；如果發生多個錯誤，就只會記錄第一個錯誤)。|  
+|來源|報表執行的來源。 可能的值：<br /><br /> **即時**<br /><br /> **Cache**：表示快取的執行，例如，資料集查詢不會即時執行。<br /><br /> **快照式**<br /><br /> **History**<br /><br /> 臨**機操作：** 表示動態產生的報表模型型切入報表，或在使用報表伺服器進行處理和轉譯的用戶端上預覽的報表產生器報表。<br /><br /> **Session**：表示已經建立之會話內的後續要求。  例如，初始要求是檢視頁面 1，而後續要求則是匯出到 Excel (包含目前的工作階段狀態)。<br /><br /> **Rdce**：表示報表定義自訂延伸模組。 RDCE 自訂延伸模組可以動態地自訂報表定義，然後在執行報表時將其傳遞至處理引擎。|  
+|狀態|狀態 (不是 rsSuccess 就是錯誤碼；如果發生多個錯誤，就只會記錄第一個錯誤)。|  
 |ByteCount|轉譯報表的大小 (以位元組為單位)。|  
 |RowCount|從查詢傳回的資料列數目。|  
 |AdditionalInfo|XML 屬性包，其中包含有關執行的其他資訊。 每個資料列的內容可能都不同。|  
@@ -222,13 +222,13 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 ```  
   
- 以下說明一些您會看到在 AdditionalInfo 欄位中的屬性：  
+ 以下說明您會在 [AdditionalInfo] 欄位中看到的一些屬性：  
   
--   **ProcessingEngine**:1= SQL Server 2005，2= 新的視需要處理引擎。 如果大部分報表仍然顯示 1 值，可以調查重新設計報表的方式，讓它們都利用較新且更有效率的視需要處理引擎。  
+-   **ProcessingEngine**： 1 = SQL Server 2005，2 = 新的隨選處理引擎。 如果大部分報表仍然顯示 1 值，可以調查重新設計報表的方式，讓它們都利用較新且更有效率的視需要處理引擎。  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
--   **ScalabilityTime**:在處理引擎中執行延展相關作業所花費的毫秒數。 0 值表示沒有針對延展作業花費任何額外時間，而且 0 也表示要求沒有承受記憶體不足的壓力。  
+-   **ScalabilityTime**：在處理引擎中執行調整相關作業所花費的毫秒數。 0 值表示沒有針對延展作業花費任何額外時間，而且 0 也表示要求沒有承受記憶體不足的壓力。  
   
     ```  
     <ScalabilityTime>  
@@ -236,7 +236,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ScalabilityTime>  
     ```  
   
--   **EstimatedMemoryUsageKB**:在特定要求期間，每個元件所耗用之記憶體尖峰數量的估計值 (以 KB 為單位)。  
+-   **EstimatedMemoryUsageKB**：每個元件在特定要求期間所耗用的尖峰記憶體數量估計（以 kb 為單位）。  
   
     ```  
     <EstimatedMemoryUsageKB>  
@@ -244,7 +244,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </EstimatedMemoryUsageKB>  
     ```  
   
--   **DataExtension**:用於報表之資料延伸模組或資料來源的類型。 其數字為特定資料來源的出現次數。  
+-   **DataExtension**：報表中使用的資料延伸模組或資料來源類型。 其數字為特定資料來源的出現次數。  
   
     ```  
     <DataExtension>  
@@ -252,7 +252,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </DataExtension>  
     ```  
   
--   **ExternalImages**的值是以毫秒來表示。 此資料可用來診斷效能問題。 從外部 Web 伺服器擷取影像所需的時間可能會讓整體報表執行變慢。 已新增至[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
+-   **ExternalImages**值為毫秒。 此資料可用來診斷效能問題。 從外部 Web 伺服器擷取影像所需的時間可能會讓整體報表執行變慢。 已在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中新增。  
   
     ```  
     <ExternalImages>  
@@ -262,7 +262,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **連線**:多層的結構。 已新增至[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
+-   **連接**：多層式結構。 已在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中新增。  
   
     ```  
     <Connections>  
@@ -307,23 +307,23 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  下表描述在報表執行記錄中擷取的資料。  
   
-|「資料行」|描述|  
+|資料行|描述|  
 |------------|-----------------|  
 |InstanceName|處理要求的報表伺服器執行個體名稱。|  
 |ReportPath|報表的路徑結構。  例如，名為 "test" 且位於報表管理員根資料夾中報表會具有 "/test" 的 ReportPath。<br /><br /> 名為 "test" 且儲存在報表管理員 "samples" 資料夾中報表會具有 "/Samples/test/" 的 ReportPath|  
 |UserName|使用者識別碼。|  
 |ExecutionID||  
 |RequestType|要求類型 (使用者或系統)。|  
-|格式|轉譯格式。|  
+|[格式]|轉譯格式。|  
 |參數|報表執行所使用的參數值。|  
-|ReportAction|可能的值如下：轉譯，排序、 BookMarkNavigation、 DocumentNavigation、 GetDocumentMap、 Findstring|  
+|ReportAction|可能的值如下：Render、Sort、BookMarkNavigation、DocumentNavigation、GetDocumentMap、Findstring|  
 |TimeStart|指出報表處理持續期間的開始與結束時間。|  
 |TimeEnd||  
 |TimeDataRetrieval|擷取資料、處理報表和轉譯報表所花費的毫秒數。|  
 |TimeProcessing||  
 |TimeRendering||  
-|`Source`|報表執行的來源 (1= 即時、2= 快取、3= 快照集、4= 記錄)。|  
-|[狀態]|狀態 (不是 rsSuccess 就是錯誤碼；如果發生多個錯誤，就只會記錄第一個錯誤)。|  
+|來源|報表執行的來源 (1= 即時、2= 快取、3= 快照集、4= 記錄)。|  
+|狀態|狀態 (不是 rsSuccess 就是錯誤碼；如果發生多個錯誤，就只會記錄第一個錯誤)。|  
 |ByteCount|轉譯報表的大小 (以位元組為單位)。|  
 |RowCount|從查詢傳回的資料列數目。|  
 |AdditionalInfo|XML 屬性包，其中包含有關執行的其他資訊。|  
@@ -339,21 +339,21 @@ select * from ExecutionLog order by TimeStart DESC
   
  下表描述在報表執行記錄中擷取的資料。  
   
-|「資料行」|描述|  
+|資料行|描述|  
 |------------|-----------------|  
 |InstanceName|處理要求的報表伺服器執行個體名稱。|  
 |ReportID|報表識別碼。|  
 |UserName|使用者識別碼。|  
-|RequestType|可能的值如下：<br /><br /> True= 訂閱要求<br /><br /> False= 互動式要求|  
-|格式|轉譯格式。|  
+|RequestType|可能的值：<br /><br /> True= 訂閱要求<br /><br /> False= 互動式要求|  
+|[格式]|轉譯格式。|  
 |參數|報表執行所使用的參數值。|  
 |TimeStart|指出報表處理持續期間的開始與結束時間。|  
 |TimeEnd||  
 |TimeDataRetrieval|擷取資料、處理報表和轉譯報表所花費的毫秒數。|  
 |TimeProcessing||  
 |TimeRendering||  
-|`Source`|報表執行的來源。 可能的值如下：(1 = 即時、 2 = 快取、 3 = 快照集、 4 = 記錄、 5 = 特定、 6 = 工作階段、 7 = RDCE)。|  
-|[狀態]|可能的值如下：rsSuccess、rsProcessingAborted 或錯誤碼。 如果發生多個錯誤，只會記錄第一個錯誤。|  
+|來源|報表執行的來源。 可能的值如下：(1= 即時、2= 快取、3= 快照集、4= 記錄、5= 特定、6= 工作階段、7= RDCE)。|  
+|狀態|可能的值如下：rsSuccess、rsProcessingAborted 或錯誤碼。 如果發生多個錯誤，只會記錄第一個錯誤。|  
 |ByteCount|轉譯報表的大小 (以位元組為單位)。|  
 |RowCount|從查詢傳回的資料列數目。|  
   

@@ -15,19 +15,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84424e361905121a0e4061f0a6b2d565b79e8ee9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100113"
 ---
 # <a name="preview-view"></a>預覽檢視
   使用 **[預覽]** 檢視可顯示轉譯報表。 在預覽報表時，報表設計師會在本機執行報表，然後顯示在 [預覽] 檢視中。 在預覽模式中，會完整處理報表。 如果報表中有複雜的查詢或大量的資料，則在第一次進行檢視時，可能需要幾分鐘才能完成預覽。 若要查看只會影響報表格式的後續變更，則預覽會使用快取的資料。  
   
 > [!IMPORTANT]  
->  當 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 以 RemoteApp 的形式執行時，報表無法顯示在  的 [預覽] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]檢視中。 RemoteApp 程式是透過遠端桌面服務進行遠端存取的程式。 如需詳細資訊，請參閱 < [TS RemoteApp 逐步指南](https://technet.microsoft.com/library/cc730673\(WS.10\).aspx)。  
+>  當 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 以 RemoteApp 的形式執行時，報表無法顯示在 **** 的 [預覽] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]檢視中。 RemoteApp 程式是透過遠端桌面服務進行遠端存取的程式。 如需詳細資訊，請參閱[TS RemoteApp 逐步指南](https://technet.microsoft.com/library/cc730673\(WS.10\).aspx)。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  使用工具列即可管理預覽功能。  
   
  **顯示或隱藏文件引導模式**  
@@ -39,16 +39,16 @@ ms.locfileid: "66100113"
  **第一頁**  
  選擇此選項即可移至報表的第一頁。  
   
- **前一頁**  
+ **上一頁**  
  選擇此選項即可移至報表的上一頁。  
   
- **目前的頁面**  
+ **目前頁面**  
  顯示報表目前的頁面。  
   
  **總頁數**  
  顯示報表的總頁數。  
   
- **下一個頁面**  
+ **下一頁**  
  選擇此選項即可移至報表的下一頁。  
   
  **最後一頁**  
@@ -63,7 +63,7 @@ ms.locfileid: "66100113"
  **[重新整理]**  
  選擇此選項可重新整理資料快取，然後再次執行報表。  
   
- **Print**  
+ **印刷**  
  選擇此選項即可列印報表。  
   
  **整頁模式**  
@@ -75,7 +75,7 @@ ms.locfileid: "66100113"
  **匯出**  
  選擇此選項可使用特定的格式匯出轉譯報表。  
   
- **顯示比例**  
+ **Zoom**  
  選取顯示比例來縮小或放大報表。  
   
  **搜尋文字**  
@@ -84,7 +84,7 @@ ms.locfileid: "66100113"
  **尋找**  
  選擇這個選項即可開始搜尋報表，以找出搜尋文字。  
   
- **找下一個**  
+ **尋找下一個**  
  選擇這個選項即可搜尋該搜尋文字的下一個執行個體。  
   
 ## <a name="see-also"></a>另請參閱  

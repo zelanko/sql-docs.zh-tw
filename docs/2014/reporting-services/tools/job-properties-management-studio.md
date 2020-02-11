@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f00250011f3c325ca39c3c040e5252b804182d86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100219"
 ---
 # <a name="job-properties-management-studio"></a>作業屬性 (Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "66100219"
   
 3.  如果已列出作業，請以滑鼠右鍵按一下該作業，然後按一下 [屬性]  。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **作業識別碼**  
  在處理作業時指派給作業的 GUID。 此值是在每次報表或訂閱執行時隨機產生的。  
   

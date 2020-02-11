@@ -13,22 +13,22 @@ ms.assetid: 37b775d1-65ac-45ac-8572-454bc4e3c1a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 330b55ef2d4fee090c453990d3fe75e6e2dacb6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063604"
 ---
 # <a name="setting-extendedansisql"></a>設定 ExtendedAnsiSQL
-屬性可以控制的連接字串中，藉由新增 ExtendedAnsiSQL 屬性：  
+藉由新增 ExtendedAnsiSQL 屬性，可以在連接字串中控制屬性：  
   
 |值|描述|  
 |-----------|-----------------|  
 |ExtendedAnsiSQL = 0 （預設值）|此設定不會啟用新功能。|  
-|ExtendedAnsiSQL=1|此設定可讓新的功能。|  
+|ExtendedAnsiSQL = 1|此設定可啟用新功能。|  
   
- 屬性也可以設定透過 dsn**進階選項**時設定 DSN 中的，透過 [控制台] 對話方塊。  
+ 透過 [控制台] 設定 DSN 時，也可以透過 [ **Advanced Options** ] 對話方塊，在 DSN 中設定屬性。  
   
- 將屬性設定為 0 會停用新的功能;將它設定為 1 會啟用新功能。  
+ 將屬性設定為0會停用新功能;將它設定為1可啟用新功能。  
   
- 屬性也可以使用 SQLSetConnectAttr() 來設定。 屬性值是 65501，並設定為 SQLINTEGER 值為 1 或 0，在上表中所述。 它可呼叫之前或之後連接，但最好是呼叫因為順序的驅動程式處理程序快取的連接屬性和連接字串連接之後。
+ 您也可以使用 SQLSetConnectAttr （）來設定屬性。 屬性值為65501，而且設定為1或0的 SQLINTEGER 值，如上表所述。 您可以在連接之前或之後呼叫它，但最好在連接後呼叫它，因為驅動程式處理快取的連接屬性和連接字串的順序。

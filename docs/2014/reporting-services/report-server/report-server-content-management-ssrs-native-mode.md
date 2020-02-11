@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4b79be33eba191349f324473ad5d80abb7b1f398
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103514"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>報表伺服器內容管理 (SSRS 原生模式)
@@ -44,11 +44,12 @@ ms.locfileid: "66103514"
   
 -   藉由建立報表處理排程，並指定何者可依需求執行以及何者要從快取載入，即可平衡伺服器的報表處理負荷。  
   
--   提供使用預先定義的角色執行管理工作的權限：**系統管理員**並**內容管理員**。 您必須被指派至這兩種角色，才能有效管理報表伺服器內容。  
+-   使用兩個預先定義的角色提供執行管理工作的權限： **系統管理員** 和 **內容管理員**。 您必須被指派至這兩種角色，才能有效管理報表伺服器內容。  
   
- 用於管理報表伺服器內容的工具包括 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 或報表管理員。 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 可讓您設定預設值和啟用功能。 報表管理員是用來將報表伺服器項目與作業的存取權授與使用者、檢視和使用報表與其他內容類型，以及檢視和使用所有共用項目與報表散發功能。 如需詳細資訊，請參閱 [Reporting Services 工具](../tools/reporting-services-tools.md)。  
+ 用於管理報表伺服器內容的工具包括 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 或報表管理員。 
+  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 可讓您設定預設值和啟用功能。 報表管理員是用來將報表伺服器項目與作業的存取權授與使用者、檢視和使用報表與其他內容類型，以及檢視和使用所有共用項目與報表散發功能。 如需詳細資訊，請參閱 [Reporting Services 工具](../tools/reporting-services-tools.md)。  
   
-##  <a name="bkmk_ReportServerItems"></a> 報表伺服器項目  
+##  <a name="bkmk_ReportServerItems"></a>報表伺服器專案  
  報表伺服器項目包括報表、共用資料來源、共用資料集、報表組件、資源 (儲存在報表伺服器上但不由報表伺服器處理的項目) 及資料夾。 項目可能取決於其他項目，例如，報表可能取決於其參考的共用資料來源。 如果您移動相依項目，報表伺服器會自動更新參考資訊。  
   
  您可以將報表伺服器項目移至報表伺服器資料夾階層中不同的資料夾位置。 當您移動項目時，所有屬性 (包括安全性設定) 都會跟著項目移到新位置。 您移動資料夾時，資料夾內的所有項目都會隨著一起移動。  
@@ -57,16 +58,16 @@ ms.locfileid: "66103514"
   
 |圖示|可移動項目|  
 |----------|-------------------|  
-|![報表圖示](../media/hlp-16doc.gif "報表圖示")|報表|  
+|![報表圖示](../media/hlp-16doc.gif "報表圖示")|Report|  
 |![連結報表圖示](../media/hlp-16linked.gif "連結報表圖示")|連結報表|  
 |![資料夾圖示](../media/hlp-16folder.gif "資料夾圖示")|資料夾|  
 |![一般資源圖示](../media/hlp-16file.gif "一般資源圖示")|一般資源|  
 |![共用資料來源圖示](../media/hlp-16datasource.png "共用資料來源圖示")|共用資料來源|  
 ||共用資料集|  
   
- 並非所有的項目都可以移動。 您無法移動與報表相關聯的項目，例如訂閱或報表記錄。 那些項目會隨著相關聯的報表移動。 同樣地，您無法移動存在於資料夾階層之外的項目 (例如共用排程)。 如果您沒有權限也無法移動項目。 在您的角色指派，如有問題的項目中選取下列工作時，即涵蓋移動項目權限：「 管理 reports，""管理模型 」、 「 管理資料夾 」 和 「 管理資料來源 」。  
+ 並非所有的項目都可以移動。 您無法移動與報表相關聯的項目，例如訂閱或報表記錄。 那些項目會隨著相關聯的報表移動。 同樣地，您無法移動存在於資料夾階層之外的項目 (例如共用排程)。 如果您沒有權限也無法移動項目。 在您的角色指派中為目標項目選取下列工作時，即涵蓋移動項目的權限：「管理報表」、「管理模型」、「管理資料夾」，以及「管理資料來源」。  
   
-##  <a name="bkmk_Folders"></a> 資料夾  
+##  <a name="bkmk_Folders"></a>資料夾  
  資料夾階層用於處理由報表伺服器所儲存及管理的項目。  根據預設，資料夾結構包含一個稱為 [主資料夾] 的根節點以及多個支援選擇性 [我的報表] 功能的保留資料夾。 其他為使用者定義的資料夾。 如果您要授與相同的存取層級給多個項目，報表伺服器資料夾相當實用。 您在資料夾上設定的權限可以由資料夾中的項目繼承，以及繼承至從該資料夾分支出去的其他資料夾。 例如，您可以在 [主資料夾] 下建立依組資料夾，指派小組權限給每個資料夾，然後讓小組成員視需要自訂小組資料夾底下的資料夾。  
   
  如果您使用瀏覽器直接連接到報表伺服器，則資料夾結構的根節點就是報表伺服器虛擬目錄的名稱。 您可以依需要從根節點建立、修改和刪除資料夾，以組織報表伺服器內容。 您可以將內容加入資料夾、在資料夾之間移動項目、修改資料夾名稱或位置，以及刪除不再需要的資料夾。  
@@ -94,9 +95,9 @@ ms.locfileid: "66103514"
   
  下表描述預先定義的資料夾，資料夾會錨定資料夾階層並提供數種功能的架構。  
   
-|資料夾|用途|  
+|資料夾|目的|  
 |------------|-------------|  
-|主資料夾|資料夾階層的根節點。|  
+|首頁|資料夾階層的根節點。|  
 |使用者|啟用 [我的報表] 功能時，會出現此資料夾。 它包含使用 [我的報表] 功能之所有使用者的子資料夾，而且只有報表伺服器管理員能夠存取。 每個子資料夾名稱與使用者的名稱相符。|  
 |我的報表|提供每個使用者的個人工作空間。|  
   
@@ -117,16 +118,16 @@ ms.locfileid: "66103514"
   
  資料夾中之項目的可見性，會依角色指派 (亦即，檢視某個項目的權限) 和資料夾適用的檢視選項而定。 在報表管理員中，您可以將 [內容] 頁面設定為清單檢視或詳細資料檢視。 在某些情況下，報表或項目可能會在清單檢視中隱藏。 刪除資料夾內容之前，務必要在詳細資料檢視中檢視資料夾。  
   
-##  <a name="bkmk_Resources"></a> 資源  
- 資源是指儲存在報表伺服器上，但並非由報表伺服器所處理的 Managed 項目。 一般而言，資源會提供外部內容給報表使用者。 範例包括 .jpg 檔、包含空間資料的 ESRI 形狀檔，或 HTML 檔中描述報表所使用之商務規則的影像。 雖然此 JPG、SHP 或 HTML 檔會儲存在報表伺服器上，但是報表伺服器會直接將此檔案傳遞至瀏覽器而非先處理它。 如需詳細資訊，請參閱[影像 &#40;報表產生器和 SSRS&#41;](../report-design/images-report-builder-and-ssrs.md) 和[地圖 &#40;報表產生器和 SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md) 的＜將資料新增至地圖＞一節。  
+##  <a name="bkmk_Resources"></a>人員  
+ 資源是指儲存在報表伺服器上，但並非由報表伺服器所處理的 Managed 項目。 一般而言，資源會提供外部內容給報表使用者。 範例包括 .jpg 檔、包含空間資料的 ESRI 形狀檔，或 HTML 檔中描述報表所使用之商務規則的影像。 雖然此 JPG、SHP 或 HTML 檔會儲存在報表伺服器上，但是報表伺服器會直接將此檔案傳遞至瀏覽器而非先處理它。 如需詳細資訊，請參閱[Images &#40;報表產生器和 ssrs&#41;](../report-design/images-report-builder-and-ssrs.md)和[Maps &#40;報表產生器和 ssrs&#41;](../report-design/maps-report-builder-and-ssrs.md)中的「將資料新增至對應」一節。  
   
 ### <a name="adding-and-viewing-a-resource"></a>加入和檢視資源  
  若要將資源加入至報表伺服器，您可以上傳或發行檔案：  
   
-|運算|檔案類型|  
+|作業|檔案類型|  
 |---------------|---------------|  
-|上傳|若要上傳資源，您必須使用報表管理員 (如果報表伺服器以原生模式執行的話) 或 SharePoint 網站上的應用程式頁面 (如果伺服器以 SharePoint 整合模式執行的話)。 如需詳細資訊，請參閱 <<c0> [ 上傳檔案或報表&#40;報表管理員&#41;](../reports/upload-a-file-or-report-report-manager.md)或 [上傳至 SharePoint 文件庫的文件&#40;以 SharePoint 模式的 Reporting Services&#41;].../ upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md）。</c0>|  
-|發行|專案中不是報表、報表組件、資料來源或資料集的所有檔案都會當做資源上傳。 若要發行資源，請在報表設計師中，將現有的項目加入至專案，然後將此專案發行至報表伺服器。|  
+|上傳|若要上傳資源，您必須使用報表管理員 (如果報表伺服器以原生模式執行的話) 或 SharePoint 網站上的應用程式頁面 (如果伺服器以 SharePoint 整合模式執行的話)。 如需詳細資訊，請參閱[上傳檔案或報表 &#40;報表管理員&#41;](../reports/upload-a-file-or-report-report-manager.md)或 [將檔上傳至 Sharepoint 文件庫 &#40;Reporting Services sharepoint 模式&#41;]。/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md）。|  
+|發佈|專案中不是報表、報表組件、資料來源或資料集的所有檔案都會當做資源上傳。 若要發行資源，請在報表設計師中，將現有的項目加入至專案，然後將此專案發行至報表伺服器。|  
   
  所有資源都會先在檔案系統上以檔案的形式產生，然後再上傳至報表伺服器。 除了 ASP.NET 所加諸的 4 MB 預設檔案大小限制以外，您可以上傳的檔案類型沒有任何限制。 不過，以資源發行至報表伺服器時，具有對等 MIME 類型之檔案類型的效能會優於其他類型。 例如，當使用者按一下資源時，以 HTML 和 JPG 檔為基礎的資源將在瀏覽器視窗中開啟，HTML 將轉譯成網頁，JPG 將轉譯成影像，供使用者檢視。 反之，沒有對等 MIME 類型的資源 (例如桌上型電腦應用程式檔案) 可能就無法在瀏覽器視窗中轉譯。  
   
@@ -146,7 +147,7 @@ ms.locfileid: "66103514"
   
  如需詳細資訊，請參閱 [更新資源 &#40;報表管理員&#41;](update-a-resource-report-manager.md)。  
   
-##  <a name="bkmk_MyReports"></a> 我的報表  
+##  <a name="bkmk_MyReports"></a>我的報表  
  [我的報表] 資料夾是以有效網域帳戶登入報表伺服器的使用者之個人工作空間。 此特定用途資料夾提供儲存區給處理中的報表、不要進行全區散發的報表，或針對特定需求而修改的報表。 您無法限制儲存在 [我的報表] 資料夾中的項目數量或大小，也無法設定 [我的報表] 資料夾在使用者之間共用。  
   
  技術上來說，[我的報表] 會將每一位使用者看到的虛擬資料夾名稱 (我的報表)，對應到主要 [使用者資料夾] 資料夾之下、以使用者名稱為名的唯一子資料夾。 當使用者存取他/她自己的 [我的報表] 資料夾時，實際上是將使用者重新導向到 [使用者資料夾] 中、他/她本身的子資料夾。 每一個子資料夾都提供儲存區，以儲存使用者加入到其 [我的報表] 資料夾中的報表和項目。  
@@ -161,11 +162,11 @@ ms.locfileid: "66103514"
   
 |字元|逸出值|範例|  
 |---------------|------------------|-------------|  
-|(空格)|[ ]|*Firstname Lastname* 會變成 *Firstname[ ]Lastname*|  
-|\ (反斜線)|會以單一空格字元取代|*DomainName\Username* 會變成 *DomainName Username*|  
-|@ (at 符號)|[at]|*username*@hotmail.com 會變成 *username*[at]hotmail.com|  
-|& (連字號)|[amp]|*username*@*company*&*company.com* 會變成 *username*[at]*company*[amp]*company.com*|  
-|$ (貨幣符號)|[dollar]|*User* $*Name* 會變成 *User*[ ][dollar]*Name*|  
+|(空格)|[ ]|*Firstname lastname*會變成*Firstname [] lastname*|  
+|\ (反斜線)|會以單一空格字元取代|*DomainName\Username*會變成*DomainName Username*|  
+|@ (at 符號)|[at]|** @hotmail.com使用者名稱會變成*username*[at] hotmail .com|  
+|& (連字號)|[amp]|*username*@** company&*company.com*會變成*username*[at]*company*[amp]*company.com*|  
+|$ (貨幣符號)|[dollar]|*使用者* $*名稱*會變成*user*[] [美元]*名稱*|  
   
  [我的報表] 功能是選擇性的。 安裝報表伺服器時，[我的報表] 預設為停用。 如需啟用此功能的詳細資訊，請參閱 [啟用與停用我的報表](enable-and-disable-my-reports.md)。 如需詳細資訊，請參閱 [保護我的報表](../security/secure-my-reports.md)。  
   
@@ -180,7 +181,7 @@ ms.locfileid: "66103514"
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 工具](../tools/reporting-services-tools.md)   
- [角色與權限 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)   
+ [角色和許可權 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)   
  [Reporting Services 報表 &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)  
   
   

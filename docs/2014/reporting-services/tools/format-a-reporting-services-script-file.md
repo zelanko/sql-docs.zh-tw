@@ -14,13 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df4585dfa4b1e45b2de9d396a59dcbf132b1a505
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100245"
 ---
 # <a name="format-a-reporting-services-script-file"></a>格式化 Reporting Services 指令碼檔案
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 指令碼是針對 Web Service Description Language (WSDL) 內建 Proxy 撰寫的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 程式碼檔案，其中會定義 Reporting Services SOAP API。 指令碼檔案會儲存為 Unicode 或 UTF-8 文字檔，且其副檔名為 .rss。  
   
  指令碼檔案的用途如何 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 模組，而且可以包含使用者自訂程序和模組層次的變數。 若要讓指令碼檔案自動執行，則必須包含 Main 程序。 Main 程序是指令碼檔案執行時存取的第一個程序。 Main 是您可以加入 Web 服務作業並執行使用者自訂子程序的地方。 下列程式碼會建立 Main 程序：  
@@ -48,13 +49,13 @@ End Sub
 > [!IMPORTANT]  
 >  使用者認證會由指令碼環境所管理，並藉由使用 RS.exe，透過命令提示字元引數傳遞。 您可以使用 *rs* 變數來設定 Web 服務的驗證，但是建議您使用指令碼環境。 您不需要在指令碼檔案本身，驗證 Web 服務。 如需有關驗證指令碼環境的詳細資訊，請參閱 [RS.exe 公用程式 &#40;SSRS&#41;](rs-exe-utility-ssrs.md)。  
   
- 您沒有宣告指令碼檔案內的命名空間。 指令碼環境提供數個實用[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]命名空間供您：**System.Web.Services**， **System.Web.Services.Protocols**， **System.Xml**，和**System.IO**。  
+ 您沒有宣告指令碼檔案內的命名空間。 指令碼環境提供數個實用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空間供您使用： **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**和 **System.IO**。  
   
  如需指令碼範例，請參閱 [SQL Server Reporting Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
   
 ## <a name="see-also"></a>另請參閱  
  [報表伺服器 Web 服務](../report-server-web-service/report-server-web-service.md)   
  [技術參考 &#40;SSRS&#41;](../technical-reference-ssrs.md)   
- [RS.exe 公用程式 &#40;SSRS&#41;](rs-exe-utility-ssrs.md)  
+ [&#40;SSRS&#41;的 RS 公用程式](rs-exe-utility-ssrs.md)  
   
   

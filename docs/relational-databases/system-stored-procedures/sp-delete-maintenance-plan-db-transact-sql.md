@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan_db (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_maintenance_plan_db （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4843eb9de8badced7e446f20a997a530478c2756
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056526"
 ---
-# <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
+# <a name="sp_delete_maintenance_plan_db-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   從指定的資料庫解除指定維護計畫的關聯。  
@@ -48,25 +48,25 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @plan_id = ] 'plan\_id'` 指定維護計畫識別碼。 *plan_id*已**uniqueidentifier**。  
+`[ @plan_id = ] 'plan\_id'`指定維護計畫識別碼。 *plan_id*是**uniqueidentifier**。  
   
-`[ @db_name = ] 'database\_name'` 指定要從維護計畫中刪除的資料庫名稱。 *database_name* 為 **sysname**。  
+`[ @db_name = ] 'database\_name'`指定要從維護計畫中刪除的資料庫名稱。 *database_name*是**sysname**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_delete_maintenance_plan_db**必須從執行**msdb**資料庫。  
+ **sp_delete_maintenance_plan_db**必須從**msdb**資料庫中執行。  
   
- **Sp_delete_maintenance_plan_db**預存程序會移除維護計畫和指定的資料庫之間的關聯，它不會卸除或損毀資料庫。  
+ **Sp_delete_maintenance_plan_db**預存程式會移除維護計畫與指定資料庫之間的關聯;它不會卸載或損毀資料庫。  
   
- 當**sp_delete_maintenance_plan_db**移除的最後一個資料庫維護計畫時，預存程序也會刪除維護計畫。  
+ 當**sp_delete_maintenance_plan_db**從維護計畫中移除最後一個資料庫時，預存程式也會刪除維護計畫。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行**sp_delete_maintenance_plan_db**。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_delete_maintenance_plan_db**。  
   
 ## <a name="examples"></a>範例  
- 刪除中的維護計畫**AdventureWorks2012**資料庫中，使用先前加入**sp_add_maintenance_plan_db**。  
+ 在先前使用**sp_add_maintenance_plan_db**新增的**AdventureWorks2012**資料庫中刪除維護計畫。  
   
 ```  
 EXECUTE   sp_delete_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'AdventureWorks2012';  
@@ -74,6 +74,6 @@ EXECUTE   sp_delete_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC',
   
 ## <a name="see-also"></a>另請參閱  
  [維護計畫](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [資料庫維護計畫預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [資料庫維護計畫預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

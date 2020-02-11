@@ -13,22 +13,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a04c27fd790a1ad5c4ba453b43af5983a6440e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099533"
 ---
 # <a name="server-properties-logging-page"></a>伺服器屬性 (記錄頁面)
   使用此頁面，即可對報表伺服器所收集的報表執行資料設定限制。 執行資料會儲存在報表伺服器資料庫內部。 您可以針對以原生模式或 SharePoint 整合模式執行的報表伺服器追蹤報表活動。 如果報表伺服器屬於向外延展部署的一部分，報表執行記錄就會在單一記錄檔中維護整個部署之所有報表活動的記錄。  
   
- 若要開啟此頁面，請啟動[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，連接到報表伺服器，以滑鼠右鍵按一下報表伺服器名稱，然後選取**屬性**。 按一下 **[記錄]** ，即可開啟此頁面。  
+ 若要開啟此頁面， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]請啟動、連接至報表伺服器、以滑鼠右鍵按一下報表伺服器名稱，然後選取 [**屬性**]。 按一下 **[記錄]** ，即可開啟此頁面。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **啟用報表執行記錄**  
- 按一下即可建立和儲存有關伺服器之報表活動的資訊。 如果此選項已啟用，報表伺服器將會追蹤使用的報表、報表處理的頻率、執行的報表作業類型、輸出格式，以及執行報表的人員。 如需有關記錄檔中所擷取的其他資料點的詳細資訊，請參閱[報表伺服器執行記錄和 ExecutionLog3 檢視](../report-server/report-server-executionlog-and-the-executionlog3-view.md)。  
+ 按一下即可建立和儲存有關伺服器之報表活動的資訊。 如果此選項已啟用，報表伺服器將會追蹤使用的報表、報表處理的頻率、執行的報表作業類型、輸出格式，以及執行報表的人員。 如需有關記錄檔中所捕捉其他資料點的詳細資訊，請參閱[報表伺服器執行記錄和 ExecutionLog3 視圖](../report-server/report-server-executionlog-and-the-executionlog3-view.md)。  
   
- **移除此天數之前的記錄項目**  
+ **移除此天數之前的記錄專案**  
  指定天數，在此天數後的記錄項目會從報表執行記錄中刪除。 預設值為 60 天。  
   
 ## <a name="see-also"></a>另請參閱  

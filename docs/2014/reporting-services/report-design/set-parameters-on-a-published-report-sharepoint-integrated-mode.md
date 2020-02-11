@@ -1,5 +1,5 @@
 ---
-title: 設定參數，在已發行的報表 (SharePoint 整合模式的 Reporting Services) |Microsoft Docs
+title: 在已發行的報表上設定參數（SharePoint 整合模式中的 Reporting Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: da71b511a65758483a9bf207dbe54a484f4f1b26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105020"
 ---
 # <a name="set-parameters-on-a-published-report-reporting-services-in-sharepoint-integrated-mode"></a>在已發行的報表上設定參數 (SharePoint 整合模式中的 Reporting Services)
@@ -79,7 +79,7 @@ ms.locfileid: "66105020"
   
     3.  如果您要使用預設值，而且不想讓此參數顯示在 [參數] 區域或訂閱頁面上，請選擇 [內部]  。  
   
-7.  按一下 **[套用]** 。  
+7.  按一下 [套用]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [報表伺服器項目的 SharePoint 網站和清單權限參考](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  

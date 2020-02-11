@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 747a811d1d355bd182b18f4c29f2d1bf9354fa55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103031"
 ---
 # <a name="windows-application-log"></a>Windows 應用程式記錄檔
@@ -41,7 +41,7 @@ ms.locfileid: "66103031"
   
 |事件類型|描述|  
 |----------------|-----------------|  
-|[資訊]|描述作業成功的事件 (例如，當報表伺服器服務啟動時)。|  
+|資訊|描述作業成功的事件 (例如，當報表伺服器服務啟動時)。|  
 |警告|表示有潛在問題的事件 (例如，磁碟空間不足)。|  
 |錯誤|描述嚴重問題的事件 (例如，服務未啟動)。|  
 |稽核成功|描述登入成功的安全性事件。|  

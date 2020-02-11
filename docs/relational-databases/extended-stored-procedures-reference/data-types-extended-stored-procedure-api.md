@@ -14,52 +14,53 @@ ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1e135e6706454fe1f03b4c7ab762e5234e1b7d35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064211"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>資料類型 (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
   
  若要使用擴充預存程序 API 資料類型，請在程式中包含 Srv.h 標頭檔案。  
   
-|資料類型|SQL Server 資料類型|Description|  
+|資料類型|SQL Server 資料類型|描述|  
 |---------------|--------------------------|-----------------|  
-|SRVBIGBINARY|**binary**|**binary** 資料類型，長度為 0 到 8000 個位元組。|  
-|SRVBIGCHAR|**char**|**character** 資料類型，長度為 0 到 8000 個位元組。|  
+|SRVBIGBINARY|**binary**|**binary**資料類型，長度為0到8000個位元組。|  
+|SRVBIGCHAR|**char**|**字元**資料類型，長度為0到8000個位元組。|  
 |SRVBIGVARBINARY|**varbinary**|可變長度的 **binary** 資料類型，長度為 0 到 8000 個位元組。|  
 |SRVBIGVARCHAR|**varchar**|可變長度的 **character** 資料類型，長度為 0 到 8000 個位元組。|  
-|SRVBINARY|**binary**|**binary** 資料類型。|  
-|SRVBIT|**Bit**|**bit** 資料類型。|  
-|SRVBITN|**bit null**|**bit** 資料類型，允許 Null 值。|  
-|SRVCHAR|**char**|**character** 資料類型。|  
+|SRVBINARY|**binary**|**binary**資料類型。|  
+|SRVBIT|**一些**|**bit**資料類型。|  
+|SRVBITN|**位 null**|**bit**資料類型，允許 null 值。|  
+|SRVCHAR|**char**|**字元**資料類型。|  
 |SRVDATETIME|**datetime**|8-byte **datetime** 資料類型。|  
 |SRVDATETIM4|**smalldatetime**|4-byte **smalldatetime** 資料類型。|  
-|SRVDATETIMN|**datetime null**|**smalldatetime** 或 **datetime** 資料類型，允許 Null 值。|  
-|SRVDECIMAL|**decimal**|**decimal** 資料類型。|  
-|SRVDECIMALN|**decimal null**|**decimal** 資料類型，允許 Null 值。|  
-|SRVFLT4|**real**|4-byte **real** 資料類型。|  
+|SRVDATETIMN|**datetime null**|**Smalldatetime**或**datetime**資料類型，允許 null 值。|  
+|SRVDECIMAL|**decimal**|**decimal**資料類型。|  
+|SRVDECIMALN|**十進位數 null**|**decimal**資料類型，允許 null 值。|  
+|SRVFLT4|**即時**|4-byte **real** 資料類型。|  
 |SRVFLT8|**float**|8-byte **float** 資料類型。|  
-|SRVFLTN|**real** &#124; **float null**|**real** 或 **float** 資料類型，允許 Null 值。|  
-|SRVIMAGE|**image**|**image** 資料類型。|  
+|SRVFLTN|**real** &#124; **float null**|**real**或**float**資料類型，允許 null 值。|  
+|SRVIMAGE|**image**|**image**資料類型。|  
 |SRVINT1|**tinyint**|1-byte **tinyint** 資料類型。|  
 |SRVINT2|**smallint**|2-byte **smallint** 資料類型。|  
 |SRVINT4|**int**|4-byte **int** 資料類型。|  
-|SRVINTN|**tinyint** &#124; **smallint** &#124; **int null**|**tinyint**、**smallint** 或 **int** 資料類型，允許 Null 值。|  
-|SRVMONEY4|**smallmoney**|4-byte **smallmoney** 資料類型。|  
+|SRVINTN|**Tinyint** &#124; **Smallint** &#124; **int null**|**Tinyint**、 **Smallint**或**int**資料類型，允許 null 值。|  
+|SRVMONEY4|**SMALLMONEY**|4-byte **smallmoney** 資料類型。|  
 |SRVMONEY|**money**|8-byte **money** 資料類型。|  
-|SRVMONEYN|**money** &#124; **smallmoney null**|**smallmoney** 或 **money** 資料類型，允許 Null 值。|  
+|SRVMONEYN|**money** &#124; **smallmoney null**|**smallmoney**或**money**資料類型，允許 null 值。|  
 |SRVNCHAR|**nchar**|Unicode **character** 資料類型。|  
 |SRVNTEXT|**ntext**|Unicode **text** 資料類型。|  
-|SRVNUMERIC|**numeric**|**numeric** 資料類型。|  
-|SRVNUMERICN|**numeric null**|**numeric** 資料類型，允許 Null 值。|  
+|SRVNUMERIC|**數值**|**數值**資料類型。|  
+|SRVNUMERICN|**數值 null**|**數值**資料類型，允許 null 值。|  
 |SRVNVARCHAR|**nvarchar**|Unicode 可變長度的 **character** 資料類型。|  
-|SRVTEXT|**text**|**text** 資料類型。|  
+|SRVTEXT|**text**|**text**資料類型。|  
 |SRVVARBINARY|**varbinary**|可變長度的 **binary** 資料類型。|  
 |SRVVARCHAR|**varchar**|可變長度的 **character** 資料類型。|  
   

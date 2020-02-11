@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58785d54954278d2dcb839ef3e707859682a9d37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104105"
 ---
 # <a name="caching-reports-ssrs"></a>快取多個報表 (SSRS)
@@ -75,7 +75,7 @@ ms.locfileid: "66104105"
  [Reporting Services 概念 &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [預先載入快取 &#40;報表管理員&#41;](preload-the-cache-report-manager.md)   
  [[排程]](../subscriptions/schedules.md)   
- [快取共用資料集 &#40;SSRS&#41;](cache-shared-datasets-ssrs.md)   
+ [&#40;SSRS&#41;快取共用資料集](cache-shared-datasets-ssrs.md)   
  [快取重新整理選項 &#40;報表管理員&#41;](../cache-refresh-options-report-manager.md)  
   
   

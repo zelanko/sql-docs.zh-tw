@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ba254f3cf1e5104a4ac56ca2bed587b150ac824f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097210"
 ---
-# <a name="instanceid-property-wmi-msreportserverinstance"></a>InstanceID 屬性 (WMI MSReportServer_Instance)
+# <a name="instanceid-property-wmi-msreportserver_instance"></a>InstanceID 屬性 (WMI MSReportServer_Instance)
   此物件支援 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 基礎結構，而且不能直接從程式碼使用。  
   
 ## <a name="syntax"></a>語法  
@@ -39,7 +39,7 @@ public string InstanceID;
 ```  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_Instance 成員](msreportserver-instance-members.md)  

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff0bd8ce8d5024d0d6e2e624c03bcc675af8fbb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101672"
 ---
 # <a name="secure-reports-and-resources"></a>保護報表和資源的安全
@@ -74,8 +74,8 @@ ms.locfileid: "66101672"
  包含機密資訊的報表應該在資料存取層級受到保護，方法是要求使用者提供存取敏感性資料的認證。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)。 您也可以保護資料夾的安全，讓未經授權的使用者無法使用它。 如需詳細資訊，請參閱 [保護資料夾的安全](secure-folders.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- (create-and-manage-role-assignments.md)   
- [設定報表產生器的存取](../report-server/configure-report-builder-access.md)   
+ （create-and-manage-role-assignments.md）   
+ [設定報表產生器存取](../report-server/configure-report-builder-access.md)   
  [在原生模式報表伺服器上授與權限](granting-permissions-on-a-native-mode-report-server.md)   
  [保護共用資料來源項目的安全](secure-shared-data-source-items.md)   
  [在 Reporting Services 資料來源中儲存認證](../report-data/store-credentials-in-a-reporting-services-data-source.md)  

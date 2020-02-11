@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 445e6d2ccaba0d03de9f25d770ac22f35b628778
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105773"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>設定圖表上數列色彩的格式 (報表產生器及 SSRS)
-  Reporting Services 為圖表提供數個內建的調色盤，或者您也可以定義自訂的調色盤。 根據預設，圖表會使用內建**BrightPastel**調色盤來填滿每個數列。 這些色彩也會出現在圖例中。 在圖表中加入多個序列時，圖表會以調色盤定義色彩的順序為序列指派色彩。  
+  Reporting Services 為圖表提供數個內建的調色盤，或者您也可以定義自訂的調色盤。 根據預設，圖表會使用內建的**BrightPastel**色調色板來填滿每個數列。 這些色彩也會出現在圖例中。 在圖表中加入多個序列時，圖表會以調色盤定義色彩的順序為序列指派色彩。  
   
  如果序列的數目超過調色盤中的色彩數，則圖表會重覆使用色彩，因此兩個序列可能會擁有相同的色彩。 如果您所使用的是形狀圖，就會經常發生這種情形，其中會為每個資料點指派調色盤的一個色彩。 為了避免混淆，請至少使用與圖表上的序列一樣多的色彩來定義自訂調色盤。  
   

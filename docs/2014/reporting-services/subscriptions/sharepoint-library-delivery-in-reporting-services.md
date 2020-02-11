@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93a62ec076b9dc61cd01d18796f04bbaa04eb93b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100700"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services 中的 SharePoint 文件庫傳遞
   針對 SharePoint 整合所設定的報表伺服器包含您可以用來將報表傳送至 SharePoint 文件庫的傳遞延伸模組。  
   
- 若要使用 SharePoint 傳遞延伸模組，您必須從 SharePoint 網站上的應用程式頁面建立訂閱，然後選取 [SharePoint 文件庫]  作為傳遞類型。 您無法針對您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或報表管理員中建立的訂閱，使用 SharePoint 傳遞延伸模組。  
+ 若要使用 SharePoint 傳遞延伸模組，您必須從 SharePoint 網站上的應用程式頁面建立訂閱，然後選取 [SharePoint 文件庫]**** 作為傳遞類型。 您不能將 SharePoint 傳遞延伸模組用於您在或報表管理員[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中建立的訂閱。  
   
 > [!NOTE]  
 >  如果報表伺服器以原生模式執行，傳遞延伸模組不支援將報表傳遞至 SharePoint 網站。 如果您嘗試以程式設計的方式呼叫原生模式報表伺服器的傳遞延伸模組，伺服器將會傳回 `rsDeliveryExtensionNotFound` 錯誤，並在報表伺服器的記錄檔中記錄 `rsOperationNotSupportedSharePointMode` 錯誤。  
@@ -51,9 +51,9 @@ ms.locfileid: "66100700"
   
 1.  移至您要存取報表的來源 SharePoint 網站。  
   
-2.  選取報表、按一下報表旁的向下箭號，然後選取 [管理訂閱]  。  
+2.  選取報表、按一下報表旁的向下箭號，然後選取 [管理訂閱]****。  
   
-3.  按一下 [建立]  、[編輯]  或 [刪除]  。  
+3.  按一下 [建立]****、[編輯]**** 或 [刪除]****。  
   
  [管理訂閱] 清單中的 [狀態] 訊息便會顯示關於訂閱的最新資訊，包括是否成功以及訂閱上次執行的日期和時間。  
   
@@ -68,25 +68,25 @@ ms.locfileid: "66100700"
  請注意，您無法指定僅用於內部使用的輸出格式，或是以 SharePoint 整合模式執行之報表伺服器不支援的輸出格式。 這些格式包括 Null、RGDI 和 HTMLOWC。  
   
  檔案名稱與副檔名  
- 將報表的檔案名稱與副檔名指定為您要顯示在目標文件庫中的檔案名稱與副檔名。 如果您沒有指定副檔名，報表伺服器會依據報表輸出格式來建立副檔名。 這是必要的值。 檔案名稱不得包含下列字元：: \ / * ? " \< > | # { } %  
+ 將報表的檔案名稱與副檔名指定為您要顯示在目標文件庫中的檔案名稱與副檔名。 如果您沒有指定副檔名，報表伺服器會依據報表輸出格式來建立副檔名。 這是必要的值。 檔案名稱不得包含下列字元：: \ / * ? 「 \< > |# { } %  
   
- 標題  
+ Title  
  在目標文件庫中，指定報表的選用 `Title` 屬性。 這是儲存在文件庫中之所有項目的標準屬性。 使用者可以在檢視 SharePoint 網站上的文件庫內容時，指定要顯示或隱藏此屬性。  
   
- `Path`  
- 指定指向 SharePoint 文件庫的完整 URL，包括 SharePoint Web 應用程式和網站。 例如： <http://mySharePointWeb/MySite/MyDocLib>; 其中 「<http://mySharePointWeb>"指出的 Web 應用程式中，"MySite"是 SharePoint 網站，以及"MyDocLib"是 SharePoint 文件庫傳遞報表。  
+ Path  
+ 指定指向 SharePoint 文件庫的完整 URL，包括 SharePoint Web 應用程式和網站。 例如： <http://mySharePointWeb/MySite/MyDocLib>;其中，<http://mySharePointWeb>"" 表示 Web 應用程式，"「我的」是 sharepoint 網站，而" MyDocLib "是要傳遞報表的 sharepoint 文件庫。  
   
  您無法指定頁面、網站或清單。 目標容器必須是相同網站或伺服陣列中的文件庫。  
   
  覆寫選項  
- 指定在處理訂閱時，具有相同名稱與副檔名的檔案是否要由較新的版本取代。 如果您要以較新的版本取代現有的檔案，選擇 [覆寫]  。 如果您不要訂閱取代檔案，選擇 [無]  。 在此情況下，如果有具有目標名稱與副檔名的檔案存在，則傳遞不會發生。 如果您要在檔案名稱結尾附加一個數字，藉此新增相同檔案的連續版本，選擇 [自動遞增]  。  
+ 指定在處理訂閱時，具有相同名稱與副檔名的檔案是否要由較新的版本取代。 如果您要以較新的版本取代現有的檔案，選擇 [覆寫]****。 如果您不要訂閱取代檔案，選擇 [無]****。 在此情況下，如果有具有目標名稱與副檔名的檔案存在，則傳遞不會發生。 如果您要在檔案名稱結尾附加一個數字，藉此新增相同檔案的連續版本，選擇 [自動遞增]****。  
   
  自動複製  
- 如果您要使用 [自動複製] 功能，將檔案的最新版本自動複製到多個位置，當啟用 [覆寫]  時，就會複製該檔案。 如果您使用**Autoincrement**或是**無**，傳遞將會失敗而`rsDeliveryError`就會發生錯誤。  
+ 如果您要使用 [自動複製] 功能，將檔案的最新版本自動複製到多個位置，當啟用 [覆寫]**** 時，就會複製該檔案。 如果您使用**自動遞增**或**無**，傳遞將會失敗， `rsDeliveryError`而且會發生錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立及管理 SharePoint 模式報表伺服器的訂閱](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [訂閱與傳遞 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [指定報表資料來源的認證及連線資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [指定報表資料來源的認證及連接資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

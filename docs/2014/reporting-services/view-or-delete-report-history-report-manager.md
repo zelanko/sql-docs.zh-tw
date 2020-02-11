@@ -1,5 +1,5 @@
 ---
-title: 檢視或刪除報表記錄 （報表管理員） |Microsoft Docs
+title: 查看或刪除報表記錄（報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,10 +26,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a05c9dccabcf9b937ebd67fb264022761b1ca249
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098711"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>檢視或刪除報表記錄 (報表管理員)
@@ -37,11 +37,11 @@ ms.locfileid: "66098711"
   
 ### <a name="to-view-a-history-snapshot"></a>若要檢視記錄快照集  
   
-1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)。  
+1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)。  
   
 2.  在報表管理員中，導覽至 **[內容]** 頁面。 導覽至您要建立或檢視記錄快照集的報表，然後按一下報表以開啟報表。  
   
-3.  按一下 [記錄]  索引標籤。記錄快照集所示**時執行**資料行。  
+3.  按一下 [歷程**記錄**] 索引標籤。記錄快照集會顯示在 [**執行時**] 資料行中。  
   
 4.  若要檢視記錄快照集，請按一下快照集。  
   
@@ -49,13 +49,13 @@ ms.locfileid: "66098711"
   
 1.  在報表管理員中，導覽至 **[內容]** 頁面。 導覽至您要建立記錄快照集的報表，然後按一下報表以開啟報表。  
   
-2.  按一下 [記錄]  索引標籤。記錄快照集所示**時執行**資料行。  
+2.  按一下 [歷程**記錄**] 索引標籤。記錄快照集會顯示在 [**執行時**] 資料行中。  
   
-3.  選取您想要刪除此項目，然後按一下 歷程記錄快照集旁邊的核取方塊**刪除**。  
+3.  選取您想要刪除之記錄快照集旁的核取方塊，然後按一下 [**刪除**]。  
   
 ## <a name="see-also"></a>另請參閱  
  [將快照集加入報表記錄 &#40;報表管理員&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [報表記錄頁面&#40;報表管理員&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
+ [報表記錄頁面 &#40;報表管理員&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
  [設定報表處理屬性](report-server/set-report-processing-properties.md)   
  [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [建立、修改及刪除報表記錄中的快照集](report-server/create-modify-and-delete-snapshots-in-report-history.md)  

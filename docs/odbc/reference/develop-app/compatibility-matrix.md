@@ -1,5 +1,5 @@
 ---
-title: 相容性比較表 |Microsoft Docs
+title: 相容性矩陣 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,54 +19,54 @@ ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 273633532b9b9247ea7aa12fe90bfcc3c6f6bb81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083269"
 ---
 # <a name="compatibility-matrix"></a>相容性矩陣
-下表描述的相容性應用程式和驅動程式先前在這一節中定義的類型。  
+下表描述本節中所定義的應用程式和驅動程式類型的相容性。  
   
-|應用程式類型<br /><br /> 和版本|32 位元 ODBC<br /><br /> *2.x*驅動程式|ODBC *3.x*<br /><br /> 驅動程式|ODBC 3.8 驅動程式|ISO 和規範開啟群組的驅動程式|  
+|應用程式類型<br /><br /> 和版本|32位 ODBC<br /><br /> 2.x*驅動程式*|ODBC *3.x*<br /><br /> driver|ODBC 3.8 驅動程式|ISO 和開放式群組相容的驅動程式|  
 |--------------------------------------|-----------------------------------|---------------------------|---------------------|-----------------------------------------|  
-|16 位元應用程式，任何版本|相容|相容|相容|相容|  
-|純*2.x*應用程式|相容|相容|相容|Not compatible[3]|  
-|純*2.x*重新編譯應用程式|相容|Compatible[1]|Compatible[1]|Not compatible[3]|  
-|純*2.x* Unicode 應用程式|相容|Compatible[1]|Compatible[1]|不相容 [3]|  
-|純的 Open Group 和 ISO 相容的應用程式|不相容|Compatible[2]|Compatible[2]|Compatible[2]|  
-|純 3.0 的應用程式|不相容|相容|相容|Not compatible[4]|  
-|純 3.5 的應用程式|不相容|相容|相容|Not compatible[4]|  
-|純 3.8 （或更新版本） 的應用程式|不相容 [5]|不相容 [5]|相容|不相容 [4]|  
-|已取代的應用程式|相容|相容|相容|Not compatible[3]|  
+|16位應用程式，任何版本|相容|相容|相容|相容|  
+|純*2.x*應用程式|相容|相容|相容|不相容 [3]|  
+|純粹*2.x*重新編譯的應用程式|相容|相容 [1]|相容 [1]|不相容 [3]|  
+|純*2.X* Unicode 應用程式|相容|相容 [1]|相容 [1]|不相容 [3]|  
+|純開放式群組和 ISO 相容應用程式|不相容|相容 [2]|相容 [2]|相容 [2]|  
+|純3.0 應用程式|不相容|相容|相容|不相容 [4]|  
+|純3.5 應用程式|不相容|相容|相容|不相容 [4]|  
+|純3.8 （或更高版本）應用程式|不相容 [5]|不相容 [5]|相容|不相容 [4]|  
+|已取代應用程式|相容|相容|相容|不相容 [3]|  
   
- [1] 的應用程式必須重新編譯 ODBC 3.5 （或更新版本） 的標頭使用 UNICODE 選項 （如果它是在 Unicode 應用程式），必須將 ODBCVER 設 0x0250。  
+ [1] 應用程式必須使用具有 UNICODE 選項（如果它是 Unicode 應用程式）的 ODBC 3.5 （或更新版本）標頭進行重新編譯，而且必須將 ODBCVER 設定為0x0250。  
   
- [2] 的應用程式必須使用 ODBC 3.5 （或更新版本） 的標頭進行編譯，並連結與 ODBC 驅動程式管理員。 它也必須設定標頭旗標 ODBC_STD。  
+ [2] 應用程式必須使用 ODBC 3.5 （或更新版本）標頭進行編譯，並使用 ODBC 驅動程式管理員連結。 它也必須將標頭旗標設定 ODBC_STD。  
   
- [3] 這項設定可能無法正常運作，因為在 ODBC 中有功能*2.x*不在標準，例如書籤。  
+ [3] 這項設定可能無法正常執行，*因為 ODBC 2.x 中的功能*不在標準中，例如書簽。  
   
- [4] 這項設定可能無法正常運作，因為在 ODBC 中有功能*3.x*不在標準，例如書籤。  
+ [4] 這項設定可能無法正常執行，因為 ODBC 3.x 中有不是*標準的功能*，例如書簽。  
   
- [5] 這項設定可以可能失敗，因為有不在 ODBC 2.x 或 3.x 驅動程式，例如驅動程式特有的功能中符合 ODBC 3.8 [ODBC 中的 C 資料類型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。  
+ [5] 這項設定可能會失敗，因為 odbc 3.8 中有不在 ODBC 2.x 或3.x 驅動程式中的功能，例如 ODBC 中的驅動程式特定[C 資料類型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。  
   
 ## <a name="driver-manager-compatibility"></a>驅動程式管理員相容性  
- ODBC 3.0 應用程式必須在所有的驅動程式管理員版本上運作，應該依下列方式啟動：  
+ 必須使用所有驅動程式管理員版本操作的 ODBC 3.0 應用程式，應該在啟動時執行下列作業：  
   
--   配置環境控制代碼。  
+-   配置環境控制碼。  
   
--   設 SQL_OV_ODBC3_80 SQL_ATTR_ODBC_VERSION 環境屬性。 如果驅動程式管理員會傳回 SQL_ERROR，驅動程式管理員比 3.8。 重設 SQL_ATTR_ODBC_VERSION sql_ov_odbc3 時或 SQL_OV_ODBC2，適當地對應到驅動程式管理員。  
+-   將 [SQL_ATTR_ODBC_VERSION 環境] 屬性設定為 [SQL_OV_ODBC3_80]。 如果驅動程式管理員傳回 SQL_ERROR，驅動程式管理員會比3.8 還舊。 視需要將 SQL_ATTR_ODBC_VERSION 重設為 SQL_OV_ODBC3 或 SQL_OV_ODBC2，以對應至驅動程式管理員。  
   
--   配置連接控制代碼。  
+-   配置連接控制碼。  
   
--   進行連線。  
+-   建立連接。  
   
--   呼叫以判斷驅動程式版本 SQL_DRIVER_ODBC_VER 的 SQLGetInfo。 如果驅動程式符合 ODBC 3.8 驅動程式，您可以使用驅動程式特有的 C 類型。 否則，請勿使用驅動程式特有的 C 資料類型。  
+-   針對 SQL_DRIVER_ODBC_VER 呼叫 SQLGetInfo，以判斷驅動程式版本。 如果驅動程式是 ODBC 3.8 驅動程式，您可以使用驅動程式特定的 C 類型。 否則，請勿使用驅動程式特定的 C 資料類型。  
   
- 請注意，重新編譯的 ODBC 3.x 應用程式可以使用 ODBC 3.8 驅動程式特有的 C 類型以外的功能而不指定 SQL_ATTR_ODBC_VERSION SQL_OV_ODBC3_80。 這是類似於使用 ODBC 3.x 功能的重新編譯 ODBC 2.x 應用程式。  
+ 請注意，重新編譯的 ODBC 3.x 應用程式可以使用驅動程式特有 C 類型以外的 ODBC 3.8 功能，而不需指定 SQL_ATTR_ODBC_VERSION 的 SQL_OV_ODBC3_80。 這類似于使用 ODBC 3.x 功能重新編譯的 ODBC 2.x 應用程式。  
   
-## <a name="using-sqlcancelhandle-in-an-application-compatible-with-all-driver-managers"></a>在 應用程式相容於所有的驅動程式管理員使用 SQLCancelHandle  
- 因為[SQLCancelHandle 函式](../../../odbc/reference/syntax/sqlcancelhandle-function.md)不支援在 Windows 7 之前發行的驅動程式管理員，應用程式無法呼叫在舊版 Windows 中載入**SQLCancelHandle**直接。 適用於所有版本的驅動程式管理員，並使用**SQLCancelHandle**應用程式應該在新的 Windows 版本上，呼叫**SQLCancelHandle**直接藉由使用**LoadLibrary**和**GetProcAddress。**  
+## <a name="using-sqlcancelhandle-in-an-application-compatible-with-all-driver-managers"></a>在與所有驅動程式管理員相容的應用程式中使用 SQLCancelHandle  
+ 由於在 Windows 7 之前發行的驅動程式管理員中不支援[SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md)函式，因此如果應用程式直接呼叫**SQLCancelHandle** ，就無法在舊版的 Windows 中載入。 若要使用所有版本的驅動程式管理員，並在新版本的 Windows 上使用**SQLCancelHandle** ，應用程式應該使用**LoadLibrary**和 GetProcAddress 來間接呼叫**SQLCancelHandle** **。**  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC 3.8 的新功能](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

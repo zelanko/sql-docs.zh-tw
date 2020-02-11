@@ -1,5 +1,5 @@
 ---
-title: CHANGE_TRACKING_CURRENT_VERSION (TRANSACT-SQL) |Microsoft Docs
+title: CHANGE_TRACKING_CURRENT_VERSION （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -20,16 +20,16 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e1bf8d568031541df8f4dfa80a4148ad759dad54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043005"
 ---
-# <a name="changetrackingcurrentversion-transact-sql"></a>CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)
+# <a name="change_tracking_current_version-transact-sql"></a>CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回與最後確認之交易相關聯的版本。 當您使用列舉變更時，就可以使用這個版本[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)。  
+  傳回與最後確認之交易相關聯的版本。 當您使用[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)列舉變更時，可以使用這個版本。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,7 +41,7 @@ CHANGE_TRACKING_CURRENT_VERSION ( )
 ```  
   
 ## <a name="return-type"></a>傳回類型  
- **bigint**  
+ **Bigint**  
   
 ## <a name="remarks"></a>備註  
  如果未針對資料庫啟用變更追蹤，則會傳回 NULL。  

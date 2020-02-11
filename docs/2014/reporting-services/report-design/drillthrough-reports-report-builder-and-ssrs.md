@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63119bf6d8ba4e9d907b9c6cdfb6bfe0b7765941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105936"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>鑽研報表 (報表產生器及 SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66105936"
 > [!NOTE]  
 >  當您在報表產生器中工作時，必須連接至報表伺服器，才能檢視按一下主報表中的鑽研連結時，所開啟的鑽研報表。  
   
- 若要快速地開始使用鑽研報表，請參閱[教學課程：建立鑽研及主報表 &#40;報表產生器&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md)。 在兩個商業智慧方案也配備了鑽研報表[BI 報表：報表和訂閱案例](https://technet.microsoft.com/bi/ff769487.aspx)和[企業儀表板：銷售解決方案](https://technet.microsoft.com/bi/ff643005.aspx)  
+ 若要快速地開始使用鑽研報表，請參閱[教學課程：建立鑽研及主報表 &#40;報表產生器&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md)。 有兩個商業智慧方案也配備了鑽研報表： [BI 報表：報表和訂閱案例](https://technet.microsoft.com/bi/ff769487.aspx) 以及 [企業儀表板：銷售方案](https://technet.microsoft.com/bi/ff643005.aspx)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

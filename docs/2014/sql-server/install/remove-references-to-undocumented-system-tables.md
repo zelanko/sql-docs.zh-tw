@@ -1,5 +1,5 @@
 ---
-title: 移除未記載的系統資料表的參考 |Microsoft Docs
+title: 移除未記載之系統資料表的參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06249aa1849a1be9af40e183724e85b0f318f3dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093150"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>移除未記載之系統資料表的參考
@@ -82,14 +82,14 @@ ms.locfileid: "66093150"
   
 |取代|使用|  
 |----------------|---------|  
-|**sysfulltextnotify**|**TableFulltextPendingChanges** OBJECTPROPERTYEX 函數的屬性。|  
-|**syslocks**|**sys.dm_tran_locks**動態管理檢視或 sp_lock 或**sys.syslockinfo**相容性檢視。|  
-|**sysproperties**|**sys.extended_properties**目錄檢視或**fn_listextendedproperty**函式|  
-|**sysxlogins**|**sys.server_principals**目錄檢視或**syslogins**相容性檢視。|  
+|**sysfulltextnotify**|OBJECTPROPERTYEX 函數的**TableFulltextPendingChanges**屬性。|  
+|**syslocks**|**dm_tran_locks**動態管理檢視] 或 [sp_lock] 或 [ **syslockinfo** ] 相容性檢視。|  
+|**sysproperties**|**extended_properties**目錄檢視或**fn_listextendedproperty**函數|  
+|**sysxlogins**|**server_principals**目錄檢視或**syslogins**相容性檢視。|  
 |所有**spt_** 資料表|沒有可用的取代項目|  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
+ [資料庫引擎升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新的&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

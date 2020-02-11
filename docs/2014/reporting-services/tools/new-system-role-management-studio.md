@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4d9227136ba3bd1526f8ec04476d6dc5d61ca41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100174"
 ---
 # <a name="new-system-role-management-studio"></a>新增系統角色 (Management Studio)
@@ -25,18 +25,18 @@ ms.locfileid: "66100174"
 > [!NOTE]  
 >  角色定義只會用於以原生模式執行的報表伺服器。 如果報表伺服器是針對 SharePoint 整合所設定，這個頁面就無法使用。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **名稱**  
  鍵入角色定義的名稱。 角色定義名稱在報表伺服器命名空間內必須是唯一的。 名稱必須至少包含一個英數字元。 它也可以包含空格和某些符號。 指定名稱時，請勿使用下列字元：  
   
- ; ? : \@ & = + , $ / * \< >  
+ ; ? ： \@ & = +，$/*\< >  
   
  " /  
   
  **說明**  
  提供如何使用角色的描述，並列舉該角色支援的項目。  
   
- **工作**  
+ **Task**  
  選取可以透過此角色所執行的系統層級工作。 您無法建立新工作，或修改 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]支援的現有工作。 您無法為系統角色定義選擇項目層級工作。  
   
  **工作描述**  

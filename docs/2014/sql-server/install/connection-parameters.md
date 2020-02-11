@@ -19,16 +19,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ca5d6ed8f1e8a92d22bd32e39c8afe946a0fcfee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095983"
 ---
-# <a name="connection-parameters"></a>連接參數
+# <a name="connection-parameters"></a>連線參數
   若要分析特定伺服器類型 (例如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)])，您必須選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的特定執行個體。 系統會自動選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設執行個體。 您可以變更此選擇，但一次只能選取一個執行個體供 Upgrade Advisor 分析。 如果您已加入需要驗證的伺服器類型，就必須輸入驗證模式和認證。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **伺服器名稱**  
  預先填入您在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件] 窗格中輸入的電腦名稱。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66095983"
  如果您要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請在此方塊中輸入使用者名稱。 我們建議使用者名稱擁有這部電腦的管理認證。  
   
 > [!NOTE]  
->  如果您選取 Windows 驗證時，會填入目前登入使用者的使用者名稱**使用者名**文字方塊。  
+>  如果您選取 [Windows 驗證]，則會在 [**使用者名稱**] 文字方塊中填入目前登入之使用者的使用者名稱。  
   
  **密碼**  
  請輸入指定之使用者的密碼。  

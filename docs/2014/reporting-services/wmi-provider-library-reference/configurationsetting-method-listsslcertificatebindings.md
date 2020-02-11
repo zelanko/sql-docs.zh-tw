@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a2a33d7aa992fd434b29fd519c805f57b2b46fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098355"
 ---
-# <a name="listsslcertificatebindings-method-wmi-msreportserverconfigurationsetting"></a>ListSSLCertificateBindings 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="listsslcertificatebindings-method-wmi-msreportserver_configurationsetting"></a>ListSSLCertificateBindings 方法 (WMI MSReportServer_ConfigurationSetting)
   傳回電腦上已安裝之 SSL 憑證的清單。  
   
 ## <a name="syntax"></a>語法  
@@ -42,19 +42,19 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
  *LCID*  
  要用於傳回之錯誤訊息的地區設定。  
   
- *Application[]*  
+ *應用程式 []*  
  [out] 具有憑證繫結的應用程式。  
   
- *CertificateHash[]*  
+ *CertificateHash []*  
  [out] 憑證的雜湊。  
   
- *IPAddress[]*  
+ *IPAddress []*  
  [out] 應用程式的 IP 位址。  
   
- *Port[]*  
+ *埠 []*  
  [out] 儲存在 rsreportserver.config 之繫結中的通訊埠編號。  
   
- *Errors[]*  
+ *錯誤 []*  
  [out] 發生之錯誤的描述。  
   
  *長度*  
@@ -69,7 +69,7 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

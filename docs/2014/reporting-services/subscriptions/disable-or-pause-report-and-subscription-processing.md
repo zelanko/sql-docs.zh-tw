@@ -1,5 +1,5 @@
 ---
-title: 暫停報表與訂閱處理 |Microsoft Docs
+title: 暫停報表和訂閱處理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1607637630c507588602dd7e566917ce1eeb6080
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100916"
 ---
 # <a name="pause-report-and-subscription-processing"></a>暫停報表與訂閱處理
@@ -36,7 +36,7 @@ ms.locfileid: "66100916"
 ## <a name="modify-role-assignments-to-prevent-access"></a>修改角色指派來禁止存取  
  讓報表無法使用的最佳方法，是暫時移除可以提供存取報表的角色指派。 無論建立資料來源連接的方式為何，此方法可以用於所有報表。 此方法僅會以報表為目標，不會影響其他報表或項目的作業。  
   
- 若要移除角色指派，請在報表管理員中，開啟報表的 [安全性屬性] 頁面。 如果報表從父系繼承安全性，您可以按一下 **[編輯項目安全性]** 來建立嚴格的安全性原則，省略提供普遍存取權的角色指派 (例如，您可以移除提供 Everyone 存取權的角色指派，保留提供一小組使用者存取權的角色指派，例如系統管理員)。  
+ 若要移除角色指派，請在報表管理員中，開啟報表的 [安全性屬性] 頁面。 如果報表從父系繼承安全性，您可以按一下 [編輯項目安全性]**** 來建立嚴格的安全性原則，省略提供普遍存取權的角色指派 (例如，您可以移除提供 Everyone 存取權的角色指派，保留提供一小組使用者存取權的角色指派，例如系統管理員)。  
   
 ## <a name="disable-a-shared-data-source"></a>停用共用資料來源  
  使用共用資料來源的優點之一是您可以停用它，禁止執行報表或資料驅動訂閱。 停用共用資料來源會中斷報表與其外部來源的連接。 停用時，資料來源無法供所有使用它的報表與訂閱使用。 若要停用共用資料來源，請在報表管理員中開啟資料來源，然後清除 **[啟用此資料來源]** 核取方塊。  
@@ -44,11 +44,11 @@ ms.locfileid: "66100916"
  請注意，即使資料來源無法使用，報表仍然會載入。 報表不包含資料，但具備適當權限的使用者可以存取與報表相關聯的屬性頁面、安全性設定、報表記錄，以及訂閱資訊。  
   
 ## <a name="pause-a-shared-schedule"></a>暫停共用排程  
- 如果報表或訂閱從共用排程執行，您可以暫停排程來禁止處理。 由排程驅動的所有報表與訂閱處理，會被延遲至排程繼續為止。 如需詳細資訊，請參閱 <<c0> [ 暫停及繼續共用排程](schedules.md)。  
+ 如果報表或訂閱從共用排程執行，您可以暫停排程來禁止處理。 由排程驅動的所有報表與訂閱處理，會被延遲至排程繼續為止。 如需詳細資訊，請參閱[暫停和繼續共用](schedules.md)排程。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)   
- [安全性屬性頁面，項目 &#40;報表管理員&#41;](../security-properties-page-items-report-manager.md)  
+ [安全性屬性頁面，&#40;報表管理員的專案&#41;](../security-properties-page-items-report-manager.md)  
   
   

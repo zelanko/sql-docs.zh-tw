@@ -1,5 +1,5 @@
 ---
-title: 準備開始完成映像 |Microsoft Docs
+title: 準備好完成影像 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 52407fbcdfd1f784128cf4c374ad18cc0255197b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093314"
 ---
 # <a name="ready-to-complete-image"></a>準備好要完成映像
-  [準備開始完成映像]  頁面會提供套用至備妥執行個體之組態的組態設定摘要。  
+  [準備開始完成映像]**** 頁面會提供套用至備妥執行個體之組態的組態設定摘要。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  這個頁面含有下列選項：  
   
--   若要繼續安裝，請按一下 **[安裝]** 。  
+-   若要繼續安裝，請按一下 **[安裝]**。  
   
--   若要變更安裝設定，請按 **[上一步]** 。  
+-   若要變更安裝設定，請按 **[上一步]**。  
   
--   若要結束安裝程式，請按一下 **[取消]** 。  
+-   若要結束安裝程式，請按一下 **[取消]**。  
   
   

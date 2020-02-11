@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3de8f9e708149669a65b8abf4114227392aa15a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102704"
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>設定報表的執行屬性 (報表管理員)
@@ -30,26 +30,26 @@ ms.locfileid: "66102704"
   
 ### <a name="to-configure-report-processing-options"></a>若要設定報表處理選項  
   
-1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)。  
+1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)。  
   
 2.  導覽至您想要設定處理選項的報表，然後開啟報表。  
   
  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-1.  在下拉式功能表中，按一下 [管理]  ，然後選取 [處理選項]  索引標籤。  
+1.  在下拉式功能表中，按一下 [管理]****，然後選取 [處理選項]**** 索引標籤。  
   
-2.  按一下 [從報表執行快照集轉譯此報表]  ，然後選取下列其中一個選項：  
+2.  按一下 [從報表執行快照集轉譯此報表]****，然後選取下列其中一個選項：  
   
-    -   如果想要建立快照集，請選取 [使用下列排程建立報表執行快照集]  ，然後定義報表特定的排程或從 [共用排程]  清單中選取。  
+    -   如果想要建立快照集，請選取 [使用下列排程建立報表執行快照集]****，然後定義報表特定的排程或從 [共用排程]**** 清單中選取。  
   
-    -   如果您要立即建立快照集，請選取 [當您在此頁面上按一下 [套用] 按鈕時，會建立報表快照集]  。  
+    -   如果您要立即建立快照集，請選取 [當您在此頁面上按一下 [套用] 按鈕時，會建立報表快照集]****。  
   
-3.  按一下 **[套用]** 。  
+3.  按一下 [套用]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表處理屬性](../report-server/set-report-processing-properties.md)   
- [開啟及關閉報表 &#40;報表管理員&#41;](../reports/open-and-close-a-report-report-manager.md)   
- [內容頁面 &#40;報表管理員&#41;](../contents-page-report-manager.md)   
+ [開啟並關閉報表 &#40;報表管理員&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [[內容] 頁面 &#40;報表管理員&#41;](../contents-page-report-manager.md)   
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [處理選項屬性頁面 &#40;報表管理員&#41;](../processing-options-properties-page-report-manager.md)  
   

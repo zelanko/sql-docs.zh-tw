@@ -1,5 +1,5 @@
 ---
-title: 設定報表伺服器項目的權限在 SharePoint 網站 (SharePoint 整合模式的 Reporting Services) |Microsoft Docs
+title: 設定 SharePoint 網站上報表伺服器專案的許可權（SharePoint 整合模式中的 Reporting Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c8c0e8f0714efb337d78d4440938dcb5a332fcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101557"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>設定 SharePoint 網站上報表伺服器項目的權限 (SharePoint 整合模式的 Reporting Services)
@@ -61,7 +61,7 @@ ms.locfileid: "66101557"
   
 7.  按一下 **[新增]** 。  
   
-8.  按一下 **[加入使用者]** 。  
+8.  按一下 [加入使用者]  。  
   
 9. 在 [使用者/群組] 中，輸入使用者帳戶。  
   

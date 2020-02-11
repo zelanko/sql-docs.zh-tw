@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: af1eccd0349d0ed204d595d32fdc35c76c3b2efa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104734"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>資料表 (報表產生器及 SSRS)
@@ -23,14 +23,15 @@ ms.locfileid: "66104734"
 > [!NOTE]  
 >  您可以將資料表當做報表組件，與報表分開發行。  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- 若要快速地開始使用資料表，請參閱[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) 或[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../create-a-basic-table-report-ssrs-tutorial.md)。  
+ 若要快速地開始使用資料表，請參閱[教學課程︰建立基本資料表報表 &#40;報表產生器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) 或[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../create-a-basic-table-report-ssrs-tutorial.md)。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 範例報表包括許多使用資料表的報表。 您可以在報表產生器或報表設計師中瀏覽範例報表的報表定義，或在報表產生器或報表設計師中預覽轉譯的報表，藉以了解資料表。 如需有關下載範例報表的詳細資訊，請參閱＜ [(SSRS) Reporting Services 範例](https://go.microsoft.com/fwlink/?LinkID=198283)＞。  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 範例報表包括許多使用資料表的報表。 您可以在報表產生器或報表設計師中瀏覽範例報表的報表定義，或在報表產生器或報表設計師中預覽轉譯的報表，藉以了解資料表。 如需有關下載範例報表的詳細資訊，請參閱＜ [(SSRS) Reporting Services 範例](https://go.microsoft.com/fwlink/?LinkID=198283)＞。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddingTable"></a> 加入資料表以顯示詳細資料  
+##  <a name="AddingTable"></a>加入資料表以顯示詳細資料  
  將資料表從功能區上的 [插入] 索引標籤加入至設計介面。 您可以使用「資料表或矩陣精靈」(包括建立資料來源連接和資料集與設定資料表) 來加入資料表，或根據您可以手動設定的資料表範本來加入資料表。  
   
 > [!NOTE]  
@@ -46,7 +47,7 @@ ms.locfileid: "66104734"
   
  ![在設計介面上選取的資料表範本](../media/rs-tabletemplatenewselected.gif "在設計介面上選取的資料表範本")  
   
- 資料列的資料列控制代碼會顯示詳細資料符號 (![具有詳細資料列之三條平行線的資料列代碼](../media/rs-icontablix-detailsrow.gif "具有詳細資料列之三條平行線的資料列代碼"))。 若要在這些資料列上顯示資料，將欄位從 [報表資料] 窗格拖曳到標頭資料列或詳細資料列的資料表資料格中。 兩個資料列會同時填入。 若要加入其他資料行，將欄位拖曳到資料表中，直到您看到插入點為止。 將資料集欄位加入到資料表之後，您可以變更日期和貨幣的預設格式來控制它們顯示在報表中的方式。 下圖顯示包含這些欄位的資料表資料區域：Date、Order、Product、Qty 和 Line Total。  
+ 資料列的資料列控點會顯示詳細資料符號（![有3個平行程式列用於詳細資訊資料列](../media/rs-icontablix-detailsrow.gif "具有詳細資料列之三條平行線的資料列代碼")）。 若要在這些資料列上顯示資料，將欄位從 [報表資料] 窗格拖曳到標頭資料列或詳細資料列的資料表資料格中。 兩個資料列會同時填入。 若要加入其他資料行，將欄位拖曳到資料表中，直到您看到插入點為止。 將資料集欄位加入到資料表之後，您可以變更日期和貨幣的預設格式來控制它們顯示在報表中的方式。 下圖顯示包含這些欄位的資料表資料區域：Date、Order、Product、Qty 和 Line Total。  
   
  ![設計、具有粗體資料行標頭的資料表](../media/rs-basictabledetailsformatteddesign.gif "設計、具有粗體資料行標頭的資料表")  
   
@@ -59,7 +60,7 @@ ms.locfileid: "66104734"
 ### <a name="adding-totals-for-detail-data"></a>加入詳細資料的資料表  
  若要加入總計，選取包含數值資料的資料格，然後使用快速鍵功能表自動加入數值欄位之詳細資料的標籤和總計。 您也可以手動指定其他標籤和總計。 下圖顯示同時包含自動和手動指定之總計的一般總計：  
   
- ![新增總計資料列至資料表](../media/rs-basictabledetailstotaldesign.gif "新增總計資料列至資料表")  
+ ![將總計資料列加入資料表](../media/rs-basictabledetailstotaldesign.gif "將總計資料列加入資料表")  
   
  在預覽中，報表會針對資料集查詢結果集中的每個資料列顯示一次標頭資料列和詳細資料列，而且該報表會顯示總計資料列。 下圖顯示資料表的最後幾個資料列，包括總計資料列。  
   
@@ -67,16 +68,16 @@ ms.locfileid: "66104734"
   
  如需詳細資訊，請參閱[將總計加入到群組或 Tablix 資料區 &#40;報表產生器及 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)。  
   
-##  <a name="AddingRowGroups"></a> 將資料列群組加入到資料表  
+##  <a name="AddingRowGroups"></a>將資料列群組加入至資料表  
  如同您可以將欄位從 [報表資料] 窗格拖曳到資料格來顯示詳細資料，您也可以將欄位拖曳到 [群組] 窗格來加入群組。 若是資料表，將欄位拖曳到 [資料列群組] 窗格。 加入群組之後，資料表會在要顯示群組值之資料列群組區域的新資料行中，自動加入資料格。 如需詳細資訊，請參閱 [Tablix 資料區的區域 &#40;報表產生器及 SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)。  
   
  下圖顯示 [設計] 檢視中包含兩個巢狀資料列群組的資料表。 若要建立資料列群組，拖曳 Order 欄位，然後將 Date 欄位拖曳到 [資料列群組] 窗格，並插入每個群組，當做現有群組的父系。 此圖表顯示一個以日期為基礎的父群組與一個以訂單號碼為基礎的子群組，以及依預設定義的詳細資料群組。  
   
- ![依日期和訂單分組的資料表](../media/rs-basictablegroupsdesign.gif "依日期和訂單分組的資料表")  
+ ![依照日期和訂單分組的資料表](../media/rs-basictablegroupsdesign.gif "依照日期和訂單分組的資料表")  
   
  在預覽中，報表會顯示先依日期，然後依訂單分組的訂單資料，如下圖所示。  
   
- ![依日期和訂單分組的資料表](../../tutorials/media/rs-basictablegroupspreview.gif "依日期和訂單分組的資料表")  
+ ![依照日期和訂單分組的資料表](../../tutorials/media/rs-basictablegroupspreview.gif "依照日期和訂單分組的資料表")  
   
  顯示群組資料的另一種方法是讓群組階層縮排，以顯示群組的巢狀關聯性，而不是在其自己的資料行中呈現每個值。 這種格式樣式稱為階梯狀報表。 如需如何將群組資訊格式化為階梯狀報表的詳細資訊，請參閱[建立階梯狀報表 &#40;報表產生器及 SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)。  
   
@@ -91,7 +92,7 @@ ms.locfileid: "66104734"
   
  如需詳細資訊，請參閱[將總計加入到群組或 Tablix 資料區 &#40;報表產生器及 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)。  
   
-##  <a name="RemovingHidingRows"></a> 移除或隱藏詳細資料列  
+##  <a name="RemovingHidingRows"></a>移除或隱藏詳細資料列  
  預覽報表中的資料表之後，您可能會決定移除現有的詳細資料列。 或者，您可能決定依預設隱藏這些資料列，然後讓使用者在檢視更多或更少詳細資料之間切換，就像在向下鑽研報表中一樣。  
   
  若要從資料表移除詳細資料列，請使用 [群組] 窗格。 選取詳細資料群組，然後使用快速鍵功能表刪除顯示詳細資料的群組和資料列。 下圖顯示依日期和訂單號碼分組之資料表的設計檢視，但是其中沒有詳細資料列。 在此資料表中沒有加入任何總計資料列。  

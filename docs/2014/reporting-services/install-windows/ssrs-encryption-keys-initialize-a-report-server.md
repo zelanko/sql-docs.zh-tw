@@ -18,18 +18,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f9bcb5e7818c4125b81d715d7e74f120a07449d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108742"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>初始化報表伺服器 (SSRS 組態管理員)
-  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，初始化的伺服器是可以在報表伺服器資料庫中加密和解密資料的伺服器。 初始化是報表伺服器作業的需求。 報表伺服器服務第一次啟動時，會進行初始化。 在您將報表伺服器聯結至現有的部署時，或者您在復原處理中手動重新建立金鑰時，也會進行初始化。 如需如何和為什麼使用加密金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 設定管理員&#41;](ssrs-encryption-keys-manage-encryption-keys.md) 和[儲存加密的報表伺服器資料 &#40;SSRS 設定管理員&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)。  
+  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，初始化的伺服器是可以在報表伺服器資料庫中加密和解密資料的伺服器。 初始化是報表伺服器作業的需求。 報表伺服器服務第一次啟動時，會進行初始化。 在您將報表伺服器聯結至現有的部署時，或者您在復原處理中手動重新建立金鑰時，也會進行初始化。 如需如何和為什麼使用加密金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 設定管理員&#41;](ssrs-encryption-keys-manage-encryption-keys.md) 和[儲存加密的報表伺服器資料 &#40;SSRS 設定管理員&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)。  
   
  加密金鑰有一部分是以報表伺服器服務的設定檔資訊為根據。 如果您變更用來執行報表伺服器服務的使用者識別，就必須隨之更新金鑰。 如果您是使用 Reporting Services 組態工具來變更識別，則會自動幫您處理這個步驟。  
   
- 如果初始化因故失敗，報表伺服器就會傳回 `RSReportServerNotActivated` 錯誤，以回應使用者和服務要求。 在此情況下，您可能需要進行系統或伺服器組態的疑難排解。 如需詳細資訊，請參閱[SSRS:使用 Reporting Services 進行疑難排解的問題和錯誤](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx)(https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) Technet Wiki 中。  
+ 如果初始化因故失敗，報表伺服器就會傳回 `RSReportServerNotActivated` 錯誤，以回應使用者和服務要求。 在此情況下，您可能需要進行系統或伺服器組態的疑難排解。 如需詳細資訊，請參閱 TechNet Wiki 中的 [SSRS：使用 Reporting Services 解決問題和錯誤](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) \(SSRS: Troubleshoot Issues and Errors with Reporting Services\)。  
   
 ## <a name="overview-of-the-initialization-process"></a>初始化處理的概觀  
  初始化處理會建立和儲存用於加密的對稱金鑰。 對稱金鑰是由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 密碼編譯服務所建立，而報表伺服器服務隨後使用它來將資料加密和解密。 對稱金鑰本身是使用非對稱金鑰來加密。  
@@ -71,6 +71,6 @@ ms.locfileid: "66108742"
  若要確認報表伺服器初始化，請在命令視窗中鍵入 **http://\<伺服器名稱>/reportserver**，來 Ping 報表伺服器 Web 服務。 如果發生 `RSReportServerNotActivated` 錯誤，初始化就會失敗。  
   
 ## <a name="see-also"></a>另請參閱  
- [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [將加密的報表伺服器資料儲存 &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

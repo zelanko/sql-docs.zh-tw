@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6c0b0cc68c73c66dabb237d859aba641fb234647
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102174"
 ---
 # <a name="security-page-site-settings-report-manager"></a>安全性頁面 (站台設定， 報表管理員)
@@ -24,32 +24,32 @@ ms.locfileid: "66102174"
   
  需要存取報表產生器或共用排程的所有其他使用者都必須被指派至系統角色指派。  
   
-## <a name="navigation"></a>巡覽  
+## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-security-page-for-site-settings"></a>若要開啟站台設定的安全性頁面  
   
 1.  開啟報表管理員。  
   
-2.  在頁面的頂端，按一下 **[站台設定]** 。 這樣就會開啟該站台的 [一般] 屬性頁面。  
+2.  在頁面的頂端，按一下 **[站台設定]**。 這樣就會開啟該站台的 [一般] 屬性頁面。  
   
-3.  選取 **[安全性]** 索引標籤。  
+3.  選取 [安全性]**** 索引標籤。  
   
 ## <a name="options"></a>選項。  
  **刪除**  
  按一下即可刪除現有的角色指派。 在按一下 **[刪除]** 之前，請選取您要移除之群組或使用者名稱旁邊的核取方塊。 如果某個角色指派是唯一剩餘的角色指派，您就無法刪除它。 刪除角色指派不會刪除群組或使用者帳戶或角色定義。  
   
  **新增角色指派**  
- 按一下即可開啟 [新增系統角色指派] 頁面，可用來建立報表伺服器站台的其他系統角色指派。 如需詳細資訊，請參閱[新增系統角色指派：編輯系統角色指派頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)。  
+ 按一下即可開啟 [新增系統角色指派] 頁面，可用來建立報表伺服器站台的其他系統角色指派。 如需詳細資訊，請參閱[新的系統角色指派：編輯系統角色指派頁面 &#40;報表管理員&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)。  
   
  **編輯**  
- 按一下即可開啟 [編輯系統角色指派] 頁面，可用來編輯報表伺服器站台的個別系統角色指派。 如需詳細資訊，請參閱[新增系統角色指派：編輯系統角色指派頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)。  
+ 按一下即可開啟 [編輯系統角色指派] 頁面，可用來編輯報表伺服器站台的個別系統角色指派。 如需詳細資訊，請參閱[新的系統角色指派：編輯系統角色指派頁面 &#40;報表管理員&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)。  
   
  **群組或使用者**  
  列出屬於現有角色指派之一部份的群組和使用者。 目前資料夾的現有角色指派是為此資料行中顯示的群組和使用者所定義的。 按一下群組或使用者名稱旁的 **[編輯]** ，即可檢視或編輯角色指派詳細資料。  
   
  **角色**  
- 列出屬於現有角色指派一部分的一個或多個角色定義。 如果有多個角色指派至群組或使用者帳戶，則該群組或使用者可以執行屬於所有角色的所有工作。 若要檢視每一個角色支援的工作集，請使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 您無法在報表管理員中檢視、建立、修改或刪除角色。 如需相關指示，請參閱 <<c0> [ 建立、 刪除或修改角色&#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)。</c0>  
+ 列出屬於現有角色指派一部分的一個或多個角色定義。 如果有多個角色指派至群組或使用者帳戶，則該群組或使用者可以執行屬於所有角色的所有工作。 若要查看每個角色支援的工作集，請[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]使用。 您無法在報表管理員中檢視、建立、修改或刪除角色。 如需相關指示，請參閱[建立、刪除或修改角色 &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d9c0b0a2c6ca3c12ca020dcc79b5aa4cad46c825
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105823"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的資料點 (報表產生器及 SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66105823"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>在圖表上放置資料點標籤  
  針對所有圖表類型，當您以滑鼠右鍵按一下圖表，然後選取 **[顯示資料標籤]** 時，可以顯示資料點標籤。 資料點標籤的位置會根據圖表類型而指定：  
   
--   在橫條圖上，您可以使用 **BarLabelStyle** 自訂屬性重新放置資料點標籤的位置。 有四個可能位置：外側、左側、中間與右側。 當橫條標籤樣式設定為 Outside 時，只要圖表區域能夠容納，標籤就會放置在橫條外部。 如果無法將標籤放置在橫條外部與圖表區域內部，標籤就會放在橫條內部。  
+-   在橫條圖上，您可以使用 **BarLabelStyle** 自訂屬性重新放置資料點標籤的位置。 可能的位置有四個：Outside、Left、Center 與 Right。 當橫條標籤樣式設定為 Outside 時，只要圖表區域能夠容納，標籤就會放置在橫條外部。 如果無法將標籤放置在橫條外部與圖表區域內部，標籤就會放在橫條內部。  
   
 -   在圓形圖上，您可以使用 **PieLabelStyle** 自訂屬性重新放置資料點標籤的位置。 在圓形圖周圍放置資料點標籤時有許多考量，包括圓形圖的大小、圓形圖及其對應圖例間的可用空間以及標籤的大小。 如需詳細資訊，請參閱 [在圓形圖外部顯示資料點標籤 &#40;報表產生器和 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)。  
   
@@ -60,21 +60,21 @@ ms.locfileid: "66105823"
   
 |圖表關鍵字|描述|適用於圖表類型|相等簡單運算式的範例|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
-|#VALY|資料點的 Y 值。|All|`=Fields!MyDataField.Value`|  
+|#VALY|資料點的 Y 值。|全部|`=Fields!MyDataField.Value`|  
 |#VALY2|資料點的 Y 值 #2。|範圍圖、泡泡圖|None|  
 |#VALY3|資料點的 Y 值 #3。|股票圖、K 線圖|None|  
 |#VALY4|資料點的 Y 值 #4。|股票圖、K 線圖|None|  
-|#SERIESNAME|數列名稱。|All|None|  
-|#LABEL|資料點標籤。|All|None|  
-|#AXISLABEL|軸資料點標籤。|形狀圖|`=Fields!MyDataField.Value`|  
-|#INDEX|資料點索引。|All|None|  
-|#PERCENT|資料點 Y 值的百分比。|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
-|#TOTAL|數列中所有 Y 值的總計。|All|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|對應到圖例項目文字的文字。|All|None|  
-|#AVG|數列中所有 Y 值的平均值。|All|`=Avg(Fields!MyDataField.Value)`|  
+|#SERIESNAME|數列名稱。|全部|None|  
+|#LABEL|資料點標籤。|全部|None|  
+|#AXISLABEL|軸資料點標籤。|形狀|`=Fields!MyDataField.Value`|  
+|#INDEX|資料點索引。|全部|None|  
+|#PERCENT|資料點 Y 值的百分比。|全部|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
+|#TOTAL|數列中所有 Y 值的總計。|全部|`=Sum(Fields!MyDataField.Value)`|  
+|#LEGENDTEXT|對應到圖例項目文字的文字。|全部|None|  
+|#AVG|數列中所有 Y 值的平均值。|全部|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|數列中所有 Y 值的最小值。|全部|`=Min(Fields!MyDataField.Value)`|  
-|#MAX|數列中所有 Y 值的最大值。|All|`=Max(Fields!MyDataField.Value)`|  
-|#FIRST|數列中所有 Y 值的第一個。|All|`=First(Fields!MyDataField.Value)`|  
+|#MAX|數列中所有 Y 值的最大值。|全部|`=Max(Fields!MyDataField.Value)`|  
+|#FIRST|數列中所有 Y 值的第一個。|全部|`=First(Fields!MyDataField.Value)`|  
   
  若要格式化關鍵字，請以括號括住 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串。 例如，若要將工具提示中資料點的值指定為包含兩位小數的數字，請以大括弧包含格式字串 "N2"，例如 "#VALY{N2}" 表示數列的 **ToolTip** 屬性。 如需有關 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串的詳細資訊，請參閱 MSDN 上的＜ [格式化型別](https://go.microsoft.com/fwlink/?LinkId=112024) ＞。 如需在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中將數字格式化的詳細資訊，請參閱[將數字和日期格式化 &#40;報表產生器和 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66105823"
 ## <a name="see-also"></a>另請參閱  
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [圖表 &#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [將軸標籤格式化成日期或貨幣 &#40;報表產生器及 SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [教學課程：將圓形圖新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   

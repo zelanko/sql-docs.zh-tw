@@ -1,5 +1,5 @@
 ---
-title: 報表產生器 (SSRS) |Microsoft Docs
+title: 報表產生器（SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b431dc6249cfabfb8e943b09304eeb7b10bc7e94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100121"
 ---
 # <a name="report-builder-ssrs"></a>報表產生器 (SSRS)
@@ -41,10 +41,10 @@ ms.locfileid: "66100121"
   
 -   將報表和相關項目儲存至報表伺服器、SharePoint 文件庫或本機電腦。  
   
- 報表產生器與報表設計師可共用許多功能。 如需有關報表產生器的詳細資訊，請參閱 <<c0> [ 報表產生器文件](https://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com 上。  
+ 報表產生器與報表設計師可共用許多功能。 如需報表產生器的詳細資訊，請參閱 msdn.microsoft.com 上的[報表產生器檔](https://go.microsoft.com/fwlink/?LinkId=154494)。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定報表產生器的存取](../report-server/configure-report-builder-access.md)   
+ [設定報表產生器存取](../report-server/configure-report-builder-access.md)   
  [Reporting Services 工具](reporting-services-tools.md)   
  [使用報表設計師設計報表 &#40;SSRS&#41;](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   

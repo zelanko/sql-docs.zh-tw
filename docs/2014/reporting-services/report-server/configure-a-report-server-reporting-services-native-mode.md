@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10e4a4befd8300863d8637a87e8c9bd03622d0af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104072"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>設定報表伺服器 (Reporting Services 原生模式)
@@ -29,7 +29,7 @@ ms.locfileid: "66104072"
   
 -   儲存應用程式資料、報表和其他項目的報表伺服器資料庫。  
   
- 如果您選取其中一個下列安裝選項時，安裝程式將會最小的設定：原生模式預設組態或 SharePoint 整合的模式預設組態。 如果您在僅限檔案模式中安裝報表伺服器 (這是安裝精靈中的 **[安裝但不設定伺服器]** 選項)，則只會設定服務帳戶。 在安裝程式完成之後，必須設定 Web 服務 URL 和報表伺服器資料庫。  
+ 如果您選取以下兩個安裝選項的其中一種，安裝程式會進行最小的設定：原生模式預設組態或 SharePoint 整合模式預設組態。 如果您在僅限檔案模式中安裝報表伺服器 (這是安裝精靈中的 **[安裝但不設定伺服器]** 選項)，則只會設定服務帳戶。 在安裝程式完成之後，必須設定 Web 服務 URL 和報表伺服器資料庫。  
   
  報表管理員是適用於原生模式報表伺服器的選擇性功能，但是建議您設定報表管理員，讓您可以授與使用者對報表伺服器的存取權，並管理報表伺服器內容。 如果您在 SharePoint 整合模式中部署報表伺服器，請使用 SharePoint 伺服器的 Web 前端來授與存取權。  
   
@@ -59,10 +59,10 @@ ms.locfileid: "66104072"
  建立資料夾、上傳項目及執行報表來確認您的安裝。 請依照 [驗證 Reporting Services 安裝](../install-windows/verify-a-reporting-services-installation.md) 中的指示來確認安裝。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理 Reporting Services 原生模式報表伺服器](manage-a-reporting-services-native-mode-report-server.md)   
- [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md)   
- [設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
- [設定報表伺服器來進行遠端管理](configure-a-report-server-for-remote-administration.md)   
+ [管理 Reporting Services 的原生模式報表伺服器](manage-a-reporting-services-native-mode-report-server.md)   
+ [設定報表伺服器存取的防火牆](configure-a-firewall-for-report-server-access.md)   
+ [&#40;SSRS&#41;設定原生模式報表伺服器進行本機管理](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
+ [設定報表伺服器進行遠端系統管理](configure-a-report-server-for-remote-administration.md)   
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

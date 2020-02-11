@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: da3f95120b81877076533d19e4cb05785d5cb932
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105650"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>指標 (報表產生器及 SSRS)
@@ -41,9 +41,10 @@ ms.locfileid: "66105650"
   
  ![rs_IndicatorTableTrafficLight](../media/rs-indicatortabletrafficlight.gif "rs_IndicatorTableTrafficLight")  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供以原狀使用的內建指標集合與指標圖示，但是您也可以自訂個別的指標圖示與指標集合以符合您的需求。  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供以原狀使用的內建指標集合與指標圖示，但是您也可以自訂個別的指標圖示與指標集合以符合您的需求。  
   
- 如需使用指標作為 KPI 的詳細資訊，請參閱[教學課程：將 KPI 新增至報表 &#40;報表產生器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
+ 如需使用指標作為 KPI 的詳細資訊，請參閱[教學課程：將 KPI 加入至報表 &#40;報表產生器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
   
 > [!NOTE]  
 >  您可以將指標當做報表組件，與報表分開發行。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -51,7 +52,7 @@ ms.locfileid: "66105650"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ComparingIndicatorsToGauges"></a> 比較指標與量測計  
+##  <a name="ComparingIndicatorsToGauges"></a>比較指標與量測計  
  雖然指標在外觀上有很大的差異，但它們只是簡單的量測計。 指標和量測計都會顯示單一資料值。 主要差異是量測計具備框架和指標之類的元素。 指標則只有狀態、圖示及 (選擇性) 標籤。 指標狀態類似於量測計範圍。  
   
  指標與量測計相同，都位於量測計面板內。 當您想要使用 **[指標屬性]** 對話方塊或 [屬性] 窗格來設定指標時，您需要選取指標，而不是此面板。 否則，可用的選項會套用到量測計面板選項，而且您無法設定指標。 下圖顯示選取的指標如何出現在它的量測計面板中。  
@@ -61,7 +62,7 @@ ms.locfileid: "66105650"
  根據您要描繪資料值的方式，量測計可能比指標更有效。 如需詳細資訊，請參閱 [量測計 &#40;報表產生器及 SSRS&#41;](gauges-report-builder-and-ssrs.md)。  
   
   
-##  <a name="ChoosingIndicatorTypes"></a> 選擇要使用的指標類型  
+##  <a name="ChoosingIndicatorTypes"></a>選擇要使用的指標類型  
  不論資料位於詳細資料列或資料表或矩陣中的資料列或資料行群組，或本身位於報表主體或儀表板中，使用正確的指標集合都是與資料意義立即進行通訊的關鍵。 內建的指標集合擁有三個或多個圖示。 這些指標可以依形狀、色彩或兩者而有所不同。 每個圖示都會與不同的資料狀態進行通訊。  
   
  下表列出內建的指標集合，並描述其中一些常見的用法。  
@@ -76,7 +77,7 @@ ms.locfileid: "66105650"
  選擇指標集合後，您就可以在指標或 [屬性] 窗格的對話方塊中設定其屬性，來自訂集合中每個指標圖示的外觀。 您可以使用內建的色彩、圖示和大小或運算式來設定指標。  
   
   
-##  <a name="CustomizingIndicators"></a> 自訂指標  
+##  <a name="CustomizingIndicators"></a>自訂指標  
  您可以自訂指標以符合您的需求。 您可以使用下列方式修改指標集合以及集合內的個別指標圖示：  
   
 -   變更指標圖示的色彩。 例如，您可能希望指標集合的色彩配置是單色的，或使用預設色彩以外的色彩。  
@@ -92,10 +93,10 @@ ms.locfileid: "66105650"
  如需詳細資訊，請參閱 [變更指標圖示和指標集合 &#40;報表產生器及 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)。  
   
   
-##  <a name="UsingIndicatorsInTablesMatrices"></a> 在資料表和矩陣中使用指標  
+##  <a name="UsingIndicatorsInTablesMatrices"></a>在資料表和矩陣中使用指標  
  簡單的指標形狀使其適合在資料表和矩陣中使用。 指標即使很小，都仍然有效。 這讓它們在報表的詳細資料或群組資料列中都相當實用。  
   
- 下圖顯示包含使用方向性指標集合 ([四箭號 (彩色)]  ) 之資料表的報表來表示標尺。 報表中的指標圖示設定為使用藍色陰影來代替預設色彩：紅色、黃色和綠色。  
+ 下圖顯示包含使用方向性指標集合 ([四箭號 (彩色)]****) 之資料表的報表來表示標尺。 報表中的指標圖示設定為使用藍色陰影來代替預設色彩：紅色、黃色和綠色。  
   
  ![rs_IndicatorReportBlueArrows](../media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   
@@ -112,7 +113,7 @@ ms.locfileid: "66105650"
  指標只使用單一值。 如果您必須顯示多個資料值，請使用走勢圖或資料橫條來代替指標。 它們可以表示多個資料值，但即使很小，也很容易了解，而且在資料表和矩陣中運作良好。 如需詳細資訊，請參閱 [走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
   
-##  <a name="SizingIndicatators"></a> 調整指標的大小，將視覺影響最大化  
+##  <a name="SizingIndicatators"></a>調整大小指標以最大化視覺效果  
  除了色彩、方向和形狀之外，您還可以使用大小，將指標的視覺影像最大化。 設想使用指標顯示客戶對於不同類型自行車之滿意度的報表。 根據客戶滿意度，指標所使用的圖示可以設定為不同的大小。 滿意度愈高，出現在報表中的圖示愈大。 下圖顯示自行車銷售的報告，而圖示的大小會反映銷售量。  
   
  您可以根據指標所使用的欄位值，使用運算式來動態設定星星的大小。 如需詳細資訊，請參閱 [使用運算式指定指標的大小 &#40;報表產生器及 SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)。  
@@ -120,7 +121,7 @@ ms.locfileid: "66105650"
  若要深入了解撰寫與使用運算式，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)。  
   
   
-##  <a name="IncludingIndicatorsInGauges"></a> 在量測計面板中加入指標與量測計  
+##  <a name="IncludingIndicatorsInGauges"></a>在量測計面板中包含指標和量測計  
  指標的位置永遠在量測計面板內。 量測計面板是最上層的容器，其中可以包含一個或多個量測計和狀態指標。 量測計面板可以包含子系或相鄰的量測計或指標。 如果您使用指標做為量測計的子系，您可以顯示量測計中所顯示的資料值狀態，將資料進一步視覺化。 例如，量測計中的指標可以顯示一個綠色圓形來表示量測計中所指向的值位於值範圍的 33% 以上。 並排使用量測計和指標時，您可以使用不同的方式來表示資料。 在任一種情況下，指標和量測計可以使用相同或不同的資料欄位。  
   
  下圖並排顯示量測計內的一個指標。  
@@ -132,12 +133,13 @@ ms.locfileid: "66105650"
  如需使用量測計的詳細資訊，請參閱 [量測計 &#40;報表產生器及 SSRS&#41;](gauges-report-builder-and-ssrs.md)。  
   
   
-##  <a name="SequenceIndicatorStates"></a> 指標狀態的順序  
- **[指標屬性]** 對話方塊的 **[值和狀態]** 索引標籤中指標狀態的順序會影響指標狀態的開始和結束值重疊時，為資料值所顯示的指標圖示。  
+##  <a name="SequenceIndicatorStates"></a>指標狀態的順序  
+ 
+  **[指標屬性]** 對話方塊的 **[值和狀態]** 索引標籤中指標狀態的順序會影響指標狀態的開始和結束值重疊時，為資料值所顯示的指標圖示。  
   
  無論使用百分比或數值狀態度量單位，都可能會發生這種狀況。 它比較可能發生於使用數值度量單位時，因為您為此度量提供特定值。 也比較可能發生於捨入報表資料值時，因為這傾向於使值較不離散。  
   
- 下列案例描述在 [三箭號 (彩色)]  方向指標中變更三個狀態的順序時，資料視覺效果如何受到影響。 依預設，此順序為：  
+ 下列案例描述在 [三箭號 (彩色)]**** 方向指標中變更三個狀態的順序時，資料視覺效果如何受到影響。 依預設，此順序為：  
   
 1.  紅色向下箭頭  
   
@@ -147,7 +149,7 @@ ms.locfileid: "66105650"
   
  下列案例顯示四個不同的狀態順序及其值範圍，以及順序如何影響資料視覺效果。  
   
- 在這些案例中，[三箭號 (彩色)]  指標使用數值狀態度量。  
+ 在這些案例中，[三箭號 (彩色)]**** 指標使用數值狀態度量。  
   
 |狀態順序|開始值|結束值|  
 |--------------------|-----------------|---------------|  
@@ -184,25 +186,25 @@ ms.locfileid: "66105650"
  總而言之，評估開始，指標狀態清單頂端和報表會顯示與第一個其值範圍可納入資料之指標狀態相關的指標圖示。 藉由變更指標狀態的順序，可以影響資料值的視覺效果。  
   
   
-##  <a name="HowTo"></a> 如何主題  
+##  <a name="HowTo"></a>How to 主題  
  本節列出的程序會示範如何加入、變更與刪除指標；如何設定與自訂指標；以及如何使用量測計中的指標。  
   
--   [加入或刪除指標 &#40;報表產生器及 SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
+-   [新增或刪除指標 &#40;報表產生器和 SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
   
--   [變更指標圖示和指標集合 &#40;報表產生器及 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [變更指標圖示和指標集合 &#40;報表產生器和 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [設定度量單位 &#40;報表產生器及 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [設定度量單位 &#40;報表產生器和 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [設定同步處理範圍 &#40;報表產生器及 SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [設定同步處理範圍 &#40;報表產生器和 SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
--   [使用運算式指定指標的大小 &#40;報表產生器及 SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
+-   [使用運算式 &#40;報表產生器和 SSRS 來指定指標的大小&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
   
--   [在量測計面板中加入指標與量測計 &#40;報表產生器及 SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
+-   [在量測計面板中包含指示器和量測計 &#40;報表產生器和 SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   
   
 ## <a name="see-also"></a>另請參閱  
  [量測計 &#40;報表產生器及 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
- [走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [走勢圖和資料橫條 &#40;報表產生器和 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

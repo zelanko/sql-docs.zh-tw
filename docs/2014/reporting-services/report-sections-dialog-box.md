@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1f634c206a2128369d8eee92a6355d26a620c3c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104313"
 ---
 # <a name="report-sections-dialog-box"></a>報表區段對話方塊
-  當您開啟報表時，報表設計師會驗證報表包含只有一個報表定義語言 (RDL) **\<一節 >** 項目。 不支援開啟具有多個 **\<Section>** 項目的報表。  
+  當您開啟報表時，報表設計師會驗證報表中是否只包含一個報表定義語言（RDL） ** \<區段>** 元素。 不支援開啟具有多個** \<區段>** 元素的報表。  
   
  雖然具有多個區段的報表定義可以透過程式設計方式產生，但還是不支援在報表撰寫環境中編輯報表。  
   
  若要識別報表、報表伺服器、專案或您報表撰寫環境的目前報表定義格式，請參閱[尋找報表定義結構描述版本 &#40;SSRS&#41;](reports/find-the-report-definition-schema-version-ssrs.md)。  
   
- 按一下 **[確定]** 繼續進行。  
+ 按一下 [確定]**** 繼續。  
   
   

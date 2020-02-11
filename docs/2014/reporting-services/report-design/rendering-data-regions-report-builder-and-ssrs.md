@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 918aa5eee3aada465e904cf7f1627f93d1b9bb6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105373"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>轉譯資料區 (報表產生器及 SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66105373"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="tablix-data-regions"></a>Tablix 資料區  
- 可讓您建立資料表、矩陣與清單的 Tablix 資料區會轉譯為由資料行和資料列組成的方格。 資料列與資料行的交集就是資料格。 進行轉譯時，此資料格可以包含資料或其他報表項目，例如，影像、矩形、文字方塊或子報表。 Tablix 資料區可以用垂直和/或水平方式擴展。 此外，邊角資料格、資料區域的標頭資料格，以及資料區域的主體資料格可以根據其內容而擴展。 如果資料區跨越多個頁面，在顯示資料區的每一個頁面上，都會轉譯設定為隨著資料區重複的報表項目。 如需詳細資訊，請參閱 <<c0> [ 列出&#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)。</c0>  
+ 可讓您建立資料表、矩陣與清單的 Tablix 資料區會轉譯為由資料行和資料列組成的方格。 資料列與資料行的交集就是資料格。 進行轉譯時，此資料格可以包含資料或其他報表項目，例如，影像、矩形、文字方塊或子報表。 Tablix 資料區可以用垂直和/或水平方式擴展。 此外，邊角資料格、資料區域的標頭資料格，以及資料區域的主體資料格可以根據其內容而擴展。 如果資料區跨越多個頁面，在顯示資料區的每一個頁面上，都會轉譯設定為隨著資料區重複的報表項目。 如需詳細資訊，請參閱[&#40;報表產生器和 SSRS&#41;清單](tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
 ### <a name="right-to-left"></a>由右至左  
  設定為由右至左顯示的 Tablix 資料區會隨著其結構，轉譯為資料區的鏡映影像 (如果是由左至右轉譯)。 資料區域的邊角會出現在右上角。 如果報表中有動態資料行，則會向左展開。 由右至左設定不會影像資料區域中資料的順序，只有您的資料行順序會有所不同。  

@@ -1,5 +1,5 @@
 ---
-title: 伺服器相關的動態管理檢視和函數 (TRANSACT-SQL) |Microsoft Docs
+title: 伺服器相關的動態管理檢視和函數（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ ms.assetid: d8f4e155-c2fb-4a1f-aa0d-e9790bdab925
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e9b99934a3d931810e29d821ba0124334bac2c12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061899"
 ---
 # <a name="server-related-dynamic-management-views-and-functions-transact-sql"></a>伺服器相關的動態管理檢視與函數 (Transact-SQL)

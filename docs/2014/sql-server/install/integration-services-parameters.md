@@ -13,16 +13,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 100e796bb27d1e60db000a364a0432273dd5cafb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094240"
 ---
 # <a name="integration-services-parameters"></a>Integration Services 參數
-  針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，您可以決定要分析[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝的電腦上，或[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]檔案封裝在檔案系統中。 如果您要分析檔案系統中的檔案，請提供包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝之資料夾的路徑。  
+  針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，您可以決定要分析[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]電腦上的封裝，或[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝檔案中的檔案。 如果您要分析檔案系統中的檔案，請提供包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝之資料夾的路徑。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **分析電腦上的 SSIS 封裝**  
  選取此選項，即可分析電腦上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 依預設，會選取這個選項。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "66094240"
  選取此選項，即可分析檔案系統中的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
  **SSIS 封裝的路徑**  
- 找出保存 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的 UNC 或本機路徑。 您不需要加入檔案名稱。 如果無法存取您所輸入的路徑，就無法按**下一步**。 根據預設，此路徑是空白的。 只有當您選取時，這個欄位啟用**分析 SSIS 封裝檔案**。  
+ 找出保存 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的 UNC 或本機路徑。 您不需要加入檔案名稱。 如果您輸入的路徑無法存取，就無法按 **[下一步]**。 根據預設，此路徑是空白的。 只有當您選取 [**分析 SSIS 封裝**檔案] 時，才會啟用此欄位。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14d0a9f95ea3abccd2d50f469fe068459baa9364
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101955"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>修改或刪除角色指派 (報表管理員)
@@ -36,36 +36,36 @@ ms.locfileid: "66101955"
   
 ### <a name="to-modify-or-delete-a-system-role-assignment"></a>若要修改或刪除系統角色指派  
   
-1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)。  
+1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)。  
   
-2.  按一下 **[站台設定]** 。  
+2.  按一下 **[站台設定]**。  
   
 3.  按一下 **[安全性]** 。 如此就會依據帳戶名稱列出目前針對伺服器或向外延展部署所定義的所有系統層級角色指派。  
   
 4.  尋找您想要修改或刪除的角色指派。  
   
-5.  若要新增或移除特定使用者或群組的角色，請按一下 [編輯]  。  
+5.  若要新增或移除特定使用者或群組的角色，請按一下 [編輯]****。  
   
-6.  若要刪除角色指派，請按一下使用者或群組名稱旁的核取方塊，然後按一下 [刪除]  。  
+6.  若要刪除角色指派，請按一下使用者或群組名稱旁的核取方塊，然後按一下 [刪除]****。  
   
 ### <a name="to-modify-or-delete-an-item-role-assignment"></a>若要修改或刪除項目角色指派  
   
-1.  啟動 [報表管理員]  並找出您想要編輯或刪除角色指派的項目。  
+1.  啟動 [報表管理員]**** 並找出您想要編輯或刪除角色指派的項目。  
   
 2.  將滑鼠停留在該項目上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 [安全性]  。  
+3.  在下拉式功能表中，按一下 [安全性]****。  
   
 4.  尋找您想要修改或刪除的角色指派。  
   
-5.  若要新增或移除特定使用者或群組的角色，請按一下 [編輯]  。  
+5.  若要新增或移除特定使用者或群組的角色，請按一下 [編輯]****。  
   
-6.  若要刪除角色指派，請按一下使用者或群組名稱旁的核取方塊，然後按一下 [刪除]  。  
+6.  若要刪除角色指派，請按一下使用者或群組名稱旁的核取方塊，然後按一下 [刪除]****。  
   
 ## <a name="see-also"></a>另請參閱  
- (create-and-manage-role-assignments.md)   
+ （create-and-manage-role-assignments.md）   
  [角色指派](role-assignments.md)   
- [網站設定頁面 &#40;報表管理員&#41;](../site-settings-page-report-manager.md)   
- [新增系統角色指派：編輯系統角色指派頁面&#40;報表管理員&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+ [[網站設定] 頁面 &#40;報表管理員&#41;](../site-settings-page-report-manager.md)   
+ [新增系統角色指派： [編輯系統角色指派] 頁面 &#40;報表管理員&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   

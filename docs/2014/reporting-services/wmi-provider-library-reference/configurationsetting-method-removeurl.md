@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bdd38b66a62b3d839f89f078904f7a3a9cc82d66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098165"
 ---
-# <a name="removeurl-method-wmi-msreportserverconfigurationsetting"></a>RemoveURL 方法 (WMI MSReportServer_ConfigurationSetting)
+# <a name="removeurl-method-wmi-msreportserver_configurationsetting"></a>RemoveURL 方法 (WMI MSReportServer_ConfigurationSetting)
   移除針對報表伺服器所保留的 URL。 如果有多個需要移除的 URL，您就必須呼叫這個 API 來逐一進行此作業。  
   
 ## <a name="syntax"></a>語法  
@@ -36,7 +36,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
 ```  
   
 ## <a name="parameters"></a>參數  
- *應用程式*  
+ *Application*  
  要移除保留項目之應用程式的名稱。  
   
  *URLString*  
@@ -55,7 +55,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  傳回 *HRESULT* ，指出方法呼叫成功或失敗。 值為 0 表示方法呼叫成功。錯誤碼則表示呼叫不成功。  
   
 ## <a name="remarks"></a>備註  
- *UrlString* 不包含虛擬目錄名稱 - [SetVirtualDirectory 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) 方法是針對該目的所提供。  
+ *UrlString*不包含虛擬目錄名稱- [SETVIRTUALDIRECTORY 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md)方法是針對該目的而提供的。  
   
  呼叫 [ReserveURL](configurationsetting-method-reserveurl.md) 方法之前，您必須針對 *Application* 參數的 VirtualDirectory 組態屬性提供一個值。 您可以使用 [SetVirtualDirectory 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) 方法來設定 VirtualDirectory 屬性。  
   
@@ -64,7 +64,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  這個方法會導致所有非組態應用程式網域在此作業期間進行硬式回收並停止。在此作業完成之後，應用程式網域就會重新啟動。  
   
 ## <a name="requirements"></a>需求  
- **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **命名空間：**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)  

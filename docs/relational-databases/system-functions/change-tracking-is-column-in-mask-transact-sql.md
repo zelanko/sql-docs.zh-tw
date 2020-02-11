@@ -1,5 +1,5 @@
 ---
-title: CHANGE_TRACKING_IS_COLUMN_IN_MASK (TRANSACT-SQL) |Microsoft Docs
+title: CHANGE_TRACKING_IS_COLUMN_IN_MASK （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -20,16 +20,16 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a6f7e9d8d9ab99ebe4a7c5749033eacf85b8feb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042987"
 ---
-# <a name="changetrackingiscolumninmask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
+# <a name="change_tracking_is_column_in_mask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  解譯 CHANGETABLE(CHANGES...) 函式所傳回的 SYS_CHANGE_COLUMNS 值。 這可讓應用程式決定指定的資料行是否要包含在針對 SYS_CHANGE_COLUMNS 傳回的值中。  
+  解讀 CHANGETABLE （CHANGES ...）函數傳回的 SYS_CHANGE_COLUMNS 值。 這可讓應用程式決定指定的資料行是否要包含在針對 SYS_CHANGE_COLUMNS 傳回的值中。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,10 +42,10 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
   
 ## <a name="arguments"></a>引數  
  *column_id*  
- 要經過檢查之資料行的識別碼。 要取得 ID，請使用資料行[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)函式。  
+ 要經過檢查之資料行的識別碼。 您可以使用[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)函數來取得資料行識別碼。  
   
  *change_columns*  
- 二進位資料之 SYS_CHANGE_COLUMNS 資料行[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)資料。  
+ 這是[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)資料之 SYS_CHANGE_COLUMNS 資料行中的二進位資料。  
   
 ## <a name="return-type"></a>傳回類型  
  **bit**  
@@ -55,14 +55,15 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
   
 |傳回值|描述|  
 |------------------|-----------------|  
-|0|指定的資料行不是處於*change_columns*清單。|  
-|1|指定的資料行正處於*change_columns*清單。|  
+|0|指定的資料行不在*change_columns*清單中。|  
+|1|指定的資料行位於*change_columns*清單中。|  
   
 ## <a name="remarks"></a>備註  
- CHANGE_TRACKING_IS_COLUMN_IN_MASK 不會執行任何檢查來驗證*column_id*值，或*change_columns*參數已經從資料表取得*column_id*取得。  
+ CHANGE_TRACKING_IS_COLUMN_IN_MASK 不會執行任何檢查來驗證*column_id*值，或從取得*column_id*的資料表中取得*change_columns*參數。  
   
 ## <a name="examples"></a>範例  
- 下列範例可判斷是否更新 `Salary` 資料表的 `Employees` 資料行。 `COLUMNPROPERTY`函式會傳回的資料行識別碼`Salary`資料行。 `@change_columns` 區域變數必須使用 CHANGETABLE 設定為查詢結果，做為資料來源。  
+ 下列範例可判斷是否更新 `Salary` 資料表的 `Employees` 資料行。 `COLUMNPROPERTY`函數會傳回資料`Salary`行的資料行識別碼。 
+  `@change_columns` 區域變數必須使用 CHANGETABLE 設定為查詢結果，做為資料來源。  
   
 ```sql  
 SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK  

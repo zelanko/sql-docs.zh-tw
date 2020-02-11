@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dac2694101678f8728de4a4bcdd3db416ad4c17f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104922"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>在資料區中排序資料 (報表產生器及 SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "66104922"
   
 3.  針對每個排序運算式，請依照下列步驟執行：  
   
-    1.  按一下 **[加入]** 。  
+    1.  按一下 [新增]  。  
   
     2.  輸入或選取排序資料所依據的運算式。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66104922"
   
 4.  針對每個排序運算式，請依照下列步驟執行：  
   
-    1.  按一下 **[加入]** 。  
+    1.  按一下 [新增]  。  
   
     2.  輸入或選取排序資料所依據的運算式。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66104922"
   
 3.  針對每個排序運算式，請依照下列步驟執行：  
   
-    1.  按一下 **[加入]** 。  
+    1.  按一下 [新增]  。  
   
     2.  選取符合您群組欄位的運算式。 您可以按一下 **[群組]** 來驗證群組欄位的運算式。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66104922"
   
 3.  針對每個排序運算式，請依照下列步驟執行：  
   
-    1.  按一下 **[加入]** 。  
+    1.  按一下 [新增]  。  
   
     2.  選取符合您資料欄位的運算式。 在大部分的情況下，這是彙總值，例如 `=Sum(Fields!Quantity.Value)`。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66104922"
   
 7.  針對每個排序運算式，請依照下列步驟執行：  
   
-    1.  按一下 **[加入]** 。  
+    1.  按一下 [新增]  。  
   
     2.  選取符合您群組欄位的運算式。 您可以按一下 **[群組]** 來驗證群組欄位的運算式。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66104922"
  如需如何在量測計中群組資料的詳細資訊，請參閱[量測計 &#40;報表產生器及 SSRS&#41;](gauges-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [對話方塊、窗格和精靈的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [對話方塊、窗格和嚮導的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [跨多個形狀圖指定一致的色彩 &#40;報表產生器及 SSRS&#41;](shape-charts-report-builder-and-ssrs.md)  

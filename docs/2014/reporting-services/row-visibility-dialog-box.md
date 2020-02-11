@@ -1,5 +1,5 @@
 ---
-title: 資料列可見性對話方塊 |Microsoft Docs
+title: 資料列可見度對話方塊 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fe9af16c34fa70bb8fcda0dcaae64a39786e3cd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102410"
 ---
 # <a name="row-visibility-dialog-box"></a>資料列可見性對話方塊
   使用 **[資料列可見性]** 對話方塊在報表第一次執行時顯示或隱藏選取的資料列，或使用其他報表項目來切換資料列的可見性。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **一開始執行報表時**  
  選擇一個選項以指出報表項目最初顯示在報表中的方式。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66102410"
  **隱藏**  
  選取此選項，以隱藏報表項目。  
   
- **顯示或隱藏 依據運算式**  
+ **依據運算式顯示或隱藏**  
  選取此選項即可使用運算式改變初始可見性。  
   
  輸入會評估為 `Boolean` 值的運算式，`True` 會隱藏項目，`False` 會顯示項目。 請按一下 [運算式]\(**fx**) 按鈕來編輯運算式。  
@@ -45,7 +45,7 @@ ms.locfileid: "66102410"
   
 ## <a name="see-also"></a>另請參閱  
  [運算式範例 &#40;報表產生器及 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [將展開或摺疊動作新增至項目中 &#40;報表產生器及 SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
+ [將展開或折迭動作新增至 &#40;報表產生器和 SSRS 的專案&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [影像 &#40;報表產生器及 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [報表設計師 F1 說明](tools/report-designer-f1-help.md)  
   

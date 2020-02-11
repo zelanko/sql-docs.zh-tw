@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2866b0b8a72e48dbb6c93b37b2a1a83e20e12821
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102535"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>將共用資料來源發行至 SharePoint 文件庫
@@ -30,19 +30,19 @@ ms.locfileid: "66102535"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟現有或新的報表伺服器專案。  
   
-2.  按一下 [專案]  功能表上的 [屬性]  。 \<專案>  [屬性頁]  對話方塊隨即開啟。  
+2.  按一下 [專案]  功能表上的 [屬性]  。 _專案>\<_ [屬性頁]  對話方塊隨即開啟。  
   
 3.  選擇您用來發行至 SharePoint 網站的 [組態]  。  
   
 4.  如果您想要發行專案中的共用資料來源，並覆寫之前發行的共用資料來源，請將 **OverwriteDataSources** 設定為 **True**。  
   
-5.  (選擇性) 為 **TargetDataSourceFolder**輸入 SharePoint 文件庫或文件庫資料夾的 URL。 例如， *http://TestServer/TestSite/Documents/DataSources* 。  
+5.  (選擇性) 為 **TargetDataSourceFolder**輸入 SharePoint 文件庫或文件庫資料夾的 URL。 例如， *http://TestServer/TestSite/Documents/DataSources*。  
   
      如果您未指定值，則會使用 **TargetReportFolder** 值。  
   
-6.  為 **TargetReportFolder**輸入文件庫或文件庫資料夾的 URL。 例如，http: *//TestServer/TestSite/Documents/Reports*。  
+6.  為 **TargetReportFolder**輸入文件庫或文件庫資料夾的 URL。 例如，http:*//TestServer/TestSite/Documents/Reports*。  
   
-7.  為 **TargetServerURL**輸入 SharePoint 頂層網站或子網站的 URL。 若未指定網站，則會使用預設的最上層網站。 例如， http://*servername*、 http://*servername*/*site* 或 http://*servername*/*site*/*subsite*。  
+7.  為 **TargetServerURL**輸入 SharePoint 頂層網站或子網站的 URL。 若未指定網站，則會使用預設的最上層網站。 例如，http://*servername*、http://*servername*/*site*或 http://*servername*/*site*/*subsite*。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

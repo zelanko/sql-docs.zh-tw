@@ -1,5 +1,5 @@
 ---
-title: 共用的資料來源屬性對話方塊、 認證 |Microsoft Docs
+title: 共用資料來源屬性對話方塊、認證 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf21cc35bb41837b65d2a2b3c2c946ffae34864f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101255"
 ---
 # <a name="shared-data-source-properties-dialog-box-credentials"></a>共用資料來源屬性對話方塊、認證
   選取 **[共用資料來源屬性]** 對話方塊上的 **[認證]** ，來顯示和修改要連接到報表中共用資料來源的認證。 您所提供的認證會用來存取資料來源，並快取資料副本，以預覽報表。 如需如何快取預覽資料的詳細資訊，請參閱 [預覽報表](reports/previewing-reports.md)。 如需認證的詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
   
 ## <a name="options"></a>選項。  
- **使用 Windows 驗證 （整合式安全性）**  
+ **使用 Windows 驗證 (整合式安全性)**  
  選取此選項即可使用 Windows 驗證。  
   
  **使用此使用者名稱和密碼**  
@@ -45,8 +45,8 @@ ms.locfileid: "66101255"
  選取此選項就不會提供資料來源的認證。 只有在資料來源未接受認證，或是使用一些其他方式傳送認證時，這個選項才有用。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料連接、 資料來源和 Reporting Services 中的連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [共用資料來源屬性對話方塊，一般](../../2014/reporting-services/shared-data-source-properties-dialog-box-general.md)  
+ [Reporting Services 中的資料連線、資料來源及連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [指定報表資料來源的認證和連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [共用資料來源屬性對話方塊、一般](../../2014/reporting-services/shared-data-source-properties-dialog-box-general.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb726adbb523f679fd9d59e3e51b2dc1291e6247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106053"
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>在圓形圖外部顯示資料點標籤 (報表產生器及 SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "66106053"
   
 5.  將 **PieLabelStyle** 屬性設定為 **Outside**。  
   
-6.  設定`PieLineColor`屬性，以**黑色**。 PieLineColor 屬性定義每個資料點標籤的註標線。  
+6.  將`PieLineColor`屬性設定為**黑色**。 PieLineColor 屬性定義每個資料點標籤的註標線。  
   
 ### <a name="to-prevent-overlapping-labels-displayed-outside-a-pie-chart"></a>若要防止在圓形圖外部顯示重疊的標籤  
   
@@ -56,6 +56,6 @@ ms.locfileid: "66106053"
 ## <a name="see-also"></a>另請參閱  
  [圓形圖 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [收集圓形圖上的小配量 &#40;報表產生器及 SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [在圓形圖上顯示百分比值 &#40;報表產生器及 SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
+ [在圓形圖上顯示百分比值 &#40;報表產生器和 SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   

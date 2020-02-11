@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99456151a71e74d0e85baec19cc42d8450c00ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106170"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>建立文件引導模式 (報表產生器及 SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "66106170"
     > [!NOTE]  
     >  若要選取 Tablix 資料區，請在任何資料格中按一下來顯示資料列和資料行控點，然後按一下角控點。  
   
-2.  在 [屬性] 窗格中，輸入您想要出現在文件引導模式，在文字`DocumentMapLabel`屬性，或輸入運算式評估為某個標籤。 例如，輸入 **Sales Chart**。  
+2.  在 [屬性] 窗格中，輸入您想要在`DocumentMapLabel`屬性的檔引導模式中顯示的文字，或輸入評估為標籤的運算式。 例如，輸入 **Sales Chart**。  
   
     > [!NOTE]  
     >  如果看不到 [屬性] 窗格，請在 **[檢視]** 索引標籤的 **[顯示/隱藏]** 群組中，選取 **[屬性]** 。  
@@ -112,13 +112,13 @@ ms.locfileid: "66106170"
 4.  在報表管理員中貼上此 URL，然後按 ENTER 鍵。 報表便會執行，而且文件引導模式會隱藏起來。  
   
 > [!NOTE]  
->  如需有關下載範例報表的詳細資訊，請參閱 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][報表產生器與報表設計師範例報表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
+>  如需有關下載範例報表的詳細資訊[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，請參閱[報表產生器和報表設計師範例報表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
 >   
 >  如需詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](https://go.microsoft.com/fwlink/?linkid=121312) 的＜URL 存取＞。  
   
  
   
 ## <a name="see-also"></a>另請參閱  
- [尋找及檢視報表在報表管理員中&#40;報表產生器及 SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [在報表管理員 &#40;報表產生器和 SSRS 中尋找及查看報表&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

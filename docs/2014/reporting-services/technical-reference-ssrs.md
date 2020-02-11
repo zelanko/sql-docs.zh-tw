@@ -17,19 +17,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9d14f27e1b41bf2a636f53ecb13c4fd88a9e4bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100609"
 ---
 # <a name="technical-reference-ssrs"></a>技術參考 (SSRS)
-  尋找工具及 PowerShell 參考文件以使用或管理 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。  
+  尋找在中[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]使用或管理的工具和 PowerShell 參考檔。  
   
- ![小型檔案資料夾圖示](../../2014/integration-services/media/filefolder-small.gif "小型檔案資料夾圖示") **錯誤和事件**  
+ ![小型檔案資料夾圖示](../../2014/integration-services/media/filefolder-small.gif "小型檔案資料夾圖示")**錯誤和事件**  
  [Reporting Services 錯誤的原因和解決方案](troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
- ![小型檔案資料夾圖示](../../2014/integration-services/media/filefolder-small.gif "小型檔案資料夾圖示") **功能參考**  
+ ![小型檔案資料夾圖示](../../2014/integration-services/media/filefolder-small.gif "小型檔案資料夾圖示")**功能參考**  
  [報表設計師 F1 說明](tools/report-designer-f1-help.md)  
   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
@@ -42,10 +42,10 @@ ms.locfileid: "66100609"
   
  [轉譯延伸模組的裝置資訊設定 &#40;Reporting Services&#41;](device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- ![小型檔案資料夾圖示](../../2014/integration-services/media/filefolder-small.gif "小型檔案資料夾圖示") **報表伺服器命令提示字元公用程式**  
- [RS.exe 公用程式 &#40;SSRS&#41;](tools/rs-exe-utility-ssrs.md)  
+ ![小型檔案資料夾圖示](../../2014/integration-services/media/filefolder-small.gif "小型檔案資料夾圖示")**報表伺服器命令提示字元公用程式**  
+ [&#40;SSRS&#41;的 RS 公用程式](tools/rs-exe-utility-ssrs.md)  
   
- [rsconfig 公用程式 &#40;SSRS&#41;](tools/rsconfig-utility-ssrs.md)  
+ [&#40;SSRS&#41;的 rsconfig 公用程式](tools/rsconfig-utility-ssrs.md)  
   
  [rskeymgmt 公用程式 &#40;SSRS&#41;](tools/rskeymgmt-utility-ssrs.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66100609"
  [Reporting Services WMI 提供者程式庫參考 &#40;SSRS&#41;](wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [有關疑難排解 Reporting Services 的 TechNet Wiki 文章](https://go.microsoft.com/fwlink/?LinkID=209153)   
- [有關疑難排解 Reporting Services SharePoint 模式的 TechNet Wiki 文章](https://go.microsoft.com/fwlink/?LinkID=209158)  
+ [關於疑難排解 Reporting Services 的 TechNet wiki 文章](https://go.microsoft.com/fwlink/?LinkID=209153)   
+ [關於疑難排解 Reporting Services SharePoint 模式的 TechNet wiki 文章](https://go.microsoft.com/fwlink/?LinkID=209158)  
   
   

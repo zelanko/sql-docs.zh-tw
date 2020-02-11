@@ -1,5 +1,5 @@
 ---
-title: 報表記錄頁面 （報表管理員） |Microsoft Docs
+title: 報表記錄頁面（報表管理員） |Microsoft Docs
 ms.prod: sql-server-2014
 ms.technology: reporting-services-native
 ms.topic: conceptual
@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 0b0841e031ee1a98f4f678406f790996a709e90f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104474"
 ---
 # <a name="report-history-page-report-manager"></a>報表記錄頁面 (報表管理員)
@@ -28,9 +28,9 @@ ms.locfileid: "66104474"
 按一下報表記錄快照集即可檢視該快照集。 報表記錄中顯示的快照集只能以建立日期和時間來區分。 沒有視覺指示可以區分快照集是回應排程而建立或是手動作業所建立。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
-## <a name="navigation"></a>巡覽  
+## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ### <a name="to-open-the-report-history-page"></a>若要開啟報表記錄頁面  
@@ -39,13 +39,13 @@ ms.locfileid: "66104474"
   
 2.  將滑鼠停留在該報表上，然後按一下下拉箭號。  
   
-3.  在下拉式功能表中，按一下 **[檢視報表記錄]** 。  
+3.  在下拉式功能表中，按一下 **[檢視報表記錄]**。  
   
 ## <a name="options"></a>選項。  
  **刪除**  
  按一下即可刪除一個或多個快照集。 在按一下 **[刪除]** 之前，請先選取要刪除之快照集旁邊的核取方塊。  
   
- **新的快照集**  
+ **新增快照集**  
  按一下即可將快照集加入至報表記錄。 只有在報表的記錄屬性頁面上選擇 **[允許手動建立記錄]** 選項時，才能使用此按鈕。  
   
  **最後執行**  
@@ -55,8 +55,8 @@ ms.locfileid: "66104474"
  顯示報表定義加報表中資料的大小。 此值指出報表定義和資料使用報表伺服器資料庫中多少空間。 轉譯報表的大小 (包括格式) 實際上會比較大。 括號中指出的總大小是目前報表的報表記錄中之所有快照集大小的總和。  
   
 ## <a name="see-also"></a>另請參閱  
- [檢視或刪除報表記錄&#40;報表管理員&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
+ [查看或刪除報表記錄 &#40;報表管理員&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
  [將快照集加入報表記錄 &#40;報表管理員&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [一般屬性頁面，報表 &#40;報表管理員&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [一般屬性頁面、報表 &#40;報表管理員&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   
- [快照集選項屬性頁面&#40;報表管理員&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)
+ [快照集選項屬性頁面 &#40;報表管理員&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)

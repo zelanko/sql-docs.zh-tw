@@ -18,16 +18,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a793fa513ef13c9cafc210a411971a0363f5976d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103234"
 ---
 # <a name="set-report-processing-properties"></a>設定報表處理屬性
   報表執行屬性控制處理報表的方式。 您必須針對每個報表個別設定執行屬性。  
   
- 若要設定報表執行屬性，請在報表管理員中開啟報表，然後導覽到 [執行] 屬性頁面。 您也可以設定屬性使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 如需詳細資訊，請參閱[處理選項屬性頁面 &#40;報表管理員&#41;](../processing-options-properties-page-report-manager.md)。  
+ 若要設定報表執行屬性，請在報表管理員中開啟報表，然後導覽到 [執行] 屬性頁面。 您也可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]來設定屬性。 如需詳細資訊，請參閱[處理選項屬性頁面 &#40;報表管理員&#41;](../processing-options-properties-page-report-manager.md)。  
   
 ## <a name="report-execution-modes"></a>報表執行模式  
  您可以視需要或以快照集的形式執行報表。 下一節描述每一種方法。  
@@ -59,7 +59,7 @@ ms.locfileid: "66103234"
  [設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [設定報表的執行屬性 &#40;報表管理員&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Reporting Services 概念 &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
- [如何：將快照集加入報表記錄](add-a-snapshot-to-report-history-report-manager.md)   
- [指定報表資料來源的認證及連線資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [如何：將快照集加入至報表記錄](add-a-snapshot-to-report-history-report-manager.md)   
+ [指定報表資料來源的認證及連接資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

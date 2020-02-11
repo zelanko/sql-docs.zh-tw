@@ -15,14 +15,14 @@ ms.assetid: 06b9f603-b395-497c-979b-d3ec3d6db375
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4b3128e0b8be8ec5bfaa2c4f0e7e64ce866b6295
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079577"
 ---
 # <a name="using-data-buffers"></a>使用資料緩衝區
-資料緩衝區會描述三段資訊： 類型、 位址和位元組長度。 只要函式需要這項資訊的其中一個，而且不會還不知道它，它會有與應用程式會將它傳遞為引數。  
+資料緩衝區是由三項資訊所描述：其類型、位址和位元組長度。 每當函式需要其中一項資訊，而且還不知道它時，它就會有應用程式傳遞它的引數。  
   
  此章節包含下列主題。  
   

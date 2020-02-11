@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e45e1e7f3c117609bd4e33611733c364b724b6a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100080"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Management Studio F1 說明中的報表伺服器
@@ -57,7 +57,7 @@ ms.locfileid: "66100080"
 -   [使用者角色屬性](user-role-properties-management-studio.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [功能參考 (Reporting Services)](../feature-reference-reporting-services.md)   
+ [功能參考（Reporting Services）](../feature-reference-reporting-services.md)   
  [SQL Server Management Studio 簡介](../../ssms/sql-server-management-studio-ssms.md)  
   
   

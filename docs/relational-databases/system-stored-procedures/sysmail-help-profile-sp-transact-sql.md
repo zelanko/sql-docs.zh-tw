@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_profile_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_help_profile_sp （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2d8f2af3894377cc0922274ca26c231c003f3bd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044497"
 ---
-# <a name="sysmailhelpprofilesp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
+# <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   列出一或多個郵件設定檔的相關資訊。  
@@ -39,9 +39,9 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @profile_id = ] profile_id` 要傳回資訊的設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。  
+`[ @profile_id = ] profile_id`要傳回信息的設定檔識別碼。 *profile_id*是**int**，預設值是 Null。  
   
-`[ @profile_name = ] 'profile_name'` 要傳回資訊的設定檔名稱。 *profile_name*已**sysname**，預設值是 NULL。  
+`[ @profile_name = ] 'profile_name'`要傳回信息的設定檔名稱。 *profile_name*是**sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -54,18 +54,18 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 |資料行名稱|資料類型|描述|  
 |**profile_id**|**int**|設定檔的設定檔識別碼。|  
 |**name**|**sysname**|設定檔的設定檔名稱。|  
-|**description**|**nvarchar(256)**|設定檔的描述。|  
+|**描述**|**nvarchar(256)**|設定檔的描述。|  
   
 ## <a name="remarks"></a>備註  
- 當指定的設定檔名稱或設定檔識別碼時， **sysmail_help_profile_sp**傳回該設定檔的相關資訊。 否則，請**sysmail_help_profile_sp**會傳回每個設定檔中的資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。  
+ 指定設定檔名稱或設定檔識別碼時， **sysmail_help_profile_sp**會傳回該設定檔的相關資訊。 否則， **sysmail_help_profile_sp**會傳回實例中每個配置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]檔的相關資訊。  
   
- 預存程序**sysmail_help_profile_sp**處於**msdb**資料庫中，擁有者**dbo**結構描述。 此程序必須利用三部分名稱來執行，如果目前的資料庫不是**msdb**。  
+ 預存程式**sysmail_help_profile_sp**在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱來執行此程式。  
   
-## <a name="permissions"></a>Permissions  
- 執行此程序預設值，成員的權限**sysadmin**固定的伺服器角色。  
+## <a name="permissions"></a>權限  
+ 此程式的執行許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
- **A.列出所有設定檔**  
+ **A. 列出所有設定檔**  
   
  下列範例會顯示如何列出執行個體中的所有設定檔。  
   
@@ -82,7 +82,7 @@ profile_id  name                          description
 57          AdventureWorks Operator       Operator mail profile.          
 ```  
   
- **B.列出特定設定檔**  
+ **B. 列出特定設定檔**  
   
  下列範例會顯示如何列出 `AdventureWorks Administrator` 設定檔的資訊。  
   
@@ -101,6 +101,6 @@ profile_id  name                          description
   
 ## <a name="see-also"></a>另請參閱  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Database Mail 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

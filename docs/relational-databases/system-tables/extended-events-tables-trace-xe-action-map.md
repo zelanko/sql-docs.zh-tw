@@ -1,5 +1,5 @@
 ---
-title: trace_xe_action_map (TRANSACT-SQL) |Microsoft Docs
+title: trace_xe_action_map （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,23 +19,23 @@ ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 47931e56759191e8386a6890ec683adf0d5f69c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056270"
 ---
-# <a name="extended-events-tables---tracexeactionmap"></a>擴充事件資料表 - trace_xe_action_map
+# <a name="extended-events-tables---trace_xe_action_map"></a>擴充事件資料表 - trace_xe_action_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  針對對應到 SQL 追蹤資料行識別碼的每個擴充事件動作包含一個資料列。 這份資料表儲存在 master 資料庫的 sys 結構描述中。  
+  針對對應到 SQL 追蹤資料行識別碼的每個擴充事件動作包含一個資料列。 此資料表儲存在主資料庫的 sys 架構中。  
   
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |trace_column_id|**smallint**|對應之 SQL 追蹤資料行的識別碼。|  
-|package_name|**nvarchar(60)**|對應動作所在之擴充事件封裝的名稱。|  
-|xe_action_name|**nvarchar(60)**|對應至 SQL 追蹤資料行之擴充事件動作的名稱。|  
+|package_name|**Nvarchar （60）**|對應動作所在之擴充事件封裝的名稱。|  
+|xe_action_name|**Nvarchar （60）**|對應至 SQL 追蹤資料行之擴充事件動作的名稱。|  
   
 ## <a name="remarks"></a>備註  
  您可以使用下列查詢來識別相當於 SQL 追蹤資料行的擴充事件動作：  

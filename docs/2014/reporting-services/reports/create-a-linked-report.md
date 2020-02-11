@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0df6a3bdb6f542b02b62ccf4aa6614da290551f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102701"
 ---
 # <a name="create-a-linked-report"></a>建立連結報表
@@ -30,23 +30,25 @@ ms.locfileid: "66102701"
   
 ### <a name="to-create-a-linked-report"></a>若要建立連結報表  
   
-1.  在報表管理員中，導覽至包含您要連結之報表的資料夾，然後開啟選項功能表。您可以按一下 **[建立連結報表]** 。  
+1.  在報表管理員中，導覽至包含您要連結之報表的資料夾，然後開啟選項功能表。您可以按一下 **[建立連結報表]**。  
   
 2.  輸入新連結報表的名稱。 選擇性地輸入描述。  
   
-3.  若要選取報表的其他資料夾，請按一下 **[變更位置]** 。 按一下您要使用的資料夾，或者在 **[位置]** 方塊中輸入資料夾名稱。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 如果您未選取其他資料夾，則會在目前的資料夾 (儲存基準報表的位置) 中建立連結報表。  
+3.  若要選取報表的其他資料夾，請按一下 **[變更位置]**。 按一下您要使用的資料夾，或者在 **[位置]** 方塊中輸入資料夾名稱。 
+  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 如果您未選取其他資料夾，則會在目前的資料夾 (儲存基準報表的位置) 中建立連結報表。  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 連結報表隨即開啟。  
+4.  
+  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 連結報表隨即開啟。  
   
      連結報表的圖示與報表伺服器所管理的其他項目不同。 下列圖示表示連結報表：  
   
      ![連結報表圖示](../media/hlp-16linked.gif "連結報表圖示")  
   
 ## <a name="see-also"></a>另請參閱  
- [開啟及關閉報表 &#40;報表管理員&#41;](../reports/open-and-close-a-report-report-manager.md)   
- [新增連結報表頁面 &#40;報表管理員&#41;](../new-linked-report-page-report-manager.md)   
- [選擇項目位置頁面 &#40;報表管理員&#41;](../choose-item-location-page-report-manager.md)   
- [一般屬性頁面，報表 &#40;報表管理員&#41;](../general-properties-page-reports-report-manager.md)   
+ [開啟並關閉報表 &#40;報表管理員&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [新的連結報表頁面 &#40;報表管理員&#41;](../new-linked-report-page-report-manager.md)   
+ [選擇專案位置頁面 &#40;報表管理員&#41;](../choose-item-location-page-report-manager.md)   
+ [一般屬性頁面、報表 &#40;報表管理員&#41;](../general-properties-page-reports-report-manager.md)   
  [Reporting Services 概念 &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)  
   

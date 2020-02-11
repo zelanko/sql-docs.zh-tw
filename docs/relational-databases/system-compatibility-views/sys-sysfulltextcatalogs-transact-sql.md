@@ -1,5 +1,5 @@
 ---
-title: sys.sysfulltextcatalogs (TRANSACT-SQL) |Microsoft Docs
+title: sysfulltextcatalogs （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c1e5bbae3a511249774d95e52210b04016c3370f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053466"
 ---
 # <a name="syssysfulltextcatalogs-transact-sql"></a>sys.sysfulltextcatalogs (Transact-SQL)
@@ -40,11 +40,11 @@ ms.locfileid: "68053466"
 |-----------------|---------------|-----------------|  
 |**ftcatid**|**smallint**|全文檢索目錄的識別碼。|  
 |**name**|**sysname**|使用者所指定的全文檢索目錄名稱。|  
-|**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**path**|**nvarchar(260)**|使用者所指定的根路徑。<br /><br /> NULL = 未指定路徑。 使用預設 (安裝) 路徑。|  
+|**狀態**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**路徑名**|**nvarchar(260)**|使用者所指定的根路徑。<br /><br /> NULL = 未指定路徑。 使用預設 (安裝) 路徑。|  
   
 ## <a name="see-also"></a>另請參閱  
- [將系統資料表對應至系統檢視表&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [將系統資料表對應至系統檢視 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的相容性檢視](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.fn_cdc_get_column_ordinal (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases fn_cdc_get_column_ordinal （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/25/2016
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 893c7b0a4c7c88c0fdc7bf89b01b61bfaae6f2f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046503"
 ---
-# <a name="sysfncdcgetcolumnordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
+# <a name="sysfn_cdc_get_column_ordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回指定的資料行，因為它的資料行序數會出現在[變更資料表](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)指定的擷取執行個體相關聯。  
+  傳回指定之資料行的資料行序數，因為它出現在與指定的 capture 實例相關聯的[變更資料表](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)中。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,18 +43,18 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
   
 ## <a name="arguments"></a>引數  
  **'** *capture_instance* **'**  
- 這是指定資料行識別為已擷取資料行之擷取執行個體的名稱。 *capture_instance*已**sysname**。  
+ 這是指定資料行識別為已擷取資料行之擷取執行個體的名稱。 *capture_instance*是**sysname**。  
   
  **'** *column_name* **'**  
- 這是要回報的資料行。 *column_name*已**sysname**。  
+ 這是要回報的資料行。 *column_name*是**sysname**。  
   
 ## <a name="return-type"></a>傳回類型  
  **int**  
   
 ## <a name="remarks"></a>備註  
- 這個函數是用來識別擷取資料行在異動資料擷取更新遮罩中的序數位置。 它主要是使用於函式搭配[sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)查詢變更資料時，從更新遮罩中擷取資訊。  
+ 這個函數是用來識別擷取資料行在異動資料擷取更新遮罩中的序數位置。 主要是與函數 sys.databases 搭配使用，以在查詢變更資料時，從更新遮罩中解壓縮資訊[fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) 。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要來源資料表之所有擷取資料行的 SELECT 權限。 如果已針對擷取執行個體指定了異動資料擷取元件的資料庫角色，也會需要該角色的成員資格。  
   
 ## <a name="examples"></a>範例  
@@ -78,8 +78,8 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [異動資料擷取函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
  [關於異動資料擷取 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
- [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [sys.sp_cdc_get_captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
- [sys.fn_cdc_is_bit_set &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)  
+ [sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [sp_cdc_get_captured_columns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
+ [fn_cdc_is_bit_set &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)  
   
   

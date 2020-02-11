@@ -1,5 +1,5 @@
 ---
-title: 移除 UDT&#39;保留的日期和時間資料類型命名 s |Microsoft Docs
+title: 移除以保留的日期和時間資料類型命名的 UDT&#39;|Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9692bcc5b3c7685e247730b0f203d273f585f1de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092993"
 ---
-# <a name="remove-udt39s-named-after-the-reserved-date-and-time-data-types"></a>移除 UDT&#39;s 名為保留的日期和時間資料類型
+# <a name="remove-udt39s-named-after-the-reserved-date-and-time-data-types"></a>移除以保留的日期和時間資料類型命名的 UDT&#39;
   Upgrade Advisor 偵測到依據針對 `date` 或 `time` 資料類型保留之詞彙所命名的使用者定義型別 (UDT)。  
   
 ## <a name="component"></a>元件  

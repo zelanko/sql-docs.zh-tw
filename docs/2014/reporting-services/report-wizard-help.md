@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d21fb2c577e6419668a619466dd0d2c94b4a3da2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102993"
 ---
 # <a name="report-wizard-help"></a>報表精靈說明
   此章節提供報表精靈的 F1 說明。 報表精靈會自動化建立表格式報表和矩陣報表的程序。 下表描述此章節的主題。  
   
- 若要開啟 [報表精靈] 中，在**專案**功能表上，按一下**加入新項目**。  
+ 若要開啟報表精靈，請在 [**專案**] 功能表上，按一下 [**加入新專案**]。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -35,11 +35,11 @@ ms.locfileid: "66102993"
   
 -   [設計查詢](../../2014/reporting-services/design-the-query.md)  
   
--   [查詢產生器&#40;報表精靈&#41;](../../2014/reporting-services/query-builder-report-wizard.md)  
+-   [查詢產生器 &#40;報表精靈&#41;](../../2014/reporting-services/query-builder-report-wizard.md)  
   
 -   [選取報表類型](../../2014/reporting-services/select-the-report-type.md)  
   
--   [設計資料表&#40;報表精靈&#41;](../../2014/reporting-services/design-the-table-report-wizard.md)  
+-   [設計資料表 &#40;報表精靈&#41;](../../2014/reporting-services/design-the-table-report-wizard.md)  
   
 -   [選擇資料表配置](../../2014/reporting-services/choose-the-table-layout.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 第 9 課：建置並執行應用程式 |Microsoft Docs
+title: 第 9 課：建置並執行應用程式 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 321075631a48570a80e8294f992e8ddb17d50bd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108376"
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>第 9 課：建置及執行應用程式
+# <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
   建立資料表的資料篩選後，下一步是要建置和執行網站應用程式。  
   
 ### <a name="to-build-and-run-the-application"></a>若要建置並執行應用程式  
   
-1.  按 **CTRL+F5** 執行 Default.aspx 頁面，但不進行偵錯，或按 F5 執行頁面並進行偵錯。  
+1.  按下 **CTRL+F5** 執行 Default.aspx 頁面，但不偵錯；或按 F5 執行頁面並偵錯。  
   
      在建置過程中，報表會進行編譯，而找到的任何錯誤 (例如報表中所使用運算式的語法錯誤) 都會加入至位於 Visual Studio 視窗底部的 **[工作清單]** 。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66108376"
   
 4.  按一下 **ReportViewer**工具列中的 **[返回父報表]** 圖示，導覽回 **[父]** 報表。  
   
-     ![使用 ReportViewer 鑽研 ssrs](../../2014/tutorials/media/ssrs-drillthrough-report.png "ssrs 鑽研使用 ReportViewer")  
+     ![ssrs 使用 ReportViewer 演練](../../2014/tutorials/media/ssrs-drillthrough-report.png "ssrs 使用 ReportViewer 演練")  
   
 5.  關閉瀏覽器即可結束。  
   

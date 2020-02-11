@@ -1,5 +1,5 @@
 ---
-title: msdb (TRANSACT-SQL) |Microsoft Docs
+title: dbo. sysjobschedules （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a7f2dfc6196bfba6c274eb45a45745159447cc39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061186"
 ---
 # <a name="dbosysjobschedules-transact-sql"></a>dbo.sysjobschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 要執行之作業的排程資訊。 這份資料表儲存在**msdb**資料庫。  
+  包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 要執行之作業的排程資訊。 此資料表會儲存在**msdb**資料庫中。  
   
-> **注意：** **Sysjobschedules**資料表會每隔 20 分鐘，可能會影響所傳回的值重新整理**sp_help_jobschedule**預存程序。  
+> **注意：****Sysjobschedules**資料表每20分鐘會重新整理一次，這可能會影響**sp_help_jobschedule**預存程式所傳回的值。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -41,6 +41,6 @@ ms.locfileid: "68061186"
 |**next_run_time**|**int**|排程執行作業的時間。 時間格式為 HHMMSS，使用 24 小時制。|  
   
 ## <a name="see-also"></a>另請參閱  
- [dbo.sysschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [sysschedules &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

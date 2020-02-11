@@ -15,11 +15,11 @@ ms.assetid: b662fab5-c236-4895-a64f-00c9c6c652c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 494c400ff5ead94c6bf8fdcd4be06652824b236f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045004"
 ---
 # <a name="native-error"></a>原生錯誤
-桌面資料庫驅動程式會產生正面的原生錯誤碼。 Microsoft Jet 會產生負面的錯誤碼。 如需詳細資訊，請參閱 < *Microsoft Jet Database Engine 程式設計人員指南*。
+正面的原生錯誤碼是由桌面資料庫驅動程式所產生。 Microsoft Jet 會產生負面錯誤碼。 如需詳細資訊，請參閱《 *Microsoft Jet 資料庫引擎程式設計人員指南》*。

@@ -1,5 +1,5 @@
 ---
-title: 卸除組件 |Microsoft Docs
+title: 卸載元件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f28f51f73faca8a72bdea3b8af70e14046d73f8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68074340"
 ---
 # <a name="dropping-an-assembly"></a>卸除組件
@@ -43,7 +43,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   使用 WITH SCHEMABINDING 子句在資料庫中建立的函數、預存程序或觸發程序 (這些項目會使用 UDT 變數或參數)。  
   
 ### <a name="finding-udt-dependencies"></a>尋找 UDT 相依性  
- 您必須先卸除所有相依物件，然後再執行 DROP TYPE 陳述式。 下列[!INCLUDE[tsql](../../../includes/tsql-md.md)]查詢找出使用 UDT 中的參數與資料行的所有**AdventureWorks**資料庫。  
+ 您必須先卸除所有相依物件，然後再執行 DROP TYPE 陳述式。 下列[!INCLUDE[tsql](../../../includes/tsql-md.md)]查詢會尋找在**AdventureWorks**資料庫中使用 UDT 的所有資料行和參數。  
   
 ```  
 USE Adventureworks;  
@@ -64,13 +64,13 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [管理 CLR 整合組件](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
- [變更組件](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
- [建立組件](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
- [DROP AGGREGATE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
- [DROP FUNCTION &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-function-transact-sql.md)   
- [DROP PROCEDURE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
+ [管理 CLR 整合元件](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
+ [改變元件](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
+ [建立元件](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
+ [DROP AGGREGATE &#40;Transact-sql&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
+ [DROP FUNCTION &#40;Transact-sql&#41;](../../../t-sql/statements/drop-function-transact-sql.md)   
+ [DROP PROCEDURE &#40;Transact-sql&#41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-trigger-transact-sql.md)   
- [DROP TYPE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
+ [DROP TYPE &#40;Transact-sql&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
   
   

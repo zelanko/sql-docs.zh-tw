@@ -20,18 +20,18 @@ ms.assetid: b96ab3b8-08d5-4fea-9ffe-e03043efbf2d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 14fb43015db9113262320f78f0bae53f8a168f95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044550"
 ---
 # <a name="sqlgetconfigmode-function"></a>SQLGetConfigMode 函式
-**合規性**  
- 導入的版本：ODBC 3.0  
+**標準**  
+ 引進的版本： ODBC 3。0  
   
  **摘要**  
- **SQLGetConfigMode**擷取表示列出資料來源名稱值的 Odbc.ini 項目中的系統資訊的組態模式。  
+ **SQLGetConfigMode**會抓取設定模式，指出列出 DSN 值的 Odbc 專案在系統資訊中的位置。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +43,7 @@ BOOL SQLGetConfigMode(
   
 ## <a name="arguments"></a>引數  
  *pwConfigMode*  
- [輸出]包含組態模式緩衝區的指標。 （請參閱 「 註解。"）中的值 *\*pwConfigMode*可以是：  
+ 輸出包含設定模式之緩衝區的指標。 （請參閱「留言」）。* \*PwConfigMode*中的值可以是：  
   
  ODBC_USER_DSN  
   
@@ -52,22 +52,22 @@ BOOL SQLGetConfigMode(
  ODBC_BOTH_DSN  
   
 ## <a name="returns"></a>傳回值  
- 如果成功，FALSE 如果失敗，則函數會傳回 TRUE。  
+ 如果成功，函式會傳回 TRUE，如果失敗，則傳回 FALSE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLGetConfigMode**會傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的此函式。  
+ 當**SQLGetConfigMode**傳回 FALSE 時，可以藉由呼叫**SQLInstallerError**來取得相關聯* \*的 pfErrorCode*值。 下表列出可由**SQLInstallerError**傳回的* \*pfErrorCode*值，並在此函式的內容中說明每一個值。  
   
 |*\*pfErrorCode*|錯誤|描述|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_OUT_OF_MEM|記憶體不足|由於記憶體不足，安裝程式無法執行函式。|  
+|ODBC_ERROR_OUT_OF_MEM|記憶體不足|因為記憶體不足，所以安裝程式無法執行函數。|  
   
 ## <a name="comments"></a>註解  
- 此函式用來判斷列出資料來源名稱值的 Odbc.ini 項目中的系統資訊。 如果 *\*pwConfigMode* ODBC_USER_DSN，資料來源名稱是 「 使用者 DSN，和函式會讀取 HKEY_CURRENT_USER 中的 Odbc.ini 項目。 如果是 ODBC_SYSTEM_DSN，DSN 為系統 DSN 和函式會讀取在 HKEY_LOCAL_MACHINE 的 Odbc.ini 項目。 如果是 ODBC_BOTH_DSN，HKEY_CURRENT_USER 時嘗試，而且如果失敗，會使用 HKEY_LOCAL_MACHINE。  
+ 此函式是用來判斷在系統資訊中列出 DSN 值的 Odbc 專案所在的位置。 如果* \*ODBC_USER_DSN pwConfigMode* ，dsn 就是使用者 dsn，而函式會從 HKEY_CURRENT_USER 中的 ODBC 專案讀取。 如果 ODBC_SYSTEM_DSN，DSN 就是系統 DSN，而函式會從 HKEY_LOCAL_MACHINE 中的 Odbc 專案讀取。 如果 ODBC_BOTH_DSN，則會嘗試 HKEY_CURRENT_USER，如果失敗，則會使用 HKEY_LOCAL_MACHINE。  
   
- 根據預設， **SQLGetConfigMode**傳回 ODBC_BOTH_DSN。 「 使用者 DSN 」 或 「 系統 DSN 的呼叫所建立時**SQLConfigDataSource**，函式會將組態模式設為 ODBC_USER_DSN 或 ODBC_SYSTEM_DSN 來區別時修改資料來源名稱的使用者和系統 Dsn。 傳回前, **SQLConfigDataSource**將組態模式重設 ODBC_BOTH_DSN。  
+ 根據預設， **SQLGetConfigMode**會傳回 ODBC_BOTH_DSN。 當呼叫**SQLConfigDataSource**來建立使用者 Dsn 或系統 dsn 時，此函式會將設定模式設為 ODBC_USER_DSN 或 ODBC_SYSTEM_DSN，以便在修改 DSN 時區分使用者和系統 dsn。 在傳回之前， **SQLConfigDataSource**會將設定模式重設為 ODBC_BOTH_DSN。  
   
 ## <a name="related-functions"></a>相關函數  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
 |設定組態模式|[SQLSetConfigMode](../../../odbc/reference/syntax/sqlsetconfigmode-function.md)|

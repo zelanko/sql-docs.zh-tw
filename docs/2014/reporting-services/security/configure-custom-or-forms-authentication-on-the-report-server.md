@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7602ce0ef0e75c3c2eb1ee5a5a47e3fe56b87f44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102140"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>設定報表伺服器上的自訂或表單驗證
@@ -47,7 +47,7 @@ ms.locfileid: "66102140"
     </Authentication>  
     ```  
   
-4.  貼上現有的項目，如 <`Authentication`>。  
+4.  將它貼到 <`Authentication`> 的現有專案上。  
   
      請注意，您無法搭配其他驗證類型使用 `Custom`。  
   
@@ -90,9 +90,9 @@ ms.locfileid: "66102140"
 15. 重新啟動報表伺服器，清除目前開啟的任何工作階段。  
   
 ## <a name="see-also"></a>另請參閱  
- [實作安全性延伸模組](../extensions/security-extension/implementing-a-security-extension.md)   
+ [執行安全性延伸模組](../extensions/security-extension/implementing-a-security-extension.md)   
  [使用報表伺服器驗證](authentication-with-the-report-server.md)   
- [RSReportServer 組態檔](../report-server/rsreportserver-config-configuration-file.md)   
+ [Rsreportserver.config 設定檔](../report-server/rsreportserver-config-configuration-file.md)   
  [設定報表伺服器上的基本驗證](configure-basic-authentication-on-the-report-server.md)   
  [設定報表伺服器上的 Windows 驗證](configure-windows-authentication-on-the-report-server.md)  
   

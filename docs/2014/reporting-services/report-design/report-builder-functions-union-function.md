@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 924b450ab138df1cad3afcfa11cb9c0d1cc87a22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105123"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Union 函數 (報表產生器及 SSRS)
@@ -38,10 +38,11 @@ Union(expression, scope, recursive)
  (`String`) 選擇性。 包含要套用彙總函式之報表項目的資料集、群組或資料區的名稱。 如果未指定 *scope* ，則使用目前的範圍。  
   
  *遞迴*  
- (**列舉型別**) 選擇性。 `Simple` (預設值) 或 `RdlRecursive`。 指定是否要以遞迴方式執行彙總。  
+ (**列舉型別**) 選擇性。 
+  `Simple` (預設值) 或 `RdlRecursive`。 指定是否要以遞迴方式執行彙總。  
   
 ## <a name="return"></a>傳回  
- 根據運算式類型傳回空間物件 (`SqlGeometry` 或 `SqlGeography`)。 如需詳細資訊`SqlGeometry`並`SqlGeography`空間資料類型，請參閱[空間資料類型概觀](../../relational-databases/spatial/spatial-data-types-overview.md)。  
+ 根據運算式類型傳回空間物件 (`SqlGeometry` 或 `SqlGeography`)。 如需`SqlGeometry`和`SqlGeography`空間資料類型的詳細資訊，請參閱[空間資料類型總覽](../../relational-databases/spatial/spatial-data-types-overview.md)。  
   
 ## <a name="remarks"></a>備註  
  運算式中指定的資料集必須具有相同的資料類型。  
@@ -54,7 +55,7 @@ Union(expression, scope, recursive)
   
 -   巢狀彙總的*Scope* 不得為資料集的名稱。  
   
--   *運算式*不得包含`First`， `Last`， `Previous`，或`RunningValue`函式。  
+-   *運算式*不能包含`First`、 `Last`、 `Previous`或`RunningValue`函數。  
   
 -   *Expression* 不得包含指定 *recursive*的巢狀彙總。  
   

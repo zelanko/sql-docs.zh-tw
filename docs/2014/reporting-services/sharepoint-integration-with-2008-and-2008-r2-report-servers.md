@@ -1,5 +1,5 @@
 ---
-title: SharePoint 整合與 2008年及 2008 R2 報表伺服器 |Microsoft Docs
+title: SharePoint 與2008和 2008 R2 報表伺服器的整合 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d29d41069d5daca25d53477326e864720aa87ca1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101198"
 ---
 # <a name="sharepoint-integration-with-2008-and-2008-r2--report-servers"></a>與 2008 及 2008 R2 報表伺服器的 SharePoint 整合
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本引進了一種架構，其中 SharePoint 模式現在是以 SharePoint 共用服務為基礎。 在 SharePoint 管理中心內完成新功能的管理上**管理的服務**並**管理員服務應用程式**頁面。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]仍然支援舊版的架構為 SharePoint 整合[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]適用於 SharePoint 2010 產品，因此您可以整合舊版的報表伺服器中的 SharePoint 2010 增益集。  
+  的[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]版本[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]引進了架構，其中 sharepoint 模式現在是以 sharepoint 共用服務為基礎。 新功能的管理是在 SharePoint 管理中心的 [**管理服務**] 和 [**管理員服務應用程式**] 頁面上完成。 Sharepoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2010 產品的[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]增益集仍然支援 sharepoint 整合的先前架構，因此您可以將 sharepoint 2010 與舊版的報表伺服器整合。  
   
  您可在下列位置找到用來管理舊有架構的 SharePoint 管理中心頁面：  
   
-1.  從 [SharePoint 管理中心] 中，按一下**一般應用程式設定**。  
+1.  從 SharePoint 管理中心，按一下 **[一般應用程式設定**]。  
   
-2.  群組**SQL Server Reporting Services （2008年和 2008 R2）** 包含的連結和舊有架構的管理頁面  
+2.  群組**SQL Server Reporting Services （2008和 2008 R2）** 包含舊版架構的連結和管理頁面  
   
 ## <a name="server-integration-architecture"></a>伺服器整合架構  
  將報表伺服器與 SharePoint 產品的執行個體整合時，項目和屬性會儲存在 SharePoint 內容資料庫中。 這可以為將會影響內容的儲存、安全性和存取方式的伺服器技術之間，提供更深層級的整合。  
