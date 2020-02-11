@@ -1,5 +1,5 @@
 ---
-title: sp_dbmmonitoraddmonitoring (TRANSACT-SQL) |Microsoft Docs
+title: sp_dbmmonitoraddmonitoring （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4ed53c6a72b201129cf9f75214261bbdd47d6fb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108156"
 ---
-# <a name="spdbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
+# <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   建立資料庫鏡像監視作業，以定期更新伺服器執行個體上每個鏡像資料庫的鏡像狀態。  
@@ -55,12 +55,12 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 ## <a name="remarks"></a>備註  
  這項程序要求 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 必須能在伺服器執行個體上執行，而且若要執行資料庫鏡像監視作業，就必須執行代理程式。  
   
- 如果從啟動資料庫鏡像[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，則**sp_dbmmonitoraddmonitoring**程序就會自動執行。 如果您啟動鏡像功能的設定使用 ALTER DATABASE 陳述式，以手動方式，來監視鏡像的資料庫的伺服器執行個體中，您必須執行**sp_dbmmonitoraddmonitoring**以手動方式。  
+ 如果從[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]啟動資料庫鏡像，則會自動執行**sp_dbmmonitoraddmonitoring**程式。 如果您使用 ALTER DATABASE 語句來手動啟動鏡像，以監視伺服器實例上的鏡像資料庫，您必須手動執行**sp_dbmmonitoraddmonitoring** 。  
   
 > [!NOTE]  
->  如果您執行**sp_dbmmonitoraddmonitoring**設定資料庫鏡像之前，監視作業會執行，但不是會更新狀態資料表的資料庫中儲存鏡像監視記錄。  
+>  如果您在設定資料庫鏡像之前執行**sp_dbmmonitoraddmonitoring** ，監視作業將會執行，但不會更新儲存資料庫鏡像監視器記錄的狀態資料表。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
@@ -72,9 +72,9 @@ EXEC sp_dbmmonitoraddmonitoring 3;
   
 ## <a name="see-also"></a>另請參閱  
  [監視資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorchangemonitoring &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
- [sp_dbmmonitordropmonitoring &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
- [sp_dbmmonitorhelpmonitoring &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
+ [sp_dbmmonitorchangemonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
+ [sp_dbmmonitordropmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
+ [sp_dbmmonitorhelpmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
  [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
   

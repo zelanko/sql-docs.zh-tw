@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242061"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>適用於 SQL Server 2014 的教學課程
@@ -44,9 +44,9 @@ ms.locfileid: "75242061"
 |Technology|描述|  
 |----------------|-----------------|  
 |[Analysis Services SSAS &#40;教學課程&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|了解如何開發和部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 表格式或多維度模型。 同時學習如何使用 PowerPivot 之類的工具來分析模型中的資料。|  
-|[Reporting Services SSRS &#40;的教學課程&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|了解如何建立基本報表和訂閱。|  
+|[Reporting Services 教學課程 &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|了解如何建立基本報表和訂閱。|  
 |[Integration Services 教學課程](../integration-services/integration-services-tutorials.md)|了解如何建立及部署 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝。|  
-|[資料庫引擎教學課程](../relational-databases/database-engine-tutorials.md)|了解如何連接到 Database Engine 的執行個體，然後建立及執行 Transact-SQL 陳述式。|  
+|[Database Engine 教學課程](../relational-databases/database-engine-tutorials.md)|了解如何連接到 Database Engine 的執行個體，然後建立及執行 Transact-SQL 陳述式。|  
 |[複寫教學課程](../relational-databases/replication/replication-tutorials.md)|了解如何使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]來設定及執行複寫拓撲。|  
-|[公司資訊管理教學課程](../../2014/tutorials/enterprise-information-management-tutorials.md)|了解如何使用 Microsoft EIM 技術管理企業中的資訊。|  
+|[企業資訊管理教學課程](../../2014/tutorials/enterprise-information-management-tutorials.md)|了解如何使用 Microsoft EIM 技術管理企業中的資訊。|  
   

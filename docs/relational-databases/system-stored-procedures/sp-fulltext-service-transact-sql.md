@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_service (TRANSACT-SQL) |Microsoft Docs
+title: sp_fulltext_service （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9ede8b65cb3f11ed6640121031ea6a2fe5b57b83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124186"
 ---
-# <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service (Transact-SQL)
+# <a name="sp_fulltext_service-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文檢索搜尋的伺服器屬性。  
@@ -42,24 +42,25 @@ sp_fulltext_service [ [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @action = ] 'action'` 這是要變更或重設屬性。 *動作*是**nvarchar（100)，** 沒有預設值。 取得一份*c*動作屬性、 其描述，以及可以設定的值，請參閱底下的表格*值*引數。 這個引數會傳回下列屬性：資料類型、目前執行中的值、最小值或最大值，以及已被取代的狀態 (如果適用的話)。  
+`[ @action = ] 'action'`這是要變更或重設的屬性。 *動作*是**Nvarchar （100），** 沒有預設值。 如需*c*的屬性清單、其描述，以及可以設定的值，請參閱*value*引數底下的資料表。 這個引數會傳回下列屬性：資料類型、目前執行中的值、最小值或最大值，以及已被取代的狀態 (如果適用的話)。  
   
-`[ @value = ] value` 指定屬性的值。 *值*已**sql_variant**，預設值是 NULL。 如果@value為 null， **sp_fulltext_service**傳回目前的設定。 這份資料表會列出動作屬性及其描述，以及可設定的值之清單。  
+`[ @value = ] value`這是指定之屬性的值。 *值*為**SQL_variant**，預設值為 Null。 如果@value為 null， **sp_fulltext_service**會傳回目前的設定。 這份資料表會列出動作屬性及其描述，以及可設定的值之清單。  
   
 > [!NOTE]  
->  下列動作將在未來版本中移除[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **clean_up**， **connect_timeout**， **data_timeout**，以及**resource_使用量**。 請避免在新的開發工作中使用這些動作，並規劃修改目前使用任何這些動作的應用程式。  
+>  下列動作將在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]未來的版本中移除： **clean_up**、 **connect_timeout**、 **data_timeout**和**resource_usage**。 請避免在新的開發工作中使用這些動作，並規劃修改目前使用任何這些動作的應用程式。  
   
-|Action|資料類型|描述|  
+|動作|資料類型|描述|  
 |------------|---------------|-----------------|  
 |**clean_up**|**int**|支援這個項目的目的，只是為了與舊版相容。 這個值一定是 0。|  
 |**connect_timeout**|**int**|支援這個項目的目的，只是為了與舊版相容。 這個值一定是 0。|  
 |**data_timeout**|**int**|支援這個項目的目的，只是為了與舊版相容。 這個值一定是 0。|  
-|**load_os_resources**|**int**|指出是否註冊了作業系統斷詞工具、字幹分析器和篩選，以及是否搭配這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體來使用它們。 它是下列項目之一：<br /><br /> 0 = 只用這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體專用的篩選和斷詞工具。<br /><br /> 1 = 載入作業系統篩選和斷詞工具。<br /><br /> 根據預設，系統會停用這個屬性來防止因更新作業系統而意外變更行為。 啟用作業系統資源會提供已向 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 索引服務註冊，但並未安裝特定執行個體專用資源之語言和文件類型資源的存取權。 如果您啟用作業系統資源的載入，請確定作業系統資源是受信任的已簽署二進位檔;否則，無法載入它們的時機**verify_signature** （請參閱下文） 設為 1。|  
+|**load_os_resources**|**int**|指出是否註冊了作業系統斷詞工具、字幹分析器和篩選，以及是否搭配這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體來使用它們。 值為下列其中之一：<br /><br /> 0 = 只用這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體專用的篩選和斷詞工具。<br /><br /> 1 = 載入作業系統篩選和斷詞工具。<br /><br /> 根據預設，系統會停用這個屬性來防止因更新作業系統而意外變更行為。 啟用作業系統資源會提供已向 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 索引服務註冊，但並未安裝特定執行個體專用資源之語言和文件類型資源的存取權。 如果您啟用作業系統資源的載入，請確定作業系統資源是受信任的已簽署二進位檔;否則，當**verify_signature** （如下所示）設為1時，便無法載入它們。|  
 |**master_merge_dop**|**int**|指定主要合併程序所要使用的執行緒數目。 此值不應超過可用 CPU 或 CPU 核心的數量。<br /><br /> 如果未指定這個引數，服務會使用 4 或是可用 CPU 或 CPU 核心數量 (取兩者中較小的那一個)。|  
 |**pause_indexing**|**int**|指定全文檢索索引是應該暫停 (如果它目前正在執行) 還是繼續 (如果它目前已暫停)。<br /><br /> 0 = 繼續伺服器執行個體的全文檢索索引活動。<br /><br /> 1 = 暫停伺服器執行個體的全文檢索索引活動。|  
 |**resource_usage**|**int**|在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本中沒有作用，所以會予以忽略。|  
-|**update_languages**|NULL|更新使用全文檢索搜尋所註冊的語言和篩選清單。 這些語言是在設定索引和進行全文檢索查詢時所指定。 篩選背景程式主機會使用篩選器擷取文字資訊從對應的檔案格式，例如儲存在資料類型，例如.docx **varbinary**， **varbinary （max)** ，**映像**，或**xml**，全文檢索索引。<br /><br /> 如需詳細資訊，請參閱 [檢視或變更已註冊的篩選與斷詞工具](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)。|  
-|**upgrade_option**|**int**|控制將資料庫從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升級到更新版本時，要如何移轉全文檢索索引。 這個屬性適用於以下方式的升級：附加資料庫、還原資料庫備份、還原檔案備份，或是使用複製資料庫精靈複製資料庫。<br /><br /> 它是下列項目之一：<br /><br /> 0 = 全文檢索目錄會使用新的增強斷詞工具重建。 重建索引可能要花一些時間，而且在升級之後可能需要相當多的 CPU 和記憶體。<br /><br /> 1 = 重設全文檢索目錄。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文檢索目錄檔案會遭到移除，但是全文檢索目錄和全文檢索索引的中繼資料則會保留。 在升級之後，所有的全文檢索索引都會停用變更追蹤，而且不會自動啟動搜耙。 當您在升級完成之後手動發出完整母體擴展之前，此目錄將會維持空白狀態。<br /><br /> 2 = 匯入全文檢索目錄。 一般而言，匯入的速度明顯比重建的速度更快。 例如，只有使用一個 CPU 時，匯入的執行速度大約比重建的速度快 10 倍。 不過，匯入的全文檢索目錄並不會使用新增的強化斷詞工具，所以您最後可能會想要重建全文檢索目錄。<br /><br /> 注意:重建可以在多執行緒模式中執行，而且如果有 10 個以上的 CPU 可用，當您允許重建使用所有 CPU 時，重建的執行速度可能會比匯入的速度更快。<br /><br /> 如果無法使用全文檢索目錄，將會重建關聯的全文檢索索引。 只有針對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫才可以使用此選項。<br /><br /> 如需選擇全文檢索升級選項的資訊，請參閱[升級全文檢索搜尋](../../relational-databases/search/upgrade-full-text-search.md)。<br /><br /> 注意:若要設定這個屬性在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，使用**全文檢索升級選項**屬性。 如需詳細資訊，請參閱 [管理及監視伺服器執行個體的全文檢索搜尋](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。|  
+|**update_languages**|NULL|更新使用全文檢索搜尋所註冊的語言和篩選清單。 這些語言是在設定索引和進行全文檢索查詢時所指定。 篩選背景程式主機會使用篩選來從對應的檔案格式（例如，儲存在資料類型中的 .docx、 **Varbinary （max）**、 **image**或**xml**）解壓縮文字資訊 **，以進行**全文檢索索引。<br /><br /> 如需詳細資訊，請參閱 [檢視或變更已註冊的篩選與斷詞工具](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)。|  
+|**upgrade_option**|**int**|控制將資料庫從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升級到更新版本時，要如何移轉全文檢索索引。 這個屬性適用於以下方式的升級：附加資料庫、還原資料庫備份、還原檔案備份，或是使用複製資料庫精靈複製資料庫。<br /><br /> 值為下列其中之一：<br /><br /> 0 = 全文檢索目錄會使用新的增強斷詞工具重建。 重建索引可能要花一些時間，而且在升級之後可能需要相當多的 CPU 和記憶體。<br /><br /> 1 = 重設全文檢索目錄。 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文檢索目錄檔案會遭到移除，但是全文檢索目錄和全文檢索索引的中繼資料則會保留。 在升級之後，所有的全文檢索索引都會停用變更追蹤，而且不會自動啟動搜耙。 當您在升級完成之後手動發出完整母體擴展之前，此目錄將會維持空白狀態。<br /><br /> 2 = 匯入全文檢索目錄。 一般而言，匯入的速度明顯比重建的速度更快。 例如，只有使用一個 CPU 時，匯入的執行速度大約比重建的速度快 10 倍。 不過，匯入的全文檢索目錄並不會使用新增的強化斷詞工具，所以您最後可能會想要重建全文檢索目錄。<br /><br /> 注意： Rebuild 可以在多執行緒模式中執行，如果有10個以上的 Cpu 可用，重建的執行速度可能會比匯入更快，如果您允許 rebuild 使用所有的 Cpu。<br /><br /> 如果無法使用全文檢索目錄，將會重建關聯的全文檢索索引。 只有針對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫才可以使用此選項。<br /><br /> 如需選擇全文檢索升級選項的資訊，請參閱[升級全文檢索搜尋](../../relational-databases/search/upgrade-full-text-search.md)。<br /><br /> 注意：若要在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]設定這個屬性，請使用 [**全文檢索升級選項**] 屬性。 如需詳細資訊，請參閱 [管理及監視伺服器執行個體的全文檢索搜尋](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。|  
 |**verify_signature**|**int**|指出全文檢索引擎是否只載入已簽署的二進位檔。 依預設，只會載入受信任的已簽署之二進位檔。<br /><br /> 1 = 確認只載入受信任的已簽署之二進位檔 (預設值)。<br /><br /> 0 = 不驗證是否已簽署二進位檔。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -68,8 +69,8 @@ sp_fulltext_service [ [@action=] 'action'
 ## <a name="result-sets"></a>結果集  
  None  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**serveradmin**固定的伺服器角色或系統管理員能夠執行**sp_fulltext_service**。  
+## <a name="permissions"></a>權限  
+ 只有**serveradmin**固定伺服器角色或系統管理員的成員，才能夠執行**sp_fulltext_service**。  
   
 ## <a name="examples"></a>範例  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_monitor_secondary (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_log_shipping_monitor_secondary （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b1acf456bda88eeee0493d3f9d7ccc063a5bda50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68001005"
 ---
-# <a name="sphelplogshippingmonitorsecondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
+# <a name="sp_help_log_shipping_monitor_secondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   從監視資料表傳回次要資料庫的相關資訊。  
@@ -42,18 +42,18 @@ sp_help_log_shipping_monitor_secondary
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @secondary_server = ] 'secondary_server'` 是次要伺服器的名稱。 *secondary_server*已**sysname**，沒有預設值。  
+`[ @secondary_server = ] 'secondary_server'`這是次要伺服器的名稱。 *secondary_server*是**sysname**，沒有預設值。  
   
-`[ @secondary_database = ] 'secondary_database'` 是，次要資料庫的名稱。 *secondary_database*已**sysname**，沒有預設值。  
+`[ @secondary_database = ] 'secondary_database'`這是次要資料庫的名稱。 *secondary_database*是**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
   
-|「資料行」|描述|  
+|資料行|描述|  
 |------------|-----------------|  
-|**secondary_server**|第二個執行個體名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]記錄傳送組態中。|  
+|**secondary_server**|記錄傳送設定[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中之次要實例的名稱。|  
 |**secondary_database**|記錄傳送組態中之次要資料庫的名稱。|  
 |**secondary_id**|記錄傳送組態中之次要伺服器的識別碼。|  
 |**primary_server**|記錄傳送組態中之 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 主要執行個體的名稱。|  
@@ -70,10 +70,10 @@ sp_help_log_shipping_monitor_secondary
 |**history_retention_period**|給定次要資料庫的記錄傳送記錄，在刪除之前所保留的時間 (以分鐘為單位)。|  
   
 ## <a name="remarks"></a>備註  
- **sp_help_log_shipping_monitor_secondary**必須從執行**主要**監視伺服器上的資料庫。  
+ **sp_help_log_shipping_monitor_secondary**必須從監視伺服器上的**master**資料庫中執行。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
   
 ## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

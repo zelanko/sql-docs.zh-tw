@@ -1,5 +1,5 @@
 ---
-title: Properties 屬性 （ServerNetworkProtocol 類別） |Microsoft Docs
+title: Properties 屬性（ServerNetworkProtocol 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 985be289be2bd3a362babeec1235dc594acb6bff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470075"
 ---
 # <a name="properties-property-servernetworkprotocol-class"></a>Properties 屬性 (ServerNetworkProtocol 類別)
@@ -37,11 +37,11 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
- A [ServerNetworkProtocol 類別](servernetworkprotocol-class.md)物件，表示執行個體所使用的網路通訊協定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ *目標*  
+ 代表實例所使用之[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]網路通訊協定的[ServerNetworkProtocol 類別](servernetworkprotocol-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- 陣列[ServerNetworkProtocolProperty 類別](../servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)代表伺服器網路通訊協定所支援之屬性的物件。  
+ [ServerNetworkProtocolProperty 類別](../servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)物件的陣列，代表伺服器網路通訊協定所支援的屬性。  
   
 ## <a name="remarks"></a>備註  
   

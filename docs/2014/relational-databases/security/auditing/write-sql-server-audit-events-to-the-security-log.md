@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211975"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>將 SQL Server Audit 事件寫入安全性記錄檔
@@ -47,20 +47,20 @@ ms.locfileid: "68211975"
   
      [安全性](#Security)  
   
--   **若要將 SQL Server 稽核事件寫入安全性記錄檔：**  
+-   **若要將 SQL Server audit 事件寫入安全性記錄檔：**  
   
-     [使用 auditpol 在 Windows 中設定稽核物件存取設定](#auditpolAccess)  
+     [使用 auditpol 在 Windows 中設定 audit 物件存取設定](#auditpolAccess)  
   
-     [使用 secpol 在 Windows 中設定稽核物件存取設定](#secpolAccess)  
+     [使用 secpol.msc 在 Windows 中設定 audit 物件存取設定](#secpolAccess)  
   
-     [使用 secpol 將 generate security audits 權限授與帳戶](#secpolPermission)  
+     [使用 secpol.msc 將產生安全性審核許可權授與帳戶](#secpolPermission)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Restrictions"></a> 限制事項  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 電腦的管理員應該了解安全性記錄檔的本機設定可以由網域原則覆寫。 在此情況下，網域原則可能會覆寫子類別目錄設定 (**auditpol /get /subcategory:"application generated"** )。 這可能會影響 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 記錄事件的功能，讓它無法偵測出系統無法繼續記錄 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 正嘗試稽核的事件。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  您必須是 Windows 管理員才能設定這些設定。  

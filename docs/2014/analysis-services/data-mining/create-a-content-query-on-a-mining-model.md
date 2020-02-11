@@ -1,5 +1,5 @@
 ---
-title: 在 採礦模型上建立內容查詢 |Microsoft Docs
+title: 在「採礦模型」上建立內容查詢 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085575"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>建立採礦模型內容查詢
@@ -30,21 +30,21 @@ ms.locfileid: "66085575"
   
 #### <a name="to-create-a-dmx-model-content-query"></a>建立 DMX 模型內容查詢  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [檢視]  功能表上，按一下 [範本總管]  。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [檢視] **** 功能表上，按一下 [範本總管] ****。  
   
-2.  在 [範本總管]  窗格中，按一下 Cube 圖示，即可變更清單並顯示 Analysis Services 範本。  
+2.  在 [範本總管]**** 窗格中，按一下 Cube 圖示，即可變更清單並顯示 Analysis Services 範本。  
   
-3.  在範本類別目錄的清單中，依序展開 [DMX]  和 [模型內容]  ，然後按兩下 [內容查詢]  。  
+3.  在範本類別目錄的清單中，依序展開 [DMX]**** 和 [模型內容]****，然後按兩下 [內容查詢]****。  
   
-4.  在 [連接到 Analysis Services]  對話方塊中，選取包含您要查詢之採礦模型的執行個體，然後按一下 [連接]  。  
+4.  在 [連接到 Analysis Services]**** 對話方塊中，選取包含您要查詢之採礦模型的執行個體，然後按一下 [連接]****。  
   
-     [內容查詢]  範本就會在適當的程式碼編輯器中開啟。 [中繼資料] 窗格會列出目前資料庫中可用的模型。 若要變更資料庫，請從 [可用的資料庫]  清單中選取不同的資料庫。  
+     [內容查詢]**** 範本就會在適當的程式碼編輯器中開啟。 [中繼資料] 窗格會列出目前資料庫中可用的模型。 若要變更資料庫，請從 [可用的資料庫]**** 清單中選取不同的資料庫。  
   
-5.  在一行中，輸入採礦模型的名稱`FROM`[ *\<採礦模型，name，Mymodel> >* ]`.CONTENT`。 如果採礦模型名稱包含空格，您就必須以方括號括住名稱。  
+5.  在 [*\<採礦模型，名稱，mymodel>>*]`.CONTENT`這`FROM`一行中，輸入「採礦模型」的名稱。 如果採礦模型名稱包含空格，您就必須以方括號括住名稱。  
   
      如果您不想要輸入名稱，可以在 **物件總管** 中選取採礦模型，然後將它拖曳至範本中。  
   
-6.  在一行中， `SELECT` *\<選取清單中，運算式清單， \* >* ，輸入採礦模型內容結構描述資料列集中的資料行的名稱。  
+6.  在行中， `SELECT` * \<選取 [清單]、[ \*expr 清單*]，然後輸入 [採礦模型內容架構] 資料列集中的資料行名稱。  
   
      若要檢視您可以在採礦模型內容查詢中傳回的資料行清單，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)所提供的 DMV 建立查詢。  
   
@@ -56,11 +56,11 @@ ms.locfileid: "66085575"
   
 #### <a name="to-create-a-query-against-the-data-mining-schema-rowset"></a>針對資料採礦結構描述資料列集建立查詢  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [新增查詢]  工具列上，按一下 [Analysis Services DMX 查詢]  或 [Analysis Services MDX 查詢]  。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [新增查詢]**** 工具列上，按一下 [Analysis Services DMX 查詢]**** 或 [Analysis Services MDX 查詢]****。  
   
-2.  在 [連接到 Analysis Services]  對話方塊中，選取包含您要查詢之物件的執行個體，然後按一下 [連接]  。  
+2.  在 [連接到 Analysis Services]**** 對話方塊中，選取包含您要查詢之物件的執行個體，然後按一下 [連接]****。  
   
-     [內容查詢]  範本就會在適當的程式碼編輯器中開啟。 [中繼資料] 窗格會列出目前資料庫中可用的物件。 若要變更資料庫，請從 [可用的資料庫]  清單中選取不同的資料庫。  
+     [內容查詢]**** 範本就會在適當的程式碼編輯器中開啟。 [中繼資料] 窗格會列出目前資料庫中可用的物件。 若要變更資料庫，請從 [可用的資料庫]**** 清單中選取不同的資料庫。  
   
 3.  在查詢編輯器中，輸入下列項目：  
   
@@ -75,10 +75,10 @@ ms.locfileid: "66085575"
      [結果] 窗格就會顯示模型的內容。  
   
     > [!NOTE]  
-    >  若要檢視目前的執行個體上的所有結構描述資料列集，您可以查詢的清單，使用下列查詢：`SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS。 或者，如需資料採礦特有之結構描述資料列集的清單，請參閱 [資料採礦結構描述資料列集](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)。  
+    >  若要檢視您可以針對目前執行個體查詢之所有結構描述資料列集的清單，請使用這個查詢： `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS。 或者，如需資料採礦特有之結構描述資料列集的清單，請參閱 [資料採礦結構描述資料列集](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [&#40;Analysis Services 的採礦模型內容-資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)   
  [資料採礦結構描述資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   
   

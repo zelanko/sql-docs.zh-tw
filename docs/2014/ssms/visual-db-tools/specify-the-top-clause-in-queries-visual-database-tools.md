@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f9587a5e653d2df8cbe169fe5030542b86d8aaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63194970"
 ---
 # <a name="specify-the-top-clause-in-queries-visual-database-tools"></a>在查詢中指定 TOP 子句 (Visual Database Tools)
@@ -52,7 +52,7 @@ ms.locfileid: "63194970"
 >  您也可以編輯 SQL 窗格中的 TOP 子句，以變更 [Top 規格]  中的子屬性值。  
   
 ## <a name="see-also"></a>另請參閱  
- [設計查詢和檢視表的使用說明主題&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [設計查詢和觀看 how to 主題 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [查詢屬性 &#40;Visual Database Tools&#41;](query-properties-visual-database-tools.md)  
   
   

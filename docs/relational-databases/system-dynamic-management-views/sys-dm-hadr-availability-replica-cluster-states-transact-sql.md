@@ -21,10 +21,10 @@ ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e3e2fccaed2b3c001fdcc8a0d7938f0a75a8f10d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246346"
 ---
 # <a name="sysdm_hadr_availability_replica_cluster_states-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "75246346"
 |**replica_id**|**uniqueidentifier**|可用性複本的唯一識別碼。|  
 |**replica_server_name**|**nvarchar(256)**|裝載此複本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。|  
 |**group_id**|**uniqueidentifier**|可用性群組的唯一識別碼。|  
-|**join_state**|**Tinyint**|0 = 未聯結<br /><br /> 1 = 已聯結，獨立<br /><br /> 2 = 已聯結，容錯移轉叢集執行個體|  
+|**join_state**|**tinyint**|0 = 未聯結<br /><br /> 1 = 已聯結，獨立<br /><br /> 2 = 已聯結，容錯移轉叢集執行個體|  
 |**join_state_desc**|**Nvarchar （60）**|NOT_JOINED<br /><br /> JOINED_STANDALONE<br /><br /> JOINED_FAILOVER_CLUSTER_INSTANCE|  
   
 ## <a name="security"></a>安全性  
@@ -48,6 +48,6 @@ ms.locfileid: "75246346"
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql&#41;監視可用性群組](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
+ [監視可用性群組 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

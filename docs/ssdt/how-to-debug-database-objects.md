@@ -1,23 +1,24 @@
 ---
-title: 如何：對資料庫物件進行偵錯 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 針對資料庫物件進行偵錯
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 57854937595ba57dee8c36bd4877fd05362f2e40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ba04eba5107968f1be11c62fbac0f57ca5733b3f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035200"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241457"
 ---
-# <a name="how-to-debug-database-objects"></a>如何：針對資料庫物件進行偵錯
+# <a name="how-to--debug-database-objects"></a>如何：針對資料庫物件進行偵錯
+
 SQL Server 單元測試是由以下項目組成：  
   
 -   以 Visual C\# 或 Visual Basic 撰寫的單元測試程式碼。 此程式碼是由 SQL Server 單元測試設計工具產生，負責提交構成測試本文的 Transact\-SQL 指令碼。  
@@ -48,7 +49,7 @@ SQL Server 單元測試是由以下項目組成：
   
 4.  在 [啟用偵錯工具]  下，按一下 [啟用 SQL Server 偵錯]  。  
   
-5.  儲存變更。  
+5.  儲存您的變更。  
   
 ### <a name="to-set-an-increased-execution-context-timeout-to-enable-debugging-for-your-test-project"></a>若要設定延長執行內容逾時來啟用測試專案的偵錯  
   
@@ -64,7 +65,7 @@ SQL Server 單元測試是由以下項目組成：
     <ExecutionContext CommandTimeout ="300" Provider="System.Data.SqlClient" ConnectionString="Data Source=TargetServerName\TargetInstanceName;Initial Catalog=TargetDatabaseName;Integrated Security=True;Pooling=False" />  
     ```  
   
-4.  儲存變更。  
+4.  儲存您的變更。  
   
 5.  重建單元測試專案。  
   

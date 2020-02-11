@@ -14,10 +14,10 @@ ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7e41af6f7b5f1d2a770400ab66191f7957937659
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729400"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>使用精靈部署模型部署封裝
@@ -29,36 +29,36 @@ ms.locfileid: "73729400"
 > [!IMPORTANT]  
 >  封裝只能部署到之前建立封裝所使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 這表示，在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中建立的封裝無法部署到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
--   在目標  **環境中，您必須擁有存取 [系統管理]** [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 功能區域的權限。  
+-   在目標 ** 環境中，您必須擁有存取 [系統管理]**[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 功能區域的權限。  
   
 -   模型部署封裝必須存在。 如需詳細資訊，請參閱 [使用精靈建立模型部署封裝](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)。  
   
--   您必須是您要部署模型之環境中的管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是您要部署模型之環境中的管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 ### <a name="to-deploy-a-model-deployment-package-of-model-objects-only"></a>若僅要部署模型物件的模型部署封裝  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
-2.  在 [模型檢視] 頁面上，從功能表列指向 [系統]，然後按一下 [部署]。  
+2.  在 [模型檢視]**** 頁面上，從功能表列指向 [系統]****，然後按一下 [部署]****。  
   
-3.  按一下 [模型部署精靈] 上的 [部署]。  
+3.  按一下 [模型部署精靈]**** 上的 [部署]****。  
   
 4.  按一下 **[瀏覽]** 。  
   
-5.  尋找您的部署套件 (.pkg 檔案)，然後按一下 [開啟]。  
+5.  尋找您的部署套件 (.pkg 檔案)，然後按一下 [開啟]****。  
   
-6.  按一下 **[下一步]** 。  
+6.  按 [下一步]  。  
   
-7.  載入套件之後，按一下 [下一步]。  
+7.  載入套件之後，按一下 [下一步]****。  
   
-8.  如果模型已存在，您可以選取 [更新現有模型] 來更新模型。 若要建立新的模型，請選取 [建立新模型]，然後在按 [下一步] 之後，輸入新模型的名稱。  
+8.  如果模型已存在，您可以選取 [更新現有模型]**** 來更新模型。 若要建立新的模型，請選取 [建立新模型]****，然後在按 [下一步]**** 之後，輸入新模型的名稱。  
   
-9. 按一下 [完成] 結束精靈。  
+9. 按一下 [完成]**** 結束精靈。  
   
- **注意：**  
+ **紀錄**  
   
 -   如果套件中的訂閱檢視與現有模型中的訂閱檢視同名，就會顯示這項警告： **部署者訂閱已重新命名**， 且會將檢視建立為 *modelname.subscriptionviewname*。 如果此名稱已在使用中，則不會建立訂閱檢視。  
   
@@ -75,11 +75,11 @@ ms.locfileid: "73729400"
      更新模型時，如果此程序在前三個步驟的任何一個期間失敗，就不會繼續進行，但是，並不會回復已經進行的變更。  
   
 ## <a name="next-steps"></a>後續步驟  
- 檔案屬性及使用者和群組的權限不包含在模型部署封裝中。 在部署模型之後，您必須手動更新這些項目。 如需詳細資訊，請參閱：  
+ 檔案屬性及使用者和群組的權限不包含在模型部署封裝中。 在部署模型之後，您必須手動更新這些項目。 如需詳細資訊，請參閱  
   
--   [指派模型物件權限 &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
+-   [指派模型物件使用權限 &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [部署模型 &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
+ [&#40;Master Data Services 部署模型&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

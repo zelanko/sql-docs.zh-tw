@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d0139376adc28b07877389a023b19310b06417ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68212137"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>讓資料庫訂閱或取消訂閱原則類別目錄
@@ -28,7 +28,7 @@ ms.locfileid: "68212137"
   
      [安全性](#Security)  
   
--   **若要使用下列方法讓資料庫訂閱或取消訂閱原則類別目錄：**  
+-   **若要將資料庫訂閱或取消訂閱原則類別目錄，請使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68212137"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要 db_owner 固定資料庫角色中的成員資格。  
@@ -49,9 +49,10 @@ ms.locfileid: "68212137"
   
 2.  按一下加號展開 **[資料庫]** 資料夾。  
   
-3.  以滑鼠右鍵按一下要管理其中類別目錄訂閱的資料庫，指向 [原則]  並選取 [類別目錄]  。  
+3.  以滑鼠右鍵按一下要管理其中類別目錄訂閱的資料庫，指向 [原則]**** 並選取 [類別目錄]****。  
   
-     **[類別目錄]** 對話方塊有下列選項：  
+     
+  **[類別目錄]** 對話方塊有下列選項：  
   
      展開資料行  
      按一下此選項可展開原則類別目錄。 這個清單會列出此類別目錄中所包含的所有原則。  
@@ -59,7 +60,7 @@ ms.locfileid: "68212137"
      **名稱**  
      原則類別目錄的名稱。  
   
-     **已訂閱**  
+     **訂閱**  
      指出目標是否已訂閱原則類別目錄。 如果已停用此核取方塊，會針對 **[託管資料庫訂閱]** 設定原則類別目錄。 這表示，原則類別目錄會套用到伺服器上的所有資料庫。  
   
      **原則**  
@@ -71,10 +72,10 @@ ms.locfileid: "68212137"
      **執行模式**  
      顯示原則的執行模式。  
   
-     **記錄**  
+     **History**  
      按一下 [檢視記錄] 超連結可開啟記錄檔檢視器，以查看原則記錄。  
   
-4.  若要訂閱原則式管理類別目錄，請選取 [已訂閱]  資料行下類別目錄的對話方塊。 若要取消訂閱類別目錄，請清除核取方塊。  
+4.  若要訂閱原則式管理類別目錄，請選取 [已訂閱]**** 資料行下類別目錄的對話方塊。 若要取消訂閱類別目錄，請清除核取方塊。  
   
 5.  完成後，請按一下 **[確定]** 。  
   

@@ -13,19 +13,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2420a4df5b971ae2190b2a66f24b226f472fee2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63249334"
 ---
 # <a name="activity-monitor"></a>活動監視器
   活動監視器顯示有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序以及這些處理序如何影響目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的詳細資訊。  
   
 ## <a name="benefits-of-activity-monitor"></a>活動監視器的優點  
- 活動監視器就會有下列可展開及摺疊窗格的索引標籤式文件視窗：[概觀]  、[作用中使用者工作]  、[資源等候]  、[資料檔案 I/O]  和 [最近且費時的查詢]  。 展開任何窗格時，活動監視器會查詢執行個體以便取得相關資訊。 摺疊某個窗格時，該窗格的所有查詢活動就會停止。 您也可以同時展開一或多個窗格，以便檢視不同種類的執行個體活動。  
+ 活動監視器是一個索引標籤式文件視窗，具有下列可擴充且可折迭的窗格：**總覽**、作用中**使用者**工作、**資源等候**、**資料檔案 i/o**和**最近的昂貴查詢**。 展開任何窗格時，活動監視器會查詢執行個體以便取得相關資訊。 摺疊某個窗格時，該窗格的所有查詢活動就會停止。 您也可以同時展開一或多個窗格，以便檢視不同種類的執行個體活動。  
   
- 中包含的資料行**作用中使用者工作**，**資源等候**，**資料檔案 I/O**，以及**最近且費時的查詢**窗格中，您可以透過下列方式自訂顯示：  
+ 針對 [作用中**使用者**工作]、[**資源等候**]、[**資料檔案 i/o**] 和 [最近的**昂貴查詢**] 窗格中所包含的資料行，您可以透過下列方式自訂顯示：  
   
 1.  若要重新排列資料行的順序，請按一下資料行標題並將它拖曳至標題功能區中的其他位置。  
   

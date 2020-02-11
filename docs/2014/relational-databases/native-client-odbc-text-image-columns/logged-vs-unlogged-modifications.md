@@ -1,5 +1,5 @@
 ---
-title: 已記錄與未修改記錄 |Microsoft Docs
+title: 已記錄與未記錄的修改 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c722d5360ad01e7e95508c2219ceb674de381286
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195141"
 ---
-# <a name="logged-vs-unlogged-modifications"></a>已記錄與未記錄的修改
-  應用程式可以要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式不要記錄**文字**， **ntext**，和**映像**修改。 但是在使用這個選項時，應該要特別小心。 它應該僅適用於這兩種情況其中**文字**， **ntext**，或**映像**資料並不重要，而且資料擁有者願意能夠復原資料的取捨較高的效能。  
+# <a name="logged-vs-unlogged-modifications"></a>已記錄及未記錄的修改
+  應用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以要求 NATIVE Client ODBC 驅動程式不會記錄**text**、 **Ntext**和**image**修改。 但是在使用這個選項時，應該要特別小心。 只有當**text**、 **Ntext**或**image**資料不重要，而且資料擁有者願意將復原資料的能力視為較高的效能時，才應該使用此功能。  
   
- 記錄的記錄**文字**， **ntext**，並**映像**修改會受到呼叫[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)使用*屬性*參數設定為 SQL_SOPT_SS_ TEXTPTR_LOGGING 以及*ValuePtr*設定為 SQL_TL_ON 或 sql_tl_off 所控制。  
+ **Text**、 **Ntext**和**image**修改的記錄是藉由呼叫[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) ，並將*Attribute*參數設定為 SQL_SOPT_SS_ TEXTPTR_LOGGING，並將*valueptr 是*設定為 SQL_TL_ON 或 SQL_TL_OFF 來控制。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理 Text 和 Image 資料行](managing-text-and-image-columns.md)  

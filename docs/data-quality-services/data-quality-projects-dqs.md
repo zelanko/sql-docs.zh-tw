@@ -10,10 +10,10 @@ ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 22a92035ea26a4341d4f912c3e6b5cdfaef75efa
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251702"
 ---
 # <a name="data-quality-projects-dqs"></a>資料品質專案 (DQS)
@@ -61,10 +61,10 @@ ms.locfileid: "75251702"
 |工作描述|主題|  
 |----------------------|-----------|  
 |描述如何建立資料品質專案。|[建立資料品質專案](../data-quality-services/create-a-data-quality-project.md)|  
-|描述如何開啟、解除鎖定、重新命名和刪除資料品質專案。|[開啟、解除鎖定、重新命名及刪除資料品質專案](open-unlock-rename-and-delete-a-data-quality-project.md)|  
+|描述如何開啟、解除鎖定、重新命名和刪除資料品質專案。|[開啟、解除鎖定、重新命名和刪除資料品質專案](open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |描述如何在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中開啟 Integration Services 專案。|[在 Data Quality Client 中開啟 Integration Services 專案](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [DQS 知識庫和定義域](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
+ [DQS 知識庫與定義域](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

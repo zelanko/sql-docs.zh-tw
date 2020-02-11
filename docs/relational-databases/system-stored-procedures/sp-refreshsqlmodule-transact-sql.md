@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df5ff458c45a4ac804591a8a4d77d9367b8cb6c4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982765"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
@@ -56,9 +56,9 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'module\_name'` 是預存程式、使用者定義函數、view、DML 觸發程式、資料庫層級 DDL 觸發程式或伺服器層級 DDL 觸發程式的名稱。 *module_name*不可以是 common language RUNTIME （CLR）預存程式或 CLR 函數。 *module_name*不可以是架構系結。 *module_name*是**Nvarchar**，沒有預設值。 *module_name*可以是多部分的識別碼，但只能參考目前資料庫中的物件。  
+`[ @name = ] 'module\_name'`這是預存程式、使用者定義函數、view、DML 觸發程式、資料庫層級 DDL 觸發程式或伺服器層級 DDL 觸發程式的名稱。 *module_name*不可以是 common language RUNTIME （CLR）預存程式或 CLR 函數。 *module_name*不可以是架構系結。 *module_name*是**Nvarchar**，沒有預設值。 *module_name*可以是多部分的識別碼，但只能參考目前資料庫中的物件。  
   
-`[ , @namespace = ] ' \<class> '` 是指定之模組的類別。 當*module_name*是 DDL 觸發程式時，\<類別 > 是必要的。 *\<類別 >* 是**Nvarchar**（20）。 有效輸入包括：  
+`[ , @namespace = ] ' \<class> '`這是指定之模組的類別。 當*module_name*是 DDL 觸發程式時\<，就需要類別>。 類別>是**Nvarchar**（20）。 * \< * 有效輸入包括：  
   
 |||  
 |-|-|  
@@ -68,7 +68,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當對受模組影響其定義的物件進行變更時，應該執行**sp_refreshsqlmodule** 。 否則，在查詢或叫用模組時，可能會產生非預期的結果。 若要重新整理視圖，您可以使用**sp_refreshsqlmodule**或**sp_refreshview**的結果相同。  
   
  **sp_refreshsqlmodule**不會影響與物件相關聯的任何許可權、擴充屬性或 SET 選項。  
@@ -78,7 +78,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 > [!NOTE]  
 >  當您執行**sp_refreshsqlmodule**時，會卸載與物件相關聯的任何簽章。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要模組的 ALTER 權限，以及物件所參考之任何 CLR 使用者自訂型別和 XML 結構描述集合的 REFERENCES 權限。 當指定的模組是資料庫層級 DDL 觸發程序時，便需要目前資料庫的 ALTER ANY DATABASE DDL TRIGGER 權限。 當指定的模組是伺服器層級 DDL 觸發程序時，便需要 CONTROL SERVER 權限。  
   
  此外，對於使用 EXECUTE AS 子句定義的模組，也必須對指定的主體具備 IMPERSONATE 權限。 一般而言，重新整理物件不會變更其 EXECUTE AS 主體，除非模組是使用 EXECUTE AS USER 定義，而且主體的使用者名稱這時解析出來不是模組建立當時的使用者。  
@@ -86,7 +86,8 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="examples"></a>範例  
   
 ### <a name="a-refreshing-a-user-defined-function"></a>A. 重新整理使用者自訂函數  
- 下列範例會重新整理使用者自訂函數。 這個範例會建立別名資料類型 `mytype`，以及使用 `to_upper` 的使用者自訂函數 `mytype`。 接著，`mytype` 會重新命名為 `myoldtype`，而且會建立有不同定義的新 `mytype`。 `dbo.to_upper` 函數會重新整理，以參考 `mytype` 的新實作，而非舊實作。  
+ 下列範例會重新整理使用者自訂函數。 這個範例會建立別名資料類型 `mytype`，以及使用 `to_upper` 的使用者自訂函數 `mytype`。 接著，`mytype` 會重新命名為 `myoldtype`，而且會建立有不同定義的新 `mytype`。 
+  `dbo.to_upper` 函數會重新整理，以參考 `mytype` 的新實作，而非舊實作。  
   
 ```  
 -- Create an alias type.  
@@ -143,7 +144,7 @@ SELECT dbo.to_upper('abcdefgh');
 GO  
 ```  
   
-### <a name="b-refreshing-a-database-level-ddl-trigger"></a>b. 重新整理資料庫層級 DDL 觸發程序  
+### <a name="b-refreshing-a-database-level-ddl-trigger"></a>B. 重新整理資料庫層級 DDL 觸發程序  
  下列範例會重新整理資料庫層級 DDL 觸發程式。  
   
 ```  
@@ -169,7 +170,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [資料庫引擎預存&#40;程式 transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [sp_refreshview &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

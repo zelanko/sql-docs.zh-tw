@@ -18,10 +18,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 23a1392256e103fa1bc112f11b5c5b97f5c398f1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75237707"
 ---
 # <a name="whats-new-in-sql-server-2014"></a>SQL Server 2014 的新功能
@@ -45,7 +45,7 @@ This file, at this exact GitHub path, is dedicated to SQL Server version 2014.
   
 -   [Analysis Services 和商業智慧的新功能](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)  
   
--   [SQL Server 安裝的新功能](install/what-s-new-in-sql-server-installation.md)  
+-   [SQL Server 安裝的新增功能](install/what-s-new-in-sql-server-installation.md)  
   
  **[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]尚未對下列功能引進重要的新功能：**  
   

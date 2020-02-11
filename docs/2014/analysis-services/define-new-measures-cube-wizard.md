@@ -1,5 +1,5 @@
 ---
-title: 定義新的量值 （Cube 精靈） |Microsoft Docs
+title: 定義新的量值（Cube Wizard） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082105"
 ---
 # <a name="define-new-measures-cube-wizard"></a>定義新的量值 (Cube 精靈)
-  使用 [定義新的量值]  頁面，即可為不使用資料來源建立之 Cube 建立新的量值。  
+  使用 [定義新的量值]**** 頁面，即可為不使用資料來源建立之 Cube 建立新的量值。  
   
 > [!NOTE]  
->  只有當您已在 [選取建立方法]  頁面上選取 [在資料來源中建立資料表]  時，才會出現此頁面。  
+>  只有當您已在 [選取建立方法]**** 頁面上選取 [在資料來源中建立資料表]**** 時，才會出現此頁面。  
   
 ## <a name="select-measures-from-template-options"></a>從範本選取量值選項  
   
 > [!NOTE]  
->  只有當您已從 [選取建立方法]  頁面上的 [範本]  中選取範本時，才會顯示此章節所列的選項。  
+>  只有當您已從 [選取建立方法]**** 頁面上的 [範本]**** 中選取範本時，才會顯示此章節所列的選項。  
   
  **從範本選取量值**  
  顯示要包含在 Cube 中之 Cube 範本的量值。  
@@ -40,7 +40,7 @@ ms.locfileid: "66082105"
   
  若要將範本的所有量值都包含在 Cube 中，請選取標頭中的核取方塊。  
   
- **[量值名稱]**  
+ **量值名稱**  
  列出範本中可以使用的量值。  
   
  若要重新命名量值，請按一下該量值，然後鍵入新的名稱。  
@@ -55,7 +55,7 @@ ms.locfileid: "66082105"
   
  若要變更資料類型，請按一下資料類型，然後從清單中選取資料類型。  
   
- **彙總**  
+ **累積**  
  列出量值的彙總。  
   
  若要變更彙總，請按一下彙總，然後從清單中選取資料類型。  
@@ -63,15 +63,15 @@ ms.locfileid: "66082105"
 ## <a name="add-new-measures-options"></a>加入新的量值選項  
   
 > [!NOTE]  
->  本節中列出的選項一律會在 [定義新的量值]  頁面上出現。  
+>  本節中列出的選項一律會在 [定義新的量值]**** 頁面上出現。  
   
  **加入新的量值**  
  顯示並讓您能夠定義要包含在 Cube 中的其他量值。  
   
- **[量值名稱]**  
+ **量值名稱**  
  列出要包含在 Cube 中的新量值。  
   
- 若要加入新的量值，請按一下 [加入新的量值]  ，然後鍵入新量值的名稱。  
+ 若要加入新的量值，請按一下 [加入新的量值]****，然後鍵入新量值的名稱。  
   
  **量值群組**  
  列出量值的量值群組。  
@@ -83,7 +83,7 @@ ms.locfileid: "66082105"
   
  若要變更資料類型，請按一下資料類型，然後從清單中選取資料類型。  
   
- **彙總**  
+ **累積**  
  列出量值的彙總。  
   
  若要變更彙總，請按一下彙總，然後從清單中選取資料類型。  
@@ -91,12 +91,12 @@ ms.locfileid: "66082105"
  **X**  
  從 Cube 中刪除新的量值。  
   
- 若要從 Cube 中移除新的量值，請按一下該量值的 [X]  按鈕。  
+ 若要從 Cube 中移除新的量值，請按一下該量值的 [X]**** 按鈕。  
   
 ## <a name="see-also"></a>另請參閱  
- [Cube 精靈 F1 說明](cube-wizard-f1-help.md)   
- [Cube 物件&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
- [多維度模型中的 Cube](multidimensional-models/cubes-in-multidimensional-models.md)   
+ [Cube Wizard F1 說明](cube-wizard-f1-help.md)   
+ [Cube 物件 &#40;Analysis Services 多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [多維度模型中的 cube](multidimensional-models/cubes-in-multidimensional-models.md)   
  [多維度模型中的維度](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

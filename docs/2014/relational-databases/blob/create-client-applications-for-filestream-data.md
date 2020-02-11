@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 77f7144231bda8be36334513584df16cf9c0e22b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010176"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>建立 FILESTREAM 資料的用戶端應用程式
@@ -29,35 +29,37 @@ ms.locfileid: "66010176"
 -   取得 Win32 控制代碼，並且使用此控制代碼來讀取及寫入資料至 FILESTREAM BLOB。  
   
 > [!NOTE]  
->  此主題中的範例需要使用在 [建立啟用 FILESTREAM 的資料庫](create-a-filestream-enabled-database.md) 和 [建立儲存 FILESTREAM 資料的資料表](create-a-table-for-storing-filestream-data.md)中建立之啟用 FILESTREAM 的資料庫和資料表。  
+>  本主題中的範例需要使用在 [建立啟用 FILESTREAM 的資料庫](create-a-filestream-enabled-database.md) 和 [建立儲存 FILESTREAM 資料的資料表](create-a-table-for-storing-filestream-data.md)中建立之啟用 FILESTREAM 的資料庫和資料表。  
   
-##  <a name="func"></a> 使用 FILESTREAM 資料的功能  
+##  <a name="func"></a>用於處理 FILESTREAM 資料的函數  
  當您使用 FILESTREAM 來儲存二進位大型物件 (BLOB) 資料時，可以使用 Win32 API 來處理檔案。 為了支援在 Win32 應用程式中使用 FILESTREAM BLOB 資料， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了下列函數和 API：  
   
--   [PathName](/sql/relational-databases/system-functions/pathname-transact-sql) 會將路徑當做 Token 傳給 BLOB。 應用程式會使用此 Token 來取得 Win32 控制代碼，並在 BLOB 資料上運作。  
+-   [PathName](/sql/relational-databases/system-functions/pathname-transact-sql)會將路徑當做權杖傳回至 BLOB。 應用程式會使用此 Token 來取得 Win32 控制代碼，並在 BLOB 資料上運作。  
   
      當包含 FILESTREAM 資料的資料庫屬於 AlwaysOn 可用性群組時，PathName 函數就會傳回虛擬網路名稱 (VNN) 而非電腦名稱。  
   
--   [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) 會傳回代表工作階段之目前交易的 Token。 應用程式會使用此 Token 將 FILESTREAM 檔案系統資料流作業繫結至此交易。  
+-   [GET_FILESTREAM_TRANSACTION_CONTEXT （）](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql)會傳回代表會話之目前交易的 token。 應用程式會使用此 Token 將 FILESTREAM 檔案系統資料流作業繫結至此交易。  
   
--   [OpenSqlFilestream API](access-filestream-data-with-opensqlfilestream.md) 會取得 Win32 檔案控制代碼。 應用程式會使用此控制代碼來為 FILESTREAM 資料進行資料流處理，然後將此控制代碼傳遞給下列 Win32 API：[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、[TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、[SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、[SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) 或 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 如果應用程式使用此控制代碼呼叫任何其他 API，就會傳回 ERROR_ACCESS_DENIED 錯誤。 應用程式應該使用 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428)來關閉此控制代碼。  
+-   
+  [OpenSqlFilestream API](access-filestream-data-with-opensqlfilestream.md) 會取得 Win32 檔案控制代碼。 應用程式會使用此控制代碼來為 FILESTREAM 資料進行資料流處理，然後將此控制代碼傳遞給下列 Win32 API： [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)或 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 如果應用程式使用此控制代碼呼叫任何其他 API，就會傳回 ERROR_ACCESS_DENIED 錯誤。 應用程式應該使用 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428)來關閉此控制代碼。  
   
- 所有 FILESTREAM 資料容器存取都是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易中執行。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以在相同的交易中執行，以維護 SQL 資料與 FILESTREAM 資料之間的一致性。  
+ 所有 FILESTREAM 資料容器存取都是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易中執行。 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以在相同的交易中執行，以維護 SQL 資料與 FILESTREAM 資料之間的一致性。  
   
-##  <a name="steps"></a> 存取 FILESTREAM 資料的步驟  
+##  <a name="steps"></a>存取 FILESTREAM 資料的步驟  
   
-###  <a name="path"></a> 讀取 FILESTREAM 檔案路徑  
- FILESTREAM 資料表中的每個資料格都具有與它相關聯的檔案路徑。 若要讀取此路徑，請在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中使用 `PathName` 資料行的 `varbinary(max)` 屬性。 下列範例將示範如何讀取 `varbinary(max)` 資料行的檔案路徑。  
+###  <a name="path"></a>讀取 FILESTREAM 檔案路徑  
+ FILESTREAM 資料表中的每個資料格都具有與它相關聯的檔案路徑。 若要讀取此路徑，請在 `PathName` 陳述式中使用 `varbinary(max)` 資料行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 屬性。 下列範例將示範如何讀取 `varbinary(max)` 資料行的檔案路徑。  
   
  [!code-sql[FILESTREAM#FS_PathName](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_pathname)]  
   
-###  <a name="trx"></a> 讀取交易內容  
+###  <a name="trx"></a>讀取交易內容  
  若要取得目前的交易內容，請使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) 函數。 下列範例將示範如何開始交易並讀取目前交易內容。  
   
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_get_transaction_context)]  
   
-###  <a name="handle"></a> 取得 Win32 檔案控制代碼  
- 若要取得 Win32 檔案控制代碼，請呼叫 OpenSqlFilestream API。 這個 API 是從 sqlncli.dll 檔案中匯出。 傳回的控制代碼可傳遞給下列任何 Win32 API：[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、[WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、[TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、[SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、[SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) 或 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 下列範例將示範如何取得 Win32 檔案控制代碼，並用它來讀取及寫入資料至 FILESTREAM BLOB。  
+###  <a name="handle"></a>取得 Win32 檔案控制代碼  
+ 若要取得 Win32 檔案控制代碼，請呼叫 OpenSqlFilestream API。 這個 API 是從 sqlncli.dll 檔案中匯出。 傳回的控制代碼可傳遞給下列任何 Win32 API： [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)或 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 下列範例將示範如何取得 Win32 檔案控制代碼，並用它來讀取及寫入資料至 FILESTREAM BLOB。  
   
  [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/cs/filestream.cs#fs_cs_readandwriteblob)]  
   
@@ -65,7 +67,7 @@ ms.locfileid: "66010176"
   
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/cpp/filestream.cpp#fs_cpp_writeblob)]  
   
-##  <a name="best"></a> 應用程式設計和實作的最佳作法  
+##  <a name="best"></a>應用程式設計與執行的最佳作法  
   
 -   當您要設計和實作使用 FILESTREAM 的應用程式時，請考慮下列指導方針：  
   

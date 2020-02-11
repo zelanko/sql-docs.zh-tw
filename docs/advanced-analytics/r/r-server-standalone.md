@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 2412bfb8bcd3cacc2db2702879353b92e328b09a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727391"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>什麼是 SQL Server 中的獨立 Machine Learning Server 或 R 伺服器？
@@ -26,11 +26,11 @@ SQL Server 提供獨立於 SQL Server 執行的獨立 R 伺服器或 Machine Lea
 > [!Note]
 > 如同 SQL Server 安裝程式所安裝，獨立伺服器的功能相當於非 SQL 品牌版本的 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)，支援相同的使用者案例，包括遠端執行、運作化和 Web 服務，以及 R 和 Python 程式庫的完整集合。
 
-## <a name="components"></a>Components
+## <a name="components"></a>元件
 
 SQL Server 2016 僅限 R。 SQL Server 2017 支援 R 和 Python。 下表描述每個版本的功能。
 
-| 元件 | Description |
+| 元件 | 描述 |
 |-----------|-------------|
 | R 套件 | [**RevoScaleR**](ref-r-revoscaler.md) 是可調整 R 的主要程式庫，其中包含資料操作、轉換、視覺效果和分析的功能。  <br/>[**MicrosoftML**](ref-r-microsoftml.md) 新增機器學習演算法來建立自訂模型，以進行文字分析、影像分析及情感分析。 <br/>[**sqlRUtils**](ref-r-sqlrutils.md) 提供協助程式函式，可將 R 指令碼放入 T-SQL 預存程序、向資料庫註冊預存程序，以及從 R 開發環境執行預存程序。<br/>[**mrsdeploy**](operationalization-with-mrsdeploy.md) 提供 Web 服務部署 (僅限 SQL Server 2017)。 <br/>[**olapR**](ref-r-olapr.md) 是用來在 R 中指定 MDX 查詢。|
 | Microsoft R Open (MRO) | [**MRO**](https://mran.microsoft.com/open) 是 Microsoft 的 R 開放原始碼散發。包含套件和解譯器。 請一律使用安裝程式中配套的 MRO 版本。 |

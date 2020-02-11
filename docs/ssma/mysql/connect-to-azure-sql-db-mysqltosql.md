@@ -1,5 +1,5 @@
 ---
-title: 連接到 Azure SQL DB (MySQLToSQL) |Microsoft Docs
+title: 連接到 Azure SQL DB （MySQLToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,28 +10,28 @@ ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 12da1aa42f468b92e1833410e635183aabf3a384
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103238"
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>連線到 Azure SQL DB (MySQLToSQL)
-使用 [連線到 SQL Azure] 對話方塊中，連接到您想要移轉 SQL Azure 資料庫。  
+使用 [連接到 SQL Azure] 對話方塊來連接到您想要遷移的 SQL Azure 資料庫。  
   
-若要存取此對話方塊中，在**檔案**功能表上，選取**連接到 SQL Azure**。 如果您先前曾經連線，則命令是**重新連接到 SQL Azure。**  
+若要存取此對話方塊，請在 [檔案]**功能表上，選取 [連線****到 SQL Azure]**。 如果您先前已連線，此命令會**重新連接到 SQL Azure。**  
   
 ## <a name="options"></a>選項。  
 **伺服器名稱**  
   
-選取或輸入伺服器名稱連接到 SQL Azure。  
+選取或輸入用來連接到 SQL Azure 的伺服器名稱。  
   
-**[資料庫備份]**  
+**Database**  
   
-選取、 輸入或**瀏覽**資料庫名稱。  
+選取 []，輸入或**流覽**資料庫名稱。  
   
 > [!IMPORTANT]  
-> SSMA for MySQL 不支援 SQL Azure 中的 master 資料庫的連接。  
+> 適用于 MySQL 的 SSMA 不支援連接到 SQL Azure 中的 master 資料庫。  
   
 **使用者名稱**  
   
@@ -39,28 +39,28 @@ ms.locfileid: "68103238"
   
 **密碼**  
   
-請輸入使用者名稱的密碼。  
+輸入使用者名稱的密碼。  
   
-**Encrypt**  
+**加密**  
   
-SSMA 會建議加密的連接到 SQL Azure。  
+SSMA 建議 SQL Azure 的加密連接。  
   
-## <a name="create-azure-database"></a>建立的 Azure 資料庫  
-如果沒有在 SQL Azure 帳戶中的資料庫，您可以建立第一個資料庫。  
+## <a name="create-azure-database"></a>建立 Azure 資料庫  
+如果 SQL Azure 帳戶中沒有任何資料庫，您可以建立第一個資料庫。  
   
-若要建立第一次新的資料庫，請遵循下列步驟  
+若要在第一次建立新的資料庫，請遵循下列步驟  
   
-1.  按一下出現在 [連接到 SQL Azure] 對話方塊中的 [瀏覽] 按鈕  
+1.  按一下 [連接到 SQL Azure] 對話方塊中出現的 [流覽] 按鈕  
   
 2.  如果沒有資料庫，則會出現下列兩個功能表項目。  
   
-    1.  **（找不到資料庫）** 其中已停用，隨時都呈現灰色  
+    1.  **（找不到任何資料庫）** 已停用，且所有時間皆為灰色  
   
-    2.  **建立新的資料庫**啟用只在 SQL Azure 帳戶中不有任何資料庫。 按一下這個功能表項目，建立 Azure Database 對話方塊中會出現與資料庫名稱和大小。  
+    2.  **建立新的資料庫**，只有在 SQL Azure 帳戶上沒有資料庫時才會啟用。 按一下此功能表項目時，會出現 [建立 Azure 資料庫] 對話方塊，其中包含資料庫名稱和大小。  
   
-3.  建立資料庫時，下列兩個參數會提供做為輸入：  
+3.  在建立資料庫時，會將下列兩個參數指定為輸入：  
   
     1.  **資料庫名稱：** 輸入資料庫名稱。  
   
-    2.  **資料庫大小：** 選取您要在 SQL Azure 帳戶中建立的資料庫大小。  
+    2.  **資料庫大小：** 選取您需要在 SQL Azure 帳戶中建立的資料庫大小。  
   

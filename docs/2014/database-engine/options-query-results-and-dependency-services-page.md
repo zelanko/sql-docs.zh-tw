@@ -1,5 +1,5 @@
 ---
-title: 選項 （查詢結果和相依性服務頁面） |Microsoft Docs
+title: 選項（查詢結果和相依性服務頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,26 +13,26 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481199"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>選項 (查詢結果和相依性服務頁面)
-  使用此頁面可指定要針對相依性服務連接的伺服器。 相依性服務可讓您擷取在不同伺服器上儲存的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件之間的相依性資訊。 使用檢視物件相依性**物件的相依性** 對話方塊中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
+  使用此頁面可指定要針對相依性服務連接的伺服器。 相依性服務可讓您擷取在不同伺服器上儲存的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件之間的相依性資訊。 您可以使用中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]的 [**物件**相依性] 對話方塊來查看物件相依性。  
   
  **您想要做什麼事？**  
   
-1.  [開啟 [選項 （查詢結果/相依性服務頁面）] 對話方塊](#open_dialog)  
+1.  [開啟選項 (查詢結果/相依性服務頁面) 對話方塊](#open_dialog)  
   
 2.  [設定選項](#options)  
   
-##  <a name="open_dialog"></a> 開啟 [選項 （查詢結果/相依性服務頁面）] 對話方塊  
+##  <a name="open_dialog"></a>開啟 [選項（查詢結果/相依性服務頁面）] 對話方塊  
   
-1.  在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，按一下**選項**上**工具**功能表。  
+1.  在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中，按一下 [**工具**] 功能表上的 [**選項**]。  
   
-2.  展開 [查詢結果]  ，然後按一下 [相依性服務]  。  
+2.  展開 [查詢結果]****，然後按一下 [相依性服務]****。  
   
 ##  <a name="options"></a> 設定選項  
   
@@ -51,5 +51,5 @@ ms.locfileid: "65481199"
  **密碼**  
  如果使用 SQL Server 驗證，請提供密碼。  
   
- **測試**  
+ **測驗**  
  按一下來測試連接。

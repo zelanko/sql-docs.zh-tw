@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7d7e92758707217a42afbd41649720907adfeaa3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211059"
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>SQL Server Profiler 範本和權限
@@ -57,7 +57,7 @@ ms.locfileid: "68211059"
 |[重新執行追蹤](replay-traces.md)|包含說明重新執行追蹤的意義，以及重新執行追蹤的必要條件等之相關資訊。|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Profiler](sql-server-profiler.md)   
+ [[SQL Server Profiler]](sql-server-profiler.md)   
  [啟動 SQL Server Profiler](start-sql-server-profiler.md)  
   
   

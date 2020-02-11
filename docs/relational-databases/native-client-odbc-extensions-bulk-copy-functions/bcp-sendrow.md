@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4bb5375de9769046c12f56f91d5c26e41090564b
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782502"
 ---
 # <a name="bcp_sendrow"></a>bcp_sendrow
@@ -46,15 +46,15 @@ RETCODE bcp_sendrow (
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- **Bcp_sendrow**函式會從程式變數建立一個資料列，並將它傳送給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ **Bcp_sendrow**函式會從程式變數建立資料列，並將[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]它傳送至。  
   
  呼叫**bcp_sendrow**之前，您必須先呼叫[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) ，以指定包含資料列資料的程式變數。  
   
- 如果呼叫**bcp_bind**指定長的可變長度資料類型（例如，SQLTEXT 的*eDataType*參數和非 Null 的*pData*參數）， **bcp_sendrow**會傳送整個資料值，就像對任何其他資料所做的一樣。型. 不過，如果**bcp_bind**具有 Null *pData*參數， **bcp_sendrow**會在指定資料的所有資料行都傳送至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之後，立即將控制權傳回給應用程式。 然後，應用程式就可以重複呼叫[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) ，將長的可變長度資料傳送至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，一次一個區塊。 如需詳細資訊，請參閱[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)。  
+ 如果呼叫**bcp_bind**指定長的可變長度資料類型（例如，SQLTEXT 的*eDataType*參數和非 Null 的*pData*參數）， **bcp_sendrow**會傳送整個資料值，就如同任何其他資料類型一樣。 不過，如果**bcp_bind**具有 Null *pData*參數， **bcp_sendrow**將控制權傳回給應用程式，並在所有具有指定資料的資料行都[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳送至之後立即傳回控制項。 然後，應用程式就可以重複呼叫[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) ，將長的可變長度資料一[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次傳送給一個區塊。 如需詳細資訊，請參閱[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)。  
   
- 當**bcp_sendrow**用來將程式變數中的資料列大量複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表時，只有當使用者呼叫[bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)或[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)時，才會認可資料列。 使用者可以選擇在每個*n*個數據列或在傳入資料的期間牢靠時，呼叫**bcp_batch**一次。 如果永遠不會呼叫**bcp_batch** ，則會在呼叫**bcp_done**時認可資料列。  
+ 當**bcp_sendrow**用來將程式變數中的資料列大量[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]複製到資料表時，只有當使用者呼叫[bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)或[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)時，才會認可資料列。 使用者可以選擇在每個*n*個數據列或在傳入資料的期間牢靠時，呼叫**bcp_batch**一次。 如果永遠不會呼叫**bcp_batch** ，則會在呼叫**bcp_done**時認可資料列。  
   
- 如需從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]開始大量複製的重大變更相關資訊，請參閱[執行大量複製作業&#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
+ 如需從開始大量複製的重大變更相關資訊[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，請參閱[&#40;ODBC&#41;執行大量複製作業](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

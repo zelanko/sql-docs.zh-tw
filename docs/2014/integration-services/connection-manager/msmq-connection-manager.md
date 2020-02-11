@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78377fe5eaf5b9f0639533f17fa7a45cca69a537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833654"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 連接管理員
-  MSMQ 連接管理員可讓封裝連接到使用 Message Queuing (又稱為 MSMQ) 的訊息佇列。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的「訊息佇列」工作使用 MSMQ 連線管理員。  
+  MSMQ 連接管理員可讓封裝連接到使用 Message Queuing (又稱為 MSMQ) 的訊息佇列。 包含的「訊息佇列[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」工作使用 MSMQ 連線管理員。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
  當您將 MSMQ 連接管理員加入封裝時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立在執行階段解析為 MSMQ 連接的連接管理員、設定連接管理員屬性，並將連接管理員加入封裝上的 `Connections` 集合。 連接管理員的 `ConnectionManagerType` 屬性會設為 `MSMQ`。  
   
@@ -37,8 +37,10 @@ ms.locfileid: "62833654"
   
 |佇列類型|範例路徑|  
 |----------------|-----------------|  
-|公用|\<電腦名稱>\\<佇列名稱\>|  
-|Private|\<電腦名稱>\Private$\\<佇列名稱\>|  
+|公開|
+  \<電腦名稱>\\<佇列名稱\>|  
+|Private|
+  \<電腦名稱>\Private$\\<佇列名稱\>|  
   
  您可以使用句號 (.) 代表本機電腦。  
   

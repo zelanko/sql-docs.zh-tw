@@ -1,5 +1,5 @@
 ---
-title: 準備 Access 資料庫的移轉 (AccessToSQL) |Microsoft Docs
+title: 準備 Access 資料庫以進行遷移（AccessToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -22,59 +22,59 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 58988d31687cacdce2954d8e4098d509a9dcbb2b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68260215"
 ---
-# <a name="preparing-access-databases-for-migration-accesstosql"></a>準備 Access 資料庫的移轉 (AccessToSQL)
-移轉至 Access 資料庫之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您必須判斷哪些資料庫移轉，並確保這些資料庫準備好進行移轉。  
+# <a name="preparing-access-databases-for-migration-accesstosql"></a>準備 Access 資料庫以進行遷移（AccessToSQL）
+將 Access 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，您必須先決定要遷移的資料庫，並確保這些資料庫已準備好進行遷移。  
   
-## <a name="determining-when-to-migrate-to-sql-server"></a>判斷何時要移轉至 SQL Server  
-Jet 資料庫引擎，用來作為資料庫引擎進行存取，是有彈性、 簡單易用的解決方案，適用於資料管理。 不過，隨著變得越來越大的資料庫及更多的任務關鍵性，許多使用者發現，它們需要較高的效能、 安全性或可用性。 對於需要更強固的資料平台的應用程式，請考慮將應用程式所需的基礎資料庫移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需有關如何決定何時要移轉的詳細資訊，請參閱 <<c0> [ 移轉資訊頁面](https://go.microsoft.com/fwlink/?LinkId=68571)上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網站。  
+## <a name="determining-when-to-migrate-to-sql-server"></a>判斷遷移至 SQL Server 的時機  
+Jet 資料庫引擎是用來做為 Access 的資料庫引擎，它是一種彈性且容易使用的資料管理解決方案。 不過，隨著資料庫變得更大且任務關鍵性，許多使用者發現它們需要更高的效能、安全性或可用性。 針對需要更健全之資料平臺的應用程式，請考慮將這些應用程式的基礎[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫移至。 如需決定何時要遷移的詳細資訊，請參閱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網站上的 [[遷移資訊] 頁面](https://go.microsoft.com/fwlink/?LinkId=68571)。  
   
-您將資料庫移轉至之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以繼續使用存取是透過連結的資料表，或您可以手動將移轉您的應用程式[!INCLUDE[msCoName](../../includes/msconame_md.md)].NET Framework 為基礎的程式碼直接互動[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+在您將資料庫移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到之後，您可以繼續使用連結資料表的存取權，也可以手動將應用程式遷移[!INCLUDE[msCoName](../../includes/msconame_md.md)]至直接與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]互動的 .NET Framework 型程式碼。  
   
-## <a name="determining-which-databases-to-migrate"></a>判斷哪一個要移轉的資料庫  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) 的存取可以讓您找到 Access 資料庫。 您接著可以將匯出到這些資料庫的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需如何匯出及查詢中繼資料的詳細資訊，請參閱[匯出 Access 清查](exporting-an-access-inventory-accesstosql.md)。  
+## <a name="determining-which-databases-to-migrate"></a>判斷要遷移的資料庫  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手（SSMA）以取得存取權，可以為您找到 Access 資料庫。 接著，您可以將這些資料庫的相關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料匯出至。 如需如何匯出和查詢中繼資料的詳細資訊，請參閱[匯出存取清查](exporting-an-access-inventory-accesstosql.md)。  
 
    > [!NOTE]
-   > 並非所有的存取功能和設定支援，或可以輕鬆地轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在開始移轉資料庫之前，請參閱[不相容的存取功能](incompatible-access-features-accesstosql.md)。
+   > 並非所有存取功能和設定都受到的支援，或者可以輕鬆地轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在您開始遷移資料庫之前，請參閱[不相容的存取功能](incompatible-access-features-accesstosql.md)。
   
-## <a name="preparing-for-migration"></a>準備移轉  
-使用下列指導方針以協助準備您的 Access 資料庫移轉到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+## <a name="preparing-for-migration"></a>準備進行遷移  
+使用下列指導方針來協助您準備存取資料庫，以便遷移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]至。  
   
-### <a name="upgrading-older-access-databases"></a>升級舊版的 Access 資料庫  
-SSMA for Access 支援 Access 97 和更新版本。 如果您的資料庫從舊版的存取權，開啟，並將資料庫儲存在 Access 97 或更新版本。  
+### <a name="upgrading-older-access-databases"></a>升級較舊的 Access 資料庫  
+SSMA for Access 支援 Access 97 和更新版本。 如果您有舊版 Access 的資料庫，請開啟並將資料庫儲存在 Access 97 或更新版本中。  
   
-### <a name="removing-workgroup-protection"></a>工作群組中移除保護  
-SSMA 無法移轉使用工作群組保護的資料庫。 若要從 Access 資料庫中移除工作群組的保護，請執行下列步驟：  
+### <a name="removing-workgroup-protection"></a>正在移除工作組保護  
+SSMA 無法遷移使用工作組保護的資料庫。 若要從 Access 資料庫中移除工作組保護，請執行下列步驟：  
   
 1.  將 Access 資料庫檔案複製到另一個位置。  
   
-2.  開啟已複製的資料庫。  
+2.  開啟複製的資料庫。  
   
-3.  在 **工具**功能表上，指向**安全性**，然後選取**使用者和群組權限**。  
+3.  在 [**工具**] 功能表上，指向 [**安全性**]，然後選取 [**使用者和群組許可權**]。  
   
-4.  選取**使用者**選項中，選取**Admin**使用者，然後確定**管理**選取權限。  
+4.  選取 [**使用者**] 選項，選取 [系統**管理員**] 使用者，然後確定已選取 [**管理**] 許可權。  
   
-5.  選取 **群組**選項中，選取**使用者**分組，並確定該**管理**選取權限。  
+5.  選取 [**群組**] 選項，選取 [**使用者**] 群組，然後確定已選取 [**管理**] 許可權。  
   
-6.  按一下  **確定**，然後在**檔案**功能表上，按一下 **結束**。  
+6.  按一下 **[確定]**，**然後在 [** 檔案] 功能表**** 上，按一下 [結束]。  
   
-您現在可以使用 SSMA 移轉已複製的資料庫。 載入結構描述讀入之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以手動將資料庫保護上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+您現在可以使用 SSMA 來遷移已複製的資料庫。 將架構載入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之後，您可以在上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]手動保護資料庫。  
   
 ### <a name="backing-up-databases"></a>備份資料庫  
-您要將 Access 資料庫移轉之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您應該備份這兩個將移轉的 Access 資料庫，以及[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將您移轉的資料庫存取物件和資料。  
+將 Access 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，您應該備份要遷移的 access 資料庫，以及您將在其中遷移存取物件和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料的資料庫。  
   
-若要將 Access 資料庫進行備份上**工具**功能表上，指向**資料庫公用程式**，然後選取**備份資料庫**。  
+若要備份 Access 資料庫，請在 [**工具**] 功能表上，指向 [**資料庫公用程式**]，然後選取 [**備份資料庫**]。  
   
-如需有關如何備份資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫，請參閱 「 備份和還原的資料庫中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
+如需有關如何備份[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫的詳細資訊，請參閱《線上叢書》中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的「備份和還原資料庫」。  
   
-### <a name="documenting-databases"></a>文件資料庫  
-您也可以在文件的屬性，例如資料庫物件、 檔案大小和存取資料庫的權限的清單。 若要產生在 Access 中，這份文件上**工具**功能表上，指向**分析**，然後按一下**記載**。  
+### <a name="documenting-databases"></a>記錄資料庫  
+您可能也會想要記載 Access 資料庫的屬性，例如資料庫物件清單、檔案大小和許可權。 若要在 [存取] 中產生此檔，請在 [**工具**] 功能表上指向 [**分析**]，然後按一下 [**記載**的]。  
   
 ## <a name="see-also"></a>另請參閱  
 [將 Access 資料庫移轉至 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-[連結到 SQL Server 的 Access 應用程式](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)
+[將存取應用程式連結至 SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)

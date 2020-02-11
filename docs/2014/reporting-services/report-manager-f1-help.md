@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f77fb2a9a23c5cc44cadfcc2b4e43039f69def07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104471"
 ---
 # <a name="report-manager-f1-help"></a>報表管理員 F1 說明
-  下列主題將提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表管理員的頁面層級說明。 應用程式中的每一個頁面，都會有一個主題。 並非所有頁面都是可用的。 安全性設定會決定您可以存取的頁面。 若要從報表管理員中存取這些主題，請按一下主要工具列上的 **[說明]** 。  
+  下列主題提供報表管理員的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]頁面層級說明。 應用程式中的每一個頁面，都會有一個主題。 並非所有頁面都是可用的。 安全性設定會決定您可以存取的頁面。 若要從報表管理員中存取這些主題，請按一下主要工具列上的 **[說明]** 。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -42,15 +42,15 @@ ms.locfileid: "66104471"
   
 -   [錯誤頁面](../../2014/reporting-services/error-page-report-manager.md)  
   
--   [一般屬性頁面 （資料夾）](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
+-   [一般屬性頁面（資料夾）](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
   
--   [一般屬性頁面 （模型）](../../2014/reporting-services/general-properties-page-models-report-manager.md)  
+-   [一般屬性頁面（模型）](../../2014/reporting-services/general-properties-page-models-report-manager.md)  
   
--   [一般屬性頁面 （報表）](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
+-   [一般屬性頁面（報表）](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
   
--   [一般屬性頁面 （資源）](../../2014/reporting-services/general-properties-page-resources-report-manager.md)  
+-   [一般屬性頁面（資源）](../../2014/reporting-services/general-properties-page-resources-report-manager.md)  
   
--   [一般屬性頁面 （共用的資料來源）](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)  
+-   [一般屬性頁面（共用資料來源）](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)  
   
 -   [模型項目安全性頁面](../../2014/reporting-services/model-item-security-page-report-manager.md)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66104471"
   
 -   [新增排程 / 編輯排程頁面](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)  
   
--   [新的訂用帳戶 / 編輯訂閱頁面](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)  
+-   [新增訂閱 / 編輯訂閱頁面](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)  
   
 -   [新增系統角色指派 / 編輯系統角色指派頁面](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
@@ -82,9 +82,9 @@ ms.locfileid: "66104471"
   
 -   [搜尋結果頁面](../../2014/reporting-services/search-page-report-manager.md)  
   
--   [安全性頁面 (網站設定)](../../2014/reporting-services/security-page-site-settings-report-manager.md)  
+-   [安全性頁面 (站台設定)](../../2014/reporting-services/security-page-site-settings-report-manager.md)  
   
--   [安全性屬性頁面 （項目）](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
+-   [安全性屬性頁面（專案）](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
   
 -   [排程頁面](../../2014/reporting-services/schedules-page-report-manager.md)  
   
@@ -96,15 +96,15 @@ ms.locfileid: "66104471"
   
 -   [上傳檔案頁面](../../2014/reporting-services/upload-file-page-report-manager.md)  
   
--   [檢視頁面 （報表）](../../2014/reporting-services/view-page-reports-report-manager.md)  
+-   [View 頁面（報表）](../../2014/reporting-services/view-page-reports-report-manager.md)  
   
--   [檢視頁面 （資源）](../../2014/reporting-services/view-page-resources-report-manager.md)  
+-   [View 頁面（資源）](../../2014/reporting-services/view-page-resources-report-manager.md)  
   
  如需有關報表管理員和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的詳細資訊，請參閱 MSDN 上的《 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》。  
   
 ## <a name="see-also"></a>另請參閱  
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
- [功能參考 (Reporting Services)](feature-reference-reporting-services.md)   
+ [功能參考（Reporting Services）](feature-reference-reporting-services.md)   
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [報表管理員](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Reporting Services 元件概觀](tools/reporting-services-tools.md)  

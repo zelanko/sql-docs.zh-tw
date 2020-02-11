@@ -1,5 +1,5 @@
 ---
-title: 建立變數值檔案 (AccessToSQL) |Microsoft Docs
+title: 建立變數值檔案（AccessToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
@@ -10,23 +10,23 @@ ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 051ded7d675f81998718b858c71488ba968ec680
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006600"
 ---
-# <a name="creating-variable-value-files-accesstosql"></a>建立變數值檔案 (AccessToSQL)
-變數的值，檔案是 XML 檔案包含經常變更整個伺服器的移轉命令 （例如來源或目的地伺服器名稱） 的參數值。 大量的資料庫移轉發生時，建立和主要的指令碼檔案中參考多個變數的檔案，以儲存每個來源伺服器的價值 **-v**在命令列切換。 此行為有助於維護幾個指令碼檔案中的靜態值，與多個變數的檔案中的變數值。  
+# <a name="creating-variable-value-files-accesstosql"></a>建立變數值檔案（AccessToSQL）
+變數值檔案是一個 XML 檔案，其中包含經常跨伺服器遷移而變更的命令參數值（例如來源或目的地伺服器名稱）。 當發生大量的資料庫移轉時，會在命令列上使用 **-v**參數來建立及參考用於儲存每個來源伺服器值的多個變數檔案。 這個行為有助於以多個變數檔案中的變數值來維護一些腳本檔案中的靜態值。  
   
 > [!NOTE]  
-> -  變數名稱會做為前置詞和後置字元為 $ （美元） 符號。 如果變數未指派的變數值檔案中的值，在指令碼檔案的剖析期間會發生錯誤，導致懸置在主控台執行程序。  
-> -  逸出字元 **$** 是 **$$** 。 如果變數或靜態值的參數值包含 **$** （貨幣） 符號，然後 **$$** 必須指定將它視為一個字元，而不是變數。  
-> -  基於可維護性，變數可以宣告內`'variable-group'`使用者定義變數的邏輯分隔的項目。  這個元素的使用方式不是必要的。  
+> -  變數名稱前面會加上 $ （美元）符號的前置詞和尾碼。 如果變數未獲指派變數值檔案中的值，則會在剖析腳本檔案期間發生錯誤，而導致主控台執行程式停止。  
+> -  的逸出字元**$** 為**$$**。 如果參數的變數或靜態值值包含**$** （美元）符號，則**$$** 必須將它指定為將它視為字元，而不是變數。  
+> -  基於可維護性的考慮，變數可以`'variable-group'`在專案內宣告，以進行使用者定義變數的邏輯分隔。  此元素的使用不是強制的。  
   
 **範例：**  
   
-**範例 1:**  
+**範例1：**  
   
 ```xml  
 <!--Sample of variable value file commands-->  
@@ -49,7 +49,7 @@ ms.locfileid: "68006600"
   
 </variables>  
 ```  
-**範例 2:**  
+**範例2：**  
   
 ```xml  
 <!--Sample of variable value file commands-->  
@@ -88,11 +88,11 @@ ms.locfileid: "68006600"
 ```  
   
 ## <a name="variable-value-file-validation"></a>變數值檔案驗證  
-使用者可以輕鬆地驗證他/她變數值檔案對結構描述定義檔**ConsoleScriptVariablesSchema.xsd**可用 [結構描述] 資料夾中。  
+使用者可以針對 [架構] 資料夾中提供的架構定義檔**ConsoleScriptVariablesSchema** ，輕鬆地驗證其變數值檔案。  
   
-## <a name="next-step"></a>下一步  
-操作主控台的下一個步驟是[建立伺服器連線檔案&#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
+## <a name="next-step"></a>後續步驟  
+操作主控台的下一個步驟是[&#40;AccessToSQL 建立伺服器連接檔案&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[建立伺服器連線檔案 （存取）](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
+[建立伺服器連接檔案（存取）](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

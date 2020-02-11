@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655491"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
@@ -56,7 +56,7 @@ ms.locfileid: "62655491"
  **切換更新模式**  
   
  若要切換更新模式，則必須啟用兩種更新模式的發行集和訂閱，然後必要時在它們之間進行切換。 如需相關資訊，請參閱  
-[切換可更新之交易式訂閱的更新模式](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)  
+[切換可更新之交易式訂閱的更新模式](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)。  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>使用可更新訂閱之考量  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62655491"
   
 -   若使用 `TIMESTAMP` 或 `IDENTITY` 資料行，且這兩個資料行在複寫時成為其基底資料類型，就不應更新訂閱者中這些資料行中的值。  
   
--   因為訂閱者無法從複寫變更追蹤觸發器中所插入或刪除的資料表中讀取 `text`、`ntext` 或 `image` 值，所以訂閱者無法更新或插入這些值。 因為資料會由發行者所覆寫，所以訂閱者也同樣無法使用 `WRITETEXT` 或 `UPDATETEXT` 更新或插入 `text` 或 `image` 值。 您反而可以將 `text` 及 `image` 資料行分割到不同的資料表，並在交易中修改這兩個資料表。  
+-   因為訂閱者無法從複寫變更追蹤觸發器中所插入或刪除的資料表中讀取 `text`、`ntext` 或 `image` 值，所以訂閱者無法更新或插入這些值。 因為資料會由發行者所覆寫，所以訂閱者也同樣無法使用 `text` 或 `image` 更新或插入 `WRITETEXT` 或 `UPDATETEXT` 值。 您反而可以將 `text` 及 `image` 資料行分割到不同的資料表，並在交易中修改這兩個資料表。  
   
      若要更新訂閱者中的大型物件，請使用資料類型 `varchar(max)`、`nvarchar(max)`、`varbinary(max)`，而不要個別使用 `text`、`ntext` 及 `image` 資料類型。  
   
@@ -108,9 +108,11 @@ ms.locfileid: "62655491"
   
 -   對於資料類型為 `SQL_VARIANT` 的資料行：當在訂閱者插入或更新資料後，資料會在從訂閱者複製到佇列時，由佇列讀取器代理程式以下列方式加以對應：  
   
-    -   `BIGINT`、`DECIMAL`、`NUMERIC`、`MONEY` 和 `SMALLMONEY` 對應至 `NUMERIC`。  
+    -   
+  `BIGINT`、`DECIMAL`、`NUMERIC`、`MONEY` 和 `SMALLMONEY` 對應至 `NUMERIC`。  
   
-    -   `BINARY` 和 `VARBINARY` 對應至 `VARBINARY` 資料。  
+    -   
+  `BINARY` 和 `VARBINARY` 對應至 `VARBINARY` 資料。  
   
 ### <a name="conflict-detection-and-resolution"></a>衝突偵測與解決方案  
   
@@ -123,7 +125,7 @@ ms.locfileid: "62655491"
     -   如果預期會發生衝突：在使用「訂閱者成功」衝突解決時，不應使用發行者或訂閱者端的外部索引鍵條件約束；在使用「發行者成功」衝突解決時，不應使用訂閱者端的外部索引鍵條件約束。  
   
 ## <a name="see-also"></a>另請參閱  
- [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
+ [點對點異動複寫](peer-to-peer-transactional-replication.md)   
  [異動複寫](transactional-replication.md)   
  [發行資料和資料庫物件](../publish/publish-data-and-database-objects.md)   
  [訂閱發行集](../subscribe-to-publications.md)  

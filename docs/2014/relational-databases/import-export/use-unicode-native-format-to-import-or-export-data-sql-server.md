@@ -14,28 +14,28 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1d115dacc53cb074080931c2ebad88dcaf1c68d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011570"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>使用 Unicode 原生格式匯入或匯出資料 (SQL Server)
-  當必須從某個 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝將資訊複製到其他安裝時，Unicode 原生格式很有用。 對非字元的資料使用原生格式可節省時間，消除在資料類型與字元格式之間，不必要的來回轉換。 對所有字元資料使用 Unicode 字元格式，可以防止在使用不同字碼頁的伺服器之間大量傳送資料期間，失去任何擴充字元。 任何大量匯入方法都可以讀取以 Unicode 原生格式表示的資料檔。  
+  當必須從某個[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝將資訊複製到另一個時，Unicode 原生格式會很有説明。 對非字元的資料使用原生格式可節省時間，消除在資料類型與字元格式之間，不必要的來回轉換。 對所有字元資料使用 Unicode 字元格式，可以防止在使用不同字碼頁的伺服器之間大量傳送資料期間，失去任何擴充字元。 任何大量匯入方法都可以讀取以 Unicode 原生格式表示的資料檔。  
   
  建議使用 Unicode 原生格式，在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間，使用包含擴充字元或 DBCS 字元的資料檔，大量傳送資料。 若是非字元資料，Unicode 原生格式會使用原生 (資料庫) 資料類型。 若是字元資料，如 `char`、`nchar`、`varchar`、`nvarchar`、`text`、`varchar(max)`、`nvarchar(max)` 及 `ntext`，Unicode 原生格式會使用 Unicode 字元資料格式。  
   
  以 SQLVARIANT 儲存在 Unicode 原生格式資料檔的 `sql_variant` 資料，會以它在原生格式資料檔的相同方式操作，不同處是 `char` 及 `varchar` 值會轉換為 `nchar` 及 `nvarchar`，這會讓受影響資料行所需的儲存體數量加倍。 原始中繼資料會加以保留，而且在大量匯入資料表資料行時，這些值會轉換回它們的原始 `char` 及 `varchar` 資料類型。  
   
 ## <a name="command-options-for-unicode-native-format"></a>Unicode 原生格式的命令選項  
- 您可以將 Unicode 原生格式資料匯入資料表，方法是使用 **bcp**、BULK INSERT 或 INSERT ...SELECT \* FROM OPENROWSET(BULK...)。若是 **bcp** 命令或 BULK INSERT 陳述式，您可以在命令列上指定資料格式。 針對 INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式，您必須在格式檔案中指定資料格式。  
+ 您可以使用**bcp**、BULK INSERT 或 INSERT ...，將 Unicode 原生格式資料匯入資料表中。SELECT \* FROM OPENROWSET （BULK ...）。對於**bcp**命令或 BULK INSERT 語句，您可以在命令列上指定資料格式。 對於 INSERT...SELECT * FROM OPENROWSET(BULK...) 陳述式，您必須在格式檔案中指定資料格式。  
   
  下列選項支援 Unicode 原生格式：  
   
-|命令|選項|描述|  
+|Command|選項|描述|  
 |-------------|------------|-----------------|  
-|**bcp**|**-N**|會導致**bcp**公用程式使用 Unicode 原生格式，使用原生 （資料庫） 資料類型的所有非字元資料，並對所有字元的 Unicode 字元資料格式 (`char`， `nchar`， `varchar`，`nvarchar`， `text`，和`ntext`) 資料。|  
-|BULK INSERT|DATAFILETYPE **='** widenative **'**|當大量匯入資料時，使用 Unicode 原生格式。|  
+|**in**|**-N**|使**bcp**公用程式使用 Unicode 原生格式，其會針對所有的字元（`char`、 `nchar`、 `varchar` `nvarchar` `text`、、和`ntext`）資料使用原生（資料庫）資料類型做為所有的非字元資料和 unicode 字元資料格式。|  
+|BULK INSERT|DATAFILETYPE **= '** widenative **'**|當大量匯入資料時，使用 Unicode 原生格式。|  
   
  如需詳細資訊，請參閱 [bcp 公用程式](../../tools/bcp-utility.md)、[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 或 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)。  
   
@@ -112,7 +112,7 @@ GO
 -   [使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 公用程式](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [資料類型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)  

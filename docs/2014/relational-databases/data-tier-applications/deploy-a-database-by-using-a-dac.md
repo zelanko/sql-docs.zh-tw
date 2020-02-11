@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873029"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 來部署資料庫
@@ -49,13 +49,13 @@ ms.locfileid: "62873029"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體必須執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本，才能使用精靈。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上的資料庫物件不受 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]支援，則無法使用此精靈將資料庫部署到 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 如果 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上的資料庫物件不受 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援，則無法使用此精靈將資料庫部署到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  為了提高安全性，SQL Server 驗證登入會儲存在 DAC BACPAC 檔案中，而且沒有密碼。 當您匯入 BACPAC 之後，此登入會建立為停用的登入，而且會產生密碼。 若要啟用登入，請使用具有 ALTER ANY LOGIN 權限的登入進行登入，並使用 ALTER LOGIN 來啟用登入，然後指派可以傳達給使用者的新密碼。 Windows 驗證登入不需要這項處理，因為這類登入的密碼不是由 SQL Server 所管理。  
   
-#### <a name="permissions"></a>Permissions  
+#### <a name="permissions"></a>權限  
  精靈需要來源資料庫的 DAC 匯出權限。 登入至少需要 ALTER ANY LOGIN 和資料庫範圍 VIEW DEFINITION 權限，以及 **sys.sql_expression_dependencies**的 SELECT 權限。 匯出 DAC 可以透過 securityadmin 固定伺服器角色的成員來完成，這個角色的成員也是匯出 DAC 之來源資料庫中 database_owner 固定資料庫角色的成員。 系統管理員固定伺服器角色的成員或內建 SQL Server 系統管理員帳戶 **sa** 也可以匯出 DAC。  
   
- 精靈需要目的地執行個體或伺服器的 DAC 匯入權限。 登入必須是 **系統管理員 (sysadmin)** 或 **伺服器管理員 (serveradmin)** 固定伺服器角色的成員，或是具有 **dbcreator** 固定伺服器角色及擁有 ALTER ANY LOGIN 權限。 名為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **的內建** 系統管理員帳戶也可以匯入 DAC。 將具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 loginmanager 或 serveradmin 角色的成員資格。 將不具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 dbmanager 或 serveradmin 角色的成員資格。  
+ 精靈需要目的地執行個體或伺服器的 DAC 匯入權限。 登入必須是 **系統管理員 (sysadmin)** 或 **伺服器管理員 (serveradmin)** 固定伺服器角色的成員，或是具有 **dbcreator** 固定伺服器角色及擁有 ALTER ANY LOGIN 權限。 內建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶 (名稱為 **sa** ) 也可以匯入 DAC。 將具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 loginmanager 或 serveradmin 角色的成員資格。 將不具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 dbmanager 或 serveradmin 角色的成員資格。  
   
 ##  <a name="UsingDeployDACWizard"></a> 使用部署資料庫精靈  
  **若要使用部署資料庫精靈移轉資料庫**  
@@ -85,31 +85,31 @@ ms.locfileid: "62873029"
   
 -   **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示 [簡介] 頁面。  
   
--   **下一步** - 繼續進行 **[部署設定]** 頁面。  
+-   **下一步**-繼續進行 [**部署設定**] 頁面。  
   
--   **取消** - 取消作業並關閉精靈。  
+-   **取消**-取消作業並關閉嚮導。  
   
-##  <a name="Deployment_settings"></a> 部署設定頁面  
+##  <a name="Deployment_settings"></a>[部署設定] 頁面  
  使用此頁面來指定目的地伺服器以及提供新資料庫的詳細資料。  
   
  **本機主機：**  
   
--   **伺服器連接** - 指定伺服器連接的詳細資料，然後按一下 [連接]  來驗證連接。  
+-   **伺服器連接**-指定伺服器連接詳細資料，然後按一下 **[連接]** 來驗證連接。  
   
--   **新資料庫名稱** - 指定新資料庫的名稱。  
+-   **新資料庫名稱**-指定新資料庫的名稱。  
   
- **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料庫設定：**  
+ **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]資料庫設定：**  
   
--   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 版本** - 從下拉式功能表中選取 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的版本。  
+-   版本- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]從下拉式功能表中選取的版本。 ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] **  
   
--   **資料庫大小上限** - 從下拉式功能表中選取資料庫大小上限。  
+-   **資料庫大小上限**-從下拉式功能表中選取資料庫大小上限。  
   
  **其他設定：**  
   
 -   指定暫存檔 (即 BACPAC 封存檔案) 的本機目錄。 請注意，檔案將在指定的位置上建立，而且作業完成之後，將保留在該位置。  
   
 ##  <a name="Summary"></a> 摘要頁面  
- 您可以使用此頁面來檢閱作業的指定來源和目標設定。 若要使用指定的設定來完成部署作業，請按一下 **[完成]** 。 若要取消部署作業並結束精靈，請按一下 **[取消]** 。  
+ 您可以使用此頁面來檢閱作業的指定來源和目標設定。 若要使用指定的設定來完成部署作業，請按一下 **[完成]**。 若要取消部署作業並結束嚮導，請按一下 [**取消**]。  
   
 ##  <a name="Progress"></a> 進度頁面  
  此頁面會顯示進度列，指出作業的狀態。 若要檢視詳細狀態，請按一下 **[檢視詳細資料]** 選項。  
@@ -117,10 +117,10 @@ ms.locfileid: "62873029"
 ##  <a name="Results"></a> 結果頁面  
  此頁面會報告部署作業成功或失敗，並顯示每個動作的結果。 發生錯誤的所有動作在 **[結果]** 資料行中都會有一個連結。 按一下連結，即可檢視該動作的錯誤報告。  
   
- 按一下 **[完成]** 關閉精靈。  
+ 按一下 **[完成**] 以關閉嚮導。  
   
 ## <a name="using-a-net-framework-application"></a>使用 .Net Framework 應用程式  
- **在 .Net Framework 應用程式中使用 DacStoreExport() 與 Import() 方法，以部署資料庫。**  
+ **在 .Net Framework 應用程式中使用 DacStoreExport （）和 Import （）方法來部署資料庫。**  
   
  若要檢視程式碼範例，請下載 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)上的 DAC 範例應用程式。  
   

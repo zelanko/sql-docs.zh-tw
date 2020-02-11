@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a5d50163f439ec3fabd219761f0749c88745c58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63231439"
 ---
 # <a name="persisted-data-source-objects"></a>保存的資料來源物件
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援保存的資料來源物件，與**IPersistFile**介面。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援使用**IPersistFile**介面保存的資料來源物件。  
   
 ## <a name="examples"></a>範例  
- **A.保存資料來源初始化：**  
+ **A. 保存資料來源初始化：**  
   
  這個範例會示範一個函數，此函數會保存定義伺服器和資料庫的資料來源初始化屬性，以及使用 Windows 驗證模式來進行連接。 伺服器名稱和資料庫名稱會在此函式的 *pLocation* 和 *pDatasource* 參數中接收。  
   
@@ -137,7 +137,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B.使用保存的資料來源初始化：**  
+ **B. 使用保存的資料來源初始化：**  
   
  此範例會搭配其他初始化屬性來使用保存的資料來源物件，這些屬性會提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入和密碼。  
   
@@ -225,9 +225,10 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- **IPersistFile::Save** 方法可以在呼叫 **IDBInitialize::Initialize** 之前或之後呼叫。 當從 **IDBInitialize::Initialize** 成功傳回之後呼叫此方法時，可確保已保存有效的資料來源規格。  
+ 
+  **IPersistFile::Save** 方法可以在呼叫 **IDBInitialize::Initialize** 之前或之後呼叫。 當從 **IDBInitialize::Initialize** 成功傳回之後呼叫此方法時，可確保已保存有效的資料來源規格。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料來源物件&#40;OLE DB&#41;](data-source-objects-ole-db.md)  
+ [資料來源物件 &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
   
   

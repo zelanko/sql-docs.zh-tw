@@ -5,22 +5,37 @@ description: 了解在 Kubernetes 上執行的 SQL Server 巨量資料叢集，�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6bbb185936b2a388014a16ae0a6ecc6c52c5d29a
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 23eb15b1f7b763688a3657406bab12106a18f977
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706666"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75720933"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 從 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 開始，[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]可讓您部署在 Kubernetes 上執行之 SQL Server、Spark 和 HDFS 容器的可調式叢集。 這些元件會並存執行，可供您讀取、寫入和處理來自 Transact-SQL 或 Spark 的巨量資料，讓您輕鬆地結合與分析具有大量巨量資料的高價值關聯式資料。
+
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 引進 SQL Server 巨量資料叢集。
+
+使用 SQL Server 巨量資料叢集可執行下列動作：
+
+- 為 Kubernetes 上執行的 SQL Server、Spark 和 HDFS 容器[部署可擴充叢集](../big-data-cluster/deploy-get-started.md)。 
+- 讀取、寫入及處理來自 Transact-SQL 或 Spark 的巨量資料。
+- 輕鬆結合及分析含有大量巨量資料的高價值關聯式資料。
+- 查詢外部資料來源。
+- 在 SQL Server 的受控 HDFS 中儲存巨量資料。
+- 透過叢集查詢來自多個外部資料來源的資料。
+- 使用 AI、機器學習和其他分析工作的資料。
+- 在 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] 中[部署及執行應用程式](../big-data-cluster/concept-application-deployment.md)。
+- 使用 [PolyBase](../relational-databases/polybase/polybase-guide.md) 將資料虛擬化。 使用外部資料表來查詢來自外部 SQL Server、Oracle、Teradata、MongoDB 及 ODBC 資料來源的資料。
+- 使用 Always On 可用性群組技術，為 SQL Server 主要執行個體和所有資料庫提供高可用性。
 
 如需最新版本新功能和已知問題的詳細資訊，請參閱[版本資訊](release-notes-big-data-cluster.md)。
 
@@ -98,7 +113,7 @@ Kubernetes 是開放原始碼容器協調器，可根據需求調整容器部署
 
 資料集區用於資料持續性和快取。 資料集區由在 Linux 上執行 SQL Server 的一或多個 Pod 所組成。 用於從 SQL 查詢或 Spark 作業中內嵌資料。 SQL Server 巨量資料叢集資料超市會保存在資料集區中。 
 
-### <a name="storage-pool"></a>存放集區
+### <a name="storage-pool"></a>儲存體集區
 
 存放集區包含由 Linux 上的 SQL Server、Spark 和 HDFS 組成的存放集區 Pod。 SQL Server 巨量資料叢集中的所有存放裝置節點都是 HDFS 叢集成員。
 

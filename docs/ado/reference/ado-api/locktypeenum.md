@@ -1,5 +1,5 @@
 ---
-title: LockTypeEnum | Microsoft Docs
+title: LockTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,35 +16,35 @@ ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ae822794b1b06a975e1cc3cd397b5a5f00036dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918250"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
-指定在編輯期間鎖定記錄的型別。  
+指定在編輯期間放置在記錄上的鎖定類型。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adLockBatchOptimistic**|4|表示開放式的批次更新。 批次更新模式的必要項。|  
-|**adLockOptimistic**|3|表示開放式鎖定、 記錄。 提供者會使用開放式鎖定，鎖定資料錄，只有當您呼叫時，才[更新](../../../ado/reference/ado-api/update-method.md)方法。|  
-|**adLockPessimistic**|2|表示封閉式鎖定，記錄。 提供者會執行什麼是為了確保成功編輯的記錄，通常藉由編輯之後，立即鎖定在資料來源的記錄。|  
-|**adLockReadOnly**|1|表示唯讀的記錄。 您無法改變的資料。|  
-|**adLockUnspecified**|-1|未指定鎖定的類型。 複製程式碼，會使用相同的鎖定類型，與原始建立複製。|  
+|**adLockBatchOptimistic**|4|表示開放式批次更新。 批次更新模式的必要參數。|  
+|**adLockOptimistic**|3|表示開放式鎖定，依記錄記錄。 提供者會使用開放式鎖定，只有在您呼叫[Update](../../../ado/reference/ado-api/update-method.md)方法時，才會鎖定記錄。|  
+|**adLockPessimistic**|2|表示封閉式鎖定，依記錄記錄。 提供者會執行必要的動作，以確保成功編輯記錄，通常是在編輯之後立即鎖定資料來源的記錄。|  
+|**adLockReadOnly**|1|表示唯讀記錄。 您不能改變數據。|  
+|**adLockUnspecified**|-1|未指定鎖定的類型。 若為複製，則會使用與原始相同的鎖定類型來建立複製。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- 封裝： **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
+ Package： **.com. wfc. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
-|AdoEnums.LockType.BATCHOPTIMISTIC|  
-|AdoEnums.LockType.OPTIMISTIC|  
-|AdoEnums.LockType.PESSIMISTIC|  
-|AdoEnums.LockType.READONLY|  
-|AdoEnums.LockType.UNSPECIFIED|  
+|AdoEnums. LockType. BATCHOPTIMISTIC|  
+|AdoEnums. LockType. 開放式|  
+|AdoEnums. LockType。封閉式|  
+|AdoEnums. LockType READONLY|  
+|AdoEnums. LockType。未指定|  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
   
 |||  
 |-|-|  

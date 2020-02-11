@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807422"
 ---
 # <a name="cross-container-transactions"></a>跨容器交易
@@ -24,8 +24,8 @@ ms.locfileid: "62807422"
   
  參考記憶體最佳化的資料表的任何解譯的查詢都視為跨容器交易的一部分，不論是從明確或隱含交易執行還是在自動認可模式中執行。  
   
-##  <a name="isolation"></a> 隔離個別作業  
- 每一筆 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 交易都有隔離等級。 預設隔離等級為 Read Committed。 若要使用不同的隔離等級，您可以設定隔離層級使用[SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)。  
+##  <a name="isolation"></a>隔離個別作業  
+ 每一筆 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 交易都有隔離等級。 預設隔離等級為 Read Committed。 若要使用不同的隔離等級，您可以使用[SET TRANSACTION 隔離等級 &#40;transact-sql&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)設定隔離等級。  
   
  相較於以磁碟為基礎的資料表作業，在記憶體最佳化的資料表上執行作業通常更需要在不同的隔離等級。 在交易中，為陳述式集合或個別讀取作業設定不同隔離等級是可行的。  
   
@@ -65,13 +65,13 @@ commit
 ### <a name="isolation-semantics-for-individual-operations"></a>個別作業的隔離語意  
  可序列化交易 T 會在完全隔離的情況下執行。 就像是其他每一筆交易在 T 開始之前已經認可，或者在 T 認可之後開始一樣。 當交易中有不同的作業具有不同隔離等級時，它會變得更複雜。  
   
- 中的交易隔離等級的一般語意[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，以及鎖定的含意，述[SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)。  
+ 中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的交易隔離等級的一般語義以及對鎖定的影響，會在[&#40;Transact-sql&#41;的設定交易隔離等級](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)中說明。  
   
  如果是不同作業可能會有不同隔離等級的跨容器交易，您必須了解個別讀取作業的隔離語意。 寫入作業永遠都會隔離。 不同交易中的寫入無法影響彼此。  
   
  資料讀取作業會傳回滿足篩選條件的許多資料列。  
   
- 執行讀取作業的交易 t 隔離層級的一部分可以理解的形式讀取  
+ 讀取會做為交易 T 的一部分來執行。讀取作業的隔離等級可以根據來理解，  
   
  認可狀態  
  認可狀態指的是，是否可以保證資料讀取為已認可狀態。  
@@ -82,7 +82,7 @@ commit
  穩定性會保證系統給出有關資料讀取的資訊給交易 T。  
  穩定性指的是交易的讀取是否可重複。 也就是說，如果讀取已重複，它們是否會傳回相同的資料列和資料列版本？  
   
- 特定保證指的是交易的邏輯結束時間。 一般而言，邏輯結束時間是資料庫認可交易的時間。 如果記憶體最佳化的資料表是由交易所存取，則邏輯結束時間在技術上為驗證階段的開始 (如需詳細資訊，請參閱中的交易存留期討論[Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 特定保證指的是交易的邏輯結束時間。 一般而言，邏輯結束時間是資料庫認可交易的時間。 如果記憶體最佳化的資料表是由交易所存取，則邏輯結束時間在技術上為驗證階段的開始  （如需詳細資訊，請參閱[記憶體優化資料表中交易](../relational-databases/in-memory-oltp/memory-optimized-tables.md)的交易存留期討論。  
   
  不論隔離等級為何，交易 (T) 永遠都會看到自己的更新：  
   
@@ -99,7 +99,7 @@ commit
  保證資料讀取為已認可狀態，而且一直到交易的邏輯結束時間為止都很穩定。  
   
  SERIALIZABLE  
- 所有的可重複讀取以及虛設項目避免和 t。 虛設項目避免表示掃描作業只能傳回額外的資料列已由 T，寫入所執行的所有可序列化的讀取作業方面的交易一致性的保證，但沒有已由其他交易寫入的資料列。  
+ 所有可重複讀取的保證，以及與 T 所執行之所有 serializable 讀取作業相關的交易一致性。虛設的規避表示掃描工作只能傳回 T 所寫入的其他資料列，但不能其他交易所寫入的資料列。  
   
  以下列交易為例：  
   
@@ -135,7 +135,7 @@ commit
   
  如果符合下列其中一個條件，給定交易 T 的磁碟端會到達某個隔離等級 X：  
   
--   它會在 X 開始。也就是工作階段預設值是 X，因為您已執行`SET TRANSACTION ISOLATION LEVEL`，或者它是[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]預設值。  
+-   它會從 X 開始。也就是說，會話預設值是 X，因為您執行`SET TRANSACTION ISOLATION LEVEL`了，或者它是[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]預設值。  
   
 -   在交易期間，使用 `SET TRANSACTION ISOLATION LEVEL` 將預設隔離等級變更為 X。  
   
@@ -172,22 +172,23 @@ commit
   
  記憶體最佳化的資料表可支援 SNAPSHOT、REPEATABLE READ 和 SERIALIZABLE 隔離等級。 如果是自動認可交易，記憶體最佳化的資料表可支援 READ COMMITTED 隔離等級。  
   
- 以下是支援的案例：  
+ 支援下列案例：  
   
 -   READ UNCOMMITTED、READ COMMITTED 和 READ_COMMITTED_SNAPSHOT 跨容器交易可以在 SNAPSHOT、REPEATABLE READ 和 SERIALIZABLE 隔離之下存取記憶體最佳化的資料表。 交易的 READ COMMITTED 保證依然存在；資料庫已認可此交易讀取的所有資料列。  
   
 -   REPEATABLE READ 和 SERIALIZABLE 交易可以在 SNAPSHOT 隔離之下存取記憶體最佳化的資料表。  
   
 ## <a name="read-only-cross-container-transactions"></a>唯讀的跨容器交易  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的大部分唯讀交易都會在認可時間回復。 因為資料庫不需認可任何變更，所以系統會釋出交易所使用的資源。 如果是唯讀的磁碟交易，交易所做的所有鎖定都會在此時釋放。 如果是跨越單一原生編譯程序執行的唯讀記憶體最佳化交易，則不會執行驗證。  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的大部分唯讀交易都會在認可時間回復。 因為資料庫不需認可任何變更，所以系統會釋出交易所使用的資源。 如果是唯讀的磁碟交易，交易所做的所有鎖定都會在此時釋放。 如果是跨越單一原生編譯程序執行的唯讀記憶體最佳化交易，則不會執行驗證。  
   
  自動認可模式中的跨容器唯讀交易會在交易結束時回復。 未執行任何驗證。  
   
- 如果交易在 REPEATABLE READ 或 SERIALIZABLE 隔離之下存取記憶體最佳化資料表，則明確或隱含的跨容器唯讀交易會在認可時間執行驗證。 有關驗證的詳細資訊請參閱節衝突偵測、 驗證和認可相依性檢查[Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 如果交易在 REPEATABLE READ 或 SERIALIZABLE 隔離之下存取記憶體最佳化資料表，則明確或隱含的跨容器唯讀交易會在認可時間執行驗證。 如需驗證的詳細資訊，請參閱[記憶體優化資料表中交易](../relational-databases/in-memory-oltp/memory-optimized-tables.md)的衝突偵測、驗證和認可相依性檢查一節。  
   
 ## <a name="see-also"></a>另請參閱  
- [了解記憶體最佳化資料表上的交易](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [具有記憶體最佳化資料表的交易隔離等級的指導方針](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
- [經記憶體最佳化的資料表上交易的重試邏輯方針](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
+ [瞭解記憶體優化資料表上的交易](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [具有記憶體優化資料表的交易隔離等級方針](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
+ [記憶體最佳化資料表交易的重試邏輯方針](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

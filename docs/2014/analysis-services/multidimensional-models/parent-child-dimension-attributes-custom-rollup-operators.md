@@ -1,5 +1,5 @@
 ---
-title: 父子式維度中的自訂積存運算子 |Microsoft Docs
+title: 父子式維度中的自訂 Rollup 運算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 20f25474b15ecf58c45383a8290bb13f956a5db8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073457"
 ---
 # <a name="custom-rollup-operators-in-parent-child-dimensions"></a>父子式維度中的自訂 ROLLUP 運算子

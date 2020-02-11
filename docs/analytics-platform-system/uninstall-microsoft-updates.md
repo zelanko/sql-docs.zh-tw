@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: a5ebe1ee911f7500505cdbd1962d28c35461a635
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399459"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>卸載 Analytics Platform System 中的 Microsoft updates
@@ -21,7 +21,7 @@ ms.locfileid: "74399459"
   
 ## <a name="before-you-begin"></a>開始之前  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>Prerequisites  
 若要執行這些步驟，您將需要：  
   
 -   具有許可權可存取管理主控台來監視設備的分析平臺系統登入。  
@@ -38,8 +38,8 @@ ms.locfileid: "74399459"
     C:\pdwinst\media\setup.exe /action="RemoveMicrosoftUpdate" /DomainAdminPasswords="<password>"  
     ```  
   
-## <a name="next-steps"></a>接下來的步驟
-如需詳細資訊，請參閱：
+## <a name="next-steps"></a>後續步驟
+如需詳細資訊，請參閱
 - [下載並套用 Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md) 
 - [將分析平臺系統修補程式套用 &#40;分析平臺系統&#41;](apply-analytics-platform-system-hotfixes.md)  
 - [&#40;分析平臺系統&#41;卸載分析平臺系統修補程式](uninstall-analytics-platform-system-hotfixes.md)  

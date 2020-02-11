@@ -1,5 +1,5 @@
 ---
-title: 設定貨幣轉換選項 （商業智慧精靈） |Microsoft Docs
+title: 設定貨幣轉換選項（商業智慧 Wizard） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97e44dc259c79c7bb1aef5cc5cbff8b06dc6c48e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068750"
 ---
 # <a name="set-currency-conversion-options-business-intelligence-wizard"></a>設定貨幣轉換選項 (商業智慧精靈)
@@ -25,25 +25,25 @@ ms.locfileid: "66068750"
 > [!NOTE]  
 >  如果 [商業智慧精靈] 是從 [維度設計師] 啟動，或是在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中方案總管的某維度上按一下滑鼠右鍵來啟動，則不會出現此頁面。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **選取包含匯率的量值群組**  
  選取包含匯率的量值群組，這會由貨幣轉換計算參考。  
   
  **指定樞紐貨幣**  
  選取作為量值群組之樞紐貨幣的成員。  
   
- **選取如何輸入匯率 （選取範例貨幣）**  
+ **選取如何輸入匯率 (選取範例貨幣)**  
  從貨幣維度選取代表範例貨幣的成員，即可變更每 1 個範例貨幣有 X 個樞紐貨幣與每 1 個樞紐貨幣有 X 個範例貨幣選項的文字，以改善匯率方向的顯示。  
   
- **X 個樞紐貨幣，每 1 個範例貨幣**  
+ **每 1 個範例貨幣有 X 個樞紐貨幣**  
  選取即可指出比率量值群組中的匯率代表指定之樞紐貨幣的倍數。  
   
- **X 個範例貨幣每 1 個樞紐貨幣**  
+ **每 1 個樞紐貨幣有 X 個範例貨幣**  
  選取即可指出比率量值群組中的匯率代表指定之範例貨幣的倍數。  
   
 ## <a name="see-also"></a>另請參閱  
- [商業智慧精靈 F1 說明](business-intelligence-wizard-f1-help.md)   
- [Cube 設計師&#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [維度設計師&#40;Analysis Services-多維度資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [商業智慧 Wizard F1 說明](business-intelligence-wizard-f1-help.md)   
+ [Cube 設計工具 &#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [維度設計師 &#40;Analysis Services 多維資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 加入資料表對話方塊 （查詢和檢視表設計工具） (Visual Database Tools) |Microsoft Docs
+title: 加入資料表對話方塊（查詢和視圖設計工具）（Visual Database Tools） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 374014ee4ccdd783cee3eeb7bad5c5e728906299
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460172"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>加入資料表對話方塊 (查詢和檢視表設計工具) (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "63460172"
 > [!NOTE]  
 >  如果資料表是要發佈以進行複寫，則必須使用 Transact-SQL 陳述式 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 或 SQL Server 管理物件 (SMO) 變更結構描述。 使用 [資料表設計工具] 或 [資料庫圖表設計工具] 變更結構描述時，會嘗試卸除並重新建立資料表。 您無法卸除已發行的物件，因此結構描述變更將會失敗。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **資料表**  
  列出可以新增至 [圖表]  窗格的資料表。 若要新增資料表，請選取資料表，再按 [新增]  。 若要一次新增數個資料表，請選取資料表，再按 [新增]  。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63460172"
  **[重新整理]**  
  更新清單以包含自上次擷取清單以來對資料庫所做的任何變更。  
   
- **[加入]**  
+ **加入**  
  加入選取的一或多個項目。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 87bfaef1ad5dc4c9b1f907c27955ca3f156038a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067804"
 ---
 # <a name="results-pane-visual-database-tools"></a>結果窗格 (Visual Database Tools)
@@ -55,7 +55,7 @@ ms.locfileid: "63067804"
   
  若要移至特定資料錄，在巡覽列文字方塊中輸入列號，然後按 ENTER。  
   
- 如需如何使用「查詢和檢視表設計工具」中之鍵盤快速鍵的資訊，請參閱[在查詢和檢視表設計工具中巡覽 &#40;Visual Database Tools&#41;](visual-database-tools.md)。  
+ 如需在查詢和檢視表設計工具中使用鍵盤快速鍵的詳細資訊，請參閱[在查詢和檢視表設計工具中巡覽 &#40;Visual Database Tools&#41;](visual-database-tools.md)。  
   
 ## <a name="keeping-the-results-set-synchronized-with-the-query-definition"></a>保持結果集與查詢定義同步處理  
  當您在處理查詢或檢視結果時，[結果] 窗格中的資料錄可能未與查詢定義保持同步處理。 例如，若您在資料表中執行五個資料行其中四個的查詢，然後使用 [圖表窗格] 在查詢定義中加入第五個資料行，則第五個資料行的資料將不會自動加入至 [結果] 窗格中。 若要讓 [結果] 窗格反映新的查詢定義，請再次執行查詢。  
@@ -63,11 +63,11 @@ ms.locfileid: "63067804"
  如果查詢變更，在 [結果] 窗格的右下角會有警告圖示，並且會出現「已變更的查詢」文字。 圖示會在窗格的左上角重複出現。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立查詢&#40;Visual Database Tools&#41;](create-queries-visual-database-tools.md)   
- [執行查詢&#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
- [設計查詢和檢視表的使用說明主題&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [圖表 窗格&#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
- [準則窗格 &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
+ [&#40;Visual Database Tools 建立查詢&#41;](create-queries-visual-database-tools.md)   
+ [&#40;Visual Database Tools 執行查詢&#41;](run-queries-visual-database-tools.md)   
+ [設計查詢和觀看 how to 主題 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [&#40;Visual Database Tools&#41;的圖表窗格](diagram-pane-visual-database-tools.md)   
+ [&#40;Visual Database Tools&#41;的 [準則窗格]](criteria-pane-visual-database-tools.md)   
  [使用結果窗格中的資料 &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)  
   
   

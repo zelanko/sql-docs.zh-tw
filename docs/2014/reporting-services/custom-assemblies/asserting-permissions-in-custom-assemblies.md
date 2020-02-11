@@ -19,20 +19,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f66896479ec06d78b94d6fe084ff806e3af67727
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265375"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>自訂組件中的判斷提示權限
   根據預設，自訂組譯碼會使用有限的 **Execution** 權限集合執行。 在某些情況下，您可能希望實作自訂組件，以安全地呼叫在安全性系統中受保護的資源 (例如檔案或是登錄)。 若要完成這個動作，您必須執行下列項目：  
   
-1.  識別您程式碼所需的完整權限，以進行安全的呼叫。 如果這個方法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 程式庫的一部分，這項資訊應該包含在方法文件集中。  
+1.  識別您程式碼所需的完整權限，以進行安全的呼叫。 如果這個方法是連結[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]庫的一部分，這項資訊應該包含在方法檔中。  
   
 2.  修改報表伺服器原則組態檔，以授與自訂組件所需的權限。 如需安全性原則設定檔的詳細資訊，請參閱[使用 Reporting Services 安全性原則檔](../extensions/secure-development/using-reporting-services-security-policy-files.md)。  
   
-3.  判斷提示所需的權限，做為進行安全呼叫的方法之一部分。 這是必要的動作，因為報表伺服器所呼叫的自訂組譯碼是報表運算式主機組件的一部分，報表運算式主機組件預設會以 **Execution** 權限執行。 **Execution** 權限集合允許執行程式碼，但不允許使用受保護的資源。  
+3.  判斷提示所需的權限，做為進行安全呼叫的方法之一部分。 這是必要的動作，因為報表伺服器所呼叫的自訂組譯碼是報表運算式主機組件的一部分，報表運算式主機組件預設會以 **Execution** 權限執行。 
+  **Execution** 權限集合允許執行程式碼，但不允許使用受保護的資源。  
   
 4.  如果使用強式名稱簽署自訂組件，請將它標示為 **AllowPartiallyTrustedCallersAttribute**。 這是必要的動作，因為自訂組件是從報表運算式中呼叫，而報表運算式是報表運算式主機組件的一部分，所以預設不會授與 **FullTrust**，因此它屬於「部分信任的」呼叫端。 如需詳細資訊，請參閱[使用強式名稱自訂組件](using-strong-named-custom-assemblies.md)。  
   

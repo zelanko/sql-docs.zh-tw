@@ -18,21 +18,21 @@ ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 57b187bf4f14bd5c05f91a433fa331e954fa0fb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020376"
 ---
 # <a name="row-status-array"></a>資料列狀態陣列
-除了資料之外， **SQLFetch**並**SQLFetchScroll**可以傳回陣列，提供資料列集中的每個資料列的狀態。 這個陣列會指定經由 sql_attr_row_status_ptr 設定陳述式屬性。 這個陣列由應用程式所配置，而且必須具有 SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性所指定的項目數。 陣列中的值由設定**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，和**SQLSetPos。** 值會描述資料列和自上次擷取後，該狀態是否已變更的狀態。  
+除了資料以外， **SQLFetch**和**SQLFetchScroll**也可以傳回陣列，以提供資料列集中每個資料列的狀態。 這個陣列是透過 SQL_ATTR_ROW_STATUS_PTR 語句屬性所指定。 這個陣列是由應用程式所配置，而且必須擁有與 SQL_ATTR_ROW_ARRAY_SIZE 語句屬性所指定的數目一樣多的元素。 陣列中的值是由**SQLBulkOperations**、 **SQLFetch**、 **SQLFetchScroll**和 SQLSetPos 所設定 **。** 這些值會描述資料列的狀態，以及該狀態自上次提取後是否已變更。  
   
 |資料列狀態陣列值|描述|  
 |----------------------------|-----------------|  
-|SQL_ROW_SUCCESS|資料列已成功擷取，而且尚未變更，因為它一次擷取。|  
-|SQL_ROW_SUCCESS_WITH_INFO|資料列已成功擷取，而且尚未變更，因為它一次擷取。 不過，資料列相關的已傳回警告。|  
+|SQL_ROW_SUCCESS|已成功提取資料列，而且自上次提取後尚未變更。|  
+|SQL_ROW_SUCCESS_WITH_INFO|已成功提取資料列，而且自上次提取後尚未變更。 不過，傳回關於資料列的警告。|  
 |SQL_ROW_ERROR|提取資料列時發生錯誤。|  
-|SQL_ROW_UPDATED|已成功擷取的資料列，以及已經更新過一次擷取。 如果再次擷取或重新整理的資料列**SQLSetPos**，其狀態會變更為新的狀態。<br /><br /> 有些驅動程式無法偵測資料變更，且無法傳回此值。 若要判斷驅動程式是否可以偵測 refetched 的資料列更新，應用程式會呼叫**SQLGetInfo** SQL_ROW_UPDATES 選項。|  
-|SQL_ROW_DELETED|因為一次擷取已刪除資料列。|  
-|SQL_ROW_ADDED|已插入資料列**SQLBulkOperations**。 如果再次擷取或重新整理的資料列**SQLSetPos**，其狀態會是 SQL_ROW_SUCCESS。<br /><br /> 此值不由設定**SQLFetch**或是**SQLFetchScroll**。|  
-|SQL_ROW_NOROW|重疊的資料列集結果集的結尾，並傳回任何資料列，對應至資料列狀態陣列的這個項目。|
+|SQL_ROW_UPDATED|已成功提取資料列，且自上次提取後已更新。 如果**SQLSetPos**再次提取或重新整理資料列，其狀態會變更為 [新狀態]。<br /><br /> 某些驅動程式無法偵測資料的變更，因此無法傳回此值。 若要判斷驅動程式是否可以偵測到根據資料列的更新，應用程式會使用 SQL_ROW_UPDATES 選項來呼叫**SQLGetInfo** 。|  
+|SQL_ROW_DELETED|上次提取資料列之後，已將其刪除。|  
+|SQL_ROW_ADDED|**SQLBulkOperations**插入資料列。 如果資料列再次提取或由**SQLSetPos**重新整理，其狀態會是 SQL_ROW_SUCCESS。<br /><br /> 這個值不是由**SQLFetch**或**SQLFetchScroll**所設定。|  
+|SQL_ROW_NOROW|資料列集會重迭結果集的結尾，而且不會傳回雖然該值到資料列狀態陣列之這個元素的任何資料列。|

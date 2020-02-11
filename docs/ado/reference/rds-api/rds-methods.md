@@ -14,32 +14,32 @@ ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d045858ddd0cde818eedb983f10527fe7e94a2fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963688"
 ---
 # <a name="rds-methods"></a>RDS 方法
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 |||  
 |-|-|  
-|[取消 (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)|取消執行暫止狀態，非同步方法呼叫。|  
-|[CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)|取消目前的或新資料列所做的變更**資料錄集**物件。|  
-|[ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|將轉換**資料錄集**MIME 字串，表示資料錄集資料。|  
-|[CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)|建立目標商務物件的 proxy，並傳回的指標。|  
-|[CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|建立空的中斷**資料錄集**。|  
-|[Execute 方法 (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|執行要求，並建立進階的資料資料列集 （適用於 ADO 2.5 及更新版本）。|  
-|[Execute21 方法 (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|執行要求，並建立進階的資料資料列集 （適用於 ADO 2.1）。|  
-|[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)|傳回要求的介面指標上能力更強的版本的物件。|  
-|[MoveFirst、 MoveLast、 MoveNext、 MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|移至 [first、 last、 下一步]，或上一個記錄中指定**資料錄集**物件。|  
-|[查詢 (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|會使用有效的 SQL 查詢字串傳回**資料錄集**。|  
-|[重新整理 (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)|重新查詢中指定的資料來源**Connect**屬性和更新查詢結果。|  
-|[重設 (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|用戶端上執行排序或篩選**資料錄集**、 根據指定的排序和篩選屬性。|  
-|[SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|提交暫止的變更以及與在本機快取可更新**Recordset**中指定的資料來源**Connect**屬性。|  
-|[Synchronize 方法 (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|使用連接字串 （適用於 ADO 2.5 及更新版本） 所指定的資料庫，同步處理指定的資料錄集。|  
-|[Synchronize21 方法 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|使用連接字串 （適用於 ADO 2.1） 所指定的資料庫，同步處理指定的資料錄集。|
+|[取消（RDS）](../../../ado/reference/rds-api/cancel-method-rds.md)|取消執行暫止的非同步方法呼叫。|  
+|[CancelUpdate （RDS）](../../../ado/reference/rds-api/cancelupdate-method-rds.md)|取消對**記錄集**物件的目前或新資料列所做的任何變更。|  
+|[ConvertToString （RDS）](../../../ado/reference/rds-api/converttostring-method-rds.md)|將**記錄集**轉換成代表記錄集資料的 MIME 字串。|  
+|[CreateObject （RDS）](../../../ado/reference/rds-api/createobject-method-rds.md)|建立目標商務物件的 proxy，並傳回它的指標。|  
+|[CreateRecordset （RDS）](../../../ado/reference/rds-api/createrecordset-method-rds.md)|建立空的、中斷連接的**記錄集**。|  
+|[Execute 方法 (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|執行要求並建立 advanced data 資料列集（以用於 ADO 2.5 和更新版本）。|  
+|[Execute21 方法 (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|執行要求並建立 advanced data 資料列集（以用於 ADO 2.1）。|  
+|[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)|在物件的支援版本上，傳回所要求介面的指標。|  
+|[MoveFirst、MoveLast、MoveNext、MovePrevious （RDS）](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|移至指定之**記錄集**物件中的第一個、最後一個、下一個或上一個記錄。|  
+|[查詢（RDS）](../../../ado/reference/rds-api/query-method-rds.md)|使用有效的 SQL 查詢字串來傳回**記錄集**。|  
+|[Refresh （RDS）](../../../ado/reference/rds-api/refresh-method-rds.md)|重新查詢**連接**屬性中所指定的資料來源，並更新查詢結果。|  
+|[重設（RDS）](../../../ado/reference/rds-api/reset-method-rds.md)|根據指定的排序和篩選屬性，在用戶端**記錄集**上執行排序或篩選。|  
+|[SubmitChanges （RDS）](../../../ado/reference/rds-api/submitchanges-method-rds.md)|將本機快取和可更新**記錄集**的暫止變更提交至**連接**屬性中所指定的資料來源。|  
+|[Synchronize 方法 (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|將指定的記錄集與連接字串所指定的資料庫同步處理（以用於 ADO 2.5 和更新版本）。|  
+|[Synchronize21 方法 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|將指定的記錄集與連接字串所指定的資料庫同步處理（以用於 ADO 2.1）。|
 
 

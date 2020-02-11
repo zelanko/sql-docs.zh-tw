@@ -13,17 +13,17 @@ ms.assetid: d735dc64-370f-48ab-a59f-6cef9bc4e1e8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 34c4a6e3d98b6711c77fb50d7156207de148881a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094249"
 ---
 # <a name="setting-descriptor-fields"></a>設定描述項欄位
-若要修改的欄位描述元，應用程式可以呼叫**SQLSetDescField**。 某些欄位是唯讀的而且無法設定。 (請參閱[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)函式描述。)  
+若要修改描述項的欄位，應用程式可以呼叫**SQLSetDescField**。 有些欄位是唯讀的，而且無法設定。 （請參閱[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)函數描述）。  
   
- 描述項記錄的欄位會設定與資料錄數目 (*RecNumber*) 1 或更高版本，while 的描述項標頭欄位會設定使用記錄數字 0。 若要設定書籤的欄位，依照慣例，書籤會包含在資料行 0 也會記錄數字 0。 這可能會導致書籤欄位都包含在描述項標頭，但這不是大小寫的印象。 書籤的欄位是標頭欄位有所區別。  
+ 描述項記錄欄位是以1或更高的記錄號碼（*RecNumber*）設定，而描述項標頭欄位則是以0的記錄號碼來設定。 記錄號碼0也會用來設定書簽欄位，這是根據書簽包含在資料行0中的慣例。 這可能會讓您覺得書簽欄位包含在描述元標頭中，但這不是這種情況。 書簽欄位與標頭欄位不同。  
   
- 當個別設定欄位時，應用程式應遵循中定義的順序[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。 設定某些欄位會導致驅動程式來設定其他欄位。 這可確保的描述元一律可供使用後具有指定的資料類型的應用程式。 當應用程式設定的 SQL_DESC_TYPE 欄位時，驅動程式會檢查指定類型的其他欄位有效且一致。  
+ 個別設定欄位時，應用程式應遵循[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)中定義的順序。 設定某些欄位會導致驅動程式設定其他欄位。 這可確保在應用程式指定資料類型後，描述項一律可供使用。 當應用程式設定 [SQL_DESC_TYPE] 欄位時，驅動程式會檢查指定類型的其他欄位是否有效且一致。  
   
- 如果設定描述項欄位的函式呼叫失敗，描述項欄位的內容失敗函式呼叫之後為未定義。
+ 如果會設定描述項欄位的函式呼叫失敗，則描述元欄位的內容會在失敗函數呼叫之後未定義。

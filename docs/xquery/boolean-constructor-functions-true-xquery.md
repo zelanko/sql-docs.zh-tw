@@ -1,5 +1,5 @@
 ---
-title: true 函數 (XQuery) |Microsoft Docs
+title: true 函數（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 56f2dde1899340f036024253405379e094de59a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039040"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>布林建構函式 - true (XQuery)
@@ -34,10 +34,10 @@ fn:true() as xs:boolean
 ```  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的 AdventureWorks 資料庫。  
+ 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存在 AdventureWorks 資料庫的各種**xml**類型資料行中。  
   
 ### <a name="a-using-the-true-xquery-boolean-function"></a>A. 使用 true() XQuery 布林函數  
- 下列範例會查詢不具型別的**xml**變數。 中的運算式**value （)** 方法會傳回布林值**true （)** 如果"aaa"是屬性的值。 **Value （)** 方法**xml**資料類型轉換成位元的布林值，並傳回它。  
+ 下列範例會查詢不具類型的**xml**變數。 如果 "aaa" 是屬性值， **value （）** 方法中的運算式會傳回布林值**true （）** 。 **Xml**資料類型的**value （）** 方法會將布林值轉換成位，並傳回它。  
   
 ```  
 DECLARE @x XML  
@@ -47,11 +47,11 @@ go
 -- result = 1  
 ```  
   
- 在下列範例中，查詢會指定針對具型別**xml**資料行。 `if`運算式會檢查具類型布林值 <`ROOT`> 項目，並據此傳回建構的 XML。 本範例將執行下列動作：  
+ 在下列範例中，查詢是針對具類型的**xml**資料行所指定。 `if`運算式會檢查 <`ROOT`> 元素的具類型布林值，並據以傳回已建立的 XML。 本範例將執行下列動作：  
   
--   建立 XML 結構描述集合定義 <`ROOT`> xs: boolean 類型的項目。  
+-   建立 XML 架構集合，以定義 xs： `ROOT` boolean 類型的 <> 元素。  
   
--   建立含有具類型的資料表**xml**使用 XML 結構描述集合的資料行。  
+-   使用 XML 架構集合，建立具有具類型**xml**資料行的資料表。  
   
 -   將 XML 執行個體儲存在資料行中，並查詢它。  
   
@@ -89,6 +89,6 @@ go
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [布林建構函式&#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
+ [&#40;XQuery&#41;的布林函式函數](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
   
   

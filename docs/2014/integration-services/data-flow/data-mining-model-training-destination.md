@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5dac84fe42185806ae468593876a6bd439c1c689
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890648"
 ---
 # <a name="data-mining-model-training-destination"></a>資料採礦模型定型目的地
@@ -35,15 +35,15 @@ ms.locfileid: "68890648"
   
  此目的地有一個輸入，但沒有輸出。  
   
- 「資料採礦模型培訓」目的地會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連線管理員以連接到包含目的地所培訓之採礦結構和採礦模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體。 如需相關資訊，請參閱 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md)。  
+ 資料採礦模型定型目的地[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]會使用連接管理員連接到專案或的實例，其中包含目的地所訓練的「採礦結構」和「採礦模型」。 如需相關資訊，請參閱 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md)。  
   
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可在 [資料採礦模型培訓編輯器] 對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
+ 如需可在 [資料採礦模型培訓編輯器]**** 對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
   
--   [資料採礦模型培訓編輯器 &#40;連接索引標籤&#41;](../data-mining-model-training-editor-connection-tab.md)  
+-   [資料採礦模型定型編輯器 &#40;連接] 索引標籤&#41;](../data-mining-model-training-editor-connection-tab.md)  
   
--   [資料採礦模型培訓編輯器 &#40;資料行索引標籤&#41;](../data-mining-model-training-editor-columns-tab.md)  
+-   [資料採礦模型定型編輯器 &#40;資料行] 索引標籤&#41;](../data-mining-model-training-editor-columns-tab.md)  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   

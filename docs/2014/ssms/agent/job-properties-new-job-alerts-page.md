@@ -1,5 +1,5 @@
 ---
-title: 作業屬性：新增作業 （警示頁面） |Microsoft Docs
+title: 作業屬性：新增作業（警示頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189275"
 ---
 # <a name="job-properties-new-job-alerts-page"></a>作業屬性：新增作業 (警示頁面)
-  使用此頁面即可檢視和組織 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的警示。  
+  使用此頁面來查看和組織[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的警示。  
   
 ## <a name="options"></a>選項。  
  **警示清單**  

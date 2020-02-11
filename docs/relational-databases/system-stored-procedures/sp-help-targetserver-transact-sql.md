@@ -1,5 +1,5 @@
 ---
-title: sp_help_targetserver (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_targetserver （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1eb9a4d1a19f54f9e57e988b350594ce6031b243
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085081"
 ---
-# <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
+# <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   列出所有目標伺服器。  
@@ -40,29 +40,29 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @server_name = ] 'server_name'` 要傳回資訊的伺服器名稱。 *server_name*已**nvarchar(30)** ，預設值是 NULL。  
+`[ @server_name = ] 'server_name'`要傳回信息的伺服器名稱。 *server_name*是**Nvarchar （30）**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 如果*server_name*未指定，則**sp_help_targetserver**傳回下列結果集。  
+ 如果未指定*server_name* ， **sp_help_targetserver**會傳回此結果集。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|伺服器識別碼。|  
-|**server_name**|**nvarchar(30)**|伺服器名稱。|  
-|**location**|**nvarchar(200)**|指定伺服器的位置。|  
+|**server_name**|**Nvarchar （30）**|伺服器名稱。|  
+|**位置**|**nvarchar(200)**|指定伺服器的位置。|  
 |**time_zone_adjustment**|**int**|相對於格林威治標準時間 (GMT) 的時區調整 (以小時為單位)。|  
 |**enlist_date**|**datetime**|指定伺服器的編列日期。|  
 |**last_poll_date**|**datetime**|前次輪詢伺服器來尋找作業的日期。|  
-|**status**|**int**|指定伺服器的狀態。|  
-|**unread_instructions**|**int**|伺服器是否有未讀的指示。 如果您已下載所有資料列，這個資料行是**0**。|  
+|**狀態**|**int**|指定伺服器的狀態。|  
+|**unread_instructions**|**int**|伺服器是否有未讀的指示。 如果所有資料列都已下載，則此資料行為**0**。|  
 |**local_time**|**datetime**|目標伺服器的本機日期和時間，以前次輪詢主要伺服器之後的目標伺服器本機時間為基礎。|  
-|**enlisted_by_nt_user**|**nvarchar(100)**|編列了目標伺服器的 Microsoft Windows 使用者。|  
+|**enlisted_by_nt_user**|**Nvarchar （100）**|編列了目標伺服器的 Microsoft Windows 使用者。|  
 |**poll_interval**|**int**|目標伺服器輪詢主要 SQLServerAgent 服務來下載作業和上傳作業狀態的頻率 (以秒為單位)。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  若要執行這個預存程序，使用者必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
@@ -90,11 +90,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
- [sp_delete_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
- [sp_delete_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
- [sp_update_targetservergroup &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
- [dbo.sysdownloadlist &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
+ [sp_add_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
+ [sp_delete_targetserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
+ [sp_delete_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
+ [sp_update_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
+ [sysdownloadlist &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

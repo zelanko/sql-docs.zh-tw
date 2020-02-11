@@ -1,5 +1,5 @@
 ---
-title: 執行預存程序 （使用 RPC 語法） 及處理傳回碼和輸出參數 (OLE DB) |Microsoft Docs
+title: 執行預存程式（使用 RPC 語法）及處理傳回碼和輸出參數（OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e00adccfa6e75434fe398e21faafccc22f99914e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206680"
 ---
 # <a name="execute-a-stored-procedure-using-rpc-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>執行預存程序 (使用 RPC 語法) 及處理傳回碼和輸出參數 (OLE DB)
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預存程序可以有整數傳回碼和輸出參數。 傳回碼和輸出參數會在來自伺服器的最後一個封包中傳送，因此要等到完全釋放資料列集之後才可供應用程式使用。 如果此命令傳回多個結果，則當 `IMultipleResults::GetResult` 傳回 DB_S_NORESULT 或是當 `IMultipleResults` 介面完全釋放時 (以先發生者為準)，便可使用輸出參數資料。  
   
 > [!IMPORTANT]  
@@ -34,7 +35,8 @@ ms.locfileid: "68206680"
   
 3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每一個參數標記各一個)。  
   
-4.  使用 `IAccessor::CreateAccessor` 方法來建立已定義之參數的存取子。 `CreateAccessor` 會從一組繫結建立存取子。  
+4.  使用 `IAccessor::CreateAccessor` 方法來建立已定義之參數的存取子。 
+  `CreateAccessor` 會從一組繫結建立存取子。  
   
 5.  填入 DBPARAMS 結構。  
   
@@ -394,6 +396,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [處理結果操作說明主題 &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
+ [處理結果 how to 主題 &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

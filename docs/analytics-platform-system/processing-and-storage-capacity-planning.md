@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 143c37b6b55b96f8a0225c98db2212f07b2cd3a5
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400539"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>分析平臺系統中的處理和儲存容量
@@ -48,7 +48,7 @@ SQL Server 平行資料倉儲（PDW）的查詢效能主要取決於平行處理
 |24|48|768|12288|20%|  
 |28|56|896|14336|17%|  
   
-說明：  
+簡短  
   
 -   每個設備的**資料縮放單位**。 若要瞭解資料縮放單位，請參閱[分析平臺系統硬體元件](hardware-components.md)。  
   
@@ -90,7 +90,7 @@ SQL Server 平行資料倉儲（PDW）的查詢效能主要取決於平行處理
 |戴爾會|2 TB|32 TB|9|288 TB|720 TB|6|4320 TB|  
 |戴爾會|4 TB|64 TB|9|576 TB|1440 TB|6|8640 TB|   
   
-說明：  
+簡短  
   
 -   每個硬體廠商的**磁片磁碟機大小**為1、2或 4 TB。  
   

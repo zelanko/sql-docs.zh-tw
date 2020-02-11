@@ -1,5 +1,5 @@
 ---
-title: 值 (MDX) |Microsoft Docs
+title: 值（MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f373f626d778c4d77ec5843dca5bb11da728451d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887450"
 ---
 # <a name="value-mdx"></a>Value (MDX)
@@ -32,7 +32,7 @@ Member_Expression[.Value]
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **Value**函式會以字串形式傳回指定成員的值。 **值**引數是選擇性的, 因為成員的值是成員的預設屬性, 而如果未指定其他值, 則是針對成員傳回的值。 如需成員屬性的詳細資訊, 請參閱[內部成員&#40;屬性&#41; mdx](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties)和[使用者自訂成員&#40;屬性&#41;mdx](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)。  
+ **Value**函式會以字串形式傳回指定成員的值。 **值**引數是選擇性的，因為成員的值是成員的預設屬性，而如果未指定其他值，則是針對成員傳回的值。 如需成員屬性的詳細資訊，請參閱[內部成員屬性 &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties)和[使用者自訂成員屬性 &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回成員值，並且會明確傳回成員名稱。  
@@ -54,9 +54,9 @@ from [Adventure Works]
   
 ## <a name="see-also"></a>另請參閱  
  [MemberValue &#40;MDX&#41;](../mdx/membervalue-mdx.md)   
- [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
- [名稱&#40;MDX&#41;](../mdx/name-mdx.md)   
+ [MDX&#41;的屬性 &#40;](../mdx/properties-mdx.md)   
+ [MDX&#41;的名稱 &#40;](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

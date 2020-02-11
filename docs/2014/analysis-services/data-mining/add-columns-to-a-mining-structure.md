@@ -1,5 +1,5 @@
 ---
-title: 資料行加入採礦結構 |Microsoft Docs
+title: 將資料行加入至採礦結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85a713bb9da24a67ebe8fdd097535c5a9d5ac98e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086230"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>將資料行加入至採礦結構
@@ -31,7 +31,7 @@ ms.locfileid: "66086230"
   
 1.  選取資料採礦設計師中的 **[採礦結構]** 索引標籤。  
   
-2.  以滑鼠右鍵按一下採礦結構，並選取 [加入資料行]  。  
+2.  以滑鼠右鍵按一下採礦結構，並選取 [加入資料行]****。  
   
      就會開啟 **[選取資料行]** 對話方塊。  
   
@@ -45,6 +45,6 @@ ms.locfileid: "66086230"
 >  如果您要加入的資料行已存在，其副本會併入結構中，並在名稱後面附加「1」。 您可藉由在採礦結構資料行的 **[名稱]** 屬性中輸入新名稱，將複製資料行的名稱變更為更具描述性的名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦結構工作和操作說明](mining-structure-tasks-and-how-tos.md)  
+ [採礦結構工作和使用說明](mining-structure-tasks-and-how-tos.md)  
   
   

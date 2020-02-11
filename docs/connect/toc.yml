@@ -15,13 +15,13 @@
     - name: 開始使用 SqlClient 驅動程式
       href: ../connect/ado-net/get-started-sqlclient-driver.md
       items:
-        - name: '步驟 1:設定 ADO.NET 開發的開發環境'
+        - name: 步驟 1︰設定 ADO.NET 開發的開發環境
           href: ../connect/ado-net/step-1-configure-development-environment-ado-net-development.md
-        - name: '步驟 2:建立 ADO.NET 開發的 SQL 資料庫'
+        - name: 步驟 2︰建立 ADO.NET 開發的 SQL 資料庫
           href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
-        - name: 步驟 3：使用 ADO.NET 連線到 SQL 的概念證明
+        - name: 步驟 3︰使用 ADO.NET 連線到 SQL 的概念證明
           href: ../connect/ado-net/step-3-connect-sql-ado-net.md
-        - name: 步驟 4：使用 ADO.NET 彈性地連線到 SQL
+        - name: 步驟 4︰使用 ADO.NET 彈性地連線到 SQL
           href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
     - name: SqlClient 驅動程式概觀
       href: ../connect/ado-net/overview-sqlclient-driver.md
@@ -140,9 +140,11 @@
               href: ../connect/ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md
             - name: SqlClient 對 LocalDB 的支援
               href: ../connect/ado-net/sql/sqlclient-support-localdb.md
+            - name: Always Encrypted 的 SqlClient 支援
+              href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
 - name: JDBC
   items:
-    - name: 用於 SQL Server 的 Microsoft JDBC 驅動程式
+    - name: Microsoft JDBC Driver for SQL Server
       href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md
     - name: JDBC Driver API 參考
       href: ../connect/jdbc/reference/jdbc-driver-api-reference.md
@@ -2482,11 +2484,11 @@
     - name: 開始使用 JDBC Driver
       href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
       items:
-        - name: '步驟 1:設定開發環境以進行 Java 開發'
+        - name: 步驟 1︰設定 Java 開發的開發環境
           href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
-        - name: '步驟 2:建立 SQL 資料庫以進行 Java 開發'
+        - name: 步驟 2︰建立 Java 開發的 SQL 資料庫
           href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
-        - name: 步驟 3：使用 Java 連線到 SQL 的概念證明
+        - name: 步驟 3︰使用 Java 連線到 SQL 的概念證明
           href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
     - name: JDBC Driver 概觀
       href: ../connect/jdbc/overview-of-the-jdbc-driver.md
@@ -2753,11 +2755,11 @@
   items:
     - name: Node.js Driver for SQL Server
       href: ../connect/node-js/node-js-driver-for-sql-server.md
-    - name: '步驟 1:設定 Node.js 開發的開發環境'
+    - name: 步驟 1︰設定 Node.js 開發的開發環境
       href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
-    - name: '步驟 2:建立 Node.js 開發的 SQL 資料庫'
+    - name: 步驟 2︰建立 Node.js 開發的 SQL 資料庫
       href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
-    - name: 步驟 3：使用 Node.js 連線到 SQL 的概念證明
+    - name: 步驟 3︰使用 Node.js 連線到 SQL 的概念證明
       href: ../connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md
 - name: ODBC
   items:
@@ -3034,11 +3036,11 @@
                     - name: 基本的 ODBC 應用程式步驟
                       href: ../odbc/reference/develop-app/basic-odbc-application-steps.md
                       items:
-                        - name: '步驟 1:連線至資料來源'
+                        - name: 步驟 1：連線到資料來源
                           href: ../odbc/reference/develop-app/step-1-connect-to-the-data-source.md
-                        - name: '步驟 2:將應用程式初始化'
+                        - name: 步驟 2：初始化應用程式
                           href: ../odbc/reference/develop-app/step-2-initialize-the-application.md
-                        - name: 步驟 3：建置和執行 SQL 陳述式
+                        - name: 步驟 3：建立和執行 SQL 陳述式
                           href: ../odbc/reference/develop-app/step-3-build-and-execute-an-sql-statement.md
                         - name: 步驟 4a：擷取結果
                           href: ../odbc/reference/develop-app/step-4a-fetch-the-results.md
@@ -3440,7 +3442,7 @@
                               href: ../odbc/reference/develop-app/setting-the-transaction-isolation-level.md
                             - name: 可捲動的資料指標和交易隔離
                               href: ../odbc/reference/develop-app/scrollable-cursors-and-transaction-isolation.md
-                        - name: 並行存取控制
+                        - name: 並行控制
                           href: ../odbc/reference/develop-app/concurrency-control.md
                           items:
                             - name: 並行類型
@@ -4037,7 +4039,7 @@
                               href: ../odbc/reference/appendixes/numeric-literal-syntax.md
                         - name: 保留關鍵字
                           href: ../odbc/reference/appendixes/reserved-keywords.md
-                    - name: 附錄 D：資料型別
+                    - name: 附錄 D：資料類型
                       href: ../odbc/reference/appendixes/appendix-d-data-types.md
                       items:
                         - name: 使用資料類型識別碼
@@ -4108,57 +4110,57 @@
                         - name: 將資料從 SQL 轉換成 C 資料類型
                           href: ../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md
                           items:
-                            - name: SQL 轉換為 C：二進位
+                            - name: SQL 到 C：二進位
                               href: ../odbc/reference/appendixes/sql-to-c-binary.md
-                            - name: SQL 轉換為 C：bit
+                            - name: SQL 到 C：位元
                               href: ../odbc/reference/appendixes/sql-to-c-bit.md
-                            - name: SQL 轉換為 C：字元
+                            - name: SQL 到 C：字元
                               href: ../odbc/reference/appendixes/sql-to-c-character.md
-                            - name: SQL 轉換為 C：Date
+                            - name: SQL 到 C：日期
                               href: ../odbc/reference/appendixes/sql-to-c-date.md
-                            - name: SQL 轉換為 C：日期時間間隔
+                            - name: SQL 到 C：日期時間間隔
                               href: ../odbc/reference/appendixes/sql-to-c-day-time-intervals.md
-                            - name: SQL 轉換為 C：GUID
+                            - name: SQL 到 C：GUID
                               href: ../odbc/reference/appendixes/sql-to-c-guid.md
-                            - name: SQL 轉換為 C：數值
+                            - name: SQL 到 C：數值
                               href: ../odbc/reference/appendixes/sql-to-c-numeric.md
-                            - name: SQL 轉換為 C：時間戳記
+                            - name: SQL 到 C：時間戳記
                               href: ../odbc/reference/appendixes/sql-to-c-timestamp.md
-                            - name: SQL 轉換為 C：Time
+                            - name: SQL 到 C：時間
                               href: ../odbc/reference/appendixes/sql-to-c-time.md
-                            - name: SQL 轉換為 C：年月間隔
+                            - name: SQL 到 C：年月間隔
                               href: ../odbc/reference/appendixes/sql-to-c-year-month-intervals.md
                             - name: SQL 到 C 資料轉換範例
                               href: ../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md
                         - name: 將資料從 C 轉換成 SQL 資料類型
                           href: ../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md
                           items:
-                            - name: C 轉換為 SQL：二進位
+                            - name: C 到 SQL：二進位
                               href: ../odbc/reference/appendixes/c-to-sql-binary.md
-                            - name: C 轉換為 SQL：bit
+                            - name: C 到 SQL：位元
                               href: ../odbc/reference/appendixes/c-to-sql-bit.md
-                            - name: C 轉換為 SQL：字元
+                            - name: C 到 SQL：字元
                               href: ../odbc/reference/appendixes/c-to-sql-character.md
-                            - name: C 轉換為 SQL：Date
+                            - name: C 到 SQL：日期
                               href: ../odbc/reference/appendixes/c-to-sql-date.md
-                            - name: C 轉換為 SQL：日期時間間隔
+                            - name: C 到 SQL：日期時間間隔
                               href: ../odbc/reference/appendixes/c-to-sql-day-time-intervals.md
-                            - name: C 轉換為 SQL：GUID
+                            - name: C 到 SQL：GUID
                               href: ../odbc/reference/appendixes/c-to-sql-guid.md
-                            - name: C 轉換為 SQL：數值
+                            - name: C 到 SQL：數值
                               href: ../odbc/reference/appendixes/c-to-sql-numeric.md
-                            - name: C 轉換為 SQL：時間戳記
+                            - name: C 到 SQL：時間戳記
                               href: ../odbc/reference/appendixes/c-to-sql-timestamp.md
-                            - name: C 轉換為 SQL：Time
+                            - name: C 到 SQL：時間
                               href: ../odbc/reference/appendixes/c-to-sql-time.md
-                            - name: C 轉換為 SQL：年月間隔
+                            - name: C 到 SQL：年月間隔
                               href: ../odbc/reference/appendixes/c-to-sql-year-month-intervals.md
                             - name: C 到 SQL 資料轉換範例
                               href: ../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md
-                    - name: 附錄 E：純量函數
+                    - name: 附錄 E：純量函式
                       href: ../odbc/reference/appendixes/appendix-e-scalar-functions.md
                       items:
-                        - name: 字串函數
+                        - name: 字串函式
                           href: ../odbc/reference/appendixes/string-functions.md
                         - name: 數值函數
                           href: ../odbc/reference/appendixes/numeric-functions.md
@@ -4179,7 +4181,7 @@
                           href: ../odbc/reference/appendixes/executing-positioned-update-and-delete-statements.md
                         - name: 資料指標程式庫程式碼範例
                           href: ../odbc/reference/appendixes/cursor-library-code-example.md
-                        - name: 實作注意事項
+                        - name: 實作附註
                           href: ../odbc/reference/appendixes/implementation-notes.md
                           items:
                             - name: 資料指標程式庫快取
@@ -5065,7 +5067,7 @@
       href: ../connect/oledb/when-to-use-oledb-driver-for-sql-server.md
     - name: 尋找詳細的 OLE DB Driver for SQL Server 資訊
       href: ../connect/oledb/finding-more-oledb-driver-for-sql-server-information.md
-    - name: 功能
+    - name: 特性
       href: ../connect/oledb/features/oledb-driver-for-sql-server-features.md
       items:
         - name: 存取擴展事件記錄檔中的診斷資訊
@@ -5445,16 +5447,16 @@
   items:
     - name: 用於 SQL Server 之 PHP 的 Microsoft 驅動程式
       href: ../connect/php/microsoft-php-driver-for-sql-server.md
-    - name: 使用者入門
+    - name: 開始使用
       href: ../connect/php/getting-started-with-the-php-sql-driver.md
       items:
-        - name: '步驟 1:設定 PHP 開發的開發環境'
+        - name: 步驟 1︰設定 PHP 開發的開發環境
           href: ../connect/php/step-1-configure-development-environment-for-php-development.md
-        - name: '步驟 2:建立 PHP 開發的 SQL 資料庫'
+        - name: 步驟 2︰建立供 PHP 開發之用的 SQL 資料庫
           href: ../connect/php/step-2-create-a-sql-database-for-php-development.md
-        - name: 步驟 3：使用 PHP 連線到 SQL Server 的概念證明
+        - name: 步驟 3︰使用 PHP 連線到 SQL Server 的概念證明
           href: ../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md
-        - name: 步驟 4：使用 PHP 彈性地連線到 SQL Server
+        - name: 步驟 4︰使用 PHP 彈性地連線到 SQL Server
           href: ../connect/php/step-4-connect-resiliently-to-sql-with-php.md
     - name: 概觀
       href: ../connect/php/overview-of-the-php-sql-driver.md
@@ -5485,15 +5487,15 @@
           items:
             - name: 如何：使用 Windows 驗證進行連接
               href: ../connect/php/how-to-connect-using-windows-authentication.md
-            - name: 如何：使用 SQL Server 驗證進行連線
+            - name: 'How to: Connect Using SQL Server Authentication'
               href: ../connect/php/how-to-connect-using-sql-server-authentication.md
             - name: 如何：使用 Azure Active Directory 驗證進行連線
               href: ../connect/php/azure-active-directory.md
-            - name: 如何：在指定的連接埠上連線
+            - name: 如何：在指定的通訊埠上連接
               href: ../connect/php/how-to-connect-on-a-specified-port.md
             - name: 連接共用
               href: ../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md
-            - name: 如何：停用 Multiple Active Result Set (MARS)
+            - name: 如何：停用 Multiple Active Resultsets (MARS)。
               href: ../connect/php/how-to-disable-multiple-active-resultsets-mars.md
             - name: 連線選項
               href: ../connect/php/connection-options.md
@@ -5517,7 +5519,7 @@
               items:
                 - name: 使用 SQLSRV 驅動程式支援資料流的資料類型
                   href: ../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md
-                - name: 如何：使用 SQLSRV 驅動程式以資料流形式擷取字元資料
+                - name: 如何：使用 SQLSRV 驅動程式以資料流的形式擷取字元資料
                   href: ../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md
                 - name: 如何：使用 SQLSRV 驅動程式以資料流形式擷取二進位資料
                   href: ../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md
@@ -5539,7 +5541,7 @@
                   href: ../connect/php/cursor-types-pdo-sqlsrv-driver.md
             - name: 如何：使用 SQLSRV 驅動程式以字串形式擷取日期和時間類型
               href: ../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md
-            - name: 如何：使用 PDO_SQLSRV 驅動程式以日期時間物件形式擷取日期和時間類型
+            - name: 如何：使用 PDO_SQLSRV 驅動程式以 PHP 日期時間物件形式擷取日期和時間類型
               href: ../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md
             - name: 將十進位字串及貨幣值格式化 (SQLSRV 驅動程式)
               href: ../connect/php/formatting-decimals-sqlsrv-driver.md
@@ -5550,7 +5552,7 @@
           items:
             - name: 如何：執行參數化查詢
               href: ../connect/php/how-to-perform-parameterized-queries.md
-            - name: 如何：以資料流形式傳送資料
+            - name: 如何：以資料流的形式傳送資料
               href: ../connect/php/how-to-send-data-as-a-stream.md
             - name: 如何：執行交易
               href: ../connect/php/how-to-perform-transactions.md
@@ -5561,13 +5563,13 @@
               href: ../connect/php/default-sql-server-data-types.md
             - name: 預設 PHP 資料類型
               href: ../connect/php/default-php-data-types.md
-            - name: 如何：在使用 SQLSRV 驅動程式時，指定 SQL Server 資料類型
+            - name: 如何：使用 SQLSRV 驅動程式指定 SQL Server 資料類型
               href: ../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md
             - name: 如何：指定 PHP 資料類型
               href: ../connect/php/how-to-specify-php-data-types.md
-            - name: 如何：使用內建的 UTF-8 支援傳送及擷取 UTF-8 資料
+            - name: 如何：使用內建的 UTF-8 支援傳送及接收 UTF-8 資料
               href: ../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md
-            - name: 如何：傳送及擷取 Linux 及 macOS 中的 ASCII 資料
+            - name: 如何：傳送及擷取 Linux 與 macOS 中的 ASCII 資料
               href: ../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md
         - name: 處理錯誤和警告
           href: ../connect/php/handling-errors-and-warnings.md
@@ -5728,30 +5730,30 @@
     - name: Python SQL 驅動程式 - pyodbc
       href: ../connect/python/pyodbc/python-sql-driver-pyodbc.md
       items:
-        - name: '步驟 1:設定 pyodbc Python 開發的開發環境'
+        - name: 步驟 1︰設定 pyodbc Python 開發的開發環境
           href: ../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md
-        - name: '步驟 2:建立 pyodbc Python 開發的 SQL 資料庫'
+        - name: 步驟 2︰建立用於 pyodbc Python 開發的 SQL 資料庫
           href: ../connect/python/pyodbc/step-2-create-a-sql-database-for-pyodbc-python-development.md
-        - name: 步驟 3：使用 pyodbc 連線到 SQL 的概念證明
+        - name: 步驟 3︰使用 pyodbc 連線到 SQL 的概念證明
           href: ../connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md
     - name: Python SQL 驅動程式 - pymssql
       href: ../connect/python/pymssql/python-sql-driver-pymssql.md
       items:
-        - name: '步驟 1:設定 pymssql Python 開發的開發環境'
+        - name: 步驟 1︰設定 pymssql Python 開發的開發環境
           href: ../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md
-        - name: '步驟 2:建立 pymssql Python 開發的 SQL 資料庫'
+        - name: 步驟 2︰建立 pymssql Python 開發的 SQL 資料庫
           href: ../connect/python/pymssql/step-2-create-a-sql-database-for-pymssql-python-development.md
-        - name: 步驟 3：使用 pymssql 連線到 SQL 的概念證明
+        - name: 步驟 3︰使用 pymssql 連線到 SQL 的概念證明
           href: ../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md
 - name: Ruby
   items:
     - name: Ruby Driver for SQL Server
       href: ../connect/ruby/ruby-driver-for-sql-server.md
-    - name: '步驟 1:設定 Ruby 開發的開發環境'
+    - name: 步驟 1︰設定 Ruby 開發的開發環境
       href: ../connect/ruby/step-1-configure-development-environment-for-ruby-development.md
-    - name: '步驟 2:建立 Ruby 開發的 SQL 資料庫'
+    - name: 步驟 2︰建立 Ruby 開發的 SQL 資料庫
       href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
-    - name: 步驟 3：使用 Ruby 連線到 SQL 的概念證明
+    - name: 步驟 3︰使用 Ruby 連線到 SQL 的概念證明
       href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
 - name: ADO
   items:
@@ -5894,7 +5896,7 @@
                   href: ../ado/guide/data/detecting-and-resolving-conflicts.md
                 - name: 中斷並重新連線資料錄集
                   href: ../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md
-                - name: 更新 JOINed 結果：Unique Table
+                - name: 更新聯結的結果：唯一資料表
                   href: ../ado/guide/data/updating-joined-results-unique-table.md
             - name: 交易處理
               href: ../ado/guide/data/transaction-processing.md
@@ -5979,7 +5981,7 @@
               href: ../ado/guide/data/ado-event-instantiation-vbscript.md
             - name: ADO 事件具現化：JScript
               href: ../ado/guide/data/ado-event-instantiation-jscript.md
-            - name: ADO 事件具現化：ADO 與 WFC
+            - name: ADO 事件具現化：ADO 和 WFC
               href: ../ado/guide/data/ado-event-instantiation-ado-and-wfc.md
     - name: 了解資料指標和鎖定
       href: ../ado/guide/data/understanding-cursors-and-locks.md
@@ -6075,9 +6077,9 @@
             - name: 網際網路發佈案例
               href: ../ado/guide/data/internet-publishing-scenario.md
               items:
-                - name: '步驟 1:設定 Visual Basic 專案'
+                - name: 步驟 1：設定 Visual Basic 專案
                   href: ../ado/guide/data/step-1-set-up-the-visual-basic-project.md
-                - name: '步驟 2:將 [主要] 清單方塊初始化'
+                - name: '步驟 2：初始化 [主要] 清單方塊'
                   href: ../ado/guide/data/step-2-initialize-the-main-list-box.md
                 - name: '步驟 3：填入 [欄位] 清單方塊'
                   href: ../ado/guide/data/step-3-populate-the-fields-list-box.md
@@ -6138,17 +6140,17 @@
     - name: RDS 教學課程
       href: ../ado/guide/remote-data-service/rds-tutorial.md
       items:
-        - name: '步驟 1:指定伺服器程式 (RDS 教學課程)'
+        - name: 步驟 1：指定伺服器程式 (RDS 教學課程)
           href: ../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md
-        - name: '步驟 2:叫用伺服器程式 (RDS 教學課程)'
+        - name: 步驟 2：叫用伺服器程式 (RDS 教學課程)
           href: ../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md
-        - name: 步驟 3：伺服器會取得資料錄集 (RDS 教學課程)
+        - name: 步驟 3：伺服器取得資料錄集 (RDS 教學課程)
           href: ../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md
-        - name: 步驟 4：伺服器會傳回資料錄集 (RDS 教學課程)
+        - name: 步驟 4：伺服器傳回資料錄集 (RDS 教學課程)
           href: ../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md
-        - name: 步驟 5：DataControl 會設為可用 (RDS 教學課程)
+        - name: 步驟 5：將 DataControl 設為可用 (RDS 教學課程)
           href: ../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md
-        - name: 步驟 6：步驟 6：變更會傳送到伺服器 (RDS 教學課程)
+        - name: 步驟 6：將變更傳送到伺服器 (RDS 教學課程)
           href: ../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md
         - name: RDS 教學課程 (VBScript)
           href: ../ado/guide/remote-data-service/rds-tutorial-vbscript.md
@@ -6253,7 +6255,7 @@
           href: ../ado/guide/appendixes/internet-explorer-error-codes.md
         - name: Internet Information Services 錯誤碼
           href: ../ado/guide/appendixes/internet-information-services-error-codes.md
-    - name: 附錄 C：使用 ADO MD 進行程式設計
+    - name: 附錄 C：使用 ADO 進行程式設計
       href: ../ado/guide/appendixes/appendix-c-programming-with-ado.md
       items:
         - name: ADO Java 類別包裝函式
