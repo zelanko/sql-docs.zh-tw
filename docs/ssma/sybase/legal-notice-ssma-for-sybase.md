@@ -1,5 +1,5 @@
 ---
-title: 法律注意事項 (SSMA for Sybase) |Microsoft Docs
+title: 法律注意事項（適用于 Sybase 的 SSMA） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,10 +10,10 @@ ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c65cc8fa51061ba9f8886bf81e0fa80d53781f91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028956"
 ---
 # <a name="legal-notice-ssma-for-sybase"></a>法律注意事項 (SSMA for Sybase)
@@ -34,7 +34,7 @@ SAP NetWeaver 是 SAP AG 在德國和其他數個國家/地區的註冊商標。
 所有其他商標為各所有人所有之商標。  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>SQL Server 支援及升級的文件集原則  
-SQL Server 文件集中的內容均經過充分測試才發佈。 產品文件-SQL Server 線上叢書 》、 讀我檔案、 已知的問題文件，以及知識庫文件-包含有關 SQL Server 特性與功能非常強大，足以供一般客戶使用的所有安全的內容。 此原則適用於所有 SQL Server 文件集，包括版本及 Service Pack 的讀我檔案；讀我檔案可視為《線上叢書》的延伸部分。  
+SQL Server 文件集中的內容均經過充分測試才發佈。 產品檔-SQL Server 線上叢書、讀我檔案、已知問題檔和知識庫文章-包含有關 SQL Server 特性和功能的內容，其健全程度足以供所有客戶一般使用。 此原則適用於所有 SQL Server 文件集，包括版本及 Service Pack 的讀我檔案；讀我檔案可視為《線上叢書》的延伸部分。  
   
 在某些情況下，某項特定功能未供客戶直接使用，因此未受記載。 除非 Microsoft 所發佈的 SQL Server 文件集也討論到某項功能，否則 Microsoft 客戶支援並不支援來自協力廠商叢書或網站的內容，並且不得用於產品資料庫或應用程式。  
   

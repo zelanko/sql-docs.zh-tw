@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1d3791cc5250442555dd9b090dda549fe2b9feec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524384"
 ---
 # <a name="delete-an-operator"></a>刪除操作員
-  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中移除操作員，因此他們不會再收到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示通知。  
+  本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]，在中移除操作員，使其不會再收到 Agent 警示通知。  
   
  **本主題內容**  
   
@@ -34,9 +34,9 @@ ms.locfileid: "62524384"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要使用下列項目刪除操作員：**  
+-   **若要使用下列內容刪除操作員：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -47,10 +47,11 @@ ms.locfileid: "62524384"
 ###  <a name="Restrictions"></a> 限制事項  
  當移除操作員時，也會移除操作員的所有相關通知。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
- **系統管理員 (sysadmin)** 固定伺服器角色的成員可以刪除操作員。  
+ 
+  **系統管理員 (sysadmin)** 固定伺服器角色的成員可以刪除操作員。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -62,9 +63,9 @@ ms.locfileid: "62524384"
   
 3.  按一下加號展開 **[操作員]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您要刪除的操作員，然後選取 [刪除]  。  
+4.  以滑鼠右鍵按一下您要刪除的操作員，然後選取 [刪除]****。  
   
-5.  在 **[刪除物件]** 對話方塊中，確定已選取正確的操作員，然後按一下 **[確定]** 。 如果希望另一個操作員可以收到會傳送給已刪除操作員的警示與作業，請核取 **[重新指派給]** ，然後在清單中選取操作員。  
+5.  在 **[刪除物件]** 對話方塊中，確定已選取正確的操作員，然後按一下 **[確定]**。 如果希望另一個操作員可以收到會傳送給已刪除操作員的警示與作業，請核取 **[重新指派給]** ，然後在清單中選取操作員。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -86,6 +87,6 @@ ms.locfileid: "62524384"
     GO  
     ```  
   
- 如需詳細資訊，請參閱 < [sp_delete_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-operator-transact-sql)。  
+ 如需詳細資訊，請參閱[sp_delete_operator &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-operator-transact-sql)。  
   
   

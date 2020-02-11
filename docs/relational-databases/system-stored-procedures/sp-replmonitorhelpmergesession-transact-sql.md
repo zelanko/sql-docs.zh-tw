@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorhelpmergesession (Transact-sql) |Microsoft Docs
+title: sp_replmonitorhelpmergesession （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1781e22e97870e7b9c26e7de397d77600ecbe1ce
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771242"
 ---
-# <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
+# <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   傳回有關某個給定複寫合併代理程式過去的工作階段，只要符合篩選準則的每個工作階段，都會傳回一個資料列。 這個預存程序用來監視合併式複寫，它執行於散發資料庫的散發者端，或是訂閱資料庫的訂閱者端。  
@@ -42,28 +42,28 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @agent_name = ] 'agent_name'`這是代理程式的名稱。 *agent_name*是**Nvarchar (100)** , 沒有預設值。  
+`[ @agent_name = ] 'agent_name'`這是代理程式的名稱。 *agent_name*是**Nvarchar （100）** ，沒有預設值。  
   
-`[ @hours = ] hours`這是傳回曆程代理程式會話資訊的時間範圍 (以小時為單位)。 *小時*是**int**, 它可以是下列其中一個範圍。  
+`[ @hours = ] hours`這是傳回曆程代理程式會話資訊的時間範圍（以小時為單位）。 *小時*是**int**，它可以是下列其中一個範圍。  
   
 |值|描述|  
 |-----------|-----------------|  
 |< **0**|傳回有關過去代理程式的執行資訊，最多可傳回 100 筆的執行資訊。|  
-|**0** (預設)|傳回所有過去代理程式的執行資訊。|  
+|**0** （預設值）|傳回所有過去代理程式的執行資訊。|  
 |> **0**|傳回過去*小時*數中發生之代理程式執行的資訊。|  
   
-`[ @session_type = ] session_type`根據會話結束結果來篩選結果集。 *session_type*是**int**, 而且可以是下列其中一個值。  
+`[ @session_type = ] session_type`根據會話結束結果來篩選結果集。 *session_type*是**int**，而且可以是下列其中一個值。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**1** (預設值)|結果為重試或成功的代理程式工作階段。|  
+|**1** （預設值）|結果為重試或成功的代理程式工作階段。|  
 |**0**|結果為失敗的代理程式工作階段。|  
   
-`[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**, 預設值是 Null。 在訂閱者端執行**sp_replmonitorhelpmergesession**時, 會使用這個參數。  
+`[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**，預設值是 Null。 在訂閱者端執行**sp_replmonitorhelpmergesession**時，會使用這個參數。  
   
-`[ @publisher_db = ] 'publisher_db'`這是發行集資料庫的名稱。 *publisher_db*是**sysname**, 預設值是 Null。 在訂閱者端執行**sp_replmonitorhelpmergesession**時, 會使用這個參數。  
+`[ @publisher_db = ] 'publisher_db'`這是發行集資料庫的名稱。 *publisher_db*是**sysname**，預設值是 Null。 在訂閱者端執行**sp_replmonitorhelpmergesession**時，會使用這個參數。  
   
-`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**, 預設值是 Null。 在訂閱者端執行**sp_replmonitorhelpmergesession**時, 會使用這個參數。  
+`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**，預設值是 Null。 在訂閱者端執行**sp_replmonitorhelpmergesession**時，會使用這個參數。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -77,22 +77,22 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**UploadedCommands**|**int**|代理程式工作階段期間所上傳的命令數。|  
 |**DownloadedCommands**|**int**|代理程式工作階段期間所下載的命令數。|  
 |**ErrorMessages**|**int**|代理程式工作階段期間所產生的錯誤訊息數。|  
-|**ErrorID**|**int**|所發生之錯誤的識別碼|  
+|**錯誤識別碼**|**int**|所發生之錯誤的識別碼|  
 |**PercentageDone**|**decimal**|使用中的工作階段已傳遞的總變更估計百分比。|  
 |**TimeRemaining**|**int**|使用中的工作階段其餘的估計秒數。|  
 |**CurrentPhase**|**int**|這是使用中工作階段的目前階段，它可以是下列項目之一。<br /><br /> **1** = 上傳<br /><br /> **2** = 下載|  
-|**LastMessage**|**nvarchar(500)**|這是在工作階段期間，由合併代理程式所記錄的最後一則訊息。|  
+|**LastMessage**|**Nvarchar （500）**|這是在工作階段期間，由合併代理程式所記錄的最後一則訊息。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** (成功) 或**1** (失敗)  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
  **sp_replmonitorhelpmergesession**是用來監視合併式複寫。  
   
- 在訂閱者上執行時, **sp_replmonitorhelpmergesession**只會傳回最後五個合併代理程式會話的資訊。  
+ 在訂閱者上執行時， **sp_replmonitorhelpmergesession**只會傳回最後五個合併代理程式會話的資訊。  
   
-## <a name="permissions"></a>Permissions  
- 只有「散發者」端或「訂閱者」端之訂閱資料庫上的**db_owner**或**replmonitor**固定資料庫角色的成員, 才能夠執行**sp_replmonitorhelpmergesession**。  
+## <a name="permissions"></a>權限  
+ 只有「散發者」端或「訂閱者」端之訂閱資料庫上的**db_owner**或**replmonitor**固定資料庫角色的成員，才能夠執行**sp_replmonitorhelpmergesession**。  
   
 ## <a name="see-also"></a>另請參閱  
  [以程式設計方式監視複寫](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

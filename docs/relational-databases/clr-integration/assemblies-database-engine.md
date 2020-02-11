@@ -1,5 +1,5 @@
 ---
-title: 組件 (Database Engine) |Microsoft Docs
+title: 元件（資料庫引擎） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,27 +14,28 @@ ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ed494e55967bb02680f0397d3b651a59fd2d3bbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028045"
 ---
 # <a name="assemblies-database-engine"></a>組件 (Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本節中的主題提供可協助您了解、設計和實作組件的資訊。  
   
- 組件所使用的執行個體中的 DLL 檔案[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]部署函式、 預存程序、 觸發程序、 使用者定義彙總和使用者定義的型別所撰寫的所裝載的 managed 程式碼語言之一[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]通用語言執行平台 (CLR)，而不是在[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+ 元件是在實例中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用來部署函式、預存程式、觸發程式、使用者定義匯總和使用者定義型別（以[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime （CLR）所裝載的其中一個 managed 程式碼語言撰寫），而不是在中[!INCLUDE[tsql](../../includes/tsql-md.md)]的 DLL 檔案。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的組件是會參考 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime 中所建立 Managed 應用程式模組 (.dll 檔案) 的物件。 組件包含類別中繼資料及 Managed 程式碼。 將組件上傳到 SQL Server 的執行個體是建立下列任何一個資料庫物件的首要步驟：  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的組件是會參考 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime 中所建立 Managed 應用程式模組 (.dll 檔案) 的物件。 組件包含類別中繼資料及 Managed 程式碼。 將組件上傳到 SQL Server 的執行個體是建立下列任何一個資料庫物件的首要步驟：  
   
--   CLR 函數。 如需詳細資訊，請參閱 <<c0> [ 建立 CLR 函數](../../relational-databases/user-defined-functions/create-clr-functions.md)。  
+-   CLR 函數。 如需詳細資訊，請參閱[建立 CLR 函數](../../relational-databases/user-defined-functions/create-clr-functions.md)。  
   
--   CLR 預存程序。 如需詳細資訊，請參閱 < [CLR 預存程序](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)。  
+-   CLR 預存程序。 如需詳細資訊，請參閱[CLR 預存程式](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)。  
   
--   CLR 觸發程序。 如需詳細資訊，請參閱 <<c0> [ 建立 CLR 觸發程序](../../relational-databases/triggers/create-clr-triggers.md)。  
+-   CLR 觸發程序。 如需詳細資訊，請參閱[建立 CLR 觸發](../../relational-databases/triggers/create-clr-triggers.md)程式。  
   
--   使用者自訂彙總函式。 如需詳細資訊，請參閱 <<c0> [ 建立使用者定義彙總](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)。  
+-   使用者自訂彙總函式。 如需詳細資訊，請參閱[建立使用者定義匯總](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)。  
   
 -   使用者定義型別。 如需詳細資訊，請參閱[使用使用者定義型別](../../relational-databases/native-client/features/using-user-defined-types.md)。  
   

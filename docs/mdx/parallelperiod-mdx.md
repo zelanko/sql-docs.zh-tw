@@ -1,5 +1,5 @@
 ---
-title: ParallelPeriod (MDX) |Microsoft Docs
+title: ParallelPeriod （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b4122c13a5371cc0ffe1c5c6235ad750e7fdadad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020706"
 ---
 # <a name="parallelperiod-mdx"></a>ParallelPeriod (MDX)
@@ -31,26 +31,26 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
  *Level_Expression*  
  傳回層級的有效多維度運算式 (MDX) 運算式。  
   
- *Index*  
+ *指數*  
  指定落後的平行週期數目之有效數值運算式。  
   
  *Member_Expression*  
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 雖然類似[Cousin](../mdx/cousin-mdx.md)函式**ParallelPeriod**函式更密切的時間序列。 **ParallelPeriod**函式會指定成員的祖系採用指定層級、 尋找上階的同層級，與指定的延遲，和最後會傳回指定成員之間的平行週期同層級子系。  
+ 雖然與[Cousin](../mdx/cousin-mdx.md)函式類似，但**ParallelPeriod**函數與時間序列更密切相關。 **ParallelPeriod**函數會在指定的層級取得指定成員的上階、尋找具有指定之延遲的上階的兄弟，最後在兄弟的子系中傳回指定成員的平行期間。  
   
- **ParallelPeriod**函式具有下列的預設值：  
+ **ParallelPeriod**函數具有下列預設值：  
   
--   如果指定層級運算式或成員運算式都不是，預設成員值是一種之第一個維度的第一個階層的目前成員*時間*量值群組中。  
+-   如果沒有指定層級運算式或成員運算式，預設成員值就是在量值群組中具有*時間*類型之第一個維度上第一個階層的目前成員。  
   
--   如果指定層級運算式，但沒有指定成員運算式，預設成員值是*Level_Expression*。**Hierarchy.CurrentMember**。  
+-   如果指定了層級運算式，但未指定成員運算式，則會*Level_Expression*預設成員值。**CurrentMember**。  
   
 -   預設索引值為 1。  
   
 -   預設層級是指定成員之父系的層級。  
   
- **ParallelPeriod**函式相當於以下的 MDX 陳述式：  
+ **ParallelPeriod**函數相當於下列 MDX 語句：  
   
  `Cousin(Member_Expression, Ancestor(Member_Expression, Level_Expression) .Lag(Numeric_Expression))`  
   
@@ -76,6 +76,6 @@ SELECT ParallelPeriod ([Date].[Calendar].[Calendar Semester]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

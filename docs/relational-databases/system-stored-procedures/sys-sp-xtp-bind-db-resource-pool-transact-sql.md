@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_bind_db_resource_pool & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.databases sp_xtp_bind_db_resource_pool （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -21,10 +21,10 @@ ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: af0e10f23d376c96fd7be0a75cf713dd76a2c149
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041014"
 ---
 # <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
@@ -57,7 +57,7 @@ sys.sp_xtp_bind_db_resource_pool 'database_name', 'resource_pool_name'
   
  **資料庫不存在**  
  Database_name 必須參考現有的資料庫。 如果指定之識別碼的資料庫不存在，就會傳回下列訊息：   
-*資料庫識別碼 %d 不存在。請這個繫結，使用有效的資料庫識別碼。*  
+*資料庫識別碼% d 不存在。 請為此系結使用有效的資料庫識別碼。*  
   
 ```  
 Msg 911, Level 16, State 18, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
@@ -65,8 +65,8 @@ Database 'Hekaton_DB213' does not exist. Make sure that the name is entered corr
 ```  
   
 **資料庫是系統資料庫**  
- 無法在系統資料庫中建立 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資料表。  因此，針對這類資料庫建立 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體的繫結是無效的作法。  系統會傳回下列錯誤：  
-*Database_name %s 指的是系統資料庫。資源集區可能只繫結至使用者資料庫。*  
+ 無法在系統資料庫中建立 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資料表。  因此，針對這類資料庫建立 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體的繫結是無效的作法。  傳回下列錯誤：  
+*Database_name% s 指的是系統資料庫。 資源集區只能系結至使用者資料庫。*  
   
 ```  
 Msg 41371, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
@@ -75,7 +75,7 @@ Binding to a resource pool is not supported for system database 'master'. This o
   
 **資源集區不存在**  
  resource_pool_name 所識別的資源集區必須在執行 `sp_xtp_bind_db_resource_pool` 之前存在。  如果指定之識別碼的集區不存在，就會傳回下列錯誤：  
-*資源集區 %s 不存在。請輸入有效的資源集區名稱。*  
+*資源集區% s 不存在。 請輸入有效的資源集區名稱。*  
   
 ```  
 Msg 41370, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
@@ -83,17 +83,17 @@ Resource pool 'Pool_Hekaton' does not exist or resource governor has not been re
 ```  
   
 **Pool_name 參考保留的系統集區**  
- 「 內部 」 和 「 預設 」 集區名稱被保留給系統集區。  將資料庫明確繫結至其中一個集區是無效的作法。  如果輸入系統集區名稱，就會傳回下列錯誤：  
-*資源集區 %s 是系統資源集區。系統資源集區可能未明確繫結至資料庫，使用此程序。*  
+ 集區名稱「內部」和「預設」是保留給系統池。  將資料庫明確繫結至其中一個集區是無效的作法。  如果輸入系統集區名稱，就會傳回下列錯誤：  
+*資源集區% s 是系統資源集區。 系統資源集區可能無法使用此程式明確地系結至資料庫。*  
   
 ```  
 Msg 41373, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
 Database 'Hekaton_DB' cannot be explicitly bound to the resource pool 'internal'. A database can only be bound only to a user resource pool.  
 ```  
   
-**資料庫已繫結至另一個資源集區**  
- 一個資料庫在任何時候都只能繫結至一個資源集區。 您必須先明確移除資源集區的資料庫繫結，然後才能將它們繫結至其他集區。 請參閱[sys.sp_xtp_bind_db_resource_pool &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)。  
-*資料庫 %s 已經繫結至資源集區 %s。您可以建立新的繫結之前，您必須解除連結。*  
+**資料庫已經繫結至另一個資源集區**  
+ 一個資料庫在任何時候都只能繫結至一個資源集區。 您必須先明確移除資源集區的資料庫繫結，然後才能將它們繫結至其他集區。 請參閱[sp_xtp_unbind_db_resource_pool &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)。  
+*資料庫% s 已經系結至資源集區% s。 您必須先解除系結，才能建立新的系結。*  
   
 ```  
 Msg 41372, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 54  
@@ -102,9 +102,9 @@ Database 'Hekaton_DB' is currently bound to a resource pool. A database must be 
   
  成功時，`sp_xtp_bind_db_resource_pool` 會傳回下列訊息。  
   
-**成功的繫結**  
+**成功繫結**  
  成功時，此函數會傳回下列成功訊息，並記錄在 SQL ERRORLOG 中  
-*使用識別碼 %d 資料庫與資源集區識別碼 %d 之間已成功建立資源繫結。*  
+*已經成功地在識別碼為 %d 的資料庫與識別碼為 %d 的資源集區之間建立資源繫結。*  
   
 ## <a name="examples"></a>範例  
 A.  下列程式碼範例會將 Hekaton_DB 資料庫繫結至 Pool_Hekaton 資源集區。  
@@ -115,7 +115,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  繫結會在下一次資料庫重新上線時生效。  
  
- B. 上述範例，其中包含一些基本檢查的擴充的範例。  執行下列命令，[!INCLUDE[tsql](../../includes/tsql-md.md)]中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ B. 上述範例的擴充範例，其中包含一些基本的檢查。  在中執行[!INCLUDE[tsql](../../includes/tsql-md.md)]下列[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
@@ -147,12 +147,13 @@ END
   
 ## <a name="requirements"></a>需求  
   
--   `database_name` 所指定的資料庫與 `resource_pool_name` 所指定的資源集區都必須在繫結之前存在。  
+-   
+  `database_name` 所指定的資料庫與 `resource_pool_name` 所指定的資源集區都必須在繫結之前存在。  
   
 -   需要 CONTROL SERVER 權限。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫並繫結至資源集區的指引，請參閱](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [sys.sp_xtp_bind_db_resource_pool &#40;-SQL&AMP;&#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
+ [sp_xtp_unbind_db_resource_pool &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

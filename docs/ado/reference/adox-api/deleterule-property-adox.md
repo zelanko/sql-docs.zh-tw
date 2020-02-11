@@ -1,5 +1,5 @@
 ---
-title: DeleteRule 屬性 (ADOX) |Microsoft Docs
+title: DeleteRule 屬性（ADOX） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,22 +20,22 @@ ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1e1e0b9a5cea798f9f8b6cc53404378d370276d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966419"
 ---
 # <a name="deleterule-property-adox"></a>DeleteRule 屬性 (ADOX)
-表示刪除主索引鍵時，執行此動作。  
+指出刪除主要金鑰時所執行的動作。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定，並傳回**長**值，可以是其中一個[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)常數。 預設值是**adRINone**。  
+ 設定並傳回可以是其中一個[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)常數的**Long**值。 預設值為**adRINone**。  
   
 ## <a name="remarks"></a>備註  
- 這個屬性是唯讀[金鑰](../../../ado/reference/adox-api/key-object-adox.md)已經附加到集合的物件。  
+ 這個屬性在已附加至集合的索引[鍵](../../../ado/reference/adox-api/key-object-adox.md)物件上是唯讀的。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Key 物件 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
 ## <a name="see-also"></a>另請參閱  

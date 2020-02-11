@@ -16,16 +16,16 @@ ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3409376b5fd2f71ecff8d510d17ce3771e63fa73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990692"
 ---
 # <a name="numeric-literals"></a>數值常值
-數值資料值會儲存在字元字串時，會使用數值常值。 轉換成 SQL_C_CHAR 字串，數值的 SQL 資料或數值的 C 資料轉換為 SQL_CHAR 或 SQL_VARCHAR 字串、 數值常值語法用來指定目標中儲存的內容。 轉換的數字儲存為 SQL_C_CHAR 字串為數值的 SQL 資料或以數字的 C 資料 SQL_CHAR 字串的形式儲存的數字，此語法用來驗證來源中儲存的內容。  
+數值常值是用來儲存在字元字串中的數值資料。 若要將數值 SQL 資料轉換成 SQL_C_CHAR 字串，或將數值 C 資料轉換成 SQL_CHAR 或 SQL_VARCHAR 字串，則會使用數值常值語法來指定要儲存在目標中的內容。 若要將儲存為 SQL_C_CHAR 字串的數值轉換為數值 SQL 資料，或將儲存為 SQL_CHAR 字串的數值轉換成數位 C 資料，則會使用此語法來驗證來源中儲存的內容。  
   
- 數值常值應該符合區段中定義的語法[數值常值語法](../../../odbc/reference/appendixes/numeric-literal-syntax.md)附錄 c:SQL 文法。  
+ 數值常值應符合附錄 C： SQL 文法中的「[數值常值語法](../../../odbc/reference/appendixes/numeric-literal-syntax.md)」一節中所定義的語法。  
   
  此章節包含下列主題。  
   

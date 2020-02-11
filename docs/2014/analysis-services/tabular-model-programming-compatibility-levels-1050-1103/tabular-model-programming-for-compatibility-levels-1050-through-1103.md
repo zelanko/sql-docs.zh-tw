@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2055602dae01e71ac320f5838181c8d8b08534a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757636"
 ---
 # <a name="tabular-model-programming"></a>表格式模型程式設計
@@ -25,16 +25,16 @@ ms.locfileid: "62757636"
  本節提供有關如何以程式設計方式使用表格式模型實體及其屬性的詳細資訊。  
   
 ## <a name="in-this-section"></a>本節內容  
- [商業智慧的 CSDL 註解 &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+ [商業智慧 &#40;CSDLBI&#41;的 CSDL 注釋](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [了解表格式物件模型](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [CSDL 之 BI 註解的技術參考](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
+ [適用于 CSDL 之 BI 批註的技術參考](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
   
  [IMDEmbedded 介面](imdembeddeddata-interface.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [表格式模型化&#40;SSAS 表格式&#41;](../tabular-models/tabular-models-ssas.md)   
- [表格式模型設計工具&#40;SSAS 表格式&#41;](../tabular-model-designer-ssas-tabular.md)  
+ [&#40;SSAS 表格式&#41;的表格式模型](../tabular-models/tabular-models-ssas.md)   
+ [表格式模型設計師 &#40;SSAS 表格式&#41;](../tabular-model-designer-ssas-tabular.md)  
   
   

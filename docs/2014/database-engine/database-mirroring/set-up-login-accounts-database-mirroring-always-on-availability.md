@@ -1,5 +1,5 @@
 ---
-title: 設定登入帳戶，資料庫鏡像或 AlwaysOn 可用性群組 (SQL Server) |Microsoft Docs
+title: 設定資料庫鏡像或 AlwaysOn 可用性群組（SQL Server）的登入帳戶 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fd397349bc3fa3ed7f69e9e1293415ea96fc75d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754315"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>設定資料庫鏡像或 AlwaysOn 可用性群組的登入帳戶 (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "62754315"
  如果兩個伺服器執行個體是以不同的帳戶執行，系統管理員必須使用 CREATE LOGIN [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，為每個伺服器執行個體之遠端執行個體的啟動服務帳戶建立登入。 如需詳細資訊，請參閱 [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)。  
   
 > [!IMPORTANT]  
->  如果您是在非網域帳戶之下執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則必須使用憑證。 如需詳細資訊，請參閱本主題稍後的 [使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
+>  如果您是在非網域帳戶之下執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則必須使用憑證。 如需詳細資訊，請參閱[使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
   
  例如，若要讓伺服器執行個體 sqlA (在 loginA 之下執行) 連接到伺服器執行個體 sqlB (在 loginB 之下執行)，則 loginA 必須在 sqlB 中，而 loginB 必須在 sqlA 中。 此外，若資料庫鏡像工作階段中包含見證伺服器執行個體 (sqlC)，而且其中的三個伺服器執行個體都是在不同的網域帳戶下執行，則必須建立下列登入：  
   
@@ -63,6 +63,6 @@ ms.locfileid: "62754315"
 ## <a name="see-also"></a>另請參閱  
  [資料庫鏡像端點 &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [為資料庫鏡像組態進行疑難排解 &#40;SQL Server&#41; &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [疑難排解 AlwaysOn 可用性群組組態&#40;SQL Server&#41;](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [針對 AlwaysOn 可用性群組 Configuration &#40;SQL Server&#41;進行疑難排解](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

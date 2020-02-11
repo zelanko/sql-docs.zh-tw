@@ -1,5 +1,5 @@
 ---
-title: IpAddressName 屬性 （ServerNetworkProtocolIPAddress 類別） |Microsoft Docs
+title: IpAddressName 屬性（ServerNetworkProtocolIPAddress 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8ca6b4b0c4449880a407e27df9becf340c84a2eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643066"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolipaddress-class"></a>IpAddressName 屬性 (ServerNetworkProtocolIPAddress 類別)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
- A [ServerNetworkProtocolIPAdress 類別](servernetworkprotocolipaddress-class.md)物件，表示執行個體上的網路通訊協定的 IP 位址[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ *目標*  
+ 代表實例上網路通訊協定之[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]IP 位址的[ServerNetworkProtocolIPAdress 類別](servernetworkprotocolipaddress-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定此 IP 位址之名稱的字串值。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定伺服器網路通訊協定和網路程式庫](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [設定伺服器網路通訊協定與網路程式庫](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

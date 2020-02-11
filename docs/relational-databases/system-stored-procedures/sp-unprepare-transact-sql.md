@@ -1,5 +1,5 @@
 ---
-title: sp_unprepare (TRANSACT-SQL) |Microsoft Docs
+title: sp_unprepare （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee74778b48476328b21c7bdfe4d4e5dd895d8204
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68027663"
 ---
-# <a name="spunprepare-transact-sql"></a>sp_unprepare (Transact-SQL)
+# <a name="sp_unprepare-transact-sql"></a>sp_unprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  捨棄 sp_prepare 預存程序所建立的執行計畫。 sp_unprepare 的叫用方式指定 ID = 15 中的表格式資料流 (TDS) 封包。  
+  捨棄 sp_prepare 預存程式所建立的執行計畫。 sp_unprepare 的叫用方式是在表格式資料流程（TDS）封包中指定 ID = 15。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,8 +39,8 @@ sp_unprepare handle
 ```  
   
 ## <a name="arguments"></a>引數  
- *控制代碼*  
- 已*處理*sp_prepare 所傳回的值。  
+ *圖*  
+ 這是 sp_prepare 所傳回的*控制碼*值。  
   
 ## <a name="examples"></a>範例  
  下列範例會準備、執行及取消準備單一陳述式。  
@@ -67,5 +67,5 @@ EXEC sp_unprepare @P1;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
+ [sp_prepare &#40;交易 SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
 

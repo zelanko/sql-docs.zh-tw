@@ -1,5 +1,5 @@
 ---
-title: 或者 (DMX) |Microsoft Docs
+title: 或（DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 76b1f8ac9a5f7ad584f42110f2c3b22e5c1918ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008139"
 ---
 # <a name="or-dmx"></a>OR (DMX)
@@ -38,7 +38,7 @@ Expression1 OR Expression2
  一個布林值，如果任一個引數或兩個引數都評估為 TRUE，就會傳回 TRUE；否則為 FALSE。  
   
 ## <a name="remarks"></a>備註  
- 運算子執行邏輯分離之前，兩個引數都會當成布林值處理 (0 為 FALSE；否則為 TRUE)。 如果任一個引數或兩個引數都評估為 TRUE，則運算子會傳回 TRUE。 如果*Expression1*評估為 TRUE 並*Expression2*評估為 FALSE，則運算子會傳回 TRUE。  
+ 運算子執行邏輯分離之前，兩個引數都會當成布林值處理 (0 為 FALSE；否則為 TRUE)。 如果任一個引數或兩個引數都評估為 TRUE，則運算子會傳回 TRUE。 如果*運算式*的評估結果為 TRUE，且*運算式*2 判斷值為 FALSE，則運算子會傳回 TRUE。  
   
  下表說明如何執行邏輯分離。  
   
@@ -50,8 +50,8 @@ Expression1 OR Expression2
 |FALSE|FALSE|FALSE|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [邏輯運算子&#40;DMX&#41;](../dmx/operators-logical.md)   
- [運算子&#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [DMX&#41; Operator Reference &#40;的資料採礦延伸模組](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [&#40;DMX&#41;的邏輯運算子](../dmx/operators-logical.md)   
+ [DMX&#41;&#40;的運算子](../dmx/operators-dmx.md)  
   
   

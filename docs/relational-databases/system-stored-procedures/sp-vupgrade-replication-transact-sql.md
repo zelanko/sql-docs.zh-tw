@@ -1,5 +1,5 @@
 ---
-title: sp_vupgrade_replication (Transact-sql) |Microsoft Docs
+title: sp_vupgrade_replication （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f6b2c736087b2f860bf8419264904e8669ba8951
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771553"
 ---
-# <a name="spvupgradereplication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
+# <a name="sp_vupgrade_replication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   當升級複寫伺服器時，由安裝程式啟動。 依照支援在目前產品層級進行複寫所需，來升級結構描述和系統資料。 在系統和使用者資料庫中，建立新的複寫系統物件。 這個預存程序執行於進行複寫升級的機器。  
@@ -41,12 +41,12 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @login = ] 'login'`這是在散發資料庫中建立新的系統物件時, 所要使用的系統管理員登入。 *login* 是預設值為 NULL 的 **sysname**。 如果*security_mode*設定為**1**(也就是 Windows 驗證), 則不需要這個參數。  
+`[ @login = ] 'login'`這是在散發資料庫中建立新的系統物件時，所要使用的系統管理員登入。 *login*是**sysname**，預設值是 Null。 如果*security_mode*設定為**1**（也就是 Windows 驗證），則不需要這個參數。  
   
 > [!NOTE]  
 >  當您升級到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本時，會忽略這個參數。  
   
-`[ @password = ] 'password'`這是在散發資料庫中建立新的系統物件時, 所要使用的系統管理員密碼。 *password*是**sysname**, 預設值是 **' '** (空字串)。 如果*security_mode*設定為**1**(也就是 Windows 驗證), 則不需要這個參數。  
+`[ @password = ] 'password'`這是在散發資料庫中建立新的系統物件時，所要使用的系統管理員密碼。 *password*是**sysname**，預設值是 **' '** （空字串）。 如果*security_mode*設定為**1**（也就是 Windows 驗證），則不需要這個參數。  
   
 > [!NOTE]  
 >  當您升級到 SQL [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本時，會忽略這個參數。  
@@ -57,19 +57,19 @@ sp_vupgrade_replication [ [@login=] 'login' ]
   
 `[ @force_remove = ] 'force_removal'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @security_mode = ] 'security_mode'`這是在散發資料庫中建立新的系統物件時, 所要使用的登入安全性模式。 *security_mode*是**bit** , 預設值是**0**。 如果是 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , 則會使用驗證。 如果是**1**, 則會使用 Windows 驗證。  
+`[ @security_mode = ] 'security_mode'`這是在散發資料庫中建立新的系統物件時，所要使用的登入安全性模式。 *security_mode*是**bit** ，預設值是**0**。 如果**** 是 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則會使用驗證。 如果是**1**，則會使用 Windows 驗證。  
   
 > [!NOTE]  
 >  當您升級到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本時，會忽略這個參數。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** (成功) 或**1** (失敗)  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- 升級所有類型的複寫時, 會使用**sp_vupgrade_replication** 。  
+ 升級所有類型的複寫時，會使用**sp_vupgrade_replication** 。  
   
-## <a name="permissions"></a>Permissions  
- 只有**系統管理員 (sysadmin** ) 固定伺服器角色的成員, 才能夠執行**sp_vupgrade_replication**。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_vupgrade_replication**。  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

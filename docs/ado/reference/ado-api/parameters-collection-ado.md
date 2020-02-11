@@ -1,5 +1,5 @@
 ---
-title: 參數集合 (ADO) |Microsoft Docs
+title: Parameters 集合（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,31 +18,31 @@ ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e062c67f0dedf55d63a076725b46d4405918741
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917699"
 ---
 # <a name="parameters-collection-ado"></a>Parameters 集合 (ADO)
-包含所有[參數](../../../ado/reference/ado-api/parameter-object.md)的物件[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  
+包含[Command](../../../ado/reference/ado-api/command-object-ado.md)物件的所有[參數](../../../ado/reference/ado-api/parameter-object.md)物件。  
   
 ## <a name="remarks"></a>備註  
- A**命令**物件具有**參數**組成的集合**參數**物件。  
+ **命令**物件具有由**參數**物件所組成的**Parameters**集合。  
   
- 使用[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)方法**命令**物件的**參數**集合擷取提供者的預存程序或參數化的查詢的參數資訊中指定**命令**物件。 某些提供者不支援預存程序呼叫或參數化的查詢;呼叫**重新整理**方法**參數**集合時使用這類提供者會傳回錯誤。  
+ 在**命令**物件的**Parameters**集合上使用[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法，會抓取**命令**物件中指定之預存程式或參數化查詢的提供者參數資訊。 有些提供者不支援預存程序呼叫或參數化查詢;使用這類提供者時，在**參數**集合上呼叫**Refresh**方法將會傳回錯誤。  
   
- 如果您還沒有定義您自己**參數**物件，並存取**參數**集合，然後再呼叫**重新整理**方法，ADO 會自動會呼叫方法並填入您的集合。  
+ 如果您尚未定義自己的**參數**物件，並在呼叫**Refresh**方法之前存取**Parameters**集合，ADO 會自動呼叫方法並為您填入集合。  
   
- 您可以呼叫提供者來改善效能，如果您知道參數的屬性相關聯的預存程序或參數化查詢您想要呼叫降至最低。 使用  [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)方法來建立**參數**具有適當的屬性設定和使用物件[附加](../../../ado/reference/ado-api/append-method-ado.md)方法，將其新增至**參數**集合。 這可讓您設定和傳回參數值，而不需要呼叫提供者之參數資訊。 如果您要寫入未提供參數資訊的提供者，您必須手動將填入**參數**使用此方法可以完全使用參數的集合。 使用[刪除](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)方法來移除**參數**物件**參數**如有必要的集合。  
+ 如果您知道與您想要呼叫的預存程式或參數化查詢相關聯的參數屬性，則可以將對提供者的呼叫降至最低以改善效能。 使用[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)方法來建立具有適當屬性設定的**參數**物件，並使用[Append](../../../ado/reference/ado-api/append-method-ado.md)方法將它們新增至**Parameters**集合。 這可讓您設定和傳回參數值，而不需要為參數資訊呼叫提供者。 如果您要寫入未提供參數資訊的提供者，您必須使用這個方法來手動填入**參數**集合，以便能夠使用參數。 如有需要，請使用[Delete](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)方法從**Parameters**集合中移除**參數**物件。  
   
- 中的物件**參數**的集合**Recordset**移超出範圍 （因此變成無法使用） 時**資料錄集**已關閉。  
+ 當**記錄集**已關閉時，**記錄集**的**Parameters**集合中的物件會移出範圍（因此變成無法使用）。  
   
- 呼叫預存程序時**命令**，擷取預存程序的傳回值/輸出參數，如下所示：  
+ 使用**命令**呼叫預存程式時，會抓取預存程式的傳回值/輸出參數，如下所示：  
   
-1.  呼叫預存程序，沒有任何參數，當**重新整理**方法**參數**呼叫之前，應該呼叫集合**Execute**方法**命令**物件。  
+1.  呼叫沒有參數的預存程式時，應該先呼叫**parameters**集合上的**Refresh**方法，再呼叫**Command**物件上的**Execute**方法。  
   
-2.  當呼叫預存程序使用參數和明確附加的參數**參數**集合**附加**，傳回的值/輸出參數應該附加至**參數**集合。 傳回的值必須先附加至**參數**集合。 使用**Append**新增到其他的參數**參數**定義順序的集合。 例如，預存程序 SPWithParam 有兩個參數。 第一個參數， *InParam*，並輸入的參數定義為 adVarChar (20)，第二個參數， *OutParam*，是一個 output 參數，定義為 adVarChar (20)。 您可以擷取傳回值/輸出參數為下列程式碼。  
+2.  呼叫具有參數的預存程式，並使用**Append**將參數明確附加至**parameters**集合時，傳回值/輸出參數應附加至**parameters**集合。 傳回值必須先附加至**Parameters**集合。 使用 [**附加**]，依定義的順序，將其他參數新增至**parameters**集合。 例如，預存程式 SPWithParam 有兩個參數。 第一個參數*InParam*是定義為 adVarChar （20）的輸入參數，而第二個參數*OutParam*是定義為 adVarChar （20）的輸出參數。 您可以使用下列程式碼來抓取傳回值/輸出參數。  
   
     ```vb
     ' Open Connection Conn  
@@ -63,7 +63,7 @@ ms.locfileid: "67917699"
   
     ```  
   
-3.  當呼叫預存程序使用參數和設定的參數，藉由呼叫**項目**方法**參數**集合，預存程序的傳回值/輸出參數可以從擷取**參數**集合。 例如，預存程序 SPWithParam 有兩個參數。 第一個參數， *InParam*，並輸入的參數定義為 adVarChar (20)，第二個參數， *OutParam*，是一個 output 參數，定義為 adVarChar (20)。 您可以擷取傳回值/輸出參數為下列程式碼。  
+3.  當呼叫具有參數的預存程式，以及在**參數**集合上呼叫**Item**方法來設定參數時，可以從**parameters**集合中抓取預存程式的傳回值/輸出參數。 例如，預存程式 SPWithParam 有兩個參數。 第一個參數*InParam*是定義為 adVarChar （20）的輸入參數，而第二個參數*OutParam*是定義為 adVarChar （20）的輸出參數。 您可以使用下列程式碼來抓取傳回值/輸出參數。  
   
     ```vb
     ' Open Connection Conn  
@@ -82,9 +82,9 @@ ms.locfileid: "67917699"
   
  本章節包含下列主題。  
   
--   [Parameters 集合屬性、 方法和事件](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
+-   [Parameters 集合屬性、方法和事件](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Append 方法 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter 方法 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
+ [Append 方法（ADO）](../../../ado/reference/ado-api/append-method-ado.md)   
+ [CreateParameter 方法（ADO）](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)

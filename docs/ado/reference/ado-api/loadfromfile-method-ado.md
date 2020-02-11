@@ -1,5 +1,5 @@
 ---
-title: LoadFromFile 方法 (ADO) |Microsoft Docs
+title: LoadFromFile 方法（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ce90b13a677246fb64462fbe691eb9e3efaa3c7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918274"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile 方法 (ADO)
-將現有檔案的內容載入[Stream](../../../ado/reference/ado-api/stream-object-ado.md)。  
+將現有檔案的內容載入[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,19 +33,19 @@ Stream.LoadFromFileFileName
 ```  
   
 #### <a name="parameters"></a>參數  
- *FileName*  
- A**字串**值，其中包含要載入的檔案名稱**Stream**。 *檔名*可包含任何有效的路徑以及 UNC 格式的名稱。 如果指定的檔案不存在，就會發生執行階段錯誤。  
+ *名稱*  
+ **字串**值，包含要載入至**資料流程**中的檔案名。 *FileName*可以包含 UNC 格式的任何有效路徑和名稱。 如果指定的檔案不存在，就會發生執行階段錯誤。  
   
 ## <a name="remarks"></a>備註  
- 這個方法可用來將本機檔案的內容載入**Stream**物件。 這可用來將本機檔案的內容上傳至伺服器。  
+ 這個方法可以用來將本機檔案的內容載入**資料流程**物件中。 這可以用來將本機檔案的內容上傳至伺服器。  
   
- **Stream**物件必須是已開啟，再呼叫**LoadFromFile**。 這個方法不會變更的繫結**Stream**物件，它將仍會繫結至的 URL 所指定的物件或**記錄**與其**Stream**原本開啟。  
+ 在呼叫**LoadFromFile**之前，**資料流程**物件必須已經開啟。 這個方法不會變更**資料流程**物件的系結。它仍然會系結至原始開啟**資料流程**的 URL 或**記錄**所指定的物件。  
   
- **LoadFromFile**會覆寫目前的內容**Stream**物件從檔案讀取的資料。 中的任何現有位元組**Stream**會覆寫檔案的內容。 下列任何先前現有和剩餘的位元組[EOS](../../../ado/reference/ado-api/eos-property.md)由**LoadFromFile**，就會遭到截斷。  
+ **LoadFromFile**會使用從檔案讀取的資料，覆寫**資料流程**物件的目前內容。 檔案的內容會覆寫**資料流程**中的任何現有位元組。 在**LoadFromFile**所建立的[EOS](../../../ado/reference/ado-api/eos-property.md)之後，任何先前現有和剩餘的位元組都會遭到截斷。  
   
- 若要在呼叫之後**LoadFromFile**，目前的位置會設定為開頭**Stream** ([位置](../../../ado/reference/ado-api/position-property-ado.md)為 0)。  
+ 呼叫**LoadFromFile**之後，目前的位置會設定為**資料流程**的開頭（[position](../../../ado/reference/ado-api/position-property-ado.md)是0）。  
   
- 編碼的資料流的開頭可能會加入 2 個位元組，因為資料流的大小可能不完全符合的檔案載入它的大小。  
+ 因為可能會將2個位元組新增至資料流程的開頭以進行編碼，所以資料流程的大小可能不會與載入它的檔案大小完全相符。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

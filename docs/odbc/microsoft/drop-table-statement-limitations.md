@@ -1,5 +1,5 @@
 ---
-title: DROP TABLE 陳述式限制 |Microsoft Docs
+title: DROP TABLE 語句限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ ms.assetid: 0a1c80f5-c9f2-4655-9bfd-0131b2f015a9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 49ee96941c69da962e7c000c33d6eb14f66d4dab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68031156"
 ---
 # <a name="drop-table-statement-limitations"></a>DROP TABLE 陳述式限制
-使用 Microsoft Excel 5.0、 7.0、 或 97 驅動程式時，DROP TABLE 陳述式會清除工作表，但不會刪除工作表的名稱。 因為工作表名稱仍存在於活頁簿中，另一個工作表無法建立具有相同名稱。
+使用 Microsoft Excel 5.0、7.0 或97驅動程式時，DROP TABLE 語句會清除工作表，但不會刪除工作表名稱。 因為工作表名稱仍然存在於活頁簿中，所以無法以相同的名稱建立另一個工作表。

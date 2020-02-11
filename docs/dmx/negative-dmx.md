@@ -1,5 +1,5 @@
 ---
-title: '- （負）(DMX) |Microsoft Docs'
+title: '- 負極（DMX） |Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1a4975e762d698d6f1097372b392a09d9fceb85e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008266"
 ---
 # <a name="--negative-dmx"></a>- (負) (DMX)
@@ -35,8 +35,8 @@ ms.locfileid: "68008266"
  具有指定參數之資料類型的值。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [運算子&#40;DMX&#41;](../dmx/operators-dmx.md)   
- [一元運算子&#40;DMX&#41;](../dmx/operators-unary.md)  
+ [DMX&#41; Operator Reference &#40;的資料採礦延伸模組](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [DMX&#41;&#40;的運算子](../dmx/operators-dmx.md)   
+ [&#40;DMX&#41;的一元運算子](../dmx/operators-unary.md)  
   
   

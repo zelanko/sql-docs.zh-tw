@@ -1,5 +1,5 @@
 ---
-title: sp_helpremotelogin (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpremotelogin （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 11d71139786ac1442588f016bf8c576b92853cf3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997576"
 ---
-# <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
+# <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   報告本機伺服器上所定義之特定遠端伺服器，或所有遠端伺服器的遠端登入相關資訊。  
@@ -44,10 +44,10 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
   
 ## <a name="arguments"></a>引數  
  [ @remoteserver **=** ] **'***remoteserver***'**  
- 這是要傳回相關遠端登入資訊的遠端伺服器。 *remoteserver*已**sysname**，預設值是 NULL。 如果*remoteserver*是未指定，會傳回本機伺服器上定義的所有遠端伺服器的相關資訊。  
+ 這是要傳回相關遠端登入資訊的遠端伺服器。 *remoteserver*是**sysname**，預設值是 Null。 如果未指定*remoteserver* ，則會傳回本機伺服器上定義之所有遠端伺服器的相關資訊。  
   
  [ @remotename **=** ] **'***remote_name***'**  
- 這是遠端伺服器上的特定遠端登入。 *remote_name*已**sysname**，預設值是 NULL。 如果*remote_name*未指定，則針對定義的所有遠端使用者的相關資訊*remoteserver*會傳回。  
+ 這是遠端伺服器上的特定遠端登入。 *remote_name*是**sysname**，預設值是 Null。 如果未指定*remote_name* ，就會傳回針對*remoteserver*定義之所有遠端使用者的相關資訊。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -56,15 +56,15 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|server|**sysname**|本機伺服器上定義之遠端伺服器的名稱。|  
+|伺服器|**sysname**|本機伺服器上定義之遠端伺服器的名稱。|  
 |local_user_name|**sysname**|來自伺服器的遠端登入所對應之本機伺服器的登入。|  
-|remote_user_name|**sysname**|對應至 local_user_name 遠端伺服器上的登入。|  
+|remote_user_name|**sysname**|對應至 local_user_name 的遠端伺服器登入。|  
 |選項|**sysname**|信任 = 從遠端伺服器連接到本機伺服器時，遠端登入無需提供密碼。<br /><br /> 未受信任 (或空白) = 從遠端伺服器連接到本機伺服器時，會提示遠端登入輸入密碼。|  
   
 ## <a name="remarks"></a>備註  
- 請使用 sp_helpserver 來列出本機伺服器上定義的遠端伺服器的名稱。  
+ 請使用 sp_helpserver 列出本機伺服器上所定義的遠端伺服器名稱。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  不檢查任何權限。  
   
 ## <a name="examples"></a>範例  
@@ -84,10 +84,10 @@ EXEC sp_helpremotelogin;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
- [sp_dropremotelogin &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_remoteoption &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
+ [sp_addremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
+ [sp_dropremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
+ [sp_helpserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_remoteoption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

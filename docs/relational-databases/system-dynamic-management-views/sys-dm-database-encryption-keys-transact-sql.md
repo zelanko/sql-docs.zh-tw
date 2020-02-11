@@ -1,5 +1,5 @@
 ---
-title: sys.dm_database_encryption_keys (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_database_encryption_keys （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c66fbc1cdf98d45a7440d2def9cb3fd1be5635a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68255757"
 ---
-# <a name="sysdmdatabaseencryptionkeys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
+# <a name="sysdm_database_encryption_keys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回關於資料庫加密狀態及其相關聯之資料庫加密金鑰的資訊。 如需資料庫加密的詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
@@ -36,36 +36,36 @@ ms.locfileid: "68255757"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|資料庫的識別碼。|  
 |encryption_state|**int**|指出資料庫已加密或未加密。<br /><br /> 0 = 沒有資料庫加密金鑰存在，未加密<br /><br /> 1 = 未加密<br /><br /> 2 = 加密進行中<br /><br /> 3 = 已加密<br /><br /> 4 = 金鑰變更進行中<br /><br /> 5 = 解密進行中<br /><br /> 6 = 保護變更進行中 (正在變更用於加密資料庫加密金鑰的憑證或非對稱金鑰)。|  
-|create_date|**datetime**|將日期顯示建立加密金鑰 （以 utc 表示）。|  
-|regenerate_date|**datetime**|顯示的日期 （於 UTC) 已重新產生加密金鑰。|  
-|modify_date|**datetime**|顯示的日期 （以 utc 表示） 修改加密金鑰。|  
-|set_date|**datetime**|顯示的日期 （以 utc 格式） 的加密金鑰已套用至資料庫。|  
-|opened_date|**datetime**|顯示上次開啟資料庫索引鍵 （以 utc 表示）。|  
-|key_algorithm|**nvarchar(32)**|顯示用於金鑰的演算法。|  
+|create_date|**datetime**|顯示建立加密金鑰的日期（UTC）。|  
+|regenerate_date|**datetime**|顯示重新產生加密金鑰的日期（UTC）。|  
+|modify_date|**datetime**|顯示已修改加密金鑰的日期（UTC）。|  
+|set_date|**datetime**|顯示加密金鑰套用至資料庫的日期（UTC）。|  
+|opened_date|**datetime**|顯示上次開啟資料庫索引鍵的時間（UTC）。|  
+|key_algorithm|**Nvarchar （32）**|顯示用於金鑰的演算法。|  
 |key_length|**int**|顯示金鑰的長度。|  
-|encryptor_thumbprint|**varbinary(20)**|顯示加密程式的指模。|  
-|encryptor_type|**nvarchar(32)**|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。<br /><br /> 描述加密程式。|  
-|percent_complete|**real**|資料庫加密狀態變更的完成百分比。 如果沒有狀態變更，這將會是 0。|
-|encryption_state_desc|**nvarchar(32)**|**適用對象**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更新版本。<br><br> 指出資料庫是否已加密，或未加密的字串。<br><br>無<br><br>未加密<br><br>加密<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
-|encryption_scan_state|**int**|**適用對象**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更新版本。<br><br>表示加密掃描的目前狀態。 <br><br>0 = 否在起始掃描，未啟用 TDE<br><br>1 = 掃描正在進行中。<br><br>2 = 掃描正在進行中，但已暫停也無妨，使用者可以繼續。<br><br>3 = 已順利完成掃描，啟用 TDE 加密已完成。<br><br>4 = 掃描已中止，因為某些原因，則需要手動操作。 如需更多協助，請連絡 Microsoft 支援服務。|
-|encryption_scan_state_desc|**nvarchar(32)**|**適用對象**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更新版本。<br><br>字串，表示加密掃描的目前狀態。<br><br> 無<br><br>RUNNING<br><br>SUSPENDED<br><br>完成<br><br>ABORTED|
-|encryption_scan_modify_date|**datetime**|**適用對象**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更新版本。<br><br> 將日期顯示上次修改加密掃描狀態 （以 utc 表示）。|
+|encryptor_thumbprint|**Varbinary （20）**|顯示加密程式的指模。|  
+|encryptor_type|**Nvarchar （32）**|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。<br /><br /> 描述加密程式。|  
+|percent_complete|**即時**|資料庫加密狀態變更的完成百分比。 如果沒有狀態變更，這將會是 0。|
+|encryption_state_desc|**Nvarchar （32）**|**適用對象**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更新版本。<br><br> 指出資料庫是否已加密或未加密的字串。<br><br>無<br><br>未經<br><br>加密<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
+|encryption_scan_state|**int**|**適用對象**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更新版本。<br><br>指出加密掃描的目前狀態。 <br><br>0 = 未起始任何掃描，TDE 未啟用<br><br>1 = 掃描正在進行中。<br><br>2 = 掃描正在進行中，但已暫停，使用者可以繼續。<br><br>3 = 掃描已成功完成，已啟用 TDE 且加密已完成。<br><br>4 = 掃描因某些原因而中止，需要手動介入。 如需更多協助，請聯絡 Microsoft 支援服務。|
+|encryption_scan_state_desc|**Nvarchar （32）**|**適用對象**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更新版本。<br><br>表示加密掃描目前狀態的字串。<br><br> 無<br><br>RUNNING<br><br>SUSPENDED<br><br>套<br><br>ABORTED|
+|encryption_scan_modify_date|**datetime**|**適用對象**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更新版本。<br><br> 顯示上次修改加密掃描狀態的日期（UTC）。|
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>權限
 
-在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。   
 
 ## <a name="see-also"></a>另請參閱  
 
- [安全性相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [安全性相關的動態管理 Views 和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   
  [透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)   
  [SQL Server 加密](../../relational-databases/security/encryption/sql-server-encryption.md)   
  [SQL Server 和資料庫加密金鑰 &#40;Database Engine&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
- [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
- [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
+ [建立資料庫加密金鑰 &#40;Transact-sql&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
+ [ALTER DATABASE ENCRYPTION KEY &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
+ [捨棄資料庫加密金鑰 &#40;Transact-sql&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
   
   

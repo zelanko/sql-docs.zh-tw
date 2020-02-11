@@ -21,13 +21,13 @@ ms.assetid: 59cc06f5-272e-4936-8afe-afba7aba8eea
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 10f97749970337435b14ff0d1dc14df42ad48daf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040136"
 ---
-# <a name="certid-transact-sql"></a>CERT_ID (Transact-SQL)
+# <a name="cert_id-transact-sql"></a>CERT_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 此函式會傳回憑證的識別碼值。
@@ -48,7 +48,7 @@ Cert_ID ( 'cert_name' )
 ## <a name="return-types"></a>傳回類型
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 目錄檢視會顯示憑證名稱。
   
 ## <a name="permissions"></a>權限  

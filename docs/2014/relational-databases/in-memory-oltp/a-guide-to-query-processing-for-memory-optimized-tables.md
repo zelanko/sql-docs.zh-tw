@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811066"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>記憶體最佳化資料表的查詢處理指南
@@ -70,16 +70,17 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  執行計畫大致如下面的 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 所示  
   
- ![聯結以磁碟為基礎的資料表的查詢計劃。](../../database-engine/media/hekaton-query-plan-1.gif "聯結以磁碟為基礎的資料表的查詢計劃。")  
+ ![聯結磁碟為基礎資料表的查詢計劃。](../../database-engine/media/hekaton-query-plan-1.gif "聯結磁碟為基礎資料表的查詢計劃。")  
 聯結磁碟為基礎資料表的查詢計劃。  
   
  關於這個查詢計劃：  
   
 -   Customer 資料表中的資料列是從叢集索引擷取，這是主要資料結構且擁有完整的資料表資料。  
   
--   會使用 CustomerID 資料行上的非叢集索引來抓取訂單資料表中的資料。 這個索引同時包含用於聯結的 CustomerID 資料行，以及傳回給使用者的主索引鍵資料行 OrderID。 從 Orders 資料表傳回其他資料行會需要查閱 Order 資料表的叢集索引。  
+-   來自 Order 資料表的資料，使用 CustomerID 資料行上的非叢集索引擷取得來。 這個索引同時包含用於聯結的 CustomerID 資料行，以及傳回給使用者的主索引鍵資料行 OrderID。 從 Orders 資料表傳回其他資料行會需要查閱 Order 資料表的叢集索引。  
   
--   邏輯運算子 `Inner Join` 是由實體運算子 `Merge Join` 所實作。 其他實體聯結類型包括 `Nested Loops` 和 `Hash Join`。 `Merge Join` 運算子會利用兩個索引都會在聯結資料行 CustomerID 上排序的情況。  
+-   邏輯運算子 `Inner Join` 是由實體運算子 `Merge Join` 所實作。 其他實體聯結類型包括 `Nested Loops` 和 `Hash Join`。 
+  `Merge Join` 運算子會利用兩個索引都會在聯結資料行 CustomerID 上排序的情況。  
   
  請考慮與這個查詢稍微不同的做法，傳回 Order 資料表的所有資料列，而不只是 OrderID：  
   
@@ -89,10 +90,11 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  這個查詢的計畫大致如下：  
   
- ![雜湊聯結以磁碟為基礎的資料表的查詢計劃。](../../database-engine/media/hekaton-query-plan-2.gif "雜湊聯結以磁碟為基礎的資料表的查詢計劃。")  
+ ![磁碟為基礎資料表的雜湊聯結查詢計劃。](../../database-engine/media/hekaton-query-plan-2.gif "磁碟為基礎資料表的雜湊聯結查詢計劃。")  
 磁碟為基礎資料表的雜湊聯結查詢計劃。  
   
- 在這個查詢中，Orders 資料表的資料列是使用叢集索引擷取。 `Hash Match` 實體運算子現在用於 `Inner Join`。 Order 上的叢集索引不會在 CustomerID 上排序，因此 `Merge Join` 會需要排序運算子，而這樣就會影響效能。 請記下與上一個範例中 `Hash Match` 運算子成本 (46%) 相較的 `Merge Join` 運算子相對成本 (75%)。 最佳化工具原本也會在上一個範例中考慮 `Hash Match` 運算子，但結果卻是 `Merge Join` 運算子提供更佳效能的結果。  
+ 在這個查詢中，Orders 資料表的資料列是使用叢集索引擷取。 
+  `Hash Match` 實體運算子現在用於 `Inner Join`。 Order 上的叢集索引不會在 CustomerID 上排序，因此 `Merge Join` 會需要排序運算子，而這樣就會影響效能。 請記下與上一個範例中 `Hash Match` 運算子成本 (46%) 相較的 `Merge Join` 運算子相對成本 (75%)。 最佳化工具原本也會在上一個範例中考慮 `Hash Match` 運算子，但結果卻是 `Merge Join` 運算子提供更佳效能的結果。  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 磁碟資料表的查詢處理  
  下圖概述 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中隨選查詢的查詢處理流程：  
@@ -100,7 +102,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  ![SQL Server 查詢處理管線。](../../database-engine/media/hekaton-query-plan-3.gif "SQL Server 查詢處理管線。")  
 SQL Server 查詢處理管線。  
   
- 在這個案例中：  
+ 在此情節中：  
   
 1.  使用者會發出查詢。  
   
@@ -114,14 +116,14 @@ SQL Server 查詢處理管線。
   
 6.  Access Methods 會從緩衝集區中的索引和資料頁面擷取資料列，並且視需要將頁面從磁碟載入至緩衝集區。  
   
- 在第一個範例查詢中, 執行引擎會要求客戶上叢集索引中的資料列, 以及從存取方法對非叢集索引進行排序。 Access Methods 會周遊 B 型樹狀目錄索引結構，擷取所要求的資料列。 在這種情況下，當計畫需要完整索引掃描時，就會擷取所有資料列。  
+ 在第一個範例查詢中，執行引擎會從 Access Methods 要求 Customer 上叢集索引中的資料列，以及 Order 上非叢集索引中的資料列。 Access Methods 會周遊 B 型樹狀目錄索引結構，擷取所要求的資料列。 在這種情況下，當計畫需要完整索引掃描時，就會擷取所有資料列。  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存取  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 隨選批次和預存程序，也稱為解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。 解譯是指查詢計劃是由查詢計劃中每個運算子的查詢執行引擎所解譯。 執行引擎會讀取運算子及其參數，並執行作業。  
   
  解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 可用來存取記憶體最佳化和磁碟為基礎的資料表。 下圖說明對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存取之查詢處理：  
   
- ![用於解譯的 tsql 的查詢處理管線。](../../database-engine/media/hekaton-query-plan-4.gif "用於解譯的 tsql 的查詢處理管線。")  
+ ![用於解譯之 tsql 的查詢處理管線。](../../database-engine/media/hekaton-query-plan-4.gif "用於解譯 TSQL 的查詢處理管道。")  
 對記憶體最佳化資料表進行解譯的 Transact-SQL 存取之查詢處理管線。  
   
  如圖中所示，查詢處理管線大致保持不變：  
@@ -170,7 +172,8 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
     -   記憶體最佳化資料表不支援叢集索引。 不過，每個記憶體最佳化的資料表都必須至少有一個非叢集索引，而且記憶體最佳化資料表上的所有索引均可有效率地存取資料表中的所有資料行，不必將資料行儲存於索引中，或參考叢集的索引。  
   
--   這個計畫包含 `Hash Match`，而不是 `Merge Join`。 Order 和 Customer 資料表上的索引是雜湊索引，因此未進行排序。 `Merge Join` 會需要排序運算子，而這樣會降低效能。  
+-   這個計畫包含 `Hash Match`，而不是 `Merge Join`。 Order 和 Customer 資料表上的索引是雜湊索引，因此未進行排序。 
+  `Merge Join` 會需要排序運算子，而這樣會降低效能。  
   
 ## <a name="natively-compiled-stored-procedures"></a>原生編譯的預存程序  
  原生編譯的預存程序是編譯成機器碼的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 預存程序，而不是由查詢執行引擎所解譯。 下列指令碼會建立執行範例查詢的原生編譯預存程序 (從「範例查詢」區段)。  
@@ -200,12 +203,12 @@ END
 ### <a name="compilation-and-query-processing"></a>編譯和查詢處理  
  下圖說明原生編譯預存程序的編譯程序：  
   
- ![預存程序的原生編譯。](../../database-engine/media/hekaton-query-plan-6.gif "預存程序的原生編譯。")  
+ ![預存程式的原生編譯。](../../database-engine/media/hekaton-query-plan-6.gif "預存程序的原生編譯。")  
 預存程序的原生編譯。  
   
  這個程序描述為：  
   
-1.  使用者對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發出 `CREATE PROCEDURE` 陳述式。  
+1.  使用者對 `CREATE PROCEDURE` 發出 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 陳述式。  
   
 2.  剖析器和 Algebrizer 會為程序建立處理流程，以及為預存程序中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查詢建立樹狀結構。  
   
@@ -217,7 +220,7 @@ END
   
  原生編譯預存程序的引動過程會轉譯為在 DLL 中呼叫函數。  
   
- ![執行原生編譯預存程序。](../../database-engine/media/hekaton-query-plan-7.gif "執行原生編譯預存程序。")  
+ ![執行原生編譯的預存程式。](../../database-engine/media/hekaton-query-plan-7.gif "執行原生編譯預存程序。")  
 執行原生編譯預存程序。  
   
  原生編譯預存程序的引動過程描述如下：  
@@ -232,14 +235,14 @@ END
   
 4.  然後會執行 DLL 中的機器碼，再將其結果傳回用戶端。  
   
- **參數探測**  
+ **參數探查**  
   
  與在建立時編譯的原生編譯預存程序相反，解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 預存程序會在第一次執行時編譯。 在引動過程中編譯解譯的預存程序時，最佳化工具會在產生執行計畫時使用提供給這個引動過程的參數值。 在編譯期間使用參數的動作，就稱為參數探測。  
   
  參數探測不會用於編譯原生編譯的預存程序。 預存程序的所有參數都會視為具有 UNKNOWN 值。 與解譯的預存程序相同，原生編譯的預存程序也支援 `OPTIMIZE FOR` 提示。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)。  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>擷取原生編譯預存程序的查詢執行計畫  
- 原生編譯預存程序的查詢執行計畫，可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 [Estimated Execution Plan (估計的執行計畫)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中的 SHOWPLAN_XML 選項加以擷取。 例如:  
+ 原生編譯預存程序的查詢執行計畫，可以使用 ** 中的 [Estimated Execution Plan (估計的執行計畫)]**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中的 SHOWPLAN_XML 選項加以擷取。 例如：  
   
 ```sql  
 SET SHOWPLAN_XML ON  
@@ -255,17 +258,18 @@ GO
 ### <a name="query-operators-in-natively-compiled-stored-procedures"></a>原生編譯預存程序中的查詢運算子  
  下表摘要說明原生編譯預存程序內部支援的查詢運算子：  
   
-|Operator|範例查詢|  
+|運算子|範例查詢|  
 |--------------|------------------|  
 |SELECT|`SELECT OrderID FROM dbo.[Order]`|  
 |Insert|`INSERT dbo.Customer VALUES ('abc', 'def')`|  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`|  
-|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
+|刪除|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
 |Compute Scalar|這個運算子同時用於內建函數和類型轉換。 並非所有函數和類型轉換都可在原生編譯預存程序內部受到支援。<br /><br /> `SELECT OrderID+1 FROM dbo.[Order]`|  
 |Nested Loops Join|巢狀迴圈是原生編譯預存程序中唯一支援的聯結運算子。 即使做為解譯 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 執行的相同查詢計劃包含雜湊或合併聯結，所有包含聯結的計畫還是都會使用 Nested Loops 運算子。<br /><br /> `SELECT o.OrderID, c.CustomerID`  <br /> `FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|  
-|排序|`SELECT ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
+|Sort|`SELECT ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
 |頂端|`SELECT TOP 10 ContactName FROM dbo.Customer`|  
-|Top-sort|`TOP` 運算式 (要傳回的資料列數目) 不得超過 8,000 個資料列。 如果查詢中也有聯結和彙總運算子，則數目會更少。 與基底資料表的資料列數相比，聯結和彙總運算子通常會減少要排序的資料列數。<br /><br /> `SELECT TOP 10 ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
+|Top-sort|
+  `TOP` 運算式 (要傳回的資料列數目) 不得超過 8,000 個資料列。 如果查詢中也有聯結和彙總運算子，則數目會更少。 與基底資料表的資料列數相比，聯結和彙總運算子通常會減少要排序的資料列數。<br /><br /> `SELECT TOP 10 ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
 |Stream Aggregate|請注意，Hash Match 運算子不支援彙總。 因此，即使解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中相同查詢的計畫使用 Hash Match 運算子，原生編譯預存程序中的所有彙總仍會使用 Stream Aggregate 運算子。<br /><br /> `SELECT count(CustomerID) FROM dbo.Customer`|  
   
 ## <a name="column-statistics-and-joins"></a>資料行統計資料和聯結  
@@ -300,7 +304,8 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   對 IX_CustomerID 的完整索引掃描已取代為索引搜尋。 這樣的結果會是掃描 5 個資料列，而不是完整索引掃描所需的 830 個資料列。  
   
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>記憶體最佳化資料表的統計資料和基數  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會維護記憶體最佳化資料表的資料行層級統計資料。 此外，它也會維護資料表的實際資料列計數。 但和磁碟資料表不同，記憶體最佳化資料表的統計資料不會自動更新。 因此，統計資料在資料表中進行過重大變更之後，需要手動更新。 如需詳細資訊，請參閱 [記憶體最佳化資料表的統計資料](memory-optimized-tables.md)。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會維護記憶體最佳化資料表的資料行層級統計資料。 此外，它也會維護資料表的實際資料列計數。 但和磁碟資料表不同，記憶體最佳化資料表的統計資料不會自動更新。 因此，統計資料在資料表中進行過重大變更之後，需要手動更新。 如需詳細資訊，請參閱 [記憶體最佳化資料表的統計資料](memory-optimized-tables.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體最佳化資料表](memory-optimized-tables.md)  

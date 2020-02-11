@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 40ce89f518dfdbf4d1c782121dc5ec0e935752ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676841"
 ---
 # <a name="view-policies-dialog-box"></a>檢視原則對話方塊
   使用此對話方塊可檢視對這個目標有效的原則。 此對話方塊會顯示相關的原則、其原則類別目錄以及有關原則的資訊。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **原則健全狀態**  
  指出與這個目標有關之原則的狀態。 當狀態未知時會保留空白。  
   
@@ -32,13 +32,13 @@ ms.locfileid: "62676841"
  **原則**  
  每一個適用的原則名稱。  
   
- **分類**  
+ **類別目錄**  
  選定原則所屬的原則類別目錄。  
   
  **評估模式**  
  具名原則的評估模式。  
   
- **記錄**  
+ **History**  
  按一下此超連結可顯示執行記錄報表。  
   
  **評估**  

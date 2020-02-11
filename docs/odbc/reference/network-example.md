@@ -13,13 +13,13 @@ ms.assetid: e14ae90f-87b3-4bcf-b69a-1773e2c2a1c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3454fab31de20a7d72f99a50c7dd3781ea2bc2be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937980"
 ---
 # <a name="network-example"></a>網路範例
-下圖顯示如何每個先前的設定可能會出現，在單一網路。  
+下圖顯示上述每個設定如何出現在單一網路中。  
   
- ![單一網路的各種組態](../../odbc/reference/media/pr08.gif "pr08")
+ ![單一網路上的多種組態](../../odbc/reference/media/pr08.gif "pr08")

@@ -1,5 +1,5 @@
 ---
-title: 監視追蹤 (XMLA) |Microsoft Docs
+title: 監視追蹤（XMLA） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,26 +16,28 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62729066"
 ---
 # <a name="monitoring-traces-xmla"></a>監視追蹤 (XMLA)
-  您可以使用[Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla)命令，在 XML for Analysis (XMLA) 來監視現有的執行個體上定義的追蹤[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 `Subscribe` 命令會以資料列集傳回追蹤的結果。  
+  您可以使用 XML for Analysis （XMLA）中的 [[訂閱](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla)] 命令，來監視在實例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]上定義的現有追蹤。 
+  `Subscribe` 命令會以資料列集傳回追蹤的結果。  
   
 ## <a name="specifying-a-trace"></a>指定追蹤  
- [物件](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)屬性`Subscribe`命令必須包含物件參考[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體或在追蹤[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體。 如果未指定 `Object` 屬性，或者如果在 `Object` 屬性中沒有指定追蹤識別碼，則 `Subscribe` 命令會監視命令的 SOAP 標頭中指定的明確工作階段之預設工作階段追蹤。  
+ 命令的[object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)屬性必須包含[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]實例的物件參考，或實例上的追蹤。 `Subscribe` 如果未指定 `Object` 屬性，或者如果在 `Object` 屬性中沒有指定追蹤識別碼，則 `Subscribe` 命令會監視命令的 SOAP 標頭中指定的明確工作階段之預設工作階段追蹤。  
   
 ## <a name="returning-results"></a>傳回結果  
- `Subscribe` 命令會傳回包含指定追蹤擷取的追蹤事件之資料列集。 `Subscribe`命令會傳回追蹤結果，直到取消命令為止[取消](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)命令。  
+ 
+  `Subscribe` 命令會傳回包含指定追蹤擷取的追蹤事件之資料列集。 `Subscribe`命令會傳回追蹤結果，直到[取消](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)命令取消命令為止。  
   
  資料列集包含下表中列出的資料行。  
   
-|「資料行」|資料類型|描述|  
+|資料行|資料類型|描述|  
 |------------|---------------|-----------------|  
-|EventClass|Integer|追蹤所收到的事件類別。|  
+|EventClass|整數|追蹤所收到的事件類別。|  
 |EventSubclass|長整數|追蹤所收到的事件子類別。|  
 |CurrentTime|Datetime|事件啟動的時間 (如果有的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|Datetime|事件啟動的時間 (如果有的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
@@ -52,10 +54,10 @@ ms.locfileid: "62729066"
 |ObjectName|String|發生事件的物件名稱。|  
 |ObjectPath|String|發生事件的物件階層路徑。 路徑是以逗號分隔字串來表示 ObjectName 中指定物件之父系的物件識別碼。|  
 |ObjectReference|String|以 XML 表示法呈現 ObjectName 中指定之物件的物件參考。|  
-|NestLevel|Integer|發生事件的交易等級。|  
+|NestLevel|整數|發生事件的交易等級。|  
 |NumSegments|長整數|發生事件的命令所影響或是存取的資料區段數目。|  
-|Severity|Integer|事件例外狀況的嚴重性層級。 此資料行可包含下列其中一個值：<br /><br /> 值：0 = 成功<br /><br /> 值：1 = 資訊<br /><br /> 值：2 = 警告<br /><br /> 值：3 = 錯誤|  
-|成功|布林|指出命令是成功或失敗。|  
+|Severity|整數|事件例外狀況的嚴重性層級。 此資料行可包含下列其中一個值：<br /><br /> 值： 0 = 成功<br /><br /> 值： 1 = 資訊<br /><br /> 值： 2 = 警告<br /><br /> 值： 3 = 錯誤|  
+|Success|Boolean|指出命令是成功或失敗。|  
 |錯誤|長整數|事件的錯誤號碼 (如果適用的話)。|  
 |ConnectionID|String|發生事件的連接識別碼。|  
 |DatabaseName|String|發生事件的資料庫名稱。|  

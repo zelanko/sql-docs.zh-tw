@@ -15,15 +15,15 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/14/2017
 ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71708215"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>使用 bcp 公用程式匯入及匯出大量資料 (SQL Server)
 
-本主題提供有關使用 [bcp 公用程式](../../tools/bcp-utility.md)，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫任何執行 SELECT 陳述式的位置 (包括資料分割檢視) 匯出資料的概觀。  
+本主題提供有關使用 [bcp 公用程式](../../tools/bcp-utility.md) ，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫任何執行 SELECT 陳述式的位置 (包括資料分割檢視) 匯出資料的概觀。  
   
  bcp 公用程式 (Bcp.exe) 是使用大量複製程式 (BCP) API 的命令列工具。 bcp 公用程式可執行以下工作：  
   
@@ -39,7 +39,7 @@ ms.locfileid: "71708215"
   
  bcp 公用程式可以將資料從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表匯出至資料檔，以供其他程式使用。 此公用程式也可以從另一個程式將資料匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表，通常是從另一個資料庫管理系統 (DBMS) 匯入。 資料會先從來源程式匯出到資料檔案，接著再以個別的作業，從資料檔案複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。  
   
- **bcp** 命令提供參數，用來指定資料檔的資料類型及其他資訊。 如果未指定這些參數，命令會提示您輸入格式資訊，例如資料檔案中的資料欄位類型。 此命令會接著詢問您是否想要建立包含互動式回應的格式檔案。 如果想要讓未來的大量匯入或大量匯出作業具有彈性，格式檔案通常會很有用。 您可以在稍後的 **bcp** 命令上，對相等的資料檔指定格式檔案。 如需詳細資訊，請參閱[使用 bcp 指定相容性的資料格式 &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)。  
+ **bcp** 命令提供參數，用來指定資料檔的資料類型及其他資訊。 如果未指定這些參數，命令會提示您輸入格式資訊，例如資料檔案中的資料欄位類型。 此命令會接著詢問您是否想要建立包含互動式回應的格式檔案。 如果想要讓未來的大量匯入或大量匯出作業具有彈性，格式檔案通常會很有用。 您可以在稍後的 **bcp** 命令上，對相等的資料檔指定格式檔案。 如需詳細資訊，請參閱[使用 bcp 時指定相容性的資料格式 &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)。  
   
 > [!NOTE]  
 >  bcp 公用程式是透過使用 ODBC 大量複製撰寫的。  
@@ -50,7 +50,7 @@ ms.locfileid: "71708215"
 
  如需 **bcp** 範例，請參閱：  
   
--   [bcp Utility](../../tools/bcp-utility.md)  
+-   [bcp 公用程式](../../tools/bcp-utility.md)  
   
 -   [建立格式檔案 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "71708215"
   
 -   [大量匯入期間保留 Null 或使用預設值 &#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
--   [指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [指定欄位和資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
 -   [使用格式檔案大量匯入資料 &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
@@ -74,11 +74,11 @@ ms.locfileid: "71708215"
 
 ## <a name="see-also"></a>另請參閱
 
-[插入&#40;transact-sql&#41; ](/sql/t-sql/statements/insert-transact-sql)
-[SELECT 子句&#40;transact-sql&#41; ](/sql/t-sql/queries/select-clause-transact-sql)
-[bcp 公用程式](../../tools/bcp-utility.md)   
-[準備大量匯入&#40;資料&#41; SQL Server](prepare-to-bulk-import-data-sql-server.md)
-[ &#40;BULK INSERT transact-sql&#41; ](/sql/t-sql/statements/bulk-insert-transact-sql)
-[大量匯入和匯出資料&#40;SQL Server&#41; ](bulk-import-and-export-of-data-sql-server.md)
-[OPENROWSET &#40;transact-sql&#41; ](/sql/t-sql/functions/openrowset-transact-sql)
-[建立格式檔案&#40;SQL Server&#41; ](create-a-format-file-sql-server.md)
+[INSERT &#40;transact-sql&#41;](/sql/t-sql/statements/insert-transact-sql) 
+ [SELECT 子句 &#40;transact-sql&#41;](/sql/t-sql/queries/select-clause-transact-sql) 
+ [bcp 公用程式](../../tools/bcp-utility.md)   
+[準備大量匯入資料 &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md) 
+ [BULK INSERT &#40;transact-sql](/sql/t-sql/statements/bulk-insert-transact-sql) 
+[大量匯入和匯出資料 &#40;](bulk-import-and-export-of-data-sql-server.md) 
+SQL Server&#41;[OPENROWSET &#40;transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql) 
+[建立格式檔案 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)

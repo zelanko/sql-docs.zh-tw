@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c919eb7c63a241c780d5e56b3e530921c6b51d6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663909"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack 事件類別
@@ -35,9 +35,9 @@ ms.locfileid: "62663909"
 |**DatabaseID**|**int**|USE *database* 陳述式指定之資料庫的識別碼。 如果未針對指定的執行個體發出 USE *database* 陳述式，則為預設資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |**EventClass**|**int**|擷取的事件類別類型。 對於 **Broker:Message Ack** 一律是 **149**。|27|否|  
 |**EventSequence**|**int**|此事件的序號。|51|否|  
-|**EventSubClass**|**nvarchar**|事件子類別的類型，可為每個事件類別提供詳細的資訊。 此資料行可包含下列值：<br /><br /> **Message With Acknowledgement Sent**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將收條當做標準循序訊息的一部分傳送。<br /><br /> **Acknowledgement Sent**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在標準循序訊息的外面傳送收條。<br /><br /> **Message With Acknowledgement Received**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將收條當做標準循序訊息的一部分接收。<br /><br /> **Acknowledgement Received**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在循序訊息的外面接收收條。|21|是|  
+|**EventSubClass**|**nvarchar**|事件子類別的類型，可為每個事件類別提供詳細的資訊。 此資料行可包含下列值：<br /><br /> **已傳送通知的訊息**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將收條當做標準循序訊息的一部分傳送。<br /><br /> **已傳送通知**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在標準循序訊息的外面傳送收條。<br /><br /> **已收到通知的訊息**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將收條當做標準循序訊息的一部分接收。<br /><br /> **收到的通知**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在循序訊息的外面接收收條。|21|是|  
 |**GUID**|**uniqueidentifier**|對話的交談識別碼。 此識別碼是以訊息的一部份傳送，並在交談的兩端之間共用。|54|否|  
-|**HonorBrokerPriority**|**整數**|資料庫 HONOR_BROKER_PRIORITY 選項目前的值為：0 = OFF、1 = ON。|32|是|  
+|**HonorBrokerPriority**|**整數**|資料庫 HONOR_BROKER_PRIORITY 選項目前的值為：0 = OFF，1 = ON。|32|是|  
 |**HostName**|**nvarchar**|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |**IntegerData**|**int**|包含收條之訊息的片段編號。|25|否|  
 |**IntegerData2**|**int**|所認可之訊息的片段編號。|55|否|  
@@ -45,12 +45,12 @@ ms.locfileid: "62663909"
 |**LoginSid**|**image**|已登入之使用者的安全性識別碼 (SID)。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
 |**NTDomainName**|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |**NTUserName**|**nvarchar**|擁有產生此事件之連接的使用者名稱。|6|是|  
-|**優先權**|**int**|交談的優先權等級。|5|是|  
+|**優先順序**|**int**|交談的優先權等級。|5|是|  
 |**RoleName**|**nvarchar**|認可訊息之執行個體的角色。 為 **initiator** 或 **target**其中一個角色。|38|否|  
 |**ServerName**|**nvarchar**|所追蹤的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。|26|否|  
 |**SPID**|**int**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端相關之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|**StarvationElevation**|**int**|傳送訊息時，使用的優先權高於原本為對話所設定的優先權：0 = false、1 = true。|33|是|  
+|**StarvationElevation**|**int**|傳送訊息時，使用的優先權高於原本為交談所設定的優先權：0 = false，1 = true。|33|是|  
 |**TransactionID**|**bigint**|系統指派的交易識別碼。|4|否|  
   
   

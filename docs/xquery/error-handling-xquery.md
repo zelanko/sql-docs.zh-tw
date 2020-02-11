@@ -1,5 +1,5 @@
 ---
-title: 錯誤處理 (XQuery) |Microsoft Docs
+title: 錯誤處理（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1be899b95a4e132c3b5aa42a73df9bd1b0ee057c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038960"
 ---
 # <a name="error-handling-xquery"></a>錯誤處理 (XQuery)
@@ -37,15 +37,15 @@ ms.locfileid: "68038960"
  雖然執行階段轉換錯誤會被轉換成空的序列，但明確地轉換為正確的類型可讓使用者解決靜態錯誤。  
   
 ## <a name="static-errors"></a>靜態錯誤  
- 靜態錯誤是使用 [!INCLUDE[tsql](../includes/tsql-md.md)] 錯誤機制傳回。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，會靜態地傳回 XQuery 類型錯誤。 如需詳細資訊，請參閱 < [XQuery 與靜態類型](../xquery/xquery-and-static-typing.md)。  
+ 靜態錯誤是使用 [!INCLUDE[tsql](../includes/tsql-md.md)] 錯誤機制傳回。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，會靜態地傳回 XQuery 類型錯誤。 如需詳細資訊，請參閱[XQuery 和靜態類型](../xquery/xquery-and-static-typing.md)。  
   
 ## <a name="dynamic-errors"></a>動態錯誤  
- 在 XQuery 中，大部份動態錯誤會對應到空白時序 ("()")。 不過，這些是兩個例外狀況：溢位在 XQuery 彙總函式以及 XML-DML 驗證錯誤的條件。 請注意，大部份動態錯誤會對應到空白時序。 否則，利用 XML 索引的優點而執行的查詢可能會發生意外的錯誤。 因此，為了使執行有效率又不會產生意外的錯誤，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會將動態錯誤對應到 ()。  
+ 在 XQuery 中，大部份動態錯誤會對應到空白時序 ("()")。 但是，有兩個例外狀況：XQuery 彙總函式中的溢位條件，以及 XML-DML 驗證錯誤。 請注意，大部份動態錯誤會對應到空白時序。 否則，利用 XML 索引的優點而執行的查詢可能會發生意外的錯誤。 因此，為了使執行有效率又不會產生意外的錯誤，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會將動態錯誤對應到 ()。  
   
  因為 () 是對應到 False，所以在動態錯誤在述詞內發生的情況下，經常不會引發錯誤而未改變語意。 但是，在某些情況下，傳回 () 而非動態錯誤，可能會導致非預期的結果。 以下是說明此點的範例。  
   
-### <a name="example-using-the-avg-function-with-a-string"></a>範例搭配字串使用 avg （） 函式  
- 在下列範例中， [avg 函數](../xquery/aggregate-functions-avg.md)呼叫以計算三個值的平均值。 其中一個值是一個字串。 因為此例中的 XML 執行個體不具類型，所以其內含的所有資料都屬於不具類型的不可部份完成類型。 **Avg （)** 函式的第一次會轉換這些值來**xs: double**計算平均值之前。 不過，此值， `"Hello"`，無法轉換成**xs: double**並建立動態錯誤。 在此情況下，而不是傳回動態錯誤，轉型`"Hello"`要**xs: double**會導致空的序列。 **Avg （)** 函式會忽略此值，計算其他兩個值的平均值，然後傳回 150。  
+### <a name="example-using-the-avg-function-with-a-string"></a>範例：搭配字串使用 avg() 函數  
+ 在下列範例中，會呼叫[avg 函數](../xquery/aggregate-functions-avg.md)來計算三個值的平均值。 其中一個值是一個字串。 因為此例中的 XML 執行個體不具類型，所以其內含的所有資料都屬於不具類型的不可部份完成類型。 **Avg （）** 函數會先將這些值轉換為**xs： double** ，再計算平均值。 不過，值`"Hello"`無法轉換為**xs： double** ，而且會建立動態錯誤。 在此情況下，將轉換`"Hello"`成**xs： double** ，而不是傳回動態錯誤，會造成空的序列。 **Avg （）** 函數會忽略這個值、計算其他兩個值的平均值，然後傳回150。  
   
 ```  
 DECLARE @x xml  
@@ -57,10 +57,10 @@ SET @x=N'<root xmlns:myNS="test">
 SELECT @x.query('avg(//*)')  
 ```  
   
-### <a name="example-using-the-not-function"></a>範例使用 not 函式  
- 當您使用[無法運作](../xquery/functions-on-boolean-values-not-function.md)述詞，例如`/SomeNode[not(Expression)]`，而且運算式導致動態錯誤，空的序列將會傳回而非錯誤。 套用**not （)** 至空的序列傳回 True，而非錯誤。  
+### <a name="example-using-the-not-function"></a>範例：使用 not 函數  
+ 當您在述詞中使用[not 函數](../xquery/functions-on-boolean-values-not-function.md)時（例如， `/SomeNode[not(Expression)]`），而運算式會造成動態錯誤，則會傳回空的序列，而不是錯誤。 將**not （）** 套用至空的序列會傳回 True，而不是錯誤。  
   
-### <a name="example-casting-a-string"></a>範例將字串轉換  
+### <a name="example-casting-a-string"></a>範例：轉換字串  
  在以下範例中，會將常值字串 "NaN" 轉換成 xs:string，然後再轉換成 xs:double。 結果會是一個空白資料列集。 雖然無法順利將字串 "NaN" 轉換成 xs:double，但是因為此字串會先轉換成 xs:string，所以此點要到執行階段才會確定。  
   
 ```  
@@ -80,7 +80,7 @@ GO
 ```  
   
 #### <a name="implementation-limitations"></a>實作限制  
- **Fn:error()** 函式不支援。  
+ 不支援**fn： error （）** 函數。  
   
 ## <a name="see-also"></a>另請參閱  
  [XQuery 語言參考 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   

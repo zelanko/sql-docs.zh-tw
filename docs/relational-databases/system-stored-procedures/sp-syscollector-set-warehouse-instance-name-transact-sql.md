@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_set_warehouse_instance_name (TRANSACT-SQL) |Microsoft Docs
+title: sp_syscollector_set_warehouse_instance_name （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6e21096971b9a0891d2c51c5fce34c119b454f0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010596"
 ---
-# <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
+# <a name="sp_syscollector_set_warehouse_instance_name-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   針對用來連接至管理資料倉儲的連接字串，指定執行個體名稱。  
@@ -40,20 +40,20 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @instance_name = ] '*instance_name*'  
- 這是執行個體名稱。 *instance_name*已**sysname**和預設為本機執行個體，如果是 NULL。  
+ [ @instance_name = ]'*instance_name*'  
+ 這是執行個體名稱。 *instance_name*是**sysname** ，而且預設為本機實例（如果是 Null 的話）。  
   
-> **注意︰** _instance_name_必須是完整的執行個體名稱，其中包含電腦名稱和執行個體名稱格式*computerName* \\ *instanceName*。  
+> **注意：**  _instance_name_必須是完整的實例名稱，其中包含電腦名稱稱和實例名稱，其格式為*computerName*\\*instanceName*。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
  您必須先停用資料收集器，然後再變更這項資料收集器範圍組態。 如果資料收集器為啟用狀態，這個程序就會失敗。  
   
- 若要檢視目前的執行個體名稱，請查詢[syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)系統檢視表。  
+ 若要查看目前的實例名稱，請查詢[syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)系統檢視。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 dc_admin (具有 EXECUTE 權限) 固定資料庫角色中的成員資格，才能執行此程序。  
   
 ## <a name="examples"></a>範例  
@@ -68,6 +68,6 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [資料收集器預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [syscollector_config_store &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)  
+ [syscollector_config_store &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)  
   
   

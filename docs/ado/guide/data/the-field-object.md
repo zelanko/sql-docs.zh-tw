@@ -13,78 +13,78 @@ ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80e6576b236db44452c4e89b1d8f3bb8976ab120
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923988"
 ---
 # <a name="the-field-object"></a>Field 物件
-每個**欄位**物件通常會對應至資料庫資料表中的資料行。 不過，**欄位**也可以代表指標到另一個**資料錄集**，呼叫一章。 例外狀況，例如章節資料行，將本指南稍後會說明。  
+每個**Field**物件通常會對應至資料庫資料表中的資料行。 不過，**欄位**也可以代表指向另一個**記錄集**的指標，稱為「章節」。 本指南稍後將會涵蓋如章節專欄的例外狀況。  
   
- 使用**值**屬性**欄位**設定或傳回目前的記錄資料的物件。 某些集合、 方法或屬性會提供者依據其功能的公開**欄位**物件可能無法使用。  
+ 使用 [**欄位**物件] 的 [**值**] 屬性來設定或傳回目前記錄的資料。 視提供者公開的功能而定，可能無法使用**欄位**物件的某些集合、方法或屬性。  
   
- 使用集合、 方法和屬性的**欄位**物件時，您可以執行下列動作：  
+ 使用**Field**物件的集合、方法和屬性，您可以執行下列動作：  
   
--   使用傳回的欄位名稱**名稱**屬性。  
+-   使用**name**屬性來傳回欄位的名稱。  
   
--   檢視或變更所使用的欄位中的資料**值**屬性。 **值**是預設屬性**欄位**物件。  
+-   使用**Value**屬性來查看或變更欄位中的資料。 **Value**是**Field**物件的預設屬性。  
   
--   使用傳回欄位的基本特性**型別**，**有效位數**，並**NumericScale**屬性。  
+-   使用**Type**、 **Precision**和**NumericScale**屬性，傳回欄位的基本特性。  
   
--   使用傳回的欄位宣告的大小**DefinedSize**屬性。  
+-   使用**DefinedSize**屬性傳回欄位的宣告大小。  
   
--   使用指定的欄位中傳回資料的實際大小**ActualSize**屬性。  
+-   使用**ActualSize**屬性，傳回給定欄位中的資料實際大小。  
   
--   判斷哪些類型的功能支援使用指定的欄位**屬性**屬性並**屬性**集合。  
+-   使用**Attributes**屬性和**Properties**集合，判斷給定欄位支援哪些類型的功能。  
   
--   管理使用包含長的二進位或長度字元資料欄位的值**AppendChunk**並**GetChunk**方法。  
+-   使用**AppendChunk**和**GetChunk**方法，操作包含長二進位或長字元資料的欄位值。  
   
- 解決在批次更新使用的欄位值不一致的地方**OriginalValue**並**UnderlyingValue**屬性，如果提供者支援批次更新。  
+ 如果提供者支援批次更新，請使用**OriginalValue**和**UnderlyingValue**屬性，在批次更新期間解決域值不一致的情況。  
   
 ## <a name="describing-a-field"></a>描述欄位  
- 請遵循將的主題將討論的屬性[欄位](../../../ado/reference/ado-api/field-object.md)代表描述資訊的物件**欄位**物件本身-也就是相關欄位的中繼資料。 這項資訊可用來判斷太多的結構描述**資料錄集**。 這些屬性包括**型別**， **DefinedSize**並**ActualSize**，**名稱**，和**NumericScale**並**有效位數**。  
+ 接下來的主題將討論[field](../../../ado/reference/ado-api/field-object.md)物件的屬性，其代表描述**欄位**物件本身的資訊，也就是欄位的相關中繼資料。 這項資訊可以用來判斷有關**記錄集**架構的內容。 這些屬性包括**Type**、 **DefinedSize**和**ActualSize**、 **Name**、 **NumericScale**和**Precision**。  
   
-### <a name="discovering-the-data-type"></a>探索的資料類型  
- **型別**屬性指出欄位的資料類型。 ADO 支援的列舉的常數所述的資料型別[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)中*ADO 程式設計人員參考*。  
+### <a name="discovering-the-data-type"></a>探索資料類型  
+ **Type**屬性會指出欄位的資料類型。 Ado 所支援的資料型別列舉常數[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)在 ado 程式設計*人員參考*中。  
   
- 浮點數值型別這類**adNumeric**，您可以取得更多的資訊。 **NumericScale**屬性會指出小數點右邊的位數數目會用來代表值**欄位**。 **有效位數**屬性會指定用來代表值的數字的最大數目**欄位**。  
+ 如需浮點數數值型別（例如**adNumeric**），您可以取得詳細資訊。 **NumericScale**屬性會指出要使用小數點右邊多少位數來表示**欄位**的值。 **Precision**屬性會指定用來表示**欄位**值的最大位數。  
   
 ### <a name="determining-field-size"></a>判斷欄位大小  
- 使用**DefinedSize**屬性來判斷的資料容量**欄位**物件。  
+ 使用**DefinedSize**屬性來判斷**欄位**物件的資料容量。  
   
- 使用**ActualSize**屬性傳回的實際長度**欄位**物件的值。 所有欄位，如**ActualSize**屬性是唯讀的。 如果 ADO 無法判斷長度**欄位**物件的值**ActualSize**屬性會傳回**adUnknown**。  
+ 使用**ActualSize**屬性可傳回**欄位**物件值的實際長度。 對於所有欄位而言， **ActualSize**屬性都是唯讀的。 如果 ADO 無法判斷**欄位**物件值的長度， **ActualSize**屬性會傳回**adUnknown**。  
   
- **DefinedSize**並**ActualSize**屬性有不同的用途。 例如，請考慮**欄位**宣告類型的物件**adVarChar**並**DefinedSize**屬性值為 50，其中包含單一字元。 **ActualSize**它所傳回的屬性值是單一字元的長度以位元組為單位。  
+ **DefinedSize**和**ActualSize**屬性有不同的用途。 例如，假設**欄位**物件的宣告類型為**AdVarChar** ，而**DefinedSize**屬性值為50，其中包含單一字元。 它所傳回的**ActualSize**屬性值是單一字元的長度（以位元組為單位）。  
   
 ### <a name="determining-field-contents"></a>判斷欄位內容  
- 資料來源的資料行的識別碼由**名稱**屬性**欄位**。 **值**屬性**欄位**物件傳回或設定欄位的實際資料內容。 這是預設屬性。  
+ 資料來源中的資料行識別碼是以**欄位**的**名稱**屬性來表示。 **Field**物件的**Value**屬性會傳回或設定欄位的實際資料內容。 這是預設屬性。  
   
- 若要變更欄位中的資料，請設定**值**屬性等於正確類型的新值。 資料指標類型必須支援更新，若要變更欄位的內容。 資料庫驗證不是此處在批次模式中，因此您必須檢查是否有錯誤，當您呼叫**UpdateBatch**這種情況。 某些提供者也支援之 ADO**欄位**物件的**UnderlyingValue**並**OriginalValue**可協助您解決衝突，當您嘗試將屬性執行批次更新。 如需有關如何解決這類衝突的詳細資訊，請參閱 <<c0> [ 編輯資料](../../../ado/guide/data/editing-data.md)。  
+ 若要變更欄位中的資料，請將**value**屬性設定為等於正確類型的新值。 您的資料指標類型必須支援更新以變更欄位的內容。 在此情況下，不會在批次模式中執行資料庫驗證，因此當您在這種情況下呼叫**UpdateBatch**時，您必須檢查是否有錯誤。 某些提供者也支援 ADO **Field**物件的**UnderlyingValue**和**OriginalValue**屬性，可在您嘗試執行批次更新時，協助您解決衝突。 如需如何解決這類衝突的詳細資訊，請參閱[編輯資料](../../../ado/guide/data/editing-data.md)。  
   
 > [!NOTE]
->  **資料錄集欄位**無法設定值，當新附加**欄位**要**資料錄集**。 相反地，新**欄位**您可以附加至已關閉**資料錄集**。 然後**Recordset**必須是已開啟，並只然後可以將值指派給這些**欄位**。  
+>  將新**欄位**附加至**記錄集**時，無法設定**記錄集域**值。 相反地，新的**欄位**可以附加至已關閉的**記錄集**。 然後，必須開啟**記錄集**，然後才可以將值指派給這些**欄位**。  
   
-### <a name="getting-more-field-information"></a>取得欄位的詳細資訊  
- ADO 物件有兩種類型的屬性： 內建和動態。 到目前為止的內建屬性**欄位**物件已經討論過。  
+### <a name="getting-more-field-information"></a>取得更多欄位資訊  
+ ADO 物件有兩種屬性類型：內建和動態。 到目前為止，只討論**Field**物件的內建屬性。  
   
- 內建屬性可讓您為這些屬性，在 ADO 中實作和立即提供給任何新物件，使用`MyObject.Property`語法。 它們不會出現**屬性**物件中的物件**屬性**集合。  
+ 內建屬性是在 ADO 中實和使用`MyObject.Property`語法立即提供給任何新物件的屬性。 它們不會在物件的**Properties**集合中顯示為**屬性**物件。  
   
- 動態屬性由基礎資料提供者所定義，並會出現在**屬性**適當的 ADO 物件的集合。 例如，提供者特有的屬性可能表示如果**資料錄集**物件支援交易，或更新。 這些額外的屬性會成為**屬性**中的物件**Recordset**物件的**屬性**集合。 動態屬性可以參考只能透過集合中，使用語法`MyObject.Properties(0)`或`MyObject.Properties("Name")`。  
+ 動態屬性是由基礎資料提供者所定義，而且會出現在適當 ADO 物件的**properties**集合中。 例如，提供者特定的屬性可能會指出**記錄集**物件是否支援交易或更新。 這些額外的屬性會以**屬性**物件的形式顯示在該**記錄集**物件的**properties**集合中。 只能透過集合使用語法`MyObject.Properties(0)`或`MyObject.Properties("Name")`來參考動態屬性。  
   
- 您無法刪除屬性的其中一種。  
+ 您不能刪除任何一種屬性。  
   
- 動態**屬性**物件都有自己的四個內建的屬性：  
+ 動態**屬性**物件有四個本身的內建屬性：  
   
--   **名稱**屬性是字串，識別屬性。  
+-   **Name**屬性是可識別屬性的字串。  
   
--   **型別**屬性是一個整數，指定屬性資料型別。  
+-   **Type**屬性是指定屬性資料類型的整數。  
   
--   **值**屬性是變化，其中包含的屬性設定。 **值**是預設屬性，如**屬性**物件。  
+-   **Value**屬性是包含屬性設定的 variant。 **Value**是**屬性**物件的預設屬性。  
   
--   **屬性**屬性是**長**值，指出屬性提供者特有的特性。  
+-   **Attributes**屬性是**Long**值，指出提供者特定屬性的特性。  
   
- **屬性**收集**欄位**物件包含關於欄位的其他中繼資料。 此集合的內容而有所不同，提供者。 下列程式碼範例會檢查**屬性**的範例集合**資料錄集**導入在這一節的開頭。 它首先會查看集合的內容。 此程式碼會使用[OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)，因此**屬性**集合包含該提供者的相關資訊。  
+ **Field**物件的**Properties**集合包含欄位的其他相關中繼資料。 此集合的內容會根據提供者而有所不同。 下列程式碼範例會檢查本節開頭所引進之範例**記錄集**的**Properties**集合。 它會先查看集合的內容。 此程式碼會使用[SQL Server 的 OLE DB 提供者](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)，因此**Properties**集合會包含該提供者的相關資訊。  
   
 ```  
 'BeginFieldProps  
@@ -101,20 +101,20 @@ ms.locfileid: "67923988"
 ```  
   
 ### <a name="dealing-with-binary-data"></a>處理二進位資料  
- 使用[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)方法**欄位**填入長二進位或字元資料的物件。 在其中的系統記憶體是有限的情況下，您可以使用**AppendChunk**方法來操作部分，而不是完整的長值。  
+ 在**欄位**物件上使用[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)方法，以完整的二進位或字元資料來填滿它。 在系統記憶體有限的情況下，您可以使用**AppendChunk**方法來管理部分中的長值，而不是完整的。  
   
- 如果**adFldLong**位元**屬性**屬性**欄位**物件設定為**True**，您可以使用**AppendChunk**該欄位的方法。  
+ 如果**欄位**物件的**Attributes**屬性中的**adFldLong**位設定為**True**，您可以針對該欄位使用**AppendChunk**方法。  
   
- 第一個**AppendChunk**上呼叫**欄位**物件會將資料寫入欄位中，覆寫任何現有的資料。 後續**AppendChunk**呼叫新增至現有的資料。 如果您將資料附加到一個欄位，然後設定或讀取目前的記錄中的另一個欄位的值，ADO 會假設您已完成將資料附加到第一個欄位。 如果您呼叫**AppendChunk**方法的第一個欄位，ADO 會解譯為新的呼叫**AppendChunk**作業，並覆寫現有的資料。 存取其他欄位**Recordset**不是複製程式碼的第一個物件**資料錄集**物件並不會影響**AppendChunk**作業。  
+ **Field**物件上的第一個**AppendChunk**呼叫會將資料寫入欄位，並覆寫任何現有的資料。 後續的**AppendChunk**呼叫會新增至現有的資料。 如果您要將資料附加至一個欄位，然後設定或讀取目前記錄中另一個欄位的值，ADO 會假設您已完成將資料附加至第一個欄位。 如果您再次呼叫第一個欄位上的**AppendChunk**方法，ADO 會將呼叫解讀為新的**AppendChunk**作業，並覆寫現有的資料。 存取不是第一個**記錄集**物件複製之其他**記錄集**物件中的欄位，將不會中斷**AppendChunk**作業。  
   
- 使用**GetChunk**方法**欄位**擷取部分或所有長二進位或字元資料的物件。 在其中的系統記憶體是有限的情況下，您可以使用**GetChunk**方法來操作部分，而不是完整的長值。  
+ 請在**Field**物件上使用**GetChunk**方法，以取出部分或整個完整的二進位或字元資料。 在系統記憶體受到限制的情況下，您可以使用**GetChunk**方法來管理部分中的長數值，而不是完整的值。  
   
- 資料可**GetChunk**呼叫會傳回指派給*變數*。 如果*大小*大於剩餘的資料， **GetChunk**方法會傳回只剩餘的資料沒有填補*變數*空白空間。 如果欄位是空的**GetChunk**方法會傳回 null 值。  
+ **GetChunk**呼叫傳回的資料會指派給*變數*。 如果*大小*大於剩餘的資料， **GetChunk**方法只會傳回剩餘的資料，而不含空格的填補*變數*。 如果欄位是空的，則**GetChunk**方法會傳回 null 值。  
   
- 每個後續**GetChunk**呼叫會擷取從何處開始的資料先前**GetChunk**離開的呼叫。 不過，如果您會擷取一個欄位的資料，然後設定或讀取目前的記錄中的另一個欄位的值，ADO 會假設您已完成擷取第一個欄位的資料。 如果您呼叫**GetChunk**方法的第一個欄位，ADO 會解譯為新的呼叫**GetChunk**作業，並讀取資料的開頭開始。 存取其他欄位**Recordset**不是複製程式碼的第一個物件**資料錄集**物件並不會影響**GetChunk**作業。  
+ 每個後續的**GetChunk**呼叫都會從先前的**GetChunk**呼叫停止的位置，抓取開始的資料。 不過，如果您要從某個欄位抓取資料，然後設定或讀取目前記錄中另一個欄位的值，ADO 會假設您已完成從第一個欄位抓取資料。 如果您再次呼叫第一個欄位上的**GetChunk**方法，ADO 會將呼叫解讀為新的**GetChunk**作業，並開始讀取資料的開頭。 存取不是第一個**記錄集**物件複製之其他**記錄集**物件中的欄位，將不會中斷**GetChunk**作業。  
   
- 如果**adFldLong**位元**屬性**屬性**欄位**物件設定為**True**，您可以使用**GetChunk**該欄位的方法。  
+ 如果**欄位**物件的**Attributes**屬性中的**adFldLong**位設定為**True**，您可以針對該欄位使用**GetChunk**方法。  
   
- 如果當您使用會有任何目前的資料錄**GetChunk**或是**AppendChunk**方法**欄位**物件時，就會發生錯誤 3021 （沒有目前的記錄）。  
+ 當您在**欄位**物件上使用**GetChunk**或**AppendChunk**方法時，如果沒有目前的記錄，則會發生錯誤3021（沒有目前的記錄）。  
   
- 如需使用這些方法來操作二進位資料的範例，請參閱 < [AppendChunk 方法](../../../ado/reference/ado-api/appendchunk-method-ado.md)並[GetChunk 方法](../../../ado/reference/ado-api/getchunk-method-ado.md)中的範例*ADO 程式設計人員參考*。
+ 如需使用這些方法來操作二進位資料的範例，請參閱 ADO 程式設計*人員參考*中的[AppendChunk 方法](../../../ado/reference/ado-api/appendchunk-method-ado.md)和[GetChunk 方法](../../../ado/reference/ado-api/getchunk-method-ado.md)範例。

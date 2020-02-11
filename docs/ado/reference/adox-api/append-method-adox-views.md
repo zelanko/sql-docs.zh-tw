@@ -1,5 +1,5 @@
 ---
-title: Append 方法 (ADOX Views) |Microsoft Docs
+title: Append 方法（ADOX Views） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 637932fed7effb87705b3aa195578cfd506e1454
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967150"
 ---
 # <a name="append-method-adox-views"></a>Append 方法 (ADOX Views)
-建立新[檢視](../../../ado/reference/adox-api/view-object-adox.md)物件，並將其附加至[檢視](../../../ado/reference/adox-api/views-collection-adox.md)集合。  
+建立新的[View](../../../ado/reference/adox-api/view-object-adox.md)物件，並將它附加至[Views](../../../ado/reference/adox-api/views-collection-adox.md)集合。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,28 +35,28 @@ Views.Append Name, Command
   
 #### <a name="parameters"></a>參數  
  *名稱*  
- A**字串**值，指定要建立之檢視的名稱。  
+ **字串**值，指定要建立的視圖名稱。  
   
- *Command*  
- ADO[命令](../../../ado/reference/ado-api/command-object-ado.md)物件，表示要建立的檢視。  
+ *命令*  
+ ADO [Command](../../../ado/reference/ado-api/command-object-ado.md)物件，代表要建立的視圖。  
   
 ## <a name="remarks"></a>備註  
- 使用名稱和屬性中指定的資料來源中建立新的檢視**命令**物件。  
+ 使用**命令**物件中指定的名稱和屬性，在資料來源中建立新的 view。  
   
- 如果使用者指定的命令文字代表程序，而不是檢視，則行為是取決於提供者。 **附加**如果提供者不支援保存的命令將會失敗。  
+ 如果使用者指定的命令文字代表程式，而不是 view，則行為取決於提供者。 如果提供者不支援持續性命令，**附加**將會失敗。  
   
 > [!NOTE]
->  當使用 OLE DB Provider for Microsoft Jet**檢視**集合**附加**方法可讓您指定**程序**而不是**檢視**中*命令*參數。 **程序**將會加入至資料來源，並將加入**檢視**集合。 之後**Append**，如果**程序**並**檢視**集合會重新整理，**程序**中無法再**檢視**集合會出現在**程序**集合。  
+>  使用 Microsoft Jet 的 OLE DB 提供者時， **Views**集合**Append**方法可讓您在*命令*參數中指定程式 **，而不是** **View** 。 此**程式將會加入**至資料來源，並加入至**Views**集合。 在**附加**之後，如果**程式**和**Views**集合重新整理，則程式不會再出現在**Views**集合中，而且會顯示在 Procedure**集合中**。 ****  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Views 集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Views Append 方法範例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Append 方法 (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 方法 (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append 方法 (ADOX Indexes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append 方法 (ADOX Keys)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append 方法 (ADOX Procedures)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append 方法 (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Views Append 方法範例（VB）](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
+ [Append 方法（ADOX Columns）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append 方法（ADOX Groups）](../../../ado/reference/adox-api/append-method-adox-groups.md)   
+ [Append 方法（ADOX 索引）](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
+ [Append 方法（ADOX Keys）](../../../ado/reference/adox-api/append-method-adox-keys.md)   
+ [Append 方法（ADOX 程式）](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [Append 方法（ADOX Tables）](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Append 方法 (ADOX Users)](../../../ado/reference/adox-api/append-method-adox-users.md)

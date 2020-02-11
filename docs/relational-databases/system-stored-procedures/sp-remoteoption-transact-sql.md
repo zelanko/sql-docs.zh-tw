@@ -1,5 +1,5 @@
 ---
-title: sp_remoteoption (TRANSACT-SQL) |Microsoft Docs
+title: sp_remoteoption （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: c9a7309b-eab7-4192-a414-e282581af4e5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 93e65bb7d72b15dcb29763a1c02845b6ff5faa01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68215930"
 ---
-# <a name="spremoteoption-transact-sql"></a>sp_remoteoption (Transact-SQL)
+# <a name="sp_remoteoption-transact-sql"></a>sp_remoteoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   顯示或變更執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本機伺服器上所定義的遠端登入選項。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]sp_remoteoption 不變更任何選項，並傳回錯誤訊息。 支援這個項目的目的，只是為了與舊版相容。  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]sp_remoteoption 不變更任何選項並傳回錯誤訊息。 支援這個項目的目的，只是為了與舊版相容。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 如述詞逸出字元 |Microsoft Docs
+title: LIKE 述詞 Escape 字元 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20310c60759aea17d61b9252fd73d226567a7a54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68027235"
 ---
 # <a name="like-predicate-escape-character"></a>LIKE 述詞逸出字元
-在 **像**述詞，百分比符號 （%）比對零或多個任意字元和底線 (_) 會比對任何單一字元。 比對實際的百分比符號或底線中**像**述詞，逸出字元必須在前面的百分比符號或底線。 定義逸出序列**像**述詞逸出字元是：  
+在**LIKE**述詞中，百分比符號（%）比對任何字元零或多個，且底線（_）符合任何一個字元。 若要比對**LIKE**述詞中的實際百分比符號或底線，escape 字元必須在百分比符號或底線前面。 定義**LIKE**述詞 escape 字元的轉義順序為：  
   
- **{逸出 '** *逸出字元* **'}**  
+ **{escape '** *escape-字元* **'}**  
   
- 何處*逸出字元*是資料來源所支援的任何字元。  
+ 其中， *escape 字元*是資料來源所支援的任何字元。  
   
- 如需類似的詳細資訊逸出序列，請參閱 <<c0> [ 逸出序列類似](../../../odbc/reference/appendixes/like-escape-sequence.md)附錄 c:SQL 文法。  
+ 如需 LIKE 轉義順序的詳細資訊，請參閱附錄 C： SQL 文法中的[LIKE Escape 序列](../../../odbc/reference/appendixes/like-escape-sequence.md)。  
   
- 例如，下列 SQL 陳述式建立相同的結果集，客戶的開頭是字元"%AAA"的名稱。 第一個陳述式會使用逸出序列的語法。 第二個陳述式為 Microsoft® Access 使用的原生的語法，而且不具互通性。 請注意，在每個字元的第二個百分比**像**述詞會比對零或多個任意字元的萬用字元。  
+ 例如，下列 SQL 語句會建立客戶名稱的相同結果集，其開頭為字元 "% AAA"。 第一個語句使用 escape 序列語法。 第二個語句使用 Microsoft®存取的原生語法，而且無法互通。 請注意，每個**LIKE**述詞中的第二個百分比字元是萬用字元，符合零或多個任一字元。  
   
 ```  
 SELECT Name FROM Customers WHERE Name LIKE '\%AAA%' {escape '\'}  
@@ -37,4 +37,4 @@ SELECT Name FROM Customers WHERE Name LIKE '\%AAA%' {escape '\'}
 SELECT Name FROM Customers WHERE Name LIKE '[%]AAA%'  
 ```  
   
- 若要判斷是否**像是**述詞逸出字元支援的資料來源，應用程式會呼叫**SQLGetInfo** SQL_LIKE_ESCAPE_CLAUSE 選項。
+ 為了判斷資料來源是否支援**LIKE**述詞 escape 字元，應用程式會使用 SQL_LIKE_ESCAPE_CLAUSE 選項來呼叫**SQLGetInfo** 。

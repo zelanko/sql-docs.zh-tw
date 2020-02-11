@@ -1,5 +1,5 @@
 ---
-title: 全文檢索搜尋和語意搜尋目錄檢視 (TRANSACT-SQL) |Microsoft Docs
+title: 全文檢索搜尋和語義搜尋目錄檢視（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 3c10554183501019f00c4f7877fabc102ee44108
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016565"
 ---
 # <a name="full-text-search-and-semantic-search-catalog-views-transact-sql"></a>全文檢索搜尋和語意搜尋目錄檢視 (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68016565"
  針對每個全文檢索目錄，各包含一個資料列。  
   
  [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md)  
- 針對可用於全文檢索索引作業的每一種文件類型，各傳回一個資料列。 每個資料列都代表**IFilter**註冊 SQL Server 執行個體中的介面。  
+ 針對可用於全文檢索索引作業的每一種文件類型，各傳回一個資料列。 每個資料列都代表在 SQL Server 的實例中註冊的**IFilter**介面。  
   
  [sys.fulltext_index_catalog_usages](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)  
  針對通往全文檢索索引參考的每個全文檢索目錄，各傳回一個資料列。  
@@ -48,7 +48,7 @@ ms.locfileid: "68016565"
  針對表格式物件的每個全文檢索索引，各包含一個資料列。  
   
  [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)  
- 針對其斷詞工具向 SQL Server 註冊的每種語言，各包含一個資料列。 每個資料列顯示的 LCID 和語言的名稱。  
+ 針對其斷詞工具向 SQL Server 註冊的每種語言，各包含一個資料列。 每個資料列都會顯示語言的 LCID 和名稱。  
   
  [sys.fulltext_stoplists](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)  
  資料庫中的每個全文檢索停用字詞表都包含一個資料列。  
@@ -73,8 +73,8 @@ ms.locfileid: "68016565"
  針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上註冊語義模型的每個語言，各傳回一個資料列。 當語言模型已註冊時，該語言會啟用語意索引。  
   
 ## <a name="see-also"></a>另請參閱  
- [系統檢視表&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [&#40;Transact-sql&#41;的系統檢視](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [全文檢索搜尋和語意搜尋動態管理檢視和函式&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [全文檢索搜尋和語義搜尋動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

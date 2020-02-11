@@ -1,5 +1,5 @@
 ---
-title: sysmail_add_profileaccount_sp & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sysmail_add_profileaccount_sp （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 11ada827add27ae2186fdcc565b3dd2f99f76452
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017760"
 ---
-# <a name="sysmailaddprofileaccountsp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
+# <a name="sysmail_add_profileaccount_sp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  將 Database Mail 帳戶加入 Database Mail 設定檔中。 執行**sysmail_add_profileaccount_sp**使用資料庫帳戶建立之後[sysmail_add_account_sp &#40;-&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)，和資料庫設定檔會透過[sysmail_add_profile_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md)。  
+  將 Database Mail 帳戶加入 Database Mail 設定檔中。 在建立資料庫帳戶後，使用[sysmail_add_account_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)來執行**sysmail_add_profileaccount_sp** ，並使用[Sysmail_add_profile_sp &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md)建立資料庫設定檔。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,32 +41,32 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @profile_id = ] profile_id` 若要將帳戶加入設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。 任一*profile_id*或*profile_name*必須指定。  
+`[ @profile_id = ] profile_id`要新增帳戶的設定檔識別碼。 *profile_id*是**int**，預設值是 Null。 必須指定*profile_id*或*profile_name* 。  
   
-`[ @profile_name = ] 'profile_name'` 若要將帳戶加入設定檔名稱。 *profile_name*已**sysname**，預設值是 NULL。 任一*profile_id*或*profile_name*必須指定。  
+`[ @profile_name = ] 'profile_name'`要新增帳戶的設定檔名稱。 *profile_name*是**sysname**，預設值是 Null。 必須指定*profile_id*或*profile_name* 。  
   
-`[ @account_id = ] account_id` 要加入設定檔的帳戶識別碼。 *account_id*已**int**，預設值是 NULL。 任一*account_id*或*account_name*必須指定。  
+`[ @account_id = ] account_id`要新增至設定檔的帳戶識別碼。 *account_id*是**int**，預設值是 Null。 必須指定*account_id*或*account_name* 。  
   
-`[ @account_name = ] 'account_name'` 要加入至設定檔的帳戶名稱。 *account_name*已**sysname**，預設值是 NULL。 任一*account_id*或*account_name*必須指定。  
+`[ @account_name = ] 'account_name'`要新增至設定檔的帳戶名稱。 *account_name*是**sysname**，預設值是 Null。 必須指定*account_id*或*account_name* 。  
   
-`[ @sequence_number = ] sequence_number` 設定檔中的帳戶序號。 *sequence_number*已**int**，沒有預設值。 序號決定了帳戶在設定檔中的使用順序。  
+`[ @sequence_number = ] sequence_number`帳戶在設定檔內的序號。 *sequence_number*是**int**，沒有預設值。 序號決定了帳戶在設定檔中的使用順序。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
  設定檔和帳戶都必須存在。 否則，預存程序會傳回錯誤。  
   
- 請注意，這個預存程序並不會變更已關聯於指定設定檔的帳戶序號。 如需有關如何更新帳戶序號的詳細資訊，請參閱 < [sysmail_update_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)。  
+ 請注意，這個預存程序並不會變更已關聯於指定設定檔的帳戶序號。 如需有關更新帳戶序號的詳細資訊，請參閱[sysmail_update_profileaccount_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)。  
   
  序號決定了 Database Mail 使用設定檔中之帳戶的順序。 如果是新的電子郵件訊息，Database Mail 會從序號最低的帳戶開始。 如果這個帳戶失敗，Database Mail 會使用序號次高的帳戶，依此類推，直到 Database Mail 傳送訊息成功為止，或直到序號最高的帳戶失敗為止。 如果序號最高的帳戶失敗，Database Mail 會在 *sysmail_configure_sp* 的 **AccountRetryDelay**參數所設定的時間之內，暫停傳送郵件，之後，再從最低的序號開始，重新嘗試傳送郵件的處理序。 請利用 *sysmail_configure_sp* 的 **AccountRetryAttempts**參數，設定外部郵件處理序嘗試利用指定設定檔中的每個帳戶，來傳送電子郵件訊息的次數。  
   
  如果有多個序號相同的帳戶存在，Database Mail 只會將其中一個帳戶用在給定的電子郵件訊息上。 在這個情況下，Database Mail 並無法保證這個序號會用到哪個帳戶，也無法保證各訊息會用到相同的帳戶。  
   
- 預存程序**sysmail_add_profileaccount_sp**處於**msdb**資料庫中，擁有者**dbo**結構描述。 此程序必須利用三部分名稱來執行，如果目前的資料庫不是**msdb**。  
+ 預存程式**sysmail_add_profileaccount_sp**在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱來執行此程式。  
   
-## <a name="permissions"></a>Permissions  
- 執行此程序預設值，成員的權限**sysadmin**固定的伺服器角色。  
+## <a name="permissions"></a>權限  
+ 此程式的執行許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
  下列範例會將 `AdventureWorks Administrator` 設定檔關聯於 `Audit Account` 帳戶。 稽核帳戶的序號是 1。  
@@ -81,7 +81,7 @@ EXECUTE msdb.dbo.sysmail_add_profileaccount_sp
 ## <a name="see-also"></a>另請參閱  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [建立 Database Mail 帳戶](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Database Mail 組態物件](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Database Mail 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail 設定物件](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Database Mail 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

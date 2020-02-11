@@ -15,26 +15,26 @@ ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f466d98d5d1edec2efa824ac644ad6bb49e990a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022159"
 ---
 # <a name="using-sqlbindcol"></a>使用 SQLBindCol
-藉由呼叫應用程式繫結的資料行**SQLBindCol**。 此函式會將一個資料行繫結一次。 有了它，應用程式則指定下列項目：  
+應用程式會藉由呼叫**SQLBindCol**來系結資料行。 此函式會一次系結一個資料行。 使用它，應用程式會指定下列各項：  
   
--   資料行編號。 資料行 0 是書籤資料行中;此資料行不會納入一些結果集。 所有其他資料行編號從數字 1 開始。 它會多於可用資料行的結果集; 繫結的編號較高的資料行發生錯誤此錯誤無法偵測到之前已建立結果集，因此它由**SQLFetch**，而非**SQLBindCol**。  
+-   資料行編號。 [資料行 0] 是書簽資料行;某些結果集不包含這個資料行。 所有其他資料行都是從數位1開始編號。 系結較高編號的資料行，而不是結果集中的資料行，這是一項錯誤。在建立結果集之前，無法偵測到此錯誤，因此它是由**SQLFetch**傳回，而不是**SQLBindCol**。  
   
--   C 資料類型、 位址和位元組長度的變數繫結至資料行。 它會指定 C 資料類型的資料行的 SQL 資料類型無法轉換; 發生錯誤此錯誤可能無法偵測之前已建立結果集，因此它由**SQLFetch**，而非**SQLBindCol**。 如需支援的轉換，請參閱[轉換將資料從 SQL 到 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)附錄 d:資料類型。 如需位元組長度的資訊，請參閱[的資料緩衝區長度](../../../odbc/reference/develop-app/data-buffer-length.md)。  
+-   系結至資料行之變數的 C 資料類型、位址和位元組長度。 若要指定 C 資料類型，而無法轉換資料行的 SQL 資料類型，就會發生錯誤。在建立結果集之前，可能不會偵測到此錯誤，因此它是由**SQLFetch**傳回，而不是**SQLBindCol**。 如需支援的轉換清單，請參閱附錄 D：資料類型中的[將資料從 SQL 轉換成 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)。 如需位元組長度的相關資訊，請參閱[資料緩衝區長度](../../../odbc/reference/develop-app/data-buffer-length.md)。  
   
--   長度/指標緩衝區的位址。 長度/指標緩衝區是選擇性的。 它用來傳回二進位或字元資料或傳回 SQL_NULL_DATA 的位元組長度，如果資料為 NULL。 如需詳細資訊，請參閱 <<c0> [ 使用長度/指標值](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)。  
+-   長度/指標緩衝區的位址。 長度/指標緩衝區是選擇性的。 它可用來傳回二進位或字元資料的位元組長度，或在資料為 Null 時傳回 SQL_Null_DATA。 如需詳細資訊，請參閱[使用長度/指標值](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)。  
   
- 當**SQLBindCol**是呼叫，此驅動程式將這項資訊與陳述式。 會擷取每個資料列，它會使用資訊來將每個資料行的資料放在繫結的應用程式變數中。  
+ 呼叫**SQLBindCol**時，驅動程式會將此資訊與語句產生關聯。 提取每個資料列時，它會使用此資訊，將每個資料行的資料放在系結的應用程式變數中。  
   
- 例如，下列程式碼會繫結變數的銷售人員和 CustID 資料行。 資料行的資料將會傳回*SalesPerson*並*CustID*。 因為*業務員*是字元的緩衝區中，應用程式指定的位元組長度 (11)，好讓驅動程式可以判斷是否要截斷的資料。 傳回的位元組長度的連結，或者是否為 NULL，將會傳回*SalesPersonLenOrInd*。  
+ 例如，下列程式碼會將變數系結至 [銷售人員] 和 [CustID] 資料行。 資料行將在*銷售人員*和*CustID*中傳回。 由於*銷售人員*是字元緩衝區，因此應用程式會指定其位元組長度（11），以便讓驅動程式判斷是否要截斷資料。 傳回之標題的位元組長度，或其是否為 Null，將會在*SalesPersonLenOrInd*中傳回。  
   
- 因為*CustID*是一個整數變數，並有固定的長度，則不需要指定它的位元組長度; 驅動程式會假設它是**sizeof (** SQLUINTEGER **)** 。 傳回的客戶的位元組長度識別碼的資料，或是否為 NULL，將會傳回*CustIDInd*。 請注意，應用程式想要只薪資是否為 NULL，因為永遠是位元組長度**sizeof (** SQLUINTEGER **)** 。  
+ 因為*CustID*是整數變數而且具有固定長度，所以不需要指定它的位元組長度。驅動程式假設它是**sizeof （** SQLUINTEGER **）**。 傳回的客戶識別碼資料的位元組長度，或其是否為 Null，將會在*CustIDInd*中傳回。 請注意，應用程式只對薪資是否為 Null 感興趣，因為位元組長度一律為**sizeof （** SQLUINTEGER **）**。  
   
 ```  
 SQLCHAR       SalesPerson[11];  
@@ -70,7 +70,7 @@ while ((rc = SQLFetch(hstmt)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmt);  
 ```  
   
- 下列程式碼執行**選取**使用者輸入陳述式，並列印每個結果集內的資料列。 因為應用程式無法預測結果的圖形設定所建立**選取**陳述式，所以無法繫結硬式編碼的變數至結果集，如上述範例所示。 相反地，應用程式會保存資料的緩衝區和長度/指標緩衝區配置該資料列中的每一個資料行。 每個資料行，它會計算資料行的記憶體開頭的位移，並調整此位移為對齊界限上的資料行的資料和長度/指標緩衝區啟動。 然後，它繫結至資料行位移開始的記憶體。 從驅動程式的觀點來看，這個記憶體位址是區別繫結在上述範例中，變數的位址。 如需對齊的詳細資訊，請參閱[對齊](../../../odbc/reference/develop-app/alignment.md)。  
+ 下列程式碼會執行使用者所輸入的**SELECT**語句，並列印結果集中的每個資料列。 因為應用程式無法預測**SELECT**語句所建立之結果集的形狀，所以它無法將硬式編碼的變數系結至結果集，如先前範例所示。 相反地，應用程式會配置一個緩衝區，以保存該資料列中每個資料行的資料和長度/指標緩衝區。 針對每個資料行，它會計算資料行記憶體起始處的位移，並調整此位移，以便在對齊界限開始時，資料行的資料和長度/指標緩衝區。 然後，它會將從位移開始的記憶體系結至資料行。 從驅動程式的觀點來看，這個記憶體的位址與上述範例中系結之變數的位址是不區分的。 如需對齊的詳細資訊，請參閱[對齊](../../../odbc/reference/develop-app/alignment.md)。  
   
 ```  
 // This application allocates a buffer at run time. For each column, this   

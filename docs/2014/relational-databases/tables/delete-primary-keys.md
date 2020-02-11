@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 690b52fceb74269501880565bab65b020206fa61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761521"
 ---
 # <a name="delete-primary-keys"></a>刪除主索引鍵
@@ -28,7 +28,7 @@ ms.locfileid: "62761521"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目來刪除主索引鍵：**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62761521"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
@@ -62,7 +62,7 @@ ms.locfileid: "62761521"
     > [!NOTE]  
     >  若要恢復此一動作，可將資料表關閉而不儲存變更。 如果恢復刪除主索引鍵的動作，將會遺失所有對資料表進行的其他變更。  
   
-3.  在 [檔案]  功能表上，按一下 [儲存]  _table name_。  
+3.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

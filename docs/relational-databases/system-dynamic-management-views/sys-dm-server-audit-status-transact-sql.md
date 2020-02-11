@@ -19,10 +19,10 @@ ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c30cbd012bb1ccc7d379eadcfd29fee87a96dd85
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72313689"
 ---
 # <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
@@ -30,18 +30,18 @@ ms.locfileid: "72313689"
 
   針對每個伺服器稽核各傳回一個資料列，表示此稽核的目前狀態。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
-|資料行名稱|[名稱]|描述|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|稽核的識別碼。 對應至 [ **sys.databases** ] 目錄檢視中的 [ **audit_id** ] 欄位。|  
 |**name**|**sysname**|稽核的名稱。 與 [ **server_audits**目錄] 視圖中的 [**名稱**] 欄位相同。|  
-|**status**|**smallint**|伺服器稽核的數值狀態：<br /><br /> 0 = 未啟動<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      執行時間失敗<br /><br /> 3 = 目標建立失敗<br /><br /> 4 = 關閉|  
+|**狀態**|**smallint**|伺服器稽核的數值狀態：<br /><br /> 0 = 未啟動<br /><br /> 1 =<br />        已啟動<br /><br /> 2 =<br />      執行時間失敗<br /><br /> 3 = 目標建立失敗<br /><br /> 4 = 關閉|  
 |**status_desc**|**nvarchar(256)**|顯示伺服器稽核狀態的字串：<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|稽核之上一次狀態變更的時間戳記 (以 UTC 為單位)。|  
-|**event_session_address**|**Varbinary （8）**|與稽核相關聯之擴充的事件工作階段的位址。 與 sys.databases 目錄檢視相關的**dm_xe_sessions。**|  
+|**event_session_address**|**varbinary(8)**|與稽核相關聯之擴充的事件工作階段的位址。 與 sys.databases 目錄檢視相關的**dm_xe_sessions。**|  
 |**audit_file_path**|**nvarchar(256)**|目前正在使用之稽核檔案目標的完整路徑和檔案名稱。 只會針對檔案稽核填入。|  
-|**audit_file_size**|**bigint**|稽核檔案的近似大小 (以位元組為單位)。 只會針對檔案稽核填入。|  
+|**audit_file_size**|**Bigint**|稽核檔案的近似大小 (以位元組為單位)。 只會針對檔案稽核填入。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  主體必須擁有**VIEW SERVER STATE**和**SELECT**許可權。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
@@ -64,7 +64,7 @@ ms.locfileid: "72313689"
  [sys.server_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
  [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
  [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [dm_server_audit_status](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys. dm_server_audit_status](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [建立伺服器稽核與伺服器稽核規格](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  

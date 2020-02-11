@@ -14,22 +14,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cc127a8bafc9ad2f53465caeca013d5033e5c396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62702979"
 ---
 # <a name="adomdnet-server-functionality"></a>ADOMD.NET 伺服器功能
   所有的 ADOMD.NET 伺服器物件，都可用唯讀方式存取伺服器上的資料與中繼資料。 若要擷取資料與中繼資料，使用 ADOMD.NET 伺服器物件模型做為伺服器物件模型，並不支援結構描述資料列集。  
   
- 透過 ADOMD.NET 伺服器物件，您可以建立使用者定義函數 (UDF) 或是預存程序[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 這些同處理序方法是透過以多維度運算式 (MDX)、資料採礦延伸模組 (DMX) 或是 SQL 等語言所建立的查詢陳述式來呼叫。 這些同處理序方法也提供與網路通訊關聯且沒有延遲的附加功能。  
+ 使用 ADOMD.NET 伺服器物件，您可以建立使用者定義函數（UDF）或的預存程式[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 這些同處理序方法是透過以多維度運算式 (MDX)、資料採礦延伸模組 (DMX) 或是 SQL 等語言所建立的查詢陳述式來呼叫。 這些同處理序方法也提供與網路通訊關聯且沒有延遲的附加功能。  
   
 > [!NOTE]  
->  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> 物件只支援 DMX。  
+>  
+  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> 物件只支援 DMX。  
   
 ## <a name="what-is-a-udf"></a>何謂 UDF？  
- A *UDF*是一種方法具有下列特性：  
+ *UDF*是具有下列特性的方法：  
   
 -   您可以在查詢內容中呼叫 UDF。  
   
@@ -46,9 +47,9 @@ FROM SalesModel
 ```  
   
 ## <a name="what-is-a-stored-procedure"></a>何謂預存程序？  
- A*預存程序*是一種方法具有下列特性：  
+ *預存*程式是具有下列特性的方法：  
   
--   您呼叫預存程序的使用 MDX[呼叫](/sql/mdx/mdx-data-manipulation-call)陳述式。  
+-   您可以使用 MDX [call](/sql/mdx/mdx-data-manipulation-call)語句，自行呼叫預存程式。  
   
 -   預存程序可以使用任何數目的參數。  
   

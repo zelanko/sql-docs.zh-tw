@@ -14,23 +14,23 @@ ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8b4e8d3c36054cd4e9dc49e940e60df51f17ddc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67940017"
 ---
 # <a name="ado-md-collections"></a>ADO MD 集合
 
 |||  
 |-|-|  
-|[軸](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|包含**軸**定義資料格集的物件。|  
-|[CubeDefs](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|包含**CubeDef**表示多維度的類別目錄 cube 物件。|  
-|[Dimensions](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|包含**維度**構成 cube 物件。|  
-|[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|包含集合**階層**維度中的物件。|  
-|[Levels](../../../ado/reference/ado-md-api/level-object-ado-md.md)|包含**層級**構成的階層物件。|  
-|[成員](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|包含**成員**物件從一個層級或沿著座標軸的位置。|  
-|[位置](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|包含**位置**軸，定義某個點的物件。|  
+|[軸](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|包含定義儲存格集的**軸**物件。|  
+|[CubeDefs](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|包含**CubeDef**物件，代表多維度目錄中的 cube。|  
+|[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|包含組成 cube 的**維度**物件。|  
+|[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|包含維度中**的集合階層**物件。|  
+|[Levels](../../../ado/reference/ado-md-api/level-object-ado-md.md)|包含組成階層的**層級**物件。|  
+|[成員](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|包含來自層級的**成員**物件或沿著軸的位置。|  
+|[Positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|包含定義軸上點的**位置**物件。|  
   
 ## <a name="see-also"></a>另請參閱  
  [ADO MD API 參考](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   

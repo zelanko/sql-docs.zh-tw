@@ -20,10 +20,10 @@ ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 24c4b8af65830f8cc3a4a4bb2c4084ed4718515b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843683"
 ---
 # <a name="ident_incr-transact-sql"></a>IDENT_INCR (Transact-SQL)
@@ -43,7 +43,7 @@ IDENT_INCR ( 'table_or_view' )
 **'** *table_or_view* **'**  
 為指定要檢查有效識別遞增值的資料表或檢視的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *table_or_view* 可以是以引號括住的字元字串常數。 它也可以是變數、函式或資料行名稱。 *table_or_view* 為 **char**、**nchar**、**varchar**，或 **nvarchar**。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 **numeric**([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## <a name="exceptions"></a>例外狀況  

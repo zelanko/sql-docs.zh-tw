@@ -1,5 +1,5 @@
 ---
-title: 範例查詢 XMLType 資料行 | Microsoft Docs
+title: 範例：查詢 XMLType 資料行 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d91192a8edd4d4ab93f539b9dc359e1be37eecf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637728"
 ---
-# <a name="example-querying-xmltype-columns"></a>範例查詢 XMLType 資料行
-  下列查詢包含 `xml` 類型的資料行。 此查詢會從 `xml` 類型之 `Instructions` 資料行的第一個位置，擷取產品型號識別碼、名稱和製造步驟。  
+# <a name="example-querying-xmltype-columns"></a>範例：查詢 XMLType 資料行
+  下列查詢包含 `xml` 類型的資料行。 此查詢會從 `Instructions` 類型之 `xml` 資料行的第一個位置，擷取產品型號識別碼、名稱和製造步驟。  
   
 ## <a name="example"></a>範例  
   
@@ -114,6 +114,6 @@ go
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 FOR XML 的 RAW 模式](use-raw-mode-with-for-xml.md)  
+ [搭配 FOR XML 使用 RAW 模式](use-raw-mode-with-for-xml.md)  
   
   

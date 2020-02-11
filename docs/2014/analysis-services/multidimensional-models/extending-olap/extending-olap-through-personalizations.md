@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74c5b777dda06cf70a6afa2e6384eb2a3587d431
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62725982"
 ---
 # <a name="extending-olap-through-personalizations"></a>通過個人化擴充 OLAP
@@ -31,7 +31,7 @@ ms.locfileid: "62725982"
  SQL Server Analysis Services 個人化延伸模組是實作外掛程式架構之概念的基礎。 Analysis Services 個人化延伸模組是比現有 Managed 組件架構更簡單精緻的版本，會在整個 Analysis Services <xref:Microsoft.AnalysisServices.AdomdServer> 物件模型、多維度運算式 (MDX) 語法和結構描述資料列集中公開。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型組件管理](../multidimensional-model-assemblies-management.md)   
+ [多維度模型元件管理](../multidimensional-model-assemblies-management.md)   
  [Analysis Services 個人化延伸模組](analysis-services-personalization-extensions.md)  
   
   

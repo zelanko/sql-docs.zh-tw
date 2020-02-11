@@ -1,5 +1,5 @@
 ---
-title: Cancel 方法範例 (VBScript) |Microsoft Docs
+title: Cancel 方法範例（VBScript） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +15,17 @@ ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 764a99faf40450bfd550dfe3f96789e705e8624a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964722"
 ---
 # <a name="cancel-method-example-vbscript"></a>Cancel 方法範例 (VBScript)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下列範例示範如何讀取[取消](../../../ado/reference/ado-api/cancel-method-ado.md)方法在執行階段。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存為 CancelVBS.asp。 您可以在任何用戶端瀏覽器中檢視結果。  
+ 下列範例顯示如何在執行時間讀取[取消](../../../ado/reference/ado-api/cancel-method-ado.md)方法。 將下列程式碼剪下並貼到 [記事本] 或其他文字編輯器，並將其儲存為 CancelVBS。 您可以在任何用戶端瀏覽器中查看結果。  
   
 ```  
 <!-- BeginCancelVBS -->  

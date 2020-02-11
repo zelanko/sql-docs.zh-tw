@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68212000"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>建立和測試分類使用者定義函數
@@ -118,7 +118,8 @@ ms.locfileid: "68212000"
 4.  建立使用時間函數和值 (可針對查閱資料表中的時間評估) 的分類函數。 如需在分類函式使用中使用查閱資料表的詳細資訊，請參閱本主題中的＜在分類函式中使用查閱資料表的最佳做法＞。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了一組擴充的日期與時間資料類型和函數。 如需詳細資訊，請參閱[日期和時間資料類型與函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)。  
+    >  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了一組擴充的日期與時間資料類型和函數。 如需詳細資訊，請參閱[日期和時間資料類型與函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)。  
   
     ```  
     CREATE FUNCTION fnTimeClassifier()  
@@ -263,16 +264,16 @@ ms.locfileid: "68212000"
         >  以下是我們建議的最佳做法。 如果有問題導致無法遵循下列最佳做法，建議您連絡 Microsoft 支援部門，以便主動避免未來發生任何問題。  
   
 ## <a name="see-also"></a>另請參閱  
- [資源管理員](resource-governor.md)   
- [啟用資源管理員](enable-resource-governor.md)   
- [資源管理員資源集區](resource-governor-resource-pool.md)   
- [資源管理員工作負載群組](resource-governor-workload-group.md)   
- [使用範本來設定資源管理員](configure-resource-governor-using-a-template.md)   
- [檢視資源管理員屬性](view-resource-governor-properties.md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)   
- [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
- [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)   
- [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
+ [Resource Governor](resource-governor.md)   
+ [啟用 Resource Governor](enable-resource-governor.md)   
+ [Resource Governor 資源集區](resource-governor-resource-pool.md)   
+ [Resource Governor 工作負載群組](resource-governor-workload-group.md)   
+ [使用範本設定 Resource Governor](configure-resource-governor-using-a-template.md)   
+ [View Resource Governor 屬性](view-resource-governor-properties.md)   
+ [ALTER RESOURCE GOVERNOR &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)   
+ [建立資源集區 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [建立工作負載群組 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)   
+ [CREATE FUNCTION &#40;Transact-sql&#41;](/sql/t-sql/statements/create-function-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

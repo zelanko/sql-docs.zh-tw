@@ -1,5 +1,5 @@
 ---
-title: 修改 SQL Server 服務進階屬性使用 VBScript |Microsoft Docs
+title: 使用 VBScript 修改 SQL Server 服務的 Advanced 屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f3a380f80b4ecc7540e29605543722edd55e226d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705069"
 ---
 # <a name="modify-sql-server-service-advanced-properties-using-vbscript"></a>使用 VBScript 修改 SQL Server 服務進階屬性
-  本節說明如何建立 VBScript 程式來列出已安裝的執行個體的版本[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的電腦上執行。  
+  本節說明如何建立 VBScript 程式，以列出在電腦上執行之[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已安裝實例的版本。  
   
  此程式碼範例會列出在電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和它的版本。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62705069"
   
 5.  儲存檔案。  
   
-6.  執行指令碼輸入`cscript test.vbs`在命令提示字元。  
+6.  在命令提示字元中`cscript test.vbs`輸入，以執行腳本。  
   
 ## <a name="example"></a>範例  
   

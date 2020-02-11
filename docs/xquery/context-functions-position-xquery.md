@@ -1,5 +1,5 @@
 ---
-title: position 函數 (XQuery) |Microsoft Docs
+title: position 函數（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038977"
 ---
 # <a name="context-functions---position-xquery"></a>內容函式 - position (XQuery)
@@ -35,13 +35,13 @@ fn:position() as xs:integer
 ```  
   
 ## <a name="remarks"></a>備註  
- 在  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]， **fn:position()** 只能用於內容相依述詞的內容。 具體而言，它只能用於括號 ([ ]) 內。針對此函數所做的比較不會在靜態類型推斷期間減少基數。  
+ 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中， **fn： position （）** 只能用於內容相依述詞的內容中。 具體而言，它只能用於括號 ([ ]) 內。針對此函數所做的比較不會在靜態類型推斷期間減少基數。  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫。  
+ 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存**** 在資料庫的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]各種 XML 類型資料行中。  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. 使用 position() XQuery 函數以擷取前兩個產品功能  
- 下列查詢會擷取前兩個功能，也就是前兩個子元素的 <`Features`> 項目，從產品型號目錄描述。 如果沒有更多的功能，它會新增 <`there-is-more/`> 元素加入結果。  
+ 下列查詢會從產品型號目錄描述中，抓取前兩個功能，也`Features`就是 <> 元素的前兩個子項目。 如果有更多的功能，它會將`there-is-more/` <> 元素新增至結果。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -67,13 +67,13 @@ WHERE CatalogDescription is not null
   
  請注意下列項目是從上一個查詢而來：  
   
--   **命名空間**中的關鍵字[XQuery 初構](../xquery/modules-and-prologs-xquery-prolog.md)定義命名空間前置詞用於查詢主體中。  
+-   [XQuery](../xquery/modules-and-prologs-xquery-prolog.md)初構中的**namespace**關鍵字會定義在查詢主體中使用的命名空間前置詞。  
   
--   查詢主體建構具有的 XML\<產品 > 項目**ProductModelID**並**ProductModelName**屬性，且具有以子元素傳回的產品功能。  
+-   查詢主體會使用具有\< **ProductModelID**和**ProductModelName**屬性的產品> 專案來建立 XML，並將產品功能當做子項目傳回。  
   
--   **Position （)** 函式來判斷的位置時，會在述詞\<功能 > 內容中的子項目。 如果它是第一個或第二個功能，就會傳回它。  
+-   **Position （）** 函式會在述詞中用來判斷\<功能> 子專案在內容中的位置。 如果它是第一個或第二個功能，就會傳回它。  
   
--   如果陳述式加入\<該處是更 / > 元素加入結果中，如果產品目錄中有兩個以上的功能。  
+-   如果產品目錄中有\<兩個以上的功能，if 語句會 > 將此專案新增至結果。  
   
 -   因為並非所有的產品型號都在資料表中儲存目錄描述，所以將使用 WHERE 子句來捨棄 CatalogDescriptions 為 NULL 的 WHERE 子句。  
   
@@ -96,6 +96,6 @@ WHERE CatalogDescription is not null
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [針對 xml 資料類型的 XQuery 函式](../xquery/xquery-functions-against-the-xml-data-type.md)  
+ [針對 xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

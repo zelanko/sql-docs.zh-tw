@@ -1,5 +1,5 @@
 ---
-title: 視覺化C++延伸模組標頭 |Microsoft Docs
+title: Visual C++ 延伸模組標頭 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 675a31ab333a6c2d92e6afcd6a461b3baebd5b3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926381"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++ Extensions 標題
-下列標頭中， **icrsint.h**，允許擷取欄位的用戶端的介面將詳細說明**資料錄集**為衍生自的類別中定義的變數**CADORecordBinding**. 您必須指定您想要存取每個欄位的 ADO 繫結巨集。  
+下列標頭**icrsint**詳述的介面，可讓用戶端將**記錄集**的欄位，抓取至衍生自**CADORecordBinding**的類別中所定義的變數。 您必須為您想要存取的每個欄位指定 ADO 系結宏。  
   
 ```cpp
 #ifndef _ICRSINT_H_  
@@ -208,5 +208,5 @@ public:
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [視覺化C++延伸模組範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
+ [Visual C++ 延伸模組範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [使用 Visual C++ Extensions](../../../ado/guide/appendixes/using-visual-c-extensions.md)

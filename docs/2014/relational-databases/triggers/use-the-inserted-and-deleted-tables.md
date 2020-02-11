@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524374"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>使用插入或刪除的資料表
@@ -38,7 +38,7 @@ ms.locfileid: "62524374"
   
 -   尋找資料修改前後之資料表狀態的差異，並依據這些差異採取動作。  
   
- deleted 資料表會儲存被 DELETE 及 UPDATE 陳述式影響的資料列副本。 在執行 DELETE 或 UPDATE 陳述式時，資料列會從觸發程序資料表刪除，並傳送到 deleted 資料表。 deleted 資料表及其觸發程序資料表兩者通常不會有資料列。  
+ deleted 資料表會儲存被 DELETE 及 UPDATE 陳述式影響的資料列副本。 在執行 DELETE 或 UPDATE 陳述式時，資料列會從觸發程序資料表刪除，並傳送到 deleted 資料表。 deleted 資料表及其觸發程序資料表兩者通常不會有相同的資料列。  
   
  inserted 資料表會儲存被 INSERT 及 UPDATE 陳述式影響的資料列副本。 在插入或更新交易期間，新的資料列會同時加入 inserted 資料表和觸發程序資料表。 inserted 資料表中的資料列即為觸發程序資料表中新資料列的副本。  
   
@@ -49,7 +49,8 @@ ms.locfileid: "62524374"
 > [!NOTE]  
 >  若觸發程序動作依據被修改的資料列數目來決定啟動與否時，則可利用對多資料列資料修改 (依據 SELECT 陳述式的 INSERT、DELETE 或 UPDATE) 的測試 (如 @@ROWCOUNT 的檢查)，以決定執行何者動作。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在使用 AFTER 觸發程序時，不允許參考 inserted 和 deleted 資料表中的 `text`、`ntext` 或 `image` 資料行。 但還是包含這些資料類型，僅做為回溯相容性的目的使用。 對於大量資料，較佳的儲存方式是使用 `varchar(max)`、`nvarchar(max)` 和 `varbinary(max)` 資料類型。 AFTER 和 INSTEAD OF 觸發程序都支援 inserted 和 deleted 資料表中的 `varchar(max)`、`nvarchar(max)` 和 `varbinary(max)` 資料。 如需詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)。  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在使用 AFTER 觸發程序時，不允許參考 inserted 和 deleted 資料表中的 `text`、`ntext` 或 `image` 資料行。 但還是包含這些資料類型，僅做為回溯相容性的目的使用。 對於大量資料，較佳的儲存方式是使用 `varchar(max)`、`nvarchar(max)` 和 `varbinary(max)` 資料類型。 AFTER 和 INSTEAD OF 觸發程序都支援 inserted 和 deleted 資料表中的 `varchar(max)`、`nvarchar(max)` 和 `varbinary(max)` 資料。 如需詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)。  
   
  **在觸發程序中使用 inserted 資料表來強制執行商務規則的範例**  
   
@@ -87,7 +88,7 @@ JOIN Person.Person AS p
 ON e.BusinessEntityID = p.BusinessEntityID;  
 ```  
   
- 這個檢視的結果集有三個資料行：一個 `int` 資料行和兩個 `nvarchar` 資料行。 傳遞給在檢視表上定義之 INSTEAD OF 觸發程序的 inserted 和 deleted 資料表，也必須有名稱為 `BusinessEntityID` 的 `int` 資料行、名稱為 `LName` 的 `nvarchar` 資料行，以及名稱為 `FName` 的 `nvarchar` 資料行。  
+ 這個檢視的結果集有三個資料行：一個 `int` 資料行和兩個 `nvarchar` 資料行。 傳遞給在檢視表上定義之 INSTEAD OF 觸發程序的 inserted 和 deleted 資料表，也必須有名稱為 `int` 的 `BusinessEntityID` 資料行、名稱為 `nvarchar` 的 `LName` 資料行，以及名稱為 `nvarchar` 的 `FName` 資料行。  
   
  檢視的選取清單也可以包含不直接對應到單一基底資料表資料行的運算式。 有些檢視運算式，例如條件約束或函數引動過程，無法參考任何資料行且可以被忽略。 複雜運算式可以參考多個資料行，但 inserted 及 deleted 資料表的每個插入資料列只能有一個值。 同樣的原則亦適用於檢視中的簡單運算式，前提是它們參考的計算資料行含有複雜運算式。 檢視的 INSTEAD OF 觸發程序必須處理這些類型的運算式。  
   

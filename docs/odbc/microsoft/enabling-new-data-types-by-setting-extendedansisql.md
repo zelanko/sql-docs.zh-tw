@@ -1,5 +1,5 @@
 ---
-title: 設定 extendedansisql 來啟用新的資料類型 |Microsoft Docs
+title: 藉由設定 ExtendedAnsiSQL 來啟用新的資料類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: f2865543-7fff-44fa-9a6a-968bec33acdc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88f11adcab09dbe6964bfd67a944912fc185bccb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68031126"
 ---
 # <a name="enabling-new-data-types-by-setting-extendedansisql"></a>設定 ExtendedAnsiSQL 以啟用新資料類型
-開啟 ExtendedAnsiSQL 旗標時，兩個新的資料類型是 Jet 4.0 資料庫中可用：SQL_DECIMAL 和 SQL_NUMERIC。 預設有效位數和小數位數分別為 18 和 0。 透過 ODBC 類型 SQL_DECIMAL 或 SQL_NUMERIC 為存取的資料會對應到 Microsoft Jet 十進位而不是貨幣。  
+當 ExtendedAnsiSQL 旗標開啟時，Jet 4.0 資料庫中有兩種新的資料類型： SQL_DECIMAL 和 SQL_NUMERIC。 預設的精確度和小數位數分別為18和0。 透過 ODBC 存取的資料（類型為 SQL_DECIMAL 或 SQL_NUMERIC）會對應至 Microsoft Jet Decimal，而不是貨幣。  
   
- ExtendedAnsiSQL 旗標為關閉時，您無法使用十進位或數值類型，來建立資料表，這些類型不會出現在 SQLGetTypeInfo()。 不過，如果資料表包含新的資料類型，它們可以搭配正確的資料類型。
+ 當 ExtendedAnsiSQL 旗標已關閉時，您無法建立具有 decimal 或 numeric 類型的資料表，而且這些類型不會出現在 SQLGetTypeInfo （）中。 不過，如果資料表包含新的資料類型，它們可以與正確的資料類型搭配使用。

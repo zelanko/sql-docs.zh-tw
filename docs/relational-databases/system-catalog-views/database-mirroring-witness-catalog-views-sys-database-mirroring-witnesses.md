@@ -1,5 +1,5 @@
 ---
-title: sys.database_mirroring_witnesses & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.databases database_mirroring_witnesses （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 10fbd3ac410ee5b6944ffe7b32285008f8b11776
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68033086"
 ---
-# <a name="database-mirroring-witness-catalog-views---sysdatabase_mirroring_witnesses"></a>資料庫鏡像見證目錄檢視-sys.database_mirroring_witnesses
+# <a name="database-mirroring-witness-catalog-views---sysdatabase_mirroring_witnesses"></a>資料庫鏡像見證目錄 Views-sys. database_mirroring_witnesses
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   針對伺服器在資料庫鏡像合作關係中所扮演的每個見證角色，各包含一個資料列。 
@@ -41,23 +41,23 @@ ms.locfileid: "68033086"
 |**principal_server_name**|**sysname**|其資料庫副本目前是主體資料庫的夥伴伺服器名稱。|  
 |**mirror_server_name**|**sysname**|其資料庫副本目前是鏡像資料庫的夥伴伺服器名稱。|  
 |**safety_level**|**tinyint**|鏡像資料庫的更新交易安全設定：<br /><br /> 0 = 未知狀態<br /><br /> 1 = 關閉 (非同步)<br /><br /> 2 = 完整 (同步)<br /><br /> 利用見證來進行自動容錯移轉需要完整的交易安全，這是預設值。|  
-|**safety_level_desc**|**nvarchar(60)**|鏡像資料庫中之更新安全保證的描述：<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL|  
-|**safety_sequence_number**|**int**|若要變更的序號更新**safety_level**。|  
+|**safety_level_desc**|**Nvarchar （60）**|鏡像資料庫中之更新安全保證的描述：<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL|  
+|**safety_sequence_number**|**int**|更新**safety_level**的變更序號。|  
 |**role_sequence_number**|**int**|將變更的序號更新為鏡像夥伴所扮演的主體/鏡像角色。|  
 |**mirroring_guid**|**uniqueidentifier**|鏡像合作關係的識別碼。|  
 |**family_guid**|**uniqueidentifier**|資料庫備份家族的識別碼。 它用來偵測相符還原狀態。|  
 |**is_suspended**|**bit**|資料庫鏡像已暫停。|  
-|**is_suspended_sequence_number**|**int**|設定序號**is_suspended**。|  
-|**partner_sync_state**|**tinyint**|鏡像工作階段的同步處理狀態：<br /><br /> 5 = 夥伴已同步處理。 現在可能可以進行容錯移轉。 如需容錯移轉，請參閱需求的詳細資訊[角色切換資料庫鏡像工作階段期間的&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。<br /><br /> 6 = 夥伴不同步。 現在不可能進行容錯移轉。|  
-|**partner_sync_state_desc**|**nvarchar(60)**|鏡像工作階段之同步處理狀態的描述：<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
+|**is_suspended_sequence_number**|**int**|設定**is_suspended**的序號。|  
+|**partner_sync_state**|**tinyint**|鏡像工作階段的同步處理狀態：<br /><br /> 5 = 夥伴已同步處理。 現在可能可以進行容錯移轉。 如需容錯移轉需求的詳細資訊，請參閱[資料庫鏡像會話期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。<br /><br /> 6 = 合作夥伴不會同步處理。 現在不可能進行容錯移轉。|  
+|**partner_sync_state_desc**|**Nvarchar （60）**|鏡像工作階段之同步處理狀態的描述：<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)   
- [sys.database_mirroring &#40;-SQL&AMP;&#41;&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
- [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
- [查詢 SQL Server 系統目錄常見問題集](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [database_mirroring &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
+ [database_mirroring_endpoints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
+ [查詢 SQL Server 系統目錄 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

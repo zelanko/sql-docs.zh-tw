@@ -1,5 +1,5 @@
 ---
-title: 型別屬性 (ADO Stream) |Microsoft Docs
+title: Type 屬性（ADO Stream） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,26 +18,26 @@ ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9b996ba4bedbb4ccf1ccb0453e4da33e09206a18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938233"
 ---
 # <a name="type-property-ado-stream"></a>Type 屬性 (ADO Stream)
-指示中所包含的資料類型[Stream](../../../ado/reference/ado-api/stream-object-ado.md) （二進位或文字）。  
+表示[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)中包含的資料類型（二進位或文字）。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回[StreamTypeEnum](../../../ado/reference/ado-api/streamtypeenum.md)值，指定包含的資料類型**Stream**物件。 預設值是**adTypeText**。 不過，如果二進位資料一開始寫入至新時，空**Stream**，則**型別**就會變更為**adTypeBinary**。  
+ 設定或傳回[StreamTypeEnum](../../../ado/reference/ado-api/streamtypeenum.md)值，指定**資料流程**物件中包含的資料類型。 預設值為**adTypeText**。 不過，如果一開始會將二進位資料寫入至新的空白**資料流程**，此**類型**將會變更為**adTypeBinary**。  
   
 ## <a name="remarks"></a>備註  
- **型別**屬性是讀取/寫入，只有在目前的位置是在開頭時，才**Stream** ([位置](../../../ado/reference/ado-api/position-property-ado.md)為 0)，且為唯讀狀態的任何其他位置。  
+ 只有當目前的位置位於**資料流程**開頭（[位置](../../../ado/reference/ado-api/position-property-ado.md)是0），而且在任何其他位置為唯讀時，**類型**屬性才會是讀取/寫入。  
   
- **型別**屬性會決定哪些方法應用於讀取和寫入**Stream**。 文字**資料流**，使用[ReadText](../../../ado/reference/ado-api/readtext-method.md)並[WriteText](../../../ado/reference/ado-api/writetext-method.md)。 二進位**資料流**，使用[讀取](../../../ado/reference/ado-api/read-method.md)並[撰寫](../../../ado/reference/ado-api/write-method.md)。  
+ **Type**屬性會決定應該使用哪些方法來讀取和寫入**資料流程**。 若為文字**資料流程**，請使用[ReadText](../../../ado/reference/ado-api/readtext-method.md)和[WriteText](../../../ado/reference/ado-api/writetext-method.md)。 若為二進位**資料流程**，請使用[讀取](../../../ado/reference/ado-api/read-method.md)和[寫入](../../../ado/reference/ado-api/write-method.md)。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [RecordType 屬性 (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
+ [RecordType 屬性（ADO）](../../../ado/reference/ado-api/recordtype-property-ado.md)   
  [Type 屬性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

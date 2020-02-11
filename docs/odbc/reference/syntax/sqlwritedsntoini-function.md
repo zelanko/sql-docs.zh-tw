@@ -20,18 +20,18 @@ ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8eece6a1347aa7fba41577f66493e35f92a69d6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039516"
 ---
 # <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni 函式
-**合規性**  
- 導入的版本：ODBC 1.0  
+**標準**  
+ 引進的版本： ODBC 1。0  
   
  **摘要**  
- **SQLWriteDSNToIni**新增資料來源的系統資訊。  
+ **SQLWriteDSNToIni**會將資料來源新增至系統資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,38 +44,38 @@ BOOL SQLWriteDSNToIni(
   
 ## <a name="arguments"></a>引數  
  *lpszDSN*  
- [輸入]要加入的資料來源的名稱。  
+ 源要加入之資料來源的名稱。  
   
  *lpszDriver*  
- [輸入]驅動程式描述 （通常是相關聯的 DBMS 的名稱） 呈現給使用者，而不是實體的驅動程式名稱。  
+ 源驅動程式描述（通常是相關 DBMS 的名稱）會呈現給使用者，而不是實體驅動程式名稱。  
   
 ## <a name="returns"></a>傳回值  
- 如果成功，FALSE 如果失敗，則函數會傳回 TRUE。  
+ 如果成功，函式會傳回 TRUE，如果失敗，則傳回 FALSE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLWriteDSNToIni**會傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的此函式。  
+ 當**SQLWriteDSNToIni**傳回 FALSE 時，可以藉由呼叫**SQLInstallerError**來取得相關聯* \*的 pfErrorCode*值。 下表列出可由**SQLInstallerError**傳回的* \*pfErrorCode*值，並在此函式的內容中說明每一個值。  
   
 |*\*pfErrorCode*|錯誤|描述|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|一般的安裝程式錯誤|發生錯誤，其中沒有特定的安裝程式錯誤。|  
-|ODBC_ERROR_INVALID_DSN|無效的資料來源名稱|*LpszDSN*引數包含無效的資料來源名稱的字串。|  
-|ODBC_ERROR_INVALID_NAME|無效的驅動程式或轉譯器名稱|*LpszDriver*引數無效。|  
-|ODBC_ERROR_REQUEST_FAILED|要求失敗|安裝程式無法在登錄中建立的 DSN。|  
-|ODBC_ERROR_OUT_OF_MEM|記憶體不足|由於記憶體不足，安裝程式無法執行函式。|  
+|ODBC_ERROR_GENERAL_ERR|一般安裝程式錯誤|發生錯誤，但沒有特定的安裝程式錯誤。|  
+|ODBC_ERROR_INVALID_DSN|不正確 DSN|*LpszDSN*引數包含對 DSN 不正確字串。|  
+|ODBC_ERROR_INVALID_NAME|驅動程式或 translator 名稱無效|*LpszDriver*引數無效。|  
+|ODBC_ERROR_REQUEST_FAILED|要求失敗|安裝程式無法在登錄中建立 DSN。|  
+|ODBC_ERROR_OUT_OF_MEM|記憶體不足|因為記憶體不足，所以安裝程式無法執行函數。|  
   
 ## <a name="comments"></a>註解  
- **SQLWriteDSNToIni**將系統資訊 [ODBC 資料來源] 區段中的資料來源。 然後會建立資料來源的規格 區段，並將單一關鍵字 (**驅動程式**) 驅動程式 DLL 做為其值的名稱。 如果資料來源規格 > 一節已經存在， **SQLWriteDSNToIni**移除舊的區段之前建立新的帳戶。  
+ **SQLWriteDSNToIni**會將資料來源新增至系統資訊的 [ODBC 資料來源] 區段。 接著，它會建立資料來源的規格區段，並新增一個具有驅動程式 DLL 名稱的單一關鍵字（**驅動程式**）作為其值。 如果資料來源規格區段已經存在， **SQLWriteDSNToIni**會先移除舊的區段，再建立新的區段。  
   
- 此函式的呼叫端必須將任何驅動程式特有的關鍵字和值加入系統資訊的資料來源規格區段。  
+ 此函式的呼叫端必須將任何驅動程式特有的關鍵字和值新增至系統資訊的資料來源規格區段。  
   
- 如果資料來源的名稱是預設值， **SQLWriteDSNToIni**也會建立預設驅動程式規格的區段，在系統資訊。  
+ 如果資料來源的名稱是預設值， **SQLWriteDSNToIni**也會在系統資訊中建立預設的驅動程式規格區段。  
   
- 此函式應該呼叫只會從安裝程式 DLL。  
+ 此函式只能從安裝程式 DLL 呼叫。  
   
 ## <a name="related-functions"></a>相關函數  
   
-|如需詳細資訊|請參閱|  
+|如需下列資訊|請參閱|  
 |---------------------------|---------|  
-|新增、 修改或移除資料來源|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)（在安裝程式 DLL 中）|  
-|新增、 修改或移除資料來源|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
-|移除系統資訊的資料來源名稱|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|
+|加入、修改或移除資料來源|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)（在安裝程式 DLL 中）|  
+|加入、修改或移除資料來源|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
+|從系統資訊移除資料來源名稱|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|

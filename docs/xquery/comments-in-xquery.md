@@ -1,5 +1,5 @@
 ---
-title: 在 XQuery 中的註解 |Microsoft Docs
+title: XQuery 中的批註 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 4d977268-de9d-4bf0-b310-b63f6a0fb0db
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a2c5adad052a33dc4d8b86b488ca1cc44737790e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039026"
 ---
 # <a name="comments-in-xquery"></a>XQuery 中的註解
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  您可以將註解加入到 XQuery。 註解字串是利用 "`(:`" 和 "`:)`" 分隔符號來加入。 例如:  
+  您可以將註解加入到 XQuery。 註解字串是利用 "`(:`" 和 "`:)`" 分隔符號來加入。 例如：  
   
 ```  
 declare @x xml  
@@ -36,7 +36,7 @@ SELECT @x.query('
 ')  
 ```  
   
- 以下是針對 Instruction 資料行指定查詢的另一個例子**xml**類型：  
+ 以下是另一個範例，其中查詢是針對**xml**類型的指令資料行所指定：  
   
 ```  
 SELECT Instructions.query('  

@@ -1,5 +1,5 @@
 ---
-title: sp_repldropcolumn (Transact-sql) |Microsoft Docs
+title: sp_repldropcolumn （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a6b398a4dd7e93521b38708d3a7e37ae09e70a15
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771474"
 ---
-# <a name="sprepldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
+# <a name="sp_repldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   從已發行的現有資料表發行項中卸除資料行。 這個預存程序執行於發行集資料庫的發行者端。  
@@ -44,31 +44,31 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @source_object =] '*source_object*'  
- 這是包含要卸除之資料行的資料表發行項名稱。 *source_object*是 Nvarchar (258), 沒有預設值。  
+ [ @source_object = ]'*source_object*'  
+ 這是包含要卸除之資料行的資料表發行項名稱。 *source_object*是 Nvarchar （258），沒有預設值。  
   
- [ @column =] ' 資料*行*'  
- 這是資料表中要卸除的資料行名稱。 資料*行*是 sysname, 沒有預設值。  
+ [ @column = ]' 資料*行*'  
+ 這是資料表中要卸除的資料行名稱。 資料*行*是 sysname，沒有預設值。  
   
- [ @from_agent =] *from_agent*  
- 預存程序是否由複寫代理程式執行。 *from_agent*是 int, 預設值是 0, 當複寫代理程式執行這個預存程式時, 會使用1的值, 而在其他情況下, 應該使用預設值0。  
+ [ @from_agent = ]*from_agent*  
+ 預存程序是否由複寫代理程式執行。 *from_agent*是 int，預設值是0，當複寫代理程式執行這個預存程式時，會使用1的值，而在其他情況下，應該使用預設值0。  
   
- [ @schema_change_script =] '*schema_change_script*'  
- 指定用來修改系統產生之自訂預存程序的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼的名稱和路徑。 *schema_change_script*是 Nvarchar (4000), 預設值是 Null。 複寫可讓使用者自訂的自訂預存程序，取代異動複寫所用的一個或多個預設程序。 *schema_change_script*是在使用 sp_repldropcolumn 對複寫資料表發行項進行架構變更之後執行, 而且可用來執行下列其中一項:  
+ [ @schema_change_script = ]'*schema_change_script*'  
+ 指定用來修改系統產生之自訂預存程序的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼的名稱和路徑。 *schema_change_script*是 Nvarchar （4000），預設值是 Null。 複寫可讓使用者自訂的自訂預存程序，取代異動複寫所用的一個或多個預設程序。 *schema_change_script*是在使用 sp_repldropcolumn 對複寫的資料表發行項進行架構變更之後執行，而且可用來執行下列其中一項動作：  
   
--   如果自動重新產生自訂預存程式, *schema_change_script*可以用來卸載這些自訂預存程式, 並以支援新架構的使用者定義自訂預存程式來取代它們。  
+-   如果自動重新產生自訂預存程式， *schema_change_script*可以用來卸載這些自訂預存程式，並以支援新架構的使用者定義自訂預存程式來取代它們。  
   
--   如果未自動重新產生自訂預存程式, *schema_change_script*可以用來重新產生這些預存程式, 或建立使用者定義的自訂預存程式。  
+-   如果未自動重新產生自訂預存程式， *schema_change_script*可以用來重新產生這些預存程式，或建立使用者定義的自訂預存程式。  
   
- [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
- 啟用或停用使快照集失效的能力。 *force_invalidate_snapshot*是 bit, 預設值是1。  
+ [ @force_invalidate_snapshot = ]*force_invalidate_snapshot*  
+ 啟用或停用使快照集失效的能力。 *force_invalidate_snapshot*是 bit，預設值是1。  
   
  1 指定發行項的變更可能使快照集失效，若是如此，1 值會提供將出現之新快照集的權限。  
   
  0 指定發行項的變更不會使快照集失效。  
   
- [ @force_reinit_subscription =] *force_reinit_subscription*  
- 啟用或停用重新初始化訂閱的能力。 *force_reinit_subscription*是 bit, 預設值是0。  
+ [ @force_reinit_subscription = ]*force_reinit_subscription*  
+ 啟用或停用重新初始化訂閱的能力。 *force_reinit_subscription*是位，預設值是0。  
   
  0 指定發行項的變更不會使訂閱重新初始化。  
   
@@ -77,7 +77,7 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  只有在發行者端的系統管理員 (sysadmin) 固定伺服器角色成員，或發行集資料庫中的 db_owner 或 db_ddladmin 固定資料庫角色成員，才能夠執行 sp_repldropcolumn。  
   
 ## <a name="see-also"></a>另請參閱  

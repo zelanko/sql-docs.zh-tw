@@ -1,5 +1,5 @@
 ---
-title: 資料行的資料 |Microsoft Docs
+title: 資料行資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ ms.assetid: 0425818c-9469-493f-9e3c-fc03d9411c5c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f4bc57a5a0b500dc8828d5b0e35c2d6023165ac5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019247"
 ---
 # <a name="column-data"></a>資料行資料
 > [!IMPORTANT]  
->  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
   
- 資料指標程式庫會繫結至結果集，每個資料緩衝區快取中建立一個緩衝區**SQLBindCol**。 它使用這些緩衝區中的值來建構**其中**子句時，它會模擬定位的 update 或 delete 陳述式。 它會從資料來源，以及當它執行定位的 update 陳述式的擷取資料時，它就會更新這些資料列集的緩衝區的緩衝區。  
+ 資料指標程式庫會在快取中，針對系結至結果集的每個資料緩衝區，使用**SQLBindCol**在快取中建立緩衝區。 當它模擬定位的 update 或 delete 語句時，它會使用這些緩衝區中的值來建立**WHERE**子句。 它會在從資料來源提取資料時，以及在執行定位 update 語句時，從資料列集緩衝區中更新這些緩衝區。  
   
- 當資料指標程式庫更新其快取，從資料列集的緩衝區時，它會將資料傳輸根據中指定的 C 資料類型**SQLBindCol**。 例如，如果 SQL_C_SLONG C 資料類型的資料列集的緩衝區，資料指標程式庫傳送四個位元組的資料;如果是 SQL_C_CHAR 並*Columnsize*為 10，資料指標程式庫傳輸資料的 10 個位元組。 資料指標程式庫不會執行任何類型檢查或轉換它所傳輸的資料。  
+ 當資料指標程式庫從資料列集緩衝區更新其快取時，它會根據**SQLBindCol**中指定的 C 資料類型來傳輸資料。 例如，如果資料列集緩衝區的 C 資料類型是 SQL_C_SLONG，則資料指標程式庫會傳輸四個位元組的資料;如果 SQL_C_CHAR 且*BufferLength*為10，則資料指標程式庫會傳輸10個位元組的資料。 資料指標程式庫不會在其所傳送的資料上執行任何類型檢查或轉換。  
   
 > [!NOTE]  
->  資料指標程式庫不會更新其快取的資料行，如果 **StrLen_or_IndPtr*中對應的資料列集的緩衝區是 SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT_EXEC 巨集的結果。  
+>  如果對應資料列集緩衝區中的 **StrLen_or_IndPtr* SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT_EXEC 宏的結果，則資料指標程式庫不會更新資料行的快取。  
   
- 當更新資料行、 資料來源空白填補固定長度的字元資料和視需要零填補固定長度二進位資料。 例如，資料來源會儲存"Smith"CHAR(10) 資料行中為"Smith"。 會將此資料複製到其快取上執行定位的 update 陳述式之後不空白填補或零填補的資料列集的緩衝區中的資料來執行並資料指標程式庫。 因此，如果應用程式需要在資料指標程式庫的快取中的值是空白填補或填補零，則它必須空白填補或零填補的資料列集的緩衝區中的值執行定位的 update 陳述式之前。
+ 當它更新資料行時，資料來源會填補固定長度的字元資料，並視需要以零填補固定長度的二進位資料。 例如，資料來源會將 "Smith" 儲存在 CHAR （10）資料行中做為 "Smith"。 資料指標程式庫在執行定位的 update 語句之後，將此資料複製到其快取時，不會有空白 pad 或以零填補資料列集緩衝區中的資料。 因此，如果應用程式要求資料指標程式庫的快取中的值填補空白或填補零，則在執行定位的 update 語句之前，它必須以空白或零填補資料列集緩衝區中的值。

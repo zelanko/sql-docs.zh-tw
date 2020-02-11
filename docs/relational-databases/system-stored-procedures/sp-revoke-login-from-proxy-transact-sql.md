@@ -1,5 +1,5 @@
 ---
-title: sp_revoke_login_from_proxy (TRANSACT-SQL) |Microsoft Docs
+title: sp_revoke_login_from_proxy （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0aad616275d635ac32d6e81dbc5321db0db58b34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019946"
 ---
-# <a name="sprevokeloginfromproxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
+# <a name="sp_revoke_login_from_proxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   移除安全性主體的 Proxy 存取權。  
@@ -42,19 +42,19 @@ sp_revoke_login_from_proxy
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'name'` 名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入、 伺服器角色或**msdb**来移除的存取權的資料庫角色。 *名稱*已**nvarchar(256)** 沒有預設值。  
+`[ @name = ] 'name'`要移除存取權[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的登入、伺服器角色或**msdb**資料庫角色的名稱。 *名稱*是**Nvarchar （256）** ，沒有預設值。  
   
-`[ @proxy_id = ] id` 要移除的存取權的 proxy 識別碼。 任一*識別碼*或是*proxy_name*必須指定，但不可同時指定兩者。 *識別碼*是**int**，預設值是 NULL。  
+`[ @proxy_id = ] id`要移除存取權之 proxy 的識別碼。 必須指定*id*或*proxy_name* ，但不能同時指定兩者。 *識別碼*是**int**，預設值是 Null。  
   
-`[ @proxy_name = ] 'proxy_name'` 要移除的存取權的 proxy 名稱。 任一*識別碼*或是*proxy_name*必須指定，但不可同時指定兩者。 *Proxy_name*是**sysname**，預設值是 NULL。  
+`[ @proxy_name = ] 'proxy_name'`要移除存取權的 proxy 名稱。 必須指定*id*或*proxy_name* ，但不能同時指定兩者。 *Proxy_name*是**sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
  將無法執行參考這個 Proxy 的登入所擁有的作業。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  若要執行這個預存程序，使用者必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
@@ -71,8 +71,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Agent 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [sp_help_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
+ [SQL Server Agent 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_grant_login_to_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
+ [sp_help_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
   
   

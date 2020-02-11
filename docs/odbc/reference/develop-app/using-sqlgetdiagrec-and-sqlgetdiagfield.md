@@ -17,20 +17,20 @@ ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 23b7539c32b6cb675f8616d9b8ec9db89be1208b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022148"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>使用 SQLGetDiagRec 和 SQLGetDiagField
-應用程式會呼叫**SQLGetDiagRec**或是**SQLGetDiagField**擷取診斷資訊。 這些函式接受環境、 連接、 陳述式或描述元控制代碼，並從上一次使用該控制代碼的函式會傳回診斷。 新的函式呼叫使用該控制代碼時，診斷登入特定的控制代碼都會被捨棄。 如果函式傳回多個診斷記錄，應用程式會呼叫這些函式多次;狀態記錄的總數會擷取藉由呼叫**SQLGetDiagField** SQL_DIAG_NUMBER 選項標頭記錄 （記錄 0）。  
+應用程式會呼叫**SQLGetDiagRec**或**SQLGetDiagField**來取得診斷資訊。 這些函數會接受環境、連接、語句或描述項控制碼，並從上次使用該處理的函式傳回診斷。 使用該控制碼呼叫新的函式時，會捨棄在特定控制碼上記錄的診斷。 如果函數傳回多個診斷記錄，應用程式會多次呼叫這些函式;藉由使用 SQL_DIAG_NUMBER 選項呼叫標頭記錄（記錄0）的**SQLGetDiagField** ，即可取得狀態記錄的總數。  
   
- 應用程式來擷取個別的診斷欄位呼叫**SQLGetDiagField**並指定要擷取的欄位。 特定的診斷欄位並沒有任何特定類型的控制代碼的意義。 診斷欄位及其意義的清單，請參閱[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函式描述。  
+ 應用程式會藉由呼叫**SQLGetDiagField**並指定要抓取的欄位，來取出個別的診斷欄位。 某些診斷欄位對於特定類型的控制碼沒有任何意義。 如需診斷欄位及其意義的清單，請參閱[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函數描述。  
   
- 藉由呼叫應用程式擷取 SQLSTATE、 原生錯誤碼和單一呼叫中的診斷訊息**SQLGetDiagRec**;**SQLGetDiagRec**無法用來擷取標頭記錄中的資訊。  
+ 應用程式會藉由呼叫**SQLGetDiagRec**，在單一呼叫中取得 SQLSTATE、原生錯誤碼和診斷訊息。**SQLGetDiagRec**無法用來從標頭記錄中取出資訊。  
   
- 例如，下列程式碼會提示使用者輸入 SQL 陳述式，並執行它。 如果未傳回任何診斷資訊，它會呼叫**SQLGetDiagField**來取得狀態記錄的數目並**SQLGetDiagRec**所取得的 SQLSTATE、 原生錯誤碼和診斷訊息記錄。  
+ 例如，下列程式碼會提示使用者提供 SQL 語句並加以執行。 如果傳回任何診斷資訊，它會呼叫**SQLGetDiagField**來取得狀態記錄和**SQLGetDiagRec**的數目，以從這些記錄取得 SQLSTATE、原生錯誤碼和診斷訊息。  
   
 ```  
 SQLCHAR       SqlState[6], SQLStmt[100], Msg[SQL_MAX_MESSAGE_LENGTH];  

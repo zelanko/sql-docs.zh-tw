@@ -21,17 +21,17 @@ ms.assetid: 724c7b86-300a-4fa9-ad96-4afa0fdcb3e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2f68a87db729df2f4a27e2766a9de60e8c75a71a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036420"
 ---
 # <a name="connection-strings"></a>連接字串
-連接字串包含用來建立連線資訊。 完整連接字串包含建立連接所需要的所有資訊。 連接字串是一系列以分號隔開的關鍵字/值組。 (如需連接字串的完整語法，請參閱[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)函式描述。)使用連接字串：  
+連接字串包含用來建立連接的資訊。 完整的連接字串包含建立連接所需的所有資訊。 連接字串是一系列以分號分隔的關鍵字/值配對。 （如需連接字串的完整語法，請參閱[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)函數描述）。連接字串的使用方式：  
   
--   **SQLDriverConnect**，這會完成與使用者互動的連接字串。  
+-   **SQLDriverConnect**，它會透過與使用者互動來完成連接字串。  
   
--   **SQLBrowseConnect**，其完成反覆與資料來源的連接字串。  
+-   **SQLBrowseConnect**，這會以資料來源反復完成連接字串。  
   
- **SQLConnect**不會使用連接字串; 使用**SQLConnect**相當於連接使用連接字串包含剛好三個的關鍵字/值組 (資料來源名稱和 （選擇性） 使用者識別碼和密碼).
+ **SQLConnect**不會使用連接字串;使用**SQLConnect**類似于使用具有三個關鍵字/值組的連接字串進行連接（適用于資料來源名稱和選擇性的使用者識別碼和密碼）。

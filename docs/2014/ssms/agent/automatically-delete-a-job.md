@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c5e165380c0f920ebf1366855e7801b6bb9089a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62472987"
 ---
 # <a name="automatically-delete-a-job"></a>自動刪除作業
-  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 在作業成功、失敗或完成時自動予以刪除。  
+  本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQL Server 管理物件， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在中設定 Agent 在作業成功、失敗或完成時自動予以刪除。  
   
  作業回應可確保資料庫管理員知道作業已完成，以及作業的執行頻率。 典型的作業回應包括：  
   
@@ -45,9 +45,9 @@ ms.locfileid: "62472987"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要使用下列項目指定作業回應：**  
+-   **若要指定作業回應，請使用：**  
   
      [Transact-SQL](#SSMS)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62472987"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
   
 ##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
@@ -64,11 +64,11 @@ ms.locfileid: "62472987"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **[SQL Server Agent]** ，展開 **[作業]** ，以滑鼠右鍵按一下要編輯的作業，然後按一下 **[屬性]** 。  
+2.  展開 **[SQL Server Agent]**，展開 **[作業]**，以滑鼠右鍵按一下要編輯的作業，然後按一下 **[屬性]**。  
   
 3.  選取 **[通知]** 頁面。  
   
-4.  選取 **[自動刪除作業]** ，然後選擇下列其中一項：  
+4.  選取 **[自動刪除作業]**，然後選擇下列其中一項：  
   
     -   按一下 **[當作業成功時]** ，以便在作業順利完成時刪除作業狀態。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62472987"
   
     -   按一下 **[作業完成時]** ，不管完成狀態為何都刪除作業。  
   
-##  <a name="SMO"></a> 使用 SQL Server 管理物件  
+##  <a name="SMO"></a>使用 SQL Server 管理物件  
  **若要自動刪除作業**  
   
  透過所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell，使用 `DeleteLevel` 類別的 `Job` 屬性。 如需詳細資訊，請參閱 [SQL Server 管理物件 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  
