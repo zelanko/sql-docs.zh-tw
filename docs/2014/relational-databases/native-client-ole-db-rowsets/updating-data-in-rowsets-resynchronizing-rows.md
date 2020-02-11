@@ -1,5 +1,5 @@
 ---
-title: 重新同步處理的資料列 |Microsoft Docs
+title: 重新同步處理資料列 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7b041dc07afb30fff0c03d96fec9cd8a5d62f965
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63229015"
 ---
 # <a name="resynchronizing-rows"></a>重新同步處理資料列
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會支援**IRowsetResynch**上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料指標支援資料列集僅。 **IRowsetResynch** 無法視需要提供。 取用者必須在開啟資料列集前要求此介面。  
+  Native Client OLE DB 提供者只支援資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指標支援的資料列集上的**IRowsetResynch。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **IRowsetResynch**無法隨選使用。 取用者必須在開啟資料列集前要求此介面。  
   
 ## <a name="see-also"></a>另請參閱  
  [更新資料列集中的資料](updating-data-in-rowsets.md)  

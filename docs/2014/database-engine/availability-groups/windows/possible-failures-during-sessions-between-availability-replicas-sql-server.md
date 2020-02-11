@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b614a2e405501e2c41cae1add9e8e6b47d372dae
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874468"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>工作階段期間可用性複本之間可能發生失敗 (SQL Server)
-  實體、作業系統或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 問題都可能會在兩個可用性複本之間的工作階段中導致失敗。 可用性複本不會為了確認 Sqlservr.exe 所依賴的元件是正常運作或已失敗，而定期檢查這些元件。 不過，針對某些類型的錯誤，受影響的元件會對 Sqlservr.exe 報告錯誤。 由其他元件所報告的錯誤稱為「重大錯誤」。 為了偵測其他沒有通知的失敗，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]會實作其本身的工作階段逾時機制。 指定工作階段逾時期限 (以秒為單位)。 逾時期限是伺服器執行個體在將另一個執行個體視為中斷連接之前，等待接收該執行個體發出之 PING 訊息的最長時間。 如果兩個可用性複本之間發生工作階段逾時，可用性複本會假設失敗已經發生，並宣告「軟體錯誤」。  
+  實體、作業系統或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 問題都可能會在兩個可用性複本之間的工作階段中導致失敗。 可用性複本不會為了確認 Sqlservr.exe 所依賴的元件是正常運作或已失敗，而定期檢查這些元件。 不過，針對某些類型的錯誤，受影響的元件會對 Sqlservr.exe 報告錯誤。 由其他元件所報告的錯誤稱為「重大錯誤」**(Hard Error)。 為了偵測其他沒有通知的失敗，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]會實作其本身的工作階段逾時機制。 指定工作階段逾時期限 (以秒為單位)。 逾時期限是伺服器執行個體在將另一個執行個體視為中斷連接之前，等待接收該執行個體發出之 PING 訊息的最長時間。 如果兩個可用性複本之間發生工作階段逾時，可用性複本會假設失敗已經發生，並宣告「軟體錯誤」**。  
   
 > [!IMPORTANT]  
 >  系統無法偵測主要資料庫以外之資料庫中的失敗。 此外，除非是因為資料磁碟錯誤而重新啟動資料庫，否則不太可能偵測得到資料磁碟錯誤。  
@@ -59,7 +59,8 @@ ms.locfileid: "70874468"
   
 -   未插上纜線。  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 具有封鎖特定通訊埠的防火牆。  
+-   
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 具有封鎖特定通訊埠的防火牆。  
   
 -   正在監視通訊埠的應用程式失敗。  
   
@@ -86,21 +87,21 @@ ms.locfileid: "70874468"
   
  主要和次要複本會互相執行 Ping，讓對方知道他們仍在作用中，而工作階段逾時限制則可防止任一複本無限期地等候接收來自另一複本的 Ping。 工作階段逾時限制是使用者可設定的複本屬性，其預設值為 10 秒。 在逾時期限接收到 Ping，表示連接仍為開啟狀態，且伺服器執行個體是透過它進行通訊。 接收到 Ping 時，可用性複本會重設它在該連接上的逾時計數器。  
   
- 如果在工作階段逾時期限內未收到另一個複本的 Ping，則連接會逾時。連接會關閉，而逾時的複本則進入 DISCONNECTED 狀態。 即使中斷連接的複本設定成同步認可模式，交易仍不會等候該複本重新連接及重新同步處理。  
+ 如果在會話超時期間內未收到來自另一個複本的 ping，則連接逾時。連接會關閉，而超時複本則進入中斷連線的狀態。 即使中斷連接的複本設定成同步認可模式，交易仍不會等候該複本重新連接及重新同步處理。  
   
 ## <a name="responding-to-an-error"></a>回應錯誤  
  不論錯誤的類型為何，偵測到錯誤的伺服器執行個體都會根據執行個體的角色、工作階段的可用性模式和工作階段中其他連接的狀態，進行適當的回應。 如需有關遺失夥伴時所發生之情況的詳細資訊，請參閱[可用性模式（AlwaysOn 可用性群組）](availability-modes-always-on-availability-groups.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
- **若要變更逾時值 (僅限同步認可可用性模式)**  
+ **變更超時值（僅限同步認可的可用性模式）**  
   
 -   [變更可用性複本的工作階段逾時期限 &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
- **若要檢視目前的逾時值**  
+ **若要查看目前的超時值**  
   
--   查詢 [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql) 中的 **session_timeout**。  
+-   查詢 **sys.availability_replicas &#40;Transact-SQL&#41;** 中的 [session_timeout](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)。  
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組&#40;SQL Server 總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

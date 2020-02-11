@@ -11,18 +11,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87ed68cc3540075e0fd5d357182d709394f44455
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797505"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>設定 FailureConditionLeve 屬性設定
   使用 FailureConditionLevel 屬性，即可將 AlwaysOn 容錯移轉叢集執行個體 (FCI) 的條件設定為容錯移轉或重新啟動。 對這個屬性的變更會立即套用，而不需要重新啟動 Windows Server 容錯移轉叢集 (WSFC) 服務或 FCI 資源。  
   
--   **Before you begin:**  [FailureConditionLevel Property Settings](#Restrictions), [Security](#Security)  
+-   **開始之前：**  [FailureConditionLevel 屬性設定](#Restrictions)、[安全性](#Security)  
   
--   **使用下列項目進行 FailureConditionLevel 屬性設定** [PowerShell](#PowerShellProcedure)， [容錯移轉叢集管理員](#WSFC)， [Transact-SQL](#TsqlProcedure)  
+-   **使用、** [PowerShell](#PowerShellProcedure)、[容錯移轉叢集管理員](#WSFC)、 [transact-sql](#TsqlProcedure)來設定 FailureConditionLevel 屬性設定  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -31,7 +31,7 @@ ms.locfileid: "72797505"
   
 ###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要 ALTER SETTINGS 及 VIEW SERVER STATE 權限。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
@@ -42,7 +42,7 @@ ms.locfileid: "72797505"
   
 2.  匯入 `FailoverClusters` 模組來啟用叢集指令程式。  
   
-3.  使用 `Get-ClusterResource` Cmdlet 來尋找 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源，然後使用 `Set-ClusterParameter` Cmdlet 來設定容錯移轉叢集實例的**FailureConditionLevel**屬性。  
+3.  使用`Get-ClusterResource` Cmdlet 來尋找[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資源，然後使用`Set-ClusterParameter` Cmdlet 設定容錯移轉叢集實例的**FailureConditionLevel**屬性。  
   
 > [!TIP]  
 >  每次開啟新的 PowerShell 視窗時，都需要匯入 `FailoverClusters` 模組。  
@@ -72,7 +72,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 2.  展開 **[服務及應用程式]** 並選取 FCI。  
   
-3.  以滑鼠右鍵按一下 [其他資源] 下方的 [SQL Server 資源]，然後從功能表中選取 [屬性]。 SQL Server 資源的 **[屬性]** 對話方塊隨即開啟。  
+3.  以滑鼠右鍵按一下 [其他資源]  下方的 [SQL Server 資源]  ，然後從功能表中選取 [屬性]  。 SQL Server 資源的 **[屬性]** 對話方塊隨即開啟。  
   
 4.  選取 **[屬性]** 索引標籤，為 **[FaliureConditionLevel]** 屬性輸入所要的值，然後再按一下 **[確定]** 以套用變更。  
   
@@ -82,7 +82,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
  使用 [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式，可以指定 FailureConditionLevel 屬性值。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  下列範例會將 FailureConditionLevel 屬性設定為 0，指出任何失敗狀況都不會自動觸發容錯移轉或重新啟動。  
   
 ```sql

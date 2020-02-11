@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa1b5f0cc1e4952523f53f02e219db42aa5b3c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63238206"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>使用 WebForms ReportViewer 控制項
@@ -24,25 +24,25 @@ ms.locfileid: "63238206"
   
 ###### <a name="to-use-the-reportviewer-control-in-a-web-application"></a>若要在 Web 應用程式中使用 ReportViewer 控制項  
   
-1.  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 建立新的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET 網站。  
+1.  使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)]或[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]新的 ASP.NET [!INCLUDE[csprcs](../../includes/csprcs-md.md)]網站。  
   
-     \- 或 -  
+     \-或  
   
      開啟現有的 ASP.NET 網站並加入新的 Web Form。  
   
-2.  從 [工具箱] 視窗的 [AJAX 延伸模組] 群組中找出 **ScriptManager** 控制項，並將它拖曳到 Web 表單的設計介面。  
+2.  從 [工具箱]**** 視窗的 [AJAX 延伸模組]**** 群組中找出 **ScriptManager** 控制項，並將它拖曳到 Web 表單的設計介面。  
   
-     如果看不到 [工具箱]，可以從 [檢視] 功能表選取 [工具箱] 加以存取。  
+     如果看不到 [工具箱]****，可以從 [檢視]**** 功能表選取 [工具箱]**** 加以存取。  
   
-3.  在 [工具箱] 中找出 **ReportViewer** 控制項，並將它拖曳至設計介面上的 **ScriptManager** 控制項下方。  
+3.  在 [工具箱]**** 中找出 **ReportViewer** 控制項，並將它拖曳至設計介面上的 **ScriptManager** 控制項下方。  
   
      名為 reportViewer1 的 **ReportViewer** 控制項會新增至表單。  
   
- 將控制項新增至表單後，[ReportViewer 工作] 智慧標籤將會顯示以提示您選取報表。 如果您希望檢視的報表已部署到報表伺服器，請從 [選擇報表] 下拉式清單，選取 [\<伺服器報表>] 選項。 選取 [\<伺服器報表>] 選項之後，會出現兩個額外屬性：[報表伺服器 URL] 和 [報表路徑]。 [報表伺服器 URL] 是到報表伺服器的位址，[報表路徑] 則是要轉譯之報表的完整路徑。  
+ 將控制項新增至表單後，[ReportViewer 工作]**** 智慧標籤將會顯示以提示您選取報表。 如果您想要查看的報表已部署到報表伺服器，請從 [**選擇報表**] 下拉式清單中選取 [ ** \<伺服器報表>** ] 選項。 一旦選取 [ ** \<伺服器報表>** ] 選項之後，就會出現兩個額外的屬性： [**報表伺服器 Url** ] 和 [**報表路徑**]。 [報表伺服器 URL]**** 是到報表伺服器的位址，[報表路徑]**** 則是要轉譯之報表的完整路徑。  
   
- 如果您要以本機模式檢視報表，請選取 [設計新報表] 選項以啟動報表設計師，或選取已是現有專案一部分的報表。 在您選取報表之後，請務必在 ReportViewer 控制項的 **ReportPath** 屬性中輸入報表 RDLC 檔案的名稱。 這個屬性會出現在 [屬性] 窗格的 **LocalReport** 節點下方。  
+ 如果您要以本機模式檢視報表，請選取 [設計新報表]**** 選項以啟動報表設計師，或選取已是現有專案一部分的報表。 在您選取報表之後，請務必在 ReportViewer 控制項的 **ReportPath** 屬性中輸入報表 RDLC 檔案的名稱。 這個屬性會出現在 [屬性]**** 窗格的 **LocalReport** 節點下方。  
   
- 當轉譯報表時，您可以選擇隱藏 ReportViewer 工具列上的一個或多個項目。 例如，您可以隱藏列印按鈕。 若要隱藏工具列項目，將以下 ReportViewer 屬性設為`False`中**屬性**窗格。  
+ 當轉譯報表時，您可以選擇隱藏 ReportViewer 工具列上的一個或多個項目。 例如，您可以隱藏列印按鈕。 若要隱藏工具列專案，請在 [**屬性**] `False`窗格中，將下列 ReportViewer 屬性設定為。  
   
 -   `ShowBackButton`  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63238206"
 ## <a name="viewing-reports-in-remote-processing-mode"></a>以遠端處理模式檢視報表  
  下列範例示範如何轉譯已部署到報表伺服器的報表。 這個範例使用包含在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例報表專案中的 Sales Order Detail 報表。  
   
- 此範例使用整合式 Windows 驗證，因此您必須啟用模擬。 若要執行將下列行插入`web.config`檔案：  
+ 此範例使用整合式 Windows 驗證，因此您必須啟用模擬。 若要這麼做，請將下列程式`web.config`程式碼插入檔案中：  
   
 ```  
 <!-- Web.config file. -->  
@@ -145,19 +145,19 @@ End Class
   
 1.  開啟將加入報表的網站。  
   
-2.  從 [網站] 功能表上，選取 [新增現有項目]。  
+2.  從 [網站]**** 功能表上，選取 [新增現有項目]****。  
   
 3.  瀏覽至安裝 AdventureWorks 報表範例專案的位置。  
   
      預設位置是 C:\Program Files\Microsoft SQL Server\100\Samples\Reporting Services\Report Samples\AdventureWorks Sample Reports。  
   
-4.  選取 Sales Order Detail.rdl 檔案，然後按一下 [新增] 按鈕。  
+4.  選取 Sales Order Detail.rdl 檔案，然後按一下 [新增]**** 按鈕。  
   
      Sales Order Detail.rdl 檔案現在應該是專案的一部分。  
   
-5.  在方案總管中，以滑鼠右鍵按一下 Sales Order Detail.rdl 檔案，然後選擇 [重新命名]。 將報表重新命名為 **Sales Order Detail.rdlc**，然後按 ENTER。  
+5.  在方案總管中，以滑鼠右鍵按一下 Sales Order Detail.rdl 檔案，然後選擇 [重新命名]****。 將報表重新命名為 **Sales Order Detail.rdlc**，然後按 ENTER。  
   
-     如果看不到方案總管，可以從 [檢視] 功能表選取方案總管加以開啟。  
+     如果看不到方案總管，您可以選取 [方案總管]，從 [ **View** ] 功能表中開啟它。  
   
  下列的程式碼範例會為銷售訂單資料建立資料集，然後以本機模式轉譯 Sales Order Detail 報表。  
   

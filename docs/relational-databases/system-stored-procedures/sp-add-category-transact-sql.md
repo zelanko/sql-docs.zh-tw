@@ -18,10 +18,10 @@ ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 076d5ade1f4951183578b1b46761d49dafbce8be
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70810549"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
@@ -45,34 +45,34 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @class = ] 'class'` 要加入之類別目錄的類別。 *class*為**Varchar （8）** ，預設值為 JOB，而且可以是下列其中一個值。  
+`[ @class = ] 'class'`要加入之類別目錄的類別。 *class*為**Varchar （8）** ，預設值為 JOB，而且可以是下列其中一個值。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |JOB|加入作業類別目錄。|  
 |ALERT|加入警示類別目錄。|  
 |OPERATOR|加入操作員類別目錄。|  
   
-`[ @type = ] 'type'` 要加入之類別目錄的類型。 *類型*為**Varchar （12）** ，預設值為**LOCAL**，而且可以是下列其中一個值。  
+`[ @type = ] 'type'`要加入之類別目錄的類型。 *類型*為**Varchar （12）**，預設值為**LOCAL**，而且可以是下列其中一個值。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |LOCAL|本機作業類別目錄。|  
 |多伺服器|多伺服器作業類別目錄。|  
-|NONE|作業以外之類別的分類 **。**|  
+|無|作業以外之類別的分類 **。**|  
   
-`[ @name = ] 'name'` 要加入之類別目錄的名稱。 在指定的類別內，這個名稱必須是唯一的。 *名稱*是**sysname**，沒有預設值。  
+`[ @name = ] 'name'`要加入之類別目錄的名稱。 在指定的類別內，這個名稱必須是唯一的。 *名稱*是**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **sp_add_category**必須從**msdb**資料庫中執行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_add_category**。  
   
 ## <a name="examples"></a>範例  
@@ -90,11 +90,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_delete_category &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_help_category &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [sp_update_category &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [sysjobs &#40;transact-sql&#41; ](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
- [sysjobservers &#40;transact-sql&#41; ](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
+ [sp_delete_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_help_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sysjobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+ [sysjobservers &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

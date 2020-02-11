@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00cf7a7fab52640cc3fc19a3d9da051d281be7c2
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783006"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>將次要複本加入至可用性群組 (SQL Server)
@@ -29,32 +29,32 @@ ms.locfileid: "72783006"
   
      [安全性](#Security)  
   
--   **使用下列方法加入複本：**  
+-   **若要加入複本，請使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
      [PowerShell](#PowerShellProcedure)  
   
--   **待處理：**  [加入次要複本之後](#FollowUp)  
+-   **後續操作：**  [加入次要複本之後](#FollowUp)  
   
 ## <a name="before-you-begin"></a>開始之前  
  我們強烈建議您先閱讀本節內容，然後再嘗試建立您的第一個可用性群組。  
   
-##  <a name="PrerequisitesRestrictions"></a> 必要條件和限制  
+##  <a name="PrerequisitesRestrictions"></a>必要條件和限制  
   
 -   您必須連接到裝載主要複本的伺服器執行個體。  
   
- 如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
+ 如需詳細資訊，請參閱[AlwaysOn 可用性群組 &#40;SQL Server&#41;的必要條件、限制和建議](prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 ##  <a name="Security"></a> Security  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- **加入複本**  
+ **若要加入複本**  
   
 1.  在 [物件總管] 中，連接到裝載主要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "72783006"
   
 3.  以滑鼠右鍵按一下可用性群組，然後選取下列其中一個命令：  
   
-    -   選取 **[加入複本]** 命令，以啟動 [將複本加入至可用性群組] 精靈。 如需詳細資訊，請參閱[使用 [將複本加入至可用性群組] 精靈 &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)。  
+    -   選取 **[加入複本]** 命令，以啟動 [將複本加入至可用性群組] 精靈。 如需詳細資訊，請參閱[使用將複本加入至可用性群組精靈 &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)。  
   
     -   或者，選取 **[屬性]** 命令，以開啟 **[可用性群組屬性]** 對話方塊。 在此對話方塊中加入複本的步驟如下：  
   
@@ -91,7 +91,7 @@ ms.locfileid: "72783006"
     ```  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
- **加入複本**  
+ **若要加入複本**  
   
 1.  變更目錄 (`cd`) 為裝載主要複本的伺服器執行個體。  
   
@@ -115,25 +115,25 @@ ms.locfileid: "72783006"
     ```  
   
     > [!NOTE]  
-    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱＜ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)＞。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
- **若要設定和使用 SQL Server PowerShell 提供者**  
+ **若要設定及使用 SQL Server PowerShell 提供者**  
   
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 待處理：加入次要複本之後  
+##  <a name="FollowUp"></a>後續操作：加入次要複本之後  
  若要將複本加入至現有的可用性群組，您必須執行下列步驟：  
   
 1.  連接到將要裝載新次要複本的伺服器執行個體。  
   
-2.  將新的次要複本加入可用性群組。 如需詳細資訊，請參閱 [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)中的 PowerShell，透過 PowerShell Cmdlet 建立及設定 AlwaysOn 可用性群組。  
+2.  將新的次要複本加入可用性群組。 如需詳細資訊，請參閱 [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
-3.  對於可用性群組中的每個資料庫，在裝載次要複本的伺服器執行個體上建立次要資料庫。 如需詳細資訊，請參閱[針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
+3.  對於可用性群組中的每個資料庫，在裝載次要複本的伺服器執行個體上建立次要資料庫。 如需詳細資訊，請參閱 [針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)中的 PowerShell，將次要資料庫聯結至 AlwaysOn 可用性群組。  
   
-4.  將每一個新的次要資料庫聯結至可用性群組。 如需詳細資訊，請參閱[將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
+4.  將每一個新的次要資料庫聯結至可用性群組。 如需詳細資訊，請參閱 [將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
- **管理可用性複本**  
+ **若要管理可用性複本**  
   
 -   [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
@@ -150,10 +150,10 @@ ms.locfileid: "72783006"
 -   [變更可用性複本的工作階段逾時期限 &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
+ [ALTER AVAILABILITY GROUP &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [建立及設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [使用 AlwaysOn 儀表板&#40;SQL Server Management Studio&#41; ](use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [監視可用性群組 &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
   

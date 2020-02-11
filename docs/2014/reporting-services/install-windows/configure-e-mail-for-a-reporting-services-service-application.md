@@ -11,34 +11,35 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6caa06af68eddfd85cb4f19ab2cfb8dd41bbdd95
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798105"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application-sharepoint-2010-and-sharepoint-2013"></a>設定 Reporting Services 服務應用程式的電子郵件 (SharePoint 2010 和 SharePoint 2013)
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料警示以電子郵件訊息傳送警示。 若要傳送電子郵件，您可能需要設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式，以及修改服務應用程式的電子郵件傳遞延伸模組。 如果您計劃針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱功能使用電子郵件傳遞延伸模組，也需要電子郵件設定。  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式&#124; sharepoint 2010 和 sharepoint 2013。|  
+|[!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Sharepoint 模式 &#124; sharepoint 2010 和 sharepoint 2013。|  
   
 ### <a name="to-configure-e-mail-for-the-shared-service"></a>設定共用服務的電子郵件  
   
-1.  在 SharePoint 管理中心中，按一下 **[應用程式管理]** 。  
+1.  在 SharePoint 管理中心中，按一下 **[應用程式管理]**。  
   
-2.  在 **[服務應用程式]** 群組中，按一下 **[管理服務應用程式]** 。  
+2.  在 **[服務應用程式]** 群組中，按一下 **[管理服務應用程式]**。  
   
 3.  在 **[名稱]** 清單中，按一下 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的名稱。  
   
-4.  在 [管理 Reporting Services 應用程式] 頁面上，按一下 [電子郵件設定]。  
+4.  在 [管理 Reporting Services 應用程式]**** 頁面上，按一下 [電子郵件設定]****。  
   
-5.  選取 **[使用 SMTP 伺服器]** 。  
+5.  選取 **[使用 SMTP 伺服器]**。  
   
 6.  在 **[外送 SMTP 伺服器]** 方塊中，輸入 SMTP 伺服器的名稱。  
   
-7.  在 [來源位址] 方塊中，鍵入電子郵件地址。  
+7.  在 [來源位址]**** 方塊中，鍵入電子郵件地址。  
   
      此地址是所有警示電子郵件訊息的寄件者地址。  
   

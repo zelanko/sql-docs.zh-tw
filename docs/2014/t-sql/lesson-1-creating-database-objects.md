@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 90780c16c2ba4b94b4e4a88c6f2c249176ef072b
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632712"
 ---
 # <a name="lesson-1-creating-database-objects"></a>第 1 課：建立資料庫物件
@@ -38,9 +38,9 @@ ms.locfileid: "73632712"
   
 -   [建立資料表 &#40;教學課程&#41;](lesson-1-2-creating-a-table.md)  
   
--   [在資料表中插入及更新資料 &#40;教學課程&#41;](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
+-   [在資料表中插入和更新資料 &#40;教學課程&#41;](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
--   [讀取資料表的資料 &#40;教學課程&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+-   [讀取資料表中的資料 &#40;教學課程&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
 -   [摘要：建立資料庫物件](lesson-1-5-summary-creating-database-objects.md)  
   

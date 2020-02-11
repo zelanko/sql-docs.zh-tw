@@ -16,21 +16,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796625"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>使用 WMI 提供者管理服務和網路設定
   WMI 提供者是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) 用於管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務和網路通訊協定的已發行介面。 在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 物件表示 WMI 提供者。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 物件可獨立操作，不受使用 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所建立連接的影響，並會使用 Windows 認證連接到 WMI 服務。  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 物件可獨立操作，不受使用 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所建立連接的影響，並會使用 Windows 認證連接到 WMI 服務。  
   
 ## <a name="example"></a>範例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- 對於使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WMI 提供者的程式，您必須包含 `Imports` 語句來限定 WMI 命名空間。 將陳述式插入至其他 `Imports` 陳述式之後、在應用程式中的任何宣告之前，例如：  
+ 對於使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wmi 提供者的程式，您必須包含`Imports`語句來限定 wmi 命名空間。 將陳述式插入至其他 `Imports` 陳述式之後、在應用程式中的任何宣告之前，例如：  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -175,5 +176,5 @@ $svc.ServiceState
 "Service" + $svc.Name + "is now started"
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [組態管理的 WMI 提供者概念](../../wmi-provider-configuration/wmi-provider-for-configuration-management.md)  

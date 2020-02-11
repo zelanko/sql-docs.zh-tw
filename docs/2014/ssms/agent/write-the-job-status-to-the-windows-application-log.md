@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ec615911233227c15f43e55125adfd6166cb51e8
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783364"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
-  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，將作業狀態寫入 Windows 應用程式事件記錄檔。  
+  本主題描述如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、或 SQL Server 管理物件， [!INCLUDE[tsql](../../includes/tsql-md.md)]在中設定 Agent，將作業狀態寫入 Windows 應用程式事件記錄檔。  
   
  作業回應可確保資料庫管理員知道作業已完成，以及作業的執行頻率。 典型的作業回應包括：  
   
@@ -38,9 +38,9 @@ ms.locfileid: "72783364"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要使用下列項目，將作業狀態寫入 Windows 應用程式記錄檔：**  
+-   **若要將作業狀態寫入 Windows 應用程式記錄檔，請使用：**  
   
      [Transact-SQL](#SSMS)  
   
@@ -57,17 +57,17 @@ ms.locfileid: "72783364"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **[SQL Server Agent]** ，展開 **[作業]** ，以滑鼠右鍵按一下要編輯的作業，然後按一下 **[屬性]** 。  
+2.  展開 **[SQL Server Agent]**，展開 **[作業]**，以滑鼠右鍵按一下要編輯的作業，然後按一下 **[屬性]**。  
   
 3.  選取 **[通知]** 頁面。  
   
-4.  勾選 **[寫入 Windows 應用程式事件記錄檔]** ，並選擇下列其中一項：  
+4.  勾選 **[寫入 Windows 應用程式事件記錄檔]**，並選擇下列其中一項：  
   
-    -   按一下 [當作業成功時]，在作業成功完成時記錄作業狀態。  
+    -   按一下 [當作業成功時]****，在作業成功完成時記錄作業狀態。  
   
-    -   按一下 [當作業失敗時]，在作業失敗時記錄作業狀態。  
+    -   按一下 [當作業失敗時]****，在作業失敗時記錄作業狀態。  
   
-    -   按一下 [作業完成時]，不論完成狀態為何，一律記錄作業狀態。  
+    -   按一下 [作業完成時]****，不論完成狀態為何，一律記錄作業狀態。  
   
 ##  <a name="SMO"></a>使用 SQL Server 管理物件  
 

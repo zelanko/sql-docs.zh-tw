@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798325"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>從命令提示字元安裝 PowerPivot
@@ -41,7 +41,7 @@ ms.locfileid: "72798325"
  相對於舊版，所有伺服器組態工作會以後續安裝工作來執行。 如果您想自動化安裝和組態步驟，您可以使用 PowerShell 設定伺服器。 如需詳細資訊，請參閱[使用 Windows PowerShell 的 PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)設定。  
   
 ## <a name="example-commands"></a>範例命令  
- 下列範例說明每個選項的用法。 範例1顯示 `SPI_AS_ExistingFarm`。  
+ 下列範例說明每個選項的用法。 範例1顯示`SPI_AS_ExistingFarm`。  
   
 ```cmd
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
@@ -62,17 +62,22 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
     Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
     ```  
   
-     `/q` 參數會以無訊息模式執行安裝程式，這樣會隱藏使用者介面。  
+     
+  `/q` 參數會以無訊息模式執行安裝程式，這樣會隱藏使用者介面。  
   
      當針對自動安裝指定了 `/IAcceptSQLServerLicenseTerms` 或 `/q` 參數時，將需要 `/qs`。  
   
-     `/action` 參數會指示安裝程式執行安裝。  
+     
+  `/action` 參數會指示安裝程式執行安裝。  
   
-     `/role` 參數會指示安裝程式安裝 PowerPivot for SharePoint 所需的 Analysis Services 程式和組態檔。 這個角色也會偵測及使用現有的伺服器陣列連接資訊，以存取 SharePoint 組態資料庫。 此參數為必要。 若要指定要安裝的元件，請使用這個參數，而非 `/features` 參數。  
+     
+  `/role` 參數會指示安裝程式安裝 PowerPivot for SharePoint 所需的 Analysis Services 程式和組態檔。 這個角色也會偵測及使用現有的伺服器陣列連接資訊，以存取 SharePoint 組態資料庫。 此為必要參數。 若要指定要安裝的元件，請使用這個參數，而非 `/features` 參數。  
   
-     `/instancename` 參數會將 'PowerPivot' 指定為具名執行個體。 這個值為硬式編碼，無法變更。 在命令中指定這個值是為了教育使用者，好讓使用者知道如何安裝此服務。  
+     
+  `/instancename` 參數會將 'PowerPivot' 指定為具名執行個體。 這個值為硬式編碼，無法變更。 在命令中指定這個值是為了教育使用者，好讓使用者知道如何安裝此服務。  
   
-     `/indicateprogress` 參數可讓您在命令提示字元視窗中監視進度。  
+     
+  `/indicateprogress` 參數可讓您在命令提示字元視窗中監視進度。  
   
 2.  此命令會略過 `PID` 參數，這樣會造成 Evaluation Edition 的安裝。 如果您想要安裝 Enterprise Edition，請將 PID 加入至安裝程式命令，並提供有效的產品金鑰。  
   
@@ -80,9 +85,9 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
     /PID=<product key for an Enterprise installation>  
     ```  
   
-3.  以有效的使用者帳戶和密碼取代 \<網域 \ 使用者名稱 > 和 \<設為 strongpassword > 的預留位置。  
+3.  使用有效的使用者\<帳戶和密碼\<來取代網域 \ 使用者名稱> 和設為 strongpassword>的預留位置。  
   
-     `/assvaccount` 和 **/assvcpassword**參數是用來設定應用程式伺服器上的 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 實例。 請以有效的帳戶資訊取代這些預留位置。  
+     `/assvaccount`和 **/assvcpassword**參數是用來設定應用程式[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]伺服器上的實例。 請以有效的帳戶資訊取代這些預留位置。  
   
      **/Assysadminaccounts**參數必須設定為正在執行 SQL Server 安裝程式之使用者的身分識別。 您至少必須指定一個系統管理員。 請注意，SQL Server 安裝程式不再授與自動系統管理員 (sysadmin) 權限給內建系統管理員群組的成員。  
   
@@ -100,7 +105,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 10. 若要驗證安裝，請檢查位於 \Program Files\SQL Server\120\Setup Bootstrap\Log 的 summary.txt 檔。 如果伺服器安裝成功而沒有任何錯誤，最終的結果應該是 "Passed"。  
   
-11. 設定伺服器。 您至少必須要部署方案、建立服務應用程式，並針對每一個網站集合啟用此功能。 如需詳細資訊，請參閱[設定或修復&#40;PowerPivot for SharePoint 2010 PowerPivot&#41;設定工具](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)或[管理中心的 powerpivot 伺服器管理和](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)設定。  
+11. 設定伺服器。 您至少必須要部署方案、建立服務應用程式，並針對每一個網站集合啟用此功能。 如需詳細資訊，請參閱[設定或修復 PowerPivot for SharePoint 2010 &#40;PowerPivot 設定工具&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)或 [[管理中心] 中的 powerpivot 伺服器管理和](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)設定。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 PowerPivot 服務帳戶](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   

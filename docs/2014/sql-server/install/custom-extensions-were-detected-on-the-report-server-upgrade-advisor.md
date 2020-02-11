@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952591"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>在報表伺服器上偵測到自訂延伸模組 (Upgrade Advisor)
@@ -28,13 +28,13 @@ ms.locfileid: "71952591"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; SharePoint 模式。|  
   
 ## <a name="component"></a>元件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>描述  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供可擴充的架構，可讓開發人員建立資料處理、傳遞、轉譯、安全性和驗證的自訂延伸模組。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]提供可擴充的架構，可讓開發人員建立資料處理、傳遞、轉譯、安全性和驗證的自訂延伸模組。  
   
  如果自訂延伸模組或組件使用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝中，雖然您可以使用安裝程式來執行升級，但是可能必須在升級完成之後將延伸模組移至新的安裝位置，或者可能必須在升級之前執行一些步驟。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71952591"
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>自訂資料處理或傳遞延伸模組的升級後步驟  
   
-1.  將延伸模組檔案移至報表伺服器的新程式資料夾。 根據預設，報表伺服器程式資料夾是在 \Program Files\Microsoft SQL Server\MSRS10_50. \<*instance_name*> \report sample server 中。  
+1.  將延伸模組檔案移至報表伺服器的新程式資料夾。 根據預設，報表伺服器程式資料夾位於 \Program Files\Microsoft SQL Server \ MSRS10_50。\< *instance_name*> \report sample 伺服器。  
   
  如需詳細資訊，請參閱《SQL Server 線上叢書》中的＜部署資料處理延伸模組＞和＜實作傳遞延伸模組＞。  
   
@@ -142,6 +142,6 @@ ms.locfileid: "71952591"
 3.  在新的執行個體上設定延伸模組。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 升級問題&#40;upgrade Advisor&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [&#40;Upgrade Advisor Reporting Services 升級問題&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   
