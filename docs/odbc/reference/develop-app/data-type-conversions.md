@@ -17,19 +17,19 @@ ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 590bd488ae87e8e871837c3055a3225794850d00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077009"
 ---
 # <a name="data-type-conversions"></a>資料類型轉換
-資料可從一種類型中轉換到另一個，在其中一個四次： 當資料傳輸從一個應用程式變數到另一個 (C 到 C)，當應用程式變數中的資料傳送至陳述式參數 (C 到 SQL) 中傳回結果集資料行中的資料時應用程式變數 (SQL 到 C) 和資料時從一個資料來源的資料行傳送至另一個 (SQL to SQL)。  
+資料可以從一種類型轉換成另一種類型：當資料從某個應用程式變數傳輸至另一個（C 到 C）時，當應用程式變數中的資料傳送至語句參數（c 到 C）時，會在中傳回結果集資料行中的資料應用程式變數（SQL 到 C），以及將資料從一個資料來源資料行傳送到另一個（SQL 到 SQL）時。  
   
- 當資料從一個應用程式變數傳送至另一個時，就會發生任何轉換已超出本文的範圍。  
+ 當資料從某個應用程式變數轉移到另一個時所發生的任何轉換，都不在本檔的討論範圍內。  
   
- 當應用程式會將變數繫結至結果集資料行或陳述式參數時，應用程式會隱含指定的資料類型轉換中選擇的應用程式變數的資料類型。 例如，假設資料行包含整數資料。 如果應用程式會將整數變數繫結至資料行，它就會指定不完成任何轉換;如果應用程式會將字元變數繫結至資料行，它會指定，資料會從整數轉換成字元。  
+ 當應用程式將變數系結至結果集資料行或語句參數時，應用程式會以隱含方式在其選擇的應用程式變數資料類型中指定資料類型轉換。 例如，假設資料行包含整數資料。 如果應用程式將整數變數系結至資料行，則會指定不進行轉換。如果應用程式將字元變數系結至資料行，它會指定要從整數轉換成字元。  
   
- ODBC 定義每個 SQL 和 C 資料類型之間轉換資料的方式。 基本上，ODBC 支援所有合理轉換的詳細資訊，例如整數和浮點數到整數的字元，而且不支援定義不正確的轉換，例如浮點數的日期。 支援每個 SQL 資料類型所支援的所有轉換所需驅動程式。 SQL 和 C 資料類型之間轉換的完整清單，請參閱 <<c0> [ 轉換將資料從 SQL 到 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)並[轉換將資料從 C 到 SQL 資料類型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)附錄 d:資料類型。  
+ ODBC 會定義在每個 SQL 和 C 資料類型之間轉換資料的方式。 基本上，ODBC 支援所有合理的轉換，例如字元到整數和整數到 float，而且不支援錯誤定義的轉換，例如 float to date。 需要驅動程式才能支援每個支援的 SQL 資料類型的所有轉換。 如需 SQL 和 C 資料類型之間轉換的完整清單，請參閱附錄 D：資料類型中的將[資料從 Sql 轉換成 c 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)和[將資料從 C 轉換成 SQL 資料類型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
   
- ODBC 也會定義將資料從一個 SQL 資料類型轉換為另一個純量函數。 **轉換**純量函式所對應的驅動程式為基礎的純量函式來執行轉換的資料來源中定義的函式。 此函式會對應至特定 DBMS 的函式，因為這些轉換的運作方式，或必須支援何種轉換，不會定義 ODBC。 應用程式可讓您探索哪些轉換支援透過 SQL_CONVERT 選項的特定驅動程式和資料來源**SQLGetInfo**。 如需詳細資訊**轉換**純量函數，請參閱[ODBC 中的逸出序列](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)並[明確資料類型轉換函式](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md)。
+ ODBC 也會定義純量函數，以便將資料從一個 SQL 資料類型轉換成另一個。 **轉換**純量函數會由驅動程式對應到基礎純量函數，或定義為在資料來源中執行轉換的函數。 因為此函式會對應至 DBMS 特有的函數，所以 ODBC 不會定義這些轉換的運作方式，或是必須支援的轉換。 應用程式會透過**SQLGetInfo**中的 SQL_CONVERT 選項，探索特定驅動程式和資料來源所支援的轉換。 如需**CONVERT**純量函數的詳細資訊，請參閱[ODBC 中的 Escape 序列](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)和[明確的資料類型轉換函](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md)式。

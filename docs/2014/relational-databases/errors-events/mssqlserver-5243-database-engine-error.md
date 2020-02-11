@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6e8fd1c3ee57b1e85411eb9a546e8330ce53054
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867852"
 ---
-# <a name="mssqlserver5243"></a>MSSQLSERVER_5243
+# <a name="mssqlserver_5243"></a>MSSQLSERVER_5243
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|5243|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -36,7 +36,7 @@ ms.locfileid: "62867852"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在記憶體儲存引擎結構中偵測到結構不一致。  
   
 ## <a name="see-also"></a>另請參閱  
- [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   
+ [DBCC CHECKDB &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   
  [資料庫檔案與檔案群組](../databases/database-files-and-filegroups.md)  
   
   

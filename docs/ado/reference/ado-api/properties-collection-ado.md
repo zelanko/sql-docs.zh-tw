@@ -1,5 +1,5 @@
 ---
-title: 屬性集合 (ADO) |Microsoft Docs
+title: Properties 集合（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,27 +18,27 @@ ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 01c2ea6b885ed2619b79413beb09ca4bf2835162
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917569"
 ---
 # <a name="properties-collection-ado"></a>Properties 集合 (ADO)
-包含所有[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件的特定執行個體的物件。  
+包含物件之特定實例的所有[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件。  
   
 ## <a name="remarks"></a>備註  
- 某些 ADO 物件具有**屬性**所組成的集合**屬性**物件。 每個**屬性**物件會對應至提供者特有之 ADO 物件的特性。  
+ 有些 ADO 物件具有由**屬性**物件所組成的**屬性**集合。 每個**屬性**物件都會對應至提供者特定的 ADO 物件特性。  
   
 > [!NOTE]
->  請參閱[屬性](../../../ado/reference/ado-api/property-object-ado.md)如需如何使用的更詳細說明的物件主題**屬性**物件。  
+>  如需如何使用**屬性**物件的詳細說明，請參閱[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件主題。  
   
- **動態屬性**的**Recordset**物件超出範圍 （變成無法使用） 時移**資料錄集**已關閉。  
+ 當**記錄集**關閉時，**記錄集**物件的**動態屬性**會移出範圍（變成無法使用）。  
   
  此章節包含下列主題。  
   
--   [屬性集合屬性、 方法和事件](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
+-   [Properties 集合屬性、方法和事件](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
+ [Property 物件（ADO）](../../../ado/reference/ado-api/property-object-ado.md)   
  [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)

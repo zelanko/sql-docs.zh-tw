@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a943d0ed7cfb0932f7eec757b40fef4d8de6504c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63306007"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>對應多對多關聯性 (Visual Database Tools)
@@ -32,15 +32,15 @@ ms.locfileid: "63306007"
   
 1.  在資料庫圖表中，加入您要在其間建立多對多關聯性的資料表。  
   
-2.  在圖表上按一下滑鼠右鍵，並從快速鍵功能表選擇 [新增資料表]  ，建立第三個資料表。 這會成為聯合資料表。  
+2.  在圖表上按一下滑鼠右鍵，並從快速鍵功能表選擇 [新增資料表]****，建立第三個資料表。 這會成為聯合資料表。  
   
-3.  在 [選擇名稱]  對話方塊中，變更系統指派的資料表名稱。 例如，`titles` 資料表和 `authors` 資料表之間的聯合資料表，現在的名稱為 `titleauthors`。  
+3.  在 [選擇名稱]**** 對話方塊中，變更系統指派的資料表名稱。 例如， `titles` 資料表和 `authors` 資料表之間的聯合資料表，現在的名稱為 `titleauthors`。  
   
 4.  將兩個資料表的主索引鍵資料行都複製到聯合資料表。 您可以將其他資料行加入到此資料表，也可以加入到其他資料表。  
   
-5.  在聯合資料表中，將主索引鍵設定為包含來自其他兩個資料表的所有主索引鍵資料行。 如需詳細資訊，請參閱 < [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md)。  
+5.  在聯合資料表中，將主索引鍵設定為包含來自其他兩個資料表的所有主索引鍵資料行。 如需詳細資訊，請參閱[建立主鍵](../../relational-databases/tables/create-primary-keys.md)。  
   
-6.  定義兩個主資料表和聯合資料表之間的一對多關聯性。 聯合資料表應該位於所建立的兩個關聯性「多」的一方。 如需詳細資訊，請參閱 < [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。  
+6.  定義兩個主資料表和聯合資料表之間的一對多關聯性。 聯合資料表應該位於所建立的兩個關聯性「多」的一方。 如需詳細資訊，請參閱[建立外鍵關聯](../../relational-databases/tables/create-foreign-key-relationships.md)性。  
   
     > [!NOTE]  
     >  在資料庫圖表中建立聯合資料表，並不會將關聯資料表的資料插入至聯合資料表。 如需將資料插入資料表的詳細資訊，請參閱[建立插入結果查詢 &#40;Visual Database Tools&#41;](visual-database-tools.md)。  

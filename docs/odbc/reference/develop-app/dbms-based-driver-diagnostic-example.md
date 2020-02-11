@@ -15,16 +15,16 @@ ms.assetid: a80d54b0-43ff-4dfd-b6cb-f4694a5ed765
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ef42fe2ab881a7e24d680e0dd941cbea0d95488f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076888"
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>以 DBMS 為基礎的驅動程式診斷範例
-以 DBMS 為基礎的驅動程式將要求傳送至 DBMS，並傳回至應用程式透過驅動程式管理員的資訊。 因為驅動程式介面驅動程式管理員使用的元件，其格式，並傳回引數**SQLGetDiagRec**。  
+以 DBMS 為基礎的驅動程式會將要求傳送至 DBMS，並透過驅動程式管理員將資訊傳回到應用程式。 因為驅動程式是與驅動程式管理員介面的元件，所以它會格式化並傳回**SQLGetDiagRec**的引數。  
   
- 比方說，如果針對 Oracle Rdb 遇到無效的資料指標名稱，請使用 SQL/服務，Microsoft 驅動程式，它可能會傳回下列值從**SQLGetDiagRec**:  
+ 例如，如果使用 SQL/服務，則適用于 Oracle Rdb 的 Microsoft 驅動程式遇到不正確資料指標名稱，它可能會從**SQLGetDiagRec**傳回下列值：  
   
 ```  
 SQLSTATE:         "34000"  
@@ -32,9 +32,9 @@ Native Error:      0
 Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver]Invalid cursor name: EMPLOYEE_CURSOR."  
 ```  
   
- 驅動程式中發生的錯誤，所以它加入前置詞的診斷訊息 ([Microsoft]) 的廠商和驅動程式 （[ODBC Rdb 驅動程式]）。  
+ 因為此錯誤發生在驅動程式中，所以它會將前置詞新增至廠商的診斷訊息（[Microsoft]）和驅動程式（[ODBC Rdb 驅動程式]）。  
   
- 如果 DBMS 找不到員工的資料表，驅動程式可能會格式化，並傳回下列值從**SQLGetDiagRec**:  
+ 如果 DBMS 找不到資料表 EMPLOYEE，驅動程式可能會格式化，並從**SQLGetDiagRec**傳回下列值：  
   
 ```  
 SQLSTATE:         "42S02"  
@@ -43,4 +43,4 @@ Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver][Rdb] %SQL-F-RELNOTDEF, Table EMP
                   "is not defined in schema."  
 ```  
   
- 因為資料來源中發生錯誤，此驅動程式會加入診斷訊息 ([Rdb]) 的資料來源識別碼的前置詞。 由於驅動程式所使用的資料來源的元件，它會加入至診斷訊息的前置詞，其供應商 ([Microsoft]) 和識別項 （[ODBC Rdb 驅動程式]）。
+ 因為此錯誤發生在資料來源中，所以驅動程式已在診斷訊息中加入資料來源識別碼（[Rdb]）的前置詞。 因為驅動程式是與資料來源介面的元件，所以它會將其廠商的前置詞（[Microsoft]）和識別碼（[ODBC Rdb 驅動程式]）新增至診斷訊息。

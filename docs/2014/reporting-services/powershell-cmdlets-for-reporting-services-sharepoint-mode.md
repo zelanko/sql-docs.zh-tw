@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79fe1380a38ab9b2d309f0fc6419261e4f13ef8b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253258"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 模式的 PowerShell Cmdlet
@@ -131,7 +131,7 @@ ms.locfileid: "75253258"
 |New-SPRSExtension|向 Reporting Services 服務應用程式註冊新的延伸模組。|  
 |Set-SPRSExtension|設定現有 Reporting Services 延伸模組的屬性。|  
 |Remove-SPRSExtension|從 Reporting Services 服務應用程式中移除延伸模組。|  
-|Get-SPRSExtension|獲取一個或多個用於 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 延伸模組。<br /><br /> 有效值為：<br /><br /> **運送**<br /><br /> **DeliveryUI**<br /><br /> **使得**<br /><br /> **資料**<br /><br /> **安全級**<br /><br /> **Authentication**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **設計工具**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
+|Get-SPRSExtension|獲取一個或多個用於 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 延伸模組。<br /><br /> 有效值為：<br /><br /> **運送**<br /><br /> **DeliveryUI**<br /><br /> **轉譯**<br /><br /> **Data**<br /><br /> **安全性**<br /><br /> **驗證**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **設計工具**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
 |Get-SPRSSite|根據是否啟用 "ReportingService" 功能取得 SharePoint 網站。 根據預設，將會傳回啟用 "ReportingService" 功能的網站。|  
   
 ##  <a name="bkmk_basic_samples"></a>基本範例  

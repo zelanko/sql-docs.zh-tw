@@ -1,5 +1,5 @@
 ---
-title: ORDER BY 運算式清單 |Microsoft Docs
+title: ORDER BY 運算式-list |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,18 +14,18 @@ ms.assetid: 5ef88186-a99f-4e2c-a3f3-98a42d4f03a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cd88673c4b5309b7463256b85df4f92d6d360b16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100787"
 ---
 # <a name="order-by-expression-list"></a>ORDER BY 運算式清單
-運算式可以使用 ORDER BY 子句中。 比方說，在下列子句的資料表依三個索引鍵的運算式： a + b、 c + d 和 e。  
+運算式可以在 ORDER BY 子句中使用。 例如，在下列子句中，資料表是以三個索引鍵運算式排序： a + b、c + d 和 e。  
   
 ```  
 SELECT * FROM emp  
 ORDER BY a+b,c+d,e  
 ```  
   
- 沒有順序允許 set 函式或包含 set 函式的運算式。
+ Set 函數或包含 set 函數的運算式不允許排序。

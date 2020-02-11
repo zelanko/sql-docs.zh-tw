@@ -1,5 +1,5 @@
 ---
-title: sys.assemblies (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19577afb746e3b005dffd803d86351d8a4b0eca4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68001213"
 ---
 # <a name="sysassemblies-transact-sql"></a>sys.assemblies (Transact-SQL)
@@ -39,18 +39,18 @@ ms.locfileid: "68001213"
 |**assembly_id**|**int**|組件識別碼。 在資料庫中，這是唯一的。|  
 |**clr_name**|**nvarchar(4000)**|將簡單名稱、版本號碼、文化、公開金鑰和組件架構加以編碼的標準字串。 這個值可以唯一識別 Common Language Runtime (CLR) 端的組件。|  
 |**permission_set**|**tinyint**|組件的權限集合/安全性層級。<br /><br /> 1 = 安全存取<br /><br /> 2 = 外部存取<br /><br /> 3 = 不安全存取|  
-|**permission_set_desc**|**nvarchar(60)**|組件的權限集合/安全層級描述。<br /><br /> SAFE_ACCESS<br /><br /> EXTERNAL_ACCESS<br /><br /> UNSAFE_ACCESS|  
+|**permission_set_desc**|**Nvarchar （60）**|組件的權限集合/安全層級描述。<br /><br /> SAFE_ACCESS<br /><br /> EXTERNAL_ACCESS<br /><br /> UNSAFE_ACCESS|  
 |**is_visible**|**bit**|1 = 只要是註冊 [!INCLUDE[tsql](../../includes/tsql-md.md)] 進入點都看得到組件。<br /><br /> 0 = 組件是專供 Managed 呼叫端使用。 也就是說，組件會為資料庫中的其他組件提供內部實作。|  
 |**create_date**|**datetime**|建立或登錄組件的日期。|  
 |**modify_date**|**datetime**|修改組件的日期。|  
-|**is_user_defined**|**bit**|指示組件的來源。<br /><br /> 0 = 系統定義的組件 (例如 Microsoft.SqlServer.Types **hierarchyid**資料類型)<br /><br /> 1 = 使用者定義的組件|  
+|**is_user_defined**|**bit**|指示組件的來源。<br /><br /> 0 = 系統定義的元件（例如**hierarchyid**資料類型的 Microsoft. SqlServer 類型）<br /><br /> 1 = 使用者定義的組件|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [CLR 組件目錄檢視&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)   
+ [CLR 元件目錄檢視 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [ASSEMBLYPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/assemblyproperty-transact-sql.md)  
+ [ASSEMBLYPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/assemblyproperty-transact-sql.md)  
   
   

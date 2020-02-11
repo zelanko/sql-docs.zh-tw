@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21b79a06acd838278073dee58026269f63b0da04
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75231714"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>SQL Server Native Client 中的疏鬆資料行支援
@@ -32,7 +32,7 @@ ms.locfileid: "75231714"
 ## <a name="user-scenarios-for-sparse-columns-and-sql-server-native-client"></a>疏鬆資料行與 SQL Server Native Client 的使用者案例  
  下表針對包含疏鬆資料行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用者摘要一般使用者案例：  
   
-|案例|行為|  
+|狀況|行為|  
 |--------------|--------------|  
 |**select \* From table**或 IOpenRowset：： OpenRowset。|傳回不屬於疏鬆 `column_set` 成員的所有資料行，加上包含屬於疏鬆 `column_set` 成員之所有非 Null 資料行值的 XML 資料行。|  
 |依名稱參考資料行。|不管其疏鬆資料行狀態或 `column_set` 成員資格，都可以參考資料行。|  

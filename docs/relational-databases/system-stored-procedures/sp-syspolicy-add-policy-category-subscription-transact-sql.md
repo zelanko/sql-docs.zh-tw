@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_add_policy_category_subscription & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_syspolicy_add_policy_category_subscription （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 795a806b1b945407a2db947f6037c435efe68b56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010508"
 ---
-# <a name="spsyspolicyaddpolicycategorysubscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
+# <a name="sp_syspolicy_add_policy_category_subscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   將原則類別目錄訂閱新增到指定的資料庫。  
@@ -42,25 +42,25 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @target_type = ] 'target_type'` 是類別目錄訂閱的目標類型。 *target_type*已**sysname**是必要的且必須設定為 'DATABASE'。  
+`[ @target_type = ] 'target_type'`這是類別目錄訂閱的目標型別。 *target_type*是**sysname**，是必要的，而且必須設定為 ' DATABASE '。  
   
-`[ @target_object = ] 'target_object'` 會將訂閱類別目錄資料庫的名稱。 *target_object*已**sysname**，而且需要。  
+`[ @target_object = ] 'target_object'`這是將訂閱類別目錄的資料庫名稱。 *target_object*是**sysname**，而且是必要的。  
   
-`[ @policy_category = ] 'policy_category'` 是要訂閱的原則類別目錄的名稱。 *policy_category&lt*已**sysname**，而且需要。  
+`[ @policy_category = ] 'policy_category'`這是要訂閱的原則類別目錄名稱。 *policy_category*是**sysname**，而且是必要的。  
   
- 若要取得值，如*policy_category&lt*，查詢 msdb.dbo.syspolicy_policy_categories 系統檢視表。  
+ 若要取得*policy_category*的值，請查詢 msdb. dbo. syspolicy_policy_categories 系統檢視。  
   
-`[ @policy_category_subscription_id = ] policy_category_subscription_id` 是類別目錄訂閱的識別碼。 *policy_category_subscription_id&lt*已**int**，而且會當做 OUTPUT 傳回。  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id`這是類別目錄訂閱的識別碼。 *policy_category_subscription_id*是**int**，且會當做 OUTPUT 傳回。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
  您必須在 msdb 系統資料庫的內容中執行 sp_syspolicy_add_policy_category_subscription。  
   
- 如果您指定不存在的原則類別目錄，就會建立新的原則類別目錄，而且當您執行此預存程序時，所有資料庫都會託管此訂閱。 如果您之後針對新的類別目錄清除託管的訂閱，只會針對您指定為 *target_object* 的資料庫來套用此訂閱。 如需如何變更授權之訂閱設定的詳細資訊，請參閱 [sp_syspolicy_update_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md)。  
+ 如果您指定不存在的原則類別目錄，就會建立新的原則類別目錄，而且當您執行此預存程序時，所有資料庫都會託管此訂閱。 如果您之後針對新的類別目錄清除託管的訂閱，只會針對您指定為 *target_object*的資料庫來套用此訂閱。 如需如何變更授權之訂閱設定的詳細資訊，請參閱 [sp_syspolicy_update_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  此預存程序會在目前預存程序擁有者的內容中執行。  
   
 ## <a name="examples"></a>範例  
@@ -75,8 +75,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [以原則為基礎的管理預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_update_policy_category_subscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
- [sp_syspolicy_unsubscribe_from_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
+ [以原則為基礎的管理預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_update_policy_category_subscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_unsubscribe_from_policy_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
   
   

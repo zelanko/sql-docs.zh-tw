@@ -1,5 +1,5 @@
 ---
-title: 具有記憶體最佳化資料表的交易隔離等級的指導方針 |Microsoft Docs
+title: 具有記憶體優化資料表的交易隔離等級方針 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779153"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>搭配記憶體最佳化的資料表使用交易隔離等級的方針
@@ -24,7 +24,7 @@ ms.locfileid: "62779153"
   
 -   TRANSACTION ISOLATION LEVEL 是包含原生編譯預存程序內容之 ATOMIC 區塊的必要選項。  
   
--   由於隔離等級在跨容器交易的使用限制，解譯的 [!INCLUDE[tsql](../includes/tsql-md.md)] 中記憶體最佳化資料表的使用，通常必須伴隨著資料表提示，指定用來存取資料表之隔離等級。 如需有關隔離等級提示和跨容器交易的詳細資訊，請參閱 <<c0> [ 交易隔離等級](../../2014/database-engine/transaction-isolation-levels.md)。  
+-   由於隔離等級在跨容器交易的使用限制，解譯的 [!INCLUDE[tsql](../includes/tsql-md.md)] 中記憶體最佳化資料表的使用，通常必須伴隨著資料表提示，指定用來存取資料表之隔離等級。 如需隔離等級提示和跨容器交易的詳細資訊，請參閱[交易隔離等級](../../2014/database-engine/transaction-isolation-levels.md)。  
   
 -   所需的交易隔離等級必須明確宣告。 無法使用鎖定提示 (例如 XLOCK) 來保證交易中某些資料列或資料表的隔離。  
   
@@ -32,14 +32,16 @@ ms.locfileid: "62779153"
   
 -   記憶體最佳化的資料表應該避免長時間執行的交易。 這類交易會增加衝突及後續交易終止的可能性。 長時間執行的交易也可能會延緩記憶體回收。 交易執行的時間愈久，記憶體中 OLTP 就會將最近刪除的資料列版本保留得愈久，這會減少新交易的查閱效能。  
   
- 磁碟基礎的資料表通常依賴鎖定及封鎖進行交易隔離。 記憶體最佳化的資料表依賴多重版本設定和衝突偵測以保證隔離。 如需詳細資訊，請參閱 < 衝突偵測、 驗證和認可相依性檢查在[Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 磁碟基礎的資料表通常依賴鎖定及封鎖進行交易隔離。 記憶體最佳化的資料表依賴多重版本設定和衝突偵測以保證隔離。 如需詳細資訊，請參閱[記憶體優化資料表中交易](../relational-databases/in-memory-oltp/memory-optimized-tables.md)的衝突偵測、驗證和認可相依性檢查一節。  
   
  磁碟基礎的資料表允許多重版本設定與隔離等級 SNAPSHOT 和 READ_COMMITTED_SNAPSHOT。 對於記憶體最佳化的資料表，所有隔離等級都是根據多個版本，包括 REPEATABLE READ 和 SERIALIZABLE。  
   
 ## <a name="types-of-transactions"></a>交易的類型  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的每一個查詢都是在交易的內容中執行。  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的每一個查詢都是在交易的內容中執行。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的交易有三種類型：  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的交易有三種類型：  
   
 -   自動認可交易： 如果沒有使用中交易內容，而且在工作階段中隱含交易未設為 ON，每個查詢都有自己的交易內容。 交易在陳述式開始執行時開始，在陳述式完成時完成。  
   
@@ -56,7 +58,7 @@ ms.locfileid: "62779153"
   
  SNAPSHOT 隔離等級提供的保證 (記憶體最佳化資料表支援的最低隔離等級) 包含 READ COMMITTED 保證。 交易中的每個陳述式都會讀取資料庫的相同一致版本。 不只是交易所讀取的所有資料列都會認可至資料庫，所有讀取作業也會看到同一組交易所做的同一組變更。  
   
- **指導方針**:如果只需要 READ COMMITTED 隔離保證，使用快照集隔離來存取記憶體最佳化的資料表，透過原生編譯的預存程序與解譯[!INCLUDE[tsql](../includes/tsql-md.md)]。  
+ **指導**方針：如果只需要讀取認可的隔離保證，請搭配原生編譯的預存程式使用快照集隔離，並透過解讀[!INCLUDE[tsql](../includes/tsql-md.md)]來存取記憶體優化的資料表。  
   
  對於自動認可交易，READ COMMITTED 隔離等級隱含對應到記憶體最佳化資料表的 SNAPSHOT 隔離。 因此，如果 TRANSACTION ISOLATION LEVEL 工作階段設定為 READ COMMITTED，當存取記憶體最佳化的資料表時，不需要透過資料表提示指定隔離等級。  
   
@@ -91,13 +93,13 @@ COMMIT
   
      有些應用程式可能會假設讀取器一定會等候寫入器認可，特別是在應用程式層中兩筆交易之間有任何同步處理時。  
   
-     **指導方針：** 應用程式不可依賴封鎖行為。 如果應用程式需要並行交易之間同步處理，這類邏輯可以實作在應用程式層，或在資料庫層中，透過[sp_getapplock &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql)。  
+     **指導方針：** 應用程式不能依賴封鎖行為。 如果應用程式需要在並行交易之間進行同步處理，則可以透過[sp_getapplock &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql)，在應用層或資料庫層中執行這類邏輯。  
   
 -   在使用 READ COMMITTED 隔離的交易，每個陳述式都會看到資料庫中最新版本的資料列。 因此，後續陳述式會看到資料庫狀態變更。  
   
      使用 WHILE 迴圈輪詢資料表，直到找到新資料列為止，就是使用這個假設的應用程式模式範例。 在迴圈的每個反覆運算，查詢會看到資料庫的最新更新。  
   
-     **指導方針：** 如果應用程式需要輪詢記憶體最佳化的資料表，以取得最新的資料列寫入資料表，將輪詢迴圈移交易範圍之外。  
+     **指導方針：** 如果應用程式需要輪詢記憶體優化資料表，以取得寫入資料表的最新資料列，請將輪詢迴圈移至交易範圍外。  
   
      下列是使用這個假設的範例應用程式模式。 使用 WHILE 迴圈輪詢資料表，直到找到新資料列為止。 在每個迴圈反覆運算，查詢會存取資料庫的最新更新。  
   
@@ -123,15 +125,15 @@ COMMIT
 ```  
   
 ## <a name="locking-table-hints"></a>鎖定資料表提示  
- 鎖定提示 ([資料表提示&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)) 例如 HOLDLOCK 和 XLOCK 可以搭配以磁碟為基礎的資料表有[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]採取更多的鎖定所需之指定的隔離等級。  
+ 鎖定提示（[資料表提示 &#40;transact-sql&#41;](/sql/t-sql/queries/hints-transact-sql-table)）（例如 HOLDLOCK 和 XLOCK）可搭配以磁片為基礎的資料表使用，使[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]其擁有比所指定隔離等級所需更多的鎖定。  
   
  記憶體最佳化的資料表不使用鎖定。 可使用較高的隔離等級，例如 REPEATABLE READ 和 SERIALIZABLE，來宣告所需的保證。  
   
  不支援鎖定提示。 請改為透過交易隔離等級宣告所需的保證。 (支援 NOLOCK，因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 沒有在記憶體最佳化的資料表上鎖定。 請注意，與磁碟基礎的資料表相反，NOLOCK 不表示記憶體最佳化資料表的 READ UNCOMMITTED 行為)。  
   
 ## <a name="see-also"></a>另請參閱  
- [了解記憶體最佳化資料表上的交易](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [指導方針的記憶體最佳化資料表上的交易重試邏輯](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
+ [瞭解記憶體優化資料表上的交易](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [記憶體優化資料表上交易的重試邏輯指導方針](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
  [交易隔離等級](../../2014/database-engine/transaction-isolation-levels.md)  
   
   

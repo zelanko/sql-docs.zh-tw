@@ -42,10 +42,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70e31ec60f8f47dfbc0a4761357c99a42623c6eb
-ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74479320"
 ---
 # <a name="publish-data-and-database-objects"></a>發行資料和資料庫物件
@@ -54,7 +54,7 @@ ms.locfileid: "74479320"
 |資料庫物件|快照式複寫和異動複寫|合併式複寫|  
 |---------------------|--------------------------------------------------------|-----------------------|  
 |資料表|X|X|  
-|資料分割資料表|X|X|  
+|分割區資料表|X|X|  
 |預存程序 - 定義 ([!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 CLR)|X|X|  
 |預存程序 - 執行 ([!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 CLR)|X|否|  
 |檢視|X|X|  
@@ -93,7 +93,7 @@ ms.locfileid: "74479320"
   
 -   [定義發行項](define-an-article.md)  
   
--   [查看及修改發行集屬性](view-and-modify-publication-properties.md)  
+-   [檢視和修改發行集屬性](view-and-modify-publication-properties.md)  
   
 -   [檢視和修改發行項屬性](view-and-modify-article-properties.md)  
   
@@ -109,11 +109,11 @@ ms.locfileid: "74479320"
   
 -   [篩選發行的資料](filter-published-data.md)  
   
--   [異動複寫的發行項選項](../transactional/article-options-for-transactional-replication.md)  
+-   [Article Options for Transactional Replication](../transactional/article-options-for-transactional-replication.md)  
   
 -   [合併式複寫的發行項選項](../merge/article-options-for-merge-replication.md)  
   
--   [複寫識別欄位](replicate-identity-columns.md)  
+-   [複寫識別資料行](replicate-identity-columns.md)  
   
  在為複寫發行資料表時，您可以指定應複製到「訂閱者」的結構描述物件，例如宣告參考完整性 (主索引鍵條件約束、參考條件約束、唯一條件約束)、索引、使用者 DML 觸發程序 (無法複寫 DDL 觸發程序)、擴充屬性和定序。 只在發行者與訂閱者之間的初始同步處理中複寫擴充屬性。 如果您在初始同步處理之後加入或修改擴充屬性，就不會複寫這項變更。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "74479320"
 ## <a name="publishing-views"></a>發行檢視表  
  所有類型的複寫都可讓您複寫檢視。 檢視 (及其隨附的索引，如果它是索引檢視表的話) 可被複製到「訂閱者」，但必須同時複寫基底資料表。  
   
- 對於索引檢視表，異動複寫也可讓您以資料表而不是檢視複寫索引檢視表，不需要複寫基底資料表。 若要這麼做，請為[sp_addarticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)的* \@type*參數指定其中一個 [indexed view logbased] 選項。 如需使用 **sp_addarticle** 的詳細資訊，請參閱[定義發行項](define-an-article.md)。  
+ 對於索引檢視表，異動複寫也可讓您以資料表而不是檢視複寫索引檢視表，不需要複寫基底資料表。 若要執行此操作，請為 *sp_addarticle &#40;Transact-SQL&#41;\@ 的* [type](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 參數指定 "indexed view logbased" 選項之一。 如需使用 **sp_addarticle** 的詳細資訊，請參閱[定義發行項](define-an-article.md)。  
   
 ## <a name="publishing-user-defined-functions"></a>發行使用者自訂函數  
  CLR 函數和 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函數的 CREATE FUNCTION 陳述式會複製到每一個訂閱者。 如果使用 CLR 函數，還將複製相關組件。 對函數所作的變更會被複寫到「訂閱者」；而對相關組件所作的變更則不會。  
@@ -168,7 +168,7 @@ ms.locfileid: "74479320"
 -   如果您發行的資料庫物件相依於一或多個其他資料庫物件，就必須發行所有參考物件。 例如，如果您發行相依於資料表的檢視表，同時也必須發行該資料表。  
   
     > [!NOTE]  
-    >  如果您將發行項加入至合併式發行集，而且現有發行項相依于新的文章，則您必須使用[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)和[sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)的** \@processing_order**參數，為這兩篇文章指定處理順序。 請考慮下列狀況：您發行資料表但未發行該資料表所參考的函數。 如果您未發行該函數，該資料表就無法在「訂閱者」端建立。 當您將函式新增至發行集時：請將 **sp_addmergearticle** 的 **\@processing_order** 參數值指定為 **1**；並將 **sp_changemergearticle** 的 **\@processing_order** 參數值指定為 **2**，指定 **\@article** 參數的資料表名稱。 此處理順序可確保您先在「訂閱者」端建立函數之後才建立相依於此函數的資料表。 您可對每個發行項使用不同的編號，只要函數的編號低於資料表的編號即可。  
+    >  如果您將發行項新增至合併式發行集且現有某發行項相依於新的發行項，則您必須使用 **sp_addmergearticle\@ 和** sp_changemergearticle[ 的 ](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)[processing_order](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 參數來指定兩個發行項的處理順序。 請考慮下列狀況：您發行資料表但未發行該資料表所參考的函數。 如果您未發行該函數，該資料表就無法在「訂閱者」端建立。 當您將函式新增至發行集時：請將 **sp_addmergearticle** 的 **\@processing_order** 參數值指定為 **1**；並將 **sp_changemergearticle** 的 **\@processing_order** 參數值指定為 **2**，指定 **\@article** 參數的資料表名稱。 此處理順序可確保您先在「訂閱者」端建立函數之後才建立相依於此函數的資料表。 您可對每個發行項使用不同的編號，只要函數的編號低於資料表的編號即可。  
   
 -   發行集名稱不能包含下列字元：% * [ ] | : " ? \< >。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "74479320"
   
 -   針對使用字元模式快照集之發行集內的發行項 (用於非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者和 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 訂閱者)：依預設，會將擁有者保留空白。 擁有者預設為與散發代理程式或合併代理程式用於連接到訂閱者之帳戶相關聯的擁有者。  
   
- 物件擁有者可以透過 [發行項屬性 -**發行項\<]******>** 對話方塊和透過下列預存程序變更︰**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 如需詳細資訊，請參閱[檢視和修改發行集屬性](view-and-modify-publication-properties.md)、[定義發行項](define-an-article.md)和[檢視和修改發行項屬性](view-and-modify-article-properties.md)。  
+ 物件擁有者可以透過 **[發行項屬性 -\<***發行項***>]** 對話方塊和透過下列預存程序變更︰**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 如需詳細資訊，請參閱[檢視和修改發行集屬性](view-and-modify-publication-properties.md)、[定義發行項](define-an-article.md)和[檢視和修改發行項屬性](view-and-modify-article-properties.md)。  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>將資料發行給執行舊版 SQL Server 的訂閱者  
   
@@ -208,9 +208,9 @@ ms.locfileid: "74479320"
 ### <a name="publishing-tables-in-more-than-one-publication"></a>在多個發行集中發行資料表  
  複寫支援下列限制下的在多個發行集中發行資料項 (包括重新發行資料)：  
   
--   如果發行項在交易式發行集和合併式發行集中發行，請確定合併發行項的* \@published_in_tran_pub*屬性設定為 TRUE。 如需設定屬性的詳細資訊，請參閱[檢視和修改發行集屬性](view-and-modify-publication-properties.md)和[檢視和修改發行項屬性](view-and-modify-article-properties.md)。  
+-   如果發行項在交易式發行集與合併式發行集中發行，則對於合併發行項，要確保 *\@published_in_tran_pub* 屬性設定為 TRUE。 如需設定屬性的詳細資訊，請參閱[檢視和修改發行集屬性](view-and-modify-publication-properties.md)和[檢視和修改發行項屬性](view-and-modify-article-properties.md)。  
   
-     如果發行項是交易式訂閱的一部分，而且包含在合併式發行集中，您也應該設定* \@published_in_tran_pub*屬性。 在此情況下，請留意，依預設異動複寫預期訂閱者端的資料表是唯讀的；如果合併式複寫對交易式訂閱中的資料表進行資料變更，資料可能會無法聚合。 若要避免此可能性，建議合併式發行集中的任何此類資料表應指定為僅限下載。 這會防止合併式訂閱者將資料變更上傳至資料表。 如需詳細資訊，請參閱[使用僅限下載的發行項最佳化合併式複寫效能](../merge/optimize-merge-replication-performance-with-download-only-articles.md)。  
+     此外，如果發行項是交易式訂閱的一部分且包含在合併式發行集，您也必須設定 *\@published_in_tran_pub* 屬性。 在此情況下，請留意，依預設異動複寫預期訂閱者端的資料表是唯讀的；如果合併式複寫對交易式訂閱中的資料表進行資料變更，資料可能會無法聚合。 若要避免此可能性，建議合併式發行集中的任何此類資料表應指定為僅限下載。 這會防止合併式訂閱者將資料變更上傳至資料表。 如需詳細資訊，請參閱[使用僅限下載的發行項最佳化合併式複寫效能](../merge/optimize-merge-replication-performance-with-download-only-articles.md)。  
   
 -   無法在合併式發行集與交易式發行集中發行具有佇列更新訂閱的發行項。  
   
@@ -218,18 +218,18 @@ ms.locfileid: "74479320"
   
 -   如果在支援佇列更新訂閱的多個交易式發行集中發行發行項，則在所有發行集中之發行項的下列屬性值必須相同：  
   
-    |Property|sp_addarticle 中的參數|  
+    |屬性|sp_addarticle 中的參數|  
     |--------------|---------------------------------|  
-    |識別範圍管理|auto_identity_range （已淘汰）和 identityrangemangementoption 無效** \@ ** ** \@**|  
+    |識別範圍管理|**\@auto_identity_range** (已淘汰) 與 **\@identityrangemangementoption**|  
     |發行者識別範圍|**\@pub_identity_range**|  
     |識別範圍|**\@identity_range**|  
-    |識別範圍臨界值|**\@閾值**|  
+    |識別範圍臨界值|**\@threshold**|  
   
      如需這些參數的詳細資訊，請參閱 [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)。  
   
 -   如果在多個合併式發行集中發行發行項，則在所有發行集中之發行項的下列屬性值必須相同：  
   
-    |Property|sp_addmergearticle 中的參數|  
+    |屬性|sp_addmergearticle 中的參數|  
     |--------------|--------------------------------------|  
     |資料行追蹤|**\@column_tracking**|  
     |結構描述選項|**\@schema_option**|  
@@ -237,24 +237,24 @@ ms.locfileid: "74479320"
     |訂閱者上傳選項|**\@subscriber_upload_options**|  
     |條件式刪除追蹤|**\@delete_tracking**|  
     |錯誤補償|**\@compensate_for_errors**|  
-    |識別範圍管理|auto_identity_range （已淘汰）和 identityrangemangementoption 無效** \@ ** ** \@**|  
+    |識別範圍管理|**\@auto_identity_range** (已淘汰) 與 **\@identityrangemangementoption**|  
     |發行者識別範圍|**\@pub_identity_range**|  
     |識別範圍|**\@identity_range**|  
-    |識別範圍臨界值|**\@閾值**|  
+    |識別範圍臨界值|**\@threshold**|  
     |資料分割選項|**\@partition_options**|  
     |Blob 資料行資料流|**\@stream_blob_columns**|  
-    |篩選類型|filter_type （ **sp_addmergefilter**中的參數） ** \@ **|  
+    |篩選類型|**\@filter_type** ( **sp_addmergefilter** 中的參數)|  
   
      如需這些參數的詳細資訊，請參閱 [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 和 [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)。  
   
 -   異動複寫和未篩選的合併式複寫支援在多個發行集中發行資料表，然後在訂閱資料庫中的單一資料表內進行訂閱 (通常稱為積存狀況)。 積存通常用於從中央訂閱者端一個資料表中的多個位置彙總資料子集。 篩選的合併式發行集不支援中央「訂閱者」狀況。 對於合併式複寫，積存通常透過具有參數化資料列篩選器的單一發行集實作。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [在現有發行集中加入和卸載發行項](add-articles-to-and-drop-articles-from-existing-publications.md)   
- [設定散發](../configure-distribution.md)   
+ [在現有發行集中加入和卸除發行項](add-articles-to-and-drop-articles-from-existing-publications.md)   
+ [[設定散發]](../configure-distribution.md)   
  [初始化訂閱](../initialize-a-subscription.md)   
- [腳本複製](../scripting-replication.md)   
- [保護髮行者](../security/secure-the-publisher.md)   
+ [編寫複寫指令碼](../scripting-replication.md)   
+ [保護發行者](../security/secure-the-publisher.md)   
  [訂閱發行集](../subscribe-to-publications.md)  
   
   

@@ -19,10 +19,10 @@ ms.assetid: 187819b6-c7f4-4a26-b74c-0a89e96695cf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 566445a3680dc54382a7e3e66bf77dbcbddca2e8
-ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75548292"
 ---
 # <a name="dbosyssessions-transact-sql"></a>dbo.syssessions (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "75548292"
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 工作階段的識別碼。 這個 session_id 不是會話的 SPID，而是此系統資料表中的識別值。|  
-|**agent_start_date**|**從中**|啟動這個工作階段的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務的日期和時間。|  
+|**agent_start_date**|**datetime**|啟動這個工作階段的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務的日期和時間。|  
   
 ## <a name="remarks"></a>備註  
  只有身為**系統管理員（sysadmin** ）固定伺服器角色成員的使用者，才能夠存取此資料表。  

@@ -18,10 +18,10 @@ ms.assetid: 4ff80124-6e2e-4d96-a692-57c17b53c55e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 07cc2bfc18ebbb6d2ddafa94bc29b14144f27c01
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660712"
 ---
 # <a name="setstrvalue-method-clientnetworkprotocolproperty-class"></a>SetStrValue 方法 (ClientNetworkProtocolProperty 類別)
@@ -36,12 +36,12 @@ object.SetStrValue(StrValue)
 ```  
   
 ## <a name="parts"></a>組件  
- *object*  
- [ClientNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)物件，代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端所使用之網路通訊協定的屬性。  
+ *目標*  
+ [ClientNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)物件，代表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端所使用之網路通訊協定的屬性。  
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |*StrValue*|指定目前屬性之新值的字串值。|  
   

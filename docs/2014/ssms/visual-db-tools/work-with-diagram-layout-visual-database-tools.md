@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf8f57f65281ad0c7ee2b603e5e35d0f22fb6783
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065516"
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>使用圖表配置 (Visual Database Tools)
@@ -35,7 +35,7 @@ ms.locfileid: "63065516"
   
  [變更圖表的字型色彩、大小及樣式 &#40;Visual Database Tools&#41;](change-the-font-color-size-and-style-in-diagrams-visual-database-tools.md)  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
   
 ## <a name="related-sections"></a>相關章節  
  [使用資料庫圖表 &#40;Visual Database Tools&#41;](work-with-database-diagrams-visual-database-tools.md)  

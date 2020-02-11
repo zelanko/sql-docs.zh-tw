@@ -1,6 +1,6 @@
 ---
-title: 將 Oracle HR 結構描述移轉至 Linux 上的 SQL Server |Microsoft Docs
-description: 將範例 Oracle 結構描述轉換成 SQL Server on Linux
+title: 將 Oracle HR 架構遷移至 Linux 上的 SQL Server |Microsoft Docs
+description: 將範例 Oracle 架構轉換成 Linux 上的 SQL Server
 author: shamikg
 ms.author: shamikg
 manager: shamikg
@@ -10,131 +10,131 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
 ms.openlocfilehash: 1926c13b739de8294966fd6ce84df3d1e02a676e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266522"
 ---
-# <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Oracle 結構描述移轉至 SQL Server 2017 Linux 上使用 SQL Server 移轉小幫手
+# <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>使用 SQL Server 移轉小幫手將 Oracle 架構遷移至 Linux 上的 SQL Server 2017
 
-本教學課程使用 SQL Server Migration Assistant (SSMA) for Windows 上的 Oracle 轉換 Oracle 範例**HR**結構描述[Linux 上的 SQL Server 2017](../../linux/sql-server-linux-overview.md)。
+本教學課程使用 Windows 上的 Oracle SQL Server 移轉小幫手（SSMA），將 Oracle 範例**HR**架構轉換成[Linux 上的 SQL Server 2017](../../linux/sql-server-linux-overview.md)。
 
 > [!div class="checklist"]
-> * 下載並安裝在 Windows 上的 SSMA
-> * 建立 SSMA 專案來管理移轉
+> * 在 Windows 上下載並安裝 SSMA
+> * 建立 SSMA 專案以管理遷移
 > * 連接到 Oracle
-> * 執行移轉報告
-> * 將轉換的範例 HR 結構描述
-> * 將資料移轉
+> * 執行遷移報告
+> * 轉換範例 HR 架構
+> * 移轉資料
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>Prerequisites
 
-- 執行個體的 Oracle 12c (12.2.0.1.0) 與**HR**安裝的結構描述
-- Linux 上的 SQL Server 的工作執行個體
+- 已安裝**HR**架構的 Oracle 12c （12.2.0.1.0）實例
+- Linux 上的 SQL Server 的工作實例
 
 > [!NOTE]
-> 可以使用相同的步驟，以目標 SQL Server on Windows，但您必須選取中的 Windows**移轉至**專案設定。
+> 相同的步驟可以用來將 Windows 上的 SQL Server 設為目標，但您必須在 [**遷移至**專案] 設定中選取 [Windows]。
 
 ## <a name="download-and-install-ssma-for-oracle"></a>下載並安裝 SSMA for Oracle
 
-另外還有數個版本的 SQL Server Migration Assistant，根據您的來源資料庫。  下載最新版[SQL Server Migration Assistant for Oracle](https://aka.ms/ssmafororacle)和使用的下載頁面上找到的指示進行安裝。
+根據您的源資料庫而定，有數個可用的 SQL Server 移轉小幫手版本。  下載 Oracle 目前版本的 SQL Server 移轉小幫手，並使用下載頁面上找到的指示[來進行](https://aka.ms/ssmafororacle)安裝。
 
 > [!NOTE]
-> 在此階段中， **SSMA for Oracle 延伸模組組件**不支援在 Linux 上，但它不需要在此教學課程。
+> 目前 Linux 不支援**SSMA For Oracle 延伸模組套件**，但本教學課程不需要此功能。
 
 ## <a name="create-and-set-up-project"></a>建立和設定專案
 
-若要建立新的 SSMA 專案中使用下列步驟：
+使用下列步驟來建立新的 SSMA 專案：
 
-1. 開啟 SSMA for Oracle，然後選擇**新的專案**從**檔案**功能表。
+1. 開啟 SSMA for Oracle，然後從 [檔案]**功能表中選擇 [** **新增專案**]。
 
-1. 指定專案的名稱。
+1. 將專案命名。
 
-1. 選擇 「 SQL Server 2017 (Linux)-預覽 」 中**移轉至**欄位。
+1. 在 [**遷移至**] 欄位中選擇 [SQL Server 2017 （Linux）-預覽]。
 
-SSMA for Oracle 不會使用預設的 Oracle 範例結構描述。 若要啟用 HR 結構描述，請使用下列步驟：
+SSMA for Oracle 預設不會使用 Oracle 範例架構。 若要啟用 HR 架構，請使用下列步驟：
 
-1. SSMA 中，選取**工具**功能表。
+1. 在 SSMA 中，選取 [**工具**] 功能表。
 
-1. 選取 **預設專案設定**，然後選擇**載入系統物件**。
+1. 選取 [**預設專案設定**]，然後選擇 [**載入系統物件**]。
 
-1. 請確定**HR**勾選，然後選擇**確定**。
+1. 請確定已核取 [ **HR** ]，然後選擇 **[確定]**。
 
 ## <a name="connect-to-oracle"></a>連接到 Oracle
 
-接著連接到 Oracle 的 SSMA。
+接下來，將 SSMA 連接到 Oracle。
 
-1. 在工具列上，按一下**連接到 Oracle**。
+1. 在工具列上，按一下 [**連接到 Oracle]**。
 
-1. 輸入伺服器名稱、 連接埠、 Oracle SID、 使用者名稱和密碼。
+1. 輸入 [伺服器名稱]、[埠]、[Oracle SID]、[使用者名稱] 和 [密碼]。
 
    ![連接到 Oracle](./media/sql-server-linux-convert-from-oracle/ConnectToOracle.png)
 
-1. 然後，按一下 [連接]  。 幾分鐘後，SSMA for Oracle 連線到您的資料庫，並讀取其中繼資料。
+1. 接著，按一下 **[連接]**。 幾分鐘後，SSMA for Oracle 就會連接到您的資料庫並讀取其中繼資料。
 
 ## <a name="create-a-report"></a>建立報表
 
-您可以使用下列步驟來產生移轉報告。
+使用下列步驟來產生遷移報表。
 
-1. 在 [ **Oracle 中繼資料總管]** ，展開您的伺服器節點。
+1. 在 [ **Oracle 中繼資料瀏覽器**] 中，展開伺服器的節點。
 
-1. 依序展開**結構描述**，以滑鼠右鍵按一下**HR**，然後選取**建立報表**。
+1. 展開 [**架構**]，以滑鼠右鍵按一下 [ **HR**]，然後選取 [**建立報告**]。
 
-   ![Oracle 中繼資料總管 建立報表](./media/sql-server-linux-convert-from-oracle/CreateReport.png)
+   ![Oracle Metadata Explorer 建立報表](./media/sql-server-linux-convert-from-oracle/CreateReport.png)
 
-1. 新的瀏覽器視窗開啟報表，其中會列出所有與轉換相關聯的錯誤與警告。
+1. 新的瀏覽器視窗隨即開啟，其中會列出與轉換相關聯的所有警告和錯誤。
 
    > [!NOTE]
-   > 您不需要進行任何動作的清單在本教學課程。 如果您針對 Oracle 資料庫執行這些步驟，您應該檢閱報表以處理資料庫的所有重要的轉換問題。
+   > 您不需要在本教學課程中使用該清單執行任何動作。 如果您針對自己的 Oracle 資料庫執行這些步驟，您應該檢查報告以解決資料庫的任何重要轉換問題。
 
-   ![範例移轉報告](./media/sql-server-linux-convert-from-oracle/SSMAReport.png)
+   ![範例遷移報表](./media/sql-server-linux-convert-from-oracle/SSMAReport.png)
 
 ## <a name="connect-to-sql-server"></a>連接至 SQL Server
 
-接下來選擇**連接到 SQL Server**並輸入適當的連接資訊。  如果您使用的資料庫名稱已經不存在，SSMA for Oracle 則會為您建立它。
+接下來，選擇 [**連接到 SQL Server]** ，然後輸入適當的連接資訊。  如果您使用尚未存在的資料庫名稱，SSMA for Oracle 就會為您建立。
 
 ![連接至 SQL Server](./media/sql-server-linux-convert-from-oracle/ConnectToSQLServer.png)
 
-## <a name="convert-schema"></a>將結構描述轉換
+## <a name="convert-schema"></a>轉換結構描述
 
-以滑鼠右鍵按一下**HR**中**Oracle 中繼資料總管**，然後選擇將轉換的結構描述。
+以滑鼠右鍵按一下**Oracle Metadata Explorer**中的 [ **HR** ]，然後選擇 [轉換架構]。
 
-![將結構描述轉換](./media/sql-server-linux-convert-from-oracle/ConvertSchema.png)
+![轉換結構描述](./media/sql-server-linux-convert-from-oracle/ConvertSchema.png)
 
 ## <a name="synchronize-database"></a>同步處理資料庫
 
 接下來，同步處理您的資料庫。
 
-1. 在轉換完成時，使用**SQL Server 中繼資料總管]** 您在上一個步驟中移至 [資料庫建立。
+1. 轉換完成後，請使用 SQL Server 的**中繼資料瀏覽器**，移至您在上一個步驟中建立的資料庫。
 
-1. 以滑鼠右鍵按一下您在資料庫上，選取**同步處理資料庫**，然後按一下 [確定]。
+1. 以滑鼠右鍵按一下您的資料庫，選取 [**與資料庫同步處理**]，然後按一下 [確定]。
 
-   ![同步處理與資料庫](./media/sql-server-linux-convert-from-oracle/SynchronizeWithDatabase.png)
+   ![與資料庫同步處理](./media/sql-server-linux-convert-from-oracle/SynchronizeWithDatabase.png)
 
-## <a name="migrate-data"></a>將資料移轉
+## <a name="migrate-data"></a>移轉資料
 
-最後一個步驟是將資料移轉。
+最後一個步驟是遷移您的資料。
 
-1. 中**Oracle 中繼資料總管**，以滑鼠右鍵按一下**HR**，然後選取**移轉資料**。
+1. 在 [ **Oracle 中繼資料瀏覽器**] 中，以滑鼠右鍵按一下 [ **HR**]，然後選取 [**遷移資料**]。
 
-1. 資料移轉步驟需要您重新輸入您的 Oracle 和 SQL Server 認證。
+1. 資料移轉步驟會要求您重新輸入 Oracle 和 SQL Server 認證。
 
-1. 完成時，檢閱資料移轉報告，看起來應該類似下列螢幕擷取畫面：
+1. 完成時，請檢查資料移轉報告，其看起來應該類似下列螢幕擷取畫面：
 
    ![資料移轉報告](./media/sql-server-linux-convert-from-oracle/DataMigrationReport.png)
 
 ## <a name="next-steps"></a>後續步驟
 
-針對更複雜的 Orcale 結構描述中，轉換程序牽涉到更多時間、 測試和用戶端應用程式可能發生的變更。 本教學課程的目的是示範如何使用 SSMA for Oracle 整體移轉程序的一部分。
+針對更複雜的 Orcale 架構，轉換程式會牽涉到更多的時間、測試和可能變更的用戶端應用程式。 本教學課程的目的是要說明如何在整體遷移程式中使用 SSMA for Oracle。
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您已了解如何：
 > [!div class="checklist"]
-> * Windows 上安裝 SSMA
+> * 在 Windows 上安裝 SSMA
 > * 建立新的 SSMA 專案
-> * 評估並從 Oracle 執行移轉
+> * 評估並執行 Oracle 的遷移
 
-接下來，瀏覽其他 SSMA 使用方式：
+接下來，探索其他使用 SSMA 的方式：
 
 > [!div class="nextstepaction"]
->[SQL Server Migration Assistant 的文件](../sql-server-migration-assistant.md)
+>[SQL Server 移轉小幫手檔](../sql-server-migration-assistant.md)

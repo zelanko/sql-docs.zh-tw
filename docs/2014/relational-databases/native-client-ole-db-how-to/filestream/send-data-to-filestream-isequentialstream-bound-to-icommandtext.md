@@ -1,5 +1,5 @@
 ---
-title: 將資料傳送到 FILESTREAM 資料行使用 ISequentialStream Bound to ICommandText 參數 (OLE DB) |Microsoft Docs
+title: 使用系結至 ICommandText 參數的 ISequentialStream （OLE DB）將資料傳送到 FILESTREAM 資料行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b661288c88a707eb81d4008b4c33c7497dfe40a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643364"
 ---
 # <a name="send-data-to-a-filestream-column-using-isequentialstream-bound-to-icommandtext-parameter-ole-db"></a>使用 ISequentialStream Bound to ICommandText 參數將資料傳送到 FILESTREAM 資料行 (OLE DB)
   此範例會使用繫結至 ICommandText 參數的 ISequentialStream 介面，將介於 4MB 與 4GB 之間的資料傳送到 Filestream 資料行。  
   
- 如需有關 filestream 功能的詳細資訊，請參閱 < [FILESTREAM 支援&#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)。  
+ 如需有關 filestream 功能的詳細資訊，請參閱[&#40;OLE DB&#41;的 Filestream 支援](../../native-client/ole-db/filestream-support-ole-db.md)。  
   
 ## <a name="example"></a>範例  
- 在編譯和執行此範例之前，啟用 FILESTREAM 支援 ([啟用及設定 FILESTREAM](../../blob/enable-and-configure-filestream.md))。  
+ 在您編譯和執行此範例之前，請先啟用 FILESTREAM 支援（[啟用和設定 filestream](../../blob/enable-and-configure-filestream.md)）。  
   
  請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   

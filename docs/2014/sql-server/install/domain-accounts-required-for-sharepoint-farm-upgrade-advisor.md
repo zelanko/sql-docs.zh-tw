@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: c4079ea4213d7ecbec0165c32c82b3449bbb5aee
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952513"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>SharePoint 伺服陣列所需的網域帳戶 (Upgrade Advisor)
@@ -22,7 +22,7 @@ ms.locfileid: "71952513"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 模式。|  
   
 ## <a name="component"></a>元件  
  [!INCLUDE[ssRS](../../includes/ssrs.md)]  
@@ -35,7 +35,7 @@ ms.locfileid: "71952513"
  「報表伺服器是以內建的 NT AUTHORITY\NETWORK SERVICE 帳戶執行，但 SharePoint 伺服陣列安裝不支援該帳戶。 請將報表伺服器重新設定成以網域帳戶執行。」  
   
 ## <a name="corrective-action"></a>更正動作  
- 若為 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 及舊版，請使用 Reporting Services 組態管理員來變更指派為報表伺服器服務帳戶的帳戶。  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]若是和舊版，請使用 Reporting Services 組態管理員來變更指派為報表伺服器服務帳戶的帳戶。  
   
 #### <a name="to-change-the-service-account-from-configuration-manager"></a>若要從組態管理員變更服務帳戶  
   
@@ -47,7 +47,7 @@ ms.locfileid: "71952513"
   
 4.  選取 [**使用其他帳戶**]，然後輸入網域帳戶的認證。  
   
-5.  按一下 **[套用]** 。  
+5.  按一下 [套用]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  

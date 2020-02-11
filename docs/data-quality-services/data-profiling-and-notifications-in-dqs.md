@@ -10,10 +10,10 @@ ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: bb763d2212bd8dcb09b6088467e97aa702d15012
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251744"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>DQS 中的資料分析與通知

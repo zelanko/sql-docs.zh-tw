@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400936"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>平行處理資料倉儲元件-Analytics Platform System
@@ -140,7 +140,7 @@ PolyBase 技術將 SQL Server PDW 資料與外部 Hadoop 資料整合在一起�
   
 查詢會以已修改\-的 transact-sql 來撰寫，以符合查詢的 MPP 性質。 所有查詢都會提交至控制節點，其會產生平行查詢計劃，以在計算節點上執行查詢。  
   
-### <a name="sql-server-data-tools-ssdt"></a>SQL Server 資料工具 (SSDT)  
+### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
 SQL Server Data Tools 會在 Visual Studio 內執行，而且是我們建議用來將查詢提交至 SQL Server PDW 的 GUI 工具。 它類似于 SQL Server Management Studio，可讓您流覽物件瀏覽器。  
   
 如果您尚未 Visual Studio，您可以免費下載所需的工具。 

@@ -1,5 +1,5 @@
 ---
-title: 標準檢視 （彙總索引標籤，Cube 設計工具） |Microsoft Docs
+title: 標準視圖（匯總索引標籤、Cube 設計工具） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1bfe78e7ac5cb497a39ab0b0679bcb2bd9a43a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068061"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>標準檢視 (彙總索引標籤，Cube 設計師)
@@ -26,13 +26,13 @@ ms.locfileid: "66068061"
   
 |選項|描述|  
 |------------|-----------------|  
-|**設計彙總**|按一下以顯示 **[彙總設計精靈]** 。|  
-|**基於使用方式的最佳化**|按一下以顯示 **[基於使用方式的最佳化]** 精靈。|  
+|**設計彙總**|按一下以顯示 **[彙總設計精靈]**。|  
+|**基於使用方式的最佳化**|按一下以顯示 [**基於使用**方式的優化嚮導]。|  
 |**指派彙總設計**|按一下以顯示 **[指派彙總設計]** 對話方塊。|  
 |**刪除**|按一下以刪除選取的彙總設計。|  
 |**屬性**|按一下以檢視彙總的屬性。|  
   
 ## <a name="see-also"></a>另請參閱  
- [彙總&#40;Cube 設計&#41;](aggregations-cube-design.md)  
+ [&#40;Cube 設計的匯總&#41;](aggregations-cube-design.md)  
   
   

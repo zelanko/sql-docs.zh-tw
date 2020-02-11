@@ -1,5 +1,5 @@
 ---
-title: 第 5 課：執行預測查詢 |Microsoft Docs
+title: 第5課：執行預測查詢 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62822310"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>第 5 課：執行預測查詢
-  在這一課，您將使用[SELECT FROM\<模型 > 預測 JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx)形式的 SELECT 陳述式來建立兩種不同預測基礎的決策樹模型中建立[第 2 課：將採礦模型加入關聯採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)。 這些預測類型定義如下。  
+  在這一課，您將使用 SELECT 語句的 [[從\<模型選取> 預測聯結（DMX）](/sql/dmx/select-from-model-cases-dmx) ] 表單，根據您在[第2課：將採礦模型加入至關聯採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)中所建立的決策樹模型，建立兩種不同類型的預測。 這些預測類型定義如下。  
   
  單一查詢  
  進行預測時，使用單一查詢提供特定的值。 例如，您可以將輸入傳遞到查詢 (例如，計算距離、區域碼，或客戶的孩童數目) 來判斷單一客戶是否可能是自行車購買者。 單一查詢會根據這些輸入傳回一個值，表示該客戶購買自行車的可能性。  
@@ -26,7 +26,7 @@ ms.locfileid: "62822310"
  批次查詢  
  使用批次查詢來判斷潛在客戶資料表中，誰有可能購買自行車。 例如，如果行銷部門提供客戶和客戶屬性之清單給您，您可以使用批次預測來判斷資料表中誰有可能購買自行車。  
   
- [SELECT FROM\<模型 > 預測 JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx)形式的 SELECT 陳述式包含三個部分：  
+ SELECT 語句的[ \<select FROM MODEL> 預測聯結（DMX）](/sql/dmx/select-from-model-cases-dmx)形式包含三個部分：  
   
 -   結果傳回的採礦模型資料行和預測函數的清單。 這些結果也可以包含來源資料的輸入資料行。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62822310"
   
 -   採礦模型資料行和來源資料之間的對應。 如果這些名稱相符，您就可以使用 NATURAL 語法，並省略資料行對應。  
   
- 您可以使用預測函數，進一步加強查詢。 預測函數提供其他資訊，例如發生預測的機率，並提供對培訓資料集的預測支援。 如需有關預測函數的詳細資訊，請參閱[函式&#40;DMX&#41;](/sql/dmx/functions-dmx)。  
+ 您可以使用預測函數，進一步加強查詢。 預測函數提供其他資訊，例如發生預測的機率，並提供對培訓資料集的預測支援。 如需預測函數的詳細資訊，請參閱[&#40;DMX&#41;](/sql/dmx/functions-dmx)的函式。  
   
  此教學課程中的預測是以 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 範例資料庫中的 ProspectiveBuyer 資料表為基礎。 ProspectiveBuyer 資料表包含潛在客戶及其相關聯特性的清單。 此資料表的客戶與用來建立決策樹採礦模型的客戶無關。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62822310"
 -   建立批次查詢來判斷客戶資料表中列出的碼些客戶可能購買自行車。  
   
 ## <a name="singleton-query"></a>單一查詢  
- 第一個步驟是使用[FROM&#60;模型&#62;PREDICTION JOIN &#40;DMX&#41; ](/sql/dmx/select-from-model-cases-dmx)單一預測查詢中。 以下是單一陳述式的一般範例：  
+ 第一個步驟是在單一預測查詢中，使用[從 &#60;模型&#62; 預測聯結 &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx)的 [選取]。 以下是單一陳述式的一般範例：  
   
 ```  
 SELECT <select list> FROM [<mining model name>]   
@@ -76,7 +76,7 @@ ORDER BY <expression>
   
 #### <a name="to-create-a-singleton-prediction-query"></a>若要建立單一預測查詢  
   
-1.  中**物件總管**，以滑鼠右鍵按一下執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查詢**，然後按一下**DMX**。  
+1.  在**物件總管**中，以滑鼠右鍵按一下的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]實例，指向 [追加**查詢**]，然後按一下 [ **DMX**]。  
   
      此時會開啟 [查詢編輯器] 且包含新的空白查詢。  
   
@@ -88,13 +88,13 @@ ORDER BY <expression>
     <select list>   
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     [Bike Buyer] AS Buyer, PredictHistogram([Bike Buyer]) AS Statistics  
     ```  
   
-     AS 陳述式是用來建立查詢傳回之資料行的別名。 [PredictHistogram](/sql/dmx/predicthistogram-dmx)函式會傳回有關預測，包括機率和支援的統計資料。 如需可用於預測陳述式的函式的詳細資訊，請參閱[函式&#40;DMX&#41;](/sql/dmx/functions-dmx)。  
+     AS 陳述式是用來建立查詢傳回之資料行的別名。 [PredictHistogram](/sql/dmx/predicthistogram-dmx)函數會傳回關於預測的統計資料，包括機率和支援。 如需可用於預測語句之函數的詳細資訊，請參閱[&#40;DMX&#41;](/sql/dmx/functions-dmx)的函式。  
   
 4.  取代下列項目：  
   
@@ -102,7 +102,7 @@ ORDER BY <expression>
     [<mining model>]   
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     [Decision Tree]  
@@ -114,7 +114,7 @@ ORDER BY <expression>
     (SELECT '<value>' AS [<column name>], ...)  AS t  
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     (SELECT 35 AS [Age],  
@@ -140,16 +140,16 @@ ORDER BY <expression>
        2 AS [Total Children]) AS t  
     ```  
   
-6.  在 **檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
+6.  **在 [檔案**] 功能表上，按一下 [**將 DMXQuery1 另存為**]。  
   
-7.  在 [**另存新檔**] 對話方塊中，瀏覽至適當的資料夾，並將檔案命名`Singleton_Query.dmx`。  
+7.  在 [**另存**新檔] 對話方塊中，流覽至適當的資料夾，並`Singleton_Query.dmx`將檔案命名為。  
   
-8.  在工具列上，按一下**Execute**  按鈕。  
+8.  在工具列上，按一下 [**執行**] 按鈕。  
   
      此查詢傳回有關具有指定特性的客戶是否會購買自行車的預測，以及有關該預測的統計資料。  
   
 ## <a name="batch-query"></a>批次查詢  
- 下一個步驟是使用[FROM&#60;模型&#62;PREDICTION JOIN &#40;DMX&#41; ](/sql/dmx/select-from-model-cases-dmx)批次預測查詢中。 以下是批次陳述式的一般範例：  
+ 下一個步驟是在批次預測查詢中，使用[從 &#60;模型&#62; 預測聯結 &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx)的 [選取]。 以下是批次陳述式的一般範例：  
   
 ```  
 SELECT TOP <number> <select list>   
@@ -162,7 +162,7 @@ WHERE <where clause, boolean expression,>
 ORDER BY <expression>  
 ```  
   
- 如同在單一查詢一樣，程式碼的前兩行定義在採礦模型中由查詢傳回的資料行，以及用來產生預測的採礦模型名稱。 頂端\<數字 > 陳述式指定數目或所指定之結果的查詢只會傳回\<編號 >。  
+ 如同在單一查詢一樣，程式碼的前兩行定義在採礦模型中由查詢傳回的資料行，以及用來產生預測的採礦模型名稱。 最上方\<的> 語句指定查詢只會傳回數位，或由\<number> 指定的結果。  
   
  接下來幾行的程式碼定義預測所依據的來源資料。  
   
@@ -191,11 +191,11 @@ WHERE <where clause, boolean expression,>
 ORDER BY <expression> [DESC|ASC]  
 ```  
   
- 使用 ORDER BY 中使用的最上層的組合\<數字 > 陳述式，以篩選所傳回的結果。 例如，在此預測中，您將按預測的正確機率排序，傳回前十個自行車買主。 您可以使用 [DESC|ASC] 語法來控制顯示結果的順序。  
+ 搭配使用 ORDER BY 和 TOP \<> 語句，以篩選傳回的結果。 例如，在此預測中，您將按預測的正確機率排序，傳回前十個自行車買主。 您可以使用 [DESC|ASC] 語法來控制顯示結果的順序。  
   
 #### <a name="to-create-a-batch-prediction-query"></a>若要建立批次預測查詢  
   
-1.  中**物件總管**，以滑鼠右鍵按一下執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查詢**，然後按一下**DMX**。  
+1.  在**物件總管**中，以滑鼠右鍵按一下的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]實例，指向 [追加**查詢**]，然後按一下 [ **DMX**]。  
   
      此時會開啟 [查詢編輯器] 且包含新的空白查詢。  
   
@@ -207,7 +207,7 @@ ORDER BY <expression> [DESC|ASC]
     <select list>   
     ```  
   
-     成為：  
+     取代為  
   
     ```  
     SELECT  
@@ -327,16 +327,16 @@ ORDER BY <expression> [DESC|ASC]
     ORDER BY PredictProbability([Bike Buyer]) DESC  
     ```  
   
-7.  在 **檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
+7.  **在 [檔案**] 功能表上，按一下 [**將 DMXQuery1 另存為**]。  
   
-8.  在 [**另存新檔**] 對話方塊中，瀏覽至適當的資料夾，並將檔案命名`Batch_Prediction.dmx`。  
+8.  在 [**另存**新檔] 對話方塊中，流覽至適當的資料夾，並`Batch_Prediction.dmx`將檔案命名為。  
   
-9. 在工具列上，按一下**Execute**  按鈕。  
+9. 在工具列上，按一下 [**執行**] 按鈕。  
   
      查詢傳回一份資料表，其中包含客戶名稱、每一個客戶是否有可能購買自行車的預測及預測的機率。  
   
  這是 Bike Buyer 教學課程的最後步驟。 現在您已有採礦模型集合，可用來探索客戶之間的相似性，並預測潛在客戶是否會購買自行車。  
   
- 若要了解如何在購物籃狀況中使用 DMX，請參閱[購物籃 DMX 教學課程](../../2014/tutorials/market-basket-dmx-tutorial.md)。  
+ 若要瞭解如何在購物籃案例中使用 DMX，請參閱[購物籃 DMX 教學](../../2014/tutorials/market-basket-dmx-tutorial.md)課程。  
   
   

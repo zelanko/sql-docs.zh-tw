@@ -11,10 +11,10 @@ ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0dd923f17fe0267edf40d07da982d0856ec4ba06
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659057"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile 類別
@@ -36,7 +36,7 @@ class SQLErrorLogFile
 };  
 ```  
   
-## <a name="properties"></a>[屬性]  
+## <a name="properties"></a>屬性  
  SQLErrorLogFile 類別會定義下列屬性。  
   
 |||  
@@ -45,18 +45,18 @@ class SQLErrorLogFile
 |InstanceName|資料類型：**字串**<br /><br /> 存取類型：唯讀<br /><br /> 限定詞：索引鍵<br /><br /> <br /><br /> 記錄檔所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。|  
 |LastModified|資料類型： **datetime**<br /><br /> 存取類型：唯讀<br /><br /> <br /><br /> 上次修改記錄檔的日期。|  
 |LogFileSize|資料類型： **uint32**<br /><br /> 存取類型：唯讀<br /><br /> <br /><br /> 記錄檔的大小 (以位元組為單位)。|  
-|[名稱]|資料類型：**字串**<br /><br /> 存取類型：唯讀<br /><br /> 限定詞：索引鍵<br /><br /> <br /><br /> 記錄檔的名稱。|  
+|名稱|資料類型：**字串**<br /><br /> 存取類型：唯讀<br /><br /> 限定詞：索引鍵<br /><br /> <br /><br /> 記錄檔的名稱。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 |||  
 |-|-|  
 |MOF|Sqlmgmprovider xpsp2up.mof|  
 |DLL|Sqlmgmprovider.dll|  
-|Namespace|\root\Microsoft\SqlServer\ComputerManagement10|  
+|命名空間|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>範例  
- 下列範例會抓取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定之實例上所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄檔的相關資訊。 若要執行範例，請將 \<*Instance_Name*> 取代為實例的名稱，例如 ' Instance1 '。  
+ 下列範例會抓取指定之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例上所有記錄檔的相關資訊。 若要執行範例，請\<將*Instance_Name*> 取代為實例的名稱，例如 ' Instance1 '。  
   
 ```  
 on error resume next  
@@ -82,17 +82,17 @@ Next
 "SELECT * FROM SqlErrorLogFile"  
 ```  
   
-## <a name="security"></a>Security  
- 若要透過 WMI 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄檔，您必須在本機和遠端電腦上具有下列許可權：  
+## <a name="security"></a>安全性  
+ 若要透過 WMI [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]連接到記錄檔，您必須在本機和遠端電腦上都有下列許可權：  
   
 -   **Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空間的讀取權限。 根據預設，每個人都可從啟用帳戶權限取得讀取權限。  
   
     > [!NOTE]  
     >  如需有關如何驗證 WMI 許可權的詳細資訊，請參閱主題 [[離線記錄](../../relational-databases/logs/view-offline-log-files.md)檔] 中的 [安全性] 區段。  
   
--   包含錯誤記錄檔之資料夾的讀取權限。 根據預設，錯誤記錄檔會位於下列路徑中（其中 \<*磁片磁碟機 >* 代表您安裝的磁片磁碟機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而 \<*InstanceName*> 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例的名稱）：  
+-   包含錯誤記錄檔之資料夾的讀取權限。 根據預設，錯誤記錄檔會位於下列路徑（其中\< *Drive>* 代表您安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的磁片磁碟機，而\< *InstanceName*> 是實例的名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）：  
   
-     **\<磁片磁碟機 >： \Program FILES\MICROSOFT SQL Server\MSSQL11** **。\<InstanceName > \MSSQL\Log**  
+     **磁片磁碟機>： \Program Files\Microsoft SQL Server\MSSQL11。 \< ** ** \<InstanceName> \MSSQL\Log**  
   
  如果透過防火牆連接，請確定您已在遠端目標電腦上的 WMI 防火牆中設定例外狀況。 如需詳細資訊，請參閱[從 Windows Vista 開始遠端連線到 WMI](https://go.microsoft.com/fwlink/?LinkId=178848)。  
   

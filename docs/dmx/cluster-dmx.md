@@ -1,5 +1,5 @@
 ---
-title: 群集 (DMX) |Microsoft Docs
+title: 叢集（DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fa7df2782b8102e386c70d5e874a25f7868dbb1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68071084"
 ---
 # <a name="cluster-dmx"></a>群集 (DMX)
@@ -27,19 +27,19 @@ ms.locfileid: "68071084"
 Cluster()  
 ```  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  唯有基礎資料採礦模型支援群集時，才能使用這個函數。  
   
 ## <a name="return-type"></a>傳回類型  
- **叢集**函式不需要參數。  
+ **Cluster**函數不需要參數。  
   
- **叢集**函式會傳回純量值的叢集名稱。 不過，如果您使用此函式為另一個函式的引數時，您必須將其做為\<叢集資料行參考 >。  
+ 叢集**函數會**傳回純量值的叢集名稱。 不過，如果您使用此函數做為另一個函式的引數，則必須將\<它視為叢集資料行參考>。  
   
 ## <a name="remarks"></a>備註  
- **叢集**也可用來當做`<`叢集資料行參考`>`如**PredictHistogram**函式。  
+ 叢集**也可以當做**PredictHistogram 函數的`<`叢集資料行`>`參考使用**** 。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用單一查詢及[PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)和叢集函式來傳回 TM Clustering 採礦模型的每一個叢集中的個別案例的距離，個別的案例會存在於每一個群集的機率。  
+ 下列範例會使用具有[PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md)和叢集函式的單一查詢，從 TM 叢集處理模型的每個叢集傳回個別案例的距離，以及在每個叢集中存在個別案例的機率。  
   
 ```  
 SELECT  
@@ -55,9 +55,9 @@ FROM
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
- [資料採礦延伸模組&#40;DMX&#41;函式參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [DMX&#41;的 ClusterProbability &#40;](../dmx/clusterprobability-dmx.md)   
+ [資料採礦延伸模組 &#40;DMX&#41; 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [DMX&#41;的函數 &#40;](../dmx/functions-dmx.md)   
+ [&#40;DMX&#41;的一般預測函數](../dmx/general-prediction-functions-dmx.md)  
   
   

@@ -12,10 +12,10 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3986854293f50a34f51170e00b4204b78fba1b63
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251658"
 ---
 # <a name="domain-management-domain-list"></a>定義域管理：定義域清單
@@ -24,16 +24,16 @@ ms.locfileid: "75251658"
 
   此主題描述 **(DQS) 中** [定義域管理] [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 頁面上定義域清單中的控制項。 使用此窗格可選取執行管理作業所在的定義域。 相同的窗格會用於 **[定義域管理]** 頁面上的所有索引標籤式頁面。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 ### <a name="domains-list"></a>定義域清單  
- **Domain**  
- 此清單會顯示知識庫中的所有定義域。 您在右窗格中的索引標籤式頁面上執行的作業都將針對此清單中選取的定義域執行。 如需詳細資訊，請參閱本主題中的  
+ **網域**  
+ 此清單會顯示知識庫中的所有定義域。 您在右窗格中的索引標籤式頁面上執行的作業都將針對此清單中選取的定義域執行。 如需相關資訊，請參閱  
   
  **建立複合定義域**  
  在知識庫中建立新的複合定義域。 此命令將會顯示 **[建立複合定義域]** 對話方塊。 若要使用此命令，請以滑鼠右鍵按一下定義域，或是按一下定義域清單上方的圖示。 如需相關資訊，請參閱 [建立複合定義域](../data-quality-services/create-a-composite-domain.md)。  
   
- **建立網域**  
+ **建立定義域**  
  在知識庫中建立新的定義域。 此命令將會顯示 **[建立定義域]** 對話方塊。 若要使用此命令，請以滑鼠右鍵按一下定義域，或是按一下定義域清單上方的圖示。 如需相關資訊，請參閱 [建立定義域](../data-quality-services/create-a-domain.md)。  
   
  **建立所選網域的複本**  

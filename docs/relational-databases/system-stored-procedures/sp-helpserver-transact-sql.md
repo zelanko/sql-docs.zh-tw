@@ -1,5 +1,5 @@
 ---
-title: sp_helpserver (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpserver （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997440"
 ---
-# <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
+# <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   報告有關特定遠端或複寫伺服器的資訊，或這兩種類型之所有伺服器的相關資訊。 提供伺服器名稱、伺服器的網路名稱、伺服器的複寫狀態、伺服器的識別碼，以及定序名稱。 另外，也提供連接到連結伺服器或查詢連結伺服器的逾時值。  
@@ -41,9 +41,9 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @server = ] 'server'` 是了解哪種報告資訊的伺服器。 當*伺服器*未指定中的所有伺服器都在報導**master.sys.servers**。 *伺服器*已**sysname**，預設值是 NULL。  
+`[ @server = ] 'server'`這是要報告資訊的伺服器。 若未指定*伺服器*，則會報告有關**sys.databases**中所有伺服器的資訊。 *伺服器*是**sysname**，預設值是 Null。  
   
-`[ @optname = ] 'option'` 會描述伺服器選項。 *選項*已**varchar (** 35 **)** ，預設值是 NULL，而且必須是下列值之一。  
+`[ @optname = ] 'option'`這是描述伺服器的選項。 *option*是**Varchar （** 35 **）**，預設值是 Null，它必須是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -51,15 +51,15 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**資料存取**|啟用和停用連結伺服器的分散式查詢存取。|  
 |**dist**|散發者。|  
 |**dpub**|這個散發者的遠端簽發者。|  
-|**延遲結構描述驗證**|在查詢開始時，略過遠端資料表的結構描述檢查。|  
-|**pub**|簽發者。|  
-|**rpc**|從指定伺服器啟用 RPC。|  
+|**lazy schema validation**|在查詢開始時，略過遠端資料表的結構描述檢查。|  
+|**酒館**|簽發者。|  
+|**4**|從指定伺服器啟用 RPC。|  
 |**rpc 輸出**|啟用對指定伺服器的 RPC。|  
 |**sub**|訂閱者。|  
-|**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**筆記本電腦**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**使用遠端定序**|利用遠端資料行的定序來取代本機伺服器的定序。|  
   
-`[ @show_topology = ] 'show_topology'` 為指定的伺服器與其他伺服器的關聯性。 *show_topology*已**varchar (** 1 **)** ，預設值是 NULL。 如果*show_topology*不等於**t**是 NULL，或**sp_helpserver**傳回結果集一節中列出的資料行。 如果*show_topology*等於**t**，列出結果集中的資料行除了**sp_helpserver**也會傳回**topx**和**topy**資訊。  
+`[ @show_topology = ] 'show_topology'`這是指定伺服器與其他伺服器的關聯性。 *show_topology*是**Varchar （** 1 **）**，預設值是 Null。 如果*show_topology*不等於**t**或為 Null， **Sp_helpserver**會傳回 [結果集] 區段中所列的資料行。 如果*show_topology*等於**t**，除了結果集中列出的資料行之外， **sp_helpserver**也會傳回**topx**和**topy**資訊。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)。  
@@ -70,8 +70,8 @@ sp_helpserver [ [ @server = ] 'server' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|伺服器名稱。|  
 |**network_name**|**sysname**|伺服器的網路名稱。|  
-|**status**|**varchar(** 70 **)**|伺服器狀態。|  
-|**id**|**char(** 4 **)**|伺服器的識別碼。|  
+|**狀態**|**Varchar （** 70 **）**|伺服器狀態。|  
+|**號**|**char （** 4 **）**|伺服器的識別碼。|  
 |**collation_name**|**sysname**|伺服器的定序。|  
 |**connect_timeout**|**int**|連接到連結伺服器的逾時值。|  
 |**query_timeout**|**int**|針對連結伺服器進行查詢的逾時值。|  
@@ -79,7 +79,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ## <a name="remarks"></a>備註  
  一部伺服器可以有多個狀態。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  不檢查任何權限。  
   
 ## <a name="examples"></a>範例  
@@ -103,16 +103,16 @@ EXEC sp_helpserver 'SEATTLE2';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_adddistpublisher &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_addsubscriber &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
- [sp_changesubscriber &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_dropserver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_dropsubscriber &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
- [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
+ [資料庫引擎預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sp_adddistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_addsubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
+ [sp_changesubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [sp_dropserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ [sp_dropsubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_helpdistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_helpremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
+ [sp_helpsubscriberinfo &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

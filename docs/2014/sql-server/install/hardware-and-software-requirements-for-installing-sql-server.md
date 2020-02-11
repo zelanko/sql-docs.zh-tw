@@ -46,10 +46,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce6cef69abe7c2461552229363c8334ca56555b4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245659"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server-2014"></a>Hardware and Software Requirements for Installing SQL Server 2014
@@ -73,7 +73,7 @@ ms.locfileid: "75245659"
 -   
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會安裝該產品所需的下列軟體元件：  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client{2}  
   
     -   
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援檔案  
@@ -189,7 +189,7 @@ ms.locfileid: "75245659"
   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard 64 位元<br /><br /> 
   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Web 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]SP2 Datacenter 64 位<br /><br /> 
   [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]SP2 Standard 64 位<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]SP2 Web 64 位|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]商業智慧|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)]R2 Datacenter 64 位<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)]R2 Standard 64 位<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)]R2 Essentials 64 位<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)]R2 Foundation 64 位<br /><br /> 
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence{2}|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)]R2 Datacenter 64 位<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)]R2 Standard 64 位<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)]R2 Essentials 64 位<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)]R2 Foundation 64 位<br /><br /> 
   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)]標準64位<br /><br /> 
   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)]Foundation 64 位<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]SP1 Datacenter 64 位<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]SP1 Enterprise 64 位<br /><br /> 
   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard 64 位元<br /><br /> 
@@ -320,7 +320,7 @@ ms.locfileid: "75245659"
   
  實際硬碟空間需求需視系統組態和您決定要安裝的功能而定。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本所支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 下表提供 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件的磁碟空間需求。  
   
-|**特徵**|**磁碟空間需求**|  
+|**功能**|**磁碟空間需求**|  
 |-----------------|--------------------------------|  
 |
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和資料檔案、複寫、全文檢索搜尋和 Data Quality Services|811 MB|  
@@ -345,7 +345,7 @@ ms.locfileid: "75245659"
   
     > **注意：** 獨立或叢集安裝的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料檔案不支援 SMB 儲存體。 請改用直接附加儲存體或存放區域網路。  
   
-    > **重要！** SMB 儲存體可由 Windows File Server 或協力廠商 SMB 儲存體裝置所裝載。 如果使用了 Windows File Server，則 Windows File Server 版本應為 2008 或更新版本。 如需有關使用 SMB 檔案共用安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 做為儲存體選項的詳細資訊，請參閱[＜安裝 SQL Server 與 SMB 檔案共用儲存體＞](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)。  
+    > **重要！！** SMB 儲存體可由 Windows File Server 或協力廠商 SMB 儲存體裝置所裝載。 如果使用了 Windows File Server，則 Windows File Server 版本應為 2008 或更新版本。 如需有關使用 SMB 檔案共用安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 做為儲存體選項的詳細資訊，請參閱[＜安裝 SQL Server 與 SMB 檔案共用儲存體＞](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)。  
   
     > **警告!!!!**  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝只有在安裝 tempdb 檔時支援本機磁碟。 請確定針對 tempdb 資料和記錄檔所指定的路徑在**所有**叢集節點上都是有效的。 在容錯移轉期間，如果容錯移轉目標節點上的 tempdb 目錄無法使用，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源將無法上線。  
@@ -368,5 +368,5 @@ ms.locfileid: "75245659"
   
 ## <a name="see-also"></a>另請參閱  
  [規劃 SQL Server 安裝](planning-a-sql-server-installation.md)   
- [SQL Server 安裝的安全性考慮](security-considerations-for-a-sql-server-installation.md)   
+ [SQL Server 安裝的安全性考量](security-considerations-for-a-sql-server-installation.md)   
  [SQL Server 2014 的產品規格](../../getting-started/sql-server-2014-product-specifications.md)  

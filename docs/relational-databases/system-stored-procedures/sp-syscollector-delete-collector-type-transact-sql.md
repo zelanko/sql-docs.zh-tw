@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_delete_collector_type (TRANSACT-SQL) |Microsoft Docs
+title: sp_syscollector_delete_collector_type （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c22170fff456a2ed65c295a1974539da20499c52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68000869"
 ---
-# <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
+# <a name="sp_syscollector_delete_collector_type-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   刪除收集器類型的定義。  
@@ -41,20 +41,20 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @collector_type_uid = ] 'collector_type_uid'` 是收集器型別的 GUID。 *collector_type_uid 是否*已**uniqueidentifier**而且必須具有值，如果*名稱*是 NULL。  
+`[ @collector_type_uid = ] 'collector_type_uid'`這是收集器型別的 GUID。 *collector_type_uid*是**uniqueidentifier** ，而且如果*name*為 Null，則必須有值。  
   
-`[ @name = ] 'name'` 是收集器型別的名稱。 *名稱*已**sysname**而且必須具有值，如果*collector_type_uid&lt*是 NULL。  
+`[ @name = ] 'name'`這是收集器型別的名稱。 *name*是**sysname** ，如果*collector_type_uid*是 Null，則必須有值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- 任一*collector_type_uid&lt*或是*名稱*必須具有值，兩者都不能是 NULL。  
+ *Collector_type_uid*或*名稱*都必須有值，兩者都不能是 Null。  
   
  如果這種集合類型的集合項目存在，這個程序將會擲回錯誤。  
   
-## <a name="permissions"></a>Permissions  
- 需要的成員資格**dc_admin** （具有 EXECUTE 權限） 固定的資料庫角色，才能執行此程序。  
+## <a name="permissions"></a>權限  
+ 需要**dc_admin** （具有 EXECUTE 許可權）固定資料庫角色中的成員資格，才能執行此程式。  
   
 ## <a name="example"></a>範例  
  此範例會刪除一般 T-SQL 查詢收集器型別。  
@@ -67,6 +67,6 @@ EXEC sp_syscollector_delete_collector_type @collector_type_uid = '302E93D1-3424-
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [[資料收集]](../../relational-databases/data-collection/data-collection.md)  
+ [資料收集](../../relational-databases/data-collection/data-collection.md)  
   
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 645ba8428dddb36de9a3edeb784d64f96b5c0603
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797035"
 ---
 # <a name="creating-altering-and-removing-databases"></a>建立、改變和移除資料庫
@@ -28,7 +28,7 @@ ms.locfileid: "72797035"
  您不必建立 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件，即可修改或移除該物件。 您可以利用集合來參考資料庫。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 VISUAL BASIC SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 VISUAL BASIC SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 Visual Studio .Net 中建立 VISUAL C&#35; SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-database-in-visual-basic"></a>在 Visual Basic 中建立、改變和移除資料庫  
  此程式碼範例會建立新資料庫， 並自動為資料庫建立檔案和檔案群組。  
@@ -76,5 +76,5 @@ $db.CreateDate
 $db.Drop()  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.SqlServer.Management.Smo.Database>  

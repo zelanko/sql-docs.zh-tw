@@ -14,10 +14,10 @@ ms.assetid: 4b80148d-2318-415c-9479-28c240e48bcd
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a6c1dbc6be8ba8ddde53ea1ccdfa97fe7992a4b5
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728736"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>指派模型物件權限 (Master Data Services)
@@ -34,37 +34,37 @@ ms.locfileid: "73728736"
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 ### <a name="to-assign-model-object-permissions"></a>若要指派模型物件權限  
   
-1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]** 。  
+1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]**。  
   
 2.  在 **[使用者]** 或 **[群組]** 頁面上，選取要編輯之使用者或群組的資料列。  
   
-3.  按一下 **[編輯選取的使用者]** 。  
+3.  按一下 **[編輯選取的使用者]**。  
   
 4.  按一下 **[模型]** 索引標籤。  
   
 5.  (選擇性) 從 **[模型]** 清單中選取模型。  
   
-6.  按一下 **[編輯]** 。  
+6.  按一下 **[編輯]**。  
   
 7.  展開樹狀結構，然後按一下要指派權限的模型物件。  
   
 8.  從功能表中，選取 [讀取]、[建立]、[更新] 和 [刪除] 的組合，或是 [拒絕]。  
   
-9. 在最上層模型層級中，如果您需要讓使用者模型成為系統管理員，請選取 [管理] 。  
+9. 在最上層模型層級中，如果您需要讓使用者模型成為系統管理員，請選取 [管理] **** 。  
   
-10. 按一下 **[儲存]** 。  
+10. 按一下 [檔案]  。  
   
 ## <a name="next-steps"></a>後續步驟  
   
 -   (選擇性) [指派階層成員權限 &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [刪除模型物件權限 &#40;Master Data Services&#41;](../master-data-services/delete-model-object-permissions-master-data-services.md)   
- [模型物件權限 &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [建立模型管理員 &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)  
+ [刪除模型物件使用權限 &#40;Master Data Services&#41;](../master-data-services/delete-model-object-permissions-master-data-services.md)   
+ [模型物件使用權限 &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [建立模型系統管理員 &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)  
   
   

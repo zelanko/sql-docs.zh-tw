@@ -18,20 +18,20 @@ ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 748f2452d20b618ae0011e2e1ac4e24af098ac06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019054"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>資料類型識別碼和描述項
-資料類型會列於[SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)並[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)稍早在本附錄中的區段都是 「 精簡 」 的資料類型：每個識別項是指單一資料類型。 沒有識別碼和資料類型之間的一對一對應。 描述元，不過，這麼做不在所有情況下使用單一值來識別資料類型。 在某些情況下，他們會使用"verbose"的資料型別和型別子代碼。 除了 datetime 和間隔資料類型的所有資料類型，詳細資訊的型別識別項與相同的精簡型別識別項，SQL_DESC_DATETIME_INTERVAL_CODE 中的值等於 0。 日期時間和間隔資料類型，不過，詳細資訊的類型 （如果是 SQL_DATETIME 或 SQL_INTERVAL） 會儲存在 SQL_DESC_TYPE、 精簡的類型會儲存在 SQL_DESC_CONCISE_TYPE，，和每一個精簡類型子代碼會儲存在 SQL_DESC_DATETIME_INTERVAL_CODE。 設定其中一個欄位，會影響其他人。 如需有關這些欄位的詳細資訊，請參閱 < [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)函式描述。  
+本附錄稍早的[SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)和[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)區段中所列的資料類型是「精簡」資料類型：每個識別碼都會參考單一資料類型。 識別碼與資料類型之間有一對一的對應關係。 不過，描述項不會在所有情況下使用單一值來識別資料類型。 在某些情況下，它們會使用「詳細資訊」資料類型和類型子代碼。 對於 datetime 和 interval 資料類型以外的所有資料類型，verbose 類型識別碼與精簡類型識別碼相同，而 SQL_DESC_DATETIME_INTERVAL_CODE 中的值等於0。 不過，針對 datetime 和 interval 資料類型，詳細資訊類型（SQL_DATETIME 或 SQL_INTERVAL）會儲存在 SQL_DESC_TYPE 中，精簡的類型會儲存在 SQL_DESC_CONCISE_TYPE 中，而每個精確類型的子代碼會儲存在 SQL_DESC_DATETIME_INTERVAL_CODE 中。 設定其中一個欄位會影響其他欄位。 如需這些欄位的詳細資訊，請參閱[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)函數描述。  
   
- 當 SQL_DESC_TYPE 或 SQL_DESC_CONCISE_TYPE 欄位設定某些資料類型時，SQL_DESC_DATETIME_INTERVAL_PRECISION、 SQL_DESC_LENGTH、 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 欄位會自動設定為預設值，視您的資料型別。 如需詳細資訊，請參閱中的 SQL_DESC_TYPE 欄位描述[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。 如果設定的預設值的任何不適當，應用程式應該明確設定描述項欄位，透過呼叫**SQLSetDescField**。  
+ 針對某些資料類型設定 [SQL_DESC_TYPE] 或 [SQL_DESC_CONCISE_TYPE] 欄位時，SQL_DESC_DATETIME_INTERVAL_PRECISION、SQL_DESC_LENGTH、SQL_DESC_PRECISION 和 SQL_DESC_SCALE 欄位會自動設定為預設值（適用于資料）型. 如需詳細資訊，請參閱[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)中的 [SQL_DESC_TYPE] 欄位的描述。 如果任何設定的預設值都不適合，應用程式應該透過呼叫**SQLSetDescField**來明確設定描述項欄位。  
   
- 下表顯示的精簡型別識別項、 詳細資訊的型別識別項和每個日期時間和間隔 SQL 和 C 類型識別項的型別子代碼。 因為日期時間和間隔資料類型，此表格指出 SQL_DESC_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE 欄位具有相同的資訊清單常數 （在實作描述項） 的 SQL 資料類型和 C 資料類型 （在應用程式描述項）。  
+ 下表顯示每個 datetime 和 interval SQL 和 C 類型識別碼的簡潔類型識別碼、詳細資訊類型識別碼和類型子代碼。 如下表所示，對於 datetime 和 interval 資料類型，SQL_DESC_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE 欄位對於 SQL 資料類型（在執行描述項中）和 C 資料類型（在應用程式中）都具有相同的資訊清單常數。描述項）。  
   
-|精簡的 SQL 類型|精簡的 C 類型|詳細資訊的型別|DATETIME_INTERVAL_CODE|  
+|簡潔的 SQL 類型|簡潔的 C 類型|詳細資訊類型|DATETIME_INTERVAL_CODE|  
 |----------------------|--------------------|------------------|------------------------------|  
 |SQL_TYPE_DATE|SQL_C_TYPE_DATE|SQL_DATETIME|SQL_CODE_DATE|  
 |SQL_TYPE_TIME|SQL_C_TYPE_TIME|SQL_DATETIME|SQL_CODE_TIME|  

@@ -22,19 +22,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 620b778069ef45deeeb5552296798736a1ebe5f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768407"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>指令碼工作的程式碼撰寫和偵錯
-  在 [指令碼工作編輯器]  中設定指令碼工作之後，於指令碼工作開發環境中撰寫自訂程式碼。  
+  在 [指令碼工作編輯器]**** 中設定指令碼工作之後，於指令碼工作開發環境中撰寫自訂程式碼。  
   
 ## <a name="script-task-development-environment"></a>指令碼工作開發環境  
- 指令碼工作使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 作為指令碼本身的開發環境。  
+ 腳本工作使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications （VSTA）做為腳本本身的開發環境。  
   
- 指令碼是以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 撰寫。 您可以在 [指令碼工作編輯器]  中設定 [ScriptLanguage]  屬性來指定指令碼語言。 如果想要使用其他的程式語言，可以用您所選的語言開發自訂組件，然後在指令碼工作中，從程式碼呼叫其功能。  
+ 指令碼是以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 撰寫。 您可以在 [指令碼工作編輯器]**** 中設定 [ScriptLanguage]**** 屬性來指定指令碼語言。 如果想要使用其他的程式語言，可以用您所選的語言開發自訂組件，然後在指令碼工作中，從程式碼呼叫其功能。  
   
  您在指令碼工作中建立的指令碼會儲存在封裝定義中， 而沒有個別的指令碼檔案。 因此，使用指令碼工作並不會影響封裝部署。  
   
@@ -47,17 +47,20 @@ ms.locfileid: "62768407"
  當您建立或修改包含在指令碼工作中的指令碼時，VSTA 會開啟空的新專案或是重新開啟現有的專案。 這個 VSTA 專案的建立不會影響專案的部署，因為專案是儲存在封裝檔案中；指令碼工作不會建立其他檔案。  
   
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>指令碼工作專案中的專案項目和類別  
- 依預設，顯示在 VSTA [專案總管] 視窗中的指令碼工作專案包含單一項目：`ScriptMain`。 `ScriptMain` 項目則包含單一類別，同樣名為 `ScriptMain`。 類別中的程式碼項目會根據您針對指令碼工作所選取的程式語言而變更。  
+ 依預設，顯示在 VSTA [專案總管] 視窗中的指令碼工作專案包含單一項目：`ScriptMain`。 
+  `ScriptMain` 項目則包含單一類別，同樣名為 `ScriptMain`。 類別中的程式碼項目會根據您針對指令碼工作所選取的程式語言而變更。  
   
--   當指令碼工作已針對[!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)]程式設計語言，`ScriptMain`類別具有公用的副程式： `Main`。 `ScriptMain.Main` 副程式是當您執行指令碼工作時，執行階段呼叫的方法。  
+-   針對程式[!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)]設計語言設定腳本工作時， `ScriptMain`類別具有公用副程式。 `Main` 
+  `ScriptMain.Main` 副程式是當您執行指令碼工作時，執行階段呼叫的方法。  
   
-     依預設，在新指令碼的 `Main` 副程式中的唯一程式碼是 `Dts.TaskResult = ScriptResults.Success` 這一行。 這行會通知執行階段，工作的作業已成功。 `Dts.TaskResult`屬性中所提及[Returning Results from 指令碼工作](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)。  
+     依預設，在新指令碼的 `Main` 副程式中的唯一程式碼是 `Dts.TaskResult = ScriptResults.Success` 這一行。 這行會通知執行階段，工作的作業已成功。 `Dts.TaskResult` [從腳本工作傳回結果](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)中會討論屬性。  
   
 -   當為 Visual C# 程式語言設定指令碼工作時，`ScriptMain` 類別具有公用的方法 `Main`。 此方法是在指令碼工作執行時呼叫。  
   
      依預設，`Main` 方法包括此行：`Dts.TaskResult = (int)ScriptResults.Success`。 這行會通知執行階段，工作的作業已成功。  
   
- `ScriptMain` 項目可以包含 `ScriptMain` 類別以外的類別。 類別僅可供其所在的指令碼工作使用。  
+ 
+  `ScriptMain` 項目可以包含 `ScriptMain` 類別以外的類別。 類別僅可供其所在的指令碼工作使用。  
   
  依預設，`ScriptMain` 專案項目包含下列自動產生的程式碼。 程式碼範本也會提供指令碼工作的概觀，以及有關如何擷取與操作 SSIS 物件 (例如變數、事件與連接) 的其他資訊。  
   
@@ -200,17 +203,17 @@ To open Help, press F1.
  指令碼工作專案可以包含預設 `ScriptMain` 項目以外的項目。 您可以將類別、模組和程式碼檔案加入專案。 您也可以使用資料夾來組織項目的群組。 所有您加入的項目都會保存在封裝內。  
   
 ### <a name="references-in-the-script-task-project"></a>指令碼工作專案中的參考  
- 您可以在 [專案總管]  中以滑鼠右鍵按一下「指令碼」工作專案，再按 [新增參考]  ，新增 Managed 組件的參考。 如需詳細資訊，請參閱[參考指令碼解決方案中的其他組件](../referencing-other-assemblies-in-scripting-solutions.md)。  
+ 您可以在 [專案總管]**** 中以滑鼠右鍵按一下「指令碼」工作專案，再按 [新增參考]****，新增 Managed 組件的參考。 如需詳細資訊，請參閱[參考指令碼解決方案中的其他組件](../referencing-other-assemblies-in-scripting-solutions.md)。  
   
 > [!NOTE]  
->  您可以在 VSTA IDE 中的 [類別檢視]  或 [專案總管]  中，檢視專案參考。 您可以從 [檢視]  功能表中開啟任一個視窗。 您可以從 [專案]  功能表、[專案總管]  或 [類別檢視]  新增參考。  
+>  您可以在 VSTA IDE 中的 [類別檢視]**** 或 [專案總管]**** 中，檢視專案參考。 您可以從 [檢視]**** 功能表中開啟任一個視窗。 您可以從 [專案]**** 功能表、[專案總管]**** 或 [類別檢視]**** 新增參考。  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>與指令碼工作中的封裝互動  
  指令碼工作使用全域 `Dts` 物件 (<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 類別的執行個體) 及其成員與包含封裝和 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段互動。  
   
  下表列出 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 類別的主要公用成員，這個類別是透過全域 `Dts` 物件向指令碼工作程式碼公開。 本節中的主題會更詳細地討論這些成員的使用。  
   
-|成員|用途|  
+|成員|目的|  
 |------------|-------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|提供定義在封裝中的連接管理員之存取權。|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|提供事件介面，讓指令碼工作引發錯誤、警告及參考訊息。|  
@@ -220,11 +223,13 @@ To open Help, press F1.
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Transaction%2A>|提供工作的容器執行範圍內的交易 (如果有的話)。|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>|提供列在 `ReadOnlyVariables` 與 `ReadWriteVariables` 工作屬性中的變數存取權，以供在指令碼中使用。|  
   
- <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 類別也包含一些您可能不會使用的公用成員。  
+ 
+  <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 類別也包含一些您可能不會使用的公用成員。  
   
 |成員|描述|  
 |------------|-----------------|  
-|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 屬性會提供更為便利的變數存取方式。 雖然您可以使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>，但是必須明確地呼叫方法以鎖定和解除鎖定要讀取和寫入的變數。 當您使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 屬性時，指令碼工作會為您處理鎖定語意。|  
+|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>|
+  <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 屬性會提供更為便利的變數存取方式。 雖然您可以使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>，但是必須明確地呼叫方法以鎖定和解除鎖定要讀取和寫入的變數。 當您使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 屬性時，指令碼工作會為您處理鎖定語意。|  
   
 ## <a name="debugging-the-script-task"></a>偵錯指令碼工作  
  若要偵錯指令碼工作中的程式碼，請在程式碼中設定至少一個中斷點，然後關閉 VSTA IDE 以便在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中執行封裝。 當封裝執行進入指令碼工作時，VSTA IDE 會在唯讀模式下重新開啟和顯示您的程式碼。 在執行到達中斷點之後，您可以檢查變數值並逐步完成其餘的程式碼。  
@@ -245,10 +250,10 @@ To open Help, press F1.
   
 -   blogs.msdn.com 上的部落格文章：[VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://go.microsoft.com/fwlink/?LinkId=215661) (SSIS 2008 和 R2 安裝的 VSTA 安裝與設定問題)。  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 的最新下載、文件、範例和影片以及社群中的選定方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示（小型）](../../media/dts-16.gif "Integration Services 圖示 (小)")**與 Integration Services 保持最**新狀態  <br /> 若要取得 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 的最新下載、文件、範例和影片以及社群中的選定方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
- [參考指令碼解決方案中的其他組件](../referencing-other-assemblies-in-scripting-solutions.md)   
+ [參考腳本解決方案中的其他元件](../referencing-other-assemblies-in-scripting-solutions.md)   
  [在指令碼工作編輯器設定指令碼工作](configuring-the-script-task-in-the-script-task-editor.md)  
   
   

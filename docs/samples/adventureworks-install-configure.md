@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6a4b56a31ede0d8e011c1a2244f5d014e185e7e5
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74318989"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks 安裝和設定
@@ -21,7 +21,7 @@ ms.locfileid: "74318989"
 
 AdventureWorks 下載連結和安裝指示。 
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)或[Azure SQL Database](https://azure.microsoft.com/services/sql-database/)。 如需完整版本的範例，請使用 SQL Server Evaluation/Developer/Enterprise Edition。
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 若要獲得最佳結果，請使用2016年6月版本或更新版本。
@@ -67,9 +67,9 @@ AdventureWorks 下載連結和安裝指示。
 1. 開啟 SQL Server Management Studio，並連接到目標 SQL Server 實例。
 2. 以滑鼠右鍵按一下 [**資料庫**] 節點，然後選取 [**還原資料庫**]。
 3. 選取 [**裝置**]，然後按一下省略號（**...**）
-4. 在對話方塊中，**選取 [備份裝置**]，按一下 [**新增**]，流覽至伺服器檔案系統中的資料庫備份，然後選取備份。 按一下 [確定]****。
+4. 在對話方塊中，**選取 [備份裝置**]，按一下 [**新增**]，流覽至伺服器檔案系統中的資料庫備份，然後選取備份。 按一下 [確定]  。
 5. 如有需要，請在 [檔案] 窗格中變更**資料檔案和**記錄檔的目標位置。 請注意，最佳做法是將資料和記錄檔放在不同的磁片磁碟機上。
-6. 按一下 [確定]****。 這會起始資料庫還原。 完成之後，您的 SQL Server 實例上會安裝 AdventureWorks 資料庫。
+6. 按一下 [確定]  。 這會起始資料庫還原。 完成之後，您的 SQL Server 實例上會安裝 AdventureWorks 資料庫。
 
 如需還原 SQL Server 資料庫的詳細資訊，請參閱[使用 SSMS 還原資料庫備份](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)。
 

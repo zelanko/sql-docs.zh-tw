@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ea4ce4bfe51f844d6d2916623f5a9cc3ffbe01a6
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781391"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>準備和執行陳述式 (ODBC)
@@ -79,9 +79,9 @@ ms.locfileid: "73781391"
   
     -   將 S 資料值和 S 資料長度放在繫結參數陣列中。  
   
-    -   呼叫 SQLExecute 來執行備妥的語句。  
+    -   呼叫 SQLExecute，以便執行準備陳述式。  
   
-    -   如果使用了資料執行中輸入參數，SQLExecute 會傳回 SQL_NEED_DATA。 使用 SQLParamData 和 SQLPutData 以區區塊轉送資料。  
+    -   如果使用了資料執行中輸入參數，SQLExecute 就會傳回 SQL_NEED_DATA。 使用 SQLParamData 和 SQLPutData 以區區塊轉送資料。  
   
 ### <a name="to-prepare-a-statement-with-row-wise-bound-parameters"></a>準備含有資料列取向繫結參數的陳述式  
   
@@ -109,11 +109,11 @@ ms.locfileid: "73781391"
   
     -   將資料值填入繫結參數緩衝區陣列。  
   
-    -   呼叫 SQLExecute 來執行備妥的語句。 驅動程式會有效率地執行 SQL 陳述式 S 次，針對每個參數集執行一次。  
+    -   呼叫 SQLExecute，以便執行準備陳述式。 驅動程式會有效率地執行 SQL 陳述式 S 次，針對每個參數集執行一次。  
   
-    -   如果使用了資料執行中輸入參數，SQLExecute 會傳回 SQL_NEED_DATA。 使用 SQLParamData 和 SQLPutData 以區區塊轉送資料。  
+    -   如果使用了資料執行中輸入參數，SQLExecute 就會傳回 SQL_NEED_DATA。 使用 SQLParamData 和 SQLPutData 以區區塊轉送資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行查詢 how to 主題&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [執行查詢 &#40;ODBC&#41;的使用說明主題](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

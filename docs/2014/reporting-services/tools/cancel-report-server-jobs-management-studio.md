@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab7c4496465de8297f07dd18b3aa2acf26ab305d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100495"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>取消報表伺服器作業 (Management Studio)
@@ -35,7 +35,7 @@ ms.locfileid: "66100495"
 > [!NOTE]  
 >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services 不支援這項功能。 因此，當您執行 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]時，不會出現此頁面。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **名稱**  
  顯示報表的名稱。 依據描述來識別訂閱。  
   

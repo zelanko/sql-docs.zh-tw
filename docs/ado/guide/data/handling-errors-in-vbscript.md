@@ -16,14 +16,14 @@ ms.assetid: 31bc3743-32d3-4bc7-ac61-ee6ed0fdec70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 99c3d2a615abe64a6ea5fc79cab8fb3dc083178d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925149"
 ---
 # <a name="handling-errors-in-vbscript"></a>處理 VBScript 的錯誤
-沒有 Visual Basic 中使用的方法以及與 VBScript 一起使用的一些差異。 主要差別，VBScript 並不支援在標籤中繼續執行的方式處理錯誤的概念。 換句話說，您無法使用`On Error GoTo`VBScript 中。 請改用`On Error Resume Next`，然後檢查兩者**Err.Number**並**計數**屬性**錯誤**集合，如下列範例所示：  
+Visual Basic 中所使用的方法和 VBScript 所使用的方法並沒有差異。 主要的差異在於，VBScript 不支援透過在標籤上繼續執行的錯誤處理概念。 換句話說，您無法在 VBScript 中`On Error GoTo`使用。 相反地， `On Error Resume Next`請使用，然後檢查**Errors**集合的**Err**和**Count**屬性，如下列範例所示：  
   
 ```  
 <!-- BeginErrorExampleVBS -->  

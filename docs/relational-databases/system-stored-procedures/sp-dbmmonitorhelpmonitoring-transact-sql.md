@@ -1,5 +1,5 @@
 ---
-title: sp_dbmmonitorhelpmonitoring (TRANSACT-SQL) |Microsoft Docs
+title: sp_dbmmonitorhelpmonitoring （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: a085cf87-269f-454a-a146-21f80a113b72
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 91668795513969c9c0bda7a2a1a7203e557f1819
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899200"
 ---
-# <a name="spdbmmonitorhelpmonitoring-transact-sql"></a>sp_dbmmonitorhelpmonitoring (Transact-SQL)
+# <a name="sp_dbmmonitorhelpmonitoring-transact-sql"></a>sp_dbmmonitorhelpmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回目前的更新週期。  
@@ -48,7 +48,7 @@ sp_dbmmonitorhelpmonitoring
 ## <a name="result-sets"></a>結果集  
  傳回目前的更新週期，也就是資料庫鏡像狀態資料表更新之間的分鐘數。 這個值介於 1 和 120 分鐘之間。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  

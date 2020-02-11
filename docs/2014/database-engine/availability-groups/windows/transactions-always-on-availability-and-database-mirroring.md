@@ -1,5 +1,5 @@
 ---
-title: 跨資料庫交易不支援資料庫鏡像或 AlwaysOn 可用性群組 (SQL Server) |Microsoft Docs
+title: 資料庫鏡像或 AlwaysOn 可用性群組（SQL Server）不支援跨資料庫交易 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c3616e40ff54c67d27902ddf9454084fb62e282
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62813653"
 ---
 # <a name="cross-database-transactions-not-supported-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>資料庫鏡像或 AlwaysOn 可用性群組不支援跨資料庫交易 (SQL Server)
+  
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]或資料庫鏡像皆不支援跨資料庫交易和分散式交易。 這是因為無法確保交易不可部分完成性/完整性，原因如下：  
   
--   跨資料庫交易：每個資料庫都會獨立認可。 因此，即使資料庫是在單一可用性群組中，在某個資料庫認可交易之後，但在另一個資料庫認可交易之前可能會發生容錯移轉。 對於資料庫鏡像，此問題更為複雜，因為在容錯移轉之後，鏡像資料庫通常與另一個資料庫位於不同的伺服器執行個體，即使兩個資料庫是在相同的兩個夥伴之間建立鏡像，也無法確保這兩個資料庫會同時容錯移轉。  
+-   對於跨資料庫交易：每個資料庫都會獨立認可。 因此，即使資料庫是在單一可用性群組中，在某個資料庫認可交易之後，但在另一個資料庫認可交易之前可能會發生容錯移轉。 對於資料庫鏡像，此問題更為複雜，因為在容錯移轉之後，鏡像資料庫通常與另一個資料庫位於不同的伺服器執行個體，即使兩個資料庫是在相同的兩個夥伴之間建立鏡像，也無法確保這兩個資料庫會同時容錯移轉。  
   
--   分散式交易：容錯移轉之後，新的主體伺服器/主要複本是無法連線到先前的主體伺服器/主要複本上的分散式的交易協調器。 因此，新的主體伺服器/主要複本無法取得交易狀態。  
+-   對於分散式交易：在容錯移轉之後，新的主體伺服器/主要複本無法連接到先前主體伺服器/主要複本上的分散式交易協調器。 因此，新的主體伺服器/主要複本無法取得交易狀態。  
   
  下列資料庫鏡像範例將說明如何發生邏輯不一致的情況。 在此範例中，應用程式會使用跨資料庫交易來插入兩個資料列：其中一個資料列會插入鏡像資料庫 A 中的資料表，而另一個資料列則插入另一個資料庫 B 中的資料表。然後，資料庫 A 會在具有自動容錯移轉的高安全性模式下進行鏡像。 認可交易時，資料庫 A 會無法使用，而鏡像工作階段便自動容錯移轉至資料庫 A 的鏡像。  
   

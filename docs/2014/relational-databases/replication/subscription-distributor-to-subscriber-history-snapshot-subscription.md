@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9e0520c28d78b8036072b70de2d8f83a1a8c72da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62628773"
 ---
 # <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>訂閱，散發者到訂閱者記錄 (快照式訂閱)
@@ -25,7 +25,7 @@ ms.locfileid: "62628773"
 ## <a name="options"></a>選項。  
  從 **[檢視]** 功能表中選取要檢視的散發代理程式工作階段，再於 **[散發代理程式的工作階段]** 的方格中選取特定的工作階段。 有關這個工作階段的詳細資訊，會顯示在標示為 **[所選取工作階段中的動作]** 之方格中。 如果選取的工作階段結束時發生錯誤， **[所選取之工作階段的錯誤詳細資料或訊息]** 的文字區域也會顯示。  
   
- **[檢視]**  
+ **檢視**  
  選取要檢視的散發代理程式工作階段。  
   
  **狀態**  
@@ -33,7 +33,7 @@ ms.locfileid: "62628773"
   
 -   錯誤  
   
--   已完成  
+-   Completed  
   
 -   正在重試  
   

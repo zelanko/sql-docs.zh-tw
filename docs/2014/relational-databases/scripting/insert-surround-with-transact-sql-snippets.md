@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fde81304117befec38844c28b6d0c434ab3606e8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242091"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>插入範圍陳述式 Transact-SQL 程式碼片段
   範圍陳述式片段是可讓您在 BEGIN、IF 或 WHILE 區塊中封入一組 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時當做起點使用的範本。  
   
 ## <a name="inserting-surround-with-snippets"></a>插入範圍陳述式片段  
- 您可以使用下列其中一種方式來啟動範圍陳述式片段：透過鍵盤快速鍵、透過 [編輯]**** 功能表，以及透過內容功能表。  
+ 您可以使用下列其中一種方式來啟動範圍陳述式片段：透過鍵盤快速鍵、透過 [編輯]  功能表，以及透過內容功能表。  
   
  在插入程式碼片段之後，您必須變更取代文字，以形成有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 如需詳細資訊，請參閱 [完成 Transact-SQL 程式碼片段](complete-transact-sql-snippets.md)。  
   
@@ -37,13 +37,13 @@ ms.locfileid: "75242091"
   
     -   輸入 CTRL+K、CTRL+S。  
   
-    -   在 [編輯]**** 功能表中，指向 [IntelliSense]****，然後選取 [範圍陳述式]**** 命令。  
+    -   在 [編輯]  功能表中，指向 [IntelliSense]  ，然後選取 [範圍陳述式]  命令。  
   
-    -   以滑鼠右鍵按一下選取的文字，然後從內容功能表中選取 [範圍陳述式]**** 命令。  
+    -   以滑鼠右鍵按一下選取的文字，然後從內容功能表中選取 [範圍陳述式]  命令。  
   
 3.  使用滑鼠，從清單中選取片段的名稱 (BEGIN、IF 或 WHILE)，或輸入片段的名稱並按下 TAB 或 ENTER。  
   
 ## <a name="see-also"></a>另請參閱  
- [插入 Transact-sql 程式碼片段](insert-transact-sql-snippets.md)  
+ [插入 Transact-SQL 程式碼片段](insert-transact-sql-snippets.md)  
   
   

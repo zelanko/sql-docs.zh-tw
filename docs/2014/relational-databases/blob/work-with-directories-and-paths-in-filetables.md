@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52e486dc6cb6c3da45d590d4ba2e557c87c1a556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66009876"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>使用 FileTables 中的目錄與路徑
@@ -32,7 +32,7 @@ ms.locfileid: "66009876"
 |經由提供路徑的方法，取得 FileTable 中指定之檔案或目錄的路徑定位器識別碼值。|[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|  
   
 ##  <a name="BestPracticeRelativePaths"></a> 如何：使用可攜式程式碼的相對路徑  
- 若要讓程式碼和應用程式獨立於目前的電腦和資料庫之外，請避免撰寫依賴絕對檔案路徑的程式碼。 相反地，同時使用 [FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) 和 [GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) 函數，以取得檔案在執行階段的完整路徑，如下列範例所示。 根據預設，`GetFileNamespacePath` 函數會傳回資料庫根路徑之下的檔案相對路徑。  
+ 若要讓程式碼和應用程式獨立於目前的電腦和資料庫之外，請避免撰寫依賴絕對檔案路徑的程式碼。 相反地，同時使用 [FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) 和 [GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)函數，以取得檔案在執行階段的完整路徑，如下列範例所示。 根據預設，`GetFileNamespacePath` 函數會傳回資料庫根路徑之下的檔案相對路徑。  
   
 ```sql  
 USE database_name;  
@@ -55,19 +55,21 @@ GO
 > [!IMPORTANT]  
 >  您不能在 FileTable 目錄中儲存超過 15 層的子目錄。 當您儲存了 15 層的子目錄時，最低的一層將無法包含任何檔案，因為這些檔案代表另外的一層。  
   
-###  <a name="fqnlength"></a> 完整路徑名稱長度  
+###  <a name="fqnlength"></a>完整路徑名稱的長度  
   
 > [!IMPORTANT]  
 >  NTFS 檔案系統支援遠超過 Windows Shell 和大多數 Windows API 的 260 字元限制的路徑名稱。 因此，可以使用 Transact-SQL 建立 FileTable 檔案階層中完整路徑名稱超過 260 字元的檔案，但卻無法以 Windows 檔案總管或許多其他 Windows 應用程式檢視或開啟這些檔案。 不過，您可以繼續使用 Transact-SQL 存取這些檔案。  
   
-##  <a name="fullpath"></a> FileTable 中儲存之項目的完整路徑  
+##  <a name="fullpath"></a>FileTable 中儲存之專案的完整路徑  
  FileTable 中儲存之檔案或目錄的完整路徑，由下列元素做為開頭：  
   
 1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體層級為 FILESTREAM 檔 I/O 存取啟用共用。  
   
-2.  **DIRECTORY_NAME** 於資料庫層級指定。  
+2.  
+  **DIRECTORY_NAME** 於資料庫層級指定。  
   
-3.  **FILETABLE_DIRECTORY** 於 FileTable 層級指定。  
+3.  
+  **FILETABLE_DIRECTORY** 於 FileTable 層級指定。  
   
  所產生的階層如下：  
   
@@ -77,7 +79,7 @@ GO
   
  請務必牢記，於此執行個體層級的 FILESTREAM 共用之下所建立的目錄階層，是一個虛擬的目錄階層。 此階層儲存於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，且不會實際於 NTFS 檔案系統中呈現出來。 所有存取 FILESTREAM 共用之下以及其所包含之 FileTables 中檔案與目錄的作業，都會由檔案系統中內嵌的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件所攔截與處理。  
   
-##  <a name="roots"></a> 執行個體、資料庫與 FileTable 層級上根目錄的語意  
+##  <a name="roots"></a>實例、資料庫和 FileTable 層級上根目錄的語義  
  此目錄階層結構遵循下列語義：  
   
 -   執行個體層級的 FILESTREAM 共用由管理員所設定，而且會儲存為伺服器屬性。 您可使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，重新命名此共用。 伺服器重新啟動之前重新命名作業不會生效。  
@@ -90,18 +92,18 @@ GO
   
 -   您無法以獨佔的檔案控制開啟這些根目錄。  
   
-##  <a name="is_directory"></a> FileTable 結構描述中的 is_directory 資料行  
+##  <a name="is_directory"></a>FileTable 架構中的 is_directory 資料行  
  下表描述 **is_directory** 資料行以及與將 FILESTREAM 資料包含於 FileTable 中的 **file_stream** 資料行之間的互動。  
   
 ||||  
 |-|-|-|  
-|*is_directory* **value**|*file_stream* **value**|**行為**|  
+|*is_directory* **值**|*file_stream* **值**|**行為**|  
 |FALSE|NULL|此為無效的組合，將由系統定義的條件約束所攔截。|  
-|FALSE|\<value>|該項目代表檔案。|  
+|FALSE|\<值>|該項目代表檔案。|  
 |TRUE|NULL|該項目代表目錄。|  
 |TRUE|\<值>|此為無效的組合，將由系統定義的條件約束所攔截。|  
   
-##  <a name="alwayson"></a> 使用虛擬網路名稱 (VNN) 搭配 AlwaysOn 可用性群組  
+##  <a name="alwayson"></a>搭配 AlwaysOn 可用性群組使用虛擬網路名稱（Vnn）  
  當包含 FILESTREAM 或 FileTable 資料的資料庫屬於 AlwaysOn 可用性群組時：  
   
 -   FILESTREAM 和 FileTable 函數會接受或傳回虛擬網路名稱 (VNN) 而非電腦名稱。 如需有關這些函數的詳細資訊，請參閱 [Filestream and FileTable Functions &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filestream-and-filetable-functions-transact-sql) (Filestream 和 FileTable 函數 (Transact-SQL))。  
@@ -110,8 +112,8 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [啟用 FileTable 的必要條件](enable-the-prerequisites-for-filetable.md)   
- [建立、改變及卸除 FileTable](create-alter-and-drop-filetables.md)   
- [利用 Transact-SQL 存取 FileTable](access-filetables-with-transact-sql.md)   
+ [Create、Alter 和 Drop Filetable](create-alter-and-drop-filetables.md)   
+ [使用 Transact-sql 存取 Filetable](access-filetables-with-transact-sql.md)   
  [使用檔案輸入輸出 API 存取 FileTable](access-filetables-with-file-input-output-apis.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 若要傳回的資料錄集的 JScript 程式碼範例 |Microsoft Docs
+title: 傳回記錄集的 JScript 程式碼範例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c195b3f9897d0bc71ab9e03e69153a66cdd80ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924924"
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>可傳回資料錄集的 JScript 程式碼範例
-## <a name="jscript-code-rsjs"></a>JScript 程式碼 (rs.js)  
+## <a name="jscript-code-rsjs"></a>JScript 程式碼（rs .js）  
   
 ```  
 main();  
@@ -79,10 +79,10 @@ function alert(str)
 }  
 ```  
   
-#### <a name="try-it"></a>試試看 ！  
+#### <a name="try-it"></a>試試看吧！  
   
-1.  將上述程式碼儲存到文字檔中。 將檔案儲存為 rs.js 中。  
+1.  將上述程式碼儲存到文字檔中。 將檔案儲存為 rs. js。  
   
-2.  開啟命令提示字元，切換至 JScript 檔 (rs.js) 的儲存位置的目錄。  
+2.  開啟命令提示字元，並將它安裝到您已儲存 JScript 檔案的目錄（rs .js）。  
   
-3.  型別`CScript rs.js`從命令提示字元。
+3.  從`CScript rs.js`命令提示字元輸入。

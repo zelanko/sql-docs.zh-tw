@@ -1,5 +1,5 @@
 ---
-title: ClusterProbability (DMX) |Microsoft Docs
+title: ClusterProbability （DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9beac713ec9a8b5a549602809d3612e4e29e67c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68071948"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
@@ -27,7 +27,7 @@ ms.locfileid: "68071948"
 ClusterProbability([<Node_Caption>])  
 ```  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  唯有基礎資料採礦模型支援群集時，才能使用這個函數。  
   
 ## <a name="return-type"></a>傳回類型  
@@ -40,9 +40,9 @@ ClusterProbability([<Node_Caption>])
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- 如需使用此語法的詳細資訊，請參閱 < [FROM&#60;模型&#62;。內容&#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)。 如需有關採礦模型內容結構描述資料列集的詳細資訊，請參閱 < [DMSCHEMA_MINING_MODEL_CONTENT 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)。  
+ 如需使用此語法的詳細資訊，請參閱[SELECT FROM &#60;model&#62;。DMX&#41;的內容 &#40;](../dmx/select-from-model-content-dmx.md)。 如需有關「採礦模型內容架構資料列集」的詳細資訊，請參閱 DMSCHEMA_MINING_MODEL_CONTENT 資料列[集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)。  
   
- 如果\<節點標題 > 未指定，則函數會傳回輸入的案例屬於最可能之群集的機率。 使用**叢集**函數來傳回最可能的群集。  
+ 如果未\<指定節點標題>，此函數會傳回輸入案例屬於最可能之群集的機率。 使用**cluster**函數來傳回最可能的叢集。  
   
 ## <a name="examples"></a>範例  
  下列範例傳回指定的案例存在標示為 Cluster 2 之叢集內的機率。  
@@ -61,9 +61,9 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [叢集&#40;DMX&#41;](../dmx/cluster-dmx.md)   
- [資料採礦延伸模組&#40;DMX&#41;函式參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [&#40;DMX&#41;的叢集](../dmx/cluster-dmx.md)   
+ [資料採礦延伸模組 &#40;DMX&#41; 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [DMX&#41;的函數 &#40;](../dmx/functions-dmx.md)   
+ [&#40;DMX&#41;的一般預測函數](../dmx/general-prediction-functions-dmx.md)  
   
   

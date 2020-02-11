@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1ff20051f5486fc8e9550c961f838ab5dc5c738
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028350"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>編輯結果窗格中的資料列 (Visual Database Tools)
@@ -41,7 +41,7 @@ ms.locfileid: "63028350"
 4.  離開資料列便會儲存您的變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [在 [結果] 窗格中的資料搭配使用&#40;Visual Database Tools&#41;](work-with-data-in-the-results-pane-visual-database-tools.md)   
+ [使用 [結果] 窗格中的資料 &#40;Visual Database Tools&#41;](work-with-data-in-the-results-pane-visual-database-tools.md)   
  [更新結果的規則 &#40;Visual Database Tools&#41;](rules-for-updating-results-visual-database-tools.md)  
   
   

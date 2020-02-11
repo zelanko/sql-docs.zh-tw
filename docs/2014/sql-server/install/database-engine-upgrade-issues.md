@@ -1,5 +1,5 @@
 ---
-title: Database Engine 升級問題 |Microsoft Docs
+title: 資料庫引擎升級問題 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6f06cea141c2812e97459b0427d1ceb248688a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095775"
 ---
 # <a name="database-engine-upgrade-issues"></a>Database Engine 升級問題
   本章節的主題描述的是可能會影響升級為 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 問題。 這些主題會描述一些可讓您採取的動作，以便減少這些變更對環境的影響。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新的&#93;](sql-server-2014-upgrade-advisor.md)   
  [解決升級問題](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [複寫升級問題](../../../2014/sql-server/install/replication-upgrade-issues.md)   
  [SQL Server Agent 升級問題](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)   

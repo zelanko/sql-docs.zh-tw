@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e36b6c114e7e5f2f95c0747d6e36e4dabc118daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876211"
 ---
 # <a name="deferred-transactions-sql-server"></a>延遲交易 (SQL Server)
@@ -39,8 +39,8 @@ ms.locfileid: "62876211"
 |動作|解決方法 (如果發生 I/O 問題，或所需的資料離線)|  
 |------------|-----------------------------------------------------------------------|  
 |伺服器啟動|延遲交易|  
-|Restore|延遲交易|  
-|附加|附加動作失敗|  
+|{1}還原{2}|延遲交易|  
+|連結|附加動作失敗|  
 |自動重新啟動|延遲交易|  
 |建立資料庫或資料庫快照集|建立動作失敗|  
 |重做資料庫鏡像|延遲交易|  
@@ -84,7 +84,7 @@ ms.locfileid: "62876211"
   
          如需緊急模式的詳細資訊，請參閱 [資料庫狀態](../databases/database-states.md)。  
   
-    -   接著，在其中一個下列的 DBCC 陳述式中使用 DBCC REPAIR_ALLOW_DATA_LOSS 選項以修復資料庫：[DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)， [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)，或[DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)。  
+    -   接著，在下列其中一個 DBCC 陳述式內使用 DBCC REPAIR_ALLOW_DATA_LOSS 選項以修復資料庫： [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)、 [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)或 [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)。  
   
          當 DBCC 發現錯誤的頁面時，它會取消配置該頁面，並修復任何相關的錯誤。 此方式可以讓資料庫以實體上一致的狀態回到線上。 不過，很可能遺失其他資料，因此除非不得已，盡量不要使用這個方式。  
   

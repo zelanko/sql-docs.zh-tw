@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: e6e2247cd3648e78df0349ec8de2b63f29e52e94
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729342"
 ---
 # <a name="deprecated-master-data-services-features"></a>取代的 Master Data Services 功能
@@ -33,7 +33,7 @@ ms.locfileid: "73729342"
   
 -   在總管中，衍生階層頁面現在會顯示每個階層層級未指派 (未使用) 的成員。 未使用的節點會依階層層級分組。 可以藉由拖放或剪下及貼上的方式，在未使用節點和根節點間移動成員。  
   
-     在 [系統管理] 中，未使用的節點會顯示在 [預覽] 窗格中。 在 [安全性] 中，未使用的節點會顯示在 [階層成員權限] 窗格中。 可以將權限指派給位在 [根] 節點或 [未使用] 節點下的成員。 也可以將權限指派給 [根]、[未使用] 和 [未使用] 虛擬成員。  
+     在 [系統管理] 中，未使用的節點會顯示在 [預覽]**** 窗格中。 在 [安全性] 中，未使用的節點會顯示在 [階層成員權限]**** 窗格中。 可以將權限指派給位在 [根]**** 節點或 [未使用]**** 節點下的成員。 也可以將權限指派給 [根]****、[未使用]**** 和 [未使用]**** 虛擬成員。  
   
 -   預存程序 mdm.udpConvertCollectionAndConsolidatedMembersToLeaf 將明確階層轉換為遞迴衍生階層，並將合併成員和集合成員轉換為分葉成員。  
   
@@ -43,13 +43,13 @@ ms.locfileid: "73729342"
   
 -   [明確階層 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
+-   [&#40;Master Data Services 的集合&#41;](../master-data-services/collections-master-data-services.md)  
   
 -   [成員 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
 ## <a name="attribute-entity-transaction-log-type"></a>屬性實體交易記錄類型  
 已淘汰 [屬性] 實體交易記錄類型，請移轉至 [成員] 實體交易記錄類型。 如需實體交易記錄類型的相關資訊，請參閱下列主題：
-* [變更實體交易記錄類型 (Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
+* [變更實體事務歷史記錄類型（Master Data Services）](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
 * [成員修訂歷程記錄](../master-data-services/member-revision-history-master-data-services.md)
   
 ## <a name="external-resources"></a>外部資源  

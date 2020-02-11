@@ -17,13 +17,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ccb9642982b8680e4111346298e7a70bbc606dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011892"
 ---
-# <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
+# <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>大量匯入中最低限度記錄的先決條件
   如果是完整復原模式之下的資料庫，則大量匯入執行的所有資料列插入作業，都會完整記錄在交易記錄中。 若使用完整復原模式，大型的資料匯入作業可能會使交易記錄檔很快就填滿。 相較之下，在簡單復原模式或大量記錄復原模式之下，大量匯入作業的最少記錄會減少大量匯入作業填滿記錄空間的機會。 最低限度記錄也比完整記錄更有效率。  
   
 > [!NOTE]  
@@ -37,7 +37,7 @@ ms.locfileid: "66011892"
 -   已指定資料表鎖定 (使用 TABLOCK)。  
   
     > [!NOTE]  
-    >  雖然在最低限度記錄的大量匯入作業期間，交易記錄檔中不會記錄資料插入，但每當有新的範圍配置到資料表時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 仍會記錄範圍配置。  
+    >  雖然在最低限度記錄的大量匯入作業期間，交易記錄檔中不會記錄資料插入，但每當有新的範圍配置到資料表時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 仍會記錄範圍配置。  
   
 -   資料表不是記憶體最佳化資料表。  
   
@@ -74,8 +74,8 @@ ms.locfileid: "66011892"
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [資料表提示 &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)   
+ [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [&#40;Transact-sql&#41;的資料表提示](/sql/t-sql/queries/hints-transact-sql-table)   
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)  
   
   

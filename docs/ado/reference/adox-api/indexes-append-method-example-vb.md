@@ -1,5 +1,5 @@
 ---
-title: Indexes Append 方法範例 (VB) |Microsoft Docs
+title: 索引附加方法範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 50f87e27-1bf9-427c-9b1d-704a672434d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5d164c650c67498a89b784cc49779384a198c669
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966058"
 ---
 # <a name="indexes-append-method-example-vb"></a>Indexes Append 方法範例 (VB)
-下列程式碼示範如何建立新的索引。 索引是在資料表中的兩個資料行上。  
+下列程式碼示範如何建立新的索引。 索引位於資料表中的兩個數據行上。  
   
 ```  
 Attribute VB_Name = "IndexesAppend"  
@@ -81,6 +81,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Append 方法 (ADOX Indexes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Index 物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
+ [Append 方法（ADOX 索引）](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
+ [Index 物件（ADOX）](../../../ado/reference/adox-api/index-object-adox.md)   
  [Indexes 集合 (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)

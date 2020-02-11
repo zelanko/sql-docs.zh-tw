@@ -1,5 +1,5 @@
 ---
-title: 日期、 時間和時間戳記常值 |Microsoft Docs
+title: 日期、時間和時間戳記常值 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,37 +13,37 @@ ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e6191995c9d1c488fc5af056248ba39dd3eb4607
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076986"
 ---
 # <a name="date-time-and-timestamp-literals"></a>日期、時間和時間戳記常值
-日期、 時間和時間戳記常值的逸出序列是  
+日期、時間和時間戳記常值的轉義順序為  
   
- **{**  _-type_ **'** _value_ **'}**  
+ **{**  _-類型_ **'** _value_ **'}**  
   
- 何處*常值型別*其中一個值會列在下表。  
+ 其中， *literal 類型*是下表所列的其中一個值。  
   
-|*literal-type*|意義|格式化的*值*|  
+|*常數值型別*|意義|*值*的格式|  
 |---------------------|-------------|-----------------------|  
-|**d**|Date|*yyyy*-*mm*-*dd*|  
-|**t**|時間 *|*hh*:*mm*:*ss*[1]|  
-|**ts**|時間戳記|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...* ][1]|  
+|**d**|Date|*yyyy*-** mm-*dd*|  
+|**而已**|階段|*hh*：*mm*：*ss*[1]|  
+|**終端**|時間戳記|*yyyy*-** mm-*dd* *hh*：*mm*：*ss*[。*f ...*]sha-1|  
   
- [SQL_DESC_PRECISION 描述項欄位中包含 1] 的時間戳記常值包含秒數元件間隔中右側位數的數目是小數點的秒數有效位數而定。 (如需詳細資訊，請參閱 < [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。)  
+ [1] 包含在 [SQL_DESC_PRECISION 描述項] 欄位中的時間或時間戳記間隔常值中，小數點右邊的位數，以秒為單位。 （如需詳細資訊，請參閱[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)）。  
   
- 如需日期、 時間和時間戳記逸出序列的詳細資訊，請參閱[日期、 時間和時間戳記逸出序列](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md)附錄 c:SQL 文法。  
+ 如需日期、時間和時間戳記逸出序列的詳細資訊，請參閱附錄 C： SQL 文法中的[日期、時間和時間戳記逸出序列](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md)。  
   
- 比方說，這兩個下列的 SQL 陳述式更新的 「 訂單 」 資料表中的銷售單 1023年開啟的日期。 第一個陳述式會使用逸出序列語法。 第二個陳述式會使用 Oracle Rdb 原生語法日期資料行，而且不具互通性。  
+ 例如，下列兩個 SQL 語句都會在 Orders 資料表中更新銷售訂單1023的開啟日期。 第一個語句使用 escape 序列語法。 第二個語句使用日期資料行的 Oracle Rdb 原生語法，而且無法互通。  
   
 ```  
 UPDATE Orders SET OpenDate={d '1995-01-15'} WHERE OrderID=1023  
 UPDATE Orders SET OpenDate='15-Jan-1995' WHERE OrderID=1023  
 ```  
   
- 日期、 時間或時間戳記常值的逸出序列也可以放在繫結至日期、 時間或時間戳記參數字元變數。 比方說，下列的程式碼會使用繫結至字元變數的日期參數來更新 「 訂單 」 資料表中的銷售單 1023年開啟日期：  
+ 日期、時間或時間戳記常值的轉義順序也可以放在系結至日期、時間或時間戳記參數的字元變數中。 例如，下列程式碼會使用系結至字元變數的日期參數，在 Orders 資料表中更新銷售訂單1023的開啟日期：  
   
 ```  
 SQLCHAR      OpenDate[56]; // The size of a date literal is 55.  
@@ -63,7 +63,7 @@ strcpy_s( (char*) OpenDate, _countof(OpenDate), "{d '1995-01-15'}");
 SQLExecDirect(hstmt, "UPDATE Orders SET OpenDate=? WHERE OrderID = 1023", SQL_NTS);  
 ```  
   
- 不過，它會直接繫結參數的日期結構通常更有效率：  
+ 不過，將參數直接系結至日期結構通常會更有效率：  
   
 ```  
 SQL_DATE_STRUCT   OpenDate;  
@@ -82,10 +82,10 @@ OpenDate.day = 15;
 SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_NTS);  
 ```  
   
- 若要判斷是否驅動程式支援 ODBC 逸出序列的日期、 時間或時間戳記常值，應用程式會呼叫**SQLGetTypeInfo**。 如果資料來源支援的日期、 時間戳記資料類型，它也必須支援對應的逸出序列。  
+ 若要判斷驅動程式是否支援日期、時間或時間戳記常值的 ODBC 轉義順序，應用程式會呼叫**SQLGetTypeInfo**。 如果資料來源支援日期、時間或時間戳記資料類型，它也必須支援對應的逸出序列。  
   
- 資料來源也可以支援的日期時間常值定義在 ANSI SQL-92 規格中，屬於不同的 ODBC 逸出序列的日期、 時間或時間戳記常值。 若要判斷資料來源是否支援 ANSI 常值，應用程式會呼叫**SQLGetInfo** SQL_ANSI_SQL_DATETIME_LITERALS 選項。  
+ 資料來源也可以支援 ANSI SQL-92 規格中所定義的日期時間常值，這不同于日期、時間或時間戳記常值的 ODBC 逸出序列。 為了判斷資料來源是否支援 ANSI 常值，應用程式會使用 SQL_ANSI_SQL_DATETIME_LITERALS 選項來呼叫**SQLGetInfo** 。  
   
- 若要判斷驅動程式是否支援 ODBC 逸出序列間隔常值，應用程式會呼叫**SQLGetTypeInfo**。 如果資料來源支援的日期時間間隔資料類型，它也必須支援對應的逸出序列。  
+ 若要判斷驅動程式是否支援間隔常值的 ODBC 逸出序列，應用程式會呼叫**SQLGetTypeInfo**。 如果資料來源支援 datetime interval 資料類型，它也必須支援對應的逸出序列。  
   
- 資料來源也可以支援 datetime 常值定義在 ANSI SQL-92 規格中，也就是不同的日期時間間隔常值的 ODBC 逸出序列。 若要判斷資料來源是否支援 ANSI 常值，應用程式會呼叫**SQLGetInfo** SQL_ANSI_SQL_DATETIME_LITERALS 選項。
+ 資料來源也可以支援 ANSI SQL-92 規格中所定義的日期時間常值，這與日期時間間隔常值的 ODBC 轉義順序不同。 為了判斷資料來源是否支援 ANSI 常值，應用程式會使用 SQL_ANSI_SQL_DATETIME_LITERALS 選項來呼叫**SQLGetInfo** 。

@@ -20,17 +20,18 @@ ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 3bb52186b88b678f9abe276fb5f18f1dd7505b96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68119693"
 ---
 # <a name="srv_rpcowner-extended-stored-procedure-api"></a>srv_rpcowner (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  
   
  傳回目前遠端預存程序的擁有者元件。  
   
@@ -57,7 +58,7 @@ len
 ## <a name="returns"></a>傳回值  
  DBCHAR 指標，指向目前遠端預存程序之以 null 結尾的擁有者元件。 如果目前沒有遠端預存程序，則會傳回 NULL 且 *len* 設定為 - 1。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此函數只會傳回遠端預存程序的擁有者元件。 這不包含名稱、遠端預存程序名稱和遠端預存程序號碼的選擇性規範。  
   
 > [!IMPORTANT]  

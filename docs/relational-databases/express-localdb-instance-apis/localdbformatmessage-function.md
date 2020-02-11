@@ -16,17 +16,17 @@ ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d5aa59cdb3b1c59b78a0ef99fb7d375275d370e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091235"
 ---
 # <a name="localdbformatmessage-function"></a>LocalDBFormatMessage 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   傳回指定之 SQL Server Express LocalDB 錯誤的當地語系化文字描述。  
   
- **標頭檔：** sqlncli.h  
+ **標頭檔：** sqlncli。h  
   
 ## <a name="syntax"></a>語法  
   
@@ -59,7 +59,7 @@ HRESULT LocalDBFormatMessage(
  [輸出] 儲存 LocalDB 錯誤訊息的緩衝區。  
   
  *lpcchMessage*  
- [輸入/輸出]輸入包含的大小*wszMessage*以字元為單位的緩衝區。 輸出時，如果指定的緩衝區大小太小，則會包含所需的緩衝區大小 (以字元為單位)，包括尾端的 Null。 如果函數成功，則會在訊息中包含字元數，尾端的 Null 不計。  
+ [輸入/輸出][輸入] 包含*wszMessage*緩衝區的大小（以字元為單位）。 輸出時，如果指定的緩衝區大小太小，則會包含所需的緩衝區大小 (以字元為單位)，包括尾端的 Null。 如果函數成功，則會在訊息中包含字元數，尾端的 Null 不計。  
   
 ## <a name="returns"></a>傳回值  
  S_OK  
@@ -78,13 +78,13 @@ HRESULT LocalDBFormatMessage(
  未提供要求語言的訊息。  
   
  [LOCALDB_ERROR_INSUFFICIENT_BUFFER](../../relational-databases/express-localdb-error-messages/localdb-error-insufficient-buffer.md)  
- 輸入的緩衝區*wszMessage*太短，而且未要求截斷。  
+ 輸入緩衝區*wszMessage*太短，且未要求截斷。  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
- 發生意外的錯誤。 請參閱事件記錄檔，以取得詳細資料。  
+ 發生意外錯誤。 請參閱事件記錄檔，以取得詳細資料。  
   
 ## <a name="remarks"></a>備註  
- 使用 LocalDB API 的程式碼範例，請參閱 < [SQL Server Express LocalDB 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 如需使用 LocalDB API 的程式碼範例，請參閱[SQL Server Express Localdb 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Express LocalDB 標頭和版本資訊](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

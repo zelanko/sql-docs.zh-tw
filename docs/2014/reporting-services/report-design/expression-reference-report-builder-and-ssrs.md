@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 421b0da3209d79444b391467dd5a5462086e25c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105932"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>運算式參考 (報表產生器及 SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66105932"
   
  [運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](built-in-collections-in-expressions-report-builder.md)  
   
- [內建的全域和使用者參考 &#40;報表產生器及 SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+ [內建的全域和使用者參考 &#40;報表產生器和 SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
  [參數集合參考 &#40;報表產生器及 SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
   

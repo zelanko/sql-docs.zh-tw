@@ -1,5 +1,5 @@
 ---
-title: 使用 HAVING 和 WHERE 子句在同一個查詢 (Visual Database Tools) |Microsoft Docs
+title: 在相同查詢中使用 HAVING 和 WHERE 子句（Visual Database Tools） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7aafcd72eff1d21dfe02c8957496398d327cf38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204626"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>在相同查詢中使用 HAVING 和 WHERE 子句 (Visual Database Tools)
@@ -59,9 +59,9 @@ HAVING AVG(price) > 10
   
 2.  如果沒有出現在 [準則] 窗格中，加入您想要組成 WHERE 條件的資料行。  
   
-3.  除非資料的資料行是 GROUP BY 子句的一部分，或包含在彙總函式中，否則清除 [輸出]  資料行。  
+3.  除非資料的資料行是 GROUP BY 子句的一部分，或包含在彙總函式中，否則清除 [輸出]**** 資料行。  
   
-4.  在 [篩選條件]  資料行中，指定 WHERE 條件。 [查詢和檢視設計師] 會將條件加入到 SQL 陳述式的 HAVING 子句。  
+4.  在 [篩選條件]**** 資料行中，指定 WHERE 條件。 [查詢和檢視設計師] 會將條件加入到 SQL 陳述式的 HAVING 子句。  
   
     > [!NOTE]  
     >  在這個程序中所顯示的查詢範例聯結了兩個資料表， `titles` 和 `publishers`。  
@@ -76,7 +76,7 @@ HAVING AVG(price) > 10
     HAVING publishers.state = 'CA'  
     ```  
   
-5.  在 [群組依據]  資料行中，從群組和摘要選項清單中選擇 [Where]  。 [查詢和檢視設計師] 移除 SQL 陳述式中的 HAVING 子句條件，然後加入到 WHERE 子句。  
+5.  在 [群組依據]**** 資料行中，從群組和摘要選項清單中選擇 [Where]****。 [查詢和檢視設計師] 移除 SQL 陳述式中的 HAVING 子句條件，然後加入到 WHERE 子句。  
   
      SQL 陳述式變更為包含了 WHERE 子句：  
   
@@ -89,7 +89,7 @@ HAVING AVG(price) > 10
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [排序及群組查詢結果&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [排序和分組查詢結果 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [摘要查詢結果 &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)  
   
   

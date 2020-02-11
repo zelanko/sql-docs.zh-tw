@@ -1,5 +1,5 @@
 ---
-title: MaxRecords 屬性範例 （VC + +） |Microsoft Docs
+title: MaxRecords 屬性範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bde93002771c219b6358cd1ecd1325fd77208d8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932240"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords 屬性範例 (VC++)
-這個範例會使用[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)屬性可開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)包含在 10 個最昂貴的書籍***標題***資料表。  
+這個範例會使用[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)屬性來開啟包含***標題***資料表中10個最昂貴標題的[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -165,17 +165,17 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **前十個標題，依價格：**  
-**但它是使用者易記嗎？---22.95**  
-**電腦 Phobic 且非恐懼症個人：行為變化---21.59**  
-**Onions、 Leeks 和大蒜：烹飪地中海---20.95 的祕密**  
-**矽谷---20.00 的祕密**  
-**忙碌的經理資料庫指南---19.99**  
-**電腦---19.99 的相關討論**  
-**矽谷 Gastronomic 視為---19.99**  
-**長時間的資料 Deprivation:四個案例研究---19.99**  
-**壽司，任何人？---14.99**  
-**Buckingham Palace 這些---11.95 五十個年份**   
+ **依價格列出前十名的標題：**  
+**但它是使用者易記的嗎？---22.95**  
+**電腦恐懼症和非恐懼症個人：行為變化---21.59**  
+**Onions、Leeks 和大蒜：烹飪地中海---20.95 的秘密**  
+**矽谷---20.00 的秘密**  
+**忙碌主管的資料庫指南---19.99**  
+**電腦---19.99 的直接討論**  
+**矽谷 Gastronomic 會視為---19.99**  
+**長時間的資料 Deprivation：四個案例研究---19.99**  
+**壽司，任何人都能---14.99**  
+**50年 Buckingham Palace 廚房---11.95**   
 ## <a name="see-also"></a>另請參閱  
- [MaxRecords 屬性 (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
+ [MaxRecords 屬性（ADO）](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

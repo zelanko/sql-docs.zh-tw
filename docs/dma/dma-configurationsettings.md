@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056545"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>設定 Data Migration Assistant 的設定
@@ -29,17 +29,17 @@ ms.locfileid: "74056545"
 
 - 桌面應用程式
 
-  % ProgramFiles%\\Microsoft Data Migration Assistant\\的 dism.exe .config
+  % ProgramFiles%\\Microsoft Data Migration Assistant\\cmd.exe .config
 
 - 命令列公用程式
 
-  % ProgramFiles%\\Microsoft Data Migration Assistant\\dmacmd .exe .config 
+  % ProgramFiles%\\Microsoft Data Migration Assistant\\dmacmd 
 
 請務必先儲存原始設定檔案的複本，再進行任何修改。 進行變更之後，請重新開機 Data Migration Assistant，新的設定值才會生效。
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>要平行評估的資料庫數目
 
-Data Migration Assistant 會以平行方式評估多個資料庫。 在評估期間 Data Migration Assistant 會將資料層應用程式（dacpac）解壓縮，以瞭解資料庫架構。 如果同一部伺服器上的多個資料庫以平行方式進行評估，此作業可能會超時。 
+Data Migration Assistant 會以平行方式評估多個資料庫。 在評估期間 Data Migration Assistant 會將資料層應用程式（dacpac）解壓縮，以瞭解資料庫架構。如果同一部伺服器上的多個資料庫以平行方式進行評估，此作業可能會超時。 
 
 從 Data Migration Assistant v2.0 開始，您可以藉由設定 parallelDatabases 設定值來控制此項。 預設值為8。
 
@@ -82,19 +82,19 @@ Data Migration Assistant 在遷移登入之前，平行遷移多個資料庫。 
 在評估期間，Data Migration Assistant 會將資料層應用程式（dacpac）解壓縮，以瞭解資料庫架構。 這種作業可能會因為非常大型的資料庫而失敗，或伺服器是否處於負載中。 從資料移轉 v1.0 開始，您可以修改下列設定值，以避免發生錯誤。 
 
 > [!NOTE]
-> 根據預設，整個 &lt;dacfx&gt; 專案會加上批註。 移除批註，然後視需要修改值。
+> 根據預設&lt;，&gt;整個 dacfx 專案都會加上批註。 移除批註，然後視需要修改值。
 
 - commandTimeout
 
-   這個參數會設定 IDbCommand. CommandTimeout 屬性 *（以秒為單位）* 。 （預設值 = 60）
+   這個參數會設定 IDbCommand. CommandTimeout 屬性 *（以秒為單位）*。（預設值 = 60）
 
 - databaseLockTimeout
 
-   這個參數相當於[設定 LOCK\_timeout timeout\_期間](../t-sql/statements/set-lock-timeout-transact-sql.md)（以*毫秒為單位）* 。 （預設值 = 5000）
+   這個參數相當於[設定鎖定\_超時時間\_長度](../t-sql/statements/set-lock-timeout-transact-sql.md)（以*毫秒為單位）*。（預設值 = 5000）
 
 - maxDataReaderDegreeOfParallelism
 
-  此參數會設定要使用的 SQL 連接集區連接數目。 （預設值 = 8）
+  此參數會設定要使用的 SQL 連接集區連接數目。（預設值 = 8）
 
 ```
 <advisorGroup>

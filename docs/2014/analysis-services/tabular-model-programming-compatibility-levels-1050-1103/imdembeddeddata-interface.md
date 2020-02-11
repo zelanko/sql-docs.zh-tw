@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757781"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded 介面
@@ -38,10 +38,10 @@ ms.locfileid: "62757781"
   
 -   將本機或同處理序資料庫儲存至容器文件中的內嵌資料流。 繼承自 `IPersistStream`。  
   
-## <a name="reference"></a>參考資料  
- 下列參考記載`IMDEmbedded`介面中所示**msmd.h**標頭檔。  
+## <a name="reference"></a>參考  
+ 下列參考記載**msmd.h**頭`IMDEmbedded`檔中所提供的介面。  
   
-### <a name="source-file-pxoembeddeddataidl"></a>原始程式檔：PXOEmbeddedData.idl  
+### <a name="source-file-pxoembeddeddataidl"></a>來源檔案：PXOEmbeddedData.idl  
   
 ```  
 [  
@@ -109,7 +109,7 @@ HRESULT GetStreamIdentifier (
 |DBPROPVAL_EMBED_EMBEDDED|0x01|目前應用程式包含內嵌資料庫|  
 |DBPROPVAL_EMBED_LINKED|0x02|內嵌資料庫裝載於遠端應用程式 (即 SharePoint Server)|  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>來源  
   
 ```  
 [id(1), helpstring("Get identifier used to look up embedded stream in container document")]   
@@ -139,7 +139,7 @@ HRESULT SetContainerURL (
  `E_FAIL`  
  設定容器 URL 時發生錯誤。  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>來源  
   
 ```  
 [id(2), helpstring("Set the URL for the document containing the embedded stream")]   
@@ -169,7 +169,7 @@ HRESULT SetHosted (
  `E_FAIL`  
  設定旗標時發生錯誤。  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>來源  
   
 ```  
 [id(5), helpstring("Set flag indicating if the application is in a hosted environment")]   
@@ -199,7 +199,7 @@ HRESULT SetTempDirPath (
  `E_FAIL`  
  設定路徑時發生錯誤。  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>來源  
   
 ```  
 [id(4), helpstring("Set the path used by the host application for temporary files")]   
@@ -229,7 +229,7 @@ HRESULT Cancel ( void )
  `E_FAIL`  
  取消內嵌作業時發生錯誤。  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>來源  
   
 ```  
 [id(5), helpstring("Cancel the current operation")]   

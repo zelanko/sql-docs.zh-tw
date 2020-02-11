@@ -15,21 +15,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85e0008e22e38b82fbd006a91eca80f67d7d8289
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046723"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
-  **SQLMoreResults**允許應用程式擷取多個結果資料列集。 包含 COMPUTE 子句或是已提交之 ODBC 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式批次的 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式會造成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式產生多個結果集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許建立伺服器資料指標來處理任一案例中的結果。 因此，開發人員必須確保 ODBC 陳述式正在封鎖中。 開發人員必須用完傳回的資料或是取消 ODBC 陳述式，然後才能處理連接上其他作用中陳述式的資料。  
+  **SQLMoreResults**可讓應用程式取得多組結果資料列。 包含 COMPUTE 子句或是已提交之 ODBC 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式批次的 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式會造成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式產生多個結果集。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許建立伺服器資料指標來處理任一案例中的結果。 因此，開發人員必須確保 ODBC 陳述式正在封鎖中。 開發人員必須用完傳回的資料或是取消 ODBC 陳述式，然後才能處理連接上其他作用中陳述式的資料。  
   
 > [!NOTE]  
 >  只有在連接至 [!INCLUDE[tsql](../../includes/tsql-md.md)] 之前的伺服器版本時，才支援包含 COMPUTE 子句的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SELECT 陳述式。  
   
- 開發人員可以判斷結果集資料行和資料列的屬性，這些資料行和資料列是由 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式的 COMPUTE 子句所產生。 如需詳細資訊，請參閱 < [SQLColAttribute](sqlcolattribute.md)。  
+ 開發人員可以判斷結果集資料行和資料列的屬性，這些資料行和資料列是由 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式的 COMPUTE 子句所產生。 如需詳細資訊，請參閱[SQLColAttribute](sqlcolattribute.md)。  
   
- 當**SQLMoreResults**呼叫與結果集中未提取的資料列，這些資料列都會遺失，而且可從下一個結果資料列集的資料列資料。  
+ 使用結果集中的 unfetched 資料列來呼叫**SQLMoreResults**時，會遺失這些資料列，並提供下一個結果資料列集的資料列資料。  
   
 ## <a name="examples"></a>範例  
   
@@ -161,7 +162,7 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLMoreResults 函數](https://go.microsoft.com/fwlink/?LinkId=59357)   
+ [SQLMoreResults 函式](https://go.microsoft.com/fwlink/?LinkId=59357)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

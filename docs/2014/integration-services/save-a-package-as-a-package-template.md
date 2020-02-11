@@ -1,5 +1,5 @@
 ---
-title: 將封裝儲存為封裝範本 |Microsoft Docs
+title: 將套件儲存為套件範本 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76349c0ca91f24a6d8d7942a89eb9683a91b573d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056335"
 ---
 # <a name="save-a-package-as-a-package-template"></a>將封裝儲存為封裝範本
-  本主題描述當您在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中建立新的 Integration Services 封裝時，如何指定及使用自訂封裝做為範本。 根據預設，當您將新封裝加入 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案中時， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會使用可建立空白封裝的封裝範本。 您不能置換這個預設範本，但是可以加入新的範本。  
+  本主題描述當您在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中建立新的 Integration Services 封裝時，如何指定及使用自訂封裝做為範本。 根據預設，當您將新封裝加入 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案中時， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會使用可建立空白封裝的封裝範本。 您不能置換這個預設範本，但是可以加入新的範本。  
   
  您可以指定將多個封裝當作範本使用。 不過您必須先建立封裝，才能將自訂封裝實作成範本。  
   
@@ -37,15 +37,15 @@ ms.locfileid: "66056335"
   
 ### <a name="to-use-a-custom-package-as-a-package-template"></a>若要使用自訂封裝作為封裝範本  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，開啟您要在其中建立封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟您要在其中建立封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在方案總管中，以滑鼠右鍵按一下專案，指向 [加入]  ，然後按一下 [新增項目]  。  
+2.  在方案總管中，以滑鼠右鍵按一下專案，指向 [加入]****，然後按一下 [新增項目]****。  
   
-3.  在 [新增新項目 -\<專案名稱>]  對話方塊中，按一下要當作範本使用的套件。  
+3.  在 [新增新項目 -**專案名稱>]\<** 對話方塊中，按一下要當作範本使用的套件。  
   
      範本清單中包含名稱為 [新增 SSIS 封裝] 的預設封裝範本。 封裝圖示識別可當作封裝範本使用的範本。  
   
-4.  按一下 **[加入]** 。  
+4.  按一下 [新增]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [在 SQL Server Data Tools 中建立封裝](create-packages-in-sql-server-data-tools.md)   

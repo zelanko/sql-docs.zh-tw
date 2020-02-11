@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e450559355baf1242e5d822761256047f4790fe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058571"
 ---
 # <a name="for-loop-editor"></a>For 迴圈編輯器
@@ -24,7 +24,7 @@ ms.locfileid: "66058571"
   
  若要了解 For 迴圈容器以及如何在封裝中使用該容器，請參閱＜ [For Loop Container](control-flow/for-loop-container.md)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **InitExpression**  
  選擇性地提供運算式，以初始化迴圈使用的值。  
   

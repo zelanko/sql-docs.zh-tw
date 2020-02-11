@@ -13,22 +13,22 @@ ms.assetid: 574399c3-2bb2-4d19-829c-7c77bd82858d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87ff006e7bead36c2aa6476b99552d1524c213b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091708"
 ---
 # <a name="sqlsetpos-cursor-library"></a>SQLSetPos (資料指標程式庫)
 > [!IMPORTANT]  
->  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
   
- 本主題討論使用**SQLSetPos**資料指標程式庫中的函式。 如需一般資訊**SQLSetPos**，請參閱[SQLSetPos 函式](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
+ 本主題討論如何在資料指標程式庫中使用**SQLSetPos**函數。 如需有關**SQLSetPos**的一般資訊，請參閱[SQLSetPos 函數](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
   
- 資料指標程式庫支援 SQL_POSITION 作業僅適用於*作業*中的引數**SQLSetPos**。 它支援僅適用於 SQL_LOCK_NO_CHANGE 值*LockType*引數。  
+ 資料指標程式庫僅支援**SQLSetPos**中*operation*引數的 SQL_POSITION 作業。 它僅支援*LockType*引數的 SQL_LOCK_NO_CHANGE 值。  
   
- 如果驅動程式不支援大量作業，資料指標程式庫，將會傳回 SQLSTATE HYC00 （驅動程式不支援） 時**SQLSetPos**呼叫*RowNumber*等於 0。 不建議此驅動程式行為。  
+ 如果驅動程式不支援大量作業，則當以*RowNumber*等於0呼叫**SQLSetPos**時，資料指標程式庫會傳回 SQLSTATE HYC00 （驅動程式不能）。 不建議使用此驅動程式行為。  
   
- 資料指標程式庫不支援的 SQL_UPDATE 和 SQL_DELETE 作業中呼叫**SQLSetPos**。 此資料指標程式庫會實作定位更新或刪除 SQL 陳述式，藉由建立搜尋更新，或刪除陳述式搭配 WHERE 子句，以列舉每個繫結的資料行快取中儲存的值。 如需詳細資訊，請參閱 <<c0> [ 處理定位的 Update 和刪除陳述式](../../../odbc/reference/appendixes/processing-positioned-update-and-delete-statements.md)。  
+ 資料指標程式庫不支援**SQLSetPos**呼叫中的 SQL_UPDATE 和 SQL_DELETE 作業。 資料指標程式庫會藉由使用 WHERE 子句來建立搜尋的 update 或 delete 語句，以列舉每個系結資料行的快取中儲存的值，來執行定位的 update 或 delete SQL 語句。 如需詳細資訊，請參閱[處理定位的 Update 和 Delete 語句](../../../odbc/reference/appendixes/processing-positioned-update-and-delete-statements.md)。  
   
- 如果驅動程式不支援靜態資料指標，使用資料指標程式庫的應用程式應該呼叫**SQLSetPos**只有在所擷取的資料列集上**SQLExtendedFetch**或**SQLFetchScroll**，而不**SQLFetch**。 資料指標程式庫會實作**SQLExtendedFetch**並**SQLFetchScroll**所進行的重複的呼叫**SQLFetch** （與資料列集大小為 1） 驅動程式中。 資料指標程式庫會傳遞至呼叫**SQLFetch**、 在其他交給，透過驅動程式。 如果**SQLSetPos**稱為多資料列的資料列集所擷取**SQLFetch**時，驅動程式不支援靜態資料指標，呼叫會失敗，因為**SQLSetPos**無法運作順向資料指標。 即使應用程式已成功地呼叫，這會發生**SQLSetStmtAttr** SQL_ATTR_CURSOR_TYPE 設 SQL_CURSOR_STATIC，資料指標程式庫支援，即使此驅動程式不支援靜態資料指標。
+ 如果驅動程式不支援靜態資料指標，使用資料指標程式庫的應用程式應該只在**SQLExtendedFetch**或**SQLFetchScroll**所提取的資料列集上呼叫**SQLSetPos** ，而不是**SQLFetch**。 資料指標程式庫會藉由在驅動程式中重複呼叫**SQLFetch** （資料列集大小為1）來執行**SQLExtendedFetch**和**SQLFetchScroll** 。 游標程式庫會將對**SQLFetch**的呼叫傳遞至驅動程式。 如果在**SQLFetch**所提取的多資料列資料列集上呼叫**SQLSetPos** ，而驅動程式不支援靜態資料指標，則呼叫將會失敗，因為**SQLSetPos**無法使用順向資料指標。 即使應用程式已成功呼叫**SQLSetStmtAttr**來將 SQL_ATTR_CURSOR_TYPE 設定為 SQL_CURSOR_STATIC （即使驅動程式不支援靜態資料指標），還是會發生這種情況。

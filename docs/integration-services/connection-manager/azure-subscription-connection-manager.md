@@ -14,10 +14,10 @@ ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 644136f4f7c0c5ea29e9c198dc3aad2bc1c2d733
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298640"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 訂用帳戶連線管理員

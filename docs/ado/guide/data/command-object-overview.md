@@ -1,5 +1,5 @@
 ---
-title: 命令物件概觀 |Microsoft Docs
+title: 命令物件總覽 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,33 +13,33 @@ ms.assetid: e84a14b1-3c2a-4f7d-a966-9e08a93948df
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ef68a36f64fbaf72f18af9fba6f2e2781422574c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925851"
 ---
 # <a name="command-object-overview"></a>Command 物件概觀
-具有**命令**物件時，您可以執行下列動作：  
+使用**Command**物件，您可以執行下列動作：  
   
--   定義所使用的命令 （例如，SQL 陳述式或預存程序） 的可執行檔的文字**CommandText**屬性。  
+-   使用**CommandText**屬性定義命令的可執行文字（例如，SQL 語句或預存程式）。  
   
--   使用來定義參數化的查詢或預存程序引數**參數**物件並**參數**集合。  
+-   使用**參數**物件和**Parameters**集合，定義參數化查詢或預存程式引數。  
   
--   執行命令，並傳回**Recordset**物件，如果適當的話，利用**Execute**方法。  
+-   執行命令，並使用**execute**方法傳回**記錄集**物件（如果適用的話）。  
   
--   使用指定的命令類型**CommandType**來最佳化效能的執行前的屬性。  
+-   在執行之前使用**CommandType**屬性指定命令的類型，以優化效能。  
   
--   使用指定的命令文字的特定資訊**方言**屬性**命令**物件。  
+-   使用**command**物件的**方言**屬性，指定有關命令文字的特定資訊。  
   
--   控制提供者是否會儲存已備妥 （或已編譯的） 版本之前執行命令，使用**已準備**屬性。  
+-   控制提供者是否會在執行之前，使用**備**妥的屬性來儲存已備妥（或已編譯）的命令版本。  
   
--   設定提供者會等候命令執行所使用的秒數**CommandTimeout**屬性。  
+-   使用**CommandTimeout**屬性，設定提供者將等候命令執行的秒數。  
   
--   將與開啟的連接產生關聯**命令**物件，藉由設定其**ActiveConnection**屬性。  
+-   藉由設定其**ActiveConnection**屬性，讓開啟的連接與**命令**物件產生關聯。  
   
--   設定**名稱**屬性來識別**命令**物件上相關聯的方法作為**連接**物件。  
+-   設定 [**名稱**] 屬性，將**命令**物件識別為相關聯**連接**物件上的方法。  
   
--   傳遞**命令**物件**來源**屬性**資料錄集**為了取得資料。  
+-   將**命令**物件傳遞至**記錄集**的**Source**屬性，以便取得資料。  
   
--   傳遞**Stream**包含命令 （例如，XML 命令），來支援它的提供者的物件。
+-   將包含命令的**資料流程**物件（例如 XML 命令）傳遞給支援它的提供者。

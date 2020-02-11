@@ -1,5 +1,5 @@
 ---
-title: sp_delete_log_shipping_secondary_database (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_log_shipping_secondary_primary （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 507fc744-73d9-4cb7-8d2a-bcff88841c6a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f389e6fa58feba189955c3ac8f654a906f61588f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68009145"
 ---
-# <a name="spdeletelogshippingsecondaryprimary-transact-sql"></a>sp_delete_log_shipping_secondary_primary (Transact-SQL)
+# <a name="sp_delete_log_shipping_secondary_primary-transact-sql"></a>sp_delete_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   這個預存程序會從次要伺服器中移除指定主要伺服器的相關資訊，且會從次要伺服器中移除複製作業和還原作業。  
@@ -41,9 +41,9 @@ sp_delete_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @primary_server = ] 'primary_server'` 主要執行個體名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]記錄傳送組態中。 *primary_server*已**sysname**不能是 NULL。  
+`[ @primary_server = ] 'primary_server'`記錄傳送設定[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中之主要實例的名稱。 *primary_server*是**sysname** ，不能是 Null。  
   
-`[ @primary_database = ] 'primary_database'` 是主要伺服器上名稱。 *primary_database&lt*已**sysname**，沒有預設值。  
+`[ @primary_database = ] 'primary_database'`這是主伺服器上的資料庫名稱。 *primary_database*是**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -52,16 +52,16 @@ sp_delete_log_shipping_secondary_primary
  無。  
   
 ## <a name="remarks"></a>備註  
- **sp_delete_log_shipping_secondary_database**必須從執行**主要**次要伺服器上的資料庫。 這個預存程序會執行下列動作：  
+ **sp_delete_log_shipping_secondary_primary**必須從次要伺服器的**master**資料庫中執行。 這個預存程序會執行下列動作：  
   
 1.  刪除次要識別碼的複製和還原作業。  
   
-2.  刪除中的項目**log_shipping_secondary**。  
+2.  刪除**log_shipping_secondary**中的專案。  
   
-3.  呼叫**sp_delete_log_shipping_alert_job**監視伺服器上。  
+3.  在監視伺服器上呼叫**sp_delete_log_shipping_alert_job** 。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
   
 ## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

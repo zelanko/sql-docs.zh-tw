@@ -13,16 +13,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f00c238dfb32089261c51936b3937b0657c58b08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62782026"
 ---
 # <a name="ole-automation-procedures-server-configuration-option"></a>OLE Automation 程序伺服器組態選項
   使用 `Ole Automation Procedures` 選項可指定 OLE Automation 物件是否可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次內部啟動。 您也可以使用以原則為基礎的管理或 **sp_configure** 預存程序來設定這個選項。 如需詳細資訊，請參閱＜ [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)＞。  
   
- `Ole Automation Procedures` 選項可設定為下列值：  
+ 
+  `Ole Automation Procedures` 選項可設定為下列值：  
   
  0  
  停用 OLE Automation Procedures。 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]新執行個體的預設值。  
@@ -32,7 +33,7 @@ ms.locfileid: "62782026"
   
  啟用 OLE Automation 程序時，對 **sp_OACreate** 的呼叫會啟動 OLE 共用執行環境。  
   
- 目前的值`Ole Automation Procedures`選項可以檢視和使用變更**sp_configure**系統預存程序。  
+ 您可以使用**sp_configure**系統`Ole Automation Procedures`預存程式，來查看和變更選項的目前值。  
   
 ## <a name="examples"></a>範例  
  下列範例顯示如何檢視 OLE Automation Procedures 的目前設定。  
@@ -58,7 +59,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
- [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)   
+ [介面區組態](../../relational-databases/security/surface-area-configuration.md)   
  [伺服器組態選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

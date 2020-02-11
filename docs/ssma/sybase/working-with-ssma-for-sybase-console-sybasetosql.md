@@ -1,5 +1,5 @@
 ---
-title: 使用 SSMA for Sybase 主控台 (SybaseToSQL) |Microsoft Docs
+title: 使用 SSMA for Sybase 主控台（SybaseToSQL） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,33 +10,33 @@ ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: fcc1543a26c179ae6a775b6d735283ba068312ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68112867"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>使用 SSMA for Oracle 主控台 (OracleToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA)，發行的 Sybase Adaptive Server Enterprise (ASE)，現在已可透過在命令列主控台應用程式。 指令碼檔案會形成執行命令的應用程式的輸入。 是主控台應用程式中，SSMA 啟用指令碼層級互動可減少移轉週期，並調整的移轉工作。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手（SSMA），可以在命令列透過主控台應用程式來存取 Sybase 調適型伺服器企業版（ASE）。 腳本檔案會形成應用程式用來執行命令的輸入。 做為主控台應用程式，SSMA 可啟用腳本層級的互動、減少遷移週期，並調整遷移工作。  
   
-本節說明使用 SSMA 主控台應用程式的 ASE 資料庫移轉程序。  
+本節說明使用 SSMA 主控台應用程式遷移 ASE 資料庫的程式。  
   
-本章節涵蓋的主題包括：  
+本節涵蓋的主題包括：  
   
 |||  
 |-|-|  
-|**主題**|**說明**|  
-|[開始使用 SSMA for Sybase 主控台&#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md)|說明執行主控台應用程式的程序。|  
-|[SSMA 主控台中的命令列選項&#40;SybaseToSQL&#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|描述操作 SSMA 主控台應用程式的命令列選項和參數。|  
-|[建立指令碼檔案&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)|說明如何建立指令碼檔案。|  
-|[建立變數值檔案&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)|說明如何建立的變數值檔案。|  
-|[建立伺服器連線檔案&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)|說明如何建立伺服器連線檔案。|  
-|[執行 SSMA 主控台&#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)|描述操作 SSMA 主控台應用程式的指令碼檔案命令。|  
-|[使用範例主控台指令碼檔&#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)|說明如何輕鬆地自訂範例檔案，以及產品中所提供的指令碼的方式|  
-|[管理密碼&#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md)|描述有關密碼加密與解密，以及匯入 / 匯出的密碼資訊。|  
-|[產生報告&#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)|列出要產生報表的命令。|  
-|[疑難排解&#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)|提供有關修正移轉問題的簡短資訊。|  
+|**一些**|**說明**|  
+|[SSMA for Sybase 主控台的消費者入門 &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md)|說明執行主控台應用程式的步驟。|  
+|[SSMA 主控台中的命令列選項 &#40;SybaseToSQL&#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|說明用來操作 SSMA 主控台應用程式的命令列選項和參數。|  
+|[建立指令檔 &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)|說明如何建立腳本檔案。|  
+|[建立變數值檔案 &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)|說明如何建立變數值檔案。|  
+|[&#40;SybaseToSQL 建立伺服器連接檔案&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)|說明如何建立伺服器連接檔案。|  
+|[執行 SSMA 主控台 &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)|說明用來操作 SSMA 主控台應用程式的腳本檔案命令。|  
+|[使用範例主控台腳本檔案 &#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)|描述可輕鬆自訂範例檔案中所提供的腳本和產品的方式|  
+|[&#40;SybaseToSQL&#41;管理密碼](../../ssma/sybase/managing-passwords-sybasetosql.md)|描述密碼加密和解密，以及匯入/匯出密碼資訊。|  
+|[&#40;SybaseToSQL&#41;產生報表](../../ssma/sybase/generating-reports-sybasetosql.md)|列出用來產生報告的命令。|  
+|[&#40;SybaseToSQL&#41;疑難排解](../../ssma/sybase/troubleshooting-sybasetosql.md)|提供有關修正遷移問題的簡短資訊。|  
   
 ## <a name="see-also"></a>另請參閱  
-[開始使用 SSMA for Sybase Console(SybaseToSQL)](https://msdn.microsoft.com/43219dbe-bcfa-427d-9242-f07b1455f15f)  
+[SSMA for Sybase 主控台（SybaseToSQL）的消費者入門](https://msdn.microsoft.com/43219dbe-bcfa-427d-9242-f07b1455f15f)  
   

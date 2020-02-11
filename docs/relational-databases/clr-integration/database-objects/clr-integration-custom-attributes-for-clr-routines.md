@@ -22,15 +22,15 @@ ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f1ff346abc41ee4589a8d0b2193b167fb2cf24e0
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70212383"
 ---
 # <a name="clr-integration-custom-attributes-for-clr-routines"></a>CLR 常式的 CLR 整合自訂屬性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  列出的屬性可以套用至在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中註冊的 common language runtime （CLR）常式、使用者定義型別和使用者定義匯總。 如果沒有套用屬性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會假設預設值。 列出的屬性會定義在**Microsoft. SqlServer. 伺服器**命名空間中。  
+  列出的屬性可以套用至在中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]註冊的 COMMON language runtime （CLR）常式、使用者定義型別和使用者定義匯總。 如果沒有套用屬性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會假設預設值。 列出的屬性會定義在**Microsoft. SqlServer. 伺服器**命名空間中。  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>SqlUserDefinedAggregate 屬性  
  **SqlUserDefinedAggregate**屬性指出應該將方法註冊為使用者定義匯總。 每個使用者定義彙總都必須使用這個屬性加註。  
@@ -69,7 +69,7 @@ ms.locfileid: "70212383"
   
 ## <a name="see-also"></a>另請參閱  
  [CLR 使用者定義匯總](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)   
- [CLR 使用者定義函式](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
+ [CLR 使用者定義函數](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
  [CLR 使用者定義類型](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
  [CLR 預存程式](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [CLR 觸發程序](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  

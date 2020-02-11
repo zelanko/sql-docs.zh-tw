@@ -1,5 +1,5 @@
 ---
-title: sp_can_tlog_be_applied (TRANSACT-SQL) |Microsoft Docs
+title: sp_can_tlog_be_applied （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 279492503ba8ce31e3c5d4027d8fd184c4a81587
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045966"
 ---
-# <a name="spcantlogbeapplied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
+# <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  確認交易記錄備份是否可套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 **sp_can_tlog_be_applied**要求資料庫處於 Restoring 狀態。  
+  確認交易記錄備份是否可套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 **sp_can_tlog_be_applied**要求資料庫必須處於還原狀態。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,11 +41,11 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @backup_file_name = ] 'backup_file_name'` 是備份檔案的名稱。 *backup_file_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** 。  
+`[ @backup_file_name = ] 'backup_file_name'`這是備份檔案的名稱。 *backup_file_name*為**Nvarchar （128）**。  
   
-`[ @database_name = ] 'database_name'` 是資料庫的名稱。 *database_name* 為 **sysname**。  
+`[ @database_name = ] 'database_name'`這是資料庫的名稱。 *database_name*是**sysname**。  
   
-`[ @result = ] _result_ OUTPUT` 指出是否可以對資料庫套用交易記錄。 *結果*已**元**。  
+`[ @result = ] _result_ OUTPUT`指出交易記錄是否可以套用至資料庫。 *結果*是**bit**。  
   
  1 = 可以套用記錄  
   
@@ -54,8 +54,8 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行**sp_can_tlog_be_applied**。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_can_tlog_be_applied**。  
   
 ## <a name="examples"></a>範例  
  下列範例宣告用來儲存結果的本機變數 `@MyBitVar`。  

@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2e5cec08809ffbd0d51ce017bbd5ff09f45410f4
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779546"
 ---
 # <a name="using-statement-parameters"></a>使用陳述式參數
@@ -35,7 +35,7 @@ ms.locfileid: "73779546"
   
 -   增強建構查詢準則時的使用者互動。  
   
--   管理**text**、 **Ntext**和**image**資料，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定的 C 資料類型。  
+-   管理**text**、 **Ntext**和**image**資料，以及[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定的 C 資料類型。  
   
  例如， **part**資料表具有名為**PartID**、 **Description**和**Price**的資料行。 加入某個部分而不含參數時，需要建構如下的 SQL 陳述式：  
   
@@ -58,6 +58,6 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
 -   [繫結參數](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [執行查詢&#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [&#40;ODBC&#41;執行查詢](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

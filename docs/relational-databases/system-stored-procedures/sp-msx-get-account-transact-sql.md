@@ -1,5 +1,5 @@
 ---
-title: sp_msx_get_account (TRANSACT-SQL) |Microsoft Docs
+title: sp_msx_get_account （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dab15a076200e464e82d0b01ef6a156447a537f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108038"
 ---
-# <a name="spmsxgetaccount-transact-sql"></a>sp_msx_get_account (Transact-SQL)
+# <a name="sp_msx_get_account-transact-sql"></a>sp_msx_get_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   列出目標伺服器用來登入主要伺服器之認證的相關資訊。  
@@ -44,7 +44,7 @@ sp_msx_get_account
 ## <a name="result-sets"></a>結果集  
  傳回下列結果集：  
   
-|資料行名稱|type|描述|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |msx_connection|**int**|主要伺服器連接編號。|  
 |msx_credential_id|**int**|這個主要伺服器連接所用的認證識別碼。|  
@@ -54,7 +54,7 @@ sp_msx_get_account
 ## <a name="remarks"></a>備註  
  如果未指定這部目標伺服器的認證，會傳回空的結果集。 若要設定認證，請使用 sp_msx_set_account。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要系統管理員 (sysadmin) 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
@@ -77,8 +77,8 @@ GO
  `1              65538             MsxAccount           AdventureWorks2012\MsxAccount`  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Agent 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [SQL Server Agent 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [sp_msx_set_account &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-msx-set-account-transact-sql.md)  
+ [sp_msx_set_account &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-msx-set-account-transact-sql.md)  
   
   

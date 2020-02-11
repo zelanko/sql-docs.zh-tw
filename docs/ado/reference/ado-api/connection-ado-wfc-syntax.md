@@ -1,5 +1,5 @@
 ---
-title: 連接 (ADO-WFC 語法) |Microsoft Docs
+title: Connection （ADO-WFC 語法） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64647d577170a79b1f600b7162a0338ea19c572e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919530"
 ---
 # <a name="connection-ado---wfc-syntax"></a>Connection (ADO - WFC 語法)
-## <a name="package-commswfcdata"></a>封裝 com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>封裝 .com. wfc. 資料  
   
 ### <a name="constructor"></a>建構函式  
   
@@ -44,7 +44,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- **ExecuteUpdate**方法是一種特殊的案例方法呼叫基礎 ADO**執行**以特定參數的方法。 **ExecuteUpdate**方法不支援的傳回**Recordset**物件，因此**執行**方法的*選項*參數使用修改**AdoEnums.ExecuteOptions.NORECORDS**。 在後**執行**方法完成，其更新*RecordsAffected*參數會傳遞回**executeUpdate**方法，最後會當成**int**。  
+ **ExecuteUpdate**方法是特殊的案例方法，會使用特定參數來呼叫基礎 ADO **execute**方法。 **ExecuteUpdate**方法不支援傳回**記錄集**物件，因此**execute**方法的*options*參數會使用**AdoEnums. ExecuteOptions. NORECORDS**進行修改。 在**execute**方法完成之後，其更新的*RecordsAffected*參數會傳回到**executeUpdate**方法，最後會以**int**的形式傳回。  
   
 ```  
 public void open()   
@@ -85,8 +85,8 @@ public AdoProperties getProperties()
 public com.ms.wfc.data.Errors getErrors()  
 ```  
   
-### <a name="events"></a>Events  
- 如需有關 ADO/WFC 事件的詳細資訊，請參閱[ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)。  
+### <a name="events"></a>事件  
+ 如需 ADO/WFC 事件的詳細資訊，請參閱[依語言的 Ado 事件](../../../ado/guide/data/ado-event-instantiation-by-language.md)具現化。  
   
 ```  
 public void addOnBeginTransComplete(ConnectionEventHandler handler)  

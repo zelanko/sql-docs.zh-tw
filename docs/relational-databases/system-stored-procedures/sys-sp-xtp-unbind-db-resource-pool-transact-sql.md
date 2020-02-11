@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_bind_db_resource_pool & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.databases sp_xtp_unbind_db_resource_pool （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: be0f8e7b410abb2e9027ce0b773d1a1ad5a14465
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041006"
 ---
 # <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
@@ -65,12 +65,13 @@ sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'
   
 ## <a name="requirements"></a>需求  
   
--   `database_name` 所指定的資料庫必須具有 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資源集區的繫結。  
+-   
+  `database_name` 所指定的資料庫必須具有 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資源集區的繫結。  
   
 -   需要 CONTROL SERVER 權限。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫並繫結至資源集區的指引，請參閱](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [sys.sp_xtp_bind_db_resource_pool &#40;-SQL&AMP;&#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
+ [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
   
   

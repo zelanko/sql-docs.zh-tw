@@ -1,5 +1,5 @@
 ---
-title: Connect 屬性範例 (VBScript) |Microsoft Docs
+title: Connect 屬性範例（VBScript） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +15,17 @@ ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b2412d0e8c01b9c347491c2bd2e89acd81efdbff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964581"
 ---
 # <a name="connect-property-example-vbscript"></a>Connect 屬性範例 (VBScript)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 此程式碼示範如何設定[Connect](../../../ado/reference/rds-api/connect-property-rds.md)在設計階段的屬性：  
+ 這段程式碼會示範如何在設計階段設定[Connect](../../../ado/reference/rds-api/connect-property-rds.md)屬性：  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="ADC1">  
@@ -37,9 +37,9 @@ ms.locfileid: "67964581"
 </OBJECT>  
 ```  
   
- 下列範例示範如何設定**Connect** VBScript 程式碼在執行階段的屬性。  
+ 下列範例顯示如何在 VBScript 程式碼中，于執行時間設定**Connect**屬性。  
   
- 若要測試此範例中，剪下並貼上程式碼之間\<主體 > 並\</b > 標記以正常的 HTML 文件並將它命名**ConnectVBS.asp**。 ASP 指令碼會識別您的伺服器。  
+ 若要測試此範例，請剪下本文> 的\<程式碼， \<並在一般 HTML 檔案中/Body> 標記，並將其命名為**ConnectVBS。** ASP 腳本會識別您的伺服器。  
   
 ```  
 <!-- BeginConnectVBS -->  
