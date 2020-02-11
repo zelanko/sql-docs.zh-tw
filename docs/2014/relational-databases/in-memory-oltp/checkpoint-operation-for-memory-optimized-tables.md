@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ddcdec0f624c1d6f70c57e593eaf9da66cbe0419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065526"
 ---
 # <a name="checkpoint-operation-for-memory-optimized-tables"></a>記憶體最佳化的資料表的檢查點作業
@@ -28,7 +28,7 @@ ms.locfileid: "63065526"
   
  對於磁碟資料表，自動檢查點是根據復原間隔組態選項取得 (如需詳細資訊，請參閱[變更資料庫的目標復原時間 &#40;SQL Server&#41;](../logs/change-the-target-recovery-time-of-a-database-sql-server.md))。  
   
- 對於記憶體最佳化的資料表，自動檢查點是當最後一個檢查點之後，交易記錄檔變成大於 512 MB。 512 MB 包含以磁碟為基礎資料表和記憶體最佳化資料表的交易記錄檔記錄。  
+ 在記憶體優化資料表中，當交易記錄檔自最後一個檢查點之後變得大於 512 MB 時，就會執行自動檢查點。 512 MB 包含磁片型和記憶體優化資料表的交易記錄檔記錄。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立及管理記憶體最佳化物件的儲存體](creating-and-managing-storage-for-memory-optimized-objects.md)  

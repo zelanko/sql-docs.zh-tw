@@ -17,36 +17,36 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6d845874a2fd221163953b0aeb2b8d32516e14b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62955887"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>伺服器連接的 F1 說明 (SQL Server Management Studio)
-  本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，[連接到伺服器]  對話方塊頁面的 F1 說明。  
+  此章節包含中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][**連接到伺服器**] 對話方塊頁面的 F1 說明。  
   
- [瀏覽伺服器 &#40;本機伺服器&#41;](../../database-engine/browse-for-servers-local-servers.md)  
+ [流覽 &#40;本機伺服器&#41;的伺服器](../../database-engine/browse-for-servers-local-servers.md)  
   
- [瀏覽伺服器 &#40;網路伺服器&#41;](../../database-engine/browse-for-servers-network-servers.md)  
+ [流覽 &#40;網路伺服器&#41;的伺服器](../../database-engine/browse-for-servers-network-servers.md)  
   
  [連接到伺服器 &#40;Analysis Services&#41;](../../database-engine/connect-to-server-analysis-services.md)  
   
- [連接到伺服器 &#40;連接屬性頁面&#41; Analysis Service](../../database-engine/connect-to-server-connection-properties-page-analysis-services.md)  
+ [連接到伺服器 &#40;連線屬性頁面&#41; Analysis Services](../../database-engine/connect-to-server-connection-properties-page-analysis-services.md)  
   
- [連接到伺服器 &#40;連接屬性頁面&#41; Database Engine](connect-to-server-connection-properties-page-database-engine.md)  
+ [連接到伺服器 &#40;連線屬性頁面&#41; 資料庫引擎](connect-to-server-connection-properties-page-database-engine.md)  
   
- [連接到伺服器 &#40;連接屬性頁面&#41; Integration Services](../../database-engine/connect-to-server-connection-properties-page-integration-services.md)  
+ [連接到伺服器 &#40;連線屬性頁面&#41; Integration Services](../../database-engine/connect-to-server-connection-properties-page-integration-services.md)  
   
- [連接到伺服器 &#40;連接屬性頁面&#41; Reporting Services](../../database-engine/connect-to-server-connection-properties-page-reporting-services.md)  
+ [連接到伺服器 &#40;連線屬性頁面&#41; Reporting Services](../../database-engine/connect-to-server-connection-properties-page-reporting-services.md)  
   
- [連接到伺服器 &#40;Database Engine&#41;](connect-to-server-database-engine.md)  
+ [連接到伺服器 &#40;資料庫引擎&#41;](connect-to-server-database-engine.md)  
   
  [連接到伺服器 &#40;Integration Services&#41;](../../database-engine/connect-to-server-integration-services.md)  
   
  [連接到伺服器 &#40;登入頁面&#41; Analysis Services](../../database-engine/connect-to-server-login-page-analysis-services.md)  
   
- [連接到伺服器 &#40;登入頁面&#41; Database Engine](connect-to-server-login-page-database-engine.md)  
+ [連接到伺服器 &#40;登入頁面&#41; 資料庫引擎](connect-to-server-login-page-database-engine.md)  
   
  [連接到伺服器 &#40;登入頁面&#41; Integration Services](../../database-engine/connect-to-server-login-page-integration-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 第 2 課：撰寫 TRANSACT-SQL |Microsoft Docs
+title: 第 2 課：撰寫 Transact-SQL | Microsoft 文件
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd776a778f56831fc63fef1ea040e3f69883eff3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470025"
 ---
 # <a name="lesson-2-writing-transact-sql"></a>第 2 課：撰寫 Transact-SQL
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用來撰寫 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 和 XML 查詢及 SQLCMD 命令的整合式開發環境。 此教學課程說明如何使用 Database Engine 查詢編輯器撰寫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]是用來撰寫[!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 和 XML 查詢及 SQLCMD 命令的整合式開發環境。 此教學課程說明如何使用 Database Engine 查詢編輯器撰寫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。  
   
 > [!NOTE]  
->  這一課的重點是工具的功能。 如需有關撰寫的教學課程[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式，請參閱[教學課程：撰寫 Transact-SQL 陳述式](../../t-sql/tutorial-writing-transact-sql-statements.md)。  
+>  這一課的重點是工具的功能。 如需撰寫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的教學課程，請參閱 [教學課程︰撰寫 Transact-SQL 陳述式](../../t-sql/tutorial-writing-transact-sql-statements.md)。  
   
  這個課程包含下列主題：  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62470025"
   
 -   編寫資料表的指令碼  
   
--   總結  
+-   摘要  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [連接查詢編輯器](lesson-2-1-connecting-with-query-editor.md)  

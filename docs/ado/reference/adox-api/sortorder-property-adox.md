@@ -1,5 +1,5 @@
 ---
-title: SortOrder 屬性 (ADOX) |Microsoft Docs
+title: SortOrder 屬性（ADOX） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,25 +20,25 @@ ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e30d3ba08c10b16768d75a9234cfa15fe501c9b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965210"
 ---
 # <a name="sortorder-property-adox"></a>SortOrder 屬性 (ADOX)
-指出資料行 （僅限索引欄） 的排序順序。  
+指出資料行的排序次序（僅限索引資料行）。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定，並傳回**長**值，可以是其中一個[SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)常數。 預設值是**adSortAscending**。  
+ 設定並傳回可以是其中一個[SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)常數的**Long**值。 預設值為**adSortAscending**。  
   
 ## <a name="remarks"></a>備註  
- 此屬性只適用於[資料行](../../../ado/reference/adox-api/column-object-adox.md)中的物件[資料行](../../../ado/reference/adox-api/columns-collection-adox.md)集合[索引](../../../ado/reference/adox-api/index-object-adox.md)。  
+ 這個屬性只會套用至[索引](../../../ado/reference/adox-api/index-object-adox.md)之[Columns](../../../ado/reference/adox-api/columns-collection-adox.md)集合中的資料[行](../../../ado/reference/adox-api/column-object-adox.md)物件。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Column 物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [SortOrder 屬性範例 (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
- [資料行集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [SortOrder 屬性範例（VB）](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
+ [Columns 集合（ADOX）](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Index 物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

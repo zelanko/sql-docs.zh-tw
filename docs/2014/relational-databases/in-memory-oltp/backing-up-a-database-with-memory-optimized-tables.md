@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468324"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>備份含有記憶體最佳化資料表的資料庫
@@ -32,14 +32,14 @@ ms.locfileid: "62468324"
 |--------------------------------|------------|  
 |已預先建立|僅限檔案中繼資料|  
 |建構中|僅限檔案中繼資料|  
-|作用中|檔案中繼資料加上使用的位元組|  
+|Active|檔案中繼資料加上使用的位元組|  
 |合併來源|檔案中繼資料加上使用的位元組|  
 |合併目標|僅限檔案中繼資料|  
 |備份/高可用性所需|檔案中繼資料加上使用的位元組|  
 |正在轉換為標記|僅限檔案中繼資料|  
 |標記|僅限檔案中繼資料|  
   
- 包含一個或多個記憶體最佳化資料表之資料庫備份的大小通常超過它在記憶體中的大小，但是小於磁碟儲存空間。 額外的大小將取決於已刪除的資料列數目以及處於「合併來源」和「備份/高可用性所需」狀態之檢查點檔案組的數目 (間接取決於工作負載)。 如需檢查點檔案組狀態的描述，請參閱 < [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)。  
+ 包含一個或多個記憶體最佳化資料表之資料庫備份的大小通常超過它在記憶體中的大小，但是小於磁碟儲存空間。 額外的大小將取決於已刪除的資料列數目以及處於「合併來源」和「備份/高可用性所需」狀態之檢查點檔案組的數目 (間接取決於工作負載)。 如需成對檢查點檔案的狀態原因，請參閱[dm_db_xtp_checkpoint_files &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)。  
   
 ### <a name="estimating-size-of-full-database-backup"></a>估計完整資料庫備份的大小  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62468324"
   
  第一個工作負載案例主要是為了插入。 在此案例中，大部分的資料檔案都處於作用中狀態，並且已完全載入，而且已刪除的資料列很少。 資料庫備份的大小將會與記憶體中的資料大小十分接近。  
   
- 第二個的工作負載案例是頻繁的插入、 刪除和更新作業：在最糟榚的情況下，在考量已刪除的資料列之後，每一個檢查點檔案組的載入程度為 50%。 因此，資料庫備份的大小至少為記憶體中資料大小的兩倍。 另外，處於「合併來源」和「備份/高可用性所需」狀態而且會讓資料庫備份大小增加的檢查點檔案組也很少。  
+ 第二個工作負載案例是頻繁的插入、刪除和更新作業：在最糟榚的情況下，在考量已刪除的資料列之後，每一個檢查點檔案組的載入程度為 50%。 因此，資料庫備份的大小至少為記憶體中資料大小的兩倍。 另外，處於「合併來源」和「備份/高可用性所需」狀態而且會讓資料庫備份大小增加的檢查點檔案組也很少。  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>使用記憶體最佳化資料表的資料庫差異備份  
  記憶體最佳化資料表的儲存體包含資料和差異檔案，如 [記憶體最佳化資料表的持久性](memory-optimized-tables.md)中所述。 具有記憶體最佳化資料表之資料庫的差異備份會包含下列資料：  

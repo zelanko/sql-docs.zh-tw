@@ -11,18 +11,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5cf9a81134af8d6e90a1b869f8cc011a17a4b93a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482927"
 ---
 # <a name="enable-data-quality-services-integration-with-master-data-services"></a>啟用 Data Quality Services 與 Master Data Services 的整合
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，比對功能是由 Data Quality Services (DQS) 提供。 此功能必須啟用才能使用。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
   
--   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 應用程式和資料庫必須存在。  
+-   
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 應用程式和資料庫必須存在。  
   
 -   Data Quality Services 功能和 Data Quality Client 必須安裝在裝載 MDS 資料庫的相同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上。 如需詳細資訊，請參閱 [安裝 Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)。  
   
@@ -30,16 +31,16 @@ ms.locfileid: "65482927"
   
 1.  開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-2.  按一下左窗格中的 **[Web 組態]** 。  
+2.  按一下左窗格中的 **[Web 組態]**。  
   
-3.  在 [Web 組態]  頁面上，選取網站和 Web 應用程式。  
+3.  在 [Web 組態]**** 頁面上，選取網站和 Web 應用程式。  
   
-4.  在 [啟用 DQS 整合]  區段中，按一下 [啟用與 Data Quality Services 整合]  。  
+4.  在 [啟用 DQS 整合]**** 區段中，按一下 [啟用與 Data Quality Services 整合]****。  
   
-5.  在確認對話方塊中按一下 **[確定]** 。  
+5.  在確認對話方塊中按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [適用於 Excel 的 MDS 增益集中的資料品質比對](../microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
+ [適用于 Excel 的 MDS 增益集中的資料品質比對](../microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [適用於 Microsoft Excel 的 Master Data Services 增益集](../microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)   
  [安裝 Master Data Services](install-master-data-services.md)  
   

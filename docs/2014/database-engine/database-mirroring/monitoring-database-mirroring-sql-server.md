@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755370"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>監視資料庫鏡像 (SQL Server)
@@ -129,8 +129,8 @@ ms.locfileid: "62755370"
   
      系統管理員可以使用 **sp_dbmmonitorresults** 系統預存程序來檢視並選擇性地更新狀態資料表 (如果在前 15 秒內未更新過的話)。 此程序會呼叫 **sp_dbmmonitorupdate** 程序並根據程序呼叫中要求的數量，傳回一個或多個記錄資料列。 如需結果集中狀態的資訊，請參閱 [sp_dbmmonitorresults &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql)。  
   
-#### <a name="monitoring-database-mirroring-status-by-dbmmonitor-members"></a>監視資料庫鏡像狀態 (dbm_monitor 成員)  
- 如上所述，首次執行 **sp_dbmmonitorupdate** 時，它會在 **msdb** 資料庫中建立 **dbm_monitor** 固定資料庫角色。 **dbm_monitor** 固定資料庫角色的成員可以使用「資料庫鏡像監視器」或 **sp_dbmmonitorresults** 預存程序，檢視現有的鏡像狀態。 但是這些使用者無法更新狀態資料表。 若要了解顯示狀態的時間，使用者可以在 [狀態]  頁面上查看 [主體記錄 (\<時間>)] **** 和 [鏡像記錄 (\<時間>)] **** 標籤中的時間。  
+#### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>監視資料庫鏡像狀態 (dbm_monitor 成員)  
+ 如上所述，首次執行 **sp_dbmmonitorupdate** 時，它會在 **msdb** 資料庫中建立 **dbm_monitor** 固定資料庫角色。 **dbm_monitor** 固定資料庫角色的成員可以使用「資料庫鏡像監視器」或 **sp_dbmmonitorresults** 預存程序，檢視現有的鏡像狀態。 但是這些使用者無法更新狀態資料表。 若要了解顯示狀態的時間，使用者可以在 [狀態]***** 頁面上查看 [主體記錄 (\<時間>)]********** 和 [鏡像記錄 (\<時間>)]********* 標籤中的時間。  
   
  **dbm_monitor** 固定資料庫角色的成員會仰賴 [資料庫鏡像監視器作業]  來定期更新狀態資料表。 如果此作業不存在或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 已停止，狀態就會逐漸成為過時，而且不再反映鏡像工作階段的組態。 例如，在容錯移轉之後，夥伴可能看起來像是共用相同的角色 (主體或鏡像)，或者目前的主體伺服器可能會顯示為鏡像，而目前的鏡像伺服器則顯示為主體。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "62755370"
   
  針對這其中每一項提供的資料都摘要在下列章節中。  
   
-#### <a name="partners"></a>夥伴  
+#### <a name="partners"></a>合作夥伴  
  **[狀態]** 頁面會顯示每個夥伴的下列資訊：  
   
 -   伺服器執行個體  
@@ -170,7 +170,7 @@ ms.locfileid: "62755370"
   
     -   已同步處理  
   
-    -   已暫停  
+    -   暫止  
   
     -   已中斷連接  
   
@@ -180,7 +180,7 @@ ms.locfileid: "62755370"
   
     -   Unknown  
   
-    -   已連接  
+    -   連線  
   
     -   已中斷連接  
   

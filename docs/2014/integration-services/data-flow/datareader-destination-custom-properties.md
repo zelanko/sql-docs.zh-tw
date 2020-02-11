@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 948ebbc696048915662caaa24b791e6258c459be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827617"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 目的地自訂屬性
@@ -25,8 +25,8 @@ ms.locfileid: "62827617"
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
 |DataReader|String|DataReader 目的地的類別名稱。|  
-|FailOnTimeout|布林|指出發生 `ReadTimeout` 時是否會失敗。 此屬性的預設值為 **False**。|  
-|ReadTimeout|Integer|發生逾時之前的毫秒數。 此屬性的預設值為 30000 (30 秒)。|  
+|FailOnTimeout|Boolean|指出發生 `ReadTimeout` 時是否會失敗。 此屬性的預設值為 **False**。|  
+|ReadTimeout|整數|發生逾時之前的毫秒數。 此屬性的預設值為 30000 (30 秒)。|  
   
  DataReader 目的地的輸入和輸入資料行沒有任何自訂屬性。  
   

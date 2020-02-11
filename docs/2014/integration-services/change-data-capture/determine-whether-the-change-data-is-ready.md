@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b4aa1420edc1cb627940aca6c6c2aed9d18a390
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771414"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>判斷變更資料是否就緒
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程中，第二個工作是確保所選間隔之變更資料已就緒。 由於非同步的擷取程序可能還沒有處理到所選端點的所有變更，因此這是必要的步驟。  
   
 > [!NOTE]  
->  控制流程的第一個工作是計算變更間隔的端點。 如需這項工作的詳細資訊，請參閱[指定變更資料的間隔](specify-an-interval-of-change-data.md)。 如需設計控制流程之完整程序的描述，請參閱[變更資料擷取 &#40;SSIS&#41;](change-data-capture-ssis.md)。  
+>  控制流程的第一個工作是計算變更間隔的端點。 如需這項工作的詳細資訊，請參閱 [指定變更資料的間隔](specify-an-interval-of-change-data.md)。 如需設計控制流程之完整程序的描述，請參閱[異動資料擷取 &#40;SSIS&#41;](change-data-capture-ssis.md)。  
   
 ## <a name="understanding-the-components-of-the-solution"></a>了解方案的元件  
  本主題所描述的方案使用 4 個 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件：  
@@ -187,7 +187,7 @@ ms.locfileid: "62771414"
         System.Threading.Thread.Sleep((int)Dts.Variables["DelaySeconds"].Value * 1000);  
         ```  
   
-         \-或-  
+         \- 或 -  
   
     -   如果您是以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]撰寫程式，輸入下列程式碼行：  
   
@@ -197,7 +197,8 @@ ms.locfileid: "62771414"
         ```  
   
         > [!NOTE]  
-        >  `Thread.Sleep` 方法應為以毫秒指定的引數。  
+        >  
+  `Thread.Sleep` 方法應為以毫秒指定的引數。  
   
 7.  保留從指令碼之執行傳回 `DtsExecResult.Success` 的預設程式碼行。  
   
@@ -331,7 +332,7 @@ ms.locfileid: "62771414"
   
 8.  關閉指令碼開發環境以及 **[指令碼工作編輯器]** 。  
   
-## <a name="next-step"></a>下一個步驟  
+## <a name="next-step"></a>後續步驟  
  判斷變更資料就緒後，下一個步驟是準備針對變更資料進行查詢。  
   
  **下一個主題：** [準備查詢變更資料](prepare-to-query-for-the-change-data.md)  

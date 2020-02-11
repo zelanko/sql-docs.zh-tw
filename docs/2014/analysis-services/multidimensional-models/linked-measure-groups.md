@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec38404a32751330d7fefd974fafe3d571d3b11b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074776"
 ---
 # <a name="linked-measure-groups"></a>連結量值群組
   連結的量值群組會以相同資料庫或不同的 Analysis Services 資料庫中不同之 Cube 中的另一個量值群組為基礎。 如果您想要重複使用多個 Cube 中的一組量值及對應的資料值，您可使用連結量值群組。  
   
- Microsoft 建議原始和連結的量值群組皆位於同一部伺服器上所執行的解決方案中。 連結量值群組在遠端伺服器上已排定從未來版本中淘汰 (請參閱[SQL Server 2014 中已被取代 Analysis Services 功能](../deprecated-analysis-services-features-in-sql-server-2014.md))。  
+ Microsoft 建議原始和連結的量值群組皆位於同一部伺服器上所執行的解決方案中。 連結到遠端伺服器上的量值群組已排定在未來的版本中淘汰（請參閱[SQL Server 2014 中已被取代的 Analysis Services 功能](../deprecated-analysis-services-features-in-sql-server-2014.md)）。  
   
 > [!IMPORTANT]  
 >  連結量值群組是唯讀的。 若要挑選最新的變更，您必須先刪除所有連結量值群組，再根據修改的來源物件重新建立連結量值群組。 基於這個理由，未來需要修改量值群組時，建議您考慮在專案之間複製並貼上量值群組這個替代方法。  
@@ -46,7 +46,7 @@ ms.locfileid: "66074776"
   
 -   連結量值群組不支援回寫。  
   
--   連結量值群組無法用於多個多對多關聯性，特別是當這些關聯性位於不同 Cube 時。 這樣做可能會導致模糊不清的彙總。 如需詳細資訊，請參閱 [包含多對多關聯性之 Cube 中連結量值的數量不正確](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)。  
+-   連結量值群組無法用於多個多對多關聯性，特別是當這些關聯性位於不同 Cube 時。 這樣做可能會導致模糊不清的彙總。 如需詳細資訊，請參閱 [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships (SSAS Troubleshooting)](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)(包含多對多關聯性之 Cube 中連結量值的數量不正確 (SSAS 疑難排解))。  
   
  連結量值群組中所包含的量值，只能和從同一個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫擷取的連結維度直接進行組織。 但是，您可以使用導出成員，將連結量值群組的資訊與您 Cube 中其他非連結維度產生關聯。 您也可以使用間接關聯性，例如參考或多對多關聯性，將非連結維度與連結量值群組產生關聯。  
   
@@ -57,18 +57,18 @@ ms.locfileid: "66074776"
   
 2.  在 [方案總管] 中，按兩下要將連結量值群組加入至哪一個 Cube。 這個步驟會在 Cube 設計師中開啟 Cube。  
   
-3.  在 Cube 設計師的 [量值] 窗格或 [維度] 窗格中，以滑鼠右鍵按一下其中一個窗格的任何地方，然後選取 [新增連結物件]  。 這樣會啟動連結物件精靈。  
+3.  在 Cube 設計師的 [量值] 窗格或 [維度] 窗格中，以滑鼠右鍵按一下其中一個窗格的任何地方，然後選取 [新增連結物件]****。 這樣會啟動連結物件精靈。  
   
 4.  在第一個頁面上，指定資料來源。 這個步驟會建立原始量值群組的位置。 預設值為目前資料庫中現有的 Cube，但是您也可以選擇不同的 Analysis Services 資料庫。  
   
 5.  在下一頁選擇您想要連結的量值群組或維度。 維度和 Cube 物件 (例如量值群組) 會個別列出。 只有尚未在目前 Cube 中的物件才可使用。  
   
-6.  按一下 [完成]  即可建立連結物件。 連結物件會出現在 [量值和維度] 窗格中 (以連結圖示指示)。  
+6.  按一下 [完成]**** 即可建立連結物件。 連結物件會出現在 [量值和維度] 窗格中 (以連結圖示指示)。  
   
 ## <a name="secure-a-linked-measure"></a>維護連結量值的安全  
  定義連結之後，管理連結量值群組中量值的存取權方式，就和管理其他量值群組存取權的方式一樣。 連結物件會連同其非連結的對應項目一起出現在角色設計工具中。 如需管理量值群組之安全性的詳細資訊，請參閱[授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)。  
   
- 若要定義或使用連結量值群組，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的 Windows 服務帳戶必須屬於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫角色 (而此角色擁有來源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上對來源 Cube 和量值群組的 `ReadDefinition` 和 `Read` 存取權限)，或必須屬於來源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理員角色。  
+ 若要定義或使用連結量值群組，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的 Windows 服務帳戶必須屬於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫角色 (而此角色擁有來源 `ReadDefinition` 執行個體上對來源 Cube 和量值群組的 `Read` 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 存取權限)，或必須屬於來源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理員角色。  
   
 ## <a name="see-also"></a>另請參閱  
  [定義連結維度](define-linked-dimensions.md)  

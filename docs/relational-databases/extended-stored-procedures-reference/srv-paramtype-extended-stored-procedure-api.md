@@ -20,10 +20,10 @@ ms.assetid: badc6d36-8a87-42b5-b28c-9c4f5ded8552
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5f81904fd930e22857bfa51584c2eefda813e7e7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253538"
 ---
 # <a name="srv_paramtype-extended-stored-procedure-api"></a>srv_paramtype (擴充預存程序 API)
@@ -52,10 +52,10 @@ n
  *srvproc*  
  這是 SRV_PROC 結構的指標，也是特定用戶端連接的控制代碼 (在這個狀況之下，該控制代碼會收到遠端預存程序呼叫)。 擴充預存程序 API 程式庫會使用該結構所包含的資訊來管理應用程式與用戶端之間的通訊和資料。  
   
- *位*  
+ *n*  
  這指出參數的數目。 第一個參數是 1。  
   
-## <a name="returns"></a>Returns  
+## <a name="returns"></a>傳回值  
  參數資料類型的 Token 值。 如需資料類型的資訊，請參閱[資料類型 &#40;擴充預存程序 API&#41;](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md)。 如果沒有第 *n* 個參數或是沒有任何遠端預存程序，會傳回 -1。  
   
  如果參數是其中一個[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]資料類型，此函數會傳回下列值。  

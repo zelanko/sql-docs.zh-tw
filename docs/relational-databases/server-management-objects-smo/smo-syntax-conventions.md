@@ -17,16 +17,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6e5c8f9d87fe511964d5657c57c70fe4379225e
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148568"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 語法慣例
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理物件 (SMO) 印刷慣例是根據 Visual Studio .net 參考資料[!INCLUDE[msCoName](../../includes/msconame-md.md)]中使用的。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理物件（SMO）印刷慣例是根據 Visual Studio .NET 參考資料[!INCLUDE[msCoName](../../includes/msconame-md.md)]中使用的。  
   
 |慣例|用於|  
 |----------------|--------------|  

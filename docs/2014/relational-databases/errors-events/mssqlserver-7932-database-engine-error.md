@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: aa0e9f6eb8e2a02bb92db50eaf11dde60d8e8f12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913283"
 ---
-# <a name="mssqlserver7932"></a>MSSQLSERVER_7932
+# <a name="mssqlserver_7932"></a>MSSQLSERVER_7932
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|7932|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_ROWSET_IN_WRONG_FILEGROUP|  
-|訊息文字|資料表錯誤：FileStream 目錄識別碼 F_ID，物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 位於檔案群組 FG_ID1 中，但應該是檔案群組 FG_ID2 中。|  
+|訊息文字|資料表錯誤: 物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 的 FileStream 目錄識別碼 F_ID 在檔案群組 FG_ID1 中，但應該是在檔案群組 FG_ID2 中。|  
   
 ## <a name="explanation"></a>說明  
  在 DBCC CHECKDB 執行期間，在錯誤的檔案群組中偵測到指定之物件的 FILESTREAM 儲存體。 這可能是資料庫的中繼資料毀損。  

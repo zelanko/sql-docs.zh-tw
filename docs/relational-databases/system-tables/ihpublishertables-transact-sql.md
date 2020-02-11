@@ -1,5 +1,5 @@
 ---
-title: IHpublishertables (TRANSACT-SQL) |Microsoft Docs
+title: IHpublishertables （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,27 +18,27 @@ ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a75e78c8423b925ca2dfc617cbbae7e4bdcc11d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990152"
 ---
 # <a name="ihpublishertables-transact-sql"></a>IHpublishertables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **IHpublishertables**系統資料表代表儲存在發行者端的中繼資料。 此資料表包含從非 SQL Server 發行者發行使用目前散發者的每個來源資料表的一個資料列。 這份資料表儲存在散發資料庫中。  
+  **IHpublishertables**系統資料表代表儲存在發行者端的中繼資料。 這份資料表會針對使用目前散發者，從非 SQL Server 發行者發行的每份來源資料表，各包含一個資料列。 這份資料表儲存在散發資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|識別已發行的資料表。|  
-|**publisher_id**|**smallint**|識別非 SQL Server 發行者資料表正在發行。|  
+|**publisher_id**|**smallint**|識別發行資料表所在位置的非 SQL Server 發行者。|  
 |**name**|**sysname**|已發行之資料表的名稱。|  
-|**owner**|**sysname**|資料表擁有者。|  
+|**主人**|**sysname**|資料表擁有者。|  
   
 ## <a name="see-also"></a>另請參閱  
  [異質資料庫複寫](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [複寫資料表 &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

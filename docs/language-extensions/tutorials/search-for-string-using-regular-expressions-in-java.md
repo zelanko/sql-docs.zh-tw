@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9740e8c93fbac0d7727ba9922342df96d9190e10
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658795"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>教學課程：在 Java 中使用規則運算式 (regex) 搜尋字串
@@ -269,7 +269,7 @@ GO
 
 1. 以滑鼠右鍵按一下資料夾 (例如 `C:\myJavaCode`)，然後選擇 [內容]   > [安全性]  。
 2. 按一下 **[編輯]** 。
-3. 按一下 **[加入]** 。
+3. 按一下 [新增]  。
 4. 在 [選取使用者、電腦、服務帳戶或群組]  中：
    1. 按一下 [物件類型]  ，並確定已選取 [內建安全性原則]  和 [群組]  。
    2. 按一下 [位置]  ，選取清單頂端的本機電腦名稱。

@@ -1,5 +1,5 @@
 ---
-title: 詞彙查閱轉換編輯器 （參考資料表索引標籤） |Microsoft Docs
+title: 詞彙查閱轉換編輯器（參考資料表索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,23 +15,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e28dda733e4c93c482e26eeb207189014a1940da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055145"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>詞彙查閱轉換編輯器 (參考資料表索引標籤)
-  使用 [詞彙查閱轉換編輯器]  對話方塊的 [參考資料表]  索引標籤，即可指定參考 (查閱) 資料表的連接。  
+  使用 [詞彙查閱轉換編輯器]**** 對話方塊的 [參考資料表]**** 索引標籤，即可指定參考 (查閱) 資料表的連接。  
   
  若要深入了解模糊查閱轉換，請參閱＜ [Term Lookup Transformation](data-flow/transformations/lookup-transformation.md)＞。  
   
 ## <a name="options"></a>選項。  
- **[無快取]**  
- 從清單中選取現有的連線管理員，或按一下 [新增]  來建立新的連線。  
+ **OLE DB 連線管理員**  
+ 從清單中選取現有的連線管理員，或按一下 [新增]**** 來建立新的連線。  
   
  **新增**  
- 使用 [設定 OLE DB 連接管理員]  對話方塊來建立新的連接。  
+ 使用 [設定 OLE DB 連接管理員]**** 對話方塊來建立新的連接。  
   
  **參考資料表名稱**  
  從清單中選取項目，以選取資料庫中的查閱資料表或檢視。 資料表或檢視應包含具有現有詞彙清單的資料行，可以用來與來源資料行中的文字進行比較。  
@@ -41,8 +41,8 @@ ms.locfileid: "66055145"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [詞彙查閱轉換編輯器 &#40;詞彙查閱索引標籤&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
- [詞彙查閱轉換編輯器 &#40;進階索引標籤&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
+ [詞彙查閱轉換編輯器 &#40;詞彙查閱] 索引標籤&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
+ [詞彙查閱轉換編輯器 &#40;[Advanced] 索引標籤&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
  [詞彙擷取轉換](data-flow/transformations/term-extraction-transformation.md)  
   
   

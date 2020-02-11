@@ -1,5 +1,5 @@
 ---
-title: '使用 irow:: Getcolumns (OLE DB) 提取資料行 |Microsoft Docs'
+title: 使用 IRow：： GetColumns （OLE DB）提取資料行 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468494"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>使用 IRow::GetColumns 提取資料行 (OLE DB)
+  
   `IRow` 介面允許直接存取結果集中單一資料列的資料行。 因此，`IRow` 是從包含一個資料列之結果集擷取資料行的有效方式。  
   
  系統會提供一個程式碼範例，顯示如何使用 `IRow` 提取單一資料列。 在此範例中，系統會從資料列一次擷取一個資料行。 此範例會示範：  
   
 -   如何提取資料行的群組 (依序)。  
   
--   如何存取兩次資料行。 第一次會先取得實際的資料行寬度，然後再存取實際的資料。 在 DBCOLUMNACCESS 結構中，如果**pData**為 NULL 並**cbMaxLen**為 0，來呼叫`IRow` - `>GetColumns()`傳回實際的資料行長度。 在此情況下，可以在相同的資料行上再呼叫 `IRow->GetColumns()` 一次來擷取實際的資料。  
+-   如何存取兩次資料行。 第一次會先取得實際的資料行寬度，然後再存取實際的資料。 在 DBCOLUMNACCESS 結構中，如果**pData**為 Null，而**cbMaxLen**為0，則呼叫`IRow` - `>GetColumns()`只會傳回實際的資料行長度。 在此情況下，可以在相同的資料行上再呼叫 `IRow->GetColumns()` 一次來擷取實際的資料。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)將它們加密。  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>使用 IRow::GetColumns 提取資料行  
   
@@ -48,7 +49,7 @@ ms.locfileid: "62468494"
   
 -   如何存取資料行兩次：第一次會先取得實際的資料行寬度，然後再存取實際的資料。  
   
- 在 DBCOLUMNACCESS 結構中，如果 pData 為 NULL，而 cbMaxLen 為 0，呼叫]-> [GetColumns 傳回實際的資料行長度。 在此情況下 GetColumns 可以再次呼叫相同的資料行，即可擷取實際的資料。 IA64 不支援此範例。  
+ 在 DBCOLUMNACCESS 結構中，如果 pData 為 NULL，而 cbMaxLen 為 0，IRow->GetColumns 的呼叫僅會傳回實際的資料行長度。 在此情況下，您可以在相同的資料行上再次呼叫 IRow->GetColumns 來擷取實際的資料。 IA64 不支援此範例。  
   
  此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   

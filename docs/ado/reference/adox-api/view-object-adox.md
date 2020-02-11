@@ -1,5 +1,5 @@
 ---
-title: 檢視物件 (ADOX) |Microsoft Docs
+title: View 物件（ADOX） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,33 +16,33 @@ ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6bc26e8d59c29bd7b1b0fbdd0a3a4fdb39f8fee1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964841"
 ---
 # <a name="view-object-adox"></a>View 物件 (ADOX)
-代表已篩選的一份記錄或一份虛擬資料表。 當搭配 ADO[命令](../../../ado/reference/ado-api/command-object-ado.md)物件，**檢視**物件可以用於加入、 刪除或修改檢視。  
+表示一組已篩選的記錄或虛擬資料表。 搭配 ADO [Command](../../../ado/reference/ado-api/command-object-ado.md)物件使用時， **View**物件可以用來新增、刪除或修改 views。  
   
 ## <a name="remarks"></a>備註  
- 檢視是從其他資料庫資料表或檢視表建立的虛擬資料表。 **檢視**物件可讓您建立的檢視，而不需要知道或使用提供者的 「 建立檢視 」 語法。  
+ View 是從其他資料庫資料表或 views 建立的虛擬資料表。 **View**物件可讓您建立視圖，而不需要知道或使用提供者的「建立視圖」語法。  
   
- 內容一起**檢視**物件時，您可以：  
+ 使用**View**物件的屬性，您可以：  
   
--   識別與檢視[名稱](../../../ado/reference/adox-api/name-property-adox.md)屬性。  
+-   使用[Name](../../../ado/reference/adox-api/name-property-adox.md)屬性來識別此視圖。  
   
--   指定 ADO**命令**可用來新增、 刪除或修改與檢視的物件[命令](../../../ado/reference/adox-api/command-property-adox.md)屬性。  
+-   指定可以用來新增、刪除或修改具有[命令](../../../ado/reference/adox-api/command-property-adox.md)屬性之 VIEWS 的 ADO**命令**物件。  
   
--   傳回日期資訊[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)並[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)屬性。  
+-   傳回具有[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)和[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)屬性的日期資訊。  
   
  本章節包含下列主題。  
   
 -   [View 物件屬性、方法和事件](../../../ado/reference/adox-api/view-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [檢視和 Fields 集合範例 (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [Views Append 方法範例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Views 集合、 CommandText 屬性範例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
- [Views Delete 方法範例 (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
+ [Views 和 Fields 集合範例（VB）](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
+ [Views Append 方法範例（VB）](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
+ [Views 集合、CommandText 屬性範例（VB）](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
+ [Views Delete 方法範例（VB）](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
  [Views 集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

@@ -1,5 +1,5 @@
 ---
-title: OriginalValue 和 UnderlyingValue 屬性範例 (VB) |Microsoft Docs
+title: OriginalValue 和 UnderlyingValue 屬性範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d424fb1033ff30044dd34134ac31991d8561c40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917804"
 ---
-# <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue 和 UnderlyingValue 屬性範例 (VB)
-此範例示範[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)並[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)藉由顯示一則訊息，如果記錄的基礎資料的屬性已變更期間[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)批次更新。  
+# <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue 和 UnderlyingValue 屬性範例（VB）
+這個範例會示範[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)和[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)屬性，方法是在記錄[集](../../../ado/reference/ado-api/recordset-object-ado.md)批次更新期間，當記錄的基礎資料變更時顯示訊息。  
   
 ```  
 'BeginOriginalValueVB  
@@ -120,6 +120,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [OriginalValue 屬性 (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [OriginalValue 屬性（ADO）](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
+ [Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [UnderlyingValue 屬性](../../../ado/reference/ado-api/underlyingvalue-property.md)

@@ -1,0 +1,103 @@
+### YamlMime:Landing
+title: SQL Server 移轉文件
+summary: 協助您移轉到 SQL Server 內部部署與雲端的技術文件。
+metadata:
+  title: SQL Server 移轉文件
+  description: 選擇您想要的 SQL Server 移轉路徑。
+  ms.prod: sql
+  ms.topic: landing-page
+  author: MashaMSFT
+  ms.author: mathoma
+  ms.date: 12/09/2019
+  ms.reviewer: jtoland
+  ms.openlocfilehash: 4ca06be03cadd08c7f49561f7b8066c7883f33f3
+  ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 01/31/2020
+  ms.locfileid: "75322361"
+landingContent:
+- title: SQL 至 SQL Server
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Data Migration Assistant (DMA)
+      url: ../../dma/dma-overview.md
+    - text: 資料庫測試助理
+      url: ../../dea/database-experimentation-assistant-overview.md
+  - linkListType: download
+    links:
+    - text: Data Migration Assistant (DMA)
+      url: https://www.microsoft.com/download/details.aspx?id=53595
+    - text: 資料庫測試助理
+      url: https://www.microsoft.com/download/details.aspx?id=54090
+- title: 非 SQL 至 SQL 與 Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Server 移轉小幫手 (SSMA)
+      url: ../../ssma/sql-server-migration-assistant.md
+  - linkListType: get-started
+    links:
+    - text: 從 Oracle
+      url: ../../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md
+    - text: 從 Access
+      url: ../../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md
+    - text: 從 DB2
+      url: ../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md
+    - text: 從 mySQL
+      url: ../../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md
+    - text: 從 Sybase
+      url: ../../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md
+- title: SQL 至 Azure SQL
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure SQL Database
+      url: /azure/sql-database/sql-database-technical-overview
+    - text: Azure SQL Server 虛擬機器
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+  - linkListType: deploy
+    links:
+    - text: 資料庫移轉服務 (DMS)
+      url: /azure/dms/
+    - text: Data Migration Assistant (DMA)
+      url: ../../dma/dma-overview.md
+  - linkListType: concept
+    links:
+    - text: 更廣泛的移轉程序
+      url: /azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration
+- title: 資源
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Server 移轉中心
+      url: https://azure.microsoft.com/migration/sql-server/
+    - text: 資料庫移轉指南
+      url: https://datamigration.microsoft.com/
+    - text: Azure Migration Service
+      url: https://azure.microsoft.com/services/azure-migrate/
+    - text: 資料移轉部落格
+      url: https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/bg-p/MicrosoftDataMigration
+    - text: 現代化 SQL Server (SQL Pass)
+      url: https://www.youtube.com/watch?v=5RPkuQHcxxs
+  - linkListType: download
+    links:
+    - text: Microsoft Assessment and Planning (MAP) 工具組
+      url: https://www.microsoft.com/download/details.aspx?id=7826
+- title: 結束支援
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 概觀
+      url: ../end-of-support/sql-server-end-of-life-overview.md
+    - text: SQL Server 2008 & R2
+      url: https://www.microsoft.com/cloud-platform/windows-sql-server-2008
+    - text: 延伸支援更新 (ESU)
+      url: ../end-of-support/sql-server-extended-security-updates.md
+    - text: 免費 ESU (含 Azure VM)
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support
+  - linkListType: download
+    links:
+    - text: 延伸安全性更新資料工作表 PDF
+      url: http://download.microsoft.com/download/A/3/F/A3F0908A-0FD8-494C-82BC-E75F313F3FAD/Extended_Security_Updates_for_Windows_Server_2008_and_SQL_Server_2008_End_of_Service.pdf

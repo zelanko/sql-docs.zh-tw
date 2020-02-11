@@ -1,5 +1,5 @@
 ---
-title: 關聯性表示法 （表格式） |Microsoft Docs
+title: 關聯性標記法（表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5acdc8b4e265ee2ebf6d6ffa4e3cc3e65a9b73b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7311fda8b3d4b8054d406ee97749c81f7d588e97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62757727"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76929514"
 ---
 # <a name="relationship-representation-tabular"></a>關聯性表示法 (表格式)
   關聯性是指兩個資料表之間的連接。 關聯性會建立兩個資料表中的資料相互關聯的方式。  
@@ -50,7 +50,7 @@ private Boolean createRelationship(string PKTableName, string PKColumnName, stri
     //Make sure PKTableName.PKColumnName  is set as PK ==> <attribute>.usage == AMO.AttributeUsage.Key  
     if (tabularDb.Dimensions[PKTableName].Attributes[PKColumnName].Usage != AMO.AttributeUsage.Key)  
     {  
-        //... here we are 'fixing', if there is an issue with PKTableName.PKColumnName not beeing the PK of the table  
+        //... here we are 'fixing', if there is an issue with PKTableName.PKColumnName not being the PK of the table  
         setPKColumn(tabularDb, PKTableName, PKColumnName);  
     }  
   

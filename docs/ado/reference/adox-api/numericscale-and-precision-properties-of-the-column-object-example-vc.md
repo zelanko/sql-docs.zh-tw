@@ -1,5 +1,5 @@
 ---
-title: NumericScale 和 Precision 屬性的資料行範例 （VC + +） |Microsoft Docs
+title: 資料行範例的 NumericScale 和 Precision 屬性（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 828f4ed0336ef7994346af3ad673de2107bd3ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc6dac85217a3f815511fa94e19a9adccc1f2ba1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965763"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918404"
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>Column 物件的 NumericScale 和 Precision 屬性範例 (VC++)
-此範例示範[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)並[有效位數](../../../ado/reference/adox-api/precision-property-adox.md)的屬性[資料行](../../../ado/reference/adox-api/column-object-adox.md)物件。 此程式碼會顯示其值**訂單詳細資料**一覽表*Northwind*資料庫。  
+這個範例會示範[Column](../../../ado/reference/adox-api/column-object-adox.md)物件的[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)和[Precision](../../../ado/reference/adox-api/precision-property-adox.md)屬性。 此程式碼會顯示*Northwind*資料庫之**Order Details**資料表的值。  
   
 ```  
 // BeginNumericScalePrecCpp.cpp  
@@ -86,7 +86,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in NumericScalePrecX...." << endl;  
+      cout << "Error occurred in NumericScalePrecX...." << endl;  
    }  
    ::CoUninitialize();  
 }  

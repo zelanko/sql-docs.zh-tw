@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a0f354280da857be236049a564a77716e93cd351
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807055"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>重新組織索引工作 (維護計畫)
-  使用 [重新組織索引工作]  對話方塊，即可將索引頁面移至更有效率的搜尋順序。 此工作會使用 `ALTER INDEX REORGANIZE` 陳述式搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫。  
+  使用 [**重新組織索引**工作] 對話方塊，即可將索引頁面移至更有效率的搜尋順序。 此工作會使用 `ALTER INDEX REORGANIZE` 陳述式搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **[連接]**  
  選取執行此工作時要使用的伺服器連接。  
   
@@ -50,16 +50,16 @@ ms.locfileid: "62807055"
   
      產生維護計畫，只針對選取的資料庫執行維護工作。 如果選擇此選項，則必須在清單中至少選取一個資料庫。  
   
- **物件**  
- 限制 [選取範圍]  格線僅顯示資料表、檢視或兩者。  
+ **Object**  
+ 限制 [選取範圍]**** 格線僅顯示資料表、檢視或兩者。  
   
- **選取範圍**  
- 指定受此工作影響的資料表或索引。 [物件]  方塊中的 [資料表和檢視]  為選取狀態時無法使用。  
+ **選取項目**  
+ 指定受此工作影響的資料表或索引。 在 [**物件**] 方塊中選取了 [**資料表和視圖]** 時無法使用。  
   
  **壓縮大型物件**  
  可能時取消配置給資料表和檢視的空間。 此選項使用 `ALTER INDEX LOB_COMPACTION = ON`。  
   
- **檢視 T-SQL**  
+ **View T-sql**  
  根據選取的選項，檢視此工作在伺服器上執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
 > [!NOTE]  
@@ -75,14 +75,14 @@ ms.locfileid: "62807055"
  **[重新整理]**  
  重新整理可用的伺服器清單。  
   
- **輸入要登入到伺服器的資訊**  
+ **輸入資訊以登入伺服器**  
  指定如何對伺服器進行驗證。  
   
  **使用 Windows 整合式安全性**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的執行個體。  
+ 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證連接到的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]實例。  
   
  **使用特定的使用者名稱和密碼**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 無法使用此選項。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 驗證，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 無法使用此選項。  
   
  **使用者名稱**  
  提供驗證時要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 無法使用此選項。  
@@ -92,6 +92,6 @@ ms.locfileid: "62807055"
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
- [DBCC INDEXDEFRAG &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-indexdefrag-transact-sql)  
+ [DBCC INDEXDEFRAG &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-indexdefrag-transact-sql)  
   
   

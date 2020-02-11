@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1f05181e1a3069ec56f079751e43bd739424ce92
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727371"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>SQL Server Launchpad 服務設定
@@ -65,8 +65,8 @@ ms.locfileid: "73727371"
 
 |**設定名稱**|**型別**|**說明**|
 |----|----|----|
-|JOB\_CLEANUP\_ON\_EXIT|Integer |這只是內部設定，請勿變更此值。 </br></br>指定為每個外部執行階段工作建立的暫存工作資料夾，是否應該在該工作階段完成後清理乾淨。 這項設定在偵錯時很有用。 </br></br>支援的值為 **0** (停用) 或 **1** (啟用)。 </br></br>預設值為 1，表示會在結束時移除記錄檔。|
-|TRACE\_LEVEL|Integer |設定 MSSQLLAUNCHPAD 的追蹤詳細資訊層級以進行偵錯。 這會影響 LOG_DIRECTORY 設定所指定路徑中的追蹤檔案。 </br></br>支援的值為：**1** (錯誤)、**2** (效能)、**3** (警告)、**4** (資訊)。 </br></br>預設值為 1，表示只輸出錯誤。|
+|JOB\_CLEANUP\_ON\_EXIT|整數 |這只是內部設定，請勿變更此值。 </br></br>指定為每個外部執行階段工作建立的暫存工作資料夾，是否應該在該工作階段完成後清理乾淨。 這項設定在偵錯時很有用。 </br></br>支援的值為 **0** (停用) 或 **1** (啟用)。 </br></br>預設值為 1，表示會在結束時移除記錄檔。|
+|TRACE\_LEVEL|整數 |設定 MSSQLLAUNCHPAD 的追蹤詳細資訊層級以進行偵錯。 這會影響 LOG_DIRECTORY 設定所指定路徑中的追蹤檔案。 </br></br>支援的值為：**1** (錯誤)、**2** (效能)、**3** (警告)、**4** (資訊)。 </br></br>預設值為 1，表示只輸出錯誤。|
 
 所有設定都會採用機碼值組的格式，分別位於獨立的行。 例如，若要變更追蹤層級，您可以新增這行：`Default: TRACE_LEVEL=4`。
 

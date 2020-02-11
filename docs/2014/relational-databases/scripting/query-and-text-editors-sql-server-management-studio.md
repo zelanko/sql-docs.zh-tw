@@ -26,10 +26,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd16879f512bf1529bec8dab6679880cd0a6b8dd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243332"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>查詢與文字編輯器 (SQL Server Management Studio)
@@ -64,10 +64,10 @@ ms.locfileid: "75243332"
 ## <a name="code-editor-components"></a>程式碼編輯器元件  
  程式碼編輯器除了包含與文字和 XML 編輯器共用的功能之外，還包含下列功能：  
   
- **更**  
+ **結果**  
  這個視窗用來檢視查詢結果。 這個視窗能夠以方格或文字來顯示結果，或者將結果導向至檔案。 結果方格可以顯示為個別的索引標籤視窗。  
   
- **感知**  
+ **IntelliSense**  
  在編輯器的 [編輯]**** 功能表上，指向 [IntelliSense]**** 來檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項。  
   
  **色彩編碼**  
@@ -110,25 +110,25 @@ ms.locfileid: "75243332"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|描述如何檢視及使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器的基本功能。|[資料庫引擎查詢編輯器 &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
+|描述如何檢視及使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器的基本功能。|[Database Engine 查詢編輯器 &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
 |描述如何檢視及使用 MDX 查詢編輯器的基本功能。|[MDX 查詢編輯器 &#40;Analysis Services-多維度資料&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
 |描述如何檢視及使用 DMX 查詢編輯器的基本功能。|[DMX 查詢編輯器 &#40;Analysis Services 資料採礦&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
 |描述如何檢視及使用 XML/A 查詢編輯器的基本功能。|[XML 編輯器 &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
 |描述如何設定各種編輯器的選項，例如行號和 IntelliSense 選項。|[設定編輯器 &#40;SQL Server Management Studio&#41;](configure-editors-sql-server-management-studio.md)|  
 |描述您可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中開啟編輯器的各種方式。|[開啟編輯器 &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  
-|描述如何管理檢視模式，例如自動換行、分割視窗或索引標籤。|[管理編輯器和視圖模式](manage-the-editor-and-view-mode.md)|  
+|描述如何管理檢視模式，例如自動換行、分割視窗或索引標籤。|[管理編輯器和檢視模式](manage-the-editor-and-view-mode.md)|  
 |描述如何設定格式選項，例如隱藏的文字或縮排。|[管理程式碼格式設定](manage-code-formatting.md)|  
 |描述如何使用累加搜尋或移至等功能，在編輯器視窗中瀏覽文字。|[導覽程式碼與文字](navigate-code-and-text.md)|  
 |描述如何設定各種語法類別的色彩編碼選項，以更容易讀取複雜的陳述式。|[查詢編輯器中的色彩編碼](color-coding-in-query-editors.md)|  
 |描述如何使用程式碼大綱，以隱藏您目前未使用的部分複雜指令碼。|[程式碼大綱](code-outlining.md)|  
 |描述如何將文字從指令碼的一個位置拖放至新位置。|[拖放文字](drag-and-drop-text.md)|  
 |描述如何執行全域搜尋和取代，例如變更資料行名稱時。|[搜尋和取代](search-and-replace.md)|  
-|描述如何設定書籤，以便更容易尋找重要的程式碼片段。|[管理書簽](../native-client-ole-db-rowsets/bookmarks.md)|  
-|描述如何列印視窗或方格中的指令碼或結果。|[列印程式碼和結果](print-code-and-results.md)|  
-|描述如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器的 sqlcmd 功能。|[使用查詢編輯器編輯 SQLCMD 腳本](edit-sqlcmd-scripts-with-query-editor.md)|  
+|描述如何設定書籤，以便更容易尋找重要的程式碼片段。|[管理書籤](../native-client-ole-db-rowsets/bookmarks.md)|  
+|描述如何列印視窗或方格中的指令碼或結果。|[列印程式碼與結果](print-code-and-results.md)|  
+|描述如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器的 sqlcmd 功能。|[使用查詢編輯器編輯 SQLCMD 指令碼](edit-sqlcmd-scripts-with-query-editor.md)|  
 |描述如何使用 IntelliSense 功能，例如在輸入時自動完成物件名稱，或確保中斷點位於有效的位置。|[IntelliSense &#40;SQL Server Management Studio&#41;](intellisense-sql-server-management-studio.md)|  
-|描述如何在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中使用程式碼片段。 程式碼片段是常用陳述式或區塊的範本，可自訂或擴充成包含網站專屬的程式碼片段。|[Transact-sql 程式碼片段](transact-sql-code-snippets.md)|  
-|描述如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具來逐步執行程式碼，以及檢視偵錯資訊 (例如變數和參數中的值)。|[Transact-sql 偵錯工具](transact-sql-debugger.md)|  
+|描述如何在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中使用程式碼片段。 程式碼片段是常用陳述式或區塊的範本，可自訂或擴充成包含網站專屬的程式碼片段。|[Transact-SQL 程式碼片段](transact-sql-code-snippets.md)|  
+|描述如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具來逐步執行程式碼，以及檢視偵錯資訊 (例如變數和參數中的值)。|[Transact-SQL 偵錯工具](transact-sql-debugger.md)|  
 |描述如何為不同的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體設定自訂色彩，並將這些色彩設為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗中狀態列的背景。|[狀態列 &#40;資料庫引擎查詢編輯器&#41;](status-bar-database-engine-query-editor.md)|  
   
 ## <a name="see-also"></a>另請參閱  

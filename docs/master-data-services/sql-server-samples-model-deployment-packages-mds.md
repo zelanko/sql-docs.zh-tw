@@ -9,15 +9,15 @@ ms.technology: master-data-services
 ms.topic: conceptual
 keywords:
 - Master Data Services
-- 範例
+- sample
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 19b4cc9cc9282fff784059e6ac39bf74792f95a4
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727873"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server 範例：模型部署套件 (MDS)
@@ -29,7 +29,7 @@ ms.locfileid: "73727873"
  如需如何部署範例模型套件的指示，請參閱 [部署範例模型和資料](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)。 您可以使用 [MDSModelDeploy 工具](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)來部署範例模型套件。  
   
 > [!IMPORTANT]
->  **範例更新 - [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+>  **中的範例更新[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
 > 
 >  範例套件已經過更新，可支援下列新的功能。  
 > 

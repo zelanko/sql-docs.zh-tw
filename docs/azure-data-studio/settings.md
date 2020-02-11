@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: a874aaf9ec136ff9ea27cbeaa92011a07f3718c7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959275"
 ---
 # <a name="modify-user-and-workspace-settings"></a>修改使用者與工作區設定
@@ -44,9 +44,9 @@ ms.locfileid: "67959275"
 
 根據您的平台，使用者設定檔案的位置如下：
 
-* **Windows**：`%APPDATA%\azuredatastudio\User\settings.json`
-* **Mac**：`$HOME/Library/Application Support/azuredatastudio/User/settings.json`
-* **Linux**：`$HOME/.config/azuredatastudio/User/settings.json`
+* **Windows** `%APPDATA%\azuredatastudio\User\settings.json`
+* **Mac** `$HOME/Library/Application Support/azuredatastudio/User/settings.json`
+* **Linux** `$HOME/.config/azuredatastudio/User/settings.json`
 
 工作區設定檔案位於您專案的 `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` 資料夾底下。
 

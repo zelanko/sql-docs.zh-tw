@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: febf8ce34e93f4efffaea1d9a9925ab5c8206652
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62625895"
 ---
 # <a name="policy-management-node-object-explorer"></a>原則管理節點 (物件總管)
@@ -52,7 +52,7 @@ ms.locfileid: "62625895"
   
 -   [匯出為原則對話方塊](export-as-policy-dialog-box.md)  
   
--   [匯出原則對話方塊](import-policies-dialog-box.md)  
+-   [匯入原則對話方塊](import-policies-dialog-box.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [使用原則式管理來管理伺服器](administer-servers-by-using-policy-based-management.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22b8ed87ea78424049f1dc42513826ef032b3654
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74685339"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>設定和管理報表伺服器 (Reporting Services SharePoint 模式)
@@ -29,13 +29,13 @@ ms.locfileid: "74685339"
   
     -   [建立及管理 SharePoint 模式報表伺服器的訂閱](subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
-    -   [從 SharePoint 網站更新報表資料來源中的認證](report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md)  
+    -   [從 SharePoint 網站更新報表資料來源的認證](report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md)  
   
     -   [管理共用資料集](report-data/manage-shared-datasets.md)  
   
     -   [在已發行的報表上設定參數 &#40;SharePoint 整合模式下的 Reporting Services&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)  
   
-    -   [以 SharePoint 整合模式 &#40;Reporting Services 設定處理選項&#41;](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
+    -   [設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
     -   [快取重新整理選項 &#40;報表管理員&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74685339"
   
 -   [將檔上傳至 sharepoint 文件庫 &#40;sharepoint 模式中的 Reporting Services&#41;](../../2014/reporting-services/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
--   [以 SharePoint 整合模式 &#40;Reporting Services 設定處理選項&#41;](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
+-   [設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
  如需有關 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的更多一般資訊，請參閱《[ 線上叢書》中的 ](create-deploy-and-manage-mobile-and-paginated-reports.md)Reporting Services &#40;SSRS&#41;[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如需有關其他 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件、工具和資源的詳細資訊，請參閱《 [SQL Server 線上叢書](../2014-toc/index.yml)》。  
   

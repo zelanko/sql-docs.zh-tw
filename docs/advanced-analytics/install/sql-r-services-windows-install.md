@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 6fcb4245d4efff00002dea9b490312792e0d83d6
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73707000"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安裝 SQL Server 2016 R Services
@@ -197,7 +197,7 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
 
 <a name="bkmk_FollowUp"></a> 
 
-## <a name="additional-configuration"></a>其他組態
+## <a name="additional-configuration"></a>其他設定
 
 如果外部指令碼驗證步驟成功，您就可以從 SQL Server Management Studio、Visual Studio Code 或任何其他可以將 T-SQL 陳述式傳送到伺服器的用戶端，執行 Python 命令。
 

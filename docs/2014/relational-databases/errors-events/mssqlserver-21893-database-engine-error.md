@@ -13,27 +13,27 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6258f36990efccf83b43e8d8ac8bd4c2397477aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914943"
 ---
-# <a name="mssqlserver21893"></a>MSSQLSERVER_21893
+# <a name="mssqlserver_21893"></a>MSSQLSERVER_21893
     
 ## <a name="details"></a>詳細資料  
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|21893|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|SQLErrorNum21893|  
-|訊息文字|原始發行者 '%s' 的訂閱者 ( %s ) 並未在重新導向的發行者 '%s' 上顯示為遠端伺服器。 執行`sp_addlinkedserver`重新導向的發行者，將這些訂閱者新增為遠端伺服器。|  
+|訊息文字|原始發行者 '%s' 的訂閱者 ( %s ) 並未在重新導向的發行者 '%s' 上顯示為遠端伺服器。 在`sp_addlinkedserver`重新導向的發行者上執行，將這些訂閱者新增為遠端伺服器。|  
   
 ## <a name="explanation"></a>說明  
- `sp_validate_redirected_publisher` 使用位於遠端伺服器的發行者資料庫的訂用帳戶中繼資料資料表，來識別其相關聯的訂閱者，並確認訂閱者的 master.dbo.sysservers 中有相關聯的項目。 如果任何識別的訂閱者不存在，就會傳回此錯誤。  
+ `sp_validate_redirected_publisher` 會使用位於遠端伺服器之發行者資料庫的訂閱中繼資料資料表來識別其相關聯的訂閱者，並且確認訂閱者的 master.dbo.sysservers 中是否存在相關聯的項目。 如果任何識別的訂閱者不存在，就會傳回此錯誤。  
   
  此錯誤不會被視為嚴重錯誤。 發生此錯誤的代理程式會將錯誤記錄成參考用訊息但不會終止，因為新的發行者沒有適當的訂閱者項目對於複寫所造成的影響很有限。 如果 sysservers 中沒有適當的訂閱者項目，透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行的某些訂閱管理活動可能會失敗。 不過，只要明確執行管理預存程序，就可以成功執行這些相同的活動。  
   

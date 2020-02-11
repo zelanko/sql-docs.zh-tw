@@ -1,5 +1,5 @@
 ---
-title: 影響資料表值參數的陳述式屬性 |Microsoft Docs
+title: 影響資料表值參數的語句屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 19a757f82c2fa2ff2e78453ddf0fea1fbebda3c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626213"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>影響資料表值參數的陳述式屬性
@@ -25,10 +25,10 @@ ms.locfileid: "62626213"
   
 |屬性名稱|類型|描述|  
 |--------------------|----------|-----------------|  
-|SQL_SOPT_SS_PARAM_FOCUS|SQLUINTEGER|如需有關 SQL_SS_PARAM_FOCUS 的詳細資訊，請參閱 < [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)。|  
-|SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|如需有關 SQL_SS_NAME_SCOPE 的詳細資訊，請參閱 < [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)。|  
+|SQL_SOPT_SS_PARAM_FOCUS|SQLUINTEGER|如需 SQL_SS_PARAM_FOCUS 的詳細資訊，請參閱[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)。|  
+|SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|如需 SQL_SS_NAME_SCOPE 的詳細資訊，請參閱[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料表值參數&#40;ODBC&#41;](table-valued-parameters-odbc.md)  
+ [ODBC&#41;&#40;的資料表值參數](table-valued-parameters-odbc.md)  
   
   

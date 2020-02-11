@@ -1,5 +1,5 @@
 ---
-title: 正式 Shape 文法 |Microsoft Docs
+title: 正式圖形文法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,64 +14,64 @@ ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91bdf0cfbfe87075d2c9484bca7edd835a950ee6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925342"
 ---
 # <a name="formal-shape-grammar"></a>正式 Shape 文法
-這是用於建立任何圖形命令的正式文法：  
+這是用來建立任何圖形命令的正式文法：  
   
--   必要的文法條款會以角括弧 ("<>") 分隔的文字字串。  
+-   必要的語法詞彙是以角括弧（"<>"）分隔的文字字串。  
   
--   選擇性的詞彙是以方括號 ("[]") 分隔。  
+-   選擇性詞彙會以方括弧（"[]"）分隔。  
   
--   替代項目會以斜線 ("&#124;")。  
+-   替代方案會以 virgule （"&#124;"）來表示。  
   
--   重複的替代項目會以省略符號 （"..."）。  
+-   重複的替代專案會以省略號（"..."）來表示。  
   
--   *Alpha*表示英文字母的字串。  
+-   *Alpha*表示字母順序的字串。  
   
--   *數字*表示數字的字串。  
+-   *數位*表示數位的字串。  
   
--   *Unicode 數字*表示 unicode 數字的字串。  
+-   *Unicode 數位*表示 unicode 數位的字串。  
   
- 所有其他的詞彙是常值。  
+ 所有其他詞彙都是常值。  
   
 |詞彙|定義|  
 |----------|----------------|  
-|\<shape-command>|SHAPE [\<table-exp> [[AS] \<alias>]][\<shape-action>]|  
-|\<table-exp>|{\<provider-command-text>} &#124;<br /><br /> (\<shape-command>) &#124;<br /><br /> 資料表\<加上引號名稱 >&#124;<br /><br /> \<quoted-name>|  
-|\<shape-action>|附加\<別名欄位清單 >&#124;<br /><br /> 計算\<別名欄位清單 > [BY\<欄位清單 >]|  
-|\<aliased-field-list>|\<別名欄位 > [，\<別名-欄位.../>>]|  
-|\<別名欄位 >|\<field-exp> [[AS] \<alias>]|  
-|\<field-exp>|(\<relation-exp>) &#124;<br /><br /> \<calculated-exp> &#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
-|<relation_exp>|\<資料表 exp > [[AS]\<別名 >]<br /><br /> 有關\<關聯條件清單 >|  
-|\<relation-cond-list>|\<關聯條件 > [，\<關聯條件 >...]|  
-|\<關聯條件 >|\<欄位名稱 > TO\<子 ref >|  
-|\<child-ref>|\<field-name> &#124;<br /><br /> 參數\<param ref >|  
-|\<param-ref>|\<number>|  
-|\<field-list>|\<field-name> [, \<field-name>]|  
-|\<aggregate-exp>|SUM(\<qualified-field-name>) &#124;<br /><br /> AVG(\<qualified-field-name>) &#124;<br /><br /> MIN(\<qualified-field-name>) &#124;<br /><br /> MAX(\<qualified-field-name>) &#124;<br /><br /> COUNT(\<qualified-alias> &#124; \<qualified-name>) &#124;<br /><br /> STDEV(\<qualified-field-name>) &#124;<br /><br /> 任何 (\<限定欄位名稱 >)|  
-|\<calculated-exp>|CALC(\<expression>)|  
-|\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
-|\<alias>|\<quoted-name>|  
-|\<field-name>|\<加上引號名稱 > [[AS]\<別名 >]|  
-|\<quoted-name>|"\<string>" &#124;<br /><br /> '\<string>' &#124;<br /><br /> [\<string>] &#124;<br /><br /> \<名稱 >|  
-|\<qualified-name>|alias[.alias...]|  
-|\<名稱 >|alpha [ alpha &#124; digit &#124; _ &#124; # &#124; : &#124; ...]|  
-|\<number>|數字 [數字...]|  
-|\<new-exp>|新\<欄位類型 > [(\<數字 > [，\<數目 >])]|  
-|\<field-type>|OLE DB 或 ADO 資料類型。|  
-|\<string>|unicode 字元 [unicode 字元...]|  
-|\<expression>|Visual Basic 應用程式其運算元都是相同的資料列中的其他非計算資料行的運算式。|  
+|\<圖形-命令>|SHAPE [\<資料表-exp> [[AS] \<alias>]] [\<圖形動作>]|  
+|\<資料表-exp>|{\<provider-命令-text>} &#124;<br /><br /> （\<圖形-命令>） &#124;<br /><br /> 以\<引號括住的名稱> &#124;<br /><br /> \<加上引號的名稱>|  
+|\<圖形-動作>|附加\<別名欄位清單> &#124;<br /><br /> 計算\<別名-欄位清單> [依\<欄位清單>]|  
+|\<別名-欄位清單>|\<別名-欄位> [， \<別名欄位 ... >]|  
+|\<別名-欄位>|\<欄位 exp> [[AS] \<alias>]|  
+|\<欄位-exp>|（\<關聯性-exp>） &#124;<br /><br /> \<計算-exp> &#124;<br /><br /> \<匯總-exp> &#124;<br /><br /> \<新的-exp>|  
+|<relation_exp>|\<資料表-exp> [[AS] \<alias>]<br /><br /> 關聯\<關係-導線清單>|  
+|\<關聯性-導線清單>|\<關聯性> [， \<關聯-導線> ...]|  
+|\<關係-導線>|\<> \<子參考> 的功能變數名稱|  
+|\<子參考>|\<功能變數名稱> &#124;<br /><br /> 參數\<param-ref>|  
+|\<參數-ref>|\<> 數目|  
+|\<欄位清單>|\<功能變數名稱> [， \<功能變數名稱稱>]|  
+|\<匯總-exp>|SUM （\<限定功能變數名稱>） &#124;<br /><br /> 平均（\<限定功能變數名稱>） &#124;<br /><br /> 最小\<值（限定功能變數名稱>） &#124;<br /><br /> 最大\<值（限定功能變數名稱>） &#124;<br /><br /> 計數（\<限定別名> &#124; \<限定名稱>） &#124;<br /><br /> STDEV （\<限定功能變數名稱>） &#124;<br /><br /> ANY （\<限定功能變數名稱>）|  
+|\<計算-exp>|CALC （\<expression>）|  
+|\<合格功能變數名稱>|\<別名>。[\<alias> ...]\<功能變數名稱>|  
+|\<別名>|\<加上引號的名稱>|  
+|\<功能變數名稱>|\<加上引號的名稱> [[ \<AS] alias>]|  
+|\<加上引號的名稱>|"\<string>" &#124;<br /><br /> '\<string> ' &#124;<br /><br /> [\<string>] &#124;<br /><br /> \<名稱>|  
+|\<限定名稱>|alias [. alias ...]|  
+|\<名稱>|Alpha [Alpha &#124; 數位 &#124; _ &#124; # &#124;： &#124; ...]|  
+|\<> 數目|數位 [數位 ...]|  
+|\<新的-exp>|新\<的欄位類型> [（\<數位> [， \<數位>]）]|  
+|\<欄位類型>|OLE DB 或 ADO 資料類型。|  
+|\<字串>|unicode-char [unicode-char ...]|  
+|\<運算式>|Visual Basic for Applications 運算式，其運算元為相同資料列中的其他非 CALC 資料行。|  
   
 ## <a name="see-also"></a>另請參閱  
- [存取階層式資料錄集中的資料列](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [資料成形概觀](../../../ado/guide/data/data-shaping-overview.md)   
+ [存取階層式記錄集中的資料列](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+ [資料成形總覽](../../../ado/guide/data/data-shaping-overview.md)   
  [資料成形所需的提供者](../../../ado/guide/data/required-providers-for-data-shaping.md)   
  [Shape APPEND 子句](../../../ado/guide/data/shape-append-clause.md)   
- [一般 shape 命令](../../../ado/guide/data/shape-commands-in-general.md)   
+ [一般的圖形命令](../../../ado/guide/data/shape-commands-in-general.md)   
  [Shape COMPUTE 子句](../../../ado/guide/data/shape-compute-clause.md)   
  [Visual Basic for Applications 函式](../../../ado/guide/data/visual-basic-for-applications-functions.md)

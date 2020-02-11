@@ -1,27 +1,28 @@
 ---
-title: 建立追蹤 (SQL Server Profiler) |Microsoft Docs
-ms.custom: ''
-ms.date: 08/01/2016
+title: 建立追蹤
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb6a3f10f93d7bba147dca0cc9f7bbb879a82d68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 08/01/2016
+ms.openlocfilehash: 5a5c004bbc7e93720f18df998b989c46ced0188e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930179"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307335"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>建立追蹤 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來建立追蹤。  
+
+此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來建立追蹤。  
   
 ### <a name="to-create-a-trace"></a>若要建立追蹤  
   
@@ -29,7 +30,7 @@ ms.locfileid: "67930179"
   
      會出現 [追蹤屬性]  對話方塊。  
   
-    > **注意**：[追蹤屬性]  對話方塊無法顯示，但若已選取 [進行連接後立即啟動追蹤]  ，便會開始追蹤。 若要關閉這個設定，請在 [工具]  ** 功能表上按一下 [選項]  ，然後清除 [進行連線後立即啟動追蹤] 核取方塊。  
+    > **注意：** [追蹤屬性] 對話方塊無法顯示，但若已選取 **[進行連接後立即啟動追蹤]** ，便會開始追蹤。 若要關閉這個設定，請在 [工具]  ** 功能表上按一下 [選項]  ，然後清除 [進行連線後立即啟動追蹤] 核取方塊。  
   
 2.  在 **[追蹤名稱]** 方塊中，輸入追蹤的名稱。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "67930179"
   
 5.  (選擇性) 選取 **[啟用追蹤停止時間]** 核取方塊，然後指定停止日期和時間。  
   
-6.  若要加入或移除事件、資料行或篩選，請按一下 [事件選取範圍]  索引標籤。如需詳細資訊，請參閱[指定追蹤檔案的事件及資料行 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)。  
+6.  若要加入或移除事件、資料行或篩選，請按一下 [事件選取範圍]  索引標籤。如需詳細資訊，請參閱[指定追蹤檔案的事件及資料行 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
 7.  按一下 **[執行]** 啟動追蹤。  
   

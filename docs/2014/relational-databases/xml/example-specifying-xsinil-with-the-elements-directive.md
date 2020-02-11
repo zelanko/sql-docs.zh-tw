@@ -1,5 +1,5 @@
 ---
-title: 範例使用 ELEMENTS 指示詞來指定 XSINIL | Microsoft Docs
+title: 範例：使用 ELEMENTS 指示詞指定 XSINIL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34cc4479a26d633e689963a945095248f683993f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287280"
 ---
-# <a name="example-specifying-xsinil-with-the-elements-directive"></a>範例使用 ELEMENTS 指示詞指定 XSINIL
+# <a name="example-specifying-xsinil-with-the-elements-directive"></a>範例：使用 ELEMENTS 指示詞指定 XSINIL
   下列查詢會指定 `ELEMENTS` 指示詞，從查詢結果產生元素中心的 XML。  
   
 ## <a name="example"></a>範例  
@@ -75,6 +75,6 @@ FOR XML RAW, ELEMENTS XSINIL ;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 FOR XML 的 RAW 模式](use-raw-mode-with-for-xml.md)  
+ [搭配 FOR XML 使用 RAW 模式](use-raw-mode-with-for-xml.md)  
   
   

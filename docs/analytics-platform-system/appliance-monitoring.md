@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cec604ff1a93213fc6308455cadda90e6efa2d61
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401418"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>分析平臺系統的設備監視
@@ -38,7 +38,7 @@ ms.locfileid: "74401418"
 有多種工具可用來監視設備。  
   
 管理主控台  
-SQL Server PDW 具有管理主控台。 這是以 web 為基礎的工具，可顯示查詢、載入、備份和還原、鎖定、會話、警示和設備狀態的相關資訊。 管理主控台會在設備上執行;使用者透過 Internet Explorer 連接到管理主控台。 如需詳細資訊，請參閱：  
+SQL Server PDW 具有管理主控台。 這是以 web 為基礎的工具，可顯示查詢、載入、備份和還原、鎖定、會話、警示和設備狀態的相關資訊。 管理主控台會在設備上執行;使用者透過 Internet Explorer 連接到管理主控台。 如需詳細資訊，請參閱  
   
 -   [使用管理主控台 &#40;分析平臺系統來監視設備&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   

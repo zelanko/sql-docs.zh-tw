@@ -11,28 +11,29 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a45ff3544fa85f1bfe9cbe7bdd00968c004a3b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62634267"
 ---
 # <a name="change-the-environment-layout"></a>變更環境配置
+  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的各個元件會競相爭取使用畫面空間。 若要有更多空間，您可以關閉、隱藏或移動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 元件。 這一頁的各個練習會將元件移到不同的位置。  
   
 ## <a name="closing-and-hiding-components"></a>關閉和隱藏元件  
   
 #### <a name="to-practice-closing-hiding-and-reopening-component-windows"></a>若要練習關閉、隱藏和重新開啟元件視窗  
   
-1.  按一下已註冊的伺服器右上角的 [x]  來隱藏已註冊的伺服器。 此時會關閉已註冊的伺服器。  
+1.  按一下已註冊的伺服器右上角的 [x]**** 來隱藏已註冊的伺服器。 此時會關閉已註冊的伺服器。  
   
-2.  在物件總管中，按一下含有 [自動隱藏]  工具提示的圖釘按鈕。 此時 [物件總管] 會最小化到畫面的左側。  
+2.  在物件總管中，按一下含有 [自動隱藏]**** 工具提示的圖釘按鈕。 此時 [物件總管] 會最小化到畫面的左側。  
   
 3.  將您的滑鼠移到 [物件總管] 標題列上。 此時會重新開啟它。  
   
 4.  再按一下圖釘，將 [物件總管] 固定在開啟的位置。  
   
-5.  在 [檢視]  功能表上，按一下 [已註冊的伺服器]  來還原已註冊的伺服器。  
+5.  在 [檢視]**** 功能表上，按一下 [已註冊的伺服器]**** 來還原已註冊的伺服器。  
   
 ## <a name="moving-components"></a>移動元件  
  主控 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的環境可讓您移動元件，並在各種組態中停駐它們。  
@@ -50,7 +51,7 @@ ms.locfileid: "62634267"
   
 1.  以滑鼠右鍵按一下 [物件總管] 的標題列，請注意下列功能表選項：  
   
-    -   float  
+    -   Float  
   
     -   停駐  
   
@@ -60,7 +61,7 @@ ms.locfileid: "62634267"
   
     -   隱藏  
   
-     您也可以從 [視窗]  功能表，或透過工具列的向下箭頭，找到這些選項。  
+     您也可以從 [視窗]**** 功能表，或透過工具列的向下箭頭，找到這些選項。  
   
 2.  按兩下 [物件總管] 的標題列，使它不再停駐。  
   
@@ -70,13 +71,13 @@ ms.locfileid: "62634267"
   
 5.  [物件總管] 也可以移至 Management Studio 的頂端或底端。 將 [物件總管] 拖放回輔助方塊中左側視窗的原始位置。  
   
-6.  以滑鼠右鍵按一下物件總管的標題列，然後按一下 [隱藏]  。  
+6.  以滑鼠右鍵按一下物件總管的標題列，然後按一下 [隱藏]****。  
   
-7.  在 [檢視]  功能表上，按一下物件總管  來還原視窗。  
+7.  在 [檢視]**** 功能表上，按一下物件總管**** 來還原視窗。  
   
-8.  以滑鼠右鍵按一下物件總管的標題列，然後按一下 [浮動]  ，使物件總管不再停駐。  
+8.  以滑鼠右鍵按一下物件總管的標題列，然後按一下 [浮動]****，使物件總管不再停駐。  
   
-9. 若要還原預設組態，請在 [視窗]  功能表上，按一下 [重設視窗配置]  。  
+9. 若要還原預設組態，請在 [視窗]**** 功能表上，按一下 [重設視窗配置]****。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [顯示查詢視窗](lesson-1-4-display-the-query-window.md)  

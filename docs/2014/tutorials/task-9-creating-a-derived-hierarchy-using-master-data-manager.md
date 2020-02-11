@@ -1,5 +1,5 @@
 ---
-title: 工作 9：建立衍生階層，使用主資料管理員 |Microsoft Docs
+title: 工作9：使用主資料管理員建立衍生階層 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,56 +11,56 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7cb2f12115e3fe743c49c2f7e69f765da4501ba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489522"
 ---
 # <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>工作 9：使用主資料管理員建立衍生階層
-  在這項工作中，您會使用主資料管理員建立衍生階層。 這個衍生的階層衍生自網域屬性關聯性之間**供應商**並**狀態**實體。  
+  在這項工作中，您會使用主資料管理員建立衍生階層。 這個衍生階層衍生自**供應商**和**州**實體之間的網域屬性關聯性。  
   
-1.  切換至的主頁面**主資料管理員**依序按一下**SQL Server 2012 Master Data Services**頁面的頂端。  
+1.  按一下頁面頂端的 [ **SQL Server 2012 Master Data Services** ]，切換至**主資料管理員**的主頁面。  
   
-2.  按一下 [**系統管理]** 中**系統管理工作**一節。  
+2.  按一下 [**管理**工作] 區段中的 [**系統管理**]。  
   
-3.  將滑鼠移**管理**功能表，然後按一下 **衍生階層**。  
+3.  將滑鼠停留在功能表列上的 [**管理**] 上，然後按一下 [**衍生**階層]。  
   
-     ![管理功能表中，選取的衍生階層](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-01.jpg "管理功能表中，選取的衍生階層")  
+     ![管理功能表 - 已選取 [衍生階層]](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-01.jpg "管理功能表 - 已選取 [衍生階層]")  
   
-4.  按一下 **加入衍生階層 （+）** 工具列上的按鈕。  
+4.  按一下工具列上的 **[加入衍生階層] （+）** 按鈕。  
   
-     ![加入衍生的階層 按鈕](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-02.jpg "加入衍生的階層 按鈕")  
+     ![[加入衍生階層] 按鈕](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-02.jpg "[加入衍生階層] 按鈕")  
   
-5.  型別**SuppliersInState** for**衍生階層名稱**。  
+5.  針對 [衍生階層**名稱**] 輸入**SuppliersInState** 。  
   
-6.  按一下 **儲存**工具列上的按鈕。  
+6.  按一下工具列上的 [**儲存**] 按鈕。  
   
-     ![儲存衍生階層 按鈕](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-03.jpg "儲存衍生階層 按鈕")  
+     ![[儲存衍生階層] 按鈕](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-03.jpg "[儲存衍生階層] 按鈕")  
   
-7.  拖曳**供應商**從**可用層級：SuppliersInState**至**目前層級：SuppliersInState**。  
+7.  從可用的**層級**拖曳**供應商**： SuppliersInState 至**目前的層級： SuppliersInState**。  
   
-     ![可用的實體和階層目前層級](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-04.jpg "可用的實體和階層目前層級")  
+     ![目前層級可用的實體和階層](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-04.jpg "目前層級可用的實體和階層")  
   
-8.  拖曳**狀態**從**可用層級：SuppliersInState**至**目前層級：SuppliersInState**。 畫面上應該有**目前的層級**如下圖所示。  
+8.  從**** 可用的**層級拖曳狀態： SuppliersInState**到**目前的層級： SuppliersInState**。 畫面應具有**目前的層級**，如下圖所示。  
   
-     ![目前的層級和衍生階層的預覽](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-05.jpg "目前層級與預覽衍生階層")  
+     ![衍生階層的目前層級和預覽](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-05.jpg "衍生階層的目前層級和預覽")  
   
-9. 在 [ **Preview** ] 視窗中，展開**NY {New York}** ，如上圖所示，您應該看到該狀態中的一家供應商。  
+9. 在 [**預覽**] 視窗中，展開 [ **NY {紐約}** ]，您應該會看到該狀態的一個供應商，如上圖所示。  
   
-10. 切換至的主頁面**主資料管理員**依序按一下**SQL Server 2012 Master Data Services**頁面的頂端。  
+10. 按一下頁面頂端的 [ **SQL Server 2012 Master Data Services** ]，切換至**主資料管理員**的主頁面。  
   
-11. 按一下 **[總管]** 。  
+11. 按一下 **[總管]**。  
   
-12. 將滑鼠移**階層**然後按一下**衍生： SuppliersInState**。  
+12. 將滑鼠**停留在階層上，** 然後按一下 [**衍生： SuppliersInState**]。  
   
-     ![階層-[衍生： SuppliersInState] 功能表](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-06.jpg "階層-[衍生： SuppliersInState] 功能表")  
+     ![階層 - [衍生:SuppliersInState] 功能表](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-06.jpg "階層 - [衍生:SuppliersInState] 功能表")  
   
-13. 按一下任何**狀態**中的節點**樹狀檢視**，您應該會看到供應商附於右窗格中的該狀態。  
+13. 按一下**樹狀檢視**中的任何**狀態**節點，您應該會在右窗格中看到該狀態的供應商。  
   
-     ![衍生階層總管 中](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-07.jpg "衍生階層總管 中")  
+     ![檔案總管中的衍生階層](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-07.jpg "檔案總管中的衍生階層")  
   
-## <a name="next-step"></a>下一個步驟  
- [第 5 課：自動化清理和比對使用 SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
+## <a name="next-step"></a>後續步驟  
+ [第 5 課：使用 SSIS 自動化清理和比對](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
   
   

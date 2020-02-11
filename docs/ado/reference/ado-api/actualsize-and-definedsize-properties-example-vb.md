@@ -1,5 +1,5 @@
 ---
-title: ActualSize 和 DefinedSize 屬性範例 (VB) |Microsoft Docs
+title: ActualSize 和 DefinedSize 屬性範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: bff2c273-b535-4b32-83b3-0336a406859c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4aa9738232eae175c78596f741d3f1bcce0910b6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887383"
 ---
-# <a name="actualsize-and-definedsize-properties-example-vb"></a>ActualSize 和 DefinedSize 屬性範例 (VB)
-這個範例會使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)和[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)屬性, 顯示欄位的定義大小和實際大小。  
+# <a name="actualsize-and-definedsize-properties-example-vb"></a>ActualSize 和 DefinedSize 屬性範例（VB）
+這個範例會使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)和[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)屬性，顯示欄位的定義大小和實際大小。  
   
 ```vb
 'BeginActualSizeVB  
@@ -88,6 +88,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ActualSize 屬性 (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
+ [ActualSize 屬性（ADO）](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [DefinedSize 屬性](../../../ado/reference/ado-api/definedsize-property.md)   
  [Field 物件](../../../ado/reference/ado-api/field-object.md)

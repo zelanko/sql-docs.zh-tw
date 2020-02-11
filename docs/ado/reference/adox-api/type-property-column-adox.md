@@ -1,5 +1,5 @@
 ---
-title: 輸入屬性 (Column) (ADOX) |Microsoft Docs
+title: Type 屬性（Column）（ADOX） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,25 +20,25 @@ ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 190d60fc5724286118a2209a60f8bee1d0835a37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965022"
 ---
 # <a name="type-property-column-adox"></a>Type 屬性 (Column) (ADOX)
-指出資料行的資料類型。  
+表示資料行的資料類型。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回**長**值，可以是其中一個[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)常數。 預設值是**adVarWChar**。  
+ 設定或傳回可以是其中一個[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)常數的**Long**值。 預設值為**adVarWChar**。  
   
 ## <a name="remarks"></a>備註  
- 這個屬性是讀取/寫入，直到[資料行](../../../ado/reference/adox-api/column-object-adox.md)物件會附加至集合或另一個物件之後，它是唯讀的。  
+ 在資料[行](../../../ado/reference/adox-api/column-object-adox.md)物件附加至集合或另一個物件之後，此屬性會是讀取/寫入，因為它是唯讀的。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Column 物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ParentCatalog 屬性範例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [Type 屬性 (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
+ [ParentCatalog 屬性範例（VB）](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
+ [Type 屬性（Key）（ADOX）](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [Type 屬性 (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

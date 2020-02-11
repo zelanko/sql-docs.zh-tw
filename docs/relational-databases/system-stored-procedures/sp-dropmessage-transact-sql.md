@@ -1,5 +1,5 @@
 ---
-title: sp_dropmessage (TRANSACT-SQL) |Microsoft Docs
+title: sp_dropmessage （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a8e6a8187936e7a2f824315123937cf9c7eca9c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933862"
 ---
-# <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
+# <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  從 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體中，卸除指定的使用者自訂錯誤訊息。 可以使用來檢視使用者自訂訊息**sys.messages**目錄檢視。  
+  從 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體中，卸除指定的使用者自訂錯誤訊息。 您可以使用**sys.databases**目錄檢視來查看使用者定義的訊息。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,9 +40,9 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @msgnum = ] message_number` 是要卸除的訊息編號。 *message_number*必須是訊息編號大於 50000 的使用者定義的訊息。 *message_number*已**int**，預設值是 NULL。  
+`[ @msgnum = ] message_number`這是要卸載的訊息編號。 *message_number*必須是訊息編號大於50000的使用者自訂訊息。 *message_number*是**int**，預設值是 Null。  
   
-`[ @lang = ] 'language'` 是要卸除之訊息的語言。 如果**所有**指定的所有語言版本*message_number*會卸除。 *語言*已**sysname**，預設值是 NULL。  
+`[ @lang = ] 'language'`這是要卸載之訊息的語言。 如果指定**all** ，則會捨棄*message_number*的所有語言版本。 *language*是**sysname**，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -50,16 +50,16 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="result-sets"></a>結果集  
  無。  
   
-## <a name="permissions"></a>Permissions  
- 需要的成員資格**sysadmin**並**serveradmin**固定伺服器角色。  
+## <a name="permissions"></a>權限  
+ 需要**sysadmin**和**serveradmin**固定伺服器角色中的成員資格。  
   
 ## <a name="remarks"></a>備註  
- 除非**所有**指定*語言*、 所有當地語系化的訊息版本必須先卸除之前美國卸除訊息的英文版。  
+ 除非已針對*language*指定**all** ，否則必須先卸載訊息的所有當地語系化版本，才能卸載美國英文版的訊息。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-dropping-a-user-defined-message"></a>A. 卸除使用者自訂訊息  
- 下列範例會卸除使用者定義的訊息，而數字`50001`，從**sys.messages**。  
+ 下列範例會從**sys.databases**中卸載使用者定義的訊息`50001`（數位）。  
   
 ```  
 USE master;  
@@ -132,9 +132,9 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sp_altermessage &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
- [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
+ [sp_addmessage &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_altermessage &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [FORMATMESSAGE &#40;Transact-sql&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

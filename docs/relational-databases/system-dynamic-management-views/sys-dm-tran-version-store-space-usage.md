@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_version_store_space_usage & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.databases dm_tran_version_store_space_usage （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -21,32 +21,32 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2a4fac732f784a401206f37fb2af9d3d8e0688ba
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262656"
 ---
-# <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdm_tran_version_store_space_usage-transact-sql"></a>sys.databases dm_tran_version_store_space_usage （Transact-sql）
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
-傳回顯示總空間在 tempdb 版本存放區記錄用於每個資料庫中的資料表。 **sys.dm_tran_version_store_space_usage**有效率，而且可以執行，因為它不會不會瀏覽個別的版本存放區記錄，並傳回彙總每個資料庫 tempdb 中所使用的版本存放區空間成本不高。
+傳回資料表，其中顯示每個資料庫的版本存放區記錄所使用的 tempdb 中的總空間。 **dm_tran_version_store_space_usage**效率較高，而且執行成本不高，因為它不會流覽個別的版本存放區記錄，而且會傳回每個資料庫的 tempdb 中所耗用的匯總版本存放區空間。
   
-每個版本控制記錄會儲存為二進位資料，連同一些追蹤或狀態資訊。 與資料庫資料表中的記錄類似，版本存放區記錄也是儲存在 8192 位元組的頁面中。 如果記錄超出 8192 位元組，該記錄便會分割成兩個不同的記錄。  
+每個已建立版本的記錄都會儲存為二進位資料，以及一些追蹤或狀態資訊。 與資料庫資料表中的記錄類似，版本存放區記錄也是儲存在 8192 位元組的頁面中。 如果記錄超出 8192 位元組，該記錄便會分割成兩個不同的記錄。  
   
-因為版本控制記錄是以二進位儲存，所以不同資料庫的不同定序不會造成問題。 使用**sys.dm_tran_version_store_space_usage**至基礎資料庫中的 SQL Server 執行個體的版本存放區空間使用量的監視和規劃 tempdb 大小。
+因為版本控制記錄是以二進位儲存，所以不同資料庫的不同定序不會造成問題。 使用**dm_tran_version_store_space_usage** ，根據 SQL Server 實例中資料庫的版本存放區空間使用量，來監視和規劃 tempdb 大小。
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|資料庫的資料庫識別碼。|  
-|**reserved_page_count**|**bigint**|在 tempdb 的版本中保留頁面的總計數儲存資料庫的記錄。|  
-|**reserved_space_kb**|**bigint**|版本以 kb 為單位，在 tempdb 中所使用的總空間存放區資料庫的記錄。|  
+|**reserved_page_count**|**Bigint**|資料庫的版本存放區記錄之 tempdb 中保留的總頁數。|  
+|**reserved_space_kb**|**Bigint**|資料庫的版本存放區記錄在 tempdb 中使用的總空間（以 kb 為單位）。|  
   
-## <a name="permissions"></a>Permissions  
-在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
+## <a name="permissions"></a>權限  
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要許可權。   
 
 ## <a name="examples"></a>範例  
-下列查詢可用來判斷是否使用 tempdb 中的空間中的版本存放區中每個資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 
+下列查詢可用來根據[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例中每個資料庫的版本存放區，來判斷 tempdb 中所耗用的空間。 
   
 ```sql  
 SELECT 
