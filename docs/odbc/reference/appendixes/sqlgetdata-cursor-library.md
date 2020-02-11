@@ -13,29 +13,29 @@ ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5962882de08712dcff75790de7c58d69f965a3bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086377"
 ---
 # <a name="sqlgetdata-cursor-library"></a>SQLGetData (資料指標程式庫)
 > [!IMPORTANT]  
->  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
+>  這項功能將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
   
- 本主題討論使用**SQLGetData**資料指標程式庫中的函式。 如需一般資訊**SQLGetData**，請參閱[SQLGetData 函數](../../../odbc/reference/syntax/sqlgetdata-function.md)。  
+ 本主題討論如何在資料指標程式庫中使用**SQLGetData**函數。 如需有關**SQLGetData**的一般資訊，請參閱[SQLGetData 函數](../../../odbc/reference/syntax/sqlgetdata-function.md)。  
   
- 資料指標程式庫會實作**SQLGetData**首先透過建構**選取**陳述式搭配**其中**列舉每個繫結其快取中儲存之值的子句目前的資料列中的資料行。 接著它會執行**選取** 陳述式以重新選取資料列，然後呼叫**SQLGetData**中驅動程式 （而不是快取） 資料來源擷取資料。  
+ 資料指標程式庫會先使用**WHERE**子句來建立**SELECT**語句，以列舉在目前資料列中每個系結資料行的快取中儲存的值，藉以執行**SQLGetData** 。 然後，它會執行**SELECT**語句來重新選取資料列，並呼叫驅動程式中的**SQLGetData** ，以從資料來源（而不是快取）抓取資料。  
   
 > [!CAUTION]  
->  **其中**建構的資料指標程式庫，以識別目前的資料列的子句無法識別的任何資料列、 找出不同的資料列，或識別一個以上的資料列。 如需詳細資訊，請參閱 <<c0> [ 建構搜尋的陳述式](../../../odbc/reference/appendixes/constructing-searched-statements.md)。  
+>  用來識別目前資料列的資料指標程式庫所建立的**WHERE**子句，可能無法識別任何資料列、識別不同的資料列，或識別一個以上的資料列。 如需詳細資訊，請參閱[建立搜尋的語句](../../../odbc/reference/appendixes/constructing-searched-statements.md)。  
   
- 如果 SQL_ATTR_USE_BOOKMARKS 陳述式屬性設定為 SQL_UB_VARIABLE， **SQLGetData**可呼叫資料行 0 傳回書籤的資料。  
+ 如果 SQL_ATTR_USE_BOOKMARKS 語句屬性設定為 SQL_UB_VARIABLE，可以在資料行0上呼叫**SQLGetData**以傳回書簽資料。  
   
- 若要呼叫**SQLGetData**受到下列限制：  
+ 對**SQLGetData**的呼叫會受到下列限制：  
   
--   **SQLGetData**無法為順向資料指標呼叫。  
+-   無法針對順向資料指標呼叫**SQLGetData** 。  
   
--   **SQLGetData**只有在符合下列條件時，才可以呼叫：**選取**產生的結果集的陳述式;**選取**陳述式未包含聯結， **UNION**子句，或有**GROUP BY**子句，並使用別名或運算式選取清單中的任何資料行已不會與繫結**SQLBindCol**。  
+-   只有在符合下列條件時，才可以呼叫**SQLGetData** ： **SELECT**語句產生結果集;**SELECT**語句不包含 Join、 **UNION**子句或**GROUP BY**子句。而在選取清單中使用別名或運算式的任何資料行，都不會與**SQLBindCol**系結。  
   
--   如果此驅動程式支援只有一個作用中陳述式，資料指標程式庫，將會擷取結果集之前執行的 rest**選取** 陳述式，並呼叫**SQLGetData**。
+-   如果驅動程式只支援一個作用中的語句，則資料指標程式庫會在執行**SELECT**語句並呼叫**SQLGetData**之前，先提取結果集的其餘部分。

@@ -1,5 +1,5 @@
 ---
-title: sys.symmetric_keys (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases symmetric_keys （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5b4607c5873889c17e9934cc4f24465fe4e83007
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108936"
 ---
-# <a name="syssymmetrickeys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
+# <a name="syssymmetric_keys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   為透過 CREATE SYMMETRIC KEY 陳述式所建立的各個對稱金鑰傳回一個資料列。  
@@ -38,17 +38,17 @@ ms.locfileid: "68108936"
 |**principal_id**|**int**|擁有金鑰的資料庫主體識別碼。|  
 |**symmetric_key_id**|**int**|金鑰的識別碼。 在資料庫中，這是唯一的。|  
 |**key_length**|**int**|金鑰的長度 (以位元為單位)。|  
-|**key_algorithm**|**char(2)**|金鑰使用的演算法：<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = Triple DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = EKM 金鑰|  
-|**algorithm_desc**|**nvarchar(60)**|金鑰使用之演算法的描述：<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL (僅限 Extensible Key Management 演算法)|  
+|**key_algorithm**|**char （2）**|金鑰使用的演算法：<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = Triple DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = EKM 金鑰|  
+|**algorithm_desc**|**Nvarchar （60）**|金鑰使用之演算法的描述：<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL (僅限 Extensible Key Management 演算法)|  
 |**create_date**|**datetime**|建立金鑰的日期。|  
 |**modify_date**|**datetime**|修改金鑰的日期。|  
 |**key_guid**|**uniqueidentifier**|與金鑰相關聯的全域唯一識別碼 (GUID)。 它會為保存的金鑰自動產生。 暫時金鑰的 GUID 衍生自使用者提供的複雜密碼。|  
 |**key_thumbprint**|**sql_variant**|金鑰的 SHA-1 雜湊。 此雜湊是全域唯一的。 如果是非 Extensible Key Management 金鑰，這個值將會是 NULL。|  
-|**provider_type**|**nvarchar(120)**|密碼編譯提供者的類型：<br /><br /> CRYPTOGRAPHIC PROVIDER = Extensible Key Management 金鑰<br /><br /> NULL = 非 Extensible Key Management 金鑰|  
+|**provider_type**|**Nvarchar （120）**|密碼編譯提供者的類型：<br /><br /> CRYPTOGRAPHIC PROVIDER = Extensible Key Management 金鑰<br /><br /> NULL = 非 Extensible Key Management 金鑰|  
 |**cryptographic_provider_guid**|**uniqueidentifier**|密碼編譯提供者的 GUID。 如果是非 Extensible Key Management 金鑰，這個值將會是 NULL。|  
 |**cryptographic_provider_algid**|**sql_variant**|密碼編譯提供者的演算法識別碼。 如果是非 Extensible Key Management 金鑰，這個值將會是 NULL。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="remarks"></a>備註  
@@ -68,7 +68,7 @@ ms.locfileid: "68108936"
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [安全性目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性目錄檢視](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
   

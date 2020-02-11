@@ -1,5 +1,5 @@
 ---
-title: Optimize 屬性範例 （VC + +） |Microsoft Docs
+title: Optimize 屬性範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5000a537e068136de98e8635f348ff6aa3d9e364
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931832"
 ---
 # <a name="optimize-property-example-vc"></a>Optimize 屬性範例 (VC++)
-此範例示範[欄位](../../../ado/reference/ado-api/field-object.md)物件的動態**最佳化**屬性。 **Zip**欄位**作者**資料表中**Pubs**資料庫未編製索引。 設定[最佳化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)屬性設 **，則為 True**上**zip**欄位會授與建立索引可提升效能的 ADO[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法。  
+這個範例會示範[Field](../../../ado/reference/ado-api/field-object.md)物件 dynamic **Optimize**屬性。 在**Pubs**資料庫中，**作者**資料表的**zip**欄位未編制索引。 將**zip**欄位上的[Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)屬性設定為**True** ，會授權 ADO 建立索引，以提升[Find](../../../ado/reference/ado-api/find-method-ado.md)方法的效能。  
   
 ## <a name="example"></a>範例  
   
@@ -132,7 +132,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Akiko Yokomoto 3 Silver ct核桃河市 CA**   
+ **Akiko Yokomoto 3 銀的 Ct. 胡桃會一籌莫展 CA**   
 ## <a name="see-also"></a>另請參閱  
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
  [Optimize 動態屬性 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

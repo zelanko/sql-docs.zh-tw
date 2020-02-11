@@ -1,5 +1,5 @@
 ---
-title: sp_lookupcustomresolver (TRANSACT-SQL) |Microsoft Docs
+title: sp_lookupcustomresolver （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 274276a55a7b3e91ff85330a0810f01786a5a080
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937909"
 ---
-# <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
+# <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回登錄在散發者端的 COM 型自訂解析程式元件之商務邏輯處理常式或類別識別碼 (CLSID) 值的相關資訊。 這個預存程序執行於發行集資料庫的發行者端。  
@@ -42,38 +42,38 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @article_resolver = ] 'article_resolver'` 指定要取消登錄的自訂商務邏輯名稱。 *article_resolver*已**nvarchar(255)** ，沒有預設值。 如果移除的商務邏輯是 COM 元件，這個參數就是元件的易記名稱。 如果商務邏輯是一個 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 組件，這個參數就是組件的名稱。  
+`[ @article_resolver = ] 'article_resolver'`指定要取消註冊之自訂商務邏輯的名稱。 *article_resolver*是**Nvarchar （255）**，沒有預設值。 如果移除的商務邏輯是 COM 元件，這個參數就是元件的易記名稱。 如果商務邏輯是一個 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 組件，這個參數就是組件的名稱。  
   
-`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` 指定的自訂商務邏輯的名稱相關聯的 COM 物件的 CLSID 值*article_resolver*參數。 *resolver_clsid*已**nvarchar(50)** ，預設值是 NULL。  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT`這是與*article_resolver*參數中指定的自訂商務邏輯名稱相關聯之 COM 物件的 CLSID 值。 *resolver_clsid*是**Nvarchar （50）**，預設值是 Null。  
   
-`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` 指定要登錄的自訂商務邏輯的類型。 *is_dotnet_assembly*已**元**，預設值是 0。 **1**表示要登錄的自訂商務邏輯是商務邏輯處理常式組件。**0**表示它是 COM 元件。  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT`指定要註冊之自訂商務邏輯的類型。 *is_dotnet_assembly*是**bit**，預設值是0。 **1**表示要註冊的自訂商務邏輯是商務邏輯處理常式元件;**0**表示它是 COM 元件。  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` 是實作商務邏輯處理常式的組件名稱。 *dotnet_assembly_name*已**nvarchar(255)** ，預設值是 NULL。  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT`這是實作為商務邏輯處理常式的元件名稱。 *dotnet_assembly_name*是**Nvarchar （255）**，預設值是 Null。  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` 覆寫的類別名稱<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>實作商務邏輯處理常式。 *dotnet_class_name*已**nvarchar(255)** ，預設值是 NULL。  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT`這是覆寫<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>來實行商務邏輯處理常式的類別名稱。 *dotnet_class_name*是**Nvarchar （255）**，預設值是 Null。  
   
-`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，預設值是 NULL。 當並未從發行者呼叫預存程序時，請使用這個參數。 若未指定，就假設本機伺服器是發行者。  
+`[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**，預設值是 Null。 當並未從發行者呼叫預存程序時，請使用這個參數。 若未指定，就假設本機伺服器是發行者。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
  **sp_lookupcustomresolver**用於合併式複寫中。  
   
- **sp_lookupcustomresolver**傳回的 NULL 值*resolver_clsid*當元件並未登錄於散發，值是"00000000-0000-0000-0000-000000000000"當登錄屬於.NET framework 組件註冊為商務邏輯處理常式。  
+ 當元件未在散發時註冊時， **sp_lookupcustomresolver**會傳回*resolver_clsid*的 Null 值，而當註冊屬於註冊為商務邏輯處理常式的 .NET Framework 元件時，則會傳回 "00000000-0000-0000-0000-000000000000" 值。  
   
- **sp_lookupcustomresolver**會呼叫[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)並[sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)來驗證指定*article_resolver*。  
+ [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)和[sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)會呼叫**sp_lookupcustomresolver** ，以驗證指定的*article_resolver*。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**db_owner**發行集資料庫的固定的資料庫角色可以執行**sp_lookupcustomresolver**。  
+## <a name="permissions"></a>權限  
+ 只有發行集資料庫中**db_owner**固定資料庫角色的成員，才能夠執行**sp_lookupcustomresolver**。  
   
 ## <a name="see-also"></a>另請參閱  
- [進階合併式複寫衝突偵測與解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [先進合併式複寫衝突偵測與解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [在合併同步處理期間執行商務邏輯](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
- [為合併發行項實作商務邏輯處理常式](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
+ [執行合併發行項的商務邏輯處理常式](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [指定合併發行項解析程式](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   
- [sp_registercustomresolver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
- [sp_unregistercustomresolver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
+ [sp_registercustomresolver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
+ [sp_unregistercustomresolver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

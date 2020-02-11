@@ -1,5 +1,5 @@
 ---
-title: Move 方法範例 (VB) |Microsoft Docs
+title: Move 方法範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 55eb797a-0205-40d2-a797-55b216d1d3bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 258f915b560bf7da9110909ada0f015fdc36af63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932126"
 ---
 # <a name="move-method-example-vb"></a>Move 方法範例 (VB)
-這個範例會使用[移動](../../../ado/reference/ado-api/move-method-ado.md)方法，以記錄指標位置會根據使用者輸入。  
+這個範例會使用[Move](../../../ado/reference/ado-api/move-method-ado.md)方法，根據使用者輸入來放置記錄指標。  
   
 ```  
 'BeginMoveVB  
@@ -127,5 +127,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Move 方法 (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
+ [Move 方法（ADO）](../../../ado/reference/ado-api/move-method-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

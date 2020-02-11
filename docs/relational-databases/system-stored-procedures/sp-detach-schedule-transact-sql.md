@@ -1,5 +1,5 @@
 ---
-title: sp_detach_schedule (TRANSACT-SQL) |Microsoft Docs
+title: sp_detach_schedule （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: aed989cc09922b7b480a7dd7b3ca6820d6b77ab2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936746"
 ---
-# <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
+# <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   移除排程和作業之間的關聯。  
@@ -42,30 +42,30 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_id = ] job_id` 若要從排程中移除工作作業識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
+`[ @job_id = ] job_id`要從其中移除排程之作業的作業識別碼。 *job_id*是**uniqueidentifier**，預設值是 Null。  
   
-`[ @job_name = ] 'job_name'` 要從排程中移除的作業名稱。 *job_name*已**sysname**，預設值是 NULL。  
-  
-> [!NOTE]  
->  任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
-  
-`[ @schedule_id = ] schedule_id` 若要從作業移除排程的排程識別碼。 *schedule_id*已**int**，預設值是 NULL。  
-  
-`[ @schedule_name = ] 'schedule_name'` 若要從作業移除排程的名稱。 *schedule_name&lt*已**sysname**，預設值是 NULL。  
+`[ @job_name = ] 'job_name'`要從其中移除排程的作業名稱。 *job_name*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  任一*schedule_id*或是*schedule_name&lt*必須指定，但不可同時指定兩者。  
+>  必須指定*job_id*或*job_name* ，但不能同時指定兩者。  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` 指定是否要刪除未使用的作業排程。 *delete_unused_schedule*已**位元**，預設值是**0**，這表示，將會保留所有排程，即使沒有作業參考它們。 如果設定為**1**，如果沒有作業參考它們，會刪除未使用的作業排程。  
+`[ @schedule_id = ] schedule_id`要從作業中移除之排程的排程識別碼。 *schedule_id*是**int**，預設值是 Null。  
+  
+`[ @schedule_name = ] 'schedule_name'`要從作業中移除之排程的名稱。 *schedule_name*是**sysname**，預設值是 Null。  
+  
+> [!NOTE]  
+>  必須指定*schedule_id*或*schedule_name* ，但不能同時指定兩者。  
+  
+`[ @delete_unused_schedule = ] delete_unused_schedule`指定是否要刪除未使用的作業排程。 *delete_unused_schedule*是**bit**，預設值是**0**，這表示將會保留所有排程，即使沒有作業參考它們也是如此。 如果設定為**1**，如果沒有任何作業參考未使用的作業排程，則會予以刪除。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
  None  
   
-## <a name="permissions"></a>Permissions  
- 依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
+## <a name="permissions"></a>權限  
+ 根據預設，**系統管理員（sysadmin** ）固定伺服器角色的成員可以執行此預存程式。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
   
 -   **SQLAgentUserRole**  
   
@@ -77,7 +77,8 @@ sp_detach_schedule
   
  如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會檢查以判斷使用者是否擁有這份排程。 只有成員**sysadmin**固定的伺服器角色可以卸離排程，從另一位使用者所擁有的作業。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會檢查以判斷使用者是否擁有這份排程。 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠從其他使用者擁有的作業中卸離排程。  
   
 ## <a name="examples"></a>範例  
  下列範例會移除 `'NightlyJobs'` 排程和 `'BackupDatabase'` 作業之間的關聯。  
@@ -93,8 +94,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

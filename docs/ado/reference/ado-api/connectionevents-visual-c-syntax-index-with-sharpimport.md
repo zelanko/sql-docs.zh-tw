@@ -1,5 +1,5 @@
 ---
-title: 'ConnectionEvents (VisualC++含 #import 語法索引) |Microsoft Docs'
+title: 'ConnectionEvents （Visual C++ #import 的語法索引） |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: dd052d36-7730-4400-822b-0544fb1992b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e813759c6500d8982145d12bac57f75448a9574d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919469"
 ---
-# <a name="connectionevents-visual-c-syntax-index-with-import"></a>ConnectionEvents (VisualC++含 #import 語法索引)
-## <a name="events"></a>Events  
+# <a name="connectionevents-visual-c-syntax-index-with-import"></a>ConnectionEvents （使用 #import Visual C++ 語法索引）
+## <a name="events"></a>事件  
   
 ```  
 HRESULT InfoMessage( struct Error * pError, enum  

@@ -1,5 +1,5 @@
 ---
-title: IsolationLevel 和 Mode 屬性範例 （VC + +） |Microsoft Docs
+title: IsolationLevel 和 Mode 屬性範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb39288499e2a78523ca29f2e1e4feff4ea9a310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932312"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 和 Mode 屬性範例 （VC + +）
-這個範例會使用[模式](../../../ado/reference/ado-api/mode-property-ado.md)屬性，以開啟專屬的連線，而[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)開啟執行的交易中的其他交易隔離。  
+# <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 和 Mode 屬性範例（VC + +）
+這個範例會使用[Mode](../../../ado/reference/ado-api/mode-property-ado.md)屬性來開啟獨佔連接，而[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)屬性則是用來開啟在隔離其他交易時所執行的交易。  
   
 ## <a name="example"></a>範例  
   
@@ -223,26 +223,26 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **連線模式是專屬**  
-**交易隔離**  
-**忙碌中執行的資料庫指南-商務**  
-**烹飪的電腦：展開的資產負債表-商務**  
-**您可以對抗電腦壓力 ！-商務**  
-**電腦-商務相關的討論**  
-**矽谷 Gastronomic 視為 mod_cook**  
-**美食微波爐的電源-mod_cook**  
-**電腦烹飪-未決的心理**  
-**但它是使用者易記嗎？-popular_comp**  
-**矽谷-popular_comp 的祕密**  
+ **連接模式是獨佔的**  
+**交易已隔離**  
+**忙碌主管的資料庫指南-商務**  
+**電腦的烹飪： Surreptitious 餘額表-商務**  
+**您可以對抗電腦壓力！-商務**  
+**關於電腦的直接討論-商務**  
+**矽谷 Gastronomic mod_cook**  
+**Gourmet 微波爐-mod_cook**  
+**電腦烹飪的心理-UNDECIDED**  
+**但它是使用者易記的嗎？-popular_comp**  
+**矽谷 popular_comp 的秘密**  
 **Net 禮儀-popular_comp**  
-**電腦 Phobic 且非恐懼症個人：行為變化-self_help**  
-**是憤怒帶來的敵人嗎？-self_help**  
-**而不必擔心-self_help 生命**  
-**長時間的資料 Deprivation:四個案例研究-self_help**  
-**情感的安全性：新的演算法-self_help**  
-**Onions、 Leeks 和大蒜：烹飪地中海-trad_cook 的祕密**  
-**Buckingham Palace 這些 trad_cook 五十個年份**  
-**壽司，任何人？-trad_cook**   
+**電腦恐懼症和非恐懼症個人：行為變化-self_help**  
+**是否生氣敵人？-self_help**  
+**不擔心 self_help 的生活**  
+**長時間的資料 Deprivation：四個個案研究-self_help**  
+**情緒安全性：新的演算法-self_help**  
+**Onions、Leeks 和大蒜：烹飪地中海的秘密-trad_cook**  
+**50年 Buckingham Palace 廚房-trad_cook**  
+**壽司，任何人都能-trad_cook**   
 ## <a name="see-also"></a>另請參閱  
  [IsolationLevel 屬性](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode 屬性 (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

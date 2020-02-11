@@ -16,38 +16,38 @@ ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70a6dd02722a34159b345a83b32897aa8c38d0ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920780"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 介面
-**ADOStreamConstruction**介面用來建構 ADO **Stream**的 OLE DB 物件**IStream** C 中的物件 /C++應用程式。  
+**ADOStreamConstruction**介面是用來從 C/c + + 應用程式中的 OLE DB **IStream**物件，來建立 ADO**資料流程**物件。  
   
 ## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
-|[Stream 屬性](../../../ado/reference/ado-api/stream-property.md)|讀取/寫入。 取得/設定 OLE DB **Stream**物件。|  
+|[Stream 屬性](../../../ado/reference/ado-api/stream-property.md)|讀取/寫入。 取得/設定 OLE DB**資料流程**物件。|  
   
 ## <a name="methods"></a>方法  
  無。  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>事件  
  無。  
   
 ## <a name="remarks"></a>備註  
- 指定 OLE DB **IStream**物件 (`pStream`)，建構的 ADO **Stream**物件 (`adoStr`) 相當於下列三種基本作業：  
+ 假設有一個**** OLE DB 的 IStream`pStream`物件（），將 ADO **Stream**物件（`adoStr`）的結構為下列三個基本作業：  
   
-1.  建立 ADO **Stream**物件：  
+1.  建立 ADO**資料流程**物件：  
   
     ```  
     Stream20Ptr adoStr;  
     adoStr.CreateInstance(__uuidof(Stream));  
     ```  
   
-2.  查詢**IADOStreamConstruction**介面上**Stream**物件：  
+2.  查詢**Stream**物件上的**IADOStreamConstruction**介面：  
   
     ```  
     adoStreamConstructionPtr adoStrConstruct=NULL;  
@@ -55,7 +55,7 @@ ms.locfileid: "67920780"
                          (void**)&adoStrConstruct);  
     ```  
   
- 呼叫`IADOStreamConstruction::get_Stream`屬性的方法，來設定 OLE DB **IStream** ado 物件**Stream**物件：  
+ 呼叫`IADOStreamConstruction::get_Stream`屬性方法，以在 ADO**資料流程**物件上設定 OLE DB **IStream**物件：  
   
 ```  
 IUnknown *pUnk=NULL;  
@@ -63,14 +63,14 @@ pRowset->QueryInterface(IID_IUnknown, (void**)&pUnk);
 adoStrConstruct->put_Stream(pUnk);  
 ```  
   
- 結果`adoStr`物件現在表示 ADO **Stream**建構從 OLE DB 物件**IStream**物件。  
+ 結果`adoStr`物件現在代表從 OLE DB **IStream**物件所建立的 ADO**資料流程**物件。  
   
 ## <a name="requirements"></a>需求  
  **版本：** ADO 2.0 或更新版本  
   
- **程式庫：** msado15.dll  
+ 連結**庫：** msado15.dll  
   
- **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
+ **UUID：** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>另請參閱  
  [ADO API 參考](../../../ado/reference/ado-api/ado-api-reference.md)

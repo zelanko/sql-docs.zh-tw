@@ -1,5 +1,5 @@
 ---
-title: 新增多個欄位 |Microsoft Docs
+title: 加入多個欄位 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 07a1a3723b4169872c1b8aa872457e67a60d1f71
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926271"
 ---
 # <a name="adding-multiple-fields-and-values"></a>新增多個欄位和值
-有時候，可能會將陣列的欄位和其對應的值，以更有效率**AddNew**方法，而不是設定**值**多次的每個新的欄位。 如果*FieldList*屬於陣列、*值*也必須是陣列具有相同成員數目，否則會發生錯誤。 欄位名稱的順序必須符合每個陣列中的欄位值的順序。 下列程式碼會將陣列的欄位和值的陣列傳遞**AddNew**方法。
+有時候，將欄位的陣列及其對應的值傳入**AddNew**方法可能會更有效率，而不是針對每個新的欄位設定多次的**值**。 如果*FieldList*是陣列，*值*也必須是具有相同成員數目的陣列;否則，就會發生錯誤。 功能變數名稱的順序必須符合每個陣列中域值的順序。 下列程式碼會將欄位陣列和值陣列傳遞給**AddNew**方法。
 
 ```
 'BeginAddNew2

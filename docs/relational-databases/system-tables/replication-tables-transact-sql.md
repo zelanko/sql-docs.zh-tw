@@ -1,5 +1,5 @@
 ---
-title: 複寫資料表 (TRANSACT-SQL) |Microsoft Docs
+title: 複寫資料表（Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dc89ce68529212246d85bdbafa8d9487b77a067
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910231"
 ---
 # <a name="replication-tables-transact-sql"></a>複寫資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  複寫拓撲是由複寫系統資料表所支援。 當使用者資料庫被設定為發行者或訂閱者時，複寫便會將系統資料表加入資料庫中。 當使用者資料庫從複寫拓撲中移除時，也會一併移除這些資料表。 一般規則有關使用系統資料表，請參閱[系統資料表&#40;TRANSACT-SQL&#41;](system-tables-transact-sql.md)。  
+  複寫拓撲是由複寫系統資料表所支援。 當使用者資料庫被設定為發行者或訂閱者時，複寫便會將系統資料表加入資料庫中。 當使用者資料庫從複寫拓撲中移除時，也會一併移除這些資料表。 如需有關使用系統資料表的一般規則，請參閱[系統資料表 &#40;transact-sql&#41;](system-tables-transact-sql.md)。  
   
 ## <a name="replication-tables"></a>複寫資料表  
  下列是複寫所用的系統資料表清單，這些系統資料表是根據資料庫加以分組。  
@@ -34,7 +34,7 @@ ms.locfileid: "67910231"
   
 |||  
 |-|-|  
-|[MSreplication_options &#40;Transact-SQL&#41;](msreplication-options-transact-sql.md)||  
+|[MSreplication_options &#40;Transact-sql&#41;](msreplication-options-transact-sql.md)||  
 | &nbsp; | &nbsp; |
  
 ### <a name="replication-tables-in-the-msdb-database"></a>msdb 資料庫中的複寫資料表  
@@ -73,7 +73,7 @@ ms.locfileid: "67910231"
 |[MSqreader_history](msqreader-history-transact-sql.md)            ||
 | &nbsp; | &nbsp; |
   
- 散發資料庫中的這些資料表用於複寫資料，從非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 如需詳細資訊，請參閱 <<c0> [ 非 SQL Server 發行者](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)。  
+ 散發資料庫中的這些資料表是用來從非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者複寫資料。 如需詳細資訊，請參閱[非 SQL Server 的發行者](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)。  
   
 |||  
 |-|-|  
@@ -91,7 +91,7 @@ ms.locfileid: "67910231"
  
 |||  
 |-|-|  
-|[conflict_\<schema>_\<table>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
+|[conflict_\<架構>_\<資料表>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
 |[MSdynamicsnapshotjobs](msdynamicsnapshotjobs-transact-sql.md)             |[MSpeer_response](mspeer-response-transact-sql.md)|
 |[MSdynamicsnapshotviews](msdynamicsnapshotviews-transact-sql.md)           |[MSpeer_topologyrequest](mspeer-topologyrequest-transact-sql.md)|  
 |[MSmerge_altsyncpartners](msmerge-altsyncpartners-transact-sql.md)         |[MSpeer_topologyresponse](mspeer-topologyresponse-transact-sql.md)|  

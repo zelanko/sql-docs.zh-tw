@@ -1,5 +1,5 @@
 ---
-title: Catalog 物件 (ADO MD) |Microsoft Docs
+title: Catalog 物件（ADO MD） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,29 +16,29 @@ ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b791803b828852a1861e55dd8ec6ef189ea6e84b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930379"
 ---
 # <a name="catalog-object-ado-md"></a>Catalog 物件 (ADO MD)
-包含多維度的結構描述特有的資訊 （也就是 cube 和基礎維度、 階層、 層級和成員） 的多維度資料提供者 (MDP)。  
+包含多維度資料提供者（MDP）特有的多維度架構資訊（也就是 cube 和基礎維度、階層、層級和成員）。  
   
 ## <a name="remarks"></a>備註  
- 使用集合和屬性的**目錄**物件時，您可以執行下列動作：  
+ 使用**目錄**物件的集合和屬性，您可以執行下列動作：  
   
--   藉由設定開啟類別目錄[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)屬性，以標準的 ADO[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件或有效的連接字串。  
+-   將[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)屬性設定為標準的 ADO[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件或有效的連接字串，以開啟目錄。  
   
--   找出**Catalog**具有[名稱](../../../ado/reference/ado-md-api/name-property-ado-md.md)屬性。  
+-   使用[Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)屬性來識別**目錄**。  
   
--   逐一查看目錄，使用 cube [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)集合。  
+-   使用[CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)集合，逐一查看目錄中的 cube。  
   
  本章節包含下列主題。  
   
--   [屬性、 方法和事件](../../../ado/reference/ado-md-api/catalog-object-properties-methods-and-events-ado-md.md)  
+-   [屬性、方法和事件](../../../ado/reference/ado-md-api/catalog-object-properties-methods-and-events-ado-md.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Catalog 範例 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Catalog 範例（VB）](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
+ [Connection 物件（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
  [CubeDefs 集合 (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)

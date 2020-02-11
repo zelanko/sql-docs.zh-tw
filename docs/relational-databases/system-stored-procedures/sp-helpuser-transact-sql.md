@@ -1,5 +1,5 @@
 ---
-title: sp_helpuser & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_helpuser （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a170c5e43329d90a4977db12a98bd9d2e556e91d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68048157"
 ---
-# <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
+# <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   報告目前資料庫中資料庫層級主體的相關資訊。  
   
 > [!IMPORTANT]  
->  **sp_helpuser**不會傳回所導入之安全性實體相關的資訊[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 使用[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)改。  
+>  **sp_helpuser**不會傳回中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]所引進之安全性實體的相關資訊。 請改用[sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,22 +42,22 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name_in_db = ] 'security_account'` 是資料庫使用者或目前資料庫中的資料庫角色的名稱。 *security_account*必須存在於目前的資料庫。 *security_account*已**sysname**，預設值是 NULL。 如果*security_account*未指定，則**sp_helpuser**傳回所有的資料庫主體的相關資訊。  
+`[ @name_in_db = ] 'security_account'`這是目前資料庫中的資料庫使用者或資料庫角色的名稱。 *security_account*必須存在於目前的資料庫中。 *security_account*是**sysname**，預設值是 Null。 如果未指定*security_account* ， **sp_helpuser**會傳回所有資料庫主體的相關資訊。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- 下表顯示的結果集時兩者皆非的使用者帳戶也不是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Windows 使用者指定*security_account*。  
+ 下表顯示未針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *security_account*指定使用者帳戶或或 Windows 使用者時的結果集。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**UserName**|**sysname**|目前資料庫中的使用者。|  
-|**RoleName**|**sysname**|角色**UserName**所屬。|  
-|**LoginName**|**sysname**|登入**UserName**。|  
-|**DefDBName**|**sysname**|預設資料庫**UserName**。|  
+|**RoleName**|**sysname**|使用者**名稱**所屬的角色。|  
+|**LoginName**|**sysname**|使用者**名稱**的登入。|  
+|**DefDBName**|**sysname**|使用者**名稱**的預設資料庫。|  
 |**DefSchemaName**|**sysname**|資料庫使用者的預設結構描述。|  
-|**UserID**|**smallint**|識別碼**UserName**目前資料庫中。|  
+|**UserID**|**smallint**|目前資料庫中的使用者**名稱**識別碼。|  
 |**SID**|**smallint**|使用者安全性識別碼 (SID)。|  
   
  下表顯示未指定使用者帳戶且別名存在於目前資料庫中時的結果集。  
@@ -67,19 +67,19 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**LoginName**|**sysname**|作為目前資料庫中之使用者的別名之登入。|  
 |**UserNameAliasedTo**|**sysname**|目前資料庫中以該登入為別名的使用者名稱。|  
   
- 下表顯示的結果集時指定的角色*security_account*。  
+ 下表顯示為*security_account*指定角色時的結果集。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**Role_name**|**sysname**|目前資料庫中角色的名稱。|  
 |**Role_id**|**smallint**|目前資料庫中角色的角色識別碼。|  
 |**Users_in_role**|**sysname**|目前資料庫中角色的成員。|  
-|**使用者識別碼**|**smallint**|角色成員的使用者識別碼。|  
+|**Userid**|**smallint**|角色成員的使用者識別碼。|  
   
 ## <a name="remarks"></a>備註  
- 若要查看資料庫角色的成員資格的相關資訊，請使用[sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)。 若要查看有關伺服器角色成員的資訊，請使用[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)，並查看伺服器層級主體的相關資訊，請使用[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。  
+ 若要查看資料庫角色成員資格的相關資訊，請使用[sys.databases database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)。 若要查看伺服器角色成員的相關資訊，請使用[sys.databases server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)，若要查看伺服器層級主體的相關資訊，請使用[sys.databases。 server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
   
  傳回的資訊受限於中繼資料存取限制。 主體對其沒有權限的實體不會出現。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
@@ -108,12 +108,12 @@ EXEC sp_helpuser 'db_securityadmin';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的安全性預存程式](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [主體 &#40;資料庫引擎&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
- [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [database_role_members &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
+ [server_principals &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
   
   

@@ -14,16 +14,16 @@ ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3512b484425749ed027f6533dab7398765c1af2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924742"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>非參數化命令的作業
-所有提供者命令執行的非參數化命令，而**資料錄集**命令執行期間所建立。 如果此命令會以同步方式執行所有**資料錄集**會完全擴展。 如果選取的非同步擴展模式，填入的狀態**資料錄集**母體擴展的模式和大小而定**資料錄集**。  
+針對非參數化命令，會執行所有提供者命令，並在命令執行期間建立**記錄集**。 如果命令是以同步方式執行，則會完整填入所有的**記錄集**。 如果選取了非同步擴展模式，則**記錄集**的填入狀態將取決於填入模式和**記錄集**的大小。  
   
- 例如，*父命令*可能會傳回**資料錄集**的 Customers 資料表中，從公司的客戶和*子命令*可能會傳回**資料錄集**的 Orders 資料表中的所有客戶的訂單。  
+ 例如，*父系-命令*可能會從 customers 資料表傳回公司客戶的**記錄集**，而*子命令*可能會從 orders 資料表傳回所有客戶之訂單的**記錄集**。  
   
 ```  
 SHAPE {SELECT * FROM Customers}   
@@ -31,17 +31,17 @@ SHAPE {SELECT * FROM Customers}
    RELATE customerID TO customerID)  
 ```  
   
- 若是非參數化父-子關聯性，每個父系和子系**資料錄集**物件必須具有在一般用來建立關聯的資料行。 在 RELATE 子句中，命名資料行*父資料行*第一次，然後*子資料行*。 資料行可能會有不同的名稱，在其各自**資料錄集**物件，但若要指定有意義的關聯性必須參考相同的資訊。 例如，**客戶**並**訂單資料錄集**物件兩者都可能會有 customerID 欄位。 因為子系的成員資格**Recordset**取決於提供者命令中，子系**資料錄集**可以包含被遺棄的資料列。 不含其他重整，這些被遺棄的資料列都無法存取。  
+ 若為非參數化的父子式關聯性，每個父系和子**記錄集**物件都必須有共同的資料行，才能建立關聯。 這些資料行是在關聯子句、*父資料行*和*子資料行*中命名。 這些資料行在其各自的**記錄集**物件中可能會有不同的名稱，但必須參考相同的資訊，才能指定有意義的關聯。 例如，[ **Customers** ] 和 [ **Orders] 記錄集**物件可以同時具有 [customerID] 欄位。 由於子**記錄集**的成員資格是由 provider 命令所決定，因此子**記錄集**可以包含孤立的資料列。 這些孤立的資料列無法存取，而不需要額外的改變。  
   
- 資料成形將的章節資料行附加至父代**資料錄集**。 章節資料行中的值為子系中的資料列參考**資料錄集**，其滿足 RELATE 子句。 也就是相同的值會處於*父資料行*指定的父資料列中的*子資料行*章子系的所有資料列。 當多個 TO 子句相同的 RELATE 子句中使用時，它們會以隱含方式結合使用 AND 運算子。 如果在 RELATE 子句中的父資料行並不會構成父系的索引鍵**資料錄集**，單一子資料列可以有多個父資料列。  
+ 資料成形會將章節欄位附加至父**記錄集**。 [章節] 資料行中的值是子**記錄集中**的資料列參考，可滿足 [關聯] 子句。 也就是說，相同的值會在指定之父資料列的*父*資料行中，如同在章節子系之所有資料*列的子*資料行中。 當同一個關聯子句中使用多個 TO 子句時，它們會使用 AND 運算子來隱含地結合。 如果關聯子句中的父資料行不會構成父**記錄集**的索引鍵，則單一子資料列可以有多個父資料列。  
   
- 當您存取的章節資料行中的參考時，ADO 會自動擷取**資料錄集**參考所表示。 請注意，在非參數化命令中，雖然將整個子**資料錄集**已擷取，本章只會呈現的資料列子集。  
+ 當您存取 [章節] 資料行中的參考時，ADO 會自動抓取參考所表示的**記錄集**。 請注意，在非參數化命令中，雖然已抓取整個子**記錄集**，但章節只會顯示資料列的子集。  
   
- 如果附加的資料行沒有任何*章別名*，自動為它會產生名稱。 A[欄位](../../../ado/reference/ado-api/field-object.md)物件中的資料行都會附加至**資料錄集**物件的[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)集合和其資料型別會**adChapter**.  
+ 如果附加的資料行沒有*章節別名*，則會自動產生名稱。 資料行的[欄位](../../../ado/reference/ado-api/field-object.md)物件將會附加至**記錄集**物件的[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)集合，而且其資料類型將會是**adChapter**。  
   
- 如需有關瀏覽階層式資訊**Recordset**，請參閱[存取階層式資料錄集中的資料列](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)。  
+ 如需導覽階層式**記錄集**的詳細資訊，請參閱[存取階層式記錄集中](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)的資料列。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料成形範例](../../../ado/guide/data/data-shaping-example.md)   
- [正式 Shape 文法](../../../ado/guide/data/formal-shape-grammar.md)   
+ [正式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

@@ -13,27 +13,27 @@ ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1bdc406778bea0d6355e747998d2517b841fc17b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922774"
 ---
 # <a name="datafactory-customization"></a>DataFactory 自訂
-遠端資料服務 (RDS) 可用來輕鬆地在三層式用戶端/伺服器系統執行資料存取。 用戶端資料控制項指定遠端資料來源或連接字串上執行查詢的連接和命令字串參數和[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件執行更新的參數。  
+遠端資料服務（RDS）提供在三層式用戶端/伺服器系統中輕鬆執行資料存取的方法。 用戶端資料控制項會指定連接和命令字串參數，以便在遠端資料源上執行查詢，或使用連接字串和[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件參數來執行更新。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，Windows 作業系統不再包含 RDS 伺服器元件（如需詳細資訊，請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)）。 RDS 用戶端元件將會在未來的 Windows 版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該遷移至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 參數會傳遞至伺服器程式中，它會執行的遠端資料來源的資料存取作業。 RDS 提供預設伺服器程式呼叫[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)物件。 **RDSServer.DataFactory**物件會傳回任何**資料錄集**查詢，以用戶端所產生的物件。  
+ 參數會傳遞至伺服器程式，以在遠端資料源上執行資料存取作業。 RDS 提供名為[RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)物件的預設伺服器程式。 **RDSServer. DataFactory**物件會將查詢所產生的任何**記錄集**物件傳回給用戶端。  
   
- 不過， **RDSServer.DataFactory**僅限於執行查詢和更新。 它無法連接或命令字串上執行任何驗證或處理。  
+ 不過， **RDSServer 的 DataFactory**僅限於執行查詢和更新。 它無法對連接或命令字串執行任何驗證或處理。  
   
- 使用 ADO 時，您可以指定**DataFactory**搭配另一種伺服器程式呼叫工作*處理常式*。 它們用來存取資料來源之前，處理常式可以修改用戶端連接和命令字串。 此外，這個處理常式可以強制執行控管的能力，來讀取和寫入資料至資料來源的用戶端的存取權。  
+ 使用 ADO，您可以指定**DataFactory**與另一種類型的伺服器程式（稱為*處理常式*）搭配使用。 處理常式可以在用來存取資料來源之前，修改用戶端連接和命令字串。 此外，處理常式也可以強制執行存取權限，以控制用戶端讀取和寫入資料至資料來源的能力。  
   
- 自訂檔案的區段中指定的參數處理常式會使用修改用戶端參數和存取權限。  
+ 處理常式用來修改用戶端參數和存取權限的參數會在自訂檔的區段中指定。  
   
- 下列主題提供自訂的相關資訊**DataFactory**物件。  
+ 下列主題提供有關自訂**DataFactory**物件的詳細資訊。  
   
 -   [了解自訂檔案](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)  
   

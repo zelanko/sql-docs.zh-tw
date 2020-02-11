@@ -1,5 +1,5 @@
 ---
-title: 刪除使用 Delete 方法的資料錄 |Microsoft Docs
+title: 使用 Delete 方法刪除記錄 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,32 +16,32 @@ ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a862a244f06c64767f41529b4fff36881895a0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925551"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>使用 Delete 方法刪除記錄
-使用**刪除**群組中的記錄或目前的記錄方法會將標記**資料錄集**為要刪除的物件。 如果**資料錄集**物件不允許刪除記錄，則會發生錯誤。 如果您是在立即更新模式中，刪除資料庫中會立即發生。 記錄如果記錄無法成功地刪除 （因為資料庫完整性違規，例如），將會保留在編輯模式下呼叫之後**更新。** 這表示您必須取消更新使用[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)再移離目前的記錄 (例如，使用[關閉](../../../ado/reference/ado-api/close-method-ado.md)，[移動](../../../ado/reference/ado-api/move-method-ado.md)，或[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md))。  
+使用**Delete**方法會將目前的記錄或記錄**集**物件中的一組記錄標記為要刪除。 如果**記錄集**物件不允許刪除記錄，就會發生錯誤。 如果您處於立即更新模式，則會立即在資料庫中進行刪除。 如果無法成功刪除記錄（例如，由於資料庫完整性違規），記錄將會在呼叫更新之後維持在編輯模式 **。** 這表示您必須先使用[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)取消更新，然後再移出目前的記錄（例如，使用[Close](../../../ado/reference/ado-api/close-method-ado.md)、 [Move](../../../ado/reference/ado-api/move-method-ado.md)或[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)）。  
   
- 如果您是在批次更新模式中，記錄標示為刪除，從快取，而實際的刪除作業發生當您呼叫**UpdateBatch**方法。 (若要檢視已刪除的記錄，請設定**篩選條件**屬性設**adFilterAffectedRecords**之後**刪除**稱為。)  
+ 如果您是在批次更新模式中，則會將記錄標示為從快取中刪除，而實際的刪除作業會在您呼叫**UpdateBatch**方法時進行。 （若要查看已刪除的記錄，請在呼叫**Delete**之後，將**Filter**屬性設定為**adFilterAffectedRecords** 。）  
   
- 嘗試擷取已刪除的資料錄的欄位值，就會產生錯誤。 刪除目前的記錄之後, 已刪除的資料錄保持最新狀態直到您將移至不同的記錄。 一旦您離開已刪除的資料錄，就無法再存取。  
+ 嘗試從已刪除的記錄中取出域值會產生錯誤。 刪除目前的記錄之後，已刪除的記錄會保持為最新狀態，直到您移至不同的記錄為止。 當您離開已刪除的記錄之後，就無法再存取它。  
   
- 如果您使用巢狀交易中的刪除，您可以使用來復原已刪除的記錄**RollbackTrans**方法。 如果您是在批次更新模式中，您可以使用取消的暫止刪除或暫止的刪除動作群組**CancelBatch**方法。  
+ 如果您在交易中嵌套刪除，您可以使用**RollbackTrans**方法來復原已刪除的記錄。 如果您是在批次更新模式中，您可以使用**CancelBatch**方法來取消暫止的刪除或暫止刪除群組。  
   
- 如果嘗試刪除記錄失敗，因為與基礎資料發生衝突 （例如，記錄已刪除另一位使用者），提供者會傳回警告**錯誤**集合，但不會不會中斷程式執行。 只有當所有要求的記錄上會發生衝突，就會發生執行階段錯誤。  
+ 如果嘗試刪除記錄因為與基礎資料衝突而失敗（例如，另一位使用者已刪除記錄），則提供者會將警告傳回給**錯誤**集合，但不會停止程式執行。 只有在所有要求的記錄有衝突時，才會發生執行階段錯誤。  
   
- 如果**唯一資料表**動態屬性會設定並**資料錄集**是執行在多個資料表，聯結作業的結果**刪除**方法會只刪除資料列從資料表中名為**唯一資料表**屬性。  
+ 如果已**設定唯一的資料表**動態屬性，而**記錄集**是在多個資料表上執行聯結作業的結果，則**Delete**方法只會刪除**唯一資料表**屬性中所命名之資料表的資料列。  
   
- **刪除**方法會採用選擇性引數，可讓您指定哪些記錄會受到**刪除**作業。 唯一有效的值，這個引數不是屬於下列 ADO **AffectEnum**列舉常數：  
+ **Delete**方法會接受選擇性的引數，讓您指定哪些記錄會受到**刪除**作業的影響。 這個引數唯一的有效值是下列其中一個 ADO **AffectEnum**列舉常數：  
   
--   **adAffectCurrent**會影響目前的記錄。  
+-   **adAffectCurrent**只會影響目前的記錄。  
   
--   **adAffectGroup**影響只符合目前的記錄**篩選**屬性設定。 **篩選條件**屬性必須設為**FilterGroupEnum**值或陣列**書籤**才能使用此選項。  
+-   **adAffectGroup**只會影響符合目前**篩選**屬性設定的記錄。 **篩選**屬性必須設定為**FilterGroupEnum**值或**書簽**陣列，才能使用此選項。  
   
- 下列程式碼會顯示指定的範例**adAffectGroup**呼叫時**刪除**方法。 本範例會加入此範例中的某些記錄**資料錄集**並更新資料庫。 然後它會篩選**Recordset**使用**adFilterAffectedRecords**篩選列舉的常數，但只會新加入的記錄顯示在**資料錄集。** 最後，它會呼叫**刪除**方法，並指定所有符合目前的記錄**篩選**應該刪除屬性的設定 （新的記錄）。  
+ 下列程式碼顯示呼叫**Delete**方法時，指定**adAffectGroup**的範例。 這個範例會將一些記錄新增至範例**記錄集**，並更新資料庫。 然後，它會使用**adFilterAffectedRecords**篩選列舉常數來篩選**記錄集**，而這只會使新加入的記錄只會顯示在**記錄集中。** 最後，它會呼叫**Delete**方法，並指定滿足目前**篩選**屬性設定（新記錄）的所有記錄都應該刪除。  
   
 ```  
 'BeginDeleteGroup  

@@ -1,5 +1,5 @@
 ---
-title: 使用邏輯函式 |Microsoft Docs
+title: 使用邏輯函數 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 723d481bc858d7d1db4a63cbb32ab5614eddbb55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097176"
 ---
 # <a name="using-logical-functions"></a>使用邏輯函數
@@ -20,9 +20,9 @@ ms.locfileid: "68097176"
 
   邏輯函數可對物件及運算式執行邏輯作業或比較，然後傳回布林值。 多維度運算式 (MDX) 中必須要有邏輯函數，才能判斷成員的位置。  
   
- 最常使用的邏輯函式**IsEmpty**函式。 如需有關如何使用**IsEmpty**函式中，請參閱[使用空白值](../mdx/working-with-empty-values.md)。  
+ 最常使用的邏輯函數是**IsEmpty**函數。 如需有關如何使用**IsEmpty**函數的詳細資訊，請參閱[使用空值](../mdx/working-with-empty-values.md)。  
   
- 下列查詢會示範如何使用**IsLeaf**並**IsAncestor**函式：  
+ 下列查詢會顯示如何使用**IsLeaf**和**IsAncestor**函式：  
   
  `WITH`  
   
@@ -41,6 +41,6 @@ ms.locfileid: "68097176"
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>另請參閱  
- [函式&#40;MDX 語法&#41;](../mdx/functions-mdx-syntax.md)  
+ [函數 &#40;MDX 語法&#41;](../mdx/functions-mdx-syntax.md)  
   
   

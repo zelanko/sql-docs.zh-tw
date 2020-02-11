@@ -1,5 +1,5 @@
 ---
-title: sp_OADestroy (TRANSACT-SQL) |Microsoft Docs
+title: sp_OADestroy （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 98907614a132cfafd297e48f0ef625bc8eb4155d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107899"
 ---
-# <a name="spoadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
+# <a name="sp_oadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   損毀已建立的 OLE 物件。  
@@ -40,21 +40,21 @@ sp_OADestroy objecttoken
   
 ## <a name="arguments"></a>引數  
  *objecttoken*  
- 使用先前建立之 OLE 物件的物件 token **sp_OACreate**。  
+ 這是先前使用**sp_OACreate**所建立之 OLE 物件的物件 token。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)，這個數字是 OLE Automation 物件所傳回之 HRESULT 的整數值。  
   
- 如需有關 HRESULT 傳回碼的詳細資訊，請參閱 < [OLE Automation 傳回碼與錯誤資訊](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)。  
+ 如需 HRESULT 傳回碼的詳細資訊，請參閱[OLE Automation 傳回碼和錯誤資訊](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)。  
   
 ## <a name="remarks"></a>備註  
- 如果**sp_OADestroy**不呼叫時，建立批次的結尾會自動終結 OLE 物件。  
+ 如果未呼叫**sp_OADestroy** ，則會在批次結束時自動終結所建立的 OLE 物件。  
   
-## <a name="permissions"></a>Permissions  
- 需要的成員資格**sysadmin**固定伺服器角色，或直接執行這個預存程序權限。 `Ole Automation Procedures` 組態必須是**啟用**使用 OLE Automation 與相關的任何系統程序。  
+## <a name="permissions"></a>權限  
+ 需要**系統管理員（sysadmin** ）固定伺服器角色的成員資格，或直接在這個預存程式上執行許可權。 `Ole Automation Procedures`必須**啟用**設定，才能使用與 OLE Automation 相關的任何系統程式。  
   
 ## <a name="examples"></a>範例  
- 下列範例會終結之前建立**SQLServer**物件。  
+ 下列範例會終結先前建立的**SQLServer**物件。  
   
 ```  
 EXEC @hr = sp_OADestroy @object;  
@@ -66,7 +66,7 @@ END;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE Automation 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [OLE Automation 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE Automation 範例指令碼](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: false 函數 (XQuery) |Microsoft 文件
+title: false 函數（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 577d84c1-9285-4580-b6f5-86fbc4827547
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7a8c013a5fd87058a202e6d24f4b3148947b5319
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093203"
 ---
 # <a name="boolean-constructor-functions---false-xquery"></a>布林建構函式 - false (XQuery)
@@ -34,12 +34,12 @@ fn:false() as xs:boolean
 ```  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的 AdventureWorks 資料庫。  
+ 本主題針對 XML 實例提供 XQuery 範例，這些實例是儲存在 AdventureWorks 資料庫的各種**xml**類型資料行中。  
   
 ### <a name="a-using-the-false-xquery-boolean-function"></a>A. 使用 false() XQuery 布林函數  
- 如需實用範例，請參閱 <<c0> [ 函式，則為 true &#40;XQuery&#41;](../xquery/boolean-constructor-functions-true-xquery.md)。</c0>  
+ 如需實用的範例，請參閱[True 函數 &#40;XQuery&#41;](../xquery/boolean-constructor-functions-true-xquery.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [布林建構函式&#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
+ [&#40;XQuery&#41;的布林函式函數](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
   
   

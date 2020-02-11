@@ -1,5 +1,5 @@
 ---
-title: sp_OAGetProperty (TRANSACT-SQL) |Microsoft Docs
+title: sp_OAGetProperty （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107884"
 ---
-# <a name="spoagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
+# <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   取得 OLE 物件的屬性值。  
@@ -42,7 +42,7 @@ sp_OAGetProperty objecttoken , propertyname
   
 ## <a name="arguments"></a>引數  
  *objecttoken*  
- 使用先前建立之 OLE 物件的物件 token **sp_OACreate**。  
+ 這是先前使用**sp_OACreate**所建立之 OLE 物件的物件 token。  
   
  *propertyname*  
  這是要傳回之 OLE 物件的屬性名稱。  
@@ -50,16 +50,16 @@ sp_OAGetProperty objecttoken , propertyname
  *propertyvalue* **輸出**  
  這是傳回的屬性值。 如果指定的話，它必須是適當資料類型的本機變數。  
   
- 如果屬性傳回 OLE 物件， *propertyvalue*必須是資料類型的區域變數**int**。物件 token 儲存在本機變數中，與這個物件 token 可以搭配其他 OLE Automation 預存程序。  
+ 如果屬性傳回 OLE 物件， *propertyvalue*必須是**int**資料類型的本機變數。物件 token 會儲存在本機變數中，而且這個物件 token 可以與其他 OLE Automation 預存程式搭配使用。  
   
- 如果屬性傳回單一值，指定區域變數*propertyvalue*，它會傳回屬性值在本機變數，或不指定*propertyvalue*，就會傳回用戶端，做為單一資料行、 單一資料列結果集的屬性值。  
+ 如果屬性傳回單一值，請指定*propertyvalue*的本機變數，這會在本機變數中傳回屬性值;或不指定*propertyvalue*，這會將屬性值以單一資料行、單一資料列結果集的形式傳回用戶端。  
   
- 當屬性傳回陣列，如果*propertyvalue*指定時，它會設定為 NULL。  
+ 當屬性傳回陣列時，如果指定了*propertyvalue* ，則會設定為 Null。  
   
- 如果*propertyvalue*指定，但屬性未傳回值，則會發生錯誤。 如果屬性傳回含有多於二個維度的陣列，就會發生錯誤。  
+ 如果指定了*propertyvalue* ，但屬性並未傳回值，則會發生錯誤。 如果屬性傳回含有多於二個維度的陣列，就會發生錯誤。  
   
  *index*  
- 這是一個索引參數。 如果指定， *index*必須是適當的資料類型的值。  
+ 這是一個索引參數。 如果指定， *index*必須是適當資料類型的值。  
   
  部份屬性有參數。 這些屬性稱為索引屬性，參數稱為索引參數。 一個屬性可以有多個索引參數。  
   
@@ -69,7 +69,7 @@ sp_OAGetProperty objecttoken , propertyname
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)，這個數字是 OLE Automation 物件所傳回之 HRESULT 的整數值。  
   
- 如需有關 HRESULT 傳回碼的詳細資訊，請參閱 < [OLE Automation 傳回碼與錯誤資訊](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)。  
+ 如需 HRESULT 傳回碼的詳細資訊，請參閱[OLE Automation 傳回碼和錯誤資訊](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)。  
   
 ## <a name="result-sets"></a>結果集  
  如果屬性傳回含有一或兩個維度的陣列，就會將陣列傳回用戶端作為結果集：  
@@ -78,11 +78,11 @@ sp_OAGetProperty objecttoken , propertyname
   
 -   二維陣列會以多資料列結果集的方式傳回給用戶端，這個資料列中有多個資料行，資料行數目等於陣列的元素數目。資料行數目等於陣列第一維的元素數目，資料列數目等於陣列第二維的元素數目。 換言之，這個陣列是以 (columns, rows) 的方式傳回。  
   
- 當屬性傳回值或方法傳回值是陣列， **sp_OAGetProperty**或是**sp_OAMethod**的結果集傳回給用戶端。 (方法輸出參數不能是陣列。)這些程序會掃描陣列中的所有資料值來判斷適當的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，以及結果集中每個資料行所用的資料長度。 對於特定資料行，這些程序會利用資料類型和長度來表示這個資料行中的所有資料值。  
+ 當屬性傳回值或方法傳回值為數組時， **sp_OAGetProperty**或**sp_OAMethod**會將結果集傳回給用戶端。 (方法輸出參數不能是陣列。)這些程序會掃描陣列中的所有資料值來判斷適當的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，以及結果集中每個資料行所用的資料長度。 對於特定資料行，這些程序會利用資料類型和長度來表示這個資料行中的所有資料值。  
   
  當資料行中的所有資料值都共用相同的資料類型時，整個資料行都會使用這個資料類型。 當資料行中的資料值是不同資料類型時，便會根據下表來選擇整個資料行的資料類型。  
   
-||ssNoversion|FLOAT|money|datetime|varchar|NVARCHAR|  
+||int|FLOAT|money|Datetime|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -92,15 +92,15 @@ sp_OAGetProperty objecttoken , propertyname
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
 ## <a name="remarks"></a>備註  
- 您也可以使用**sp_OAMethod**取得屬性值。  
+ 您也可以使用**sp_OAMethod**來取得屬性值。  
   
-## <a name="permissions"></a>Permissions  
- 需要的成員資格**sysadmin**固定伺服器角色，或直接執行這個預存程序權限。 `Ole Automation Procedures` 組態必須是**啟用**使用 OLE Automation 與相關的任何系統程序。  
+## <a name="permissions"></a>權限  
+ 需要**系統管理員（sysadmin** ）固定伺服器角色的成員資格，或直接在這個預存程式上執行許可權。 `Ole Automation Procedures`必須**啟用**設定，才能使用與 OLE Automation 相關的任何系統程式。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-a-local-variable"></a>A. 使用本機變數  
- 下列範例會取得`HostName`屬性 (先前建立**SQLServer**物件) 並將它儲存在本機變數。  
+ 下列範例會取得`HostName`屬性（先前建立的**SQLServer**物件），並將它儲存在本機變數中。  
   
 ```  
 DECLARE @property varchar(255);  
@@ -114,7 +114,7 @@ PRINT @property;
 ```  
   
 ### <a name="b-using-a-result-set"></a>B. 使用結果集  
- 下列範例會取得`HostName`屬性 (先前建立**SQLServer**物件)，並傳回它在用戶端當作結果集。  
+ 下列範例會取得`HostName`屬性（先前建立的**SQLServer**物件），並將它以結果集的形式傳回給用戶端。  
   
 ```  
 EXEC @hr = sp_OAGetProperty @object, 'HostName';  
@@ -126,7 +126,7 @@ END;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE Automation 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [OLE Automation 預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE Automation 範例指令碼](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

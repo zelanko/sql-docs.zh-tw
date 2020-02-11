@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_maintenance_plan （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aa33e418b81cb2f77a39f20d36bba7a25caffb4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104578"
 ---
-# <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
+# <a name="sp_add_maintenance_plan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   加入維護計畫和傳回計畫識別碼。  
@@ -45,19 +45,19 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @plan_name = ] 'plan_name'` 指定要加入之維護計畫的名稱。 *plan_name*已**varchar(128)** 。  
+`[ @plan_name = ] 'plan_name'`指定要加入之維護計畫的名稱。 *plan_name*為**Varchar （128）**。  
   
- **@plan_id = '** *plan_id* **'**  
- 指定維護計畫的識別碼。 *plan_id*已**uniqueidentifier**。  
+ ** ** @plan_id = '** plan_id **'**  
+ 指定維護計畫的識別碼。 *plan_id*是**uniqueidentifier**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_add_maintenance_plan**必須從執行**msdb**資料庫並建立新的空白維護計畫。 若要新增一或多個資料庫，並將它們與作業關聯，執行**sp_add_maintenance_plan_db**並**sp_add_maintenance_plan_job**。  
+ **sp_add_maintenance_plan**必須從**msdb**資料庫中執行，並建立新的但空白的維護計畫。 若要新增一或多個資料庫，並將它們與工作或作業產生關聯，請執行**sp_add_maintenance_plan_db**並**sp_add_maintenance_plan_job**。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行**sp_add_maintenance_plan**。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_add_maintenance_plan**。  
   
 ## <a name="examples"></a>範例  
  建立稱為 Myplan 的維護計畫。  
@@ -77,6 +77,6 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [維護計畫](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [資料庫維護計畫預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [資料庫維護計畫預存程式 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

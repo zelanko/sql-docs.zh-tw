@@ -1,5 +1,5 @@
 ---
-title: 使用 ADO 與 Microsoft Visual Basic |Microsoft Docs
+title: 搭配使用 ADO 與 Microsoft Visual Basic |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,63 +16,63 @@ ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22286cbe571420475cf273ca377d16e79610fc3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926561"
 ---
-# <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>應用程式搭配使用 ADO 與 Microsoft Visual Basic 和 Visual Basic
-設定 ADO 專案，並撰寫 ADO 程式碼很類似您是否使用 Visual Basic 或 Visual Basic 應用程式。 本主題說明使用 Visual Basic 和 Visual Basic 中使用 ADO 的應用程式，並資訊的任何差異。
+# <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>搭配使用 ADO 與 Microsoft Visual Basic 和 Visual Basic for Applications
+無論您使用 Visual Basic 或 Visual Basic for Applications，設定 ADO 專案和撰寫 ADO 程式碼都很類似。 本主題說明如何搭配 Visual Basic 和 Visual Basic for Applications 使用 ADO，並注意任何差異。
 
 ## <a name="referencing-the-ado-library"></a>參考 ADO 程式庫
  您的專案必須參考 ADO 程式庫。
 
-#### <a name="to-reference-ado-from-microsoft-visual-basic"></a>若要從 Microsoft Visual Basic 參考 ADO
+#### <a name="to-reference-ado-from-microsoft-visual-basic"></a>從 Microsoft Visual Basic 參考 ADO
 
-1.  在 Visual Basic 中從**專案**功能表上，選取**參考...** .
+1.  在 Visual Basic 中，從 [**專案**] 功能表選取 [**參考 ...**]。
 
-2.  選取 **程式庫的 Microsoft ActiveX Data Objects x.x**從清單中。 確認至少下列的程式庫也會一併選取：
+2.  從清單中選取 [ **Microsoft ActiveX Data Objects x. x 程式庫**]。 確認至少也已選取下列程式庫：
 
     -   Visual Basic for Applications
 
-    -   Visual Basic 執行階段物件和程序
+    -   Visual Basic 執行時間物件和程式
 
-    -   Visual Basic 物件和程序
+    -   Visual Basic 物件和程式
 
     -   OLE Automation
 
 3.  按一下 [確定]  。
 
- 您可以使用 ADO 輕鬆地使用 Visual Basic 應用程式，例如使用 Microsoft Access。
+ 例如，您可以透過使用 Microsoft Access，輕鬆地使用 ADO，如同 Visual Basic for Applications。
 
-#### <a name="to-reference-ado-from-microsoft-access"></a>若要從 Microsoft Access 中參考 ADO
+#### <a name="to-reference-ado-from-microsoft-access"></a>從 Microsoft Access 參考 ADO
 
-1.  在 Microsoft Access 中，選取或建立的模組**模組**索引標籤中**資料庫**視窗。
+1.  在 Microsoft Access 中，從 [**資料庫**] 視窗的 [**模組**] 索引標籤中，選取或建立模組。
 
-2.  在 **工具**功能表上，選取**參考...** .
+2.  在 [**工具**] 功能表上，選取 [**參考 ...**]。
 
-3.  選取 **程式庫的 Microsoft ActiveX Data Objects x.x**從清單中。 確認至少下列的程式庫也會一併選取：
+3.  從清單中選取 [ **Microsoft ActiveX Data Objects x. x 程式庫**]。 確認至少也已選取下列程式庫：
 
     -   Visual Basic for Applications
 
-    -   Microsoft Access 8.0 物件程式庫 （或更新版本）
+    -   Microsoft Access 8.0 物件程式庫（或更新版本）
 
-    -   Microsoft DAO 3.5 物件程式庫 （或更新版本）
+    -   Microsoft DAO 3.5 物件程式庫（或更新版本）
 
 4.  按一下 [確定]  。
 
 ## <a name="creating-ado-objects-in-visual-basic"></a>在 Visual Basic 中建立 ADO 物件
- 若要建立自動化變數和物件，該變數的執行個體，您可以使用兩種方法：**Dim**或是**CreateObject**。
+ 若要為該變數建立自動化變數和物件的實例，您可以使用兩種方法： **Dim**或**CreateObject**。
 
-### <a name="dim"></a>維度
- 您可以使用**的新**關鍵字搭配**Dim**宣告，並在一個步驟中建立 ADO 物件的執行個體：
+### <a name="dim"></a>變暗
+ 您可以使用**新**的關鍵字搭配**Dim** ，在一個步驟中宣告並建立 ADO 物件的實例：
 
 ```
 Dim conn As New ADODB.Connection
 ```
 
- 或者， **Dim**陳述式宣告和物件具現化也可以是兩個步驟：
+ 或者， **Dim**語句宣告和物件具現化也可以是兩個步驟：
 
 ```
 Dim conn As ADODB.Connection
@@ -80,10 +80,10 @@ Set conn = New ADODB.Connection
 ```
 
 > [!NOTE]
->  它不需要明確地使用`ADODB`使用 progid **Dim**陳述式中，假設您已正確參考 ADO 程式庫專案中。 不過，使用它可確保，您不需要命名衝突與其他程式庫。
+>  如果您已正確參考專案中的`ADODB` ADO 程式庫，則不需要明確地使用 progid 語句搭配**Dim**語句。 不過，使用它可確保您不會有與其他程式庫的命名衝突。
 
 > [!NOTE]
->  比方說，如果您將 ADO 和 DAO 的參考納入相同的專案時，您應該包含辨識符號，指定要具現化時使用的物件模型**資料錄集**物件，如下列程式碼所示：
+>  例如，如果您在相同的專案中同時包含 ADO 和 DAO 的參考，您應該包含辨識符號來指定具現化**記錄集**物件時所要使用的物件模型，如下列程式碼所示：
 
 ```
 Dim adoRS As ADODB.Recordset
@@ -91,28 +91,28 @@ Dim daoRS As DAO.Recordset
 ```
 
 ### <a name="createobject"></a>CreateObject
- 具有**CreateObject**方法、 宣告和物件具現化必須是兩個獨立的步驟：
+ 使用**CreateObject**方法時，宣告和物件具現化必須是兩個不同的步驟：
 
 ```
 Dim conn1
 Set conn1 = CreateObject("ADODB.Connection") As Object
 ```
 
- 使用物件具現化**CreateObject**是晚期繫結，這表示它們不強型別且已停用命令列完成。 不過，它確實可讓您略過從您的專案中參考 ADO 程式庫，並可讓您具現化物件的特定版本。 例如:
+ 以**CreateObject**具現化的物件是晚期繫結，這表示它們不是強型別，且已停用命令列完成。 不過，它可讓您略過從專案參考 ADO 程式庫，並可讓您具現化特定版本的物件。 例如：
 
 ```
 Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
 ```
 
- 您也可以完成這特別建立的 ADO 版本 2.0 類型程式庫的參考，並建立物件。
+ 您也可以藉由特別建立 ADO 版本2.0 類型程式庫的參考，並建立物件來完成此動作。
 
- 使用具現化物件**CreateObject**方法會比使用通常慢**Dim**陳述式。
+ 使用**CreateObject**方法來具現化物件，通常比使用**Dim**語句慢。
 
 ## <a name="handling-events"></a>處理事件
- 若要處理 ADO 事件 Microsoft Visual Basic 中，您必須宣告模組層級變數 using **WithEvents**關鍵字。 變數可以宣告只為一部分的類別模組，而且必須在模組層級宣告。 處理 ADO 事件的更完整討論，請參閱[處理 ADO 事件](../../../ado/guide/data/handling-ado-events.md)。
+ 若要在 Microsoft Visual Basic 中處理 ADO 事件，您必須使用**WithEvents**關鍵字來宣告模組層級變數。 變數只能宣告為類別模組的一部分，而且必須在模組層級宣告。 如需處理 ADO 事件的更完整討論，請參閱[處理 Ado 事件](../../../ado/guide/data/handling-ado-events.md)。
 
 ## <a name="visual-basic-examples"></a>Visual Basic 範例
- 許多 Visual Basic 範例隨附的 ADO 文件。 如需詳細資訊，請參閱 < [Microsoft Visual Basic 中的 ADO 程式碼範例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)。
+ ADO 檔中包含許多 Visual Basic 範例。 如需詳細資訊，請參閱[Microsoft Visual Basic 中的 ADO 程式碼範例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)。
 
 ## <a name="see-also"></a>另請參閱
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [搭配使用 ADO 與 Microsoft Visual C++ ](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) [搭配使用 ADO 與指令碼語言](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)
+ 使用[ado 搭配 Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)搭配[使用 Ado 與指令碼語言](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)的[Microsoft ActiveX Data Objects （ADO）](../../../ado/microsoft-activex-data-objects-ado.md)

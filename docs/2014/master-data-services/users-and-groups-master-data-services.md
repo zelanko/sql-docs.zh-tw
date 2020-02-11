@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58373531871a5db8ff859280de52cbe21562bfb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478621"
 ---
 # <a name="users-and-groups-master-data-services"></a>使用者和群組 (Master Data Services)
@@ -30,13 +30,13 @@ ms.locfileid: "65478621"
 -   將使用者帳戶新增至 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]的使用者清單。  
   
     > [!NOTE]  
-    >  如果使用者屬於可存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的群組，則在第一次存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 或 MDS [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 時，使用者的名稱會自動新增至使用者清單。  
+    >  如果使用者屬於可存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]的群組，則在第一次存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 或 MDS [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]時，使用者的名稱會自動新增至使用者清單。  
   
- 若要在 UI 的 [總管]  功能區域內執行動作，群組或使用者必須獲得指派 [總管]  功能區域存取權以及模型物件權限。  
+ 若要在 UI 的 [總管]**** 功能區域內執行動作，群組或使用者必須獲得指派 [總管]**** 功能區域存取權以及模型物件權限。  
   
  如果使用者或群組需要存取其他功能區域，使用者或群組必須是管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
-## <a name="best-practice"></a>最佳作法  
+## <a name="best-practice"></a>最佳做法  
  若要簡化管理，請建立群組，然後指派每個群組的功能區域和模型物件權限。 您即可在群組中新增及移除使用者，而不需存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] UI。  
   
  請勿指派其他權限給個別使用者，也不要在具有 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]存取權的多個群組中加入使用者。 此外，除非您希望群組擁有特定成員的受限存取權，否則請勿使用階層成員權限。  
@@ -44,7 +44,7 @@ ms.locfileid: "65478621"
 ## <a name="see-also"></a>另請參閱  
  [新增使用者 &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-user-master-data-services.md)   
  [新增群組 &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)   
- [刪除使用者或群組 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-users-or-groups-master-data-services.md)   
- [測試使用者的權限 &#40;Master Data Services&#41;](../../2014/master-data-services/test-a-user-s-permissions-master-data-services.md)  
+ [刪除 &#40;Master Data Services&#41;的使用者或群組](../../2014/master-data-services/delete-users-or-groups-master-data-services.md)   
+ [測試使用者的許可權 &#40;Master Data Services&#41;](../../2014/master-data-services/test-a-user-s-permissions-master-data-services.md)  
   
   

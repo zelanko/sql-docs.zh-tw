@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 54f600eb020472f93067f7b9fe1e867f2730d670
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097103"
 ---
 # <a name="using-member-functions"></a>使用成員函數
@@ -20,7 +20,7 @@ ms.locfileid: "68097103"
 
   成員函數是一種會傳回成員的多維度運算式 (MDX) 函數。 成員函數跟 tuple 函數和 set 函數一樣，對於交涉 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中找到的多維度結構而言不可或缺。  
   
- 最重要的是在 MDX 中的許多成員函式， **CurrentMember**函式，這用來判斷階層上的目前成員。 下列查詢說明如何使用它時，連同**父代**，**祖系**，並**Prevmember**函式：  
+ 在 MDX 中的許多成員函式中，最重要的是**CurrentMember**函數，用來判斷階層上的目前成員。 下列查詢說明如何使用它，以及**Parent**、**祖系**和**Prevmember**函式：  
   
  `WITH`  
   
@@ -47,8 +47,8 @@ ms.locfileid: "68097103"
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>另請參閱  
- [函式&#40;MDX 語法&#41;](../mdx/functions-mdx-syntax.md)   
- [使用 Tuple 函數](../mdx/using-tuple-functions.md)   
- [使用集合函式](../mdx/using-set-functions.md)  
+ [函數 &#40;MDX 語法&#41;](../mdx/functions-mdx-syntax.md)   
+ [使用元組函數](../mdx/using-tuple-functions.md)   
+ [使用集合函數](../mdx/using-set-functions.md)  
   
   

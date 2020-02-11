@@ -16,13 +16,13 @@ ms.assetid: 12599cdc-7725-4faf-bcae-e163ea0f5851
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4841d8d923ff73d187569df3d7f9e29daf0f4e48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107403"
 ---
 # <a name="sqlgetdata-and-block-cursors"></a>SQLGetData 和區塊資料指標
-**SQLGetData**作業的單一資料列的單一資料行，而且無法擷取陣列，包含多個資料列的資料。 這是因為主要使用的**SQLGetData**是擷取組件中的 long 資料，而且沒有少量或沒有執行此動作一次多個資料列的原因。  
+**SQLGetData**會在單一資料列的單一資料行上運作，而且無法提取包含來自多個資料列之資料的陣列。 這是因為**SQLGetData**的主要用途是在元件中提取長資料，而不需要一次為一個以上的資料列執行此動作。  
   
- 若要使用**SQLGetData**使用區塊資料指標，應用程式第一次呼叫**SQLSetPos**若要將游標放在單一資料列。 然後它會呼叫**SQLGetData**中該資料列的資料行。 不過，此行為是選擇性的。 若要判斷驅動程式是否支援使用**SQLGetData**應用程式會使用區塊資料指標，呼叫**SQLGetInfo** SQL_GETDATA_EXTENSIONS 選項。
+ 若要搭配使用**SQLGetData**與區塊資料指標，應用程式會先呼叫**SQLSetPos** ，將游標放在單一資料列上。 然後，它會針對該資料列中的資料行呼叫**SQLGetData** 。 不過，此行為是選擇性的。 若要判斷驅動程式是否支援使用具有區塊資料指標的**SQLGetData** ，應用程式會使用 SQL_GETDATA_EXTENSIONS 選項來呼叫**SQLGetInfo** 。

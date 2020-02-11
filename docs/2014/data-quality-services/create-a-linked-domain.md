@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7c9d5f86ba0be02ba21529aafc02897195ff4396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481016"
 ---
 # <a name="create-a-linked-domain"></a>建立連結的定義域
@@ -31,21 +31,21 @@ ms.locfileid: "65481016"
 ### <a name="controlling-data-flow-to-composite-domains"></a>控制與複合定義域之間的資料流程  
  連結的定義域可讓您控制欄位與複合定義域之間的資料流程。 當某個欄位的資料流向複合定義域中，以及另一個非常類似的欄位中的資料未流向此複合定義域時，您可以加以區分。 當您要這樣做時，您會指定在兩個連結的定義域中，一個定義域是複合定義域的一部分，另一個定義域則否。 從定義域的觀點來看，連結的定義域是相同的。 它們包含相同的知識。 但是從複合定義域的觀點來看，連結的定義域是不同的。 其中一個會參與複合定義域，另一個則否。  
   
- 範例是包含下列欄位的記錄：客戶名字、客戶姓氏和父親的名字。 假設您將客戶名字和父親的名字對應到「名字」定義域，並讓「名字」定義域和「姓氏」定義域成為「完整名稱」複合定義域的一部分。 問題是父親的名字將會加入至複合定義域，而且不含姓氏。 但是，如果您將兩個名字欄位中的每一個都連結到定義域，並連結這兩個定義域，然後您可以將「客戶名字」定義域加入至「完整名稱」複合定義域，而不將「父親的名字」欄位加入至複合定義域，以免「父親的名字」被加入至複合定義域。  
+ 範例是包含以下欄位的記錄：客戶名字、客戶姓氏和父親的名字。 假設您將客戶名字和父親的名字對應到「名字」定義域，並讓「名字」定義域和「姓氏」定義域成為「完整名稱」複合定義域的一部分。 問題是父親的名字將會加入至複合定義域，而且不含姓氏。 但是，如果您將兩個名字欄位中的每一個都連結到定義域，並連結這兩個定義域，然後您可以將「客戶名字」定義域加入至「完整名稱」複合定義域，而不將「父親的名字」欄位加入至複合定義域，以免「父親的名字」被加入至複合定義域。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Prerequisites"></a> 必要條件  
  若要建立連結的定義域，您必須擁有知識庫以及您想要連結的現有定義域。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能建立連結的定義域。  
   
-##  <a name="Create"></a> 建立連結的定義域  
+##  <a name="Create"></a>建立連結的定義域  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]**。 如需相關資訊，請參閱 [建立知識庫](../../2014/data-quality-services/create-a-knowledge-base.md) 或 [開啟知識庫](../../2014/data-quality-services/open-a-knowledge-base.md)。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "65481016"
   
 7.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](../../2014/data-quality-services/end-the-domain-management-activity.md)＞中所述。  
   
-##  <a name="Map"></a> Map two fields to linked domains  
+##  <a name="Map"></a>將兩個欄位對應到連結的定義域  
   
 1.  開啟知識探索活動中的知識庫，並將知識庫對應到資料庫及資料表或檢視表。  
   
@@ -72,10 +72,10 @@ ms.locfileid: "65481016"
   
 4.  在 [建立定義域] 對話方塊中，輸入定義域名稱和描述，然後按一下 [確定]。  
   
-##  <a name="FollowUp"></a> 後續操作：建立連結的定義域之後  
+##  <a name="FollowUp"></a>後續操作：建立連結的定義域之後  
  在建立連結的定義域之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../../2014/data-quality-services/managing-a-domain.md)或[建立比對原則](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
-##  <a name="Behavior"></a> 連結的定義域行為  
+##  <a name="Behavior"></a>連結的定義域行為  
  您可以為連結的定義域變更設定，如下所示：  
   
 -   您可以變更連結的定義域的名稱和描述。  

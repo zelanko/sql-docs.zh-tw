@@ -1,5 +1,5 @@
 ---
-title: sp_delete_log_shipping_alert_job (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_log_shipping_alert_job （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 5d6c7f07-a163-48fa-8c1f-abc252043dde
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e413b677062841dbd25e2c57e0437efe566ccf98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085323"
 ---
-# <a name="spdeletelogshippingalertjob-transact-sql"></a>sp_delete_log_shipping_alert_job (Transact-SQL)
+# <a name="sp_delete_log_shipping_alert_job-transact-sql"></a>sp_delete_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   如果作業存在，且沒有要監視的主要或次要資料庫，便從記錄傳送監視伺服器中移除警示作業。  
@@ -49,13 +49,13 @@ sp_delete_log_shipping_alert_job
  無。  
   
 ## <a name="remarks"></a>備註  
- **sp_delete_log_shipping_alert_job**必須從執行**主要**監視伺服器上的資料庫。  
+ **sp_delete_log_shipping_alert_job**必須從監視伺服器上的**master**資料庫中執行。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
+## <a name="permissions"></a>權限  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
   
 ## <a name="examples"></a>範例  
- 此範例示範執行**sp_delete_log_shipping_alert_job**刪除警示作業。  
+ 這個範例會顯示刪除警示作業的**sp_delete_log_shipping_alert_job**執行。  
   
 ```  
 USE master;  

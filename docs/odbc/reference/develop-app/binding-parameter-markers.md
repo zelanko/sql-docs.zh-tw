@@ -1,5 +1,5 @@
 ---
-title: 繫結參數標記 |Microsoft Docs
+title: 系結參數標記 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.assetid: fe88c1c2-4ee4-45e0-8500-b8c25c047815
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0e625e01b9bf4771f18dd8e9807ab09100ca580c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107653"
 ---
 # <a name="binding-parameter-markers"></a>繫結參數標記
-藉由呼叫應用程式繫結的參數**SQLBindParameter**。 **SQLBindParameter**將一個參數繫結一次。 有了它，應用程式則指定下列項目：  
+應用程式會藉由呼叫**SQLBindParameter**來系結參數。 **SQLBindParameter**一次系結一個參數。 使用它，應用程式會指定下列各項：  
   
--   參數數目。 參數會以遞增的參數順序，在 SQL 陳述式，從數字 1 開始編號。 法律指定較高的參數號碼時比 SQL 陳述式中的參數數目，參數值時，會忽略執行的陳述式。  
+-   參數編號。 在 SQL 語句中，參數會以遞增的參數順序編號，從數位1開始。 雖然指定的參數編號高於 SQL 語句中的參數數目，但在執行語句時，參數值會被忽略。  
   
--   參數類型 （輸入、 輸入/輸出或輸出）。 除了程序呼叫中的參數，所有參數都是輸入的參數。 如需詳細資訊，請參閱 <<c0> [ 程序參數](../../../odbc/reference/develop-app/procedure-parameters.md)稍後這一節。  
+-   參數類型（輸入、輸入/輸出或輸出）。 除了程序呼叫中的參數之外，所有參數都是輸入參數。 如需詳細資訊，請參閱本節稍後的程式[參數](../../../odbc/reference/develop-app/procedure-parameters.md)。  
   
--   C 資料類型、 位址和位元組長度的變數繫結至參數。 驅動程式必須能夠將 C 資料類型的資料轉換成 SQL 資料類型或傳回錯誤。 如需支援的轉換，請參閱[轉換將資料從 C 到 SQL 資料類型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)附錄 d:資料類型。  
+-   系結至參數之變數的 C 資料類型、位址和位元組長度。 驅動程式必須能夠將 C 資料類型的資料轉換成 SQL 資料類型，否則會傳回錯誤。 如需支援的轉換清單，請參閱附錄 D：資料類型中的[將資料從 C 轉換成 SQL 資料類型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)。  
   
--   SQL 資料類型、 有效位數和小數位數參數本身。  
+-   參數本身的 SQL 資料類型、有效位數和小數位數。  
   
--   長度/指標緩衝區的位址。 它提供二進位或字元資料的位元組長度、 指定資料為 NULL，或指定的資料將會傳送具有**SQLPutData**。 如需詳細資訊，請參閱 <<c0> [ 使用長度/指標值](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)。  
+-   長度/指標緩衝區的位址。 它會提供二進位或字元資料的位元組長度、指定資料為 Null，或指定要使用**SQLPutData**來傳送資料。 如需詳細資訊，請參閱[使用長度/指標值](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)。  
   
- 例如，下列程式碼繫結*業務員*並*CustID*的銷售人員及 CustID 資料行的參數。 因為*SalesPerson*包含字元資料，也就是可變長度，程式碼會指定的位元組長度*銷售人員*(11) 並繫結*SalesPersonLenOrInd*至包含資料的位元組長度*業務員*。 這項資訊不需要*CustID*因為它包含固定長度的整數資料。  
+ 例如，下列程式碼會將*銷售人員*和*CustID*系結至銷售人員和 CustID 資料行的參數。 由於*銷售人員*包含的字元資料是可變長度，因此程式碼會指定「*銷售人員*」的位元組長度（11），並將*SalesPersonLenOrInd*系結至包含「*銷售人員*」中資料的位元組長度。 *CustID*不需要這項資訊，因為它包含固定長度的整數資料。  
   
 ```  
 SQLCHAR       SalesPerson[11];  
@@ -58,7 +58,7 @@ CustIDInd = 0;
 SQLExecDirect(hstmt1,"SELECT * FROM Orders WHERE SalesPerson=? AND CustID=?",SQL_NTS);  
 ```  
   
- 當**SQLBindParameter**是呼叫，驅動程式將此資訊儲存在結構中，陳述式。 執行陳述式時，它會使用擷取的參數資料，並將它傳送至資料來源的資訊。  
+ 呼叫**SQLBindParameter**時，驅動程式會將這項資訊儲存在語句的結構中。 執行語句時，它會使用資訊來抓取參數資料，並將它傳送至資料來源。  
   
 > [!NOTE]  
->  在 ODBC 1.0 參數已繫結與**SQLSetParam**。 對應呼叫之間的驅動程式管理員**SQLSetParam**並**SQLBindParameter**，取決於應用程式和驅動程式所使用的 ODBC 版本。
+>  在 ODBC 1.0 中，參數已與**SQLSetParam**系結。 驅動程式管理員會對應**SQLSetParam**與**SQLBindParameter**之間的呼叫，端視應用程式和驅動程式所使用的 ODBC 版本而定。

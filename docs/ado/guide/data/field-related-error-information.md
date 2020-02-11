@@ -14,21 +14,21 @@ ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7094c2dba004e35593f5ab11b1162efbdf3283c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925317"
 ---
 # <a name="field-related-error-information"></a>欄位相關的錯誤資訊
-如果錯誤直接與相關欄位-比方說，如果資料遺失，或者它是錯誤的類型，欄位-您可以擷取問題的原因的詳細資訊藉由檢查**欄位**物件的**狀態**屬性。 這個屬性已經過增強，以提供特定問題的相關資訊。 因此，例如，當呼叫**UpdateBatch**失敗，問題的原因可以檢查來判斷**狀態**屬性**欄位**中每個受影響的功能記錄。 這個屬性會包含在值的其中一個**FieldStatusEnum**常數。 下表包含發生錯誤時，會特別感興趣的那些值。  
+如果錯誤與欄位直接相關-例如，如果資料遺失或欄位的類型錯誤，您可以藉由檢查**欄位**物件的**Status**屬性來取得有關問題原因的詳細資訊。 這個屬性已經過增強，可提供問題的特定資訊。 因此，例如，當呼叫**UpdateBatch**失敗時，您可以檢查每個受影響記錄中**欄位**的**Status**屬性來判斷問題的原因。 屬性會包含**FieldStatusEnum**常數中的其中一個值。 下表包含錯誤發生時特別需要注意的值。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adFieldCantConvertValue**|2|表示欄位無法擷取或儲存而不會遺失資料。|  
-|**adFieldDataOverflow**|6|指出提供者傳回的資料造成溢位 欄位的資料類型。|  
-|**adFieldDefault**|13|表示欄位的預設值已設定資料時使用。|  
-|**adFieldIgnore**|15|表示這個欄位已略過，當設定資料來源中的值。 提供者未不設定任何值。|  
-|**adFieldIntegrityViolation**|10|表示無法修改欄位，因為它是導出或衍生的實體。|  
-|**adFieldIsNull**|3|表示提供者傳回 null 值。|  
-|**adFieldOutOfSpace**|22|表示提供者無法取得足夠的儲存空間可完成的移動或複製作業。|
+|**adFieldCantConvertValue**|2|表示無法抓取或儲存欄位，而不會遺失資料。|  
+|**adFieldDataOverflow**|6|表示從提供者傳回的資料溢位欄位的資料類型。|  
+|**adFieldDefault**|13|表示設定資料時，使用欄位的預設值。|  
+|**adFieldIgnore**|15|表示在設定來源中的資料值時，略過此欄位。 提供者未設定任何值。|  
+|**adFieldIntegrityViolation**|10|表示欄位無法修改，因為它是計算或衍生的實體。|  
+|**adFieldIsNull**|3|指出提供者傳回 null 值。|  
+|**adFieldOutOfSpace**|22|指出提供者無法取得足夠的儲存空間來完成移動或複製操作。|

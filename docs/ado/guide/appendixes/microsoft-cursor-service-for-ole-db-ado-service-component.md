@@ -1,5 +1,5 @@
 ---
-title: OLE DB （ADO 服務元件） 的 Microsoft 資料指標服務 |Microsoft Docs
+title: 適用于 OLE DB 的 Microsoft 資料指標服務（ADO 服務元件） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,21 +14,21 @@ ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7e5b9a973e5ccf04f92a2162d88ee25b7fa5242
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926799"
 ---
-# <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB 概觀的 Microsoft 資料指標服務
-OLE DB 的 Microsoft 資料指標服務來補充資料提供者的資料指標支援函式。 如此一來，使用者察覺到相當一致的功能，從所有資料提供者。
+# <a name="microsoft-cursor-service-for-ole-db-overview"></a>適用于 OLE DB 的 Microsoft 資料指標服務總覽
+適用于 OLE DB 的 Microsoft 資料指標服務會補充資料提供者的資料指標支援功能。 如此一來，使用者就能從所有資料提供者感知相當一致的功能。
 
- 資料指標服務提供動態屬性，並增強特定方法的行為。 例如，[最佳化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)動態屬性可讓您建立暫存的索引，以利於進行某些作業，例如[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法。
+ 資料指標服務可提供動態屬性，並增強某些方法的行為。 例如， [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) dynamic 屬性可讓您建立暫存索引來加速特定作業，例如[Find](../../../ado/reference/ado-api/find-method-ado.md)方法。
 
- 資料指標服務可支援在所有情況下的批次更新。 資料提供者只可以提供效能較差的資料指標，例如靜態資料指標時，它也會模擬功能更強大的資料指標類型，例如動態資料指標。
+ 在所有情況下，資料指標服務都會啟用批次更新的支援。 它也會在資料提供者只能提供較不支援的資料指標（例如靜態資料指標）時，模擬更有能力的游標類型，例如動態資料指標。
 
 ## <a name="keyword"></a>關鍵字
- 若要叫用此服務元件，請設定[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)或[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件的[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設**adUseClient**。
+ 若要叫用此服務元件，請將[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)或[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件的[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**adUseClient**。
 
 ```vb
 connection.CursorLocation=adUseClient
@@ -36,9 +36,9 @@ recordset.CursorLocation=adUseClient
 ```
 
 ## <a name="dynamic-properties"></a>動態屬性
- 叫用的 OLE DB 資料指標服務時，加入下列的動態屬性**Recordset**物件的[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。 完整清單**連接**並**Recordset**物件的動態屬性會列在[ADO 動態屬性索引](../../../ado/reference/ado-api/ado-dynamic-property-index.md)。 相關聯的 OLE DB 屬性名稱，在適當的地方包含括號括住的 ADO 屬性名稱之後。
+ 叫用 OLE DB 的資料指標服務時，會將下列動態屬性加入至**記錄集**物件的[properties](../../../ado/reference/ado-api/properties-collection-ado.md)集合中。 **連接**和**記錄集**物件動態屬性的完整清單會列在[ADO 動態屬性索引](../../../ado/reference/ado-api/ado-dynamic-property-index.md)中。 在適當的情況下，相關聯的 OLE DB 屬性名稱會包含在 ADO 屬性名稱後面的括弧中。
 
- 有些動態屬性的變更不會對基礎資料來源顯示的在叫用資料指標服務之後。 例如，設定*命令逾*屬性上的**資料錄集**將不會顯示基礎資料提供者。
+ 在叫用 Cursor 服務之後，基礎資料來源看不到某些動態屬性的變更。 例如，基礎資料提供者不會看到**記錄集**上的*命令逾時*屬性。
 
 ```vb
 
@@ -51,42 +51,42 @@ Recordset1.Properties.Item("Command Time out") = 50
 
 ```
 
- 如果您的應用程式需要的資料指標服務，但您需要在基礎提供者上設定動態內容，請叫用資料指標服務之前設定的屬性。 命令物件屬性的設定一定會傳遞至基礎資料提供者，不論資料指標位置。 因此，您也可以使用命令物件設定屬性，在任何時間。
+ 如果您的應用程式需要資料指標服務，但您需要在基礎提供者上設定動態屬性，請在叫用資料指標服務之前設定屬性。 命令物件屬性設定一律會傳遞給基礎資料提供者，不論游標位置為何。 因此，您也可以隨時使用 command 物件來設定屬性。
 
 > [!NOTE]
->  動態屬性 DBPROP_SERVERDATAONINSERT 是服務不支援資料指標，即使基礎資料提供者支援。
+>  資料指標服務不支援動態屬性 DBPROP_SERVERDATAONINSERT，即使基礎資料提供者支援它亦然。
 
 |屬性名稱|描述|
 |-------------------|-----------------|
-|自動重新計算 (DBPROP_ADC_AUTORECALC)|資料錄集，這個值表示頻率建立具有 Data Shaping Service 系統會計算導出和彙總資料行。 預設值 (值 = 1) 是每當 Data Shaping Service 可讓您決定的值有變更時重新整理。 如果值為 0，一開始建立階層時，會僅會計算導出或彙總的資料行。|
-|批次大小 (DBPROP_ADC_BATCHSIZE)|指出可以進行批次處理，再傳送至資料存放區的 update 陳述式數目。 批次中的多個陳述式，較少的來回行程，對資料存放區。|
-|快取子資料列 (DBPROP_ADC_CACHECHILDROWS)|代表建立具有 Data Shaping Service 的資料錄集，這個值會表示子資料錄集是否會儲存在快取中供稍後使用。|
-|資料指標引擎版本 (DBPROP_ADC_CEVER)|指出資料指標服務所使用的版本。|
-|維護變更狀態 (DBPROP_ADC_MAINTAINCHANGESTATUS)|表示用來重新同步處理多個資料表的聯結中的一或多個資料列的命令的文字。|
-|[最佳化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|指出是否應該建立索引。 當設定為 **，則為 True**，授與暫存索引以提升執行某些作業的建立。|
-|[調整形狀名稱](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|表示名稱**資料錄集**。 可以是參考位於目前，或後續、 資料成形命令。|
-|[重新同步命令](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|表示自訂命令字串，以供[重新同步處理](../../../ado/reference/ado-api/resync-method.md)方法時[唯一資料表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)屬性就會生效。|
-|[唯一的目錄](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|表示包含所參考的資料表的資料庫名稱**唯一資料表**屬性。|
-|[唯一的結構描述](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|表示所參考的資料表擁有者的名稱**唯一資料表**屬性。|
-|[唯一資料表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|指示中的一個資料表名稱**資料錄集**建立多個資料表，就可以修改的插入、 更新或刪除。|
-|更新條件 (DBPROP_ADC_UPDATECRITERIA)|中的哪些欄位會指出**其中**子句用來處理在更新期間發生的衝突。|
-|[更新重新同步處理](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)(DBPROP_ADC_UPDATERESYNC)|指出是否**重新同步處理**方法會隱含地叫用後[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法 （和其行為），當**唯一資料表**屬性就會生效。|
+|自動重新計算（DBPROP_ADC_AUTORECALC）|對於使用資料成形服務建立的記錄集，這個值會指出計算計算和匯總資料行的頻率。 每當資料成形服務判斷值已變更時，預設值（value = 1）就會重新計算。 如果值為0，則只有在一開始建立階層時，才會計算計算或匯總資料行。|
+|批次大小（DBPROP_ADC_BATCHSIZE）|指出在傳送至資料存放區之前，可以批次處理的 update 語句數目。 批次中的語句越多，資料存放區的來回行程就越少。|
+|快取子資料列（DBPROP_ADC_CACHECHILDROWS）|對於使用資料成形服務所建立的記錄集，這個值會指出子記錄集是否儲存在快取中供稍後使用。|
+|資料指標引擎版本（DBPROP_ADC_CEVER）|指出所使用的資料指標服務版本。|
+|維護變更狀態（DBPROP_ADC_MAINTAINCHANGESTATUS）|表示用來在多個資料表聯結中重新同步處理一或多個資料列的命令文字。|
+|[最優化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|指出是否應該建立索引。 設定為**True**時，會授權暫時建立索引，以改善特定作業的執行。|
+|[重新調整名稱](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|指出**記錄集**的名稱。 可以在目前或後續的資料成形命令內參考。|
+|[重新同步命令](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|表示當[Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)屬性生效時， [Resync](../../../ado/reference/ado-api/resync-method.md)方法所使用的自訂命令字串。|
+|[唯一目錄](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|指出包含 [**唯一資料表**] 屬性所參考之資料表的資料庫名稱。|
+|[唯一的架構](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|指出**唯一資料表**屬性所參考之資料表的擁有者名稱。|
+|[Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|指出從多個資料表建立的**記錄集**內，一個資料表的名稱，可以透過插入、更新或刪除來加以修改。|
+|更新準則（DBPROP_ADC_UPDATECRITERIA）|指出使用**WHERE**子句中的哪些欄位來處理更新期間發生的衝突。|
+|[更新重新同步](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)（DBPROP_ADC_UPDATERESYNC）|指出當**Unique Table**屬性生效時，是否會在[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法（和其行為）之後，隱含地叫用重新**同步**處理方法。|
 
- 您也可以設定，或藉由指定其名稱為索引中擷取動態屬性**屬性**集合。 比方說，取得並列印目前的值[最佳化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)動態屬性，然後將新的值，如下所示：
+ 您也可以指定動態屬性的名稱做為**屬性**集合的索引，藉以進行設定或抓取。 例如，取得並列印 [[優化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)動態] 屬性的目前值，然後設定新的值，如下所示：
 
 ```vb
 Debug.Print rs.Properties("Optimize")
 rs.Properties("Optimize") = True
 ```
 
-## <a name="built-in-property-behavior"></a>內建的屬性行為
- OLE DB 資料指標服務也會影響某些內建屬性的行為。
+## <a name="built-in-property-behavior"></a>內建屬性行為
+ OLE DB 的資料指標服務也會影響特定內建屬性的行為。
 
 |屬性名稱|描述|
 |-------------------|-----------------|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|補充的一種可供資料指標**資料錄集**。|
-|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|補充適用於鎖定的類型**資料錄集**。 啟用批次更新。|
-|[Sort](../../../ado/reference/ado-api/sort-property.md)|指定一或多個欄位名稱**資料錄集**排序，以及每個欄位以遞增或遞減順序排序。|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|補充適用于**記錄集**的資料指標類型。|
+|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|補充適用于**記錄集**的鎖定類型。 啟用批次更新。|
+|[Sort](../../../ado/reference/ado-api/sort-property.md)|指定**記錄集**排序所在的一個或多個功能變數名稱，以及每個欄位是否以遞增或遞減順序排序。|
 
-## <a name="method-behavior"></a>方法的行為
- OLE DB 資料指標服務啟用，或會影響的行為[欄位](../../../ado/reference/ado-api/field-object.md)物件的[附加](../../../ado/reference/ado-api/append-method-ado.md)方法，而**資料錄集**物件的[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)， [resync](../../../ado/reference/ado-api/resync-method.md)， [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)，和[儲存](../../../ado/reference/ado-api/save-method.md)方法。
+## <a name="method-behavior"></a>方法行為
+ OLE DB 的資料指標服務會啟用或影響[Field](../../../ado/reference/ado-api/field-object.md)物件的[Append](../../../ado/reference/ado-api/append-method-ado.md)方法行為;和**Recordset**物件的[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)、 [Resync](../../../ado/reference/ado-api/resync-method.md)、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)和[Save](../../../ado/reference/ado-api/save-method.md)方法。

@@ -1,5 +1,5 @@
 ---
-title: sp_attach_schedule (TRANSACT-SQL) |Microsoft Docs
+title: sp_attach_schedule （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f85095941311459da2fdc757a11895795ebb418e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046160"
 ---
-# <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
+# <a name="sp_attach_schedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   設定作業的排程。  
@@ -42,29 +42,29 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_id = ] job_id` 要加入排程的作業工作識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
+`[ @job_id = ] job_id`要加入排程之作業的作業識別碼。 *job_id*是**uniqueidentifier**，預設值是 Null。  
   
-`[ @job_name = ] 'job_name'` 要加入排程的作業名稱。 *job_name*已**sysname**，預設值是 NULL。  
-  
-> [!NOTE]  
->  任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
-  
-`[ @schedule_id = ] schedule_id` 要設定作業之排程的排程識別碼。 *schedule_id*已**int**，預設值是 NULL。  
-  
-`[ @schedule_name = ] 'schedule_name'` 若要設定作業排程的名稱。 *schedule_name&lt*已**sysname**，預設值是 NULL。  
+`[ @job_name = ] 'job_name'`要加入排程的作業名稱。 *job_name*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  任一*schedule_id*或是*schedule_name&lt*必須指定，但不可同時指定兩者。  
+>  必須指定*job_id*或*job_name* ，但不能同時指定兩者。  
+  
+`[ @schedule_id = ] schedule_id`要為作業設定之排程的排程識別碼。 *schedule_id*是**int**，預設值是 Null。  
+  
+`[ @schedule_name = ] 'schedule_name'`要為作業設定的排程名稱。 *schedule_name*是**sysname**，預設值是 Null。  
+  
+> [!NOTE]  
+>  必須指定*schedule_id*或*schedule_name* ，但不能同時指定兩者。  
   
 ## <a name="remarks"></a>備註  
  排程和作業的擁有者必須相同。  
   
  多項作業可以設定同一份排程。 一項作業可以根據多份排程來執行。  
   
- 這個預存程序必須從執行**msdb**資料庫。  
+ 這個預存程式必須從**msdb**資料庫中執行。  
   
-## <a name="permissions"></a>Permissions  
- 依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
+## <a name="permissions"></a>權限  
+ 根據預設，**系統管理員（sysadmin** ）固定伺服器角色的成員可以執行此預存程式。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
   
 -   **SQLAgentUserRole**  
   
@@ -76,7 +76,8 @@ sp_attach_schedule
   
  如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會檢查使用者是否同時擁有作業和排程。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會檢查使用者是否同時擁有作業和排程。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立一份名稱為 `NightlyJobs` 的排程。 每天伺服器時間到了 `01:00` 時，就會開始執行使用這份排程的作業。 這個範例會將排程附加至 `BackupDatabase` 作業和 `RunReports` 作業上。  
@@ -107,8 +108,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

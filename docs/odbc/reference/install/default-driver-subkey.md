@@ -16,26 +16,26 @@ ms.assetid: 9e58b24f-ebfc-4286-a272-0843b4d6f2d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e82644d3bddab5d4f6fde6f7103bd9731872bab9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094193"
 ---
 # <a name="default-driver-subkey"></a>預設驅動程式子機碼
-預設子機碼包含描述的預設資料來源所使用的驅動程式的單一值。 下表顯示此值的格式。  
+預設子機碼包含單一值，可描述預設資料來源所使用的驅動程式。 下表顯示此值的格式。  
   
-|名稱|資料類型|Data|  
+|名稱|資料類型|資料|  
 |----------|---------------|----------|  
-|**驅動程式**|REG_SZ|*default-driver-description*|  
+|**驅動程式**|REG_SZ|*預設驅動程式-描述*|  
   
- *預設驅動程式描述*名稱等同於底下說明驅動程式的 ODBC 驅動程式子機碼值的名稱。  
+ *預設驅動程式描述*名稱與描述驅動程式之 ODBC 驅動程式子機碼下的值名稱相同。  
   
- 比方說，如果預設的資料來源使用的 SQL Server 驅動程式，可能會將預設子機碼下的值：  
+ 例如，如果預設資料來源使用 SQL Server 驅動程式，則預設子機碼底下的值可能會是：  
   
 ```  
 Driver : REG_SZ : SQL Server  
 ```  
   
 > [!NOTE]  
->  預設的預設子機碼中包含的驅動程式可以參考的預設使用者 DSN 或預設系統 DSN。 如果預設的使用者 DSN 與預設系統尚未建立 DSN，預設的驅動程式取決於最後，建立 DSN 因此，可能不需要先建立資料來源名稱的有效項目。
+>  預設子機碼中包含的預設驅動程式可以參考預設的使用者 DSN 或預設系統 DSN。 如果預設的使用者 DSN 和預設系統 DSN 都已建立，則預設的驅動程式是由最後建立的 DSN 決定，因此它可能不是先建立之 DSN 的有效專案。

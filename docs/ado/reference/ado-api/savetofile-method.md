@@ -17,14 +17,14 @@ ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c2e56178ad306d5b39c2445c391c3bbabe4fc424
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917028"
 ---
 # <a name="savetofile-method"></a>SaveToFile 方法
-將儲存的二進位內容[Stream](../../../ado/reference/ado-api/stream-object-ado.md)至檔案。  
+將[資料流程](../../../ado/reference/ado-api/stream-object-ado.md)的二進位內容儲存至檔案。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,25 +34,25 @@ Stream.SaveToFile FileName, SaveOptions
 ```  
   
 #### <a name="parameters"></a>參數  
- *FileName*  
- A**字串**值，其中包含之檔案的完整限定名稱的內容**Stream**會儲存。 您可以將它儲存至任何有效的本機位置，或您可以存取透過 UNC 值的任何位置。  
+ *名稱*  
+ **字串**值，其中包含將儲存**資料流程**內容之檔案的完整名稱。 您可以儲存至任何有效的本機位置，或您可透過 UNC 值存取的任何位置。  
   
- *SaveOptions*  
- A [SaveOptionsEnum](../../../ado/reference/ado-api/saveoptionsenum.md)值，指定是否應該藉由建立新的檔案**SaveToFile**，如果不存在。 預設值是**adSaveCreateNotExists**。 您可以使用這些選項，指定是否指定的檔案不存在，會發生錯誤。 您也可以指定**SaveToFile**覆寫現有檔案的目前內容。  
+ *System.xml.linq.saveoptions>*  
+ [SaveOptionsEnum](../../../ado/reference/ado-api/saveoptionsenum.md)值，指定是否應該在**SaveToFile**建立新檔案（如果尚未存在的話）。 預設值為**adSaveCreateNotExists**。 您可以使用這些選項指定如果指定的檔案不存在，就會發生錯誤。 您也可以指定**SaveToFile**覆寫現有檔案的目前內容。  
   
 > [!NOTE]
->  如果您要覆寫現有檔案 (當**adSaveCreateOverwrite**設定)， **SaveToFile**截斷任何位元組從原始的現有檔案，請遵循新[EOS](../../../ado/reference/ado-api/eos-property.md)。  
+>  如果您覆寫現有的檔案（當設定**adSaveCreateOverwrite**時）， **SaveToFile**會從新的[EOS](../../../ado/reference/ado-api/eos-property.md)後面的原始現有檔案截斷任何位元組。  
   
 ## <a name="remarks"></a>備註  
- **SaveToFile**可用來將內容複製**Stream**到本機檔案的物件。 沒有任何內容或屬性中的變更**Stream**物件。 **Stream**物件必須為開啟狀態，然後再呼叫**SaveToFile**。  
+ **SaveToFile**可以用來將**資料流程**物件的內容複寫到本機檔案。 **資料流程**物件的內容或屬性不會有任何變更。 在呼叫**SaveToFile**之前，必須先開啟**資料流程**物件。  
   
- 這個方法不會變更的關聯**Stream**其基礎來源的物件。 **Stream**物件仍然會與原始的 URL 相關聯或是**記錄**，已開啟時，其來源。  
+ 這個方法不會將**資料流程**物件的關聯變更為其基礎來源。 在開啟時，**資料流程**物件仍會與原始 URL 或其來源的**記錄**相關聯。  
   
- 在後**SaveToFile**作業，目前的位置 ([位置](../../../ado/reference/ado-api/position-property-ado.md)) 資料流中設為 (0) 的資料流的開頭。  
+ 在**SaveToFile**作業之後，資料流程中的目前位置（[位置](../../../ado/reference/ado-api/position-property-ado.md)）會設定為數據流的開頭（0）。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Open 方法 (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+ [Open 方法（ADO Stream）](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Save 方法](../../../ado/reference/ado-api/save-method.md)

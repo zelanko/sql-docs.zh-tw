@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_distributed_sql_requests (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_exec_distributed_sql_requests （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,35 +23,35 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a63d8a331163283598dd50a418f0dd32f9ac5edd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097793"
 ---
-# <a name="sysdmexecdistributedsqlrequests-transact-sql"></a>sys.dm_exec_distributed_sql_requests (Transact-SQL)
+# <a name="sysdm_exec_distributed_sql_requests-transact-sql"></a>sys.databases dm_exec_distributed_sql_requests （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  保留相關資訊的所有 SQL 查詢散發套件 SQL 步驟的一部分在查詢中。  此檢視會顯示的最近 1000 則要求; 的資料使用中要求一律會有此檢視中的資料。  
+  保存所有 SQL 查詢散發套件的相關資訊，做為查詢中 SQL 步驟的一部分。  此視圖會顯示最後一個1000要求的資料;使用中要求的資料一律會出現在此視圖中。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|execution_id 和 step_index 組成此檢視的索引鍵。 與要求相關聯的唯一數值識別碼。|請參閱中的識別碼[sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
-|step_index|**int**|此分佈是一部分的查詢步驟的索引。|請參閱中的 step_index [sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)。|  
-|compute_node_id|**int**|此步驟中所代表的作業類型。|請參閱中的 compute_node_id [sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
-|distribution_id|**int**|執行步驟的地方。|設定為-1 的執行在節點範圍內不發佈範圍的要求。|  
-|status|**nvarchar(32)**|此步驟的狀態|作用中、 已取消、 已完成、 失敗、 已排入佇列|  
-|error_id|**nvarchar(36)**|如果有的話，此步驟中，與相關的錯誤的唯一識別碼|請參閱識別碼[sys.dm_exec_compute_node_errors &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)，如果未不發生任何錯誤則為 NULL。|  
-|start_time|**datetime**|步驟開始執行時間|較小或等於目前的時間和大於或等於 end_compile_time 屬於此步驟中的查詢。|  
-|end_time|**datetime**|在此步驟中完成執行、 已取消，或失敗的時間。|較小或等於目前的時間和大於或等於 start_time，目前在執行中的步驟設定為 NULL 或已排入佇列。|  
-|total_elapsed_time|**int**|已執行的查詢步驟，以毫秒為單位的時間總數量|介於 0 到 end_time 和 start_time 之間的差異。 0 代表已排入佇列的步驟。|  
-|row_count|**bigint**|變更或這項要求所傳回的資料列的總數|0 表示未變更或傳回的資料，否則會受到影響的資料列數目的步驟。 設定為 DMS 步驟的-1。|  
-|spid|**int**|執行查詢發佈在 SQL Server 執行個體上的工作階段識別碼||  
-|command|nvarchar(4000)|保留此步驟的命令的完整文字。|步驟的任何有效的要求字串。 如果超過 4000 個字元，就會截斷。|  
+|execution_id|**Nvarchar （32）**|execution_id 和 step_index 組成此視圖的索引鍵。 與要求相關聯的唯一數值識別碼。|請參閱[dm_exec_requests &#40;transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)中的識別碼&#41;|  
+|step_index|**int**|此散發所屬之查詢步驟的索引。|請參閱[dm_exec_distributed_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)中的 step_index。|  
+|compute_node_id|**int**|此步驟所表示的作業類型。|請參閱[dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)中的 compute_node_id。|  
+|distribution_id|**int**|步驟執行所在的位置。|針對在節點範圍（而非散發範圍）執行的要求，設定為-1。|  
+|status|**Nvarchar （32）**|此步驟的狀態|作用中、已取消、已完成、失敗、已排入佇列|  
+|error_id|**Nvarchar （36）**|與此步驟相關聯之錯誤的唯一識別碼（如果有的話）|請參閱[dm_exec_compute_node_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)的識別碼，如果未發生錯誤，則為 Null。|  
+|start_time|**datetime**|步驟開始執行的時間|小於或等於目前的時間，或是大於或等於此步驟所屬查詢的 end_compile_time。|  
+|end_time|**datetime**|此步驟完成執行、已取消或失敗的時間。|小於或等於目前時間且大於或等於 start_time，針對目前執行中或已排入佇列的步驟將設定為 Null。|  
+|total_elapsed_time|**int**|查詢步驟已執行的總時間量（以毫秒為單位）|介於0和 end_time 與 start_time 之間的差異。 0表示已排入佇列的步驟。|  
+|row_count|**Bigint**|此要求變更或傳回的總數據列數|0適用于未變更或傳回資料的步驟，否則為受影響的資料列數目。 針對 DMS 步驟，設定為-1。|  
+|spid|**int**|執行查詢散發之 SQL Server 實例上的會話識別碼||  
+|命令|nvarchar(4000)|保存此步驟之命令的完整文字。|步驟的任何有效要求字串。 如果超過4000個字元，則會截斷。|  
   
 ## <a name="see-also"></a>另請參閱  
- [PolyBase 疑難排解動態管理檢視](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [使用動態管理檢視進行 PolyBase 疑難排解](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [與資料庫相關動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [資料庫相關的動態管理檢視 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   
