@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917590"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>建立 SQL Server Agent 作業以封存 Database Mail 訊息及事件記錄檔
@@ -76,13 +76,13 @@ ms.locfileid: "62917590"
   
 ## <a name="to-create-a-step-to-archive-the-database-mail-messages"></a>建立封存 Database Mail 訊息的步驟  
   
-1.  在 **[步驟]** 頁面上，按一下 **[新增]** 。  
+1.  在 **[步驟]** 頁面上，按一下 **[新增]**。  
   
 2.  在 **[步驟名稱]** 方塊中，輸入 **複製 Database Mail 項目**。  
   
-3.  在 **[類型]** 方塊中，選取 **[Transact-SQL 指令碼 (T-SQL)]** 。  
+3.  在 **[類型]** 方塊中，選取 **[Transact-SQL 指令碼 (T-SQL)]**。  
   
-4.  在 **[資料庫]** 方塊中，選取 **[msdb]** 。  
+4.  在 **[資料庫]** 方塊中，選取 **[msdb]**。  
   
 5.  在 **[命令]** 方塊中，輸入下列陳述式建立一個資料表，以上一個月份命名，包含這個月之前的所有資料列：  
   
@@ -102,13 +102,13 @@ ms.locfileid: "62917590"
   
 ## <a name="to-create-a-step-to-archive-the-database-mail-attachments"></a>建立封存 Database Mail 附加檔案的步驟  
   
-1.  在 **[步驟]** 頁面上，按一下 **[新增]** 。  
+1.  在 **[步驟]** 頁面上，按一下 **[新增]**。  
   
 2.  在 **[步驟名稱]** 方塊中，輸入 **複製 Database Mail 附加檔案**。  
   
-3.  在 **[類型]** 方塊中，選取 **[Transact-SQL 指令碼 (T-SQL)]** 。  
+3.  在 **[類型]** 方塊中，選取 **[Transact-SQL 指令碼 (T-SQL)]**。  
   
-4.  在 **[資料庫]** 方塊中，選取 **[msdb]** 。  
+4.  在 **[資料庫]** 方塊中，選取 **[msdb]**。  
   
 5.  在 **[命令]** 方塊中，輸入下列陳述式建立一個附加檔案資料表，以上一個月份命名，包含前一步驟轉移訊息所對應的附件：  
   
@@ -129,13 +129,13 @@ ms.locfileid: "62917590"
   
 ## <a name="to-create-a-step-to-archive-the-database-mail-log"></a>建立封存 Database Mail 記錄的步驟  
   
-1.  在 **[步驟]** 頁面上，按一下 **[新增]** 。  
+1.  在 **[步驟]** 頁面上，按一下 **[新增]**。  
   
 2.  在 **[步驟名稱]** 方塊中，輸入 **複製 Database Mail 記錄**。  
   
-3.  在 **[類型]** 方塊中，選取 **[Transact-SQL 指令碼 (T-SQL)]** 。  
+3.  在 **[類型]** 方塊中，選取 **[Transact-SQL 指令碼 (T-SQL)]**。  
   
-4.  在 **[資料庫]** 方塊中，選取 **[msdb]** 。  
+4.  在 **[資料庫]** 方塊中，選取 **[msdb]**。  
   
 5.  在 **[命令]** 方塊中，輸入下列陳述式建立一個記錄資料表，以上一個月份命名，包含前面步驟轉移訊息所對應的記錄項目：  
   
@@ -156,13 +156,13 @@ ms.locfileid: "62917590"
   
 ## <a name="to-create-a-step-to-remove-the-archived-rows-from-database-mail"></a>建立從 Database Mail 移除封存資料列的步驟  
   
-1.  在 **[步驟]** 頁面上，按一下 **[新增]** 。  
+1.  在 **[步驟]** 頁面上，按一下 **[新增]**。  
   
 2.  在 **[步驟名稱]** 方塊中，輸入 **從 Database Mail 移除資料列**。  
   
-3.  在 **[類型]** 方塊中，選取 **[Transact-SQL 指令碼 (T-SQL)]** 。  
+3.  在 **[類型]** 方塊中，選取 **[Transact-SQL 指令碼 (T-SQL)]**。  
   
-4.  在 **[資料庫]** 方塊中，選取 **[msdb]** 。  
+4.  在 **[資料庫]** 方塊中，選取 **[msdb]**。  
   
 5.  在 **[命令]** 方塊中，輸入下列陳述式，從 Database Mail 資料表移除這個月之前的資料列：  
   
@@ -178,11 +178,11 @@ ms.locfileid: "62917590"
   
 ## <a name="to-create-a-step-to-remove-the-archived-items-from-database-mail-event-log"></a>建立從 Database Mail 事件記錄檔移除封存項目的步驟  
   
-1.  在 **[步驟]** 頁面上，按一下 **[新增]** 。  
+1.  在 **[步驟]** 頁面上，按一下 **[新增]**。  
   
 2.  在 **[步驟名稱]** 方塊中，輸入 **從 Database Mail 事件記錄檔移除資料列**。  
   
-3.  在 **[類型]** 方塊中，選取 **[Transact-SQL 指令碼 (T-SQL)]** 。  
+3.  在 **[類型]** 方塊中，選取 **[Transact-SQL 指令碼 (T-SQL)]**。  
   
 4.  在 **[命令]** 方塊中，輸入下列陳述式，從 Database Mail 事件記錄檔移除這個月之前的資料列：  
   
@@ -198,17 +198,17 @@ ms.locfileid: "62917590"
   
 ## <a name="to-schedule-the-job-to-run-periodically"></a>排程定期執行作業  
   
-1.  在 **[新增作業]** 對話方塊中，按一下 **[排程]** 。  
+1.  在 **[新增作業]** 對話方塊中，按一下 **[排程]**。  
   
-2.  在 **[排程]** 頁面上，按一下 **[新增]** 。  
+2.  在 **[排程]** 頁面上，按一下 **[新增]**。  
   
 3.  在 **[名稱]** 方塊中，輸入 **封存 Database Mail**。  
   
-4.  在 **[排程類型]** 方塊中，選取 **[重複執行]** 。  
+4.  在 **[排程類型]** 方塊中，選取 **[重複執行]**。  
   
 5.  在 **[頻率]** 區域中，選取定期執行作業的選項 (例如一個月一次)。  
   
-6.  在 [每日頻率]  區域中，選取 [執行一次於 \<時間>]  。  
+6.  在 [每日頻率]**** 區域中，選取 [執行一次於 **時間>]\<**。  
   
 7.  視需要設定其他選項，然後按一下 **[確定]** 儲存排程。  
   

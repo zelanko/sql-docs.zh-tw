@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831880"
 ---
 # <a name="data-profiling-task"></a>資料分析工作
@@ -31,7 +31,7 @@ ms.locfileid: "62831880"
 > [!NOTE]  
 >  本主題只會描述資料分析工作的功能和需求。 如需如何使用資料分析工作的逐步解說，請參閱 [資料分析工作和檢視器](data-profiling-task-and-viewer.md)一節。  
   
-## <a name="requirements-and-limitations"></a>需求與限制  
+## <a name="requirements-and-limitations"></a>需求和限制  
  資料分析工作僅用於儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的資料。 此工作不適用於協力廠商或以檔案為基礎的資料來源。  
   
  此外，若要執行包含資料分析工作的封裝，您所使用的帳戶必須具備 tempdb 資料庫的讀取/寫入權限，包括 CREATE TABLE 權限。  
@@ -75,14 +75,20 @@ ms.locfileid: "62831880"
 |-------------|------------------------|  
 |ColumnStatisticsProfile|數值類型或 `datetime` 類型的資料行 (沒有適用於 `mean` 資料行的 `stddev` 和 `datetime`)|  
 |ColumnNullRatioProfile|所有資料行**|  
-|ColumnValueDistributionProfile|`integer` 類型、`char` 類型和 `datetime` 類型的資料行|  
-|ColumnLengthDistributionProfile|`char` 類型的資料行|  
-|ColumnPatternProfile|`char` 類型的資料行|  
-|CandidateKeyProfile|`integer` 類型、`char` 類型和 `datetime` 類型的資料行|  
-|FunctionalDependencyProfile|`integer` 類型、`char` 類型和 `datetime` 類型的資料行|  
-|InclusionProfile|`integer` 類型、`char` 類型和 `datetime` 類型的資料行|  
+|ColumnValueDistributionProfile|
+  `integer` 類型、`char` 類型和 `datetime` 類型的資料行|  
+|ColumnLengthDistributionProfile|
+  `char` 類型的資料行|  
+|ColumnPatternProfile|
+  `char` 類型的資料行|  
+|CandidateKeyProfile|
+  `integer` 類型、`char` 類型和 `datetime` 類型的資料行|  
+|FunctionalDependencyProfile|
+  `integer` 類型、`char` 類型和 `datetime` 類型的資料行|  
+|InclusionProfile|
+  `integer` 類型、`char` 類型和 `datetime` 類型的資料行|  
   
- \* 有效的資料類型的上一個資料表中`integer`， `char`， `datetime`，和`numeric`類型包括下列特定的資料類型：  
+ \*在有效資料類型的上一個資料表中， `integer`、 `char`、 `datetime`和`numeric`類型包含下列特定的資料類型：  
   
  整數類型包括 `bit`、`tinyint`、`smallint`、`int` 和 `bigint`。  
   
@@ -92,7 +98,7 @@ ms.locfileid: "62831880"
   
  數值類型包括 `integer` 類型 (`bit` 除外)、`money`、`smallmoney`、`decimal`、`float`、`real` 和 `numeric`。  
   
- \*\* `image``text`， `XML`， `udt`，和`variant`之外的資料行 Null 比例設定檔的設定檔不支援的類型。  
+ \*\*`image`對於`text`資料`XML`行`udt`Null 比例`variant`設定檔以外的設定檔，不支援、、、和類型。  
   
 ### <a name="valid-tables-and-columns"></a>有效的資料表和資料行  
  如果資料表或資料行為空白，資料分析會採取下列動作：  
@@ -104,9 +110,9 @@ ms.locfileid: "62831880"
 ## <a name="features-of-the-data-profiling-task"></a>資料分析工作的功能  
  資料分析工作具有下列便利的組態選項：  
   
--   **萬用字元資料行**當您要設定設定檔要求時，此工作會接受 **(\*)** 萬用字元來取代資料行名稱。 這會簡化組態，而且更容易發現不熟悉之資料的特性。 當工作執行時，該工作會分析具有適當資料類型的每個資料行。  
+-   **萬用字元資料行**當您正在設定設定檔要求時，此工作會**接受\*（）** 萬用字元來取代資料行名稱。 這會簡化組態，而且更容易發現不熟悉之資料的特性。 當工作執行時，該工作會分析具有適當資料類型的每個資料行。  
   
--   **[快速分析]** You can select [快速分析] to configure the task quickly. [快速分析] 會使用所有預設的設定檔和預設值，分析資料表或檢視表。  
+-   **快速分析**您可以選取 [快速分析] 來快速設定工作。 [快速分析] 會使用所有預設的設定檔和預設值，分析資料表或檢視表。  
   
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>資料分析工作上所提供的自訂記錄訊息  
  下表列出資料分析工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../custom-messages-for-logging.md)。  
@@ -116,7 +122,7 @@ ms.locfileid: "62831880"
 |**DataProfilingTaskTrace**|提供有關此工作之狀態的描述性資訊。 訊息包括下列資訊：<br /><br /> 開始處理要求<br /><br /> 查詢開始<br /><br /> 查詢結束<br /><br /> 完成計算要求|  
   
 ## <a name="output-and-its-schema"></a>輸出及其結構描述  
- 資料分析工作會將選取的設定檔輸出到根據 DataProfile.xsd 結構描述結構化的 XML。 您可以指定此 XML 輸出要以檔案或封裝變數儲存。 您可以在 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/) 線上檢視此結構描述。 您可以從網頁儲存結構描述的本機複本。 然後，您可以在 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或其他結構描述編輯器、XML 編輯器，或「記事本」之類的文字編輯器中檢視結構描述的本機複本。  
+ 資料分析工作會將選取的設定檔輸出到根據 DataProfile.xsd 結構描述結構化的 XML。 您可以指定此 XML 輸出要以檔案或封裝變數儲存。 您可以在線上觀看此架構[https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)，網址為。 您可以從網頁儲存結構描述的本機複本。 然後，您可以在 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或其他結構描述編輯器、XML 編輯器，或「記事本」之類的文字編輯器中檢視結構描述的本機複本。  
   
  此資料品質資訊的結構描述對於下列事項可能很實用：  
   
@@ -124,7 +130,7 @@ ms.locfileid: "62831880"
   
 -   建立搭配資料品質資訊使用的自訂工具。  
   
- 在結構描述中，將目標命名空間識別為 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
+ 在架構中，將目標命名空間識別[https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)為。  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>封裝的條件式工作流程中的輸出  
  資料分析元件不包含內建功能，無法根據資料分析工作的輸出，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的工作流程中實作條件式邏輯。 不過，您可以利用最少量的程式設計，在指令碼工作中輕鬆加入這個邏輯。 此程式碼會根據 XML 輸出執行 XPath 查詢，然後以封裝變數儲存結果。 將指令碼工作連接到後續工作的優先順序條件約束可以使用運算式來判斷工作流程。 例如，指令碼工作會偵測到 Null 值在資料行中的百分比超出特定的臨界值。 此條件為 true 時，您可能想要先中斷封裝並解決問題，然後再繼續。  
@@ -133,10 +139,10 @@ ms.locfileid: "62831880"
  您可以使用 **[資料分析工作編輯器]** 來設定資料分析工作。 此編輯器有兩個頁面：  
   
  [一般頁面](../general-page-of-integration-services-designers-options.md)  
- 在 [一般]  頁面上，您可以指定輸出檔案或變數。 您也可以選取 **[快速分析]** ，利用預設值快速設定工作以計算設定檔。 如需詳細資訊，請參閱 [單一資料表快速分析表單 &#40;資料分析工作&#41;](data-profiling-task.md)。  
+ 在 [一般]**** 頁面上，您可以指定輸出檔案或變數。 您也可以選取 **[快速分析]** ，利用預設值快速設定工作以計算設定檔。 如需詳細資訊，請參閱 [單一資料表快速分析表單 &#40;資料分析工作&#41;](data-profiling-task.md)。  
   
- [設定檔要求頁面](data-profiling-task-editor-profile-requests-page.md)  
- 在 [設定檔要求]  頁面上，您可以指定資料來源，然後選取並設定您要計算的資料設定檔。 如需有關您可以設定之各種設定檔的詳細資訊，請參閱下列主題：  
+ [[設定檔要求] 頁面](data-profiling-task-editor-profile-requests-page.md)  
+ 在 [設定檔要求]**** 頁面上，您可以指定資料來源，然後選取並設定您要計算的資料設定檔。 如需有關您可以設定之各種設定檔的詳細資訊，請參閱下列主題：  
   
 -   [候選索引鍵設定檔要求選項 &#40;資料分析工作&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   

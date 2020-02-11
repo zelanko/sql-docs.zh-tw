@@ -13,17 +13,17 @@ ms.author: rortloff
 ms.reviewer: ''
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 323b7602fd375bc393828663f1d2c749332dc9ac
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67463473"
 ---
-# <a name="sppdwdatabaseencryptionregeneratesystemkeys-sql-data-warehouse"></a>sp_pdw_database_encryption_regenerate_system_keys （SQL 資料倉儲）
+# <a name="sp_pdw_database_encryption_regenerate_system_keys-sql-data-warehouse"></a>sp_pdw_database_encryption_regenerate_system_keys （SQL 資料倉儲）
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  使用**sp_pdw_database_encryption_regenerate_system_keys**旋轉應用裝置上啟用 TDE 時加密的內部資料庫的憑證和資料庫加密金鑰。 這包括 `tempdb`。 這將會成功才會啟用 TDE。  
+  使用**sp_pdw_database_encryption_regenerate_system_keys**在設備上啟用 TDE 時，針對已加密的內部資料庫，旋轉憑證和資料庫加密金鑰。 這包括 `tempdb`。 只有在啟用 TDE 時，才會成功。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,15 +34,15 @@ sp_pdw_database_encryption_regenerate_system_keys  ;
 ```  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- 此程序沒有任何參數。  
+ 程式沒有任何參數。  
   
- 較低的設備中的流量時，應該使用此程序。  
+ 當設備中的流量偏低時，應使用此程式。  
   
-## <a name="permissions"></a>Permissions  
- 需要的成員資格**sysadmin**固定資料庫角色，或**CONTROL SERVER**權限。  
+## <a name="permissions"></a>權限  
+ 需要**系統管理員（sysadmin** ）固定資料庫角色中的成員資格，或**CONTROL SERVER**許可權。  
   
 ## <a name="example"></a>範例  
  下列範例會重新產生資料庫加密金鑰。  

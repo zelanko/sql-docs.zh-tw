@@ -1,5 +1,5 @@
 ---
-title: 圖形 APPEND 子句 |Microsoft Docs
+title: Shape APPEND 子句 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924186"
 ---
 # <a name="shape-append-clause"></a>Shape APPEND 子句
-Shape 命令 APPEND 子句附加的資料行或資料行**資料錄集**。 通常，這些資料行是章節資料行，參考的子系**資料錄集**。  
+Shape 命令 APPEND 子句會將一個或多個資料行附加至**記錄集**。 這些資料行通常是參考子**記錄集**的章節資料行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,30 +31,30 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
 ```  
   
 ## <a name="description"></a>描述  
- 這個子句的部分如下所示：  
+ 此子句的部分如下所示：  
   
- *parent-command*  
- 零或下列其中之一 (您可以省略*父命令*完全):  
+ *parent-命令*  
+ 零或下列其中一項（您可以完全省略*父命令*）：  
   
--   提供者命令括在大括弧 ("{}")，會傳回**資料錄集**物件。 基礎資料提供者發出的命令和其語法取決於該提供者的需求。 這通常是 SQL 語言，雖然 ADO 不需要任何特定的查詢語言。  
+-   以大括弧（"{}"）括住的提供者命令，會傳回**記錄集**物件。 此命令會發出給基礎資料提供者，且其語法取決於該提供者的需求。 雖然 ADO 不需要任何特定的查詢語言，但這通常會是 SQL 語言。  
   
--   另一個圖形命令內嵌在括號中。  
+-   內嵌在括弧中的另一個圖形命令。  
   
--   資料表關鍵字，後面加上資料表中的資料提供者的名稱。  
+-   TABLE 關鍵字，後面接著資料提供者中的資料表名稱。  
   
- *parent-alias*  
- 父代是指的選擇性別名**資料錄集**。  
+ *父系-別名*  
+ 參考父**記錄集**的選擇性別名。  
   
- *column-list*  
- 一或多個項目：  
+ *資料行清單*  
+ 下列一或多個動作：  
   
--   彙總的資料行。  
+-   匯總資料行。  
   
--   導出資料行。  
+-   計算結果欄。  
   
--   新的資料行，建立使用新的子句。  
+-   使用 NEW 子句建立的新資料行。  
   
--   章節資料行。 章節資料行定義為加括號 （"（）"）。 請參閱以下的語法。  
+-   章節資料行。 章節資料行定義會以括弧（"（）"）括住。 請參閱下列語法。  
   
 ```  
 SHAPE [parent-command [[AS] parent-alias]]  
@@ -65,50 +65,50 @@ SHAPE [parent-command [[AS] parent-alias]]
 ```  
   
 ## <a name="remarks"></a>備註  
- *child-recordset*  
- -   提供者命令括在大括弧 ("{}")，會傳回**資料錄集**物件。 基礎資料提供者發出的命令和其語法取決於該提供者的需求。 這通常是 SQL 語言，雖然 ADO 不需要任何特定的查詢語言。  
+ *子記錄集*  
+ -   以大括弧（"{}"）括住的提供者命令，會傳回**記錄集**物件。 此命令會發出給基礎資料提供者，且其語法取決於該提供者的需求。 雖然 ADO 不需要任何特定的查詢語言，但這通常會是 SQL 語言。  
   
--   另一個圖形命令內嵌在括號中。  
+-   內嵌在括弧中的另一個圖形命令。  
   
--   現有的形狀名稱**資料錄集**。  
+-   現有的形狀**記錄集**名稱。  
   
--   資料表關鍵字，後面加上資料表中的資料提供者的名稱。  
+-   TABLE 關鍵字，後面接著資料提供者中的資料表名稱。  
   
- *child-alias*  
- 子系的別名**資料錄集**。  
+ *子別名*  
+ 參考子**記錄集**的別名。  
   
- *parent-column*  
- 中的資料行**Recordset**所傳回*父命令。*  
+ *父系-資料行*  
+ *父命令*所傳回之**記錄集**內的資料行。  
   
- *child-column*  
- 中的資料行**Recordset**由*子命令*。  
+ *子資料行*  
+ *子命令*所傳回之**記錄集**內的資料行。  
   
- *param-number*  
- 請參閱[參數化命令的作業](../../../ado/guide/data/operation-of-parameterized-commands.md)。  
+ *參數編號*  
+ 請參閱[參數化命令的](../../../ado/guide/data/operation-of-parameterized-commands.md)作業。  
   
- *chapter-alias*  
- 參考附加至父代的章節資料行的別名。  
-  
-> [!NOTE]
->  *「 父資料行*TO*子資料行"* 子句其實是一個清單，其中定義每個關聯性以逗號分隔  
+ *章節-別名*  
+ 別名，參考附加至父系的章節資料行。  
   
 > [!NOTE]
->  子句之後附加關鍵字其實是一個清單，其中每個子句會以逗號分隔，而會定義要附加至父代的另一個資料行。  
+>  「*父資料行*到*子資料行*」子句實際上是一個清單，其中定義的每個關聯都是以逗號分隔。  
+  
+> [!NOTE]
+>  APPEND 關鍵字之後的子句實際上是一個清單，其中的每個子句都以逗號分隔，並定義另一個要附加至父系的資料行。  
   
 ## <a name="remarks"></a>備註  
- 當您從使用者輸入提供者命令建構圖形命令的一部分時，圖形會視為使用者提供提供者命令不透明的字串並準確地傳遞給提供者。 例如，在下列圖形命令中，  
+ 當您將使用者輸入中的提供者命令視為圖形命令的一部分來設計時，SHAPE 會將使用者提供的提供者命令視為不透明的字串，並將其如實傳遞給提供者。 例如，在下列圖形命令中，  
   
 ```  
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- 圖形將會執行兩個命令：`select * from t1`和 (`select * from t2 RELATE k1 TO k2)`。 如果使用者提供以分號隔開的多個提供者命令所組成的複合指令，圖形不可以區別的差異。 這在下列圖形命令中，  
+ SHAPE 會執行兩個命令`select * from t1` ：和`select * from t2 RELATE k1 TO k2)`（。 如果使用者提供的複合命令包含以分號分隔的多個提供者命令，SHAPE 就無法區分兩者的差異。 因此，在下列圖形命令中，  
   
 ```  
 SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- 圖形執行`select * from t1; drop table t1`和 (`select * from t2 RELATE k1 TO k2),`他不知道，`drop table t1`還有一個在此案例中是很危險，提供者命令。 應用程式必須一律會驗證使用者輸入，以避免發生這種潛在的駭客攻擊。  
+ SHAPE `drop table t1`會`select * from t1; drop table t1`執行和`select * from t2 RELATE k1 TO k2),` （不會發現，這是個別的，在此案例中是危險的提供者命令。 應用程式必須一律驗證使用者輸入，以避免發生這類可能的駭客攻擊。  
   
  此章節包含下列主題。  
   
@@ -122,5 +122,5 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
   
 ## <a name="see-also"></a>另請參閱  
  [資料成形範例](../../../ado/guide/data/data-shaping-example.md)   
- [正式 Shape 文法](../../../ado/guide/data/formal-shape-grammar.md)   
+ [正式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

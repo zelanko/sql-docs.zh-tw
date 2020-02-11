@@ -1,5 +1,5 @@
 ---
-title: 將羅吉斯迴歸模型加入到撥接中心結構 （中繼資料採礦教學課程） |Microsoft Docs
+title: 將羅吉斯回歸模型加入至話務中心結構（元資料採礦教學課程） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 32e66a84dea20964c11c7de0aa568530aa8c28c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823275"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>將羅吉斯迴歸模型加入到撥接中心結構 (中繼資料採礦教學課程)
@@ -28,47 +28,47 @@ ms.locfileid: "62823275"
   
 ### <a name="to-add-a-new-mining-model-to-the-call-center-mining-structure"></a>將新的採礦模型加入到撥接中心採礦結構中  
   
-1.  在[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，在 [方案總管] 中，以滑鼠右鍵按一下採礦結構**呼叫 Center 分類收納**，然後選取**開啟設計工具**。  
+1.  在[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的方案總管中，以滑鼠右鍵按一下 [採礦結構]、[**撥接中心分類收納**]，然後選取 [**開啟設計**工具]。  
   
-2.  在 [資料採礦設計師中，按一下**採礦模型**] 索引標籤。  
+2.  在資料採礦設計工具中，按一下 [**採礦模型**] 索引標籤。  
   
-3.  按一下 **建立相關的採礦模型**。  
+3.  按一下 [**建立相關的採礦模型**]。  
   
-4.  在**新的採礦模型** 對話方塊中，如**模型名稱**，型別`Call Center - LR`。  針對**演算法名稱**，選取**Microsoft 羅吉斯迴歸**。  
+4.  在 [**新增採礦模型**] 對話方塊的 [**模型名稱**] 中`Call Center - LR`，輸入。  在 [**演算法名稱]** 中，選取 [ **Microsoft 羅吉斯回歸**]。  
   
 5.  按一下 [確定]  。  
   
-     新的採礦模型會顯示在**採礦模型** 索引標籤。  
+     新的採礦模型會顯示在 [**採礦模型**] 索引標籤中。  
   
 ### <a name="to-customize-the-logistic-regression-model"></a>自訂羅吉斯迴歸模型  
   
-1.  在新的採礦模型的資料行`Call Center - LR`，將 Fact CallCenter ID 做為索引鍵。  
+1.  在新的「採礦模型`Call Center - LR`」的資料行中，保留事實 CallCenter ID 做為索引鍵。  
   
-2.  將 ServiceGrade 和 「 二級操作員來**Predict**。  
+2.  將 [ServiceGrade] 和 [層級 2] 運算子的值變更為 [**預測**]。  
   
      這些資料行將同時用於輸入和預測。 基本上，您是在相同的資料上建立兩個不同的模型：一個用來預測操作員人數，一個用來預測服務等級。  
   
-3.  變更所有其他的資料行**輸入**。  
+3.  將所有其他資料行變更為 [**輸入**]。  
   
 ### <a name="to-specify-the-seed-and-process-the-models"></a>指定種子和處理模型  
   
-1.  在 **採礦模型**索引標籤，以滑鼠右鍵按一下資料行的模型名稱為撥接中心-LR，然後選取**設定演算法參數**。  
+1.  在 [**採礦模型**] 索引標籤中，以滑鼠右鍵按一下名為 [撥接中心-LR] 之模型的資料行，然後選取 [**設定演算法參數]**。  
   
-2.  在 HOLDOUT_SEED 參數的資料列，按一下 底下的空資料格**值**，然後輸入`1`。 按一下 [確定]  。  
+2.  在 [HOLDOUT_SEED] 參數的資料列中，按一下 [**值**] 底下的空白`1`資料格，然後輸入。 按一下 [確定]  。  
   
     > [!NOTE]  
     >  只要您將相同的種子用於所有相關的模型，您選擇做為種子的值就不重要了。  
   
-3.  在  **Mining Models**功能表上，選取**處理採礦結構和所有模型**。 按一下 **是**若要更新的資料採礦專案部署至伺服器。  
+3.  在 [**採礦模型**] 功能表中，選取 [**處理採礦結構] 和 [所有模型**]。 按一下 **[是]** ，將更新的資料採礦專案部署到伺服器。  
   
-4.  在 [**處理採礦模型**] 對話方塊中，按一下**執行**。  
+4.  在 [**處理採礦模型**] 對話方塊中，按一下 [**執行**]。  
   
-5.  按一下 [**關閉**以關閉**處理進度**對話方塊，然後再按一下**關閉**中再次**處理採礦模型**] 對話方塊。  
+5.  按一下 [**關閉**] 以關閉 [**處理進度**] 對話方塊，然後在 [**處理採礦模型**] 對話方塊中再次按一下 [**關閉**]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [建立用於撥接中心模型的預測&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
+ [&#40;中繼資料採礦教學課程建立撥打電話中心模型的預測&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [處理需求和考量 (資料採礦)](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [&#40;資料採礦&#41;的處理需求和考慮](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 建立使用 Common Language Runtime (CLR) 整合的資料庫物件 |Microsoft Docs
+title: 使用 Common Language Runtime （CLR）整合建立資料庫物件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8dc507d455636bf6256fd7ba4649dba53d32884e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919248"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>利用 Common Language Runtime (CLR) 整合建置資料庫物件
-  您可以建置使用的資料庫物件[!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]稱為 「 CLR 常式 」。 這些常式包括：  
+  您可以使用[!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]來建立資料庫物件，稱為「CLR 常式」。 這些常式包括：  
   
 -   純量值的使用者定義函數 (純量 UDF)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62919248"
   
  CLR 常式在 Managed 程式碼中包含三個相同的結構。 這三個結構會對應到類別的 public、static (在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET 中則為 shared) 方法。 除了常式之外，使用者定義型別 (UDT) 和使用者定義彙總函式也可以使用 .NET Framework 來定義。 UDT 和使用者定義彙總都會對應到整個 .NET Framework 類別。  
   
- 每種類型的.NET Framework 常式都[!INCLUDE[tsql](../../../includes/ssnoversion-md.md)]，[!INCLUDE[tsql](../../../includes/tsql-md.md)]可以使用對等項目。 例如，純量 UDF 可以在任何純量運算式中使用。 TVF 可以在任何 FROM 子句中使用。 程序可以在 EXEC 陳述式中叫用，或從用戶端應用程式叫用。  
+ 每種類型的 .NET Framework 常式都[!INCLUDE[tsql](../../../includes/ssnoversion-md.md)]有， [!INCLUDE[tsql](../../../includes/tsql-md.md)]可以使用對等的。 例如，純量 UDF 可以在任何純量運算式中使用。 TVF 可以在任何 FROM 子句中使用。 程序可以在 EXEC 陳述式中叫用，或從用戶端應用程式叫用。  
   
 > [!NOTE]  
 >  Common Language Runtime 上的 CLR 物件 (使用者定義函數、使用者定義類型或觸發程序) 可以在多個執行緒上執行 (平行計畫)，如果查詢最佳化工具判定這是有幫助的。 不過，如果使用者定義函數存取資料，則是以序列計畫執行。 在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前的伺服器版本上執行時，如果使用者定義函數包含 LOB 參數或傳回值，也必須以序列計畫執行。  
@@ -54,12 +54,13 @@ ms.locfileid: "62919248"
  提供 CLR 整合程式設計模型限制的相關資訊。  
   
  [.NET Framework 的 SQL Server 資料類型](../../clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型及其 .NET Framework 對等項目的概觀。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型及其 .NET Framework 對等項目的概觀。  
   
  [CLR 整合自訂屬性的概觀](../../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)  
  提供 CLR 整合自訂屬性的相關資訊。  
   
- [CLR 使用者定義函式](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
+ [CLR 使用者定義函數](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
  描述如何實作與使用各種類型的 CLR 函數：資料表值函式、純量函數，以及使用者定義彙總函式。  
   
  [CLR 使用者定義型別](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
@@ -72,6 +73,6 @@ ms.locfileid: "62919248"
  描述如何實作及使用 CLR 觸發程序。  
   
 ## <a name="see-also"></a>另請參閱  
- [通用語言執行平台&#40;CLR&#41;整合概觀](../common-language-runtime-integration-overview.md)  
+ [Common Language Runtime &#40;CLR&#41; 整合總覽](../common-language-runtime-integration-overview.md)  
   
   

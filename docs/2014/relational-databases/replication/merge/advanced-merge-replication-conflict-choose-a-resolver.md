@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17c751898aee25fa98bfeb6c2a7e1f1143bc61ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62931621"
 ---
 # <a name="choose-a-resolver"></a>選擇解析程式
@@ -42,7 +42,7 @@ ms.locfileid: "62931621"
 |衝突結果資料需與原始衝突資料不同。|使用可計算新值的發行項解決器。|  
   
 ## <a name="see-also"></a>另請參閱  
- [偵測和解決邏輯記錄中的衝突](advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+ [Detecting and Resolving Conflicts in Logical Records](advanced-merge-replication-conflict-resolving-in-logical-record.md)   
  [進階合併式複寫衝突偵測與解決](advanced-merge-replication-conflict-detection-and-resolution.md)   
  [重新發行資料](../republish-data.md)  
   

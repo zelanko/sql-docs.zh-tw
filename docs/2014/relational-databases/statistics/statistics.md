@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cc9657d8db84b67abe324aea9614dd27c2d9df83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033724"
 ---
 # <a name="statistics"></a>統計資料
@@ -35,9 +35,9 @@ ms.locfileid: "63033724"
   
 ##  <a name="DefinitionQOStatistics"></a> 元件和概念  
  統計資料  
- 查詢最佳化的統計資料是指包含資料表或索引檢視表之一個或多個資料行中值分佈相關統計資料的物件。 查詢最佳化工具會使用這些統計資料來估計查詢結果中的「基數」或資料列數目。 這些「基數估計值」可讓查詢最佳化工具建立高品質的查詢計劃。 例如，查詢最佳化工具可使用基數估計值來選擇索引搜尋運算子，而非需要更大量資源的索引掃描運算子，而且這樣做會改善查詢效能。  
+ 查詢最佳化的統計資料是指包含資料表或索引檢視表之一個或多個資料行中值分佈相關統計資料的物件。 查詢最佳化工具會使用這些統計資料來估計查詢結果中的*基數*或資料列數目。 這些*基數估計值*可讓查詢最佳化工具建立高品質的查詢計劃。 例如，查詢最佳化工具可使用基數估計值來選擇索引搜尋運算子，而非需要更大量資源的索引掃描運算子，而且這樣做會改善查詢效能。  
   
- 每個統計資料物件都是針對一或多個資料表資料行的清單所建立，而且包含顯示第一個資料行中值分佈的長條圖。 多個資料行的統計資料物件也會儲存這些資料行之間值相互關聯的相關統計資料。 這些相互關聯統計資料 (或稱「密度」) 衍生自資料行值之相異資料列的數目。 如需統計資料物件的詳細資訊，請參閱 [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)。  
+ 每個統計資料物件都是針對一或多個資料表資料行的清單所建立，而且包含顯示第一個資料行中值分佈的長條圖。 多個資料行的統計資料物件也會儲存這些資料行之間值相互關聯的相關統計資料。 這些相互關聯統計資料 (或稱「密度」  ) 衍生自資料行值之相異資料列的數目。 如需統計資料物件的詳細資訊，請參閱 [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)。  
   
  篩選的統計資料  
  對於從定義完善的資料子集中選取的查詢而言，篩選的統計資料可以改善查詢效能。 篩選的統計資料會使用篩選述詞來選取統計資料中所含的資料子集。 設計完善的篩選統計資料可以改善查詢執行計畫 (相較於完整資料表統計資料而言)。 如需篩選述詞的詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)。 如需有關何時建立篩選統計資料的詳細資訊，請參閱本主題的 [何時建立統計資料](#UpdateStatistics) 一節。 如需個案研究，請參閱 SQLCAT 網站的部落格文章 [配合分割資料表使用已篩選的統計資料](https://go.microsoft.com/fwlink/?LinkId=178505)。  
@@ -68,7 +68,7 @@ ORDER BY s.name;
  AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料物件、查詢述詞中的單一資料行，以及使用 [CREATE STATISTICS](/sql/t-sql/statements/create-statistics-transact-sql) 陳述式所建立的統計資料。 此外，這個選項也會套用至篩選的統計資料。  
   
  AUTO_UPDATE_STATISTICS_ASYNC  
- 非同步統計資料更新選項 AUTO_UPDATE_STATISTICS_ASYNC 會決定查詢最佳化工具要使用同步或非同步統計資料更新。 根據預設，非同步統計資料更新選項處於關閉狀態，而且查詢最佳化工具會以同步方式更新統計資料。 AUTO_UPDATE_STATISTICS_ASYNC 選項會套用至針對索引所建立的統計資料物件、查詢述詞中的單一資料行，以及使用 [CREATE STATISTICS](/sql/t-sql/statements/create-statistics-transact-sql) 陳述式所建立的統計資料。  
+ 非同步統計資料更新選項 AUTO_UPDATE_STATISTICS_ASYNC 會決定查詢最佳化工具要使用同步或非同步統計資料更新。 根據預設，非同步統計資料更新選項處於關閉狀態，而且查詢最佳化工具會以同步方式更新統計資料。 AUTO_UPDATE_STATISTICS_ASYNC 選項會套用至針對索引所建立的統計資料物件、查詢述詞中的單一資料行，以及使用[CREATE STATISTICS](/sql/t-sql/statements/create-statistics-transact-sql)語句所建立的統計資料。  
   
  統計資料更新可以是同步 (預設值) 或非同步。 使用同步統計資料更新時，查詢一律會使用最新的統計資料進行編譯和執行。如果統計資料已過期，查詢最佳化工具就會先等候更新的統計資料，然後再編譯並執行查詢。 使用非同步統計資料更新時，查詢就會使用現有的統計資料進行編譯，即使現有的統計資料已過期也一樣。如果查詢進行編譯時統計資料已過期，查詢最佳化工具可能會選擇次佳查詢計劃。 在非同步更新完成之後進行編譯的查詢將會從使用更新的統計資料中獲益。  
   
@@ -103,9 +103,9 @@ ORDER BY s.name;
   
 ||  
 |-|  
-|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|**適用**于： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
   
-##  <a name="CreateStatistics"></a> 何時建立統計資料  
+##  <a name="CreateStatistics"></a>建立統計資料的時機  
  查詢最佳化工具已經用下列方式建立統計資料：  
   
 1.  建立索引時，查詢最佳化工具就會針對資料表或檢視表的索引建立統計資料。 這些統計資料是針對索引的索引鍵資料行所建立的。 如果索引是篩選的索引，查詢最佳化工具就會在針對篩選索引所指定的相同資料列子集上建立篩選的統計資料。 如需篩選索引的詳細資訊，請參閱[建立篩選的索引](../indexes/create-filtered-indexes.md)和 [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)。  
@@ -118,7 +118,8 @@ ORDER BY s.name;
   
  當下列任何情況適用時，請考慮使用 CREATE STATISTICS 陳述式來建立統計資料：  
   
--   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Tuning Advisor 建議您建立統計資料。  
+-   
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Tuning Advisor 建議您建立統計資料。  
   
 -   查詢述詞包含多個尚未存在相同索引中的相互關聯資料行。  
   
@@ -127,7 +128,7 @@ ORDER BY s.name;
 -   查詢具有遺失的統計資料。  
   
 ### <a name="query-predicate-contains-multiple-correlated-columns"></a>查詢述詞包含多個相互關聯的資料行  
- 當查詢述詞包含多個具有跨資料行關聯性與相依性的資料行時，多個資料行的統計資料可能會改善查詢計劃。 多個資料行的統計資料包含跨資料行相互關聯統計資料 (稱為「密度」，而且這些統計資料不會在單一資料行統計資料中提供。 當查詢結果相依於多個資料行之間的資料關聯性時，密度可以改善基數估計值。  
+ 當查詢述詞包含多個具有跨資料行關聯性與相依性的資料行時，多個資料行的統計資料可能會改善查詢計劃。 多個資料行的統計資料包含跨資料行相互關聯統計資料 (稱為「密度」**，而且這些統計資料不會在單一資料行統計資料中提供。 當查詢結果相依於多個資料行之間的資料關聯性時，密度可以改善基數估計值。  
   
  如果資料行已經存在相同的索引中，就表示多重資料行統計資料物件已經存在，而且您不需要手動建立此物件。 如果資料行尚未存在相同的索引中，您可以針對資料行建立索引或使用 CREATE STATISTICS 陳述式，藉以建立多重資料行統計資料。 相較於統計資料物件而言，這種統計資料需要更多系統資源來維護索引。 如果應用程式不需要多重資料行索引，您就可以建立統計資料物件而不建立索引，藉以節省系統資源。  
   
@@ -152,7 +153,7 @@ GO
 ### <a name="query-selects-from-a-subset-of-data"></a>查詢會從資料子集中選取  
  當查詢最佳化工具針對單一資料行和索引建立統計資料時，它就會針對所有資料列中的值建立統計資料。 當查詢從資料列的子集中選取，而且該資料列子集具有唯一的資料分佈時，篩選的統計資料就可以改善查詢計劃。 您可以使用 CREATE STATISTICS 陳述式搭配 WHERE 子句來定義篩選述詞運算式，藉此建立篩選統計資料。  
   
- 例如，使用[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]，Production.Product 資料表中的每個產品都屬於 Production.ProductCategory 資料表中的四個類別之一：Bikes、Components、Clothing 及 Accessories。 其中每個類別目錄都具有不同的重量資料分佈：腳踏車 (Bikes) 的重量範圍是從 13.77 到 30.0、元件 (Components) 的重量範圍是從 2.12 到 1050.00 且有些是 NULL 值、衣服 (Clothing) 的重量全部為 NULL，配件 (Accessories) 的重量也是 NULL。  
+ 例如，在使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]時，Production.Product 資料表中的每個產品都屬於 Production.ProductCategory 資料表中的四個類別之一：Bikes、Components、Clothing 及 Accessories。 其中每個類別目錄都具有不同的重量資料分佈：腳踏車 (Bikes) 的重量範圍是從 13.77 到 30.0、元件 (Components) 的重量範圍是從 2.12 到 1050.00 且有些是 NULL 值、衣服 (Clothing) 的重量全部為 NULL，配件 (Accessories) 的重量也是 NULL。  
   
  以 Bikes 為例，相較於 Weight 資料行的完整資料表統計資料或不存在的統計資料而言，所有腳踏車重量的篩選統計資料將提供更精確的統計資料給查詢最佳化工具，而且可以改善查詢計畫品質。 雖然腳踏車重量資料行適合做為篩選的統計資料，但是不一定適合做為篩選的索引 (如果重量查閱的數目相當小的話)。 篩選索引為查閱所提供的效能提升程度可能不會超過將篩選索引加入至資料庫的額外維護和儲存成本。  
   
@@ -175,7 +176,7 @@ GO
 ### <a name="query-identifies-missing-statistics"></a>查詢會識別遺失的統計資料  
  如果錯誤或其他事件讓查詢最佳化工具無法建立統計資料，查詢最佳化工具會建立查詢計劃，但不使用統計資料。 查詢最佳化工具會將統計資料標示為遺失，並且嘗試在下一次執行查詢時重新產生統計資料。  
   
- 當查詢的執行計畫是利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]以圖形顯示時，遺失的統計資料就會表示成警告 (資料表名稱為紅色)。 此外，使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來監視 **Missing Column Statistics** 事件類別會指出統計資料遺失的時間。 如需詳細資訊，請參閱[錯誤和警告事件類別目錄 &#40;Database Engine&#41;](../event-classes/errors-and-warnings-event-category-database-engine.md)。  
+ 當查詢的執行計畫是利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]以圖形顯示時，遺失的統計資料就會表示成警告 (資料表名稱為紅色)。 此外，使用 ** 來監視 **Missing Column Statistics[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 事件類別會指出統計資料遺失的時間。 如需詳細資訊，請參閱[錯誤和警告事件類別目錄 &#40;Database Engine&#41;](../event-classes/errors-and-warnings-event-category-database-engine.md)。  
   
  如果統計資料已遺失，請執行下列步驟：  
   
@@ -191,11 +192,11 @@ GO
   
 -   使用 [DROP STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql) 陳述式所建立的統計資料。  
   
--   使用 **sys.stats** 和 **sys.stats_columns** 目錄檢視監控統計資料。 **sys_stats** 包含 **is_temporary** 資料行，以指示哪些統計資料為永久性及哪些統計資料為暫時性。  
+-   使用 **sys.stats** 和 **sys.stats_columns** 目錄檢視來監視統計資料。 **sys_stats**包含 [ **is_temporary** ] 資料行，以指出哪些是永久的、哪些是暫時性的。  
   
  因為暫時統計資料會儲存在 `tempdb` 中，所以重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務會導致所有暫時統計資料消失。  
   
-##  <a name="UpdateStatistics"></a> 何時更新統計資料  
+##  <a name="UpdateStatistics"></a>何時更新統計資料  
  查詢最佳化工具會判斷統計資料可能過期的時間，然後在查詢計劃需要它們時進行更新。 在某些情況下，您可以讓統計資料的更新頻率高於 AUTO_UPDATE_STATISTICS 開啟時的更新頻率，藉以改善查詢計劃，因而改善查詢效能。 您可以使用 UPDATE STATISTICS 陳述式或 sp_updatestats 預存程序來更新統計資料。  
   
  更新統計資料可確保查詢使用最新的統計資料進行編譯。 不過，更新統計資料會導致查詢重新編譯。 我們建議您不要太頻繁地更新統計資料，因為改善查詢計劃與重新編譯查詢所花費的時間之間具有效能權衡取捨。 特定的權衡取捨完全取決於您的應用程式。  
@@ -225,10 +226,10 @@ GO
   
  重建、重組或重新組織索引等作業都不會變更資料的分佈。 因此，在執行 ALTER INDEX REBUILD、DBCC REINDEX、DBCC INDEXDEFRAG 或 ALTER INDEX REORGANIZE 作業之後，您不需要更新統計資料。 當您使用 ALTER INDEX REBUILD 或 DBCC DBREINDEX 來重建資料表或檢視表的索引時，查詢最佳化工具就會更新統計資料。不過，這種統計資料更新是重新建立索引的副產品。 在 DBCC INDEXDEFRAG 或 ALTER INDEX REORGANIZE 作業之後，查詢最佳化工具則不會更新統計資料。  
   
-##  <a name="DesignStatistics"></a> 有效使用統計資料的查詢  
+##  <a name="DesignStatistics"></a>有效使用統計資料的查詢  
  某些查詢實作 (例如查詢述詞中的區域變數和複雜運算式) 可能會導致次佳的查詢計劃。 不過，遵循查詢設計指導方針來有效使用統計資料有助於避免這種情況發生。 如需查詢述詞的詳細資訊，請參閱[搜尋條件 &#40;Transact-SQL&#41;](/sql/t-sql/queries/search-condition-transact-sql)。  
   
- 您可以套用有效使用統計資料的查詢設計指導方針來改善查詢述詞中使用之運算式、變數和函數的「基數估計值」，藉以改善查詢計劃。 當查詢最佳化工具不知道運算式、變數或函數的值時，它就不知道要在長條圖中查閱哪個值，因此無法從長條圖中擷取最佳的基數估計值。 此時，查詢最佳化工具會改為以長條圖中所有取樣資料列之每個相異值的平均資料列數目做為基數估計值的基礎。 這樣會導致次佳的基數估計值，而且可能會損及查詢效能。  
+ 您可以套用有效使用統計資料的查詢設計指導方針來改善查詢述詞中使用之運算式、變數和函數的「基數估計值」**，藉以改善查詢計劃。 當查詢最佳化工具不知道運算式、變數或函數的值時，它就不知道要在長條圖中查閱哪個值，因此無法從長條圖中擷取最佳的基數估計值。 此時，查詢最佳化工具會改為以長條圖中所有取樣資料列之每個相異值的平均資料列數目做為基數估計值的基礎。 這樣會導致次佳的基數估計值，而且可能會損及查詢效能。  
   
  下列指導方針描述的是如何撰寫查詢，以便透過改善基數估計值，改善查詢計劃。  
   
@@ -323,7 +324,7 @@ GO
  對於某些應用程式而言，查詢設計指導方針可能不適用，因為您無法變更查詢或者使用 RECOMPILE 查詢提示可能會導致重新編譯次數太多。 此時，您可以使用計畫指南來指定其他提示 (例如 USE PLAN)，以便控制查詢的行為，同時向應用程式廠商調查應用程式變更。 如需有關計畫指南的詳細資訊，請參閱 [計畫指南](../performance/plan-guides.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)   
+ [&#40;Transact-sql&#41;建立統計資料](/sql/t-sql/statements/create-statistics-transact-sql)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)   
  [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)   

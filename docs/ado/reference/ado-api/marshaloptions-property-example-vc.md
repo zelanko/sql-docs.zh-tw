@@ -1,5 +1,5 @@
 ---
-title: MarshalOptions 屬性範例 （VC + +） |Microsoft Docs
+title: MarshalOptions 屬性範例（VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26ce0f7bce4af9a57963a7efa29f6bcbc4280c29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932260"
 ---
 # <a name="marshaloptions-property-example-vc"></a>MarshalOptions 屬性範例 (VC++)
-這個範例會使用[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)屬性來指定哪些資料列會傳送至伺服器的所有資料列或僅修改資料列。  
+這個範例會使用[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)屬性來指定要將哪些資料列傳回給伺服器-所有資料列，或只傳送修改過的資料列。  
   
 ```  
 // BeginMarshalOptionsCpp.cpp  

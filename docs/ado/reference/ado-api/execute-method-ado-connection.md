@@ -1,5 +1,5 @@
 ---
-title: Execute 方法 (ADO Connection) |Microsoft Docs
+title: Execute 方法（ADO Connection） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4999b1e21ec145713cadae28ff7ee8a64dd460b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932896"
 ---
 # <a name="execute-method-ado-connection"></a>Execute 方法 (ADO Connection)
-執行指定的查詢，SQL 陳述式、 預存程序或提供者特定的文字。  
+執行指定的查詢、SQL 語句、預存程式或提供者特定的文字。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,35 +35,35 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 傳回[資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)物件參考。  
+ 傳回[Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)物件參考。  
   
 #### <a name="parameters"></a>參數  
  *CommandText*  
- A**字串**包含 SQL 陳述式、 預存程序、 URL 或提供者特定文字執行的值。 **選擇性地**，如果提供者是 SQL 知道，可以但僅限於使用資料表名稱。 例如，如果資料表名稱的 「 客戶 」 會使用，ADO 會自動在前面加上形成，並傳遞 「 選取 * 從客戶 」 的標準 SQL Select 語法為[!INCLUDE[tsql](../../../includes/tsql-md.md)]給提供者的陳述式。  
+ **字串**值，其中包含要執行的 SQL 語句、預存程式、URL 或提供者特定的文字。 **（選擇性**）只有在提供者為 SQL 感知時，才可以使用資料表名稱。 例如，如果使用「Customers」資料表名稱，ADO 就會自動加上標準 SQL Select 語法來形成，並將「SELECT * FROM Customers」當做[!INCLUDE[tsql](../../../includes/tsql-md.md)]語句傳遞給提供者。  
   
  *RecordsAffected*  
- 選擇性。 A**長**變數提供者所傳回的作業影響的記錄數目。  
+ 選擇性。 **長**變數，提供者會傳回作業所影響的記錄數目。  
   
- *選項。*  
- 選擇性。 A**長**值，指出提供者應該如何評估 CommandText 引數。 可以是下列其中一個或多個的位元遮罩[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)或是[的執行方式](../../../ado/reference/ado-api/executeoptionenum.md)值。  
+ *選項*  
+ 選擇性。 指出提供者應該如何評估 CommandText 引數的**Long**值。 可以是一個或多個[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)或[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)值的位元遮罩。  
   
- **附註**使用**的執行方式**值**adExecuteNoRecords**來提升效能，藉由減少內部處理，以及您要移植從 Visual Basic 6.0 的應用程式。  
+ **注意**使用**ExecuteOptionEnum**值**adExecuteNoRecords**可將內部處理和從 Visual Basic 6.0 移植的應用程式降至最低，以改善效能。  
   
- 請勿使用**adExecuteStream**具有**Execute**方法**連接**物件。  
+ 請勿將**adExecuteStream**與**Connection**物件的**Execute**方法搭配使用。  
   
- 請勿使用 Execute 時使用 adCmdFile 或 adCmdTableDirect CommandTypeEnum 值。 這些值只可用來當做選項搭配[Open 方法 (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)並[Requery 方法](../../../ado/reference/ado-api/requery-method.md)方法**資料錄集**。  
+ 請勿將 adCmdFile 或 adCmdTableDirect 的 CommandTypeEnum 值與 Execute 搭配使用。 這些值只能當做選項，使用**記錄集**的[OPEN 方法（ADO Recordset）](../../../ado/reference/ado-api/open-method-ado-recordset.md)和[Requery 方法](../../../ado/reference/ado-api/requery-method.md)方法。  
   
 ## <a name="remarks"></a>備註  
- 使用**Execute**方法[連線物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)物件執行任何您傳遞至 CommandText 引數中的方法指定的連接的查詢。 如果 CommandText 引數會指定傳回資料列的查詢，執行會產生任何結果會儲存在新**資料錄集**物件。 如果命令不會用來傳回結果 （例如，SQL 更新查詢） 提供者會傳回**Nothing**只要選項**adExecuteNoRecords**指定，否則執行傳回關閉**資料錄集**。  
+ 在[Connection 物件（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)物件上使用**Execute**方法，會執行您在指定連接上的 CommandText 引數中傳遞至方法的任何查詢。 如果 CommandText 引數指定資料列傳回查詢，執行所產生的任何結果都會儲存在新的**記錄集**物件中。 如果命令不是用來傳回結果（例如，SQL UPDATE 查詢），則只要指定選項**adExecuteNoRecords** ，提供者就不會傳回**任何內容**。否則，Execute 會傳回封閉的**記錄集**。  
   
- 傳回**資料錄集**物件永遠是唯讀、 順向資料指標。 如果您需要**Recordset**物件更多的功能，請先建立**資料錄集**物件的所需的屬性設定，然後使用**資料錄集**物件的[Open 方法 (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法來執行查詢並傳回所需的資料指標類型。  
+ 傳回的**記錄集**物件一律為唯讀、順向資料指標。 如果您需要具有更多功能的**記錄集**物件，請先使用所需的屬性設定建立**記錄集**物件，然後使用**Recordset**物件的[Open 方法（ADO recordset）](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法來執行查詢，並傳回所需的資料指標類型。  
   
- 內容*CommandText*引數是提供者特定的而且可以是標準 SQL 語法或任何提供者支援的特殊命令格式。  
+ *CommandText*引數的內容是提供者所特有，可以是標準 SQL 語法或提供者支援的任何特殊命令格式。  
   
- 這項作業結束時，就會發出 ExecuteComplete 事件。  
+ 當此作業結束時，將會發出 ExecuteComplete 事件。  
   
 > [!NOTE]
->  使用 http 配置 Url 將會自動叫用[Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 如需詳細資訊，請參閱 <<c0> [ 絕對和相對 Url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
+>  使用 HTTP 配置的 Url 會自動叫用[Microsoft OLE DB 提供者以進行網際網路發佈](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 如需詳細資訊，請參閱[絕對和相對 url](../../../ado/guide/data/absolute-and-relative-urls.md)。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

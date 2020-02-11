@@ -13,14 +13,14 @@ ms.assetid: ca6a5804-bf5c-4afc-99db-22904bc0b33d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e182792a78d07cd6423b4409be95872c707791d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917418"
 ---
-# <a name="putoledbcommand-method"></a>put_OLEDBCommand 方法
-這個方法會執行任何作業，而且一律會傳回 S_OK。  
+# <a name="put_oledbcommand-method"></a>put_OLEDBCommand 方法
+這個方法不會執行任何作業，而且一律會傳回 S_OK。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,7 +33,7 @@ HRESULT put_OLEDBCommand(
   
 #### <a name="parameters"></a>參數  
  *pOLEDBCommand*  
- [in]OLE DB Command 物件的指標。  
+ 在OLE DB 命令物件的指標。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [IADOCommandConstruction](https://msdn.microsoft.com/library/windows/desktop/aa965677.aspx)

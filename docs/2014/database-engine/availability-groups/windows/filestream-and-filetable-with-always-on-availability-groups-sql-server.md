@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM 和 FileTable 與 AlwaysOn 可用性群組 (SQL Server) |Microsoft Docs
+title: FILESTREAM 和 FileTable 與 AlwaysOn 可用性群組（SQL Server） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3fa149aa47c99418bd3109829bfffee698ab3f6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814137"
 ---
 # <a name="filestream-and-filetable-with-alwayson-availability-groups-sql-server"></a>FILESTREAM 和 FileTable 與 AlwaysOn 可用性群組 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62814137"
   
 -   [必要條件](#Prerequisites)  
   
--   [使用虛擬網路名稱 (VNN) 進行 FILESTREAM 和 FileTable 存取](#vnn)  
+-   [使用虛擬網路名稱（Vnn）進行 FILESTREAM 和 FileTable 存取](#vnn)  
   
 -   [相關工作](#RelatedTasks)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62814137"
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
--   [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
+-   [啟用及設定 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
 -   [啟用 FileTable 的必要條件](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
@@ -85,6 +85,6 @@ ms.locfileid: "62814137"
  無。  
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

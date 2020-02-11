@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918812"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>設定管理資料倉儲 (SQL Server Management Studio)
@@ -42,9 +42,9 @@ ms.locfileid: "62918812"
   
 2.  在 [物件總管] 中，展開 **[管理]** 節點。  
   
-3.  以滑鼠右鍵按一下 [資料收集]  ，展開 [工作]  ，然後按一下 [設定管理資料倉儲]  。  
+3.  以滑鼠右鍵按一下 [資料收集]****，展開 [工作]****，然後按一下 [設定管理資料倉儲]****。  
   
-4.  使用 [設定管理資料倉儲精靈](#Wizard) 來建立管理資料倉儲、設定登入、啟用資料收集，並啟動 **[系統資料收集組]** 。  
+4.  使用 [設定管理資料倉儲精靈](#Wizard) 來建立管理資料倉儲、設定登入、啟用資料收集，並啟動 **[系統資料收集組]**。  
   
      若要設定多個執行個體，請繼續執行步驟 5。  
   
@@ -55,16 +55,16 @@ ms.locfileid: "62918812"
   
     -   使用「設定管理資料倉儲精靈」來針對現有的管理資料倉儲設定資料收集。  
   
-    -   以滑鼠右鍵按一下 [資料收集]  ，然後按一下 [屬性]  。 在 **[一般]** 索引標籤中，指定現有的管理資料倉儲以及它安裝所在的伺服器。  
+    -   以滑鼠右鍵按一下 [資料收集]****，然後按一下 [屬性]****。 在 **[一般]** 索引標籤中，指定現有的管理資料倉儲以及它安裝所在的伺服器。  
   
 6.  重複步驟 5，直到使用資料收集器的所有資料庫執行個體都設定為可將資料上傳到共用管理資料倉儲為止。  
   
-####  <a name="Wizard"></a> 設定管理資料倉儲精靈  
+####  <a name="Wizard"></a>設定管理資料倉儲 Wizard  
  **歡迎頁面**  
   
  此歡迎頁面是「設定資料收集精靈」的起始頁面。 可以選擇是否顯示此頁面。  
   
- **不要再顯示此開始頁面。**  
+ **不要再顯示此起始頁。**  
  選取此選項，可在下一次啟動「設定資料收集精靈」時隱藏這個頁面。  
   
  **設定管理資料倉儲儲存體頁面**  
@@ -82,9 +82,10 @@ ms.locfileid: "62918812"
  **資料庫名稱**  
  指定將會儲存收集之資料的關聯式資料庫。 使用此清單來選取現有的資料庫，或是使用 **[新增資料庫]** 對話方塊來按一下 **[新增]** ，建立新的資料庫。  
   
- **[新增]** 選項只有在設定資料收集組時才提供。  
+ 
+  **[新增]** 選項只有在設定資料收集組時才提供。  
   
- **對應登入及使用者頁面**  
+ **對應登入和使用者頁面**  
   
  使用這個頁面可將登入對應到管理資料倉儲的資料庫使用者角色。  
   
@@ -93,7 +94,7 @@ ms.locfileid: "62918812"
   
  為登入選取 **[對應]** 核取方塊來指定此登入。  
   
- **資料庫角色成員資格對象:**  *\<資料倉儲名稱>*  
+ **資料庫角色成員資格：**  *\<>的資料倉儲名稱*  
  選取此登入所對應的管理資料倉儲角色，其方式是按一下下列一或多個選項旁邊的核取方塊：  
   
 -   **mdw_admin**  
@@ -103,23 +104,23 @@ ms.locfileid: "62918812"
 -   **mdw_writer**  
   
  **新增登入**  
- 開啟 [登入 - 新增]  對話方塊，並為此管理資料倉儲建立新的登入。  
+ 開啟 [登入 - 新增]**** 對話方塊，並為此管理資料倉儲建立新的登入。  
   
- **完成精靈頁面**  
+ **完成嚮導頁面**  
   
  使用此頁面可驗證及完成資料收集組態。 檢視視窗中所顯示的樹狀目錄會顯示將要套用哪些組態，以及當您按一下 **[完成]** 時將會發生的動作。  
   
- **設定資料收集精靈進度頁面**  
+ **[設定資料收集嚮導進度] 頁面**  
   
  使用此頁面可檢視每一個組態步驟的結果。  
   
  **詳細資料**  
- 將每一個組態步驟顯示為 [詳細資料]  方格中的資料列。 每一個資料列都包含一個可描述此步驟的 **[動作]** 資料行，以及一個指示此步驟為成功或失敗的 **[狀態]** 資料行。 如果發生錯誤， **[訊息]** 資料行中會出現訊息。  
+ 將每一個組態步驟顯示為 [詳細資料]**** 方格中的資料列。 每一個資料列都包含一個可描述此步驟的 **[動作]** 資料行，以及一個指示此步驟為成功或失敗的 **[狀態]** 資料行。 如果發生錯誤， **[訊息]** 資料行中會出現訊息。  
   
  **停止**  
  停止精靈的處理。  
   
- **報表**  
+ **Report**  
  檢視資料收集組態的報表。 以下是提供的報表選項：  
   
 -   檢視報表  
@@ -134,8 +135,8 @@ ms.locfileid: "62918812"
  關閉精靈。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)   
- [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)   
+ [sp_syscollector_enable_collector &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)   
+ [sp_syscollector_disable_collector &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)   
  [資料收集](data-collection.md)   
  [管理資料收集](manage-data-collection.md)  
   

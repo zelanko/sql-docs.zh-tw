@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921802"
 ---
 # <a name="file-restores-simple-recovery-model"></a>檔案還原 (簡單復原模式)
@@ -46,11 +46,11 @@ ms.locfileid: "62921802"
      如需線上頁面和檔案還原支援的相關資訊，請參閱 [SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如需線上還原的詳細資訊，請參閱[線上還原 &#40;SQL Server&#41;](online-restore-sql-server.md)。  
   
     > [!TIP]  
-    >  如果您想要讓資料庫離線以進行檔案還原，請在啟動還原順序之前，先執行下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) 陳述式來使資料庫離線：ALTER DATABASE *database_name* SET OFFLINE。  
+    >  若您要讓資料庫離線以進行檔案還原，請在啟動還原順序之前，執行下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) 陳述式：ALTER DATABASE *database_name* SET OFFLINE。  
   
 
   
-##  <a name="Overview"></a> 簡單復原模式下的檔案和檔案群組還原概觀  
+##  <a name="Overview"></a>簡單復原模式下的檔案和檔案群組還原總覽  
  檔案還原案例是單一還原順序，涵蓋複製、向前復原及復原適當資料等動作，如下所示：  
   
 1.  從最新的檔案備份來還原每一個損毀的檔案。  
@@ -62,13 +62,13 @@ ms.locfileid: "62921802"
   
  還原順序只包含兩個 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式。 第一個陳述式會還原次要檔案 (即 `A`檔案)，而此檔案是使用 WITH NORECOVERY 進行還原。 第二項作業還原其他兩個檔案 ( `B` 和 `C` )，而這些檔案是使用 WITH RECOVERY 從不同的備份裝置進行還原。  
   
-1.  RESTORE DATABASE *database* FILE **=** _name_of_file_A_  
+1.  還原資料庫*資料庫* **=** 檔案_name_of_file_A_  
   
      FROM *file_backup_of_file_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *database* FILE **=** _name_of_file_B_ **,** _name_of_file_C_  
+2.  還原資料庫*資料庫*檔**=** _name_of_file_B_**，**_name_of_file_C_  
   
      FROM *file_backup_of_files_B_and_C*  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62921802"
   
 -   [範例：線上還原唯讀檔案 &#40;簡單復原模式&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [範例：離線還原主要檔案群組與另一個檔案群組 &#40;完整復原模式&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [範例：離線還原主要和另一個檔案群組 &#40;完整復原模式&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
  
   
@@ -96,7 +96,7 @@ ms.locfileid: "62921802"
   
   
 ## <a name="see-also"></a>另請參閱  
- [備份與還原：互通性與共存性 &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [備份與還原：互通性與共存 &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [差異備份 &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [完整檔案備份 &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
  [備份概觀 &#40;SQL Server&#41;](backup-overview-sql-server.md)   

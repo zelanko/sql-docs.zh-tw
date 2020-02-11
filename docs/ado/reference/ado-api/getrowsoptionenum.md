@@ -1,5 +1,5 @@
 ---
-title: GetRowsOptionEnum | Microsoft Docs
+title: GetRowsOptionEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,25 +16,25 @@ ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a48d0d3a08095cde1da2c142ed59efafb0ba463f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918469"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
-指定要擷取記錄數[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+指定要從[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)取出多少筆記錄。  
   
-|常數|值|描述|  
+|持續性|值|描述|  
 |--------------|-----------|-----------------|  
-|**adGetRowsRest**|-1|擷取的記錄中的其餘部分**資料錄集**，從目前的位置或所指定的書籤*開始*參數[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法。|  
+|**adGetRowsRest**|-1|從目前位置或[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法之*Start*參數所指定的書簽，抓取**記錄集中**的其餘記錄。|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- 封裝： **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC 對等  
+ Package： **.com. wfc. 資料**  
   
-|常數|  
+|持續性|  
 |--------------|  
-|AdoEnums.GetRowsOption.REST|  
+|AdoEnums. GetRowsOption. REST|  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [GetRows 方法 (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)

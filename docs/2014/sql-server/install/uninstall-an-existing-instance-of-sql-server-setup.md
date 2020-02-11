@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990195"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>解除安裝現有的 SQL Server 執行個體 (安裝程式)
@@ -30,7 +30,7 @@ ms.locfileid: "62990195"
 >  若要解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體，您必須是本機管理員，且具有以服務登入的權限。  
   
 > [!NOTE]  
->  若要解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式所提供的「移除節點」功能來分別移除每個節點。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集 &#40;Setup&#41; 中加入或移除節點](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
+>  若要解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式所提供的「移除節點」功能來分別移除每個節點。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
  解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前，請先考慮下列重要資訊：  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62990195"
   
 ### <a name="before-you-uninstall"></a>解除安裝之前  
   
-1.  **備份資料。** 雖然這並非必要步驟，不過您可能會擁有要以目前狀態儲存的資料庫， 也可能想要儲存先前對系統資料庫所做的變更。 若符合其中任一情況，請務必在解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前先行備份資料。 或者，您也可以將所有資料和記錄檔的複本儲存在 MSSQL 資料夾以外的資料夾中。 解除安裝期間將會刪除 MSSQL 資料夾。  
+1.  **備份您的資料。** 雖然這並非必要步驟，不過您可能會擁有要以目前狀態儲存的資料庫， 也可能想要儲存先前對系統資料庫所做的變更。 若符合其中任一情況，請務必在解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前先行備份資料。 或者，您也可以將所有資料和記錄檔的複本儲存在 MSSQL 資料夾以外的資料夾中。 解除安裝期間將會刪除 MSSQL 資料夾。  
   
      您必須儲存的檔案包括下列資料庫檔案：  
   
@@ -66,21 +66,21 @@ ms.locfileid: "62990195"
   
     -   Templog.ldf  
   
-    -   `ReportServer[$InstanceName]` (Thisis[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]預設資料庫。)  
+    -   `ReportServer[$InstanceName]`（Thisis [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]預設資料庫）。  
   
     -   ReportServer[$InstanceName]TempDB (這是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設暫存資料庫)。  
   
 2.  **刪除本機安全性群組。** 在解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，請先刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的本機安全性群組。  
   
-3.  **停止所有**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **服務** ：建議您在解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件之前，先停止所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的本機安全性群組。 使用中的連接可能會導致解除安裝無法順利完成。  
+3.  **停止所有**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **服務。**   ：建議您在解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件之前，先停止所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的本機安全性群組。 使用中的連接可能會導致解除安裝無法順利完成。  
   
-4.  **使用具有適當權限的帳戶。** 請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶或具有同等權限的帳戶登入伺服器。 例如，您可以使用本機管理員群組成員的帳戶登入伺服器。  
+4.  **使用具有適當許可權的帳戶。** 請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶或具有同等權限的帳戶登入伺服器。 例如，您可以使用本機管理員群組成員的帳戶登入伺服器。  
   
 ### <a name="to-uninstall-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>To Uninstall an Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  若要開始解除安裝程序，請移至 **[控制台]** ，然後移至 **[程式和功能]** 。  
+1.  若要開始解除安裝程序，請移至 **[控制台]** ，然後移至 **[程式和功能]**。  
   
-2.  以滑鼠右鍵按一下 **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** ，然後選取**解除安裝**。 然後按一下 **[移除]** 。 這樣就會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈。  
+2.  按一下** [!INCLUDE[msCoName](../../includes/msconame-md.md)] **滑鼠右鍵，然後選取 [**卸載**]。 然後按一下 **[移除]**。 這樣就會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈。  
   
      安裝程式支援規則將會執行，以便驗證您的電腦組態。 若要繼續進行，請按 **[下一步]** 。  
   
@@ -92,13 +92,13 @@ ms.locfileid: "62990195"
   
 5.  在 **[準備移除]** 頁面上，檢閱即將解除安裝之元件和功能的清單。 按一下 **[移除]** 開始解除安裝  
   
-6.  解除安裝最後一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [程式和功能] **的程式清單中仍會顯示與**相關聯的其他程式。 不過，如果您關閉 **[程式和功能]** ，下次再開啟 **[程式和功能]** 時，就會重新整理程式清單，只顯示實際上仍安裝的程式。  
+6.  解除安裝最後一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [程式和功能] **的程式清單中仍會顯示與**相關聯的其他程式。 不過，如果您關閉 **[程式和功能]**，下次再開啟 **[程式和功能]** 時，就會重新整理程式清單，只顯示實際上仍安裝的程式。  
   
 ### <a name="if-the-uninstallation-fails"></a>如果解除安裝失敗  
   
 1.  如果解除安裝程序未順利完成，請嘗試解決導致解除安裝失敗的問題。 下列文章可以幫助您了解解除安裝失敗的原因：  
   
-    -   [如何在安裝記錄檔中識別 SQL Server 2008 的安裝問題](https://support.microsoft.com/kb/955396/en-us)  
+    -   [如何識別安裝程式記錄檔中 SQL Server 2008 安裝問題](https://support.microsoft.com/kb/955396/en-us)  
   
     -   [檢視與讀取 SQL Server 安裝程式記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   

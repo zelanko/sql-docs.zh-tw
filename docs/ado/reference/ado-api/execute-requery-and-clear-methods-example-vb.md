@@ -1,5 +1,5 @@
 ---
-title: Execute、 Requery 和 Clear 方法範例 (VB) |Microsoft Docs
+title: Execute、Requery 和 Clear 方法範例（VB） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eff8b97d1248acaae23f5bcd21e050da61cf4346
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932880"
 ---
-# <a name="execute-requery-and-clear-methods-example-vb"></a>Execute、 Requery 和 Clear 方法範例 (VB)
-此範例示範**Execute**方法時執行兩個[命令](../../../ado/reference/ado-api/command-object-ado.md)物件和[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。 它也會使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法來擷取目前的資料，在[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，而[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法，以清除內容[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 (**錯誤**收集透過存取**連線**物件[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)屬性[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。)ExecuteCommand 和 PrintOutput 程序不需要執行這個程序。  
+# <a name="execute-requery-and-clear-methods-example-vb"></a>Execute、Requery 和 Clear 方法範例（VB）
+這個範例會示範從[Command](../../../ado/reference/ado-api/command-object-ado.md)物件和[Connection](../../../ado/reference/ado-api/connection-object-ado.md)物件執行時的**Execute**方法。 它也會使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法來抓取[記錄集中](../../../ado/reference/ado-api/recordset-object-ado.md)的目前資料，而[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法則會清除[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合的內容。 （**錯誤**集合是透過[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)之[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)屬性的**Connection**物件來存取）。需要有 ExecuteCommand 和 PrintOutput 程式，才能執行此程式。  
   
 ```  
 'BeginExecuteVB  
@@ -168,11 +168,11 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Clear 方法 (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
- [Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Clear 方法（ADO）](../../../ado/reference/ado-api/clear-method-ado.md)   
+ [Command 物件（ADO）](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Connection 物件（ADO）](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Error 物件](../../../ado/reference/ado-api/error-object.md)   
- [Execute 方法 (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Execute 方法 (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
- [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Execute 方法（ADO 命令）](../../../ado/reference/ado-api/execute-method-ado-command.md)   
+ [Execute 方法（ADO Connection）](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Recordset 物件（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Requery 方法](../../../ado/reference/ado-api/requery-method.md)

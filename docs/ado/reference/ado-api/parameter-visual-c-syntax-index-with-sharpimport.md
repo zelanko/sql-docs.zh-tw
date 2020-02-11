@@ -1,5 +1,5 @@
 ---
-title: '參數 (VisualC++含 #import 語法索引) |Microsoft Docs'
+title: '參數（Visual C++ #import 的語法索引） |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ ms.assetid: 6b43cf70-9695-47b0-9e68-f36898859b6b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad717081698efcc3c976376a8f1f1f3cab604e54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917767"
 ---
-# <a name="parameter-visual-c-syntax-index-with-import"></a>參數 (VisualC++含 #import 語法索引)
+# <a name="parameter-visual-c-syntax-index-with-import"></a>參數（Visual C++ #import 的語法索引）
 ## <a name="methods"></a>方法  
   
 ```  

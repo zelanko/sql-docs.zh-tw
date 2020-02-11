@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12fc3e7e7b67b9f02f2a9744d4af2af175ce0812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022670"
 ---
 # <a name="new-agent-profile"></a>新增代理程式設定檔
@@ -40,14 +40,14 @@ ms.locfileid: "63022670"
   
 -   [Replication Distribution Agent](agents/replication-distribution-agent.md)  
   
--   [複寫合併代理程式](agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](agents/replication-merge-agent.md)  
   
 -   [複寫佇列讀取器代理程式](agents/replication-queue-reader-agent.md)  
   
  **預設值**  
  每一個代理程式參數的預設值。  
   
- **值**  
+ **ReplTest1**  
  針對作為新設定檔之基礎的設定檔中，所指定的參數值。 編輯此欄位，即可變更參數的值。  
   
  **[只顯示這個設定檔中使用的參數]**  

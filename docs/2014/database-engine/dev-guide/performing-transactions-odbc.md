@@ -1,5 +1,5 @@
 ---
-title: 執行異動 (ODBC) |Microsoft Docs
+title: 執行交易（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f4a4d4ce67d6087ca6efd2cb2285604a3d79d64f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781024"
 ---
 # <a name="performing-transactions-odbc"></a>執行交易 (ODBC)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式可支援 ODBC API 交易管理函數。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 針對個別伺服器上的本機交易提供了完整的支援。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會使用這些功能來支援可管理交易的 ODBC API 函數。  
+  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式可支援 ODBC API 交易管理函數。 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 針對個別伺服器上的本機交易提供了完整的支援。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會使用這些功能來支援可管理交易的 ODBC API 函數。  
   
  透過 Microsoft 分散式交易協調器 (MS DTC) 的使用，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式可以參與跨越多部伺服器的分散式交易。  
   

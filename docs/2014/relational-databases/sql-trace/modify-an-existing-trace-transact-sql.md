@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 56d4f7d922c0c229b1e2126f93611670adf7c702
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63135613"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>修改現有的追蹤 (Transact-SQL)
@@ -29,17 +29,17 @@ ms.locfileid: "63135613"
   
 2.  若要修改追蹤事件，請執行 **sp_trace_setevent** 並利用參數指定要做的變更。 這些參數依序排列如下：  
   
-    -   **@traceid** (追蹤識別碼)  
+    -   **@traceid**（追蹤識別碼）  
   
-    -   **@eventid** (事件識別碼)  
+    -   **@eventid**（事件識別碼）  
   
-    -   **@columnid** (資料行識別碼)  
+    -   **@columnid**（資料行識別碼）  
   
-    -   **@on** (ON)  
+    -   **@on**的  
   
-     在修改 **@on** 參數時，請記住此參數與 **@columnid** 參數的互動：  
+     當您修改**@on**參數時，請記住其與**@columnid**參數的互動：  
   
-    |ON|資料行識別碼|結果|  
+    |開啟|資料行識別碼|結果|  
     |--------|---------------|------------|  
     |ON (**1**)|NULL|會開啟事件。 會清除所有資料行。|  
     ||NOT NULL|資料行會針對特定的事件開啟。|  

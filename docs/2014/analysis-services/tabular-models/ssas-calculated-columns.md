@@ -1,5 +1,5 @@
 ---
-title: 導出資料行 (SSAS 表格式) |Microsoft Docs
+title: 計算結果欄（SSAS 表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284896"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>導出資料行 (SSAS 表格式)
-  表格式模型中的導出資料行可讓您將新資料加入至模型。 不必貼上或匯入到資料行的值，您可以建立定義資料行的資料列層級值的 DAX 公式。 然後就可以像是其他任何資料行一樣，在報表、樞紐分析表或樞紐分析圖中使用導出資料行。  
+  表格式模型中的導出資料行可讓您將新資料加入至模型。 您可以建立 DAX 公式來定義資料行的資料列層級值，而不是將值貼入或匯入資料行。 然後就可以像是其他任何資料行一樣，在報表、樞紐分析表或樞紐分析圖中使用導出資料行。  
   
 > [!NOTE]  
 >  在 DirectQuery 模式下的表格式模型不支援導出資料行。 如需詳細資訊，請參閱 [DirectQuery 模式 &#40;SSAS 表格式&#41;](directquery-mode-ssas-tabular.md)。  
@@ -27,9 +27,9 @@ ms.locfileid: "67284896"
   
 -   [優點](#bkmk_understanding)  
   
--   [為導出資料行命名](#bkmk_naming)  
+-   [命名計算結果欄](#bkmk_naming)  
   
--   [導出資料行的效能](#bkmk_perf)  
+-   [計算結果欄的效能](#bkmk_perf)  
   
 -   [相關工作](#bkmk_rel_tasks)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "67284896"
   
  此公式從 StartDate 資料行中擷取月份。 接著再計算資料表中每個資料列的月底值。 第二個參數是指定在 StartDate 當月之前或之後的月數，本例為 0 即表示同一個月份。 例如，若 StartDate 資料行的值為 6/1/2001，則導出資料行的值將是 6/30/2001。  
   
-##  <a name="bkmk_naming"></a> 為導出資料行命名  
+##  <a name="bkmk_naming"></a>命名計算結果欄  
  根據預設，新的導出資料行會加入至資料表中其他資料行的右邊，而且將自動為這類資料行指派預設名稱 **CalculatedColumn1**、 **CalculatedColumn2**，依此類推。 您也可以在資料行上按一下滑鼠右鍵，然後按一下 [插入資料行]，在兩個現有的資料行之間建立新資料行。 您可以按一下再拖曳，來重新排列相同資料表中的資料行，也可以在建立資料行之後，重新命名資料行；但是，您應該注意下列有關變更導出資料行的限制：  
   
 -   每個資料行名稱在資料表中都必須是唯一的。  
@@ -62,7 +62,7 @@ ms.locfileid: "67284896"
   
 -   資料行的名稱中不能使用某些字元。 如需詳細資訊，請參閱 [PowerPivot 的 DAX 語法規格](/dax/dax-syntax-reference)中的＜命名需求＞。  
   
-##  <a name="bkmk_perf"></a> 導出資料行的效能  
+##  <a name="bkmk_perf"></a>計算結果欄的效能  
  導出資料行的公式可能會比量值所使用的公式更耗費資源。 其中一個原因是：導出資料行的結果永遠是針對資料表中的每個資料列計算，而量值僅針對報表、樞紐分析表或樞紐分析圖中所用篩選定義的資料格計算。 例如，包含一百萬個資料列的資料表所擁有的導出資料行永遠都會有一百萬個結果，在效能上也會有對應的影響。 但是，樞紐分析表通常會套用資料列和資料行標題來篩選資料，因此，只會針對樞紐分析表內每一個資料格中的資料子集來計算量值。  
   
  公式通常與該公式中參考之物件具有相依性，例如評估值的其他資料行或運算式。 舉例來說，以另一個資料行做為根據的導出資料行或是包含具有資料行參考之運算式的計算，必須等到評估另一個資料行的結果之後，才會評估出結果。 預設情況下，活頁簿會啟用自動重新整理，因此在更新值或重新整理公式時，任何這類相依性都有可能影響效能。  
@@ -81,11 +81,11 @@ ms.locfileid: "67284896"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[建立導出資料行 &#40;SSAS 表格式&#41;](ssas-calculated-columns-create-a-calculated-column.md)|此主題中的工作描述如何將新導出資料行加入至資料表。|  
+|[建立 &#40;SSAS 表格式&#41;的計算結果欄](ssas-calculated-columns-create-a-calculated-column.md)|此主題中的工作描述如何將新導出資料行加入至資料表。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料表與資料行 &#40;SSAS 表格式&#41;](tables-and-columns-ssas-tabular.md)   
- [量值 &#40;SSAS 表格式&#41;](measures-ssas-tabular.md)   
- [計算 &#40;SSAS 表格式&#41;](calculations-ssas-tabular.md)  
+ [&#40;SSAS 表格式&#41;的資料表和資料行](tables-and-columns-ssas-tabular.md)   
+ [&#40;SSAS 表格式&#41;的量值](measures-ssas-tabular.md)   
+ [&#40;SSAS 表格式&#41;的計算](calculations-ssas-tabular.md)  
   
   

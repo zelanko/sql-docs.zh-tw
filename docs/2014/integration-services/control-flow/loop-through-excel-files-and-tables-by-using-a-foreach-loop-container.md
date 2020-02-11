@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 979a0e0a1e8a05b676d4de7ccda0c5876943d587
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830579"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表
@@ -32,24 +32,24 @@ ms.locfileid: "62830579"
   
      如果您沒有針對 [擴充屬性] 引數使用變數，就必須手動將它加入至包含連接字串的運算式。  
   
-3.  將 Foreach 迴圈容器加入 [控制流程]  索引標籤。如需如何設定 Foreach 迴圈容器的資訊，請參閱[設定 Foreach 迴圈容器](foreach-loop-container.md)。  
+3.  將「Foreach 迴圈」容器加入至 [**控制流程**] 索引標籤。如需如何設定「Foreach 迴圈」容器的詳細資訊，請參閱[設定 Foreach 迴圈容器](foreach-loop-container.md)。  
   
-4.  在 [Foreach 迴圈編輯器]  的 [集合]  頁面上，選取 Foreach 檔案列舉值、指定 Excel 活頁簿所在位置的資料夾，並指定檔案篩選 (通常是 *.xls)。  
+4.  在 [Foreach 迴圈編輯器] **** 的 [集合]**** 頁面上，選取 Foreach 檔案列舉值、指定 Excel 活頁簿所在位置的資料夾，並指定檔案篩選 (通常是 *.xls)。  
   
-5.  在 [變數對應]  頁面上，將 [索引 0] 對應至使用者自訂的字串變數，該變數將接收迴圈每個反覆運算上目前的 Excel 路徑和檔案名稱。 (此程序後面顯示的範例運算式會使用 `ExcelFile` 變數名稱)。  
+5.  在 [變數對應]**** 頁面上，將 [索引 0] 對應至使用者自訂的字串變數，該變數將接收迴圈每個反覆運算上目前的 Excel 路徑和檔案名稱。 (此程序後面顯示的範例運算式會使用 `ExcelFile`變數名稱)。  
   
-6.  關閉 [Foreach 迴圈編輯器]  。  
+6.  關閉 [Foreach 迴圈編輯器]****。  
   
-7.  如[加入、刪除或共用封裝中的連線管理員](../add-delete-or-share-a-connection-manager-in-a-package.md)中所述，將 Excel 連線管理員加入封裝。 選取現有的 Excel 活頁簿檔案做為要連接的檔案，以避免驗證錯誤。  
+7.  如 [加入、刪除或共用封裝中的連線管理員](../add-delete-or-share-a-connection-manager-in-a-package.md)中所述，將 Excel 連線管理員加入封裝。 選取現有的 Excel 活頁簿檔案做為要連接的檔案，以避免驗證錯誤。  
   
     > [!IMPORTANT]  
-    >  為了避免在設定使用此 Excel 連線管理員的工作和資料流程元件時發生驗證錯誤，請在 [Excel 連線管理員編輯器]  中選取現有的 Excel 活頁簿。 在設定了 `ConnectionString` 屬性的運算式之後 (如下列步驟所述)，連接管理員就不會在執行階段使用這個活頁簿。 在您建立和設定封裝之後，就可以在 [屬性] 視窗中清除 `ConnectionString` 屬性的值。 不過，如果您要清除這個值，除非執行「ForEach 迴圈」，否則 Excel 連接管理員的連接字串屬性將不再有效。 因此，您必須將使用連接管理員的工作或封裝的 `DelayValidation` 屬性設為 `True`，以避免驗證錯誤。  
+    >  為了避免在設定使用此 Excel 連線管理員的工作和資料流程元件時發生驗證錯誤，請在 [Excel 連線管理員編輯器]**** 中選取現有的 Excel 活頁簿。 在設定了 `ConnectionString` 屬性的運算式之後 (如下列步驟所述)，連接管理員就不會在執行階段使用這個活頁簿。 在您建立和設定封裝之後，就可以在 [屬性] 視窗中清除 `ConnectionString` 屬性的值。 不過，如果您要清除這個值，除非執行「ForEach 迴圈」，否則 Excel 連接管理員的連接字串屬性將不再有效。 因此，您必須將使用連接管理員的工作或封裝的 `DelayValidation` 屬性設為 `True`，以避免驗證錯誤。  
     >   
     >  您也必須將 `False` 的預設值用於 Excel 連接管理員的 `RetainSameConnection` 屬性。 如果您將此值變更為 `True`，迴圈的每個反覆運算都會繼續開啟第一個 Excel 活頁簿。  
   
 8.  選取新的 Excel 連線管理員，在 [屬性] 視窗中按一下 **Expressions** 屬性，然後按一下省略符號。  
   
-9. 在 **屬性運算式編輯器**，選取`ConnectionString`屬性，然後按一下省略符號。  
+9. 在 [**屬性運算式編輯器**] 中， `ConnectionString`選取屬性，然後按一下省略號。  
   
 10. 在「運算式產生器」中，輸入下列運算式：  
   
@@ -69,29 +69,29 @@ ms.locfileid: "62830579"
   
 ### <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>使用 Foreach ADO.NET 結構描述資料列集列舉值來循環使用 Excel 資料表  
   
-1.  建立會使用 Microsoft Jet OLE DB 提供者連接到 Excel 活頁簿之 ADO.NET 連接管理員。 在 [連線管理員]  對話方塊的 [全部] 頁面上，確定您輸入 Excel 8.0 做為 Extended Properties 屬性的值。 如需詳細資訊，請參閱 [加入、刪除或共用封裝中的連線管理員](../add-delete-or-share-a-connection-manager-in-a-package.md)。  
+1.  建立會使用 Microsoft Jet OLE DB 提供者連接到 Excel 活頁簿之 ADO.NET 連接管理員。 在 [連線管理員]**** 對話方塊的 [全部] 頁面上，確定您輸入 Excel 8.0 做為 Extended Properties 屬性的值。 如需詳細資訊，請參閱 [加入、刪除或共用封裝中的連線管理員](../add-delete-or-share-a-connection-manager-in-a-package.md)。  
   
 2.  建立會接收迴圈每個反覆運算上目前資料表名稱的字串變數。  
   
-3.  將 Foreach 迴圈容器加入 [控制流程]  索引標籤。如需如何設定Foreach 迴圈容器的資訊，請參閱[設定 Foreach 迴圈容器](foreach-loop-container.md)。  
+3.  將「Foreach 迴圈」容器加入至 [**控制流程**] 索引標籤。如需如何設定「Foreach 迴圈」容器的詳細資訊，請參閱[設定 Foreach 迴圈容器](foreach-loop-container.md)。  
   
-4.  在 [Foreach 迴圈編輯器]  的 [集合]  頁面上，選取 [Foreach ADO.NET 結構描述資料列集] 列舉值。  
+4.  在 [Foreach 迴圈編輯器]**** 的 [集合]**** 頁面上，選取 [Foreach ADO.NET 結構描述資料列集] 列舉值。  
   
-5.  選取您先前建立的 ADO.NET 連線管理員作為 [連接]  的值。  
+5.  選取您先前建立的 ADO.NET 連線管理員作為 [連接]**** 的值。  
   
-6.  選取 [資料表] 作為 [結構描述]  的值。  
+6.  選取 [資料表] 作為 [結構描述]**** 的值。  
   
     > [!NOTE]  
-    >  Excel 活頁簿中資料表清單包含活頁簿 (具有 $ 後置詞) 及具名範圍。 如果您必須只篩選清單中的活頁簿或具名範圍，必須在指令碼工作中寫入這個用途的自訂程式碼。 如需詳細資訊，請參閱[以指令碼工作處理 Excel 檔案](script-task.md)。  
+    >  Excel 活頁簿中資料表清單包含活頁簿 (具有 $ 後置詞) 及具名範圍。 如果您必須只篩選清單中的活頁簿或具名範圍，必須在指令碼工作中寫入這個用途的自訂程式碼。 如需詳細資訊，請參閱 [以指令碼工作處理 Excel 檔案](script-task.md)。  
   
-7.  在 [變數對應]  頁面上，將 [索引 2] 對應至先前建立的字串變數，以保留目前資料表的名稱。  
+7.  在 [變數對應]**** 頁面上，將 [索引 2] 對應至先前建立的字串變數，以保留目前資料表的名稱。  
   
-8.  關閉 [Foreach 迴圈編輯器]  。  
+8.  關閉 [Foreach 迴圈編輯器]****。  
   
 9. 在「Foreach 迴圈」容器中建立工作，以便使用 Excel 連接管理員在指定之活頁簿中的每個 Excel 資料表上執行相同的作業。 如果您使用指令碼工作檢查列舉的資料表名稱，或者用來處理每個資料表，請記得將字串變數加入指令碼工作的 ReadOnlyVariables 屬性中。  
   
 ## <a name="see-also"></a>另請參閱  
- [從 Excel 匯入資料，或將資料匯出至 Excel 與 SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md) [設定 Foreach 迴圈容器](foreach-loop-container.md)   
+ [使用 SQL Server Integration Services （SSIS）從 excel 匯入資料或將資料匯出至 excel](../load-data-to-from-excel-with-ssis.md) [設定 Foreach 迴圈容器](foreach-loop-container.md)   
  [新增或變更屬性運算式](../expressions/add-or-change-a-property-expression.md)   
  [Excel 連線管理員](../connection-manager/excel-connection-manager.md)   
  [Excel 來源](../data-flow/excel-source.md)   

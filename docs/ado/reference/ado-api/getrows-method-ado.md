@@ -1,5 +1,5 @@
 ---
-title: GetRows 方法 (ADO) |Microsoft Docs
+title: GetRows 方法（ADO） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d96b7968c7aba8d1249db2f43b53fc8a22596419
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918454"
 ---
 # <a name="getrows-method-ado"></a>GetRows 方法 (ADO)
-擷取的多筆記錄[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)成陣列的物件。  
+將[記錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的多個記錄捕獲到陣列中。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,32 +34,32 @@ array = recordset.GetRows(Rows, Start, Fields )
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 傳回**Variant**其值是二維陣列。  
+ 傳回其值為二維陣列的**Variant** 。  
   
 #### <a name="parameters"></a>參數  
- *資料列*  
- 選擇性。 A [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md)值，指出要擷取的記錄數目。 預設值是**adGetRowsRest**。  
+ *行間*  
+ 選擇性。 [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md)值，表示要取得的記錄數目。 預設值為**adGetRowsRest**。  
   
- *啟動*  
- 選擇性。 A**字串**值，或**Variant**評估為書籤記錄從中**GetRows**作業應該開始。 您也可以使用[BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)值。  
+ *Start*  
+ 選擇性。 **字串**值或**Variant** ，會評估為要從中開始**GetRows**作業之記錄的書簽。 您也可以使用[BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)值。  
   
  *欄位*  
- 選擇性。 A **Variant**表示的單一欄位名稱或序數位置或欄位名稱或序數位置的數字的陣列。 ADO 會傳回這些欄位中的資料。  
+ 選擇性。 表示單一功能變數名稱或序數位置的**Variant** ，或功能變數名稱或序數位置數位的陣列。 ADO 只會傳回這些欄位中的資料。  
   
 ## <a name="remarks"></a>備註  
- 使用**GetRows**方法來複製資料的來源**資料錄集**的二維陣列。 第一個註標識別欄位，第二個識別的資料錄數目。 *陣列*變數會自動設定為正確大小的時機**GetRows**方法傳回的資料。  
+ 使用**GetRows**方法將記錄從**記錄集**複製到二維陣列。 第一個注標會識別欄位，而第二個則會識別記錄號碼。 當**GetRows**方法傳回資料時，*陣列*變數會自動維度為正確的大小。  
   
- 如果您未指定的值*資料列*引數**GetRows**方法會自動擷取中的所有記錄**資料錄集**物件。 如果您要求可供使用，過多的記錄**GetRows**傳回只有可用的記錄數目。  
+ 如果您未指定*Rows*引數的值，則**GetRows**方法會自動抓取**記錄集**物件中的所有記錄。 如果您要求的記錄數超過可用的數量，則**GetRows**只會傳回可用記錄的數目。  
   
- 如果**Recordset**物件支援書籤，您可以指定在哪一筆記錄**GetRows**方法應該開始擷取資料，將該記錄的值傳遞[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)中的屬性*啟動*引數。  
+ 如果**記錄集**物件支援書簽，您可以在*開始*引數中傳遞該記錄的 [[書簽](../../../ado/reference/ado-api/bookmark-property-ado.md)] 屬性的值，以指定**要在哪個**記錄上開始抓取資料。  
   
- 如果您想要限制欄位所**GetRows**呼叫傳回時，您可以將單一欄位名稱/數字或欄位名稱/數字陣列中的傳遞*欄位*引數。  
+ 如果您想要限制**GetRows**呼叫傳回的欄位，您可以在*fields*引數中傳遞單一功能變數名稱/數位，或功能變數名稱/數位陣列。  
   
- 在您呼叫後**GetRows**下, 一個未閱讀的記錄會變成目前的記錄，或[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)屬性設定為**True**如果沒有更多的記錄。  
+ 在您呼叫**GetRows**之後，下一個未讀取的記錄就會成為目前的記錄，否則如果沒有其他記錄， [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)屬性會設定為**True** 。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [GetRows 方法範例 (VB)](../../../ado/reference/ado-api/getrows-method-example-vb.md)   
+ [GetRows 方法範例（VB）](../../../ado/reference/ado-api/getrows-method-example-vb.md)   
  [GetRows 方法範例 (VC++)](../../../ado/reference/ado-api/getrows-method-example-vc.md)   

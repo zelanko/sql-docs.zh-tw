@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 84ee67faf36668a297cdfd801a84147ed236ce50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62956073"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>將現有專案加入方案中
@@ -40,7 +40,7 @@ ms.locfileid: "62956073"
 >  從多重開發人員環境的共用目錄，加入現有專案之前，必須嘗試確定變更不會覆寫其他開發人員的變更，或者對其造成負面影響。  
   
 ## <a name="see-also"></a>另請參閱  
- [專案&#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
+ [專案 &#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
  [方案 &#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)  
   
   

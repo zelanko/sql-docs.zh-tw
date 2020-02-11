@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: bd95133bee73720e6117a0eedd93f8de56b5496f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807522"
 ---
 # <a name="database-engine-cross-instance-features"></a>Database Engine 跨執行個體功能
@@ -28,7 +28,7 @@ ms.locfileid: "62807522"
 [註冊伺服器](../ssms/register-servers/register-servers.md)  
 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)  
 [資料收集](../relational-databases/data-collection/data-collection.md)  
-[監視資源使用狀況 &#40;系統監視器&#41;](../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+[監視資源使用狀況 &#40;System Monitor&#41;](../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
 [使用中央管理伺服器管理多部伺服器](../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
 [SQL Server 組態管理員](../relational-databases/sql-server-configuration-manager.md)  
 [活動監視器](../relational-databases/performance-monitor/activity-monitor.md)  

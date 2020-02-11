@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 032c371fd37bb66392761fff24bd30efb2bd5b37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011941"
 ---
 # <a name="create-an-application-role"></a>建立應用程式角色
@@ -31,7 +31,7 @@ ms.locfileid: "63011941"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目建立應用程式角色：**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63011941"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料庫的 ALTER ANY APPLICATION ROLE 權限。  
@@ -62,14 +62,14 @@ ms.locfileid: "63011941"
   
 6.  在 **[預設結構描述]** 方塊中，透過輸入物件名稱，指定擁有此角色建立的物件之結構描述。 或者，按一下省略符號 **(...)** ，開啟 [尋找結構描述]  對話方塊。  
   
-7.  在 **[密碼]** 方塊中，輸入新角色的密碼。 在 **[確認密碼]** 方塊中重新輸入該密碼。  
+7.  在 **[密碼]** 方塊中，輸入新角色的密碼。 在 [確認密碼]  方塊中再次輸入密碼。  
   
 8.  在 **[此角色擁有的結構描述]** 底下，選取或檢視此角色將擁有的結構描述。 結構描述僅能由一個結構描述或角色擁有。  
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他選項  
- **應用程式角色-新增**對話方塊也會提供其他兩個頁面上的選項：**安全性實體**並**擴充屬性**。  
+ [應用程式角色 - 新增]  對話方塊也在其他兩個頁面上提供選項：[安全性實體]  和 [擴充屬性]  。  
   
 -   **[安全性實體]** 頁面列出所有可能的安全性實體以及可授與登入的安全性實體權限。  
   

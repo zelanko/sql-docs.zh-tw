@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828122"
 ---
 # <a name="cdc-source"></a>CDC 來源
@@ -45,7 +45,7 @@ ms.locfileid: "62828122"
 ## <a name="error-handling"></a>錯誤處理  
  CDC 來源有錯誤輸出。 此元件的錯誤輸出包含下列輸出資料行：  
   
--   **錯誤碼**：此值一律為 -1。  
+-   **錯誤碼**：值一定是 -1。  
   
 -   **錯誤資料行**：造成錯誤 (用於轉換錯誤) 的來源資料行。  
   
@@ -75,20 +75,25 @@ use <cdc-enabled-database-name>
   
  其中：  
   
--   \<cdc-enabled-database-name> 是包含變更資料表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫名稱。  
+-   
+  \<cdc-enabled-database-name> 是包含變更資料表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫名稱。  
   
--   \<value-from-state-cs> 是在 CDC 狀態變數中顯示為 CS/\<value-from-state-cs>/ 的值 (CS 代表 Current-processing-range-Start)。  
+-   
+  \<value-from-state-cs> 是在 CDC 狀態變數中顯示為 CS/\<value-from-state-cs>/ 的值 (CS 代表 Current-processing-range-Start)。  
   
--   \<value-from-state-ce> 是在 CDC 狀態變數中顯示為 CE/\<value-from-state-cs>/ 的值 (CE 代表 Current-processing-range-End)。  
+-   
+  \<value-from-state-ce> 是在 CDC 狀態變數中顯示為 CE/\<value-from-state-cs>/ 的值 (CE 代表 Current-processing-range-End)。  
   
--   \<模式> 是 CDC 處理模式。 處理模式有下列其中一個值：[全部]  、[全部 (含舊值)]  、[淨]  、[淨 (含更新遮罩)]  、[淨 (含合併)]  。  
+-   
+  \<模式> 是 CDC 處理模式。 處理模式有下列其中一個值：[全部]****、[全部 (含舊值)]****、[淨]****、[淨 (含更新遮罩)]****、[淨 (含合併)]****。  
   
- 此指令碼會在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中重現問題，協助您輕鬆重現及識別錯誤以隔離問題。  
+ 此指令碼會在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中重現問題，協助您輕鬆重現及識別錯誤以隔離問題。  
   
 #### <a name="sql-server-error-message"></a>SQL Server 錯誤訊息  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可能會傳回下列訊息：  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可能會傳回下列訊息：  
   
- **提供給程序或函式 cdc.fn_cdc_get_net_changes_\<..>** 的引數數量不足。  
+ **為程式或函數 cdc 提供的引數數目不足。 fn_cdc_get_net_changes_\<。>。**  
   
  此錯誤並不表示缺少引數。 它表示 CDC 狀態變數中的開始或結束 LSN 值無效。  
   
@@ -107,9 +112,9 @@ use <cdc-enabled-database-name>
   
  若要開啟 **[進階編輯器]** 對話方塊：  
   
--   在 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 專案的 [資料流程]  畫面中，以滑鼠右鍵按一下 CDC 來源，然後選取 [顯示進階編輯器]  。  
+-   在 ** 專案的 [資料流程]**[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 畫面中，以滑鼠右鍵按一下 CDC 來源，然後選取 [顯示進階編輯器]****。  
   
- 如需可在 [進階編輯器]  對話方塊中設定之屬性的詳細資訊，請參閱 [CDC 來源自訂屬性](cdc-source-custom-properties.md)。  
+ 如需可在 [進階編輯器]**** 對話方塊中設定之屬性的詳細資訊，請參閱 [CDC 來源自訂屬性](cdc-source-custom-properties.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -125,6 +130,6 @@ use <cdc-enabled-database-name>
   
 ## <a name="related-content"></a>相關內容  
   
--   mattmasson.com 上的部落格文章：[Processing Modes for the CDC Source](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)。  
+-   mattmasson.com 上的部落格文章： [Processing Modes for the CDC Source](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)。  
   
   

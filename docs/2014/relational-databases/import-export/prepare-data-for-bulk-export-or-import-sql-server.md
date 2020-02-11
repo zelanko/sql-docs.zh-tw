@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c1c423bad8742b0a9760945e3823d6ef159c1e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67046708"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>準備大量匯出或匯入的資料 (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "67046708"
   
 -   從資料表或檢視大量匯出到資料檔，需要大量複製的資料表或檢視之 SELECT 權限。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可使用平行掃描來擷取資料。 因此，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體大量匯出的資料表資料列，通常不能保證在資料檔中具有特定順序。 若要確定大量匯出的資料表資料列以特定順序顯示在資料檔中，請使用 **queryout** 選項從查詢進行大量匯出，以及指定 ORDER BY 子句。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以使用平行掃描來取出資料。 因此，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體大量匯出的資料表資料列，通常不能保證在資料檔中具有特定順序。 若要確定大量匯出的資料表資料列以特定順序顯示在資料檔中，請使用 **queryout** 選項從查詢進行大量匯出，以及指定 ORDER BY 子句。  
   
 ## <a name="data-file-format-requirements-for-bulk-import"></a>大量匯入的資料檔格式需求  
  若要從資料檔匯入資料，該檔案必須符合下列基本需求：  
@@ -59,7 +59,8 @@ ms.locfileid: "67046708"
   
 -   若要從包含固定長度或固定寬度欄位的資料檔案匯入資料，您必須使用格式檔案。 如需詳細資訊，請參閱 [XML 格式檔案 &#40;SQL Server&#41;](xml-format-files-sql-server.md)。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入作業不支援逗號分隔值 (CSV) 檔案。 不過，在某些情況下，CSV 檔案可用來當做資料檔案，以便將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請注意，CSV 檔案的欄位結束字元不必是逗號。 為了能夠當做資料檔使用來進行大量匯入，CSV 檔案必須符合下列限制：  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入作業不支援逗號分隔值 (CSV) 檔案。 不過，在某些情況下，CSV 檔案可用來當做資料檔案，以便將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請注意，CSV 檔案的欄位結束字元不必是逗號。 為了能夠當做資料檔使用來進行大量匯入，CSV 檔案必須符合下列限制：  
   
     -   資料欄位永遠不會包含欄位結束字元。  
   
@@ -67,19 +68,19 @@ ms.locfileid: "67046708"
   
      若要從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro 或 Visual FoxPro 資料表 (.dbf) 檔案或 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 工作表 (.xls) 檔案大量匯入資料，您必須將該資料轉換成符合前述限制的 CSV 檔案。 副檔名通常為 .csv。 然後，您就可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入作業中，將此 .csv 檔案當做資料檔使用。  
   
-     在 32 位元系統上，您可以搭配 OLE DB Provider for Jet 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [，將 CSV 資料匯入](/sql/t-sql/functions/openrowset-transact-sql) 資料表，而不需要將大量匯入最佳化。 Jet 會將文字檔視為資料表，其中包含與資料來源位於相同目錄中之 schema.ini 檔所定義的結構描述。  若是 CSV 資料，schema.ini 檔中的其中一個參數將會是 "FORMAT=CSVDelimited"。 若要使用此解決方案，您需要了解 Jet Test IISAMm 如何運作 (其連接字串語法、schema.ini 用法、登錄設定選項等等)。  此資訊的最佳來源為 Microsoft Access 說明以及知識庫 (KB) 文件。 如需詳細資訊，請參閱[初始化文字資料來源驅動程式](https://docs.microsoft.com/office/client-developer/access/desktop-database-reference/initializing-the-text-data-source-driver)、[如何搭配安全保護 Access 資料庫的連結伺服器使用 SQL Server 7.0 分散式查詢](https://go.microsoft.com/fwlink/?LinkId=128504)、[如何：使用 Jet OLE DB Provider 4.0 連線到 ISAM 資料庫 ](https://go.microsoft.com/fwlink/?LinkId=128505)，以及[如何使用 Jet 提供者的文字 IIsam 開啟分隔的文字檔](https://go.microsoft.com/fwlink/?LinkId=128501)。  
+     在 32 位元系統上，您可以搭配 OLE DB Provider for Jet 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [，將 CSV 資料匯入](/sql/t-sql/functions/openrowset-transact-sql) 資料表，而不需要將大量匯入最佳化。 Jet 會將文字檔視為資料表，其中包含與資料來源位於相同目錄中之 schema.ini 檔所定義的結構描述。  若是 CSV 資料，schema.ini 檔中的其中一個參數將會是 "FORMAT=CSVDelimited"。 若要使用此解決方案，您需要了解 Jet Test IISAMm 如何運作 (其連接字串語法、schema.ini 用法、登錄設定選項等等)。  此資訊的最佳來源為 Microsoft Access 說明以及知識庫 (KB) 文件。 如需詳細資訊，請參閱 [初始化文字資料來源驅動程式](https://docs.microsoft.com/office/client-developer/access/desktop-database-reference/initializing-the-text-data-source-driver)、 [如何搭配安全保護 Access 資料庫的連結伺服器使用 SQL Server 7.0 分散式查詢](https://go.microsoft.com/fwlink/?LinkId=128504)、 [如何：使用 Jet OLE DB Provider 4.0 連接到 ISAM 資料庫](https://go.microsoft.com/fwlink/?LinkId=128505)以及 [如何使用 Jet 提供者的文字 IIsam 開啟分隔的文字檔案](https://go.microsoft.com/fwlink/?LinkId=128501)。  
   
  此外，將資料從資料檔大量匯入到資料表中需要下列：  
   
 -   使用者必須具有該資料表的 INSERT 與 SELECT 權限。 使用者在使用需要資料定義語言 (DDL) 作業的選項 (如停用條件約束) 時，也需要 ALTER TABLE 權限。  
   
--   當您使用 BULK INSERT 或 INSERT ...SELECT * FROM OPENROWSET(BULK...) 來大量匯入資料時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序的安全性設定檔 (若使用者利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的登入來登入) 和用於委託安全性的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登入，必須可存取資料檔以進行讀取作業。 此外，使用者必須具有 ADMINISTER BULK OPERATIONS 權限才能讀取檔案。  
+-   當您使用 BULK INSERT 或 INSERT ...SELECT * FROM OPENROWSET(BULK...) 來大量匯入資料時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序的安全性設定檔 (若使用者利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的登入來登入) 和用於委託安全性的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登入，必須可存取資料檔以進行讀取作業。 此外，使用者必須具有 ADMINISTER BULK OPERATIONS 權限才能讀取檔案。  
   
 > [!NOTE]  
 >  系統並不支援大量匯入到資料分割檢視，而嘗試將資料大量匯入到資料分割檢視會失敗。  
   
 ## <a name="external-resources"></a>外部資源  
- [如何將 Excel 中的資料匯入到 SQL Server](https://support.microsoft.com/kb/321686)  
+ [如何將資料從 Excel 匯入至 SQL Server](https://support.microsoft.com/kb/321686)  
   
 ## <a name="change-history"></a>變更記錄  
   
@@ -88,7 +89,7 @@ ms.locfileid: "67046708"
 |已加入使用 OLE DB Provider for Jet 匯入 CSV 資料的相關資訊。|  
   
 ## <a name="see-also"></a>另請參閱  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 公用程式](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [資料類型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
  [使用字元格式匯入或匯出資料 &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)   

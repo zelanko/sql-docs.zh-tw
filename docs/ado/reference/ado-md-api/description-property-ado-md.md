@@ -1,5 +1,5 @@
 ---
-title: Description 屬性 (ADO MD) |Microsoft Docs
+title: Description 屬性（ADO MD） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -21,24 +21,24 @@ ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5636b5f4e49ff9a5bbe46937a8d7b972e61b4502
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938579"
 ---
 # <a name="description-property-ado-md"></a>Description 屬性 (ADO MD)
 傳回目前物件的文字說明。  
   
 ## <a name="return-values"></a>傳回值  
- 傳回**字串**和處於唯讀狀態。  
+ 傳回**字串**，而且是唯讀的。  
   
 ## <a name="remarks"></a>備註  
- 針對[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)物件，**描述**僅適用於量值和公式的成員。 **描述**傳回空字串 ("") 的所有其他類型的成員。 如需各種類型的成員的詳細資訊，請參閱[型別](../../../ado/reference/ado-md-api/type-property-ado-md.md)屬性。  
+ 對於[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)物件， **Description**僅適用于 measure 和 formula 成員。 **描述**會針對所有其他類型的成員傳回空字串（""）。 如需各種成員類型的詳細資訊，請參閱[Type](../../../ado/reference/ado-md-api/type-property-ado-md.md)屬性。  
   
- 這個屬性才支援**成員**屬於物件[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)物件。 從參考這個屬性時，就會發生錯誤**成員**屬於物件[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)物件。  
+ 只有屬於[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)物件的**成員**物件才支援這個屬性。 當這個屬性是從屬於[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)物件的**成員**物件參考時，就會發生錯誤。  
   
-## <a name="applies-to"></a>適用於  
+## <a name="applies-to"></a>套用至  
   
 ||||  
 |-|-|-|  
