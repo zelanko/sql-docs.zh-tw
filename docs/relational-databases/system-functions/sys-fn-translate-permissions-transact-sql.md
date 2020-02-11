@@ -1,5 +1,5 @@
 ---
-title: sys.fn_translate_permissions (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases fn_translate_permissions （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055370"
 ---
-# <a name="sysfntranslatepermissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
+# <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   將 SQL 追蹤所傳回的權限位元遮罩解譯為權限名稱表。  
@@ -43,23 +43,23 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>引數  
- *level*  
- 這是套用權限的安全性實體種類。 *層級*已**nvarchar(60)** 。  
+ *二級*  
+ 這是套用權限的安全性實體種類。 *層級*為**Nvarchar （60）**。  
   
  *perms*  
- 這是權限資料行中傳回的位元遮罩。 *perms*已**varbinary(16)** 。  
+ 這是權限資料行中傳回的位元遮罩。 *perms*是**Varbinary （16）**。  
   
 ## <a name="returns"></a>傳回值  
- **table**  
+ **目錄**  
   
 ## <a name="remarks"></a>備註  
- 中傳回的值**權限**SQL 追蹤資料行是所使用的位元遮罩的整數表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來計算有效權限。 25 種安全性實體的每一種都有它自己的權限集合，而且這些權限集合有對應的數值。 **sys.fn_translate_permissions**這個位元遮罩轉譯為權限名稱表。  
+ 在 SQL 追蹤的 [**許可權**] 資料行中傳回的值，是用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來計算有效許可權之位元遮罩的整數表示。 25 種安全性實體的每一種都有它自己的權限集合，而且這些權限集合有對應的數值。 **fn_translate_permissions**會將此位元遮罩轉譯成許可權名稱的資料表。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要 **public** 角色的成員資格。  
   
 ## <a name="example"></a>範例  
- 下列查詢會使用`sys.fn_builtin_permissions`若要顯示的權限，適用於憑證，然後再使用`sys.fn_translate_permissions`傳回結果的權限的位元遮罩。  
+ 下列查詢會使用`sys.fn_builtin_permissions`來顯示適用于憑證的許可權，然後使用`sys.fn_translate_permissions`來傳回許可權位元遮罩的結果。  
   
 ```  
 SELECT * FROM sys.fn_builtin_permissions('CERTIFICATE');  
@@ -70,7 +70,7 @@ SELECT '0011' AS Input, * FROM sys.fn_translate_permissions('CERTIFICATE', 0011)
   
 ## <a name="see-also"></a>另請參閱  
  [權限 &#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
+ [server_permissions &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   

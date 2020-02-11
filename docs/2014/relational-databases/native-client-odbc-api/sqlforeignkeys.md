@@ -1,5 +1,5 @@
 ---
-title: SQLForeignKeys | Microsoft Docs
+title: SQLForeignKeys |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,23 +15,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8481b0f19566ed0e55f31480f9ab8be0c9441c7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184473"
 ---
 # <a name="sqlforeignkeys"></a>SQLForeignKeys
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援串聯更新，而且會透過外部索引鍵條件約束機制刪除。 如果在 FOREIGN KEY 條件約束的 ON UPDATE 和/或 ON DELETE 子句上指定 CASCADE 選項，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對 UPDATE_RULE 和/或 DELETE_RULE 資料行傳回 SQL_NO_ACTION。 如果在 FOREIGN KEY 條件約束的 ON UPDATE 和/或 ON DELETE 子句上指定 NO ACTION 選項，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對 UPDATE_RULE 和/或 DELETE_RULE 資料行傳回 SQL_NO_ACTION。  
   
- 無效的值時存在於任何**SQLForeignKeys**參數**SQLForeignKeys**執行都會傳回 SQL_SUCCESS。 **SQLFetch**無效的值用於這些參數時，會傳回 sql_no_data 為止。  
+ 當任何**SQLForeignKeys**參數中出現不正確值時， **SQLForeignKeys**會在執行時傳回 SQL_SUCCESS。 當這些參數中使用了不正確值時， **SQLFetch**會傳回 SQL_NO_DATA。  
   
- **SQLForeignKeys**可以在靜態伺服器資料指標上執行。 嘗試執行**SQLForeignKeys**可更新的 （動態或索引鍵集） 資料指標會傳回 SQL_SUCCESS_WITH_INFO，指出資料指標類型已變更。  
+ **SQLForeignKeys**可以在靜態伺服器資料指標上執行。 嘗試在可更新的（動態或索引鍵集）資料指標上執行**SQLForeignKeys**時，會傳回 SQL_SUCCESS_WITH_INFO，表示資料指標類型已變更。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援的報告資訊的連結伺服器上的資料表所接受的兩部分名稱*FKCatalogName*並*PKCatalogName*參數：*Linked_Server_Name.Catalog_Name*。  
+ Native Client ODBC 驅動程式藉由接受*FKCatalogName*和*sqlforeignkeys*參數的兩部分名稱，支援連結伺服器上之資料表的報告資訊： *Linked_Server_Name. Catalog_Name。* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLForeignKeys 函數](https://go.microsoft.com/fwlink/?LinkId=59344)   
+ [SQLForeignKeys 函式](https://go.microsoft.com/fwlink/?LinkId=59344)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

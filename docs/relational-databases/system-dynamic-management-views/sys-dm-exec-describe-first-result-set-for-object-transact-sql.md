@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c500967b83581cc3bc108232f12c9a0f4d008da6
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71199340"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  這個動態管理函數會採用 @object_id 做為參數，並描述具有該識別碼之模組的第一個結果中繼資料。 指定的 @object_id 可以是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程式或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 觸發程式的識別碼。 如果是任何其他物件 (例如檢視表、資料表、函數或 CLR 程序) 的識別碼，結果的錯誤資料行中會指定錯誤。  
+  這個動態管理函數會採用@object_id做為參數，並描述具有該識別碼之模組的第一個結果中繼資料。 指定@object_id的可以是[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程式或[!INCLUDE[tsql](../../includes/tsql-md.md)]觸發程式的識別碼。 如果是任何其他物件 (例如檢視表、資料表、函數或 CLR 程序) 的識別碼，結果的錯誤資料行中會指定錯誤。  
   
- **dm_exec_describe_first_result_set_for_object**與 sys.databases 具有相同的結果集定義， [dm_exec_describe_first_result_set &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) ，類似于[sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
+ **dm_exec_describe_first_result_set_for_object**與 sys.databases 具有相同的結果集定義， [dm_exec_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) ，而且類似[sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,15 +44,15 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>引數  
  *\@object_id*  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程式或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 觸發程式的 @object_id。 @object_id 的類型為**int**。  
+ 預存程式或[!INCLUDE[tsql](../../includes/tsql-md.md)]觸發程式的。 @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)] @object_id的類型為**int**。  
   
  *\@include_browse_information*  
- @include_browse_information 的類型為**bit**。 如果設定為 1，就會分析每個查詢，如同查詢上有 FOR BROWSE 選項一樣。 會傳回其他索引鍵資料行和來源資料表資訊。  
+ @include_browse_information為類型**位**。 如果設定為 1，就會分析每個查詢，如同查詢上有 FOR BROWSE 選項一樣。 會傳回其他索引鍵資料行和來源資料表資訊。  
   
 ## <a name="table-returned"></a>傳回的資料表  
  這個通用的中繼資料會當做結果集來傳回，而結果中繼資料中的每個資料行都會有一個資料列。 每個資料列都會使用下一節所描述的格式來描述資料行的類型和 Null 屬性。 如果每個控制項路徑都沒有第一個陳述式，就會傳回具有零個資料列的結果集。  
   
-|資料行名稱|[名稱]|描述|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|指定資料行是否為了用來瀏覽資訊而加入的額外資料行，而不會實際顯示在結果集中。|  
 |**column_ordinal**|**int**|包含資料行在結果集中的序數位置。 第一個資料行的位置將會指定為 1。|  
@@ -60,9 +60,9 @@ sys.dm_exec_describe_first_result_set_for_object
 |**is_nullable**|**bit**|如果資料行允許 NULL 則包含值 1，如果資料行不允許 NULL 則包含 0，此外，如果無法判別資料行是否允許 NULL，則為 1。|  
 |**system_type_id**|**int**|包含 sys.databases 中所指定之資料行的資料類型 system_type_id。 針對 CLR 類型，即使 system_type_name 資料行將傳回 NULL，這個資料行將會傳回值 240。|  
 |**system_type_name**|**nvarchar(256)**|包含資料類型名稱。 包含指定給資料行之資料類型的引數 (例如長度、有效位數、小數位數)。 如果資料類型是使用者定義的別名類型，這裡就會指定基礎系統類型。 如果它是 CLR 使用者定義類型，這個資料行就會傳回 NULL。|  
-|**max_length**|**smallint**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**Varchar （max）** 、 **Nvarchar （max）** 、 **Varbinary （max）** 或**xml**。<br /><br /> 若為**文字**資料行， **max_length**值會是16，或**sp_tableoption ' text in row '** 所設定的值。|  
+|**max_length**|**smallint**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**Varchar （max）**、 **Nvarchar （max）**、 **Varbinary （max）** 或**xml**。<br /><br /> 若為**文字**資料行， **max_length**值會是16，或**sp_tableoption ' text in row '** 所設定的值。|  
 |**有效位數**|**tinyint**|如果以數值為基礎，就是資料行的有效位數。 否則傳回 0。|  
-|**scale**|**tinyint**|如果是以數值為基礎，便是資料行的小數位數。 否則傳回 0。|  
+|**尺度**|**tinyint**|如果是以數值為基礎，便是資料行的小數位數。 否則傳回 0。|  
 |**collation_name**|**sysname**|如果是以字元為基礎，便是資料行的定序名稱。 否則，便傳回 NULL。|  
 |**user_type_id**|**int**|針對 CLR 和別名類型，會如同 sys.types 中所指定，包含資料行資料類型的 user_type_id。 否則，便為 NULL。|  
 |**user_type_database**|**sysname**|針對 CLR 和別名類型，會包含定義類型之資料庫的名稱。 否則，便為 NULL。|  
@@ -88,23 +88,23 @@ sys.dm_exec_describe_first_result_set_for_object
 |**is_sparse_column_set**|**bit**|如果資料行是疏鬆資料行，則傳回 1，否則傳回 0。 如果無法判別資料行是否為疏鬆資料行集的一部分，則傳回 NULL。|  
 |**ordinal_in_order_by_list**|**smallint**|這個資料行在 ORDER BY 清單中的位置。如果資料行不會顯示在 ORDER BY 清單中，或如果無法唯一判別 ORDER BY 清單，則傳回 NULL。|  
 |**order_by_list_length**|**smallint**|ORDER BY 清單的長度。 如果沒有 ORDER BY 清單，或如果無法唯一判別 ORDER BY 清單，則傳回 NULL。 請注意，對於由 sp_describe_first_result_set 傳回的所有資料列來說，這個值都是一樣的。|  
-|**order_by_is_descending**|**Smallint Null**|如果 ordinal_in_order_by_list 不是 Null，[ **order_by_is_descending** ] 資料行會報告此資料行之 order by 子句的方向。 否則，它會回報 NULL。|  
+|**order_by_is_descending**|**Smallint Null**|如果 ordinal_in_order_by_list 不是 NULL，**order_by_is_descending** 資料行會回報此資料行的 ORDER BY 子句方向。 否則，它會回報 NULL。|  
 |**error_number**|**int**|包含函數傳回的錯誤號碼。 如果資料行未發生錯誤，則包含 NULL。|  
 |**error_severity**|**int**|包含函數傳回的嚴重性。 如果資料行未發生錯誤，則包含 NULL。|  
 |**error_state**|**int**|包含函數傳回的狀態訊息。 如果未發生錯誤， 則資料行會包含 NULL。|  
 |**error_message**|**Nvarchar （4096）**|包含函數傳回的訊息。 如果未發生錯誤，則資料行會包含 NULL。|  
 |**error_type**|**int**|包含整數，代表要傳回的錯誤。 對應到 error_type_desc。 請參閱備註下的清單。|  
-|**error_type_desc**|**nvarchar(60)**|包含簡短大寫字串，表示要傳回的錯誤。 對應到 error_type。 請參閱備註下的清單。|  
+|**error_type_desc**|**Nvarchar （60）**|包含簡短大寫字串，表示要傳回的錯誤。 對應到 error_type。 請參閱備註下的清單。|  
   
-## <a name="remarks"></a>Remarks  
- 此函式會使用與**sp_describe_first_result_set**相同的演算法。 如需詳細資訊，請參閱[sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
+## <a name="remarks"></a>備註  
+ 這個函數與 **sp_describe_first_result_set** 使用相同的演算法。 如需詳細資訊，請參閱[sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
   
  下表列出錯誤類型及其說明。  
   
 |error_type|error_type|描述|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|未說明的所有錯誤。|  
-|2|SYNTAX|批次發生語法錯誤。|  
+|2|語法|批次發生語法錯誤。|  
 |3|CONFLICTING_RESULTS|因為兩個可能的第一個陳述式之間的衝突，無法判定結果。|  
 |4|DYNAMIC_SQL|因為動態 SQL 可能傳回第一個結果，無法判定結果。|  
 |5|CLR_PROCEDURE|因為 CLR 預存程序可能傳回第一個結果，無法判定結果。|  
@@ -112,18 +112,18 @@ sys.dm_exec_describe_first_result_set_for_object
 |7|EXTENDED_PROCEDURE|因為擴充預存程序可能傳回第一個結果，無法判定結果。|  
 |8|UNDECLARED_PARAMETER|無法判斷結果，因為一或多個結果集資料行的資料類型可能相依于未宣告的參數。|  
 |9|RECURSION|因為批次包含遞迴陳述式，無法判定結果。|  
-|10|TEMPORARY_TABLE|無法判斷結果，因為批次包含臨時表，而且**sp_describe_first_result_set**不支援。|  
-|11|UNSUPPORTED_STATEMENT|無法判斷結果，因為批次包含**sp_describe_first_result_set**不支援的語句（例如，FETCH、REVERT 等）。|  
-|12|OBJECT_ID_NOT_SUPPORTED|不支援傳遞至函數的 @object_id （亦即不是預存程式）|  
-|13|OBJECT_ID_DOES_NOT_EXIST|在系統目錄中找不到傳遞至函數的 @object_id。|  
+|10|TEMPORARY_TABLE|因為批次包含暫存資料表且不受 **sp_describe_first_result_set** 支援，無法判定結果。|  
+|11|UNSUPPORTED_STATEMENT|因為批次包含 **sp_describe_first_result_set** 不支援的陳述式 (例如，FETCH、REVERT 等)，無法判定結果。|  
+|12|OBJECT_ID_NOT_SUPPORTED|不@object_id支援傳遞至函數的（亦即不是預存程式）|  
+|13|OBJECT_ID_DOES_NOT_EXIST|在@object_id系統目錄中找不到傳遞至函數的。|  
   
-## <a name="permissions"></a>Permissions  
- 需要執行 @tsql 引數的許可權。  
+## <a name="permissions"></a>權限  
+ 需要執行引數的@tsql許可權。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-returning-metadata-with-and-without-browse-information"></a>A. 傳回具有及不具有瀏覽資訊的中繼資料  
- 下列範例會建立名為 TestProc2 的預存程式，它會傳回兩個結果集。 然後，此範例會示範**dm_exec_describe_first_result_set**傳回程序中第一個結果集的相關資訊，以及不含流覽資訊的。  
+ 下列範例會建立名為 TestProc2 的預存程式，它會傳回兩個結果集。 然後此範例示範 **sys.dm_exec_describe_first_result_set** 傳回此預存程序的第一個結果集相關資訊 (具有瀏覽資訊以及不具瀏覽資訊)。  
   
 ```  
 CREATE PROC TestProc2  
@@ -137,8 +137,8 @@ SELECT * FROM sys.dm_exec_describe_first_result_set_for_object(OBJECT_ID('TestPr
 GO  
 ```  
   
-### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>b. 結合 sys.dm_exec_describe_first_result_set_for_object 函數與資料表或檢視表  
- 下列範例會使用 sys.databases 系統目錄檢視和**sys.databases dm_exec_describe_first_result_set_for_object**函數，顯示 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中所有預存程式之結果集的中繼資料。  
+### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>B. 結合 sys.dm_exec_describe_first_result_set_for_object 函數與資料表或檢視表  
+ 下列範例會使用 sys.databases 系統目錄檢視和**sys.databases dm_exec_describe_first_result_set_for_object**函數來顯示[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫中所有預存程式之結果集的中繼資料。  
   
 ```  
 USE AdventureWorks2012;  
@@ -152,8 +152,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_describe_first_result_set &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sp_describe_undeclared_parameters &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys. dm_exec_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
+ [sp_describe_first_result_set &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sp_describe_undeclared_parameters &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [dm_exec_describe_first_result_set &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
   
   

@@ -19,30 +19,30 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed78d5ff91d09f9d8370eef31fd3a6651b301a38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188206"
 ---
 # <a name="manage-events"></a>管理事件
-  您可以將達到或超過特定錯誤嚴重性層級的所有事件訊息轉送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 這稱為「事件轉送」  。 轉送伺服器是一個專用的伺服器，它也可以當做主要伺服器。 您可以利用事件轉送功能將伺服器群組的警示管理集中化，藉以減輕使用頻繁之伺服器的工作負載。  
+  您可以將達到或超過特定錯誤嚴重性層級的所有事件訊息轉送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 這稱為「事件轉送」**。 轉送伺服器是一個專用的伺服器，它也可以當做主要伺服器。 您可以利用事件轉送功能將伺服器群組的警示管理集中化，藉以減輕使用頻繁之伺服器的工作負載。  
   
- 當某伺服器接收到其他伺服器群組的事件時，接收事件的伺服器稱為「警示管理伺服器」  。 在多伺服器的環境中，您可以將主要伺服器指定為警示管理伺服器。  
+ 當某伺服器接收到其他伺服器群組的事件時，接收事件的伺服器稱為「警示管理伺服器」**。 在多伺服器的環境中，您可以將主要伺服器指定為警示管理伺服器。  
   
 ## <a name="advantages-of-using-an-alerts-management-server"></a>使用警示管理伺服器的優點  
  設定警示管理伺服器的優點包括：  
   
 -   **集中化**。 可從單一伺服器集中控制和合併檢視多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的事件。  
   
--   **延展性**。 能以一個邏輯伺服器的方式管理很多實體的伺服器。 您可以依照需要對這個實體的伺服器群組新增或移除伺服器。  
+-   擴充**性**。 能以一個邏輯伺服器的方式管理很多實體的伺服器。 您可以依照需要對這個實體的伺服器群組新增或移除伺服器。  
   
 -   **效率**。 組態時間減少，因為您只需要定義一次警示和運算子。  
   
 ## <a name="disadvantages-of-using-an-alerts-management-server"></a>使用警示管理伺服器的缺點  
  設定警示管理伺服器的缺點包括：  
   
--   **網路流量增加**。 將事件轉送至警示管理伺服器會增加網路傳輸量。 將事件轉送限制在高於指定嚴重性層級的事件，可減緩流量增加的情況。  
+-   **增加的流量**。 將事件轉送至警示管理伺服器會增加網路傳輸量。 將事件轉送限制在高於指定嚴重性層級的事件，可減緩流量增加的情況。  
   
 -   **單一失敗點**。 如果警示管理伺服器離線，則不會對受管理伺服器群組上的任何事件發出警示。  
   
@@ -88,6 +88,6 @@ ms.locfileid: "63188206"
 >  因為作業可能引發事件，請小心不要建立遞迴式警示作業迴圈。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.sysmessages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
+ [sysmessages &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
   
   

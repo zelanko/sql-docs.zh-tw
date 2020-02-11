@@ -11,14 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062434"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services 教學課程案例
-  這個教學課程是以一家虛構的公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]為基礎。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨國製造公司，專門生產及批發金屬和合成器材自行車給北美、歐洲和亞洲的商場。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的總公司在華盛頓 Bothell，該公司雇用 500 位員工。 另外， [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 它的市場還雇用了一些地區銷售團隊。  
+  這個教學課程是以一家虛構的公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]為基礎。 
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨國製造公司，專門生產及批發金屬和合成器材自行車給北美、歐洲和亞洲的商場。 
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的總公司在華盛頓 Bothell，該公司雇用 500 位員工。 另外， [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 它的市場還雇用了一些地區銷售團隊。  
   
  在最近幾年， [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 購買了一間墨西哥的小型製造工廠 Importadores Neptuno。 Importadores Neptuno 為 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 產品線製造幾項重要的子零件。 這些子零件運送到 Bothell 地點進行最後產品組裝。 在 2005 年，Importadores Neptuno 成為自行車產品類的唯一製造商和批發商。  
   
@@ -46,7 +48,7 @@ ms.locfileid: "66062434"
 -   資訊很難稽核。 財務部門目前使用的 **AdventureWorksDW2012** 資料庫只做為大量查詢的資料來源。 他們會將資料下載到個別的試算表，然後花很多時間準備資料及處理試算表。 因此，公司財務報表很難在整個公司進行準備、稽核和管理的工作。  
   
 ## <a name="the-solution"></a>方案  
- 資料倉儲團隊最近對目前分析系統進行設計檢閱。 這項檢閱包括對目前問題和未來需求的差距分析。 資料倉儲團隊認為 **AdventureWorksDW2012** 資料庫是一個設計完善的維度資料庫，其中包含符合標準的維度和 Surrogate 索引鍵。 符合維度可讓維度使用於多個資料超市，例如 [時間] 維度或 [產品] 維度。 Surrogate 索引鍵是假造的索引鍵，連結維度和事實資料表，用來確保唯一性及改進效能。 此外，資料倉儲團隊也判定 **AdventureWorksDW2012** 資料庫中基底資料表的載入和管理方面目前沒有重大問題。 因此該團隊決定使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 來完成下列各項：  
+ 資料倉儲團隊最近對目前分析系統進行設計檢閱。 這項檢閱包括對目前問題和未來需求的差距分析。 資料倉儲團隊認為 **AdventureWorksDW2012** 資料庫是一個設計完善的維度資料庫，其中包含符合標準的維度和 Surrogate 索引鍵。 符合維度可讓維度使用於多個資料超市，例如 [時間] 維度或 [產品] 維度。 Surrogate 索引鍵是假造的索引鍵，連結維度和事實資料表，用來確保唯一性及改進效能。 此外，資料倉儲團隊也判定 **AdventureWorksDW2012** 資料庫中基底資料表的載入和管理方面目前沒有重大問題。 因此，小組已決定使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]來完成下列動作：  
   
 -   透過共同中繼資料層，提供統一資料存取，以進行邏輯分析和報告。  
   
@@ -60,9 +62,9 @@ ms.locfileid: "66062434"
   
 -   對美國以外地區的商務使用者提供當地語系化體驗。  
   
- Analysis Services 教學課程中的課程提供建立符合這些所有目標之 Cube 資料庫的指導方針。 若要開始，繼續執行第 1 課：[第 1 課：建立新的表格式模型專案](lesson-1-create-a-new-tabular-model-project.md)。  
+ Analysis Services 教學課程中的課程提供建立符合這些所有目標之 Cube 資料庫的指導方針。 若要開始使用，請繼續進行第一課： [第 1 課：建立新的表格式模型專案](lesson-1-create-a-new-tabular-model-project.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型化 &#40;Adventure Works 教學課程&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [多維度模型化 &#40;的艾德作品教學課程&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

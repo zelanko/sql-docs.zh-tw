@@ -1,5 +1,5 @@
 ---
-title: 資料流程元件中設定錯誤輸出 |Microsoft Docs
+title: 在資料流程元件中設定錯誤輸出 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060820"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>在資料流程元件中設定錯誤輸出
@@ -27,7 +27,7 @@ ms.locfileid: "66060820"
 ## <a name="configuring-an-error-output"></a>設定錯誤輸出  
  若要設定錯誤輸出，您有兩個選項：  
   
--   使用 [設定錯誤輸出]  對話方塊。 您可以使用此對話方塊，在支援錯誤輸出的任何資料流程元件中設定錯誤輸出。  
+-   使用 [設定錯誤輸出]**** 對話方塊。 您可以使用此對話方塊，在支援錯誤輸出的任何資料流程元件中設定錯誤輸出。  
   
 -   請針對此元件使用編輯器對話方塊。 某些元件可讓您直接從它們的編輯器對話方塊設定錯誤輸出； 但如果是 ADO NET 來源、匯入資料行轉換、OLE DB 命令轉換或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 目的地，您便無法從編輯器對話方塊設定錯誤輸出。  
   
@@ -39,13 +39,13 @@ ms.locfileid: "66060820"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，按一下 [資料流程]  索引標籤。  
+3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，按一下 [資料流程]**** 索引標籤。  
   
 4.  將錯誤輸出 (以紅色箭頭表示) 從錯誤來源元件拖曳到資料流程中的另一個元件。  
   
-5.  在 [設定錯誤輸出]  對話方塊中，針對元件輸入中的每個資料行，在 [錯誤]  和 [截斷]  資料行中選取動作。  
+5.  在 [設定錯誤輸出]**** 對話方塊中，針對元件輸入中的每個資料行，在 [錯誤]**** 和 [截斷]**** 資料行中選取動作。  
   
-6.  若要儲存已更新的封裝，請按一下 [檔案]  功能表上的 [儲存選取項目]  。  
+6.  若要儲存已更新的封裝，請按一下 [檔案]**** 功能表上的 [儲存選取項目]****。  
   
 #### <a name="to-add-an-error-output-using-the-editor-dialog-box-for-the-component"></a>針對此元件使用編輯器對話方塊來加入錯誤輸出  
   
@@ -53,24 +53,24 @@ ms.locfileid: "66060820"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，按一下 [資料流程]  索引標籤。  
+3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，按一下 [資料流程]**** 索引標籤。  
   
 4.  按兩下要在其中設定錯誤輸出的資料流程元件，並依據此元件，執行下列其中一個步驟：  
   
-    -   按一下 [設定錯誤輸出]  。  
+    -   按一下 [設定錯誤輸出]****。  
   
-    -   按一下 [錯誤輸出]  。  
+    -   按一下 [錯誤輸出]****。  
   
-5.  為每個資料行設定 [錯誤]  選項。  
+5.  為每個資料行設定 [錯誤]**** 選項。  
   
-6.  為每個資料行設定 [截斷]  選項。  
+6.  為每個資料行設定 [截斷]**** 選項。  
   
 7.  按一下 [確定]  。  
   
-8.  若要儲存已更新的封裝，請按一下 [檔案]  功能表上的 [儲存選取項目]  。  
+8.  若要儲存已更新的封裝，請按一下 [檔案]**** 功能表上的 [儲存選取項目]****。  
   
 ## <a name="configuring-error-output-columns"></a>設定錯誤輸出資料行  
- 若要設定錯誤輸出資料行，您必須使用 [進階編輯器]  對話方塊的 [輸入與輸出屬性]  索引標籤。  
+ 若要設定錯誤輸出資料行，您必須使用 [進階編輯器]**** 對話方塊的 [輸入與輸出屬性]**** 索引標籤。  
   
 #### <a name="to-configure-error-output-columns"></a>設定錯誤輸出資料行  
   
@@ -78,22 +78,22 @@ ms.locfileid: "66060820"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，按一下 [資料流程]  索引標籤。  
+3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中，按一下 [資料流程]**** 索引標籤。  
   
-4.  以滑鼠右鍵按一下要設定其錯誤輸出資料行的元件，並按一下 [顯示進階編輯器]  。  
+4.  以滑鼠右鍵按一下要設定其錯誤輸出資料行的元件，並按一下 [顯示進階編輯器]****。  
   
-5.  按一下 [輸入與輸出屬性]  索引標籤，並展開 [\<元件名稱> 錯誤輸出]  ，然後展開 [輸出資料行]  。  
+5.  按一下 [輸入與輸出屬性]**** 索引標籤，並展開 [**元件名稱> 錯誤輸出]\<**，然後展開 [輸出資料行]****。  
   
 6.  按一下資料行並更新其屬性。  
   
     > [!NOTE]  
     >  資料行的清單包括元件輸入中的資料行、上一個錯誤輸出加入的 **ErrorCode** 和 **ErrorColumn** 資料行，以及此元件加入的 **ErrorCode** 和 **ErrorColumn** 資料行。  
   
-7.  按一下 **[確定].**  
+7.  按一下 [確定]****。  
   
-8.  若要儲存已更新的封裝，請按一下 [檔案]  功能表上的 [儲存選取項目]  。  
+8.  若要儲存已更新的封裝，請按一下 [檔案]**** 功能表上的 [儲存選取項目]****。  
   
 ## <a name="see-also"></a>另請參閱  
- [處理資料中的錯誤](data-flow/error-handling-in-data.md)  
+ [資料中的錯誤處理](data-flow/error-handling-in-data.md)  
   
   

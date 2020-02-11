@@ -1,5 +1,5 @@
 ---
-title: datetime 資料類型轉換 (ODBC) |Microsoft Docs
+title: datetime 資料類型轉換（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcc48b1e545fb58d076074f9b11960227f788321
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63206981"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>datetime 資料類型轉換 (ODBC)
@@ -30,7 +30,7 @@ ms.locfileid: "63206981"
   
 -   date 字串的格式為 'yyyy-mm-dd'  
   
- 字串的轉換在空白和欄位寬度上允許彈性。 如需詳細資訊，請參閱 「 資料格式：字串和常值 > 一節[資料類型對 ODBC 日期和時間改善支援](data-type-support-for-odbc-date-and-time-improvements.md)。  
+ 字串的轉換在空白和欄位寬度上允許彈性。 如需詳細資訊，請參閱[資料類型支援 ODBC 日期和時間改善](data-type-support-for-odbc-date-and-time-improvements.md)的「資料格式：字串和常值」一節。  
   
  下面是一般轉換規則：  
   
@@ -58,6 +58,6 @@ ms.locfileid: "63206981"
  列出當您從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/時間類型轉換成 C 類型時應該考量的問題。  
   
 ## <a name="see-also"></a>另請參閱  
- [日期和時間改善&#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;的日期和時間改善](date-and-time-improvements-odbc.md)  
   
   

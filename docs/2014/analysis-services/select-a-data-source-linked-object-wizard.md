@@ -1,5 +1,5 @@
 ---
-title: 選取資料來源 （連結的物件精靈） |Microsoft Docs
+title: 選取資料來源（連結的物件 Wizard） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a103e3e81283badbee236d2c38e2809d36664d9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069756"
 ---
 # <a name="select-a-data-source-linked-object-wizard"></a>選取資料來源 (連結物件精靈)
   使用 **[選取資料來源]** 頁面，即可選取 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料來源，此資料來源包含要連結或匯入的物件。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **Analysis Services 資料來源**  
  選取包含要進行連結之物件的資料來源。  
   
  **資料來源屬性**  
  顯示資料來源上相關屬性的屬性名稱和值。  
   
- **新的資料來源**  
+ **新增資料來源**  
  使用資料來源精靈建立新的資料來源。  
   
   

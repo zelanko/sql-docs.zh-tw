@@ -1,5 +1,5 @@
 ---
-title: 網路內容 |Microsoft Docs
+title: 網路屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -36,16 +36,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 882b5fc60020423e19f68fda40273b7c944bd4f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068880"
 ---
 # <a name="network-properties"></a>網路屬性
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的伺服器屬性。 如需有關其他伺服器屬性及如何設定伺服器屬性的詳細資訊，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  
   
- **適用於：** 多維度與表格式伺服器模式  
+ **適用物件：** 多維度和表格式伺服器模式  
   
 ## <a name="general"></a>一般  
  `ListenOnlyOnLocalConnections`  
@@ -82,14 +83,14 @@ ms.locfileid: "66068880"
  `ServerSendTimeout`  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## <a name="requests"></a>要求  
+## <a name="requests"></a>Requests  
  `EnableBinaryXML`  
  此為布林值屬性，指定伺服器是否會辨識要求的二進位 XML 格式。  
   
  `EnableCompression`  
  此為布林值屬性，指定是否針對要求啟用壓縮。  
   
-## <a name="responses"></a>Responses  
+## <a name="responses"></a>回應  
  `CompressionLevel`  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
@@ -143,7 +144,7 @@ ms.locfileid: "66068880"
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 中設定伺服器屬性](server-properties-in-analysis-services.md)   
- [判斷 Analysis Services 執行個體的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [在 Analysis Services 中設定伺服器屬性](server-properties-in-analysis-services.md)   
+ [判斷 Analysis Services 實例的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

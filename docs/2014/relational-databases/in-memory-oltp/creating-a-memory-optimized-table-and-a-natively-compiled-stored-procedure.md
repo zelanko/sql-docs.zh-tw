@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 927a89c36019ebc7232a110f5a10fcbf2cfa74af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157982"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>建立記憶體最佳化資料表和原生編譯的預存程序
@@ -26,7 +26,7 @@ ms.locfileid: "63157982"
   
 -   建立記憶體最佳化資料表及索引 如需詳細資訊，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)。  
   
--   使用解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)]，將資料載入記憶體最佳化資料表，並於更新統計資料後再建立原生編譯預存程序。 如需詳細資訊，請參閱 [Statistics for Memory-Optimized Tables](memory-optimized-tables.md)。  
+-   使用解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)]，將資料載入記憶體最佳化資料表，並於更新統計資料後再建立原生編譯預存程序。 如需詳細資訊，請參閱 [記憶體最佳化資料表的統計資料](memory-optimized-tables.md)。  
   
 -   建立原生編譯的預存程序來存取記憶體最佳化資料表中的資料。 如需詳細資訊，請參閱 [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)。  
   
@@ -234,7 +234,7 @@ ORDER BY so.so_id, sod.lineitem_id
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體內部 OLTP 程式碼範例](in-memory-oltp-code-samples.md)   
- [移轉計算資料行](migrating-computed-columns.md)   
+ [遷移計算資料行](migrating-computed-columns.md)   
  [在記憶體最佳化資料表中實作 IDENTITY](implementing-identity-in-a-memory-optimized-table.md)  
   
   

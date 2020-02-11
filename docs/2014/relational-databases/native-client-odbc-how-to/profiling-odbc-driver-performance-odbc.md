@@ -1,5 +1,5 @@
 ---
-title: 分析 ODBC 驅動程式效能的如何主題 (ODBC) |Microsoft Docs
+title: 分析 ODBC 驅動程式效能的使用說明主題（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cf597a459f12ccebc449de684fa05ac6dce39b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200290"
 ---
 # <a name="profiling-odbc-driver-performance-how-to-topics-odbc"></a>分析 ODBC 驅動程式效能的使用說明主題 (ODBC)
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式具有兩個驅動程式特有的選項，可用於分析驅動程式的效能。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式可以在檔案中記錄效能統計資料。 此記錄檔是以 Tab 字元分隔的檔案，可以在 Microsoft Excel 等支援以 Tab 字元分隔之檔案的任何試算表中進行分析。  
+ ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驅動程式可以將效能統計資料記錄在檔案中。 此記錄檔是以 Tab 字元分隔的檔案，可以在 Microsoft Excel 等支援以 Tab 字元分隔之檔案的任何試算表中進行分析。  
   
  此驅動程式也可以記錄長時間執行的查詢 (在指定的時間長度內，沒有從伺服器取得回應的查詢)。 之後，程式設計人員和資料庫管理員就可以分析這些查詢。  
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [程式碼剖析驅動程式效能資料&#40;ODBC&#41;](profiling-odbc-driver-performance-data.md)  
+-   [分析 &#40;ODBC&#41;的驅動程式效能資料](profiling-odbc-driver-performance-data.md)  
   
--   [記錄長時間執行的查詢&#40;ODBC&#41;](profiling-odbc-driver-performance-data-log-long-running-queries.md)  
+-   [&#40;ODBC&#41;記錄長時間執行的查詢](profiling-odbc-driver-performance-data-log-long-running-queries.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC 的使用說明主題](odbc-how-to-topics.md)  

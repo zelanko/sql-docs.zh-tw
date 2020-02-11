@@ -1,5 +1,5 @@
 ---
-title: 排序資料表 (SSAS 表格式) 中的資料 |Microsoft Docs
+title: 排序資料表中的資料（SSAS 表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc53b6ccc800e2986bf7a6bfdd01c0ef3c3208df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066654"
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>排序資料表中的資料 (SSAS 表格式)
@@ -26,9 +26,9 @@ ms.locfileid: "66066654"
   
 2.  在 [自動篩選] 功能表中，執行下列其中一項：  
   
-    -   若要以遞增的英數順序排序，按一下 **[從 A 到 Z 排序]** 。  
+    -   若要以遞增的英數順序排序，按一下 **[從 A 到 Z 排序]**。  
   
-    -   若要以遞減的英數順序排序，按一下 **[從 Z 到 A 排序]** 。  
+    -   若要以遞減的英數順序排序，按一下 **[從 Z 到 A 排序]**。  
   
     > [!NOTE]  
     >  在某些情況下，從其他應用程式匯入的資料在資料前面可能會插入開頭空白。 您必須移除開頭空白，才能正確排序資料。  
@@ -39,16 +39,16 @@ ms.locfileid: "66066654"
   
 2.  在 [自動篩選] 功能表中，執行下列其中一項：  
   
-    -   若要從最小的數字排序到最大的數字，按一下 **[從最小到最大排序]** 。  
+    -   若要從最小的數字排序到最大的數字，按一下 **[從最小到最大排序]**。  
   
-    -   若要從最大的數字排序到最小的數字，按一下 **[從最大到最小排序]** 。  
+    -   若要從最大的數字排序到最小的數字，按一下 **[從最大到最小排序]**。  
   
     > [!NOTE]  
     >  如果結果不如預期，資料行可能會包含儲存為文字而非數字的數字。 例如，從某些會計系統匯入的負數，或者以開頭 ' (單引號) 輸入的數字儲存為文字。  
   
 ## <a name="see-also"></a>另請參閱  
- [篩選與排序資料 &#40;SSAS 表格式&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [檢視方塊 &#40;SSAS 表格式&#41;](perspectives-ssas-tabular.md)   
- [角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)  
+ [&#40;SSAS 表格式&#41;篩選和排序資料](../filter-and-sort-data-ssas-tabular.md)   
+ [SSAS 表格式 &#40;的觀點&#41;](perspectives-ssas-tabular.md)   
+ [&#40;SSAS 表格式&#41;的角色](roles-ssas-tabular.md)  
   
   
