@@ -1,5 +1,5 @@
 ---
-title: sp_trace_setstatus (TRANSACT-SQL) |Microsoft Docs
+title: sp_trace_setstatus （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1e6d3ed9c31307fb032d4ccc3cc950565c39c52c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68095928"
 ---
-# <a name="sptracesetstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
+# <a name="sp_trace_setstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   修改指定追蹤的目前狀態。  
@@ -42,13 +42,13 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @traceid = ] trace_id` 是要修改之 trace 的識別碼。 *trace_id*已**int**，沒有預設值。 使用者會利用這*trace_id*值來識別、 修改和控制追蹤。 如需有關擷取資訊*trace_id*，請參閱[sys.fn_trace_geteventinfo &#40;-&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)。  
+`[ @traceid = ] trace_id`這是要修改的追蹤識別碼。 *trace_id*是**int**，沒有預設值。 使用者會利用這個*trace_id*值來識別、修改和控制追蹤。 如需有關抓取*trace_id*的詳細資訊，請參閱[sys.databases&#41;fn_trace_getinfo &#40;transact-sql ](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)。  
   
-`[ @status = ] status` 指定要追蹤所實作的動作。 *狀態*已**int**，沒有預設值。  
+`[ @status = ] status`指定要在追蹤上執行的動作。 *狀態*為**int**，沒有預設值。  
   
  下表列出可能指定的狀態。  
   
-|[狀態]|描述|  
+|狀態|描述|  
 |------------|-----------------|  
 |**0**|停止指定的追蹤。|  
 |**1**|啟動指定的追蹤。|  
@@ -66,22 +66,22 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 |**1**|未知的錯誤。|  
 |**8**|指定的狀態無效。|  
 |**9**|指定的追蹤控制代碼無效。|  
-|**13**|記憶體用完。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
+|**十三**|記憶體不足。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
   
- 如果追蹤已在指定的狀態[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會傳回**0**。  
+ 如果追蹤已在指定的狀態中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]則會傳回**0**。  
   
 ## <a name="remarks"></a>備註  
- 參數的所有 SQL 追蹤預存程序 (**sp_trace_xx**) 都有強制類型。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
+ 所有 SQL 追蹤預存程式的參數（**sp_trace_xx**）都是嚴格類型。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
   
  如需使用追蹤預存程序的範例，請參閱[建立追蹤 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  使用者必須有 ALTER TRACE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [sp_trace_generateevent &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [SQL 追蹤](../../relational-databases/sql-trace/sql-trace.md)  

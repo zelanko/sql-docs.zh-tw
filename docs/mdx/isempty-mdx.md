@@ -1,5 +1,5 @@
 ---
-title: IsEmpty (MDX) |Microsoft Docs
+title: IsEmpty （MDX） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8b31b884e0f86bf2aebe4859cd1c7a441669e813
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905994"
 ---
 # <a name="isempty-mdx"></a>IsEmpty (MDX)
@@ -32,15 +32,15 @@ IsEmpty(Value_Expression)
  一般會傳回成員或 Tuple 之資料格座標的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **IsEmpty**函式會傳回 **，則為 true**如果評估的運算式是空的資料格的值。 否則，此函數會傳回**false**。  
+ 如果評估的運算式是空的資料格值，則**IsEmpty**函數會傳回**true** 。 否則，此函數會傳回**false**。  
   
 > [!NOTE]  
 >  成員的預設屬性就是成員的值。  
   
- **IsEmpty**函式是因為空白資料格值中具有特殊意義，可靠地測試空白資料格的唯一方式[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
+ **IsEmpty**函數是可靠地測試空白儲存格的唯一方式，因為空的資料格值在中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]有特殊意義。  
   
 > [!IMPORTANT]  
->  如果值運算式的評估會傳回錯誤，此函數會傳回**false**。 例如，屬性參考所參考的是無效或不存在的屬性時，值運算式會傳回錯誤。  
+>  如果值運算式的評估傳回錯誤，函數會傳回**false**。 例如，屬性參考所參考的是無效或不存在的屬性時，值運算式會傳回錯誤。  
   
  如需有關空的資料格的詳細資訊，請參閱 OLE DB 文件集。  
   
@@ -59,6 +59,6 @@ IsEmpty(Value_Expression)
   
 ## <a name="see-also"></a>另請參閱  
  [使用空白值](../mdx/working-with-empty-values.md)   
- [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 23683b70d5b0de7b2852187969842702dd925da4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241325"
 ---
 # <a name="move-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>移動已註冊的伺服器或已註冊的伺服器群組 (SQL Server Management Studio)
@@ -36,6 +36,6 @@ ms.locfileid: "75241325"
   
 ## <a name="see-also"></a>另請參閱  
  [註冊伺服器](register-servers.md)   
- [建立或編輯服務器群組 &#40;SQL Server Management Studio&#41;](create-or-edit-a-server-group-sql-server-management-studio.md)  
+ [建立或編輯伺服器群組 &#40;SQL Server Management Studio&#41;](create-or-edit-a-server-group-sql-server-management-studio.md)  
   
   

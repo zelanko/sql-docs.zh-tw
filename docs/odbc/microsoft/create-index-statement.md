@@ -1,5 +1,5 @@
 ---
-title: CREATE INDEX 陳述式 |Microsoft Docs
+title: CREATE INDEX 語句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad15ad436b0f34f00acbd75e371e998183f22d2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081914"
 ---
 # <a name="create-index-statement"></a>CREATE INDEX 陳述式
-CREATE INDEX 陳述式的語法是：  
+CREATE INDEX 語句的語法如下：  
   
- 建立 [UNIQUE] 的索引*的索引名稱*ON*資料表名稱*(*資料行識別碼*[ASC] [DESC] [，*資料行識別碼*[ASC][DESC]...])具有\<*索引選項清單*>  
+ 建立 [唯一] 索引*索引-* *資料表名稱*上的名稱（資料*行識別碼*[asc] [desc] [，資料*行識別碼*[asc] [desc] ...]）\<*索引選項清單*>  
   
- 何處\<*的索引選項清單*> 可以是：主要&#124;不允許 NULL&#124;忽略 NULL  
+ \<*索引選項清單*> 可以是：主要 &#124; 不允許 null &#124; 忽略 null  
   
- Microsoft Access 驅動程式會使用不允許 NULL] 和 [略過空值的索引選項。 DBASE 和 Paradox 驅動程式接受的語法，但忽略的其中一個選項存在。  
+ 只有 Microsoft Access 驅動程式會使用 [不允許 Null] 和 [忽略 Null 索引] 選項。 DBASE 和 Paradox 驅動程式會接受語法，但忽略任一選項的存在。  
   
- 使用 Paradox 驅動程式時，CREATE INDEX 陳述式會建立 Paradox 的主要金鑰檔案，然後次要檔案。  
+ 使用 Paradox 驅動程式時，CREATE INDEX 語句會建立 Paradox 主要金鑰檔案和次要檔案。  
   
- Microsoft Excel 或文字驅動程式不支援此陳述式。
+ Microsoft Excel 或文字驅動程式不支援此語句。

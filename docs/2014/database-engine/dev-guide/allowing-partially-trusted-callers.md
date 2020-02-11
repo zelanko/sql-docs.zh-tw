@@ -1,5 +1,5 @@
 ---
-title: 允許部分信任呼叫端 |Microsoft Docs
+title: 允許部分信任的呼叫端 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754196"
 ---
 # <a name="allowing-partially-trusted-callers"></a>允許部分信任的呼叫端
@@ -39,7 +39,7 @@ IPermission permThatFailed) at
 Microsoft.Samples.SqlServer.TestResultSet.Test()  
 ```  
   
- 我們建議您最好將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中註冊的所有組件 (加入至全域組件快取的組件除外) 都標示 `AllowPartiallyTrustedCallers` 屬性，好讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 載入的組件可以彼此存取。 要加入至全域組件快取的組件應該先徹底檢閱看看是否安全之後，再加入 `AllowPartiallyTrustedCallers` 屬性，因為此組件之後將提供給非預期環境的部分信任呼叫端所使用。 組件不應該變成完全信任 (在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用 `UNSAFE` 權限集合註冊)。  
+ 我們建議您最好將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中註冊的所有組件 (加入至全域組件快取的組件除外) 都標示 `AllowPartiallyTrustedCallers` 屬性，好讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 載入的組件可以彼此存取。 要加入至全域組件快取的組件應該先徹底檢閱看看是否安全之後，再加入 `AllowPartiallyTrustedCallers` 屬性，因為此組件之後將提供給非預期環境的部分信任呼叫端所使用。 組件不應該變成完全信任 (在 `UNSAFE` 中使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 權限集合註冊)。  
   
  如需詳細資訊，請參閱 .NET Framework 軟體開發套件中的＜從部分受信任程式碼使用程式庫＞一節。  
   
@@ -60,7 +60,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  此範例還會示範使用 "Allow partially trusted callers" 屬性，指示結果集組件為程式庫，並且可以從其他組件安全地呼叫。 這個方法稍微複雜，但是比使用 unsafe 權限註冊呼叫組件更安全。 之所以較為安全，是因為將呼叫組件註冊為 safe，呼叫組件會限制存取出影響伺服器的資源，並且避免損壞伺服器的完整性。  
   
- 這個範例的建置指示會假設原始程式碼檔位於名為 c:\samples 的目錄中。  如果您使用其他目錄，就必須修改 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 [!INCLUDE[tsql](../../includes/tsql-md.md)]指令碼也需要 AdventureWorks 資料庫。 您可以下載的 AdventureWorks 範例資料庫[Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384)首頁。  
+ 這個範例的建置指示會假設原始程式碼檔位於名為 c:\samples 的目錄中。  如果您使用其他目錄，就必須修改 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 [!INCLUDE[tsql](../../includes/tsql-md.md)]腳本也需要 AdventureWorks 資料庫。 您可以從[Microsoft SQL Server 範例和 [社區專案](https://go.microsoft.com/fwlink/?LinkID=85384)] 首頁下載 AdventureWorks 範例資料庫。  
   
  若要建立並執行此範例，請將第一個程式碼清單貼入名為 ResultSet.cs 的檔案中，然後使用 csc /target:library ResultSet.cs 編譯。  
   

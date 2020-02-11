@@ -11,28 +11,30 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 42bc370a4e1eebddb3293afe6843f3ed19338656
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952143"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>安裝具有 SharePoint 的 SQL Server BI 功能 (PowerPivot 和 Reporting Services)
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以和 Microsoft SharePoint 伺服器陣列整合，以啟用 SharePoint 中的商業智慧 (BI) 功能。 功能包括 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 用於 SharePoint 伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 是一種資料引擎，適用於以 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 建立並從 SharePoint 文件庫存取的活頁簿。 當您將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿儲存至 SharePoint 之後，即可將其用為 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 報表的資料來源。  
+  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以和 Microsoft SharePoint 伺服器陣列整合，以啟用 SharePoint 中的商業智慧 (BI) 功能。 功能包括 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]用於 SharePoint 伺服器[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]陣列中的資料存取。 
+  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 是一種資料引擎，適用於以 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 建立並從 SharePoint 文件庫存取的活頁簿。 當您將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿儲存至 SharePoint 之後，即可將其用為 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 報表的資料來源。  
   
  SharePoint 2010 所需的一些安裝和組態步驟和 SharePoint 2013 所需要的步驟不同。 本節的部分主題同時適用於 SharePoint 的這兩個版本。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- ![注意](../../../2014/reporting-services/media/rs-fyinote.png "注意：")如需目前的版本資訊，請參閱[SQL server 2014 版本](https://go.microsoft.com/fwlink/?LinkID=296445)資訊。  
+ ![注意](../../../2014/reporting-services/media/rs-fyinote.png "注意")如需目前的版本資訊，請參閱[SQL server 2014 版本](https://go.microsoft.com/fwlink/?LinkID=296445)資訊。  
   
-##  <a name="bkmk_top"></a> 本主題內容  
+##  <a name="bkmk_top"></a>本主題中的  
   
 -   [SQL Server BI 案例和 SharePoint 2013](#bkmk_bi_scenarios)  
   
--   [安裝的總覽](#bkmk_install_sharepoint2013_overview)  
+-   [安裝概觀](#bkmk_install_sharepoint2013_overview)  
   
 ## <a name="in-this-section"></a>本節內容  
  除了本主題中的資訊以外，本節內容還包含下列相關主題。  
@@ -43,7 +45,7 @@ ms.locfileid: "71952143"
   
  [安裝 BI 功能來搭配 SharePoint 的檢查清單](../../../2014/sql-server/install/checklists-for-installing-bi-features-with-sharepoint.md)  
   
- [Reporting Services SharePoint 模式安裝&#40;sharepoint 2010 和 SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)  
+ [Sharepoint 2010 和 SharePoint 2013 Reporting Services SharePoint 模式安裝 &#40;&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)  
   
  [PowerPivot for SharePoint 2013 安裝](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)  
   
@@ -56,23 +58,23 @@ ms.locfileid: "71952143"
   
  部署 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 增益集可在 SharePoint 伺服器陣列中啟用其他功能與特性。 其他功能包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫、排程資料重新整理及 PowerPivot 管理儀表板。 請參閱下表以取得其他資訊。  
   
-||Hierarchy|功能|安裝或設定|  
+||層級|特性|安裝或設定|  
 |-|-----------|--------------|--------------------------|  
 |1|僅 SharePoint|原生 Excel Services 功能|Excel Services 以及 SharePoint Server 2013 隨附的其他服務。|  
 |**2**|SharePoint 以及 SharePoint 模式的 Analysis Services|在瀏覽器中的互動式 PowerPivot 活頁簿|以 SharePoint 模式安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。<br /><br /> 在 Excel Services 中註冊 Analysis Services 伺服器。|  
-|**3**|SharePoint 以及 SharePoint 模式的 Reporting Services|Power View|以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。<br /><br /> 安裝適用于 SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集 **（rssharepoint.msi .msi）** 。 如需詳細資訊，請參閱[安裝或卸載適用&#40;于 sharepoint SharePoint 2010 和 sharepoint 2013&#41;的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)|  
-|**4**|所有 PowerPivot 功能|存取活頁簿做為來自於伺服器陣列外部的資料來源。<br /><br /> 排程資料重新整理。<br /><br /> PowerPivot 圖庫。<br /><br /> 管理儀表板。<br /><br /> BISM 連結檔案內容類型。|部署 PowerPivot for SharePoint 2013 增益集 **（sppowerpivot.msi .msi）** 。 如需詳細資訊，請參閱下列內容：<br /><br /> [安裝或卸載 PowerPivot for SharePoint 增益集&#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)<br /><br /> 如需有關如何下載 **spPowerPivot.msi**的詳細資訊，請參閱＜ [下載 SQL Server 2014 PowerPivot for SharePoint](https://go.microsoft.com/fwlink/?LinkID=296473)＞。|  
+|**第**|SharePoint 以及 SharePoint 模式的 Reporting Services|Power View|以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。<br /><br /> 安裝[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]適用于 SharePoint 的增益集 **（rssharepoint.msi .msi）** 。 如需詳細資訊，請參閱[安裝或卸載適用于 sharepoint 的 Reporting Services 增益集 &#40;sharepoint 2010 和 sharepoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)|  
+|**4**|所有 PowerPivot 功能|存取活頁簿做為來自於伺服器陣列外部的資料來源。<br /><br /> 排程資料重新整理。<br /><br /> PowerPivot 圖庫。<br /><br /> 管理儀表板。<br /><br /> BISM 連結檔案內容類型。|部署 PowerPivot for SharePoint 2013 增益集 **（sppowerpivot.msi .msi）**。 如需詳細資訊，請參閱下列：<br /><br /> [安裝或卸載 PowerPivot for SharePoint 增益集 &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)<br /><br /> 如需有關如何下載 **spPowerPivot.msi**的詳細資訊，請參閱＜ [下載 SQL Server 2014 PowerPivot for SharePoint](https://go.microsoft.com/fwlink/?LinkID=296473)＞。|  
   
- 如需啟用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 功能的詳細資訊，請參閱[SharePoint 2013 的 SQL SERVER BI 新故事](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx)（ https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx)。  
+ 如需有關啟用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]功能的詳細資訊，請參閱[SharePoint 2013 的 SQL Server BI 新故事](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx)（https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx)）。  
   
 ##  <a name="bkmk_install_sharepoint2013_overview"></a>安裝的總覽  
- 如果您要同時使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，請執行 [SQL Server 安裝精靈] 兩次。 在 [SQL Server 安裝程式] 的 [**安裝程式角色**] 頁面上，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 是不同的選擇。  
+ 如果您要同時使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，請執行 [SQL Server 安裝精靈] 兩次。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]在 [SQL Server 安裝] wizard 的 [**安裝程式角色**] 頁面上有不同的選擇。  
   
- [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 支援 SharePoint 2010 和 SharePoint 2013。不過，視 SharePoint 的版本而定，所使用的架構和安裝程序會有所不同。{2}  
+ [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]同時支援 SharePoint 2010 和 SharePoint 2013;不過，視 SharePoint 的版本而定，會使用不同的架構和安裝程式。  
   
  以下將摘要說明在單一伺服器上部署 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] BI 功能的安裝步驟：  
   
- **[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013**  
+ **[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2013**  
   
  若為 **SharePoint 2013**，可以在未安裝 SharePoint 產品的伺服器上執行 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝。 適用於 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 架構是在 SharePoint 伺服器陣列 **外** 執行，因此可以安裝在包含 SharePoint 安裝的伺服器上，也可以安裝在不包含 SharePoint 安裝的伺服器上。  
   
@@ -94,11 +96,11 @@ ms.locfileid: "71952143"
   
      ![兩個 PowerPivot 組態工具](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-configtools-bothicons.gif "兩個 PowerPivot 組態工具")  
   
-5.  在 SharePoint Server 2013 中設定 Excel Services，以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱[PowerPivot for SharePoint 2013 安裝](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)中的「設定基本 Analysis Services SharePoint 整合」一節，以及[管理 Excel Services 資料模型設定（SharePoint Server 2013）](https://technet.microsoft.com/library/jj219780.aspx) （ https://technet.microsoft.com/library/jj219780.aspx)。  
+5.  在 SharePoint Server 2013 中設定 Excel Services，以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱[PowerPivot for SharePoint 2013 安裝](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)中的「設定基本 Analysis Services SharePoint 整合」一節，以及[管理 Excel Services 資料模型設定（SharePoint Server 2013）](https://technet.microsoft.com/library/jj219780.aspx) （https://technet.microsoft.com/library/jj219780.aspx)。  
   
 6.  如需詳細資訊，請參閱＜ [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)＞。  
   
- **[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010**  
+ **[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2010**  
   
  若為 SharePoint 2010，則需要在已經安裝或將會安裝 SharePoint 2010 的伺服器上執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝。 適用於 SharePoint 2010 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 架構是在伺服器陣列 **內** 執行，所以 SharePoint 必須位於安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的伺服器上。  
   
@@ -114,7 +116,7 @@ ms.locfileid: "71952143"
   
 3.  如需詳細資訊，請參閱＜ [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)＞。  
   
- **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**  for SharePoint 2010 和 2013  
+ **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** 適用于 SharePoint 2010 和2013  
   
 1.  SharePoint 模式中的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝和舊版一樣並沒有變更。  
   
@@ -122,19 +124,20 @@ ms.locfileid: "71952143"
   
     -   查看下列項目的支援組合：  
   
-        -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的版本。  
+        -   
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的版本。  
   
         -   適用於 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集。  
   
         -   SharePoint 產品的版本。  
   
-         [支援的 SharePoint 和 Reporting Services 伺服器與增益集&#40;的組合 SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+         [支援的 SharePoint 和 Reporting Services 伺服器與增益集的組合 &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
     -   SharePoint 2010 上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 需要 SharePoint 2010 Service Pack 2 (SP2)。  
   
-    1.  以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 [Reporting Services sharepoint 模式安裝&#40;sharepoint 2010 和 SharePoint 2013&#41; ](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md) ，並[安裝適用于 sharepoint 2010 的 Reporting Services sharepoint 模式](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)。  
+    1.  以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 [Reporting Services Sharepoint 模式安裝 &#40;sharepoint 2010 和 sharepoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)並[安裝適用于 sharepoint 2010 的 Reporting Services sharepoint 模式](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)。  
   
-    2.  安裝 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集 (rsSharePoint.msi)。 請參閱[安裝或卸載適用&#40;于 sharepoint SharePoint 2010 和 sharepoint 2013&#41;的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。 如需適用于 SharePoint 之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集的最新版本，請參閱[尋找適用于 Sharepoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+    2.  安裝 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集 (rsSharePoint.msi)。 請參閱[安裝或卸載適用于 sharepoint &#40;sharepoint 2010 和 sharepoint 2013&#41;的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。 如需適用于 SharePoint 之[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]增益集的最新版本，請參閱[尋找適用于 sharepoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
     3.  設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 服務以及至少一個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 如需詳細資訊，請參閱[Install Reporting Services Sharepoint Mode For sharepoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)中的「建立 Reporting Services 服務應用程式」一節。  
   
@@ -160,15 +163,15 @@ ms.locfileid: "71952143"
   
 -   [將 PowerPivot 移轉至 SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013)  
   
--   [升級到 SharePoint 2013 的程序概觀](https://go.microsoft.com/fwlink/p/?LinkId=256688)。  
+-   [SharePoint 2013 升級](https://go.microsoft.com/fwlink/p/?LinkId=256688)程式的總覽。  
   
--   [升級到 SharePoint 2013 之前的清除準備工作](https://go.microsoft.com/fwlink/p/?LinkId=256689)。  
+-   [升級至 SharePoint 2013 之前，請先清除準備](https://go.microsoft.com/fwlink/p/?LinkId=256689)工作。  
   
--   [將資料庫從 SharePoint 2010 升級到 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690)。  
+-   [將資料庫從 sharepoint 2010 升級至 sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690)。  
   
 ## <a name="see-also"></a>另請參閱  
- [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
- [支援的 SharePoint 和 Reporting Services 伺服器與增益集&#40;的組合 SQL Server 2014&#41; ](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)   
- [安裝或卸載適用于 SharePoint &#40;sharepoint 2010 和 sharepoint 2013 的 Reporting Services 增益集&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [何處可以找到適用于 SharePoint 產品的 Reporting Services 增益集](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
+ [支援的 SharePoint 和 Reporting Services 伺服器與增益集的組合 &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)   
+ [安裝或卸載適用于 SharePoint &#40;SharePoint 2010 和 SharePoint 2013 的 Reporting Services 增益集&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

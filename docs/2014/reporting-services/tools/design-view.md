@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63ac5bf29ca441a18be4bc5e46448475b56104bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100302"
 ---
 # <a name="design-view"></a>設計檢視
@@ -35,7 +35,7 @@ ms.locfileid: "66100302"
   
  將項目從 [報表資料] 窗格拖曳至設計介面上的資料區域和文字方塊，以便將資料和影像加入到報表中。  
   
- 如需相關資訊，請參閱 [Report Data Pane](../report-data/report-data-pane.md)。  
+ 如需詳細資訊，請參閱 [Report Data Pane](../report-data/report-data-pane.md)。  
   
 ## <a name="grouping-pane"></a>群組窗格  
  群組的用途在於將報表資料組織為視覺階層以及計算總計。 使用 [群組] 窗格檢視針對資料表、矩陣或清單資料區域定義的群組。 根據預設，[群組] 窗格會將所選資料區域的所有群組顯示為扁平化清單。 [圖表] 和 [量測計] 資料區域會停用 [群組] 窗格。  

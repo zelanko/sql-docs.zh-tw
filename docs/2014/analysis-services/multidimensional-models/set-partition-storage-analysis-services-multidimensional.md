@@ -1,5 +1,5 @@
 ---
-title: 設定分割區儲存 (Analysis Services-多維度) |Microsoft Docs
+title: 設定資料分割儲存體（Analysis Services-多維度） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,14 +26,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072984"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>設定分割區儲存 (Analysis Services - 多維度)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會針對儲存模式和快取選項提供數個標準儲存組態。 這些會提供更新通知、延遲以及重建資料的常用組態。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]針對儲存模式和快取選項提供數個標準儲存[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]設定。 這些會提供更新通知、延遲以及重建資料的常用組態。  
   
  您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]之 Cube 的 [分割區] 索引標籤，或在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的分割區屬性頁面上，指定分割區儲存。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66072984"
 |MOLAP|未啟用主動式快取。 詳細資料和彙總會以多維度格式儲存。 當資料變更時，伺服器不接收通知。 必須排程執行或手動執行處理。<br /><br /> 此設定通常用於用戶端應用程式不需要定期更新、但高效能很重要的資料來源。<br /><br /> 如果應用程式不需要最新的資料，則不具主動式快取的 MOLAP 儲存會提供最佳效能。 雖然可以在臨時伺服器上更新和處理 Cube，並使用資料庫同步處理將更新和處理的 MOLAP 物件複製到實際伺服器，藉以將停機時間縮到最短，但實際上並不需要停機來處理更新的物件。|  
   
 ## <a name="custom-storage-options"></a>自訂儲存選項  
- 您可以不使用其中一個標準儲存設定，而以手動方式設定儲存和主動式快取。 在建立自訂儲存設定之前，您可以先按一下 [標準設定] 選項，然後將滑桿移到最符合您想要使用之組態的標準設定。 接著，若要建立自訂組態，請按一下 [自訂設定] 選項，然後按一下 [選項]。  
+ 您可以不使用其中一個標準儲存設定，而以手動方式設定儲存和主動式快取。 在建立自訂儲存設定之前，您可以先按一下 [標準設定]**** 選項，然後將滑桿移到最符合您想要使用之組態的標準設定。 接著，若要建立自訂組態，請按一下 [自訂設定]**** 選項，然後按一下 [選項]****。  
   
 -   您可以指定資料來源中的變更是否觸發快取的更新。 為了要達到可容忍的變更率，您可以指定在資料來源更新之後的最小無回應間隔。 您也可以指定無回應間隔的覆寫，以便資料來源的變更間隔都未達到最小值時，在特定期間之後更新快取。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "66072984"
   
 -   如果不論資料來源是否變更，您都想要定期更新快取的 MOLAP 物件，則可排程強制更新快取。 即時 OLAP 的好處會隨資料庫的大小和來源資料變更頻率所指派的延遲期間而異。 您希望使用者儘量傳送查詢至快取而不是至 ROLAP。  
   
- 如果您選取 [套用設定至維度] 核取方塊，相同的儲存設定就會套用至與量值群組相關的維度。 維度值一開始與分割區值相同。  
+ 如果您選取 [套用設定至維度]**** 核取方塊，相同的儲存設定就會套用至與量值群組相關的維度。 維度值一開始與分割區值相同。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的分割區](partitions-in-multidimensional-models.md)  
+ [多維度模型中的資料分割](partitions-in-multidimensional-models.md)  
   
   

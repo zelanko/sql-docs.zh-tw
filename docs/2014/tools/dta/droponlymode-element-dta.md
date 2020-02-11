@@ -1,5 +1,5 @@
 ---
-title: DropOnlyMode 元素 (DTA) |Microsoft Docs
+title: DropOnlyMode 元素（DTA） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1d449defa98112c87a4b5789f1cff6f764252e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62659572"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode 元素 (DTA)
@@ -40,13 +40,13 @@ ms.locfileid: "62659572"
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  
-|**出現次數**|選擇性。 每個 `TuningOptions` 元素只能使用這個元素一次。 如果在 `TuningOptions` 元素中指定了下列元素，就不能使用這個元素：<br /><br /> [FeatureSet 元素 &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Partitioning 元素 &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [KeepExisting 元素 &#40;DTA&#41;](keepexisting-element-dta.md) 設為 **ALL**|  
+|**出現次數**|選擇性。 每個 `TuningOptions` 元素只能使用這個元素一次。 如果在 `TuningOptions` 元素中指定了下列元素，就不能使用這個元素：<br /><br /> [&#40;DTA&#41;的 FeatureSet 元素](featureset-element-dta.md)<br /><br /> [&#40;DTA&#41;的資料分割元素](partitioning-element-dta.md)<br /><br /> [&#40;DTA&#41;的 KeepExisting 元素](keepexisting-element-dta.md)設定為**ALL**|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[TuningOptions 元素 &#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**父元素**|[&#40;DTA&#41;的 TuningOptions 元素](tuningoptions-element-dta.md)|  
 |**子元素**|無。|  
   
 ## <a name="example"></a>範例  

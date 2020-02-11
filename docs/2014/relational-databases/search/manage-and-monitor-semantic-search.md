@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 94f8edc0fe8b2505adc36705200e299f36b2dbf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011124"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>管理及監視語意搜尋
   描述語意索引的程序，以及與管理及監視索引相關的工作。  
   
-##  <a name="HowToMonitorStatus"></a> 如何：檢查語意索引的狀態  
+##  <a name="HowToMonitorStatus"></a>如何：檢查語義索引的狀態  
  **語意索引的第一個階段是否已完成？**  
- 查詢動態管理檢視 [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql) **status** 和 **status_description** 資料行。  
+ 查詢動態管理檢視 [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)**status** 和 **status_description** 資料行。  
   
  索引的第一個階段包括擴展全文檢索關鍵字索引和語意主要片語索引，以及擷取文件相似度資料。  
   
@@ -38,7 +38,7 @@ GO
 ```  
   
  **語意索引的第二個階段是否已完成？**  
- 查詢動態管理檢視 [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql) **status** 和 **status_description** 資料行。  
+ 查詢動態管理檢視 [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql)**status** 和 **status_description** 資料行。  
   
  索引的第二個階段包括擴展語意文件相似度索引。  
   
@@ -50,7 +50,7 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population WHERE table_id = OBJECT_
 GO  
 ```  
   
-##  <a name="HowToCheckSize"></a> 如何：檢查語意索引的大小  
+##  <a name="HowToCheckSize"></a>如何：檢查語義索引的大小  
  **語意主要片語索引或語意文件相似度索引的邏輯大小為何？**  
  查詢動態管理檢視 [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql)。  
   
@@ -64,23 +64,23 @@ SELECT * FROM sys.dm_db_fts_index_physical_stats WHERE object_id = OBJECT_ID('ta
 GO  
 ```  
   
- **全文檢索目錄的全文檢索和語意索引的總大小為何？**  
- 查詢 [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) 中繼資料函數的 **IndexSize** 屬性。  
+ **全文檢索目錄的全文檢索索引與語意索引的總大小為何？**  
+ 查詢 **FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;** 中繼資料函數的 [IndexSize](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) 屬性。  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
 GO  
 ```  
   
- **多少個項目中的全文檢索目錄的全文檢索和語意索引編製索引？**  
- 查詢 [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) 中繼資料函數的 **ItemCount** 屬性。  
+ **全文檢索目錄的全文檢索索引和語意索引中建立了多少項目的索引？**  
+ 查詢 **FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;** 中繼資料函數的 [ItemCount](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) 屬性。  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  
 GO  
 ```  
   
-##  <a name="HowToForcePopulation"></a> 如何：強制擴展語意索引  
+##  <a name="HowToForcePopulation"></a>如何：強制填入語義索引  
  您可以強制全文檢索索引和語意索引的母體擴展，其方式是使用 START/STOP/PAUSE 或 RESUME POPULATION 子句搭配全文檢索索引所描述的相同語法和行為。 如需詳細資訊，請參閱 [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql) 和[擴展全文檢索索引](../indexes/indexes.md)。  
   
  因為語意索引會依據全文檢索索引，所以只有當關聯的全文檢索索引已擴展時，才會擴展語意索引。  
@@ -98,7 +98,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-##  <a name="HowToDisableIndexing"></a> 如何：停用或重新啟用語意索引  
+##  <a name="HowToDisableIndexing"></a>如何：停用或重新啟用語義索引編制  
  您可以啟用或停用全文檢索索引或語意索引，其方式是使用 ENABLE/DISABLE 子句搭配全文檢索索引所描述的相同語法與行為。 如需詳細資訊，請參閱 [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)。  
   
  當語意索引已停用且暫停時，語意資料的查詢會持續順利運作，並傳回之前的索引資料。 此行為與全文檢索搜尋的行為不一致。  
@@ -119,10 +119,10 @@ ALTER FULLTEXT INDEX ON table_name ENABLE
 GO  
 ```  
   
-##  <a name="SemanticIndexing"></a> 語意索引的階段  
+##  <a name="SemanticIndexing"></a>語義索引的階段  
  語意搜尋會針對其啟用所在的每一個資料行，建立兩種資料的索引：  
   
-1.  **主要片語**  
+1.  **關鍵片語**  
   
 2.  **文件相似度**  
   
@@ -133,14 +133,14 @@ GO
 2.  **階段 2**： 然後會擴展語意文件相似度索引。 此索引取決於上一個階段中已擴展的兩個索引。  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a> 問題：未擴展語意索引  
- **會填入相關聯的全文檢索索引嗎？**  
+##  <a name="ProblemNotPopulated"></a>問題：未填入語義索引  
+ **是否已擴展關聯的全文檢索索引？**  
  因為語意索引會依據全文檢索索引，所以只有當關聯的全文檢索索引已擴展時，才會擴展語意索引。  
   
- **全文檢索搜尋和語意搜尋正確安裝並設定？**  
+ **是否已正確安裝及設定全文檢索搜尋及語意搜尋？**  
  如需詳細資訊，請參閱 [安裝及設定語意搜尋](install-and-configure-semantic-search.md)。  
   
- **FDHOST 服務無法使用，或是否有另一個狀況導致全文檢索索引失敗？**  
+ **FDHOST 服務是否無法使用，或是有另一個狀況導致全文檢索索引失敗？**  
  如需相關資訊，請參閱 [疑難排解全文檢索索引](troubleshoot-full-text-indexing.md)。  
   
   

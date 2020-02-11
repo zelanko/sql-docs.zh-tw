@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b092c85ea678ce05c3b9c8bbff4f78d47589bdb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244955"
 ---
 # <a name="database-engine-scripting"></a>Database Engine 指令碼
@@ -79,13 +79,13 @@ ms.locfileid: "75244955"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|描述如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的程式碼和文字編輯器，以互動方式開發、偵錯和執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。|[查詢和文字編輯器 &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)|  
+|描述如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的程式碼和文字編輯器，以互動方式開發、偵錯和執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。|[查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)|  
 |描述如何使用 `sqlcmd` 公用程式，從命令提示字元執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼，包含以互動方式開發指令碼的能力。|[sqlcmd 使用說明主題](../../database-engine/sqlcmd-how-to-topics.md)|  
 |描述如何將 SQL Server 元件整合至 Windows PowerShell 2.0 環境，然後建立 PowerShell 指令碼以管理 SQL Server 執行個體和物件。|[SQL Server PowerShell](../../powershell/sql-server-powershell.md)|  
-|描述如何使用 [產生和發佈指令碼精靈]****，建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼以重新建立資料庫中的一個或多個物件。|[產生腳本 &#40;SQL Server Management Studio&#41;](generate-scripts-sql-server-management-studio.md)|  
+|描述如何使用 [產生和發佈指令碼精靈]****，建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼以重新建立資料庫中的一個或多個物件。|[產生指令碼 &#40;SQL Server Management Studio&#41;](generate-scripts-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)   
- [教學課程：撰寫 Transact-sql 語句](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [教學課程：撰寫國際性通用的 Transact-SQL 陳述式](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

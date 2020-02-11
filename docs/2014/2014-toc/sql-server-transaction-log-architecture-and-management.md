@@ -1,5 +1,5 @@
 ---
-title: SQL Server 交易記錄架構與管理 |Microsoft Docs
+title: SQL Server 交易記錄架構和管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2495b9487a633fff6c5214a07e589f58fafa5e61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62512745"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management"></a>SQL Server 交易記錄架構與管理
@@ -24,7 +24,7 @@ ms.locfileid: "62512745"
   每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫都有交易記錄檔，這個記錄檔會記錄所有交易，以及個別交易在資料庫中所做的修改。 交易記錄是資料庫的重要元件，而且如果系統故障，就可能需要交易記錄讓資料庫返回一致的狀態。 本指南提供有關交易記錄實體及邏輯架構的資訊。 了解此架構可提升交易記錄管理的效能。  
 
   
-##  <a name="Logical_Arch"></a> 交易記錄邏輯架構  
+##  <a name="Logical_Arch"></a>交易記錄邏輯架構  
 
  在邏輯上， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 交易記錄檔會以記錄檔記錄字串的形式進行運作。 每個記錄檔記錄均由記錄序號 (LSN) 來識別。 每筆新記錄檔記錄都會寫入記錄檔的邏輯結尾處，並且其 LSN 比它前一個記錄的 LSN 來得大。 記錄檔記錄將在它們建立時依序儲存。 每筆記錄檔記錄都包含所屬交易的識別碼。 對於每筆交易，所有與交易關聯的記錄檔記錄將使用反向指標個別地連結於鏈結之中，以加速交易的回復。  
   
@@ -56,23 +56,28 @@ ms.locfileid: "62512745"
   
  回復作業也會留下記錄。 每筆交易都會在交易記錄檔中保留空間，以確保有足夠的記錄檔空間可支援由明確回復陳述式所造成的回復，或因發生錯誤而造成的回復。 保留的空間大小須視交易中執行的作業而定，但通常會等於用來記錄每個作業的空間大小。 當交易完成後就會釋放這個保留空間。  
   
- 在記錄檔中，從對成功回復全資料庫而言不可或缺的第一筆記錄檔記錄，一直到最後寫入的記錄檔記錄的這個區段，稱為記錄檔的使用中部分，或「使用中的記錄」  。 這是需要進行完整資料庫復原的記錄區段。 沒有任何使用中的記錄部分可被截斷。 此第一個記錄檔記錄的記錄序號 (LSN) 就稱為最小復原 LSN (*MinLSN*)。  
+ 在記錄檔中，從第一個記錄檔記錄的區段，如果成功回復到最後寫入的記錄檔記錄，就稱為記錄檔的使用中部分，或使用中的*記錄*檔。 這是需要進行完整資料庫復原的記錄區段。 沒有任何使用中的記錄部分可被截斷。 第一個記錄檔記錄的記錄序號（LSN）就稱為最小復原 LSN （*MinLSN*）。  
   
-##  <a name="physical_arch"></a> 交易記錄實體架構  
+##  <a name="physical_arch"></a>交易記錄實體架構  
 
  資料庫中的交易記錄會對應到一個或多個實體檔案。 從概念上來說，記錄檔是記錄的字串。 就實際上來說，記錄的順序必須有效地儲存在實作交易記錄的一組實體檔案中。 每個資料庫至少要有一個記錄檔。  
   
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會在內部將每個實體記錄檔分成數個虛擬記錄檔。 虛擬記錄檔沒有固定的大小，一個實體記錄檔也沒有固定的虛擬記錄檔數目。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 在建立或擴充記錄檔時，會動態選擇虛擬記錄檔的大小。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 會盡量維持少量的虛擬檔。 記錄檔擴充之後的虛擬檔大小，是現有記錄檔大小以及新檔案所增加的大小總和。 系統管理員無法設定虛擬記錄檔的大小或數目。  
+ 
+  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會在內部將每個實體記錄檔分成數個虛擬記錄檔。 虛擬記錄檔沒有固定的大小，一個實體記錄檔也沒有固定的虛擬記錄檔數目。 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)] 在建立或擴充記錄檔時，會動態選擇虛擬記錄檔的大小。 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)] 會盡量維持少量的虛擬檔。 記錄檔擴充之後的虛擬檔大小，是現有記錄檔大小以及新檔案所增加的大小總和。 系統管理員無法設定虛擬記錄檔的大小或數目。  
   
- 只有當實體記錄檔是以較小的 *size* 和 *growth_increment* 值來定義時，虛擬記錄檔才會影響到系統效能。 *size* 值是記錄檔的初始大小，而 *growth_increment* 值則是每次需要新空間時加入檔案的空間量。 如果記錄檔因為許多少量增加而變得很龐大，將會產生許多虛擬記錄檔。 這樣會減慢資料庫啟動的速度，也會降低記錄備份和還原作業的執行速度。 建議您使用接近最後所需大小的 *size* 值來指派記錄檔，並使用相對較大的 *growth_increment* 值。 如需這些參數的詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)。  
+ 只有當實體記錄檔是以較小的 *size* 和 *growth_increment* 值來定義時，虛擬記錄檔才會影響到系統效能。 
+  *size* 值是記錄檔的初始大小，而 *growth_increment* 值則是每次需要新空間時加入檔案的空間量。 如果記錄檔因為許多少量增加而變得很龐大，將會產生許多虛擬記錄檔。 這樣會減慢資料庫啟動的速度，也會降低記錄備份和還原作業的執行速度。 建議您使用接近最後所需大小的 *size* 值來指派記錄檔，並使用相對較大的 *growth_increment* 值。 如需這些參數的詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)。  
   
- 交易記錄是循環使用的檔案。 例如，假設資料庫的一個實體記錄檔分成四個虛擬記錄檔。 資料庫建立時，邏輯記錄檔從實體記錄檔的最前面開始。 新的記錄會加在邏輯記錄檔的最後，並朝向實體記錄檔的結尾處擴充。 記錄截斷會釋出記錄出現在最小復原記錄序號 (MinLSN) 前面的所有虛擬記錄。 *MinLSN* 是成功回復全資料庫所需之最舊記錄檔記錄的記錄序號。 範例資料庫中的交易記錄看起來如下圖所示。  
+ 交易記錄是循環使用的檔案。 例如，假設資料庫的一個實體記錄檔分成四個虛擬記錄檔。 資料庫建立時，邏輯記錄檔從實體記錄檔的最前面開始。 新的記錄會加在邏輯記錄檔的最後，並朝向實體記錄檔的結尾處擴充。 記錄截斷會釋出記錄出現在最小復原記錄序號 (MinLSN) 前面的所有虛擬記錄。 
+  *MinLSN* 是成功回復全資料庫所需之最舊記錄檔記錄的記錄序號。 範例資料庫中的交易記錄看起來如下圖所示。  
   
- ![記錄檔分成四個虛擬記錄檔](media/tranlog3.gif "記錄檔分成四個虛擬記錄檔")  
+ ![分為四個虛擬記錄檔的記錄檔](media/tranlog3.gif "分為四個虛擬記錄檔的記錄檔")  
   
  當邏輯記錄檔的結尾到達實體記錄檔的結尾時，新的記錄資料將寫回實體記錄檔的開頭處。  
   
- ![記錄將會自動換行大約到記錄檔的開頭](media/tranlog4.gif "記錄大約包裝至記錄檔的開頭")  
+ ![記錄檔記錄寫回到記錄檔的開頭](media/tranlog4.gif "記錄檔記錄寫回到記錄檔的開頭")  
   
  只要邏輯記錄檔的結尾永遠不碰到邏輯記錄檔的開頭，此週期就會不斷地重複。 如果經常截斷舊的記錄，以便讓目前到下個檢查點之間建立的所有新記錄一定會有足夠的空間可以使用，記錄檔就永遠不會填滿。 不過，如果邏輯記錄檔的結尾已到達邏輯記錄檔的開頭，會發生下列其中一種狀況：  
   
@@ -88,11 +93,11 @@ ms.locfileid: "62512745"
   
  下圖將顯示截斷前後的交易記錄。 第一張圖是顯示從未進行截斷的交易記錄。 目前，邏輯記錄正使用四個虛擬記錄檔。 邏輯記錄檔是從第一個虛擬記錄檔的前面開始，並於虛擬記錄檔 4 結束。 MinLSN 記錄位於虛擬記錄檔 3 中。 虛擬記錄檔 1 和虛擬記錄檔 2 僅包含非使用中的記錄檔記錄。 這些記錄都可以截斷。 虛擬記錄 5 仍未使用而且不屬於目前邏輯記錄的一部分。  
   
- ![四個虛擬記錄檔與交易記錄檔](media/tranlog2.gif "四個虛擬記錄檔與交易記錄檔")  
+ ![具有四個虛擬記錄檔的交易記錄檔](media/tranlog2.gif "具有四個虛擬記錄檔的交易記錄檔")  
   
  第二張圖是顯示記錄截斷之後的內容。 虛擬記錄 1 和虛擬記錄 2 已經釋出以便重複使用。 現在邏輯記錄檔是從虛擬記錄檔 3 的前面開始。 虛擬記錄檔 5 仍未使用，而且不屬於目前邏輯記錄檔的一部分。  
   
- ![記錄檔分成四個虛擬記錄檔](media/tranlog3.gif "記錄檔分成四個虛擬記錄檔")  
+ ![分為四個虛擬記錄檔的記錄檔](media/tranlog3.gif "分為四個虛擬記錄檔的記錄檔")  
   
  除了因為某種原因而延遲以外，記錄截斷會在發生下列事件之後自動進行：  
   
@@ -100,19 +105,22 @@ ms.locfileid: "62512745"
   
 -   在完整復原模式或大量記錄復原模式下，上一次備份以來發生檢查點時的記錄備份之後。  
   
- 記錄截斷可能會因為各種因素而延遲。 如果在記錄截斷中發生長時間的延遲，交易記錄可能會填滿。 如需詳細資訊，請參閱[可能會延遲記錄截斷的因素](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)和[寫滿交易記錄疑難排解 &#40;SQL Server 錯誤 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。  
+ 記錄截斷可能會因為各種因素而延遲。 如果在記錄截斷中發生長時間的延遲，交易記錄可能會填滿。 如需相關資訊，請參閱[可能會延遲記錄截斷](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)和[疑難排解完整交易記錄檔的因素 &#40;SQL Server 錯誤 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。  
   
-##  <a name="WAL"></a> 預先寫入交易記錄  
+##  <a name="WAL"></a>預先寫入交易記錄  
 
- 本章節說明預先寫入交易記錄在將資料修改記錄至磁碟時所扮演的角色。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會使用預先寫入記錄 (WAL)，而這項功能可確保在關聯的記錄檔記錄寫入磁碟之前，不會有任何資料修改寫入磁碟。 如此可保留交易的 ACID 屬性。  
+ 本章節說明預先寫入交易記錄在將資料修改記錄至磁碟時所扮演的角色。 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會使用預先寫入記錄 (WAL)，而這項功能可確保在關聯的記錄檔記錄寫入磁碟之前，不會有任何資料修改寫入磁碟。 如此可保留交易的 ACID 屬性。  
   
- 若要了解預寫記錄檔的運作方式，您一定要知道如何將修改的資料寫入磁碟。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會維護緩衝快取，當需要擷取資料時，就可以將資料頁讀取到其中。 當緩衝快取中的頁面被修改時，不會立即重新寫入磁碟；而是將頁面標示為「中途」  。 在實際將資料頁寫入磁碟之前，可以進行多次邏輯寫入。 每次邏輯寫入時，都會有交易記錄插入至記載修改的記錄快取中。 記錄檔記錄必須在關聯的中途分頁從緩衝區快取移除而寫入至磁碟之前，先寫入磁碟中。 檢查點處理序會定期掃描緩衝快取，檢查是否有內含來自指定資料庫之頁面的緩衝區，並將所有中途分頁寫入磁碟。 藉由建立一個點來確保所有中途分頁都已寫入磁碟中，檢查點可讓稍後的復原節省時間。  
+ 若要了解預寫記錄檔的運作方式，您一定要知道如何將修改的資料寫入磁碟。 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會維護緩衝快取，當需要擷取資料時，就可以將資料頁讀取到其中。 在緩衝區快取中修改頁面時，不會立即將它寫回磁片。而是將頁面標示為「中途 *」。* 在實際將資料頁寫入磁碟之前，可以進行多次邏輯寫入。 每次邏輯寫入時，都會有交易記錄插入至記載修改的記錄快取中。 記錄檔記錄必須在關聯的中途分頁從緩衝區快取移除而寫入至磁碟之前，先寫入磁碟中。 檢查點處理序會定期掃描緩衝快取，檢查是否有內含來自指定資料庫之頁面的緩衝區，並將所有中途分頁寫入磁碟。 藉由建立一個點來確保所有中途分頁都已寫入磁碟中，檢查點可讓稍後的復原節省時間。  
   
- 將緩衝區快取中之修改資料頁面寫入磁碟中的動作稱為清除頁面。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 含有防止中途分頁在寫入相關聯記錄檔記錄之前遭到清除的邏輯。 記錄會在交易被認可後寫入磁碟中。  
+ 將緩衝區快取中之修改資料頁面寫入磁碟中的動作稱為清除頁面。 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 含有防止中途分頁在寫入相關聯記錄檔記錄之前遭到清除的邏輯。 記錄會在交易被認可後寫入磁碟中。  
   
-##  <a name="Backups"></a> 交易記錄備份  
+##  <a name="Backups"></a>交易記錄備份  
 
- 本章節提出有關如何備份和還原 (套用) 交易記錄的概念。 在完整和大量記錄復原模式下，進行交易記錄 (「記錄備份」  ) 的例行備份，對復原資料而言是必要的。 您可以在任何完整備份正在執行的同時備份記錄。 如需復原模型的詳細資訊，請參閱 [SQL Server 資料庫的備份與還原](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
+ 本章節提出有關如何備份和還原 (套用) 交易記錄的概念。 在完整和大量記錄復原模式下，進行交易記錄 (「記錄備份」**) 的例行備份，對復原資料而言是必要的。 您可以在任何完整備份正在執行的同時備份記錄。 如需復原模型的詳細資訊，請參閱 [SQL Server 資料庫的備份與還原](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
  在建立第一個記錄備份之前，您必須建立完整備份，例如資料庫備份或檔案備份組中的第一個備份。 僅使用檔案備份來還原資料庫，可能會讓情況變得很複雜。 因此，我們建議您盡可能先從完整資料庫備份開始。 之後，則需要定期備份交易記錄。 這不僅是要降低工作損失的風險，也是為了在必要時可以截斷交易記錄。 交易記錄通常在每個傳統記錄備份之後截斷。  
   
@@ -122,7 +130,7 @@ ms.locfileid: "62512745"
   
 ### <a name="the-log-chain"></a>記錄鏈結  
 
- 連續的記錄備份順序稱為「記錄檔鏈結」  。 記錄鏈結以資料庫的完整備份開始。 通常，只有在首次備份資料庫，或將簡單復原模式切換為完整或大量記錄復原模式之後，才會開始新的記錄鏈結。 除非您在建立完整資料庫備份時選擇覆寫現有的備份組，否則現有的記錄鏈結會維持不變。 透過維持不變的記錄鏈結，您可以從媒體集中的任何完整資料庫備份還原資料庫，後面接著所有後續的記錄備份，直到復原點為止。 復原點可能是上一個記錄備份的結尾，或是任何記錄備份中的特定復原點。 如需詳細資訊，請參閱[套用交易記錄備份 &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
+ 連續的記錄備份順序稱為「記錄檔*鏈*」。 記錄鏈結以資料庫的完整備份開始。 通常，只有在首次備份資料庫，或將簡單復原模式切換為完整或大量記錄復原模式之後，才會開始新的記錄鏈結。 除非您在建立完整資料庫備份時選擇覆寫現有的備份組，否則現有的記錄鏈結會維持不變。 透過維持不變的記錄鏈結，您可以從媒體集中的任何完整資料庫備份還原資料庫，後面接著所有後續的記錄備份，直到復原點為止。 復原點可能是上一個記錄備份的結尾，或是任何記錄備份中的特定復原點。 如需詳細資訊，請參閱[套用交易記錄備份 &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
   
  若要將資料庫還原到失敗點，必須有完整的記錄鏈結。 也就是說，必須將交易記錄備份的順序不間斷地延伸到失敗點。 這個記錄順序必須從何處開始視您要還原的資料備份類型而定：資料庫、部分或檔案。 如果是資料庫或部分備份，記錄備份的順序必須從資料庫或部分備份的結尾延伸。 如果是檔案備份組，記錄備份的順序則必須從完整檔案備份組的起始來延伸。 如需詳細資訊，請參閱[套用交易記錄備份 &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)。  
   
@@ -134,8 +142,8 @@ ms.locfileid: "62512745"
 
  建議您閱覽下列文章和書籍，了解交易記錄的其他相關資訊。  
   
- [＜了解 SQL Server 中的記錄和復原＞，作者 Paul Randall](https://technet.microsoft.com/magazine/2009.02.logging.aspx)  
+ [在 Paul Randall 中瞭解記錄和復原 SQL Server](https://technet.microsoft.com/magazine/2009.02.logging.aspx)  
   
- [《SQL Server Transaction Log Management》，作者 Tony Davis 和 Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
+ [Tony Davis 和 Gail Shaw 的 SQL Server 交易記錄管理](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   

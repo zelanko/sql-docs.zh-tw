@@ -1,5 +1,5 @@
 ---
-title: 排程頁面 （報表管理員） |Microsoft Docs
+title: 排程頁面（報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 927a9fc96e11bffdcacf7a12f09ee93d25f153fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102321"
 ---
 # <a name="schedules-page-report-manager"></a>排程頁面 (報表管理員)
@@ -23,27 +23,27 @@ ms.locfileid: "66102321"
  若要刪除、暫停或繼續執行共用排程，請選取想要修改的共用排程旁邊的核取方塊。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需版本支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱[SQL Server 2014 版本支援的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
-## <a name="navigation"></a>巡覽  
+## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ### <a name="to-open-the-schedules-page"></a>若要開啟排程頁面  
   
 1.  開啟報表管理員。  
   
-2.  在頁面的頂端，按一下右邊角落的 **[站台設定]** 。 這樣就會開啟該站台的 [一般] 屬性頁面。  
+2.  在頁面的頂端，按一下右邊角落的 **[站台設定]**。 這樣就會開啟該站台的 [一般] 屬性頁面。  
   
 3.  選取 **[排程]** 索引標籤。  
   
-## <a name="options"></a>選項  
- **新的排程**  
+## <a name="options"></a>選項。  
+ **新增排程**  
  按一下即可開啟 [排程] 頁面，可用來指定頻率資訊。  
   
  **刪除**  
  按一下即可移除共用排程。  
   
- **暫停**  
+ **中斷**  
  按一下即可暫時停止執行共用排程。 暫停排程可避免訂閱及其他已排程處理序的執行。  
   
  **繼續**  
@@ -52,10 +52,10 @@ ms.locfileid: "66102321"
  **[排程]**  
  顯示目前定義的共用排程。 按一下共用排程以檢視或編輯頻率資訊。  
   
- **建立者**  
+ **創**  
  顯示建立共用排程的使用者名稱。  
   
- **上次執行 / 下一個執行**  
+ **最後執行 / 下一個執行**  
  顯示最後執行共用排程和下一個執行共用排程的時間。  
   
  **狀態**  

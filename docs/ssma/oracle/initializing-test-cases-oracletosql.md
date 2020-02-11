@@ -1,5 +1,5 @@
 ---
-title: 將測試案例 (OracleToSQL) 初始化 |Microsoft Docs
+title: 正在初始化測試案例（OracleToSQL） |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,31 +11,31 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ae6a7bbeb70ae53280877a1f88a006743eea0655
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264366"
 ---
 # <a name="initializing-test-cases-oracletosql"></a>將測試案例初始化 (OracleToSQL)
-在此步驟中，您指定新的測試案例的初始資訊。  
+在此步驟中，您會指定新測試案例的初始資訊。  
   
 ## <a name="parameters"></a>參數  
 **測試案例名稱**  
-輸入名稱來識別測試案例。  
+輸入名稱以識別測試案例。  
   
 **建立日期**  
-今日的目前日期，自動定義。  
+今天的目前日期，自動定義。  
   
-**上次修改的日期**  
-自動; 填入不會變更。  
+**上次修改日期**  
+自動填入;不應該變更。  
   
 **測試案例描述**  
-輸入任何其他的資訊來識別測試案例的目的。  
+輸入任何其他資訊，以識別測試案例的目的。  
   
-## <a name="next-step"></a>下一個步驟  
-[選取並設定要測試的物件&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+## <a name="next-step"></a>後續步驟  
+[選取並設定要測試的物件 &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[測試移轉的資料庫物件&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[&#40;OracleToSQL&#41;測試遷移的資料庫物件](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

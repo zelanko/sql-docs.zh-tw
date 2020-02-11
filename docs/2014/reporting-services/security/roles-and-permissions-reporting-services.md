@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0e6098a51afde04164e3ef0dfa5e5297457b4440
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101800"
 ---
 # <a name="roles-and-permissions-reporting-services"></a>角色與權限 (Reporting Services)
@@ -31,7 +31,7 @@ ms.locfileid: "66101800"
 ## <a name="identity-and-access-control-for-native-mode"></a>原生模式的識別和存取控制  
  預設驗證是以 Windows 驗證和整合式安全性為基礎。 您可變更這些驗證設定，以便允許報表伺服器回應不同的驗證要求，甚至是將預設的安全性功能取代成您提供的自訂驗證延伸模組。  
   
- 授權是以您指派給原則的角色為基礎。 每個角色都包含一組相關的工作，然後這些工作則包含相關的作業。 例如，[管理報表] 工作會授與下列報表伺服器作業的存取權：檢視報表、新增報表、更新報表、刪除報表、排程報表和更新報表屬性。  
+ 授權是以您指派給原則的角色為基礎。 每個角色都包含一組相關的工作，然後這些工作則包含相關的作業。 例如，[管理報表]  工作會授與下列報表伺服器作業的存取權：檢視報表、新增報表、更新報表、刪除報表、排程報表和更新報表屬性。  
   
 ## <a name="identity-and-access-control-for-sharepoint-mode"></a>SharePoint 模式的識別和存取控制  
  在 SharePoint 整合模式中，驗證和授權會先在 SharePoint 網站上處理，然後要求才會送達報表伺服器。 根據您設定驗證的方式而定，來自 SharePoint 網站的要求會包含安全性 Token 或受信任的使用者名稱。 您針對 SharePoint 使用者和群組所設定的權限會授權放置於 SharePoint 文件庫中之報表伺服器項目的存取權。  

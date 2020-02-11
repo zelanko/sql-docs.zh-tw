@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468605"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>使用解譯的 Transact-SQL 存取記憶體最佳化的資料表
@@ -53,7 +53,7 @@ ms.locfileid: "62468605"
 |READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *integer*|TABLOCK|  
 |TABLOCKXX|UPDLOCK|XLOCK||  
   
- 當您使用解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 從明確或隱含交易存取記憶體最佳化的資料表時，您必須包括隔離等級的資料表提示，例如 SNAPSHOT、REPEATABLEREAD 或 SERIALIZABLE，或者，您可以使用 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT。 如需詳細資訊，請參閱[與記憶體最佳化資料表的交易隔離等級的指導方針](memory-optimized-tables.md)並[ALTER DATABASE SET 選項&#40;-&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
+ 當您使用解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 從明確或隱含交易存取記憶體最佳化的資料表時，您必須包括隔離等級的資料表提示，例如 SNAPSHOT、REPEATABLEREAD 或 SERIALIZABLE，或者，您可以使用 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT。 如需詳細資訊，請參閱[使用記憶體優化資料表的交易隔離等級方針](memory-optimized-tables.md)和[ALTER database SET 選項 &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
   
 > [!NOTE]  
 >  在自動認可模式下執行之查詢所存取的記憶體最佳化的資料表不需要隔離等級資料表提示。  

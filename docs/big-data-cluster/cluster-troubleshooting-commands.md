@@ -1,5 +1,5 @@
 ---
-title: 監視和疑難排解
+title: 監視及疑難排解
 titleSuffix: SQL Server big data clusters
 description: 本文提供用來監視 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]及針對其進行疑難排解的實用命令。
 author: mihaelablendea
@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70153636"
 ---
 # <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>監視 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]及針對其進行疑難排解
@@ -114,7 +114,7 @@ kubectl get svc -n mssql-cluster
 
 下列服務支援對巨量資料叢集的外部連線：
 
-| 服務 | Description |
+| 服務 | 描述 |
 |---|---|
 | **master-svc-external** | 提供主要執行個體的存取權。<br/>(**EXTERNAL-IP,31433** 和 **SA** 使用者) |
 | **controller-svc-external** | 支援管理叢集的工具和用戶端。 |

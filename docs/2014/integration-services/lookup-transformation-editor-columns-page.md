@@ -1,5 +1,5 @@
 ---
-title: 查閱轉換編輯器 （資料行頁面） |Microsoft Docs
+title: 查閱轉換編輯器（資料行頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1a32dcbcee6704cb4fecef7b58cbff8354b910a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057900"
 ---
 # <a name="lookup-transformation-editor-columns-page"></a>查閱轉換編輯器 (資料行頁面)
@@ -32,7 +32,7 @@ ms.locfileid: "66057900"
   
  使用拖放作業，即可將可用的輸入資料行對應到查閱資料行。  
   
- 您也可以藉由在 **[可用的輸入資料行]** 資料表中反白顯示資料行，按下應用程式鍵，然後按一下 **[編輯對應]** ，使用鍵盤將輸入資料行對應到查閱資料行。  
+ 您也可以藉由在 **[可用的輸入資料行]** 資料表中反白顯示資料行，按下應用程式鍵，然後按一下 **[編輯對應]**，使用鍵盤將輸入資料行對應到查閱資料行。  
   
  **可用的查閱資料行**  
  檢視查閱資料行清單。 查閱資料行是參考資料表中的資料行，您可在其中查閱符合輸入資料行的值。  
@@ -41,7 +41,7 @@ ms.locfileid: "66057900"
   
  使用核取方塊即可在參考資料表中，選取要執行查閱作業的查閱資料行。  
   
- 您也可以藉由在 **[可用的查閱資料行]** 資料表中反白顯示資料行，按下應用程式鍵，然後按一下 **[編輯對應]** ，使用鍵盤將查閱資料行對應到輸入資料行。  
+ 您也可以藉由在 **[可用的查閱資料行]** 資料表中反白顯示資料行，按下應用程式鍵，然後按一下 **[編輯對應]**，使用鍵盤將查閱資料行對應到輸入資料行。  
   
  **查閱資料行**  
  檢視選取的查閱資料行。 您的選擇會反映在 **[可用的查閱資料行]** 資料表的核取方塊選擇中。  
@@ -55,7 +55,7 @@ ms.locfileid: "66057900"
 ## <a name="see-also"></a>另請參閱  
  [查閱轉換編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [查閱轉換編輯器 &#40;連接頁面&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
- [查閱轉換編輯器 &#40;進階頁面&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [查閱轉換編輯器 &#40;Advanced Page&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
  [查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [模糊查閱轉換](data-flow/transformations/fuzzy-lookup-transformation.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 發行集資訊，警告 （交易式發行集，SQL Server 2005 和更新版本） |Microsoft Docs
+title: 發行集資訊，警告（交易式發行集，SQL Server 2005 和更新版本） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2ab1c4be29b87e1051daa702ce40905a95e34ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022003"
 ---
 # <a name="publication-information-warnings-transactional-publication-sql-server-2005-and-later"></a>發行集資訊，警告 (交易式發行集，SQL Server 2005 和更新的版本)
@@ -47,20 +47,20 @@ ms.locfileid: "63022003"
   
     -   差  
   
-    -   嚴重  
+    -   重大  
   
  您啟用警告時，也會設定臨界值。 例如，若您啟用警告 **[若延遲超過臨界值，就發出警告]** ，請選取發行者端認可交易和訂閱者端認可交易之間允許的時間。  
   
  除了在複寫監視器顯示警告外，達到臨界值也會觸發警示。 定義警示的方式，是按一下 **[設定警示]** ，並在 **[設定複寫警示]** 對話方塊中提供資訊。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **已啟用**  
  選取以啟用警告，並指定臨界值。  
   
  **警告**  
  與臨界值相關聯之警告的描述。  
   
- **臨界值**  
+ **閾值**  
  指定臨界值的值。  
   
  **[設定警示]**  
