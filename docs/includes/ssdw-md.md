@@ -1,1 +1,1 @@
-Azure Synapse Analytics (Formerly SQL Data Warehouse)  
+Azure Synapse Analytics (先前稱為 SQL 資料倉儲)  

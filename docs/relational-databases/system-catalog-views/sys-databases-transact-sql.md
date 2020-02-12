@@ -1,7 +1,7 @@
 ---
 title: sys.databases （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 11/18/2019
+ms.date: 02/11/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a307cf2fb9747e822cc48ca4b0723aed437d4af7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5b9b5147621fb459e419a29e0a31f9ad9381eb77
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74165953"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77147396"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
@@ -117,7 +117,8 @@ ms.locfileid: "74165953"
 |**is_temporal_retention_enabled**|**bit**|指出是否已啟用時態性保留原則清除工作。<br /> **適用**物件：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|目錄定序設定：<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **適用**物件：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**Nvarchar （60）**|目錄定序設定：<br />COLLATE<br />SQL_Latin_1_General_CP1_CI_AS<br /> **適用**物件：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on 是 on</br>0 = is_result_set_caching_on 是關閉的</br>**適用**于： Azure SQL 資料倉儲 Gen2。 雖然這項功能會推出到所有區域，但請檢查部署至您實例的版本，以及最新的[AZURE SQL DW 版本](/azure/sql-data-warehouse/release-notes-10-0-10106-0)資訊，以取得功能可用性。|
+|**is_result_set_caching_on**|**bit**|1 = is_result_set_caching_on 是 on</br>0 = is_result_set_caching_on 是關閉的</br>**適用**于： Azure SQL 資料倉儲 Gen2。 雖然這項功能會推出到所有區域，但請檢查部署至您實例的版本，以及最新的[AZURE SQL DW 版本](/azure/sql-data-warehouse/release-notes-10-0-10106-0)資訊，以取得功能可用性。|
+|**is_memory_optimized_enabled**|**bit**|指出是否已針對資料庫啟用特定的記憶體內部功能，例如[混合式緩衝集區](../../database-engine/configure-windows/hybrid-buffer-pool.md)。 不會反映[記憶體內部 OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)的可用性或設定狀態。 <br />**適用**于： SQL Server 2019 （15. x）|
   
 ## <a name="permissions"></a>權限
 
