@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58d94afea9c6801d75a67f6f9136441d536eb696
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62956150"
 ---
 # <a name="add-existing-items-to-a-project"></a>將現有的項目加入至專案
-  請將新的項目加入專案中，來延伸應用程式功能。 現有項目可以是查詢或其他檔案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有兩種專案類型：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案和 Analysis Services 指令碼專案。 專案類型決定了可以加入專案中的查詢檔。 例如，您可以將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢 (副檔名是 .sql 的檔案) 加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案中，但您不能將它加入 Analysis Services 指令碼專案中。 若要將專案類型的其他副檔名的關聯，請參閱[使副檔名與程式碼編輯器](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)。  
+  請將新的項目加入專案中，來延伸應用程式功能。 現有項目可以是查詢或其他檔案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有兩種專案類型： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案和 Analysis Services 指令碼專案。 專案類型決定了可以加入專案中的查詢檔。 例如，您可以將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢 (副檔名是 .sql 的檔案) 加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案中，但您不能將它加入 Analysis Services 指令碼專案中。 若要將其他副檔名與專案類型產生關聯，請參閱[使副檔名與程式碼編輯器產生關聯](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)。  
   
 ### <a name="to-add-an-existing-query-or-a-miscellaneous-file-to-a-project"></a>將現有的查詢或其他檔案加入專案中  
   
@@ -45,15 +45,15 @@ ms.locfileid: "62956150"
      使用此選項來篩選所顯示的檔案和資料夾。 輸入要篩選的完整或部份檔案名稱；使用星號 (`*`) 作為萬用字元。  
   
     > [!NOTE]  
-    >  在 [檔案名稱]  方塊中輸入 URL 或網路路徑，導覽至 Web 和網路位置。 例如， **http://mywebsite** 會顯示在 mywebsite Web 位置上的可用檔案，而 **\\ \myserver\myshare** 則會顯示在 myserver 的 myshare 位置上的可用檔案。  
+    >  在 [檔案名稱]  方塊中輸入 URL 或網路路徑，導覽至 Web 和網路位置。 例如， **http://mywebsite** 會顯示在 mywebsite Web 位置上的可用檔案，而 **\\\myserver\myshare** 則會顯示在 myserver 的 myshare 位置上的可用檔案。  
   
      **檔案類型**  
      使用此選項根據副檔名篩選檔案。 每個產品都會列出最常用之檔案類型的預設篩選。  
   
-     **[加入]**  
+     **加入**  
      使用此下拉式按鈕將項目加入專案中並在預設編輯器中開啟項目。  
   
-    -   **[加入]**  
+    -   **加入**  
   
          將現有的項目複製到磁碟上的專案資料夾，並將項目加入方案總管中所選取的專案之下。 對項目所做的任何變更不會反映到位於原始位置的項目中。 這是此檔案類型的預設編輯器。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62956150"
   
 ## <a name="see-also"></a>另請參閱  
  [方案總管](solution-explorer.md)   
- [將新的項目加入至專案](add-new-items-to-a-project.md)   
+ [將新專案新增至專案](add-new-items-to-a-project.md)   
  [移除或刪除項目或專案](remove-or-delete-an-item-or-project.md)  
   
   
