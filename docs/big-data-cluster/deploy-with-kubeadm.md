@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 96479cfd42c8a08295a600ef3de4137b66aa106d
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 6b5f2c8dac062f147326a0b9fcfb7120f0648729
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119375"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74165434"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>在多部電腦上設定 Kubernetes 以進行 SQL Server 巨量資料叢集部署
 
@@ -104,12 +104,14 @@ ms.locfileid: "74119375"
    EOF
    ```
 
-1. 初始化這部電腦上的 Kubernetes 主機。 您應該會看到 Kubernetes 主機已成功初始化的輸出。
+1. 初始化這部電腦上的 Kubernetes 主機。 下面的範例指令碼指定 Kubernetes 版本 `1.15.0`。 您使用的版本取決於您的 Kubernetes 叢集。
 
    ```bash
-   KUBE_VERSION=1.11.3
+   KUBE_VERSION=1.15.0
    sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --kubernetes-version=$KUBE_VERSION
    ```
+
+   您應該會看到 Kubernetes 主機已成功初始化的輸出。
 
 1. 請注意 `kubeadm join` 命令，您需要將其用來在其他伺服器上聯結 Kubernetes 叢集。 複製此命令以供稍後使用。
 
