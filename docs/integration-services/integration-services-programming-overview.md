@@ -21,10 +21,10 @@ ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f540278d8f27eb091d4818f838d069c82a61159c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296218"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 程式設計概觀
@@ -51,12 +51,12 @@ ms.locfileid: "71296218"
 ## <a name="supported-languages"></a>支援的語言  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 完全支援 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]。 如此可讓開發人員使用所選的 .NET 相容語言來針對 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 進行程式設計。 雖然執行階段引擎和資料流程引擎都是以機器碼所撰寫，但是兩者都可透過完全受管理的物件模型來使用。  
   
- 您可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或其他程式碼或文字編輯器中，設計 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 套件、自訂工作和元件的程式。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 提供開發人員許多工具與功能，使之可以簡化及加快反覆執行程式碼撰寫、偵錯與測試週期的速度。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 也可簡化部署工作。 但是，您不需要 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 編譯及建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程式碼專案。 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 包含 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 和 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 編譯器與相關工具。  
+ 您可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或是其他程式碼或文字編輯器中設計 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 套件、自訂工作和元件的程式。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 提供開發人員許多工具與功能，使之可以簡化及加快反覆執行程式碼撰寫、偵錯與測試週期的速度。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 也可簡化部署工作。 但是，您不需要 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 編譯及建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程式碼專案。 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 包含 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 和 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 編譯器與相關工具。  
   
 > [!IMPORTANT]  
 >  依預設，[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 會隨 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 一起安裝，但是不會安裝 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK。 除非已在電腦上安裝 SDK，而且 SDK 文件集是包含在線上叢書集合中，否則本節中的 SDK 內容連結將不會有任何作用。 在安裝 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 之後，您可以遵循[新增或移除 SQL Server 的產品文件集](https://msdn.microsoft.com/library/ef798cc8-87cf-4d60-a7bf-9e061bdd0052)中的指示，將 SDK 文件集新增至線上叢書集合和目錄。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 指令碼工作和指令碼元件會使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) 當作內嵌指令碼環境。 VSTA 支援 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 指令碼工作和指令碼元件會將 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) 作為內嵌指令碼環境使用。 VSTA 支援 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 應用程式開發介面與 COM 指令碼語言 (如 VBScript) 不相容。  
@@ -69,7 +69,7 @@ ms.locfileid: "71296218"
 ## <a name="commonly-used-assemblies"></a>常用的組件  
  下表列出在使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 開發 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 程式時經常使用的組件。  
   
-|組件|Description|  
+|組件|描述|  
 |--------------|-----------------|  
 |Microsoft.SqlServer.ManagedDTS.dll|包含 Managed 執行階段引擎。|  
 |Microsoft.SqlServer.RuntimeWrapper.dll|包含原生執行階段引擎的主要 Interop 組件 (PIA) 或包裝函數。|  

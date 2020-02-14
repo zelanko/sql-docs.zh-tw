@@ -18,10 +18,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048714"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>建立、修改及卸除空間索引
@@ -56,7 +56,7 @@ ms.locfileid: "68048714"
   
 7.  若要指定您要建立索引的空間資料行，請按一下 [加入]  。  
   
-8.  在 [從 *\<資料表名稱>* 選取資料行]  對話方塊中，選取對應的核取方塊來選取 **geometry** 或 **geography** 類型的資料行。 任何其他的空間資料行就會變成無法編輯。 如果您想要選取不同的空間資料行，就必須先清除目前選取的資料行。 完成後，請按一下 **[確定]** 。  
+8.  在 [從 \<資料表名稱> 選取資料行]   對話方塊中，選取對應的核取方塊來選取 **geometry** 或 **geography** 類型的資料行。 任何其他的空間資料行就會變成無法編輯。 如果您想要選取不同的空間資料行，就必須先清除目前選取的資料行。 完成後，請按一下 **[確定]** 。  
   
 9. 在 [索引鍵資料行]  方格中確認您的資料行選取。  
   
@@ -64,11 +64,11 @@ ms.locfileid: "68048714"
   
 11. 在 [空間]  頁面上，指定您想要用於索引之空間屬性的值。  
   
-     當您在 **geometry** 類型資料行上建立索引時，您必須指定週框方塊的 **(** _X-min_ **,** _Y-min_ **)** 和 **(** _X-max_ **,** _Y-max_ **)** 座標。 如果是 **geography** 類型資料行上的索引，在您指定**地理方格**鑲嵌式配置之後，週框方塊欄位會變成唯讀，因為地理方格鑲嵌式不會使用週框方塊。  
+     當您在 **geometry** 類型資料行上建立索引時，您必須指定週框方塊的 **(** _X-min_ **,** _Y-min_ **)** 和 **(** _X-max_ **,** _Y-max_ **)** 座標。 如果是 **geography** 類型資料行上的索引，在您指定 **地理方格** 鑲嵌式配置之後，週框方塊欄位會變成唯讀，因為地理方格鑲嵌式不會使用週框方塊。  
   
      您可以選擇性地針對 [每一物件的資料格]  欄位及鑲嵌式配置的任何方格密度等級指定非預設值。 每一物件的資料格預設數目為 16 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 或 8 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 或更高，而預設方格密度是 [中]  ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)])。  
   
-     您可以針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的鑲嵌式配置選取 GEOMETRY_AUTO_GRID 或 GEOGRAPHY_AUTO_GRID。 當您選取 GEOMETRY_AUTO_GRID 或 GEOGRAPHY_AUTO_GRID 時，就會停用 [層級 1]、[層級 2]、[層級 3] 和 [層級 4] 方格密度選項。  
+     您可以針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的鑲嵌式配置選取 GEOMETRY_AUTO_GRID 或 GEOGRAPHY_AUTO_GRID。 當您選取 GEOMETRY_AUTO_GRID 或 GEOGRAPHY_AUTO_GRID 時，就會停用 [層級 1]、[層級 2]、[層級 3] 和 [層級 4] 方格密度選項。  
   
      如需這些屬性的詳細資訊，請參閱 [索引屬性 F1 說明](../../relational-databases/indexes/index-properties-f1-help.md)。  
   

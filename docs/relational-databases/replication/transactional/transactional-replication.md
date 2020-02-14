@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 986461eb17ed8c5980139fd8789f4fcbed458734
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 745001fb70cf3e210a1e5646fb198acfecdc8cee
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251082"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286945"
 ---
 # <a name="transactional-replication"></a>異動複寫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "71251082"
 ## <a name="publication-types"></a>發行集類型 
 異動複寫提供四種發行集類型：  
   
-|發行集類型|Description|  
+|發行集類型|描述|  
 |----------------------|-----------------|  
 |標準交易式發行集|適合於「訂閱者」端的所有資料均為唯讀狀態 (異動複寫並不在「訂閱者」端強制這個屬性) 的拓撲。<br /><br /> 當使用 Transact-SQL 或 Replication Management Objects (RMO) 時，依預設，會建立標準交易式發行集。 當使用「新增發行集精靈」時，它們會透過選取 **[發行集類型]** 頁面上的 **[交易式發行集]** 來建立。<br /><br /> 如需建立發行集的詳細資訊，請參閱 [發行資料和資料庫物件](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)。|  
 |具有可更新訂閱的交易式發行集|這個發行集類型的特性為：<br /><br /> -每個位置都有相同的資料，含有一個「發行者」和一個「訂閱者」。 <br /> -您可以更新「訂閱者」端的資料列<br /> -此拓撲最適合於需要高可用性和讀取延展性的伺服器環境。<br /><br />如需詳細資訊，請參閱[可更新訂閱](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。|  

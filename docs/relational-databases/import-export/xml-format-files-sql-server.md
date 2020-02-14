@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 724898bb35df9126ba61b5ebac147a37f272effc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091427"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式檔案 (SQL Server)
@@ -176,7 +176,7 @@ ms.locfileid: "68091427"
  \</BCP 格式>  
  結束格式檔案時需要用到。  
   
-####  <a name="AttrOfFieldElement"></a> \<欄位> 項目的屬性  
+####  <a name="AttrOfFieldElement"></a>\<欄位> 項目的屬性  
  本節描述 \<欄位> 項目的屬性，這些屬性會摘要在下列的結構描述語法中：  
   
  <FIELD  
@@ -199,17 +199,17 @@ ms.locfileid: "68091427"
   
  每個 \<欄位> 項目都與其他項目無關。 以下透過屬性來說明欄位：  
   
-|FIELD 屬性|說明|選擇性 /<br /><br /> 必要項|  
+|FIELD 屬性|描述|選擇性 /<br /><br /> 必要|  
 |---------------------|-----------------|------------------------------|  
-|ID **="** _fieldID_ **"**|指定資料檔中欄位的邏輯名稱。 欄位識別碼是用來參考該欄位的索引鍵。<br /><br /> \<欄位識別碼 **="** _fieldID_ **"** /> 對應到 \<資料行來源 **="** _fieldID_ **"** />|必要項|  
+|ID **="** _fieldID_ **"**|指定資料檔中欄位的邏輯名稱。 欄位識別碼是用來參考該欄位的索引鍵。<br /><br /> \<欄位識別碼 **="** _fieldID_ **"** /> 對應到 \<資料行來源 **="** _fieldID_ **"** />|必要|  
 |xsi:type **="** _fieldType_ **"**|這是識別元素執行個體之類型的 XML 建構 (如同屬性般使用)。 *fieldType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。|必要 (視資料類型而定)|  
 |LENGTH **="** _n_ **"**|此屬性定義固定長度資料類型的執行個體之長度。<br /><br /> *n* 的值必須為正整數。|除非 xsi:type 值有要求，否則是選擇性的|  
 |PREFIX_LENGTH **="** _p_ **"**|此屬性定義二進位資料代表的前置長度。 PREFIX_LENGTH 值 *p* 必須是下列其中一個：1、2、4 或 8。|除非 xsi:type 值有要求，否則是選擇性的|  
-|MAX_LENGTH **="** _m_ **"**|此屬性是可儲存在給定欄位中的最大位元組數。 若沒有目標資料表，則無法取得資料行最大長度。 MAX_LENGTH 屬性會限制輸出字元資料行的最大長度，因而限制為資料行值配置的儲存區。 在 ELECT FROM 子句中使用 OPENROWSET 函數的 BULK 選項時，這樣做特別方便。<br /><br /> *m* 的值必須為正整數。 根據預設， **char** 資料行的最大長度是 8000 個字元，而 **nchar** 資料行的最大長度是 4000 個字元。|選擇性|  
-|COLLATION **="** _collationName_ **"**|COLLATION 只能用於字元欄位。 如需 SQL 定序名稱的清單，請參閱 [SQL Server 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。|選擇性|  
+|MAX_LENGTH **="** _m_ **"**|此屬性是可儲存在給定欄位中的最大位元組數。 若沒有目標資料表，則無法取得資料行最大長度。 MAX_LENGTH 屬性會限制輸出字元資料行的最大長度，因而限制為資料行值配置的儲存區。 在 ELECT FROM 子句中使用 OPENROWSET 函數的 BULK 選項時，這樣做特別方便。<br /><br /> *m* 的值必須為正整數。 根據預設， **char** 資料行的最大長度是 8000 個字元，而 **nchar** 資料行的最大長度是 4000 個字元。|選用|  
+|COLLATION **="** _collationName_ **"**|COLLATION 只能用於字元欄位。 如需 SQL 定序名稱的清單，請參閱 [SQL Server 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。|選用|  
 |TERMINATOR **= "** _terminator_ **"**|此屬性會指定資料欄位的結束字元。 結束字元可以是任何字元。 結束字元必須是不包含於資料之任何部分的唯一字元。<br /><br /> 根據預設，欄位結束字元是定位字元 (以 \t 表示)。 若要表示段落標記，請使用 \r\n。|只能搭配字元資料的 xsi:type 使用，字元資料需要此屬性。|  
   
-#####  <a name="XsiTypeValuesOfFIELD"></a> \<欄位> 項目的 xsi:type 值  
+#####  <a name="XsiTypeValuesOfFIELD"></a>\<欄位> 項目的 xsi:type 值  
  xsi:type 值是識別元素執行個體之資料類型的 XML 建構 (如同屬性般使用)。 如需有關使用「將 xsi:type 值放入資料集」的資訊，請參閱本節稍後的部分。  
   
  \<欄位> 項目的 xsi:type 值支援下列資料類型。  
@@ -225,9 +225,9 @@ ms.locfileid: "68091427"
 |**CharTerm**|**TERMINATOR**|MAX_LENGTH、COLLATION|  
 |**NCharTerm**|**TERMINATOR**|MAX_LENGTH、COLLATION|  
   
- 如需 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的詳細資訊，請參閱 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)＞。  
+ 如需 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。  
   
-####  <a name="AttrOfColumnElement"></a> \<資料行> 項目的屬性  
+####  <a name="AttrOfColumnElement"></a>\<資料行> 項目的屬性  
  本節描述 \<資料行> 項目的屬性，這些屬性會摘要在下列的結構描述語法中：  
   
  <COLUMN  
@@ -252,24 +252,24 @@ ms.locfileid: "68091427"
   
  欄位會使用下列屬性對應到目標資料表的資料行：  
   
-|COLUMN 屬性|Description|選擇性 /<br /><br /> 必要項|  
+|COLUMN 屬性|描述|選擇性 /<br /><br /> 必要|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="** _fieldID_ **"**|指定對應到資料行的欄位識別碼。<br /><br /> \<資料行來源 **="** _fieldID_ **"** /> 對應到 \<欄位識別碼 **="** _fieldID_ **"** />|必要項|  
-|NAME = "*columnName*"|指定資料列集中由格式檔案代表的資料行名稱。 此資料行名稱會用來識別結果集中的資料行，而且它不需要對應到用於目標資料表中的資料行名稱。|必要項|  
-|xsi **:** type **="** _ColumnType_ **"**|這是識別元素執行個體之資料類型的 XML 建構 (如同屬性般使用)。 *ColumnType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。<br /><br /> 注意:[&lt;COLUMN&gt; 元素的 xsi:type 值](#XsiTypeValuesOfCOLUMN)一節的 \<COLUMN> 元素資料表列出了 *ColumnType* 的可能值及其相關屬性。|選擇性|  
+|SOURCE **="** _fieldID_ **"**|指定對應到資料行的欄位識別碼。<br /><br /> \<資料行來源 **="** _fieldID_ **"** /> 對應到 \<欄位識別碼 **="** _fieldID_ **"** />|必要|  
+|NAME = "*columnName*"|指定資料列集中由格式檔案代表的資料行名稱。 此資料行名稱會用來識別結果集中的資料行，而且它不需要對應到用於目標資料表中的資料行名稱。|必要|  
+|xsi **:** type **="** _ColumnType_ **"**|這是識別元素執行個體之資料類型的 XML 建構 (如同屬性般使用)。 *ColumnType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。<br /><br /> 注意:[&lt;COLUMN&gt; 元素的 xsi:type 值](#XsiTypeValuesOfCOLUMN)一節的 \<COLUMN> 元素資料表列出了 *ColumnType* 的可能值及其相關屬性。|選用|  
 |LENGTH **="** _n_ **"**|定義固定長度資料類型的長度。 只有當 xsi:type 是字串資料類型時，才會使用 LENGTH。<br /><br /> *n* 的值必須為正整數。|選用 (只在 xsi:type 是字串資料類型時才可使用)|  
 |PRECISION **="** _n_ **"**|指定數字中的位數。 例如，數字 123.45 的精確度是 5。<br /><br /> 其值必須為正整數。|選擇性 (唯有 xsi:type 是變數數字 (variable-number) 資料類型時才能使用)|  
 |SCALE **="** _int_ **"**|指定數字中小數點右方的位數。 例如，數字 123.45 的小數位數是 2。<br /><br /> 值必須是整數。|選擇性 (唯有 xsi:type 是變數數字 (variable-number) 資料類型時才能使用)|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|指定資料行是否可指定 NULL 值。 此屬性完全與 FIELDS 無關。 然而，若資料行並非 NULLABLE 且欄位指定 NULL (未指定任何值)，則會導致執行階段錯誤。<br /><br /> 只有當您執行一般的 SELECT FROM OPENROWSET(BULK...) 陳述式時，才會使用 NULLABLE 屬性。|選用 (可用於任何資料類型)|  
   
-#####  <a name="XsiTypeValuesOfCOLUMN"></a> \<資料行> 項目的 xsi:type 值  
+#####  <a name="XsiTypeValuesOfCOLUMN"></a>\<資料行> 項目的 xsi:type 值  
  xsi:type 值是識別元素執行個體之資料類型的 XML 建構 (如同屬性般使用)。 如需有關使用「將 xsi:type 值放入資料集」的資訊，請參閱本節稍後的部分。  
   
  \<資料行> 項目支援原生 SQL 資料類型，如下所示：  
   
 |類型類別目錄|\<資料行> 資料類型|必要的 XML 屬性<br /><br /> 適用於資料類型|選擇性 XML 屬性<br /><br /> 適用於資料類型|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|固定|**SQLBIT**、 **SQLTINYINT**、 **SQLSMALLINT**、 **SQLINT**、 **SQLBIGINT**、 **SQLFLT4**、 **SQLFLT8**、 **SQLDATETIME**、 **SQLDATETIM4**、 **SQLDATETIM8**、 **SQLMONEY**、 **SQLMONEY4**、 **SQLVARIANT**和 **SQLUNIQUEID**|無。|NULLABLE|  
+|已修正|**SQLBIT**、 **SQLTINYINT**、 **SQLSMALLINT**、 **SQLINT**、 **SQLBIGINT**、 **SQLFLT4**、 **SQLFLT8**、 **SQLDATETIME**、 **SQLDATETIM4**、 **SQLDATETIM8**、 **SQLMONEY**、 **SQLMONEY4**、 **SQLVARIANT**和 **SQLUNIQUEID**|無。|NULLABLE|  
 |變數數字|**SQLDECIMAL** 和 **SQLNUMERIC**|無。|NULLABLE、PRECISION、SCALE|  
 |LOB|**SQLIMAGE**、 **CharLOB**、 **SQLTEXT**和 **SQLUDT**|無。|NULLABLE|  
 |字元 LOB|**SQLNTEXT**|無。|NULLABLE|  

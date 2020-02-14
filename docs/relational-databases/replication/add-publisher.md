@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ac60bbbed5a14c0ec891b2794620c1492cdb0fb5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d84df39c307177dc2e7fcbab9c9cdf177b580a73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768849"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286889"
 ---
 # <a name="add-publisher"></a>加入發行者
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[加入發行者]** 對話方塊，可讓您將一或多個發行者加入至複寫監視器的左窗格。 加入發行者之後，選取左窗格中的發行者會在右窗格中顯示該發行者的資訊。  
   
 ## <a name="options"></a>選項。  
- **[加入]**  
- 按一下即可選取要加入的發行者類型，可用來啟動 **[連接到伺服器]** 對話方塊。 選項包括：  
+ **加入**  
+ 按一下即可選取要加入的發行者類型，可用來啟動 **[連接到伺服器]** 對話方塊。 可用選項包括：  
   
 -   **加入 SQL Server 發行者...**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68768849"
   
 -   **加入 Oracle 發行者...**  
   
-     使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor associated with the Oracle Publisher using the **Connect to Server** dialog box.  
+     使用 [連線到伺服器]  對話方塊，連線到與 Oracle 發行者建立關聯的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 散發者。  
   
 -   **指定散發者，並加入其發行者...**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68768849"
  **在下列群組中顯示此發行者**  
  從清單中選取一個發行者群組。 發行者會在左窗格中的這個群組之下顯示。 群組提供組織發行者的一種方式，對於複寫的運作方式沒有影響。 如果沒有定義任何群組或想要建立新的群組，請按一下 **[新增群組]** 。  
   
- **[新增群組]**  
+ **新增群組**  
  按一下即可建立新的發行者群組。 發行者群組提供在複寫監視器內組織發行者的一種便利方式。 群組不會影響資料的複寫，也不會影響複寫拓撲中各伺服器間的關聯性。  
   
 ## <a name="see-also"></a>另請參閱  

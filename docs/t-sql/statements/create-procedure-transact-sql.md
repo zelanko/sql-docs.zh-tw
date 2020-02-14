@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d24ab7a119162c9ad0f084efa8f47961b270a11e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 9ae139dda1837a6d8698809f984060f0b341b758
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982761"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909818"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -144,7 +144,7 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
   
 ## <a name="arguments"></a>引數
 OR ALTER  
- **適用於**：Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始)。  
+ **適用於**：Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始)。  
   
  如果程序已經存在，即會將它改變。
  
@@ -199,7 +199,7 @@ OR ALTER
 VARYING  
  指定支援做為輸出參數的結果集。 這個參數由程序動態建構，可能會有不同的內容。 只適用於 **cursor** 參數。 這個選項不適用於 CLR 程序。  
   
-*default*  
+*預設值*  
  參數的預設值。 如果定義了參數的預設值，不必指定該參數的值就可以執行程序。 預設值必須是常數，或者，可以是 NULL。 常數值可以採用萬用字元格式，讓您可以在將參數傳入程序時使用 LIKE 關鍵字。   
   
  **sys.parameters.default** 資料行中只會記錄 CLR 程序的預設值。 如果是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程序參數，該資料行為 NULL。  
@@ -308,7 +308,7 @@ SERIALIZABLE
 -   如果其他交易插入了新資料列，且其索引鍵值落在目前交易之任何陳述式已讀取的索引鍵範圍中，則目前交易會失敗。  
   
 SNAPSHOT  
- 指定交易中任何陳述式所讀取的資料都是交易一致性版本，這些資料從交易開始時就已存在。  
+ 指定交易中任何陳述式所讀取的資料都會與交易開始時就存在的資料版本一致。  
   
 DATEFIRST = *number*  
  **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -353,10 +353,10 @@ SELECT DB_NAME(@ID) AS ThatDB;
 
 如需更多範例，請參閱本主題結尾的[範例](#Examples)。     
     
-## <a name="best-practices"></a>最佳作法  
+## <a name="best-practices"></a>最佳做法  
  雖然這不是最詳盡的最佳作法清單，但這些建議可能會改善程序效能。  
   
--   使用 SET NOCOUNT ON 陳述式做為程序主體中的第一個陳述式。 亦即，將該陳述式放在 AS 關鍵字正後方。 這樣會關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在執行任何 SELECT、INSERT、UPDATE、MERGE 和 DELETE 陳述式之後，傳回用戶端的訊息。 這樣能讓所產生的輸出為最小，以保持清晰。 但在現今的硬體上，沒有可測量的效能優勢。 如需詳細資訊，請參閱 [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md)。  
+-   使用 SET NOCOUNT ON 陳述式做為程序主體中的第一個陳述式。 亦即，將該陳述式放在 AS 關鍵字正後方。 這樣會關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在執行任何 SELECT、INSERT、UPDATE、MERGE 和 DELETE 陳述式之後，傳回用戶端的訊息。 這樣能讓所產生的輸出為最小，以保持清晰。 但在現今硬體上沒有可測量的效能優勢。 如需詳細資訊，請參閱 [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md)。  
   
 -   建立或參考程序中的資料庫物件時，請使用結構描述名稱。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不必搜尋多個結構描述，解析物件名稱所需的處理時間會較少。 它也能防止在不指定結構描述的情況下建立物件時，因指派使用者預設結構描述所引起的權限和存取問題。  
   
@@ -440,7 +440,7 @@ GO
 ## <a name="metadata"></a>中繼資料  
  下表列出可用於傳回預存程序之詳細資訊的目錄檢視和動態管理檢視。  
   
-|檢視|Description|  
+|檢視|描述|  
 |----------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|傳回 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程序的定義。 您無法使用 **sys.sql_modules** 目錄檢視來檢視以 ENCRYPTION 選項建立的程序文字。|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|傳回 CLR 程序的詳細資訊。|  
@@ -451,13 +451,13 @@ GO
   
 |效能監視器物件名稱|效能監視器計數器名稱|  
 |-------------------------------------|--------------------------------------|  
-|SQLServer：計畫快取物件|Cache Hit Ratio|  
+|SQLServer：計畫快取物件|快取點擊率|  
 ||快取頁面|  
 ||快取物件計數*|  
   
  \* 這些計數器可供各種類別目錄的快取物件使用，包括隨選 [!INCLUDE[tsql](../../includes/tsql-md.md)]、已備妥的 [!INCLUDE[tsql](../../includes/tsql-md.md)]、程序、觸發程序等等。 如需詳細資訊，請參閱 [SQL Server 的 Plan Cache 物件](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>權限  
  需要資料庫的 **CREATE PROCEDURE** 權限，以及要在其中建立程序之結構描述的 **ALTER** 權限，或者需要 **db_ddladmin** 固定資料庫角色的成員資格。  
@@ -489,7 +489,7 @@ GO
   
 ## <a name="Examples"></a> 範例  
   
-|類別目錄|代表性語法元素|  
+|類別|代表性語法元素|  
 |--------------|------------------------------|  
 |[基本語法](#BasicSyntax)|CREATE PROCEDURE|  
 |[傳遞參數](#Parameters)|@parameter <br> &nbsp;&nbsp;  • = 預設值 <br> &nbsp;&nbsp; • 輸出 <br> &nbsp;&nbsp; • 資料表值參數類型 <br> &nbsp;&nbsp; • CURSOR VARYING|  

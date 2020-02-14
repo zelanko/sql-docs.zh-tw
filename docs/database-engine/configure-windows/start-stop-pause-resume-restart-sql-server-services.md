@@ -41,10 +41,10 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 281d392bcb6c9bd6e46dbb6b41a85d080bb811f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68038836"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>啟動、停止、暫停、繼續、重新啟動 SQL Server 服務
@@ -114,7 +114,7 @@ ms.locfileid: "68038836"
   
 -   在叢集上執行時，使用叢集管理員來管理 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服務的效果最佳。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  根據預設，只有本機 Administrators 群組的成員能夠啟動、停止、暫停、繼續或重新啟動服務。 若要將管理服務的能力授與非系統管理員，請參閱 [How to grant users rights to manage services in Windows Server 2003](https://support.microsoft.com/kb/325349)(如何在 Windows Server 2003 中，將管理服務的權限授與使用者)。 (其他 Windows 版本的程序都很相似)。  
@@ -127,7 +127,7 @@ ms.locfileid: "68038836"
   
 1.  指向 **[開始]** 功能表上的 **[所有程式]** ，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]** ，再按一下 **[SQL Server 組態管理員]** 。  
   
-     由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 程式的嵌入式管理單元，而不是獨立的程式，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員在較新版本的 Windows 中不會作為應用程式出現。 以下是將 Windows 安裝在 C 磁碟機時的最近四個版本路徑。  
+     因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理主控台程式的嵌入式管理單元，而不是獨立的程式，所以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員在較新版本的 Windows 中不會作為應用程式出現。 以下是將 Windows 安裝在 C 磁碟機時的最近四個版本路徑。  
   
     |||  
     |-|-|  
@@ -187,7 +187,7 @@ ms.locfileid: "68038836"
 3.  當系統提示您是否要執行動作時，請按一下 **[是]** 。  
   
 ##  <a name="CommandPrompt"></a> 從命令提示字元視窗使用 net 命令  
- 可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net [!INCLUDE[msCoName](../../includes/msconame-md.md)] 命令來啟動、停止或暫停 **net** 服務。  
+ 可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows **net** 命令來啟動、停止或暫停 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
   
 ###  <a name="dbDefault"></a> 若要啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -358,7 +358,7 @@ ms.locfileid: "68038836"
  [檢視與讀取 SQL Server 安裝程式記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)   
  [以最低組態啟動 SQL Server](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)   
- [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
+ [SQL Server 2016 的版本所支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
   
   
 

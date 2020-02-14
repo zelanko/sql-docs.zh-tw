@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 67db54183f186ce5a116aada3e5f6b058abb9dc5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f4f51850fe288f2bbbd6d0e70a123a03f84344ac
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907119"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284940"
 ---
 # <a name="configure-publishing-and-distribution"></a>設定發行和散發
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "72907119"
 
 ##  <a name="BeforeYouBegin"></a> 開始之前 
 
-###  <a name="Security"></a> 安全性 
+###  <a name="Security"></a> Security 
 如需詳細資訊，請參閱[檢視及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。
 
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio 
@@ -36,7 +36,7 @@ ms.locfileid: "72907119"
 
 #### <a name="to-configure-distribution"></a>若要設定散發 
 
-1. 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到將成為「散發者」的伺服器 (在許多情況下，「發行者」與「散發者」是同一個伺服器)，然後展開伺服器節點。
+1. 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連線到將成為「散發者」的伺服器 (在許多情況下，「發行者」與「散發者」是同一部伺服器)，然後展開伺服器節點。
 
 2. 在以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[設定散發]** 。
 
@@ -77,7 +77,7 @@ ms.locfileid: "72907119"
 
    - 如果結果集中 `distribution db installed` 的值是 `0`，請在 master 資料庫的「散發者」上執行 [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)。 針對 `@database` 指定散發資料庫的名稱。 您可以選擇針對 `@max_distretention` 指定最大交易保留期限，並針對 `@history_retention` 指定記錄保留期限。 如果正在建立新的資料庫，請指定所要的資料庫屬性參數。
 
-2. 在散發者上執行 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)，指定將作為 `@working_directory` 預設快照集資料夾使用的 UNC 共用。 如果散發者將在與發行者連接時使用「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」，則也必須針對 `@security_mode` 指定 `0` 的值，並針對 `@login` 和`@password` 指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入資訊。
+2. 在散發者上執行 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)，指定將作為 `@working_directory` 預設快照集資料夾使用的 UNC 共用。 如果散發者將在與發行者連線時使用「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」，則也必須針對 `@security_mode` 指定 `0` 的值，並針對 `@login` 和 `@password` 指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入資訊。
 
    若是 SQL Database 受控執行個體上的散發者，請為 `@working_directory` 使用 Azure 儲存體帳戶，並為 `@storage_connection_string` 使用儲存體存取金鑰。 
 

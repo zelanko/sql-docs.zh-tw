@@ -11,10 +11,10 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
 ms.openlocfilehash: 975a312988a7df4bdb4fb2858d7b0fcbe95cea33
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71016855"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>加密與 Linux 上 SQL Server 的連線
@@ -64,13 +64,13 @@ TLS 可用來加密從用戶端應用程式到 [!INCLUDE[ssNoVersion](../include
     -   如果您使用 CA 簽署的憑證，則必須將「憑證授權單位」(CA) 憑證而不是使用者憑證複製到用戶端機器。 
     -   如果您使用自我簽署憑證，只要將 .pem 檔案複製到下列發行版本的個別資料夾，並執行命令來啟用它們即可 
         - **Ubuntu**：將憑證複製到 ```/usr/share/ca-certificates/```，將副檔名重新命名為 .crt，使用 dpkg-reconfigure ca-certificates 來啟用它作為系統 CA 憑證。 
-        - **RHEL**：將憑證複製到 ```/etc/pki/ca-trust/source/anchors/```，使用 ```update-ca-trust``` 來將其啟用成系統 CA 憑證。
+        - **RHEL**：將憑證複製到 ```/etc/pki/ca-trust/source/anchors/```，使用 ```update-ca-trust``` 來啟用它作為系統 CA 憑證。
         - **SUSE**：將憑證複製到 ```/usr/share/pki/trust/anchors/```，使用 ```update-ca-certificates``` 來啟用它作為系統 CA 憑證。
         - **Windows**：將 .pem 檔案匯入成 [目前的使用者] -> [受信任的根憑證授權單位] -> [憑證] 底下的憑證
         - **macOS**： 
            - 將憑證複製到 ```/usr/local/etc/openssl/certs```
            - 執行下列命令以取得雜湊值：```/usr/local/Cellar/openssl/1.0.2l/openssl x509 -hash -in mssql.pem -noout```
-           - 將憑證重新命名成值。 例如： ```mv mssql.pem dc2dd900.0```＞。 確定 dc2dd900.0 在 ```/usr/local/etc/openssl/certs``` 中
+           - 將憑證重新命名成值。 例如： ```mv mssql.pem dc2dd900.0``` 。 確定 dc2dd900.0 在 ```/usr/local/etc/openssl/certs``` 中
     
 -   **範例連接字串** 
 
@@ -129,7 +129,7 @@ TLS 可用來加密從用戶端應用程式到 [!INCLUDE[ssNoVersion](../include
 
 ## <a name="common-connection-errors"></a>常見的連線錯誤  
 
-|錯誤訊息 |Fix |
+|錯誤訊息 |修正 |
 |--- |--- |
 |此憑證鏈結是由不受信任的授權單位發出的。  |當用戶端無法驗證 SQL Server 在 TLS 信號交換期間所出示憑證上的簽章時，就會發生此錯誤。 確定用戶端直接信任 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 憑證，或信任簽署 SQL Server 憑證的 CA。 |
 |目標主體名稱不正確。  |確定 SQL Server 憑證上的 [一般名稱] 欄位與用戶端連接字串中指定伺服器名稱相符。 |  

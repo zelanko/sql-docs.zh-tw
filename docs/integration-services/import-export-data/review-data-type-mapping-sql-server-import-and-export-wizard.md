@@ -12,10 +12,10 @@ ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f0bd7fe34b1945c3f0f2255e256ead38a6d15e3a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296271"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>檢閱資料類型對應 (SQL Server 匯入和匯出精靈)
@@ -36,7 +36,7 @@ ms.locfileid: "71296271"
  -   [資料表]  清單中資料列上的警告圖示，指出將至少一個資料行從查詢結果轉換成目的地資料表中的相容資料類型時發生問題。
  -   [資料類型對應]  清單中第一個資料列上的警告圖示，指出從來源資料行的 **int** 資料類型對應至目的地資料行的 **smalldatetime** 資料類型可能會導致資料遺失。
  
- ![匯入和匯出精靈的 [檢閱資料類型對應] 頁面](../../integration-services/import-export-data/media/review-mapping.png "匯入和匯出精靈的 [檢閱資料類型對應] 頁面") 
+ ![[匯入和匯出精靈] 的 [檢閱資料類型對應] 頁面](../../integration-services/import-export-data/media/review-mapping.png "[匯入和匯出精靈] 的 [檢閱資料類型對應] 頁面") 
  
 ## <a name="review-the-source-and-destination-tables"></a>檢閱來源與目的地資料表  
  [檢閱資料類型對應]  頁面的上半部是 [資料表]  清單，其中列出要從來源複製至目的地的資料表。 若要查看個別資料表的轉換資訊，請在 [資料表]  清單中選取資料表。 所選取資料表之個別資料行的轉換資訊會顯示在此頁面下半部的 [資料類型對應]  方格中。
@@ -47,10 +47,10 @@ ms.locfileid: "71296271"
   
  下表描述 [資料表]  清單中的資料行。  
   
-|資料行|Description|  
+|資料行|描述|  
 |------------|-----------------|  
 |(來源圖示)|指出資料類型轉換的成功機率：<br /> - **綠色** 的核取記號圖示表示精靈預期這個資料表的所有資料類型轉換都會成功。<br />- **黃色** 的警告圖示表示您應該檢閱精靈即將執行的個別轉換。 若要檢閱這些轉換，請選取資料表，然後在 **[資料類型對應]** 清單中檢閱個別資料行的轉換。<br />- **紅色** 的錯誤圖示表示精靈無法確實針對這個資料表執行某些轉換。|  
-|**來源**|來源資料表的名稱。|  
+|**Source**|來源資料表的名稱。|  
 |(目的地圖示)|指出目的地已經存在或將由精靈建立：<br /> -   資料表圖示表示目的地是現有的資料表。<br />-   含有光環的資料表圖示表示目的地是精靈即將建立的新資料表。|  
 |**目的地**|目的地資料表的名稱。|  
   
@@ -63,7 +63,7 @@ ms.locfileid: "71296271"
 
 下表描述 [資料類型對應]  清單中的資料行。 
 
-|資料行|Description|  
+|資料行|描述|  
 |------------|-----------------|  
 |(轉換圖示)|指出資料類型轉換的成功機率：<br /> - **綠色** 的核取記號圖示表示精靈預期這個資料行的資料類型轉換會成功。<br />- **黃色** 的警告圖示表示您應該檢閱精靈即將執行的轉換。 若要檢閱轉換，請按兩下資料行，即可檢視 [資料行轉換詳細資訊]  對話方塊。 如需詳細資訊，請參閱 [資料行轉換詳細資訊對話方塊](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md)。<br />- **紅色** 錯誤圖示表示精靈無法確實執行轉換。|  
 |**來源資料行**|來源資料行的名稱。|  

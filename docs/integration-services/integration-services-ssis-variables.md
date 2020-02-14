@@ -19,10 +19,10 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 973e5e1449205d5e72abfa03068db3c8c3e98f87
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296156"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 變數
@@ -30,7 +30,7 @@ ms.locfileid: "71296156"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  變數會儲存 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝及其容器、工作和事件處理常式在執行階段可使用的值。 「指令碼」工作和「指令碼」元件中的指令碼也可以使用變數。 將工作和容器排序成工作流程的優先順序條件約束，可在其條件約束定義含有運算式時使用變數。  
+  變數會儲存 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 套件及其容器、工作與事件處理常式在執行階段所能使用的值。 「指令碼」工作和「指令碼」元件中的指令碼也可以使用變數。 將工作和容器排序成工作流程的優先順序條件約束，可在其條件約束定義含有運算式時使用變數。  
   
  您可將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中的變數用於下列用途：  
   
@@ -98,8 +98,8 @@ ms.locfileid: "71296156"
  **名稱**    
  指定變數名稱。  
   
- **命名空間**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供兩個命名空間： **User** 和 **System**。 依預設，自訂變數屬於 **User** 命名空間，而系統變數則屬於 **System** 命名空間。 您可以為使用者定義變數建立其他命名空間，並變更 **User** 命名空間的名稱，但是您無法變更 **System** 命名空間的名稱，也無法將變數加入 **System** 命名空間或將系統變數指派給其他命名空間。  
+ **Namespace**  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供兩個命名空間：**User** 和 **System**。 依預設，自訂變數屬於 **User** 命名空間，而系統變數則屬於 **System** 命名空間。 您可以為使用者定義變數建立其他命名空間，並變更 **User** 命名空間的名稱，但是您無法變更 **System** 命名空間的名稱，也無法將變數加入 **System** 命名空間或將系統變數指派給其他命名空間。  
   
 **RaiseChangedEvent**  
  當此屬性設為 [True]  時，**OnVariableValueChanged** 事件會在變數變更值時產生。  
@@ -107,7 +107,7 @@ ms.locfileid: "71296156"
  **ReadOnly**  
  當此屬性設為 [False]  ，表示變數可讀取\寫入。  
   
-**範圍。**    
+**範圍**    
  > [!NOTE]  
 >  您只能透過按一下 [變數]  視窗中的 [移動變數]  來變更此屬性設定。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "71296156"
 
 | 資料類型 | 預設值 |
 |---|---|
-| 布林 | False |
+| Boolean | False |
 | 數字和二進位資料類型 | 0 (零) |
 | 字元和字串資料類型 | (空字串) |
 | Object | System.Object |
@@ -158,7 +158,7 @@ ms.locfileid: "71296156"
   
  **資料流程運算式** ：使用變數在運算式中提供值，「衍生的資料行」和「條件式分割」轉換會使用這些運算式擴展資料行，或將資料列導向不同的轉換輸出。 例如， `@varSalutation + LastName`運算式會串連 `VarSalutation` 變數和 `LastName` 資料行中的值。 `Income < @HighIncome` 運算式會將 `Income` 資料行中、值小於 `HighIncome` 變數中的值的資料列導向輸出。 如需詳細資訊，請參閱[衍生的資料行轉換](../integration-services/data-flow/transformations/derived-column-transformation.md)、[條件式分割轉換](../integration-services/data-flow/transformations/conditional-split-transformation.md) 和 [Integration Services &#40;SSIS&#41; 運算式](../integration-services/expressions/integration-services-ssis-expressions.md)。  
   
- **優先順序條件約束運算式**：提供要在優先順序條件約中使用的值，決定受條件約束的可執行檔是否執行。 這些運算式可以和執行結果 (成功、失敗、完成) 一起使用，或取代執行結果。 例如，如果 `@varMax > @varMin`運算式評估為 **true**，可執行檔就會執行。 如需詳細資訊，請參閱[將運算式加入優先順序條件約束](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)。  
+ **優先順序條件約束運算式**：提供要在優先順序條件約中使用的值，決定受條件約束的可執行檔是否執行。 這些運算式可以和執行結果 (成功、失敗、完成) 一起使用，或取代執行結果。 例如，如果 `@varMax > @varMin`運算式評估為 **true**，可執行檔就會執行。 如需詳細資訊，請參閱 [將運算式加入優先順序條件約束](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)。  
   
  **參數和傳回碼** ：提供值給輸入參數，或儲存輸出參數和傳回碼的值。 您可以將變數對應到參數和傳回值來完成這個動作。 例如，如果您將 `varProductId` 變數設為 23 並執行 `SELECT * from Production.Product WHERE ProductID = ?`SQL 陳述式，查詢就會擷取 `ProductID` 為 23 的產品。 如需詳細資訊，請參閱 [執行 SQL 工作](../integration-services/control-flow/execute-sql-task.md) 和 [執行 SQL 工作中的參數和傳回碼](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)。  
   
@@ -174,21 +174,21 @@ ms.locfileid: "71296156"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，若要定義變數的範圍，請執行下列其中之一：  
+3.  在 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中，若要定義變數的範圍，請執行下列其中之一：  
   
-    -   若要將範圍設為封裝，按一下 [控制流程]  索引標籤之設計介面上的任意位置。  
+    -   若要將範圍設為封裝，請按一下 [控制流程]  索引標籤之設計介面上的任意位置。  
   
     -   若要將範圍設為事件處理常式，在 [事件處理常式]  索引標籤的設計介面上，選取可執行檔和事件處理常式。  
   
     -   若要將範圍設為工作或容器，在 [控制流程]  索引標籤或 [事件處理常式]  索引標籤的設計介面上，按一下工作或容器。  
   
-4.  在 [SSIS]  功能表上，按一下 [變數]  。 您可以將 View.Variables 命令對應到您在 [選項]  對話方塊的 [鍵盤]  頁面中所選擇的組合鍵，以選擇性地顯示 [變數]  視窗。  
+4.  在 **[SSIS]** 功能表上，按一下 **變數**。 您可以將 View.Variables 命令對應到您在 [選項]  對話方塊的 [鍵盤]  頁面中所選擇的組合鍵，以選擇性地顯示 [變數]  視窗。  
   
 5.  在 [變數]  視窗中，按一下**加入變數**圖示。 新變數便會加入清單。  
   
 6.  選擇性地按一下**方格選項**圖示，在 [變數方格選項]  對話方塊中選取要顯示的其他資料行，然後按一下 [確定]  。  
   
-7.  選擇性地設定變數屬性。 如需詳細資訊，請參閱 [設定使用者定義變數的屬性](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)。  
+7.  選擇性地設定變數屬性。 如需詳細資訊，請參閱 [設定使用者定義變數的屬性](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)定義。  
   
 8.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
 
@@ -322,6 +322,6 @@ ms.locfileid: "71296156"
  若要動態地更新變數，您可以建立變數的組態，使用封裝部署組態，然後在部署封裝時更新組態檔中的變數值。 在執行階段，封裝會使用更新的變數值。 如需詳細資訊，請參閱 [建立封裝組態](../integration-services/packages/create-package-configurations.md)。  
 
 ## <a name="related-tasks"></a>相關工作  
- [在子封裝中使用變數和參數的值](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
+ [在子套件中使用變數和參數的值](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [在資料流程元件中將查詢參數對應至變數](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  

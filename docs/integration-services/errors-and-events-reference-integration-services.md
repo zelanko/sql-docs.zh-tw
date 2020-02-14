@@ -16,10 +16,10 @@ ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 64e805e5dd9b334afe252e2c1d43685e9c92b95f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290615"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>錯誤和事件參考 (Integration Services)
@@ -36,7 +36,7 @@ ms.locfileid: "71290615"
   
 ## <a name="error-messages"></a>錯誤訊息  
   
-|錯誤的符號名稱|Description|  
+|錯誤的符號名稱|描述|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|指出封裝無法執行，因為某個「快取轉換」轉換正嘗試將資料寫入記憶體中的快取。 不過，快取連線管理員已經將快取檔案載入記憶體中的快取。|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|指出封裝無法執行，因為指定的連接已失敗。|  
@@ -46,7 +46,7 @@ ms.locfileid: "71290615"
 |DTS_E_CONNECTIONNOTFOUND|指出封裝無法執行，因為找不到指定的連線管理員。|  
 |DTS_E_CONNECTIONREQUIREDFORMETADATA|指出 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師必須連接到資料來源，才能擷取來源或目的地的新增或更新中繼資料，並指出該設計師無法與資料來源連接。|  
 |DTS_E_MULTIPLECACHEWRITES|指出封裝無法執行，因為某個「快取轉換」轉換正嘗試將資料寫入記憶體中的快取。 不過，另一個「快取轉換」已經寫入記憶體中的快取。|  
-|DTS_E_PRODUCTLEVELTOLOW|指出封裝無法執行，因為尚未安裝正確的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 版本。|  
+|DTS_E_PRODUCTLEVELTOLOW|指出套件無法執行，因為尚未安裝正確的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 版本。|  
 |DTS_E_READNOTFILLEDCACHE|指出「查閱」轉換正嘗試從記憶體中的快取讀取資料，同時「快取轉換」轉換正將資料寫入快取。|  
 |DTS_E_UNPROTECTXMLFAILED|指出系統並未將保護的 XML 節點解密。|  
 |DTS_E_WRITEWHILECACHEINUSE|指出「快取轉換」轉換正嘗試將資料寫入記憶體中的快取，同時「查閱」轉換正從記憶體中的快取讀取資料。|  
@@ -55,7 +55,7 @@ ms.locfileid: "71290615"
 ## <a name="events-sqlispackage"></a>事件 (SQLISPackage)  
  如需詳細資訊，請參閱 [Integration Services 封裝所記錄的事件](../integration-services/performance/events-logged-by-an-integration-services-package.md)。  
   
-|事件|Description|  
+|事件|描述|  
 |-----------|-----------------|  
 |SQLISPackage_12288|指出封裝已經啟動。|  
 |SQLISPackage_12289|指出封裝已順利地完成執行。|  
@@ -69,7 +69,7 @@ ms.locfileid: "71290615"
 ## <a name="events-sqlisservice"></a>事件 (SQLISService)  
  如需詳細資訊，請參閱 [Integration Services 服務所記錄的事件](../integration-services/service/events-logged-by-the-integration-services-service.md)。  
   
-|事件|Description|  
+|事件|描述|  
 |-----------|-----------------|  
 |SQLISService_256|指出服務即將啟動。|  
 |SQLISService_257|指出服務已經啟動。|  

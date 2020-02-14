@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 00fd02afb8cfd140124a9f476aa4ae0bfb4e1514
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095320"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和監視異動資料擷取 (SQL Server)
@@ -65,7 +65,7 @@ ms.locfileid: "74095320"
 在連續模式中，擷取作業會要求 `sp_cdc_scan` 連續執行。 這會透過提供 maxtrans 和 maxscans，以及記錄檔處理之間秒數的值 (輪詢間隔)，讓此預存程序管理自己的等候迴圈。 在這種模式中執行時，擷取作業會維持使用中，並且在記錄檔掃描之間執行 `WAITFOR`。  
   
 > [!NOTE]  
-> 當輪詢間隔的值大於 0 時，輸送量 (用於重複執行一次作業) 的相同上限也會套用至連續模式中的作業。 也就是說，(`maxtrans` \* `maxscans`) 除以非零的輪詢間隔會針對擷取作業可以處理的平均交易數目設置上限。  
+> 當輪詢間隔的值大於 0 時，輸送量 (用於重複執行一次作業) 的相同上限也會套用至連續模式中的作業。 亦即，(`maxtrans` \* `maxscans`) 除以非零的輪詢間隔，會針對擷取作業可以處理的平均交易數目設置上限。  
   
 ### <a name="capture-job-customization"></a>擷取作業自訂
 

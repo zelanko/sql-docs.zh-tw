@@ -16,10 +16,10 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fe0c9a950221317cb4a9088bae7629fc0c894165
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710325"
 ---
 # <a name="create-a-full-database-backup"></a>建立完整資料庫備份
@@ -43,7 +43,7 @@ ms.locfileid: "71710325"
 - 使用 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 系統預存程序來估計完整資料庫備份的大小。
 - 根據預設，每項成功的備份作業都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔與系統事件記錄檔中，加入一個項目。 如果您經常備份，這些成功訊息將會快速累積，因而產生龐大的錯誤記錄檔！ 這會讓您難以尋找其他訊息。 在這類情況下，如果沒有任何指令碼相依於這些備份記錄項目，您就可以使用追蹤旗標 3226 來隱藏這些項目。 如需詳細資訊，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
-## <a name="Security"></a> 安全性
+## <a name="Security"></a> Security
 
 資料庫備份上的 **TRUSTWORTHY** 是設為 OFF。 如需如何將 **TRUSTWORTHY** 設為 ON，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。
 
@@ -60,7 +60,7 @@ ms.locfileid: "71710325"
 > [!NOTE]
 > 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您可以按一下 [指令碼]  按鈕，然後選取指令碼目的地來產生對應的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 指令碼。
 
-1. 連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體後，請在 [物件總管]  中按一下伺服器名稱以展開伺服器樹狀目錄。
+1. 連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體之後，請在 [物件總管]  中展開伺服器樹狀目錄。
 
 1. 展開 [資料庫]  ，並選取使用者資料庫或展開 [系統資料庫]  ，然後選取系統資料庫。
 
@@ -136,7 +136,7 @@ GO
 
 在此範例中，`SQLTestDB` 資料庫將會備份至預設備份位置上的磁碟。
 
-1. 連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體後，請在 [物件總管]  中按一下伺服器名稱以展開伺服器樹狀目錄。
+1. 連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體之後，請在 [物件總管]  中展開伺服器樹狀目錄。
 
 1. 展開 [資料庫]  ，以滑鼠右鍵按一下 `SQLTestDB`，指向 [工作]  ，然後按一下 [備份...]  。
 
@@ -150,7 +150,7 @@ GO
 
 在此範例中，`SQLTestDB` 資料庫會備份到磁碟上您選擇的位置。
 
-1. 連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體後，請在 [物件總管]  中按一下伺服器名稱以展開伺服器樹狀目錄。
+1. 連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體之後，請在 [物件總管]  中展開伺服器樹狀目錄。
 
 1. 展開 [資料庫]  ，以滑鼠右鍵按一下 `SQLTestDB`，指向 [工作]  ，然後按一下 [備份...]  。
 
@@ -172,7 +172,7 @@ GO
 
 在此範例中，`SQLTestDB` 資料庫將會使用加密備份至預設備份位置。
 
-1. 連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體後，請在 [物件總管]  中按一下伺服器名稱以展開伺服器樹狀目錄。
+1. 連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體之後，請在 [物件總管]  中展開伺服器樹狀目錄。
 
 1. 依序展開 [資料庫]  及 [系統資料庫]  、以滑鼠右鍵按一下 `master`，然後按一下 [新查詢]  來開啟查詢視窗並連線到您的 `SQLTestDB` 資料庫。
 
@@ -210,7 +210,7 @@ GO
 
 若您在儲存體帳戶中尚未擁有 Azure Blob 容器，請先建立一個再繼續。 如需詳細資訊，請參閱[建立一般用途儲存體帳戶](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal)及[建立容器](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container)。
 
-1. 連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體後，請在 [物件總管]  中按一下伺服器名稱以展開伺服器樹狀目錄。
+1. 連線到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體之後，請在 [物件總管]  中展開伺服器樹狀目錄。
 
 1. 展開 [資料庫]  ，以滑鼠右鍵按一下 `SQLTestDB`，指向 [工作]  ，然後按一下 [備份...]  。
 
@@ -251,7 +251,7 @@ GO
 
  BACKUP DATABASE *database* TO *backup_device* [ **,** ...*n* ] [ WITH *with_options* [ **,** ...*o* ] ] ;
 
-|選項|[描述]|
+|選項|描述|
 |------------|-----------------|
 |*database*|為要備份的資料庫。|
 |*backup_device* [ **,** ...*n* ]|指定一份清單，列出備份作業可使用的 1 到 64 個備份裝置。 您可以指定實體備份裝置，或者指定對應的邏輯備份裝置 (若已經定義)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：<br /><br /> { DISK &#124; TAPE } **=** _physical\_backup\_device\_name_<br /><br /> 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。|

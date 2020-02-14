@@ -11,10 +11,10 @@ ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9963f137470c7e252bc00be189c37ac98e6374e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284352"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 各版本支援的 Integration Services 功能
@@ -39,7 +39,7 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
     
 ## <a name="ISNew"></a> SQL Server 2017 的新 Integration Services 功能
   
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|功能|Enterprise|標準|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Scale Out Master|是|||||
 |Scale Out Worker|是|是 <sup>1</sup>|TBD|TBD|TBD|
@@ -51,13 +51,13 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
 
 ## <a name="IEWiz"></a> SQL Server 匯入和匯出精靈
 
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|功能|Enterprise|標準|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |SQL Server 匯入和匯出精靈|是|是|是|是|是|  
 
 ## <a name="IS"></a> Integration Services  
   
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|功能|Enterprise|標準|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |內建的資料來源連接器|是|是|||| 
 |內建工作和轉換|是|是||||  
@@ -68,7 +68,7 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
 
 ## <a name="ISAA"></a> Integration Services - 進階來源和目的地  
   
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|功能|Enterprise|標準|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Attunity 的高效能 Oracle 來源和目的地|是|||||  
 |Attunity 的高效能 Teradata 來源和目的地|是|||||  
@@ -79,7 +79,7 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
   
 ## <a name="ISAT"></a> Integration Services - 進階工作和轉換  
   
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|功能|Enterprise|標準|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Attunity 異動資料擷取元件 <sup>1</sup>|是|||||  
 |資料採礦查詢轉換|是|||||  

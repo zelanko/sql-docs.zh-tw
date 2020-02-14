@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed302e9361e46b8403cea168201fc6cadaa17986
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026190"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
@@ -50,7 +50,7 @@ DATEADD (datepart , number , date )
   
 ## <a name="arguments"></a>引數  
 *datepart*  
-*date* 中 `DATEADD` 要加上 **整數** *number* 的部分。 此表格會列出所有有效的 *datepart* 引數。 
+`DATEADD` 要加上 **整數** *number* 的 *date* 部分。 此表格會列出所有有效的 *datepart* 引數。 
 
 > [!NOTE]
 > `DATEADD` 不會接受 *datepart* 引數的使用者定義變數對等項目。 
@@ -134,12 +134,12 @@ SELECT DATEADD(year,-2147483647, '20060731');
 -   如果是 **millisecond** 的 *datepart*，且 *number* 介於 -30001 到 +29998 之間，`DATEADD` 不會變更。  
 -   如果是 **millisecond** 的 *datepart*，且 *number* 值小於 -30001 或大於 +29998，`DATEADD` 會從一分鐘開始執行加法。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 在下列子句中使用 `DATEADD`：
 
 + GROUP BY
 + HAVING
-+ ORDER BY
++ 排序依據
 + SELECT \<list>
 + WHERE
   

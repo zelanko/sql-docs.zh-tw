@@ -1,10 +1,10 @@
 ---
 title: 建立連結的伺服器
-ms.date: 11/20/2015
+ms.date: 01/24/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: carlrab
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.linkedserver.properties.general.f1
@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 15d7b07b409d8a281b0ea47222ce608a712cfa3f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: ddcead69006fdee32598590192e777984ea3fcd7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095890"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761890"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>建立連結的伺服器 (SQL Server Database Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "74095890"
   
  連結之伺服器的功能以及所需的引數可能會大大地改變。 本主題中的範例會提供一般範例，但不會描述所有選項。 如需詳細資訊，請參閱 [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)的資料。  
   
-##  <a name="Security"></a> 安全性  
+##  <a name="Security"></a> Security  
   
 ### <a name="permissions"></a>權限  
  使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時，需要伺服器的 **ALTER ANY LINKED SERVER** 權限或 **setupadmin** 固定伺服器角色的成員資格。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 時，需要 **CONTROL SERVER** 權限或 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
@@ -54,7 +54,7 @@ ms.locfileid: "74095890"
   
 2.  在 **[一般]** 頁面的 **[連結的伺服器]** 方塊中，輸入您要連結之 **[SQL Server]** 的執行個體名稱。  
   
-     **[SQL Server]**  
+     **SQL Server**  
      將連結的伺服器識別為 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。 如果您使用這個定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連結之伺服器的方法， **[連結的伺服器]** 中所指定的名稱就必須是伺服器的網路名稱。 另外，從伺服器擷取的任何資料表，都會是來自已連結伺服器上之登入所定義的預設資料庫。  
   
      **其他資料來源**  
@@ -97,11 +97,14 @@ ms.locfileid: "74095890"
   
      **遠端使用者**  
      使用遠端使用者以對應未定義於 **[本機登入]** 中的使用者。 **[遠端使用者]** 必須是遠端伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入。  
-  
+
+    > [!WARNING]
+    > 只有 SQL Server 使用者可以在 Azure SQL Database 受控執行個體部署中用作「遠端使用者」。  
+
      **遠端密碼**  
      指定遠端使用者的密碼。  
   
-     **[加入]**  
+     **加入**  
      加入新的本機登入。  
   
      **移除**  
@@ -140,7 +143,7 @@ ms.locfileid: "74095890"
   
      如果為 True，針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源會使用遠端資料行的定序，而針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源會使用定序名稱中所指定的定序。  
   
-     如果為 False，分散式查詢一律會使用本機伺服器的預設定序，而定序名稱與遠端資料行的定序則會被忽略。 預設值為 False。  
+     如果為 False，分散式查詢一律會使用本機伺服器的預設定序，而定序名稱與遠端資料行的定序則會被忽略。 預設值為 false。  
   
      **定序名稱**  
      如果使用遠端定序為 True，並且資料來源不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源，請指定遠端資料來源所使用的定序名稱。 這個名稱必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所支援的定序之一。  
@@ -162,7 +165,7 @@ ms.locfileid: "74095890"
      **啟用分散式交易的升級**  
      使用此選項，透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 交易，保護伺服器對伺服器程序的動作。 此選項為 TRUE 時，呼叫遠端預存程序就會啟動分散式交易，而且會利用 MS DTC 來編列這項交易。 如需詳細資訊，請參閱 [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)的資料。  
   
-6.  按一下 **[確定]** 。  
+6.  按一下 [確定]  。  
   
 ##### <a name="to-view-the-provider-options"></a>若要檢視提供者選項  
   

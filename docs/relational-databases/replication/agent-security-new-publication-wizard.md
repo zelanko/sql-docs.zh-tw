@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: db3e9b71b5e19e4dec55d64f9e0dde75a38947f5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 192beff1882ddb743cd7840067c9b1ce21c32e77
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770782"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288297"
 ---
 # <a name="agent-security-new-publication-wizard"></a>代理程式安全性 (新增發行集精靈)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68770782"
   
 -   所有交易式發行集的記錄讀取器代理程式。  
   
--   允許可更新訂閱的交易式發行集之佇列讀取器代理程式。 如果您在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job for this agent is created if you specified **Transactional publication with updatable subscriptions** on the **Publication Type** page, regardless of the type of updatable subscriptions you use. 如需有關可更新訂閱的詳細資訊，請參閱[異動複寫的可更新訂閱](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。  
+-   允許可更新訂閱的交易式發行集之佇列讀取器代理程式。 如果您在 [發行集類型]  頁面上指定 [具有可更新訂閱的交易式發行集]  ，則不論您所使用可更新訂閱類型為何都會建立此代理程式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。 如需有關可更新訂閱的詳細資訊，請參閱＜ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)＞。  
   
  如需有關代理程式所需權限和複寫安全性的最佳做法的詳細資訊，請參閱＜ [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md) ＞和＜ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)＞。  
   

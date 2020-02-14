@@ -13,10 +13,10 @@ ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e3bbac9bbdc12e5f2c1a0fb318a91860e44131d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940928"
 ---
 # <a name="back-up-database-general-page"></a>備份資料庫 (一般頁面)
@@ -26,7 +26,7 @@ ms.locfileid: "67940928"
  如需基本備份概念的詳細資訊，請參閱[備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，可以按一下 [指令碼]  按鈕，然後選取指令碼的目的地，以產生對應的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 指令碼。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您可以按一下 [指令碼]  按鈕，然後選取指令碼目的地來產生對應的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 指令碼。  
   
  **若要使用 SQL Server Management Studio 建立備份**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "67940928"
 ### <a name="source"></a>來源  
  **[來源]** 面板的選項會識別資料庫，並指定備份作業的備份類型和元件。  
   
- **[資料庫備份]**  
+ **Database**  
  選取要備份的資料庫。  
   
  **復原模式**  
@@ -74,10 +74,10 @@ ms.locfileid: "67940928"
   
 |||  
 |-|-|  
-|**[資料庫備份]**|指定備份整個資料庫。|  
+|**Database**|指定備份整個資料庫。|  
 |**檔案與檔案群組**|指定備份指定的檔案和 (或) 檔案群組。<br /><br /> 選取這個選項會開啟 **[選取檔案與檔案群組]** 對話方塊。 在選取了要備份的檔案群組或檔案，並按一下 **[確定]** 之後，選取項目就會出現在 **[檔案群組與檔案]** 方塊中。|  
   
-### <a name="destination"></a>目的地  
+### <a name="destination"></a>Destination  
  **[目的地]** 面板的選項可讓您指定備份作業的備份裝置類型，並尋找現有的邏輯或實體備份裝置。  
   
 > [!NOTE]  
@@ -94,15 +94,15 @@ ms.locfileid: "67940928"
   
  所顯示的下一組選項取決於選取的目的地類型。 如果選取 [磁碟] 或 [磁帶]，則會顯示下列選項。  
   
- **[加入]**  
- 將檔案或裝置加入至 **[備份至]** 清單。 您在本機磁碟或遠端磁碟上，最多可以同時備份到 64 個裝置。 若要指定遠端磁碟上的檔案，請使用完整的通用命名慣例 (UNC) 名稱。 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
+ **加入**  
+ 將檔案或裝置加入至 **[備份至]** 清單。 您在本機磁碟或遠端磁碟上，最多可以同時備份到 64 個裝置。 若要指定遠端磁碟上的檔案，請使用完整的通用命名慣例 (UNC) 名稱。 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。  
  
  
   
  **移除**  
  從 **[備份至]** 清單中，移除一個或多個目前選取的裝置。  
   
- **目錄**  
+ **Contents**  
 顯示所選裝置的媒體內容 (如果裝置存在)。  當 **URL** 指定時，按鈕不會執行函數。 
    
 [選取備份目的地]  對話方塊：在您選取 [新增]  之後，[選取備份目的地]  對話方塊隨即出現。   所顯示的選項集取決於選取的目的地類型。 

@@ -19,10 +19,10 @@ ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68300431"
 ---
 # <a name="database-snapshots-sql-server"></a>資料庫快照集 (SQL Server)
@@ -109,7 +109,7 @@ ms.locfileid: "68300431"
 ##  <a name="LimitationsRequirements"></a> 資料庫快照集的必要條件和限制  
  **本節內容：**  
   
--   [必要條件](#Prerequisites)  
+-   [先決條件](#Prerequisites)  
   
 -   [對來源資料庫的限制](#LimitsOnSourceDb)  
   
@@ -197,7 +197,7 @@ ms.locfileid: "68300431"
     > [!NOTE]  
     >  針對資料庫快照集執行的 SELECT 陳述式不得指定 FILESTREAM 資料行，否則將會傳回下列錯誤訊息： `Could not continue scan with NOLOCK due to data movement.`  
   
--   如果唯讀快照集上的統計資料遺漏或過時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在 tempdb 中建立及維護暫時性統計資料。 如需詳細資訊，請參閱 [Statistics](../../relational-databases/statistics/statistics.md)。  
+-   如果唯讀快照集上的統計資料遺漏或過時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在 tempdb 中建立及維護暫時性統計資料。 如需詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
   
 ###  <a name="DiskSpace"></a> 磁碟空間需求  
  資料庫快照集會耗用磁碟空間。 如果資料庫快照集用光磁碟空間，它會標示為有疑問，因此必須卸除 (不過，來源資料庫不受影響，其上的動作會繼續正常執行)。但是，與資料庫的完整副本相比，快照集的空間利用率仍算是很有效率了。 快照集所需儲存空間，只要足夠儲存那些在存留時間內會有變更的頁面即可。 通常，快照集只會保存一段有限的時間，所以其大小不會是大問題。  

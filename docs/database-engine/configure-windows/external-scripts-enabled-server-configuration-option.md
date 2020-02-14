@@ -14,19 +14,19 @@ ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3f47352cc82ac831ebcd64548baa24423490094f
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72006044"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>啟用外部指令碼伺服器設定選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-**適用對象**：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 和 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 和 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 使用 **external scripts enabled** 選項以啟用具有特定遠端語言擴充功能之指令碼的執行。 依預設，此屬性為 OFF。 如果已安裝**進階分析服務**，安裝程式就可以選擇將此屬性設定為 true。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 您必須先啟用 external script enabled 選項，才能使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 程序來執行外部指令碼。 使用 **sp_execute_external_script** 執行以所支援語言 (例如 R 或 Python) 所撰寫的指令碼。 
 
@@ -63,4 +63,4 @@ RECONFIGURE WITH OVERRIDE;
 
 [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-[SQL Server 機器學習服務](../../advanced-analytics/r/sql-server-r-services.md)
+[SQL Server Machine Learning 服務](../../advanced-analytics/r/sql-server-r-services.md)

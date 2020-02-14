@@ -16,10 +16,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903830"
 ---
 # <a name="get-started-with-full-text-search"></a>全文檢索搜尋使用者入門
@@ -89,7 +89,7 @@ ms.locfileid: "72903830"
  
  我們建議您在相同的全文檢索目錄底下，將具有相同更新特性的資料表 (例如少量變更與大量變更，或在每日特定時段頻繁變更的資料表) 產生關聯。 透過設定全文檢索目錄的母體擴展排程，在高度資料庫活動期間，全文檢索索引仍然能夠保持與資料表同步，而不會對資料庫伺服器的資源使用量造成負面影響。  
   
- 請考慮下列指導方針：  
+ 請參考下列指引：  
   
 -   如果您正在針對包含數百萬資料列的資料表建立索引，請將此資料表指派給它本身的全文檢索目錄。  
   
@@ -108,7 +108,7 @@ CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;
 GO  
 ```  
   
- 下列 [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會更改名為 myStoplist 的停用字詞表，並加入 'en' 一詞 (先針對西班牙文，然後再針對法文)：  
+ 下列 [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會更改名為 myStoplist 的停用字詞表，並新增 'en' 一詞 (先針對西班牙文，然後再針對法文)：  
   
 ```sql  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'Spanish';  
@@ -118,7 +118,7 @@ GO
 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。
 
 ## <a name="update-a-full-text-index"></a>更新全文檢索索引  
- 如同一般 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 索引，當相關聯資料表中的資料變更時，就可以自動更新全文檢索索引。 這是預設行為。 或者，您也可以手動或以指定的排程間隔將全文檢索索引保持在最新狀態。 擴展全文檢索索引可能會相當耗時而且需要大量資源。 因此，索引更新通常會當作在背景中執行的非同步處理序執行並且在修改基底資料表之後，將全文檢索索引保持在最新狀態。 
+ 如同一般 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 索引，當相關聯資料表中的資料變更時，就可以自動更新全文檢索索引。 此為預設行為。 或者，您也可以手動或以指定的排程間隔將全文檢索索引保持在最新狀態。 擴展全文檢索索引可能會相當耗時而且需要大量資源。 因此，索引更新通常會當作在背景中執行的非同步處理序執行並且在修改基底資料表之後，將全文檢索索引保持在最新狀態。 
  
 在基底資料表每次變更之後立即更新全文檢索索引也需要大量資源。 因此，如果您設定更新/插入/刪除的高速率，可能會遇到查詢效能降低的情況。 如果發生這種情況，請考慮排程手動變更追蹤更新，以便偶爾與許多變更保持同步，而非與查詢競爭資源。  
   

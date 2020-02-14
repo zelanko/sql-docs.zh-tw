@@ -14,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c76c8896d19bed29bd8e71f6726b05cc0526e91
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: b96529feb6e6e4c4ac2ad7d4be62474a624392d8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558198"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909908"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>使用 Always Encrypted 將大量的加密資料載入資料行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "75558198"
     ```  
 
 ## <a name="potential-for-data-corruption"></a>資料損毀的可能性  
-不當使用這個選項會導致資料損毀。 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 選項可讓使用者在資料庫中將任何資料插入加密的資料行，包括使用不同金鑰加密、未正確加密，或完全不加密的資料。 如果使用者不小心使用了針對目標資料行設定的加密配置 (資料行加密金鑰、演算法、加密類型) 來複製未正確加密的資料，您將無法解密資料 (資料將會損毀)。 您必須謹慎使用這個選項，因為它會導致資料庫中的資料損毀。  
+不當使用這個選項會導致資料損毀。 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 選項可讓使用者在資料庫中將任何資料插入加密的資料行，包括使用不同金鑰加密、未正確加密，或完全不加密的資料。 如果使用者不小心使用針對目標資料行所設定加密配置 (資料行加密金鑰、演算法、加密類型) 來複製未正確加密的資料，則您將無法解密資料 (資料將會損毀)。 您必須謹慎使用這個選項，因為它會導致資料庫中的資料損毀。  
 
 下列案例示範未正確匯入資料如何導致資料損毀︰  
 

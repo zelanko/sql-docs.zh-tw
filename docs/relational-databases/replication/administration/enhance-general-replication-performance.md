@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: dd7cfe863fde1b4909caadca12b496705f956483
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8ac6758c3856858f6b10b17184705022aa51a62e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768813"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288185"
 ---
 # <a name="enhance-general-replication-performance"></a>增強一般複寫效能
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68768813"
   
 ## <a name="server-and-network"></a>伺服器和網路  
   
--   設定配置給 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的最小和最大記憶體數量。  
+-   設定配置給 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 的最小和最大記憶體數量。  
   
      依預設， [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 將根據可用的系統資源，動態地變更其記憶體需求。 若要避免複寫活動執行期間記憶體可用量過低，請使用 **min server memory** 選項設定最小可用的記憶體。 若要避免作業系統將記憶體分頁部署到光碟，亦可使用 **max server memory** 選項設定最大記憶體數量。 如需詳細資訊，請參閱[伺服器記憶體伺服器組態選項](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68768813"
   
      LOB 比其他資料行資料類型需要更多儲存空間和處理。 除非您的應用程式需要，否則不要在發行項中包含這些資料行。 資料類型 **text**、 **ntext**和 **image** 已被取代。 若您納入 LOB，建議您分別依序使用資料類型 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 。  
   
-     對於異動複寫，請考慮使用名為 **OLEDB 資料流的散發設定檔**的「散發代理程式」設定檔。 如需詳細資訊，請參閱 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
+     對於異動複寫，請考慮使用名為 **OLEDB 資料流的散發設定檔**的「散發代理程式」設定檔。 如需相關資訊，請參閱 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
 ## <a name="publication-design"></a>發行集設計  
   
@@ -159,7 +159,7 @@ ms.locfileid: "68768813"
   
 -   使用散發代理程式和合併代理程式的 **–UseInprocLoader** 參數 (如果發行的資料表包括 XML 資料行，則不可使用此參數)。 此參數會使代理程式在套用快照集時使用 BULK INSERT 命令。  
   
- 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
+ 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱  
   
 -   [處理複寫代理程式設定檔](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   

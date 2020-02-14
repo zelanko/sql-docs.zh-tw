@@ -26,10 +26,10 @@ ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 19f179ae869a175ea6238ba4ade9e5f87d663e08
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297793"
 ---
 # <a name="dtutil-utility"></a>Encrypt
@@ -37,7 +37,7 @@ ms.locfileid: "71297793"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  **dtutil** 命令提示字元公用程式可用來管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。 這個公用程式可以複製、移動、刪除封裝，或確認封裝是否存在。 下列三個位置所儲存的任何 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝都可以執行這些動作： [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區和檔案系統。 如果公用程式存取存放在 **msdb**中的封裝，則命令提示字元可能會需要使用者名稱和密碼。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，則命令提示字元需要使用者名稱和密碼。 如果遺漏使用者名稱， **dtutil** 會嘗試使用 Windows 驗證登入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 封裝的儲存類型是由 **/SQL**、 **/FILE**和 **/DTS** 等選項來識別。  
+  **dtutil** 命令提示字元公用程式可用來管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 套件。 這個公用程式可以複製、移動、刪除封裝，或確認封裝是否存在。 下列三個位置之一所儲存的任何 [!INCLUDE[ssIS](../includes/ssis-md.md)] 套件都可以執行這些動作：[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫、[!INCLUDE[ssIS](../includes/ssis-md.md)] 套件存放區和檔案系統。 如果公用程式存取存放在 **msdb**中的封裝，則命令提示字元可能會需要使用者名稱和密碼。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，則命令提示字元需要使用者名稱和密碼。 如果遺漏使用者名稱， **dtutil** 會嘗試使用 Windows 驗證登入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 封裝的儲存類型是由 **/SQL**、 **/FILE**和 **/DTS** 等選項來識別。  
   
  **dtutil** 命令提示字元公用程式不支援使用命令檔或重新導向。  
   
@@ -87,7 +87,7 @@ dtutil /option [value] [/option [value]]...
   
 #### <a name="parameters"></a>參數  
   
-|選項|Description|  
+|選項|描述|  
 |------------|-----------------|  
 |/?|顯示命令提示字元選項。|  
 |/C[opy] *location;destinationPathandPackageName*|對 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝指定複製動作。 若要使用此參數，您必須先使用 **/FI**、 **/SQ**或 **/DT** 選項來指定封裝的位置。 接下來，指定目的地位置目的地封裝名稱。 *destinationPathandPackageName* 引數指定複製 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝所在的位置。 如果目的地 *location* 是 **SQL**，則也必須在命令中指定 *DestUser*、 *DestPassword* 和 *DestServer* 引數。<br /><br /> 當 **Copy** 動作發現目的地有現有的封裝時， **dtutil** 會提示使用者確認是否要刪除封裝。 **Y** 回覆會覆寫封裝， **N** 回覆會結束程式。 當命令包含 *Quiet* 引數時，不會出現提示，並且會覆寫任何現有的封裝。|  
@@ -111,16 +111,16 @@ dtutil /option [value] [/option [value]]...
 |/M[ove] {*SQL* &#124; *File* &#124; *DTS*}; *pathandname*|對 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝指定移動動作。 若要使用此參數，請先使用 **/FI**、 **/SQ**或 **/DT** 選項來指定封裝的位置。 接下來，指定 **Move** 動作。 這個動作需要兩個以分號分隔的引數：<br /><br /> 目的地引數可指定 *SQL*、 *FILE*或 *DTS*。 *SQL* 目的地可包含 *DESTUSER*、 *DESTPASSWORD*和 *DESTSERVER* 選項。<br /><br /> *pathandname* 引數指定套件的位置：*SQL* 使用套件路徑和封裝名稱， *FILE* 使用 UNC 或本機路徑，*DTS* 使用相對於 [!INCLUDE[ssIS](../includes/ssis-md.md)] 套件存放區根目錄的位置。 當目的地為 *FILE* 或 *DTS*時，路徑引數不包含檔案名稱。 而是使用在指定位置的封裝名稱來做為檔案名稱。<br /><br /> <br /><br /> 當 **MOVE** 動作在目的地發現現有的封裝時， **dtutil** 會提示您確認是否要覆寫該封裝。 **Y** 回覆會覆寫封裝， **N** 回覆會結束程式。 當命令包含 *QUIET* 選項時，不會出現提示，並且會覆寫任何現有的封裝。|  
 |/Q[uiet]|停止執行包含 **COPY**、 **MOVE**或 **SIGN** 選項的命令時所可能出現的確認提示。 如果目的地電腦中已有指定封裝的同名封裝，或已簽署了指定的封裝，就會出現這些提示。|  
 |/R[emark] *text*|在命令列中加入註解。 註解引數是選擇性的。 如果註解文字包括空格，就必須用引號括住文字。 您可以在單一命令列中併入多個 REM 選項。|  
-|/Si[gn] {*SQL* &#124; *File* &#124; *DTS*}; *path*; *hash*|簽署 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝。 這個動作需要使用三個以分號分隔的引數 (目的地、路徑及雜湊)：<br /><br /> 目的地引數可指定 *SQL*、 *FILE*或 *DTS*。 SQL 目的地可包含 *DESTUSER*、 *DESTPASSWORD* 和 *DESTSERVER* 選項。<br /><br /> path 引數指定要處理之封裝的位置。<br /><br /> hash 引數指定用可變長度十六進位字串來表示的憑證識別碼。<br /><br /> 如需詳細資訊，請參閱 [使用數位簽章來識別封裝的來源](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)。<br /><br /> <br /><br /> **\*\* 重要事項 \*\*** 當 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 設定為檢查封裝的簽章時，將只會檢查數位簽章是否存在、是否有效，以及是否來自信任的來源。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]「不會」  檢查套件是否經過變更。|  
-|/SourceP[assword] *password*|指定 *SQL* 和 *SOURCEUSER* 選項使用的密碼，以擷取儲存在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 執行個體上之資料庫中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，所使用的密碼。 在不含 *SOURCEUSER* 選項的命令列上指定 **SOURCEPASSWORD** 是錯的。<br /><br /> 注意： [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
-|/SourceS[erver] *server_instance*|指定與 **SQL** 選項一起使用的伺服器名稱，以擷取 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中所儲存之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 在不含與 *SOURCESERVER* 、 *SIGN SQL*、 *COPY* *SQL*或 *MOVE* *SQL* 選項來指定封裝的位置。<br /><br /> 您可以在伺服器名稱中加入反斜線和執行個體名稱來指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的名稱。|  
+|/Si[gn] {*SQL* &#124; *File* &#124; *DTS*}; *path*; *hash*|簽署 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝。 這個動作需要使用三個以分號分隔的引數 (目的地、路徑及雜湊)：<br /><br /> 目的地引數可指定 *SQL*、 *FILE*或 *DTS*。 SQL 目的地可包含 *DESTUSER*、 *DESTPASSWORD* 和 *DESTSERVER* 選項。<br /><br /> path 引數指定要處理之封裝的位置。<br /><br /> hash 引數指定用可變長度十六進位字串來表示的憑證識別碼。<br /><br /> 如需詳細資訊，請參閱 [Identify the Source of Packages with Digital Signatures](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)(使用數位簽章識別封裝來源)。<br /><br /> <br /><br /> **\*\* 重要事項 \*\*** 當 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 設定為檢查封裝的簽章時，將只會檢查數位簽章是否存在、是否有效，以及是否來自信任的來源。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]「不會」  檢查套件是否經過變更。|  
+|/SourceP[assword] *password*|指定 *SQL* 和 *SOURCEUSER* 選項使用的密碼，以擷取儲存在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 執行個體上之資料庫中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，所使用的密碼。 在不含 *SOURCEUSER* 選項的命令列上指定 **SOURCEPASSWORD** 是錯的。<br /><br /> 注意：[!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
+|/SourceS[erver] *server_instance*|指定與 **SQL** 選項一起使用的伺服器名稱，以擷取 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中所儲存之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 在不含 *SIGN SQL*、*COPY* *SQL* 或 *MOVE* *SQL* 選項的命令列上指定 *SOURCESERVER* 是一項錯誤。<br /><br /> 您可以在伺服器名稱中加入反斜線和執行個體名稱來指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的名稱。|  
 |/SourceU[ser] *username*|指定與 *SOURCESERVER* 選項一起使用的伺服器名稱，以擷取 [!INCLUDE[ssIS](../includes/ssis-md.md)] 驗證之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，所使用的密碼。 在不含 *SOURCEUSER* 、 *SIGN SQL*或 *COPY SQL*選項的命令列上指定 *MOVE SQL* 是錯的。<br /><br /> 注意：[!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
 |/SQ[L] *package_path*|指定 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝的位置。 這個選項指出封裝儲存在 **msdb** 資料庫中。 *package_path* 引數指定 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝的路徑和名稱。 資料夾名稱以反斜線做為結尾。<br /><br /> 如果在下列任何選項的相同命令列中指定 *SQL* 選項，就會傳回 DTEXEC_DTEXECERROR：<br /><br /> *DTS*<br /><br /> *FILE*<br /><br /> *SQL* 選項可附帶下列選項中的零個或一個執行個體：<br /><br /> *SOURCEUSER*<br /><br /> *SOURCEPASSWORD*<br /><br /> *SOURCESERVER*<br /><br /> <br /><br /> 如果未加入 *SOURCEUSERNAME* ，將會使用 Windows 驗證存取封裝。 只有在*SOURCEPASSWORD* 存在時，才允許使用 *SOURCEUSER* 。 如果不包含 *SOURCEPASSWORD* ，則使用空白密碼。<br /><br /> **\*\* 重要事項 \*\*** [!INCLUDE[ssNoteStrongPass](../includes/ssnotestrongpass-md.md)]|  
   
 ## <a name="dtutil-exit-codes"></a>dtutil 結束碼  
  **dtutil** 可設定結束碼，以便在偵測到語法錯誤、使用不正確的引數或指定無效的選項組合時，向您發出警告。 否則，公用程式就會報告「已成功地完成作業」。下表將列出封裝作業結束時， **dtutil** 公用程式所能設定的值。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |0|已順利執行公用程式。|  
 |1|公用程式失敗。|  
@@ -128,7 +128,7 @@ dtutil /option [value] [/option [value]]...
 |5|公用程式無法載入所要求的封裝。|  
 |6|公用程式無法解析命令列，因為它包含語法或語意錯誤。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  您無法搭配 **dtutil**使用命令檔或重新導向。  
   
  命令列的選項順序不重要。  

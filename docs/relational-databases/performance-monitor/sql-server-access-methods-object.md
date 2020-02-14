@@ -14,10 +14,10 @@ ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ab394b7eed0a284b8ed74e5333b01f27283469ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987360"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server 的 Access Methods 物件
@@ -44,7 +44,7 @@ ms.locfileid: "67987360"
   
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Access Methods** 計數器。  
   
-|SQL Server 的 Access Methods 計數器|Description|  
+|SQL Server 的 Access Methods 計數器|描述|  
 |----------------------------------------|-----------------|  
 |**AU cleanup batches/sec**|可將延遲的已卸除配置單位清除的背景工作，每秒內可順利完成的批次數。|  
 |**AU cleanups/sec**|可將延遲的已卸除配置單位清除的背景工作，每秒內順利卸除的配置單位數。 每次卸除配置單位都需要多個批次。|  

@@ -14,10 +14,10 @@ ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 5d835a317f2968775f0cc94df19866c0d083d69d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093518"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server 的 General Statistics 物件
@@ -26,7 +26,7 @@ ms.locfileid: "68093518"
   
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **General Statistics** 計數器。  
   
-|SQL Server 的 General Statistics 計數器|Description|  
+|SQL Server 的 General Statistics 計數器|描述|  
 |--------------------------------------------|-----------------|  
 |**Active Temp Tables**|使用中的暫存資料表數目/資料表變數數目。|  
 |**Connection resets/sec**|從連接集區啟動的登入總數。|  

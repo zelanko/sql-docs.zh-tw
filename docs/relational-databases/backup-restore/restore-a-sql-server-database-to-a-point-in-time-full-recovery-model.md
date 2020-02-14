@@ -15,10 +15,10 @@ ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f4a4a91c4703bd4634f471e3d6bc0b9b4baf2305
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908884"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>將 SQL Server 資料庫還原至某個時間點 (完整復原模式)
@@ -49,7 +49,7 @@ ms.locfileid: "72908884"
   
 -   指定還原順序中較早的時間點  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  如果還原的資料庫不存在，使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。 如果資料庫存在，RESTORE 權限預設為 **系統管理員 (sysadmin)** 和 **資料庫建立者 (dbcreator)** 固定伺服器角色的成員以及資料庫的擁有者 (**dbo**) (對 FROM DATABASE_SNAPSHOT 選項而言，資料庫一律存在)。  
@@ -67,14 +67,14 @@ ms.locfileid: "72908884"
   
 4.  在 **[一般]** 頁面上，使用 **[來源]** 區段指定要還原之備份組的來源和位置。 選取下列其中一個選項：  
   
-    -   **[資料庫備份]**  
+    -   **Database**  
   
          從下拉式清單中選取要還原的資料庫。 此清單僅包含已根據 **msdb** 備份記錄而備份的資料庫。  
   
     > [!NOTE]  
     >  如果備份是根據不同的伺服器建立的，目的地伺服器就沒有指定之資料庫的備份記錄資訊。 在此情況下，請選取 **[裝置]** ，以便手動指定要還原的檔案或裝置。  
   
-    -   **[裝置]**  
+    -   **裝置**  
   
          按一下瀏覽 ( **...** ) 按鈕，開啟 [選取備份裝置]  對話方塊。 在 **[備份媒體類型]** 方塊中，選取列出的其中一種裝置類型。 若要選取 **[備份媒體]** 方塊中的一個或多個裝置，請按一下 **[加入]** 。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "72908884"
 14. 如果想要系統在每個還原作業之間提示您，請選取 **[還原每個備份之前先提示]** 。 除非資料庫夠大，而且您想要監視還原作業的狀態，否則這通常不需要。  
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- **Before you begin**  
+ **開始之前**  
   
  指定的時間一律是從記錄備份中還原。 在還原順序的每個 RESTORE LOG 陳述式中，您必須在相同的 STOPAT 子句中指定目標時間或交易。 您必須先還原其端點早於目標還原時間的完整資料庫備份，當做時間點還原的必要條件。 該完整資料庫備份可以晚於最近的完整資料庫備份，只要您之後還原每個後續的記錄備份即可，最多並包括含有目標時間點的記錄備份。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "72908884"
   
  復原點是在由 **時間** 指定的 *datetime*值當時或之前所發生的最新交易認可。  
   
- 若只要還原特定時間點之前進行的修改，請為您要還原的每個備份指定 WITH STOPAT **=** _time_ 。 這樣可確保您不會還原到超過目標時間。  
+ 若只要還原特定時間點之前進行的修改，請為您要還原的每個備份指定 WITH STOPAT **=** _time_。 這樣可確保您不會還原到超過目標時間。  
   
  **將資料庫還原至某個時間點**  
   
@@ -160,7 +160,7 @@ ms.locfileid: "72908884"
     >  RECOVERY 及 STOPAT 選項。 如果交易記錄備份中不含所要求的時間 (例如指定的時間超出交易記錄的結束時間)，則會產生警告訊息，且此資料庫會維持未復原狀態。  
   
 ###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
- 下列範例會將資料庫還原至 `12:00 AM` `April 15, 2020` 時的狀態，並顯示含有多個記錄備份的還原作業。 在備份裝置 `AdventureWorksBackups`上，要還原的完整資料庫備份是裝置上的第三個備份組 (`FILE = 3`)，第一個記錄備份是第四個備份組 (`FILE = 4`)，而第二個記錄備份是第五個備份組 (`FILE = 5`)。  
+ 下列範例會將資料庫還原至 `12:00 AM``April 15, 2020` 時的狀態，並顯示含有多個記錄備份的還原作業。 在備份裝置 `AdventureWorksBackups`上，要還原的完整資料庫備份是裝置上的第三個備份組 (`FILE = 3`)，第一個記錄備份是第四個備份組 (`FILE = 4`)，而第二個記錄備份是第五個備份組 (`FILE = 5`)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫使用簡單復原模式。 若要允許記錄備份，在執行完整資料庫備份之前，已使用 `ALTER DATABASE AdventureWorks SET RECOVERY FULL`將資料庫設定為使用完整復原模式。  

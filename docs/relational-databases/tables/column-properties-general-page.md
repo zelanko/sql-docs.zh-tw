@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 732c1c759eec875af0bd65b763b21d912ffe2de7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085766"
 ---
 # <a name="column-properties-general-page"></a>資料行屬性 (一般頁面)
@@ -49,14 +49,14 @@ ms.locfileid: "68085766"
  **計算文字**  
  指出用來計算資料行文字的陳述式。 如需詳細資訊，請參閱 [指定資料表中的計算資料行](../../relational-databases/tables/specify-computed-columns-in-a-table.md)。  
   
- **識別**  
+ **身分識別**  
  表示資料行是否為資料表的識別欄位。 可能的值為 **True** 和 **False**。  
   
  **識別種子**  
  指出識別欄位的初始資料列值。  
   
  **識別值增量**  
- [識別值增量]  屬性會指定當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為插入的資料列產生識別值時，要加到最大的現有資料列識別值的數值。  
+ [識別值增量]  屬性會指定當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為插入的資料列產生識別值時，要加到最大現有資料列識別值的數值。  
   
  **預設繫結**  
  資料行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設繫結。 若未繫結預設值，此選項可為空白。  

@@ -12,12 +12,12 @@ ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57bd71b3f066b8b392371af0e49693f9f19e6b7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce090a9018327d1808cf891b5ba6c068d37ccb73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999823"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516459"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,10 +29,10 @@ ms.locfileid: "67999823"
   
 ## <a name="blocked-process-report-event-class-data-columns"></a>Blocked Process Report 事件類別資料行  
   
-|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|取得鎖定之資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
-|**有效期間**|**bigint**|封鎖處理序的時間量 (以毫秒為單位)。|13|是|  
+|**有效期間**|**bigint**|封鎖處理序的時間量 (以微秒為單位)。|13|是|  
 |**EndTime**|**datetime**|事件結束的時間。 啟動事件類別 (如 **SQL:BatchStarting** 或 **SP:Starting**) 不會擴展這個資料行。|15|是|  
 |**EventClass**|**int**|事件類型 = 137。|27|否|  
 |**EventSequence**|**int**|要求中之給定事件的順序。|51|否|  

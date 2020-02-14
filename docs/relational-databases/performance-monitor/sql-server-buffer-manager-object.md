@@ -14,10 +14,10 @@ ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f79d41e3fd247ca596a6257415d29f7ebcbe87b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986938"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server 的 Buffer Manager 物件
@@ -41,7 +41,7 @@ ms.locfileid: "67986938"
 ## <a name="buffer-manager-performance-objects"></a>Buffer Manager 效能物件  
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Manager** 效能物件。  
   
-|SQL Server Buffer Manager 計數器|Description|  
+|SQL Server Buffer Manager 計數器|描述|  
 |----------------------------------------|-----------------|  
 |**Background writer pages/sec**|為了強制執行復原間隔設定而排清的頁數。| 
 |**Buffer cache hit ratio**|表示不需讀取磁碟即可在緩衝區快取中找到之頁面的百分比。 此比率是過去數千個分頁存取中，快取叫用總數除以快取查閱所得的結果。 時間一久，比率的變動會越來越小。 從快取讀取遠比從磁碟讀取節省成本，因此您會希望此比率越高越好。 通常，您可以藉由增加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用的記憶體數量或是使用緩衝集區擴充功能，來提高緩衝區快取叫用比率。|  

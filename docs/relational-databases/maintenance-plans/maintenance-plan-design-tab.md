@@ -15,10 +15,10 @@ ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e4de9bbecbd7c473780d8baa598246f732b0ebcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115736"
 ---
 # <a name="maintenance-plan-design-tab"></a>維護計畫 (設計索引標籤)
@@ -41,7 +41,7 @@ ms.locfileid: "68115736"
  **移除排程**  
  從選取的子計畫移除排程。  
   
- **管理連接**  
+ **管理連線**  
  顯示 [管理連接]  對話方塊。 用於將其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體連接加入維護計畫。 子計畫編輯器中的每個維護工作，都可以使用這些連接。 執行時，維護計畫會使用連接認證，從維護計畫伺服器連接到指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 伺服器。  
   
  **報表與記錄**  
@@ -69,7 +69,7 @@ ms.locfileid: "68115736"
   
  將維護工作放到設計介面中之後，就可以依需求編輯其屬性。 例如，將工作加入計畫之後，就可以在 [備份資料庫工作] 中指定要備份的特定資料庫。 設計介面上的工作如果設定不正確，會顯示包含白色 x 的紅色圖示。  
   
- 若要將維護工作加入計畫，請將工作的圖示從 [維護計畫工作]  工具箱拖曳到計畫設計介面，或按兩下工具箱中的工作，這會將該工作加入目前使用中的設計師介面。 如果看不到 [維護計畫工作]  工具箱，請從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [檢視]  功能表選取 [工具箱]  。 在 [工具箱]  窗格中展開 [維護計畫工作]  節點。  
+ 若要將維護工作加入計畫，請將工作的圖示從 [維護計畫工作]  工具箱拖曳到計畫設計介面，或按兩下工具箱中的工作，這會將該工作加入目前使用中的設計師介面。 如果看不到 [維護計畫工作]  工具箱，請從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [檢視]  功能表選擇 [工具箱]  。 在 [工具箱]  窗格中展開 [維護計畫工作]  節點。  
   
  若要從計畫中移除工作，請在設計師介面選取該工作，然後按下 **DELETE** 鍵，或以滑鼠右鍵按一下該工作，然後按一下 [刪除]  。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "68115736"
  **展開**  
  將先前使用 [摺疊]  隱藏的工作，在群組中顯示出來。  
   
- **顯示比例**  
+ **Zoom**  
  在設計介面上變更工作的大小  
   
 ## <a name="see-also"></a>另請參閱  

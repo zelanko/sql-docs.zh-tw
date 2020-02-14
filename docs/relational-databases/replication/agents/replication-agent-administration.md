@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 93527accb44bd192e1468ea4176702173bf74114
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 43b3c6759f4ea213acf8bed789d67ff4952b4ae8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768217"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288147"
 ---
 # <a name="replication-agent-administration"></a>複寫代理程式管理
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  複寫代理程式可執行許多有關複寫的工作，包含建立結構描述和資料的副本、偵測「發行者」或「訂閱者」端的更新，以及在伺服器之間傳播變更。 依預設，複寫代理程式在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 作業步驟之下執行。 此代理程式只不過是可執行檔，所以也可以從命令列和批次指令碼直接呼叫。 每個複寫代理程式都支援一組用於控制其執行方式的執行時期參數；這些參數在代理程式設定檔或命令列中指定。  
+  複寫代理程式可執行許多有關複寫的工作，包含建立結構描述和資料的副本、偵測「發行者」或「訂閱者」端的更新，以及在伺服器之間傳播變更。 根據預設，複寫代理程式在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 作業步驟下執行。 此代理程式只不過是可執行檔，所以也可以從命令列和批次指令碼直接呼叫。 每個複寫代理程式都支援一組用於控制其執行方式的執行時期參數；這些參數在代理程式設定檔或命令列中指定。  
   
 > [!IMPORTANT]  
 >  依預設，安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時會停用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 服務，除非明確選擇在安裝期間自動啟動該服務。  
@@ -41,7 +41,7 @@ ms.locfileid: "68768217"
   
 |代理程式可執行檔|檔案名稱|  
 |----------------------|---------------|  
-|[複寫快照集代理程式](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
+|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
 |[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
 |[複寫記錄讀取器代理程式](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|logread.exe|  
 |[複寫佇列讀取器代理程式](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|qrdrsvc.exe|  
@@ -77,7 +77,7 @@ ms.locfileid: "68768217"
   
     -   散發代理程式  
   
-    -   [合併代理程式]  
+    -   合併代理程式  
   
      透過下列索引標籤，可存取與這些代理程式建立關聯的資訊和工作：[訂閱監看清單]  (適用於每個「發行者」) 或 [所有訂閱]  索引標籤 (適用於每個發行集)。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
@@ -87,10 +87,10 @@ ms.locfileid: "68768217"
 ## <a name="replication-maintenance-jobs"></a>複寫維護作業  
  複寫使用下列作業執行依排程和視需要的維護。  
   
-|清除作業|Description|預設排程|  
+|清除作業|描述|預設排程|  
 |------------------|-----------------|----------------------|  
-|清除代理程式記錄：Distribution|從散發資料庫移除複寫代理程式的記錄。|每 10 分鐘執行|  
-|清除散發：Distribution|從散發資料庫移除複寫的交易。 |每 10 分鐘執行|  
+|清除代理程式記錄：散發|從散發資料庫移除複寫代理程式的記錄。|每 10 分鐘執行|  
+|清除散發：散發|從散發資料庫移除複寫的交易。 |每 10 分鐘執行|  
 |到期的訂閱清除|偵測並移除散發資料庫中到期的訂閱。 在散發者上，停用在最長散發保留期限內未同步處理的訂閱。|每天早上 1:00 執行| 
 |重新初始化資料驗證失敗的訂閱|偵測使資料驗證失敗的所有訂閱，並將其標示為重新初始化。 下次「合併代理程式」或「散發代理程式」執行時，將在「訂閱者」端套用新的快照集。|沒有預設排程 (依預設值未啟動)|  
 |複寫代理程式檢查|偵測並未動態記錄歷程的複寫代理程式。 如果作業步驟失敗，則其會寫入 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 事件記錄檔。|每十分鐘執行一次。|  

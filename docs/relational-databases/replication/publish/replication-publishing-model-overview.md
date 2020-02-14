@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 95d2a3538cb775efb346d59e7db75c238e35c5d6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d0983db7dee94269981933f115594bdbb9c6a115
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769805"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287550"
 ---
 # <a name="replication-publishing-model-overview"></a>複寫發行模型概觀
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,12 +63,12 @@ ms.locfileid: "68769805"
 ## <a name="publication"></a>發行集  
  發行集是單一資料庫之一個或多個發行項的集合。 將多個發行項分組到單一發行集，會比較容易指定一組當作一個單元來複寫的邏輯相關之資料庫物件和資料。  
   
-## <a name="subscription"></a>訂閱  
+## <a name="subscription"></a>訂用帳戶  
  訂閱是對要傳遞給「訂閱者」之發行集副本的要求。 訂閱會定義將在何時、何處收到什麼發行集。 訂閱的類型有兩種：發送和提取。 如需發送和提取訂閱的詳細資訊，請參閱[訂閱發行集](../../../relational-databases/replication/subscribe-to-publications.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫代理程式概觀](../../../relational-databases/replication/agents/replication-agents-overview.md)   
- [複寫類型](../../../relational-databases/replication/types-of-replication.md)   
+ [Types of Replication](../../../relational-databases/replication/types-of-replication.md)   
  [設定 AlwaysOn 可用性群組的複寫 (SQL Server)](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)   
  [維護 AlwaysOn 發行集資料庫 (SQL Server)](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   

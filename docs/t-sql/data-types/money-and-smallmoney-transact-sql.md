@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ad26acc2f1e23b61e9692dcf2720d7ee6dd8639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077813"
 ---
 # <a name="money-and-smallmoney-transact-sql"></a>money 和 smallmoney (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68077813"
 
 代表金融或貨幣值的資料類型。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 |資料類型|範圍|儲存體|  
 |---|---|---|
@@ -49,7 +49,7 @@ ms.locfileid: "68077813"
   
 這些資料類型可以使用以下任一種貨幣符號。
   
-![貨幣符號，十六進位值表格](../../t-sql/data-types/media/money01.gif "貨幣符號，十六進位值表格")
+![貨幣符號、十六進位值表格](../../t-sql/data-types/media/money01.gif "貨幣符號、十六進位值表格")
   
 貨幣資料不必括在單引號 (') 中。 您必須記住，在指定前面有貨幣符號的貨幣值時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會儲存任何與符號相關聯的貨幣資訊，它只會儲存數值。
   

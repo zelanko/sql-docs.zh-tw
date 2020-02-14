@@ -19,10 +19,10 @@ ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 98f0e19bb0e3eb424d742990ce2f63e3fb0af019
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295709"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 封裝升級精靈 F1 說明
@@ -30,7 +30,7 @@ ms.locfileid: "71295709"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  使用 [SSIS 套件升級精靈] 將舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 所建立的套件升級為目前 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 版本的套件格式。  
+  使用 [SSIS 套件升級精靈] 將舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 所建立套件升級為目前 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 版本的套件格式。  
   
  **執行 SSIS 封裝升級精靈**  
   
@@ -52,10 +52,10 @@ ms.locfileid: "71295709"
  **封裝來源**  
  選取包含要升級之封裝的儲存位置。 這個選項的值列於下表中。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|**[File System]**|指示要升級的封裝位於本機電腦的資料夾中。<br /><br /> 若要讓精靈在升級這些封裝之前先備份原始封裝，原始封裝必須儲存在檔案系統中。 如需詳細資訊，請參閱「如何」主題。|  
-|**SSIS 封裝存放區**|指示要升級的封裝位於封裝存放區中。 此封裝存放區是由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務所管理的檔案系統資料夾集合所組成。 如需詳細資訊，請參閱 [AllMembers &#40;MDX&#41;](../integration-services/service/package-management-ssis-service.md)。<br /><br /> 選取這個值會顯示對應的 **[封裝來源]** 動態選項。|  
+|**檔案系統**|指示要升級的封裝位於本機電腦的資料夾中。<br /><br /> 若要讓精靈在升級這些封裝之前先備份原始封裝，原始封裝必須儲存在檔案系統中。 如需詳細資訊，請參閱「如何」主題。|  
+|**SSIS 封裝存放區**|指示要升級的封裝位於封裝存放區中。 此封裝存放區是由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務所管理的檔案系統資料夾集合所組成。 如需詳細資訊，請參閱[封裝管理 &#40;SSIS 服務&#41;](../integration-services/service/package-management-ssis-service.md)。<br /><br /> 選取這個值會顯示對應的 **[封裝來源]** 動態選項。|  
 |**Microsoft SQL Server**|指示要升級的封裝是來自現有的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。<br /><br /> 選取這個值會顯示對應的 **[封裝來源]** 動態選項。|  
   
  **資料夾**  
@@ -80,7 +80,7 @@ ms.locfileid: "71295709"
  **使用 SQL Server 驗證**  
  選取此選項可使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證連接到伺服器。 如果您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，就必須提供使用者名稱和密碼。  
   
- **User name**  
+ **使用者名稱**  
  輸入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證將用來連接伺服器的使用者名稱。  
   
  **密碼**  
@@ -104,9 +104,9 @@ ms.locfileid: "71295709"
  **封裝來源**  
  指定要儲存升級封裝的位置。 這個選項的值列於下表中。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|**[File System]**|指示升級封裝要儲存到本機電腦的資料夾中。|  
+|**檔案系統**|指示升級封裝要儲存到本機電腦的資料夾中。|  
 |**SSIS 封裝存放區**|指示升級封裝要儲存到 Integration Services 封裝存放區。 此封裝存放區是由 Integration Services 服務所管理的檔案系統資料夾集合所組成。 如需詳細資訊，請參閱[封裝管理 &#40;SSIS 服務&#41;](../integration-services/service/package-management-ssis-service.md)。<br /><br /> 選取這個值會顯示對應的 **[封裝來源]** 動態選項。|  
 |**Microsoft SQL Server**|指示升級封裝要儲存到現有的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。<br /><br /> 選取這個值會顯示對應的 **[封裝來源]** 動態選項。|  
   
@@ -132,7 +132,7 @@ ms.locfileid: "71295709"
  **使用 SQL Server 驗證**  
  選取此選項可使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證連接到伺服器。 如果您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，就必須提供使用者名稱和密碼。  
   
- **User name**  
+ **使用者名稱**  
  輸入使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證來連接伺服器時所要使用的使用者名稱。  
   
  **密碼**  
@@ -236,7 +236,7 @@ ms.locfileid: "71295709"
  **停止**  
  停止封裝升級。  
   
- **報表**  
+ **Report**  
  選取您想要針對包含封裝升級結果的報表採取什麼動作：  
   
 -   線上檢視報表。  
@@ -257,6 +257,6 @@ ms.locfileid: "71295709"
 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的 [方案總管] 中，開啟 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，然後展開 **[SSIS 封裝]** 節點，查看升級的封裝。  
   
 ## <a name="see-also"></a>另請參閱  
- [升級 Integration Services 封裝](../integration-services/install-windows/upgrade-integration-services-packages.md)  
+ [升級 Integration Services 套件](../integration-services/install-windows/upgrade-integration-services-packages.md)  
   
   

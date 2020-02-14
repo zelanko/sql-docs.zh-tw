@@ -13,10 +13,10 @@ ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 73efd4acedfbce0dcfdea72be63b5b11a086d38f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006392"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>資料庫鏡像監視器 (警告頁面)
@@ -27,7 +27,7 @@ ms.locfileid: "68006392"
   
 -   [啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="columns"></a>[資料行]  
+## <a name="columns"></a>資料行  
  **警告**  
  可定義臨界值的警告包括：  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68006392"
 |**如果最舊未傳送交易的時間超過臨界值，即發出警告**|指定在主體伺服器執行個體上產生警告之前，傳送佇列中可以累積的交易分鐘數。 這個警告有助於從時間方面來測量資料遺失的可能性，與高效能模式特別有關係。 但是，當鏡像因為夥伴中斷連接而暫停或暫止時，這個警告也會與高安全性模式有關。|  
 |**如果鏡像認可負擔超過臨界值，即發出警告**|指定在主體伺服器上產生警告之前，所容許之每項交易的平均延遲毫秒數。 這項延遲是當主體伺服器執行個體等待鏡像伺服器執行個體將交易記錄寫入重做佇列中時所產生的負擔量。 只有在高安全性模式中才會顯出這個值的重要性。|  
   
- **'** _<server_instance>_ **' 的臨界值**  
+ **'** <伺服器執行個體>  **' 的閾值**  
  針對每一個警告，顯示其中一個伺服器執行個體目前使用者指定的臨界值 (如果有的話)。 在對應的資料行標題中，會指出伺服器執行個體的完整執行個體名稱。  
   
  如需詳細資訊，請參閱此主題稍後的「備註」。  
@@ -48,8 +48,8 @@ ms.locfileid: "68006392"
   
  如需詳細資訊，請參閱此主題稍後的「備註」。  
   
-## <a name="remarks"></a>Remarks  
- 如果伺服器執行個體目前無法使用資訊，則對應之 **[於...的臨界值]** 資料行的資料格便會顯示灰色背景和浮水印文字。 如果監視器未連接到伺服器執行個體，則每個資料格中的方格會依據該執行個體是預設執行個體還是具名執行個體而顯示 [未連接至 _<SYSTEM_NAME>_ ]  或 [未連接至 _<SYSTEM_NAME>_ **\\** _<instance_name>_ ]  。 如果監視器正在等候查詢傳回資料，則每個資料格中的方格會顯示 [正在等候資料...]  。  
+## <a name="remarks"></a>備註  
+ 如果伺服器執行個體目前無法使用資訊，則對應之 **[於...的臨界值]** 資料行的資料格便會顯示灰色背景和浮水印文字。 如果監視器未連線到伺服器執行個體，則每個資料格中的方格會依據該執行個體是預設執行個體還是具名執行個體而顯示 [未連線到 <系統名稱>]   或 [未連線到<系統名稱>\\<執行個體名稱>]     。 如果監視器正在等候查詢傳回資料，則每個資料格中的方格會顯示 [正在等候資料...]  。  
   
  當資訊可以使用時，每個警告的資料格會顯示指定的臨界值 (和度量單位) 或 [未啟用]  。  
   

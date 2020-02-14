@@ -11,10 +11,10 @@ ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2baea8e71a3730a100eda8971ad70a28f1a97773
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296462"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 中的 Integration Services 新功能
@@ -22,7 +22,7 @@ ms.locfileid: "71296462"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-本主題說明 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中已新增或更新的功能。
+本主題描述 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中已新增或更新的功能。
 
 > [!NOTE]
 > SQL Server 2017 也包含 SQL Server 2016 的功能以及 SQL Server 2016 更新中新增的功能。 如需 SQL Server 2016 的 SSIS 新功能資訊，請參閱 [SQL Server 2016 的 Integration Services 新功能](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)。

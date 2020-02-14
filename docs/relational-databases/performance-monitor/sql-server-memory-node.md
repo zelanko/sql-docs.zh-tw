@@ -11,10 +11,10 @@ ms.assetid: 55b28ba9-b6d5-4ea9-8103-db8a72f42982
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 40014049e46f10778ede60e9f1597d740bde882f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68102497"
 ---
 # <a name="sql-server-memory-node"></a>SQL Server, Memory Node
@@ -24,7 +24,7 @@ ms.locfileid: "68102497"
 ## <a name="memory-node-counters"></a>Memory Node 計數器  
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Node** 計數器。  
   
-|SQL Server Memory Manager 計數器|Description|  
+|SQL Server Memory Manager 計數器|描述|  
 |----------------------------------------|-----------------|  
 |**Database Node Memory (KB)**|指定伺服器目前用於此節點之資料庫頁面的記憶體數量。|  
 |**Free Node Memory (KB)**|指定伺服器未用於此節點的記憶體數量。|  

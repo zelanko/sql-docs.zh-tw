@@ -14,10 +14,10 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8c2a89293e0cfa3428723a19e7ee2938fd7e8ca6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294838"
 ---
 # <a name="change-data-capture-ssis"></a>異動資料擷取 (SSIS)
@@ -40,7 +40,7 @@ ms.locfileid: "71294838"
   
  一旦管理員已經在資料庫上啟用異動資料擷取，您就可以建立執行累加式變更資料載入的封裝。 下圖顯示建立可從單一資料表執行累加式載入這種封裝的步驟：  
   
- ![異動資料擷取封裝建立步驟](../../integration-services/change-data-capture/media/cdc-package-creation.gif "異動資料擷取封裝建立步驟")  
+ ![異動資料擷取套件建立步驟](../../integration-services/change-data-capture/media/cdc-package-creation.gif "異動資料擷取套件建立步驟")  
   
  如上圖所示，建立可執行累加式變更資料載入的封裝包含下列步驟：  
   

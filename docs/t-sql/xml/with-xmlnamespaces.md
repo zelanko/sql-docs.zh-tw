@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 86bdd12d5dabd7ad74662cd47b2004594328a6c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 12af8c813fd61b4f4c9040d72e19173ef810e80f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048146"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909788"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ DEFAULT <xml_namespace_uri>
  *xml_namespace_prefix*  
  指定要對應並且與 *xml_namespace_uri* 中指定的命名空間 URI 值相關聯的前置詞。 *xml_namespace_prefix* 必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  在另外還包含一般資料表運算式的陳述式中使用 WITH XMLNAMESPACES 子句時，陳述式中的 WITH XMLNAMESPACES 子句必須位在一般資料表運算式之前。  
   
  當您使用 WITH XMLNAMESPACES 子句時，下列一般語法規則適用：  

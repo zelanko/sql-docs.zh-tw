@@ -13,10 +13,10 @@ ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0d37918c0ca2be62c2e620faa8034548df2b4592
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940829"
 ---
 # <a name="backup-device-general-page"></a>備份裝置 (一般頁面)
@@ -34,7 +34,7 @@ ms.locfileid: "67940829"
  檢視現有邏輯備份裝置的名稱，或是指定新邏輯備份裝置的名稱。  
   
  **磁帶**  
- 在 [磁帶]  清單中檢視或選取目的地磁帶裝置。 只有當磁帶機已連接到執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]之執行個體的電腦上時，此選項才可以使用。  
+ 在 [磁帶]  清單中檢視或選取目的地磁帶裝置。 只有當磁帶機已連結到執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體的電腦上時，此選項才可以使用。  
   
 > [!NOTE]  
 >  遠端電腦上的磁帶備份裝置並不是有效的備份目的地。  
@@ -48,12 +48,12 @@ ms.locfileid: "67940829"
   
      若要指定邏輯備份檔案，可以按一下 **[檔案]** 文字方塊右邊的 [瀏覽] 按鈕。 接著，您可以在 **[尋找資料庫檔案]** 對話方塊中，導覽至執行伺服器執行個體之電腦中任何固定磁碟機上的任何位置。 如果備份檔案尚不存在，則您必須在該對話方塊的 **[檔案名稱]** 欄位中輸入您要使用的檔名。  
   
-     或者，您可以用手動方式編輯 **[檔案]** 欄位，以覆寫預設的路徑、檔案名稱和副檔名。 若要指定遠端檔案做為備份目的地，請輸入其完整的通用命名慣例 (UNC) 名稱。 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)之執行個體的電腦上時，此選項才可以使用。  
+     或者，您可以用手動方式編輯 **[檔案]** 欄位，以覆寫預設的路徑、檔案名稱和副檔名。 若要指定遠端檔案做為備份目的地，請輸入其完整的通用命名慣例 (UNC) 名稱。 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。  
   
     > [!IMPORTANT]  
     >  透過網路備份資料可能會受到網路錯誤的影響，因此，建議您在備份作業完成之後要進行確認。 如需詳細資訊，請參閱 [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  單一媒體集是由一組一個或多個備份裝置上的備份所組成。 *「媒體集」* 是按順序排列的備份媒體集合 (磁帶或磁碟檔案)，由一個或多個的備份作業使用固定的備份裝置類型與數量寫入。 如需媒體集的一般資訊，請參閱 [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)之執行個體的電腦上時，此選項才可以使用。  
   
  將媒體集中的第一個備份寫入邏輯備份裝置時，會初始化對應於邏輯備份裝置的實體備份裝置。 如果實體備份裝置是目前尚不存在的檔案，在初始化時便會建立該檔案。  

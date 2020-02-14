@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9547eaae31787dc01946b8dfd2d2d43781b5a8af
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: db98f5aa3cdec76b59e51f743200b24725231f95
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258128"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831629"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -92,6 +92,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
     | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
+    | ISOLATE_SECURITY_POLICY_CARDINALITY  = { ON | OFF }
 }
 ```
 
@@ -366,6 +367,12 @@ PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 - 當設定為 0 時，暫停的作業永遠不會自動中止
 
 此選項目前的值會顯示於 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)。
+
+ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
+
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
+可讓您控制[資料列層級安全性](../../relational-databases/security/row-level-security.md) (RLS) 述詞是否會影響整體使用者查詢的執行計畫基數。 當 ISOLATE_SECURITY_POLICY_CARDINALITY 為 ON 時，RLS 述詞不會影響執行計畫的基數。 例如，假設某資料表包含 1 百萬個資料列以及一個 RLS 述詞，此述詞會針對發出查詢的特定使用者將結果限制為 10 個資料列。 將此資料庫範圍的設定設為 OFF 時，此述詞的基數估計值會是 10。 當此資料庫範圍的設定為 ON 時，查詢最佳化會估計 1 百萬個資料列。 建議針對大部分工作負載使用預設值。
 
 ## <a name="Permissions"></a> 權限
 

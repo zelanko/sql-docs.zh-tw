@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816710"
 ---
 # <a name="columnstore-indexes---query-performance"></a>資料行存放區索引 - 查詢效能
@@ -106,7 +106,7 @@ ms.locfileid: "71816710"
 |巢狀迴圈||否|否|否||    
 |在 MAXDOP 1 下執行的單一執行緒查詢||否|否|是||    
 |具有序列查詢計畫的單一執行序查詢||否|否|是||    
-|排序|在 SCAN 上搭配資料行存放區索引由子句排序。|否|否|是||    
+|sort|在 SCAN 上搭配資料行存放區索引由子句排序。|否|否|是||    
 |頂端排序||否|否|是||    
 |視窗彙總||NA|NA|是|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的新運算子。|    
     
@@ -127,7 +127,7 @@ ms.locfileid: "71816710"
     
  彙總下推可透過有效彙總快取相容執行中壓縮過/編碼過的資料，及透過利用 SIMD 來進一步加速。    
     
- ![aggregate pushdown](../../relational-databases/indexes/media/aggregate-pushdown.jpg "aggregate pushdown")    
+ ![彙總下推](../../relational-databases/indexes/media/aggregate-pushdown.jpg "彙總下推")    
     
 例如，以下兩個查詢都會進行彙總下推：    
     

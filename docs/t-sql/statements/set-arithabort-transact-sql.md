@@ -27,12 +27,12 @@ ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da408c690622f5ba1ef45fa2466ed396d0022599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7ec15aed162c096bc13062ed1ec98b02c0c9ca4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064610"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516249"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ SET ARITHABORT { ON | OFF }
 SET ARITHABORT ON
 ```
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 在登入工作階段中一律將 ARITHABORT 設為 ON。 將 ARITHABORT 設為 OFF 可能會對查詢最佳化造成負面影響，進而導致效能問題。  
   
 > [!WARNING]  
@@ -70,7 +70,7 @@ SET ARITHABORT ON
 > [!NOTE]  
 >  如果 SET ARITHABORT 和 SET ARITHIGNORE 都不是 ON，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 NULL，並在查詢執行之後，傳回一則警告訊息。  
   
-當資料庫的相容性層級設定為 90 或以上時，將 ANSI_WARNINGS 設定為 ON 也會將 ARITHABORT 隱含設定為 ON。 如果資料庫的相容性層級設定為 80 或更低，ARITHABORT 選項就必須明確地設定為 ON。  
+當 ANSI_WARNINGS 的值為 ON 且將資料庫相容性層級設為 90 或更高時，則不論其值設定為何，ARITHABORT 都會隱含為 ON。 如果資料庫的相容性層級設定為 80 或更低，ARITHABORT 選項就必須明確地設定為 ON。  
   
 進行運算式評估時，如果 SET ARITHABORT 為 OFF，而且 INSERT、UPDATE 或 DELETE 陳述式遇到算術、溢位、除以零或網域錯誤，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會插入或更新 NULL 值。 如果目標資料行不可為 Null，插入或更新動作就會失敗，而使用者會看見錯誤。  
   

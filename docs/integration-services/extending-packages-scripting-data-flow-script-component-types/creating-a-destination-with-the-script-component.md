@@ -17,10 +17,10 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 946fc77d3bde2814176ebefce4102742a0288a91
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296482"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>以指令碼元件建立目的地
@@ -79,7 +79,7 @@ ms.locfileid: "71296482"
  如需 [指令碼轉換編輯器]  的 [指令碼]  頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)。  
   
 ## <a name="scripting-a-destination-component-in-code-design-mode"></a>在程式碼設計模式中編寫目的地元件的指令碼  
- 在您設定好元件的中繼資料之後，便可撰寫自訂指令碼。 在 [指令碼轉換編輯器]  的 [指令碼]  頁面上，按一下 [編輯指令碼]  ，開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 以新增自訂指令碼。 所使用的指令碼語言取決於您選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 還是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作為 [指令碼]  頁面上 **ScriptLanguage** 屬性的指令碼語言。  
+ 在您設定好元件的中繼資料之後，便可撰寫自訂指令碼。 在 [指令碼轉換編輯器]  的 [指令碼]  頁面上，按一下 [編輯指令碼]  來開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 以新增自訂指令碼。 所使用的指令碼語言取決於您選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 還是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作為 [指令碼]  頁面上 **ScriptLanguage** 屬性的指令碼語言。  
   
  如需使用指令碼元件所建立之各種元件都適用的重要資訊，請參閱[編碼和偵錯指令碼元件](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。  
   
@@ -242,7 +242,7 @@ public class ScriptMain:
   
 3.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件 (您不需要進行任何轉換，就可以直接將來源連線到目的地。)這個輸出應該從 **AdventureWorks** 範例資料庫的 **Person.Address** 資料表中提供資料，而且應該至少包含 **AddressID** 和 **City** 資料行。  
   
-4.  開啟**指令碼轉換編輯器**。 在 [輸入資料行]  頁面上，選取 **AddressID** 和 **City** 資料行。  
+4.  開啟**指令碼轉換編輯器**。 在 [輸入資料行]  頁面上，選取 [AddressID]  與 [City]  資料行。  
   
 5.  在 [輸入及輸出]  頁面上，以更具描述性的名稱重新命名輸入，例如 **MyAddressInput**。  
   

@@ -23,10 +23,10 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 994018ab8b574bc313072f7a353ff999d645e0d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292757"
 ---
 # <a name="error-handling-in-data"></a>處理資料中的錯誤
@@ -98,7 +98,7 @@ ms.locfileid: "71292757"
 ## <a name="select-an-error-handling-option"></a>選取錯誤處理選項  
  您可以設定來源、轉換及目的地處理錯誤和截斷的方式。 下表描述這些選項。  
   
-|選項|Description|  
+|選項|描述|  
 |------------|-----------------|  
 |失敗元件|當發生錯誤或截斷時，資料流程工作將失敗。 失敗是錯誤和截斷的預設選項。|  
 |忽略失敗|會忽略錯誤或截斷，並會將資料列導向轉換或來源的輸出。|  

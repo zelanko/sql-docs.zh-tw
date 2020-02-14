@@ -13,10 +13,10 @@ ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 50cf62449d789684324a25c4c0bd09bbe28ce28a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291710"
 ---
 # <a name="balanced-data-distributor-transformation"></a>平衡資料分佈器轉換
@@ -28,7 +28,7 @@ ms.locfileid: "71291710"
   
  下列圖表顯示使用 BDD 轉換的簡單範例。 在此範例中，BDD 轉換會在從一般檔案來源輸入資料時，挑選一個管線緩衝區，然後以循環配置資源的方式向下傳送至三個輸出路徑的其中一個路徑。 在 SQL Server Data Tools 中，您可以在顯示資料流程工作屬性的 [屬性]  視窗中，查看 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferSize%2A> (預設管線緩衝區大小) 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferMaxRows%2A> (管線緩衝區中的預設最大資料列數) 的值。  
   
- ![平衡型資料分配器](../../../integration-services/data-flow/transformations/media/balanceddatadistributor.JPG "平衡型資料分配器")  
+ ![平衡型資料分配器](../../../integration-services/data-flow/transformations/media/balanceddatadistributor.JPG "平衡型資料散發者")  
   
  在符合下列條件的狀況下，平衡資料分佈器轉換將有助於提升封裝的效能：  
   

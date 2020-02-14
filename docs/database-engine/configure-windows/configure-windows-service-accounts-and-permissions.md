@@ -1,7 +1,7 @@
 ---
 title: 設定 Windows 服務帳戶與權限 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2019
+ms.date: 01/28/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -50,12 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ed0565a9cf5a5eecaff143f9a4583a763910d3d8
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: f8097f477368a9aa4cd8846b8da77e8bff73324e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660283"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929151"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>設定 Windows 服務帳戶與權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "73660283"
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
 
-##  <a name="Service_Details"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的服務  
+##  <a name="Service_Details"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的服務  
  依據您決定安裝的元件而定， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會安裝下列服務：  
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Services** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的服務。 可執行檔為 \<MSSQLPATH>\MSSQL\Binn\sqlservr.exe。  
@@ -129,7 +129,7 @@ ms.locfileid: "73660283"
 |---------------|------------------------------------|----------------------------------------------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)*|  
-|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)\* \*\*|  
+|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)\*\*\*|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)\*|  
 |[!INCLUDE[ssRS](../../includes/ssrs.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)\*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)\*|  
@@ -168,14 +168,14 @@ ms.locfileid: "73660283"
   
 受管理的服務帳戶、群組受管理的服務帳戶和虛擬帳戶的設計，在於提供重要的應用程式 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) 並與自己的帳戶隔離，同時不需系統管理員手動管理服務主要名稱 (SPN) 和這些帳戶的認證。 這些帳戶可讓長期管理服務帳戶使用者、密碼和 SPN 的工作更輕鬆。  
   
--   <a name="MSA"></a> **Managed Service Accounts**  
+-   <a name="MSA"></a> **受控服務帳戶**  
   
      受管理的服務帳戶 (MSA) 是一種網域帳戶，由網域控制站建立和管理。 這個帳戶會指派給執行服務的單一成員電腦使用。 密碼是由網域控制站自動管理。 您無法使用 MSA 登入電腦，但是電腦可以使用 MSA 啟動 Windows 服務。 MSA 能夠在提供讀取和寫入 servicePrincipalName 權限時，於 Active Directory 內註冊服務主體名稱 (SPN)。 MSA 的命名包含 **$** 後置詞，例如 **DOMAIN\ACCOUNTNAME$** 。 指定 MSA 時，讓密碼空白。 由於 MSA 是指派給單一電腦，而不能用於 Windows 叢集的不同節點上。  
   
     > [!NOTE]  
     >  網域系統管理員必須先在 Active Directory 中建立 MSA， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式才能將其用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
   
--  <a name="GMSA"></a> **群組受管理的服務帳戶**  
+-  <a name="GMSA"></a> **分組受控服務帳戶**  
   
      群組受管理的服務帳戶是適用於多部伺服器的 MSA。 Windows 會為伺服器群組上執行的服務管理服務。 Active Directory 會自動更新群組受管理的服務帳戶密碼，不需要重新啟動服務。 您可以設定 SQL Server 服務，以使用群組受管理的服務帳戶主體。 自 SQL Server 2014 起，SQL Server 已可支援獨立執行個體的群組受控服務帳戶，自 SQL Server 2016 起的版本，則支援容錯移轉叢集執行個體與可用性群組。  
   
@@ -289,7 +289,7 @@ ms.locfileid: "73660283"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式授與的權限|
 |---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT SERVICE\MSSQLSERVER**。 具名執行個體：**NT SERVICE\MSSQL$** InstanceName。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> 啟動 SQL 寫入器的權限<br /><br /> 讀取事件記錄檔服務的權限<br /><br /> 讀取遠端程序呼叫服務的權限|  
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent：** \*<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT Service\SQLSERVERAGENT**。 具名執行個體：**NT Service\SQLAGENT$** _InstanceName_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)|  
+|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式：** \*<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT Service\SQLSERVERAGENT**。 具名執行個體：**NT Service\SQLAGENT$** _InstanceName_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]：**<br /><br /> (所有權利都會授與本機 Windows 群組。 預設執行個體：**SQLServerMSASUser$** _ComputerName_ **$MSSQLSERVER**。 具名執行個體：**SQLServerMSASUser$** _ComputerName_ **$** _InstanceName_。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 執行個體：**SQLServerMSASUser$** _ComputerName_ **$** _PowerPivot_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> 僅限表格式：<br /><br /> **增加處理程序工作組** (SeIncreaseWorkingSetPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> **鎖定記憶體中的分頁** (SeLockMemoryPrivilege) - 這只有在分頁完全關閉時才需要。<br /><br /> 僅限容錯移轉叢集安裝：<br /><br /> **增加排程優先順序** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT SERVICE\ReportServer**。 具名執行個體：**NT SERVICE\\ReportServer$** _InstanceName_。)|**以服務方式登入** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體與具名執行個體：**NT SERVICE\MsDtsServer130**。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 沒有具名執行個體的個別處理序。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> 寫入應用程式事件記錄檔的權限。<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **在驗證之後模擬用戶端** (SeImpersonatePrivilege)|  
@@ -344,12 +344,12 @@ ms.locfileid: "73660283"
 ||Instid\OLAP\Backup|讀取、寫入|  
 ||Instid\OLAP\Temp|讀取、寫入|  
 ||130\shared\Errordumps|讀取、寫入|  
-|SQLServerReportServerUser|Instid\Reporting Services\Log Files|讀取、寫入、刪除|  
+|ReportServer|Instid\Reporting Services\Log Files|讀取、寫入、刪除|  
 ||Instid\Reporting Services\ReportServer|讀取、執行|  
-||Instid\Reportingservices\Reportserver\global.asax|完整控制|  
-||Instid\Reportingservices\Reportserver\Reportserver.config|讀取|  
-||Instid\Reporting Services\reportManager|讀取、執行|  
-||Instid\Reporting Services\RSTempfiles|讀取、寫入、執行、刪除|  
+||Instid\Reporting Services\ReportServer\global.asax|完整控制|  
+||Instid\Reporting Services\ReportServer\rsreportserver.config|讀取|  
+||Instid\Reporting Services\RSTempfiles|讀取、寫入、執行、刪除| 
+||Instid\Reporting Services\RSWebApp|讀取、執行|   
 ||130\shared|讀取、執行|  
 ||130\shared\Errordumps|讀取、寫入|  
 |MSDTSServer100|130\dts\binn\MsDtsSrvr.ini.xml|讀取|  
@@ -362,10 +362,8 @@ ms.locfileid: "73660283"
 |SQLWriter|N/A (以本機系統執行)||  
 |User|Instid\MSSQL\binn|讀取、執行|  
 ||Instid\Reporting Services\ReportServer|讀取、執行、列出資料夾內容|  
-||Instid\Reportingservices\Reportserver\global.asax|讀取|  
-||Instid\Reporting Services\reportManager|讀取、執行|  
-||Instid\Reporting Services\ReportManager\pages|讀取|  
-||Instid\Reporting Services\ReportManager\Styles|讀取|  
+||Instid\Reporting Services\ReportServer\global.asax|讀取|  
+||Instid\Reporting Services\RSWebApp|讀取、執行、列出資料夾內容|    
 ||130\dts|讀取、執行|  
 ||130\tools|讀取、執行|  
 ||100\tools|讀取、執行|  
@@ -407,18 +405,15 @@ ms.locfileid: "73660283"
 ||僅限管理員|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<SQL_執行個體名稱>\*|完整控制|  
 ||管理員，系統|\tools\binn\schemas\sqlserver\2004\07\showplan|完整控制|  
 ||使用者|\tools\binn\schemas\sqlserver\2004\07\showplan|讀取、執行|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<報表伺服器 Web 服務帳戶>|\<安裝>  \Reporting Services\LogFiles|刪除<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||報表管理員應用程式集區識別 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 帳戶，Everyone|\<安裝>  \Reporting Services\ReportManager、\<安裝>  \Reporting Services\ReportManager\Pages\\\*.\*、\<裝>  \Reporting Services\ReportManager\Styles\\\*.\*、\<安裝>  \Reporting Services\ReportManager\webctrl_client\1_0\\*。\*|讀取|  
-||報表管理員應用程式集區識別|\<安裝>  \Reporting Services\ReportManager\Pages\\*。\*|讀取|  
-||\<報表伺服器 Web 服務帳戶>|\<安裝>  \Reporting Services\ReportServer|讀取|  
-||\<報表伺服器 Web 服務帳戶>|\<安裝>  \Reporting Services\ReportServer\global.asax|完整|  
-||Everyone|\<安裝>  \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
-||NETWORK SERVICE|\<安裝>  \Reporting Services\ReportServer\ReportService.asmx|完整|  
-||Everyone|\<安裝>  \Reporting Services\ReportServer\ReportService.asmx|READ_CONTROL<br /><br /> SYNCHRONIZE FILE_GENERIC_READ<br /><br /> FILE_GENERIC_EXECUTE<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_EXECUTE<br /><br /> FILE_READ_ATTRIBUTES|  
-||報表伺服器 Windows 服務帳戶|*\<安裝*\Reporting Services\ReportServer\RSReportServer.config|刪除<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||Everyone|報表伺服器索引鍵 (Instid 登錄區)|查詢值<br /><br /> 列舉子機碼<br /><br /> Notify<br /><br /> 讀取控制|  
-||終端服務使用者|報表伺服器索引鍵 (Instid 登錄區)|查詢值<br /><br /> 設定值<br /><br /> 建立子機碼<br /><br /> 列舉子機碼<br /><br /> Notify<br /><br /> DELETE<br /><br /> 讀取控制|  
-||進階使用者|報表伺服器索引鍵 (Instid 登錄區)|查詢值<br /><br /> 設定值<br /><br /> 建立子機碼<br /><br /> 列舉子機碼<br /><br /> 通知<br /><br /> DELETE<br /><br /> 讀取控制|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|報表伺服器 Windows 服務帳戶|\<安裝>  \Reporting Services\LogFiles|刪除<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||報表伺服器 Windows 服務帳戶|\<安裝>  \Reporting Services\ReportServer|讀取|  
+||報表伺服器 Windows 服務帳戶|\<安裝>  \Reporting Services\ReportServer\global.asax|完整|  
+||報表伺服器 Windows 服務帳戶|*\<install>* \Reporting Services\RSWebApp|讀取、執行|  
+||所有人|\<安裝>  \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
+||報表伺服器 Windows 服務帳戶|*\<install>* \Reporting Services\ReportServer\rsreportserver.config|刪除<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||所有人|報表伺服器索引鍵 (Instid 登錄區)|查詢值<br /><br /> 列舉子機碼<br /><br /> Notify<br /><br /> 讀取控制|  
+||終端服務使用者|報表伺服器索引鍵 (Instid 登錄區)|查詢值<br /><br /> 設定值<br /><br /> 建立子機碼<br /><br /> 列舉子機碼<br /><br /> Notify<br /><br /> 刪除<br /><br /> 讀取控制|  
+||進階使用者|報表伺服器索引鍵 (Instid 登錄區)|查詢值<br /><br /> 設定值<br /><br /> 建立子機碼<br /><br /> 列舉子機碼<br /><br /> Notify<br /><br /> 刪除<br /><br /> 讀取控制|  
   
  \*這是 WMI 提供者命名空間。  
   
@@ -593,7 +588,7 @@ Windows Management Instrumentation (WMI) 必須能夠連接到 [!INCLUDE[ssDE](.
 > [!NOTE]  
 >  如果您將應用程式設定為使用網域帳戶，則可以隔離應用程式的權限，不過必須手動管理密碼或建立自訂解決方案來管理這些密碼。 許多伺服器應用程式都是使用此策略來增強安全性，不過此策略需要額外的管理和複雜性。 在這些部署中，服務管理員會花相當多時間進行維護工作，例如管理 Kerberos 驗證所需的服務密碼和服務主要名稱 (SPN)。 此外，這些維護工作都可能干擾服務。  
   
- <a name="Local_User"></a> **Local User Accounts**  
+ <a name="Local_User"></a> **本機使用者帳戶**  
   
  如果電腦不屬於網域的一部分，建議您使用不含 Windows 管理員權限的本機使用者帳戶。  
   

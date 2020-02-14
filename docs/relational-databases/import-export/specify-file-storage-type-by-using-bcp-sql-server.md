@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 93b368ece9fc259e13b63c0b58f7efe72256a564
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056384"
 ---
 # <a name="specify-file-storage-type-using-bcp-sql-server"></a>使用 bcp 指定檔案儲存類型 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "74056384"
   
  您對此提示的回應視執行的工作而定，如下所示：  
   
--   若要以最精簡的儲存方式 (原生資料格式) 將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料大量匯出到資料檔案，請接受 **bcp**提供的預設檔案儲存類型。 如需原生檔案儲存類型的清單，請參閱此主題稍後的＜原生檔案儲存類型＞。  
+-   若要以最精簡的儲存方式 (原生資料格式)，將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料大量匯出到資料檔案，請接受 **bcp** 提供的預設檔案儲存類型。 如需原生檔案儲存類型的清單，請參閱此主題稍後的＜原生檔案儲存類型＞。  
   
 -   若要以字元格式將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料大量匯出到資料檔案，請將資料表中所有資料行的檔案儲存類型指定為 **char** 。  
   
@@ -125,12 +125,12 @@ ms.locfileid: "74056384"
 -   若 **float**、 **money**、 **datetime**或 **int** 等非字元資料類型儲存為其資料庫類型時，資料會以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生格式寫入資料檔案中。  
   
     > [!NOTE]  
-    >  以互動方式在 **bcp** 命令中指定所有欄位之後，此命令會提示您將每個欄位的回應儲存為非 XML 格式檔案。 如需非 XML 格式檔案的詳細資訊，請參閱[非 XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)。  
+    >  以互動方式在 **bcp** 命令中指定所有欄位之後，此命令會提示您將每個欄位的回應以非 XML 格式的檔案加以儲存。 如需非 XML 格式檔案的詳細資訊，請參閱[非 XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [bcp 公用程式](../../tools/bcp-utility.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [使用 bcp 指定欄位長度 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   
+ [使用 bcp 時指定欄位長度 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   
  [指定欄位與資料列結束字元 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   
  [使用 bcp 指定資料檔的前置長度 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   

@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8feec11884ae31e34cbc5497bf818991e59b39dd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909789"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>以 XML 格式儲存執行計畫
@@ -86,13 +86,13 @@ ms.locfileid: "72909789"
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>若要在 SQL Server Management Studio 中開啟已儲存的 XML 查詢計畫  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案]  功能表上，選擇 [開啟]  ，然後按一下 [檔案]  。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 **「檔案」** 功能表上，選擇 **「開啟」** ，然後按一下 **「檔案」** 。  
   
 2.  在 [開啟檔案]  對話方塊中，將 [檔案類型]  設為 [執行計畫檔案 (\*.sqlplan)]  ，以產生已儲存之 XML 查詢計劃檔案的篩選清單。  
   
 3.  選取您要檢視的 XML 查詢計劃檔案，然後按一下 [開啟]  。  
   
-     您也可以在 Windows 檔案總管中，按兩下副檔名為 **.sqlplan** 的檔案。 計畫會在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中開啟。  
+     您也可以在 Windows 檔案總管中，按兩下副檔名為 **.sqlplan**的檔案。 計畫會在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中開啟。  
   
 ## <a name="see-also"></a>另請參閱  
  [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-xml-transact-sql.md)   

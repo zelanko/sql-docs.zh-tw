@@ -15,10 +15,10 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a6bd6207df7d0e93c1b6d360643a9d549e90af9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295037"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 的新功能
@@ -79,7 +79,7 @@ ms.locfileid: "71295037"
   
         -   [將新範本重新命名為組件](#Parts)  
   
--   **連接性**  
+-   **連線能力**  
   
     -   已擴充內部部署的連線  
   
@@ -250,7 +250,7 @@ ms.locfileid: "71295037"
 ####  <a name="Parts"></a> 將新範本重新命名為組件  
  在 CTP 3.0 中發行之可重複使用的新控制流程範本，已重新命名為控制流程組件或封裝組件。 如需此功能的詳細資訊，請參閱 [使用控制流程封裝組件在封裝之間重複使用控制流程](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md)。  
 
-## <a name="connectivity"></a>連接性  
+## <a name="connectivity"></a>連線能力  
 
 ### <a name="expanded-connectivity-on-premises"></a>已擴充內部部署的連線
 

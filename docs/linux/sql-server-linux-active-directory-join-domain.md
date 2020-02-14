@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9bc52bc1708d4ca6e06e5cc78399e12615860d27
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 5999a50e793cb29ea67075d0fa36454cdb58a67d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75224508"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761872"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>將 Linux 主機上的 SQL Server 加入 Active Directory 網域
 
@@ -27,7 +27,7 @@ ms.locfileid: "75224508"
 設定 Active Directory 驗證之前，您必須先在網路上設定 Active Directory 網域控制站 (Windows)。 然後，將 Linux 主機上的 SQL Server 加入 Active Directory 網域。
 
 > [!IMPORTANT]
-> 本文所述的範例步驟僅供指引參考。 根據整體環境的設定方式而定，您環境中的實際步驟可能稍有不同。 如需環境的特定設定、自訂及任何必要的疑難排解，請連絡您的系統和網域管理員。
+> 本文中所述的範例步驟僅為指導用途，並參考 Ubuntu 16.04、Red Hat Enterprise Linux (RHEL) 7.x 和 SUSE Enterprise Linux (SLES) 12 作業系統。 根據整體環境的設定方式與作業系統版本而定，您環境中的實際步驟可能稍有不同。 例如，Ubuntu 18.04 使用 netplan，而 Red Hat Enterprise Linux (RHEL) 8.x 使用 nmcli 等其他工具來管理及設定網路。 建議連絡您的系統和網域管理員，以了解您環境的特定工具、設定、自訂並進行任何必要的疑難排解。
 
 ## <a name="check-the-connection-to-a-domain-controller"></a>檢查網域控制站的連線
 
@@ -43,7 +43,7 @@ ping contoso.com
 
 如果其中一項名稱檢查失敗，請更新您的網域搜尋清單。 下列各節分別提供適用於 Ubuntu、Red Hat Enterprise Linux (RHEL) 和 SUSE Linux Enterprise Server (SLES) 的指示。
 
-### <a name="ubuntu"></a>Ubuntu
+### <a name="ubuntu-1604"></a>Ubuntu 16.04
 
 1. 編輯 **/etc/network/interfaces** 檔案，以讓您的 Active Directory 網域位於網域搜尋清單中：
 
@@ -71,7 +71,7 @@ ping contoso.com
    nameserver **<AD domain controller IP address>**
    ```
 
-### <a name="rhel"></a>RHEL
+### <a name="rhel-7x"></a>RHEL 7.x
 
 1. 編輯 **/etc/sysconfig/network-scripts/ifcfg-eth0** 檔案，以讓您的 Active Directory 網域位於網域搜尋清單中。 或者，視需要編輯其他介面設定檔：
 
@@ -100,7 +100,7 @@ ping contoso.com
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
    ```
 
-### <a name="sles"></a>SLES
+### <a name="sles-12"></a>SLES 12
 
 1. 編輯 **/etc/sysconfig/network/config** 檔案，以讓您的 Active Directory 網域控制站 IP 用於 DNS 查詢，且您的 Active Directory 網域位於網域搜尋清單中：
 
@@ -178,7 +178,7 @@ ping contoso.com
 
    SQL Server 會使用 SSSD 和 NSS，將使用者帳戶和群組對應至安全性識別碼 (SID)。 您必須設定並執行 SSSD，SQL Server 才能成功建立 AD 登入。 **realmd** 通常會在加入網域的過程中自動執行此動作，但在某些情況下，您必須另外進行此作業。
 
-   如需詳細資訊，請參閱如何[手動設定 SSSD](https://access.redhat.com/articles/3023951) 和[設定 NSS 以使用 SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)。
+   如需詳細資訊，請參閱如何[手動設定 SSSD](https://access.redhat.com/articles/3023951) 和[設定 NSS 以使用 SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)。
 
 1. 確認您現在可以透過網域收集使用者的相關資訊，並取得該使用者的 Kerberos 票證。 下列範例會針對上述目的，使用 **id**、[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) 和 [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) 命令。
 

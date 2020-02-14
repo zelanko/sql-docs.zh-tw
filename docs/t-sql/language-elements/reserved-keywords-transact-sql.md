@@ -19,16 +19,16 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cc0390a01bec10b58ed29d1824e8d0b482e78358
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091767"
 ---
 # <a name="reserved-keywords-transact-sql"></a>保留關鍵字 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用保留的關鍵字來定義、操作和存取資料庫。 保留的關鍵字是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用來剖析及了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式和批次之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言文法的一部分。 雖然在語意上可以利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 保留關鍵字做為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼中的識別碼及物件名稱，但您必須分隔這些識別碼。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用保留的關鍵字來定義、操作和存取資料庫。 保留的關鍵字是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用來剖析及了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式和批次之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言文法的一部分。 雖然在語意上可以利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 保留關鍵字做為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼中的識別碼及物件名稱，但您必須分隔這些識別碼。  
   
  下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Azure SQL 資料倉儲的保留關鍵字。  
   
@@ -37,12 +37,12 @@ ms.locfileid: "68091767"
 |ADD|EXTERNAL|PROCEDURE|  
 |ALL|FETCH|PUBLIC|  
 |ALTER|FILE|RAISERROR|  
-|與|FILLFACTOR|READ|  
+|AND|FILLFACTOR|READ|  
 |ANY|FOR|READTEXT|  
 |AS|FOREIGN|RECONFIGURE|  
 |ASC|FREETEXT|REFERENCES|  
 |AUTHORIZATION|FREETEXTTABLE|複寫|  
-|BACKUP|FROM|RESTORE|  
+|備份|FROM|RESTORE|  
 |BEGIN|FULL|RESTRICT|  
 |BETWEEN|FUNCTION|RETURN|  
 |BREAK|GOTO|REVERT|  
@@ -78,21 +78,21 @@ ms.locfileid: "68091767"
 |DEALLOCATE|OF|TRUNCATE|  
 |DECLARE|OFF|TRY_CONVERT|  
 |DEFAULT|OFFSETS|TSEQUAL|  
-|Delete|ON|UNION|  
-|DENY|OPEN|UNIQUE|  
+|刪除|開啟|UNION|  
+|拒絕|OPEN|UNIQUE|  
 |DESC|OPENDATASOURCE|UNPIVOT|  
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
-|DOUBLE|OPTION|使用者|  
-|DROP|或|VALUES|  
+|DOUBLE|OPTION|USER|  
+|DROP|OR|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
 |END|OVER|WAITFOR|  
 |ERRLVL|PERCENT|WHEN|  
 |ESCAPE|PIVOT|WHERE|  
 |EXCEPT|PLAN|WHILE|  
-|EXEC|PRECISION|取代所有提及的|  
+|EXEC|PRECISION|WITH|  
 |執行 CREATE 陳述式之前，請先執行|PRIMARY|WITHIN GROUP|  
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||
@@ -118,7 +118,7 @@ ms.locfileid: "68091767"
 ||||  
 |-|-|-|  
 |**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
-|**ACTION**|**EXECUTE**|**PAD**|  
+|**動作**|**EXECUTE**|**PAD**|  
 |**ADA**|**EXISTS**|**PARTIAL**|  
 |**ADD**|**EXTERNAL**|**PASCAL**|  
 |**ALL**|**EXTRACT**|**POSITION**|  
@@ -240,8 +240,8 @@ ms.locfileid: "68091767"
 |CONNECT|MODIFIES|STRUCTURE|  
 |CONNECTION|MODIFY|SUBMULTISET|  
 |CONSTRAINTS|MODULE|SUBSTRING_REGEX|  
-|CONSTRUCTOR|MONTH|SYMMETRIC|  
-|CORR|MULTISET|SYSTEM|  
+|CONSTRUCTOR|月|SYMMETRIC|  
+|CORR|MULTISET|系統|  
 |CORRESPONDING|NAMES|TEMPORARY|  
 |COVAR_POP|NATURAL|TERMINATE|  
 |COVAR_SAMP|NCHAR|THAN|  
@@ -255,12 +255,12 @@ ms.locfileid: "68091767"
 |CURRENT_TRANSFORM_GROUP_FOR_TYPE|OBJECT|TREAT|  
 |CYCLE|OCCURRENCES_REGEX|TRUE|  
 |DATA|OLD|UESCAPE|  
-|DATE|ONLY|UNDER|  
+|日期|ONLY|UNDER|  
 |DAY|OPERATION|UNKNOWN|  
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|Value|  
+|DEFERRED|OUTPUT|值|  
 |DEPTH|PAD|VAR_POP|  
 |DEREF|參數|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
@@ -291,7 +291,7 @@ ms.locfileid: "68091767"
 |GET|REGR_R2|XMLTABLE|  
 |GLOBAL|REGR_SLOPE|XMLTEXT|  
 |GO|REGR_SXX|XMLVALIDATE|  
-|GROUPING|REGR_SXY|YEAR|  
+|GROUPING|REGR_SXY|年|  
 |HOLD|REGR_SYY|ZONE|  
   
 ## <a name="see-also"></a>另請參閱  

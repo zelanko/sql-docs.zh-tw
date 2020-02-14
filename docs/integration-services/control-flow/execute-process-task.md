@@ -17,10 +17,10 @@ ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 214f28fbb977414d4e14fdd14f2be53e9b705bc1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298333"
 ---
 # <a name="execute-process-task"></a>執行處理工作
@@ -28,14 +28,14 @@ ms.locfileid: "71298333"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  「執行處理」工作會隨 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝工作流程執行應用程式或批次檔。 雖然可以使用「執行處理」工作來開啟任何標準應用程式，例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 或 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]，但通常您會使用它來執行處理資料來源的商業應用程式或批次檔。 例如，您可以使用「執行處理」工作展開壓縮的文字檔。 然後封裝就可以使用文字檔做為封裝中資料流程的資料來源。 另一項範例為：您可以使用「執行處理」工作來執行產生每日銷售報表的自訂 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 應用程式。 接著，您就可將報告附加至「傳送郵件」工作，並將報告轉寄到通訊群組清單。  
+  「執行處理」工作會隨 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件工作流程來執行應用程式或批次檔。 雖然可以使用「執行處理」工作來開啟任何標準應用程式，例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 或 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]，但通常您會使用它來執行處理資料來源的商業應用程式或批次檔。 例如，您可以使用「執行處理」工作展開壓縮的文字檔。 然後封裝就可以使用文字檔做為封裝中資料流程的資料來源。 另一項範例為：您可以使用「執行處理」工作來執行產生每日銷售報表的自訂 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 應用程式。 接著，您就可將報告附加至「傳送郵件」工作，並將報告轉寄到通訊群組清單。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含執行工作流程作業的其他工作，例如執行封裝。 如需詳細資訊，請參閱 [執行封裝工作](../../integration-services/control-flow/execute-package-task.md)  
   
 ## <a name="custom-log-entries-available-on-the-execute-process-task"></a>執行處理工作上可用的自訂記錄項目  
  下表列出「執行處理」工作的自訂記錄項目。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|Description|  
+|記錄項目|描述|  
 |---------------|-----------------|  
 |**ExecuteProcessExecutingProcess**|提供將工作設定為執行之相關的程序資訊。<br /><br /> 將會寫入兩個記錄項目。 其中一個包含工作所執行之可執行檔的名稱和位置的相關資訊，另一個項目則記錄可執行檔的結束。|  
 |**ExecuteProcessVariableRouting**|提供有關哪些變數會傳到可執行檔之輸入和輸出的相關資訊。 將會寫入 stdin (輸入)、stdout (輸出) 和 stderr (錯誤輸出) 的記錄項目。|  
@@ -60,7 +60,7 @@ ms.locfileid: "71298333"
   
  您可以使用運算式來設定各種「執行處理」工作屬性。  
   
- 當您使用 **StandardInputVariable** 屬性設定「執行處理」工作來提供輸入時，請從應用程式呼叫 **Console.ReadLine** 方法來讀取輸入。 如需詳細資訊，請參閱 [Console.ReadLine 方法](https://go.microsoft.com/fwlink/?LinkId=129201)類別庫中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
+ 當您使用 **StandardInputVariable** 屬性設定「執行處理」工作來提供輸入時，請從應用程式呼叫 **Console.ReadLine** 方法來讀取輸入。 如需詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別庫中的 [Console.ReadLine 方法](https://go.microsoft.com/fwlink/?LinkId=129201)主題。  
   
  當您使用 **Arguments** 屬性設定「執行處理」工作來提供輸入時，請執行下列其中一個步驟來取得引數：  
   

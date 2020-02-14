@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7fbe5d78e911f526f9006acee3c9f9842ec2d5e2
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 474a65593b830e671a7a65557c4c5fec11aea07a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768561"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285788"
 ---
 # <a name="generate-sql-script-replication-objects"></a>產生 SQL 指令碼 (複寫物件)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   複寫指令碼包含要實作已編寫複寫元件之指令碼所必要的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 系統預存程序，例如發行集或訂閱。 拓撲中的所有複寫元件都應作為損毀復原計畫的一部份來編寫指令碼，而指令碼也可以用於自動執行重複性工作。 複寫提供編寫複寫物件之指令碼的兩個對話方塊：  
   
--   **[產生 SQL 指令碼]** ，這可從 **msCoName** 中之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]資料夾和所有子資料夾的內容功能表中使用。 此對話方塊可讓您編寫 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上之所有複寫物件的指令碼。  
+-   [產生 SQL 指令碼]  ，這可從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [複寫]  資料夾和所有子資料夾的操作功能表中使用。 此對話方塊可讓您撰寫 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上所有複寫物件的指令碼。  
   
 -   **產生 SQL 指令碼 \<物件名稱>** ，這可從發行集和訂閱的內容功能表使用。 此對話方塊可讓您編寫個別物件的指令碼。  
   

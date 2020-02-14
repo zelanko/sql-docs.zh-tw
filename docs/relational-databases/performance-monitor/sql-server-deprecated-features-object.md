@@ -16,10 +16,10 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2dd802097e083adb633549174dbc420b5967fb10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093596"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server、Deprecated Features 物件
@@ -36,16 +36,16 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 下表描述 SQL Server **已被取代的功能** 效能物件。
 
-|**SQL Server 已被取代的功能計數器**|Description|  
+|**SQL Server 已被取代的功能計數器**|描述|  
 |-------------|-----------------|  
-|**使用方式**|自上次啟動 SQL Server 後的功能使用方式。|
+|**使用量**|自上次啟動 SQL Server 後的功能使用方式。|
   
  下表描述 SQL Server Deprecated Features 計數器執行個體。  
   
-|SQL Server 已被取代的功能計數器執行個體|Description|  
+|SQL Server 已被取代的功能計數器執行個體|描述|  
 |------------------------------------------------------|-----------------|  
 |做為暫存資料表和預存程序名稱的 '#' 和 '##'。|遇到一個不包含 # 以外之任何字元的識別碼。 請至少使用一個其他字元。 每次編譯時發生一次。|  
-|'::' 函數呼叫語法|資料表值函式遇到 :: 函式呼叫語法。 取代為 `SELECT column_list FROM` <函數名稱>  `()`。 例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)` 取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次編譯時發生一次。|  
+|'::' 函數呼叫語法|資料表值函式遇到 :: 函式呼叫語法。 取代為 `SELECT column_list FROM` <函式名稱>  `()`。 例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)`取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次編譯時發生一次。|  
 |'\@' 和以 '\@\@' 開頭的名稱作為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別碼|出現了以 \@ 或 \@\@ 開頭的識別碼。 請勿使用 \@、\@v @ 或是以 \@\@ 開頭的名稱作為識別碼。 每次編譯時發生一次。|  
 |ADDING TAPE DEVICE|遇到已被取代的功能 sp_addumpdevice'**tape**'。 請改用 sp_addumpdevice'**disk**'。 每次使用時發生一次。|  
 |ALL 權限|遇到 GRANT ALL、DENY ALL 或 REVOKE ALL 語法的總次數。 請修改語法來拒絕特定權限。 每次查詢時發生一次。|  
@@ -110,7 +110,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Hindi|每次啟動資料庫及使用定序時，事件會發生一次。 請規劃修改使用此定序的應用程式。 請改用 Indic_General_90。|  
 |沒有括號的 HOLDLOCK 資料表提示。||  
 |IDENTITYCOL|遇到 INDENTITYCOL 語法。 請重寫陳述式來使用 $identity 語法。 每次編譯時發生一次。|  
-|沒有 COUNT_BIG(\*) 的索引檢視表 SELECT 清單|彙總索引檢視表的 SELECT 清單必須包含 COUNT_BIG (\*)。|  
+|沒有 COUNT_BIG(*) 的索引檢視表 SELECT 清單|彙總索引檢視表的 SELECT 清單必須包含 COUNT_BIG (\*)。|  
 |INDEX_OPTION|遇到 CREATE TABLE、ALTER TABLE 或 CREATE INDEX 語法，但是選項周圍沒有括號。 請重寫陳述式來使用目前的語法。 每次查詢時發生一次。|  
 |INDEXKEY_PROPERTY|遇到 INDEXKEY_PROPERTY 語法。 請重寫陳述式來查詢 sys.index_columns。 每次編譯時發生一次。|  
 |間接 TVF 提示|透過檢視表將資料表提示間接套用到多重陳述式資料表值函式 (TVF) 的引動過程，將從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本中移除。|  
@@ -118,7 +118,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |INSERT_HINTS||  
 |Korean_Wansung_Unicode|每次啟動資料庫及使用定序時，事件會發生一次。 請規劃修改使用此定序的應用程式。|  
 |Lithuanian_Classic|每次啟動資料庫及使用定序時，事件會發生一次。 請規劃修改使用此定序的應用程式。|  
-|Macedonian|每次啟動資料庫及使用定序時，事件會發生一次。 請規劃修改使用此定序的應用程式。 請改用 Macedonian_FYROM_90。|  
+|馬其頓文|每次啟動資料庫及使用定序時，事件會發生一次。 請規劃修改使用此定序的應用程式。 請改用 Macedonian_FYROM_90。|  
 |MODIFY FILEGROUP READONLY|遇到了 MODIFY FILEGROUP READONLY 語法。 請重寫陳述式來使用 READ_ONLY 語法。 每次編譯時發生一次。|  
 |MODIFY FILEGROUP READWRITE|遇到了 MODIFY FILEGROUP READWRITE 語法。 請重寫陳述式來使用 READ_WRITE 語法。 每次編譯時發生一次。|  
 |兩部分以上的資料行名稱|查詢在資料行清單中使用了 3 部分或 4 部分的名稱。 請將查詢變更為使用標準的 2 部分相容名稱。 每次編譯時發生一次。|  
@@ -275,7 +275,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |XMLDATA|遇到 FOR XML 語法。 針對 RAW 和 AUTO 模式使用 XSD 產生。 明確的模式不會有任何取代項目。 每次編譯時發生一次。|  
 |XP_API|遇到擴充預存程序陳述式。 請勿使用。|  
 |xp_grantlogin|遇到 xp_grantlogin 程序。 請改用 CREATE LOGIN。 每次編譯時發生一次。|  
-|xp_loginconfig|遇到 xp_loginconfig 程序。 請改用 SERVERPROPERTY 的 IsIntegratedSecurityOnly 引數。 每次查詢時發生一次。|  
+|xp_loginConfig|遇到 xp_loginconfig 程序。 請改用 SERVERPROPERTY 的 IsIntegratedSecurityOnly 引數。 每次查詢時發生一次。|  
 |xp_revokelogin|遇到 xp_revokelogin 程序。 請改用 ALTER LOGIN DISABLE 或 DROP LOGIN。 每次編譯時發生一次。|  
   
 ## <a name="see-also"></a>另請參閱  

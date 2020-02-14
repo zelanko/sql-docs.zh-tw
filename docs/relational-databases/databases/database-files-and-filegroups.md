@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6ccf21bcc3e0657123aa4f0fdcfe9b2d3cb0861a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 782536e79336c0224638707538e8a12a31f5af84
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037590"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315598"
 ---
 # <a name="database-files-and-filegroups"></a>資料庫檔案與檔案群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68037590"
 ## <a name="database-files"></a>資料庫檔案  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有三種檔案類型，如下表所示。  
   
-|檔案|Description|  
+|檔案|描述|  
 |----------|-----------------|  
 |Primary|主要資料檔包含資料庫啟動資訊，並指到資料庫中的其他檔案。 使用者資料和物件可儲存於此檔案或次要的資料檔中。 每個資料庫都有一個主要資料檔案。 建議您將主要資料檔的副檔名設為 .mdf。|  
 |次要|次要資料檔是選擇性且使用者自訂的，並可儲存使用者資料。 次要檔可用以將資料分散在多個磁碟上，即透過將每個檔案放在不同的磁碟機上來達成此目的。 此外，若資料庫超過了單一 Windows 檔案的大小上限，您可使用次要資料檔，以容許資料庫繼續成長。<br /><br /> 建議您將次要資料檔的副檔名設為 .ndf。|  
@@ -67,7 +67,7 @@ ms.locfileid: "68037590"
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料及記錄檔可以放在 FAT 或 NTFS 檔案系統， 在 Windows 系統上，因為 NTFS 安全性層面，我們建議使用 NTFS 檔案系統。 
 
 > [!WARNING]
-> 但是讀寫資料檔案群組及記錄檔不能放在 NTFS 壓縮檔案系統。 只有唯讀資料庫及唯讀次要檔案群組，才能放在 NTFS 壓縮檔案系統。
+> NTFS 壓縮檔案系統不支援讀寫資料檔案群組及記錄檔。 只有唯讀資料庫及唯讀次要檔案群組才允許放在 NTFS 壓縮檔案系統上。
 > 為節省空間，強烈建議使用[資料壓縮](../../relational-databases/data-compression/data-compression.md)，而不要使用檔案系統壓縮。
 
 若有多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體執行於同一部電腦上，每個執行個體都會收到不同的預設目錄來包含建立於執行個體中的資料庫檔案。 如需詳細資訊，請參閱 [SQL Server 預設和具名執行個體的檔案位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。
@@ -101,12 +101,12 @@ ms.locfileid: "68037590"
   
  所有儲存在檔案群組中的資料檔列於下表。  
   
-|檔案群組|Description|  
+|檔案群組|描述|  
 |---------------|-----------------|  
 |Primary|包含主要檔案的檔案群組。 所有的系統資料表都配置於主要檔案群組內。|  
 |記憶體最佳化資料|記憶體最佳化檔案群組是根據檔案資料流檔案群組|  
 |檔案資料流||    
-|使用者自訂|使用者在初次建立資料庫或之後修改資料庫時，特別建立的檔案群組。|  
+|使用者定義|使用者在初次建立資料庫或之後修改資料庫時，特別建立的檔案群組。|  
   
 ### <a name="default-primary-filegroup"></a>預設 (主要) 檔案群組  
  若在資料庫中建立物件時未指明屬於哪個檔案群組，就會將物件指定至預設的檔案群組。 在任何時候，都只有一個檔案群組指定為預設檔案群組。 在預設檔案群組中的檔案必須夠大，才能容納未配置到其他檔案群組的新物件。  

@@ -13,15 +13,15 @@ ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: bbc94f7586c05746a70c2f9fd9172230771837a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67912049"
 ---
-# <a name="resource-governor"></a>[資源管理員]
+# <a name="resource-governor"></a>資源管理員
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源管理員是一項功能，可讓您用於管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作負載和系統資源耗用量。 資源管理員可讓您針對內送應用程式要求可用的 CPU、實體 IO 和記憶體數量指定限制。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源管理員是一項功能，可讓您用於管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作負載和系統資源耗用量。 Resource Governor 可讓您指定內送應用程式要求所能使用的 CPU、實體 IO 和記憶體數量限制。  
   
 ## <a name="benefits-of-resource-governor"></a>資源管理員的優點  
  資源管理員可讓您藉由指定內送要求的資源耗用量限制來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作負載和資源。 在「資源管理員」環境中，工作負載是一組大小類似的查詢或要求，可以也應該將其視為單一實體。 這不是一項規定，但是當工作負載的資源使用模式越一致時，您就可以從「資源管理員」得到更多的好處。 可以即時重新設定資源限制，對正在執行的工作負載造成最低的影響。  
@@ -75,7 +75,7 @@ ms.locfileid: "67912049"
   
 -   資源集區提供並限制應用程式 (例如，應用程式 3) 所需的資源。  
   
- ![資源管理員功能性元件](../../relational-databases/resource-governor/media/rg-basic-funct-components.gif "資源管理員功能性元件")  
+ ![Resource Governor 功能性元件](../../relational-databases/resource-governor/media/rg-basic-funct-components.gif "Resource Governor 功能性元件")  
   
 ## <a name="resource-governor-tasks"></a>資源管理員工作  
   
@@ -85,8 +85,8 @@ ms.locfileid: "67912049"
 |描述如何停用資源管理員。|[停用資源管理員](../../relational-databases/resource-governor/disable-resource-governor.md)|  
 |描述如何建立、改變和卸除資源集區。|[資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)|  
 |描述如何建立、改變、移動及卸除工作負載群組。|[資源管理員工作負載群組](../../relational-databases/resource-governor/resource-governor-workload-group.md)|  
-|描述如何建立和測試分類使用者定義函數。|[資源管理員分類函式](../../relational-databases/resource-governor/resource-governor-classifier-function.md)|  
-|描述如何使用範本設定資源管理員。|[使用範本來設定資源管理員](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)|  
+|描述如何建立和測試分類使用者定義函數。|[資源管理員分類函數](../../relational-databases/resource-governor/resource-governor-classifier-function.md)|  
+|描述如何使用範本設定資源管理員。|[使用範本設定資源管理員](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)|  
 |描述如何檢視資源管理員的屬性。|[檢視資源管理員屬性](../../relational-databases/resource-governor/view-resource-governor-properties.md)|  
   
 ## <a name="see-also"></a>另請參閱  

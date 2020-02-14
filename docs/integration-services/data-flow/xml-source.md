@@ -20,10 +20,10 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d766d6a36dbe8f91f2c2fd42433093b298935b48
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290834"
 ---
 # <a name="xml-source"></a>XML 來源
@@ -76,7 +76,7 @@ ms.locfileid: "71290834"
   
  XML 來源支援多項規則輸出和多項錯誤輸出。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括用來設定 XML 來源的 [XML 來源編輯器]  對話方塊。 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中即提供此對話方塊。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含用來設定 XML 來源的 [XML 來源編輯器]  對話方塊。 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中即提供此對話方塊。  
   
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "71290834"
  **資料存取模式**  
  從來源中指定選取資料的方法。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |XML 檔案位置|從 XML 檔案擷取資料。|  
 |來自變數的 XML 檔案|指定變數中的 XML 檔案名稱。<br /><br /> **相關資訊**：[在套件中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  

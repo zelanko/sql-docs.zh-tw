@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70009399"
 ---
 # <a name="columnstore-indexes-overview"></a>資料行存放區索引：概觀
@@ -61,7 +61,7 @@ ms.locfileid: "70009399"
 -   每一個資料列群組會針對資料表中的每一個資料行包含一個資料行區段。  
 -   每個資料行區段會各自壓縮成一體並且儲存到實體媒體上。  
   
-![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+![資料行區段](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "資料行區段")  
   
 #### <a name="clustered-columnstore-index"></a>叢集資料行存放區索引
 叢集資料行存放區索引是整個資料表的實體儲存體。    
@@ -116,7 +116,7 @@ ms.locfileid: "70009399"
 資料行存放區索引可提升分析查詢的效能，現在可掃描大量資料，特別是大型資料表上的資料。 請在資料倉儲和分析工作負載上 (尤其是在事實資料表上) 使用資料行存放區索引，因為它們通常需要完整資料表掃描，而不是資料表搜尋。  
   
 ### <a name="can-i-combine-rowstore-and-columnstore-on-the-same-table"></a>我可以將資料列存放區和資料行存放區合併到同一個資料表嗎？  
-是的。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，您可以在資料列存放區資料表上建立可更新的非叢集資料行存放區索引。 資料行存放區索引會儲存所選資料行的複本，因此您需要額外的空間來存放此資料，但所選資料平均會壓縮 10 倍。 您就可以同時在資料行存放區索引上執行分析，並在資料列存放區索引上執行交易。 當資料列存放區資料表中的資料變更時，會更新資料行存放區，讓兩個索引針對相同的資料執行。  
+是。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，您可以在資料列存放區資料表上建立可更新的非叢集資料行存放區索引。 資料行存放區索引會儲存所選資料行的複本，因此您需要額外的空間來存放此資料，但所選資料平均會壓縮 10 倍。 您就可以同時在資料行存放區索引上執行分析，並在資料列存放區索引上執行交易。 當資料列存放區資料表中的資料變更時，會更新資料行存放區，讓兩個索引針對相同的資料執行。  
   
 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，您在資料行存放區索引上可以有一個或多個非叢集資料列存放區索引，而且可以針對基礎資料行存放區執行有效率的資料表搜尋。 其他選項現在也可以使用。 例如，您可以在資料列存放區資料表上使用 UNIQUE 條件約束，強制執行主索引鍵條件約束。 由於非唯一值將無法插入至資料列存放區資料表，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法將值插入至資料行存放區。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "70009399"
   
 當您使用 `CREATE TABLE` 陳述式建立資料表時，可以指定 `WITH CLUSTERED COLUMNSTORE INDEX` 選項，將資料表建立為資料行存放區。 如果您已經有一個資料列存放區資料表，並想要將它轉換成資料行存放區，則可以使用 `CREATE COLUMNSTORE INDEX` 陳述式。  
   
-|工作|參考主題|注意|  
+|Task|參考主題|注意|  
 |----------|----------------------|-----------|  
 |建立資料表作為資料行存放區。|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]開始，您可以建立資料表作為叢集資料行存放區索引。 您不需要先建立資料列存放區資料表，再將它轉換成資料行存放區。|  
 |建立具有資料行存放區索引的記憶體資料表。|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]開始，您可以建立具有資料行存放區索引的記憶體最佳化資料表。 建立資料表之後，也可以使用 `ALTER TABLE ADD INDEX` 語法來加入資料行存放區索引。|  

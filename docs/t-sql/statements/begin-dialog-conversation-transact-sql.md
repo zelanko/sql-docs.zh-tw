@@ -31,10 +31,10 @@ ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c456b6e34dba77b7e35cc24e8af673662725a2bb
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211379"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
@@ -101,12 +101,12 @@ WHERE database_id = DB_ID() ;
  指定對話維持開啟狀態的最大時間量。 為了使對話順利完成，兩個端點必須在存留期間過期之前明確地結束對話。 *dialog_lifetime* 值必須以秒為單位來表示。 存留期間的類型是 **int**。當沒有指定 LIFETIME 子句時，對話存留期間是 **int** 資料類型的最大值。  
   
  ENCRYPTION  
- 指定當這個對話所傳送和接收的訊息在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之外傳送時，是否必須加密。 必須加密的對話是「安全的對話」  。 當 ENCRYPTION = ON 且未設定支援加密所需要的憑證時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在交談上傳回錯誤訊息。 當 ENCRYPTION = OFF 時，如果設定 *target_service_name* 的遠端服務繫結，便會使用加密；否則，會以不加密的方式來傳送訊息。 如果沒有這個子句，預設值便是 ON。  
+ 指定當這個對話方塊所傳送和接收訊息在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之外傳送時，是否必須加密。 必須加密的對話是「安全的對話」  。 當 ENCRYPTION = ON 且未設定支援加密所需要的憑證時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在交談上傳回錯誤訊息。 當 ENCRYPTION = OFF 時，如果設定 *target_service_name* 的遠端服務繫結，便會使用加密；否則，會以不加密的方式來傳送訊息。 如果沒有這個子句，預設值便是 ON。  
   
 > [!NOTE]  
 >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的相同執行個體中各項服務之間交換的訊息，絕對不會加密。 不過，如果交談服務在不同資料庫中，使用加密的交談仍需要資料庫主要金鑰以及用於加密的憑證。 如此一來，當進行交談時，如果其中一個資料庫移到不同的執行個體，仍可以繼續交談。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  所有訊息都是交談的一部份。 因此，起始服務必須先開始一項與目標服務的交談，才能將訊息傳給目標服務。 BEGIN DIALOG CONVERSATION 陳述式指定的資訊與郵件的地址相似；[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會利用這項資訊將訊息傳給正確的服務。 TO SERVICE 子句指定的服務是訊息要送往的地址。 FROM SERVICE 子句指定的服務是回覆訊息的傳回地址。  
   
  交談目標不需要呼叫 BEGIN DIALOG CONVERSATION。 當起始端所發出之交談中的第一則訊息抵達時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在目標資料庫中建立一項交談。  

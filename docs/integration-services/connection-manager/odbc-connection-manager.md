@@ -18,10 +18,10 @@ ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0d115753447a337cc9846942e2c39da54f3658f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298492"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 連接管理員
@@ -31,7 +31,7 @@ ms.locfileid: "71298492"
 
   ODBC 連接管理員可使用「開放式資料庫連接 (ODBC)」規格，讓封裝連接到各種資料庫管理系統。  
   
- 當您將 ODBC 連接加入封裝並設定連線管理員屬性時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立連線管理員，並將該連線管理員加入到封裝的 **Connections** 集合。 在執行階段，連接管理員會解析為實體 ODBC 連接。  
+ 當您將 ODBC 連線新增至套件並設定連線管理員屬性時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立連線管理員，並將該連線管理員新增至套件的 **Connections** 集合。 在執行階段，連接管理員會解析為實體 ODBC 連接。  
   
  連線管理員的 **ConnectionManagerType** 屬性會設為 **ODBC**。  
   

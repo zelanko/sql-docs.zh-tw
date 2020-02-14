@@ -16,10 +16,10 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846743"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
@@ -113,7 +113,7 @@ replmerg [-?]
  列印所有可用的參數。  
   
  **-Publisher** _server_name_[ **\\** _instance_name_]  
- 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 <伺服器名稱>  。 請針對該伺服器上 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
+ 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 *server_name*。 請針對該伺服器上 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
   
  **-PublisherDB** _publisher_database_  
  這是發行者資料庫的名稱。  
@@ -134,7 +134,7 @@ replmerg [-?]
  指定代理程式是否會嘗試持續輪詢複寫的交易。 如果您指定了這個參數，代理程式就會以輪詢間隔輪詢來源的複寫交易，即使沒有任何交易暫止也一樣。  
   
  **-DestThreads** _number_of_destination_threads_  
- 指定合併代理程式在目的地套用變更所用的目的地執行緒數目。 在上傳期間，目的地是發行者，而在下載期間，目的地則是訂閱者。 預設值是 4。  
+ 指定合併代理程式在目的地套用變更所用的目的地執行緒數目。 在上傳期間，目的地是發行者，而在下載期間，目的地則是訂閱者。 預設值為 4。  
   
  **-DefinitionFile** _def_path_and_file_name_  
  這是代理程式定義檔的路徑。 代理程式定義檔包含代理程式的命令提示字元引數。 此檔案的內容會剖析為可執行檔。 請使用雙引號 (") 來指定包含任意字元的引數值。  
@@ -166,7 +166,7 @@ replmerg [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  這是建立連接時，合併代理程式所使用的安全通訊端層 (SSL) 加密層級。  
   
-|EncryptionLevel 值|Description|  
+|EncryptionLevel 值|描述|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定要使用 SSL，但是代理程式不會驗證 SSL 伺服器憑證是否由受信任的簽發者簽署。|  
@@ -183,7 +183,7 @@ replmerg [-?]
   
  指定同步處理期間資料交換的類型，它可以是下列其中一個值：  
   
-|ExchangeType 值|Description|  
+|ExchangeType 值|描述|  
 |------------------------|-----------------|  
 |**1**|代理程式應該將資料變更從訂閱者上傳至發行者。|  
 |**2**|代理程式應該將資料變更從發行者下載至訂閱者。|  
@@ -202,7 +202,7 @@ replmerg [-?]
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  指定合併代理程式應該使用的聚合層級，而且可以是下列其中一個值。  
   
-|ForceConvergenceLevel 值|Description|  
+|ForceConvergenceLevel 值|描述|  
 |---------------------------------|-----------------|  
 |**0** (預設)|預設值。 執行標準合併，但不進行其他聚合。|  
 |**1**|針對所有層代強制執行聚合。|  
@@ -223,7 +223,7 @@ replmerg [-?]
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  指定在合併作業期間記錄的記錄量。 您可以透過選取 **1**，盡量減少記錄作業對效能造成的影響。  
   
-|HistoryVerboseLevel 值|Description|  
+|HistoryVerboseLevel 值|描述|  
 |-------------------------------|-----------------|  
 |**0**|記錄最終代理程式狀態訊息、最終工作階段詳細資料，以及任何錯誤。|  
 |**1**|除了最終代理程式狀態訊息、最終工作階段詳細資料以及任何錯誤以外，記錄每個工作階段狀態的累加工作階段詳細資料，包括完成百分比。|  
@@ -328,7 +328,7 @@ replmerg [-?]
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  指定現有的訂閱者資料庫是否存在。  
   
-|SubscriberDBAddOption 值|Description|  
+|SubscriberDBAddOption 值|描述|  
 |---------------------------------|-----------------|  
 |**0**|使用現有的資料庫 (預設值)。|  
 |**1**|建立新的空白訂閱者資料庫。|  
@@ -374,7 +374,7 @@ replmerg [-?]
  **-Validate** [**0**|**1**|**2**|**3**]  
  指定是否應該在合併工作階段結束時完成驗證，而且如果是的話，應該完成哪一種驗證。 值 **3** 是建議值。  
   
-|Validate 值|Description|  
+|Validate 值|描述|  
 |--------------------|-----------------|  
 |**0** (預設)|不驗證。|  
 |**1**|僅驗證資料列計數。|  
@@ -387,7 +387,7 @@ replmerg [-?]
  **-ValidateInterval** _validate_interval_  
  這是在連續模式下驗證訂閱的頻率。 預設值是 **60** 分鐘。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]  
 >  如果您已將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 安裝成在本機系統帳戶而非網域使用者帳戶 (預設值) 底下執行，這項服務就只能存取本機電腦。 如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 底下執行的合併代理程式設定為使用 Windows 驗證模式，當它登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]時，合併代理程式就會失敗。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設設定為  驗證。  

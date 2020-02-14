@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d255b4f3599cc9d42f52e860a21941c6e8b95436
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 265f7fa72b6cdcd59ff7c74ec456e533471ddd0a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769744"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287394"
 ---
 # <a name="replication-backward-compatibility"></a>複寫回溯相容性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68769744"
 
 ## <a name="additional-resources"></a>其他資源
  [SQL Server 複寫中已被取代的功能](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  
- 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中為了與舊版相容而保留的複寫功能，將在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未來版本中遭到移除。  
+ 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中為了與舊版相容而保留的複寫功能，將在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未來版本中移除。  
   
  [SQL Server 複寫中的重大變更](../../relational-databases/replication/breaking-changes-in-sql-server-replication.md)  
  需要對應用程式做一些改變的複寫功能變更。 

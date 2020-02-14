@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 520637f8bcbe8ae1fcd4fee0ebf3fa33fe3b3650
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: edd716b36e8dc7339ab9661a2213afae5ac35379
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710495"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909628"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>監視 PolyBase 並進行疑難排解
 
@@ -33,7 +33,7 @@ ms.locfileid: "71710495"
 
 |||  
 |-|-|  
-|檢視|Description|  
+|檢視|描述|  
 |[sys.external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|指定外部資料表。|  
 |[sys.external_data_sources &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|指定外部資料來源。|  
 |[sys.external_file_formats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|指定外部檔案格式。|  
@@ -138,11 +138,11 @@ PolyBase 查詢會分成 sys.dm_exec_distributed_request_steps 內的一系列�
 
 2. 按一下 [執行計劃]  索引標籤。
 
-   ![PolyBase 查詢計畫](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase 查詢計畫")  
+   ![PolyBase 查詢計劃](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase 查詢計劃")  
 
 3. 在 [遠端查詢運算子]  上按一下滑鼠右鍵，然後選取 [屬性]  。
 
-4. 複製遠端查詢值，並將其貼至文字編輯器，以檢視 XML 遠端查詢計劃。 下列為範例。
+4. 複製遠端查詢值，並將其貼至文字編輯器，以檢視 XML 遠端查詢計劃。 範例如下所示。
 
    ```xml  
 

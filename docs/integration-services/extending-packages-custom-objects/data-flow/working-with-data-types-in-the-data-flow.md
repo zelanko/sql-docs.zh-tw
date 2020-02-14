@@ -15,10 +15,10 @@ ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2100176fa0bb6f02deff6cdf2a210ea81e04f9a6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287446"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>使用資料流程中的資料類型
@@ -94,7 +94,7 @@ ms.locfileid: "71287446"
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetUInt64%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_UI8>|  
   
 ## <a name="mapping-data-types-in-the-data-flow"></a>對應資料流程中的資料類型  
- 當透過轉換將資料從來源移到目的地時，資料流程元件偶爾必須在 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType> 列舉中所定義之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 類型，以及 **System** 命名空間中所定義之 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的受管理資料類型之間轉換資料類型。 此外，元件偶爾也必須先將某個 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型轉換成其他資料類型，才可將該類型轉換為 Managed 類型。  
+ 當透過轉換將資料從來源移到目的地時，資料流程元件有時必須在 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType> 列舉中所定義 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 類型，以及 **System** 命名空間中所定義 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的受控資料類型之間轉換資料類型。 此外，元件偶爾也必須先將某個 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型轉換成其他資料類型，才可將該類型轉換為 Managed 類型。  
   
 > [!NOTE]  
 >  預設安裝在 C:\Program Files\Microsoft SQL Server\130\DTS\MappingFiles 中的 XML 格式之對應檔案，與本主題所討論的資料類型對應並不相關。 這些檔案會將資料類型從某個資料庫版本或系統，對應到其他資料庫版本或系統 (例如，從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 對應至 Oracle)，並只可供 [[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 使用。 如需這些對應檔的詳細資訊，請參閱 [SQL Server 匯入和匯出精靈](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)。  

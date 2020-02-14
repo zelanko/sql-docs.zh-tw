@@ -18,10 +18,10 @@ ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ac8532f2cc5d8e2f50c0408ce983a61626748fb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066544"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (geography 資料類型)
@@ -42,7 +42,7 @@ ms.locfileid: "68066544"
 _distance_  
 這是指定與 **geography** 執行個體之間距離的 **float** 運算式，將會從此執行個體的周圍計算緩衝。  
   
-緩衝區的最大距離不能超過 0.999 \* _π_  * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 的地球圓周) 或完整地球。  
+緩衝區最大距離不能超過 0.999 \* _π_  * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 的地球圓周) 或完整地球。  
   
 _tolerance_  
 這是 **float** 運算式，用來指定緩衝距離的容錯。  
@@ -56,12 +56,12 @@ _tolerance_ 值是傳回之線性近似值的理想緩衝距離最大變異值�
 _relative_  
 這是 **bit**，用來指定 _tolerance_ 值是相對的還是絕對的。 如果值為 'TRUE' 或 1，則 tolerance 為相對值。 此值為 _tolerance_ 參數與角度範圍 \* 橢圓體赤道半徑的乘積。 如果值為 'FALSE' 或 0，則 tolerance 為絕對值。 此 _tolerance_ 值是傳回之線性近似值的理想緩衝距離絕對最大變異值。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
 CLR 傳回型別：**SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 如果 _distance_ 不是數字 (NAN)，或如果 _distance_ 是正或負的無限值，則這個方法會擲回 **ArgumentException**。  如果 _tolerance_ 是零 (0) 而不是數字 (NaN) 或正的或負的無限值，則這個方法也會擲回 **ArgumentException**。  
   
 在某些情況下，`STBuffer()` 會傳回 **FullGlobe** 執行個體，例如，當緩衝距離大於兩極至赤道距離時，`STBuffer()` 會在兩極傳回 **FullGlobe** 執行個體。  

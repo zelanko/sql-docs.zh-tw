@@ -13,10 +13,10 @@ ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0230354bfe53de8c362bcdb70caa597652706ee2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293977"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>資料分析工作的設定
@@ -26,7 +26,7 @@ ms.locfileid: "71293977"
 
   在您可以檢閱來源資料的設定檔前，第一個步驟是設定並執行「資料分析」工作。 您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部建立這個工作。 若要設定「資料分析」工作，您可以使用「資料分析工作編輯器」。 此編輯器可讓您選取要輸出設定檔的位置以及要計算的設定檔。 設定工作後，您可以執行封裝以計算資料設定檔。  
   
-## <a name="requirements-and-limitations"></a>需求與限制  
+## <a name="requirements-and-limitations"></a>需求和限制  
  資料分析工作僅用於儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的資料。 此工作不適用於協力廠商或以檔案為基礎的資料來源。  
   
  此外，若要執行包含資料分析工作的封裝，您所使用的帳戶必須具備 tempdb 資料庫的讀取/寫入權限，包括 CREATE TABLE 權限。  
@@ -103,7 +103,7 @@ ms.locfileid: "71293977"
   
  在結構描述中，將目標命名空間識別為 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
   
-## <a name="next-step"></a>下一個步驟  
+## <a name="next-step"></a>後續步驟  
  [資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
   

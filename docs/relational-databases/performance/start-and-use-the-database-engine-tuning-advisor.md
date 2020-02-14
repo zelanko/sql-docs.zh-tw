@@ -19,10 +19,10 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 898c59cab6038b7025066906ea74ffd5b9222815
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983273"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>啟動及使用 Database Engine Tuning Advisor
@@ -50,11 +50,11 @@ ms.locfileid: "73983273"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>若要在 SQL Server Management Studio 中啟動 Database Engine Tuning Advisor  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **中的** 功能表上，按一下 **[Database Engine Tuning Advisor]** 。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [工具]  功能表上，按一下 [Database Engine Tuning Advisor]  。  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>若要從 SQL Server Management Studio 查詢編輯器中啟動 Database Engine Tuning Advisor  
   
-1.  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中，開啟一個 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指令碼檔案。 如需詳細資訊，請參閱[查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)。  
+1.  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中，開啟一個 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]指令碼檔案。 如需詳細資訊，請參閱[查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)。  
   
 2.  選取 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼中的一項查詢，或選取整份指令碼，以滑鼠右鍵按一下選取範圍，選擇 [在 Database Engine Tuning Advisor 中分析查詢]  。 此時會開啟 Database Engine Tuning Advisor GUI，且會將指令碼匯入來作為一份 XML 檔工作負載。 您可以指定工作階段名稱和微調選項來微調做為工作負載的所選 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "73983273"
   
     -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，按一下 **[工具]** 功能表，然後按一下 **[SQL Server Profiler]** 。  
   
-2.  按照下列程序，使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **[微調]** 範本來建立追蹤檔案或資料表：  
+2.  依下列程序，使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [微調]  範本來建立追蹤檔案或資料表：  
   
     -   [建立追蹤 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
@@ -185,7 +185,7 @@ ms.locfileid: "73983273"
   
 2.  建立工作負載。 如需詳細資訊，請參閱本主題前面的＜ [建立工作負載](#Create) ＞。  
   
-3.  啟動 Database Engine Tuning Advisor，登入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。 如需詳細資訊，請參閱本主題前面的＜ [啟動 Database Engine Tuning Advisor](#Start) ＞。  
+3.  啟動 Database Engine Tuning Advisor，並登入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 如需詳細資訊，請參閱本主題前面的＜ [啟動 Database Engine Tuning Advisor](#Start) ＞。  
   
 4.  在 **[一般]** 索引標籤的 **[工作階段名稱]** 中輸入名稱，以建立新的微調工作階段。  
   
@@ -308,7 +308,7 @@ ms.locfileid: "73983273"
 ##  <a name="XMLInput"></a> 建立 XML 輸入檔  
  如果您是有經驗的 XML 開發人員，即可建立 XML 格式的檔案供 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 用以微調工作負載。 若要建立這些 XML 檔案，請使用您喜好的 XML 工具來編輯範例檔，或是根據 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML 結構描述產生執行個體。  
   
- 您的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tuning Advisor XML 結構描述，其位置如下：  
+ 您的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中提供 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML 結構描述，其位置如下：  
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
@@ -363,7 +363,7 @@ ms.locfileid: "73983273"
  **檔案**  
  指定工作負載的 .sql 指令碼或追蹤檔案。 在相關聯的文字方塊中，指定路徑和檔名。 Database Engine Tuning Advisor 會假設工作負載追蹤檔案為換用檔案。 如需有關換用檔案的詳細資訊，請參閱＜ [Limit Trace File and Table Sizes](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)＞。  
   
- **[資料表]**  
+ **Table**  
  指定工作負載的追蹤資料表。 指定相關聯的文字方塊中之追蹤資料表的完整限定名稱如下：  
   
 ```  
@@ -455,7 +455,7 @@ database_name.owner_name.table_name
  **包含篩選的索引**  
  包含加入篩選之索引的建議。 如果您選取下列其中一個實體設計結構，即可使用這個選項：[索引與索引檢視]  、[索引]  或 [非叢集索引]  。  
   
- **[索引]**  
+ **索引數**  
  只包含加入叢集與非叢集索引的建議。 不建議索引檢視。  
   
  **[非叢集索引]**  
@@ -517,6 +517,6 @@ database_name.owner_name.table_name
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及處理 Database Engine Tuning Advisor 的輸出](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [dta Utility](../../tools/dta/dta-utility.md)  
+ [dta 公用程式](../../tools/dta/dta-utility.md)  
   
   

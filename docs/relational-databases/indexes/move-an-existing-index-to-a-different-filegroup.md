@@ -17,10 +17,10 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a2eaffb39868737c955224b3ccd3ba39366d6f92
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906376"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>將現有的索引移至不同的檔案群組
@@ -50,7 +50,7 @@ ms.locfileid: "72906376"
   
 -   您無法使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]移動使用 UNIQUE 或 PRIMARY KEY 條件約束建立的索引。 若要移動這些索引，請使用 [中的](../../t-sql/statements/create-index-transact-sql.md) CREATE INDEX [!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式搭配 (DROP_EXISTING=ON) 選項。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
@@ -73,7 +73,7 @@ ms.locfileid: "72906376"
   
 7.  選取 **[檔案群組或分割區配置名稱]** ，然後從清單中選取要將索引移至其中的檔案群組或分割區配置。  
   
-8.  按一下 [ **關閉**]。  
+8.  按一下 [關閉]  。  
   
 9. 在 [檔案]  功能表上，選取 [儲存 _table_name_]  。  
 

@@ -15,10 +15,10 @@ ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 91db0303326c74b710e7755de5a9573539e61425
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082977"
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>使用系統監視器監視複寫
@@ -27,7 +27,7 @@ ms.locfileid: "68082977"
   
  「系統監視器」使用效能物件和計數器，這些工具可以提供各種處理之效能的資訊。 您可以透過與複寫代理程式相關的計數器來衡量複寫效能：  
   
-|Agent|效能物件|計數器|Description|  
+|代理程式|效能物件|計數器|描述|  
 |-----------|------------------------|-------------|-----------------|  
 |所有代理程式|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：複寫代理程式|執行中|目前正在執行的複寫代理程式數。|  
 |快照集代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:複寫快照|Snapshot:Delivered Cmds/sec|每秒傳送到散發者的命令數。|  
@@ -38,9 +38,9 @@ ms.locfileid: "68082977"
 |散發代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:Replication Dist.|Dist:Delivered Cmds/sec|每秒傳遞至「訂閱者」的命令數。|  
 |散發代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:Replication Dist.|Dist:Delivered Trans/sec|每秒傳遞至「訂閱者」的交易數。|  
 |散發代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:Replication Dist.|Dist:Delivery Latency|目前從交易傳送到分配者到交易在「訂閱者」套用所經過的時間 (毫秒)。|  
-|[合併代理程式]|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:複寫合併|Conflicts/sec|合併處理期間每秒所發生的衝突數。|  
-|[合併代理程式]|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:複寫合併|Downloaded Changes/sec|每秒從「發行者」複寫至「訂閱者」的資料列數。|  
-|[合併代理程式]|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:複寫合併|Uploaded Changes/sec|每秒從「訂閱者」複寫至「發行者」的資料列數。|  
+|合併代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:複寫合併|Conflicts/sec|合併處理期間每秒所發生的衝突數。|  
+|合併代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:複寫合併|Downloaded Changes/sec|每秒從「發行者」複寫至「訂閱者」的資料列數。|  
+|合併代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:複寫合併|Uploaded Changes/sec|每秒從「訂閱者」複寫至「發行者」的資料列數。|  
   
 ## <a name="see-also"></a>另請參閱  
  [監視 &#40;複寫&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  

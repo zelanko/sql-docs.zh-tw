@@ -15,10 +15,10 @@ ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e4ad4f9578913e3a6fd9d78e50a7c44e9c8642bf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295096"
 ---
 # <a name="debugging-script"></a>偵錯指令碼
@@ -28,7 +28,7 @@ ms.locfileid: "71295096"
 
   您可以撰寫指令碼工作和指令碼元件在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 中使用的指令碼。  
   
- 您可以在 VSTA 中設定中斷點和編寫中斷點指令碼。 您可以在 VSTA 中管理中斷點，但您也可以使用「[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」提供的 [設定中斷點]  對話方塊管理中斷點。 如需詳細資訊，請參閱[偵錯控制流程](../../integration-services/troubleshooting/debugging-control-flow.md)。  
+ 您可以在 VSTA 中設定中斷點和編寫中斷點指令碼。 您可以在 VSTA 中管理中斷點，但您也可以使用「[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」提供的 [設定中斷點]  對話方塊管理中斷點。 如需詳細資訊，請參閱 [偵錯控制流程](../../integration-services/troubleshooting/debugging-control-flow.md)。  
   
  [設定中斷點]  對話方塊包含指令碼中斷點。 這些中斷點出現在中斷點清單的底部，並顯示中斷點所在之函數的行號和名稱。 您可以從 [設定中斷點]  對話方塊刪除指令碼中斷點。  
   
@@ -38,9 +38,9 @@ ms.locfileid: "71295096"
   
 ### <a name="to-set-a-breakpoint-in-visual-studio-for-applications"></a>在 Visual Studio for Applications 中設定中斷點  
   
--   [在指令碼工作和指令碼元件中設定中斷點來偵錯指令碼](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)  
+-   [在指令碼工作和指令碼元件中設定中斷點來對指令碼偵錯](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [疑難排解封裝開發的工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
+ [套件開發的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
   
   

@@ -17,10 +17,10 @@ ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 618c30a29473e7ade84812abeba52d23ff52da9e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290348"
 ---
 # <a name="cast-ssis-expression"></a>Cast (SSIS 運算式)
@@ -48,7 +48,7 @@ ms.locfileid: "71290348"
 ## <a name="result-types"></a>結果類型  
  *type_spec*的資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  下列圖表顯示合法的轉換運算。  
   
  ![資料類型之間的合法和不合法轉換](../../integration-services/expressions/media/data-conversion.gif "資料類型之間的合法和不合法轉換")  
@@ -60,8 +60,8 @@ ms.locfileid: "71290348"
 |DT_STR|*charcount*<br /><br /> *codepage*|(DT_STR,30,1252) 會使用 1252 字碼頁將 30 個位元組 (或 30 個單一字元) 轉換成 DT_STR 資料類型。|  
 |DT_WSTR|*Charcount*|(DT_WSTR,20) 會將成對的 20 個位元組 (或 20 個 Unicode 字元) 轉換成 DT_WSTR 資料類型。|  
 |DT_BYTES|*Bytecount*|(DT_BYTES,50) 將 50 個位元組轉換為 DT_BYTES 資料類型。|  
-|DT_DECIMAL|*小數位數*|(DT_DECIMAL,2) 將數值轉換為 DT_DECIMAL 資料類型，使用 2 位小數位數。|  
-|DT_NUMERIC|*有效位數*<br /><br /> *小數位數*|(DT_NUMERIC,10,3) 將數值轉換為 DT_NUMERIC 資料類型，使用 10 位有效位數與 3 位小數位數。|  
+|DT_DECIMAL|*調整*|(DT_DECIMAL,2) 將數值轉換為 DT_DECIMAL 資料類型，使用 2 位小數位數。|  
+|DT_NUMERIC|*有效位數*<br /><br /> *調整*|(DT_NUMERIC,10,3) 將數值轉換為 DT_NUMERIC 資料類型，使用 10 位有效位數與 3 位小數位數。|  
 |DT_TEXT|*Codepage*|(DT_TEXT,1252) 將值轉換為 DT_TEXT 資料類型，使用 1252 字碼頁。|  
   
  當字串轉換成 DT_DATE 或 DT_DATE 轉換成字串時，會使用轉換的地區設定。 不過，日期是使用 ISO 格式 YYYY-MM-DD，而不論地區設定的偏好設定是否使用 ISO 格式。  

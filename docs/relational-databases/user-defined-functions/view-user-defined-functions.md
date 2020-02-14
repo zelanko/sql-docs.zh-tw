@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 076fd5f22fb7df7801ce0dacb08126a55a735d40
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72905513"
 ---
 # <a name="view-user-defined-functions"></a>檢視使用者定義函數
@@ -47,7 +47,7 @@ ms.locfileid: "72905513"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  若要使用 **sys.sql_expression_dependencies** 尋找函數的所有相依性，需要資料庫的 VIEW DEFINITION 權限以及資料庫之 **sys.sql_expression_dependencies** 的 SELECT 權限。 系統物件定義是公開可見的，就像 OBJECT_DEFINITION 中傳回的定義一樣。  
@@ -70,9 +70,9 @@ ms.locfileid: "72905513"
   
 4.  以滑鼠右鍵按一下要查看其屬性的函數，然後選取 [屬性]  。  
 
-     下列屬性會出現在 [函數屬性 - _function_name_]  對話方塊中。  
+     下列屬性會出現在 [函式屬性 - _function_name_]  對話方塊中。  
   
-     **[資料庫備份]**  
+     **Database**  
      包含此函數之資料庫的名稱。  
   
      **Server**  

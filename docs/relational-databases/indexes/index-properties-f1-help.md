@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68476294"
 ---
 # <a name="index-properties-f1-help"></a>索引屬性 F1 說明
@@ -89,14 +89,14 @@ ms.locfileid: "68476294"
  **大小**  
  顯示儲存資料行資料類型所需的最大位元組數。 針對空間或 XML 資料行顯示零 (0)。  
   
- **識別**  
+ **身分識別**  
  顯示參與索引鍵的資料行是否為識別欄位。  
   
  **允許 NULL**  
  顯示參與索引鍵的資料行是否允許在資料表或檢視資料行中儲存 NULL 值。  
   
- **[加入]**  
- 將資料行加入索引鍵。 請從您按一下 [新增]  時所出現的 [從 *\<資料表名稱>* 選取資料行]  對話方塊中，選取資料表資料行。 如果是空間索引，在您選取一個資料行之後，此按鈕會呈暗灰色。  
+ **加入**  
+ 將資料行加入索引鍵。 請從您按一下 [新增]  時所出現的 [從 \<資料表名稱> 選取資料行]   對話方塊中，選取資料表資料行。 如果是空間索引，在您選取一個資料行之後，此按鈕會呈暗灰色。  
   
  **移除**  
  從索引鍵中的參與裡移除選取的資料行。  
@@ -128,7 +128,7 @@ ms.locfileid: "68476294"
  **Bytes**  
  資料行的大小 (以位元組為單位)。  
   
- **識別**  
+ **身分識別**  
  針對識別欄位顯示 **[是]** ，若資料行不是識別欄位，就顯示 **[否]** 。  
   
  **允許 Null**  
@@ -213,7 +213,7 @@ False 或未指定 fillfactor<br>
  為 FILESTREAM 資料指定檔案群組。 此清單只會顯示 FILESTREAM 檔案群組。 預設清單選取項目為資料庫的 PRIMARY FILESTREAM 檔案群組。 如需詳細資訊，請參閱 [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)。  
   
  **分割區配置**  
- 在資料分割結構描述中儲存索引。 按一下 **[資料分割配置]** 以啟用下列方格。 預設清單選取項目是用來儲存資料表資料的資料分割配置。 當您在清單中選取不同的資料分割配置時，會更新方格中的資訊。 如需相關資訊，請參閱 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
+ 在資料分割結構描述中儲存索引。 按一下 **[資料分割配置]** 以啟用下列方格。 預設清單選取項目是用來儲存資料表資料的資料分割配置。 當您在清單中選取不同的資料分割配置時，會更新方格中的資訊。 如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。  
   
  如果資料庫中沒有資料分割結構描述，則無法使用資料分割結構描述選項。  
   
@@ -255,7 +255,7 @@ False 或未指定 fillfactor<br>
  週框方塊右上角的 Y 座標。  
   
 ### <a name="general"></a>一般  
- **[鑲嵌式配置]**  
+ **鑲嵌式配置**  
  表示索引的鑲嵌式配置。 支援的鑲嵌式配置如下所示。  
   
  **幾何方格**  

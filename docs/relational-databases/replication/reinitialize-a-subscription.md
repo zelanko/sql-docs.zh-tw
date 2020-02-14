@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846512"
 ---
 # <a name="reinitialize-a-subscription"></a>重新初始化訂閱
@@ -33,7 +33,7 @@ ms.locfileid: "70846512"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  重新初始化訂閱處理分為兩部份：  
   
-1.  *「標示」* 要重新初始化之發行集的單個或所有訂閱。 在 **[重新初始化訂閱]** 對話方塊中標示要進行重新初始化處理的訂閱，此對話方塊在  中的 **[本機發行集]** 資料夾和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 您也可以從「複寫監視器」中的 **[所有訂閱]** 索引標籤和發行集節點中標示訂閱。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。 當您要標示訂閱進行重新初始化時，可用的選項如下：  
+1.  *「標示」* 要重新初始化之發行集的單個或所有訂閱。 在 [重新初始化訂閱]  對話方塊中，標示要重新初始化的訂閱；您可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [本機發行集]  資料夾和 [本機訂閱]  資料夾來存取此對話方塊。 您也可以從「複寫監視器」中的 **[所有訂閱]** 索引標籤和發行集節點中標示訂閱。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。 當您要標示訂閱進行重新初始化時，可用的選項如下：  
   
      **使用目前的快照集**  
      選取即可將目前的快照集套用至散發代理程式或合併代理程式下一次將執行的訂閱者。 如果沒有任何有效的快照集可以使用，則不可以選取此選項。  
@@ -188,7 +188,7 @@ ms.locfileid: "70846512"
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> 方法。 此方法會標示要重新初始化的訂閱。  
   
-5.  同步處理發送訂閱。 如需詳細資訊，請參閱 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
+5.  同步處理發送訂閱。 如需詳細資訊，請參閱 [同步處理發送訂閱](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>重新初始化合併式發行集的提取訂閱  
   
@@ -206,7 +206,7 @@ ms.locfileid: "70846512"
     > [!NOTE]  
     >  如果此訂閱已過期，將無法上傳變更。 如需詳細資訊，請參閱 [Set the Expiration Period for Subscriptions](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md)。  
   
-5.  同步處理提取訂閱。 如需詳細資訊，請參閱 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
+5.  同步處理提取訂閱。 如需相關資訊，請參閱 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>重新初始化合併式發行集的發送訂閱  
   
@@ -224,7 +224,7 @@ ms.locfileid: "70846512"
     > [!NOTE]  
     >  如果此訂閱已過期，將無法上傳變更。 如需詳細資訊，請參閱 [Set the Expiration Period for Subscriptions](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md)。  
   
-5.  同步處理發送訂閱。 如需詳細資訊，請參閱 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
+5.  同步處理發送訂閱。 如需詳細資訊，請參閱 [同步處理發送訂閱](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
   
 ###  <a name="PShellExample"></a> 範例 (RMO)  
  此範例會重新初始化交易式發行集的提取訂閱。  
@@ -242,6 +242,6 @@ ms.locfileid: "70846512"
 ## <a name="see-also"></a>另請參閱  
  [重新初始化訂閱](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [複寫安全性最佳作法](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

@@ -20,10 +20,10 @@ ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 478641bed0931fc78db3c7df166b860374034f90
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983255"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
@@ -48,25 +48,25 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
   
 |||  
 |-|-|  
-|sysadmin|serveradmin|  
+|系統管理員 (sysadmin)|serveradmin|  
 |dbcreator|setupadmin|  
 |bulkadmin|securityadmin|  
-|diskadmin|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> public|  
+|diskadmin|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 公開|  
 |processadmin||  
   
  **'** *login* **'**  
  為要檢查的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 *login* 是預設值為 NULL 的 **sysname**。 如果未指定值，結果將以目前的執行內容為依據。 如果參數包含 NULL 一詞，就會傳回 NULL。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
-|傳回值|Description|  
+|傳回值|描述|  
 |------------------|-----------------|  
 |0|*login* 不是 *role* 的成員。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，這個陳述式一律會傳回 0。|  
 |1|*login* 為 *role* 的成員。|  
 |NULL|*role* 或 *login* 無效，或是您沒有檢視角色成員資格的權限。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  請使用 IS_SRVROLEMEMBER 函式來判斷目前使用者是否能執行需要伺服器角色權限的動作。  
   
  如果針對 *login* 指定 Windows 登入 (例如 Contoso\Mary5)，**IS_SRVROLEMEMBER** 就會傳回 **NULL**，除非此登入已被授與或拒絕 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的直接存取權。  

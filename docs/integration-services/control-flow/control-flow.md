@@ -15,10 +15,10 @@ ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b1e6e2278e20cf9ae7b3d31edaebd44ee4d3956
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298382"
 ---
 # <a name="control-flow"></a>控制流程
@@ -26,7 +26,7 @@ ms.locfileid: "71298382"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  封裝由控制流程及選擇性的一個或多個資料流程所組成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供三種不同類型的控制流目程項目，分別是提供套件中結構的容器、提供功能的工作，以及將可執行檔、容器與工作連線成一個排序控制流程的優先順序條件約束。  
+  封裝由控制流程及選擇性的一個或多個資料流程所組成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供三種不同類型的控制流程項目，分別是提供套件中結構的容器、提供功能的工作，以及將可執行檔、容器與工作連線成一個排序控制流程的優先順序條件約束。  
   
  如需相關資訊，請參閱 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)、 [Integration Services Containers](../../integration-services/control-flow/integration-services-containers.md)及 [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "71298382"
   
  下圖顯示控制流程設計師中某個簡單封裝的控制流程。 圖中顯示的控制流程由三個封裝層級的工作，和包含這三個工作的一個封裝層級容器組成。 使用優先順序條件約束連接工作與容器。  
   
- ![具有套件之控制流程設計工具的螢幕擷取畫面](../../integration-services/connection-manager/media/samplecontrolflow.gif "具有套件之控制流程設計工具的螢幕擷取畫面")  
+ ![具有套件的控制流程設計師螢幕擷取畫面](../../integration-services/connection-manager/media/samplecontrolflow.gif "具有套件的控制流程設計師螢幕擷取畫面")  
   
  建立控制流程包括下列工作：  
   
@@ -57,7 +57,7 @@ ms.locfileid: "71298382"
   
      將工作或容器加入 **[控制流程]** 索引標籤的設計介面後， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師會自動將連接子加入該項目。 如果封裝包括兩個以上的項目、工作或容器，則您可透過將它們的連接子從一個項目拖曳至另一個項目，來將其聯結到控制流程中。  
   
-     兩個項目之間的連接子代表一個優先順序條件約束。 優先順序條件約束定義兩個已連接項目之間的關聯性。 它指定在執行階段工作與容器的執行順序，以及執行工作與容器的條件約束。 例如，優先順序條件約束可以指定某個工作必須成功，然後才可以執行控制流程中的下一個工作。 如需詳細資訊，請參閱 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
+     兩個項目之間的連接子代表一個優先順序條件約束。 優先順序條件約束定義兩個已連接項目之間的關聯性。 它指定在執行階段工作與容器的執行順序，以及執行工作與容器的條件約束。 例如，優先順序條件約束可以指定某個工作必須成功，然後才可以執行控制流程中的下一個工作。 如需詳細資訊，請參閱 [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)。  
   
 -   加入連接管理員。  
   

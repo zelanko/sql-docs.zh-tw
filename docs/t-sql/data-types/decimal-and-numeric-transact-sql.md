@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2836dc2d57ef5844463c303c6432698bf05a4d1
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682105"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 和 numeric (Transact-SQL)
@@ -48,7 +48,7 @@ p (有效位數)
 *s* (小數位數)  
 小數點右側所能儲存的小數位數。 這個數字會從 *p* 中減去，以判斷小數點左邊的最大位數。 小數位數必須是介於 0 到 *p* 間的值，且只能在已指定有效位數時指定。 預設小數位數是 0，因此 0 <= *s* \<= *p*。 最大儲存體大小會隨著有效位數而不同。
   
-|有效位數|儲存體位元組|  
+|Precision|儲存體位元組|  
 |---|---|
 |1 - 9|5|  
 |10-19|9|  

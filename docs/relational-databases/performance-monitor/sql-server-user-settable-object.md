@@ -14,10 +14,10 @@ ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: cddb71a35ac762ed602dd93e9e50f463da3e41f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947928"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server 的 User Settable 物件
@@ -29,15 +29,15 @@ ms.locfileid: "67947928"
 > [!NOTE]  
 >  「系統監視器」不會自動輪詢使用者計數器預存程序。 必須由使用者應用程式明確執行，才會更新計數器的值。 請利用觸發程序來自動更新計數器的值。 例如，若要建立計數器來監視資料表的資料列數目，請在資料表建立 INSERT 和 DELETE 觸發程序來執行下列陳述式： `SELECT COUNT(*) FROM table`。 每當資料表因 INSERT 或 DELETE 作業而引發觸發程序時，「系統監視器」計數器就會自動更新。  
   
- 下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** object.  
+ 下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** 物件。  
   
-|SQL Server User Settable 計數器|Description|  
+|SQL Server User Settable 計數器|描述|  
 |---------------------------------------|-----------------|  
-|**[資料集屬性]**|**User Settable** 物件包含查詢計數器。 使用者可設定查詢物件內的 **User counter** 。|  
+|**查詢**|**User Settable** 物件包含查詢計數器。 使用者可設定查詢物件內的 **User counter** 。|  
   
  下表描述 **Query** 計數器的 **執行個體** 。  
   
-|Query 計數器執行個體|Description|  
+|Query 計數器執行個體|描述|  
 |-----------------------------|-----------------|  
 |**User counter 1**|使用 **sp_user_counter1**來定義。|  
 |**使用者計數器 2**|使用 **sp_user_counter2**來定義。|  

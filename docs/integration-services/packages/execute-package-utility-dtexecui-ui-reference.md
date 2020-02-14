@@ -24,10 +24,10 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 651311d70b17ce4be761e7ecc246e8839ef34eb0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295825"
 ---
 # <a name="execute-package-utility-dtexecui"></a>執行套件公用程式 (dtexecui)
@@ -35,7 +35,7 @@ ms.locfileid: "71295825"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  您可使用 **[執行封裝公用程式]** 來執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 此公用程式會執行儲存在下列三個位置之一的封裝： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統。 此使用者介面可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 開啟或藉由在命令提示字元輸入 **dtexecui** 加以開啟，作為使用 **DTExec** 命令提示字元工具執行封裝的替代方案。  
+  您可使用 **[執行封裝公用程式]** 來執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 此公用程式會執行儲存在下列三個位置之一的套件：[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、[!INCLUDE[ssIS](../../includes/ssis-md.md)] 套件存放區及檔案系統。 此使用者介面可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 開啟或藉由在命令提示字元輸入 **dtexecui** 加以開啟，作為使用 **DTExec** 命令提示字元工具執行封裝的替代方案。  
   
  封裝會在與 **dtexecui.exe** 公用程式相同的處理序中執行。 由於此公用程式是 32 位元工具，因此封裝會在 Windows on Win32 (WOW) 所執行的 64 位元環境中透過 **dtexecui.exe** 加以執行。 在 64 位元電腦上使用 dtexecui.exe 公用程式開發及測試命令時，應先使用 64 位元版本的 **dtexec.exe** 以 64 位元模式測試命令，然後才在實際伺服器上部署或為命令排程。  
   
@@ -70,8 +70,8 @@ ms.locfileid: "71295825"
   
 |||  
 |-|-|  
-|ReplTest1|Description|  
-|**SQL Server**|當封裝位於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，請選取此選項。 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，並提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的使用者名稱和密碼。 每個使用者名稱和密碼都會將 **/USER** _username_ 和 **/PASSWORD** _password_ options to the comm和 prompt.|  
+|值|描述|  
+|**SQL Server**|當套件位於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，請選取此選項。 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，並提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的使用者名稱和密碼。 每個使用者名稱和密碼都會將 **/USER** _username_ 和 **/PASSWORD** _password_ 選項新增至命令提示字元。|  
 |**檔案系統**|當封裝位於檔案系統時，請選取此選項。|  
 |**SSIS 封裝存放區**|當封裝位於 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區時，請選取此選項。|  
   
@@ -92,7 +92,7 @@ ms.locfileid: "71295825"
  **登入伺服器**  
  指定封裝要使用 Windows 驗證或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 建議使用 Windows 驗證，以獲得較佳的安全性。 使用 Windows 驗證，您就不需要指定使用者名稱和密碼。  
   
- **使用 Windows 驗證**  
+ **[使用 Windows 驗證]**  
  選取此選項即可使用 Windows 驗證，並以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者帳戶登入。  
   
  **[使用 SQL Server 驗證]**  
@@ -101,11 +101,11 @@ ms.locfileid: "71295825"
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。  
   
- **封裝**  
+ **套件**  
  鍵入套件的名稱，或按一下省略符號按鈕 **(...)** ，以使用 [選取 SSIS 套件]  對話方塊來尋找套件。  
   
 #### <a name="package-source--file-system"></a>封裝來源 = 檔案系統  
- **封裝**  
+ **套件**  
  鍵入套件的名稱，或按一下省略符號按鈕 **(...)** ，以使用 [開啟] 對話方塊來尋找套件。 依預設，對話方塊只會列出副檔名為 .dtsx 的檔案。  
   
 #### <a name="package-source--ssis-package-store"></a>封裝來源 = SSIS 封裝存放區  
@@ -121,7 +121,7 @@ ms.locfileid: "71295825"
  **[使用 SQL Server 驗證]**  
  當您執行儲存在 [SSIS 封裝存放區]  的封裝時，無法使用此選項。  
   
- **封裝**  
+ **套件**  
  鍵入套件的名稱，或按一下省略符號按鈕 **(...)** ，以使用 [選取 SSIS 套件]  對話方塊來尋找套件。  
   
 ## <a name="configurations-page"></a>組態頁面  
@@ -137,7 +137,7 @@ ms.locfileid: "71295825"
 > [!NOTE]  
 >  如果有多個組態會修改同一項屬性，就會採用最後載入的組態。  
   
- **[加入]**  
+ **加入**  
  按一下即可使用 [開啟]  對話方塊來加入組態。 依預設，對話方塊只會列出具有 .dtsconfig 副檔名的檔案。  
   
  **移除**  
@@ -153,13 +153,13 @@ ms.locfileid: "71295825"
  使用 **[執行封裝公用程式]** 對話方塊的 **[命令檔]** 頁面，即可選取在執行階段要載入的命令檔。  
   
 ### <a name="options"></a>選項。  
- **Command files**  
+ **命令檔**  
  列出封裝所使用的命令檔。 封裝可以使用多個檔案來設定命令列選項。  
   
  **方向鍵**  
  選取清單中的命令檔，並使用右邊的方向鍵來變更載入順序。 命令檔依序載入，從清單的最上方開始。  
   
- **[加入]**  
+ **加入**  
  按一下即可使用 [開啟]  對話方塊加入命令檔。  
   
  **移除**  
@@ -218,7 +218,7 @@ ms.locfileid: "71295825"
  **重新啟動選項**  
  如果您覆寫重新啟動選項，選取如何使用檢查點。  
   
- **Execute**  
+ **執行**  
  按一下以執行封裝。  
   
  **關閉**  
@@ -231,7 +231,7 @@ ms.locfileid: "71295825"
  **主控台事件**  
  指出要報告的事件和訊息類型。  
   
- **無**  
+ **None**  
  選擇不報告。  
   
  **錯誤**  
@@ -249,7 +249,7 @@ ms.locfileid: "71295825"
  **資訊**  
  選擇要報告資訊訊息。  
   
- **Verbose**  
+ **詳細資訊**  
  選擇要使用詳細資訊報表。  
   
  **主控台記錄**  
@@ -333,7 +333,7 @@ ms.locfileid: "71295825"
  **確認封裝組建**  
  選取即可確認封裝組建。  
   
- 建置  
+ Build  
  指定與組建相關聯的循序組建編號。  
   
  **確認封裝識別碼**  

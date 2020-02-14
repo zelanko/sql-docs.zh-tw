@@ -17,10 +17,10 @@ ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 890bd202912cea88491acd79906c873c44e53658
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282615"
 ---
 # <a name="performance-counters"></a>效能計數器
@@ -34,7 +34,7 @@ ms.locfileid: "71282615"
   
  下表描述這些效能計數器。  
   
-|效能計數器|Description|  
+|效能計數器|描述|  
 |-------------------------|-----------------|  
 |BLOB bytes read|資料流程引擎已從所有來源讀取之二進位大型物件 (BLOB) 資料的位元組數目。|  
 |BLOB bytes written|資料流程引擎已寫入所有目的地之 BLOB 資料的位元組數目。|  
@@ -73,9 +73,9 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ## <a name="related-content"></a>相關內容  
   
--   codeplex.com 上的工具：[Business Intelligence Development Studio 的 SSIS 效能視覺化 (CodePlex 專案)](https://go.microsoft.com/fwlink/?LinkId=146626)。  
+-   codeplex.com 上的工具： [Business Intelligence Development Studio 的 SSIS 效能視覺化 (CodePlex 專案)](https://go.microsoft.com/fwlink/?LinkId=146626)。  
   
--   msdn.microsoft.com 上的影片：[測量與了解您企業中的 SSIS 封裝資料效能 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=150497)。  
+-   msdn.microsoft.com 上的影片： [測量與了解您企業中的 SSIS 封裝資料效能 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=150497)。  
   
 -   support.microsoft.com 上的技術支援文件： [升級至 Windows Server 2008 之後，效能監視器中無法再使用 SSIS 效能計數器](https://go.microsoft.com/fwlink/?LinkId=235319)(機器翻譯)。  
 
@@ -83,7 +83,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   此程序描述如何加入資料流程引擎提供之效能計數器的記錄檔。  
   
 > [!NOTE]  
->  如果您在執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的電腦上安裝 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]，然後將該電腦升級到 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]，則升級程序會從電腦中移除 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 效能計數器。 若要還原電腦上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 效能計數器，請在修復模式中執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式。  
+>  ：如果您在執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的電腦上安裝 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]，然後將該電腦升級到 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]，則升級程序會從電腦中移除 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 效能計數器。 若要還原電腦上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 效能計數器，請在修復模式中執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式。  
   
 ### <a name="to-add-logging-of-performance-counters"></a>若要加入效能計數器的記錄  
   
@@ -107,9 +107,9 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
     -   選取 [從清單選取計數器]  ，並選取要使用的效能計數器。  
   
-9. 按一下 **[加入]** 。  
+9. 按一下 [新增]  。  
   
-10. 按一下 [ **關閉**]。  
+10. 按一下 [關閉]  。  
   
 11. 在 [MyLog]  對話方塊中，檢閱 [計數器]  清單中記錄效能計數器的清單。  
   
@@ -121,4 +121,4 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
     >  您必須使用 Administrators 群組成員的本機帳戶或網域帳戶，啟動「效能記錄檔及警示」服務。  
 
 ## <a name="see-also"></a>另請參閱  
- [執行專案與封裝](../packages/run-integration-services-ssis-packages.md) [Integration Services 套件記錄的事件](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+ [執行專案與套件](../packages/run-integration-services-ssis-packages.md) [Integration Services 套件所記錄的事件](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  

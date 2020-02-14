@@ -21,10 +21,10 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 78aa101ac0f7c86bc2563f7cf0151e7f976a5b80
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296190"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 封裝
@@ -32,7 +32,7 @@ ms.locfileid: "71296190"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  封裝是指經過組織的連接、控制流程元素、資料流程元素、事件處理常式、變數、參數以及組態的集合，您可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的圖形設計工具組裝或利用撰寫程式的方式建立封裝。  然後將完成的封裝儲存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區或檔案系統中，或者您可以將 ssISnoversion 專案部署到 [!INCLUDE[ssIS](../includes/ssis-md.md)] 伺服器。 封裝是所擷取、執行和儲存的工作單位。  
+  套件是指經過組織的連線、控制流程項目、資料流程項目、事件處理常式、變數、參數及組態集合，可使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的圖形化設計工具來組合，或以程式設計方式來建立。  然後將完成的封裝儲存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區或檔案系統中，或者您可以將 ssISnoversion 專案部署到 [!INCLUDE[ssIS](../includes/ssis-md.md)] 伺服器。 封裝是所擷取、執行和儲存的工作單位。  
   
  當您初次建立封裝時，它是空的物件且沒有任何功能。 若要將功能加入至封裝，您可以加入控制流程，以及選擇性地將一或多項資料流程加入至封裝。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "71296190"
  封裝物件可設定成支援各種功能，包括於檢查點重新啟動封裝、以數位憑證簽署封裝、設定封裝保護等級，以及使用交易確保資料完整性。  
   
 ### <a name="restarting-packages"></a>重新啟動封裝  
- 封裝包括檢查點屬性，可讓您在一或多項工作失敗時，用來重新啟動封裝。 例如，如果封裝有兩項資料流程工作，分別更新兩個不同的表格，而第二項工作失敗了，則封裝可重新執行而不需要重複第一項資料流程工作。 對於需要長時間執行的封裝而言，重新啟動封裝可節省時間。 重新啟動表示您可以從失敗的工作啟動封裝，而不必重新執行整個封裝。 如需詳細資訊，請參閱 [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
+ 封裝包括檢查點屬性，可讓您在一或多項工作失敗時，用來重新啟動封裝。 例如，如果封裝有兩項資料流程工作，分別更新兩個不同的表格，而第二項工作失敗了，則封裝可重新執行而不需要重複第一項資料流程工作。 對於需要長時間執行的封裝而言，重新啟動封裝可節省時間。 重新啟動表示您可以從失敗的工作啟動封裝，而不必重新執行整個封裝。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
 ### <a name="securing-packages"></a>保護封裝的安全  
  封裝可利用數位簽章簽署，並使用密碼或使用者金鑰加密。 數位簽章可驗證封裝的來源。 不過，您也必須將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 設定為在載入封裝時檢查數位簽章。 如需詳細資訊，請參閱 [使用數位簽章來識別封裝的來源](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md) 和 [封裝中的敏感性資料存取控制](../integration-services/security/access-control-for-sensitive-data-in-packages.md)。  
@@ -88,7 +88,7 @@ ms.locfileid: "71296190"
 ## <a name="custom-log-entries-available-on-the-package"></a>封裝上可用的自訂記錄項目  
  下表列出封裝的自訂記錄項目。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|Description|  
+|記錄項目|描述|  
 |---------------|-----------------|  
 |**PackageStart**|指出封裝已經開始執行。<br /><br /> 注意:此記錄項目會自動寫入記錄檔中。 您無法排除它。|  
 |**PackageEnd**|指出封裝已經完成。<br /><br /> 注意:此記錄項目會自動寫入記錄檔中。 您無法排除它。|  

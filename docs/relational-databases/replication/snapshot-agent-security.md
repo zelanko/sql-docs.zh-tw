@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ab40ebb4935616ff8960c3348756e36d45203c03
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68769552"
 ---
 # <a name="snapshot-agent-security"></a>快照集代理程式安全性
@@ -28,7 +28,7 @@ ms.locfileid: "68769552"
   
 -   在散發者端執行快照集代理程式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶。 Windows 帳戶也稱為 *處理帳戶*，因為代理程式處理是在這個帳戶下執行。  
   
--   快照集代理程式用於連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者的內容。 可以模擬 Windows 帳戶進行連接，或者在您指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶的內容下進行連接。  
+-   快照集代理程式用於連線到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者的內容。 可以模擬 Windows 帳戶進行連接，或者在您指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶的內容下進行連接。  
   
     > [!NOTE]  
     >  即使發行者和散發者不在同一部電腦上，快照集代理程式也會連接到發行者。 快照集代理程式也會連接到散發者；這些連接一律會藉由模擬執行代理程式的 Windows 帳戶來進行。  
@@ -38,14 +38,14 @@ ms.locfileid: "68769552"
  所有帳戶都必須有效，並且每個帳戶皆有指定正確的密碼。 等到代理程式執行時，才會驗證帳戶與密碼。  
   
 ## <a name="options"></a>選項。  
- **Process account**  
+ **處理帳戶**  
  輸入在散發者端執行快照集代理程式的 Windows 帳戶。 您指定的 Windows 帳戶必須：  
   
 -   至少是散發資料庫中 **db_owner** 固定資料庫角色的成員。  
   
 -   擁有快照集共用上的寫入權限。  
   
- **密碼** 與 **確認密碼**  
+ **[密碼]** 與 **[確認密碼]**  
  輸入 Windows 帳戶的密碼。  
   
  **連接到發行者**  

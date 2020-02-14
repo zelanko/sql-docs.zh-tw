@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a0e861a1619921081a81fa52f72ba6fc88e98668
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: a7feb252e98be7cc820b074bcb3c3b2c6ff4ff5d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908343"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287580"
 ---
 # <a name="replicate-identity-columns"></a>複寫識別欄位
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  將 IDENTITY 屬性指派給資料行時， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會自動為含有識別欄位之資料表的新資料列產生序號。 如需詳細資訊，請參閱 [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md)。 由於識別欄位可能會做為主索引鍵的一部分，因此請務必避免在識別欄位中重複值。 若要在具有多個節點更新的複寫拓撲裡使用識別欄位，複寫拓撲中的每個節點必須使用不同的識別值範圍，以免出現重複。  
+  將 IDENTITY 屬性指派給資料行時，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會自動為含有識別欄位之資料表的新資料列產生序號。 如需詳細資訊，請參閱 [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md)。 由於識別欄位可能會做為主索引鍵的一部分，因此請務必避免在識別欄位中重複值。 若要在具有多個節點更新的複寫拓撲裡使用識別欄位，複寫拓撲中的每個節點必須使用不同的識別值範圍，以免出現重複。  
   
  例如，「發行者」可指派範圍 1-100、訂閱者 A 指派範圍 101-200，訂閱者 B 則指派範圍 201-300。 如果在「發行者」插入資料列，而且識別值是 65，該值就會複寫到每個「訂閱者」。 當複寫在每個「訂閱者」端插入資料時，不會遞增「訂閱者」資料表中的識別欄位值，而是插入常值 65。 只有使用者插入會導致識別欄位值遞增，複寫代理程式插入則不會。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "72908343"
 |**decimal** 及 **numeric**|-10^38+1 到 10^38-1|  
   
 > [!NOTE]  
->  若要建立可用於多個資料表中或可在不參考任何資料表的情況下從應用程式進行呼叫的自動遞增數字，請參閱[序號](../../../relational-databases/sequence-numbers/sequence-numbers.md)。  
+>  若要建立可用於多個資料表中或可在不參考任何資料表的情況下從應用程式進行呼叫的自動遞增數字，請參閱 [序號](../../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
 ### <a name="merge-replication"></a>合併式複寫  
  識別範圍由「發行者」管理，並由「合併代理程式」傳播至「訂閱者」(在重新發行階層中，範圍由根「發行者」與重新發行者管理)。 識別值從「發行者」端的集區指派。 您在 [新增發行集精靈] 中或使用 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 將具有識別欄位的發行項新增至發行集時，指定下列的值：  

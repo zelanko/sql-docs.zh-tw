@@ -15,10 +15,10 @@ ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0de4fe433a1f34b49dbfb12082759c954e87a7a4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298563"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>加入 Analysis Services 連接管理員對話方塊 UI 參考
@@ -26,7 +26,7 @@ ms.locfileid: "71298563"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  使用 **[加入 Analysis Services 連接管理員]** 對話方塊來建立執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之伺服器的連接，或編輯連接屬性。  
+  使用 [新增 Analysis Services 連線管理員]  對話方塊來建立連線至執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的伺服器，或編輯連線屬性。  
   
  若要深入了解 Analysis Services 連接管理員，請參閱＜ [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)＞。  
   

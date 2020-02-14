@@ -15,17 +15,17 @@ ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a507bd5425686e7a33a8bbf49e6c8669effed031
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68084090"
 ---
 # <a name="log-file-viewer-f1-help"></a>記錄檔檢視器 F1 說明
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   記錄檔檢視器會顯示許多不同元件的記錄資訊。 當記錄檔檢視器開啟時，使用 **[選取記錄]** 窗格以選取您要顯示的記錄檔。 每個記錄檔都會顯示適用於該記錄檔類型的資料行。  
   
- 可用的記錄檔取決於記錄檔檢視器的開啟方式而定。 如需詳細資訊，請參閱[開啟記錄檔檢視器](../../relational-databases/logs/open-log-file-viewer.md)。  
+ 可用的記錄檔取決於記錄檔檢視器的開啟方式而定。 如需詳細資訊，請參閱 [開啟記錄檔檢視器](../../relational-databases/logs/open-log-file-viewer.md)。  
   
  您可以在 [工具/選項]  對話方塊的 [SQL Server 物件總管/命令]  頁面中，設定要顯示的稽核記錄檔資料列數目。 如需稽核記錄檔顯示之資料行的描述，請參閱 [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68084090"
  **[重新整理]**  
  重新整理所選取之記錄檔的檢視。 當套用任何篩選設定時， **[重新整理]** 按鈕會從目標伺服器重新讀取選取的記錄檔。  
   
- **篩選**  
+ **Filter**  
  開啟對話方塊，以讓您指定用來篩選記錄檔的設定，例如 [連接]  、[日期]  或其他的 [一般]  篩選準則。  
   
  **搜尋**  
@@ -49,7 +49,7 @@ ms.locfileid: "68084090"
  停止載入記錄檔項目。 例如，如果遠端或離線記錄檔需要長時間才能載入，而您只要檢視最新項目時，就可以使用這個選項。  
   
  **記錄檔摘要**  
- 此資訊面板會顯示記錄檔篩選的摘要。 如果未篩選檔案，則會看到下列文字： **[未套用篩選]** 。 如果篩選已套用到記錄檔，則會看到下列文字：**篩選記錄項目的準則:** \<篩選準則>。  
+ 此資訊面板會顯示記錄檔篩選的摘要。 如果未篩選檔案，則會看到下列文字： **[未套用篩選]** 。 若篩選已套用到記錄，則會看到下列文字：**篩選記錄項目的準則：** \<篩選準則>。  
   
  **選取的資料列詳細資料**  
  選取資料列以顯示頁面下方有關選取之事件資料列的其他詳細資料。 將資料行拖曳至方格中的新位置，以重新排序資料行。 將方格標頭中的資料行分隔線拖曳至左邊或右邊，以調整資料行大小。 在方格標頭中按兩下資料行分隔線，自動將資料行大小調整為內容寬度。  

@@ -12,10 +12,10 @@ ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
 ms.openlocfilehash: 8d13d6df17cad82076813c5fee93ed794d3439f2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892578"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>升級 Power Pivot for SharePoint
@@ -30,7 +30,7 @@ ms.locfileid: "68892578"
   
  **本文內容：**  
   
- [必要條件](#bkmk_prereq)  
+ [先決條件](#bkmk_prereq)  
   
  [升級現有的 SharePoint 2013 伺服器陣列](#bkmk_uprgade_sharepoint2013)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68892578"
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 增益集 (**spPowerPivot.msi**) 會與舊版並存安裝。 例如， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 增益集會安裝至資料夾 `c:\Program Files\Microsoft SQL Server\130\Tools\PowerPivotTools`。  
   
 ##  <a name="bkmk_prereq"></a> 必要條件  
- **Permissions**  
+ **權限**  
   
 -   您必須是伺服器陣列管理員，才能升級 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝。 您必須是本機系統管理員，才能執行 SQL Server 安裝程式。  
   
@@ -67,9 +67,9 @@ ms.locfileid: "68892578"
   
  **SQL Server:**  
   
--   如果現有的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安裝為 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，則需要 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2)，才能升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
+-   如果現有的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安裝為 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，則需要 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2) 才能升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
   
--   如果現有的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安裝為 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，則需要 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1)，才能升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
+-   如果現有的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安裝為 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，則需要 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1) 才能升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
   
  **SharePoint 2010：**  
   
@@ -94,13 +94,13 @@ ms.locfileid: "68892578"
   
 3.  在 SharePoint 2013 伺服器陣列中的每部伺服器上，執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 增益集 (**spPowerPivot.msi**)，以安裝資料提供者。 但是執行 SQL Server 安裝精靈所在的伺服器除外，安裝精靈也會升級資料提供者。 如需詳細資訊，請參閱[下載 Microsoft SQL Server 2014 Powerpivot for Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=42300) 和[安裝或解除安裝 Power Pivot for SharePoint 增益集 &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)。  
   
-4.  **在 SharePoint 2013 伺服器陣列中的每部伺服器上，執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態** 工具，以增益集所安裝的更新方案檔來設定 SharePoint 伺服器陣列。 您無法使用 SharePoint 管理中心來進行此步驟。 如需詳細資訊，請參閱下列內容：  
+4.  **在 SharePoint 2013 伺服器陣列中的每部伺服器上，執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態** 工具，以增益集所安裝的更新方案檔來設定 SharePoint 伺服器陣列。 您無法使用 SharePoint 管理中心來進行此步驟。 如需詳細資訊，請參閱下列：  
   
     1.  在 Windows [開始] 頁面中，輸入 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** ，然後在搜尋結果中，按一下 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態]  。 請注意，搜尋可能會將組態工具的兩個版本皆傳回。  
   
          ![兩個 PowerPivot 組態工具](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "兩個 PowerPivot 組態工具")  
   
-         或  
+         Or  
   
          在 [開始]  功能表上，指向 [所有程式]  ，然後依序按一下 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、[組態工具]  和 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態工具]  。 請注意，只有在本機伺服器上安裝了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 時，才會列出此工具。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "68892578"
   
     9. 在伺服器陣列中升級方案和功能可能需要數分鐘才能完成。 在這段期間內，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的連接要求**將會失敗**，並出現類似下列錯誤：「**無法重新整理資料**」或「**嘗試執行要求的動作時發生錯誤。請再試一次**」。 升級完成後，伺服器將會變成可以使用，而且將不再發生這些錯誤。  
   
-     如需詳細資訊，請參閱下列內容：  
+     如需詳細資訊，請參閱下列：  
   
     -   [Power Pivot 組態工具](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
   
@@ -254,11 +254,11 @@ Get-PowerPivotSystemService
   
  **Windows 檔案總管**：  
   
-1.  瀏覽至 **Bin** 資料夾，尋找 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 執行個體。 例如 `C:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\bin`。  
+1.  瀏覽至 **Bin** 資料夾，尋找 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 執行個體。 例如 `C:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\bin` 。  
   
 2.  以滑鼠右鍵按一下 `msmdsrv.exe`，然後選取 **[屬性]** 。  
   
-3.  按一下 **[詳細資料]** 。  
+3.  按一下 [詳細資訊]  。  
   
 4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 檔案版本應該為 13.00.\<主要組建>.\<次要組建>。  
   
@@ -346,7 +346,7 @@ Get-PowerPivotSystemService
 ##  <a name="verify"></a> 升級後的驗證工作  
  升級完成後，使用下列步驟來驗證伺服器正常運作。  
   
-|工作|連結|  
+|Task|連結|  
 |----------|----------|  
 |確認伺服器在執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的所有電腦上執行。|[啟動或停止 Power Pivot for SharePoint Server](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server)|  
 |確認網站集合層級的功能啟用。|[在管理中心為網站集合啟用 Power Pivot 功能整合](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)|  

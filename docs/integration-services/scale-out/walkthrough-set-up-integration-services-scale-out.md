@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: d3b6ea9f53a54b7f02042b85781bc8fe24028a69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896129"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>逐步解說：設定 Integration Services (SSIS) Scale Out
@@ -64,13 +64,13 @@ ms.locfileid: "67896129"
 
 3.  在 [Integration Services 相應放大主機組態]  頁面上，指定相應放大主機用來與相應放大背景工作通訊的通訊埠編號。 預設通訊埠編號是 8391。  
 
-    ![Master 設定](media/master-config.PNG "Master 設定")
+    ![主機組態](media/master-config.PNG "主機設定")
 
 4.  執行下列其中一項，以指定用來保護相應放大主機與相應放大背景工作間之通訊的 SSL 憑證。
     * 按一下 [建立新的 SSL 憑證]  ，讓安裝程序建立預設自我簽署 SSL 憑證。  預設憑證會安裝到 [受信任的根憑證授權單位] 的 [本機電腦] 下方。 您可以在此憑證中指定 CN。 主要端點的主機名稱應該併入 CN 中。 預設會包含 Master 節點的電腦名稱和 IP。
     * 按一下 [使用現有的 SSL 憑證]  ，然後按一下 [瀏覽]  選取憑證，以選取本機電腦上的現有 SSL 憑證。 憑證的指紋會出現在文字方塊中。 按一下 [瀏覽]  會顯示在 [受信任的根憑證授權單位] 的 [本機電腦] 中所儲存的憑證。 您選取的憑證必須儲存在這裡。       
 
-    ![Master 設定 2](media/master-config-2.PNG "Master 設定 2")
+    ![主機組態 2](media/master-config-2.PNG "主機組態 2")
   
 5.  完成 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安裝精靈。
 
@@ -105,7 +105,7 @@ ms.locfileid: "67896129"
 
 2.  在 [伺服器組態]  頁面上，選取要執行 [SQL Server Integration Services 相應放大背景工作服務]  的帳戶，然後選取 [啟動類型]  。
 
-    ![伺服器設定 2](media/server-config-2.PNG "伺服器設定 2")
+    ![伺服器組態 2](media/server-config-2.PNG "伺服器組態 2")
 
 3.  在 [Integration Services 相應放大背景工作組態]  頁面上，指定連接至相應放大主機的端點。 
 
@@ -113,7 +113,7 @@ ms.locfileid: "67896129"
 
     - 針對**多部電腦**環境，端點包含已安裝 Scale Out Master 之電腦的名稱或 IP，以及 Scale Out Master 安裝期間所指定的連接埠號碼。
    
-    ![背景工作設定 1](media/worker-config.PNG "背景工作設定 1")    
+    ![背景工作組態 1](media/worker-config.PNG "背景工作組態 1")    
 
     > [!NOTE]
     > 您可以在這裡略過背景工作節點設定，並在安裝之後使用 [Scale Out Manager](integration-services-ssis-scale-out-manager.md) 建立 Scale Out Worker 與 Scale Out Master 的關聯。
@@ -122,7 +122,7 @@ ms.locfileid: "67896129"
   
     按一下 [瀏覽]  找出憑證檔案 (*.cer)。 若要使用預設 SSL 憑證，請選取 Scale Out Master 安裝所在電腦的 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` 下方的 `SSISScaleOutMaster.cer` 檔案。   
 
-    ![背景工作設定 2](media/worker-config-2.PNG "背景工作設定 2")
+    ![背景工作組態 2](media/worker-config-2.PNG "背景工作組態 2")
 
     > [!NOTE]
     > 自我簽署 Scale Out Master 所使用的 SSL 憑證時，需要在具有 Scale Out Worker 的電腦上安裝對應的用戶端 SSL 憑證。 如果您在 [Integration Services 相應放大背景工作設定]  頁面上提供用戶端 SSL 憑證的檔案路徑，則會自動安裝憑證；否則，您稍後必須手動安裝憑證。 

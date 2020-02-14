@@ -60,10 +60,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74127504"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
@@ -400,7 +400,7 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 要改變的資料表名稱。 如果資料表不在目前資料庫中，或未包含在目前使用者擁有的結構描述內，則您必須明確指定該資料庫和結構描述。
 
 ALTER COLUMN  
-指定要變更或改變的具名資料行。
+指定將要變更或改變的具名資料行。
 
 修改後的資料行不能是：
 
@@ -474,8 +474,8 @@ ALTER COLUMN
 
 只適用於 **xml** 資料類型，可用來將 XML 結構描述與該類型產生關聯。 將 **L** 資料行鍵入結構描述集合之前，您必須先使用 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 在資料庫中建立結構描述集合。
 
-COLLATE \<定序名稱   >  
-指定已改變之資料行的新定序。 若未指定，就會將資料庫的預設定序指派給資料行。 定序名稱可以是 Windows 定序名稱或 SQL 定序名稱。 如需清單和詳細資訊，請參閱 [Windows 定序名稱](../../t-sql/statements/windows-collation-name-transact-sql.md)和 [SQL Server 定序名稱](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。
+COLLATE \<定序名稱 >   
+指定變更資料行的新定序。 若未指定，就會將資料庫的預設定序指派給資料行。 定序名稱可以是 Windows 定序名稱或 SQL 定序名稱。 如需清單和詳細資訊，請參閱 [Windows 定序名稱](../../t-sql/statements/windows-collation-name-transact-sql.md)和 [SQL Server 定序名稱](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。
 
 COLLATE 子句會變更 **char**、**varchar**、**nchar** 與 **nvarchar** 資料類型之資料行的定序。 若要變更使用者定義別名資料類型資料行的定序，請使用個別的 ALTER TABLE 陳述式來將資料行變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型。 然後變更其定序，並將資料行變更回別名資料類型。
 
@@ -514,7 +514,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
 ROWGUIDCOL 不強制使用儲存在資料行中之值的唯一性，且不針對插入資料表中的新資料列自動產生值。 若要為每個資料行產生唯一值，請在 INSERT 陳述式上使用 NEWID 或 NEWSEQUENTIALID 函式。 或者，您也可以將 NEWID 或 NEWSEQUENTIALID 函式指定為資料行的預設值。
 
 [ {ADD | DROP} PERSISTED ]  
-指定要將 PERSISTED 屬性新增至指定的資料行，或從指定的資料行卸除該屬性。 該資料行必須是使用具決定性運算式定義的計算資料行。 就指定為 PERSISTED 的資料行而言，當計算資料行相依的任何其他資料行更新時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 實際上會將計算值儲存在資料表並將值更新。 將計算資料行標示為 PERSISTED，就可以在定義於具決定性 (但不是精確) 運算式上的計算資料行上建立索引。 如需詳細資訊，請參閱 [計算資料行的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。
+指定將 PERSISTED 屬性加入至指定的資料行，或從指定的資料行卸除該屬性。 該資料行必須是使用具決定性運算式定義的計算資料行。 就指定為 PERSISTED 的資料行而言，當計算資料行相依的任何其他資料行更新時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 實際上會將計算值儲存在資料表並將值更新。 將計算資料行標示為 PERSISTED，就可以在定義於具決定性 (但不是精確) 運算式上的計算資料行上建立索引。 如需詳細資訊，請參閱 [計算資料行的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。
 
 作為資料分割資料表之資料分割資料行的任何計算資料行，都必須明確標示為 PERSISTED。
 
@@ -529,14 +529,14 @@ SPARSE
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
-指定動態資料遮罩。 *mask_function* 是遮罩函數的名稱並具備適當的參數。 可用的函數有三個：
+指定動態資料遮罩。 *mask_function* 是遮罩函式的名稱並具備適當的參數。 可用的函數有三個：
 
 - default()
 - email()
 - partial()
 - random()
 
-若要卸除遮罩，請使用 `DROP MASKED`。 針對函數參數，請參閱[動態資料遮罩](../../relational-databases/security/dynamic-data-masking.md)。
+若要卸除遮罩，請使用 `DROP MASKED`。 如需函式參數，請參閱[動態資料遮罩](../../relational-databases/security/dynamic-data-masking.md)。
 
 WITH ( ONLINE = ON | OFF) \<適用於改變資料行>  
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
@@ -581,7 +581,7 @@ ALTER INDEX *index_name*
 > 在未使用 ALTER TABLE 陳述式的情況下，記憶體最佳化資料表上的索引就不支援 [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)、[ALTER INDEX](alter-index-transact-sql.md) 與 [PAD_INDEX](alter-table-index-option-transact-sql.md) 陳述式。
 
 ADD  
-指定已新增一或多個資料行定義、計算資料行定義或資料表條件約束。 或者，會新增系統用於系統版本設定的資料行。 您可以對記憶體最佳化資料表新增索引。
+指定加入一個或多個資料行定義、計算資料行定義或資料表條件約束。 或者，會新增系統用於系統版本設定的資料行。 您可以對記憶體最佳化資料表新增索引。
 
 > [!NOTE]
 > 在變更資料表中的所有現有資料行之後會新增新資料行。
@@ -635,7 +635,7 @@ PERIOD FOR SYSTEM_TIME
 卸除系統將用於系統版本設定的資料行。
 
 WITH \<drop_clustered_constraint_option>  
-指定已設定一或多個卸除叢集條件約束選項。
+指定設定一個或多個卸除叢集條件約束選項。
 
 MAXDOP = *max_degree_of_parallelism*  
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
@@ -663,7 +663,7 @@ MAXDOP = *max_degree_of_parallelism*
 ONLINE **=** { ON | **OFF** } \<適用於 drop_clustered_constraint_option>  
 指定在索引作業期間，查詢和資料修改是否能夠使用基礎資料表和相關聯的索引。 預設值為 OFF。 您可以將 REBUILD 用作 ONLINE 作業執行。
 
-ON  
+開啟  
 索引作業持續期間不會保留長期資料表鎖定。 在索引作業的主要階段期間，來源資料表上只保留意圖共用 (IS) 鎖定。 此行為使得基礎資料表和索引的查詢或更新能夠繼續運作。 作業開始時，只會在短時間內保留來源物件的共用 (S) 鎖定。 作業結束時，如果正在建立非叢集索引，則會在短時間內在來源上取得 S (共用) 鎖定。 或者，在線上建立或卸除叢集索引，以及正在重建叢集索引或非叢集索引時，會取得 SCH-M (結構描述修改) 鎖定。 建立本機暫存資料表的索引時，ONLINE 不可設為 ON。 只可使用單一執行緒的堆積重建作業。
 
 若要執行 **SWITCH** 或線上索引重建的 DDL，則特定資料表上執行的所有進行中封鎖交易都必須完成。 執行時，**SWITCH** 或重建作業會阻止新交易啟動，且可能會大幅影響工作負載輸送量並暫時延遲對基礎資料表的存取。
@@ -688,7 +688,7 @@ MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ [ 1 **,** ... *n*] **)*
 指定 *constraint_name* 為已啟用或已停用。 這個選項只能搭配 FOREIGN KEY 和 CHECK 條件約束使用。 當指定 NOCHECK 時，會停用條件約束，且不會依照條件約束條件來驗證未來資料行的插入或更新作業。 不能停用 DEFAULT、PRIMARY KEY 及 UNIQUE 條件約束。
 
 ALL  
-指定使用 NOCHECK 選項停用所有條件約束，或使用 CHECK 選項啟用所有條件約束。
+指定利用 NOCHECK 選項停用所有條件約束，或利用 CHECK 選項啟用所有條件約束。
 
 { ENABLE | DISABLE } TRIGGER  
 指定 *trigger_name* 為已啟用或已停用。 觸發程序停用時，仍然會為資料表定義。 不過，在針對資料表執行 INSERT、UPDATE 或 DELETE 陳述式時，在重新啟用觸發程序之前不會執行觸發程序中的動作。
@@ -781,7 +781,7 @@ DISABLE
 在大多數情況下都避免使用鎖定擴大， 但並非完全不允許資料表層級的鎖定。 例如，當您在可序列化隔離層級下掃描沒有任何叢集索引的資料表時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 必須採用資料表鎖定以保護資料的完整性。
 
 REBUILD  
-REBUILD WITH 語法可用來重建整個資料表，包括資料分割資料表中的所有分割區。 如果資料表有叢集索引，則 REBUILD 選項會重建叢集索引。 REBUILD 可以執行為 ONLINE 作業。
+REBUILD WITH 語法可用來重建整個資料表，包括已分割區之資料表中的所有分割區。 如果資料表有叢集索引，則 REBUILD 選項會重建叢集索引。 REBUILD 可以執行為 ONLINE 作業。
 
 REBUILD PARTITION 語法可用來重建已分割區之資料表中的單一分割區。
 
@@ -791,7 +791,7 @@ PARTITION = ALL
 在變更分割區壓縮設定時重建所有分割區。
 
 REBUILD WITH ( \<rebuild_option> )  
-所有選項都適用於含叢集索引的資料表。 如果資料表沒有叢集索引，則只有其中一些選項會影響堆積結構。
+所有選項都適用於具有叢集索引的資料表。 如果資料表沒有叢集索引，則只有其中一些選項會影響堆積結構。
 
 當特定壓縮設定並非使用 REBUILD 作業來指定時，就會使用資料分割的目前壓縮設定。 若要傳回目前設定，請查詢 **sys.partitions** 目錄檢視表中的 **data_compression** 資料行。
 
@@ -823,7 +823,7 @@ COLUMNSTORE_ARCHIVE
 ONLINE **=** { ON | **OFF** } \<適用於 single_partition_rebuild_option>  
 指定在索引作業期間，查詢和資料修改是否能夠使用基礎資料表的單一資料分割，以及相關聯的索引。 預設值為 OFF。 您可以將 REBUILD 用作 ONLINE 作業執行。
 
-ON  
+開啟  
 索引作業持續期間不會保留長期資料表鎖定。 在索引重建開始時，需要對資料表進行 S 鎖定，而在線上索引重建結束時，需要對資料表進行 Sch-M 鎖定。 雖然這兩個鎖定是短暫的中繼資料鎖定，但 Sch-M 鎖定必須等候所有封鎖交易完成。 在等候期間，Sch-M 鎖定會在存取相同資料表時，封鎖等待在這個鎖定之後的所有其他交易。
 
 > [!NOTE]
@@ -871,27 +871,27 @@ SET ( FILETABLE_DIRECTORY = *directory_name* )
 
 **為資料表停用 Stretch Database**
 
-當您為資料表停用 Stretch 時，有兩個選項可用於已移轉至 Azure 的遠端資料。 如需詳細資訊，請參閱 [停用 Stretch Database 並帶回遠端資料](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)。
+當您為資料表停用 Stretch 時，有兩個選項可用於已移轉至 Azure 的遠端資料。 如需詳細資訊，請參閱[停用 Stretch Database 並帶回遠端資料](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)。
 
-- 若要針對資料表停用 Stretch，並將資料表的遠端資料從 Azure複製回 SQL Server，請執行下列命令。 無法取消此命令。
+- 若要停用資料表的 Stretch，並將資料表的遠端資料從 Azure 複製到 SQL Server，請執行下列命令。 無法取消此命令。
 
     ```sql
     ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;
     ```
 
-此作業會產生資料傳輸成本，且無法取消。 如需詳細資訊，請參閱 [資料傳輸定價詳細資料](https://azure.microsoft.com/pricing/details/data-transfers/)。
+這項操作會產生資料傳輸成本，且無法取消。 如需詳細資訊，請參閱 [資料傳輸定價詳細資料](https://azure.microsoft.com/pricing/details/data-transfers/)。
 
 將所有遠端資料從 Azure 複製回 SQL Server 後，即會針對資料表停用 Stretch。
 
-- 若要針對資料表停用 Stretch 並放棄遠端資料，請執行下列命令。
+- 若要停用資料表的 Stretch，並放棄遠端資料，請執行下列命令。
 
     ```sql
     ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;
     ```
 
-針對資料表停用 Stretch Database 後，即會停止執行資料移轉作業，且查詢結果不再包含來自遠端資料表的結果。
+當您停用資料表的 Stretch Database 之後，資料移轉將會停止，而查詢結果將不再包含來自遠端資料表的結果。
 
 停用 Stretch 並不會移除遠端資料表。 若您想要刪除遠端資料庫，則必須使用 Azure 入口網站將其卸除。
 
@@ -913,7 +913,7 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
 - 指定 `OUTBOUND` 以將資料從 SQL Server 移轉至 Azure。
 - 指定 `INBOUND` 以將資料表的遠端資料，從 Azure 複製回 SQL Server，然後停用資料表的 Stretch。 如需詳細資訊，請參閱[停用 Stretch Database 並帶回遠端資料](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)。
 
-    此作業會產生資料傳輸成本，且無法取消。
+    這項操作會產生資料傳輸成本，且無法取消。
 
 - 指定 `PAUSED` 以暫停或延後資料移轉。 如需詳細資訊，請參閱[暫停和繼續資料移轉 - Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)。
 
@@ -946,7 +946,7 @@ IF EXISTS
 
 只有在已經存在的情況下，才有條件地卸除資料行或條件約束。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 若要加入新的資料列，請使用 [INSERT](../../t-sql/statements/insert-transact-sql.md)。 若要移除資料列，請使用 [DELETE](../../t-sql/statements/delete-transact-sql.md) 或 [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md)。 若要變更現有資料列中的值，請使用 [UPDATE](../../t-sql/queries/update-transact-sql.md)。
 
@@ -1056,7 +1056,7 @@ ALTER TABLE 權限可套用至涉及 ALTER TABLE SWITCH 陳述式的兩種資料
 
 ## <a name="Example_Top"></a> 範例
 
-|類別目錄|代表性語法元素|
+|類別|代表性語法元素|
 |--------------|------------------------------|
 |[加入資料行和條件約束](#add)|ADD • 含索引選項的 PRIMARY KEY • 疏鬆資料行和資料行集 •|
 |[卸除資料行和條件約束](#Drop)|DROP|
@@ -1921,7 +1921,7 @@ CREATE TABLE Customer (
 
 下列範例會將 `Orders` 資料表某一資料分割中的資料移至 `OrdersHistory` 資料表的某一資料分割。
 
-`Orders` 資料表有以下的 DDL：
+`Orders` 資料表有以下 DDL：
 
 ```sql
 CREATE TABLE Orders (

@@ -13,10 +13,10 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 06f2d0cef2cafa90476b4e3f5b6e68efe208c21b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293105"
 ---
 # <a name="data-streaming-destination"></a>資料流目的地
@@ -24,7 +24,7 @@ ms.locfileid: "71293105"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  **資料流目的地** 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 目的地元件，可讓 **OLE DB Provider for SSIS** 取用 SSIS 封裝的輸出做為表格式結果集。 您可以建立連結的伺服器來使用 OLE DB Provider for SSIS，然後在連結的伺服器上執行 SQL 查詢來顯示 SSIS 封裝所傳回的資料。  
+  **資料流目的地**是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 目的地元件，可讓 **OLE DB Provider for SSIS** 取用 SSIS 套件的輸出作為表格式結果集。 您可以建立連結的伺服器來使用 OLE DB Provider for SSIS，然後在連結的伺服器上執行 SQL 查詢來顯示 SSIS 封裝所傳回的資料。  
   
  在下列範例中，下列查詢會在 SSIS 目錄的 Power BI 資料夾中，傳回 SSISPackagePublishing 專案的 Package.dtsx 封裝輸出。 此查詢會使用名為 [Integration Services 的預設連結伺服器] 的連結伺服器，接著使用新的 OLE DB Provider for SSIS。 此查詢包括 SSIS 目錄中的資料夾名稱、專案名稱和封裝名稱。 OLE DB Provider for SSIS 會執行您在查詢中指定的封裝，然後傳回表格式結果集。  
   
@@ -60,9 +60,9 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="component-properties-tab"></a>[元件屬性] 索引標籤  
  此索引標籤具有以下可以編輯的欄位：  
   
-|欄位|Description|  
+|欄位|描述|  
 |-----------|-----------------|  
-|[屬性]|封裝中資料流目的地元件的名稱。|  
+|名稱|封裝中資料流目的地元件的名稱。|  
 |ValidateExternalMetadata|指出元件是否在設計階段就使用外部資料來源驗證。 如果設定為 false，對外部資料來源的驗證會延遲到執行階段。|  
 |IDColumnName|[資料摘要發行精靈] 所產生的檢視具有此其他識別碼資料行。 當其他應用程式將資料作為 OData 摘要使用時，識別碼資料行將作為資料流程輸出資料的 EntityKey。<br /><br /> 此資料行的預設名稱是 _ID。 您可以為 ID 資料行指定不同的名稱。|  
   

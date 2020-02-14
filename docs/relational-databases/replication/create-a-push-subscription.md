@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 6eca1e80614772a1aa65faa60351fb73f83ba433
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70059289"
 ---
 # <a name="create-a-push-subscription"></a>建立發送訂閱
@@ -58,7 +58,7 @@ ms.locfileid: "70059289"
   
 #### <a name="to-create-a-push-subscription-from-the-publisher"></a>若要從發行者端建立發送訂閱  
   
-1. 連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的發行者，然後展開伺服器節點。  
+1. 連線到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的發行者，然後展開伺服器節點。  
   
 2. 展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "70059289"
      > [!NOTE]
      > 透過 Windows 整合式驗證進行的連線，一律使用由 **\@job_login** 和 **\@job_password** 指定的 Windows 認證。 散發代理程式一律使用 Windows 整合式驗證建立與散發者的本機連線。 根據預設，代理程式會使用 Windows 整合式驗證連線至訂閱者。  
   
-   - (選擇性) **\@subscriber_security_mode** 的值 **0** ，以及 **\@subscriber_login** 和 **\@subscriber_password** 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入資訊。 如果您在連接到「訂閱者」時需要使用「SQL Server 驗證」，請指定這些參數。  
+   - (選擇性) **\@subscriber_security_mode** 的值 **0**，以及 **\@subscriber_login** 和 **\@subscriber_password** 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入資訊。 如果您在連接到「訂閱者」時需要使用「SQL Server 驗證」，請指定這些參數。  
   
    - 此訂閱之散發代理程式作業的排程。 如需詳細資訊，請參閱[指定同步處理排程](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   

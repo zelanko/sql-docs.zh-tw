@@ -11,17 +11,17 @@ ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: aed634232901aa116fddf361d3c3347d1e462eb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086286"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure 中資料庫檔案的檔案快照集備份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案快照集備份使用 Azure 快照集為使用 Azure Blob 儲存體服務儲存的資料庫檔案，提供近乎即時的備份及更快速的還原。 這個功能可讓您簡化備份和還原原則。 如需即時的示範，請參閱 [File-Snapshot Backups Demo (檔案快照集備份示範)](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)。 如需使用 Azure Blog 儲存體服務儲存資料庫檔案的詳細資訊，請參閱 [Microsoft Azure 中的 SQL Server 資料檔案](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案快照集備份使用 Azure 快照集為使用 Azure Blob 儲存體服務儲存的資料庫檔案，提供近乎即時的備份及更快速的還原。 這項功能可簡化備份和還原原則。 如需即時的示範，請參閱 [File-Snapshot Backups Demo (檔案快照集備份示範)](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)。 如需使用 Azure Blog 儲存體服務儲存資料庫檔案的詳細資訊，請參閱 [Microsoft Azure 中的 SQL Server 資料檔案](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。  
   
- ![快照集備份架構圖表](../../relational-databases/backup-restore/media/snapshotbackups.PNG "快照集備份架構圖表")  
+ ![快照集備份架構圖](../../relational-databases/backup-restore/media/snapshotbackups.PNG "快照集備份架構圖")  
   
  **下載**  
   
@@ -148,7 +148,7 @@ GO
 ```  
   
 ## <a name="viewing-database-backup-file-snapshots"></a>檢視資料庫備份檔案快照集  
- 若要檢視每個資料庫檔案之基底 Blob 的檔案快照集，請使用 **sys.fn_db_backup_file_snapshots** 系統函數。 這個系統函數可讓您檢視以 Azure Blob 儲存體服務來儲存的資料庫之每個基底 Blob 的所有備份檔案快照集。 這個函式的主要使用案例是要識別，當檔案快照集備份組的備份檔案是以 **sys.sp_delete_backup** 系統預存程序以外的機制刪除時，所留下的資料庫備份檔案快照集。 若要判斷備份檔案快照集是否屬於完整備份組之一部分，請使用 **RESTORE FILELISTONLY** 系統預存程序來列出屬於每個備份檔案的檔案快照集。 如需詳細資訊，請參閱 [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) 和 [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)。  
+ 若要檢視每個資料庫檔案之基底 Blob 的檔案快照集，請使用 **sys.fn_db_backup_file_snapshots** 系統函數。 這個系統函數可讓您檢視以 Azure Blob 儲存體服務來儲存的資料庫之每個基底 Blob 的所有備份檔案快照集。 這個函式的主要使用案例是要識別，當檔案快照集備份組的備份檔案是以 **sys.sp_delete_backup** 系統預存程序以外的機制刪除時，所留下的資料庫備份檔案快照集。 若要判斷備份檔案快照集是否屬於完整備份組之一部分，請使用 **RESTORE FILELISTONLY**  系統預存程序來列出屬於每個備份檔案的檔案快照集。 如需詳細資訊，請參閱 [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) 和 [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)。  
   
  以下範例會傳回指定之資料庫的所有備份檔案快照集。  
   

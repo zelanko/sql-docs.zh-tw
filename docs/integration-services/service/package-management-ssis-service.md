@@ -28,10 +28,10 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296873"
 ---
 # <a name="package-management-ssis-service"></a>封裝管理 (SSIS 服務)
@@ -110,7 +110,7 @@ ms.locfileid: "71296873"
   
  您可以在下列位置之間匯入或匯出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝：  
   
--   您可以匯入儲存在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體、檔案系統或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區內的封裝。 匯入的封裝將儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區內的資料夾中。  
+-   您可以匯入儲存在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體、檔案系統或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 套件存放區中的套件。 匯入的封裝將儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區內的資料夾中。  
   
 -   您可以將儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體、檔案系統或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區內的封裝匯出至不同的儲存格式和位置。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "71296873"
   
 ### <a name="to-import-a-package-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 來匯入封裝  
   
-1.  按一下 [開始]  、指向 [Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  ，然後按一下 [SQL Server Management Studio]  。  
+1.  按一下 [開始]  、指向 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  ，然後按一下 [SQL Server Management Studio]  。  
   
 2.  在 [連接到伺服器]  對話方塊上，設定下列選項：  
   
@@ -160,7 +160,7 @@ ms.locfileid: "71296873"
   
 ### <a name="to-export-a-package-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 來匯出封裝  
   
-1.  按一下 [開始]  、指向 [Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  ，然後按一下 [SQL Server Management Studio]  。  
+1.  按一下 [開始]  、指向 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  ，然後按一下 [SQL Server Management Studio]  。  
   
 2.  在 [連接到伺服器]  對話方塊上，設定下列選項：  
   
@@ -197,7 +197,7 @@ ms.locfileid: "71296873"
   
 ### <a name="options"></a>選項。  
  **封裝位置**  
- 選取要匯入封裝之儲存位置的類型。 下列是可以使用的選項：  
+ 選取要匯入封裝之儲存位置的類型。 有下列選項可供使用：  
   
  **SQL Server**  
   
@@ -217,7 +217,7 @@ ms.locfileid: "71296873"
  **驗證類型**  
  選取驗證類型。  
   
- **User name**  
+ **使用者名稱**  
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請提供使用者名稱。  
   
  **密碼**  
@@ -237,11 +237,11 @@ ms.locfileid: "71296873"
   
 ### <a name="options"></a>選項。  
  **封裝位置**  
- 選取要用來儲存所匯出之封裝的儲存體類型。 下列是可以使用的選項：  
+ 選取要用來儲存所匯出之封裝的儲存體類型。 有下列選項可供使用：  
   
  **SQL Server**  
   
- **[File System]**  
+ **檔案系統**  
   
  **SSIS 封裝儲存體**  
   
@@ -257,7 +257,7 @@ ms.locfileid: "71296873"
  **驗證類型**  
  選取驗證類型。  
   
- **User name**  
+ **使用者名稱**  
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請提供使用者名稱。  
   
  **密碼**  
@@ -271,7 +271,7 @@ ms.locfileid: "71296873"
 
 ## <a name="back-up-and-restore-packages"></a>備份和還原套件
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝可以儲存至檔案系統或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料庫 msdb。 儲存至 msdb 的封裝可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原功能進行備份和還原。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件可以儲存至檔案系統或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料庫 msdb。 儲存至 msdb 的封裝可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原功能進行備份和還原。  
   
  如需備份和還原 msdb 資料庫的詳細資訊，請按一下下列主題之一：  
   

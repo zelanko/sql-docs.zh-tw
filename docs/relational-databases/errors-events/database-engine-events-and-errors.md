@@ -9,12 +9,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 29f9245fcb3f827c51060834a37fbc3c01aa5e9b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 941dbe32355ef158f0a0a07c16e5181653738cb1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75247324"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918185"
 ---
 # <a name="database-engine-errors"></a>資料庫引擎錯誤
 
@@ -5871,7 +5871,7 @@ ms.locfileid: "75247324"
 |   14689   |   16  |   否  |   如果未設定管理資料倉儲，就無法啟動收集組。 請執行 instmdw.sql 指令碼，以建立及設定管理資料倉儲。 |
 |   14690   |   16  |   否  |   無法在啟用收集器時執行這個程序。 請停用收集器，然後重試一遍。  |
 |   14691   |   16  |   否  |   收集器的狀態不能是 null。 這可能表示收集器組態資料中發生內部損毀。   |
-|   14692   |   16  |   否  |   權限不足，無法啟動收集組: '%s'。 在沒有 SQL Server Agent Proxy 的情況下，只有 'sysadmin' 固定伺服器角色的成員才能啟動收集組。 請將 SQL Server Agent Proxy 附加至收集組後，再重試一次。    |
+|   14692   |   16  |   否  |   權限不足，無法啟動收集組：'%s'。 在沒有 SQL Server Agent Proxy 的情況下，只有 'sysadmin' 固定伺服器角色的成員才能啟動收集組。 請將 SQL Server Agent Proxy 附加至收集組後，再重試一次。    |
 |   14693   |   16  |   否  |   收集組無法在沒有排程的情況下啟動。 請為收集組指定排程。    |
 |   14694   |   16  |   否  |   在非快取模式下，無法視需要上傳收集組 '%s' 的資料。    |
 |   14695   |   16  |   否  |   在快取模式下，無法視需要收集收集組 '%s' 的資料。   |
@@ -7997,7 +7997,7 @@ ms.locfileid: "75247324"
 |   21796   |   16  |   否  |   屬性 "xactsetjobinterval" 的指定值必須大於或等於 0。  |
 |   21797   |   16  |   否  |   無法建立代理程式作業。 '%s' 必須是有效的 Windows 登入，格式為:'MACHINE\Login' 或 'DOMAIN\Login'。 請參閱 '%s' 的文件集。    |
 |   21798   |   16  |   否  |   無法執行複寫管理程序。 必須先透過 '%s' 新增 '%s' 代理程式工作，方可繼續。 請參閱 '%s' 的文件集。   |
-|   21799   |   16  |   否  |   找不到簽發者 (%s)，資料庫 (%s)，發行集 (%s) 的 %s 代理程式。 請使用適當的程序建立代理程序: sp_addpublication_snapshot、sp_addlogreader_agent 或 sp_addqreader_agent。  |
+|   21799   |   16  |   否  |   找不到發行者 (%s)、資料庫 (%s)、發行集 (%s) 的 %s 代理程式。 請使用適當的程序建立代理程序: sp_addpublication_snapshot、sp_addlogreader_agent 或 sp_addqreader_agent。   |
 |   21800   |   16  |   否  |   此複寫端的通用產生浮水印無效，因為其並不存在，或是尚未傳播的中繼資料變更可能已遭清除。 |
 |   21801   |   16  |   否  |   預存程序 sp_createagentparameter 無法在系統資料表 msdb.dbo.MSagentparameterlist 中加入一或多個參數。 請檢查由 sp_createagentparameter 傳回的任何錯誤，和 sp_createagentparameter 執行期間由 SQL Server 傳回的錯誤。    |
 |   21802   |   16  |   否  |   代理程式設定檔建立程序無法驗證指定的代理程式參數值。 '%s' 不是 '%s' 參數的有效值。 其值必須是小於或等於 '%d' 的整數。 請確認已正確安裝複寫。   |

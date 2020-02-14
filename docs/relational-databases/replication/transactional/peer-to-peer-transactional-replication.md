@@ -17,10 +17,10 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4dcb5f8bd05b5cd1b5b68927abfef49576d6b072
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710725"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>點對點 - 異動複寫
@@ -78,7 +78,7 @@ ms.locfileid: "71710725"
   
 -   在發生失敗或要允許對一或多個參與資料庫進行維護時，具有更高的可用性。  
   
-     ![點對點複寫，三和四個節點](../../../relational-databases/replication/transactional/media/repl-multinode-04.gif "點對點複寫，三和四個節點")  
+     ![點對點複寫，三或四個節點](../../../relational-databases/replication/transactional/media/repl-multinode-04.gif "點對點複寫，三或四個節點")  
   
  上圖顯示如何將節點加入到三個節點的拓撲。 基於以下原因，可以在此案例中加入節點：  
   

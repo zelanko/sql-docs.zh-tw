@@ -19,10 +19,10 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 00c117a2282216f5f326cbf524f3326af5cc93e1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294333"
 ---
 # <a name="bulk-insert-task"></a>大量插入工作
@@ -71,7 +71,7 @@ ms.locfileid: "71294333"
 ## <a name="custom-log-entries-available-on-the-bulk-insert-task"></a>大量插入工作上可用的自訂記錄項目  
  下表列出「大量插入」工作的自訂記錄項目。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|Description|  
+|記錄項目|描述|  
 |---------------|-----------------|  
 |**BulkInsertTaskBegin**|指出大量插入已經開始。|  
 |**BulkInsertTaskEnd**|指出大量插入已經完成。|  
@@ -112,7 +112,7 @@ ms.locfileid: "71294333"
   
 ## <a name="related-content"></a>相關內容  
   
--   support.microsoft.com 上的技術文件： [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=233693)(您可能會在啟用 UAC 的系統上收到「無法準備 SSIS 大量插入來進行資料插入」錯誤)。  
+-   support.microsoft.com 上的技術文件： [您可能會在啟用 UAC 的系統上收到「無法準備 SSIS 大量插入來進行資料插入」錯誤](https://go.microsoft.com/fwlink/?LinkId=233693)。  
   
 -   msdn.microsoft.com 上的技術文章： [資料載入效能指南](https://go.microsoft.com/fwlink/?LinkId=233700)。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "71294333"
  **格式**  
  選取大量插入的格式來源。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**使用檔案**|選取包含格式規格的檔案。 選取此選項會顯示動態選項 [FormatFile]  。|  
 |**指定**|指定格式。 選取此選項會顯示動態選項 [RowDelimiter]  和 [ColumnDelimiter]  。|  
@@ -179,7 +179,7 @@ ms.locfileid: "71294333"
  輸入大量插入工作的描述。  
  
 ## <a name="bulk-insert-task-editor-options-page"></a>大量插入工作編輯器 (選項頁面)
-  使用 **[大量插入工作編輯器]** 對話方塊的 **[選項]** 頁面，即可設定大量插入作業的屬性。 大量插入工作會將大量資料複製至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或檢視表。  
+  使用 **[大量插入工作編輯器]** 對話方塊的 **[選項]** 頁面，即可設定大量插入作業的屬性。 大量插入工作會將大量資料複製到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或檢視表。  
   
  若要了解如何使用大量插入，請參閱[大量插入工作](../../integration-services/control-flow/bulk-insert-task.md)和 [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "71294333"
  **FirstRow**  
  指定要開始複製的第一個資料列。  
   
- **[大量插入工作編輯器]**  
+ **選項**  
  |詞彙|定義|  
 |----------|----------------|  
 |**檢查條件約束**|選取此選項可檢查資料表與資料行條件約束。|  

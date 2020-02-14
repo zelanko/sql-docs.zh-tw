@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 22f296db7717e81068ac52d6c3df547a0ba0d085
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73660786"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL 資料倉儲)
@@ -138,7 +138,7 @@ CTAS 需要 *select_criteria* 中所參考任何物件的 `SELECT` 權限。
 ## <a name="limitations-and-restrictions"></a>限制事項  
 Azure SQL 資料倉儲目前尚不支援自動建立或自動更新統計資料。  若要讓查詢有最佳效能，請務必在執行 CTAS 之後，以及當資料發生重大變更之後，針對所有資料表的所有資料行來建立統計資料。 如需詳細資訊，請參閱 [CREATE STATISTICS (TRANSACT-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。
 
-排序的叢集資料行存放區索引可以建立在 Azure SQL 資料倉儲支援的任何資料類型的資料行上，但不包括字串資料行。  
+已排序的叢集資料行存放區索引可以建立在 Azure SQL 資料倉儲支援的任何資料類型的資料行上，但不包括字串資料行。  
 
 [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) 對 CTAS 沒有作用。 若要達到類似的行為，請使用 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)。  
  
@@ -679,7 +679,7 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 
 <a name="ctas-data-type-and-nullability-bk"></a>
 
-### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. 明確地陳述輸出的資料類型和可 Null 性  
+### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. 明確陳述資料類型和輸出可為 null  
 適用於：Azure SQL 資料倉儲與平行處理資料倉儲  
 
 將 SQL Server 程式碼移轉至 SQL 資料倉儲時，您可能碰到這種類型的程式碼模式：
@@ -750,7 +750,7 @@ AS
 SELECT ISNULL(CAST(@d*@f AS DECIMAL(7,2)),0) as result
 ```
 
-請注意下列事項：
+請注意：
 - 原本可使用 CAST 或 CONVERT
 - ISNULL 是用來強制可 Null 性，而不是 COALESCE
 - ISNULL 是最外層的函數
@@ -846,7 +846,7 @@ OPTION (MAXDOP 1);
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
- [CREATE TABLE &#40;Azure SQL 資料倉儲&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [CREATE TABLE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  

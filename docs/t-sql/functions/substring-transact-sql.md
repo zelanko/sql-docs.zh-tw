@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19c261227f81debb3afec4e9d4b68f6ca7e8d607
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117672"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
@@ -46,7 +46,7 @@ SUBSTRING ( expression ,start , length )
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 這是 **character**、**binary**、**text**、**ntext** 或 **image** [expression](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 這是 **character**、**binary**、**text**、**ntext** 或 **image** [運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *start*  
  這是指定傳回之字元開始的整數或 **bigint** 運算式。 (編號是以 1 為基礎，這表示運算式中的第一個字元為 1)。 如果 *start* 小於 1，傳回的運算式將會從 *expression* 內指定的第一個字元開始。 在此情況下，傳回的字元數會是 *start* + *length* 的總和 -1 或是 0 (以最大值為準)。 如果 *start* 大於值運算式中的字元數，則會傳回長度為零的運算式。  
@@ -54,7 +54,7 @@ SUBSTRING ( expression ,start , length )
  *length*  
  這是一個正整數，或是指定將傳回之 *expression* 字元數的 **bigint** 運算式。 如果 *length* 是負數，則會產生錯誤並結束此陳述式。 如果 *start* 和 *length* 的總和大於 *expression* 中的字元數，則會傳回從 *start* 開始的整個值運算式。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  如果 *expression* 是其中一個支援的字元資料類型，就會傳回字元資料。 如果 *expression* 是支援的 **binary**資料類型之一，就會傳回二進位資料。 傳回的字串與指定運算式的類型相同，但下表所顯示者例外。  
   
 |指定的運算式|傳回類型|  
@@ -63,7 +63,7 @@ SUBSTRING ( expression ,start , length )
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  *start* 和 *length* 的值必須指定為字元數 (適用於 **ntext** **char**或 **varchar** 資料類型) 和位元組數 (適用於 **text**’**image**、**binary**或 **varbinary** 資料類型)。  
   
  當 *start* 或 *length* 包含大於 2147483647 的值時，*expression* 必須是 **varchar(max)** 或 **varbinary(max)** 。  

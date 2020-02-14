@@ -12,10 +12,10 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63cc8413175555e37a29caf288a72815824c3778
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296252"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>儲存 SSIS 封裝 (SQL Server 匯入和匯出精靈)
@@ -61,10 +61,10 @@ ms.locfileid: "71296252"
  **[使用 Windows 驗證]**  
 使用 Windows 整合式驗證連接到伺服器。 這是慣用的驗證方法。  
   
- **使用 SQL Server 驗證**  
+ **[使用 SQL Server 驗證]**  
 使用 SQL Server 驗證連接到伺服器。  
   
- **User name**  
+ **使用者名稱**  
 如果您已指定 SQL Server 驗證，請輸入使用者名稱。  
   
  **密碼**  

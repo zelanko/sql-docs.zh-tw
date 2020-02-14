@@ -18,16 +18,16 @@ ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5b98f2283cfb9d89277ad97ffc7a883e43a42b4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042526"
 ---
 # <a name="spatial-types---geography"></a>空間類型 - geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  地理空間資料型別 **geography** 會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中實作為 .NET Common Language Runtime (CLR) 資料型別。 此類型代表圓形地球座標系統中的資料。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**geography** 資料類型會儲存橢圓體 (圓形地球) 資料，例如 GPS 經緯度座標。  
+  地理空間資料型別 **geography** 會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中實作為 .NET Common Language Runtime (CLR) 資料型別。 此類型代表圓形地球座標系統中的資料。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 資料類型會儲存橢圓體 (圓形地球) 資料，例如 GPS 經緯度座標。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 **geography** 空間資料型別的一組方法。 其中包括開放地理空間協會 (OGC) 標準所定義的 **geography** 方法以及該標準的一組 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 擴充。  
  

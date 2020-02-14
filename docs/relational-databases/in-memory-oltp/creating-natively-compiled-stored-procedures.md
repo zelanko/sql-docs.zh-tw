@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fb7b029527eec87c87b9b21b4da8aff5e289424e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032025"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>建立原生編譯的預存程序
@@ -33,7 +33,7 @@ ms.locfileid: "68032025"
   
     -   DECLARE @myVarchar  varchar(32)  **not null = "Hello"** ; -- *(必須初始化為值。)*  
   
-    -   SET @myVarchar **= null**; -- *(編譯，但是在執行階段期間會失敗。)*  
+    -   SET @myVarchar **= null**; -- (編譯，但是在執行階段期間會失敗。)   
   
 -   原生編譯預存程序的結構描述繫結。  
   
@@ -62,7 +62,7 @@ GO
  
 在程式碼範例中， **NATIVE_COMPILATION** 表示這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序是原生編譯的預存程序。 以下是必要的選項：  
   
-|選項|Description|  
+|選項|描述|  
 |------------|-----------------|  
 |**SCHEMABINDING**|原生編譯的預存程序必須繫結至其所參考之物件的結構描述。 這表示，此程序所參考的資料表將無法卸除。 此程序中參考的資料表必須包含其結構描述名稱，而且查詢中不允許使用萬用字元 (\*) (表示沒有 `SELECT * from...`)。 只有這個**版本中的原生編譯預存程序才支援** SCHEMABINDING [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**BEGIN ATOMIC**|原生編譯的預存程序主體必須剛好由一個不可部分完成的區塊所組成。 不可部分完成的區塊保證會以不可部分完成的方式執行預存程序。 如果此程序在使用中交易的內容之外叫用，它將會開始新的交易，該交易會在不可部分完成的區塊結尾認可。 原生編譯預存程序中不可部分完成的區塊有兩個必要選項：<br /><br /> **TRANSACTION ISOLATION LEVEL** 如需支援的隔離等級，請參閱 [記憶體最佳化資料表的交易隔離等級](https://msdn.microsoft.com/library/8a6a82bf-273c-40ab-a101-46bd3615db8a) 。<br /><br /> **LANGUAGE**。 預存程序的語言必須設定為其中一個可用語言或語言別名。|  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: af2e1ff51864215d3f5709463ab8d49e6737747e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8359c9844cf9ebbc91da556f212429c96909d857
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768764"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285676"
 ---
 # <a name="replication-programming-concepts"></a>複寫程式設計概念
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "68768764"
   
 2.  除了銷售應用程式所需的一般資料存取之外，此應用程式應該允許銷售人員按一下按鈕，視需要同步處理提取訂閱。 既然銷售代表將會安裝和執行應用程式，因此它也需要能夠在用戶端設定訂閱並套用初始快照集。 否則，應用程式將使用 Windows 提供的基礎結構來感應無線連接，以便在偵測到連接時，自動同步處理訂閱。  
   
-3.  當連接到發行者時，請遵循所有的複寫安全性指導方針，包括 Windows 驗證與虛擬的私人網路 (VPN)。 如果實作 Web 同步處理，請使用安全通訊端層 (SSL) 連接。 如需詳細資訊，請參閱[設定 Web 同步處理](../../../relational-databases/replication/configure-web-synchronization.md)。  
+3.  當連接到發行者時，請遵循所有的複寫安全性指導方針，包括 Windows 驗證與虛擬的私人網路 (VPN)。 如果實作 Web 同步處理，請使用安全通訊端層 (SSL) 連接。 如需詳細資訊，請參閱 [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)。  
   
 4.  為了利用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的功能，應用程式是使用 Managed 程式碼語言來開發。  
   

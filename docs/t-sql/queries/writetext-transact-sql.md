@@ -24,10 +24,10 @@ ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c10e7259062316454e4e0ecf430f6fdb87c53caf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948109"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
@@ -68,7 +68,7 @@ WRITETEXT [BULK]
  *data*  
  這是要儲存的實際 **text**、**ntext** 或 **image** 資料。 *data* 可以是常值或參數。 就 **text**、**ntext** 及 **image** 資料而言，可使用 WRITETEXT 以互動方式插入的文字長度上限大約是 120 KB。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  請使用 WRITETEXT 來取代 **text**、**ntext** 及 **image** 資料，使用 UPDATETEXT 來修改 **text**、**ntext** 及 **image** 資料。 UPDATETEXT 較有彈性，因為它只會變更 **text**、**ntext** 或 **image** 資料行的一部份，而不是變更整個資料行。  
   
  為了獲得最佳效能，建議您以 8040 個位元組之倍數的片段大小來插入或更新 **text**、**ntext** 及 **image** 資料。  

@@ -16,10 +16,10 @@ ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 68bdea5d7c63f8d4781dadd8250a14f258c0866f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68083922"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>檢查資料庫完整性工作 (維護計畫)
@@ -39,7 +39,7 @@ ms.locfileid: "68083922"
   
 -   **所有資料庫**  
   
-     產生維護計畫，針對所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫執行維護工作，但 **tempdb**除外。  
+     產生維護計畫，針對所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫執行維護工作，但 **tempdb** 除外。  
   
 -   **所有系統資料庫**  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68083922"
  將檢查限制於頁面實體結構、記錄標頭的完整性，以及資料庫配置的一致性。 使用此選項可縮短 DBCC CHECKDB 對大型資料庫的執行階段，因此，建議您在實際系統上經常使用。  
   
  **Tablock**  
- 使 DBCC CHECKDB 取得鎖定，而不使用內部資料庫快照集。 這包括資料庫上的短期獨佔 (X) 鎖定。 使用此選項可協助 DBCC CHECKDB 在負載沉重的資料庫上執行得快一些，但 DBCC CHECKDB 執行時，資料庫可用的並行會降低。  
+ 使 DBCC CHECKDB 取得鎖定，而不使用內部資料庫快照集。 這包括資料庫上的短期獨佔 (X) 鎖定。 使用此選項可協助 DBCC CHECKDB 在大量負載的資料庫上執行得快一些，但 DBCC CHECKDB 執行時，資料庫可用的並行處理能力會降低。  
   
  **檢視 T-SQL**  
  根據選取的選項，檢視此工作在伺服器上執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
@@ -72,7 +72,7 @@ ms.locfileid: "68083922"
 >  受影響的物件數目較為大量時，會多花一些時間才會顯示。  
   
 ## <a name="new-connection-dialog-box"></a>新增連接對話方塊  
- **連接名稱**  
+ **連線名稱**  
  輸入新連接的名稱。  
   
  **選取或輸入伺服器名稱**  
@@ -85,12 +85,12 @@ ms.locfileid: "68083922"
  指定如何對伺服器進行驗證。  
   
  **使用 Windows 整合式安全性**  
- 使用 Windows 驗證連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。  
+ 使用 Windows 驗證連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。  
   
  **使用特定的使用者名稱和密碼**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 無法使用此選項。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。 無法使用此選項。  
   
- **User name**  
+ **使用者名稱**  
  提供驗證時要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 無法使用此選項。  
   
  **密碼**  

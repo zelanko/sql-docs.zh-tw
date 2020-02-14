@@ -14,10 +14,10 @@ ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 753c7c08164de1583dd8de1aa1720fcad6a98dff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093633"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server Agent、JobSteps 物件
@@ -26,15 +26,15 @@ ms.locfileid: "68093633"
   
  下表包含 **SQLAgent:JobSteps** 計數器。  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |**Active steps**|此計數器會報告目前在執行中的作業步驟數目。|  
 |**Queued steps**|此計數器會報告準備供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行，但尚未開始執行的作業步驟數目。|  
-|**Total step retries**|此計數器會報告自從伺服器上次重新啟動之後， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重試作業步驟的總次數。|  
+|**Total step retries**|此計數器會報告自從伺服器上次重新啟動之後，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重試作業步驟的總次數。|  
   
  物件中的每個計數器均包含下列執行個體：  
   
-|執行個體|Description|  
+|執行個體|描述|  
 |--------------|-----------------|  
 |**_Total**|所有作業步驟的資訊。|  
 |**ActiveScripting**|使用 **ActiveScripting** 子系統之作業步驟的資訊。|  

@@ -13,15 +13,15 @@ ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c71cc0537f79330742282e7a0389187c8424d1f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115534"
 ---
 # <a name="toolbox-component-f1-help"></a>工具箱元件 F1 說明
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **[工具箱]** 會顯示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 專案中所使用的各種項目。 您可以從 **[檢視]** 功能表中開啟 **[工具箱]** ，然後將此視窗停駐在您希望的位置。 停駐之後，可以將 **[工具箱]** 固定開啟，或在不使用時將其設定為 **[自動隱藏]** 。  
+  [工具箱]  會顯示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 專案中所使用的各種項目。 您可以從 **[檢視]** 功能表中開啟 **[工具箱]** ，然後將此視窗停駐在您希望的位置。 停駐之後，可以將 **[工具箱]** 固定開啟，或在不使用時將其設定為 **[自動隱藏]** 。  
   
  [工具箱]  項目可以拖曳再放置或是複製再貼上至程式碼編輯器，或者至 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 內的設計檢視介面上。  
   

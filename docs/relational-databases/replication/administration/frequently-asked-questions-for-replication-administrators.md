@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 99be52de235c676137981021b9e926aba7320f43
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f05b8d942a87f749fc5e1c1235d8410558603507
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322023"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910161"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>複寫管理員的常見問題集
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -113,7 +113,10 @@ ms.locfileid: "75322023"
   
 ### <a name="does-replication-work-over-low-bandwidth-connections-does-it-use-compression"></a>複寫是否透過低頻寬連接執行？ 它是否使用壓縮？  
  是，複寫透過低頻寬連接執行。 對於透過 TCP/IP 的連接，它使用由通訊協定提供的壓縮，但不提供其他壓縮。 對於透過 HTTPS 的 Web 同步處理連接，它使用由通訊協定提供的壓縮，同時還提供對 XML 檔案 (用於複寫變更) 的其他壓縮。  
-  
+
+### <a name="can-i-configure-replication-if-i-connect-to-the-server-by-using-the-ip-address"></a>如果我使用 IP 位址連線到伺服器，可以設定複寫嗎？ 
+否。複寫只有在使用實際的伺服器名稱時才會運作。 從 SQL Server Management Studio (SSMS) 18.0 (和更新版本) 開始，您可以使用實際的伺服器名稱和連接埠號碼來設定複寫。 
+
 ## <a name="logins-and-object-ownership"></a>登入和物件擁有權  
   
 ### <a name="are-logins-and-passwords-replicated"></a>登入和密碼是否會被複寫？  

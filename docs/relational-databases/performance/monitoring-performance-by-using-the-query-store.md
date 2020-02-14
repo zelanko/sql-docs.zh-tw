@@ -15,10 +15,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909312"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查詢存放區監視效能
@@ -36,14 +36,14 @@ ms.locfileid: "72909312"
   
 #### <a name="use-the-query-store-page-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [查詢存放區] 頁面  
   
-1.  在 [物件總管] 中，以滑鼠右鍵按一下資料庫，然後按一下 [屬性] 。  
+1.  在 [物件總管] 中，以滑鼠右鍵按一下資料庫，然後按一下 [屬性]  。  
   
     > [!NOTE]  
     > 至少需要 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 16 版。  
   
 2.  在 [資料庫屬性]  對話方塊中，選取 [查詢存放區]  頁面。  
   
-3.  在 [作業模式 (要求)]  方塊中，選取 [讀取寫入] 。  
+3.  在 [作業模式 (要求)]  方塊中，選取 [讀取寫入]  。  
 
 #### <a name="use-transact-sql-statements"></a>使用 Transact-SQL 陳述式  
   
@@ -109,23 +109,23 @@ INNER JOIN sys.query_store_query_text AS Txt
 ```  
  
 ##  <a name="Regressed"></a> 使用迴歸查詢功能  
-啟用查詢存放區之後，請重新整理 [物件總管] 窗格中的資料庫部分，以新增查詢存放區 區段。  
+啟用查詢存放區之後，請重新整理 [物件總管] 窗格中的資料庫部分，以新增查詢存放區  區段。  
   
-![SSMS 物件總管中的 SQL Server 2016 查詢存放區樹狀結構](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SSMS 物件總管中的 SQL Server 2016 查詢存放區樹狀結構")   ![SSMS 物件總管中的 SQL Server 2017 查詢存放區樹狀結構](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SSMS 物件總管中的 SQL Server 2017 查詢存放區樹狀結構") 
+![SSMS 物件總管中的 SQL Server 2016 查詢存放區樹狀結構](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SSMS 物件總管中的 SQL Server 2016 查詢存放區樹狀結構") ![SSMS 物件總管中的 SQL Server 2017 查詢存放區樹狀結構](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SSMS 物件總管中的 SQL Server 2017 查詢存放區樹狀結構") 
   
-選取 [迴歸查詢]  ，開啟 **中的 [迴歸查詢]**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]窗格。 [迴歸查詢] 窗格會顯示查詢存放區中的查詢與計劃。 頂端的下拉式清單方塊，可供您依據各種條件篩選查詢：**持續時間 (毫秒)** (預設)、CPU 時間 (毫秒)、邏輯讀取 (KB)、邏輯寫入 (KB)、實體讀取 (KB)、CLR 時間 (毫秒)、DOP、記憶體耗用量 (KB)、資料列計數、已使用的記錄記憶體 (KB)、已使用的暫存 DB 記憶體 (KB)，以及等候時間 (毫秒)。  
+選取 [迴歸查詢]  ，開啟 **中的 [迴歸查詢]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]窗格。 [迴歸查詢] 窗格會顯示查詢存放區中的查詢與計劃。 頂端的下拉式清單方塊，可供您依據各種條件篩選查詢：**持續時間 (毫秒)** (預設)、CPU 時間 (毫秒)、邏輯讀取 (KB)、邏輯寫入 (KB)、實體讀取 (KB)、CLR 時間 (毫秒)、DOP、記憶體耗用量 (KB)、資料列計數、已使用的記錄記憶體 (KB)、已使用的暫存 DB 記憶體 (KB)，以及等候時間 (毫秒)。  
 選取計劃即可以圖形方式檢視查詢計劃。 按鈕可用來檢視來源查詢、強制執行及取消強制執行查詢計畫、在格線和圖表格式之間切換、比較所選取的計畫 (如果選取了多個)，以及重新整理顯示。  
   
 ![SSMS 物件總管中的 SQL Server 2016 迴歸查詢](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SSMS 物件總管中的 SQL Server 2016 迴歸查詢")  
   
-若要強制執行計劃，請選取查詢與計劃，然後按一下 [強制執行計劃] 。 您只可以強制執行由查詢計劃功能所儲存且仍保留在查詢計劃快取中的計劃。
+若要強制執行計劃，請選取查詢與計劃，然後按一下 [強制執行計劃]  。 您只可以強制執行由查詢計劃功能所儲存且仍保留在查詢計劃快取中的計劃。
 
 ##  <a name="Waiting"></a> 尋找等候查詢
 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 開始，可在查詢存放區中使用每個查詢經過一段時間的等候統計資料。 
 
 在查詢存放區中，等候類型會合併到**等候類別**。 [sys.query_store_wait_stats & #40;TRANSACT-SQL & #41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table) 可將等候類別對應至等候類型。
 
-選取 [查詢等候統計資料]，以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 或更新版本中開啟 [查詢等候統計資料] 窗格。 [查詢等候統計資料] 窗格會在查詢存放區中顯示包含前幾個等候類別的長條圖。 使用頂端的下拉式清單來選取等候時間的彙總準則：平均值、最大值、最小值、標準差及**總計** (預設值)。
+選取 [查詢等候統計資料]  ，以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 或更新版本中開啟 [查詢等候統計資料]  窗格。 [查詢等候統計資料] 窗格會在查詢存放區中顯示包含前幾個等候類別的長條圖。 使用頂端的下拉式清單來選取等候時間的彙總準則：平均值、最大值、最小值、標準差及**總計** (預設值)。
 
  ![SSMS 物件總管中的 SQL Server 2017 查詢等候統計資料](../../relational-databases/performance/media/query-store-waits.PNG "SSMS 物件總管中的 SQL Server 2017 查詢等候統計資料")
 
@@ -142,9 +142,9 @@ INNER JOIN sys.query_store_query_text AS Txt
 |||| 
 |-|-|-|  
 |過去的體驗|新的體驗|動作|
-|每個資料庫的高 RESOURCE_SEMAPHORE 等候|查詢存放區特定查詢的高記憶體等候|尋找查詢存放區中前幾項最耗記憶體的查詢。 這些查詢可能會延遲受影響查詢的進度。 請考慮對這些查詢或受影響的查詢使用 MAX_GRANT_PERCENT 查詢提示。|
-|每個資料庫的高 LCK_M_X 等候|查詢存放區特定查詢的高鎖定等候|檢查受影響查詢的查詢文字，找出目標項目。 在查詢存放區中尋找修改相同項目的其他查詢，這些查詢經常執行且/或持續時間很長。 找出這些查詢之後，請考慮變更應用程式邏輯以改善並行，或使用較不嚴格的隔離等級。|
-|每個資料庫的高 PAGEIOLATCH_SH 等候|查詢存放區特定查詢的高緩衝區 IO 等候|在查詢存放區中尋找有大量實體讀取次數的查詢。 如果它們符合高 IO 等候的查詢，請考慮引入基礎實體索引搜尋，以執行搜尋而不是掃描，進而將查詢的 IO 負擔降至最低。|
+|每個資料庫的高 RESOURCE_SEMAPHORE 等候|查詢存放區特定查詢的高記憶體等候|找出查詢存放區中記憶體耗用量名列前茅的查詢。 這些查詢可能會進一步延遲受影響查詢的進度。 請考慮對這些查詢或受影響的查詢使用 MAX_GRANT_PERCENT 查詢提示。|
+|每個資料庫的高 LCK_M_X 等候|查詢存放區特定查詢的高鎖定等候|查看受影響查詢的查詢文字，並找出目標實體。 在查詢存放區中尋找修改相同項目的其他查詢，這些查詢經常執行且/或持續時間很長。 找出這些查詢之後，請考慮變更應用程式邏輯，改善並行存取，或使用限制較少的隔離等級。|
+|每個資料庫的高 PAGEIOLATCH_SH 等候|查詢存放區特定查詢的高緩衝區 IO 等候|在查詢存放區中尋找實體讀取次數高的查詢。 如果它們符合高 IO 等候的查詢，請考慮引入基礎實體索引搜尋，以執行搜尋而不是掃描，進而將查詢的 IO 負擔降至最低。|
 |每個資料庫的高 SOS_SCHEDULER_YIELD 等候|查詢存放區特定查詢的高 CPU 等候|尋找查詢存放區中前幾項最耗 CPU 的查詢。 在它們中間找出高 CPU 趨勢與受影響查詢之高 CPU 等候相互關聯的查詢。 專注於將那些查詢最佳化，可能存在計畫迴歸或缺少索引。|
 
 ##  <a name="Options"></a> 組態選項 

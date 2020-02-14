@@ -19,25 +19,25 @@ ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: d900593848561bba17e186f48632bf299fe9a7cd
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73962400"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>效能監視及微調工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一組完整的工具，可用來監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的事件，以及用來微調實體資料庫設計。 要選擇的工具依據要做的監視或微調類型，以及要監視的特殊事件而定。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供一組完整的工具，可用來監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的事件，以及用來微調實體資料庫設計。 要選擇的工具依據要做的監視或微調類型，以及要監視的特殊事件而定。  
   
  下列為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監視和微調工具：  
   
-|工具|Description|  
+|工具|描述|  
 |----------|-----------------|  
 |[內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|內建的函數會顯示自伺服器啟動後，關於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活動的快照統計資料，這些統計資料會儲存在預先定義的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 計數器中。 例如， **\@\@CPU_BUSY** 包含 CPU 已執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式碼的時間長度； **\@\@CONNECTIONS** 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線或嘗試連線的數量； **\@\@PACKET_ERRORS** 則包含在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線上發生的網路封包數。|  
 |[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|DBCC (資料庫主控台命令) 陳述式讓您可以檢查效能統計資料和資料庫的邏輯與實體一致性。|  
 |[Database Engine Tuning Advisor (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md)|Database Engine Tuning Advisor 會針對您要微調的資料庫，分析執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式效能影響。 Database Engine Tuning Advisor 會針對新增、移除，或修改索引、索引檢視和分割提供建議。|  
 |[資料庫測試助理 (DEA)](https://www.microsoft.com/download/details.aspx?id=54090)|資料庫測試助理 (DEA) 是一個適用於 SQL Server 的新 A/B 測試解決方案。 它將協助針對指定的工作負載評估 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的目標版本。 從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始) 升級為任何較新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，DEA 將能提供比較分析計量。|
-|錯誤記錄檔|Windows 應用程式事件記錄檔針對發生於 Windows Server 和 Windows 作業系統上的事件，以及在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 與全文檢索搜尋中的事件，提供一個概括性的資訊。 記錄檔包含有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中事件的相關資訊，這些資訊無法從別處取得。 您可以使用錯誤記錄檔中的資訊來進行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相關問題的疑難排解。|  
+|錯誤記錄|Windows 應用程式事件記錄檔針對發生於 Windows Server 和 Windows 作業系統上的事件，以及在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 與全文檢索搜尋中的事件，提供一個概括性的資訊。 記錄檔包含有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中事件的相關資訊，這些資訊無法從別處取得。 您可以使用錯誤記錄檔中的資訊來進行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相關問題的疑難排解。|  
 |[擴充事件](../../relational-databases/extended-events/extended-events.md)|「擴充事件」是一種使用極少量效能資源的一種輕量型效能監視系統。 擴充事件提供三個圖形化使用者介面 (新增工作階段精靈、新增工作階段及 XE Profiler)，以建立、修改、顯示及分析您的工作階段資料。|  
 |[執行相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)|執行相關的 DMV 可讓您可以檢查與執行相關的資訊。|
 |[即時查詢統計資料 (LQS)](../../relational-databases/performance/live-query-statistics.md)|顯示有關查詢執行步驟的即時統計資料。 因為這份資料是執行查詢時提供，所以這些執行統計資料在偵錯查詢效能問題方面非常有用。|  
@@ -55,13 +55,13 @@ ms.locfileid: "73962400"
 ## <a name="choosing-a-monitoring-tool"></a>選擇監視工具  
  監視工具的選擇依據要監視的事件與活動而定。  
   
-|事件或活動|擴充事件|SQL Server Profiler|Distributed Replay|系統監視器|活動監視器|Transact-SQL|錯誤記錄檔|效能儀表板|  
+|事件或活動|擴充事件|SQL Server Profiler|Distributed Replay|系統監視器|活動監視器|Transact-SQL|錯誤記錄|效能儀表板|  
 |-----------------------|-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|----------------|   
 |趨勢分析|是|是||是|||||  
 |重新執行擷取的事件||是 (從單一電腦)|是 (從多部電腦)||||||  
 |特定的監視|是<sup>1</sup>|是|||是|是|是|是|  
 |產生警示||||是|||||  
-|圖形介面|是|是||是|是||是|是|  
+|圖形化介面|是|是||是|是||是|是|  
 |在自訂應用程式中使用|是|是<sup>2</sup>||||是|||  
   
  <sup>1</sup> 使用 [SQL Server Management Studio XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)    
@@ -70,7 +70,7 @@ ms.locfileid: "73962400"
 ## <a name="windows-monitoring-tools"></a>Windows 監視工具  
  Windows 作業系統與 Windows Server 2003 也提供下列監控工具。  
   
-|工具|Description|  
+|工具|描述|  
 |----------|-----------------|  
 |工作管理員|顯示執行於系統上的處理序與應用程式概要。|  
 |網路監視器代理程式|監視網路流量。|  

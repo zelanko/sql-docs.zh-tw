@@ -23,10 +23,10 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 15da54550dd314a50d4c3235a77394292d23f1d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296942"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服務 (SSIS 服務)
@@ -71,7 +71,7 @@ ms.locfileid: "71296942"
  當安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件時，也會安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 根據預設， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會啟動，而且服務的啟動類型會設為自動。 不過，您也必須安裝 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 才能使用此服務來管理已儲存和執行中的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
 > [!NOTE]
-> 若要直接連接到舊版 Integration Services 服務的執行個體，您必須使用 SQL Server Management Studio (SSMS) 版本以及在其上執行 Integration Services 服務的 SQL Server 版本。 例如，若要連接到 SQL Server 2016 執行個體上執行的舊版 Integration Services 服務，您必須使用針對 SQL Server 2016 所發行的 SSMS 版本。 [下載 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
+> 若要直接連接到舊版 Integration Services 服務的執行個體，您必須使用 SQL Server Management Studio (SSMS) 版本以及在其上執行 Integration Services 服務的 SQL Server 版本。 例如，若要連接到 SQL Server 2016 執行個體上執行的舊版 Integration Services 服務，您必須使用針對 SQL Server 2016 所發行的 SSMS 版本。 [下載 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 >
 >   在 SSMS [連接到伺服器]  對話方塊中，您無法輸入執行舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的伺服器名稱。 不過，若要管理儲存在遠端伺服器上的封裝，您不必連接到該遠端伺服器上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務執行個體。 而是要編輯 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的組態檔，好讓 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 顯示儲存在遠端伺服器上的封裝。   
   
@@ -79,7 +79,7 @@ ms.locfileid: "71296942"
   
  您可以使用下列其中一個 Microsoft Management Console (MMC) 嵌入式管理單元來管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務：SQL Server 組態管理員或服務。 您必須先確定服務已啟動，然後才能管理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的封裝。  
   
- 根據預設，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務設定為可管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體之 msdb 資料庫中的封裝，該執行個體與 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 同時安裝。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體並未同時安裝，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會設定為可管理本機預設 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體之 msdb 資料庫中的封裝。 若要管理儲存在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]具名或遠端執行個體中的封裝，或儲存在多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體中的封裝，您就必須修改此服務的組態檔。
+ 根據預設， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務設定為可管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體之 msdb 資料庫中的封裝，該執行個體與 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]同時安裝。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體並未同時安裝， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會設定為可管理本機預設 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體之 msdb 資料庫中的封裝。 若要管理儲存在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]具名或遠端執行個體中的封裝，或儲存在多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體中的封裝，您就必須修改此服務的組態檔。
   
  依預設， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會設定為在服務停止時停止執行中的封裝。 不過， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務不會等待封裝停止，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務停止後，仍可能有部份封裝在執行中。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "71296942"
   
 ## <a name="set-the-properties-of-the-service"></a>設定服務的屬性
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會管理並監視 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的封裝。 當您首次安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務就會啟動，而且此服務的啟動類型會設定為自動。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會管理並監視 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的封裝。 當您首次安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務就會啟動，且此服務的啟動類型會設定為自動。  
   
  在您已經安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務之後，就可以使用 [SQL Server 組態管理員] 或 [服務] MMC 嵌入式管理單元來設定服務的屬性。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "71296942"
   
 4.  在 **[SQL Server Integration Services 屬性]** 對話方塊中，您可以執行下列動作：  
   
-    -   按一下 **[一般]** 索引標籤。若要啟用服務，請選取手動或自動啟動類型。 若要停用服務，請在 **[啟動類型]** 方塊中選取 [停用]。 選取 [停用] 不會停止目前正在執行的服務。  
+    -   按一下 [General] \(一般\)  索引標籤。若要啟用服務，請選取手動或自動啟動類型。 若要停用服務，請在 **[啟動類型]** 方塊中選取 [停用]。 選取 [停用] 不會停止目前正在執行的服務。  
   
          如果已啟用服務，則可以按一下 **[停止]** 停止服務，或按一下 **[啟動]** 啟動服務。  
   
@@ -293,7 +293,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 4.  在 **[連接到伺服器]** 對話方塊中，提供伺服器名稱。 您可以使用句號 (.)、(local) 或 **localhost** 表示本機伺服器。  
   
-5.  按一下 **[連接]** 。  
+5.  按一下 [ **連接**]。  
 
 ## <a name="connect-to-a-remote-ssis-server"></a>連線至遠端 SSIS 伺服器
   
@@ -314,12 +314,12 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 3.  選取 [伺服器類型]  清單中的 [Integration Services]  。  
   
-4.  在 [伺服器名稱]  文字方塊中，輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的名稱。  
+4.  在 [伺服器名稱]  文字方塊中鍵入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的名稱。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務不是執行個體特定的。 您可以使用 Integration Services 服務執行所在的電腦名稱來連接此服務。  
   
-5.  按一下 **[連接]** 。  
+5.  按一下 [ **連接**]。  
   
 > [!NOTE]  
 >  [瀏覽伺服器]  對話方塊不會顯示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的遠端執行個體。 此外，[連接到伺服器]  對話方塊的 [連接選項]  索引標籤 (按一下 [選項]  按鈕即可顯示) 上的可用選項不適用於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 連接。  
@@ -355,11 +355,11 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 #### <a name="to-configure-rights-for-remote-users-on-windows-2000-with-the-latest-service-packs"></a>設定具有最新 Service Pack 版本的 Windows 2000 遠端使用者權限  
   
-1.  在命令提示字元執行 **dcomcnfg.exe**。  
+1.  在命令提示字元執行 **dcomcnfg.exe** 。  
   
 2.  在 [分散式 COM 組態內容]  對話方塊的 [應用程式]  頁面上，選取 SQL Server Integration Services 11.0，然後按一下 [內容]  。  
   
-3.  選取 [安全性]  頁面。  
+3.  選取 [安全性] 頁面  。  
   
 4.  使用兩個分開的對話方塊設定 [存取權限]  與 [啟動權限]  。 您無法區分遠端與本機存取，存取權限包含了本機與遠端存取，而啟動權限則包含了本機與遠端啟動。  
   
@@ -371,7 +371,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
  如果您是在用戶端電腦上使用本機 Windows 帳戶工作，那麼只有當遠端電腦上存在和本機帳戶相同名稱與密碼以及適當權限的帳戶，您才能連接到遠端電腦上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。  
   
 ### <a name="by-default-the-ssis-service-does-not-support-delegation"></a>SSIS 服務預設不支援委派  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務預設不支援認證委派 (有時候稱為「雙躍點」)。 在這種情況中，您是在用戶端電腦上工作、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務是在第二部電腦上執行， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則是在第三部電腦上執行。 首先， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 已順利將認證從用戶端電腦傳遞至正在其上執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的第二部電腦。 接著，不過，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務無法將認證從第二部電腦委派至正在其上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的第三部電腦。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務預設不支援認證委派 (有時候稱為「雙躍點」)。 在這種情況中，您是在用戶端電腦上工作、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務是在第二部電腦上執行， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則是在第三部電腦上執行。 首先， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 已順利將認證從用戶端電腦傳遞至正在其上執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的第二部電腦。 接著，不過， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務無法將認證從第二部電腦委派至正在其上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的第三部電腦。
 
 將 [信任這個使用者，可委派任何服務 (只限 Kerberos)]  權限授與 SQL Server 服務帳戶 (可將 Integration Services 服務 (ISServerExec.exe) 啟動為子處理序)，即可啟用認證委派。 在授與此權限之前，請考慮它是否符合您組織的安全性需求。
 
@@ -401,13 +401,13 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 #### <a name="to-configure-a-windows-firewall-using-the-command-prompt-window"></a>若要使用命令提示視窗來設定 Windows 防火牆  
   
-1.  執行下列命令：
+1.  執行以下命令：
 
     ```dos
     netsh firewall add portopening protocol=TCP port=135 name="RPC (TCP/135)" mode=ENABLE scope=SUBNET
     ```
   
-2.  執行下列命令：
+2.  執行以下命令：
 
     ```dos
     netsh firewall add allowedprogram program="%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn\MsDtsSrvr.exe" name="SSIS Service" scope=SUBNET

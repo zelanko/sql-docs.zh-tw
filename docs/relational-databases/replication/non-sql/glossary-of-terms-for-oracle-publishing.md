@@ -13,10 +13,10 @@ ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ac643b3c0c095dee143c3feca878bd4072273bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901105"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Oracle 發行相關術語字彙
@@ -35,7 +35,7 @@ ms.locfileid: "67901105"
 #### <a name="rowid"></a>ROWID  
  指向資料庫中特定資料列位置的指標。 因為使用 ROWID 擷取資料列比使用資料表掃描或索引要快，所以複寫在處理已發行的資料表變更時暫時使用 ROWID。  
   
-#### <a name="sequence"></a>序列  
+#### <a name="sequence"></a>順序  
  用來產生唯一數字的資料庫物件。 複寫使用序列對已發行資料表的變更進行排序。  
   
 #### <a name="sqlplus"></a>SQL\*Plus  
@@ -59,6 +59,6 @@ ms.locfileid: "67901105"
  [設定 Oracle 發行者](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [在 Oracle 發行者上建立的物件](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)   
  [非 SQL Server 發行者](../../../relational-databases/replication/non-sql/non-sql-server-publishers.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Oracle 發行概觀](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d79007dccddef604315c57beca1e1274d23c6f0f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095686"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>交易鎖定與資料列版本設定指南
@@ -31,19 +31,19 @@ ms.locfileid: "74095686"
 **適用於**：[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)](除非另有明確指定)。 
   
 ##  <a name="Basics"></a> 交易基本概念  
- 交易 (Transaction) 是以工作的單一邏輯單元 (Logic Unit) 來執行的一系列相關作業。 工作邏輯單元必須呈現出四種屬性，即不可部份完成性 (Atomicity)、一致性 (Consistency)、隔離性 (Isolation) 與耐久性 (Durability) 屬性，稱為 ACID，才能有資格成為一筆交易。  
+ 交易就是以單一工作邏輯單元執行的一連串作業。 工作邏輯單元必須呈現出四種屬性，即不可部份完成性 (Atomicity)、一致性 (Consistency)、隔離性 (Isolation) 與耐久性 (Durability) 屬性，稱為 ACID，才能有資格成為一筆交易。  
   
  **不可部份完成性**  
  交易必須是不可部分完成 (Atomic) 的工作單位；資料的修改若非全部執行，就是全部不執行。  
   
  **一致性**  
- 交易完成時，全部的資料必須維持一致性的狀態。 在關聯式資料庫 (Relational Database) 中，必須將所有的規則 (Rule) 套用於交易的修改，以維護所有的資料整合性 (Integrity)。 所有的內部資料結構，例如 B 型樹狀結構索引 (B-tree Index) 或是雙向連結串列 (Doubly-Linked List)，在交易終止時必須是正確的。  
+ 交易完成時，所有資料必須維持一致的狀態。 在關聯式資料庫 (Relational Database) 中，必須將所有的規則 (Rule) 套用於交易的修改，以維護所有的資料整合性 (Integrity)。 所有的內部資料結構，例如 B 型樹狀結構索引 (B-tree Index) 或是雙向連結串列 (Doubly-Linked List)，在交易終止時必須是正確的。  
   
- **隔離性**  
- 並行的交易所做的修改，必須與其他任何並行的交易所做的修改隔離。 交易所辨識的資料不是處於另一筆並行的交易修改資料之前的狀態，就是處於第二筆交易完成後的狀態，但是卻無法辨識中繼狀態。 這稱為序列化能力 (Serializability)，因為這樣可以產生重新載入起始資料並重新執行一系列的交易，以便讓資料最終能夠與原始交易執行後的狀態相同的能力。  
+ **隔離**  
+ 並行交易所做的修改，必須與任何其他並行交易所做的修改隔離。 交易所辨識的資料不是處於另一筆並行的交易修改資料之前的狀態，就是處於第二筆交易完成後的狀態，但是卻無法辨識中繼狀態。 這稱為序列化能力 (Serializability)，因為這樣可以產生重新載入起始資料並重新執行一系列的交易，以便讓資料最終能夠與原始交易執行後的狀態相同的能力。  
   
  **耐久性**  
- 完全持久交易完成之後，其作用便永遠存在於系統之中。 即使系統發生失敗的事件但修改仍會保存。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 和更新版本支援延遲的持久交易。 延遲的持久交易會在交易記錄檔記錄永久保存到磁碟之前認可。 如需有關延遲交易持久性的詳細資訊，請參閱[交易持久性](../relational-databases/logs/control-transaction-durability.md)主題。  
+ 完全持久交易完成之後，其作用便永遠存在於系統之中。 即使發生系統失敗仍會保存修改。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 和更新版本支援延遲的持久交易。 延遲的持久交易會在交易記錄檔記錄永久保存到磁碟之前認可。 如需有關延遲交易持久性的詳細資訊，請參閱[交易持久性](../relational-databases/logs/control-transaction-durability.md)主題。  
   
  SQL 程式設計者負責在強制資料邏輯一致性 (Consistency) 的點上啟動與結束交易。 程式設計者必須定義資料修改順序，讓資料維持在與組織的商業規則有關的一致性狀態。 然後再由程式設計者將這些修改陳述式包含於單一的交易中，這樣 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 便得以強制交易的實體完整性。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "74095686"
   
 -   保持交易隔離性 (Isolation) 的鎖定機能 (Locking Facility)。  
   
--   記錄機能可確保交易持久性。 針對完全持久交易，記錄檔記錄會在交易認可之前強行寫入磁碟。 即使伺服器的硬體、作業系統、或是 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 執行個體本身發生失敗，該執行個體仍會在重新啟動時，使用交易記錄檔將所有未完成的交易自動復原到系統失敗的點。 延遲的持久交易會在交易記錄檔記錄強行寫入磁碟之前認可。 如果在記錄檔記錄先強行寫入磁碟之前發生系統失敗，這類交易可能會遺失。 如需有關延遲交易持久性的詳細資訊，請參閱[交易持久性](../relational-databases/logs/control-transaction-durability.md)主題。  
+-   記錄機能可確保交易持久性。 針對完全持久交易，記錄檔記錄會在交易認可之前強行寫入磁碟。 因此，即使伺服器硬體、作業系統或[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]執行個體本身發生失敗，該執行個體仍會在重新啟動時，使用交易記錄檔，將所有未完成的交易自動復原到系統失敗點。 延遲的持久交易會在交易記錄檔記錄強行寫入磁碟之前認可。 如果在記錄檔記錄先強行寫入磁碟之前發生系統失敗，這類交易可能會遺失。 如需有關延遲交易持久性的詳細資訊，請參閱[交易持久性](../relational-databases/logs/control-transaction-durability.md)主題。  
   
 -   強制不可部份完成性 (Atomicity) 與一致性的交易管理功能。 交易在啟動之後必須成功地完成 (認可)，否則 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會將交易啟動後所做的所有資料修改動作復原。 這項作業稱為回復交易，因為資料將恢復為任何變更發生之前的狀態。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "74095686"
 |ALTER DATABASE|CREATE DATABASE|DROP FULLTEXT INDEX|  
 |ALTER FULLTEXT CATALOG|CREATE FULLTEXT CATALOG|RECONFIGURE|  
 |ALTER FULLTEXT INDEX|CREATE FULLTEXT INDEX|RESTORE|  
-|BACKUP|DROP DATABASE|全文檢索系統預存程序|  
+|備份|DROP DATABASE|全文檢索系統預存程序|  
 |CREATE DATABASE|DROP FULLTEXT CATALOG|由 sp_dboption 設定資料庫選項，或於外顯或隱含交易中修改 master 資料庫的任何系統程序。|  
   
 > [!NOTE]  
@@ -91,7 +91,7 @@ ms.locfileid: "74095686"
 |-|-|-|  
 |ALTER TABLE|FETCH|REVOKE|  
 |CREATE|GRANT|SELECT|  
-|刪除|INSERT|TRUNCATE TABLE|  
+|刪除|Insert|TRUNCATE TABLE|  
 |DROP|OPEN|UPDATE|  
   
  **批次範圍交易**  
@@ -290,7 +290,7 @@ GO
 |資料列版本設定隔離等級|定義|  
 |------------------------------------|----------------|  
 |讀取認可快照|當 READ_COMMITTED_SNAPSHOT 資料庫選項設為 ON 時，讀取認可隔離會使用資料列版本設定以提供陳述式層級的讀取一致性。 讀取作業只需要 SCH-S 資料表層級的鎖定，並不需要頁面或資料列的鎖定。 也就是說，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]會利用資料列版本設定，依照資料在陳述式開始時的存在狀態，為每個陳述式提供在交易上一致的資料快照集。 鎖定的使用目的不是為了防止其他交易更新資料。 使用者定義的函數可傳回在包含 UDF 的陳述式開始之後所認可的資料。<br /><br /> 當 `READ_COMMITTED_SNAPSHOT` 資料庫選項設定為 OFF (預設設定) 時，讀取認可隔離會在目前交易執行讀取作業的期間，利用共用鎖定來防止其他交易修改資料列。 共用鎖定也會封鎖陳述式，使它們在其他交易完成之前，無法讀取其他交易所修改的資料列。 這兩種實作都符合讀取認可隔離的 ISO 定義。|  
-|快照式|快照隔離等級使用資料列版本設定來提供交易層級的讀取一致性。 讀取作業並不需要頁面或資料列的鎖定，只需要 SCH-S 資料表鎖定。 當讀取其他交易所修改的資料列時，它們會擷取在啟動交易時就已經存在的資料列版本。 只有當 `ALLOW_SNAPSHOT_ISOLATION` 資料庫選項設定為 ON 時，您才能針對資料庫使用快照集隔離。 根據預設，使用者資料庫的此選項為 OFF。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援中繼資料版本設定。 因此，哪些 DDL 作業可以在快照隔離之下執行的明確交易中執行會有一些限制。 在 BEGIN TRANSACTION 陳述式之後，不允許在快照隔離下執行下列 DDL 陳述式：ALTER TABLE、CREATE INDEX、CREATE XML INDEX、ALTER INDEX、DROP INDEX、DBCC REINDEX、ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME 或是任何通用語言執行平台 (CLR) DDL 陳述式。 當您在隱含交易內使用快照隔離時，便允許這些陳述式。 就定義而言，隱含交易是一種單一陳述式，可強制使用快照隔離的語意 (即使是 DDL 陳述式)。 違反這個原則可能會造成錯誤 3961：`Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
+|快照式|快照隔離等級使用資料列版本設定來提供交易層級的讀取一致性。 讀取作業並不需要頁面或資料列的鎖定，只需要 SCH-S 資料表鎖定。 當讀取其他交易所修改的資料列時，它們會擷取在啟動交易時就已經存在的資料列版本。 只有當 `ALLOW_SNAPSHOT_ISOLATION` 資料庫選項設定為 ON 時，您才能針對資料庫使用快照集隔離。 根據預設，使用者資料庫的此選項為 OFF。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援中繼資料版本設定。 因此，哪些 DDL 作業可以在快照隔離之下執行的明確交易中執行會有一些限制。 在 BEGIN TRANSACTION 陳述式之後，不允許在快照隔離下執行下列 DDL 陳述式：ALTER TABLE、CREATE INDEX、CREATE XML INDEX、ALTER INDEX、DROP INDEX、DBCC REINDEX、ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME 或是任何通用語言執行平台 (CLR) DDL 陳述式。 在隱含交易內使用快照集隔離時，這些陳述式會受到允許。 就定義而言，隱含交易是一種單一陳述式，可強制使用快照隔離的語意 (即使是 DDL 陳述式)。 違反這個原則可能會造成錯誤 3961：`Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
   
  下表顯示不同隔離等級所啟用的並行副作用。  
   
@@ -324,7 +324,7 @@ GO
   
  針對快照集交易，應用程式會將 Attribute 設定為 SQL_COPT_SS_TXN_ISOLATION 並將 ValuePtr 設定為 SQL_TXN_SS_SNAPSHOT，來呼叫 `SQLSetConnectAttr`。 快照集交易可以使用 SQL_COPT_SS_TXN_ISOLATION 或 SQL_ATTR_TXN_ISOLATION 來擷取。  
   
-##  <a name="Lock_Engine"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]中的鎖定  
+##  <a name="Lock_Engine"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]中的鎖定  
  鎖定是 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的一種機制，用以同步處理多個使用者在同一時間對相同資料的存取。  
   
  在交易取得資料目前狀態的相依性前 (例如讀取或修改資料)，它必須保護自己使其免於受到另一個交易修改相同資料的影響。 交易可以要求資料的鎖定以達到此目的。 鎖定有不同的模式，例如共用或獨佔。 鎖定模式可定義交易在資料上的相依性層級。 若已授與該資料的鎖定模式給某個交易，就不會再授與鎖定給另一個交易，以免造成衝突。 如果交易所要求的鎖定模式，將和已授與相同資料的鎖定造成衝突， [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將停止要求交易，直到釋放第一個鎖定為止。  
@@ -340,7 +340,7 @@ GO
   
  下表顯示 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可以鎖定的資源。  
   
-|資源|Description|  
+|資源|描述|  
 |--------------|-----------------|  
 |RID|資料列識別碼，用來鎖定堆積內單一資料列。|  
 |KEY|索引中的資料列鎖定，用來保護可序列化交易中的索引鍵範圍。|  
@@ -362,12 +362,12 @@ GO
   
  下表顯示 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 使用的資源鎖定模式。  
   
-|鎖定模式|Description|  
+|鎖定模式|描述|  
 |---------------|-----------------|  
 |共用 (S)|用於不變更或更新資料的讀取作業，例如 `SELECT` 陳述式。|  
 |更新 (U)|用於可更新的資源上。 防止當多個工作階段正在讀取、鎖定及後來可能更新資源時發生常見的死結。|  
 |獨占 (X)|用於資料修改作業，例如 `INSERT``UPDATE`或 `DELETE`。 確保不能對相同資源同時進行多重更新。|  
-|意圖|用來建立鎖定階層。 意圖鎖定的類型為：意圖共用 (IS)、意圖獨佔 (IX) 與共用意圖獨佔 (SIX)。|  
+|Intent|用來建立鎖定階層。 意圖鎖定的類型為：意圖共用 (IS)、意圖獨佔 (IX) 與共用意圖獨佔 (SIX)。|  
 |結構描述|執行相依於資料表結構描述的作業時使用。 結構描述鎖定的類型為：結構描述修改 (Sch-M) 與結構描述穩定性 (Sch-S)。|  
 |大量更新 (BU)|用於將資料大量複製到資料表且已指定 `TABLOCK` 提示時。|  
 |索引鍵範圍|當使用可序列化交易隔離等級時，保護查詢讀取的資料列範圍。 確定其他交易無法插入資料列，這些資料列在查詢重新執行時可限定可序列化交易的查詢。|  
@@ -397,7 +397,7 @@ GO
   
 <a name="lock_intent_table"></a> 意圖鎖定包括意圖共用 (IS)、意圖獨佔 (IX) 與以意圖獨佔共用 (SIX)。  
   
-|鎖定模式|Description|  
+|鎖定模式|描述|  
 |---------------|-----------------|  
 |意圖共用 (IS)|保護在階層較低位置的某些 (但不是全部) 資源上要求的或取得的共用鎖定。|  
 |意圖獨佔 (IX)|保護在階層較低位置的某些 (但不是全部) 資源上要求的或取得的獨佔鎖定。 IX 是 IS 的超集，它也保護在較低層級資源要求的共用鎖定。|  
@@ -461,10 +461,10 @@ GO
 -   資料列代表保護索引項的鎖定模式。  
 -   模式代表所使用的合併鎖定模式。 索引鍵範圍鎖定模式由兩個部份組成。 第一個部份代表用來鎖定索引鍵範圍的鎖定類型 (Range*T*)，第二個部份代表用來鎖定特定索引鍵的鎖定類型 (*K*)。 這兩個部份使用連字號 (-) 來連接，例如 Range*T*-*K*。  
   
-    |範圍|資料列|[模式]|Description|  
+    |範圍|資料列|[模式]|描述|  
     |-----------|---------|----------|-----------------|  
     |RangeS|S|RangeS-S|共用範圍，共用資源鎖定；可序列化範圍掃描。|  
-    |RangeS|u|RangeS-U|共用範圍，更新資源鎖定；可序列化更新掃描。|  
+    |RangeS|U|RangeS-U|共用範圍，更新資源鎖定；可序列化更新掃描。|  
     |RangeI|Null|RangeI-N|插入範圍，Null 資源鎖定；在插入新的索引鍵到索引之前用來測試範圍。|  
     |RangeX|X|RangeX-X|獨占範圍，獨占資源鎖定；在範圍內更新索引鍵時使用。|  
   
@@ -490,7 +490,7 @@ GO
 |鎖定 1|鎖定 2|轉換鎖定|  
 |------------|------------|---------------------|  
 |S|RangeI-N|RangeI-S|  
-|u|RangeI-N|RangeI-U|  
+|U|RangeI-N|RangeI-U|  
 |X|RangeI-N|RangeI-X|  
 |RangeI-N|RangeS-S|RangeX-S|  
 |RangeI-N|RangeS-U|RangeX-U|  
@@ -540,7 +540,7 @@ WHERE name = 'Bill';
   
  將索引鍵範圍鎖定放在與名稱範圍從 `Ben` 到 `Bing` 對應的索引項，因為要把名稱 `Bill` 插入這兩個相鄰的索引項之間。 將 RangeS-S 模式的索引鍵範圍鎖定放在索引項 `Bing`之上。 這可預防其他交易將值 (例如 `Bill`) 插入到索引項 `Ben` 和 `Bing`之間。  
   
-##### <a name="delete-operation"></a>刪除動作  
+##### <a name="delete-operation"></a>刪除作業  
  在交易內刪除某個值時，交易進行刪除動作期間不需鎖定該值所處之範圍。 鎖定欲刪除的索引鍵值直到交易結束，即足以維持可序列化能力。 例如，給定以下的 DELETE 陳述式：  
   
 ```sql  
@@ -586,7 +586,7 @@ INSERT mytable VALUES ('Dan');
   
  等到交易 B 完成後，交易 A 才能完成，但交易 B 卻被交易 A 封鎖了。這個狀況也稱為「循環相依性」：交易 A 相依於交易 B，且交易 B 因為相依於交易 A 而形成封閉式循環。  
   
- 在死結中的這兩個交易會一直等下去，除非由外部處理序解除此死結。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 死結監視器會定期檢查死結中的工作。 如果監視器偵測到循環相依性，它會選擇其中一個工作作為犧牲者，以錯誤來結束其交易。 這樣另一個工作便可以完成其交易。 因為錯誤而結束交易的應用程式可以重試交易，通常在另一個死結交易完成之後便會完成。  
+ 在死結中的這兩個交易會一直等下去，除非由外部處理序解除此死結。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 死結監視器會定期檢查是否有工作處於死結狀態。 如果監視器偵測到循環相依性，它會選擇其中一個工作作為犧牲者，以錯誤來結束其交易。 這樣另一個工作便可以完成其交易。 因為錯誤而結束交易的應用程式可以重試交易，通常在另一個死結交易完成之後便會完成。  
   
  死結通常會和一般的封鎖產生混淆。 當交易要求鎖定的資源被另一個交易鎖定時，提出要求的交易會等待鎖定釋出。 依預設，除非設定了 LOCK_TIMEOUT，否則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 交易不會逾時。 提出要求的交易會被封鎖，但非死結，因為提出要求的交易尚未封鎖目前擁有鎖定的交易。 最後，主控交易會完成並釋出鎖定，然後提出要求的交易會被授與鎖定並繼續進行。  
   
@@ -594,7 +594,7 @@ INSERT mytable VALUES ('Dan');
   
  死結可能發生在任何具有多執行緒的系統上，而不只是在關聯式資料庫管理系統，並且可能發生在資料庫物件鎖定之外的資源。 例如，在多執行緒作業系統中的一個執行緒可能取得一或多個資源，像是記憶體區塊。 若要取得的資源目前為另一個執行緒所擁有，前者的執行緒可能就必須等候擁有資源的執行緒釋放目標資源。 等候的執行緒便是所謂的與擁有該特定資源的執行緒具有依存性。 在 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]的執行個體中，當工作階段取得非資料庫資源 (例如記憶體或執行緒) 時，可能會發生死結。  
   
- ![死結](../relational-databases/media/deadlock.png)  
+ ![deadlock](../relational-databases/media/deadlock.png)  
   
  在上圖中，在 **Part** 資料表鎖定資源上，交易 T1 相依於交易 T2。 同樣的，在 **Supplier** 資料表鎖定資源上，交易 T2 相依於交易 T1。 由於這些相依性形成循環，交易 T1 與 T2 之間便構成死結。  
   
@@ -769,7 +769,7 @@ END
 |--------------|-----------------------------------------|--------------------------|--------------------------|  
 |輸出格式|輸出是擷取到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 錯誤記錄檔中。|聚焦於死結所涉及的節點。 每一個節點有一個專用區段，最後區段描述死結犧牲者。|以類似 XML 格式傳回不符合 XML 結構描述定義 (XSD) 結構描述的資訊。 此格式有三大區段。 第一個區段宣告死結犧牲者。 第二個區段描述死結所涉及的每一個處理序。 第三個區段描述與追蹤旗標 1204 中的節點同義的資源。|  
 |識別屬性|**SPID:<x\> ECID:<x\>。** 識別平行處理序中的系統處理序識別碼執行緒。 `SPID:<x> ECID:0` 項目代表主執行緒，其中 <x\> 會被 SPID 值取代。 `SPID:<x> ECID:<y>` 項目代表相同 SPID 的子執行緒，其中<x\> 會被 SPID 值取代，而 <y\> 會大於 0。<br /><br /> **BatchID** (追蹤旗標 1222 的**sbid** )。 識別程式碼執行從中要求或保留鎖定的批次。 停用 Multiple Active Result Sets (MARS) 時，BatchID 值為 0。 啟用 MARS 時，作用中批次的值為 1 到 *n*。 如果工作階段中沒有作用中批次，BatchID 為 0。<br /><br /> **模式**。 指定執行緒所要求、授與或等待之特定資源的鎖定類型。 模式可為 IS (意圖共用)、S (共用)、U (更新)、IX (意圖獨佔)、SIX (共用意圖獨佔) 和 X (獨佔)。<br /><br /> **Line #** (追蹤旗標 1222 的**line** )。 列出發生死結時正在執行之目前陳述式批次中的行號。<br /><br /> **Input Buf** (追蹤旗標 1222 的**inputbuf** )。 列出目前批次中的所有陳述式。|**節點**。 代表死結鏈結中的項目號碼。<br /><br /> **清單**。 鎖定擁有者可以是這些清單的一部分：<br /><br /> **授與清單**。 列舉資源的目前擁有者。<br /><br /> **轉換清單**。 列舉嘗試將其鎖定轉換為更高層的目前擁有者。<br /><br /> **等待清單**。 列舉資源的目前最新鎖定要求。<br /><br /> **陳述式類型**。 描述執行緒有權限的 DML 陳述式的類型 (SELECT、INSERT、UPDATE 或 DELETE)。<br /><br /> **犧牲者資源擁有者**。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 選擇作為犧牲者來中斷死結循環的參與執行緒。 選擇的執行緒和所有現存的子執行緒會終止。<br /><br /> **下一分支**。 代表相同 SPID 中兩個以上涉及死結循環的子執行緒。|**deadlock victim**。 代表被選為死結犧牲者之工作的實體記憶位址 (請參閱 [sys.dm_os_tasks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md))。 在未解決的死結案例中，它可能會是 0 (零)。 回復中的工作不可選為死結犧牲者。<br /><br /> **executionstack**。 代表發生死結時正在執行的 [!INCLUDE[tsql](../includes/tsql-md.md)] 程式碼。<br /><br /> **priority**。 代表死結優先權。 在特定案例中， [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可能會選擇在短時間內變更死結優先權，以達到更佳的並行效果。<br /><br /> **logused**。 工作所使用的記錄檔空間。<br /><br /> **owner id**。具有要求控制權之交易的識別碼。<br /><br /> **status**。 工作的狀態。 它是下列其中一值：<br /><br /> >> **pending**。 等待工作者執行緒。<br /><br /> >> **runnable**。 可開始執行但等待配量。<br /><br /> >> **running**。 目前在排程器上執行。<br /><br /> >> **suspended**。 執行已暫停。<br /><br /> >> **done**。 工作已完成。<br /><br /> >> **spinloop**。 等待單一執行緒存取鎖變成可用。<br /><br /> **waitresource**。 工作所需的資源。<br /><br /> **waittime**。 等待資源的時間 (以毫秒為單位)。<br /><br /> **schedulerid**。 與這個工作相關聯的排程器。 請參閱 [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。<br /><br /> **hostname**。 工作站的名稱。<br /><br /> **isolationlevel**。 目前交易隔離等級。<br /><br /> **Xactid**。 具有要求控制權之交易的識別碼。<br /><br /> **currentdb**。 資料庫的識別碼。<br /><br /> **lastbatchstarted**。 用戶端處理序上次啟動批次執行的時間。<br /><br /> **lastbatchcompleted**。 用戶端處理序上次完成批次執行的時間。<br /><br /> **clientoption1 和 clientoption2**。 此用戶端連接上的設定選項。 這是位元遮罩，其中包含通常由 SET 陳述式 (例如 SET NOCOUNT 和 SET XACTABORT) 所控制之選項的資訊。<br /><br /> **associatedObjectId**。 代表 HoBT (堆積或 B 型樹狀目錄) 識別碼。|  
-|資源屬性|**RID**。 識別在資料表內保留或要求鎖定的單一資料列。 RID 是以 RID: *db_id:file_id:page_no:row_no*表示。 例如， `RID: 6:1:20789:0`。<br /><br /> **OBJECT**。 識別保留或要求鎖定的資料表。 OBJECT 是以 OBJECT: *db_id:object_id*表示。 例如， `TAB: 6:2009058193`。<br /><br /> **KEY**。 識別在索引內保留或要求鎖定的索引鍵範圍。 KEY 是以 KEY: *db_id:hobt_id* (*index key hash value*) 表示。 例如， `KEY: 6:72057594057457664 (350007a4d329)`。<br /><br /> **PAG**。 識別保留或要求鎖定的頁面資源。 PAG 是以 PAG: *db_id:file_id:page_no*表示。 例如， `PAG: 6:1:20789`。<br /><br /> **EXT**。 識別範圍結構。 EXT 是以 EXT: *db_id:file_id:extent_no*表示。 例如， `EXT: 6:1:9`。<br /><br /> **DB**。 識別資料庫鎖定。 **DB 會以下列其中一種方式表示：**<br /><br /> DB: *db_id*<br /><br /> DB: *db_id*[BULK-OP-DB]，識別備份資料庫使用的資料庫鎖定。<br /><br /> DB: *db_id*[BULK-OP-LOG]，識別該特定資料庫的備份記錄檔所使用的鎖定。<br /><br /> **APP**。 識別應用程式資源使用的鎖定。 APP 是以 APP: *lock_resource*表示。 例如， `APP: Formf370f478`。<br /><br /> **METADATA**。 代表死結所涉及的中繼資料資源。 因為 METADATA 有許多子資源，所以傳回的值視含有死結的子資源而定。 例如，METADATA.USER_TYPE 會傳回 `user_type_id =` <*integer_value*>。 如需有關 METADATA 資源和子資源的詳細資訊，請參閱 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。<br /><br /> **HOBT**。 代表死結所涉及的堆積或 B 型樹狀目錄。|None 與此追蹤旗標互斥。|None 與此追蹤旗標互斥。|  
+|資源屬性|**RID**。 識別在資料表內保留或要求鎖定的單一資料列。 RID 是以 RID: *db_id:file_id:page_no:row_no*表示。 例如： `RID: 6:1:20789:0` 。<br /><br /> **OBJECT**。 識別保留或要求鎖定的資料表。 OBJECT 是以 OBJECT: *db_id:object_id*表示。 例如： `TAB: 6:2009058193` 。<br /><br /> **KEY**。 識別在索引內保留或要求鎖定的索引鍵範圍。 KEY 是以 KEY: *db_id:hobt_id* (*index key hash value*) 表示。 例如： `KEY: 6:72057594057457664 (350007a4d329)` 。<br /><br /> **PAG**。 識別保留或要求鎖定的頁面資源。 PAG 是以 PAG: *db_id:file_id:page_no*表示。 例如： `PAG: 6:1:20789` 。<br /><br /> **EXT**。 識別範圍結構。 EXT 是以 EXT: *db_id:file_id:extent_no*表示。 例如： `EXT: 6:1:9` 。<br /><br /> **DB**。 識別資料庫鎖定。 **DB 會以下列其中一種方式表示：**<br /><br /> DB: *db_id*<br /><br /> DB: *db_id*[BULK-OP-DB]，識別備份資料庫使用的資料庫鎖定。<br /><br /> DB: *db_id*[BULK-OP-LOG]，識別該特定資料庫的備份記錄檔所使用的鎖定。<br /><br /> **APP**。 識別應用程式資源使用的鎖定。 APP 是以 APP: *lock_resource*表示。 例如： `APP: Formf370f478` 。<br /><br /> **METADATA**。 代表死結所涉及的中繼資料資源。 因為 METADATA 有許多子資源，所以傳回的值視含有死結的子資源而定。 例如，METADATA.USER_TYPE 會傳回 `user_type_id =` <*integer_value*>。 如需有關 METADATA 資源和子資源的詳細資訊，請參閱 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。<br /><br /> **HOBT**。 代表死結所涉及的堆積或 B 型樹狀目錄。|None 與此追蹤旗標互斥。|None 與此追蹤旗標互斥。|  
   
 ###### <a name="trace-flag-1204-example"></a>追蹤旗標 1204 範例  
  下列範例顯示追蹤旗標 1204 開啟時的輸出。 在此案例中，節點 1 中的資料表是一個不含索引的堆積，節點 2 中的資料表是一個含非叢集索引的堆積。 當發生死結時，正在更新節點 2 中的索引鍵。  
@@ -887,7 +887,7 @@ deadlock-list
 如需有關執行 SQL Profiler Deadlock Graph 的詳細資訊，請參閱[儲存 Deadlock Graph &#40;SQL Server Profiler&#41;](../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md)。  
   
 #### <a name="handling-deadlocks"></a>處理死結  
- 當 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的執行個體選擇某交易做為死結的犧牲者時，會終止目前的批次並回復交易，然後將錯誤訊息 1205 傳回給應用程式。  
+ 當 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]執行個體選擇某個交易作為死結犧牲者時，會終止目前的批次、復原交易，然後將錯誤訊息 1205 傳回給應用程式。  
   
  `Your transaction (process ID #52) was deadlocked on {lock | communication buffer | thread} resources with another process and has been chosen as the deadlock victim. Rerun your transaction.`  
   
@@ -1055,7 +1055,7 @@ BEGIN TRANSACTION
         WITH (TABLOCKX, HOLDLOCK);  
 ```   
   
-##  <a name="Row_versioning"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]中的資料列版本設定型隔離等級  
+##  <a name="Row_versioning"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]中的資料列版本設定型隔離等級  
  從 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 開始，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]便提供現有之讀取認可交易隔離等級的實作，這可使用資料列版本設定來提供陳述式層級的快照集。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]也提供快照交易隔離等級，這同樣是使用資料列版本設定，但提供交易層級的快照集。  
   
  資料列版本設定是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的一般架構，會在資料列遭修改或刪除的情況下叫用寫入時複製機制。 為此，當交易正在執行時，舊版本的資料列務必可供仍需要早先交易一致狀態的交易使用。 資料列版本設定用於執行下列事項：  
@@ -1495,11 +1495,11 @@ ALTER DATABASE AdventureWorks2016
   
  下表列出並說明 ALLOW_SNAPSHOT_ISOLATION 選項的狀態。 將 ALTER DATABASE 與 ALLOW_SNAPSHOT_ISOLATION 選項搭配使用，不會影響到目前存取資料庫資料的使用者。  
   
-|現行資料庫的快照隔離架構狀態|Description|  
+|現行資料庫的快照隔離架構狀態|描述|  
 |----------------------------------------------------------------|-----------------|  
 |OFF|未啟動快照隔離交易的支援。 不允許任何快照隔離交易。|  
 |PENDING_ON|快照隔離交易的支援處於轉換狀態 (從 OFF 到 ON)。 開啟的交易必須完成。<br /><br /> 不允許任何快照隔離交易。|  
-|ON|已啟動快照隔離交易的支援。<br /><br /> 允許快照集交易。|  
+|開啟|已啟動快照隔離交易的支援。<br /><br /> 允許快照集交易。|  
 |PENDING_OFF|快照隔離交易的支援處於轉換狀態 (從 ON 到 OFF)。<br /><br /> 在此時間之後所啟動的快照集交易，無法存取此資料庫。 更新交易仍需花費成本進行此資料庫中的版本控制。 現有的快照集交易仍可存取此資料庫，而不會產生任何問題。 必須等到所有在資料庫快照隔離狀態為 ON 時，且處於使用中的快照集交易完成之後，PENDING_OFF 狀態才會變成 OFF。|  
   
  使用 `sys.databases` 目錄檢視，可判定兩個資料列版本設定資料庫選項的狀態。  
@@ -1586,10 +1586,10 @@ ALTER DATABASE AdventureWorks2016
 ## <a name="customizing-locking-and-row-versioning"></a>自訂鎖定及資料列版本設定  
   
 ### <a name="customizing-the-lock-time-out"></a>自訂鎖定逾時  
- 如果 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的執行個體因為另一個交易已擁有資源的衝突鎖定，而無法將鎖定授與給另一個交易時，第一個交易會被封鎖，並等待現有鎖定釋出。 依預設，除非嘗試存取資料 (且可能會永遠被封鎖)，否則並沒有強制的逾時期限，且無法在鎖定資源之前測試資源是否已經鎖定。  
+ 如果當另一個交易已經擁有該資源的衝突鎖定使得 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 執行個體無法將鎖定授與一個交易時，系統就會封鎖第一個交易，以等待現有的鎖定釋出。 依預設，除非嘗試存取資料 (且可能會永遠被封鎖)，否則並沒有強制的逾時期限，且無法在鎖定資源之前測試資源是否已經鎖定。  
   
 > [!NOTE]  
-> 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中，可使用 **sys.dm_os_waiting_tasks** 動態管理檢視，判斷處理序是否已封鎖，以及其封鎖者。 在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，請使用 **sp_who** 系統預存程序。  
+> 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，請使用 **sys.dm_os_waiting_tasks** 動態管理檢視來判斷處理序是否已被封鎖，以及其封鎖者是誰。 在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，請使用 **sp_who** 系統預存程序。  
   
  `LOCK_TIMEOUT` 設定值可讓應用程式設定陳述式等待已封鎖之資源的時間上限。 當陳述式等待的時間超過 LOCK_TIMEOUT 設定值時，會自動取消封鎖的陳述式，然後將錯誤訊息 1222 (`Lock request time-out period exceeded`) 傳回應用程式。 但 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]不會回復或取消包含此陳述式的任何交易。 因此，應用程式必須具有能捕捉錯誤訊息 1222 的錯誤處理常式。 如果應用程式沒有捕捉此錯誤，就會繼續進行而不知道交易中的個別陳述式已取消了，並且因為交易中後面的陳述式可能相依於這個從未執行過的陳述式，此時就會發生錯誤。  
   
@@ -1603,7 +1603,7 @@ GO
 ```  
   
 ### <a name="customizing-transaction-isolation-level"></a>自訂交易隔離等級  
- READ COMMITTED 是 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]的預設隔離等級。 如果應用程式必須在不同隔離等級操作，可以使用下列方法來設定隔離等級：  
+ READ COMMITTED 是 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的預設隔離等級。 如果應用程式必須在不同隔離等級操作，可以使用下列方法來設定隔離等級：  
   
 -   執行 [SET TRANSACTION ISOLATION LEVEL](../t-sql/statements/set-transaction-isolation-level-transact-sql.md) 陳述式。  
 -   使用 System.Data.SqlClient 受控命名空間的 ADO.NET 應用程式可以使用 SqlConnection.BeginTransaction 方法來指定 *IsolationLevel* 選項。  
@@ -1758,7 +1758,7 @@ GO
   
  「 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]」會忽略認可內部交易。 交易的認可或復原是依照最外層的交易在最後所執行的動作而定。 若是認可外部交易，則內部的巢狀交易也會被認可。 若是復原外部交易，便會復原所有的內部交易，而不論內部交易是否個別被認可。  
   
- 對 `COMMIT TRANSACTION` 或 `COMMIT WORK` 發出的每個呼叫都會套用至最後一個執行的 `BEGIN TRANSACTION`。 如果 `BEGIN TRANSACTION` 陳述式位於巢狀結構中，則 `COMMIT` 陳述式只會套用至最後一個巢狀交易，亦即最內層的交易。 即使位於巢狀交易中的 `COMMIT TRANSACTION` *transaction_name* 陳述式參考的是外部交易的交易名稱，還是只會認可最內層的交易。  
+ 對 `COMMIT TRANSACTION` 或 `COMMIT WORK` 發出的每個呼叫都會套用至最後一個執行的 `BEGIN TRANSACTION`。 如果 `BEGIN TRANSACTION` 陳述式位於巢狀結構中，則 `COMMIT` 陳述式只會套用至最後一個巢狀交易，亦即最內層的交易。 即使巢狀交易中 `COMMIT TRANSACTION` *transaction_name* 陳述式參考外部交易的交易名稱，則仍只會認可最內層的交易。  
   
  `ROLLBACK TRANSACTION` 陳述式的 *transaction_name* 參數如果參考一組具名巢狀交易的內部交易，是不合法的情況。 *transaction_name* 只能參考最外層交易的交易名稱。 如果使用外部交易名稱的 ROLLBACK TRANSACTION *transaction_name* 陳述式，是在一組巢狀交易的任何層級執行，將會回復所有的巢狀交易。 如果是在一組巢狀交易的任何層級執行不含 *transaction_name* 參數的 `ROLLBACK WORK` 或 `ROLLBACK TRANSACTION` 陳述式，則會復原所有巢狀交易，包括最外層的交易。  
   

@@ -18,10 +18,10 @@ ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: db49332ec2710586e9cae23c3e41ee4aff42b486
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68136972"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>合併式複寫的 Web 同步處理
@@ -54,7 +54,7 @@ ms.locfileid: "68136972"
   
  參與 Web 同步處理的所有電腦都需要[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本。  
   
-### <a name="synchronization-process"></a>同步處理  
+### <a name="synchronization-process"></a>同步處理程序  
  同步處理期間會發生下列步驟：  
   
 1.  合併代理程式會在訂閱者端啟動。 此代理程式會執行下列動作：  
@@ -83,6 +83,6 @@ ms.locfileid: "68136972"
   
 ## <a name="see-also"></a>另請參閱  
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
- [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
+ [Web 同步處理的拓撲](../../relational-databases/replication/topologies-for-web-synchronization.md)  
   
   

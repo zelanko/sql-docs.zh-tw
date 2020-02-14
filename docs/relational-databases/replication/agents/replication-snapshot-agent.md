@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: e777b49ab8c27abff81f54fef52f2a2a7c4dec31
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710347"
 ---
 # <a name="replication-snapshot-agent"></a>複寫快照集代理程式
@@ -85,7 +85,7 @@ snapshot [ -?]
  **-Publisher**  _server_name_[ **\\** _instance\_name_]  
  這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。 請針對該伺服器上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 具名執行個體指定 _server\_name_ **\\** _instance\_name_。  
   
- **-Publication** _發行集_  
+ **-Publication** _publication_  
  這是發行集的名稱。 只有在發行集設定成隨時都有快照供新的訂閱或重新初始化的訂閱使用時，這個參數才有效。  
   
  **-70Subscribers**  
@@ -103,7 +103,7 @@ snapshot [ -?]
  **-DistributorDeadlockPriority** [ **-1**|**0**|**1**]  
  這是發生死結時散發者之快照集代理程式連接的優先權。 指定這個參數的目的是為了解決快照集產生期間，快照集代理程式與使用者應用程式之間可能會發生的死結。  
   
-|DistributorDeadlockPriority 值|Description|  
+|DistributorDeadlockPriority 值|描述|  
 |---------------------------------------|-----------------|  
 |**-1**|在散發者端發生死結時，快照集代理程式以外的應用程式擁有優先權。|  
 |**0** (預設值)|未指派優先權。|  
@@ -130,7 +130,7 @@ snapshot [ -?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  這是建立連接時，快照集代理程式所使用的安全通訊端層 (SSL) 加密層級。  
   
-|EncryptionLevel 值|Description|  
+|EncryptionLevel 值|描述|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定要使用 SSL，但是代理程式不會驗證 SSL 伺服器憑證是否由受信任的簽發者簽署。|  
@@ -147,7 +147,7 @@ snapshot [ -?]
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  指定在快照集作業期間記錄的記錄量。 您可以透過選取 **1**，盡量減少記錄作業對效能造成的影響。  
   
-|HistoryVerboseLevel 值|Description|  
+|HistoryVerboseLevel 值|描述|  
 |-------------------------------|-----------------|  
 |**0**|進度訊息會寫入主控台或輸出檔中。 但是，記錄不會記錄在散發資料庫中。|  
 |**1**|一律更新相同狀態的上一個記錄訊息 (啟動、進度、成功等等)。 如果沒有任何具有相同狀態的上一筆記錄存在，便插入新的記錄。|  
@@ -193,7 +193,7 @@ snapshot [ -?]
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  指定輸出是否應該詳細。  
   
-|OutputVerboseLevel 值|Description|  
+|OutputVerboseLevel 值|描述|  
 |------------------------------|-----------------|  
 |**0**|僅列印錯誤訊息。|  
 |**1** (預設值)|列印所有進度報表訊息 (預設值)。|  
@@ -208,7 +208,7 @@ snapshot [ -?]
 **-PrefetchTables** [ **0**| **1**]  
  指定是否要預先擷取並快取資料表物件的選擇性參數。  預設行為是根據內部計算，使用 SMO 元件預先擷取特調資料表內容。  此參數在 SMO 預先擷取作業花非常長時間執行的情況下很實用。 若未使用此參數，會在執行階段根據已新增為要發佈之發行項的資料表百分比來制訂決策。  
   
-|OutputVerboseLevel 值|Description|  
+|OutputVerboseLevel 值|描述|  
 |------------------------------|-----------------|  
 |**0**|SMO 元件的「呼叫以預先擷取」方法已停用。|  
 |**1**|「快照集代理程式」將會呼叫預先擷取方法以使用 SMO 快取某些資料表內容|  
@@ -222,7 +222,7 @@ snapshot [ -?]
  **-PublisherDeadlockPriority** [ **-1**|**0**|**1**]  
  這是發生死結時發行者之快照集代理程式連接的優先權。 指定這個參數的目的是為了解決快照集產生期間，快照集代理程式與使用者應用程式之間可能會發生的死結。  
   
-|PublisherDeadlockPriority 值|Description|  
+|PublisherDeadlockPriority 值|描述|  
 |-------------------------------------|-----------------|  
 |**-1**|在發行者端發生死結時，快照集代理程式以外的應用程式擁有優先權。|  
 |**0** (預設值)|未指派優先權。|  
@@ -255,7 +255,7 @@ snapshot [ -?]
  \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  這個參數已被取代，而且是為了回溯相容性才提供支援。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]  
 >  如果您已將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 安裝成在本機系統帳戶而非網域使用者帳戶 (預設值) 底下執行，這項服務就只能存取本機電腦。 如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 底下執行的快照集代理程式設定為使用 Windows 驗證模式，當它登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]時，快照集代理程式就會失敗。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設設定為  驗證。  

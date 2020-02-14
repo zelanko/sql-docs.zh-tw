@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11ed5aa2ddcd675d201fc86abf595055828d7621
-ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
+ms.openlocfilehash: 88b8e54867aba5439af9ed87e4a42b2083a479b3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681769"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76281866"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps 工具 (預覽)
 
@@ -133,12 +133,25 @@ SSIS 部署工作目前不支援下列情節：
 
 ## <a name="release-notes"></a>版本資訊
 
+### <a name="version-013-preview"></a>0\.1.3 版預覽
+
+發行日期：2020 年 1 月 19 日
+
+- 已修正當 ispac 的原始檔案名稱變更時即無法部署的問題。
+
+### <a name="version-012-preview"></a>0\.1.2 版預覽
+
+發行日期：2020 年 1 月 13 日
+
+- 新增了更詳細的例外狀況資訊，當目的地類型為 SSISDB 時，會顯示在 SSIS 部署工作記錄中。
+- 修正了 SSIS 部署工作中，目的地路徑屬性說明文字的範例目的地路徑。
+
 ### <a name="version-011-preview"></a>0\.1.1 版預覽
 
 發行日期：2020 年 1 月 6 日
 
-- 已新增最低代理程式版本需求的限制。 目前，此產品的最低代理程式版本是 2.144.0。
-- 已修正 SSIS 部署工作的部分錯誤顯示文字。
+- 新增了最低代理程式版本需求的限制。 目前，此產品的最低代理程式版本是 2.144.0。
+- 修正了 SSIS 部署工作的部分錯誤顯示文字。
 - 修正部分錯誤訊息。
 
 ### <a name="version-010-preview"></a>0\.1.0 版預覽

@@ -18,10 +18,10 @@ ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5651f61f33d598930aff2fb482b415e9749f6d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042536"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (geography 資料類型)
@@ -42,14 +42,14 @@ ms.locfileid: "68042536"
  *distance*  
  這是 **float** 類型 (.NET Framework 中的 **double**) 的值，可指定與 **geography** 執行個體之間的距離 (將會從此執行個體的周圍計算緩衝)。  
   
- 緩衝的最大距離不能超過 0.999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 的地球圓周) 或完整的地球。  
+ 緩衝區最大距離不能超過 0.999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 的地球圓周) 或完整的地球。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
  CLR 傳回型別：**SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  STBuffer() 會使用與 [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md) 相同的方式計算緩衝，指定 *tolerance* = abs(distance) \* .001 且 *relative* = **false**。  
   
  負數的緩衝會移除 **geography** 執行個體界限之給定距離內的所有點。  

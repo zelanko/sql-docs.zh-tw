@@ -17,15 +17,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: be602e61cfd34e8daf97200628df7fa3147c809a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120462"
 ---
 # <a name="sql-server-event-class-reference"></a>SQL Server 事件類別參考
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可讓您記錄 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體中發生的事件。 所記錄的事件就是追蹤定義的事件類別執行個體。 在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，可以在 **[追蹤檔案屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤上，取得事件類別和其事件類別目錄。  
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可讓您記錄 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體中發生的事件。 所記錄的事件就是追蹤定義的事件類別執行個體。 在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，可以在 **[追蹤檔案屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤上，取得事件類別和其事件類別目錄。  
   
  下表描述事件類別目錄，並列出相關的事件類別。  
   

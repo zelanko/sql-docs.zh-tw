@@ -34,10 +34,10 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 723c8f8b34ceb9e96ae6da196a64f766b18857ef
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291499"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查閱轉換
@@ -58,11 +58,11 @@ ms.locfileid: "71291499"
   
  此轉換有一個輸入和一個輸出。  
   
- 只有具有 **DT_WSTR** 和 **DT_STR** 資料類型的資料行可用於模糊比對。 完全比對可使用任何 DTS 資料類型，但 **DT_TEXT**、 **DT_NTEXT**和 **DT_IMAGE**除外。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)＞。 參與輸入與參考資料表之間聯結的資料行必須具有相容的資料類型。 例如，將具有 DTS **DT_WSTR** 資料類型的資料行聯結到具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** 資料類型的資料行是有效的，但將具有 **DT_WSTR** 資料類型的資料行聯結到具有 **int** 資料類型的資料行則是無效的。  
+ 只有具有 **DT_WSTR** 和 **DT_STR** 資料類型的資料行可用於模糊比對。 完全比對可使用任何 DTS 資料類型，但 **DT_TEXT**、 **DT_NTEXT**和 **DT_IMAGE**除外。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../../integration-services/data-flow/integration-services-data-types.md)。 參與輸入與參考資料表之間聯結的資料行必須具有相容的資料類型。 例如，將具有 DTS **DT_WSTR** 資料類型之資料行聯結到具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** 資料類型的資料行為有效，但將具有 **DT_WSTR** 資料類型之資料行聯結到具有 **int** 資料類型的資料行則為無效。  
   
  您可以指定最大記憶體數量、資料列比較演算法，以及轉換使用的索引和參考資料表快取，以自訂此轉換。  
   
- 您可以透過設定 MaxMemoryUsage 自訂屬性來設定模糊查閱轉換所使用的記憶體數量。 您可以指定百萬位元組 (MB) 數，或是使用 0 值，讓轉換依據其需求與可用實體記憶體，使用動態的記憶體數量。 屬性運算式可以在載入封裝時更新 MaxMemoryUsage 自訂屬性。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; Expressions](../../../integration-services/expressions/integration-services-ssis-expressions.md) (Integration Services (SSIS) 運算式)、[Use Property Expressions in Packages](../../../integration-services/expressions/use-property-expressions-in-packages.md) (在封裝中使用屬性運算式) 和[轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
+ 您可以透過設定 MaxMemoryUsage 自訂屬性來設定模糊查閱轉換所使用的記憶體數量。 您可以指定百萬位元組 (MB) 數，或是使用 0 值，讓轉換依據其需求與可用實體記憶體，使用動態的記憶體數量。 屬性運算式可以在載入封裝時更新 MaxMemoryUsage 自訂屬性。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[在封裝中使用屬性運算式](../../../integration-services/expressions/use-property-expressions-in-packages.md)和[轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
   
 ## <a name="controlling-fuzzy-matching-behavior"></a>控制模糊比對行為  
  「模糊查閱」轉換包含三種用於自訂其所執行之查閱的功能：每個輸入資料列傳回的相符項目上限、Token 分隔符號，以及相似度臨界值。  
@@ -96,7 +96,7 @@ ms.locfileid: "71291499"
   
  下表描述相符索引選項。  
   
-|選項|Description|  
+|選項|描述|  
 |------------|-----------------|  
 |**GenerateAndMaintainNewIndex**|建立、儲存並維護新索引。 轉換會在參考資料表上安裝觸發程序，以讓參考資料表與索引資料表同步。|  
 |**GenerateAndPersistNewIndex**|建立並儲存新索引，但不對其進行維護。|  
@@ -113,7 +113,7 @@ ms.locfileid: "71291499"
 > [!NOTE]  
 >  當您在 **[模糊查閱轉換編輯器]** 的 **[參考資料表]** 索引標籤上選取 **[維護儲存的索引]** 時，轉換會使用具名預存程序來維護索引。 這些 Managed 預存程序會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的 Common Language Runtime (CLR) 整合功能。 根據預設，不會啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 CLR 整合功能。 若要使用 **[維護儲存的索引]** 功能，您必須啟用 CLR 整合。 如需詳細資訊，請參閱 [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md)。  
 >   
->  因為 [維護儲存的索引]  選項需要 CLR 整合，因此只有當您在已啟用 CLR 整合的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上選取參考資料表時，這項功能才有效。  
+>  因為 **[維護儲存的索引]** 選項需要 CLR 整合，因此只有當您在已啟用 CLR 整合的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上選取參考資料表時，這項功能才有效。  
   
 ## <a name="row-comparison"></a>資料列比較  
  設定模糊查閱轉換時，您可以指定轉換在參考資料表中尋找相符記錄時所使用的比較演算法。 如果您將 Exhaustive 屬性設為 **True**，則轉換會比較輸入中的每一個資料列與參考資料表中的每一個資料列。 此比較演算法可產生更精確的結果，但很可能會讓轉換的執行速度更慢，除非參考資料表中的資料列數目較小。 如果將 Exhaustive 屬性設為 **True**，則會將整個參考資料表載入記憶體。 為避免效能問題，建議僅在封裝開發期間將 Exhaustive 屬性設為 **True** 。  
@@ -133,7 +133,7 @@ ms.locfileid: "71291499"
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -209,7 +209,7 @@ ms.locfileid: "71291499"
   
 ### <a name="options"></a>選項。  
  **每次查閱輸出的相符項目上限**  
- 指定轉換針對每一個輸入資料列，可以傳回的相符項目上限。 預設值是 **1**。  
+ 指定轉換針對每一個輸入資料列，可以傳回的相符項目上限。 預設為 **1**。  
   
  **相似度臨界值**  
  使用滑桿設定元件層級的相似度臨界值。 此值越接近 1，查閱值與來源值的相似度必須越接近才能認定為相符。 增加臨界值可改善比對速度，因為需要考慮的候選記錄越少。  
@@ -219,7 +219,7 @@ ms.locfileid: "71291499"
   
 ## <a name="see-also"></a>另請參閱  
  [查閱轉換](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [模糊群組轉換](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

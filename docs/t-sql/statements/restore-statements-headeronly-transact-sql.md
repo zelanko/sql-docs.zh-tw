@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983027"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 陳述式 - HEADERONLY (Transact-SQL)
@@ -86,7 +86,7 @@ FROM <backup_device>
  對於給定裝置中的每個備份，伺服器都會傳送一個含有下列資料行的標頭資訊資料列：  
   
 > [!NOTE]
->  RESTORE HEADERONLY 會查看媒體中的所有備份組。 因此，當使用高容量磁帶機時，產生這個結果集可能需要一些時間。 若要快速瀏覽媒體，而不需要取得每個備份組的相關資訊，請使用 RESTORE LABELONLY 或指定 FILE **=** _backup_set_file_number_。  
+>  RESTORE HEADERONLY 會查看媒體中的所有備份組。 因此，當使用高容量磁帶機時，產生這個結果集可能需要一些時間。 若要快速瀏覽媒體，而不需要取得每個備份組的資訊，請使用 RESTORE LABELONLY 或指定 FILE **=** _backup_set_file_number_。  
 > 
 > [!NOTE]
 >  由於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format 本質的緣故，來自其他軟體程式的備份組有可能佔用與 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份組相同媒體上的空間。 RESTORE HEADERONLY 傳回的結果集會針對每個這些其他備份組，各包括一個資料列。  
@@ -139,7 +139,7 @@ FROM <backup_device>
 |**IsCopyOnly**|**bit**|**1** = 僅限複製的備份。<br /><br /> 僅限複製備份並不會影響資料庫的整體備份和還原程序。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。|  
 |**FirstRecoveryForkID**|**uniqueidentifier**|起始復原分岔的識別碼。 這個資料行會與 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 資料表中的 **first_recovery_fork_guid**對應。<br /><br /> 就資料備份而言，**FirstRecoveryForkID** 等於 **RecoveryForkID**。|  
 |**ForkPointLSN**|**numeric(25,0)** NULL|如果 **FirstRecoveryForkID** 不等於 **RecoveryForkID**，這就是分岔點的記錄序號。 否則，這個值是 NULL。|  
-|**RecoveryModel**|**nvarchar(60)**|這是資料庫的復原模式，它有下列幾種：<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> SIMPLE|  
+|**RecoveryModel**|**nvarchar(60)**|這是資料庫的復原模式，它有下列幾種：<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> 簡單|  
 |**DifferentialBaseLSN**|**numeric(25,0)** NULL|如果是單一基底差異備份，這個值就等於差異基底的 **FirstLSN**；LSN 大於或等於 **DifferentialBaseLSN** 的變更會納入差異備份中。<br /><br /> 如果是多重基底差異備份，這個值就是 NULL，基底 LSN 必須取決於檔案層級。 如需詳細資訊，請參閱 [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)。<br /><br /> 如果是非差異備份類型，這個值一律是 NULL。<br /><br /> 如需詳細資訊，請參閱 [差異備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)。|  
 |**DifferentialBaseGUID**|**uniqueidentifier**|如果是單一基底差異備份，這個值就是差異基底的唯一識別碼。<br /><br /> 如果是多重基底差異備份，這個值就是 NULL，差異基底必須取決於個別檔案。<br /><br /> 如果是非差異備份類型，這個值就是 NULL。|  
 |**BackupTypeDescription**|**nvarchar(60)**|這是字串備份類型，它有下列幾種：<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
@@ -156,8 +156,8 @@ FROM <backup_device>
 ## <a name="general-remarks"></a>一般備註  
  用戶端可以利用 RESTORE HEADERONLY 來擷取特定備份裝置上的所有備份之所有備份標頭資訊。 對於備份裝置中的每個備份，伺服器會將標頭資訊當做一個資料列來傳送。  
   
-## <a name="security"></a>Security  
- 備份作業可以選擇性地指定媒體集的密碼及 (或) 備份組的密碼。 當在媒體集或備份組上定義密碼時，您必須在 RESTORE 陳述式中，指定一個或多個正確的密碼。 這些密碼可以防止他人利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具，在未經授權的情況下，對媒體執行還原作業及附加備份組。 不過，密碼無法防止使用者利用 BACKUP 陳述式的 FORMAT 選項來覆寫媒體。  
+## <a name="security"></a>安全性  
+ 備份作業可以選擇性地指定媒體集的密碼及 (或) 備份組的密碼。 當在媒體集或備份組上定義密碼時，您必須在 RESTORE 陳述式中，指定一個或多個正確的密碼。 這些密碼可以防止他人使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具，在未獲授權的情況下，在媒體上執行還原作業及附加備份組。 不過，密碼無法防止使用者利用 BACKUP 陳述式的 FORMAT 選項來覆寫媒體。  
   
 > [!IMPORTANT]  
 >  這個密碼所提供的保護很弱。 這是為了防止已獲授權或未獲授權的使用者使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具進行不正確的還原。 它無法防止透過其他方式或以取代密碼的方式來讀取備份資料。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]保護備份的最佳做法是將備份磁帶存放在安全位置，或備份至受適當存取控制清單 (ACL) 保護的磁碟檔案中。 ACL 應該設在備份建立所在的根目錄下。  

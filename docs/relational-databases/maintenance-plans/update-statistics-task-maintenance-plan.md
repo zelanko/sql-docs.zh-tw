@@ -15,15 +15,15 @@ ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d63b9d5d864dc9027eaf6b19a4e4964895699feb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115505"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>更新統計資料工作 (維護計畫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用 **[更新統計資料工作]** 對話方塊，更新有關資料表及索引中資料的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資訊。 此工作針對資料庫中使用者資料表所建立的每個索引，重新取樣散發統計資料。 在處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式的期間， [!INCLUDE[tsql](../../includes/tsql-md.md)] 會使用散發統計資料來最佳化資料表的導覽。 若要自動建立散發統計資料， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在每個索引的對應資料表中，定期地取樣資料。 取樣大小會視資料表的資料列數與資料修改的頻率而定。 使用此選項即可使用資料表中指定的資料百分比執行其他取樣。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用此資訊來建立更好的查詢計畫。  
+  使用 [更新統計資料工作]  對話方塊，更新資料表及索引中資料的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資訊。 此工作針對資料庫中使用者資料表所建立的每個索引，重新取樣散發統計資料。 在處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式的期間， [!INCLUDE[tsql](../../includes/tsql-md.md)] 會使用散發統計資料來最佳化資料表的導覽。 若要自動建立散發統計資料， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在每個索引的對應資料表中，定期地取樣資料。 取樣大小會視資料表的資料列數與資料修改的頻率而定。 使用此選項即可使用資料表中指定的資料百分比執行其他取樣。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用此資訊來建立更好的查詢計畫。  
   
 此工作會執行 `UPDATE STATISTICS` 陳述式。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68115505"
  > [!NOTE]
  > 維護計畫只針對相容性層級設為 80 (含) 以上的資料庫來執行。 不會顯示相容性層級設為 70 或更低的資料庫。  
   
- **物件**  
+ **Object**  
  限制 [選取範圍]  格線僅顯示資料表、檢視或兩者。  
   
  **選取範圍**  
@@ -87,7 +87,7 @@ ms.locfileid: "68115505"
 > 受影響的物件數目較為大量時，會多花一些時間才會顯示。  
   
 ## <a name="new-connection-dialog-box"></a>新增連接對話方塊  
- **連接名稱**  
+ **連線名稱**  
  輸入新連接的名稱。  
   
  **選取或輸入伺服器名稱**  
@@ -100,12 +100,12 @@ ms.locfileid: "68115505"
  指定如何對伺服器進行驗證。  
   
  **使用 Windows 整合式安全性**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的執行個體。  
+ 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。  
   
  **使用特定的使用者名稱和密碼**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 無法使用此選項。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。 無法使用此選項。  
   
- **User name**  
+ **使用者名稱**  
  提供驗證時要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 無法使用此選項。  
   
  **密碼**  

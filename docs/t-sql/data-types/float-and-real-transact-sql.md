@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7f31e3894448e5d6a044af75c7e86b704b993aa6
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682014"
 ---
 # <a name="float-and-real-transact-sql"></a>float 和 real (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "71682014"
 ## <a name="syntax"></a>語法  
 **float** [ **(** _n_ **)** ] 其中 *n* 是用來儲存科學記號標記法 **float** 數尾數的位元數目；因此，其規定有效位數和儲存體大小。 如果指定 *n*，則其值必須介於 **1** 與 **53** 之間。 *n* 的預設值為 **53**。
   
-|*n* 值|有效位數|儲存體大小|  
+|*n* 值|Precision|儲存體大小|  
 |---|---|---|
 |**1-24**|7 位數|4 個位元組|  
 |**25-53**|15 位數|8 個位元組|  
@@ -50,7 +50,7 @@ ms.locfileid: "71682014"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[ **(n)** ] 資料類型從 **1** 到 **53** 的所有 *n* 值都符合 ISO 標準。 **double precision** 的同義字是 **float(53)** 。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 |資料類型|範圍|儲存體|  
 |---|---|---|
@@ -62,7 +62,7 @@ ms.locfileid: "71682014"
   
 當您想要從 **float** 或 **real** 轉換成字元資料時，使用 STR 字串函式比 CAST( ) 來得有用。 這是因為 STR 可以對格式有較多的控制。 如需詳細資訊，請參閱 [STR &#40;Transact-SQL&#41](../../t-sql/functions/str-transact-sql.md) 和 [函式 &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)。
   
-在 [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 之前，**float** 值轉換成 **decimal** 或 **numeric** 會限制為只有 17 個有效位數的值。 任何小於 5E-18 (當設定使用 5E-18 科學記號標記法或 0.0000000000000000050000000000000005 十進位標記法時) 的 **float** 值都會捨去為 0。 這不再是 [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 的限制。
+在 [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 之前，**float** 值轉換至 **decimal** 或 **numeric**，就會限制為只有 17 個有效位數的值。 任何小於 5E-18 (當設定使用 5E-18 科學記號標記法或 0.0000000000000000050000000000000005 十進位標記法時) 的 **float** 值都會捨去為 0。 這不再是 [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 的限制。
   
 ## <a name="see-also"></a>另請參閱
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  

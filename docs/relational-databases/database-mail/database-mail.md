@@ -15,10 +15,10 @@ ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2d9a354b23a751a657ca10acc7e6cc19c6b586b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137421"
 ---
 # <a name="database-mail"></a>Database Mail
@@ -51,7 +51,7 @@ ms.locfileid: "68137421"
   
 -   64 位元相容性：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 64 位元安裝完全支援 Database Mail。  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>安全性  
   
 -   預設關閉：為了縮小 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的介面區，預設會停用 Database Mail 預存程序。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68137421"
   
 -   Database Mail 會以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎服務帳戶執行。 若要從資料夾將檔案附加至電子郵件，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎帳戶應具備存取包含該檔案之資料夾的權限。  
   
-### <a name="supportability"></a>可支援性  
+### <a name="supportability"></a>支援能力  
   
 -   整合式設定：Database Mail 會在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 內維護電子郵件帳戶的資訊。 毋須在外部用戶端應用程式管理郵件設定檔。 「Database Mail 組態精靈」提供方便的介面，供設定 Database Mail 使用。 您也可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]，來建立並維護 Database Mail 組態。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68137421"
 ##  <a name="VisualElement"></a> Database Mail 架構  
  Database Mail 是根據使用 Service Broker 技術的佇列架構而設計。 當使用者執行 **sp_send_dbmail**時，預存程序會在郵件佇列中插入項目，並建立包含該電子郵件訊息的記錄。 在郵件佇列中插入新項目會啟動外部 Database Mail 處理序 (DatabaseMail.exe)。 外部處理序會讀取電子郵件資訊，並傳送電子郵件訊息到適當的電子郵件伺服器。 外部處理序會在「狀態」佇列中插入項目，表示傳送作業的結果。 在狀態佇列中插入新記錄會啟動內部預存程序，此預存程序會更新電子郵件訊息的狀態。 除了儲存已傳送 (或未傳送) 的電子郵件訊息之外，Database Mail 也會在系統資料表中記錄任何電子郵件附加檔案。 Database Mail 檢視提供可用於進行疑難排解的訊息狀態，並提供可用來管理 Database Mail 佇列的預存程序。  
   
- ![MSDB 傳送訊息到 SMTP 郵件伺服器](../../relational-databases/database-mail/media/databasemail.gif "MSDB 傳送訊息到 SMTP 郵件伺服器")  
+ ![msdb 傳送訊息到 SMTP 郵件伺服器](../../relational-databases/database-mail/media/databasemail.gif "msdb 傳送訊息到 SMTP 郵件伺服器")  
   
   
 ##  <a name="ComponentsAndConcepts"></a> Database Mail 元件簡介  

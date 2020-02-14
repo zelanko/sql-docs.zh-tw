@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD 分類器 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 01/27/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: adf8b1e04e7dcd75bcad0c4b184ae60f2b59d248
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 54c9145e40d9ad326faf0c897281fedb9a9fe9dc
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056487"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831615"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -129,14 +129,17 @@ CREATE WORKLOAD CLASSIFIER wcELTLoads WITH
 
 如果未指定重要性，則會使用工作負載群組的重要性設定。  預設工作負載群組重要性是 NORMAL。  重要性會影響所排定要求的順序，進而授與資源和鎖定的優先存取權。
 
-## <a name="classification-parameter-precedence"></a>分類參數優先順序
+## <a name="classification-parameter-weighting"></a>分類參數加權
 
-要求可以符合多個分類器。  分類器參數中有優先順序。  首先使用優先順序較高的對應分類器來指派工作負載群組和重要性。  優先順序如下所示：
-1. USER
-2. ROLE
-3. WLM_LABEL
-4. WLM_SESSION
-5. START_TIME/END_TIME
+要求可以符合多個分類器。  分類器參數具有加權。  加權較高的比對分類器會用於指派工作負載群組和重要性。  加權如下所示：
+
+|分類器參數 |Weight   |
+|---------------------|---------|
+|USER                 |64       |
+|ROLE                 |32       |
+|WLM_LABEL            |16       |
+|WLM_CONTEXT          |8        |
+|START_TIME/END_TIME  |4        |
 
 請考慮下列分類器設定。
 
@@ -151,13 +154,13 @@ CREATE WORKLOAD CLASSIFIER classiferB WITH
 ( WORKLOAD_GROUP = 'wgUserQueries'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = LOW
- ,START_TIME     = '18:00')
+ ,START_TIME     = '18:00'
  ,END_TIME       = '07:00' )
 ```
 
-使用者 `userloginA` 是針對這兩個分類器所設定。  如果 userloginA 在 UTC 下午 6 點和上午 7 點之間執行帶有等於 `salesreport` 的標籤的查詢，則該要求將被分類為具有高重要性的 wgDashboards 工作負載群組。  預期的情況可能是針對非工作時間報告將要求分類為重要性較低的 wgUserQueries，但是 WLM_LABEL 的優先順序高於 START_TIME/END_TIME。  在此情況下，您可以將 START_TIME/END_TIME 新增至 classiferA。
+使用者 `userloginA` 是針對這兩個分類器所設定。  如果 userloginA 在 UTC 下午 6 點和上午 7 點之間執行帶有等於 `salesreport` 的標籤的查詢，則該要求將被分類為具有高重要性的 wgDashboards 工作負載群組。  預期可能會針對非工作時間報告將要求分類為重要性較低的 wgUserQueries，但是 WLM_LABEL 的加權高於 START_TIME/END_TIME。  分類器 A 的加權為 80 (使用者 64，加上 WLM_LABEL 的 16)。  分類器 B 的加權為 68 (使用者 64，加上 START_TIME/END_TIME 的 4)。  在此案例中，您可以將 WLM_LABEL 新增至分類器 B。
 
- 如需詳細資訊，請參閱[工作負載分類](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence)。
+ 如需詳細資訊，請參閱[工作負載加權](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting)。
 
 ## <a name="permissions"></a>權限
 

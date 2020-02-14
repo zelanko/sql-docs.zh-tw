@@ -13,10 +13,10 @@ ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eec72a0421576ed4c09d35cd19bb0d842bd08f78
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292368"
 ---
 # <a name="hdfs-file-destination"></a>HDFS 檔案目的地
@@ -33,7 +33,7 @@ ms.locfileid: "71292368"
 ## <a name="options"></a>選項。
  在 [Hadoop File Destination Editor (Hadoop 檔案目的地編輯器)]  對話方塊的 [一般]  索引標籤上，設定下列選項。
 
-|欄位|Description|
+|欄位|描述|
 |-----------|-----------------|
 |**Hadoop 連接**|指定現有的 Hadoop 連接管理員或建立新的連接管理員。 此連接管理員會指出 HDFS 檔案的裝載位置。|
 |**檔案路徑**|指定 HDFS 檔案的名稱。|

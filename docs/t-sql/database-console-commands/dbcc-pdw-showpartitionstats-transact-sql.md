@@ -12,13 +12,13 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: ac6d3ac9128c8f27a898f4b903f74d1e9ab9bb1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116501"
 ---
-# <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
+# <a name="dbcc-pdw_showpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 顯示 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 資料庫的資料表中每個分割區的資料列大小和數目。
@@ -43,17 +43,17 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
 ## <a name="result-sets"></a>結果集  
 此集合為 DBCC PDW_SHOWPARTITIONSTATS 命令的結果。
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|partition_number|INT|資料分割編號。|  
+|partition_number|int|資料分割編號。|  
 |used_page_count|BIGINT|資料的使用頁數。|  
 |reserved_page_count|BIGINT|分割區的保留頁數。|  
 |row_count|BIGINT|分割區中的資料列數。|  
-|pdw_node_id|INT|資料的計算節點。|  
-|distribution_id|INT|資料的散發識別碼。|  
+|pdw_node_id|int|資料的計算節點。|  
+|distribution_id|int|資料的散發識別碼。|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>A. DBCC PDW_SHOWPARTITIONSTATS 基本語法範例  
+### <a name="a-dbcc-pdw_showpartitionstats-basic-syntax-examples"></a>A. DBCC PDW_SHOWPARTITIONSTATS 基本語法範例  
 下列範例依分割區顯示 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 資料庫中 FactInternetSales 資料表的已使用空間和資料列數目。
   
 ```sql

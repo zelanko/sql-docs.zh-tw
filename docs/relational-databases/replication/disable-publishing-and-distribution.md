@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3fe1baf8676db54161c0c0fb7fccea171c3a3341
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 7d48edb0024261bee87071cbd3ac77e3c49aabfd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908412"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284730"
 ---
 # <a name="disable-publishing-and-distribution"></a>停用發行和散發
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "72908412"
   
 -   **開始之前：**  
   
-     [必要條件](#Prerequisites)  
+     [先決條件](#Prerequisites)  
   
 -   **若要停用發行和散發，請使用：**  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72908412"
   
 #### <a name="to-disable-publishing-and-distribution"></a>停用發行和散發  
   
-1.  連接到您要在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中停用的「發行者」或「散發者」，然後展開伺服器節點。  
+1.  連線到您要在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中停用的「發行者」或「散發者」，然後展開伺服器節點。  
   
 2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[停用發行與散發]** 。  
   
@@ -135,6 +135,6 @@ ms.locfileid: "72908412"
   
 ## <a name="see-also"></a>另請參閱  
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
- [複寫系統預存程序概念](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
+ [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   

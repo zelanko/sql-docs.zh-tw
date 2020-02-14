@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 06c5e725e62946544301098a7636760040b28b64
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.openlocfilehash: 6fea23921dd3b01032de8c8960970526502eee17
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75952425"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831889"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -2619,6 +2619,9 @@ ON 查詢最佳化工具會視需要針對查詢述詞中的單一資料行建�
 預設值是 ON。 我們建議您針對大部分資料庫使用預設設定。
 
 OFF 查詢最佳化工具不會在編譯查詢時針對查詢述詞中的單一資料行建立統計資料。 將這個選項設定為 OFF 可能會導致次佳查詢計劃並降低查詢效能。
+
+### <a name="remarks"></a>備註
+此命令必須在連線到使用者資料庫時執行。
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 i`s_auto_create_stats_on` 資料行來判斷這個選項的狀態。 您也可以檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式的 `IsAutoCreateStatistics` 屬性來判斷狀態。
 

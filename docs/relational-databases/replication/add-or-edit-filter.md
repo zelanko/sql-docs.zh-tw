@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 21d23387b3d17f54cbd6cfed3398cf5a0e8cffe6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3f6fc6a82b0559282bf2ae714213bb8434c07bd0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770802"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286886"
 ---
 # <a name="add-or-edit-filter"></a>加入或編輯篩選
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "68770802"
   
 3.  **指定多少訂閱會從這個資料表接收資料**  
   
-     僅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新的版本；僅限合併式複寫。 合併式複寫可以讓您指定最適合您的資料與應用程式的資料分割類型。 如果您選取 **[這個資料表中的一個資料列只會提供給一個訂閱]** ，合併式複寫會設定非重疊資料分割選項。 非重疊資料分割配合預先計算的資料分割使用可以提升效能，其中非重疊資料分割會最小化與預先計算之資料分割相關聯的上傳成本。 當使用的參數化篩選和聯結篩選越複雜時，非重疊資料分割在效能上的益處更為醒目。 如果您選取此選項，必須確定分割資料的方式不會讓一個資料列複寫到一個以上的訂閱者。 如需進一步資訊，請參閱主題＜ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞中的「設定資料分割選項」。  
+     僅限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新的版本；僅限合併式複寫。 合併式複寫可以讓您指定最適合您的資料與應用程式的資料分割類型。 如果您選取 **[這個資料表中的一個資料列只會提供給一個訂閱]** ，合併式複寫會設定非重疊資料分割選項。 非重疊資料分割配合預先計算的資料分割使用可以提升效能，其中非重疊資料分割會最小化與預先計算之資料分割相關聯的上傳成本。 當使用的參數化篩選和聯結篩選越複雜時，非重疊資料分割在效能上的益處更為醒目。 如果您選取此選項，必須確定分割資料的方式不會讓一個資料列複寫到一個以上的訂閱者。 如需進一步資訊，請參閱主題＜ [參數化資料列篩選器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞中的「設定資料分割選項」。  
   
  您加入或編輯篩選之後，請按一下 **[確定]** 以儲存變更並關閉對話方塊。 您指定的篩選會被剖析，並會針對 SELECT 子句中的資料表執行。 如果篩選陳述式包含語法錯誤或其他問題，則會通知您，且您可以編輯該篩選陳述式。  
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68035824"
 ---
 # <a name="create-a-format-file-sql-server"></a>建立格式檔案 (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "68035824"
  一般而言，XML 和非 XML 格式檔案可以互換使用， 但是，仍建議您在新的格式檔案中使用 XML 語法，因為 XML 比非 XML 格式檔案多了一些優點。  
   
 > [!NOTE]  
->  用於讀取格式檔案的 **bcp** 公用程式 (Bcp.exe) 版本，必須與用於建立格式檔案的版本相同或比它更新。 例如，[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** 可以讀取由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** 產生的 10.0 版格式檔案，但 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** 無法讀取由 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** 產生的 11.0 版格式檔案。  
+>  用於讀取格式檔案的 **bcp** 公用程式 (Bcp.exe) 版本，必須與用於建立格式檔案的版本相同或比它更新。 例如，[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** 可以讀取由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** 產生的 10.0 版格式檔案，但 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** 無法讀取由 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** 產生的 11.0 版格式檔案。  
   
  此主題描述如何使用 [bcp 公用程式](../../tools/bcp-utility.md) 來建立特定資料表的格式檔案。 格式檔案以指定的資料類型選項 ( **-n**、 **-c**、 **-w**，或 **-N**) 與資料表或檢視分隔符號為基礎。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "68035824"
   
  **bcp** 命令包含下列限定詞。  
   
-|限定詞|Description|  
+|限定詞|描述|  
 |----------------|-----------------|  
-|**formatnul f** _format_file_|指定非 XML 格式檔案。|  
+|**formatnul-f** _format_file_|指定非 XML 格式檔案。|  
 |**-n**|指定原生資料類型。|  
 |**-T**|指定 **bcp** 公用程式使用整合式安全性的信任連接，連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，則必須指定 **-U** 與 **-P** ，才能順利登入。|  
   
@@ -93,9 +93,9 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  **bcp** 命令包含下列限定詞。  
   
-|限定詞|Description|  
+|限定詞|描述|  
 |----------------|-----------------|  
-|**formatnul f** _format_file_|指定非 XML 格式檔案。|  
+|**formatnul-f** _format_file_|指定非 XML 格式檔案。|  
 |**-c**|指定字元資料。|  
 |**-T**|指定 **bcp** 公用程式使用整合式安全性的信任連接，連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，則必須指定 **-U** 與 **-P** ，才能順利登入。|  
   
@@ -191,9 +191,9 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
  **bcp** 命令包含下列限定詞。  
   
-|限定詞|Description|  
+|限定詞|描述|  
 |----------------|-----------------|  
-|**formatnul f** _format_file_ **-x**|指定 XML 格式檔案。|  
+|**formatnul-f** _format_file_ **-x**|指定 XML 格式檔案。|  
 |**-c**|指定字元資料。|  
 |**-t** `,`|指定逗號 ( **,** ) 作為欄位結束字元。<br /><br /> 注意:如果資料檔使用預設欄位結束字元 (`\t`)，則不需要 **-t** 參數。|  
 |**-T**|指定 **bcp** 公用程式使用整合式安全性的信任連接，連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，則必須指定 **-U** 與 **-P** ，才能順利登入。|  
@@ -231,9 +231,9 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  **bcp** 命令包含下列限定詞。  
   
-|限定詞|Description|  
+|限定詞|描述|  
 |----------------|-----------------|  
-|**formatnul f** _format_file_ **-x**|指定 XML 格式檔案。|  
+|**formatnul-f** _format_file_ **-x**|指定 XML 格式檔案。|  
 |**-n**|指定原生資料類型。|  
 |**-T**|指定 **bcp** 公用程式使用整合式安全性的信任連接，連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，則必須指定 **-U** 與 **-P** ，才能順利登入。|  
   

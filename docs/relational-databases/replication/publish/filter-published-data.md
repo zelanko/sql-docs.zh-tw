@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 55eb271c7eb5dff661b37cfb18b029e57bbeb0ba
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 38e0164de9dda9f86183a89a29b58753b2a7f118
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769882"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287635"
 ---
 # <a name="filter-published-data"></a>篩選發行的資料
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "68769882"
   
 -   聯結篩選，僅適用於合併式複寫。  
   
-     聯結篩選可用於將一個發行資料表的資料列篩選擴充到另一個資料表。 如需詳細資訊，請參閱 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
+     聯結篩選可用於將一個發行資料表的資料列篩選擴充到另一個資料表。 如需相關資訊，請參閱 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
   
 ## <a name="static-row-filters"></a>靜態資料列篩選  
  下圖顯示篩選後發行集中僅包含資料列 2、3、6 的發行資料表。  
@@ -74,7 +74,7 @@ ms.locfileid: "68769882"
     > [!NOTE]  
     >  交易式發行集的資料列篩選可能會顯著增加負擔，因為已發行資料表的所有寫入記錄資料列都要進行發行項篩選子句評估，以決定是否應複寫資料列。 如果每個複寫節點均可支援完全資料載入，且整個資料集非常小，則應避免交易式發行集中的資料列篩選。  
   
--   對於合併式複寫，請使用參數化資料列篩選器，不要使用靜態資料列篩選建立多個發行集。 如需詳細資訊，請參閱 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+-   對於合併式複寫，請使用參數化資料列篩選器，不要使用靜態資料列篩選建立多個發行集。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
  若要定義或修改靜態資料列篩選，請參閱＜ [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)＞。  
   

@@ -17,10 +17,10 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2b3c4937d87d166d87711389be7acd0c4ae0f8ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67938187"
 ---
 # <a name="remote-servers"></a>遠端伺服器
@@ -36,7 +36,7 @@ ms.locfileid: "67938187"
   
  大部份的情況下，您不需要設定遠端伺服器的組態選項。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在本機和遠端電腦上設定預設值，以允許遠端伺服器的連接。  
   
- 若要讓遠端伺服器存取可以進行，在本機與遠端電腦上的 [遠端存取]  組態選項都必須設定為 1 (這是預設值)。[遠端存取]  會控制遠端伺服器的登入。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** 預存程序或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]重設此組態選項。 若要重設 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的選項，請使用 [伺服器屬性連接]  頁面的 [允許此伺服器的遠端連接]  。 若要存取 [伺服器屬性連接]  頁面，請在物件總管中以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]  。 在 [伺服器屬性]  頁面上，按一下 [連接]  頁面。  
+ 若要讓遠端伺服器存取可以進行，在本機與遠端電腦上的 [遠端存取]  組態選項都必須設定為 1 (這是預設值)。[遠端存取]  會控制遠端伺服器的登入。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** 預存程序或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重設此組態選項。 若要重設 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的選項，請使用 [伺服器屬性連接]  頁面的 [允許此伺服器的遠端連接]  。 若要存取 [伺服器屬性連接]  頁面，請在物件總管中以滑鼠右鍵按一下伺服器名稱，然後按一下 [屬性]  。 在 [伺服器屬性]  頁面上，按一下 [連接]  頁面。  
   
  您可以從本機伺服器來停用遠端伺服器組態，以防止其配對遠端伺服器上的使用者存取本機伺服器。  
   

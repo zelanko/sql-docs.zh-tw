@@ -13,10 +13,10 @@ ms.assetid: 90646316-9822-48aa-9900-295a33750780
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a624228a0df45ee0ba2954d27e38be511db629fe
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294088"
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig 工作
@@ -33,7 +33,7 @@ ms.locfileid: "71294088"
 ## <a name="options"></a>選項。  
  在 [Hadoop Pig 工作編輯器]  對話方塊中設定下列選項。  
   
-|欄位|Description|  
+|欄位|描述|  
 |-----------|-----------------|  
 |**Hadoop 連接**|指定現有的 Hadoop 連接管理員或建立新的連接管理員。 此連接管理員會指出 WebHCat 服務的裝載位置。|  
 |**SourceType**|指定查詢的來源類型。 可用的值為 **ScriptFile** 和 **DirectInput**。|  
@@ -42,6 +42,6 @@ ms.locfileid: "71294088"
 |**TimeoutInMinutes**|以分鐘為單位來指定逾時值。 如果在逾時之前尚未完成的話，則 Hadoop 工作將會停止。 指定 0 以為 Hadoop 工作進行排程，以便以非同步方式執行。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Hadoop 連接管理員](../../integration-services/connection-manager/hadoop-connection-manager.md)  
+ [Hadoop 連線管理員](../../integration-services/connection-manager/hadoop-connection-manager.md)  
   
   

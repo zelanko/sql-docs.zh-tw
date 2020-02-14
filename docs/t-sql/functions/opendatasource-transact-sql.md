@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 8aa3f690b79167df6de5b27f6dd78276c61e0b26
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71342064"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
@@ -62,11 +62,11 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 |擴充屬性|DBPROP_INIT_PROVIDERSTRING|提供者特定連接字串。|  
 |連接逾時|DBPROP_INIT_TIMEOUT|逾時值，在此之後連線嘗試會失敗。|  
 |使用者識別碼|DBPROP_AUTH_USERID|用於連接的使用者識別碼。|  
-|[密碼]|DBPROP_AUTH_PASSWORD|用於連接的密碼。|  
+|密碼|DBPROP_AUTH_PASSWORD|用於連接的密碼。|  
 |目錄|DBPROP_INIT_CATALOG|連接到資料來源的初始或預設目錄名稱。|  
 |整合式安全性|DBPROP_AUTH_INTEGRATED|SSPI，用來指定 Windows 驗證|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 `OPENROWSET` 一律會繼承執行個體定序，而不會考慮資料行的定序集。
 
 唯有針對指定的提供者將 DisallowAdhocAccess 登錄選項明確設定為 0，且已啟用 [隨選分散式查詢] 進階設定選項時，才能使用 `OPENDATASOURCE` 來存取 OLE DB 資料來源的遠端資料。 若未設定這些選項，預設行為便不允許特定存取。  
@@ -97,7 +97,7 @@ ORDER BY GroupName, Name;
 ``` 
 
 ### <a name="b-using-opendatasource-with-select-and-the-sql-server-ole-db-provider"></a>B. 搭配 SELECT 和 SQL Server OLE DB 提供者使用 OPENDATASOURCE  
-下列範例對伺服器 `Payroll` 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `London` 執行個體建立特定連接，並查詢 `AdventureWorks2012.HumanResources.Employee` 資料表。 
+下列範例對伺服器 `Payroll` 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`London` 執行個體建立特定連接，並查詢 `AdventureWorks2012.HumanResources.Employee` 資料表。 
 
 > [!NOTE] 
 > 使用 SQLNCLI 會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新導向至最新版本的 SQL Server Native Client OLE DB 提供者。 OLE DB 提供者預期會登錄在登錄中指定的 PROGID。 

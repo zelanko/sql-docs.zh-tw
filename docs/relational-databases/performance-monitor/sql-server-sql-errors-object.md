@@ -14,10 +14,10 @@ ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: b5f4b6a6d12f8f4eee929dfca59906fc418bfcd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995671"
 ---
 # <a name="sql-server-sql-errors-object"></a>SQL Server 的 SQL Errors 物件
@@ -26,13 +26,13 @@ ms.locfileid: "67995671"
   
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Errors** 計數器。  
   
-|SQL Server SQL Errors 計數器|Description|  
+|SQL Server SQL Errors 計數器|描述|  
 |------------------------------------|-----------------|  
 |**Errors/sec**|每秒的錯誤數目。|  
   
  物件中的每個計數器均包含下列執行個體：  
   
-|項目|定義|  
+|Item|定義|  
 |----------|----------------|  
 |**_Total**|所有錯誤的相關資訊。|  
 |**DB Offline Errors**|追蹤導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 讓目前資料庫離線的嚴重錯誤。|  

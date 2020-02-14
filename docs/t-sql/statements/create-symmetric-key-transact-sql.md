@@ -23,10 +23,10 @@ ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 485ef972b86795a2127dba5fc3e86bdf98354c7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117073"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
@@ -116,7 +116,7 @@ CREATE SYMMETRIC KEY key_name
 > [!WARNING]  
 > 開頭為 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，取代 AES_128、AES_192 和 AES_256 以外的所有演算法。 若要使用較舊的演算法 (不建議)，您必須將資料庫相容性層級設定為 120 或更低。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當建立對稱金鑰時，至少必須利用下列一項來加密對稱金鑰：憑證、密碼、對稱金鑰、非對稱金鑰或 PROVIDER。 針對每一種類型，金鑰都可以有多個加密。 換句話說，可以同時利用多個憑證、密碼、對稱金鑰及非對稱金鑰來加密單一對稱金鑰。  
   
 > [!CAUTION]  

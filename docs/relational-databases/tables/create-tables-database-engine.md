@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ce6bea9e9f99cd5db4559c6f4b1d966e809f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123714"
 ---
 # <a name="create-tables-database-engine"></a>建立資料表 (Database Engine)
@@ -63,7 +63,7 @@ ms.locfileid: "68123714"
   
      如需有關結構描述的詳細資訊，請參閱＜ [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md)＞。  
   
-9. 從 [檔案]  功能表中，選擇 [儲存]  *table name*。  
+9. 從 [檔案]  功能表中，選擇 [儲存 <資料表名稱>]   。  
   
 10. 在 **[選擇名稱]** 對話方塊中，輸入資料表的名稱，然後按一下 **[確定]** 。  
   

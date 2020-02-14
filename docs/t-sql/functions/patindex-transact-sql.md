@@ -22,12 +22,12 @@ ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f718d61c351e11c0e5d159e683390cf311f49e48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 51b18437976a9ecb192a69602ecbdc97054b9b47
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914359"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831830"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,15 +44,18 @@ PATINDEX ( '%pattern%' , expression )
   
 ## <a name="arguments"></a>引數  
  *pattern*  
- 這是字元運算式，其中包含要尋找的順序。 此處可以使用萬用字元，但是 *pattern* 前後都必須加上 % 字元 (除非要搜尋第一個或最後一個字元)。 *pattern* 是字元字串資料類型類別目錄的運算式。 *pattern* 限制為 8000 個字元。  
+ 這是字元運算式，其中包含要尋找的順序。 此處可以使用萬用字元，但是 *pattern* 前後都必須加上 % 字元 (除非要搜尋第一個或最後一個字元)。 *pattern* 是字元字串資料類型類別目錄的運算式。 *pattern* 限制為 8000 個字元。
+
+ > [!NOTE]
+ > 雖然 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原本就不支援傳統的規則運算式，但使用各種萬用字元運算式可以完成類似的複雜模式比對。 如需萬用字元語法的詳細資料，請參閱[字串運算子](../../t-sql/language-elements/string-operators-transact-sql.md)文件。
   
  *expression*  
  這是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，通常是搜尋指定之模式的資料行。 *expression* 屬於字元字串資料類型類別目錄。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
 若 *expression* 的資料類型為 **varchar(max)** 或 **nvarchar(max)** ，則為 **bigint**，否則為 **int**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 如果 *pattern* 或 *expression* 為 NULL，則 PATINDEX 會傳回 NULL。  
  
 PATINDEX 的起始位置是 1。
@@ -70,18 +73,22 @@ PATINDEX 會以輸入的定序為基礎來執行比較。 若要執行指定定�
  下例範例會檢查 `ter`字元開頭位置的短字元字串 (`interesting data`)。  
   
 ```sql  
-SELECT PATINDEX('%ter%', 'interesting data');  
+SELECT position = PATINDEX('%ter%', 'interesting data');  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-`3`  
+
+```
+position
+--------
+3
+```
   
 ### <a name="b-using-a-pattern-with-patindex"></a>B. 搭配 PATINDEX 使用模式  
 下列範例會尋找 `ensure` 模式在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `DocumentSummary` 資料表中 `Document` 資料行之特定資料列中的起始位置。  
   
 ```sql  
-SELECT PATINDEX('%ensure%',DocumentSummary)  
+SELECT position = PATINDEX('%ensure%',DocumentSummary)  
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  
 GO   
@@ -90,9 +97,9 @@ GO
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
------------  
+position
+--------  
 64  
-(1 row(s) affected)
 ```  
   
 如果您沒有利用 `WHERE` 子句來限制要搜尋的資料列，查詢會傳回資料表的所有資料列，且針對找到模式的所有資料列報告非零值，找不到模式的所有資料列則會報告零。  
@@ -101,21 +108,36 @@ GO
  下列範例在指定的字串中 (索引從 1 開始)，使用 % 和 _ 萬用字元來尋找模式 `'en'` 後面接著任何一個字元和 `'ure'` 的開始位置：  
   
 ```sql  
-SELECT PATINDEX('%en_ure%', 'please ensure the door is locked');  
+SELECT position = PATINDEX('%en_ure%', 'Please ensure the door is locked!');  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
------------  
+position
+--------  
 8  
 ```  
   
 `PATINDEX` 的運作方式就像 `LIKE`，所以您可以使用任何萬用字元。 您不必用百分比括住模式。 `PATINDEX('a%', 'abc')` 會傳回 1 且 `PATINDEX('%a', 'cba')` 會傳回 3。  
   
  與 `LIKE` 不同的是，`PATINDEX` 會傳回位置，類似 `CHARINDEX`。  
-  
-### <a name="d-using-collate-with-patindex"></a>D. 搭配 PATINDEX 使用 COLLATE  
+
+### <a name="d-using-complex-wildcard-expressions-with-patindex"></a>D. 使用複雜的萬用字元運算式搭配 PATINDEX 
+下列範例會使用 `[^]` [字串運算子](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)尋找不是數字、字母或空格的字元位置。
+
+```sql
+SELECT position = PATINDEX('%[^ 0-9A-z]%', 'Please ensure the door is locked!'); 
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+position
+--------
+33
+```
+
+### <a name="e-using-collate-with-patindex"></a>E. 搭配 PATINDEX 使用 COLLATE  
  下列範例利用 `COLLATE` 函數來明確指定所搜尋之運算式的定序。  
   
 ```sql  
@@ -124,13 +146,20 @@ GO
 SELECT PATINDEX ( '%ein%', 'Das ist ein Test'  COLLATE Latin1_General_BIN) ;  
 GO  
 ```  
-  
-### <a name="e-using-a-variable-to-specify-the-pattern"></a>E. 使用變數來指定模式  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+position
+--------
+9
+```
+
+### <a name="f-using-a-variable-to-specify-the-pattern"></a>F. 使用變數來指定模式  
 下列範例會使用變數，將值傳遞給 *pattern* 參數。 這個範例會使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫。  
   
 ```sql  
 DECLARE @MyValue varchar(10) = 'safety';   
-SELECT PATINDEX('%' + @MyValue + '%', DocumentSummary)   
+SELECT position = PATINDEX('%' + @MyValue + '%', DocumentSummary)   
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  
 ```  
@@ -138,7 +167,8 @@ WHERE DocumentNode = 0x7B40;
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
-------------  
+position
+--------  
 22
 ```  
   

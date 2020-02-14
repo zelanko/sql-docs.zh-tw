@@ -13,10 +13,10 @@ ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3bdb3585647e64ad1a175900263628b607eb0041
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710361"
 ---
 # <a name="login-for-updatable-subscriptions"></a>可更新訂閱的登入
@@ -41,19 +41,19 @@ ms.locfileid: "71710361"
  **建立使用下列 SQL Server 驗證登入進行連接的連結伺服器：**  
  複寫會使用 **[登入]** 和 **[密碼]** 欄位中指定的認證，來建立連結伺服器。  
   
- **[登入]**  
- 輸入只具有此主題描述之權限的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
+ **登入**  
+ 輸入只具有此主題所描述權限的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   
- **[密碼]**  
+ **密碼**  
  為 **[登入]** 中指定的登入輸入增強式密碼。  
     
  **使用您已定義的連結伺服器或遠端伺服器。**  
  此選項需要您已定義的連結伺服器或遠端伺服器。 如需詳細資訊，請參閱[連結的伺服器 &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md) 和[遠端伺服器](../../database-engine/configure-windows/remote-servers.md)。 請確定連結伺服器或遠端伺服器使用的登入具有增強式密碼，且只具有此主題所描述的權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立交易式發行集的可更新訂閱](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [檢視及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [異動複寫的可更新訂閱](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

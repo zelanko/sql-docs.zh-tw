@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7de5bc19cd49959663bf4ead3f8ebff62b3b982b
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982855"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
@@ -422,7 +422,7 @@ RETURNS return_data_type
  ALLOW_PAGE_LOCKS = { ON | OFF }  
  指定是否允許頁面鎖定。 預設值是 ON。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  ALTER FUNCTION 不能用來將純量值函式變更為資料表值函式，反之亦然。 另外，ALTER FUNCTION 也不能用來將內嵌函數變更為多重陳述式函數，反之亦然。 ALTER FUNCTION 不能用來將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數變更為 CLR 函數，反之亦然。  
   
  下列 Service Broker 陳述式不能包含在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用者定義函式的定義中：  

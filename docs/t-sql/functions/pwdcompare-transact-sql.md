@@ -20,10 +20,10 @@ ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4d0feb6b3254ddff640a41de8e0b833739225761
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73168774"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
@@ -55,12 +55,12 @@ PWDCOMPARE ( 'clear_text_password'
 > [!CAUTION]  
 >  提供這個參數是為了回溯相容性，因為密碼雜湊 BLOB 現在包含自己的版本說明，所以會忽略它。 [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
  若 *clear_text_password* 的雜湊符合 *password_hash* 參數，則傳回 1；否則傳回 0。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  PWDCOMPARE 函數並不會對密碼雜湊強度造成威脅，因為可以使用當做第一個參數提供的密碼嘗試登入來執行相同的測試。  
   
  **PWDCOMPARE** 無法與自主資料庫使用者的密碼搭配使用。 沒有任何自主資料庫對等項目。  

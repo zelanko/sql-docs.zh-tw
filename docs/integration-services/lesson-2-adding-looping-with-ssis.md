@@ -11,10 +11,10 @@ ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ccd3be3203aae382cda239ed6d7bdc2fa224923b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296059"
 ---
 # <a name="lesson-2-add-looping-with-ssis"></a>第 2 課：使用 SSIS 來新增迴圈
@@ -25,7 +25,7 @@ ms.locfileid: "71296059"
 
 在[第 1 課：使用 SSIS 建立專案和基本套件](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)中，您已建立會從單一一般檔案來源擷取資料的套件。 接著，套件會使用「查閱」轉換來轉換該資料。 最後，套件會將資料載入至 **AdventureWorksDW2012** 範例資料庫的 **FactCurrencyRate** 事實資料表複本中。  
   
-「擷取、轉換和載入」(ETL) 程序通常會從多個一般檔案來源擷取資料。 從多個來源擷取資料需要反覆的控制流程。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 可以輕鬆地將反覆運算或迴圈新增到套件中。  
+「擷取、轉換和載入」(ETL) 程序通常會從多個一般檔案來源擷取資料。 從多個來源擷取資料需要反覆的控制流程。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 可以輕鬆地將反覆運算或迴圈新增至套件。  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供兩種類型的容器來循環使用封裝迴圈：Foreach 迴圈容器和 For 迴圈容器。 雖然「Foreach 迴圈」容器通常使用變數運算式，但「Foreach 迴圈」容器會使用列舉值來執行迴圈。 這一課使用 Foreach 迴圈容器。  
   

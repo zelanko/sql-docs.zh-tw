@@ -14,10 +14,10 @@ ms.assetid: 2393ea1c-2bf3-41c3-9f37-b9761144eeca
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 36cc64688cb78febb3e023e2b11e6e3da204ad1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67939524"
 ---
 # <a name="sql-server-latches-object"></a>SQL Server 的 Latches 物件
@@ -26,7 +26,7 @@ ms.locfileid: "67939524"
   
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Latches** 計數器。  
   
-|SQL Server 的 Latches 計數器|Description|  
+|SQL Server 的 Latches 計數器|描述|  
 |---------------------------------|-----------------|  
 |**Average Latch Wait Time (ms)**|必須等候之閂鎖要求的平均閂鎖等候時間 (以毫秒為單位)。|  
 |**Average Latch Wait Time Base**|僅供內部使用。| 

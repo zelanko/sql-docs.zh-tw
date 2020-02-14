@@ -17,10 +17,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e69d3d2d73a53f6bdd8a3fe7282c1e9ad65b5773
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095289"
 ---
 # <a name="upgrade-full-text-search"></a>升級全文檢索搜尋
@@ -56,7 +56,7 @@ ms.locfileid: "68095289"
   
  如需有關匯入全文檢索索引之影響的詳細資訊，請參閱本主題後面的「選擇全文檢索升級選項的考量」。  
   
- **Rebuild**  
+ **重建**  
  全文檢索目錄會使用新的增強斷詞工具重建。 重建索引可能需要一些時間，而且在升級之後可能需要相當多的 CPU 和記憶體。  
   
  **重設**  

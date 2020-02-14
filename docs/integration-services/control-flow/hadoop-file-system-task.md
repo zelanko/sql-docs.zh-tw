@@ -13,10 +13,10 @@ ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e97ae33bcccee338be576138ca335bd6298e0128
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294074"
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop 檔案系統工作
@@ -33,7 +33,7 @@ ms.locfileid: "71294074"
 ## <a name="options"></a>選項。  
  在 Hadoop 檔案系統工作編輯器)  對話方塊中設定下列選項。  
   
-|欄位|Description|  
+|欄位|描述|  
 |-----------|-----------------|  
 |**Hadoop 連接**|指定現有的 Hadoop 連接管理員或建立新的連接管理員。 此連線管理員會指出目的地檔案的裝載位置。|  
 |**Hadoop 檔案路徑**|指定 HDFS 上的檔案或目錄路徑。|  
@@ -45,6 +45,6 @@ ms.locfileid: "71294074"
   
 ## <a name="see-also"></a>另請參閱  
  [Hadoop 連接管理員](../../integration-services/connection-manager/hadoop-connection-manager.md)   
- [檔案連接管理員](../../integration-services/connection-manager/file-connection-manager.md)  
+ [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
   
   

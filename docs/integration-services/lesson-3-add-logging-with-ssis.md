@@ -11,10 +11,10 @@ ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ebbc82f5570fb97d7b1169563bfde7c67f5be0d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296017"
 ---
 # <a name="lesson-3-add-logging-with-ssis"></a>第 3 課：使用 SSIS 來新增記錄功能
@@ -23,7 +23,7 @@ ms.locfileid: "71296017"
 
 
 
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供工作和容器事件的追蹤，包含可讓您進行疑難排解及監視套件執行的記錄功能。 記錄功能是具有彈性的。 您可以在套件層級啟用記錄功能，也可以在套件內的個別工作或容器上啟用記錄功能。 您可以選取要記錄哪些事件，以及針對單一套件建立多個記錄。  
+[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含的記錄功能，可讓您藉由提供工作和容器事件的追蹤來對套件執行進行疑難排解和監視。 記錄功能是具有彈性的。 您可以在套件層級啟用記錄功能，也可以在套件內的個別工作或容器上啟用記錄功能。 您可以選取要記錄哪些事件，以及針對單一套件建立多個記錄。  
   
 記錄提供者會建立記錄。 每一個記錄提供者都可將記錄資訊寫入至不同格式和目的地類型。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供下列記錄提供者：  
   

@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 9d6abc08f6ba46792d92887ca22f1a37b48e05cc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981008"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287835"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "73981008"
 ```  
   
 ## <a name="arguments"></a>引數  
- 登入  
+ LOGIN  
  **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  指定您要模擬的執行內容是登入。 模擬範圍是在伺服器層級。  
@@ -96,7 +96,7 @@ ms.locfileid: "73981008"
  > [!NOTE]  
 >  此選項在 SQL 資料倉儲中無法使用。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  執行內容中的變更持續有效，直到發生下列項目之一為止：  
   
 -   執行另一個 EXECUTE AS 陳述式。  
@@ -120,7 +120,7 @@ ms.locfileid: "73981008"
   
 如果使用者被遺棄 (相關聯的登入不存在)，而且使用者並非以 **WITHOUT LOGIN** 建立，該使用者的 **EXECUTE AS** 將會失敗。  
   
-## <a name="best-practice"></a>最佳作法  
+## <a name="best-practice"></a>最佳做法  
  指定一個登入或使用者，它具有執行工作階段中作業所需要的最低權限。 例如，如果只需要資料庫層級權限，就不要指定具有伺服器層級權限的登入名稱；或者，除非需要其權限，否則不要指定資料庫擁有者帳戶。  
   
 > [!CAUTION]  
@@ -129,9 +129,9 @@ ms.locfileid: "73981008"
 ## <a name="using-with-no-revert"></a>使用 WITH NO REVERT  
  當 EXECUTE AS 陳述式包括選擇性的 WITH NO REVERT 子句時，不能使用 REVERT 或藉由執行另一個 EXECUTE AS 陳述式來重設工作階段的執行內容。 陳述式設定的內容會持續有效，直到卸除工作階段為止。  
   
- 指定 WITH NO REVERT COOKIE = @*varbinary_variabl*e 子句時，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會將 Cookie 值傳遞到 @*varbinary_variabl*e。 只有當呼叫的 REVERT WITH COOKIE = @*varbinary_variable* 陳述式包含相同的 *@varbinary_variable* 值時，該陳述式所設定的執行內容才能還原到先前的內容。  
+ 指定 WITH NO REVERT COOKIE = @*varbinary_variabl*e 子句時，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會將 Cookie 值傳遞到 @*varbinary_variabl*e。 只有當呼叫的 EVERT WITH COOKIE = @*varbinary_variable* 陳述式包含相同 *\@varbinary_variable* 值時，該陳述式所設定的執行內容才能還原到先前內容。  
   
- 這個選項在使用連接共用的環境中相當有用。 連接共用是資料庫連接群組的維護，這些連接是供應用程式伺服器上的應用程式重複使用。 由於只有 EXECUTE AS 陳述式的呼叫者知道傳送到 *@varbinary_variable* 的值，因此呼叫者可以保證其所建立的執行內容不會被別人變更。  
+ 這個選項在使用連接共用的環境中相當有用。 連接共用是資料庫連接群組的維護，這些連接是供應用程式伺服器上的應用程式重複使用。 由於只有 EXECUTE AS 陳述式的呼叫者知道傳送到 *\@varbinary_variable* 的值，因此呼叫者可以保證其所建立的執行內容無法由其他人變更。  
   
 ## <a name="determining-the-original-login"></a>決定原始登入  
  使用 [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) 函式時，可傳回連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的登入名稱。 您可以利用這個函數來傳回有許多明確或隱含內容切換的工作階段中原始登入的識別。  

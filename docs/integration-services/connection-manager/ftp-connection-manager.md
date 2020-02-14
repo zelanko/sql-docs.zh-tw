@@ -17,10 +17,10 @@ ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0f1380370862b735e00799cbcb6a9ba46d69fd3f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294418"
 ---
 # <a name="ftp-connection-manager"></a>FTP 連接管理員
@@ -28,9 +28,9 @@ ms.locfileid: "71294418"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  FTP 連接管理員可讓封裝連接到「檔案傳輸通訊協定 (FTP)」伺服器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含的 FTP 工作使用此連線管理員。  
+  FTP 連接管理員可讓封裝連接到「檔案傳輸通訊協定 (FTP)」伺服器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 FTP 工作會使用此連線管理員。  
   
- 當您將 FTP 連線管理員加入封裝時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立在執行階段可解析為 FTP 連接的連線管理員、設定連線管理員屬性，並將連線管理員加入封裝上的 **Connections** 集合。  
+ 當您將 FTP 連線管理員加入封裝時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立在執行階段可解析為 FTP 連接的連線管理員、設定連線管理員屬性，並將連線管理員加入封裝上的 **Connections** 集合。  
   
  連線管理員的 **ConnectionManagerType** 屬性會設為 [FTP]  。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "71294418"
  **伺服器通訊埠**  
  指定 FTP 伺服器上用來連接的通訊埠編號。 這個屬性的預設值為 **21**。  
   
- **User name**  
+ **使用者名稱**  
  提供存取 FTP 伺服器的使用者名稱。 這個屬性的預設值為 **匿名**。  
   
  **密碼**  
@@ -90,7 +90,7 @@ ms.locfileid: "71294418"
  **使用被動模式**  
  指定伺服器或用戶端是否起始連接。 伺服器會以主動模式起始連接，而用戶端則會以被動模式啟動連接。 此屬性的預設值為 **主動模式**。  
   
- **重試次數**  
+ **重試**  
  指定工作嘗試連接的次數。 值為 **0** 指出不限制嘗試次數。  
   
  **區塊大小 (以 KB 為單位)**  

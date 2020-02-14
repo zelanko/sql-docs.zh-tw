@@ -16,10 +16,10 @@ ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2fa693e4e5c8f21b9d8fc8ad02369bff7623b59e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295790"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>使用控制流程封裝組件在封裝之間重複使用控制流程
@@ -78,9 +78,9 @@ ms.locfileid: "71295790"
   
  ![從功能表新增控制流程範本](../integration-services/media/control-flow-templates-add-from-menu.png "從功能表新增控制流程範本")  
   
- ![新增現有範本的副本對話方塊](../integration-services/media/control-flow-templates-add-copy-dialog.png "新增現有範本的副本對話方塊")  
+ ![[新增現有範本的複本] 對話方塊](../integration-services/media/control-flow-templates-add-copy-dialog.png "[新增現有範本的複本] 對話方塊")  
   
- **選項。**  
+ **選項**  
   
  **封裝組件路徑**  
  輸入組件檔案路徑，或按一下瀏覽按鈕 ([...])，找出要複製或參考的組件檔案。  
@@ -91,7 +91,7 @@ ms.locfileid: "71295790"
 -   如果取消選取，則組件檔案的複本就會加入專案中。  
   
 ## <a name="configure-a-control-flow-package-part"></a>設定控制流程封裝組件  
- 若要在控制流程封裝組件加入封裝的控制流程之後設定它們，請使用 [Package Part Configuration]\(封裝組件組態)    對話方塊。  
+ 若要在控制流程封裝組件加入封裝的控制流程之後設定它們，請使用 [Package Part Configuration]\(封裝組件組態)   對話方塊。  
   
 #### <a name="to-open-the-package-part-configuration-dialog-box"></a>開啟 [Package Part Configuration]\(封裝組件組態) 對話方塊  
   
@@ -102,7 +102,7 @@ ms.locfileid: "71295790"
 ### <a name="properties-tab"></a>屬性索引標籤  
  使用 [Package Part Configuration]\(封裝組件組態)  對話方塊的 [屬性]   索引標籤來指定組件的屬性。  
   
- ![[範本設定] 對話方塊的 [內容] 索引標籤](../integration-services/media/template-configuration-properties-tab.png "[範本設定] 對話方塊的 [內容] 索引標籤")  
+ ![[範本組態] 對話方塊的 [屬性] 索引標籤](../integration-services/media/template-configuration-properties-tab.png "[範本組態] 對話方塊的 [屬性] 索引標籤")  
   
  左窗格的樹狀檢視階層架構會列出組件執行個體所有可設定的屬性。  
   
@@ -119,9 +119,9 @@ ms.locfileid: "71295790"
 -   **值**。 已設定的值。 這個值會覆寫預設值。  
   
 ### <a name="connection-managers-tab"></a>[連線管理員] 索引標籤  
- 使用 [Package Part Configuration]\(封裝組件組態)   對話方塊的 [連線管理員]   索引標籤來指定組件執行個體的連線管理員屬性。  
+ 使用 [Package Part Configuration]\(封裝組件組態)  對話方塊的 [連線管理員]   索引標籤來指定組件執行個體的連線管理員屬性。  
   
- ![[範本設定] 對話方塊的 [連線管理員] 索引標籤](../integration-services/media/template-configuration-connection-managers-tab.png "[範本設定] 對話方塊的 [連線管理員] 索引標籤")  
+ ![[範本組態] 對話方塊的 [連線管理員] 索引標籤](../integration-services/media/template-configuration-connection-managers-tab.png "[範本組態] 對話方塊的 [連線管理員] 索引標籤")  
   
  左窗格中的資料表會列出控制流程組件中所定義的所有連線管理員。 選擇您要設定的連線管理員。  
   

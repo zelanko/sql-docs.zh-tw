@@ -14,10 +14,10 @@ ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0aecc0f5bb867699bef16ff9f2947fe99a2cf1ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006469"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>資料庫鏡像和記錄傳送 (SQL Server)
@@ -76,7 +76,7 @@ ms.locfileid: "68006469"
 ## <a name="setting-up-mirroring-and-log-shipping-together"></a>同時設定鏡像和記錄傳送  
  若要同時設定資料庫鏡像和記錄傳送，必須進行下列步驟：  
   
-1.  使用 NORECOVERY，將主體/主要資料庫的備份還原到另一個伺服器執行個體上，以便稍後作為主體/主要資料庫用來進行資料庫鏡像的鏡像資料庫。 如需詳細資訊，請參閱[準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
+1.  使用 NORECOVERY，將主體/主要資料庫的備份還原到另一個伺服器執行個體上，以便稍後作為主體/主要資料庫用來進行資料庫鏡像的鏡像資料庫。 如需詳細資訊，請參閱 [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
 2.  設定資料庫鏡像。 如需詳細資訊，請參閱[使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md) 或[設定資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。  
   

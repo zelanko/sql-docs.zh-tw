@@ -21,10 +21,10 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298308"
 ---
 # <a name="execute-sql-task"></a>執行 SQL 工作
@@ -49,10 +49,10 @@ ms.locfileid: "71298308"
 ## <a name="connect-to-a-data-source"></a>連線到資料來源  
  執行 SQL 工作可使用不同類型的連接管理員，以連接到其執行 SQL 陳述式或預存程序的資料來源。 此工作可使用下表中列出的連接類型。  
   
-|連接類型|[ODBC 來源編輯器]|  
+|連線類型|[ODBC 來源編輯器]|  
 |---------------------|------------------------|  
 |EXCEL|[Excel 連線管理員](../../integration-services/connection-manager/excel-connection-manager.md)|  
-|OLE DB|[OLE DB 連接管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
+|OLE DB|[OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
 |ODBC|[ODBC 連線管理員](../../integration-services/connection-manager/odbc-connection-manager.md)|  
 |ADO|[ADO 連線管理員](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|[ADO.NET 連線管理員](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
@@ -157,7 +157,7 @@ ms.locfileid: "71298308"
   
  這個屬性具有下表中所列的選項。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|將來源設定為 Transact-SQL 陳述式。 選取此值會顯示動態選項 [SQLStatement]  。|  
 |**檔案連接**|選取包含 Transact-SQL 陳述式的檔案。 選取此選項會顯示動態選項 [FileConnection]  。|  
@@ -225,7 +225,7 @@ ms.locfileid: "71298308"
   
  此設計可確保提供者能為可變長度的參數值配置足夠的空間。  
   
- **[加入]**  
+ **加入**  
  按一下即可加入參數對應。  
   
  **移除**  
@@ -246,14 +246,14 @@ ms.locfileid: "71298308"
  **變數名稱**  
  選取變數來將結果集對應至變數，或是按一下 [\<新增變數...>]  ，使用 [新增變數]  對話方塊來新增新的變數。  
   
- **[加入]**  
+ **加入**  
  按一下即可新增結果集對應。  
   
  **移除**  
  選取清單中的結果集對應，然後按一下 [移除]  。  
  
 ## <a name="parameters-in-the-execute-sql-task"></a>執行 SQL 工作中的參數
-SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數以及傳回碼。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，「執行 SQL」工作支援 **Input**、**Output** 和 **ReturnValue** 參數類型。 您可針對輸入參數使用 **Input** 類型、針對輸出參數使用 **Output** ，且針對傳回碼使用 **ReturnValue** 。  
+SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數以及傳回碼。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，「執行 SQL」工作支援 **Input**、 **Output**和 **ReturnValue** 參數類型。 您可以使用 **Input** 類型當做輸入參數，使用 **Output** 當做輸出參數，並使用 **ReturnValue** 當做傳回碼。  
   
 > [!NOTE]  
 >  只有在資料提供者支援參數時，您才能在執行 SQL 工作中使用參數。  
@@ -279,7 +279,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
  下表摘要說明執行 SQL 工作可以使用之連線管理員類型的 SQL 命令需求。  
   
-|連接類型|參數標記|參數名稱|範例 SQL 命令|  
+|連線類型|參數標記|參數名稱|範例 SQL 命令|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<參數名稱>|\@\<參數名稱>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
@@ -312,15 +312,15 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>搭配 ADO.NET 和 ADO 連線管理員使用日期和時間參數  
  讀取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型的資料，即 **time** 和 **datetimeoffset**時，使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 或 ADO 連線管理員的「執行 SQL」工作有下列額外需求：  
   
--   若是 **time** 資料，[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員要求此資料必須儲存在參數類型為 **Input** 或 **Output**，且資料類型為 **string** 的參數中。  
+-   若是 **time** 資料， [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員要求此資料必須儲存在參數類型為 **Input** 或 **Output**，且資料類型為 **string**的參數中。  
   
--   若是 **datetimeoffset** 資料，[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員要求此資料必須儲存在下列其中一個參數中：  
+-   若是 **datetimeoffset** 資料， [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員要求此資料必須儲存在下列其中一個參數中：  
   
     -   參數類型為 **Input** ，且資料類型為 **string**的參數。  
   
-    -   參數類型為 **Output** 或 **ReturnValue**，且資料類型為 **datetimeoffset**、 **string**或 **datetime2**的參數。 如果您選取資料類型為 **string** 或 **datetime2** 的參數，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會將資料轉換為字串或 datetime2。  
+    -   參數類型為 **Output** 或 **ReturnValue**，且資料類型為 **datetimeoffset**、 **string**或 **datetime2**的參數。 如果您選取資料類型為 **string** 或 **datetime2**的參數， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會將資料轉換為字串或 datetime2。  
   
--   ADO 連線管理員要求 **time** 或 **datetimeoffset** 資料必須儲存在參數類型為 **Input** 或 **Output**，且資料類型為 **adVarWchar** 的參數中。  
+-   ADO 連線管理員要求 **time** 或 **datetimeoffset** 資料必須儲存在參數類型為 **Input** 或 **Output**，且資料類型為 **adVarWchar**的參數中。  
   
  如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型以及如何將其對應到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) 和 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
@@ -335,7 +335,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
     |-------------------------------|--------------------|  
     |DBDATE|**date**|  
     |DBTIME2|**time**|  
-    |DBTIMESTAMP|**datetime**、**datetime2**|  
+    |DBTIMESTAMP|**datetime**、 **datetime2**|  
     |DBTIMESTAMPOFFSET|**datetimeoffset**|  
   
  如果資料沒有以適當的輸入或輸出參數儲存，則封裝會失敗。  
@@ -361,9 +361,9 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
  您可以使用參數標記，動態提供參數值。 SQL 陳述式中可以使用的參數標記和參數名稱的規則，需視「執行 SQL」所使用的連接管理員類型而定。  
   
- 下表依照連接管理員類型列出 SELECT 命令的範例。 INSERT、UPDATE 和 DELETE 陳述式與這些範例類似。 這些範例使用 SELECT，從 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 的 **Product** 資料表傳回 **ProductID** 大於及小於兩個參數所指定之值的產品。  
+ 下表依照連接管理員類型列出 SELECT 命令的範例。 INSERT、UPDATE 和 DELETE 陳述式與這些範例類似。 這些範例使用 SELECT，從 **中的** Product [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 資料表傳回 **ProductID** 大於及小於兩個參數所指定之值的產品。  
   
-|連接類型|SELECT 語法|  
+|連線類型|SELECT 語法|  
 |---------------------|-------------------|  
 |EXCEL、ODBC 和 OLEDB|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
 |ADO|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
@@ -380,16 +380,16 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
 ###  <a name="Stored_procedures"></a> 搭配預存程序使用參數  
  執行預存程序的 SQL 命令亦可使用參數對應。 如何使用參數標記和參數名稱的規則，需視「執行 SQL」所使用的連接管理員類型而定，這一點與參數化查詢的規則相同。  
   
- 下表依照連接管理員類型列出 EXEC 命令的範例。 這些範例會執行 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 中的 **uspGetBillOfMaterials** 預存程序。 預存程序會使用 `@StartProductID` 和 `@CheckDate` **輸入** 參數。  
+ 下表依照連接管理員類型列出 EXEC 命令的範例。 這些範例會執行 **中的** uspGetBillOfMaterials [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]預存程序。 預存程序會使用 `@StartProductID` 和 `@CheckDate` **輸入**參數。  
   
-|連接類型|EXEC 語法|  
+|連線類型|EXEC 語法|  
 |---------------------|-----------------|  
 |EXCEL 和 OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> 如需 ODBC CALL 語法的詳細資訊，請參閱 MSDN Library 之《ODBC 程式設計人員參考》中的主題[程序參數](https://go.microsoft.com/fwlink/?LinkId=89462)。|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> 如需 ODBC CALL 語法的詳細資訊，請參閱 MSDN Library 之《ODBC 程式設計人員參考》中的主題 [程序參數](https://go.microsoft.com/fwlink/?LinkId=89462)。|  
 |ADO|如果 IsQueryStoredProcedure 設為 [False]  ，則 `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> 如果 IsQueryStoredProcedure 設為 [True]  ，則 `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|如果 IsQueryStoredProcedure 設為 [False]  ，則 `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> 如果 IsQueryStoredProcedure 設為 [True]  ，則 `uspGetBillOfMaterials`|  
   
- 若要使用輸出參數，此語法要求您必須在每個參數標記後面加上 OUTPUT 關鍵字。 例如，下列輸出參數語法是正確的：`EXEC myStoredProcedure ? OUTPUT`。  
+ 若要使用輸出參數，此語法要求您必須在每個參數標記後面加上 OUTPUT 關鍵字。 例如，下列輸出參數語法是正確的： `EXEC myStoredProcedure ? OUTPUT`。  
   
  如需搭配 Transact-SQL 預存程序使用輸入和輸出參數的詳細資訊，請參閱 [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)。  
  
@@ -418,7 +418,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
      您在參數化 SQL 陳述式中使用的參數標記，需視「執行 SQL」工作所使用的連接類型而定。  
   
-    |連接類型|參數標記|  
+    |連線類型|參數標記|  
     |---------------------|----------------------|  
     |ADO|?|  
     |ADO.NET 和 SQLMOBILE|\@\<參數名稱>|  
@@ -427,7 +427,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
      下表依照連接管理員類型列出 SELECT 命令的範例。 參數會在 WHERE 子句中提供篩選值。 這些範例使用 SELECT，從 **中的** Product [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 資料表傳回 **ProductID** 大於及小於兩個參數所指定之值的產品。  
   
-    |連接類型|SELECT 語法|  
+    |連線類型|SELECT 語法|  
     |---------------------|-------------------|  
     |EXCEL、ODBC 和 OLEDB|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
     |ADO|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
@@ -441,7 +441,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
      您所使用的參數名稱需視「執行 SQL」工作所使用的連接類型而定。  
   
-    |連接類型|參數名稱|  
+    |連線類型|參數名稱|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, ...|  
     |ADO.NET 和 SQLMOBILE|\@\<參數名稱>|  
@@ -471,10 +471,10 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
  部分語法不支援參數常值。 在這種情況下，您必須使用變數來提供參數值。  
   
-|連接類型|EXEC 語法|  
+|連線類型|EXEC 語法|  
 |---------------------|-----------------|  
 |EXCEL 和 OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> 如需 ODBC CALL 語法的詳細資訊，請參閱 MSDN Library 之《ODBC 程式設計人員參考》中的主題[程序參數](https://go.microsoft.com/fwlink/?LinkId=89462)。|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> 如需 ODBC CALL 語法的詳細資訊，請參閱 MSDN Library 之《ODBC 程式設計人員參考》中的主題 [程序參數](https://go.microsoft.com/fwlink/?LinkId=89462)。|  
 |ADO|如果 IsQueryStoreProcedure 設為 [False]  ，則 `EXEC ? = myStoredProcedure 1`<br /><br /> 如果 IsQueryStoreProcedure 設為 [True]  ，則 `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|將 IsQueryStoreProcedure 設為 [True]  。<br /><br /> `myStoredProcedure`|  
   
@@ -526,9 +526,9 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
 |結果集類型|變數的資料類型|物件類型|  
 |---------------------|---------------------------|--------------------|  
 |單一資料列|與結果集之類型資料行相容的任何類型。|不適用|  
-|完整結果集|**物件**|如果工作使用原生連接管理員 (包括 ADO、OLE DB、Excel 與 ODBC 連接管理員)，則傳回的物件是 ADO **Recordset**。<br /><br /> 如果工作使用 Managed 連線管理員 (例如 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員)，傳回的物件便會是 **System.Data.DataSet**。<br /><br /> 您可以使用指令碼工作來存取 **System.Data.DataSet** 物件，如下列範例所示。<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
+|完整結果集|**Object**|如果工作使用原生連接管理員 (包括 ADO、OLE DB、Excel 與 ODBC 連接管理員)，則傳回的物件是 ADO **Recordset**。<br /><br /> 如果工作使用 Managed 連線管理員 (例如 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員)，傳回的物件便會是 **System.Data.DataSet**。<br /><br /> 您可以使用指令碼工作來存取 **System.Data.DataSet** 物件，如下列範例所示。<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
 |XML|**String**|**String**|  
-|XML|**物件**|如果工作使用原生連接管理員 (包括 ADO、OLE DB、Excel 與 ODBC 連接管理員)，則傳回的物件是 **MSXML6.IXMLDOMDocument**。<br /><br /> 如果工作使用 Managed 連線管理員 (例如 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員)，傳回的物件便會是 **System.Xml.XmlDocument**。|  
+|XML|**Object**|如果工作使用原生連接管理員 (包括 ADO、OLE DB、Excel 與 ODBC 連接管理員)，則傳回的物件是 **MSXML6.IXMLDOMDocument**。<br /><br /> 如果工作使用 Managed 連線管理員 (例如 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員)，傳回的物件便會是 **System.Xml.XmlDocument**。|  
   
  變數可在執行 SQL 工作或封裝範圍內定義。 如果變數包含封裝範圍，則結果集可用於該封裝內的其他工作和容器，並可用於「執行封裝」或「執行 DTS 2000 封裝」工作所執行的任何封裝。  
   
@@ -543,7 +543,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在方案總管  中，按兩下封裝將其開啟。  
+2.  在 **方案總管**中，按兩下封裝將其開啟。  
   
 3.  按一下 **[控制流程]** 索引標籤。  
   
@@ -577,7 +577,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
 ### <a name="custom-log-entries"></a>自訂記錄項目  
  下表描述「執行 SQL」工作的自訂記錄項目。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|Description|  
+|記錄項目|描述|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|提供 SQL 陳述式執行階段的相關資訊。 寫入記錄項目的時機包括在工作取得資料庫連接時、在工作開始準備 SQL 陳述式時，以及在 SQL 陳述式執行完成之後。 準備階段的記錄項目包含工作所使用的 SQL 陳述式。|  
 

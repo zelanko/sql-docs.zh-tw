@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 266d03b1eb5b96f4f4e78ed1a7985e5071a12d20
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71823607"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
@@ -53,7 +53,7 @@ IF Boolean_expression
   
  若要定義陳述式區塊，請使用流程控制關鍵字 BEGIN 和 END。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  您可以在批次、預存程序和隨選查詢中使用 IF...ELSE 建構。 當在預存程序中使用這個建構時，經常會測試某個參數是否存在。  
   
  您可以在 IF 或 ELSE 之後，進行巢狀的 IF 測試。 巢狀層級數目的限制，會隨著可用的記憶體而不同。  

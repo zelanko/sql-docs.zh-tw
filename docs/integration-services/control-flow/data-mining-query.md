@@ -13,10 +13,10 @@ ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ab9374312051ab22aa90c48bfed40713fe4e318
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298312"
 ---
 # <a name="data-mining-query"></a>資料採礦查詢
@@ -30,9 +30,9 @@ ms.locfileid: "71298312"
  切換檢視按鈕  
  按一下圖示，即可在設計與查詢窗格之間切換。 預設會開啟設計窗格。  
   
- 若要切換到設計窗格，請按一下![設計圖示](../../integration-services/control-flow/media/ssis-designicon.gif "設計圖示")圖示。  
+ 若要切換到設計窗格，請按一下 ![設計圖示](../../integration-services/control-flow/media/ssis-designicon.gif "設計圖示") 圖示。  
   
- 若要切換到查詢窗格，請按一下![SQL 圖示](../../integration-services/control-flow/media/ssis-queryicon.gif "SQL 圖示")圖示。  
+ 若要切換到查詢窗格，請按一下 ![SQL 圖示](../../integration-services/control-flow/media/ssis-queryicon.gif "SQL 圖示") 圖示。  
   
  **採礦模型**  
  顯示選取的採礦模型，並以此模型作為預測的基礎。  

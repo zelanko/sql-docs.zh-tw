@@ -34,13 +34,13 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327b084471155c9e7d8451fc8dceec8e4c00496f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116475"
 ---
-# <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
+# <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 DBCC SHOW_STATISTICS 會針對資料表或索引檢視表顯示目前的查詢最佳化統計資料。 查詢最佳化工具會使用統計資料來預估基數或查詢結果中的資料列數，如此可讓查詢最佳化工具建立高品質的查詢計畫。 例如，查詢最佳化工具可使用基數預估來選擇查詢計畫中的索引搜尋運算子，而不是索引掃描運算子，避免發生資源密集的索引掃描來提高查詢效能。
@@ -49,7 +49,7 @@ DBCC SHOW_STATISTICS 會針對資料表或索引檢視表顯示目前的查詢�
   
 DBCC SHOW_STATISTICS 會根據儲存在統計資料物件中的資料來顯示標頭、長條圖和密度向量。 此語法可讓您指定資料表或索引檢視表，連同目標索引名稱、統計資料名稱或資料行名稱。 此主題描述如何顯示統計資料以及如何了解顯示的結果。
   
-如需詳細資訊，請參閱 [Statistics](../../relational-databases/statistics/statistics.md)。
+如需詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -94,9 +94,9 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="result-sets"></a>結果集  
 下表描述指定 STAT_HEADER 時，結果集所傳回的資料行。
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
-|[屬性]|統計資料物件的名稱。|  
+|名稱|統計資料物件的名稱。|  
 |已更新|上次更新統計資料的日期和時間。 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 函數是擷取這項資訊的替代方式。 如需詳細資訊，請參閱此頁的[備註](#Remarks)一節。|  
 |資料列|上一次更新統計資料時位於資料表或索引檢視表中的資料列總數。 如果篩選了統計資料或是統計資料對應至篩選過的索引，此資料列數可能會少於資料表中的資料列數。 如需詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。|  
 |取樣的資料列|針對統計資料計算進行取樣的資料列總數。 如果取樣的資料列數 < 資料列數，顯示的長條圖和密度結果將會是根據取樣資料列數的預估值。|  
@@ -106,19 +106,19 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |String Index|Yes 表示統計資料物件包含了字串摘要統計資料來改善使用 LIKE 運算子之查詢述詞的基數預估，例如 `WHERE ProductName LIKE '%Bike'`。 字串摘要統計資料會與長條圖分開儲存，而且會在具有 **char**、**varchar**、**nchar**、**nvarchar**、**varchar(max)** 、**nvarchar(max)** 、**text** 或 **ntext** 類型時於統計資料物件的第一個索引鍵資料行上建立。|  
 |篩選運算式|包含在統計資料物件中之資料表資料列子集的述詞。 NULL = 非篩選的統計資料。 如需篩選述詞的詳細資訊，請參閱[建立篩選的索引](../../relational-databases/indexes/create-filtered-indexes.md)。 如需已篩選統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。|  
 |Unfiltered Rows|套用篩選運算式之前，資料表中的資料列總數。 如果 Filter Expression 為 NULL，Unfiltered Rows 就會等於 Rows。|  
-|保存取樣百分比|使用於未明確指定取樣百分比之統計資料更新的保存取樣百分比。 如果值為零，表示這個統計資料未設定保存取樣百分比。<br /><br /> **適用於：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
+|保存取樣百分比|使用於未明確指定取樣百分比之統計資料更新的保存取樣百分比。 如果值為零，表示這個統計資料未設定保存取樣百分比。<br /><br /> **適用範圍：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
   
 下表描述指定 DENSITY_VECTOR 時，結果集所傳回的資料行。
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
 |所有密度|密度是 1 / 相異值  。 結果會針對統計資料物件中資料行的每個前置詞來顯示密度，一個密度一個資料列。 相異值是每個資料列和每個資料行前置詞的資料行值相異清單。 例如，如果統計資料物件包含索引鍵資料行 (A, B, C)，結果就會報告每一個資料行前置詞中相異值清單的密度：(A)、(A,B) 和 (A, B, C)。 使用前置詞 (A, B, C) 時，這些清單的每一個都會是相異值清單：(3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7)。 使用前置詞 (A, B) 時，相同的資料行值都會有這些相異值清單：(3, 5)、(4, 4) 和 (4, 5)|  
 |平均長度|平均長度 (以位元組為單位)，用來儲存資料行前置詞的資料行值清單。 例如，如果清單 (3, 5, 6) 中的每一個值都需要 4 位元組，長度就是 12 位元組。|  
-|[資料行]|在前置詞中顯示 All density 和 Average length 的資料行名稱。|  
+|資料行|在前置詞中顯示 All density 和 Average length 的資料行名稱。|  
   
 下表描述指定 HISTOGRAM 選項時，結果集所傳回的資料行。
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |---|---|
 |RANGE_HI_KEY|長條圖步驟的上限資料行值。 此資料行值也稱為索引鍵值。|  
 |RANGE_ROWS|資料行值在長條圖步驟內的預估資料列數，不包括上限。|  

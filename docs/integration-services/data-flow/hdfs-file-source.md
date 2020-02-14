@@ -13,10 +13,10 @@ ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a06374e2803a5e482e6d5a7a665756e38cb7f2f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292440"
 ---
 # <a name="hdfs-file-source"></a>HDFS 檔案來源
@@ -33,7 +33,7 @@ ms.locfileid: "71292440"
 ## <a name="options"></a>選項。  
  在 [Hadoop File Source Editor (Hadoop 檔案來源編輯器)]  對話方塊的 [一般]  索引標籤上，設定下列選項。  
   
-|欄位|Description|  
+|欄位|描述|  
 |-----------|-----------------|  
 |**Hadoop 連接**|指定現有的 Hadoop 連接管理員或建立新的連接管理員。 此連接管理員會指出 HDFS 檔案的裝載位置。|  
 |**檔案路徑**|指定 HDFS 檔案的名稱。|  

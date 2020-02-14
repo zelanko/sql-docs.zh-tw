@@ -12,10 +12,10 @@ ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a16e270acae2a2685bcaf53045883eaa078ab03d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285936"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>資料行對應 (SQL Server 匯入和匯出精靈)
@@ -108,7 +108,7 @@ ms.locfileid: "71285936"
 -    **有效位數**  
     指定目的地資料行中數值資料的整數位數，即數字的位數 (適用時)。  
   
- -   **小數位數**  
+ -   **調整**  
     指定目的地資料行中數值資料的小數位數，即小數位數 (適用時)。  
   
 ## <a name="whats-next"></a>下一步  

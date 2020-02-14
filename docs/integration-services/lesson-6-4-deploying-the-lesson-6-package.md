@@ -11,10 +11,10 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2a16cd38eef12584f8d876e610bfda5d602c3076
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283018"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>第 6-4 課：部署第 6 課套件
@@ -66,7 +66,7 @@ ms.locfileid: "71283018"
   
 6.  在 [瀏覽資料夾]  對話方塊上，瀏覽至包含此 SSIS 教學課程專案的資料夾，然後選取 [確定]  。  
   
-7.  選取 **[下一步]** 。  
+7.  選取 [下一步]  。  
   
 8.  在 [選取套件] 頁面上，您應該會看到 SSIS 教學課程中的所有六個套件。 在 [套件]  清單中，選取 **Lesson 6.dtsx**，然後選取 [下一步]  。  
   

@@ -11,10 +11,10 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014686"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>監視 Always On 可用性群組的效能
@@ -24,7 +24,7 @@ ms.locfileid: "68014686"
 ##  <a name="data-synchronization-process"></a>資料同步處理程序  
  若要預估完整同步處理的時間並找出瓶頸，您需要了解同步處理程序。 效能瓶頸可能會在程序中的任何位置，而找出瓶頸可以協助您挖掘更深入的底層問題。 下圖和下表說明資料同步處理程序：  
   
- ![可用性群組資料同步處理](media/always-onag-datasynchronization.gif "可用性群組資料同步處理")  
+ ![可用性群組資料同步](media/always-onag-datasynchronization.gif "可用性群組資料同步")  
   
 |||||  
 |-|-|-|-|  
@@ -45,7 +45,7 @@ ms.locfileid: "68014686"
 |-|-|-|-|  
 |**Level**|**閘道數目**|**訊息數目**|**實用的計量**|  
 |傳輸|每個可用性複本 1 個|8192|擴充事件 **database_transport_flow_control_action**|  
-|[資料庫]|每個可用性資料庫 1 個|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 擴充事件 **hadron_database_flow_control_action**|  
+|資料庫|每個可用性資料庫 1 個|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 擴充事件 **hadron_database_flow_control_action**|  
   
  一旦達到其中一個閘道的訊息閾值，記錄檔訊息便不會再傳送至特定複本，或是針對特定資料庫傳送。 一旦收到傳送訊息的訊息收條，就可以傳送訊息，讓傳送訊息數目低於閾值。  
   
@@ -439,7 +439,7 @@ ms.locfileid: "68014686"
 ##  <a name="BKMK_SCENARIOS"></a> 效能疑難排解案例  
  下表列出常見的效能相關疑難排解案例。  
   
-|狀況|Description|  
+|狀況|描述|  
 |--------------|-----------------|  
 |[疑難排解：可用性群組已超過 RTO](troubleshoot-availability-group-exceeded-rto.md)|在自動容錯移轉或規劃的手動容錯移轉之後若未遺失資料，容錯移轉時間會超過您的 RTO。 或者，當您評估同步認可次要複本 (例如自動容錯移轉夥伴) 的容錯移轉時間時，發現它超過您的 RTO。|  
 |[疑難排解：可用性群組已超過 RPO](troubleshoot-availability-group-exceeded-rpo.md)|在您執行強制手動容錯移轉之後，遺失的資料超過您的 RPO。 或者，當您計算非同步認可次要複本的潛在資料遺失時，發現它超過您的 RPO。|  
@@ -448,7 +448,7 @@ ms.locfileid: "68014686"
 ##  <a name="BKMK_XEVENTS"></a> 實用的擴充事件  
  當針對**同步處理中**狀態的複本進行疑難排解時，下列擴充事件很有用。  
   
-|事件名稱|類別目錄|通路|可用性複本|  
+|活動名稱|類別|通路|可用性複本|  
 |----------------|--------------|-------------|--------------------------|  
 |redo_caught_up|交易|偵錯|次要|  
 |redo_worker_entry|交易|偵錯|次要|  

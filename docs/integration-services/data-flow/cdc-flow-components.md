@@ -11,10 +11,10 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d1b067ae6f35f9f96f7f0f7207cb6d09456a177f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293407"
 ---
 # <a name="cdc-flow-components"></a>CDC 流程元件
@@ -81,15 +81,15 @@ ms.locfileid: "71293407"
 ## <a name="getting-started-with-the-change-data-capture-components"></a>開始使用異動資料擷取元件  
  一般的 CDC 封裝會處理一組資料表的變更。 下圖顯示這種 CDC 封裝類型的基本控制流程部分。 這種封裝稱為 Trickle 摘要處理封裝。  
   
- ![Trickle 摘要處理封裝控制流程](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Trickle 摘要處理封裝控制流程")  
+ ![Trickle 摘要處理套件控制流程](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Trickle 摘要處理套件控制流程")  
   
  這個 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 控制流程包含兩項 CDC 控制工作和資料流程工作。 名為「取得 CDC 處理範圍」  的第一項工作會針對在名為「處理變更」  之資料流程工作中處理的變更建立 LSN 範圍。 這個範圍是根據最後一個封裝執行期間所處理的內容以及儲存在永續性存放區中的內容所建立。  
   
- 如需使用 CDC 控制工作的詳細資訊，請參閱 [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)和 [CDC 控制工作編輯器](../../integration-services/control-flow/cdc-control-task-editor.md)。  
+ 如需使用 CDC 控制工作的詳細資訊，請參閱 [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md) 和 [CDC 控制工作編輯器](../../integration-services/control-flow/cdc-control-task-editor.md)。  
   
  下圖顯示「處理變更」  資料流程，就概念上說明變更的處理方式。  
   
- ![處理變更資料流程](../../integration-services/data-flow/media/processchangesdataflow.gif "處理變更資料流程")  
+ ![處理異動資料流程](../../integration-services/data-flow/media/processchangesdataflow.gif "處理異動資料流程")  
   
  此圖所說明的步驟如下：  
   
@@ -125,11 +125,11 @@ ms.locfileid: "71293407"
   
  下圖顯示可處理前兩種案例的 SSIS 封裝：  
   
- ![SSIS 封裝處理前兩個案例](../../integration-services/data-flow/media/scenarioonetwo.gif "SSIS 封裝處理前兩個案例")  
+ ![SSIS 套件處理前兩個案例](../../integration-services/data-flow/media/scenarioonetwo.gif "SSIS 套件處理前兩個案例")  
   
  下圖顯示可處理第三種案例的 SSIS 封裝：  
   
- ![SSIS 封裝處理第三個案例](../../integration-services/data-flow/media/scenario3.gif "SSIS 封裝處理第三個案例")  
+ ![SSIS 套件處理第三個案例](../../integration-services/data-flow/media/scenario3.gif "SSIS 套件處理第三個案例")  
   
  初始載入封裝之後，Trickle 摘要更新封裝會根據處理變更的排程重複執行，因為它們變成可供取用。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "71293407"
 ## <a name="cdc-state"></a>CDC 狀態  
  每個 CDC 群組都具有相關聯的狀態，由特定格式的字串表示。 如需詳細資訊，請參閱 [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)。 下表顯示可能的 CDC 狀態值。  
   
-|State|Description|  
+|State|描述|  
 |-----------|-----------------|  
 |0-(INITIAL)|在目前 CDC 群組上執行任何封裝之前就存在的狀態。 這也是 CDC 狀態為空白時呈現的狀態。<br /><br /> 如需 CDC 控制工作作業的詳細資訊，請參閱 [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)。|  
 |1-ILSTART (初始載入開始)|這是初始載入封裝啟動時存在的狀態。 這個狀態會在 CDC 控制工作的 **MarkInitialLoadStart** 作業呼叫之後出現。<br /><br /> 如需 CDC 控制工作作業的詳細資訊，請參閱 [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)。|  

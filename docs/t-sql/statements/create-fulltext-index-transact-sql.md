@@ -22,10 +22,10 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5d51385ff820155d805803773265f39cd8598df6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981898"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
@@ -96,7 +96,7 @@ LANGUAGE *language_term*
   
 您必須針對指定為 *language_term* 的語言來啟用資源，如文字分隔和詞幹分析器。 如果這些資源不支援指定的語言， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。  
   
-請利用 sp_configure 預存程序來存取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之預設全文檢索語言的相關資訊。 如需詳細資訊，請參閱本主題稍後的 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)的使用者閱讀。  
+請使用 sp_configure 預存程序來存取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的預設全文檢索語言相關資訊。 如需詳細資訊，請參閱本主題稍後的 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)的使用者閱讀。  
   
 如果是包含多種語言之文字資料的非 BLOB 和非 XML 資料行，或是資料行內所儲存的文字語言不明，您可能適合使用中性 (0x0) 語言資源。 但是，您應該先了解使用中性 (0x0) 語言資源的可能結果。 如需使用中性 (0x0) 語言資源之可能解決方案和結果的資訊，請參閱[在建立全文檢索索引時選擇語言](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)。  
   
@@ -153,7 +153,7 @@ OFF
 *property_list_name*       
 指定要與全文檢索索引產生關聯的搜尋屬性清單名稱。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 如需全文檢索索引的詳細資訊，請參閱[建立及管理全文檢索索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)。  
   
 您可以在 **xml** 資料行上建立檢索 XML 項目內容但忽略 XML 標記的全文檢索索引。 屬性值是全文檢索索引的值 (除非它們是數值)。 元素標記會當做 Token 界限來使用。 系統支援包含多種語言且格式正確的 XML 或 HTML 文件和片段。 如需詳細資訊，請參閱 [使用 XML 資料行進行全文檢索搜尋](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)。  
@@ -167,8 +167,8 @@ OFF
 |---------------------|------------------------|------------|  
 |未啟用|未指定|在索引上執行完整母體擴展。|  
 |未啟用|已指定|要等到發出 ALTER FULLTEXT INDEX...START POPULATION 陳述式之後，才會進行索引的母體擴展。|  
-|已啟用|已指定|引發錯誤，而且索引不會改變。|  
-|已啟用|未指定|在索引上執行完整母體擴展。|  
+|啟用|已指定|引發錯誤，而且索引不會改變。|  
+|啟用|未指定|在索引上執行完整母體擴展。|  
   
  如需填入全文檢索索引的詳細資訊，請參閱[填入全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。  
   

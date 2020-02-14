@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cc83aca49b6147835353538d809be121756ecda6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072405"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
@@ -53,7 +53,7 @@ PRINT msg_str | @local_variable | string_expr
  *string_expr*  
  這是傳回字串的運算式。 它可以包括串連的常值、函數和變數。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果訊息字串不是 Unicode 字串，它的長度可以多達 8,000 個字元；如果它是 Unicode 字串，則可以多達 4,000 個字元。 較長字串會被截斷。 **varchar(max)** 和 **nvarchar(max)** 資料類型都會被截斷為長度不超過 **varchar(8000)** 和 **nvarchar(4000)** 的資料類型。  
   
  RAISERROR 也可用來傳回訊息。 相較於 PRINT，RAISERROR 有下列優點：  

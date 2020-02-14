@@ -12,10 +12,10 @@ ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a945c51a5ba75c20a0925a4f548d98765379459b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296371"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>完成精靈 (SQL Server 匯入和匯出精靈)

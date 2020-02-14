@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: b70035a1fc54d4b59978a3256b2ed3040ba4e8f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006510"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
@@ -63,7 +63,7 @@ WITH
  AUTHORIZATION *owner_name*  
  將路由的擁有者設為指定的資料庫使用者或角色。 當目前使用者是 **db_owner** 固定資料庫角色的成員或 **sysadmin** 固定伺服器角色的成員時，*owner_name* 可以是任何有效使用者或角色的名稱。 否則，*owner_name* 必須是目前使用者的名稱、目前使用者有其 IMPERSONATE 權限的使用者名稱，或目前使用者所屬的角色名稱。 當略過這個子句時，路由會屬於目前的使用者。  
   
- 取代所有提及的  
+ WITH  
  導入定義所建立之路由的子句。  
   
  SERVICE_NAME = **'** _service\_name_ **'**  
@@ -123,7 +123,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  當指定 MIRROR_ADDRESS 時，路由必須指定 SERVICE_NAME 子句和 BROKER_INSTANCE 子句。 在 *next_hop_address* 中指定 **'LOCAL'** 或 **'TRANSPORT'** 的路由可能不會指定鏡像位址。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  儲存路由的路由表是能夠利用 **sys.routes** 目錄檢視來讀取的中繼資料表。 您只能利用 CREATE ROUTE、ALTER ROUTE 和 DROP ROUTE 陳述式來更新這個目錄檢視。  
   
  依預設，每個使用者資料庫中的路由表都包含一個路由。 這個路由的名稱是 **AutoCreatedLocal**。 這個路由在 *next_hop_address* 中指定 **'LOCAL'** ，且會比對任何服務名稱和 Broker 執行個體識別碼。  

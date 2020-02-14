@@ -25,10 +25,10 @@ ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f0c5a07b7ff618b3857d9e67b11d50a5a29e8248
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894793"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
@@ -137,7 +137,7 @@ OPTIMISTIC
 FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
 在資料指標內定義可更新的資料行。 如果提供了 `OF <column_name> [, <... n>]`，便只允許修改列出的資料行。 若指定 `UPDATE` 時未加上資料行清單，除非指定 `READ_ONLY` 這個並行選項，否則所有資料行皆可更新。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 `DECLARE CURSOR` 定義 [!INCLUDE[tsql](../../includes/tsql-md.md)] 伺服器資料指標的屬性，例如其捲動行為以及用來建立資料指標運作所在之結果集的查詢。 `OPEN` 陳述式可擴展結果集，而 `FETCH` 會從結果集中傳回一個資料列。 `CLOSE` 陳述式會釋放與資料指標相關聯的目前結果集。 `DEALLOCATE` 陳述式則會釋放資料指標所使用的資源。  
   
 `DECLARE CURSOR` 陳述式的第一種格式是使用 ISO 語法來宣告資料指標的行為。 `DECLARE CURSOR` 的第二種格式是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 延伸模組，讓您使用與 ODBC 或 ADO 資料庫 API 資料指標功能中相同的資料指標類型來定義資料指標。  
@@ -156,7 +156,7 @@ FOR UPDATE [OF *column_name* [ **,** ...*n*]]
   
 在宣告資料指標後，下列系統預存程序即可用來判斷資料指標的特性。  
   
-|系統預存程序|Description|  
+|系統預存程序|描述|  
 |------------------------------|-----------------|  
 |**sp_cursor_list**|傳回目前連接可見的資料指標清單及其屬性。|  
 |**sp_describe_cursor**|描述某個資料指標的屬性，例如，它是一個順向資料指標或捲動資料指標。|  

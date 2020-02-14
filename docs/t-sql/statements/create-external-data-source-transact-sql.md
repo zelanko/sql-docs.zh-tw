@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2019
+ms.date: 01/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,16 +19,16 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec1bd01ae5f92efbbbe08ebee3da3484ce387e29
-ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
+ms.openlocfilehash: a927964a3f3cf8fe5119011a430393330402a7aa
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681779"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516639"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
-建立使用 SQL Server、SQL Database、SQL 資料倉儲或 Analytics Platform System (平行處理資料倉儲或 PDW) 進行查詢的外部資料來源。
+建立使用 SQL Server、SQL Database、Azure Synapse Analytics 或 Analytics Platform System (平行處理資料倉儲或 PDW) 進行查詢的外部資料來源。
 
 本文提供適用於您所選擇之 SQL 產品的語法、引數、備註、權限和範例。
 
@@ -42,7 +42,7 @@ ms.locfileid: "75681779"
 
 |                               |                                                              |                                                              |                                                              |      |
 | ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| **_\* SQL Server \*_** &nbsp; | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL 資料<br />倉儲](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| **_\* SQL Server \*_** &nbsp; | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                               |                                                              |                                                              |                                                              |      |
 
 &nbsp;
@@ -59,7 +59,7 @@ ms.locfileid: "75681779"
 ## <a name="syntax"></a>語法
 
 ```sql
-CREATE EXTERNAL DATA SOURCE <data_source_name>  
+CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CONNECTION_OPTIONS        = '<name_value_pairs>']
@@ -105,7 +105,7 @@ WITH
 
 - SQL 引擎在建立物件時，不會驗證外部資料來源是否存在。 若要驗證，請使用外部資料來源建立外部資料表。
 - 查詢 Hadoop 時，請針對所有資料表使用相同的外部資料來源，以確保查詢語意一致。
-- 您可以使用 `sqlserver` 位置前置詞，將 SQL Server 2019 連線到 SQL Server、SQL Database 或 SQL 資料倉儲。
+- 您可以使用 `sqlserver` 位置前置詞，將 SQL Server 2019 連線到 SQL Server、SQL Database 或 Azure Synapse Analytics。
 - 透過 `ODBC` 連線時，請指定 `Driver={<Name of Driver>}`。
 - `wasb` 是 Azure Blob 儲存體的預設通訊協定。 `wasbs` 為選擇性，但由於資料會使用安全的 SSL 連線傳送，因此建議使用。
 - 為確保在 Hadoop `Namenode` 容錯移轉期間能成功進行 PolyBase 查詢，請考慮使用虛擬 IP 位址作為 Hadoop 叢集的 `Namenode`。 若未這樣做，請執行 [ALTER EXTERNAL DATA SOURCE][alter_eds] 命令以指向新位置。
@@ -152,13 +152,13 @@ WITH
 > [!IMPORTANT]
 > 如果使用任何其他外部資料來源，請不要設定 `TYPE`。
 
-如需使用 `TYPE` =`HADOOP` 從 Azure Blob 儲存體載入資料的範例，請參閱[建立參考 Azure Blob 儲存體的外部資料來源](#e-create-external-data-source-to-reference-azure-blob-storage)。
+如需使用 `TYPE` = `HADOOP` 從 Azure Blob 儲存體載入資料的範例，請參閱[建立參考 Azure Blob 儲存體的外部資料來源](#e-create-external-data-source-to-reference-azure-blob-storage)。
 
 ### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
 連線到 Hortonworks 或 Cloudera 時，請設定這個選用值。
 
-定義 `RESOURCE_MANAGER_LOCATION` 時，查詢最佳化工具會制訂成本型決策以改善效能。 MapReduce 作業可用於將計算下推到 Hadoop。 指定 `RESOURCE_MANAGER_LOCATION` 可大幅降低在 Hadoop 與 SQL 之間傳輸的資料量，而導致查詢效能獲得改善。  
+定義 `RESOURCE_MANAGER_LOCATION` 時，查詢最佳化工具會制訂成本型決策以改善效能。 MapReduce 作業可用於將計算下推到 Hadoop。 指定 `RESOURCE_MANAGER_LOCATION` 可大幅降低在 Hadoop 與 SQL 之間傳輸的資料量，而導致查詢效能獲得改善。
 
 若未指定 Resource Manager，系統會針對 PolyBase 查詢停用將計算推送到 Hadoop。
 
@@ -187,7 +187,7 @@ WITH
 
 ## <a name="locking"></a>鎖定
 
-在 EXTERNAL DATA SOURCE 物件上取得共用鎖定。  
+在 EXTERNAL DATA SOURCE 物件上取得共用鎖定。
 
 ## <a name="security"></a>安全性
 
@@ -201,13 +201,16 @@ PolyBase 支援大多數外部資料來源的 Proxy 驗證。 建立資料庫範
 
 ## <a name="examples-sql-server-2016"></a>範例：SQL Server (2016+)
 
+> [!IMPORTANT]
+> 如需如何安裝及啟用 Polybase 的相關資訊，請參閱[在 Windows 上安裝 PolyBase](../../relational-databases/polybase/polybase-installation.md)
+
 ### <a name="a-create-external-data-source-in-sql-2019-to-reference-oracle"></a>A. 在 SQL 2019 中建立參考 Oracle 的外部資料來源
 
 若要建立參考 Oracle 的外部資料來源，請確保您擁有資料庫範圍認證。 您也可以選擇啟用或停用對此資料來源的下推計算。
 
 ```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '!MyC0mpl3xP@ssw0rd!
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '!MyC0mpl3xP@ssw0rd!'
 ;
 
 -- Create a database scoped credential with Azure storage account key as the secret.
@@ -233,7 +236,7 @@ WITH
 
 若要建立參考 Hortonworks 或 Cloudera Hadoop 叢集的外部資料來源，請指定 Hadoop `Namenode` 的電腦名稱或 IP 位址與連接埠。 <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
 
-```sql  
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
 (    LOCATION = 'hdfs://10.10.10.10:8050'
@@ -246,7 +249,7 @@ WITH
 
 指定 `RESOURCE_MANAGER_LOCATION` 選項，以便對適用於 PolyBase 查詢的 Hadoop 啟用下推計算。 啟用之後，PolyBase 會制訂成本型決策來判斷是否應該將查詢計算推送到 Hadoop。
 
-```sql  
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
 (    LOCATION                  = 'hdfs://10.10.10.10:8020'
@@ -260,7 +263,7 @@ WITH
 
 若要確認 Hadoop 叢集是否由 Kerberos 保護，請檢查 Hadoop core-site.xml 中 hadoop.security.authentication 屬性的值。 若要參考由 Kerberos 保護的 Hadoop 叢集，您必須指定資料庫範圍的認證，其中包含您的 Kerberos 使用者名稱與密碼。 資料庫主要金鑰用來加密資料庫範圍的認證密碼。
 
-```sql  
+```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'
 ;
@@ -317,18 +320,19 @@ WITH
 
 ```sql
 CREATE EXTERNAL DATA SOURCE SQLServerInstance2
-WITH ( 
+WITH (
   LOCATION = 'sqlserver://WINSQL2019',
   CONNECTION_OPTIONS = 'Server=%s\SQL2019',
   CREDENTIAL = SQLServerCredentials
 );
 
 ```
+
 或者，您可以使用連接埠來連線到 SQL Server 執行個體。
 
 ```sql
 CREATE EXTERNAL DATA SOURCE SQLServerInstance2
-WITH ( 
+WITH (
   LOCATION = 'sqlserver://WINSQL2019:58137',
   CREDENTIAL = SQLServerCredentials
 );
@@ -403,7 +407,7 @@ WITH
 
 |                                                              |                                 |                                                              |                                                              |      |
 | ------------------------------------------------------------ | ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | **_\* SQL Database \*_** &nbsp; | [SQL 資料<br />倉儲](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | **_\* SQL Database \*_** &nbsp; | [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                                                              |                                 |                                                              |                                                              |      |
 
 &nbsp;
@@ -413,13 +417,13 @@ WITH
 建立彈性查詢的外部資料來源。 外部資料來源會用來建立連線能力，並支援這些主要使用案例：
 
 - 使用 `BULK INSERT` 或 `OPENROWSET` 的大量載入作業
-- 使用 SQL Database 搭配[彈性查詢][remote_eq]，查詢遠端 SQL Database 或 SQL 資料倉儲執行個體
+- 使用 SQL Database 搭配[彈性查詢][remote_eq]，查詢遠端 SQL Database 或 Azure Synapse 執行個體
 - 使用[彈性查詢][sharded_eq]，查詢分區化 Azure SQL Database
 
 ## <a name="syntax"></a>語法
 
 ```sql
-CREATE EXTERNAL DATA SOURCE <data_source_name>  
+CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CREDENTIAL                = <credential_name> ]
@@ -434,7 +438,7 @@ WITH
 
 ### <a name="data_source_name"></a>data_source_name
 
-指定資料來源的使用者定義名稱。 這個名稱在 SQL Database (SQL DB) 的資料庫內必須是唯一的。
+指定資料來源的使用者定義名稱。 這個名稱在 SQL Database 的資料庫內必須是唯一的。
 
 ### <a name="location--prefixpathport"></a>LOCATION = *`'<prefix>://<path[:port]>'`*
 
@@ -476,7 +480,7 @@ WITH
 
 指定要設定的外部資料來源類型。 不一定需要此參數。
 
-- 使用 RDBMS 從 SQL Database 透過彈性查詢進行跨資料庫查詢。  
+- 使用 RDBMS 從 SQL Database 透過彈性查詢進行跨資料庫查詢。
 - 建立外部資料來源以連線到分區化 SQL Database 時，請使用 SHARD_MAP_MANAGER。
 - 使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 執行大量作業時，請使用 BLOB_STORAGE。
 
@@ -506,7 +510,7 @@ WITH
 
 ## <a name="locking"></a>鎖定
 
-在 EXTERNAL DATA SOURCE 物件上取得共用鎖定。  
+在 EXTERNAL DATA SOURCE 物件上取得共用鎖定。
 
 ## <a name="examples"></a>範例：
 
@@ -545,7 +549,7 @@ WITH
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
 ;
 
-CREATE DATABASE SCOPED CREDENTIAL SQL_Credential  
+CREATE DATABASE SCOPED CREDENTIAL SQL_Credential
 WITH
      IDENTITY  = '<username>'
 ,    SECRET    = '<password>'
@@ -630,22 +634,22 @@ WITH
 
 |                                                              |                                                              |                                            |                                                              |      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------ | ------------------------------------------------------------ | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | **_\* SQL 資料<br />倉儲 \*_** &nbsp; | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | **_\* Azure Synapse<br />Analytics \*_** &nbsp; | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                                                              |                                                              |                                            |                                                              |      |
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>概觀：Azure SQL 資料倉儲
+## <a name="overview-azure-synapse-analytics"></a>概觀：Azure Synapse Analytics
 
 建立 PolyBase 的外部資料來源。 外部資料來源會用來建立連線能力，並支援下列主要使用案例：使用 [PolyBase][intro_pb] 來執行資料虛擬化和資料載入
 
 > [!IMPORTANT]  
-> 若要建立外部資料來源，以使用 SQL Database 搭配[彈性查詢][remote_eq]來查詢 SQL 資料倉儲執行個體，請參閱 [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)。
+> 若要建立外部資料來源，以使用 Azure SQL Database 搭配[彈性查詢][remote_eq]來查詢 SQL Analytics 資源，請參閱 [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)。
 
 ## <a name="syntax"></a>語法
 
 ```sql
-CREATE EXTERNAL DATA SOURCE <data_source_name>  
+CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CREDENTIAL                = <credential_name> ]
@@ -658,7 +662,7 @@ WITH
 
 ### <a name="data_source_name"></a>data_source_name
 
-指定資料來源的使用者定義名稱。 這個名稱在 SQL 資料倉儲 (SQL DW) 的資料庫內必須是唯一的。
+指定資料來源的使用者定義名稱。 這個名稱在 Azure Synapse 的 SQL 資料庫內必須為唯一。
 
 ### <a name="location--prefixpathport"></a>LOCATION = *`'<prefix>://<path[:port]>'`*
 
@@ -677,8 +681,8 @@ WITH
 
 設定位置時的其他注意事項和指引：
 
-- 預設選項是在佈建 Azure Data Lake Storage Gen 2 時使用 `enable secure SSL connections`。 當此項啟用時，您必須在選取了安全 SSL 連線時使用 `abfss`。 請注意，`abfss` 也適用於不安全的 SSL 連線。 
-- 在建立物件時，SQL 資料倉儲引擎不會驗證外部資料來源是否存在。 若要驗證，請使用外部資料來源建立外部資料表。
+- 預設選項是在佈建 Azure Data Lake Storage Gen 2 時使用 `enable secure SSL connections`。 當此項啟用時，您必須在選取了安全 SSL 連線時使用 `abfss`。 請注意，`abfss` 也適用於不安全的 SSL 連線。
+- 在建立物件時，Azure Synapse 不會驗證外部資料來源是否存在。 。 若要驗證，請使用外部資料來源建立外部資料表。
 - 查詢 Hadoop 時，請針對所有資料表使用相同的外部資料來源，以確保查詢語意一致。
 - `wasb` 是 Azure Blob 儲存體的預設通訊協定。 `wasbs` 為選擇性，但由於資料會使用安全的 SSL 連線傳送，因此建議使用。
 
@@ -706,11 +710,11 @@ WITH
 
 ## <a name="permissions"></a>權限
 
-需要有對 SQL 資料倉儲中資料庫的 CONTROL 權限。
+需要資料庫的 CONTROL 權限。
 
 ## <a name="locking"></a>鎖定
 
-在 EXTERNAL DATA SOURCE 物件上取得共用鎖定。  
+在 EXTERNAL DATA SOURCE 物件上取得共用鎖定。
 
 ## <a name="security"></a>安全性
 
@@ -843,8 +847,8 @@ CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCAT
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
 - [CREATE EXTERNAL FILE FORMAT (Transact-SQL)][create_eff]
 - [CREATE EXTERNAL TABLE (Transact-SQL)][create_etb]
-- [CREATE EXTERNAL TABLE AS SELECT (Azure SQL 資料倉儲)][create_etb_as_sel]
-- [CREATE TABLE AS SELECT (Azure SQL 資料倉儲)][create_tbl_as_sel]
+- [CREATE EXTERNAL TABLE AS SELECT (Azure Synapse Analytics)][create_etb_as_sel]
+- [CREATE TABLE AS SELECT (Azure Synapse Analytics)][create_tbl_as_sel]
 - [sys.external_data_sources (Transact-SQL)][cat_eds]
 - [使用共用存取簽章 (SAS)][sas_token]
 
@@ -885,7 +889,7 @@ CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCAT
 
 |                                                              |                                                              |                                                              |                                                         |      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------- | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL 資料<br />倉儲](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | **_\* 分析<br />平台系統 (PDW) \*_** &nbsp; |      |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | **_\* Analytics<br />Platform System (PDW) \*_** &nbsp; |      |
 |                                                              |                                                              |                                                              |                                                         |      |
 
 &nbsp;
@@ -897,7 +901,7 @@ CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCAT
 ## <a name="syntax"></a>語法
 
 ```sql
-CREATE EXTERNAL DATA SOURCE <data_source_name>  
+CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CREDENTIAL                = <credential_name> ]
@@ -960,7 +964,7 @@ WITH
 
 連線到 Hortonworks 或 Cloudera 時，請設定這個選用值。
 
-定義 `RESOURCE_MANAGER_LOCATION` 時，查詢最佳化工具會制訂成本型決策以改善效能。 MapReduce 作業可用於將計算下推到 Hadoop。 指定 `RESOURCE_MANAGER_LOCATION` 可大幅降低在 Hadoop 與 SQL 之間傳輸的資料量，而導致查詢效能獲得改善。  
+定義 `RESOURCE_MANAGER_LOCATION` 時，查詢最佳化工具會制訂成本型決策以改善效能。 MapReduce 作業可用於將計算下推到 Hadoop。 指定 `RESOURCE_MANAGER_LOCATION` 可大幅降低在 Hadoop 與 SQL 之間傳輸的資料量，而導致查詢效能獲得改善。
 
 若未指定 Resource Manager，系統會針對 PolyBase 查詢停用將計算推送到 Hadoop。
 
@@ -978,7 +982,7 @@ WITH
 
 如需支援 Hadoop 版本的完整清單，請參閱 [PolyBase 連線設定 (Transact-SQL)][connectivity_pb]。
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > 當您建立外部資料來源時，不會驗證 RESOURCE_MANAGER_LOCATION 值。 輸入不正確的值可能會導致每次嘗試下推就在執行時間發生查詢失敗，因為無法解析所提供的值。
 
 [在已啟用下推的情況下，建立參考 Hadoop 的外部資料來源](#b-create-external-data-source-to-reference-hadoop-with-push-down-enabled)提供具體範例及進一步指引。
@@ -992,7 +996,7 @@ WITH
 
 ## <a name="locking"></a>鎖定
 
-在 EXTERNAL DATA SOURCE 物件上取得共用鎖定。  
+在 EXTERNAL DATA SOURCE 物件上取得共用鎖定。
 
 ## <a name="security"></a>安全性
 
@@ -1008,7 +1012,7 @@ PolyBase 支援大多數外部資料來源的 Proxy 驗證。 建立資料庫範
 
 若要建立參考 Hortonworks 或 Cloudera Hadoop 叢集的外部資料來源，請指定 Hadoop `Namenode` 的電腦名稱或 IP 位址與連接埠。 <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
 
-```sql  
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
 (    LOCATION = 'hdfs://10.10.10.10:8050'
@@ -1021,7 +1025,7 @@ WITH
 
 指定 `RESOURCE_MANAGER_LOCATION` 選項，以便對適用於 PolyBase 查詢的 Hadoop 啟用下推計算。 啟用之後，PolyBase 會制訂成本型決策來判斷是否應該將查詢計算推送到 Hadoop。
 
-```sql  
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
 (    LOCATION                  = 'hdfs://10.10.10.10:8020'
@@ -1035,7 +1039,7 @@ WITH
 
 若要確認 Hadoop 叢集是否由 Kerberos 保護，請檢查 Hadoop core-site.xml 中 hadoop.security.authentication 屬性的值。 若要參考由 Kerberos 保護的 Hadoop 叢集，您必須指定資料庫範圍的認證，其中包含您的 Kerberos 使用者名稱與密碼。 資料庫主要金鑰用來加密資料庫範圍的認證密碼。
 
-```sql  
+```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'
 ;

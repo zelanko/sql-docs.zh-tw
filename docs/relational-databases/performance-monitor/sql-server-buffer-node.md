@@ -14,10 +14,10 @@ ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 9011394dccf472499c1c8a8bd1023b7c23009883
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987217"
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server:Buffer Node
@@ -27,7 +27,7 @@ ms.locfileid: "67987217"
 ## <a name="buffer-node-performance-objects"></a>Buffer Node 效能物件  
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Node** 效能物件。  
   
-|SQL Server Buffer Node 計數器|Description|  
+|SQL Server Buffer Node 計數器|描述|  
 |-------------------------------------|-----------------|  
 |**Database pages**|指出在這個具有資料庫內容之節點上的緩衝集區頁面數。|  
 |**Page life expectancy**|指出頁面停留在這個沒有參考之節點的緩衝集區中的秒數下限。|  

@@ -20,10 +20,10 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 261f22847c8b397d57ff5f732ea4d97091895daa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67939206"
 ---
 # <a name="enhance-merge-replication-performance"></a>增強合併式複寫效能
@@ -34,7 +34,7 @@ ms.locfileid: "67939206"
   
 -   資料列篩選與聯結篩選中使用的索引資料行。  
   
-     當您在已發行的發行項上使用資料列篩選時，請在篩選的 WHERE 子句中所使用的每個資料行上建立一個索引。 如果沒有索引， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就必須讀取資料表中的每個資料列，來判斷該資料列是否應包含於資料分割。 有了索引之後， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就可以很快地找出應該包含的資料列。 當複寫單從索引便可完全解析篩選的 WHERE 子句時，便能產生最快的處理速度。  
+     當您在已發行的發行項上使用資料列篩選時，請在篩選的 WHERE 子句中所使用的每個資料行上建立一個索引。 如果沒有索引，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就必須讀取資料表中的每個資料列來判斷該資料列是否應包含在資料分割中。 有了索引之後， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就可以很快地找出應該包含的資料列。 當複寫單從索引便可完全解析篩選的 WHERE 子句時，便能產生最快的處理速度。  
   
      為聯結篩選所使用的全部資料行加上索引也非常重要。 每次執行「合併代理程式」時，系統都會搜尋基底資料表，以決定父資料表與相關資料表中哪些資料列應該包含於資料分割。 為聯結的資料行建立索引可避免 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在「合併式代理程式」每次執行時都讀取資料表中的每個資料列。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "67939206"
   
      在合併處理期間聯結篩選五個 (含) 以上資料表可能對效能有很大影響。 建議要產生包含五個 (含) 以上資料表的聯結篩選時，考慮使用其他解決方案：  
   
-    -   不要篩選主要為下列類型的資料表：查閱資料表、小型資料表以及內容不會變更的資料表。 讓這些資料表整體成為發行集的一部分。 建議僅在必須分割給「訂閱者」的資料表之間使用聯結篩選。 如需詳細資訊，請參閱 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
+    -   不要篩選主要為下列類型的資料表：查閱資料表、小型資料表以及內容不會變更的資料表。 讓這些資料表整體成為發行集的一部分。 建議僅在必須分割給「訂閱者」的資料表之間使用聯結篩選。 如需相關資訊，請參閱 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
   
     -   如果聯結中有大量資料表，請考慮去除資料庫正規化的設計或使用對應資料表。 例如，如果業務員僅需其客戶的資料，但需要六個聯結以將客戶與業務員關聯，請考慮在客戶資料表中新增一個資料行以識別該業務員。 業務員資料有所重複，但複寫資料分割的效能益處可能要超過去除資料表正規化的成本。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "67939206"
   
 -   如果訂閱透過快速連接進行同步處理，且變更從「發行者」和「訂閱者」端送出，請使用「合併代理程式」的 **–ParallelUploadDownload** 參數。  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引進新的「合併代理程式」參數： **–ParallelUploadDownload**。 設定此參數可讓「合併代理程式」平行處理上傳至「發行者」以及下載至「訂閱者」的變更。 這對於高網路頻寬的高容量環境非常有用。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引進新的「合併代理程式」參數： **–ParallelUploadDownload**。 設定此參數可讓「合併代理程式」平行處理上傳至「發行者」以及下載至「訂閱者」的變更。 這對於高網路頻寬的高容量環境非常有用。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱  
   
     -   [處理複寫代理程式設定檔](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
@@ -115,7 +115,7 @@ ms.locfileid: "67939206"
   
 -   當您同步處理具有大量資料的資料列 (例如，具有 LOB 資料行的資料列) 時，Web 同步處理會要求額外的記憶體配置，而這樣會降低效能。 當「合併代理程式」產生 XML 訊息，而此訊息包含了過多具有大量資料的資料列時，便會發生這個情況。 如果「合併代理程式」在 Web 同步處理期間耗用太多的資源，請使用以下其中一個方法來減少在單一訊息中所傳送的資料列數目：  
   
-    -   對「合併代理程式」使用慢速連結代理程式設定檔。 如需詳細資訊，請參閱 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
+    -   對「合併代理程式」使用慢速連結代理程式設定檔。 如需相關資訊，請參閱 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
     -   將「合併代理程式」的 **-DownloadGenerationsPerBatch** 和 **-UploadGenerationsPerBatch** 參數減少到 10 個 (含) 以下。 這兩個參數的預設值為 50。  
   

@@ -13,10 +13,10 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 892c1dd28eb482eac046016c5cb59b3d711387c8
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055174"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>建立維護計畫 (維護計畫設計介面)
@@ -39,9 +39,9 @@ ms.locfileid: "74055174"
   
 -   若要建立多伺服器維護計畫，必須設定多伺服器環境，其中包含一個主要伺服器以及一或多個目標伺服器。 多伺服器維護計畫必須在主要伺服器上建立和維護。 您可以在目標伺服器上檢視這些計畫，但不能加以維護。  
   
--   **db_ssisadmin** 角色和 **dc_admin** 角色的成員可以將其權限提高為 **sysadmin**。 能夠提高權限是因為這些角色可以修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝；這些封裝可藉由使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 **sysadmin** 安全性內容由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行。 若要在執行維護計畫、資料收集組和其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝時預防此權限提高，請將執行封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業設為使用有限權限的 Proxy 帳戶，或是只將 **sysadmin** 成員加入 **db_ssisadmin** 和 **dc_admin** 角色。  
+-   **db_ssisadmin** 角色和 **dc_admin** 角色的成員可以將其權限提高為 **系統管理員**。 能夠提高權限是因為這些角色可以修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝；這些封裝可藉由使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 **sysadmin** 安全性內容由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行。 若要在執行維護計畫、資料收集組和其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝時預防此權限提高，請將執行封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業設為使用有限權限的 Proxy 帳戶，或是只將 **系統管理員** 成員加入 **db_ssisadmin** 和 **dc_admin** 角色。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  若要建立或管理維護計畫，您必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員。 只有在使用者是 **sysadmin** 固定伺服器角色的成員時，[物件總管] 才會顯示 **[維護計畫]** 節點。  
@@ -75,7 +75,7 @@ ms.locfileid: "74055174"
      **移除排程**  
      從選取的子計畫移除排程。  
   
-     **管理連接**  
+     **管理連線**  
      顯示 [管理連接]  對話方塊。 用於將其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體連接加入維護計畫。 如需有關此對話方塊的詳細資訊，請參閱下文。  
   
      **報表與記錄**  
@@ -99,13 +99,13 @@ ms.locfileid: "74055174"
   
      **[子計畫屬性]** 對話方塊有下列選項。  
   
-     **[名稱]**  
+     **名稱**  
      子計畫的名稱。  
   
      **說明**  
      子計畫的簡短描述。  
   
-     **排程**  
+     **[排程]**  
      指出將執行子計畫的排程。 按一下 **[子計畫排程]** 以開啟 **[新增作業排程]** 對話方塊。 按一下 **[移除排程]** ，從子計畫中刪除排程。  
   
      **執行身分** 清單  
@@ -172,7 +172,7 @@ ms.locfileid: "74055174"
          **運算式**  
          如果使用的是 [運算式]  、[運算式與條件約束]  或 [運算式或條件約束]  作業，請鍵入運算式。 運算式必須評估為布林。  
   
-         **測試**  
+         **Test**  
          驗證運算式。  
   
          **多個條件約束**  
@@ -242,7 +242,7 @@ ms.locfileid: "74055174"
      **[重新整理]**  
      重新整理所選取之記錄檔的檢視。 當套用任何篩選設定時， **[重新整理]** 按鈕會從目標伺服器重新讀取選取的記錄檔。  
   
-     **篩選**  
+     **Filter**  
      開啟對話方塊，以讓您指定用來篩選記錄檔的設定，例如 [連接]  、[日期]  或其他的 [一般]  篩選準則。  
   
      **搜尋**  
@@ -252,7 +252,7 @@ ms.locfileid: "74055174"
      停止載入記錄檔項目。 例如，如果遠端或離線記錄檔需要長時間才能載入，而您只要檢視最新項目時，就可以使用這個選項。  
   
      **記錄檔摘要**  
-     此資訊面板會顯示記錄檔篩選的摘要。 如果未篩選檔案，則會看到下列文字： **[未套用篩選]** 。 若篩選已套用到記錄檔，則會看到下列文字：**篩選記錄項目的準則:** \<篩選準則>。  
+     此資訊面板會顯示記錄檔篩選的摘要。 如果未篩選檔案，則會看到下列文字： **[未套用篩選]** 。 若篩選已套用到記錄檔，則會看到下列文字：**篩選記錄項目的準則：** \<篩選準則>。  
   
      **日期**  
      顯示事件的日期。  

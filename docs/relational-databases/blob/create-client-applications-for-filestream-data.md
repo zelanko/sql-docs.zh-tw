@@ -12,10 +12,10 @@ ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 385deb9dd689c6716ab8addaa64d8bf8bd62ed97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085388"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>建立 FILESTREAM 資料的用戶端應用程式
@@ -29,7 +29,7 @@ ms.locfileid: "68085388"
 -   取得 Win32 控制代碼，並且使用此控制代碼來讀取及寫入資料至 FILESTREAM BLOB。  
   
 > [!NOTE]  
->  此主題中的範例需要使用在 [建立啟用 FILESTREAM 的資料庫](../../relational-databases/blob/create-a-filestream-enabled-database.md) 和 [建立儲存 FILESTREAM 資料的資料表](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md)中建立之啟用 FILESTREAM 的資料庫和資料表。  
+>  本主題中的範例需要使用在 [建立啟用 FILESTREAM 的資料庫](../../relational-databases/blob/create-a-filestream-enabled-database.md) 和 [建立儲存 FILESTREAM 資料的資料表](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md)中建立之啟用 FILESTREAM 的資料庫和資料表。  
   
 ##  <a name="func"></a> 使用 FILESTREAM 資料的功能  
  當您使用 FILESTREAM 來儲存二進位大型物件 (BLOB) 資料時，可以使用 Win32 API 來處理檔案。 為了支援在 Win32 應用程式中使用 FILESTREAM BLOB 資料， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了下列函數和 API：  
@@ -52,7 +52,7 @@ ms.locfileid: "68085388"
  [!code-sql[FILESTREAM#FS_PathName](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_1.sql)]  
   
 ###  <a name="trx"></a> 讀取交易內容  
- 若要取得目前的交易內容，請使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) 函數。 下列範例將示範如何開始交易並讀取目前交易內容。  
+ 若要取得目前的交易內容，請使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) 函式。 下列範例將示範如何開始交易並讀取目前交易內容。  
   
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_2.sql)]  
   

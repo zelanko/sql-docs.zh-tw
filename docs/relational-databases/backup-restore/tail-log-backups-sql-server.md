@@ -18,10 +18,10 @@ ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: f069a36982a624dceee4f2be38633ec6998f1eb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041345"
 ---
 # <a name="tail-log-backups-sql-server"></a>結尾記錄備份 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "68041345"
    ##  <a name="TailLogScenarios"></a> 需要結尾記錄備份的實例  
  建議您在下列實例中進行結尾記錄備份：  
   
--   如果資料庫在線上，而且您打算執行資料庫的還原作業，請從備份記錄結尾開始。 若要避免線上資料庫的錯誤，則必須使用... [BACKUP](../../t-sql/statements/backup-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 WITH NORECOVERY 選項。  
+-   如果資料庫在線上，而且您打算執行資料庫的還原作業，請從備份記錄結尾開始。 若要避免線上資料庫的錯誤，則必須使用...[BACKUP](../../t-sql/statements/backup-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 WITH NORECOVERY 選項。  
   
 -   如果資料庫離線且無法啟動，並且需要還原資料庫，請先備份記錄結尾。 因為這段時間不會發生交易，所以使用 WITH NORECOVERY 是選擇性的。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68041345"
   
 -   **backup_set_id**  
 -   **filegroup_id**  
--   **型別**  
+-   **type**  
 -   **type_desc**  
 -   **is_readonly**  
   

@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 40f30fd646e166cc9b8db433934d22a378c907cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995623"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>判斷有效的 Database Engine 權限
@@ -92,7 +92,7 @@ SELECT DP1.name AS DatabaseRoleName,
 
 在伺服器層級、資料庫層級、結構描述層級或物件層級等等，可以授與權限。有 26 個層級 (稱為類別)。 依字母順序排列的完整類別清單如下：`APPLICATION ROLE`、`ASSEMBLY`、`ASYMMETRIC KEY`、`AVAILABILITY GROUP`、`CERTIFICATE`、`CONTRACT`、`DATABASE`、`DATABASE` `SCOPED CREDENTIAL`、`ENDPOINT`、`FULLTEXT CATALOG`、`FULLTEXT STOPLIST`、`LOGIN`、`MESSAGE TYPE`、`OBJECT`、`REMOTE SERVICE BINDING`、`ROLE`、`ROUTE`、`SCHEMA`、`SEARCH PROPERTY LIST`、`SERVER`、`SERVER ROLE`、`SERVICE`、`SYMMETRIC KEY`、`TYPE`、`USER`、`XML SCHEMA COLLECTION` (在某些類型的 SQL Server 上無法使用一些類別)。若要提供每個類別的完整資訊，則需要不同的查詢。
 
-### <a name="principals"></a>主體
+### <a name="principals"></a>Principals
 
 權限會授與主體。 主體可以是伺服器角色、登入、資料庫角色或使用者。 登入可以代表包含許多 Windows 使用者的 Windows 群組。 因為 Windows 群組不是由 SQL Server 維護，所以 SQL Server 不一定知道誰是 Windows 群組的成員。 Windows 使用者連線到 SQL Server 時，登入封包會包含使用者的 Windows 群組成員資格 Token。
 

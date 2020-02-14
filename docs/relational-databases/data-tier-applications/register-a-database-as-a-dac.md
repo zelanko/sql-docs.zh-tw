@@ -19,10 +19,10 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 726955115dc956f2ad16e39775610deb16c445a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134681"
 ---
 # <a name="register-a-database-as-a-dac"></a>將資料庫註冊為 DAC
@@ -34,7 +34,7 @@ ms.locfileid: "68134681"
 -   **若要升級 DAC，請使用下列方式：** [註冊資料層應用程式精靈](#UsingRegisterDACWizard)、[PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>開始之前  
- 註冊程序會建立 DAC 定義，以定義資料庫中的物件。 DAC 定義和資料庫的組合會形成 DAC 執行個體。 如果將資料庫註冊為 Database Engine 執行個體上的 DAC，下次從執行個體將公用程式收集組傳送到公用程式控制點時，註冊的 DAC 將會合併到 SQL Server 公用程式中。 然後 DAC 會出現在  [公用程式總管] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[部署的資料層應用程式]** 節點中，並在  詳細資料頁面中報告。  
+ 註冊程序會建立 DAC 定義，以定義資料庫中的物件。 DAC 定義和資料庫的組合會形成 DAC 執行個體。 如果將資料庫註冊為 Database Engine 執行個體上的 DAC，下次從執行個體將公用程式收集組傳送到公用程式控制點時，註冊的 DAC 將會合併到 SQL Server 公用程式中。 然後 DAC 會出現在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [公用程式總管]  的 [部署的資料層應用程式]  節點中，並在 [部署的資料層應用程式]  詳細資料頁面中報告。  
   
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
  DAC 註冊只能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本的資料庫上執行。 如果已經針對資料庫註冊 DAC，將無法執行 DAC 註冊。 例如，如果資料庫是藉由部署 DAC 所建立，您將無法執行 [註冊資料層應用程式精靈]  。  
@@ -79,7 +79,7 @@ ms.locfileid: "68134681"
   
  **應用程式名稱** - 字串，用來識別 DAC 定義的名稱，此欄位已經填入資料庫名稱。  
   
- **版本** - 可識別 DAC 版本的數值。 DAC 版本會用於 Visual Studio 中，以便識別開發人員正在處理的 DAC 版本。 部署 DAC 時，此版本會儲存在 **msdb** 資料庫中，而且您之後可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [資料層應用程式]  節點底下檢視此版本。  
+ **版本。** - 可識別 DAC 版本的數值。 DAC 版本會用於 Visual Studio 中，以便識別開發人員正在處理的 DAC 版本。 部署 DAC 時，此版本會儲存在 **msdb** 資料庫中，而且您之後可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [資料層應用程式]  節點底下檢視此版本。  
   
  **描述** - 選擇性。 說明 DAC 用途的文字。 部署 DAC 時，此描述會儲存在 **msdb** 資料庫中，而且您之後可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的 [資料層應用程式]  節點底下檢視此描述。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "68134681"
  [使用註冊資料層應用程式精靈](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>驗證物件  
- **Checking**  _SchemaName_ **.** _ObjectName_ **.** - 當精靈驗證擷取之物件的相依性，並驗證這些對於 DAC 都是有效的物件時，將會顯示進度列。 _SchemaName_ **.** _ObjectName_ 識別目前正在驗證哪一個物件。  
+ **檢查**_SchemaName_ **.** _ObjectName_ **。** - 當精靈驗證擷取之物件的相依性，並驗證這些對於 DAC 都是有效的物件時，將會顯示進度列。 _SchemaName_ **.** _ObjectName_ 識別目前正在驗證哪一個物件。  
   
  **< 上一步** - 回到 [設定屬性]  頁面來變更輸入。  
   

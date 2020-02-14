@@ -14,10 +14,10 @@ ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b595c8e2c09260e6874fc3cbaab8cc06d2a0c9df
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296165"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 套件和專案參數
@@ -50,7 +50,7 @@ ms.locfileid: "71296165"
   
  下表將列出值的類型。  
   
-|值名稱|Description|值的類型|  
+|值名稱|描述|值的類型|  
 |----------------|-----------------|-------------------|  
 |執行值|指派給封裝執行之特定執行個體的值。 此指派會覆寫所有其他值，但是只會套用至封裝執行的單一執行個體。|常值|  
 |伺服器值|在專案部署至 Integration Services 伺服器之後，指派給專案範圍內之參數的值。 此值會覆寫設計預設值。|常值或環境變數參考|  
@@ -89,7 +89,7 @@ ms.locfileid: "71296165"
   
  您也可以在 **中使用** [執行封裝] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊修改參數值。 如需詳細資訊，請參閱＜ [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)＞。  
   
- 您也可以使用 dtexec **/Parameter** 選項修改參數值。 如需詳細資訊，請參閱＜ [dtexec Utility](../integration-services/packages/dtexec-utility.md)＞。  
+ 您也可以使用 dtexec **/Parameter** 選項修改參數值。 如需詳細資訊，請參閱 [dtexec Utility](../integration-services/packages/dtexec-utility.md)。  
   
 ### <a name="parameter-validation"></a>參數驗證  
  如果無法解析參數值，則對應的封裝執行將會失敗。 若要避免失敗，您可以使用 **中的** [驗證] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]對話方塊來驗證專案及封裝。 驗證可讓您確認所有參數都有必要的值，或是可以用特定的環境參考來解析必要的值。 驗證也會檢查其他常見的封裝問題。  
@@ -112,7 +112,7 @@ ms.locfileid: "71296165"
   
 1.  開啟 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中的封裝，然後按一下 SSIS 設計師中的 **[參數]** 索引標籤。  
   
-     ![套件參數索引標籤](../integration-services/media/denali-package-parameters.gif "套件參數索引標籤")  
+     ![套件的 [參數] 索引標籤](../integration-services/media/denali-package-parameters.gif "套件的 [參數] 索引標籤")  
   
 2.  按一下工具列上的 **[加入參數]** 按鈕。  
   
@@ -120,14 +120,14 @@ ms.locfileid: "71296165"
   
 3.  在清單本身或 **[屬性]** 視窗中，輸入 **[名稱]** 、 **[資料類型]** 、 **[值]** 、 **[區分]** 以及 **[必要]** 屬性的值。 下表描述這些屬性。  
   
-    |屬性|Description|  
+    |屬性|描述|  
     |--------------|-----------------|  
-    |[屬性]|參數的名稱。|  
-    |[名稱]|參數的資料類型。|  
+    |名稱|參數名稱。|  
+    |資料類型|參數的資料類型。|  
     |預設值|在設計時指派的參數預設值。 這也稱為設計預設值。|  
-    |區分|敏感性參數值會在目錄中加密，以 Transact-SQL 或 SQL Server Management Studio 來檢視時，會顯示為 NULL 值。|  
-    |必要項|必須先指定一個值 (非設計預設值)，封裝才能執行。|  
-    |Description|為方便維護，使用參數的描述。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，於 Visual Studio 的 [屬性] 視窗中設定參數描述 (已在適用的參數視窗中選取參數)。|  
+    |敏感|敏感性參數值會在目錄中加密，以 Transact-SQL 或 SQL Server Management Studio 來檢視時，會顯示為 NULL 值。|  
+    |必要|必須先指定一個值 (非設計預設值)，封裝才能執行。|  
+    |描述|為方便維護，使用參數的描述。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，於 Visual Studio 的 [屬性] 視窗中設定參數描述 (已在適用的參數視窗中選取參數)。|  
   
     > **注意：** 當您將專案部署至目錄時，會再多幾個屬性與專案相關聯。 若要查看目錄中所有參數的所有屬性，請使用 [catalog.object_parameters &#40;SSISDB 資料庫&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 檢視。  
   
@@ -151,14 +151,14 @@ ms.locfileid: "71296165"
   
 4.  輸入 **[名稱]** 、 **[資料類型]** 、 **[值]** 、 **[區分]** 以及 **[必要]** 屬性的值。  
   
-    |屬性|Description|  
+    |屬性|描述|  
     |--------------|-----------------|  
-    |[屬性]|參數的名稱。|  
-    |[名稱]|參數的資料類型。|  
+    |名稱|參數名稱。|  
+    |資料類型|參數的資料類型。|  
     |預設值|在設計時指派的參數預設值。 這也稱為設計預設值。|  
-    |區分|敏感性參數值會在目錄中加密，以 Transact-SQL 或 SQL Server Management Studio 來檢視時，會顯示為 NULL 值。|  
-    |必要項|必須先指定一個值 (非設計預設值)，封裝才能執行。|  
-    |Description|為方便維護，使用參數的描述。 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，於 Visual Studio 的 [屬性] 視窗中設定參數描述 (已在適用的參數視窗中選取參數)。|  
+    |敏感|敏感性參數值會在目錄中加密，以 Transact-SQL 或 SQL Server Management Studio 來檢視時，會顯示為 NULL 值。|  
+    |必要|必須先指定一個值 (非設計預設值)，封裝才能執行。|  
+    |描述|為方便維護，使用參數的描述。 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，於 Visual Studio 的 [屬性] 視窗中設定參數描述 (已在適用的參數視窗中選取參數)。|  
   
 5.  儲存專案以儲存參數的變更。 參數值儲存在專案檔案的組態中。 儲存專案檔案即可將參數值的任何變更認可到磁碟。  
   
@@ -189,7 +189,7 @@ ms.locfileid: "71296165"
  **ReplTest1**  
  指定參數的預設值。 這也稱作設計預設值，以後在部署時可以覆蓋該值。  
   
- **範圍。**  
+ **範圍**  
  選取 [專案]  或 [封裝]  選項來指定參數的範圍。 專案參數可用於向專案中的一個或多個封裝提供專案接收的任何外部輸入。 封裝參數可讓您修改封裝執行，而不需要編輯和重新部署封裝。  
   
  **區分**  

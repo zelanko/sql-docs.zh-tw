@@ -21,13 +21,13 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 71a3d8f8ce28fcc8918f2058d08f99df2982be5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086708"
 ---
-# <a name="isrolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
+# <a name="is_rolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   指示指定的資料庫主體是否為指定之資料庫角色的成員。  
@@ -48,16 +48,16 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
  **'** *database_principal* **'**  
  要檢查之資料庫使用者、資料庫角色或應用程式角色的名稱。 *database_principal* 為具有 NULL 預設值的 **sysname**。 如果未指定值，結果將以目前的執行內容為依據。 如果參數包含 NULL 一詞，就會傳回 NULL。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
-|傳回值|Description|  
+|傳回值|描述|  
 |------------------|-----------------|  
 |0|*database_principal* 不是 *role* 的成員。|  
 |1|*database_principal* 是 *role* 的成員。|  
 |NULL|*database_principal* 或 *role* 無效，或是您沒有檢視角色成員資格的權限。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  請利用 IS_ROLEMEMBER 函數來判斷目前使用者是否能執行需要資料庫角色權限的動作。  
   
  若 *database_principal* 是以 Windows 登入為基礎 (例如 Contoso\Mary5)，除非 *database_principal* 已獲得授與或拒絕直接存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的權限，否則 IS_ROLEMEMBER 會傳回 NULL。  

@@ -30,10 +30,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 046ce79c989fdfb24c6615968e6bad951aeb7280
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024898"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>建立分割區資料表及索引
@@ -72,12 +72,12 @@ ms.locfileid: "68024898"
   
 -   如果分割區函數內的任何資料列含有 Null 值的分割資料行，這些資料列都會配置到最左邊的分割區。 不過，如果將 NULL 指定為界限值且指示 RIGHT，最左邊的分割區會保持空白，而且 NULL 值會放在第二個分割區。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  建立分割區資料表，需要資料庫中的 CREATE TABLE 權限及建立資料表的結構描述之 ALTER 權限。 建立分割區索引，需要建立索引的資料表或檢視的 ALTER 權限。 建立分割區資料表或索引，還需要下列任何一個附加權限：  
   
--   ALTER ANY DATASPACE 權限。 這個權限預設會授與 **系統管理員 (sysadmin)** 固定伺服器角色以及 **db_owner** 和 **db_ddladmin** 固定資料庫角色的成員。  
+-   ALTER ANY DATASPACE 權限。 這個權限預設會授與 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_ddladmin** 固定資料庫角色的成員。  
   
 -   建立分割區函數和分割區配置之資料庫的 CONTROL 或 ALTER 權限。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "68024898"
   
 1.  在物件總管中，以滑鼠右鍵按一下要建立分割區資料表的資料庫，然後選取 [屬性]  。  
   
-2.  在 [資料庫屬性 - <資料庫名稱>  ]  對話方塊的 [選取頁面]  底下，選取 [檔案群組]  。  
+2.  在 [資料庫屬性 - *database_name*]  對話方塊的 [選取頁面]  底下，選取 [檔案群組]  。  
   
 3.  按一下 **[資料列]** 底下的 **[加入]** 。 在新資料列中，輸入檔案群組名稱。  
   
@@ -241,7 +241,7 @@ ms.locfileid: "68024898"
      **訊息**  
      提供從程序所傳回的任何錯誤或警告訊息。  
   
-     **報表**  
+     **Report**  
      建立包含 [建立分割區精靈] 結果的報表。 選項為 **[檢視報表]** 、 **[將報表儲存到檔案]** 、 **[複製報表到剪貼簿]** 和 **[以電子郵件傳送報表]** 。  
   
      **檢視報表**  
@@ -384,7 +384,7 @@ ms.locfileid: "68024898"
   
 #### <a name="to-determine-the-partition-column-for-a-partitioned-table"></a>若要判斷分割資料表的分割區資料行  
   
-1.  下列查詢會傳回資料表之分割區資料行的名稱。 `PartitionTable`中建立分割區資料表或索引。  
+1.  下列查詢會傳回資料表之分割區資料行的名稱。 第 1 課：建立 Windows Azure 儲存體物件`PartitionTable`。  
   
     ```  
     SELECT   
@@ -409,7 +409,7 @@ ms.locfileid: "68024898"
     GO  
     ```  
   
- 如需詳細資訊，請參閱：  
+ 如需詳細資訊，請參閱  
   
 -   [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
   

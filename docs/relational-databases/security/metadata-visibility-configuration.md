@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba613c3736024de71a67e7cdb749960e91e89ff
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68661219"
 ---
 # <a name="metadata-visibility-configuration"></a>中繼資料可見性組態
@@ -79,7 +79,7 @@ END;
 GO  
 ```  
   
- 若要讓呼叫者能夠檢視中繼資料，您可以在適當範圍 (例如，物件層級、資料庫層級或伺服器層級) 授與呼叫者 VIEW DEFINITION 權限。 因此，在上個範例中，如果呼叫者具有 `myTable` 的 VIEW DEFINITION 權限，預存程序就會傳回一個資料列。 如需詳細資訊，請參閱 [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md) 和[授與資料庫權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
+ 若要讓呼叫者能夠檢視中繼資料，您可以在適當範圍 (例如，物件層級、資料庫層級或伺服器層級) 授與呼叫者 VIEW DEFINITION 權限。 因此，在上個範例中，如果呼叫者具有 `myTable`的 VIEW DEFINITION 權限，預存程序就會傳回一個資料列。 如需詳細資訊，請參閱 [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md) 和[授與資料庫權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
   
  您也可以修改預存程序，使其在擁有者的認證下執行。 若程序擁有者和資料表擁有者是相同的擁有者，就會套用擁有權鏈結，且程序擁有者的安全性內容就可以存取 `myTable`的中繼資料。 在這種狀況下，下列程式碼會將中繼資料的資料列傳回給呼叫者。  
   

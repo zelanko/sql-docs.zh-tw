@@ -10,12 +10,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 56a055c0528bea03419c1a56dd89efb5fbfa1753
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 6dffa188f5641510f2ad47c17af3b40ad16a3ec9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056747"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941155"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>選擇資料庫引擎升級方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "74056747"
   
 -   **系統物件：** 某些應用程式會相依於超出單一使用者資料庫範圍之外的資訊、實體和/或物件。 一般而言，應用程式相依於 master 和 msdb 資料庫以及使用者資料庫。 如果有資料庫正確運作所需的任何項目儲存在使用者資料庫外部，則必須設法讓目的地伺服器執行個體也能提供。 例如，應用程式的登入在 master 資料庫中儲存為中繼資料，就必須在目的地伺服器上加以重新建立。 若應用程式或資料庫維護計畫相依於 SQL Server Agent 作業，而其中繼資料儲存於 msdb 資料庫，則必須在目的地伺服器執行個體上重新建立那些作業。 伺服器層級觸發程序的中繼資料也同樣儲存在 master 中。  
  
-   當您將應用程式的資料庫移動到其他伺服器執行個體時，您必須在目的地伺服器執行個體上重新建立 master 和 msdb 中相依實體及物件的所有中繼資料。 例如，如果資料庫應用程式使用伺服器層級觸發程序，僅在新系統上附加或還原資料庫是不夠的。 除非您以手動方式為 master 資料庫中的那些觸發程序重新建立中繼資料，否則資料庫無法如預期一般運作。 如需詳細資訊，請參閱[在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
+   當將應用程式的資料庫移至其他伺服器執行個體時，您必須在目的地伺服器執行個體上重新建立 master 和 msdb 中相依實體及物件的所有中繼資料。 例如，如果資料庫應用程式使用伺服器層級觸發程序，僅在新系統上附加或還原資料庫是不夠的。 除非您以手動方式為 master 資料庫中的那些觸發程序重新建立中繼資料，否則資料庫無法如預期一般運作。 如需詳細資訊，請參閱[在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
 -   **儲存在 MSDB 中的 Integration Services 套件：** 如果您將套件儲存在 MSDB 中，就必須使用 [dtutil 公用程式](../../integration-services/dtutil-utility.md)來編寫那些套件的指令碼，或是將它們重新佈署到新的伺服器。 您必須先將封裝升級成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然後才能在新的伺服器上使用封裝。 如需詳細資訊，請參閱 [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md)。  
   

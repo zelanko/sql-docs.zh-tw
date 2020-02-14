@@ -13,10 +13,10 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d6c0aa05f095907b39cacf39f65dfc3b09d9786e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907192"
 ---
 # <a name="configure-an-oracle-publisher"></a>設定 Oracle 發行者
@@ -27,7 +27,7 @@ ms.locfileid: "72907192"
   
 2.  對於您發行的資料表，則在每個資料表上直接 (不透過角色) 將 SELECT 權限授與您在步驟一中建立的 Oracle 管理使用者。  
   
-3.  在「 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」上安裝 Oracle 用戶端軟體和 OLE DB 提供者，然後停止並重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 如果「散發者」在 64 位元平台上執行，則必須使用 Oracle OLE DB 提供者的 64 位元版本。  
+3.  在「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」上安裝 Oracle 用戶端軟體和 OLE DB 提供者，然後停止並重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 如果「散發者」在 64 位元平台上執行，則必須使用 Oracle OLE DB 提供者的 64 位元版本。  
   
 4.  在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端將 Oracle 資料庫設為「發行者」。  
 
@@ -51,7 +51,7 @@ ms.locfileid: "72907192"
 >  您必須是 **sysadmin** 固定伺服器角色的成員，才能啟用「發行者」或「散發者」並建立 Oracle 發行集或從 Oracle 發行集建立訂閱。  
   
 ## <a name="creating-the-replication-administrative-user-schema-within-the-oracle-database"></a>在 Oracle 資料庫中建立複寫管理的使用者結構描述  
- 複寫代理程式連接到 Oracle 資料庫並在您必須建立的使用者結構描述內容中執行作業。 此結構描述必須被授與許多權限，這些權限會列示在下一節中。 此結構描述在「Oracle 發行者」上擁有 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫處理所建立的所有物件，但公用同義字 **MSSQLSERVERDISTRIBUTOR**除外。 如需 Oracle 資料庫中建立的物件的詳細資訊，請參閱＜ [Objects Created on the Oracle Publisher](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)＞。  
+ 複寫代理程式連接到 Oracle 資料庫並在您必須建立的使用者結構描述內容中執行作業。 此結構描述必須被授與許多權限，這些權限會列示在下一節中。 此結構描述在「Oracle 發行者」上擁有 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫處理所建立的所有物件，但公用同義字 **MSSQLSERVERDISTRIBUTOR** 除外。 如需 Oracle 資料庫中建立的物件的詳細資訊，請參閱＜ [Objects Created on the Oracle Publisher](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)＞。  
   
 > [!NOTE]  
 >  用 **CASCADE** 選項來卸除 **MSSQLSERVERDISTRIBUTOR** 公用同義字和設定的 Oracle 複寫使用者，會從「Oracle 發行者」移除所有的複寫物件。  
@@ -89,7 +89,7 @@ ms.locfileid: "72907192"
   
  在 Oracle Universal Installer 中，您必須提供下列資訊：  
   
-|[資訊]|Description|  
+|資訊|描述|  
 |-----------------|-----------------|  
 |Oracle Home|這是到 Oracle 軟體之安裝目錄的路徑。 接受預設路徑 (C:\oracle\ora90 或類似路徑) 或輸入其他路徑。 如需有關 Oracle Home 的詳細資訊，請參閱本主題後面的「Oracle Home 的注意事項」。|  
 |Oracle Home 名稱|Oracle Home 路徑的別名。|  
@@ -97,7 +97,7 @@ ms.locfileid: "72907192"
   
  Oracle Universal Installer 完成之後，請使用 Net Configuration Assistant 設定網路連接性。 您必須提供四項資訊來設定網路連接性。 Oracle 資料庫管理員會在設定資料庫與接聽程式時設定網路組態，如果您沒有此一資訊，管理員應該能夠提供。 您必須執行下列工作：  
   
-|動作|Description|  
+|動作|描述|  
 |------------|-----------------|  
 |識別資料庫|有兩種方法可以識別資料庫。 第一種方法使用 Oracle 系統識別碼 (SID)，每個 Oracle 版本都有。 第二種方法使用服務名稱，從 Oracle 8.0 版開始提供。 這兩種方法都使用在建立資料庫時設定的值，重要的是，用戶端網路組態必須使用相同於管理員在設定資料庫接聽程式時，所使用的命名方法。|  
 |識別資料庫的網路別名|您必須指定一個用於存取 Oracle 資料庫的網路別名。 在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端將 Oracle 資料庫視為「發行者」時也要提供此別名。 網路別名實質上是指向在建立資料庫時設定之遠端 SID 或服務名稱的指標；不同的 Oracle 版本與產品中所使用的稱呼各有不同，包括網路服務名稱 (Net Service Name) 和 TNS 別名 (TNS Alias)。 您登入時，SQL*Plus 會提示以「Host String」參數輸入這個別名。|  
@@ -145,7 +145,7 @@ ms.locfileid: "72907192"
   
 ## <a name="see-also"></a>另請參閱  
  [Oracle 發行者的管理考量](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
- [Oracle 發行者的資料類型對應](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
+ [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Oracle 發行相關術語字彙](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
  [Oracle 發行概觀](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   

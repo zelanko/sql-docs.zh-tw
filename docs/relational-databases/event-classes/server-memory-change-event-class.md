@@ -13,19 +13,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b039f0cb4ff6aa944adf981ad5fa26e1cc4cbeea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67911176"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  當  記憶體使用量增加或減少 1 MB 或最大伺服器記憶體的 5% (以較大者為主)，就會發生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory usage has increased or decreased by either 1 megabyte (MB) or 5 percent of the maximum server memory, whichever is greater.  
+  當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體使用量增加或減少 1 MB 或最大伺服器記憶體的 5% (以較大者為主)，就會發生 **Server Memory Change** 事件類別。  
   
 ## <a name="server-memory-change-event-class-data-columns"></a>Server Memory Change 事件類別資料行  
   
-|資料行名稱|資料類型|Description|資料行識別碼|是|  
+|資料行名稱|資料類型|描述|資料行識別碼|是|  
 |----------------------|---------------|-----------------|---------------|---------|  
 |**EventClass**|**int**|事件類型 = 81。|27|否|  
 |**EventSequence**|**int**|要求中的給定事件順序。|51|否|  

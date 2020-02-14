@@ -17,10 +17,10 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c6076e4c02ccb4c91c88a22df7cd7c4a50b0f877
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295122"
 ---
 # <a name="debugging-data-flow"></a>偵錯資料流程
@@ -28,7 +28,7 @@ ms.locfileid: "71295122"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」提供許多功能和工具，讓您用來疑難排解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中的資料流程。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師包含許多功能和工具，可讓您用來對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件中的資料流程進行疑難排解。  
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」會提供資料檢視器。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "71295122"
   
 #### <a name="to-add-a-data-viewer"></a>若要加入資料檢視器  
   
--   [將資料檢視器加入資料流程](#add_viewer)  
+-   [將資料檢視器新增到資料流程](#add_viewer)  
   
 ## <a name="row-counts"></a>資料列計數  
  經過某個路徑傳送的資料列數目，會顯示在「 **設計師」中** [資料流程] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 索引標籤之設計介面上的該路徑旁邊。 隨著資料不斷經由路徑移動，該數目會定期更新。  
@@ -65,7 +65,7 @@ ms.locfileid: "71295122"
   
  下表描述色彩編碼。  
   
-|Color|Description|  
+|Color|描述|  
 |-----------|-----------------|  
 |無色彩|正在等候由資料流程引擎呼叫。|  
 |黃色|正在執行轉換、擷取資料或載入資料。|  
@@ -73,7 +73,7 @@ ms.locfileid: "71295122"
 |紅色|已執行但發生錯誤。|  
 
 ## <a name="analysis-of-data-flow"></a>資料流程分析
-  您可以使用 [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) **SSISDB** 資料庫檢視，分析封裝的資料流程。 每當資料流程元件傳送資料至下游元件，此檢視就會顯示一個資料列。 您可以使用這項資訊深入了解傳送至每個元件的資料列。  
+  您可以使用 [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) **SSISDB** 資料庫檢視來分析套件的資料流程。 每當資料流程元件傳送資料至下游元件，此檢視就會顯示一個資料列。 您可以使用這項資訊深入了解傳送至每個元件的資料列。  
   
 > [!NOTE]  
 >  您必須將記錄層次設定為 [詳細資訊]  ，以透過 catalog.execution_data_statistics 檢視來擷取資訊。  
@@ -143,7 +143,7 @@ order by source_component_name desc
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中，按一下 [資料流程]  索引標籤。  
+3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中，按一下 [資料流程]  索引標籤。  
   
 4.  按兩下要在其中設定錯誤輸出的資料流程元件，並依據此元件，執行下列其中一個步驟：  
   
@@ -168,7 +168,7 @@ order by source_component_name desc
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中，按一下 [資料流程]  索引標籤。  
+3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中，按一下 [資料流程]  索引標籤。  
   
 4.  以滑鼠右鍵按一下要設定其錯誤輸出資料行的元件，並按一下 [顯示進階編輯器]  。  
   
@@ -179,7 +179,7 @@ order by source_component_name desc
     > [!NOTE]  
     >  資料行的清單包括元件輸入中的資料行、上一個錯誤輸出加入的 **ErrorCode** 和 **ErrorColumn** 資料行，以及此元件加入的 **ErrorCode** 和 **ErrorColumn** 資料行。  
   
-7.  按一下 **[確定].**  
+7.  按一下 [確定]  。  
   
 8.  若要儲存已更新的封裝，請按一下 [檔案]  功能表上的 [儲存選取項目]  。  
 
@@ -272,10 +272,10 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
 ### <a name="performance-consideration"></a>效能考量  
  啟用詳細資訊記錄層次和加入資料點選會致使資料整合方案執行更多 I/O 作業。 因此，建議您只有在進行疑難排解時才加入資料點選。  
   
-### <a name="video"></a>視訊  
+### <a name="video"></a>影片  
  這部 [TechNet 上的影片](https://technet.microsoft.com/sqlserver/dn600163) 示範了如何在 SQL Server 2012 SSISDB 目錄中加入/使用資料點選，協助您以程式設計方式對封裝進行偵錯及在執行階段擷取部分結果。 該影片也將討論如何列出/移除這些資料點選，以及在 SSIS 封裝中使用資料點選的最佳作法。  
  
 ## <a name="see-also"></a>另請參閱  
- [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)  
+ [資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
   
   

@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72252044"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
@@ -82,7 +82,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  這是決定替代值之間距與對齊的程式碼。  
   
-|程式碼|前置詞或對齊|Description|  
+|程式碼|前置詞或對齊|描述|  
 |----------|-----------------------------|-----------------|  
 |- (減號)|靠左對齊|給定欄位寬度內的引數值靠左對齊。|  
 |+ (加號)|符號前置詞|如果值為帶正負號的類型，則在引數值前加上正號 (+) 或負號 (-)。|  
@@ -120,7 +120,7 @@ RAISERROR ( { msg_str | @local_variable }
 >  這些類型規格的基礎乃是原本為 C 標準程式庫中 **printf** 函數所定義的規格。 用於 RAISERROR 訊息字串的類型規格對應到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料類型，而用於 **printf** 的規格對應到 C 語言資料類型。 當 [!INCLUDE[tsql](../../includes/tsql-md.md)] 沒有類似於相關聯 C 資料類型的資料類型時，RAISERROR 不支援用於 **printf** 的類型規格。 例如，RAISERROR 不支援指標的 *%p* 規格，因為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 沒有指標資料類型。  
   
 > [!NOTE]  
->  若要轉換 [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** 資料型別的值，請指定 **%I64d**。  
+>  若要將某個值轉換為 [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** 資料類型，請指定 **%I64d**。  
   
  *\@local_variable*  
  這是任何有效字元資料類型的變數，其中包含採用與 *msg_str* 相同方法格式化的字串。 *\@local_variable* 必須是 **char** 或 **varchar**，或者必須能夠隱含轉換為這兩種資料類型。  
@@ -157,13 +157,13 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  *選項*  
  這是錯誤的自訂選項，可以是下表中的值之一。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|LOG|在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的錯誤記錄檔和應用程式記錄檔中記錄錯誤。 記錄在錯誤記錄檔中的錯誤目前最大限制為 440 位元組。 只有系統管理員 (sysadmin) 固定伺服器角色成員，或具有 ALTER TRACE 權限的使用者，才可以指定 WITH LOG。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
-|NOWAIT|立即傳送訊息給用戶端。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
-|SETERROR|不論嚴重性層級為何，都將 @@ERROR 和 ERROR_NUMBER 值設定為 *msg_id* 或 50000。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|記錄|在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的錯誤記錄檔和應用程式記錄檔中記錄錯誤。 記錄在錯誤記錄檔中的錯誤目前最大限制為 440 位元組。 只有系統管理員 (sysadmin) 固定伺服器角色成員，或具有 ALTER TRACE 權限的使用者，才可以指定 WITH LOG。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|NOWAIT|立即傳送訊息給用戶端。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|SETERROR|不論嚴重性層級為何，都將 @@ERROR 和 ERROR_NUMBER 值設定為 *msg_id* 或 50000。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  由 RAISERROR 所產生的錯誤，運作方式和由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 程式碼所產生的錯誤相同。 由 RAISERROR 指定的值是由 ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY、ERROR_STATE 和 @@ERROR 等系統函數所報告。 在 TRY 區塊以 11 或更高的嚴重性來執行 RAISERROR 時，RAISERROR 會傳送控制項到相關聯的 CATCH 區塊。 如果在下列情況下執行 RAISERROR，會將錯誤傳回給呼叫端：  
   
 -   在任何 TRY 區塊的範圍外執行。  

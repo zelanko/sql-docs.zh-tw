@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: de565a5d34ddbf8388e2c20a564bc8c872a0a1c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140805"
 ---
 # <a name="cursors"></a>資料指標
@@ -89,7 +89,7 @@ API 指標可支援 OLE DB 和 ODBC 中的 API 資料指標函數。 API 伺服�
 開啟資料指標時，索引鍵集驅動資料指標中的成員資格和資料列順序是固定的。 索引鍵集驅動資料指標是由一組唯一的識別碼、索引鍵 (稱為索引鍵集) 所控制。 索引鍵是從結果集中唯一識別資料列的一組資料行建立的。 索引鍵集是一組取自所有資料列的索引鍵值，這些資料列會在開啟資料指標時對 `SELECT` 陳述式加以限定。 開啟資料指標時，會在 **tempdb** 中建立索引鍵集驅動資料指標的索引鍵集。  
   
 ### <a name="dynamic"></a>動態  
-動態資料指標是靜態資料指標的相反。 捲動資料指標時，動態資料指標會反映其結果集中資料列的所有變更。 每回擷取時結果集之中資料列的資料值、順序和成員均會變動。 您可以透過資料指標看到所有使用者執行的全部 `UPDATE`、`INSERT` 和 `DELETE` 陳述式作業。 若是藉由使用 API 函數 (如：**SQLSetPos** 或 [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE CURRENT OF` 子句) 的資料指標來進行更新，您會馬上看到更新。 至於資料指標外的更新必須經過認可後才看得見，除非資料指標交易隔離等級設定為讀取未認可。 如需隔離等級的詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。 
+動態資料指標是靜態資料指標的相反。 捲動資料指標時，動態資料指標會反映其結果集中資料列的所有變更。 每回擷取時結果集之中資料列的資料值、順序和成員均會變動。 您可以透過資料指標看到所有使用者執行的全部 `UPDATE`、`INSERT` 和 `DELETE` 陳述式作業。 若是藉由使用 API 函式 (例如 **SQLSetPos**) 或 [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE CURRENT OF` 子句的資料指標來進行更新，則會馬上看到更新。 至於資料指標外的更新必須經過認可後才看得見，除非資料指標交易隔離等級設定為讀取未認可。 如需隔離等級的詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。 
  
 > [!NOTE]
 > 動態資料指標計劃一律不會使用空間索引。  

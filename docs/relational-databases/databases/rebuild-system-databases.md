@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: abec4388ccc56d2d643794cc354167359efa15f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e31a24a949968e3d17b50c32b42e92cdd0997483
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127298"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516549"
 ---
 # <a name="rebuild-system-databases"></a>重建系統資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68127298"
   
      [限制事項](#Restrictions)  
   
-     [必要條件](#Prerequisites)  
+     [先決條件](#Prerequisites)  
   
 -   **程序：**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68127298"
     SELECT * FROM sys.configurations;  
     ```  
   
-2.  記錄所有套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 Service Pack 和 Hotfix 以及目前的定序。 您必須在重建系統資料庫之後重新套用這些更新。  
+2.  記錄所有套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 Hotfix 以及目前的定序。 您必須在重建系統資料庫之後重新套用這些 Hotfix。  
   
     ```  
     SELECT  
@@ -100,21 +100,21 @@ ms.locfileid: "68127298"
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName /SQLSYSADMINACCOUNTS=accounts [ /SAPWD= StrongPassword ] [ /SQLCOLLATION=CollationName]**  
   
-    |參數名稱|Description|  
+    |參數名稱|描述|  
     |--------------------|-----------------|  
     |/QUIET 或 /Q|指定安裝程式的執行不使用任何使用者介面。|  
     |/ACTION=REBUILDDATABASE|指定安裝程式要重新建立系統資料庫。|  
     |/INSTANCENAME=*InstanceName*|這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的名稱。 若為預設執行個體，請輸入 MSSQLSERVER。|  
     |/SQLSYSADMINACCOUNTS=*accounts*|指定要加入至系統管理員 ( **sysadmin** ) 固定伺服器角色的 Windows 群組或個別帳戶。 指定多個帳戶時，請以空格隔開這些帳戶。 例如，您可以輸入 **BUILTIN\Administrators MyDomain\MyUser**。 當您要指定的帳戶在帳戶名稱中包含空白時，請以雙引號括住該帳戶。 例如，輸入 **NT AUTHORITY\SYSTEM**。|  
-    |[ /SAPWD=*StrongPassword* ]|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** 帳戶的密碼。 如果執行個體使用混合驗證 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 驗證) 模式，這就是必要的參數。<br /><br /> **&#42;&#42; 安全性注意事項 &#42;&#42;** **sa** 帳戶是已知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶，且經常是惡意使用者的攻擊目標。 請務必針對 **sa** 登入使用一個增強式密碼。<br /><br /> 請勿針對 Windows 驗證模式指定此參數。|  
-    |[ /SQLCOLLATION=*CollationName* ]|指定新的伺服器層級定序。 這個參數是選擇性的。 如果沒有指定，就會使用伺服器的目前定序。<br /><br /> **\*\* 重要事項 \*\*** 變更伺服器層級定序並不會變更現有使用者資料庫的定序。 所有新建立的使用者資料庫預設都會使用新的定序。<br /><br /> 如需詳細資訊，請參閱 [設定或變更伺服器定序](../../relational-databases/collations/set-or-change-the-server-collation.md)。|  
-    |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|指定 tempdb 資料檔案數目。 此值可以增加為 8 個或與核心數目相同 (兩者取其較高者)。<br /><br /> 預設值︰8 個或核心數目 (兩者取其較低者)。|  
-    |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|指定每個 tempdb 資料檔案的初始大小 (MB)。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值︰8|  
-    |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|指定每個 tempdb 資料檔案的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值︰64|  
-    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|指定 tempdb 記錄檔的初始大小 (MB)。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值︰8.<br /><br /> 允許的範圍：最小值 = 8，最大值 = 1024。|  
-    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|指定 tempdb 記錄檔的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值︰64<br /><br /> 允許的範圍：最小值 = 8，最大值 = 1024。|  
-    |[ /SQLTEMPDBDIR=Directories ]|指定 tempdb 資料檔案的目錄。 指定多個目錄時，請以空格隔開這些目錄。 若指定多個目錄，tempdb 資料檔案將以循環配置資源方式跨多個目錄存放。<br /><br /> 預設值︰系統資料目錄|  
-    |[ /SQLTEMPDBLOGDIR=Directory ]|指定 tempdb 記錄檔的目錄。<br /><br /> 預設值︰系統資料目錄|  
+    |[ /SAPWD=*StrongPassword* ]|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **A** 帳戶的密碼。 如果執行個體使用混合驗證 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 驗證) 模式，這就是必要的參數。<br /><br /> **&#42;&#42; 安全性注意事項 &#42;&#42;** **sa** 帳戶是已知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶，且經常是惡意使用者的攻擊目標。 請務必針對 **sa** 登入使用一個增強式密碼。<br /><br /> 請勿針對 Windows 驗證模式指定此參數。|  
+    |[ /SQLCOLLATION=*CollationName* ]|指定新的伺服器層級定序。 這是選擇性參數。 如果沒有指定，就會使用伺服器的目前定序。<br /><br /> **\*\* 重要事項 \*\*** 變更伺服器層級定序並不會變更現有使用者資料庫的定序。 所有新建立的使用者資料庫預設都會使用新的定序。<br /><br /> 如需詳細資訊，請參閱 [設定或變更伺服器定序](../../relational-databases/collations/set-or-change-the-server-collation.md)。|  
+    |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|指定 tempdb 資料檔案數目。 此值可以增加為 8 個或與核心數目相同 (兩者取其較高者)。<br /><br /> 預設值：8 個或核心數目 (兩者取其較低者)。|  
+    |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|指定每個 tempdb 資料檔案的初始大小 (MB)。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值：8|  
+    |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|指定每個 tempdb 資料檔案的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值：64|  
+    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|指定 tempdb 記錄檔的初始大小 (MB)。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值：8.<br /><br /> 允許的範圍：最小值 = 8，最大值 = 1024。|  
+    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|指定 tempdb 記錄檔的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值：64<br /><br /> 允許的範圍：最小值 = 8，最大值 = 1024。|  
+    |[ /SQLTEMPDBDIR=Directories ]|指定 tempdb 資料檔案的目錄。 指定多個目錄時，請以空格隔開這些目錄。 若指定多個目錄，tempdb 資料檔案將以循環配置資源方式跨多個目錄存放。<br /><br /> 預設值：系統資料目錄|  
+    |[ /SQLTEMPDBLOGDIR=Directory ]|指定 tempdb 記錄檔的目錄。<br /><br /> 預設值：系統資料目錄|  
   
 3.  當安裝程式完成系統資料庫的重建作業時，它就會返回命令提示字元，而且不會顯示任何訊息。 您可以檢查 Summary.txt 記錄檔來確認此程序是否順利完成。 這個檔案位於 C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Logs。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "68127298"
 -   確認伺服器範圍的組態值符合您先前記錄的值。  
   
 ##  <a name="Resource"></a> 重建資源資料庫  
- 下列程序會重建 resource 系統資料庫。 當您重建 resource 資料庫時，所有 Service Pack 和 Hotfix 都會遺失，因此必須重新套用。  
+ 下列程序會重建 resource 系統資料庫。 當您重建資源資料庫時，所有 Hotfix 都會遺失，因此必須重新套用。  
   
 #### <a name="to-rebuild-the-resource-system-database"></a>若要重建 resource 系統資料庫：  
   
@@ -166,7 +166,7 @@ ms.locfileid: "68127298"
   
 2.  使用命令 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 從命令列啟動 `NET START MSSQLSERVER /T3608`  
   
-     如需詳細資訊，請參閱 [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+     如需詳細資訊，請參閱 [启动、停止、暂停、继续、重启 SQL Server 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 3.  在另一個命令列視窗中，執行下列命令卸離 **msdb** 資料庫，並且將 *\<servername>* 取代為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體：`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
@@ -180,7 +180,7 @@ ms.locfileid: "68127298"
   
 7.  使用 [Windows 記事本] 開啟 **instmsdb.out** 檔，並檢查輸出是否有任何錯誤。  
   
-8.  在執行個體上重新套用任何已安裝的 Service Pack 或 Hotfix。  
+8.  在執行個體上重新套用任何已安裝的 Hotfix。  
   
 9. 重新建立儲存在 **msdb** 資料庫中的使用者內容，例如工作、警示等。  
   

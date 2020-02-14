@@ -20,10 +20,10 @@ ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dd8ad58e96956e1ab0f7b542bab4168272b3f968
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141287"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
@@ -58,7 +58,7 @@ _size_ 是使用 **text** 或 **image** 資料類型時的位元組數目。 它
 HOLDLOCK  
 造成讀取文字值的鎖定，直到交易結束為止。 其他使用者可以讀取值，但無法加以修改。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 請使用 [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) 函式來取得有效的 _text\_ptr_ 值。 TEXTPTR 會傳回指定資料列中 **text**、**ntext** 或 **image** 資料行的指標。 如果查詢傳回多個資料列，TEXTPRT 也可以傳回指向查詢所傳回最後一個資料列之 **text**、**ntext** 或 **image** 資料行的指標。 由於 TEXTPTR 會傳回 16 位元組二進位字串，我們建議您宣告一個本機變數來存放文字指標，再搭配 READTEXT 來使用這個變數。 如需有關宣告本機變數的詳細資訊，請參閱 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。  
   
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，同資料列文字指標有可能存在而無效。 如需有關 **text in row** 選項的詳細資訊，請參閱 [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。 如需有關讓文字指標變成無效的詳細資訊，請參閱 [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)。  

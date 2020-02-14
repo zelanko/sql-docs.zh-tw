@@ -15,10 +15,10 @@ ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4dcb3d5669e62836f859252749469703bf26d29e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043877"
 ---
 # <a name="database-mirroring-witness"></a>資料庫鏡像見證
@@ -26,7 +26,7 @@ ms.locfileid: "68043877"
   若要支援自動容錯移轉，就必須在高安全性模式下設定資料庫鏡像工作階段，而且它也會包含第三個伺服器執行個體，稱為「見證」  。 見證是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的選擇性執行個體，可以讓在高安全性模式工作階段中的鏡像伺服器辨別是否啟動自動容錯移轉。 與兩位夥伴不同的是，見證並不是為資料庫服務。 支援自動容錯移轉是見證的唯一角色。  
   
 > [!NOTE]  
->  在高效能模式中，見證可能會對可用性有負面影響。 如果見證是設定供資料庫鏡像工作階段使用，則主體伺服器必須至少連接到一個其他伺服器執行個體、鏡像伺服器或見證，或者兩者都連接。 否則，資料庫會變得無法使用，而又不可能強制服務 (可能會有資料遺失)。 因此，對於高效能模式，強烈建議您永遠將見證設定為 OFF。 如需見證對高效能模式影響的相關資訊，請參閱 [資料庫鏡像作業模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
+>  在高效能模式中，見證可能會對可用性有負面影響。 如果見證是設定供資料庫鏡像工作階段使用，則主體伺服器必須至少連接到一個其他伺服器執行個體、鏡像伺服器或見證，或者兩者都連接。 否則，資料庫會變得無法使用，而又不可能強制服務 (可能會有資料遺失)。 因此，對於高效能模式，強烈建議您永遠將見證設定為 OFF。 如需見證對高效能模式影響的資訊，請參閱 [資料庫鏡像作業模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
   
  下圖將說明含有見證的高安全性模式工作階段。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68043877"
 ##  <a name="InMultipleSessions"></a> 在多個工作階段中使用見證  
  特定伺服器執行個體可以做為並行資料庫鏡像工作階段中的見證，每個不同的資料庫都有一個工作階段。 不同的工作階段可以有不同的夥伴。 下圖示範做為兩個有不同夥伴的資料庫鏡像工作階段之見證的伺服器執行個體。  
   
- ![作為 2 個資料庫之見證的伺服器執行個體](../../database-engine/database-mirroring/media/dbm-witness-in-2-sessions.gif "作為 2 個資料庫之見證的伺服器執行個體")  
+ ![作為 2 個資料庫見證的伺服器執行個體](../../database-engine/database-mirroring/media/dbm-witness-in-2-sessions.gif "作為 2 個資料庫見證的伺服器執行個體")  
   
  單一伺服器執行個體也可以同時做為某些工作階段的見證與其他工作階段的夥伴。 但是實務上，伺服器執行個體通常是做為見證或夥伴。 這是因為夥伴需要配備足夠硬體的精密電腦以支援實際執行的資料庫，而見證則可以在支援 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的任何可用 Windows 系統上執行。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "68043877"
   
 -   [新增或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
--   [使用 Windows 驗證加入資料庫鏡像見證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
+-   [使用 Windows 驗證新增資料庫鏡像見證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
  **移除見證**  
   

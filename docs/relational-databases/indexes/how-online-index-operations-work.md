@@ -19,10 +19,10 @@ ms.author: mikeray
 ms.prod_service: database-engine, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2dd4970cc25e382706f63ed94b7bcc3700549d9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909748"
 ---
 # <a name="how-online-index-operations-work"></a>線上索引作業如何運作
@@ -62,7 +62,7 @@ ms.locfileid: "67909748"
 |階段|來源活動|來源鎖定|  
 |-----------|---------------------|------------------|  
 |準備<br /><br /> 短期階段|準備建立新的空索引結構的系統中繼資料。<br /><br /> 定義資料表的快照集。 亦即，會使用資料列版本設定來提供交易層級的讀取一致性。<br /><br /> 並行使用者對來源的寫入作業會短時間封鎖。<br /><br /> 除了建立多個非叢集索引，不允許並行的 DDL 作業。|資料表上是 S (共用)*<br /><br /> IS (意圖共用)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
-|建置<br /><br /> 主要階段|在大量載入作業中，資料會被掃描、排序、合併且插入目標。<br /><br /> 並行使用者的選取、插入、更新和刪除作業，會同時套用到預先存在的索引和任何建立的新索引。|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
+|Build<br /><br /> 主要階段|在大量載入作業中，資料會被掃描、排序、合併且插入目標。<br /><br /> 並行使用者的選取、插入、更新和刪除作業，會同時套用到預先存在的索引和任何建立的新索引。|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
 |完成<br /><br /> 短期階段|所有無法認可的更新交易必須在此階段開始之前完成。 根據所取得的鎖定，所有新的使用者讀取或寫入交易會短時間封鎖，直到此階段完成為止。<br /><br /> 系統中繼資料會更新，以目標取代來源。<br /><br /> 如果需要來源，會卸除來源。 例如，在重建或卸除叢集索引之後。|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> 如果正在建立非叢集索引，資料表上是 S。\*<br /><br /> 如果卸除任何來源結構 (索引或資料表)，則是 SCH-M (結構描述修改)。\*|  
   
  \* 索引作業會等待任何未認可的更新交易先完成，然後才取得資料表的 S 鎖定或 SCH-M 鎖定。  
@@ -77,8 +77,8 @@ ms.locfileid: "67909748"
 |階段|目標活動|目標鎖定|  
 |-----------|---------------------|------------------|  
 |準備|已建立新索引，並且設為唯寫。|IS|  
-|建置|從來源插入資料。<br /><br /> 套用要套用到來源的使用者修改 (插入、更新、刪除)。<br /><br /> 此活動對使用者而言不需要做任何變更。|IS|  
-|完成|更新索引中繼資料。<br /><br /> 將索引設為讀取/寫入狀態。|S<br /><br /> 中的多個<br /><br /> SCH-M|  
+|Build|從來源插入資料。<br /><br /> 套用要套用到來源的使用者修改 (插入、更新、刪除)。<br /><br /> 此活動對使用者而言不需要做任何變更。|IS|  
+|完成|更新索引中繼資料。<br /><br /> 將索引設為讀取/寫入狀態。|S<br /><br /> 或<br /><br /> SCH-M|  
   
  直到索引作業完成，使用者發出的 SELECT 陳述式才能存取目標。  
   

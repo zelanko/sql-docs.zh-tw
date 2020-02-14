@@ -23,18 +23,19 @@ ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2fa9c7a4ea14154315ef30ae8b193360b34ffda9
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 82876d2f0e749163ced821bdc24797a6f71b6e7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75257037"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831582"
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (萬用字元 - 要比對的字元) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 符合方括號 `[ ]` 之間所指定之指定範圍或集合內的任何單一字元。 這些萬用字元可用於包含模式比對 (如 `LIKE` 和 `PATINDEX`) 的字串比較中。  
-  
+
+ 
 ## <a name="examples"></a>範例  
 ### <a name="a-simple-example"></a>A：簡單範例   
 下列範例會傳回開頭為字母 `m` 的名稱。 `[n-z]` 會指定第二個字母必須是範圍從 `n` 到 `z` 中的某一個字母。 百分比萬用字元 `%` 允許開頭為字元 3 的任何字元或沒有字元。 `model` 和 `msdb` 資料庫符合此原則。 `master` 資料庫不符合準則，並會從結果集中加以排除。
@@ -68,7 +69,7 @@ INNER JOIN Person.Address AS a ON a.AddressID = ea.AddressID
 WHERE a.PostalCode LIKE '[0-9][0-9][0-9][0-9]';  
 ```  
   
- 以下為結果集：  
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  
   
 ```  
 EmployeeID      FirstName      LastName      PostalCode  
@@ -76,8 +77,26 @@ EmployeeID      FirstName      LastName      PostalCode
 290             Lynn           Tsoflias      3000  
 ```  
 
+### <a name="c-using-a-set-that-combines-ranges-and-single-characters"></a>C.使用結合範圍和單一字元的集合
 
+萬用字元集合可同時包含單一字元和範圍。 下列範例會使用 [] 運算子來尋找開頭為數字或一系列特殊字元的字串。
 
+```sql
+SELECT [object_id], OBJECT_NAME(object_id) AS [object_name], name, column_id 
+FROM sys.columns 
+WHERE name LIKE '[0-9!@#$.,;_]%';
+```
+
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  
+
+```
+object_id     object_name                         name  column_id
+---------     -----------                         ----  ---------
+615673241     vSalesPersonSalesByFiscalYears      2002  5
+615673241     vSalesPersonSalesByFiscalYears      2003  6
+615673241     vSalesPersonSalesByFiscalYears      2004  7
+1591676718    JunkTable                           _xyz  1
+```
   
 ## <a name="see-also"></a>另請參閱  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   

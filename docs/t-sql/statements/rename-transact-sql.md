@@ -10,10 +10,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 624131beece632cffd13bde3d6ad378f67b3a340
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141265"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
@@ -113,7 +113,7 @@ RENAME DATABASE AdWorks to AdWorks2;
 
 ### <a name="b-rename-a-table"></a>B. 重新命名資料表
 
-**適用於：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**適用於：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 此範例會將 Customer 資料表重新命名為 Customer 1。
 
@@ -128,7 +128,7 @@ RENAME OBJECT mydb.dbo.Customer TO Customer1;
 
 ### <a name="c-move-a-table-to-a-different-schema"></a>C. 將資料表移到不同的結構描述
 
-**適用於：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**適用於：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 如果您想要將物件移至不同的結構描述，請使用 [ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md)。 例如，下列陳述式會將資料表項目從產品結構描述移至 dbo 結構描述。
 
@@ -138,7 +138,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 
 ### <a name="d-terminate-sessions-before-renaming-a-table"></a>D. 重新命名資料表前，先終止工作階段
 
-**適用於：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**適用於：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 請務必記得，如果資料表正在使用中，便無法將其重新命名。 重新命名資料表時，需要取得資料表的獨佔鎖定。 如果資料表正在使用中，您可能需要找出是哪些工作階段正在使用該資料表，然後予以終止。 若要終止工作階段，您可以使用 KILL 命令。 請小心使用 KILL，因為當工作階段終止後，任何未認可的工作都將回復。 SQL 資料倉儲中的工作階段名稱前面都會加上 'SID'。 叫用 KILL 命令時，應該包含 'SID' 與工作階段編號。 此範例會檢視作用中或閒置的工作階段清單，然後會終止工作階段 'SID1234'。
 

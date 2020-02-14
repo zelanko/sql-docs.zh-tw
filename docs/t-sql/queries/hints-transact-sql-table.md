@@ -37,10 +37,10 @@ ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981767"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 資料表
@@ -51,7 +51,7 @@ ms.locfileid: "73981767"
 > [!CAUTION]  
 >  由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具通常會選取最好的查詢執行計畫，因此，我們建議資深的開發人員和資料庫管理員只將提示當做最後的解決辦法。  
   
- **適用於：**  
+ **適用範圍：**  
   
  [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
@@ -121,7 +121,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>引數  
-WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]  
+WITH **(** \<> **)** [ [ **,** ]...*n* ]  
 但有某些例外，僅當利用 WITH 關鍵字指定提示時，FROM 子句才會支援資料表提示。 資料表提示也必須用括號來指定。  
   
 > [!IMPORTANT]  
@@ -192,7 +192,7 @@ FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] *
   
 您可以使用下列方式指定 FORCESEEK 提示。  
   
-|語法|範例|Description|  
+|語法|範例|描述|  
 |------------|-------------|-----------------|  
 |沒有索引或 INDEX 提示|`FROM dbo.MyTable WITH (FORCESEEK)`|查詢最佳化工具只會考慮透過任何相關索引的索引搜尋作業存取資料表或檢視表。|  
 |結合 INDEX 提示|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|查詢最佳化工具只會考慮利用指定索引的索引搜尋作業存取資料表或檢視表。|  
@@ -354,7 +354,7 @@ UPDLOCK
 XLOCK  
 指定採用獨佔鎖定，且保留到交易完成為止。 如果指定了 ROWLOCK、PAGLOCK 或 TABLOCK，就會將獨佔鎖定套用在適當的資料粒度層級上。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 如果查詢計劃並未存取資料表，就會忽略資料表提示。 這可能是最佳化工具選擇完全不存取資料表所造成的，也可能是因為改成存取索引檢視表。 在後面一種情況中，您可以利用 OPTION (EXPAND VIEWS) 查詢提示來防止存取索引檢視表。  
   
 所有鎖定提示都會傳播到查詢計劃所存取的所有資料表和檢視表，包括檢視表中所參考的資料表和檢視表。 另外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會執行對應的鎖定一致性檢查。  

@@ -16,10 +16,10 @@ ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a39f9cf72f08e80face176412851778f1afec174
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982455"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 陳述式 - 引數 (Transact-SQL)
@@ -52,7 +52,7 @@ ms.locfileid: "73982455"
   
  如果是使用完整或大量記錄復原模式的資料庫，在大部分情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都會要求您先備份記錄結尾，再還原資料庫。 除非 RESTORE DATABASE 陳述式包含 WITH REPLACE 或 WITH STOPAT 子句 (必須指定在資料備份結束之後發生的時間或交易)，否則如果沒有先備份記錄結尾便還原資料庫，就會產生錯誤。 如需結尾記錄備份的詳細資訊，請參閱[結尾記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
   
- LOG  
+ 記錄  
  **支援者：** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  指定要將交易記錄備份套用在這個資料庫上。 您必須依照順序來套用交易記錄。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會檢查備份的交易記錄，以確保交易是依照正確順序載入正確的資料庫。 若要套用多個交易記錄，請在所有還原作業上使用 NORECOVERY 選項，但最後一項還原作業除外。  
@@ -541,7 +541,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如需其他備註的詳細資訊，請參閱下列主題：  
   
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  

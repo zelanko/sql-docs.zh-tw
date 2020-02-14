@@ -21,10 +21,10 @@ ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d0e511e34b782c444bcdf6c778bb89dfebd4fab4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099028"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Text 和 Image 函式 - TEXTPTR (Transact-SQL)
@@ -48,10 +48,10 @@ TEXTPTR ( column )
  *column*  
  為將要使用的 **text**、**ntext**，或 **image** 資料行。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **varbinary**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果是含同資料列文字的資料表，TEXTPTR 會傳回要處理之文字的控制代碼。 即使文字值是 NULL，您也可以取得有效的文字指標。  
   
  在檢視的資料行上無法使用 TEXTPTR 函數。 您只能將它用於資料表資料行。 若要在檢視資料行上使用 TEXTPTR 函式，您必須利用 [ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)，將相容性層級設為 80。 如果資料表沒有同資料列文字，且尚未使用 UPDATETEXT 陳述式來初始化 **text**、**ntext** 或 **image** 資料行，TEXTPTR 會傳回 Null 指標。  
@@ -60,7 +60,7 @@ TEXTPTR ( column )
   
  另外，當您使用 **text**、**ntext** 和 **image** 資料時，這些函式和陳述式也很有用。  
   
-|函數或陳述式|Description|  
+|函數或陳述式|描述|  
 |---------------------------|-----------------|  
 |PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|傳回指定字元字串在 **text** 或 **ntext** 資料行中的字元位置。|  
 |DATALENGTH<b>(</b>_expression_ **)**|傳回 **text**、**ntext** 和 **image** 資料行中資料的長度。|  

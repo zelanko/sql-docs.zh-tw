@@ -14,10 +14,10 @@ ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 28d7a01ce3c11ce332de7e7af70ff0c57746e840
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682093"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>隱藏 SQL Server Database Engine 的執行個體
@@ -28,15 +28,15 @@ ms.locfileid: "71682093"
   
 #### <a name="to-hide-an-instance-of-the-sql-server-database-engine"></a>若要隱藏 SQL Server Database Engine 的執行個體  
   
-1.  在 [SQL Server 組態管理員]  中，展開 [SQL Server 網路組態]  ，並以滑鼠右鍵按一下 [\<伺服器執行個體> 的通訊協定]   ，然後選取 [屬性]  。  
+1.  在 [SQL Server 組態管理員]  中展開 [SQL Server 網路組態]  ，以滑鼠右鍵按一下 [\<伺服器執行個體> 的通訊協定]   ，然後選取 [屬性]  。  
   
 2.  在 **[旗標]** 索引標籤的 **[HideInstance]** 方塊中，選取 **[是]** ，然後按一下 **[確定]** 關閉對話方塊。 此變更在新連接時會立即生效。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果隱藏具名執行個體，將必須於連接字串中提供連接埠號碼，才可連接到隱藏的執行個體 (即使瀏覽器服務正在執行中亦然)。 建議您使用靜態連接埠，而不要使用具名隱藏執行個體的動態連接埠。  
   如需詳細資訊，請參閱[設定伺服器接聽特定 TCP 通訊埠 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   
-### <a name="clustering"></a>群集  
+### <a name="clustering"></a>叢集  
  如果隱藏叢集執行個體或可用性群組，則叢集服務可能無法連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 而如此會導致叢集執行個體的 **IsAlive** 檢查失敗，且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會離線。 
  
 若要避免這種情況，請在叢集執行個體的所有節點或所有本機可用性群組複本中都建立別名，以反映為該執行個體所設定的靜態連接埠。  舉例而言，在含有兩個複本的可用性群組中，針對節點 2 執行個體在節點 1 上建立別名，例如 `node-two\instancename`。 在節點 2 上，建立稱為 `node-one\instancename` 的別名。 這些別名是成功容錯移轉的必要項目。 

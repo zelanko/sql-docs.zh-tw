@@ -11,10 +11,10 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9eb3f9c071194941d76878a016fbcefa4f5fbe5c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908814"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
@@ -43,7 +43,7 @@ ms.locfileid: "72908814"
   
 -   [使用 SQL Server Management Studio 從 Azure 儲存體還原](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)  
   
-###  <a name="security"></a> 安全性  
+###  <a name="security"></a> Security  
  以下是備份至 Microsoft Azure Blob 儲存體服務或從中還原時的安全性考量和需求。  
   
 -   建立 Microsoft Azure Blob 儲存體服務的容器時，建議您將存取權設為 [私用]  。 將存取權設定為 [私用] 可限制只有能夠提供必要資訊向 Azure 帳戶驗證的使用者或帳戶，才有存取權。  
@@ -83,7 +83,7 @@ ms.locfileid: "72908814"
   
  **Azure 快照集：** 在某個時點間取得的 Azure Blob 快照集。 如需詳細資訊，請參閱 [建立 Blob 的快照集](https://msdn.microsoft.com/library/azure/hh488361.aspx)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份現在支援儲存在 Microsoft Azure Blob 儲存體服務中的資料庫檔案 Azure 快照集備份。 如需詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
-###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
+###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件  
  **URL：** URL 會指定唯一備份檔案的統一資源識別項 (URI)。 此 URL 是用來提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份檔案的位置和名稱。 此 URL 必須指向實際的 Blob，而非只有容器。 如果 Blob 不存在，就會建立 Blob。 如果指定了現有的 Blob，除非同時指定 "WITH FORMAT" 選項覆寫 Blob 中現有的備份檔，否則 BACKUP 會失敗。  
   
  以下是 URL 值範例：http[s]://ACCOUNTNAME.blob.core.windows.net/\<容器>/\<.bak>。 HTTPS 不是必要項目，但是建議使用。  
@@ -122,7 +122,7 @@ ms.locfileid: "72908814"
   
 |Backup/Restore 陳述式|支援|例外狀況|註解|
 |-|-|-|-|
-|BACKUP|Y|針對區塊 Blob，支援指定 BLOCKSIZE 和 MAXTRANSFERSIZE。 它們不支援用於分頁 Blob。 | 備份至區塊 Blob 需要 SQL Server 認證中所儲存的共用存取簽章。 備份至分頁 Blob 需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證中所儲存的儲存體帳戶金鑰，而且需要指定 WITH CREDENTIAL 引數。|  
+|備份|Y|針對區塊 Blob，支援指定 BLOCKSIZE 和 MAXTRANSFERSIZE。 它們不支援用於分頁 Blob。 | 備份至區塊 Blob 需要 SQL Server 認證中所儲存的共用存取簽章。 備份至分頁 Blob 需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證中所儲存的儲存體帳戶金鑰，而且需要指定 WITH CREDENTIAL 引數。|  
 |RESTORE|Y||如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是使用作為密碼的儲存體帳戶金鑰所定義，則需要定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，而且需要指定 WITH CREDENTIAL 引數。|  
 |RESTORE FILELISTONLY|Y||如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是使用作為密碼的儲存體帳戶金鑰所定義，則需要定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，而且需要指定 WITH CREDENTIAL 引數。|  
 |RESTORE HEADERONLY|Y||如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是使用作為密碼的儲存體帳戶金鑰所定義，則需要定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，而且需要指定 WITH CREDENTIAL 引數。|  
@@ -139,7 +139,7 @@ ms.locfileid: "72908814"
 |引數|支援|例外狀況|註解|  
 |-|-|-|-|  
 |DATABASE|Y|||  
-|LOG|Y|||  
+|記錄|Y|||  
 ||  
 |TO (URL)|Y|與 DISK 和 TAPE 不同，URL 不支援指定或建立邏輯名稱。|這個引數是用來指定備份檔案的 URL 路徑。|  
 |MIRROR TO|Y|||  
@@ -176,7 +176,7 @@ ms.locfileid: "72908814"
 |引數|支援|例外狀況|註解|  
 |-|-|-|-|  
 |DATABASE|Y|||  
-|LOG|Y|||  
+|記錄|Y|||  
 |FROM (URL)|Y||FROM URL 引數是用來指定備份檔案的 URL 路徑。|  
 |**WITH Options:**||||  
 |CREDENTIAL|Y||當您使用 RESTORE FROM URL 選項，從 Microsoft Azure Blob 儲存體服務還原時，才支援 WITH CREDENTIAL。|  
@@ -372,7 +372,7 @@ Write-Host $tSql
    ```  
   
 ###  <a name="complete"></a> 執行完整的資料庫備份  
- 下列範例會將 AdventureWorks2016 資料庫完整備份至 Microsoft Azure Blob 儲存體服務。 執行下列其中之一：   
+ 下列範例會將 AdventureWorks2016 資料庫完整備份至 Microsoft Azure Blob 儲存體服務。 執行下列其中一個動作：   
   
   
 2.  **至 URL，使用共用存取簽章**  

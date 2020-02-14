@@ -17,10 +17,10 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7d61b0e88dd2017218c74635b89f8207691c22a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133271"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 訂閱者
@@ -108,7 +108,7 @@ ms.locfileid: "68133271"
 |**bit**|SMALLINT|  
 |**char(1-254)**|CHAR(1-254)|  
 |**char(255-8000)**|VARCHAR(255-8000)|  
-|**date**|DATE|  
+|**date**|日期|  
 |**datetime**|timestamp|  
 |**datetime2(0-7)**|VARCHAR(27)|  
 |**datetimeoffset(0-7)**|VARCHAR(34)|  
@@ -132,7 +132,7 @@ ms.locfileid: "68133271"
 |**smalldatetime**|timestamp|  
 |**smallint**|SMALLINT|  
 |**smallmoney**|DECIMAL(10,4)|  
-|**sql_variant**|不適用|  
+|**sql_variant**|N/A|  
 |**sysname**|VARCHAR(128)|  
 |**text**|VARCHAR(0)*|  
 |**time(0-7)**|VARCHAR(16)|  
@@ -150,11 +150,11 @@ ms.locfileid: "68133271"
 ### <a name="data-type-mapping-considerations"></a>資料類型對應考量  
  複寫至「DB2 訂閱者」時，請考慮下列資料類型對應問題：  
   
--   在將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char**、 **varchar**、 **binary** ＞和＜ **varbinary** 分別對應至 DB2 CHAR、VARCHAR、CHAR FOR BIT DATA 及 VARCHAR FOR BIT DATA 時，複寫會將 DB2 資料類型的長度設定為與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 類型的長度相同。  
+-   在將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char**、**varchar**、**binary** 和 **varbinary** 分別對應至 DB2 CHAR、VARCHAR、CHAR FOR BIT DATA 及 VARCHAR FOR BIT DATA 時，複寫會將 DB2 資料類型長度設定為與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 類型的長度相同。  
   
      這可使產生的資料表在「訂閱者」端成功建立，只要 DB2 頁面大小條件約束足以容納資料列的大小上限。 確定用於存取 DB2 資料庫的登入，有權限存取擁有足夠大小以容納正複寫至 DB2 之資料表的資料表空間。  
   
--   DB2 可以支援最大 32 千位元組 (KB) 的 VARCHAR 資料行，因此可以將某些 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型物件資料行正確對應至 DB2 VARCHAR 資料行。 但是，複寫用於 DB2 的 OLE DB 提供者不支援將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型物件對應至 DB2 大型物件。 因此，在產生的建立指令碼中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**、 **varchar(max)** 、 **ntext**和 **nvarchar(max)** 資料行將對應至 VARCHAR(0)。 長度值 0 必須在將指令碼套用至「訂閱者」之前變更為適當值。 如果資料類型長度未變更，則嘗試在「DB2 訂閱者」端建立資料表時，DB2 將產生錯誤 604 (表示資料類型的有效位數或長度屬性無效)。  
+-   DB2 可以支援最大 32 千位元組 (KB) 的 VARCHAR 資料行，因此可以將某些 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型物件資料行正確對應至 DB2 VARCHAR 資料行。 但是，複寫用於 DB2 的 OLE DB 提供者不支援將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型物件對應至 DB2 大型物件。 因此，在產生的建立指令碼中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**、**varchar(max)** 、**ntext** 和 **nvarchar(max)** 資料行將對應至 VARCHAR(0)。 長度值 0 必須在將指令碼套用至「訂閱者」之前變更為適當值。 如果資料類型長度未變更，則嘗試在「DB2 訂閱者」端建立資料表時，DB2 將產生錯誤 604 (表示資料類型的有效位數或長度屬性無效)。  
   
      根據您對要複寫之來源資料表的了解，判斷是否適合將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型物件對應至可變長度的 DB2 項目，並在自訂建立指令碼中指定適當的最大長度。 如需有關指定自訂建立指令碼的資訊，請參閱本主題中＜設定 IBM DB2 訂閱者＞一節中的步驟 5。  
   
@@ -163,9 +163,9 @@ ms.locfileid: "68133271"
   
      如果大型物件資料行沒有適當的對應，請考慮在發行項上使用資料行篩選，以便不複寫資料行。 如需詳細資訊，請參閱[篩選發行的資料](../../../relational-databases/replication/publish/filter-published-data.md)。  
   
--   在將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nchar** ＞和＜ **nvarchar** 複寫至 DB2 CHAR 和 VARCHAR 時，複寫對 DB2 類型與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 類型的長度相同。 但是，資料類型長度對於產生的 DB2 資料表可能太小。  
+-   在將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nchar** 和 **nvarchar** 複寫至 DB2 CHAR 和 VARCHAR 時，複寫對 DB2 類型與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 類型使用相同的長度規範。 但是，資料類型長度對於產生的 DB2 資料表可能太小。  
   
-     在某些 DB2 環境中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char** 資料項目未限制為單位元組字元，所以 CHAR 或 VARCHAR 項目的長度必須將此考慮在內。 如果需要 *shift in* 和 *shift out* 字元，您還必須考慮到它們。 如果您要複寫含有 **nchar** 和 **nvarchar** 資料行的資料表，可能需要為自訂建立指令碼中的資料類型指定較大的最大長度。 如需有關指定自訂建立指令碼的資訊，請參閱本主題中＜設定 IBM DB2 訂閱者＞一節中的步驟 5。  
+     在某些 DB2 環境中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char** 資料項目未限制為單一位元組字元；CHAR 或 VARCHAR 項目的長度必須將此納入考量。 如果需要 *shift in* 和 *shift out* 字元，您還必須考慮到它們。 如果您要複寫含有 **nchar** 和 **nvarchar** 資料行的資料表，可能需要為自訂建立指令碼中的資料類型指定較大的最大長度。 如需有關指定自訂建立指令碼的資訊，請參閱本主題中＜設定 IBM DB2 訂閱者＞一節中的步驟 5。  
   
 ## <a name="see-also"></a>另請參閱  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   

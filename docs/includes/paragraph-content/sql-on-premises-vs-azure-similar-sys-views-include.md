@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 6fd7bb2b8be38becc87c4dc8cb353594459a8dd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68220185"
----
 
 <!--
 ### Code examples for Azure cloud differ slightly from on-premises
@@ -13,12 +5,12 @@ ms.locfileid: "68220185"
 ### Code examples can differ for Azure SQL Database
 -->
 
-某些針對 SQL Server 內部部署所撰寫的 Transact-SQL 程式碼範例，需要進行小幅變更，才能在雲端的 Azure SQL Database 服務上執行。 這類程式碼範例的其中一個類別牽涉到系統檢視，而系統檢視的名稱前置詞在這兩個資料庫系統之間稍有不同：
+某些針對 SQL Server 內部部署所撰寫的 Transact-SQL 程式碼範例，需要進行小幅變更，才能在雲端的 Azure SQL Database 服務上執行。 這類程式碼範例的其中一個類別牽涉到系統檢視，而系統檢視的名稱前置詞在這兩個資料庫系統之間略有不同：
 
-- **server\_** &nbsp; - &nbsp; 內部部署的前置詞 
-- **database\_** &nbsp; - &nbsp; 雲端中 Azure SQL DB 服務的前置詞 
+- **伺服器\_** &nbsp; - &nbsp; 內部部署的前置詞 
+- **資料庫\_** &nbsp; - &nbsp; 雲端中 Azure SQL DB 服務的前置詞 
 
-為了示範，下表列出並比較兩個系統檢視子集。 為求簡潔，這些子集限制為同時包含字串 `_event` 的檢視名稱。 子集具有不同的名稱前置詞，因為它們來自兩個不同的資料庫系統。
+為了示範，下表列出並比較兩個系統檢視子集。 為求簡潔，這些子集限制為同時包含字串 `_event` 的檢視名稱。 由於子集來自兩個不同資料庫系統，因此具有不同的名稱前置詞。
 
 | 內部部署 2017 中的名稱 | 雲端服務中的名稱 |
 | :------------------------- | :---------------------- |

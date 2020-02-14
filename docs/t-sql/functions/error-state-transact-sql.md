@@ -24,13 +24,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 694017e60682d191bd1d02cdc231b7185c3b8c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094607"
 ---
-# <a name="errorstate-transact-sql"></a>ERROR_STATE (Transact-SQL)
+# <a name="error_state-transact-sql"></a>ERROR_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   傳回造成執行 TRY...CATCH 建構的 CATCH 區塊之錯誤的狀態碼。  
@@ -43,7 +43,7 @@ ms.locfileid: "68094607"
 ERROR_STATE ( )  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
 ## <a name="return-value"></a>傳回值  
@@ -51,7 +51,7 @@ ERROR_STATE ( )
   
  如果是在 CATCH 區塊範圍之外呼叫，便傳回 NULL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 程式碼中的多個點都可能會引發某些錯誤訊息。 例如，在許多不同情況下，都有可能產生 "1105" 錯誤。 每個產生錯誤的特定狀況，都會指派唯一的狀態碼。  
   
  當檢視已知問題的資料庫時，例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫，您可以利用狀態碼來判斷所記錄的問題，與您遇到的錯誤是否相同。 例如，如果知識庫文件討論狀態為 2 的 1105 錯誤訊息，而您收到的 1105 錯誤訊息的狀態卻是 3，錯誤原因可能不是文章所報告的原因。  
@@ -66,7 +66,7 @@ ERROR_STATE ( )
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-errorstate-in-a-catch-block"></a>A. 在 CATCH 區塊中使用 ERROR_STATE  
+### <a name="a-using-error_state-in-a-catch-block"></a>A. 在 CATCH 區塊中使用 ERROR_STATE  
  下列範例顯示將會產生除以零之錯誤的 `SELECT` 陳述式。 它會傳回錯誤的狀態。  
   
 ```sql  
@@ -80,7 +80,7 @@ END CATCH;
 GO  
 ```  
   
-### <a name="b-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>B. 在含有其他錯誤處理工具的 CATCH 區塊中使用 ERROR_STATE  
+### <a name="b-using-error_state-in-a-catch-block-with-other-error-handling-tools"></a>B. 在含有其他錯誤處理工具的 CATCH 區塊中使用 ERROR_STATE  
  下列範例顯示將會產生除以零之錯誤的 `SELECT` 陳述式。 錯誤的相關訊息會隨同錯誤狀態一起傳回。  
   
 ```sql  
@@ -102,7 +102,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>C. 在含有其他錯誤處理工具的 CATCH 區塊中使用 ERROR_STATE  
+### <a name="c-using-error_state-in-a-catch-block-with-other-error-handling-tools"></a>C. 在含有其他錯誤處理工具的 CATCH 區塊中使用 ERROR_STATE  
  下列範例顯示將會產生除以零之錯誤的 `SELECT` 陳述式。 錯誤的相關訊息會隨同錯誤狀態一起傳回。  
   
 ```sql  

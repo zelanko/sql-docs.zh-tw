@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68697497"
 ---
 # <a name="data-type-conversion-database-engine"></a>資料類型轉換 (資料庫引擎)
@@ -56,7 +56,7 @@ CAST ( $157.27 AS VARCHAR(10) )
   
 下圖顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統提供之資料類型所能使用的所有明確與隱含資料類型轉換。 這些包括 **xml**、**bigint** 和 **sql_variant**。 從 **sql_variant** 資料類型進行指派時，不可使用隱含轉換，但可以隱含轉換成 **sql_variant**。
   
-![資料類型轉換表](../../t-sql/data-types/media/lrdatahd.png "資料類型轉換表")
+![資料類型轉換資料表](../../t-sql/data-types/media/lrdatahd.png "資料類型轉換資料表")
 
 雖然上圖顯示了 SQL Server 中允許的所有明確及隱含轉換，但是它並未指出轉換的結果資料類型。 當 SQL Server 執行明確轉換時，陳述式本身便會判斷結果的資料類型。 針對隱含轉換，指派陳述式 (例如設定變數值或將值插入資料行) 會產生變數宣告或資料行定義所定義的資料類型。 針對比較運算子或其他運算式，結果資料類型會取決於資料類型優先順序的規則。
 
@@ -124,10 +124,10 @@ SELECT @notastring + '1'
 |--------------------------|----------------------------|  
 |**char**、**varchar**、**text**、**nvarchar**、**ntext**|**String**|  
 |**decimal**、**numeric**|**String**|  
-|**bit**|**布林**|  
+|**bit**|**布林值**|  
 |**binary**、**varbinary**、**image**|一維 **Byte()** 陣列|  
 |**int**|**Long**|  
-|**smallint**|**Integer**|  
+|**smallint**|**整數**|  
 |**tinyint**|**位元組**|  
 |**float**|**Double**|  
 |**real**|**Single**|  
@@ -135,7 +135,7 @@ SELECT @notastring + '1'
 |**datetime**、**smalldatetime**|**日期**|  
 |設成 NULL 的任何類型|**Variant** 設為 Null|  
   
-所有單一的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值皆會轉換成單一的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 值，但不包括 **binary**、**varbinary** 及 **image** 值。 這些值會在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中轉換成一維的 **Byte()** 陣列。 此陣列的範圍為 **Byte (** 0 到 _length_ 1 **)** ，其中 *length* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**、**varbinary** 或 **image** 值中的位元組數目。
+所有單一的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值皆會轉換成單一的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 值，但不包括 **binary**、**varbinary** 及 **image** 值。 這些值會在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中轉換成一維的 **Byte()** 陣列。 此陣列的範圍為 **Byte(** 0 到 _length_ 1 **)** ，其中 *length* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**、**varbinary** 或 **image** 值中的位元組數目。
   
 這些轉換是從 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 資料類型到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。
   

@@ -22,10 +22,10 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: mikeray
 ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69028744"
 ---
 # <a name="server-memory-configuration-options"></a>伺服器記憶體設定選項
@@ -80,7 +80,7 @@ ms.locfileid: "69028744"
   
 若要停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [鎖定記憶體中的分頁]  選項，請將具有 sqlservr.exe ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動帳戶) 執行權限之帳戶的 [鎖定記憶體中的分頁]  使用者權利移除。  
  
-設定此選項並不會影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [動態記憶體管理](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management)，使其可應其他記憶體 Clerk 的要求擴張或縮減。 使用 [在記憶體中鎖定分頁]  使用者權利時，建議設定[如上詳述](#max_server_memory)的 [最大伺服器記憶體]  上限。
+設定此選項並不會影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [動態記憶體管理](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management)，使其可依其他記憶體 Clerk 的要求來擴充或縮減。 使用 [在記憶體中鎖定分頁]  使用者權利時，建議設定[如上詳述](#max_server_memory)的 [最大伺服器記憶體]  上限。
 
 > [!IMPORTANT]
 > 請只有必要的情況下才設定此選項，例如出現 sqlservr 程序移出分頁的跡象。在此情況下，錯誤記錄檔中會回報錯誤 17890，類似下列範例：`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
@@ -95,7 +95,7 @@ ms.locfileid: "69028744"
   
 2.  在 [群組原則]  主控台上，依序展開 [電腦組態]  和 [Windows 設定]  。  
   
-3.  依序展開 [安全性設定]  和 [本機原則]  。  
+3.  展開 [安全性設定]  ，然後展開 [本機原則]  。  
   
 4.  選取 [使用者權限指派]  資料夾。  
   

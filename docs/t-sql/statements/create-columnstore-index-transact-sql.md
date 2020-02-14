@@ -30,10 +30,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2e917d4dcd2f722bb9d683ebe0a6a8777487c61d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729924"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
@@ -120,7 +120,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 | COMPRESSION_DELAY | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
 | DATA_COMPRESSION | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | 
 | ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] |
-| WHERE 子句 | 不適用 | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
+| WHERE 子句 | N/A | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
 
 所有選項皆可在 Azure SQL Database 中使用。
 
@@ -163,7 +163,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 
    如需詳細資訊，請參閱[設定平行處理原則的最大程度伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)和[設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
  
-###### <a name="compression_delay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *延遲* [ 分鐘 ]  
+###### <a name="compression_delay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
    至於磁碟資料表，「延遲」  會指定關閉狀態下的差異資料列群組，必須在差異資料列群組中至少保留多少分鐘的時間，然後 SQL Server 才能將它壓縮到壓縮的資料列群組。 因為磁碟資料表不會追蹤個別資料列的插入和更新時間，因此 SQL Server 會將這段延遲時間套用於關閉狀態下的差異資料列群組。  
    預設值是 0 分鐘。  
    
@@ -240,7 +240,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
    如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 > [!NOTE]
->  [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用平行索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+>  [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每個版本都無法使用平行索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 ###### <a name="online--on--off"></a>ONLINE = [ON | OFF]   
 - `ON` 指定當建置索引的新複本時，資料行存放區索引會保持連線並可供使用。
@@ -250,7 +250,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
 CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPrice, TaxRate) WITH ( ONLINE = ON );
 ```
 
-##### <a name="compression_delay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<延遲>[分鐘]  
+##### <a name="compression_delay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
    指定資料列應該保留在差異資料列群組中的時間下限，當過了這段時間後，資料列才能遷移到壓縮的資料列群組。 例如，客戶可以指定資料列維持不變 120 分鐘後，就可以把它壓縮成單欄式儲存體格式。 至於磁碟資料表上的資料行存放區索引，我們不會追蹤資料列插入或更新的時間，我們使用差異資料列群組關閉時間來代理資料列。 預設持續時間是 0 分鐘。 當差異資料列群組累積了 1 百萬個資料列並標示為已關閉，就會將資料列移轉至單欄式儲存體。  
   
 ###### <a name="data_compression"></a>DATA_COMPRESSION  
@@ -311,13 +311,13 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
     |Set 選項|必要值|預設伺服器值|預設<br /><br /> OLE DB 與 ODBC 值|預設<br /><br /> DB-Library 值|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ON|ON|ON|OFF|  
-    |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS*|ON|ON|ON|OFF|  
-    |ARITHABORT|ON|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
+    |ANSI_NULLS|開啟|開啟|開啟|OFF|  
+    |ANSI_PADDING|開啟|開啟|開啟|OFF|  
+    |ANSI_WARNINGS*|開啟|開啟|開啟|OFF|  
+    |ARITHABORT|開啟|開啟|OFF|OFF|  
+    |CONCAT_NULL_YIELDS_NULL|開啟|開啟|開啟|OFF|  
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|   
+    |QUOTED_IDENTIFIER|開啟|開啟|開啟|OFF|   
   
      *當資料庫的相容性層級設定為 90 或更高層級時，將 ANSI_WARNINGS 設定為 ON 也會將 ARITHABORT 隱含設定為 ON。 如果資料庫的相容性層級設定為 80 或更低，ARITHABORT 選項就必須明確地設定為 ON。  
   
@@ -336,9 +336,9 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 **資料行存放區索引中的每個資料行都必須是下列其中一種一般商務資料類型：** 
 -   datetimeoffset [ ( *n* ) ]  
 -   datetime2 [ ( *n* ) ]  
--   DATETIME  
+-   Datetime  
 -   smalldatetime  
--   日期  
+-   date  
 -   time [ ( *n* ) ]  
 -   float [ ( *n* ) ]  
 -   real [ ( *n* ) ]  
@@ -347,8 +347,8 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 -   money  
 -   SMALLMONEY  
 -   BIGINT  
--   INT  
--   smallint  
+-   int  
+-   SMALLINT  
 -   TINYINT  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
@@ -370,7 +370,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 -   rowversion (和 timestamp)  
 -   sql_variant  
 -   CLR 類型 (hierarchyid 和空間類型)  
--   xml  
+-   Xml  
 -   uniqueidentifier (適用於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
 
 **非叢集資料行存放區索引：**

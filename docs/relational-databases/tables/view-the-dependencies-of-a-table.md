@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4575c9cbc20faf6afa03201645b736a13325e66b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140295"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>檢視資料表的相依性
@@ -42,7 +42,7 @@ ms.locfileid: "68140295"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料庫的 VIEW DEFINITION 權限和資料庫之 sys.sql_expression_dependencies 的 SELECT 權限。 根據預設，SELECT 權限只授與 db_owner 固定資料庫角色的成員。 當 SELECT 和 VIEW DEFINITION 權限授與其他使用者時，被授與者就可以檢視資料庫中的所有相依性。  
@@ -55,7 +55,7 @@ ms.locfileid: "68140295"
   
 2.  以滑鼠右鍵按一下資料表，然後按一下 [檢視相依性]  。  
   
-3.  在 [物件相依性 _\<物件名稱\>_ ]  對話方塊中，選取 [相依於 _\<物件名稱\>_ 的物件]  或 [ _\<物件名稱\>_ 所相依的物件]   。  
+3.  在 [物件相依性 \<物件名稱\>]   對話方塊中，選取 [相依於 \<物件名稱\> 的物件]   或 [\<物件名稱\> 所相依的物件]    。  
   
 4.  選取 **[相依性]** 方格中的物件。 物件類型 (如「觸發程序」或「預存程序」) 會出現在 [類型]  方塊中。  
   

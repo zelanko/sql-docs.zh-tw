@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048517"
 ---
 # <a name="spatial-data-types-overview"></a>空間資料類型概觀
@@ -40,11 +40,11 @@ ms.locfileid: "68048517"
 geometry 和 geography 類型的子類型可區分為簡單與集合類型。  某些方法 (例如 `STNumCurves()` ) 只能使用簡單類型。  
 
 簡單類型包括：  
--   [Point](../../relational-databases/spatial/point.md)  
+-   [點](../../relational-databases/spatial/point.md)  
 -   [LineString](../../relational-databases/spatial/linestring.md)  
 -   [CircularString](../../relational-databases/spatial/circularstring.md)  
 -   [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)  
--   [多邊形](../../relational-databases/spatial/polygon.md)  
+-   [Polygon](../../relational-databases/spatial/polygon.md)  
 -   [CurvePolygon](../../relational-databases/spatial/curvepolygon.md)  
 
 集合類型包括：  
@@ -80,7 +80,7 @@ geometry 類型的圓弧線段定義於 XY 笛卡兒座標平面上 (忽略 Z �
 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中， **FullGlobe** 是一種特殊類型的多邊形，它涵蓋了整個地球。 **FullGlobe** 有面積，但沒有框線或頂點。  
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>外部和內部環形在 `geography` 類型中不重要  
-OGC 的 SQL 簡單特徵規格討論了外部環形和內部環形，但是這樣的區別對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 資料類型沒有很大的意義。多邊形的任何環形都可以當作外部環形。  
+OGC 的 SQL 簡單特徵規格會討論外部環形和內部環形，但是這樣的區別對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 資料類型不具太大意義；多邊形的任何環形都可以當作外部環形。  
 
 如需有關 OGC 規格的詳細資訊，請參閱下列主題：  
 -   [OGC 規格，簡單特徵存取第一部 - 常見架構](https://go.microsoft.com/fwlink/?LinkId=93627)  
@@ -114,7 +114,7 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 
 請注意， **CircularString** 執行個體需要使用七個點來定義三角形，但是 **LineString** 執行個體只需要使用四個點來定義三角形。 這是因為 **CircularString** 執行個體會儲存圓弧線段而非直線線段。 因此，儲存在 **CircularString** 執行個體中的三角形側邊為 ABC、CDE 和 EFA，而儲存在 **LineString** 執行個體中的三角形側邊為 AC、CE 和 EA。  
 
-請設想下列範例：  
+請考慮下列範例：  
 
 ```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);

@@ -23,10 +23,10 @@ ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 21bc28f99768c7b31d6ba5b18170140a23400853
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287771"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>開發資料流程元件的使用者介面
@@ -49,7 +49,7 @@ ms.locfileid: "71287771"
   
 -   檔案版本  
   
--   Culture  
+-   文化特性  
   
 -   公開金鑰 Token  
   
@@ -93,7 +93,7 @@ End Class
 ### <a name="using-the-services-of-the-ssis-designer"></a>使用 SSIS 設計師的服務  
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 方法的 **IServiceProvider** 參數會提供對下列 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計工作服務的存取權：  
   
-|服務|Description|  
+|服務|描述|  
 |-------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Design.IDtsClipboardService>|用來判斷此元件是否在複製/貼上或剪下/貼上的作業中產生。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionService>|用來存取現有的連接或是在封裝中建立新的連接。|  

@@ -18,10 +18,10 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9a36d403867699a02adfec0d04c9db4efa803514
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281885"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS 如何建立 ETL 封裝
@@ -30,7 +30,7 @@ ms.locfileid: "71281885"
 
 
 
-在此教學課程中，您將學會如何使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計工具來建立簡單的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 套件。 您建立的封裝會從一般檔案取用資料，重新格式化資料，然後將重新格式化之後的資料插入到事實資料表中。 在下列課程中，將會擴充套件以示範迴圈、套件設定、記錄和錯誤流程。  
+在本教學課程中，您將了解如何使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師來建立簡單的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 套件。 您建立的封裝會從一般檔案取用資料，重新格式化資料，然後將重新格式化之後的資料插入到事實資料表中。 在下列課程中，將會擴充套件以示範迴圈、套件設定、記錄和錯誤流程。  
   
 當您安裝了教學課程使用的範例資料時，也會安裝您在教學課程每一課中所建立套件的完整版本。 利用完整封裝，您可以三級跳，從教學課程後面的課程開始。 如果本教學課程是您初次使用套件或新開發環境，我們建議您從第 1 課開始。  
 
@@ -39,10 +39,10 @@ ms.locfileid: "71281885"
 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 是一種用於建置高效能資料整合解決方案的平台，其中包括資料倉儲的擷取、轉換和載入 (ETL) 套件。 SSIS 包含建置套件和對套件進行偵錯的圖形化工具和精靈；執行工作流程功能 (例如 FTP 作業、執行 SQL 陳述式和傳送電子郵件訊息) 的工作；擷取和載入資料的資料來源和目的地；清除、彙總、合併和複製資料的轉換；管理封裝執行和儲存的管理資料庫 `SSISDB`；以及設計 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件模型之程式的應用程式開發介面 (API)。  
 
 ## <a name="what-you-learn"></a>學習內容  
-要熟悉 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所提供的新工具、控制項和功能，最好的方法就是使用它們。 這個教學課程將引導您使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計工具來建立簡單的 ETL 套件，包括迴圈、設定、錯誤流程邏輯和記錄。  
+若要熟悉 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所提供的新工具、控制項和功能，最好的方法就是使用它們。 這個教學課程將引導您使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計工具來建立簡單的 ETL 套件，包括迴圈、設定、錯誤流程邏輯和記錄。  
   
 ## <a name="prerequisites"></a>Prerequisites  
-這個教學課程的主要對象是熟悉基本資料庫作業，但對於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]可用的新功能較為陌生的使用者。  
+本教學課程的主要對象是熟悉基本資料庫作業，但對於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所提供新功能較為陌生的使用者。  
 
 若要執行本教學課程，您必須安裝以下元件：  
   

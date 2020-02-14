@@ -19,10 +19,10 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3cba502e5f89c39df67b74909f3185ad45c659e2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298360"
 ---
 # <a name="data-mining-query-task"></a>資料採礦查詢工作
@@ -45,14 +45,14 @@ ms.locfileid: "71298360"
   
  此工作可查詢相同採礦結構上建立的多個採礦模型。 採礦模型是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的其中一種資料採礦演算法建立。 「資料採礦查詢」工作參考的採礦結構，可包含多個使用不同演算法建立的採礦模型。 如需詳細資訊，請參閱[採礦結構 &#40;Analysis Services - 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining) 和[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)。  
   
- 「資料採礦查詢」工作執行的預測查詢會傳回單一資料列或資料集的結果。 傳回單一資料列的查詢稱為單一查詢：例如，預測夏季各月間將售出之帆船數的查詢會傳回數字。 如需傳回單一資料列之預測查詢的詳細資料，請參閱[資料採礦查詢工具](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)。  
+ 「資料採礦查詢」工作執行的預測查詢會傳回單一資料列或資料集的結果。 傳回單一資料列的查詢稱為單一查詢：例如，預測夏季各月間將售出之帆船數的查詢會傳回數字。 如需傳回單一資料列之預測查詢的詳細資料，請參閱 [資料採礦查詢工具](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)。  
   
  查詢結果會儲存到資料表。 如果「資料採礦查詢」工作指定的資料表名稱已存在，則工作可使用相同的名稱附加一個號碼建立新的資料表，或者覆寫資料表內容。  
   
  如果結果包含巢狀，則會在儲存之前扁平化結果。 扁平化結果會將巢狀結果集變更成資料表。 例如，扁平化含有 **Customer** 資料行和巢狀 **Product** 資料行的巢狀結果，會將資料列加入至 **Customer** 資料行，以製作包含各客戶之產品資料的資料表。 例如，擁有三種不同產品的客戶會變成擁有三個資料列的資料表，各資料列中會重複該客戶並包含不同的產品。 如果省略 FLATTENED 關鍵字，則資料表只會包含 **Customer** 資料行，且每個客戶只有一個資料列。 如需詳細資訊，請參閱 [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md)。  
   
 ## <a name="configuration-of-the-data-mining-query-task"></a>設定資料採礦查詢工作  
- 「資料採礦查詢」工作需要兩個連接。 第一個連接是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接管理員，會連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，或含有採礦結構和採礦模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案。 第二個連接是 OLE DB 連接管理員，會連接到含有工作所寫入資料表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 如需相關資訊，請參閱 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md) 及 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
+ 「資料採礦查詢」工作需要兩個連接。 第一個連線是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連線管理員，其會連線到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，或含有採礦結構和採礦模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案。 第二個連接是 OLE DB 連接管理員，會連接到含有工作所寫入資料表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 如需相關資訊，請參閱 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md) 及 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "71298360"
 ## <a name="data-mining-query-task-editor-query-tab"></a>資料採礦查詢工作編輯器 (查詢索引標籤)
   使用 [資料採礦查詢工作]  對話方塊的 [查詢]  索引標籤，即可依據採礦模型建立預測查詢。 在此對話方塊中，您也可以將參數和結果集繫結到變數。  
   
- 若要深入了解在封裝中實作資料採礦，請參閱 [資料採礦查詢工作](../../integration-services/control-flow/data-mining-query-task.md) 和 [資料採礦方案](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)。  
+ 若要深入了解在封裝中實作資料採礦，請參閱 [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) (資料採礦查詢工作) 和 [Data Mining Solutions](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)(資料採礦方案)。  
   
 ### <a name="general-options"></a>一般選項  
  **名稱**  
@@ -133,7 +133,7 @@ ms.locfileid: "71298360"
  **變數名稱**  
  在清單中選取變數，以將其對應至參數。  
   
- **[加入]**  
+ **加入**  
  將參數加入清單中。  
   
  **移除**  
@@ -151,7 +151,7 @@ ms.locfileid: "71298360"
  **結果類型**  
  指出傳回單一資料列或完整結果集。  
   
- **[加入]**  
+ **加入**  
  將結果集加入清單中。  
   
  **移除**  
@@ -159,7 +159,7 @@ ms.locfileid: "71298360"
 ## <a name="data-mining-query-task-editor-output-tab"></a>資料採礦查詢工作編輯器 (輸出索引標籤)
   使用 **[資料採礦查詢工作編輯器]** 對話方塊的 **[輸出]** 索引標籤，即可指定預測查詢的目的地。  
   
- 若要深入了解在封裝中實作資料採礦，請參閱 [資料採礦查詢工作](../../integration-services/control-flow/data-mining-query-task.md) 和 [資料採礦方案](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)。  
+ 若要深入了解在封裝中實作資料採礦，請參閱 [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) (資料採礦查詢工作) 和 [Data Mining Solutions](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)(資料採礦方案)。  
   
 ### <a name="general-options"></a>一般選項  
  **名稱**  

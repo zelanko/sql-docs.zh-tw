@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934829"
 ---
 # <a name="upgrade-master-data-services"></a>升級 Master Data Services
@@ -71,7 +71,7 @@ ms.locfileid: "67934829"
   
 2.  升級 MDS 資料庫結構描述。  
   
-    1.  開啟目前 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
+    1.  開啟目前的 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
         > [!IMPORTANT]  
         >  若要升級 MDS 資料庫結構描述，您必須以建立 MDS 資料庫時指定之系統管理員帳戶的身分登入。 在 MDS 資料庫的 mdm.tblUser 中，這位使用者的 [識別碼]  值為 **1**。  
@@ -105,7 +105,7 @@ ms.locfileid: "67934829"
   
     2.  選取 MDS 資料庫。  
   
-    3.  按一下 **[套用]** 。  
+    3.  按一下 [套用]  。  
   
 ##  <a name="engine"></a> 升級且包含 Database Engine 升級  
  在此案例中，您要將資料庫引擎和 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 應用程式從舊版本升級至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 或 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]。  

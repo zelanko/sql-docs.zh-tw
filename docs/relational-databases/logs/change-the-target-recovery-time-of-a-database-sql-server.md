@@ -11,10 +11,10 @@ ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 24a87adf77ea4217cb27b20d2452fcbd5ba26135
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056249"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>變更資料庫的目標復原時間 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "74056249"
 > [!CAUTION]  
 >  設定間接檢查點的資料庫線上交易式工作負載可能會導致效能降低。 間接檢查點可確定中途分頁的數目，低於特定臨界值，如此即可在目標復原時間內完成資料庫的復原。 相對於使用中途分頁數目的間接檢查點，復原間隔設定選項會使用交易數目來判斷復原時間。 在接收到大量 DML 作業的資料庫上啟用間接檢查點時，背景寫入器就會開始積極地將中途緩衝區排清到磁碟，以確保執行復原所需的時間會在資料庫上所設定的目標復原時間內。 這會在某些系統上造成額外的 I/O 活動，如果磁碟子系統的運作超過或接近 I/O 閾值，就會形成效能瓶頸。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  

@@ -17,10 +17,10 @@ ms.assetid: 3aa3bc0e-1a1c-452e-81b8-b4e3422ea053
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 081cfc1b5808ca38fb536197cfa44d60f2203b99
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056565"
 ---
 # <a name="execute-sql-server-agent-job-task"></a>執行 SQL Server Agent 作業工作
@@ -33,7 +33,7 @@ ms.locfileid: "74056565"
  封裝可藉由使用「執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業」工作，執行與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件有關的管理工作。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業可執行 **sp_enum_dtspackages** 這類系統預存程序，以取得資料夾中的封裝清單。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式必須先執行，本機或多伺服器管理作業才能自動執行。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 必須先執行，本機或多伺服器管理作業才能自動執行。  
   
  此工作會封裝 **sp_start_job** 系統程序，並將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的名稱傳遞至程序作為引數。 如需詳細資訊，請參閱 [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)。  
   

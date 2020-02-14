@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fad28919360caf2a37f410d1c3f3e122fd3dd803
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 282e75c071ce220c5b7301b5c4b27fff2cf4b053
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119452"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929106"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>管理在另一部伺服器上提供資料庫時所需的中繼資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "74119452"
   
  某些應用程式會相依於超出單一使用者資料庫範圍之外的資訊、實體和/或物件。 一般而言，應用程式相依於 **master** 和 **msdb** 資料庫以及使用者資料庫。 如果有資料庫正確運作所需的任何項目儲存在使用者資料庫外部，則必須設法讓目的地伺服器執行個體也能提供。 例如，應用程式的登入在 **master** 資料庫中儲存為中繼資料，就必須在目的地伺服器上加以重新建立。 如果應用程式或資料庫維護計畫相依於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，而其中繼資料儲存於 **msdb** 資料庫，則必須在目的地伺服器執行個體上重新建立那些作業。 同樣的，伺服器層級觸發程序的中繼資料會儲存在 **master**中。  
   
- 當您將應用程式的資料庫移動到其他伺服器執行個體時，您必須在目的地伺服器執行個體上重新建立 **master** 和 **msdb** 中的相依實體及物件的所有中繼資料。 例如，如果資料庫應用程式使用伺服器層級觸發程序，僅在新系統上附加或還原資料庫是不夠的。 除非您以手動方式為 **master** 資料庫中的那些觸發程序重新建立中繼資料，否則資料庫無法如預期一般運作。  
+ 當您將應用程式的資料庫移至其他伺服器執行個體時，您必須在目的地伺服器執行個體上重新建立 **master** 和 **msdb** 中相依實體及物件的所有中繼資料。 例如，如果資料庫應用程式使用伺服器層級觸發程序，僅在新系統上附加或還原資料庫是不夠的。 除非您以手動方式為 **master** 資料庫中的那些觸發程序重新建立中繼資料，否則資料庫無法如預期一般運作。  
   
 ##  <a name="information_entities_and_objects"></a> 儲存在使用者資料庫外部的資訊、實體和物件  
  本文其餘的篇幅將摘要說明在其他伺服器執行個體上提供資料庫時，可能對該資料庫造成影響的潛在問題。 您可能需要重新建立下列清單列出的其中一個或多個資訊、實體或物件類型。 若要查看摘要，請按一下各項目的連結。  
@@ -86,7 +86,7 @@ ms.locfileid: "74119452"
   
 -   [登入](#logins)  
   
--   [Permissions](#permissions)  
+-   [權限](#permissions)  
   
 -   [複寫設定](#replication_settings)  
   
@@ -113,7 +113,7 @@ ms.locfileid: "74119452"
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
  DB_CHAINING 和 TRUSTWORTHY 資料庫選項預設是 OFF。 如果原始資料庫的其中一個選項設定為 ON，您就必須在目的地伺服器執行個體的資料庫上啟用該選項。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
- 附加與卸離作業會停用資料庫的跨資料庫擁有權鏈結。 如需如何啟用鏈結的相關資訊，請參閱[跨資料庫擁有權鏈結伺服器組態選項](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。  
+ 附加與卸離作業會停用資料庫的跨資料庫擁有權鏈結。 如需如何啟用鏈結的相關資訊，請參閱 [跨資料庫擁有權鏈結伺服器組態選項](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。  
   
  如需詳細資訊，另請參閱[設定鏡像資料庫可使用 Trustworthy 屬性 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "74119452"
   
  當加密的資料庫複製、還原或附加至新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時，以服務主要金鑰加密的資料庫主要金鑰副本並不會存放在目的地伺服器執行個體的 **master** 中。 您必須在目的地伺服器執行個體上，開啟資料庫的主要金鑰。 若要開啟主要金鑰，請執行下列陳述式：OPEN MASTER KEY DECRYPTION BY PASSWORD **='** _密碼_ **'** 。 建議您接著執行下列陳述式來啟用資料庫主要金鑰的自動解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 這個 ALTER MASTER KEY 陳述式會將以服務主要金鑰加密的資料庫主要金鑰副本提供給伺服器執行個體。 如需詳細資訊，請參閱 [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) 和 [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)。  
   
- 如需如何啟用鏡像資料庫之資料庫主要金鑰的自動解密相關資訊，請參閱[設定加密鏡像資料庫](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)。  
+ 如需如何啟用鏡像資料庫之資料庫主要金鑰的自動解密相關資訊，請參閱 [設定加密鏡像資料庫](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)。  
   
  如需詳細資訊，請參閱：  
   
@@ -192,13 +192,13 @@ ms.locfileid: "74119452"
 ##  <a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
  全文檢索引擎的屬性是由 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)所設定。 請確定目的地伺服器執行個體具有這些屬性的必要設定。 如需這些屬性的詳細資訊，請參閱 [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)。  
   
- 此外，如果[斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)元件或[全文檢索搜尋篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)元件在原始和目的地伺服器執行個體上具有不同的版本，全文檢索索引和查詢就可能會有不同的行為方式。 而且， [同義字](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) 會存放在執行個體專用的檔案中。 您必須將這些檔案的副本傳送至目的地伺服器執行個體上的對等位置，或在新執行個體上重新建立這些檔案。  
+ 此外，如果 [斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) 元件或 [全文檢索搜尋篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md) 元件在原始和目的地伺服器執行個體上具有不同的版本，全文檢索索引和查詢就可能會有不同的行為方式。 而且， [同義字](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) 會存放在執行個體專用的檔案中。 您必須將這些檔案的副本傳送至目的地伺服器執行個體上的對等位置，或在新執行個體上重新建立這些檔案。  
   
 > **注意：** 當您將包含全文檢索目錄檔案的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫附加至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 伺服器執行個體時，系統就會從先前的位置附加這些目錄檔案以及其他資料庫檔案，此行為與 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的行為相同。 如需詳細資訊，請參閱 [升級全文檢索搜尋](../../relational-databases/search/upgrade-full-text-search.md)。  
   
  如需詳細資訊，請參閱：  
   
--   [備份並還原全文檢索目錄與索引。](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
+-   [備份並還原全文檢索目錄與索引](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
 -   [資料庫鏡像和全文檢索目錄 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
 
@@ -231,7 +231,7 @@ ms.locfileid: "74119452"
   
 -   [角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) (適用於資料庫鏡像)  
   
--   [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (當您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體時)  
+-   [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (當您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體時)  
   
 -   [設定 SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md) (當您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體時)  
   
@@ -273,15 +273,15 @@ ms.locfileid: "74119452"
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>系統物件的 GRANT、REVOKE 及 DENY 權限  
  系統物件 (例如，預存程序、擴充預存程序、函數和檢視) 的權限會存放在 **master** 資料庫中，而且您必須在目的地伺服器執行個體上設定這些權限。  
   
- 若要在原始資料庫副本中產生部分或所有物件的指令碼，您可以使用「產生指令碼精靈」，然後在 **[選擇指令碼選項]** 對話方塊中，將 **[編寫物件層級權限的指令碼]** 選項設定為 **[True]** 。  
+ 若要在原始資料庫副本中產生部分或所有物件的指令碼，您可以使用「產生指令碼精靈」，然後在 [選擇指令碼選項]  對話方塊中，將 [編寫物件層級權限的指令碼]  選項設定為 [True]  。  
   
    > [!IMPORTANT]
    > 當您在編寫登入的指令碼時，密碼並不會編寫在指令碼中。 如果您具有使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入，就必須修改目的地上的指令碼。  
   
- 您可以在 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) 目錄檢視中看到系統物件。 您可以在 **master** 資料庫的 [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 目錄檢視中，看到系統物件的權限。 如需查詢這些目錄檢視和授與系統物件權限的詳細資訊，請參閱 [GRANT 系統物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)。 如需詳細資訊，請參閱 [REVOKE 系統物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) 和 [DENY 系統物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)。  
+ 您可以在 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) 目錄檢視中看到系統物件。 您可以在 [master](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 資料庫的 **sys.database_permissions** 目錄檢視中，看到系統物件的權限。 如需查詢這些目錄檢視和授與系統物件權限的詳細資訊，請參閱 [GRANT 系統物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)。 如需詳細資訊，請參閱 [REVOKE 系統物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) 和 [DENY 系統物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)。  
   
 ### <a name="grant-revoke-and-deny-permissions-on-a-server-instance"></a>伺服器執行個體的 GRANT、REVOKE 及 DENY 權限  
- 伺服器範圍的權限會存放在 **master** 資料庫中，而且您必須在目的地伺服器執行個體上設定這些權限。 如需伺服器執行個體之伺服器權限的詳細資訊，請查詢 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視。如需伺服器主體的詳細資訊，請查詢 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視。如需伺服器角色之成員資格的詳細資訊，請查詢 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 目錄檢視。  
+ 伺服器範圍的權限會存放在 **master** 資料庫中，而且您必須在目的地伺服器執行個體上設定這些權限。 如需伺服器執行個體之伺服器權限的詳細資訊，請查詢 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視。如需伺服器主體的詳細資訊，請查詢 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)目錄檢視。如需伺服器角色之成員資格的詳細資訊，請查詢 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 目錄檢視。  
   
  如需詳細資訊，請參閱 [GRANT 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)、[REVOKE 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md) 和 [DENY 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)。  
   
@@ -335,7 +335,7 @@ TRUSTWORHTY 資料庫屬性是用來指定 SQL Server 執行個體是否信任�
 ## <a name="see-also"></a>另請參閱  
  [自主資料庫](../../relational-databases/databases/contained-databases.md)   
  [複製資料庫至其他伺服器](../../relational-databases/databases/copy-databases-to-other-servers.md)   
- [資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [容錯移轉至記錄傳送次要 &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
  [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [設定加密鏡像資料庫](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   

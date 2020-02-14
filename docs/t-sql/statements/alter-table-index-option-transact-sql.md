@@ -15,10 +15,10 @@ ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e70998bed1ed0f2681009622cfb086baa79dcf02
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982009"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
@@ -72,7 +72,7 @@ ms.locfileid: "73982009"
   
  指定索引填補。 預設值為 OFF。  
   
- ON  
+ 開啟  
  FILLFACTOR 指定的可用空間百分比會套用到索引的中繼層級頁面上。  
   
  OFF 或未指定 *fillfactor*  
@@ -89,7 +89,7 @@ ms.locfileid: "73982009"
  IGNORE_DUP_KEY **=** { ON | **OFF** }  
  指定當插入作業嘗試將重複的索引鍵值插入唯一索引時所產生的回應類型。 IGNORE_DUP_KEY 選項只適用於在建立或重建索引之後所發生的插入作業。 執行 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)、[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 或 [UPDATE](../../t-sql/queries/update-transact-sql.md) 時，這個選項沒有任何作用。 預設值為 OFF。  
   
- ON  
+ 開啟  
  當重複的索引鍵值插入唯一索引時，就會出現警告訊息。 只有違反唯一性條件約束的資料列才會失敗。  
   
  OFF  
@@ -104,7 +104,7 @@ ms.locfileid: "73982009"
  STATISTICS_NORECOMPUTE **=** { ON | **OFF** }  
  指定是否要重新計算統計資料。 預設值為 OFF。  
   
- ON  
+ 開啟  
  不會自動重新計算過期的統計資料。  
   
  OFF  
@@ -115,7 +115,7 @@ ms.locfileid: "73982009"
   
  指定是否允許資料列鎖定。 預設值是 ON。  
   
- ON  
+ 開啟  
  當存取索引時，允許資料列鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會決定使用資料列鎖定的時機。  
   
  OFF  
@@ -126,7 +126,7 @@ ms.locfileid: "73982009"
   
  指定是否允許頁面鎖定。 預設值是 ON。  
   
- ON  
+ 開啟  
  當存取索引時，允許頁面鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會決定使用頁面鎖定的時機。  
   
  OFF  
@@ -143,7 +143,7 @@ ms.locfileid: "73982009"
   
  指定是否將排序結果儲存在 **tempdb** 中。 預設值為 OFF。  
   
- ON  
+ 開啟  
  用來建置索引的中繼排序結果會儲存在 **tempdb** 中。 如果 **tempdb** 位於與使用者資料庫所在磁碟不同的磁碟上，這可能會減少建立索引所需的時間。 不過，這會增加建立索引時所使用的磁碟空間量。  
   
  OFF  
@@ -157,7 +157,7 @@ ms.locfileid: "73982009"
 > [!NOTE]  
 >  唯一的非叢集索引不能在線上建立。 這包括因 UNIQUE 或 PRIMARY KEY 條件約束而建立的索引。  
   
- ON  
+ 開啟  
  索引作業持續期間不會保留長期資料表鎖定。 在索引作業的主要階段期間，來源資料表上只保留意圖共用 (IS) 鎖定。 這可使基礎資料表和索引的查詢或更新能夠進行。 在作業開始時，共用 (S) 鎖定會在來源物件上保留一段很短的時間。 在作業結束時，如果正在建立非叢集索引，則有一段短時間會在來源上取得 S (共用) 鎖定；或者，當以線上方式建立或卸除叢集索引時，以及正在重建叢集索引或非叢集索引時，則會取得 SCH-M (結構描述修改) 鎖定。 雖然線上索引鎖定是短暫的中繼資料鎖定，尤其是 Sch-M 鎖定必須等候這個資料表上的所有封鎖交易完成。 在等候期間，Sch-M 鎖定會在存取相同資料表時，封鎖等待在這個鎖定之後的所有其他交易。 建立本機暫存資料表的索引時，ONLINE 不可設為 ON。  
   
 > [!NOTE]  
@@ -185,7 +185,7 @@ ms.locfileid: "73982009"
  如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 > [!NOTE]
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用平行索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每個版本都無法使用平行索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  DATA_COMPRESSION  
  **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
@@ -213,7 +213,7 @@ ms.locfileid: "73982009"
   
  如需與壓縮有關的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
   
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n* ] **)** **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+ON PARTITIONS **(** { \<> | \<範圍> } [ **,** ...*n* ] **)** **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  指定套用 DATA_COMPRESSION 設定的分割區。 如果未分割此資料表，ON PARTITIONS 引數會產生錯誤。 如果未提供 ON PARTITIONS 子句，DATA_COMPRESSION 選項會套用到分割區資料表的所有分割區。  
   
@@ -270,7 +270,7 @@ BLOCKERS
  終止目前封鎖 **SWITCH** 或線上索引重建 DDL 作業的所有使用者交易，讓作業可以繼續。  
  BLOCKERS 需要 **ALTER ANY CONNECTION** 權限。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如需索引選項的完整描述，請參閱 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)。  
   
 ## <a name="see-also"></a>另請參閱  

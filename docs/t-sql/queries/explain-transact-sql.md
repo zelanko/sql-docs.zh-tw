@@ -11,17 +11,17 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: af27b58b2e4dd1f5e5b743e4a905dfee8cebc497
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73659423"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  傳回 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 陳述式的查詢計劃，而不執行陳述式。 使用 EXPLAIN 預覽哪些作業需要移動資料，以及檢視查詢作業的估計成本。 `WITH RECOMMENDATIONS` 適用於 Azure SQL 資料倉儲 (預覽)。
+  傳回 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 陳述式的查口詢計劃，而不執行陳述式。 使用 EXPLAIN 預覽哪些作業需要移動資料，以及檢視查詢作業的估計成本。 `WITH RECOMMENDATIONS` 適用於 Azure SQL 資料倉儲 (預覽)。
   
  如需查詢計劃的詳細資訊，請參閱 [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)] 中的＜了解查詢計劃＞。  
   
@@ -81,7 +81,7 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 |--------------------|-------------|-------------|  
 |BROADCAST_MOVE、DISTRIBUTE_REPLICATED_TABLE_MOVE、MASTER_TABLE_MOVE、PARTITION_MOVE、SHUFFLE_MOVE 和 TRIM_MOVE|`<operation_cost>` 元素，具有這些屬性。 值只反映本機作業：<br /><br /> -   *cost* 是本機運算子成本，並顯示作業執行的預估時間，以毫秒為單位。<br />-   *accumulative_cost* 是計劃中包括平行作業加總值的所有所見作業總和，以毫秒為單位。<br />-   *average_rowsize* 是作業期間，擷取和傳遞之資料列的資料列預估平均大小 (以位元組為單位)。<br />-   *output_rows* 是輸出 (節點) 基數，並顯示輸出資料列的數目。<br /><br /> `<location>`:作業發生所在的節點或散發。 選項包括："Control"、"ComputeNode"、"AllComputeNodes"、"AllDistributions"、"SubsetDistributions"、"Distribution" 和 "SubsetNodes"。<br /><br /> `<source_statement>`:隨機移動的來源資料。<br /><br /> `<destination_table>`:資料將移入的內部暫存資料表。<br /><br /> `<shuffle_columns>`:(只適用於 SHUFFLE_MOVE 作業)。 一或多個將用於暫存資料表之散發資料行的資料行。|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
 |MetaDataCreate_Operation|`<source_table>`:作業的來源資料表。<br /><br /> `<destination_table>`:作業的目的地資料表。|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
-|ON|`<location>`:請參閱上面的 `<location>`。<br /><br /> `<sql_operation>`:識別將在節點上執行的 SQL 命令。|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
+|開啟|`<location>`:請參閱上面的 `<location>`。<br /><br /> `<sql_operation>`:識別將在節點上執行的 SQL 命令。|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
 |RemoteOnOperation|`<DestinationCatalog>`:目的地目錄。<br /><br /> `<DestinationSchema>`:DestinationCatalog 中的目的地結構描述。<br /><br /> `<DestinationTableName>`:目的地資料表或 "TableName" 的名稱。<br /><br /> `<DestinationDatasource>`:目的地資料來源的名稱。<br /><br /> `<Username>` 和 `<Password>`：這些欄位表示可能需要目的地的使用者名稱和密碼。<br /><br /> `<CreateStatement>`:目的地資料庫的資料表建立陳述式。|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
 |RETURN|`<resultset>`:結果集的識別碼。|`<resultset>RS_19</resultset>`|  
 |RND_ID|`<identifier>`:所建立物件的識別碼。|`<identifier>TEMP_ID_260</identifier>`|  

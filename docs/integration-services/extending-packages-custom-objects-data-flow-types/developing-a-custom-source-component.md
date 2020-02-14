@@ -22,10 +22,10 @@ ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0d2546e349859b8f059623f25b2e8ac971ba5643
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297329"
 ---
 # <a name="developing-a-custom-source-component"></a>開發自訂來源元件
@@ -33,7 +33,7 @@ ms.locfileid: "71297329"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供開發人員撰寫來源元件的能力，這些元件可以連線至自訂資料來源，並將那些來源的資料提供給資料流程工作中的其他元件。 當您必須連接至無法使用其中一個現有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來源存取的資料來源時，能夠建立自訂來源的能力是很重要的。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可讓開發人員撰寫來源元件，以便連線到自訂資料來源，並將這些來源的資料提供給資料流程工作中的其他元件。 當您必須連接至無法使用其中一個現有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來源存取的資料來源時，能夠建立自訂來源的能力是很重要的。  
   
  來源元件具有一或多個輸出與零輸入。 在設計階段，來源元件是用以建立和設定連接、從外部資料來源讀取資料行中繼資料，以及設定以外部資料來源為基礎之來源的輸出資料行。 在執行期間，它們會連接至外部資料來源並將資料列加入輸出緩衝區。 資料流程工作會將這個緩衝區的資料列提供給下游元件。  
   
@@ -173,7 +173,7 @@ End Sub
   
  資料行的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> 會決定為其他屬性設定的值。 下表顯示每個 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> 的相依屬性之需求。 未列出的資料類型會將其相依屬性設定為零。  
   
-|DataType|長度|小數位數|有效位數|CodePage|  
+|DataType|長度|調整|Precision|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|大於 0，且小於或等於 28。|0|0|  
 |DT_CY|0|0|0|0|  

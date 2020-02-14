@@ -20,10 +20,10 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295125"
 ---
 # <a name="debugging-control-flow"></a>偵錯控制流程
@@ -31,7 +31,7 @@ ms.locfileid: "71295125"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含您可用於疑難排解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中之控制流程的功能及工具。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含許多功能和工具，可讓您用來對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件中的控制流程進行疑難排解。  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援容器及工作上的中斷點。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "71295125"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供您可以在所有工作及容器上啟用的十個中斷條件。 在 [設定中斷點]  對話方塊中，您可以在滿足下列條件時啟用中斷點：  
   
-|中斷條件|Description|  
+|中斷條件|描述|  
 |---------------------|-----------------|  
 |當容器收到 **OnPreExecute** 事件時。|即將執行工作時呼叫。 工作或容器會在即將執行之前引發此事件。|  
 |當容器收到 **OnPostExecute** 事件時。|在工作的執行邏輯完成之後立即呼叫。 工作或容器會在執行之後立即引發此事件。|  
@@ -71,16 +71,16 @@ ms.locfileid: "71295125"
   
  下表描述叫用計數類型。  
   
-|叫用計數類型|Description|  
+|叫用計數類型|描述|  
 |--------------------|-----------------|  
-|永遠|叫用中斷點時，一律暫停執行。|  
+|一律|叫用中斷點時，一律暫停執行。|  
 |叫用計數等於|當中斷點發生的次數等於叫用計數時，暫停執行。|  
 |叫用次數大於或等於|當中斷點發生的次數大於或等於叫用計數時，暫停執行。|  
 |叫用計數倍數|每當到達叫用計數的倍數時，暫停執行。 例如，若您將此選項設定為 5，則每到達五次叫用便會暫停執行。|  
   
 #### <a name="to-set-breakpoints"></a>設定中斷點  
   
--   [針對工作或容器設定中斷點以偵錯封裝](#debug)  
+-   [在工作或容器設定中斷點以對套件偵錯](#debug)  
   
 ## <a name="progress-reporting"></a>進度報表  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具包含兩種類型的進度報告：[控制流程]  索引標籤之設計介面上的色彩編碼，以及 [進度]  索引標籤上的進度訊息。  
@@ -103,7 +103,7 @@ ms.locfileid: "71295125"
   
  下圖顯示 [進度]  索引標籤。  
   
- ![SSIS 設計工具的 [進度] 索引標籤](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "SSIS 設計工具的 [進度] 索引標籤")  
+ ![SSIS 設計師的 [進度] 索引標籤](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "SSIS 設計師的 [進度] 索引標籤")  
   
 ## <a name="debug-windows"></a>偵錯視窗  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 包含許多視窗，您可將其用於處理中斷點及偵錯包含中斷點的封裝。 若要了解每個視窗的詳細資訊，請開啟該視窗並按 F1，以顯示視窗的 [說明]。  
@@ -112,7 +112,7 @@ ms.locfileid: "71295125"
   
  下表描述這些視窗。  
   
-|視窗|Description|  
+|時間範圍|描述|  
 |------------|-----------------|  
 |中斷點|列出封裝中的中斷點，並提供啟用及刪除中斷點的選項。|  
 |輸出|在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中顯示各功能的狀態訊息。|  
@@ -148,13 +148,13 @@ ms.locfileid: "71295125"
  **已啟用**  
  選取即可在事件上啟用中斷點。  
   
- **中斷條件**  
+ **Break Condition**  
  檢視要設定中斷點之可用事件的清單。  
   
- **叫用計數類型**  
+ **Hit Count Type**  
  指定中斷點生效的時間。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**永遠**|叫用中斷點時，一律暫停執行。|  
 |**叫用計數等於**|當中斷點發生的次數等於叫用計數時，暫停執行。|  

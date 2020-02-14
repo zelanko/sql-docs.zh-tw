@@ -26,10 +26,10 @@ ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064677"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
@@ -57,7 +57,7 @@ FOR CONVERSATION
   
 ## <a name="arguments"></a>引數  
  *ConversationPriorityName*  
- 指定此交談優先權的名稱。 此名稱在目前的資料庫中必須是唯一的，而且必須符合 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
+ 指定此交談優先權的名稱。 此名稱在目前資料庫中必須是唯一的，且必須符合[!INCLUDE[ssDE](../../includes/ssde-md.md)] [識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
  SET  
  指定用來判斷交談優先權是否套用到交談的準則。 如果有指定，SET 必須至少包含一個準則：CONTRACT_NAME、LOCAL_SERVICE_NAME、REMOTE_SERVICE_NAME 或 PRIORITY_LEVEL。 如果未指定 SET，所有的三個準則都會設定預設值。  
@@ -110,7 +110,7 @@ FOR CONVERSATION
  PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
  指定優先權，以指派使用交談優先權中指定之合約和服務的任何交談端點。 *PriorityValue* 必須是從 1 (最低優先權) 到 10 (最高優先權) 的整數常值。 預設值為 5。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會指派優先權等級給交談端點。 優先權等級會控制與此端點有關之作業的優先權。 每個交談都具有兩個交談端點：  
   
 -   起始端交談端點會讓交談的某一端與起始端服務和起始端佇列產生關聯。 起始端交談端點是在執行 BEGIN DIALOG 陳述式時建立的。 與起始端交談端點相關聯的作業包括下列項目：  

@@ -27,10 +27,10 @@ ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 45e7828421f6a8d4bca6084c6b9e0d215b432cc9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294082"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 工作
@@ -38,11 +38,11 @@ ms.locfileid: "71294082"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  工作為控制流程元素，用來定義封裝控制流程中所執行工作的單位。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝是由一或多項工作所組成。 如果封裝包含超過一項工作，則會在控制流程中按照優先順序條件約束連接並排列順序。  
+  工作為控制流程元素，用來定義封裝控制流程中所執行工作的單位。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件是由一或多項工作所組成。 如果封裝包含超過一項工作，則會在控制流程中按照優先順序條件約束連接並排列順序。  
   
  您也可以使用支援 COM 的程式設計語言 (例如 Visual Basic) 或 .NET 程式設計語言 (例如 C#) 撰寫自訂工作。  
   
- [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中使用封裝的圖形工具，它提供用來建立封裝控制流程的設計介面，以及用來設定工作的自訂編輯器。 您也可以設計 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型的程式以程式設計方式建立封裝。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中用於處理套件的圖形化工具，提供用來建立套件控制流程的設計介面，以及用來設定工作的自訂編輯器。 您也可以設計 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型的程式，以透過程式設計方式來建立套件。  
   
 ## <a name="types-of-tasks"></a>工作的類型  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括下列工作類型。  
@@ -86,6 +86,6 @@ ms.locfileid: "71294082"
  您可將多項工作設為群組，並做為單一工作單位執行，或於迴圈中重複。 如需詳細資訊，請參閱 [Foreach 迴圈容器](../../integration-services/control-flow/foreach-loop-container.md)、 [For 迴圈容器](../../integration-services/control-flow/for-loop-container.md)和 [時序容器](../../integration-services/control-flow/sequence-container.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
- [在控制流程中加入或刪除工作或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+ [在控制流程中新增或刪除工作或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
   

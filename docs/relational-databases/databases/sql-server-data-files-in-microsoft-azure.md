@@ -11,15 +11,15 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba61e7cc35d9cd0a0f63e3e2f89980b12c6904d5
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74833584"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 資料檔案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  ![Azure 上的資料檔案](../../relational-databases/databases/media/data-files-on-azure.png "DaAzure 上的資料檔案」)  
+  ![Azure 上的資料檔案](../../relational-databases/databases/media/data-files-on-azure.png "Azure 上的資料檔案")  
   
 Microsoft Azure 中的 SQL Server 資料檔案可提供將 SQL Server 資料庫檔案儲存為 Blob 的原生支援。 它可讓您在內部部署執行的 SQL Server 或 Microsoft Azure 虛擬機器執行的 SQL Server 中建立資料庫，以將您的 Microsoft Azure Blob 儲存體資料儲存在專用儲存位置。 它也簡化了在機器之間移動資料庫的程序。 您可以從一部機器中斷連結資料庫，並將其連結到另一部機器。 此外，它可讓您還原至 Microsoft Azure 儲存體或從中還原，為您的資料庫備份檔案提供替代儲存位置。 因此，它會針對資料虛擬化、資料移動、安全性和可用性提供許多優點，進而實現許多混合式方案，而且成本低廉、維護簡單，即可達到高可用性和彈性調整的效果。
  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7ed2d476be0ba9a22b42e5c7e60789a4059ea73c
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: 5483c2b6d344d72eb161b303abf1bf7e56825987
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816729"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76922894"
 ---
 # <a name="create-alter-and-drop-filetables"></a>建立、改變及卸除 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -175,7 +175,7 @@ GO
 |檢查條件約束|系統定義的檢查條件約束會強制執行下列需求：<br /><br /> 有效的檔案名稱。<br /><br /> 有效的檔案屬性。<br /><br /> 父物件必須是目錄。<br /><br /> 在檔案操作期間，會鎖定命名空間階層。|  
   
  **系統定義之條件約束的命名慣例**  
- 上述之系統定義條件約束的命名格式為 **\<條件約束類型>_\<資料表名稱>[\_\<資料行名稱>]\_\<唯一碼>** ，其中：  
+ 上述系統定義條件約束的命名格式為 **\<條件約束類型>_\<資料表名稱>[\_\<資料行名稱>]\_\<唯一碼>** ，其中：  
   
 -   其中的 <條件約束類型>  是 CK (檢查條件約束)、DF (預設條件約束)、FK (外部索引鍵)、PK (主索引鍵) 或 UQ (唯一條件約束)。  
   

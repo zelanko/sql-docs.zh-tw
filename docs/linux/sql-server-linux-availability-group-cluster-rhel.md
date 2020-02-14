@@ -5,17 +5,17 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 01/10/2020
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: bf888d42215f3a4ee7c44b782b82c55f85afa041
-ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
+ms.openlocfilehash: be817f1fffd734dcf86f3b35d3215decbc9eb28d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75884029"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76706283"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 RHEL 叢集
 
@@ -50,7 +50,7 @@ ms.locfileid: "75884029"
    
    >Linux 叢集會使用隔離功能將叢集回復為已知的狀態。 設定隔離的方式取決於發行版本和環境。 目前，有些雲端環境無法使用隔離。 如需詳細資訊，請參閱 [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440) (RHEL 高可用性叢集的支援原則 - 虛擬化平台)。
 
-5. [將可用性群組新增為叢集中的資源](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource)。  
+4. [將可用性群組新增為叢集中的資源](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource)。  
 
 ## <a name="configure-high-availability-for-rhel"></a>為 RHEL 設定高可用性
 
@@ -84,8 +84,16 @@ ms.locfileid: "75884029"
 
 1. 啟用存放庫。
 
+   **RHEL 7**
+
    ```bash
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
+   ```
+
+   **RHEL 8**
+
+   ```bash
+   sudo subscription-manager repos --enable=rhel-8-for-x86_64-highavailability-rpms
    ```
 
 如需詳細資訊，請參閱 [Pacemake - 開放原始碼、高可用性叢集](https://clusterlabs.org/pacemaker/) \(英文\)。 
@@ -161,12 +169,19 @@ pcs resource update ag_cluster meta failure-timeout=60s
 
 若要建立可用性群組資源，請使用 `pcs resource create` 命令，並設定資源屬性。 下列命令會針對名稱為 `ocf:mssql:ag` 的可用性群組建立 `ag1` 主要/從屬類型資源。
 
+**RHEL 7**
+
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
 ```
 
-> [!NOTE]
-> 在 **RHEL 8** 推出之後，CREATE 語法也隨之改變。 如果您使用 **RHEL 8**，術語 `master` 現在已變更為 `promotable`。 請使用下列 CREATE 命令，而非上述的命令：`sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true`
+**RHEL 8**
+
+在 **RHEL 8** 推出之後，CREATE 語法也隨之改變。 如果您使用 **RHEL 8**，術語 `master` 現在已變更為 `promotable`。 請使用下列 CREATE 命令，而非上述命令： 
+
+```bash
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true
+```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

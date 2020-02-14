@@ -18,10 +18,10 @@ ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: da6d7934951b683976a1a55f116def120bc515a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000439"
 ---
 # <a name="tostring-database-engine"></a>ToString (Database Engine)
@@ -49,7 +49,7 @@ string ToString  ( )
   
 **CLR 傳回型別：String**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 傳回階層中的邏輯位置。 例如，`/2/1/` 表示下列檔案系統階層式結構中的第四個資料列 ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])：
   
 ```sql

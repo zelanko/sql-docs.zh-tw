@@ -13,12 +13,12 @@ ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 766ae29c9024afd31b4c2bf353653f9f6b1a079f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1f9d94f1ddf6f6d3e9a8ce73a263790acc516de
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123720"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76259386"
 ---
 # <a name="create-primary-keys"></a>建立主索引鍵
 
@@ -34,7 +34,7 @@ ms.locfileid: "68123720"
 
 - PRIMARY KEY 條件約束內所定義的所有資料行，都必須定義成 NOT NULL。 如果未指定 Null 屬性，參與 PRIMARY KEY 條件約束的所有資料行，其 Null 屬性都會設成 NOT NULL。
 
-### <a name="Security"></a> 安全性
+### <a name="Security"></a> Security
 
 #### <a name="Permissions"></a> 權限
 
@@ -83,7 +83,7 @@ CREATE TABLE Production.TransactionHistoryArchive1
 ;
 ```
 
-### <a name="to-create-a-primary-key-with-nonclustered-index-in-a-new-table"></a>在新的資料表中建立具有非叢集索引的主索引鍵
+### <a name="to-create-a-primary-key-with-clustered-index-in-a-new-table"></a>在新資料表中建立具有叢集索引的主索引鍵
 
 下列範例會建立資料表，並在 AdventureWorks 資料庫的 `CustomerID` 資料行上定義主索引鍵，以及在 `TransactionID` 上定義叢集索引。
 

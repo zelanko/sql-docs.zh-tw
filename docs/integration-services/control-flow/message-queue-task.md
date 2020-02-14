@@ -22,10 +22,10 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 486339cc1c5ef550dbf4eee227bec3ad67ce0e3a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294104"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
@@ -33,7 +33,7 @@ ms.locfileid: "71294104"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  「訊息佇列」工作可讓您使用 Message Queuing (又稱為 MSMQ) 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝之間傳送和接收訊息，或將訊息傳送至由自訂應用程式處理的應用程式佇列。 這些訊息可採用簡單文字、檔案或變數及其值的形式。  
+  「訊息佇列」工作可讓您使用 Message Queuing (又稱為 MSMQ) 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件之間傳送和接收訊息，或將訊息傳送至由自訂應用程式處理的應用程式佇列。 這些訊息可採用簡單文字、檔案或變數及其值的形式。  
   
  透過使用「訊息佇列」工作，您可以協調整個企業內的作業。 如果目的地無法使用或者忙碌，可以將訊息排入佇列以稍後傳遞；例如，此工作可將屬於銷售代表離線之膝上型電腦的訊息排入佇列，等銷售代表們連接到網路後就可以接收到各自的訊息。 您可將「訊息佇列」工作用於下列用途：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "71294104"
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>訊息佇列工作上可用的自訂記錄訊息  
  下表列出「訊息佇列」工作的自訂記錄項目。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|Description|  
+|記錄項目|描述|  
 |---------------|-----------------|  
 |**MSMQAfterOpen**|指出工作已經完成開啟訊息佇列。|  
 |**MSMQBeforeOpen**|指出工作已經開始開啟訊息佇列。|  
@@ -128,7 +128,7 @@ ms.locfileid: "71294104"
  指定訊息佇列工作是否傳送或接收訊息。 如果選取 **[傳送訊息]** ，對話方塊的左窗格會列出 [傳送] 頁面，如果選取 **[接收訊息]** ，則會列出 [接收] 頁面。 依預設，此值設定為 **[傳送訊息]** 。  
   
 ## <a name="message-queue-task-editor-send-page"></a>訊息佇列工作編輯器 (傳送頁面)
-  使用 **[訊息佇列工作編輯器]** 對話方塊的 **[傳送]** 頁面，即可設定從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝傳送訊息的訊息佇列工作。  
+  使用 [訊息佇列工作編輯器]  對話方塊的 [傳送]  頁面，即可設定從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件傳送訊息的「訊息佇列」工作。  
   
 ### <a name="options"></a>選項。  
  **UseEncryption**  
@@ -138,7 +138,7 @@ ms.locfileid: "71294104"
  如果您選擇使用加密，請指定要使用之加密演算法的名稱。 「訊息佇列」工作可以使用 RC2 和 RC4 演算法。 預設值是 **[RC2]** 。  
   
 > [!NOTE]  
->  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料 (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在最新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。  
+>  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料 (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在最新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。  
   
 > [!IMPORTANT]  
 >  這些是 Message Queuing (又稱為 MSMQ) 技術支援的加密演算法。 這兩種加密演算法目前被認為在密碼編譯技術上不如較新的演算法，不過 Message Queuing 目前還不支援較新的演算法。 因此，在使用「訊息佇列」工作傳送訊息時，應仔細考慮您的加密需求。  
@@ -146,7 +146,7 @@ ms.locfileid: "71294104"
  **MessageType**  
  選取訊息類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**資料檔訊息**|訊息儲存在檔案中。 選取此值會顯示動態選項 **[DataFileMessage]** 。|  
 |**變數訊息**|訊息儲存在變數中。 選取此值會顯示動態選項 **[VariableMessage]** 。|  
@@ -184,7 +184,7 @@ ms.locfileid: "71294104"
  **MessageType**  
  選取訊息類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**資料檔訊息**|訊息儲存在檔案中。 選取此值會顯示動態選項 **[DataFileMessage]** 。|  
 |**變數訊息**|訊息儲存在變數中。 選取此值會顯示動態選項 **[VariableMessage]** 。|  
@@ -200,10 +200,10 @@ ms.locfileid: "71294104"
  **Overwrite**  
  指出儲存資料檔訊息的內容時，是否要覆寫現有檔案中的資料。 預設值為 **False**。  
   
- **篩選**  
+ **Filter**  
  指定是否要將篩選套用至訊息。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**沒有篩選**|工作不會篩選訊息。 選取此值會顯示動態選項 **IdentifierReadOnly**。|  
 |**來自封裝**|訊息只接收來自指定之封裝的訊息。 選取此值會顯示動態選項 **識別碼**＞。|  
@@ -221,10 +221,10 @@ ms.locfileid: "71294104"
  **相關主題：** [選取套件](../../integration-services/control-flow/select-a-package.md)  
   
 #### <a name="messagetype--variable-message"></a>MessageType = 變數訊息  
- **篩選**  
+ **Filter**  
  指定是否要將篩選套用至訊息。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**沒有篩選**|工作不會篩選訊息。 選取此值會顯示動態選項 **IdentifierReadOnly**。|  
 |**來自封裝**|訊息只接收來自指定之封裝的訊息。 選取此值會顯示動態選項 **識別碼**＞。|  
@@ -250,9 +250,9 @@ ms.locfileid: "71294104"
  **比較**  
  指定是否要將篩選套用至訊息。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|**無**|不會比較訊息。|  
+|**None**|不會比較訊息。|  
 |**完全相符**|訊息必須與 **CompareString** 選項中的字串完全相符。|  
 |**忽略大小寫**|訊息必須與 **CompareString** 選項中的字串相符，但是比較時不會區分大小寫。|  
 |**包含**|訊息必須包含 **CompareString** 選項中的字串。|  
@@ -264,9 +264,9 @@ ms.locfileid: "71294104"
  **比較**  
  指定是否要將篩選套用至訊息。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|**無**|不會比較訊息。|  
+|**None**|不會比較訊息。|  
 |**完全相符**|訊息必須與 **CompareString** 選項中的字串完全相符。|  
 |**忽略大小寫**|訊息必須與 **CompareString** 選項中的字串相符，但是比較時不會區分大小寫。|  
 |**包含**|訊息必須包含 **CompareString** 選項中的字串。|  

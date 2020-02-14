@@ -16,10 +16,10 @@ ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fd7a0ebf16733109e59aac74652d90e0b63a1d9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012915"
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe"></a>設定要在替代管道接聽的伺服器
@@ -38,13 +38,13 @@ ms.locfileid: "68012915"
   
 #### <a name="to-configure-the-named-pipe-used-by-the-sql-server-database-engine"></a>若要設定 SQL Server Database Engine 所使用的具名管道  
   
-1.  在 SQL Server 組態管理員的主控台窗格中，展開 [SQL Server 網路組態]  ，然後按一下並展開 [\<執行個體名稱> 的通訊協定]   。  
+1.  在 SQL Server 組態管理員的主控台窗格中展開 [SQL Server 網路組態]  ，然後按一下並展開 [\<執行個體名稱> 的通訊協定]   。  
   
 2.  在詳細資料窗格中，以滑鼠右鍵按一下 [具名管道]  ，然後按一下 [內容]  。  
   
 3.  在 **[通訊協定]** 索引標籤的 **[管道名稱]** 方塊中，輸入您要 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 接聽的管道，然後按一下 **[確定]** 。  
   
-4.  在主控台窗格中，按一下 **[SQL Server 服務]** 。  
+4.  在主控台窗格中，按一下 [SQL Server 服務]  。  
   
 5.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server (\<執行個體名稱>)]   ，然後按一下 [重新啟動]  ，以停止並重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   

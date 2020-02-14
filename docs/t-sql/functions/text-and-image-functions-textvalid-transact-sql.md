@@ -23,10 +23,10 @@ ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0608d1c5bd8c24fc9e78b21abf7cad6b1045db18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099043"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>Text 和 Image 函式 - TEXTVALID (Transact-SQL)
@@ -56,15 +56,15 @@ TEXTVALID ( 'table.column' ,text_ ptr )
  *text_ptr*  
  這是將檢查的文字指標。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果指標有效，便傳回 1，如果指標無效，便傳回 0。 請注意，**text** 資料行的識別碼必須包含資料表名稱。 如果有效的文字指標不存在，您便無法使用 UPDATETEXT、WRITETEXT 或 READTEXT。  
   
  另外，當您使用 **text**、**ntext** 和 **image** 資料時，下列函式和陳述式也很有用。  
   
-|函數或陳述式|Description|  
+|函數或陳述式|描述|  
 |---------------------------|-----------------|  
 |PATINDEX **(** ' _%pattern%_ ' **,** _expression_ **)**|傳回指定字元字串在 **text** 和 **ntext** 資料行中的字元位置。|  
 |DATALENGTH **(** _expression_ **)**|傳回 **text**、**ntext** 和 **image** 資料行中資料的長度。|  
@@ -107,7 +107,7 @@ pub_id Valid (if 1) Text data
  [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
  [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [Text 和 Image 函式 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [Text 和 Image 函數 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)  
   
   

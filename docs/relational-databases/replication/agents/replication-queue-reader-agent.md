@@ -16,15 +16,15 @@ ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7ba560e46aaebc1aa5bc6901a3c0067fae91bdb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085938"
 ---
 # <a name="replication-queue-reader-agent"></a>複寫佇列讀取器代理程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  「複寫佇列讀取器代理程式」是一個可執行檔，它會讀取儲存在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 佇列或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Message Queue 中的訊息，然後將這些訊息套用至發行者。 佇列讀取器代理程式可搭配允許佇列更新的快照式和交易式發行集使用。  
+  「複寫佇列讀取器代理程式」是一個可執行檔，其會讀取儲存在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 佇列或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 訊息佇列中的訊息，然後將這些訊息套用至發行者。 佇列讀取器代理程式可搭配允許佇列更新的快照式和交易式發行集使用。  
   
 > [!NOTE]  
 >  您可以使用任何順序來指定參數。 沒有指定選擇性參數時，系統就會使用以預設代理程式設定檔為基礎的預先定義值。  
@@ -55,7 +55,7 @@ qrdrsvc [-?]
   
 ## <a name="arguments"></a>引數  
  **-?**  
- 顯示使用方式資訊。  
+ 顯示使用資訊。  
   
  **-Continuous**  
  指定代理程式是否會嘗試連續處理佇列的交易。 如果您指定了這個參數，代理程式就會繼續執行，即使所有訂閱者都沒有任何佇列交易暫止也一樣。  
@@ -81,7 +81,7 @@ qrdrsvc [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  這是建立連接時，佇列讀取器代理程式所使用的安全通訊端層 (SSL) 加密層級。  
   
-|EncryptionLevel 值|Description|  
+|EncryptionLevel 值|描述|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定要使用 SSL，但是代理程式不會驗證 SSL 伺服器憑證是否由受信任的簽發者簽署。|  
@@ -95,7 +95,7 @@ qrdrsvc [-?]
  **-HistoryVerboseLevel** [ **0**| **1**| **2**| **3**]  
  指定在佇列讀取器作業期間記錄的記錄量。 您可以透過選取 **1**，盡量減少記錄作業對效能造成的影響。  
   
-|HistoryVerboseLevel 值|Description|  
+|HistoryVerboseLevel 值|描述|  
 |-------------------------------|-----------------|  
 |**0**|無記錄 (不建議使用)。|  
 |**1**|預設值。 一律更新相同狀態的上一個記錄訊息 (啟動、進度、成功等等)。 如果沒有任何具有相同狀態的上一筆記錄存在，便插入新的記錄。|  
@@ -115,10 +115,10 @@ qrdrsvc [-?]
  這僅與使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 架構佇列的更新訂閱有關。 指定針對暫止佇列交易輪詢 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 佇列的頻率 (以秒為單位)。 此值可介於 0 與 240 秒之間。 預設值是 5 秒。  
   
  **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
- 指定參與具有發行集資料庫之資料庫鏡像工作階段的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉夥伴執行個體。 如需詳細資訊，請參閱[資料庫鏡像和複寫 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
+ 指定參與具有發行集資料庫之資料庫鏡像工作階段的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉夥伴執行個體。 如需詳細資訊，請參閱 [資料庫鏡像和複寫 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
  **-ProfileName** _agent_profile_name_  
- 這是將一組預設值提供給代理程式所用之代理程式設定檔的名稱。 如需詳細資訊，請參閱[複寫代理程式設定檔](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
+ 這是將一組預設值提供給代理程式所用之代理程式設定檔的名稱。 如需資訊，請參閱[複寫代理程式設定檔](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
  **-QueryTimeOut** _query_time_out_seconds_  
  這是查詢逾時之前的秒數。預設值是 1800 秒。  
@@ -126,7 +126,7 @@ qrdrsvc [-?]
  **-ResolverState** [ **1**| **2**| **3**]  
  指定解決佇列更新衝突的方式。 值為 **1** 表示發行者在衝突中獲勝，而且目前的衝突佇列交易將在發行者和原始更新訂閱者上回復。後續佇列交易的處理將繼續進行。 值為 **2** 表示訂閱者在衝突中獲勝，而且佇列交易將覆寫發行者的值。 值為 **3** 表示任何衝突將導致訂閱者重新初始化。發行者在衝突中獲勝、後續佇列交易的處理將結束，而且訂閱將重新初始化。 交易式發行集的預設設定為 **1** ，而快照式發行集的預設設定為 **3** 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  若要啟動佇列讀取器代理程式，請從命令提示字元執行 **qrdrsvc.exe** 。 如需詳細資訊，請參閱＜ [複寫代理程式可執行檔](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  

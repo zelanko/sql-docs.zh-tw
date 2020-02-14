@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0563510242e38e817c7fb01e4185241062feedf3
-ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70978601"
 ---
 # <a name="expressions-transact-sql"></a>運算式 (Transact-SQL)
@@ -104,7 +104,7 @@ ms.locfileid: "70978601"
   
  許多符號和運算子組成的複雜運算式會評估得出單值結果。 產生之運算式的資料類型、定序、有效位數和值取決於元件運算式的組合，每次兩個，直到到達最終結果為止。 運算式的組合順序是由運算式中的運算子優先順序所定義。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果兩個運算式都有運算子所支援的資料類型，且至少符合下列條件之一，就可以用這個運算子來組合這兩個運算式：  
   
 -   運算式有相同的資料類型。  

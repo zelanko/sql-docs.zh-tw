@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981721"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 子句 (Transact-SQL)
@@ -63,9 +63,9 @@ SELECT...INTO 會在預設的檔案群組中建立新的資料表，然後將查
  *filegroup*    
  指定將作為新資料表建立位置的檔案群組名稱。 指定的檔案群組應該存在於資料庫上，否則 SQL Server 引擎會擲回錯誤。   
  
- **適用於：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 及更新版本。
+ **適用範圍：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 及更新版本。
   
-## <a name="data-types"></a>資料型別  
+## <a name="data-types"></a>資料類型  
  FILESTREAM 屬性不會傳送至新的資料表。 FILESTREAM BLOB 會以 **varbinary(max)** BLOB 的形式被複製並儲存在新資料表中。 在沒有 FILESTREAM 屬性的情況下，**varbinary(max)** 資料類型會有 2 GB 的限制。 如果 FILESTREAM BLOB 超過這個值，系統就會引發錯誤 7119 並且停止此陳述式。  
   
  當您將現有的識別欄位選入新的資料表時，除非下列其中一個狀況成立，否則新資料行會繼承 IDENTITY 屬性：  
@@ -82,7 +82,7 @@ SELECT...INTO 會在預設的檔案群組中建立新的資料表，然後將查
   
 如果其中任何一個狀況成立，都會將資料行建立成 NOT NULL，而不是繼承 IDENTITY 屬性。 如果新的資料表需要識別欄位，但是無法使用這種資料行，或者您想要與來源識別欄位不同的初始或遞增值，請使用 IDENTITY 函數在選取清單中定義此資料行。 請參閱下面＜範例＞一節中的＜使用 IDENTITY 函數來建立識別欄位＞。  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 `SELECT...INTO` 陳述式會以兩個部分運作 - 建立新資料表，然後插入資料列。  這表示若插入失敗，它們會復原，但仍會保留新的 (空白) 資料表。  若您需要讓整個操作整體成功或失敗，請使用[明確交易](../language-elements/begin-transaction-transact-sql.md)。
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
@@ -171,7 +171,7 @@ WHERE name = 'AddressID';
 ### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. 指定遠端資料來源的資料行，藉以建立資料表  
  下列範例將示範三種根據遠端資料來源在本機伺服器上建立新資料表的方法。 此範例一開始會建立遠端資料來源的連結。 然後，連結的伺服器名稱 `MyLinkServer,` 會指定於第一個 SELECT...INTO 陳述式的 FROM 子句和第二個 SELECT...INTO 陳述式的 OPENQUERY 函數中。 最後，第三個 SELECT...INTO 陳述式會使用 OPENDATASOURCE 函數，以便直接指定遠端資料來源，而非使用連結的伺服器名稱。  
   
- **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+ **適用於：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
 ```sql
 USE master;  
@@ -231,7 +231,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 將新資料表建立成另一個資料表的複本並載入至指定的檔案群組中
 下列範例示範如何將新資料表建立成另一個資料表的複本，然後載入至與使用者預設檔案群組不同的指定檔案群組中。
 
- **適用於：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 及更新版本。
+ **適用範圍：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 及更新版本。
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

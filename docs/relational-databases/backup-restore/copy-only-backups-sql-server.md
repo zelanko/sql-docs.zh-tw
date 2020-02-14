@@ -1,7 +1,7 @@
 ---
 title: 只複製備份 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/08/2018
+ms.date: 01/30/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,17 +15,17 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 621d3d701e1e815bac4d5028c3d78b00240bc293
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 1d95c1982d5809288b64f34cd1f6328b4ee00e4c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908990"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941036"
 ---
 # <a name="copy-only-backups"></a>只複製備份
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-「只複製備份」  是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 通常，進行備份會變更資料庫，而且會影響往後其他備份的還原方式。 不過，偶爾為了特殊目的在不影響資料庫整體備份及還原程序的情況下進行備份，相當有用。 只複製備份即是供此目的之用。  
+「只複製備份」  是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 通常，進行備份會變更資料庫，而且會影響往後其他備份的還原方式。 不過，偶爾為了特殊目的在不影響資料庫整體備份及還原程序的情況下進行備份，相當有用。 只複製備份即是供此目的之用。
   
  只複製備份的類型如下所示：  
   
@@ -42,13 +42,16 @@ ms.locfileid: "72908990"
      交易記錄永遠不會在只複製備份之後截斷。  
   
  只複製備份會記錄在 **backupset** 資料表的 [is_copy_only](../../relational-databases/system-tables/backupset-transact-sql.md) 資料行中。  
+ 
+ > [!IMPORTANT]  
+> 在 Azure SQL 受控執行個體中，無法為使用[服務管理的透明資料加密 (TDE)](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption) 加密的資料庫建立僅複本備份。 服務管理的 TDE 使用內部金鑰加密資料，且該金鑰無法匯出，所以您無法將備份還原到其他位置。 請考慮改用[客戶管理的 TDE](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql)，以便建立加密資料庫的僅複本備份，但請務必讓加密金鑰可供日後還原使用。
   
 ## <a name="to-create-a-copy-only-backup"></a>若要建立只複製備份  
  您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 PowerShell 建立只複製備份。  
 
 ### <a name="examples"></a>範例  
 ###  <a name="SSMSProcedure"></a> A. 使用 SQL Server Management Studio  
-在此範例中，`Sales` 資料庫的只複製備份將會備份至預設備份位置的磁碟。
+在此範例中， `Sales` 資料庫的只複製備份將會備份至預設備份位置的磁碟。
 
 1. 在物件總管  中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
 
@@ -58,7 +61,7 @@ ms.locfileid: "72908990"
 
 1. 按一下 [確定]  。
 
-###  <a name="TsqlProcedure"></a>B. 使用 Transact-SQL  
+###  <a name="TsqlProcedure"></a>B. 使用 TRANSACT-SQL  
 此範例使用 COPY_ONLY 參數來建立 `Sales` 資料庫的只複製備份。  此外，也會擷取交易記錄的只複製備份。
 
 ```sql

@@ -25,10 +25,10 @@ ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a31be66b07c6d5c463f5220e6359942cd507849b
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981739"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
@@ -56,10 +56,10 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
  指定是否要驗證登入名稱。 *Param2* 的類型為 **int** 且為選擇性。 當 *Param2* 為 0 時，不會驗證登入名稱。 當 *Param2* 未指定為 0 時，會驗證 Window 登入名稱與儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的登入名稱完全相同。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **varbinary(85)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  SUSER_SID 可在 ALTER TABLE 或 CREATE TABLE 中，用來當做 DEFAULT 條件約束使用。 SUSER_SID 可用在選取清單、WHERE 子句及任何允許使用運算式的位置中。 SUSER_SID 後面一律必須接著括號，即使未指定任何參數，也是如此。  
   
  當呼叫 SUSER_SID 時，如果未設定引數，它會傳回目前安全性內容的 SID。 當利用 EXECUTE AS，在已切換內容的批次內，未設定引數的情況下呼叫 SUSER_SID 時，它會傳回模擬內容的 SID。 當從模擬內容呼叫時，SUSER_SID(ORIGINAL_LOGIN()) 會傳回原始內容的 SID。  

@@ -21,10 +21,10 @@ ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b858cc4930cdfe9792e08c991c3ebdf8f319d0f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948226"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
@@ -83,7 +83,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!NOTE]  
 >  *scr_text_ptr* 值不得與 *dest_text_ptr* 值相同。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  新插入的資料可以是單一 *inserted_data* 常數、資料表名稱、資料行名稱或文字指標。  
   
 |更新動作|UPDATETEXT 參數|  

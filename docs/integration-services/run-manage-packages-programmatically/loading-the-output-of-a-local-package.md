@@ -17,10 +17,10 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc35bb8b31c88cea2d903981e709f4075929ea7a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295742"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>載入本機封裝的輸出
@@ -36,7 +36,7 @@ ms.locfileid: "71295742"
 > [!NOTE]  
 > 本主題所述之程序需要將資料流程工作與任何父物件的 DelayValidation 屬性，設定成其預設值 **False**。
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  這個程序示範如何以 Managed 程式碼開發用戶端應用程式，這個程式碼使用 DataReader 目的地直接從記憶體載入封裝的輸出。 這裡所摘要的步驟將在接下來的程式碼範例中示範。  
   
 #### <a name="to-load-data-package-output-into-a-client-application"></a>將資料封裝輸出載入用戶端應用程式  

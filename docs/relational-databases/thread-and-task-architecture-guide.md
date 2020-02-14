@@ -15,10 +15,10 @@ author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305194"
 ---
 # <a name="thread-and-task-architecture-guide"></a>執行緒和工作架構指南
@@ -36,7 +36,7 @@ ms.locfileid: "72305194"
 
 **工作**代表必須完成以滿足要求的工作單位。 您可以將一或多個工作指派給單一要求。 平行要求將有數個同時 (而非依序) 執行的作用中工作。 依序執行的要求在任何給定的時間點都只會有一個作用中工作。 工作在其整個生命週期中以各種狀態存在。 如需有關工作狀態的詳細資訊，請參閱 [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 處於「暫停」狀態的工作正在等候執行工作所需資源成為可用。 如需有關等候中工作的詳細資訊，請參閱 [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **工作執行緒** (亦稱為背景工作角色或執行緒) 是作業系統執行緒的邏輯表示法。 當執行序列要求時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將會繁衍背景工作角色以執行作用中工作。 當以[資料列模式](../relational-databases/query-processing-architecture-guide.md#execution-modes)執行平行要求時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會指派背景工作角色以協調負責完成指派給它們的工作的子背景工作角色。 為每個工作繁衍的背景工作執行緒數目取決於：
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **背景工作執行緒** (也稱為背景工作角色或執行緒) 是作業系統執行緒的邏輯表示法。 當執行序列要求時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將會繁衍背景工作角色以執行作用中工作。 當以[資料列模式](../relational-databases/query-processing-architecture-guide.md#execution-modes)執行平行要求時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會指派背景工作角色以協調負責完成指派給它們的工作的子背景工作角色。 為每個工作繁衍的背景工作執行緒數目取決於：
 -   要求是否符合平行處理原則的資格 (由查詢最佳化工具判斷)。
 -   根據目前的工作負載，實際可用[平行處理原則 (DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) 為何。 這可能會與預估 DOP 有所差異，後者是以平行處理原則的最大程度 (MAXDOP) 伺服器組態為基礎的。 例如，MAXDOP 伺服器組態選項可能是 8，執行階段的可用 DOP 只能是 2，這會影響查詢效能。 
 
@@ -46,7 +46,7 @@ ms.locfileid: "72305194"
 **排程器** (亦稱為 SOS 排程器) 會管理需要處理時間來代表工作 (Task) 執行工作 (Work) 的背景工作執行緒。 每個排程器都對應到個別處理器 (CPU)。 背景工作角色可在排程器中維持作用中的時間稱為 OS 配量，其最大值為 4 毫秒。 在經過此配量時間之後，背景工作角色會將其時間分配給需要存取 CPU 資源的背景工作角色，並變更其狀態。 這個背景工作角色之間的合作以最大化 CPU 資源存取的機制稱為**合作式排程**，亦稱為非先佔式排程。 接著，背景工作角色中的變更會傳播到與該背景工作角色關聯的工作，以及傳播到與該工作關聯的要求。 如需有關背景工作角色狀態的詳細資訊，請參閱 [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。 如需有關排程器的詳細資訊，請參閱 [sys.dm_os_schedulers](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。 
 
 ### <a name="allocating-threads-to-a-cpu"></a>配置執行緒給 CPU
-根據預設，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的每個執行個體會啟動每個執行緒，且作業系統會根據負載從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，將執行緒散發給電腦上的處理器 (CPU)。 如果已在作業系統層級啟用處理序親和性，則作業系統就會將每個執行緒指派給特定的 CPU。 相反地，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會將[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **背景工作執行緒**指派給**排程器**，以便將這些執行緒平均分配給 CPU。
+根據預設，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的每個執行個體會啟動每個執行緒，且作業系統會根據負載從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，將執行緒散發給電腦上的處理器 (CPU)。 如果已在作業系統層級啟用處理序親和性，則作業系統就會將每個執行緒指派給特定的 CPU。 相反地，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **背景工作執行緒**指派給**排程器**，以便將這些執行緒平均分配給 CPU。
     
 為了執行多工作業 (例如當多個應用程式存取一組相同的 CPU 時)，作業系統有時會在不同的 CPU 之間移動背景工作執行緒。 雖然從作業系統的觀點來看很有效率，但是在繁重的系統負載下，這項活動可能會降低 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的效能，因為每個處理器快取會重複地重新載入資料。 在這些情況中，將特定執行緒指定給 CPU，可降低處理器重新載入的情形並減少跨 CPU 移轉執行緒的問題 (藉此減少內容切換)，進而提升效能，而執行緒與處理器之間的關聯則稱為處理器同質性。 如果已經啟用相似性，作業系統就會將每個執行緒指派給特定的 CPU。 
 

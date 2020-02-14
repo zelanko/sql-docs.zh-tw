@@ -32,10 +32,10 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a320b01433ad95f4bd695a3f700b7e7bb9ba653
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902828"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
@@ -159,7 +159,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  有關 SERVICE_BROKER 特定的選項，請參閱本節稍後的「SERVICE_BROKER 選項」。 有關 DATABASE_MIRRORING 特定的選項，請參閱本節稍後的「DATABASE_MIRRORING 選項」。  
   
- AUTHENTICATION **=** \<authentication_options> 指定此端點連接的 TCP/IP 驗證需求。 預設值是 WINDOWS。  
+ AUTHENTICATION **=** \<驗證選項>：指定此端點連接的 TCP/IP 驗證需求。 預設值是 WINDOWS。  
   
  支援的驗證方法包括 NTLM 及 (或) Kerberos。  
   
@@ -256,7 +256,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  DATABASE_MIRRORING 沒有預設的通訊埠。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  ENDPOINT DDL 陳述式不能在使用者交易內執行。 即使使用中的快照隔離等級正在使用變更的端點，ENDPOINT DDL 陳述式也不會失敗。  
   
  可利用下列方式，針對 ENDPOINT 來執行要求：  

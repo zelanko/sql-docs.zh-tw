@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 40584dda23d36af385b9cae5457377838694be6e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: 8ec410ba98be0c1893f376daf596a0746983b87d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558463"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909898"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>在 Azure Key Vault 中使用客戶受控金鑰進行透明資料加密的常見錯誤
 
@@ -33,7 +33,7 @@ ms.locfileid: "75558463"
 
 如果無法存取的資料庫已經不再需要，可以立即將它刪除，以停止產生成本。 除非已還原對 Azure Key Vault 金鑰的存取權，且資料庫已重新上線，否則不允許資料庫上的其他所有動作。 當使用客戶管理金鑰加密的資料庫無法存取時，也無法將伺服器上的 TDE 選項從「客戶管理」變更為「服務管理」金鑰。 當 TDE 保護裝置遭撤銷時，這是保護資料免於未經授權存取的必要動作。 
 
-在資料庫無法存取超過 8 小時之後，就不會再自動修復。 如果已經在該期間之後還原對必要 Azure Key Vault 金鑰的存取權，您必須手動重新驗證存取權，才能讓資料庫重新上線。 在此情況下，讓資料庫重新上線可能需要花很多時間 (取決於資料庫大小)，且目前需要支援票證。 一旦資料庫重新上線，先前設定的設定，例如，異地連結 (如果已設定異地 DR)、PITR 歷程記錄和標籤將會遺失。 因此，建議使用[動作群組](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) \(部分機器翻譯\) 實作通知系統，以便盡快察覺並解決基礎金鑰保存庫的金鑰存取問題。 
+在資料庫無法存取超過 8 小時之後，就不會再自動修復。 如果已經在該期間之後還原對必要 Azure Key Vault 金鑰的存取權，您必須手動重新驗證該金鑰的存取權，才能讓資料庫重新上線。 在此情況下，讓資料庫重新上線可能需要花很多時間，視資料庫大小而定。 一旦資料庫重新上線，則先前設定的設定，例如，[容錯移轉群組](https://docs.microsoft.com/azure/sql-database/sql-database-auto-failover-group)、PITR 歷程記錄和所有標籤**都會遺失**。 因此，建議使用[動作群組](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) \(部分機器翻譯\) 實作通知系統，以便盡快察覺並解決基礎金鑰保存庫的金鑰存取問題。 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>導致資料庫變得無法存取的常見錯誤
 

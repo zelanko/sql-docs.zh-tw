@@ -15,10 +15,10 @@ ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a9fdbe8cca12779e6666e0305ddfb081f3649f44
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294471"
 ---
 # <a name="ado-connection-manager"></a>ADO 連接管理員
@@ -28,7 +28,7 @@ ms.locfileid: "71294471"
 
   ADO 連接管理員可讓封裝連接到 ActiveX Data Objects (ADO) 物件，例如資料錄集。 這個連接管理員一般用在以舊版語言 (例如 Microsoft Visual Basic 6.0) 所撰寫的自訂工作中，或用於做為使用 ADO 連接到資料來源之現有應用程式一部份的自訂工作中。  
   
- 當您將 ADO 連接管理員加入封裝時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立在執行階段解析為 ADO 連接的連接管理員、設定連接管理員屬性，並將連接管理員加入封裝上的 **Connections** 集合。 連接管理員的 **ConnectionManagerType** 屬性會設為 **ADO**。  
+ 當您將 ADO 連線管理員新增至套件時，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立一個連線管理員 (在執行階段會解析為 ADO 連線)、設定連線管理員的屬性，並將連線管理員新增至套件的 **Connections** 集合。 連接管理員的 **ConnectionManagerType** 屬性會設為 **ADO**。  
   
 ## <a name="troubleshooting-the-ado-connection-manager"></a>疑難排解 ADO 連接管理員  
  由 ADO 連接管理員讀取時，某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期資料類型會產生如下表所示結果。  
@@ -56,7 +56,7 @@ ms.locfileid: "71294471"
   
  如需有關可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請按下列主題：  
   
--   [設定 OLE DB 連接管理員](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)  
+-   [設定 OLE DB 連線管理員](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)  
   
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   

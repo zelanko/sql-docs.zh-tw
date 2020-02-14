@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f60ded18e88d57c5a2975b567fa246923ece7ebe
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71974365"
 ---
 # <a name="how-query-store-collects-data"></a>查詢存放區如何收集資料
@@ -31,7 +31,7 @@ SQL Server 查詢存放區可當作飛行資料記錄器來使用，不斷地收
  ![查詢存放區程序檢視](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
 **檢視描述**  
   
-|檢視|Description|  
+|檢視|描述|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|顯示針對資料庫執行的唯一查詢文字。 查詢文字前後的註解和空格會被忽略。 不會忽略文字內的註解和空格。 批次中的每個陳述式都會產生個別的查詢文字項目。|  
 |**sys.query_context_settings**|顯示在其下執行查詢之影響計劃設定的唯一組合。 使用不同影響計劃設定來執行的相同查詢文字，會在查詢存放區中產生不同的查詢項目，因為 `context_settings_id` 是查詢索引鍵的一部分。|  
@@ -57,15 +57,15 @@ SQL Server 查詢存放區可當作飛行資料記錄器來使用，不斷地收
   
  ![查詢存放區程序](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor") 
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
  為了減少 I/O 額外負荷，會從記憶體內部擷取新資料。 寫入作業會排入佇列，並隨後排清至磁碟。 查詢和計劃資訊 (在下圖中顯示為計劃存放區) 會以最快速度排清。 執行階段統計資料 (顯示為執行階段統計資料) 會保留在記憶體中，時間長短依 `SET QUERY_STORE` 陳述式 `DATA_FLUSH_INTERVAL_SECONDS` 選項所定義的期限。 您可以使用 [[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 查詢存放區] 對話方塊輸入 [資料排清間隔 (分鐘)]  的值，這會在內部轉換為秒。 
   
- ![查詢存放區程序計劃](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan") 
+ ![查詢存放區程序計畫](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan") 
   
  如果在使用[追蹤旗標 7745](../../relational-databases/performance/best-practice-with-the-query-store.md#Recovery) 時發生系統當機或關機，則查詢存放區可能會遺失已收集但尚未保存的執行時間資料，最多至 `DATA_FLUSH_INTERVAL_SECONDS` 所定義的時間範圍。 我們建議使用預設值 900 秒 (15 分鐘) 作為查詢擷取效能與資料可用性之間的平衡。
  
  > [!IMPORTANT] 
- > 系統不會嚴格強制執行 [大小上限 (MB)]  的限制。 只有當查詢存放區將資料寫入磁碟時，系統才會檢查儲存體大小。 此間隔是由 [資料排清間隔]  值所設定。 如果查詢存放區違反儲存體大小檢查之間的大小上限，即會轉換為唯讀模式。 如果啟用 [大小基礎的清除模式]  ，也會觸發強制執行大小上限的清除機制。
+ > 系統不會嚴格強制執行 [大小上限 (MB)]  的限制。 只有當查詢存放區將資料寫入磁碟時，系統才會檢查儲存體大小。 此間隔是由 [資料排清間隔]  值所設定。 如果查詢存放區違反儲存體大小檢查之間的大小上限，即會轉換為唯讀模式。 如果啟用 [以大小為基準的清除模式]  ，也會觸發強制執行大小上限的清除機制。
  
  > [!NOTE]
  > 如果有記憶體壓力，執行階段統計資料就能在使用 `DATA_FLUSH_INTERVAL_SECONDS` 所定義的時間之前排清至磁碟。
@@ -74,7 +74,7 @@ SQL Server 查詢存放區可當作飛行資料記錄器來使用，不斷地收
  
  如果工作階段終止，或者用戶端應用程式重新啟動或當機，將不會記錄查詢統計資料。 
   
- ![查詢存放區程序計劃資訊](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
+ ![查詢存放區程序計畫資訊](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
 ## <a name="see-also"></a>另請參閱
  [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  

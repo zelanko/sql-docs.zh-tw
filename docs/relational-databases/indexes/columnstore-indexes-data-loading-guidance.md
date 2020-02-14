@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68307629"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>資料行存放區索引 - 資料載入指導
@@ -31,7 +31,7 @@ ms.locfileid: "68307629"
 
 若要執行大量載入，您可以使用 [bcp 公用程式](../../tools/bcp-utility.md)、[Integration Services](../../integration-services/sql-server-integration-services.md)，或從暫存資料表中選取資料列。
 
-![載入至叢集資料行存放區索引](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "載入至叢集資料行存放區索引")  
+![載入叢集資料行存放區索引](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "載入叢集資料行存放區索引")  
   
 如圖表所示，大量載入︰
   
@@ -74,7 +74,7 @@ SELECT object_id, index_id, partition_number, row_group_id, delta_store_hobt_id,
 FROM sys.dm_db_column_store_row_group_physical_stats  
 ```  
   
- ![批次載入的資料列群組和差異存放區](../../relational-databases/indexes/media/sql-server-pdw-columnstore-batchload.gif "批次載入的資料列群組和差異存放區")  
+ ![批次載入的資料列群組與差異存放區](../../relational-databases/indexes/media/sql-server-pdw-columnstore-batchload.gif "批次載入的資料列群組與差異存放區")  
   
 ## <a name="use-a-staging-table-to-improve-performance"></a>使用暫存資料表來改善效能
 如果您只要在執行其他轉換之前暫存載入的資料，則將資料表載入堆積資料表遠快於將資料載入叢集資料行存放區資料表。 此外，將資料載入 [暫存資料表] [暫存] 也會比將資料表載入永久儲存體還要快的多。  

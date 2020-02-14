@@ -19,10 +19,10 @@ ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b65577b7f6b69bd4fb27392a7d71a2d68f17d7c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68063158"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>準備大量匯入資料 (SQL Server)
@@ -36,11 +36,11 @@ ms.locfileid: "68063158"
 > [!NOTE]  
 >  不支援大量匯入資料到遠端資料表。  
   
- 當您將資料檔案中的資料大量匯入到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體時，請使用下列方針：  
+ 當您將資料檔案中資料大量匯入到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體時，請使用下列方針：  
   
 -   為您的使用者帳戶取得必要的權限。  
   
-     使用者帳戶，用來使用 **bcp** 公用程式、BULK INSERT 陳述式或 INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式的使用者帳戶必須擁有資料表的必要權限 (由資料表擁有者指派)。 如需每個方法所需之權限的詳細資訊，請參閱 [bcp 公用程式](../../tools/bcp-utility.md)、[OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md) 和 [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)。  
+     使用者帳戶，用來使用 **bcp** 公用程式、BULK INSERT 陳述式或 INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式的使用者帳戶必須擁有資料表的必要權限 (由資料表擁有者指派)。 如需每個方法所需之權限的詳細資訊，請參閱 [bcp 公用程式](../../tools/bcp-utility.md)、 [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)和 [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
 -   使用大量記錄復原模式。  
   
@@ -49,13 +49,13 @@ ms.locfileid: "68063158"
      建議您在大量匯入作業之前，立即將資料庫變更為使用大量記錄復原模式。 事後則應立刻將資料庫重設成完整復原模式。 如需詳細資訊，請參閱[檢視或變更資料庫的復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)。  
   
     > [!NOTE]  
-    >  如需如何在大量匯入作業期間盡量減少記錄的詳細資訊，請參閱[大量匯入採用最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
+    >  如需如何在大量匯入作業期間盡量減少記錄的詳細資訊，請參閱 [大量匯入採用最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
 -   在大量匯入資料之後備份。  
   
      如果是使用簡單復原模式的資料庫，我們建議您在大量匯入作業完成之後進行完整或差異備份。 如需詳細資訊，請參閱[建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md) 或[建立差異資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)。  
   
-     如果是大量記錄復原模式或完整復原模式，記錄備份便已足夠。 如需詳細資訊，請參閱[交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
+     如果是大量記錄復原模式或完整復原模式，記錄備份便已足夠。 如需詳細資訊，請參閱[套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
   
 -   卸除資料表索引以改善大型大量匯入的效能。  
   

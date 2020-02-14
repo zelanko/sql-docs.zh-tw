@@ -21,10 +21,10 @@ ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c1912b398ca0d5db28bef668572a3a07d752694e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287941"
 ---
 # <a name="developing-a-custom-destination-component"></a>開發自訂目的地元件
@@ -32,7 +32,7 @@ ms.locfileid: "71287941"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 讓開發人員能夠撰寫可連線至任何自訂資料來源並在其中儲存資料的自訂目的地元件。 當您必須連接至無法使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 隨附的其中一個現有來源元件所存取的資料來源時，自訂目的地元件就很有用。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可讓開發人員撰寫自訂目的地元件，以便連線到任何自訂資料來源中的資料，以及將資料儲存到任何自訂資料來源。 當您必須連接至無法使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 隨附的其中一個現有來源元件所存取的資料來源時，自訂目的地元件就很有用。  
   
  目的地元件具有一或多個輸入與零個輸出。 在設計階段中，它們會建立並設定連接，並且從外部資料來源中讀取資料行中繼資料。 在執行期間，它們會連接至外部資料來源，並且將從資料流程的上游元件收到的資料列加入至外部資料來源。 如果外部資料來源在執行此元件之前就存在，目的地元件也必須確定此元件收到之資料行的資料類型與外部資料來源之資料行的資料類型相符。  
   

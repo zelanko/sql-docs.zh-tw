@@ -14,17 +14,17 @@ ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: be0ff34acb9d7743ae096f8ecd2b0ad3ed8a4e28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089838"
 ---
 # <a name="differential-backups-sql-server"></a>差異備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此備份和還原主題與所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫相關。  
   
- 差異備份是以之前最近一次的完整資料備份為基礎。 差異備份只擷取自那次完整備份以後變更過的資料。 差異備份據以為基礎的完整備份就稱為差異的 *「基底」* (Base)。 完整備份 (不包括僅限複製備份) 可做為一系列差異備份的基底，包括資料庫備份、部分備份及檔案備份。 檔案差異備份的基底備份可以包含在完整備份、檔案備份或部分備份之中。  
+ 差異備份是以先前最近的完整資料備份為基礎。 差異備份只擷取自那次完整備份以後變更過的資料。 差異備份據以為基礎的完整備份就稱為差異的 *「基底」* (Base)。 完整備份 (不包括僅限複製備份) 可做為一系列差異備份的基底，包括資料庫備份、部分備份及檔案備份。 檔案差異備份的基底備份可以包含在完整備份、檔案備份或部分備份之中。  
   
   
 ##  <a name="Benefits"></a> 優點  

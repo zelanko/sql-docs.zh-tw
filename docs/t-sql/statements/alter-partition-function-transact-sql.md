@@ -26,10 +26,10 @@ ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c2418bedb172464002fd640a50c8b57f3daca712
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071251"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
@@ -75,7 +75,7 @@ MERGE [ RANGE ( *boundary_value*) ]
 > [!NOTE]  
 >  資料行存放區索引的限制：包含資料行存放區索引的兩個非空白分割區無法合併。 在執行此作業之前，您必須卸除或停用資料行存放區索引  
   
-## <a name="best-practices"></a>最佳作法  
+## <a name="best-practices"></a>最佳做法  
 一律在分割區範圍的兩端保留空的分割區。 在這兩端保留分割區，以確保分割區會分割，而且分割區合併不會產生任何資料移動。 分割區分割會在一開始發生，而分割區合併會在結束時發生。 請避免分割或合併已擴展的資料分割。 分割或合併已擴展的分割區有時候很沒效率。 之所以缺乏效率，是因為分割與合併有時能使記錄產生作業延長四倍以上，也可能造成嚴重鎖定。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  

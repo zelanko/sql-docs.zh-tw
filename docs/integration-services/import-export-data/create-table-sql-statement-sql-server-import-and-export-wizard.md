@@ -12,10 +12,10 @@ ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bc7255cdcb9758f2bdd55b043e70669affadabd8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285223"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>建立資料表的 SQL 陳述式 (SQL Server 匯入和匯出精靈)
@@ -33,7 +33,7 @@ ms.locfileid: "71285223"
  
 在此範例中，[SQL 陳述式]  方塊會包含精靈所產生的預設 **CREATE TABLE** 陳述式。 此陳述式會建立名為 **Person.AddressNew** 的新目的地資料表，這是 **Person.Address** 來源資料表的複本。 
   
- ![[匯入和匯出精靈] 的建立資料表頁面](../../integration-services/import-export-data/media/create-table.png "[匯入和匯出精靈] 的建立資料表頁面")  
+ ![[匯入和匯出精靈] 的 [建立資料表] 頁面](../../integration-services/import-export-data/media/create-table.png "[匯入和匯出精靈] 的 [建立資料表] 頁面")  
   
 ## <a name="review-or-regenerate-the-create-table-statement"></a>檢視或重新產生 CREATE TABLE 陳述式  
  **SQL 陳述式**  

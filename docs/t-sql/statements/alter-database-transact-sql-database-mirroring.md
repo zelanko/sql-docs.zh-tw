@@ -18,10 +18,10 @@ ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 32cc95fa56d909602ab66d3ddad403bf4ceacebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065823"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (Transact-SQL) 資料庫鏡像
@@ -70,7 +70,7 @@ SET { <partner_option> | <witness_option> }
 > [!NOTE]
 > 自主資料庫無法使用 ALTER DATABASE 資料庫鏡像選項。
 
-*database_name* 此為要修改的資料庫名稱。
+*database_name*：這是要修改的資料庫名稱。
 
 PARTNER \<partner_option> 控制定義資料庫鏡像工作階段容錯移轉夥伴及其行為的資料庫屬性。 部分 SET PARTNER 選項可以在任何一個夥伴上設定，但其他選項只適用於主體伺服器或鏡像伺服器。 如需詳細資訊，請參閱下面的個別 PARTNER 選項。 SET PARTNER 子句會影響資料庫的這兩個複本，不論哪個夥伴指定它，都是如此。
 
@@ -85,7 +85,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]
 > 每個 SET PARTNER 子句都只能有一個 \<partner_option>。
 
-**'** _partner_server_ **'** 指定要在新資料庫鏡像工作階段中，作為容錯移轉夥伴的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體伺服器網路位址。 每個工作階段都需要兩個夥伴：一個啟動做為主體伺服器，一個啟動做為鏡像伺服器。 我們建議您將這些夥伴放在不同電腦中。
+**'** _partner_server_ **'** 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體伺服器網路位址作為新資料庫鏡像工作階段的容錯移轉夥伴。 每個工作階段都需要兩個夥伴：一個啟動做為主體伺服器，一個啟動做為鏡像伺服器。 我們建議您將這些夥伴放在不同電腦中。
 
 在每個夥伴上，每個工作階段都指定一次這個選項。 起始資料庫鏡像工作階段需要兩個 ALTER DATABASE *database* SET PARTNER **='** _partner_server_ **'** 陳述式。 它們的順序很重要。 首先是連線到鏡像伺服器，將主體伺服器執行個體指定為 *partner_server* (SET PARTNER **='** _principal_server_ **'** )。 其次是連線到主體伺服器，將鏡像伺服器執行個體指定為 *partner_server* (SET PARTNER **='** _mirror_server_ **'** )；這會在這兩個夥伴之間，啟動一個資料庫鏡像工作階段。 如需詳細資訊，請參閱[設定資料庫鏡像](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。
 
@@ -179,13 +179,13 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]
 > 每個 SET WITNESS 子句只能有一個 \<witness_option>。
 
- **'** _witness_server_ **'** 指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體作為資料庫鏡像工作階段的見證伺服器。 您只能在主體伺服器上指定 SET WITNESS。
+ **'** _witness_server_ **'** 指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體作為資料庫鏡像工作階段的見證伺服器。 您只能在主體伺服器上指定 SET WITNESS。
 
 在 **='** _witness_server_ **'** 陳述式中，*witness_server* 的語法與 *partner_server* 的語法相同。
 
 OFF 從資料庫鏡像工作階段中移除見證。 將見證設成 OFF 會停用自動容錯移轉。 如果資料庫設為 FULL SAFETY，且見證設為 OFF，鏡像伺服器失敗，會使主體伺服器將資料庫設為無法使用。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 ## <a name="examples"></a>範例
 

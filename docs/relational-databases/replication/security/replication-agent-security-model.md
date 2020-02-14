@@ -21,10 +21,10 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bd0cafe74b558dc86f6709b23e2f1195ecada520
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68768470"
 ---
 # <a name="replication-agent-security-model"></a>複寫代理程式安全性模型
@@ -55,7 +55,7 @@ ms.locfileid: "68768470"
 > [!NOTE]  
 >  某些 Windows 作業系統中的「使用者帳戶控制」(UAC) 可以防止以管理員權限存取快照集共用。 因此，您必須針對快照集代理程式、散發代理程式和合併代理程式所使用的 Windows 帳戶，明確地授與快照集共用權限。 即使 Windows 帳戶是管理員群組的成員，也必須這麼做。 如需詳細資訊，請參閱[保護快照集資料夾](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
   
-|Agent|權限|  
+|代理程式|權限|  
 |-----------|-----------------|  
 |快照集代理程式|在連接到散發者時，需使用執行代理程式的 Windows 帳戶。 這個帳戶必須：<br /><br /> -至少是散發資料庫中 **db_owner** 固定資料庫角色的成員。<br /><br /> -具備快照集共用的讀取、寫入及修改權限。<br /><br /> <br /><br /> 請注意，用來 *連接* 發行者的帳戶必須至少是發行集資料庫中 **db_owner** 固定資料庫角色的成員。|  
 |記錄讀取器代理程式|在連接到散發者時，需使用執行代理程式的 Windows 帳戶。 這個帳戶必須至少是散發資料庫中 **db_owner** 固定資料庫角色的成員。<br /><br /> 用來連接發行者的帳戶必須至少是發行集資料庫中 **db_owner** 固定資料庫角色的成員。<br /><br /> 選取 **sync_type** 選項 *replication support only*、 *initialize with backup*或 *initialize from lsn*時，記錄讀取器代理程式必須在執行 **sp_addsubscription**之後執行，讓設定指令碼寫入至散發資料庫。 記錄讀取器代理程式必須在屬於 **系統管理員 (sysadmin)** 固定伺服器角色成員的 Windows 帳戶底下執行。 當 **sync_type** 選項設為 *Automatic*時，不需要任何特殊的記錄讀取器代理程式動作。|  
@@ -68,7 +68,7 @@ ms.locfileid: "68768470"
 ## <a name="agent-security-under-sql-server-agent"></a>SQL Server Agent 下的代理程式安全性  
  利用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程序或 RMO 設定複寫時，依預設，會為每個代理程式建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 作業。 然後，代理程式將在作業步驟內容下執行，無論是連續執行、按排程執行，或者在需要時執行。 您可以在 **中的** [作業] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]資料夾下檢視這些作業。 下表列出各個作業名稱。  
   
-|Agent|作業名稱|  
+|代理程式|作業名稱|  
 |-----------|--------------|  
 |快照集代理程式|**\<發行者>-\<發行集資料庫>-\<發行集>-\<整數>**|  
 |合併式發行集分割區的快照集代理程式|**Dyn_\<發行者>-\<發行集資料庫>-\<發行集>-\<GUID>**|  

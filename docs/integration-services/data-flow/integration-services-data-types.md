@@ -19,10 +19,10 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292421"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 資料類型
@@ -32,11 +32,11 @@ ms.locfileid: "71292421"
 
   當資料輸入封裝中的資料流程時，擷取資料的來源會將資料轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 數值資料會指派為數值資料類型、字串資料指派為字元資料類型，而日期則是指派為日期資料類型。 其他資料，例如 GUID 和「二進位大型物件區塊 (BLOB)」也都會被指派適當的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 如果資料的資料類型不能轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型，則會發生錯誤。  
   
- 部分資料流程元件會在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]的 Managed 資料類型之間轉換資料類型。 如需 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 Managed 資料類型間對應的詳細資訊，請參閱 [使用資料流程中的資料類型](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)。  
+ 部分資料流程元件會在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的受控資料類型之間轉換資料類型。 如需 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 Managed 資料類型間對應的詳細資訊，請參閱 [使用資料流程中的資料類型](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)。  
   
  下表列出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 資料表中的某些資料類型具有適用的精確度和小數位數資訊。 如需有效位數和小數位數的詳細資訊，請參閱[有效位數、小數位數和長度 &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
-|資料類型|Description|  
+|資料類型|描述|  
 |---------------|-----------------|  
 |DT_BOOL|布林值。|  
 |DT_BYTES|二進位資料值。 長度是變數，且最大長度為 8,000 個位元組。|  
@@ -64,7 +64,7 @@ ms.locfileid: "71292421"
 |DT_UI4|四位元組不帶正負號的整數。|  
 |DT_UI8|八位元組不帶正負號的整數。|  
 |DT_WSTR|最大長度為 4000 字元，以 Null 終止的 Unicode 字元字串。 如果資料行值包含額外的 Null 結束字元，字串就會在第一個 Null 出現時被截斷。|  
-|DT_IMAGE|大小上限為 2^31-1 (2,147,483,647) 個位元組的二進位值。 的 Managed 資料類型之間轉換資料類型。|  
+|DT_IMAGE|大小上限為 2^31-1 (2,147,483,647) 個位元組的二進位值。 。|  
 |DT_NTEXT|最大長度為 2^30 - 1 (1,073,741,823) 個字元的 Unicode 字元字串。|  
 |DT_TEXT|最大長度為 2^31-1 (2,147,483,647) 個字元的 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS 字元字串。|  
   
@@ -226,25 +226,25 @@ ms.locfileid: "71292421"
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
 |DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
-|DT_CY|smallmoney, money|smallmoney, money|CURRENCY||||  
+|DT_CY|smallmoney, money|smallmoney, money|貨幣||||  
 |DT_DATE|||||||  
-|DT_DBDATE|[日期 &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[日期 &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||日期|日期|日期|  
-|DT_DBTIME||||TIMESTAMP|time|time|  
+|DT_DBDATE|[日期 &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[日期 &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||date|date|date|  
+|DT_DBTIME||||timestamp|time|time|  
 |DT_DBTIME2|[時間 &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)(p)|[時間 &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md) (p)|||||  
-|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)、[smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)、[smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
-|DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
+|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)、[smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)、[smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|Datetime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
+|DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)||timestamp|timestamp|timestamp|  
 |DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)(p)|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
 |DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
-|DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
-|DT_I4|INT|INT|長整數||INTEGER|INTEGER|  
+|DT_I2|SMALLINT|SMALLINT|Short||SMALLINT|SMALLINT|  
+|DT_I4|int|int|long||INTEGER|INTEGER|  
 |DT_I8|BIGINT|BIGINT|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
-|DT_R4|REAL|REAL|Single||real|real|  
+|DT_R4|real|real|Single||real|real|  
 |DT_R8|FLOAT|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
-|DT_STR|char, varchar||varchar||char, varchar|char, varchar|  
+|DT_STR|char, varchar||VarChar||char, varchar|char, varchar|  
 |DT_UI1|TINYINT|TINYINT|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  

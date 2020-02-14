@@ -17,10 +17,10 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 66d7ac0e15ebfee2c79a90f8c5041ba899dbff93
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73926042"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
@@ -31,7 +31,7 @@ Microsoft SQL Server Express LocalDB 是 [SQL Server Express](../../sql-server/e
 
 LocalDB 安裝會複製啟動 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]所需的最少檔案。 安裝 LocalDB 後，您可以使用特殊連接字串來起始連線。 連接時，就會自動建立及啟動必要的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基礎結構，應用程式不需複雜的組態工作即可開始使用資料庫。 Developer Tools 為開發人員提供 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，讓他們撰寫和測試 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，而不需要管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的完整伺服器執行個體。 
 
-## <a name="try-it-out"></a>現在就試試看！ 
+## <a name="try-it-out"></a>立即試用！ 
 
 - 若要下載並安裝 SQL Server Express LocalDB，請移至 **[SQL Server 下載](https://www.microsoft.com/sql-server/sql-server-editions-express)** 。 LocalDB 是您在安裝期間選取的功能，而且可以在下載媒體時使用。 如果您下載媒體，請選擇 **Express Advanced** 或 LocalDB 套件。 在 Visual Studio 安裝程式  中，您可以安裝 SQL Server Express LocalDB 作為 **.NET 桌面開發**工作負載的一部分，或是作為個別的元件。
 
@@ -48,9 +48,9 @@ LocalDB 安裝會複製啟動 [!INCLUDE[ssDEnoversion](../../includes/ssdenovers
 
 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB 的執行個體是使用 `SqlLocalDB.exe` 公用程式來管理。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB 應該用來取代已過時的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 使用者執行個體功能。
 
-## <a name="description"></a>Description
+## <a name="description"></a>描述
 
-LocalDB 安裝程式使用 `SqlLocalDB.msi` 程式在電腦上安裝必要的檔案。 在安裝後，LocalDB 就是可建立及開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 執行個體。 資料庫的系統資料庫檔案儲存在本機上通常處於隱藏狀態的 AppData 路徑中。 例如， `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`。 使用者資料庫檔案會儲存在使用者指定的位置，通常位於 `C:\Users\<user>\Documents\` 資料夾中。
+LocalDB 安裝程式使用 `SqlLocalDB.msi` 程式在電腦上安裝必要的檔案。 在安裝後，LocalDB 就是可建立及開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 執行個體。 資料庫的系統資料庫檔案儲存在本機上通常處於隱藏狀態的 AppData 路徑中。 例如： `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\` 。 使用者資料庫檔案會儲存在使用者指定的位置，通常位於 `C:\Users\<user>\Documents\` 資料夾。
 
 如需在應用程式中包含 LocalDB 的詳細資訊，請參閱 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [本機資料概觀](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110))、[在 Visual Studio 中建立資料庫並新增資料表](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)。
 
@@ -90,7 +90,7 @@ LocalDB 支援兩種類型的執行個體：自動執行個體和具名執行個
 
 ### <a name="connect-to-the-automatic-instance"></a>連線到自動執行個體
 
-使用 LocalDB 最簡單的方式是透過使用連接字串 `Server=(localdb)\MSSQLLocalDB;Integrated Security=true`，連線到目前使用者所擁有的自動執行個體。 若要使用檔案名稱來連線到特定的資料庫，請使用類似於 `Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf` 的連接字串進行連線。
+使用 LocalDB 最簡單的方式是透過使用連接字串 `Server=(localdb)\MSSQLLocalDB;Integrated Security=true`，連線到目前使用者所擁有的自動執行個體。 若要使用檔案名稱來連接到特定的資料庫，請使用類似於 `Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf` 的連接字串進行連接。
 
 >[!NOTE]
 >電腦使用者初次嘗試連線至 LocalDB 時，自動執行個體必須已建立及啟動。 建立執行個體所需的額外時間可能會導致連接嘗試失敗並顯示逾時訊息。 發生這種情況時，請等候幾秒鐘，讓建立程序完成，然後再重新連接。
@@ -112,10 +112,10 @@ REM Gather information about the instance of LocalDB
 
 |||
 |-|-|
-|[屬性]|`LocalDBApp1`|
+|名稱|`LocalDBApp1`|
 |版本|\<目前版本>|
 |共用名稱|""|
-|[擁有者]|"\<您的 Windows 使用者>"|
+|擁有者|"\<您的 Windows 使用者>"|
 |自動建立|否|
 |State|執行中|
 |上次啟動時間|\<日期和時間>|

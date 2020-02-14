@@ -13,15 +13,15 @@ ms.assetid: 019b7c49-dcca-445d-8969-5982a8ccbc1a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d56e6191276d97cd1286089db6a934d122a60e76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100034"
 ---
 # <a name="oracle-publisher"></a>Oracle 發行者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可讓您使用快照式和異動複寫來發行 Oracle 資料庫的資料。 如需詳細資訊，請參閱 [Oracle 發行概觀](../../relational-databases/replication/non-sql/oracle-publishing-overview.md)。  
+  從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可讓您使用快照式和異動複寫來發佈 Oracle 資料庫的資料。 如需詳細資訊，請參閱 [Oracle 發行概觀](../../relational-databases/replication/non-sql/oracle-publishing-overview.md)。  
   
  Oracle 發行者必須使用遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 散發者；在安裝和測試必要的 Oracle 網路軟體之後，必須在此伺服器上執行此精靈。 如需詳細資訊，請參閱[設定 Oracle 發行者](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)。  
   

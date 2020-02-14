@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f18f33d58de48358ffe88adee0bb2a3605c3c50b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 1052379affba718d49879c85e395b0117671075a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769989"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286561"
 ---
 # <a name="publication-properties-subscription-options"></a>發行集屬性，訂閱選項
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68769989"
   
 ### <a name="creation-and-synchronization"></a>建立與同步處理  
  **允許匿名訂閱**  
- 決定是否允許匿名提取訂閱。 匿名訂閱支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)]版和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for Windows CE。 若要在快照式和交易式發行集使用此選項， **[快照集永遠可使用]** 選項就必須設定為 **[True]** 。  
+ 決定是否允許匿名提取訂閱。 匿名訂閱支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)] 版和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for Windows CE。 若要在快照式和交易式發行集使用此選項， **[快照集永遠可使用]** 選項就必須設定為 **[True]** 。  
   
  **可附加訂閱資料庫**  
  決定是否可以附加訂閱資料庫的副本來建立訂閱 (快照式和交易式發行集的 **[快照集永遠可使用]** 選項必須設定為 **[True]** )。  
@@ -50,7 +50,7 @@ ms.locfileid: "68769989"
   
 ### <a name="schema-replication"></a>結構描述複寫  
  **複寫結構描述變更**  
- 僅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 決定是否複寫結構描述變更 (例如，加入資料行至資料表或變更資料行的資料類型) 至發行的物件。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
+ 僅限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 決定是否複寫結構描述變更 (例如，加入資料行至資料表或變更資料行的資料類型) 至發行的物件。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
 ## <a name="options-for-snapshot-and-transactional-publications"></a>快照式和交易式發行集的選項  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68769989"
  僅適用於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 決定發行集是否支援點對點複寫。 將此選項設定為 **[True]** ，就會將其他發行集屬性設定為支援點對點複寫。 如果訂閱存在，這個選項就是唯讀的。 如果 [允許立即更新訂閱]  、[允許佇列更新訂閱]  或 [允許非 SQL Server 訂閱者]  設定為 [True]  ，此選項就無法設定為 [True]  。 如需相關資訊，請參閱 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
   
  **允許點對點衝突偵測**  
- 僅適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本。 指定這個發行集是否啟用衝突偵測。 若要使用衝突偵測，所有節點都必須執行 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本，而且您必須針對所有節點啟用偵測。 若要使用衝突偵測，您也必須指定 [對等建立者識別碼]  的值。如需詳細資訊，請參閱 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。  
+ 僅適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本。 指定這個發行集是否啟用衝突偵測。 若要使用衝突偵測，所有節點都必須執行 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本，而且您必須針對所有節點啟用偵測。 若要使用衝突偵測，您也必須指定 [對等建立者識別碼]  的值。如需相關資訊，請參閱 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。  
   
  **對等訂閱者識別碼**  
  僅適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本。 針對點對點拓撲中的節點指定識別碼。 如果 **[允許點對點衝突偵測]** 設定為 **[True]** ，這個識別碼就會用於衝突偵測。 請指定拓撲中從未使用過的非零正數識別碼。 如需已經使用的識別碼清單，請查詢 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) 系統資料表。  
@@ -106,9 +106,9 @@ ms.locfileid: "68769989"
  **集中報告衝突**  
  決定是否只在發行者端報告資料變更的衝突，或在發行者和訂閱者兩端都報告。 此選項是唯讀的；針對使用新增發行集精靈所建立的發行集，預設為 **[True]** ，而且在發行集建立後就無法變更。 **[True]** 值表示衝突只會在發行者端報告。 衝突只能在其報告處檢視。 如需詳細資訊，請參閱＜ [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)＞的「檢視衝突」一節。  
   
-### <a name="filtering"></a>篩選  
+### <a name="filtering"></a>Filtering  
  **允許參數化篩選**  
- 會依據發行集是否使用參數化篩選來設定。 此選項一律會是唯讀的。 如需詳細資訊，請參閱 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+ 會依據發行集是否使用參數化篩選來設定。 此選項一律會是唯讀的。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
  **驗證訂閱者**  
  決定要使用哪些功能來驗證訂閱者的資料分割是否正確。 請以逗號分隔多個值。 如需詳細資訊，請參閱[驗證合併訂閱者的資料分割資訊](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md)。  

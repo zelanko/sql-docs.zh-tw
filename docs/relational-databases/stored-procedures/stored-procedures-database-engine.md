@@ -14,15 +14,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e64a097fb4d2eed917155fb3881d233231c413bc
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70148294"
 ---
 # <a name="stored-procedures-database-engine"></a>預存程序 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預存程序是一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的群組，或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 方法的參考。 預存程序類似於其他程式設計語言中的建構，因為這些程序可以：  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預存程序是一或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的群組，或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 方法的參考。 預存程序類似於其他程式設計語言中的建構，因為這些程序可以：  
   
 -   接受輸入參數，並以輸出參數的形式將多個數值傳回呼叫程式。  
   

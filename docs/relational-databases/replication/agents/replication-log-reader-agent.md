@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 6c71ce5c804a25123ce18e010585e038f41a2ebf
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 5c6ed8c51ea7b471f69a462cee06d5ffd0560973
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770721"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288098"
 ---
 # <a name="replication-log-reader-agent"></a>複寫記錄讀取器代理程式
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,10 +68,10 @@ logread [-?]
   
 ## <a name="arguments"></a>引數  
  **-?**  
- 顯示使用方式資訊。  
+ 顯示使用資訊。  
   
  **-Publisher** _server_name_[ **\\** _instance_name_]  
- 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 <伺服器名稱>  。 請針對該伺服器上 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
+ 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 *server_name*。 請針對該伺服器上 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
   
  **-PublisherDB** _publisher_database_  
  這是發行者資料庫的名稱。  
@@ -97,7 +97,7 @@ logread [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  這是建立連接時，記錄讀取器代理程式所使用的安全通訊端層 (SSL) 加密層級。  
   
-|EncryptionLevel 值|Description|  
+|EncryptionLevel 值|描述|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定要使用 SSL，但是代理程式不會驗證 SSL 伺服器憑證是否由受信任的簽發者簽署。|  
@@ -114,14 +114,14 @@ logread [-?]
  **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
  指定在記錄讀取器作業期間記錄的記錄量。  您可以透過選取 1，盡量減少記錄作業的效能影響。  
   
-|HistoryVerboseLevel 值|Description|  
+|HistoryVerboseLevel 值|描述|  
 |-------------------------------|-----------------|  
 |**0**||  
 |**1**|預設值。 一律更新相同狀態的上一個記錄訊息 (啟動、進度、成功等等)。 如果沒有任何具有相同狀態的上一筆記錄存在，便插入新的記錄。|  
 |**2**|除非記錄用於閒置訊息或長時間執行作業訊息等事件 (在此情況下，更新之前的記錄)，否則便插入新的記錄。|  
   
  **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
- 這是記錄執行緒檢查是否有任何現有的連接正在等候伺服器回應之前的秒數。 執行長時間執行的批次時，您可以減少這個值，避免檢查代理程式將記錄讀取器代理程式標示為有疑問。 預設值是 300 秒。  
+ 這是記錄執行緒檢查是否有任何現有的連接正在等候伺服器回應之前的秒數。 執行長時間執行的批次時，您可以減少這個值，避免檢查代理程式將記錄讀取器代理程式標示為有疑問。 預設為 300 秒。  
   
  **-LoginTimeOut** _login_time_out_seconds_  
  這是登入逾時之前的秒數。預設為 15 秒。  
@@ -146,7 +146,7 @@ logread [-?]
  **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
  指定輸出是否應該詳細。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|僅列印錯誤訊息。|  
 |**1**|列印所有代理程式進度報表訊息。|  
@@ -189,7 +189,7 @@ logread [-?]
  **-RecoverFromDataErrors**  
  指定當記錄讀取器代理程式在非 SQL Server 發行者發行的資料行資料中遇到錯誤時，它會繼續執行。 根據預設，這類錯誤會導致記錄讀取器代理程式失敗。 當您使用 **-RecoverFromDataErrors**時，錯誤的資料行資料就會複寫成 NULL 或適當的非 Null 值，而且系統會在 [MSlogreader_history](../../../relational-databases/system-tables/mslogreader-history-transact-sql.md) 資料表中記錄警告訊息。 這個參數僅支援 Oracle 發行者。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]  
 >  如果您將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 安裝成在本機系統帳戶而非網域使用者帳戶 (預設值) 底下執行，這項服務就只能存取本機電腦。 如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 底下執行的記錄讀取器代理程式設定為使用 Windows 驗證模式，當它登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]時，記錄讀取器代理程式就會失敗。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設設定為  驗證。 如需有關變更安全性帳戶的詳細資訊，請參閱＜ [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)＞。  

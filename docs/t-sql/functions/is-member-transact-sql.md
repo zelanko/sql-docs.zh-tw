@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2d3a0a9b09696959ba14c97c237e9e8ef9927db6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982916"
 ---
 # <a name="is_member-transact-sql"></a>IS_MEMBER (Transact-SQL)
@@ -57,13 +57,13 @@ IS_MEMBER ( { 'group' | 'role' } )
  **'** *role* **'**  
  這是要檢查的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 角色名稱。 *role* 為 **sysname**，而且可以包含資料庫固定角色或使用者定義角色，但無法包含伺服器角色。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  IS_MEMBER 會傳回下列值。  
   
-|傳回值|Description|  
+|傳回值|描述|  
 |------------------|-----------------|  
 |0|目前使用者不是 *group* 或 *role* 的成員。|  
 |1|目前使用者是 *group* 或 *role* 的成員。|  
@@ -73,7 +73,7 @@ IS_MEMBER ( { 'group' | 'role' } )
   
  若要從資料庫角色中新增和移除成員，請使用 [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)。 若要從伺服器角色中新增和移除成員，請使用 [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)。  
   
- 這個函數會評估角色成員資格，而非基礎權限。 例如，**db_owner** 固定資料庫角色具有 **CONTROL DATABASE** 權限。 如果使用者擁有 **CONTROL DATABASE** 權限，但不是此角色的成員，這個函式將正確回報該使用者不是 **db_owner** 角色的成員，即使該使用者擁有相同的權限也一樣。  
+ 這個函數會評估角色成員資格，而非基礎權限。 例如，**db_owner** 固定資料庫角色具有 **CONTROL DATABASE** 權限。 如果使用者擁有 **CONTROL DATABASE** 權限，但不是此角色的成員，則這個函式將正確回報該使用者不是 **db_owner** 角色的成員，即使該使用者擁有相同的權限也一樣。  
   
  **sysadmin** 固定伺服器角色的成員會作為 **dbo** 使用者輸入每個資料庫。 若要檢查 **sysadmin** 固定伺服器角色成員的權限，請檢查 **dbo** 的權限，而非原始登入。 由於 **dbo** 無法新增至資料庫角色，也不存在於 Windows 群組之中，因此 **dbo** 一律會傳回 0 (或當角色不存在時，傳回 NULL)。  
   

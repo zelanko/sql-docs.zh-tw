@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 61747c9b7e445990bd285061f63c5497b0f51f85
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68811333"
 ---
 # <a name="modify-unique-constraints"></a>修改唯一的條件約束
@@ -42,7 +42,7 @@ ms.locfileid: "68811333"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
@@ -59,16 +59,16 @@ ms.locfileid: "68811333"
   
 4.  完成下表中的動作：  
   
-    |若要|請依照下列步驟：|  
+    |至|請依照下列步驟：|  
     |--------|------------------------|  
     |變更與條件約束有關的資料行|1) 在 [(一般)]  底下的方格中，按一下 [資料行]  ，然後按一下屬性右邊的省略符號 **(...)** 。<br /><br /> 2) 在 [索引資料行]  對話方塊中，指定索引的新資料行或排序次序，同時指定這兩者。|  
-    |重新命名條件約束|在 **[識別]** 底下的方格中，於 **[名稱]** 方塊中輸入新的名稱。 確定新名稱不會與 [選取的主/唯一索引鍵或索引]  清單中的名稱重複。|  
+    |重新命名條件約束|在 **[識別]** 底下的方格中，於 **[名稱]** 方塊中輸入新的名稱。 確定新名稱不會與 [選取的主索引鍵/唯一索引鍵或索引]  清單中的名稱重複。|  
     |設定叢集選項|在 [資料表設計工具]  下的方格中，選取 [建立為叢集]  ，然後從下拉式清單中，選擇 [是] 建立叢集索引，或選擇 [否] 建立非叢集索引。 每個資料表只能存在一個叢集索引。 如果叢集索引已經存在這個資料表中，您就必須清除原始索引的這項設定。|  
     |定義填滿因數|在 **[資料表設計工具]** 底下的方格中，展開 **[填滿規格]** 類別目錄，然後在 **[填滿因數]** 方塊中輸入 0 到 100 之間的整數。|  
   
-5.  在 [檔案]  功能表上，按一下 [儲存]  _table name_。  
+5.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
   
-##  <a name="TsqlProcedure"></a> **若要修改唯一條件約束**  
+##  <a name="TsqlProcedure"></a> **修改唯一條件約束**  
   
  若要使用 Transact-SQL 來修改 UNIQUE 條件約束，您必須先刪除現有的 UNIQUE 條件約束，然後使用新的定義來重新建立。 如需相關資訊，請參閱 [Delete Unique Constraints](../../relational-databases/tables/delete-unique-constraints.md) 及 [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md)。  
   

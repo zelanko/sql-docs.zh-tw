@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9859db8e22110e228386dfe23f94341ab1f7be15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68062555"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定欄位與資料列結束字元 (SQL Server)
@@ -107,7 +107,7 @@ bcp -r '0x0A'
   
  **bcp** 命令包含下列參數。  
   
-|參數|Description|  
+|Switch|描述|  
 |------------|-----------------|  
 |**-c**|指定以字元資料載入資料欄位。|  
 |**-t** `,`|指定逗號 (,) 做為欄位結束字元。|  
@@ -135,7 +135,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      您可以使用下表所示的限定詞，針對格式檔案中的個別欄位或整個資料檔指定結束字元。  
   
-    |Qualifier|Description|  
+    |Qualifier|描述|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***field_terminator***'**|指定要用於字元和 Unicode 字元資料檔中的欄位結束字元。<br /><br /> 預設值是 \t (定位字元)。|  
     |ROWTERMINATOR **='***row_terminator***'**|指定要用於字元和 Unicode 字元資料檔中的資料列結束字元。<br /><br /> 預設值是 \n (新行字元)。|  
@@ -183,7 +183,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 #### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. 使用 BULK INSERT 以互動方式指定結束字元  
  下列範例會使用 `Department-c-t.txt` 陳述式 (其中使用下表所示的限定詞)，大量匯入 `BULK INSERT` 資料檔。  
   
-|選項|attribute|  
+|選項|屬性|  
 |------------|---------------|  
 |DATAFILETYPE **='** char **'**|指定以字元資料載入資料欄位。|  
 |FIELDTERMINATOR **='** `,` **'**|指定逗號 (`,`) 作為欄位結束字元。|  
@@ -204,7 +204,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 公用程式](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [使用 bcp 時指定欄位長度 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   

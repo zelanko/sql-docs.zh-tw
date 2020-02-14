@@ -1,7 +1,7 @@
 ---
 title: HAVING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 01/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 55650709-001e-42f4-902f-ead09a3c34af
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7cba43ad87b39122f6cd3d3ae7328b963e6fb1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a574e3f7348c4641665b067193c54604145386c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948431"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315608"
 ---
 # <a name="select---having-transact-sql"></a>SELECT - HAVING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ ORDER BY SalesOrderID ;
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會使用 `HAVING` 子句從 `FactInternetSales` 資料表中，擷取 `OrderDateKey` 在 2004 年或之後的每個 `SalesAmount` 的總計。  
+ 使用簡單 `HAVING` 子句的下列範例，會從 `FactInternetSales` 資料表擷取每個 `OrderDateKey` 超出 `80000` 的 `SalesAmount` 總數。  
   
 ```sql
 -- Uses AdventureWorks  

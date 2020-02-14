@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8081b4b4b4c8a9d19af0c558d162974d98e16878
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094737"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>將資料行加入資料表 (Database Engine)
@@ -34,7 +34,7 @@ ms.locfileid: "68094737"
 
  如果您使用 ALTER TABLE 陳述式，將資料行加入至資料表，系統就會自動將這些資料行加入至資料表的結尾。 如果您想要讓資料行按照特定順序列在資料表中，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 不過，請注意，這並非資料庫設計最佳作法。 最佳作法是在應用程式和查詢層級指定傳回資料行的順序。 您不應該仰賴使用 SELECT *，根據資料表中定義資料行的順序，按照預期的順序傳回所有資料行。 請務必按照您想要顯示資料行的順序，在查詢和應用程式中依名稱指定資料行。
 
-### <a name="Security"></a> 安全性
+### <a name="Security"></a> Security
 
 #### <a name="Permissions"></a> 權限
 
@@ -59,7 +59,7 @@ ms.locfileid: "68094737"
     > [!NOTE]
     > 資料行屬性的預設值會在您建立新資料行時加入，但是您可以在 [資料行屬性]  索引標籤中變更預設值。
 
-6. 新增資料行之後，請從 [檔案]  功能表中，選擇 [儲存**資料表**]  。
+6. 新增資料行之後，請從 [檔案]  功能表中，選擇 [儲存 <資料表名稱>]   。
   
 ## <a name="TsqlProcedure"></a> 使用 Transact-SQL
   

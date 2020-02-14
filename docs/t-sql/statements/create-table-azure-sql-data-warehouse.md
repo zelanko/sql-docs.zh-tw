@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729871"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
@@ -187,7 +187,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  `datetime2` [ ( *n* ) ]  
 與 `datetime` 相同，但您可以指定小數部分的秒數。 *n* 的預設值是 `7`。  
   
-|*n* 值|有效位數|小數位數|  
+|*n* 值|Precision|調整|  
 |--:|--:|-:|  
 |`0`|19|0|  
 |`1`|21|1|  
@@ -213,7 +213,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  `float` [ ( *n* ) ]  
  用來搭配浮點數值資料使用的近似數字資料類型。 浮點數資料是近似的，這表示並非資料類型範圍內的所有值都能夠精確地表示。 *n* 指定用來以科學記號標記法儲存 `float` 之尾數的位元數。 *n* 可決定有效位數和儲存體大小。 如果指定 *n*，則其值必須介於 `1` 與 `53` 之間。 *n* 的預設值是 `53`。  
   
-| *n* 值 | 有效位數 | 儲存體大小 |  
+| *n* 值 | Precision | 儲存體大小 |  
 | --------: | --------: | -----------: |  
 | 1-24   | 7 位數  | 4 個位元組      |  
 | 25-53  | 15 位數 | 8 個位元組      |  
@@ -234,7 +234,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  *scale*  
  小數點右側所能儲存的最大十進位數。 *小數位數*必須是從 `0` 到 *有效位數* 之間的值。 只有在已指定 *precision* 的情況下，您才能指定 *scale*。 預設小數位數為 `0`，因此 `0` <= *scale* <= *precision*。 最大儲存體大小會隨著有效位數而不同。  
   
-| 有效位數 | 儲存體位元組  |  
+| Precision | 儲存體位元組  |  
 | ---------: |-------------: |  
 |  1-9       |             5 |  
 | 10-19      |             9 |  
@@ -317,7 +317,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 若要將資料列存放區資料表變更為資料行存放區資料表，請卸除資料表中所有現有的索引，然後建立叢集資料行存放區索引。 如需範例，請參閱 [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)。
 
-如需詳細資訊，請參閱下列文章：
+如需詳細資訊，請參閱這些文章：
 - [資料行存放區索引建立版本功能摘要](https://msdn.microsoft.com/library/dn934994/)
 - [SQL 資料倉儲中的索引資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [資料行存放區索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md) 

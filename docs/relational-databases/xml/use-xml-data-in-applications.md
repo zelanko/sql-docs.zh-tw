@@ -26,10 +26,10 @@ ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 998504b936681c5e20d185ab17b787630a6ae2f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039148"
 ---
 # <a name="use-xml-data-in-applications"></a>在應用程式中使用 XML 資料
@@ -146,14 +146,14 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>使用 ADO.NET 處理 xml 類型資料行的 XML  
- 若要使用 ADO.NET 和  處理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] you can use the standard behavior of the **SqlCommand** class. 例如，使用 **SqlDataReader** 擷取 **xml**資料類型資料行及其值，就跟擷取 SQL 資料行的方式一樣。不過，如果您想要將 **xml** 資料類型資料行的內容處理為 XML，您就必須先將內容指定為 **XmlReader** 類型。  
+ 若要使用 ADO.NET 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 處理 **ML** 資料類型資料行中的 XML，您可以使用 **SqlCommand** 類別的標準行為。 例如，使用 **SqlDataReader** 擷取 **xml**資料類型資料行及其值，就跟擷取 SQL 資料行的方式一樣。不過，如果您想要將 **xml** 資料類型資料行的內容處理為 XML，您就必須先將內容指定為 **XmlReader** 類型。  
   
- 如需詳細資訊及範例程式碼，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 文件集的 "XML Column Values in a Data Reader"。  
+ 如需詳細資訊及範例程式碼，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 文件中的＜資料讀取器中的 XML 資料行值＞。  
   
 ## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>使用 ADO.NET 處理參數中的 xml 類型資料行  
  若要以 ADO.NET 和 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]處理傳遞為參數的 xml 資料類型，您可以提供值作為 **SqlXml** 資料類型的執行個體。 這裡不牽涉特殊的處理，因為 **中的** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型資料行可以接受與其他資料行及資料類型 (如 **string** 或 **integer**) 相同方式的參數值。  
   
- 如需詳細資訊及範例程式碼，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 文件集的 "XML Values as Command Parameters"。  
+ 如需詳細資訊及範例程式碼，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 文件中的＜作為命令列參數的 XML 值＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [XML 資料 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  

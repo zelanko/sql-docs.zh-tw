@@ -26,12 +26,12 @@ ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 188248ea2a09875e71905878a9d9f85c3ebfcd78
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 86c10915b811578f82e50bd4322439863e610766
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843566"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315618"
 ---
 # <a name="system_user-transact-sql"></a>SYSTEM_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -46,10 +46,10 @@ ms.locfileid: "73843566"
 SYSTEM_USER  
 ```  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  您可以在 CREATE TABLE 和 ALTER TABLE 陳述式中，搭配 DEFAULT 條件約束使用 SYSTEM_USER 函數。 您也可以把它當作任何標準函數使用。  
   
  如果使用者名稱和登入名稱不同，SYSTEM_USER 便會傳回登入名稱。  
@@ -57,7 +57,9 @@ SYSTEM_USER
  如果目前使用者使用 Windows 驗證登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，SYSTEM_USER 便會傳回 Windows 登入識別名稱，格式如下：*DOMAIN*\\*user_login_name*。 不過，如果目前使用者是利用 SQL Server 驗證登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，SYSTEM_USER 便會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入識別名稱，例如，以 `WillisJo` 登入的使用者，就傳回 `WillisJo`。  
   
  SYSTEM_USER 會傳回目前執行內容的名稱。 如果 EXECUTE AS 陳述式已用來切換內容，SYSTEM_USER 便會傳回模擬內容的名稱。  
-  
+
+ 您無法對 SYSTEM_USER 執行 EXECUTE AS。
+
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-system_user-to-return-the-current-system-user-name"></a>A. 利用 SYSTEM_USER 傳回目前系統使用者名稱  

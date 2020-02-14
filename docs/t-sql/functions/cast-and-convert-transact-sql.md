@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5839bfa470bfc7a35c924f1710b1d78f86cb1245
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 943d0e840c0c407e66f0d47deec4c1e78fc57afa
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843427"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761622"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -122,7 +122,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 
 <sup>6</sup> 只有在從字元資料轉換為 **datetime** 或 **smalldatetime** 時才支援。 將只代表日期或只代表時間元件的字元資料轉換成 **datetime** 或 **smalldatetime** 資料類型時，未指定的時間元件會設定為 00:00:00.000，而未指定的日期元件則會設定為 1900-01-01。
   
-<sup>7</sup> 使用選擇性時區指標 **Z** 更輕鬆地將具有時區資訊的 XML **datetime** 值對應到沒有時區的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 值。 Z 指出時區 UTC-0。 以 + 或 - 方向位移的 HH:MM 指出其他時區。 例如： `2006-12-12T23:45:12-08:00`＞。
+<sup>7</sup> 使用選擇性時區指標 **Z** 更輕鬆地將 XML **datetime** 值 (具有時區資訊) 對應到沒有時區的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 值。 Z 指出時區 UTC-0。 以 + 或 - 方向位移的 HH:MM 指出其他時區。 例如： `2006-12-12T23:45:12-08:00` 。
   
 將 **smalldatetime** 轉換成字元資料時，包含秒或毫秒的樣式會在這些位置顯示零。 從 **datetime** 或 **smalldatetime** 值轉換時，請使用適當的 **char** 或 **varchar** 資料類型長度來截斷不需要的日期部分。
   
@@ -136,7 +136,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |**0** (預設)|最多 6 位數。 在適當時機，供科學記號標記法使用。|  
 |**1**|一律 8 位數。 一律用在科學記號標記法中。|  
 |**2**|一律 16 位數。 一律用在科學記號標記法中。|  
-|**3**|一律 17 位數。 用於不失真的轉換。 透過這個樣式，可保證將每個不同的 float 或 real 值轉換成相異的字元字串。<br /><br /> **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
+|**3**|一律 17 位數。 用於不失真的轉換。 透過這個樣式，可保證將每個不同的 float 或 real 值轉換成相異的字元字串。<br /><br /> **適用範圍：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
 |**126、128、129**|基於舊版原因而納入；未來版本可能會取代這些值。|  
   
 ## <a name="money-and-smallmoney-styles"></a>money 和 smallmoney 樣式
@@ -165,7 +165,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |值|輸出|  
 |---|---|
 |**0** (預設)|將 ASCII 字元轉譯成二進位位元組，或將二進位位元組轉譯成 ASCII 字元。 每個字元或位元組都會以 1:1 的方式轉換。<br /><br /> 針對二進位 *data_type*，會在結果的左側新增字元 0x。|  
-|**1**、**2**|針對二進位 *data_type*，運算式必須是字元運算式。 *expression* 必須具有**偶數**個十六進位數字 (0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f)。 如果 *style* 設定為 1，則必須具有 0x 作為前兩個字元。 如果運算式包含奇數個字元，或者有任何字元無效，則會引發錯誤。<br /><br /> 如果所轉換運算式的長度超過 *data_type* 的長度，結果就是自右截斷。<br /><br /> 大於已轉換結果的固定長度 *data_type* 會在結果的右側新增零。<br /><br /> 字元類型的 *data_type* 需要二進位運算式。 每個二進位字元都會轉換成兩個十六進位字元。 如果所轉換運算式的長度超過 *data_type* 的長度，結果就是自右截斷。<br /><br /> 針對固定大小字元類型 *data_type*，如果已轉換結果的長度小於 *data_type* 的長度，則會在所轉換運算式的右側新增空格，以維持偶數個十六進位數字。<br /><br /> 針對 *style* 1 的已轉換結果，系統會在它的左邊加入字元 0x。|  
+|**1**、**2**|針對二進位 *data_type*，運算式必須是字元運算式。 *expression* 必須具有**偶數**個十六進位數字 (0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f)。 如果 *style* 設為 1，則運算式的前兩個字元必須是 0x。 如果運算式包含奇數個字元，或者有任何字元無效，則會引發錯誤。<br /><br /> 如果所轉換運算式的長度超過 *data_type* 的長度，結果就是自右截斷。<br /><br /> 大於已轉換結果的固定長度 *data_type* 會在結果的右側新增零。<br /><br /> 字元類型的 *data_type* 需要二進位運算式。 每個二進位字元都會轉換成兩個十六進位字元。 如果所轉換運算式的長度超過 *data_type* 的長度，結果就是自右截斷。<br /><br /> 針對固定大小字元類型 *data_type*，如果已轉換結果的長度小於 *data_type* 的長度，則會在所轉換運算式的右側新增空格，以維持偶數個十六進位數字。<br /><br /> 針對 *style* 1 的已轉換結果，系統會在它的左邊加入字元 0x。|  
   
 ## <a name="implicit-conversions"></a>隱含的轉換
 隱含轉換不需要指定 CAST 函式或 CONVERT 函式。 明確轉換需要指定 CAST 函式或 CONVERT 函式。 下圖顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統提供之資料類型所能使用的所有明確和隱含資料類型轉換。 這些包含 **bigint**、**sql_variant** 和 **xml**。 從 **sql_variant** 資料類型進行指派時，不可使用隱含轉換，但可以隱含轉換成 **sql_variant**。
@@ -269,14 +269,14 @@ Gail        Erickson      Ms.    *
   
 當您轉換具有不同小數位數的資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有時會傳回截斷的結果值，有時會傳回捨入的值。 此表格顯示這個行為。
   
-|來源|若要|行為|  
+|從|至|行為|  
 |---|---|---|
 |**numeric**|**numeric**|Round|  
-|**numeric**|**int**|截斷|  
+|**numeric**|**int**|Truncate|  
 |**numeric**|**money**|Round|  
 |**money**|**int**|Round|  
 |**money**|**numeric**|Round|  
-|**float**|**int**|截斷|  
+|**float**|**int**|Truncate|  
 |**float**|**numeric**|Round<br /><br /> 如果您將使用科學記號標記法的 **float** 值轉換成 **decimal** 或 **numeric**，就會限制為只有 17 個有效位數的值。 有效位數超過 17 的任何值都會捨入為零。|  
 |**float**|**datetime**|Round|  
 |**datetime**|**int**|Round|  

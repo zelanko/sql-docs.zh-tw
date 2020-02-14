@@ -13,10 +13,10 @@ ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: dce8d383ca01fd205645a18f7aa181d12cff4675
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68110959"
 ---
 # <a name="other-non-sql-server-subscribers"></a>其他非 SQL Server 訂閱者
@@ -60,7 +60,7 @@ ms.locfileid: "68110959"
   
 -   **IDBProperties**  
   
- 如果提供者支援 **IDBInfo** 介面， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 便會用此介面擷取例如引號識別碼字元、SQL 陳述式長度最大值、資料表和資料行名稱的字元數目之最大值等資訊。  
+ 如果提供者支援 **IDBInfo** 介面，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 便會使用此介面來擷取引號識別項字元、SQL 陳述式長度上限、資料表和資料行名稱的最大字元數等資訊。  
   
 ### <a name="session-object-interfaces"></a>Session 物件介面  
  以下是必要的介面：  
@@ -115,6 +115,6 @@ ms.locfileid: "68110959"
  如需 OLE DB 提供者的詳細資訊，請參閱您 OLE DB 提供者所附的文件。  
   
 ## <a name="see-also"></a>另請參閱  
- [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
+ [非 SQL Server 訂閱者](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
   
   

@@ -22,10 +22,10 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 75258eabcc1874ca8cda731cc473847b7316ff28
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296192"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件處理常式
@@ -109,7 +109,7 @@ ms.locfileid: "71296192"
   
 3.  按一下 [事件處理常式]  索引標籤。  
   
-     ![含事件處理常式之設計介面的螢幕擷取畫面](../integration-services/media/eventhandlers.gif "含事件處理常式之設計介面的螢幕擷取畫面")  
+     ![含事件處理常式的設計介面螢幕擷取畫面](../integration-services/media/eventhandlers.gif "含事件處理常式的設計介面螢幕擷取畫面")  
   
      在事件處理常式中建立控制流程和資料流程，與在封裝中建立控制流程和資料流程相似。 如需詳細資訊，請參閱[控制流程](../integration-services/control-flow/control-flow.md)和[資料流程](../integration-services/data-flow/data-flow.md)。  
   
@@ -119,9 +119,9 @@ ms.locfileid: "71296192"
   
 6.  按一下 [事件處理常式]  索引標籤之設計介面上的連結。  
   
-7.  將控制流程項目加入事件處理常式，並使用優先順序條件約束連接項目，方法是將條件約束從一個控制流程項目拖曳到另一個控制流程項目。 如需詳細資訊，請參閱[控制流程](../integration-services/control-flow/control-flow.md)。  
+7.  將控制流程項目加入事件處理常式，並使用優先順序條件約束連接項目，方法是將條件約束從一個控制流程項目拖曳到另一個控制流程項目。 如需詳細資訊，請參閱 [控制流程](../integration-services/control-flow/control-flow.md)。  
   
-8.  選擇性地加入「資料流程」工作，並在 [資料流程]  索引標籤的設計介面上，為事件處理常式建立資料流程。 如需詳細資訊，請參閱[資料流程](../integration-services/data-flow/data-flow.md)。  
+8.  選擇性地加入「資料流程」工作，並在 [資料流程]  索引標籤的設計介面上，為事件處理常式建立資料流程。 如需詳細資訊，請參閱 [資料流程](../integration-services/data-flow/data-flow.md)。  
   
 9. 在 [檔案]  功能表上，按一下 [儲存選取項目]  ，以儲存封裝。  
 
@@ -130,9 +130,9 @@ ms.locfileid: "71296192"
   
  如需如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中設定這些屬性的相關資訊，請參閱 [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
- 如需以程式設計方式設定這些屬性的相關資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>。  
+ 如需以程式設計方式設定這些屬性的詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>。  
   
 ## <a name="related-tasks"></a>相關工作  
- 如需如何將事件處理常式加入封裝的相關資訊，請參閱[將事件處理常式加入封裝中](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)。  
+ 如需如何將事件處理常式加入封裝的相關資訊，請參閱 [將事件處理常式加入封裝中](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)。  
   
   

@@ -16,20 +16,20 @@ ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 36093a4cd91943b3db214dcb9cdeb55bda7399c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093513"
 ---
 # <a name="sql-server-external-scripts-object"></a>SQL Server, 外部指令碼物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 **SQLServer:External Scripts** 物件可提供計數器來監視與執行外部指令碼相關聯的動作。 如需執行外部指令碼的相關資訊，請參閱 [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。  
+  **中的** SQLServer:External Scripts [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件可提供計數器來監視與執行外部指令碼相關聯的動作。 如需執行外部指令碼的相關資訊，請參閱 [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。  
   
- 下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **外部指令碼**計數器。  
+ 下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **External Scripts** 計數器。  
   
-|SQL Server 外部指令碼計數器|Description|  
+|SQL Server 外部指令碼計數器|描述|  
 |------------------------------------------|-----------------|  
 |**執行錯誤**|執行外部指令碼時的錯誤數目。|  
 |**Implied Auth.Logins**|來自使用隱含驗證進行驗證之附屬程序的登入次數。|  

@@ -13,10 +13,10 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 263f398e0c14c1b056185722a0662e031c9d7472
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297733"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>逐步解說：發行 SSIS 封裝做為 SQL 檢視
@@ -64,7 +64,7 @@ ms.locfileid: "71297733"
   
     3.  使用下列資料插入兩筆記錄。  
   
-        |ID|FirstName|LastName|  
+        |ID|FIRSTNAME|LASTNAME|  
         |--------|---------------|--------------|  
         |1|John|Doe|  
         |2|Jane|Doe|  
@@ -96,17 +96,17 @@ ms.locfileid: "71297733"
   
 2.  在 [簡介]  頁面上，按 [下一步]  。  
   
-     ![資料摘要發行精靈 - 簡介頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "資料摘要發行精靈 - 簡介頁面")  
+     ![資料摘要發佈精靈 - 簡介頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "資料摘要發佈精靈 - 簡介頁面")  
   
 3.  在 [封裝設定]  頁面上，執行下列動作：  
   
     1.  輸入包含 SSIS 目錄的 SQL Server 執行個體 **名稱** ，或按一下 [瀏覽]  來選取伺服器。  
   
-         ![資料摘要發行精靈 - 套件設定頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "資料摘要發行精靈 - 套件設定頁面")  
+         ![資料摘要發佈精靈 - 套件設定頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "資料摘要發佈精靈 - 套件設定頁面")  
   
     2.  按一下 [路徑] 欄位旁的 [瀏覽]  、瀏覽 SSIS 目錄、選取您要發行的 SSIS 套件 (例如︰[SSISDB]  ->[SSISPackagePublishing]  ->[Package.dtsx]  )，然後按一下 [確定]  。  
   
-         ![資料摘要發行精靈 - 瀏覽套件](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "資料摘要發行精靈 - 瀏覽套件")  
+         ![資料摘要發佈精靈 - 瀏覽套件](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "資料摘要發佈精靈 - 瀏覽套件")  
   
     3.  使用頁面底部的 [封裝參數]、[專案參數] 和 [連接管理員] 索引標籤，針對任何封裝參數、專案參數或適用於封裝的連接管理員設定來輸入值。 您也可以指定要用來進行封裝執行的環境參考，並將專案/封裝參數繫結至環境變數。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "71297733"
   
     1.  針對要建立的檢視選取 **資料庫** 。  
   
-         ![資料摘要發行精靈 - 發行設定頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "資料摘要發行精靈 - 發行設定頁面")  
+         ![資料摘要發佈精靈 - 發佈設定頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "資料摘要發佈精靈 - 發佈設定頁面")  
   
     2.  輸入 **檢視** 的 **名稱**。 您也可以從下拉式清單選取現有的檢視。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "71297733"
   
 5.  在 [驗證]  頁面上，檢閱驗證所有設定之值的結果。 在下列範例中，您會看到關於連結的伺服器是否存在的 **警告** ，因為連結的伺服器不存在於選取的 SQL Server 執行個體上。 如果您在 **結果** 中看見 **錯誤**，請將滑鼠游標移到 **錯誤** 上方，您將會看到關於此錯誤的詳細資料。 例如，如果您尚未針對 SSISOLEDB 提供者啟用 [允許 Inprocess] 選項，就會在 [連結伺服器的組態] 動作上得到錯誤。  
   
-     ![資料摘要發行精靈 - 驗證頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "資料摘要發行精靈 - 驗證頁面")  
+     ![資料摘要發佈精靈 - 驗證頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "資料摘要發佈精靈 - 驗證頁面")  
   
 6.  若要將此報表儲存為 XML 檔案，可按一下 [儲存報表]。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "71297733"
   
 8.  在 [摘要]  頁面中檢視您的選取項目，然後按一下 [發行]  來啟動發行程序，這將會建立連結的伺服器 (如果它尚未存在於伺服器上)，然後使用連接的伺服器建立檢視。  
   
-     ![資料摘要發行精靈 - 摘要頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "資料摘要發行精靈 - 摘要頁面")  
+     ![資料摘要發佈精靈 - 摘要頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "資料摘要發佈精靈 - 摘要頁面")  
   
      您現在可以針對 TestDB 資料庫執行下列 SQL 陳述式來查詢套件的輸出資料：SELECT * FROM [SSISPackageView]。  
   
@@ -261,7 +261,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
 -   單一引號 (') - 標準 OPENQUERY 支援此字元。 如果您想要在查詢子句中使用單引號，請使用兩個單引號 ('')。  
   
--   雙引號 (") - 查詢的參數部分會以雙引號括住。 如果參數值本身包含雙引號，請使用逸出字元。 例如： \"＞。  
+-   雙引號 (") - 查詢的參數部分會以雙引號括住。 如果參數值本身包含雙引號，請使用逸出字元。 例如： \" 。  
   
 -   左和右方括弧 ([ 和 ]) - 這些字元可用來表示前置/後端空格。 例如，「[ 一些空格 ]」代表「 一些空格 」字串，其中有一個前置空格和一個尾端空格。 如果這些字元本身會在查詢子句中使用，則必須逸出它們。 例如， \\和 \\]。  
   

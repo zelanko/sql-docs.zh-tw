@@ -22,10 +22,10 @@ ms.assetid: 54eac961-5c7a-4481-982d-f93a64b5c2f4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: db02b300e0f327a9186fb9b9af612d8f3f1ec452
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67915981"
 ---
 # <a name="run-sql-server-with-or-without-a-network"></a>使用 (或不使用) 網路執行 SQL Server
@@ -52,6 +52,6 @@ ms.locfileid: "67915981"
   
  當您未指定伺服器名稱而連接到本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，就會使用本機管道。 當您連接到本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，並明確指定伺服器名稱時，使用的是網路管道或別的網路跨處理序通訊 (IPC) 機制，如 Internetwork Packet Exchange (IPX) /Sequenced Packet Exchange (SPX) (假設您已將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設成可使用多個網路)。 由於獨立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援網路管道，因此從用戶端連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，必須省略不必要的 **/** <伺服器名稱>  引數。 例如，若要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] osql **連接到獨立**執行個體，請輸入：  
   
- **osql /Usa /P** \<sa 密碼>   
+ **osql /Usa /P** \<SA 密碼>   
   
   

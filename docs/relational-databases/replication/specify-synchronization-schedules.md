@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 69072514931e7e449893124a8f192043b2bf87d7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f240938196d50b76b182e994000727c4f3e30d58
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908335"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287122"
 ---
 # <a name="specify-synchronization-schedules"></a>指定同步處理排程
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,12 +46,12 @@ ms.locfileid: "72908335"
   
  如果從 **[作業]** 資料夾指定排程，請使用下列資料表以決定代理程式作業的名稱。  
   
-|Agent|作業名稱|  
+|代理程式|作業名稱|  
 |-----------|--------------|  
 |提取訂閱的合併代理程式|**\<發行者>-\<發行集資料庫>-\<發行集>-\<訂閱者>-\<訂閱資料庫>-\<整數>**|  
 |發送訂閱的合併代理程式|**\<發行者>-\<發行集資料庫>-\<發行集>-\<訂閱者>-\<整數>**|  
-|發送訂閱的散發代理程式|**\<發行者>-\<發行集資料庫>-\<發行集>-\<訂閱者>-\<整數>** <sup>1</sup>|  
-|提取訂閱的散發代理程式|**\<發行者>-\<發行集資料庫>-\<發行集>-\<訂閱者>-\<訂閱資料庫>-\<GUID>** <sup>2</sup>|  
+|發送訂閱的散發代理程式|**\<發行者>-\<資料庫>-\<>-\<訂閱者>-\<整數>** <sup>1</sup>|  
+|提取訂閱的散發代理程式|**\<>-\<資料庫>-\<發行集>-\<>-\<>-\<GUID>** <sup>2</sup>|  
 |發送訂閱至非 SQL Server 訂閱者的散發代理程式|**\<發行者>-\<發行集資料庫>-\<發行集>-\<訂閱者>-\<整數>**|  
   
  <sup>1</sup> 如果是 Oracle 發行集的發送訂閱，其作業名稱會是 [\<發行者>-\<發行者>]  ，而不是 [\<發行者>-\<發行集資料庫>]  。  
@@ -197,7 +197,7 @@ ms.locfileid: "72908335"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-push-subscription-to-a-transactional-publication"></a>當您建立交易式發行集的發送訂閱時，定義複寫代理程式排程  
   
-1.  為您所建立的訂閱建立 <xref:Microsoft.SqlServer.Replication.TransSubscription> 類別的執行個體。 如需詳細資訊，請參閱 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)。  
+1.  為您所建立的訂閱建立 <xref:Microsoft.SqlServer.Replication.TransSubscription> 類別的執行個體。 如需詳細資訊，請參閱 [建立發送訂閱](../../relational-databases/replication/create-a-push-subscription.md)。  
   
 2.  在您呼叫 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>之前，請設定 <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> 屬性的下列一或多個欄位：  
   
@@ -290,7 +290,7 @@ ms.locfileid: "72908335"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-push-subscription-to-a-merge-publication"></a>當您建立合併式發行集的發送訂閱時，定義複寫代理程式排程  
   
-1.  為您所建立的訂閱建立 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 類別的執行個體。 如需詳細資訊，請參閱 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)。  
+1.  為您所建立的訂閱建立 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 類別的執行個體。 如需詳細資訊，請參閱 [建立發送訂閱](../../relational-databases/replication/create-a-push-subscription.md)。  
   
 2.  在您呼叫 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>之前，請設定 <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> 屬性的下列一或多個欄位：  
   

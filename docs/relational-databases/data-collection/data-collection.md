@@ -14,10 +14,10 @@ ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2e50a46d53e1bf8fbee2b711ddce80e21a65beca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140751"
 ---
 # <a name="data-collection"></a>資料收集
@@ -40,13 +40,13 @@ ms.locfileid: "68140751"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 可用來排定和執行收集作業。 您應該了解以下概念：  
   
--   作業  
+-   工作 (Job)  
   
 -   作業步驟  
   
 -   作業排程  
   
--   子系統  
+-   Subsystem  
   
 -   Proxy 帳戶  
   
@@ -111,12 +111,12 @@ ms.locfileid: "68140751"
   
 ## <a name="things-you-can-do"></a>您可以執行的動作  
   
-|Description|主題|  
+|描述|主題|  
 |----------------------|-----------|  
 |管理資料收集的不同層面，例如啟用或停用資料收集、變更收集組的組態，或是檢視管理資料倉儲中的資料。|[管理資料收集](../../relational-databases/data-collection/manage-data-collection.md)|  
 |使用這些報表來取得監視系統容量和疑難排解系統效能的資訊。|[系統資料收集組報表](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  
 |使用管理資料倉儲從伺服器 (資料收集目標) 收集資料。|[管理資料倉儲](../../relational-databases/data-collection/management-data-warehouse.md)| 
-|利用 SQL Server Profiler 的伺服器端追蹤功能來匯出追蹤定義，以便用來建立使用一般 SQL 追蹤收集器類型的收集組。| [使用 SQL Server Profiler 來建立 SQL 追蹤收集組 (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
+|利用 SQL Server Profiler 的伺服器端追蹤功能來匯出追蹤定義，以便用來建立使用一般 SQL 追蹤收集器類型的收集組。| [使用 SQL Server Profiler 建立 SQL 追蹤收集組 (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   
   
 

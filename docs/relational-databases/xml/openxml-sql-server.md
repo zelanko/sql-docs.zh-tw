@@ -24,17 +24,17 @@ ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6282a242807532095d13fed4b853731937bdd176
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995362"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   OPENXML 是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 關鍵字，可透過類似資料表或檢視表的記憶體中 XML 文件，提供資料列集。 OPENXML 允許對 XML 資料的存取像是關聯式資料列集一樣。 其做法是，提供 XML 文件內部表示法的資料列集檢視。 資料列集的記錄可以儲存在資料庫的資料表中。  
   
- OPENXML 可用於 SELECT 及 SELECT INTO 陳述式，其中出現的資料列集提供者、檢視或 OPENROWSET 都可做為來源。 如需 OPENXML 語法的資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)。  
+ OPENXML 可用於 SELECT 及 SELECT INTO 陳述式，其中出現的資料列集提供者、檢視或 OPENROWSET 都可做為來源。 如需 OPENXML 語法的相關資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)。  
   
  若要利用 OPENXML 來對 XML 文件撰寫查詢，您必須先呼叫 **sp_xml_preparedocument**。 這樣會剖析 XML 文件，並將控制代碼傳回至準備要使用的已剖析文件。 剖析過的文件就是 XML 文件中，各種節點的文件物件模型 (DOM) 樹狀表示法。 接著文件控制代碼會傳遞至 OPENXML。 然後 OPENXML 會依據傳給它的參數，提供該文件的資料列集檢視。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67995362"
   
  下圖說明此程序。  
   
- ![正在使用 OPENXML 剖析 XML](../../relational-databases/xml/media/xmlsp.gif "正在使用 OPENXML 剖析 XML")  
+ ![使用 OPENXML 剖析 XML](../../relational-databases/xml/media/xmlsp.gif "使用 OPENXML 剖析 XML")  
   
  請注意，若要了解 OPENXML，您必須先熟悉 XPath 查詢，並了解 XML。 如需 SQL Server 中 XPath 支援的詳細資訊，請參閱 [在 SQLXML 4.0 中使用 XPath 查詢](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)。  
   
@@ -138,7 +138,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  下表說明邊緣資料表的結構。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|這是文件節點的唯一識別碼。<br /><br /> 根元素具有識別碼值 0； 負的識別碼值會保留。|  
 |**parentid**|**bigint**|識別節點的父系。 此識別碼所識別的父系，不一定就是父元素； 這一點需根據此識別碼所識別父系的節點 NodeType 而定。 例如，若該節點是文字節點，其父系可能是屬性節點。<br /><br />  如果節點位於 XML 文件的最上層，其 ParentID 為 NULL。|  
@@ -173,7 +173,7 @@ EXEC sp_xml_removedocument @docHandle;
   
      *ColPattern*為 XPath 運算式，在 WITH 子句中指定為 *SchemaDeclaration* 的一部份。  在 *ColPattern* 中指定的對應，會覆寫由 flags 參數所指定的對應。  
   
-     *ColPattern* 可用來指定對應的類型 (例如：屬性中心或元素中心)，以覆寫或加強 *flags*所指定的預設對應。  
+     *ColPattern* 可用來指定對應的類型 (例如屬性中心或元素中心)，以覆寫或加強 *flags*所指定的預設對應。  
   
       在下列情況下，會指定 ColPattern：  
   

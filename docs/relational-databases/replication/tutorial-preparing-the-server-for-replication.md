@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 09d68b763d967b6bcea4853f40bfc2ee2694421b
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.openlocfilehash: 7d7582eca4c3934a43e3faa7c94fc84f5609d86e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75320395"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910021"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>教學課程：準備 SQL Server 進行複寫 (發行者、散發者、訂閱者)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,8 +181,9 @@ ms.locfileid: "75320395"
    ![捷徑功能表上的 [設定散發] 命令](media/tutorial-preparing-the-server-for-replication/configuredistribution.png)
   
    > [!NOTE]  
-   > 如果您使用 **localhost** 而非實際伺服器名稱連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，系統會以警告提示您 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法連線到 **localhost**。 在警告對話方塊中選取 [確定]  。 在 [連線到伺服器]  對話方塊中，將 [伺服器名稱]  從 **localhost** 變更為伺服器的名稱。 然後選取 [連線]  。  
-  
+   > - 如果您使用 **localhost** 而非實際的伺服器名稱連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則系統會以警告提示您 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法連線到 **localhost 或 IP 位址**。 在警告對話方塊中選取 [確定]  。 在 [連線到伺服器]  對話方塊中，將 [伺服器名稱]  從 **localhost 或 IP 位址**變更為您的伺服器名稱。 然後選取 [連線]  。  
+   > - SQL Server Management Studio (SSMS) 18.0 (和更新版本) 目前已知有以下問題：當使用 IP 位址連線至散發者卻仍無效時，「不」  顯示警告訊息。 連線至散發者時應使用實際的伺服器名稱。 
+   
    [散發設定精靈] 會隨即啟動。  
   
 3. 在 [散發者]  頁面上，選取 [<'伺服器名稱'  > 將扮演本身的散發者; SQL Server 將建立散發資料庫和記錄]  。 然後選取 [下一步]  。  

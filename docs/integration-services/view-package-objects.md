@@ -20,10 +20,10 @@ ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 28393d15ade12562dbcaa4af457bf0de0e51948b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295016"
 ---
 # <a name="view-package-objects"></a>檢視封裝物件
@@ -63,7 +63,7 @@ ms.locfileid: "71295016"
  
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../integration-services/control-flow/integration-services-tasks.md)   
- [整合服務容器](../integration-services/control-flow/integration-services-containers.md)   
+ [Integration Services 容器](../integration-services/control-flow/integration-services-containers.md)   
  [優先順序條件約束](../integration-services/control-flow/precedence-constraints.md)   
  [Integration Services &#40;SSIS&#41; 變數](../integration-services/integration-services-ssis-variables.md)   
  [Integration Services &#40;SSIS&#41; 事件處理常式](../integration-services/integration-services-ssis-event-handlers.md)   

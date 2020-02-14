@@ -16,10 +16,10 @@ ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e253e6a4e19982e5350161cde00bc7609ed7380d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297003"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>比較指令碼工作和指令碼元件
@@ -32,7 +32,7 @@ ms.locfileid: "71297003"
 ## <a name="similarities-between-the-script-task-and-the-script-component"></a>指令碼工作和指令碼元件之間的相似性  
  指令碼工作和指令碼元件都有下列常用的功能。  
   
-|功能|Description|  
+|功能|描述|  
 |-------------|-----------------|  
 |兩種設計階段模式|在工作與元件中，您可以從在編輯器中指定屬性開始，然後再切換到開發環境以撰寫程式碼。|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)|工作與元件皆使用相同的 VSTA IDE，並支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 所撰寫的程式碼。|  

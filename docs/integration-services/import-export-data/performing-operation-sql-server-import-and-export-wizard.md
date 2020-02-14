@@ -12,10 +12,10 @@ ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 22f9918800930be9534441d2bb3706ad7844e9f7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285361"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>正在執行作業 (SQL Server 匯入和匯出精靈)
@@ -28,12 +28,12 @@ ms.locfileid: "71285361"
 ## <a name="screen-shot---operation-in-progress"></a>螢幕擷取畫面 - 作業進行中 
  下列螢幕擷取畫面顯示當作業仍在進行中時，精靈的 [正在執行作業]  頁面。  
   
- ![匯入和匯出精靈的執行作業頁面](../../integration-services/import-export-data/media/performing-operation1.png "匯入和匯出精靈的執行作業頁面")  
+ ![[匯入和匯出精靈] 的 [正在執行作業] 頁面](../../integration-services/import-export-data/media/performing-operation1.png "[匯入和匯出精靈] 的 [正在執行作業] 頁面")  
 
 ## <a name="screen-shot---operation-completed"></a>螢幕擷取畫面 - 作業已完成 
  下列螢幕擷取畫面顯示當作業完成之後，精靈的 [正在執行作業]  頁面。 按一下 [訊息]  資料行中的項目，取得關於對應步驟的詳細資訊。  
   
- ![匯入和匯出精靈的執行作業頁面](../../integration-services/import-export-data/media/performing-operation2.png "匯入和匯出精靈的執行作業頁面")  
+ ![[匯入和匯出精靈] 的 [正在執行作業] 頁面](../../integration-services/import-export-data/media/performing-operation2.png "[匯入和匯出精靈] 的 [正在執行作業] 頁面")  
   
 ## <a name="watch-the-progress-of-the-operation"></a>查看作業進度
  **動作**  
@@ -49,7 +49,7 @@ ms.locfileid: "71285361"
  **停止**  
  如有必要，請按一下 [停止]  按鈕中斷作業。  
   
- **報表**  
+ **Report**  
  檢視結果的報表、將報表儲存至檔案、將報表複製到剪貼簿，或透過電子郵件傳送報表。  
   
 ## <a name="whats-next"></a>下一步  

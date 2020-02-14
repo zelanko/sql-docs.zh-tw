@@ -22,10 +22,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3c261b2cc8a29af74adba6e32c646a11e940070
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982071"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
@@ -93,9 +93,9 @@ column_name <data_type>
   
 -   基於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型的別名資料類型。 別名資料類型必須先利用 CREATE TYPE 建立，之後，才能在資料表定義中使用它們。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 使用者定義型別及其所屬的結構描述。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 使用者自訂類型必須先利用 CREATE TYPE 建立，之後，才能在資料表定義中使用它。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 使用者定義型別及其所屬的結構描述。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 使用者自訂類型必須先利用 CREATE TYPE 建立，之後，才能在資料表定義中使用它。  
   
- 若未指定 *type_schema_name*，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會按照以下順序參考 *type_name*：  
+ 若未指定 *type_schema_name*，則 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會以下列順序來參考 *type_name*：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型。  
   
@@ -116,7 +116,7 @@ column_name <data_type>
  指定 *column_name* 中 **xml** 資料類型的每個執行個體都可以由多個最上層項目組成。 CONTENT 只適用於 **xml** 資料類型，而且只有在同時指定 *xml_schema_collection* 時，才能指定。 如果未指定這個項目，CONTENT 便是預設行為。  
   
 DOCUMENT  
- 指定 *column_name* 中 **xml** 資料類型的每個執行個體都只能由一個最上層項目組成。 CONTENT 只適用於 **xml** 資料類型，而且只有在同時指定 *xml_schema_collection* 時，才能指定。  
+ 指定 *column_name* 中 **xml** 資料類型的每個執行個體都只能由一個最上層項目組成。 DOCUMENT 只適用於 **xml** 資料類型，而且只有在同時指定 *xml_schema_collection* 時，才能指定。  
   
  *xml_schema_collection*  
  **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
@@ -216,7 +216,7 @@ ALGORITHM
 **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
 必須為 **'AEAD_AES_256_CBC_HMAC_SHA_256'** 。  
   
- 如需詳細資訊 (包括功能條件約束)，請參閱 [Always Encrypted &#40;資料庫引擎&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。  
+ 如需包括功能條件約束的詳細資訊，請參閱[永遠加密 &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。  
   
    
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
@@ -234,7 +234,7 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
   
  如需函式參數，請參閱[動態資料遮罩](../../relational-databases/security/dynamic-data-masking.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果新增的資料行有 **uniqueidentifier** 資料類型，您可以使用預設值來定義它。預設值會使用 NEWID() 函式，在資料表中每個現有資料列的新資料行內提供唯一識別碼值。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會強制在資料行定義中指定 DEFAULT、IDENTITY、ROWGUIDCOL 或資料行條件約束的順序。  

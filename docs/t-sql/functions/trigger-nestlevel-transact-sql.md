@@ -20,13 +20,13 @@ ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6215824f230001cb9d7add20d32c85780a65ede6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098809"
 ---
-# <a name="triggernestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
+# <a name="trigger_nestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回針對引發了觸發程序之陳述式而執行的觸發程序數目。 DML 和 DDL 觸發程序利用 TRIGGER_NESTLEVEL 來判斷目前的巢狀層級。  
@@ -41,7 +41,7 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
 ```  
   
 ## <a name="arguments"></a>引數  
- *object_id*  
+ object_id   
  這是觸發程序的物件識別碼。 若指定 *object_id*，則會傳回針對陳述式執行指定觸發程序的次數。 如果未指定 *object_id*，則會傳回針對陳述式而執行之所有觸發程序的次數。  
   
  **'** *trigger_type* **'**  
@@ -50,7 +50,7 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
  **'** *trigger_event_category* **'**  
  指定是否將 TRIGGER_NESTLEVEL 套用在 DML 或 DDL 觸發程序。 為 DML 觸發程序指定 **DML**。 為 DDL 觸發程序指定 **DDL**。 若指定 *trigger_event_category*，則也必須同時指定 *trigger_type*。 請注意，只有 **AFTER** 可以指定 **DDL**，因為 DDL 觸發程序只能是 AFTER 觸發程序。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當未指定任何參數時，TRIGGER_NESTLEVEL 會在呼叫堆疊上傳回觸發程序的總數。 其中包括它本身。 當觸發程序執行命令，造成引發另一個觸發程序或建立引發後續觸發程序時，可能會省略參數。  
   
  若要在特定觸發程序類型和事件類別的呼叫堆疊上，傳回觸發程序的總數，請指定 *object_id* = 0。  

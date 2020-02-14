@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b36e31e163999a6af70b498fef9d65c2ce0ae55
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843623"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME (Transact-SQL)
@@ -60,17 +60,17 @@ PARSENAME ( 'object_name' , object_piece )
   
  4 = 伺服器名稱  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **sysname**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果符合下列條件之一，PARSENAME 會傳回 NULL：  
   
 -   *object_name* 或 *object_piece* 是 NULL。  
   
 -   發生語法錯誤。  
   
- 要求的物件部份，長度為 0，不是有效的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼。 長度為零的物件名稱會將完整名稱轉譯為無效。  
+ 要求的物件部分，長度為 0，且不是有效的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼。 長度為零的物件名稱會將完整名稱轉譯為無效。  
   
 ## <a name="examples"></a>範例  
  下列範例會利用 `PARSENAME` 來傳回 `Person` 資料庫中之 `AdventureWorks2012` 資料表的相關資訊。  

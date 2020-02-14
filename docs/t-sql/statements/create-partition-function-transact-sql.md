@@ -28,10 +28,10 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67912609"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
@@ -75,7 +75,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  **LEFT** | RIGHT  
  指定當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是按遞增順序由左至右來排序間隔值時，*boundary_value* [ **,** _...n_ ] 屬於每個界限值間隔的哪一側 (左或右)。 若未指定，LEFT 便是預設值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  資料分割函數的範圍只限於建立它的資料庫。 在這個資料庫內，資料分割函數是在不同於其他函數的個別命名空間中。  
   
  任何資料分割資料行含有 Null 值的資料列，都會放在最左側資料分割中，除非將 NULL 指定為界限值，且指示 RIGHT。 在這個情況下，最左側的資料分割是空的資料分割，NULL 值會放在下列資料分割中。  
@@ -117,7 +117,7 @@ AS RANGE RIGHT FOR VALUES (1, 100, 1000);
   
 |資料分割|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
-|**值**|**col1** \< `1`|**col1** >= `1` AND **col1** \< `100`|**col1** >= `100` AND **col1** \< `1000`|**col1** >= `1000`| 
+|**值**|**col1** \< `1`|**col1** >= `1` 且 **col1** \< `100`|**col1** >= `100` 且 **col1** \< `1000`|**col1** >= `1000`| 
   
 ### <a name="c-creating-a-range-right-partition-function-on-a-datetime-column"></a>C. 建立 datetime 資料行的 RANGE RIGHT 資料分割函數  
  下列資料分割函數會將資料表或是索引分割成為 12 個資料分割，分別在 **datetime** 資料行中顯示一年中各個月份的價值。  
@@ -133,7 +133,7 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
   
 |資料分割|1|2|...|11|12|  
 |---------------|-------|-------|---------|--------|--------|  
-|**值**|**datecol** \< `February 1, 2003`|**datecol** >= `February 1, 2003` AND **datecol** \< `March 1, 2003`||**datecol** >= `November 1, 2003` AND **col1** \< `December 1, 2003`|**datecol** >= `December 1, 2003`| 
+|**值**|**datecol** \< `February 1, 2003`|**datecol** >= `February 1, 2003` 且 **datecol** \< `March 1, 2003`||**datecol** >= `November 1, 2003` 且 **col1** \< `December 1, 2003`|**datecol** >= `December 1, 2003`| 
   
 ### <a name="d-creating-a-partition-function-on-a-char-column"></a>D. 建立 char 資料行的資料分割函數  
  下列資料分割函數會將資料表或索引分割成四份資料分割。  
@@ -147,7 +147,7 @@ AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');
   
 |資料分割|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
-|**值**|**col1** \< `EX`...|**col1** >= `EX` AND **col1** \< `RXE`...|**col1** >= `RXE` AND **col1** \< `XR`...|**col1** >= `XR`| 
+|**值**|**col1** \< `EX`...|**col1** >= `EX` 且 **col1** \< `RXE`...|**col1** >= `RXE` 且 **col1** \< `XR`...|**col1** >= `XR`| 
   
 ### <a name="e-creating-15000-partitions"></a>E. 建立 15,000 個資料分割  
  下列資料分割函數會將資料表或索引分割成 15,000 個資料分割。  

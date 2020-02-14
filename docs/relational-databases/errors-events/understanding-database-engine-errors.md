@@ -17,17 +17,17 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 91ef40f0c1b5250cde244130b146479cf14fa9fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903756"
 ---
 # <a name="understanding-database-engine-errors"></a>了解 Database Engine 錯誤
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  下表描述 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 所引發之錯誤的屬性。  
+  下表描述 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 所引發錯誤的屬性。  
   
-|attribute|Description|  
+|屬性|描述|  
 |---------------|-----------------|  
 |錯誤號碼|每一則錯誤訊息都有唯一的錯誤號碼。|  
 |錯誤訊息字串|錯誤訊息包含錯誤原因的診斷資訊。 許多錯誤訊息都有用來插入資訊 (例如產生錯誤的物件名稱) 的替代變數。|  
@@ -38,7 +38,7 @@ ms.locfileid: "67903756"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體中的所有系統和使用者自訂的錯誤訊息都包含在 **sys.messages** 目錄檢視中。 您可以使用 RAISERROR 陳述式，將使用者自訂的錯誤傳回給應用程式。  
   
- 所有資料庫 API (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** 命名空間、ActiveX Data Objects (ADO)、OLE DB 和開放式資料庫連接 (ODBC)) 都會報告基本錯誤屬性。 這項資訊包括錯誤號碼和訊息字串。 不過，並非所有 API 都會報告所有其他錯誤屬性。  
+ 所有資料庫 API，例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** 命名空間、ActiveX Data Objects (ADO)、OLE DB 和開放式資料庫連線 (ODBC)，都會報告基本錯誤屬性。 這項資訊包括錯誤號碼和訊息字串。 不過，並非所有 API 都會報告所有其他錯誤屬性。  
   
  您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼中，使用相關聯之 CATCH 區塊範圍內的 ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE 等函數，來取得在 TRY…CATCH 建構的 TRY 區塊範圍內出現之錯誤的相關資訊。 如需詳細資訊，請參閱 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)。  
   

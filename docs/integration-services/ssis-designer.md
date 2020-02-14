@@ -25,10 +25,10 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3c458257766e52898d0924b2f8ad57ddd2423b19
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295671"
 ---
 # <a name="ssis-designer"></a>SSIS 設計師
@@ -52,7 +52,7 @@ ms.locfileid: "71295671"
   
  下圖顯示 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師與 [工具箱]  視窗。  
   
- ![設計師與工具箱的螢幕擷取畫面](../integration-services/media/denali-designerandtoolbox.gif "設計師與工具箱的螢幕擷取畫面")  
+ ![SSIS 設計師與工具箱的螢幕擷取畫面](../integration-services/media/denali-designerandtoolbox.gif "SSIS 設計師與工具箱的螢幕擷取畫面")  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含用來在封裝中加入功能的其他對話方塊和視窗， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 則提供用於設定開發環境及使用封裝的視窗和對話方塊。 如需詳細資訊，請參閱 [Integration Services User Interface](../integration-services/integration-services-user-interface.md)(Integration Services 使用者介面)。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "71295671"
 ### <a name="event-handlers-tab"></a>事件處理常式索引標籤  
  您可以在 [事件處理常式]  索引標籤的設計介面上，建構封裝中的事件。請在 [事件處理常式]  索引標籤上，選取要建立事件處理常式的封裝或封裝物件，然後選取要與事件處理常式產生關聯的事件。 事件處理常式具有控制流程和選擇性的資料流程。  
   
- 如需詳細資訊，請參閱 [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78) (將事件處理常式加入封裝中)。  
+ 如需詳細資訊，請參閱 [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)(將事件處理常式加入封裝中)。  
   
 ### <a name="package-explorer-tab"></a>封裝總管索引標籤  
  封裝可能相當複雜，其中包括許多工作、連接管理員、變數和其他元素等。 封裝總管檢視可讓您查看封裝元素的完整清單。  
@@ -189,6 +189,6 @@ ms.locfileid: "71295671"
 -   [在 SQL Server Data Tools 中建立套件](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Integration Services User Interface](../integration-services/integration-services-user-interface.md)  
+ [Integration Services 使用者介面](../integration-services/integration-services-user-interface.md)  
   
   

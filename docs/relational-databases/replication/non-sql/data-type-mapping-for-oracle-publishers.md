@@ -15,15 +15,15 @@ ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901124"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 發行者的資料類型對應
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Oracle 資料類型與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型並非始終完全相符。 若有可能，將在發行 Oracle 資料表時自動選取相符的資料類型。 如果單一資料類型對應不清楚，將提供替代的資料類型對應。 如需有關如何選取替代對應的詳細資訊，請參閱本主題稍後的「指定替代資料類型對應」一節。  
+  Oracle 資料類型與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型並非一律完全相符。 若有可能，將在發行 Oracle 資料表時自動選取相符的資料類型。 如果單一資料類型對應不清楚，將提供替代的資料類型對應。 如需有關如何選取替代對應的詳細資訊，請參閱本主題稍後的「指定替代資料類型對應」一節。  
   
  下表顯示了將資料從「Oracle 發行者」移至「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」時，資料類型在 Oracle 與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之間的預設對應方式。 「替代方案」一欄會指示替代對應是否可用。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "67901124"
 |BLOB|VARBINARY(MAX)|是|  
 |CHAR([1-2000])|CHAR([1-2000])|是|  
 |CLOB|VARCHAR(MAX)|是|  
-|DATE|DATETIME|是|  
+|日期|DATETIME|是|  
 |FLOAT|FLOAT|否|  
 |FLOAT([1-53])|FLOAT([1-53])|否|  
 |FLOAT([54-126])|FLOAT|否|  

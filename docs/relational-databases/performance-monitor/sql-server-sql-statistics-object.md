@@ -14,10 +14,10 @@ ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 7841fef89ae4eb0600dcc62c1561bff769500a47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995658"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server 的 SQL Statistics 物件
@@ -34,7 +34,7 @@ ms.locfileid: "67995658"
   
  以下是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics** 計數器。  
   
-|SQL Server SQL Statistics 計數器|Description|  
+|SQL Server SQL Statistics 計數器|描述|  
 |----------------------------------------|-----------------|  
 |**Auto-Param Attempts/sec**|每秒的自動參數化嘗試次數。 此總數應該是所有失敗的、安全的與不安全的自動參數化之總和。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體嘗試以參數來取代部份常值，以將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 要求參數化時，就會發生自動參數化；如此將可以在多個相似的要求中，重複使用所產生的快取執行計畫。 請注意，自動參數化在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更新版本中也稱為簡單參數化。 此計數器不包含強制參數化。|  
 |**Batch Requests/sec**|每秒接收的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令批次數目。 此統計資料受到所有條件約束的影響 (例如 I/O、使用者數目、快取大小、要求複雜性等)， 批次要求數目大，表示輸送量高。|  
@@ -50,6 +50,6 @@ ms.locfileid: "67995658"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 的 Plan Cache 物件](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   
- [監視資源使用量 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [監視資源使用狀況 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

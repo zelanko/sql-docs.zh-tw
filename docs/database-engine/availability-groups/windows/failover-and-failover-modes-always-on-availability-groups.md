@@ -16,10 +16,10 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 269ec542c7de83afa9c174ea0bc9221f125f7e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67949109"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>容錯移轉及容錯移轉模式 (AlwaysOn 可用性群組)
@@ -107,9 +107,9 @@ ms.locfileid: "67949109"
   
 |複本|可用性模式與容錯移轉模式設定|  
 |-------------|--------------------------------------------------|  
-|只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時，|包含自動容錯移轉的同步認可|  
+|A|包含自動容錯移轉的同步認可|  
 |B|包含自動容錯移轉的同步認可|  
-|c|僅包含已規劃的手動容錯移轉的同步認可|  
+|C|僅包含已規劃的手動容錯移轉的同步認可|  
 |D|非同步認可 (僅包含強制容錯移轉)|  
   
  每個次要複本的容錯移轉行為取決於目前是主要複本的可用性複本。 基本上，若是給定的次要複本，容錯移轉行為是最嚴重的目前給定主要複本案例。 下圖說明次要複本的容錯移轉行為如何根據目前主要複本，以及它設定為非同步認可模式 (只使用強制容錯移轉) 或同步認可模式 (不論是否使用自動容錯移轉)，而有所不同。  
@@ -132,7 +132,7 @@ ms.locfileid: "67949109"
   
 -   自動容錯移轉設定已存在。 此設定是由一併設定成同步認可模式及 AUTOMATIC 容錯移轉的主要複本與次要複本所組成，後者稱為「自動容錯移轉目標」  。 如果主要複本設為 MANUAL 容錯移轉，則即使次要複本是設為 AUTOMATIC 容錯移轉，也不會發生自動容錯移轉。  
   
-     如需詳細資訊，請參閱 [可用性模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)(Failover) 的程序中通常可以互換。  
+     如需詳細資訊，請參閱 [可用性模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。  
   
 -   自動容錯移轉目標的同步處理狀態良好 (這表示容錯移轉目標上的每一個次要資料庫會與其對應的主要資料庫同步處理)。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "67949109"
 ###  <a name="EnableAutoFo"></a> 若要設定自動容錯移轉  
  可用性複本可以設定成在任何時間都支援自動容錯移轉。  
   
- **To configure automatic failover**  
+ **若要設定自動容錯移轉**  
   
 1.  請確認次要複本設定為使用同步認可的可用性模式。 如需詳細資訊，請參閱 [變更可用性複本的可用性模式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)(Failover) 的程序中通常可以互換。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "67949109"
   
 3.  容錯移轉目標 (位於 `Node02`) 將成為新的主要複本。 因為這是已規劃的容錯移轉，之前的主要複本會在容錯移轉期間切換為次要角色，而且會立即使其資料庫變成線上狀態以做為次要資料庫。  
   
- ![規劃的手動容錯移轉圖例](../../../database-engine/availability-groups/windows/media/aoag-plannedmanualfailover.gif "規劃的手動容錯移轉圖例")  
+ ![已規劃的手動容錯移轉圖例](../../../database-engine/availability-groups/windows/media/aoag-plannedmanualfailover.gif "已規劃的手動容錯移轉圖例")  
   
  **本節內容：**  
   

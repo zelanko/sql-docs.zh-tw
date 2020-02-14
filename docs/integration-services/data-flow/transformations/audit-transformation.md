@@ -17,10 +17,10 @@ ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 76ce8959e9b9cedb9a1e8a096913a3d6257cfd2d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298020"
 ---
 # <a name="audit-transformation"></a>稽核轉換
@@ -28,12 +28,12 @@ ms.locfileid: "71298020"
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  稽核轉換可讓封裝中的資料流程包含有關封裝執行的環境資料。 例如，可以將封裝、電腦與操作員的名稱加入資料流程。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括提供此資訊的系統變數。  
+  稽核轉換可讓封裝中的資料流程包含有關封裝執行的環境資料。 例如，可以將封裝、電腦與操作員的名稱加入資料流程。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含提供此資訊的系統變數。  
   
 ## <a name="system-variables"></a>系統變數  
  下表描述「稽核」轉換可使用的系統變數。  
   
-|系統變數|索引|Description|  
+|系統變數|索引|描述|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|識別封裝執行執行個體的 GUID。|  
 |**PackageID**|1|封裝的唯一識別碼。|  
@@ -54,7 +54,7 @@ ms.locfileid: "71298020"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "71298020"
  **稽核類型**  
  選取可用的系統變數以提供稽核資訊。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**執行執行個體 GUID**|插入唯一識別封裝之執行執行個體的 GUID。|  
 |**封裝識別碼**|插入唯一識別封裝的 GUID。|  
@@ -78,7 +78,7 @@ ms.locfileid: "71298020"
 |**版本識別碼**|插入唯一識別封裝版本的 GUID。|  
 |**執行開始時間**|插入封裝開始執行的時間。|  
 |**電腦名稱**|插入啟動封裝的電腦名稱。|  
-|**User name**|插入啟動封裝之使用者的登入名稱。|  
+|**使用者名稱**|插入啟動封裝之使用者的登入名稱。|  
 |**工作名稱**|插入與稽核轉換相關聯之資料流程工作的名稱。|  
 |**工作識別碼**|插入唯一識別與稽核轉換相關聯之資料流程工作的 GUID。|  
   

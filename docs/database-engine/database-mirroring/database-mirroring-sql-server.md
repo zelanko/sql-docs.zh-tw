@@ -24,10 +24,10 @@ ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3f8ebb1119e84caa80c0faa03c5c1405992723b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006340"
 ---
 # <a name="database-mirroring-sql-server"></a>資料庫鏡像 (SQL Server)
@@ -111,7 +111,7 @@ ms.locfileid: "68006340"
  交易安全性  
  鏡像特有的資料庫屬性，用來決定資料庫鏡像工作階段是以同步或非同步方式作業。 有兩個安全性層級：FULL 和 OFF。  
   
- Witness  
+ 見證  
  只能搭配高安全性模式使用的一種 SQL Server 選擇性執行個體，可讓鏡像伺服器辨別何時要起始自動容錯移轉。 與兩個容錯移轉夥伴不同的是，見證並不是為資料庫服務。 支援自動容錯移轉是見證的唯一角色。  
   
   
@@ -157,7 +157,7 @@ ms.locfileid: "68006340"
   
  下圖顯示包括見證的組態。  
   
- ![包含旁觀的鏡像工作階段](../../database-engine/database-mirroring/media/dbm-3-way-session-intro-ov.gif "包含旁觀的鏡像工作階段")  
+ ![包含見證的鏡像工作階段](../../database-engine/database-mirroring/media/dbm-3-way-session-intro-ov.gif "包含見證的鏡像工作階段")  
   
  如需詳細資訊，請參閱本主題稍後的 [角色切換](#RoleSwitching)。  
   
@@ -188,7 +188,7 @@ ms.locfileid: "68006340"
   
      見證角色是用來驗證特定的夥伴伺服器是否已啟動而且可以正常運作。 如果鏡像伺服器與主體伺服器的連接中斷，但見證仍與主體伺服器連接，鏡像伺服器就不會起始容錯移轉。 如需詳細資訊，請參閱 [資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)。  
   
--   *Manual failover*  
+-   *手動容錯移轉*  
   
      這種形式需要使用高安全性模式。 夥伴必須互相連接，而且資料庫也必須已完成同步處理。  
   
@@ -207,9 +207,9 @@ ms.locfileid: "68006340"
   
 |伺服器執行個體|資料庫 A 的工作階段|資料庫 B 的工作階段|資料庫 C 的工作階段|資料庫 D 的工作階段|  
 |---------------------|----------------------------|----------------------------|----------------------------|----------------------------|  
-|`SSInstance_1`|Witness|Partner|Partner|Partner|  
-|`SSInstance_2`|Partner|Witness|Partner|Partner|  
-|`SSInstance_3`|Partner|Partner|Witness|Witness|  
+|`SSInstance_1`|見證|Partner|Partner|Partner|  
+|`SSInstance_2`|Partner|見證|Partner|Partner|  
+|`SSInstance_3`|Partner|Partner|見證|見證|  
   
  下圖說明兩個伺服器執行個體以夥伴伺服器的角色，共同參與兩個鏡像工作階段。 其中一個工作階段用於名為 **Db_1**的資料庫，另一個工作階段則用於名為 **Db_2**的資料庫。  
   
@@ -331,7 +331,7 @@ ms.locfileid: "68006340"
   
  **Transact-SQL**  
   
--   [加入或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
+-   [新增或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
 -   [手動容錯移轉資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   

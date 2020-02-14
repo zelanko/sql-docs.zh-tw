@@ -21,10 +21,10 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0bc268c2baea6e0e661fac123df9fe19ec60252c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281942"
 ---
 # <a name="security-overview-integration-services"></a>安全性概觀 (Integration Services)
@@ -32,7 +32,7 @@ ms.locfileid: "71281942"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的安全性包含幾層，提供了豐富且具彈性的安全性環境。 這些安全性階層包括使用數位簽章、封裝屬性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色，以及作業系統權限。 這些安全性功能中，絕大部分都屬於識別與存取控制的類別。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的安全性包含多個層，其提供了豐富且具彈性的安全性環境。 這些安全性階層包括使用數位簽章、封裝屬性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色，以及作業系統權限。 這些安全性功能中，絕大部分都屬於識別與存取控制的類別。  
 
 ## <a name="threat-and-vulnerability-mitigation"></a>威脅和弱點安全防護
   雖然 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含各種安全性機制，但是封裝以及封裝所建立或使用的檔案可能會遭到惡意使用者的利用。  
@@ -41,7 +41,7 @@ ms.locfileid: "71281942"
   
 |威脅或弱點|定義|降低|  
 |-----------------------------|----------------|----------------|  
-|封裝來源|封裝的來源是指建立此封裝的個人或組織。 執行來自未知或不受信任來源的封裝可能會有風險。|使用數位簽章來識別封裝的來源，並且只執行來自已知且信任來源的封裝。 如需詳細資訊，請參閱 [使用數位簽章來識別封裝的來源](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)。|  
+|封裝來源|封裝的來源是指建立此封裝的個人或組織。 執行來自未知或不受信任來源的封裝可能會有風險。|使用數位簽章來識別封裝的來源，並且只執行來自已知且信任來源的封裝。 如需詳細資訊，請參閱 [Identify the Source of Packages with Digital Signatures](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)(使用數位簽章識別封裝來源)。|  
 |封裝內容|封裝內容包括封裝中的元素及其屬性。 這些屬性可能會包含機密資料，例如密碼或連接字串。 SQL 陳述式等封裝元素可能會顯示資料庫的結構。|進行下列步驟來控制封裝及內容的存取權：<br /><br /> 1) 若要控制封裝本身的存取權，請將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性功能套用至儲存在 **執行個體之** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫中的封裝。 對於儲存在檔案系統中的封裝，請套用檔案系統安全性功能，例如存取控制清單 (ACL)。<br /><br /> 2) 若要控制封裝內容的存取權，請設定封裝的保護等級。<br /><br /> 如需詳細資訊，請參閱[安全性概觀 &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md) 和[封裝中的敏感性資料存取控制](../../integration-services/security/access-control-for-sensitive-data-in-packages.md)。|  
 |封裝輸出|當您將封裝設定成使用組態、檢查點和記錄時，此封裝就會在封裝外部儲存這項資訊。 儲存在封裝外部的資訊可能會包含機密資料。|若要保護封裝儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料表的組態和記錄，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性功能。<br /><br /> 若要控制檔案的存取權，請使用檔案系統所提供的存取控制清單 (ACL)。<br /><br /> 如需詳細資訊，請參閱 [Access to Files Used by Packages](#files)|  
   
@@ -82,7 +82,7 @@ ms.locfileid: "71281942"
 #### <a name="saving-packages-to-the-msdb-database"></a>將封裝儲存到 msdb 資料庫  
  將封裝儲存至 msdb 資料庫有助於提供伺服器、資料庫和資料表層級的安全性。 在 msdb 資料庫中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝是儲存在 sysssispackages 資料表中。 由於這些封裝會分別儲存到 msdb 資料庫中的 sysssispackages 和 sysdtspackages 資料表中，因此，當您備份 msdb 資料庫時，也會自動備份這些封裝。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 套用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料庫層級角色還可以保護儲存在 msdb 資料庫的封裝。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含以下三個固定資料庫層級角色：db_ssisadmin、db_ssisltduser 和 db_ssisoperator，可用於控制封裝的存取權。 讀取器和寫入器角色可以與每個封裝相關聯。 您也可以定義要在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中使用的自訂資料庫層級角色。 這些角色只能在儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中 msdb 資料庫的封裝上實作。 如需詳細資訊，請參閱 [Integration Services 角色 &#40;SSIS 服務&#41;](../../integration-services/security/integration-services-roles-ssis-service.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 套用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料庫層級角色還可以保護儲存在 msdb 資料庫的封裝。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含以下三個固定資料庫層級角色：db_ssisadmin、db_ssisltduser 和 db_ssisoperator，可用於控制封裝的存取權。 讀取器和寫入器角色可以與每個封裝相關聯。 您也可以定義要在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中使用的自訂資料庫層級角色。 這些角色只能在儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中 msdb 資料庫的封裝上實作。 如需詳細資訊，請參閱 [Integration Services 角色 &#40;SSIS 服務&#41;](../../integration-services/security/integration-services-roles-ssis-service.md)。  
   
 #### <a name="saving-packages-to-the-file-system"></a>將封裝儲存至檔案系統  
  如果您將封裝儲存到檔案系統，而非 msdb 資料庫中，請務必保護封裝檔案和包含封裝檔案的資料夾。  
@@ -90,7 +90,7 @@ ms.locfileid: "71281942"
 ### <a name="controlling-access-to-files-used-by-packages"></a>控制封裝所使用之檔案的存取  
  已設定為使用組態、檢查點和記錄的封裝會產生儲存在封裝之外的資訊。 此資訊可能是機密資訊，應該對其進行保護。 檢查點檔案只能儲存至檔案系統，但組態和記錄檔可以儲存至檔案系統或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料表。 儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的組態和記錄檔受到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性保護，但寫入檔案系統的資訊需要額外的安全性。  
   
- 如需詳細資訊，請參閱 [Access to Files Used by Packages](#files)(存取封裝所使用的檔案)。  
+ 如需詳細資訊，請參閱 [對封裝使用之檔案的存取權](#files)。  
   
 #### <a name="storing-package-configurations-securely"></a>安全地儲存封裝組態  
  封裝組態可以儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料表或儲存至檔案系統。  
@@ -140,10 +140,10 @@ ms.locfileid: "71281942"
   
 -   [建立使用者定義角色](../../integration-services/security/integration-services-roles-ssis-service.md#create)  
   
--   [指派讀取器和寫入器角色給封裝](../../integration-services/security/integration-services-roles-ssis-service.md#assign)  
+-   [指派讀取器和寫入器角色給套件](../../integration-services/security/integration-services-roles-ssis-service.md#assign)  
   
 -   [透過設定登錄值實作簽署原則](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#registry)  
   
 -   [使用數位憑證來簽署封裝](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
   
--   [設定或變更封裝的保護等級](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  
+-   [設定或變更套件的保護等級](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  

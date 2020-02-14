@@ -31,10 +31,10 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2266b837ce7822a6b03b3f6a26d4d1d818aade72
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298295"
 ---
 # <a name="foreach-loop-container"></a>Foreach 迴圈容器
@@ -205,7 +205,7 @@ ms.locfileid: "71298295"
  **列舉值**  
  從清單中選取列舉值類型。 此屬性具有下表所列的選項：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**Foreach 檔案列舉值**|列舉檔案。 選取這個值就會在 **[Foreach 檔案列舉值]** 區段中顯示動態選項。|  
 |**Foreach 項目列舉值**|列舉項目中的值。 選取這個值就會在 **[Foreach 項目列舉值]** 區段中顯示動態選項。|  
@@ -347,7 +347,7 @@ ms.locfileid: "71298295"
  **DocumentSourceType**  
  選取 XML 文件的來源類型。 此屬性具有下表所列的選項：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
@@ -367,7 +367,7 @@ ms.locfileid: "71298295"
  **EnumerationType**  
  從清單中選取列舉類型。 此屬性具有下表所列的選項：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**Navigator**|使用 XPathNavigator 列舉。|  
 |**節點**|列舉 XPath 作業傳回的節點。|  
@@ -377,7 +377,7 @@ ms.locfileid: "71298295"
  **OuterXPathStringSourceType**  
  選取 XPath 字串的來源類型。 此屬性具有下表所列的選項： 
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
@@ -400,7 +400,7 @@ ms.locfileid: "71298295"
  **InnerXPathStringSourceType**  
  選取內部 XPath 字串的來源類型。 此屬性具有下表所列的選項：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
@@ -526,7 +526,7 @@ Data Lake Storage Gen2 權限由 [RBAC](https://docs.microsoft.com/azure/storage
   
  若要了解如何在 Integration Services 套件中使用 Foreach 迴圈容器，請參閱 [Foreach 迴圈容器](../../integration-services/control-flow/foreach-loop-container.md)。 若要了解如何設定此容器，請參閱 [設定 Foreach 迴圈容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 教學課程中的＜建立簡易 ETL 封裝教學課程＞包含了一門教您加入和設定「Foreach 迴圈」的課程。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 教學課程中的＜建立簡易 ETL 套件教學課程＞包含一門如何新增和設定 Foreach 迴圈的課程。  
   
 ### <a name="options"></a>選項。  
  **變數**  
@@ -571,7 +571,7 @@ Data Lake Storage Gen2 權限由 [RBAC](https://docs.microsoft.com/azure/storage
  **資料類型**  
  選取資料類型。  
   
- **[加入]**  
+ **加入**  
  加入新資料行。  
   
  **移除**  
@@ -608,6 +608,6 @@ Data Lake Storage Gen2 權限由 [RBAC](https://docs.microsoft.com/azure/storage
 
 ## <a name="see-also"></a>另請參閱  
  [控制流程](../../integration-services/control-flow/control-flow.md)   
- [整合服務容器](../../integration-services/control-flow/integration-services-containers.md)  
+ [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)  
   
   

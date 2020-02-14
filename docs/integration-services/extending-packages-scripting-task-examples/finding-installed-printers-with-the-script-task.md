@@ -22,10 +22,10 @@ ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cece5cb3e406bdc0fe5b437691528eb4cf6bf848
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286852"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>以指令碼工作尋找安裝的印表機
@@ -38,8 +38,8 @@ ms.locfileid: "71286852"
 > [!NOTE]  
 >  如果您想要建立可更輕鬆地在多個封裝之間重複使用的工作，請考慮使用此指令碼工作範例中的程式碼做為自訂工作的起點。 如需詳細資訊，請參閱 [開發自訂工作](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-## <a name="description"></a>Description  
- 下列範例找到安裝在伺服器上支援 Legal Size 紙張 (用於美國) 的印表機。 檢查支援紙張大小的程式碼是封裝在私用函數中。 為了讓您在指令碼檢查每台印表機的設定時，追蹤指令碼的進度，指令碼使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 方法，來針對使用 Legal Size 紙張的印表機引發參考用訊息，並為沒有 Legal Size 紙張的印表機引發警告。 當您在設計工具中執行封裝時，這些訊息會出現在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 的 [輸出]  視窗中。  
+## <a name="description"></a>描述  
+ 下列範例找到安裝在伺服器上支援 Legal Size 紙張 (用於美國) 的印表機。 檢查支援紙張大小的程式碼是封裝在私用函數中。 為了讓您在指令碼檢查每台印表機的設定時，追蹤指令碼的進度，指令碼使用 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 方法，來針對使用 Legal Size 紙張的印表機引發參考用訊息，並為沒有 Legal Size 紙張的印表機引發警告。 當您在設計師中執行套件時，這些訊息會出現在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 的 [輸出]  視窗中。  
   
 #### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
   

@@ -20,10 +20,10 @@ ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23292c0ac898ca035bca4b499de4bfc3fe2a7ebc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292151"
 ---
 # <a name="partition-processing-destination"></a>資料分割處理目的地
@@ -47,22 +47,22 @@ ms.locfileid: "71292151"
 >  此處描述的工作不適用於 Analysis Services 表格式模型。  您無法針對表格式模型，將輸入資料行對應至資料分割資料行。 您可以改用 Analysis Services 執行 DDL 工作 ( [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) ) 來處理資料分割。  
   
 ## <a name="configuration-of-the-partition-processing-destination"></a>設定資料分割處理目的地  
- 資料分割處理目的地會使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接管理員，以連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或包含目的地所處理之 Cube 及資料分割的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)。  
+ 資料分割處理目的地會使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接管理員，以連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或包含目的地所處理之 Cube 及資料分割的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。 如需相關資訊，請參閱 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)。  
   
  此目的地擁有一個輸入。 它不支援錯誤輸出。  
   
- 您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
+ 您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
 -   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
--   [資料分割處理目的地自訂屬性](../../integration-services/data-flow/partition-processing-destination-custom-properties.md)  
+-   [分割區處理目的地自訂屬性](../../integration-services/data-flow/partition-processing-destination-custom-properties.md)  
   
  如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="partition-processing-destination-editor-connection-manager-page"></a>資料分割處理目的地編輯器 (連接管理員頁面)
-  使用 **[資料分割處理目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，來指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的連接或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之執行個體的連接。  
+  使用 [資料分割處理目的地編輯器]  對話方塊的 [連線管理員]  頁面，以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的連線。  
   
 > [!NOTE]  
 >  此處描述的工作不適用於 Analysis Services 表格式模型。  您無法針對表格式模型，將輸入資料行對應至資料分割資料行。 您可以改用 Analysis Services 執行 DDL 工作 ( [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) ) 來處理資料分割。  
@@ -80,7 +80,7 @@ ms.locfileid: "71292151"
  **處理方法**  
  選取處理方法。 此選項的預設值是 **[完整]** 。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |加入 (累加)|執行資料分割的累加處理。|  
 |完整|執行資料分割的完整處理。|  
@@ -118,7 +118,7 @@ ms.locfileid: "71292151"
  **索引鍵錯誤動作**  
  指定如何處理具有無法接受之索引鍵值的記錄。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|將無法接受的索引鍵值轉換為未知值。|  
 |**DiscardRecord**|捨棄記錄。|  
@@ -135,7 +135,7 @@ ms.locfileid: "71292151"
  **發生錯誤時要執行的動作**  
  如果您已選取 [發生錯誤時停止]  ，請指定到達錯誤臨界值時要採取的動作。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**StopProcessing**|停止處理。|  
 |**StopLogging**|停止記錄錯誤。|  
@@ -143,7 +143,7 @@ ms.locfileid: "71292151"
  **找不到索引鍵**  
  針對找不到索引鍵錯誤，指定要採取的動作。 依預設，此值為 **ReportAndContinue**。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略錯誤並繼續處理。|  
 |**ReportAndContinue**|報告錯誤並繼續處理。|  
@@ -152,7 +152,7 @@ ms.locfileid: "71292151"
  **重複的索引鍵**  
  針對重複索引鍵錯誤，指定要採取的動作。 依預設，此值為 **IgnoreError**。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略錯誤並繼續處理。|  
 |**ReportAndContinue**|報告錯誤並繼續處理。|  
@@ -161,7 +161,7 @@ ms.locfileid: "71292151"
  **Null 索引鍵已轉換為未知**  
  指定當 Null 索引鍵轉換為未知值的時候應採取的動作。 依預設，此值為 **IgnoreError**。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略錯誤並繼續處理。|  
 |**ReportAndContinue**|報告錯誤並繼續處理。|  
@@ -170,7 +170,7 @@ ms.locfileid: "71292151"
  **不允許 Null 索引鍵**  
  指定在不允許 Null 索引鍵的情況下如果發現 Null 索引鍵，所要採取的動作。 依預設，此值為 **ReportAndContinue**。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略錯誤並繼續處理。|  
 |**ReportAndContinue**|報告錯誤並繼續處理。|  

@@ -19,13 +19,13 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 770ef448094e764bcc1ca970354941c0d1d03d4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072278"
 ---
-# <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
+# <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 將先前利用 DECLARE @*local_variable* 陳述式來建立的指定區域變數設為指定的值。  
@@ -168,7 +168,7 @@ READ ONLY
 `UPDATE [OF column_name[ ,... n ] ]`  
 在資料指標內定義可更新的資料行。 如果提供 OF *column_name* [ **,** ...*n*]，則只允許修改所列出的資料行。 未提供任何清單時，除非資料指標已定義為 READ_ONLY，否則可以更新所有資料行。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 在宣告變數之後，會將它初始化成 NULL。 請使用 SET 陳述式，將非 NULL 值指派給宣告的變數。 將值指派給變數的 SET 陳述式會傳回單一值。 當您初始化多個變數時，每個區域變數都要使用個別的 SET 陳述式。  
   
 您只能在運算式中使用變數，而不能使用物件名稱或關鍵字。 若要建構動態 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，請使用 EXECUTE。  

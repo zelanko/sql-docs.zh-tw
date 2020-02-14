@@ -20,10 +20,10 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b447bec3817dbaa173c544dcb31200a702b8661d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68890070"
 ---
 # <a name="full-database-backups-sql-server"></a>完整資料庫備份 (SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "68890070"
 ##  <a name="DbBuRMs"></a> 簡單復原模式下的資料庫備份  
  在簡單復原模式下，每次備份之後，如果會發生損毀，資料庫都將承受可能遺失工作的風險。 工作遺失風險隨著每一次更新而增加，直到下次備份為止；此時工作遺失風險便會歸零，但是又會重新開始另一循環的工作遺失風險。 一段時間之後，備份之間的工作遺失風險會增加。 下圖顯示只使用完整資料庫備份之備份策略的工作遺失風險。  
   
- ![顯示資料庫備份之間的工作損失風險](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "顯示資料庫備份之間的工作損失風險")  
+ ![顯示資料庫備份之間的工作遺失風險](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "顯示資料庫備份之間的工作遺失風險")  
   
 ### <a name="example--includetsqlincludestsql-mdmd"></a>範例 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  下列範例顯示如何使用 WITH FORMAT 來覆寫任何現有備份並建立新的媒體集，以建立完整資料庫備份。  

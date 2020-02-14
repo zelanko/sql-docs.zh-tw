@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3c20631f9a24ddf3950a14897bca8934f6794045
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: feabed59f397f2a12ca3697e5938e0540fcad228
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770587"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288123"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>使用複寫監視器監視效能
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器」可讓您使用下列方法來監視異動複寫與合併式複寫的效能：  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器可讓您使用下列方法來監視異動複寫與合併式複寫的效能：  
   
 -   設定警告和臨界值  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68770587"
  如需相關資訊，請參閱 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
 ## <a name="view-performance-measurements"></a>檢視效能度量  
- 複寫監視器在發行集的 **[目前的平均效能]** 和 **[目前最差效能]** 資料行，以及訂閱的 **[效能]** 資料行，顯示異動複寫與合併式複寫的效能品質的值。 這些值為：  
+ 複寫監視器在發行集的 **[目前的平均效能]** 和 **[目前最差效能]** 資料行，以及訂閱的 **[效能]** 資料行，顯示異動複寫與合併式複寫的效能品質的值。 值如下：  
   
 -   非常好  
   
@@ -75,7 +75,7 @@ ms.locfileid: "68770587"
   
 -   對於異動複寫，效能品質由延遲臨界值決定。 如果不設定臨界值，則不顯示值。 下表顯示了臨界值和效能品質值之間的交互關聯。 例如，如果將臨界值設定為 60 秒，而實際延遲為 30 秒，則延遲為臨界值的 50%，結果值為「好」。  
   
-    |非常好|好|普通|差|嚴重|  
+    |非常好|好|普通|差|重大|  
     |---------------|----------|----------|----------|--------------|  
     |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
   

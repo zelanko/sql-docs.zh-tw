@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f07afead7d74b358c0220dc7ed22dbf31ebbf11a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056052"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Security Audit 事件類別目錄 (SQL Server Profiler)
@@ -27,7 +27,7 @@ ms.locfileid: "74056052"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[Audit Add DB User 事件類別](../../relational-databases/event-classes/audit-add-db-user-event-class.md)|表示已當做資料庫使用者在資料庫中加入或移除登入。|  
 |[Audit Add Login to Server Role 事件類別](../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)|表示已在固定伺服器角色中加入或移除登入。|  
@@ -49,7 +49,7 @@ ms.locfileid: "74056052"
 |[Audit Database Operation 事件類別](../../relational-databases/event-classes/audit-database-operation-event-class.md)|表示已發生各種作業，例如檢查點或訂閱查詢通知。|  
 |[Audit Database Principal Impersonation 事件類別](../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md)|表示已在資料庫範圍內發生模擬。|  
 |[Audit Database Principal Management 事件類別](../../relational-databases/event-classes/audit-database-principal-management-event-class.md)|表示已在資料庫中建立、改變或卸除主體。|  
-|[Audit Database Scope GDR 事件類別](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)|表示使用者已在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中發出陳述式權限的 GRANT、REVOKE 或 DENY。|  
+|[Audit Database Scope GDR 事件類別](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)|表示使用者已在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中發出陳述式權限的 GRANT、REVOKE 或 DENY。|  
 |[稽核 DBCC 事件類別](../../relational-databases/event-classes/audit-dbcc-event-class.md)|表示已發出 DBCC 命令。|  
 |[稽核全文檢索事件類別](../../relational-databases/event-classes/audit-fulltext-event-class.md)|指出發生全文檢索事件。|  
 |[Audit Login Change Password 事件類別](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|表示使用者已變更其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入密碼。|  

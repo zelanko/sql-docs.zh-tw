@@ -23,10 +23,10 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a40336899e804ee634cf586078ec7c219f31c486
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297874"
 ---
 # <a name="script-component"></a>指令碼元件
@@ -138,7 +138,7 @@ ms.locfileid: "71297874"
  **說明**  
  輸入連接的描述。  
   
- **[加入]**  
+ **加入**  
  將其他連接加入 [連線管理員]  清單中。  
   
  **移除**  
@@ -205,7 +205,7 @@ ms.locfileid: "71297874"
  **屬性**  
  檢視和修改指令碼轉換的屬性。 顯示的許多屬性是唯讀的。 您可以修改下列屬性：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**說明**|以其用途來描述指令碼轉換。|  
 |**LocaleID**|指定地區設定以提供排序和日期和時間轉換的特定區域資訊。|  

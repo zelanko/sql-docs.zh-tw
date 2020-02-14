@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021228"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改善全文檢索索引的效能
@@ -116,7 +116,7 @@ ms.locfileid: "68021228"
   
 |**變數**|**預設值**|  
 |------------------|-----------------------|  
-|*number_of_crawl_ranges*|CPU 的數目|  
+|*number_of_crawl_ranges*|CPU 數目|  
 |*ism_size*|1 MB (適用於 x86 電腦)<br /><br /> 4 MB、8 MB 或 16MB (適用於 x64 電腦，端視實體記憶體總數而定)|  
 |*max_outstanding_isms*|25 (適用於 x86 電腦)<br /><br /> 5 (適用於 x64 電腦)|  
   
@@ -140,7 +140,7 @@ ms.locfileid: "68021228"
 2.  500 MB 是系統中其他處理序所需記憶體的估計值。 如果系統正在進行其他工作，請據此增加這個值。  
 3.  。*ism_size* 在 x64 平台假設為 8 MB。  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>範例估計 fdhost.exe 的記憶體需求  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>範例：估計 fdhost.exe 的記憶體需求  
   
  這個範例適用於具有 8GM RAM 和 4 個雙核心處理器的 64 位元電腦。 第一個計算會估計 fdhost.exe 所需的記憶體-*F*。 搜耙範圍的數目是 `8`。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "68021228"
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>範例設定最大伺服器記憶體  
+ #### <a name="example-setting-max-server-memory"></a>範例：設定最大伺服器記憶體  
   
  此範例使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，將 [最大伺服器記憶體]  設為上述範例中計算的 *M* 值，即 `7052`：  
   
@@ -178,7 +178,7 @@ GO
   
      下表將說明在此重要的等候類型。  
   
-    |等候類型|Description|可能的解決方案|  
+    |等候類型|描述|可能的解決方案|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX 或 _UP)|這可能表示 IO 瓶頸，而在此情況下，您通常也會看見很高的平均磁碟佇列長度。|將全文檢索索引移至不同磁碟上的不同檔案群組可能有助於減少 IO 瓶頸。|  
     |PAGELATCH_EX (或 _UP)|這可能表示嘗試寫入相同資料庫檔案的執行緒之間存在大量競爭的情況。|將檔案加入至全文檢索索引所在的檔案群組可能有助於減少這類競爭的情況。|  

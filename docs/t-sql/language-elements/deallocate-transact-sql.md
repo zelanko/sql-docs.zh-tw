@@ -22,10 +22,10 @@ ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 92153155be5761e804c6d62cece4d392b40a1412
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894894"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
@@ -48,7 +48,7 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
  @*cursor_variable_name*  
  這是**資料指標**變數的名稱。 @*cursor_variable_name* 的類型必須是 **cursor**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 處理資料指標的陳述式會利用資料指標名稱或資料指標變數來參考資料指標。 `DEALLOCATE` 會移除資料指標和資料指標名稱或資料指標變數之間的關聯。 如果名稱或變數是最後一個參考資料指標的項目，就會取消配置資料指標，釋出資料指標所用的任何資源。 在 `DEALLOCATE` 時，會釋出用來保護擷取隔離的捲動鎖定。 用來保護更新 (其中包括透過資料指標所進行的定位更新) 的交易鎖定，會保留到交易結束時。  
   
 `DECLARE CURSOR` 陳述式會配置資料指標並將它和資料指標產生關聯。  

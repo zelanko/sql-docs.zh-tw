@@ -20,13 +20,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ccd04bec4416fdf5bb5f2137dc2f86e69a9a2ab4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914338"
 ---
-# <a name="percentiledisc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
+# <a name="percentile_disc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中計算整個資料列集或資料列集特定資料分割的特定排序值百分位數。 針對指定的百分位數值 *P*，PERCENTILE_DISC 會在 ORDER BY 子句中排序運算式值。 接著傳回大於或等於*P* 所指定最小 CUME_DIST 值的值 (相對於相同的排序規格)。例如，PERCENTILE_DISC (0.5) 會計算運算式的第 50 個百分位數 (亦即中間值)。 PERCENTILE_DISC 會根據資料行值的離散分布計算百分位數。 結果等於某個特定的資料行值。  
@@ -50,7 +50,7 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
  OVER **(** \<partition_by_clause>)**  
  將 FROM 子句的結果集分成幾個資料分割。 百分位數函式會套用到這些資料分割。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。 PERCENTILE_DISC 函式中不能指定 \<ORDER BY 子句> 和 \<資料列或範圍子句>。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  傳回型別由 *order_by_expression* 類型決定。  
   
 ## <a name="compatibility-support"></a>相容性支援  

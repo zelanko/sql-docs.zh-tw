@@ -23,10 +23,10 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c93f0be480341abb59038db34616a94d4b475952
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298510"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>多個一般檔案連接管理員
@@ -36,7 +36,7 @@ ms.locfileid: "71298510"
 
   「多個一般檔案」連接管理員可讓封裝存取多個一般檔案中的資料。 例如，當資料流程工作位於迴圈容器 (如 For 迴圈容器) 內時，「一般檔案」來源可以使用「多個一般檔案」連接管理員。 在此容器的每一個迴圈上，「一般檔案」來源會從「多個一般檔案」連接管理員提供的下一個檔案名稱中載入資料。  
   
- 當您將「多個一般檔案」連接管理員加入封裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立連接管理員，用來在執行階段解析為「多個一般檔案」連接、在「多個一般檔案」連接管理員上設定屬性，以及將「多個一般檔案」連接管理員加入封裝的 **Connections** 集合。  
+ 當您將「多個一般檔案」連線管理員新增至套件時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立一個連線管理員 (在執行階段會解析為「多個一般檔案」連線)、設定「多個一般檔案」連線管理員的屬性，並將「多個一般檔案」連線管理員新增至套件的 **Connections** 集合。  
   
  連接管理員的 **ConnectionManagerType** 屬性會設為 **MULTIFLATFILE**。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "71298510"
   
  \<*path*>|\<*path*>  
   
- 您也可以使用萬用字元來指定多個檔案。 例如，若要參考 C 磁碟機上的所有文字檔， **ConnectionString** 屬性的值可以設定為 C:\\*.txt。  
+ 您也可以使用萬用字元來指定多個檔案。 例如，若要參考 C 磁碟機上的所有文字檔， **ConnectionString** 屬性的值可以設定為 C:\\\*.txt。  
   
  如果「多個一般檔案」連接管理員參考多個檔案，則所有檔案必須具有相同的格式。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "71298510"
 ## <a name="multiple-flat-files-connection-manager-editor-general-page"></a>多個一般檔案連線管理員編輯器 (一般頁面)
   使用 **[多個一般檔案連線管理員編輯器]** 對話方塊的 **[一般]** 頁面，即可選取一組具有相同資料格式的檔案，並指定其資料格式。 多個一般檔案連接，可以讓封裝連接到一組具有相同格式的文字檔。  
   
- 若要深入了解多個一般檔案連線管理員，請參閱＜ [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)＞。  
+ 若要深入了解多個一般檔案連接管理員，請參閱＜ [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)＞。  
   
 ### <a name="options"></a>選項。  
  **連線管理員名稱**  
@@ -101,9 +101,9 @@ ms.locfileid: "71298510"
  **格式**  
  指出是要使用分隔符號、固定寬度或不齊右的格式。 所有檔案必須有相同的資料格式。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|使用分隔符號|資料行是以分隔符號隔開，分隔符號是在 **[資料行]** 頁面上指定的。|  
+|Delimited (分隔檔)|資料行是以分隔符號隔開，分隔符號是在 **[資料行]** 頁面上指定的。|  
 |固定寬度|資料行具有固定寬度，由 **[資料行]** 頁面上的拖曳標記線所指定。|  
 |不齊右|不齊右檔案就是除了最後一個資料行是由資料列分隔符號所分隔之外，其他所有資料行都有在 **[資料行]** 頁面上所指定之固定寬度的檔案。|  
   
@@ -113,7 +113,7 @@ ms.locfileid: "71298510"
  **標頭資料列分隔符號**  
  從標頭資料列的分隔符號清單中選取，或輸入分隔符號文字。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|標頭資料列是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|標頭資料列是以歸位字元分隔。|  
@@ -148,7 +148,7 @@ ms.locfileid: "71298510"
  **資料列分隔符號**  
  從可用的資料列分隔符號清單中選取，或輸入分隔符號文字。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料列是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|資料列是以歸位字元分隔。|  
@@ -162,7 +162,7 @@ ms.locfileid: "71298510"
  **資料行分隔符號**  
  從可用的資料行分隔符號清單中選取，或輸入分隔符號文字。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料行是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|資料行是以歸位字元分隔。|  
@@ -203,7 +203,7 @@ ms.locfileid: "71298510"
  **資料列分隔符號**  
  從可用的資料列分隔符號清單中選取，或輸入分隔符號文字。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料列是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|資料列是以歸位字元分隔。|  
@@ -234,9 +234,9 @@ ms.locfileid: "71298510"
  **設定每一個資料行的屬性**  
  請在左窗格中選取一個資料行以便在右窗格中檢視它的屬性。 請參閱下表以了解資料類型屬性的描述。 部分列出的屬性，只能在某些一般檔案格式中設定。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
-|**ColumnType**|代表資料行是否為分隔的、固定寬度或不齊右。 此屬性是唯讀的。 不齊右檔案就是除了最後一個資料行是由資料列分隔符號所終止之外，其他所有資料行都有固定寬度的檔案。|  
+|**ColumnType**|代表資料行是否為分隔的、固定寬度或不齊右。 這個屬性是唯讀的。 不齊右檔案就是除了最後一個資料行是由資料列分隔符號所終止之外，其他所有資料行都有固定寬度的檔案。|  
 |**OutputColumnWidth**|指定將儲存為位元組計數的值；針對 Unicode 檔案，這將會顯示為字元計數。 在資料流程工作中，這個值將用來替一般檔案來源設定輸出資料行寬度。<br /><br /> 注意:在物件模型中，這個屬性的名稱為 MaximumWidth。|  
 |**DataType**|從可用的資料類型清單中選取。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。|  
 |**TextQualified**|使用文字限定詞字元指出文字資料是否為限定的：<br /><br /> **True**：一般檔案中文字資料是限定的。<br /><br /> **False**：一般檔案中文字資料是非限定的。|  
@@ -249,7 +249,7 @@ ms.locfileid: "71298510"
  **新增**  
  按一下 [新增]  來加入新的資料行。 [新增]  按鈕預設會在清單結尾加入新資料行。 此按鈕還有下列選項，可以在下拉式清單中使用。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**加入資料行**|在清單結尾加入新資料行。|  
 |**插在前面**|在選取的資料行之前插入新資料行。|  
@@ -280,7 +280,7 @@ ms.locfileid: "71298510"
  檢視第一個選取的一般檔案中的範例資料，使用選取的選項將資料分為資料行和資料列。  
   
 ## <a name="see-also"></a>另請參閱  
- [[一般檔案來源]](../../integration-services/data-flow/flat-file-source.md)   
+ [一般檔案來源](../../integration-services/data-flow/flat-file-source.md)   
  [一般檔案目的地](../../integration-services/data-flow/flat-file-destination.md)   
  [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

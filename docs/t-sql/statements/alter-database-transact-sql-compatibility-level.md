@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d65bcb7db0bc0628d1c7b40d21e9b2089ad285c
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 7ed32cf93d5bbf13580fc15d649ad403b98524cf
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127695"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909648"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
 
@@ -48,13 +48,13 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 
 ## <a name="arguments"></a>引數
 
-*database_name* 是要修改的資料庫名稱。
+*database_name*：這是要修改的資料庫名稱。
 
 COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } 是資料庫必須相容的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 可以設定下列相容性層級值 (並非所有版本都支援上述所列的所有相容性層級)：
 
 <a name="supported-dbcompats"></a>
 
-|產品|資料庫引擎版本|預設相容性層級指定|支援的相容性層級值|
+|Products|資料庫引擎版本|預設相容性層級指定|支援的相容性層級值|
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
 |[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140、130、120、110、100|
@@ -71,8 +71,7 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } 是資料庫
 > [!IMPORTANT]
 > SQL Server 和 Azure SQL Database 的資料庫引擎版本號碼無法彼此相互比較，且更像是這些個別產品的內部組建編號。 Azure SQL Database 資料庫引擎是以和 SQL Server 資料庫引擎相同的程式碼基底作為基礎。 最重要的是，Azure SQL Database 資料庫引擎一律具有最新的 SQL 資料庫引擎位元。 Azure SQL Database 版本 12 比 SQL Server 版本 15 更新。
 
-## <a name="remarks"></a>Remarks
-
+## <a name="remarks"></a>備註
 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有安裝，預設相容性層級與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的版本相關聯。 新資料庫會設定為這個層級，除非 **model** 資料庫具有更低的相容性層級。 針對從任何舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接或還原的資料庫，資料庫會保留其現有的相容性層級 (如果其至少為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體所允許最低層級)。 移動相容性層級低於 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 所允許層級的資料庫時，會自動將資料庫設定為允許的最低相容性層級。 這同樣適用於系統和使用者資料庫。
 
 附加或還原資料庫以及就地升級之後，[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 預期會有下列行為：
@@ -152,13 +151,15 @@ SELECT name, compatibility_level FROM sys.databases;
 ## <a name="differences-between-compatibility-levels"></a>相容性層級之間的差異
 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有安裝，預設相容性層級與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的版本相關聯，如[此表](#supported-dbcompats)所示。 針對新的開發工作，請務必計畫在最新的資料庫相容性層級上認證應用程式。
 
-但是，資料庫相容性層級也會提供與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的回溯相容性，因為從任何舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 附加或還原的資料庫會保留其現有的相容性層級 (如果相同或高於允許的最低相容性層級)。 這會在本文的[使用相容性層級進行回溯相容性](#backwardCompat)一節中討論。
+除非新 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法可以藉由製造與使用者 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼的衝突來中斷現有應用程式，否則不受資料庫相容性層級管制。 這些例外狀況會記載於本文的後續章節中，其概述特定相容性層級之間的差異。
+
+資料庫相容性層級也會提供與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的回溯相容性，因為從任何舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 附加或還原的資料庫會保留其現有相容性層級 (如果相同或高於所允許最低相容性層級)。 這會在本文的[使用相容性層級進行回溯相容性](#backwardCompat)一節中討論。
 
 從資料庫相容性層級 130 開始，任何會影響查詢計劃的新修正和功能，只會新增至可用的最新相容性層級，也稱為預設相容性層級。 這種作法是為了將升級期間因新的查詢最佳化行為而可能引發的查詢計劃變更，所導致效能降低而產生的風險降到最低。 
 
 僅新增至新版本 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的預設相容性層級上，影響計劃的基本變更是：
 
-1.  **針對舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (追蹤旗標 4199) 所發行的查詢最佳化工具修正，會在較新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設相容性層級中自動啟用**。 **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+1.  **針對舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (追蹤旗標 4199) 所發行的查詢最佳化工具修正，會在較新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設相容性層級中自動啟用**。 **適用範圍：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
     例如，當 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 發行時，針對舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以及各自的相容性層級 100 到 120) 發行的所有查詢最佳化工具修正，都會變成針對使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 預設相容性層級 (130) 的資料庫自動啟用。 僅 RTM 後查詢最佳化工具修正程式需要明確啟用。
     
@@ -167,7 +168,7 @@ SELECT name, compatibility_level FROM sys.databases;
     >
     > - 在伺服器層級，使用[追蹤旗標 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199)。
     > - 在資料庫層級，使用 [ALTER 資料庫範圍設定 (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 [`QUERY_OPTIMIZER_HOTFIXES`] 選項。
-    > - 在查詢層級，使用 `USE HINT 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'` [查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)。
+    > - 在查詢層級，使用 `USE HINT 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'`[查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)。
     
     之後，當 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 發行時，在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM 之後所發行的所有查詢最佳化工具修正程式都會針對使用 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 預設相容性層級 (140) 的資料庫自動啟用。 這是包含所有舊版修正的累計行為。 同樣地，僅 RTM 後查詢最佳化工具修正程式需要明確啟用。  
     
@@ -175,9 +176,9 @@ SELECT name, compatibility_level FROM sys.databases;
     
     |資料庫引擎 (DE) 版本|資料庫相容性層級|TF 4199|來自所有先前資料庫相容性層級的的 QO 變更|RTM 後 DE 版本的 QO 變更|
     |----------|----------|---|------------|--------|
-    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|100 至 120<br /><br /><br />130|關閉<br />開啟<br /><br />關閉<br />開啟|**已停用**<br />已啟用<br /><br />**已啟用**<br />已啟用|已停用<br />已啟用<br /><br />已停用<br />已啟用|
-    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|100 至 120<br /><br /><br />130<br /><br /><br />140|關閉<br />開啟<br /><br />關閉<br />開啟<br /><br />關閉<br />開啟|**已停用**<br />已啟用<br /><br />**已啟用**<br />已啟用<br /><br />**已啟用**<br />已啟用|已停用<br />已啟用<br /><br />已停用<br />已啟用<br /><br />已停用<br />已啟用|
-    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) 和 12 ([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])|100 至 120<br /><br /><br />130 至 140<br /><br /><br />150|關閉<br />開啟<br /><br />關閉<br />開啟<br /><br />關閉<br />開啟|**已停用**<br />已啟用<br /><br />**已啟用**<br />已啟用<br /><br />**已啟用**<br />已啟用|已停用<br />已啟用<br /><br />已停用<br />已啟用<br /><br />已停用<br />已啟用|
+    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|100 至 120<br /><br /><br />130|關閉<br />另一<br /><br />關閉<br />另一|**Disabled**<br />啟用<br /><br />**已啟用**<br />啟用|已停用<br />啟用<br /><br />已停用<br />啟用|
+    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|100 至 120<br /><br /><br />130<br /><br /><br />140|關閉<br />另一<br /><br />關閉<br />另一<br /><br />關閉<br />另一|**Disabled**<br />啟用<br /><br />**已啟用**<br />啟用<br /><br />**已啟用**<br />啟用|已停用<br />啟用<br /><br />已停用<br />啟用<br /><br />已停用<br />啟用|
+    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) 和 12 ([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])|100 至 120<br /><br /><br />130 至 140<br /><br /><br />150|關閉<br />另一<br /><br />關閉<br />另一<br /><br />關閉<br />另一|**Disabled**<br />啟用<br /><br />**已啟用**<br />啟用<br /><br />**已啟用**<br />啟用|已停用<br />啟用<br /><br />已停用<br />啟用<br /><br />已停用<br />啟用|
     
     > [!IMPORTANT]
     > 追蹤旗標 4199 不會保護處理錯誤結果或存取違規錯誤的「查詢最佳化工具」修正。 那些修正不會被視為選擇性。
@@ -192,9 +193,9 @@ SELECT name, compatibility_level FROM sys.databases;
     
     |資料庫引擎版本|資料庫相容性層級|新版本 CE 變更|
     |----------|--------|-------------|
-    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|< 130<br />130|已停用<br />已啟用|
-    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])<sup>1</sup>|< 140<br />140|已停用<br />已啟用|
-    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])<sup>1</sup>|< 150<br />150|已停用<br />已啟用|
+    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|< 130<br />130|已停用<br />啟用|
+    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])<sup>1</sup>|< 140<br />140|已停用<br />啟用|
+    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])<sup>1</sup>|< 150<br />150|已停用<br />啟用|
     
     <sup>1</sup> 也適用於 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
     
@@ -256,7 +257,7 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 
 |相容性層級設定為 110 或更低|相容性層級設定為 120|
 |--------------------------------------------------|-----------------------------------------|
-|使用舊版的查詢最佳化工具。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包括可建立及最佳化查詢計劃之元件的大幅改善。 這個新的查詢最佳化工具功能取決於資料庫相容性層級 120 的使用。 新的資料庫應用程式應該使用資料庫相容性層級 120 加以開發，以便充分利用這些改良功能。 從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉的應用程式應該謹慎測試，以確認良好的效能得以持續或改善。 如果效能降低，您可以將資料庫相容性層級設定為 110 或更低的數字，以便使用舊的查詢最佳化工具方法。<br /><br /> 資料庫相容性層級 120 會使用新的基數估計工具，其經過調整適合於新型資料倉儲和 OLTP 工作負載。 因效能發生問題而要將資料庫相容性層級設定為 110 之前，請先參閱 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [Database Engine 的新功能](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)主題的＜查詢計劃＞  一節提供的建議。|
+|使用舊版的查詢最佳化工具。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包括可建立及最佳化查詢計劃之元件的大幅改善。 這個新的查詢最佳化工具功能取決於資料庫相容性層級 120 的使用。 新的資料庫應用程式應該使用資料庫相容性層級 120 加以開發，以便充分利用這些改良功能。 從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉的應用程式應該謹慎測試，以確認良好的效能得以持續或改善。 如果效能降低，您可以將資料庫相容性層級設定為 110 或更低的數字，以便使用舊的查詢最佳化工具方法。<br /><br /> 資料庫相容性層級 120 會使用新的基數估計工具，其經過調整適合於新型資料倉儲和 OLTP 工作負載。 因效能問題而要將資料庫相容性層級設定為 110 之前，請先參閱[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][資料庫引擎的新功能](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)主題的＜查詢計劃＞  一節提供的建議。|
 |在低於 120 的相容性層級中，將**日期**值轉換成字串值時，會忽略語言設定。 請注意，此行為只針對**日期**類型。 請參閱下方＜範例＞一節中的範例 B。|將**日期**值轉換成字串值時，不會忽略語言設定。|
 |`EXCEPT` 子句右邊的遞迴參考會建立無限迴圈。 下方＜範例＞一節中的範例 C 會示範此行為。|`EXCEPT` 子句中的遞迴參考會產生符合 ANSI SQL 標準的錯誤。|
 |遞迴通用資料表運算式 (CTE) 允許複寫資料行名稱。|遞迴 CTE 不允許重複的資料行名稱。|
@@ -289,7 +290,7 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 |當您建立或改變分割區函數時，評估此函數中的 **datetime** 和 **smalldatetime** 常值時會假設 US_English 為語言設定。|目前的語言設定可用來評估分割區函數中的 **datetime** 和 **smalldatetime** 常值。|中|
 |`INSERT` 和 `SELECT INTO` 陳述式中允許 (但會忽略) `FOR BROWSE` 子句。|`INSERT` 和 `SELECT INTO` 陳述式中不允許 `FOR BROWSE` 子句。|中|
 |`OUTPUT` 子句中允許全文檢索述詞。|`OUTPUT` 子句中不允許全文檢索述詞。|低|
-|不支援 `CREATE FULLTEXT STOPLIST`、`ALTER FULLTEXT STOPLIST`和 `DROP FULLTEXT STOPLIST`。 系統停用字詞表會自動與新的全文檢索索引產生關聯。|支援 `CREATE FULLTEXT STOPLIST`、`ALTER FULLTEXT STOPLIST`和 `DROP FULLTEXT STOPLIST`。|低|
+|未支援 `CREATE FULLTEXT STOPLIST`、`ALTER FULLTEXT STOPLIST` 和 `DROP FULLTEXT STOPLIST`。 系統停用字詞表會自動與新的全文檢索索引產生關聯。|支援 `CREATE FULLTEXT STOPLIST`、`ALTER FULLTEXT STOPLIST`和 `DROP FULLTEXT STOPLIST`。|低|
 |`MERGE` 不會強制為保留關鍵字。|MERGE 是完整的保留關鍵字。 100 和 90 相容性層級之下都支援 `MERGE` 陳述式。|低|
 |使用 INSERT 陳述式的 \<dml_table_source> 引數會引發語法錯誤。|您可以在巢狀 INSERT、UPDATE、DELETE 或 MERGE 陳述式中擷取 OUTPUT 子句的結果，並將這些結果插入目標資料表或檢視表中。 這是利用 INSERT 陳述式中的 \<dml_table_source> 引數所完成的。|低|
 |除非指定了 `NOINDEX`X，否則 `DBCC CHECKDB` 或 `DBCC CHECKTABLE` 會針對單一資料表或索引檢視表及它的所有非叢集索引和 XML 索引進行實體和邏輯一致性檢查。 不支援空間索引。|除非指定了 `NOINDEX`X，否則 `DBCC CHECKDB` 或 `DBCC CHECKTABLE` 會針對單一資料表及它的所有非叢集索引進行實體和邏輯一致性檢查。 但是根據預設，XML 索引、空間索引和索引檢視表只會進行實體一致性檢查。<br /><br /> 如果指定了 `WITH EXTENDED_LOGICAL_CHECKS`，將會針對索引檢視表、XML 索引和空間索引 (如果有的話) 執行邏輯檢查。 根據預設，實體一致性檢查會在邏輯一致性檢查之前執行。 如果也指定了 `NOINDEX`，則只會執行邏輯檢查。|低|

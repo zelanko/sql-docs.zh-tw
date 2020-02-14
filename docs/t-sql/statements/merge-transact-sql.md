@@ -25,10 +25,10 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a49bef9dc75beea0e098908362f198b60a8b92c
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680831"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
@@ -207,7 +207,7 @@ TOP ( *expression* ) [ PERCENT ]
 USING \<table_source>  
 會根據 \<merge_search condition>，指定與 *target_table* 中資料列進行比對的資料來源。 此項比對的結果會指定 MERGE 陳述式的 WHEN 子句所採取的動作。 \<table_source> 可以是遠端資料表或存取遠端資料表的衍生資料表。
   
-\<table_source> 可以是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [資料表值建構函式](../../t-sql/queries/table-value-constructor-transact-sql.md)的衍生資料表，藉由指定多個資料列來建構資料表。  
+\<來源> 可以是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [資料表值建構函式](../../t-sql/queries/table-value-constructor-transact-sql.md)的衍生資料表，藉由指定多個資料列來建構資料表。  
   
 如需有關此子句語法和引數的詳細資訊，請參閱 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)。  
   
@@ -262,7 +262,7 @@ UPDATE SET \<set_clause>
   
 如需有關此子句引數的詳細資訊，請參閱 [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)。 不支援將變數設定為與資料行相同的值。  
   
-Delete  
+刪除  
 指定符合 *target_table* 資料列的資料列會遭到刪除。  
   
 \<merge_not_matched>  
@@ -285,7 +285,7 @@ DEFAULT VALUES
 \<圖形搜尋模式>  
 指定圖形搜尋模式。 如需此子句的引數詳細資訊，請參閱 [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 必須至少指定三個 MATCHED 子句中的一個，但可依任何順序指定這些子句。 在同一個 MATCHED 子句中，不能更新變數一次以上。  
   
@@ -324,20 +324,20 @@ MERGE 陳述式需要使用分號 (;) 做為陳述式結束字元。 若 MERGE �
 - 在來源資料表的聯結資料行上，建立唯一且涵蓋的索引。
 - 在目標資料表的聯結資料行上，建立唯一的叢集索引。
 
-這些索引可確保聯結索引鍵是唯一的，而且排序資料表中的資料已經過排序。 查詢效能已經過改良，因為查詢最佳化工具不需要執行額外的驗證處理，也可以尋找及更新重複的資料列，而且不需要其他排序作業。
+這些索引可確保聯結索引鍵是唯一的，而且會排序資料表中的資料。 查詢效能已經過改良，因為查詢最佳化工具不需要執行額外的驗證處理，也可以尋找及更新重複的資料列，而且不需要其他排序作業。
 
 ### <a name="join-best-practices"></a>JOIN 最佳做法
 
 若要改善 MERGE 陳述式的效能，並確保可得到正確的結果，我們建議您遵循聯結指導方針：
 
-- 在決定用來比對來源和目標資料表資料之準則的 ON <merge_search_condition> 子句中，只指定搜尋條件。 也就是說，只指定是來自目標資料表且要與來源資料表之對應資料行進行比較的資料行。 
-- 請勿包含與其他值 (例如，常數) 的比較。
+- 在決定用來比對來源和目標資料表資料之準則的 ON <merge_search_condition> 子句中，只指定搜尋條件。 也就是說，只從目標資料表中指定要與來源資料表的對應資料行進行比較的資料行。 
+- 請勿包含與其他值 (如常數) 的比較。
 
 若要從來源或目標資料表中篩選掉資料列，請使用下列其中一個方法。
 
 - 在適當的 WHEN 子句中指定資料列篩選的搜尋條件。 例如，WHEN NOT MATCHED AND S.EmployeeName LIKE 'S%' THEN INSERT....
 - 在來源或目標上定義一個可傳回篩選過之資料列的檢視表，並將此檢視表當做來源或目標資料表來參考。 如果此檢視表定義在目標資料表上，則對其進行的任何動作都必須滿足更新檢視表的條件。 如需有關使用檢視表來更新資料的詳細資訊，請參閱＜透過檢視修改資料＞。
-- 使用 `WITH <common table expression>` 子句，從來源或目標資料表中篩選掉資料列。 這個方法類似於在 ON 子句中指定其他搜尋條件，而且可能會產生不正確的結果。 我們建議您避免使用這個方法，或是在實作這個方法之前先徹底加以測試。
+- 使用 `WITH <common table expression>` 子句，從來源或目標資料表中篩選掉資料列。 這個方法類似於在 ON 子句中指定其他搜尋條件，而且可能會產生不正確的結果。 我們建議您最好避免使用這個方法，或是在實作這個方法之前先徹底加以測試。
 
 MERGE 陳述式中的聯結作業會使用與 SELECT 陳述式中的聯結相同的方式來最佳化。 也就是說，當 SQL Server 處理聯結時，查詢最佳化工具將從多種可能性選擇最有效率的聯結處理方式。 當來源和目標的大小類似，而且先前所述的索引指導方針適用於來源和目標資料表時，合併聯結運算子就是最有效率的查詢計畫。 這是因為這兩個資料表都會掃描一次，而且不需要排序資料。 當來源小於目標資料表時，偏好的是巢狀迴圈運算子。
 
@@ -361,7 +361,7 @@ MERGE 陳述式中的聯結作業會使用與 SELECT 陳述式中的聯結相同
 
 - I/O 效能可能會受到影響。
 
-  MERGE 陳述式會對來源和目標資料表執行完整資料表掃描。 將作業分成若干批次時，將會減少每一個批次執行的寫入作業數；但是，每一個批次都將會執行來源和目標資料表的完整資料表掃描。 產生的讀取活動可能會影響查詢的效能。
+  MERGE 陳述式會針對來源和目標資料表執行完整資料表掃描。 將作業分成若干批次時，將會減少每一個批次執行的寫入作業數；但是，每一個批次都將執行來源和目標資料表的完整資料表掃描。 產生的讀取活動可能會影響查詢的效能。
 
 - 可能產生不正確的結果。
 

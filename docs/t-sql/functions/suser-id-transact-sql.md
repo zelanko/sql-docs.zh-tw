@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: e9bad34cf3d195e4038d794fac913bdb3d16bc91
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843557"
 ---
 # <a name="suser_id-transact-sql"></a>SUSER_ID (Transact-SQL)
@@ -51,10 +51,10 @@ SUSER_ID ( [ 'login' ] )
  **'** *login* **'**  
  這是使用者的登入名稱。 *login* 為 **nchar**。 若將 *login* 指定為 **char**，則 *login* 便會隱含轉換成 **nchar**。 *login* 可以是有權連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或是 Windows 使用者或群組。 如果未指定 *login*，便會傳回目前使用者的登入識別碼。 如果參數包含 NULL 一詞，就會傳回 NULL。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  SUSER_ID 只會針對在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內明確規定的登入來傳回識別碼。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內，這個識別碼是用來追蹤擁有權和權限。 這個識別碼不等於 SUSER_SID 傳回之登入的 SID。 如果 *login* 是一項 SQL Server 登入，則 SID 會對應至 GUID。 如果 *login* 是 Windows 登入或 Windows 群組，則 SID 會對應至 Windows 安全性識別碼。  
   
  SUSER_SID 只會傳回在 **syslogins** 系統資料表中有項目之登入的 SUID。  

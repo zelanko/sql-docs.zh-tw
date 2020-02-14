@@ -13,10 +13,10 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6d39c2d0975f7be8a7e5481b9c91266528ae9ee2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006355"
 ---
 # <a name="database-mirroring-operating-modes"></a>資料庫鏡像作業模式
@@ -39,7 +39,7 @@ ms.locfileid: "68006355"
  交易安全性  
  鏡像特有的資料庫屬性，用來決定資料庫鏡像工作階段是以同步或非同步方式作業。 有兩個安全性層級：FULL 和 OFF。  
   
- Witness  
+ 見證  
  只能搭配高安全性模式使用的一種 SQL Server 選擇性執行個體，可讓鏡像伺服器辨別是否要起始自動容錯移轉。 與兩個容錯移轉夥伴不同的是，見證並不是為資料庫服務。 支援自動容錯移轉是見證的唯一角色。  
   
 ## <a name="asynchronous-database-mirroring-high-performance-mode"></a>非同步資料庫鏡像 (高效能模式)  
@@ -145,7 +145,7 @@ ms.locfileid: "68006355"
 ###  <a name="HighSafetyWithOutAutoFailover"></a> 不具有自動容錯移轉的高安全性模式  
  下圖將顯示不含自動容錯移轉之高安全性模式的組態。 這個組態僅包含兩個夥伴。  
   
- ![在沒有見證之情況下通訊的夥伴](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "在沒有見證之情況下通訊的夥伴")  
+ ![在沒有見證情況下通訊的夥伴](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "在沒有見證情況下通訊的夥伴")  
   
  當夥伴已連接而且資料庫已經同步處理後，就會支援手動容錯移轉。 如果鏡像伺服器執行個體效能降低，主體伺服器執行個體不受影響，並且公開執行 (亦即沒有鏡像資料)。 如果遺失主體伺服器，就會暫停鏡像，不過可以將服務強制轉到鏡像伺服器 (可能會遺失資料)。 如需詳細資訊，請參閱 [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)版本都可使用見證伺服器執行個體。  
   
@@ -168,7 +168,7 @@ ms.locfileid: "68006355"
   
 -   如果主體伺服器在上述條件下變得無法使用，就會進行自動容錯移轉。 鏡像伺服器會切換成主體的角色，並提供其資料庫來作為主體資料庫。  
   
--   如果主體伺服器在未達到這些條件時無法使用，強制服務 (可能發生資料遺失) 是可行的。 如需詳細資訊，請參閱[資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。  
+-   如果主體伺服器在未達到這些條件時無法使用，強制服務 (可能發生資料遺失) 是可行的。 如需詳細資訊，請參閱 [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)版本都可使用見證伺服器執行個體。  
   
 -   如果只有鏡像伺服器變得無法使用，主體及見證會繼續運作。  
   
@@ -247,7 +247,7 @@ ms.locfileid: "68006355"
 ###  <a name="ViewWitness"></a> 檢視安全性設定和見證狀態  
  若要檢視資料庫的安全性設定和見證狀態，請使用 **sys.database_mirroring** 目錄檢視。 相關的資料行如下：  
   
-|因數|[資料行]|Description|  
+|因數|資料行|描述|  
 |------------|-------------|-----------------|  
 |交易安全性|**mirroring_safety_level** 或 **mirroring_safety_level_desc**|在鏡像資料庫上更新的交易安全性設定，其中一個為：<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL= 資料庫不在線上。|  
 |見證存在嗎？|**mirroring_witness_name**|資料庫鏡像見證的伺服器名稱或 NULL，表示沒有見證。|  
@@ -277,7 +277,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 -   [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
--   [使用 Windows 驗證加入資料庫鏡像見證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
+-   [使用 Windows 驗證新增資料庫鏡像見證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
 -   [從資料庫鏡像工作階段移除見證 &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 7524d1c984d1e12b744c57b97cfeb586dff3f7ce
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68770752"
 ---
 # <a name="replication-distribution-agent"></a>複寫散發代理程式
@@ -93,7 +93,7 @@ distrib [-?]
  列印所有可用的參數。  
   
  **-Publisher** _server_name_[ **\\** _instance_name_]  
- 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 <伺服器名稱>  。 請針對該伺服器上 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
+ 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 *server_name*。 請針對該伺服器上 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
   
  **-PublisherDB** _publisher_database_  
  這是發行者資料庫的名稱。  
@@ -108,7 +108,7 @@ distrib [-?]
  這是包含訂閱之初始快照集的資料夾路徑。  
   
  **-BcpBatchSize** _bcp_batch_size_  
- 這是要在大量複製作業中傳送的資料列數目。  執行 **bcp in** 作業時，批次大小就是要在單一交易中傳送至伺服器的資料列數目，而且它也是「散發代理程式」記錄 bcp 進度訊息之前必須傳送的資料列數目。 執行 **bcp out** 作業時，系統會使用固定批次大小 **1000** 。  
+ 這是要在大量複製作業中傳送的資料列數目。 執行 **bcp in** 作業時，批次大小就是要在單一交易中傳送至伺服器的資料列數目，而且它也是「散發代理程式」記錄 **bcp** 進度訊息之前必須傳送的資料列數目。 執行 **bcp out** 作業時，系統會使用固定批次大小 **1000** 。  
   
  **-CommitBatchSize** _commit_batch_size_  
  這是發出 COMMIT 陳述式之前，要發送至訂閱者的交易數目。 預設值為 100，最大值為 10000。
@@ -137,7 +137,7 @@ distrib [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  這是建立連接時，散發代理程式所使用的安全通訊端層 (SSL) 加密層級。  
   
-|EncryptionLevel 值|Description|  
+|EncryptionLevel 值|描述|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定要使用 SSL，但是代理程式不會驗證 SSL 伺服器憑證是否由受信任的簽發者簽署。|  
@@ -172,7 +172,7 @@ distrib [-?]
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
  指定在散發作業期間記錄的記錄量。  您可以透過選取 1，盡量減少記錄作業的效能影響。  
   
-|HistoryVerboseLevel 值|Description|  
+|HistoryVerboseLevel 值|描述|  
 |-------------------------------|-----------------|  
 |**0**|進度訊息會寫入主控台或輸出檔中。 但是，記錄不會記錄在散發資料庫中。|  
 |**1**|預設值。 一律更新相同狀態的上一個記錄訊息 (啟動、進度、成功等等)。 如果沒有任何具有相同狀態的上一筆記錄存在，便插入新的記錄。|  
@@ -251,7 +251,7 @@ distrib [-?]
  **-SubscriberType** [ **0**| **1**| **3**]  
  指定由散發代理程式所使用的訂閱者連接類型。  
   
-|SubscriberType 值|Description|  
+|SubscriberType 值|描述|  
 |--------------------------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**1**|ODBC 資料來源|  
@@ -287,7 +287,7 @@ distrib [-?]
  **-UseOledbStreaming**  
  指定這個參數時，可將二進位大型物件資料繫結成資料流。 您可以使用 **-OledbStreamThreshold** 來指定將使用的資料流大小 (以位元組為單位)。 **UseOledbStreaming** 預設為啟用。 **UseOledbStreaming** 會寫入 **C:\Program Files\Microsoft SQL Server\\<版本\>\COM** 資料夾。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如果您已將  Agent 安裝成在本機系統帳戶而非網域使用者帳戶 (預設值) 底下執行，這項服務就只能存取本機電腦。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Agent 底下執行的散發代理程式設定為使用 Windows 驗證模式，當它登入  執行個體時，散發代理程式就會失敗。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設設定為  驗證。 [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)如需有關變更安全性帳戶的詳細資訊，請參閱＜＞。  

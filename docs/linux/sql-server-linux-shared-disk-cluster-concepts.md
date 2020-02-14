@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 81d283ba02ec62a2de8d3c8f0e56be8c55d58190
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032396"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>容錯移轉叢集執行個體 - Linux 上的 SQL Server
@@ -63,7 +63,7 @@ FCI 在 DNS 中的名稱應該要和在 Pacemaker 叢集中所建立之 FCI 資�
 
 - iSCSI
 - 網路檔案系統 (NFS)
-- 伺服器訊息區 (SMB) 在 Windows Server 底下，選項則稍有不同。 一個目前不支援 Linux 型 FCI 的選項，是使用 TempDB (其為 SQL Server 的暫存工作區) 節點的本機磁碟。
+- 伺服器訊息區 (SMB)：在 Windows Server 底下，選項則稍有不同。 一個目前不支援 Linux 型 FCI 的選項，是使用 TempDB (其為 SQL Server 的暫存工作區) 節點的本機磁碟。
 
 在橫跨多個位置的設定中，儲存在單一資料中心的內容必須與另一個資料中心同步。 在發生容錯移轉的情況下，FCI 將能上線，且儲存體將會保持一致。 若要達成此目的，將會需要針對儲存體複寫使用某種外部方法；無論是透過基礎儲存體硬體，或是某種以軟體為基礎的公用程式來達成。 
 

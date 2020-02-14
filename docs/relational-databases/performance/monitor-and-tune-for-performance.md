@@ -30,10 +30,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fd6fdf81a74e015995f5bf9bd5500f196ccf5cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68020254"
 ---
 # <a name="monitor-and-tune-for-performance"></a>效能的監視與微調
@@ -66,7 +66,7 @@ ms.locfileid: "68020254"
   
 ## <a name="monitoring-and-performance-tuning-tasks"></a>監視和效能微調工作  
   
-|主題| 工作|  
+|主題| Task|  
 |-----------|----------------------|  
 |[監視 SQL Server 元件](../../relational-databases/performance/monitor-sql-server-components.md)|監視任何 SQL Server 元件所需的步驟，例如，活動監視器、擴充事件，以及動態管理檢視與函數等。|  
 |[效能監視及微調工具](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)|列出可供 SQL Server 使用的監視及微調工具，例如，即時查詢統計資料和 Database Engine Tuning Advisor。|  

@@ -15,10 +15,10 @@ ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 91f0ca0980eceb5ccdd2b1c0814661695f573d50
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291652"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>使用緩時變維度精靈來設定輸出
@@ -84,6 +84,6 @@ ms.locfileid: "71291652"
  更新「緩時變維度」轉換輸出之組態的最簡單方法，就是重新執行「緩時變維度精靈」並修改精靈頁面中的屬性。 您還可以使用 [進階編輯器]  對話方塊或以程式設計方式更新「緩時變維度」轉換。  
   
 ## <a name="see-also"></a>另請參閱  
- [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+ [緩時變維度轉換](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   

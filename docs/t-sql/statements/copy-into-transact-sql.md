@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 4cdfba4070e8788687c453435b4a6d525aeb44fe
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.openlocfilehash: 4e42c60e945512c09b88b19b18b6f24ce45b46dc
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321829"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76536644"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (預覽)
 
@@ -390,7 +390,7 @@ WITH (
 不需要分割 Parquet 與 ORC 檔案，因為 COPY 命令將會自動分割檔案。 Azure 儲存體帳戶中的 Parquet 與 ORC 檔案應為 256MB 以上，以達到最佳效能。 
 
 ### <a name="when-will-the-copy-command-be-generally-available"></a>COPY 命令何時會公開推出？
-COPY 命令將會在下一個日曆年度 (2020) 公開推出。 
+COPY 命令將會在此日曆年度 (2020) 結束前正式推出。 
 
 ### <a name="are-there-any-known-issues-with-the-copy-command"></a>COPY 命令是否有任何已知問題？
 

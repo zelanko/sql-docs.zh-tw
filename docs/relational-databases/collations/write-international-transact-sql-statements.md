@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4cbc237ad0df16dbb854fb5bd062d7d37375294f
-ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70913552"
 ---
 # <a name="write-international-transact-sql-statements"></a>撰寫國際通用的 Transact-SQL 陳述式
@@ -46,11 +46,11 @@ ms.locfileid: "70913552"
   
     -   ADO、OLE DB 和 ODBC 應用程式應該使用以下形式的 ODBC 時間戳記、日期和時間逸出子句：  
   
-         **{ ts'** _yyyy_ **-** _mm_ **-** _dd_ _hh_ **:** _mm_ **:** _ss_ [ **.** _fff_] **'}** 例如： **{ ts'1998-09-24 10:02:20'}**  
+         **{ ts'** _yyyy_ **-** _mm_ **-** _dd_ _hh_ **:** _mm_ **:** _ss_ [ **.** _fff_] **'}** ，例如： **{ ts'1998-09-24 10:02:20'}**  
   
-         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** 例如： **{ d'1998-09-24'}**
+         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** ，例如： **{ d'1998-09-24'}**
   
-         **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** 例如： **{ t'10:02:20'}**  
+         **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** ，例如： **{ t'10:02:20'}**  
   
     -   使用其他 API 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼、預存程序和觸發程序的應用程式，應該使用未分隔的數值字串。 例如 *yyyymmdd* 為 19980924。  
   

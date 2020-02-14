@@ -13,10 +13,10 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 112a925c051b5345933ee4c8fc1fb3b1147c2e48
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297320"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>建立、部署和偵錯自訂物件
@@ -76,7 +76,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
 ```  
   
 ##  <a name="deploying"></a> 部署組件  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具會列舉在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 時所建立之一系列資料夾中所找到的檔案，以尋找可在套件中使用的自訂物件。 使用預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝設定時，這組資料夾位於 **C:\Program Files\Microsoft SQL Server\130\DTS**。 不過，如果您為自訂物件建立安裝程式，則應該檢查 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\Setup\DtsPath** 登錄機碼值以確認此資料夾的位置。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師會列舉在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 時所建立一系列資料夾中找到的檔案，以尋找可在套件中使用的自訂物件。 使用預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝設定時，這組資料夾位於 **C:\Program Files\Microsoft SQL Server\130\DTS**。 不過，如果您為自訂物件建立安裝程式，則應該檢查 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\Setup\DtsPath** 登錄機碼值以確認此資料夾的位置。  
   
 > [!NOTE]  
 >  如需如何部署自訂元件以與 SQL Server Data Tools 中的多版本支援搭配運作良好的資訊，請參閱[取得 SSIS 自訂延伸模組，以支援 SQL Server 2016 的 SSDT 2015 多版本支援](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)。  
@@ -91,7 +91,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 |自訂物件|部署資料夾|  
 |-------------------|-----------------------|  
-|工作|工作|  
+|Task|工作|  
 |[ODBC 來源編輯器]|連接|  
 |記錄提供者|LogProviders|  
 |資料流程元件|PipelineComponents|  

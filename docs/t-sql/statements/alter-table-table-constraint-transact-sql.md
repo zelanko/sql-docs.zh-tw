@@ -17,10 +17,10 @@ ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 92e12a2991d03c125e3247d1dd681b0a5754e2f9
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981995"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
@@ -168,7 +168,7 @@ ms.locfileid: "73981995"
  指定資料行的預設值。 您可以利用 DEFAULT 定義來提供現有資料列之新資料行的值。 您不能將 DEFAULT 定義新增至含 **timestamp** 資料類型、IDENTITY 屬性、現有的 DEFAULT 定義或繫結預設值的資料行。 如果資料行有現有的預設值，就必須先卸除預設值，才能加入新預設值。 如果使用者定義的類型資料行指定了預設值，該類型應該支援將 *constant_expression* 隱含地轉換成使用者定義的類型。 若要維護與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的相容性，您可以將條件約束名稱指派給 DEFAULT。  
   
  *constant_expression*  
- 這是用來作為資料行預設值的常值、NULL 或系統函數。 如果 *constant_expression* 用來搭配定義為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 使用者定義類型的資料行，該類型的實作必須支援將 *constant_expression* 隱含地轉換成使用者定義的類型。  
+ 這是用來作為資料行預設值的常值、NULL 或系統函數。 如果 *constant_expression* 用來搭配定義為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 使用者定義型別的資料行，該類型的實作必須支援將 *constant_expression* 隱含地轉換成使用者定義型別。  
   
  FOR *column*  
  指定關聯於資料表層級 DEFAULT 定義的資料行。  
@@ -183,7 +183,7 @@ ms.locfileid: "73981995"
  *logical_expression*  
  CHECK 條件約束所使用的邏輯運算式，會傳回 TRUE 或 FALSE。 搭配 CHECK 條件約束使用的 *logical_expression* 無法參考其他資料表，但可以參考相同資料列所在之資料表的其他資料行。 這個運算式不能參考別名資料類型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  加入 FOREIGN KEY 或 CHECK 條件約束時，除非指定 WITH NOCHECK 選項，否則將會驗證所有現有資料的強制違規。 如果有任何違規，ALTER TABLE 便會失敗，且會傳回錯誤。 當現有資料行中加入了新的 PRIMARY KEY 或 UNIQUE 條件約束時，資料行中的資料便必須是唯一的。 如果找到重複的值，ALTER TABLE 便會失敗。 當加入 PRIMARY KEY 或 UNIQUE 條件約束時，WITH NOCHECK 選項沒有作用。  
   
  每個 PRIMARY KEY 和 UNIQUE 條件約束都會產生一個索引。 UNIQUE 和 PRIMARY KEY 條件約束數目無法使資料表的索引數目超出 999 個非叢集索引和 1 個叢集索引。 外部索引鍵條件約束不會自動產生索引。 但外部索引鍵資料行常會用於查詢的聯結準則，方法是將資料表的外部索引鍵條件約束與其他資料表的主要或唯一索引鍵資料行進行比對。 外部索引鍵資料行的索引可讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 快速從外部索引鍵資料表中尋找相關資料。  

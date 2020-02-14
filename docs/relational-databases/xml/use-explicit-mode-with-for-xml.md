@@ -15,10 +15,10 @@ ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001794"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>搭配 FOR XML 使用 EXPLICIT 模式
@@ -52,7 +52,7 @@ ms.locfileid: "68001794"
   
 -   在由此通用資料表產生 XML 時，此資料表中的資料會垂直分割成資料行群組。 分組是根據 **Tag** 值及資料行名稱來決定。 建構 XML 時，處理邏輯會為每個資料列選取一個資料行群組並建構一個元素。 以下適用於此範例：  
   
-    -   對於第一個資料列中的 **Tag** 資料行值 1，其名稱包含相同標記編號的資料行 **Customer!1!cid** 及 **Customer!1!name** 會形成一個群組。 這些資料行是用來處理資料列，而且您可能已注意到產生的元素是 <`Customer id=... name=...`>。 資料行名稱格式會在本主題稍後描述。  
+    -   對於第一個資料列中的 **Tag** 資料行值 1，其名稱包含相同標記編號的資料行 **Customer!1!cid** 及 **Customer!1!name**會形成一個群組。 這些資料行是用來處理資料列，而且您可能已注意到產生的元素是 <`Customer id=... name=...`>。 資料行名稱格式會在本主題稍後描述。  
   
     -   對於 **Tag** 資料行值 2 的資料列，資料行 **Order!2!id** 及 **Order!2!date** 會形成一個群組，之後會用來建構元素 <`Order id=... date=... /`>。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68001794"
         </Customer>  
         ```  
   
- 簡言之，**Tag** 及 **Parent** 中繼資料行中的值、資料行名稱提供的相關資訊，以及資料列的正確順序都可以在您使用 EXPLICIT 模式時，產生您想要的 XML。  
+ 簡言之， **Tag** 及 **Parent** 中繼資料行中的值、資料行名稱提供的相關資訊，以及資料列的正確順序都可以在您使用 EXPLICIT 模式時，產生您想要的 XML。  
   
 ### <a name="universal-table-row-ordering"></a>通用資料表資料列順序  
  在建構 XML 時，會按照順序處理通用資料表中的資料列集。 因此，若要擷取與父系相關的正確子執行個體，就必須要將資料列集中的資料列排序，如此每個父節點後面就會緊跟著其所屬子系。  
@@ -143,7 +143,7 @@ ElementName!TagNumber!AttributeName!Directive
   
  如果指定 **xmltext** 指示詞，資料行內容會包裝在單一標記中，與文件的其他部分整合。 此指示詞用來取得 OPENXML 儲存在資料行的溢位 (未消耗) XML 資料很有用。 如需詳細資訊，請參閱 [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)。  
   
- 如果指定 *AttributeName*，就會以指定的名稱取代標記名稱。 否則，將內容放在不進行實體編碼的內含項目開頭，就會在內含元素目前的屬性清單後面附加上該屬性。 具有此指示詞的資料行必須屬於文字類型，例如 **varchar**、 **nvarchar**、 **char**、 **nchar**、 **text**或 **ntext**。 此指示詞只適用於 **hide**。 此指示詞可用來取得儲存在資料行的溢位資料。 若內容不是完整形成的 XML，則行為是未定義的。  
+ 如果指定 *AttributeName* ，就會以指定的名稱取代標記名稱。 否則，將內容放在不進行實體編碼的內含項目開頭，就會在內含元素目前的屬性清單後面附加上該屬性。 具有此指示詞的資料行必須屬於文字類型，例如 **varchar**、 **nvarchar**、 **char**、 **nchar**、 **text**或 **ntext**。 此指示詞只適用於 **hide**。 此指示詞可用來取得儲存在資料行的溢位資料。 若內容不是完整形成的 XML，則行為是未定義的。  
   
 ## <a name="in-this-section"></a>本節內容  
  下列範例說明 EXPLICIT 模式的用法。  
@@ -169,7 +169,7 @@ ElementName!TagNumber!AttributeName!Directive
 -   [範例：指定 XMLTEXT 指示詞](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [搭配 FOR XML 使用 RAW 模式](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
+ [使用 FOR XML 的 RAW 模式](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
  [搭配 FOR XML 使用 AUTO 模式](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [搭配 FOR XML 使用 PATH 模式](../../relational-databases/xml/use-path-mode-with-for-xml.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

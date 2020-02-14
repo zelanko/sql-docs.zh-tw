@@ -22,15 +22,15 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6b64ac7463e9a1e3ef62d87d5cf9d6096be275cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67998012"
 ---
 # <a name="logging-in-to-sql-server"></a>登入 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  您可以利用任何圖形化管理工具，或是從命令提示字元登入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
+  您可以使用任何圖形化管理工具，或是從命令提示字元登入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
  當您利用圖形化管理工具 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) 登入 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行個體時，必要時會提示您輸入伺服器名稱、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入和密碼。 若使用「Windows 驗證」登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則不需要在每次存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時提供 SQL Server 登入。 相反地， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會利用您的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶自動將您登入。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是以混合模式驗證 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 驗證模式) 執行，且您選擇使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來登入，則必須提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入和密碼。 盡可能使用 Windows 驗證。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "67998012"
 |----------------------|-------------------------------|  
 |使用預設通訊協定連接至預設執行個體|APPHOST|  
 |使用預設通訊協定連接至具名執行個體 |APPHOST\SQLEXPRESS|  
-|使用句號連接至同一部電腦上的預設執行個體，指出執行個體是在本機電腦上執行。|執行個體時提供 SQL Server 登入。|  
+|使用句號連接至同一部電腦上的預設執行個體，指出執行個體是在本機電腦上執行。|。|  
 |使用句號連接至同一部電腦上的具名執行個體，指出執行個體是在本機電腦上執行。|.\SQLEXPRESS|  
 |使用 localhost 連接至同一部電腦上的預設執行個體，指出執行個體是在本機電腦上執行。|localhost|  
 |使用 localhost 連接至同一部電腦上的具名執行個體，指出執行個體是在本機電腦上執行。|localhost\SQLEXPRESS|  

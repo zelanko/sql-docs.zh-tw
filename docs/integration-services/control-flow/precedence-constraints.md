@@ -20,10 +20,10 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 10deeb5de3a74e765f99a76d59d2184a6b76b106
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294005"
 ---
 # <a name="precedence-constraints"></a>優先順序條件約束
@@ -35,13 +35,13 @@ ms.locfileid: "71294005"
   
  優先順序條件約束會連結兩個可執行檔：優先順序可執行檔和受條件約束的可執行檔。 優先順序可執行檔在條件約束可執行檔之前執行，且優先順序可執行檔的執行結果可以決定條件約束可執行檔是否執行。 下圖顯示了由優先順序條件約束連結的兩個可執行檔。  
   
- ![以優先順序條件約束連接的可執行檔](../../integration-services/control-flow/media/ssis-pcsimple.gif "以優先順序條件約束連接的可執行檔")  
+ ![以優先順序條件約束連線的可執行檔](../../integration-services/control-flow/media/ssis-pcsimple.gif "以優先順序條件約束連線的可執行檔")  
   
  在線性控制流程 (即沒有分支的控制流程) 中，優先順序條件約束單獨管理工作執行的順序。 在控制流程分支中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行階段引擎決定直接跟隨在分支後面的工作和容器之執行順序。 執行階段引擎也決定控制流程中未連接的工作流程之執行順序。  
   
  除僅封裝單一工作的工作主機容器之外， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的巢狀容器架構會啟用所有容器，用以包含每個都具有其各自控制流程的其他容器。 「For 迴圈」容器、「Foreach 迴圈」容器和「時序」容器可以包含多個工作和其他容器，而工作和其他容器進而可以包含多個工作和容器。 例如，具有「指令碼」工作和「時序」容器的封裝具有連結「指令碼」工作和「時序」容器的優先順序條件約束。 「時序」容器包括三個「指令碼」工作，且其優先順序條件約束會將這三個「指令碼」工作連結至一個控制流程。 下圖顯示具有兩個巢狀層級之封裝中的優先順序條件約束。  
   
- ![封裝中的優先順序條件約束](../../integration-services/control-flow/media/mw-dts-12.gif "封裝中的優先順序條件約束")  
+ ![套件中的優先順序條件約束](../../integration-services/control-flow/media/mw-dts-12.gif "套件中的優先順序條件約束")  
   
  因為封裝位於 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 容器架構的最上層，所以優先順序條件約束無法連結多個封裝；但是，您可以將「執行封裝」工作加入封裝，然後間接地將其他封裝連結至控制流程。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "71294005"
   
 4.  按兩下優先順序條件約束，  
   
-     以開啟 [優先順序條件約束編輯器]  。  
+     [優先順序條件約束編輯器]  隨即開啟。  
   
 5.  在 [評估作業]  下拉式清單中，選取評估作業。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "71294005"
  **運算式**  
  如果使用 [運算式]  、[運算式與條件約束]  或 [運算式或條件約束]  作業，請輸入運算式或啟動運算式產生器以建立運算式。 運算式必須評估為布林。  
   
- **測試**  
+ **Test**  
  驗證運算式。  
   
  **邏輯 AND**  
@@ -152,13 +152,13 @@ ms.locfileid: "71294005"
   
     |讀取/寫入屬性|組態動作|  
     |--------------------------|--------------------------|  
-    |Description|提供描述。|  
+    |描述|提供描述。|  
     |EvalOp|選取評估作業。 如果選取 [Expression]  、[ExpressionAndConstant]  或 [ExpressionOrConstant]  作業，您就可以指定運算式。|  
-    |運算式|如果評估作業包含運算式，請提供一個運算式。 運算式必須評估為布林。 如需運算式語言的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)。|  
+    |運算是|如果評估作業包含運算式，請提供一個運算式。 運算式必須評估為布林。 如需運算式語言的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)。|  
     |LogicalAnd|設定 [LogicalAnd]  ，指定當多個可執行檔優先於並連結到受條件約束的可執行檔時，優先順序條件約束是否要配合其他優先順序條件約束進行評估|  
-    |[屬性]|更新優先順序條件約束的名稱。|  
+    |名稱|更新優先順序條件約束的名稱。|  
     |ShowAnnotation|指定要使用之註解的類型。 選擇 [Never]  以停用註解，選擇 [AsNeeded]  以視需要啟用註解，選擇 [ConstraintName]  以使用 Name 屬性的值來自動註解，選擇 [ConstraintDescription]  以使用 Description 屬性的值來自動註解，以及選擇 [ConstraintOptions]  以使用 Value 和 Expression 屬性的值來自動註解。|  
-    |ReplTest1|如果 EvalOP 屬性中指定的評估作業包含條件約束，請選取具有條件約束之可執行檔的執行結果。|  
+    |值|如果 EvalOP 屬性中指定的評估作業包含條件約束，請選取具有條件約束之可執行檔的執行結果。|  
   
 5.  關閉 [屬性] 視窗。  
   
@@ -177,9 +177,9 @@ ms.locfileid: "71294005"
 5.  若要儲存更新的封裝，請按一下 [檔案]  功能表上的 [儲存選取項目]  。  
 
 ## <a name="add-expressions-to-precedence-constraints"></a>將運算式加入優先順序條件約束
- 優先順序條件約束可以使用運算式來定義兩個可執行檔之間的條件約束：優先順序可執行檔和受條件約束的可執行檔。 可執行檔可以是工作或容器。 運算式可以單獨使用，或與優先順序可執行檔的執行結果組合使用。 可執行檔的執行結果為成功或失敗。 設定優先順序條件約束的執行結果時，可以將執行結果設為 [成功]  、[失敗]  或 [完成]  。 **成功**：表示優先順序可執行檔必須執行成功；**失敗**：表示優先順序可執行檔必須執行失敗；**完成**：指示不論優先順序工作成功與否，受條件約束的可執行檔都應該執行。 如需詳細資訊，請參閱 [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)。  
+ 優先順序條件約束可以使用運算式來定義兩個可執行檔之間的條件約束：優先順序可執行檔和受條件約束的可執行檔。 可執行檔可以是工作或容器。 運算式可以單獨使用，或與優先順序可執行檔的執行結果組合使用。 可執行檔的執行結果為成功或失敗。 設定優先順序條件約束的執行結果時，可以將執行結果設為 [成功]  、[失敗]  或 [完成]  。 **成功** ：表示優先順序可執行檔必須執行成功； **失敗** ：表示優先順序可執行檔必須執行失敗； **完成** ：指示不論優先順序工作成功與否，受條件約束的可執行檔都應該執行。 如需詳細資訊，請參閱 [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)。  
   
- 運算式必須評估為 **True** 或 **False**，且必須是有效的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式。 運算式可以使用常值、系統及自訂變數，以及 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 運算式文法提供的函數與運算子。 例如，運算式 `@Count == SQRT(144) + 10` 使用變數 **Count**、SQRT 函數及等於 (==) 和加 (+) 運算子。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)為止。  
+ 運算式必須評估為 **True** 或 **False** ，且必須是有效的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式。 運算式可以使用常值、系統及自訂變數，以及 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 運算式文法提供的函數與運算子。 例如，運算式 `@Count == SQRT(144) + 10` 使用變數 **Count**、SQRT 函數及等於 (==) 和加 (+) 運算子。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)為止。  
   
  在下圖中，工作 A 及工作 B 由使用執行結果及運算式的優先順序條件約束連結。 條件約束值設為 [成功]  且運算式為 `@X >== @Z`。 工作 B (受條件約束的工作) 只在工作 A 順利完成且變數 **X** 的值大於或等於變數 **Z**的值時執行。  
   
@@ -216,10 +216,10 @@ ms.locfileid: "71294005"
   
 |評估作業|條件約束評估為|運算式評估為|受條件約束的可執行檔執行|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
-|條件約束|True|不適用|True|  
-|條件約束|False|不適用|False|  
-|運算式|不適用|True|True|  
-|運算式|不適用|False|False|  
+|條件約束|True|N/A|True|  
+|條件約束|False|N/A|False|  
+|運算是|N/A|True|True|  
+|運算是|N/A|False|False|  
 |條件約束與運算式|True|True|True|  
 |條件約束與運算式|True|False|False|  
 |條件約束與運算式|False|True|False|  
@@ -231,7 +231,7 @@ ms.locfileid: "71294005"
 
 
 ## <a name="complex-constraint-scenarios-with-multiple-precedence-constraints"></a>使用多個優先順序條件約束的複雜條件約束案例 
-優先順序條件約束會連接兩個可執行檔：兩個工作、兩個容器，或一個工作和一個容器。 其稱為優先順序可執行檔與受條件約束的可執行檔。 條件約束可執行檔可包含多個優先順序條件約束。 如需詳細資訊，請參閱 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
+優先順序條件約束會連接兩個可執行檔：兩個工作、兩個容器，或一個工作和一個容器。 其稱為優先順序可執行檔與受條件約束的可執行檔。 條件約束可執行檔可包含多個優先順序條件約束。 如需詳細資訊，請參閱 [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)。  
   
  藉由群組條件約束來組裝複雜的條件約束案例，可讓您在封裝中實作複雜的控制流程。 例如，在下圖中，工作 D 按 [成功]  條件約束連結到工作 A、按 [失敗]  條件約束連結到工作 B，同時按 [成功]  條件約束連結到工作 C。 工作 D 與工作 A、工作 D 與工作 B，以及工作 D 與工作 C 之間的優先順序條件約束會參與邏輯 *and* 關聯性。 因此，工作 A 必須成功執行、工作 B 必須失敗，而且工作 C 必須成功執行，才可以執行工作 D。  
   

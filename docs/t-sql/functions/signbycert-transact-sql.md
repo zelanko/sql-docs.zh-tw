@@ -24,10 +24,10 @@ ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 039e6b776240121aa66559cfb637c11f0ac70a9d
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314585"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
@@ -54,10 +54,10 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  **'** *password* **'**  
  這是用來加密憑證私密金鑰的密碼。 *password* 為 **nvarchar(128)** 。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **varbinary**，大小上限為 8,000 位元組。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  需要憑證的 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  

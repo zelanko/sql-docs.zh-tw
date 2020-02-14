@@ -22,10 +22,10 @@ ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 692f62c6a5b9d6268a27de350a860c0cb58c74bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067547"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
@@ -63,10 +63,10 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
  *language_term* 可以指定為對應於語言地區設定識別碼 (LCID) 的字串、整數或十六進位值，如下所示：  
   
-|[格式]|Description|  
+|[格式]|描述|  
 |------------|-----------------|  
 |String|*language_term* 會對應到 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 相容性檢視中的 **alias** 資料行值。 字串必須以單引號括住，如 **'***language_term***'** 。|  
-|Integer|*language_term* 是語言的 LCID。|  
+|整數|*language_term* 是語言的 LCID。|  
 |十六進位|*language_term* 是 0x 後接 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。 如果這個值是雙位元組字集 (DBCS) 格式，SQL Server 會將它轉換成 Unicode。|  
   
  ADD **'***stopword***'** LANGUAGE *language_term*  
@@ -86,7 +86,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
  ALL  
  卸除停用字詞表中的所有停用字詞。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  CREATE FULLTEXT STOPLIST 僅支援相容性層級 100 和更高層級。 若為相容性層級 80 和 90，系統停用字詞表就一定會指派給資料庫。  
   
 ## <a name="permissions"></a>權限  

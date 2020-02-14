@@ -14,10 +14,10 @@ ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b621ebd5750d918c22f61ac005b02e1b8bea187
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297221"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>開發 Integration Services 的自訂物件
@@ -25,7 +25,7 @@ ms.locfileid: "71297221"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 隨附的控制流程與資料流程物件無法完全滿足您的需求時，您可以自行開發許多類型的自訂物件，包括：  
+  當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 隨附的控制流程與資料流程物件無法完全滿足需求時，您可以自行開發許多類型的自訂物件，包括：  
   
 -   **自訂工作**。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "71297221"
 ## <a name="base-classes-attributes-and-important-methods"></a>基底類別、屬性和重要的方法  
  這個資料表針對您可以開發的各種類型自訂物件，提供 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中最重要元素的便利參考。  
   
-|自訂物件|基底類別|attribute|重要的方法|  
+|自訂物件|基底類別|屬性|重要的方法|  
 |-------------------|----------------|---------------|-----------------------|  
-|工作|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
+|Task|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
 |[ODBC 來源編輯器]|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|  
 |記錄提供者|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>|  
 |列舉值|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A>|  
@@ -104,7 +104,7 @@ ms.locfileid: "71297221"
   
 |自訂物件|使用者介面的基底類別|沒有提供自訂使用者介面時的預設編輯行為|  
 |-------------------|-----------------------------------|----------------------------------------------------------------------|  
-|工作|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|僅 [屬性] 視窗|  
+|Task|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|僅 [屬性] 視窗|  
 |[ODBC 來源編輯器]|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>|僅 [屬性] 視窗|  
 |記錄提供者|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI><br /><br /> (尚未在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中實作)|[設定]  資料行中的文字方塊|  
 |列舉值|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI>|僅 [屬性] 視窗。 編輯器的 [列舉值組態] 區域是空的。|  

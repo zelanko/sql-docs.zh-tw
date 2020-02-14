@@ -14,10 +14,10 @@ ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: bf2451fbebb26bd8b9f47bcfe25c34e741e98eea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093399"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server 的 Memory Manager 物件
@@ -29,9 +29,9 @@ ms.locfileid: "68093399"
 -   是否可藉由增加更多記憶體，或讓資料快取或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部結構可使用更多記憶體，而改善查詢效能。  
   
 ## <a name="memory-manager-counters"></a>Memory Manager 計數器  
- 下表說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Manager** 計數器。  
+ 下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Manager** 計數器。  
   
-|SQL Server Memory Manager 計數器|Description|  
+|SQL Server Memory Manager 計數器|描述|  
 |----------------------------------------|-----------------|  
 |**Connection Memory (KB)**|指定伺服器用來維護連線的動態記憶體總數。|  
 |**Database Cache Memory (KB)**|指定伺服器目前用於資料庫頁面快取的記憶體數量。|  
@@ -39,10 +39,10 @@ ms.locfileid: "68093399"
 |**Free Memory (KB)**|指定伺服器目前不使用的已認可記憶體數量。|  
 |**Granted Workspace Memory (KB)**|指定目前授權來執行雜湊、排序、大量複製及建立索引作業等類處理序的記憶體總數。|  
 |**Lock Blocks**|指定目前伺服器上使用中的鎖定區塊數 (定期重新整理)。 鎖定區塊代表個別的鎖定資源，例如資料表、分頁或資料列。|  
-|**Lock Blocks Allocated**|指定目前配置的鎖定區塊數。 當伺服器啟動時，配置的鎖定區塊數加上配置的鎖定擁有者區塊數，將取決於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** 組態選項。 如需更多的鎖定區塊，此數值將會增加。|  
+|**Lock Blocks Allocated**|指定目前配置的鎖定區塊數。 當伺服器啟動時，所配置鎖定區塊數加上配置的鎖定擁有者區塊數，將取決於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** 組態選項。 如需更多的鎖定區塊，此數值將會增加。|  
 |**Lock Memory (KB)**|指定伺服器用於鎖定的動態記憶體總數。|  
 |**Lock Owner Blocks**|指定目前用於伺服器的鎖定擁有者區塊數 (定期重新整理)。 鎖定擁有者區塊代表個別執行緒在物件上的鎖定擁有權。 因此若三個執行緒中的每一個在分頁上都有共用 (S) 鎖定，就會有三個鎖定擁有者區塊。|  
-|**Lock Owner Blocks Allocated**|指定目前配置的鎖定擁有者區塊數。 當伺服器啟動時，配置的鎖定擁有者區塊數及配置的鎖定區塊數，將取決於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** 組態選項。 如需更多的鎖定擁有者區塊，此數值將會動態地增加。|  
+|**Lock Owner Blocks Allocated**|指定目前配置的鎖定擁有者區塊數。 當伺服器啟動時，所配置鎖定擁有者區塊數及配置的鎖定區塊數，將取決於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** 組態選項。 如需更多的鎖定擁有者區塊，此數值將會動態地增加。|  
 |**Log Pool Memory (KB)**|伺服器用於記錄檔集區的動態記憶體總數。| 
 |**Maximum Workspace Memory (KB)**|指定可用來執行雜湊、排序、大量複製和建立索引作業等處理序的最大記憶體量。|  
 |**Memory Grants Outstanding**|指定成功取得工作空間記憶體授權的處理序總數。|  

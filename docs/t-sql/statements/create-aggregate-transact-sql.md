@@ -22,10 +22,10 @@ ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1e796155210017addb6801930903a5aa38df71e8
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064635"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
@@ -81,7 +81,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *assembly_name* [ **.** _class_name_ ]  
  指定要繫結使用者定義彙總函式的組件，以及 (選擇性) 組件所屬的結構描述名稱和實作使用者自訂彙總的組件中之類別名稱。 這個組件必須已利用 CREATE ASSEMBLY 陳述式建立在資料庫中。 *class_name* 必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼，且符合組件中現有的類別名稱。 如果用來撰寫類別的程式設計語言使用命名空間 (如 C#)，則 *class_name* 可能是符合命名空間的名稱。 如果未指定 *class_name*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會假設它和 *aggregate_name* 一樣。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  依預設，會關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 CLR 程式碼的能力。 您可以建立、修改和卸除參考受控碼模組的資料庫物件，但除非使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 來啟用 [clr enabled 選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)，否則，這些模組中的程式碼不會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中執行。  
   
  *assembly_name* 及其方法所參考的組件類別，應該滿足在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中實作使用者定義彙總函式的所有需求。 如需詳細資訊，請參閱 [CLR 使用者定義彙總](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)。  

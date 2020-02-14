@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ee844af9f851d1dab1d77c54dfdd04fadd4d3c06
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 5499bb5106deddcd073c52453a477190e3150bb9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706226"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941110"
 ---
 # <a name="distributed-availability-groups"></a>分散式可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "73706226"
 
 ## <a name="sql-server-version-and-edition-requirements-for-distributed-availability-groups"></a>分散式可用性群組的 SQL Server 版本需求
 
-SQL Server 2017 或更新版本中的分散式可用性群組可以混合相同分散式可用性群組中的主要 SQL Server 版本。 包含讀取/寫入主要複本的 AG 版本，可以與參與分散式 AG 的其他 AG 版本相同或更低。 其他 AG 可以是相同版本或更新版本。 此案例是以升級和移轉案例為目標。 例如，如果包含讀取/寫入主要複本的 AG 為 SQL Server 2016，但您想要升級/移轉至 SQL Server 2017 或更新版本，則可以使用 SQL Server 2017 設定參與分散式 AG 的其他 AG。
+SQL Server 2017 或更新版本中分散式可用性群組可以混合相同分散式可用性群組中的主要 SQL Server 版本。 包含讀取/寫入主要複本的 AG 版本，可以與參與分散式 AG 的其他 AG 版本相同或更低。 其他 AG 可以是相同版本或更新版本。 此案例是以升級和移轉案例為目標。 例如，如果包含讀取/寫入主要複本的 AG 為 SQL Server 2016，但您想要升級/移轉至 SQL Server 2017 或更新版本，則可以使用 SQL Server 2017 設定參與分散式 AG 的其他 AG。
 
 因為 SQL Server 2012 或 2014 中沒有分散式可用性群組功能，所以使用這些版本所建立的可用性群組不能參與分散式可用性群組。 
 
@@ -148,7 +148,7 @@ SQL Server 2017 或更新版本中的分散式可用性群組可以混合相同�
 
 在這兩個上述範例中，這三個可用性群組最多可能共會有 27 個複本，而且全部都可以用於唯讀查詢。 
 
-[唯讀路由]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)無法完全與分散式可用性群組搭配運作。 具體來說：
+[唯讀路由]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)無法完全與分散式可用性群組搭配運作。 具體而言：
 
 1. 唯讀路由可加以設定，並用於分散式可用性群組的主要可用性群組。 
 2. 唯讀路由可加以設定，但無法用於分散式可用性群組的次要可用性群組。 查詢若使用接聽程式連線到次要可用性群組，則會全部移至次要可用性群組的主要複本。 否則，您必須設定每個複本都允許次要複本的所有連接，並直接存取它們。 不過，如果次要可用性群組在容錯移轉之後成為主要，則可以使用唯讀路由。 在 SQL Server 2016 更新或 SQL Server 的未來版本中，可能會變更此行為。

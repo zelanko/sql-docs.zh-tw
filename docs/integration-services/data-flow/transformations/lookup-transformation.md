@@ -24,10 +24,10 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d4c44f8920fc3a8060dcff6112eb41055f1584d2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291264"
 ---
 # <a name="lookup-transformation"></a>查閱轉換
@@ -90,7 +90,7 @@ ms.locfileid: "71291264"
   
  下列是將快取保存至檔案的其他優點：  
   
--   ***在多個封裝間共用快取檔案。如需詳細資訊，請參閱***  [使用快取連線管理員以完整快取模式實作查閱轉換](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***。***  
+-   ***在多個封裝間共用快取檔案。如需詳細資訊，請參閱***[使用快取連線管理員以完整快取模式實作查閱轉換](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)***。***  
   
 -   使用封裝部署快取檔案， ***接著就可以在多部電腦上使用資料。*** 如需詳細資訊，請參閱 [針對查閱轉換來建立及部署快取](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md)。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "71291264"
  **沒有快取**  
  在查閱轉換執行期間產生參考資料集。 沒有資料會載入到快取。  
   
- **快取連接管理員**  
+ **[完整快取]**  
  將查閱轉換設定為使用快取連接管理員。 只有在選取 [完整快取] 選項時，才能使用這個選項。  
   
  **[無快取]**  

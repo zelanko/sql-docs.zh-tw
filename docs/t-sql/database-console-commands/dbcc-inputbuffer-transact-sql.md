@@ -24,16 +24,16 @@ ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: d0b6f9dac0cb065a9509040b5693b09b1fa9d5e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039104"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-顯示從用戶端傳送至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體的上一個陳述式。
+顯示從用戶端傳送至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的上一個陳述式。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -57,7 +57,7 @@ SELECT request_id
 FROM sys.dm_exec_requests   
 WHERE session_id = @@spid;  
 ```  
-取代所有提及的  
+WITH  
 啟用要指定的選項。  
   
 NO_INFOMSGS  
@@ -66,7 +66,7 @@ NO_INFOMSGS
 ## <a name="result-sets"></a>結果集  
 DBCC INPUTBUFFER 會傳回含有下列資料行的資料列集。
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**EventType**|**nvarchar(30)**|事件類型。 這可能會是「RPC 事件」  或「語言事件」  。 如果未偵測到上一個事件，輸出將為「無事件」  。|  
 |**參數**|**smallint**|0 = 文字<br /><br /> 1- *n* = 參數|  

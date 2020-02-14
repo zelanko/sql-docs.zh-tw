@@ -17,10 +17,10 @@ ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b3f33d0c37ba9c856d9cc0b66674c8ca4221e0d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294361"
 ---
 # <a name="wmi-connection-manager"></a>WMI 連接管理員
@@ -28,7 +28,7 @@ ms.locfileid: "71294361"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  WMI 連接管理員可讓封裝利用 Windows Management Instrumentation (WMI)，來管理企業環境中的資訊。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 Web 服務工作會使用 WMI 連線管理員。  
+  WMI 連接管理員可讓封裝利用 Windows Management Instrumentation (WMI)，來管理企業環境中的資訊。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的「Web 服務」工作會使用 WMI 連線管理員。  
   
  當您將 WMI 連線管理員新增至套件時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立在執行階段解析為 WMI 連線的連線管理員、設定連線管理員屬性，並將連線管理員新增至套件上的 **Connections** 集合。 連線管理員的 **ConnectionManagerType** 屬性會設為 **WMI**。  
   
@@ -68,13 +68,13 @@ ms.locfileid: "71294361"
  **使用 Windows 驗證**  
  選取以使用 Windows 驗證。 如果您使用 Windows 驗證，就不需要提供連接的使用者名稱或密碼。  
   
- **User name**  
+ **使用者名稱**  
  如果您並未使用 Windows 驗證，則必須提供連接的使用者名稱。  
   
  **密碼**  
  如果您並未使用 Windows 驗證，則必須提供連接的密碼。  
   
- **測試**  
+ **Test**  
  測試連接管理員設定。  
   
 ## <a name="see-also"></a>另請參閱  

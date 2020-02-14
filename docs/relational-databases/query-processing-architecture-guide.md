@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb6463efe0b4b4f5d7b009eae6f9a4a612cf5e7e
-ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
+ms.openlocfilehash: e5b890ff4a9d58f531f3a72e41e8280faf2511a3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74866072"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909748"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -637,16 +637,16 @@ WHERE ProductSubcategoryID = 4;
 
 * 任何 `SELECT` 陳述式的 <select_list>。 這包括子查詢的 `SELECT` 清單和 `INSERT` 陳述式內的 `SELECT` 清單。
 * 出現在 `SELECT` 陳述式內的子查詢 `IF` 陳述式。
-* 查詢的 `TOP`、 `TABLESAMPLE`、 `HAVING`、 `GROUP BY`、 `ORDER BY`、 `OUTPUT...INTO`或 `FOR XM`L 子句。
+* 查詢的 `TOP`、`TABLESAMPLE`、`HAVING`、`GROUP BY`、`ORDER BY`、`OUTPUT...INTO` 或 `FOR XML` 子句。
 * 傳送至 `OPENROWSET`、 `OPENQUERY`、 `OPENDATASOURCE`、 `OPENXML`或任何 `FULLTEXT` 運算子的引數 (直接或做為子運算式)。
 * `LIKE` 子句的 pattern 和 escape_character 引數。
 * `CONVERT` 子句的 style 引數。
 * `IDENTITY` 子句中的整數常數。
 * 使用 ODBC 延伸語法指定的常數。
-* 可摺疊常數的運算式，其為 +、-、\*、/ 和 % 運算子的引數。 在考量是否可進行強制參數化時，若符合下列其中一項條件，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會認定運算式為可摺疊常數的：  
+* 可摺疊常數的運算式，其為 `+`、`-`、`*`、`/` 和 `%` 運算子的引數。 在考量是否可進行強制參數化時，若符合下列其中一項條件，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會認定運算式為可摺疊常數的：  
   * 運算式中未出現資料行、變數或子查詢。  
   * 運算式包含 `CASE` 子句。  
-* 查詢提示子句的引數。 這些包括 `number_of_rows` 查詢提示的 `FAST` 引數、 `number_of_processors` 查詢提示的 `MAXDOP` 引數，以及 `MAXRECURSION` 查詢提示的 number 引數。
+* 查詢提示子句的引數。 這些包括 `FAST` 查詢提示的 *number_of_rows* 引數、`MAXDOP` 查詢提示的 *number_of_processors* 引數和 `MAXRECURSION` 查詢提示的 *number* 引數。
 
 參數化會發生於個別 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式層級上。 換句話說，批次中的個別陳述式會進行參數化。 編譯之後，參數化查詢會在最初提交查詢的批次內容中執行。 若已快取查詢的執行計畫，即可藉由參考 sys.syscacheobjects 動態管理檢視表的 sql 資料行，來判斷查詢是否已參數化。 若查詢已參數化，則此資料行中參數的名稱與資料類型會顯示在提交批次的文字之前，如 (\@1 tinyint)。
 

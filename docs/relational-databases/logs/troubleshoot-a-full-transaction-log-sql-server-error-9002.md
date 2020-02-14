@@ -19,17 +19,17 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ad8b68338987256f1c7fa01f1f0d56242cef6a7f
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056068"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>寫滿交易記錄疑難排解 (SQL Server 錯誤 9002)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主題將討論對於寫滿交易記錄的可能回應，並建議將來可採用的避免方法。 
   
-  當交易記錄寫滿時， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 就會發出 **9002 錯誤**。 此記錄可能會在資料庫處於線上或復原狀態時填滿。 如果此記錄是在資料庫處於線上狀態時填滿，資料庫會保持線上狀態，不過只能讀取而無法更新資料庫。 如果此記錄是在復原期間填滿，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將資料庫標示為 RESOURCE PENDING。 不論是哪一種情況，使用者都必須採取動作，以便提供足夠的記錄空間。  
+  當交易記錄寫滿時， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 就會發出 **9002 錯誤**。 此記錄可能會在資料庫處於線上或復原狀態時填滿。 如果記錄已滿時，資料庫正在線上，則資料庫仍會保持在線上，但只能讀取並無法更新。 如果此記錄是在復原期間填滿，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將資料庫標示為 RESOURCE PENDING。 不論是哪一種情況，使用者都必須採取動作，以便提供足夠的記錄空間。  
   
 ## <a name="responding-to-a-full-transaction-log"></a>寫滿交易記錄的回應  
  寫滿交易記錄的適當回應會部分根據導致記錄填滿的條件而定。 
@@ -102,7 +102,7 @@ ms.locfileid: "74056068"
 ### <a name="discovering-long-running-transactions"></a>探索長時間執行的交易
 非常長時間執行的交易可能會造成交易記錄被填滿。 若要尋找長時間執行的交易，請使用下列其中一種方式：
  - **[sys.dm_tran_database_transactions](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)。**
-這個動態管理檢視傳回有關資料庫層級之交易的資訊。 對於長時間執行的交易，較重要的資料行包括第一筆記錄檔記錄的時間 [(database_transaction_begin_time)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)、交易的目前狀態 [(database_transaction_state)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)和交易記錄之開始記錄的 [記錄序號 (LSN)](../backup-restore/recover-to-a-log-sequence-number-sql-server.md) [(database_transaction_begin_lsn)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)。
+這個動態管理檢視傳回有關資料庫層級之交易的資訊。 對於長時間執行的交易，較重要的資料行包括第一筆記錄檔記錄的時間 [(database_transaction_begin_time)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)、交易的目前狀態 [(database_transaction_state)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)和交易記錄之開始記錄的 [記錄序號 (LSN)](../backup-restore/recover-to-a-log-sequence-number-sql-server.md)[(database_transaction_begin_lsn)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)。
 
  - **[DBCC OPENTRAN](../../t-sql/database-console-commands/dbcc-opentran-transact-sql.md)。**
 此陳述式可讓您識別交易擁有者的使用者識別碼，如此就可以追蹤交易來源，以便更有條理地終止交易 (進行認可而非回復)。
@@ -111,7 +111,7 @@ ms.locfileid: "74056068"
 有時您必須結束處理序；您可能必須使用 [KILL](../../t-sql/language-elements/kill-transact-sql.md) 陳述式。 請小心使用此陳述式，尤其是執行您不想刪除的重要處理序時。 如需詳細資訊，請參閱 [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)
 
 ## <a name="see-also"></a>另請參閱  
-[知識庫支援文章 - SQL Server 中的交易記錄意外地擴充或滿溢](https://support.microsoft.com/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+[知識庫支援文章 - SQL Server 中的交易記錄異常增長或填滿](https://support.microsoft.com/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [管理交易記錄檔的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  

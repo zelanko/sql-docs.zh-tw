@@ -20,13 +20,13 @@ ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 16230302a44ef9c56d3b2ab9ff17de6288ead371
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109357"
 ---
-# <a name="keyguid-transact-sql"></a>KEY_GUID (Transact-SQL)
+# <a name="key_guid-transact-sql"></a>KEY_GUID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回資料庫中對稱金鑰的 GUID。  
@@ -44,10 +44,10 @@ Key_GUID( 'Key_Name' )
  **'** *Key_Name* **'**  
  資料庫中的對稱金鑰名稱。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果識別值是在建立金鑰時指定，則其 GUID 為該識別值的 MD5 雜湊。 如果未指定任何識別值，伺服器便會產生 GUID。  
   
  如果金鑰是一個暫時金鑰，則金鑰名稱必須以數字符號 (#) 開頭。  

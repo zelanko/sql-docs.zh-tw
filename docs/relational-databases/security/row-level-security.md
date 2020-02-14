@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68809956"
 ---
 # <a name="row-level-security"></a>資料列層級安全性
@@ -34,7 +34,7 @@ ms.locfileid: "68809956"
   
 資料列層級安全性 (RLS) 簡化您的應用程式中安全性的設計和編碼。 RLS 可協助您在資料列存取上進行實作限制。 例如，您可以確保員工只能存取與其部門相關的資料列。 另一個範例是將客戶的資料存取限制為只能存取與其公司相關的資料。  
   
-存取限制邏輯是位於資料庫層，而不是離開這些資料，到另一個應用程式層。 資料庫系統會在每次於任何層嘗試存取該資料時套用存取限制。 透過減少安全性系統的介面區，讓您的安全性系統更可靠且健全。  
+存取限制邏輯是位於資料庫層，而不是離開這些資料，到另一個應用程式層。 資料庫系統會在每次於任何層嘗試存取該資料時套用存取限制。 這可藉由縮小安全性系統的接觸區，讓安全性系統更加可靠和健全。  
   
 使用 [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式以及作為[內嵌資料表值函式](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)建立的述詞來實作 RLS。  
 
@@ -101,7 +101,7 @@ RLS 可支援兩種類型的安全性述詞。
   
  RLS 篩選述詞的功能等同於附加 **WHERE** 子句。 述詞可以像商務作法命令一樣為複雜，或子句可以像 `WHERE TenantId = 42`一樣簡單。  
   
- 在更正式的用語，RLS 將介紹述詞型的存取控制。 它具備彈性且集中的述詞型評估。 述詞能以中繼資料 (或任何其他系統管理員判斷為適當的準則) 為基礎。 述詞作為準則，以根據使用者屬性判斷使用者是否具有適當的資料存取權。 標籤為基礎的存取控制可以使用述詞為基礎的存取控制來實作。  
+ 在更正式的用語，RLS 將介紹述詞型的存取控制。 它具備彈性且集中的述詞型評估。 述詞能以中繼資料 (或任何其他系統管理員判斷為適當的準則) 為基礎。 述詞作為準則，以根據使用者屬性判斷使用者是否具有適當的資料存取權。 標籤型存取控制可透過述詞型存取控制來實作。  
   
 ## <a name="Permissions"></a> 權限
 
@@ -149,7 +149,7 @@ RLS 可支援兩種類型的安全性述詞。
   
 ### <a name="carefully-crafted-queries"></a>精巧的查詢
 
-藉由使用精巧的查詢，有可能造成資訊外洩。 例如， `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` 可讓惡意使用者知道 John Doe 薪資為 $100000。 即使有安全性述詞用來防止惡意使用者直接查詢其他人的薪資，當查詢傳回除以零的例外狀況時，使用者仍可以決定。  
+很可能會透過使用精巧的查詢，造成資訊外洩。 例如， `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` 可讓惡意使用者知道 John Doe 薪資為 $100000。 即使有安全性述詞用來防止惡意使用者直接查詢其他人的薪資，當查詢傳回除以零的例外狀況時，使用者仍可以決定。  
 
 ## <a name="Limitations"></a> 跨功能的相容性
 

@@ -21,10 +21,10 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f70ce04ebe25c752f3cc12d4888f1ff5c967b805
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292402"
 ---
 # <a name="integration-services-paths"></a>Integration Services 路徑
@@ -39,7 +39,7 @@ ms.locfileid: "71292402"
 ## <a name="configure-the-path"></a>設定路徑  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師提供 [資料流程路徑編輯器]  對話方塊，用以設定路徑屬性、檢視通過該路徑之資料行的中繼資料，並設定資料檢視器。  
   
- 可設定的路徑屬性包括名稱、描述及路徑的註解。 您還可以程式設計方式設定路徑。 如需詳細資訊，請參閱[以程式設計方式連接資料流程元件](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)。  
+ 可設定的路徑屬性包括名稱、描述及路徑的註解。 您還可以程式設計方式設定路徑。 如需詳細資訊，請參閱 [以程式設計方式連接資料流程元件](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)。  
   
  路徑註解顯示路徑來源的名稱，或在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中 [資料流程]  索引標籤設計介面上的路徑名稱。 路徑註解與您可加入資料流程、控制流程和事件處理常式的註解相似。 唯一不同之處在於路徑註解是附加到路徑上的，而其他註解則顯示於 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [資料流程]  、[控制流程]  和 [事件處理常式]  索引標籤上。  
   
@@ -69,8 +69,8 @@ ms.locfileid: "71292402"
  **名稱**  
  提供路徑的唯一名稱。  
   
- **ID**  
- 路徑的歷程識別碼。 此屬性是唯讀的。  
+ **識別碼**  
+ 路徑的歷程識別碼。 這個屬性是唯讀的。  
   
  **IdentificationString**  
  識別路徑的字串。 根據前面輸入的名稱自動產生。  
@@ -103,7 +103,7 @@ ms.locfileid: "71292402"
  **有效位數**  
  列出數值中的位數。  
   
- **小數位數**  
+ **調整**  
  列出數值中之小數點右邊的位數。  
   
  **長度**  
@@ -137,7 +137,7 @@ ms.locfileid: "71292402"
  **資料檢視器類型**  
  列出資料檢視器的類型。  
   
- **[加入]**  
+ **加入**  
  按一下即可使用 [設定資料檢視器]  對話方塊加入資料檢視器。  
   
  **刪除**  
@@ -156,7 +156,7 @@ ms.locfileid: "71292402"
   
  下表將描述資料流程中路徑的可設定屬性。 資料流程引擎也會將值指派給這裡未列出的其他唯讀屬性。  
   
-|屬性名稱|資料類型|Description|  
+|屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
 |PathAnnotation|整數 (列舉)|指出設計師介面上是否應該與路徑一起顯示註解的值。 可能的值為 **AsNeeded**、 **SourceName**、 **PathName**和 **Never**。 預設值為 **AsNeeded**。|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|與路徑相關聯的輸入。|  

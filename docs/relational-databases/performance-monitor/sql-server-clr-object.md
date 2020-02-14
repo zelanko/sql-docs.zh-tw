@@ -14,19 +14,19 @@ ms.assetid: bed788b0-a68e-4fb1-b001-03bf09ff868e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 91d3a7b23602b631d51904fa5e2b68821725d77e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987170"
 ---
 # <a name="sql-server-clr-object"></a>SQL Server 的 CLR 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **SQLServer:CLR** 物件提供用來監視在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中執行 Common Language Runtime (CLR) 的計數器。  
+  **SQLServer:CLR** 物件提供用來監視在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行 Common Language Runtime (CLR) 的計數器。  
   
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **CLR** 計數器。  
   
-|CLR 計數器|Description|  
+|CLR 計數器|描述|  
 |------------------|-----------------|  
 |**CLR 執行**|在 CLR 中的總執行時間 (微秒)|  
   

@@ -25,10 +25,10 @@ ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fc38de8bffc09461dc69a24acf15ce143276422b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843634"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
@@ -54,10 +54,10 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
  **'** *column* **'**  
  這是要傳回權限資訊之資料行的選擇性名稱。 資料行必須是 *objectid* 指定的資料表中有效的資料行名稱。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回型別  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  PERMISSIONS 可用來決定目前使用者是否有必要的權限，來執行陳述式或將權限授與 (GRANT) 另一位使用者。  
   
  傳回的權限資訊是 32 位元點陣圖。  
@@ -80,7 +80,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 |32|0x20|CREATE DEFAULT|  
 |64|0x40|BACKUP DATABASE|  
 |128|0x80|BACKUP LOG|  
-|256|0x100|已保留|  
+|256|0x100|Reserved|  
   
  下表顯示用於只有在指定 *objectid* 時才會傳回之物件權限的位元。  
   

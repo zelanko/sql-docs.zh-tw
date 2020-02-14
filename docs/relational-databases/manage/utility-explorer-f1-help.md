@@ -20,10 +20,10 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024492"
 ---
 # <a name="utility-explorer-f1-help"></a>公用程式總管 F1 說明
@@ -120,7 +120,7 @@ ms.locfileid: "68024492"
   公用程式總管之 [部署的資料層應用程式] 檢視中的資訊提供了個別資料層應用程式的使用量資料、CPU 使用量歷程記錄、檔案層級的儲存使用量詳細資料，以及檢視和更新原則臨界值的功能。 原則臨界值可以針對 CPU 使用量及資料庫的資料檔案和記錄檔，於資料層應用程式層級進行控制。 您也可以針對個別的資料層應用程式來檢視屬性詳細資料。  
   
 ### <a name="uielement-list"></a>UIElement 清單  
- 清單檢視  
+ [清單] 檢視  
  上方窗格中的清單檢視會顯示有關個別資料層應用程式的資料。 健全狀態圖示會依據使用量類別提供每一個資料層應用程式的狀態摘要：  
   
 -   綠色核取符號 - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - 不違反資源使用量原則的資料層應用程式數目。 資源的使用情況良好。  
@@ -260,12 +260,12 @@ ms.locfileid: "68024492"
  公用程式總管之 Managed 執行個體檢視中的資訊提供了個別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的使用量資料、CPU 使用量歷程記錄、檔案層級的儲存使用量詳細資料，以及檢視和更新原則臨界值的功能。 原則臨界值可以針對電腦及資料庫檔案和記錄檔在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體層級控制，也可以在存放磁碟區的層級控制。 您也可以針對個別的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Managed 執行個體檢視屬性詳細資料。  
   
 ### <a name="uielement-list"></a>UIElement 清單  
- 清單檢視  
+ [清單] 檢視  
  上方窗格的清單檢視會依據 ComputerName\InstanceName 顯示列於資料列中的個別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
  健全狀態圖示會依據使用量類別提供每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的狀態摘要：  
   
--   綠色核取符號 - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - 不違反資源使用量原則的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Managed 執行個體數目。 資源的使用情況良好。  
+-   綠色核取符號 - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - 不違反資源使用量原則的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受控執行個體數目。 資源的使用情況良好。  
   
 -   綠色向下箭頭 - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 資源使用量過低。  
   

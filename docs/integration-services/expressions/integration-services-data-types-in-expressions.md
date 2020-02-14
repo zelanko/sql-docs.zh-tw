@@ -14,10 +14,10 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e2c8c8f77fd0643c503f5b817b050ff64529751
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297543"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>運算式中的 Integration Services 資料類型
@@ -111,9 +111,9 @@ ms.locfileid: "71297543"
 ## <a name="requirements-for-data-used-in-expressions"></a>運算式中所用資料的需求  
  運算式評估工具支援所有的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 不過，根據運算和函數而定，運算元和引數會需要特定資料類型。 運算式評估工具對於運算式中使用的資料，有下列資料類型需求的規定︰  
   
--   **邏輯**運算中使用的運算元評估結果必須為布林。 例如，ColumnA > 1&&ColumnB < 2。  
+-   **邏輯** 運算中使用的運算元評估結果必須為布林。 例如，ColumnA > 1&&ColumnB < 2。  
   
--   **數學**運算中使用的運算元評估結果必須為數值。 例如，23.75 * 4。  
+-   **數學** 運算中使用的運算元評估結果必須為數值。 例如，23.75 * 4。  
   
 -   比較運算中使用的運算元 (例如邏輯和等式運算) 必須評估為相容的資料類型。  
   

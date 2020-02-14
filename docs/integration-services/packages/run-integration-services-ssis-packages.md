@@ -22,10 +22,10 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fe82e7d6746f3a5fc76fda3f960f069ef4345525
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282602"
 ---
 # <a name="run-integration-services-ssis-packages"></a>執行 Integration Services (SSIS) 封裝
@@ -48,14 +48,14 @@ ms.locfileid: "71282602"
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
 |**SQL Server Data Tools**|否|否<br /><br /> 但是，您可以將 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區中現有的封裝加入專案，其中包括 msdb 資料庫。 用這種方式來將現有封裝加入專案，會在檔案系統中建立封裝的本機複本。|是|  
 |**SQL Server Management Studio (當您連接到主控 Integration Services 伺服器的 Database Engine 執行個體時)**<br /><br /> 如需詳細資訊，請參閱 [執行封裝對話方塊](#execute_package_dialog)|是|否<br /><br /> 但是，您可以將封裝從這些位置匯入伺服器。|否<br /><br /> 但是，您可以將封裝從檔案系統匯入伺服器。|
-|**SQL Server Management Studio (當您連接到主控已啟用為相應放大主機之 Integration Services 伺服器的 Database Engine 執行個體時)**<br /><br /> 如需詳細資訊，請參閱[在 [相應放大] 中執行套件](../../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md)|是|否|否|
+|**SQL Server Management Studio (當您連接到主控已啟用為相應放大主機之 Integration Services 伺服器的 Database Engine 執行個體時)**<br /><br /> 如需詳細資訊，請參閱 [在 [相應放大] 中執行套件](../../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md)|是|否|否|
 |**SQL Server Management Studio (當連接到管理 SSIS 套件存放區的 Integration Services 服務時)**|否|是|否<br /><br /> 但是，您可以從檔案系統將封裝匯入 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區。|  
 |**dtexec**<br /><br /> 如需詳細資訊，請參閱 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。|是|是|是|  
 |**dtexecui**<br /><br /> 如需詳細資訊，請參閱[執行封裝公用程式 &#40;DtExecUI&#41; UI 參考](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)|否|是|是|  
 |**SQL Server Agent**<br /><br /> 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業排程封裝。<br /><br /> 如需詳細資訊，請參閱 [封裝的 SQL Server Agent 作業](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)。|是|是|是|  
 |**內建預存程序**<br /><br /> 如需詳細資訊，請參閱 [catalog.start_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)|是|否|否|  
-|**Managed API (使用** <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間中的類型和成員)|是|否|否|  
-|**Managed API (使用** <xref:Microsoft.SqlServer.Dts.Runtime> 命名空間中的類型和成員)|非目前|是|是|  
+|**Managed API (使用 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間中的類型和成員)**|是|否|否|  
+|**Managed API (使用 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空間中的類型和成員)**|非目前|是|是|  
 
 ## <a name="execution-and-logging"></a>執行與記錄  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝可以啟用記錄功能，您可以在記錄檔中擷取執行階段資訊。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
@@ -163,7 +163,7 @@ ms.locfileid: "71282602"
  選取用於執行封裝的記錄層級。 如需詳細資訊，請參閱 [catalog.set_execution_parameter_value &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)。  
   
  **在發生錯誤時傾印**  
- 指定在封裝執行期間發生錯誤時是否建立傾印檔。 如需相關資訊，請參閱 [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)。  
+ 指定在封裝執行期間發生錯誤時是否建立傾印檔。 如需相關資訊，請參閱 [產生封裝執行的傾印檔案](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)。  
   
  **32 位元執行階段**  
  指定封裝將會在 32 位元系統上執行。  

@@ -12,10 +12,10 @@ ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8c596f37cb0a83682c5c8dff370a92a5d3d73eb5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285790"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>設定一般檔案目的地 (SQL Server 匯入和匯出精靈)
@@ -43,7 +43,7 @@ ms.locfileid: "71285790"
  **資料列分隔符號**  
  從分隔符號清單中選取分隔符號，以分隔輸出中的資料列。 沒有選項可用於指定*自訂*的資料列分隔符號。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料列是使用歸位/換行字元組合進行分隔。|  
 |**{CR}**|資料列是使用歸位字元進行分隔。|  
@@ -57,7 +57,7 @@ ms.locfileid: "71285790"
  **資料行分隔符號**  
  從分隔符號清單中選取分隔符號，以分隔輸出中的資料行。 沒有選項可用於指定*自訂*的資料行分隔符號。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料行是使用歸位/換行字元組合進行分隔。|  
 |**{CR}**|資料行是使用歸位字元進行分隔。|  
@@ -83,5 +83,5 @@ ms.locfileid: "71285790"
 在您預覽資料之後，可能會想要變更已在精靈的先前頁面上選取的選項。 若要進行這些變更，請返回 [設定一般檔案目的地]  頁面，然後按一下 [上一步]  返回先前的頁面，如此您就可以在其中變更選取項目。  
 
 ## <a name="whats-next"></a>下一步  
- 指定目的地一般檔案的格式化選項之後，下一個頁面是 [Save and Execute Package (儲存和執行封裝)]  。 在此頁面上，您可以指定是否要立即執行作業。 根據您的設定，也可以將設定儲存為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 套件進行自訂並在稍後重複使用。 如需詳細資訊，請參閱 [儲存和執行封裝](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。  
+ 指定目的地一般檔案的格式化選項之後，下一個頁面是 [Save and Execute Package (儲存和執行封裝)]  。 在此頁面上，您可以指定是否要立即執行作業。 根據組態，您也可以將設定儲存為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件，以便在稍後進行自訂並重複使用。 如需詳細資訊，請參閱 [儲存和執行封裝](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。  
 

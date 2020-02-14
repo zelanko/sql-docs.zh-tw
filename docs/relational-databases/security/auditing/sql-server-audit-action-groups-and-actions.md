@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2efe63ae57e80e06d616938c0dcdf77dbe055ac6
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: 77f07412551fd94737a3200a103c16904771d962
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929699"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315588"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server Audit 動作群組和動作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "70929699"
   
  下表說明伺服器層級的稽核動作群組，並提供適用的同等 SQL Server 事件類別。  
   
-|動作群組名稱|Description|  
+|動作群組名稱|描述|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|每當變更應用程式角色的密碼時，就會引發這個事件。 等於＜ [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)＞。|  
 |AUDIT_CHANGE_GROUP|每當建立、修改或刪除稽核時，就會引發這個事件。 每當建立、修改或刪除任何稽核規格時，就會引發這個事件。 稽核的任何變更都會在該稽核中進行稽核。 等於＜ [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md)＞。|  
@@ -94,6 +94,7 @@ ms.locfileid: "70929699"
 ](../../../relational-databases/event-classes/audit-add-member-to-db-role-event-class.md)＞。|  
 |DBCC_GROUP|每當主體發出任何 DBCC 命令時，就會引發這個事件。 等於＜ [Audit DBCC Event Class](../../../relational-databases/event-classes/audit-dbcc-event-class.md)＞。|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP|表示某個主體嘗試登入自主資料庫卻失敗。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。 等於＜ [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md)＞。|    
+|FAILED_LOGIN_GROUP|表示主體嘗試登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 但失敗。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。 等於＜ [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md)＞。 此稽核不適用於 Azure SQL Database。| 
 |FULLTEXT_GROUP|表示發生全文檢索事件。 等於＜ [Audit Fulltext Event Class](../../../relational-databases/event-classes/audit-fulltext-event-class.md)＞。|  
 |LOGIN_CHANGE_PASSWORD_GROUP|每當透過 ALTER LOGIN 陳述式或 sp_password 預存程序變更登入的密碼時，就會引發這個事件。 等於＜ [Audit Login Change Password Event Class](../../../relational-databases/event-classes/audit-login-change-password-event-class.md)＞。|  
 |LOGOUT_GROUP|表示主體已登出 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。 等於＜ [Audit Logout Event Class](../../../relational-databases/event-classes/audit-logout-event-class.md)＞。|  
@@ -131,7 +132,7 @@ ms.locfileid: "70929699"
   
  下表說明資料庫層級的稽核動作群組，並提供適用的同等 SQL Server 事件類別。  
   
-|動作群組名稱|Description|  
+|動作群組名稱|描述|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|每當變更應用程式角色的密碼時，就會引發這個事件。 等於＜ [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)＞。|  
 |AUDIT_CHANGE_GROUP|每當建立、修改或刪除稽核時，就會引發這個事件。 每當建立、修改或刪除任何稽核規格時，就會引發這個事件。 稽核的任何變更都會在該稽核中進行稽核。 等於＜ [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md)＞。|  
@@ -161,12 +162,12 @@ ms.locfileid: "70929699"
 ## <a name="database-level-audit-actions"></a>資料庫層級的稽核動作  
  資料庫層級的動作支援直接在資料庫結構描述和結構描述物件上稽核特定的動作，例如資料表、檢視表、預存程序、函數、擴充預存程序、佇列、同義字。 類型、XML 結構描述集合、資料庫和結構描述則不會稽核。 可在結構描述和資料庫上設定結構描述物件的稽核，這表示指定之結構描述或資料庫包含的所有結構描述物件上的事件都會稽核。 下表說明資料庫層級的稽核動作。  
   
-|動作|Description|  
+|動作|描述|  
 |------------|-----------------|  
 |SELECT|每當發出 SELECT 時，就會引發這個事件。|  
 |UPDATE|每當發出 UPDATE 時，就會引發這個事件。|  
 |Insert|每當發出 INSERT 時，就會引發這個事件。|  
-|Delete|每當發出 DELETE 時，就會引發這個事件。|  
+|刪除|每當發出 DELETE 時，就會引發這個事件。|  
 |執行 CREATE 陳述式之前，請先執行|每當發出 EXECUTE 時，就會引發這個事件。|  
 |RECEIVE|每當發出 RECEIVE 時，就會引發這個事件。|  
 |REFERENCES|每當檢查 REFERENCES 權限時，都會引發這個事件。|  
@@ -181,7 +182,7 @@ ms.locfileid: "70929699"
 ## <a name="audit-level-audit-action-groups"></a>稽核層級的稽核動作群組  
  您也可以在稽核程序中稽核動作， 這可以是伺服器範圍或資料庫範圍。 在資料庫範圍中，只發生於資料庫稽核規格。 下表說明稽核層級的稽核動作群組。  
   
-|動作群組名稱|Description|  
+|動作群組名稱|描述|  
 |-----------------------|-----------------|  
 |AUDIT_CHANGE_GROUP|每當發出下列其中一個命令時，就會引發這個事件：<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   

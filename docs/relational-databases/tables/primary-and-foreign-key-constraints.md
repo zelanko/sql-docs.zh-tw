@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b738bd06abe616adc846727dd5721b7204e340c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999441"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主要與外部索引鍵條件約束
@@ -121,7 +121,7 @@ ms.locfileid: "67999441"
 ##  <a name="Tasks"></a> 相關工作  
  下表列出與主索引鍵和外部索引鍵條件約束相關聯的一般工作。  
   
-|工作|主題|  
+|Task|主題|  
 |----------|-----------|  
 |描述如何建立主索引鍵。|[建立主索引鍵](../../relational-databases/tables/create-primary-keys.md)|  
 |描述如何刪除主索引鍵。|[刪除主索引鍵](../../relational-databases/tables/delete-primary-keys.md)|  

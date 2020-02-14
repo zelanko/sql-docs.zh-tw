@@ -20,10 +20,10 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: be976ec58ae275f37262f136a2896ffb6a9c7677
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287877"
 ---
 # <a name="use-property-expressions-in-packages"></a>在封裝中使用屬性運算式
@@ -79,10 +79,10 @@ ms.locfileid: "71287877"
   
 #### <a name="to-work-with-property-expressions"></a>處理屬性運算式  
   
--   [加入或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)  
+-   [新增或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
 ### <a name="setting-property-expressions-of-data-flow-components"></a>設定資料流程元件的屬性運算式  
- 如果在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中建構封裝，支援屬性運算式之資料流程元件的屬性便會在其所屬的資料流程工作上公開。 若要加入、變更及移除資料流程元件的屬性運算式，請以滑鼠右鍵按一下資料流程元件所屬資料流程的資料流程工作，並按一下 [屬性]  。 [屬性] 視窗會列出可搭配使用屬性運算式之資料流程元件的屬性。 例如，若要建立或修改屬性運算式，以用於 SampleCustomer 資料流程中資料列取樣轉換的 SamplingValue 屬性，請以滑鼠右鍵按一下資料列取樣轉換所屬資料流程的資料流程工作，並按一下 [屬性]  。 SamplingValue 屬性會列在 [屬性] 視窗中，其格式為 [SampleCustomer].[SamplingValue]。  
+ 如果在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建構封裝，支援屬性運算式之資料流程元件的屬性便會在其所屬的資料流程工作上公開。 若要加入、變更及移除資料流程元件的屬性運算式，請以滑鼠右鍵按一下資料流程元件所屬資料流程的資料流程工作，並按一下 [屬性]  。 [屬性] 視窗會列出可搭配使用屬性運算式之資料流程元件的屬性。 例如，若要建立或修改屬性運算式，以用於 SampleCustomer 資料流程中資料列取樣轉換的 SamplingValue 屬性，請以滑鼠右鍵按一下資料列取樣轉換所屬資料流程的資料流程工作，並按一下 [屬性]  。 SamplingValue 屬性會列在 [屬性] 視窗中，其格式為 [SampleCustomer].[SamplingValue]。  
   
  在 [屬性] 視窗中，您可以使用與其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件類型之屬性運算式相同的方式，來加入、變更及移除屬性運算式。 [屬性] 視窗也可讓您存取用於加入、變更或移除資料流程元件之屬性運算式的各種對話方塊和產生器。 如需屬性運算式可更新之資料流程元件屬性的詳細資訊，請參閱 [轉換自訂屬性](../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
   

@@ -18,10 +18,10 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b252a53acd98a0c5b445166ffcf3fa4328dd646f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293148"
 ---
 # <a name="data-flow"></a>資料流程
@@ -101,7 +101,7 @@ ms.locfileid: "71293148"
 ### <a name="sources-available-for-download"></a>可下載的來源  
  下表列出您可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 網站下載的其他來源。  
   
-|來源|Description|  
+|來源|描述|  
 |------------|-----------------|  
 |Oracle 來源|Oracle 來源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的來源元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)。|  
 |SAP BI 來源|SAP BI 來源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的來源元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面的 [Microsoft SQL Server 功能套件](https://go.microsoft.com/fwlink/?LinkID=746297)。|  
@@ -140,7 +140,7 @@ ms.locfileid: "71293148"
   
  如需詳細資訊，請參閱 [Integration Services 轉換](../../integration-services/data-flow/transformations/integration-services-transformations.md)。  
   
-## <a name="destinations"></a>目的地  
+## <a name="destinations"></a>Destinations  
  目的地是將資料流程中的資料寫入特定資料存放區，或者建立記憶體中資料集的資料流程元件。 您可以將資料載入一般檔案、處理分析資料，以及提供資料給其他處理序。 您也可以透過存取資料庫中的資料表和檢視以及執行查詢來載入資料。  
   
  資料流程可以包含將資料載入至不同資料存放區的多個目的地。  
@@ -162,7 +162,7 @@ ms.locfileid: "71293148"
 ### <a name="destinations-available-for-download"></a>可下載的目的地  
  下表列出您可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 網站下載的其他目的地。  
   
-|來源|Description|  
+|來源|描述|  
 |------------|-----------------|  
 |Oracle 目的地|Oracle 目的地是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的目的地元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)。|  
 |SAP BI 目的地|SAP BI 目的地是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的目的地元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面的 [Microsoft SQL Server 功能套件](https://go.microsoft.com/fwlink/?LinkID=746297)。|  
@@ -192,7 +192,7 @@ ms.locfileid: "71293148"
   
  如需詳細資訊，請參閱 [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。  
   
-### <a name="columns"></a>[資料行]  
+### <a name="columns"></a>資料行  
  輸入、輸出和錯誤輸出都是資料行的集合。 每個資料行皆可供設定，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會依據資料行類型 (輸入、輸出或外部) 提供不同的資料行屬性。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供三種不同的方式用於設定資料行屬性，包括以程式設計的方式、使用元件特定對話方塊，或是使用 [進階編輯器]  對話方塊。  
   
 ## <a name="paths"></a>路徑  
@@ -214,7 +214,7 @@ ms.locfileid: "71293148"
  如需如何使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 設定屬性的詳細資訊，請參閱[設定資料流程元件的屬性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
- [在資料流程中新增或刪除元件](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)  
+ [在資料流程中加入或刪除元件](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
  [連接資料流程中的元件](../../integration-services/data-flow/connect-components-in-a-data-flow.md)  
   

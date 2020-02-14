@@ -25,10 +25,10 @@ ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6ac35c702783ca5b80367c6f41af9c4c450e0be7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67997963"
 ---
 # <a name="manage-the-database-engine-services"></a>管理 Database Engine Services

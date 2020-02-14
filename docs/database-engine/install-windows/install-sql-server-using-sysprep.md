@@ -11,19 +11,19 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 8e8b9a36fac2e90719d3f8a8dbeee5d4c4a0e662
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67990938"
 ---
 # <a name="install-sql-server-with-sysprep"></a>使用 SysPrep 安裝 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 相關的安裝動作可以透過安裝中心來存取。 **[安裝中心]** 的 **[進階]** 頁面包含兩個選項 - 準備 **獨立執行個體的映像[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 及 完成備妥的 **獨立執行個體的映像[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 。 [準備](#prepare) 和 [完成](#complete) 章節會詳細說明安裝程序。 如需詳細資訊，請參閱＜ [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)＞。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 相關的安裝動作可以透過安裝中心來存取。 **[安裝中心]** 的 **[進階]** 頁面包含兩個選項 - 準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**獨立執行個體的映像** 及 完成備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**獨立執行個體的映像**。 [準備](#prepare) 和 [完成](#complete) 章節會詳細說明安裝程序。 如需詳細資訊，請參閱＜ [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)＞。 
   
-您也可以使用命令提示字元或組態檔，準備及完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 如需詳細資訊，請參閱：  
+您也可以使用命令提示字元或組態檔，準備及完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 如需詳細資訊，請參閱  
   
 - [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
   
@@ -111,7 +111,7 @@ ms.locfileid: "67990938"
   
 10. 在 **[準備映像規則]** 頁面上，系統組態檢查會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。 
   
-11. 在 [執行個體組態] 頁面上，指定執行個體的執行個體識別碼。 按 **[下一步]** ，繼續進行。 
+11. 在 [執行個體組態] 頁面上，指定執行個體的執行個體識別碼。 選取 [下一步]  以繼續操作。 
   
      **執行個體識別碼** - 執行個體識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果已備妥的執行個體在完成步驟期間當做預設執行個體來完成，執行個體名稱會覆寫為 MSSQLSERVER。 執行個體識別碼仍然與指定的識別碼相同。 
   
@@ -160,7 +160,7 @@ ms.locfileid: "67990938"
     > [!NOTE]  
     >  您可以加入您所安裝之產品版本的可用功能。 如需詳細資訊，請參閱 [SQL Server 的版本及支援功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
-9. 在 [執行個體組態] 頁面上，指定已備妥之執行個體的執行個體名稱。 這就是當您完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態之後的執行個體名稱。 按 **[下一步]** ，繼續進行。 
+9. 在 [執行個體組態] 頁面上，指定已備妥之執行個體的執行個體名稱。 這就是當您完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態之後的執行個體名稱。 選取 [下一步]  以繼續操作。 
   
      **執行個體識別碼** - 執行個體識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果已備妥的執行個體在完成步驟期間當做預設執行個體來完成，執行個體名稱會覆寫為 MSSQLSERVER。 執行個體識別碼仍然與準備步驟期間指定的識別碼相同。 
   
@@ -263,7 +263,7 @@ ms.locfileid: "67990938"
   
 4. 在 **[選取執行個體]** 頁面上，選取您想要修改的已備妥執行個體。 備妥的執行個體名稱將會顯示為 "Unconfigured PreparedInstanceID"，其中 PreparedInstanceID 是您選取的執行個體。 
   
-5. 在 **[選取功能]** 頁面上，指定要從指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中移除的功能。 按 **[下一步]** ，繼續進行。 
+5. 在 **[選取功能]** 頁面上，指定要從指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中移除的功能。 選取 [下一步]  以繼續操作。 
   
 6. 移除規則將會執行，以便確認作業可以順利完成。 
   
@@ -285,7 +285,7 @@ ms.locfileid: "67990938"
   
 4. 在 **[選取執行個體]** 頁面上，選取您想要修改的已備妥執行個體。 備妥的執行個體名稱將會顯示為 "Unconfigured PreparedInstanceID"，其中 PreparedInstanceID 是您選取的執行個體。 
   
-5. 在 **[選取功能]** 頁面上，指定要從指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中移除的功能。 按 **[下一步]** ，繼續進行。 
+5. 在 **[選取功能]** 頁面上，指定要從指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中移除的功能。 選取 [下一步]  以繼續操作。 
   
 6. 在 **[移除規則]** 頁面上，安裝程式會執行規則，以便確認作業可以順利完成。 
   
@@ -298,7 +298,7 @@ ms.locfileid: "67990938"
 10. 重複步驟 1 到 9，直到移除所有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件為止。 
   
 ##  <a name="bk_Modifying_Uninstalling"></a> 修改或解除安裝已完成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 
- 加入或移除功能或解除安裝已完成之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的程序，類似於已安裝之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的程序。 如需詳細資訊，請參閱下列文件：  
+ 加入或移除功能或解除安裝已完成之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的程序，類似於已安裝之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的程序。 如需詳細資訊，請參閱下列文章：  
   
 - [將功能新增至 SQL Server 的執行個體 &#40;安裝程式&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  
   

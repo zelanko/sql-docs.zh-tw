@@ -12,10 +12,10 @@ ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2b26aba44ff43de115268dcafa5ecc51e3f13c02
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903943"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>使用範本來設定資源管理員
@@ -24,7 +24,7 @@ ms.locfileid: "72903943"
   
 -   **開始之前：** [權限](#Permissions)  
   
--   **若要建立工作負載群組，請使用：**  [範本](#ConfRGTemplate)  
+-   **若要建立工作負載群組，請使用：** [範本](#ConfRGTemplate)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  使用下列步驟即可開啟和修改建立資源集區與集區之工作負載群組的範本。 此外，這個範本可讓您建立使用者定義的分類函數，以便將新的連接路由傳送至預設群組或您所建立的工作負載群組。  

@@ -32,10 +32,10 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295820"
 ---
 # <a name="legacy-package-deployment-ssis"></a>舊版封裝部署 (SSIS)
@@ -43,7 +43,7 @@ ms.locfileid: "71295820"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的工具和精靈可以簡化將封裝從開發電腦部署到實際伺服器或部署到其他電腦的流程。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含工具和精靈可以簡化將套件從開發電腦部署到實際伺服器或部署到其他電腦的流程。  
   
  封裝部署處理有四個步驟：  
   
@@ -56,7 +56,7 @@ ms.locfileid: "71295820"
 4.  第四步是在目標電腦上執行 [封裝安裝精靈]，將封裝安裝到檔案系統或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。  
 
 ## <a name="package-configurations"></a>封裝組態
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供可用以在執行階段更新屬性值的封裝組態。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供可用在執行階段更新屬性值的套件組態。  
   
 > **注意：** 組態可用於封裝部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型讓您能將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。 如需有關部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)＞。   
   
@@ -110,13 +110,13 @@ ms.locfileid: "71295820"
 ### <a name="package-configuration-types"></a>封裝組態類型  
  下表描述封裝組態類型。  
   
-|類型|Description|  
+|類型|描述|  
 |----------|-----------------|  
 |XML 組態檔|XML 檔案包含組態。 XML 檔案可以包含多重組態。|  
 |環境變數|環境變數包含組態。|  
 |登錄項目|登錄項目包含組態。|  
 |父封裝變數|封裝中的變數包含組態。 這個組態類型通常用來更新子封裝中的屬性。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料表包含組態。 資料表可以包含多重組態。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料表包含組態。 資料表可以包含多重組態。|  
   
 #### <a name="xml-configuration-files"></a>XML 組態檔  
  如果選取 [XML 組態檔]  組態類型，您可以建立新的組態檔、重複使用現有的檔案並加入新組態，或者重複使用現有的檔案但覆寫現有的檔案內容。  
@@ -215,11 +215,11 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  在精靈完成後，新組態會加入 [封裝組態組合管理]  對話方塊中的組態清單。  
   
-> **注意：** 「封裝組態精靈」的最後一頁，也就是 [正在完成精靈] 頁面，會列出組態中的目標屬性。 如果您想要在執行封裝時使用 **dtexec** 命令提示公用程式來更新屬性，可以執行封裝組態精靈來產生代表屬性路徑的字串，然後再將這些字串複製並貼到命令提示字元視窗中，以便搭配 **dtexec** 的設定選項使用。  
+> **注意：** 「封裝組態精靈」的最後一頁，也就是 [正在完成精靈] 頁面，會列出組態中的目標屬性。 如果您想要在執行封裝時使用 **dtexec** 命令提示公用程式來更新屬性，可以執行封裝組態精靈來產生代表屬性路徑的字串，然後再將這些字串複製並貼到命令提示字元視窗中，以便搭配 **dtexec**的設定選項使用。  
   
  下表描述 [封裝組態組合管理]  對話方塊中組態清單中的資料行。  
   
-|資料行|Description|  
+|資料行|描述|  
 |------------|-----------------|  
 |**組態名稱**|組態的名稱。|  
 |**組態類型**|組態類型。|  
@@ -251,7 +251,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 10. 檢視 [封裝組態組合管理]  對話方塊中的組態。  
   
-11. 按一下 [ **關閉**]。  
+11. 按一下 [關閉]  。  
 
 ## <a name="package-configurations-organizer"></a>[封裝組態組合管理]
   使用 **[封裝組態組合管理]** 對話方塊，即可啟用封裝組態、檢視目前封裝的組態清單，以及指定載入組態的喜好順序。  
@@ -283,7 +283,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **目標屬性**  
  檢視組態所修改之屬性的名稱。 如果組態類型支援多個組態，則此資料行是空白。  
   
- **[加入]**  
+ **加入**  
  使用封裝組態精靈來加入組態。  
   
  **編輯**  
@@ -321,7 +321,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **組態類型**  
  使用下列選項，即可選取儲存組態的來源類型：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**XML 組態檔**|將組態儲存為 XML 檔案。 選取這個值就會顯示 **[組態類型]** 區段中的動態選項。|  
 |**環境變數**|將組態儲存在其中一個環境變數中。 選取這個值就會顯示 **[組態類型]** 區段中的動態選項。|  
@@ -338,7 +338,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定組態設定**  
  這可用來直接指定設定。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**組態檔名稱**|鍵入精靈產生之組態檔的路徑。|  
 |**瀏覽**|使用 **[選取組態檔位置]** 對話方塊，即可指定精靈產生之組態檔的路徑。 如果檔案不存在，精靈就會建立檔案。|  
@@ -346,7 +346,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **組態位置儲存在環境變數中**  
  這可用來指定儲存組態的環境變數。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**環境變數**|從清單中選取環境變數。|  
   
@@ -358,14 +358,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定組態設定**  
  這可用來直接指定設定。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**登錄項目**|輸入包含組態資訊的登錄機碼。 格式為 \<登錄機碼>。<br /><br /> 登錄機碼必須已經存在於 HKEY_CURRENT_USER 中且具有名為 Value 的值。 該值可以是 DWORD 或字串。<br /><br /> 如果您想要使用不是在 HKEY_CURRENT_USER 根目錄的登錄機碼，請使用 \<登錄機碼\登錄機碼\\...> 格式來識別該機碼。|  
   
  **組態位置儲存在環境變數中**  
  這可用來指定儲存組態的環境變數。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**環境變數**|從清單中選取環境變數。|  
   
@@ -373,14 +373,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定組態設定**  
  這可用來直接指定設定。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**父變數**|在包含組態資訊的父封裝中指定變數。|  
   
  **組態位置儲存在環境變數中**  
  這可用來指定儲存組態的環境變數。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**環境變數**|從清單中選取環境變數。|  
   
@@ -388,7 +388,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定組態設定**  
  這可用來直接指定設定。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**[連接]**|請從清單中選取連接，或按一下 **[新增]** 即可建立新的連接。|  
 |**組態資料表**|選取現有的資料表，或按一下 **[新增]** ，即可撰寫建立新資料表的 SQL 陳述式。|  
@@ -397,7 +397,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **組態位置儲存在環境變數中**  
  這可用來指定儲存組態的環境變數。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**環境變數**|從清單中選取環境變數。|  
   
@@ -443,7 +443,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中，若要定義變數的範圍，請執行下列其中之一：  
+3.  在 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中，若要定義變數的範圍，請執行下列其中之一：  
   
     -   若要將範圍設為封裝，請按一下 [控制流程]  索引標籤之設計介面上的任意位置。  
   
@@ -482,7 +482,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  下表列出部署公用程式屬性。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |AllowConfigurationChange|指定部署期間是否可以更新組態的值。|  
 |[CreateDeploymentUtility]|指定建立專案時是否建立封裝部署公用程式的值。 此屬性必須為 **True** ，才能建立部署公用程式。|  
@@ -546,7 +546,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 4.  選擇性地選取 [安裝之後驗證封裝]  ，以在將封裝安裝到目標伺服器後對其進行驗證。  
   
-5.  在 [指定目標 SQL Server]  頁面上，指定要安裝封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，並選取驗證模式。 如果選取「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」，則您必須提供使用者名稱和密碼。  
+5.  在 [指定目標 SQL Server]  頁面上，指定要安裝封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，並選取驗證模式。 如果選取「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」，則您必須提供使用者名稱和密碼。  
   
 6.  在 [選取安裝資料夾]  頁面上，為要安裝的封裝相依性指定檔案系統中的資料夾。  
   
@@ -670,10 +670,10 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[使用 Windows 驗證]**  
  指定是否使用 Windows 驗證來登入伺服器。 建議使用 Windows 驗證，以獲得較佳的安全性。  
   
- **使用 SQL Server 驗證**  
+ **[使用 SQL Server 驗證]**  
  指定封裝是否應使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來登入伺服器。 如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，就必須提供使用者名稱和密碼。  
   
- **User name**  
+ **使用者名稱**  
  指定使用者名稱。  
   
  **密碼**  

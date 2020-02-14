@@ -11,10 +11,10 @@ ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1a6856b2bf297293fcf26c73885cbd46e68b3b1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133235"
 ---
 # <a name="sql-trace"></a>SQL 追蹤
@@ -32,13 +32,13 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所提供的
 ## <a name="sql-trace-architecture"></a>SQL 追蹤架構  
 「事件來源」可以是任何產生追蹤事件的來源，例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次，或類似死結的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 如需事件的詳細資訊，請參閱 [SQL Server 事件類別參考](../../relational-databases/event-classes/sql-server-event-class-reference.md)。 發生事件之後，如果其事件類別已納入追蹤定義內，追蹤就會蒐集事件資訊。 如果追蹤定義內已針對該事件類別定義了篩選，便會套用篩選並將追蹤事件資訊傳遞給佇列。 佇列中的追蹤資訊會寫入檔案，或由 SMO 在應用程式 (例如 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]) 中使用該資訊。 下列圖表顯示 SQL 追蹤如何在追蹤期間蒐集事件。  
   
-![Database Engine 事件追蹤處理](../../relational-databases/sql-trace/media/tracarch.gif "Database Engine 事件追蹤處理")  
+![資料庫引擎事件追蹤程序](../../relational-databases/sql-trace/media/tracarch.gif "資料庫引擎事件追蹤程序")  
   
 ## <a name="sql-trace-terminology"></a>SQL 追蹤詞彙  
 下列詞彙說明 SQL 追蹤的主要概念。  
   
  **事件**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體內所發生的動作。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體內所發生的動作。  
   
  **資料行**  
  事件的屬性。  
@@ -58,7 +58,7 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所提供的
  **追蹤定義**  
  事件類別、資料行與篩選 (可識別追蹤期間所要收集的事件類型) 的集合。  
   
- **篩選**  
+ **Filter**  
  限制追蹤所收集之事件的條件。  
   
  **追蹤檔案**  
@@ -73,7 +73,7 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所提供的
 ## <a name="use-data-columns-to-describe-returned-events"></a>使用資料行描述傳回的事件  
 SQL 追蹤使用追蹤輸出的資料行來描述追蹤執行時傳回的事件。 下表描述的是 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，這些資料行與 SQL 追蹤使用的資料行相同，同時也會指出預設會選取的資料行。  
   
-|資料行|資料行編號|Description|  
+|資料行|資料行編號|描述|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName**|10|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的名稱。|  
 |**BigintData1**|52|值 (**bigint** 資料類型)，會視追蹤指定的事件類別而定。|  
@@ -116,7 +116,7 @@ SQL 追蹤使用追蹤輸出的資料行來描述追蹤執行時傳回的事件�
 |**OwnerID**|58|只適用於鎖定事件。 擁有鎖定的物件類型。|  
 |**OwnerName**|37|物件擁有者的資料庫使用者名稱。|  
 |**ParentName**|59|物件所在的結構描述名稱。|  
-|**Permissions**|19|代表核取的權限類型的整數值。 值為：<br /><br /> **1** = SELECT ALL<br /><br /> **2** = UPDATE ALL<br /><br /> **4** = REFERENCES ALL<br /><br /> **8** = INSERT<br /><br /> **16** = DELETE<br /><br /> **32** = EXECUTE (僅限程序)<br /><br /> **4096** = SELECT ANY (至少一個資料行)<br /><br /> **8192** = UPDATE ANY<br /><br /> **16384** = REFERENCES ANY|  
+|**權限**|19|代表核取的權限類型的整數值。 值為：<br /><br /> **1** = SELECT ALL<br /><br /> **2** = UPDATE ALL<br /><br /> **4** = REFERENCES ALL<br /><br /> **8** = INSERT<br /><br /> **16** = DELETE<br /><br /> **32** = EXECUTE (僅限程序)<br /><br /> **4096** = SELECT ANY (至少一個資料行)<br /><br /> **8192** = UPDATE ANY<br /><br /> **16384** = REFERENCES ANY|  
 |**ProviderName**|46|OLEDB 提供者的名稱。|  
 |**Reads**|16|伺服器代表事件所執行的邏輯磁碟讀取作業次數。 這些讀取作業包括陳述式執行期間，從表格和緩衝區執行的讀取。|  
 |**RequestID**|49|包含陳述式之要求的識別碼。|  
@@ -130,7 +130,7 @@ SQL 追蹤使用追蹤輸出的資料行來描述追蹤執行時傳回的事件�
 |**SqlHandle**|63|這是一個 64 位元雜湊，以隨選查詢的文字或 SQL 物件的資料庫和物件識別碼為基礎。 這個值可以傳給 **sys.dm_exec_sql_text()** ，以擷取相關聯的 SQL 文字。|  
 |**StartTime**|14|事件啟動的時間 (如果有的話)。|  
 |**State**|30|錯誤狀態碼。|  
-|**成功**|23|代表事件成功與否。 數值包括：<br /><br /> **1** = 成功<br /><br /> **0** = 失敗<br /><br /> 例如， **1** 表示權限檢查成功， **0** 表示檢查失敗。|  
+|「成功」 |23|代表事件成功與否。 數值包括：<br /><br /> **1** = 成功<br /><br /> **0** = 失敗<br /><br /> 例如， **1** 表示權限檢查成功， **0** 表示檢查失敗。|  
 |**TargetLoginName**|42|對於目標為登入的動作，這是目標登入的名稱；例如，要加入新登入。|  
 |**TargetLoginSid**|43|對於目標為登入的動作，這是目標登入的 SID；例如，要加入新登入。|  
 |**TargetUserName**|39|對於目標為資料庫使用者的動作，這是該使用者的名稱；例如，要授與使用者權限。|  

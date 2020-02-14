@@ -25,10 +25,10 @@ ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 26051de067dd496d25cfcc3c2cb0f71715ed3145
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211356"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
@@ -62,7 +62,7 @@ END CONVERSATION conversation_handle
  WITH CLEANUP  
  移除無法正常完成之交談這一端的所有訊息和目錄檢視項目。 交談的另一端將不會收到此清除通知。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會卸除交談端點，以及這項交談在傳輸佇列和服務佇列中的所有訊息。 管理員可使用這個選項來移除無法正常完成的交談。 例如，如果遠端服務已永久移除，管理員可以使用 WITH CLEANUP 來移除與這項服務的交談。 請勿在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 應用程式的程式碼中使用 WITH CLEANUP。 如果在接收端點認可收到訊息之前，END CONVERSATION WITH CLEANUP 已在執行中，則傳送端點將會再次傳送此訊息。 這樣可能會重新執行對話。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  結束交談會鎖定提供之 *conversation_handle* 所屬的交談群組。 當交談結束時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會移除這項交談在服務佇列中的所有訊息。  
   
  交談結束之後，應用程式就無法再傳送或接收這項交談的訊息。 交談的兩個參與者都必須呼叫 END CONVERSATION，交談才會完成。 如果 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 沒有收到交談另一方參與者發出的結束對話訊息或錯誤訊息，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會通知交談的另一方參與者交談已經結束。 在這個情況下，雖然交談的交談控制代碼已不再有效，但交談的端點仍會維持使用中的狀態，直到主控遠端服務的執行個體確認這則訊息為止。  

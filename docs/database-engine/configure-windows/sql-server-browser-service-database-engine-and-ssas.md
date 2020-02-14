@@ -16,15 +16,15 @@ ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fade5e48340e8cc2b51b354f9717a561c632e4d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68028636"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server Browser 服務 (Database Engine 和 SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 程式會以 Windows 服務的方式執行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 會接聽 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的內送要求，並提供有關電腦上所安裝之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資訊。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 完成下列動作：  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 程式會以 Windows 服務的方式執行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 會接聽 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的內送要求，並提供有關電腦上所安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資訊。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 完成下列動作：  
   
 -   瀏覽可用伺服器的清單  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68028636"
   
 -   您為每個執行個體選取的通訊埠可能正由該伺服器上的其他服務或應用程式使用中，導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體無法使用。  
   
-## <a name="clustering"></a>群集  
+## <a name="clustering"></a>叢集  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 不是群集資源，不支援一個叢集節點容錯移轉到另一個叢集節點。 因此，以群集的情況而言，應該要為群集的每一個節點安裝及開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser。 在群集上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 會接聽 IP_ANY。  
   
 > [!NOTE]  
@@ -96,7 +96,7 @@ ms.locfileid: "68028636"
 <drive>\<path>\sqlbrowser.exe -c  
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="account-privileges"></a>帳戶權限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器會接聽 UDP 通訊埠，並接受使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol (SSRP) 的未驗證要求。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser，以降低遭受惡意攻擊的機會。 可利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來變更登入帳戶。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 所需的最低使用者權限如下：  

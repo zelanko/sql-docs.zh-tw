@@ -19,10 +19,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 48cd04467283683cf1dc54f300b2c4ff21fb8248
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68632136"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68632136"
 >
 > 即使是新的 Azure SQL Database，其預設的相容性層級也可能會是 120。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示")[Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,11 +56,11 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 
 ### <a name="openjson"></a>openjson
 
-![OPENJSON TVF 語法](../../relational-databases/json/media/openjson-syntax.png "OPENJSON 語法")  
+![OPENJSON TVF 的語法](../../relational-databases/json/media/openjson-syntax.png "OPENJSON 語法")  
 
 根據預設，**OPENJSON** 資料表值函式會傳回三個資料行，其中包含了索引鍵名稱、值，以及在 *jsonExpression* 中找到的每個 {索引鍵/值} 組的類型。 或者，您可以透過提供 *with_clause* 來指定 **OPENJSON** 傳回之結果集的結構描述。
   
-### <a name="withclause"></a>with_clause
+### <a name="with_clause"></a>with_clause
   
 ![OPENJSON TVF 中 WITH 子句的語法](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH 語法")
 
@@ -91,7 +91,7 @@ SELECT * FROM OpenJson(@json);
 
 **結果：**
 
-| 索引鍵                                | value                 | 型別 |
+| 索引鍵                                | value                 | type |
 | :--                                | :----                 | :--- |
 | String_value                       | John                  | 1 |
 | DoublePrecisionFloatingPoint_value | 45                    | 2 |
@@ -128,7 +128,7 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
   
  **結果**  
   
-|索引鍵|ReplTest1|  
+|Key|值|  
 |---------|-----------|  
 |0|en-GB|  
 |1|en-UK|  
@@ -140,7 +140,7 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 
 用來比對路徑步驟與 JSON 運算式屬性的比較會區分大小寫且為非識別定序 (即 BIN2 比較)。 
 
-### <a name="withclause"></a>*with_clause*
+### <a name="with_clause"></a>*with_clause*
 
 明確定義 **OPENJSON** 函式要傳回的輸出結構描述。 選擇性的 *with_clause* 可包含下列項目：
 
@@ -214,7 +214,7 @@ WITH (
   
 **結果**
   
-|Number|date|客戶|Quantity|單|  
+|Number|Date|客戶|數量|單|  
 |------------|----------|--------------|--------------|-----------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|{"Number":"SO43661","Date":"2011-06-01T00:00:00"}|  
@@ -230,8 +230,8 @@ OPENJSON 函式傳回的資料行取決於 WITH 選項。
         |「類型」資料行的值|JSON 資料類型|  
         |------------------------------|--------------------|  
         |0|null|  
-        |1|string|  
-        |2|INT|  
+        |1|字串|  
+        |2|int|  
         |3|true/false|  
         |4|array|  
         |5|物件 (object)|  
@@ -243,7 +243,7 @@ OPENJSON 函式傳回的資料行取決於 WITH 選項。
 > [!NOTE]  
 > **Key**、**Value** 和 **Type** 資料行只會在您搭配預設結構描述使用 OPENJSON 時傳回，且無法搭配明確結構描述使用。
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 
 **OPENJSON** 的第二個引數或 *with_clause* 中的 *json_path* 開頭可為 **lax** 或 **strict** 關鍵字。
 

@@ -11,12 +11,12 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7644e38995d7afb7493ed3bfec20f2049beb9055
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 1ef9084e8264caf6b14289d6d2674afca012cd15
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009456"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761924"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>資料行存放區索引 - 資料倉儲
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "70009456"
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>透過結合非叢集和資料行存放區索引來改善效能  
  從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，您可以在叢集資料行存放區索引上定義非叢集索引。   
   
-### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>範例以非叢集索引改善資料表搜尋的效率  
+### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>範例：以非叢集索引改善資料表搜尋的效率  
  若要改善在資料倉儲中搜尋資料表的效率，您可以建立專用的非叢集索引來執行對資料表搜尋有最佳效能的查詢。 例如，針對 B 型樹狀結構索引執行比對值或傳回小範圍值的查詢，其執行效能會比針對資料行存放區索引為佳。 它們不需要透過資料行存放區索引的完整資料表掃描，且透過 B 型樹狀結構索引執行二進位搜尋會較快傳回正確的結果。  
   
 ```sql  
@@ -63,8 +63,8 @@ GO
 CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);  
 ```  
   
-### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>範例使用非叢集索引在資料行存放區資料表上強制套用主索引鍵條件約束  
- 根據設計，資料行存放區資料表不允許主索引鍵條件約束。 現在您可以在資料行存放區資料表上使用非叢集索引強制執行主索引鍵條件約束。 在非 NULL 的資料行上主索引鍵等同 UNIQUE 條件約束，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會實作 UNIQUE 條件約束來當作非叢集索引。 結合這些事實，以下範例在非 NULL 資料行 accountkey 上定義 UNIQUE 條件約束。 結果是一個將主索引鍵條件約束強制做為非 NULL 資料行上之 UNIQUE 條件約束的非叢集索引。  
+### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>範例：使用非叢集索引在資料行存放區資料表上強制套用主索引鍵條件約束  
+ 根據設計，資料行存放區資料表不允許叢集主索引鍵條件約束。 現在您可以在資料行存放區資料表上使用非叢集索引強制執行主索引鍵條件約束。 在非 NULL 的資料行上主索引鍵等同 UNIQUE 條件約束，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會實作 UNIQUE 條件約束來當作非叢集索引。 結合這些事實，以下範例在非 NULL 資料行 accountkey 上定義 UNIQUE 條件約束。 結果是一個將主索引鍵條件約束強制做為非 NULL 資料行上之 UNIQUE 條件約束的非叢集索引。  
   
  接下來，該資料表會轉換為叢集資料行存放區索引。 轉換期間會保留非叢集索引。 結果是一個包含強制執行主索引鍵條件約束之非叢集索引的叢集資料行存放區索引。 因為資料行存放區資料表上的任何更新或插入都會影響非叢集索引，所以任何違反唯一條件約束和非 NULL 的作業都會造成整個作業失敗。  
   
@@ -100,7 +100,7 @@ WITH CHECK ADD FOREIGN KEY([AccountKey]) REFERENCES my_dimension(Accountkey);
 ```  
   
 ### <a name="improve-performance-by-enabling-row-level-and-row-group-level-locking"></a>藉由啟用資料列層級和資料列群組層級鎖定來改善效能  
- 為了補充資料行存放區索引功能上的非叢集索引，[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 提供選取、更新和刪除作業的詳細鎖定功能。 查詢能夠針對非叢集索引在索引搜尋上以資料列層級鎖定執行，或針對資料行存放區索引在完整資料表掃描上以資料行群組層級鎖定執行。 藉由適當地使用資料列層級和資料列群組層級鎖定，來以此方法達到更高的獨取/寫入並行。  
+ 為了補充資料行存放區索引功能上的非叢集索引， [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 提供選取、更新和刪除作業的詳細鎖定功能。 查詢能夠針對非叢集索引在索引搜尋上以資料列層級鎖定執行，或針對資料行存放區索引在完整資料表掃描上以資料行群組層級鎖定執行。 藉由適當地使用資料列層級和資料列群組層級鎖定，來以此方法達到更高的獨取/寫入並行。  
   
 ```sql  
 --Granular locking example  
@@ -124,7 +124,7 @@ END TRAN
 ```  
   
 ### <a name="snapshot-isolation-and-read-committed-snapshot-isolations"></a>快照集隔離和讀取認可快照集隔離  
- 使用「快照集隔離」(SI) 來保證交易的一致性，以及「讀取認可快照集隔離」(RCSI) 來確保資料行存放區索引上查詢陳述式層級的一致性。 這可讓查詢執行而不會封鎖資料寫入器。 此非封鎖性的行為也會大幅降低複雜交易發生死結的可能性。 如需詳細資訊，請參閱 MSDN 上的 [SQL Server 中的快照集隔離](https://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx)。  
+ 使用「快照集隔離」(SI) 來保證交易的一致性，以及「讀取認可快照集隔離」(RCSI) 來確保資料行存放區索引上查詢陳述式層級的一致性。 這可讓查詢執行而不會封鎖資料寫入器。 此非封鎖性的行為也會大幅降低複雜交易發生死結的可能性。 如需詳細資訊，請參閱 MSDN 上的 [SQL Server 中的快照集隔離](https://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) 。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料行存放區索引設計指導](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   

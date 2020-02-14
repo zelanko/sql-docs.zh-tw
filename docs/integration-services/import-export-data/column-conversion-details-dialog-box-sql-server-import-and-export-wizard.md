@@ -12,10 +12,10 @@ ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 531d7e5a0f945a8d0dd5570d95843164fbc98734
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296345"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>資料行轉換詳細資訊對話方塊 (SQL Server 匯入和匯出精靈)
@@ -37,7 +37,7 @@ ms.locfileid: "71296345"
 -   精靈判斷「此資料行不需要進行轉換」  。
  
   
- ![[匯入和匯出精靈] 的資料行轉換頁面](../../integration-services/import-export-data/media/column-conversion.png "[匯入和匯出精靈] 的資料行轉換頁面") 
+ ![[匯入和匯出精靈] 的 [資料行轉換] 頁面](../../integration-services/import-export-data/media/column-conversion.png "[匯入和匯出精靈] 的 [資料行轉換] 頁面") 
   
 ## <a name="whats-next"></a>下一步  
  在您檢閱資料行轉換詳細資訊並按一下 [確定]  之後，[資料行轉換詳細資訊]  對話方塊會讓您回到 [檢閱資料類型對應]  頁面。 如需詳細資訊，請參閱 [檢閱資料類型對應](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md)。  

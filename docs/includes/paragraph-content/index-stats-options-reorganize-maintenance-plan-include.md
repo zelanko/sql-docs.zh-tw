@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 78b372942de6ec62823dddecd08fdb7221cbe7a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68219682"
----
 
 
 ### <a name="index-stats-options"></a>索引統計資料選項
@@ -41,7 +33,7 @@ Initially used in:
  UI 提供下列可調整的篩選條件，可讓您用來避免重新整理還不需要立即重新整理的索引：
 
 
-- 片段 &gt; (%) 
+- 片段 &gt; *(%)*
 - 頁面計數 &gt;
 - 使用時間在過去 (天) 
 

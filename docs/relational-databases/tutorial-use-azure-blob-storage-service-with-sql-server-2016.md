@@ -15,10 +15,10 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aba8d7e3dc7aaf48523303ad6f63682c888b3c46
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095697"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016
@@ -32,7 +32,7 @@ Microsoft Azure Blob 儲存體服務的 SQL Server 整合支援一開始是 SQL 
   
 ## <a name="prerequisites"></a>Prerequisites
 
-若要完成本教學課程，您必須熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 備份與還原概念以及 T-SQL 語法。 若要使用本教學課程，您需要 Azure 儲存體帳戶、SQL Server Management Studio (SSMS)、存取 SQL Server 內部部署執行個體的權限、存取執行 SQL Server 2016 Azure 虛擬機器 (VM) 的權限，以及 AdventureWorks2016 資料庫。 此外，用來發出 BACKUP 或 RESTORE 命令的帳戶，應該位於擁有**改變任何認證**權限的 **db_backupoperator** 資料庫角色中。 
+若要完成本教學課程，您必須熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 備份與還原概念以及 T-SQL 語法。 若要使用本教學課程，您需要 Azure 儲存體帳戶、SQL Server Management Studio (SSMS)、存取 SQL Server 內部部署執行個體的權限、存取執行 SQL Server 2016 Azure 虛擬機器 (VM) 的權限，以及 AdventureWorks2016 資料庫。 此外，用來發出 BACKUP 或 RESTORE 命令的帳戶，應該位於擁有 **ALTER ANY CREDENTIAL** 權限的 **db_backupoperator** 資料庫角色中。 
 
 - 取得免費 [Azure 帳戶](https://azure.microsoft.com/offers/ms-azr-0044p/)。
 - 建立 [Azure 儲存體帳戶](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal)。

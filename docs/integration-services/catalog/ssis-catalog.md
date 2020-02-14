@@ -15,10 +15,10 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294957"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
@@ -76,7 +76,7 @@ ms.locfileid: "71294957"
   
 -   資料夾  
   
--   專案  
+-   隨附此逐步解說的專案  
   
 -   環境  
   
@@ -118,7 +118,7 @@ ms.locfileid: "71294957"
 -   後續的字元可以是 Unicode Standard 2.0 中定義的字母或數字，或是底線 (_)。  
   
 ##  <a name="Configuration"></a> 目錄組態  
- 您會藉由調整目錄屬性來微調目錄的行為模式。 目錄屬性會定義如何加密敏感性資料以及如何保留作業和專案版本設定資料。 若要設定目錄屬性，請使用 [目錄屬性]  對話方塊，或是呼叫 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md) 預存程序。 若要檢視屬性，請使用對話方塊或查詢 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)。 您可在 [物件總管] 中以滑鼠右鍵按一下 **SSISDB** 來存取此對話方塊。  
+ 您會藉由調整目錄屬性來微調目錄的行為模式。 目錄屬性會定義如何加密敏感性資料以及如何保留作業和專案版本設定資料。 若要設定目錄屬性，請使用 [目錄屬性]  對話方塊，或是呼叫 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md) 預存程序。 若要檢視屬性，請使用對話方塊或查詢 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)。 您可在物件總管中以滑鼠右鍵按一下 [SSISDB]  來存取此對話方塊。  
   
 ###  <a name="Cleanup"></a> 作業和專案版本清除  
  目錄中許多作業的狀態資料會儲存在內部資料庫資料表中。 例如，目錄會追蹤封裝執行和專案部署的狀態。 為了維護作業資料的大小， **中的** [SSIS Server 維護作業] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會用來移除舊的資料。 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時會建立此 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Agent 作業。  
@@ -166,7 +166,7 @@ ms.locfileid: "71294957"
   
  若要變更 **[加密演算法]** 屬性設定，請將 **SSISDB** 資料庫設為單一使用者模式，然後呼叫 catalog.configure_catalog 預存程序。 使用 ENCRYPTION_ALGORITHM 指定 *property_name* 引數。 如需支援的屬性值，請參閱 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)。 如需預存程序的詳細資訊，請參閱 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)。  
   
- 如需單一使用者模式的詳細資訊，請參閱[將資料庫設定為單一使用者模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中加密和加密演算法的資訊，請參閱 [SQL Server 加密](../../relational-databases/security/encryption/sql-server-encryption.md)一節中的主題。  
+ 如需單一使用者模式的詳細資訊，請參閱 [將資料庫設定為單一使用者模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中加密和加密演算法的資訊，請參閱 [SQL Server 加密](../../relational-databases/security/encryption/sql-server-encryption.md)一節中的主題。  
   
  資料庫主要金鑰會用於加密。 當您建立目錄時會建立此金鑰。  
   
@@ -319,7 +319,7 @@ ms.locfileid: "71294957"
   
 2.  連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine。  
   
-3.  在 [物件總管] 中，展開伺服器節點，以滑鼠右鍵按一下 [Integration Services 目錄]  節點，然後按一下 [建立目錄]  。  
+3.  在物件總管中，展開伺服器節點，以滑鼠右鍵按一下 [Integration Services 目錄]  節點，然後按一下 [建立目錄]  。  
   
 4.  按一下 **[啟用 CLR 整合]** 。  
   
@@ -374,7 +374,7 @@ ms.locfileid: "71294957"
   
 ###  <a name="open_dialog"></a> 開啟目錄屬性對話方塊  
   
-1.  開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
+1.  開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
 2.  連接 Microsoft SQL Server Database Engine。  
   
@@ -385,7 +385,7 @@ ms.locfileid: "71294957"
 #### <a name="options"></a>選項。  
  下表描述對話方塊中的特定屬性，以及 `catalog.catalog_properties` 檢視表中的對應屬性。  
   
-|屬性名稱 (目錄屬性對話方塊)|屬性名稱 (catalog.catalog_properties 檢視表)|Description|  
+|屬性名稱 (目錄屬性對話方塊)|屬性名稱 (catalog.catalog_properties 檢視表)|描述|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |加密演算法名稱|ENCRYPTION_ALGORITHM|指定用來加密目錄中敏感性參數值的加密類型。 以下是可能的值：<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (預設)|  
 |每一專案的版本數目上限|MAX_PROJECT_VERSIONS|指定目錄中所儲存的專案版本數目。 當專案版本清除作業執行時，會移除超過上限的舊專案版本。|  
@@ -555,13 +555,13 @@ ms.locfileid: "71294957"
   
      選取此核取方塊，表示您已經在執行這個精靈之前備份 SSISDB 資料庫。  
   
-     ![選取 [SSISDB 升級精靈] 中的伺服器](../../integration-services/service/media/ssisdb-upgrade-wizard-2.png "選取 [SSISDB 升級精靈] 中的伺服器")  
+     ![在 [SSISDB 升級精靈] 中選取伺服器](../../integration-services/service/media/ssisdb-upgrade-wizard-2.png "在 [SSISDB 升級精靈] 中選取伺服器")  
   
 5.  選取 [升級]  升級 SSIS 目錄資料庫。  
   
 6.  在 [結果]  頁面上，檢閱結果。  
   
-     ![檢閱 [SSISDB 升級精靈] 中的結果](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "檢閱 [SSISDB 升級精靈] 中的結果")  
+     ![在 [SSISDB 升級精靈] 中檢閱結果](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "在 [SSISDB 升級精靈] 中檢閱結果")  
 
 ## <a name="always-on-for-ssis-catalog-ssisdb"></a>適用於 SSIS 目錄 (SSISDB) 的 Always On
   AlwaysOn 可用性群組功能是提供資料庫鏡像之企業級替代方案的高可用性與災害復原解決方案。 可用性群組支援一組可一起容錯移轉之離散化使用者資料庫的容錯移轉環境，也就是所謂的可用性資料庫。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。  
@@ -573,7 +573,7 @@ ms.locfileid: "71294957"
  
  **本節內容：**  
   
-1.  [必要條件](#prereq)  
+1.  [先決條件](#prereq)  
   
 2.  [設定適用於 AlwaysOn 的 SSIS 支援](#Firsttime)  
   

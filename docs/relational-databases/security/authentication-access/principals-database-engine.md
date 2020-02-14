@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68344603"
 ---
 # <a name="principals-database-engine"></a>主體 (Database Engine)
@@ -67,7 +67,7 @@ ms.locfileid: "68344603"
 ## <a name="public-server-role-and-database-role"></a>public 伺服器角色和資料庫角色  
 每個登入都屬於 `public` 固定伺服器角色，而每個資料庫使用者都屬於 `public` 資料庫角色。 當登入或使用者未被授與或拒絕安全性實體的特定權限時，該登入或使用者會繼承授與該安全性實體之 public 的權限。 無法卸除 `public` 固定伺服器角色和 `public` 固定資料庫角色。 不過，您可以撤銷 `public` 角色的權限。 預設會將許多權限指派給 `public` 角色。 在資料庫中執行例行作業時，需要其中的大部分權限，而每個人應該都有可以執行的動作類型。 撤銷 public 登入或使用者的權限時請小心，因為它會影響所有登入/使用者。 一般而言，您不應該將拒絕權限授與 public，因為拒絕陳述會覆寫任何可對個人所進行的授與陳述。 
   
-## <a name="informationschema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA 與 sys 使用者和結構描述 
+## <a name="information_schema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA 與 sys 使用者和結構描述 
  每個資料庫都包含兩個在目錄檢視中顯示為使用者的實體：`INFORMATION_SCHEMA` 和 `sys`。 需要有這些實體，以供 Database Engine 內部使用。 它們無法進行修改或卸除。  
   
 ## <a name="certificate-based-sql-server-logins"></a>以憑證為基礎的 SQL Server 登入  

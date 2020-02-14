@@ -19,10 +19,10 @@ ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 60dcf1692fb8b805b9eef8fad228353104131c93
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295732"
 ---
 # <a name="save-packages"></a>儲存封裝
@@ -47,7 +47,7 @@ ms.locfileid: "71295732"
     >  您可以在 [屬性] 視窗中，確認儲存封裝的路徑和檔案名稱。  
 
 ## <a name="save-a-copy-of-a-package"></a>儲存封裝的複本
-  本節描述如何將套件的複本儲存至檔案系統、套件存放區，或  中的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 當您指定儲存封裝副本的位置時，也可以更新封裝名稱。  
+  本節描述如何將套件複本儲存至檔案系統、套件存放區，或 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 **msdb** 資料庫。 當您指定儲存封裝副本的位置時，也可以更新封裝名稱。  
   
  封裝存放區可以包含 **msdb** 資料庫和檔案系統中的資料夾、或者只有包含 **msdb**，或只有包含檔案系統中的資料夾。 在 **msdb**中，封裝是儲存至 **sysssispackages** 資料表。 這個資料表包含了識別封裝所屬之邏輯資料夾的 **folderid** 資料行。 邏輯資料夾會以相同的方式為 **msdb** 中所儲存的封裝提供實用的分組方法，就像檔案系統中的資料夾為檔案系統中所儲存的封裝提供實用的分組方法一樣。 **msdb** 中 **sysssispackagefolders** 資料表的資料列會定義資料夾。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "71295732"
   
 2.  在 [檔案]  功能表上，按一下 [另存\<套件檔案> 的副本為]  。  
   
-3.  在 **[儲存封裝的副本]** 對話方塊中，從 **[封裝位置]** 清單選取封裝位置。 下列是可以使用的選項：  
+3.  在 **[儲存封裝的副本]** 對話方塊中，從 **[封裝位置]** 清單選取封裝位置。 有下列選項可供使用：  
     -   SQL Server
     -   檔案系統 
     -   SSIS 封裝存放區 
@@ -94,7 +94,7 @@ ms.locfileid: "71295732"
   
  您可以指定將多個封裝當作範本使用。 不過您必須先建立封裝，才能將自訂封裝實作成範本。  
   
- 使用自訂封裝作為範本以建立封裝時，新封裝將擁有與範本相同的名稱和 GUID。 為了區分這些封裝，您應該更新 **Name** 屬性的值，並為 **ID** 屬性產生新的 GUID。 如需詳細資訊，請參閱[在 SQL Server 資料工具中建立封裝](../integration-services/create-packages-in-sql-server-data-tools.md)和[設定封裝屬性](../integration-services/set-package-properties.md)。  
+ 使用自訂封裝作為範本以建立封裝時，新封裝將擁有與範本相同的名稱和 GUID。 為了區分這些封裝，您應該更新 **Name** 屬性的值，並為 **ID** 屬性產生新的 GUID。 如需詳細資訊，請參閱 [在 SQL Server 資料工具中建立封裝](../integration-services/create-packages-in-sql-server-data-tools.md) 和 [設定封裝屬性](../integration-services/set-package-properties.md)。  
   
 ### <a name="to-designate-a-custom-package-as-a-package-template"></a>若要將自訂封裝指定成封裝範本  
   
@@ -106,7 +106,7 @@ ms.locfileid: "71295732"
   
 ### <a name="to-use-a-custom-package-as-a-package-template"></a>若要使用自訂封裝作為封裝範本  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，開啟您要在其中建立封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟您要在其中建立封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
 2.  在方案總管中，以滑鼠右鍵按一下專案，指向 [加入]  ，然後按一下 [新增項目]  。  
   
@@ -114,4 +114,4 @@ ms.locfileid: "71295732"
   
      範本清單中包含名稱為 [新增 SSIS 封裝] 的預設封裝範本。 封裝圖示識別可當作封裝範本使用的範本。  
   
-4.  按一下 **[加入]** 。  
+4.  按一下 [新增]  。  

@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c183b1830bc5625171cfbb3372b0dbbb6c99e236
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 9dc0d760bd7fd6a89d9829fa5e883ef1ad9b59b7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75259033"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76934195"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>從安裝精靈安裝 SQL Server 2016 (安裝程式)
 
@@ -67,9 +67,9 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
    若要繼續，請選取 [下一步]  。
 
 1. 在 [授權條款]  頁面上，檢閱授權合約。 如果您同意，請選取 [我接受授權條款]  核取方塊，然後選取 [下一步]  。  
-
-   >[!NOTE]
-   > SQL Server 會將您的安裝經驗及其他使用方式與效能資料的相關資訊傳送給 Microsoft，以協助改進產品。 若要深入了解 SQL Server 資料處理與隱私權控制，請參閱[隱私權聲明](https://privacy.microsoft.com/privacystatement)和[設定 SQL Server 將意見反應傳送給 Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016)。
+    
+   > [!NOTE]
+   > SQL Server 會將您的安裝經驗及其他使用方式與效能資料的相關資訊傳送給 Microsoft，以協助改進產品。 若要深入了解 SQL Server 資料處理與隱私權控制，請參閱[隱私權聲明](https://privacy.microsoft.com/privacystatement)和[設定 SQL Server 將意見反應傳送給 Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback)。
 
 1. 在 [全域規則]  頁面中，如果沒有規則錯誤，安裝程序會自動前進到 [產品更新]  頁面。  
   
@@ -227,15 +227,17 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
   
 1. 安裝精靈會執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心。 若要建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新安裝，請在左側導覽區域中，選取 [安裝]  ，然後選取 [新增 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立安裝或將功能新增到現有安裝]  。  
 
-1. 在 [產品金鑰]  頁面上選取選項，指出您要安裝免費的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本或具有 PID 金鑰的產品版本。 如需詳細資訊，請參閱 [SQL Server 2017 的版本及支援功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
+1. 在 [產品金鑰]  頁面上選取選項，指出您要安裝免費的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本或具有 PID 金鑰的產品版本。 如需詳細資訊，請參閱 [SQL Server 2017 的版本及支援功能](../../sql-server/editions-and-components-of-sql-server-version-15.md)。  
   
    若要繼續，請選取 [下一步]  。
-
   
 1. 在 [授權條款]  頁面上，檢閱授權合約。 如果您同意，請選取 [我接受授權條款和[隱私權聲明](https://privacy.microsoft.com/privacystatement)]  核取方塊，然後選取 [下一步]  。  
 
-   >[!NOTE]
-   > SQL Server 會將您的安裝經驗及其他使用方式與效能資料的相關資訊傳送給 Microsoft，以協助改進產品。 若要深入了解 SQL Server 資料處理與隱私權控制，請參閱[隱私權聲明](https://privacy.microsoft.com/privacystatement)和[設定 SQL Server 將意見反應傳送給 Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016)。
+   > [!NOTE]
+   > 如果輸入企業伺服器/CAL 授權產品金鑰，且電腦具有 20 個以上的實體核心，或在啟用超執行緒時有 40 個邏輯核心，則會在安裝期間顯示警告。 您仍然可以繼續安裝，方法是選取 [Check this box to acknowledge this limitation or click Back/Cancel to enter an Enterprise Core product license that supports the operating system maximum] \(核取此方塊以確認這項限制，或按一下 [上一步]/[取消] 以輸入支援最多作業系統的 Enterprise Core 產品授權\)  核取方塊，或按一下 [上一步]  ，然後輸入支援最多作業系統處理器數目的授權金鑰。
+
+   > [!NOTE]
+   > SQL Server 會將您的安裝經驗及其他使用方式與效能資料的相關資訊傳送給 Microsoft，以協助改進產品。 若要深入了解 SQL Server 資料處理與隱私權控制，請參閱[隱私權聲明](https://privacy.microsoft.com/privacystatement)和[設定 SQL Server 將意見反應傳送給 Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback)。
 
 1. 在 [全域規則]  頁面中，如果沒有規則錯誤，安裝程序會自動前進到 [產品更新]  頁面。  
   

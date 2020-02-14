@@ -33,10 +33,10 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134425"
 ---
 # <a name="database-mail-configuration-objects"></a>Database Mail 組態物件
@@ -51,7 +51,7 @@ ms.locfileid: "68134425"
 ##  <a name="VisualElement"></a> Database Mail 組態物件關聯性  
  下圖說明顯示兩個設定檔、三個帳戶及三個使用者。 「使用者 1」有「設定檔 1」的存取權，前者使用「帳戶 1」及「帳戶 2」。 「使用者 3」有「設定檔 2」的存取權，而「設定檔 2」使用「帳戶 3」及「帳戶 3」。 「使用者 2」有「設定檔 1」及「設定檔 2」的存取權。  
   
- ![使用者、設定檔和帳戶的關聯性](../../relational-databases/database-mail/media/databasemailprofileaccount.gif "使用者、設定檔和帳戶的關聯性")  
+ ![使用者、設定檔與帳戶的關聯性](../../relational-databases/database-mail/media/databasemailprofileaccount.gif "使用者、設定檔與帳戶的關聯性")  
   
   
 ##  <a name="DBAccount"></a> Database Mail 帳戶  
@@ -79,7 +79,7 @@ ms.locfileid: "68134425"
   
 -   電子郵件伺服器的名稱。  
   
--   電子郵件伺服器的類型。 若是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，一律為 Simple Mail Transfer Protocol (SMTP)。  
+-   電子郵件伺服器的類型。 針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此一律為簡易郵件傳輸通訊協定 (SMTP)。  
   
 -   電子郵件伺服器的通訊埠編號。  
   
@@ -128,14 +128,14 @@ ms.locfileid: "68134425"
   
 ### <a name="database-mail-settings"></a>Database Mail 設定  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|變更 Database Mail 的組態設定。|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|顯示 Database Mail 的組態設定。|  
   
 ### <a name="accounts-and-profiles"></a>帳戶與設定檔  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|將郵件帳戶加入到 Database Mail 設定檔。|  
 |[sysmail_delete_account_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|刪除 Database Mail 帳戶。|  
@@ -148,9 +148,9 @@ ms.locfileid: "68134425"
 |[sysmail_update_profile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-profile-sp-transact-sql.md)|變更 Database Mail 設定檔的描述或名稱。|  
 |[sysmail_update_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)|更新 Database Mail 設定檔內的帳戶序號。|  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>安全性  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|授與資料庫主體使用 Database Mail 設定檔的權限。|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|移除資料庫使用者使用公用或私人 Database Mail 設定檔的權限。|  
@@ -159,7 +159,7 @@ ms.locfileid: "68134425"
   
 ### <a name="system-state"></a>系統狀態  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[sysmail_start_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|啟動 Database Mail 外部程式，以及關聯的 SQL Service Broker 佇列。|  
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|停止 Database Mail 外部程式，以及關聯的 SQL Service Broker 佇列。|  

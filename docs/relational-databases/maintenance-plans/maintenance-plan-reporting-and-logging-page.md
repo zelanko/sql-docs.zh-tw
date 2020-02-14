@@ -13,10 +13,10 @@ ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2905877f907e932be058a07ba3a9fbbd892e7ae6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115701"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>維護計畫 (報告與記錄頁面)

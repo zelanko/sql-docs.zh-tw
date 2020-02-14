@@ -23,10 +23,10 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f69f0553eecb8ebe13dc23f50982ac09ef63e5a0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299073"
 ---
 # <a name="working-with-variables-programmatically"></a>以程式設計方式使用變數
@@ -50,7 +50,7 @@ ms.locfileid: "71299073"
   
 -   您可以為下列所有容器類型建立自訂變數：套件、**Foreach 迴圈**容器、**For 迴圈**容器、**時序**容器、TaskHost 和事件處理常式。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
-## <a name="scope"></a>範圍。  
+## <a name="scope"></a>影響範圍  
  每個容器有它自己的 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 集合。 在建立新變數時，它在其父容器的範圍內。 因為封裝容器位於容器階層的最上層，所以具有封裝範圍的變數在功能上與全域變數相同，而且在封裝中的所有容器都可以看到它們。 透過使用集合中的變數名稱或是變數的索引，容器的子系也可以透過 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 集合來存取容器的變數集合。  
   
  因為變數的可見性範圍是從上向下，所以封裝中的所有容器都可以看到在封裝層級宣告的變數。 因此，在容器上的 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 集合除了自己的變數以外，還會包括屬於其父系的所有變數。  
@@ -162,11 +162,11 @@ End Module
  請注意，在**系統**命名空間中限定範圍的所有變數，都可供套件使用。 如需詳細資訊，請參閱 [系統變數](../../integration-services/system-variables.md)。  
   
 ## <a name="namespaces"></a>命名空間  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 提供存在兩個變數的預設命名空間：**使用者**與**系統**命名空間。 根據預設，開發人員建立的任何自訂變數都會新增至**使用者**命名空間。 系統變數位於**系統**命名空間中。 您可以建立**使用者**命名空間之外的其他命名空間，以儲存自訂變數，而且可以變更**使用者**命名空間的名稱，但是無法在**系統**命名空間中新增或修改變數，也無法將系統變數指派給不同的命名空間。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ( [!INCLUDE[ssIS](../../includes/ssis-md.md)]) 提供存在變數的兩個預設命名空間：**使用者**與**系統**命名空間。 根據預設，開發人員建立的任何自訂變數都會新增至**使用者**命名空間。 系統變數位於**系統**命名空間中。 您可以建立**使用者**命名空間之外的其他命名空間，以儲存自訂變數，而且可以變更**使用者**命名空間的名稱，但是無法在**系統**命名空間中新增或修改變數，也無法將系統變數指派給不同的命名空間。  
   
  可使用的系統變數會因容器類型而異。 如需可用於套件、容器、工作和事件處理常式的系統變數清單，請參閱[系統變數](../../integration-services/system-variables.md)。  
   
-## <a name="value"></a>ReplTest1  
+## <a name="value"></a>值  
  自訂變數值可以是常值或是運算式：  
   
 -   如果您希望變數包含常值，請設定其 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 屬性值。  
@@ -234,6 +234,6 @@ End Module
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)   
- [在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [在套件中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

@@ -17,10 +17,10 @@ ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fa19857dc7c0651beeaedfdef8b843fcfc58c62
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296413"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>使用指令碼元件建立同步轉換
@@ -82,7 +82,7 @@ ms.locfileid: "71296413"
  如需 [指令碼轉換編輯器]  的 [指令碼]  頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)。  
   
 ## <a name="scripting-a-synchronous-transformation-component-in-code-design-mode"></a>在程式碼設計模式中編寫同步轉換元件的指令碼  
- 在您設定好元件的中繼資料之後，便可撰寫自訂指令碼。 在 [指令碼轉換編輯器]  的 [指令碼]  頁面上，按一下 [編輯指令碼]  ，開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 以新增自訂指令碼。 所使用的指令碼語言取決於您選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 還是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作為 [指令碼]  頁面上 **ScriptLanguage** 屬性的指令碼語言。  
+ 在您設定好元件的中繼資料之後，便可撰寫自訂指令碼。 在 [指令碼轉換編輯器]  的 [指令碼]  頁面上，按一下 [編輯指令碼]  來開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 以新增自訂指令碼。 所使用的指令碼語言取決於您選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 還是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作為 [指令碼]  頁面上 **ScriptLanguage** 屬性的指令碼語言。  
   
  如需使用指令碼元件所建立之各種元件都適用的重要資訊，請參閱[編碼和偵錯指令碼元件](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。  
   
@@ -151,7 +151,7 @@ else
   
 2.  將來源的輸出或另一個轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的新轉換元件。 這個輸出應該從 **AdventureWorks** 範例資料庫的 **Person.Address** 資料表中提供資料，這個資料表包含 **AddressID** 和 **City** 資料行。  
   
-3.  開啟 [指令碼轉換編輯器]  。 在 [輸入資料行]  頁面上，選取 [AddressID]  和 [City]  資料行。 將 **City** 資料行標示為讀取/寫入。  
+3.  開啟**指令碼轉換編輯器**。 在 [輸入資料行]  頁面上，選取 [AddressID]  與 [City]  資料行。 將 **City** 資料行標示為讀取/寫入。  
   
 4.  在 [輸入及輸出]  頁面上，以更具描述性的名稱重新命名輸入與輸出；例如 **MyAddressInput** 和 **MyAddressOutput**。 請注意，輸出的 **SynchronousInputID** 會對應至輸入的 **ID**。 因此，您不必加入和設定輸出資料行。  
   
@@ -203,7 +203,7 @@ public class ScriptMain:
   
 2.  將來源的輸出或另一個轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的新轉換元件。 這個輸出應該從 **AdventureWorks** 範例資料庫的 **Person.Address** 資料表中提供資料，這個資料表至少包含 **AddressID** 和 **City** 資料行。  
   
-3.  開啟**指令碼轉換編輯器**。 在 [輸入資料行]  頁面上，選取 [AddressID]  和 [City]  資料行。 將 **City** 資料行標示為讀取/寫入。  
+3.  開啟**指令碼轉換編輯器**。 在 [輸入資料行]  頁面上，選取 [AddressID]  與 [City]  資料行。 將 **City** 資料行標示為讀取/寫入。  
   
 4.  在 [輸入及輸出]  頁面上，建立第二個輸出。 在新增輸出之後，請確定將其 **SynchronousInputID** 設定為輸入的 **ID**。 在預設會建立的第一個輸出上已經設定這個屬性。 對於每個輸出，請將 **ExclusionGroup** 屬性設定為相同的非零值，以指出您將在兩個互斥輸出之間分割輸入資料列。 您不必將任何輸出資料行加入輸出。  
   

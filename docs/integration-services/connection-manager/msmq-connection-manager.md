@@ -18,10 +18,10 @@ ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a6cd2bbabd1cae5fd23dd0522c9664d39b66084f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298531"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 連接管理員
@@ -29,7 +29,7 @@ ms.locfileid: "71298531"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  MSMQ 連接管理員可讓封裝連接到使用 Message Queuing (又稱為 MSMQ) 的訊息佇列。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的「訊息佇列」工作使用 MSMQ 連線管理員。  
+  MSMQ 連接管理員可讓封裝連接到使用 Message Queuing (又稱為 MSMQ) 的訊息佇列。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的「訊息佇列」工作會使用 MSMQ 連線管理員。  
   
  當您將 MSMQ 連線管理員加入封裝時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立在執行階段解析為 MSMQ 連接的連線管理員、設定連線管理員屬性，並將連線管理員加入封裝上的 **Connections** 集合。 連線管理員的 **ConnectionManagerType** 屬性會設為 **MSMQ**。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "71298531"
   
 |佇列類型|範例路徑|  
 |----------------|-----------------|  
-|公用|\<電腦名稱>\\<佇列名稱\>|  
+|公開|\<電腦名稱>\\<佇列名稱\>|  
 |Private|\<電腦名稱>\Private$\\<佇列名稱\>|  
   
  您可以使用句號 (.) 代表本機電腦。  
@@ -75,12 +75,12 @@ ms.locfileid: "71298531"
   
 |佇列類型|範例路徑|  
 |----------------|-----------------|  
-|公用|\<電腦名稱>\\<佇列名稱\>|  
+|公開|\<電腦名稱>\\<佇列名稱\>|  
 |Private|\<電腦名稱>\Private$\\<佇列名稱\>|  
   
  您可以使用 "." 代表本機電腦。  
   
- **測試**  
+ **Test**  
  在設定 MSMQ 連線管理員之後，請按一下 [測試]  來確認連接已可使用。  
   
 ## <a name="see-also"></a>另請參閱  

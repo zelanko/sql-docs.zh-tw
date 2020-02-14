@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf9b8222453cea1bdaecad25256819aa7bcb1366
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909551"
 ---
 # <a name="set-index-options"></a>設定索引選項
@@ -59,7 +59,7 @@ ms.locfileid: "67909551"
 - 透過使用 ALTER INDEX 陳述式的 SET 子句，會在索引立即套用下列選項：ALLOW_PAGE_LOCKS、ALLOW_ROW_LOCKS、OPTIMIZE_FOR_SEQUENTIAL_KEY、IGNORE_DUP_KEY 和 STATISTICS_NORECOMPUTE。
 - 當您使用 ALTER INDEX REBUILD 或 CREATE INDEX WITH DROP_EXISTING 重建索引時，可以設定下列選項：PAD_INDEX、FILLFACTOR、SORT_IN_TEMPDB、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE、ONLINE、ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、MAXDOP 和 DROP_EXISTING (僅限 CREATE INDEX)。
 
-### <a name="Security"></a> 安全性
+### <a name="Security"></a> Security
 
 #### <a name="Permissions"></a> 權限
 
@@ -75,7 +75,7 @@ ms.locfileid: "67909551"
 4. 在 [資料表設計工具]  功能表上，按一下 [索引/索引鍵]  。
 5. 選取您要修改的索引。 其屬性會在主要方格中顯示。
 6. 變更任何和所有屬性的設定，以自訂索引。
-7. 按一下 [ **關閉**]。
+7. 按一下 [關閉]  。
 8. 在 [檔案]  功能表上，選取 [儲存 _table_name_]  。
 
 ### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>在物件總管中修改索引的屬性
@@ -87,7 +87,7 @@ ms.locfileid: "67909551"
 5. 以滑鼠右鍵按一下要修改其屬性的索引，然後選取 [屬性]  。
 6. 在 **[選取頁面]** 底下，選取 **[選項]** 。
 7. 變更任何和所有屬性的設定，以自訂索引。
-8. 若要加入、移除或變更索引資料行的位置，請選取 [索引屬性 - _index_name_]  對話方塊中的 [一般]  頁面。 如需相關資訊，請參閱 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)
+8. 若要新增、移除或變更索引資料行的位置，請選取 [索引屬性 - _index_name_]  對話方塊中的 [一般]  頁面。 如需相關資訊，請參閱 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)
 
 ## <a name="TsqlProcedure"></a> 使用 Transact-SQL
 

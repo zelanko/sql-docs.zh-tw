@@ -20,10 +20,10 @@ ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0b07cc17344e27d82155ceaae8e55494deb0bd57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065674"
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT (Transact-SQL)
@@ -110,7 +110,7 @@ FOR DATABASE_MIRRORING (
  **FOR** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
  您不能使用 **ALTER ENDPOINT** 來變更承載類型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當您使用 ALTER ENDPOINT 時，只要指定您要更新的參數即可。 現有端點的所有屬性，都將保持不變，除非您明確變更它們。  
   
  ENDPOINT DDL 陳述式不能在使用者交易內執行。  

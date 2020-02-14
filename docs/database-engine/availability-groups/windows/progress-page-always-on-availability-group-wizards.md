@@ -16,10 +16,10 @@ ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 87201ed5c3d2368f54e2ffb0c57391322066a30b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014469"
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>進度頁面 (AlwaysOn 可用性群組精靈)
@@ -37,11 +37,11 @@ ms.locfileid: "68014469"
  **狀態**  
  指出已完成步驟的結果以及目前步驟的完成百分比，如下所示：  
   
-|結果|Description|  
+|結果|描述|  
 |------------|-----------------|  
 |**錯誤**|表示這個步驟的作業發生錯誤。 按一下連結可顯示描述錯誤的訊息對話方塊。|  
-|**進行中 (** *完成百分比* **)**|表示作業目前正在進行，並且估計這個步驟已完成的百分比。|  
-|**成功**|表示這個步驟的作業已順利完成。|  
+|**進行中 (** 完成百分比  **)**|表示作業目前正在進行，並且估計這個步驟已完成的百分比。|  
+|「成功」 |表示這個步驟的作業已順利完成。|  
   
  **較少詳細資料**  
  按一下可隱藏進度方格。  
@@ -55,7 +55,7 @@ ms.locfileid: "68014469"
   
 -   [使用 [將複本加入可用性群組中精靈] &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [使用 [將資料庫加入可用性群組中精靈] &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
+-   [使用將資料庫加入至可用性群組精靈 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
 -   [使用容錯移轉可用性群組精靈 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   

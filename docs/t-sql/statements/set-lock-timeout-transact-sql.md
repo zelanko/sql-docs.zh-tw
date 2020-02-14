@@ -26,13 +26,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 97bdfbe485c129e7040235db7fffe296bb16897a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67928902"
 ---
-# <a name="set-locktimeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
+# <a name="set-lock_timeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   指定陳述式等待鎖定釋出的毫秒數。  
@@ -51,7 +51,7 @@ SET LOCK_TIMEOUT timeout_period
   
  當等待鎖定超出逾時值時，會傳回錯誤。 0 值表示完全不等待，且在發現鎖定之後，儘快傳回一則訊息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  在開始連線時，這個設定的值為 -1。 變更之後，新設定會在接下來的連線時間內維持有效。  
   
  SET LOCK_TIMEOUT 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
