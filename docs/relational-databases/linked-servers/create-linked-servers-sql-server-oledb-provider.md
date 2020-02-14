@@ -11,10 +11,10 @@ ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095997"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Microsoft SQL Server 分散式查詢：OLE DB 連接
@@ -98,7 +98,7 @@ SQL 命令提供者的範例為 Microsoft OLE DB Provider for SQL Server 和 Mic
 
 索引鍵集資料指標會在資料指標開啟時填入，且結果集會在整個資料指標存留期間保持不變。 不過，在瀏覽資料列之後，即會在資料指標中看見對基礎資料表所做的更新和刪除。 但如果對基礎資料表所做的插入可能影響資料指標成員資格，則看不見這些插入。
 
-如果提供者符合遠端資料表上的更新和刪除條件，則可透過定義於分散式查詢並參考遠端資料表的資料指標來更新或刪除遠端資料表，例如 table `UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`。 如需詳細資訊，請參閱本文稍後的 \"UPDATE 和 DELETE 陳述式\"。
+如果提供者符合遠端資料表上的更新和刪除條件，則可透過定義於分散式查詢並參考遠端資料表的資料指標來更新或刪除遠端資料表，例如資料表 `UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`。 如需詳細資訊，請參閱本文稍後的 \"UPDATE 和 DELETE 陳述式\"。
 
 #### <a name="keyset-cursor-support-requirements"></a>索引鍵集資料指標支援需求
 
@@ -323,7 +323,7 @@ SQL Server 和 OLE DB 資料類型對應表。
 |`DBTYPE_NUMERIC`| |`numeric`|
 |`DBTYPE_DECIMAL`| |`decimal`|
 |`DBTYPE_CY`| |`money`|
-|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>中的多個<br> 最大長度 > 4000 個字元|ntext|
+|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>或<br> 最大長度 > 4000 個字元|ntext|
 |`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`|NCHAR|
 |`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|NVARCHAR|
 |`DBTYPE_IDISPATCH`| |錯誤|
@@ -332,16 +332,16 @@ SQL Server 和 OLE DB 資料類型對應表。
 |`DBTYPE_VARIANT`*| |NVARCHAR|
 |`DBTYPE_IUNKNOWN`| |錯誤|
 |`DBTYPE_GUID`| |`uniqueidentifier`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>中的多個<br> 最大長度 > 8000|`image`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`、`DBCOLUMNFLAGS_ISFIXEDLENGTH=true`、資料行大小 = 8 <br>中的多個<br> 未回報最大長度。 | `timestamp` |
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>或<br> 最大長度 > 8000|`image`|
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`、`DBCOLUMNFLAGS_ISFIXEDLENGTH=true`、資料行大小 = 8 <br>或<br> 未回報最大長度。 | `timestamp` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `binary` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varbinary`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `char`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varchar` |
-|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>中的多個<br> 最大長度 > 8000 個字元 <br>中的多個<br>   未回報最大長度。 | `text`|
+|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>或<br> 最大長度 > 8000 個字元 <br>或<br>   未回報最大長度。 | `text`|
 |`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` |`nchar`|
 |`DBTYPE_WSTR` | `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|`nvarchar`|
-|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>中的多個<br> 最大長度 > 4000 個字元 <br>中的多個<br>   未回報最大長度。 | `ntext`|
+|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>或<br> 最大長度 > 4000 個字元 <br>或<br>   未回報最大長度。 | `ntext`|
 |`DBTYPE_UDT`| |錯誤|
 |`DBTYPE_DATE`* | | `datetime` |
 |`DBTYPE_DBDATE` | | `datetime` (需要明確轉換)|
@@ -427,7 +427,7 @@ SQL Server 會依照 OLE DB 所指定來使用 OLE DB 錯誤物件。 以下是�
 
 如需如何使用提供者錯誤物件的詳細資訊，請參閱您的 OLE DB 文件。
 
-### <a name="security"></a>Security
+### <a name="security"></a>安全性
 
 當取用者連接到 OLE DB 提供者時，除非取用者想要以整合式安全性使用者身分進行驗證，否則提供者通常需要使用者識別碼和密碼。 在分散式查詢案例中，SQL Server 可作為 OLE DB 提供者的取用者，代替 SQL Server 登入執行分散式查詢。 SQL Server 會將目前的 SQL Server 登入對應到連結伺服器上使用者識別碼和密碼。
 
@@ -536,7 +536,7 @@ SQL Server 支援在每個資料行層級指定字元資料的定序。 針對�
 
 為了回溯相容性，仍然支援 SQL Server 7.0 中支援的 [定序相容] 選項。 將它設定為 true 相當於將 [定序名稱] 選項設定為 SQL Server master 資料庫的預設定序。 新的應用程式應該使用 [定序名稱] 選項，而不是 [定序相容] 選項。
 
-### <a name="indexed-access"></a>索引存取
+### <a name="indexed-access"></a>索引查詢
 
 SQL Server 使用提供者所公開索引來評估分散式查詢的特定述詞。 此案例只能對索引提供者進行，且使用者必須設定 `Index as Access Path` 提供者選項。 下列是當 SQL Server 使用索引執行查詢時，對提供者所執行的主要高階步驟：
 
@@ -616,7 +616,7 @@ Microsoft SQL Server 提供最強大的工具組，可從異質性資料來源�
 
 在選擇性介面案例中，[案例] 欄指出使用指定介面的六個案例其中一或多個案例。 例如，基底資料表資料列集上的 `IRowsetChange` 介面是選擇性介面，此介面可用於 `UPDATE` 和 DELETE 陳述式以及 `INSERT` 陳述式案例。 如果不支援此介面，就無法支援對該提供者使用 UPDATE、DELETE 和 `INSERT` 陳述式。 其他一些選擇性介面會在 [案例] 欄中標示為「效能」，表示此介面會產生更好的整體效能。 例如，如果不支援 `IDBSchemaRowset` 介面，則 SQL Server 必須開啟資料列集兩次：一次用於擷取其中繼資料，一次用於查詢執行。 藉由支援 `IDBSchemaRowset`，即可改善 SQL Server 效能。
 
-|Object|介面|必要項|註解|案例|
+|Object|介面|必要|註解|案例|
 |:-----|:-----|:-----|:-----|:-----|
 |Data Source 物件|`IDBInitialize`|是|初始化與設定資料和安全性內容。| |
 | |`IDBCreateSession`|是|建立 DB Session 物件。| |
@@ -640,7 +640,7 @@ Microsoft SQL Server 提供最強大的工具組，可從異質性資料來源�
 | |`IColumnsInfo`|是|取得資料列集的資料行相關資訊。|索引存取、效能。|
 | |`IRowsetInfo`|是|取得資料列集屬性的相關資訊。|索引存取、效能。|
 | |`IRowsetIndex`|是|對於索引上的資料列集是必要的；用於索引功能 (設定範圍、搜尋)。|索引存取、效能。|
-|命令|`ICommand`|是| |遠端查詢、傳遞查詢。|
+|Command|`ICommand`|是| |遠端查詢、傳遞查詢。|
 | |`ICommandText`|是|用於定義查詢文字。|遠端查詢、傳遞查詢。|
 | |`IColumnsInfo`|是|用於取得查詢結果的資料行中繼資料。|遠端查詢、傳遞查詢。|
 | |`ICommandProperties`|是|用於指定命令所傳回資料列集的必要屬性。|遠端查詢、傳遞查詢。|
@@ -680,7 +680,7 @@ SQL Server 會針對支援 SQL-92 入門層級或 ODBC 核心層級的 SQL 命�
 
    - 不含 AS 關鍵字的資料表別名。
 
-1. `WHERE` 子句使用子查詢並搭配 `NOT`、`EXISTS`、`ANY`、`ALL`。
+1. `WHERE` 子句搭配 `NOT`、`EXISTS`、`ANY`、`ALL` 使用子查詢。
 
 1. 運算式：
 

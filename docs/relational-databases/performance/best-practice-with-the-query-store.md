@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d35637b9452500caac680439bd1ef09442d9ef11
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: f5861ece9a27e0d38274e9cac97ae046a9f6bdde
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142781"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910101"
 ---
 # <a name="best-practices-with-query-store"></a>使用查詢存放區的最佳做法
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "73142781"
   本文概述工作負載與 SQL Server 查詢存放區搭配使用的最佳做法。
   
 ##  <a name="SSMS"></a> 使用最新版 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一組使用者介面，其設計為用來設定查詢存放區，以及用來取用所收集與工作負載相關的資料。 [在此](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)下載最新版 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一組使用者介面，其設計為用來設定查詢存放區，以及用來取用所收集與工作負載相關的資料。 [在此](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)下載最新版的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
  如需如何在疑難排解案例中使用查詢存放區的快速描述，請參閱[查詢存放區@Azure部落格](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)。  
   
@@ -73,7 +73,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  [資料排清間隔 (分鐘)]  ：它定義將所收集執行階段統計資料保存到磁碟的頻率。 在圖形化使用者介面 (GUI) 中是以分鐘表示，但在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中則是以秒表示。 預設值為 900 秒，在圖形化使用者介面即 15 分鐘。 如果您的工作負載不會產生大量不同的查詢與計劃，或您可以在資料庫關閉之前承受較長的資料保存時間，請考慮使用較高的值。
  
 > [!NOTE]
-> 您可以使用追蹤旗標 7745，防止查詢存放區在發生容錯移轉或關機命令時將資料寫入磁碟。 如需詳細資訊，請參閱[＜在任務關鍵性伺服器上使用追蹤旗標來改善災害復原＞](#Recovery)一節。
+> 您可以使用追蹤旗標 7745，防止查詢存放區在發生容錯移轉或關機命令時將資料寫入磁碟。 如需詳細資訊，請參閱 [在任務關鍵性伺服器上使用追蹤旗標](#Recovery)一節。
 
 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 為 [資料排清間隔]  設定不同的值：  
   
@@ -111,7 +111,10 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 -   [自動]  ：會忽略不頻繁的查詢，以及包含無意義編譯和執行期間的查詢。 執行計數、編譯和執行階段持續時間的臨界值由系統內部決定。 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，這是預設選項。
 -   **無**：查詢存放區會停止擷取新的查詢。  
 -   [自訂]  ：允許額外控制及微調資料收集原則的功能。 新的自訂設定可定義在內部擷取原則時間臨界值期間會發生什麼情況。 這是評估可設定條件的時間界限；如果任何條件成立的話，即可由查詢存放區來擷取查詢。
-  
+
+> [!IMPORTANT]
+> 當 [查詢存放區擷取模式] 設定為 [全部]  、[自動]  或 [自訂]  時，系統一律會擷取資料指標、預存程序中的查詢，以及原生編譯的查詢。 若要擷取原生編譯查詢，請使用 [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 來啟用收集每個查詢的統計資料。 
+
  下列指令碼會將 QUERY_CAPTURE_MODE 設定為 AUTO：
   
 ```sql  
@@ -324,9 +327,9 @@ FROM sys.database_query_store_options;
   
 |查詢存放區擷取模式|狀況|  
 |------------------------|--------------|  
-|**全部**|根據所有查詢圖形、其執行頻率和其他統計資料，徹底分析您的工作負載。<br /><br /> 識別您的工作負載中的新查詢。<br /><br /> 偵測特定查詢是否用來識別使用者或自動參數化的機會。<br /><br />注意:這是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中的預設擷取模式。|
+|**全部**|根據所有查詢圖形、其執行頻率和其他統計資料，徹底分析您的工作負載。<br /><br /> 識別您工作負載中的新查詢。<br /><br /> 偵測是否使用臨機操作查詢來識別使用者或自動參數化的機會。<br /><br />注意:這是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中的預設擷取模式。|
 |**Auto**|將注意力放在相關且可採取動作的查詢上。 例如，那些會定期執行或耗用大量資源的查詢。<br /><br />注意:從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，這是預設的擷取選項。|  
-|**無**|您已擷取要在執行階段中監視的查詢集，並想排除其他查詢可能會造成的分心。<br /><br /> [無] 適合用於測試和效能評定環境。<br /><br /> 「無」也適用於在出貨時已將查詢存放區組態設定為監視其應用程式工作負載的軟體廠商。<br /><br /> 您應該謹慎使用 [無]，以免錯失追蹤重要新查詢並將其最佳化的機會。 除非您有需要「無」的特定案例，否則請避免使用。|  
+|**None**|您已擷取要在執行階段中監視的查詢集，並想排除其他查詢可能會造成的分心。<br /><br /> [無] 適合用於測試和效能評定環境。<br /><br /> 「無」也適用於在出貨時已將查詢存放區組態設定為監視其應用程式工作負載的軟體廠商。<br /><br /> 您應該謹慎使用 [無]，以免錯失追蹤重要新查詢並將其最佳化的機會。 除非您有需要「無」的特定案例，否則請避免使用。|  
 |**Custom**|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 會在 `ALTER DATABASE SET QUERY_STORE` 命令下引進 [自訂] 擷取模式。 啟用後，即可在新的查詢存放區擷取原則設定下，使用額外查詢存放區設定來微調特定伺服器中的資料收集。<br /><br />新的自訂設定可定義在內部擷取原則時間臨界值期間會發生什麼情況。 這是評估可設定條件的時間界限；如果任何條件成立的話，即可由查詢存放區來擷取查詢。 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。|  
 
 > [!NOTE]
