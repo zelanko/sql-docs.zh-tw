@@ -22,15 +22,15 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321885"
 ---
-# <a name="conflict-resolution-for-merge-replication"></a>合併式複寫的衝突解決
+# <a name="conflict-resolution-for-merge-replication"></a>解決合併式複寫的衝突
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   合併式複寫中的衝突根據為每個發行項指定的解決器進行解決。 依預設，衝突的解決不需要使用者的介入。 但是可以在「 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 複寫衝突檢視器」(Replication Conflict Viewer) 中檢視衝突並變更解決的結果。  
   
  複寫衝突檢視器可以在衝突保留期限指定的時間內使用衝突資料 (預設為 14 天)。 若要設定衝突保留期限，可以：  
+
+-   針對 [**sp_addmergepublication &#40;Transact-SQL&#41;**](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@conflict_retention` 參數指定保留值。
   
--   針對 `@conflict_retention`sp_addmergepublication &#40;Transact-SQL&#41;[ 的 ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 參數指定保留值。  
-  
--   針對 **sp_changemergepublication &#40;Transact-SQL&#41;** 的 `@property` 參數指定 `@value`conflict_retention[ 的值，且為 ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 參數指定保留值。  
+-   針對 [**sp_changemergepublication &#40;Transact-SQL&#41;**](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 的 `@property` 參數指定一個 **flict_retention** 值，並且為 `@value` 參數指定保留值。
   
  依預設，會儲存衝突資訊：    
 -   如果發行集相容性層級為 90RTM 或更高，則是在「發行者」與「訂閱者」端。   
