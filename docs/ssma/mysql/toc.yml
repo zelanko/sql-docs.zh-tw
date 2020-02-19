@@ -1,4 +1,4 @@
-- name: mySQL
+- name: MySQL
   href: sql-server-migration-assistant-for-mysql-mysqltosql.md
 - name: 安裝 SSMA
   href: installing-ssma-for-mysql-mysqltosql.md
@@ -106,7 +106,7 @@
       href: project-settings-azure-sql-db-mysqltosql.md
     - name: 類型對應
       href: project-settings-type-mapping-mysqltosql.md
-    - name: 移轉
+    - name: 遷移
       href: project-settings-migration-mysqltosql.md
     - name: Synchronization
       href: project-settings-synchronization-mysqltosql.md

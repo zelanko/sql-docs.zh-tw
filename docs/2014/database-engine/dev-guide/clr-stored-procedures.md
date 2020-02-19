@@ -7,7 +7,6 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: reference
 dev_langs:
-- TSQL
 - VB
 - CSharp
 helpviewer_keywords:
@@ -21,12 +20,12 @@ ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f509b2a2544c67c9113bc700b7d98bfd4a24024
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e7e79307e2c913841ae1e017e6a5c180dfd55b6b
+ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62753813"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77213964"
 ---
 # <a name="clr-stored-procedures"></a>CLR 預存程序
   預存程序是無法在純量運算式中使用的常式。 不像純量函數，它們可以將表格式結果及訊息傳回到用戶端、叫用資料定義語言 (DDL) 及資料操作語言 (DML) 陳述式，並傳回輸出參數。 如需 CLR 整合的優點，以及在 managed 程式碼和[!INCLUDE[tsql](../../includes/tsql-md.md)]之間選擇的詳細資訊，請參閱[CLR 整合的總覽](../../relational-databases/clr-integration/clr-integration-overview.md)。  
@@ -50,9 +49,9 @@ ms.locfileid: "62753813"
   
 ### <a name="output-parameters-and-clr-stored-procedures"></a>OUTPUT 參數與 CLR 預存程序  
  與 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序一樣，資訊可透過 OUTPUT 參數，從 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 預存程序傳回。 用於建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] DML 語法，與用於建立寫入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 之預存程序的語法相同。 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別內實作程式碼中的對應參數應使用依參照傳遞的參數做為引數。 請注意，Visual Basic 不支援輸出參數的方式，與 Visual C# 所使用的方式不同。 您必須依參考指定參數，並套用\<Out （） > 屬性來表示輸出參數，如下所示：  
+  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別內實作程式碼中的對應參數應使用依參照傳遞的參數做為引數。 請注意，Visual Basic 不支援與 c # 相同的輸出參數。 您必須依參考指定參數，並套用\<Out （） > 屬性來表示輸出參數，如下所示：  
   
-```  
+```vb
 Imports System.Runtime.InteropServices  
 ...  
 Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)  
@@ -60,9 +59,7 @@ Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)
   
  以下範例示範透過 OUT 參數傳回資訊的預存程序：  
   
- C#  
-  
-```  
+```csharp  
 using System;  
 using System.Data.SqlTypes;  
 using System.Data.SqlClient;  
@@ -92,9 +89,7 @@ public class StoredProcedures
 }  
 ```  
   
- Visual Basic  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -130,7 +125,7 @@ End Class
   
  一旦包含上述 CLR 預存程式的元件在伺服器上建立並建立之後，就會使用[!INCLUDE[tsql](../../includes/tsql-md.md)]下列方法在資料庫中建立程式，並將*SUM*指定為 OUTPUT 參數。  
   
-```  
+```sql
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
 AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum  
 -- if StoredProcedures class was inside a namespace, called MyNS,  
@@ -152,9 +147,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 ###### <a name="returning-tabular-results"></a>傳回表格式結果  
  若要將查詢結果直接傳送至用戶端，請在 `Execute` 物件上使用 `SqlPipe` 方法的其中一個多載。 這是將結果傳回至用戶端的最有效方式，因為資料會傳輸到網域緩衝區，而不是複製到 Managed 記憶體中。 例如：  
   
- [C#]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlTypes;  
@@ -179,9 +172,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -232,10 +223,8 @@ public class StoredProcedures
    }  
 }  
 ```  
-  
- [Visual Basic]  
-  
-```  
+ 
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -289,9 +278,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -341,9 +328,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -374,7 +359,7 @@ End Class
   
  請注意，這些範例僅做為說明之用。 對於需要大量計算的應用程式，CLR 函數比簡單的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式更為適合。 幾乎等同於先前範例的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序為：  
   
-```  
+```sql
 CREATE PROCEDURE HelloWorld() AS  
 BEGIN  
 PRINT('Hello world!')  
@@ -387,13 +372,13 @@ END;
   
  如果上述的 Visual C# 程式碼儲存在 MyFirstUdp.cs 檔案中，而且使用下列方式編譯：  
   
-```  
+```console
 csc /t:library /out:MyFirstUdp.dll MyFirstUdp.cs   
 ```  
   
  或者，如果上述的 Visual Basic 程式碼儲存在 MyFirstUdp.vb 檔案中，而且使用下列方式編譯：  
   
-```  
+```console
 vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb   
 ```  
   
@@ -402,7 +387,7 @@ vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb
   
  利用下列 DDL，可以註冊所產生的組件，並叫用進入點：  
   
-```  
+```sql
 CREATE ASSEMBLY MyFirstUdp FROM 'C:\Programming\MyFirstUdp.dll';  
 CREATE PROCEDURE HelloWorld  
 AS EXTERNAL NAME MyFirstUdp.StoredProcedures.HelloWorld;  

@@ -1,7 +1,7 @@
 ---
 title: sys.databases （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 02/12/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d4d307ea18127586ac46b0f6afb973ef62cf6ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3208f538a1c1e111913c0808a8213743fed41bcc
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74761477"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179289"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "74761477"
 |**allow_row_locks**|**bit**|1 = 索引允許資料列鎖定。<br /><br /> 0 = 索引不允許資料列鎖定。<br /><br /> 永遠是 0，表示叢集資料行存放區索引。|  
 |**allow_page_locks**|**bit**|1 = 索引允許頁面鎖定。<br /><br /> 0 = 索引不允許頁面鎖定。<br /><br /> 永遠是 0，表示叢集資料行存放區索引。|  
 |**has_filter**|**bit**|1 = 索引有篩選，而且只包含滿足篩選定義的資料列。<br /><br /> 0 = 索引沒有篩選。|  
-|**filter_definition**|**nvarchar(max)**|包含在已篩選之索引內的資料列子集運算式。<br /><br /> NULL 代表堆積或非篩選的索引。|  
+|**filter_definition**|**nvarchar(max)**|包含在已篩選之索引內的資料列子集運算式。<br /><br /> Null 代表堆積、非篩選索引，或資料表的許可權不足。|  
 |**auto_created**|**bit**|1 = 索引是由自動調整所建立。<br /><br />0 = 索引是由使用者所建立。
 |**optimize_for_sequential_key**|**bit**|1 = 索引已啟用最後頁面插入優化。<br><br>0 = 預設值。 索引已停用最後頁面的插入優化。|
 

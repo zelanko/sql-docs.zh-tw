@@ -22,7 +22,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321885"
 ---
-# <a name="conflict-resolution-for-merge-replication"></a>合併式複寫的衝突解決
+# <a name="conflict-resolution-for-merge-replication"></a>解決合併式複寫的衝突
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   合併式複寫中的衝突根據為每個發行項指定的解決器進行解決。 依預設，衝突的解決不需要使用者的介入。 但是可以在「 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 複寫衝突檢視器」(Replication Conflict Viewer) 中檢視衝突並變更解決的結果。  
   

@@ -20,12 +20,12 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4fba10bd080c4b97cd38a7330611bed51f3d225
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 23fd1a0c896436dad27ab771e2ed04c775938091
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73982646"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429010"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "73982646"
 |-----------------|---------------|-----------------|  
 |**sql_handle**|**Varbinary （64）**  |這是一個標記，可唯一識別查詢所屬的批次或預存程式。<br /><br /> **sql_handle**，連同**statement_start_offset**和**statement_end_offset**，可以藉由呼叫**sys.databases dm_exec_sql_text**動態管理函數，來抓取查詢的 sql 文字。|  
 |**statement_start_offset**|**int**|表示資料列於其批次或保存物件的文字中所描述之查詢的起始位置 (由 0 開始並以位元組為單位)。|  
-|**statement_end_offset**|**int**|表示資料列於其批次或保存物件的文字中所描述之查詢的結束位置 (由 0 開始並以位元組為單位)。 在之前[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的版本中，-1 的值表示批次的結尾。 已不再包含尾端批註。|  
+|**statement_end_offset**|**int**|表示資料列於其批次或保存物件的文字中所描述之查詢的結束位置 (由 0 開始並以位元組為單位)。 在之前[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的版本中，-1 的值表示批次的結尾。 已不再包含尾端的註解。|  
 |**plan_generation_num**|**Bigint**|可用於重新編譯之後區分計畫執行個體的序號。|  
 |**plan_handle**|**Varbinary （64）**|這是一個標記，可唯一識別已執行之批次的查詢執行計畫，且其計畫位於計畫快取中，或目前正在執行。 此值可以傳遞至 [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) 動態管理函數，以取得查詢計畫。<br /><br /> 當原生編譯的預存程序查詢記憶體最佳化的資料表時，一律為 0x000。|  
 |**creation_time**|**datetime**|計畫的編譯時間。|  

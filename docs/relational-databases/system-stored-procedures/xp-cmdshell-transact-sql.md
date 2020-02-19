@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be1b7bc97a46282e0adae2fb5679cfff0cd11dd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c7515ae9b453a1d3a65b317f20ab4e13b8fb15e8
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74687315"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256761"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +124,7 @@ REVERT ;
  下列範例會顯示執行目錄命令的 `xp_cmdshell` 擴充預存程序。  
   
 ```  
-EXEC master..xp_cmdshell 'dir *.exe''  
+EXEC master..xp_cmdshell 'dir *.exe'  
 ```  
   
 ### <a name="b-returning-no-output"></a>B. 未傳回輸出  

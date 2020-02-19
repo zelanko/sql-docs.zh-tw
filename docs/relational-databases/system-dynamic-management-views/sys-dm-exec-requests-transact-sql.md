@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: sstein
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -19,13 +18,14 @@ helpviewer_keywords:
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
+ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20257eb1a91b35dd45e1b4fc79f84533c64b2561
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 16939894f9e43e4538a8d56e76632af891d9714a
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74307990"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429013"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -40,9 +40,9 @@ ms.locfileid: "74307990"
 |start_time|**datetime**|要求到達時的時間戳記。 不可為 Null。|  
 |status|**Nvarchar （30）**|要求的狀態。 這可以是下列其中一項：<br /><br /> 背景<br />執行中<br />可執行的<br />休眠中<br />Suspended<br /><br /> 不可為 Null。|  
 |命令|**Nvarchar （32）**|識別目前所處理命令的類型。 常見命令類型包括下列項目：<br /><br /> SELECT<br />Insert<br />UPDATE<br />刪除<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 要求的文字可使用 sys.dm_exec_sql_text 加上要求的對應 sql_handle 來擷取。 內部系統處理序會根據其所執行工作的類型來設定命令。 工作包括下列項目：<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> 不可為 Null。|  
-|sql_handle|**Varbinary （64）**|這是一個標記，可唯一識別查詢所屬的批次或預存程式。 可為 Null。|  
-|statement_start_offset|**int**|目前執行的批次或預存程序中的字元數，目前執行的陳述式即從該處開始。 可與 sql_handle、statement_end_offset 和 sys.dm_exec_sql_text 動態管理函數一起使用，來擷取該要求目前執行的陳述式。 可為 Null。|  
-|statement_end_offset|**int**|目前執行的批次或預存程序中的字元數，目前執行的陳述式即在該處結束。 可與 sql_handle、statement_end_offset 和 sys.dm_exec_sql_text 動態管理函數一起使用，來擷取該要求目前執行的陳述式。 可為 Null。|  
+|sql_handle|**Varbinary （64）**|這是一個標記，可唯一識別查詢所屬的批次或預存程式。 可為 Null。| 
+|statement_start_offset|**int**|表示目前執行之批次或保存物件的目前執行語句的開始位置（以位元組為單位，從0開始）。 可以與`sql_handle`、和`statement_end_offset` `sys.dm_exec_sql_text`動態管理函數一起使用，以取得要求的目前執行語句。 可為 Null。|  
+|statement_end_offset|**int**|表示目前執行之批次或保存物件的目前執行語句的結束位置（以位元組為單位，從0開始）。 可以與`sql_handle`、和`statement_start_offset` `sys.dm_exec_sql_text`動態管理函數一起使用，以取得要求的目前執行語句。 可為 Null。|  
 |plan_handle|**Varbinary （64）**|這是一個標記，可唯一識別目前執行之批次的查詢執行計畫。 可為 Null。|  
 |database_id|**smallint**|要求執行目標的資料庫識別碼。 不可為 Null。|  
 |user_id|**int**|提交要求之使用者的識別碼。 不可為 Null。|  
