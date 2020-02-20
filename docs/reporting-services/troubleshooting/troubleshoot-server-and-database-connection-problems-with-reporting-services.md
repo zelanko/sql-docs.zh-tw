@@ -1,6 +1,7 @@
 ---
-title: 針對 Reporting Services 的伺服器與資料庫連線問題進行疑難排解 | Microsoft Docs
-ms.date: 05/28/2019
+title: 針對伺服器與資料庫連線問題進行疑難排解 | Microsoft Docs
+description: 使用此主題，即可對在連接到報表伺服器時遇到的問題進行疑難排解。 此主題也提供「非預期錯誤」訊息的資訊。
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eda9f349cf53d77af14df10c842c9619fb6d370a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c6d91ea5d1daf7d63c56ae84b2cf76d3ee82846c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403166"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243626"
 ---
-# <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>針對 Reporting Services 的伺服器與資料庫連線問題進行疑難排解
+# <a name="troubleshoot-server--database-connection-problems-with-reporting-services"></a>針對 Reporting Services 的伺服器與資料庫連線問題進行疑難排解
 使用此主題，即可對在連接到報表伺服器時遇到的問題進行疑難排解。 此主題也提供有關「意外的錯誤」訊息的資訊。 如需資料來源組態和設定報表伺服器連接的詳細資訊，請參閱 [指定報表資料來源的認證和連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 和 [設定報表伺服器資料庫連接 (SSRS 組態管理員)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
 ## <a name="cannot-create-a-connection-to-data-source-datasourcename-rserroropeningconnection"></a>無法與資料來源 'datasourcename' 建立連接。 (rsErrorOpeningConnection)  
@@ -28,7 +29,7 @@ ms.locfileid: "66403166"
 傳遞認證跨越多部電腦的連接時，會發生此錯誤。 如果您是使用 Windows 驗證，而且未啟用 Kerberos 版本 5 通訊協定，則在認證傳遞跨越一個以上的電腦連接時，就會發生此錯誤。 若要解決此錯誤，請考慮使用預存認證或提示認證。 如需如何解決這個問題的詳細資訊，請參閱 [指定報表資料來源的認證和連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
   
 ### <a name="an-error-has-occurred-while-establishing-a-connection-to-the-server"></a>建立伺服器的連接時發生錯誤。  
-連接到 SQL Server 時，可能因為在預設的設定下 SQL Server 不允許遠端連接而引起此失敗。 (提供者：具名管道提供者，錯誤：40 - 無法開啟 SQL Server 的連接)。 這項錯誤是由主控報表伺服器資料庫的 Database Engine 執行個體所傳回。 在大部分情況下，發生這項錯誤的原因是 SQL Server 服務已停止。 或者，若您正在使用 SQL Server Express with Advanced Services 或具名執行個體，當報表伺服器 URL 或報表伺服器資料庫的連接字串不正確時，就會發生這項錯誤。 若要解決這些問題，請進行下列動作：  
+連接到 SQL Server 時，可能因為在預設的設定下 SQL Server 不允許遠端連接而引起此失敗。 (提供者：具名管道提供者，錯誤: 40 - 無法開啟 SQL Server 連線)。 這項錯誤是由主控報表伺服器資料庫的 Database Engine 執行個體所傳回。 在大部分情況下，發生這項錯誤的原因是 SQL Server 服務已停止。 或者，若您正在使用 SQL Server Express with Advanced Services 或具名執行個體，當報表伺服器 URL 或報表伺服器資料庫的連接字串不正確時，就會發生這項錯誤。 若要解決這些問題，請進行下列動作：  
   
 * 驗證 SQL Server (**MSSQLSERVER**) 服務已啟動。 在主控 Database Engine 執行個體的電腦上，依序按一下 [開始]、[系統管理工具] 和 [服務]，然後捲動至 [SQL Server (**MSSQLSERVER)** ]。 若這項服務未啟動，請在此服務上按一下滑鼠右鍵，選取 [內容]，在 [啟動類型] 中選取 [自動]，然後依序按一下 [套用]、[啟動] 和 [確定]。   
 * 確認報表伺服器 URL 和報表伺服器資料庫的連接字串正確無誤。 若 Reporting Services 或 Database Engine 已安裝成具名執行個體，在安裝期間建立的預設連接字串將會包含執行個體名稱。 例如，若您在名為 DEVSRV01 的伺服器上安裝 SQL Server Express with Advanced Services 的預設執行個體，入口網站 URL 就會是 DEVSRV01\Reports$SQLEXPRESS。 此外，連接字串中的資料庫伺服器名稱將類似於 DEVSRV01\SQLEXPRESS。 如需 SQL Server Express 的 URL 和資料來源連接字串的相關資訊，請參閱 [SQL Server Express with Advanced Services 中的 Reporting Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx)。 若要驗證報表伺服器資料庫的連接字串，請啟動 Reporting Services 組態工具，然後檢視 [資料庫安裝] 頁面。  
@@ -59,24 +60,24 @@ ms.locfileid: "66403166"
   
 若要解決這個錯誤，您應該重新安裝此軟體。 除此之外，您可以透過 SOAP 端點連接至報表伺服器，當做暫時的解決方法：  
   
-* 在 Management Studio 的 [連接到伺服器]  對話方塊中，於 [伺服器名稱]  內輸入報表伺服器 URL。 依預設，此為 `https://<your server name>/reportserver`。 或者若您正在使用 SQL Server 2008 Express with Advanced Services，則為 `https://<your server name>/reportserver$sqlexpress`。  
+* 在 Management Studio 的 [連接到伺服器]  對話方塊中，於 [伺服器名稱]  內輸入報表伺服器 URL。 根據預設，它是 `https://<your server name>/reportserver`。 或者若您正在使用 SQL Server 2008 Express with Advanced Services，則為 `https://<your server name>/reportserver$sqlexpress`。  
   
 若要解決此錯誤，以便使用 WMI 提供者進行連接，您應該執行安裝程式來修復 Reporting Services 或加以重新安裝。  
   
 ## <a name="connection-error-where-login-failed-due-to-unknown-user-name-or-bad-password"></a>連接錯誤，由於未知的使用者名稱或密碼錯誤而登入失敗  
 若您是使用網域帳戶從報表伺服器連接到報表伺服器資料庫，而網域帳戶的密碼已經變更，就會發生 **rsReportServerDatabaseLogonFailed** 錯誤。   
   
-錯誤文字全文為：「報表伺服器無法開啟到報表伺服器資料庫的連接。 登入失敗 (**rsReportServerDatabaseLogonFailed**)。 登入失敗: 未知的使用者名稱或密碼錯誤」。  
+錯誤文字全文為：「報表伺服器無法開啟與報表伺服器資料庫的連線。 登入失敗 (**rsReportServerDatabaseLogonFailed**)。 登入失敗: 未知的使用者名稱或密碼錯誤」。  
   
 如果您重設密碼，則必須更新連接。 如需詳細資訊，請參閱 [設定報表伺服器資料庫連接 (SSRS 組態管理員)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
 ## <a name="the-report-server-cannot-open-a-connection-to-the-report-server-database-rsreportserverdatabaseunavailable"></a>報表伺服器無法開啟到報表伺服器資料庫的連接。 (rsReportServerDatabaseUnavailable)。  
-完整訊息：報表伺服器無法開啟報表伺服器資料庫的連接。 所有要求和處理都需要與資料庫連接。 (rsReportServerDatabaseUnavailable)  
+完整訊息：報表伺服器無法開啟到報表伺服器資料庫的連接。 所有要求和處理都需要與資料庫連接。 (rsReportServerDatabaseUnavailable)  
 當報表伺服器無法連接到為伺服器提供內部儲存區的 SQL Server 關聯式資料庫時，就會發生此錯誤。 報表伺服器資料庫的連接是透過 Reporting Services 組態工具所管理。 您可以執行此工具，移到 [資料庫安裝] 頁面，並更正連接資訊。 使用工具更新連接資訊是最好的作法，因為這項工具一定會更新相依設定，並重新啟動服務。 如需詳細資訊，請參閱 [設定報表伺服器資料庫連接](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) 和 [設定報表伺服器服務帳戶](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
   
 若主控報表伺服器資料庫的 Database Engine 執行個體沒有設定遠端連接，也會發生此錯誤。 在某些 SQL Server 版本中，預設會啟用遠端連接。 若要驗證它是否在您使用的 SQL Server Database Engine 執行個體上啟用，請執行 SQL Server 組態管理員工具。 您必須同時啟用 TCP/IP 和具名管道。 報表伺服器會同時使用這兩種通訊協定。 如需有關如何啟用遠端連接的指示，請參閱 [設定報表伺服器來進行遠端管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)中的＜如何設定與報表伺服器資料庫的遠端連接＞一節。  
   
-若錯誤中另外還包含下列文字，則表示用來執行 Database Engine 執行個體的帳戶其密碼已經過期：「建立伺服器的連線時發生錯誤。 連接到 SQL Server 時，可能因為在預設的設定下 SQL Server 不允許遠端連接而引起此失敗。 (**提供者：SQL Server 網路介面，錯誤：26 - 尋找指定的伺服器/執行個體時發生錯誤)** 。」 若要解決此錯誤，請重新設定密碼。   
+若錯誤中另外還包含下列文字，則表示用來執行 Database Engine 執行個體的帳戶其密碼已經過期：「建立伺服器的連線時發生錯誤。 連接到 SQL Server 時，可能因為在預設的設定下 SQL Server 不允許遠端連接而引起此失敗。 (**提供者：SQL Server 網路介面，錯誤：26 - 搜尋指定的伺服器/執行個體時發生錯誤)** 。」 若要解決此錯誤，請重新設定密碼。   
   
 ## <a name="rpc-server-is-not-listening"></a>「RPC 伺服器不在聽候」  
 報表伺服器服務會使用遠端程序呼叫 (RPC) 伺服器執行某些作業。 如果您收到「RPC 伺服器不在聽候」錯誤，請確認報表伺服器服務正在執行。  
@@ -85,7 +86,7 @@ ms.locfileid: "66403166"
 此錯誤表示資料來源連接錯誤。 您應該檢查連接字串，並確認是否有存取資料來源的權限。 如果您是使用 Windows 驗證來存取資料來源，就必須有存取主控資料來源之電腦的權限。  
   
 ## <a name="unable-to-grant-database-access-in-sharepoint-central-administration"></a>無法在 SharePoint 管理中心內授與資料庫存取權  
-當您已經將 Reporting Services 設定成與 Windows Vista 或 Windows Server 2008 上的 SharePoint 產品或技術整合時，若您嘗試在 SharePoint 管理中心的 [授與資料庫存取權]  頁面上授與存取權，可能會收到下列錯誤訊息：「無法建立與電腦的連接」。  
+如果您已設定整合 Reporting Services 與 Windows Vista 或 Windows Server 2008 上的 SharePoint 產品或技術，當您嘗試在 SharePoint 管理中心的 [授與資料庫存取權]  頁面上授與存取權時，可能會收到下列錯誤訊息：「無法建立與電腦的連線。」  
   
 發生這項錯誤的原因是在執行需要管理員權限的工作時，Windows Vista 和 Windows Server 2008 中的使用者帳戶控制 (UAC) 需要管理員的明確接受，才能提高和使用管理員 Token。 不過，在此情況中，無法提高 Windows SharePoint Services 管理服務，因此無法將 SharePoint 組態和內容資料庫的存取權授與 Reporting Services 服務帳戶。  
   
@@ -113,7 +114,7 @@ ms.locfileid: "66403166"
 [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [錯誤和事件 (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [針對 Reporting Services 報表的資料擷取問題進行疑難排解](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
-[為 Reporting Services 訂閱與傳遞疑難排解](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
+[針對 Reporting Services 訂閱與傳遞進行疑難排解](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   
   

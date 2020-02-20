@@ -13,16 +13,16 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b4bf1f99d6ebadaa0b5740d3563386802bbc3e69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578069"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services 中的 SharePoint 文件庫傳遞
   針對 SharePoint 整合所設定的報表伺服器包含您可以用來將報表傳送至 SharePoint 文件庫的傳遞延伸模組。  
   
- 若要使用 SharePoint 傳遞延伸模組，您必須從 SharePoint 網站上的應用程式頁面建立訂閱，然後選取 [SharePoint 文件庫]  作為傳遞類型。 您無法針對您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或報表管理員中建立的訂閱，使用 SharePoint 傳遞延伸模組。  
+ 若要使用 SharePoint 傳遞延伸模組，您必須從 SharePoint 網站上的應用程式頁面建立訂閱，然後選取 [SharePoint 文件庫]  作為傳遞類型。 您無法針對在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或報表管理員中建立的訂閱來使用 SharePoint 傳遞延伸模組。  
   
 > [!NOTE]  
 >  如果報表伺服器以原生模式執行，傳遞延伸模組不支援將報表傳遞至 SharePoint 網站。 如果您嘗試以程式設計的方式呼叫原生模式報表伺服器的傳遞延伸模組，伺服器將會傳回 **rsDeliveryExtensionNotFound** 錯誤，並在報表伺服器的記錄檔中記錄 **rsOperationNotSupportedSharePointMode** 錯誤。  
@@ -71,7 +71,7 @@ ms.locfileid: "65578069"
  Title  
  在目標文件庫中，指定報表的選用 **Title** 屬性。 這是儲存在文件庫中之所有項目的標準屬性。 使用者可以在檢視 SharePoint 網站上的文件庫內容時，指定要顯示或隱藏此屬性。  
   
- 路徑  
+ Path  
  指定指向 SharePoint 文件庫的完整 URL，包括 SharePoint Web 應用程式和網站。 例如，`https://mySharePointWeb/MySite/MyDocLib`，其中的 `https://mySharePointWeb` 表示 Web 應用程式，"MySite" 是 SharePoint 網站，而 "MyDocLib" 是將傳遞報表的 SharePoint 文件庫。  
   
  您無法指定頁面、網站或清單。 目標容器必須是相同網站或伺服陣列中的文件庫。  

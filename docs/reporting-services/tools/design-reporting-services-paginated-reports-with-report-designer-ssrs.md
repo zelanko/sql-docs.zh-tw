@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27da48f6d124baed5202d5cb75e8086b97fc684e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a7195055e95abe07770633ec672d746c5927054d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577864"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190436"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Reporting Services 分頁的報表與報表設計工具 (SSRS) 的設計
 
@@ -44,7 +44,7 @@ ms.locfileid: "65577864"
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 是一個用戶端工具。 您可以本機測試電腦上的報表方案，將其部署至測試環境以測試伺服器方案，然後將其部署至實際執行環境。 部署後，請確認資料來源處理延伸模組和資料來源認證已針對報表伺服器環境進行設定。 您可以使用組態管理員，以協助您管理不同部署的屬性。 如需詳細資訊，請參閱 [SQL Server Data Tools &#40;SSDT&#41; 中的 Reporting Services](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)。  
   
- 如需詳細資訊，請參閱 [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
    
 ##  <a name="bkmk_SharedDatasets"></a> 共用資料集  
  使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 定義及部署報表方案的共用資料集。 透過使用 **OverwriteDatasets** 和 **TargetDatasetFolder** 屬性，即可從專案中的其他項目獨立部署共用資料集。 如需詳細資訊，請參閱[設定部署屬性 &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)。  
@@ -90,7 +90,7 @@ ms.locfileid: "65577864"
  透過使用 **TargetReportPartFolder** 和其他屬性，即可從專案中的其他項目獨立部署報表組件。 如需詳細資訊，請參閱[設定部署屬性 &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)。  
   
 ##  <a name="bkmk_Resources"></a> 資源  
- 您可以將檔案加入與報表相關但不是由報表伺服器進行處理的專案。 例如，您可以加入圖片影像或空間資料的 ESRI 形狀檔。 如需詳細資訊，請參閱 [Resources](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources)。  
+ 您可以將檔案加入與報表相關但不是由報表伺服器進行處理的專案。 例如，您可以加入圖片影像或空間資料的 ESRI 形狀檔。 如需詳細資訊，請參閱[資源](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources)。  
  
 ##  <a name="bkmk_ReportLayout"></a> Paginated Report Layout  
  若要建立報表配置，請將報表項目和資料區從 [工具箱] 拖曳至設計介面，然後排列它們。 將資料集欄位拖曳至設計介面上的項目，即可將資料加入報表。 若要在 Tablix 資料區中組織群組的資料，請將資料集欄位拖曳至 [群組] 窗格。 因為報表撰寫工具是建立報表定義很重要的方法，所以報表設定的方法在報表建立器和報表設計師之間會相當類似。  
@@ -118,7 +118,7 @@ ms.locfileid: "65577864"
     > [!NOTE]  
     >  若要使用偵錯模式，您必須設定啟動項目。 在 [方案總管] 中，以滑鼠右鍵按一下報表專案，再按一下 **[屬性]** ，然後在 **[StartItem]** 中選取要顯示的報表名稱。  
   
-     如果您想要預覽並非專案之啟動項目的特定報表，請選取建立報表但未部署報表的組態 (例如 DebugLocal 組態)，以滑鼠右鍵按一下報表，然後按一下 **[執行]** 。 您必須選擇並未部署報表的組態；否則，報表將會發行至報表伺服器，而非在本機的預覽視窗中顯示。  
+     如果您想要預覽並非專案之啟動項目的特定報表，請選取建立報表但未部署報表的組態 (例如 DebugLocal 組態)，以滑鼠右鍵按一下報表，然後按一下 [執行]  。 您必須選擇並未部署報表的組態；否則，報表將會發行至報表伺服器，而非在本機的預覽視窗中顯示。  
   
 -   **預覽列印。**  
   
@@ -168,7 +168,7 @@ ms.locfileid: "65577864"
   
  下表列出這些錯誤層級。  
   
-|錯誤層級|Description|  
+|錯誤層級|描述|  
 |-----------------|-----------------|  
 |0|最嚴重而且無法避免的建立問題，這些問題會導致無法預覽和部署報表。|  
 |1|嚴重的建立問題，這些問題會徹底變更報表配置。|  

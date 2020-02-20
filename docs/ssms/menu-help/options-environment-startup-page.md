@@ -1,5 +1,5 @@
 ---
-title: " SQL Server [選項] 頁面 - [環境] - [啟動] | Microsoft Docs"
+title: " SQL Server [選項] 頁面 - [環境] - [啟動]"
 ms.date: 11/05/2018
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -7,24 +7,24 @@ ms.technology: ssms
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 80fff1e8db1fb9dabe6ed12d425bd844e954dac9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 13814422be321a3b26577909588385af43ad3406
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68257268"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252214"
 ---
 # <a name="options-environment---startup-page"></a>選項 ([環境] - [啟動] 頁面)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-使用 [選項]  對話方塊，來設定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的啟動動作、一般視窗管理選項，以及其他一般設定。 在 [工具]  功能表上按一下 [選項]  ，展開 [環境]  資料夾，然後按一下 [啟動]  。
+使用 [選項]  對話方塊來設定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的啟動動作、一般視窗管理選項，以及其他一般設定。 在 [工具]  功能表上按一下 [選項]  ，展開 [環境]  資料夾，然後按一下 [啟動]  。
 
 ## <a name="uielement-list"></a>UIElement 清單
 
 **啟動時**
 
-選取 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 啟動時要執行的動作。 選項包括：
+選取 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 啟動時要執行的動作。 可用選項包括：
 
 - [開啟物件總管]  會提示進行連接，然後開啟物件總管。
 

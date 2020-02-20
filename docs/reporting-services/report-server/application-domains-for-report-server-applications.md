@@ -12,10 +12,10 @@ ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d39f1b9b081d50e5d64a6d5f948255f3a4d6e53b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574800"
 ---
 # <a name="application-domains-for-report-server-applications"></a>報表伺服器應用程式的應用程式網域
@@ -38,10 +38,10 @@ ms.locfileid: "65574800"
   
 |事件|事件描述|適用於|可設定|回收作業描述|  
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
-|以預先定義間隔發生的排程回收作業|根據預設，應用程式網域每隔 12 小時會回收一次。<br /><br /> 排程回收作業是提升整體處理序健全狀況之 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式的常見作法。|報表伺服器 Web 服務<br /><br /> 報表管理員<br /><br /> 背景處理應用程式|是的。 RSReportServer.config 檔中的**RecycleTime** 組態設定會決定回收間隔。<br /><br /> **MaxAppDomainUnloadTime** 會設定允許背景處理完成的等候時間。|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 會管理 Web 服務和報表管理員的回收作業。<br /><br /> 若為背景處理應用程式，報表伺服器會針對從排程起始的新作業建立新的應用程式網域。 系統會允許已經在進行中的作業在目前的應用程式網域中完成，直到等候時間過期為止。|  
-|報表伺服器的組態變更|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 將回收應用程式網域，以便回應 RSReportServer.config 檔中的變更。|報表伺服器 Web 服務<br /><br /> 報表管理員<br /><br /> 背景處理應用程式|資料分割|您無法阻止回收作業發生。 不過，為了回應組態變更所發生之回收作業的處理方式與排程回收作業相同。 當目前的要求和作業在目前的應用程式網域中完成時，系統會針對新的要求建立新的應用程式網域。|  
-|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 組態變更|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 如果所監視的檔案 (例如，machine.config 和 Web.config 檔，以及 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 程式檔案) 發生變更，它就會回收應用程式網域。|報表伺服器 Web 服務<br /><br /> 報表管理員|資料分割|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 會管理此作業。<br /><br /> 由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 起始的回收作業不會影響背景處理應用程式網域。|  
-|記憶體不足的壓力和記憶體配置失敗|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR 就會立即回收應用程式網域。|報表伺服器 Web 服務<br /><br /> 報表管理員<br /><br /> 背景處理應用程式|資料分割|處於高度記憶體不足壓力的情況下，報表伺服器不會接受目前應用程式網域中的新要求。 在伺服器拒絕新要求的期間，就會發生 HTTP 503 錯誤。 卸載舊的應用程式網域之前，系統不會建立新的應用程式網域。 這表示，如果您在伺服器處於高度記憶體不足壓力的情況下進行組態檔變更，正在進行中的要求和作業可能無法啟動或完成。<br /><br /> 如果記憶體配置失敗，所有應用程式網域都會立即重新啟動。 系統會卸除正在進行中的作業和要求。 您必須以手動方式重新啟動這些作業和要求。|  
+|以預先定義間隔發生的排程回收作業|根據預設，應用程式網域每隔 12 小時會回收一次。<br /><br /> 排程回收作業是提升整體處理序健全狀況之 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式的常見作法。|報表伺服器 Web 服務<br /><br /> 報表管理員<br /><br /> 背景處理應用程式|是。 RSReportServer.config 檔中的**RecycleTime** 組態設定會決定回收間隔。<br /><br /> **MaxAppDomainUnloadTime** 會設定允許背景處理完成的等候時間。|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 會管理 Web 服務和報表管理員的回收作業。<br /><br /> 若為背景處理應用程式，報表伺服器會針對從排程起始的新作業建立新的應用程式網域。 系統會允許已經在進行中的作業在目前的應用程式網域中完成，直到等候時間過期為止。|  
+|報表伺服器的組態變更|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 將回收應用程式網域，以便回應 RSReportServer.config 檔中的變更。|報表伺服器 Web 服務<br /><br /> 報表管理員<br /><br /> 背景處理應用程式|否。|您無法阻止回收作業發生。 不過，為了回應組態變更所發生之回收作業的處理方式與排程回收作業相同。 當目前的要求和作業在目前的應用程式網域中完成時，系統會針對新的要求建立新的應用程式網域。|  
+|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 組態變更|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 如果所監視的檔案 (例如，machine.config 和 Web.config 檔，以及 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 程式檔案) 發生變更，它就會回收應用程式網域。|報表伺服器 Web 服務<br /><br /> 報表管理員|否。|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 會管理此作業。<br /><br /> 由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 起始的回收作業不會影響背景處理應用程式網域。|  
+|記憶體不足的壓力和記憶體配置失敗|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR 就會立即回收應用程式網域。|報表伺服器 Web 服務<br /><br /> 報表管理員<br /><br /> 背景處理應用程式|否。|處於高度記憶體不足壓力的情況下，報表伺服器不會接受目前應用程式網域中的新要求。 在伺服器拒絕新要求的期間，就會發生 HTTP 503 錯誤。 卸載舊的應用程式網域之前，系統不會建立新的應用程式網域。 這表示，如果您在伺服器處於高度記憶體不足壓力的情況下進行組態檔變更，正在進行中的要求和作業可能無法啟動或完成。<br /><br /> 如果記憶體配置失敗，所有應用程式網域都會立即重新啟動。 系統會卸除正在進行中的作業和要求。 您必須以手動方式重新啟動這些作業和要求。|  
   
 ## <a name="planned-and-unplanned-recycle-operations"></a>已規劃與未規劃的回收作業  
  回收作業是已規劃或未規劃完全取決於產生作業的條件而定：  
@@ -56,7 +56,7 @@ ms.locfileid: "65574800"
   
  報表伺服器 Web 服務、報表管理員和背景處理應用程式的應用程式網域可能會一起回收或個別回收，端視導致回收發生的情況而定：  
   
--   由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 起始的回收作業通常只會影響 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式：報表伺服器 Web 服務和報表管理員。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 所監視的檔案發生變更，它就會回收應用程式網域。 由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 起始的回收作業通常與背景處理應用程式的回收作業無關。  
+-   由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 起始的回收作業只會影響 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式：報表伺服器 Web 服務和報表管理員。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 所監視的檔案發生變更，它就會回收應用程式網域。 由 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 起始的回收作業通常與背景處理應用程式的回收作業無關。  
   
 -   由報表伺服器起始的回收作業通常會影響報表伺服器 Web 服務、報表管理員和背景處理應用程式。 為了回應組態設定和服務重新啟動的變更，系統會進行回收作業。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65574800"
   
  下表將描述這些元素。  
   
-|元素|適用對象|定義|  
+|元素|適用於|定義|  
 |-------------|----------------|----------------|  
 |**RecycleTime**|這三個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式網域|指定回收應用程式網域的頻率。 預設回收排程符合通常在 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式網域回收中所遵循的 12 小時制模式。 在排程的時間，所有新要求都會轉送至應用程式網域的新執行個體。 目前正在原始執行個體進行中的要求可以繼續執行到完成。 等到所有處理序都完成後，系統會刪除原始執行個體，而新執行個體將成為唯一使用中的應用程式網域執行個體。<br /><br /> 預設值為 720 分鐘。|  
 |**MaxAppDomainUnloadTime**|只有背景處理應用程式網域|根據預設，報表伺服器會配置 30 分鐘的等候時間，在這段時間內，允許在回收作業過程中關閉應用程式網域。 如果目前進行中的作業無法在指定的時間內完成 (或者作業所花的時間比等候時間所允許的還要久)，系統就會立即重新啟動應用程式網域執行個體。 所有未完成的作業都會結束。<br /><br /> 如需如何檢視或取消在報表伺服器上執行之作業的詳細資訊，請參閱[取消報表伺服器作業 &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)。|  

@@ -1,34 +1,28 @@
 ---
-title: 使用 SQL Server Profiler 分析鎖死 |Microsoft Docs
-ms.custom: ''
-ms.date: 03/03/2017
+title: 分析死結
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- process nodes [SQL Server Profiler]
-- Profiler [SQL Server Profiler], deadlocks
-- deadlocks [SQL Server], identifying cause
-- resource nodes [SQL Server Profiler]
-- graphs [SQL Server Profiler]
-- SQL Server Profiler, deadlocks
-- events [SQL Server], deadlocks
-- edges [SQL Server Profiler]
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ab8914abdaa2056a71fdd4d0e1a277c89e200dc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/03/2017
+ms.openlocfilehash: 15d41ae2517a3eadb8305a359f4576fb4407020b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105635"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307372"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>使用 SQL Server Profiler 分析死結
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可識別死結的原因。 SQL Server 中有兩個或兩個以上的執行緒 (或處理序)，因為某些資源集而產生循環相依性時，就會發生死結。 利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以建立一個用來記錄、重新執行和顯示死結事件的追蹤，以便進行分析。  
+
+使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可識別死結的原因。 SQL Server 中有兩個或兩個以上的執行緒 (或處理序)，因為某些資源集而產生循環相依性時，就會發生死結。 利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以建立一個用來記錄、重新執行和顯示死結事件的追蹤，以便進行分析。  
   
  若要追蹤死結事件，請將 **Deadlock graph** 事件類別加入追蹤。 此事件類別會用死結相關處理序和物件的 XML 資料來擴展追蹤中的 **TextData** 資料行。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可將 XML 文件擷取至死結 XML (.xdl) 檔案，您稍後可在 SQL Server Management Studio 中檢視該檔案。 您可以設定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，將 **Deadlock graph** 事件擷取到單一檔案 (其中包含所有的 **Deadlock graph** 事件)，或將各個事件擷取到不同的檔案。 這種擷取可以利用下列任一方法來完成：  
   
@@ -47,8 +41,8 @@ ms.locfileid: "68105635"
  資源節點  
  資料庫物件；例如，資料表、索引或資料列。  
   
- 邊緣  
- 處理序與資源之間的關聯性。 當處理序等待資源時，會發生 **request** 邊緣； 當資源等待處理序時，則會發生 **owner** 邊緣。 邊緣描述中也會納入鎖定模式， 例如 [模式: X]  。  
+ Edge  
+ 處理序與資源之間的關聯性。 當處理序等待資源時，會發生 **request** 邊緣； 當資源等待處理序時，則會發生 **owner** 邊緣。 邊緣描述中也會納入鎖定模式， 例如，**模式：X**。  
   
 ## <a name="deadlock-process-node"></a>死結處理序節點  
  在等待圖形中，處理序節點包含處理序的相關資訊。 下表說明處理序的元件。  
@@ -62,8 +56,8 @@ ms.locfileid: "68105635"
 |使用的記錄|處理序已使用的記錄檔空間量。|  
 |擁有者識別碼|正在使用交易且目前正在等待鎖定之處理序的交易識別碼。|  
 |交易描述項|說明交易狀態之交易描述項的指標。|  
-|輸入緩衝區|目前處理序的輸入緩衝區，定義事件類型和正在執行的陳述式。 可能的值包括：<br /><br /> **語言**<br /><br /> **RPC**<br /><br /> **無**|  
-|引數|陳述式的類型。 可能的值為：<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
+|輸入緩衝區|目前處理序的輸入緩衝區，定義事件類型和正在執行的陳述式。 可能的值包括：<br /><br /> **語言**<br /><br /> **RPC**<br /><br /> **None**|  
+|引數|陳述式的類型。 可能的值包括：<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
   
 ## <a name="deadlock-resource-node"></a>死結資源節點  
  在死結中，有兩個處理序正在互相等待彼此所保留的資源。 在死結圖形中，資源會顯示為資源節點。  

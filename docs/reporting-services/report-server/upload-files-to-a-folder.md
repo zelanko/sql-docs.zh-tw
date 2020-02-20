@@ -17,10 +17,10 @@ ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d93840b2b1b7354238ccae12ba3a540889038fb2
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67228679"
 ---
 # <a name="upload-files-to-a-folder"></a>上傳檔案到資料夾
@@ -33,17 +33,17 @@ ms.locfileid: "67228679"
     >[!NOTE]  
     >您不能上傳報表資料來源 (.rds) 檔案，以建立共用資料來源。 .rds 檔案只能在報表設計師中使用。 它無法提供您透過入口網站定義與管理之共用資料來源項目的內容。 上傳的替代方法，是撰寫指令碼來建立以 .rds 檔案為基礎的共用資料來源。  
   
- 上傳項目的最大檔案大小為 2 GB，並可設定為使用中的 MaxFileSizeMb 屬性[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
+ 已上傳項目的檔案大小上限為 2 GB，可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 MaxFileSizeMb 屬性來設定。  
   
  您上傳至報表伺服器資料庫的檔案，在資料夾階層中會使用下列圖示進行視覺化表示。  
   
-  ![報表伺服器可上傳的檔案圖示](../../reporting-services/report-server/media/upload-files-to-a-folder/report-server-uploadable-file-icons.png)
+  ![報表伺服器的可上傳檔案圖示](../../reporting-services/report-server/media/upload-files-to-a-folder/report-server-uploadable-file-icons.png)
   
  上傳檔案時，檔案永遠會放在目前所選取的資料夾中。 您可以先導覽至要包含項目的資料夾，或是上傳檔案然後再移動到最終位置。  
   
  若要上傳檔案，請使用入口網站。 您是否能夠上傳檔案到報表伺服器，是依您角色指派中的工作而定。 如果您使用預設安全性，本機管理員就可以將項目加入報表伺服器。 如果已啟用我的報表，則只要是有 [我的報表] 資料夾的使用者，都有權將項目上傳至該資料夾。 如果您使用自訂角色指派，角色指派就必須包括支援資料夾管理的工作。  
   
-|以進行此動作|包括下列工作|  
+|作法|包括下列工作|  
 |----------------|-------------------------|  
 |將 .rdl 檔案上傳至資料夾|管理報表|  
 |將任何檔案當成二進位物件上傳|管理資源|  

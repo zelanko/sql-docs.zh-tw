@@ -1,8 +1,10 @@
 ---
-title: 電子郵件設定 - Reporting Services 原生模式 (設定管理員) | Microsoft Docs
-ms.date: 06/01/2016
+title: SSRS 原生模式中的電子郵件設定 (組態管理員) | Microsoft Docs
+description: 因為 SQL Server Reporting Services 包含一個電子郵件傳遞延伸模組，所以您能夠透過電子郵件散發報表。
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.emailsettings.F1
@@ -11,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 872c7e4d501017627fcc64eca7ed48204c9d3533
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593812"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866001"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>電子郵件設定 - Reporting Services 原生模式 (組態管理員)
-Reporting Services 包含一個電子郵件傳遞延伸模組，讓您能夠透過電子郵件散發報表。 根據您定義電子郵件訂閱的方式而定，傳遞可能會由通知、連結、附加檔案或內嵌報表所組成。 電子郵件傳遞延伸模組可搭配現有的郵件伺服器技術一起使用。 郵件伺服器必須是 SMTP 伺服器或轉送器。 報表伺服器會透過作業系統提供的 Collaboration Data Objects (CDO) 程式庫 (cdosys.dll) 連接到 SMTP 伺服器。
+因為 SQL Server Reporting Services 包含一個電子郵件傳遞延伸模組，所以您能夠透過電子郵件散發報表。 根據您定義電子郵件訂閱的方式而定，傳遞可能會由通知、連結、附加檔案或內嵌報表所組成。 電子郵件傳遞延伸模組可搭配現有的郵件伺服器技術一起使用。 郵件伺服器必須是 SMTP 伺服器或轉送器。 報表伺服器會透過作業系統提供的 Collaboration Data Objects (CDO) 程式庫 (cdosys.dll) 連接到 SMTP 伺服器。
 
 根據預設，系統並不會設定報表伺服器電子郵件傳遞延伸模組。 您必須使用 Reporting Services 組態管理員，以最低限度的方式設定此延伸模組。 若要設定進階屬性，則必須編輯 RSReportServer.config 檔案。 如果您無法將報表伺服器設定為使用此延伸模組，則可以改成將報表傳遞到共用資料夾。 如需詳細資訊，請參閱＜File Share Delivery in Reporting Services＞(Reporting Services 中的檔案共用傳遞)。
 
@@ -109,7 +111,7 @@ Reporting Services 包含一個電子郵件傳遞延伸模組，讓您能夠透�
      <SendPassword></SendPassword>
 </RSEmailDPConfiguration>
 ```
-## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>設定郵件收件者欄位的組態選項
+## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>設定郵件 [收件者:]欄位的組態選項
 如果依據 [管理個別訂閱] 工作所授與的權限建立使用者自訂訂閱，這些訂閱中便會包含以網域使用者帳戶為基礎的預設使用者名稱。 當使用者建立訂閱時，系統就會利用建立訂閱之使用者的網域使用者帳戶，自行處理 **[收件者:]** 欄位中的收件者名稱。
 
 如果使用 SMTP 伺服器或轉送器，而伺服器或轉送器所使用的電子郵件帳戶與網域使用者帳戶不同時，則 SMTP 伺服器嘗試將報表傳遞給該使用者時便會失敗。

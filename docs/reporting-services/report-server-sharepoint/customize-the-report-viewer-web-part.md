@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0974e9bd7e2e4c2306a5ada0a3a41f657073a267
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580003"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>自訂報表檢視器 Web 組件
@@ -63,9 +63,9 @@ ms.locfileid: "65580003"
   
  報表檢視器 Web 組件的自訂屬性如下所列。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
-|報表|報表的完整路徑，此報表位於目前的 SharePoint 網站上，或是相同 Web 應用程式或伺服陣列內的網站上。 若要在設定其他屬性時獲得最佳結果，請在指定報表 URL 之後按一下 [套用]。|  
+|Report|報表的完整路徑，此報表位於目前的 SharePoint 網站上，或是相同 Web 應用程式或伺服陣列內的網站上。 若要在設定其他屬性時獲得最佳結果，請在指定報表 URL 之後按一下 [套用]。|  
 |超連結目標|標準 HTML，此 HTML 會指定在目前文件內顯示連結內容的目標框架。 如果是包含外部網站超連結的報表，您可以指定目標文件會取代目前視窗內現有的報表，或是在新的瀏覽器視窗中開啟。 有效值包括 **_Top**、 **_Blank**和 **_Self**。 **_Top** 會使用目前的視窗， **_Blank** 則會在新的瀏覽器視窗中載入文件，而 **_Self** 會在目前的框架內開啟文件。 雖然 **_Parent** 是 HTML 中目標屬性的有效值，但是請不要在報表檢視器 Web 組件內嵌於頁面中時使用。|  
 |自動產生 Web 組件標題|所產生的標題，其中包括報表檢視器 Web 組件的名稱加上報表的名稱，兩者以破折號分隔。 如果報表沒有標題，則會使用報表的檔案名稱。 標題可在您將網頁組件新增至頁面時看見。 如果選取這個核取方塊，則標題會在每一次重新整理頁面時產生。|  
 |自動產生 Web 組件標題詳細資料連結|產生的超連結，會出現在 Web 組件的上方。 您可以按一下連結，在新頁面中以整頁模式開啟報表。|  

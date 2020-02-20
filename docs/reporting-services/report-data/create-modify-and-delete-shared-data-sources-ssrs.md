@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1045f9a0c271ee4c3befe434a3eef50f0edee6df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9f5ed3f000f13d965d9f45c853d831e18d5dd4e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573195"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190862"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>建立、修改及刪除共用資料來源 (SSRS)
   共用資料來源是一組資料來源連接屬性，可供多個報表、模型以及在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器上執行的資料驅動訂閱參考。  共用資料來源提供一種簡單的方式，可用來管理通常會隨著時間而變更的資料來源屬性。 如果使用者帳戶或密碼變更，或者如果您將資料庫移到不同的伺服器，可以在一個地方更新連接資訊。  
@@ -30,12 +30,12 @@ ms.locfileid: "65573195"
   
  共用資料來源包含下列部分：  
   
-|部分|Description|  
+|部分|描述|  
 |----------|-----------------|  
-|[屬性]|識別報表伺服器資料夾階層中之項目的名稱。|  
-|Description|檢視資料夾的內容時，與入口網站中的項目一起顯示的描述。|  
-|連接類型|與資料來源搭配使用的資料處理延伸模組。 您僅能使用在報表伺服器上部署的資料處理延伸模組。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 隨附之資料處理延伸模組的詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。|  
-|連接字串|資料庫的連接字串。 如需詳細資訊，或者要檢視常用資料來源之連接字串的範例，請參閱 [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。|  
+|名稱|識別報表伺服器資料夾階層中之項目的名稱。|  
+|描述|檢視資料夾的內容時，與入口網站中的項目一起顯示的描述。|  
+|連線類型|與資料來源搭配使用的資料處理延伸模組。 您僅能使用在報表伺服器上部署的資料處理延伸模組。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 隨附之資料處理延伸模組的詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。|  
+|連接字串|資料庫的連接字串。 如需詳細資訊以及檢視常用資料來源的連接字串範例，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。|  
 |認證類型|指定如何取得用於連接的認證，以及建立連接後是否要使用這些認證。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。|  
   
  共用資料來源不包含用來擷取資料的查詢資訊。 查詢永遠會保留在報表定義中。  
@@ -103,7 +103,7 @@ ms.locfileid: "65573195"
     > [!NOTE]  
     >  [測試連接] 按鈕不支援 XML 資料來源類型。  
   
-10. 按一下 **[確定]** 。  
+10. 按一下 [檔案] &gt; [新增] &gt; [專案]   
   
  **在入口網站中修改共用資料來源**  
   
@@ -167,7 +167,7 @@ ms.locfileid: "65573195"
   
 4.  在 [資料來源類型]  的清單中，選取資料來源的類型。 如需詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
-5.  在 [連接字串]  中，指定資料來源的指標以及其他建立外部資料來源連線必要的任何設定。 您所使用的資料來源類型會決定連接字串的語法。 如需詳細資訊和範例，請參閱 [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+5.  在 [連接字串]  中，指定資料來源的指標以及其他建立外部資料來源連線必要的任何設定。 您所使用的資料來源類型會決定連接字串的語法。 如需詳細資訊和範例，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 6.  在 [認證]  中，指定報表伺服器取得認證來存取外部資料來源的方式。 認證可以針對自動報表處理而儲存、提示、整合或設定。  
   
@@ -214,7 +214,7 @@ ms.locfileid: "65573195"
      若為報表模型，相依項目的清單就會顯示在報表產生器中建立的報表。 若為共用資料來源，相依項目清單可能會同時包括報表和報表模型。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [管理報表資料來源](../../reporting-services/report-data/manage-report-data-sources.md)   
  [設定編頁報表的資料來源屬性](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   

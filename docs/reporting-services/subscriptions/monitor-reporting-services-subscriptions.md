@@ -15,10 +15,10 @@ ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d1cfa2c5face12eab1677d4a1386511d005aa5dd
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67285037"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>監視 Reporting Services 訂閱
@@ -43,9 +43,9 @@ ms.locfileid: "67285037"
   
  下表描述 [狀態]  欄的可能值。  
   
-|[狀態]|Description|  
+|狀態|描述|  
 |------------|-----------------|  
-|新增訂閱|出現在第一次建立訂閱時。|  
+|新的訂用帳戶|出現在第一次建立訂閱時。|  
 |非使用中|出現在無法處理訂用帳戶時。 如需詳細資訊，請參閱本文中稍後的＜管理非使用中訂閱＞。|  
 |完成：已處理 \<數目  > 個 (總共 \<數目  > 個)；\<數目  > 個錯誤。|顯示資料驅動訂閱執行的狀態；此訊息來自排程與傳遞處理器。|  
 |已處理 \<數目  > 個|排程與傳遞處理器已成功傳遞或已不再嘗試傳遞的通知數目。 當資料驅動傳遞完成時，已處理的通知數目應該和產生的通知總數相等。|  
@@ -76,7 +76,7 @@ ms.locfileid: "67285037"
   
  下列是與訂閱相關的追蹤記錄檔範例錯誤訊息：  
   
--   library!WindowsService_7!b60!05/20/2019-22:34:36 i i INFO: 將 EnableExecutionLogging 初始化至 'True' ，如同 Server 系統所示 properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERROR: **傳送電子郵件時發生錯誤**。 例外狀況：System.Net.Mail.SmtpException: SMTP 伺服器需要安全的連線或是用戶端未經認證。 伺服器回應為：5.7.1 用戶端未經認證   於 System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36 i 資訊:將 EnableExecutionLogging 初始化至 'True'，如同伺服器系統所示 properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 錯誤:**傳送電子郵件時發生錯誤**。 例外狀況：System.Net.Mail.SmtpException:SMTP 伺服器需要安全連線，或用戶端未經驗證。 伺服器回應為:5.7.1 用戶端未經認證   於 System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  記錄檔不包括有關報表是否開啟或實際上是否成功傳遞的資訊。 成功傳遞是指排程與傳遞處理器未產生錯誤，且報表伺服器已連接到郵件伺服器。 如果電子郵件在使用者信箱產生無法傳遞訊息錯誤，該資訊將不會包含在記錄檔中。 如需記錄檔的詳細資訊，請參閱 [Reporting Services 記錄檔和來源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
   
@@ -96,11 +96,11 @@ ms.locfileid: "67285037"
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|date|處理|區域|類別目錄|層級|Correlation|訊息|  
-|2019/5/21 14:34:06:15|應用程式集區：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|報表伺服器電子郵件延伸模組|未預期|(空的)|**Error sending email.** 例外狀況：System.net.mail.smtpexception: 信箱無法使用。 伺服器回應為：5.7.1 用戶端不具權限，無法以此寄件者傳送  於 System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  於 System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  於 System.Net.Mail.SmtpClient.Send(MailMessage message)  於 Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|Date|Process|區域|類別|層級|Correlation|訊息|  
+|2019/5/21 14:34:06:15|應用程式集區：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|報表伺服器電子郵件延伸模組|未預期|(空白)|**Error sending email.** 例外狀況：System.Net.Mail.SmtpException:無法使用信箱。 伺服器回應為:5.7.1 用戶端沒有權限，無法以這個寄件人身分傳送  於 System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  於 SSystem.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  於 System.Net.Mail.SmtpClient.Send(MailMessage message)  於 Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> 使用 PowerShell 監視訂閱  
- 比方說的 PowerShell 指令碼可用來檢查狀態的原生模式或 SharePoint 模式的訂用帳戶，請參閱[管理的訂用帳戶擁有者和執行訂用帳戶-PowerShell](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)。  
+ 例如，您可以使用 PowerShell 指令碼查看原生模式或 SharePoint 模式訂閱的狀態，請參閱[管理訂閱擁有者及執行訂閱 - PowerShell](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)。  
   
 ##  <a name="bkmk_manage_inactive"></a> 管理非使用中訂閱  
  如果訂閱變成非使用中，您應該將其刪除，或藉由解決導致無法處理的問題將其重新啟動。 如果發生問題而導致無法處理，訂閱就可能會變成非使用中。 這些條件包括：  

@@ -1,5 +1,5 @@
 ---
-title: 建立、 刪除或修改資料夾-Reporting Services |Microsoft Docs
+title: 建立、刪除或修改資料夾 - Reporting Services | Microsoft Docs
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 874fb7ba143c8f08a0f25501e1852b4d2b280cb2
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492858"
 ---
-# <a name="create-delete-or-modify-a-folder---reporting-services"></a>建立、 刪除或修改資料夾-Reporting Services
+# <a name="create-delete-or-modify-a-folder---reporting-services"></a>建立、刪除或修改資料夾 - Reporting Services
   您可以建立資料夾來組織與管理發行至報表伺服器的項目。 建立資料夾可以協助使用者尋找他們感興趣的報表。 對於內容管理員而言，資料夾會提供套用權限的架構。 您可以針對特定資料夾建立角色指派，以便限制在開發中或不應該廣為散發之報表的存取權。  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
@@ -28,7 +28,7 @@ ms.locfileid: "67492858"
   
      [新增資料夾]  頁面隨即開啟。  
   
-3.  輸入資料夾名稱。 資料夾名稱可以包含空格，但是不能包含用於 URL 編碼的保留字元：\;\? \: \@ \& \= \+ \, \$ \/ \* \< \> \|。 您無法一次輸入一連串的資料夾名稱來建立數個資料夾。  
+3.  輸入資料夾名稱。 資料夾名稱可以包含空格，但是不能包含用於 URL 編碼的保留字元：\; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|。 您無法一次輸入一連串的資料夾名稱來建立數個資料夾。  
   
 4.  選擇性地輸入描述。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "67492858"
   
 6.  或者，若要移除資料夾及其內容，請按一下 [刪除]  。  
   
-7.  按一下 [套用]  儲存變更。  
+7.  按一下 [套用]  以儲存變更。  
 
 ::: moniker-end
 
@@ -74,39 +74,39 @@ ms.locfileid: "67492858"
   
 1. 開啟[報表伺服器的入口網站 (SSRS 原生模式)](../../reporting-services/web-portal-ssrs-native-mode.md)。  
   
-2. 瀏覽至資料夾或您想要用來找出新的資料夾的子資料夾。 選取 **首頁**藉由選取的資料夾**瀏覽**在頂端工具列上的按鈕保留的頁面，即可建立在資料夾階層的頂端。  
+2. 巡覽至您想要在其中尋找新資料夾的資料夾或子資料夾。 選取 [主資料夾]  資料夾，方法是選取頁面左上角工具列上的 [瀏覽]  按鈕，以在資料夾階層的頂端建立該資料夾。  
   
-3. 選取 **的新**頂端的 報表伺服器 工具列中，然後再選取**資料夾**從下拉式選單。  
+3. 選取報表伺服器工具列右上方的 [新增]  按鈕，然後從下拉式功能表中選取 [資料夾]  。  
   
-4. 在  **（目前的資料夾名稱） 中建立新的資料夾**對話方塊方塊中，輸入要建立新資料夾的名稱。 資料夾名稱可以包含空格，但是不能包含用於 URL 編碼的保留字元：\; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|。 您也不可為了建立數個資料夾，而一次鍵入一連串資料夾名稱。  
+4. 於 [在 (目前的資料夾名稱) 中建立新資料夾]  對話方塊中，輸入要建立的新資料夾名稱。 資料夾名稱可以包含空格，但是不能包含用於 URL 編碼的保留字元：\; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|。 您也不可為了建立數個資料夾，而一次鍵入一連串資料夾名稱。  
   
-5. 選取 **建立**以完成動作。  
+5. 選取 [建立]  以完成動作。  
   
 ## <a name="to-delete-a-folder"></a>若要刪除資料夾  
   
-1. 在入口網站中，瀏覽資料夾階層並找出您想要刪除的資料夾。  
+1. 在入口網站中，巡覽資料夾階層，並找出您想要刪除的資料夾。  
   
-2. 右邊-click 的資料夾，然後選取**刪除**從下拉式選單。  
+2. 以滑鼠右鍵按一下資料夾，然後從下拉式功能表中選取 [刪除]  。  
   
-3. 選取 **刪除**按鈕**刪除<foldername>** 對話方塊中，以確認刪除。  
+3. 選取 [刪除 <foldername>]  對話方塊中的 [刪除]  按鈕以確認刪除。  
   
-## <a name="to-modify-a-folders-properties"></a>若要修改資料夾屬性  
+## <a name="to-modify-a-folders-properties"></a>修改資料夾的屬性  
   
-1. 在入口網站中，瀏覽資料夾階層並找出您想要刪除的資料夾。  
+1. 在入口網站中，巡覽資料夾階層，並找出您想要刪除的資料夾。  
   
-2. 右邊-click 的資料夾，然後選取**刪除**從下拉式選單。  
+2. 以滑鼠右鍵按一下資料夾，然後從下拉式功能表中選取 [刪除]  。  
   
-3. 選取 [屬性]  索引標籤。**屬性**預設會顯示頁面。  
+3. 選取 [屬性]  索引標籤。預設會出現 [屬性]  頁面。  
   
-4. 您可以變更的資料夾名稱*名稱** 文字方塊中。  
+4. 您可以在 [名稱]  * 文字方塊中變更資料夾的名稱。  
   
-5. 您可以新增或變更的資料夾中的說明*描述** 文字方塊中。  
+5. 您可以在 [描述]  * 文字方塊中，新增或變更資料夾的描述。  
   
-6. 您可以隱藏或取消隱藏的資料夾，藉由檢查或取消選取**隱藏此項目**核取方塊分別。  
+6. 您可以藉由核取或取消核取 [隱藏此項目]  核取方塊來隱藏或取消隱藏資料夾。  
   
-7. 選取 **套用**儲存屬性變更。  
+7. 選取 [套用]  以儲存屬性變更。  
   
-8. （選擇性） 您可以移動或刪除選取的資料夾**移動**或是**刪除**頂端的按鈕**屬性**頁面。 請參閱[移動或刪除項目 （web 入口網站）](../../reporting-services/report-server/move-or-delete-an-item-report-manager.md)文件，如需詳細資訊。  
+8. 或者，您可以選取 [屬性]  頁面頂端的 [移動]  或 [刪除]  按鈕來移動或刪除資料夾。 如需詳細資訊，請參閱[移動或刪除項目 (入口網站)](../../reporting-services/report-server/move-or-delete-an-item-report-manager.md) 一文。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立、刪除或修改資料夾 (入口網站)](../../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md)   

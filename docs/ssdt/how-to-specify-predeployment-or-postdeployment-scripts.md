@@ -1,23 +1,24 @@
 ---
-title: 如何：指定預先部署或部署後指令碼 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 指定預先部署或部署後指令碼
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e8bbc783901c7dd93515424ae811fe66239e9f33
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 56b69a6b84aa3c529c02690f7e6554e76e46b079
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199294"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244270"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>如何：指定預先部署或部署後指令碼
+
 預先部署和部署後指令碼會分別執行主要部署指令碼前後的 Transact\-SQL 陳述式，主要部署指令碼則是從資料庫專案產生。 從 Visual Studio 中的結構描述比較結果更新目標時，將不會執行預先部署指令碼。 專案中只能有一個預先部署指令碼和一個部署後指令碼。 這些指令碼有許多用途。 例如：  
   
 -   預先部署指令碼可以從將要變更的資料表複製資料到暫存資料表，之後再由部署後指令碼將資料重新格式化並套用到所變更的資料表。  

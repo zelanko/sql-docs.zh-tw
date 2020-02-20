@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0daca68faa97a59b9c98b13ab9ca8f867341917c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f2ce2535a28661e40e845aa87936f3c23353e544
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500473"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190842"
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>建立和修改內嵌資料來源
   內嵌資料來源是定義在報表定義中，而且只能供該報表使用。  
@@ -33,7 +33,7 @@ ms.locfileid: "66500473"
   
     2.  使用以下其中一個替代方式指定連接字串：  
   
-        -   在 **[連接字串]** 文字方塊中直接輸入連接字串。 如需連接字串範例的清單，請參閱[報表產生器中的資料連線、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[資料連線、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+        -   在 **[連接字串]** 文字方塊中直接輸入連接字串。 如需範例連接字串的清單，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
         -   按一下運算式 (**fx)** 按鈕，即可建立一個評估為連接字串的運算式。 在 **[運算式]** 對話方塊的 [運算式] 窗格內，輸入運算式。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66500473"
   
     2.  使用以下其中一個替代方式來指定連接字串：  
   
-        -   在 **[連接字串]** 文字方塊中直接輸入連接字串。 如需連接字串範例的清單，請參閱 [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+        -   在 **[連接字串]** 文字方塊中直接輸入連接字串。 如需範例連接字串的清單，請參閱[建立資料連接字串 - 報表產生器 & SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
         -   按一下運算式 (**fx)** 按鈕，即可建立一個評估為連接字串的運算式。 在 **[運算式]** 對話方塊的 [運算式] 窗格內，輸入運算式。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

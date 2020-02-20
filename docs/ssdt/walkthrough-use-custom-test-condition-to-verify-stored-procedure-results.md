@@ -1,23 +1,24 @@
 ---
-title: 逐步解說：使用自訂測試條件來驗證預存程序的結果 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 可驗證預存程序結果的自訂測試條件
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ef888bf2cf4259ec904194a39aa74ed44040586
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 60160fe3f36d61364b8bf4385fa53b744f9a3475
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068985"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242663"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>逐步解說：使用自訂測試條件來驗證預存程序的結果
+
 在這個延伸模組功能逐步解說中，您將建立測試條件，並透過建立 SQL Server 單元測試來驗證其功能。 此程序包含建立測試條件的類別庫專案，以及簽署及安裝專案。 若您已經有要更新的測試條件，請參閱[如何：將 Visual Studio 2010 自訂測試條件從舊版升級至 SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)。  
   
 本逐步解說將說明下列工作：  
@@ -63,7 +64,7 @@ ms.locfileid: "68068985"
   
 6.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
-7.  按一下 [ **建置** ] 功能表上的 [ **建置方案**]。  
+7.  在 [建置]  功能表上，按一下 [建置方案]  。  
   
 接下來，將必要參考加入至專案。  
   
@@ -344,7 +345,7 @@ namespace ColumnCountCondition
 接下來，建置專案。  
   
 ## <a name="xxx"></a>編譯專案及安裝測試條件  
-按一下 [ **建置** ] 功能表上的 [ **建置方案**]。  
+在 [建置]  功能表上，按一下 [建置方案]  。  
   
 接下來，將組件資訊複製到 Extensions 目錄。 當 Visual Studio 啟動時，會識別 %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions 目錄和子目錄中的任何延伸模組，並讓這些延伸模組可供使用：  
   

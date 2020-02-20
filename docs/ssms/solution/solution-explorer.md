@@ -1,5 +1,5 @@
 ---
-title: 方案總管 | Microsoft Docs
+title: 方案總管
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -15,19 +15,19 @@ ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: a0e2a3512528bdddc62d89e182a6f074b05bdc75
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: d95b590d4ec0bd9daef6b81822317cfdda0bdad3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988130"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242835"
 ---
 # <a name="solution-explorer"></a>方案總管
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [方案總管] 窗格提供稱為專案的容器，可用來管理資料庫指令碼、查詢、資料連接和檔案等項目。 一個或多個彼此相關的專案會合併到稱為方案的容器。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [方案總管] 窗格提供的容器稱為專案，可用來管理資料庫指令碼、查詢、資料連線和檔案等項目。 一個或多個彼此相關的專案會合併到稱為方案的容器。  
   
 方案包括一個或多個專案，加上有助於將方案當做一個整體來定義的檔案和中繼資料。 專案是一組檔案，加上連接資訊等相關的中繼資料。 方案和專案包含代表建立資料庫方案時所需要之指令碼、查詢、連接資訊和檔案的項目。  
   

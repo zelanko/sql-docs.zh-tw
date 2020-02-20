@@ -12,10 +12,10 @@ ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2a6e57c1e4326f2c8a0f04a515aab7c699778f39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580695"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>隱藏項目 (報表產生器及 SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "65580695"
   
         > [!NOTE]  
         >  當您指定可見性的運算式時，會設定報表項目的 Hidden 屬性，如下圖所示。 評估之後的運算式會在值為 False 時顯示此報表項目，並在值為 True 時隱藏此報表項目。   
-        > ![Properties_Visibility 對話方塊和隱藏屬性](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Properties_Visibility 對話方塊和隱藏屬性")  
+        > ![Properties_Visibility 對話方塊與隱藏的屬性](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Properties_Visibility 對話方塊與隱藏的屬性")  
   
 4.  按兩次 **[確定]** 。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65580695"
   
 ## <a name="see-also"></a>另請參閱  
  [向下鑽研動作 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [將展開或摺疊動作加入項目中 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
+ [將展開或摺疊動作新增至項目中 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

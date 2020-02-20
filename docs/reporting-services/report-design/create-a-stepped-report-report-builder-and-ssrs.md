@@ -9,10 +9,10 @@ ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: adfde8e92d249c40749dba76f42c6d1d5ba20d71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581532"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>建立階梯狀報表 (報表產生器及 SSRS)
@@ -54,7 +54,7 @@ ms.locfileid: "65581532"
   
 3.  如果是階梯狀報表，您不需要第一個顯示群組執行個體的資料行， 請改為複製群組首資料格中的值、刪除群組資料行，然後貼到群組首資料列中的第一個文字方塊。 若要移除群組資料行，請以滑鼠右鍵按一下群組資料行或資料格，然後按一下 [刪除資料行]  。 下圖顯示資料區可能會在設計介面上呈現的外觀。  
   
-     ![含有群組頁首資料列的資料區域](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "含有群組頁首資料列的資料區域")  
+     ![含有群組標頭資料列的資料區域](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "含有群組標頭資料列的資料區域")  
   
 4.  若要將詳細資料列縮排到相同資料行的群組頁首資料列之下，請變更詳細資料資料格的填補。  
   

@@ -7,10 +7,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/06/2018
 ms.openlocfilehash: 5db33f22ffd5143d88c5654c753f1b08811c0c8a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68262896"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>移轉 Reporting Services 安裝 (原生模式)
@@ -215,7 +215,7 @@ ms.locfileid: "68262896"
   
     1. [部署自訂組件](../../reporting-services/custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2. [如何：部署自訂報表項目](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2. [操作說明：部署自訂報表項目](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3. [部署資料處理延伸模組](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)  
   
@@ -256,7 +256,7 @@ ms.locfileid: "68262896"
 
 如果您在先前安裝中修改了 RSReportServer.config 檔案或 RSWebApplication.config 檔案，就應該在新的 RSReportServer.config 檔案中進行相同的修改。 下列清單將摘要列出一些您可能會修改先前組態檔的原因，並且提供有關如何在 SQL Server 2016 中設定相同設定的其他資訊連結。  
   
-|自訂|[資訊]|  
+|自訂|資訊|  
 |-------------------|-----------------|  
 |含有自訂設定的報表伺服器電子郵件傳遞|[電子郵件設定 * Reporting Services 原生模式](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。|  
 |裝置資訊設定|[在 RSReportServer.Config 中自訂轉譯延伸模組參數](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)|

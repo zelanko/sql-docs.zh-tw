@@ -16,10 +16,10 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 26fa81278afd686d25192fdd49bbc3f2119a5762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571571"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>什麼是 SQL Server Reporting Services (SSRS)？
@@ -30,7 +30,7 @@ ms.locfileid: "65571571"
 
 SQL Server Reporting Services (SSRS) 提供了一組內部部署工具和服務，可用於建立、部署及管理行動與分頁報表。
 
-![SQL Server Reporting Services 全部整合](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services 全部整合")
+![SQL Server Reporting Services 整合一切](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services 整合一切")
 
 ## <a name="create-deploy-and-manage-mobile-and-paginated-reports"></a>建立、部署和管理行動及分頁報表
 
@@ -83,7 +83,7 @@ Reporting Services 與「傳統」分頁報表相關聯，適用於已針對列�
 
 原生模式 Reporting Services 使用者的首頁，就是您可以在大部分瀏覽器中檢視的新式入口網站。 您可以在新的入口網站中存取您所有的 Reporting Services 行動裝置、分頁報表和 KPI。 KPI 可以在瀏覽器中呈現關鍵業務指標概覽，而不必開啟報表。
 
-新的入口網站完全是報表管理員的重寫。 現在它是單一頁面的標準式 HTML5 應用程式，並已針對下列新式瀏覽器最佳化︰Microsoft Edge、Internet Explorer 10 和 11、Chrome、Firefox、Safari，以及所有主要瀏覽器。
+新的入口網站完全是報表管理員的重寫。 它現在是單頁面的標準 HTML5 型應用程式，為新式瀏覽器的最佳化對象：Microsoft Edge、Internet Explorer 10 和 11、Chrome、Firefox、Safari 和所有主要瀏覽器。
 
 入口網站的內容依類型組織：
 
@@ -110,7 +110,7 @@ Reporting Services 與「傳統」分頁報表相關聯，適用於已針對列�
 
 ::: moniker-end
 
-## <a name="includessrsnoversionincludesssrsnoversion-mdmd-programming-features"></a>[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 程式設計功能
+## <a name="ssrsnoversion-programming-features"></a>[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 程式設計功能
 
 妥善運用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 程式設計功能，您就能夠擴充及自訂報表功能。 請使用 SSRS API 整合或擴充自訂應用程式中的資料和報表處理功能。
 

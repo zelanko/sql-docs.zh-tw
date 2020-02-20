@@ -9,10 +9,10 @@ ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 944b6c7053b024a0a62cc24c53095464844d4387
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573952"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Tablix 資料區的區域 (報表產生器及 SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "65573952"
   
 在設計介面上，虛線會指出所選取之 Tablix 資料區的四個區域。 下圖顯示 Tablix 區域中，具有以類別目錄和子類別目錄為基礎的巢狀資料列群組、以地理和國家 (地區) 為基礎的巢狀資料行群組，以及以年為基礎的相鄰資料行群組的區域。  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Tablix 資料區的區域](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix 資料區的區域")  
   
  下列清單具有每個區域的描述：  
   
@@ -42,7 +42,7 @@ ms.locfileid: "65573952"
   
  下圖顯示預覽中的 Tablix 資料區。  
   
- ![預覽、Tablix 邊角、資料列和資料行群組、主體](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "預覽、Tablix 邊角、資料列和資料行群組、主體")  
+ ![預覽，Tablix 邊角、資料列和資料行群組、主體](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "預覽，Tablix 邊角、資料列和資料行群組、主體")  
   
  資料列群組區域會為 Clothing 和 Components 顯示兩個類別目錄群組執行個體。 資料行群組會為 North America 顯示地理群組執行個體，其中具有 Canada (CA) 和 United States (US) 的兩個巢狀國家 (地區) 群組執行個體。 另外，相鄰的資料行會為 2003 和 2004 顯示兩個年群組執行個體。 [總計] 資料行資料列會顯示資料列總計；類別目錄群組所重複的總計資料列會顯示子類別目錄總計，而全部總計資料列則會針對資料區域顯示一次類別目錄的總計。  
   

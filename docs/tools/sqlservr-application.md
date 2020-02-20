@@ -1,6 +1,6 @@
 ---
-title: sqlservr.exe 應用程式 |Microsoft Docs
-ms.custom: ''
+title: sqlservr 應用程式
+ms.custom: seo-lt-2019
 ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1feb0cfe509f4dec4e77076021757045628e2e7a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.openlocfilehash: a4a35081f52ddc6f6e75c4bfa8ff56e1020cb0c6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028976"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75305780"
 ---
 # <a name="sqlservr-application"></a>sqlservr 應用程式
 
@@ -45,7 +45,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 ## <a name="arguments"></a>引數
 
-**-s** *instance_name* 指定要連接的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]實例。 如果未指定任何具名執行個體， **sqlservr** 會啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的預設執行個體。
+**-s** *instance_name* 指定要連接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 如果未指定任何具名執行個體， **sqlservr** 會啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的預設執行個體。
 
 > [!IMPORTANT]
 >啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的執行個體時，您必須使用該執行個體之適當目錄中的 **sqlservr** 應用程式。 如果是預設的執行個體，請執行 \MSSQL\Binn 目錄中的 **sqlservr** 。 如果是具名執行個體，請執行 \MSSQL$ **instance_name** \Binn 目錄中的*sqlservr*。
@@ -59,7 +59,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 **-f** 啟動只含最小組態的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 如果組態值設定 (如過度調配記憶體) 造成伺服器無法啟動，這就很有用。
 
-**-e** *error_log_path* 指出錯誤記錄檔的完整路徑。 如果未指定, 預設的位置會`*\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog`是預設實例的, `*\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog`而針對已命名的實例則為。 **-e** 和 *error_log_path*之間沒有空格。
+**-e** *error_log_path* 指出錯誤記錄檔的完整路徑。 若未指定，則預設執行個體的預設位置是 `*\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog`，而具名執行個體的預設位置是 `*\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog`。 **-e** 和 *error_log_path*之間沒有空格。
 
 **-l** *master_log_path* 指出 **master** 資料庫交易記錄檔的完整路徑。 **-l** 和 *master_log_path*之間沒有空格。
 
@@ -67,7 +67,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 **-n** 可讓您啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體。 如果沒有設定 **-s** 參數，就會嘗試啟動預設執行個體。 您必須先在命令提示字元處切換至該執行個體的適當 BINN 目錄，才能啟動 **sqlservr.exe**。 例如，如果 Instance1 原先為二進位編碼檔案使用 \mssql$Instance1，使用者就必須位於 \mssql$Instance1\binn 目錄中，才能啟動 **sqlservr.exe -s instance1**。 如果您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -n **選項啟動** 的執行個體，建議您也要使用 **-e** 選項，否則不會記錄 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事件。
 
-**-T** *trace#* 指出啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，應該已啟用指定的追蹤旗標 (*trace#* )。 追蹤旗標用來啟動具有非標準行為的伺服器。 如需詳細資訊，請參閱[追蹤旗標&#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
+**-T** *trace#* 指出啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，應該已啟用指定的追蹤旗標 (*trace#* )。 追蹤旗標用來啟動具有非標準行為的伺服器。 如需詳細資訊，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
 >[!IMPORTANT]
 >指定追蹤旗標時，請使用 **-T** 傳遞追蹤旗標號碼。 **接受小寫的 t (** -t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])；但是 **-t** 是用來設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援工程師所需要的其他內部追蹤旗標。
@@ -76,16 +76,16 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 **-x** 停止保留 CPU 時間和快取命中率統計資料。 允許最大效能。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 在大部分情況下，sqlservr.exe 程式只用來進行疑難排解或主要的維護工作。 在命令提示字元處利用 sqlservr.exe 啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會以服務形式啟動，因此，您無法使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] net **命令停止** 。 使用者可以連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，但 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具會顯示該服務的狀態， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員因而可正確地指出該服務已經停止。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可以連接到伺服器，但它也會指出該服務已經停止。
 
 ## <a name="compatibility-support"></a>相容性支援
-下列參數已過時, 且在中[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]不支援。
+下列參數已淘汰，因此 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 不支援。
 
 |參數 | 詳細資訊|
 |:-----|:-----|
-|**-h** | 在舊版 32 位元 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體使用此參數，在啟用 AWE 的情況下保留 Hot Add Memory 中繼資料的虛擬記憶體位址空間。 透過[!INCLUDE[sssql14](../includes/sssql14-md.md)]支援。 如需詳細資訊，請參閱 [SQL Server 2016 中已取代及已中止的 SQL Server 功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)。|
-|**-g** | *memory_to_reserve*<br/><br>適用于的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]舊版32位實例。 透過[!INCLUDE[sssql14](../includes/sssql14-md.md)]支援。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 保留給在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理序之內但在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體集區之外的記憶體配置，所能使用的記憶體整數數量 (MB)。 如需詳細資訊, 請參閱[伺服器記憶體設定選項的 SQL Server 2014 檔](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014)。|
+|**-h** | 在舊版 32 位元 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體使用此參數，在啟用 AWE 的情況下保留 Hot Add Memory 中繼資料的虛擬記憶體位址空間。 透過 [!INCLUDE[sssql14](../includes/sssql14-md.md)] 支援。 如需詳細資訊，請參閱 [SQL Server 2016 中已取代及已中止的 SQL Server 功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)。|
+|**-g** | *memory_to_reserve*<br/><br>適用於舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 32 位元執行個體。 透過 [!INCLUDE[sssql14](../includes/sssql14-md.md)] 支援。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 保留給在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理序之內但在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體集區之外的記憶體配置，所能使用的記憶體整數數量 (MB)。 如需詳細資訊，請參閱 [SQL Server 2014 文件的伺服器記憶體組態選項](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014)。|
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>另請參閱

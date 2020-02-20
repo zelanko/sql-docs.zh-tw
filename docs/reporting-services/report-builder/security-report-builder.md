@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb1a8021ca269cc5fde423ba9eb6903876f949fc
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: e8b89f31330fa09d5dbe1f70fd10b2c473d26c0d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593846"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190101"
 ---
 # <a name="security-report-builder"></a>安全性 (報表產生器)
-  報表產生器是一種報表撰寫用戶端應用程式，專為搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器使用而設計。 該報表伺服器可以設定為以獨立伺服器的原生模式運作，或者以 SharePoint 整合模式運作以支援 SharePoint 網站上的報表。  
+  報表產生器是一種報表撰寫用戶端應用程式，其專為搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器使用而設計。 該報表伺服器可以設定為以獨立伺服器的原生模式運作，或者以 SharePoint 整合模式運作以支援 SharePoint 網站上的報表。  
   
  在報表產生器中，您可以撰寫報表、共用的資料集以及可重複使用的報表組件。 從報表伺服器或 SharePoint 網站上，您可以編輯報表並且加入共用的資料來源、共用的資料集以及共用的報表組件。  
   
@@ -90,10 +90,10 @@ ms.locfileid: "73593846"
   
  在報表設計階段，認證會用於執行資料集查詢和預覽報表。 在執行階段，認證會用於執行報表與快取查詢結果。 您也可以獨立地快取共用資料集查詢結果。 設計階段與執行階段使用的認證可能會不同。 如需詳細資訊，請參閱 [在報表產生器中指定認證](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
   
- 如需保護資料的詳細資訊，請參閱[SQL Server 資料庫引擎和 Azure SQL Database 的資訊安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)。 
+ 如需保護資料安全的詳細資訊，請參閱 [SQL Server 資料庫引擎和 Azure SQL Database 的資訊安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)。 
   
   
- 如需資料來源的詳細資訊，請參閱 [報表產生器中的資料連接、資料來源及連接字串](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+ 如需資料來源的詳細資訊，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
   
 ##  <a name="Models"></a> 了解模型與安全性篩選  
@@ -107,7 +107,7 @@ ms.locfileid: "73593846"
   
 -   除非您會提供有效的值，否則請不要使用依據查詢參數以及屬於 **[文字]** 類型的參數。 可用的值清單有助於使用者只選擇有效的值。 如果沒有有效的值清單，則您將無法限制使用者可以輸入的值。  
   
--   請不要使用全域 [&UserID] 來維護私人資料的安全性。 這個值做為報表參數時，可以利用 URL 存取語法在報表 URL 中指定它。 在共用資料集的運算式中使用這個值，會讓資料集無法被快取。 如需詳細資訊，請參閱[URL 存取參數參考](../../reporting-services/url-access-parameter-reference.md)。  
+-   請不要使用全域 [&UserID] 來維護私人資料的安全性。 這個值做為報表參數時，可以利用 URL 存取語法在報表 URL 中指定它。 在共用資料集的運算式中使用這個值，會讓資料集無法被快取。 如需詳細資訊，請參閱 [URL 存取參數參考](../../reporting-services/url-access-parameter-reference.md)。  
   
  項目發行到報表伺服器後，報表伺服器管理員可以指定以角色為基礎的安全性或資料夾與項目層級安全性，藉此維護這些項目的安全。 如需詳細資訊，請參閱 [保護報表和資源的安全](../../reporting-services/security/secure-reports-and-resources.md)。  
   

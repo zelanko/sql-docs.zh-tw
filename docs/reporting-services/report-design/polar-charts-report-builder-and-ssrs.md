@@ -9,10 +9,10 @@ ms.assetid: c9402d8f-202a-4cdf-949e-50f5b1d2b885
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c6641ab4cbb58ab628fb2524d72751fd042a49e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576353"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>極座標圖 (報表產生器及 SSRS)
@@ -21,7 +21,7 @@ ms.locfileid: "65576353"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="variations"></a>變數  
+## <a name="variations"></a>變化  
   
 -   **雷達圖**： 雷達圖會將數列顯示為弧線或區域。 雷達圖不像極座標圖，不會根據極座標顯示資料。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "65576353"
 ## <a name="example"></a>範例  
  下列範例顯示如何使用雷達圖。 下表提供圖表的範例資料。  
   
-|[屬性]|Sales|  
+|名稱|Sales|  
 |----------|-----------|  
 |灌木|61|  
 |種子|78|  

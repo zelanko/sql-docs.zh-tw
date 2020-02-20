@@ -1,95 +1,27 @@
 ---
-title: 資料連線、資料來源、連接字串-報表產生器-SSRS | Microsoft Docs
-ms.date: 10/10/2019
+title: 建立資料連接字串 - 報表產生器 & SSRS | Microsoft Docs
+ms.date: 11/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0f4ff968ae8d6090756cc5751fda2aadbec3f98a
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
-ms.translationtype: MTE75
+ms.openlocfilehash: 73bf9e24ffb42ef93547097c53b5838a22292fda
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313764"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190917"
 ---
-# <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>資料連接、資料來源及連接字串 (報表產生器和 SSRS)
+# <a name="create-data-connection-strings---report-builder--ssrs"></a>建立資料連接字串 - 報表產生器 & SSRS
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
-
-  若要在[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]分頁報表中包括資料，您必須先建立「資料來源」  與「資料集」  。 本主題說明資料來源的類型、如何建立資料來源，以及與資料來源認證相關的重要資訊。 資料來源包括資料來源類型、連接資訊，以及要使用的認證類型。 資料來源有兩種類型：內嵌和共用。 內嵌資料來源是定義在報表中，而且只能供該報表使用。 共用資料來源則與報表分開定義，而且可以供多個報表使用。 如需詳細資訊，請參閱[內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)。  
-
-## <a name="data-in-includessrbnoversionincludesssrbnoversionmd"></a>[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中的資料  
- ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
-  
-1.  **報表資料窗格中的資料來源** ：在您建立內嵌資料來源或加入共用資料來源之後，[報表資料] 窗格中就會出現資料來源。  
-  
-2.  **連接對話方塊** ：使用 [連接對話方塊] 可建立連接字串或貼上連接字串。  
-  
-3.  **資料連接資訊** ：連接字串會傳遞至資料延伸模組。  
-  
-4.  **認證** ：認證會與連接字串分開管理。  
-  
-5.  **資料延伸模組/資料提供者** ：資料可經由多個資料存取層連接。  
-  
-6.  **外部資料來源** ：從關聯式資料庫、多維資料庫、SharePoint 清單、Web 服務或報表模型擷取資料。  
-
-##  <a name="bkmk_data_sources"></a> 內嵌與共用資料來源  
- 如果資料來源使用頻率很高，則共用資料來源很有用。 建議您盡量使用共用資料來源。 它們會簡化報表和報表存取的管理，而且有助於提升報表和報表所存取之資料來源的安全性。 如果您需要共用資料來源，請要求系統管理員為您建立一個。  
-  
- 內嵌資料來源是儲存在報表定義中的資料連接。 內嵌資料來源連接資訊只能用於內嵌該資訊的報表中。 若要定義和管理內嵌資料來源，請使用 **[資料來源屬性]** 對話方塊。  
-  
- 內嵌與共用資料來源之間的差異在於建立、儲存和管理的方式。  
-  
--   在報表設計師中，您可以將內嵌或共用資料來源建立成 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 專案的一部分。 您可以控制要在本機使用它們進行預覽，還是將它們當做專案的一部分部署至報表伺服器或 SharePoint 網站。 您可以使用已經安裝在電腦以及報表伺服器或 SharePoint 網站 (部署報表的所在位置) 上的自訂資料延伸模組。  
-  
-     系統管理員可以安裝與設定其他資料處理延伸模組以及 .NET Framework 資料提供者。 如需詳細資訊，請參閱[資料處理延伸模組與 .NET Framework Data Providers &#40;SSRS&#41;](../../reporting-services/report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md)。  
-  
-     開發人員可以使用 <xref:Microsoft.ReportingServices.DataProcessing> API 建立資料處理延伸模組，以支援其他類型的資料來源。  
-  
--   在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中，您可以瀏覽至報表伺服器或 SharePoint 網站，然後選取共用資料來源或在報表中建立內嵌資料來源。 您無法在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中建立共用資料來源。 您無法在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中使用自訂資料延伸模組。  
-  
- 下表摘要列出內嵌與共用資料來源之間的差異。  
-  
-|Description|內嵌<br /><br /> 資料來源|共用<br /><br /> 資料來源|  
-|-----------------|------------------------------|----------------------------|  
-|資料連接會內嵌在報表定義中。|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
-|報表伺服器上資料連接的指標會內嵌在報表定義中。||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
-|在報表伺服器上管理|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
-|共用資料集所需||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
-|元件所需||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
+  若要在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 編頁報表中包含資料，您必須先建立「資料來源」  的「連接字串」  。 本文說明如何建立資料連接字串，以及與資料來源認證相關的重要資訊。 資料來源包括資料來源類型、連接資訊，以及要使用的認證類型。 如需詳細的背景資料，請參閱 [SQL Server Reporting Services 中的報表資料簡介 (SSRS)](report-data-ssrs.md)。
   
 ##  <a name="bkmk_DataConnections"></a> 內建的資料延伸模組  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中預設的資料延伸模組包括下列資料連接類型：  
-  
--   Microsoft SQL Server 和 Microsoft Azure SQL Database
-  
--   Microsoft SQL Server Analysis Services  
-  
--   Microsoft SharePoint 清單  
-  
--   [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
-  
--   Microsoft SQL Server Parallel Data Warehouse  
-  
--   OLE DB  
-  
--   Oracle  
-  
--   SAP NetWeaver BI  
-  
--   Hyperion Essbase  
-  
--   Teradata  
-  
--   XML  
-  
--   ODBC  
-
- 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援之資料來源與版本的完整清單，請參閱 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的預設資料延伸模組包括 Microsoft SQL Server、Microsoft Azure SQL Database 和 Microsoft SQL Server Analysis Services。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援之資料來源與版本的完整清單，請參閱 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
 ##  <a name="bkmk_connection_examples"></a> 一般連接字串範例  
  連接字串是資料提供者之連接屬性的文字表示。 下表列出各種資料連接類型之連接字串的範例。  
@@ -97,7 +29,7 @@ ms.locfileid: "72313764"
  > [!NOTE]  
 >  [Connectionstrings.com](https://www.connectionstrings.com/) 是取得連接字串範例的另一個資源。 
   
-|**Data source**|**範例**|**說明**|  
+|**資料來源**|**範例**|**說明**|  
 |---------------------|-----------------|---------------------|  
 |本機伺服器上的 SQL Server 資料庫|`data source="(local)";initial catalog=AdventureWorks`|將資料來源類型設為 **Microsoft SQL Server**。 如需詳細資訊，請參閱 [SQL Server 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)。|  
 |SQL Server 執行個體<br /><br /> [資料庫]|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|將資料來源類型設為 **Microsoft SQL Server**。|  
@@ -114,15 +46,15 @@ ms.locfileid: "72313764"
 |XML 資料來源、XML 文件|`https://localhost/XML/Customers.xml`|將資料來源類型設為 **XML**。 連接字串是 XML 文件的 URL。 
 |XML 資料來源, 內嵌 XML 文件|*Empty*|將資料來源類型設為 **XML**。 XML 資料內嵌在報表定義中。|  
 |SharePoint 清單|`data source=https://MySharePointWeb/MySharePointSite/`|將資料來源類型設為 **SharePoint 清單**。|  
-| Power BI Premium 資料集（從 Reporting Services 2019 開始） | 伺服器 = powerbi：//api.powerbi.com/v1.0/myorg/<workspacename>; 初始目錄 = <YourDatasetName> | 將資料來源類型設為 **Microsoft SQL Server Analysis Services**。 |
+| Power BI Premium 資料集 (從 Reporting Services 2019 開始) | Server=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;initial catalog = <YourDatasetName> | 將資料來源類型設為 **Microsoft SQL Server Analysis Services**。 |
 
   
  如果無法使用 **localhost**連接到報表伺服器，請檢查 TCP/IP 通訊協定的網路通訊協定是否已啟用。 如需詳細資訊，請參閱 [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md)。  
   
- 如需連接到這些資料來源類型所需組態的詳細資訊，請參閱[從外部資料來源加入資料 &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 或 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) 下的特定資料連接主題。  
+ 如需連線到這些資料來源類型所需組態的詳細資訊，請參閱[從外部資料來源新增資料 &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 或 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) 下特定資料連線文章。  
   
 ##  <a name="bkmk_special_password_characters"></a> 密碼中的特殊字元  
- 如果您設定 ODBC 或 SQL 資料來源以提示密碼或將密碼包含在連接字串中，則當使用者輸入含有特殊字元 (例如：標點符號) 的密碼時，某些基礎資料來源驅動程式無法驗證這些特殊字元。 當您處理報表時，訊息「不是有效密碼」可能會指出此問題。 如果無法變更密碼，您可以洽詢資料庫管理員，將適當的認證儲存在伺服器上，做為系統 ODBC 資料來源名稱 (DSN) 的一部分。 如需詳細資訊，請參閱 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 文件集中的＜OdbcConnection.ConnectionString＞。  
+ 如果您設定 ODBC 或 SQL 資料來源以提示密碼或將密碼包含在連接字串中，則當使用者輸入含有特殊字元 (例如：標點符號) 的密碼時，某些基礎資料來源驅動程式無法驗證這些特殊字元。 當您處理報表時，訊息「不是有效密碼」可能會指出此問題。 如果無法變更密碼，您可以洽詢資料庫管理員，將適當的認證儲存在伺服器上，做為系統 ODBC 資料來源名稱 (DSN) 的一部分。 如需詳細資訊，請參閱 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 文件中的 [OdbcConnection.ConnectionString](https://docs.microsoft.com/dotnet/api/system.data.odbc.odbcconnection.connectionstring)。  
   
 ##  <a name="bkmk_Expressions_in_connection_strings"></a> 以運算式為基礎的連接字串  
  以運算式為基礎的連接字串是在執行階段進行評估。 例如，您可以將資料來源指定為參數，包括連接字串中的參數參考，並允許使用者選擇報表的資料來源。 例如，假設有一家跨國企業，在許多國家 (地區) 有資料伺服器。 執行銷售報表的使用者可以在執行報表之前，使用以運算式為基礎的連接字串，來選取特定國家 (地區) 的資料來源。  
@@ -149,7 +81,8 @@ ms.locfileid: "72313764"
 
 ## <a name="next-steps"></a>後續步驟
 
-[建立、修改及刪除共用資料來源](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+[SQL Server Reporting Services 中的報表資料簡介 (SSRS)](report-data-ssrs.md)
+[建立和修改共用資料來源](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
 [建立和修改內嵌資料來源](../../reporting-services/report-data/create-and-modify-embedded-data-sources.md)   
 [設定部署屬性](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [指定報表資料來源的認證及連線資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  

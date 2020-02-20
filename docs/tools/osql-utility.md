@@ -1,10 +1,7 @@
 ---
-title: osql 公用程式 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/16/2017
+title: osql 公用程式
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,17 +20,23 @@ helpviewer_keywords:
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: markingmyname
 ms.author: maghan
+ms.manageR: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: cfd8bc56a642442e1a5c5f673ca70bd86eb3ef6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: dbc103ea44027056541dada86451c757a27619ff
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105752"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307368"
 ---
 # <a name="osql-utility"></a>osql 公用程式
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  **osql** 公用程式可讓您輸入 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式、系統程序和指令碼檔案。 這個公用程式利用 ODBC 來與伺服器通訊。  
+
+**osql** 公用程式可讓您輸入 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式、系統程序和指令碼檔案。 這個公用程式利用 ODBC 來與伺服器通訊。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的未來版本將移除此功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 改用 **sqlcmd** 。 如需詳細資訊，請參閱 [sqlcmd Utility](../tools/sqlcmd-utility.md)。  
@@ -137,7 +140,7 @@ C:\>osql
  **-c** _cmd_end_  
  指定命令結束字元。 依預設，在一行中單獨輸入 GO，便會終止命令，並將命令傳給 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 當您重設命令結束字元時，請勿使用對作業系統有特殊意義的 [!INCLUDE[tsql](../includes/tsql-md.md)] 保留字或字元，不論前面是否附加了反斜線，都是一樣。  
   
- **-q "查詢**  **"**  
+ **-q "** _query_ **"**  
  啟動 **osql** 時便執行查詢，但查詢完成時 **osql** 不會結束。 (請注意，查詢陳述式不應包含 GO)。 如果您是從批次檔中發出查詢，請使用變數 (%variables) 或環境變數 (%variables%)。 例如：  
   
 ```  
@@ -147,7 +150,7 @@ osql -E -q "select name, object_id from %table%"
   
  請利用雙引號括住查詢，利用單引號括住內嵌在查詢中的任何項目。  
   
- **-Q"查詢**  **"**  
+ **-Q"** _query_ **"**  
  執行查詢並立即結束 **osql**。 請利用雙引號括住查詢，利用單引號括住內嵌在查詢中的任何項目。  
   
  **-n**  
@@ -193,7 +196,7 @@ osql -E -q "select name, object_id from %table%"
 > [!NOTE]  
 >  **osql**已不再支援 **-n** 、 **-O** 和 **-D**選項。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **osql** 公用程式會在已設定此處所列之區分大小寫選項的情況下，直接從作業系統中啟動。 啟動 **osql**後，其會接受 SQL 陳述式並以互動方式傳送至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 結果會格式化，顯示在畫面中 (**stdout**)。 使用 QUIT 或 EXIT 來結束 **osql**。  
   
  若您在啟動 **osql**時未指定使用者名稱，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會檢查及使用類似 **osqluser=(** _user_ **)** 或 **osqlserver=(** _server_ **)** 等環境變數。 如果未設定任何環境變數，就會使用工作站使用者名稱。 如果您沒有指定伺服器，就會使用工作站的名稱。  
@@ -208,7 +211,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>OSQL 命令  
  除了 [!INCLUDE[tsql](../includes/tsql-md.md)] osql **內的**陳述式，您也可以使用這些命令。  
   
-|命令|Description|  
+|Command|描述|  
 |-------------|-----------------|  
 |GO|執行在上一個 GO 之後輸入的所有陳述式。|  
 |RESET|清除您已輸入的任何陳述式。|  
@@ -264,7 +267,7 @@ osql -E -i titles.qry -o titles.res
  您可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **提交給**的 Transact-SQL 陳述式中併入註解。 可用的註解樣式有兩種：`--` 與 `/*...*/`。  
   
 ## <a name="using-exit-to-return-results-in-osql"></a>在 osql 中利用 EXIT 傳回結果  
- 您可以利用 SELECT 陳述式的結果來做為 **osql**的傳回值。 如果為數值，則最後一個結果資料列的最後一個資料行會轉換成 4 位元組的整數 (long)。 MS-DOS 會將低位元組傳給父處理序或作業系統錯誤層級。 Windows 會傳遞整個 4 位元組整數。 語法如下：  
+ 您可以利用 SELECT 陳述式的結果來做為 **osql**的傳回值。 如果為數值，則最後一個結果資料列的最後一個資料行會轉換成 4 位元組的整數 (long)。 MS-DOS 會將低位元組傳給父處理序或作業系統錯誤層級。 Windows 會傳遞整個 4 位元組整數。 語法為：  
   
 ```  
 EXIT ( < query > )  

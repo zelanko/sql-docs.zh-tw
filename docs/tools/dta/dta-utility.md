@@ -1,10 +1,7 @@
 ---
-title: dta 公用程式 | Microsoft Docs
-ms.custom: ''
-ms.date: 01/09/2017
+title: dta 公用程式
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,18 +17,24 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23cd3f3b29db6d6c791b97b40401781fa3a3bbfc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/09/2017
+ms.openlocfilehash: 7225e09e0cda9c371d1fc24934f9aeb9a803be9b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981808"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258279"
 ---
 # <a name="dta-utility"></a>dta 公用程式
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **dta** 公用程式是 Database Engine Tuning Advisor 的命令提示字元版本。 **dta** 公用程式的設計，是為了讓您在應用程式和指令碼中使用 Database Engine Tuning Advisor 功能。  
-  
- 如同 Database Engine Tuning Advisor， **dta** 公用程式也會分析工作負載，並提供實體設計結構的建議，以增進該工作負載的伺服器效能。 工作負載可能是計畫快取、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤檔或資料表，也可能是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 實體設計結構包括索引、索引檢視表及資料分割。 分析工作負載之後， **dta** 公用程式會產生資料庫實體設計的建議，且能夠產生必要的指令碼來實作建議。 您可以從命令提示字元，搭配 **-if** 或 **-it** 引數來指定工作負載。 您也可以從命令提示字元，搭配 **-ix** 引數來指定 XML 輸入檔。 在這個情況之下，工作負載指定在 XML 輸入檔中。  
+
+**dta** 公用程式是 Database Engine Tuning Advisor 的命令提示字元版本。 **dta** 公用程式的設計，是為了讓您在應用程式和指令碼中使用 Database Engine Tuning Advisor 功能。  
+
+如同 Database Engine Tuning Advisor， **dta** 公用程式也會分析工作負載，並提供實體設計結構的建議，以增進該工作負載的伺服器效能。 工作負載可能是計畫快取、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤檔或資料表，也可能是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 實體設計結構包括索引、索引檢視表及資料分割。 分析工作負載之後， **dta** 公用程式會產生資料庫實體設計的建議，且能夠產生必要的指令碼來實作建議。 您可以從命令提示字元，搭配 **-if** 或 **-it** 引數來指定工作負載。 您也可以從命令提示字元，搭配 **-ix** 引數來指定 XML 輸入檔。 在這個情況之下，工作負載指定在 XML 輸入檔中。  
   
 ## <a name="syntax"></a>語法  
   
@@ -78,7 +81,7 @@ dta
   
 ## <a name="arguments"></a>引數  
  **-?**  
- 顯示使用方式資訊。  
+ 顯示使用資訊。  
   
  **-A** _time_for_tuning_in_minutes_  
  指定微調時間限制 (以分鐘為單位)。 **dta** 會利用指定的時間量來微調工作負載，以及產生含有建議的實體設計變更的指令碼。 依預設， **dta** 假設微調時間是 8 小時。 指定 0 代表微調時間無限制。 **dta** 可能會在時間限制過期之前，完成整個工作負載的微調。 不過，為了確保整個工作負載都能得到微調，我們建議您指定無限的微調時間 (-A 0)。  
@@ -166,7 +169,7 @@ dta -d AdventureWorks2012 ...
  **-fa** _physical_design_structures_to_add_  
  指定 **dta** 應該在建議中包含的實體設計結構類型。 下表列出並說明這個引數所能指定的值。 未指定任何值時，**dta** 會使用預設的 **-fa IDX**。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |IDX_IV|索引和索引檢視表。|  
 |IDX|只有索引。|  
@@ -187,7 +190,7 @@ dta -d AdventureWorks2012 ...
  **-fk** _keep_existing_option_  
  指定 **dta** 在產生建議時，必須保留的現有實體設計結構。 下表列出並說明這個引數所能指定的值：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |無|無現有結構。|  
 |ALL|所有現有結構。|  
@@ -198,7 +201,7 @@ dta -d AdventureWorks2012 ...
  **-fp** _partitioning_strategy_  
  指定是否應該分割 **dta** 所提出的新實體設計結構 (索引和索引檢視表) 及其分割方式。 下表列出並說明這個引數所能指定的值：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |無|沒有資料分割。|  
 |FULL|完整的資料分割 (選擇這個項目，可以增進效能)。|  
@@ -214,14 +217,13 @@ dta -d AdventureWorks2012 ...
   
  **-ip**  
  指定計畫快取可用做為工作負載。 針對明確選定的資料庫排名前 1000 個計畫快取事件，進行分析。 您可以利用 **-n** 選項變更此值。  
- 
+
 **-iq**  
- 指定使用查詢存放區做為工作負載。 系統會分析來自查詢存放區明確選取之資料庫的前1000個事件。 您可以利用 **-n** 選項變更此值。  如需詳細資訊，請參閱[查詢存放區](../../relational-databases/performance/how-query-store-collects-data.md)和[使用查詢存放區的工作負載微調資料庫](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。
+ 指定將查詢存放區作為工作負載。 系統會針對明確選定的資料庫來分析查詢存放區排名前 1000 個事件。 您可以利用 **-n** 選項變更此值。  如需詳細資訊，請參閱[查詢存放區](../../relational-databases/performance/how-query-store-collects-data.md)和[使用查詢存放區的工作負載微調資料庫](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。
  ||  
 |-|  
 |**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。|  
      
-  
  **-if** _workload_file_  
  指定微調輸入所用的工作負載檔案之路徑與名稱。 檔案必須是下列其中一種格式：.trc (SQL Server Profiler 追蹤檔)、.sql (SQL 檔案) 或 .log ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 追蹤檔)。 您必須指定一個工作負載檔案或一份工作負載資料表。  
   
@@ -241,17 +243,23 @@ dta -d AdventureWorks2012 ...
   
  **-ix** _input_XML_file_name_  
  指定包含 **dta** 輸入資訊的 XML 檔案名稱。 這必須是符合 DTASchema.xsd 的有效 XML 文件。 微調選項的命令提示字元所指定的衝突引數會覆寫這個 XML 檔案中的對應值。 XML 輸入檔中以評估模式輸入的使用者指定組態是唯一例外。 例如，如果在 XML 輸入檔的 **Configuration** 元素中輸入了某項組態， **EvaluateConfiguration** 元素也指定成一個微調選項，XML 輸入檔所指定的微調選項會覆寫在命令提示字元之下輸入的任何微調選項。  
-  
+
+ **-k** _maxtotalindexes_  
+ 建議的索引數上限。  
+
+ **-K** _maxtotalindexes_  
+ 每一資料表的索引數上限。
+
  **-m** _minimum_improvement_  
  指定建議的組態必須符合之最小改進百分比。  
   
  **-N** _online_option_  
  指定是否在線上建立實體設計結構。 下表列出和描述這個引數所能指定的值：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |OFF|不能在線上建立任何建議的實體設計結構。|  
-|ON|可以在線上建立所有建議的實體設計結構。|  
+|開啟|可以在線上建立所有建議的實體設計結構。|  
 |MIXED|Database Engine Tuning Advisor 嘗試建議在可能的情況下，能夠在線上建立的實體設計結構。|  
   
  如果在線上建立索引，就會在它的物件定義上附加 ONLINE = ON。  
@@ -266,11 +274,11 @@ dta -n number_of_events -A 0
  在這個情況下，指定無限微調時間 (`-A 0`) 非常重要。 否則，Database Engine Tuning Advisor 會預設 8 小時的微調時間。
  
  **-I** _time_window_in_hours_   
-   指定查詢必須執行的時間範圍（以小時為單位），以供 DTA 在使用 **-iq**選項（查詢存放區的工作負載）時進行調整。 
+   指定查詢必須執行的時間範圍 (以小時為單位)，以供 DTA 在使用 **-iq** 選項時作為調整依據 (查詢存放區的工作負載)。 
 ```  
 dta -iq -I 48  
 ```  
-在此情況下，DTA 會使用查詢存放區做為工作負載的來源，而且只會考慮過去48小時內執行的查詢。  
+在此情況下，DTA 會將查詢存放區作為工作負載的來源，並只考慮過去 48 小時內執行的查詢。  
   ||  
 |-|  
 |**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。|  
@@ -280,7 +288,7 @@ dta -iq -I 48
  **-of** _output_script_file_name_  
  指定 **dta** 將建議以 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼形式，寫入指定的檔案名稱與目的地。  
   
- 您可以搭配此選項來使用 **-F**。 請確定檔案名稱沒有重複，特別是當您也正在使用 **-or** 和 **-ox**時。  
+ 您可以搭配此選項來使用 **-F** 。 請確定檔案名稱沒有重複，特別是當您也正在使用 **-or** 和 **-ox**時。  
   
  **-or** _output_xml_report_file_name_  
  指定 **dta** 將建議以 XML 格式寫入輸出報表。 如果提供了檔案名稱，建議便會寫入該目的地。 否則， **dta** 將使用該工作階段名稱來產生檔案名稱，並將其寫入目前的目錄。  
@@ -301,7 +309,7 @@ dta -iq -I 48
  **-rl** _analysis_report_list_  
  指定要產生的分析報表清單。 下表列出這個引數所能指定的值：  
   
-|ReplTest1|報表|  
+|值|Report|  
 |-----------|------------|  
 |ALL|所有分析報表|  
 |STMT_COST|陳述式成本報表|  
@@ -361,7 +369,7 @@ dta -iq -I 48
  **-x**  
  啟動微調工作階段並結束。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  按一下 CTRL+C 可停止微調工作階段，並依據 **dta** 截至目前為止所完成的分析來產生建議。 系統會提示您決定是否要產生建議。 請再按一下 CTRL+C 來停止微調工作階段，不產生建議。  
   
 ## <a name="examples"></a>範例  
@@ -390,33 +398,32 @@ dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10
 ```  
   
  **D.微調檔案中所列出的特定資料表**  
-  
+
  此範例示範 *table_list_file* ( **-Tf** 引數) 的用法。 table_list.txt 檔的內容如下：  
-  
-```  
+
+```
 AdventureWorks2012.Sales.Customer  100000  
 AdventureWorks2012.Sales.Store  
 AdventureWorks2012.Production.Product  2000000  
-```  
+```
+
+table_list.txt 的內容指定：  
+
+- 只應微調資料庫中的 **Customer**、 **Store**和 **Product** 等資料表。  
   
- table_list.txt 的內容指定：  
+- **Customer** 和 **Product** 資料表中的列數，分別假設為 100,000 和 2,000,000。  
   
--   只應微調資料庫中的 **Customer**、 **Store**和 **Product** 等資料表。  
-  
--   **Customer** 和 **Product** 資料表中的列數，分別假設為 100,000 和 2,000,000。  
-  
--   **Store** 中的列數假設為資料表目前的列數。  
-  
- 請注意，資料列計數與 *table_list_file*的先前資料表名稱之間可能有一個或多個空格。  
-  
- 微調時間是 2 小時 (`-A 120`)，輸出寫在 XML 檔 (`-ox XMLTune.xml`) 中。  
-  
-```  
+- **Store** 中的列數假設為資料表目前的列數。  
+
+    請注意，資料列計數與 *table_list_file*的先前資料表名稱之間可能有一個或多個空格。  
+    
+    微調時間是 2 小時 (`-A 120`)，輸出寫在 XML 檔 (`-ox XMLTune.xml`) 中。  
+
+``` 
 dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [命令提示字元公用程式參考 &#40;Database Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)   
- [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
-  
-  
+``` 
+
+## <a name="see-also"></a>另請參閱
+
+- [命令提示字元公用程式參考 &#40;Database Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)
+- [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)

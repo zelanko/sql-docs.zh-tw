@@ -14,14 +14,14 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fa8579f24cbad2bdbebe3ad5198732ac7786bde9
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67228752"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>報表伺服器內容管理 (SSRS 原生模式)
-在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，內容管理是指管理報表伺服器項目。 所有項目都可以透過屬性和安全性設定單獨進行管理， 而任何一個項目都可以移至報表伺服器資料夾命名空間內的不同位置。 若要有效管理項目，您必須了解內容管理員所執行的工作。 從 SQL Server 2016 Reporting Services 或更新版本 (SSRS) CTP 3.2 開始[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]入口網站是可用。 本文會探討入口網站和新的入口網站體驗。  
+在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，內容管理是指管理報表伺服器項目。 所有項目都可以透過屬性和安全性設定單獨進行管理， 而任何一個項目都可以移至報表伺服器資料夾命名空間內的不同位置。 若要有效管理項目，您必須了解內容管理員所執行的工作。 從 SQL Server 2016 Reporting Services 或更新版本 (SSRS) CTP 3.2 開始，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站可供使用。 本文會探討入口網站和新的入口網站體驗。  
   
 > [!NOTE]  
 > 內容管理與報表伺服器管理不同。 如需如何管理報表伺服器執行環境的詳細資訊，請參閱 [Reporting Services 報表伺服器 &#40;原生模式&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)。  
@@ -42,7 +42,7 @@ ms.locfileid: "67228752"
   
 -   藉由建立報表處理排程，並指定何者可依需求執行以及何者要從快取載入，即可平衡伺服器的報表處理負荷。  
   
--   使用兩個預先定義的角色提供執行管理工作的權限： **系統管理員** 和 **內容管理員**。 您必須被指派至這兩種角色，才能有效管理報表伺服器內容。  
+-   使用預先定義的角色提供權限以執行管理工作：**系統管理員**和**內容管理員**。 您必須被指派至這兩種角色，才能有效管理報表伺服器內容。  
   
 用於管理報表伺服器內容的工具包括 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 與入口網站。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可讓您設定預設值和啟用功能。 入口網站是用來將報表伺服器項目與作業的存取權授與使用者、檢視和使用報表與其他內容類型，以及檢視和使用所有共用項目與報表散發功能。 入口網站是更新的網站，允許使用大多數已過時的報表管理員功能。 如需詳細資訊，請參閱 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "67228752"
   
   ![可移動項目的報表伺服器圖示](media/report-server-content-management-ssrs-native-mode/report-server-content-icons.png)
 
- 並非所有的項目都可以移動。 您無法移動與報表相關聯的項目，例如訂閱或報表記錄。 那些項目會隨著相關聯的報表移動。 同樣地，您無法移動存在於資料夾階層之外的項目 (例如共用排程)。 如果您沒有權限也無法移動項目。 在您的角色指派中為目標項目選取下列工作時，即涵蓋移動項目的權限：「管理報表」、「管理資料夾」，以及「管理資料來源」。  
+ 並非所有的項目都可以移動。 您無法移動與報表相關聯的項目，例如訂閱或報表記錄。 那些項目會隨著相關聯的報表移動。 同樣地，您無法移動存在於資料夾階層之外的項目 (例如共用排程)。 如果您沒有權限也無法移動項目。 在您的角色指派中針對目標項目選取下列工作時，即涵蓋移動項目的權限：「管理報表」、「管理資料夾」，以及「管理資料來源」。  
   
 ##  <a name="bkmk_Folders"></a> 資料夾  
  資料夾階層用於處理由報表伺服器所儲存及管理的項目。  根據預設，資料夾結構包含一個稱為 [主資料夾] 的根節點以及多個支援選擇性 [我的報表] 功能的保留資料夾。 其他為使用者定義的資料夾。 如果您要授與相同的存取層級給多個項目，報表伺服器資料夾相當實用。 您在資料夾上設定的權限可以由資料夾中的項目繼承，以及繼承至從該資料夾分支出去的其他資料夾。 例如，您可以在 [主資料夾] 下建立依組資料夾，指派小組權限給每個資料夾，然後讓小組成員視需要自訂小組資料夾底下的資料夾。  
@@ -94,7 +94,7 @@ ms.locfileid: "67228752"
   
 |資料夾|目的|  
 |------------|-------------|  
-|主資料夾|資料夾階層的根節點。|  
+|Home|資料夾階層的根節點。|  
 |使用者|啟用 [我的報表] 功能時，會出現此資料夾。 它包含使用 [我的報表] 功能之所有使用者的子資料夾，而且只有報表伺服器管理員能夠存取。 每個子資料夾名稱與使用者的名稱相符。|  
 |我的報表|提供每個使用者的個人工作空間。|  
   
@@ -124,7 +124,7 @@ ms.locfileid: "67228752"
 |作業|檔案類型|  
 |---------------|---------------|  
 |上傳|若要上傳資源，您必須使用入口網站 (如果報表伺服器以原生模式執行的話) 或 SharePoint 網站上的應用程式頁面 (如果伺服器以 SharePoint 整合模式執行的話)。 如需詳細資訊，請參閱[在報表伺服器中上傳檔案或報表](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)或[將文件上傳到 SharePoint 文件庫 &#40;SharePoint 模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)。|  
-|發行|專案中不是報表、報表組件、資料來源或資料集的所有檔案都會當做資源上傳。 若要發行資源，請在報表設計師中，將現有的項目加入至專案，然後將此專案發行至報表伺服器。|  
+|發佈|專案中不是報表、報表組件、資料來源或資料集的所有檔案都會當做資源上傳。 若要發行資源，請在報表設計師中，將現有的項目加入至專案，然後將此專案發行至報表伺服器。|  
   
  所有資源都會先在檔案系統上以檔案的形式產生，然後再上傳至報表伺服器。 除了 ASP.NET 所加諸的 4 MB 預設檔案大小限制以外，您可以上傳的檔案類型沒有任何限制。 不過，以資源發行至報表伺服器時，具有對等 MIME 類型之檔案類型的效能會優於其他類型。 例如，當使用者按一下資源時，以 HTML 和 JPG 檔為基礎的資源將在瀏覽器視窗中開啟，HTML 將轉譯成網頁，JPG 將轉譯成影像，供使用者檢視。 反之，沒有對等 MIME 類型的資源 (例如桌上型電腦應用程式檔案) 可能就無法在瀏覽器視窗中轉譯。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "67228752"
   
  若要在報表中使用影像資源，請將影像檔加入至專案，然後將它與報表一起發行。 發行影像之後，您可以更新報表中的影像參考，讓它指向報表伺服器上的資源，然後單獨重新發行該報表，以便儲存您的變更。 之後，您就可以透過重新發行資源，更新影像 (與報表分開處理)。 報表會使用報表伺服器上可用的最新影像版本。  
   
- 如需詳細資訊，請參閱 <<c0> [ 更新資源 （web 入口網站）](../../reporting-services/report-server/update-a-resource-report-manager.md)。  
+ 如需詳細資訊，請參閱[更新資源 (入口網站)](../../reporting-services/report-server/update-a-resource-report-manager.md)。  
   
 ##  <a name="bkmk_MyReports"></a> 我的報表  
  [我的報表] 資料夾是以有效網域帳戶登入報表伺服器的使用者之個人工作空間。 此特定用途資料夾提供儲存區給處理中的報表、不要進行全區散發的報表，或針對特定需求而修改的報表。 您無法限制儲存在 [我的報表] 資料夾中的項目數量或大小，也無法設定 [我的報表] 資料夾在使用者之間共用。  
@@ -170,7 +170,7 @@ ms.locfileid: "67228752"
 ## <a name="tasks"></a>工作  
  [上傳檔案到資料夾](../../reporting-services/report-server/upload-files-to-a-folder.md)  
  [建立、刪除或修改資料夾 (入口網站)](../../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md)  
- [更新資源 （web 入口網站）](../../reporting-services/report-server/update-a-resource-report-manager.md)  
+ [更新資源 (入口網站)](../../reporting-services/report-server/update-a-resource-report-manager.md)  
  [上傳檔案到資料夾](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
 ## <a name="see-also"></a>另請參閱  

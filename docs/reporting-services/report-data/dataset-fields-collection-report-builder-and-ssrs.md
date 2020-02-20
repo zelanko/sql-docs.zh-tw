@@ -9,10 +9,10 @@ ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a893a9a25f4ad19dcc71f538b62110b5838fa3ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573160"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>資料集欄位集合 (報表產生器及 SSRS)
@@ -53,7 +53,7 @@ ms.locfileid: "65573160"
  如果您正在處理報表模型資料來源，您可將實體和實體欄位指定為報表資料。 在報表模型的查詢設計工具中，您可以透過互動方式來瀏覽及選取相關實體，並選擇您要併入報表資料集的欄位。 當您完成查詢的設計之後，您可以在 [報表資料] 窗格內查看實體識別碼和實體欄位的集合。 實體識別碼是由報表模型自動產生，通常不會對使用者顯示。  
   
 ### <a name="using-extended-field-properties"></a>使用擴充欄位屬性  
- 支援多維度查詢的資料來源 (如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]) 可支援欄位上的欄位屬性。 欄位屬性會出現在查詢的結果集中，但是在 **[報表資料]** 窗格中則看不到。 欄位屬性仍然可供您的報表使用。 若要參考欄位的屬性，請將欄位拖曳到報表上，然後將預設屬性 **Value** 變更為您想要之屬性的欄位名稱。 例如在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 中，您可以針對 Cube 資料格中的值來定義格式。 可以使用欄位屬性 **FormattedValue**來取得格式化的值。 若要直接使用該值，而不是使用值並設定文字方塊的格式屬性，請將欄位拖曳到文字方塊，並將預設運算式 `=Fields!FieldName.Value` 變更為 `=Fields!FieldName.FormattedValue`。  
+ 支援多維度查詢的資料來源 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]) 可支援欄位上欄位屬性。 欄位屬性會出現在查詢的結果集中，但是在 **[報表資料]** 窗格中則看不到。 欄位屬性仍然可供您的報表使用。 若要參考欄位的屬性，請將欄位拖曳到報表上，然後將預設屬性 **Value** 變更為您想要之屬性的欄位名稱。 例如在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 中，您可以針對 Cube 資料格中的值來定義格式。 可以使用欄位屬性 **FormattedValue**來取得格式化的值。 若要直接使用該值，而不是使用值並設定文字方塊的格式屬性，請將欄位拖曳到文字方塊，並將預設運算式 `=Fields!FieldName.Value` 變更為 `=Fields!FieldName.FormattedValue`。  
   
 > [!NOTE]
 >  並非所有 **Field** 屬性都可用於所有資料來源。 **Value** 和 **IsMissing** 屬性是為所有資料來源定義的。 其他預先定義的屬性 (例如多維度資料來源的 **Key**、 **UniqueName**和 **ParentUniqueName** ) 只有在資料來源有提供這些屬性時，才受到支援。 某些資料提供者可支援自訂屬性。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。 例如，如果是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源，請參閱 [Analysis Services 資料庫的擴充欄位屬性 &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
@@ -89,9 +89,9 @@ ms.locfileid: "65573160"
   
      例如， [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 已導入報表處理器用於新日期和時間類型的日期類型，如下表所示：  
   
-    |SQL 資料類型|CLR 資料類型|Description|  
+    |SQL 資料類型|CLR 資料類型|描述|  
     |-------------------|-------------------|-----------------|  
-    |**Date**|**DateTime**|僅限日期|  
+    |**日期**|**DateTime**|僅限日期|  
     |**Time**|**TimeSpan**|只有時間|  
     |**DateTimeTZ**|**DateTimeOffset**|包含時區時差的日期和時間|  
     |**DateTime2**|**DateTime**|包含毫秒的日期和時間|  

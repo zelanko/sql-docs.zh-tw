@@ -1,5 +1,5 @@
 ---
-title: 報表資料
+title: SQL Server Reporting Services 中的報表資料簡介 (SSRS)
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -8,28 +8,44 @@ ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/14/2018
-ms.openlocfilehash: f3aa702eef414fdc92670a51b8d374627797fe3d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.date: 11/18/2019
+ms.openlocfilehash: 6317e8161871d7094486ed8b6178847549d8ab96
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265562"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190725"
 ---
-# <a name="report-data-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的報表資料
+# <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services 中的報表資料簡介 (SSRS)
 
   報表資料可能是來自組織中的多個資料來源。 您設計報表的第一個步驟，就是建立資料來源，及代表基礎報表資料的資料集。 每個資料來源包含資料連接資訊。 每個資料集都包含將一組欄位定義使用為資料來源中資料的查詢命令。 若要視覺化每個資料集的資料，請加入資料區，例如資料表、矩陣、圖表或對應。 處理報表時，查詢會在資料來源上執行，且每個資料區會視需要展開，以顯示資料集的查詢結果。  
 
 > [!NOTE]
 > SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
+
+## <a name="data-in-ssrbnoversion"></a>[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中的資料  
+ ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
-##  <a name="BkMk_ReportDataTerms"></a> 詞彙  
+1.  **報表資料窗格中的資料來源** ：在您建立內嵌資料來源或加入共用資料來源之後，[報表資料] 窗格中就會出現資料來源。  
+  
+2.  **連接對話方塊** ：使用 [連接對話方塊] 可建立連接字串或貼上連接字串。  
+  
+3.  **資料連接資訊** ：連接字串會傳遞至資料延伸模組。  
+  
+4.  **認證** ：認證會與連接字串分開管理。  
+  
+5.  **資料延伸模組/資料提供者** ：資料可經由多個資料存取層連接。  
+  
+6.  **外部資料來源** ：從關聯式資料庫、多維資料庫、SharePoint 清單或 Web 服務擷取資料。  
+
+
+##  <a name="BkMk_ReportDataTerms"></a> 定義字詞  
   
 - **資料連接。** 也稱為 *資料來源*。 資料連接包括相依於連接類型的名稱和連接屬性。 依預設，資料連接不包括認證。 資料連接不會指定要從外部資料來源擷取的資料。 若要執行這項操作，您可以在建立資料集時指定查詢。  
   
-- **共用資料來源定義。** 包含報表資料來源之 XML 表示的檔案。 報表發行時，其資料來源會儲存到報表伺服器或 SharePoint 網站上做為資料來源定義，與報表定義分開。 例如，報表伺服器管理員可能會更新連接字串或認證。 在原生報表伺服器上，檔案類型為 .rds。 在 SharePoint 網站上，檔案類型為 .rsds。  
+- **共用資料來源定義。** 包含報表資料來源之 XML 表示的檔案。 發佈報表時，其資料來源會儲存到報表伺服器或 SharePoint 網站作為資料來源定義，與報表定義分開。 例如，報表伺服器管理員可能會更新連接字串或認證。 在原生報表伺服器上，檔案類型為 .rds。 在 SharePoint 網站上，檔案類型為 .rsds。  
   
-- **連接字串。** 連接字串是連接到資料來源時所需之連接屬性的字串版本。 連接屬性會依資料連接類型而有所不同。 如需範例，請參閱＜ [Data Connections, Data Sources, and Connection Strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)＞。  
+- **連接字串。** 連接字串是連接到資料來源時所需之連接屬性的字串版本。 連接屬性會依資料連接類型而有所不同。 如需範例，請參閱[建立資料連接字串 - 報表產生器 & SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 - **共用資料來源。** 報表伺服器或 SharePoint 網站上提供的資料來源，可供多個報表使用。  
   
@@ -47,11 +63,11 @@ ms.locfileid: "68265562"
   
 - **報表組件使用的資料** ：報表組件可以包含所相依的資料。 如需報表組件的詳細資訊，請參閱[報表設計師中的報表組件 &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
   
-- **篩選資料** ：在查詢或在報表中，可以篩選報表資料。 您可以使用資料集及查詢變數以建立串聯參數，並提供使用者從數千個選取中減少選擇項目的能力，以選取便於管理的數字。 您可以根據所指定的參數值或其他值，篩選資料表或圖表中的資料。  
+- **篩選資料** ：在查詢或在報表中，可以篩選報表資料。 您可以使用資料集和查詢變數來建立串聯參數。 使用串聯參數，使用者可將選擇範圍從數千縮減至更容易管理的數量。 您可以根據所指定的參數值或其他值，篩選資料表或圖表中的資料。  
   
-- **參數** ：包含查詢變數的資料集查詢命令會自動建立相符的報表參數。 您也可以手動建立參數。 檢視報表時，報表工具列會顯示參數。 使用者可以選取值，以控制報表資料或報告的外觀。 若要為特定對象自訂報表資料，您可以建立一組具有連結到相同報表定義之不同預設值的報表參數，或是使用內建的 **UserID** 欄位。 如需詳細資訊，請參閱[報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) 和[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
+- **參數** ：包含查詢變數的資料集查詢命令會自動建立相符的報表參數。 您也可以手動建立參數。 檢視報表時，報表工具列會顯示參數。 使用者可以選取值，以控制報表資料或報告的外觀。 若要為特定對象自訂報表資料，您可以建立連結到相同報表定義，但具有不同預設值的多組報表參數。 您也可以使用內建的 [UserID]  欄位為不同的對象自訂資料。 如需詳細資訊，請參閱[報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) 和[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
-- **資料警示** ：發行報表後，您可以根據報表資料來建立警示，並在符合所指定規則時，接收電子郵件訊息。  
+- **資料警示**：發佈報表之後，您可以根據報表資料建立警示。 然後，只要符合指定的規則，您就會收到電子郵件訊息。  
   
 - **群組及彙總值** ：在查詢或在報表中，可以分組及彙總報表資料。 若您彙總查詢中的數值，可繼續合併有意義條件約束內報表中的數值。  如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) 和[彙總函式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)。  
   
@@ -71,7 +87,7 @@ ms.locfileid: "68265562"
   
 - 了解 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 用戶端/伺服器架構及工具。 例如，在報表設計師中，您會在使用內建資料來源類型的用戶端機器上撰寫報表。 發行報表時，報表伺服器或 SharePoint 網站上必須支援資料來源類型。  如需詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
-- 報表中可撰寫資料來源及資料集，並且會從用戶端撰寫工具發行至報表伺服器或 SharePoint 網站。 報表伺服器上可直接建立資料來源。 發行後，您可以設定報表伺服器上的認證及其他屬性。 如需詳細資訊，請參閱 [資料連接、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 和 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
+- 報表中可撰寫資料來源及資料集，並且會從用戶端撰寫工具發行至報表伺服器或 SharePoint 網站。 報表伺服器上可直接建立資料來源。 發行後，您可以設定報表伺服器上的認證及其他屬性。 如需詳細資訊，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 和 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
   
 - 您可以使用的資料來源取決於其 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料延伸模組的安裝。 資料來源支援可視用戶端撰寫工具、報表伺服器版本及報表伺服器平台而有所差異。 如需詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
@@ -84,7 +100,7 @@ ms.locfileid: "68265562"
 |||  
 |-|-|  
 |**一般工作**|**連結**|  
-|建立資料連接|[資料連接、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
+|建立資料連接|[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |建立資料集及查詢|[報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
 |在發行後管理資料來源|[管理報表資料來源](../../reporting-services/report-data/manage-report-data-sources.md)|  
 |在發行後共用資料集|[管理共用資料集](../../reporting-services/report-data/manage-shared-datasets.md)|  

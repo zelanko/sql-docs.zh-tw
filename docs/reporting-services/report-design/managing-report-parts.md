@@ -9,10 +9,10 @@ ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 241d74d615f9aac2cbe48d084fd2d8e91ea9abbf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580111"
 ---
 # <a name="managing-report-parts"></a>管理報表組件
@@ -22,7 +22,7 @@ ms.locfileid: "65580111"
  若要管理報表組件，您可以針對原生模式報表伺服器使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 入口網站，或是針對 SharePoint 整合模式報表伺服器使用應用程式頁面。  
   
 ### <a name="server-side-interaction-and-search"></a>伺服器端互動及搜尋  
- 報表組件可以發行到原生模式或 SharePoint 整合模式的報表伺服器。 使用者可以使用報表撰寫應用程式 (如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 報表產生器) 中的報表組件庫功能，尋找報表組件並將其加入至報表中。 當使用者搜尋報表組件時，不管伺服器是以何種模式安裝，搜尋都會查看報表伺服器目錄。  
+ 報表組件可以發行到原生模式或 SharePoint 整合模式的報表伺服器。 使用者可以使用報表撰寫應用程式 (如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 報表產生器) 中的報表組件庫功能來尋找報表組件並將其新增至報表中。 當使用者搜尋報表組件時，不管伺服器是以何種模式安裝，搜尋都會查看報表伺服器目錄。  
   
  當報表組件從報表撰寫應用程式 (如報表產生器) 發行至 SharePoint 整合模式的報表伺服器時，報表伺服器目錄也會更新，而且會從組件庫搜尋以準確反映新的或更新的報表組件。  
   
@@ -47,10 +47,10 @@ ms.locfileid: "65580111"
   
  (*) 表示是此版本的新功能。  
   
-|屬性|Description|報表組件<br /><br /> 組件庫搜尋準則|  
+|屬性|描述|報表組件<br /><br /> 組件庫搜尋準則|  
 |--------------|-----------------|---------------------------------------------|  
-|[屬性]|這是使用者可以在報表組件庫中搜尋的其中一個準則。|是|  
-|Description|您可能會想要使用某種方式來組織報表組件名稱，讓使用者更容易在組件庫中找到組件。 例如，您可以搜尋以「銷售>>」開頭的描述，以尋找與銷售相關資料和簡報有關的所有報表組件。|是|  
+|名稱|這是使用者可以在報表組件庫中搜尋的其中一個準則。|是|  
+|描述|您可能會想要使用某種方式來組織報表組件名稱，讓使用者更容易在組件庫中找到組件。 例如，您可以搜尋以「銷售>>」開頭的描述，以尋找與銷售相關資料和簡報有關的所有報表組件。|是|  
 |CreatedBy|將報表組件加入報表伺服器資料庫的使用者識別碼。 確切的格式視驗證方法而定。 例如，某些驗證方法會導致在 [CreatedBy] 和 [ModifiedBy] 欄位中顯示完整的網域\使用者名稱。|是|  
 |CreationDate|原先建立報表組件的日期。<br /><br /> 這是使用者可以在報表組件庫中搜尋的其中一個準則。|是|  
 |ModifiedBy|ModifiedBy 是上次修改報表組件之使用者的識別碼。|是|  
@@ -73,7 +73,7 @@ ms.locfileid: "65580111"
   
 |動作|角色|  
 |-------------|----------|  
-|加入、刪除、編輯項目屬性、管理安全性，以及下載報表組件|完整控制|  
+|加入、刪除、編輯項目屬性、管理安全性，以及下載報表組件|完全控制|  
 |加入、刪除、編輯項目屬性，以及下載報表組件|設計<br /><br /> 參與|  
 |搜尋及重複使用|讀取<br /><br /> 僅檢視|  
   
@@ -89,7 +89,7 @@ ms.locfileid: "65580111"
 ## <a name="see-also"></a>另請參閱  
  [報表產生器中的報表組件和資料集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [疑難排解報表組件 (報表產生器及 SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [針對報表組件進行疑難排解 (報表產生器及 SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [報表設計師中的報表組件 &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   

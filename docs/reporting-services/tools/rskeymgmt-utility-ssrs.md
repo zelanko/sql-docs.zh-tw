@@ -20,10 +20,10 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f64ee56ddbd88f2d981d35fb24d9e156b734ff88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571481"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 公用程式 (SSRS)
@@ -73,17 +73,17 @@ rskeymgmt {-?}
  **-j**  
  設定遠端報表伺服器執行個體來共用本機報表伺服器執行個體所用的報表伺服器資料庫。  
   
- **-r**  <安裝識別碼>   
+ **-r**  *installationID*  
  移除特定報表伺服器執行個體的對稱金鑰資訊，因而從向外延展部署中移除報表伺服器。 <安裝識別碼>  是一個 GUID 值，可在 RSReportserver.config 檔中找到它。  
   
- **-f**  <檔案>   
+ **-f**  *file*  
  指定儲存了對稱金鑰備份副本之檔案的完整路徑。  
   
  若為 **rskeymgmt -e**，對稱金鑰會寫入您指定的檔案中。  
   
  若為 **rskeymgmt -a**，便會將檔案中所儲存的對稱金鑰值套用在報表伺服器執行個體上。  
   
- **-p** <密碼>   
+ **-p**  *password*  
  ( **-f**需要這個引數) 指定用來備份或套用對稱金鑰的密碼。 這個值不能空白。  
   
  **-i**  
@@ -93,15 +93,15 @@ rskeymgmt {-?}
  指定要聯結至報表伺服器向外延展部署中，主控報表伺服器執行個體的遠端電腦名稱。 請使用在網路中用來識別這部電腦的名稱。  
   
  **-n**  
- 指定遠端電腦中之報表伺服器執行個體的名稱。 如果您將報表伺服器安裝在預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上，這個引數即為選擇性 ( **-n** 的預設值是 MSSQLSERVER)。 若您將報表伺服器安裝成具名執行個體，則需要 **-n**。  
+ 指定遠端電腦中之報表伺服器執行個體的名稱。 如果您將報表伺服器安裝在預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上，這個引數即為選擇性 ( **-n** 的預設值是 MSSQLSERVER)。 若您將報表伺服器安裝成具名執行個體，則需要 **-n** 。  
   
- **-u**  <使用者帳戶>   
+ **-u**  *useraccount*  
  指定要聯結至向外延展部署中之遠端電腦的管理員帳戶。 如果未指定帳戶，就會使用目前使用者的認證。  
   
- **-v**  <密碼>   
+ **-v**  *password*  
  ( **-u**需要這個引數) 指定要聯結至向外延展部署中之遠端電腦的管理員帳戶密碼。  
   
- **-t**  <追蹤>   
+ **-t**  *trace*  
  在追蹤記錄中，輸出錯誤訊息。 此引數沒有取得值。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
 ## <a name="permissions"></a>權限  
@@ -145,7 +145,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  報表伺服器向外延展部署是指多個報表伺服器執行個體共用相同報表伺服器資料庫的部署模型。 對稱金鑰儲存在報表伺服器資料庫中的任何報表伺服器執行個體，都可以使用報表伺服器資料庫。 例如，如果報表伺服器資料庫包含三個報表伺服器執行個體的金鑰資訊，這三個執行個體都會被視為相同向外延展部署的成員。  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>在相同電腦上聯結報表伺服器執行個體  
- 您可以從安裝在相同電腦上的多個報表伺服器執行個體中建立向外延展部署。 如果您要聯結的報表伺服器執行個體是安裝在本機，請不要設定 **-u** 和 **-v** 引數。 只有當您從遠端電腦聯結執行個體時，才要使用 **-u** 和 **-v** 引數。 如果您指定這些引數，會出現下列錯誤：「使用者認證無法用於本機連接。」  
+ 您可以從安裝在相同電腦上的多個報表伺服器執行個體中建立向外延展部署。 如果您要聯結的報表伺服器執行個體是安裝在本機，請不要設定 **-u** 和 **-v** 引數。 只有當您從遠端電腦聯結執行個體時，才要使用 **-u** 和 **-v** 引數。 如果您指定這些引數，將會出現下列錯誤：「使用者認證無法用於本機連線。」  
   
  下列範例說明使用多個本機執行個體建立向外延展部署的語法。 在這個範例中，\<**已初始化的執行個體**> 是已初始化為使用報表伺服器資料庫的執行個體名稱，\<**新的執行個體**> 是您要新增部署的執行個體名稱：  
   
@@ -165,7 +165,7 @@ rskeymgmt -r <installationID>
 ## <a name="file-location"></a>檔案位置  
  Rskeymgmt.exe 位於 **\<*磁碟機*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** 或 **\<*磁碟機*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn**。 您可以從檔案系統上的任何資料夾執行此公用程式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  報表伺服器會加密預存的認證和連接資訊。 資料的加密使用公開金鑰和對稱金鑰。 報表伺服器資料庫必須具備有效的金鑰，報表伺服器才能夠執行。 您可以使用 **rskeymgmt** 來備份、刪除或還原金鑰。 如果金鑰無法還原，這個工具可用來刪除已無法使用的加密內容。  
   
  **rskeymgmt** 公用程式用來管理安裝期間或初始化期間所定義的金鑰組。 它利用遠端程序呼叫 (RPC) 端點來連接本機報表伺服器 Windows 服務。 報表伺服器 Windows 服務必須在執行中，這個公用程式才能運作。  

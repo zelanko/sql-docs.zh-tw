@@ -1,6 +1,7 @@
 ---
-title: 容錯移轉叢集執行個體管理及維護 | Microsoft Docs
-ms.custom: ''
+title: 容錯移轉叢集執行個體的管理及維護
+description: 了解 SQL Server 容錯移轉叢集執行個體的管理及維護。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 46b895dcc560a6e42e9ba5abce39ee22b4075bde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5788d52a119fe6bada56ac2def9d2fbfb2c09cb0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002487"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230071"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>容錯移轉叢集執行個體管理及維護
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "68002487"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式提供維護現有 FCI 的選項。 如果選擇這個選項，則可以在要加入 FCI 的電腦上執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式，將其他的節點加入 FCI。 如需詳細資訊，請參閱[建立新的 SQL Server 容錯移轉叢集 &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) 和[在 SQL Server 容錯移轉叢集中加入或移除節點 &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
 ### <a name="removing-a-node-from-an-existing-failover-cluster-instance"></a>從現有的容錯移轉叢集執行個體移除節點  
- 您可以在要從 FCI 移除的電腦上執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式，以從 FCI 移除節點。 FCI 內的每個節點都視為與 FCI 上其他節點無相依性的對等，而您可以將任何節點移除。 損毀的節點即使無法使用也可移除，而且移除程序將不會從無法使用的節點中解除安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 二進位編碼檔案。 已移除的節點可以隨時再加入 FCI。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中加入或移除節點 &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
+ 您可以在要從 FCI 移除的電腦上執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式，以從 FCI 移除節點。 FCI 內的每個節點都視為與 FCI 上其他節點無相依性的對等，而您可以將任何節點移除。 損毀的節點即使無法使用也可移除，而且移除程序將不會從無法使用的節點中解除安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 二進位編碼檔案。 已移除的節點可以隨時再加入 FCI。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
 ### <a name="changing-service-accounts"></a>變更服務帳戶  
  當 FCI 節點關閉或離線時，您不可以變更任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶的密碼。 如果您變更了帳戶密碼，就必須在所有的節點都恢復連線工作時，使用「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員」重新設定密碼。  

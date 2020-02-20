@@ -9,10 +9,10 @@ ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893247"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
@@ -38,9 +38,9 @@ ms.locfileid: "68893247"
 ##  <a name="bkmk_general"></a> 一般 ULS 記錄建議  
  下表將針對監視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 環境，列出建議的事件類別目錄和層級。 記錄事件時，每個項目都會包含記錄事件的時間、處理序名稱，以及執行緒識別碼。  
   
-|類別目錄|層級|Description|  
+|類別|層級|描述|  
 |--------------|-----------|-----------------|  
-|[資料庫]|「詳細資訊」|記錄涉及資料庫存取權的事件。|  
+|資料庫|「詳細資訊」|記錄涉及資料庫存取權的事件。|  
 |一般|「詳細資訊」|記錄涉及下列項目之存取權的事件：<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 網頁<br /><br /> 報表檢視器 HTTP 處理常式<br /><br /> 報表存取 (.rdl 檔)<br /><br /> 資料來源 (.rsds 檔)<br /><br /> SharePoint 網站的 URL (.smdl 檔)|  
 |Office Server 一般|例外狀況|記錄登入失敗。|  
 |拓撲|「詳細資訊」|記錄目前的使用者資訊。|  
@@ -85,9 +85,9 @@ Get-SPDiagnosticConfig
   
 1.  **產品：SQL Server Reporting Services**  
   
-2.  **類別目錄：** 與伺服器相關的事件其名稱開頭會有 "Report Server" 字元。 例如 "Report Server Alerting Runtime"，這些事件會記錄到報表伺服器記錄檔。  
+2.  **類別：** 與伺服器相關的事件，其名稱開頭會有 "Report Server" 字元。 例如 "Report Server Alerting Runtime"，這些事件會記錄到報表伺服器記錄檔。  
   
-3.  **類別目錄：** 與 Web 前端元件相關或從中進行通訊的事件不會包含 "Report Server"。 例如 "Service Application Proxy"、"Report Server Alerting Runtime"。 WFE 項目會包含 CorrelationID，但伺服器項目不會包含。  
+3.  **類別：** 與 Web 前端元件相關或從中進行通訊的事件不會包含 "Report Server"。 例如 "Service Application Proxy"、"Report Server Alerting Runtime"。 WFE 項目會包含 CorrelationID，但伺服器項目不會包含。  
   
 ##  <a name="bkmk_list"></a> SQL Server Reporting Services 事件清單  
  下表為 SQL Server Reporting Services 類別目錄中事件的清單：  
@@ -124,7 +124,7 @@ Get-SPDiagnosticConfig
 |報表伺服器提供者||  
 |報表伺服器轉譯||  
 |報表伺服器報表預覽||  
-|報表伺服器資源公用程式|範例項目：<br /><br /> MediumReporting Services 啟動 SKU：評估版<br /><br /> MediumEvaluation 複本：剩下 180 天|  
+|報表伺服器資源公用程式|範例項目：<br /><br /> MediumReporting Services 啟動 SKU：評估<br /><br /> MediumEvaluation 複本：剩下 180 天|  
 |報表伺服器執行工作||  
 |報表伺服器執行要求||  
 |報表伺服器排程||  

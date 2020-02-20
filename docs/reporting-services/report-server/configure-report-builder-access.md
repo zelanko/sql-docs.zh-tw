@@ -8,14 +8,14 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/06/2019
 ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68255176"
 ---
 # <a name="configure-report-builder-access"></a>設定報表產生器的存取
-報表產生器是一個隨選報表工具，它會與設定原生模式或 SharePoint 整合模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器一起安裝。  
+報表產生器是一個隨選報表工具，此工具會與設定原生模式或 SharePoint 整合模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器一起安裝。  
 
 報表產生器的存取權會因下列因素而異：  
 
@@ -29,15 +29,15 @@ ms.locfileid: "68255176"
 
 並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中都可使用報表產生器。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2017 版本支援的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
 
-用戶端電腦必須[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]分別為 SSRS 2016 和2017安裝4.6 或4.6.1。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供了執行 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 應用程式的基礎結構。  
+用戶端電腦必須針對 SSRS 2016 和 2017 分別安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 或 4.6.1。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供了執行 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 應用程式的基礎結構。  
 
-您必須使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 或更新版本, 或其他現代化瀏覽器。  
+您必須使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 或更新版本，或使用其他新式瀏覽器。  
 
 報表產生器一定會在完全信任模式中執行；您不能設定它在部分信任模式中執行。 在舊版中，報表產生器可以在部分信任模式中執行，但是在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中則不支援這個選項。  
 
 ## <a name="enabling-and-disabling-report-builder"></a>啟用及停用報表產生器  
 
-預設會啟用報表產生器。 報表伺服器管理員可以選擇將報表伺服器系統屬性 **ShowDownloadMenu** 設定為 **false**，以停用報表產生器功能。 設定這個屬性將會停用該報表伺服器的報表產生器、行動報表發行工具和 Power BI 行動版下載。  
+預設會啟用報表產生器。 報表伺服器管理員可以選擇將報表伺服器系統屬性 **ShowDownloadMenu** 設定為 **false**，以停用報表產生器功能。 設定這個屬性將會停用該報表伺服器的報表產生器、行動報表發行工具和 Power BI 行動版下載功能。  
 
  若要設定報表伺服器系統屬性，您可以使用 Management Studio 或指令碼：   
 
@@ -109,7 +109,7 @@ ms.locfileid: "68255176"
 
 1. 啟動入口網站。  
 
-2. 按一下入口網站首頁右上方的齒輪圖示, 然後從下拉式功能表中選取 [**網站設定**]。  
+2. 按一下入口網站首頁右上方的齒輪圖示，然後從下拉式功能表中選取 [網站設定]  。  
 ![入口網站齒輪圖示和功能表](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. 按一下 **[安全性]** 。  

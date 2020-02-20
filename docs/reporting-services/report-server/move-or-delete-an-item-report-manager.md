@@ -12,10 +12,10 @@ ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a1be40ed580de1163c0e85e37e7b8ffc1bccc342
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581082"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>移動或刪除項目 (報表管理員)
@@ -28,11 +28,11 @@ ms.locfileid: "65581082"
   
 |圖示|可移動項目|  
 |----------|-------------------|  
-|![報表圖示](../../reporting-services/report-server/media/hlp-16doc.gif "報表圖示")|報表|  
+|![Report icon](../../reporting-services/report-server/media/hlp-16doc.gif "報表圖示")|Report|  
 |![連結報表圖示](../../reporting-services/report-server/media/hlp-16linked.gif "連結報表圖示")|連結報表|  
 |![資料夾圖示](../../reporting-services/report-server/media/hlp-16folder.gif "資料夾圖示")|資料夾|  
 |![一般資源圖示](../../reporting-services/report-server/media/hlp-16file.gif "一般資源圖示")|一般資源|  
-|![共用資料來源圖示](../../reporting-services/report-data/media/hlp-16datasource.png "共用資料來源圖示")|共用資料來源|  
+|![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "共用資料來源圖示")|共用資料來源|  
 ||共用資料集|  
   
  並非所有的項目都可以移動。 您無法移動與報表相關聯的項目，例如訂閱或報表記錄。 那些項目會隨著相關聯的報表移動。 同樣地，您無法移動存在於資料夾階層之外的項目 (例如共用排程)。 如果您沒有權限也無法移動項目。 在您的角色指派中為目標項目選取下列工作時，即涵蓋移動項目的權限：「管理報表」、「管理模型」、「管理資料夾」，以及「管理資料來源」。  

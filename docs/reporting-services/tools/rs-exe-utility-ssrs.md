@@ -17,10 +17,10 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8f16f30aeba48be7f0d2e61d2ef28b37060a232c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581290"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
@@ -92,7 +92,7 @@ rs {-?}
   
  全域變數會使用給定的名稱來建立並設定為所提供的值。 例如， **-v a=** "**1**" **-v b=** "**2**" 會產生名為 **a** 的變數，其值為 "**1**"，以及名為 **b** 的變數，其值為 "**2**"。  
   
- 指令碼中的任何函數均可使用全域變數。 反斜線和引號 ( **\\"** ) 將被解譯為雙引號。 只有當字串含有空格時才需要引號。 變數名稱必須是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]的有效名稱。它們必須以字母字元或底線符號為開頭，而且包含字母字元、數字或底線符號。 保留字不可以當做變數名稱使用。 如需使用全域變數的詳細資訊，請參閱[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
+ 指令碼中的任何函數均可使用全域變數。 反斜線和引號 ( **\\"** ) 將被解譯為雙引號。 只有當字串含有空格時才需要引號。 變數名稱必須是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 的有效名稱；這些名稱必須以字母字元或底線符號為開頭，且包含字母字元、數字或底線符號。 保留字不可以當做變數名稱使用。 如需使用全域變數的詳細資訊，請參閱[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
  **-t**  
  (選擇性) 追蹤記錄的輸出錯誤訊息。 此引數沒有取得值。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。  
@@ -111,10 +111,10 @@ rs -i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver
   
  如需其他範例，請參閱 [執行 Reporting Services 指令碼檔案](../../reporting-services/tools/run-a-reporting-services-script-file.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  您可以定義指令碼來設定系統屬性、發行報表等等。 您可以建立的指令碼包括 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API 的任何方法。 如需有關可供您使用的方法和屬性之詳細資訊，請參閱＜ [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)＞。  
   
- 指令碼必須以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 程式碼撰寫，然後使用 .rss 副檔名將指令碼儲存在 Unicode 或 UTF-8 文字檔中。 您不可以使用 **rs** 公用程式來偵錯指令碼。 若要偵錯指令碼，請在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]中執行該程式碼。  
+ 指令碼必須以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 程式碼撰寫，然後使用 .rss 副檔名將指令碼儲存在 Unicode 或 UTF-8 文字檔中。 您不可以使用 **rs** 公用程式來偵錯指令碼。 若要對指令碼進行偵錯，請在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中執行該程式碼。  
   
 > [!TIP]  
 >  如需詳細範例，請參閱 [在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  

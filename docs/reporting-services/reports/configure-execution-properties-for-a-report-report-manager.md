@@ -13,10 +13,10 @@ ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6dfb24b6314529b19fb7bb5edb81534f30dc018a
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492741"
 ---
 # <a name="configure-execution-properties-for-a-report"></a>設定報表的執行屬性
@@ -44,7 +44,7 @@ ms.locfileid: "67492741"
   
     -   如果您要立即建立快照集，請選取 [當您在此頁面上按一下 [套用] 按鈕時，會建立報表快照集]  。  
   
-3.  按一下 **[套用]** 。  
+3.  按一下 [套用]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)   
@@ -56,26 +56,26 @@ ms.locfileid: "67492741"
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
   
-## <a name="to-configure-report-execution-properties"></a>設定報表執行屬性  
+## <a name="to-configure-report-execution-properties"></a>若要設定報表執行屬性  
   
 從[報表伺服器的入口網站 (SSRS 原生模式)](../../reporting-services/web-portal-ssrs-native-mode.md)：  
   
-1. 瀏覽至您要設定執行屬性的報表。  
+1. 巡覽至您要為其設定執行屬性的報表。  
   
-2. 以滑鼠右鍵按一下報表，然後選取**管理**從下拉式選單。
+2. 以滑鼠右鍵按一下報表，然後從下拉式功能表中選取 [管理]  。
 
-3. 選取 **歷程記錄快照集**索引標籤，顯示**歷程記錄快照集**頁面。  
+3. 選取 [記錄快照集]  索引標籤，以顯示 [記錄快照集]  頁面。  
   
-4. 選取 **排程及設定**按鈕，然後檢查**依排程建立歷程記錄快照集**如果未選取。
+4. 選取 [排程及設定]  按鈕，然後核取 [依排程建立記錄快照集]  (如果尚未核取)。
   
-5. 選取 **共用排程**或是**報表特定排程**視。  
+5. 視需要選取 [共用排程]  或 [報表特定排程]  。  
   
-6. 在 **進階**區段中，選取所需**保留**原則歷程記錄快照集。  
+6. 在 [進階]  區段中，選取記錄快照集所需的 [保留]  原則。  
   
 7. 選取 [套用]  。  
   
    >[!NOTE]
-   >如果您想要立即建立快照集，請選取**新的歷程記錄快照集**按鈕而不要**排程與設定**會立即建立按鈕和報表快照集。  
+   >如果您想要立即建立快照集，請選取 [新增記錄快照集]  按鈕，而不是 [排程及設定]  按鈕，即會隨即建立報表快照集。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)   

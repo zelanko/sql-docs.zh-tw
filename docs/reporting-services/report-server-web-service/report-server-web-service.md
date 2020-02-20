@@ -17,10 +17,10 @@ ms.assetid: 16c21dec-6b46-4497-9a0c-1b0f2b6ab8fc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 455fc4c5ea881f370257769d6794628a45017b3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63070345"
 ---
 # <a name="report-server-web-service"></a>報表伺服器 Web 服務
@@ -35,7 +35,7 @@ ms.locfileid: "63070345"
 -   使用任何啟用 SOAP 的開發工具集來開發應用程式。 如需詳細資訊，請參閱 [Reporting Services 中的 SOAP 角色](../../reporting-services/report-server-web-service/the-role-of-soap-in-reporting-services.md)。  
   
 ## <a name="programming-diagram"></a>程式設計圖表  
- ![報表伺服器 Web 服務開發選項](../../reporting-services/report-server-web-service/media/reportserviceswebserviceprog-01.gif "報表伺服器 Web 服務開發選項")  
+ ![報表伺服器 Web 服務部署選項](../../reporting-services/report-server-web-service/media/reportserviceswebserviceprog-01.gif "報表伺服器 Web 服務部署選項")  
 Reporting Services 可用的 Web 服務開發選項  
   
 ## <a name="in-this-section"></a>本節內容  
@@ -68,7 +68,7 @@ Reporting Services 可用的 Web 服務開發選項
   
 -   對 SOAP 和 [!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)]有確實的了解。  
   
--   如果您計畫使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 作為開發平台，則需要有使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 等 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 相容語言的開發經驗。  
+-   如果您計畫使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 作為開發平台，則需要有使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 等 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 相容語言的開發體驗。  
   
 ## <a name="see-also"></a>另請參閱  
  [報表伺服器 Web 服務](../../reporting-services/report-server-web-service/report-server-web-service.md)  

@@ -13,10 +13,10 @@ ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 18ac0bfb10914b8e0afb1aca363e53f9dff3af91
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67500191"
 ---
 # <a name="role-definitions---predefined-roles"></a>角色定義 - 預先定義的角色
@@ -24,7 +24,7 @@ ms.locfileid: "67500191"
   
 ## <a name="how-to-use-predefined-roles"></a>如何使用預先定義的角色  
   
-1. 檢閱預先定義的角色來判斷您是否能夠依原狀使用它們。 如果您需要調整工作或定義其他角色，就應該先進行這些作業，然後再指派使用者至特定角色。 若要建立或編輯自訂角色會使用 SQL Server Management Studio。 如需這些預先定義角色的詳細資訊，請參閱 [建立、刪除或修改角色 &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)。
+1. 檢閱預先定義的角色來判斷您是否能夠依原狀使用它們。 如果您需要調整工作或定義其他角色，就應該先進行這些作業，然後再指派使用者至特定角色。 若要建立或編輯自訂角色，請使用 SQL Server Management Studio。 如需這些預先定義角色的詳細資訊，請參閱 [建立、刪除或修改角色 &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)。
   
 2. 確認哪些使用者和群組需要存取報表伺服器，以及所存取的層級。 多數使用者都應指派至 **[瀏覽者]** 角色或 **[報表產生器]** 角色。 **[發行者]** 角色則應指派給較少數的使用者。 只有非常少數的使用者才應指派至 **[內容管理員]** 。  
 
@@ -37,13 +37,13 @@ ms.locfileid: "67500191"
   
  下表描述角色的預先定義範圍：  
   
-|預先定義的角色|「範圍」|Description|  
+|預先定義的角色|影響範圍|描述|  
 |---------------------|-----------|-----------------|  
-|[內容管理員角色](#bkmk_content)|項目|可以管理報表伺服器中的內容。 這包含資料夾、報表及資源。|  
-|[發行者角色](#bkmk_publisher)|項目|可以針對報表伺服器發佈報表及已連結報表。|  
-|[瀏覽者角色](#bkmk_browser)|項目|可以檢視資料夾及報表，以及訂閱報表。|  
-|[報表產生器角色](#bkmk_reportbuilder)|項目|可以檢視報表定義。|  
-|[[我的報表] 角色](#bkmk_myreports)|項目|可以發佈報表和已連結報表；管理使用者 [我的報表] 資料夾中的資料夾、報表及資源。|  
+|[內容管理員角色](#bkmk_content)|Item|可以管理報表伺服器中的內容。 這包含資料夾、報表及資源。|  
+|[發行者角色](#bkmk_publisher)|Item|可以針對報表伺服器發佈報表及已連結報表。|  
+|[瀏覽者角色](#bkmk_browser)|Item|可以檢視資料夾及報表，以及訂閱報表。|  
+|[報表產生器角色](#bkmk_reportbuilder)|Item|可以檢視報表定義。|  
+|[[我的報表] 角色](#bkmk_myreports)|Item|可以發佈報表和已連結報表；管理使用者 [我的報表] 資料夾中的資料夾、報表及資源。|  
 |[系統管理員角色](#bkmk_systemadministrator)|系統|除了建立角色定義及在 Management Studio 中管理作業之外，還有檢視及修改系統角色指派、系統角色定義、系統屬性及共用排程。|  
 |[系統使用者角色](#bkmk_systemuser)|系統|檢視系統屬性及共用排程，以及允許使用報表產生器或其他能執行報表定義的用戶端。|  
   
@@ -55,7 +55,7 @@ ms.locfileid: "67500191"
 ### <a name="content-manager-tasks"></a>[內容管理員] 工作  
  下表列出 [內容管理員]  角色中所包含的工作：  
   
-|工作|Description|  
+|Task|描述|  
 |----------|-----------------|  
 |取用報表|讀取報表定義。|  
 |建立連結報表|建立以非連結報表為基礎的連結報表。|  
@@ -92,7 +92,7 @@ ms.locfileid: "67500191"
 ### <a name="publisher-tasks"></a>[發行者] 工作  
  下表列出 [發行者]  角色中所包含的工作：  
   
-|工作|Description|  
+|Task|描述|  
 |----------|-----------------|  
 |建立連結報表|建立連結報表並將它們發行至報表伺服器資料夾。|  
 |管理資料來源|建立並刪除共用資料來源項目、檢視和修改資料來源屬性及內容。|  
@@ -114,7 +114,7 @@ ms.locfileid: "67500191"
 ### <a name="browser-tasks"></a>[瀏覽者] 工作  
  下表描述 [瀏覽者]  角色定義中所包含的工作：  
   
-|工作|Description|  
+|Task|描述|  
 |----------|-----------------|  
 |檢視報表|執行報表與檢視報表屬性。|  
 |檢視資源|檢視資源與資源屬性。|  
@@ -133,7 +133,7 @@ ms.locfileid: "67500191"
 ### <a name="report-builder-tasks"></a>報表產生器工作  
  下表描述 [報表產生器]  角色定義中所包含的工作：  
   
-|工作|Description|  
+|Task|描述|  
 |----------|-----------------|  
 |取用報表|讀取報表定義。|  
 |檢視報表|執行報表與檢視報表屬性。|  
@@ -155,7 +155,7 @@ ms.locfileid: "67500191"
 ### <a name="my-reports-tasks"></a>[我的報表] 工作  
  下表列出 [我的報表]  角色中所包含的工作：  
   
-|工作|Description|  
+|Task|描述|  
 |----------|-----------------|  
 |建立連結報表|建立連結報表，以儲存在使用者之 [我的報表] 資料夾的報表為基礎。|  
 |管理資料夾|建立、檢視與刪除資料夾，以及檢視和修改資料夾屬性。|  
@@ -183,10 +183,10 @@ ms.locfileid: "67500191"
 ### <a name="system-administrator-tasks"></a>[系統管理員] 工作  
  下表列出 [系統管理員]  角色中所包含的工作：  
   
-|工作|Description|  
+|Task|描述|  
 |----------|-----------------|  
 |執行報表定義|開始執行報表定義，但是不將定義發行到報表伺服器。|  
-|管理作業|檢視和取消執行中的作業。 如需詳細資訊，請參閱 [管理執行中的處理序](../../reporting-services/subscriptions/manage-a-running-process.md)。|  
+|管理工作|檢視和取消執行中的作業。 如需詳細資訊，請參閱 [管理執行中的處理序](../../reporting-services/subscriptions/manage-a-running-process.md)。|  
 |管理報表伺服器屬性|檢視和修改套用至報表伺服器以及報表伺服器管理之項目的屬性。<br /><br /> 此工作支援重新命名入口網站、啟用 [我的報表]，以及設定報表記錄預設值。|  
 |管理角色|建立、檢視和修改以及刪除角色定義。<br /><br /> **系統管理員** 角色的成員，可以使用 [站台設定] 頁面來管理角色。|  
 |管理共用排程|建立、檢視、修改以及刪除用來執行或重新整理報表的共用排程。|  
@@ -201,7 +201,7 @@ ms.locfileid: "67500191"
   
 ### <a name="system-user-tasks"></a>[系統使用者] 工作  
   
-|工作|Description|  
+|Task|描述|  
 |----------|-----------------|  
 |執行報表定義|執行報表，但不將它發行至報表伺服器。|  
 |檢視報表伺服器屬性|檢視套用至報表伺服器的屬性 (例如應用程式名稱)、是否已啟用 [我的報表] 設定，以及報表記錄預設值。<br /><br /> 如果您從 **系統使用者** 角色移除此工作，將無法使用 [站台設定] 頁面。 另外，應用程式標題不會在每一個頁面的頂端顯示。 根據預設，入口網站的標題會是 "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]"。|  

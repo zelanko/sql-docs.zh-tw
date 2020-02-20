@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e415fee08a9723419c7d8a4258fc88670c5e262
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68892398"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 模式的 PowerShell Cmdlet
@@ -38,8 +38,8 @@ ms.locfileid: "68892398"
   
  當您輸入 PowerShell 範例時，將會看到類似下面的錯誤訊息：  
   
--   Install-SPRSService: 無法辨識 'Install-SPRSService' 詞彙是否為  
-    Cmdlet、函數、指令檔或可執行程式的名稱。 檢查名稱拼字是否正確，如果包含路徑的話，請確認路徑是否正確，然後重試一次。  
+-   Install-SPRSService：'Install-SPRSService' 一詞無法辨識為  
+    Cmdlet、函數、指令檔或可執行程式的名稱。 請檢查名稱拼字，如果名稱含有路徑，請確認路徑正確，然後再試一次。  
   
  發生以下其中一個問題：  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68892398"
 
  下表包含用於 Reporting Services SharePoint 共用服務的 PowerShell Cmdlet。  
   
-|指令程式|Description|  
+|Cmdlet|描述|  
 |------------|-----------------|  
 |Install-SPRSService|安裝及註冊或是解除安裝 Reporting Services 共用服務。 只有在擁有 SharePoint 模式之 SQL Server Reporting Services 安裝的電腦上才可以執行這項作業。 針對安裝會進行兩項作業：<br /><br /> -Reporting Services 服務會安裝在伺服器陣列中。<br /><br /> -Reporting Services 服務執行個體會安裝到目前的電腦上。<br /><br /> 針對解除安裝會進行兩項作業：<br /><br /> -Reporting Services 服務會從目前的電腦解除安裝。<br /><br /> -Reporting Services 服務會從伺服器陣列解除安裝。<br /><br /> <br /><br /> 如果伺服器陣列中有任何其他電腦已安裝 Reporting Services 服務，或者依然有 Reporting Services 服務應用程式在伺服器陣列中執行，則會顯示警告訊息。|  
 |Install-SPRSServiceProxy|在 SharePoint 伺服器陣列中安裝及註冊或是解除安裝 Reporting Services 服務 Proxy。|  
@@ -80,10 +80,10 @@ ms.locfileid: "68892398"
 
  下表包含用於 Reporting Services 服務應用程式及其相關聯 Proxy 的 PowerShell Cmdlet。  
   
-|Cmdlet|Description|  
+|Cmdlet|描述|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|取得一或多個 Reporting Services 服務應用程式物件。|  
-|New-SPRSServiceApplication|建立新的 Reporting Services 服務應用程式與相關聯的資料庫。<br /><br /> LogonType 參數：指定報表伺服器會使用 SSRS 應用程式集區帳戶或是 SQL Server 登入來存取報表伺服器資料庫。 有效值為：<br /><br /> 0 Windows 驗證<br /><br /> 1 SQL Server<br /><br /> 2 應用程式集區帳戶 (預設)|  
+|New-SPRSServiceApplication|建立新的 Reporting Services 服務應用程式與相關聯的資料庫。<br /><br /> LogonType 參數：指定報表伺服器會使用 SSRS 應用程式集區帳戶或 SQL Server 登入來存取報表伺服器資料庫。 有效值為：<br /><br /> 0 Windows 驗證<br /><br /> 1 SQL Server<br /><br /> 2 應用程式集區帳戶 (預設)|  
 |Remove-SPRSServiceApplication|移除指定的 Reporting Services 服務應用程式。 這項操作也會移除相關聯的資料庫。|  
 |Set-SPRSServiceApplication|編輯現有 Reporting Services 服務應用程式的屬性。|  
 |New-SPRSServiceApplicationProxy|建立新的 Reporting Services 服務應用程式 Proxy。|  
@@ -100,7 +100,7 @@ ms.locfileid: "68892398"
   
 ## <a name="reporting-services-custom-functionality-cmdlets"></a>Reporting Services 自訂功能 Cmdlet
   
-|指令程式|Description|  
+|Cmdlet|描述|  
 |------------|-----------------|  
 |Update-SPRSEncryptionKey|為指定的 Reporting Services 服務應用程式更新加密金鑰，並重新加密其資料。|  
 |Restore-SPRSEncryptionKey|為 Reporting Services 服務應用程式還原之前備份的加密金鑰。|  
@@ -109,7 +109,7 @@ ms.locfileid: "68892398"
 |New-SPRSExtension|向 Reporting Services 服務應用程式註冊新的延伸模組。|  
 |Set-SPRSExtension|設定現有 Reporting Services 延伸模組的屬性。|  
 |Remove-SPRSExtension|從 Reporting Services 服務應用程式中移除延伸模組。|  
-|Get-SPRSExtension|為 Reporting Services 服務應用程式取得一個或多個 Reporting Services 延伸模組。<br /><br /> 有效值為：<br /><br /> <br /><br /> 傳遞<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> data<br /><br /> Security<br /><br /> 驗證<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> 設計師<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
+|Get-SPRSExtension|為 Reporting Services 服務應用程式取得一個或多個 Reporting Services 延伸模組。<br /><br /> 有效值為：<br /><br /> <br /><br /> 遞送<br /><br /> DeliveryUI<br /><br /> 轉譯<br /><br /> 資料<br /><br /> 安全性<br /><br /> 驗證<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> 設計師<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
 |Get-SPRSSite|根據是否啟用 "ReportingService" 功能取得 SharePoint 網站。 根據預設，將會傳回啟用 "ReportingService" 功能的網站。|  
   
 ## <a name="basic-samples"></a>基本範例
@@ -259,7 +259,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 }  
 ```  
   
- **範例輸出：**  
+ **範例輸出︰**  
   
 -   `Name           ExtensionType`  
   
@@ -290,7 +290,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 ## <a name="next-steps"></a>後續步驟
 
 [使用 PowerShell 變更及列出 Reporting Services 訂閱擁有者並執行訂閱](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)。  
-[檢查清單：使用 PowerShell 驗證 Power Pivot for SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
+[檢查清單：使用 PowerShell 驗證 PowerPivot for SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)  (機器翻譯)  
 [取得 SQL Server PowerShell 說明](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

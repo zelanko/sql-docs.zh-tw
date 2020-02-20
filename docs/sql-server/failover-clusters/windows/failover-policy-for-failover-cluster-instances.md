@@ -1,6 +1,7 @@
 ---
-title: 容錯移轉叢集執行個體的容錯移轉原則 | Microsoft Docs
-ms.custom: ''
+title: 容錯移轉叢集執行個體的容錯移轉原則
+description: 描述 SQL Server 容錯移轉叢集執行個體可用的不同容錯移轉原則。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e2fae9bbc5f0f601f4d455204df6c9d18383458
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 153de78e01099cf1079c6fe0ad34c15c6d7afc44
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044756"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258159"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.locfileid: "68044756"
   
 4.  io_subsystem  
   
-5.  事件  
+5.  活動  
   
  系統、資源和查詢處理序元件會用於失敗偵測。 io_subsytem 和事件元件只會用於診斷用途。  
   
@@ -92,7 +93,7 @@ ms.locfileid: "68044756"
   
  請檢閱 [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)，此系統預存程序在失敗狀況層級扮演重要角色。  
   
-|層級|條件|Description|  
+|層級|條件|描述|  
 |-----------|---------------|-----------------|  
 |0|沒有自動的容錯移轉或重新啟動|指出任何失敗狀況都不會自動觸發容錯移轉或重新啟動。 這個等級只會用於系統維護的用途。|  
 |1|伺服器關閉的容錯移轉或重新啟動|表示伺服器重新啟動或容錯移轉會在引發下列狀況時觸發：<br /><br /> SQL Server 服務已關閉。|  

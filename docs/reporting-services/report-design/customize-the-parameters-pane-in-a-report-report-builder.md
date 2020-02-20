@@ -9,10 +9,10 @@ ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dc6445b64e323c3e5f8e5b0257d8573ec10d3af8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63218982"
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
@@ -32,7 +32,7 @@ ms.locfileid: "63218982"
   
     -   在參數窗格中以滑鼠右鍵按一下空的資料格，然後按一下 [加入參數]  。  
   
-         ![從 [參數] 窗格新增新參數](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "從 [參數] 窗格新增新參數")  
+         ![從 [參數] 窗格新增參數](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "從 [參數] 窗格新增參數")  
   
     -   在 [報表資料]  窗格中以滑鼠右鍵按一下 [參數]  ，然後按一下 [加入參數]  。  
   

@@ -32,10 +32,10 @@ ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d8df41eb7c0a0463648898c08091dd8f8c01f29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581735"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>變更地圖圖例、色階與相關的規則 (報表產生器及 SSRS)
@@ -201,7 +201,7 @@ ms.locfileid: "65581735"
   
     -   **最佳**： 指定會自動調整分佈的範圍來建立對稱的子範圍。  
   
-    -   **自訂**： 指定您自己的範圍數目來控制值的分佈。  
+    -   **自訂**。 指定您自己的範圍數目來控制值的分佈。  
   
      如需分佈選項的詳細資訊，請參閱[使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
@@ -221,7 +221,7 @@ ms.locfileid: "65581735"
   
 2.  以滑鼠右鍵按一下其中包含所需資料的圖層，然後按一下 [\<地圖元素類型>  規則]  。  
   
-3.  驗證已選取 [使用 \<rule type  > 將資料視覺化]  。  
+3.  確認已選取 [使用 \<規則類型  > 將資料視覺化]  選項。  
   
 4.  在 [資料欄位]  中，確認已選取您要在圖層上視覺化的分析資料。  
   

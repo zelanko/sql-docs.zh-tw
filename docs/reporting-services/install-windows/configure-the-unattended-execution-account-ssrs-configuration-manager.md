@@ -1,8 +1,10 @@
 ---
-title: 設定自動執行帳戶 (SSRS 設定管理員) | Microsoft Docs
-ms.date: 05/31/2016
+title: 設定自動執行帳戶 (組態管理員) | Microsoft Docs
+description: Reporting Services 提供一個特殊帳戶，供自動報表透過網路處理和傳送連線要求。
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -15,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4326c38c84ad7af8fb23a5dde035720a1a7024d4
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593318"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866315"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>設定自動執行帳戶 (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了一個特殊帳戶，它是用於自動報表處理和透過網路傳送連接要求。 以下是使用此帳戶的方式：  
@@ -32,7 +34,7 @@ ms.locfileid: "73593318"
  自動報表處理是指由事件觸發 (不論是排程驅動事件或資料重新整理事件)，而非由使用者要求觸發的任何報表執行處理。 報表伺服器使用自動報表處理帳戶，來登入主控外部資料來源的電腦。 因為報表伺服器服務帳戶的認證絕不會用來連接到其他電腦，所以需要此帳戶。  
   
 > [!IMPORTANT]  
->  設定此帳戶是選擇性的。 不過，如果沒有加以設定，您就可能無法連接到某些資料來源，而且可能無法從遠端電腦擷取影像檔。 如果您真的設定帳戶，就必須讓它保持最新狀態。 特別是如果您讓密碼過期或者 Active Directory 中的帳戶資訊變更，則下次在處理報表時，您將遇到下列的錯誤訊息：「登入失敗 (rsLogonFailed) 登入失敗：未知的使用者名稱或密碼錯誤。」 正確維護自動報表處理帳戶是很重要的，即使您從未擷取外部影像或傳送對外部電腦的連接要求也是如此。 如果在設定帳戶之後發現並未使用該帳戶，可以將其刪除，這樣就不需經常進行帳戶維護工作。  
+>  設定此帳戶是選擇性的。 不過，如果沒有加以設定，您就可能無法連接到某些資料來源，而且可能無法從遠端電腦擷取影像檔。 如果您真的設定帳戶，就必須讓它保持最新狀態。 特別是，如果您讓密碼過期或變更了 Active Directory 中的帳戶資訊，則下次在處理報表時，您將發生下列錯誤：「登入失敗 (rsLogonFailed) 登入失敗：未知的使用者名稱或密碼錯誤。」 正確維護自動報表處理帳戶是很重要的，即使您從未擷取外部影像或傳送對外部電腦的連接要求也是如此。 如果在設定帳戶之後發現並未使用該帳戶，可以將其刪除，這樣就不需經常進行帳戶維護工作。  
   
 ## <a name="how-to-configure-the-account"></a>如何設定帳戶  
  您必須使用網域使用者帳戶。 為了提供原先預期的用途，此帳戶應該與用來執行報表伺服器服務的帳戶不同。 請務必使用符合下列條件的帳戶：擁有最小權限 (具有網路連接的唯讀存取權限就足夠)，而且僅擁有提供資料來源和資源給報表伺服器之電腦的有限存取權。  
@@ -99,7 +101,7 @@ ms.locfileid: "73593318"
   
 2.  在 [執行帳戶] 頁面上，清除 [指定執行帳戶]  。  
   
-3.  按一下 **[套用]** 。  
+3.  按一下 [套用]  。  
   
  帳戶資訊會隨即從 RSReportServer.config 檔案中移除。  
   

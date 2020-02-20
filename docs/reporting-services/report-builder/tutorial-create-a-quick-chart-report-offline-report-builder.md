@@ -13,15 +13,15 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 72e6846ef10bc86c1711958e144601d8bff5caac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037967"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教學課程：離線建立快速圖表報表 (報表產生器)
 
-  在本教學課程中，您會使用精靈在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]分頁報表中建立圓形圖。 然後您會加入百分比，然後稍微修改圓形圖。 
+  在本教學課程中，您使用精靈在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中建立圓形圖。 然後您會加入百分比，然後稍微修改圓形圖。 
   
 您可以採用兩種不同的方式進行此教學課程。 這兩種方法結果都一樣，這個示範的圓形圖會像這樣：  
   
@@ -41,7 +41,7 @@ ms.locfileid: "67037967"
   
  [使用 XML 資料建立圓形圖](#CreatePieChartXML)  
   
-### <a name="using-a-includetsqlincludestsql-mdmd-query-that-contains-data-for-this-tutorial"></a>針對此教學課程使用包含資料的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢  
+### <a name="using-a-tsql-query-that-contains-data-for-this-tutorial"></a>針對此教學課程使用包含資料的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢  
  您可以從本主題複製包含資料的查詢，並將它貼入精靈中。 您將需要 SQL Server 執行個體的名稱，以及能夠以唯讀方式存取任何資料庫的認證。 教學課程中的資料集查詢會使用常值資料，但是查詢必須經過 SQL Server 執行個體處理，才能傳回報表資料集所需的中繼資料。  
   
  使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢的優點在於，所有其他 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 教學課程都使用相同的方法，因此當您進行其他教學課程時，已經知道要執行哪些作業。  
@@ -56,7 +56,7 @@ ms.locfileid: "67037967"
   
      此時會出現 **[使用者入門]** 對話方塊。  
   
-     ![開始使用報表產生器](../../reporting-services/media/rb-getstarted.png "開始使用報表產生器")  
+     ![報表產生器入門](../../reporting-services/media/rb-getstarted.png "報表產生器入門")  
   
      如果 [使用者入門]  對話方塊沒有出現，請按一下 [檔案]   >[新增]  。 [新報表或資料集]  對話方塊大部分的內容和 [使用者入門]  對話方塊相同。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "67037967"
   
      ![報表產生器的新圖表預覽](../../reporting-services/report-builder/media/rb-newchartpreview.png "報表產生器的新圖表預覽")  
   
-16. 按一下 **[完成]** 。  
+16. 按一下 [完成]  。  
   
      現在，您會在 [設計檢視] 中看到新的圓形圖報表，仍有代表性的資料。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "67037967"
     UNION SELECT 450 AS Sales, 'Ranjit Varkey' AS FullName   
     ```  
   
-8.  (選擇性) 按一下 [執行] 按鈕 ( **!** ) 來查看您圖表所依據的資料。  
+8.  (選擇性) 按一下 [執行] 按鈕 ( **!** ) 來查看您報表所依據的資料。  
   
 9. 按 [下一步]  。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "67037967"
   
 12. 將 **FullName** 欄位從 [可用的欄位]  方塊拖曳至 [類別目錄]  方塊中 (或是按兩下該欄位，就會移至 [類別目錄]  方塊)，然後按一下 [下一步]  。  
   
-13. 按一下 **[完成]** 。  
+13. 按一下 [完成]  。  
   
      您現在就會在設計介面上看見新的圓形圖報表。 您所看見的內容是代表性內容。 圖例會顯示成 Full Name 1、Full Name 2，以此類推，而非銷售人員的名稱，而且圓形圖配量的大小也不正確。 這只是要讓您了解報表即將呈現的外觀而已。  
   
@@ -220,7 +220,7 @@ ms.locfileid: "67037967"
  如需自訂圖表標籤和圖例的詳細資訊，請參閱 [在圓形圖上顯示百分比值 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) 和[變更圖例項目的文字 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)。  
   
 ##  <a name="WhatsNext"></a> 下一步  
- 既然您已經在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中建立第一份報表，就可以準備嘗試進行其他教學課程，並且根據自己的資料開始建立報表。 若要執行 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，您需要使用 *連接字串*(實際上會將您連接至資料來源) 來存取資料庫等資料來源的權限。 系統管理員會提供這項資訊而且可能會為您設定。  
+ 既然您已經在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中建立第一份報表，就可以準備嘗試進行其他教學課程，並且根據自己的資料開始建立報表。 若要執行 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，您需要有權使用「連接字串」  存取資料來源 (例如資料庫)，以將您實際連線至資料來源。 系統管理員會提供這項資訊而且可能會為您設定。  
   
  若要進行其他教學課程，您需要 SQL Server 執行個體的名稱，以及能夠以唯讀方式存取任何資料庫的認證。 系統管理員可能也會為您進行該設定。  
   

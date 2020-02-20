@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: dce33b0f267dadd8454378fccb72112970553a96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580508"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>在 SharePoint 中啟用報表伺服器和 Power View 整合功能
@@ -46,7 +46,7 @@ ms.locfileid: "65580508"
   
 5.  在清單中尋找 **[報表伺服器整合功能]** 或 **[Power View 整合功能]** 。  
   
-6.  按一下 **[啟用]** 。  
+6.  按一下 [啟用]  。  
   
  若要停用功能，您可以使用相同的程序，但是要按一下 **[停用]** ，而不是 **[啟用]** 。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "65580508"
   
 5.  在清單中尋找 **[報表伺服器管理中心功能]** 。  
   
-6.  按一下 **[啟用]** 。  
+6.  按一下 [啟用]  。  
   
  若要停用此功能，您可以使用相同的程序，但是要按一下 **[停用]** ，而不是 **[啟用]** 。  
   

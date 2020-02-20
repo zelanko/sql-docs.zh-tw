@@ -12,10 +12,10 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4873e91d33363743652f36d15c9015438e479476
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575234"
 ---
 # <a name="upgrade-a-report-server-database"></a>升級報表伺服器資料庫
@@ -56,7 +56,7 @@ ms.locfileid: "65575234"
  除了報表伺服器資料庫之外，報表伺服器也使用暫存資料庫。 當您升級報表伺服器資料庫時，會自動升級暫存資料庫。  
   
 ## <a name="permissions-required-to-upgrade-a-report-server-database"></a>升級報表伺服器資料庫所需的權限  
- 如果您正在升級的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝包含報表伺服器資料庫，則當執行資料庫升級時具備的權限不足時，您可能會看到錯誤訊息。 依預設，安裝程式會使用執行安裝程式之使用者的安全性 Token，以連接到遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體並更新結構描述。 如果您在主控報表伺服器資料庫的資料庫伺服器上擁有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **系統管理員** 權限，資料庫升級將會成功。 同樣地，如果您從命令提示字元執行安裝程式，並為具有修改遠端電腦結構描述之 **系統管理員** 權限的帳戶指定 RSUPGRADEDATABASEACCOUNT 和 RSUPGRADEPASSWORD 引數，資料庫升級將會成功。  
+ 如果您正在升級的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝包含報表伺服器資料庫，則當執行資料庫升級時具備的權限不足時，您可能會看到錯誤訊息。 依預設，安裝程式會使用執行安裝程式之使用者的安全性 Token，以連接到遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體並更新結構描述。 如果您在主控報表伺服器資料庫的資料庫伺服器上擁有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **系統管理員**權限，則資料庫升級將會成功。 同樣地，如果您從命令提示字元執行安裝程式，並為具有修改遠端電腦結構描述之 **系統管理員** 權限的帳戶指定 RSUPGRADEDATABASEACCOUNT 和 RSUPGRADEPASSWORD 引數，資料庫升級將會成功。  
   
  然而，如果您沒有遠端電腦之資料庫的 **系統管理員** 權限，則連線會遭到拒絕，並傳回下列錯誤：  
   

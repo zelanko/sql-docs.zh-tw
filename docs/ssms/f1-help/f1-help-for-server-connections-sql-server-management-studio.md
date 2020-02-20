@@ -1,6 +1,6 @@
 ---
-title: 伺服器連接的 F1 說明 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 伺服器連線的 F1 說明
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a72e24f-9e11-4032-ab9e-5ecc6edd4890
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 495e32c9930711562876c87c5781d51535f1ff2a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f1d4ae0491aee99acca8c6f82e96208ff9eb5bec
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265075"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243905"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>伺服器連接的 F1 說明 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

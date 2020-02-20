@@ -14,10 +14,10 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e1cf8ea99cac00670bd96437e0a5484d2888cbe9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68044795"
 ---
 # <a name="failover-cluster-troubleshooting"></a>容錯移轉叢集疑難排解
@@ -44,7 +44,7 @@ ms.locfileid: "68044795"
   
 3.  仍在 [摘要]  頁面時，按一下 [檢視報告]  以檢視測試結果。  
   
-     若要在關閉精靈之後檢視測試結果，請參閱 **%SystemRoot%\Cluster\Reports\Validation Report date and time.html**，其中 **%SystemRoot%** 是安裝作業系統所在的資料夾 (例如，**C:\Windows**)。  
+     若要在關閉精靈之後檢視測試結果，請參閱 **%SystemRoot%\Cluster\Reports\Validation Report date and time.html** ，其中 **%SystemRoot%** 是安裝作業系統所在的資料夾 (例如， **C:\Windows**)。  
   
 4.  若要檢視將可協助您解譯結果的說明主題，請按一下 [深入了解叢集驗證測試]  。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "68044795"
  **解決方法 1**：使用 **/qb** 參數，而不使用 **/qn** 參數。 如果使用 **/qb** 參數，將會顯示每個步驟的基本 UI (包括錯誤訊息)。  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>問題：SQL Server 無法在移轉至另一個節點之後登入至網路  
- **問題 1：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務帳戶無法與網域控制站聯繫。  
+ **問題 1：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶無法與網域控制站連絡。  
   
  **解決方法 1**：檢查您的事件記錄檔，尋找是否有網路問題的相關記錄 (例如：介面卡失敗或 DNS 問題)。 確認您可以偵測到 (ping) 您的網域控制站。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "68044795"
   
  **解決方法 2：** 使用 NBTSTAT 來尋找重複的名稱，然後更正此問題。  
   
- **問題 3：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 並非使用具名管道來連接。  
+ **問題 3：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 並非使用具名管道來連線。  
   
  **解決方法 3：** 若要使用具名管道來連線，請使用 SQL Server 組態管理員來建立別名以連線到適當的電腦。 例如，若您有一個具有兩個節點的叢集 (**節點 A** 與 **節點 B**)，以及具有預設執行個體的容錯移轉叢集執行個體 (**Virtsql**)，則您可以利用下列步驟連接到網路名稱資源已離線的伺服器：  
   

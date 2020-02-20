@@ -17,10 +17,10 @@ ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67412659"
 ---
 # <a name="monitoring-report-server-performance"></a>監視報表伺服器效能
@@ -72,7 +72,7 @@ SQL Server 2016 Reporting Services 或更新版本 (SSRS) 包含下列效能物�
   
 |效能物件|注意|  
 |------------------------|-----------|  
-|**.NET CLR 資料** 和 **.NET CLR 記憶體**|Web 入口網站會使用[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]效能計數器。 如需詳細資訊，請參閱 MSDN 上的「Improving .NET Application Performance and Scalability」。|  
+|**.NET CLR 資料** 和 **.NET CLR 記憶體**|入口網站會使用 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 效能計數器。 如需詳細資訊，請參閱 MSDN 上的「Improving .NET Application Performance and Scalability」。|  
 |**處理**|針對 ReportingServicesService 執行個體加入 [已耗用時間]  和 [處理序識別碼]  效能計數器，以便依據處理序識別碼追蹤處理序執行時間。|  
   
 ## <a name="sharepoint-events"></a>SharePoint 事件  

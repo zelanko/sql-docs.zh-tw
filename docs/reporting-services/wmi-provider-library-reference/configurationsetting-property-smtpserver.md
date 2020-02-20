@@ -16,10 +16,10 @@ ms.assetid: 8bcceeba-e1a0-44ef-bda1-600c6925e1db
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d54f229624f211d4244224a9b6f4765fd9095542
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570216"
 ---
 # <a name="configurationsetting-property---smtpserver"></a>ConfigurationSetting 屬性 - SMTPServer

@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d50d7e273be27f6b03d98db40c2da1dc70b23306
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68887742"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>將 Reporting Services 內容類型新增至 SharePoint 文件庫
@@ -123,7 +123,7 @@ ms.locfileid: "68887742"
   
 ##  <a name="bkmk_enable_content_management_2010"></a> 啟用單一文件庫的內容類型管理 (SharePoint 2010)  
   
-1.  開啟要啟用多個內容類型的文件庫。 在文件庫功能表列上，您應該會看見下列功能表： **[新增]** 、 **[上傳]** 、 **[動作]** 及 **[設定]** 。 如果您看不到 **[設定]** ，表示您沒有加入內容類型的權限。  
+1.  開啟要啟用多個內容類型的文件庫。 您應會在文件庫功能表列上看見下列功能表：[新增]  、[上傳]  、[動作]  及 [設定]  。 如果您看不到 **[設定]** ，表示您沒有加入內容類型的權限。  
   
 2.  在 **[文件庫工具]** 功能區中，按一下 **[文件庫]** 。  
   
@@ -167,7 +167,7 @@ ms.locfileid: "68887742"
   
      ![rs_general_app_settings_old_integrations](../../reporting-services/report-server-sharepoint/media/rs-general-app-settings-old-integrations.gif "rs_general_app_settings_old_integrations")  
   
-4.  按一下 **[確定]** 。  
+4.  按一下 [確定]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [報表伺服器項目的 SharePoint 網站和清單權限參考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   

@@ -9,10 +9,10 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 126819d9adb85fa4cf17af0c6308d56696136988
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570858"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "65570858"
  報表伺服器是其上安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 執行個體的電腦。 報表伺服器會在內部儲存分頁與行動報表、報表相關項目以及資源、排程和訂閱這類項目。 報表伺服器可以設定為獨立單一伺服器或向外延展伺服器陣列，也可以與 SharePoint Server 整合。 與報表伺服器項目的互動方式是透過 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web 服務、WMI 提供者、URL 存取或透過指令碼進行程式設計。 與報表伺服器的互動方式則取決於部署拓撲和組態。  
   
 ### <a name="native-mode-report-servers"></a>原生模式報表伺服器
- 以原生模式設定的報表伺服器是其上安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 且設定為獨立伺服器的電腦。 與報表伺服器、報表和報表相關項目的互動方式，是搭配使用瀏覽器與 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 或 URL 存取命令、SQL Server Management Studio 或透過指令碼進行程式設計。 如需詳細資訊，請參閱 [Reporting Services 報表伺服器 &#40;原生模式&#41;](../reporting-services/report-server/reporting-services-report-server-native-mode.md)。  
+ 以原生模式所設定報表伺服器是其上安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 且設定為獨立伺服器的電腦。 與報表伺服器、報表和報表相關項目的互動方式，是搭配使用瀏覽器與 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 或 URL 存取命令、SQL Server Management Studio 或透過指令碼進行程式設計。 如需詳細資訊，請參閱 [Reporting Services 報表伺服器 &#40;原生模式&#41;](../reporting-services/report-server/reporting-services-report-server-native-mode.md)。  
   
 ### <a name="sharepoint-mode-report-servers"></a>SharePoint 模式報表伺服器  
  與 SharePoint 整合的報表伺服器有兩種可能的組態。 在 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]中， [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 是與做為 SharePoint 共用服務的 SharePoint 伺服器一起安裝。 在舊版本中，報表伺服器會透過安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 增益集與 SharePoint Server 的整合。 在這兩種情況下，與報表伺服器、報表和報表相關項目的互動是在 SharePoint 網站上使用應用程式頁面。 您可以使用 SharePoint 文件庫以及其他您建立用以儲存報表相關內容類型的文件庫。 如需詳細資訊，請參閱 [Reporting Services 報表伺服器 &#40;原生模式&#41;](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)。  
@@ -42,7 +42,7 @@ ms.locfileid: "65570858"
   
  在 SharePoint 網站上，請使用 SharePoint 網站管理員頁面以管理報表及報表相關網站內容的存取權。  
   
-### <a name="schedules"></a>[排程]
+### <a name="schedules"></a>排程
  在原生報表伺服器上，您可以排程分頁報表、共用資料集及訂閱，以便在特定時間或離峰時段擷取資料及傳遞報表與資料集查詢。 排程可以執行一次，或以小時、天、週或月為週期連續執行。 如需詳細資訊，請參閱 [Schedules](../reporting-services/subscriptions/schedules.md)。  
   
 ### <a name="subscriptions-and-delivery"></a>訂閱與傳遞  
@@ -186,7 +186,7 @@ ms.locfileid: "65570858"
 ##  <a name="bkmk_StagesofReports"></a> Reporting Services 分頁報表的階段  
  您可以建立、發行或儲存、編譯、處理、快取、轉譯、檢視和匯出報表定義，以及將報表定義儲存為記錄。 執行報表時，報表伺服器會以三個步驟來處理報表：報表處理、資料處理，以及轉譯。 資料和報表處理是在報表定義上執行，而結果為內部中繼格式。 中繼格式的報表接下來會轉譯成特定的檢視格式。 下列圖表顯示報表處理的階段和元素。  
   
- ![報表處理圖](../reporting-services/media/report-execution.gif "報表處理圖")  
+ ![report processing diagram](../reporting-services/media/report-execution.gif "報表處理圖")  
 報表處理圖  
   
 ### <a name="report-definition"></a>報表定義  

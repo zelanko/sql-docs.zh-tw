@@ -9,10 +9,10 @@ ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: aec3e79fbfbaf96475cf10457c9f21c8c3d78b6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581548"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>建立矩陣 (報表產生器及 SSRS)
@@ -37,15 +37,15 @@ ms.locfileid: "65581548"
   
  當您在設計介面上選取矩陣時，資料列和資料行控制代碼隨即出現，如下圖所示。  
   
- ![從工具箱新增選取的新矩陣](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "從工具箱新增選取的新矩陣")  
+ ![從工具箱新增選取的矩陣](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "從工具箱新增選取的矩陣")  
   
  將資料集欄位拖曳到 [群組] 窗格的 [資料列群組] 和 [資料行群組] 區域來加入群組。 您拖曳到資料列群組或資料行群組窗格中的第一個欄位會取代初始的空預設群組。 接著，您可以根據資料，套用每個資料格的格式。  
   
- ![矩陣、類別目錄資料列和地理資料行群組](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "矩陣、類別目錄資料列和地理資料行群組")  
+ ![矩陣，目錄資料列和地理位置資料行群組](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "矩陣，目錄資料列和地理位置資料行群組")  
   
  在 [預覽] 中，矩陣會展開以顯示資料列群組和資料行群組值。 資料格會顯示摘要值，如下圖所示。  
   
- ![預覽已展開群組的轉譯矩陣](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "預覽已展開群組的轉譯矩陣")  
+ ![具有展開群組的轉譯矩陣預覽](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "具有展開群組的轉譯矩陣預覽")  
   
  您開始使用的矩陣是以 Tablix 資料區為基礎的範本。 您可以加入巢狀或相鄰的資料列群組或資料行群組，甚至是加入詳細資料列，以便繼續開發您的矩陣設計。 如需詳細資訊，請參閱[探索 Tablix 資料區的彈性 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "65581548"
   
  當報表執行時，動態資料行標頭會依唯一群組值數目，向右展開資料行 (如果矩陣的 Direction 屬性設為 RTL，則是向左展開)。 動態資料列是在頁面上向下擴展。 出現在 Tablix 主體資料格中的資料會以資料列和資料行群組的交集為基礎來彙總，如下圖所示。  
   
- ![矩陣、巢狀資料列和具有總計的資料行群組](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalsdesign.gif "矩陣、巢狀資料列和具有總計的資料行群組")  
+ ![矩陣，巢狀資料列和具有總計的資料行群組](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalsdesign.gif "矩陣，巢狀資料列和具有總計的資料行群組")  
   
  在預覽中，報表如下圖所示。  
   

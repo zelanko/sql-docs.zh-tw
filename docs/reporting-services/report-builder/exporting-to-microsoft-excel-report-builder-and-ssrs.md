@@ -9,10 +9,10 @@ ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9973ce2f9c5eac344307258e1c212979146c1695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580781"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
@@ -117,7 +117,7 @@ ms.locfileid: "65580781"
   
  這表示，當您將含有資料列群組或資料行群組的報表匯出至 Excel 之後，必須先加以修改，然後才能在樞紐資料表中顯示匯出的資料。 您必須將群組值加入至遺漏值的資料格，讓工作表成為所有資料格都含有值的二維資料表。 下圖顯示更新過的工作表。  
   
- ![匯出至 Excel 的報表 (壓平合併)](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "匯出至 Excel 的報表 (壓平合併)")  
+ ![匯出至 Excel 的報表 (扁平化)](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "匯出至 Excel 的報表 (扁平化)")  
   
  因此，如果您建立報表的特定目的是要將它匯出至 Excel，以便進一步分析報表資料，請考慮不要對報表中的資料列或資料行進行分組。  
   
@@ -204,11 +204,11 @@ ms.locfileid: "65580781"
 ##  <a name="DocumentProperties"></a> 文件屬性  
  Excel 轉譯器會將下列中繼資料寫入到 Excel 檔。  
   
-|報表元素屬性|Description|  
+|報表元素屬性|描述|  
 |-------------------------------|-----------------|  
-|建立日期|執行報表的日期和時間，當做 ISO 日期/時間值。|  
+|建立時間|執行報表的日期和時間，當做 ISO 日期/時間值。|  
 |作者|Report.Author|  
-|Description|Report.Description|  
+|描述|Report.Description|  
 |LastSaved|執行報表的日期和時間，當做 ISO 日期/時間值。|  
   
 ##  <a name="PageHeadersFooters"></a> 頁首和頁尾  

@@ -1,6 +1,7 @@
 ---
-title: 第 4 課：將資料表新增至報表 (Reporting Services) | Microsoft Docs
-ms.date: 04/29/2019
+title: 第 4 課：將資料表新增至報表 | Microsoft Docs
+description: 定義資料集之後，您就可以開始設計分頁報表。 您可以將報表物件從 [工具箱] 窗格拖放到 [設計介面]，以建立報表版面配置。
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,21 +9,21 @@ ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e925dec5eb14365a6c313349599a77ffe1d7ab13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: fca89bf8992db9ec3b07cea422ec146993e8aec8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106011"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244304"
 ---
-# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>第 4 課：將資料表加入至報表 (Reporting Services)
+# <a name="lesson-4-add-a-table-to-the-report-reporting-services"></a>第 4 課：將資料表新增至報表 (Reporting Services)
 
-定義資料集之後，您就可以開始設計報表。 您會透過將「報表物件」  從 [工具箱]  窗格拖放到 [設計介面]  ，以建立報表版面配置。 某些報表物件的型別包含：
+定義資料集之後，您就可以開始設計分頁報表。 您會透過將「報表物件」  從 [工具箱]  窗格拖放到 [設計介面]  ，以建立報表版面配置。 某些報表物件的型別包含：
 
 - Table
 - 文字方塊
-- image
-- 線條
+- 映像
+- 折線圖
 - 矩形
 - 圖表
 - 對應
@@ -54,7 +55,7 @@ ms.locfileid: "65106011"
 
 7. 以相同的方式加入 `[LineTotal]` 欄位，以建立第五個資料行。 資料行標籤會新增為 "Line Total"。 報表設計師會將 LineTotal 分割成兩個字，藉以自動建立資料行的易記名稱。
 
-下圖顯示已擴展這些欄位的資料表資料區域：Date、Order、Product、Qty 和 Line Total。
+下圖顯示已使用這些欄位填入的資料表資料區域：Date、Order、Product、Qty 和 Line Total。
 ![rs_BasicTableDetailsDesign](media/rs-basictabledetailsdesign.png)
 
 ## <a name="preview-your-report"></a>預覽報表
@@ -69,7 +70,7 @@ ms.locfileid: "65106011"
 
 下圖顯示 [預覽]  檢視中的部分報表。
 
-   ![預覽，有五個資料行的資料表詳細資料列](media/rs-basictabledetailspreview.png "預覽，有五個資料行的資料表詳細資料列")
+   ![有 5 個資料行的資料表詳細資料列預覽](media/rs-basictabledetailspreview.png "有 5 個資料行的資料表詳細資料列預覽")
 
 看看日期和產品線總計值。 在下一課中，您將會了解如何將它們格式化以更整齊地顯示。
 
@@ -78,7 +79,7 @@ ms.locfileid: "65106011"
 
 ## <a name="next-steps"></a>後續步驟
 
-您已經成功將資料表資料區域加入到報表中、將欄位加入到資料區域中，並預覽過您的報表。 在下一課中，您將會了解如何將資料行標頭和欄位運算式格式化。 接著請繼續[第 5 課：格式化報表 &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)。
+您已經成功將資料表資料區域加入到報表中、將欄位加入到資料區域中，並預覽過您的報表。 在下一課中，您將會了解如何將資料行標頭和欄位運算式格式化。 接下來，繼續進行[第 5 課：格式化報表 &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)。
   
 ## <a name="see-also"></a>另請參閱
 

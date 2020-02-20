@@ -1,6 +1,6 @@
 ---
-title: 選項 (環境 - 說明 - 一般頁面) | Microsoft Docs
-ms.custom: ''
+title: 選項 (環境 - 說明 - 一般頁面)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,23 +12,23 @@ f1_keywords:
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63331d03066e10a5e6364b73bc61814569e41102
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b5c3935ebf4c42cf971c7b01dd7d79b9d2d1b5c1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68257219"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252349"
 ---
 # <a name="options-environment---help---general-page"></a>選項 (環境 - 說明 - 一般頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用 [選項]  對話方塊來選擇文件集，並決定是否要在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中顯示主題，或是在不同的視窗中顯示。 若要存取此對話方塊，請按一下 [工具]  功能表上的 [選項]  ，展開 [環境]  節點中的 [說明]  ，然後按一下 [一般]  。  
+使用 [選項]  對話方塊來選擇文件集，並決定是否要在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或在不同的視窗中顯示主題。 若要存取此對話方塊，請按一下 [工具]  功能表上的 [選項]  ，展開 [環境]  節點中的 [說明]  ，然後按一下 [一般]  。  
   
 > [!NOTE]  
 > 一直到重新啟動環境之後，在此頁面上對選項所做的變更才會生效。  
   
-## <a name="settings"></a>[設定]  
+## <a name="settings"></a>設定  
 **顯示說明使用的工具**  
-指定說明顯示的方式。 從下拉式清單中選取 [外部說明檢視器]  ，即可在外部浮動視窗中顯示主題。 選取 [整合式說明檢視器]  ，即可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 內停駐的 Web 瀏覽器視窗中顯示說明主題。  
+指定說明顯示的方式。 從下拉式清單中選取 [外部說明檢視器]  ，即可在外部浮動視窗中顯示主題。 選取 [整合式說明檢視器]  ，即可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 內停駐的網頁瀏覽器視窗中顯示說明主題。  
   
 **每一頁的搜尋結果數目**  
 指定在單一 [搜尋結果]  頁面上要顯示主題的數目。  

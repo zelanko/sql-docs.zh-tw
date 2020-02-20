@@ -1,6 +1,6 @@
 ---
-title: 找不到名稱對話方塊 | Microsoft Docs
-ms.custom: ''
+title: 找不到名稱對話方塊
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d2ba40f3580a01bb7f72f54bd69407853820a6d7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c6dc23b79346a3e163f896b3f85f120cc9ccc903
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264075"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257176"
 ---
 # <a name="name-not-found-dialog-box"></a>找不到名稱對話方塊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,6 +38,6 @@ ms.locfileid: "68264075"
 **輸入物件名稱**  
 包含找不到之物件的名稱。 請更正物件的名稱，或鍵入新的物件名稱。  
   
-從選取範圍移除  *<object name>*   
+**從選取範圍移除** *<object name>*   
 選取以關閉 [找不到名稱]  對話方塊，並從 [選取物件]  對話方塊中移除項目。  
   

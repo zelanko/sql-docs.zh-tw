@@ -14,10 +14,10 @@ ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ad5251471fe9be594bf0ffb09c13f5f9afc35990
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128953"
 ---
 # <a name="supplying-web-service-method-arguments"></a>提供 Web 服務方法引數
@@ -34,7 +34,7 @@ rs.CreateFolder("Product Sales", "/Sales", null);
 ```  
   
 ## <a name="complex-data-types"></a>複雜的資料類型  
- 報表伺服器 Web 服務的核心類別是 <xref:ReportService2010.ReportingService2010>，您使用它來叫用 SOAP 作業或是 Proxy 類別的 Web 方法。 若要支援此類別及其方法，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括使用者定義、複雜的資料類型，這些資料類型是 Web 服務方法的輸入與輸出參數特有的。 這些複雜的資料類型是產生之 Proxy 類別的一部分，可在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 環境中開發時使用。  
+ 報表伺服器 Web 服務的核心類別是 <xref:ReportService2010.ReportingService2010>，您使用它來叫用 SOAP 作業或是 Proxy 類別的 Web 方法。 若要支援此類別及其方法，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括使用者定義、複雜的資料類型，這些資料類型是 Web 服務方法的輸入與輸出參數特有的。 這些複雜資料類型是所產生 Proxy 類別的一部分，可在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 環境中開發時使用。  
   
  當您產生 Proxy 類別時，在 WSDL 檔案中定義的複雜資料類型是由 Proxy 類別所代表，這包括對應至複雜資料類型的各種 SOAP 元素。 這些資料類型的順序會變成可在程式碼中列舉的物件陣列。 這會列舉直接與 SOAP 訊息中傳送的 XML 結構搭配使用的需求。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 會為您處理翻譯。  
   

@@ -1,11 +1,13 @@
 ---
-title: 刪除和重新建立加密金鑰 (SSRS 設定管理員) | Microsoft Docs
-ms.date: 05/31/2016
+title: 刪除和重新建立加密金鑰 (組態管理員) | Microsoft Docs
+description: 刪除和重新建立加密金鑰是例行加密金鑰維護範圍之外的活動。
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
-- re-creating encryption keys
+- recreating encryption keys
 - encryption keys [Reporting Services]
 - deleting encryption keys
 - symmetric keys [Reporting Services]
@@ -14,28 +16,28 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bf83ea3eb7ed7f4ef28872b964449d2924aab48
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 13f0237a987a87087f04da88f4a21173611c4437
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593539"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866301"
 ---
-# <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS 加密金鑰 - 刪除和重新建立加密金鑰
+# <a name="delete-and-recreate-encryption-keys-ssrs-configuration-manager"></a>刪除和重新建立加密金鑰 (SSRS 組態管理員)
   刪除和重新建立加密金鑰是例行加密金鑰維護範圍之外的活動。 執行這些工作是為了因應報表伺服器所受的特定威脅，或者當您無法存取報表伺服器資料庫時的最後手段。  
   
--   您認為現有的對稱金鑰被洩漏時，請重新建立對稱金鑰。 也可以當成最佳安全性作法，定期重新建立金鑰。  
+-   如果您認為現有的對稱金鑰遭盜用，請重新建立對稱金鑰。 您也可以定期重新建立金鑰，當成最佳安全性作法。  
   
 -   當您無法還原對稱金鑰時，請刪除現有的加密金鑰和無法使用的加密內容。  
   
-## <a name="re-creating-encryption-keys"></a>重新建立加密金鑰  
- 如果有證據顯示未授權使用者已獲悉對稱金鑰，或者您的報表伺服器已遭到攻擊，而您想要重設對稱金鑰做為預防，您就可以重新建立對稱金鑰。 重新建立對稱金鑰時，所有加密值都會使用新值重新加密。 如果您是在向外延展部署中執行多個報表伺服器，對稱金鑰的所有副本都會更新為新值。 報表伺服器使用它能使用的公開金鑰，來更新部署中每個伺服器的對稱金鑰。  
+## <a name="recreating-encryption-keys"></a>重新建立加密金鑰  
+ 如果有證據顯示未授權使用者已獲悉對稱金鑰，或報表伺服器已遭到攻擊，且您想要重設對稱金鑰作為預防，則可重新建立對稱金鑰。 重新建立對稱金鑰時，所有加密值都會使用新值重新加密。 如果您是在向外延展部署中執行多個報表伺服器，對稱金鑰的所有副本都會更新為新值。 報表伺服器使用它能使用的公開金鑰，來更新部署中每個伺服器的對稱金鑰。  
   
  唯有報表伺服器處於工作狀態時，您才能重新建立對稱金鑰。 重新建立加密金鑰和重新加密內容會中斷伺服器作業。 進行重新加密時，必須將伺服器離線。 重新加密過程中，不應該對報表伺服器提出任何要求。  
   
  您可以使用 Reporting Services 組態工具或 **rskeymgmt** 公用程式，來重設對稱金鑰和加密資料。 如需如何建立對稱金鑰的詳細資訊，請參閱[初始化報表伺服器 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
   
-### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>如何重新建立加密金鑰 (Reporting Services 組態工具)  
+### <a name="how-to-recreate-encryption-keys-reporting-services-configuration-tool"></a>如何重新建立加密金鑰 (Reporting Services 組態工具)  
   
 1.  透過在 rsreportserver.config 檔案中修改 **IsWebServiceEnabled** 屬性，停用報表伺服器 Web 服務和 HTTP 存取。 此步驟會讓驗證要求暫時停止送給報表伺服器，而不會完全關閉伺服器。 您必須有最少的服務，好讓您可以重新建立金鑰。  
   
@@ -55,7 +57,7 @@ ms.locfileid: "73593539"
   
 5.  透過在 rsreportserver.config 檔案中修改 **IsWebServiceEnabled** 屬性，重新啟用 Web 服務和 HTTP 存取。 如果是處理向外延展部署，請為所有執行個體執行此作業。  
   
-### <a name="how-to-re-create-encryption-keys-rskeymgmt"></a>如何重新建立加密金鑰 (rskeymgmt)  
+### <a name="how-to-recreate-encryption-keys-rskeymgmt"></a>如何重新建立加密金鑰 (rskeymgmt)  
   
 1.  停用報表伺服器 Web 服務和 HTTP 存取。 使用前面程序中的指示來停止 Web 服務作業。  
   

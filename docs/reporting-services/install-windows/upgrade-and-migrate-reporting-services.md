@@ -12,10 +12,10 @@ ms.author: maggies
 ms.topic: conceptual
 ms.date: 08/17/2017
 ms.openlocfilehash: 9d0ff28e1e9c7784da2c1206f72573ba608797a1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68264988"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
@@ -24,9 +24,9 @@ ms.locfileid: "68264988"
 
   本主題概述 SQL Server Reporting Services 的升級與移轉選項。 升級 SQL Server Reporting Services 部署的一般方式有兩種：  
  
--   **升級：** 您可以在目前安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件的伺服器和執行個體上升級這些元件。 這種方式通常稱為「就地」升級。 不支援從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器的一種模式就地升級至另一種模式。 例如，您無法將原生模式報表伺服器升級至 SharePoint 模式報表伺服器。 您可以將報表項目從一個模式移轉至另一個模式。 如需詳細資訊，請參閱本文件稍後的＜原生至 SharePoint 移轉＞一節。  
+-   **升級：** 您可以在目前安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件的伺服器和執行個體上升級這些元件。 這種方式通常稱為「就地」升級。 不支援從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器的一種模式就地升級至另一種模式。 例如，您無法將原生模式報表伺服器升級至 SharePoint 模式報表伺服器。 您可以將報表項目從一個模式移轉至另一個模式。 如需詳細資訊，請參閱本文件稍後的＜原生至 SharePoint 移轉＞一節。  
   
--   **移轉**：安裝和設定新的 SharePoint 環境、將報表項目和資源複製到新環境，然後設定新環境，以使用現有的內容。 較低層級的移轉形式為複製 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料庫、組態檔，如果您是使用 SharePoint 模式，則還有 SharePoint 內容資料庫。  
+-   **移轉**：您要安裝和設定新的 SharePoint 環境、將報表項目和資源複製到新環境，然後設定新環境以使用現有的內容。 較低層級的移轉形式為複製 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料庫、組態檔，如果您是使用 SharePoint 模式，則還有 SharePoint 內容資料庫。  
     
 > **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式
 
@@ -83,7 +83,7 @@ ms.locfileid: "68264988"
   
 -   備份在 IIS 中對現有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 虛擬目錄所進行的任何自訂。  
   
--   移除無效的 SSL 憑證。  這包括已過期而且您不打算要在升級 Reporting Services 之前更新的憑證。  無效的憑證會導致升級失敗，並且會在 Reporting Services 記錄檔中寫入類似下列的錯誤訊息︰ **Microsoft.ReportingServices.WmiProvider.WMIProviderException︰網站上未設定安全通訊端層 (SSL) 憑證**。  
+-   移除無效的 SSL 憑證。  這包括已過期而且您不打算要在升級 Reporting Services 之前更新的憑證。  無效的憑證會造成升級失敗，並將類似下面的錯誤訊息寫入 Reporting Services 記錄檔：**Microsoft.ReportingServices.WmiProvider.WMIProviderException：網站上未設定安全通訊端層 (SSL) 憑證。**  
   
  在升級實際執行環境之前，請務必在與實際執行環境具有相同組態的實際執行前環境中執行測試升級。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "68264988"
   
   
 ##  <a name="bkmk_native_scenarios"></a> 原生模式升級和移轉狀況  
- **升級：** 原生模式的就地升級對於每個稍早在本主題中列出的支援版本而言，是相同的程序。 執行 SQL Server 安裝精靈或命令列安裝。 在安裝之後，報表伺服器資料庫將自動升級至新的報表伺服器資料庫結構描述。 如需詳細資訊，請參閱本主題中的 [就地升級](#bkmk_inplace_upgrade) 一節。  
+ **升級：** 原生模式就地升級程序和本主題前文中所列出每個支援版本的程序一樣。 執行 SQL Server 安裝精靈或命令列安裝。 在安裝之後，報表伺服器資料庫將自動升級至新的報表伺服器資料庫結構描述。 如需詳細資訊，請參閱本主題中的 [就地升級](#bkmk_inplace_upgrade) 一節。  
   
  當您選取要升級的現有報表伺服器執行個體時，升級程序就會開始。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "68264988"
   
 8.  安裝程式會合併組態檔中的設定。 使用目前安裝中的組態檔當做基礎，加入新的項目。 已過時的項目不會移除，但是報表伺服器在升級完成之後不會再讀取這些項目。 升級將不會刪除舊的記錄檔、過時的 RSWebApplication.config 檔，或是 IIS 中的虛擬目錄設定。 升級也不會移除舊版報表設計師、Management Studio 或其他用戶端工具。 如果您不再需要這些項目，請務必在升級完成之後移除這些檔案和工具。  
   
- **移轉：** 將舊版的原生模式安裝移轉至 SQL Server Reporting Services 對於所有稍早在本主題中列出的支援版本而言是相同的步驟。 如需詳細資訊，請參閱[移轉 Reporting Services 安裝 &#40;原生模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+ **移轉：** 將舊版原生模式安裝移轉至 SQL Server Reporting Services 的步驟，和本主題前文中所列出所有支援版本的步驟一樣。 如需詳細資訊，請參閱[移轉 Reporting Services 安裝 &#40;原生模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
   
   
 ##  <a name="bkmk_native_scaleout"></a> 升級 Reporting Services 原生模式向外延展部署  
@@ -162,7 +162,7 @@ ms.locfileid: "68264988"
 > [!IMPORTANT]  
 >  下列某些狀況因為升級所需的技術不同，而需要將 SharePoint 環境停機。 如果您的情況不允許停機，將需要完成移轉，而非就地升級。  
   
-### <a name="includesssql14includessssql14-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 SQL Server Reporting Services  
+### <a name="sssql14-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 SQL Server Reporting Services  
  **起始環境：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1、SharePoint 2010 或 SharePoint 2013。  
   
  **結束環境：** SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。   
@@ -171,7 +171,7 @@ ms.locfileid: "68264988"
   
      如果您擁有與 SharePoint 2010 整合的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝，就無法就地升級 SharePoint 伺服器。 不過，您可以將內容資料庫和伺服器應用程式資料庫從 SharePoint 2010 伺服器陣列移轉至 SharePoint 2013/2016 伺服器陣列。  
   
-### <a name="includesssql11includessssql11-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 SQL Server Reporting Services  
+### <a name="sssql11-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 SQL Server Reporting Services  
  **起始環境：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]、SharePoint 2010。  
   
  **結束環境：** SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。   
@@ -180,7 +180,7 @@ ms.locfileid: "68264988"
   
      如果您擁有與 SharePoint 2010 整合的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝，就無法就地升級 SharePoint 伺服器。 不過，您可以將內容資料庫和伺服器應用程式資料庫從 SharePoint 2010 伺服器陣列移轉至 SharePoint 2013/2016 伺服器陣列。  
   
-### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 至 SQL Server Reporting Services  
+### <a name="sskilimanjaro-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 至 SQL Server Reporting Services  
  **起始環境：** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、SharePoint 2010。  
   
  **結束環境：** SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。  
@@ -208,9 +208,9 @@ ms.locfileid: "68264988"
   
  若要在新的報表伺服器電腦上重新建立可回復的加密，您必須還原之前所備份的金鑰。 儲存在報表伺服器資料庫中的完整金鑰集合是由對稱金鑰值所組成，再加上用來限制此金鑰之存取的服務識別資訊，如此一來，只有儲存此金鑰的報表伺服器執行個體才可以使用此金鑰。 在金鑰還原期間，報表伺服器將會以新的版本取代現有的金鑰複本。 新的版本包括目前電腦上所定義的電腦和服務識別的值。 如需詳細資訊，請參閱下列主題：  
   
--   SharePoint 模式：請參閱[管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的＜金鑰管理＞一節  
+-   SharePoint 模式：請參閱[管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)中的＜金鑰管理＞一節  
   
--   原生模式：請參閱 [備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+-   原生模式：請參閱[備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   
 ### <a name="fixed-database-name"></a>固定資料庫名稱  

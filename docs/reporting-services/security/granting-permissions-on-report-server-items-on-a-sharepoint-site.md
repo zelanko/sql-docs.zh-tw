@@ -14,10 +14,10 @@ ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e1d11d26ccc86b9db04d29856adfbd4c9ce643a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580040"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>授與 SharePoint 網站上報表伺服器項目的權限
@@ -56,7 +56,7 @@ ms.locfileid: "65580040"
  伺服器管理員和網站集合管理員可以設定選項，以決定其他網站擁有者能否設定權限。 依您擁有的不同權限等級，您或許無法建立或自訂 SharePoint 群組或權限等級。  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>使用預先定義的 SharePoint 群組和權限等級  
- [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 產品文件中的建議事項建議您使用標準 SharePoint 群組 (它們是「 *Site name* **擁有者**, *Site name* **成員**」和「 *Site name* **訪客**」)，並於網站層級指定權限。 受您指定權限的大部分使用者應該是「 *Site name* **訪客** 」或「 *Site name* **成員** 」群組的成員。 上層網站的權限會由整個網站階層繼承。 您可以針對需要其他限制的特定項目，中斷其權限繼承。  
+ [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 產品文件中的建議事項建議您使用標準 SharePoint 群組 (這些是 *Site name* **擁有者**、*Site name*  **成員**和 *Site name* **訪客**)，並於網站層級指派權限。 獲您指派權限的大部分使用者應該是 *Site name* **訪客**或 *Site name* **成員**群組的成員。 上層網站的權限會由整個網站階層繼承。 您可以針對需要其他限制的特定項目，中斷其權限繼承。  
   
  下列 SharePoint 群組具有下列預先定義的權限等級：  
   
@@ -64,7 +64,7 @@ ms.locfileid: "65580040"
   
 -   「 **成員** 」群組具有「參與」等級權限，讓群組成員能夠檢視網頁、編輯項目、提交變更核准、加入清單項目和刪除清單項目。  
   
--   [訪客]  群組具有「讀取」層級權限，讓群組成員能夠檢視網頁、清單項目和文件。  
+-    [訪客] 群組具有「讀取」層級權限，讓群組成員能夠檢視網頁、清單項目和文件。  
   
  SharePoint 群組具有可立即存取許多報表伺服器作業的權限等級。 如果您覺得內建的安全性設定無法提供您需要的存取層級，您可以建立自訂群組或權限等級。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "65580040"
  [報表伺服器項目的 SharePoint 網站和清單權限參考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
  提供可用來存取報表伺服器作業之所有 SharePoint 產品權限的參考。  
   
- [在 SharePoint Web 應用程式中設定報表伺服器作業的權限](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
+ [設定 SharePoint Web 應用程式中報表伺服器作業的權限](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
  描述隨選報表的權限需求，並建議啟用功能的方法。  
   
  [將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  

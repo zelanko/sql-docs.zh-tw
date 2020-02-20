@@ -9,10 +9,10 @@ ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9285b9b89930fe540f9b5493f1730184cf4e9526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62499939"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>準備 Reporting Services 行動報表的 Excel 資料
@@ -44,7 +44,7 @@ ms.locfileid: "62499939"
   
 ![SS_MRP_ExcelDataSheet](../../reporting-services/mobile-reports/media/ss-mrp-exceldatasheet.png)  
           
-## <a name="column-headers"></a>資料行標頭  
+## <a name="column-headers"></a>資料行標題  
   
 如您在上述的範例中所見，第一個資料列包含該資料行中的度量名稱。 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 會保留這些資料行標頭，以便組件庫項目設定中的簡單參考使用。 不過，資料行標頭並非必要。 如果遺漏， [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 會使用 Excel 的 A、B、C,...、AA、BB、...慣例來產生標題。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62499939"
   
 匯入至 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]的 Excel 檔案儲存位置沒有任何限制。 不過，如果您在匯入後移動或重新命名檔案，您將無法透過 [資料檢視] 中的 **refresh all data** 命令重新整理該資料。   
   
->**注意**： [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 不會自動重新整理 Excel 資料。 您可以透過 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **refresh** command, but only if the file hasn't moved.  
+>**注意**： [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 不會自動重新整理 Excel 資料。 您可以透過 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **refresh** 命令重新整理資料，但只有在檔案尚未移動時才能重新整理。  
   
 ## <a name="dates"></a>日期  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62499939"
 Excel 工作表中的自訂物件，包括樞紐分析表、視覺效果和影像等，均不會匯入至 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]。  
   
 ### <a name="see-also"></a>另請參閱  
-- [Prepare data for Reporting Services mobile reports (準備 Reporting Services 行動報表的資料)](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
+- [準備 Reporting Services 行動報表的資料](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
 - [使用 SQL Server 行動報表發行工具建立與發行行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  在 [iPad app 中檢視 SQL Server 行動報表和 KPI](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI for iOS)  
 -  請參閱 [在 iPhone 應用程式中檢視 SQL Server 行動報表和 KPI (iOS 版 Power BI)](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (iOS 版 Power BI)  

@@ -11,13 +11,13 @@ ms.assetid: eea6bfe9-3130-4272-b3c2-c334349a7afd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 059f517b3309b059f3944f04131e02e8722e7fc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571071"
 ---
-# <a name="msreportserverinstance-properties---version"></a>MSReportServer_Instance 屬性 - Version
+# <a name="msreportserver_instance-properties---version"></a>MSReportServer_Instance 屬性 - Version
   以 Major.Minor.Build.Revision 的格式傳回報表伺服器的版本。 唯讀。  
   
 ## <a name="syntax"></a>語法  

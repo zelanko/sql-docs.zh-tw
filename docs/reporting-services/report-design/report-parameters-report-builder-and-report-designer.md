@@ -11,10 +11,10 @@ ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
 ms.openlocfilehash: 494b682853425b40699ff698117d2941805ab7da
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68941143"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>報表參數 (報表產生器和報表設計師)
@@ -31,9 +31,9 @@ ms.locfileid: "68941143"
 
 ::: moniker-end
 
-本主題說明 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表參數的一般用法、您可以設定的屬性，以及其他資訊。 報表參數可讓您控制報表資料、將相關的報表連接在一起，以及變更報表呈現方式。 報表參數可以使用於您在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 和報表設計師中建立的分頁報表中，也可以使用於您在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]中建立的行動報表。 深入了解 [報表參數概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)。  
+本主題說明 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表參數的一般用法、您可以設定的屬性，以及其他資訊。 報表參數可讓您控制報表資料、將相關的報表連接在一起，以及變更報表呈現方式。 報表參數可以使用於您在[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]和報表設計師中建立的分頁報表，也可以使用於您在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中建立的行動報表。 深入了解 [報表參數概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)。  
 
-若要嘗試自行將參數加入報表，請參閱 [教學課程：將參數加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)中建立的行動報表。  
+若要嘗試自行將參數新增至報表，請參閱[教學課程：將參數新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)。  
 
 ## <a name="bkmk_Common_Uses_for_Parameters"></a> 參數的一般使用方式
 
@@ -71,7 +71,7 @@ ms.locfileid: "68941143"
 
 當您檢視具有參數的報表時，報表檢視器工具列會顯示每一個參數，讓您能夠以互動的方式指定值。 下圖顯示使用參數 @ReportMonth、@ReportYear、@EmployeeID、@ShowAll、@ExpandTableRows、@CategoryQuota 及 @SalesDate 之報表的參數區域。  
 
-![使用參數檢視報表](../../reporting-services/report-design/media/ssrb-rptparamviewrpt.png "使用參數檢視報表")  
+![檢視具有參數的報表](../../reporting-services/report-design/media/ssrb-rptparamviewrpt.png "檢視具有參數的報表")  
   
 1. **參數窗格** ：報表檢視器工具列會顯示每個參數的提示和預設值。 您可以在參數窗格中自訂參數的配置。 如需詳細資訊，請參閱 [自訂報表中的參數窗格 &#40;報表產生器&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)中建立的行動報表。  
   
@@ -146,18 +146,18 @@ ms.locfileid: "68941143"
 
  您可以使用 [報表屬性] 對話方塊來變更報表參數屬性。 下表摘要說明您可以針對每個參數設定的屬性：  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
-|[屬性]|輸入區分大小寫的參數名稱。 此名稱必須以字母開頭，可以包含字母、數字和底線 (_)。 名稱不能有空格。 若是自動產生的參數，此名稱會與資料集查詢中的參數相同。 根據預設，手動建立的參數類似於 ReportParameter1。|  
-|提示|在報表檢視器工具列上顯示於參數旁邊的文字。|  
+|名稱|輸入區分大小寫的參數名稱。 此名稱必須以字母開頭，可以包含字母、數字和底線 (_)。 名稱不能有空格。 若是自動產生的參數，此名稱會與資料集查詢中的參數相同。 根據預設，手動建立的參數類似於 ReportParameter1。|  
+|Prompt|在報表檢視器工具列上顯示於參數旁邊的文字。|  
 |資料類型|報表參數的資料類型必須是下列其中一種：<br /><br /> **布林**。 使用者會從選項按鈕中選取 True 或 False。<br /><br /> **日期時間**： 使用者會從日曆控制項中選取日期。<br /><br /> **整數**： 使用者會在文字方塊中輸入值。<br /><br /> **浮點數**： 使用者會在文字方塊中輸入值。<br /><br /> **文字**： 使用者會在文字方塊中輸入值。<br /><br /> 針對某個參數定義了可用的值之後，使用者就可以從下拉式清單中選擇值，即使資料類型是 **DateTime**也一樣。<br /><br /> 如需有關報表資料類型的詳細資訊，請參閱＜ [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)＞。|  
 |允許空白值|如果參數值可為空字串或空白，則選取此選項。<br /><br /> 如果您為參數指定有效值，而且希望空白值是其中一個有效值，則必須將它納入做為您指定的其中一個有效值。 選取此選項並不會自動將空白納入做為可用的值。|  
 |允許 null 值|如果參數值可為 null，則選取此選項。<br /><br /> 如果您為參數指定有效值，而且希望 null 是其中一個有效值，則必須將 null 納入做為您指定的其中一個有效值。 選取此選項並不會自動將 null 納入做為可用的值。|  
 |允許多個值|提供可用的值，建立可供使用者選擇的下拉式清單。 這是確保資料集查詢中只會提交有效值的好方法。<br /><br /> 如果參數值可以是顯示在下拉式清單中的多個值，則選取此選項。 不允許 Null 值。 選取此選項時，系統會將核取方塊加入到參數下拉式清單內可用值的清單中。 清單的頂端包含 **[全選]** 核取方塊。 使用者可以檢查想要的值。<br /><br /> 如果提供值的資料迅速改變，則使用者看見的清單可能不是最新的。|  
-|Visible|選取此選項可顯示報表執行時，位於報表頂端的報表參數。 此選項可讓使用者在執行階段選取參數值。|  
+|可見|選取此選項可顯示報表執行時，位於報表頂端的報表參數。 此選項可讓使用者在執行階段選取參數值。|  
 |Hidden|選取此選項來隱藏已發行報表中的報表參數。 您仍然可以在報表 URL、訂閱定義或報表伺服器上設定報表參數值。|  
 |內部|選取此選項來隱藏報表參數。 已發行報表中的報表參數只能在報表定義中檢視。|  
-|可用的值|如果您已為參數指定可用的值，則有效值會固定顯示為下拉式清單。 例如，如果您為 **DateTime** 參數提供可用的值，則參數窗格中會出現日期的下拉式清單，而不是行事曆控制項。<br /><br /> 為確保報表和子報表之間的值清單一致，您可以在資料來源上設定一個選項，針對與資料來源相關聯的資料集中的所有查詢使用單一交易。<br /><br /> **安全性注意事項**：在任何包含 **Text** 資料類型之參數的報表中，務必使用可用的值清單 (也稱為有效值清單)，並且確認任何執行報表的使用者僅擁有檢視報表中資料所需的權限。 如需詳細資訊，請參閱 [安全性 &#40;報表產生器&#41;](../../reporting-services/report-builder/security-report-builder.md)中建立的行動報表。|  
+|可用值|如果您已為參數指定可用的值，則有效值會固定顯示為下拉式清單。 例如，如果您為 **DateTime** 參數提供可用的值，則參數窗格中會出現日期的下拉式清單，而不是行事曆控制項。<br /><br /> 為確保報表和子報表之間的值清單一致，您可以在資料來源上設定一個選項，針對與資料來源相關聯的資料集中的所有查詢使用單一交易。<br /><br /> **安全性注意事項**：在任何包含 **Text** 資料類型之參數的報表中，務必使用可用的值清單 (也稱為有效值清單)，並且確認任何執行報表的使用者僅擁有檢視報表中資料所需的權限。 如需詳細資訊，請參閱 [安全性 &#40;報表產生器&#41;](../../reporting-services/report-builder/security-report-builder.md)中建立的行動報表。|  
 |預設值|設定來自查詢或靜態清單的預設值。<br /><br /> 如果每個參數都有預設值，則報表會在第一次檢視時自動執行。|  
 |進階|設定報表定義屬性 **UsedInQuery**，其值指出此參數直接或間接影響報表中的資料。<br /><br /> **自動判斷何時重新整理**<br /> 當您想要讓報表處理器判斷此值的設定時，請選擇此選項。 如果報表處理器偵測到一個資料集查詢，且其中包含一個這個參數的直接或間接參照，或者如果報表中有子報表，則此值為 **True** 。<br /><br /> **永遠重新整理**<br /> 在資料集查詢或參數運算式中直接或間接使用報表參數時，請選擇此選項。 此選項會將 **UsedInQuery** 設定為 True。<br /><br /> **永不重新整理**<br /> 不在資料集查詢或參數運算式中直接或間接使用報表參數時，請選擇此選項。 此選項會將 **UsedInQuery** 設定為 False。<br /><br /> **警告**：請小心使用 [永不重新整理]  。 在報表伺服器上， **UsedInQuery** 用於協助控制報表資料與已轉譯之報表的快取選項，以及快照集報表的參數選項。 如果未正確設定 **[永不重新整理]** ，您可能會快取不正確的報表資料或報表，或者使快照集報表的資料不一致。 如需詳細資訊，請參閱[報表定義語言 &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)。|  
   
@@ -223,7 +223,7 @@ ms.locfileid: "68941143"
 
 ##  <a name="bkmk_Related_Topics"></a> 相關章節  
 
- [教學課程：將參數加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [教學課程：將參數新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
 [報表參數概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   

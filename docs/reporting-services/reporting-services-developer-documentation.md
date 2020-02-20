@@ -12,19 +12,19 @@ helpviewer_keywords:
 - programming [Reporting Services]
 ms.date: 03/17/2017
 ms.openlocfilehash: e2db4a113ebdb53756200879e3797ccbbeec8a52
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68259610"
 ---
 # <a name="reporting-services-developer-documentation"></a>Reporting Services 開發人員文件
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供一些可在自己的應用程式中利用的程式設計介面。 您可以使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的現有功能和能力，將自訂報表與管理工具建立到網站和 Windows 應用程式中，或是可以延伸 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 平台。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供一些可在自有應用程式中利用的程式設計介面。 您可以使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的現有功能和能力，將自訂報表與管理工具建立到網站和 Windows 應用程式中，或是可以延伸 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 平台。  
   
  擴充 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 平台包括建立可用於資料存取、報表傳遞等的新元件與資源。 您可以將這些元件與資源行銷到在其組織中使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的公司。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括程式設計範例與教學課程以協助您開始。 如需詳細資訊，請參閱 [Reporting Services 範例](https://msdn.microsoft.com/library/ms160954\(v=sql.110\).aspx)和[開發人員手冊： 教學課程 (Reporting Services)](https://msdn.microsoft.com/library/aa337423\(v=sql.110\).aspx)。  
+>  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括程式設計範例與教學課程以協助您開始。 如需詳細資訊，請參閱 [Reporting Services 範例](https://msdn.microsoft.com/library/ms160954\(v=sql.110\).aspx)和[開發人員手冊：教學課程 (Reporting Services)](https://msdn.microsoft.com/library/aa337423\(v=sql.110\).aspx)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [將 Reporting Services 整合到應用程式](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)  
@@ -40,7 +40,7 @@ ms.locfileid: "68259610"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支援一組完整且以 URL 為基礎的要求，讓您得以使用快速且輕鬆的存取點來進行報表導覽和檢視。 您可以和報表伺服器 Web 服務搭配使用這項技術，將完整的報表方案整合到自訂商務應用程式。 當將報表整合為 Web 入口網站的一部分時，或是當從網頁瀏覽器檢視報表時，URL 存取將特別有用。  
   
  [Reporting Services 延伸模組](../reporting-services/extensions/reporting-services-extensions.md)  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的模組化架構是針對擴充性所設計。 現在可以使用 Managed 程式碼 API，這樣您就可以輕鬆地開發、安裝和管理許多 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 元件取用的延伸模組。 您可以使用 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 建立組件，並新增新的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 轉譯、安全性、傳遞和資料處理功能，以滿足不斷成長的業務需求。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的模組化架構是針對擴充性所設計。 現在可以使用 Managed 程式碼 API，這樣您就可以輕鬆地開發、安裝和管理許多 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 元件取用的延伸模組。 您可以使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 建立組件，並新增 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 轉譯、安全性、傳遞和資料處理功能，以滿足不斷成長的業務需求。  
   
  [自訂報表項目](../reporting-services/custom-report-items/custom-report-items.md)  
  描述如何建立自訂報表項目，將功能加入現有控制項的 RDL 或是擴充功能。  

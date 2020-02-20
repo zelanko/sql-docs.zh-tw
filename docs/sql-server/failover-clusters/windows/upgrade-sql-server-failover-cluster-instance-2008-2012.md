@@ -1,6 +1,7 @@
 ---
-title: 升級在 Windows Server 2008/2008 R2/2012 叢集上執行的 SQL Server 執行個體 | Microsoft Docs
-ms.date: 01/25/2018
+title: 升級 SQL Server 執行個體：Windows Server 2012 和舊版叢集
+description: 描述如何升級在 Windows Server 2008、Windows Server 2008 R2 和 Windows Server 2012 上執行的 SQL Server 容錯移轉叢集執行個體。
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: high-availability
 ms.topic: conceptual
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - failover clustering [SQL Server], upgrading
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c8825d0d4c8ff0ac6d83b152b8606be6d9fd0cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b9d0c843e9a116a6d89198db22053224c2f1d19
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904965"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242848"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>升級在 Windows Server 2008/2008 R2/2012 叢集上執行的 SQL Server 執行個體
 
@@ -282,7 +283,7 @@ ms.locfileid: "67904965"
 
     在移轉之後，遠端服務繫結將如預期般運作，因為任何使用遠端服務繫結的使用者都會適當地移轉。
 
-### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent
+### <a name="ssnoversion-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent
 
 -   **作業**
 

@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/01/2017
-ms.openlocfilehash: 9b8eca48287388eba7f8e1f13ba4c6e5692a278d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: b3607172643129b7ec327d12f6818dafbde10e23
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68251058"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190022"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>加入及驗證資料連接 (報表產生器及 SSRS)
 
@@ -24,7 +24,7 @@ ms.locfileid: "68251058"
 
 若要建立內嵌資料來源，您必須具有外部資料來源的連接資訊，而且必須知道存取資料必須擁有哪些權限。 這項資訊通常是來自於資料來源的擁有者。 您可以測試此連接，以確認指定的認證是否足夠。
 
-如需詳細資訊，請參閱[報表產生器中的資料連線、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)，以及[在報表產生器中指定認證](https://docs.microsoft.com/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources?view=sql-server-2017)
+如需詳細資訊，請參閱[建立資料連接字串 - 報表產生器 & SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)，以及[在報表產生器中指定認證](https://docs.microsoft.com/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources?view=sql-server-2017) (機器翻譯)
 
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "68251058"
 
 2. 按一下 **[測試連接]** 。
 
-3. 如果連接成功，將會出現下列訊息：「成功建立連接」。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3. 如果連線成功，即會出現下列訊息：「成功建立連線」。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-4. 如果連接未能成功，將會出現下列訊息：「無法連接到資料來源」。  
+4. 如果連線不成功，即會出現下列訊息：「無法連線到資料來源。」  
 
 5. 按一下 **[詳細資料]** ，並使用該資訊來更正問題。
 
@@ -67,4 +67,4 @@ ms.locfileid: "68251058"
 - [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
 - [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
 - [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
-- [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [建立資料連接字串 - 報表產生器 & SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

@@ -1,6 +1,6 @@
 ---
-title: 程式碼大綱 | Microsoft 文件
-ms.custom: ''
+title: 程式碼大綱
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c718d4f6ff1d057c23f8041be755da54f9b5da58
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 366928df4dfe2b4b3c7c2749201d1d3980937f01
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256638"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254028"
 ---
 # <a name="code-outlining"></a>程式碼大綱
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,19 +40,19 @@ ms.locfileid: "68256638"
   
  當您按一下 \<InnerTag> 行的減號時，只會摺疊 InnerTag，如下圖所示。  
   
- ![隱藏內部節點的 XML 程式碼](../../ssms/scripting/media/editoutlinexmlinnercol.gif "隱藏內部節點的 XML 程式碼")  
+ ![具有內部隱藏節點的 XML 程式碼](../../ssms/scripting/media/editoutlinexmlinnercol.gif "具有內部隱藏節點的 XML 程式碼")  
   
  當您將指標移至具有三個句號 (...) 的方塊上方時，已摺疊區域中的程式碼就會顯示在工具提示中，如下圖所示。  
   
- ![所含的工具提示顯示隱藏程式碼的 XML 程式碼](../../ssms/scripting/media/editoutlinexmlmouse.gif "所含的工具提示顯示隱藏程式碼的 XML 程式碼")  
+ ![顯示隱藏程式碼的 XML 程式碼工具提示](../../ssms/scripting/media/editoutlinexmlmouse.gif "顯示隱藏程式碼的 XML 程式碼工具提示")  
   
  當您按一下 \<MiddleTag> 行的減號時，就會同時摺疊 MiddleTag 和 InnerTag，如下圖所示。  
   
- ![隱藏內部和中間標記的 XML 程式碼](../../ssms/scripting/media/editoutlinexmlmiddlecol.gif "隱藏內部和中間標記的 XML 程式碼")  
+ ![隱藏內部和中間標籤的 XML 程式碼](../../ssms/scripting/media/editoutlinexmlmiddlecol.gif "具有內部及中間隱藏標籤的 XML 程式碼")  
   
  當您按一下 \<OuterTag> 行的減號時，就會摺疊這三行，如下圖所示。  
   
- ![顯示隱藏所有三個標記的 XML 程式碼](../../ssms/scripting/media/editoutlinexmloutercol.gif "顯示隱藏所有三個標記的 XML 程式碼")  
+ ![顯示所有三個隱藏標籤的 XML 程式碼](../../ssms/scripting/media/editoutlinexmloutercol.gif "顯示所有三個隱藏標籤的 XML 程式碼")  
   
 ### <a name="database-engine-query-editor-regions"></a>Database Engine 查詢編輯器區域  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器會針對下列階層中的每個元素產生大綱區域：  

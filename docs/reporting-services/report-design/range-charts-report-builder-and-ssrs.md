@@ -9,10 +9,10 @@ ms.assetid: 48e351d3-ac5b-4eda-a4bd-32a0de206a30
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e28daac5af66601d8a48b4fc793d6e6c5d178ca0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576471"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>範圍圖表 (報表產生器及 SSRS)
@@ -20,12 +20,12 @@ ms.locfileid: "65576471"
   
  下圖顯示的是包含三個數列的一般範圍圖表。  
   
- ![範圍圖表](../../reporting-services/report-design/media/rs-rangechart.gif "範圍圖表")  
+ ![範圍圖](../../reporting-services/report-design/media/rs-rangechart.gif "範圍圖")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="variations"></a>變數  
+## <a name="variations"></a>變化  
   
 -   **平滑範圍圖表**： 平滑範圍圖表會顯示曲線而不是直線。  
   

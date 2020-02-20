@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3dff76f6293b5f02373234fb2546076f7584f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 7ecc2115b106fe61492be388c90cfa2bd27eae9f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577991"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190037"
 ---
 # <a name="report-design-view-report-builder"></a>報表設計檢視 (報表產生器)
   [報表產生器] 視窗的設計目的是要協助您輕鬆地組織報表資源和快速地建立所需的編頁報表。 設計介面位於視窗中央，並且具有功能區和窗格。 設計介面是您可以加入和組織報表項目的位置。 本文所說明的窗格可用來加入、選取並組織報表資源，以及變更報表項目屬性。  
   
- ![報表產生器設計檢視](../../reporting-services/report-builder/media/ssrb-designview.png "報表產生器設計檢視")  
+ ![報表產生器的 [設計] 檢視](../../reporting-services/report-builder/media/ssrb-designview.png "報表產生器的 [設計] 檢視")  
   
 1.  功能區  
   
@@ -98,11 +98,11 @@ ms.locfileid: "65577991"
   
 -   [影像 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)  
   
--   [資料連接、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+-   [建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
--   [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+-   [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
--   [資料集欄位集合 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+-   [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
 ##  <a name="ReptPartGallery"></a> 報表組件庫  
@@ -137,7 +137,7 @@ ms.locfileid: "65577991"
  根據屬性而定，您可以從下拉式清單中選取屬性值、輸入值，或按一下 `<Expression>` 來建立運算式。  
   
 ### <a name="changing-the-properties-pane-view"></a>變更屬性窗格檢視  
- 根據預設，顯示在 [屬性] 窗格中的屬性會組織成一些廣泛的類別目錄，例如 [動作]、[框線]、[填滿]、[字型] 和 [一般]。 每個類別目錄都具有一組相關聯的屬性。 例如，下列屬性列於 [字型] 類別目錄中：[Color]、[FontFamily]、[FontSize]、[FontStyle]、[FontWeight]、[LineHeight] 和 [TextDecoration]。 如果您想要，也可以依字母順序排列此窗格中所列的所有屬性。 這樣做會移除這些類別目錄並按照字母順序列出所有屬性，不論類別目錄為何。  
+ 根據預設，顯示在 [屬性] 窗格中的屬性會組織成一些廣泛的類別目錄，例如 [動作]、[框線]、[填滿]、[字型] 和 [一般]。 每個類別目錄都具有一組相關聯的屬性。 例如，下列屬性列於 [字型] 類別目錄中：Color、FontFamily、FontSize、FontStyle、FontWeight、LineHeight 和 TextDecoration。 如果您想要，也可以依字母順序排列此窗格中所列的所有屬性。 這樣做會移除這些類別目錄並按照字母順序列出所有屬性，不論類別目錄為何。  
   
  [屬性] 窗格的窗格頂端具有三個按鈕：[類別目錄]、[按字母排列] 和 [屬性頁]。 按一下 [類別目錄] 和 [按字母排列] 按鈕，即可在 [屬性] 窗格檢視之間切換。 按一下 [屬性頁]  按鈕，即可開啟選取之報表項目的 [屬性] 對話方塊。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "65577991"
 ##  <a name="GroupPane"></a> 群組窗格 (報表產生器)  
  群組的用途在於將報表資料組織為視覺階層以及計算總計。 您可以在設計介面和 [群組] 窗格中檢視資料區域內的資料列和資料行群組。 [群組] 窗格具有兩個窗格：[資料列群組] 和 [資料行群組]。 當您選取某個資料區域時，[群組] 窗格就會將該資料區域內的所有群組顯示成階層式清單：子群組會以縮排方式顯示在其父群組底下。  
   
- ![報表產生器的資料列群組](../../reporting-services/report-builder/media/ssrb-rowgroups.png "報表產生器的資料列群組")  
+ ![報表產生器資料列群組](../../reporting-services/report-builder/media/ssrb-rowgroups.png "報表產生器資料列群組")  
   
  您可以從 [報表資料] 窗格中拖曳欄位，然後將這些欄位放置在設計介面或 [群組] 窗格中，藉以建立群組。 在 [群組] 窗格中，您可以加入父群組、相鄰群組和子群組、變更群組屬性，以及刪除群組。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "65577991"
  請深入閱讀 [在報表產生器中預覽報表](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)。  
   
 ### <a name="running-a-report-with-parameters"></a>使用參數執行報表  
- 當您執行報表時，系統會自動處理報表。 如果報表包含參數，所有參數都必須具有預設值，然後報表才能自動執行。 如果某個參數沒有預設值，當您執行報表時，就必須選擇該參數的值，然後按一下 [執行] 索引標籤上的 [檢視報表]  。如需詳細資訊，請參閱[報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 當您執行報表時，系統會自動處理報表。 如果報表包含參數，所有參數都必須具有預設值，然後報表才能自動執行。 如果某個參數沒有預設值，當您執行報表時，就必須選擇該參數的值，然後按一下 [執行] 索引標籤上的 [檢視報表]  。如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
   
 ### <a name="print-preview"></a>預覽列印  
  當您在執行模式中預覽報表時，它就類似於以 HTML 產生的報表。 這個預覽並不是 HTML，不過報表的配置及分頁與 HTML 的輸出相似。 您可以切換到預覽列印模式，以變更檢視來顯示列印的報表。 按一下 [執行]  索引標籤上的 [預覽列印]  按鈕。所顯示的報表就如同在實際頁面上所看到的。 這個檢視與影像和 PDF 轉譯延伸模組所產生的輸出類似。 預覽列印並不是影像或 PDF 檔案，不過報表的配置及分頁與這些格式的輸出相似。  

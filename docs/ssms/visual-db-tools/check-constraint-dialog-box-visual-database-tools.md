@@ -1,10 +1,7 @@
 ---
-title: 檢查條件約束對話方塊 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: 檢查條件約束對話方塊
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,25 +9,32 @@ f1_keywords:
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2532d368392b86b72523f00df982613428a86e7a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: df31dd31192d3aa877301c63ac425af6477dedd3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263682"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255535"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>檢查條件約束對話方塊 (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 當您在資料表設計工具的資料表定義方格上按一下滑鼠右鍵，再按 [檢查條件約束]  時，這個對話方塊便會出現。 此對話方塊包含一組附加至資料庫資料表的非唯一條件約束的屬性。 套用至唯一條件約束的屬性會出現在 [索引/索引鍵]  對話方塊中。  
   
 > [!NOTE]  
 > 如果資料表是要發佈以進行複寫，則必須使用 Transact-SQL 陳述式 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 或 SQL Server 管理物件 (SMO) 變更結構描述。 使用 [資料表設計工具] 或 [資料庫圖表設計工具] 變更結構描述時，會嘗試卸除並重新建立資料表。 您無法卸除已發行的物件，因此結構描述變更將會失敗。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項。
+
 **選取的檢查條件約束**  
 列出可用的檢查條件約束。 若要檢視條件約束的屬性，請在清單中選取該條件約束。  
   
-**[加入]**  
+**加入**  
 為選取的資料庫資料表建立新的條件約束，並提供該條件約束的預設名稱和其他值。 在輸入條件約束的運算式之後，條件約束才會有效。  
   
 **刪除**  
@@ -40,7 +44,7 @@ ms.locfileid: "68263682"
 展開以顯示 [運算式]  屬性欄位。  
   
 **運算式**  
-顯示已選取之檢查條件約束的運算式。 對於新的條件約束，退出此方塊之前必須先輸入運算式。 您也可以編輯現有的檢查條件約束。 如需詳細資訊，請參閱 [使用條件約束 (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)。  
+顯示已選取之檢查條件約束的運算式。 對於新的條件約束，退出此方塊之前必須先輸入運算式。 您也可以編輯現有的檢查條件約束。 如需詳細資訊，請參閱[使用條件約束(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) 。  
   
 **識別類別目錄**  
 展開以顯示 [名稱]  與 [描述]  屬性。  
@@ -63,7 +67,7 @@ ms.locfileid: "68263682"
 **強制複寫**  
 指示當複寫代理程式在此資料表上執行插入或更新時，是否要強制使用條件約束。  
   
-## <a name="see-also"></a>另請參閱  
-[使用條件約束 (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
-[索引 - 鍵對話方塊 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
-  
+## <a name="see-also"></a>另請參閱
+
+[使用條件約束](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)
+[索引 - 索引鍵對話方塊 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)

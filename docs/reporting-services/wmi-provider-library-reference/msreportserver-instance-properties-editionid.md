@@ -11,13 +11,13 @@ ms.assetid: ee84dd74-0eb3-4d29-807a-8b317c2fde96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c3e73d8416c6c475a8cc5225d478a6e85472ceb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571083"
 ---
-# <a name="msreportserverinstance-properties---editionid"></a>MSReportServer_Instance 屬性 - EditionID
+# <a name="msreportserver_instance-properties---editionid"></a>MSReportServer_Instance 屬性 - EditionID
   傳回報表伺服器的版本。 唯讀。  
   
 ## <a name="syntax"></a>語法  

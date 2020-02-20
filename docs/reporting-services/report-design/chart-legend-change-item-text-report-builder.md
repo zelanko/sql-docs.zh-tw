@@ -9,10 +9,10 @@ ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bc8b459c3ecfe9c34ff7552acb2565c1b25239a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581673"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>圖表圖例 - 變更項目文字 (報表產生器)
@@ -35,7 +35,7 @@ ms.locfileid: "65581673"
   
  下表提供用於 [自訂圖例文字]  屬性之圖表特定關鍵字的範例。 如需關鍵字的詳細資訊，請參閱[格式化圖表上的資料點 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
   
-|關鍵字|Description|在圖例中顯示為文字的範例|  
+|關鍵字|描述|在圖例中顯示為文字的範例|  
 |-------------|-----------------|---------------------------------------------------|  
 |`#PERCENT{P1}`|將總值的百分比顯示為一個小數位數。|85.0%|  
 |`#VALY`|顯示資料欄位的實際數值。|17000|  

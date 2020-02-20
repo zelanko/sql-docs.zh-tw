@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 6e1b69fc176281e9be65ca7a9766fc8fb270a3de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580082"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>管理 Reporting Services SharePoint 服務應用程式
@@ -34,7 +34,7 @@ ms.locfileid: "65580082"
   
 2.  在您的服務應用程式名稱附近按一下，或按一下 **[類型]** 資料行選取整個資料列，然後按一下 SharePoint 功能區中的 **[屬性]** 。  
   
- 如需服務應用程式屬性的詳細資訊，請參閱 [步驟 3：建立 Reporting Services 服務應用程式](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)。  
+ 如需服務應用程式屬性的詳細資訊，請參閱[步驟 3：建立 Reporting Services 服務應用程式](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)中的＜服務應用程式＞一節。  
   
 ## <a name="open-service-application-management-pages"></a>開啟服務應用程式管理頁面
 
@@ -97,11 +97,11 @@ ms.locfileid: "65580082"
 |編輯工作階段逾時|預設值是 7200 秒。|  
 |編輯工作階段快取限制|預設值為 5。|  
   
-## <a name="manage-jobs"></a>管理作業
+## <a name="manage-jobs"></a>管理工作
 
  您可以檢視和刪除執行中的作業，例如報表訂閱及資料驅動訂閱所建立的作業。 此頁面並非用來管理訂閱，而是管理訂閱所觸發的作業。 例如，排程為每小時執行一次的訂閱將會每小時產生作業，該作業會出現在 **[管理作業]** 頁面上。  
   
- ![管理正在執行的作業](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "管理正在執行的作業")  
+ ![管理執行中的作業](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "管理執行中的作業")  
   
 ## <a name="key-management"></a>金鑰管理
  下表摘要說明 [金鑰管理] 頁面  
@@ -109,7 +109,7 @@ ms.locfileid: "65580082"
 > [!IMPORTANT]  
 >  定期變更 Reporting Services 加密金鑰是安全性最佳作法。 建議您在進行 Reporting Services 的主要版本升級之後，立即變更金鑰。 在升級之後變更金鑰可將升級循環以外，由變更 Reporting Services 加密金鑰所造成的其他服務中斷減至最少。  
   
-|頁面|Description|  
+|頁面|描述|  
 |----------|-----------------|  
 |備份加密金鑰|1) 在 [密碼:]  與 [確認密碼:]  方塊中鍵入密碼，然後按一下 [匯出]  。 如果您輸入的密碼不符合網域原則的複雜性需求，則會顯示警告。<br /><br /> 2) 系統會提示您提供儲存金鑰檔的檔案位置。 您應考慮將金鑰檔儲存到與執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 預設檔案名稱與服務應用程式的名稱相同。|  
 |還原加密金鑰|1) 在 [檔案位置]  方塊中鍵入或瀏覽至金鑰檔。<br /><br /> 2) 在 [密碼]  方塊中，鍵入要用來備份加密檔案的密碼。<br /><br /> 3) 按一下 [確定]  。|  
@@ -138,7 +138,7 @@ ms.locfileid: "65580082"
 Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
 ```
 
- 如需詳細資訊，請參閱 [Reporting Services SharePoint 模式適用的 PowerShell Cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
+ 如需詳細資訊，請參閱 [Reporting Services SharePoint 模式的 PowerShell Cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
 
 ### <a name="options"></a>選項。
 

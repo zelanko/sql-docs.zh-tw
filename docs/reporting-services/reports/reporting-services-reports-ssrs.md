@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f0d3a49ae2fc2b0b5f8ecf8f8a92161f66aa839
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.openlocfilehash: 6a0b224d51daad95e4d19cc614d3a964779cd11b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314023"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190445"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 報表 (SSRS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表是一種以 XML 為基礎的報表定義，其中包括報表資料及報表配置元素。 在用戶端檔案系統上，報表定義的副檔名為 .rdl。 在發行分頁報表之後，其為儲存在報表伺服器或 SharePoint 網站上的報表項目。 分頁報表是由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]提供之伺服器架構報表平台的一部分。 您也可以 [使用 SQL Server 行動報表發行工具建立行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表是一種 XML 型報表定義，其包含報表資料及報表配置元素。 在用戶端檔案系統上，報表定義的副檔名為 .rdl。 在發行分頁報表之後，其為儲存在報表伺服器或 SharePoint 網站上的報表項目。 分頁報表是由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]提供之伺服器架構報表平台的一部分。 您也可以 [使用 SQL Server 行動報表發行工具建立行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)。  
   
  若您是第一次使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，請務必檢閱 [Reporting Services 概念 &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md) 中的資訊。  
   
@@ -73,17 +73,17 @@ ms.locfileid: "67314023"
   
 -   針對每份報表：  
   
-    -   **識別資料的來源。** 為每個資料來源定義報表資料來源。 如需詳細資訊，請參閱 [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+    -   **識別資料的來源。** 為每個資料來源定義報表資料來源。 如需詳細資訊，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
     -   **選擇每個來源會用到的資料。** 為每個資料來源定義報表資料集。 每個資料集都包括查詢，以指定要使用的資料。 若您有報表參數，定義資料集可擴展每個參數可用的值清單。 如需詳細資訊，請參閱[報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) 和[報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
-    -   **選擇資料視覺效果。** 為每個資料集選擇要顯示資料的資料區。 從資料表、圖表、量測計及地圖清單中選擇。 如需詳細資訊，請參閱下列文件：  
+    -   **選擇資料視覺效果。** 為每個資料集選擇要顯示資料的資料區。 從資料表、圖表、量測計及地圖清單中選擇。 如需詳細資訊，請參閱下列文章：  
   
         -   [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
         -   [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
-        -   [走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
+        -   [走勢圖和資料橫條 &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
         -   [指標 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
@@ -91,7 +91,7 @@ ms.locfileid: "67314023"
   
         -   [量測計 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
-    -   **自訂資料及配置。** 設計報表配置。 報表定義包含報表主體、資料來源、資料集、資料區、文字方塊、線條和影像。 矩形可以當做配置與視覺化元素的容器使用。 藉由撰寫運算式，並控制篩選、群組、排序、格式及顯示資料，以自訂每個資料區。 加入報表名稱、位置及其他識別資訊，以利管理數十份或數百份報表。 加入視覺化元素及容器以組織頁面上的配置元素。 如需詳細資訊，請參閱下列文件：  
+    -   **自訂資料及配置。** 設計報表配置。 報表定義包含報表主體、資料來源、資料集、資料區、文字方塊、線條和影像。 矩形可以當做配置與視覺化元素的容器使用。 藉由撰寫運算式，並控制篩選、群組、排序、格式及顯示資料，以自訂每個資料區。 加入報表名稱、位置及其他識別資訊，以利管理數十份或數百份報表。 加入視覺化元素及容器以組織頁面上的配置元素。 如需詳細資訊，請參閱下列文章：  
   
         -   [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
@@ -122,7 +122,7 @@ ms.locfileid: "67314023"
 ## <a name="view-reports"></a>檢視報表  
  您除了可以預覽儲存在本機或發行至報表伺服器的報表外，還可提供各種檢視經驗給報告讀取器。 若要檢視報表：  
   
--   **瀏覽器。**  使用報表伺服器 Web 服務或 SharePoint 網站來檢視發行的報表。 在 SharePoint 網站中，您也可以設定 Web 組件來檢視已發行的報表。 如需詳細資訊，請參閱下列文件：
+-   **瀏覽器。**  使用報表伺服器 Web 服務或 SharePoint 網站來檢視發行的報表。 在 SharePoint 網站中，您也可以設定 Web 組件來檢視已發行的報表。 如需詳細資訊，請參閱下列文章：
 
      - [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
      - [報表伺服器的入口網站 (SSRS 原生模式)](../../reporting-services/web-portal-ssrs-native-mode.md)
@@ -134,7 +134,7 @@ ms.locfileid: "67314023"
   
 -   **列印。**  報告讀取器可依據報表檢視的方式來列印報表或報表的頁面。 如需詳細資訊，請參閱[列印報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)。  
   
--   **Web 或 Windows Form 應用程式。**  使用 Visual Studio 來開發應用程式，可協助透過 SSRS 報表。 如需詳細資訊，請參閱 [[整合 Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)。  
+-   **Web 或 Windows Form 應用程式。**  使用 Visual Studio 開發可透過 SSRS 協助報告的應用程式。 如需詳細資訊，請參閱 [[將 Reporting Services 整合到應用程式](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)。  
   
 ## <a name="manage-reports"></a>管理報表  
  若要管理發行的報表：  
@@ -170,7 +170,7 @@ ms.locfileid: "67314023"
   
 - 在報表撰寫環境中開啟報表。 在大部分情況下，報表定義都會升級。 如需詳細資訊，請參閱[升級報表](../../reporting-services/install-windows/upgrade-reports.md)和 [SQL Server Data Tools 中的部署和版本支援 &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)。  
   
-## <a name="troubleshoot-reports"></a>報表疑難排解  
+## <a name="troubleshoot-reports"></a>對報表進行疑難排解  
  若要疑難排解報表：  
   
 - **判斷何處發生問題。** 檢閱 [報表階段](#bkmk_StagesSummary)。  
@@ -180,5 +180,5 @@ ms.locfileid: "67314023"
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)   
  [延伸模組 &#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)   
- [比較原生和 SharePoint 的 Reporting Services 報表伺服器](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
+ [比較原生報表伺服器和 SharePoint Reporting Services 報表伺服器](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   

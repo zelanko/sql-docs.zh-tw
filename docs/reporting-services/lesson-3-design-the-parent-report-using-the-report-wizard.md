@@ -9,10 +9,10 @@ ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ad06a5a76344348c71838873edcc490c75b7b2e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651274"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>第 3 課：使用報表精靈設計父報表
@@ -28,11 +28,11 @@ ms.locfileid: "62651274"
   
     這樣會啟動 [報表精靈]。  
   
-4.  在 [資料集屬性]  頁面的 [資料來源]  方塊中，選取您在[第 2 課：定義父報表的資料連線和資料表](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)中建立的 [DataSet1]  。  
+4.  在 [資料集屬性]  頁面的 [資料來源]  方塊中，選取您在下列課程中建立的 [DataSet1]  ：[第 2 課：定義父報表的資料連線和資料表](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)。  
   
     [可用資料集]  方塊會自動更新為您如上所建立的 **DataTable**。  
   
-5.  選取 **[下一步]** 。  
+5.  選取 [下一步]  。  
   
 6.  在 [排列欄位]  頁面中執行下列操作：  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62651274"
 8.  儲存 .rdlc 檔。  
   
 ## <a name="next-task"></a>下一項工作  
-您已使用 [報表精靈] 成功設計父報表。 接下來您將建立子報表的資料連接和資料表。 請參閱 [第 4 課：定義子報表的資料連接和資料表](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)。  
+您已使用 [報表精靈] 成功設計父報表。 接下來您將建立子報表的資料連接和資料表。 查看[第 4 課：定義子報表的資料連線和資料表](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)。  
   
   
   

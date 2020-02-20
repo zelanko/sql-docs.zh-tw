@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3c9f44a580ef8207c58ec86ed9df668590266e1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579915"
 ---
 # <a name="high-availability-in-sql-server-reporting-services"></a>SQL Server Reporting Services 的高可用性
@@ -20,7 +20,7 @@ ms.locfileid: "65579915"
   
 -   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的高可用性功能，盡可能增加報表伺服器資料庫的執行時間。 如果您將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體設定為在容錯移轉叢集中執行，就可以在建立報表伺服器資料庫時選取該執行個體。  
   
--   請盡可能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 搭配 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料庫和資料來源。 如需詳細資訊，請參閱 [Reporting Services 與 AlwaysOn 可用性群組](../../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md)。  
+-   請盡可能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 來搭配 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料庫和資料來源。 如需詳細資訊，請參閱 [Reporting Services 與 AlwaysOn 可用性群組](../../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md)。  
   
 -   將多個報表伺服器設定為在向外延展部署中執行，其中所有伺服器都會共用單一報表伺服器資料庫。 將多個報表伺服器執行個體 (最好位於不同的伺服器上) 部署在向外延展部署中，有助於在其中一個報表伺服器執行個體無法使用時，提供不中斷的服務。  
   

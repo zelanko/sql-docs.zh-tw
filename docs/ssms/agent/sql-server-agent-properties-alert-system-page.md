@@ -1,10 +1,9 @@
 ---
-title: SQL Server Agent 屬性 (警示系統頁面) | Microsoft Docs
-ms.custom: ''
+title: SQL Server Agent 屬性 (警示系統頁面)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 92db1bf98b3a50aa619333ba0107034d24106855
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5b870368136055ea2df6e5473c1b33640cea57b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265315"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75234536"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server Agent 屬性 (警示系統頁面)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "68265315"
 **呼叫器**  
 在前置詞與後置詞之間包含訊息的電子郵件地址。  
   
-**後置詞**  
+**尾碼**  
 在傳送到呼叫器的訊息之 [收件者]  的結尾處，輸入呼叫器系統要求的任何固定文字。  
   
 **副本**  
@@ -71,7 +72,7 @@ ms.locfileid: "68265315"
 **呼叫器**  
 在前置詞與後置詞之間包含訊息的電子郵件地址。  
   
-**後置詞**  
+**尾碼**  
 在傳送到呼叫器的訊息之 [副本]  的結尾處，輸入呼叫器系統要求的任何固定文字。  
   
 **主旨**  
@@ -80,7 +81,7 @@ ms.locfileid: "68265315"
 **Prefix**  
 在傳送到呼叫器的訊息之 [主旨]  的開頭處，輸入呼叫器系統要求的任何固定文字。  
   
-**後置詞**  
+**尾碼**  
 在傳送到呼叫器的訊息之 [主旨]  的結尾處，輸入呼叫器系統要求的任何固定文字。  
   
 **在通知訊息中包含主體**  
@@ -92,7 +93,7 @@ ms.locfileid: "68265315"
 **啟用保全操作員**  
 指定保全操作員。  
   
-**[運算子]**  
+**運算子**  
 設定要接收保全通知的操作員名稱。  
   
 **通知使用**  

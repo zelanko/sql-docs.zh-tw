@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571598"
 ---
 # <a name="data-alert-designer"></a>資料警示設計工具
@@ -198,7 +198,7 @@ ms.locfileid: "65571598"
   
  若要編輯資料警示定義，請在 [資料警示管理員] 中以滑鼠右鍵按一下該資料警示定義，然後按一下 [編輯]  。 下圖說明 [資料警示管理員] 中資料警示的內容功能表。  
   
- ![按一下 [編輯] 開啟資料警示設計工具](../reporting-services/media/rs-alertmanageriwopendesigner.gif "按一下 [編輯] 開啟資料警示設計工具")  
+ ![按一下 [編輯] 來開啟資料警示設計工具](../reporting-services/media/rs-alertmanageriwopendesigner.gif "按一下 [編輯] 來開啟資料警示設計工具")  
   
  如需詳細資訊，請參閱 [在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
   

@@ -1,10 +1,9 @@
 ---
-title: 索引 - 索引鍵對話方塊 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 索引 - 索引鍵對話方塊
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dc4ca010e03090b1ba695247023858b2d1541c40
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7043ec4173bf1a14ca80b915e1ea6ac10fd0d72d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254335"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75224925"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>索引 - 索引鍵對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68254335"
 **選取的主/唯一索引鍵或索引**  
 列出現有的主索引鍵或唯一鍵和索引。 選取一項，以便在右邊方格中顯示其屬性。 如果清單是空的，表示此資料表沒有任何定義的項目。  
   
-**[加入]**  
+**加入**  
 建立新的主索引鍵、唯一鍵或索引。  
   
 **刪除**  
@@ -92,7 +93,7 @@ ms.locfileid: "68254335"
 **忽略重複的索引鍵**  
 指定在資料列的索引鍵值等於大量插入作業期間插入的現有索引鍵值時，會發生哪些狀況。 如果您選擇：  
   
--   [是]  ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會發出警告，忽略違規的連入資料列，並嘗試插入其餘的資料列。  
+-   [是]  ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會發出警告，忽略違規的內送資料列，並嘗試插入其餘的資料列。  
   
 -   [否]  ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會發出錯誤訊息，並復原整個大量插入作業。  
   
@@ -115,6 +116,6 @@ ms.locfileid: "68254335"
 指定是否在此索引中允許資料列層級的鎖定。 允許或不允許資料列層級的鎖定會影響資料庫效能。 建議設定為 [是]  。  
   
 ## <a name="see-also"></a>另請參閱  
-[使用條件約束 (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
-[使用索引鍵 (Visual Database Tools)](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
+[使用條件約束(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[使用金鑰(https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
   

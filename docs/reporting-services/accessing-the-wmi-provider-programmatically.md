@@ -9,16 +9,16 @@ ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8196e045704adedbf235fcba566ba22b009536f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62704580"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>以程式設計方式存取 WMI 提供者
 
 ## <a name="wmi-provider-overview"></a>WMI 提供者概觀  
- 本主題的程式碼範例中用來取得 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 相關資訊的命名空間為 **System.Management** 命名空間，位於 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 中。 **System.Management** 命名空間提供一組 Managed 程式碼類別，[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 應用程式可以透過這些類別來存取和操作管理資訊。 如需使用 **System.Management** 命名空間以運用 Reporting Services WMI 類別的詳細資訊，請參閱 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 中的＜使用 System.Managment 存取管理資訊＞。  
+ 本主題的程式碼範例中用來取得 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 相關資訊的命名空間為 **System.Management** 命名空間，其位於 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 中。 **System.Management** 命名空間提供一組 Managed 程式碼類別，[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 應用程式可以透過這些類別來存取和操作管理資訊。 如需使用 **System.Management** 命名空間以運用 Reporting Services WMI 類別的詳細資訊，請參閱 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 中的＜使用 System.Managment 存取管理資訊＞。  
   
 ## <a name="finding-a-report-server-instance"></a>尋找報表伺服器執行個體  
  在報表伺服器安裝上尋找資訊的最好方法，就是列舉 WMI 執行個體集合。 以下範例顯示如何建立集合，以及對集合執行迴圈以顯示屬性，來尋找每個報表伺服器執行個體上的屬性。  

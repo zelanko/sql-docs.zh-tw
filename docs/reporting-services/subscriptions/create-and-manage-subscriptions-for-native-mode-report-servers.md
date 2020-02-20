@@ -12,10 +12,10 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 69cc078dc5ce605f1d7bf55d872c2a4629eb3301
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66403258"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>建立及管理原生模式報表伺服器的訂閱
@@ -52,9 +52,9 @@ ms.locfileid: "66403258"
   
 2.  瀏覽至所需的報表。 以滑鼠右鍵按一下該報表，然後選取 [訂閱]  。  
   
-3.  **描述**：輸入該報表訂閱的描述，最多 512 個字元。  
+3.  **描述**：鍵入該報表訂閱的描述，最多 512 個字元。  
   
-4.  **擁有者**︰擁有者欄位預設為目前的使用者，且在您建立訂閱時無法編輯。 不過，在儲存訂閱之後，您可以變更訂閱屬性，包括擁有者與描述。  
+4.  **擁有者**：擁有者欄位預設為目前使用者，且在您建立訂閱時無法編輯。 不過，在儲存訂閱之後，您可以變更訂閱屬性，包括擁有者與描述。  
 
 5. 在 [訂閱的類型]  底下，選取 [標準訂閱]  選項按鈕。
 
@@ -67,15 +67,15 @@ ms.locfileid: "66403258"
 7. 在 [目的地]  底下，選取 [Windows 檔案共用]  。  
   
 8. 在 [傳遞選項 (Windows 檔案共用)]  底下，指定：  
-   - **檔案名稱**：輸入報表的檔案名稱。
-   - **建立檔案時加入副檔名**︰這個選項會將三個字元的副檔名加入檔案名稱。 副檔名是由您選取的報表輸出格式所決定。  
-   - **路徑**：輸入您要傳遞報表之現有資料夾的通用命名慣例 (UNC) 路徑 (例如，\\<伺服器名稱\>\<我的報表>)。 在路徑的開頭包含雙反斜線字元。 請勿在尾端指定反斜線。  
+   - **檔案名稱**：鍵入報表的檔案名稱。
+   - **建立檔案時新增副檔名**：這個選項會將三個字元的副檔名加入至檔案名稱。 副檔名是由您選取的報表輸出格式所決定。  
+   - **路徑**：針對您要傳遞報表的現有資料夾鍵入通用命名慣例 (UNC) 路徑 (例如，\\<伺服器名稱\>\<我的報表>)。 在路徑的開頭包含雙反斜線字元。 請勿在尾端指定反斜線。  
   
-     ![檔案共用訂用帳戶](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "檔案共用訂用帳戶")  
+     ![檔案共用訂閱](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "檔案共用訂閱")  
   
    - **轉譯格式**：選取檔案傳遞的報表輸出格式。 選擇對應至將用於開啟報表之桌面應用程式的格式。 請避免使用無法在單一資料流完成報表轉譯的格式，或者會導入靜態檔案無法支援之互動性的格式 (例如 HTML 4.0)。  
   
-   - **認證**︰選取以使用檔案共用帳戶或特定的 Windows 使用者認證。 若報表管理員未設定檔案共用帳戶，則會停用 [使用檔案共用帳戶]  。 如需詳細資訊，請參閱[訂閱設定與檔案共用帳戶 &#40;組態管理員&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。 在 [使用者名稱]  及 [密碼]  文字方塊中，指定存取檔案共用所需的認證，使用者名稱請使用 \<網域>  \\\<使用者名稱>  。  
+   - **認證**：選取以使用檔案共用帳戶或特定的 Windows 使用者認證。 若報表管理員未設定檔案共用帳戶，則會停用 [使用檔案共用帳戶]  。 如需詳細資訊，請參閱[訂閱設定與檔案共用帳戶 &#40;組態管理員&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。 在 [使用者名稱]  及 [密碼]  文字方塊中，指定存取檔案共用所需的認證，使用者名稱請使用 \<網域>  \\\<使用者名稱>  。  
   
    - **覆寫選項**：  
      - **以較新版本覆寫現有檔案**。  
@@ -92,9 +92,9 @@ ms.locfileid: "66403258"
   
 2. 瀏覽至所需的報表。 以滑鼠右鍵按一下該報表，然後選取 [訂閱]  。  
   
-3. **描述**：輸入該報表訂閱的描述，最多 512 個字元。  
+3. **描述**：鍵入該報表訂閱的描述，最多 512 個字元。  
   
-4.  **擁有者**︰擁有者欄位預設為目前的使用者，且在您建立訂閱時無法編輯。 不過，在儲存訂閱之後，您可以變更訂閱屬性，包括擁有者與描述。  
+4.  **擁有者**：擁有者欄位預設為目前使用者，且在您建立訂閱時無法編輯。 不過，在儲存訂閱之後，您可以變更訂閱屬性，包括擁有者與描述。  
 
 5. 在 [訂閱的類型]  底下，選取 [標準訂閱]  選項按鈕。
 
@@ -107,18 +107,18 @@ ms.locfileid: "66403258"
 7. 在 [目的地]  底下，選取 [電子郵件]  。  如果無法使用 [電子郵件]  選項，表示您的報表伺服器尚未針對電子郵件訂閱進行設定。 請參閱[設定 Reporting Services 服務應用程式的電子郵件](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)。
   
 8. 在 [傳遞選項 (電子郵件)]  底下，指定：
-   - **收件者**：系統會使用您的網域使用者帳戶，自行處理 [收件者:] 欄位中的收件者名稱。 確定格式為 [使用者名稱]@[網域.com]。 報表伺服器組態設定會決定系統是否會使用您的使用者帳戶來自行處理 [收件者]  欄位。 如需變更組態設定電子郵件地址的詳細資訊，請參閱[設定 Reporting Services 服務應用程式的電子郵件](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)
+   - **收件者**：系統會使用您的網域使用者帳戶來自行處理 [收件者:] 欄位中收件者名稱。 確定格式為 [使用者名稱]@[網域.com]。 報表伺服器組態設定會決定系統是否會使用您的使用者帳戶來自行處理 [收件者]  欄位。 如需變更組態設定電子郵件地址的詳細資訊，請參閱[設定 Reporting Services 服務應用程式的電子郵件](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)
 
      >[!NOTE]  
      > 根據您的權限，可能可以輸入想要傳遞報表的目標電子郵件地址。 若要指定多個電子郵件地址，請使用分號 (;) 隔開。 您也可以在 [副本]  、[密件副本]  和 [回覆至]  文字方塊中，鍵入其他電子郵件地址。 這需要您具有管理所有訂閱的權限。  
   
-   - **主旨**：預設為「@ReportName 已在 @ExecutionTime 執行」。 您可以編輯主旨，但請注意，@ReportName 和 @ExecutionTime 是 [主旨]  欄位中唯一支援的全域變數。  
+   - **主體**：預設為「@ReportName 已在 @ExecutionTime 執行」。 您可以編輯主旨，但請注意，@ReportName 和 @ExecutionTime 是 [主旨]  欄位中唯一支援的全域變數。  
   
      ![電子郵件訂閱](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png "電子郵件訂閱")  
 
    - **包含報表**：選取此選項可內嵌或附加報表的複本。 報表的格式是由您選取的轉譯格式所決定。 如果您認為報表大小將超出您為電子郵件系統所定義的限制，請勿選擇此選項。  
   
-   - **包含連結**：選取此選項可在電子郵件訊息主體中包含報表的 URL 連結。  
+   - **包含連結**：選取此選項可在電子郵件訊息本文中包含報表的 URL 連結。  
   
      >[!NOTE]  
      >如果您清除這兩個選項，就只會傳送主旨行中的通知文字。  
@@ -135,7 +135,7 @@ ms.locfileid: "66403258"
 ##  <a name="bkmk_modify_subscription"></a> 修改訂閱  
  您可以在任何時間修改訂閱。 如果您在處理訂閱時修改訂閱，當更新的設定在傳遞延伸模組接收到訂閱資料之前儲存到報表伺服器中時，就會使用更新的設定。 否則，會使用現有的設定。  
   
- 建立訂閱的使用者便擁有該訂閱。 每一個使用者都可以修改或刪除自己所擁有的訂閱。 您可以從訂閱屬性頁面中變更報表的擁有者，或者可以透過程式設計方式變更擁有權。 如需詳細資訊，請參閱下列內容：  
+ 建立訂閱的使用者便擁有該訂閱。 每一個使用者都可以修改或刪除自己所擁有的訂閱。 您可以從訂閱屬性頁面中變更報表的擁有者，或者可以透過程式設計方式變更擁有權。 如需詳細資訊，請參閱下列：  
   
 -   [使用 PowerShell 變更及列出 Reporting Services 訂閱擁有者並執行訂閱](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   

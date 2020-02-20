@@ -12,14 +12,14 @@ ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 948abaaae630de34f4340370fd2f6f0f4e0a1d34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65503069"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 檢視器和報表工具列
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了 HTML 檢視器，可用來從報表伺服器要求報表時，視需要顯示這些報表。 HTML 檢視器提供以 HTML 檢視報表的架構。 其中包含報表工具列、參數區段、認證區段以及文件對應。 HTML 檢視器中的報表工具列含有可用來處理報表的功能，包括可以讓您以非 HTML 格式檢視報表的匯出選項。 只有在開啟設定為使用參數和文件引導模式控制項的報表時，才會顯示參數區段和文件引導模式。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供 HTML 檢視器，可用來從報表伺服器要求報表時，視需要顯示這些報表。 HTML 檢視器提供以 HTML 檢視報表的架構。 其中包含報表工具列、參數區段、認證區段以及文件對應。 HTML 檢視器中的報表工具列含有可用來處理報表的功能，包括可以讓您以非 HTML 格式檢視報表的匯出選項。 只有在開啟設定為使用參數和文件引導模式控制項的報表時，才會顯示參數區段和文件引導模式。  
   
  雖然您無法修改報表工具列，但是您可以設定報表 URL 上的參數，以在報表中隱藏此工具列。 如需隱藏報表工具列的詳細資訊，請參閱 [URL 存取參數參考](../reporting-services/url-access-parameter-reference.md)。  
   
@@ -30,11 +30,11 @@ ms.locfileid: "65503069"
   
  報表工具列會與下列圖例所顯示的工具列相似。 您看到的報表工具列可能會與此圖例有所不同，依可用的報表功能或轉譯選項而定。  
   
- ![Report toolbar](../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
+ ![報表工具列](../reporting-services/media/ssrs-htmlviewer-toolbar.png "報表工具列")  
   
  下表描述報表工具列的常用功能。 每一項功能都可以透過存取該功能的控制項來識別。  
   
-|使用這個圖示或控制項||若要|  
+|使用這個圖示或控制項||至|  
 |------------------------------|-|--------|  
 |![頁面導覽控制項](../reporting-services/media/htmlviewer-pagenav.gif "頁面導覽控制項")|**頁面導覽控制項**|開啟報表的第一頁或最後一頁、逐頁捲動報表和開啟報表中的特定頁面。 若要檢視特定頁面，請輸入頁碼然後按 ENTER。|  
 |![頁面顯示控制項](../reporting-services/media/htmlviewer-pagesize.gif "頁面顯示控制項")|**頁面顯示控制項**|放大或縮小報表頁面的尺寸。 除了百分比架構的變更之外，您還可以選取 [頁寬]  使其符合瀏覽器視窗中報表頁面的水平長度，或選取 [整頁]  使其符合瀏覽器視窗中報表的垂直長度。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 和更新的版本可以支援 [顯示比例]  選項。|  
@@ -52,13 +52,13 @@ ms.locfileid: "65503069"
   
  預設的報表伺服器安裝中，有包含下列匯出格式。 您可用的匯出格式清單，可能會與此處所列的清單有所不同。  
   
-|匯出格式|Description|  
+|匯出格式|描述|  
 |-------------------|-----------------|  
 |XML|以 XML 語法檢視報表。 在新的瀏覽器視窗中，以 XML 檢視報表。|  
 |CSV|以逗號分隔格式來檢視報表。 報表會在與 CSV 檔案類型相關聯的應用程式中開啟。|  
 |PDF|使用用戶端 PDF 檢視器來檢視報表。 您必須擁有協力廠商 PDF 檢視器 (例如 Adobe Acrobat Reader)，才能使用此格式。|  
 |MHTML|以 MIME 編碼的 HTML 格式檢視報表，在報表中保留影像和連結的內容。|  
-|[匯出]|在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 中檢視報表 (為 .xlsx 格式的檔案)。|  
+|Excel|在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 中檢視報表 (為 .xlsx 格式的檔案)。|  
 |PowerPoint|在 [!INCLUDE[msCoName](../includes/msconame-md.md)] PowerPoint 中檢視報表 (為 .pptx 格式的檔案)。|  
 |TIFF 檔案|以預設的 TIFF 檢視器檢視報表。 對於某些 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 用戶端來說，這會是 Windows 圖片和傳真檢視器。 選取此格式就能夠以頁面導向的配置來檢視報表。|  
 |Word|在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Word 中檢視報表 (為 .docx 格式的檔案)。|  
@@ -73,7 +73,7 @@ ms.locfileid: "65503069"
   
 ## <a name="see-also"></a>另請參閱  
  [指定報表資料來源的認證及連接資訊](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [尋找、檢視和管理報表 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [匯出報表 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

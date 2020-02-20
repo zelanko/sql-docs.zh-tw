@@ -17,10 +17,10 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 103f74b4a1be1ee2111f8ed3e983f8a468f8db2c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893028"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
@@ -32,7 +32,7 @@ ms.locfileid: "68893028"
 ![SQL Server 2016](../sql-server/media/sql-server-2016.png)
 
  **立即試用 SQL Server！** 
-- 下載「免費的」  [**SQL Server 2016 Developer Edition！** ](https://www.microsoft.com/cloud-platform/sql-server-editions-developers)
+- 下載**免費的** [**SQL Server 2016 Developer Edition！** ](https://www.microsoft.com/cloud-platform/sql-server-editions-developers)。
 - 下載最新版的 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)。 
 - 有 Azure 帳戶嗎？ 啟動[已安裝 SQL Server 2016 的虛擬機器](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)。
 

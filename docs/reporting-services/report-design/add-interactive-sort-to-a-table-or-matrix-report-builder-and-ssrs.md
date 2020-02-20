@@ -12,10 +12,10 @@ ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 962f07f5e5f6ce00bc21c362ce905bec2773c28c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893798"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>將互動式排序加入至資料表或矩陣 (報表產生器及 SSRS)
@@ -60,7 +60,7 @@ ms.locfileid: "68893798"
   
  若要驗證排序動作，請按一下 **[執行]** 預覽報表，然後按一下互動式排序按鈕。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
+ ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示") [[回到頁首]](#BackToTop)  
   
 ##  <a name="SortingTopLevelParent"></a> 排序資料表或矩陣的最上層父資料列群組  
  將互動式排序按鈕加入到資料行標頭，讓使用者按一下資料行標頭，並依該資料行中顯示的值，排序資料表或矩陣中的父群組資料列。 子群組的順序會維持不變。  
@@ -84,7 +84,7 @@ ms.locfileid: "68893798"
   
  若要驗證排序動作，請按一下 **[執行]** 預覽報表，然後按一下互動式排序按鈕。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
+ ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示") [[回到頁首]](#BackToTop)  
   
 ##  <a name="SortingChildGroups"></a> 排序群組的子群組或詳細資料列  
  將互動式排序按鈕加入到群組標題資料列，讓使用者從父群組排序子群組的值，或針對最內部的子群組排序詳細資料列。  
@@ -107,7 +107,7 @@ ms.locfileid: "68893798"
   
  若要驗證排序動作，請按一下 **[執行]** 預覽報表，然後按一下互動式排序按鈕。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
+ ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示") [[回到頁首]](#BackToTop)  
   
 ##  <a name="SortingMultipleRowGroups"></a> 根據複雜的群組運算式排序資料列  
  將互動式排序按鈕加入到資料行標頭，讓使用者按一下資料行標頭，並排序合併的父群組和子群組。 為達到此效果，您必須將群組運算式變更為兩個群組的複合。 例如，假設矩陣會針對同時依色彩和大小分組的項目，顯示商店的存貨總數。 若要根據色彩和大小的組合 (而不是個別針對色彩群組和大小群組) 排序資料列，您可以根據色彩和大小的組合定義群組。 如需定義群組運算式的詳細資訊，請參閱[群組運算式範例 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)。  
@@ -164,7 +164,7 @@ ms.locfileid: "68893798"
   
  若要驗證排序動作，請按一下 **[執行]** 預覽報表，然後按一下互動式排序按鈕。 即使每個個別值都會顯示在其自己的資料行中，矩陣還是會依群組運算式的合計值排序。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
+ ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示") [[回到頁首]](#BackToTop)  
   
 ##  <a name="SynchronizingSortOrder"></a> 同步處理多個資料區的排序次序  
  加入互動式排序按鈕，讓使用者按一下其中一個排序按鈕，然後排序多個資料區。 當您建立互動式排序按鈕時，可以指定是否要根據相同的報表資料集，同步處理多個資料區域的排序。 例如，報表可能包含一個矩陣以及一個以圖形方式顯示資料的圖表。 當使用者在矩陣中變更資料列的排序次序時，此圖表會自動顯示相同的排序次序。  
@@ -191,7 +191,7 @@ ms.locfileid: "68893798"
   
 8.  按一下 **[排序]** 。  
   
-9. 按一下 **[加入]** 。 新的排序資料列就會加入到排序選項方格中。  
+9. 按一下 [新增]  。 新的排序資料列就會加入到排序選項方格中。  
   
 10. 在 [排序依據] 的下拉式清單中，選擇您在步驟 6 中選擇，當做分組依據的相同欄位。  
   
@@ -213,10 +213,10 @@ ms.locfileid: "68893798"
   
  若要驗證排序動作，請按一下 **[執行]** 預覽報表，然後按一下互動式排序按鈕。 即使每個個別值都會顯示在其自己的資料行中，矩陣還是會依群組運算式的合計值排序。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
+ ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示") [[回到頁首]](#BackToTop)  
   
 ## <a name="see-also"></a>另請參閱  
- [篩選、分組和排序資料 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [互動式排序 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
  [在資料區中排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [探索 Tablix 資料區的彈性 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  

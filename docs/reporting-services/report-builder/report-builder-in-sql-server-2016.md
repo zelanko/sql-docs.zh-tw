@@ -14,10 +14,10 @@ ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c10e37d7c1231a3ed4db2d7412ea223cccc6922d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67688518"
 ---
 # <a name="report-builder-in-sql-server"></a>SQL Server 的報表產生器
@@ -36,7 +36,7 @@ ms.locfileid: "67688518"
   
 -   **從資料表、矩陣或圖表精靈開始**。 您可以選擇資料來源連接、拖放欄位以建立資料集查詢、選取配置和樣式，以及自訂報表。  
   
--   **從地圖精靈開始** ，以建立根據地理或幾何背景顯示彙總資料的報表。 地圖資料可能是來自 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或環境系統研究協會 (Environmental Systems Research Institute, Inc.) 的空間資料。(ESRI) 形狀檔。 您也可以加入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing 地圖底圖背景。  
+-   **從地圖精靈開始** ，以建立根據地理或幾何背景顯示彙總資料的報表。 地圖資料可能是來自 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或環境系統研究協會 (Environmental Systems Research Institute, Inc.，ESRI) 形狀檔的空間資料。 您也可以加入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing 地圖底圖背景。  
   
 -   **使用報表組件啟動您的報表**。 報表組件是個別發行到原生模式或 SharePoint 整合模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器的報表項目。 報表組件可以在其他報表中重複使用。 諸如資料表、矩陣、圖表和影像等報表項目都可以發行為報表組件。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "67688518"
   
 -   **建立含有資料表、矩陣、圖表和自由形式報表配置的分頁報表。** 針對以資料行為基礎的資料建立資料表報表、針對摘要資料建立矩陣報表 (例如交叉分析或樞紐分析表報表)、針對地理資料建立圖表報表，以及針對其他資料建立自由形式的報表。 報表可以內嵌其他報表和圖表，連同動態網路架構應用程式的清單、圖形和控制項。  
   
--   **從各種資料來源建立報表。** 使用具有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]管理的資料提供者、OLE DB 提供者或 ODBC 資料來源之任何資料來源類型中的資料建立報表。 您可以建立使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、Oracle、Hyperion 及其他資料庫中關聯式和多維度資料的報表。 您可以使用 XML 資料處理延伸模組，從任何 XML 資料來源擷取資料。 您可以使用資料表值函數來設計自訂資料來源。  
+-   **從各種資料來源建立報表。** 使用任何資料來源類型 (具有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 受控資料提供者、OLE DB 提供者或 ODBC 資料來源) 中的資料建置報表。 您可以建立使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、Oracle、Hyperion 及其他資料庫中關聯式和多維度資料的報表。 您可以使用 XML 資料處理延伸模組，從任何 XML 資料來源擷取資料。 您可以使用資料表值函數來設計自訂資料來源。  
   
 -   **修改現有的報表。** 使用 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，您可以自訂及更新在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]報表設計師中建立的報表。  
   

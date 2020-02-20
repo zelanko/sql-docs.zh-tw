@@ -1,6 +1,7 @@
 ---
-title: 被遺棄使用者疑難排解 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 針對孤立使用者進行疑難排解
+description: 當資料庫使用者登入不再存在於 master 資料庫時，就會出現孤立使用者。 本主題討論如何識別和解決孤立使用者。
+ms.custom: seo-lt-2019
 ms.date: 07/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -19,20 +20,20 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d42da661015f1184945d4e4ae45cb3f70016e987
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91d3d04efa0300683a5ee727cfa0a1fcd31e3c10
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063808"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822057"
 ---
-# <a name="troubleshoot-orphaned-users-sql-server"></a>被遺棄使用者疑難排解 (SQL Server)
+# <a name="troubleshoot-orphaned-users-sql-server"></a>針對孤立使用者進行疑難排解 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的被遺棄使用者，當資料庫中的使用者登入是根據 **master** 資料庫，但登入已不存在於 **master**時就會發生。 當登入遭到刪除，或當資料庫移動到另一個登入不存在的資料庫時，就可能發生。 本主題說明如何尋找被遺棄使用者，並將他們重新對應至登入。  
   
 > [!NOTE]  
->  針對可能會移動的資料庫，使用自主資料庫使用者可減少被遺棄使用者產生的可能性。 如需詳細資訊，請參閱 [自主資料庫使用者 - 使資料庫可攜](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+>  針對可能會移動的資料庫，使用自主資料庫使用者可減少被遺棄使用者產生的可能性。 如需詳細資訊，請參閱 [自主的資料庫使用者 - 使資料庫可攜](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
 ## <a name="background"></a>背景  
  若要使用以登入為基礎的安全性主體 (資料庫使用者身分識別) 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的資料庫，主體在 **master** 資料庫必須有有效的登入。 此登入適用於驗證程序，可確認主體身份識別並決定主體是否允許連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。 伺服器執行個體上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入可以在 **sys.server_principals** 目錄檢視和 **sys.sql_logins** 相容性檢視中看到。  
@@ -55,7 +56,7 @@ ms.locfileid: "68063808"
   
  在伺服器執行個體上未定義或定義不正確之對應 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的資料庫使用者 (以登入為基礎) 無法登入此執行個體。 這類使用者就是伺服器執行個體上的資料庫 *「被遺棄使用者」* (Orphaned User)。 如果資料庫使用者對應到的登入 SID 未出現在 `master` 執行個體中，則會遭到遺棄。 資料庫還原或附加到其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未建立登入的執行個體，也會讓資料庫使用者遭到遺棄。 如果卸除了對應的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，則資料庫使用者也會遭到遺棄。 即使重新建立登入，它的 SID 也會不同，因此資料庫使用者仍會遭到遺棄。  
   
-## <a name="to-detect-orphaned-users"></a>若要偵測被遺棄使用者  
+## <a name="detect-orphaned-users"></a>偵測被孤立使用者  
 
 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 PDW**
 
@@ -95,7 +96,7 @@ WHERE sp.SID IS NULL
 
 3. 比較這兩份清單，以判斷使用者資料庫 `sys.database_principals` 資料表中是否有使用者 SID 不符合 master 資料庫 `sql_logins` 資料表中的登入 SID。 
   
-## <a name="to-resolve-an-orphaned-user"></a>若要解析被遺棄使用者  
+## <a name="resolve-an-orphaned-user"></a>解決孤立使用者  
 在 master 資料庫中，使用 [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) 陳述式搭配 SID 選項以重新建立遺失的登入，提供在上一節取得之資料庫使用者的 `SID` ：  
   
 ```  

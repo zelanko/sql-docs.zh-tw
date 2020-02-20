@@ -8,10 +8,10 @@ ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
 ms.openlocfilehash: dd8dc50b9885bb33df66d152b432092b6ac9868d
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68329358"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>使用 Reporting Services 中的 KPI
@@ -29,13 +29,13 @@ ms.locfileid: "68329358"
 - 我已完成的最小數量為何？  
 
 > [!NOTE]
-> 只有在 SSRS 入口網站的 Enterprise (Developer) 版本中, 才可存取 Kpi。
+> 只有在 SSRS 入口網站的 Enterprise (Developer) 版本中才能存取 KPI。
 
 ## <a name="creating-a-dataset"></a>建立資料集
 
 KPI 只會使用共用資料集的第一列資料。 請確定您想要使用的資料位於第一列。 若要建立共用資料集，您可以使用報表產生器或 SQL Server Data Tools。  
   
-> **注意**︰資料集不需要位於與 KPI 相同的資料夾。  
+> **注意**：資料集不需要位於與 KPI 相同的資料夾。  
   
 ## <a name="placement-of-kpis"></a>KPI 的位置  
   
@@ -52,16 +52,16 @@ KPI 只會使用共用資料集的第一列資料。 請確定您想要使用的
   
 您可以指派靜態值，或使用共用資料集的資料。 當您建立新的 KPI 時，即會填入一組隨機的手動資料。  
   
-| 欄位 | Description |
+| 欄位 | 描述 |
 |-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | 值格式 | 用來變更顯示值的格式。 |
-| ReplTest1 | 針對 KPI 顯示的值。 |
+| 值 | 針對 KPI 顯示的值。 |
 | 目標 | 用來與數值比較且以差異百分比​​顯示。 |
-| [狀態] | 用於判斷 KPI 圖格色彩的數值。 有效值為 1 (綠色)、 0 (琥珀色) 和 -1 (紅色)。 |
+| 狀態 | 用於判斷 KPI 圖格色彩的數值。 有效值為 1 (綠色)、 0 (琥珀色) 和 -1 (紅色)。 |
 | 趨勢集 | 用於圖表視覺效果且以逗點分隔的數值。 這也可以設定為資料集的資料行，其值代表趨勢。 |
-| 相關內容 | 能夠設定深入剖析連結。 此連結可以是在入口網站上發佈的行動報表或自訂 URL。 |
+| 相關內容 | 能夠設定鑽研連結。 此連結可以是在入口網站上所發佈行動報表或自訂的 URL。 |
   
-> **警告**︰雖然您可以在設計階段使用 [狀態]  欄位的文字值，但如果會重新整理資料集，您就應該使用數值。 如果您使用文字值 (而非數字) 重新整理資料集，它可能會損毀您伺服器上的 KPI。  
+> **警告**：雖然您可以在設計階段使用 [狀態]  欄位的文字值，但如果會重新整理資料集，您就應該使用數值。 如果您使用文字值 (而非數字) 重新整理資料集，它可能會損毀您伺服器上的 KPI。  
 >
 > **注意**：[值]  、[目標]  和 [狀態]  欄位只可以從資料集結果的第一列中選擇值。 不過，[趨勢集]  欄位可以選擇哪些資料行會反映趨勢。  
   
@@ -91,19 +91,19 @@ KPI 只會使用共用資料集的第一列資料。 請確定您想要使用的
 
 ## <a name="configuring-related-content"></a>設定相關內容
 
-當您選擇 [行動**報表**] 時, 您可以在對話方塊中選擇目的地。
+當選擇 [行動報表]  時，您可以在對話方塊中選擇目的地。
 
    ![行動報表](media/rscreatekpi-related-content-mobile-report.png)
 
-當您現在按一下入口網站中的 KPI 時, 行動報表的縮圖會顯示在 [相關內容] 下拉式清單底下。 按一下此縮圖可以直接流覽至這份報表。
+當您現在按一下入口網站中的 KPI 時，行動報表的縮圖會顯示在 [相關內容] 下拉式清單下。 按一下此縮圖可直接巡覽至這份報表。
 
-您也可以指定自訂 URL。 這項工作可以是任何專案: 網站、SharePoint 網站、SSRS 報表的 URL (這可讓您沿著硬式編碼的參數傳遞)。
+您也可以指定自訂的 URL。 這項工作可以是任何形式：網站、SharePoint 網站、SSRS 報表的 URL (這可讓您沿著硬式編碼的參數傳遞)。
 
 ![自訂 URL](media/rscreatekpi-related-content-custom-url.png)
 
-當您現在按一下 KPI 時, URL 會顯示在 [相關內容] 底下。
+當您現在按一下 KPI 時，URL 會顯示在相關內容下。
 
-您只能新增一個行動報表或一個自訂 URL。
+您只能新增一份行動報表或一個自訂 URL。
   
 ## <a name="removing-a-kpi"></a>移除 KPI  
   
@@ -113,7 +113,7 @@ KPI 只會使用共用資料集的第一列資料。 請確定您想要使用的
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
-2. 選取 **[刪除]** 。 在確認對話方塊中，再次選取 [刪除]  。  
+2. 選取 [刪除]  。 在確認對話方塊中，再次選取 [刪除]  。  
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   

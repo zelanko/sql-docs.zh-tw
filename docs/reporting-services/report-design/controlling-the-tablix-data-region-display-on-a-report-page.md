@@ -9,10 +9,10 @@ ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e87bea9a9bd4807b1d91735cc5a620ac3242de73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581531"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>控制報表頁面上的 Tablix 資料區顯示
@@ -50,7 +50,7 @@ ms.locfileid: "65581531"
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>控制 Tablix 資料列和資料行群組轉譯的方式  
  控制 Tablix 資料區群組轉譯的方式主要取決於群組結構。 Tablix 資料區可以有四個區域，如下圖所示：  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Tablix 資料區的區域](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix 資料區的區域")  
   
  資料列群組區域和資料行群組區域包含群組頁首。 當 Tablix 資料區具有群組頁首時，您就可以透過在 **[Tablix 屬性]** 對話方塊的 **[一般]** 頁面上設定屬性，來控制資料列和資料行重複的方式。  
   

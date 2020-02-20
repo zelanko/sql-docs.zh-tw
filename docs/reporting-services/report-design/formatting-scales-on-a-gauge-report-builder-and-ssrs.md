@@ -9,16 +9,16 @@ ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7044e079ddf6aa9ce322a742a78aa83059efca6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580288"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>格式化量測計上的標尺 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，量測計標尺是顯示在量測計上，受限於最小值與最大值的數字範圍。 量測計標尺通常包含量測計標籤與刻度，以便正確讀取量測計指標所顯示的數目。 量測計標尺通常與一或多個量測計指標相關聯。 在相同的量測計上可以有一個以上的標尺。  
   
- ![量測計標尺的項目概觀](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "量測計標尺的項目概觀")  
+ ![量測計標尺的元素概觀](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "量測計標尺的元素概觀")  
   
  與定義多個群組的圖表不同的是，量測計只會顯示一個值。 您必須定義標尺的最小值和最大值。 系統會根據您針對最小值和最大值指定的值，自動計算間隔數字。  
   

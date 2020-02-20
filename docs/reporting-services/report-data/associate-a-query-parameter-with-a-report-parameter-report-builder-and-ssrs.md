@@ -12,10 +12,10 @@ ms.assetid: 6d297e1a-ff71-472a-addc-349e863092b5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 45161e43e405586bb441088b89fc24494eb928df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573233"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>將查詢參數與報表參數產生關聯 (報表產生器及 SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "65573233"
   
  如果您重新命名繫結至查詢參數的報表參數，您需要使用本主題的查詢，手動將查詢參數連結到重新命名過的報表參數。  
   
-> **附註：** [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+> **注意：** [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-associate-a-query-parameter-with-a-report-parameter"></a>將查詢參數與報表參數相關聯  
   
@@ -37,7 +37,7 @@ ms.locfileid: "65573233"
   
     -   在 [參數值]  中，鍵入或選取會評估為要傳遞到查詢參數之值的運算式。 這通常是報表參數的名稱。  
   
-        > **注意：** 並非只有報表參數才能作為查詢參數的值。 您可以使用任何會評估為值的運算式，以做為參數值。  
+        > **注意：** 並非只有報表參數才能做為查詢參數的值。 您可以使用任何會評估為值的運算式，以做為參數值。  
   
 3.  重複步驟 2 可以加入其他查詢參數。  
   

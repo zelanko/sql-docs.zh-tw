@@ -12,10 +12,10 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d660cc7b3c15706951981540f592589ba92e9df2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62513639"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>安裝 Reporting Services 2016 原生模式報表伺服器
@@ -82,11 +82,11 @@ ms.locfileid: "62513639"
 ##  <a name="bkmk_defaultURLreservations"></a> 預設 URL 保留項目  
  URL 保留項目是由前置詞、主機名稱、通訊埠和虛擬目錄所組成：  
   
-|部分|Description|  
+|部分|描述|  
 |----------|-----------------|  
-|Prefix|預設前置詞是 HTTP。 如果您之前安裝了安全通訊端層 (SSL) 憑證，安裝程式將會嘗試建立使用 HTTPS 前置詞的 URL 保留項目。|  
+|前置詞|預設前置詞是 HTTP。 如果您之前安裝了安全通訊端層 (SSL) 憑證，安裝程式將會嘗試建立使用 HTTPS 前置詞的 URL 保留項目。|  
 |主機名稱|預設主機名稱是強式萬用字元 (+)， 它會指定報表伺服器接受解析為電腦任何主機名稱之指定連接埠上的任何 HTTP 要求，包括 `https://<computername>/reportserver`、`https://localhost/reportserver` 或 `https://<IPAddress>/reportserver`。|  
-|通訊埠|預設連接埠是 80。 請注意，如果您使用通訊埠 80 以外的任何通訊埠，當您在瀏覽器視窗中開啟 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 應用程式時，就必須明確將此通訊埠加入 URL 中。|  
+|連接埠|預設連接埠是 80。 請注意，如果您使用通訊埠 80 以外的任何通訊埠，當您在瀏覽器視窗中開啟 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 應用程式時，就必須明確將此通訊埠加入 URL 中。|  
 |虛擬目錄|根據預設，系統會使用 ReportServer_\<執行個體名稱  > (針對報表伺服器 Web 服務) 和 Reports_\<執行個體名稱  > (針對[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]) 的格式來建立虛擬目錄。 如果是報表伺服器 Web 服務，預設虛擬目錄會是 **reportserver**。 如果是 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，則預設虛擬目錄為 **reports**。|  
   
  完整 URL 字串可能出現的範例如下：  
@@ -140,7 +140,7 @@ ms.locfileid: "62513639"
   
 8.  在 **[Reporting Services 組態]** 頁面上選取 **[安裝和設定]** 。  
   
-     ![SSRS 原生模式設定](../../reporting-services/install-windows/media/rs-setupconfiguration-native-with-circles.png "SSRS 原生模式設定")  
+     ![SSRS 原生模式組態](../../reporting-services/install-windows/media/rs-setupconfiguration-native-with-circles.png "SSRS 原生模式組態")  
   
     > [!NOTE]  
     >  您必須同時選取要安裝的資料庫功能，才能使用 [安裝和設定]  。  
@@ -155,11 +155,11 @@ ms.locfileid: "62513639"
   
     -   **以系統管理權限** 開啟瀏覽器，並連接到 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，例如 `https://localhost/Reports`。  
   
-    -   以系統管理權限開啟瀏覽器，並連接到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器頁面。 例如，  `https://localhost/ReportServer`  
+    -   以系統管理權限開啟瀏覽器，並連接到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器頁面。 例如，`https://localhost/ReportServer`  
   
  如需詳細資訊，請參閱下列兩個主題的＜原生＞一節：  
   
- [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
+ [驗證 Reporting Services 安裝](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
   
  [針對 Reporting Services 安裝進行疑難排解](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
   

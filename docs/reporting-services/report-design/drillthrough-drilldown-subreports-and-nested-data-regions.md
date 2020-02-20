@@ -9,10 +9,10 @@ ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 23a1561104273203a01c99a08e86ed301e55bbf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578780"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>鑽研、向下鑽研、子報表和巢狀資料區
@@ -22,7 +22,7 @@ ms.locfileid: "65578780"
   
  A. 鑽研報表  
   
- B. 「子報表」  
+ B. 子報表  
   
  C. 巢狀資料區  
   
@@ -36,7 +36,7 @@ ms.locfileid: "65578780"
 ##  <a name="SummaryCharacteristics"></a> 特性摘要  
  下表簡要地敘述這些不同特性。 稍後會在此主題另一節說明細節。 比較內容不含向下鑽研，因為您可以將它的顯示和隱藏動作套用到任何報表項目。  
   
-|特徵|子報表|「鑽研」|「巢狀」|  
+|特徵|子報表|鑽研|「巢狀」|  
 |-----------|---------------|------------------|------------|  
 |使用主報表的資料集|相同或相異|相同或相異|相同|  
 |擷取資料|與主報表同時擷取資料|一次擷取一份鑽研報表的資料|與主報表同時擷取所有資料|  

@@ -1,22 +1,24 @@
 ---
-title: 訂用帳戶設定與檔案共用帳戶 (設定管理員) | Microsoft Docs
-ms.date: 05/31/2016
+title: 訂用帳戶設定與檔案共用帳戶 (組態管理員) | Microsoft Docs
+description: 使用 Reporting Services 組態管理員的 [訂閱設定] 頁面，為原生模式報表伺服器與檔案共用訂用帳戶設定檔案共用帳戶。
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e8dfea342f4545313035869f8c2e12367e62aed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9dd29c96f80ed24889356c72961f47de707037e6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62651969"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866271"
 ---
-# <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>訂閱設定與檔案共用帳戶 (Configuration Manager)
+# <a name="subscription-settings-and-a-file-share-account-ssrs-configuration-manager"></a>訂閱設定與檔案共用帳戶 (SSRS 組態管理員)
   使用 **Configuration Manager 的 [訂閱設定]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 頁面，針對原生模式報表伺服器與檔案共用訂閱設定檔案共用帳戶。 檔案共用帳戶可讓您在將報表傳遞至檔案共用的多個訂閱中，使用單一認證組合。 當變更認證時，您可針對檔案共用帳戶設定變更，而無須更新每個個別訂閱。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 檔案共用訂閱具有兩個工作流程：  
@@ -36,7 +38,7 @@ ms.locfileid: "62651969"
   
  下圖是使用者針對檔案共用傳送所設定訂閱看到的內容。 若未設定檔案共用帳戶，則會停用 [使用檔案共用帳戶]  。  
   
- ![設定管理員檔案共用帳戶](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "設定管理員檔案共用帳戶")  
+ ![組態管理員檔案共用帳戶](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "組態管理員檔案共用帳戶")  
   
 ## <a name="prevent-privilege-escalation-or-elevated-privileges"></a>防止權限提升或提高權限  
   

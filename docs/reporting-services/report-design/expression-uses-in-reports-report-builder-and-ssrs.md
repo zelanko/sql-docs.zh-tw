@@ -11,10 +11,10 @@ ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cd0b847ba4ebaa2d669927abe0665b18a2d517bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579165"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>報表中的運算式用法 (報表產生器及 SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "65579165"
   
  運算式可能很簡單或很複雜。 *「簡單運算式」* (Simple Expression) 包含單一資料集欄位、參數或內建欄位的參考。 複雜運算式可包含多個內建參考、運算子和函數呼叫。 例如，複雜運算式可能會包含套用至 Sales 欄位的 Sum 函數。  
   
- 運算式是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]撰寫。 運算式的開頭是等號 (=)，後面緊接著內建集合 (如資料集欄位和參數、常數、函數及運算子) 之參考的組合。  
+ 運算式是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 撰寫。 運算式的開頭是等號 (=)，後面緊接著內建集合 (如資料集欄位和參數、常數、函數及運算子) 之參考的組合。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -57,12 +57,12 @@ ms.locfileid: "65579165"
 |根據值格式化文字方塊內的資料。|Tablix 的詳細資料資料列中，文字方塊內的預留位置色彩。 使用 **[文字方塊屬性對話方塊、字型]** 。|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |計算值一次，以便在整個報表中參考。|報表變數的值。 使用 **[報表屬性對話方塊、變數]** 。|`=Variables!MyCalculation.Value`|  
 |從資料集中併入一個以上欄位的特定值。|Tablix 中群組的篩選方程式。 使用 **[Tablix 屬性對話方塊、篩選]** 。|選取 **[布林值]** 做為資料類型。<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|隱藏設計介面上的文字方塊，使用者可以使用名為 *Show*的布林參數進行切換。|文字方塊上的 Hidden 屬性。 使用 **[文字方塊屬性對話方塊、可見性]** 。|`=Not Parameters!`*顯示\<布林參數>* `.Value`|  
+|隱藏設計介面上的文字方塊，使用者可以使用名為 *Show*的布林參數進行切換。|文字方塊上的 Hidden 屬性。 使用 **[文字方塊屬性對話方塊、可見性]** 。|`=Not Parameters!` Show\<布林參數>  `.Value`|  
 |指定動態頁首或頁尾內容。|放置在頁首或頁尾之文字方塊內的預留位置值。|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |使用參數動態指定資料來源。|資料來源上的連接字串。 使用 **[資料來源屬性對話方塊、一般]** 。|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |識別使用者選擇之多值參數的所有值。|文字方塊內的預留位置值。 使用 **[Tablix 屬性對話方塊、篩選]** 。|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  
 |在沒有其他群組的 Tablix 內，每 20 個資料列指定分頁符號。|Tablix 內群組的群組運算式。 使用 **[群組屬性對話方塊、分頁符號]** 。 選取 **[在群組的每個執行個體之間]** 選項。|`=Ceiling(RowNumber(Nothing)/20)`|  
-|根據參數指定條件式可見性。|Tablix 的 Hidden 屬性。 使用 **[Tablix 屬性對話方塊、可見性]** 。|`=Not Parameters!<` *布林值參數* `>.Value`|  
+|根據參數指定條件式可見性。|Tablix 的 Hidden 屬性。 使用 **[Tablix 屬性對話方塊、可見性]** 。|`=Not Parameters!<` 布林參數  `>.Value`|  
 |指定針對特定文化特性格式化的日期。|資料區中文字方塊內的預留位置值。 使用 **[文字方塊屬性對話方塊、一般]** 。|`=Fields!OrderDate.Value.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("de-DE"))`|  
 |串連字串及數字 (該數字格式化成兩個小數位數的百分比)。|資料區中文字方塊內的預留位置值。 使用 **[文字方塊屬性對話方塊、一般]** 。|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
   

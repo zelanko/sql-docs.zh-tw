@@ -9,10 +9,10 @@ ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 319f221116d49cab52b0c01a273db565a9049669
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574727"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>資料表 (報表產生器及 SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "65574727"
    
  您可以依單一欄位、多個欄位或透過撰寫自己的運算式來分組資料。 您可以建立巢狀群組或獨立、相鄰的群組。 若要顯示群組資料的彙總值，將總計加入到群組中。 格式化資料列和資料行以反白顯示您要強調的資料。 您可以一開始隱藏詳細資料或群組資料並加入向下鑽研切換，以便讓使用者以互動方式選擇要顯示多少資料。  
   
- 若要快速地開始使用資料表，請參閱[教學課程︰建立基本資料表報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) 或[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。  
+ 若要快速地開始使用資料表，請參閱[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) 或[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。  
   
 > [!NOTE]  
 >  您可以將資料表當做報表組件，與報表分開發行。 深入了解 [報表組件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
@@ -42,9 +42,9 @@ ms.locfileid: "65574727"
   
  ![在設計介面上選取的資料表範本](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "在設計介面上選取的資料表範本")  
   
- 資料列的資料列控制代碼會顯示詳細資料符號 (![具有詳細資料列之三條平行線的資料列代碼](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "具有詳細資料列之三條平行線的資料列代碼"))。 若要在這些資料列上顯示資料，將欄位從 [報表資料] 窗格拖曳到標頭資料列或詳細資料列的資料表資料格中。 兩個資料列會同時填入。 若要加入其他資料行，將欄位拖曳到資料表中，直到您看到插入點為止。 將資料集欄位加入到資料表之後，您可以變更日期和貨幣的預設格式來控制它們顯示在報表中的方式。 下圖顯示包含這些欄位的資料表資料區域：Date、Order、Product、Qty 和 Line Total。  
+ 資料列的資料列控制代碼會顯示詳細資料符號 (![具有 3 條平行線代表詳細資料列的資料列代碼](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "具有 3 條平行線代表詳細資料列的資料列控制代碼"))。 若要在這些資料列上顯示資料，將欄位從 [報表資料] 窗格拖曳到標頭資料列或詳細資料列的資料表資料格中。 兩個資料列會同時填入。 若要加入其他資料行，將欄位拖曳到資料表中，直到您看到插入點為止。 將資料集欄位加入到資料表之後，您可以變更日期和貨幣的預設格式來控制它們顯示在報表中的方式。 下圖顯示包含這些欄位的資料表資料區域：Date、Order、Product、Qty 和 Line Total。  
   
- ![設計、具有粗體資料行標頭的資料表](../../reporting-services/report-design/media/rs-basictabledetailsformatteddesign.gif "設計、具有粗體資料行標頭的資料表")  
+ ![設計，具有粗體資料行標頭的資料表](../../reporting-services/report-design/media/rs-basictabledetailsformatteddesign.gif "設計，具有粗體資料行標頭的資料表")  
   
  在預覽中檢視報表來檢查您的設計。 必要時，資料表會向下展開頁面。 標籤資料列和檢視資料列會分別針對資料集查詢結果集中的每個資料列顯示一次。 訂單中銷售的每個產品以及項目的數量和產品線總計都會列在個別的資料列中，如下圖所示：  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65574727"
 ### <a name="adding-totals-for-detail-data"></a>加入詳細資料的資料表  
  若要加入總計，選取包含數值資料的資料格，然後使用快速鍵功能表自動加入數值欄位之詳細資料的標籤和總計。 您也可以手動指定其他標籤和總計。 下圖顯示同時包含自動和手動指定之總計的一般總計：  
   
- ![新增總計資料列至資料表](../../reporting-services/report-design/media/rs-basictabledetailstotaldesign.gif "新增總計資料列至資料表")  
+ ![新增至資料表的總計資料列](../../reporting-services/report-design/media/rs-basictabledetailstotaldesign.gif "新增至資料表的總計資料列")  
   
  在預覽中，報表會針對資料集查詢結果集中的每個資料列顯示一次標頭資料列和詳細資料列，而且該報表會顯示總計資料列。 下圖顯示資料表的最後幾個資料列，包括總計資料列。  
   
@@ -68,22 +68,22 @@ ms.locfileid: "65574727"
   
  下圖顯示 [設計] 檢視中包含兩個巢狀資料列群組的資料表。 若要建立資料列群組，拖曳 Order 欄位，然後將 Date 欄位拖曳到 [資料列群組] 窗格，並插入每個群組，當做現有群組的父系。 此圖表顯示一個以日期為基礎的父群組與一個以訂單號碼為基礎的子群組，以及依預設定義的詳細資料群組。  
   
- ![依日期和訂單分組的資料表](../../reporting-services/report-design/media/rs-basictablegroupsdesign.gif "依日期和訂單分組的資料表")  
+ ![依照日期和訂單分組的資料表](../../reporting-services/report-design/media/rs-basictablegroupsdesign.gif "依照日期和訂單分組的資料表")  
   
  在預覽中，報表會顯示先依日期，然後依訂單分組的訂單資料，如下圖所示。  
   
- ![依日期和訂單分組的資料表](../../reporting-services/media/rs-basictablegroupspreview.png "依日期和訂單分組的資料表")  
+ ![](../../reporting-services/media/rs-basictablegroupspreview.png "依照日期後依照訂單分組的資料表")  
   
  顯示群組資料的另一種方法是讓群組階層縮排，以顯示群組的巢狀關聯性，而不是在其自己的資料行中呈現每個值。 這種格式樣式稱為階梯狀報表。 如需如何將群組資訊格式化為階梯狀報表的詳細資訊，請參閱[建立階梯狀報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md)。  
   
 ### <a name="adding-totals-to-row-groups"></a>將總計加入到資料列群組  
  若要顯示群組的總計，您可以使用內容相關的 **[加入總計]** 命令。 若是資料列群組，[加入總計] 命令會加入群組外的資料列，讓該資料列僅針對群組重複一次。 若是巢狀群組，子群組的總計資料列位於子群組外部，但位於父群組內部。 在此種情況下，針對子群組設定總計資料列的背景色彩以便與詳細資料列區隔相當實用。 您也可以使用不同的背景色彩區隔資料表頁首與頁尾資料列。 下圖顯示根據訂單號碼，針對群組加入總計資料列的資料表。  
   
- ![設計檢視，新增總資料列至群組和資料表](../../reporting-services/report-design/media/rs-basictablegroupstotalscolordesign.gif "設計檢視，新增總資料列至群組和資料表")  
+ ![設計檢視，將總計資料列新增至群組和資料表](../../reporting-services/report-design/media/rs-basictablegroupstotalscolordesign.gif "設計檢視，將總計資料列新增至群組和資料表")  
   
  當您檢視報表時，顯示訂單小計的資料列會針對每個訂單號碼重複一次。 資料表頁尾會顯示所有日期的總計。 在下圖中，最後幾個資料列顯示最後三個詳細資料列、最後一個訂單號碼 SO71952 的小計，以及資料表中所有日期的總計。  
   
- ![預覽，具有群組總計的資料表、最後資料列](../../reporting-services/report-design/media/rs-basictablegroupstotalscolorpreviewbottom.gif "預覽，具有群組總計的資料表、最後資料列")  
+ ![預覽，具有群組總計的資料表、最後的資料列](../../reporting-services/report-design/media/rs-basictablegroupstotalscolorpreviewbottom.gif "預覽，具有群組總計的資料表、最後的資料列")  
   
  如需詳細資訊，請參閱[將總計加入到群組或 Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)。  
   

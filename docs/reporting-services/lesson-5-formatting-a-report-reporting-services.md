@@ -9,10 +9,10 @@ ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65105931"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>第 5 課：格式化報表 (Reporting Services)
@@ -65,7 +65,7 @@ LineTotal 欄位運算式會顯示一般數字。 您可以格式化該欄位，
 
 ## <a name="next-steps"></a>後續步驟
 
-您已經在本課成功格式化資料行標頭和欄位運算式。 下一步，您會將群組和總計加入至報表。 請繼續[第 6 課：新增群組和總計 &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)。
+您已經在本課成功格式化資料行標頭和欄位運算式。 下一步，您會將群組和總計加入至報表。 繼續進行[第 6 課：新增群組和總計 &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)。
 
 ## <a name="see-also"></a>另請參閱
 

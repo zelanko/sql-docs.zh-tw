@@ -14,14 +14,14 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 08/07/2019
-ms.openlocfilehash: 4fa84860e2d101b43b1ea4ebfe09d9580c0088ee
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 5a31fb94fad2e063fe9846bd820957abb4ce9b32
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893218"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243901"
 ---
 # <a name="ssms-utility"></a>SSMS 公用程式
 
@@ -50,16 +50,16 @@ ms.locfileid: "68893218"
  
  *solutionfile* 指定要開啟的解決方案。 這個參數必須包含方案檔的完整路徑。 
  
-[ **-S** _伺服器名稱_] 伺服器名稱
+[ **-S** _servername_] 伺服器名稱
  
-[ **-d** _資料庫名稱_] 資料庫名稱
+[ **-d** _databasename_] 資料庫名稱
 
 [ **-G**] 使用 Active Directory 驗證來連線。 是否包含 **-U** 會決定連線的類型。
 
 > [!Note]
 > 目前不支援**具 MFA 支援的 Active Directory - 通用**。
  
-[ **-U** _使用者名稱_] 與「SQL 驗證」連線時，為使用者名稱
+[ **-U** _username_] 與「SQL 驗證」連線時的使用者名稱
  
 [ **-E**] 使用 Windows 驗證進行連線
  
@@ -69,7 +69,7 @@ ms.locfileid: "68893218"
  
 [ **-?** ] 顯示命令列說明
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 所有參數皆為選擇性參數，以空格加以分隔，但檔案除外，檔案以逗號分隔。 如果您沒有指定任何參數，**Ssms** 會依照 [工具]  功能表上，[選項]  設定中所指定的內容來開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 例如，如果 [環境/一般]  頁面的 [啟動時]  選項指定了 [開啟新增查詢視窗]  ，**Ssms** 開啟時就會出現空白的查詢編輯器。
  
@@ -79,7 +79,7 @@ ms.locfileid: "68893218"
 
 下表將伺服器類型對應至副檔名。
  
-|伺服器類型|延伸模組| 
+|伺服器類型|分機| 
 |-----------------|---------------| 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|.sql|
 |SQL Server Analysis Services|.mdx<br /><br /> .xmla|

@@ -1,5 +1,5 @@
 ---
-title: 教學課程：在 SQL Server Management Studio 中撰寫物件指令碼
+title: SSMS 指令碼物件
 description: 在 SSMS 中撰寫物件指令碼的教學課程
 keywords: SQL Server, SSMS, SQL Server Management Studio, 指令碼, 撰寫指令碼
 author: MashaMSFT
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 36d3b90a9ac1e49af564323c86421216216522a9
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: f1709114c064e6d46ab69ba7a15143bab24ea280
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72988410"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247301"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中撰寫物件指令碼
 
@@ -115,7 +115,7 @@ ms.locfileid: "72988410"
 
 6. 選取 [全部取代]  以將所有 *AdventureWorks2016* 的執行個體取代為 *AdventureWorks2016a*。 
 
-    ![尋找及取代](media/scripting-ssms/findandreplace.png)
+    ![尋找並取代](media/scripting-ssms/findandreplace.png)
 
 7. 選取 [執行]  來執行查詢並建立新的 AdventureWorks2016a 資料庫。 
 
@@ -135,9 +135,9 @@ ms.locfileid: "72988410"
 
 5. 選取 [下一步]  來開啟 [設定指令碼編寫選項]  頁面。 在這裡您可以設定指令碼的儲存位置以及其他進階選項。 
 
-    A. 選取 [儲存至新增查詢視窗]  。
+    a. 選取 [儲存至新增查詢視窗]  。
 
-    B. 選取 [進階]  並確認這些選項皆已設定：
+    b. 選取 [進階]  並確認這些選項皆已設定：
 
       * [編寫統計資料的指令碼]  已設定為 [編寫統計資料的指令碼]  。
       * [要編寫指令碼的資料類型]  已設定為 [僅結構描述]  。

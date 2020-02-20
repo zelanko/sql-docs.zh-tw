@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68259358"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services 中的樹狀圖與放射環狀圖 
@@ -45,7 +45,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
     * **類別目錄群組** (依下列順序)：
         1. CategoryName
         2. SubcategoryName
-    * **數列群組**：TerritoryName  
+    * **序列群組**：TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -91,7 +91,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
         1. CategoryName
         2. SubcategoryName
         3. SalesReasonName
-    * **數列群組**：TerritoryName  
+    * **序列群組**：TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -115,7 +115,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
   
 1. **取得資料**。  
   
-     本節中的查詢是以 AdventureWorks 資料庫為基礎，該資料庫可從 GitHub：[AdventureWorks 2016 完整資料庫備份](https://github.com/Microsoft/sql-server-samples/releases)下載取得。  
+     本節中的查詢是以 AdventureWorks 資料庫為基礎，此資料庫可從 GitHub 下載：[AdventureWorks 2016 完整資料庫備份](https://github.com/Microsoft/sql-server-samples/releases)。  
 
 2. **建立資料來源**。  
   
@@ -180,4 +180,4 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
 
 * [教學課程：Power BI 中的樹狀圖](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
 
-* [樹狀圖：適用於 Office 的 Microsoft 研究資料視覺效果應用程式](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)
+* [Treemap:Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx) (樹狀圖：適用於 Office 之 Microsoft 研究的資料視覺效果應用程式)

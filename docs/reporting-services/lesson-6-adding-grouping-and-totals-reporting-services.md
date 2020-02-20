@@ -9,13 +9,13 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b5b9846a20615cf613dd50752ac63f2669b1e399
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65089670"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>第 6 課：新增群組和總計 (Reporting Services)
 
 在最終的教學課程中，您會將群組和總計新增至 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表以組織和摘要資料。  
 
@@ -58,7 +58,7 @@ ms.locfileid: "65089670"
 6. 從 [格式]  功能表上，選取[背景色彩]   > [淺灰]  正方形。
 7. 選取 [確定]  來套用格式。
 
-   ![設計檢視：具有訂單總計的基本資料表](media/rs-basictablesumlinetotaldesign.gif "設計檢視：具有訂單總計的基本資料表")
+   ![設計檢視：包含訂單總計的基本資料表](media/rs-basictablesumlinetotaldesign.gif "設計檢視：包含訂單總計的基本資料表")
 
 ## <a name="add-the-daily-total-to-the-report"></a>在報表中加入每日總計
 
@@ -84,7 +84,7 @@ ms.locfileid: "65089670"
 
 若要預覽格式變更，請選取 [預覽]  索引標籤。在 [預覽]  工具列中，選取 [最後一頁]  按鈕，如下所示 ![ssrs_ssdt_viewertoolbar_lastpage](media/ssrs-ssdt-viewertoolbar-lastpage.png)。 結果應該會顯示如下：
 
-   ![預覽：具有總計的基本資料表](media/rs-basictablesumgrandtotalpreview.gif "預覽：具有總計的基本資料表")
+   ![預覽：包含總計的基本資料表](media/rs-basictablesumgrandtotalpreview.gif "預覽：包含總計的基本資料表")
 
 ## <a name="publishing-the-report-to-the-report-server-optional"></a>將報表發佈至*報表伺服器* (選擇性)
 
@@ -101,15 +101,15 @@ ms.locfileid: "65089670"
 
     如果您在 [輸出]  視窗中看見類似如下的訊息，就表示部署成功。
 
-    > ------ 已經開始建立: 專案: tutorial，組態: 偵錯 ------  
+    > ------ 建置已開始：專案：教學課程，設定：偵錯 ------  
     > 正在略過 'Sales Orders.rdl'。 項目已是最新版本。  
     > 建立已完成 -- 0 個錯誤，0 個警告  
-    > ------ 已經開始部署: 專案: tutorial，組態: 偵錯 ------  
+    > ------ 已開始部署：專案：教學課程，設定：偵錯 ------  
     > 正在部署至 `https://[server name]/reportserver`  
     > 正在部署報表 '/tutorial/Sales Orders'。  
     > 部署已完成 -- 0 個錯誤，0 個警告  
-    > ========== 建置: 1 個成功或最新狀態，0 個失敗，0 個略過 ==========  
-    > ========== 部署: 1 個成功，0 個失敗，0 個略過 ==========  
+    > ========== 建置：1 個成功或已是最新狀態，0 個失敗，0 個略過 ==========  
+    > ========== 部署：1 個成功，0 個失敗，0 個略過 ==========  
 
     如果您看見類似如下的錯誤訊息，請確認您擁有報表伺服器的適當權限，而且已經以系統管理員權限啟動 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]。
     >

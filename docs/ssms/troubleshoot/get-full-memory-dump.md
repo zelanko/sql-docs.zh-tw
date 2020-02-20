@@ -1,5 +1,5 @@
 ---
-title: 取得完整記憶體傾印以針對 SQL Server Management Studio (SSMS) 進行疑難排解
+title: 取得完整的記憶體傾印以針對 SSMS 進行疑難排解
 Description: 透過收集完整記憶體傾印，針對 SSMS 停止回應或當機進行疑難排解
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -9,14 +9,14 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: dineth, sstein
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: 95beb87d72295f4f5ea10b5bb33476d4d27af628
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 95e88b8bbf61e04251ce17ad0a4fcd5aff91cc9e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266717"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247165"
 ---
 # <a name="get-full-memory-dump"></a>取得完整記憶體傾印
 

@@ -1,5 +1,5 @@
 ---
-title: 安裝非英文語言版本的 SQL Server Management Studio (SSMS) | Microsoft Docs
+title: 安裝非英文語言版本
 description: 安裝非英文語言版本的 SQL Server Management Studio (SSMS)
 ms.prod: sql
 ms.reviewer: ''
@@ -7,14 +7,14 @@ ms.technology: ssms
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 04/25/2019
-ms.openlocfilehash: fb1d51121f38aa2adfe0bdfbfcb6c5bcc10d8c4f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: cc4d98322f0422053402bdf097674c90807e11a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265015"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246878"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>安裝非英文語言版本的 SQL Server Management Studio (SSMS)
 

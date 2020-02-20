@@ -1,10 +1,8 @@
 ---
-title: 錯誤清單視窗 (Management Studio) | Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
+title: '[錯誤清單] 視窗'
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -14,20 +12,28 @@ helpviewer_keywords:
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcf0886a58e1e735e95ed0383313769f4796bd24
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 64fa6b834d3f771712f9ce09dedb237fff46ed2c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253636"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243388"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL 偵錯工具 - 錯誤清單視窗
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [錯誤清單]  會顯示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中從 IntelliSense 程式碼產生的語法和語意錯誤。  
-  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [錯誤清單]  會顯示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中有哪些 IntelliSense 程式碼產生的語法和語意錯誤。  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
 ## <a name="features-of-the-error-list"></a>錯誤清單的功能  
- [錯誤清單]  提供了以下功能：  
+
+[錯誤清單]  提供了以下功能：  
   
 -   當您編輯指令碼時，[錯誤清單]  會顯示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中由 IntelliSense 產生的錯誤和警告。  
   
@@ -59,7 +65,7 @@ ms.locfileid: "68253636"
 ## <a name="transact-sql-errors-in-management-studio"></a>Management Studio 中的 Transact-SQL 錯誤  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會在以下位置顯示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼的錯誤：  
   
--   [錯誤清單]  包含 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 編輯器中 IntelliSense 所找到的所有語法和語意錯誤。 當您編輯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼時，會動態更新這份錯誤清單。 此清單包含編輯器在每一個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼中找到的所有錯誤。 編輯器在發現指令碼中的錯誤之後，不會停止剖析檔案。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 編輯器中的 IntelliSense 不會支援所有的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法元素。 [錯誤清單]  只包含 IntelliSense 支援之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法中的錯誤。  
+-   [錯誤清單]  包含 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 編輯器中 IntelliSense 所找到的所有語法和語意錯誤。 當您編輯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼時，會動態更新這份錯誤清單。 此清單包含編輯器在每一個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼中找到的所有錯誤。 編輯器在發現指令碼中的錯誤之後，不會停止剖析檔案。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 編輯器中的 IntelliSense 不會支援所有的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法元素。 [錯誤清單]  只包含 IntelliSense 支援之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法中的錯誤。  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗底端的 [訊息]  索引標籤會顯示當執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼時，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 所傳回的所有錯誤和訊息。 此清單要等到您再次執行此指令碼之後，才會變更。 當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 找到一或兩個編譯錯誤之後，就會停止剖析批次；因此，[訊息]  索引標籤可能不會列出指令碼中的所有錯誤。  
   

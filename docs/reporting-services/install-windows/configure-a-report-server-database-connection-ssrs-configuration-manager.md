@@ -1,19 +1,20 @@
 ---
-title: 設定報表伺服器資料庫連線 (SSRS 設定管理員) | Microsoft Docs
+title: 設定報表伺服器資料庫連線 (組態管理員) | Microsoft Docs
+description: 每個報表伺服器執行個體都需要連線至儲存伺服器所管理之報表、共用資料來源、資源和中繼資料的報表伺服器資料庫。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
-ms.custom: seodec18
-ms.date: 10/09/2019
-ms.openlocfilehash: 7c781721ff9dcd2ec82844e8e0604aca83a186e4
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019, seo-mmd-2019
+ms.date: 12/04/2019
+ms.openlocfilehash: d65c0e8bebf9f4019055e2fbabb30785235dacea
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72239373"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866035"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>設定報表伺服器資料庫連接 (SSRS 組態管理員)
 
@@ -109,7 +110,7 @@ ms.locfileid: "72239373"
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> 使用 Azure SQL 受控執行個體來裝載 Reporting Services 2019 資料庫時，支援僅限於使用 SQL Server 登入認證來進行連線。
+> 使用 Azure SQL 受控執行個體裝載 Reporting Services 2019 資料庫時，支援僅限於使用 SQL Server 登入認證進行連線。
 
 ::: moniker-end
 

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 82559832d11d9461665e89963026a267d9f0554c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68267493"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>在 SQL Server Reporting Services (SSRS) 中預覽報表
@@ -25,7 +25,7 @@ ms.locfileid: "68267493"
   
 ## <a name="preview-mode"></a>預覽模式
 
- 您可以預覽報表在報表設計師中的，依序按一下![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png "ssrs_ssdt_preview")。 這會在本機執行報表，使用與報表伺服器相同的報表處理與轉譯功能。 顯示的報表是互動式影像；您可以選取參數、按一下連結、檢視文件引導模式，以及展開和摺疊報表的隱藏區域。 您也可以將報表匯出至任何已安裝的轉譯格式。  
+ 您可以按一下 ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png "ssrs_ssdt_preview") 以在報表設計師中預覽報表。 這會在本機執行報表，使用與報表伺服器相同的報表處理與轉譯功能。 顯示的報表是互動式影像；您可以選取參數、按一下連結、檢視文件引導模式，以及展開和摺疊報表的隱藏區域。 您也可以將報表匯出至任何已安裝的轉譯格式。  
   
 ## <a name="standalone-preview"></a>獨立預覽
 
@@ -33,7 +33,7 @@ ms.locfileid: "68267493"
   
 - 在 [偵錯]  功能表中，按一下 [開始偵錯]  。  
   
-- 依序按一下**啟動**按鈕[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][標準] 工具列![ssrs_ssdt_startdebug](../../reporting-services/reports/media/ssrs-ssdt-startdebug.png "ssrs_ssdt_startdebug")。  
+- 按一下 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 標準工具列 ![ssrs_ssdt_startdebug](../../reporting-services/reports/media/ssrs-ssdt-startdebug.png "ssrs_ssdt_startdebug") 上的 [啟動]  按鈕。  
   
 - 按下 **F5**。  
   

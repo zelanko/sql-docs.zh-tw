@@ -16,14 +16,14 @@ ms.assetid: 102da66e-ca31-41aa-ab4b-c9b5ab752a72
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6f8eab7033c0307d4cc49f0138210ea5733fa660
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571161"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>SAP NetWeaver BI 查詢設計工具使用者介面
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了圖形化查詢設計工具，可用來建立適用於 SAP NetWeaver® Business Intelligence 資料來源的多維度運算式 (MDX) 查詢。 MDX 圖形化查詢設計工具有兩種模式：「設計」模式和「查詢」模式。 每一種模式都會提供 [中繼資料] 窗格，您可以在這個窗格中，從資料來源上定義的 InfoCube、MultiProvider 或 Web 查詢中拖曳成員，從而建立 MDX 查詢，在處理報表時擷取資料。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了圖形化查詢設計工具，可用來建立適用於 SAP NetWeaver® Business Intelligence 資料來源的多維度運算式 (MDX) 查詢。 MDX 圖形化查詢設計工具有兩種模式：設計模式和查詢模式。 每一種模式都會提供 [中繼資料] 窗格，您可以在這個窗格中，從資料來源上定義的 InfoCube、MultiProvider 或 Web 查詢中拖曳成員，從而建立 MDX 查詢，在處理報表時擷取資料。  
   
 > [!IMPORTANT]  
 >  當使用者建立與執行查詢時，可以存取資料來源。 您應該授與資料來源的最小權限，例如唯讀權限。  
@@ -39,7 +39,7 @@ ms.locfileid: "65571161"
   
  下表列出此模式下的窗格。  
   
-|窗格|函數|  
+|窗格|函式|  
 |----------|--------------|  
 |[選取 Cube] 按鈕|顯示目前選取的 InfoCube、MultiProvider 或 Web 查詢。|  
 |[中繼資料] 窗格|顯示 InfoCube、MultiProvider 和查詢的階層式清單。 在資料來源建立的查詢可能會顯示在對應的 Cube 底下。|  
@@ -51,13 +51,13 @@ ms.locfileid: "65571161"
 ### <a name="toolbar-for-the-graphical-query-designer-in-design-mode-toolbar"></a>設計模式中的圖形化查詢設計工具工具列  
  查詢設計工具工具列會提供按鈕，協助您使用圖形化介面設計 MDX 查詢。 下表描述這些按鈕及其功能。  
   
-|按鈕|Description|  
+|按鈕|描述|  
 |------------|-----------------|  
 |**當成文字編輯**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。 無法用於這種資料來源類型。|  
 |**匯入**|從檔案系統上的報表定義 (.rdl) 檔案匯入現有的查詢。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
 |![重新整理資料集欄位](../../reporting-services/report-data/media/rsqdicon-refreshfields.gif "重新整理資料集欄位")|重新整理資料來源中的中繼資料。|  
-|![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|顯示 **[導出成員產生器]** 對話方塊。|  
-|![切換以顯示空的資料格](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "切換以顯示空的資料格")|在顯示或隱藏 [資料] 窗格中的空白資料格之間切換 (這相當於使用 MDX 中的 NON EMPTY 子句)。|  
+|![新增導出成員](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "加入導出成員")|顯示 **[導出成員產生器]** 對話方塊。|  
+|![切換以顯示空資料格](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "切換以顯示空資料格")|在顯示或隱藏 [資料] 窗格中的空白資料格之間切換 (這相當於使用 MDX 中的 NON EMPTY 子句)。|  
 |![自動執行查詢](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "自動執行查詢")|每次進行變更 (例如刪除 [資料] 窗格中的資料行) 時自動執行查詢並顯示結果。 結果會顯示在 [資料] 窗格中。|  
 |![刪除](../../reporting-services/report-data/media/rsqdicon-delete.gif "刪除")|從查詢中刪除 [資料] 窗格中選取的資料行。|  
 |![[查詢參數] 對話方塊圖示](../../reporting-services/report-data/media/iconqueryparameter.gif "[查詢參數] 對話方塊圖示")|顯示 **[變數]** 對話方塊。 只有當選取的 Cube 是查詢 Cube 時，才會啟用這個按鈕 (因為只有查詢 Cube 才支援變數)。 當您指派預設值給變數時，就會建立對應的報表參數。|  
@@ -74,7 +74,7 @@ ms.locfileid: "65571161"
   
  下表會描述各個窗格的功能。  
   
-|窗格|函數|  
+|窗格|函式|  
 |----------|--------------|  
 |[選取 Cube] 按鈕|顯示目前選取的 InfoCube、MultiProvider 或其他 Cube。|  
 |[中繼資料/函數] 窗格|顯示索引標籤式的視窗，列出可用來建立查詢文字的可用中繼資料或函數清單。|  
@@ -93,9 +93,9 @@ ms.locfileid: "65571161"
   
 -   **當成文字編輯**  
   
--   **加入導出成員** (![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **新增導出成員** (![新增導出成員](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "加入導出成員"))  
   
--   **顯示空的資料格** (![切換以顯示空的資料格](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "切換以顯示空的資料格"))  
+-   **顯示空資料格** (![切換以顯示空資料格](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "切換以顯示空資料格"))  
   
 -   **自動執行** (![自動執行查詢](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "自動執行查詢"))  
   
@@ -103,6 +103,6 @@ ms.locfileid: "65571161"
   
 ## <a name="see-also"></a>另請參閱  
  [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [RSReportDesigner 組態檔](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
+ [RSReportDesigner 設定檔](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: 新增別名 (別名索引標籤) |Microsoft Docs
-ms.custom: ''
+title: 新增別名 (別名索引標籤)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 24b08707a13bd67fcac41df0104ca916bfb2179c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: d691369d3df437cb8312d66f521eb48c20212ca8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010026"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306435"
 ---
 # <a name="new-alias-alias-tab"></a>新增別名 (別名索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68010026"
  用於連接的通訊協定。  
   
  **Server**  
- 要連接之目標 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。  
+ 要連接的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。  
   
 ## <a name="when-to-use-an-alias"></a>使用別名的時機  
  依預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共用記憶體 **通訊協定來連接到** 的本機執行個體；使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TCP/IP **或** 具名管道 **來連接到其他電腦上的**執行個體。 當您想要使用 TCP/IP 或具名管道，並且想要提供自訂連接字串，或當您想要使用其他名稱 (而不使用伺服器名稱) 來進行連接時，請建立別名。  

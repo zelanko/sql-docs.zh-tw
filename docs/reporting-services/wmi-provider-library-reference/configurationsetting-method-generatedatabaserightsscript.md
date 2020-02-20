@@ -16,10 +16,10 @@ ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8714aee2b5bb33c84a1d9f11b626d3e21e06ed1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570962"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>ConfigurationSetting 方法 - GenerateDatabaseRightsScript
@@ -61,7 +61,7 @@ out Int32 HRESULT);
 ## <a name="return-value"></a>傳回值  
  傳回 *HRESULT* ，指出方法呼叫成功或失敗。 值為 0 表示方法呼叫成功。 非零值則表示已發生錯誤。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 *DatabaseName* 是空的，即忽略 *IsRemote* ，而且報表伺服器組態檔值會用於資料庫名稱。  
   
  如果 *IsWindowsUser* 設為 **true**，則 *UserName* 的格式應該為 \<網域>\\<使用者名稱\>。  
@@ -87,7 +87,7 @@ out Int32 HRESULT);
   
  如果指定了 **LocalService** 內建帳戶，而且報表伺服器資料庫位於遠端，就會傳回錯誤。  
   
- 當 *IsWindowsUser* 為 true，且必須轉譯 *UserName* 提供的值時，WMI 提供者就會判斷報表伺服器資料庫位於同一部電腦或遠端電腦上。 為了判斷安裝是否位於本機，WMI 提供者會根據下列值清單評估 DatabaseServerName 屬性。 如果找到相符項目，表示資料庫位於本機。 否則，就表示資料庫位於遠端。 這項比較不區分大小寫。  
+ 當 *IsWindowsUser* 為 true，且必須轉譯 *UserName* 提供的值時，WMI 提供者就會判斷報表伺服器資料庫位於同一部電腦或遠端電腦上。 為了判斷安裝是否位於本機，WMI 提供者會根據下列值清單評估 DatabaseServerName 屬性。 如果找到相符項目，表示資料庫位於本機。 否則，就表示資料庫位於遠端。 此比較不區分大小寫。  
   
 |DatabaseServerName 的值|範例|  
 |---------------------------------|-------------|  

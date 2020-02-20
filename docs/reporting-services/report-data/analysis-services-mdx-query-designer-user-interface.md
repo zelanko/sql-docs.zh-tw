@@ -15,10 +15,10 @@ ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 41d02ba0cd1dc9067bd6425895e53d9a949fd0d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573270"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services MDX 查詢設計工具使用者介面
@@ -41,7 +41,7 @@ ms.locfileid: "65573270"
   
  下表列出此模式下的窗格：  
   
-|窗格|函數|  
+|窗格|函式|  
 |----------|--------------|  
 |[Select Cube (選取 Cube)] 按鈕 ( **...** )|顯示目前選取的 Cube。|  
 |[中繼資料] 窗格|顯示在選取的 Cube 上定義之量值、關鍵效能指標 (KPI) 和維度的階層式清單。|  
@@ -62,15 +62,15 @@ ms.locfileid: "65573270"
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>設計模式中的圖形化 MDX 查詢設計工具工具列  
  查詢設計工具工具列會提供按鈕，協助您使用圖形化介面設計 MDX 查詢。 下表列出這些按鈕及其功能。  
   
-|按鈕|Description|  
+|按鈕|描述|  
 |------------|-----------------|  
 |**當成文字編輯**|這種資料來源類型不啟用|  
 |**匯入**|從檔案系統上的報表定義 (.rdl) 檔案匯入現有的查詢。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
 |![變更為 MDX 查詢檢視](../../reporting-services/report-data/media/rsqdicon-commandtypemdx.gif "變更為 MDX 查詢檢視")|切換到命令類型 MDX。|  
 |![變更為 DMX 查詢語言檢視](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "變更為 DMX 查詢語言檢視")|切換到命令類型 DMX。|  
 |![重新整理結果資料](../../reporting-services/report-data/media/rsqdicon-refresh.gif "重新整理結果資料")|重新整理資料來源中的中繼資料。|  
-|![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|顯示 **[導出成員產生器]** 對話方塊。|  
-|![切換以顯示空的資料格](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "切換以顯示空的資料格")|在顯示或隱藏 [資料] 窗格中的空白資料格之間切換 (這相當於使用 MDX 中的 NON EMPTY 子句)。|  
+|![新增導出成員](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "加入導出成員")|顯示 **[導出成員產生器]** 對話方塊。|  
+|![切換以顯示空資料格](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "切換以顯示空資料格")|在顯示或隱藏 [資料] 窗格中的空白資料格之間切換 (這相當於使用 MDX 中的 NON EMPTY 子句)。|  
 |![自動執行查詢](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "自動執行查詢")|每次進行變更時，自動執行查詢並顯示結果。 結果會顯示在 [資料] 窗格中。|  
 |![顯示彙總按鈕](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "顯示彙總按鈕")|將彙總顯示在 [資料] 窗格中。|  
 |![刪除](../../reporting-services/report-data/media/rsqdicon-delete.gif "刪除")|從查詢中刪除 [資料] 窗格中選取的資料行。|  
@@ -89,7 +89,7 @@ ms.locfileid: "65573270"
   
  下表列出此模式下的窗格：  
   
-|窗格|函數|  
+|窗格|函式|  
 |----------|--------------|  
 |[Select Cube (選取 Cube)] 按鈕 ( **...** )|顯示目前選取的 Cube。|  
 |[中繼資料/函數/範本] 窗格|顯示在選取的 Cube 上定義之量值、KPI 和維度的階層式清單。|  
@@ -107,9 +107,9 @@ ms.locfileid: "65573270"
   
 -   **當成文字編輯**  
   
--   **加入導出成員** (![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **新增導出成員** (![新增導出成員](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "加入導出成員"))  
   
--   **顯示空的資料格** (![切換以顯示空的資料格](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "切換以顯示空的資料格"))  
+-   **顯示空資料格** (![切換以顯示空資料格](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "切換以顯示空資料格"))  
   
 -   **自動執行** (![自動執行查詢](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "自動執行查詢"))  
   
@@ -120,6 +120,6 @@ ms.locfileid: "65573270"
  [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
  [RSReportDesigner 組態檔](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Analysis Services Connection Type for MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
+ [MDX 的 Analysis Services 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
   
   

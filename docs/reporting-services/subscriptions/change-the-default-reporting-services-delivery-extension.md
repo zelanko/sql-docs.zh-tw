@@ -11,10 +11,10 @@ ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 007427739f91a12ea6603bbf58450821d2c999ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66500396"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>變更預設 Reporting Services 傳遞延伸模組
@@ -85,7 +85,7 @@ ms.locfileid: "66500396"
   
      **事件識別碼：** 109  
   
-     **來源** ：報表伺服器 Windows 服務 (執行個體名稱)  
+     **來源：** 報表伺服器 Windows 服務 (執行個體名稱)  
   
      已修改 RSReportServer.config 檔  
   

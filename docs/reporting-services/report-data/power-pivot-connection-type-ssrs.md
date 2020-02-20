@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed100221dd827b84dba935db730d02e8268aac41
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
-ms.translationtype: MTE75
+ms.openlocfilehash: 8d6c9273abda883b175a46d9695d4d231cc5bc73
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73638009"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190757"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Power Pivot 連接類型 (SSRS)
   您可以使用 SQL Server Analysis Services 資料處理延伸模組，從已在 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中發行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿中擷取資料。  
@@ -32,20 +32,20 @@ ms.locfileid: "73638009"
  連接字串是已在 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫或其他文件庫中發行之 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的 URL，例如 `https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`。  
   
 ## <a name="credentials"></a>認證  
- 請指定存取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿和 SharePoint 網站所需的認證，例如 Windows 驗證 (整合式安全性)。 如需詳細資訊，請參閱[資料連線、資料來源和連接&#40;字串報表產生器和&#41; SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ，或[指定報表資料來源的認證和連接資訊](specify-credential-and-connection-information-for-report-data-sources.md)。  
+ 請指定存取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿和 SharePoint 網站所需的認證，例如 Windows 驗證 (整合式安全性)。 如需詳細資訊，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[指定報表資料來源的認證及連接資訊](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
 ## <a name="queries"></a>查詢  
  在您連接至 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料來源之後，請使用 MDX 圖形化查詢來建立查詢，其方式是從基礎資料結構進行瀏覽及選取。 建立查詢之後，請執行查詢，於結果窗格中查看範例資料。  
   
  查詢設計工具會分析該查詢來決定資料集的欄位。 您也可以在 [報表資料]  窗格中手動編輯資料集欄位集合。 如需詳細資訊，請參閱[加入、編輯、重新整理報表資料窗格中的欄位 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。  
   
-## <a name="filters"></a>篩選  
+## <a name="filters"></a>篩選器  
  在 [篩選] 窗格中，請指定要從查詢結果中篩選出或包含在查詢結果中的維度和成員。  
   
 ## <a name="parameters"></a>參數  
  在 [篩選] 窗格中，選取篩選的 [參數]  選項，以便使用對應至篩選選取範圍的可用值來自動建立報表參數。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果您從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿開啟報表產生器，該報表就不會重新建立樞紐分析表、樞紐分析圖、交叉分析篩選器，以及來自 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的其他配置和分析功能。 而是，空白報表會包括指向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿中資料的預先設定資料來源。 根據您想要在報表中重新建立的交叉分析篩選器、篩選和資料表或圖表數目，設計以 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿為基礎的報表可能會相當費時耗力。 較佳的方法是分開想像報表資料的呈現方式與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 設計方式。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿中的資料會進行高度壓縮，而針對報表從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿中擷取的資料則不會進行壓縮。 您可以使用查詢設計工具來指定篩選和參數，以便將資料限制為報表所需的項目。  

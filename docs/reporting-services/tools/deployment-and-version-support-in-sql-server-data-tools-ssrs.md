@@ -9,10 +9,10 @@ ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571500"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的部署和版本支援 (SSDT) | Microsoft Docs
@@ -33,7 +33,7 @@ ms.locfileid: "65571500"
   
  系統會先建立報表，然後才將報表轉譯為報表設計師中的預覽或部署到報表伺服器。  
   
- 您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **[專案屬性]** 對話方塊中設定組態屬性。  
+ 您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [專案屬性]  對話方塊中設定組態屬性。  
   
  建立與部署屬性包括：  
   
@@ -41,29 +41,29 @@ ms.locfileid: "65571500"
   
 -   ErrorLevel 是建置屬性，會識別回報為錯誤之建置問題的嚴重性。 嚴重性層級小於或等於 ErrorLevel 值的問題會回報為錯誤；否則，會將這些問題回報為警告。 如需詳細資訊，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) 中的＜報表驗證和錯誤等級＞一節。  
   
--   TargetServerVersion 是部署屬性，可以識別 TargetServerURL 屬性中所指定之目標報表伺服器上安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預期版本。  
+-   TargetServerVersion 是部署屬性，可以識別 TargetServerURL 屬性中所指定目標報表伺服器上安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預期版本。  
   
- 當您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 對話方塊中指定舊版 **[專案屬性]** 時，系統不會自動將報表還原到舊版。 因此，報表伺服器專案可以包含來自兩個不同版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的報表。 部署報表伺服器專案時，專案中的所有報表會轉換為 TargetServerVersion 中指定的版本。  
+ 當您在 [專案屬性]  對話方塊中指定舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 時，系統不會自動將報表還原為舊版。 因此，報表伺服器專案可以包含來自兩個不同版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的報表。 部署報表伺服器專案時，專案中的所有報表會轉換為 TargetServerVersion 中指定的版本。  
   
  您可以在專案中加入一個以上的專案組態。而每一個專案組態都用於不同的狀況，例如，部署到不同版本的報表伺服器。 如需詳細資訊，請參閱[設定部署屬性 &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md) 和[專案屬性頁對話方塊](../../reporting-services/tools/project-property-pages-dialog-box.md)。  
   
 ##  <a name="bkmk_SupportedVersions"></a> 支援的版本  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)](報表伺服器專案的 32 位元開發環境) 不是設計成要在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]架構電腦上執行，而且未安裝在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]架構伺服器上。 不過， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 仍支援 x64 架構的電腦。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] (報表伺服器專案的 32 位元開發環境) 不是設計成要在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 架構電腦上執行，而且未安裝在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 架構伺服器上。 不過， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 仍支援 x64 架構的電腦。  
   
  下表描述在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中撰寫及發行報表所支援的版本。  
   
 > [!NOTE]  
 >  此結構描述從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]之後並未變更。  
   
-|專案或檔案類型|Version|撰寫報表|發行報表|注意|  
+|專案或檔案類型|版本|撰寫報表|發行報表|注意|  
 |--------------------------|-------------|--------------------|---------------------|-----------|  
-|報表伺服器專案<br /><br /> 中的多個<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|2016 RDL 結構描述|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
-|報表伺服器專案<br /><br /> 中的多個<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|2014 RDL 結構描述|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|報表伺服器專案<br /><br /> 中的多個<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|2012 RDL 結構描述|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|報表伺服器專案<br /><br /> 中的多個<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL 結構描述|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|報表伺服器專案<br /><br /> 中的多個<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008 RDL 結構描述|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器|在本機將 2003 RDL 和 2005 RDL 升級到 2008 RDL 結構描述。|  
+|報表伺服器專案<br /><br /> 或<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|2016 RDL 結構描述|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
+|報表伺服器專案<br /><br /> 或<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|2014 RDL 結構描述|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|報表伺服器專案<br /><br /> 或<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|2012 RDL 結構描述|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|報表伺服器專案<br /><br /> 或<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL 結構描述|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|報表伺服器專案<br /><br /> 或<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008 RDL 結構描述|僅限 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器|在本機將 2003 RDL 和 2005 RDL 升級到 2008 RDL 結構描述。|  
   
  如需在舊版報表定義結構描述中開啟報表的詳細資訊，請參閱 [升級報表](../../reporting-services/install-windows/upgrade-reports.md)。 如需有關特定報表定義結構描述的詳細資訊，請參閱＜ [報表定義語言規格](https://go.microsoft.com/fwlink/?linkid=116865)＞。  
   

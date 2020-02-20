@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30a7e283fe7f4b16903dbf293c3db5c77a2409af
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 43f726dbddb9b9f3737a92a82987dc3832182d49
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593951"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190698"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 清單連接類型 (SSRS)
 
@@ -28,7 +28,7 @@ ms.locfileid: "73593951"
   
  查詢設計工具會自動顯示您有足夠權限存取的 SharePoint 清單。  
   
- 如需更多連接字串範例，請參閱 [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+ 如需詳細的連接字串範例，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 ##  <a name="Credentials"></a> 認證  
  需要有認證才能夠執行報表、於本機預覽報表並且從報表伺服器預覽報表。 發行報表之後，您可能需要變更資料來源的認證，如此當報表在報表伺服器上執行時，擷取資料的權限就會是有效的。 可搭配這個資料延伸模組使用的認證類型，取決於您使用做為資料來源之 SharePoint 清單的 SharePoint 技術設定。  
@@ -71,7 +71,7 @@ ms.locfileid: "73593951"
   
  如需有關跨 Microsoft BI 堆疊之宣告驗證支援的詳細資訊，請參閱 [跨 Microsoft BI 堆疊使用宣告驗證](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)。  
   
- 如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)、[指定適用於報表資料來源的認證及連接資訊](specify-credential-and-connection-information-for-report-data-sources.md)或 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+ 如需詳細資訊，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)、[指定適用於報表資料來源的認證及連接資訊](specify-credential-and-connection-information-for-report-data-sources.md)，以及 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
 ##  <a name="Query"></a> 查詢  
  若要設計查詢，根據資料來源建立新資料集，然後開啟相關聯的查詢設計工具。 如需詳細資訊，請參閱 [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)。  
@@ -111,7 +111,7 @@ ms.locfileid: "73593951"
 ### <a name="query-text"></a>查詢文字  
  若要檢視圖形化查詢設計工具所產生的查詢，請切換到以文字為基礎的查詢設計工具。 在此檢視中，您可以看到圖形化查詢設計工具所建立的 XML。 XML 包含清單名稱、欄位集合和篩選的元素。  
   
-#### <a name="example-1-specified-fields-for-a-list"></a>範例 1： 指定清單的欄位  
+#### <a name="example-1-specified-fields-for-a-list"></a>範例 1. 指定清單的欄位  
  下列範例顯示格式正確的 SharePoint 查詢：  
   
 ```  
@@ -140,7 +140,7 @@ ms.locfileid: "73593951"
   
  只要查詢維持格式正確的 XML 文字，您就可以編輯此查詢的檢視。  
   
-#### <a name="example-2-all-fields-for-a-list"></a>範例 2： 清單的所有欄位  
+#### <a name="example-2-all-fields-for-a-list"></a>範例 2. 清單的所有欄位  
  您也可以指定只傳回清單的名稱以及所有欄位，包括隱藏的欄位。 下列範例會從名為 Tasks 的清單擷取所有欄位：  
   
 ```  
@@ -169,7 +169,7 @@ ms.locfileid: "73593951"
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供存取報表資料的概觀。  
   
- [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  提供資料連接與資料來源的相關資訊。  
   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

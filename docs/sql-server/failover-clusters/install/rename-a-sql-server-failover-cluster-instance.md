@@ -1,7 +1,7 @@
 ---
-title: 重新命名 SQL Server 容錯移轉叢集執行個體 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 重新命名容錯移轉叢體執行個體
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 612f0171cbb7786374923dc5ed8c257224474a21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af1ec295ef8567496da84819532342164cb269cb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063883"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230724"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>重新命名 SQL Server 容錯移轉叢集執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,6 +82,6 @@ ms.locfileid: "68063883"
 -   更新相依於伺服器名稱的作業步驟。 如需詳細資訊，請參閱 [Manage Job Steps](../../../ssms/agent/manage-job-steps.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [重新命名主控 SQL Server 獨立執行個體的電腦](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
+ [重新命名主控 SQL Server 獨立式執行個體的電腦](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   

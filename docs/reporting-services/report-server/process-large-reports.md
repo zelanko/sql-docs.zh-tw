@@ -15,10 +15,10 @@ ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 574fcc9c8e180b75d5d3def6d97798708c40996c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140256"
 ---
 # <a name="process-large-reports"></a>處理大型報表
@@ -36,7 +36,7 @@ ms.locfileid: "67140256"
 ## <a name="configuration-recommendations"></a>組態建議  
  報表執行、報表轉譯與報表存取的建議包括下列項目：  
   
--   設計報表以支援分頁。 報表伺服器每次傳送一頁報表。 如果報表包含分頁，您就可以控制多少資料流至瀏覽器。 如需詳細資訊，請參閱 <<c0> [ 預先載入快取 (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)。  
+-   設計報表以支援分頁。 報表伺服器每次傳送一頁報表。 如果報表包含分頁，您就可以控制多少資料流至瀏覽器。 如需詳細資訊，請參閱[預先載入快取 (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)。  
   
 -   設定報表當成已排程的報表快照集執行，以防止其視需要執行。 請勿設定報表執行的逾時值。 在離峰時段執行報表。  
   

@@ -1,18 +1,19 @@
 ---
-title: 在多個頁面上顯示資料列和資料行標頭 (報表產生器及 SSRS) | Microsoft Docs
+title: 在多個頁面上顯示資料列和資料行標頭 (報表產生器) | Microsoft Docs
+description: 您可以控制是否要針對跨多個頁面的 Tablix 資料區 (資料表、矩陣或清單)，在 Reporting Services 分頁報表的每個頁面上重複資料列和資料行標頭。
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
-ms.date: 03/01/2017
-ms.openlocfilehash: 1f1ae9d45e98cc847a89562c93040c4465e51efe
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.date: 12/09/2019
+ms.openlocfilehash: ca1b00d98c71808cd42acb220e7fbf5d1c382555
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263335"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254586"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>在多個頁面上顯示資料列和資料行標頭 (報表產生器及 SSRS)
 
@@ -20,7 +21,7 @@ ms.locfileid: "68263335"
   
  控制資料列和資料行的方式，是根據 Tablix 資料區是否具有群組標題而定。 當您在具有群組標題的 Tablix 資料區內按一下時，虛線會顯示 Tablix 區域，如下圖中所示：  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Tablix 資料區的區域](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix 資料區的區域")  
   
  當您藉由使用 [新增資料表] 或 [矩陣精靈] 或 [新增圖表精靈]、在 [群組] 窗格中新增欄位或使用內容選單來新增群組時，會自動建立資料列和資料行的群組標頭。 如果 Tablix 資料區只有 Tablix 主體而沒有群組頁首，則資料行和資料列就是 Tablix 成員。  
   

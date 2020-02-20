@@ -1,6 +1,6 @@
 ---
-title: 版本資訊 (SSRS) 2017年和更新版本 |Microsoft Docs
-ms.date: 02/18/2019
+title: Reporting Services 2017 和更新版本的版本資訊 | Microsoft Docs
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,20 +9,20 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 8767640e2ad0a7b71bb7977ab6eb997892845403
-ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
-ms.translationtype: MTE75
+ms.openlocfilehash: 39049ee5a2561821e0a2284ed66b9b04730998bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67533835"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74834254"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SQL Server Reporting Services (SSRS) 2017 與更新版本的版本資訊
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2017-and-later](../includes/ssrs-appliesto-2017-and-later.md)]
 
-這篇文章說明中的變更[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS)，對於 2017年和更新版本的版本。
+本文描述 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS) 2017 版和更新版本中的變更。
 
-報表檢視器控制項的版本資訊，請參閱[Release Notes for 報表檢視器控制項 WebForms 和 WinForms 的 SSRS](application-integration/release-notes-ssrs-application-integration.md)。
+如需報表檢視器控制項的版本資訊，請參閱 [WebForms 和 WinForms SSRS 的報表檢視器控制項版本資訊](application-integration/release-notes-ssrs-application-integration.md)。
 
 <!--
 We are "standardizing" all our 'Release Notes' style articles:
@@ -50,23 +50,35 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+## <a name="1406001451-20191113"></a>14.0.600.1451 2019/11/13 
+
+| 已修正的問題 | 詳細資料 |
+| :---------- | :------ |
+| 安全性更新 | &nbsp; |
+| 啟用快照集時，編頁報表不能配合篩選參數正常運作  | &nbsp; |
+| 具有瀏覽器角色和預設設定的使用者過去無權下載 Excel 檔案  | &nbsp; |
+| 升級期間，從 SQL Server 2016 Reporting Services 升級至 Power BI 報表伺服器失敗 | &nbsp; |
+| 從 SQL Server 2012 Reporting Services 升級之後，訂用帳戶失敗，並出現「在郵件標頭中找到不正確字元：','」訊息 | &nbsp; |
+| 組態工具：在 [資料庫] 區段取消強制回應視窗將會重新啟動 Reporting Services 服務 | &nbsp; |
+| Textbox 控制項的 BorderStyle 屬性運算式並未轉譯成 Excel 格式  | &nbsp; |
+| 造成某些報表卡在轉譯同一頁面，始終到不了報表最後一頁的分頁問題 | &nbsp; |
 
 ## <a name="1406001274-20190701"></a>2019/07/01 14.0.600.1274
 
 | 已修正的問題 | 詳細資料 |
 | :---------- | :------ |
 | 安全性更新 | &nbsp; |
-| 無法選取工作日建立共用的每週排程時 | &nbsp; |
-| 報表不會顯示換行字元正確 Word 格式 | &nbsp; |
-| System Center Operations Manager(SCOM) 2019 沒有較長的運作方式，使用最新的 SSRS 2017 升級 | &nbsp; |
-| 叫用授權延伸模組共用資料集時，發生錯誤 | &nbsp; |
-| 變更預存程序 GetAllProperties SSRS 2017 及 PBIRS，這會導致 Web 服務端點 ReportingService2010.GetProperties 方法無法取得連結報表中的任何資料的邏輯 | &nbsp; |
-| 按一下方格內的項目時，就會消失在行動報表中的簡單格線資料列標頭 | &nbsp; |
-| 無法使用資料驅動訂閱參數中的 [日期] 欄位 | &nbsp; |
-| 巢狀的 tablix 會顯示小字型或部分的字型，在 SSRS 2016 和更新版本 | &nbsp; |
-| 使用日期時間參數發生錯誤的訂用帳戶之後以不同的地區設定編輯訂用帳戶的使用者 | &nbsp; |
-| 使用 Null 傳遞延伸模組來建立資料驅動訂閱的 「 發生傳遞錯誤 」 發生失敗 | &nbsp; |
-| URL 編碼不正確，Excel\Word 格式設定值時 | &nbsp; |
+| 建立共用每週排程時無法選取工作日 | &nbsp; |
+| 報表不會正確顯示 Word 格式的歸位字元 | &nbsp; |
+| System Center Operations Manager (SCOM) 2019 不再使用最近的 SSRS 2017 升級 | &nbsp; |
+| 叫用共用資料集的授權延伸模組時發生錯誤 | &nbsp; |
+| SSRS 2017 和 PBIRS 中預存程序 GetAllProperties 的邏輯變更，造成 Web 服務端點 ReportingService2010.GetProperties 方法無法為連結的報表取得任何資料 | &nbsp; |
+| 按一下資料格中的項目時，行動報表中的簡易資料格列標頭會消失 | &nbsp; |
+| 無法使用資料驅動訂閱參數中的日期欄位 | &nbsp; |
+| 巢狀 Tablix 在 SSRS 2016 和更新版本中顯示小型字型或部分字型 | &nbsp; |
+| 在具有不同地區設定的使用者編輯訂用帳戶之後，具有 DateTime 參數錯誤的訂用帳戶出局 | &nbsp; |
+| 建立具有 Null 傳遞延伸模組的資料驅動訂閱，因「發生傳遞錯誤」而失敗 | &nbsp; |
+| 以 Excel\Word 格式設定值時，URL 編碼不正確 | &nbsp; |
 
 ## <a name="1406001109-20190212"></a>14.0.600.1109，2019/02/12
 
@@ -82,7 +94,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | 安全性更新。 | &nbsp; |
 | 未顯示連結的報表 UI。 | &nbsp; |
 | 含巢狀 Tablix 控制項的特定分頁報表中，字型有誤。 | &nbsp; |
-| 空白字元不正確地加入包含 tablix 資料區之特定編頁報表。 | &nbsp; |
+| 在某些包含 Tablix 資料區域的編頁報表中，錯誤新增了空白字元。 | &nbsp; |
 | 展開行動報表的簡單資料格時，標頭資料列會消失。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
@@ -101,13 +113,13 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | :---------- | :------ |
 | 當 rc:Toolbar=False 且它有長文字時，矩形內的文字方塊會導致矩形無法垂直成長。 | &nbsp; |
 | 若 pageHeight 小於 0.5 英吋，則不會縮放文字大小。 | &nbsp; |
-| CRM 搭配使用時，就會在 SSRS 類別目錄資料庫中發生死結。 | &nbsp; |
+| 與 CRM 一起使用時，SSRS 類別目錄資料庫出現死結。 | &nbsp; |
 | 當在報告中向下捲動時，垂直對齊資料行標頭不正確地顯示。 | &nbsp; |
-| 新增至 System Center Operations Manager 報表的角色的使用者可以封鎖至 SSRS web 入口網站的存取。 | &nbsp; |
+| System Center Operations Manager 報表角色所新增使用者封鎖了對 SSRS 入口網站的存取。 | &nbsp; |
 | 泰文字元未正確匯出至 PDF。 | &nbsp; |
 | 瀏覽器角色行為變更。 | &nbsp; |
 | rc:Toolbar=false 無法在 Express 版本中使用。 | &nbsp; |
-| 遺漏參數提示區域中的垂直捲軸。 | &nbsp; |
+| 參數提示區域中遺漏垂直捲軸。 | &nbsp; |
 | 已更新行動報表執行階段。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
@@ -127,7 +139,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | :---------- | :------ |
 | 編輯報表參數的屬性之後，它在連結的報表中的可見性會被還原。 | &nbsp; |
 | URL 參數 rc:Toolbar=false 無法在 Express 版本中使用。 | &nbsp; |
-| 需要運算式在文字方塊中的 cangrow 屬性設定為未顯示的值，則為 false 的結果。 | &nbsp; |
+| 在文字方塊中將運算式的 CanGrow 屬性設定為 False 會導致不顯示值。 | &nbsp; |
 | 在安裝程式中新增產品金鑰的 [深入了解]  連結。 | &nbsp; |
 | 含自訂表單驗證的 Web 入口網站會忽略變動到期 Cookie。 | &nbsp; |
 | 如果資料列的內容是空的，匯出到 Word 會建立不相等的資料列高度。 | &nbsp; |
@@ -135,7 +147,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 
 ## <a name="140600594-20180109"></a>14.0.600.594，2018/01/09
 
-已實作某些安全性更新程式。
+已實作一些安全性更新。
 
 ### <a name="140600490-20171101"></a>14.0.600.490，2017/11/01
 

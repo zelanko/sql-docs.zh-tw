@@ -1,7 +1,7 @@
 ---
-title: 使用 SQL Server 的多個版本和執行個體 | Microsoft Docs
-ms.custom: ''
-ms.date: 08/25/2017
+title: 使用多個版本與執行個體
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba5e4fdaab769fca0443f6395536dc31207b1374
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ff71430707e210daf970e969d854e408d777e4e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045666"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258973"
 ---
-# <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>使用 SQL Server 的多個版本和執行個體
+# <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>使用 SQL Server 的多個版本與執行個體
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -60,13 +60,13 @@ ms.locfileid: "68045666"
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每一個主要或次要版本中，版本號碼都會遞增，以便與之前的版本區別。 這項版本變更可用於許多用途。 其中包括在使用者介面中顯示版本資訊、控制升級期間如何取代檔案、套用 Service Pack，同時也是在後續版本之間區分功能的一項機制。
   
-### <a name="components-shared-by-all-versions-of-includessnoversionincludesssnoversion-mdmd"></a>所有版本共用的元件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-shared-by-all-versions-of-ssnoversion"></a>所有版本共用的元件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
  所有已安裝之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的所有執行個體會共用某些元件。 當您在同一部機器上並存安裝不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，這些元件會自動升級到最新的版本。 當解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的最後一個執行個體時，通常會自動解除安裝這類元件。
   
- 範例:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 和 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer。
+ 範例：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 和 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer。
   
-### <a name="components-shared-across-all-instances-of-the-same-major-version-of-includessnoversionincludesssnoversion-mdmd"></a>在相同主要版本的所有執行個體之間共用的元件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-shared-across-all-instances-of-the-same-major-version-of-ssnoversion"></a>在相同主要版本的所有執行個體之間共用的元件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有相同主要版本的版本會在所有執行個體之間共用某些元件。 如果在升級期間選取共用元件，現有的元件都會升級到最新的版本。
   
@@ -76,23 +76,23 @@ ms.locfileid: "68045666"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有相同 major.minor 版本共用元件的版本。
   
-範例安裝程式支援檔案。
+範例：安裝程式支援檔案。
   
-### <a name="components-specific-to-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>執行個體特有的元件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-specific-to-an-instance-of-ssnoversion"></a>執行個體特有的元件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件或服務是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所特有， 也可感知執行個體。 這些元件或服務也會與裝載它們的執行個體共用相同的版本，並專門用於該執行個體。
   
 範例： [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
-### <a name="components-that-are-independent-of-the-includessnoversionincludesssnoversion-mdmd-versions"></a>與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本無關的元件
+### <a name="components-that-are-independent-of-the-ssnoversion-versions"></a>與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本無關的元件
 
 某些元件會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間安裝，但是與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的版本無關。 這些元件可能會在主要版本之間共用，或是由所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本共用。  
 
-範例:Microsoft Sync Framework、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact。  
+範例：Microsoft Sync Framework、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact。  
   
 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 安裝的詳細資訊，請參閱 [從安裝精靈安裝 SQL Server 2016 &#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。 如需如何解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 的詳細資訊，請參閱[解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)。  
   
-## <a name="using-includessnoversionincludesssnoversion-mdmd-side-by-side-with-previous-versions-of-includessnoversionincludesssnoversion-mdmd"></a>並存使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+## <a name="using-ssnoversion-side-by-side-with-previous-versions-of-ssnoversion"></a>並存使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 您可以在已執行舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的電腦上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果預設執行個體已存在於電腦上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須安裝成具名執行個體。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "68045666"
 
 ## <a name="preventing-ip-address-conflicts"></a>防止 IP 位址衝突
 
-當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體與 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的獨立執行個體並行安裝時，務必避免 IP 位址發生 TCP 連接埠號碼衝突。 通常兩個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體同樣設定為使用預設 TCP 通訊埠 (1433) 時，就會發生衝突。 為避免發生衝突，請將其中一個執行個體設定為使用非預設固定通訊埠。 在獨立執行個體上設定固定通訊埠通常最為簡單。 將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 設定為使用不同的連接埠，就能防止發生非預期的 IP 位址/TCP 通訊埠衝突，以免造成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體失敗而移轉至待命節點時，執行個體無法啟動。
+當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體與 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的獨立執行個體並行安裝時，務必避免 IP 位址發生 TCP 連接埠號碼衝突。 通常兩個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體同樣設定為使用預設 TCP 通訊埠 (1433) 時，就會發生衝突。 為避免發生衝突，請將其中一個執行個體設定為使用非預設固定通訊埠。 在獨立執行個體上設定固定通訊埠通常最為簡單。 將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 設定為使用不同的通訊埠，就能防止發生非預期的 IP 位址/TCP 通訊埠衝突，以免造成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體失敗而移轉至待命節點時，執行個體無法啟動。
   
 ## <a name="see-also"></a>另請參閱
 

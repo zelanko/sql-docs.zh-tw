@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 9702ca84fab0da2024db6f6f5e0f510822dcd29e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579803"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>在資料警示管理員中管理 SharePoint 網站上的所有資料警示
@@ -25,7 +25,7 @@ ms.locfileid: "65579803"
 
 SharePoint 警示系統管理員可以檢視任何網站使用者建立之資料警示的清單，以及警示的相關資訊。 警示系統管理員還可以刪除警示。 下圖說明 [資料警示管理員] 中可供警示系統管理員使用的功能。
 
- ![Sharepoint 網站管理員的警示管理員](../reporting-services/media/rs-alertmanagersite.gif "SharePoint 網站管理員的警示管理員")
+ ![SharePoint 網站管理員的警示管理員](../reporting-services/media/rs-alertmanagersite.gif "SharePoint 網站管理員的警示管理員")
 
 > [!NOTE]
 > SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。

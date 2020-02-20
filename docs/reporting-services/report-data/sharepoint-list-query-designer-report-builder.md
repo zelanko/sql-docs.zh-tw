@@ -11,10 +11,10 @@ ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bd0c32d753abf6b907e35daa91851acdd286f417
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66500054"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>SharePoint 清單查詢設計工具 (報表產生器)
@@ -85,7 +85,7 @@ ms.locfileid: "66500054"
 ### <a name="graphical-query-designer-toolbar"></a>圖形化查詢設計工具工具列  
  關聯式查詢設計工具的工具列會提供下列按鈕來協助您指定或檢視查詢的結果。  
   
-|按鈕|Description|  
+|按鈕|描述|  
 |------------|-----------------|  
 |**當成文字編輯**|切換至以文字為基礎的查詢設計工具，以便檢視自動產生的查詢，或是修改查詢。|  
 |**匯入**|從檔案或報表匯入現有的查詢。 支援 .sql 和 .rdl 檔案類型。|  

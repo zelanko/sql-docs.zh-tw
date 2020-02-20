@@ -1,24 +1,26 @@
 ---
-title: 尋找 SQL Server Reporting Services (SSRS) 的產品金鑰 | Microsoft Docs
-ms.date: 10/02/2019
+title: 尋找 SQL Server Reporting Services 的產品金鑰 | Microsoft Docs
+description: 了解如何尋找 SQL Server Reporting Services (SSRS) 2017 和 2019 的產品金鑰，以在生產環境中安裝伺服器。
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6033b15655cebd557ee93efabce32ea0981072f1
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MTE75
+ms.openlocfilehash: c85fc8de816c24496fe0ffb353f7d51e20b07389
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952717"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866048"
 ---
 # <a name="find-the-product-key-for-sql-server-reporting-services"></a>尋找 SQL Server Reporting Services 的產品金鑰
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-瞭解如何尋找 SQL Server Reporting Services （SSRS）2017和2019的產品金鑰，讓您可以在生產環境中安裝您的伺服器。
+了解如何尋找 SQL Server Reporting Services (SSRS) 2017 和 2019 的產品金鑰，以在生產環境中安裝伺服器。
 
 若要尋找您的產品金鑰，請從下載並執行 SQL Server 安裝程式開始。
 
@@ -27,7 +29,7 @@ ms.locfileid: "71952717"
 
     ![複製 SQL Server 產品金鑰](media/find-reporting-services-product-key-ssrs/ssrs-ss2017-copy-product-key.png)
 
-1. [下載 Reporting Services](install-reporting-services.md)、執行安裝程式，並貼上金鑰：
+1. [下載 Reporting Services](install-reporting-services.md)、執行安裝程式，然後貼上金鑰：
 
      ![貼上產品金鑰](media/find-reporting-services-product-key-ssrs/ssrs-ssrs2017-paste-product-key.png)
 

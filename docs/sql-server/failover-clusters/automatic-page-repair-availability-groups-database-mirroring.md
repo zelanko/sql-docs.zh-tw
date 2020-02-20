@@ -1,6 +1,7 @@
 ---
-title: 自動修復頁面 (可用性群組：資料庫鏡像) | Microsoft Docs
-ms.custom: ''
+title: 可用性群組和資料庫鏡像的自動修復頁面
+description: '當資料庫參與 Always On 可用性群組或資料庫鏡像關聯性時，會自動修復某些類型的頁面損毀。 本主題提供錯誤類型的相關資訊，以及其可能的解決方法。 '
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9e445d15401b747be6bd690e4ae6884a831e66de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c8d58b7bdc836f44871560c0d1e9908d1f72f23
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035270"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822639"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>自動修復頁面 (可用性群組：資料庫鏡像)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +47,11 @@ ms.locfileid: "68035270"
 ##  <a name="ErrorTypes"></a> 造成嘗試自動修復頁面的錯誤類型  
  資料庫鏡像的自動修復頁面僅會嘗試修復在操作資料檔案時，因為下表列出的其中一個錯誤而失敗的頁面。  
   
-|錯誤號碼|Description|造成嘗試自動修復頁面的執行個體|  
+|錯誤號碼|描述|造成嘗試自動修復頁面的執行個體|  
 |------------------|-----------------|---------------------------------------------------------|  
 |823|只有當作業系統在資料上執行循環冗餘檢查 (CRC) 失敗時，才會採取動作。|ERROR_CRC。 這項錯誤的作業系統值為 23。|  
 |824|邏輯錯誤。|邏輯資料錯誤，例如，分次寫入或頁面總和檢查碼錯誤。|  
-|829|頁面已標示為還原暫止。|全部。|  
+|829|頁面已標示為還原暫止。|All：|  
   
  若要檢視最近的 823 CRC 錯誤和 824 錯誤，請參閱 [msdb](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 資料庫中的 [suspect_pages](../../relational-databases/databases/msdb-database.md) 資料表。  
 

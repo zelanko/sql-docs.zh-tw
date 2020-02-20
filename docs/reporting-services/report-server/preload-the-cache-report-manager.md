@@ -12,10 +12,10 @@ ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6b2be1e020354f47aa21dc83f17ff6169bcf2d72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66174999"
 ---
 # <a name="preload-the-cache"></a>預先載入快取  
@@ -25,7 +25,7 @@ ms.locfileid: "66174999"
   
 1.  建立報表的快取重新整理計劃。 這是慣用的方法。  
   
-2.  使用資料驅動訂閱，以預先載入有參數化報表執行個體的快取。 這是在早於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]的版本中預先載入快取的唯一方法。 如需詳細資訊，請參閱 [快取報表 &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)的版本中預先載入快取的唯一方法。  
+2.  使用資料驅動訂閱，以預先載入有參數化報表執行個體的快取。 這是在早於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)][!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]的版本中預先載入快取的唯一方法。 如需詳細資訊，請參閱 [快取報表 &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)的版本中預先載入快取的唯一方法。  
   
  快取報表或共用資料集之前，必須符合下列條件：  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66174999"
   
 ## <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>若要透過建立快取重新整理計劃以預先載入快取  
   
-1. 啟動[報表伺服器的 Web 入口網站](../../reporting-services/web-portal-ssrs-native-mode.md "報表伺服器的 Web 入口網站")。  
+1. 啟動[報表伺服器的入口網站](../../reporting-services/web-portal-ssrs-native-mode.md "報表伺服器的入口網站")。  
   
 2. 從主畫面選取 [瀏覽]  ，並瀏覽資料夾階層以尋您要建立的項目。  
   
@@ -48,11 +48,11 @@ ms.locfileid: "66174999"
 5. 若要為資料集啟用快取，請選取 [快取此資料集的複本，並在可取得時使用]  選項按鈕。 [快取逾期]  區段接著會出現在它的下方。 選取下列其中一個選項按鈕：
 
     - [快取逾期於 x 分鐘後]  \(為 x 輸入想要的分鐘數\)。
-    - [快取於排程逾期]  。  Reporting Services 提供共用排程與報表特定排程，以協助您控制處理程序、一致的內容與報表散發效能。 如需詳細資訊，請參閱[建立、修改及刪除排程](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "建立、修改及刪除排程")。 您有數個選項可建立排程，在此案例中，為了快取逾期：選取下列兩個排程選項的其中一個：  
-      - [共用排程]  選項按鈕，然後從 [選取共用排程]  下拉式文字方塊選取排程。 如需詳細資訊，請參閱[排程](../../reporting-services/subscriptions/schedules.md "排程")。  
+    - [快取於排程逾期]  。  Reporting Services 提供共用排程與報表特定排程，以協助您控制處理程序、一致的內容與報表散發效能。 如需詳細資訊，請參閱 [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Create, Modify, and Delete Schedules")。 您有數個選項可建立排程，在此案例中，針對快取逾期：選取下列兩個排程選項的其中一個：  
+      - [共用排程]  選項按鈕，然後從 [選取共用排程]  下拉式文字方塊選取排程。 如需詳細資訊，請參閱 [Schedules](../../reporting-services/subscriptions/schedules.md "排程")。  
       - [報表特定排程]  選項按鈕，然後選取 [編輯排程]  連結 (若要顯示 [排程詳細資料]  頁面)。  
 
-         ![Web 入口網站快取逾期排程詳細資料頁面](../../reporting-services/report-server/media/preload-the-cache/web-portal-dataset-cache-schedule-details.png "資料集快取排程詳細資料頁面")
+         ![資料集的入口網站快取逾期 [排程詳細資料] 頁面](../../reporting-services/report-server/media/preload-the-cache/web-portal-dataset-cache-schedule-details.png "資料集快取排程詳細資料頁面")
 
           在此頁面上，您可以選取：
          - 排程的類型：
@@ -94,7 +94,7 @@ ms.locfileid: "66174999"
   
 ## <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>若要透過使用資料驅動訂閱以預先載入含使用者專屬報表的快取
 
-1. 啟動[報表伺服器的 Web 入口網站](../../reporting-services/web-portal-ssrs-native-mode.md "報表伺服器的 Web 入口網站")。  
+1. 啟動[報表伺服器的入口網站](../../reporting-services/web-portal-ssrs-native-mode.md "報表伺服器的入口網站")。  
 2. 從主畫面選取 [瀏覽]  ，並瀏覽資料夾階層以尋您要訂閱的報表。  
 3. 以滑鼠右鍵按一下報表，從下拉式功能表選取 [訂閱]  。 [新的訂用帳戶]  頁面隨即顯示。  
 4. 在 [描述]  文字方塊中，輸入訂用帳戶的描述。  
@@ -132,14 +132,14 @@ ms.locfileid: "66174999"
 
 13. 選取 [建立訂閱]  。  
   
-14. [訂閱]  頁面隨即顯示，其中顯示您的新資料驅動訂閱。 從這個頁面，您可以在準備好時啟用訂閱，方式是選取它左邊的核取方塊，然後選取 [啟用]  按鈕。 ![訂閱頁面啟用按鈕](../../reporting-services/report-server/media/preload-the-cache/subscriptions-page-enable-button.png "訂閱頁面上的啟用按鈕")
+14. [訂閱]  頁面隨即顯示，其中顯示您的新資料驅動訂閱。 從這個頁面，您可以在準備好時啟用訂閱，方式是選取它左邊的核取方塊，然後選取 [啟用]  按鈕。 ![[訂閱] 頁面的 [啟用] 按鈕](../../reporting-services/report-server/media/preload-the-cache/subscriptions-page-enable-button.png "訂閱頁面上的啟用按鈕")
 
 15. 指定處理訂閱的時間。 請勿選擇 [更新報表伺服器上的報表資料時]  。 該設定僅適用於快照集。 如果您想要使用預先存在的排程，請選取 [在共用排程上]  。  
   
      或者，若要建立自訂排程，請選取 [在為此訂閱建立的排程上]  ，然後選取 [下一步]  。 設定排程，然後選取 [完成]  。  
   
     > [!NOTE]  
-    > 為了讓訂閱者能夠接收到最新的報表，您設定的排程應該與您為訂閱者所定義的報表傳遞排程一致。 如需詳細資訊，請參閱[報表伺服器的 Web 入口網站](../../reporting-services/web-portal-ssrs-native-mode.md  "報表伺服器的 Web 入口網站")。  
+    > 為了讓訂閱者能夠接收到最新的報表，您設定的排程應該與您為訂閱者所定義的報表傳遞排程一致。 如需詳細資訊，請參閱[報表伺服器的入口網站](../../reporting-services/web-portal-ssrs-native-mode.md  "報表伺服器的入口網站")。  
   
 16. 設定報表的執行選項，如下。 在報表頁面上，選取 [屬性]  索引標籤。  
   

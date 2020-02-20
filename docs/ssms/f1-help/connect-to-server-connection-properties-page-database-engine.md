@@ -1,6 +1,6 @@
 ---
-title: 連接到伺服器 (連接屬性頁面) 資料庫引擎 | Microsoft Docs
-ms.custom: ''
+title: 連接到伺服器 (連接屬性頁面) Database Engine
+ms.custom: seo-lt-2019
 ms.date: 08/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 93c9069cf3a52cbbfa961737350976c3beda4304
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: cb62bd419c08b1562a6b636685e360501f574ae3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265097"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245013"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>連接到伺服器 (連接屬性頁面) Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-連接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 執行個體或在 [已註冊的伺服器]  中註冊 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 執行個體時，[連接]  和 [選項]  才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 時，[測試]  和 [儲存]  才會出現在這個對話方塊中。  
+當您連接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 執行個體或在 [已註冊的伺服器]  中註冊 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 執行個體時，[連接]  和 [選項]  才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 時，[測試]  和 [儲存]  才會出現在這個對話方塊中。  
   
 **連接到資料庫**  
 從清單中選取要連接的資料庫。 如果您選取 **<default>** ，就會連線到伺服器的預設資料庫。 如果您選取 **<Browse server>** ，您就可以瀏覽伺服器來尋找您要連接的資料庫。  
@@ -64,10 +64,10 @@ ms.locfileid: "68265097"
 **[連接]**  
 使用列出的值嘗試進行連接。  
   
-**選項。**  
+**選項**  
 按一下即可變更對話方塊，並隱藏其他伺服器連接選項，例如記住密碼。  
   
-**測試**  
+**Test**  
 在 [已註冊的伺服器]  中註冊 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 時，請按一下以測試連接。  
   
 **儲存**  

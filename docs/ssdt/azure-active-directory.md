@@ -1,20 +1,21 @@
 ---
-title: SQL Server Data Tools (SSDT) 中的 Azure Active Directory | Microsoft Docs
-ms.custom: ''
-ms.date: 10/28/2019
+title: SSDT 中的 Azure Active Directory
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: ssdt
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
+manager: jroth
+reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 302345a2d7e8c1bd9192c91c6f88253c9a4668f2
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: ed7bc77b48881351a144ed5d217454518abafcc2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049896"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245580"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支援
 
@@ -40,11 +41,11 @@ SQL Server Data Tools (SSDT) 提供數個 [Azure Active Directory (Azure AD)](ht
 - 您從未與 Azure 同盟的網域中使用認證來登入 Windows，或
 - 您針對 Azure AD 使用 Azure AD 驗證，而它是以初始或用戶端網域為依據。
 
-如需詳細資訊，請參閱 [使用 Azure Active Directory 驗證連線到 SQL 資料庫](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。  
+如需詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。  
 
 ## <a name="active-directory-integrated-authentication"></a>Active Directory 整合式驗證
 
-「Active Directory 整合式驗證」  是使用 Azure Active Directory (Azure AD) 中的身分識別連線到所列 Azure SQL 產品的機制。 如果您使用來自同盟網域的 Azure Active Directory 認證登入 Windows，請使用此方法連線。 如需詳細資訊，請參閱 [使用 Azure Active Directory 驗證連線到 SQL 資料庫](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。
+「Active Directory 整合式驗證」  是使用 Azure Active Directory (Azure AD) 中的身分識別連線到所列 Azure SQL 產品的機制。 如果您使用來自同盟網域的 Azure Active Directory 認證登入 Windows，請使用此方法連線。 如需詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。
 
 ## <a name="active-directory-interactive-authentication"></a>Active Directory 互動式驗證
 

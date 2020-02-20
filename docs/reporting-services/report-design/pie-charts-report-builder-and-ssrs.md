@@ -9,10 +9,10 @@ ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a623762a7424036ffe8b9b5b669be426480bbb4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582231"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>圓形圖 (報表產生器及 SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "65582231"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="variations"></a>變數  
+## <a name="variations"></a>變化  
   
 -   **分裂式圓形圖**： 一種圓形圖，其中所有的扇區會從圓形圖的中央向外移動。 除了所有扇區都分離的分裂式圓形圖之外，您也可以建立只有一個扇區的分裂式扇形圖。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "65582231"
 ## <a name="applying-drawing-styles-to-a-pie-chart"></a>將繪製樣式套用至圓形圖  
  您可以在圓形圖上加入特殊的繪製樣式來增加其視覺效果。 繪製樣式包括斜面 (Bevel) 和凹面效果。 這些效果僅適用平面圓形圖。 下圖顯示圓形圖的斜面和凹面繪製樣式範例。  
   
- ![圓形圖繪製樣式](../../reporting-services/report-design/media/rs-piedrawingeffects-concave2.gif "圓形圖繪製樣式")  
+ ![圓形繪製樣式](../../reporting-services/report-design/media/rs-piedrawingeffects-concave2.gif "圓形繪製樣式")  
   
  如需詳細資訊，請參閱[將斜面、浮凸與紋理樣式加入圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "65582231"
   
 -   增加圖表的寬度和高度，讓標籤有更多的空間。  
   
--   在圖表區域外部顯示圓形圖標籤。 如需詳細資訊，請參閱 [在圓形圖外部顯示資料點標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)。  
+-   在圖表區域外部顯示圓形圖標籤。 如需詳細資訊，請參閱 [在圓形圖外部顯示資料點標籤 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)。  
   
 -   將小圓形圖扇區收集成一個扇區。  
   
@@ -86,8 +86,8 @@ ms.locfileid: "65582231"
 ## <a name="see-also"></a>另請參閱  
  [在圓形圖外部顯示資料點標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [收集圓形圖上的小配量 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [在圓形圖上顯示百分比值 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
- [教學課程：將圓形圖加入報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [在圓形圖上顯示百分比值 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [教學課程：將圓形圖新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [在圖表上格式化圖例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [圖表中的空白和 Null 資料點 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  

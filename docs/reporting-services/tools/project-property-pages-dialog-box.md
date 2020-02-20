@@ -13,10 +13,10 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578232"
 ---
 # <a name="project-property-pages-dialog-box"></a>專案屬性頁對話方塊
@@ -29,14 +29,14 @@ ms.locfileid: "65578232"
   
 ## <a name="options"></a>選項。  
  **Configuration**  
- 選取要編輯的組態。 一開始會有下列的組態可用： **Debug**、 **DebugLocal**和 **Release**。 使用中組態會先出現，例如 **Active(Debug)** 。  
+ 選取要編輯的組態。 一開始會有下列的組態可用：**Debug**、**DebugLocal** 和 **Release**。 使用中組態會先出現，例如 **Active(Debug)** 。  
   
  若要同時查看多個組態的屬性，請選取 **[所有組態]** 或 **[多重組態]** 。  
   
  若要建立其他組態，請按一下工具列上的 **[組態管理員]** 。  
   
- **[組態管理員]**  
- 針對整個方案管理組態或是加入其他組態。 如需詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 文件集。  
+ **組態管理員**  
+ 針對整個方案管理組態或是加入其他組態。 如需詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 文件。  
   
  **OutputPath**  
  輸入或貼上路徑來儲存報表之建立驗證、部署與預覽時所使用的報表定義。 此路徑必須不同於專案所使用的路徑以及位於專案路徑下之子資料夾的相對路徑。  
@@ -61,22 +61,22 @@ ms.locfileid: "65578232"
   
  發行至以原生模式執行的報表伺服器時，請從根目錄開始指定資料夾階層的完整路徑。 例如，Folder1/Folder2/Folder3。  
   
- 發行至以 SharePoint 整合模式執行的報表伺服器時，請使用 SharePoint 文件庫的 URL。 例如， `http:\\<servername>\<site>\Documents\MyFolder`。  
+ 發行至以 SharePoint 整合模式執行的報表伺服器時，請使用 SharePoint 文件庫的 URL。 例如： `http:\\<servername>\<site>\Documents\MyFolder` 。  
   
  **TargetReportFolder**  
  用來儲存已發行報表的資料夾名稱。 依預設，此為報表專案的名稱。 如果報表伺服器上沒有此資料夾，報表設計師會在發行報表時建立資料夾。  
   
  發行至以原生模式執行的報表伺服器時，請從根目錄開始指定資料夾階層的完整路徑。 如果某個資料夾位於另一個資料夾內，請從根目錄開始加入資料夾的路徑，例如 Folder1/Folder2/Folder3。  
   
- 發行至以 SharePoint 整合模式執行的報表伺服器時，請使用 SharePoint 文件庫的 URL。 例如， `http:\\<servername>\\<site>\Documents\MyFolder`。  
+ 發行至以 SharePoint 整合模式執行的報表伺服器時，請使用 SharePoint 文件庫的 URL。 例如： `http:\\<servername>\\<site>\Documents\MyFolder` 。  
   
  **TargetServerURL**  
  目標報表伺服器的 URL。 在發行報表之前，您必須設定此屬性為有效的報表伺服器 URL。  
   
- 發行到以原生模式執行的報表伺服器時，請使用報表伺服器虛擬目錄的 URL。 例如， `http:\\<server>\reportserver`。 這是報表伺服器的虛擬目錄，而非報表管理員。 依預設，報表伺服器會安裝在名稱為 [reportserver] 的虛擬目錄中。  
+ 發行到以原生模式執行的報表伺服器時，請使用報表伺服器虛擬目錄的 URL。 例如： `http:\\<server>\reportserver` 。 這是報表伺服器的虛擬目錄，而非報表管理員。 依預設，報表伺服器會安裝在名稱為 [reportserver] 的虛擬目錄中。  
   
  發行至以 SharePoint 整合模式執行的報表伺服器時，請使用 SharePoint 頂層網站或子網站的 URL。 若未指定網站，則會使用預設的最上層網站。 例如： 
-+ `http:\\<servername>`、 
++ `http:\\<servername>`, 
 + `http:\\<servername\<site>` 
 + 第 1 課：建立 Windows Azure 儲存體物件`http:\\<servername>\<site>\<subsite>`。  
 

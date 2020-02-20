@@ -1,5 +1,6 @@
 ---
-title: 第 3 課：定義資料表報表的資料集 (Reporting Services) | Microsoft Docs
+title: 第 3 課：定義資料表報表的資料集 | Microsoft Docs
+description: 當您為分頁報表定義資料來源之後，就需要定義資料集。 在 SQL Server Reporting Services 中，報表所用的資料包含在資料集中。
 ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eaa2af570ae363e6a48c8d14e5b73c70e6790b5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 25c62e0cd615748a764937d6dc2b8e4c952e59a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106015"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244310"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>第 3 課：定義資料表報表的資料集 (Reporting Services)
+# <a name="lesson-3-define-a-dataset-for-the-table-report---sql-server-reporting-services"></a>第 3 課：定義資料表報表的資料集 - SQL Server Reporting Services
 
-當您定義資料來源之後，就需要定義資料集。 在 [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)] 中，報表所用的資料是包含在「資料集」  中。 資料集含有指向資料來源的指標和報表要使用的查詢、導出欄位和變數。
+當您為分頁報表定義資料來源之後，就需要定義資料集。 在 [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)] 中，報表所用的資料是包含在「資料集」  中。 資料集含有指向資料來源的指標和報表要使用的查詢、導出欄位和變數。
 
 使用報表設計師中的查詢設計工具來定義資料集。 在本教學課程中，您將建立一項查詢，可擷取 AdventureWorks2016 資料庫中的銷售訂單資訊。
 
@@ -60,7 +61,7 @@ ms.locfileid: "65106015"
     HAVING ppc.Name = 'Clothing'
     ```
 
-7. (選擇性) 選取 [查詢設計工具]  按鈕。 查詢會顯示在以文字為基礎的 [查詢設計工具]  中。 在 [查詢設計工具]  工具列上，選取 ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) [執行]  按鈕，藉以檢視查詢的結果。 在 AdventureWorks2016 資料庫中，顯示的資料集包含 4 個資料表中的 6 個欄位。 查詢會使用別名之類的 Transact-SQL 功能。 例如，SalesOrderHeader 資料表稱為 *soh*。
+7. (選擇性) 選取 [查詢設計工具]  按鈕。 查詢會顯示在以文字為基礎的 [查詢設計工具]  中。 在 [查詢設計工具]  工具列上，選取 ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) [執行]  按鈕，以檢視查詢的結果。 在 AdventureWorks2016 資料庫中，顯示的資料集包含 4 個資料表中的 6 個欄位。 查詢會使用別名之類的 Transact-SQL 功能。 例如，SalesOrderHeader 資料表稱為 *soh*。
 
 8. 選取 [確定]  結束 [查詢設計工具]  。
 
@@ -72,7 +73,7 @@ ms.locfileid: "65106015"
 
 ## <a name="next-steps"></a>後續步驟
 
-您已經成功指定一項擷取報表資料的查詢。 之後，您將要建立報表版面配置。 請繼續進行[第 4 課：將資料表新增至報表 &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)。
+您已經成功指定一項擷取報表資料的查詢。 之後，您將要建立報表版面配置。 繼續進行[第 4 課：將資料表新增至報表 &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)。
 
 ## <a name="see-also"></a>另請參閱
 

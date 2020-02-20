@@ -9,12 +9,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d3eccb52c9a7164285627063f23dbb790b6dfa3c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: c9ffc6865a6dd7ccc9665eb85da8142bc918b4af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594069"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244574"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 連接類型 (SSRS)
 
@@ -43,7 +43,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 此外，您可以使用 [資料來源屬性]  對話方塊提供認證 (例如使用者名稱和密碼)。 `User Id` 和 `Password` 選項會自動附加至連接字串；您不需要隨連接字串鍵入這些選項。  
   
-如需連接字串範例的詳細資訊，請參閱 [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+如需連接字串範例的詳細資訊，請參閱[建立資料連接字串 - 報表產生器及 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 ## <a name="Credentials"></a> 認證
 
@@ -57,7 +57,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 - 不需要認證。 若要使用這個選項，您先前必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
-如需詳細資訊，請參閱[資料連線、資料來源和連接&#40;字串報表產生器和&#41; SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ，或[指定報表資料來源的認證和連接資訊](specify-credential-and-connection-information-for-report-data-sources.md)。  
+如需詳細資訊，請參閱[建立資料連接字串 - 報表產生器及 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 和[指定報表資料來源的認證及連線資訊](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
 ## <a name="Query"></a> 查詢
 
@@ -160,7 +160,7 @@ WHERE EmployeeID = (@EmpID)
 
 當您以適當方式設定下列項目時，便支援此案例：
 
-- 已在報表伺服器上安裝[適用於 SQL Server 的 Active Directory 驗證程式庫 (ADALSQL)](https://www.microsoft.com/en-us/download/details.aspx?id=48742)。
+- 已在報表伺服器上安裝[適用於 SQL Server 的 Active Directory 驗證程式庫 (ADALSQL)](https://www.microsoft.com/download/details.aspx?id=48742)。
 - [Active Directory 同盟服務](https://docs.microsoft.com/windows-server/identity/active-directory-federation-services)已設為跨內部部署 Active Directory (AD) 及 AAD 同盟。
 - [Kerberos 限制委派 (KCD)](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview)已從報表伺服器設定至 ADFS 伺服器。
 - 設定報表/資料來源以檢視報表使用者的身分向 [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview) 驗證。
@@ -184,7 +184,7 @@ WHERE EmployeeID = (@EmpID)
 [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
 提供存取報表資料的概觀。  
   
-[報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+[建立資料連接字串 - 報表產生器及 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
 提供資料連接與資料來源的相關資訊。  
   
 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

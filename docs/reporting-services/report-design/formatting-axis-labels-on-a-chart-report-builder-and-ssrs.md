@@ -26,10 +26,10 @@ ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 36eb4aff0571be5eb25115df06df5079a59da75b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575608"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的軸標籤 (報表產生器及 SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "65575608"
 ## <a name="types-of-axes"></a>軸的類型  
  圖表有兩種主要的軸：值軸和類別目錄軸。  
   
- ![圖表類別與數值座標軸](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "圖表類別與數值座標軸")  
+ ![圖表的類別目錄軸與值軸](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "圖表的類別目錄軸與值軸")  
   
  當您將欄位從資料集拖曳到圖表介面上時，圖表會決定這個欄位是屬於類別目錄軸或值軸。  
   
@@ -56,10 +56,10 @@ ms.locfileid: "65575608"
   
  軸刻度受限於最小值及最大值，這些值會定義在軸上顯示的資料範圍。 圖表會根據結果集中的值來計算每個軸的最小值及最大值。 值軸上的刻度永遠是由值欄位中的最小及最大數決定， 類別目錄軸上的最小及最大值類型則是根據類別目錄欄位的類型而定。 資料集中的任何欄位都可分類成三種類別目錄欄位類型之一。 下表說明這三種類別目錄欄位類型。  
   
-|類型目錄欄位類型|Description|範例|  
+|類型目錄欄位類型|描述|範例|  
 |-------------------------|-----------------|-------------|  
 |數值|類別目錄會以數值次序沿著 X 軸繪製。|依員工識別碼排列的銷售報表，沿著 X 軸顯示員工識別碼。|  
-|日期/時間|類別目錄會依時間順序沿著 X 軸繪製。|依月份排列的銷售報表，沿著 X 軸顯示格式化的日期。|  
+|Date/time|類別目錄會依時間順序沿著 X 軸繪製。|依月份排列的銷售報表，沿著 X 軸顯示格式化的日期。|  
 |字串|類別目錄會依出現在資料來源中的次序沿著 X 軸繪製。|依區域排列的銷售報表，沿著 X 軸顯示區域名稱。|  
   
  當放入圖表的類別目錄過多時，所有具有兩個軸的圖表類型都設計成會隱藏某些軸標籤，以產生較清晰的圖表影像並避免標籤互相衝突。  
@@ -75,7 +75,7 @@ ms.locfileid: "65575608"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>圖表如何計算軸標籤的範例  
  此處所示的資料表包含要繪製在直條圖上的範例銷售資料。 [名稱] 欄位會加入至 [類別目錄群組] 區域，而 [數量] 欄位則加入至 [值] 區域。  
   
-|[屬性]|Quantity|  
+|名稱|數量|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  

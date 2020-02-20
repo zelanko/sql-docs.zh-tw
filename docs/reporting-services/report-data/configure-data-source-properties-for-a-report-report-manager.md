@@ -11,10 +11,10 @@ ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5e134c81fd697d4aa6fc7e5b620c1a71ff462b73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573199"
 ---
 # <a name="configure-data-source-properties-for-a-paginated-report"></a>設定編頁報表的資料來源屬性
@@ -36,7 +36,7 @@ ms.locfileid: "65573199"
   
 7.  針對 **[連接字串]** ，請指定報表伺服器用於連接到資料來源的連接字串。 建議您不要在連接字串中指定認證。  
   
-     下列範例將說明用以連接至本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的連接字串：  
+     下列範例將說明用以連線至本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的連接字串：  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  

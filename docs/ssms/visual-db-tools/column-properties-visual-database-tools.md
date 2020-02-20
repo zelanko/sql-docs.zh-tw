@@ -1,10 +1,9 @@
 ---
-title: 資料行屬性 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 資料行屬性
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -16,16 +15,18 @@ f1_keywords:
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3ee1e24b0f9b55d299f56aa02c99405e001c33c1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7646eb379b3fe81603e78843808c90914889ed5d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262559"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241265"
 ---
 # <a name="column-properties-visual-database-tools"></a>資料行屬性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-有兩個集合的資料行屬性：您可以在資料表設計工具的 [資料行屬性]  索引標籤中看到的完整集合 (僅適用於 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫)，以及使用伺服器總管可以在 [屬性] 視窗中看到的子集。  
+系統提供兩組資料行屬性：您可以在資料表設計工具的 [資料行屬性]  索引標籤中看到整組屬性 (僅適用於 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫)，並可以使用伺服器總管在 [屬性] 視窗中看到子集。  
   
 > [!NOTE]  
 > 此主題中的屬性，是依類別目錄的順序排列，而非依字母排列。  
@@ -45,7 +46,7 @@ ms.locfileid: "68262559"
 **名稱**  
 顯示資料行的名稱。  
   
-**[資料庫備份]**  
+**Database**  
 顯示選取的資料行之資料來源的名稱。 (僅適用於 OLE DB)。  
   
 **其他類別目錄**  
@@ -72,7 +73,7 @@ ms.locfileid: "68262559"
 **有效位數**  
 顯示數值資料類型所允許的最大位數數目。 這個屬性會顯示 **0** 來表示非數字的資料類型。  
   
-**小數位數**  
+**調整**  
 若為數值資料類型，顯示可在小數點右邊顯示的最大位數數目。 這個值必須小於或等於有效位數。 這個屬性會顯示 **0** 來表示非數字的資料類型。  
   
 ## <a name="column-properties-tab"></a>資料行屬性索引標籤  
@@ -105,7 +106,7 @@ ms.locfileid: "68262559"
 **有效位數**  
 顯示數值資料類型所允許的最大位數數目。 這個屬性會顯示 **0** 來表示非數字的資料類型。 此屬性僅適用於數值資料類型。  
   
-**小數位數**  
+**調整**  
 若為數值資料類型，顯示可在小數點右邊顯示的最大位數數目。 這個值必須小於或等於有效位數。 這個屬性會顯示 **0** 來表示非數字的資料類型。 此屬性僅適用於數值資料類型。  
   
 **資料表設計工具類別目錄**  

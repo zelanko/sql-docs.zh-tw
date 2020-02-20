@@ -9,10 +9,10 @@ ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574012"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>報表伺服器上的項目 URL 範例 - SharePoint 模式
@@ -29,12 +29,12 @@ ms.locfileid: "65574012"
   
  您可以使用以下的 Web 階層元素來存取報表伺服器的內容並保護其安全性。 其他諸如清單與頁面等物件則不會用來存取報表伺服器的內容，因此不會在下表中說明。  
   
-|Object|Description|  
+|Object|描述|  
 |------------|-----------------|  
 |SharePoint Web 應用程式|SharePoint Web 應用程式可以當做獨立的伺服器安裝，或安裝在包含虛擬伺服器集合的伺服器陣列下。 Web 應用程式具有一個 URL (例如 `http:*//servername*`)，並可包含多個網站。|  
 |網站|網站可能是 Web 應用程式的上層網站或子網站。|  
 |SharePoint 文件庫|文件庫包含文件或資料夾。 文件庫或文件庫中的資料夾是可以儲存報表、報表模型、共用資料來源與外部影像的唯一站台物件。|  
-|項目|您可以在 URL 中參考的報表伺服器項目包括報表或子報表的報表定義、報表模型、共用資料來源或外部影像。|  
+|Item|您可以在 URL 中參考的報表伺服器項目包括報表或子報表的報表定義、報表模型、共用資料來源或外部影像。|  
   
 ## <a name="url-syntax-and-rules"></a>URL 語法與規則  
  在文件庫中的每個報表伺服器項目可由完整的 URL 識別，完整的 URL 包含通訊協定前置詞、伺服器名稱、站台、文件庫、檔案名稱，以及檔案類型的副檔名。  
@@ -54,9 +54,9 @@ ms.locfileid: "65574012"
 ### <a name="url-for-a-sharepoint-library"></a>SharePoint 文件庫的 URL  
  當您將報表或相關項目部署至 SharePoint 文件庫時，您必須使用指向 SharePoint 文件庫的 URL。 要用於文件庫的 URL 會視您所使用的 SharePoint 版本而有所不同。  
   
- 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 或 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]，文件庫會出現在伺服器名稱後面，例如 `https://*servername/*Shared Documents`。  
+ 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 或 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 上，文件庫會出現在伺服器名稱後面，例如 `https://*servername/*Shared Documents`。  
   
- 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]上，文件庫會出現在網站和子網站後面。 例如， `https://*servername/site/*Documents`。  
+ 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]上，文件庫會出現在網站和子網站後面。 例如： `https://*servername/site/*Documents` 。  
   
  若要尋找新 SharePoint 文件庫或不熟悉之網站的路徑資訊，開啟瀏覽器，然後找出您要發行報表的 SharePoint 文件庫。 如果文件庫是空的，上傳任何檔案。 以滑鼠右鍵按一下檔案，然後選取 [屬性]  ，以開啟 [屬性]  視窗。 檔案的位址包含發行作業所需的 URL 值。  
   

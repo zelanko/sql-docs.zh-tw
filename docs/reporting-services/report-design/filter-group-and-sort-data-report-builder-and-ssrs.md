@@ -18,10 +18,10 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0012f01fead8d6890f8e593f4991cbb0252e3dd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576523"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>篩選、分組和排序資料 (報表產生器及 SSRS)
@@ -85,7 +85,7 @@ ms.locfileid: "65576523"
   
  群組名稱會識別運算式範圍。 您可以將群組的名稱指定成下列作業的執行範圍：計算彙總、在向下鑽研報表中以階層方式組織資料並從父節點切換為子節點的顯示、在多個資料區中顯示相同資料的不同檢視，以及視覺化資料表、矩陣、圖表、量測計或地圖中的摘要資料。 如需詳細資訊，請參閱 [總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
- 若要在數個資料集欄位上分組，請將每個欄位加入到群組運算式集合。 您也可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]中，撰寫自己的群組運算式。 例如，您可以依據值的範圍分組，或者使用報表參數讓使用者選取在資料區中分組資料的方式藉以進行分組。 如需詳細資訊，請參閱 [群組運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)。  
+ 若要在數個資料集欄位上分組，請將每個欄位加入到群組運算式集合。 您也可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中撰寫自己的群組運算式。 例如，您可以依據值的範圍分組，或者使用報表參數讓使用者選取在資料區中分組資料的方式藉以進行分組。 如需詳細資訊，請參閱 [群組運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)。  
   
  若要呈現報表，您可以在每個群組或每個群組執行個體的前後加入分頁符號，以減少每個頁面的資料量並協助您管理報表轉譯效能。 如需詳細資訊，請參閱[新增分頁符號 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md)。  
   
@@ -107,12 +107,12 @@ ms.locfileid: "65576523"
   
  三種類型的排序全都可以在相同的報表中結合。 依預設，排序次序是由資料集查詢傳回資料的順序來決定。 排序運算式會套用在資料區和資料區群組中。 互動式排序則是在排序運算式之後套用。  
   
- 對於包含彙總函式的運算式，大部分的結果都不會受排序次序影響。 下列彙總函式的傳回值會受排序次序影響：First、Last 和 Previous。 如需詳細資訊，請參閱 [彙總函式參考 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
+ 對於包含彙總函式的運算式，大部分的結果都不會受排序次序影響。 下列彙總函式的傳回值會受排序次序影響：第一個、最後一個和上一個。 如需詳細資訊，請參閱 [彙總函式參考 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>排序資料集查詢中的資料  
  將資料集查詢中的排序次序加入到預先排序資料，然後再針對報表進行擷取。 透過排序查詢中的資料，排序工作將由資料來源而非報表處理器完成。  
   
- 若是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源類型，您可以將 ORDER BY 子句加入到資料集查詢。 例如，下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢會從 SalesOrders 資料表，以遞減的順序排序 Sales 和 Region by Sales 資料行： `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`。  
+ 針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源類型，您可以將 ORDER BY 子句新增至資料集查詢。 例如，下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢會從 SalesOrders 資料表，以遞減的順序排序 Sales 和 Region by Sales 資料行： `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`。  
   
 > [!NOTE]  
 >  並非所有資料來源都支援在查詢中指定排序次序的能力。  

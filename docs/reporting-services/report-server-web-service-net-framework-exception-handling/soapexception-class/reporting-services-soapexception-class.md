@@ -12,10 +12,10 @@ ms.assetid: 2cec49ee-20b1-40eb-a75b-0908d9c05b34
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: daab30930fb1ae5df3c36dcfb417bd977d6663c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62991685"
 ---
 # <a name="reporting-services-soapexception-class"></a>Reporting Services SoapException 類別
@@ -25,7 +25,7 @@ ms.locfileid: "62991685"
   
  下表列出 **SoapException** 類別的公用屬性。  
   
-|公用屬性|Description|  
+|公用屬性|描述|  
 |---------------------|-----------------|  
 |**Actor**|造成例外狀況的程式碼， 這個值是 Web 服務方法的 URL。|  
 |**Detail**|應用程式特定的錯誤資訊， 這個值是由報表伺服器所設定，且格式為 XML。 如需詳細資訊，請參閱 [Detail 屬性](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md)和[使用 Detail 屬性處理特定的錯誤](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)。|  

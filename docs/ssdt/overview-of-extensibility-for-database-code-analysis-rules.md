@@ -1,23 +1,24 @@
 ---
-title: 資料庫程式碼分析規則的擴充性概觀 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 資料庫程式碼分析規則的擴充性
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd64a7c3152941a88122543dc4b8b80045f175a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ef4ab84a123252dd35da85213110b8b4abb616ad
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984487"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251971"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>資料庫程式碼分析規則的擴充性概觀
+
 包含 SQL Server Data Tools 的 Visual Studio 版本包括程式碼分析規則，可報告資料庫程式碼中的 Transact\-SQL 設計、命名和效能警告。 如需詳細資訊，請參閱[分析資料庫程式碼以提升程式碼品質](https://msdn.microsoft.com/library/dd172133(v=vs.100).aspx) \(機器翻譯\)。  
   
 如果內建的程式碼分析規則未涵蓋您要包括的特定 Transact\-SQL 問題，則您可以建立自訂的資料庫程式碼分析規則。 例如，您可能想要建立可避免使用 WAITFOR DELAY 陳述式的自訂規則，如[為 SQL Server 編寫自訂靜態程式碼分析規則組件的逐步解說](../ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md)中所示。 若要建立自訂的資料庫程式碼分析規則，您要使用 [CodeAnalysis](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.aspx) 命名空間中的類別。  

@@ -1,6 +1,6 @@
 ---
-title: 已註冊的伺服器 F1 說明 | Microsoft Docs
-ms.custom: ''
+title: 已註冊的伺服器 F1 說明
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf08f76b0df0b3624aa1450b2463599b31fb85fa
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f8422cd501258d15365e7125c11e616c94d7dc8d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266138"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256232"
 ---
 # <a name="registered-servers-f1-help"></a>已註冊的伺服器 F1 說明
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "68266138"
  **已註冊的伺服器描述**  
  輸入伺服器的選擇性描述。  
   
- **測試**  
+ **Test**  
  按一下以測試與 [伺服器名稱]  中選取之伺服器的連接。  
   
  
@@ -91,7 +91,7 @@ ms.locfileid: "68266138"
  **驗證**  
  Windows 驗證允許使用者使用其 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認證、以 Windows 使用者身分或是 Windows 群組成員的身分進行連接。  
   
- **User name**  
+ **使用者名稱**  
  這個選項在此版本中無法使用。  
   
  **密碼**  
@@ -106,7 +106,7 @@ ms.locfileid: "68266138"
  **已註冊的伺服器描述**  
  輸入伺服器的選擇性描述。  
   
- **測試**  
+ **Test**  
  按一下以測試與 [伺服器名稱]  中選取之伺服器的連接。 
  
  ## <a name="ssis-new-or-edit-server-registration-general-tab"></a>SSIS 新增或編輯伺服器註冊 (一般索引標籤) 
@@ -117,7 +117,7 @@ ms.locfileid: "68266138"
   
 ### <a name="options"></a>選項。  
  **伺服器類型**  
- 在 [已註冊的伺服器] 中註冊伺服器時，[伺服器類型]  方塊是唯讀的，且會與 [已註冊的伺服器] 中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請在 **[已註冊的伺服器]** , **[Database Engine]** , **[Analysis Server]** , **[Reporting Services]** **、** [SQL Server Compact] **Edition** 或 **[Integration Services]** ，然後才開始註冊新伺服器。  
+ 在 [已註冊的伺服器] 中註冊伺服器時，[伺服器類型]  方塊是唯讀的，且會與 [已註冊的伺服器] 中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請在 [已註冊的伺服器]  工具列上按一下 **Database Engine**、**Analysis Server**、**Reporting Services**、**SQL Server Compact Edition**  或 **Integration Services**，然後才開始註冊新伺服器。  
   
  **伺服器名稱**  
  選取要連接的伺服器。 依預設，會顯示上次連接的伺服器。  
@@ -125,7 +125,7 @@ ms.locfileid: "68266138"
  **驗證**  
  Windows 驗證模式允許使用者透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者帳戶連接。  
   
- **User name**  
+ **使用者名稱**  
  這個選項在此版本中無法使用。  
   
  **密碼**  
@@ -140,7 +140,7 @@ ms.locfileid: "68266138"
  **已註冊的伺服器描述**  
  輸入伺服器的選擇性描述。  
   
- **測試**  
+ **Test**  
  按一下以測試與 [伺服器名稱]  中選取之伺服器的連接。 
   
 

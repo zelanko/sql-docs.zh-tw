@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51c21800dcddec471d6760c31c3cea12e6123b6e
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 7a4deeec624f349f7fd40bb89dc9b14b6baf309b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592317"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190690"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>報表內嵌資料集和共用資料集 (報表產生器及 SSRS)
   資料集會從資料連接指定您要使用的資料。 資料集是以報表中儲存為內嵌資料來源或報表伺服器上共用資料來源參考的資料連接為基礎。 資料集包含指定一組欄位的查詢。 當您將這些欄位拖曳至設計介面時，您可以建立報表執行時評估為實際資料的運算式。  
@@ -42,7 +42,7 @@ ms.locfileid: "73592317"
   
 6.  **查詢結果** ：您可以執行查詢並查看範例結果集。 您必須擁有設計階段認證，才能執行查詢。  
   
-7.  **來自結構描述的中繼資料** ：資料提供者會將結構描述查詢命令與查詢分開執行，以擷取資料集欄位集合的中繼資料。 例如， [!INCLUDE[tsql](../../includes/tsql-md.md)] **SELECT** 陳述式會傳回資料庫資料表的資料行名稱。 使用 [報表資料] 窗格展開資料集，即可檢視資料集欄位集合。  
+7.  **來自結構描述的中繼資料** ：資料提供者會將結構描述查詢命令與查詢分開執行，以擷取資料集欄位集合的中繼資料。 例如，[!INCLUDE[tsql](../../includes/tsql-md.md)] **SELECT** 陳述式會傳回資料庫資料表的資料行名稱。 使用 [報表資料] 窗格展開資料集，即可檢視資料集欄位集合。  
   
  資料也可以使用預先定義的共用資料集和報表組件併入報表中。 這些項目已經有您所需的資料連接資訊。 如需詳細資訊，請參閱[報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) 和[報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "73592317"
   
 -   來自任何已註冊並已設定之 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者的結果集。  
   
--   來自已針對特定資料來源設計之報表模型的資料，其中包含預先定義的實體、實體關聯性以及欄位。 如需詳細資訊，請參閱[Reporting Services 檔](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)中的「報表資料集」。  
+-   來自已針對特定資料來源設計之報表模型的資料，其中包含預先定義的實體、實體關聯性以及欄位。 如需詳細資訊，請參閱 [Reporting Services 文件](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)中的＜報表資料集＞。  
   
  當報表在執行階段處理時，針對查詢傳回的實際結果集可能擁有零或多個資料列。 在查詢中定義的資料行也可能從資料來源遺失。 來自資料來源的 Null 值會對應到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 值 **System.DBNull.Value**。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "73592317"
   
  內嵌與共用資料來源之間的差異在於建立、儲存和管理的方式。 下表摘要列出內嵌與共用資料來源之間的差異：  
   
-|Description|內嵌<br /><br /> 資料來源|共用<br /><br /> 資料來源|  
+|描述|內嵌<br /><br /> 資料來源|共用<br /><br /> 資料來源|  
 |-----------------|------------------------------|----------------------------|  
 |資料連接會內嵌在報表定義中。|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
 |報表伺服器上資料連接的指標會內嵌在報表定義中。||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
@@ -144,7 +144,7 @@ ms.locfileid: "73592317"
 |--------------|--------------------------------------------|------------------------------------------|  
 |查詢文字|設定查詢，包括將它定義為運算式。|無法變更查詢。|  
 |查詢參數|無法參考報表參數<br /><br /> 包含預設值<br /><br /> 包含唯讀旗標|設定未在定義中標記為唯讀的參數|  
-|篩選|定義篩選|無法檢視或變更屬於定義之一部分的資料集篩選<br /><br /> 可以建立其他篩選|  
+|篩選器|定義篩選條件|無法檢視或變更屬於定義之一部分的資料集篩選<br /><br /> 可以建立其他篩選|  
 |資料來源|必須為共用資料來源|無法變更資料來源|  
 |欄位|來自查詢命令的欄位<br /><br /> 導出欄位不屬於資料集定義的一部分|檢視欄位，但是無法變更欄位<br /><br /> 根據您將共用資料集加入至報表時的查詢，欄位集合是靜態的。 若要更新，請按一下 **[資料集屬性]** 對話方塊中的 **[重新整理欄位]** 。 實際的欄位集合是定義中目前的查詢所傳回的任何內容。<br /><br /> 加入導出欄位|  
 |資料集|資料選項，例如區分大小寫|覆寫執行個體中的資料選項|  
@@ -219,7 +219,7 @@ ms.locfileid: "73592317"
   
 ## <a name="see-also"></a>另請參閱  
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: f6f0c6e3-8bb5-4c44-9d19-1872edc72746
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 65da2d36c53f5f00851b36f47396b7bcbf6a6092
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284611"
 ---
 # <a name="calling-web-service-methods"></a>呼叫 Web 服務方法

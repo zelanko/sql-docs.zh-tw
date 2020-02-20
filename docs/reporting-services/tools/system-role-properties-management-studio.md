@@ -11,16 +11,16 @@ ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f3084f12a417986571c3feb2195e513f071f9dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576025"
 ---
 # <a name="system-role-properties-management-studio"></a>系統角色屬性 (Management Studio)
   您可以使用 [系統角色] 頁面來檢視目前為報表伺服器定義的系統角色定義。 系統角色定義包含相對於整個網站 (而非個別項目) 所執行之工作的具名集合。 角色定義會指派給使用者或群組，以便建立產生的角色指派。 角色定義中的工作會指定使用者或群組可執行的工作。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 有兩個預先定義的系統角色定義： **系統管理員** 和 **系統使用者**。 您可以藉由變更工作清單來修改這些角色定義，也可以建立支援不同工作組合的新系統角色。 編輯角色定義將影響包含該角色定義的所有角色指派。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 有兩個預先定義的系統角色定義：**系統管理員**和**系統使用者**。 您可以藉由變更工作清單來修改這些角色定義，也可以建立支援不同工作組合的新系統角色。 編輯角色定義將影響包含該角色定義的所有角色指派。  
   
 > [!NOTE]  
 >  系統角色定義只會用於以原生模式執行的報表伺服器。 如果報表伺服器是針對 SharePoint 整合所設定，這個頁面就無法使用。  
@@ -30,9 +30,9 @@ ms.locfileid: "65576025"
  指定系統角色定義的名稱。  
   
  **說明**  
- 顯示系統角色定義的描述。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，這項描述只會顯示在此頁面中。 透過報表管理員檢視這個項目的使用者，會在瀏覽資料夾階層時看到此描述。  
+ 顯示系統角色定義的描述。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，這項描述只會出現在本頁面上。 透過報表管理員檢視這個項目的使用者，會在瀏覽資料夾階層時看到此描述。  
   
- **工作**  
+ **Task**  
  列出此角色定義可以選取的所有系統層級工作。 您可以將項目加入預先定義的工作清單，或者從清單移除項目，以定義使用者藉由這個角色存取指定項目的方式。 您不能建立新的工作，也不能修改現有的工作。  
   
  **說明**  

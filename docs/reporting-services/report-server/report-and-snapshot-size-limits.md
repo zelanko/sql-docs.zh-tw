@@ -16,17 +16,17 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 05ed8b22882264aa16efc8c5b7736bcc517e44f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581446"
 ---
 # <a name="report-and-snapshot-size-limits"></a>報表和快照集的大小限制
   管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的管理員可以透過此主題中的資訊來了解，當報表發行至報表伺服器、在執行階段進行轉譯以及儲存至檔案系統時，報表大小的限制。 此主題也提供有關如何測量報表伺服器資料庫大小的實作指南，並且描述快照集大小對伺服器效能的影響。  
   
 ## <a name="maximum-size-for-published-reports"></a>已發行報表的大小上限  
- 報表伺服器上報表和模型的大小，是根據您發行至報表伺服器上報表定義 (.rdl) 與報表模型 (.smdl) 檔案的大小來決定， 報表伺服器本身並不會限制您發行之報表的大小。 但是， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 會限制公佈到伺服器之項目的大小上限。 依預設，此限制為 4 MB。 如果您將超出此限制的檔案上傳或發行至報表伺服器，您將收到一個 HTTP 例外狀況。 在此情況下，藉由增加 Machine.config 檔案中 **maxRequestLength** 元素的值，就可以修改預設值。  
+ 報表伺服器上報表和模型的大小，是根據您發行至報表伺服器上報表定義 (.rdl) 與報表模型 (.smdl) 檔案的大小來決定， 報表伺服器本身並不會限制您發行之報表的大小。 但是，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 會限制張貼到伺服器的項目大小上限。 依預設，此限制為 4 MB。 如果您將超出此限制的檔案上傳或發行至報表伺服器，您將收到一個 HTTP 例外狀況。 在此情況下，藉由增加 Machine.config 檔案中 **maxRequestLength** 元素的值，就可以修改預設值。  
   
  儘管報表模型的大小可能非常巨大，但是報表定義很少會超過 4 MB， 而且報表大小通常只在 KB 的範圍之內。 但是，如果您包含內嵌影像，則這些影像的編碼可能會產生超過 4 MB 預設值的大型報表定義。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "65581446"
  報表大小唯一的硬限制只會發生在轉譯成 Excel 格式時， 因為工作表不能超過 65536 個資料列或 256 個資料行。 其他轉譯格式沒有這些限制，因此檔案大小僅受限於伺服器的資源數量。  
   
 > [!NOTE]  
->  報表處理及轉譯是在記憶體中處理， 因此，如果您有大型的報表或大量的使用者，請務必先做好容量計劃，以確保您的報表伺服器部署執行方式可以滿足使用者。 如需有關工具和指導方針的詳細資訊，請參閱下列 MSDN 發行集：＜ [規劃 Reporting Services 的延展性和效能](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) ＞(英文) 和＜ [在 SQL Server 2005 Reporting Services 報表伺服器上使用 Visual Studio 2005 執行負載測試](https://go.microsoft.com/fwlink/?LinkID=77519)＞(英文)。  
+>  報表處理及轉譯是在記憶體中處理， 因此，如果您有大型的報表或大量的使用者，請務必先做好容量計劃，以確保您的報表伺服器部署執行方式可以滿足使用者。 如需工具和指導方針的詳細資訊，請參閱下列 MSDN 發行集：[規劃 Reporting Services 的延展性和效能](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10))與[在 SQL Server 2005 Reporting Services 報表伺服器上使用 Visual Studio 2005 執行負載測試](https://go.microsoft.com/fwlink/?LinkID=77519) (英文)。  
   
 ## <a name="measuring-snapshot-storage"></a>測量快照集儲存區  
  任何給定之快照集的大小，會與報表中的資料數量呈現直接正比， 因此會遠大於儲存在報表伺服器上的其他項目。 快照集大小一般會介於數 MB 到數十 MB 之間， 如果您的報表非常大，則可以預期會看到更大的快照集。 根據您使用快照集的頻率以及設定報表記錄的方式，可能在短時間內，報表伺服器資料庫所需的磁碟空間數量就會快速增加。  

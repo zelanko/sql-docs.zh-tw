@@ -1,7 +1,7 @@
 ---
-title: 解除安裝現有的 SQL Server 執行個體 (安裝程式) | Microsoft Docs
-ms.custom: ''
-ms.date: 09/11/2019
+title: 解除安裝現有的執行個體
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 16c406052b563accdc2cd98fd629909cce38e0ce
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 980982f6ae55d72ef6a54fdc07c0c707c4752b8f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251071"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258953"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>解除安裝現有的 SQL Server 執行個體 (安裝程式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,19 +55,19 @@ ms.locfileid: "71251071"
     > ReportServer 資料庫包含在 SQL Server Reporting Services 中。   
 
  
-1.  **停止所有**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **服務** ：建議您在解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件之前，先停止所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的本機安全性群組。 使用中的連接可能會導致解除安裝無法順利完成。  
+1.  **停止所有** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **服務。** ：建議您在解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件之前，先停止所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的本機安全性群組。 使用中的連接可能會導致解除安裝無法順利完成。  
   
 1.  **使用具有適當權限的帳戶。** 請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶或具有同等權限的帳戶登入伺服器。 例如，您可以使用本機管理員群組成員的帳戶登入伺服器。  
   
-## <a name="uninstall"></a>Uninstall 
+## <a name="uninstall"></a>解除安裝 
 
-# <a name="windows-10--2016-tabwindows10"></a>[Windows 10 / 2016 以上](#tab/Windows10)
+# <a name="windows-10--2016-"></a>[Windows 10 / 2016 以上](#tab/Windows10)
 
 若要從 Windows 10、Windows Server 2016、Windows Server 2019 及更新版本中解除安裝 SQL Server，請遵循下列步驟： 
 
 1. 若要開始移除流程，請從 [開始] 功能表巡覽至 [設定]  ，然後選擇 [應用程式]  。 
 1. 在搜尋方塊中搜尋 `sql`。 
-1. 選取 **Microsoft SQL Server (版本) (位元)** 。 例如， `Microsoft SQL Server 2017 (64-bit)`。
+1. 選取 **Microsoft SQL Server (版本) (位元)** 。 例如： `Microsoft SQL Server 2017 (64-bit)` 。
 1. 選取 [解除安裝]  。
  
     ![解除安裝 SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-10.png)
@@ -84,12 +84,12 @@ ms.locfileid: "71251071"
  
 1. 重新整理 [應用程式與功能]  視窗來驗證已成功移除 SQL Server 執行個體，並判斷哪些 SQL Server 元件仍存在 (若有的話)。 若您有進行選擇的話，請也從此視窗移除這些元件。 
 
-# <a name="windows-2008---2012-r2tabwindows2012"></a>[Windows 2008 - 2012 R2](#tab/windows2012)
+# <a name="windows-2008---2012-r2"></a>[Windows 2008 - 2012 R2](#tab/windows2012)
 
 若要從 Windows Server 2008、Windows Server 2012 及 Windows 2012 R2 中解除安裝 SQL Server，請遵循下列步驟： 
 
 1. 若要開始移除流程，請巡覽至 [控制台]  ，然後選取 [程式和功能]  。
-1. 以滑鼠右鍵按一下 [Microsoft SQL Server (版本) (位元)]  ，然後選取 [解除安裝]  。 例如， `Microsoft SQL Server 2012 (64-bit)`。  
+1. 以滑鼠右鍵按一下 [Microsoft SQL Server (版本) (位元)]  ，然後選取 [解除安裝]  。 例如： `Microsoft SQL Server 2012 (64-bit)` 。  
   
     ![解除安裝 SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-2012.png)
 

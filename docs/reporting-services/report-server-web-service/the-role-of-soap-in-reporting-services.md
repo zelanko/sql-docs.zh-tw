@@ -14,10 +14,10 @@ ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4f03388971728750866480a5b0a6ec9626f92a1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63069866"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
@@ -39,7 +39,7 @@ ms.locfileid: "63069866"
 </soap:Envelope>  
 ```  
   
- SOAP 本身需要將訊息放入 **Envelope** 項目中，並且在 **Body** 項目中含有大量的訊息。 在此範例中，本文包含對 <xref:ReportService2010.ReportingService2010.DeleteItem%2A> 方法的呼叫，這需要代表要刪除的項目路徑之字串參數。 您可以建立 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 用戶端 Proxy 類別，將所有的 SOAP 作業封裝成方法。 下列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 方法代表稍早指定的 SOAP 範例。  
+ SOAP 本身需要將訊息放入 **Envelope** 項目中，並且在 **Body** 項目中含有大量的訊息。 在此範例中，本文包含對 <xref:ReportService2010.ReportingService2010.DeleteItem%2A> 方法的呼叫，這需要代表要刪除的項目路徑之字串參數。 您可以建立 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 用戶端 Proxy 類別，其可將所有的 SOAP 作業封裝成方法。 下列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 方法代表稍早指定的 SOAP 範例。  
   
 ```  
 public void DeleteItem(string item);  

@@ -14,10 +14,10 @@ ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0359a53fafa4c738b80d4ad44b3c9babdd534cf7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68892557"
 ---
 # <a name="grouping-pane"></a>群組窗格
@@ -36,11 +36,11 @@ ms.locfileid: "68892557"
 ## <a name="default-mode"></a>預設模式  
  在預設模式下，[資料列群組] 窗格和 [資料行群組] 窗格會顯示所有父群組、子群組和相鄰群組的階層式檢視。 子群組會以縮排顯示在其父群組下。 相鄰群組會與其同層級群組顯示在相同的縮排層級上。 下圖顯示 Tablix 資料區域與巢狀資料列群組，以及巢狀資料行和相鄰資料行群組。  
   
- ![Tablix、巢狀及相鄰的資料列和資料行群組](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix、巢狀及相鄰的資料列和資料行群組")  
+ ![Tablix、巢狀和相鄰的資料列及資料行群組](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix、巢狀和相鄰的資料列及資料行群組")  
   
  [群組] 窗格會顯示對應的資料列和資料行群組。 在下圖中，以子類別目錄為基礎的群組已在 [資料列群組] 窗格中選取，而 [Subcat] 群組資料格則已在 Tablix 資料區域中選取：  
   
- ![巢狀資料列和資料行群組的群組窗格](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "巢狀資料列和資料行群組的群組窗格")  
+ ![巢狀資料列和資料行群組的分組窗格](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "巢狀資料列和資料行群組的分組窗格")  
   
  在 [資料列群組] 窗格中，以子類別目錄為基礎之群組是以類別目錄為基礎之群組的子系。 在 [資料行群組] 窗格中，國家/地區群組是地理位置群組的子系。 年份群組和國家/地區群組則是相鄰的群組。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68892557"
   
 -   **FixedData**： 布林值。 用於外部資料列和資料行標頭。 在轉譯器 (例如 HTML) 中垂直捲動時凍結資料列群組區域，或在水平捲動時凍結資料行群組區域。  
   
--   **HideIfNoRows**： 布林值。 僅用於靜態成員。 設定時，會忽略 Hidden 和 ToggleItem。 如果 Tablix 資料區域不包含資料的資料列，則隱藏此成員。  
+-   **HideIfNoRows**： 布林值。 僅用於靜態成員。 如果有設定，則會忽略 Hidden 和 ToggleItem。 如果 Tablix 資料區域不包含資料的資料列，則隱藏此成員。  
   
 -   **KeepTogether**：  
   

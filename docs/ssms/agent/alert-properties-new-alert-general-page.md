@@ -1,10 +1,9 @@
 ---
-title: 警示屬性 - 新增警示 (一般頁面) | Microsoft Docs
-ms.custom: ''
+title: 警示屬性 - 新增警示 (一般頁面)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4634821adee5021b986b3f9c87c0416bad33ec6a
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: d889dc5f93abb61dd3d92b736eb483a5a4ba2ff6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383801"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254564"
 ---
 # <a name="alert-properties---new-alert-general-page"></a>警示屬性 - 新增警示 (一般頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "70383801"
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-使用此頁面即可檢視及修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示的一般屬性。  
+使用此頁面來檢視和修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示的一般屬性。  
 
 ## <a name="options"></a>選項。  
 **名稱**  
@@ -62,7 +63,7 @@ ms.locfileid: "70383801"
 指定要用來篩選事件的字串。  
   
 ## <a name="sql-server-performance-condition-alerts"></a>SQL Server 效能條件警示  
-**物件**  
+**Object**  
 指定要監視的效能物件。  
   
 **計數器**  
@@ -74,14 +75,14 @@ ms.locfileid: "70383801"
 **發出警示的時機為計數器達**  
 指定警示要回應的計數器行為。 例如，當 [Free space in tempdb (KB)]  計數器的值低於某個值時，您可能會希望警示針對如此的條件做出回應，或者當 [SQL Compilations/sec]  高於某個值時，您可能會希望警示針對如此的條件做出回應。  
   
-**Value**  
+**ReplTest1**  
 指定計數器的值。  
   
 ## <a name="wmi-event-alert-options"></a>WMI 事件警示選項  
-**命名空間**  
+**Namespace**  
 指定針對 WMI 查詢語言 (WQL) 陳述式使用的命名空間。 僅支援執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 之電腦上的命名空間。  
   
-**[資料集屬性]**  
+**查詢**  
 指定會識別警示所回應之事件的 WQL 陳述式。  
   
 ## <a name="see-also"></a>另請參閱  

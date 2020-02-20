@@ -1,7 +1,7 @@
 ---
-title: 建立新的 SQL Server 容錯移轉叢集 (安裝程式) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 建立新的容錯移轉叢集
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: install
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 02cb0eb53ee8561884799c3a5e4f4f44eb5ff752
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7d66a12e545374196a2fa6a8833bcbf159c1c9c6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893178"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230481"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>建立新的 SQL Server 容錯移轉叢集 (安裝程式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,13 +82,13 @@ ms.locfileid: "68893178"
 > [!NOTE]  
 >  執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式之前，請記下叢集管理員中的共用磁碟機位置。 您必須擁有這項資訊，才能建立新的容錯移轉叢集。  
   
-### <a name="to-install-a-new-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-integrated-install-with-add-node"></a>若要使用整合式安裝與加入節點來安裝新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集  
+### <a name="to-install-a-new-ssnoversion-failover-cluster-using-integrated-install-with-add-node"></a>若要使用整合式安裝與加入節點來安裝新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝媒體，然後在根資料夾中，按兩下 Setup.exe。 若要從網路共用區進行安裝，請瀏覽到共用區上的根資料夾，然後按兩下 Setup.exe。 如需有關如何安裝必要元件的詳細資訊，請參閱＜ [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)＞。  
   
 2.  安裝精靈會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要建立新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 叢集安裝，請在安裝頁面上按一下 新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [容錯移轉叢集安裝]  。  
   
-3.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
+3.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請[!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
   
 4.  若要繼續進行，請按 **[下一步]** 。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68893178"
   
 7.  在 [產品金鑰] 頁面上，指出您要安裝免費的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本，還是您擁有產品之實際執行版本的 PID 金鑰。 如需詳細資訊，請參閱 [SQL Server 2016 的版本和元件](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
-8.  在 [授權條款] 頁面上，閱讀授權合約，然後選取要接受授權條款和條件的核取方塊。 若要協助提升 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您也可以啟用功能使用方式選項，並傳送報告給 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 按 **[下一步]** ，繼續進行。 若要結束安裝程式，請按一下 **[取消]** 。  
+8.  在 [授權條款] 頁面上，閱讀授權合約，然後選取要接受授權條款和條件的核取方塊。 若要協助提升 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您也可以啟用功能使用方式選項，並傳送報告給 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 選取 [下一步]  以繼續操作。 若要結束安裝程式，請按一下 **[取消]** 。  
   
 9. 在 [特徵選取] 頁面上，選取要安裝的元件。 當您選取功能名稱之後，每一個元件群組的描述就會出現在右窗格中。 雖然您可以選取任何核取方塊的組合，但是只有表格式模式中的 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 及多維度模式中的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支援容錯移轉叢集。 其他選取的元件將會當做獨立功能來執行，而在您執行安裝程式的目前節點上則沒有任何容錯移轉功能。 如需 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 節點的詳細資訊，請參閱 [判斷 Analysis Services 執行個體的伺服器模式](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "68893178"
   
      **執行個體根目錄** - 依預設，執行個體根目錄為 C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\。 若要指定非預設的根目錄，請使用提供的欄位，或是按一下省略符號按鈕找出安裝資料夾。  
   
-     **在這部電腦上偵測到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體和功能** - 此方格會顯示執行安裝程式之電腦上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 如果預設執行個體已經安裝在電腦上，您就必須安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的具名執行個體。 按 **[下一步]** ，繼續進行。  
+     **在這部電腦上偵測到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體和功能** - 此方格會顯示執行安裝程式之電腦上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 如果預設執行個體已經安裝在電腦上，您就必須安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的具名執行個體。 選取 [下一步]  以繼續操作。  
   
 12. 使用 [叢集資源群組] 頁面，即可指定即將放置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 虛擬伺服器資源的叢集資源群組名稱。 若要指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 叢集資源群組名稱，您有兩個選擇：  
   
@@ -143,7 +143,7 @@ ms.locfileid: "68893178"
   
     -   輸入要建立之新群組的名稱。 請注意，"Available storage" 名稱不是有效的群組名稱。  
   
-13. 在 [叢集磁碟選取] 頁面上，選取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集的共用叢集磁碟資源。 叢集磁碟就是即將放置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料的位置。 可以指定一個以上的磁碟。 [可用共用磁碟] 方格會顯示可用磁碟的清單、每個磁碟是否具有成為共用磁碟的資格，以及每個磁碟資源的描述。 按 **[下一步]** ，繼續進行。  
+13. 在 [叢集磁碟選取] 頁面上，選取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集的共用叢集磁碟資源。 叢集磁碟就是即將放置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料的位置。 可以指定一個以上的磁碟。 [可用共用磁碟] 方格會顯示可用磁碟的清單、每個磁碟是否具有成為共用磁碟的資格，以及每個磁碟資源的描述。 選取 [下一步]  以繼續操作。  
   
     > [!NOTE]  
     >  第一個磁碟機會當做所有資料庫的預設磁碟機使用，但是可以在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 或 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 組態頁面上變更。  
@@ -154,7 +154,7 @@ ms.locfileid: "68893178"
   
     -   **網路設定** ：指定容錯移轉叢集執行個體的 IP 類型和 IP 位址。  
   
-     按 **[下一步]** ，繼續進行。  
+     選取 [下一步]  以繼續操作。  
   
 15. 使用此頁面來指定叢集安全性原則。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "68893178"
   
     -   在 [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)]上，請指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務的網域群組。 所有資源權限都是由包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶當做群組成員的網域層級群組所控制。  
   
-     按 **[下一步]** ，繼續進行。  
+     選取 [下一步]  以繼續操作。  
   
 16. 本主題其餘部分的工作流程會因您針對安裝所指定的功能而不同。 您可能不會看到所有頁面，端視您的選取項目而定 ([!INCLUDE[ssDE](../../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)])。  
   
@@ -196,7 +196,7 @@ ms.locfileid: "68893178"
     > [!NOTE]  
     >  若要指定伺服器訊息區塊 (SMB) 檔案伺服器作為資料目錄，請將 [預設資料根目錄]  設為 \\\伺服器名稱\共用名稱\\... 格式的檔案共用  
    
-21. 使用 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] [組態 - FILESTREAM] 頁面來針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體啟用 FILESTREAM。 按 **[下一步]** ，繼續進行。  
+21. 使用 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] [組態 - FILESTREAM] 頁面來針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體啟用 FILESTREAM。 選取 [下一步]  以繼續操作。  
   
 22. 使用 [[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 組態 - 帳戶提供] 頁面來指定即將擁有 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 之管理員權限的使用者或帳戶。 您至少必須針對 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]指定一個系統管理員。 若要加入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式執行所用的帳戶，請按一下 **[加入目前使用者]** 。 若要在系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]** ，然後編輯在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中將會有管理員權限的使用者、群組或電腦清單。
   
@@ -207,7 +207,7 @@ ms.locfileid: "68893178"
     > [!IMPORTANT]  
     >  如果您要指定非預設的安裝目錄，請確定安裝資料夾對於此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中的目錄共用。 資料目錄應該位於容錯移轉叢集的共用叢集磁碟上。  
    
-24. 使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [組態] 頁面來指定要建立的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安裝類型。 如果是容錯移轉叢集安裝，此選項會設定為未設定的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安裝。 在您完成安裝之後，必須設定 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務。  
+24. 使用[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [組態] 頁面來指定要建立的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安裝類型。 如果是容錯移轉叢集安裝，此選項會設定為未設定的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安裝。 在您完成安裝之後，必須設定 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務。  
   
  
 25. 系統組態檢查將會執行一組額外的規則，以便使用您已指定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能來驗證組態。  
@@ -218,7 +218,7 @@ ms.locfileid: "68893178"
   
 28. 安裝之後， **[完成]** 頁面會提供安裝和其他重要注意事項之摘要記錄檔的連結。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程序，請按一下 **[關閉]** 。  
   
-29. 如果指示您重新啟動電腦，請立刻執行。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需安裝程式記錄檔的詳細資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
+29. 如果指示您重新啟動電腦，請立刻執行。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需安裝程式記錄檔的資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
 30. 若要將節點加入到您剛才建立的單一節點容錯移轉叢集中，請在每一個額外的節點上執行安裝程式，並遵循 AddNode 作業的步驟。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
@@ -237,7 +237,7 @@ ms.locfileid: "68893178"
   
 3.  安裝必要元件之後，安裝精靈將會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要準備要建立叢集的節點，請移到 **[進階]** 頁面，然後按一下 **[進階叢集準備]** 。  
   
-4.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
+4.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請[!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
   
 5.  在 [安裝程式支援檔案] 頁面上，按一下 **[安裝]** ，即可安裝安裝程式支援檔案。  
   
@@ -252,7 +252,7 @@ ms.locfileid: "68893178"
     > [!NOTE]  
     >  您必須在您為相同容錯移轉叢集準備的所有節點上指定相同的產品金鑰。  
   
-9. 在 [授權條款] 頁面上，閱讀授權合約，然後選取要接受授權條款和條件的核取方塊。 若要協助提升 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您也可以啟用功能使用方式選項，並傳送報告給 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 按 **[下一步]** ，繼續進行。 若要結束安裝程式，請按一下 **[取消]** 。  
+9. 在 [授權條款] 頁面上，閱讀授權合約，然後選取要接受授權條款和條件的核取方塊。 若要協助提升 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您也可以啟用功能使用方式選項，並傳送報告給 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 選取 [下一步]  以繼續操作。 若要結束安裝程式，請按一下 **[取消]** 。  
   
 10. 在 [特徵選取] 頁面上，選取要安裝的元件。 當您選取功能名稱之後，每一個元件群組的描述就會出現在右窗格中。 雖然您可以選取任何核取方塊的組合，但是只有表格式模式中的 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 及多維度模式中的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支援容錯移轉叢集。 其他選取的元件將會當做獨立功能來執行，而在您執行安裝程式的目前節點上則沒有任何容錯移轉功能。 如需 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 節點的詳細資訊，請參閱 [判斷 Analysis Services 執行個體的伺服器模式](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)。  
   
@@ -275,7 +275,7 @@ ms.locfileid: "68893178"
   
      **執行個體根目錄** - 依預設，執行個體根目錄為 C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\。 若要指定非預設的根目錄，請使用提供的欄位，或是按一下省略符號按鈕找出安裝資料夾。  
   
-     **安裝的執行個體** - 此方格會顯示執行安裝程式之電腦上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 如果預設執行個體已經安裝在電腦上，您就必須安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的具名執行個體。 按 **[下一步]** ，繼續進行。  
+     **安裝的執行個體** - 此方格會顯示執行安裝程式之電腦上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 如果預設執行個體已經安裝在電腦上，您就必須安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的具名執行個體。 選取 [下一步]  以繼續操作。  
   
 12. [磁碟空間需求] 頁面會計算您所指定之功能的所需磁碟空間，並且比較空間需求與執行安裝程式之電腦的可用磁碟空間。  
   
@@ -285,13 +285,13 @@ ms.locfileid: "68893178"
   
     -   在 [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)]上，請指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務的網域群組。 所有資源權限都是由包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶當做群組成員的網域層級群組所控制。  
   
-     按 **[下一步]** ，繼續進行。  
+     選取 [下一步]  以繼續操作。  
   
 14. 本主題其餘部分的工作流程會因您針對安裝所指定的功能而不同。 您可能不會看到所有頁面，端視您的選取項目而定。  
   
 15. 在 [伺服器設定 - 服務帳戶] 頁面中，指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務的登入帳戶。 在這個頁面上所設定的實際服務隨著您選取要安裝的功能而不同。  
   
-     您可以將相同登入帳戶指派給所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務，或個別設定每一個服務帳戶。 啟動類型針對所有可識別叢集服務是設為手動，其中包括全文檢索搜尋及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理程式，並且在安裝期間無法進行變更。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您個別設定服務帳戶，以針對各項服務提供最低權限，其中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務會授與必須完成工作的最小權限。 如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+     您可以將相同登入帳戶指派給所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務，或個別設定每一個服務帳戶。 啟動類型針對所有可識別叢集服務是設為手動，其中包括全文檢索搜尋及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理程式，並且在安裝期間無法進行變更。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您個別設定服務帳戶，以針對各項服務提供最低權限，其中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務會授與必須完成工作的最小權限。 如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)預覽版本升級問題的解答。  
   
      若要針對此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中的所有服務帳戶指定相同的登入帳戶，請在頁面底部的欄位中提供認證。  
   
@@ -301,7 +301,7 @@ ms.locfileid: "68893178"
   
 16. 使用 [伺服器組態 - 定序]  索引標籤，為 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 指定非預設的定序。  
   
-17. 使用 [Server Configuration - Filestream (伺服器組態 - Filestream)] **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可針對**  的執行個體啟用 FILESTREAM。  按 **[下一步]** ，繼續進行。  
+17. 使用 [Server Configuration - Filestream (伺服器組態 - Filestream)] **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可針對**  的執行個體啟用 FILESTREAM。  選取 [下一步]  以繼續操作。  
   
 18. 使用[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [組態] 頁面來指定要建立的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安裝類型。 如果是容錯移轉叢集安裝，此選項會設定為未設定的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安裝。 在您完成安裝之後，必須設定 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務。  
    
@@ -315,7 +315,7 @@ ms.locfileid: "68893178"
   
 22. 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程序，請按一下 **[關閉]** 。  
   
-23. 如果指示您重新啟動電腦，請立刻執行。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需安裝程式記錄檔的詳細資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
+23. 如果指示您重新啟動電腦，請立刻執行。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需安裝程式記錄檔的資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
 24. 重複上述步驟，為容錯移轉叢集準備其他節點。 您也可以使用自動產生的組態檔，在其他節點上執行準備工作。 如需詳細資訊，請參閱 [使用組態檔安裝 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)。  
   
@@ -325,7 +325,7 @@ ms.locfileid: "68893178"
   
 1.  在依照 [準備步驟](#prepare)中所述的內容來準備所有節點之後，請在其中一個備妥的節點上執行安裝程式，最好是在擁有共用磁碟的節點上執行。 在  安裝中心的 [進階] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 頁面上，按一下 **[進階叢集完成]** 。  
   
-2.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
+2.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請[!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
   
 3.  在 [安裝程式支援檔案] 頁面上，按一下 **[安裝]** ，即可安裝安裝程式支援檔案。  
   
@@ -342,13 +342,13 @@ ms.locfileid: "68893178"
   
 7.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會依據您選取的功能執行一組額外的規則，以驗證您的組態。  
   
-8.  使用 [叢集資源群組] 頁面，即可指定即將放置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 虛擬伺服器資源的叢集資源群組名稱。 若要指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 叢集資源群組名稱， 您有兩個選項：  
+8.  使用 [叢集資源群組] 頁面，即可指定即將放置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 虛擬伺服器資源的叢集資源群組名稱。 若要指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 叢集資源群組名稱， 您有兩個選擇：  
   
     -   使用清單來指定要使用的現有群組。  
   
     -   輸入要建立之新群組的名稱。 請注意，"Available storage" 名稱不是有效的群組名稱。  
   
-9. 在 [叢集磁碟選取] 頁面上，選取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集的共用叢集磁碟資源。 叢集磁碟就是即將放置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料的位置。 可以指定一個以上的磁碟。 [可用共用磁碟] 方格會顯示可用磁碟的清單、每個磁碟是否具有成為共用磁碟的資格，以及每個磁碟資源的描述。 按 **[下一步]** ，繼續進行。  
+9. 在 [叢集磁碟選取] 頁面上，選取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集的共用叢集磁碟資源。 叢集磁碟就是即將放置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料的位置。 可以指定一個以上的磁碟。 [可用共用磁碟] 方格會顯示可用磁碟的清單、每個磁碟是否具有成為共用磁碟的資格，以及每個磁碟資源的描述。 選取 [下一步]  以繼續操作。  
   
     > [!NOTE]  
     >  第一個磁碟機會當做所有資料庫的預設磁碟機使用，但是可以在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 或 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 組態頁面上變更。  
@@ -357,7 +357,7 @@ ms.locfileid: "68893178"
   
     -   **網路設定** - 針對容錯移轉叢集執行個體的所有節點與子網路指定 IP 類型和 IP 位址。 您可以針對多重子網路容錯移轉叢集指定多個 IP 位址，但是每個子網路只支援一個 IP 位址。 每個備妥的節點都至少應該是一個 IP 位址的擁有者。 如果您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集具有多個子網路，系統將會提示您將 IP 位址資源相依性設定為 OR。  
   
-     按 **[下一步]** ，繼續進行。  
+     選取 [下一步]  以繼續操作。  
   
 11. 本主題其餘部分的工作流程會因您針對安裝所指定的功能而不同。 您可能不會看到所有頁面，端視您的選取項目而定。  
   
@@ -395,7 +395,7 @@ ms.locfileid: "68893178"
   
 19. 安裝之後， **[完成]** 頁面會提供安裝和其他重要注意事項之摘要記錄檔的連結。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程序，請按一下 **[關閉]** 。 有了這個步驟，針對相同容錯移轉叢集準備的所有節點現在都會成為已完成之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集的一部分。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
  **設定新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝**：為了減少系統的可攻擊介面區，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會選擇性地安裝及啟用主要服務和功能。 如需詳細資訊，請參閱＜ [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md)＞。  
   
  如需記錄檔位置的詳細資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  

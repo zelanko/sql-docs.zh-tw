@@ -1,7 +1,6 @@
 ---
-title: 查看重新執行結果 |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 檢閱重新執行結果
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,18 +9,22 @@ ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6b68d6e5376bdf24efb09c50e3df63ed5810373
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 03c6f6e0bcb58037e362ffd4b3ad20914fd9c328
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949938"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306948"
 ---
 # <a name="review-the-replay-results"></a>檢閱重新執行結果
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能完成分散式重新執行之後，即可擷取每個用戶端的重新執行活動，並將其儲存在每個用戶端的結果追蹤檔案中。 若要擷取此活動，您必須在以 **replay** 選項執行管理工具時使用 **-o** 參數。 如需詳細資訊，請參閱[重新執行選項 &#40;Distributed Replay 管理工具&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)。  
+
+在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能完成分散式重新執行之後，即可擷取每個用戶端的重新執行活動，並將其儲存在每個用戶端的結果追蹤檔案中。 若要擷取此活動，您必須在以 **replay** 選項執行管理工具時使用 **-o** 參數。 如需詳細資訊，請參閱[重新執行選項 &#40;Distributed Replay 管理工具&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)。  
   
- 結果追蹤檔案的儲存位置是由每個用戶端上用戶端組態檔 `<ResultDirectory>` 中的 `DReplayClient.xml` XML 元素所指定。 每次重新執行時都會覆寫用戶端結果目錄中的追蹤檔案。  
+ 結果追蹤檔案的儲存位置是由每個用戶端上用戶端組態檔 `<ResultDirectory>` 中的 `DReplayClient.xml`XML 元素所指定。 每次重新執行時都會覆寫用戶端結果目錄中的追蹤檔案。  
   
  若要指定結果追蹤檔案中應該擷取何種輸出，請修改重新執行組態檔 `DReplay.exe.replay.config`。 您可以使用 `<OutputOptions>` XML 項目來指定是否應該記錄資料列計數或結果集內容。  
   
@@ -30,20 +33,20 @@ ms.locfileid: "67949938"
 ## <a name="event-classes-captured-in-result-trace-files"></a>結果追蹤檔案中擷取的事件類別  
  下表列出結果追蹤資料中擷取的所有事件類別。  
   
-|類別目錄|EventClass 名稱|擷取頻率|擷取點|  
+|類別|EventClass 名稱|擷取頻率|擷取點|  
 |--------------|---------------------|-----------------------|----------------------|  
 |可重新執行的事件|稽核登入|原始追蹤資料中每個 Audit Login 事件一次|在事件成功完成或失敗時。|  
 ||稽核登出|原始追蹤資料中每個 Audit Logout 事件一次|在事件成功完成或失敗時。|  
 ||SQL:BatchCompleted|原始追蹤資料中每個 SQL:BatchStarting 事件一次|在事件成功完成或失敗時。|  
 ||RPC:Completed|原始追蹤資料中每個 RPC:Starting 事件一次|在事件成功完成或失敗時。|  
-|統計資料和結果|Replay Settings Event|一次|結果追蹤的第一個事件|  
-||Replay Statistics Event|一次|結果追蹤的最後一個事件|  
+|統計資料和結果|Replay Settings Event|一次性|結果追蹤的第一個事件|  
+||Replay Statistics Event|一次性|結果追蹤的最後一個事件|  
 ||Replay Result Set Event|每個 SQL:BatchStarting 和 RPC:Starting 事件一次。<br /><br /> 只有在重新執行組態檔中 `<RecordResultSet>` 選項的值設為 `Yes`時才擷取。||  
 ||Replay Result Row Event|SQL:BatchStarting 和 RPC:Starting 事件結果集中的每個資料列一次。<br /><br /> 只有在重新執行組態檔中 `<RecordResultSet>` 選項的值設為 `Yes`時才擷取。||  
 |錯誤和警告|Replay Internal Error|每個內部錯誤一次|在發生內部錯誤狀況時|  
 ||Replay Provider Error|每個提供者錯誤一次|在發生提供者錯誤狀況時|  
   
- 請注意下列事項：  
+ 請注意：  
   
 -   在目標伺服器上每個順利重新執行的事件都有一個對應的輸出事件類別。  
   
@@ -52,12 +55,12 @@ ms.locfileid: "67949938"
 ## <a name="event-class-column-mapping"></a>事件類別資料行對應  
  下圖列出結果追蹤的哪些資料行可用於重新執行期間所擷取的每種事件類別。  
   
- ![Event class column mapping](../../tools/distributed-replay/media/eventclassmappings.gif "Event class column mapping")  
+ ![事件類別資料行對應](../../tools/distributed-replay/media/eventclassmappings.gif "事件類別資料行對應")  
   
 ## <a name="column-descriptions-for-result-trace"></a>結果追蹤的資料行說明  
  下表描述結果追蹤資料的資料行。  
   
-|資料行名稱|資料類型|Description|資料行識別碼|  
+|資料行名稱|資料類型|描述|資料行識別碼|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|事件類別的名稱。|1|  
 |EventSequence|**bigint**|針對提供者錯誤以及內部錯誤和警告，這是對應於錯誤或警告的擷取事件順序。<br /><br /> 針對所有其他事件類別，這是原始追蹤資料中的事件順序。|2|  
@@ -79,7 +82,7 @@ ms.locfileid: "67949938"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay 需求](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [管理工具命令列選項 &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [設定 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   

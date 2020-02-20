@@ -11,15 +11,15 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68889835"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的 Reporting Services (SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境，可用於建立商務智慧解決方案。 SSDT 的主要功能之一是提供報表設計師的撰寫環境，讓您可以從中開啟、修改、預覽、儲存及部署 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 編頁報表定義、共用的資料來源、共用資料集與報表組件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不會包含與 SQL Server。 下載 [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)。 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境，可用於建立商業智慧方案。 SSDT 的主要功能之一是提供報表設計師的撰寫環境，讓您可以從中開啟、修改、預覽、儲存及部署 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 編頁報表定義、共用的資料來源、共用資料集與報表組件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不會包含與 SQL Server。 下載 [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)。 
   
  此主題描述用於 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]方案、專案、專案範本和組態，以及您可以在 [報表設計師] 中使用的檢視、功能表、工具列和快速鍵。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68889835"
   
   
 ##  <a name="bkmk_Configurations"></a> 組態  
- 若要針對不同部署建立多組專案屬性，例如企業測試和實際報表伺服器，請使用組態管理員。 如需詳細資訊，請參閱 [SQL Server 資料工具中的部署和版本支援 &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)之中。  
+ 若要針對不同部署建立多組專案屬性，例如企業測試和實際報表伺服器，請使用組態管理員。 如需詳細資訊，請參閱 [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)。  
   
 ##  <a name="bkmk_ReportServerProjects"></a> 報表伺服器專案  
  當您安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]時， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]提供了下列專案範本：  
@@ -73,7 +73,7 @@ ms.locfileid: "68889835"
   
  [群組] 窗格有兩種模式：  
   
--   **預設值。** 使用 **[預設值]** 模式以階層格式顯示所有資料列及資料行群組，其中顯示父群組、子群組、相鄰群組及詳細資料群組的關聯性。 子群組會顯示在下一個縮排層級 (相較於其父群組而言) 的下方。 相鄰群組會與其對等或同層級群組顯示在相同的縮排層級上。  
+-   **預設值：** 使用 **[預設值]** 模式以階層格式顯示所有資料列及資料行群組，其中顯示父群組、子群組、相鄰群組及詳細資料群組的關聯性。 子群組會顯示在下一個縮排層級 (相較於其父群組而言) 的下方。 相鄰群組會與其對等或同層級群組顯示在相同的縮排層級上。  
   
      您可以使用預設模式來加入、編輯或刪除群組。 若為以單一資料集欄位為基礎的群組，則可以將欄位拖曳至 [資料列群組] 或 [資料行群組] 窗格。 您可以在現有的群組上方或下方插入群組。 若要加入相鄰群組，請以滑鼠右鍵按一下同層級群組，然後使用快速鍵功能表。 若要顯示屬於某個群組的 Tablix 資料格，請選取 [群組] 窗格中的群組。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "68889835"
 ###  <a name="bkmk_SolutionExplorer"></a> 方案總管  
  [方案總管] 是標準的 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 元件，它會顯示專案中的所有項目。 若為報表伺服器專案，這包含用於組織共用資料來源、共用資料集、報表及資源的資料夾。 開啟方案檔時，會自動依字母順序來排列資料夾項目。 若要檢視 [屬性] 窗格中的項目屬性，請選取項目。  
   
-###  <a name="bkmk_Output"></a> 輸出  
+###  <a name="bkmk_Output"></a> Output  
  當您預覽報表時，[輸出] 視窗就會顯示處理錯誤，而當您部署報表或共用資料來源時，則會顯示發行錯誤。  
   
  使用 [輸出] 及 [文件大綱] 視窗，即可協助偵錯運算式中的錯誤。  
@@ -175,7 +175,7 @@ ms.locfileid: "68889835"
   
 -   **報表屬性** ：選取即可開啟 **[報表屬性]** 對話方塊。 在這個對話方塊中，您可以指派一般報表屬性，例如作者名稱和方格間距，以及指定報表配置的屬性，例如資料行數和頁面大小。 您也可以包括自訂程式碼、組件和類別的參考、資料輸出元素的名稱、資料轉換和資料結構描述。  
   
--   **檢視** ：在兩個報表設計師索引標籤之間切換：[設計] 和 [預覽]。  
+-   **檢視**：在兩個報表設計師索引標籤之間切換：[設計] 和 [預覽]。  
   
 -   **頁首** ：在報表中加入或刪除頁首。 當您刪除頁首時，就會刪除頁首中的所有項目。  
   
@@ -240,13 +240,13 @@ ms.locfileid: "68889835"
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 可以與來源外掛程式整合。您可以使用 **[選項]** 對話方塊中的 [專案和方案] 頁面，以指定外掛程式，並設定屬性。  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> 自訂報表範本  
- 若要使用自訂報表做為新報表的範本，您只需將自訂報表複製到裝有 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 之電腦上的 ReportProject 資料夾即可。 此資料夾預設位於下列位置： `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 將新項目加入報表專案時，您的自訂報表會顯示在 [範本] 窗格中。  
+ 若要使用自訂報表做為新報表的範本，您只需將自訂報表複製到裝有 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 之電腦上的 ReportProject 資料夾即可。 此資料夾預設位於下列位置：`<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 將新項目加入報表專案時，您的自訂報表會顯示在 [範本] 窗格中。  
   
  您也可以將自訂樣式加入報表精靈。  
   
   
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> SQL Server 資料工具的命令列支援  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 以及基礎 devenv.exe 應用程式為基礎。 您必須先為下列兩個項目設定有效的值，才能使用這些選項：  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 及基礎 devenv.exe 應用程式為基礎。 您必須先為下列兩個項目設定有效的值，才能使用這些選項：  
   
 -   OverwriteDataSources、TargetDataSourceFolder、TargetReportFolder 和 TargetServerURL 的專案屬性。  
   
@@ -279,7 +279,7 @@ ms.locfileid: "68889835"
   
 -   控制 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的視窗和模式：  
   
-    |Description|按鍵組合|  
+    |描述|按鍵組合|  
     |-----------------|---------------------|  
     |建立選取的專案|CTRL+SHIFT+B|  
     |顯示 [屬性] 視窗|F4|  
@@ -289,7 +289,7 @@ ms.locfileid: "68889835"
   
 -   控制報表設計介面上的項目：  
   
-    |Description|按鍵組合|  
+    |描述|按鍵組合|  
     |-----------------|---------------------|  
     |將焦點從某個報表項目移到下一個報表項目|TAB|  
     |移動選取的報表項目|方向鍵|  

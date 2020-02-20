@@ -12,10 +12,10 @@ ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 640cd9bfd39b272e7829cc25b51ee50a82176a65
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037871"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>報表、報表組件和報表定義 (報表產生器及 SSRS)
@@ -60,10 +60,10 @@ ms.locfileid: "67037871"
   
 -   訂閱報表，訂閱的報表會以您指定的輸出格式傳遞到電子郵件收件匣或檔案共用。  
   
- 訂閱報表，訂閱的報表會以您指定的輸出格式傳遞到電子郵件收件匣或檔案共用。 報表的預設轉譯格式為 HTML 4.0。 除了 HTML 以外，報表還可以使用許多輸出格式轉譯，包括 Excel、Word、XML、PDF、TIFF 與 CSV。 如同已發行的報表一樣，已轉譯的報表也無法編輯或回存到報表伺服器。 如需詳細資訊，請參閱 [匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
+ 訂閱報表，訂閱的報表會以您指定的輸出格式傳遞到電子郵件收件匣或檔案共用。 報表的預設轉譯格式為 HTML 4.0。 除了 HTML 以外，報表還可以使用許多輸出格式轉譯，包括 Excel、Word、XML、PDF、TIFF 與 CSV。 如同已發行的報表一樣，已轉譯的報表也無法編輯或回存到報表伺服器。 如需詳細資訊，請參閱 [匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)中之分頁的規則。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md) [SQL Server 報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md) [SQL Server 中的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   

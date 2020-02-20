@@ -1,23 +1,24 @@
 ---
-title: 如何：從 Team Foundation Build 執行 SQL Server 單元測試 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 從 Team Foundation Build 執行 SQL Server 單元測試
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c4008d88a2a353ead1ddd16f678c4167ff6714d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035088"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244285"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>如何：從 Team Foundation Build 執行 SQL Server 單元測試
+
 您可以使用 Team Foundation Build，在執行組建驗證測試 (BVT) 時執行 SQL Server 單元測試。 您可以設定單元測試以部署資料庫、產生測試資料，然後執行選取的測試。 如果您不熟悉 Team Foundation Build，就應該先檢閱下列資訊，然後再依照本主題的程序進行：  
   
 -   [建立和定義 SQL Server 單元測試](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
@@ -81,7 +82,7 @@ ms.locfileid: "68035088"
   
 4.  在詳細資料窗格的 [主機處理序平台]  中，按一下 [MSIL]  以設定在 x64 組建代理程式上執行測試。  
   
-5.  按一下 **[套用]** 。  
+5.  按一下 [套用]  。  
   
 ## <a name="CreateATestList"></a>將測試指派給測試分類 (選擇性)  
 一般而言，當您建立組建定義以執行單元測試時，可以指定一個或多個測試分類。 指定之分類中的所有測試都會在組建執行時執行。  
@@ -196,9 +197,9 @@ ms.locfileid: "68035088"
   
 5.  在 [加入部署檔案]  對話方塊中，指定您建立的 *BuildComputer*.sqlunitttest.config 檔案。  
   
-6.  按一下 **[套用]** 。  
+6.  按一下 [套用]  。  
   
-7.  按一下 [ **關閉**]。  
+7.  按一下 [關閉]  。  
   
 8.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   

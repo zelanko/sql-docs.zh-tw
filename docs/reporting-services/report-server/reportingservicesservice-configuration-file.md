@@ -13,10 +13,10 @@ ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dfb0f48bb35e6341e2b2a9a72007ef4eb09c2b9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66506626"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 組態檔
@@ -26,7 +26,7 @@ ms.locfileid: "66506626"
 ReportingServicesService.exe.config 檔包括設定追蹤的設定。  
   
 ## <a name="file-location"></a>檔案位置  
-這個檔案可能位於其中一個下列路徑：  
+這個檔案可能位於下列其中一個路徑：  
 
 ``` Paths  
 \Reporting Services\Report Server\Bin  

@@ -1,7 +1,7 @@
 ---
-title: 設定多重主目錄電腦進行 SQL Server 存取 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 設定多重主目錄電腦以進行存取
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a024707b5fa7ab70394a068ed47110898ae0518
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8733c9a4624bcadb60eb5cfa70cf81f242f43a7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126217"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244455"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>設定多重主目錄電腦進行 SQL Server 存取
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,14 +58,14 @@ ms.locfileid: "68126217"
   
 1.  在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦上，依序按一下 [開始]  和 [執行]  、輸入 **cmd**，然後 [!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
-2.  在 [命令提示字元] 視窗中，輸入 **ipconfig**，然後按下 ENTER，即可列出這部電腦可用的 IP 位址。  
+2.  在 [命令提示字元] 視窗中，輸入 **ipconfig** ，然後按下 ENTER，即可列出這部電腦可用的 IP 位址。  
   
     > [!NOTE]  
     >  **ipconfig** 命令有時會列出許多可能的連結，包含已中斷連線的連結。 **ipconfig** 命令可以同時列出 IPv4 及 IPv6 的位址。  
   
 3.  請記下所使用的 IPv4 位址和 IPv6 位址。 清單中的其他資訊 (例如暫時位址、子網路遮罩和預設閘道器) 都是設定 TCP/IP 網路的重要資訊。 不過，這則範例不會使用這項資訊。  
   
-#### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>判斷使用的 IP 位址和連接埠 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="to-determine-the-ip-addresses-and-ports-used-by-ssnoversion"></a>判斷使用的 IP 位址和連接埠 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  按一下 [開始]  並依序指向 [所有程式]  、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 [組態工具]  ，然後按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員]  。  
   

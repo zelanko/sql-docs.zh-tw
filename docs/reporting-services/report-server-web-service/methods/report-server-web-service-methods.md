@@ -16,10 +16,10 @@ ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4b7425b205bdc630d17e5c962519348d2b1ce7a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284655"
 ---
 # <a name="report-server-web-service-methods"></a>報表伺服器 Web 服務方法
@@ -28,7 +28,7 @@ ms.locfileid: "63284655"
 ## <a name="endpoints-and-methods"></a>端點和方法  
  下表將列出報表伺服器 Web 服務的端點，以及 <xref:ReportService2010.ReportingService2010> 端點所提供之方法的類別目錄。 如需其他端點所提供之方法的詳細資訊，請參閱[技術參考 &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)。  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[報表伺服器 Web 服務端點](../../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)|描述報表伺服器 Web 服務的管理和執行端點。|  
 |[報表伺服器命名空間管理方法](../../../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md)|描述您可以用於管理報表伺服器資料庫的方法。 也就是說，您可以管理資料夾和資源並設定項目屬性。|  

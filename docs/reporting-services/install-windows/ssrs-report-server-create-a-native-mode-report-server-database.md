@@ -1,8 +1,10 @@
 ---
-title: 建立原生模式報表伺服器資料庫 (SSRS 設定管理員) | Microsoft Docs
-ms.date: 05/24/2018
+title: 建立原生模式報表伺服器資料庫 (組態管理員) | Microsoft Docs
+description: 原生模式 Reporting Services 的內部儲存使用 SQL Server 資料庫。 資料庫是必要元件，它是用來儲存已發行的報表、模型、共用資料來源、工作階段資料、資源和伺服器中繼資料。
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
@@ -10,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b80a7e6ee0d68009ff21f01ba0c75b3f0a7fb33
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593559"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866331"
 ---
-# <a name="create-a-native-mode-report-server-database"></a>建立原生模式報表伺服器資料庫
+# <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>建立原生模式報表伺服器資料庫 (SSRS 組態管理員)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
-原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫進行內部儲存。 資料庫是必要元件，它是用來儲存已發行的報表、模型、共用資料來源、工作階段資料、資源和伺服器中繼資料。  
+原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的內部儲存使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 資料庫是必要元件，它是用來儲存已發行的報表、模型、共用資料來源、工作階段資料、資源和伺服器中繼資料。  
 
 若要建立報表伺服器資料庫或是變更連接字串或認證，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員中 [資料庫] 頁面上的選項。  
   
@@ -85,7 +87,7 @@ ms.locfileid: "73593559"
   
     3.  選取 [測試連線]  可驗證與伺服器的連線。  
   
-    4.  選取 **[下一步]** 。  
+    4.  選取 [下一步]  。  
   
 5.  指定用來建立資料庫的屬性。 如需有關如何使用這些屬性的詳細資訊，請參閱本主題的「 [在開始之前](#rsdbrequirements) 」。  
   
@@ -95,7 +97,7 @@ ms.locfileid: "73593559"
   
     3.  報表伺服器模式一律設定為 **[原生]** 。  
   
-    4.  選取 **[下一步]** 。  
+    4.  選取 [下一步]  。  
   
 6.  指定報表伺服器用來連接到報表伺服器資料庫的認證。  
   
@@ -107,7 +109,7 @@ ms.locfileid: "73593559"
   
          如果您希望報表伺服器使用它的服務帳戶進行連接，請選取 **[服務認證]** 。 有了這個選項，伺服器就會使用整合式安全性來進行連接；認證並不會加密或儲存起來。  
   
-    2.  選取 **[下一步]** 。  
+    2.  選取 [下一步]  。  
   
 7.  檢閱 [摘要] 頁面上的資訊，以確認設定都正確無誤，然後選取 [下一步]  。  
   
@@ -127,7 +129,7 @@ ms.locfileid: "73593559"
   
     2.  選取 [測試連線]  可驗證與伺服器的連線。  
   
-    3.  選取 **[下一步]** 。  
+    3.  選取 [下一步]  。  
 
 4.  指定報表伺服器用來連接到報表伺服器資料庫的認證。  
   
@@ -139,7 +141,7 @@ ms.locfileid: "73593559"
   
          如果您希望報表伺服器使用它的服務帳戶進行連接，請選取 **[服務認證]** 。 有了這個選項，伺服器就會使用整合式安全性來進行連接；認證並不會加密或儲存起來。  
   
-    2.  選取 **[下一步]** 。 
+    2.  選取 [下一步]  。 
 
 5. 檢閱設定並選取 [下一步]  。
 

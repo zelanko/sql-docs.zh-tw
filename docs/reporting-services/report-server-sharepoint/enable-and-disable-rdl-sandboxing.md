@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577764"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>以 SharePoint 整合模式啟用和停用 Reporting Services 的 RDL 沙箱功能
@@ -65,14 +65,14 @@ RDL (報表定義語言) 沙箱功能可在多個租用戶使用報表伺服器�
 
  下表提供有關組態設定的資訊。 設定會依其出現在組態檔的順序顯示。  
   
-|設定|Description|  
+|設定|描述|  
 |-------------|-----------------|  
 |**MaxExpressionLength**|RDL 運算式中允許的最大字元數。<br /><br /> 預設值：1000|  
 |**MaxResourceSize**|外部資源允許的最大 KB 數。<br /><br /> 預設值：100|  
 |**MaxStringResultLength**|RDL 運算式的傳回值中允許的最大字元數。<br /><br /> 預設值：1000|  
 |**MaxArrayResultLength**|RDL 運算式的陣列傳回值中允許的最大項目數。<br /><br /> 預設值：100|  
 |**類型**|RDL 運算式中允許的成員清單。|  
-|**Allow**|RDL 運算式中允許的類型或類型集合。|  
+|**允許**|RDL 運算式中允許的類型或類型集合。|  
 |**Namespace**|**Allow** 的屬性，這是包含一或多個套用至 Value 之類型的命名空間。 這個屬性不區分大小寫。|  
 |**AllowNew**|**Allow** 的布林屬性，可控制 RDL 運算式或 RDL **\<Class>** 項目中是否允許建立此類型的新執行個體。<br /><br /> 當啟用 **RDLSandboxing** 時，無論是否設定 **AllowNew**，都無法在 RDL 運算式中建立新的陣列。|  
 |**ReplTest1**|**Allow** 的值，這是 RDL 運算式中允許之類型的名稱。 **\*** 值表示允許命名空間中的所有類型。 這個屬性不區分大小寫。|  
@@ -104,7 +104,7 @@ RDL (報表定義語言) 沙箱功能可在多個租用戶使用報表伺服器�
   
 -   某個類型的靜態成員。  
   
--   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **新** 方法。  
+-   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** 方法。  
   
 -   報表定義中的 **\<Classes>** 項目。  
   

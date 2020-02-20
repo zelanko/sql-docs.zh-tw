@@ -1,7 +1,7 @@
 ---
-title: 在 SQL Server 容錯移轉叢集上安裝用戶端工具 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 安裝用戶端工具：容錯移轉叢集
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: install
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 359548f6315535e324158cdecd015c1c03266d7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4918cdbb99a49bf577f9efad19ed0360c9a4911
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063939"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230504"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>在 SQL Server 容錯移轉叢集上安裝用戶端工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68063939"
   
 ## <a name="installation-procedures"></a>安裝程序  
   
-#### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-using-the-setup-user-interface"></a>使用安裝程式使用者介面安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端工具  
+#### <a name="installing-ssnoversion-client-tools-using-the-setup-user-interface"></a>使用安裝程式使用者介面安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端工具  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝媒體。 在根安裝資料夾中，按兩下 Setup.exe。 若要從網路共用進行安裝，請找出共用上的根資料夾，然後按兩下 Setup.exe。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68063939"
   
 5.  在 **[特徵選取]** 頁面上，選取您要安裝的工具，然後遵循安裝程序的其餘步驟進行。  
   
-#### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-at-the-command-prompt"></a>在命令提示字元安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端工具  
+#### <a name="installing-ssnoversion-client-tools-at-the-command-prompt"></a>在命令提示字元安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端工具  
   
 1.  若要安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端工具與《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》，請執行下列命令：Setup.exe/q/Action=Install /Features=Tools  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68063939"
   
 3.  如果要安裝完整的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理工具，請執行下列命令：Setup.exe/q/Action=Install /Features=ADV_SSMS。 如需功能參數值的詳細資訊，請參閱 [從命令提示字元安裝 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
   
-### <a name="uninstalling-includessnoversionincludesssnoversion-mdmd-client-tools"></a>解除安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端工具  
+### <a name="uninstalling-ssnoversion-client-tools"></a>解除安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端工具  
  這些用戶端工具在 [控制台] 的 [新增或移除程式] 中顯示為 **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** ，而且可以從該處移除。 當您使用 [移除節點] 從容錯移轉叢集解除安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體時，不會同時解除安裝用戶端元件。  
   
 ## <a name="see-also"></a>另請參閱  

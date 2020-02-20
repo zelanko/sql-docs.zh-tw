@@ -1,6 +1,6 @@
 ---
-title: sqlmaint 公用程式 |Microsoft Docs
-ms.custom: ''
+title: sqlmaint 公用程式
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ecc0a38acd6ea00656e67e9f582a55c05ca15583
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: c0f87bca3404505e82c903bd868e9b5c2da00bed
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986290"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306965"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ number[minutes | hours | days | weeks | months]
  指定傳回 **sqlmaint** 的語法圖。 這個參數必須單獨使用。  
   
  **-S** _server_name_[ **\\** _instance\_name_]  
- 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目標執行個體。 指定 _server\_name_，即可連接到該伺服器上 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的預設執行個體。 指定 _server\_name_ **\\** _instance\_name_，即可連線到該伺服器上 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的具名執行個體。 如果未指定伺服器， **sqlmaint** 會連接到本機電腦中 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體。  
+ 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的目標執行個體。 指定 _server\_name_，即可連接到該伺服器上 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的預設執行個體。 指定 _server\_name_ **\\** _instance\_name_，即可連線到該伺服器上 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的具名執行個體。 如果未指定伺服器， **sqlmaint** 會連接到本機電腦中 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體。  
   
  **-U** _login_ID_  
  指定連接伺服器時所用的登入識別碼。 如果未提供， **sqlmaint** 會嘗試使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 驗證。 如果 *login_ID* 包含特殊字元，則必須以雙引號 (") 括住；否則可省略雙引號。  
@@ -141,7 +141,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  如果執行 *sqlmaint* 時資料庫正在使用中，就會在 **text_file** 中寫入一則警告。  
   
  **-CkAl** |  **-CkAlNoIdx**  
- 指定在 **-D** 所指定的資料庫中，執行設定了 NOINDEX 選項的 DBCC CHECKALLOC 陳述式。 如需詳細資訊，請參閱 [DBCC CHECKALLOC &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)。  
+ 指定在 **-D**所指定的資料庫中，執行設定了 NOINDEX 選項的 DBCC CHECKALLOC 陳述式。 如需詳細資訊，請參閱 [DBCC CHECKALLOC &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)。  
   
  **-CkCat**  
  指定在 **-D** 所指定的資料庫中，執行 DBCC CHECKCATALOG (Transact-SQL) 陳述式。 如需詳細資訊，請參閱 [DBCC CHECKCATALOG &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md)。  
@@ -228,7 +228,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  如果只指定 *number* ，預設的日期部分是 **weeks**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **sqlmaint** 公用程式會在一或多個資料庫上執行維護作業。 如果指定了 **-D** ，就只會在指定的資料庫上執行其餘參數所指定的作業。 如果指定了 **-PlanName** 或 **-PlanID** ， **sqlmaint** 從指定的維護計畫中擷取的唯一資訊就是計畫中的資料庫清單。 從計畫中取得的清單所列出的每個資料庫，都會套用其餘 **sqlmaint** 參數所指定的所有作業。 **sqlmaint** 公用程式不會套用計畫本身所定義的任何維護活動。  
   
  如果 **sqlmaint** 公用程式順利執行，就會傳回 0，如果失敗，則傳回 1。 在下列情況下，會發出失敗報告：  

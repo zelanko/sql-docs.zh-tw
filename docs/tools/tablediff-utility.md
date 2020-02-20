@@ -1,6 +1,6 @@
 ---
-title: tablediff 公用程式 |Microsoft Docs
-ms.custom: ''
+title: tablediff 公用程式
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -19,18 +19,18 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 48fc2d25bc65e76156da80c6b6117a62fa39e2a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: cb12cc164490e249dae13ef22cdd5279a0427102
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986042"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304800"
 ---
 # <a name="tablediff-utility"></a>tablediff 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   **tablediff** 公用程式用來比較兩份資料表之資料的非聚合狀況，當進行複寫拓撲中之非聚合狀況的疑難排解時，它尤其有用。 您可以在命令提示字元之下，或在批次檔中，利用這個公用程式來執行下列工作：  
   
--   在扮演複寫簽發者之 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的來源資料表，與扮演複製訂閱者的一或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的目的地資料表之間，每個資料列做比較。  
+-   在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的來源資料表 (作為複寫發行者) 與一或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的目的地資料表 (作為複寫訂閱者) 之間，逐一進行資料列比較。  
   
 -   執行快速比較，只比較資料列計數和結構描述。  
   
@@ -166,13 +166,13 @@ tablediff
   
 ## <a name="return-value"></a>傳回值  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|**0**|成功|  
+|**0**|Success|  
 |**1**|嚴重錯誤|  
 |**2**|資料表差異|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **tablediff** 公用程式不能與非 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 伺服器搭配使用。  
   
  不支援具有 **sql_variant** 資料類型資料行的資料表。  

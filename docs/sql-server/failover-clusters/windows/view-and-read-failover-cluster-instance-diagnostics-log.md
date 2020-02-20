@@ -1,6 +1,7 @@
 ---
-title: 檢視及閱讀容錯移轉叢集執行個體診斷記錄檔 | Microsoft Docs
-ms.custom: ''
+title: 檢視及讀取容錯移轉叢集執行個體診斷記錄
+description: 了解如何檢視及讀取 SQL Server 容錯移轉叢集執行個體所產生的診斷記錄。
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0932181110c5c4ec34e3d4bdf6b1395bffc65cca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44b631bb1c453ebc09e8a38a57b1a3160084b09d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904989"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242875"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>檢視及閱讀容錯移轉叢集執行個體診斷記錄檔
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "67904989"
   
  記錄檔會使用擴充的事件檔案格式。 **sys.fn_xe_file_target_read_file** 系統函數可用來讀取擴充事件所建立的檔案。 系統會以 XML 格式針對每個資料列傳回一個事件。 查詢系統檢視，即可將 XML 資料剖析為結果集。 如需詳細資訊，請參閱 [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> 權限  
  需要有 VIEW SERVER STATE 權限才能執行 **fn_xe_file_target_read_file**。  
@@ -91,7 +92,7 @@ ORDER BY Time;
  **設定診斷記錄屬性**  
   
 > [!NOTE]  
->  如需這個程序的範例，請參閱本節稍後的 [範例 (Transact-SQL)](#TsqlExample)。  
+>  如需這個程序的範例，請參閱本節稍後的 [範例 &#40;Transact-SQL&#41;](#TsqlExample)。  
   
  使用資料定義語言 (DDL) 陳述式 **ALTER SERVER CONFIGURATION**，您可以開始或停止記錄 [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 程序所擷取的診斷資料，並設定 SQLDIAG 記錄組態參數，例如記錄檔換用計數、記錄檔大小和檔案位置。 如需語法的詳細資料，請參閱 [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic)。  
   
@@ -131,6 +132,6 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [容錯移轉叢集執行個體的容錯移轉原則](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

@@ -9,10 +9,10 @@ ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 243f895c22621c3f83fab38a5bab47d1f7b7b490
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893764"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>報表產生器函式 - 彙總函式參考
@@ -50,10 +50,10 @@ ms.locfileid: "68893764"
 ##  <a name="CalculatingAggregates"></a> 內建彙總函式  
  下列內建函數會針對預設範圍或具名範圍，計算非 Null 數值資料集的摘要值。  
   
-|**函數**|**說明**|  
+|**Function**|**說明**|  
 |------------------|---------------------|  
 |[Avg](../../reporting-services/report-design/report-builder-functions-avg-function.md)|傳回運算式指定的所有非 Null 數值的平均值 (在給定範圍中評估)。|  
-|[計數](../../reporting-services/report-design/report-builder-functions-count-function.md)|傳回運算式指定的非 Null 值的計數 (在給定範圍的內容中評估)。|  
+|[Count](../../reporting-services/report-design/report-builder-functions-count-function.md)|傳回運算式指定的非 Null 值的計數 (在給定範圍的內容中評估)。|  
 |[CountDistinct](../../reporting-services/report-design/report-builder-functions-countdistinct-function.md)|傳回運算式指定的所有非 Null 相異值的計數 (在給定範圍的內容中評估)。|  
 |[Max](../../reporting-services/report-design/report-builder-functions-max-function.md)|傳回運算式指定的所有非 Null 數值的最大值 (在給定範圍的內容中)。 這個函數可用來指定圖表軸的最大值以控制刻度。|  
 |[Min](../../reporting-services/report-design/report-builder-functions-min-function.md)|傳回運算式指定的所有非 Null 數值的最小值 (在給定範圍的內容中)。 這個函數可用來指定圖表軸的最小值以控制刻度。|  
@@ -64,7 +64,7 @@ ms.locfileid: "68893764"
 |[Var](../../reporting-services/report-design/report-builder-functions-var-function.md)|傳回運算式指定的所有非 Null 數值的變異數 (在給定範圍中評估)。|  
 |[VarP](../../reporting-services/report-design/report-builder-functions-varp-function.md)|傳回運算式指定的所有非 Null 數值的母體擴展變異數 (在給定範圍的內容中評估)。|  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")回到頁首  
+ ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")[回到頁首]  
   
 ##  <a name="Restrictions"></a> 內建欄位、集合和彙總函式的限制  
  下表摘要列出您可以加入運算式之報表位置的限制，該運算式包含全域內建集合的參考。  
@@ -72,7 +72,7 @@ ms.locfileid: "68893764"
 |報表中的位置|欄位|參數|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|變數|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
 |頁首<br /><br /> 頁尾|是|是|最多一個<br /><br /> 附註 1|是|是|是|是|  
-|本文|是<br /><br /> 附註 2|是|只有目前範圍或包含範圍內的項目<br /><br /> 附註 3|否|是|是|是|  
+|body|是<br /><br /> 附註 2|是|只有目前範圍或包含範圍內的項目<br /><br /> 附註 3|否|是|是|是|  
 |報表參數|否|只有清單中稍早的參數<br /><br /> 附註 4|否|否|否|否|否|  
 |欄位|是|是|否|否|否|否|否|  
 |查詢參數|否|是|否|否|否|否|否|  
@@ -101,15 +101,15 @@ ms.locfileid: "68893764"
   
 -   **附註 8。** 除了 Count 與 CountDistinct 以外的所有彙總之資料類型，所有的值都必須是相同的資料類型或 null。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")回到頁首  
+ ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")[回到頁首]  
   
 ##  <a name="NestedRestrictions"></a> 巢狀彙總的限制  
  下表摘要列出彙總函式可以將其他彙總函式指定為巢狀彙總的限制。  
   
-|內容|RunningValue|RowNumber|第一個<br /><br /> 最後一個|Previous|Sum 和其他 Presort 函數|ReportItem 彙總|查閱函數|彙總函式|  
+|Context|RunningValue|RowNumber|First<br /><br /> Last|Previous|Sum 和其他 Presort 函數|ReportItem 彙總|查閱函數|彙總函式|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
 |執行中的值|否|否|否|否|是|否|是|否|  
-|第一個<br /><br /> 最後一個|否|否|否|否|是|否|否|否|  
+|First<br /><br /> Last|否|否|否|否|是|否|否|否|  
 |Previous|是|是|是|否|是|否|是|否|  
 |Sum 和其他 Presort 函數|否|否|否|否|是|否|是|否|  
 |ReportItem 彙總|否|否|否|否|否|否|否|否|  
@@ -118,75 +118,75 @@ ms.locfileid: "68893764"
   
 -   **附註 1：** 如果查閱函數未包含在彙總內，則只有查閱函數的 *Source* 運算式中才允許彙總函式。 查閱函數的 *Destination* 或 *Result* 運算式內不允許彙總函式。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")回到頁首  
+ ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")[回到頁首]  
   
 ##  <a name="CalculatingRunningValues"></a> 計算執行值  
  下列的內建函數會計算資料集的執行值。 **RowNumber** 與 **RunningValue** 類似，會傳回累加包含範圍內每個資料列的計數執行值。 這些函數的範圍參數必須指定包含範圍，這個範圍控制何時重新開始計數。  
   
-|**函數**|**說明**|  
+|**Function**|**說明**|  
 |------------------|---------------------|  
 |[RowNumber](../../reporting-services/report-design/report-builder-functions-rownumber-function.md)|傳回指定範圍中資料列數的執行計數。 **RowNumber** 函數從 1 開始重新計數，而不是 0。|  
 |[RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md)|傳回運算式指定的所有非 Null 數值的執行彙總 (在給定範圍中評估)。|  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")回到頁首  
+ ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")[回到頁首]  
   
 ##  <a name="RetrievingRowCounts"></a> 擷取資料列計數  
  下列的內建函數會計算給定範圍中的資料列數。 這個函數可用來計算所有資料列的數目，包括具有 Null 值的資料列。  
   
-|**函數**|**說明**|  
+|**Function**|**說明**|  
 |------------------|---------------------|  
 |[CountRows](../../reporting-services/report-design/report-builder-functions-countrows-function.md)|傳回指定之範圍中的資料列數目，包括具有 Null 值的資料列。|  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")回到頁首  
+ ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")[回到頁首]  
   
 ##  <a name="LookupFunctions"></a> 從其他資料集查詢值  
  下列查閱函數會從指定的資料集擷取值。  
   
-|**函數**|**說明**|  
+|**Function**|**說明**|  
 |------------------|---------------------|  
 |[Lookup 函數](../../reporting-services/report-design/report-builder-functions-lookup-function.md)|從指定之運算式的資料集傳回值。|  
-|[LookupSet 函數](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)|從指定之運算式的資料集傳回一組值。|  
-|[Multilookup 函數](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)|從包含名稱/值組的資料集傳回第一組符合某一組名稱的值。|  
+|[LookupSet 函式](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)|從指定之運算式的資料集傳回一組值。|  
+|[Multilookup 函式](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)|從包含名稱/值組的資料集傳回第一組符合某一組名稱的值。|  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")回到頁首  
+ ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")[回到頁首]  
   
 ##  <a name="RetrievingPostsortValues"></a> 擷取與排序相依的值  
  下列的內建函數會傳回給定範圍內的第一個、最後一個或上一個值。 這些函數會視資料值的排序次序而定。 舉例而言，這些函數可用來尋找頁面上的第一個和最後一個值，以建立字典樣式的頁首。 **Previous** 可用來比較特定範圍內一個資料列的值與上一個資料列的值，以在資料表中找出年的成長百分比。  
   
-|**函數**|**說明**|  
+|**Function**|**說明**|  
 |------------------|---------------------|  
 |[第一個](../../reporting-services/report-design/report-builder-functions-first-function.md)|傳回所指定運算式給定範圍中的第一個值。|  
 |[最後一個](../../reporting-services/report-design/report-builder-functions-last-function.md)|傳回所指定運算式給定範圍中的最後一個值。|  
-|[Previous](../../reporting-services/report-design/report-builder-functions-previous-function.md)|傳回某個項目在指定之範圍內上一個執行個體的值或指定的彙總值。|  
+|[[上一步]](../../reporting-services/report-design/report-builder-functions-previous-function.md)|傳回某個項目在指定之範圍內上一個執行個體的值或指定的彙總值。|  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")回到頁首  
+ ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")[回到頁首]  
   
 ##  <a name="RetrievingServerAggregates"></a> 擷取伺服器彙總  
  下列的內建函數將從資料提供者擷取自訂彙總。 例如，您可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源類型擷取在資料來源伺服器上計算的彙總，以用於群組頁首。  
   
-|**函數**|**說明**|  
+|**Function**|**說明**|  
 |------------------|---------------------|  
-|[Aggregate](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)|傳回指定之運算式的自訂彙總，由資料提供者定義。|  
+|[彙總](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)|傳回指定之運算式的自訂彙總，由資料提供者定義。|  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")回到頁首  
+ ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")[回到頁首]  
   
 ##  <a name="TestingforScope"></a> 測試範圍  
  下列的內建函數會測試報表項目目前的內容，查看是否為特定範圍的成員。  
   
-|函數|Description|  
+|函式|描述|  
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|指出目前項目的執行個體是否在指定的範圍內。|  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")回到頁首  
+ ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")[回到頁首]  
   
 ##  <a name="RetrievingRecursiveLevel"></a> 擷取遞迴層級  
  下列的內建函數會在系統處理遞迴階層時，擷取目前的層級。 在文字方塊中以 **Padding** 屬性使用此函數的結果，即可控制遞迴群組視覺階層的縮排層級。 如需詳細資訊，請參閱[建立遞迴階層群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
   
-|函數|Description|  
+|函式|描述|  
 |--------------|-----------------|  
 |[Level](../../reporting-services/report-design/report-builder-functions-level-function.md)|傳回遞迴階層中之目前所在的層級。|  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")回到頁首  
+ ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")[回到頁首]  
   
 ## <a name="see-also"></a>另請參閱  
  [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   

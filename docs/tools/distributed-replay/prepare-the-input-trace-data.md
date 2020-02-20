@@ -1,7 +1,6 @@
 ---
-title: 準備輸入追蹤資料 |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 準備輸入追蹤資料
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,18 +9,22 @@ ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3fbf4e9b2607638d37217dc5862a36446d592b5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 514d11ded0761cd4719b3d3a44b7c91d08d97e04
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949999"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306999"
 ---
 # <a name="prepare-the-input-trace-data"></a>準備輸入追蹤資料
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  您必須先從 Distributed Replay 管理工具起始前置處理階段，準備輸入追蹤資料，才能透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能啟動分散式重新執行。 在前置處理階段中，分散式重新執行控制器會處理追蹤資料並產生中繼檔案：  
+
+您必須先從分散式重新執行管理工具開始前置處理階段，以準備輸入追蹤資料，才能透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能啟動分散式重新執行。 在前置處理階段中，分散式重新執行控制器會處理追蹤資料並產生中繼檔案：  
   
- ![Distributed replay](../../tools/distributed-replay/media/preprocess.gif "Distributed replay")  
+ ![分散式重新執行前置處理階段](../../tools/distributed-replay/media/preprocess.gif "分散式重新執行前置處理階段")  
   
  如需前置處理階段的詳細資訊，請參閱 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)。  
   
@@ -30,7 +33,7 @@ ms.locfileid: "67949999"
   
 ### <a name="to-prepare-the-input-trace-data"></a>若要準備輸入追蹤資料  
   
-1.  **(選擇性) 修改前置處理組態設定**：如果您想要修改前置處理組態設定 (例如要篩選系統工作階段或設定最大閒置時間)，必須修改以 XML 為基礎的前置處理組態檔 `<PreprocessModifiers>` 的 `DReplay.exe.preprocess.config`元素。 如果您修改前置處理組態檔，我們建議您修改複本，而不是原始版本。 若要修改設定，請執行下列步驟：  
+1.  **(選擇性) 修改前置處理組態設定**：如果您想要修改前置處理組態設定 (例如要篩選系統工作階段或設定最大閒置時間)，必須修改以 XML 為基礎的前置處理組態檔 `DReplay.exe.preprocess.config` 的 `<PreprocessModifiers>` 元素。 如果您修改前置處理組態檔，我們建議您修改複本，而不是原始版本。 若要修改設定，請執行下列步驟：  
   
     1.  建立預設前置處理組態檔 `DReplay.exe.preprocess.config`的複本，並重新命名新的檔案。 預設前置處理組態檔位於管理工具的安裝資料夾。  
   
@@ -40,7 +43,7 @@ ms.locfileid: "67949999"
   
      如需前置處理組態檔的詳細資訊，請參閱 [設定 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)。  
   
-2.  **起始前置處理階段**：若要準備輸入追蹤資料，您必須以 **preprocess** 選項執行管理工具。 如需詳細資訊，請參閱[前置處理選項 &#40;Distributed Replay 管理工具&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)。  
+2.  **開始前置處理階段**：若要準備輸入追蹤資料，您必須透過 [前置處理]  選項執行管理工具。 如需詳細資訊，請參閱[前置處理選項 &#40;Distributed Replay 管理工具&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)。  
   
     1.  開啟 Windows 命令提示字元公用程式 (**CMD.exe**)，並巡覽至 Distributed Replay 管理工具 (**DReplay.exe**) 的安裝位置。  
   
@@ -60,7 +63,7 @@ ms.locfileid: "67949999"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay 需求](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [管理工具命令列選項 &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [設定 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   

@@ -1,23 +1,24 @@
 ---
-title: SQL Server 單元測試的自訂測試條件 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server 單元測試的自訂測試條件
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1292666a44f93d8b8dd551975eed4b7ea46f5ffe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 2852d075b6d5b1f55b76fea6b32443ea14e74384
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984556"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245525"
 ---
-# <a name="custom-test-conditions--for-sql-server-unit-tests"></a>SQL Server 單元測試的自訂測試條件
+# <a name="custom-test-conditions-for-sql-server-unit-tests"></a>SQL Server 單元測試的自訂測試條件
+
 您可以新增 SQL Server 單元測試的自訂測試條件。 不過，無論您已建立擴充功能或要安裝其他人建立的擴充功能，都必須先安裝測試條件，才能使用它。  
   
 安裝不是您建立的測試條件之前，必須了解下列風險：  

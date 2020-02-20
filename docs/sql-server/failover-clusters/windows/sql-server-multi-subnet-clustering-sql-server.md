@@ -1,6 +1,7 @@
 ---
-title: SQL Server 多重子網路叢集 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: SQL Server 多重子網路叢集
+description: 了解如何在多重子網路環境中設定 SQL Server 容錯移轉叢集執行個體。
+ms.custom: seo-lt-2019
 ms.date: 09/01/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 16f89fcc50ec7db910d88d8ec807cb28c66cde89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e257ead5f858e80095c077643b283645917271be
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044733"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258156"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多重子網路叢集 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "68044733"
  在多重子網路容錯移轉叢集組態中，IP 位址不會由容錯移轉叢集中的所有節點擁有，可能也不會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 啟動期間全數都在線上。 從 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]開始，您可以將 IP 位址資源相依性設為 **OR**。 當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以繫結到至少一個有效的 IP 位址時，這可讓它位於線上。  
   
   > [!NOTE] 
-  > - 在版本早於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 版本中，多重子站台叢集組態中使用了延展 V-LAN 技術來公開跨越站台之容錯移轉的單一 IP 位址。 利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 跨越不同子網路叢集節點的新功能，現在您可以在不需要實作延展 V-LAN 技術的情況下，設定跨越多個站台的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集。  
+  > - 在版本早於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]版本中，多重子站台叢集組態中使用了延展 V-LAN 技術來公開跨越站台之容錯移轉的單一 IP 位址。 利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 跨越不同子網路叢集節點的新功能，現在您可以在不需要實作延展 V-LAN 技術的情況下，設定跨越多個站台的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集。  
 
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>IP 位址資源 OR 相依性考量  

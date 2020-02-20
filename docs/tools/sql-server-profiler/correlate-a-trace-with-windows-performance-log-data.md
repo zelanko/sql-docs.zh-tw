@@ -1,33 +1,30 @@
 ---
-title: 建立追蹤與 Windows 效能記錄資料的關聯 | Microsoft Docs
-ms.custom: ''
-ms.date: 07/12/2017
+title: 使追蹤與 Windows 效能記錄資料相互關聯
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- correlating trace with log data
-- logs [SQL Server], traces
-- Profiler [SQL Server Profiler], correlating trace with log data
-- traces [SQL Server], logs
-- SQL Server Profiler, correlating trace with log data
 ms.assetid: 1e4412c8-d27c-4aae-9b35-214128d1d00a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 92d925158e04e11b0a00181ec0ecaf42c6ff7b37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 07/12/2017
+ms.openlocfilehash: b9fca7d522d21706681ddfa714d45e8d18b3d4c1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930095"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307319"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>建立追蹤與 Windows 效能記錄資料的關聯
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以開啟 Microsoft Windows 效能記錄，選擇要與追蹤相互關連的計數器，而且在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 圖形化使用者介面中，讓選取的效能計數器顯示在追蹤的旁邊。 選取追蹤視窗中的事件後，[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的 [系統監視器] 資料窗格中的紅色直條，表示與選取的追蹤事件相互關聯的效能記錄資料。  
+
+使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以開啟 Microsoft Windows 效能記錄，選擇要與追蹤相互關連的計數器，而且在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 圖形化使用者介面中，讓選取的效能計數器顯示在追蹤的旁邊。 選取追蹤視窗中的事件後， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的 [系統監視器] 資料窗格中的紅色直條，表示與選取的追蹤事件相互關聯的效能記錄資料。  
   
- 若要使追蹤與效能計數器相互關聯，請開啟包含 **StartTime** 與 **EndTime** 資料行的追蹤檔案或資料表，然後在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [檔案]  功能表上，按一下 [匯入效能資料]  。 接著可以開啟效能記錄，然後選取要與追蹤相互關聯的「系統監視器」物件與計數器。  
+ 若要使追蹤與效能計數器相互關聯，請開啟包含 [StartTime]  與 [EndTime]  資料行的追蹤檔案或資料表，然後在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [檔案]  功能表上，按一下 [匯入效能資料]  。 接著可以開啟效能記錄，然後選取要與追蹤相互關聯的「系統監視器」物件與計數器。  
   
 ### <a name="to-correlate-a-trace-with-performance-log-data"></a>使追蹤與效能記錄資料產生相互關聯  
   
@@ -37,7 +34,7 @@ ms.locfileid: "67930095"
   
 3.  在 [開啟]  對話方塊中，選取含有效能記錄的檔案。 擷取效能記錄資料的期間必須與擷取追蹤資料的期間相同。  
   
-4.  在 [效能計數器限制]  對話方塊中，針對要顯示在追蹤旁的系統監視器物件與計數器，選取其對應的核取方塊。 按一下 **[確定].**  
+4.  在 [效能計數器限制]  對話方塊中，針對要顯示在追蹤旁的系統監視器物件與計數器，選取其對應的核取方塊。 按一下 [確定]  。  
   
 5.  選取追蹤事件視窗中的事件，或使用方向鍵來瀏覽追蹤事件視窗中相鄰的幾個資料列。 [系統監視器資料]  視窗中的紅色直條，代表已與所選追蹤事件產生相互關聯的效能記錄資料。  
   
@@ -53,7 +50,7 @@ ms.locfileid: "67930095"
   
 4.  在 [一般]  索引標籤上，按一下 [新增計數器]  。  
   
-5.  在 [效能物件]  清單中，選取您要監視的效能物件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能物件名稱會以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作為開頭，而具名執行個體則會以 MSSQL$*instanceName* 作為開頭。  
+5.  在 [效能物件]  清單中，選取您要監視的效能物件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能物件名稱會以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作為開頭，而具名執行個體則會以 MSSQL$*instanceName*作為開頭。  
   
 6.  盡可能為您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體加入所需的計數器以及其他重要的值，如處理器時間與磁碟時間。  
   

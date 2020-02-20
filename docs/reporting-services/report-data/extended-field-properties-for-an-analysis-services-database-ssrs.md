@@ -9,10 +9,10 @@ ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d315aa1c5037e27d5c48e1ee03addef35cbc22df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573315"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 資料庫的擴充欄位屬性 (SSRS)
@@ -42,8 +42,8 @@ ms.locfileid: "65573315"
   
 |**屬性**|**型別**|**描述或預期的值**|  
 |------------------|--------------|---------------------------------------|  
-|**ReplTest1**|**物件**|指定欄位的資料值。|  
-|**IsMissing**|**布林**|指出在產生的資料集裡是否有找到欄位。|  
+|**ReplTest1**|**Object**|指定欄位的資料值。|  
+|**IsMissing**|**布林值**|指出在產生的資料集裡是否有找到欄位。|  
 |**UniqueName**|**String**|傳回層級的完整名稱。 例如，某一位員工的 **UniqueName** 值可能是 *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]* 。|  
 |**BackgroundColor**|**String**|傳回資料庫中為欄位定義的背景色彩。|  
 |**Color**|**String**|傳回資料庫中為項目定義的前景色彩。|  
@@ -53,8 +53,8 @@ ms.locfileid: "65573315"
 |**FontStyle**|**String**|傳回資料庫中為項目定義之字型的樣式。|  
 |**TextDecoration**|**String**|傳回資料庫中為項目定義的特殊文字格式。|  
 |**FormattedValue**|**String**|傳回量值或關鍵數值的格式化值。 例如， **[銷售量配額]** 的 **FormattedValue** 屬性會傳回貨幣格式，如 $1,124,400.00。|  
-|**索引鍵**|**物件**|傳回層級的索引鍵。|  
-|**LevelNumber**|**Integer**|如果是父子式階層，則會傳回層級或維度編號。|  
+|**索引鍵**|**Object**|傳回層級的索引鍵。|  
+|**LevelNumber**|**整數**|如果是父子式階層，則會傳回層級或維度編號。|  
 |**ParentUniqueName**|**String**|如果是父子式階層，會傳回父層級的完整名稱。|  
   
 > [!NOTE]  
@@ -97,7 +97,7 @@ FROM [Adventure Works]
 |All Periods|[Date].[Date].[All Periods]|(Null)|(Null)|(Null)|0|  
 |1-Jul-01|[Date].[Date].&[1]|星期日|7/1/2001|[Date].[Date].[All Periods]|1|  
 |2-Jul-01|[Date].[Date].&[2]|星期一|7/2/2001|[Date].[Date].[All Periods]|2|  
-|3-Jul-01|[Date].[Date].&[3]|星期二|7/3/2001|[Date].[Date].[All Periods]|3|  
+|3-Jul-01|[Date].[Date].&[3]|Tuesday|7/3/2001|[Date].[Date].[All Periods]|3|  
   
  在圖形模式 MDX 查詢設計工具中所建置的預設 MDX 查詢只包含維度屬性的 MEMBER_CAPTION 和 UNIQUENAME。 依預設，這些值一定是 **String**資料類型。  
   
@@ -124,12 +124,12 @@ CELL PROPERTIES
 |三月|2,749|  
 |四月|2,739|  
   
- 這些屬性雖然是 MDX 選取陳述式的一部分，但是卻不會出現在結果集資料行中， 然而，報表還是可以透過使用擴充屬性功能來使用這些資料。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的 MDX 查詢結果窗格中，按兩下資料格即可查看資料格屬性值 (如果 Cube 中已設定的話)。 如果按兩下包含 1,379 的第一個 [Order Count] 資料格，就會出現內含下列資料格屬性的快顯視窗：  
+ 這些屬性雖然是 MDX 選取陳述式的一部分，但是卻不會出現在結果集資料行中， 然而，報表還是可以透過使用擴充屬性功能來使用這些資料。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的 MDX 查詢結果窗格中，按兩下資料格即可查看資料格屬性值 (如果 Cube 中已設定的話)。 如果按兩下包含 1,379 的第一個 [Order Count] 資料格，就會出現內含下列資料格屬性的快顯視窗：  
   
-|屬性|ReplTest1|  
+|屬性|值|  
 |--------------|-----------|  
 |CellOrdinal|0|  
-|Value|2481|  
+|值|2481|  
 |BACK_COLOR|(Null)|  
 |FORE_COLOR|(Null)|  
 |FORMATTED_VALUE|2,481|  
@@ -149,6 +149,6 @@ CELL PROPERTIES
 ## <a name="see-also"></a>另請參閱  
  [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [資料集 Fields 集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

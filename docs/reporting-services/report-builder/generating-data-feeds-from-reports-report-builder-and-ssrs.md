@@ -9,10 +9,10 @@ ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 851a574989f56609298e4283a398fcddce027024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580740"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>從多個報表產生資料摘要 (報表產生器及 SSRS)
@@ -105,7 +105,7 @@ ms.locfileid: "65580740"
  `</entry>`  
   
 ### <a name="working-with-data-feeds"></a>處理資料摘要  
- 報表所產生的所有資料摘要包含產生資料摘要之資料區父系範圍內的報表項目。 整合的 SharePoint 網站，產生 Atom 服務文件與資料摘要。 設想一個包含數個資料表和一個圖表的報表。 報表主體中的文字方塊會提翁每個資料區的描述文字。 報表所產生之每個資料摘要中的每個項目都包含文字方塊的值。 例如，如果文字為 "Chart displays monthly sales averages by sales region" (圖表依銷售區域顯示每月的平均銷售額)，全部三個資料摘要都會在每個資料列上加入這段文字。  
+ 報表所產生的所有資料摘要包含產生資料摘要之資料區父系範圍內的報表項目。 。 設想一個包含數個資料表和一個圖表的報表。 報表主體中的文字方塊會提翁每個資料區的描述文字。 報表所產生之每個資料摘要中的每個項目都包含文字方塊的值。 例如，如果文字為 "Chart displays monthly sales averages by sales region" (圖表依銷售區域顯示每月的平均銷售額)，全部三個資料摘要都會在每個資料列上加入這段文字。  
   
  如果報表配置包含階層式資料關聯性 (如巢狀資料區)，這些關聯性就會包含在報表資料的扁平化資料列集中。  
   
@@ -167,7 +167,7 @@ ms.locfileid: "65580740"
   
  下表指出報表項目轉譯時的外觀：  
   
-|項目|轉譯行為|  
+|Item|轉譯行為|  
 |----------|------------------------|  
 |Table|藉由展開資料表，並為每個資料列與資料行以最低層級的詳細資料建立資料列與資料行，來進行轉譯。 小計資料列和資料行沒有資料行或資料列標題。 不支援鑽研報表。|  
 |矩陣|藉由展開矩陣，並為每個資料列與資料行以最低層級的詳細資料建立資料列與資料行，來進行轉譯。 小計資料列和資料行沒有資料行或資料列標題。|  

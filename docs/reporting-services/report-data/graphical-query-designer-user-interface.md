@@ -18,10 +18,10 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ff907d83a4d793169872d5abaa059e8b6a1d91b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572742"
 ---
 # <a name="graphical-query-designer-user-interface"></a>圖形化查詢設計工具使用者介面
@@ -34,7 +34,7 @@ ms.locfileid: "65572742"
   
  下列選項可用於查詢類型：  
   
--   **Text** ：可支援關聯式資料庫資料來源的標準 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢文字，包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Oracle 的資料處理延伸模組。  
+-   **Text** 可支援關聯式資料庫資料來源的標準 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢文字，包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Oracle 的資料處理延伸模組。  
   
 -   **TableDirect** ：從指定的資料表中選取所有資料行。 例如，如果是名為 Customers 的資料表，這就等於 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 `SELECT * FROM Customers`。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "65572742"
   
  下表會描述各個窗格的功能。  
   
-|窗格|函數|  
+|窗格|函式|  
 |----------|--------------|  
 |圖表|顯示查詢中之資料表的圖形表示。 使用此窗格，即可選取欄位並定義資料表之間的關聯性。|  
 |方格|顯示查詢傳回的欄位清單。 使用此窗格，即可定義別名、排序次序、篩選、群組和參數。|  
@@ -66,21 +66,21 @@ ms.locfileid: "65572742"
 #### <a name="toolbar-for-the-graphical-query-designer"></a>圖形化查詢設計工具工具列  
  圖形化查詢設計工具工具列會提供按鈕，協助您使用圖形化介面設計 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢。  
   
-|按鈕|Description|  
+|按鈕|描述|  
 |------------|-----------------|  
 |**當成文字編輯**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。|  
 |**匯入**|從檔案或報表匯入現有的查詢。 只支援 .sql 和 .rdl 檔案類型。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
-|![顯示/隱藏圖表窗格切換按鈕](../../reporting-services/report-data/media/rsqdicon-showhidediagram.gif "顯示/隱藏圖表窗格切換按鈕")|顯示或隱藏 [圖表] 窗格。|  
-|![顯示或隱藏方格窗格切換](../../reporting-services/report-data/media/rsqdicon-showhidegrid.gif "顯示或隱藏方格窗格切換")|顯示或隱藏 [方格] 窗格。|  
-|![顯示或隱藏 SQL 窗格切換](../../reporting-services/report-data/media/rsqdicon-showhidesql.gif "顯示或隱藏 SQL 窗格切換")|顯示或隱藏 [SQL] 窗格。|  
-|![顯示或隱藏結果窗格切換](../../reporting-services/report-data/media/rsqdicon-showhideresult.gif "顯示或隱藏結果窗格切換")|顯示或隱藏 [結果] 窗格。|  
+|![顯示/隱藏 [圖表] 窗格切換按鈕](../../reporting-services/report-data/media/rsqdicon-showhidediagram.gif "顯示/隱藏 [圖表] 窗格切換按鈕")|顯示或隱藏 [圖表] 窗格。|  
+|![顯示或隱藏 [方格] 窗格切換](../../reporting-services/report-data/media/rsqdicon-showhidegrid.gif "顯示或隱藏 [方格] 窗格切換")|顯示或隱藏 [方格] 窗格。|  
+|![顯示或隱藏 [SQL] 窗格切換](../../reporting-services/report-data/media/rsqdicon-showhidesql.gif "顯示或隱藏 [SQL] 窗格切換")|顯示或隱藏 [SQL] 窗格。|  
+|![顯示或隱藏 [結果] 窗格切換](../../reporting-services/report-data/media/rsqdicon-showhideresult.gif "顯示或隱藏 [結果] 窗格切換")|顯示或隱藏 [結果] 窗格。|  
 |![執行查詢](../../reporting-services/report-data/media/rsqdicon-run.gif "執行查詢")|執行查詢。|  
-|![在 SQL 窗格中驗證 SQL 的按鈕](../../reporting-services/report-data/media/rsqdicon-verifysql.gif "在 SQL 窗格中驗證 SQL 的按鈕")|檢查查詢文字的語法是否正確。|  
-|![在選取的欄位設定遞增排序](../../reporting-services/report-data/media/rsqdicon-sortascending.gif "在選取的欄位設定遞增排序")|將 [圖表] 窗格中選取之資料行的排序次序，設定為 [遞增排序]  。|  
-|![在選取的欄位設定遞減排序](../../reporting-services/report-data/media/rsqdicon-sortdescending.gif "在選取的欄位設定遞減排序")|將 [圖表] 窗格中選取之資料行的排序次序，設定為 [遞減排序]  。|  
-|![移除所選欄位的篩選](../../reporting-services/report-data/media/rsqdicon-removefilter.gif "移除所選欄位的篩選")|在標記為有篩選 (![所選篩選資料行旁邊的篩選圖形](../../reporting-services/report-data/media/rsqdicon-filter.gif "所選篩選資料行旁邊的篩選圖形")) 的 [圖表] 窗格中，移除所選資料行的篩選。|  
-|![對所選欄位使用 [分組依據]](../../reporting-services/report-data/media/rsqdicon-usegroupby.gif "對所選欄位使用 [分組依據]")|顯示或隱藏 [方格] 窗格中的 [群組依據]  資料行。 當 [分組依據]  切換為開啟時，[方格] 窗格中會出現一個名稱為 [分組依據]  的額外資料行，而且查詢中所選資料行的每一個值都會預設為 [分組依據]  ，這樣就會將選取的資料行包含在 SQL 文字的 Group By 子句中。 使用 [群組依據] 按鈕即可自動加入 GROUP BY 子句，該子句會包含 SELECT 子句中的所有資料行。 如果 SELECT 子句中包含的是彙總函式呼叫 (例如 SUM(ColumnName))，但是您希望非彙總資料行也出現在結果集中，則請將其包含在 GROUP BY 子句中。<br /><br /> 查詢中的每個資料行都必須定義彙總函式，用以計算要顯示在 [結果] 窗格中的值，或者必須在 SQL 查詢的 GROUP BY 子句中指定查詢的資料行，這樣資料行才會出現在 [結果] 窗格中。|  
-|![將新資料表新增到圖表窗格](../../reporting-services/report-data/media/rsqdicon-addtable.gif "將新資料表新增到圖表窗格")|將資料來源中的新資料表加入至 [圖表] 窗格中。<br /><br /> **注意** ：當您加入新資料表時，查詢設計工具會嘗試比對資料來源中的外部索引鍵關聯性。 因此，在加入資料表之後，請確認以資料表之間的連結所表示的外部索引鍵關聯性是否正確。|  
+|![以 [SQL] 窗格按鈕驗證 SQL](../../reporting-services/report-data/media/rsqdicon-verifysql.gif "以 [SQL] 窗格按鈕驗證 SQL")|檢查查詢文字的語法是否正確。|  
+|![在選取欄位上設定遞增排序](../../reporting-services/report-data/media/rsqdicon-sortascending.gif "在選取欄位上設定遞增排序")|將 [圖表] 窗格中選取之資料行的排序次序，設定為 [遞增排序]  。|  
+|![在選取欄位上設定遞減排序](../../reporting-services/report-data/media/rsqdicon-sortdescending.gif "在選取欄位上設定遞減排序")|將 [圖表] 窗格中選取之資料行的排序次序，設定為 [遞減排序]  。|  
+|![移除選取欄位上的篩選](../../reporting-services/report-data/media/rsqdicon-removefilter.gif "移除選取欄位上的篩選")|在標記為有篩選 (![所選篩選資料行旁邊的篩選圖形](../../reporting-services/report-data/media/rsqdicon-filter.gif "在選取篩選資料行旁邊的篩選圖形")) 的 [圖表] 窗格中，移除所選資料行的篩選。|  
+|![為選取欄位使用群組依據](../../reporting-services/report-data/media/rsqdicon-usegroupby.gif "為選取欄位使用群組依據")|顯示或隱藏 [方格] 窗格中的 [群組依據]  資料行。 當 [分組依據]  切換為開啟時，[方格] 窗格中會出現一個名稱為 [分組依據]  的額外資料行，而且查詢中所選資料行的每一個值都會預設為 [分組依據]  ，這樣就會將選取的資料行包含在 SQL 文字的 Group By 子句中。 使用 [群組依據] 按鈕即可自動加入 GROUP BY 子句，該子句會包含 SELECT 子句中的所有資料行。 如果 SELECT 子句中包含的是彙總函式呼叫 (例如 SUM(ColumnName))，但是您希望非彙總資料行也出現在結果集中，則請將其包含在 GROUP BY 子句中。<br /><br /> 查詢中的每個資料行都必須定義彙總函式，用以計算要顯示在 [結果] 窗格中的值，或者必須在 SQL 查詢的 GROUP BY 子句中指定查詢的資料行，這樣資料行才會出現在 [結果] 窗格中。|  
+|![在 [圖表] 窗格中新增資料表](../../reporting-services/report-data/media/rsqdicon-addtable.gif "在 [圖表] 窗格中新增資料表")|將資料來源中的新資料表加入至 [圖表] 窗格中。<br /><br /> **注意** ：當您加入新資料表時，查詢設計工具會嘗試比對資料來源中的外部索引鍵關聯性。 因此，在加入資料表之後，請確認以資料表之間的連結所表示的外部索引鍵關聯性是否正確。|  
   
 #### <a name="example"></a>範例  
  下列查詢會從 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的 **Person** 資料表傳回姓氏清單：  
@@ -103,7 +103,7 @@ EXEC uspGetEmployeeManagers '1';
   
  下表會描述各個窗格的功能。  
   
-|窗格|函數|  
+|窗格|函式|  
 |----------|--------------|  
 |資料表下拉式清單|列出資料來源中所有可使用的資料表。 從清單中選取一項，即可使其變成使用中狀態。|  
 |結果|顯示選取之資料表中的所有資料行。 若要執行資料表查詢，請按一下工具列上的 [執行]  按鈕。|  
@@ -111,7 +111,7 @@ EXEC uspGetEmployeeManagers '1';
 #### <a name="toolbar-buttons-for-the-command-type-tabledirect"></a>TableDirect 命令類型的工具列按鈕  
  圖形化查詢設計工具工具列會提供資料來源中的資料表下拉式清單。 下表列出每一個按鈕以及該按鈕的功能。  
   
-|按鈕|Description|  
+|按鈕|描述|  
 |------------|-----------------|  
 |**當成文字編輯**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。|  
 |**匯入**|從檔案或報表匯入現有的查詢。 只支援 .sql 和 .rdl 檔案類型。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
@@ -121,7 +121,7 @@ EXEC uspGetEmployeeManagers '1';
 ### <a name="command-type-storedprocedure"></a>StoredProcedure 命令類型  
  在 **StoredProcedure** 類型中，圖形化查詢設計工具會顯示資料來源中可用的預存程序下拉式清單和 [結果] 窗格。 下表會描述各個窗格的功能。  
   
-|窗格|函數|  
+|窗格|函式|  
 |----------|--------------|  
 |預存程序下拉式清單|列出資料來源中所有可使用的預存程序。 從清單中選取一項，即可使其變成使用中狀態。|  
 |結果|顯示執行預存程序的結果。 若要執行選取的預存程序，請按一下工具列上的 [執行]  按鈕。|  
@@ -129,10 +129,10 @@ EXEC uspGetEmployeeManagers '1';
 #### <a name="toolbar-buttons-for-command-type-storedprocedure"></a>StoredProcedure 命令類型的工具列按鈕  
  圖形化查詢設計工具工具列會提供資料來源中的預存程序下拉式清單。 下表列出每一個按鈕以及該按鈕的功能。  
   
-|按鈕|Description|  
+|按鈕|描述|  
 |------------|-----------------|  
 |**當成文字編輯**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。|  
-|**匯入**|從檔案或報表匯入現有的查詢。 只支援 .sql 和 .rdl 檔案類型。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)(Dependent Dataset)。|  
+|**匯入**|從檔案或報表匯入現有的查詢。 只支援 .sql 和 .rdl 檔案類型。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
 |![執行查詢](../../reporting-services/report-data/media/rsqdicon-run.gif "執行查詢")|執行選取的預存程序。|  
 |預存程序下拉式清單|按一下向下箭頭，即可顯示資料來源中可使用的預存程序清單。 按一下清單中的任何一個預存程序，以選取它。|  
   

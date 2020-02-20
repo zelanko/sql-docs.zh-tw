@@ -9,10 +9,10 @@ ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041197"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教學課程：建立基本資料表報表 (報表產生器)
@@ -21,7 +21,7 @@ ms.locfileid: "63041197"
 ![SSRS_Tutorial_Basic_Table_Report](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
   
 
-完成這個教學課程的估計時間：30 分鐘。  
+完成此教學課程的估計時間：20 分鐘。  
   
 ## <a name="requirements"></a>需求  
 如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
@@ -184,7 +184,7 @@ ms.locfileid: "63041197"
   
 4.  按一下 [下一步]  預覽資料表，然後按一下 [完成]  。  
   
-資料表會加入至設計介面。 這個資料表有 5 個資料行和 5 個資料列。 [資料列群組] 窗格會顯示三個資料列群組：[SalesDate]、[Subcategory] 和 [Details]。 詳細資料是資料集查詢擷取的所有資料。  
+資料表會加入至設計介面。 這個資料表有 5 個資料行和 5 個資料列。 [資料列群組] 窗格會顯示三個資料列群組：SalesDate、Subcategory 和 Details。 詳細資料是資料集查詢擷取的所有資料。  
   
 ## <a name="FormatCurrency"></a>2.將資料格式化為貨幣  
 根據預設，[Sales] 欄位的摘要資料會顯示一般數字。 格式化該欄位，將數字顯示為貨幣。   
@@ -297,7 +297,7 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
   
 4.  在 [名稱]  中，以 **Product_Sales** 取代 [未命名]  。  
   
-5.  按一下 **[儲存]** 。  
+5.  按一下 [檔案]  。  
   
 報表就會儲存至報表伺服器。 您連接之報表伺服器的名稱會顯示在視窗底部的狀態列中。  
   
@@ -309,7 +309,7 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
   
 3.  在 [名稱]  中，以 **Product Sales** 取代 [未命名]  。  
   
-4.  按一下 **[儲存]** 。  
+4.  按一下 [檔案]  。  
   
 ## <a name="Export"></a>7.匯出報表  
 報表可匯出為不同的格式，例如 Microsoft Excel 和逗號分隔值 (CSV) 檔案。 如需詳細資訊，請參閱 [匯出報表 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)中之分頁的規則。  
@@ -342,7 +342,7 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
   
 5.  驗證檔案類型為 **Excel (\*.xlsx)** 。  
   
-6.  按一下 **[儲存]** 。  
+6.  按一下 [檔案]  。  
   
 ### <a name="to-view-the-report-in-excel"></a>若要在 Excel 中檢視報表  
   
@@ -350,7 +350,7 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
   
 2.  確認活頁簿索引標籤的名稱是 **Product Sales Excel**。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
 以上總結如何建立基本資料表報表的逐步解說。 如需資料表的詳細資訊，請參閱[資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  

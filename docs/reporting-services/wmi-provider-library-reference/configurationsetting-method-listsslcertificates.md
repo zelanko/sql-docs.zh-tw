@@ -11,10 +11,10 @@ ms.assetid: 88cd0936-b202-4ab8-90f2-d9c3f66d37f4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1e39c771872b0afbb614257145f447d1a47386a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571332"
 ---
 # <a name="configurationsetting-method---listsslcertificates"></a>ConfigurationSetting 方法 - ListSSLCertificates
@@ -53,7 +53,7 @@ public void ListSSLCertificates(out string[] CertificateHash,
 ## <a name="return-value"></a>傳回值  
  傳回 *HRESULT* ，指出方法呼叫成功或失敗。 值為 0 表示方法呼叫成功。錯誤碼則表示呼叫不成功。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
  **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

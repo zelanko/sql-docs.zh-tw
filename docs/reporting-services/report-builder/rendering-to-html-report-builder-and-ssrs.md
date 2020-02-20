@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de76ab165f201500399ff6c0585a49122d6b9cc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f30568da0ea6f8b937fd87a4891058b9d68949fe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580658"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74957442"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>轉譯為 HTML (報表產生器及 SSRS)
   HTML 轉譯延伸模組會轉譯 HTML 格式的分頁報表。 轉譯延伸模組也可產生完整的 HTML 頁面，或內嵌在其他 HTML 頁面中的 HTML 片段。 所有 HTML 均以 UTF-8 編碼產生。  
@@ -84,6 +84,8 @@ ms.locfileid: "65580658"
   
  其他搜尋和尋找功能是由 ReportViewer Web 表單控制項提供。  
   
+##  <a name="FontsOnClient"></a> 用戶端電腦上的字型
+ 當報表使用自訂字型時，用來檢視報表的電腦 (用戶端電腦) 必須安裝該自訂字型，才能正確顯示報表。 如果用戶端電腦上未安裝此字型，則報表會顯示系統預設字型，而不是自訂的字型。
   
 ##  <a name="DeviceInfo"></a> 裝置資訊設定  
  您可以變更此轉譯器的某些預設值，包括要在哪個模式下轉譯，方法是，變更裝置資訊設定。 如需相關資訊，請參閱 [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md)。  

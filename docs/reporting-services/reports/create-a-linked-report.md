@@ -11,10 +11,10 @@ ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6dad85f35be1d7fb26f4c9eef6241e01baadb692
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492819"
 ---
 # <a name="create-a-linked-report"></a>建立連結報表
@@ -28,17 +28,17 @@ ms.locfileid: "67492819"
   
 ## <a name="to-create-a-linked-report"></a>若要建立連結報表  
   
-1. 在入口網站中，瀏覽至所需的報表，以滑鼠右鍵按一下它，然後選取**管理**從下拉式清單。
+1. 在入口網站中，巡覽至所需的報表，以滑鼠右鍵按一下該報表，然後從下拉式功能表中選取 [管理]  。
 
-2. 在 **管理<reportname>** 頁面上，選取**建立連結的報表**。  
+2. 在 [管理 <reportname>]  頁面上，選取 [建立連結報表]  。  
   
 3. 輸入新連結報表的名稱。 選擇性地輸入描述。  
   
-4. 若要選取報表的其他資料夾，選取 右邊的省略符號按鈕 （...）***位置***。  瀏覽至報表，然後選取新資料夾**選取**。 如果您未選取不同的資料夾，則建立連結的報表是在目前的資料夾。  
+4. 若要為報表選取不同的資料夾，請選取 [位置] 右側的省略符號按鈕 (...)。  巡覽至報表的新資料夾，然後選取 [選取]  。 如果您未選取其他資料夾，則會在目前的資料夾中建立連結報表。  
   
-5. 選取 [建立]  。 會建立連結的報表。  
+5. 選取 [建立]  。 連結報表隨即建立。  
 
-6. 底下**進階**，選取不同**報表逾時**值，如有需要，然後選取**套用**以儲存變更。
+6. 在 [進階]  底下，視需要選取不同的 [報表逾時]  值，然後選取 [套用]  以儲存變更。
   
      連結報表的圖示與報表伺服器所管理的其他項目不同。 下列圖示表示連結報表：  
   

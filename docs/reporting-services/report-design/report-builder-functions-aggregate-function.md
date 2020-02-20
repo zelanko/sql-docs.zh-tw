@@ -9,10 +9,10 @@ ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: aa6d1892c8aceb4640207bce9bc2321541137b6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576383"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>報表產生器函式 - Aggregate 函式
@@ -38,8 +38,8 @@ Aggregate(expression, scope)
 ## <a name="return-type"></a>傳回類型  
  傳回類型是由資料提供者決定。 如果資料提供者不支援此函數或無法使用資料，則傳回 **Nothing** 。  
   
-## <a name="remarks"></a>Remarks  
- **Aggregate** 函數會提供一個方式來使用在外部資料來源上計算的彙總。 這個功能的支援是由資料延伸模組所決定。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料處理延伸模組會從 MDX 查詢擷取扁平化的資料列集。 結果集中的某些資料列可能會包含在資料來源伺服器上計算的彙總值。 這些值稱為 *「伺服器彙總」* (Server Aggregate)。 若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的圖形化查詢設計工具中檢視伺服器彙總，可以使用工具列的 **[顯示彙總]** 按鈕。 如需詳細資訊，請參閱 [Analysis Services MDX 查詢設計工具使用者介面 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)。  
+## <a name="remarks"></a>備註  
+ **Aggregate** 函數會提供一個方式來使用在外部資料來源上計算的彙總。 這個功能的支援是由資料延伸模組所決定。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料處理延伸模組會從 MDX 查詢擷取扁平化的資料列集。 結果集中的某些資料列可能會包含在資料來源伺服器上計算的彙總值。 這些值稱為 *「伺服器彙總」* (Server Aggregate)。 若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的圖形化查詢設計工具中檢視伺服器彙總，可以使用工具列的 **[顯示彙總]** 按鈕。 如需詳細資訊，請參閱 [Analysis Services MDX 查詢設計工具使用者介面 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)。  
   
  當您在 Tablix 資料區域的詳細資料列中顯示彙總和詳細資料集值的組合時，一般並不會包含伺服器彙總，因為這些值並非詳細資料。 不過，您可以顯示針對資料集所擷取的所有值，並自訂計算及顯示彙總資料的方式。  
   

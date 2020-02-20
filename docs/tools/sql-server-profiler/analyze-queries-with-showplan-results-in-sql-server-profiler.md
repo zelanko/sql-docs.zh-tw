@@ -1,27 +1,25 @@
 ---
-title: 在 SQL Server Profiler 中使用 SHOWPLAN 結果分析查詢 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 使用執行程序表結果分析查詢
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- events [SQL Server], Showplan
-- Profiler [SQL Server Profiler], Showplan results
-- SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 577590c360b14af9129487c120dbf70726f2a7ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: e0936a3931b574c08e5a58f396d7917eae569078
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105607"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307380"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>在 SQL Server Profiler 中使用 SHOWPLAN 結果分析查詢
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   您可以將 Showplan 事件類別加入至追蹤定義中，讓 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 蒐集查詢計畫資訊並顯示在追蹤中。 您也可以從追蹤所收集的其他事件中擷取顯示計畫事件，並將這些顯示計畫事件儲存在個別的 XML 檔案中。  
   
@@ -36,7 +34,7 @@ ms.locfileid: "68105607"
 ## <a name="showplan-events"></a>顯示計畫事件  
  下表列出並說明顯示計畫追蹤事件。  
   
-|事件名稱|Description|  
+|事件名稱|描述|  
 |----------------|-----------------|  
 |**Performance statistics**|指出第一次快取已編譯顯示計畫的時間、其重新編譯的時間，以及從計畫快取中卸除的時間。 **TextData** 資料行中包含了 XML 格式的顯示計畫。 如需詳細資訊，請參閱 [Performance Statistics 事件類別](../../relational-databases/event-classes/performance-statistics-event-class.md)。|  
 |**Showplan All**|所顯示的查詢計畫，含有已執行之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的完整編譯詳細資料。 例如，其中可能會顯示成本估計與資料行清單。 如需詳細資訊，請參閱 [Showplan All 事件類別](../../relational-databases/event-classes/showplan-all-event-class.md)。|  

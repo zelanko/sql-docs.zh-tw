@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 840b964a8010ad7682a4d6d4d62a53192da9cfbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 0f7dd8b90b59c95121f9924f0fbb077521b0670f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65571213"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190783"
 ---
 # <a name="query-design-tools-ssrs"></a>查詢設計工具 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供各種查詢設計工具，您可以在報表設計師中利用這些工具來建立資料集查詢。 某些查詢設計工具還提供替代模式，讓您能夠選擇使用視覺化模式或直接使用查詢語言。 本主題簡介每個工具，並描述每個工具支援的資料來源類型。 本主題將描述下列工具：  
@@ -52,25 +52,25 @@ ms.locfileid: "65571213"
   
 -   **依查詢設計工具類型。** 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源同時支援圖形化查詢設計工具以及以文字為基礎的查詢設計工具。  
   
--   **依查詢語言變化。** 例如， [!INCLUDE[tsql](../../includes/tsql-md.md)] 這類的查詢語言在語法上可能會視資料來源類型而有所不同。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言和 Oracle SQL 語言在查詢命令的語法上有一些不同。  
+-   **依查詢語言變化。** 例如， [!INCLUDE[tsql](../../includes/tsql-md.md)] 這類的查詢語言在語法上可能會視資料來源類型而有所不同。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言和 Oracle SQL 語言在查詢命令的語法上有些不同。  
   
--   **依資料庫物件名稱的結構描述部分支援。** 當資料來源使用結構描述做為資料庫物件識別碼的一部分時，必須針對不使用預設結構描述的任何名稱，提供結構描述名稱做為查詢的一部分。 例如， `SELECT FirstName, LastName FROM [Person].[Person]`。  
+-   **依資料庫物件名稱的結構描述部分支援。** 當資料來源使用結構描述做為資料庫物件識別碼的一部分時，必須針對不使用預設結構描述的任何名稱，提供結構描述名稱做為查詢的一部分。 例如： `SELECT FirstName, LastName FROM [Person].[Person]` 。  
   
 -   **依查詢參數支援。** 資料提供者的差異在於參數的支援。 有些資料提供者支援指名參數，例如， `SELECT Col1, Col2 FROM Table WHERE <parameter identifier><parameter name> = <value>`。 有些資料提供者則支援未指名參數，例如， `SELECT Col1, Col2 FROM Table WHERE <column name> = ?`。 參數識別碼可能依資料提供者而有所不同，例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 @ 符號，而 Oracle 使用冒號 (:)。 而有些資料提供者不支援參數。  
   
 -   **依匯入查詢的能力。** 例如，若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源，您可以從報表定義檔案 (.rdl) 或 .sql 檔案匯入查詢。  
   
 ##  <a name="Textbased"></a> 以文字為基礎的查詢設計工具  
- 以文字為基礎的查詢設計工具是預設的查詢建立工具，它適用於大部分支援的關聯式資料來源，包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、Teradata、OLE DB、XML 和 ODBC。 相較於圖形化查詢設計工具，此查詢設計工具在查詢設計期間並不會驗證查詢語法。 下圖說明以文字為基礎的查詢設計工具。  
+ 以文字為基礎查詢設計工具是預設的查詢建置工具，適用於大部分支援的關聯式資料來源，包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、Teradata、OLE DB、XML 和 ODBC。 相較於圖形化查詢設計工具，此查詢設計工具在查詢設計期間並不會驗證查詢語法。 下圖說明以文字為基礎的查詢設計工具。  
   
- ![關聯式資料查詢的一般查詢設計工具](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "關聯式資料查詢的一般查詢設計工具")  
+ ![一般查詢設計工具，適用於關聯式資料查詢](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "一般查詢設計工具，適用於關聯式資料查詢")  
   
  建議您利用以文字為基礎的查詢設計工具來建立複雜的查詢、使用預存程序、查詢 XML 資料，以及撰寫動態查詢。 根據資料來源，您可能可以切換工具列上的 [當成文字編輯]  按鈕，以便在圖形化查詢設計工具和以文字為基礎的查詢設計工具之間切換。 如需詳細資訊，請參閱 [以文字為基礎的查詢設計工具使用者介面](https://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)。  
   
 ##  <a name="Graphical"></a> 圖形化查詢設計工具  
  圖形化查詢設計工具用於建立或修改根據關聯式資料庫執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢。 此查詢設計工具可用於數種 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 產品以及其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件。 根據資料來源類型，它支援文字模式、StoredProcedure 模式和 TableDirect 模式。 下圖說明圖形化查詢設計工具。  
   
- ![SQL 查詢適用的圖形化查詢設計工具](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "SQL 查詢適用的圖形化查詢設計工具")  
+ ![適用於 SQL 查詢的圖形化查詢設計工具](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "適用於 SQL 查詢的圖形化查詢設計工具")  
   
  您可以切換工具列上的 [當成文字編輯]  按鈕，以便在圖形化查詢設計工具和以文字為基礎的查詢設計工具之間切換。 如需詳細資訊，請參閱 [圖形化查詢設計工具使用者介面](../../reporting-services/report-data/graphical-query-designer-user-interface.md)。  
   
@@ -84,14 +84,14 @@ ms.locfileid: "65571213"
 ##  <a name="MDX"></a> MDX 查詢設計工具  
  多維度運算式 (MDX) 查詢設計工具用於建立或修改針對包含多維度 Cube 之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源所執行的查詢。 下圖說明定義查詢和篩選之後的 MDX 查詢設計工具。  
   
- ![Analysis Services MDX 查詢設計工具，設計檢視](../../reporting-services/report-data/media/rsqd-dsawas-mdx-designmode.gif "Analysis Services MDX 查詢設計工具，設計檢視")  
+ ![Analysis Services MDX 查詢設計工具，[設計] 檢視](../../reporting-services/report-data/media/rsqd-dsawas-mdx-designmode.gif "Analysis Services MDX 查詢設計工具，[設計] 檢視")  
   
  若要使用 MDX 查詢設計工具，您定義的資料來源必須包含有效而且已經經過處理的可用 Analysis Services Cube。 當您定義資料來源的資料集時，您可以在 MDX 查詢設計工具中開啟查詢。 必要時，使用工具列上的 MDX 和 DMX 按鈕，在 MDX 與 DMX 模式之間切換。 如需詳細資訊，請參閱 [Analysis Services MDX 查詢設計工具使用者介面](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)。  
   
 ##  <a name="DMX"></a> DMX 查詢設計工具  
  資料採礦預測運算式 (DMX) 查詢設計工具用於建立或修改針對包含採礦模型之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源所執行的查詢。 下圖說明選取模型和輸入資料表之後的 DMX 查詢設計工具。  
   
- ![Analysis Services DMX 查詢設計工具，設計檢視](../../reporting-services/report-data/media/rsqd-dsawas-dmx-designmode.gif "Analysis Services DMX 查詢設計工具，設計檢視")  
+ ![Analysis Services MDX 查詢設計工具，[設計] 檢視](../../reporting-services/report-data/media/rsqd-dsawas-dmx-designmode.gif "Analysis Services DMX 查詢設計工具，[設計] 檢視")  
   
  若要使用 DMX 查詢設計工具，您定義的資料來源必須已經包含有效的可用資料採礦模型。 當您定義資料來源的資料集時，您可以在 DMX 查詢設計工具中開啟查詢。 必要時，使用工具列上的 MDX 和 DMX 按鈕，在 MDX 與 DMX 模式之間切換。 選取模型之後，您可以建立資料採礦預測查詢，提供資料給報表。 如需詳細資訊，請參閱 [Analysis Services MDX 查詢設計工具使用者介面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "65571213"
 ##  <a name="Hyperion"></a> Hyperion Essbase 查詢設計工具  
  [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 查詢設計工具是用來擷取 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 資料庫與應用程式中的資料。 下圖說明 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 查詢設計工具。  
   
- ![Hyperion Essbase 資料來源的查詢設計工具](../../reporting-services/report-data/media/rsqd-dshyperionessbase-mdx-designmode.gif "Hyperion Essbase 資料來源的查詢設計工具")  
+ ![Hyperion Essbase 查詢設計工具資料來源](../../reporting-services/report-data/media/rsqd-dshyperionessbase-mdx-designmode.gif "Hyperion Essbase 查詢設計工具資料來源")  
   
  若要使用此查詢設計工具，您所具備的 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 資料來源必須至少擁有一個資料庫。  
   
@@ -112,9 +112,9 @@ ms.locfileid: "65571213"
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)   
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Reporting Services 教學課程 &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
+ [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
  [建立內嵌或共用資料來源 &#40;SSRS&#41;](https://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)  
   
   

@@ -1,10 +1,9 @@
 ---
-title: 建立及更新資料表 (SSMS) | Microsoft Docs
-ms.custom: ''
+title: 建立及更新資料表
+ms.custom: seo-lt-2019
 ms.date: 08/25/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,14 @@ helpviewer_keywords:
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c10e17fd9da739eecc07536b40be3964705abef
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 42da7ce86560e77cc7757f8077b0c0aca8775d93
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263775"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254685"
 ---
 # <a name="create-and-update-database-tables"></a>建立及更新資料表
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "68263775"
 [資料行屬性](column-properties-visual-database-tools.md)  
 [在資料表新增資料行](../../relational-databases/tables/add-columns-to-a-table-database-engine.md)  
 [主要與外部索引鍵](../../relational-databases/tables/primary-and-foreign-key-constraints.md)  
-[[索引]](../../relational-databases/indexes/indexes.md)  
+[索引數](../../relational-databases/indexes/indexes.md)  
 [資料類型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [下載 SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)  
 [在 Visual Studio 中建立資料庫及新增資料表](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)

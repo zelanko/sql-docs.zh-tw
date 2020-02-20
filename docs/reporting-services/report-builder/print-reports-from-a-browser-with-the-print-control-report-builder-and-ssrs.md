@@ -9,16 +9,16 @@ ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 535d35ad80f940e7d3ed4a9163b2e65757088e58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581163"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>使用列印控制項從瀏覽器列印報表 (報表產生器及 SSRS)
   雖然瀏覽器是最常用來檢視報表的用戶端應用程式，但瀏覽器的列印功能在列印報表時並不理想。 瀏覽器的列印功能是為了列印網頁而設計的。 通常，您從瀏覽器列印的頁面會包括網頁上的所有視覺化元素，以及識別網頁或網站的頁首和頁尾資訊。 從瀏覽器列印時會列印現行視窗的內容。 若為多頁報表．瀏覽器最多只會列印第一頁，如果報表頁面延伸到列印頁面範圍之外，則列印出來的可能更少。  
   
- 若要改善您在瀏覽器中檢視之報表的列印品質並列印多個頁面，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中提供的用戶端列印功能。 用戶端列印功能提供標準的 **[列印]** 對話方塊，可以用來選取印表機、指定頁面和邊界，以及在列印之前先預覽報表。 用戶端列印功能就是要用來代替瀏覽器 **[檔案]** 功能表上的 **[列印]** 命令。 使用用戶端列印功能時，報表會像原來設計那樣列印出來，而不會有您在網頁輸出中所看到的多餘元素。  
+ 若要改善在瀏覽器中所檢視報表的列印品質並列印多個頁面，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中提供的用戶端列印功能。 用戶端列印功能提供標準的 **[列印]** 對話方塊，可以用來選取印表機、指定頁面和邊界，以及在列印之前先預覽報表。 用戶端列印功能就是要用來代替瀏覽器 **[檔案]** 功能表上的 **[列印]** 命令。 使用用戶端列印功能時，報表會像原來設計那樣列印出來，而不會有您在網頁輸出中所看到的多餘元素。  
   
  若要使用用戶端列印功能，您必須安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 控制項。 如需詳細資訊，請參閱 [啟用和停用 Reporting Services 的用戶端列印](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。  
   

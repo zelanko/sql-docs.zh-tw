@@ -1,6 +1,6 @@
 ---
-title: MSSQLSERVER 屬性的通訊協定 ([憑證] 索引標籤) | Microsoft Docs
-ms.custom: ''
+title: MSSQLSERVER 的通訊協定內容 (憑證索引標籤)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,21 +15,21 @@ ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1dd00a167765e80a67daa6e795330fdbcf04e3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: b19b12a55f1afee35ed351ab6033179c17be89a8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058484"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306375"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>MSSQLSERVER 的通訊協定內容 (憑證索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  您可以使用 **[MSSQLSERVER 的通訊協定內容]** 對話方塊的 **[憑證]** 索引標籤，來選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]憑證或檢視憑證內容。 選取憑證之前所有欄位都會是空白。  
+  您可以使用 [MSSQLSERVER 屬性的通訊協定]  對話方塊的 [憑證]  索引標籤，以選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的憑證或檢視憑證內容。 選取憑證之前所有欄位都會是空白。  
   
  電腦上之使用者的憑證會儲存在本機中。 若要載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的憑證，您必須使用和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務相同的使用者帳戶來執行「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」。  
   
 ## <a name="page-header"></a>頁首  
- **[檢視]**  
+ **檢視**  
  可存取憑證上其他的詳細資料。 在 **[憑證]** 方塊中選取憑證之前，此按鈕無法使用。 如需憑證詳細資料的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 文件集。  
   
  **Clear**  

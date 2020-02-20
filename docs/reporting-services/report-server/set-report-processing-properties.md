@@ -16,16 +16,16 @@ ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4a7729e8880e811494e6e1016b827831674cd812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140402"
 ---
 # <a name="set-report-processing-properties"></a>設定報表處理屬性
   報表執行屬性控制處理報表的方式。 您必須針對每個報表個別設定執行屬性。  
   
- 若要設定報表執行屬性，瀏覽至入口網站中的報表，以滑鼠右鍵按一下報表，然後選取**管理**從下拉式清單。
+ 若要設定報表執行屬性，請在入口網站中巡覽至報表，以滑鼠右鍵按一下該報表，然後從下拉式功能表中選取 [管理]  。
   
 ## <a name="report-execution-modes"></a>報表執行模式  
  您可以視需要或以快照集的形式執行報表。 下一節描述每一種方法。  

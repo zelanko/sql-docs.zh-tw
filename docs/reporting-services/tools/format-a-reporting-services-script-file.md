@@ -12,10 +12,10 @@ ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1979e19b3d93e9687d6abb137758bc71548b10ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577792"
 ---
 # <a name="format-a-reporting-services-script-file"></a>格式化 Reporting Services 指令碼檔案
@@ -46,7 +46,7 @@ End Sub
 > [!IMPORTANT]  
 >  使用者認證會由指令碼環境所管理，並藉由使用 RS.exe，透過命令提示字元引數傳遞。 您可以使用 *rs* 變數來設定 Web 服務的驗證，但是建議您使用指令碼環境。 您不需要在指令碼檔案本身，驗證 Web 服務。 如需有關驗證指令碼環境的詳細資訊，請參閱 [RS.exe 公用程式 &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)。  
   
- 您沒有宣告指令碼檔案內的命名空間。 指令碼環境提供數個實用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空間供您使用： **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**和 **System.IO**。  
+ 您沒有宣告指令碼檔案內的命名空間。 指令碼環境提供數個實用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空間供您使用：**System.Web.Services**、**System.Web.Services.Protocols**、**System.Xml** 和 **System.IO**。  
   
  如需指令碼範例，請參閱 [SQL Server Reporting Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
   

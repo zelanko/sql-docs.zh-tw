@@ -1,6 +1,7 @@
 ---
-title: 指定報表資料來源的認證及連線資訊 | Microsoft Docs
-ms.date: 08/17/2018
+title: 設定報表資料來源的認證及連線資訊 | Microsoft Docs
+description: 報表伺服器使用認證以連接到外部資料來源，其中提供內容給報表或提供收件者資訊給資料驅動訂閱。
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d6b5041b07551ba8bbd23cc3f737fc0c09d72ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575343"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244557"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>指定報表資料來源的認證及連接資訊
   報表伺服器使用認證以連接到外部資料來源，其中提供內容給報表或提供收件者資訊給資料驅動訂閱。 您可以指定認證來使用 Windows 驗證、資料庫驗證、無驗證或自訂驗證。 透過網路傳送連接要求時，報表伺服器會模擬使用者帳戶或自動執行帳戶。 如需安全性內容 (連接要求會在其底下進行) 的詳細資訊，請參閱本主題之後的 [資料來源組態和網路連接](#DataSourceConfigurationConnections) 。  
@@ -39,7 +40,7 @@ ms.locfileid: "65575343"
 > [!NOTE]  
 >  認證也用於驗證存取報表伺服器的使用者。 有關報表伺服器驗證使用者的資訊，會在另一個主題中提供。  
   
- 當您建立報表時，會定義與外部資料來源之間的連接。 當報表發行之後，可以個別管理此連接。 您可以指定靜態連接字串或運算式，好讓使用者可以從動態清單中選取資料來源。 如需如何指定資料來源類型和連接字串的詳細資訊，請參閱 [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+ 當您建立報表時，會定義與外部資料來源之間的連接。 當報表發行之後，可以個別管理此連接。 您可以指定靜態連接字串或運算式，好讓使用者可以從動態清單中選取資料來源。 如需如何指定資料來源類型和連接字串的詳細資訊，請參閱[建立資料連接字串 - 報表產生器及 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 ## <a name="when-credentials-are-used-in-report-builder"></a>在報表產生器中使用認證時  
  在報表產生器中，認證經常在您連接至報表伺服器時使用，或是用於資料相關工作，例如建立內嵌的資料來源、執行資料集查詢，或是預覽報表。 認證不會儲存在報表中。 認證會在報表伺服器或本機用戶端上另行管理。 下列清單說明您可能需要提供的認證類型、認證儲存的位置，以及使用認證的方式：  
@@ -153,15 +154,15 @@ ms.locfileid: "65575343"
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |整合式安全性|模擬目前的使用者|針對所有資料來源類型，利用目前的使用者帳戶來連接。|  
 |Windows 認證|模擬指定的使用者|若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：使用模擬使用者帳戶進行連接。|  
-|資料庫認證|模擬自動執行帳戶或服務帳戶。<br /><br /> (利用服務識別傳送連接要求時，Reporting Services 會移除管理員權限)。|若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 將使用者名稱和密碼附加至連接字串。<br /><br /> 若為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]：<br /><br /> 使用 TCP/IP 通訊協定時，連接會成功，否則會失敗。<br /><br /> 如果是 XML：<br /><br /> 使用資料庫認證時，會使報表伺服器上的連接失敗。|  
-|None|模擬自動執行帳戶。|若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 使用連接字串中定義的認證。 如果未定義自動執行帳戶，報表伺服器上的連接會失敗。<br /><br /> 若為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]：<br /><br /> 指定無認證或定義自動執行帳戶時，永遠會使連接失敗。<br /><br /> 如果是 XML：<br /><br /> 如果已定義自動執行帳戶，則以匿名使用者連接；否則會使連接失敗。|  
+|資料庫認證|模擬自動執行帳戶或服務帳戶。<br /><br /> (利用服務識別傳送連接要求時，Reporting Services 會移除管理員權限)。|若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 將使用者名稱和密碼附加至連接字串。<br /><br /> 針對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]：<br /><br /> 使用 TCP/IP 通訊協定時，連接會成功，否則會失敗。<br /><br /> 如果是 XML：<br /><br /> 使用資料庫認證時，會使報表伺服器上的連接失敗。|  
+|None|模擬自動執行帳戶。|若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 使用連接字串中定義的認證。 如果未定義自動執行帳戶，報表伺服器上的連接會失敗。<br /><br /> 針對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]：<br /><br /> 指定無認證或定義自動執行帳戶時，永遠會使連接失敗。<br /><br /> 如果是 XML：<br /><br /> 如果已定義自動執行帳戶，則以匿名使用者連接；否則會使連接失敗。|  
   
 ## <a name="setting-credentials-programmatically"></a>以設計程式的方式設定認證  
  您可以在您的程式碼中設定認證，來控制報表和報表伺服器的存取。 如需詳細資訊，請參閱 [資料來源和連接方法](../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
- [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [建立資料連接字串 - 報表產生器及 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [管理報表資料來源](../../reporting-services/report-data/manage-report-data-sources.md)   
  [設定報表的資料來源屬性](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   

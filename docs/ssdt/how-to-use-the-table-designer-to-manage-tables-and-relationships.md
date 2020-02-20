@@ -1,11 +1,7 @@
 ---
-title: 如何：使用資料表設計工具管理資料表和關聯性 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 使用資料表設計工具管理資料表和關聯性
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.columnspecification.index.dialog
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 91fddb94bf028ec884a4589c7c4a88bd3be923e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 924a48ffe75c043385043f02125c8e07cfe3fbbc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097482"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226831"
 ---
 # <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>如何：使用資料表設計工具管理資料表和關聯性
+
 資料表設計工具與 Transact\-SQL 編輯器一起為 SQL Server 資料庫提供用於建立及編輯資料表結構 (包括資料表特定的程式設計物件) 的視覺效果。  為連接的資料庫或專案建立新資料表，或是在 [SQL Server 物件總管] 或 [方案總管] 中按兩下資料表加以編輯時，就會啟動資料表設計工具。  
   
 這個設計工具由資料行格線、指令碼窗格和內容窗格組成。 資料行格線會列出資料表中的所有資料行。 您可以加入、編輯和刪除此格線中的資料行。  內容窗格提供資料表定義 (索引鍵、索引、條件約束、觸發程序等等) 的邏輯檢視，並讓您選取要反白顯示與個別資料行關聯性的物件。 您也可以將新物件加入至這個窗格中的資料表，並在 [屬性] 方格中編輯所選取物件的屬性。 指令碼窗格會顯示資料表結構的定義，並在內容窗格或資料行格線中反白顯示所選物件的指令碼。 您可以在檢視中使用資料行格線和內容窗格並存編輯指令碼。 任何三個窗格的任何變更都會將立即傳播到其他兩個窗格。  

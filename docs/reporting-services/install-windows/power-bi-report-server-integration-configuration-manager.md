@@ -7,10 +7,10 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
 ms.openlocfilehash: c2013e99f5e222c50d954e292cbc0b48b39cb7c9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68265637"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 報表伺服器整合 (組態管理員)
@@ -23,9 +23,9 @@ ms.locfileid: "68265637"
 
 除了使用中的網際網路連線，您還可以瀏覽至 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 服務，以下是完成 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]整合的需求。
 
-- **Azure Active Directory：** 貴組織必須使用 Azure Active Directory，為 Azure 服務和 Web 應用程式提供目錄和身分識別管理。 如需詳細資訊，請參閱 [什麼是 Azure Active Directory？](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
+- **Azure Active Directory：** 您的組織必須使用 Azure Active Directory，其為 Azure 服務和 Web 應用程式提供目錄和身分識別管理。 如需詳細資訊，請參閱[什麼是 Azure Active Directory？](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
 
-- **受管理的租用戶︰** 您要在其中釘選報表項目的 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板必須是 Azure AD 受管理租用戶的一部分。  貴組織首次訂閱如 Office 365 和 Microsoft Intune 等 Azure 服務時，受管理的租用戶便會自動建立。   目前不支援病毒式租用戶。  如需詳細資訊，請參閱 [什麼是 Azure AD 目錄？](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)中的＜什麼是 Azure AD 租用戶＞和＜如何取得 Azure AD 目錄＞二節。
+- **受控租用戶：** 您要釘選報表項目的 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板必須屬於 Azure AD 受控租用戶。  貴組織首次訂閱如 Office 365 和 Microsoft Intune 等 Azure 服務時，受管理的租用戶便會自動建立。   目前不支援病毒式租用戶。  如需詳細資訊，請參閱 [什麼是 Azure AD 目錄？](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)中的＜什麼是 Azure AD 租用戶＞和＜如何取得 Azure AD 目錄＞二節。
 
 - 執行 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 整合的使用者需為 Azure AD 租用戶的成員，該租用戶為 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 系統管理員以及 ReportServer 目錄資料庫的系統管理員。
 
@@ -33,15 +33,15 @@ ms.locfileid: "68265637"
 
 - 您想要從中釘選的報表必須使用預存的認證。 這不是 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 整合本身的需求，而是已釘選項目重新整理程序的需求。  釘選報表項目這項動作會建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱來管理 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]中磚的重新整理排程。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱需要預存的認證。 若報表不會使用預存的認證，使用者還是可以釘選報表項目，但當相關聯的訂閱嘗試將資料重新整理至 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]時，您會在 [我的訂閱]  頁面看到類似下列的錯誤訊息。
 
-    Power BI 傳遞錯誤︰儀表板︰IT 花費分析範例，視覺效果：Chart2，錯誤︰無法完成目前的動作。 使用者資料來源認證不符合需求，無法執行這份報表或執行共用資料集。 任一使用者資料來源認證。
+    PowerBI Delivery error: dashboard:IT 支出分析範例，視覺效果：Chart2，錯誤：無法完成目前的動作。 使用者資料來源認證不符合需求，無法執行這份報表或執行共用資料集。 任一使用者資料來源認證。
 
 如需如何儲存認證的詳細資訊，請參閱[在 Reporting Services 資料來源中儲存認證](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)中的＜為報表特定的資料來源設定預存認證＞一節。
 
 系統管理員可以檢閱  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 記錄檔以取得詳細資訊。  其會看到與下列文字類似的訊息。 將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Power Query 用於檔案是檢閱及監視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 記錄檔的好方法。  如需詳細資訊和短片，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。
 
-- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI 傳遞錯誤︰儀表板︰IT 花費分析範例，視覺效果：Chart2，錯誤︰無法完成目前的動作。 使用者資料來源認證不符合需求，無法執行這份報表或執行共用資料集。 使用者資料來源認證未儲存在報表伺服器資料庫中，或使用者資料來源設定為不需要認證，但未指定自動的執行帳戶。
+- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR:PowerBI Delivery error: dashboard:IT 支出分析範例，視覺效果：Chart2，錯誤：無法完成目前的動作。 使用者資料來源認證不符合需求，無法執行這份報表或執行共用資料集。 使用者資料來源認證未儲存在報表伺服器資料庫中，或使用者資料來源設定為不需要認證，但未指定自動的執行帳戶。
 
-- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI 傳遞錯誤︰儀表板︰IT 花費分析範例，視覺效果：Chart2，錯誤︰無法完成目前的動作。 使用者資料來源認證不符合需求，無法執行這份報表或執行共用資料集。 使用者資料來源認證未儲存在報表伺服器資料庫中，或使用者資料來源設定為不需要認證，但未指定自動的執行帳戶。
+- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR:Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9:PowerBI Delivery error: dashboard:IT 支出分析範例，視覺效果：Chart2，錯誤：無法完成目前的動作。 使用者資料來源認證不符合需求，無法執行這份報表或執行共用資料集。 使用者資料來源認證未儲存在報表伺服器資料庫中，或使用者資料來源設定為不需要認證，但未指定自動的執行帳戶。
 
 ## <a name="bkmk_steps2integrate"></a> 整合並註冊報表伺服器
 
@@ -62,7 +62,7 @@ ms.locfileid: "68265637"
 
 ## <a name="bkmk_unregister"></a> 取消註冊 Power BI
 
-**取消註冊︰** 從報表伺服器取消註冊 Azure Active Directory 會導致下列情形：
+**取消註冊：** 從 Azure Active Directory 取消註冊報表伺服器會導致下列情形：
 
 - [我的設定]  連結將不再顯示於入口網站功能表列。
 
@@ -110,7 +110,7 @@ ms.locfileid: "68265637"
 
  **當使用者將報表項目釘選到儀表板︰**
 
-1. 使用者在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 中預覽報表，並首次按一下以從 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]釘選報表項目。
+1. 使用者在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 中預覽報表，並首次按一下以從 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 釘選報表項目。
 
 2. 系統會將他們重新導向至 Azure AD 的登入頁面。 使用者也可以從[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] [我的設定]  頁面登入。 當使用者登入 Azure 受管理的租用戶時，其 Azure 帳戶與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 權限之間會建立關聯性。  如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](../my-settings-for-power-bi-integration-web-portal.md)。
 

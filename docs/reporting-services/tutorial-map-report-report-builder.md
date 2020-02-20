@@ -9,10 +9,10 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041573"
 ---
 # <a name="tutorial-map-report-report-builder"></a>教學課程：地圖報表 (報表產生器)
@@ -27,9 +27,9 @@ ms.locfileid: "63041573"
 在本教學課程中，您將建立地圖報表，用於顯示紐約州各郡的商店位置。  
    
 > [!NOTE]  
-> 在本教學課程中，精靈的步驟會合併成兩個程序：一個程序用來建立資料集，另一個程序用來建立資料表。 如需如何瀏覽至報表伺服器、選擇資料來源、建立資料集以及執行精靈的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+> 在本教學課程中，精靈的步驟會合併成兩個程序：一個程序用來建立資料集，另一個程序用來建立資料表。 如需如何瀏覽至報表伺服器、選擇資料來源、建立資料集，以及執行精靈的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
-完成本教學課程的估計時間：30 分鐘。  
+完成此教學課程的估計時間：30 分鐘。  
   
 ## <a name="requirements"></a>需求  
 針對本教學課程，報表伺服器必須設定為支援 Bing Maps 作為背景。 如需詳細資訊，請參閱 [對應報表支援規劃](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。 
@@ -85,7 +85,7 @@ ms.locfileid: "63041573"
     
     ![report-builder-map-choose-color-theme](../reporting-services/media/report-builder-map-choose-color-theme.png)
   
-14. 按一下 **[完成]** 。  
+14. 按一下 [完成]  。  
   
     地圖就會加入至設計介面。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63041573"
   
 1.  在 [執行]  索引標籤 > [設計]  ，切換回 [設計] 檢視。  
   
-2.  按兩下地圖來顯示 [地圖圖層]  窗格。 在工具列上，按一下 [新增圖層精靈]  按鈕 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")。 
+2.  按兩下地圖來顯示 [地圖圖層]  窗格。 在工具列上，按一下**新增圖層精靈**按鈕 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")。 
 
     ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
@@ -169,13 +169,13 @@ ms.locfileid: "63041573"
 9. 在查詢設計工具工具列上，按一下 **[執行]** \( **!** )。  
   
     結果集包含七個資料行，代表一組販賣消費品的紐約州商店。 以下是清單，以及對於較不明顯者的說明︰ 
-    *   **StoreKey**︰商店識別碼。  
+    *   **StoreKey**：商店識別碼。  
     *   **StoreName**。
-    *   **SellingArea**︰可用於產品展示的區域，範圍是從 455 平方英尺到 1125 平方英尺。
+    *   **SellingArea**：可用於產品展示的區域，範圍從 455 平方英尺到 1125 平方英尺。
     *   **City**。
     *   **County**。
-    *   **Sales**：總銷售額。 
-    *   **SpatialLocation**︰經度和緯度位置。 
+    *   **銷售**：總銷售額。 
+    *   **SpatialLocation**：經度和緯度位置。 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
   
@@ -199,7 +199,7 @@ ms.locfileid: "63041573"
   
 18. 選取 [顯示標籤]  ，並在 [資料欄位]  中選取 `[City]`。
 
-18. 按一下 **[完成]** 。  
+18. 按一下 [完成]  。  
   
     地圖圖層會加入至報表。 圖例會根據 SellingArea 值顯示泡泡大小。  
   
@@ -234,7 +234,7 @@ ms.locfileid: "63041573"
   
 1.  切換至 [設計] 檢視。  
   
-2.  按兩下地圖來顯示 **[地圖圖層]** 窗格。 在工具列上，按一下 [新增圖層精靈]  按鈕 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")。  
+2.  按兩下地圖來顯示 **[地圖圖層]** 窗格。 在工具列上，按一下**新增圖層精靈**按鈕 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")。  
   
 3.  在 **[選擇空間資料的來源]** 頁面上，選取 **[SQL Server 空間查詢]** ，然後按 **[下一步]** 。  
   
@@ -269,7 +269,7 @@ ms.locfileid: "63041573"
   
 13. 在 **[選擇色彩主題和資料視覺效果]** 上，選取 **[單一色彩地圖]** 選項。 路徑會根據所選主題的單一色彩顯示。  
   
-14. 按一下 **[完成]** 。  
+14. 按一下 [完成]  。  
 
     ![report-builder-map-line](../reporting-services/media/report-builder-map-line.png)
   
@@ -289,7 +289,7 @@ ms.locfileid: "63041573"
   
 1.  切換至 [設計] 檢視。  
   
-2.  按兩下地圖來顯示 **[地圖圖層]** 窗格。 在工具列上，按一下 [新增圖層]  ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")。  
+2.  按兩下地圖來顯示 **[地圖圖層]** 窗格。 在工具列上，按一下**新增圖層** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")。  
   
 3.  從下拉式清單中，按一下 **[圖格圖層]** 。  
   
@@ -453,7 +453,7 @@ ms.locfileid: "63041573"
   
 1.  切換至 [設計] 檢視。  
   
-2.  按兩下地圖來顯示 **[地圖圖層]** 窗格。 在工具列上，按一下 [新增圖層]  ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")，然後按一下 [點圖層]  。  
+2.  按兩下地圖來顯示 **[地圖圖層]** 窗格。 在工具列上，按一下**新增圖層** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")，然後按一下**點圖層**。  
   
     新的點圖層便會加入至地圖中。 根據預設，點圖層的空間資料類型為 **[內嵌]** 。  
   
@@ -530,13 +530,13 @@ ms.locfileid: "63041573"
 
 3. 將它儲存到本機電腦上，或 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 伺服器。
   
-4. 按一下 **[儲存]** 。 
+4. 按一下 [檔案]  。 
 
 如果您將它儲存到報表伺服器，您可以在該處檢視。
 
 ![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
 以上總結如何將地圖加入至報表的逐步解說。  
   
 如需詳細資訊，請參閱[地圖 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  

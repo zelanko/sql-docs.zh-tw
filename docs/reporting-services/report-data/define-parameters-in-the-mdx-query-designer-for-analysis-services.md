@@ -15,10 +15,10 @@ ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02b9884d4f1f9d7928db80091c68678dbc55fa10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573658"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>在 Analysis Services 的 MDX 查詢設計工具中定義參數
@@ -53,11 +53,11 @@ ms.locfileid: "65573658"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>在查詢模式下定義 MDX 中的查詢參數  
   
-1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源類型建立的資料集，然後按一下 **[查詢]** 。 MDX 查詢設計工具會在 [設計] 模式中開啟。  
+1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源類型建立的資料集，然後按一下 [查詢]  。 MDX 查詢設計工具會在 [設計] 模式中開啟。  
   
 2.  在工具列上按一下 **[設計]** ，切換至 [查詢] 模式。  
   
-3.  在 MDX 查詢設計工具的工具列上，按一下 [查詢參數]  (![查詢參數對話方塊圖示](../../reporting-services/report-data/media/iconqueryparameter.gif "查詢參數對話方塊圖示"))。 [查詢參數] 對話方塊隨即開啟。  
+3.  在 MDX 查詢設計工具的工具列上，按一下 [查詢參數]  (![[查詢參數] 對話方塊圖示](../../reporting-services/report-data/media/iconqueryparameter.gif "[查詢參數] 對話方塊圖示"))。 [查詢參數] 對話方塊隨即開啟。  
   
 4.  在 [參數]  資料行中，按一下 [\<輸入參數>]  ，然後鍵入參數名稱。  
   

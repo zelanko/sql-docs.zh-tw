@@ -1,10 +1,9 @@
 ---
-title: 在查詢和檢視表設計工具中巡覽 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 在查詢與檢視表設計工具中巡覽
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f9581eca3d6abbefcd897ccc4ce627ca180649b3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 5e78aa041929e5b804547db0ef773d40aea7d7c8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262305"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75224594"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>在查詢和檢視表設計工具中巡覽 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "68262305"
 |在資料表或表格化物件的資料行之間移動|方向鍵|要移至的資料行|  
 |選擇選取的資料行以供輸出|空白鍵或加號鍵|資料行名稱旁邊的核取方塊|  
 |從查詢輸出中移除選取的資料行|空白鍵或減號鍵|資料行名稱旁邊的核取方塊|  
-|從查詢中移除選取的資料表、表格化物件或聯結線|Delete|按一下滑鼠右鍵，再選擇 [移除]  。|  
+|從查詢中移除選取的資料表、表格化物件或聯結線|刪除|按一下滑鼠右鍵，再選擇 [移除]  。|  
   
 > [!NOTE]  
 > 如果選取多個項目，按下此按鍵會影響所有選取的項目。 按住 CTRL 鍵，同時在要選取的各項目上按一下滑鼠，即可選取多個項目。  
@@ -52,7 +53,7 @@ ms.locfileid: "68262305"
   
 ## <a name="criteria-pane"></a>準則窗格  
   
-|若要|按鍵|按一下|  
+|至|按鍵|按一下|  
 |------|---------|---------|  
 |在資料格間移動|方向鍵、TAB 或 SHIFT+TAB|目標資料格|  
 |移至所選取資料行的最後一列|CTRL+向下鍵||  
@@ -60,15 +61,15 @@ ms.locfileid: "68262305"
 |移至方格可見部分中的左上資料格|CTRL+HOME||  
 |移至右下資料格|CTRL+END||  
 |在下拉式清單中移動|向上鍵或向下鍵|資料格裡的按鈕|  
-|選取整個方格資料行|CTRL+ 空白鍵|資料行標題|  
+|選取整個方格資料行|CTRL+ 空白鍵|資料行標頭|  
 |切換編輯模式或資料格選擇模式|F2||  
 |將資料格中選取的文字複製到剪貼簿 (編輯模式)|CTRL+C||  
 |剪下資料格中選取的文字，放到剪貼簿中 (編輯模式)|CTRL+X||  
 |貼上剪貼簿中的文字 (編輯模式)|CTRL+V||  
 |編輯資料格時切換插入模式或覆寫模式|INS||  
 |切換輸出資料行中的核取方槐|空白鍵|核取方塊|  
-|清除資料格的選取內容|Delete||  
-|清除選取方格資料行的所有值|Delete||  
+|清除資料格的選取內容|刪除||  
+|清除選取方格資料行的所有值|刪除||  
 |在現有資料列間插入資料列|選取方格資料列後按 INS||  
 |新增 [或...] 資料行|選取任一個 [或...] 資料行後按 INS||  
   
@@ -98,7 +99,7 @@ ms.locfileid: "68262305"
 |選取至資料格裡的最後一個字元|SHIFT+END||  
 |切換編輯模式或資料格選擇模式|F2||  
 |編輯資料格時切換插入模式或覆寫模式|INS||  
-|從資料表中刪除一個資料列|Delete||  
+|從資料表中刪除一個資料列|刪除||  
 |恢復目前資料格中的變更|在有變更內容的資料格中按 ESC||  
 |恢復目前資料列中的變更|在尚未變更的任一個資料格中按 ESC||  
 |在資料格中輸入 Null|CTRL+0||  

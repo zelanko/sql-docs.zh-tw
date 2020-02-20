@@ -9,14 +9,14 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581250"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>規劃報表設計與報表部署 | Reporting Services
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了數種撰寫與部署分頁報表的方法。 了解如何針對一起運作的報表撰寫和報表伺服器環境進行規劃。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供數種撰寫與部署分頁報表的方法。 了解如何針對一起運作的報表撰寫和報表伺服器環境進行規劃。
 
 本主題為 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 元件支援之報表定義的概觀。 報表定義是以報表定義語言 (RDL) 或用戶端報表定義語言 (RDLC) 撰寫的 XML 檔案。 每個報表定義都符合列於檔案開頭的特定結構描述版本。  
   
@@ -46,11 +46,11 @@ ms.locfileid: "65581250"
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> 報表伺服器與 RDL 結構描述支援  
  報表定義檔案可以透過下列方式部署至 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 報表伺服器：  
   
--   **報表設計師：** 從 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]中的報表設計師部署報表。  
+-   **報表設計師：** 從報表設計師將報表部署在 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 中。  
   
 -   **報表產生器：** 從報表產生器將報表儲存至報表伺服器。  
   
--   **入口網站** ：從 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]將報表上傳至原生模式報表伺服器。  
+-   **入口網站：** 從 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 將報表上傳至原生模式報表伺服器。  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -58,14 +58,14 @@ ms.locfileid: "65581250"
 
 ::: moniker-end
   
--   **程式設計方式：** 使用 SOAP API 介面，以程式設計的方式將報表發行至報表伺服器。 如需詳細資訊，請參閱 [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md)。  
+-   **以程式設計方式：** 使用 SOAP API 介面，以程式設計方式將報表發佈至報表伺服器。 如需詳細資訊，請參閱 [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md)。  
   
  下表依照報表伺服器的版本列出支援的 rdl 結構描述版本。  
   
 |報表伺服器版本|RDL 結構描述版本|  
 |---------------------------|------------------------|  
 |SQL Server 2016|2016 RDL<br /><br />2010 RDL<br /><br /> 2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL
-|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> 或<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> 或<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|2010 RDL<br /><br /> 2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
+|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|2010 RDL<br /><br /> 2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
 |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
   
  當您將報表定義上傳至報表伺服器，或升級包含現有報表的報表伺服器時，報表伺服器會以原始格式保留報表定義。 **第一次使用時**，報表伺服器會將報表伺服器資料庫中的報表升級為二進位格式，而這個格式在後續檢視時都會保留著。 報表定義 (.rdl) 本身不會升級。  
@@ -91,7 +91,7 @@ ms.locfileid: "65581250"
 |---------------------------|--------------------------|------------------------|--------------------------------------|  
 |SQL Server 2016 報表產生器|撰寫 2016 RDL<br /><br /> 將舊版 RDL 升級為 2016 RDL|2016 RDL|SQL Server 2016|
 |SQL Server 2016 Data Tools 中的報表設計師 - Business Intelligence for Microsoft Visual Studio 2015|撰寫 2016 RDL<br /><br /> 將舊版 RDL 升級為 2016 RDL|2016 RDL|SQL Server 2016|
-|SQL Server 2014 Data Tools 中的報表設計師 - Business Intelligence for Microsoft Visual Studio 2012<br /><br /> 或<br /><br /> SQL Server 2012 Data Tools 中的報表設計師 - Business Intelligence for Microsoft Visual Studio 2012<br /><br /> 或<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools 中的報表設計師，包含在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中。|撰寫 2010 RDL<br /><br /> 將舊版 RDL 升級為 2010 RDL|2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|SQL Server 2014 Data Tools 中的報表設計師 - Business Intelligence for Microsoft Visual Studio 2012<br /><br /> Or<br /><br /> SQL Server 2012 Data Tools 中的報表設計師 - Business Intelligence for Microsoft Visual Studio 2012<br /><br /> Or<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools 中的報表設計師，包含在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中。|撰寫 2010 RDL<br /><br /> 將舊版 RDL 升級為 2010 RDL|2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Business Intelligence Development Studio 中的報表設計師|撰寫 2010 RDL<br /><br /> 將舊版 RDL 升級為 2010 RDL|2010 RDL|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Business Intelligence Development Studio 中的報表設計師|撰寫 2008 RDL<br /><br /> 將舊版 RDL 升級為 2008 RDL|2008 RDL|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|
   
@@ -106,10 +106,10 @@ ms.locfileid: "65581250"
   
 |產品中的 ReportViewer 控制項|用於本機預覽的 RDL 版本|  
 |-------------------------------------|--------------------------------------|  
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2015 <br/><br/>或<br/><br/>[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> 或<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> 或<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|2008 RDL|  
-|[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> 或<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|2005 RDL|  
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2015 <br/><br/>Or<br/><br/>[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> Or<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> Or<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|2008 RDL|  
+|[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|2005 RDL|  
   
- 如需詳細資訊，請參閱下列內容：  
+ 如需詳細資訊，請參閱下列：  
   
 -   [將 RDLC 檔案轉換成 RDL 檔案](https://msdn.microsoft.com/library/ms252109.aspx)  
   

@@ -14,10 +14,10 @@ ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 40e4fb9280d7ff9d05412966487997f507fb3dc7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65503091"
 ---
 # <a name="feature-reference-reporting-services"></a>功能參考 (Reporting Services)
@@ -33,7 +33,7 @@ ms.locfileid: "65503091"
  提供用於部署及管理報表伺服器執行個體之 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 組態工具的說明。  
   
  [Management Studio F1 說明中的報表伺服器](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
- 提供用於在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中管理報表和報表伺服器之對話方塊的說明。  
+ 針對用來在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中管理報表和報表伺服器的對話方塊提供其說明。  
   
  [HTML 檢視器和報表工具列](../reporting-services/html-viewer-and-the-report-toolbar.md)  
  提供用於在網頁瀏覽器中檢視報表之 HTML 檢視器元件的說明。  

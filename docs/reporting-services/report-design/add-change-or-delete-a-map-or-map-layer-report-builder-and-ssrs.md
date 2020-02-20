@@ -26,10 +26,10 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 32b0e633aa95ab2d9e4eadea822d10dbfe47d8d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582072"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>加入、變更或刪除地圖或地圖圖層 (報表產生器及 SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "65582072"
   
  下表顯示 [地圖]  窗格的工具列圖示。  
   
-|符號|Description|使用時機|  
+|符號|描述|使用時機|  
 |------------|-----------------|-----------------|  
 |![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|地圖圖層精靈|若要使用精靈加入圖層，按一下 [新增圖層精靈]  。|  
 |![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|加入圖層|若要手動加入圖層，按一下 [加入圖層]  ，然後按一下要加入之地圖圖層的類型。|  
@@ -67,7 +67,7 @@ ms.locfileid: "65582072"
   
 ##  <a name="ChangeLayer"></a> 使用地圖圖層精靈來變更圖層的選項  
   
--   執行地圖圖層精靈。 這個精靈可讓您變更您使用地圖圖層精靈所建立的圖層選項。 在 [地圖] 窗格中，以滑鼠右鍵按一下此圖層，然後在工具列上按一下圖層精靈按鈕 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
+-   執行地圖圖層精靈。 這個精靈可讓您變更您使用地圖圖層精靈所建立的圖層選項。 在 [地圖] 窗格中，以滑鼠右鍵按一下圖層，然後在工具列上按一下圖層精靈按鈕 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
   
      如需詳細資訊，請參閱 [地圖精靈與地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "65582072"
 2.  在工具列上，按一下 [新增圖層]  按鈕，然後從下拉式清單中按一下您要新增的圖層類型：[點]  、[線條]  或 [多邊形]  。  
   
     > [!NOTE]  
-    >  雖然您可以手動加入地圖圖層並加以設定，我們建議您最好使用地圖圖層精靈來新增圖層。 若要在 [地圖] 窗格工具列啟動精露，請以滑鼠右鍵按一下圖層精靈按鈕 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
+    >  雖然您可以手動加入地圖圖層並加以設定，我們建議您最好使用地圖圖層精靈來新增圖層。 若要在 [地圖] 窗格工具列啟動精露，請按一下圖層精靈按鈕 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
   
 3.  以滑鼠右鍵按一下圖層，然後按一下 [圖層資料]  。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "65582072"
   
     2.  在 [分析資料集]  中，按一下其中包含分析資料與符合欄位之資料集的名稱，來建立分析資料與空間資料之間的關聯性。  
   
-    3.  按一下 **[加入]** 。  
+    3.  按一下 [新增]  。  
   
     4.  從空間資料集輸入符合欄位的名稱。  
   

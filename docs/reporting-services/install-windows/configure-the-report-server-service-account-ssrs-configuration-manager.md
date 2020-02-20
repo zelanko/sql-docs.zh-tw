@@ -1,18 +1,19 @@
 ---
-title: 設定報表伺服器服務帳戶 (SSRS 設定管理員) | Microsoft Docs
+title: 設定報表伺服器服務帳戶 (組態管理員) | Microsoft Docs
+description: Reporting Services 會實作成單一服務，包含報表伺服器 Web 服務、入口網站，以及用於排程報表處理和訂用帳戶傳遞的背景處理應用程式。
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
-ms.custom: seodec18
-ms.date: 12/10/2018
-ms.openlocfilehash: 3cf868f9fb89bf6daa20ae6977bf1111649d46c1
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019, seo-mmd-2019
+ms.date: 12/04/2019
+ms.openlocfilehash: 49a5f8e19db65691fe8e521d7ca6a65e828fe6bd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594089"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866021"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>設定報表伺服器服務帳戶 (SSRS 組態管理員)
 
@@ -34,9 +35,9 @@ ms.locfileid: "73594089"
   
 - 自動將新帳戶加入本機電腦上所建立的報表伺服器群組中。 此群組是在保護 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 檔案安全的存取控制清單 (ACL) 中指定。  
   
-- 自動更新用來主控報表伺服器資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的登入權限。 新的帳戶會新增至 **RSExecRole**。  
+- 自動更新用來裝載報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體登入權限。 新的帳戶會新增至 **RSExecRole**。  
   
-     舊帳戶的資料庫登入不會自動移除。 請務必移除不再使用的帳戶。 如需詳細資訊，請參閱[管理報表伺服器&#40;資料庫 SSRS 原&#41;生模式](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)。  
+     舊帳戶的資料庫登入不會自動移除。 請務必移除不再使用的帳戶。 如需詳細資訊，請參閱[管理報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)。  
   
      只有在一開始設定報表伺服器資料庫連接使用新的服務帳戶，才能將資料庫權限授與這個服務帳戶。 如果您設定報表伺服器資料庫連接使用網域使用者帳戶或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫登入，則連接資訊將不會受到服務帳戶更新的影響。  
   
@@ -55,11 +56,11 @@ ms.locfileid: "73594089"
   
      如果在支援 Kerberos 驗證的網路中部署報表伺服器，您就必須使用您所指定網域使用者帳戶來註冊報表伺服器的「服務主體名稱」(SPN)。 如需詳細資訊，請參閱[為報表伺服器註冊服務主體名稱 &#40;SPN&#41;](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)。  
   
-4. 按一下 **[套用]** 。  
+4. 按一下 [套用]  。  
   
 5. 如果出現提示要求備份對稱金鑰，請輸入對稱金鑰備份的檔案名稱和位置，然後輸入用來鎖定和解除檔案鎖定的密碼，再按一下 **[確定]** 。  
   
-6. 如果報表伺服器使用此服務帳戶連線到報表伺服器資料庫，則會更新連線資訊來使用新的帳戶或密碼。 更新連接資訊時，將需要連接到資料庫。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **[資料庫連接]** 對話方塊出現，請輸入有權連接此資料庫的認證，然後按一下 **[確定]** 。  
+6. 如果報表伺服器使用此服務帳戶連線到報表伺服器資料庫，則會更新連線資訊來使用新的帳戶或密碼。 更新連接資訊時，將需要連接到資料庫。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [資料庫連接]  對話方塊出現，請輸入有權連線此資料庫的認證，然後按一下 [確定]  。  
   
 7. 當系統提示您還原對稱金鑰時，請輸入您在步驟 5 中指定的密碼，然後按一下 **[確定]** 。  
   
@@ -111,7 +112,7 @@ ms.locfileid: "73594089"
   
 - 當您更新此服務帳戶時，可能會發生 URL 保留項目錯誤。 每一個 URL 保留項目都包含一個內含「判別存取控制清單」(DACL) 的安全性描述項，該清單會授與服務帳戶接受 URL 要求的權限。 當您更新此帳戶時，必須重新建立此 URL，以便使用新的帳戶資訊來更新 DACL。 如果無法重新建立此 URL 保留項目，且您知道此帳戶確實有效，請嘗試重新啟動電腦。 如果錯誤持續存在，請嘗試使用不同的帳戶。  
   
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 
  [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)

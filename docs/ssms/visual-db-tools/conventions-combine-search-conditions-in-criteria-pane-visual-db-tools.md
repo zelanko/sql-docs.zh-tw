@@ -1,10 +1,9 @@
 ---
-title: 在條件窗格中合併搜尋條件的慣例 | Microsoft Docs
-ms.custom: ''
+title: 在準則窗格中合併搜尋條件的慣例
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,14 @@ helpviewer_keywords:
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5575530a70eecfc030e457d20596ebc76040cd01
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 889b0497959e7ac7b624d7659fba2648166f0a63
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260426"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254445"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>在條件窗格中合併搜尋條件的慣例 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -139,7 +140,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
 查詢和檢視設計工具會在 [準則窗格] 中如下顯示此 WHERE 子句：  
   
-![條件窗格中的 OR 子句優先順序](../../ssms/visual-db-tools/media/vs_criteriapane1.gif "條件窗格中的 OR 子句優先順序")  
+![準則窗格中的 OR 子句優先順序](../../ssms/visual-db-tools/media/vs_criteriapane1.gif "準則窗格中的 OR 子句優先順序")  
   
 但是，如果連結的 OR 子句優先於 AND 子句，將會為每一個 OR 子句重複 AND 子句。 這會使得 AND 子句分散至每一個 OR 子句。 例如，您可以在 [SQL 窗格] 中建立如下所示的 WHERE 子句：  
   
@@ -151,7 +152,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
 查詢和檢視設計工具會在 [準則窗格] 中如下顯示此 WHERE 子句：  
   
-![條件窗格中的多個 AND 和 OR 子句](../../ssms/visual-db-tools/media/vs_criteriapane2.gif "條件窗格中的多個 AND 和 OR 子句")  
+![準則窗格中的多個 AND 和 OR 子句](../../ssms/visual-db-tools/media/vs_criteriapane2.gif "準則窗格中的多個 AND 和 OR 子句")  
   
 如果連結的 OR 子句只牽涉到一個資料行，查詢和檢視設計工具可以將整個 OR 子句放入方格的單一資料格內，避免重複 AND 子句的必要。 例如，您可以在 [SQL 窗格] 中建立如下所示的 WHERE 子句：  
   
@@ -162,7 +163,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
 查詢和檢視設計工具會在 [準則窗格] 中如下顯示此 WHERE 子句：  
   
-![條件窗格中定義的連結 OR 子句](../../ssms/visual-db-tools/media/vs_criteriapane3.gif "條件窗格中定義的連結 OR 子句")  
+![準則窗格中定義的連結 OR 子句](../../ssms/visual-db-tools/media/vs_criteriapane3.gif "準則窗格中定義的連結 OR 子句")  
   
 如果您變更查詢 (例如變更 [準則窗格] 中的其中一個值)，查詢和檢視設計工具會在 [SQL 窗格] 中重建 SQL 陳述式。 重建的 SQL 陳述式和 [準則窗格] 中顯示的內容類似，而不是和原始陳述式類似。 例如，[準則窗格] 中如果包含了分散式 AND 子句，[SQL 窗格] 中產生的陳述式將會以明確的分散式 AND 子句重建。 如需詳細資訊，請參閱此主題中的＜AND 和多個 OR 子句配合的方式＞。  
   

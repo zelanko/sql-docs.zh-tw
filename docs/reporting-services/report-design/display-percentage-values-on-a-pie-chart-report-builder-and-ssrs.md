@@ -1,6 +1,7 @@
 ---
-title: 在圓形圖上顯示百分比值 (報表產生器及 SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+title: 在圓形圖上顯示百分比值 (報表產生器) | Microsoft Docs
+description: 在 Reporting Services 分頁報表中，圖例預設會顯示類別。 您也可能想要在圖例或圓形圖配量本身中顯示百分比。
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fab9a9c5f6fbdbf3201ba597102450bad0d95629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ffa11ae9d6c0d539accb4bbf6d796019cbc3371e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65578197"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254602"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>在圓形圖上顯示百分比值 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，圖例預設會顯示類別。 您也可能想要在圖例或圓形圖配量本身中顯示百分比。   
 
 ![report-builder-pie-chart-preview-percents](../../reporting-services/media/report-builder-pie-chart-preview-percents.png)
 
- 如果您想要先使用範例資料嘗試此功能，[教學課程：將圓形圖新增至報表 (報表產生器)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md) 會引導您將百分比新增至圓形圖配量。
+ [教學課程：將圓形圖新增至報表 (報表產生器)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md) 會引導您逐步將百分比新增至圓形圖塊 (如果您想要先使用範例資料嘗試此功能的話)。
  
   
 ## <a name="to-display-percentage-values-as-labels-on-a-pie-chart"></a>將百分比值顯示為圓形圖的標籤  
@@ -42,7 +43,7 @@ ms.locfileid: "65578197"
 2.  在 [圖例]  中，針對 [自訂圖例文字]  屬性鍵入 **#PERCENT**。  
   
 ## <a name="see-also"></a>另請參閱  
-* [教學課程：將圓形圖加入至報表 (報表產生器)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
+* [教學課程：將圓形圖新增至報表 (報表產生器)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
 *  [圓形圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [在圖表上格式化圖例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
 *  [在圓形圖外部顯示資料點標籤 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ef70b3430cc1028b7486bf663280cfcf740d9290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651950"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>SSRS 服務應用程式的佈建訂閱及警示
@@ -28,9 +28,9 @@ ms.locfileid: "62651950"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2016 &#124; SharePoint 2013|  
   
- ![服務應用程式資料庫的 SQL Agent 權限](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "服務應用程式資料庫的 SQL Agent 權限")  
+ ![對於服務應用程式資料庫的 SQL Agent 權限](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "對於服務應用程式資料庫的 SQL Agent 權限")  
   
-||Description|  
+||描述|  
 |------|-----------------|  
 |**1**|主控 Reporting Services 服務應用程式資料庫的 SQL Server Database Engine 執行個體。|  
 |**2**|SQL Database Engine 執行個體的 SQL Server Agent 執行個體。|  
@@ -100,7 +100,7 @@ ms.locfileid: "62651950"
   
     -   如果使用 SQL Server 驗證連接，請提供登入和密碼。  
   
-3.  按一下 **[連接]** 。  
+3.  按一下 [ **連接**]。  
   
 #### <a name="to-run-the-transact-sql-statement"></a>執行 Transact-SQL 陳述式  
   

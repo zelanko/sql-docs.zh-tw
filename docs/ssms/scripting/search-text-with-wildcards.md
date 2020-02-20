@@ -1,6 +1,6 @@
 ---
-title: 使用萬用字元搜尋文字 | Microsoft Docs
-ms.custom: ''
+title: 使用萬用字元搜尋文字
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -16,16 +16,16 @@ ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdc79f8162ef95fdbaa34e36629484f1a17d6436
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 766bb8d9a90fb3f1af5a7697e52ae42f6c8fc8d7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264162"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253617"
 ---
 # <a name="search-text-with-wildcards"></a>使用萬用字元搜尋文字
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  下列運算式可以取代 **之** [尋找和取代] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[尋找目標]** 欄位中的字元或數字。  
+  下列運算式可以取代 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [尋找和取代]  對話方塊中 [尋找目標]  欄位的字元或數字。  
   
 #### <a name="to-search-using-wildcards"></a>若要利用萬用字元搜尋  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68264162"
   
  下表說明 **[參考清單]** 中可用的萬用字元。  
   
-|運算式|語法|Description|  
+|運算是|語法|描述|  
 |----------------|------------|-----------------|  
 |任何單一字元|?|符合任何單一字元。|  
 |任何單一位數|#|符合任何單一位數。 例如，7# 符合在 7 後面接著另一個數字的數字，如 71，17 便不符合。|  

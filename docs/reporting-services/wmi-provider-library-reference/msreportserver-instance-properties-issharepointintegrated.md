@@ -11,13 +11,13 @@ ms.assetid: e21d00ad-5d9a-4290-8d74-7eeeda39e1ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a1e785172a14ad553f40f8b151b0ee3715490fd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65569113"
 ---
-# <a name="msreportserverinstance-properties---issharepointintegrated"></a>MSReportServer_Instance 屬性 - IsSharePointIntegrated
+# <a name="msreportserver_instance-properties---issharepointintegrated"></a>MSReportServer_Instance 屬性 - IsSharePointIntegrated
   指定報表伺服器是否處於 SharePoint 整合模式。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始，此屬性一律傳回 **False** ，因為在 SharePoint 模式中， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體是 SharePoint 共用服務且不受 WMI 提供者控制。  
   
 ## <a name="syntax"></a>語法  

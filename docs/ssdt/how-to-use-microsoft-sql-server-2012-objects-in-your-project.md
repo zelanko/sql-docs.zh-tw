@@ -1,23 +1,24 @@
 ---
-title: 如何：在專案中使用 Microsoft SQL Server 2012 物件 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 專案中的 SQL Server 2012 物件
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 222b725e7e5497adaf679f710fa390dcea8aecf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c9ea326bc37d4843b6cb7e3bc4e21fa356af5435
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034983"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244246"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>如何：在專案中使用 Microsoft SQL Server 2012 物件
+
 在這個範例中，您會將一個序列物件加入至以 Microsoft SQL Server 2012 為目標的資料庫專案。  
   
 序列在 Microsoft SQL Server 2012 中導入。 序列是使用者定義的結構描述繫結物件，該物件會根據建立順序所使用的規格產生數值序列。 數值序列是在定義的間隔依照遞增或遞減順序來產生，而且可依照要求循環 (重複)。  如需有關序列物件的詳細資訊，請參閱[序號](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx)。 如需 Microsoft SQL Server 2012 新功能的資訊，請參閱 [SQL Server 2012 的新功能](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx)。  
@@ -31,7 +32,7 @@ ms.locfileid: "68034983"
   
 2.  按一下左窗格中的 [可程式性]  ，然後選取 [序列]  。 按一下 [加入] 將新的物件加入至專案  。  
   
-3.  以下列程式碼取代預設程式碼。  
+3.  使用下列程式碼來取代預設程式碼。  
   
     ```  
     CREATE SEQUENCE [dbo].[Seq1]  

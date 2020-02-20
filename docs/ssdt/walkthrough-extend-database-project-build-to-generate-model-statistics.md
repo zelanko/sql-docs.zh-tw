@@ -1,23 +1,24 @@
 ---
-title: 逐步解說：延伸資料庫專案組建，以產生模型統計資料 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 擴充資料庫專案組建，以產生模型統計資料
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5e1844ae19de96b13b36fad59f5032fe68caaf19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069013"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242694"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>逐步解說：擴充資料庫專案組建，以產生模型統計資料
+
 您可以建立組建參與者，以便在建置資料庫時執行自訂動作。 在這個逐步解說，會建立名為 ModelStatistics 的組建參與者，以便在建置資料庫專案時從 SQL 資料庫模型輸出統計資料。 因為在建置時這個組建參與者採用參數，所以需要某些其他步驟。  
   
 在本逐步解說中，您將會完成下列主要工作：  
@@ -74,7 +75,7 @@ ms.locfileid: "68069013"
   
 -   建立類別庫專案並加入必要參考。  
   
--   定義繼承自 [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)名稱為 ModelStatistics 的類別。  
+-   定義繼承自 [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) 且名稱為 ModelStatistics 的類別。  
   
 -   覆寫 OnExecute 方法。  
   
@@ -447,7 +448,7 @@ ms.locfileid: "68069013"
   
 8.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
-9. 按一下 [ **建置** ] 功能表上的 [ **建置方案**]。  
+9. 在 [建置]  功能表上，按一下 [建置方案]  。  
   
     下一步，您必須安裝組件，以便在建置 SQL 專案時將其載入。  
   
@@ -587,7 +588,7 @@ Relationships
   
     報告的結果也會保存到 XML 檔案。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
 您可以建立其他工具，執行 XML 輸出檔案的處理。 這只是組建參與者的一個例子。 例如，您可以建立組建參與者，以便輸出資料字典檔案做為建置流程的一部分。  
   
 ## <a name="see-also"></a>另請參閱  

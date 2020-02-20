@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1bd47c468354cead8a3fd9c2ad5b391988a919b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ad8b75d75b5f9c4bc5b606c4e103c318e23398ed
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573182"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190860"
 ---
 # <a name="convert-data-sources-report-builder-and-ssrs"></a>轉換資料來源 (報表產生器和 SSRS)
   [報表資料] 窗格中的每個資料來源都是報表內嵌且專用的項目，或共用的項目。 在報表產生器中，共用資料來源會指向報表伺服器或 SharePoint 網站上的已發行共用資料來源。 在報表設計師中，共用資料來源會指向 [方案總管] 中 **[共用資料來源]** 資料夾的共用資料來源。  
@@ -41,7 +41,7 @@ ms.locfileid: "65573182"
   
 ### <a name="to-convert-a-data-source-from-shared-to-embedded"></a>若要將資料來源從共用轉換成內嵌  
   
--   在 [報表資料] 窗格中，以滑鼠右鍵按一下資料來源，開啟 [資料來源屬性]  對話方塊，然後按一下 [內嵌連接]  。 接著，輸入必要的資訊。  
+-   在 [報表資料] 窗格中，以滑鼠右鍵按一下資料來源，開啟 [資料來源屬性]  對話方塊，然後按一下 [內嵌連接]  。 輸入必要資訊。  
   
      在 [報表資料] 窗格中，資料來源圖示會變成共用資料來源圖示。  
   
@@ -49,18 +49,18 @@ ms.locfileid: "65573182"
   
 #### <a name="to-convert-a-data-source-from-embedded-to-shared"></a>若要將資料來源從內嵌轉換成共用  
   
--   在 [報表資料] 窗格中，以滑鼠右鍵按一下資料來源開啟 [資料來源屬性]  對話方塊，然後按一下 [內嵌連接]  。 接著，輸入必要的資訊。  
+-   在 [報表資料] 窗格中，以滑鼠右鍵按一下資料來源開啟 [資料來源屬性]  對話方塊，然後按一下 [內嵌連接]  。 輸入必要資訊。  
   
      在 [報表資料] 窗格中，資料來源圖示會變成共用資料來源圖示。  
   
 #### <a name="to-convert-a-data-source-from-shared-to-embedded"></a>若要將資料來源從共用轉換成內嵌  
   
--   在 [報表資料] 窗格中，以滑鼠右鍵按一下資料來源，開啟 [資料來源屬性]  對話方塊，然後按一下 [內嵌連接]  。 接著，輸入必要的資訊。  
+-   在 [報表資料] 窗格中，以滑鼠右鍵按一下資料來源，開啟 [資料來源屬性]  對話方塊，然後按一下 [內嵌連接]  。 輸入必要資訊。  
   
      在 [報表資料] 窗格中，資料來源圖示會變成共用資料來源圖示。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理報表資料來源](../../reporting-services/report-data/manage-report-data-sources.md)   
- [資料連接、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

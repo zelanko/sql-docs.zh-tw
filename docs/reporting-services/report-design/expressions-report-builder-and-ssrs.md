@@ -9,16 +9,16 @@ ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6083acaca377fdce5bcaed33ce57bb4e75cc3167
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579113"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>運算式 (報表產生器及 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中從頭到尾都廣泛利用運算式來擷取、計算、顯示、分組、排序、篩選、參數化及格式化資料。 
   
-  許多報表項目屬性都可以設定為運算式。 運算式可協助您控制報表的內容、設計與互動性。 運算式會以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]撰寫、儲存在報表定義中，然後在您執行報表時由報表處理器評估。  
+  許多報表項目屬性都可以設定為運算式。 運算式可協助您控制報表的內容、設計與互動性。 運算式會以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 撰寫、儲存在報表定義中，然後在您執行報表時由報表處理器評估。  
   
  報表與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 之類的應用程式不同，後者會直接使用工作表中的資料，而前者則使用資料預留位置的運算式。 若要從評估的運算式查看實際資料，您必須預覽報表。 當您執行報表時，報表處理器會評估每個運算式，因為它會結合資料與報表配置元素，例如資料表和圖表。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "65579113"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="Types"></a> 了解簡單和複雜運算式  
- 運算式是以等號 (=) 當作開頭，而且是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]撰寫。 運算式可以包含常數、運算子及內建值 (欄位、集合和函數) 和外部或自訂程式碼參考的組合。  
+ 運算式是以等號 (=) 作為開頭，且是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 撰寫。 運算式可以包含常數、運算子及內建值 (欄位、集合和函數) 和外部或自訂程式碼參考的組合。  
   
  您可以使用運算式來指定許多報表項目屬性的值。 最常見的屬性為文字方塊與預留位置文字的值。 如果文字方塊只包含一個運算式，該運算式通常就是文字方塊屬性的值。 如果文字方塊包含多個運算式，每個運算式都是文字方塊中的預留位置文字值。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65579113"
 
 簡單運算式會使用符號來指示參考是指向欄位、參數、內建集合還是報表項目集合。 下表顯示了顯示和運算式文字的範例：  
   
-|項目|顯示文字範例|運算式文字範例|  
+|Item|顯示文字範例|運算式文字範例|  
 |----------|--------------------------|-----------------------------|  
 |資料集欄位|`[Sales]`<br /><br /> `[SUM(Sales)]`<br /><br /> `[FIRST(Store)]`|`=Fields!Sales.Value`<br /><br /> `=Sum(Fields!Sales.Value)`<br /><br /> `=First(Fields!Store.Value)`|  
 |報表參數|`[@Param]`<br /><br /> `[@Param.Label]`|`=Parameters!Param.Value`<br /><br /> `=Parameters!Param.Label`|  
@@ -75,7 +75,7 @@ ms.locfileid: "65579113"
   
  下表列出可以包含在運算式中的參考種類：  
   
-|參考|Description|範例|  
+|參考|描述|範例|  
 |----------------|-----------------|-------------|  
 |[常數](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)|描述可透過互動方式針對需要常數值的屬性而存取的常數，例如字型色彩。|`="Blue"`|  
 |[運算子](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)|描述您可以用來結合運算式中參考的運算子。 例如， **&** 運算子用於串連字串。|`="The report ran at: " & Globals!ExecutionTime & "."`|  

@@ -1,6 +1,7 @@
 ---
-title: 角色切換後針對登入和作業進行管理 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 鏡像容錯移轉之後的登入及作業管理
+description: 了解如何在將鏡像資料庫從主要資料庫容錯移轉至次要資料庫之後，進行登入及作業的管理。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2887cfe969afd8739b15646efb8ee4700c8affff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf355678b3219fb0bf32ecd1620c00b0e58f346f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063847"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230217"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>角色切換後針對登入和作業進行管理 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,9 +27,9 @@ ms.locfileid: "68063847"
 ## <a name="logins"></a>登入  
  您應該在裝載資料庫副本的每個伺服器執行個體上，重現對主體資料庫具有存取權限的登入。 當主要/主體角色切換時，只有其登入存在於新的主要/主體伺服器執行個體上的使用者才能存取新的主要/主體資料庫。 凡是未在新的主要/主體伺服器執行個體上定義登入的使用者都將遭到遺棄，以致無法存取資料庫。  
   
- 若有使用者遭到遺棄，請在新的主要/主體伺服器執行個體上建立其登入並執行 [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md)。 如需詳細資訊，請參閱 [孤立的使用者疑難排解 &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。  
+ 若有使用者遭到遺棄，請在新的主要/主體伺服器執行個體上建立其登入並執行 [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md)。 如需詳細資訊，請參閱[孤立的使用者疑難排解 &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。  
   
-###  <a name="SSauthentication"></a> 使用 SQL Server 驗證或本機 Windows 登入的應用程式登入  
+###  <a name="SSauthentication"></a> Logins Of Applications That Use SQL Server Authentication or a Local Windows Login  
  如果應用程式使用 SQL Server 驗證或本機 Windows 登入，可能會由於 SID 不相符造成遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體無法解析該應用程式的登入。 SID 不相符將導致此登入成為遠端伺服器執行個體上的被遺棄使用者。 若應用程式是在容錯移轉後連接到鏡像資料庫或記錄傳送資料庫，或者連接到從備份初始化的複寫訂閱者資料庫，可能就會發生這個問題。  
   
  建議您在設定這類應用程式而要使用由遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所裝載的資料庫時，應採取預防措施以避免此問題。 預防的方法包括從本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體傳送登入和密碼到遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 如需如何預防此問題的詳細資訊，請參閱知識庫文章 918992：[如何在 SQL Server 的執行個體之間傳送登入和密碼](https://support.microsoft.com/kb/918992/)。  
@@ -38,7 +39,7 @@ ms.locfileid: "68063847"
   
  如需詳細資訊，請參閱 Database Engine 部落格文章： [Orphaned Users with Database Mirroring and Log Shipping](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (孤立的使用者與資料庫鏡像及記錄傳送)。  
   
-## <a name="jobs"></a>中稱為  
+## <a name="jobs"></a>工作  
  像是備份工作這類的工作，也需要特別注意。 通常在角色切換之後，資料庫擁有者或系統管理員必須為新的主要/主體資料庫重新建立各項作業。  
   
  一旦原先的主要/主體伺服器執行個體已可使用，您便應該刪除前述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上的原始作業。 請注意，由於目前的鏡像資料庫是在 RESTORING 狀態以致無法使用，該資料庫上的作業都將失敗。  

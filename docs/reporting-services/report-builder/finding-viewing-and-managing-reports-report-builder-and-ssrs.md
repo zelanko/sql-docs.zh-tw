@@ -1,6 +1,7 @@
 ---
 title: 尋找、檢視和管理報表 (報表產生器及 SSRS) | Microsoft Docs
-ms.date: 05/20/2019
+description: 在報表產生器和報表設計師中，您可以瀏覽以尋找分頁報表、共用的資料來源、模型及其他相關報表項目。
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-builder
@@ -8,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2e379d463734b751770a8b9a844ea92b1f328b6
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.openlocfilehash: 74c4591122fa45d4e050718e78296ed672a4c210
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492861"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258097"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>尋找、檢視和管理報表 (報表產生器及 SSRS)
-  在報表產生器中，您可以瀏覽報表伺服器或 SharePoint 網站上的資料夾，以便尋找報表、共用資料來源、模型，以及其他相關的報表項目，並瀏覽電腦以尋找本機報表。 為了更容易尋找報表，報表產生器會維護一份最近使用之伺服器及網站的清單，而且可以直接存取電腦檔案系統中的 [桌面]、[我的文件] 和 [我的電腦] 資料夾。  
+  在報表產生器中，您可以瀏覽報表伺服器或 SharePoint 網站上的資料夾，以便尋找分頁報表、共用的資料來源、模型及其他相關報表項目，並瀏覽電腦以尋找本機報表。 為了更容易尋找報表，報表產生器會維護一份最近使用之伺服器及網站的清單，而且可以直接存取電腦檔案系統中的 [桌面]、[我的文件] 和 [我的電腦] 資料夾。  
   
- 在報表設計師中，您也可以瀏覽電腦以尋找本機報表。 將報表部署至報表伺服器或 SharePoint 網站之後，您就可以透過使用 Web 入口網站來瀏覽報表伺服器，或搜尋 SharePoint 網站以尋找報表。 當您部署報表和相關的項目之後，它們會維持可在本機使用的狀態。  
+ 在報表設計師中，您也可以瀏覽電腦以尋找本機分頁報表。 將報表部署至報表伺服器或 SharePoint 網站之後，您就可以透過使用 Web 入口網站來瀏覽報表伺服器，或搜尋 SharePoint 網站以尋找報表。 當您部署報表和相關的項目之後，它們會維持可在本機使用的狀態。  
   
 > [!NOTE]  
 > 您可以在本機模式下使用報表產生器，或連接到報表伺服器。 當您沒有與報表伺服器建立使用中的連接時，系統會套用特定的限制。  

@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580064"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 資料警示
@@ -58,13 +58,13 @@ SQL Server Reporting Services 資料警示是資料驅動的警示解決方案�
   
  當您以原生模式或 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 或是使用獨立版的報表產生器時，可以將報表儲存到報表伺服器、您的電腦或 SharePoint 文件庫。 若要在報表上建立資料警示，則報表必須儲存或上載到 SharePoint 文件庫。 這表示，您無法在儲存到原生模式的報表伺服器或電腦的報表上建立警示。 此外，您也無法建立內嵌於自訂應用程式中的警示。  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支援報表中各種不同的認證類型。 您可以在資料來源設定為使用預存認證或不使用認證的報表上建立資料警示。 不過您無法在設定為使用整合式安全性認證或提示輸入認證的報表上建立警示。 報表會在處理警示定義時一併執行，而沒有認證的情況下處理會失敗。 如需詳細資訊，請參閱下列內容：  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支援報表中各種不同的認證類型。 您可以在資料來源設定為使用預存認證或不使用認證的報表上建立資料警示。 不過您無法在設定為使用整合式安全性認證或提示輸入認證的報表上建立警示。 報表會在處理警示定義時一併執行，而沒有認證的情況下處理會失敗。 如需詳細資訊，請參閱下列：  
   
--   [指定報表資料來源的認證及連接資訊](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+-   [指定報表資料來源的認證及連線資訊](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
 -   [角色與權限 &#40;Reporting Services&#41;](../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
--   [使用報表伺服器驗證](../reporting-services/security/authentication-with-the-report-server.md)  
+-   [報表伺服器的驗證](../reporting-services/security/authentication-with-the-report-server.md)  
   
 ### <a name="run-reports"></a>執行報表  
  建立資料警示定義的第一個步驟，就是在 SharePoint 文件庫中尋找您要的報表，然後執行報表。 如果報表執行時未包含任何資料，則無法在當時於報表上建立警示。  
@@ -116,9 +116,9 @@ SQL Server Reporting Services 資料警示是資料驅動的警示解決方案�
 ##  <a name="InstallAlerting"></a> 安裝資料警示  
  資料警示功能只有在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 是以 SharePoint 模式安裝時才可使用。 當您以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時，安裝程式會自動建立儲存警示定義和警示中繼資料的警示資料庫，以及兩個用於管理警示的 SharePoint 頁面，並且將 [資料警示設計工具] 加入 SharePoint 網站。 在安裝期間不需要針對警示執行特殊步驟或是設定特殊選項。  
   
- 如果您想要深入了解以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (包括 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的新 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 共用服務，以及在使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能之前，必須先建立和設定的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式)，請參閱 MSDN Library 中的 [安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) 。  
+ 如果您想要深入了解以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (包括 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中的新 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共用服務，以及在使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能之前，必須先建立和設定的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式)，請參閱 MSDN Library 中的 [安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) \(機器翻譯\)。  
   
- 如本主題前段的圖中所示，資料警示會使用 SQL Server Agent 作業。 若要建立作業，必須執行 SQL Server Agent。 您可能已將 SQL Server Agent 設定為在安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]時自動啟動。 否則，您可以手動啟動 SQL Server Agent。 如需詳細資訊，請參閱 [設定 SQL Server Agent](../ssms/agent/configure-sql-server-agent.md) 和 [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+ 如本主題前段的圖中所示，資料警示會使用 SQL Server Agent 作業。 若要建立作業，必須執行 SQL Server Agent。 您可能已將 SQL Server Agent 設定為在安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]時自動啟動。 否則，您可以手動啟動 SQL Server Agent。 如需詳細資訊，請參閱[設定 SQL Server Agent](../ssms/agent/configure-sql-server-agent.md)及[及啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
  您可以使用 SharePoint 管理中心內的 **[提供訂閱和警示]** 頁面，查看 SQL Server Agent 是否正在執行，並且建立和下載自訂的 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼，之後可執行這些指令碼將權限授與 SQL Server Agent。 另外還可以使用 PowerShell 產生 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼。 如需詳細資訊，請參閱 [SSRS 服務應用程式的佈建訂用帳戶及警示](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
@@ -131,7 +131,7 @@ SQL Server Reporting Services 資料警示是資料驅動的警示解決方案�
   
  下表列出資料警示的組態項目、其預設值、描述和位置。  
   
-|設定|預設值|Description|位置|  
+|設定|預設值|描述|Location|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|兩次清除循環開始之間的分鐘數。|報表伺服器組態檔|  
 |AlertingExecutionLogCleanupMinutes|10080|保留執行記錄項目的分鐘數。|報表伺服器組態檔|  
@@ -145,7 +145,7 @@ SQL Server Reporting Services 資料警示是資料驅動的警示解決方案�
 ### <a name="event-handlers-and-retry"></a>事件處理常式和重試  
  事件處理常式包括：  
   
-|事件處理常式|Description|  
+|事件處理常式|描述|  
 |-------------------|-----------------|  
 |FireAlert|按一下 [資料警示管理員] 中的 **[執行]**  ，初始化立即處理警示定義。|  
 |FireSchedule|SQL Server Agent 會為警示定義啟動作業排程。|  
@@ -222,7 +222,7 @@ SQL Server Reporting Services 資料警示是資料驅動的警示解決方案�
   
 -   基礎資料來源中的資料類型已變更，且警示定義不再有效。  
   
-### <a name="logs"></a>記錄檔  
+### <a name="logs"></a>記錄  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 會提供一些記錄檔，有助於深入了解處理資料警示定義、所建立的資料警示執行個體等等時執行的報表。 有三個記錄檔特別實用：警示執行記錄、報表伺服器執行記錄及報表伺服器追蹤記錄。  
   
  如需其他 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 記錄檔的相關資訊，請參閱 [Reporting Services 記錄檔和來源](../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
@@ -313,7 +313,7 @@ SQL Server Reporting Services 資料警示是資料驅動的警示解決方案�
   
 -   [在資料警示管理員中管理 SharePoint 網站上的所有資料警示](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   
--   [將權限授與使用者及警示管理員](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
+-   [將權限授與使用者及警示系統管理員](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
 ## <a name="see-also"></a>另請參閱
 

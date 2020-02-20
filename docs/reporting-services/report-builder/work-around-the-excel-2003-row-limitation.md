@@ -9,10 +9,10 @@ ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3898e4202d958c1d20d5436a143e80bb45c7490f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577786"
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>解決 Excel 2003 資料列限制
@@ -55,6 +55,6 @@ ms.locfileid: "65577786"
   
      ![設定分頁符號](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "設定分頁符號")  
   
-8.  儲存報表。 當您將它匯出至 Excel 時，它會匯出到多個工作表，而且每個工作表最多包含 65000 個資料列。  
+8.  儲存報告。 當您將它匯出至 Excel 時，它會匯出到多個工作表，而且每個工作表最多包含 65000 個資料列。  
   
   

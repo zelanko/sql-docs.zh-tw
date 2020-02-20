@@ -1,6 +1,7 @@
 ---
-title: 將展開或摺疊動作新增項目中 (報表產生器及 SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+title: 新增展開或摺疊動作 (報表產生器及 SSRS) | Microsoft Docs
+description: 您可以讓使用者以互動方式展開或摺疊分頁報表中的項目；或者，展開或摺疊與資料表或矩陣中群組建立關聯的資料列和資料行。
+ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 23a4cddc93108a3e45828e79822eaf5f76f0fba7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 776326093518aa33f8f031e4c4d6675791acf82d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65582128"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242553"
 ---
-# <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>將展開或摺疊動作加入項目中 (報表產生器及 SSRS)
-  您可以讓使用者以互動方式展開或摺疊報表項目，或者針對資料表或矩陣，展開或摺疊與群組關聯的資料列和資料行。 若要讓使用者展開或摺疊項目，您可以設定該項目的可見性屬性。 設定可見性適用於 HTML 報表檢視器，有時稱為 *「向下鑽研」* (Drilldown) 動作。  
+# <a name="add-an-expand-or-collapse-action-to-an-item-report-builder--ssrs"></a>將展開或摺疊動作新增至項目 (報表產生器及 SSRS)
+  您可以讓使用者以互動方式展開或摺疊分頁報表中的項目；或者，展開或摺疊與資料表或矩陣中群組建立關聯的資料列和資料行。 若要讓使用者展開或摺疊項目，您可以設定該項目的可見性屬性。 設定可見性適用於 HTML 報表檢視器，有時稱為 *「向下鑽研」* (Drilldown) 動作。  
   
  在報表設計檢視中，請指定要顯示展開和摺疊切換圖示之文字方塊的名稱。 在轉譯過的報表中，文字方塊除了其內容之外，還會顯示一個加號 (+) 或一個減號 (-)。 當使用者按一下切換時，報表顯示會重新整理，根據報表項目的目前可見性設定，顯示或隱藏報表項目。  
   
@@ -61,7 +62,7 @@ ms.locfileid: "65582128"
   
 6.  若要測試切換，請執行報表，然後按一下包含切換影像的文字方塊。 報表顯示會重新整理，以顯示包含已切換之可見性的資料列群組和資料行群組。  
   
-     ![執行含可展開之資料列群組的報表](../../reporting-services/report-design/media/expandcollapse-runreport-rowgroup.png "執行含可展開之資料列群組的報表")  
+     ![執行含可展開資料列群組的報表](../../reporting-services/report-design/media/expandcollapse-runreport-rowgroup.png "執行含可展開資料列群組的報表")  
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>若要將展開和摺疊動作加入至報表項目中  
   
@@ -91,7 +92,7 @@ ms.locfileid: "65582128"
   
 5.  若要測試切換，請執行報表，然後按一下包含切換影像的文字方塊。 報表顯示會重新整理，以顯示包含已切換之可見性的報表項目。  
   
-     ![執行含有展開的資料表的報表](../../reporting-services/report-design/media/expandcollapse-runreport-reporttable.png "執行含有展開的資料表的報表")  
+     ![執行含有已展開資料表的報表](../../reporting-services/report-design/media/expandcollapse-runreport-reporttable.png "執行含有已展開資料表的報表")  
   
 ## <a name="see-also"></a>另請參閱  
  [向下鑽研動作 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   

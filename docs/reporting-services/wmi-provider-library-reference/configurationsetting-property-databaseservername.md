@@ -16,10 +16,10 @@ ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a967cb012f8647d51a33b2a603144bfd4dd8d9e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573535"
 ---
 # <a name="configurationsetting-property---databaseservername"></a>ConfigurationSetting 屬性 - DatabaseServerName

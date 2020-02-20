@@ -1,10 +1,9 @@
 ---
-title: 使用查詢和檢視表設計工具操作國際資料 | Microsoft Docs
-ms.custom: ''
+title: 使用查詢設計工具和檢視表設計師處理國際資料
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,14 @@ helpviewer_keywords:
 ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff5eafd8a0a150b40c2383523e269691f0a83b08
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 8b2bd268bd46240b5954851946c7546a7f2dbb34
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267415"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246031"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>使用查詢和檢視表設計工具操作國際資料 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,12 +52,12 @@ ms.locfileid: "68267415"
   
 當您在 [準則] 窗格中使用特定地區設定格式輸入資料時，[查詢和檢視設計師] 會在 [SQL] 窗格中自動將該資料轉譯為 ANSI 格式。 例如，如果您的 [地區設定] 為 Standard German，您可以使用 "31.12.96" 的格式在 [準則] 窗格中輸入資料。 然而，資料將以 ANSI 日期時間的格式出現在 [SQL] 窗格中，如 `{ ts '1996-12-31 00:00:00' }.` 。如果直接在 [SQL] 窗格中輸入資料，則必須以 ANSI 格式輸入。  
   
-## <a name="sort-order"></a>[排序順序]  
+## <a name="sort-order"></a>排序次序  
 資料庫將決定您查詢中資料的排序次序。 您在 Windows [區域設定] 對話方塊中設定的選項並不會影響查詢的排序次序。 但在特定查詢中，您可以要求使用特定順序傳回資料列。  
   
 ## <a name="using-double-byte-characters"></a>使用雙位元組字元  
 您可以輸入 DBCS 字元做為常值或資料庫物件名稱，如資料表和檢視名稱或別名。 您也可以使用 DBCS 字元做為參數名稱或參數標記字元。 但是您無法在 SQL 項目中 (如函數名稱或 SQL 關鍵字) 使用 DBCS 字元。  
   
-## <a name="see-also"></a>另請參閱  
-[設計查詢和檢視使用說明主題 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-  
+## <a name="see-also"></a>另請參閱
+
+[設計查詢與檢視表操作說明主題](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)

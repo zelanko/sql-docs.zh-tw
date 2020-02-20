@@ -1,23 +1,24 @@
 ---
-title: 使用 SQL Server 單元測試驗證資料庫程式碼 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 驗證資料庫程式碼
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3e720389f790282f1ad7a33302e2d277128178f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ab6cccf656d0951c5f8fd72bb5863bbe91f0e74d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140945"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243491"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>使用 SQL Server 單元測試驗證資料庫程式碼
+
 您可以使用 SQL Server 單元測試建立資料庫的基準狀態，然後驗證您對資料庫物件所做的任何後續變更。  
   
 若要建立資料庫的基準狀態，您可以建立測試專案，並撰寫可對資料庫物件進行操作的 Transact\-SQL 集。 藉由使用這些測試，您可以在隔離的開發環境中驗證那些物件功能是否為預期的功能。 SQL Server 單元測試非常適合使用 SQL Server 資料庫專案結合離線資料庫開發一起運作 (如需詳細資訊，請參閱[專案導向的離線資料庫開發](../ssdt/project-oriented-offline-database-development.md))。 有了 SQL Server 單元測試的基準集之後，您就可以使用這些測試，驗證資料庫是否正確運作，然後再將變更簽入至版本控制。  

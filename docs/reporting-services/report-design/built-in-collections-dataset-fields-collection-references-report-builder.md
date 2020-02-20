@@ -9,10 +9,10 @@ ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 91550f60a7fe056a3df68ba9c4006e8359ff2c73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581813"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>內建集合 - 資料集 Fields 集合參考 (報表產生器)
@@ -38,7 +38,7 @@ ms.locfileid: "65581813"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>在執行階段偵測動態查詢的遺漏欄位  
- Fields 集合內的項目預設會有兩個屬性：Value 和 IsMissing。 IsMissing p 屬性會指出在設計階段針對資料集所定義的欄位是否包含在執行階段擷取的欄位中。 例如，您的查詢可能會呼叫預存程序 (其中的結果集會因為輸入參數而不同)，或者您的查詢可能會是 `SELECT * FROM` \<資料表>  (變更資料表定義的地方)。  
+ Fields 集合內的項目預設會有兩個屬性：Value 和 IsMissing。 IsMissing p 屬性會指出在設計階段針對資料集所定義的欄位是否包含在執行階段擷取的欄位中。 例如，您的查詢可能會呼叫預存程序 (其中的結果集會因為輸入參數而不同)，或您的查詢可能會是 `SELECT * FROM` \<資料表>  (變更資料表定義的地方)。  
   
 > [!NOTE]  
 >  IsMissing 會偵測設計階段與執行階段之間對於任何資料來源類型的資料集結構描述變更。 IsMissing 不能用來偵測多維度 Cube 中的空白成員，而且不會與 **EMPTY** 和 **NON EMPTY**的 MDX 查詢語言概念產生關聯。  

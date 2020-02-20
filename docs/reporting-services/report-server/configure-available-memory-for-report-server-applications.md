@@ -12,10 +12,10 @@ ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d7cbcb0b2cd0da8bd13d28620261c2e9894463db
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67564029"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>設定報表伺服器應用程式的可用記憶體
@@ -36,7 +36,7 @@ ms.locfileid: "67564029"
   
  如果系統沒有任何記憶體不足的壓力，每個伺服器應用程式都會在啟動時 (接收要求之前) 要求一些記憶體，以便在最後收到要求時提供最佳效能。 隨著記憶體不足的壓力逐漸增加，報表伺服器會根據下表所描述的方式調整其處理模型。  
   
-|記憶體不足的壓力|伺服器回應|  
+|記憶體壓力|伺服器回應|  
 |---------------------|---------------------|  
 |低|目前的要求會繼續處理。 新的要求幾乎一定都會被接受。 導向至背景處理應用程式之要求所收到的優先權會比導向至報表伺服器 Web 服務的要求更低。|  
 |中|目前的要求會繼續處理。 新的要求可能會被接受。 導向至背景處理應用程式之要求所收到的優先權會比導向至報表伺服器 Web 服務的要求更低。 這三個伺服器應用程式的記憶體配置會縮減，而且針對背景處理進行相對大幅的縮減，以便提供更多可用的記憶體給 Web 服務要求。|  
@@ -64,7 +64,7 @@ ms.locfileid: "67564029"
   
  下表描述 **WorkingSetMaximum**、 **WorkingSetMinimum**、 **MemorySafetyMargin**和 **MemoryThreshold** 設定。 組態設定指定於 [RSReportServer.config 檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)中。  
   
-|元素|Description|  
+|元素|描述|  
 |-------------|-----------------|  
 |**WorkingSetMaximum**|指定一個記憶體臨界值，達到此臨界值後，沒有任何新的記憶體配置要求會授與報表伺服器應用程式。<br /><br /> 根據預設，報表伺服器會將 **WorkingSetMaximum** 設定為電腦上的可用記憶體數量。 這個值是在服務啟動時偵測的。<br /><br /> 除非您手動加入這項設定，否則它不會顯示在 RSReportServer.config 檔中。 如果您想讓報表伺服器使用更少記憶體，可以修改 RSReportServer.config 檔並加入此元素和值。 有效值範圍是從 0 到最大整數。 這個值是以 KB 表示。<br /><br /> 達到 **WorkingSetMaximum** 的值之後，報表伺服器就不再接受新的要求。 系統會允許目前正在進行中的要求完成。 只有當記憶體使用量降到 **WorkingSetMaximum**所指定的值以下時，才會接受新要求。<br /><br /> 如果現有的要求在達到 **WorkingSetMaximum** 值之後仍繼續耗用其他記憶體，則系統會回收所有報表伺服器應用程式定義域。 如需詳細資訊，請參閱＜ [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)＞。|  
 |**WorkingSetMinimum**|指定資源耗用量的下限。如果整體記憶體使用量低於此限制，報表伺服器將不會釋放記憶體。<br /><br /> 根據預設，此值是在服務啟動時計算的。 計算內容是初始記憶體配置要求代表 **WorkingSetMaximum**的 60%。<br /><br /> 除非您手動加入這項設定，否則它不會顯示在 RSReportServer.config 檔中。 如果您想要自訂此值，就必須將 **WorkingSetMinimum** 元素加入 RSReportServer.config 檔。 有效值範圍是從 0 到最大整數。 這個值是以 KB 表示。|  
@@ -72,7 +72,7 @@ ms.locfileid: "67564029"
 |**MemorySafetyMargin**|指定 **WorkingSetMaximum** 的百分比，以便定義中度與低度壓力狀況之間的界限。 這個值是保留給系統而且無法用於報表伺服器作業之可用記憶體的百分比。 預設值是 80。|  
   
 > [!NOTE]  
->  在**和更新版本中，** MemoryLimit **Maximum和更新版本中，** MaximumMemoryLimit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] MemoryLimit later versions. 如果您已升級現有的安裝，或正在使用包含這些設定的 RSReportServer.config 檔，則報表伺服器就不會再讀取這些值。  
+>  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中，**MemoryLimit** 和 **MaximumMemoryLimit** 設定已過時。 如果您已升級現有的安裝，或正在使用包含這些設定的 RSReportServer.config 檔，則報表伺服器就不會再讀取這些值。  
   
 #### <a name="example-of-memory-configuration-settings"></a>記憶體組態設定的範例  
  下列範例將顯示使用自訂記憶體組態值之報表伺服器電腦的組態設定。 如果您想要加入 **WorkingSetMaximum** 或 **WorkingSetMinimum**，就必須在 RSReportServer.config 檔中輸入這些元素和值。 這兩個值都是整數，它們代表您配置給伺服器應用程式之 RAM 的 KB 數。 下列範例會指定報表伺服器應用程式的總記憶體不得超過 4 GB。 如果 **WorkingSetMinimum** 的預設值 ( **WorkingSetMaximum**的 60%) 可接受，您就可以省略它並單獨在 RSReportServer.config 檔中指定 **WorkingSetMaximum** 。 此範例包含 **WorkingSetMinimum** ，以便說明其顯示方式 (如果您想要加入它的話)：  
@@ -86,7 +86,7 @@ ms.locfileid: "67564029"
 ```  
   
 #### <a name="about-aspnet-memory-configuration-settings"></a>關於 ASP.NET 記憶體組態設定  
- 雖然 2016年和更新版本報表伺服器 Web 服務和入口網站是 HTML5 應用程式，但舊版會[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]應用程式，兩個應用程式會回應您在中指定的記憶體組態設定**processModel** machine.config 區段[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]在 IIS 5.0 和更新版本的相容性模式中執行的應用程式。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 只會從 RSReportServer.config 檔讀取記憶體組態設定。  
+ 雖然 2016 及更新版本的報表伺服器 Web 服務和入口網站是 HTML5 應用程式，舊版是 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式，但是這兩個應用程式都不會回應您針對以 IIS 5.0 和更高版本相容性模式執行的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式，在 machine.config 的 **processModel** 區段中所指定記憶體組態設定。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 只會從 RSReportServer.config 檔讀取記憶體組態設定。  
   
 ## <a name="see-also"></a>另請參閱  
  [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

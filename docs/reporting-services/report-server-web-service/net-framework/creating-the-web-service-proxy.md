@@ -15,10 +15,10 @@ ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 116e4ca4ef2080c186a11b6816a08d4c3c5ba169
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284643"
 ---
 # <a name="creating-the-web-service-proxy"></a>建立 Web 服務 Proxy
@@ -27,7 +27,7 @@ ms.locfileid: "63284643"
  有兩種方式可以將 Proxy 類別新增至使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的開發專案：使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的 WSDL 工具，以及在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中新增 Web 參考。 下列小節針對這個主題進行更詳細的討論。  
   
 ## <a name="adding-the-proxy-using-the-wsdl-tool"></a>使用 WSDL 工具加入 Proxy  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 包含 Web 服務描述語言工具 (Wsdl.exe)，這可讓您在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 開發環境中產生要使用的 Web 服務 Proxy。 使用支援 Web 服務的語言 (目前 C# 與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) 來建立用戶端 Proxy 的最常見方式是使用 WSDL 工具。  
+ [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 包含 Web 服務描述語言工具 (Wsdl.exe)，這可讓您在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 開發環境中產生要使用的 Web 服務 Proxy。 以 Web 服務所支援語言 (目前為 C# 與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) 來建立用戶端 Proxy 的最常見方式是使用 WSDL 工具。  
   
  **使用 Wsdl.exe 將 Proxy 類別新增至專案**  
   

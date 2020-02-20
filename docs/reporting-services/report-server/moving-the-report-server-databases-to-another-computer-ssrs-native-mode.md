@@ -1,6 +1,7 @@
 ---
-title: 將報表伺服器資料庫移至其他電腦 (SSRS 原生模式) | Microsoft Docs
-ms.date: 05/30/2017
+title: 將報表伺服器資料庫移至其他電腦 (原生模式) | Microsoft Docs
+description: 您可以將安裝 SQL Server Database Engine 所使用報表伺服器資料庫移至不同電腦上的執行個體。
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 762bee43a32bed19b5646ad982467c67c933ed85
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65619680"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254580"
 ---
-# <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>將報表伺服器資料庫移至其他電腦 (SSRS 原生模式)
+# <a name="moving-report-server-databases-to-another-computer-ssrs-native-mode"></a>將報表伺服器資料庫移至其他電腦 (SSRS 原生模式)
 
-  您可以將安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 所使用的報表伺服器資料庫，移至不同電腦上的執行個體。 但是，您必須一起移動或複製 reportserver 和 reportservertempdb 資料庫。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝需要這兩個資料庫。reportservertempdb 資料庫的名稱必須與所移動的主要 reportserver 資料庫相關。  
+  您可以將安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 所使用報表伺服器資料庫移至不同電腦上的執行個體。 但是，您必須一起移動或複製 reportserver 和 reportservertempdb 資料庫。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝需要這兩個資料庫。reportservertempdb 資料庫的名稱必須與所移動的主要 reportserver 資料庫相關。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式。  
   
  移動資料庫不會影響目前已針對報表伺服器項目所定義的排程作業。  
   
@@ -45,7 +46,7 @@ ms.locfileid: "65619680"
   
 2.  停止報表伺服器服務。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具來停止這項服務。  
   
-3.  啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 並開啟主控報表伺服器資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的連接。  
+3.  啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，並開啟對主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體連接。  
   
 4.  以滑鼠右鍵按一下報表伺服器資料庫，指向 [工作]，並按一下 [卸離]  。 針對報表伺服器暫存資料庫重複此步驟。  
   
@@ -72,7 +73,7 @@ ms.locfileid: "65619680"
 ## <a name="backing-up-and-restoring-the-report-server-databases"></a>備份及還原報表伺服器資料庫  
  如果無法將報表伺服器設定為離線狀態，您可以使用備份和還原來重新放置報表伺服器資料庫。 您必須使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式來進行備份和還原。 還原資料庫之後，您必須將報表伺服器設定為使用新伺服器執行個體上的資料庫。 如需詳細資訊，請參閱此主題結尾的指示。  
   
-### <a name="using-backup-and-copyonly-to-backup-the-report-server-databases"></a>使用 BACKUP 和 COPY_ONLY 備份報表伺服器資料庫  
+### <a name="using-backup-and-copy_only-to-backup-the-report-server-databases"></a>使用 BACKUP 和 COPY_ONLY 備份報表伺服器資料庫  
  備份資料庫時，請設定 COPY_ONLY 引數。 請務必同時備份資料庫以及記錄檔。  
   
 ```  

@@ -14,16 +14,16 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b385e04cf2efa103dba4a66d4e794a7984814fb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140272"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>建立、修改和刪除資料驅動訂閱
   資料驅動訂閱是查詢式訂閱，會在執行階段取得用於處理訂閱的資料值。 觸發訂閱時，會處理查詢以取得有關收件者、報表傳遞選項、轉譯格式，以及參數設定的最新資訊。 查詢結果會與訂閱定義結合，以建立動態訂閱，該動態訂閱會使用您已在員工資料庫、客戶資料庫，或包含可做為訂閱者資料之資訊的其他任何資料庫中維護的資料。  
   
- 若要建立新的資料驅動訂用帳戶，或修改現有的訂用帳戶，請使用**管理** > **訂用帳戶**入口網站中的頁面。 **訂用帳戶**頁面將引導您完成建立或修改訂用帳戶的每個步驟。 若要在訂閱建立之後存取，請使用 [我的訂閱] 頁面或 [訂閱] 清單。 若要了解如何建立資料驅動訂閱，請參閱[建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)。  
+ 若要建立新的資料驅動訂閱或修改現有訂閱，請使用入口網站中的 [管理]   > [訂閱]  頁面。 [訂閱]  頁面會引導您逐步建立或修改訂閱。 若要在訂閱建立之後存取，請使用 [我的訂閱]  頁面或 [訂閱] 清單。 若要了解如何建立資料驅動訂閱，請參閱[建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)。  
   
  本文內容：  
   
@@ -36,9 +36,9 @@ ms.locfileid: "67140272"
 -   [執行訂閱](#bkmk_run_subscription)  
   
 ##  <a name="bkmk_manage_and_delete"></a> 管理和刪除資料驅動訂閱  
- 無法停止或透過入口網站刪除正在進行中的資料驅動訂閱。 因此，建議您使用共用排程來觸發資料驅動訂閱。 這樣一來，如果您想要暫時防止訂閱處理，就可以暫停觸發訂閱的排程。 如需詳細資訊，請參閱 [建立和管理原生模式報表伺服器的訂閱](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
+ 您無法透過入口網站停止或刪除正在進行中的資料驅動訂閱。 因此，建議您使用共用排程來觸發資料驅動訂閱。 這樣一來，如果您想要暫時防止訂閱處理，就可以暫停觸發訂閱的排程。 如需詳細資訊，請參閱 [建立和管理原生模式報表伺服器的訂閱](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
   
- 若要刪除的資料驅動訂閱，選取 上的 報表旁的核取方塊**訂用帳戶**頁面，然後再選取**刪除**。  
+ 若要刪除資料驅動訂閱，請選取 [訂閱]  頁面上報表旁的核取方塊，然後選取 [刪除]  。  
   
  如需如何取消資料驅動訂閱的指示，請參閱 [管理執行中的處理序](../../reporting-services/subscriptions/manage-a-running-process.md)。  
   
@@ -47,29 +47,29 @@ ms.locfileid: "67140272"
   
 ### <a name="to-create-a-data-driven-subscription-native-mode"></a>若要建立資料驅動訂閱 (原生模式)  
   
-1. 在入口網站中，瀏覽至包含報表的資料夾，以滑鼠右鍵按一下報表，然後選取**管理**從下拉式功能表中。  
+1. 在入口網站中，巡覽至包含報表的資料夾，以滑鼠右鍵按一下該報表，然後從下拉式功能表中選取 [管理]  。  
   
 2. 選取 **[訂閱]** 索引標籤。  
   
-3. 選取  **+ 新的訂用帳戶**上**訂用帳戶**頁面。  
+3. 在 [訂閱]  頁面上選取 [+ 新增訂閱]  。  
   
 ### <a name="to-create-a-data-driven-subscription-sharepoint-mode"></a>若要建立資料驅動訂閱 (SharePoint 模式)  
   
-1. 在 SharePoint 文件庫中，將滑鼠停留在報告上方，接著開啟 [選項] 功能表，然後按一下 **[管理訂閱]**。  
+1. 在 SharePoint 文件庫中，將滑鼠停留在報告上方，接著開啟 [選項] 功能表，然後按一下 **[管理訂閱]** 。  
   
-2. 按一下 **[加入資料驅動訂閱]**。  
+2. 按一下 **[加入資料驅動訂閱]** 。  
   
 ### <a name="to-modify-an-existing-data-driven-subscription-native-mode"></a>若要修改現有的資料驅動訂閱 (原生模式)  
   
-1. 在入口網站中，瀏覽至包含報表的資料夾，以滑鼠右鍵按一下報表，然後選取**管理**從下拉式功能表中。  
+1. 在入口網站中，巡覽至包含報表的資料夾，以滑鼠右鍵按一下該報表，然後從下拉式功能表中選取 [管理]  。  
   
 2. 選取 **[訂閱]** 索引標籤。  
   
-3. 選取您想要修改，並選取訂用帳戶旁邊的核取方塊**編輯**。 資料驅動訂閱都會在值 「 資料驅動 」**型別**資料行。  
+3. 選取所要修改訂閱旁的核取方塊，然後選取 [編輯]  。 資料驅動訂閱在 [類型]  資料行中的值為「資料驅動」。  
   
 ### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>若要修改現有的資料驅動訂閱 (SharePoint 模式)  
   
-1.  在 SharePoint 文件庫中，將滑鼠停留在報告上方，接著開啟 [選項] 功能表，然後按一下 **[管理訂閱]**。  
+1.  在 SharePoint 文件庫中，將滑鼠停留在報告上方，接著開啟 [選項] 功能表，然後按一下 **[管理訂閱]** 。  
   
 2.  選取您要修改的訂閱。  
   
@@ -103,5 +103,5 @@ ms.locfileid: "67140272"
  [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [報表伺服器的入口網站 (SSRS 原生模式)](../../reporting-services/web-portal-ssrs-native-mode.md)   
  [建立及管理原生模式報表伺服器的訂閱](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [使用訂用帳戶 （web 入口網站）](../../reporting-services/working-with-subscriptions-web-portal.md) [使用我的訂閱 （原生模式報表伺服器）](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [使用訂閱 (入口網站)](../../reporting-services/working-with-subscriptions-web-portal.md) [使用我的訂閱 (原生模式報表伺服器)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
  
