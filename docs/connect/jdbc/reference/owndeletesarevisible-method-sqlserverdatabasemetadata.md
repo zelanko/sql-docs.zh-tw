@@ -1,5 +1,5 @@
 ---
-title: ownDeletesAreVisible 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: ownDeletesAreVisible 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 2dd6d976-9f8f-4a24-9354-ff239cfd4364
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ecb8ca48f9f4b76a9d3bf22aff3930eec63667dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976557"
 ---
 # <a name="owndeletesarevisible-method-sqlserverdatabasemetadata"></a>ownDeletesAreVisible 方法 (SQLServerDatabaseMetaData)
@@ -63,8 +63,8 @@ public boolean ownDeletesAreVisible(int type)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 ownDeletesAreVisible 方法是由 JAVA.sql.databasemetadata 介面中的 ownDeletesAreVisible 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 ownDeletesAreVisible 方法是由 java.sql.DatabaseMetaData 介面中的 ownDeletesAreVisible 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

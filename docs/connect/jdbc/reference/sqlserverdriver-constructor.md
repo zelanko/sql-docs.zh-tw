@@ -1,5 +1,5 @@
 ---
-title: SQLServerDriver 的構造函式 () |Microsoft Docs
+title: SQLServerDriver 建構函式 () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6dc1273c-bb42-414f-8e11-bb4673e7423a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f8e01c04e8d64ea73a9c89783781c54f40f2d517
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971260"
 ---
 # <a name="sqlserverdriver-constructor-"></a>SQLServerDriver 建構函式 ()

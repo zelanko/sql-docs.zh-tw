@@ -13,10 +13,10 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 034df879dc79f920219a43e2faaaf0e3ac4fc17b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008698"
 ---
 # <a name="using-integrated-authentication"></a>使用整合式驗證
@@ -24,7 +24,7 @@ ms.locfileid: "68008698"
 
 Linux 和 macOS 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援使用 Kerberos 整合驗證的連線。 其支援 MIT Kerberos 金鑰發佈中心 (KDC) 並可使用一般安全性服務應用程式開發介面 (GSSAPI) 和 Kerberos v5 程式庫。
   
-## <a name="using-integrated-authentication-to-connect-to-includessnoversionincludesssnoversion-mdmd-from-an-odbc-application"></a>使用整合驗證從 ODBC 應用程式連線至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="using-integrated-authentication-to-connect-to-ssnoversion-from-an-odbc-application"></a>使用整合驗證從 ODBC 應用程式連線至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
 您可以透過在 **SQLDriverConnect** 或 **SQLConnect** 的連接字串中指定 **Trusted_Connection=yes**，來啟用 Kerberos 整合驗證。 例如：  
 
@@ -60,9 +60,9 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 ## <a name="tracking-access-to-a-database"></a>追蹤對資料庫的存取
 
-使用系統帳戶透過整合式驗證存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，資料庫管理員可以建立資料庫存取的稽核記錄。  
+資料庫管理員可在透過整合驗證存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系統帳戶 時，建立資料庫存取的稽核線索。  
   
-登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時會使用系統帳戶，但 Linux 上並沒有模擬安全性內容的功能。 因此，需要有更多線索來判別使用者。
+登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用系統帳戶，且 Linux 上沒有模擬資訊安全內容的功能。 因此，需要有更多線索來判別使用者。
   
 若要代表系統帳戶以外的使用者稽核 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的活動，應用程式必須使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**。  
   
@@ -72,7 +72,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
 
 ## <a name="using-active-directory-to-manage-user-identities"></a>使用 Active Directory 管理使用者身分識別
 
-應用程式系統管理員不需要管理個別的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]登入認證集。 Active Directory 可以設定為整合式驗證的金鑰發佈中心 (KDC)。 如需詳細資訊，請參閱 [Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos)。
+應用程式系統管理員不需要分別管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的各組登入認證。 Active Directory 可以設定為整合式驗證的金鑰發佈中心 (KDC)。 如需詳細資訊，請參閱 [Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos)。
 
 ## <a name="using-linked-server-and-distributed-queries"></a>使用連結的伺服器和分散式查詢
 
@@ -94,11 +94,11 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 `-T` 與 `-U` 或 `-P` 選項搭配使用是錯誤的。
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversion-mdmd"></a>由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 註冊之 SPN 的支援語法
+## <a name="supported-syntax-for-an-spn-registered-by-ssnoversion"></a>由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 註冊之 SPN 的支援語法
 
 SPN 在連接字串或連線屬性中使用的語法如下：  
 
-|語法|Description|  
+|語法|描述|  
 |----------|---------------|  
 |MSSQLSvc/*fqdn*:*port*|使用 TCP 時，此為提供者產生的預設 SPN。 *port* 是 TCP 通訊埠編號。 *fqdn* 是完整的網域名稱。|  
   

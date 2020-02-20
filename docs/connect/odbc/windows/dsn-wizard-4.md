@@ -1,5 +1,5 @@
 ---
-title: 資料來源嚮導畫面 4 (ODBC Driver for SQL Server) |Microsoft Docs
+title: 資料來源精靈畫面 4 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 177888dd1034bb1edcb870db38b00bbc418cb261
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989462"
 ---
 # <a name="data-source-wizard-screen-4"></a>資料來源精靈畫面 4
@@ -33,7 +33,7 @@ SQL Server 的每一個執行個體都可具有多組系統訊息，每一組都
 
 ### <a name="trust-server-certificate"></a>信任伺服器憑證
 
-只有在已啟用 [**對資料使用強式加密**] 時, 才適用此選項。 選取此選項時, 將不會驗證服務器的憑證是否具有伺服器的正確主機名稱, 並由受信任的憑證授權單位單位發行。 
+只有在已啟用 [為資料使用增強式加密]  時，此選項才適用。 選取時，伺服器的憑證將不需要經過驗證，就擁有伺服器的正確主機名稱，且由信任的憑證授權單位所發出。 
 
 ### <a name="perform-translation-for-character-data"></a>為字元資料執行轉譯
 
@@ -61,19 +61,19 @@ SQL Server 的每一個執行個體都可具有多組系統訊息，每一組都
 
 ### <a name="connect-retry-count"></a>連接重試計數
 
-指定重試嘗試連接失敗的次數。
+指定嘗試連接失敗的重試次數。
 
 ### <a name="connect-retry-interval-seconds"></a>連接重試間隔 (秒)
 
-指定每個連接重試嘗試之間的秒數。 如需有關此作業和**連接重試計數**選項的詳細資訊, 請參閱[Windows ODBC 驅動程式中的連接恢復](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)功能。
+指定每個連接重試嘗試的間隔秒數。 如需有關此作業和 [連接重試計數]  選項的詳細資訊，請參閱 [Windows ODBC 驅動程式中的連接復原功能](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)。
 
-### <a name="back"></a>上一頁
+### <a name="back"></a>Back
 
-按一下此按鈕, 返回嚮導的上一頁。
+按一下此按鈕，返回精靈的上一頁。
 
 ### <a name="finish"></a>[完成]
 
-如果在此畫面上指定的資訊已完成, 您可以按一下 **[完成]** 。 DSN 是使用在 wizard 的這個畫面上所指定的所有屬性來建立, 而且您有機會測試新建立的 DSN。
+如果在此畫面上指定的資訊完整，您可以按一下 [完成]  。 DSN 是使用在精靈此畫面與其他畫面上指定的所有屬性建立的，而且您有機會測試新建立的 DSN。
 
 ## <a name="next-steps"></a>後續步驟
 

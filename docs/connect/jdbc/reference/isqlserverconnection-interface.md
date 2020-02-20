@@ -1,5 +1,5 @@
 ---
-title: ISQLServerConnection 介面 |Microsoft Docs
+title: ISQLServerConnection 介面 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 031c01e2-2c65-4fe4-9700-fdbcc7a39f30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2fbe3b6c1721720720b06bdcf4122a289589e639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977457"
 ---
 # <a name="isqlserverconnection-interface"></a>ISQLServerConnection 介面
@@ -33,8 +33,8 @@ ms.locfileid: "67977457"
 public interface ISQLServerConnection  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 這個介面是由[SQLServerConnection 類別](../../../connect/jdbc/reference/sqlserverconnection-class.md)所執行。  
+## <a name="remarks"></a>備註  
+ 此介面是由 [SQLServerConnection 類別](../../../connect/jdbc/reference/sqlserverconnection-class.md)所實作。  
   
  此介面會公開下列 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 特有的欄位：  
   

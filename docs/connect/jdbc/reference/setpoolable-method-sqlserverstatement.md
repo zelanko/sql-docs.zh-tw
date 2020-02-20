@@ -1,5 +1,5 @@
 ---
-title: setPoolable 方法 (SQLServerStatement) |Microsoft Docs
+title: setPoolable 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f0f798c8-cafb-4acc-b85d-2e0059c91d92
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5424de7d0d6f7bda44ec61ea61f48d63bb097c97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973204"
 ---
 # <a name="setpoolable-method-sqlserverstatement"></a>setPoolable 方法 (SQLServerStatement)
@@ -37,12 +37,12 @@ public void setPoolable(boolean poolable) throws SQLException
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  *poolable* 參數中指定的值是陳述式集區實作提示，可指出應用程式是否想要共用陳述式。 陳述式集區管理員會決定它是否使用該提示。  
   
  陳述式的集區值會套用到驅動程式所實作的內部陳述式快取，以及應用程式伺服器和其他應用程式所實作的外部陳述式快取。  
   
- 根據預設, SQLServerStatement 物件在建立時不會可共用。 SQLServerPreparedStatement 和 SQLServerCallableStatement 物件會在建立時可共用。  
+ 根據預設，SQLServerStatement 物件在建立時是不可共用的。 SQLServerPreparedStatement 和 SQLServerCallableStatement 物件在建立時是可共用的。  
   
  如果這個方法在關閉的陳述式上呼叫，則會擲回 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)。  
   

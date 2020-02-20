@@ -1,5 +1,5 @@
 ---
-title: 保存的資料來源物件 |Microsoft Docs
+title: 保存的資料來源物件 | Microsoft Docs
 description: 保存的資料來源物件
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c8ba02b1b459e3f1381138eaa708658b317cd9f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015937"
 ---
 # <a name="persisted-data-source-objects"></a>保存的資料來源物件
@@ -27,7 +27,7 @@ ms.locfileid: "68015937"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驅動程式支援使用**IPersistFile**介面保存的資料來源物件。  
+  OLE DB Driver for SQL Server 利用 **IPersistFile** 介面來支援保存的資料來源物件。  
   
 ## <a name="examples"></a>範例  
  **A.保存資料來源初始化：**  
@@ -232,6 +232,6 @@ HRESULT InitFromPersistedDS
  **IPersistFile::Save** 方法可以在呼叫 **IDBInitialize::Initialize** 之前或之後呼叫。 當從 **IDBInitialize::Initialize** 成功傳回之後呼叫此方法時，可確保已保存有效的資料來源規格。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料來源物件&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [資料來源物件 &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

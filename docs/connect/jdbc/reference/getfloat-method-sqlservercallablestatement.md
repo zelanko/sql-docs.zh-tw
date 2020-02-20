@@ -1,5 +1,5 @@
 ---
-title: getFloat 方法 (SQLServerCallableStatement) |Microsoft Docs
+title: getFloat 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 58a60767-655b-4c89-a44a-965b9fb9bcd6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f10a0878c741c34ed26c0bd1114d17e85548ff51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983016"
 ---
 # <a name="getfloat-method-sqlservercallablestatement"></a>getFloat 方法 (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67983016"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getFloat (int)](../../../connect/jdbc/reference/getfloat-method-int.md)|使用 Java 程式設計語言，並配合指定參數索引來擷取所指定參數值作為 **float**。|  
 |[getFloat (java.lang.String)](../../../connect/jdbc/reference/getfloat-method-java-lang-string.md)|使用 Java 程式設計語言，並配合指定參數名稱來擷取所指定參數的值作為 **float**。|  

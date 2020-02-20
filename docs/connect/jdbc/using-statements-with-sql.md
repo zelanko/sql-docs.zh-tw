@@ -1,5 +1,5 @@
 ---
-title: 搭配 SQL 使用語句 |Microsoft Docs
+title: 搭配 SQL 使用陳述式 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 553c0e742b34406b23a68f1403c372dcc7080088
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025833"
 ---
 # <a name="using-statements-with-sql"></a>使用 SQL 陳述式
@@ -26,7 +26,7 @@ ms.locfileid: "69025833"
 如果您的 SQL 陳述式不含任何 IN 參數，請使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別，但如果它確實含有 IN 參數，則請使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 類別。  
   
 > [!NOTE]  
-> 如果您需要使用同時包含 IN 與 OUT 參數的 SQL 陳述式，您必須將它們實作為預存程序，並使用 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別呼叫它們。 如需使用預存程式的詳細資訊, 請參閱[using 語句與預存程式](../../connect/jdbc/using-statements-with-stored-procedures.md)。  
+> 如果您需要使用同時包含 IN 與 OUT 參數的 SQL 陳述式，您必須將它們實作為預存程序，並使用 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別呼叫它們。 如需有關使用預存程序的詳細資訊，請參閱[搭配預存程序使用陳述式](../../connect/jdbc/using-statements-with-stored-procedures.md)。  
   
 下列各節描述在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中使用 SQL 陳述式來處理資料的不同狀況。  
 

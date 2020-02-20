@@ -1,5 +1,5 @@
 ---
-title: SQLServerStatement 類別 |Microsoft Docs
+title: SQLServerStatement 類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: ec24963c-8b51-4838-91e9-1fbfa2347451
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 89547655fd734ca9e6e340d94832dea5816f2733
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970373"
 ---
 # <a name="sqlserverstatement-class"></a>SQLServerStatement 類別
@@ -33,10 +33,10 @@ ms.locfileid: "67970373"
 public class SQLServerStatement  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  SQLServerStatement 類別也針對 JDBC 備妥及可呼叫的陳述式提供許多基底類別實作方法。 SQLServerStatement 類別的基本角色是執行 SQL 陳述式，然後將更新計數和結果集傳回給使用者應用程式。  
   
- 這個類別支援解除包裝為 SQLServerStatement 類別、ISQLServerStatement 介面和 sql-dmo 介面。 如需詳細資訊, 請參閱包裝函式[和介面](../../../connect/jdbc/wrappers-and-interfaces.md)。  
+ 這個類別支援解除包裝為 SQLServerStatement 類別、ISQLServerStatement 介面和 java.sql.Statement 介面。 如需詳細資訊，請參閱[包裝函式與介面](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

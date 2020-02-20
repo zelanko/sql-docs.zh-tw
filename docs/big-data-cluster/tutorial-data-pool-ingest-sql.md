@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: b389f8ba8e99678f98ef4eb22d3fe51d8b04bee3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653316"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75325415"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教學課程：使用 Transact-SQL 將資料內嵌到 SQL Server 資料集區
 
@@ -22,7 +22,7 @@ ms.locfileid: "69653316"
 
 本教學課程示範如何使用 Transact-SQL 將資料載入 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的[資料集區](concept-data-pool.md)。 透過 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]，即可將各種來源的資料內嵌和分散到不同的資料集區執行個體。
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您會了解如何：
 
 > [!div class="checklist"]
 > * 在資料集區中建立外部資料表。
@@ -42,7 +42,7 @@ ms.locfileid: "69653316"
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>在資料集區中建立外部資料表
 
-下列步驟會在資料集區建立名為 **web_clickstream_clicks_data_pool** 的外部資料表。 然後，此資料表可作為將資料內嵌至巨量資料叢集的位置。
+下列步驟會在資料集區建立名為 **web_clickstream_clicks_data_pool** 的外部資料表。 然後，此資料表可作為資料內嵌至巨量資料叢集的位置。
 
 1. 在 Azure Data Studio 中，連線到巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱[連線到 SQL Server 主要執行個體](connect-to-big-data-cluster.md#master)。
 
@@ -57,7 +57,7 @@ ms.locfileid: "69653316"
    GO
    ```
 
-1. 如果資料集區沒有外部資料表，請加以建立。
+1. 如果資料集區沒有外部資料來源，請加以建立。
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
@@ -77,8 +77,8 @@ ms.locfileid: "69653316"
          DISTRIBUTION = ROUND_ROBIN
       );
    ```
-  
-1. 在 CTP 3.1 中，資料集區的建立是非同步的，但目前沒有方法能判斷會何時完成。 請等候兩分鐘，確保資料集區建立完成，再繼續進行。
+
+資料集區外部資料表的建立是封鎖作業。 當指定的資料表已經在所有後端資料集區節點上建立之後，就會恢復控制權。 如果建立作業期間發生失敗，錯誤訊息會傳回給呼叫者。
 
 ## <a name="load-data"></a>載入資料
 

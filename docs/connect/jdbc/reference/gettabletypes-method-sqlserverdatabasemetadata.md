@@ -1,5 +1,5 @@
 ---
-title: getTableTypes 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getTableTypes 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e0f5dc57-07b8-4811-ab1a-80a524bfdb42
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8da791a53d6ee25dd56f7f015ccc69947999f3b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979153"
 ---
 # <a name="gettabletypes-method-sqlserverdatabasemetadata"></a>getTableTypes 方法 (SQLServerDatabaseMetaData)
@@ -40,12 +40,12 @@ public java.sql.ResultSet getTableTypes()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getTableTypes 方法是由 java.sql.DatabaseMetaData 介面中的 getTableTypes 方法指定。  
   
  透過 getTableTypes 方法所傳回的結果將包含下列資訊：  
   
-|[屬性]|類型|Description|  
+|名稱|類型|描述|  
 |----------|----------|-----------------|  
 |TABLE_TYPE|**String**|資料表類型。|  
   

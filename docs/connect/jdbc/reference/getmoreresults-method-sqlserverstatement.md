@@ -1,5 +1,5 @@
 ---
-title: getMoreResults 方法 (SQLServerStatement) |Microsoft Docs
+title: getMoreResults 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6b18510a-4d6d-4eeb-a9d0-32e920eb0048
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b7d8c1c63823cd558122746fdc2dbca84d3f64a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981746"
 ---
 # <a name="getmoreresults-method-sqlserverstatement"></a>getMoreResults 方法 (SQLServerStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67981746"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getMoreResults ()](../../../connect/jdbc/reference/getmoreresults-method.md)|移至這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件的下一個結果。|  
 |[getMoreResults (int)](../../../connect/jdbc/reference/getmoreresults-method-int.md)|移至這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件的下一個結果，並根據指定模式所指定的指示來處理目前開啟的任何結果集物件。|  

@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: fetchColumn |Microsoft Docs'
+title: PDOStatement::fetchColumn | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 6ebf385c-ddb0-4c53-9dc6-7df0d3740b04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4021a6a5c550ea9674c0bf699462eece1d9c2f9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993042"
 ---
 # <a name="pdostatementfetchcolumn"></a>PDOStatement::fetchColumn
@@ -30,12 +30,12 @@ string PDOStatement::fetchColumn ([ $column_number ] );
 ```  
   
 #### <a name="parameters"></a>參數  
-$*column_number*：一個選擇性整數，表示以零起始的資料行編號。 預設值為 0 (資料列中的第一個資料行)。  
+$*column_number*：選擇性整數，表示以零起始的資料行編號。 預設值為 0 (資料列中的第一個資料行)。  
   
 ## <a name="return-value"></a>傳回值  
 一個資料行，如果沒有更多資料列則為 false。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
 ## <a name="example"></a>範例  

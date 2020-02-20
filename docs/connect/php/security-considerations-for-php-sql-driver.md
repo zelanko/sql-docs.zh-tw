@@ -1,5 +1,5 @@
 ---
-title: 適用于 PHP for SQL Server 的 Microsoft 驅動程式安全性考慮 |Microsoft Docs
+title: Microsoft Drivers for PHP for SQL Server 的安全性考量 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1fecf1add70a7b3bd96484cbd3634db2cfda01cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992895"
 ---
-# <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>適用于 PHP for SQL Server 的 Microsoft 驅動程式安全性考慮
+# <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的安全性考量
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本主題說明在開發、部署和執行使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的應用程式時特有的安全性考量。 如需 SQL Server 安全性的詳細資訊, 請參閱[SQL Server 安全性的總覽](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security)。  
+本主題說明在開發、部署和執行使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的應用程式時特有的安全性考量。 如需關於 SQL Server 安全性的詳細資訊，請參閱[ SQL Server 安全性概觀](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security)。  
   
 ## <a name="connect-using-windows-authentication"></a>使用 Windows 驗證進行連接  
 可能的話，Windows 驗證應該用來連接 SQL Server，原因如下：  
@@ -31,17 +31,17 @@ ms.locfileid: "67992895"
   
 -   **使用者受到集中的帳戶管理。** 會強制執行安全性原則，例如；密碼到期日、最小密碼長度，以及帳戶在多次無效登入要求後鎖定。  
   
-如需如何使用 Windows 驗證連接到伺服器的相關資訊，請參閱 [如何：使用 Windows 驗證進行連接](../../connect/php/how-to-connect-using-windows-authentication.md)。  
+如需如何使用 Windows 驗證連線到伺服器的相關資訊，請參閱[如何：使用 Windows 驗證進行連線](../../connect/php/how-to-connect-using-windows-authentication.md)。  
   
-當您使用 Windows 驗證進行連接時，建議您設定您的環境，讓 SQL Server 可以使用 Kerberos 驗證通訊協定。 如需詳細資訊，請參閱 [對 SQL Server 2005 的執行個體建立遠端連接時如何確實使用 Kerberos 驗證](https://support.microsoft.com/en-ca/help/909801/how-to-make-sure-that-you-are-using-kerberos-authentication-when-you-c) 或 [Kerberos 驗證和 SQL Server](https://msdn.microsoft.com/library/cc280744.aspx)。  
+當您使用 Windows 驗證進行連接時，建議您設定您的環境，讓 SQL Server 可以使用 Kerberos 驗證通訊協定。 如需詳細資訊，請參閱[對 SQL Server 2005 的執行個體建立遠端連線時如何確實使用 Kerberos 驗證](https://support.microsoft.com/en-ca/help/909801/how-to-make-sure-that-you-are-using-kerberos-authentication-when-you-c)或 [Kerberos 驗證和 SQL Server](https://msdn.microsoft.com/library/cc280744.aspx)。  
   
 ## <a name="use-encrypted-connections-when-transferring-sensitive-data"></a>在傳送敏感性資料時使用加密連接  
 在每次要對 SQL Server 傳送或擷取敏感性資料時，均應使用加密連接。 如需如何啟用加密連線的資訊，請參閱[如何啟用 Database Engine 的加密連線 (SQL Server 設定管理員)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。 若要使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]建立安全連接，請在連接到伺服器時使用 Encrypt 連接屬性。 如需連接屬性的詳細資訊，請參閱 [Connection Options](../../connect/php/connection-options.md)。  
   
 ## <a name="use-parameterized-queries"></a>使用參數化查詢  
-使用參數化查詢，可降低 SQL 資料隱碼攻擊的風險。 如需執行參數化查詢的範例，請參閱 [How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md)。  
+使用參數化查詢，可降低 SQL 資料隱碼攻擊的風險。 如需執行參數化查詢的範例，請參閱[如何：執行參數化查詢](../../connect/php/how-to-perform-parameterized-queries.md)。  
   
-如需 SQL 資料隱碼攻擊和相關安全性考量的詳細資訊，請參閱 [SQL 資料隱碼](https://msdn.microsoft.com/library/ms161953.aspx)。  
+如需 SQL 插入式攻擊和相關安全性考量的詳細資訊，請參閱 [SQL 插入式攻擊](https://msdn.microsoft.com/library/ms161953.aspx)。  
   
 ## <a name="do-not-accept-server-or-connection-string-information-from-end-users"></a>不接受來自一般使用者的伺服器或連接字串資訊  
 所撰寫的應用程式，應讓使用者無法將伺服器或連接字串資訊提交至應用程式。 對伺服器和連接字串資訊保有嚴格的控制，能夠減少惡意活動的接觸區域。  

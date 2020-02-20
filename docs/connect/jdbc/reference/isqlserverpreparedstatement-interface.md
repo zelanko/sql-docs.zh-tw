@@ -1,5 +1,5 @@
 ---
-title: ISQLServerPreparedStatement 介面 |Microsoft Docs
+title: ISQLServerPreparedStatement 介面 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: cf87892e-5c34-4ac6-8258-c2a81e117b26
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 05fda4ea42c1819f3cbb4f16fcc7f02da2a06b8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977431"
 ---
 # <a name="isqlserverpreparedstatement-interface"></a>ISQLServerPreparedStatement 介面
@@ -33,8 +33,8 @@ ms.locfileid: "67977431"
 public interface ISQLServerPreparedStatement  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 這個介面是由[SQLServerPreparedStatement 類別](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)所執行。  
+## <a name="remarks"></a>備註  
+ 此介面是由 [SQLServerPreparedStatement 類別](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)所實作。  
   
  此介面會公開下列 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 的特定方法：  
   

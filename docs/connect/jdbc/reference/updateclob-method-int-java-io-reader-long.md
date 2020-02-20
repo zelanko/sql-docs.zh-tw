@@ -1,5 +1,5 @@
 ---
-title: updateClob 方法 (int, java. io. 讀取器, long) |Microsoft Docs
+title: updateClob 方法 (int, java.io.Reader, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 5c958ccb-386a-4dd5-901d-5a106dac2683
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 196960b897b9e351eb7541c181cc0b828959c13a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996651"
 ---
 # <a name="updateclob-method-int-javaioreader-long"></a>updateClob 方法 (int, java.io.Reader, long)
@@ -47,7 +47,7 @@ public void updateClob(int columnIndex,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 updateClob 方法是由 java.sql.ResultSet 介面中的 updateClob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

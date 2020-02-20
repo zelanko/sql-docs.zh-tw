@@ -1,27 +1,26 @@
 ---
-title: 快速入門：建立 Python 指令碼
-titleSuffix: SQL Server Machine Learning Services
-description: 使用 SQL Server 機器學習服務，在 SQL Server 執行個體中建立及執行簡單的 Python 指令碼。
+title: 快速入門：執行 Python 指令碼
+description: 使用 SQL Server 機器學習服務執行一組簡單的 Python 指令碼。 了解如何使用預存程序 sp_execute_external_script 在 SQL Server 執行個體中執行指令碼。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8409eaf8129d7c8eb2eecd5a1157a17444341734
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 8c1347d58f0b8a4014a51a220b6ecded5a343082
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727030"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831910"
 ---
-# <a name="quickstart-create-and-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server 機器學習服務，建立及執行簡單的 Python 指令碼
+# <a name="quickstart-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server 機器學習服務，執行簡單的 Python 指令碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在本快速入門中，您將使用 [SQL Server 機器學習服務](../what-is-sql-server-machine-learning.md)來建立和執行一組簡單的 Python 指令碼。 您將了解如何將格式正確的 Python 指令碼包裝在預存程式 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 中，並在 SQL Server 執行個體中執行指令碼。
+在此快速入門中，您將會使用 [SQL Server 機器學習服務](../what-is-sql-server-machine-learning.md)來執行一組簡單的 Python 指令碼。 您將會了解如何使用預存程序 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 在 SQL Server 執行個體中執行指令碼。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -159,7 +158,7 @@ GO
     請注意，Python 區分大小寫。 Python 指令碼 (**SQL_out** **SQL_in**) 中所使用的輸入和輸出變數必須比對以 `@input_data_1_name` 和 `@output_data_1_name` 定義的名稱，包括大小寫。
 
    > [!TIP]
-   > 只有一個輸入資料集可以當作參數傳遞，您只能傳回一個資料集。 不過，您可以從 Python 程式碼內部呼叫其他資料集，而且除了資料集之外，您還可以傳回其他類型的輸出。 您也可以將 OUTPUT 關鍵字新增至任何參數，讓它傳回結果。
+   > 只有一個輸入資料集可以傳入作為參數，而且您只能傳回一個資料集。 不過，您可以從 Python 程式碼內部呼叫其他資料集，而且除了資料集之外，您還可以傳回其他類型的輸出。 您也可以為任何參數加上 OUTPUT 關鍵字，使其與結果一起傳回。
 
 1. 您也可以在無輸入資料的情況下 (`@input_data_1` 設為空白)，只使用 Python 指令碼產生值。
 
@@ -225,40 +224,27 @@ Microsoft 提供一些透過 SQL Server 機器學習服務預先安裝在您 SQL
 ```SQL
 EXECUTE sp_execute_external_script @language = N'Python'
     , @script = N'
-import pip
-for i in pip.get_installed_distributions():
-    print(i)
+import pkg_resources
+import pandas
+dists = [str(d) for d in pkg_resources.working_set]
+OutputDataSet = pandas.DataFrame(dists)
 '
+WITH RESULT SETS(([Package] NVARCHAR(max)))
 GO
 ```
 
-輸出來自 Python 中的 `pip.get_installed_distributions()`，並以 `STDOUT` 訊息形式傳回。
+該清單是來自 Python 中的 `pkg_resources.working_set`，並以資料框架的形式傳回到 SQL。
 
 **結果**
 
-```text
-STDOUT message(s) from external script:
-xlwt 1.2.0
-XlsxWriter 0.9.6
-xlrd 1.0.0
-win-unicode-console 0.5
-widgetsnbextension 2.0.0
-wheel 0.29.0
-Werkzeug 0.12.1
-wcwidth 0.1.7
-unicodecsv 0.14.1
-traitlets 4.3.2
-tornado 4.4.2
-toolz 0.8.2
-. . .
-```
+:::image type="content" source="media/python-package-list.png" alt-text="已安裝的 Python 套件清單":::
 
 ## <a name="next-steps"></a>後續步驟
 
 若要了解如何在 SQL Server 機器學習服務中使用 Python 來使用資料結構，請遵循本快速入門：
 
 > [!div class="nextstepaction"]
-> [在 SQL Server 機器學習服務中使用 Python 處理資料類型和物件](quickstart-python-data-structures.md)
+> [快速入門：在 SQL Server 機器學習服務中使用 Python 的資料結構和物件](quickstart-python-data-structures.md)
 
 如需在 SQL Server 機器學習服務中使用 Python 的詳細資訊，請參閱下列文章：
 

@@ -11,10 +11,10 @@ ms.assetid: be01ce56-8f13-437b-8de6-246cda5f7830
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cbe655691ed898dfbb8eac5da5bb28d4d6cde686
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981501"
 ---
 # <a name="getnclob-method-javalangstring"></a>getNClob 方法 (java.lang.String)
@@ -35,15 +35,15 @@ public java.sql.NClob getNClob(java.lang.String parameterName)
  包含參數名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
- ANClobobject.  
+ ANClobobject。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getNClob 方法是由 java.sql.CallableStatement 介面中的 getNClob 方法指定。  
   
- 這個方法只支援抓取**NCHAR**、 **NVARCHAR**、 **NTEXT**和**XML**參數。 對其他資料類型參數呼叫這些方法，將擲回例外狀況。  
+ 這個方法只支援擷取 **NCHAR**、**NVARCHAR**、**NTEXT** 和 **XML** 參數。 對其他資料類型參數呼叫這些方法，將擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱  
  [getNClob 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)   

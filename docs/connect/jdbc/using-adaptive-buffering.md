@@ -1,5 +1,5 @@
 ---
-title: 使用自適性緩衝 |Microsoft Docs
+title: 使用自適性緩衝 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,48 +11,48 @@ ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 28b2750d96e1fbe5b5a1cfc3021a22415128b7df
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026803"
 ---
 # <a name="using-adaptive-buffering"></a>使用自適性緩衝
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-自適性緩衝是針對在沒有伺服器資料指標負擔的情況下，擷取任何種類的大數值資料而設計的。 應用程式可以使用自適性緩衝功能搭配此驅動程式所支援的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。
+適應性緩衝是針對在沒有伺服器資料指標負擔的情況下，擷取任何種類的大數值資料而設計的。 應用程式可以使用自適性緩衝功能搭配此驅動程式所支援的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。
 
 一般而言，當 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 執行查詢時，驅動程式會將伺服器中的所有結果擷取到應用程式記憶體中。 雖然這個方法會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資源耗用量降到最低，但是它會針對產生非常龐大結果的查詢，在 JDBC 應用程式中擲回 OutOfMemoryError。
 
-為了允許應用程式處理非常龐大的結果，因此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供自適性緩衝。 使用自適性緩衝，此驅動程式會在應用程式需要時，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中擷取陳述式執行結果，而非一次擷取所有結果。 只要應用程式不再存取這些結果，驅動程式也可以捨棄它們。 下面是自適性緩衝可能有用的部分範例：
+為了允許應用程式處理非常龐大的結果，因此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供自適性緩衝。 使用自適性緩衝，此驅動程式會在應用程式需要時，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中擷取陳述式執行結果，而非一次擷取所有結果。 只要應用程式不再存取這些結果，驅動程式也可以捨棄它們。 下面是適應性緩衝可能有用的部分範例：
 
-- **查詢會產生非常龐大的結果集：** 應用程式可以執行 SELECT 陳述式，該陳述式會產生比應用程式可以儲存在記憶體中還要多的資料列。 在舊版中，應用程式必須使用伺服器資料指標來避免 OutOfMemoryError。 自適性緩衝可以針對任意大的結果集進行順向唯讀行程，而不需要伺服器資料指標。
+- **此查詢會產生非常龐大的結果集：** 應用程式可以執行 SELECT 陳述式，該陳述式所產生的資料列會比應用程式可以儲存於記憶體中的資料列還要多。 在舊版中，應用程式必須使用伺服器資料指標來避免 OutOfMemoryError。 適應性緩衝可以針對任意大的結果集進行順向唯讀行程，而不需要伺服器資料指標。
 
-- **此查詢會產生非常龐大的** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **資料行或** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT 參數值：** 應用程式可以擷取因為過大而無法完整納入應用程式記憶體中的單一值 (資料行或 OUT 參數)。 自適性緩衝可讓用戶端應用程式使用 getAsciiStream、getBinaryStream 或 getCharacterStream 方法, 將這類值當做資料流程來取得。 應用程式會在從資料流讀取時，擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的值。
+- **此查詢會產生非常龐大的** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **資料行或** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT 參數值：** 應用程式可以擷取值太大而無法完整納入應用程式記憶體的單一值 (資料行或 OUT 參數)。 自適性緩衝可讓用戶端應用程式使用 getAsciiStream、getBinaryStream 或 getCharacterStream 方法，來擷取諸如資料流的值。 應用程式會在從資料流讀取時，擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的值。
 
 > [!NOTE]  
-> 透過自適性緩衝，JDBC Driver 只會緩衝處理它所需的資料量。 此驅動程式不會提供任何公用方法來控制或限制緩衝區的大小。
+> 透過適應性緩衝，JDBC Driver 只會緩衝處理它所需的資料量。 此驅動程式不會提供任何公用方法來控制或限制緩衝區的大小。
 
 ## <a name="setting-adaptive-buffering"></a>設定自適性緩衝
 
-自 JDBC Driver 2.0 版開始，此驅動程式的預設行為是 "**adaptive**"。 換言之，若要取得自適性緩衝行為，您的應用程式不需要明確要求適應性行為。 但在 1.2 版中，預設的緩衝模式為 "**full**"，且應用程式必須明確要求自適性緩衝模式。
+自 JDBC Driver 2.0 版開始，此驅動程式的預設行為是 "**adaptive**"。 換言之，若要取得適應性緩衝行為，您的應用程式不需要明確要求適應性行為。 但在 1.2 版中，預設的緩衝模式為 "**full**"，且應用程式必須明確要求自適性緩衝模式。
 
-應用程式可以要求陳述式執行應該使用自適性緩衝的方式有三種：
+應用程式可以要求陳述式執行應該使用適應性緩衝的方式有三種：
 
-- 應用程式可以將連接屬性**responseBuffering**設定為「調適型」。 如需設定連接屬性的詳細資訊, 請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。
+- 應用程式可以將連線屬性 **responseBuffering** 設定為 "adaptive"。 如需設定連線屬性的詳細資訊，請參閱[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。
 
 - 應用程式可以使用 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 物件的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md) 方法，設定透過該 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 物件建立之所有連線的回應緩衝模式。
 
 - 應用程式可以使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法來設定特定陳述式物件的回應緩衝模式。
 
-使用 JDBC Driver 1.2 版時，應用程式原本必須將陳述式物件轉換成 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別，才能使用 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法。 [讀取大型資料範例](../../connect/jdbc/reading-large-data-sample.md)和[使用預存程式讀取大型資料](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md)範例中的程式碼範例會示範這項舊的使用量。
+使用 JDBC Driver 1.2 版時，應用程式原本必須將陳述式物件轉換成 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別，才能使用 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法。 [讀取大型資料範例](../../connect/jdbc/reading-large-data-sample.md)和[使用預存程序讀取大型資料範例](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md)中的程式碼範例示範這個舊的使用方式。
 
-不過，使用 JDBC Driver 2.0 版時，應用程式可以使用 [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 方法和 [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 方法來存取供應商特定的功能，而不需要提出有關實作類別階層的任何假設。 如需範例程式碼, 請參閱[更新大型資料範例](../../connect/jdbc/updating-large-data-sample.md)主題。
+不過，使用 JDBC Driver 2.0 版時，應用程式可以使用 [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 方法和 [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 方法來存取供應商特定的功能，而不需要提出有關實作類別階層的任何假設。 如需範例程式碼，請參閱[更新大型資料範例](../../connect/jdbc/updating-large-data-sample.md)主題。
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>利用自適性緩衝擷取大型資料
 
-使用 get\<類型>Stream 方法讀取大數值一次，而且以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回的順序存取 ResultSet 資料行和 CallableStatement OUT 參數時，自適性緩衝會將處理結果時的應用程式記憶體使用量降到最低。 使用自適性緩衝時：
+使用 get\<類型>Stream 方法讀取大數值一次，而且以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回的順序存取 ResultSet 資料行和 CallableStatement OUT 參數時，自適性緩衝會將處理結果時的應用程式記憶體使用量降到最低。 使用適應性緩衝時：
 
 - 雖然資料流透過應用程式標示時可以重設，但是在 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別中定義的 get\<類型>Stream 方法預設還是會傳回讀取一次的資料流。 如果應用程式想要 `reset` 資料流，必須先在該資料流上呼叫 `mark` 方法。
 
@@ -61,15 +61,15 @@ ms.locfileid: "69026803"
 當應用程式使用自適性緩衝時，僅可以擷取 get\<類型>Stream 方法所擷取值一次。 如果您在呼叫相同物件的 get\<類型>Stream 方法後，嘗試針對相同的資料行或參數呼叫任何 get\<類型> 方法，則會擲回例外狀況並顯示訊息：「資料已存取，此資料行或參數無法使用」。
 
 > [!NOTE]
-> 在處理結果集的過程中, 對 ResultSet. close () 的呼叫需要 Microsoft JDBC Driver for SQL Server, 才能讀取和捨棄所有剩餘的封包。 如果查詢傳回大型資料集, 特別是當網路連接速度很慢時, 這可能需要相當長的時間。
+> 在處理 ResultSet 的過程中呼叫 ResultSet.close()，會要求 Microsoft JDBC Driver for SQL Server 讀取和捨棄所有剩餘的封包。 如果查詢傳回了大型資料集，特別是當網路連線速度很慢時，這可能需要相當長的時間。
 
 ## <a name="guidelines-for-using-adaptive-buffering"></a>使用自適性緩衝的指導方針
 
 開發人員應該遵循這些重要的指導方針，將應用程式的記憶體使用量降到最低：
 
-- 請避免使用 **selectMethod=cursor** 連接字串屬性，以讓應用程式處理非常龐大的結果集。 自適性緩衝功能可讓應用程式處理非常大的順向唯讀結果集，而不需要使用伺服器資料指標。 請注意，當您設定 **selectMethod=cursor** 時，該連線產生的所有順向唯讀結果集都會受到影響。 換言之，如果您的應用程式例行地處理含有少數資料列的簡短結果集，就用戶端和伺服器端而言，針對每個結果集建立、讀取和關閉伺服器資料指標所使用的資源會比 **selectMethod** 沒有設定為 **cursor** 的情況還多。
+- 請避免使用 **selectMethod=cursor** 連接字串屬性，以讓應用程式處理非常龐大的結果集。 適應性緩衝功能可讓應用程式處理非常大的順向唯讀結果集，而不需要使用伺服器資料指標。 請注意，當您設定 **selectMethod=cursor** 時，該連線產生的所有順向唯讀結果集都會受到影響。 換言之，如果您的應用程式例行地處理含有少數資料列的簡短結果集，就用戶端和伺服器端而言，針對每個結果集建立、讀取和關閉伺服器資料指標所使用的資源會比 **selectMethod** 沒有設定為 **cursor** 的情況還多。
 
-- 使用 getAsciiStream、getBinaryStream 或 getCharacterStream 方法 (而不是 getBlob 或 getClob 方法), 將大型文字或二進位值讀取為數據流。 從 1.2 版開始，[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別會針對此用途提供新的 get\<類型>Stream 方法。
+- 使用 getAsciiStream、getBinaryStream 或 getCharacterStream 方法 (而不是 getBlob 或 getClob 方法)，以資料流形式讀取大型文字或二進位值。 從 1.2 版開始，[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別會針對此用途提供新的 get\<類型>Stream 方法。
 
 - 確保潛在具有大數值的資料行放置在 SELECT 陳述式之資料行清單中的最後面，並確保 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 的 get\<類型>Stream 方法用於以選取的順序存取資料行。
 
@@ -77,9 +77,9 @@ ms.locfileid: "69026803"
 
 - 避免在相同的連接上，同時執行一個以上的陳述式。 在處理前一個陳述式的結果前執行其他陳述式可能會使未處理的結果在應用程式記憶體中緩衝處理。
 
-- 在某些情況下, 使用**selectMethod = cursor** , 而不是**responseBuffering =** 自動調整會更有説明, 例如:
+- 在某些情況下，使用 **selectMethod=cursor** 而非 **responseBuffering=adaptive** 更有益，例如：
 
-  - 如果您的應用程式處理順向唯讀結果集的速度很慢 (例如在部分使用者輸入之後讀取每個資料列), 使用**selectMethod = cursor**而不是**responseBuffering =** 自動調整, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可能有助於減少資源使用量。
+  - 如果您的應用程式處理順向唯讀結果集的速度很慢 (例如，在部分使用者輸入之後讀取每個資料列)，使用 **selectMethod=cursor** 而非 **responseBuffering=adaptive** 可能有助於減少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所使用的資源。
 
   - 如果您的應用程式針對相同的連線同時處理兩個以上的順向唯讀結果集，請使用 **selectMethod=cursor** 而非 **responseBuffering=adaptive** 可能會有助於減少驅動程式在處理這些結果集時所需的記憶體。
 

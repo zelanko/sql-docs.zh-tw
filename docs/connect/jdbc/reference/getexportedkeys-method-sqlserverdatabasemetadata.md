@@ -1,5 +1,5 @@
 ---
-title: getExportedKeys 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getExportedKeys 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 26888e61-b243-4a1b-922c-c0a451dcff4d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e89d65955c5637bcd566d48b6e54bcae50397d88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983309"
 ---
 # <a name="getexportedkeys-method-sqlserverdatabasemetadata"></a>getExportedKeys 方法 (SQLServerDatabaseMetaData)
@@ -55,12 +55,12 @@ public java.sql.ResultSet getExportedKeys(java.lang.String cat,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getExportedKeys 方法是由 JAVA.sql.databasemetadata 介面中的 getExportedKeys 方法指定。  
+## <a name="remarks"></a>備註  
+ 此 getExportedKeys 方法是由 java.sql.DatabaseMetaData 介面中的 getExportedKeys 方法所指定。  
   
  透過 getExportedKeys 方法所傳回的結果將包含下列資訊：  
   
-|[屬性]|類型|Description|  
+|名稱|類型|描述|  
 |----------|----------|-----------------|  
 |PKTABLE_CAT|**String**|包含主索引鍵資料表的目錄名稱。|  
 |PKTABLE_SCHEM|**String**|主索引鍵資料表的結構描述名稱。|  

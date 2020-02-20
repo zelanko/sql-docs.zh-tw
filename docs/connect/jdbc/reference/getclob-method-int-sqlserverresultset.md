@@ -16,10 +16,10 @@ ms.assetid: 91020fad-a9e2-4ea4-9c72-c63cf6b1051c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dedfec8f5d6f04f4bb9b564dd3dbe0dab3d26b1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953090"
 ---
 # <a name="getclob-method-int-sqlserverresultset"></a>getClob 方法 (int) (SQLServerResultSet)
@@ -45,7 +45,7 @@ public java.sql.Clob getClob(int columnIndex)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getClob 方法是由 java.sql.ResultSet 介面中的 getClob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

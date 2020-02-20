@@ -1,22 +1,22 @@
 ---
 title: Python 教學課程：準備叢集資料
-description: 在這個教學課程系列的第二部分 (總共四個部分) 中，您將準備 SQL Server 資料庫的資料，使用「SQL Server 機器學習服務」在 Python 中執行叢集。
+description: 在此教學課程系列的第二部分 (總共四個部分) 中，您將會準備 SQL 資料，使用 SQL Server 機器學習服務以 Python 執行群集。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/30/2019
+ms.date: 12/17/2019
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 11c24d5403e6540da52ec3557c64e1dc8fa57c78
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 8ee19ddfa59f8f1a4a32c0adf08b8f36eef9aa1f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727086"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75305539"
 ---
 # <a name="tutorial-prepare-data-to-categorize-customers-in-python-with-sql-server-machine-learning-services"></a>教學課程：使用 SQL Server 機器學習服務在 Python 中準備資料以分類客戶
 
@@ -30,7 +30,7 @@ ms.locfileid: "73727086"
 > * 使用 Python 劃分不同維度的客戶
 > * 將 SQL 資料庫的資料載入 Python 資料框架
 
-在[第一部分](python-clustering-model.md)，您已安裝必要條件並還原範例資料庫。
+在[第一部分](python-clustering-model.md)中，您已安裝必要條件並還原範例資料庫。
 
 在[第三部分](python-clustering-model-build.md)，您將了解如何在 Python 中建立和定型 K-Means 叢集模型。
 
@@ -55,10 +55,10 @@ ms.locfileid: "73727086"
 
 ```python
 # Load packages.
+import pyodbc
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import revoscalepy as revoscale
 from scipy.spatial import distance as sci_distance
 from sklearn import cluster as sk_cluster
 
@@ -69,7 +69,7 @@ from sklearn import cluster as sk_cluster
 ################################################################################################
 
 # Connection string to connect to SQL Server named instance.
-conn_str = 'Driver=SQL Server;Server=localhost;Database=tpcxbb_1gb;Trusted_Connection=True;'
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=localhost; DATABASE=tpcxbb_1gb; Trusted_Connection=yes')
 
 input_query = '''SELECT
 ss_customer_sk AS customer,
@@ -115,14 +115,10 @@ column_info = {
 
 ## <a name="load-the-data-into-a-data-frame"></a>將資料載入資料框架
 
-查詢的結果會使用 revoscalepy **RxSqlServerData** 函數傳回 Python。 作為此流程的一部分，您將使用在先前指令碼中定義的資料行資訊。
+查詢的結果會使用 Pandas **read_sql** 函式傳回至 Python。 作為此流程的一部分，您將使用在先前指令碼中定義的資料行資訊。
 
 ```python
-data_source = revoscale.RxSqlServerData(sql_query=input_query, column_Info=column_info,
-                                        connection_string=conn_str)
-revoscale.RxInSqlServer(connection_string=conn_str, num_tasks=1, auto_cleanup=False)
-# import data source and convert to pandas dataframe.
-customer_data = pd.DataFrame(revoscale.rx_import(data_source))
+customer_data = pandas.read_sql(input_query, conn_str)
 ```
 
 現在會顯示資料框架的開頭，以驗證它看起來正確。

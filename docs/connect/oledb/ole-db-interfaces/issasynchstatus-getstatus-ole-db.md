@@ -1,5 +1,5 @@
 ---
-title: 'ISSAsynchStatus:: GetStatus (OLE DB) |Microsoft Docs'
+title: ISSAsynchStatus::GetStatus (OLE DB) | Microsoft Docs
 description: ISSAsynchStatus::GetStatus (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6f05b5c7c7b03fa1b68f3da5c6fbed29ed98a3c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994382"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
@@ -44,10 +44,10 @@ HRESULT GetStatus(
   
 ## <a name="arguments"></a>引數  
  *hChapter*[in]  
- 章節控制代碼。 如果輪詢的物件不是資料列集物件, 或作業不適用於某一章, 則應該將它設定為 DB_Null_HCHAPTER, 提供者會忽略它。  
+ 章節控制代碼。 如果輪詢的物件不是資料列集物件，或者作業不適用於章節，則其應該設定為 DB_NULL_HCHAPTER (提供者會加以忽略)。  
   
  *eOperation*[in]  
- 正在要求其非同步狀態的作業。 應使用下列值:  
+ 正在要求其非同步狀態的作業。 應使用下列值：  
   
  DBASYNCHOP_OPEN：取用者會要求有關非同步開啟或資料列集擴展的資訊，或有關資料來源物件的非同步初始化的資訊。 如果提供者是 OLE DB 2.5 相容且支援 URL 直接繫結的提供者，則取用者會要求有關非同步初始化或資料來源、資料列集、資料列或資料流物件擴展的資訊。  
   
@@ -97,7 +97,7 @@ HRESULT GetStatus(
  已在資料來源物件初始化期間取消非同步處理。 資料來源物件處於未初始化的狀態。  
   
  E_INVALIDARG  
- *Hchapter 設定*參數不正確。  
+ *hChapter* 參數錯誤。  
   
  E_UNEXPECTED  
  已在資料來源物件上呼叫 **ISSAsynchStatus::GetStatus** 方法，而尚未在資料來源物件上呼叫 **IDBInitialize::Initialize**。  
@@ -109,7 +109,7 @@ HRESULT GetStatus(
  E_FAIL  
  發生了提供者特定的錯誤。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **ISSAsynchStatus::GetStatus** 方法的行為與 **IDBAsynchStatus::GetStatus** 方法完全相同，不同的是如果中止資料來源物件的初始化，便會傳回 E_UNEXPECTED，而不是 DB_E_CANCELED (雖然 [ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) 會傳回 DB_E_CANCELED)。 這是因為資料來源物件在中止後不會保留在一般的廢止狀態，如此可以讓系統嘗試進一步的初始化作業。  
   
  如果資料列集是非同步地初始化或擴展，則必須支援此方法。  

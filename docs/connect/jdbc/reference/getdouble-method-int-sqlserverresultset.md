@@ -16,10 +16,10 @@ ms.assetid: 128df26a-9063-4bdf-a4fb-a077cbe7cfe1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3d9a02c6bf2fa6c9afa48c2192bfc9103c519174
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983658"
 ---
 # <a name="getdouble-method-int-sqlserverresultset"></a>getDouble 方法 (int) (SQLServerResultSet)
@@ -40,12 +40,12 @@ public double getDouble(int columnIndex)
  指出資料行索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- **Double**值。  
+ **double** 值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getDouble 方法是由 java.sql.ResultSet 介面中的 getDouble 方法指定。  
   
  這個方法會傳回所有具有 Java **double** 精確度的數字資料類型。  

@@ -1,5 +1,5 @@
 ---
-title: SQLServerPreparedStatement 類別 |Microsoft Docs
+title: SQLServerPreparedStatement 類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: a8481c06-fbba-432b-8c69-4f4619c20ad4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 96d2e01d4ca8d38b79906ee31cc5b50df0d8cb25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970766"
 ---
 # <a name="sqlserverpreparedstatement-class"></a>SQLServerPreparedStatement 類別
@@ -35,12 +35,12 @@ ms.locfileid: "67970766"
 public class SQLServerPreparedStatement  
 ```  
   
-## <a name="remarks"></a>Remarks  
- SQLServerPreparedStatement 提供的方法可讓您提供參數，作為任何原生 Java 類型及許多 Java 物件類型。 SQLServerPreparedStatement 會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sp_prepare** 預存程序來準備陳述式，然後在後續每一次執行該陳述式時重複使用傳回的陳述式控制代碼，通常會使用該使用者提供的不同參數。  
+## <a name="remarks"></a>備註  
+ SQLServerPreparedStatement 提供的方法可讓您提供參數，作為任何原生 Java 類型及許多 Java 物件類型。 SQLServerPreparedStatement 會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**sp_prepare** 預存程序來準備陳述式，然後在後續每一次執行該陳述式時重複使用傳回的陳述式控制代碼，通常會使用該使用者提供的不同參數。  
   
  SQLServerPreparedStatement 支援批次處理，也就是一組備妥的陳述式會在單一資料庫來回行程中執行，以改善執行階段效能。  
   
- 這個類別支援解除包裝為 SQLServerPreparedStatement 類別、ISQLServerPreparedStatement 介面、JAVA.sql.preparedstatement 介面, 以及 SQLServerStatement 所支援的類別和介面來解除包裝。 如需詳細資訊, 請參閱包裝函式[和介面](../../../connect/jdbc/wrappers-and-interfaces.md)。  
+ 這個類別支援解除包裝為 SQLServerPreparedStatement 類別、ISQLServerPreparedStatement 介面、java.sql.PreparedStatement 介面，以及 SQLServerStatement 支援來解除包裝的類別和介面。 如需詳細資訊，請參閱[包裝函式與介面](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

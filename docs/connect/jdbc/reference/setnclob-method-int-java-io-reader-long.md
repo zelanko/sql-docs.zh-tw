@@ -1,5 +1,5 @@
 ---
-title: setNClob 方法 (int, java. io. 讀取器, long) |Microsoft Docs
+title: setNClob 方法 (int, java.io.Reader, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 11071f8f-0e9b-45f0-b600-aaef7e2815d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dae9fbeb16a5b9c9c881e4250206b7f83344ef78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973802"
 ---
 # <a name="setnclob-method-int-javaioreader-long"></a>setNClob 方法 (int, java.io.Reader, long)
@@ -47,7 +47,7 @@ public final void setNClob(int parameterIndex,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 setNClob 方法是由 java.sql.PreparedStatement 介面中的 setNClob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

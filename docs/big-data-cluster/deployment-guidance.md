@@ -9,14 +9,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 818ffbb7a8957fbcec67e6686b12a731397b6501
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 94e2fe49e52ed224a35183f9629bf8eeab112d17
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127380"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831608"
 ---
-# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -33,7 +33,7 @@ SQL Server 巨量資料叢集會部署為 Kubernetes 叢集上的 Docker 容器�
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- 適用於 Azure Data Studio 的 SQL Server 2019 延伸模組
+- 適用於 Azure Data Studio 的[資料虛擬化延伸模組](../azure-data-studio/data-virtualization-extension.md)
 
 ## <a id="prereqs"></a> Kubernetes 先決條件
 
@@ -48,13 +48,13 @@ SQL Server 巨量資料叢集會部署為 Kubernetes 叢集上的 Docker 容器�
 
 您可以選擇以下列三種方式中的任一種來部署 Kubernetes：
 
-| 在下列項目上部署 Kubernetes： | Description | 連結 |
+| 在下列項目上部署 Kubernetes： | 描述 | 連結 |
 |---|---|---|
 | **Azure Kubernetes Service (AKS)** | Azure 中的受控 Kubernetes 容器服務。 | [指示](deploy-on-aks.md) |
 | **單一或多部電腦 (`kubeadm`)** | 使用 `kubeadm`，在實體或虛擬機器上部署 Kubernetes 叢集 | [指示](deploy-with-kubeadm.md) |
 
 > [!TIP]
-> 您也可以在一個步驟中編寫部署 AKS 和巨量資料叢集的指令碼。 如需詳細資訊，請參閱如何在 [Python 指令碼](quickstart-big-data-cluster-deploy.md)或 Azure Data Studio [筆記本](deploy-notebooks.md)中執行此動作。
+> 您也可以透過單一步驟編寫部署 AKS 和巨量資料叢集的指令碼。 如需詳細資訊，請參閱如何在 [Python 指令碼](quickstart-big-data-cluster-deploy.md)或 Azure Data Studio [筆記本](deploy-notebooks.md)中執行此動作。
 
 ### <a name="verify-kubernetes-configuration"></a>確認 Kubernetes 組態
 
@@ -169,13 +169,13 @@ azdata bdc create --accept-eula=yes
 
 下列環境變數用於不會儲存於部署組態檔中的安全性設定。 請注意，您可以在組態檔中設定認證以外的 Docker 設定。
 
-| 環境變數 | 需求 |Description |
+| 環境變數 | 需求 |描述 |
 |---|---|---|
-| `AZDATA_USERNAME` | 必要項 |SQL Server 巨量資料叢集管理員的使用者名稱。 SQL Server 主要執行個體中會建立具有相同名稱的系統管理員登入。 基於安全性最佳做法，`sa` 帳戶已停用。 |
-| `AZDATA_PASSWORD` | 必要項 |以上所建立使用者帳戶的密碼。 `root` 使用者會使用相同的密碼來保護 Knox 閘道和 HDFS。 |
+| `AZDATA_USERNAME` | 必要 |SQL Server 巨量資料叢集管理員的使用者名稱。 SQL Server 主要執行個體中會建立具有相同名稱的系統管理員登入。 基於安全性最佳做法，`sa` 帳戶已停用。 |
+| `AZDATA_PASSWORD` | 必要 |以上所建立使用者帳戶的密碼。 `root` 使用者會使用相同的密碼來保護 Knox 閘道和 HDFS。 |
 | `ACCEPT_EULA`| 第一次使用 `azdata` 時的必要項| 設定為 [是]。 設定為環境變數時，會將 EULA 套用至 SQL Server 和 `azdata`。 如果未設定為環境變數，您可以在第一次使用 `azdata` 命令時包含 `--accept-eula=yes`。|
-| `DOCKER_USERNAME` | 選擇性 | 用來存取容器映像的使用者名稱，以防它們儲存於私人存放庫中。 如需如何使用私人 Docker 存放庫來進行巨量資料叢集部署的詳細資訊，請參閱[離線部署](deploy-offline.md)主題。|
-| `DOCKER_PASSWORD` | 選擇性 |用來存取上述私人存放庫的密碼。 |
+| `DOCKER_USERNAME` | 選用 | 用來存取容器映像的使用者名稱，以防它們儲存於私人存放庫中。 如需如何使用私人 Docker 存放庫來進行巨量資料叢集部署的詳細資訊，請參閱[離線部署](deploy-offline.md)主題。|
+| `DOCKER_PASSWORD` | 選用 |用來存取上述私人存放庫的密碼。 |
 
 呼叫 `azdata bdc create` 之前，必須先設定這些環境變數。 如果未設定任何變數，系統就會提示您輸入。
 
@@ -193,7 +193,8 @@ SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> 您必須針對 Knox 閘道使用 `root` 使用者來搭配上述密碼。 `root` 是此基本驗證 (使用者名稱/密碼) 設定中唯一支援的使用者。 針對 SQL Server 主要，搭配上述密碼使用的佈建使用者名稱為 `sa`。
+> 您必須針對 Knox 閘道使用 `root` 使用者來搭配上述密碼。 `root` 是此基本驗證 (使用者名稱/密碼) 中唯一支援的使用者。
+> 若要使用基本驗證連線到 SQL Server，請使用與 AZDATA_USERNAME 和 AZDATA_PASSWORD [環境變數](#env)相同的值。 
 
 
 設定環境變數之後，您必須執行 `azdata bdc create` 來觸發部署。 此範例會使用上方所建立的叢集組態設定檔：
@@ -227,7 +228,7 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> 由於下載巨量資料叢集元件的容器映像所需的時間，整個部署可能需要很長的時間。 不過，應該不會花費到數小時。 如果您在部署期間遇到問題，請參閱[監視和針對 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 進行疑難排解](cluster-troubleshooting-commands.md)。
+> 由於下載巨量資料叢集元件的容器映像需要時間，因此整個部署可能會很費時。 不過，應該不會花費到數小時。 部署時若發生問題，請參閱[監視及疑難排解[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md)。
 
 完成部署時，輸出會通知您成功：
 

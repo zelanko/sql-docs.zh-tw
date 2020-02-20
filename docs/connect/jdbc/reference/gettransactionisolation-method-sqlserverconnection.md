@@ -1,5 +1,5 @@
 ---
-title: getTransactionIsolation 方法 (SQLServerConnection) |Microsoft Docs
+title: getTransactionIsolation 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 179772e9-6572-4ce5-83c5-ab2b196cee67
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4b9a8b537e110f220203c0cda7d3ea27e8a6385e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978677"
 ---
 # <a name="gettransactionisolation-method-sqlserverconnection"></a>getTransactionIsolation 方法 (SQLServerConnection)
@@ -52,8 +52,8 @@ public int getTransactionIsolation()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getTransactionIsolation 方法是由連接介面中的 getTransactionIsolation 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getTransactionIsolation 方法是由 java.sql.Connection 介面中的 getTransactionIsolation 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

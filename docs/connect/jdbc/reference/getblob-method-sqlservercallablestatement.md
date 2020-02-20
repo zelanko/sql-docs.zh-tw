@@ -1,5 +1,5 @@
 ---
-title: getBlob 方法 (SQLServerCallableStatement) |Microsoft Docs
+title: getBlob 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e609b336-d40e-4d89-9130-6db7e6853541
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61a6eeb405018c2b9eebc01039b0b49a14e6d910
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953589"
 ---
 # <a name="getblob-method-sqlservercallablestatement"></a>getBlob 方法 (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67953589"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getBlob (int)](../../../connect/jdbc/reference/getblob-method-int.md)|使用 Java 程式設計語言，並配合所指定參數索引來擷取指定 JDBC BLOB 參數的值作為 Blob 物件。|  
 |[getBlob (java.lang.String)](../../../connect/jdbc/reference/getblob-method-java-lang-string.md)|使用 Java 程式設計語言，並配合指定的參數名稱來擷取所指定 JDBC BLOB 參數的值作為 Blob 物件。|  

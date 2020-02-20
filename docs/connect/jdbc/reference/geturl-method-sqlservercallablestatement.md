@@ -1,5 +1,5 @@
 ---
-title: getURL 方法 (SQLServerCallableStatement) |Microsoft Docs
+title: getURL 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 700f54ab-58c1-4e5f-a188-818366a119c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec8a1fc56fe5762093f78ce95453cc44d2f136f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978284"
 ---
 # <a name="geturl-method-sqlservercallablestatement"></a>getURL 方法 (SQLServerCallableStatement)
@@ -29,9 +29,9 @@ ms.locfileid: "67978284"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
-|[getURL (int)](../../../connect/jdbc/reference/geturl-method-int.md)|使用 Java 程式設計語言，並配合所指定的參數索引來擷取指定參數的值作為 URL 物件。|  
+|[getURL (int)](../../../connect/jdbc/reference/geturl-method-int.md)|使用 Java 程式設計語言，並配合指定的參數索引來擷取所指定參數值作為 URL 物件。|  
 |[getURL (java.lang.String)](../../../connect/jdbc/reference/geturl-method-java-lang-string.md)|使用 Java 程式設計語言，並配合指定的參數名稱來擷取指定參數的值作為 URL 物件。|  
   
 ## <a name="see-also"></a>另請參閱  

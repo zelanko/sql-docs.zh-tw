@@ -1,6 +1,6 @@
 ---
-title: 資料表和索引 |Microsoft Docs
-description: 使用適用于 SQL Server 的 OLE DB 驅動程式來建立、改變和 droping 資料表和索引
+title: 資料表與索引 | Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 來建立、變更和卸載資料表和索引
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0fc8aeed348f64c17894fa3432a7a81274ffbea4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015246"
 ---
 # <a name="tables-and-indexes"></a>資料表和索引
@@ -35,13 +35,13 @@ ms.locfileid: "68015246"
   
  建立或卸除資料表和索引的能力，取決於取用者應用程式使用者的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存取權限。 卸除資料表可藉由宣告式參考完整性條件約束或其他因數的存在，而受進一步的條件約束。  
   
- 大部分的應用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]程式目標都使用 sql-dmo, 而不是這些 OLE DB 驅動程式 SQL Server 介面。 SQL-DMO 是 OLE Automation 物件的集合，可支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 所有的管理功能。 以多個 OLE DB 提供者為目標的應用程式會使用這些受多個 OLE DB 提供者支援的一般 OLE DB 介面。  
+ 大部分以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 為目標的應用程式都使用 SQL-DMO，而不是這些 OLE DB Driver for SQL Server 介面。 SQL-DMO 是 OLE Automation 物件的集合，可支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 所有的管理功能。 以多個 OLE DB 提供者為目標的應用程式會使用這些受多個 OLE DB 提供者支援的一般 OLE DB 介面。  
   
  在提供者特定屬性集 DBPROPSET_SQLSERVERCOLUMN 中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會定義下列屬性。  
   
-|屬性識別碼|Description|  
+|屬性識別碼|描述|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|類型：VT_BSTR<br /><br /> R/W：寫入<br /><br /> 預設值：Null<br /><br /> 描述：此屬性只能用於 **ITableDefinition**。 在建立 [CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md) 時會使用這個屬性指定的字串<br /><br /> 陳述式。|  
+|SSPROP_COL_COLLATIONNAME|輸入：VT_BSTR<br /><br /> R/W︰寫入<br /><br /> 預設值：Null<br /><br /> 描述：此屬性只能用於 **ITableDefinition**。 在建立 [CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md) 時會使用這個屬性指定的字串<br /><br /> 陳述式。|  
   
 ## <a name="in-this-section"></a>本節內容  
   

@@ -1,5 +1,5 @@
 ---
-title: 步驟 3︰使用 Java 連線到 SQL 的概念證明 | Microsoft Docs
+title: 步驟 3：使用 Java 連線到 SQL 的概念證明 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,19 +11,19 @@ ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0def25f7fc19344c3548353bbd15ffa27e65caa
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027513"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>步驟 3︰使用 Java 連線到 SQL 的概念證明
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>步驟 3：使用 Java 連線到 SQL 的概念證明
   
-這個範例應該僅視為概念證明。 為了清楚起見, 範例程式碼已簡化, 不一定代表 Microsoft 建議的最佳作法。  
+這個範例只應被視為一個概念證明。 為了清楚起見，已將範例程式碼簡化，而其不一定代表 Microsoft 建議的最佳做法。  
   
-## <a name="step-1-connect"></a>步驟 1: 連接  
+## <a name="step-1-connect"></a>步驟 1:連線  
   
-使用連接類別來連接到 SQL Database。   
+使用連接類別連接到 SQL Database。   
   
 ```java  
 import java.sql.Connection;
@@ -54,8 +54,8 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-2-execute-a-query"></a>步驟 2：執行查詢  
-在此範例中, 連接到 Azure SQL Database、執行 SELECT 語句, 然後傳回選取的資料列。   
+## <a name="step-2-execute-a-query"></a>步驟 2:執行查詢  
+在此範例中，連接到 Azure SQL Database、執行 SELECT 陳述式，並傳回選取的資料列。   
   
 ```java  
 import java.sql.Connection;
@@ -99,8 +99,8 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-3-insert-a-row"></a>步驟 3: 插入資料列  
-在此範例中, 執行 INSERT 語句、傳遞參數, 並取出自動產生的主要索引鍵值。   
+## <a name="step-3-insert-a-row"></a>步驟 3：插入資料列  
+在此範例中，執行 INSERT 陳述式、傳遞參數，並且擷取自動產生的主索引鍵值。   
   
 ```java  
 import java.sql.Connection;

@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR 深入教學課程
-description: 在本教學課程中，您將了解如何使用 SQL Server Machine Learning R 整合來呼叫 RevoScaleR 函式。
+description: 在此教學課程系列中，您將了解如何使用 SQL Server 機器學習 R 整合來呼叫 RevoScaleR 函式。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 853f2e33ff4f801c3668a9f79bcec247dc13963e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: fc1f427659155b5379a681787a633b6037b4bd87
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727222"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918832"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>教學課程：搭配 SQL Server 資料使用 RevoScaleR R 函式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 是 Microsoft R 套件，可提供資料科學和機器學習工作負載的分散式和平行處理。 針對 SQL Server 中的 R 開發，**RevoScaleR** 是其中一個核心內建套件，包含用來建立資料來源物件、設定計算內容、管理套件的功能，以及最重要的功能：從匯入到視覺效果和分析，端對端使用資料。 SQL Server 中的機器學習演算法相依於 **RevoScaleR** 資料來源。 基於 **RevoScaleR** 的重要性，知道何時以及如何呼叫其函式是必要的技能。 
+在這個多部分的教學課程系列中，會為您介紹與資料科學相關聯工作的一些 **RevoScaleR** 函式。 在此程序中，您將會了解如何建立遠端計算內容、在本機與遠端計算內容之間移動資料，以及在遠端 SQL Server 上執行 R 程式碼。 您也會了解如何在本機與遠端伺服器上分析及繪製資料，以及如何建立及部署模型。
 
-在這個多部分的教學課程中，會為您介紹與資料科學相關聯工作的一些 **RevoScaleR** 函式。 在此程序中，您將了解如何建立遠端計算內容、在本機與遠端計算內容之間移動資料，以及在遠端 SQL Server 上執行 R 程式碼。 您也會了解如何在本機與遠端伺服器上分析和繪製資料，以及如何建立和部署模型。
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 是 Microsoft R 套件，可提供資料科學和機器學習工作負載的分散式和平行處理。 針對 SQL Server 中的 R 開發，**RevoScaleR** 是其中一個核心內建套件，包含用來建立資料來源物件、設定計算內容、管理套件的功能，以及最重要的功能：從匯入到視覺效果和分析，端對端使用資料。 SQL Server 中的機器學習演算法相依於 **RevoScaleR** 資料來源。 基於 **RevoScaleR** 的重要性，知道何時以及如何呼叫其函式是必要的技能。 
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -33,7 +33,7 @@ ms.locfileid: "73727222"
 
 + IDE，例如 RStudio 或 R 包含內建 RGUI.EXE 工具
 
-若要在本機與遠端計算內容之間來回切換，您需要兩個系統。 本機通常是具有資料科學工作負載足夠能力的開發工作站。 在此情況下，遠端會是已啟用 R 功能的 SQL Server。 
+若要在本機與遠端計算內容之間來回切換，您需要兩個系統。 本機通常是具有足夠資料科學工作負載能力的開發工作站。 在此情況下，遠端會是已啟用 R 功能的 SQL Server。 
 
 切換計算內容的前提是在本機和遠端系統上具有相同版本的 **RevoScaleR**。 在本機工作站上，您可以藉由安裝 Microsoft R Client 來取得 **RevoScaleR** 套件和相關提供者。
 
@@ -49,7 +49,7 @@ ms.locfileid: "73727222"
 
 R 開發人員通常會使用 IDE 來撰寫 R 程式碼以及進行偵錯。 以下是一些建議：
 
-- **Visual Studio R 工具** (RTVS) 是免費的外掛程式，可提供 Intellisense、偵錯及 Microsoft R 的支援。您可以將它用於 R 伺服器和 SQL Server Machine Learning 服務。 若要下載，請參閱 [適用於 Visual Studio 的 R 工具](https://www.visualstudio.com/vs/rtvs/)。
+- **Visual Studio R 工具** (RTVS) 是免費的外掛程式，可提供 Intellisense、偵錯及 Microsoft R 的支援。您可以將它用於 R 伺服器和 SQL Server Machine Learning 服務。 若要下載，請參閱 [適用於 Visual Studio 的 R 工具](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019)。
 
 - **RStudio** 是其中一個比較常見的 R 開發環境。 如需詳細資訊，請參閱 [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/)。
 
@@ -71,4 +71,4 @@ R 開發人員通常會使用 IDE 來撰寫 R 程式碼以及進行偵錯。 以
 ## <a name="next-steps"></a>後續步驟
 
 > [!div class="nextstepaction"]
-> [第 1 課：建立資料庫與權限](deepdive-work-with-sql-server-data-using-r.md)
+> [教學課程 1：建立資料庫與權限](deepdive-work-with-sql-server-data-using-r.md)

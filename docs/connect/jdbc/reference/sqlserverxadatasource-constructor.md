@@ -1,5 +1,5 @@
 ---
-title: SQLServerXADataSource 的構造函式 () |Microsoft Docs
+title: SQLServerXADataSource 建構函式 ()| Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 03649d56-3319-4867-bef1-559dfd221b8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b76d6e6f88580585f00148d8b01be586e3937b96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970205"
 ---
 # <a name="sqlserverxadatasource-constructor-"></a>SQLServerXADataSource 建構函式 ()

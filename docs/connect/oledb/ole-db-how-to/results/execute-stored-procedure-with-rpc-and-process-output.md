@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 749a406a071c549f47ea41ead9fdf21574e0b523
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994731"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>使用 RPC 及處理輸出執行預存程序
@@ -38,13 +38,13 @@ ms.locfileid: "67994731"
   
 3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每一個參數標記各一個)。  
   
-4.  使用**IAccessor:: CreateAccessor**方法, 為已定義的參數建立存取子。 **CreateAccessor** 會從一組繫結建立存取子。  
+4.  使用 **IAccessor::CreateAccessor** 方法來建立已定義之參數的存取子。 **CreateAccessor** 會從一組繫結建立存取子。  
   
 5.  填入 DBPARAMS 結構。  
   
 6.  呼叫 **Execute** 命令 (在此情況下，為預存程序的呼叫)。  
   
-7.  處理資料列集, 並使用**IRowset:: release**方法加以釋放。  
+7.  處理資料列集，並使用 **IRowset::Release** 方法加以釋放。  
   
 8.  處理從預存程序收到的傳回碼和輸出參數值。  
   

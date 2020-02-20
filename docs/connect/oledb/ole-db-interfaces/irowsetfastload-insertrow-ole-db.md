@@ -1,5 +1,5 @@
 ---
-title: 'IRowsetFastLoad:: InsertRow (OLE DB) |Microsoft Docs'
+title: IRowsetFastLoad::InsertRow (OLE DB) | Microsoft Docs
 description: IRowsetFastLoad::InsertRow (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b01c63e74ee26cea327a01e3bf9a3595bc5012d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015456"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
@@ -27,7 +27,7 @@ ms.locfileid: "68015456"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  將資料列加入至大量複製資料列集。 如需範例, 請參閱[使用 IRowsetFastLoad &#40;OLE DB&#41;大量資料複製](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md), 並[使用 IRowsetFastLoad 和&#40;ISEQUENTIALSTREAM OLE DB&#41;將 BLOB 資料傳送到 SQL SERVER](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)。  
+  將資料列加入至大量複製資料列集。 如需範例，請參閱[使用 IRowsetFastLoad 大量複製資料 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) 和[使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 將 BLOB 資料傳送到 SQL SERVER &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -67,12 +67,12 @@ HRESULT InsertRow(
  DB_E_BADACCESSORTYPE  
  指定的存取子不是資料列存取子，或未指定取用者所擁有的記憶體。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  將取用者資料轉換成資料行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型時發生的錯誤會導致 OLE DB Driver for SQL Server 傳回 E_FAIL。 您可在任何 **InsertRow** 方法或僅在 **Commit** 方法上將資料傳輸至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 取用者應用程式可能會在使用錯誤的資料呼叫 **InsertRow** 方法很多次後，才收到發生了資料類型轉換錯誤的通知。 因為 **Commit** 方法會確保所有資料都由取用者正確指定，所以取用者可依需要適當地使用 **Commit** 方法來驗證資料。  
   
- SQL Server 大量複製資料列集的 OLE DB 驅動程式是僅限寫入。 SQL Server 的 OLE DB 驅動程式不會公開允許取用者查詢資料列集的任何方法。 若要終止處理，取用者可以不必呼叫 **Commit** 方法，即釋放它在 [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) 介面上的參考。 沒有功能可用來存取資料列集中取用者插入的資料列並變更其值，或將該資料列從資料列集個別地移除。  
+ OLE DB Driver for SQL Server 大量複製資料列集是唯寫的。 OLE DB Driver for SQL Server 沒有公開任何允許取用者查詢資料列集的方法。 若要終止處理，取用者可以不必呼叫 **Commit** 方法，即釋放它在 [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) 介面上的參考。 沒有功能可用來存取資料列集中取用者插入的資料列並變更其值，或將該資料列從資料列集個別地移除。  
   
- 大量複製的資料列會在伺服器上針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 設定格式。 資料列格式會受到已針對連接或工作階段所設定之任何選項 (例如 ANSI_PADDING) 的影響。 根據預設, 此選項會針對 SQL Server 的 OLE DB 驅動程式所建立的任何連接進行設定。  
+ 大量複製的資料列會在伺服器上針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 設定格式。 資料列格式會受到已針對連接或工作階段所設定之任何選項 (例如 ANSI_PADDING) 的影響。 根據預設，針對透過 OLE DB Driver for SQL Server 所建立的任何連線，此選項皆設定為開啟。  
   
 ## <a name="see-also"></a>另請參閱  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  

@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 8aa971142e1154f50ebc0cf17107682b47529c68
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70874618"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>顯示資料行與疏鬆資料行的目錄中繼資料 (OLE DB)
@@ -24,7 +24,7 @@ ms.locfileid: "70874618"
 
   此範例會建立包含三個資料行的資料表：疏鬆資料行、非疏鬆資料行的資料行，以及資料行集資料行。 接著，範例會顯示 OLE DB 旗標以顯示非疏鬆資料行和資料行集資料行的資料行和目錄中繼資料。  
   
- 此範例適用於 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更新版本。 如需稀疏資料行的詳細資訊, 請參閱[SQL Server OLE DB 驅動程式中的稀疏資料行支援](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)。  
+ 此範例適用於 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更新版本。 如需疏鬆資料行的詳細資訊，請參閱 [OLE DB Driver for SQL Server 中的疏鬆資料行支援](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)。  
   
 ## <a name="example"></a>範例  
  請確認您的 INCLUDE 環境變數包含的目錄內含 msoledbsql.h。  

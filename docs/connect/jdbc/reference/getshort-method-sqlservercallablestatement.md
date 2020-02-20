@@ -1,5 +1,5 @@
 ---
-title: getShort 方法 (SQLServerCallableStatement) |Microsoft Docs
+title: getShort 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 9e3c51bc-7285-4f28-92c8-cfa05e49da9e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5d382ef1b3a07abce21ccdf4b621d214f92d2007
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979794"
 ---
 # <a name="getshort-method-sqlservercallablestatement"></a>getShort 方法 (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67979794"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getShort (int)](../../../connect/jdbc/reference/getshort-method-int.md)|使用 Java 程式設計語言，並配合指定參數索引來擷取指定參數值當作 **short**。|  
 |[getShort (java.lang.String)](../../../connect/jdbc/reference/getshort-method-java-lang-string.md)|使用 Java 程式設計語言，並配合指定參數名稱來擷取指定參數的值當作 **short**。|  

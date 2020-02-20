@@ -1,5 +1,5 @@
 ---
-title: getConnection 方法 (SQLServerPooledConnection) |Microsoft Docs
+title: getConnection 方法 (SQLServerPooledConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 05bdb61f-26e8-480f-a1c1-1e46a8ed4b70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 352d867e444158cb2b8754a9cce1752bc4c2ee4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952695"
 ---
 # <a name="getconnection-method-sqlserverpooledconnection"></a>getConnection 方法 (SQLServerPooledConnection)
@@ -40,8 +40,8 @@ public java.sql.Connection getConnection()
 ## <a name="exceptions"></a>例外狀況  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- 這個 getConnection 方法是由 javax.xml.transform.dom.domresult. JAVAx.sql.pooledconnection 介面中的 getConnection 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getConnection 方法是由 javax.sql.PooledConnection 介面中的 getConnection 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerPooledConnection 方法](../../../connect/jdbc/reference/sqlserverpooledconnection-methods.md)   

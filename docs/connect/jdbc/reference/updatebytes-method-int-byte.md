@@ -1,5 +1,5 @@
 ---
-title: updateBytes 方法 (int, byte) |Microsoft Docs
+title: updateBytes 方法 (int, byte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 625f48ba-53d0-45a6-8fcb-643f1e0cbe8a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 60de0b0fd051ed67a2f2804443e419d454c2cb5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996912"
 ---
 # <a name="updatebytes-method-int-byte"></a>updateBytes 方法 (int, byte)

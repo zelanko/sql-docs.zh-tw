@@ -12,13 +12,13 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 950fa902d2772d131f5ecd626653ad58c97c0fb1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027888"
 ---
-# <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>適用於 SQL Server 的 Microsoft JDBC 驅動程式支援對照表
+# <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft JDBC Driver for SQL Server 支援對照表
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   此頁面包含 Microsoft JDBC Driver for SQL Server 的支援對照表與支援週期原則。  
@@ -32,7 +32,7 @@ ms.locfileid: "69027888"
   
 |驅動程式名稱|驅動程式套件版本|適用的 JAR|主要支援結束日期|
 |-|-|-|-|  
-|Microsoft JDBC Driver 7.4 for SQL Server|7.4|mssql-jdbc-6.4.0.jre8.jar 7.4.1. jre12 .jar<br> mssql-jdbc-6.4.0.jre8.jar 7.4.1. mssql-jdbc-7.2.2.jre11.jar .jar<br> mssql-jdbc-6.4.0.jre8.jar 7.4.1. mssql-jdbc-6.2.2.jre8.jar .jar|2024年8月2日|
+|Microsoft JDBC Driver 7.4 for SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|2024 年 8 月 2 日|
 |Microsoft JDBC Driver 7.2 for SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|2024 年 4 月 16 日|
 |Microsoft JDBC Driver 7.0 for SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|2023 年 7 月 31 日|  
 |Microsoft JDBC Driver 6.4 for SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|2023 年 2 月 27 日|    
@@ -55,7 +55,7 @@ ms.locfileid: "69027888"
   
 ## <a name="sql-version-compatibility"></a>SQL 的版本相容性  
   
-|驅動程式版本|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
+|驅動程式版本|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
 |-|-|-|-|-|-|-|-|-|-|-|
 |7.4|N|N|Y|Y|Y|Y|Y|Y|Y|
 |7.2|N|Y|Y|Y|Y|Y|Y|Y|N| 

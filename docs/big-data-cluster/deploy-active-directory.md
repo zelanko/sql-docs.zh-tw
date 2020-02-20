@@ -5,18 +5,18 @@ description: 了解如何升級 Active Directory 網域中的 SQL Server 巨量�
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/13/2019
+ms.date: 12/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 40b1101d9ee6c57db865282d1556f96aa4311a1f
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: e47af4ef20bc3dac6c61b9c5f851822348d36650
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127447"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253112"
 ---
-# <a name="deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-active-directory-mode"></a>以 Active Directory 模式部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>以 Active Directory 模式部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -49,7 +49,7 @@ ms.locfileid: "74127447"
 
 ### <a name="creating-an-ou"></a>建立 OU
 
-在網域控制站上，開啟 [Active Directory 使用者及電腦]  。 在左面板中，以滑鼠右鍵按一下您要建立 OU 的目錄，然後選取 [新增] -\> [組織單位]  ，然後遵循精靈的提示建立 OU。 或者，您可以使用 PowerShell 建立 OU：
+在網域控制站上，開啟 [Active Directory 使用者及電腦]  。 在左面板上，以滑鼠右鍵按一下您要建立 OU 的目錄，然後選取 [新增] -\> [組織單位]  ，然後遵循精靈的提示建立 OU。 或者，您可以使用 PowerShell 建立 OU：
 
 ```powershell
 New-ADOrganizationalUnit -Name "<name>" -Path "<Distinguished name of the directory you wish to create the OU in>"
@@ -89,7 +89,7 @@ BDC 網域服務帳戶 (DSA) 必須能在 OU 中建立使用者、群組和電�
 
     ![image18](./media/deploy-active-directory/image18.png)
 
-    - 按一下 [選取主體]  、插入 **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] DSA**，然後按一下 [確定]
+    - 按一下 [選取主體]  、插入 **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA**，然後按一下 [確定]
 
     - 將 [類型]  設定為 [允許] 
 
@@ -109,7 +109,7 @@ BDC 網域服務帳戶 (DSA) 必須能在 OU 中建立使用者、群組和電�
        - **建立使用者物件**
        - **刪除使用者物件**
 
-    - 按一下 **[確定]** 。
+    - 按一下 [檔案] &gt; [新增] &gt; [專案] 
 
 - 按一下 [新增] 
 
@@ -123,7 +123,7 @@ BDC 網域服務帳戶 (DSA) 必須能在 OU 中建立使用者、群組和電�
 
     - 捲動回頂端，然後選取 [重設密碼] 
 
-    - 按一下 **[確定]** 。
+    - 按一下 [檔案] &gt; [新增] &gt; [專案] 
 
 - 按一下 [新增] 
 
@@ -137,7 +137,7 @@ BDC 網域服務帳戶 (DSA) 必須能在 OU 中建立使用者、群組和電�
 
     - 捲動回頂端，然後選取 [重設密碼] 
 
-    - 按一下 **[確定]** 。
+    - 按一下 [檔案] &gt; [新增] &gt; [專案] 
 
 - 再按兩次 [確定]  ，關閉開啟的對話方塊
 
@@ -168,19 +168,22 @@ AD 整合需要下列參數。 使用本文稍後在下面顯示的 `config repl
 
 - `security.dnsIpAddresses`：網域控制站的 IP 位址清單
 
-- `security.domainControllerFullyQualifiedDns`:網域控制站的 FQDN 清單。 FQDN 包含網域控制站的機器/主機名稱。 如果您有多個網域控制站，您可以在這裡提供清單。 範例 `HOSTNAME.CONTOSO.LOCAL`
+- `security.domainControllerFullyQualifiedDns`:網域控制站的 FQDN 清單。 FQDN 包含網域控制站的機器/主機名稱。 如果您有多個網域控制站，您可以在這裡提供清單。 範例： `HOSTNAME.CONTOSO.LOCAL`
 
-- `security.realm` **選擇性參數**：在大部分的情況下，領域等於網域名稱。 如果它們不相同，請使用此參數來定義領域的名稱 (例如 `CONTOSO.LOCAL`)。
+- `security.realm`**選擇性參數**：在大部分的情況下，領域等於網域名稱。 如果它們不相同，請使用此參數來定義領域的名稱 (例如 `CONTOSO.LOCAL`)。
 
 - `security.domainDnsName`:您網域的名稱 (例如 `contoso.local`)。
 
-- `security.clusterAdmins`:此參數接受一個 AD 群組。 此群組的成員將會得到叢集中的系統管理員權限。 這表示他們將會有 SQL Server 中的系統管理員權限、HDFS 中的超級使用者權限，以及控制器中的系統管理員權限。
+- `security.clusterAdmins`:此參數接受**一個 AD 群組**。 此群組的成員將會得到叢集中的系統管理員權限。 這表示這些成員將會有 SQL Server 中的系統管理員權限、HDFS 中的超級使用者權限，以及控制器中的系統管理員權限。 **請注意，此群組必須先存在於 AD 中，才能開始部署。另請注意，此群組不能在 Active Directory 中設定 DomainLocal 範圍。設定網域本機範圍的群組將導致部署失敗。**
 
-- `security.clusterUsers`:大型資料叢集中屬於一般使用者 (無系統管理員權限) 的 AD 群組清單。
+- `security.clusterUsers`:大型資料叢集中屬於一般使用者 (無系統管理員權限) 的 AD 群組清單。 **請注意，在開始部署之前，這些群組就必須存在於 AD 中。另請注意，這些群組不能在 Active Directory 中設定 DomainLocal 範圍。設定網域本機範圍的群組將導致部署失敗。**
 
-- `security.appOwners` **選擇性參數**：AD 使用者或群組的清單，他們有權限建立、刪除和執行任何應用程式。
+- `security.appOwners`**選擇性參數**：AD 使用者或群組的清單，他們有權限建立、刪除和執行任何應用程式。 **請注意，在開始部署之前，這些群組就必須存在於 AD 中。另請注意，這些群組不能在 Active Directory 中設定 DomainLocal 範圍。設定網域本機範圍的群組將導致部署失敗。**
 
-- `security.appReaders` **選擇性參數**：AD 使用者或群組的清單，他們有權限執行任何應用程式。 
+- `security.appReaders`**選擇性參數**：AD 群組的清單，此群組的成員必須有執行任何應用程式的權限。 **請注意，在開始部署之前，這些群組就必須存在於 AD 中。另請注意，這些群組不能在 Active Directory 中設定 DomainLocal 範圍。設定網域本機範圍的群組將導致部署失敗。**
+
+**如何檢查 AD 群組範圍：** 
+[按一下這裡以取得檢查 AD 群組範圍的指示](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) \(英文\)，以判斷是否是 DomainLocal。
 
 如果您尚未初始化部署設定檔案，您可以執行此命令來取得設定的複本。
 
@@ -199,6 +202,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.dom
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainDnsName=contoso.local"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadminsgroup\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusersgroup\"]"
+#Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
 ```
 
 除了上述資訊之外，您還需要為不同叢集端點提供 DNS 名稱。 在部署時，系統會自動在您的 DNS 伺服器中建立使用所提供 DNS 名稱的 DNS 項目。 當您連線到不同叢集端點時，將會使用這些名稱。 例如，如果 SQL 主要執行個體的 DNS 名稱是 `mastersql`，您將會使用 `mastersql.contoso.local,31433` 來從工具連線到主要執行個體。
@@ -293,3 +297,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - 目前，安全 AD 模式只適用於 `kubeadm` 部署環境，而不適用於 AKS 上。 根據預設，`kubeadm-prod` 部署設定檔包含安全性區段。
 
 - 目前，每個網域只允許一個 BDC。 已針對未來版本規劃啟用每個網域多個 BDC。
+
+- 安全性設定中指定的任何 AD 群組都不能設定 DomainLocal 範圍。 您可以遵循[這些指示](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)，以檢查 AD 群組的範圍。

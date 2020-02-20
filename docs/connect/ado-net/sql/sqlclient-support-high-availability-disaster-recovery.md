@@ -1,27 +1,27 @@
 ---
 title: SqlClient 對高可用性、災害復原的支援
-description: 描述高可用性、嚴重損壞修復（AlwaysOn）可用性群組的 SqlClient 支援。
+description: 描述 SqlClient 對高可用性、災害復原 (AlwaysOn) 可用性群組的支援。
 ms.date: 08/15/2019
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: c60ade4c949574b589bf1e1e660564775b394527
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: b84790960455d60411cae14ae180be0d8891e4a2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451992"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258553"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient 對高可用性、災害復原的支援
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-本主題討論適用于 SQL Server 支援高可用性、嚴重損壞修復的 Microsoft SqlClient Data Provider--AlwaysOn 可用性群組。  SQL Server 2012 新增了 AlwaysOn 可用性群組功能。 如需 AlwaysOn 可用性群組的詳細資訊，請參閱《SQL Server 線上叢書》。  
+此主題將討論 Microsoft SqlClient Data Provider for SQL Server 對高可用性、災害復原 (AlwaysOn 可用性群組) 的支援。  SQL Server 2012 新增了 AlwaysOn 可用性群組功能。 如需 AlwaysOn 可用性群組的詳細資訊，請參閱《SQL Server 線上叢書》。  
   
 現在，您可以在連線屬性中指定 (高可用性、災害復原) 可用性群組 (AG) 的可用性群組接聽程式或 SQL Server 2012 容錯移轉叢集執行個體。 如果 SqlClient 應用程式連線到容錯移轉的 AlwaysOn 資料庫，原始連線會中斷，應用程式必須開啟新的連線，才能在容錯移轉後繼續工作。  
   
@@ -30,13 +30,13 @@ ms.locfileid: "72451992"
 > [!NOTE]
 >  增加連接逾時並實作連接重試邏輯可提高應用程式連接到可用性群組的機率。 此外，因為連線可能會由於容錯移轉而失敗，所以您應該實作連線重試邏輯，並重試失敗的連線，直到重新連線為止。  
   
-適用于 SQL Server 的 Microsoft SqlClient Data Provider 支援下列連接屬性：  
+Microsoft SqlClient Data Provider for SQL Server 支援下列連線屬性：  
   
 - `ApplicationIntent`  
   
 - `MultiSubnetFailover`  
   
-您可以用程式設計的方式修改這些連接字串關鍵字：  
+您可以透過下列方式，以程式設計方式修改這些連接字串關鍵字：  
   
 - <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
@@ -59,11 +59,11 @@ ms.locfileid: "72451992"
   
 - 連線到設定超過 64 個 IP 位址的 SQL Server 執行個體會導致連線失敗。  
   
-- 使用 `MultiSubnetFailover` 連線屬性之應用程式的行為不受驗證類型影響：SQL Server 驗證、Kerberos 驗證或 Windows 驗證。  
+- 使用 `MultiSubnetFailover` 連線屬性的應用程式行為不會受到驗證類型影響：SQL Server 驗證、Kerberos 驗證或 Windows 驗證。  
   
 - 提高 `Connect Timeout` 的值來配合容錯移轉時間，並減少應用程式連線重試次數。  
   
-- 不支援分散式交易。  
+- 不支援分散式工作階段。  
   
  如果唯讀路由不在作用中，在下列狀況下，連線到次要複本位置將會失敗：  
   
@@ -71,12 +71,12 @@ ms.locfileid: "72451992"
   
 - 如果應用程式使用 `ApplicationIntent=ReadWrite` (下文討論)，而且已針對唯讀存取設定次要複本位置。  
   
-唯讀次要複本不支援 <xref:Microsoft.Data.SqlClient.SqlDependency>。  
+唯讀的次要複本不支援 <xref:Microsoft.Data.SqlClient.SqlDependency>。  
   
 如果設定主要複本拒絕唯讀工作負載，而且連接字串包含 `ApplicationIntent=ReadOnly`，則連接會失敗。  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>從資料庫鏡像升級到使用多重子網路叢集  
-如果連接字串中有 `MultiSubnetFailover` 和 `Failover Partner` 連接關鍵字，或是使用了 `MultiSubnetFailover=True` 和 TCP 以外的通訊協定，就會發生連接錯誤（<xref:System.ArgumentException>）。 如果使用 `MultiSubnetFailover` 而且 SQL Server 傳回容錯移轉夥伴回應，指出其是資料庫鏡像配對的一部分，也會發生錯誤 (<xref:Microsoft.Data.SqlClient.SqlException>)。  
+如果連接字串中有 `MultiSubnetFailover` 和 `Failover Partner` 連線關鍵字，或者如果使用了 `MultiSubnetFailover=True` 和 TCP 以外的通訊協定，則將會發生連線錯誤 (<xref:System.ArgumentException>)。 如果使用 `MultiSubnetFailover` 而且 SQL Server 傳回容錯移轉夥伴回應，指出其是資料庫鏡像配對的一部分，也會發生錯誤 (<xref:Microsoft.Data.SqlClient.SqlException>)。  
   
 如果您將目前使用資料庫鏡像的 SqlClient 應用程式升級為多重子網路案例，應該移除 `Failover Partner` 連線屬性，並以設為 `True` 的 `MultiSubnetFailover` 加以取代，然後以可用性群組接聽程式取代連接字串中的伺服器名稱。 如果連接字串使用 `Failover Partner` 和 `MultiSubnetFailover=True`，驅動程式會發生錯誤。 不過，如果連接字串使用 `Failover Partner` 和 `MultiSubnetFailover=False` (或 `ApplicationIntent=ReadWrite`)，應用程式就會使用資料庫鏡像。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "72451992"
   
 `ApplicationIntent` 關鍵字不適用於舊版唯讀資料庫。  
   
-資料庫可以允許或不允許 AlwaysOn 目標資料庫上的讀取工作負載 （這是透過 `PRIMARY_ROLE` 和 `SECONDARY_ROLE`Transact SQL 語句的 `ALLOW_CONNECTIONS` 子句來完成）。  
+資料庫可以允許或不允許 AlwaysOn 目標資料庫上的讀取工作負載 (這會透過 `PRIMARY_ROLE` 和 `SECONDARY_ROLE` Transact-SQL 陳述式的 `ALLOW_CONNECTIONS` 子句來完成)。  
   
 `ApplicationIntent` 關鍵字用於啟用唯讀路由。  
   

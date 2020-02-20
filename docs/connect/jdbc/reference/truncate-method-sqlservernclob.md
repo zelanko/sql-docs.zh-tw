@@ -1,5 +1,5 @@
 ---
-title: 截斷方法 (SQLServerNClob) |Microsoft Docs
+title: truncate 方法 (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: b7e8210d-a724-4bae-832a-ae4c63031c9c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9ed19679cb1a173d015152a006f55660fe9f826
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968469"
 ---
 # <a name="truncate-method-sqlservernclob"></a>truncate 方法 (SQLServerNClob)
@@ -37,8 +37,8 @@ public void truncate(long len)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個截斷方法是由 NClob 介面中的截斷方法所指定。  
+## <a name="remarks"></a>備註  
+ 這個 truncate 方法是由 java.sql.NClob 介面中的 truncate 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerNClob 方法](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

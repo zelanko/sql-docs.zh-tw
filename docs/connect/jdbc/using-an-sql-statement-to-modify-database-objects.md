@@ -11,10 +11,10 @@ ms.assetid: f49ea499-df3c-4e85-9fc7-450fb99622a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de8e357328c151e3762f324dcbeba2525df53530
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026558"
 ---
 # <a name="using-an-sql-statement-to-modify-database-objects"></a>使用 SQL 陳述式修改資料庫物件
@@ -26,7 +26,7 @@ ms.locfileid: "69026558"
 若要這樣做，您必須先使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 方法建立 SQLServerStatement 物件。
 
 > [!NOTE]  
-> 在資料庫內修改物件的 SQL 陳述式稱為資料定義語言 (DDL) 陳述式。 這些包含語句`CREATE TABLE`, 例如、 `DROP TABLE`、 `CREATE INDEX`和。 `DROP INDEX` 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所支援之DDL 陳述式類型的詳細資訊，請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書。
+> 在資料庫內修改物件的 SQL 陳述式稱為資料定義語言 (DDL) 陳述式。 這些包含下列陳述式：`CREATE TABLE`、`DROP TABLE`、`CREATE INDEX` 與 `DROP INDEX`。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所支援之DDL 陳述式類型的詳細資訊，請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書。
 
 在下列範例中，[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫的開啟連線會傳入至函式、建構會在資料庫中建立簡易 TestTable 的 SQL 陳述式，然後執行陳述式並顯示傳回值。
 

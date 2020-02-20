@@ -1,5 +1,5 @@
 ---
-title: JDBC SQL driver 的程式設計指南 |Microsoft Docs
+title: JDBC SQL 驅動程式程式設計指南 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 99f0db69-ce1a-49cf-9c24-0b9abfa4e0c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0a2ee49a7df1eca698c4a711527fd5ce7f21eb3
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027827"
 ---
 # <a name="programming-guide-for-jdbc-sql-driver"></a>JDBC SQL 驅動程式程式設計指南

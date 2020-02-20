@@ -9,18 +9,22 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f984871729ea1d92b8da3b90751988fc33e741ff
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532044"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558313"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>設定叢集資源和服務的部署設定
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 從 `azdata` 管理工具內建的預先定義組態設定檔集合開始，您可以輕鬆地修改預設設定，使其更符合 BDC 工作負載需求。 設定檔結構可讓您針對資源的每項服務進行細微設定更新。
+
+觀看這段 13 分鐘的影片，以取得巨量資料叢集設定的概觀：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Cluster-Configuration/player?WT.mc_id=dataexposed-c9-niner]
 
 > [!TIP]
 > 如需如何部署高可用性服務的詳細資料，請參閱有關如何針對任務關鍵性元件 (例如 [SQL Server 主要](deployment-high-availability.md)或 [HDFS 名稱節點](deployment-high-availability-hdfs-spark.md)) 設定**高可用性**的文章。
@@ -210,7 +214,7 @@ azdata bdc config replace -c custom-bdc/control.json -j "$.spec.docker.imageTag=
 > 基於最佳做法，您必須使用版本特定的映像標籤，並避免使用 `latest` 映像標籤，因為這可能會導致版本不相符而造成叢集健全狀況問題。
 
 > [!TIP]
-> 巨量資料叢集部署必須能夠存取容器登錄和存放庫以從中提取容器映像。 如果您的環境無法存取預設 Microsoft 容器登錄，您可以執行離線安裝，先將所需的映像放入私人 Docker 存放庫。 如需離線安裝的詳細資訊，請參閱[執行 SQL Server 巨量資料叢集的離線部署](deploy-offline.md)。 請注意，您必須先設定 `DOCKER_USERNAME` 和 `DOCKER_PASSWORD` [環境變數](deployment-guidance.md#env)，然後發行部署，以確保部署工作流程能夠存取您的私人存放庫以從中提取映像。
+> 巨量資料叢集部署必須能夠存取容器登錄和存放庫以從中提取容器映像。 如果您的環境無法存取預設 Microsoft 容器登錄，您可以執行離線安裝，先將所需的映像放入私人 Docker 存放庫。 如需離線安裝的詳細資訊，請參閱[執行 SQL Server 巨量資料叢集的離線部署](deploy-offline.md)。 請注意，您必須先設定 `DOCKER_USERNAME` 與 `DOCKER_PASSWORD` [環境變數](deployment-guidance.md#env)，然後發行部署，以確保部署工作流程能夠存取您的私人存放庫以從中提取映像。
 
 ## <a id="clustername"></a> 變更叢集名稱
 
@@ -448,12 +452,12 @@ kubectl label node <kubernetesNodeName8> mssql-cluster=bdc mssql-resource=bdc-st
 
 ```bash
 azdata bdc config add -c custom-bdc/control.json -j "$.spec.clusterLabel=bdc"
-azdata bdc config add -c custom-bdc/control.json -j "$.spec.clusterLabel=bdc-shared"
+azdata bdc config add -c custom-bdc/control.json -j "$.spec.nodeLabel=bdc-shared"
 
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.master.spec.nodeLabel=bdc-master"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.compute-0.spec.nodeLabel=bdc-compute-pool"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.data-0.spec.nodeLabel=bdc-compute-pool"
-azdata bdc config add -c custom-bdc/bdc.json-j "$.spec.resources.storage-0.spec.nodeLabel=bdc-storage-pool"
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.storage-0.spec.nodeLabel=bdc-storage-pool"
 
 # below can be omitted in which case we will take the node label default from the control.json
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.nmnode-0.spec.nodeLabel=bdc-shared"

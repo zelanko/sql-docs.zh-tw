@@ -1,6 +1,6 @@
 ---
 title: Python 教學課程
-description: 本文說明 SQL Server 機器學習服務的 Python 教學課程。 了解如何執行 Python 指令碼。 建置、訓練 Python 模型，並部署至 SQL Server。 了解遠端和本機計算內容。 探索適用於資料科學和機器學習的 Microsoft Python 套件。
+description: 此文章描述 SQL Server 機器學習服務的 Python 教學課程。 了解如何在 SQL Server 中執行指令碼及建置機器學習模型。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/04/2019
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 80f714810acd8c04c80fe0b8abe5214a456f6dd6
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: b8caa58c178f68ebcf773fcef8f18509b85ad24a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199404"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908751"
 ---
 # <a name="python-tutorials-for-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的 Python 教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "71199404"
 
 ## <a name="python-tutorials"></a>Python 教學課程
 
-| 教學課程 | Description |
+| 教學課程 | 描述 |
 |-|-|
 | [使用線性迴歸來預測雪橇租賃](python-ski-rental-linear-regression.md) | 使用 Python 和線性迴歸來預測雪橇租賃的數量。 在 Azure Data Studio 中使用筆記本來準備資料及訓練模型，並使用 T-SQL 進行模型部署。 |
 | [使用 k-means 叢集將客戶分類](python-clustering-model.md) | 使用 Python 來開發及部署 K-Means 叢集模型，以將客戶分類。 在 Azure Data Studio 中使用筆記本來準備資料及訓練模型，並使用 T-SQL 進行模型部署。 |
@@ -40,7 +40,7 @@ ms.locfileid: "71199404"
 
 如果您不熟悉 SQL Server 機器學習服務，也可以嘗試 Python 快速入門。
 
-| 快速入門 | Description |
+| 快速入門 | 描述 |
 |-|-|
 | [Python 和 SQL Server 中的 Hello World](quickstart-python-create-script.md) | 了解如何使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，在 T-SQL 中呼叫 Python 的基本概念。 |
 | [在 SQL Server 中使用 Python 處理資料類型和物件](quickstart-python-data-structures.md) | 顯示 SQL Server 如何使用 Python Pandas 套件來處理資料結構。 |

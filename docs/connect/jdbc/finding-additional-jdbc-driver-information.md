@@ -1,5 +1,5 @@
 ---
-title: 尋找其他 JDBC 驅動程式資訊 |Microsoft Docs
+title: 尋找其他 JDBC 驅動程式資訊 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 75047e8c2ea7589247e0c32c7a4710eb6a6e7dbc
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028192"
 ---
 # <a name="finding-additional-jdbc-driver-information"></a>尋找其他 JDBC 驅動程式資訊
@@ -27,10 +27,10 @@ ms.locfileid: "69028192"
   
 |資源|描述|  
 |--------------|-----------------|  
-|[適用于 SQL Server GitHub 存放庫的 JDBC Driver](https://github.com/microsoft/mssql-jdbc)|此存放庫包含適用于 SQL Server 之 JDBC 驅動程式的原始程式碼。 使用此網站可直接與 JDBC driver 小組成員互動。 您可以在這裡提出問題、提供意見反應, 並直接參與驅動程式。|
+|[JDBC Driver for SQL Server GitHub 存放庫](https://github.com/microsoft/mssql-jdbc) \(英文\)|此存放庫包含 JDBC Driver for SQL Server 的原始程式碼。 使用此網站來與 JDBC 驅動程式小組的成員直接互動。 您可以在此針對驅動程式提出問題、提供意見反應，以及直接做出貢獻。|
 |[資料存取和儲存體程式開發人員中心](https://go.microsoft.com/fwlink?linkid=4173)|這個網站提供 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 所有資料存取技術的文件、技術文章、範例程式碼，以及其他資源。|  
 |[SQL Server 資料存取論壇](https://go.microsoft.com/fwlink/?LinkId=70651)|這個網站是社群論壇，提供使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、OLE DB、ODBC、ADO、MDAC、JDBC 或 SOAP/HTTP 來對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行資料存取。|  
-|[JDBC 部落格](https://go.microsoft.com/fwlink/?LinkId=124746)|此 blog 是用來提供有關的[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]資訊。|  
+|[JDBC 部落格](https://go.microsoft.com/fwlink/?LinkId=124746)|此部落格是用來提供關於 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的資訊。|  
   
 ## <a name="see-also"></a>另請參閱  
 

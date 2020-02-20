@@ -1,5 +1,5 @@
 ---
-title: SQLServerBlob 類別 |Microsoft Docs
+title: SQLServerBlob 類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 88bd8623-889d-4b5d-99ff-c85b32f3ff5c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98880980d11775b3c906b6e51a2d9deef50316bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972025"
 ---
 # <a name="sqlserverblob-class"></a>SQLServerBlob 類別
@@ -40,7 +40,7 @@ ms.locfileid: "67972025"
 public class SQLServerBlob  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  BLOB 會作為 IMAGE 資料類型儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,5 +1,5 @@
 ---
-title: commit 方法 (SQLServerXAResource) |Microsoft Docs
+title: commit 方法 (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 1d0f8612-fb4a-4eca-bc37-8342e1419fd4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85bc4f123dd29025e906d57d64f21746df5f2e07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955550"
 ---
 # <a name="commit-method-sqlserverxaresource"></a>commit 方法 (SQLServerXAResource)
@@ -47,7 +47,7 @@ public void commit(javax.transaction.xa.Xid xid,
 ## <a name="exceptions"></a>例外狀況  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 commit 方法是由 javax.transaction.xa.XAResource 介面中的 commit 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

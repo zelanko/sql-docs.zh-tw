@@ -1,5 +1,5 @@
 ---
-title: 正在透過 useFmtOnly 來抓取 JAVA.sql.parametermetadata |Microsoft Docs
+title: 透過 useFmtOnly 擷取 ParameterMetaData | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -15,26 +15,26 @@ author: rene-ye
 ms.author: v-reye
 manager: kenvh
 ms.openlocfilehash: 6877a6421622ab52a92b89502c68f47c4c315d93
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025499"
 ---
-# <a name="retrieving-parametermetadata-via-usefmtonly"></a>透過 useFmtOnly 抓取 JAVA.sql.parametermetadata
+# <a name="retrieving-parametermetadata-via-usefmtonly"></a>透過 useFmtOnly 擷取 ParameterMetaData
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  適用于 SQL Server 的 Microsoft JDBC Driver 包含從伺服器 ( **useFmtOnly**) 查詢參數中繼資料的替代方式。 這項功能最初是在驅動程式7.4 版中引進, 而且必須是解決已知問題`sp_describe_undeclared_parameters`的因應措施。
+  Microsoft JDBC Driver for SQL Server 包含從伺服器查詢參數中繼資料的另一種方式：**useFmtOnly**。 此功能最初是在驅動程式 7.4 版中所引進，而且需要用來作為 `sp_describe_undeclared_parameters` 中已知問題的因應措施。
   
-  驅動程式主要使用預存`sp_describe_undeclared_parameters`程式來查詢參數中繼資料, 因為在大部分情況下, 這是針對參數中繼資料抓取的建議方法。 不過, 在下列使用案例中, 執行預存程式目前會失敗:
+  驅動程式主要使用預存程序 `sp_describe_undeclared_parameters` 來查詢參數中繼資料，因為在大多數情況下，這是用於擷取參數中繼資料的建議方法。 不過，在下列使用案例中，執行預存程序目前會失敗：
   
--   針對 Always Encrypted 資料行
+-   對 Always Encrypted 資料行執行
   
 -   對暫存資料表和資料表變數執行
   
--   針對 views 
+-   對檢視執行 
   
-  這些使用案例的建議解決方案是剖析使用者的參數和資料表目標的 SQL 查詢, 然後使用`SELECT` `FMTONLY` [已啟用] 執行查詢。 下列程式碼片段會協助將功能視覺化。
+  這些使用案例的建議解決方案是針對參數和資料表目標剖析使用者的 SQL 查詢，然後執行已啟用 `FMTONLY` 的 `SELECT` 查詢。 下列程式碼片段有助於將功能視覺化。
   
 ```sql
 --create a normal table 'Foo' and a temporary table 'Bar'
@@ -53,9 +53,9 @@ SET FMTONLY OFF;
 ```
  
 ## <a name="turning-the-feature-onoff"></a>開啟/關閉功能 
- 功能**useFmtOnly**預設為關閉。 使用者可以藉由指定`useFmtOnly=true`, 透過連接字串來啟用這項功能。 例如： `jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;useFmtOnly=true;`＞。
+ **useFmtOnly** 功能預設為關閉。 使用者可以藉由指定 `useFmtOnly=true`，透過連接字串啟用此功能。 例如： `jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;useFmtOnly=true;` 。
  
- 或者, 也可以透過`SQLServerDataSource`取得此功能。
+ 或者，也可以透過 `SQLServerDataSource` 取得此功能。
  ```java
 SQLServerDataSource ds = new SQLServerDataSource();
 ds.setServerName(<server>);
@@ -69,12 +69,12 @@ try (Connection c = ds.getConnection()) {
 }
  ```
  
- 此功能也適用于語句層級。 使用者可以透過`PreparedStatement.setUseFmtOnly(boolean)`開啟/關閉功能。
+ 此功能也適用於陳述式層級。 使用者可以透過 `PreparedStatement.setUseFmtOnly(boolean)` 開啟/關閉此功能。
 > [!NOTE]  
->  驅動程式會優先處理 [連接層級] 屬性上的 [語句層級] 屬性。
+>  驅動程式會優先處理連線層級屬性上的陳述式層級屬性。
 
 ## <a name="using-the-feature"></a>使用此功能
-  一旦啟用, 驅動程式就會在內部開始使用新功能, `sp_describe_undeclared_parameters`而不是查詢參數中繼資料。 使用者不需要採取任何進一步的動作。
+  一旦啟用之後，驅動程式就會在查詢參數中繼資料時，於內部開始使用此新功能，而不使用 `sp_describe_undeclared_parameters`。 使用者不需採取任何進一步的動作。
 ```java
 final String sql = "INSERT INTO #Bar VALUES (?)";
 try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
@@ -90,10 +90,10 @@ try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
 }
 ```
 > [!NOTE]  
->  此功能僅支援`SELECT/INSERT/UPDATE/DELETE`查詢。 查詢的開頭應為4個支援的其中一個關鍵字, 或是一個[通用資料表運算式](https://docs.microsoft.com/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017), 後面接著其中一個支援的查詢。 不支援通用資料表運算式中的參數。
+>  此功能僅支援 `SELECT/INSERT/UPDATE/DELETE` 查詢。 查詢的開頭應為 4 個支援的關鍵字之一或一個[通用資料表運算式](https://docs.microsoft.com/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017)，後面接著其中一個支援的查詢。 不支援在通用資料表運算式內使用參數。
 
 ## <a name="known-issues"></a>已知問題
-  目前有些功能問題是 SQL 剖析邏輯中的缺陷所致。 這些問題可能會在後續的功能更新中獲得解決, 並在下方記載其相關的因應措施建議。
+  目前有些功能問題是 SQL 剖析邏輯中的缺陷所致。 這些問題可能會在未來對此功能的更新中獲得解決，並在下方記載其相關的因應措施建議。
   
 A. 使用「向前宣告」別名
 ```sql
@@ -107,7 +107,7 @@ DELETE fooAlias FROM Foo AS fooAlias WHERE c1 > ?;
 DELETE Foo FROM Foo fooAlias WHERE c1 > ?;
 ```
 
-B. 當資料表具有共用資料行名稱時, 不明確的資料行名稱
+B. 當資料表具有共用資料行名稱時，不明確的資料行名稱
 ```sql
 CREATE TABLE Foo(c1 int, c2 int, c3 int)
 CREATE TABLE Bar(c1 int, c2 int, c3 int)
@@ -118,7 +118,7 @@ SELECT c1,c2 FROM Foo WHERE c3 IN (SELECT c3 FROM Bar WHERE c1 > ? and c2 < ? an
 SELECT c1,c2 FROM Foo WHERE c3 IN (SELECT c3 FROM Bar b WHERE b.c1 = ? and b.c2 = ? and b.c3 = ?);
 ```
 
-C. 從具有參數的子查詢中選取
+C. 來自具有參數之子查詢的 SELECT
 ```sql
 
 CREATE TABLE Foo(c1 int)

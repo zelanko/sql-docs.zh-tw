@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 1ed49ebaffb46b8542247e67ff7c639cec1cca1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016112"
 ---
 # <a name="command-parameters"></a>命令參數
@@ -34,7 +34,7 @@ ms.locfileid: "68016112"
 {call SalesByCategory('Produce', ?)}  
 ```  
   
- 為了透過減少網路傳輸來改善效能，除非在執行命令之前呼叫了 **ICommandWithParameters::GetParameterInfo** 或 **ICommandPrepare::Prepare**，否則 OLE DB Driver for SQL Server 不會自動衍生參數資訊。 這表示 SQL Server 的 OLE DB 驅動程式不會自動執行:  
+ 為了透過減少網路傳輸來改善效能，除非在執行命令之前呼叫了 **ICommandWithParameters::GetParameterInfo** 或 **ICommandPrepare::Prepare**，否則 OLE DB Driver for SQL Server 不會自動衍生參數資訊。 這表示 OLE DB Driver for SQL Server 不會自動：  
   
 -   確認使用 **ICommandWithParameters::SetParameterInfo** 所指定之資料類型的正確性。  
   
@@ -53,11 +53,11 @@ ms.locfileid: "68016112"
 > [!NOTE]  
 >  在下列情況下，提供者不支援呼叫 **ICommandWithParameters::GetParameterInfo**：包含 FROM 子句的任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UPDATE 或 DELETE 陳述式、相依於包含參數之子查詢的任何 SQL 陳述式、在比較 (like) 或定量述詞的運算式中都包含參數標記的 SQL 陳述式，或是其中一個參數為函式參數的任何查詢。 在處理 SQL 陳述式批次時，提供者也不支援針對批次內第一個陳述式之後的陳述式中的參數標記呼叫 **ICommandWithParameters::GetParameterInfo**。 不允許在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 命令中使用註解 (/* \*/)。  
   
- SQL Server 的 OLE DB 驅動程式支援 SQL 語句命令中的輸入參數。 在程序呼叫命令中, SQL Server 的 OLE DB 驅動程式支援輸入、輸出和輸入/輸出參數。 在執行 (只有在沒有傳回任何資料列集時) 或應用程式已用盡所有傳回的資料列集時，輸出參數值就會傳回應用程式。 若要確保傳回的值有效，請使用 **IMultipleResults** 來強制資料列集取用。  
+ OLE DB Driver for SQL Server 支援 SQL 陳述式命令中的輸入參數。 在程序呼叫命令中，OLE DB Driver for SQL Server 支援輸入、輸出及輸入/輸出參數。 在執行 (只有在沒有傳回任何資料列集時) 或應用程式已用盡所有傳回的資料列集時，輸出參數值就會傳回應用程式。 若要確保傳回的值有效，請使用 **IMultipleResults** 來強制資料列集取用。  
   
  您不需要在 DBPARAMBINDINFO 結構中指定預存程序參數的名稱。 您可以使用 NULL 當作 *pwszName* 成員的值，表示 OLE DB Driver for SQL Server 應該忽略參數名稱，而且僅使用 **ICommandWithParameters::SetParameterInfo** 之 *rgParamOrdinals* 成員中指定的序數。 如果命令文字同時包含已命名和未命名的參數，您就必須在任何已命名的參數前面指定所有未命名的參數。  
   
- 如果指定預存程序參數的名稱，OLE DB Driver for SQL Server 就會檢查名稱，以便確保它是否有效。 SQL Server 的 OLE DB 驅動程式從取用者收到錯誤的參數名稱時, 會傳回錯誤。  
+ 如果指定預存程序參數的名稱，OLE DB Driver for SQL Server 就會檢查名稱，以便確保它是否有效。 當 OLE DB Driver for SQL Server 從取用者接收到錯誤的參數名稱時，就會傳回錯誤。  
   
 > [!NOTE]  
 >  為了公開 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 和使用者定義型別 (UDT) 的支援，OLE DB Driver for SQL Server 會實作新的 [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md) 介面。  

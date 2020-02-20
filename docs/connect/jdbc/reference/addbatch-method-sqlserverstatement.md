@@ -1,5 +1,5 @@
 ---
-title: addBatch 方法 (SQLServerStatement) |Microsoft Docs
+title: addBatch 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 95924a8b-a43c-4133-aff6-1d712e60e234
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c19e8cd92f7ee7aafcf6dd23e9c179f2557e628f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955993"
 ---
 # <a name="addbatch-method-sqlserverstatement"></a>addBatch 方法 (SQLServerStatement)
@@ -42,8 +42,8 @@ public void addBatch(java.lang.String sql)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 addBatch 方法是由 sql 語句介面中的 addBatch 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 addBatch 方法是由 java.sql.Statement 介面中的 addBatch 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

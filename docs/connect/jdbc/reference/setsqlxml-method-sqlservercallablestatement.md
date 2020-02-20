@@ -1,5 +1,5 @@
 ---
-title: setSQLXML 方法 (SQLServerCallableStatement) |Microsoft Docs
+title: setSQLXML 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: de095cb3-1111-4154-8996-3c2e529e3000
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf6338d0aee36fedd9011a8467b1d283d7dcae21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972823"
 ---
 # <a name="setsqlxml-method-sqlservercallablestatement"></a>setSQLXML 方法 (SQLServerCallableStatement)
@@ -42,7 +42,7 @@ public final void setSQLXML(java.lang.String parameterName,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 setSQLXML 方法是由 java.sql.CallableStatement 介面中的 setSQLXML 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,6 +1,6 @@
 ---
-title: 命令語法 |Microsoft Docs
-description: 命令語法和預存程式
+title: 命令語法 | Microsoft Docs
+description: 命令語法和預存程序
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 15d6d221c9e3435a3ba4c3f58c7d6b6e55314f29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016117"
 ---
 # <a name="command-syntax"></a>命令語法
@@ -27,7 +27,7 @@ ms.locfileid: "68016117"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驅動程式會辨識 DBGUID_SQL 宏指定的命令語法。 針對 SQL Server 的 OLE DB 驅動程式, 規範表示 ODBC SQL、ISO 和[!INCLUDE[tsql](../../../includes/tsql-md.md)]的混合物是有效的語法。 例如，下列 SQL 陳述式會使用 ODBC SQL 逸出序列來指定 LCASE 字串函數：  
+  OLE DB Driver for SQL Server 會辨識 DBGUID_SQL 巨集所指定的命令語法。 針對 OLE DB Driver for SQL Server，此規範表示 ODBC SQL、ISO 和 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 的混合物是有效的語法。 例如，下列 SQL 陳述式會使用 ODBC SQL 逸出序列來指定 LCASE 字串函數：  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  

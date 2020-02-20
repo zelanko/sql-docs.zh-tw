@@ -1,5 +1,5 @@
 ---
-title: 資料定義語句會強制執行交易認可。 | Microsoft Docs
+title: 資料定義陳述式是否會強制交易認可。 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bf04fa73-b9f1-4403-b6a0-e53d0d27c671
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5c1b6732f5cb22126ad9a102322a88df95606be7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955214"
 ---
 # <a name="datadefinitioncausestransactioncommit-method-sqlserverdatabasemetadata"></a>dataDefinitionCausesTransactionCommit 方法 (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public boolean dataDefinitionCausesTransactionCommit()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 dataDefinitionCausesTransactionCommit 方法是由 JAVA.sql.databasemetadata 介面中的 dataDefinitionCausesTransactionCommit 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 dataDefinitionCausesTransactionCommit 方法是由 java.sql.DatabaseMetaData 介面中的 dataDefinitionCausesTransactionCommit 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

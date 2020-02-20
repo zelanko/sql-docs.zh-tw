@@ -1,5 +1,5 @@
 ---
-title: isSearchable 方法 (SQLServerResultSetMetaData) |Microsoft Docs
+title: isSearchable 方法 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 10cf54f9-ef42-475e-8397-790306934573
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e875e7b9a3866ffcb165610c4225a63f28dfa4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977271"
 ---
 # <a name="issearchable-method-sqlserverresultsetmetadata"></a>isSearchable 方法 (SQLServerResultSetMetaData)
@@ -45,8 +45,8 @@ public boolean isSearchable(int column)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 isSearchable 方法是由 ResultSetMetaData 介面中的 isSearchable 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 isSearchable 方法是由 java.sql.ResultSetMetaData 介面中的 isSearchable 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSetMetaData 方法](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

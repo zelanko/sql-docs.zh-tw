@@ -1,5 +1,5 @@
 ---
-title: 針對連線能力進行疑難排解 |Microsoft Docs
+title: 連線能力疑難排解 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d6a64589b44de50328aa3384a51e29e0c2cc9a6e
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027623"
 ---
 # <a name="troubleshooting-connectivity"></a>連線能力疑難排解
@@ -28,7 +28,7 @@ ms.locfileid: "69027623"
   
     -   已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但未使用 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 網路公用程式，或是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，將 TCP/IP 安裝為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的網路通訊協定。  
   
-    -   TCP/IP 已安裝為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通訊協定，但未在 JDBC 連線 URL 中指定的連接埠上接聽。 預設連接埠為 1433，但可在產品安裝期間將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為在任何連接埠上接聽。 請確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正於連接埠 1433 上接聽。 或者，如果已變更通訊埠，則請確定 JDBC 連接 URL 中所指定的通訊埠符合已變更的通訊埠。 如需 JDBC 連接 Url 的詳細資訊, 請參閱[建立連接 url](../../connect/jdbc/building-the-connection-url.md)。  
+    -   TCP/IP 已安裝為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通訊協定，但未在 JDBC 連線 URL 中指定的連接埠上接聽。 預設連接埠為 1433，但可在產品安裝期間將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為在任何連接埠上接聽。 請確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正於連接埠 1433 上接聽。 或者，如果已變更通訊埠，則請確定 JDBC 連接 URL 中所指定的通訊埠符合已變更的通訊埠。 如需 JDBC 連線 URL 的詳細資訊，請參閱[建置連線 URL](../../connect/jdbc/building-the-connection-url.md)。  
   
     -   JDBC 連線 URL 中指定的電腦位址並不是指已安裝並啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的伺服器。  
   

@@ -1,5 +1,5 @@
 ---
-title: 包裝函式與介面 |Microsoft Docs
+title: 包裝函式與介面 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a74f5ccd8a36527dd7c37fc02150d11be632ba9
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025585"
 ---
 # <a name="wrappers-and-interfaces"></a>包裝函式與介面
@@ -27,9 +27,9 @@ ms.locfileid: "69025585"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援 java.sql.Wrapper 介面。 這個介面會提供一項機制，可讓您透過 Proxy 介面存取 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 特定的 JDBC API 延伸模組。
 
-.JAVA 介面會定義兩種方法: **isWrapperFor**和解除包裝。  **isWrapperFor** 方法會檢查指定的輸入物件是否實作這個介面。 **unwrap** 方法會傳回實作這個介面的物件，以便允許存取 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 特定的方法。
+java.sql.Wrapper 介面會定義兩個方法：**isWrapperFor** 和 **unwrap**。 **isWrapperFor** 方法會檢查指定的輸入物件是否實作這個介面。 **unwrap** 方法會傳回實作這個介面的物件，以便允許存取 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 特定的方法。
 
-**isWrapperFor**和  解除包裝方法的公開方式如下:
+**isWrapperFor** 和 **unwrap** 方法會公開如下：
 
 - [isWrapperFor 方法 &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)
 
@@ -41,7 +41,7 @@ ms.locfileid: "69025585"
 
 - [isWrapperFor 方法 &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)
 
-- [解除包裝&#40;方法 SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
+- [unwrap 方法 &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
 
 - [isWrapperFor 方法 &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)
 
@@ -49,11 +49,11 @@ ms.locfileid: "69025585"
 
 - [isWrapperFor 方法 &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)
 
-- [解除包裝&#40;方法 SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
+- [unwrap 方法 &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
 
 - [isWrapperFor 方法 &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)
 
-- [解除包裝&#40;方法 SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
+- [unwrap 方法 &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
 
 ## <a name="interfaces"></a>介面
 

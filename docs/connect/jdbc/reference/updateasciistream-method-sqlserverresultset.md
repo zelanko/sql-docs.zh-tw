@@ -1,5 +1,5 @@
 ---
-title: updateAsciiStream 方法 |Microsoft Docs
+title: updateAsciiStream 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 4959a0a9-ae55-4c4e-80a8-21119aaceb92
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91e006cbf64d28e7cb62c1957b46fc7e1ce7b1aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67997210"
 ---
 # <a name="updateasciistream-method-sqlserverresultset"></a>updateAsciiStream 方法 (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67997210"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[updateAsciiStream 方法 &#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/updateasciistream-method-int-java-io-inputstream.md)|使用 ASCII 資料流值，更新指定的資料行。|  
 |[updateAsciiStream (int, java.io.InputStream, int)](../../../connect/jdbc/reference/updateasciistream-method-int-java-io-inputstream-int.md)|使用資料行索引特有的 ASCII 資料流值，更新指定的資料行索引。|  

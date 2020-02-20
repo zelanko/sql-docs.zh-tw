@@ -1,5 +1,5 @@
 ---
-title: getDate 方法 (SQLServerCallableStatement) |Microsoft Docs
+title: getDate 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a4a969e7-e72c-4ac8-8b8c-ae2281e4e705
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0c308966a0aa474287709ac498db871c5202222b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983884"
 ---
 # <a name="getdate-method-sqlservercallablestatement"></a>getDate 方法 (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67983884"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getDate (int)](../../../connect/jdbc/reference/getdate-method-int.md)|在 Java 程式語言中使用給定的參數索引，擷取指定之參數的值來當做 java.sql.Date 物件。|  
 |[getDate (int, java.util.Calendar)](../../../connect/jdbc/reference/getdate-method-int-java-util-calendar.md)|在 Java 程式語言中使用指定的參數索引和 Calendar 物件，擷取指定的參數值來當作 java.sql.Date 物件。|  

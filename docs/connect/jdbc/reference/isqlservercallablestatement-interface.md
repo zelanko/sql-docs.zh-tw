@@ -1,5 +1,5 @@
 ---
-title: ISQLServerCallableStatement 介面 |Microsoft Docs
+title: ISQLServerCallableStatement 介面 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 030a1631-cfcd-41e0-beb5-47f93c01e8e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e30758f99b3b3aa1b40319fda91760b253d17a9a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977488"
 ---
 # <a name="isqlservercallablestatement-interface"></a>ISQLServerCallableStatement 介面
@@ -33,8 +33,8 @@ ms.locfileid: "67977488"
 public interface ISQLServerCallableStatement  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 這個介面是由[SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)所執行。  
+## <a name="remarks"></a>備註  
+ 此介面是由 [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)所實作。  
   
  此介面會公開下列 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 的特定方法：  
   

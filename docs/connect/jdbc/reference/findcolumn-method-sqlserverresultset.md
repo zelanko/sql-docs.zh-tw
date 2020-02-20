@@ -16,10 +16,10 @@ ms.assetid: 7c29994a-0b53-420b-8a9b-82a9eef08587
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 24aed500f5b345e2ba3762bdd7a888fc5f8f31ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954578"
 ---
 # <a name="findcolumn-method-sqlserverresultset"></a>findColumn 方法 (SQLServerResultSet)
@@ -46,7 +46,7 @@ public int findColumn(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 這個 findColumn 方法是由 sql-dmo 介面中的 findColumn 方法指定。  
+ 這個 findColumn 方法是由 java.sql.ResultSet 介面中的 findColumn 方法指定。  
   
  如果有多個資料行同名，findColumn 方法會傳回第一個區分大小寫的相符項目。 如果沒有任何區分大小寫的相符項目，這個方法會傳回第一個不區分大小寫的相符項目。  
   

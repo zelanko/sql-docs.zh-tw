@@ -17,13 +17,13 @@ ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b98533dcc1589e07bc8ae37562bf6734077a78f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935809"
 ---
-# <a name="sqlsrvconfigure"></a>sqlsrv_configure
+# <a name="sqlsrv_configure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 變更錯誤處理和記錄選項的設定。  
@@ -36,7 +36,7 @@ sqlsrv_configure( string $setting, mixed $value )
 ```  
   
 #### <a name="parameters"></a>參數  
-*$setting*：要設定的設定名稱。 如需設定的清單, 請參閱下表。  
+*$setting*：要設定的設定名稱。 請參閱下表中的設定清單。  
   
 *$value*：要對 *$setting* 參數中指定的設定套用的值。 此參數的可能值取決所指定的設定。 下表列出可能的組合。  
   
@@ -55,7 +55,7 @@ sqlsrv_configure( string $setting, mixed $value )
   
 (2) 如需記錄活動的詳細資訊，請參閱[記錄活動](../../connect/php/logging-activity.md)。  
   
-(3) 如需設定錯誤和警告處理的詳細資訊，請參閱[如何：使用 SQLSRV 驅動程式設定錯誤和警告處理](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)。  
+(3) 如需關於設定錯誤和警告處理的詳細資訊，請參閱[如何：使用 SQLSRV 驅動程式設定錯誤和警告處理](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)

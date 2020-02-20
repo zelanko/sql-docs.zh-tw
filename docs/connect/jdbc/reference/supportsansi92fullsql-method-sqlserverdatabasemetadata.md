@@ -1,5 +1,5 @@
 ---
-title: supportsANSI92FullSQL 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: supportsANSI92FullSQL 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 8877dc8c-26cd-4374-8ae8-ff7d20621130
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fcad4dae62be2e2185848acc2ea5aa3562e60ce1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969831"
 ---
 # <a name="supportsansi92fullsql-method-sqlserverdatabasemetadata"></a>supportsANSI92FullSQL 方法 (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean supportsANSI92FullSQL()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 如果支援,**則為 true** 。 否則為 **false**。  
+ 如果支援，則為 **true**。 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 supportsANSI92FullSQL 方法是由 JAVA.sql.databasemetadata 介面中的 supportsANSI92FullSQL 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 supportsANSI92FullSQL 方法是由 java.sql.DatabaseMetaData 介面中的 supportsANSI92FullSQL 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

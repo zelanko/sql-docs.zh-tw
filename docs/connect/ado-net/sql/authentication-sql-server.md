@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: eb528eb1045788469b0eb31491fd654997831468
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 115b4810fbe890862dfb63e278a583b3e12dbf54
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452317"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75250890"
 ---
 # <a name="authentication-in-sql-server"></a>在 SQL Server 中進行驗證
 
@@ -25,7 +25,7 @@ ms.locfileid: "72452317"
 
 SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。  
   
-- Windows 驗證是預設設定，也經常稱為整合式安全性，原因為這個 SQL Server 安全性模型會與 Windows 緊密整合。 特定的 Windows 使用者和群組帳戶受信任，可登入 SQL Server。 已通過驗證的 Windows 使用者不需要出示額外的認證。  
+- Windows 驗證是預設設定，也經常稱為整合式安全性，原因為這個 SQL Server 安全性模型會與 Windows 緊密整合。 特定的 Windows 使用者和群組帳戶要受到信任，才能登入 SQL Server。 已通過驗證的 Windows 使用者不需出示額外的認證。  
   
 - 混合模式支援 Windows 和 SQL Server 提供的驗證。 使用者名稱和密碼組會在 SQL Server 內進行維護。  
   
@@ -39,22 +39,22 @@ SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。
 ```  
   
 > [!NOTE]
-> 登入與資料庫使用者不同。 您必須在個別的作業中，將登入或 Windows 群組對應至資料庫使用者或角色。 接著，您可以將許可權授與使用者或角色，以存取資料庫物件。  
+> 登入與資料庫使用者不同。 您必須在個別作業中，將登入或 Windows 群組對應到資料庫使用者或角色。 接著，您可以將權限授與使用者或角色來存取資料庫物件。  
   
 ## <a name="authentication-scenarios"></a>驗證案例  
-在下列情況下，Windows 驗證通常是最佳選擇：  
+在下列情況中，Windows 驗證通常是最佳選擇：  
   
 - 有一個網域控制站。  
   
-- 應用程式和資料庫位於相同的電腦上。  
+- 應用程式和資料庫均位於相同電腦上。  
   
 - 您使用的是 SQL Server Express 或 LocalDB 執行個體。  
   
-在下列情況下，通常會使用 SQL Server 登入：  
+在下列情況中，通常會使用 SQL Server 登入：  
   
-- 如果您有工作組。  
+- 如果您有工作群組。  
   
-- 使用者從不同、不受信任的網域進行連接。  
+- 使用者從不受信任的不同網域進行連線。  
   
 - 網際網路應用程式，例如 ASP.NET。  
   
@@ -66,7 +66,7 @@ SQL Server 支援三種登入類型：
   
 - 本機 Windows 使用者帳戶或受信任的網域帳戶。 SQL Server 會仰賴 Windows 來驗證 Windows 使用者帳戶。  
   
-- Windows 群組。 授與 Windows 群組的存取權，可授與屬於群組成員之所有 Windows 使用者登入的存取權。  
+- Windows 群組。 為 Windows 群組授與存取權，可為屬於群組成員的所有 Windows 使用者登入授與存取權。  
   
 - SQL Server 登入。 SQL Server 會使用內部驗證方法確認登入作業，將使用者名稱和密碼雜湊儲存在 master 資料庫。  
   
@@ -77,15 +77,15 @@ SQL Server 支援三種登入類型：
 如果您必須使用混合模式驗證，則必須建立儲存在 SQL Server 中的 SQL Server 登入。 然後在執行階段時還需要提供 SQL Server 使用者名稱和密碼。  
   
 > [!IMPORTANT]
-> SQL Server 會使用名為 `sa` 的 SQL Server 登入進行安裝（「系統管理員」的縮寫）。 將強式密碼指派給 `sa` 登入，而不要在您的應用程式中使用 `sa` 登入。 `sa` 登入對應到 `sysadmin` 固定伺服器角色，這在整個伺服器上具有無法撤銷的系統管理認證。 如果攻擊者取得系統管理員的存取權，就不會有潛在損害的限制。 Windows `BUILTIN\Administrators` 群組 (本機系統管理員群組) 的所有成員，都會預設為 `sysadmin` 角色的成員，但可以從該角色移除。  
+> SQL Server 會使用名為 `sa` (「系統管理員」的縮寫) 的 SQL Server 登入進行安裝。 將強式密碼指派給 `sa` 登入，而不要在您的應用程式中使用 `sa` 登入。 `sa` 登入會對應到 `sysadmin` 固定伺服器角色，其在整部伺服器上具有無法撤銷的系統管理認證。 如果攻擊者取得系統管理員的存取權，對於潛在損害就沒有任何限制。 Windows `BUILTIN\Administrators` 群組 (本機系統管理員群組) 的所有成員，都會預設為 `sysadmin` 角色的成員，但可以從該角色移除。  
   
 > [!IMPORTANT]
-> 串連來自使用者輸入的連接字串，可能會讓您容易遭受連接字串插入式攻擊。 使用 <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder>，在執行時間建立語法有效的連接字串。 
+> 串連來自使用者輸入的連接字串，可能會讓您容易受到連接字串插入式攻擊。 在執行階段，使用 <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> 來建立語法正確的連接字串。 
   
 ## <a name="external-resources"></a>外部資源  
 如需詳細資訊，請參閱下列資源。  
   
-|資源|Description|  
+|資源|描述|  
 |--------------|-----------------|  
 |[主體](../../../relational-databases/security/authentication-access/principals-database-engine.md)|說明 SQL Server 中的登入及其他安全性主體。|  
   

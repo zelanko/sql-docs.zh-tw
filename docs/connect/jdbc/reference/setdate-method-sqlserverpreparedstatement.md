@@ -1,5 +1,5 @@
 ---
-title: setDate 方法 (SQLServerPreparedStatement) |Microsoft Docs
+title: setDate 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f81e5203-71eb-407e-b71f-1bdc722887a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc64a807ac219e5f726ec414ad13c9f7c83daca1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974393"
 ---
 # <a name="setdate-method-sqlserverpreparedstatement"></a>setDate 方法 (SQLServerPreparedStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67974393"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[setDate (int, java.sql.Date)](../../../connect/jdbc/reference/setdate-method-int-java-sql-date.md)|將指定的參數設定為給定的日期值。|  
 |[setDate (int, java.sql.Date, java.util.Calendar)](../../../connect/jdbc/reference/setdate-method-int-java-sql-date-java-util-calendar.md)|將指定的參數設定為給定的日期和行事曆值。|  

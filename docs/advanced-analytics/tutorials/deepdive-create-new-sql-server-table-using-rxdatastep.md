@@ -1,6 +1,6 @@
 ---
 title: 使用 rxDataStep 建立資料表
-description: 如何在 SQL Server 上使用 R 語言建立 SQL Server 資料表的教學課程逐步解說。
+description: RevoScaleR 教學課程 11：如何在 SQL Server 上使用 R 語言建立 SQL Server 資料表。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,28 +9,28 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f4ac51fc1affb4128abab017eb00cba4b56960fa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 99f693210b567523b74f851d1db68470cae2891d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727243"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947243"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>使用 rxDataStep 建立新的 SQL Server 資料表 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本課程是 [RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分，說明如何將 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server 搭配使用。
+此教學課程是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 11 個，該系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
 
-在本課程中，您會了解如何在記憶體內部資料框架、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內容以及本機檔案之間移動資料。
+在此教學課程中，您將會了解如何在記憶體內部資料框架、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內容與本機檔案之間移動資料。
 
 > [!NOTE]
-> 本課程使用不同的資料集。 航空公司誤點資料集是廣泛用於機器學習實驗的公用資料集。 這個範例中使用的資料檔案提供也可以在與其他產品範例相同的目錄中取得。
+> 此教學課程使用不同的資料集。 航空公司誤點資料集是廣泛用於機器學習實驗的公用資料集。 這個範例中使用的資料檔案提供也可以在與其他產品範例相同的目錄中取得。
 
 ## <a name="load-data-from-a-local-xdf-file"></a>從本機 XDF 檔案載入資料
 
-在本教學課程的前半部當中，您已經使用 **RxTextData** 函式將資料從文字檔案匯入到 R，並使用 **RxDataStep** 函式將資料移入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+在此教學課程系列的前半部中，您已經使用 **RxTextData** 函式將資料從文字檔匯入到 R，並使用 **RxDataStep** 函式將資料移入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
-本課程會採用不同的方法，並使用以 [XDF 格式](https://en.wikipedia.org/wiki/Extensible_Data_Format)所儲存檔案中的資料。 使用 XDF 檔案對資料執行一些輕量型轉換之後，您會將轉換的資料儲存至新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。
+此教學課程採用不同的方法，並使用以 [XDF 格式](https://en.wikipedia.org/wiki/Extensible_Data_Format) \(英文\) 所儲存檔案中的資料。 使用 XDF 檔案對資料執行一些輕量型轉換之後，您會將轉換的資料儲存至新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。
 
 **什麼是 XDF？**
 

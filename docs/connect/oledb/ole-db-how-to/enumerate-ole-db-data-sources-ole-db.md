@@ -1,6 +1,6 @@
 ---
-title: 列舉 OLE DB 的資料來源 (OLE DB) |Microsoft Docs
-description: 使用內含 MSOLEDBSQL.H 枚舉器列舉 OLE DB 的資料來源
+title: 列舉 OLE DB 資料來源 (OLE DB) | Microsoft Docs
+description: 使用 MSOLEDBSQL 列舉程式列舉 OLE DB 資料來源
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b9e14ef426a07705c51c0aa77c908dd1c2b8bbcf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994826"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>列舉 OLE DB 資料來源 (OLE DB)
@@ -39,15 +39,15 @@ ms.locfileid: "67994826"
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>若要列舉 OLE DB 資料來源  
   
-1.  藉由呼叫**ISourceRowset:: GetSourcesRowset**來取出來來源資料列集。  
+1.  呼叫 **ISourceRowset::GetSourcesRowset** 來擷取來源資料列集。  
   
-2.  藉由呼叫**GetColumnInfo:: IColumnInfo**, 尋找列舉值資料列集的描述。  
+2.  呼叫 **GetColumnInfo::IColumnInfo** 來尋找列舉程式資料列集的描述。  
   
 3.  從資料行資訊建立繫結結構。  
   
-4.  藉由呼叫**IAccessor:: CreateAccessor**來建立資料列集存取子。  
+4.  呼叫 **IAccessor::CreateAccessor** 來建立資料列集存取子。  
   
-5.  藉由呼叫**IRowset:: GetNextRows**來提取資料列。  
+5.  呼叫 **IRowset::GetNextRows** 來擷取資料列。  
   
 6.  呼叫 **IRowset::GetData** 來從資料列集的資料列複本擷取資料，然後加以處理。  
   

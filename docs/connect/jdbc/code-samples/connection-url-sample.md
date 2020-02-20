@@ -1,5 +1,5 @@
 ---
-title: 連線 URL 範例 |Microsoft Docs
+title: 連線 URL 範例 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 96fabc42-59d1-4cc0-93c5-db00cbe55e95
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e6d42e7743e7fba02992e641c18609371b2d1e5a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028353"
 ---
 # <a name="connection-url-sample"></a>連線 URL 範例

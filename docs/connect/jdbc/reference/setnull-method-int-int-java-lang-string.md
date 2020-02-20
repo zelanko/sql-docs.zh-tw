@@ -1,5 +1,5 @@
 ---
-title: setNull 方法 (int, int, java lang.ini) |Microsoft Docs
+title: setNull 方法 (int, int, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 43c74e06-2858-49ba-bae7-b88808e5fff4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e59b32581d25370fa86da417fd71c1eb7b67b33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973582"
 ---
 # <a name="setnull-method-int-int-javalangstring"></a>setNull 方法 (int, int, java.lang.String)
@@ -52,7 +52,7 @@ public final void setNull(int paramIndex,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 setNull 方法是由 java.sql.PreparedStatement 介面中的 setNull 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

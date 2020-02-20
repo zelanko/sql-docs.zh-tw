@@ -1,5 +1,5 @@
 ---
-title: supportsConvert 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: supportsConvert 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a5dbb5d8-41c2-48af-9b71-93a22f6a9b33
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9b46b0c7e4ae412fe925a7397f12e8f84e038e2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969613"
 ---
 # <a name="supportsconvert-method-sqlserverdatabasemetadata"></a>supportsConvert 方法 (SQLServerDatabaseMetaData)
@@ -29,7 +29,7 @@ ms.locfileid: "67969613"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[supportsConvert ()](../../../connect/jdbc/reference/supportsconvert-method.md)|擷取值，此值指出這個資料庫是否支援在 SQL 型別之間使用 CONVERT 函數。|  
 |[supportsConvert (int, int)](../../../connect/jdbc/reference/supportsconvert-method-int-int.md)|擷取值，此值指出這個資料庫是否支援兩個給定 SQL 型別的 CONVERT。|  

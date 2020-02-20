@@ -1,5 +1,5 @@
 ---
-title: storesMixedCaseQuotedIdentifiers 方法 |Microsoft Docs
+title: storesMixedCaseQuotedIdentifiers 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 1ffa599c-d0c8-43b6-8e9b-7c856a846630
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f5fa0433b801ed9a0a3fc92cb3768b4cd727424
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969898"
 ---
 # <a name="storesmixedcasequotedidentifiers-method-sqlserverdatabasemetadata"></a>storesMixedCaseQuotedIdentifiers 方法 (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public boolean storesMixedCaseQuotedIdentifiers()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 storesMixedCaseQuotedIdentifiers 方法是由 JAVA.sql.databasemetadata 介面中的 storesMixedCaseQuotedIdentifiers 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 storesMixedCaseQuotedIdentifiers 方法是由 java.sql.DatabaseMetaData 介面中的 storesMixedCaseQuotedIdentifiers 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

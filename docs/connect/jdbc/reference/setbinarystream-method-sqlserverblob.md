@@ -1,5 +1,5 @@
 ---
-title: setBinaryStream 方法 (SQLServerBlob) |Microsoft Docs
+title: setBinaryStream 方法 (SQLServerBlob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: abcec31f-1a60-4765-9725-8cf7e9f1f8ab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4555dfb9256f3ffe2ba61e82fe90307991a5a580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975091"
 ---
 # <a name="setbinarystream-method-sqlserverblob"></a>setBinaryStream 方法 (SQLServerBlob)
@@ -46,7 +46,7 @@ public java.io.OutputStream setBinaryStream(long pos)
  java.sql.SQLException  
   
 ## <a name="remarks"></a>備註  
- 這個 setBinaryStream 方法是由 .java 介面中的 setBinaryStream 方法指定。  
+ 這個 setBinaryStream 方法是由 java.sql.Blob 介面中的 setBinaryStream 方法指定。  
   
  輸出資料流會從指定的位置開始覆寫 BLOB 中的資料，而且可以超過 BLOB 的初始長度。 指定位置 + 1 的值將會附加位元組。 傳遞位置 + 2 或更大 (或是零或零以下) 的值將會擲回位置錯誤。  
   

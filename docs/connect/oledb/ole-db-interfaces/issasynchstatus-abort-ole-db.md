@@ -1,5 +1,5 @@
 ---
-title: 'ISSAsynchStatus:: Abort (OLE DB) |Microsoft Docs'
+title: ISSAsynchStatus::Abort (OLE DB) | Microsoft Docs
 description: ISSAsynchStatus::Abort (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4cb57bfac5af957bd9f2f539b025f32b5f481d66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015434"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
@@ -43,7 +43,7 @@ HRESULT Abort(
  要中止作業之章節的控制代碼。 如果所呼叫的物件不是資料列集物件或是此作業不適用於章節，呼叫端必須將 *hChapter* 設定為 DB_NULL_HCHAPTER。  
   
  *eOperation*[in]  
- 要中止的作業。 應使用下列值:  
+ 要中止的作業。 應使用下列值：  
   
  DBASYNCHOP_OPEN：取消的要求適用於非同步開啟或擴展資料列集，或是非同步初始化資料來源物件。  
   
@@ -61,7 +61,7 @@ HRESULT Abort(
  發生了提供者特定的錯誤。  
   
  E_INVALIDARG  
- *Hchapter 設定*參數不是 DB_Null_HCHAPTER, 或*EOPERATION*不是 DBASYNCH_OPEN。  
+ *hChapter* 參數不是 DB_NULL_HCHAPTER 或 *eOperation* 不是 DBASYNCH_OPEN。  
   
  E_UNEXPECTED  
  已在尚未呼叫或完成 **IDBInitialize::Initialize** 的資料來源物件上呼叫 **ISSAsynchStatus::Abort**。  
@@ -72,7 +72,7 @@ HRESULT Abort(
   
  已在資料列集上呼叫 **ISSAsynchStatus::Abort**，這個資料列集已在其初始化階段非同步地取消。 此資料列集處於廢止狀態。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  中止資料列集或資料來源物件的初始化可能會讓該資料列集或資料來源物件處於廢止狀態，因此造成 **IUnknown** 方法以外的所有方法都會傳回 E_UNEXPECTED。 當發生這個情況時，取用者唯一可行的動作就是釋放此資料列集或資料來源物件。  
   
  呼叫 **ISSAsynchStatus::Abort** 並針對 *eOperation* 傳回 DBASYNCHOP_OPEN 以外的值將會傳回 S_OK。 這不表示此作業已被取消或完成。  

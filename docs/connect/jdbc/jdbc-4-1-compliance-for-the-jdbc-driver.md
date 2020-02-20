@@ -1,5 +1,5 @@
 ---
-title: JDBC driver 的 JDBC 4.1 合規性 |Microsoft Docs
+title: 適用於 JDBC 驅動程式的 JDBC 4.1 合規性 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f087fd40-8451-478e-b465-43112c711515
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ea3d783fb98d22b3937016c9e6e60ed625ffca2d
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027976"
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>適用於 JDBC 驅動程式的 JDBC 4.1 合規性
@@ -52,7 +52,7 @@ ms.locfileid: "69027976"
   
 |新功能|描述|  
 |-----------------|-----------------|  
-|新的逸出函數<br /><br /> 限制傳回的資料列逸出|部分支援<br /><br /> Escape 語法: 限制\<資料列 > [OFFSET < 資料列位移 >](using-sql-escape-sequences.md)。|  
+|新的逸出函數<br /><br /> 限制傳回的資料列逸出|部分支援<br /><br /> 逸出語法：LIMIT \<rows> [OFFSET <row_offset>](using-sql-escape-sequences.md).|  
   
  Microsoft JDBC Driver 4.2 for SQL Server 可使用下列資料類型對應，支援 Java 資料庫連線 API 4.1 規格。  
   

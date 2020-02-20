@@ -1,5 +1,5 @@
 ---
-title: setNCharacterStream 方法到讀取器物件-字串 |Microsoft Docs
+title: setNCharacterStream 方法設定為 Reader 物件 - string | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: fd19fbb8-a878-4d98-a584-e4969d649844
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 34eb40d6c36f5c1586ac690de5e9fc354c8fd1f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973867"
 ---
 # <a name="setncharacterstream-method-javalangstring-javaioreader"></a>setNCharacterStream 方法 (java.lang.String, java.io.Reader)
@@ -42,10 +42,10 @@ public final void setNCharacterStream(java.lang.String parameterName,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 setNCharacterStream 方法是由 JAVA.sql.callablestatement 介面中的 setNCharacterStream 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 setNCharacterStream 方法是由 java.sql.CallableStatement 介面中的 setNCharacterStream 方法指定。  
   
- 這個方法應該用於**NCHAR**、 **NVARCHAR**、 **NTEXT**和**XML**資料類型。  
+ 此方法應該用於 **NCHAR**、**NVARCHAR**、**NTEXT** 和 **XML** 資料類型。  
   
 ## <a name="see-also"></a>另請參閱  
  [setNCharacterStream 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlservercallablestatement.md)   

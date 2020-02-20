@@ -1,5 +1,5 @@
 ---
-title: getBigDecimal 方法 (int, int) |Microsoft Docs
+title: getBigDecimal 方法 (int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: d9351b35-7046-4852-a612-72d4c46b2bbb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 77fa7092b7835e400b7ced8c7dbc0368188b0eb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954009"
 ---
 # <a name="getbigdecimal-method-int-int"></a>getBigDecimal 方法 (int, int)
@@ -48,13 +48,13 @@ public java.math.BigDecimal getBigDecimal(int index,
  **int**，指出小數點右邊的位數。  
   
 ## <a name="return-value"></a>傳回值  
- JAVA.math.bigdecimal 物件。  
+ BigDecimal 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getBigDecimal 方法是由 JAVA.sql.callablestatement 介面中的 getBigDecimal 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getBigDecimal 方法是由 java.sql.CallableStatement 介面中的 getBigDecimal 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [getBigDecimal 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   

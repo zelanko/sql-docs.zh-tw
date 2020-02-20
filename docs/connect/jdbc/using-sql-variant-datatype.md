@@ -1,5 +1,5 @@
 ---
-title: 使用 Sql_variant 資料類型 |Microsoft Docs
+title: 使用 Sql_variant 資料類型 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,26 +11,26 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cdede5d41d5ad7fc22cfed3f1efa9f95612032ca
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025845"
 ---
 # <a name="using-sql_variant-data-type"></a>使用 Sql_variant 資料類型
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-從版本 6.3.0, JDBC 驅動程式支援 SQL_variant 資料類型。 使用資料表值參數和 BulkCopy 之類的功能時, 也支援 Sql_variant, 此頁面稍後會提到一些限制。 並非所有資料類型都可以儲存在 SQL_variant 資料類型中。 如需支援 SQL_variant 的資料類型清單, 請查看 SQL Server [檔](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql)。
+從 6.3.0 版開始，JDBC 驅動程式支援 sql_variant 資料類型。 在使用資料表值參數和大量複製等功能的情況下，也支援 sql_variant，但有些限制 (將在本頁面稍後詳述)。 並非所有資料類型都可以儲存在 sql_variant 資料類型中。 如需 sql_variant 支援的資料類型清單，請查看 SQL Server [文件](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql)。
 
-##  <a name="populating-and-retrieving-a-table"></a>填入和抓取資料表:
-假設有一個資料表的 SQL_variant 資料行為:
+##  <a name="populating-and-retrieving-a-table"></a>填入及擷取資料表：
+假設有一個資料表，其中有一個 sql_variant 資料行如下：
 
 ```sql
 CREATE TABLE sampleTable (col1 sql_variant)  
 ```
 
-使用語句插入值的範例腳本:
+使用陳述式插入值的範例指令碼：
 
 ```java
 try (Statement stmt = connection.createStatement()){
@@ -38,7 +38,7 @@ try (Statement stmt = connection.createStatement()){
 }
 ```
 
-使用備妥的語句來插入值:
+使用備妥的陳述式插入值：
 
 ```java
 try (PreparedStatement preparedStatement = con.prepareStatement("insert into sampleTable values (?)")) {
@@ -47,7 +47,7 @@ try (PreparedStatement preparedStatement = con.prepareStatement("insert into sam
 }
 ```      
 
-如果已知所傳遞資料的基礎類型, 則可以使用個別的 setter。 例如, 插入`preparedStatement.setInt()`整數值時, 可以使用。
+如果要傳遞之資料的底層類型為已知，便可以使用相對應 setter。 例如，可以在插入整數值時使用 `preparedStatement.setInt()`。
 
 ```java
 try (PreparedStatement preparedStatement = con.prepareStatement("insert into table values (?)")) {
@@ -56,7 +56,7 @@ try (PreparedStatement preparedStatement = con.prepareStatement("insert into tab
 }
 ```
 
-若要從資料表讀取值, 可以使用個別的 getter。 例如, 如果`getInt()`已知`getString()`來自伺服器的值, 就可以使用或方法:    
+若要從資料表讀取值，可以使用相對應的 getter。 例如，如果來自伺服器的值為已知，便可以使用 `getInt()` 或 `getString()` 方法：    
 
 ```java
 try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("select * from sampleTable ")) {
@@ -65,14 +65,14 @@ try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("sele
 }
 ```
 
-## <a name="using-stored-procedures-with-sql_variant"></a>搭配 SQL_variant 使用預存程式:   
-擁有預存程式, 例如:     
+## <a name="using-stored-procedures-with-sql_variant"></a>搭配 sql_variant 使用預存程序：   
+具有如下的預存程序：     
 
 ```java
 String sql = "CREATE PROCEDURE " + inputProc + " @p0 sql_variant OUTPUT AS SELECT TOP 1 @p0=col1 FROM sampleTable ";
 ``` 
     
-必須註冊輸出參數:
+必須註冊輸出參數：
 
 ```java
 try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc + " (?) }")) {
@@ -81,14 +81,14 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 }
 ```
 
-## <a name="limitations-of-sql_variant"></a>Sql_variant 的限制:
-- 當您使用 TVP 來填入在 SQL_variant 中`datetime`儲存`smalldatetime` `getDateTime()` / / `date`值的資料表時, 在上呼叫/ `getSmallDateTime()` / `getDate()`ResultSet 無法運作, 而且會擲回下列例外狀況:
+## <a name="limitations-of-sql_variant"></a>sql_variant 的限制：
+- 使用 TVP 來搭配儲存在 sql_variant 中的 `datetime`/`smalldatetime`/`date` 值填入資料表時，在 ResultSet 上呼叫 `getDateTime()`/`getSmallDateTime()`/`getDate()` 並不會運作，且會擲回下列例外狀況：
     
     `Java.lang.String cannot be cast to java.sql.Timestamp`
    
-    因應措施`getString()` : `getObject()`請改用或。 
+    因應措施：改為使用 `getString()` 或 `getObject()`。 
     
-- 不支援使用 TVP 來填入資料表, 並在 SQL_variant 中傳送 null 值, 而且會擲回例外狀況:
+- 不支援使用 TVP 來填入資料表並在 sql_variant 中傳送 null 值，且會擲回例外狀況：
     
     `Inserting null value with column type sql_variant in TVP is not supported.`
 

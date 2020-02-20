@@ -1,5 +1,5 @@
 ---
-title: getURL 方法 (SQLServerDataSource) |Microsoft Docs
+title: getURL 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: dd0d5d2c-91fe-4b0f-a162-69d898ba176e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f3922e5cf97b6c7b5a795f295249950fd21a9f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978205"
 ---
 # <a name="geturl-method-sqlserverdatasource"></a>getURL 方法 (SQLServerDataSource)
@@ -37,7 +37,7 @@ public java.lang.String getURL()
 ## <a name="return-value"></a>傳回值  
  包含 URL 的**字串**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  基於安全性理由，您不應該在提供給 [setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md) 方法的 URL 中包含密碼。 原因是因為協力廠商 Java 應用程式伺服器會經常顯示其資料來源組態使用者介面中所設定的 URL 屬性值。 請改用 [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) 方法來設定密碼值。 這樣一來，Java 應用程式伺服器將不會顯示其資料來源組態使用者介面中所設定的密碼。  
   
 > [!NOTE]  

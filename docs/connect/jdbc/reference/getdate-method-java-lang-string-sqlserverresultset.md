@@ -1,5 +1,5 @@
 ---
-title: getDate 方法 (.java. String) 資料行 |Microsoft Docs
+title: getDate 方法 (java.lang.String) 資料行 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 821058ae-cbe3-4a14-aa02-d55e45491437
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c534c043de11d9123beaaa36f38c4bbd009012c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983907"
 ---
 # <a name="getdate-method-javalangstring-sqlserverresultset"></a>getDate 方法 (java.lang.String) (SQLServerResultSet)
@@ -45,7 +45,7 @@ public java.sql.Date getDate(java.lang.String columnName)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getDate 方法是由 java.sql.ResultSet 介面中的 getDate 方法指定。  
   
  這個方法會傳回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 或 smalldatetime 資料類型中的有效日期部分，而時間部分是設定成 Java 基準時間 00:00 (午夜)。  

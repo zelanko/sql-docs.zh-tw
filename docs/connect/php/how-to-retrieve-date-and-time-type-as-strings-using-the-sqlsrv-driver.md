@@ -13,24 +13,24 @@ ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8c3fbd475d5f7038d36ba17a9578713c3ed1b53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993526"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式以字串形式擷取日期和時間類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-使用的 SQLSRV [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]驅動程式時, 您可以藉由指定下列各項, 將日期和時間類型 (**Smalldatetime**、 **datetime**、 **date**、 **time**、 **datetime2**和**datetimeoffset**) 取出為字串[連接字串] 或 [語句層級] 中的選項:
+針對 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 使用 SQLSRV 驅動程式時，您可以在連接字串中或於陳述式層級指定下列選項，來以字串形式擷取日期和時間類型 (**smalldatetime**、**datetime**、**date**、**time**、**datetime2** 及 **datetimeoffset**)：
 
 ```
 'ReturnDatesAsStrings'=>true
 ```
 
-預設值是 **false**，表示 **smalldatetime**、**datetime**、**date**、**time**、**datetime2** 與 **datetimeoffset** 等類型將會以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 物件的形式傳回。 如果此選項設定于語句層級, 則會覆寫連接層級設定。
+預設值是 **false**，表示 **smalldatetime**、**datetime**、**date**、**time**、**datetime2** 與 **datetimeoffset** 等類型將會以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 物件的形式傳回。 如果此選項是於陳述式層級設定，其會覆寫連線層級設定。
 
-PDO_SQLSRV 驅動程式預設會以字串的形式傳回日期和時間類型。 若要以 PHP DateTime 物件的形式抓取它們, 請參閱 how [to: 使用 PDO_SQLSRV 將日期和時間類型當做 Php Datetime 物件取出](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
+PDO_SQLSRV 驅動程式預設會以字串形式傳回日期和時間類型。 若要以 PHP DateTime 物件的形式加以擷取，請參閱[如何：使用 PDO_SQLSRV 以 PHP DateTime 物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
 
 ## <a name="example"></a>範例
 下列範例說明指定要以字串的形式擷取日期和時間類型的語法。
@@ -161,7 +161,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example"></a>範例
-語句層級的 ReturnDatesAsStrings 選項會覆寫對應的連接選項。
+陳述式層級的 ReturnDatesAsStrings 選項會覆寫相對應的連線選項。
 
 ```php
 <?php
@@ -194,4 +194,4 @@ sqlsrv_close($conn);
 ## <a name="see-also"></a>另請參閱
 [擷取資料](../../connect/php/retrieving-data.md)
 
-[如何：使用 PDO_SQLSRV 以 PHP 日期時間物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
+[操作說明：使用 PDO_SQLSRV 以 PHP DateTime 物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)

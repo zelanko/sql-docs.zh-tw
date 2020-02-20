@@ -1,5 +1,5 @@
 ---
-title: getNCharacterStream 方法 (java lang.ini) |Microsoft Docs
+title: getNCharacterStream 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 45d2695b-0727-419d-8921-a51d6feef0aa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc5e5e72c4b1aedcc9e10ef74ff2946f2fb2d588
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981626"
 ---
 # <a name="getncharacterstream-method-javalangstring"></a>getNCharacterStream 方法 (java.lang.String)
@@ -35,15 +35,15 @@ public final java.io.Reader getNCharacterStream(java.lang.String columnLabel)
  **String**，包含資料行標籤。  
   
 ## <a name="return-value"></a>傳回值  
- AReaderobject.  
+ AReaderobject。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 存取**NCHAR**、 **NVARCHAR**和**LONGNVARCHAR**參數時, 應該使用這個方法。  
+## <a name="remarks"></a>備註  
+ 存取 **NCHAR**、**NVARCHAR** 和 **LONGNVARCHAR** 參數時，應該使用此方法。  
   
- 這個 getNCharacterStream 方法是由 JAVA.sql.callablestatement 介面中的 getNCharacterStream 方法指定。  
+ 此 getNCharacterStream 方法是由 java.sql.CallableStatement 介面中的 getNCharacterStream 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [getNCharacterStream 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md)   

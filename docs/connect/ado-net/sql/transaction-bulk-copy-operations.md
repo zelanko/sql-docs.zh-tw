@@ -1,6 +1,6 @@
 ---
 title: 交易和大量複製作業
-description: 描述如何在交易內執行大量複製作業，包括如何認可或回復交易。
+description: 描述如何在交易內執行大量複製作業，包括如何認可或復原交易。
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: c2e855407edd6b2af51ae5710cd6601e9aa25654
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 465870aa05b97b841a23c0ca1843e3de395a0b8b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451915"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75233804"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>交易和大量複製作業
 
@@ -47,7 +47,7 @@ ms.locfileid: "72451915"
 > [!NOTE]
 >  由於不同的批次在不同交易中執行，如果大量複製作業期間發生錯誤時，目前的批次中的所有資料列將會回復，但是先前批次的資料列將保留在資料庫中。  
   
-在下方的主控台應用程式中，除了大量複製作業會自行管理本身的交易外，其餘部分均與前述範例類似。 發生錯誤前複製的所有批次均已認可；包含重複索引鍵的批次已回復，而且大量複製作業會在處理任何其他批次之前暫止。  
+下列主控台應用程式類似於前一個範例，但有一個例外狀況：在此範例中，大量複製作業會管理自己的交易。 發生錯誤前複製的所有批次均已認可；包含重複索引鍵的批次已回復，而且大量複製作業會在處理任何其他批次之前暫止。  
   
 > [!IMPORTANT]
 >  除非您已如[大量複製範例設定](bulk-copy-example-setup.md)中所述建立工作資料表，否則此範例不會執行。 這個程式碼僅是為了示範使用 **SqlBulkCopy** 的語法而提供。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL `INSERT … SELECT` 陳述式來複製資料會更方便且快速。  
@@ -55,9 +55,9 @@ ms.locfileid: "72451915"
 [!code-csharp[DataWorks SqlBulkCopyOptions_UseInternalTransaction#1](~/../sqlclient/doc/samples/SqlBulkCopyOptions_UseInternalTransaction.cs#1)]
   
 ## <a name="using-existing-transactions"></a>使用現有的交易  
-您可以在 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 的程式中，將現有的 <xref:Microsoft.Data.SqlClient.SqlTransaction> 物件指定為參數。 在此情況下，大量複製作業會在現有的交易中執行，而且不會變更交易狀態 (也就是其尚未認可或中止)。 這可讓應用程式在其他資料庫作業的交易中包含大量複製作業。 不過，如果您未指定 <xref:Microsoft.Data.SqlClient.SqlTransaction> 物件並傳遞 null 參考，而且連接具有使用中交易，則會擲回例外狀況。  
+您可以在 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 建構函式中，將現有的 <xref:Microsoft.Data.SqlClient.SqlTransaction> 物件指定為參數。 在此情況下，大量複製作業會在現有的交易中執行，而且不會變更交易狀態 (也就是其尚未認可或中止)。 這可讓應用程式在其他資料庫作業的交易中包含大量複製作業。 不過，如果您未指定 <xref:Microsoft.Data.SqlClient.SqlTransaction> 物件並傳遞了 Null 參考，而且連線具有使用中交易，則會擲回例外狀況。  
   
-如果您因為發生錯誤而需要復原整個大量複製作業，或如果大量複製應當做可以復原之較大進程的一部分來執行，您可以將 <xref:Microsoft.Data.SqlClient.SqlTransaction> 物件提供給 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 的函式。  
+如果因為發生錯誤，或大量複製應該要以可復原之較大處理序的一部分來執行，而使得您需要復原整個大量複製作業，則您可以將 <xref:Microsoft.Data.SqlClient.SqlTransaction> 物件提供給 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 建構函式。  
   
 下列主控台應用程式與第一個 (非交易) 範例類似，但有一項例外：在此範例中，大量複製作業包含在較大的外部交易中。 當發生主要索引鍵違規錯誤時，整個交易便會回復，並且沒有任何資料列會加入目的地資料表。  
   

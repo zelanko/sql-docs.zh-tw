@@ -1,5 +1,5 @@
 ---
-title: 資料列集和參數中的資料類型對應 |Microsoft Docs
+title: 資料列集和參數中的資料類型對應 | Microsoft Docs
 description: 資料列集和參數中的資料類型對應
 ms.custom: ''
 ms.date: 06/14/2018
@@ -22,10 +22,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 529c3189676ce704d10a90902bd44f7f2c8e8f6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67995194"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>資料列集和參數中的資料類型對應
@@ -67,7 +67,7 @@ ms.locfileid: "67995194"
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
   
- SQL Server 的 OLE DB 驅動程式支援取用者要求的資料轉換, 如圖所示。  
+ OLE DB Driver for SQL Server 支援取用者要求的資料轉換，如圖中所示。  
   
  **sql_variant** 物件可保存任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型的資料，下列類型除外：text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、timestamp 和 Microsoft .NET Framework Common Language Runtime (CLR) 使用者定義型別。 sql_variant 資料的執行個體不能用 sql_variant 做為它的基礎基底資料類型。 例如，資料行可以在某些資料列中包含 **smallint** 值，在其他資料列中包含 **float** 值，而在剩餘的資料列中包含 **char**/**nchar** 值。  
   
@@ -76,26 +76,26 @@ ms.locfileid: "67995194"
   
  以 DBTYPE_VARIANT 擷取 **sql_variant** 資料時，會將該資料置於緩衝區的 VARIANT 結構中。 但是 VARIANT 結構中的子類型可能不會對應到定義於 **sql_variant** 資料類型中的子類型。 接下來必須以 DBTYPE_SQLVARIANT 擷取 **sql_variant** 資料，才能讓所有的子類型相互對應。  
   
-## <a name="dbtypesqlvariant-data-type"></a>DBTYPE_SQLVARIANT 資料類型  
+## <a name="dbtype_sqlvariant-data-type"></a>DBTYPE_SQLVARIANT 資料類型  
  若要支援 **sql_variant** 資料類型，OLE DB Driver for SQL Server 會公開稱為 DBTYPE_SQLVARIANT 的提供者特定資料類型。 以 DBTYPE_SQLVARIANT 擷取 **sql_variant** 資料時，該資料會儲存在提供者特定的 SSVARIANT 結構中。 SSVARIANT 結構包含的所有子類型都符合 **sql_variant** 資料類型的子類型。  
   
  工作階段屬性 SSPROP_ALLOWNATIVEVARIANT 也必須設定為 TRUE。  
   
-## <a name="provider-specific-property-sspropallownativevariant"></a>提供者特定的屬性 SSPROP_ALLOWNATIVEVARIANT  
+## <a name="provider-specific-property-ssprop_allownativevariant"></a>提供者特定的屬性 SSPROP_ALLOWNATIVEVARIANT  
  您在提取資料時，可以明確地指定要針對資料行或參數傳回何種資料類型。 **IColumnsInfo** 也可以用來取得資料行資訊，並用該資訊來進行繫結。 使用 **IColumnsInfo** 來取得用於繫結用途的資料行資訊時，如果 SSPROP_ALLOWNATIVEVARIANT 工作階段屬性為 FALSE (預設值)，則會針對 **sql_variant** 資料行傳回 DBTYPE_VARIANT。 如果 SSPROP_ALLOWNATIVEVARIANT 屬性為 FALSE，則 DBTYPE_SQLVARIANT 不受支援。 如果 SSPROP_ALLOWNATIVEVARIANT 屬性設定為 TRUE，則資料行類型會傳回為 DBTYPE_SQLVARIANT，在此種情況下，緩衝區會保存 SSVARIANT 結構。 以 DBTYPE_SQLVARIANT 擷取 **sql_variant** 資料時，工作階段屬性 SSPROP_ALLOWNATIVEVARIANT 必須設定為 TRUE。  
   
  SSPROP_ALLOWNATIVEVARIANT 屬性是提供者特定之 DBPROPSET_SQLSERVERSESSION 屬性集的一部分，而且是工作階段屬性。  
   
  DBTYPE_VARIANT 適用於所有其他的 OLE DB 提供者。  
   
-## <a name="sspropallownativevariant"></a>SSPROP_ALLOWNATIVEVARIANT  
+## <a name="ssprop_allownativevariant"></a>SSPROP_ALLOWNATIVEVARIANT  
  SSPROP_ALLOWNATIVEVARIANT 是工作階段屬性，而且是 DBPROPSET_SQLSERVERSESSION 屬性集的一部分。  
   
 |||  
 |-|-|  
-|SSPROP_ALLOWNATIVEVARIANT|類型：VT_BOOL<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：決定所提取的資料是否為 DBTYPE_VARIANT 或 DBTYPE_SQLVARIANT。<br /><br /> VARIANT_TRUE：資料行類型是以 DBTYPE_SQLVARIANT 傳回，在此種情況下，緩衝區會保存 SSVARIANT 結構。<br /><br /> VARIANT_FALSE：資料行類型是以 DBTYPE_VARIANT 傳回，而且緩衝區將具有 VARIANT 結構。|  
+|SSPROP_ALLOWNATIVEVARIANT|輸入：VT_BOOL<br /><br /> R/W︰讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：決定擷取的資料是否為 DBTYPE_VARIANT 或 DBTYPE_SQLVARIANT。<br /><br /> VARIANT_TRUE：資料行類型會以 DBTYPE_SQLVARIANT 傳回，在此情況下，緩衝區將會保留 SSVARIANT 結構。<br /><br /> VARIANT_FALSE：資料行類型會以 DBTYPE_VARIANT 傳回，而且緩衝區將具有 VARIANT 結構。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料類型&#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+ [資料類型 &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

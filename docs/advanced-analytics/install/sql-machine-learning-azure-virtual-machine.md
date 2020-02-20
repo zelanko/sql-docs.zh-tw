@@ -1,29 +1,38 @@
 ---
 title: 在 Azure 虛擬機器上安裝
-description: 在 Azure 雲端中的 SQL Server 虛擬機器上執行 R 與 Python 資料科學與機器學習解決方案。
+description: 在 Azure 雲端中的虛擬機器上，搭配 SQL Server 機器學習服務執行 Python 與 R 資料科學與機器學習解決方案。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/09/2018
+ms.date: 01/02/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: aeec25b561822e8083b89e03f0f7e74f40660f7b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: d81237f67c82fd7cc8b9259fcd7a0202ffb7fd4b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727621"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75776587"
 ---
-# <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>在 Azure 虛擬機器上搭配 R 與 Python 安裝 SQL Server 機器學習服務
+# <a name="install-sql-server-machine-learning-services-with-python-and-r-on-an-azure-virtual-machine"></a>在 Azure 虛擬機器上搭配 Python 與 R 安裝 SQL Server 機器學習服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-您可以在 Azure 中的 SQL Server 虛擬機器上安裝 R 與 Python 和機器學習服務的整合，以減少安裝及設定工作。 部署虛擬機器之後，即可使用這些功能。
- 
-如需逐步指示，請參閱[如何在 Azure 入口網站中佈建 Windows SQL Server 虛擬機器](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision) \(部分機器翻譯\)。
+了解如何在 Azure 中的虛擬機器上，搭配 SQL Server 機器學習服務安裝 Python 與 R。 這樣可減少機器學習服務的安裝及設定工作。
 
-[設定 SQL server 設定](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings)是您將機器學習新增到執行個體的步驟。
+請遵循下列步驟：
+
+1. 在 Azure 中佈建 SQL Server 虛擬機器
+1. 解除封鎖防火牆
+1. 針對遠端用戶端啟用 ODBC 回呼
+1. 新增網路通訊協定
+
+## <a name="provision-sql-server-virtual-machine-in-azure"></a>在 Azure 中佈建 SQL Server 虛擬機器
+
+如需逐步指示，請參閱[如何在 Azure 入口網站中佈建 Windows SQL Server 虛擬機器](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision) \(部分機器翻譯\)。 
+
+[設定 SQL Server 設定](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) \(部分機器翻譯\) 步驟是您將機器學習服務新增到執行個體的步驟。
 
 <a name="firewall"></a>
 

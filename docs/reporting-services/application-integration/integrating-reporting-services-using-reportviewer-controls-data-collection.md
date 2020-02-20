@@ -1,22 +1,23 @@
 ---
 title: ReportViewer 控制項 2016 中的資料收集
+description: 控制項會收集匿名使用方式資料，以深入了解客戶如何利用產品。 使用方式資料可讓您專注於未來針對最貼近客戶需求的增強功能進行開發。
 author: maggiesMSFT
 ms.author: maggies
+ms.custom: ''
 ms.reviewer: ''
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-ms.custom: ''
 ms.date: 09/18/2018
-ms.openlocfilehash: 2372adbf0fd0b9ad15383d6538d25ef955b27426
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
-ms.translationtype: MTE75
+ms.openlocfilehash: d7b70445fc4d8a29d8ebcdf7ecbffe4b54133f0e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923795"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796892"
 ---
-# <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>使用 ReportViewer 控制項整合 Reporting Services - 資料收集
+# <a name="integrate-reporting-services-using-reportviewer-controls---data-collection"></a>使用 ReportViewer 控制項整合 Reporting Services - 資料收集
 
 控制項會收集匿名使用方式資料，以深入了解客戶如何利用產品。 使用方式資料可讓您專注於與客戶最相關之增強功能的未來開發。
 

@@ -1,5 +1,5 @@
 ---
-title: 追蹤驅動程式作業 |Microsoft Docs
+title: 追蹤驅動程式作業 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027587"
 ---
 # <a name="tracing-driver-operation"></a>追蹤驅動程式作業
@@ -25,7 +25,7 @@ ms.locfileid: "69027587"
 > [!NOTE]  
 >  若是 JDBC 驅動程式隨附的原生元件 (sqljdbc_xa.dll)，內建診斷 (BID) 架構會啟用追蹤。 如需 BID 的資訊，請參閱 [SQL Server 中的資料存取追蹤](https://go.microsoft.com/fwlink/?LinkId=70042)。  
   
- 開發應用程式時，您可以呼叫 Logger 物件，進而建立 LogRecord 物件，這些物件接著會傳遞至 Handler 物件以進行處理。 記錄器和處理常式物件都會使用記錄層級, 並選擇性地記錄篩選準則, 以控制要處理的 LogRecords。 完成記錄作業時，Handler 物件可以選擇性地使用 Formatter 物件，以發佈記錄資訊。  
+ 開發應用程式時，您可以呼叫 Logger 物件，進而建立 LogRecord 物件，這些物件接著會傳遞至 Handler 物件以進行處理。 Logger 和 Handler 物件都會使用記錄層級和記錄篩選 (選擇性)，來規範要處理哪些 LogRecord。 完成記錄作業時，Handler 物件可以選擇性地使用 Formatter 物件，以發佈記錄資訊。  
   
  根據預設，java.util.logging 架構會將其輸出寫入到檔案。 此輸出記錄檔必須將寫入權限授與給執行 JDBC 驅動程式的內容。  
   
@@ -59,8 +59,8 @@ ms.locfileid: "69027587"
 |WARNING|表示潛在問題。|  
 |INFO|提供參考訊息。|  
 |FINE|提供追蹤資訊，包括基本物件建立和解構。 此外，還提供了公用方法所擲回的所有例外狀況。|  
-|FINER|提供詳細的追蹤資訊，包括所有公用方法的進入和結束點 (包含相關聯的參數資料類型)，以及公用類別的所有公用屬性。 此外，還提供輸入參數、輸出參數和方法傳回值 (CLOB、BLOB、NCLOB、Reader、\<stream> 傳回值類型除外)。<br /><br /> 下列記錄類別目錄存在於 JDBC 驅動程式 1.2 版中，而且具有 FINE 記錄層級：[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、XA 和 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)。 從 2.0 版開始，這些項目已升級為 FINER 層級。|  
-|FINEST|提供非常詳細的追蹤資訊。 這是最低的記錄層級。<br /><br /> 下列記錄類別目錄存在 JDBC Driver 1.2 版中，而且具有 FINEST 記錄層級：TDS.DATA 和 TDS.TOKEN。 從 2.0 版開始，它們保留 FINEST 記錄層級。|  
+|FINER|提供詳細的追蹤資訊，包括所有公用方法的進入和結束點 (包含相關聯的參數資料類型)，以及公用類別的所有公用屬性。 此外，還提供輸入參數、輸出參數和方法傳回值 (CLOB、BLOB、NCLOB、Reader、\<stream> 傳回值類型除外)。<br /><br /> 下列記錄類別存在於 JDBC 驅動程式 1.2 版中，而且具有 FINE 記錄層級：[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、XA 及 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)。 從 2.0 版開始，這些項目已升級為 FINER 層級。|  
+|FINEST|提供非常詳細的追蹤資訊。 這是最低的記錄層級。<br /><br /> 下列記錄類別存在於 JDBC 驅動程式 1.2 版中，而且具有 FINEST 記錄層級：TDS.DATA 和 TDS.TOKEN。 從 2.0 版開始，它們保留 FINEST 記錄層級。|  
 |OFF|關閉記錄。|  
 |ALL|啟用所有訊息的記錄。|  
   
@@ -69,7 +69,7 @@ ms.locfileid: "69027587"
   
 |名稱|描述|  
 |----------|-----------------|  
-|連接|記錄 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別中的訊息。 應用程式可以將記錄層級設定為 FINER。|  
+|Connection|記錄 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別中的訊息。 應用程式可以將記錄層級設定為 FINER。|  
 |引數|記錄 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別中的訊息。 應用程式可以將記錄層級設定為 FINER。|  
 |DataSource|記錄 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 類別中的訊息。 應用程式可以將記錄層級設定為 FINE。|  
 |ResultSet|記錄 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別中的訊息。 應用程式可以將記錄層級設定為 FINER。|  
@@ -79,7 +79,7 @@ ms.locfileid: "69027587"
   
 |名稱|描述|  
 |----------|-----------------|  
-|AuthenticationJNI|記錄有關 Windows 整合式驗證問題的訊息 (當**authenticationScheme**連接屬性隱含或明確設定為**NativeAuthentication**時)。<br /><br /> 應用程式可以將記錄層級設定為 FINEST 和 FINE。|  
+|AuthenticationJNI|記錄有關 Windows 整合式驗證問題的訊息 (當 **authenticationScheme** 連線屬性以隱含或明確方式設定為 **NativeAuthentication** 時)。<br /><br /> 應用程式可以將記錄層級設定為 FINEST 和 FINE。|  
 |SQLServerConnection|記錄 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別中的訊息。 應用程式可以將記錄層級設定為 FINE 和 FINER。|  
 |SQLServerDataSource|記錄 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)、[SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 和 [SQLServerPooledConnection](../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 類別中的訊息。<br /><br /> 應用程式可以將記錄層級設定為 FINER。|  
 |InputStream|記錄有關下列資料類型的訊息：java.io.InputStream、java.io.Reader 以及具有最大規範的資料類型，例如 varchar、nvarchar 和 varbinary 資料類型。<br /><br /> 應用程式可以將記錄層級設定為 FINER。|  
@@ -87,7 +87,7 @@ ms.locfileid: "69027587"
 |SQLServerResultSet|記錄 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別中的訊息。 應用程式可以將記錄層級設定為 FINE、FINER 和 FINEST。|  
 |SQLServerStatement|記錄 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別中的訊息。 應用程式可以將記錄層級設定為 FINE、FINER 和 FINEST。|  
 |XA|記錄 [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 類別中所有 XA 交易的訊息。 應用程式可以將記錄層級設定為 FINE 和 FINER。|  
-|KerbAuthentication|記錄有關類型 4 Kerberos 驗證的訊息 (當**authenticationScheme**連接屬性設定為**JAVAKerberos**時)。 此應用程式可以將記錄層級設定為 FINE 或 FINER。|  
+|KerbAuthentication|記錄有關類型 4 Kerberos 驗證的訊息 (當 **authenticationScheme** 連線屬性設定為 **JavaKerberos** 時)。 此應用程式可以將記錄層級設定為 FINE 或 FINER。|  
 |TDS.DATA|記錄包含此驅動程式與 SQL Server 之間 TDS 通訊協定層級交談的訊息。 每個所傳送和接收之 TDS 封包的詳細內容都會以 ASCII 和十六進位的格式記錄。 但是，系統不會記錄登入認證 (使用者名稱和密碼)， 只會記錄所有其他資料。<br /><br /> 這個類別目錄會建立非常詳細的訊息，並只能透過將記錄層次設為 FINEST 而啟用。|  
 |TDS.Channel|這個類別目錄會追蹤與 SQL Server 進行 TCP 通訊通道的動作。 記錄的訊息包括通訊端開啟和關閉，以及讀取和寫入。 此外，它也會追蹤有關與 SQL Server 建立安全通訊端層 (SSL) 連接的訊息。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINE、FINER 或 FINEST 而啟用。|  
 |TDS.Writer|這個類別目錄會追蹤 TDS 通道的寫入作業。 請注意，系統只會追蹤寫入的長度，而非內容。 當注意訊號傳送至伺服器以取消陳述式的執行時，這個類別目錄也會追蹤問題。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINEST 而啟用。|  

@@ -1,5 +1,5 @@
 ---
-title: getCrossReference 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getCrossReference 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 099dd0bf-b017-479d-9696-f5b06f4c6bf9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f23da4d83217fbed39e6dddacfe92541eae0db23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67984214"
 ---
 # <a name="getcrossreference-method-sqlserverdatabasemetadata"></a>getCrossReference 方法 (SQLServerDatabaseMetaData)
@@ -70,12 +70,12 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getCrossReference 方法是由 JAVA.sql.databasemetadata 介面中的 getCrossReference 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getCrossReference 方法是由 java.sql.DatabaseMetaData 介面中的 getCrossReference 方法指定。  
   
  透過 getCrossReference 方法所傳回的結果將包含下列資訊：  
   
-|[屬性]|類型|Description|  
+|名稱|類型|描述|  
 |----------|----------|-----------------|  
 |PKTABLE_CAT|**String**|包含主索引鍵資料表的目錄名稱。|  
 |PKTABLE_SCHEM|**String**|主索引鍵資料表的結構描述名稱。|  

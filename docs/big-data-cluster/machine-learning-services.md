@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
-ms.openlocfilehash: 66bc987b71bb8b139eec5b69e78532aa54f1294d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: e16304765e5f4a51feed4d3d59e790505baa740d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531951"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252028"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>對安裝有機器學習服務的 SQL Server 巨量資料叢集執行 Python 與 R 指令碼
 
@@ -26,7 +26,7 @@ ms.locfileid: "73531951"
 
 ## <a name="enable-machine-learning-services"></a>啟用機器學習服務
 
-根據預設，機器學習服務會安裝在巨量資料叢集上，而且需要個別安裝。
+根據預設，機器學習服務會安裝在巨量資料叢集上，而且不需要個別安裝。
 
 若要啟用機器學習服務，請對主要執行個體上執行下列陳述式：
 
@@ -36,7 +36,7 @@ RECONFIGURE WITH OVERRIDE
 GO
 ```
 
-## <a name="enable-always-on-availability-groups"></a>啟用 AlwaysOn 可用性群組
+## <a name="enable-always-on-availability-groups"></a>啟用 Always On 可用性群組
 
 若是使用 SQL Server 巨量資料叢集搭配 [Always On 可用性群組](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)，必須執行一些額外的步驟，才能啟用機器學習服務。
 

@@ -1,6 +1,6 @@
 ---
 title: 使用 ODBC CALL 及處理輸出執行預存程序 | Microsoft Docs
-description: 使用 SQL Server 的 OLE DB 驅動程式來處理傳回碼和輸出參數
+description: 使用 OLE DB Driver for SQL Server 處理傳回碼和輸出參數
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c8b591cf2c903bb974af613dec17269c2d9f10fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015633"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>使用 ODBC CALL 及處理輸出執行預存程序
@@ -36,13 +36,13 @@ ms.locfileid: "68015633"
   
 2.  使用 DBBINDING 結構的陣列來建立一組繫結 (每一個參數標記各一個)。  
   
-3.  使用**IAccessor:: CreateAccessor**方法, 為已定義的參數建立存取子。 **CreateAccessor** 會從一組繫結建立存取子。  
+3.  使用 **IAccessor::CreateAccessor** 方法來建立已定義之參數的存取子。 **CreateAccessor** 會從一組繫結建立存取子。  
   
 4.  填入 DBPARAMS 結構。  
   
 5.  呼叫 **Execute** 命令 (在此情況下，為預存程序的呼叫)。  
   
-6.  處理資料列集, 並使用**IRowset:: release**方法加以釋放。  
+6.  處理資料列集，並使用 **IRowset::Release** 方法加以釋放。  
   
 7.  處理從預存程序收到的傳回碼和輸出參數值。  
   

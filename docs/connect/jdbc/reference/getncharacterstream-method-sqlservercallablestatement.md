@@ -1,5 +1,5 @@
 ---
-title: getNCharacterStream 方法 (SQLServerCallableStatement) |Microsoft Docs
+title: getNCharacterStream 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: e4f1e99c-4c7a-4c83-b202-4608538ab50b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 57d93c8d99c775232c0f5ad5c418fe32e57922cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981601"
 ---
 # <a name="getncharacterstream-method-sqlservercallablestatement"></a>getNCharacterStream 方法 (SQLServerCallableStatement)
@@ -24,7 +24,7 @@ ms.locfileid: "67981601"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getNCharacterStream 方法 &#40;int&#41;](../../../connect/jdbc/reference/getncharacterstream-method-int.md)|透過給定的參數索引，擷取指定之參數的值來當做 java.io.Reader 物件。|  
 |[getNCharacterStream 方法 &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getncharacterstream-method-java-lang-string.md)|透過給定的參數名稱，擷取指定之參數的值來當做 java.io.Reader 物件。|  

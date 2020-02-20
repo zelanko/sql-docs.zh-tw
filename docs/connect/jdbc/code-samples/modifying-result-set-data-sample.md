@@ -1,5 +1,5 @@
 ---
-title: 修改結果集資料範例 |Microsoft Docs
+title: 修改結果集資料範例 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: b5ae54dc-2a79-4664-bb21-cacdb7d745e1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52ef5b12771cb7ef65f34dd7d890f19a8541d3ee
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028327"
 ---
 # <a name="modifying-result-set-data-sample"></a>修改結果集資料範例

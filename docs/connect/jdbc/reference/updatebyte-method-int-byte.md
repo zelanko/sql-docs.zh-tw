@@ -1,5 +1,5 @@
 ---
-title: updateByte 方法 (int, byte) |Microsoft Docs
+title: updateByte 方法 (int, byte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e635d789-9218-488e-a213-2e3e09635acc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da7c1c07537ebd9cb258bbd2eba9c2e8718bfe40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996940"
 ---
 # <a name="updatebyte-method-int-byte"></a>updateByte 方法 (int, byte)
@@ -47,7 +47,7 @@ public void updateByte(int index,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 updateByte 方法是由 java.sql.ResultSet 介面中的 updateByte 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

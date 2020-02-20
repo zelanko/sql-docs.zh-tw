@@ -1,5 +1,5 @@
 ---
-title: 產生多個資料列集結果的命令 |Microsoft Docs
+title: 產生多個資料列集結果的命令 | Microsoft Docs
 description: 產生多個資料列集結果的命令
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 5374e1ccd1024993369091b431a025676bccf1f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016063"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>產生多個資料列集結果的命令
@@ -29,14 +29,14 @@ ms.locfileid: "68016063"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驅動程式可以從[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]語句傳回多個資料列集。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 陳述式在下列條件下會傳回多個資料列集結果：  
+  OLE DB Driver for SQL Server 可以從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 陳述式傳回多個資料列集。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 陳述式在下列條件下會傳回多個資料列集結果：  
   
 -   批次的 SQL 陳述式以單一命令提交。  
   
 -   預存程序實作 SQL 陳述式批次。  
   
 ## <a name="batches"></a>批次  
- SQL Server 的 OLE DB 驅動程式會將分號字元辨識為 SQL 語句的批次分隔符號:  
+ OLE DB Driver for SQL Server 會將分號字元辨識為 SQL 陳述式的批次分隔符號：  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

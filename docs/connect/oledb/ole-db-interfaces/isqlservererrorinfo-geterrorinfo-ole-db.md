@@ -1,5 +1,5 @@
 ---
-title: 'ISQLServerErrorInfo:: GetErrorInfo (OLE DB) |Microsoft Docs'
+title: ISQLServerErrorInfo::GetErrorInfo (OLE DB) | Microsoft Docs
 description: ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 54e9c71ca21647004ea3899306dcb15689dcc3d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015445"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
@@ -27,9 +27,9 @@ ms.locfileid: "68015445"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  針對包含[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]錯誤詳細資料的 SQL Server SSERRORINFO 結構, 傳回 OLE DB 驅動程式的指標。  
+  傳回包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 錯誤詳細資料之 OLE DB Driver for SQL Server SSERRORINFO 結構的指標。  
   
- SQL Server 的 OLE DB 驅動程式會定義**ISQLServerErrorInfo**錯誤介面。 此介面會傳回來自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 錯誤的詳細資料，包括其嚴重性和狀態。  
+ OLE DB Driver for SQL Server 定義 **ISQLServerErrorInfo** 錯誤介面。 此介面會傳回來自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 錯誤的詳細資料，包括其嚴重性和狀態。  
 
   
 ## <a name="syntax"></a>語法  
@@ -53,12 +53,12 @@ HRESULT GetErrorInfo(
  此方法已成功。  
   
  E_INVALIDARG  
- 可能是*ppSSErrorInfo*或*ppErrorStrings*引數為 Null。  
+ *ppSSErrorInfo* 或 *ppErrorStrings* 引數為 NULL。  
   
  E_OUTOFMEMORY  
- SQL Server 的 OLE DB 驅動程式無法配置足夠的記憶體來完成要求。  
+ OLE DB Driver for SQL Server 無法配置足夠的記憶體來完成要求。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  OLE DB Driver for SQL Server 會針對透過取用者傳遞之指標所傳回的 SSERRORINFO 和 OLECHAR 字串配置記憶體。 當取用者不再需要存取錯誤資料時，必須使用 **IMalloc::Free** 方法來取消配置這個記憶體。  
   
  SSERRORINFO 結構定義如下：  
@@ -77,7 +77,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|成員|Description|  
+|member|描述|  
 |------------|-----------------|  
 |*pwszMessage*|來自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的錯誤訊息。 此訊息會透過 **IErrorInfo::GetDescription** 方法傳回。|  
 |*pwszServer*|發生錯誤之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。|  

@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPColFmt (OLE DB) |Microsoft Docs'
+title: IBCPSession::BCPColFmt (OLE DB) | Microsoft Docs
 description: IBCPSession::BCPColFmt (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 76dd26d42951a95c604b8d5b3bceaff21c355be2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994573"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
@@ -43,7 +43,7 @@ HRESULT BCPColFmt(
       DBORDINAL idxServerCol);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **BCPColFmt** 方法是用來建立 BCP 資料檔欄位與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料行之間的繫結。 它會使用資料行的長度、類型、結束字元和前置長度當做參數，並為個別欄位設定每一個屬性。  
   
  如果使用者選擇互動模式，就會呼叫這個方法兩次；一次是根據預設值設定資料行格式 (預設值是根據伺服器資料行的類型)，另一次是根據互動模式期間選擇之用戶端的資料行類型，針對每一個資料行設定格式。  
@@ -64,7 +64,7 @@ HRESULT BCPColFmt(
   
 -   選擇性結束位元組順序的長度。  
   
- **BCPColFmt** 的每個呼叫都會針對一個使用者檔案欄位指定格式。 例如，若要在五個欄位的使用者資料檔案中變更三個欄位的預設值，請先呼叫 `BCPColumns(5)`，然後呼叫 **BCPColFmt** 五次，其中三次呼叫會設定您的自訂格式。 針對剩餘的兩個呼叫, 請將*eUserDataType*設定為 BCP_TYPE_DEFAULT, 並分別將*cbIndicator*、 *cbUserData*和*cbUserDataTerm*設定為0、BCP_VARIABLE_LENGTH 和0。 此程序會複製全部五個資料行，其中三個為您自訂的格式，而另兩個為預設格式。  
+ **BCPColFmt** 的每個呼叫都會針對一個使用者檔案欄位指定格式。 例如，若要在五個欄位的使用者資料檔案中變更三個欄位的預設值，請先呼叫 `BCPColumns(5)`，然後呼叫 **BCPColFmt** 五次，其中三次呼叫會設定您的自訂格式。 在其餘兩個呼叫中，將 *eUserDataType* 設定為 BCP_TYPE_DEFAULT，並將 *cbIndicator*、*cbUserData* 和 *cbUserDataTerm* 分別設定為 0、BCP_VARIABLE_LENGTH 和 0。 此程序會複製全部五個資料行，其中三個為您自訂的格式，而另兩個為預設格式。  
   
 > [!NOTE]  
 >  必須先呼叫 [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 方法，才能進行 **BCPColFmt** 的任何呼叫。 您必須在使用者檔案中，針對每個資料行呼叫 **BCPColFmt** 一次。 針對任何使用者檔案資料行多次呼叫 **BCPColFmt** 會產生錯誤。  
@@ -78,7 +78,7 @@ HRESULT BCPColFmt(
  使用者的資料檔案中的欄位索引。  
   
  *eUserDataType*[in]  
- 使用者的資料檔案中欄位的資料類型。 可用的資料類型會列在具有 BCP_TYPE_XXX 格式之 SQL Server 標頭檔 (內含 msoledbsql.h) 的 OLE DB 驅動程式中, 例如 BCP_TYPE_SQLINT4。 如果指定了 BCP_TYPE_DEFAULT 值，提供者會嘗試使用與資料表或檢視表資料行類型相同的類型。 當 **eUserDataType** 引數為 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 時，要從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 進行大量複製作業，並複製到檔案中：  
+ 使用者的資料檔案中欄位的資料類型。 可用的資料類型會列在 OLE DB Driver for SQL Server 標頭檔 (msoledbsql.h)，且格式為 BCP_TYPE_XXX，例如 BCP_TYPE_SQLINT4。 如果指定了 BCP_TYPE_DEFAULT 值，提供者會嘗試使用與資料表或檢視表資料行類型相同的類型。 當 **eUserDataType** 引數為 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 時，要從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 進行大量複製作業，並複製到檔案中：  
   
 -   如果來源資料行不是小數或數值，便會使用預設的有效位數和小數位數。  
   

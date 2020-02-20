@@ -1,5 +1,5 @@
 ---
-title: SQLXML 資料類型範例 |Microsoft Docs
+title: SQLXML 資料類型範例 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: df376535f8f6c6a7d98e1744a2d2b70e813d400a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028278"
 ---
 # <a name="sqlxml-data-type-sample"></a>SQLXML 資料類型範例

@@ -1,5 +1,5 @@
 ---
-title: 使用陳述式與結果集 |Microsoft Docs
+title: 使用陳述式與結果集 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a57ffc5c9314f8e84c077b6c15ab88ed5411f028
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025362"
 ---
 # <a name="working-with-statements-and-result-sets"></a>使用陳述式與結果集
@@ -27,9 +27,9 @@ ms.locfileid: "69025362"
 
 當您使用其中一個 JDBC 驅動程式陳述式物件 (例如 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 或 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 物件) 時，請確定正在對工作使用適當的物件。
 
-- 如果您沒有 OUT 參數, 就不需要使用 SQLServerCallableStatement 物件。 請改為使用 SQLServerStatement 或 SQLServerPreparedStatement 物件。
+- 如果沒有 OUT 參數，您不需要使用 SQLServerCallableStatement 物件。 請改為使用 SQLServerStatement 或 SQLServerPreparedStatement 物件。
 
-- 如果您不想要多次執行語句, 或者沒有 IN 或 OUT 參數, 就不需要使用 SQLServerCallableStatement 或 SQLServerPreparedStatement 物件。 相反地, 請使用 SQLServerStatement 物件。
+- 如果不想要多次執行陳述式，或者沒有 IN 或 OUT 參數，您不需要使用 SQLServerCallableStatement 或 SQLServerPreparedStatement 物件。 請改為使用 SQLServerStatement 物件。
 
 ## <a name="use-the-appropriate-concurrency-for-resultset-objects"></a>為 ResultSet 物件使用適當的並行
 

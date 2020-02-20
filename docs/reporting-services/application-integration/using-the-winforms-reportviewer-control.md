@@ -1,23 +1,25 @@
 ---
-title: 使用 WinForms ReportViewer 控制項 | Microsoft Docs
+title: 使用 WinForms ReportViewer 控制項
+description: 若要檢視已部署至報表伺服器或存在於本機檔案系統的報表，您可以使用 WinForms ReportViewer 控制項在 Windows 應用程式中加以轉譯。
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d43534148ccf22419c630880192ff21eba2a441
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: b5b294d78c3e63766ac72b2cdfcfd3c592df3690
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63195275"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796883"
 ---
-# <a name="using-the-winforms-reportviewer-control"></a>使用 WinForms ReportViewer 控制項
+# <a name="use-the-winforms-reportviewer-control"></a>使用 WinForms ReportViewer 控制項
   若要檢視已部署至報表伺服器或存在於本機檔案系統的報表，您可以使用 WinForms ReportViewer 控制項在 Windows 應用程式中加以轉譯。  
   
 ## <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>將 ReportViewer 控制項加入至 Windows 應用程式  
@@ -38,7 +40,7 @@ ms.locfileid: "63195275"
   
  將控制項新增至表單後，[ReportViewer 工作]  智慧標籤會顯示，並提示您選取報表。  
   
- 如果您希望檢視的報表已部署到報表伺服器，請從 [選擇報表]  下拉式清單，選取 [\<伺服器報表>]  選項。 選取 [\<伺服器報表>]  選項之後，會出現兩個額外屬性：[報表伺服器 URL]  和 [報表路徑]  。 [報表伺服器 URL]  是報表伺服器的位址，[報表路徑]  則是要轉譯之報表的完整路徑。  
+ 如果您希望檢視的報表已部署到報表伺服器，請從 [選擇報表]  下拉式清單，選取 [\<伺服器報表>]  選項。 選取 [\<伺服器報表]  選項後，會顯示兩個額外屬性：[報表伺服器 URL]  與 [報表路徑]  。 [報表伺服器 URL]  是報表伺服器的位址，[報表路徑]  則是要轉譯之報表的完整路徑。  
   
  ![選取伺服器報表](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "選取伺服器報表")  
   
@@ -157,14 +159,14 @@ End Class
   
      Sales Order Detail.rdl 檔案現在應該是專案的一部分。  
   
-     ![Sales Order Detail 報表](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "Sales Order Detail 報表")  
+     ![銷售訂單詳細資料報表](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "銷售訂單詳細資料報表")  
   
 5.  在方案總管中，以滑鼠右鍵按一下 Sales Order Detail.rdl 檔案，然後選擇 [重新命名]  。 將報表重新命名為 **Sales Order Detail.rdlc**，然後按 ENTER。  
   
      如果看不到方案總管，可以從 [檢視]  功能表選取方案總管  開啟。  
   
     > [!NOTE]  
-    >  將副檔名從 rdl 重新命名為 rdlc 可以讓您使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 的報表設計師編輯報表。  
+    >  將副檔名從 rdl 重新命名為 rdlc 可以讓您使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 的報表設計師編輯報表。  
   
 6.  在報表重新命名後，選取檔案並找出 [屬性] 視窗。 將 [複製到輸出目錄]  屬性變更為 [有更新時才複製]  。  
   

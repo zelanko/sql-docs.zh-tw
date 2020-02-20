@@ -1,5 +1,5 @@
 ---
-title: getTrustServerCertificate 方法 (SQLServerDataSource) |Microsoft Docs
+title: getTrustServerCertificate 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e4f443cc-b5d7-4859-81df-836a8642ed07
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81d07743dfefe0b0305b1a094a9ae4632d4effd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978586"
 ---
 # <a name="gettrustservercertificate-method-sqlserverdatasource"></a>getTrustServerCertificate 方法 (SQLServerDataSource)
@@ -37,7 +37,7 @@ public boolean getTrustServerCertificate()
 ## <a name="return-value"></a>傳回值  
  如果啟用 trustServerCertificate，則為 **true**。 否則為 **false**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果 trustServerCertificate 屬性設定為 **true**，則當使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全通訊端層 (SSL) 加密通訊層時會自動信任 SSL 憑證。 換句話說，[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 將不會驗證 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 憑證。 預設值為 **false**。  
   
  如果 trustServerCertificate 屬性設定為 **false**，則 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 將會驗證伺服器 SSL 憑證。  

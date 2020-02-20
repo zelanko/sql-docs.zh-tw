@@ -1,5 +1,5 @@
 ---
-title: registerOutParameter 方法 (SQLServerCallableStatement) |Microsoft Docs
+title: registerOutParameter 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 82f8d608-efc1-4af8-a985-ec25d19420aa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bda185834c24c63ec0a6c9209e6dfd779bece858
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975882"
 ---
 # <a name="registeroutparameter-method-sqlservercallablestatement"></a>registerOutParameter 方法 (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67975882"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[registerOutParameter (int, int)](../../../connect/jdbc/reference/registeroutparameter-method-int-int.md)|在給定 JDBC 型別的指定序數位置中註冊 OUT 參數。|  
 |[registerOutParameter (int, int, int)](../../../connect/jdbc/reference/registeroutparameter-method-int-int-int.md)|在給定 JDBC 型別和小數位數的指定序數位置中註冊 OUT 參數。|  

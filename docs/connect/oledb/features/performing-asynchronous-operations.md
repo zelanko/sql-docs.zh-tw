@@ -1,6 +1,6 @@
 ---
-title: 執行非同步作業 |Microsoft Docs
-description: 使用適用于 SQL Server 的 OLE DB 驅動程式執行非同步作業
+title: 執行非同步作業 | Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 執行非同步作業
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4080e8147c4d2a05916f23051f61a9dbe3697b1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989023"
 ---
 # <a name="performing-asynchronous-operations"></a>執行非同步作業
@@ -52,7 +52,7 @@ ms.locfileid: "67989023"
 ## <a name="execution-and-rowset-initialization"></a>執行和資料列集初始化  
  設計為非同步開啟執行命令結果的應用程式可以在 DBPROP_ROWSET_ASYNCH 屬性中設定 DBPROPVAL_ASYNCH_INITIALIZE 位元。 呼叫 **IDBInitialize::Initialize**、**ICommand::Execute**、**IOpenRowset::OpenRowset** 或 **IMultipleResults::GetResult** 之前設定此位元時，必須將 *riid* 引數設定為 IID_IDBAsynchStatus、IID_ISSAsynchStatus 或 IID_Iunknown。  
   
- 如果資料列集初始化立即完成，此方法會使用 S_OK 立即傳回；如果資料列集在 *ppRowset* 設定為資料列集上要求的介面時，繼續以非同步方式初始化，則會使用 DB_S_ASYNCHRONOUS 傳回此方法。 針對 SQL Server 的 OLE DB 驅動程式, 此介面只能是**IDBAsynchStatus**或**ISSAsynchStatus**。 在資料列集完全初始化之前，此介面的行為如同處於已暫停狀態，而且針對 **IID_IDBAsynchStatus** 或 **IID_ISSAsynchStatus** 之外的介面呼叫 **QueryInterface** 可能會傳回 E_NOINTERFACE。 除非取用者明確地要求非同步處理，否則資料列集會以同步的方式進行初始化。 如果 **IDBAsynchStaus::GetStatus** 或 **ISSAsynchStatus::WaitForAsynchCompletion** 傳回時，指出非同步作業已完成，則可使用所有要求的介面。 這不一定表示資料列集已完全擴展，但是該資料列集是完整的，而且完全可以運作。  
+ 如果資料列集初始化立即完成，此方法會使用 S_OK 立即傳回；如果資料列集在 *ppRowset* 設定為資料列集上要求的介面時，繼續以非同步方式初始化，則會使用 DB_S_ASYNCHRONOUS 傳回此方法。 針對 OLE DB Driver for SQL Server，此介面只能是 **IDBAsynchStatus** 或 **ISSAsynchStatus**。 在資料列集完全初始化之前，此介面的行為如同處於已暫停狀態，而且針對 **IID_IDBAsynchStatus** 或 **IID_ISSAsynchStatus** 之外的介面呼叫 **QueryInterface** 可能會傳回 E_NOINTERFACE。 除非取用者明確地要求非同步處理，否則資料列集會以同步的方式進行初始化。 如果 **IDBAsynchStaus::GetStatus** 或 **ISSAsynchStatus::WaitForAsynchCompletion** 傳回時，指出非同步作業已完成，則可使用所有要求的介面。 這不一定表示資料列集已完全擴展，但是該資料列集是完整的，而且完全可以運作。  
   
  如果執行的命令並未傳回資料列集，它仍然會使用支援 **IDBAsynchStatus** 的物件立即傳回。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "67989023"
   
  接著，使用 **QueryInterface** 來查詢多個結果介面，藉此取得 **IDBAsynchStatus** 和 **ISSAsynchStatus** 介面。  
   
- 當命令執行完成時，除非同步案例的一個例外，否則可以如常使用 **IMultipleResults**：可以傳回 DB_S_ASYNCHRONOUS，在此情況下，**IDBAsynchStatus** 或 **ISSAsynchStatus** 可用於判斷作業完成的時間。  
+ 當命令完成執行之後，就能正常使用 **IMultipleResults**，但有一個來自同步案例的例外狀況：可能會傳回 DB_S_ASYNCHRONOUS，在這種情況下，可以使用 **IDBAsynchStatus** 或 **ISSAsynchStatus** 來判斷作業何時完成。  
   
 ## <a name="examples"></a>範例  
  在下列範例中，應用程式會呼叫非封鎖的方法、進行其他某些處理，然後返回處理結果。 **ISSAsynchStatus::WaitForAsynchCompletion** 會等候內部事件物件，直到非同步執行作業完成，或是過了 *dwMilisecTimeOut* 所指定的時間為止。  

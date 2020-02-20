@@ -1,5 +1,5 @@
 ---
-title: SQLServerXAResource 成員 |Microsoft Docs
+title: SQLServerXAResource 成員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b420dd7c4bc714e26c8078112c5af54ae5aa7b0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970063"
 ---
 # <a name="sqlserverxaresource-members"></a>SQLServerXAResource 成員
@@ -27,7 +27,7 @@ ms.locfileid: "67970063"
   
 ## <a name="fields"></a>欄位  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)|用來允許緊密結合的 XA 交易，這些交易擁有不同的 XA 分支交易識別碼 (XID)，但是擁有相同的全域交易識別碼 (GTRID)。|  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67970063"
   
 ## <a name="methods"></a>方法  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[commit](../../../connect/jdbc/reference/commit-method-sqlserverxaresource.md)|認可指定 XID 物件所指定的全域交易。|  
 |[end](../../../connect/jdbc/reference/end-method-sqlserverxaresource.md)|結束代表交易分支執行的工作。|  
@@ -47,7 +47,7 @@ ms.locfileid: "67970063"
 |[getTransactionTimeout](../../../connect/jdbc/reference/gettransactiontimeout-method-sqlserverxaresource.md)|取得為這個 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 物件設定的目前交易逾時值。|  
 |[isSameRM](../../../connect/jdbc/reference/issamerm-method-sqlserverxaresource.md)|判斷目標物件所表示的資源管理員執行個體是否與指定 XAResource 物件所表示的資源管理員執行個體相同。|  
 |[prepare](../../../connect/jdbc/reference/prepare-method-sqlserverxaresource.md)|要求資源管理員準備所指定 XID 物件指定交易的交易認可。|  
-|[復原 (recover)](../../../connect/jdbc/reference/recover-method-sqlserverxaresource.md)|從資源管理員取得備妥的交易分支清單。|  
+|[recover](../../../connect/jdbc/reference/recover-method-sqlserverxaresource.md)|從資源管理員取得備妥的交易分支清單。|  
 |[rollback](../../../connect/jdbc/reference/rollback-method-sqlserverxaresource.md)|要求資源管理員回復之前代表交易分支所完成的工作。|  
 |[setTransactionTimeout](../../../connect/jdbc/reference/settransactiontimeout-method-sqlserverxaresource.md)|設定這個 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 物件的目前交易逾時值。|  
 |[start](../../../connect/jdbc/reference/start-method-sqlserverxaresource.md)|代表 XID 物件中指定的交易分支開始工作。|  

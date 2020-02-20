@@ -1,5 +1,5 @@
 ---
-title: SQLServerException 類別 |Microsoft Docs
+title: SQLServerException 類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: af5ef257-7cf6-4db3-b1ee-07d22d82bef1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 40474f747022c34994dba9f34dbed15f1791c2af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971153"
 ---
 # <a name="sqlserverexception-class"></a>SQLServerException 類別
@@ -35,7 +35,7 @@ ms.locfileid: "67971153"
 public final class SQLServerException  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  SQLServerException 類別會同時處理 SQL 92 和 XOPEN 狀態碼。 這些狀態碼可以使用使用者指定的連接屬性來交換。 例外狀況會寫入任何已經指定的開啟記錄檔中。  
   
 ## <a name="see-also"></a>另請參閱  

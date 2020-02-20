@@ -1,5 +1,5 @@
 ---
-title: SQLServerXADataSource 成員 |Microsoft Docs
+title: SQLServerXADataSource 成員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 04178645-915f-4569-8907-d45e299bbe7d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2baf4e745e18052646e842eb64445690229ed0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970170"
 ---
 # <a name="sqlserverxadatasource-members"></a>SQLServerXADataSource 成員
@@ -24,7 +24,7 @@ ms.locfileid: "67970170"
   
 ## <a name="constructors"></a>建構函式  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[SQLServerXADataSource ()](../../../connect/jdbc/reference/sqlserverxadatasource-constructor.md)|將 [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) 類別的新執行個體初始化。|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67970170"
   
 ## <a name="methods"></a>方法  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|(繼承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) 傳回 **applicationIntent** 連線屬性的值。|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|(繼承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) 傳回應用程式名稱。|  

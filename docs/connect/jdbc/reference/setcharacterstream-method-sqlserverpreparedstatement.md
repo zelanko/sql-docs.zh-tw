@@ -1,5 +1,5 @@
 ---
-title: setCharacterStream 方法 (SQLServerPreparedStatement) |Microsoft Docs
+title: setCharacterStream 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: fe13326b-799d-4bf3-b4f1-32ab1841d0ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5136e4502b3101bfe53998cbf268962e2761d574
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974821"
 ---
 # <a name="setcharacterstream-method-sqlserverpreparedstatement"></a>setCharacterStream 方法 (SQLServerPreparedStatement)
@@ -24,7 +24,7 @@ ms.locfileid: "67974821"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[setCharacterStream 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader.md)|將指定參數設定為指定的 java.io.Reader 物件。|  
 |[setCharacterStream 方法 &#40;int, java.io.Reader, int&#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader-int.md)|將指定的參數設定為所指定 java.io.Reader 物件，該物件長度為指定的字元數。|  

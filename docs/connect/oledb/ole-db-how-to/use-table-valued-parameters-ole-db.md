@@ -1,5 +1,5 @@
 ---
-title: 使用資料表值參數 (OLE DB) |Microsoft Docs
+title: 使用資料表值參數 (OLE DB) | Microsoft Docs
 description: 使用資料表值參數 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7ec89b3fdafaba7fe81849ab2ae5b2baf926ef83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994597"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>使用資料表值參數 (OLE DB)
@@ -22,7 +22,7 @@ ms.locfileid: "67994597"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  此範例適用於 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更新版本。 此範例會執行下列各項：  
+  此範例適用於 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更新版本。 此範例會執行下列動作：  
   
 -   使用動態探索，透過 IOpenRowset::OpenRowset 建立資料表值參數。  
   
@@ -32,9 +32,9 @@ ms.locfileid: "67994597"
   
 -   利用 ISSCommandWithParameters 使用自訂參數屬性。  
   
--   顯示內含 MSOLEDBSQL.H 錯誤的錯誤處理。  
+-   顯示 MSOLEDBSQL 錯誤的錯誤處理。  
   
- 如需資料表值參數的詳細資訊, 請參閱[ &#40;SQL Server&#41;OLE DB 驅動程式的資料表值參數](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)。  
+ 如需資料表值參數的詳細資訊，請參閱[資料表值參數 &#40;OLE DB Driver for SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)。  
   
 ## <a name="example"></a>範例  
  第一個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的資料庫。  

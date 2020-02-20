@@ -11,16 +11,16 @@ ms.assetid: ff1d47e4-572a-4169-a631-ac261f7642b3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22177442dcec9fb873d4a824b73845ce6fc9bfdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954123"
 ---
 # <a name="getasciistream-method-sqlservernclob"></a>getAsciiStream 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  抓取此**NCLOB**物件指定為 ASCII 資料流程的**NCLOB**值。  
+  將這個 **NClob** 物件所指定的 **NCLOB** 值擷取為 ASCII 資料流。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +36,7 @@ public java.sql.InputStream getAsciiStream()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 這個 getAsciiStream 方法是由 SQLServerNClob 介面中的 getAsciiStream 方法指定。  
+ 這個 getAsciiStream 方法是由 java.sql.SQLServerNClob 介面中的 getAsciiStream 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerNClob 方法](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

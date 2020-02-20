@@ -1,5 +1,5 @@
 ---
-title: getClientInfo 方法 (SQLServerConnection) |Microsoft Docs
+title: getClientInfo 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 241536e1-fae6-4980-85a5-d8cfcd50b8bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e35e2a640d65e72ab7c956999e7e0b7795ce643
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953127"
 ---
 # <a name="getclientinfo-method-sqlserverconnection"></a>getClientInfo 方法 (SQLServerConnection)
@@ -24,7 +24,7 @@ ms.locfileid: "67953127"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getClientInfo 方法 &#40;&#41;](../../../connect/jdbc/reference/getclientinfo-method.md)|擷取清單，此清單包含 JDBC Driver 所支援之個別用戶端資訊的名稱和最新值。|  
 |[getClientInfo 方法 &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getclientinfo-method-java-lang-string.md)|擷取指定之用戶端資訊屬性的值。|  

@@ -1,5 +1,5 @@
 ---
-title: 使用 advanced 資料類型 |Microsoft Docs
+title: 使用進階資料類型 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a50bc3e4fae8fe45004374d3dd019a0f65fe544f
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027013"
 ---
 # <a name="using-advanced-data-types"></a>使用進階資料類型
@@ -32,13 +32,13 @@ ms.locfileid: "69027013"
 |varbinary(max)<br /><br /> image|LONGVARBINARY|byte[] \(預設值)、Blob、InputStream、String|  
 |text<br /><br /> varchar(max)|LONGVARCHAR|String (預設值)、Clob、InputStream|  
 |ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (default), Clob, NClob|  
-|xml|LONGVARCHAR<br /><br /> SQLXML|String (default), InputStream, Clob, byte[], Blob, SQLXML|  
+|Xml|LONGVARCHAR<br /><br /> SQLXML|String (default), InputStream, Clob, byte[], Blob, SQLXML|  
 |Udt<sup>1</sup>|VARBINARY|String (預設值)、byte[]、InputStream|  
 |sqlvariant|SQLVARIANT|Object|  
-|幾何<br /><br /> 地理位置|VARBINARY|byte[]|  
+|幾何<br /><br /> geography|VARBINARY|byte[]|  
 
 
-<sup>1</sup> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援當成二進位資料傳送和擷取 CLR UDT，但不支援操作 CLR 中繼資料。  
+<sup>1</sup>[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援當成二進位資料傳送和擷取 CLR UDT，但不支援操作 CLR 中繼資料。  
   
 下列各節會提供如何使用 JDBC Driver 和進階資料類型的範例。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "69027013"
 JDBC 驅動程式會實作 java.sql.Blob、java.sql.Clob 和 java.sql.NClob 介面的所有方法。  
   
 > [!NOTE]  
-> CLOB 值可以與 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (或更新版本) 大數值資料類型搭配使用。 具體而言, CLOB 類型可以與**Varchar (max)** 和**Nvarchar (max)** 資料類型搭配使用, BLOB 類型可搭配**Varbinary (max)** 和**image**資料類型使用, 而 NCLOB 類型可以搭配**Ntext**和**Nvarchar (max)** .  
+> CLOB 值可以與 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (或更新版本) 大數值資料類型搭配使用。 具體而言，CLOB 類型可以搭配 **varchar(max)** 和 **nvarchar(max)** 資料類型使用、BLOB 類型可以搭配 **varbinary(max)** 和 **image** 資料類型使用，而 NCLOB 類型則可以搭配 **ntext** 和 **nvarchar(max)** 使用。  
 
 ## <a name="large-value-data-types"></a>大數值資料類型
 
@@ -66,7 +66,7 @@ Reader reader = rs.getCharacterStream(2);
 ```
 
 > [!NOTE]
-> 這個相同的方法也可以用於**text**、 **Ntext**和**Nvarchar (max)** 資料類型。  
+> 這個相同的方法也可以用於 **text**、**ntext** 和 **nvarchar(max)** 資料類型。  
 
 當您從資料庫擷取二進位大型數值的資料類型 (例如 **varbinary(max)** 資料類型) 時，有幾種方法可以使用。 最有效的方法就是將資料當作二進位資料流來讀取，如下所示：  
 
@@ -101,7 +101,7 @@ pstmt.executeUpdate();
 ```
 
 > [!NOTE]  
-> 這個方法也可用於儲存在**text**、 **Ntext**和**Nvarchar (max)** 資料行中的值。  
+> 此方法也可用於儲存在 **text**、**ntext** 和 **nvarchar(max)** 資料行中的值。  
 
 如果您在伺服器上具有影像程式庫，且必須將整個二進位影像檔上傳到 **varbinary(max)** 資料行，則使用 JDBC 驅動程式最有效的方法就是直接使用資料流，如下所示：  
 
@@ -148,7 +148,7 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的 **xml** 資料類型，可讓您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中儲存 XML 文件和片段。 **xml** 資料類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的內建資料類型，而且在某些狀況下類似於其他內建類型，例如 **int** 和 **varchar**。 如同其他內建類型，您可以將 **xml** 資料類型當成建立資料表時的資料行類型；當成變數類型、參數類型或函式傳回類型使用；或者在 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 和 CONVERT 函式中使用。  
   
-在 JDBC 驅動程式中，**xml** 資料類型可以對應為字串、位元組陣列、資料流、CLOB、BLOB 或 SQLXML 物件。 字串為預設值。 從 JDBC Driver 2.0 版開始，JDBC Driver 提供了 JDBC 4.0 API 的支援，其中導入 SQLXML 介面。 SQLXML 介面會定義與 XML 資料互動和進行操作的方法。 **SQLXML**資料類型會對應至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml**資料類型。 如需如何在具有 **SQLXML** Java 資料類型的關聯式資料庫中讀取和寫入 XML 資料的詳細資訊，請參閱[支援 XML 資料](../../connect/jdbc/supporting-xml-data.md)。  
+在 JDBC 驅動程式中，**xml** 資料類型可以對應為字串、位元組陣列、資料流、CLOB、BLOB 或 SQLXML 物件。 字串為預設值。 從 JDBC Driver 2.0 版開始，JDBC Driver 提供了 JDBC 4.0 API 的支援，其中導入 SQLXML 介面。 SQLXML 介面會定義與 XML 資料互動和進行操作的方法。 **SQLXML** 資料類型會對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** 資料類型。 如需如何在具有 **SQLXML** Java 資料類型的關聯式資料庫中讀取和寫入 XML 資料的詳細資訊，請參閱[支援 XML 資料](../../connect/jdbc/supporting-xml-data.md)。  
   
 JDBC 驅動程式中 **xml** 資料類型的實作提供下列項目的支援：  
   
@@ -172,11 +172,11 @@ JDBC 驅動程式中 **xml** 資料類型的實作提供下列項目的支援：
   
 ## <a name="sql_variant-data-type"></a>Sql_variant 資料類型
 
-如需 SQL_variant 資料類型的詳細資訊, 請參閱[使用 SQL_variant 資料類型](../../connect/jdbc/using-sql-variant-datatype.md)。  
+如需有關 sql_variant 資料類型的詳細資訊，請參閱[使用 Sql_variant 資料類型](../../connect/jdbc/using-sql-variant-datatype.md)。  
 
 ## <a name="spatial-data-types"></a>空間資料類型
 
-如需空間資料類型的詳細資訊, 請參閱[使用空間](../../connect/jdbc/use-spatial-datatypes.md)類型。  
+如需有關空間資料類型的詳細資訊，請參閱[使用空間資料類型](../../connect/jdbc/use-spatial-datatypes.md)。  
 
 ## <a name="see-also"></a>另請參閱
 

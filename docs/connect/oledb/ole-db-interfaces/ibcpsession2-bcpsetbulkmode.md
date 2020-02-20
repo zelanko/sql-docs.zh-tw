@@ -1,6 +1,6 @@
 ---
 title: IBCPSession2::BCPSetBulkMode | Microsoft Docs
-description: '使用 IBCPSession2:: BCPSetBulkMode, 從查詢或資料表中建立大量複製'
+description: 使用 IBCPSession2::BCPSetBulkMode 來大量複製查詢或資料表
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: d07cb3c62e0779a517a3441bef7bc01fbdbce037
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015485"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
@@ -24,7 +24,7 @@ ms.locfileid: "68015485"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  IBCPSession2:: BCPSetBulkMode 提供[IBCPSession:: &#40;BCPColFmt OLE DB&#41; ](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)的替代方法, 以指定資料行格式。 不同于 IBCPSession:: BCPColFmt, 它會設定個別的資料行格式屬性, IBCPSession2:: BCPSetBulkMode 會設定所有屬性。  
+  IBCPSession2::BCPSetBulkMode 提供了 [IBCPSession::BCPColFmt &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 的替代方式，可用於指定資料行格式。 不同於設定個別資料行格式屬性的 IBCPSession::BCPColFmt，IBCPSession2::BCPSetBulkMode 會設定所有屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,37 +56,37 @@ HRESULT BCPSetBulkMode (
  資料列結束字元值的長度 (以位元組為單位)。  
   
 ## <a name="returns"></a>傳回值  
- IBCPSession2:: BCPSetBulkMode 可能會傳回下列其中一項:  
+ IBCPSession2::BCPSetBulkMode 可能會傳回下列其中一個值：  
   
 |||  
 |-|-|  
 |**S_OK**|此方法已成功。|  
 |**E_FAIL**|發生提供者特有的錯誤，如需詳細資訊，請使用 ISQLServerErrorInfo 介面。|  
-|**E_UNEXPECTED**|此方法的呼叫是非預期的。 例如, 在呼叫 IBCPSession2:: BCPSetBulkMode 之前, 不會呼叫**IBCPSession2:: BCPInit**方法。|  
+|**E_UNEXPECTED**|此方法的呼叫是非預期的。 例如，在呼叫 IBCPSession2::BCPSetBulkMode 之前，沒有呼叫 **IBCPSession2::BCPInit** 方法。|  
 |**E_INVALIDARG**|此引數無效。|  
 |**E_OUTOFMEMORY**|記憶體不足的錯誤。|  
   
-## <a name="remarks"></a>Remarks  
- IBCPSession2:: BCPSetBulkMode 可用於從查詢或資料表大量複製。 當 IBCPSession2::BCPSetBulkMode 用來大量複製查詢陳述式時，您必須先呼叫此方法，再呼叫 `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` 來指定查詢陳述式。  
+## <a name="remarks"></a>備註  
+ IBCPSession2::BCPSetBulkMode 可用來大量複製查詢或資料表。 當 IBCPSession2::BCPSetBulkMode 用來大量複製查詢陳述式時，您必須先呼叫此方法，再呼叫 `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` 來指定查詢陳述式。  
   
- 您應該避免在單一命令文字中結合 RPC 呼叫語法與批次查詢語法 (例如 `{rpc func};SELECT * from Tbl`)。  這會導致 ICommandPrepare::P 準備傳回錯誤, 並讓您無法抓取中繼資料。 如果您需要在單一命令文字中結合預存程序執行與批次查詢，請使用 ODBC CALL 語法 (例如 `{call func}; SELECT * from Tbl`)。  
+ 您應該避免在單一命令文字中結合 RPC 呼叫語法與批次查詢語法 (例如 `{rpc func};SELECT * from Tbl`)。  這樣做會導致 ICommandPrepare::Prepare 傳回錯誤並且讓您無法擷取中繼資料。 如果您需要在單一命令文字中結合預存程序執行與批次查詢，請使用 ODBC CALL 語法 (例如 `{call func}; SELECT * from Tbl`)。  
   
  下表將列出 *property* 參數的常數。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應至 BCP 中的-c 選項。EXE, 並將*eUserDataType*屬性設定為**BCP_TYPE_SQLCHARACTER**, 以 IBCPSession:: BCPColFmt。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應至 BCP 中的-w 選項。將*eUserDataType*屬性設定為**BCP_TYPE_SQLNCHAR**的 EXE 和 IBCPSession:: BCPColFmt。|  
-|BCP_OUT_NATIVE_TEXT_MODE|指定非字元類型的原生類型和字元類型的 Unicode。<br /><br /> 對應至 BCP 中的-N 選項。EXE 和 IBCPSession:: BCPColFmt with *eUserDataType*屬性設為**BCP_TYPE_SQLNCHAR** , 如果資料行類型是字串或**BCP_TYPE_DEFAULT** (如果不是字串)。|  
-|BCP_OUT_NATIVE_MODE|指定原生資料庫類型。<br /><br /> 對應至 BCP 中的-n 選項。將*eUserDataType*屬性設定為**BCP_TYPE_DEFAULT**的 EXE 和 IBCPSession:: BCPColFmt。|  
+|BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應至 BCP.EXE 中的 -c 選項，以及 *eUserDataType* 屬性設定為 **BCP_TYPE_SQLCHARACTER** 的 IBCPSession::BCPColFmt。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應至 BCP.EXE 中的 -w 選項，以及 *eUserDataType* 屬性設定為 **BCP_TYPE_SQLNCHAR** 的 IBCPSession::BCPColFmt。|  
+|BCP_OUT_NATIVE_TEXT_MODE|指定非字元類型的原生類型和字元類型的 Unicode。<br /><br /> 對應至 BCP.EXE 中的 -N 選項，以及 *eUserDataType* 屬性設定為 **BCP_TYPE_SQLNCHAR** (如果資料行類型是字串的話) 或 **BCP_TYPE_DEFAULT** (如果不是字串的話) 的 IBCPSession::BCPColFmt。|  
+|BCP_OUT_NATIVE_MODE|指定原生資料庫類型。<br /><br /> 對應至 BCP.EXE 中的 -n 選項，以及 *eUserDataType* 屬性設定為 **BCP_TYPE_DEFAULT** 的 IBCPSession::BCPColFmt。|  
   
- 您可以針對不與 IBCPSession:: BCPControl 衝突的 IBCPSession2:: BCPSetBulkMode 選項, 呼叫 IBCPSession:: BCPControl 和 IBCPSession2:: BCPSetBulkMode。 例如, 您可以使用**BCP_OPTION_FIRST**和 IBCPSession2:: BCPSetBulkMode 呼叫 IBCPSession:: BCPControl。  
+ 您可以針對不會與 IBCPSession2::BCPSetBulkMode 發生衝突的 IBCPSession::BCPControl 選項呼叫 IBCPSession::BCPControl 和 IBCPSession2::BCPSetBulkMode。 例如，您可以使用 **BCP_OPTION_FIRST** 和 IBCPSession2::BCPSetBulkMode 來呼叫 IBCPSession::BCPControl。  
   
- 您無法使用**BCP_OPTION_TEXTFILE**和 IBCPSession2:: BCPSetBulkMode 呼叫 IBCPSession:: BCPControl。  
+ 您不可以使用 **BCP_OPTION_TEXTFILE** 和 IBCPSession2::BCPSetBulkMode 來呼叫 IBCPSession::BCPControl。  
   
- 如果您嘗試使用包含 IBCPSession:: BCPColFmt、IBCPSession:: BCPControl 和 IBCPSession:: BCPReadFmt 的函式呼叫序列來呼叫 IBCPSession2:: BCPSetBulkMode, 其中一個函式呼叫將會傳回序列錯誤失敗。 如果您選擇要更正失敗，請呼叫 IBCPSession::BCPInit 來重設設定並重新開始。  
+ 如果您嘗試使用一連串包含 IBCPSession::BCPColFmt、IBCPSession::BCPControl 和 IBCPSession::BCPReadFmt 的函式呼叫來呼叫 IBCPSession2::BCPSetBulkMode，其中一個函式呼叫就會傳回順序錯誤失敗。 如果您選擇要更正失敗，請呼叫 IBCPSession::BCPInit 來重設設定並重新開始。  
   
- 以下是一些會導致函式順序錯誤的函式呼叫範例:  
+ 以下是會產生函式順序錯誤的一些函式呼叫範例：  
   
 ```cpp  
 BCPInit("table", "dataFile", "errorFile", BCP_DIRECTION_IN);  

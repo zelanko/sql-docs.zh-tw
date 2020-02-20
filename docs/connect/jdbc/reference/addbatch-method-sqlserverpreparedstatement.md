@@ -1,5 +1,5 @@
 ---
-title: addBatch 方法 (SQLServerPreparedStatement) |Microsoft Docs
+title: addBatch 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 134f1455-c98c-4112-ab2d-9205a0db73df
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 21664ab5f612689949f65ffb237a50c8747d1cd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67956001"
 ---
 # <a name="addbatch-method-sqlserverpreparedstatement"></a>addBatch 方法 (SQLServerPreparedStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67956001"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[addBatch ()](../../../connect/jdbc/reference/addbatch-method.md)|將一組參數新增至這個 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 物件的命令批次中。|  
 |[addBatch (java.lang.String)](../../../connect/jdbc/reference/addbatch-method-java-lang-string.md)|將指定的 SQL 命令新增至這個 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 物件的目前命令清單中。|  

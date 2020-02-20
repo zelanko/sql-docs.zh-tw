@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 18dc87158bc1a6086cf8406423c123b0789b0f08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015545"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 將 BLOB 資料傳送到 SQL SERVER (OLE DB)
@@ -34,7 +34,7 @@ ms.locfileid: "68015545"
   
  因為 DBTYPE_IUNKNOWN 會在繫結中指定為資料類型，所以必須符合資料行或目標參數的類型。 從資料列介面透過 ISequentialStream 傳送資料時，不能進行轉換。 對於參數，您應該避免使用 ICommandWithParameters::SetParameterInfo，並指定不同的類別來強制執行轉換；這項作業需要提供者在本機快取所有的 BLOB 資料，以便在傳送到 SQL Server 之前加以轉換。 快取大量的 BLOB 並在本機進行轉換無法提供良好的效能。  
   
- 如需詳細資訊, 請參閱[blob 和 OLE 物件](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)。  
+ 如需詳細資訊，請參閱 [BLOB 與 OLE 物件](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)。  
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  

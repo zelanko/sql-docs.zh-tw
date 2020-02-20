@@ -1,5 +1,5 @@
 ---
-title: getBigDecimal 方法 (SQLServerCallableStatement) |Microsoft Docs
+title: getBigDecimal 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bc81b9a3-96ae-4c9c-b6c4-abd7b83175e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ce96850f9fb39ca2484dd003e4a861813e53766d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953829"
 ---
 # <a name="getbigdecimal-method-sqlservercallablestatement"></a>getBigDecimal 方法 (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67953829"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getBigDecimal (int)](../../../connect/jdbc/reference/getbigdecimal-method-int.md)|配合給定的參數索引來擷取指定之參數的值當做 java.math.BigDecimal (具有完整有效位數)。|  
 |[getBigDecimal (int, int)](../../../connect/jdbc/reference/getbigdecimal-method-int-int.md)|(已被取代) 配合給定的參數索引和小數位數來擷取指定之參數的值當做 java.math.BigDecimal。|  

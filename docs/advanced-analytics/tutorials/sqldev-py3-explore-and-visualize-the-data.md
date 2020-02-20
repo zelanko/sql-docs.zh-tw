@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ba5f48b7788b6ebec63149175568777e6659017f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 2aef2ed82803af2a6ca1966cde5f5bf6675ca016
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725069"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74901840"
 ---
 # <a name="explore-and-visualize-the-data"></a>探索及視覺化資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ _hack_license_ 資料行包含計程車司機駕照號碼 (匿名)。
 1. 如果 PowerShell 指令碼尚未建立預存程序，請建立預存程序 **PyPlotMatplotlib**。
 
     - 變數 `@query` 會定義查詢文字 `SELECT tipped FROM nyctaxi_sample`，以當成指令碼輸入變數 `@input_data_1` 的引數傳遞給 Python 程式碼區塊。
-    - Python 指令碼相當簡單：**matplotlib** `figure` 物件用來建立長條圖和散佈圖，然後使用 `pickle` 程式庫將這些物件序列化。
+    - Python 指令碼相當簡單：**matplotlib** `figure` 物件會用來建立長條圖和散佈圖，然後使用 `pickle` 程式庫將這些物件序列化。
     - Python 圖形物件會序列化為 **pandas** DataFrame 以進行輸出。
   
     ```sql
@@ -197,7 +197,7 @@ _hack_license_ 資料行包含計程車司機駕照號碼 (匿名)。
   
     ![小費金額與車資金額](media/sqldev-python-sample-plot.png "小費金額與車資金額") 
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>後續步驟
 
 [使用 T-SQL 建立資料特徵](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 

@@ -1,6 +1,6 @@
 ---
-title: 正在抓取錯誤資訊 |Microsoft Docs
-description: 使用 SQL Server 的 OLE DB 驅動程式來抓取錯誤資訊
+title: 擷取錯誤資訊 | Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 來擷取錯誤資訊
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: efde220b1cdc849eec9c0483453739b47fac7a75
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70874646"
 ---
 # <a name="retrieving-error-information"></a>擷取錯誤資訊

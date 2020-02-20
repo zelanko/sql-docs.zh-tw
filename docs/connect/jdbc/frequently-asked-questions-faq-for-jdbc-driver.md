@@ -11,10 +11,10 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 37f644b07b02c90e74b0b4fe4e0d5215f5efa298
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049813"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 驅動程式常見問題集 (FAQ)
@@ -39,9 +39,9 @@ Microsoft JDBC Driver 7.4 支援 JDBC 4.2 和 4.3 (部份) 規格，同時也在
 
 | JAR                        | JDBC 規格            | JDK 版本 |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-6.4.0.jre8.jar 7.4.1. jre12 .jar | JDBC 4.3 (部份) 和 4.2 | JDK 12.0    |
-| mssql-jdbc-6.4.0.jre8.jar 7.4.1. mssql-jdbc-7.2.2.jre11.jar .jar | JDBC 4.3 (部份) 和 4.2 | JDK 11.0    |
-| mssql-jdbc-6.4.0.jre8.jar 7.4.1. mssql-jdbc-6.2.2.jre8.jar .jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-7.4.1.jre12.jar | JDBC 4.3 (部份) 和 4.2 | JDK 12.0    |
+| mssql-jdbc-7.4.1.jre11.jar | JDBC 4.3 (部份) 和 4.2 | JDK 11.0    |
+| mssql-jdbc-7.4.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 Microsoft JDBC Driver 7.2 支援 JDBC 4.2 與 4.3 (部份) 規格，同時也在安裝套件中包含了下列兩個 JAR 類別庫：
@@ -102,7 +102,7 @@ Microsoft JDBC Driver for SQL Server 為免費提供。
 JDBC 驅動程式 6.0、6.2、6.4 與 7.0 是可轉發的。 請檢閱授權合約中的「可轉散發程式碼」條款。
 
 **我可以使用此驅動程式從 Linux 電腦存取 Microsoft SQL Server 嗎？**  
-當然可以。 您可以使用此驅動程式從 Linux、 Unix 及其他非 Windows 平台存取 SQL Server。 如需詳細資料，請參閱 [Microsoft JDBC Driver for SQL Server 支援對照表](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)。
+可以！ 您可以使用此驅動程式從 Linux、 Unix 及其他非 Windows 平台存取 SQL Server。 如需詳細資料，請參閱 [Microsoft JDBC Driver for SQL Server 支援對照表](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)。
 
 **此驅動程式支援安全通訊端層 (SSL) 加密嗎？**  
 此驅動程式自 1.2 版起，即支援安全通訊端層 (SSL) 加密。 如需詳細資訊，請參閱 [使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)。
@@ -117,19 +117,19 @@ JDBC 驅動程式 6.0、6.2、6.4 與 7.0 是可轉發的。 請檢閱授權合�
 | 非 Windows | Azure Active Directory 驗證 |
 | Windows     | 純 Java Kerberos                    |
 | Windows     | SQL Server                            |
-| 視窗     | Kerberos 加 NTLM 備份             |
+| Windows     | Kerberos 加 NTLM 備份             |
 | Windows     | NTLM                                  |
 | Windows     | Azure Active Directory 驗證 |
 | &nbsp;      | &nbsp;                                |
 
 **此驅動程式支援網際網路通訊協定第 6 版 (IPv6) 位址嗎？**  
-是的。 此驅動程式支援使用 IPv6 位址。 使用連線屬性集合和 serverName 連接字串屬性。 如需詳細資訊，請參閱[建置連線 URL](../../connect/jdbc/building-the-connection-url.md)。
+是。 此驅動程式支援使用 IPv6 位址。 使用連線屬性集合和 serverName 連接字串屬性。 如需詳細資訊，請參閱[建置連線 URL](../../connect/jdbc/building-the-connection-url.md)。
 
 **什麼是自適性緩衝？**  
 自適性緩衝是從 Microsoft SQL Server 2005 JDBC Driver 1.2 版開始引進的。 它是針對在沒有伺服器資料指標負擔的情況下，擷取任何種類的大數值資料而設計的。 Microsoft SQL Server JDBC Driver 的自適性緩衝功能提供連接字串屬性 responseBuffering，可以設定為 "adaptive" 或 "full"。 在 1.2 版中，預設的緩衝模式為 "full"，而且應用程式必須明確自適性緩衝模式。 自 JDBC Driver 2.0 版起，此驅動程式的預設行為是 "adaptive"。 因此，您的應用程式不需要明確要求自適性行為，就能取得自適性緩衝行為。 如需詳細資訊，請參閱[使用自適性緩衝](../../connect/jdbc/using-adaptive-buffering.md)與 [What is adaptive response buffering and why should I use it?](https://go.microsoft.com/fwlink/?LinkId=111575) (什麼是自適性回應緩衝，以及我為何應該使用它？) 部落格。
 
 **此驅動程式支援連線共用嗎？**  
-此驅動程式提供支援 Java Platform, Enterprise Edition 5 (Java EE 5) 的連接共用。 此驅動程式實作了 JDBC 3.0 所需的介面，讓驅動程式能夠參與中介軟體應用程式廠商所提供的連接共用實作。 此驅動程式可參與這些環境中的共用連接。 如需詳細資訊，請參閱 [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md)。 此驅動程式不提供自己的共用實作，而會使用第三方 Java 應用程式伺服器。
+此驅動程式提供支援 Java Platform, Enterprise Edition 5 (Java EE 5) 的連接共用。 此驅動程式實作了 JDBC 3.0 所需的介面，讓驅動程式能夠參與中介軟體應用程式廠商所提供的連接共用實作。 此驅動程式可參與這些環境中的共用連接。 如需詳細資訊，請參閱[使用連線共用](../../connect/jdbc/using-connection-pooling.md)。 此驅動程式不提供自己的共用實作，而會使用第三方 Java 應用程式伺服器。
 
 **此驅動程式是否提供任何支援選項？**  
 此驅動程式提供數個支援選項。 您可以在我們的 [GitHub 存放庫](https://github.com/microsoft/mssql-jdbc) \(英文\) 上張貼或提出問題，這會由 Microsoft 監控。 [論壇](https://go.microsoft.com/fwlink/?LinkID=246673) \(英文\) 會由 Microsoft、MVP 和社群監控。 您也可以連絡 Microsoft 客戶支援服務。 開發小組可能會要求您重現任何第三方應用程式伺服器以外的問題。 若無法在裝載 Java 容器之環境以外之處重現問題，您必須連絡相關的第三方廠商，小組才能繼續協助您。 該小組也可能要求您在作業系統 (例如 Windows) 上重現您的問題，以便為該問題提供最佳支援。

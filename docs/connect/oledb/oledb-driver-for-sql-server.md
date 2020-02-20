@@ -18,12 +18,12 @@ helpviewer_keywords:
 - native data access [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: adc18554ebb4494112f424f3e6a3dd02c13b121c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 849c3dbc0a0f94387f2e2f25ba17d64c910653cb
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993789"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918813"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ OLE DB Driver for SQL Server 是用於 OLE DB 的獨立資料存取應用程式�
   
  OLE DB Driver for SQL Server 的設計目的是提供簡化的方法，讓您使用 OLE DB 取得 SQL Server 的原生資料存取權。 它提供一種方式來改革及發展新的資料存取功能，而不需變更目前的 Windows DAC 元件 (這些元件現在為 Microsoft Windows 平台的一部分)。  
   
- 雖然 OLE DB Driver for SQL Server 會使用 Windows DAC 中的元件，但它並非明確相依於特定的 Windows DAC 版本。 您可以使用 OLE DB Driver for SQL Server 搭配 OLE DB Driver for SQL Server 所支援之任何作業系統安裝的 Windows DAC 版本。  
+ 雖然 OLE DB Driver for SQL Server 會使用 Windows DAC 中的元件，其並不會明確相依於特定的 Windows DAC 版本。 您可以使用 OLE DB Driver for SQL Server 搭配 OLE DB Driver for SQL Server 所支援之任何作業系統安裝的 Windows DAC 版本。  
 
  ## <a name="different-generations-of-ole-db-drivers"></a>不同世代的 OLE DB 驅動程式
 

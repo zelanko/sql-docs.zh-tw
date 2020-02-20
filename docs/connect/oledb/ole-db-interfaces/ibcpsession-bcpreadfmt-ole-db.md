@@ -1,6 +1,6 @@
 ---
-title: 'IBCPSession:: BCPReadFmt (OLE DB) |Microsoft Docs'
-description: '使用 IBCPSession:: BCPReadFmt 從格式檔案讀取資料 (OLE DB)'
+title: IBCPSession::BCPReadFmt (OLE DB) | Microsoft Docs
+description: 使用 IBCPSession::BCPReadFmt 從格式檔案讀取資料 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 97274315275f11e77c458827740f44906a524ed9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015506"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
@@ -37,14 +37,14 @@ HRESULT BCPReadFmt(
       const wchar_t *pwszFormatFile);  
 ```  
   
-## <a name="remarks"></a>Remarks  
- **BCPReadFmt** 方法是用來讀取格式檔案中的資料 (格式檔案會指定資料檔中的資料格式)。 這個方法能夠偵測格式檔案的正確版本。 它可以自動偵測格式檔案為 xml 還是舊樣式的文字格式，並適當地產生行為。 SQL Server BCP 的 OLE DB 驅動程式所支援的格式檔案版本是6.0 或更新版本。  
+## <a name="remarks"></a>備註  
+ **BCPReadFmt** 方法是用來讀取格式檔案中的資料 (格式檔案會指定資料檔中的資料格式)。 這個方法能夠偵測格式檔案的正確版本。 它可以自動偵測格式檔案為 xml 還是舊樣式的文字格式，並適當地產生行為。 OLE DB Driver for SQL Server BCP 支援的格式檔案版本為 6.0 版或更新版本。  
   
  當 **BCPReadFmt** 方法讀取格式值以後，它會適當地呼叫 [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 和 [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 方法。 使用者不需要剖析格式檔案，也不需要進行這些呼叫。  
   
  若要儲存格式檔案，請呼叫 [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) 方法。 **BCPReadFmt** 方法的呼叫可以參考已儲存的格式。 另外，大量複製公用程式 (**bcp**) 可以將使用者定義的資料格式儲存在由 **BCPReadFmt** 方法參考的檔案中。  
   
- [IBCPSession:: BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md)之*EOption*參數的**BCP_OPTION_DELAYREADFMT**值修改了 IBCPSession:: BCPReadFmt 的行為。  
+ [IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) 之 *eOption* 參數的 **BCP_OPTION_DELAYREADFMT** 值會修改 IBCPSession::BCPReadFmt 的行為。  
   
 ## <a name="arguments"></a>引數  
  *pwszFormatFile*[in]  

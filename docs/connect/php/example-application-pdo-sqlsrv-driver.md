@@ -1,5 +1,5 @@
 ---
-title: 範例應用程式 (PDO_SQLSRV 驅動程式) |Microsoft Docs
+title: 範例應用程式 (PDO_SQLSRV 驅動程式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8414497fed891e153399febf84151c82d915d77a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993595"
 ---
-# <a name="example-application-pdosqlsrv-driver"></a>範例應用程式 (PDO_SQLSRV 驅動程式)
+# <a name="example-application-pdo_sqlsrv-driver"></a>範例應用程式 (PDO_SQLSRV 驅動程式)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 AdventureWorks Product Reviews 範例應用程式是一種 Web 應用程式，其使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的 PDO_SQLSRV 驅動程式。 此應用程式可讓使用者經由輸入關鍵字來搜尋產品、查看所選產品的評論、撰寫所選產品的評論，以及上傳所選產品的影像。  
@@ -32,7 +32,7 @@ AdventureWorks Product Reviews 範例應用程式是一種 Web 應用程式，�
 ## <a name="requirements"></a>需求  
 若要執行 AdventureWorks Product Reviews 範例應用程式，您的電腦的下列項目必須相符：  
   
--   您的系統符合 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的需求。 如需詳細資訊, 請參閱適用于[PHP 的 Microsoft 驅動程式的系統需求 SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md)。  
+-   您的系統符合 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的需求。 如需詳細資訊，請參閱 [Microsoft Drivers for PHP for SQL Server 的系統需求](../../connect/php/system-requirements-for-the-php-sql-driver.md)。  
  -   adventureworks_demo.php 和 photo.php 檔案位於您的 Web 伺服器的根目錄中。 這些檔案必須包含本文件稍後所列的程式碼。  
 -   本機電腦上已安裝 SQL Server 2005 或 SQL Server 2008，並附加 [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。  
 -   已安裝網頁瀏覽器。  
@@ -41,8 +41,8 @@ AdventureWorks Product Reviews 範例應用程式是一種 Web 應用程式，�
 AdventureWorks Product Reviews 範例應用程式會示範下列工作：  
   
 -   如何使用 Windows 驗證開啟 SQL Server 連接。  
--   如何準備和執行參數化查詢。  
--   如何取得資料。  
+-   如何準備及執行參數化查詢。  
+-   如何擷取資料。  
 -   如何檢查錯誤。  
   
 ## <a name="example"></a>範例  
@@ -506,7 +506,7 @@ die( print_r( $e->getMessage() ) );
 ## <a name="see-also"></a>另請參閱  
 [連線到伺服器](../../connect/php/connecting-to-the-server.md)
 
-[比較執行函數](../../connect/php/comparing-execution-functions.md)
+[比較執行函式](../../connect/php/comparing-execution-functions.md)
 
 [擷取資料](../../connect/php/retrieving-data.md)
 

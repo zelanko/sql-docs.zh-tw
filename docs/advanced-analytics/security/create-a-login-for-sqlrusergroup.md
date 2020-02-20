@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: a5194f251b7ea47e0d9485446b8957e96037ded0
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68714965"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>為 SQLRUserGroup 建立登入
@@ -33,11 +33,11 @@ ms.locfileid: "68714965"
 
 2. 在 [登入 - 新增]  對話方塊中，選取 [搜尋]  (還不要在方塊中輸入任何內容)。
     
-     ![按一下 [搜尋] 以新增機器學習服務的登入](media/implied-auth-login1.png "按一下 [搜尋] 以新增機器學習服務的登入")
+     ![按一下 [搜尋] 來為機器學習新增登入](media/implied-auth-login1.png "按一下 [搜尋] 來為機器學習新增登入")
 
 3. 在 [選取使用者或群組]  方塊中，按一下 [物件類型]  按鈕。
 
-     ![搜尋物件類型以新增機器學習服務的登入](media/implied-auth-login2.png "搜尋物件類型以新增機器學習服務的登入")
+     ![搜尋 [物件類型] 來為機器學習新增登入](media/implied-auth-login2.png "搜尋 [物件類型] 來為機器學習新增登入")
 
 4. 在 [物件類型]  對話方塊中，選取 [群組]  。 清除其他所有的核取方塊。
 
@@ -45,7 +45,7 @@ ms.locfileid: "68714965"
 
 4. 按一下 [進階]  ，確認要搜尋的位置是目前的電腦，然後按一下 [立即尋找]  。
 
-     ![按一下 [立即尋找] 以取得群組清單](media/implied-auth-login4.png "按一下 [立即尋找] 以取得群組清單")
+     ![按一下 [立即尋找] 來取得群組清單](media/implied-auth-login4.png "按一下 [立即尋找] 來取得群組清單")
 
 5. 瀏覽伺服器上的群組帳戶清單，直到您找到一個開頭為 `SQLRUserGroup` 的清單為止。
     

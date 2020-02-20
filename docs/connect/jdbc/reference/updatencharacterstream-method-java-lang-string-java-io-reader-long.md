@@ -11,10 +11,10 @@ ms.assetid: db0a96a8-248f-4664-9c13-f480f309ab91
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee869c9d9bdcc707456f1cb04b5dcacdacee89a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998686"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader-long"></a>updateNCharacterStream 方法 (java.lang.String, java.io.Reader, long)
@@ -47,10 +47,10 @@ public void updateNCharacterStream(java.lang.String columnLabel,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 updateNCharacterStream 方法是由 sql-dmo 介面中的 updateNCharacterStream 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 updateNCharacterStream 方法是由 java.sql.ResultSet 介面中的 updateNCharacterStream 方法指定。  
   
- 這個方法會將讀取器物件的 Unicode 字元傳遞到選取的**Nchar**、 **Nvarchar (max)** 、 **Ntext**和**xml**資料行。 在其他資料類型資料行上使用這個方法，將會擲回例外狀況。  
+ 這個方法會從 Reader 物件將 Unicode 字元傳遞到選取的 **nchar**、**nvarchar(max)** 、**ntext** 和 **xml** 資料行。 在其他資料類型資料行上使用這個方法，將會擲回例外狀況。  
   
  如果此資料流的長度與 *length* 參數中所指定的長度不同，JDBC 驅動程式就會在更新或插入資料列時擲回例外狀況。  
   

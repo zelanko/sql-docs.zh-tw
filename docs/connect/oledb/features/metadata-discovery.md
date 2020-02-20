@@ -1,6 +1,6 @@
 ---
-title: 中繼資料探索 |Microsoft Docs
-description: SQL Server OLE DB 驅動程式中的中繼資料探索
+title: 中繼資料探索 | Microsoft Docs
+description: OLE DB Driver for SQL Server 中的中繼資料探索
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9891e5708110be83a4ef33cb2a142accaf93ffe2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989058"
 ---
 # <a name="metadata-discovery"></a>中繼資料探索
@@ -28,18 +28,18 @@ ms.locfileid: "67989058"
   
  如果您使用 OLE DB Driver for SQL Server 來開發應用程式，但卻連接至 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 之前的伺服器版本，則中繼資料探索功能將對應至該伺服器的版本。  
   
-## <a name="remarks"></a>Remarks   
+## <a name="remarks"></a>備註   
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 已經強化了下列 OLE DB 成員函數，以便提供改良的中繼資料探索：  
   
 -   IColumnsInfo::GetColumnInfo  
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   ICommandWithParameters:: GetParameterInfo (如需詳細資訊, 請參閱[ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md) )  
+-   ICommandWithParameters::GetParameterInfo (如需詳細資訊，請參閱 [ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md))  
   
  當您使用 IBCPSession::BCPSetBulkMode 來指定中繼資料格式時，也會看見效能改進  
   
- SQL Server 的 OLE DB 驅動程式中已改善的中繼資料探索可能是因為在中[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]加入了兩個預存程式:  
+ 由於 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 加入了下列兩個預存程序，所以您可以在 OLE DB Driver for SQL Server 中進行改善的中繼資料探索：  
   
 -   sp_describe_first_result_set  
   

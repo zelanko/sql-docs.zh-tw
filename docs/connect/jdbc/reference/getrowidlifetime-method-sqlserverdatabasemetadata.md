@@ -1,5 +1,5 @@
 ---
-title: getRowIdLifetime 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getRowIdLifetime 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 317c0b44-fe3f-4142-9cab-e40e4c4fe070
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9a792f33d598eafa706241329873338998c61865
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980258"
 ---
 # <a name="getrowidlifetime-method-sqlserverdatabasemetadata"></a>getRowIdLifetime 方法 (SQLServerDatabaseMetaData)
@@ -33,13 +33,13 @@ public java.sql.RowIdLifetime getRowIdLifetime()
  RowIdLifetime 物件。  
   
 > [!NOTE]  
->  在 JDBC 驅動程式2.0 版的版本中, 這個方法會傳回 RowIdLifetime. ROWID_UNSUPPORTED 值。  
+>  在 JDBC Driver 2.0 版的版本中，這個方法會傳回 java.sql.RowIdLifetime.ROWID_UNSUPPORTED 值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getRowIdLifetime 方法是由 JAVA.sql.databasemetadata 介面中的 getRowIdLifetime 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getRowIdLifetime 方法是由 java.sql.DatabaseMetaData 介面中的 getRowIdLifetime 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

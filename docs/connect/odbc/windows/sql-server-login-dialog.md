@@ -1,5 +1,5 @@
 ---
-title: SQL Server 登入對話方塊 (ODBC) |Microsoft Docs
+title: SQL Server 登入對話方塊 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
@@ -11,21 +11,21 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
 ms.openlocfilehash: fcfde122b978fa1e77baa690a1f3e09417dab1c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989418"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>SQL Server 登入對話方塊 (ODBC)
 
-當您呼叫 ODBC 連接，但卻沒有為驅動程式指定足夠的資訊以連接至 SQL Server 時，ODBC 驅動程式就會顯示 [SQL Server 登入]  對話方塊。
+當您呼叫 ODBC 連接，但卻沒有為驅動程式指定足夠的資訊以連接至 SQL Server 時，ODBC 驅動程式就會顯示 [SQL Server 登入] 對話方塊。
 
 ## <a name="options"></a>選項。
 
-### <a name="server"></a>[伺服器]
+### <a name="server"></a>伺服器
 
-在您的網路上 SQL Server 實例的名稱。 從清單中選取伺服器或執行個體名稱，或在 [伺服器]  方塊中鍵入伺服器或執行個體名稱。 (選擇性) 您可以在用戶端電腦上使用 [SQL Server 設定管理員]  建立伺服器別名，並在 [伺服器]  方塊中鍵入該名稱。
+網路上 SQL Server 執行個體的名稱。 從清單中選取伺服器或執行個體名稱，或在 [伺服器] 方塊中鍵入伺服器或執行個體名稱。 (選擇性) 您可以在用戶端電腦上使用 [SQL Server 設定管理員] 建立伺服器別名，並在 [伺服器] 方塊中鍵入該名稱。
 
 如果您使用的電腦與 SQL Server 的相同，則可輸入 "(local)"。 接著，即使執行的是非網路版的 SQL Server，您也可連接到 SQL Server 的本機執行個體。
 
@@ -33,14 +33,14 @@ ms.locfileid: "67989418"
 
 ### <a name="authentication-mode"></a>驗證模式
 
-從下列其中一項選取驗證模式:
-- 具有登入識別碼和密碼的**SQL Server**
-- 使用目前登入的使用者帳戶進行**Windows 整合**式驗證
-- 具有登入識別碼和密碼的**Active Directory 密碼**
-- 使用目前登入的使用者帳戶**Active Directory 整合**式驗證
+請從下列其中一項選取驗證模式：
+- 具有登入識別碼和密碼的 **SQL Server**
+- 使用目前登入的使用者帳戶進行 **Windows 整合式**驗證
+- 具有登入識別碼和密碼的 **Active Directory 密碼**
+- 使用目前登入的使用者帳戶進行 **Active Directory 整合式**驗證
 - 使用登入識別碼進行的 **Active Directory 互動式**驗證
 
-如需驗證模式的詳細資訊, 請參閱[資料來源嚮導畫面 2](../../../connect/odbc/windows/dsn-wizard-2.md) 。
+如需有關驗證模式的詳細資訊，請參閱[資料來源精靈畫面 2](../../../connect/odbc/windows/dsn-wizard-2.md)。
 
 ### <a name="server-spn"></a>伺服器 SPN
 
@@ -48,19 +48,19 @@ ms.locfileid: "67989418"
 
 ### <a name="login-id"></a>登入識別碼
 
-如果**驗證模式**設定為 [ **SQL Server** ] 或 [ **Active Directory 密碼**] 或 [ **Active Directory 互動式**], 則指定要用於連接的 SQL Server 或 Azure Active Directory 登入識別碼。 否則, 就會停用 [**登入識別碼**] 方塊。
+如果 [驗證模式] 設定為 [SQL Server] 或 [Active Directory 密碼] 或 [Active Directory 互動式]，則指定要用於連線的 SQL Server 或 Azure Active Directory 登入識別碼。 否則，就會停用 [登入識別碼] 方塊。
 
-### <a name="password"></a>[密碼]
+### <a name="password"></a>密碼
 
-如果 [**驗證模式]** 設定為 [ **SQL Server** ] 或 [ **Active Directory 密碼**], 則指定用於連接之 SQL Server 或 Azure Active Directory 登入識別碼的密碼。 否則, 就會停用 [**密碼**] 方塊。
+如果 [驗證模式] 設定為 [SQL Server] 或 [Active Directory 密碼]，則指定要用於連線的 SQL Server 或 Azure Active Directory 登入識別碼密碼。 否則，就會停用 [密碼] 方塊。
 
 ### <a name="options"></a>選項。
 
-顯示或隱藏 [選項]  群組。 如果 [伺服器]  具有值，即會啟用 [選項]  按鈕。
+顯示或隱藏 [選項] 群組。 如果 [伺服器] 具有值，即會啟用 [選項] 按鈕。
 
 ### <a name="change-password"></a>變更密碼
 
-選取此方塊時，會顯示 [新密碼]  和 [確認新密碼]  方塊。
+選取此方塊時，會顯示 [新密碼] 和 [確認新密碼] 方塊。
 
 ### <a name="new-password"></a>新密碼
 
@@ -70,7 +70,7 @@ ms.locfileid: "67989418"
 
 再次指定新密碼，以進行確認。
 
-### <a name="database"></a>[資料庫]
+### <a name="database"></a>資料庫
 
 指定用於連接的預設資料庫。 此設定會覆寫伺服器上指定用於登入的預設資料庫。 如果未指定任何資料庫，則連接會使用伺服器上指定用於登入的預設資料庫。
 
@@ -82,11 +82,11 @@ ms.locfileid: "67989418"
 
 (選擇性) 您可以指定鏡像伺服器的 SPN。 鏡像伺服器的 SPN 會用於用戶端與伺服器之間的相互驗證。
 
-### <a name="language"></a>語言
+### <a name="language"></a>Language
 
 指定要用於 SQL Server 系統訊息的國家/地區語言。 執行 SQL Server 的電腦必須安裝此語言。 此設定會覆寫伺服器上指定用於登入的預設語言。 如果未指定任何語言，則連接會使用伺服器上指定用於登入的預設語言。
 
-### <a name="application-name"></a>Application Name
+### <a name="application-name"></a>應用程式名稱
 
 (選擇性) 指定要針對 **sys.sysprocesses** 中的此連接，儲存在資料列上的 **program_name** 資料行中的應用程式名稱。
 
@@ -96,12 +96,12 @@ ms.locfileid: "67989418"
 
 ### <a name="use-strong-encryption-for-data"></a>使用高度加密資料
 
-若選取此選項, 透過連接傳遞的資料將會加密。 預設會加密登入，即使清除該核取方塊亦然。
+選取時，透過連線傳遞的資料將會經過加密。 預設會加密登入，即使清除該核取方塊亦然。
 
 ### <a name="trust-server-certificate"></a>信任伺服器憑證
 
-只有在已啟用 [**對資料使用強式加密**] 時, 才適用此選項。 選取此選項時, 將不會驗證服務器的憑證是否具有伺服器的正確主機名稱, 並由受信任的憑證授權單位單位發行。
+只有在已啟用 [為資料使用增強式加密] 時，此選項才適用。 選取時，伺服器的憑證將不需要經過驗證，就擁有伺服器的正確主機名稱，且由信任的憑證授權單位所發出。
 
 ## <a name="see-also"></a>另請參閱
 
-[Windows 上適用於 SQL Server 的 Microsoft ODBC 驅動程式](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)
+[Windows 上的 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)

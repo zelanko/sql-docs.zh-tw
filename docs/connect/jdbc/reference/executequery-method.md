@@ -1,5 +1,5 @@
 ---
-title: executeQuery 方法 () |Microsoft Docs
+title: executeQuery 方法 () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 1d90407f-16df-4ba2-b4a5-47d5751e1d7c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f80cceb8807fc643e197d06ae737ee7347e1be1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954767"
 ---
 # <a name="executequery-method-"></a>executeQuery 方法 ()
@@ -40,7 +40,7 @@ public java.sql.ResultSet executeQuery()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 executeQuery 方法是由 java.sql.PreparedStatement 介面中的 executeQuery 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

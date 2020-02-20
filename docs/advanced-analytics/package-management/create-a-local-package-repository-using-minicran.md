@@ -3,19 +3,19 @@ title: 使用 miniCRAN 建立存放庫
 description: 了解如何使用 miniCRAN 套件離線安裝 R 套件，以建立套件和相依性的本機存放庫。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9b83a0c016cf16e4df8ef7fcb90b3711eabe4933
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c8ddfcf997cd4cc62f1c65efd7ecfc4cf3aff730
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727578"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479468"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>使用 miniCRAN 建立本機 R 套件存放庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73727578"
 
 - **安全性**：許多 R 使用者都習慣從 CRAN 或其鏡像網站之一隨意下載並安裝新的 R 套件。 不過，基於安全性理由，執行 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 的實際執行伺服器通常不具網際網路連線能力。
 
-- **更輕鬆進行離線安裝**：若要將套件安裝到離線服務器，您也必須下載所有套件相依性。 使用 miniCRAN 可讓您更輕鬆地以正確的格式取得所有相依性。 藉由使用 miniCRAN，您可以在準備套件以使用 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 陳述式進行安裝時，避免產生套件相依性錯誤。
+- **更輕鬆進行離線安裝**：若要將套件安裝到離線服務器，您也必須下載所有套件相依性。 使用 miniCRAN 可讓您更輕鬆地以正確的格式取得所有相依性，並避免相依性錯誤。
 
 - **已改良版本管理**：在多使用者環境中，有充分的理由來避免在伺服器上無限制地安裝多個套件版本。 使用本機存放庫，為使用者提供一組一致性套件。
 
@@ -112,6 +112,11 @@ pdb[, c("Package", "Version", "License")]
 
 當您擁有具備所需套件的本機存放庫之後，將該套件存放庫移至 SQL Server 電腦。 下列程序描述如何使用 R 工具安裝套件。
 
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!NOTE]
+> 安裝套件的建議方法是使用 **sqlmlutils**。 請參閱[使用 sqlmlutils 安裝新的 R 套件](install-additional-r-packages-on-sql-server.md)。
+::: moniker-end
+
 1. 將包含 miniCRAN 存放庫的資料夾完整複製到您打算安裝套件的伺服器。 該資料夾通常具有下列結構： 
 
    `<miniCRAN root>/bin/windows/contrib/version/<all packages>`
@@ -124,7 +129,7 @@ pdb[, c("Package", "Version", "License")]
    - 例如，RGUI 的預設檔案位置是 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`。
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range"=sql-server-2017||=sqlallproducts-allversions"
    - 例如，RGUI 的檔案位置是 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`。
    ::: moniker-end
 

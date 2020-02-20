@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0e6ceaa3fae1efd04490932dd1fdc42a9805b2f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67995115"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>對 OLE DB 日期和時間改善的資料類型支援
@@ -25,16 +25,16 @@ ms.locfileid: "67995115"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  本文提供支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]日期/時間資料類型之 OLE DB (SQL Server 的 OLE DB 驅動程式) 的相關資訊。  
+  本文提供有關支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 日期/時間資料類型之 OLE DB (OLE DB Driver for SQL Server) 類型的資訊。  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>資料列集和參數中的資料類型對應  
  OLE DB 提供兩種新的資料類型來支援新的伺服器類型：DBTYPE_DBTIME2 和 DBTYPE_DBTIMESTAMPOFFSET。 下表顯示完整伺服器類型的對應：  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型|OLE DB 資料類型|ReplTest1|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型|OLE DB 資料類型|值|  
 |-----------------------------------------|----------------------|-----------|  
-|DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
+|Datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
-|日期|DBTYPE_DBDATE|133 (oledb.h)|  
+|date|DBTYPE_DBDATE|133 (oledb.h)|  
 |time|DBTYPE_DBTIME2|145 (msoledbsql.h)|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (msoledbsql.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -43,9 +43,9 @@ ms.locfileid: "67995115"
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型|OLE DB 資料類型|用於用戶端轉換的字串格式|  
 |-----------------------------------------|----------------------|------------------------------------------|  
-|DATETIME|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> 針對 Datetime，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 最多支援三個小數秒位數。|  
+|Datetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> 針對 Datetime，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 最多支援三個小數秒位數。|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> 此資料類型的精確度為一分鐘。 輸出時，秒數元件為零，而在輸入時，將會由伺服器捨去。|  
-|日期|DBTYPE_DBDATE|'yyyy-mm-dd'|  
+|date|DBTYPE_DBDATE|'yyyy-mm-dd'|  
 |time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> 您最多可以使用七位數選擇性地指定小數秒。|  
 |datetime2|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.fffffff]'<br /><br /> 您最多可以使用七位數選擇性地指定小數秒。|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.fffffff] +/-hh:mm'<br /><br /> 您最多可以使用七位數選擇性地指定小數秒。|  
@@ -85,7 +85,7 @@ ms.locfileid: "67995115"
   
 -   DBTYPE_FILETIME  
   
-### <a name="dbtypedbtime2"></a>DBTYPE_DBTIME2  
+### <a name="dbtype_dbtime2"></a>DBTYPE_DBTIME2  
  此結構在 32 位元和 64 位元作業系統上會填補到 12 個位元組。  
   
 ```  
@@ -97,7 +97,7 @@ typedef struct tagDBTIME2 {
     } DBTIME2;  
 ```  
   
-### <a name="dbtype-dbtimestampoffset"></a>DBTYPE_ DBTIMESTAMPOFFSET  
+### <a name="dbtype_-dbtimestampoffset"></a>DBTYPE_ DBTIMESTAMPOFFSET  
   
 ```  
 typedef struct tagDBTIMESTAMPOFFSET {  
@@ -160,7 +160,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- 如果基礎架構更新為使用**datetime2**而不是**datetime**, 則遷移至 OLE DB 驅動程式的應用程式, 如果是使用**SQL_variant**的 SQL Server 並依賴有效的**datetime**有效位數, 則必須更新。  
+ 若應用程式會移轉至使用 **sql_variant** 並依賴 **datetime** 有限精確度的 OLE DB Driver for SQL Server，如果將基礎結構描述更新為使用 **datetime2** 而非 **datetime**，則必須更新這類應用程式。  
   
  SSVARIANT 的存取巨集也已經透過加入下列項目來擴充：  
   
@@ -172,16 +172,16 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable 中的資料類型對應  
- 下列類型對應會與 ITableDefinition:: CreateTable 所使用的 DBCOLUMNDESC 結構搭配使用:  
+ 下列類型對應會搭配 ITableDefinition::CreateTable 所使用的 DBCOLUMNDESC 結構使用：  
   
 |OLE DB 資料類型 (*wType*)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型|注意|  
 |----------------------------------|-----------------------------------------|-----------|  
-|DBTYPE_DBDATE|日期||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|SQL Server 的 OLE DB 驅動程式會檢查 DBCOLUMDESC *bScale*成員, 以判斷小數秒的有效位數。|  
-|DBTYPE_DBTIME2|**time**(p)|SQL Server 的 OLE DB 驅動程式會檢查 DBCOLUMDESC *bScale*成員, 以判斷小數秒的有效位數。|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|SQL Server 的 OLE DB 驅動程式會檢查 DBCOLUMDESC *bScale*成員, 以判斷小數秒的有效位數。|  
+|DBTYPE_DBDATE|date||  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|OLE DB Driver for SQL Server 會檢查 DBCOLUMDESC *bScale* 成員來判斷毫秒精確度。|  
+|DBTYPE_DBTIME2|**time**(p)|OLE DB Driver for SQL Server 會檢查 DBCOLUMDESC *bScale* 成員來判斷毫秒精確度。|  
+|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|OLE DB Driver for SQL Server 會檢查 DBCOLUMDESC *bScale* 成員來判斷毫秒精確度。|  
   
- 當應用程式在*wType*中指定 DBTYPE_DBTIMESTAMP 時, 它可以藉由在*pwszTypeName*中提供型別名稱來覆寫**datetime2**的對應。 如果已指定**datetime** , *bScale*必須是3。 如果指定**Smalldatetime** , *bScale*必須是0。 如果*bScale*與*wType*和*pwszTypeName*不一致, 則會傳回 DB_E_BADSCALE。  
+ 當應用程式在 *wType* 中指定 DBTYPE_DBTIMESTAMP 時，其可在 *pwszTypeName* 中提供一個類型名稱，藉以將對應覆寫到 **datetime2**。 如果指定了 **datetime**，*bScale* 必須是 3。 如果指定了 **smalldatetime**，*bScale* 必須是 0。 如果 *bScale* 與 *wType* 和 *pwszTypeName* 不一致，則會傳回 DB_E_BADSCALE。  
   
 ## <a name="see-also"></a>另請參閱  
  [日期和時間改善 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  

@@ -1,6 +1,6 @@
 ---
-title: 使用大數數值型別 |Microsoft Docs
-description: 針對 SQL Server 使用具有 OLE DB 驅動程式的大數數值型別
+title: 使用大數值類型 | Microsoft Docs
+description: 搭配 OLE DB Driver for SQL Server 使用大數值類型
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2847838b37a9f5c233f649b6a712d4c0b2d150f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988864"
 ---
 # <a name="using-large-value-types"></a>使用大數值類型
@@ -33,7 +33,7 @@ ms.locfileid: "67988864"
 > [!NOTE]  
 >  大數值資料類型的最大大小可介於 1 KB 和 8 KB 之間，或者也可以指定為無限制。  
   
- 先前，只有 **text**、**ntext** 和 **image** 之類的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型可以達到此種長度。 **varchar**、**nvarchar** 和 **varbinary** 的 **max** 規範使這些資料類型變得多餘。 不過，因為 long 資料類型仍可使用，所以大部分 OLE DB 資料存取元件的介面都仍保持原樣。 為了與先前版本的回溯相容性, SQL Server 的 OLE DB 驅動程式中的 DBCOLUMNFLAGS_ISLONG 旗標仍在使用中。 當新類型設定為無限制的最大長度時，針對 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更新版本所撰寫的提供者和驅動程式仍會為其繼續使用這些詞彙。  
+ 先前，只有 **text**、**ntext** 和 **image** 之類的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型可以達到此種長度。 **varchar**、**nvarchar** 和 **varbinary** 的 **max** 規範使這些資料類型變得多餘。 不過，因為 long 資料類型仍可使用，所以大部分 OLE DB 資料存取元件的介面都仍保持原樣。 為了與先前的版本保持回溯相容性，OLE DB Driver for SQL Server 中的 DBCOLUMNFLAGS_ISLONG 旗標仍會繼續使用。 當新類型設定為無限制的最大長度時，針對 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更新版本所撰寫的提供者和驅動程式仍會為其繼續使用這些詞彙。  
   
 > [!NOTE]  
 >  您也可以將 **varchar(max)** 、**nvarchar(max)** 和 **varbinary(max)** 資料類型指定為預存程序的輸入和輸出參數類型、函數傳回型別，或者指定於 [CAST 和 CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) 函數。  
@@ -62,7 +62,7 @@ ms.locfileid: "67988864"
   
 -   繫結為 DBTYPE_IUNKNOWN 並使用資料流。  
   
- 報告資料行的大小上限時, SQL Server 的 OLE DB 驅動程式將會報告:  
+ 在報告資料行的大小上限時，OLE DB Driver for SQL Server 將會報告：  
   
 -   定義的最大大小，例如 **varchar(** 2000 **)** 資料行的最大大小為 2000，或者  
   
@@ -690,7 +690,7 @@ _ExitProcessResultSet:
 }  
 ```  
   
- 如需 SQL Server 的 OLE DB 驅動程式如何公開大數值資料類型的詳細資訊, 請參閱[blob 和 OLE 物件](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)。  
+ 如需有關 OLE DB Driver for SQL Server 如何公開大數值資料類型的詳細資訊，請參閱 [BLOB 與 OLE 物件](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)。  
 
   
 ## <a name="see-also"></a>另請參閱  

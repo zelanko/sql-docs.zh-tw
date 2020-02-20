@@ -11,10 +11,10 @@ ms.assetid: 64cf4877-5995-4bfc-8865-b7618a5c8d01
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 851974955b9311efc149ecdff310bfbb1d8869fc
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026932"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>使用含更新計數的預存程序
@@ -26,7 +26,7 @@ ms.locfileid: "69026932"
 使用 SQLServerCallableStatement 類別設定預存程序的呼叫之後，接著便可以使用 [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 或 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 方法呼叫預存程序。 executeUpdate 方法會傳回 **int** 值，其中包含預存程序所影響的資料列數目，但是 execute 方法則不會傳回該值。 如果使用 execute 方法並想要取得受影響的資料列計數，則您可以在執行預存程序之後呼叫 [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) 方法。
 
 > [!NOTE]  
-> 如果想要 JDBC 驅動程式傳回所有更新計數 (包括任何可能已引發之觸發程序所傳回的更新計數)，請將 lastUpdateCount 連接字串屬性設為 "false"。 如需 lastUpdateCount 屬性的詳細資訊, 請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。
+> 如果想要 JDBC 驅動程式傳回所有更新計數 (包括任何可能已引發之觸發程序所傳回的更新計數)，請將 lastUpdateCount 連接字串屬性設為 "false"。 如需 lastUpdateCount 屬性的詳細資訊，請參閱[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。
 
 例如，您可以在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫中建立下列資料表和預存程序，同時插入範例資料：
 

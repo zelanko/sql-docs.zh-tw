@@ -1,5 +1,5 @@
 ---
-title: IBCPSession2 (OLE DB) |Microsoft Docs
+title: IBCPSession2 (OLE DB) | Microsoft Docs
 description: IBCPSession2 介面 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7fe71aa439b54785e30adf4c4192be0f924318e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994515"
 ---
 # <a name="ibcpsession2-ole-db"></a>IBCPSession2 (OLE DB)
@@ -24,9 +24,9 @@ ms.locfileid: "67994515"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  IBCPSession2 介面是 IBCPSession 的擴充功能, 它會提供成員函式, 這是針對每個資料行呼叫 IBCPSession:: BCPColFmt 的替代方法。  IBCPSession2 繼承自 IBCPSession, 並加入一個新的方法: [IBCPSession2:: BCPSetBulkMode](../../oledb/ole-db-interfaces/ibcpsession2-bcpsetbulkmode.md)。  
+  IBCPSession2 介面是 IBCPSession 的延伸模組，可提供針對每個資料行呼叫 IBCPSession::BCPColFmt 之替代方式的成員函式。  IBCPSession2 繼承自 IBCPSession 並且加入了一個新方法：[IBCPSession2::BCPSetBulkMode](../../oledb/ole-db-interfaces/ibcpsession2-bcpsetbulkmode.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [介面&#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
+ [介面 &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: getServerName 方法 (SQLServerDataSource) |Microsoft Docs
+title: getServerName 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 3004ed22-5d69-4dd0-8761-d39f0b7dde13
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 487d214dbdd6974442749dd0cff6ac24fe9d1977
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979948"
 ---
 # <a name="getservername-method-sqlserverdatasource"></a>getServerName 方法 (SQLServerDataSource)
@@ -37,7 +37,7 @@ public java.lang.String getServerName()
 ## <a name="return-value"></a>傳回值  
  包含伺服器名稱的**字串**，如果未設定任何值，則為 null。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  伺服器名稱是正在執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 目標電腦的主機名稱。 如果未設定 getServerName 屬性，getServerName 會傳回預設值 null。  
   
 ## <a name="see-also"></a>另請參閱  

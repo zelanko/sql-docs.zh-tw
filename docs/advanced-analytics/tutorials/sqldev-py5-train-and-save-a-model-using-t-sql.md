@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b8bec553502b2e5c8d69436e539437be9a5989aa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 87194c1a77964f0e5aef3d0fae008d14cbfb8eb2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73724873"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74901800"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>使用 T-SQL 定型及儲存 Python 模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "73724873"
 
 這個預存程序使用新的 **revoscalepy** 套件，這是適用於 Python 的新套件。 其中包含物件、轉換和演算法，類似於針對 R 語言的 **RevoScaleR** 套件提供的演算法。 
 
-藉由使用 **revoscalepy**，您可以建立遠端計算內容、在計算內容之間移動資料、轉換資料，以及使用常用的演算法 (例如羅吉斯和線性迴歸、決策樹等等) 定型預測模型。 如需詳細資訊，請參閱 [SQL Server 中的 revoscalepy 模組](../python/ref-py-revoscalepy.md)和 [revoscalepy 函數參考](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)。
+藉由使用 **revoscalepy**，您可以建立遠端計算內容、在計算內容之間移動資料、轉換資料，以及使用常用的演算法 (例如羅吉斯和線性迴歸、決策樹等等) 定型預測模型。 如需詳細資訊，請參閱 [SQL Server 中的 revoscalepy 模組](../python/ref-py-revoscalepy.md)和 [revoscalepy 函數參考](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) \(英文\)。
 
 1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，開啟新的 [查詢]  視窗，然後執行下列陳述式來建立預存程序 _TrainTipPredictionModelRxPy_。  因為預存程序已經包含輸入資料的定義，因此您不需要提供輸入查詢。
 
@@ -190,7 +190,7 @@ ms.locfileid: "73724873"
 
 在下一個步驟中，您將使用定型的模型來建立預測。
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>後續步驟
 
 [在預存程序中使用 Python 內嵌執行預測](sqldev-py6-operationalize-the-model.md)
 

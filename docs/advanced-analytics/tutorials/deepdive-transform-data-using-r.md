@@ -1,6 +1,6 @@
 ---
 title: 使用 RevoScaleR 轉換資料
-description: 如何在 SQL Server 上使用 R 語言轉換資料的教學課程逐步解說。
+description: RevoScaleR 教學課程 9：如何在 SQL Server 上使用 R 語言轉換資料。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 773607c7800ed1d507aa721ca7cf86a03857ab8b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 3e8c28548ba4fa5f5ad661e3b7b0872ad166b812
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727167"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947181"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>使用 R 轉換資料 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本課程是 [RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分，說明如何將 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server 搭配使用。
+此教學課程是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 9 個，該系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
 
-在本課程中，您將了解在分析的各個階段用於轉換資料的 **RevoScaleR** 函式。
+在此教學課程中，您將會了解在分析的各個階段用於轉換資料的 **RevoScaleR** 函式。
 
 > [!div class="checklist"]
 > * 使用 **rxDataStep** 建立和轉換資料子集

@@ -1,22 +1,23 @@
 ---
-title: 使用 Azure Data Studio 筆記本部署 SQL Server 巨量資料叢集
-titleSuffix: Deploy SQL Server big data cluster cluster with Azure Data Studio notebooks
+title: 部署：Azure Data Studio 筆記本
+titleSuffix: SQL Server Big Data Clusters
 description: 使用來自 Azure Data Studio 的筆記本來部署巨量資料叢集。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dfdf7dfd2ca5521bd80c4fdbf81e7b5c45d58b8d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: e11a4ac0bcbb66d6b3216d8c2f7a4a3b15cedfb8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594202"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246872"
 ---
-# <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebooks"></a>使用 Azure Data Studio 筆記本部署 SQL Server 巨量資料叢集
+# <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebook"></a>使用 Azure Data Studio 筆記本部署 SQL Server 巨量資料叢集
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -111,17 +112,17 @@ Spark 執行個體可包含在 HDFS 中。 其包含於儲存體集區，或個�
 
    ![端點設定](media/deploy-notebooks/endpoint-settings.png)
 
-#### <a name="storage-settings"></a>儲存設定
+#### <a name="storage-settings"></a>儲存體設定
 
 儲存體設定包含資料與記錄的儲存體類別及宣告大小。 這些設定可套用到儲存體集區、資料及 SQL Server 主要集區。
 
-   ![儲存設定](media/deploy-notebooks/storage-settings.png)
+   ![儲存體設定](media/deploy-notebooks/storage-settings.png)
 
 #### <a name="advanced-storage-settings"></a>進階儲存體設定
 
 您可以在 [**進階儲存設定**] 底下新增其他儲存設定
 
-* 儲存集區 (HDFS)
+* 存放集區 (HDFS)
 * 資料集區
 * SQL Server Master
 

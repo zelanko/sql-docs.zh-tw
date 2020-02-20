@@ -1,6 +1,6 @@
 ---
 title: 使用 RevoScaleR 將資料視覺化
-description: 如何在 SQL Server 上使用 R 語言將資料視覺化的教學課程逐步解說。
+description: RevoScaleR 教學課程 6：如何在 SQL Server 上使用 R 語言視覺化資料。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,30 +9,30 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f64b42e69b1399e67211e82e26502c3fcec96254
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 887c5790a7de70cf111f004be65e3a41748b47bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727115"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947358"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>使用 R 將 SQL Server 資料視覺化 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本課程是 [RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分，說明如何將 [RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server 搭配使用。
+此教學課程是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 6 個，該系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
 
-在此課程中，使用 R 函數，依性別檢視 *creditLine* 資料行中的值分布。
+在此教學課程中，您將會使用 R 函式，依性別檢視 *creditLine* 資料行中的值分佈。
 
 > [!div class="checklist"]
 > * 為長條圖輸入建立 min-max 變數
 > * 從 **RevoScaleR** 使用 **rxHistogram** 將長條圖中的資料視覺化
 > * 使用基礎 R 發佈中包含之 **lattice** 的 **levelplot**，將散佈圖視覺化
 
-如本課程所示，您可以在相同的指令碼中結合開放原始碼和 Microsoft 特定的函數。
+如此教學課程所示範，您可以在相同的指令碼中結合開放原始碼與 Microsoft 特定的函式。
 
 ## <a name="add-maximum-and-minimum-values"></a>新增最大值和最小值
 
-根據上一課計算的摘要統計資料，您發現與資料相關的一些實用資訊，可以將其插入資料來源，以供進一步計算使用。 例如，最小值和最大值可用於計算長條圖。 在此練習中，將最高值和最低值新增至 **RxSqlServerData** 資料來源。
+根據上一個教學課程計算的摘要統計資料，您發現與資料相關的一些實用資訊，可以將其插入資料來源，以供進一步計算使用。 例如，最小值和最大值可用於計算長條圖。 在此練習中，將最高值和最低值新增至 **RxSqlServerData** 資料來源。
 
 1. 一開始先設定一些暫存變數。
   
@@ -41,7 +41,7 @@ ms.locfileid: "73727115"
     var <- sumDF$Name
     ```
   
-2. 使用您在上一課中建立的變數 *ccColInfo*，定義資料來源中的資料行。
+2. 使用您在上一個教學課程中建立的變數 *ccColInfo*，定義資料來源中的資料行。
   
    將新的計算資料行 (*numTrans*、*numIntlTrans* 和 *creditLine*) 新增至置換原始定義的資料行集合。 以下指令碼根據從 sumOut (儲存 **rxSummary** 的記憶體內部輸出) 獲得的最小值和最大值，來新增係數。 
   

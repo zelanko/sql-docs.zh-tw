@@ -1,5 +1,5 @@
 ---
-title: updateFloat 方法 (java. lang.ini, float) |Microsoft Docs
+title: updateFloat 方法 (java.lang.String, float) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 19a6164f-f560-4304-8466-e55f0667a3d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74df5537849daddf09d9edbb10f1baa4d8808e41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998952"
 ---
 # <a name="updatefloat-method-javalangstring-float"></a>updateFloat 方法 (java.lang.String, float)
@@ -42,7 +42,7 @@ public void updateFloat(java.lang.String columnName,
   
  *x*  
   
- **浮點**值。  
+ **float** 值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

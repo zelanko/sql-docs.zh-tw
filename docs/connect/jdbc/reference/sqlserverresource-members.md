@@ -1,5 +1,5 @@
 ---
-title: SQLServerResource 成員 |Microsoft Docs
+title: SQLServerResource 成員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 34b4b2e7-ec00-42aa-82ec-9cb01b538998
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d673cf36e3b9ed4d3012e49c620aed8c8e34eb94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970638"
 ---
 # <a name="sqlserverresource-members"></a>SQLServerResource 成員
@@ -24,7 +24,7 @@ ms.locfileid: "67970638"
   
 ## <a name="constructors"></a>建構函式  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[SQLServerResource ()](../../../connect/jdbc/reference/sqlserverresource-constructor.md)|初始化 [SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md) 類別的新執行個體。 此建構函式僅供內部使用。|  
   
@@ -33,13 +33,13 @@ ms.locfileid: "67970638"
   
 ## <a name="inherited-fields"></a>繼承的欄位  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |java.util.ResourceBundle|父系 (parent)|  
   
 ## <a name="methods"></a>方法  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getContents](../../../connect/jdbc/reference/getcontents-method-sqlserverresource.md)|擷取錯誤字串資訊。 這個方法僅供內部使用。|  
   

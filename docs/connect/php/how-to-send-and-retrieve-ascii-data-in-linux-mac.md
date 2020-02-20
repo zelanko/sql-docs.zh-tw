@@ -1,5 +1,5 @@
 ---
-title: '如何: 在 Linux 和 macOS 中傳送和取出 ASCII 資料 (SQL) |Microsoft Docs'
+title: 如何：在 Linux 與 macOS 中傳送及擷取 ASCII 資料 (SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
@@ -15,33 +15,33 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 9edd73f5ef01d1d3f22db78400cc3c204efe1379
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68251899"
 ---
-# <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>如何：傳送及擷取 Linux 與 macOS 中的 ASCII 資料 
+# <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>如何：傳送及擷取 Linux 及 macOS 中的 ASCII 資料 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本文假設您的 Linux 或 macOS 系統中已產生或安裝 ASCII (非 UTF-8) 地區設定。 
+此文章假設您的 Linux 或 macOS 系統中已產生或安裝 ASCII (非 UTF-8) 地區設定。 
 
-若要將 ASCII 字元集傳送或取出至伺服器:  
+將 ASCII 字元集傳送或擷取到伺服器：  
 
-1.  如果您的系統內容中所需的地區設定不是預設值, 請`setlocale(LC_ALL, $locale)`確定您在進行第一次連接之前先叫用。 PHP setlocale () 函數只會變更目前腳本的地區設定, 而且如果在進行第一次連接之後叫用, 則可能會被忽略。
+1.  若想要的地區設定不是您系統環境中的預設值，請務必在第一次連線之前先叫用 `setlocale(LC_ALL, $locale)`。 PHP setlocale() 函式只會變更目前指令碼的地區設定，而且若在進行第一次連線之後叫用，則系統可能會將其忽略。
  
-2.  使用 SQLSRV 驅動程式時, 您可以將`'CharacterSet' => SQLSRV_ENC_CHAR`指定為連接選項, 但這個步驟是選擇性的, 因為它是預設的編碼方式。
+2.  使用 SQLSRV 驅動程式時，您可以指定 `'CharacterSet' => SQLSRV_ENC_CHAR` 作為連線選項，但此步驟是選擇性的，因為它是預設的編碼。
 
-3.  使用 PDO_SQLSRV 驅動程式時, 有兩種方式。 首先, 在建立連接時, 將`PDO::SQLSRV_ATTR_ENCODING`設定`PDO::SQLSRV_ENCODING_SYSTEM`為 (如需設定連線選項的範例, 請參閱[PDO:: __construct](../../connect/php/pdo-construct.md))。 或者, 在成功連線之後, 新增這一行`$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
+3.  使用 PDO_SQLSRV 驅動程式時，有兩種方式。 首先，在進行連線時，將 `PDO::SQLSRV_ATTR_ENCODING` 設定為 `PDO::SQLSRV_ENCODING_SYSTEM` (如需設定連線選項的範例，請參閱 [PDO::__construct](../../connect/php/pdo-construct.md))。 或者，在成功連線之後，新增這一行 `$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
   
-當您指定連接資源 (SQLSRV) 或連線物件 (PDO_SQLSRV) 的編碼方式時, 驅動程式會假設其他連接選項字串使用相同的編碼方式。 此外也會假設伺服器名稱和查詢字串使用相同的字元集。  
+當您指定連線資源 (在 SQLSRV 中) 或連線物件 (PDO_SQLSRV) 的編碼方式時，驅動程式會假設其他連線選項字串使用該相同編碼。 此外也會假設伺服器名稱和查詢字串使用相同的字元集。  
   
-PDO_SQLSRV 驅動程式的預設編碼方式為 UTF-8 (PDO:: SQLSRV_ENCODING_UTF8), 與 SQLSRV 驅動程式不同。 如需這些常數的詳細資訊，請參閱[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。 
+PDO_SQLSRV 驅動程式的預設編碼為 UTF-8 (PDO::SQLSRV_ENCODING_UTF8)，與 SQLSRV 驅動程式不同。 如需這些常數的詳細資訊，請參閱[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。 
   
 ## <a name="example"></a>範例  
-下列範例示範如何在進行連接之前指定特定地區設定, 以使用 PHP 驅動程式來傳送和抓取 ASCII 資料, 以進行 SQL Server。 不同 Linux 平臺的地區設定可能會以不同于 macOS 中相同地區設定的方式命名。 例如, 當 macOS 中的名稱是`en_US.ISO-8859-1` `en_US.ISO8859-1`時, 美國 ISO-8859-1 (拉丁 1) 地區設定是在 Linux 中。
+下列範例示範如何在進行連線之前指定特定地區設定，以使用適用於 SQL Server 的 PHP 驅動程式來傳送及擷取 ASCII 資料。 不同 Linux 平台的地區設定命名方式可能會與 macOS 中相同地區設定的命名方式不同。 例如，US ISO-8859-1 (Latin 1) 地區設定在 Linux 中是 `en_US.ISO-8859-1`，而在 macOS 中，該名稱是 `en_US.ISO8859-1`。
   
-這些範例假設[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已安裝在伺服器上。 從瀏覽器執行範例時，所有輸出都會寫入至瀏覽器。  
+這些範例假設伺服器上已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 從瀏覽器執行範例時，所有輸出都會寫入至瀏覽器。  
   
 ```  
 <?php  
@@ -166,8 +166,8 @@ try {
 
 ## <a name="see-also"></a>另請參閱  
 [擷取資料](../../connect/php/retrieving-data.md)  
-[使用 utf-8 資料](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
-[更新資料&#40;適用于 PHP 的 Microsoft 驅動程式 SQL Server&#41; ](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+[處理 UTF-8 資料](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
+[更新資料 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
 [常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 [範例應用程式 &#40;SQLSRV 驅動程式&#41;](../../connect/php/example-application-sqlsrv-driver.md)  

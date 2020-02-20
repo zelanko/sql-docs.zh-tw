@@ -1,5 +1,5 @@
 ---
-title: getLong 方法 (SQLServerCallableStatement) |Microsoft Docs
+title: getLong 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: d6c1a8a4-5647-439f-87b8-310b6e9b778a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd79beffea0558c68208c43a9f10633f9bb4c591
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982415"
 ---
 # <a name="getlong-method-sqlservercallablestatement"></a>getLong 方法 (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67982415"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getLong (int)](../../../connect/jdbc/reference/getlong-method-int.md)|使用 Java 程式設計語言，並配合指定參數索引來擷取指定參數的值當作 **long**。|  
 |[getLong (java.lang.String)](../../../connect/jdbc/reference/getlong-method-java-lang-string.md)|使用 Java 程式設計語言，並配合指定參數名稱來擷取指定參數的值當作 **long**。|  

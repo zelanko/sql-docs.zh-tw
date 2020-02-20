@@ -1,22 +1,23 @@
 ---
-title: 在 Azure Toolkit for IntelliJ 中於 SQL Server 巨量資料叢集上執行 Spark 作業
-titleSuffix: SQL Server big data clusters
+title: 執行 Spark 作業：Azure Toolkit for IntelliJ
+titleSuffix: SQL Server Big Data Clusters
 description: 在 Azure Toolkit for IntelliJ 中於 SQL Server 巨量資料叢集上提交 Spark 作業。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
 ms.topic: conceptual
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 59946731dc1e76716b6202dd6f8aa93d777986b3
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 70cdc7e9738abdde2dfaf479320b11a94469f661
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653710"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244077"
 ---
-# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-intellij"></a>在 IntelliJ 中於 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上提交 Spark 作業
+# <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>在 IntelliJ 中於 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上提交 Spark 作業
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -51,16 +52,16 @@ ms.locfileid: "69653710"
 
 1. 啟動 IntelliJ IDEA，然後建立專案。 在 [New Project]  \(新增專案\) 對話方塊中，遵循下列步驟： 
 
-   A. 選取[Azure Spark/HDInsight]   > [Spark Project with Samples (Scala)]  \(含範例的 Spark 專案 (Scala)\)。
+   a. 選取[Azure Spark/HDInsight]   > [Spark Project with Samples (Scala)]  \(含範例的 Spark 專案 (Scala)\)。
 
-   B. 在 [Build tool]  \(組建工具\) 清單中，根據您的需求選取下列其中一項：
+   b. 在 [Build tool]  \(組建工具\) 清單中，根據您的需求選取下列其中一項：
 
       * **Maven**，適用於 Scala 專案建立精靈支援
       * **SBT**，適用於管理相依性和建置 Scala 專案
 
     ![[New Project] \(新增專案\) 對話方塊](./media/spark-submit-job-intellij-tool-plugin/create-hdi-scala-app.png)
 
-2. 選取 **[下一步]** 。
+2. 選取 [下一步]  。
 
 3. Scala 專案建立精靈會自動偵測您是否已安裝 Scala 外掛程式。 選取 [安裝]  。
 
@@ -74,9 +75,9 @@ ms.locfileid: "69653710"
 
     ![選取 Spark SDK](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
-   A. 輸入專案名稱和位置。
+   a. 輸入專案名稱和位置。
 
-   B. 在 [Project SDK]  \(專案 SDK\) 下拉式清單中，針對 Spark 2.x 叢集，請選取 [Java 1.8]  ，針對 Spark 1.x 叢集，則選取 [Java 1.7]  。
+   b. 在 [Project SDK]  \(專案 SDK\) 下拉式清單中，針對 Spark 2.x 叢集，請選取 [Java 1.8]  ，針對 Spark 1.x 叢集，則選取 [Java 1.7]  。
 
    c. 在 [Spark version]  \(Spark 版本\) 下拉式清單中，Scala 專案建立精靈整合 Spark SDK 和 Scala SDK 的適當版本。 如果 Spark 叢集版本早於 2.0，請選取 [Spark 1.x]  。 否則，請選取 [Spark 2.x]  。 此範例使用 [Spark 2.0.2 (Scala 2.11.8)]  。
 
@@ -84,9 +85,9 @@ ms.locfileid: "69653710"
 
 7. Spark 專案會自動為您建立成品。 若要檢視該成品，請執行下列步驟：
 
-   A. 在 [File]  \(檔案\) 功能表上，選取 [Project Structure]  \(專案結構\)。
+   a. 在 [File]  \(檔案\) 功能表上，選取 [Project Structure]  \(專案結構\)。
 
-   B. 在 [Project Structure]  \(專案結構\) 對話方塊中，選取 [Artifacts]  \(成品\) 以檢視所建立的預設成品。 您也可以選取加號 ( **+** ) 來建立自己的成品。
+   b. 在 [Project Structure]  \(專案結構\) 對話方塊中，選取 [Artifacts]  \(成品\) 以檢視所建立的預設成品。 您也可以選取加號 ( **+** ) 來建立自己的成品。
 
       ![對話方塊中的成品資訊](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
@@ -106,13 +107,13 @@ ms.locfileid: "69653710"
 
     * **Main class name** (主要類別名稱) 欄位：預設值是所選取檔案中的主要類別。 您可以選取省略號 ( **...** ) 並選擇另一個類別來變更類別。   
 
-    * **Job Configurations** (作業設定) 欄位：預設值會設定為如上圖所示。 您可以為您的作業提交變更值或新增機碼/值。 如需詳細資訊：[Apache Livy REST API](http://livy.incubator.apache.org./docs/latest/rest-api.html) \(英文\)
+    * **Job Configurations** (作業設定) 欄位：預設值會設定為如上圖所示。 您可以為您的作業提交變更值或新增機碼/值。 其他資訊：[Apache Livy REST API](http://livy.incubator.apache.org./docs/latest/rest-api.html) \(英文\)
 
       ![Spark 提交對話方塊作業設定意義](./media/spark-submit-job-intellij-tool-plugin/submit-job-configurations.png)
 
     * **Command line arguments** (命令列引數) 欄位：如有需要，您可以輸入主要類別的引數值 (以空格分隔)。
 
-    * [Referenced Jars]  \(參考的 Jar\) 和 [Referenced Files]  \(參考的檔案\) 欄位：如果有任何要參考的 Jar 或檔案，您可以輸入其路徑。 如需詳細資訊：[Apache Spark 設定](https://spark.apache.org/docs/latest/configuration.html#runtime-environment) \(英文\) 
+    * [Referenced Jars]  \(參考的 Jar\) 和 [Referenced Files]  \(參考的檔案\) 欄位：如果有任何要參考的 Jar 或檔案，您可以輸入其路徑。 其他資訊：[Apache Spark 設定](https://spark.apache.org/docs/latest/configuration.html#runtime-environment) \(英文\) 
 
       ![Spark 提交對話方塊 Jar 檔案意義](./media/spark-submit-job-intellij-tool-plugin/jar-files-meaning.png)
 
@@ -139,7 +140,7 @@ ms.locfileid: "69653710"
 
 4. 提供下列值，然後選取 [OK]  \(確定\)：
 
-    |屬性 |ReplTest1 |
+    |屬性 |值 |
     |----|----|
     |作業主要類別|預設值是所選取檔案中的主要類別。 您可以選取省略號 ( **...** ) 並選擇另一個類別來變更類別。|
     |環境變數|請確定 HADOOP_HOME 的值是正確的。|
@@ -173,7 +174,7 @@ ms.locfileid: "69653710"
 
 4. 提供下列值，然後選取 [OK]  \(確定\)：
 
-    |屬性 |ReplTest1 |
+    |屬性 |值 |
     |----|----|
     |Spark clusters (Linux only) (Spark 叢集 (僅限 Linux))|選取您要在上面執行應用程式的 SQL Server 巨量資料叢集。|
     |Main class name (主要類別名稱)|預設值是所選取檔案中的主要類別。 您可以選取省略號 ( **...** ) 並選擇另一個類別來變更類別。|

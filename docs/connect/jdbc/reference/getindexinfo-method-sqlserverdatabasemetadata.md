@@ -1,5 +1,5 @@
 ---
-title: getIndexInfo 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getIndexInfo 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dd512236aa3070ce299756d4e4294c79ac2e94a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982797"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo 方法 (SQLServerDatabaseMetaData)
@@ -53,11 +53,11 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  *unique*  
   
- 如果只傳回唯一值的索引,**則為 true** 。 如果傳回所有索引, 則**為 false** 。  
+ 如果僅傳回唯一值的索引，則為 **true**。 如果傳回所有索引，則為 **false**。  
   
  *approximate*  
   
- 如果結果反映大約或過期的值,**則為 true** 。 如果結果正確, 則**為 false** 。  
+ 如果結果反映近似或過期的值，則為 **true**。 如果結果正確，則為 **false**。  
   
 ## <a name="return-value"></a>傳回值  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  

@@ -1,6 +1,6 @@
 ---
-title: 取得 FAST_FORWARD 資料指標 |Microsoft Docs
-description: 使用適用于 SQL Server 的 OLE DB 驅動程式來取得 FAST_FORWARD 資料指標
+title: 取得 FAST_FORWARD 資料指標 | Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 取得 FAST_FORWARD 資料指標
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,13 +13,13 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2b49071908be3d8093d66358148e305b79476324
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994735"
 ---
-# <a name="obtain-a-fastforward-cursor"></a>取得 FAST_FORWARD 資料指標
+# <a name="obtain-a-fast_forward-cursor"></a>取得 FAST_FORWARD 資料指標
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "67994735"
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
   
-### <a name="to-obtain-fastforward-cursor"></a>取得 FAST_FORWARD 資料指標  
+### <a name="to-obtain-fast_forward-cursor"></a>取得 FAST_FORWARD 資料指標  
   
 1.  建立資料來源的連接。  
   

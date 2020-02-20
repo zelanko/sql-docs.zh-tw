@@ -1,5 +1,5 @@
 ---
-title: 診斷 JDBC driver 的問題 |Microsoft Docs
+title: 診斷 JDBC 驅動程式的問題 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9c36e81631435e4e079d2b52aea4fe9bce587159
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028099"
 ---
 # <a name="diagnosing-problems-with-the-jdbc-driver"></a>診斷 JDBC 驅動程式的問題

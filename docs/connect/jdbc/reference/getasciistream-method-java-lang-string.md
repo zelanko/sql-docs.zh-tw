@@ -16,10 +16,10 @@ ms.assetid: b2d24a6b-f029-4691-981b-125c690b8ba5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: feadeaffb5fd74ebc6b2d273dca263cac16c14ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954199"
 ---
 # <a name="getasciistream-method-javalangstring"></a>getAsciiStream 方法 (java.lang.String)
@@ -46,7 +46,7 @@ public java.io.InputStream getAsciiStream(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 這個 getAsciiStream 方法是由 sql-dmo 介面中的 getAsciiStream 方法指定。  
+ 這個 getAsciiStream 方法是由 java.sql.ResultSet 介面中的 getAsciiStream 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [getAsciiStream 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)   

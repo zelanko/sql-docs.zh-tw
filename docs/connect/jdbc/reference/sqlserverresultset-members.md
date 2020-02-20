@@ -1,5 +1,5 @@
 ---
-title: SQLServerResultSet 成員 |Microsoft Docs
+title: SQLServerResultSet 成員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fed1b515d6e003f00cebbaf3f3a9306572e2ad2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970569"
 ---
 # <a name="sqlserverresultset-members"></a>SQLServerResultSet 成員
@@ -27,7 +27,7 @@ ms.locfileid: "67970569"
   
 ## <a name="fields"></a>欄位  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CONCUR_SS_OPTIMISTIC_CC](../../../connect/jdbc/reference/concur-ss-optimistic-cc-field-sqlserverresultset.md)|用來指定不含資料列鎖定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 讀取/寫入開放式並行類型。|  
 |[CONCUR_SS_OPTIMISTIC_CCVAL](../../../connect/jdbc/reference/concur-ss-optimistic-ccval-field-sqlserverresultset.md)|用來指定不含資料列鎖定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 讀取/寫入開放式並行類型。|  
@@ -40,13 +40,13 @@ ms.locfileid: "67970569"
   
 ## <a name="inherited-fields"></a>繼承的欄位  
   
-|類別繼承自：|Description|  
+|類別繼承自：|描述|  
 |---------------------------|-----------------|  
 |java.sql.ResultSet|CLOSE_CURSORS_AT_COMMIT, CONCUR_READ_ONLY, CONCUR_UPDATABLE, FETCH_FORWARD, FETCH_REVERSE, FETCH_UNKNOWN, HOLD_CURSORS_OVER_COMMIT, TYPE_FORWARD_ONLY, TYPE_SCROLL_INSENSITIVE, TYPE_SCROLL_SENSITIVE|  
   
 ## <a name="methods"></a>方法  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[absolute](../../../connect/jdbc/reference/absolute-method-sqlserverresultset.md)|移動資料指標到這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中的指定資料列。|  
 |[afterLast](../../../connect/jdbc/reference/afterlast-method-sqlserverresultset.md)|將資料指標移動到這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的最後一個資料列的後面。|  
@@ -71,7 +71,7 @@ ms.locfileid: "67970569"
 |[getConcurrency](../../../connect/jdbc/reference/getconcurrency-method-sqlserverresultset.md)|擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的並行模式。|  
 |[getCursorName](../../../connect/jdbc/reference/getcursorname-method-sqlserverresultset.md)|擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件所使用 SQL 資料指標的名稱。|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)|使用 Java 程式語言，擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 java.sql.Date 物件。|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|抓取指定資料行的值做為[DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)物件。|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|擷取指定資料行的值作為 [DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)物件。|  
 |[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)|使用 Java 程式語言，擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 **double**。|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverresultset.md)|擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的擷取方向。|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)|擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的擷取大小。|  
@@ -116,7 +116,7 @@ ms.locfileid: "67970569"
 |[setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)|提供提示給 JDBC Driver，作為當這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件需要多個資料列時應從資料庫中提取的資料列數目。|  
 |[updateArray](../../../connect/jdbc/reference/updatearray-method-sqlserverresultset.md)|使用陣列物件，更新指定的資料行。|  
 |[updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)|使用 ASCII 資料流值，更新指定的資料行。|  
-|[updateBigDecimal](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)|使用 JAVA.math.bigdecimal 物件來更新指定的資料行。|  
+|[updateBigDecimal](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)|使用 BigDecimal 物件來更新指定的資料行。|  
 |[updateBinaryStream](../../../connect/jdbc/reference/updatebinarystream-method-sqlserverresultset.md)|使用二進位資料流值，更新指定的資料行。|  
 |[updateBlob](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)|使用 java.sql.Blob 值，更新指定的資料行。|  
 |[updateBoolean](../../../connect/jdbc/reference/updateboolean-method-sqlserverresultset.md)|使用 **boolean** 值，更新指定的資料行。|  
@@ -125,7 +125,7 @@ ms.locfileid: "67970569"
 |[updateCharacterStream](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)|使用字元資料流值，更新指定的資料行。|  
 |[updateClob](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)|使用 java.sql.Clob 值，更新指定的資料行。|  
 |[updateDate](../../../connect/jdbc/reference/updatedate-method-sqlserverresultset.md)|使用日期值，更新指定的資料行。|  
-|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)|更新[DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)資料行。|  
+|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)|更新 [DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)資料行。|  
 |[updateDouble](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)|使用 **double** 值，更新指定的資料行。|  
 |[updateFloat](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)|使用**浮點數**值，更新指定的資料行。|  
 |[updateInt](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)|使用 **int** 值，更新指定的資料行。|  

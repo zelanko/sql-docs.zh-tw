@@ -1,5 +1,5 @@
 ---
-title: SQLServerXAResource 類別 |Microsoft Docs
+title: SQLServerXAResource 類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: df957b79-536f-4db7-b6ac-3d59343559fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 282201b7ff3f5b2ebfe4d8a1224d4d1b39285c53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970089"
 ---
 # <a name="sqlserverxaresource-class"></a>SQLServerXAResource 類別
@@ -35,7 +35,7 @@ ms.locfileid: "67970089"
 public class SQLServerXAResource  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  XA 交易會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中使用 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 分散式交易協調器 (DTC) 來實作。 The SQLServerXAResource 類別會呼叫 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 擴充 dll sqljdbc_xa.dll，此 dll 會與 DTC 接觸。 SQLServerXAResource (XA_START、XA_END、XA_PREPARE 等) 所接收的 XA 呼叫會對應到對應的 DTC 函式呼叫。  
   
 ## <a name="see-also"></a>另請參閱  

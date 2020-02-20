@@ -1,5 +1,5 @@
 ---
-title: 'ISSCommandWithParameters:: GetParameterProperties (OLE DB) |Microsoft Docs'
+title: ISSCommandWithParameters::GetParameterProperties (OLE DB) | Microsoft Docs
 description: ISSCommandWithParameters::GetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4ed73892ae0ebe88d4b18f2d2114143423570c60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015426"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
@@ -48,7 +48,7 @@ HRESULT GetParameterProperties(
 ## <a name="return-code-values"></a>傳回碼值  
  除了無法引發 DB_S_ERRORSOCCURRED 和 DB_E_ERRORSOCCURED 之外，**GetParameterProperties** 方法會傳回與核心 OLE DB **ICommandProperties::GetProperties** 方法相同的錯誤碼。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  相對於 **GetParameterInfo** 而言，**ISSCommandWithParameters::GetParameterProperties** 方法的行為一致。 如果尚未呼叫 [ISSCommandWithParameters::SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) 或 **SetParameterInfo**，或者已經在 cParams 等於零的情況下進行呼叫，**GetParameterInfo** 會衍生並傳回參數資訊。 如果至少已經針對一個參數呼叫 **ISSCommandWithParameters::SetParameterProperties** 或 **SetParameterInfo**，**ISSCommandWithParameters::GetParameterProperties** 方法僅會針對已經呼叫 **ISSCommandWithParameters::SetParameterProperties** 的參數傳回屬性。 如果在 **ISSCommandWithParameters::GetParameterProperties** 或 **GetParameterInfo** 之後呼叫 **ISSCommandWithParameters::SetParameterProperties**，**ISSCommandWithParameters::GetParameterProperties** 的後續呼叫會針對已經呼叫 **ISSCommandWithParameters::SetParameterProperties** 方法的參數，傳回覆寫值。  
   
  SSPARAMPROPS 結構定義如下：  
@@ -63,7 +63,7 @@ HRESULT GetParameterProperties(
   
  `};`  
   
-|成員|Description|  
+|member|描述|  
 |------------|-----------------|  
 |*iOrdinal*|所傳遞參數的序數。|  
 |*cPropertySets*|*rgPropertySets* 中的 DBPROPSET 結構數目。|  

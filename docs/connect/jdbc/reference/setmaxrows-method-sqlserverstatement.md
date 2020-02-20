@@ -1,5 +1,5 @@
 ---
-title: setMaxRows 方法 (SQLServerStatement) |Microsoft Docs
+title: setMaxRows 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: cccc0667-589b-4655-8ea8-14ae8b2eb9dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1ff4ab9e1db2415c92d42012d45b04c57ac30b67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973976"
 ---
 # <a name="setmaxrows-method-sqlserverstatement"></a>setMaxRows 方法 (SQLServerStatement)
@@ -42,8 +42,8 @@ public final void setMaxRows(int max)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 setMaxRows 方法是由 sql 語句介面中的 setMaxRows 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 setMaxRows 方法是由 java.sql.Statement 介面中的 setMaxRows 方法指定。  
   
  這個 MaxRows 方法對動態的可捲動資料指標不會產生任何作用。 應用程式應該要使用 SELECT TOP N SQL 語法，限制可能的大型結果集傳回的資料列數。  
   

@@ -1,5 +1,5 @@
 ---
-title: getBestRowIdentifier 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getBestRowIdentifier 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9a19bd01a8ebf54eb3e819bd4a82400b8107e382
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954020"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>getBestRowIdentifier 方法 (SQLServerDatabaseMetaData)
@@ -71,19 +71,19 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getBestRowIdentifier 方法是由 JAVA.sql.databasemetadata 介面中的 getBestRowIdentifier 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getBestRowIdentifier 方法是由 java.sql.DatabaseMetaData 介面中的 getBestRowIdentifier 方法所指定。  
   
  getBestRowIdentifier 方法所傳回的結果集將包含下列資訊：  
   
-|[屬性]|類型|Description|  
+|名稱|類型|描述|  
 |----------|----------|-----------------|  
 |SCOPE|short|傳回之結果的範圍。 它可能是下列其中一個值：<br /><br /> bestRowTemporary (0)<br /><br /> bestRowTransaction (1)<br /><br /> bestRowSession (2)|  
 |COLUMN_NAME|String|資料行的名稱。|  
 |DATA_TYPE|short|來自 java.sql.Types 的 SQL 資料型別。|  
 |TYPE_NAME|String|資料類型的名稱。|  
-|COLUMN_SIZE|INT|資料行的有效位數。|  
-|BUFFER_LENGTH|INT|緩衝區長度。|  
+|COLUMN_SIZE|int|資料行的有效位數。|  
+|BUFFER_LENGTH|int|緩衝區長度。|  
 |DECIMAL_DIGITS|short|資料行的小數位數。|  
 |PSEUDO_COLUMN|short|指出資料行是否為虛擬資料行。 它可能是下列其中一個值：<br /><br /> bestRowUnknown (0)<br /><br /> bestRowNotPseudo (1)<br /><br /> bestRowPseudo (2)|  
   

@@ -1,5 +1,5 @@
 ---
-title: 建立連接 URL |Microsoft Docs
+title: 建立連線 URL | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028447"
 ---
 # <a name="building-the-connection-url"></a>建立連接 URL
@@ -37,10 +37,10 @@ ms.locfileid: "69028447"
     > [!NOTE]  
     >  若要達到最佳的連接效能，在連接到具名執行個體時應設定 portNumber。 如此可避免為了判斷通訊埠號碼而徒勞往返於伺服器。 如果同時使用 portNumber 及 instanceName，將優先使用 portNumber 並忽略 instanceName。  
   
--   **property** (選擇性) 是一或多個選項連線屬性。 如需詳細資訊，請參閱[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。 可以指定清單中的任何屬性。 屬性只能使用分號 (';') 來分隔，且不能重複。  
+-   **property** (選擇項) 是一或多個選項連線屬性。 如需詳細資訊，請參閱[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。 可以指定清單中的任何屬性。 屬性只能使用分號 (';') 來分隔，且不能重複。  
   
 > [!CAUTION]  
->  為了安全起見，您應該避免根據使用者輸入來建立連接 URL。 應該只在 URL 中指定伺服器名稱和驅動程式。 至於使用者名稱和密碼值，請使用連接屬性集合。 如需有關 JDBC 應用程式中安全性的詳細資訊, 請參閱[保護 jdbc driver 應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)。  
+>  為了安全起見，您應該避免根據使用者輸入來建立連接 URL。 應該只在 URL 中指定伺服器名稱和驅動程式。 至於使用者名稱和密碼值，請使用連接屬性集合。 如需有關 JDBC 應用程式中安全性的詳細資訊，請參閱[保護 JDBC 驅動程式應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)。  
   
 ## <a name="connection-examples"></a>連線範例  
  使用一個使用者名稱及密碼，連接至本機電腦上的預設資料庫：  
@@ -98,7 +98,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  \<*安裝目錄*>\sqljdbc_\<*版本*>\\<*語言*>\auth\  
   
- 針對支援[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]的任何作業系統, 請參閱[使用 Kerberos 整合式驗證連接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) , 以取得中[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]新增的功能描述, 讓應用程式可以使用整合式連接到資料庫。具有類型 4 Kerberos 的驗證。  
+ 如需 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援哪些作業系統的資訊，請參閱[使用 Kerberos 整合式驗證連線到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) 以取得 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 中所新增功能的描述，讓應用程式能夠搭配類型 4 Kerberos 使用整合式驗證連線到資料庫。  
   
 > [!NOTE]  
 >  如果您執行的是 32 位元的 Java Virtual Machine (JVM)，即使作業系統為 x64 版，也請使用 x86 資料夾中的 sqljdbc_auth.dll 檔案。 如果您是在 x64 處理器上執行 64 位元的 JVM，請使用 x64 資料夾中的 sqljdbc_auth.dll 檔案。  

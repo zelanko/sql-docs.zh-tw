@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0b5172339873ba90b12f65b5334a9014563cd3f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989037"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>OLE DB Driver for SQL Server 的高可用性支援、災害復原
@@ -22,7 +22,7 @@ ms.locfileid: "67989037"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  本文討論 SQL Server 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的*OLE DB 驅動程式*。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的詳細資訊，請參閱[可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[建立及設定可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[容錯移轉叢集和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 和[使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+  此文章討論 *OLE DB Driver for SQL Server* 對 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的支援。 如需有關 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的詳細資訊，請參閱[可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[建立及設定可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[容錯移轉叢集和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 和[使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  您可以在連接字串中指定給定可用性群組的可用性群組接聽程式。 如果 OLE DB Driver for SQL Server 應用程式已連線到可用性群組中容錯移轉的資料庫，則原始連線會中斷，而且應用程式必須在容錯移轉後開啟新連線，才能繼續工作。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67989037"
 > 增加連接逾時並實作連接重試邏輯可提高應用程式連接到可用性群組的機率。 此外，因為連接可能會由於可用性群組容錯移轉而失敗，所以您應該實作連接重試邏輯，並重試失敗的連接，直到重新連接為止。  
   
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 進行連接  
- 當連線到 SQL Server Always On 可用性群組接聽程式或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體時，永遠指定 **MultiSubnetFailover=Yes**。 **MultiSubnetFailover** 可讓所有 Always On 可用性群組和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的容錯移轉叢集執行個體容錯移轉得更快，並大幅縮短單一和多重子網路 Always On 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會平行嘗試連接。 在子網容錯移轉期間, SQL Server 的 OLE DB 驅動程式將會重試 TCP 連接。  
+ 當連線到 SQL Server Always On 可用性群組接聽程式或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體時，永遠指定 **MultiSubnetFailover=Yes**。 **MultiSubnetFailover** 可讓所有 Always On 可用性群組和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的容錯移轉叢集執行個體容錯移轉得更快，並大幅縮短單一和多重子網路 Always On 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會平行嘗試連接。 在子網路容錯移轉期間，OLE DB Driver for SQL Server 將會重試 TCP 連線。  
   
  **MultiSubnetFailover** 連線屬性表示正在可用性群組或容錯移轉叢集執行個體中部署應用程式，OLE DB Driver for SQL Server 將會嘗試連線到所有 IP 位址，以試著連線到主要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上的資料庫。 為連接指定 **MultiSubnetFailover=Yes** 時，用戶端會重試 TCP 連接，其速度比作業系統的預設 TCP 重新傳輸間隔更快。 在 Always On 可用性群組或容錯移轉叢集執行個體容錯移轉後，這可加快重新連線的速度，且同時適用於單一和多重子網路可用性群組和容錯移轉叢集執行個體。  
   
@@ -48,11 +48,11 @@ ms.locfileid: "67989037"
   
 -   連接到設定超過 64 個 IP 位址的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體會導致連接失敗。  
   
--   根據驗證的類型，使用 **MultiSubnetFailover** 連接屬性之應用程式的行為不會受到影響：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證、Kerberos 驗證或 Windows 驗證。  
+-   應用程式如果使用 **MultiSubnetFailover** 連接屬性，其行為不會依據驗證類型受到影響：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證、Kerberos 驗證或 Windows 驗證。  
   
 -   您可以增加 **loginTimeout** 的值，以容納容錯移轉時間並減少應用程式連接重試次數。  
   
--   不支援分散式交易。  
+-   不支援分散式工作階段。  
   
 如果唯讀路由不在作用中，在下列狀況下，連接到可用性群組中的次要複本位置將會失敗：  
   
@@ -74,9 +74,9 @@ ms.locfileid: "67989037"
 
 
 ## <a name="ole-db"></a>OLE DB  
-SQL Server 的 OLE DB 驅動程式同時支援**ApplicationIntent**和**MultiSubnetFailover**關鍵字。   
+OLE DB Driver for SQL Server 同時支援 **ApplicationIntent** 和 **MultiSubnetFailover** 關鍵字。   
   
-已新增兩個 OLE DB 連接字串關鍵字, 以[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]支援 SQL Server 的 OLE DB 驅動程式:  
+已新增兩個 OLE DB 連接字串關鍵字，以支援 OLE DB Driver for SQL Server 中的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]：  
   
 -   **ApplicationIntent** 
 -   **MultiSubnetFailover**  
@@ -91,7 +91,7 @@ SQL Server 的 OLE DB 驅動程式同時支援**ApplicationIntent**和**MultiSub
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
   
-SQL Server 應用程式的 OLE DB 驅動程式可以使用其中一種方法來指定應用程式意圖:  
+OLE DB Driver for SQL Server 應用程式可以使用其中一個方法來指定應用程式意圖：  
   
  -   **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize** 會使用之前設定的屬性集合來初始化資料來源及建立資料來源物件。 將應用程式意圖指定為提供者屬性或是擴充屬性字串的一部分。  
@@ -114,7 +114,7 @@ SQL Server 應用程式的 OLE DB 驅動程式可以使用其中一種方法來�
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
 
-SQL Server 應用程式的 OLE DB 驅動程式可以使用下列其中一種方法來設定 MultiSubnetFailover 選項:  
+OLE DB Driver for SQL Server 應用程式可以使用下列其中一種方法，設定 MultiSubnetFailover 選項：  
 
  -   **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize** 會使用之前設定的屬性集合來初始化資料來源及建立資料來源物件。 將應用程式意圖指定為提供者屬性或是擴充屬性字串的一部分。  
@@ -123,7 +123,7 @@ SQL Server 應用程式的 OLE DB 驅動程式可以使用下列其中一種方�
  **IDataInitialize::GetDataSource** 會採用可包含 **MultiSubnetFailover** 關鍵字的輸入連接字串。  
 
 -   **IDBProperties::SetProperties**  
-若要設定**MultiSubnetFailover**屬性值, 請**呼叫 IDBProperties:: SetProperties** , 並在**SSPROP_INIT_MULTISUBNETFAILOVER**屬性中傳入值**VARIANT_TRUE**或**VARIANT_FALSE**或**DBPROP_INIT_PROVIDERSTRING**屬性, 其值包含 "**MultiSubnetFailover = Yes**" 或 "**MultiSubnetFailover = No**"。
+若要設定 **MultiSubnetFailover** 屬性值，請以值 **VARIANT_TRUE**、**VARIANT_FALSE** 或 **DBPROP_INIT_PROVIDERSTRING** 屬性 (其值包含 "**MultiSubnetFailover=Yes**" 或 "**MultiSubnetFailover=No**")，呼叫傳入 **SSPROP_INIT_MULTISUBNETFAILOVER** 屬性的 **IDBProperties::SetProperties**。
 
 #### <a name="example"></a>範例
 

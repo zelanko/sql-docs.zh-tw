@@ -1,5 +1,5 @@
 ---
-title: 瞭解 XA 交易 |Microsoft Docs
+title: 了解 XA 交易 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6e7f602107e828ee0bd985345ed5e641d6870558
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.openlocfilehash: 3e249bb515ca0a8b579e923e7d289fccd80ce6ef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027220"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947130"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 交易
 
@@ -23,8 +23,10 @@ ms.locfileid: "69027220"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 Java Platform Enterprise Edition/JDBC 2.0 選擇性分散式交易的支援。 從 [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 類別取得的 JDBC 連線可參與標準分散式交易處理環境，例如 Java Platform Enterprise Edition (Java EE) 應用程式伺服器。  
 
+在此文章中，XA 代表延伸架構。
+
 > [!WARNING]  
-> Microsoft JDBC Driver 4.2 (和更新版本) for SQL 包含新的現有功能逾時選項，用於已取消準備交易的自動回復。 如需詳細資訊, 請參閱本主題稍後的設定[伺服器端的自動回復未準備的交易](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide)。  
+> Microsoft JDBC Driver 4.2 (和更新版本) for SQL 包含新的現有功能逾時選項，用於已取消準備交易的自動回復。 如需詳細資訊，請參閱此主題稍後的[針對已取消準備之交易的自動回復設定伺服器端逾時設定](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide)。  
 
 ## <a name="remarks"></a>備註
 
@@ -44,9 +46,9 @@ ms.locfileid: "69027220"
 
 - 當您將 XA 交易與 Microsoft 分散式交易協調器 (MS DTC) 一起使用時，可能會注意到目前版本的 MS DTC 不支援緊密繫結的 XA 分支行為。 例如，MS DTC 在 XA 分支交易識別碼 (XID) 與 MS DTC 交易識別碼之間擁有一對一的對應，而且由鬆散繫結之 XA 分支所執行的工作會彼此隔離。  
   
-     [MSDTC 與緊密結合的交易](https://support.microsoft.com/kb/938653) 提供的 Hotfix，可以支援緊密結合的 XA 分支，其中多個具有相同交易識別碼 (GTRID) 的 XA 分支將會對應到同一個 MS DTC 交易識別碼。 此支援讓多個緊密結合的 XA 分支可以在資源管理員 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 中查看彼此的變更。
+- MSDTC 也支援緊密耦合的 XA 分支，其中具有相同全域交易識別碼 (GTRID) 的多個 XA 分支會對應到單一 MS DTC 交易識別碼。 此支援讓多個緊密結合的 XA 分支可以在資源管理員 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 中查看彼此的變更。
   
-- [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 旗標允許應用程式使用緊密結合的 XA 交易，但這些交易的 XA 分支交易識別碼 (BQUAL) 各不相同，只有全域交易識別碼 (GTRID) 及格式識別碼 (FormatID) 相同。 若要使用該功能, 您必須在 XAResource. start 方法的 flags 參數上設定[SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) :
+- [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 旗標允許應用程式使用緊密結合的 XA 交易，但這些交易的 XA 分支交易識別碼 (BQUAL) 各不相同，只有全域交易識別碼 (GTRID) 及格式識別碼 (FormatID) 相同。 若要使用該功能，您必須在 XAResource.start 方法的 flags 參數上，設定 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)：
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
@@ -60,12 +62,12 @@ ms.locfileid: "69027220"
 > JDBC 分散式交易元件會包含在 JDBC 驅動程式安裝的 xa 目錄中。 這些元件包括 xa_install.sql 及 sqljdbc_xa.dll 檔案。  
 
 > [!NOTE]  
-> 從 SQL Server 2019 公開預覽 CTP 2.0 開始, JDBC XA 分散式交易元件會包含在 SQL Server 引擎中, 而且可以使用系統預存程式來啟用或停用。
-> 若要啟用必要元件以使用 JDBC 驅動程式來執行 XA 分散式交易, 請執行下列預存程式。
+> 從 SQL Server 2019 公開預覽 CTP 2.0 開始，JDBC XA 分散式交易元件會包含在 SQL Server 引擎中，並且可以使用系統預存程序來啟用或停用。
+> 若要使用 JDBC 驅動程式啟用必要元件以執行 XA 分散式交易，請執行下列預存程序。
 >
 > EXEC sp_sqljdbc_xa_install
 >
-> 若要停用先前安裝的元件, 請執行下列預存程式。
+> 若要停用先前安裝的元件，請執行下列預存程序。
 >
 > EXEC sp_sqljdbc_xa_uninstall
 
@@ -108,9 +110,9 @@ ms.locfileid: "69027220"
   
 1. 開啟將參與分散式交易之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦的 LOG 目錄。 選取並開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "ERRORLOG" 檔案。 在 "ERRORLOG" 檔案中搜尋 "Using 'SQLJDBC_XA.dll' version ..." 片語。  
   
-2. 開啟將參與分散式交易之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦的 Binn 目錄。 選取 [sqljdbc_xa] 元件。
+2. 開啟將參與分散式交易之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦的 Binn 目錄。 選取 sqljdbc_xa.dll 組件。
 
-    - 在 Windows Vista 或更新版本上：以滑鼠右鍵按一下 sqljdbc_xa.dll，然後選取 [內容]。 然後，按一下 [詳細資料]  索引標籤。[檔案版本]  欄位就會顯示目前安裝在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的 sqljdbc_xa.dll 版本。  
+    - 在 Windows Vista 或更新的版本上：以滑鼠右鍵按一下 sqljdbc_xa.dll，然後選取 [內容]。 然後，按一下 [詳細資料]  索引標籤。[檔案版本]  欄位就會顯示目前安裝在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的 sqljdbc_xa.dll 版本。  
   
 3. 依照下一節的程式碼範例所示，設定記錄功能。 在輸出記錄檔案中搜尋 "Server XA DLL version:..." 片語。  
 
@@ -121,9 +123,9 @@ ms.locfileid: "69027220"
 
 有兩個登錄設定 (DWORD 值) 用來控制分散式交易的逾時行為：  
   
-- **XADefaultTimeout**(以秒為單位): 當使用者未指定任何超時時間時, 所要使用的預設超時值。 預設值是 0。  
+- **XADefaultTimeout** (以秒為單位)：若使用者未指定任何逾時，此時所要使用的預設逾時值。 預設值是 0。  
   
-- **XAMaxTimeout**(以秒為單位): 使用者可以設定之超時的最大值。 預設值是 0。  
+- **XAMaxTimeout** (以秒為單位)：使用者可以設定的逾時最大值。 預設值是 0。  
   
 這些是 SQL Server 執行個體的特定設定，而且應該建立在下列登錄機碼底下：  
 
@@ -159,7 +161,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
 > [!IMPORTANT]  
 > 您應利用維護時段，或沒有任何 MS DTC 交易正在進行時，升級 sqljdbc_xa.dll。
   
-1. 使用 [ [!INCLUDE[tsql](../../includes/tsql-md.md)] **DBCC sqljdbc_xa (FREE)** ] 命令來卸載 sqljdbc_xa。  
+1. 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令 **DBCC sqljdbc_xa (FREE)** 來卸載 sqljdbc_xa.dll。  
   
 2. 將新的 sqljdbc_xa.dll 從 JDBC 驅動程式安裝目錄複製到將參與分散式交易之每一部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦的 Binn 目錄。  
   

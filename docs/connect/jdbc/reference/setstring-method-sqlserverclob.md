@@ -1,5 +1,5 @@
 ---
-title: setString 方法 (SQLServerClob) |Microsoft Docs
+title: setString 方法 (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e329de08-7624-4cf6-9da7-350584e87011
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 47a1bccc2e47d0ef8265554374c8ea492e704373
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972655"
 ---
 # <a name="setstring-method-sqlserverclob"></a>setString 方法 (SQLServerClob)
@@ -29,7 +29,7 @@ ms.locfileid: "67972655"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[setString (long, java.lang.String)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string.md)|從給定的位置開始，將給定的字串  寫入 CLOB。|  
 |[setString (long, java.lang.String, int, int)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-int-int.md)|依據給定的位移和長度，在給定位置開始將給定字串寫入 CLOB。|  

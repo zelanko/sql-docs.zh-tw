@@ -1,5 +1,5 @@
 ---
-title: 處理錯誤和警告 |Microsoft Docs
+title: 處理錯誤和警告 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2765df415cd4e45469f48c30dc2c0937361ce3aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015075"
 ---
 # <a name="handling-errors-and-warnings"></a>處理錯誤和警告
@@ -26,10 +26,10 @@ ms.locfileid: "68015075"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |---------|---------------|  
-|[如何：使用 SQLSRV 驅動程式設定錯誤和警告處理](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)|示範如何變更組態設定來處理錯誤和警告。|  
-|[如何：使用 SQLSRV 驅動程式處理錯誤和警告](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)|示範如何個別處理錯誤和警告。|  
+|[操作說明：使用 SQLSRV 驅動程式設定錯誤和警告處理](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)|示範如何變更組態設定來處理錯誤和警告。|  
+|[操作說明：使用 SQLSRV 驅動程式處理錯誤和警告](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)|示範如何個別處理錯誤和警告。|  
   
 ## <a name="reference"></a>參考  
 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md)  

@@ -1,5 +1,5 @@
 ---
-title: setPassword 方法 (SQLServerDataSource) |Microsoft Docs
+title: setPassword 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0db06631-5e68-488c-a9f1-6e5052c0759d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 54459377a27406044a9323c36b78417b144661de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973246"
 ---
 # <a name="setpassword-method-sqlserverdatasource"></a>setPassword 方法 (SQLServerDataSource)

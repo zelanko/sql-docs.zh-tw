@@ -1,5 +1,5 @@
 ---
-title: SQL Server 程式設計的 OLE DB 驅動程式 |Microsoft Docs
+title: OLE DB Driver for SQL Server 程式設計 | Microsoft Docs
 description: OLE DB Driver for SQL Server 程式設計
 ms.custom: ''
 ms.date: 06/12/2018
@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0645659036af0b00e2cf1b62b67830ded43aecbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993924"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>OLE DB Driver for SQL Server 程式設計
@@ -30,17 +30,17 @@ ms.locfileid: "67993924"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驅動程式是用來存取資料的低層級 COM API。 建議將 OLE DB Driver for SQL Server　用於開發工具、公用程式或需要高效能的低階元件。 OLE DB Driver for SQL Server　是原生、高效能的提供者，會直接存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表格式資料流 (TDS) 通訊協定。  
+  OLE DB Driver for SQL Server 是用於存取資料的低階 COM API。 建議將 OLE DB Driver for SQL Server　用於開發工具、公用程式或需要高效能的低階元件。 OLE DB Driver for SQL Server　是原生、高效能的提供者，會直接存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表格式資料流 (TDS) 通訊協定。  
   
- SQL Server 的 OLE DB 驅動程式會提供連接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]之應用程式的 OLE DB 支援。  
+ OLE DB Driver for SQL Server 會對連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的應用程式提供 OLE DB 支援。  
   
- SQL Server 的 OLE DB 驅動程式是 OLE DB 版本2.0 相容提供者。  
+ OLE DB Driver for SQL Server 是符合 OLE DB 2.0 版規範的提供者。  
   
 ## <a name="in-this-section"></a>本節內容  
   
 -   [建立 OLE DB Driver for SQL Server 應用程式](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
--   [資料來源物件&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [資料來源物件 &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
 -   [命令](../../oledb/ole-db-commands/commands.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67993924"
   
 -   [資料表和索引](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
--   [資料類型&#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+-   [資料類型 &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
 -   [結構描述資料列集支援 &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "67993924"
   
 -   [疏鬆資料行支援 &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
   
--   [SQL Server &#40;OLE DB&#41;參考的 OLE DB 驅動程式](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
+-   [OLE DB Driver for SQL Server &#40;OLE DB&#41; 參考](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
 -   [OLE DB 的使用說明主題](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   

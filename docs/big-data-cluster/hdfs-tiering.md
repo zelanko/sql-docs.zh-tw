@@ -9,14 +9,14 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 673b3eed760af4b36c494e2dd45cdfc8ed8e8dc8
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706048"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190396"
 ---
-# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上設定 HDFS 階層處理
+# <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上設定 HDFS 階層處理
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -25,6 +25,11 @@ HDFS 階層處理提供在 HDFS 中掛接外部、HDFS 相容檔案系統的功�
 ## <a name="hdfs-tiering-overview"></a>HDFS 階層處理概觀
 
 應用程式可以透過階層處理順暢存取各種外部存放區中的資料，如同資料位於本機 HDFS 一樣。 掛接是中繼資料作業，其中描述外部檔案系統上命名空間的中繼資料會複製到本機 HDFS。 此中繼資料包含外部目錄和檔案的相關資訊，以及其權限和 ACL。 對應的資料只會隨選複製，而資料本身則是透過查詢等項目來存取。 您現在可以從 SQL Server 巨量資料叢集存取外部檔案系統資料。 您可以對此資料執行 Spark 作業和 SQL 查詢，方式與在叢集上儲存於 HDFS 的任何本機資料上執行它們一樣。
+
+這段 7 分鐘的影片提供 HDFS 階層處理概觀：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Unify-your-data-lakes-with-HDFS-tiering/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ### <a name="caching"></a>Caching
 根據預設，現在會保留 1% 的總 HDFS 儲存體，來快取已掛接的資料。 快取是跨掛接的全域設定。
@@ -76,4 +81,4 @@ HDFS 階層處理支援重新整理。 針對遠端資料的最新快照集重�
 
 ## <a name="next-steps"></a>後續步驟
 
-如需 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的詳細資訊，請參閱[什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)。
+如需 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]的詳細資訊，請參閱[什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)。

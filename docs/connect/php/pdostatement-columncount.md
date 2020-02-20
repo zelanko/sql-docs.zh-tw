@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: columnCount |Microsoft Docs'
+title: PDOStatement::columnCount | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 8d89a568-0c7c-40dd-9f54-db7313600df3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13b7df0010236103da8d5311ee37ea237e14bf2c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936091"
 ---
 # <a name="pdostatementcolumncount"></a>PDOStatement::columnCount
@@ -32,7 +32,7 @@ int PDOStatement::columnCount ();
 ## <a name="return-value"></a>傳回值  
 傳回結果集內的資料行數目。 如果結果集是空的，則傳回零。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
 ## <a name="example"></a>範例  

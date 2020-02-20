@@ -1,5 +1,5 @@
 ---
-title: 處理錯誤 |Microsoft Docs
+title: 處理錯誤 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 8fd5b5ef-d939-4b78-b900-5b7b6ddb3eb9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6277b3ecf0160078fa47bc79994d31f64519d9b7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028034"
 ---
 # <a name="handling-errors"></a>處理錯誤
@@ -30,23 +30,23 @@ ms.locfileid: "69028034"
   
 -   `getNextException()` 傳回下一個 `SQLServerException` 物件，如果沒有其他例外狀況物件要傳回，則傳回 Null。
 
--   `getSQLServerError()``SQLServerError`傳回物件, 其中包含從 SQL Server 收到之例外狀況的詳細資訊。 如果未發生任何伺服器錯誤, 則這個方法會傳回 null。
+-   `getSQLServerError()` 傳回 `SQLServerError` 物件，其中包含從 SQL Server 收到之例外狀況的詳細資訊。 如果未發生任何伺服器錯誤，則這個方法會傳回 null。
 
-您可以使用`SQLServerError`類別的下列方法, 取得有關從伺服器產生之錯誤的其他詳細資料。
+您可以使用 `SQLServerError` 類別的下列方法，取得有關從伺服器產生之錯誤的其他詳細資料。
 
--   `SQLServerError.getErrorMessage()`傳回從伺服器收到的錯誤訊息。
+-   `SQLServerError.getErrorMessage()` 傳回從伺服器收到的錯誤訊息。
 
--   `SQLServerError.getErrorNumber()`傳回識別錯誤類型的數位。
+-   `SQLServerError.getErrorNumber()` 傳回可識別錯誤類型的數字。
 
--   `SQLServerError.getErrorState()`從代表錯誤、警告或「找不到資料」訊息的 SQL Server 傳回數值錯誤碼。
+-   `SQLServerError.getErrorState()` 從 SQL Server 傳回代表錯誤、警告或「找不到資料」訊息的數值錯誤碼。
 
--   `SQLServerError.getErrorSeverity()`傳回所收到之錯誤的嚴重性層級。
+-   `SQLServerError.getErrorSeverity()` 傳回所收到錯誤的嚴重性層級。
 
--   `SQLServerError.getServerName()`傳回正在執行產生錯誤之 SQL Server 實例的電腦名稱稱。
+-   `SQLServerError.getServerName()` 傳回正在執行產生錯誤之 SQL Server 執行個體的電腦名稱。
 
--   `SQLServerError.getProcedureName()`傳回產生錯誤之預存程式或遠端程序呼叫 (RPC) 的名稱。
+-   `SQLServerError.getProcedureName()` 傳回產生錯誤之預存程序或遠端程序呼叫 (RPC) 的名稱。
 
--   `SQLServerError.getLineNumber()`傳回產生錯誤之 Transact-sql 命令批次或預存程式內的行號。
+-   `SQLServerError.getLineNumber()` 傳回產生錯誤之 Transact-SQL 命令批次或預存程序內的行號。
   
  在下列範例中，連至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫的開啟連線會傳入函式，並會建構一個格式錯誤的 SQL 陳述式，它不含 FROM 子句。 然後，會執行此陳述式，並處理 SQL 例外狀況。  
   

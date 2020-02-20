@@ -1,5 +1,5 @@
 ---
-title: getRef 方法 (SQLServerCallableStatement) |Microsoft Docs
+title: getRef 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0c7632a9-1ef6-46f0-8208-06a6cbd202e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f0a37385750db130a82bee39e430f5d4632f139
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980567"
 ---
 # <a name="getref-method-sqlservercallablestatement"></a>getRef 方法 (SQLServerCallableStatement)
@@ -29,9 +29,9 @@ ms.locfileid: "67980567"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
-|[getRef (int)](../../../connect/jdbc/reference/getref-method-int.md)|使用 Java 程式設計語言，並配合所指定參數索引來擷取指定參數的值作為 Ref 物件。|  
+|[getRef (int)](../../../connect/jdbc/reference/getref-method-int.md)|使用 Java 程式設計語言，並配合指定的參數索引來擷取所指定參數的值作為 Ref 物件。|  
 |[getRef (java.lang.String)](../../../connect/jdbc/reference/getref-method-java-lang-string.md)|使用 Java 程式設計語言，並配合所指定參數名稱來擷取指定參數的值作為 Ref 物件。|  
   
 ## <a name="see-also"></a>另請參閱  

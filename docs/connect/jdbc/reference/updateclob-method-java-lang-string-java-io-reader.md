@@ -11,10 +11,10 @@ ms.assetid: 338a2bf2-b110-469d-ad08-a0f2bbefcb88
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e4a50738cb7bca9feecaa647008713ee0899d66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67999243"
 ---
 # <a name="updateclob-method-javalangstring-javaioreader"></a>updateClob 方法 (java.lang.String, java.io.Reader)
@@ -42,7 +42,7 @@ public void updateClob(java.lang.String columnLabel,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 updateClob 方法是由 java.sql.ResultSet 介面中的 updateClob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,5 +1,5 @@
 ---
-title: SQLSRV 驅動程式 API 參考 |Microsoft Docs
+title: SQLSRV 驅動程式 API 參考 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3d5a6afaa4580623bade5ac6d7dd5b13a4cbdc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992784"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>SQLSRV 驅動程式 API 參考
@@ -25,7 +25,7 @@ ms.locfileid: "67992784"
 ## <a name="in-this-section"></a>本節內容  
 SQLSRV 驅動程式包含下列函數：  
   
-|函數|Description|  
+|函式|描述|  
 |------------|---------------|  
 |[sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md)|開始交易。|  
 |[sqlsrv_cancel](../../connect/php/sqlsrv-cancel.md)|取消陳述式；會捨棄陳述式任何擱置的結果。|  

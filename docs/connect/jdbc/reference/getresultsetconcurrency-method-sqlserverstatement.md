@@ -1,5 +1,5 @@
 ---
-title: getResultSetConcurrency 方法 (SQLServerStatement) |Microsoft Docs
+title: getResultSetConcurrency 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 47ef6547-5ec7-4cf5-a4d4-e34cbeec72eb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4dee62a135b45b0181094aeec8b5edc063f6ffea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980387"
 ---
 # <a name="getresultsetconcurrency-method-sqlserverstatement"></a>getResultSetConcurrency 方法 (SQLServerStatement)
@@ -40,8 +40,8 @@ public final int getResultSetConcurrency()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getResultSetConcurrency 方法是由 sql 語句介面中的 getResultSetConcurrency 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getResultSetConcurrency 方法是由 java.sql.Statement 介面中的 getResultSetConcurrency 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

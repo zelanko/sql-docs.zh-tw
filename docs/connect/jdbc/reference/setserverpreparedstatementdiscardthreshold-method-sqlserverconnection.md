@@ -1,5 +1,5 @@
 ---
-title: setServerPreparedStatementDiscardThreshold 方法 (SQLServerConnection) |Microsoft Docs
+title: setServerPreparedStatementDiscardThreshold 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8f66746b15e96f49d96b428e8cf8844eeea12a12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972926"
 ---
 # <a name="setserverpreparedstatementdiscardthreshold-method-sqlserverconnection"></a>setServerPreparedStatementDiscardThreshold 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 指定特定連接實例的行為。 此設定可控制在執行清除伺服器上未完成的控制碼之前, 每個連接的未完成準備語句捨棄動作 (sp_unprepare)。 當設定為時 < = 1 取消準備的動作會在備妥的語句關閉時立即執行。 如果值設定為 > 1, 則會將這些呼叫批次處理在一起, 以避免太常呼叫 sp_unprepare 的額外負荷。
+ 指定特定連線執行個體的行為。 此設定可控制在執行清理伺服器上未完成控制代碼的呼叫之前，每個連線可以有多少未處理的未處理準備陳述式捨棄動作 (sp_unprepare)。 當設定為 <= 1 時，準備陳述式一結束就會立即執行未準備動作。 如果值設定為 > 1，則會將這些呼叫批次處理在一起，以避免太常呼叫 sp_unprepare 所造成的額外負荷。
 
 
 ## <a name="syntax"></a>語法  
@@ -38,13 +38,13 @@ public void setServerPreparedStatementDiscardThreshold(boolean thresholdValue)
 #### <a name="parameters"></a>參數  
  *thresholdValue*  
  
- **ServerPreparedStatementDiscardThreshold**連接屬性的新值。  
+ **serverPreparedStatementDiscardThreshold** 連接屬性的新值。  
  
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Remarks  
- 這個方法可從 JDBC 驅動程式6.4 版和之後版本取得。
+## <a name="remarks"></a>備註  
+ 從 JDBC 驅動程式 6.4 版開始，可以使用此方法。
  
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

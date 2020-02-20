@@ -16,10 +16,10 @@ ms.assetid: 183af414-b0a3-4ca7-b160-d199bcf469b0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ab1ec7a5fc68a34c2f6a72b9ea940405d099f05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979867"
 ---
 # <a name="getshort-method-javalangstring-sqlserverresultset"></a>getShort 方法 (java.lang.String) (SQLServerResultSet)
@@ -40,12 +40,12 @@ public short getShort(java.lang.String columnName)
  包含資料行名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
- **Short**值。  
+ **short** 值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getShort 方法是由 java.sql.ResultSet 介面中的 getShort 方法指定。  
   
  只有可以安全傳回整數值 (如 smallint、tinyint 和 bit) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型才支援這個方法。 對任何其他資料類型使用這個方法，將擲回例外狀況。  

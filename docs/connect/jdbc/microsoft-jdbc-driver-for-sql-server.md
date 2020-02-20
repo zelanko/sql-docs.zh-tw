@@ -11,13 +11,13 @@ ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc81bae599bcd9e401aad7e610a7c43ed1a0dcec
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027879"
 ---
-# <a name="microsoft-jdbc-driver-for-sql-server"></a>用於 SQL Server 的 Microsoft JDBC 驅動程式
+# <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -25,13 +25,13 @@ ms.locfileid: "69027879"
 
 Microsoft JDBC Driver for SQL Server 已在主要的應用程式伺服器上經過測試，例如 IBM WebSphere 及 SAP NetWeaver。
   
-## <a name="getting-started"></a>使用者入門  
+## <a name="getting-started"></a>開始使用  
 
-* [步驟 1︰設定 Java 開發的開發環境](step-1-configure-development-environment-for-java-development.md)  
-* [步驟 2︰建立 Java 開發的 SQL 資料庫](step-2-create-a-sql-database-for-java-development.md)  
-* [步驟 3︰使用 Java 連接到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
+* [步驟 1：設定開發環境以進行 Java 開發](step-1-configure-development-environment-for-java-development.md)  
+* [步驟 2：建立 SQL 資料庫以進行 Java 開發](step-2-create-a-sql-database-for-java-development.md)  
+* [步驟 3：使用 Java 連線到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
-## <a name="documentation"></a>文件集  
+## <a name="documentation"></a>文件  
 
 * [快速入門](getting-started-with-the-jdbc-driver.md)
 * [概觀](overview-of-the-jdbc-driver.md)  
@@ -48,13 +48,13 @@ Microsoft JDBC Driver for SQL Server 已在主要的應用程式伺服器上經�
   
 ## <a name="download"></a>下載
 
-[下載適用于 SQL Server 的 MICROSOFT JDBC Driver](download-microsoft-jdbc-driver-for-sql-server.md) -具有 Maven 專案的其他相關資訊等等。
+[下載 Microsoft JDBC Driver for SQL Server](download-microsoft-jdbc-driver-for-sql-server.md) - 有 Maven 專案的其他相關資訊等等。
   
 ## <a name="samples"></a>範例  
 
 * [範例 JDBC 驅動程式應用程式](sample-jdbc-driver-applications.md)  
-* [Windows 上的 JAVA 使用者入門](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
-* [MacOS 上的 JAVA 使用者入門](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
-* [開始在 Ubuntu 上使用 JAVA](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
-* [Red Hat Enterprise Linux 上的 JAVA 使用者入門 (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
-* [SUSE Linux Enterprise Server 上的 JAVA 入門 (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
+* [在 Windows 上開始使用 Java](https://www.microsoft.com/sql-server/developer-get-started/java/windows/) \(英文\)
+* [在 macOS 上開始使用 Java](https://www.microsoft.com/sql-server/developer-get-started/java/mac/) \(英文\)
+* [在 Ubuntu 上開始使用 Java](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/) \(英文\)
+* [在 Red Hat Enterprise Linux (RHEL) 上開始使用 Java](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/) \(英文\)
+* [在 SUSE Linux Enterprise Server (SLES) 上開始使用 Java](https://www.microsoft.com/sql-server/developer-get-started/java/sles/) \(英文\)

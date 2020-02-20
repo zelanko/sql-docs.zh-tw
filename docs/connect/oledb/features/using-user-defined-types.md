@@ -1,6 +1,6 @@
 ---
-title: 使用使用者自訂類型 |Microsoft Docs
-description: 針對 SQL Server 使用具有 OLE DB 驅動程式的使用者自訂類型
+title: 使用使用者定義型別 | Microsoft Docs
+description: 搭配 OLE DB Driver for SQL Server 使用使用者定義型別
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -22,10 +22,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 731e00fdf4c9f073348389f537fa812e10bcbab5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988803"
 ---
 # <a name="using-user-defined-types"></a>使用使用者定義型別
@@ -44,7 +44,7 @@ ms.locfileid: "67988803"
 >  **IRowsetFind::FindNextRow** 方法無法與 UDT 資料類型一起運作。 如果將 UDT 當做搜尋資料行類型使用，就會傳回 DB_E_BADCOMPAREOP。  
   
 ### <a name="data-bindings-and-coercions"></a>資料繫結和強制型轉  
- 下表描述當搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT 使用列出的資料類型時，所發生的繫結和強制型轉。 UDT 資料行是透過 OLE DB 驅動程式公開, SQL Server 為 DBTYPE_UDT。 您可以透過適當的結構描述資料列集來取得中繼資料，好讓您可以將自己定義的類型當做物件來管理。  
+ 下表描述當搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT 使用列出的資料類型時，所發生的繫結和強制型轉。 UDT 資料行是透過 OLE DB Driver for SQL Server (當作 DBTYPE_UDT) 公開的。 您可以透過適當的結構描述資料列集來取得中繼資料，好讓您可以將自己定義的類型當做物件來管理。  
   
 |資料類型|到伺服器<br /><br /> **UDT**|到伺服器<br /><br /> **非 UDT**|從伺服器<br /><br /> **UDT**|從伺服器<br /><br /> **非 UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
@@ -55,7 +55,7 @@ ms.locfileid: "67988803"
 |DBTYPE_STR|支援<sup>3、6</sup>|N/A<sup>2</sup>|支援<sup>4、6</sup>|N/A<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|不支援|N/A<sup>2</sup>|不支援|N/A<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支援<sup>6</sup>|N/A<sup>2</sup>|支援<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|支援<sup>3、6</sup>|N/A<sup>2</sup>|不適用|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|支援<sup>3、6</sup>|N/A<sup>2</sup>|N/A|N/A<sup>2</sup>|  
   
  <sup>1</sup>如果使用 **ICommandWithParameters::SetParameterInfo** 指定 DBTYPE_UDT 以外的伺服器類型，而且存取子類型為 DBTYPE_UDT，則當執行陳述式時會發生錯誤 (DB_E_ERRORSOCCURRED；參數狀態為 DBSTATUS_E_BADACCESSOR)。 否則資料會傳給伺服器，但是伺服器會傳回一則錯誤，指示從 UDT 到參數的資料類型之間沒有隱含轉換。  
   
@@ -81,22 +81,22 @@ ms.locfileid: "67988803"
  OLE DB 核心服務 (**IDataConvert**) 提供的資料轉換不適用於 DBTYPE_UDT。 不支援其他任何繫結。  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 資料列集的加入和變更  
- SQL Server 的 OLE DB 驅動程式會將新的值或變更加入到許多核心 OLE DB 架構資料列集。  
+ OLE DB Driver for SQL Server 會將新的值或變更加入到許多核心 OLE DB 結構描述資料列集。  
   
-#### <a name="the-procedureparameters-schema-rowset"></a>PROCEDURE_PARAMETERS 結構描述資料列集  
+#### <a name="the-procedure_parameters-schema-rowset"></a>PROCEDURE_PARAMETERS 結構描述資料列集  
  下列是已經針對 PROCEDURE_PARAMETERS 結構描述資料列集所做的加入。  
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|三部分名稱的識別碼。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|三部分名稱的識別碼。|  
 |SS_UDT_NAME|DBTYPE_WSTR|三部分名稱的識別碼。|  
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|組件限定名稱，其中包含類型名稱以及要由 CLR 參考所需的所有組件識別。|  
   
-#### <a name="the-sqlassemblies-schema-rowset"></a>SQL_ASSEMBLIES 結構描述資料列集  
+#### <a name="the-sql_assemblies-schema-rowset"></a>SQL_ASSEMBLIES 結構描述資料列集  
  OLE DB Driver for SQL Server 會公開新的提供者特定的結構描述資料列集，以描述已註冊的 UDT。 ASSEMBLY 伺服器可指定為 DBTYPE_WSTR，但是不在資料列集內。 如果未指定的話，此資料列集將預設為目前的伺服器。 下表定義 SQL_ASSEMBLIES 結構描述資料列集：  
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|包含該類型之組件的目錄名稱。|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|包含該類型之組件的結構描述名稱或擁有者名稱。 雖然組件是由資料庫指定範圍，而不是由結構描述指定範圍，組件依然有擁有者 (這裡有反映這一點)。|  
@@ -105,20 +105,20 @@ ms.locfileid: "67988803"
 |PERMISSION_SET|DBTYPE_WSTR|表示組件之存取範圍的值。 值包括 "SAFE"、"EXTERNAL_ACCESS" 和 "UNSAFE"。|  
 |ASSEMBLY_BINARY|DBTYPE_BYTES|組件的二進位表示法。|  
   
-#### <a name="the-sqlassemblies-dependencies-schema-rowset"></a>SQL_ASSEMBLIES_ DEPENDENCIES 結構描述資料列集  
+#### <a name="the-sql_assemblies_-dependencies-schema-rowset"></a>SQL_ASSEMBLIES_ DEPENDENCIES 結構描述資料列集  
  OLE DB Driver for SQL Server 會公開新的提供者特定的結構描述資料列集，以描述指定之伺服器的組件相依性。 ASSEMBLY_SERVER 可由呼叫端指定為 DBTYPE_WSTR，但是不在資料列集內。 如果未指定的話，此資料列集將預設為目前的伺服器。 下表定義 SQL_ASSEMBLY_DEPENDENCIES 結構描述資料列集：  
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|包含該類型之組件的目錄名稱。|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|包含該類型之組件的結構描述名稱或擁有者名稱。 雖然組件是由資料庫指定範圍，而不是由結構描述指定範圍，組件依然有擁有者 (這裡有反映這一點)。|  
 |ASSEMBLY_ID|DBTYPE_UI4|組件的物件識別碼。|  
 |REFERENCED_ASSEMBLY_ID|DBTYPE_UI4|參考之組件的物件識別碼。|  
   
-#### <a name="the-sqlusertypes-schema-rowset"></a>SQL_USER_TYPES 結構描述資料列集  
+#### <a name="the-sql_user_types-schema-rowset"></a>SQL_USER_TYPES 結構描述資料列集  
  OLE DB Driver for SQL Server 會公開新的結構描述資料列集 SQL_USER_TYPES，以描述何時新增指定之伺服器的已註冊 UDT。 UDT_SERVER 必須由呼叫端指定為 DBTYPE_WSTR，但是不在資料列集內。 下表定義了 SQL_USER_TYPES 結構描述資料列集。  
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |UDT_CATALOGNAME|DBTYPE_WSTR|如果是 UDT 資料行，這個屬性就是指定 UDT 定義所在之目錄名稱的字串。|  
 |UDT_SCHEMANAME|DBTYPE_WSTR|如果是 UDT 資料行，這個屬性就是指定 UDT 定義所在之結構描述名稱的字串。|  
@@ -128,7 +128,7 @@ ms.locfileid: "67988803"
 #### <a name="the-columns-schema-rowset"></a>COLUMNS 結構描述資料列集  
  COLUMNS 結構描述資料列集的新增項目包含下列資料行：  
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|如果是 UDT 資料行，這個屬性就是指定 UDT 定義所在之目錄名稱的字串。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|如果是 UDT 資料行，這個屬性就是指定 UDT 定義所在之結構描述名稱的字串。|  
@@ -136,12 +136,12 @@ ms.locfileid: "67988803"
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|完整類型名稱 (AQN) 包含前面有加上命名空間的類型名稱 (適用的話)。|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>OLE DB 屬性集的加入和變更  
- SQL Server 的 OLE DB 驅動程式會將新的值或變更加入到許多核心 OLE DB 屬性集。  
+ OLE DB Driver for SQL Server 會將新的值或變更加入到許多核心 OLE DB 屬性集。  
   
-#### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 屬性集  
+#### <a name="the-dbpropset_sqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 屬性集  
  為了透過 OLE DB 支援 UDT，OLE DB Driver for SQL Server 會實作新的 DBPROPSET_SQLSERVERPARAMETER 屬性集，其中包含以下值：  
   
-|[屬性]|類型|Description|  
+|名稱|類型|描述|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|三部分名稱的識別碼。<br /><br /> 如果是 UDT 參數，這個屬性就是指定使用者定義型別定義所在之目錄名稱的字串。|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|三部分名稱的識別碼。<br /><br /> 如果是 UDT 參數，這個屬性就是指定使用者定義型別定義所在之結構描述名稱的字串。|  
@@ -149,10 +149,10 @@ ms.locfileid: "67988803"
   
  SSPROP_PARAM_UDT_NAME 為強制性。 SSPROP_PARAM_UDT_CATALOGNAME 和 SSPROP_PARAM_UDT_SCHEMANAME 是選擇性。 如果未正確指定任何屬性，將會傳回 DB_E_ERRORSINCOMMAND。 如果 SSPROP_PARAM_UDT_CATALOGNAME 和 SSPROP_PARAM_UDT_SCHEMANAME 皆未指定，則 UDT 必須定義在與資料表相同的資料庫和結構描述中。 如果 UDT 定義不在與資料表相同的結構描述中 (但是在相同資料庫內)，則必須指定 SSPROP_PARAM_UDT_SCHEMANAME。 如果 UDT 定義位於不同的資料庫內，則必須指定 SSPROP_PARAM_UDT_CATALOGNAME 和 SSPROP_PARAM_UDT_SCHEMANAME 這兩者。  
   
-#### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 屬性集  
+#### <a name="the-dbpropset_sqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 屬性集  
  為了支援 **ITableDefinition** 介面中的資料表建立，OLE DB Driver for SQL Server 會將下列三個新的資料行新增到 DBPROPSET_SQLSERVERCOLUMN 屬性集。  
   
-|[屬性]|Description|類型|Description|  
+|名稱|描述|類型|描述|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|如果是 DBTYPE_UDT 類型的資料行，這個屬性就是指定 UDT 定義所在之目錄名稱的字串。|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|如果是 DBTYPE_UDT 類型的資料行，這個屬性就是指定 UDT 定義所在之結構描述名稱的字串。|  
@@ -172,7 +172,7 @@ ms.locfileid: "67988803"
  如果 UDT 定義位於不同的資料庫內，則必須指定 SSPROP_COL_UDT_CATALOGNAME 和 SSPROP_COL_UDT_SCHEMANAME 這兩者。  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>OLE DB 介面的加入和變更  
- SQL Server 的 OLE DB 驅動程式會將新的值或變更加入到許多核心 OLE DB 介面。  
+ OLE DB Driver for SQL Server 會將新的值或變更加入到許多核心 OLE DB 介面。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 介面  
  為了透過 OLE DB 支援 UDT，OLE DB Driver for SQL Server 會實作一些變更，其中包括新增 **ISSCommandWithParameters** 介面。 這個新的介面繼承自核心的 OLE DB 介面 **ICommandWithParameters**。 除了繼承自 **ICommandWithParameters** 的三種方法 (**GetParameterInfo**、**MapParameterNames** 和 **SetParameterInfo**)，**ISSCommandWithParameters** 也提供用來處理伺服器特定資料類型的 **GetParameterProperties** 和 **SetParameterProperties** 方法。  
@@ -183,7 +183,7 @@ ms.locfileid: "67988803"
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 介面  
  除了 **ISSCommandWithParameters** 介面以外，OLE DB Driver for SQL Server 也在透過 **IColumnsRowset::GetColumnRowset** 方法呼叫而傳回的資料列集內新增值，包括以下項目。  
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 目錄名稱識別碼。|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 結構描述名稱識別碼。|  

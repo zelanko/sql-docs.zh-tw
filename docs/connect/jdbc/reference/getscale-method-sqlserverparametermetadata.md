@@ -1,5 +1,5 @@
 ---
-title: getScale 方法 (SQLServerParameterMetaData) |Microsoft Docs
+title: getScale 方法 (SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 7b8d8d9c-74aa-4e6e-88f1-2fc5c74004ae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29c2da8d8b6645ec9d5186f79db80b03626b2978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980201"
 ---
 # <a name="getscale-method-sqlserverparametermetadata"></a>getScale 方法 (SQLServerParameterMetaData)
@@ -45,8 +45,8 @@ public int getScale(int param)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getScale 方法是由 JAVA.sql.parametermetadata 介面中的 getScale 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getScale 方法是由 java.sql.ParameterMetaData 介面中的 getScale 方法所指定。  
   
  這個方法會取得小數點右邊的資料行位數。 如果是沒有小數點的型別，這個方法會傳回 "0"。  
   

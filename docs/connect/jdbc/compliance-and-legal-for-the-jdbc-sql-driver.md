@@ -1,5 +1,5 @@
 ---
-title: JDBC SQL 驅動程式的合規性與法律 |Microsoft Docs
+title: JDBC SQL 驅動程式的合規性和合法性 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 0ac8dc45-373c-4ac6-92fc-34b8455e5654
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 153f9c83699713c60eaa8d9020a86ca7fa415958
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028208"
 ---
 # <a name="jdbc-specification-compliance"></a>JDBC 規格合規性

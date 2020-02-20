@@ -1,5 +1,5 @@
 ---
-title: getParameterType 方法 (SQLServerParameterMetaData) |Microsoft Docs
+title: getParameterType 方法 (SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 638aca05-63e4-4d73-a9c8-e0442f775720
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd9252827e7c7bec70636937bc89dd5390e68519
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980947"
 ---
 # <a name="getparametertype-method-sqlserverparametermetadata"></a>getParameterType 方法 (SQLServerParameterMetaData)
@@ -45,8 +45,8 @@ public int getParameterType(int param)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getParameterType 方法是由 JAVA.sql.parametermetadata 介面中的 getParameterType 方法指定。  
+## <a name="remarks"></a>備註  
+ 此 getParameterType 方法是由 java.sql.ParameterMetaData 介面中的 getParameterType 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerParameterMetaData 方法](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

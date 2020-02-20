@@ -1,5 +1,5 @@
 ---
-title: '如何: 執行參數化查詢 |Microsoft Docs'
+title: 如何：執行參數化查詢 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -14,10 +14,10 @@ ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e406d64bd8c56b467c9b331eb4aef132dc0cc67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993498"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>如何：執行參數化查詢
@@ -31,7 +31,7 @@ ms.locfileid: "67993498"
   
 2.  初始化或更新對應至 Transact-SQL 查詢中預留位置的 PHP 變數。  
   
-3.  使用步驟 2 中的 PHP 變數，來建立或更新對應至 Transact-SQL 字串中參數預留位置的參數值陣列。 陣列中的參數值必須與預留位置所代表的順序相同。
+3.  使用步驟 2 中的 PHP 變數，來建立或更新對應至 Transact-SQL 字串中參數預留位置的參數值陣列。 陣列中參數值的順序，必須與加以代表的預留位置相同。
   
 4.  執行查詢：  
   
@@ -190,7 +190,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>另請參閱  
 [轉換資料類型](../../connect/php/converting-data-types.md)
 
-[適用于 PHP for SQL Server 的 Microsoft 驅動程式安全性考慮](../../connect/php/security-considerations-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 的安全性考量](../../connect/php/security-considerations-for-php-sql-driver.md)
 
 [關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 連接 bcp |Microsoft Docs
+title: 連線 bcp | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1dd80df3a0f7fabec7ae9ddc51b16cb4456c7970
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996614"
 ---
 # <a name="connecting-with-bcp"></a>連接 bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[Bcp](https://go.microsoft.com/fwlink/?LinkID=190626) 公用程式可在 Linux 和 macOS 版 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 上使用。 本頁記錄與 Windows 版本的`bcp`差異。
+[Bcp](https://go.microsoft.com/fwlink/?LinkID=190626) 公用程式可在 Linux 和 macOS 版 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 上使用。 此頁面記錄了與 Windows 版本 `bcp` 的差異。
   
 - 欄位結束字元是定位字元 ("\t")。  
   
@@ -78,7 +78,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定空白資料行在作業過程中應保持 Null 值，而非保有插入之資料行的任何預設值。  
   
 - -l  
-指定登入逾時。 -l 選項會指定在您嘗試連線到伺服器時，登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 逾時之前的秒數。 預設登入超時時間為15秒。 登入逾時必須是介於 0 與 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內，`bcp` 就會產生錯誤訊息。 值為0會指定無限的超時時間。
+指定登入逾時。 -l 選項會指定在您嘗試連線到伺服器時，登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 逾時之前的秒數。 預設登入逾時為 15 秒。 登入逾時必須是介於 0 與 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內，`bcp` 就會產生錯誤訊息。 值為 0 會指定無限逾時。
   
 - -L *last_row*  
 指定要從資料表匯出或從資料檔案匯入的最後一個資料列的號碼。  
@@ -98,11 +98,11 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -r *row_terminator*  
 指定資料列結束字元。  
   
-- -r  
+- -R  
 指定要使用定義給用戶端電腦地區設定的區域格式，將貨幣、日期和時間資料大量複製到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中。  
   
 - -S *server*  
-指定要連接之[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例的名稱, 如果使用了-D, 則為。  
+指定要連線之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱，或者，如果使用了 -D，則為 DSN。  
   
 - -t *field_terminator*  
 指定欄位結束字元。  
@@ -113,7 +113,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -U *login_id*  
 指定用來連接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的登入識別碼。  
   
-- -V  
+- -v  
 報告 `bcp` 公用程式版本號碼和著作權。  
   
 - -w  
@@ -133,14 +133,14 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -i *input_file*  
 指定回應檔案的名稱。  
   
-- -n  
+- -N  
 對於非字元資料，使用資料的原生 (資料庫) 資料類型；如果是字元資料，則使用 Unicode 字元。  
   
 - -o *output_file*  
 指定接收來自命令提示字元重新導向之輸出的檔案名稱。  
   
 - -V (80 | 90 | 100)  
-使用舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的資料類型。  
+使用舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料類型。  
   
 - -X  
 與 format 和 -f format_file 選項一起使用，會產生以 XML 為基礎的格式檔案，而非預設的非 XML 格式檔案。  

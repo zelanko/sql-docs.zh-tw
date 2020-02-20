@@ -1,5 +1,5 @@
 ---
-title: supportsSchemasInDataManipulation 方法 |Microsoft Docs
+title: supportsSchemasInDataManipulation 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 812dc551-c718-494e-80d9-75732464c8ba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 109d2963b8dcf928eb9b40f093aa2ceb10278654
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968910"
 ---
 # <a name="supportsschemasindatamanipulation-method-sqlserverdatabasemetadata"></a>supportsSchemasInDataManipulation 方法 (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean supportsSchemasInDataManipulation()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 如果支援,**則為 true** 。 否則為 **false**。  
+ 如果支援，則為 **true**。 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 supportsSchemasInDataManipulation 方法是由 JAVA.sql.databasemetadata 介面中的 supportsSchemasInDataManipulation 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 supportsSchemasInDataManipulation 方法是由 java.sql.DatabaseMetaData 介面中的 supportsSchemasInDataManipulation 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

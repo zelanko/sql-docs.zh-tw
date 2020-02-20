@@ -16,10 +16,10 @@ ms.assetid: 78db89d6-a8a0-4116-8885-548e627220ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87d3dfc2183bdc00261417a024507b41ea5fde28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952749"
 ---
 # <a name="getconnection-method-javalangstring-javalangstring"></a>getConnection 方法 (java.lang.String, java.lang.String)
@@ -50,10 +50,10 @@ public java.sql.Connection getConnection(java.lang.String username,
 ## <a name="exceptions"></a>例外狀況  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- 這個 getConnection 方法是由 javax.xml.transform.dom.domresult 介面中的 getConnection 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getConnection 方法是由 javax.sql.DataSource 介面中的 getConnection 方法所指定。  
   
- 使用非 null 的使用者名稱或密碼呼叫 getConnection 方法, 將會取代初始化 SQLServerConnection 物件時, 在 SQLServerDataSource 類別上設定的使用者名稱和密碼屬性。 例如，如果呼叫者已經在資料來源上呼叫 [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) 和 [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md)，然後呼叫 getConnection 並提供非 Null 使用者名稱或非 Null 密碼，則 setUser 和 setPassword 所設定之使用者名稱和密碼將會由傳遞給 getConnection 的使用者名稱和密碼取代。  
+ 使用非 Null 使用者名稱或密碼呼叫 getConnection 方法時，將會取代初始化 SQLServerConnection 物件時，在 SQLServerDataSource 類別上所設定的使用者名稱與密碼屬性。 例如，如果呼叫者已經在資料來源上呼叫 [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) 和 [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md)，然後呼叫 getConnection 並提供非 Null 使用者名稱或非 Null 密碼，則 setUser 和 setPassword 所設定之使用者名稱和密碼將會由傳遞給 getConnection 的使用者名稱和密碼取代。  
   
 > [!NOTE]  
 >  在此情況下，使用 [setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md) 方法的呼叫在 URL 內設定的使用者名稱和密碼將不會變更。  

@@ -16,10 +16,10 @@ ms.assetid: 10c93cbf-f831-4e00-8e37-ea728bf34b1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa968eaf8b34a1959f17474ae79f65f1a2fd0ebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972445"
 ---
 # <a name="settimestamp-method-int-javasqltimestamp-javautilcalendar"></a>setTimestamp 方法 (int, java.sql.Timestamp, java.util.Calendar)
@@ -43,16 +43,16 @@ public final void setTimestamp(int n,
   
  *x*  
   
- 時間戳記物件。  
+ Timestamp 物件。  
   
  *cal*  
   
- 行事曆物件。  
+ Calendar 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 setTimestamp 方法是由 java.sql.PreparedStatement 介面中的 setTimestamp方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

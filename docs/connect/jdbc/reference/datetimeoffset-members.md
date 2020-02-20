@@ -1,5 +1,5 @@
 ---
-title: DateTimeOffset 成員 |Microsoft Docs
+title: DateTimeOffset 成員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 9ee3cff7-a422-4805-8516-a8d9d1eb2731
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ccdaa6df027edd9dac3243dffc420898543f9632
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955157"
 ---
 # <a name="datetimeoffset-members"></a>DateTimeOffset 成員
@@ -30,14 +30,14 @@ ms.locfileid: "67955157"
   
 ## <a name="methods"></a>方法  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
-|[compareTo](../../../connect/jdbc/reference/compareto-method-datetimeoffset.md)|根據 GMT 的時間, 比較此**datetimeoffset**物件與另一個**datetimeoffset**物件。|  
-|[equals](../../../connect/jdbc/reference/equals-method-datetimeoffset.md)|將此**DateTimeOffset**物件與另一個**物件**相比較。|  
-|[getMinutesOffset](../../../connect/jdbc/reference/getminutesoffset-method-datetimeoffset.md)|傳回此**DateTimeOffset**物件的時差 (以分鐘為單位)。|  
-|[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-datetimeoffset.md)|傳回這個**DateTimeOffset**物件所表示的時間點, 以做為 .Sql. Timestamp。|  
+|[compareTo](../../../connect/jdbc/reference/compareto-method-datetimeoffset.md)|將此 **DateTimeOffset** 物件與另一個 **DateTimeOffset** 物件比較，並以其於 GMT 的時間為基礎。|  
+|[equals](../../../connect/jdbc/reference/equals-method-datetimeoffset.md)|將此 **DateTimeOffset** 物件與另一個**物件**比較。|  
+|[getMinutesOffset](../../../connect/jdbc/reference/getminutesoffset-method-datetimeoffset.md)|傳回此 **DateTimeOffset** 物件與 GMT 之間位移 (以分鐘為單位)。|  
+|[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-datetimeoffset.md)|以 java.sql.Timestamp 的形式傳回此 **DateTimeOffset** 物件所代表的時間點。|  
 |[hashCode](../../../connect/jdbc/reference/hashcode-method-datetimeoffset.md)|傳回此物件的雜湊碼值。|  
-|[toString](../../../connect/jdbc/reference/tostring-method-datetimeoffset.md)|傳回**DateTimeOffset**物件的字串表示。|  
+|[toString](../../../connect/jdbc/reference/tostring-method-datetimeoffset.md)|傳回 **DateTimeOffset** 物件的字串表示。|  
 |[valueOf](../../../connect/jdbc/reference/valueof-method-datetimeoffset.md)|建立 **DateTimeOffset** 物件，這個物件表示從 GMT 特定位移的時間點。|  
   
 ## <a name="inherited-methods"></a>繼承的方法  

@@ -1,52 +1,69 @@
 ---
 title: Microsoft.Data.SqlClient 命名空間簡介
-description: SqlClient 命名空間的簡介頁面。
+description: Microsoft.Data.SqlClient 命名空間的簡介頁面。
 ms.date: 09/30/2019
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 4f4034c557c13054dcfb6ed425ca996b0c5363f6
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: e64a4b04e5059ebc4acbd8e673746fc3953fbb03
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452388"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251007"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Microsoft.Data.SqlClient 命名空間簡介
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[下載 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-此頁面說明 SqlClient 命名空間如何透過現有的 SqlClient 命名空間提供額外的功能。
-  
-## <a name="release-notes"></a>版本資訊
-所有版本資訊都可在[GitHub 存放庫](https://github.com/dotnet/SqlClient/tree/master/release-notes)中取得。
+## <a name="release-notes-for-microsoftdatasqlclient-110"></a>Microsoft.Data.SqlClient 1.1.0 的版本資訊
 
-## <a name="new-features"></a>新增功能
+您也可以在 GitHub 存放庫中取得版本資訊：[1.1 版本資訊](https://github.com/dotnet/SqlClient/tree/master/release-notes/1.1) \(英文\)。
 
-### <a name="new-features-over-net-framework-472-systemdatasqlclient"></a>.NET Framework 4.7.2 的新功能 SqlClient。
+### <a name="new-features"></a>新功能
 
-資料分類-自 CTP 2.0 開始，Azure SQL Database 和 Microsoft SQL Server 2019 中提供。
+#### <a name="always-encrypted-with-secure-enclaves"></a>具有安全記憶體保護區的 Always Encrypted
 
-UTF-8 支援-自 CTP 2.3 開始，Microsoft SQL Server SQL Server 2019 中提供。
+Always Encrypted 從 Microsoft SQL Server 2016 開始提供。 安全記憶體保護區從 Microsoft SQL Server 2019 開始提供。 為了使用記憶體保護區功能，連接字串應該包含必要的證明通訊協定和證明 URL。 範例：
 
-### <a name="new-features-over-net-core-22-systemdatasqlclient"></a>.NET Core 2.2 SqlClient 的新功能。
+```
+Attestation Protocol=HGS;Enclave Attestation Url=<attestation_url_for_HGS>
+```
 
-資料分類-自 CTP 2.0 開始，Azure SQL Database 和 Microsoft SQL Server 2019 中提供。
+如需詳細資訊，請參閱：
 
-UTF-8 支援-自 CTP 2.3 開始，Microsoft SQL Server SQL Server 2019 中提供。
+- [SqlClient 對 Always Encrypted 的支援](sql/sqlclient-support-always-encrypted.md)
+- [教學課程：使用具有安全記憶體保護區的 Always Encrypted 開發 .NET 應用程式](sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
 
-具有記憶體保護區 Always Encrypted 的 Always Encrypted 可在 Microsoft SQL Server 2016 和更新版本中使用。 Microsoft Sql Server 2019 CTP 2.0 中引進了記憶體保護區支援。
+## <a name="release-notes-for-microsoftdatasqlclient-10"></a>Microsoft.Data.SqlClient 1.0 的版本資訊
 
-驗證-Active Directory 密碼驗證模式。
+Microsoft.Data.SqlClient 命名空間的初始版本提供超越現有 Microsoft.Data.SqlClient 命名空間的其他功能。
+您也可以在 GitHub 存放庫上取得版本資訊：[1.0 版本資訊](https://github.com/dotnet/SqlClient/tree/master/release-notes/1.0) \(英文\)。
+
+### <a name="new-features"></a>新功能
+
+#### <a name="new-features-over-net-framework-472-systemdatasqlclient"></a>超越 .NET Framework 4.7.2 System.Data.SqlClient 的新功能
+
+- **資料分類**：適用於 Azure SQL Database 和 Microsoft SQL Server 2019。
+
+- **UTF-8 支援**：適用於 Microsoft SQL Server 2019。
+
+#### <a name="new-features-over-net-core-22-systemdatasqlclient"></a>超越 .NET Core 2.2 System.Data.SqlClient 的新功能
+
+- **資料分類**：適用於 Azure SQL Database 和 Microsoft SQL Server 2019。
+
+- **UTF-8 支援**：適用於 Microsoft SQL Server 2019。
+
+- **驗證**：Active Directory 密碼驗證模式。
 
 ### <a name="data-classification"></a>資料分類
 
-資料分類會提供一組新的 Api，以公開唯讀資料敏感度，以及當基礎來源支援此功能時，透過 SqlDataReader 取得之物件的分類資訊，並包含有關[資料敏感度和的中繼資料。分類](../../relational-databases/security/sql-data-discovery-and-classification.md)。
+當底層來源支援此功能，並包含有關[資料敏感度和分類](../../relational-databases/security/sql-data-discovery-and-classification.md)的中繼資料時，資料分類會帶來一組新的 API，公開有關透過 SqlDataReader 擷取之物件的唯讀資料敏感度和分類資訊。
 
 ```csharp
 public class SqlDataReader
@@ -86,20 +103,20 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
 ### <a name="utf-8-support"></a>UTF-8 支援
 
-UTF-8 支援不需要任何應用程式代碼變更。 這些 SqlClient 變更只會在伺服器支援 UTF-8 且基礎資料行定序為 UTF-8 時，將用戶端與伺服器之間的通訊優化。 如[SQL Server 2019 preview 的新功能](../../sql-server/what-s-new-in-sql-server-ver15.md)，請參閱 utf-8 一節。
+UTF-8 支援不需要進行任何應用程式程式碼變更。 這些 SqlClient 變更只會在伺服器支援 UTF-8 且底層資料行定序為 UTF-8 時，將用戶端與伺服器之間的通訊最佳化。 請參閱 [SQL Server 2019 預覽版的新功能](../../sql-server/what-s-new-in-sql-server-ver15.md)底下的 UTF-8 小節。
 
-### <a name="always-encrypted-with-enclaves"></a>一律使用記憶體保護區加密
+### <a name="always-encrypted-with-enclaves"></a>具有記憶體保護區的 Always Encrypted
 
-一般來說，使用 SqlClient on .NET Framework**和內建資料行主要金鑰存放區提供者**的現有檔，現在也應該使用 .net Core。
+一般來說，在 .NET Framework **和內建資料行主要金鑰存放區提供者**上使用 System.Data.SqlClient 的現有文件現在也應該使用 .NET Core。
 
  [搭配使用 Always Encrypted 與 .NET Framework Data Provider 進行開發](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 
- [Always Encrypted：保護機密資料，並將加密金鑰儲存在 Windows 憑證存放區中](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
+ [Always Encrypted：保護敏感性資料並將加密金鑰儲存在 Windows 憑證存放區中](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted) \(部分機器翻譯\)
 
 ### <a name="authentication"></a>驗證
 
-您可以使用 [_驗證_連接字串] 選項來指定不同的驗證模式。 如需詳細資訊，請參閱[SqlAuthenticationMethod 的檔](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2)。
+您可以使用 _Authentication_ 連接字串選項來指定不同的驗證模式。 如需詳細資訊，請參閱 [SqlAuthenticationMethod 的文件](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2) \(部分機器翻譯\)。
 
 > [!NOTE]
-> 自訂金鑰存放區提供者（如 Azure Key Vault 提供者）將需要更新，以支援 SqlClient。 同樣地，記憶體保護區提供者也必須更新以支援 SqlClient。
-> 只有 .NET Framework 和 .NET Core 目標支援 Always Encrypted。 不支援 .NET Standard，因為 .NET Standard 遺失某些加密相依性。
+> 自訂金鑰存放區提供者 (例如 Azure Key Vault 提供者) 將需要更新，才能支援 Microsoft.Data.SqlClient。 同樣地，記憶體保護區提供者也必須更新，才能支援 Microsoft.Data.SqlClient。
+> 僅針對 .NET Framework 和 .NET Core 目標支援 Always Encrypted。 並未針對 .NET Standard 提供支援，因為 .NET Standard 遺漏了某些加密相依性。

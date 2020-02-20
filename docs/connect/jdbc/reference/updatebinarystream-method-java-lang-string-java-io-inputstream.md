@@ -11,10 +11,10 @@ ms.assetid: 56883144-26a0-4f45-ad36-4f616369af3e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc247cd3f97aeebeb6f52e1b4f3f36d8d97f6548
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67997156"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream"></a>updateBinaryStream 方法 (java.lang.String, java.io.InputStream)
@@ -42,10 +42,10 @@ public void updateBinaryStream(java.lang.String columnLabel,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 updateBinaryStream 方法是由 sql-dmo 介面中的 updateBinaryStream 方法指定。  
+## <a name="remarks"></a>備註  
+ 此 updateBinaryStream 方法是由 java.sql.ResultSet 介面中的 updateBinaryStream 方法所指定。  
   
- 針對**image**、 **text**和**Ntext** SQL Server 資料類型使用這個方法可能會影響效能。  
+ 使用這個方法來處理 **image**、**text** 和 **ntext** 等 SQL Server 資料類型，可能會影響到效能。  
   
  這個方法會透過 InputStream 物件將位元組傳遞到選取的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 二進位資料行，例如 binary、varbinary、varbinary(max)、image、xml 和 udt。 這個方法不支援更新字元資料行。 若要以 InputStream 更新字元資料行，請使用 [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md) 方法。  
   

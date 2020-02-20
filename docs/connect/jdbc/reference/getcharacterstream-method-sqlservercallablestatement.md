@@ -1,5 +1,5 @@
 ---
-title: getCharacterStream 方法 (SQLServerCallableStatement) |Microsoft Docs
+title: getCharacterStream 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6207ad4b-56b3-4c66-bad5-6e590591ac2f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e88522dcea0371db8341fc129f23c90a7620d342
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953242"
 ---
 # <a name="getcharacterstream-method-sqlservercallablestatement"></a>getCharacterStream 方法 (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67953242"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getCharacterStream &#40;int&#41;](../../../connect/jdbc/reference/getcharacterstream-int.md)|透過給定的參數索引，擷取指定之參數的值來當做 java.io.Reader 物件。|  
 |[getCharacterStream &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getcharacterstream-java-lang-string.md)|透過給定的參數名稱，擷取指定之參數的值來當做 java.io.Reader 物件。|  

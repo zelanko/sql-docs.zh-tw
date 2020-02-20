@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c3cf3c1debc03c169c585521b8b46dd8b1365c5
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 41e5f384878dfb284c31d6ba2886c9e223d03ca3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69641155"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479421"
 ---
 # <a name="get-r-package-information"></a>取得 Python 資訊
 
@@ -85,23 +85,23 @@ EXECUTE sp_execute_external_script
 
 以下是與 SQL Server R Services 一起安裝的 R 套件。
 
-|Packages | 版本 | Description |
+|Packages | 版本 | 描述 |
 |---------|---------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 用於遠端計算內容、串流、平行執行 rx 函式以進行資料匯入與轉換、模型化、視覺化，以及分析。 |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | 用於將 R 指令碼包含在預存程序中。 |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | 用於將 R 指令碼包含在預存程序中。 |
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
 以下是您在安裝期間選取 R 功能時，與 SQL Server 機器學習服務一起安裝的 R 套件。
 
-|Packages | 版本 | Description |
+|Packages | 版本 | 描述 |
 |---------|---------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | 用於遠端計算內容、串流、平行執行 rx 函式以進行資料匯入與轉換、模型化、視覺化，以及分析。 |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 9.2 | 用於將 R 指令碼包含在預存程序中。 |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 9.2 | 在 R 中新增機器學習演算法。 | 
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 9.2 | 用於在 R 中撰寫 MDX 陳述式。 |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | 用於將 R 指令碼包含在預存程序中。 |
+| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | 在 R 中新增機器學習演算法。 | 
+| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | 用於在 R 中撰寫 MDX 陳述式。 |
 
 ::: moniker-end
 
@@ -178,7 +178,12 @@ print(packageDescription("glue"))
 
 ## <a name="next-steps"></a>後續步驟
 
-+ [安裝新的 R 封裝](../r/install-additional-r-packages-on-sql-server.md)
+::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
++ [使用 R 工具來安裝套件](install-r-packages-standard-tools.md)
+::: moniker-end
+::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
++ [使用 sqlmlutils 來安裝新的 R 套件](install-additional-r-packages-on-sql-server.md)
+::: moniker-end
 + [取得 Python 套件資訊](python-package-information.md)
 + [安裝新的 Python 封裝](../python/install-additional-python-packages-on-sql-server.md)
 + [R 與 Python 教學課程](../tutorials/machine-learning-services-tutorials.md)

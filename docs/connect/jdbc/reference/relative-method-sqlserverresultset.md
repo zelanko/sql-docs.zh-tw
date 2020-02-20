@@ -16,10 +16,10 @@ ms.assetid: 2bcdbb69-95fd-4ae8-8488-1a75a91fe2e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b2e644feff3cd2787cc6bd80bce54562ad20794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975779"
 ---
 # <a name="relative-method-sqlserverresultset"></a>relative 方法 (SQLServerResultSet)
@@ -46,7 +46,7 @@ public boolean relative(int nRows)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 這個相對方法是由 sql ResultSet 介面中的相對方法指定。  
+ 這個 relative 方法是由 java.sql.ResultSet 介面中的 relative 方法指定。  
   
  嘗試移到結果集中第一個或最後一個資料列之外的範圍會將游標置於第一個或最後一個資料列之前或之後。 呼叫 `relative(0)` 是有效的，但不會變更游標位置。  
   

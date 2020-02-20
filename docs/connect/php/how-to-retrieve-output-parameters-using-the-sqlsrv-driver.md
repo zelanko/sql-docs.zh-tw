@@ -12,10 +12,10 @@ ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db1216f513f353a6c703805c7aabe7b8dd468115
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993396"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式擷取輸出參數
@@ -32,7 +32,7 @@ ms.locfileid: "67993396"
 下列範例會呼叫一個預存程序，傳回指定員工的年度迄今銷售量。 PHP 變數 *$lastName* 是輸入參數， *$salesYTD* 則是輸出參數。  
   
 > [!NOTE]  
-> 將 *$salesYTD* 初始化為 0.0，會將傳回的 PHPTYPE 設為 **float**。 若要確保資料類型的完整性，應在呼叫預存程序之前初始化輸出參數，或應指定所需的 PHPTYPE。 如需指定 PHPTYPE 的相關資訊，請參閱 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
+> 將 *$salesYTD* 初始化為 0.0，會將傳回的 PHPTYPE 設為 **float**。 若要確保資料類型的完整性，應在呼叫預存程序之前初始化輸出參數，或應指定所需的 PHPTYPE。 如需指定 PHPTYPE 的相關資訊，請參閱[如何：指定 PHP 資料類型](../../connect/php/how-to-specify-php-data-types.md)。  
   
 由於預存程序僅傳回一個結果，因此在執行預存程序之後， *$salesYTD* 中隨即包含輸出參數的傳回值。  
   
@@ -120,10 +120,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> 將輸出參數系結至 Bigint 類型時, 如果值的結尾可能超出[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)的範圍, 您就必須將其 SQL 欄位類型指定為 SQLSRV_SQLTYPE_BIGINT。 否則, 它可能會產生「值超出範圍」例外狀況。
+> 將輸出參數繫結至 bigint 類型時，如果值可能會超出某個[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)的範圍，您必須將其 SQL 欄位類型指定為 SQLSRV_SQLTYPE_BIGINT。 否則，這可能會導致「值超出範圍」例外狀況。
 
 ## <a name="example-2"></a>範例 2
-此程式碼範例示範如何系結大型 Bigint 值做為輸出參數。  
+此程式碼範例示範如何將大型 bigint 值繫結為輸出參數。  
 
 ```
 <?php
@@ -150,9 +150,9 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="see-also"></a>另請參閱  
-[如何：使用 SQLSRV 驅動程式指定參數方向](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+[操作說明：使用 SQLSRV 驅動程式指定參數方向](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
-[如何：使用 SQLSRV 驅動程式擷取輸入和輸出參數](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)
+[操作說明：使用 SQLSRV 驅動程式擷取輸入和輸出參數](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)
 
 [擷取資料](../../connect/php/retrieving-data.md)  
   

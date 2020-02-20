@@ -1,5 +1,5 @@
 ---
-title: execute 方法 (SQLServerStatement) |Microsoft Docs
+title: execute 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e1367f39-23d7-4e26-b160-6d988d7e6988
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4be0fdbc622b50ffe6e403a0d1bc05e1be7104b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954936"
 ---
 # <a name="execute-method-sqlserverstatement"></a>execute 方法 (SQLServerStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67954936"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[execute (java.lang.String)](../../../connect/jdbc/reference/execute-method-java-lang-string-sqlserverstatement.md)|執行給定的 SQL 陳述式，此陳述式可傳回多個結果。|  
 |[execute (java.lang.String, int)](../../../connect/jdbc/reference/execute-method-java-lang-string-int.md)|執行可傳回多個結果的指定 SQL 陳述式，並向 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 發出訊號，通知必須提供自動產生的索引鍵以進行擷取。|  

@@ -1,5 +1,5 @@
 ---
-title: JDBC 驅動程式關閉開啟的結果集 |Microsoft Docs
+title: JDBC 驅動程式是否會關閉開啟的結果集 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 1739ecb5-e5cb-4807-b5a8-97c0299929d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9fded722f558b68e393fc4e0815a35cc7383b8d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955859"
 ---
 # <a name="autocommitfailureclosesallresultsets-method-sqlserverdatabasemetadata"></a>autoCommitFailureClosesAllResultSets 方法 (SQLServerDatabaseMetaData)
@@ -35,8 +35,8 @@ public boolean autoCommitFailureClosesAllResultSets()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 autoCommitFailureClosesAllResultSets 方法是由 JAVA.sql.databasemetadata 介面中的 autoCommitFailureClosesAllResultSets 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 autoCommitFailureClosesAllResultSets 方法是由 java.sql.DatabaseMetaData 介面中的 autoCommitFailureClosesAllResultSets 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

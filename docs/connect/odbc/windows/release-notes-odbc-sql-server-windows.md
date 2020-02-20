@@ -7,16 +7,16 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-ms.reviewer: v-jizho2, v-chojas, genemi
+ms.reviewer: v-chojas
 author: v-makouz
-ms.author: v-makouz
+ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 98e7aec7883bc12d04ce24aba7b9a93244f707f6
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
-ms.translationtype: MTE75
+ms.openlocfilehash: c53832e40b055792d98b9bffea368d156d535545
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041165"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910939"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>ODBC to SQL Server on Windows 版本資訊
 
@@ -44,13 +44,21 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="175-january-2020"></a>17.5，2020 年 1 月
+
+| 新增功能 | 詳細資料 |
+| :------------ | :------ |
+| SQL_COPT_SS_SPID 連線屬性，不需往返伺服器即可擷取 SPID | 請參閱 [DSN 和連接字串屬性和關鍵字](../dsn-connection-string-attribute.md)。 |
+| 錯誤修正。 | 請參閱 [Bug 修正](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
+
 ## <a name="1742-october-2019"></a>17.4.2，2019 年 10 月
 
 | 新增功能 | 詳細資料 |
 | :------------ | :------ |
 | 支援額外的 Azure Key Vault 端點 | 請參閱[搭配 ODBC 驅動程式使用 Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md)。 |
 | 支援設定資料分類版本 | 請參閱[資料分類](../data-classification.md#bkmk-version)。 |
-| 驅動程式現在會將用於驗證的 Azure Active Drirectory Authentication Library （adal）安裝至 Azure | |
+| 在安裝程式中包含 Azure Active Directory 驗證程式庫 (adal.dll) | 現已包含在基底驅動程式安裝中，這將會升級適用於 SQL Server 的 Microsoft Active Directory 驗證程式庫的現有安裝，將其從 Windows 中的已安裝應用程式清單中移除。 |
 | 錯誤修正。 | 請參閱 [Bug 修正](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
 
@@ -59,7 +67,7 @@ GeneMi (and CraigG).  2019/03/30.
 | 新增功能 | 詳細資料 |
 | :------------ | :------ |
 | 具有安全記憶體保護區的 Always Encrypted。 | 請參閱[搭配 ODBC 驅動程式使用 Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md)。 |
-| 可設定的 TCP Keep-alive 設定。 | 請參閱[連線到 SQL Server](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md)。 |
+| 可設定的 TCP 保持連線設定。 | 請參閱[連線到 SQL Server](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md)。 |
 | 錯誤修正。 | 請參閱 [Bug 修正](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
 
@@ -70,7 +78,7 @@ GeneMi (and CraigG).  2019/03/30.
 | Azure Active Directory 受控服務識別 (系統和使用者指派) 驗證模式。 | 請參閱[搭配 ODBC 驅動程式使用 Azure Active Directory](../using-azure-active-directory.md)。 |
 | 針對 Always Encrypted 資料行串流輸入參數的能力。 | 請參閱[使用 Always Encrypted 時的 ODBC 驅動程式限制](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)。 |
 | XA 分散式交易。 | [使用 XA 交易](../use-xa-with-dtc.md)。 |
-| Bug 修正。 | 請參閱 [Bug 修正](../bug-fixes.md)。 |
+| 錯誤修正。 | 請參閱 [Bug 修正](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="172-july-2018"></a>17.2，2018 年 7 月
@@ -79,7 +87,7 @@ GeneMi (and CraigG).  2019/03/30.
 | :------------ | :------ |
 | 適用於 Azure SQL Database 和 SQL Server 的資料分類。 | 請參閱[資料分類](../data-classification.md)。 |
 | UTF-8 伺服器編碼的支援。 | &nbsp; |
-| Bug 修正。 | 請參閱 [Bug 修正](../bug-fixes.md)。 |
+| 錯誤修正。 | 請參閱 [Bug 修正](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="171-march-2018"></a>17.1，2018 年 3 月
@@ -88,7 +96,7 @@ GeneMi (and CraigG).  2019/03/30.
 | :------------ | :------ |
 | `SQL_COPT_SS_CEKCACHETTL` 和 `SQL_COPT_SS_TRUSTEDCMKPATHS` 連接屬性的支援。 | &bull; &nbsp; `SQL_COPT_SS_CEKCACHETTL`<br/>允許控制資料行加密金鑰本機快取的存在時間，以及清除它。<br/><br/>&bull; &nbsp; `SQL_COPT_SS_TRUSTEDCMKPATHS`<br/>允許應用程式限制為 AE 作業只能使用指定清單的資料行主要金鑰。<br/><br/> 如需詳細資訊，請參閱[搭配 ODBC Driver for SQL Server 使用 Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md)。 |
 | Azure Active Directory 互動式驗證支援 | &nbsp; |
-| Bug 修正。 | 請參閱 [Bug 修正](../bug-fixes.md)。 |
+| 錯誤修正。 | 請參閱 [Bug 修正](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="17-february-2018"></a>17，2018 年 2 月

@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: nextRowset |Microsoft Docs'
+title: PDOStatement::nextRowset | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 048a6d8f-7fc4-449e-8161-19268c68f41d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3099d6e5d69d9b16e87c4d2eb14ed7706cf4d5f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992956"
 ---
 # <a name="pdostatementnextrowset"></a>PDOStatement::nextRowset
@@ -32,7 +32,7 @@ bool PDOStatement::nextRowset();
 ## <a name="return-value"></a>傳回值  
 成功時傳回 true，否則傳回 false。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
 ## <a name="example"></a>範例  

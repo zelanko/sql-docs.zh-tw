@@ -1,6 +1,6 @@
 ---
 title: 教學課程的航班示範資料
-Description: 從 R 和 Python 建立包含航空公司資料集的資料庫。 此資料集用於練習，示範如何將 R 語言或 Python 程式碼包裝在 SQL Server 預存程序中。
+Description: 從 R 和 Python 建立包含航空公司資料集的資料庫。 此資料集會用於 SQL Server 機器學習服務的 R 和 Python 教學課程。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/22/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 520a94f5f92c8b7e7d8bf7ba4efc851ce0c3e723
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 9bb8d26acb21ff38725c6e993c0b6080a35410f1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727143"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908909"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 和 R 的航班抵達示範資料教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

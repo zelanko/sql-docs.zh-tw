@@ -1,7 +1,7 @@
 ---
-title: 使用資料表值參數 |Microsoft Docs
+title: 使用資料表值參數 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 11/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 98863afb5a47eddfd311563bd03a1c7c7120b161
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.openlocfilehash: 66d9c24a31002f0c991fbf1dfdd7210adbf53172
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69025711"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74249708"
 ---
 # <a name="using-table-valued-parameters"></a>使用資料表值參數
 
@@ -23,43 +23,43 @@ ms.locfileid: "69025711"
 
 資料表值參數提供從用戶端應用程式，將多個資料列的資料封送至 SQL Sever 的簡便方式，而不需多次來回存取或特殊的伺服器端邏輯才能處理資料。 您可以使用資料表值參數，以一個參數化命令在用戶端應用程式中封裝資料列的資料，並傳送至伺服器。 傳入的資料列會儲存於資料表變數中，之後可使用 Transact-SQL 進行運算。  
   
-資料表值參數中的資料行值可以使用標準的 Transact-sql SELECT 語句來存取。 資料表值參數是強型別, 而且其結構會自動驗證。 資料表值參數的大小只受限於伺服器記憶體。  
+資料表值參數中的資料行值可透過標準的 Transact-SQL SELECT 陳述式加以存取。 資料表值參數為強型別參數，其結構會自動驗證。 資料表值參數的大小只受限於伺服器記憶體。  
   
 > [!NOTE]  
 > 從 Microsoft JDBC Driver 6.0 for SQL Server 開始提供資料表值參數的支援。
 >
-> 您無法以資料表值參數傳回資料。 資料表值參數是僅限輸入;不支援 OUTPUT 關鍵字。  
+> 您無法以資料表值參數傳回資料。 資料表值參數是僅限輸入；不支援 OUTPUT 關鍵字。  
   
- 如需有關資料表值參數的詳細資訊, 請參閱下列資源。  
+ 如需有關資料表值參數的詳細資訊，請參閱下列資源。  
   
 | 資源                                                                                                             | 描述                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| SQL Server 線上叢書中的[資料表值參數 (資料庫引擎)](https://go.microsoft.com/fwlink/?LinkId=98363) | 描述如何建立及使用資料表值參數                             |
-| SQL Server 線上叢書中的[使用者定義資料表類型](https://go.microsoft.com/fwlink/?LinkId=98364)                  | 描述用來宣告資料表值參數的使用者定義資料表類型 |
-| CodePlex 的[Microsoft SQL Server 資料庫引擎](https://go.microsoft.com/fwlink/?LinkId=120507)區段        | 包含示範如何使用 SQL Server 特性和功能的範例  |
+| 《SQL Server 線上叢書》中的[資料表值參數 (資料庫引擎)](https://go.microsoft.com/fwlink/?LinkId=98363) | 描述如何建立及使用資料表值參數                             |
+| SQL Server 線上叢書中的[使用者定義資料表類型](https://go.microsoft.com/fwlink/?LinkId=98364)                  | 說明用來宣告資料表值參數的使用者定義資料表類型 |
+| CodePlex 的 [Microsoft SQL Server 資料庫引擎](https://go.microsoft.com/fwlink/?LinkId=120507) \(英文\) 一節        | 包含示範如何使用 SQL Server 特性與功能的範例  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>在舊版 SQL Server 中傳遞多個資料列  
 
-在將資料表值參數引進 SQL Server 2008 之前, 將多個資料列傳遞至預存程式或參數化 SQL 命令的選項受到限制。 開發人員可以從下列選項中選擇, 將多個資料列傳遞至伺服器:  
+在 SQL Server 2008 中引進資料表值參數之前，將多個資料列傳遞至預存程序或參數化 SQL 命令的選項有所限制。 開發人員可以從下列選項中選擇將多個資料列傳遞至伺服器的方式：  
   
-- 使用一系列的個別參數來代表多個資料行和資料列中的值。 使用這個方法可以傳遞的資料量受限於允許的參數數目。 SQL Server 程式最多可以有2100個參數。 需要伺服器端邏輯, 才能將這些個別的值組合成資料表變數或臨時表進行處理。  
+- 使用一系列的個別參數來代表多個資料行和資料列中的值。 使用這個方法時，可以傳遞的資料量會受到允許的參數數目限制。 SQL Server 程序最多可以有 2100 個參數。 這需要伺服器端邏輯，才能將這些個別的值組合成資料表變數或暫存資料表來加以處理。  
   
-- 將多個資料值組合成分隔字串或 XML 檔, 然後將這些文字值傳遞給程式或語句。 這需要程式或語句包含驗證資料結構和 unbundling 值所需的邏輯。  
+- 將多個資料值組合成分隔字串或 XML 文件，然後將那些文字值傳遞給程序或陳述式。 這需要程序或陳述式包含驗證資料結構及拆開值所需的邏輯。  
   
-- 針對會影響多個資料列的資料修改, 建立一系列個別的 SQL 語句。 變更可以個別提交至伺服器, 或批次處理成群組。 不過, 即使是以包含多個語句的批次提交, 每個語句都會在伺服器上個別執行。  
+- 針對會影響多個資料列的資料修改建立一系列的獨立 SQL 陳述式。 變更可以以個別方式，或以批次處理成群組的方式提交給伺服器。 不過，即使是以包含多個陳述式的批次方式提交，每個陳述式都會在伺服器上個別執行。  
   
-- 使用 bcp utility 程式或[SQLServerBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy(v=vs.110).aspx)物件, 將許多資料列載入資料表。 雖然這項技術非常有效率, 但除非將資料載入臨時表或資料表變數中, 否則不支援伺服器端處理。  
+- 使用 bcp 公用程式或 [SQLServerBulkCopy](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md)，將許多資料列載入至資料表。 雖然此技術非常有效率，但除非將資料載入暫存資料表或資料表變數中，否則不支援伺服器端處理。
   
 ## <a name="creating-table-valued-parameter-types"></a>建立資料表值參數類型  
 
-資料表值參數是以使用 transact-sql `CREATE TYPE`語句所定義的強型別資料表結構為基礎。 您必須先建立資料表類型並在 SQL Server 中定義結構, 然後才能在用戶端應用程式中使用資料表值參數。 如需建立資料表類型的詳細資訊, 請參閱 SQL Server 線上叢書中的[使用者定義資料表類型](https://go.microsoft.com/fwlink/?LinkID=98364)。  
+資料表值參數是以使用 Transact-SQL `CREATE TYPE` 陳述式所定義的強型別資料表結構為基礎。 您必須先在 SQL Server 中建立資料表類型並定義此結構，然後才能在用戶端應用程式中使用資料表值參數。 如需建立資料表類型的詳細資訊，請參閱《SQL Server 線上叢書》中的[使用者定義資料表類型](https://go.microsoft.com/fwlink/?LinkID=98364)。  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```
 
-建立資料表類型之後, 您可以根據該類型來宣告資料表值參數。 下列 Transact-sql 片段示範如何在預存程序定義中宣告資料表值參數。 請注意, 需要關鍵字來宣告資料表值參數。`READONLY`  
+建立資料表類型之後，您可以根據該類型來宣告資料表值參數。 下列 Transact-SQL 片段將示範如何在預存程序定義中宣告資料表值參數。 請注意，必須要有 `READONLY` 關鍵字才能宣告資料表值參數。  
 
 ```sql
 CREATE PROCEDURE usp_UpdateCategories
@@ -68,9 +68,9 @@ CREATE PROCEDURE usp_UpdateCategories
 
 ## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>使用資料表值參數修改資料 (Transact-SQL)  
 
-資料表值參數可用於以集合為基礎的資料修改 (藉由執行單一語句來影響多個資料列)。 例如, 您可以選取資料表值參數中的所有資料列, 並將它們插入資料庫資料表中, 或者您可以藉由將資料表值參數聯結至您要更新的資料表來建立 update 語句。  
+資料表值參數可透過執行單一陳述式，在以集合為基礎且會影響多個資料列的資料修改中使用。 例如，您可以選取資料表值參數中的所有資料列，並將它們插入資料庫資料表中，或者您可以藉由將資料表值參數聯結至您要更新的資料表，以建立更新陳述式。  
   
-下列 Transact-sql UPDATE 語句示範如何藉由將資料表值參數聯結至 category 資料表來使用它們。 當您在 FROM 子句中使用資料表值參數搭配聯結時, 您也必須將它設為別名, 如下所示, 其中資料表值參數的別名為 "ec":  
+下列 Transact-SQL UPDATE 陳述式會示範如何將資料表值參數聯結至 Categories 資料表，藉以運用此參數。 當您在 FROM 子句中搭配 JOIN 使用資料表值參數時，也必須為它設定別名，例如下方所示，為資料表值參數設定別名 "ec"：  
 
 ```sql
 UPDATE dbo.Categories  
@@ -79,7 +79,7 @@ UPDATE dbo.Categories
     ON dbo.Categories.CategoryID = ec.CategoryID;  
 ```
 
-此 Transact-sql 範例示範如何從資料表值參數中選取資料列, 以在單一集合式作業中執行插入。
+這個 Transact-SQL 範例將示範如何從資料表值參數中選取資料列，以便在單一集合式作業中執行 INSERT。
 
 ```sql
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
@@ -88,23 +88,23 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 
 ## <a name="limitations-of-table-valued-parameters"></a>資料表值參數的限制
 
-資料表值參數有幾項限制:  
+資料表值參數有幾項限制：  
   
-- 您無法將資料表值參數傳遞給使用者定義函數。  
+- 您無法將資料表值參數傳遞至使用者定義函式。  
   
-- 資料表值參數只能編制索引, 以支援 UNIQUE 或 PRIMARY KEY 條件約束。 SQL Server 不會維護資料表值參數的統計資料。  
+- 資料表值參數只能編製索引，以支援 UNIQUE 或 PRIMARY KEY 條件約束。 SQL Server 不會維護資料表值參數的統計資料。  
   
-- 資料表值參數在 Transact-sql 程式碼中是唯讀的。 您無法更新資料表值參數資料列中的資料行值, 也無法插入或刪除資料列。 若要在資料表值參數中修改傳遞至預存程式或參數化語句的資料, 您必須將資料插入臨時表或資料表變數中。  
+- 資料表值參數在 Transact-SQL 程式碼中處於唯讀狀態。 您無法更新資料表值參數資料列中的資料行值，也無法插入或刪除資料列。 若要在資料表值參數中修改傳遞至預存程序或參數化陳述式的資料，您必須將資料插入至暫存資料表或資料表變數中。  
   
-- 您不能使用 ALTER TABLE 語句來修改資料表值參數的設計。
+- 您無法使用 ALTER TABLE 陳述式來修改資料表值參數的設計。
 
 - 您可以在資料表值參數中串流大型物件。  
   
 ## <a name="configuring-a-table-valued-parameter"></a>設定資料表值參數
 
-從 Microsoft JDBC Driver 6.0 for SQL Server 開始, 使用參數化語句或參數化預存程式即可支援資料表值參數。 資料表值參數可以從 SQLServerDataTable、結果集, 或從使用者提供的 ISQLServerDataRecord 介面實作為填入。 為備妥的查詢設定資料表值參數時, 您必須指定必須符合先前在伺服器上所建立之相容型別的名稱的型別名稱。  
+從 Microsoft JDBC Driver 6.0 for SQL Server 開始，參數化陳述式或參數化預存程序支援資料表值參數。 可以從 SQLServerDataTable、ResultSet 或使用者提供的 ISQLServerDataRecord 介面實作中填入資料表值參數。 為備妥的查詢設定資料表值參數時，您必須指定型別名稱，該名稱必須符合先前在伺服器上所建立之相容型別的名稱。  
   
-下列兩個程式碼片段示範如何使用 SQLServerPreparedStatement 和 SQLServerCallableStatement 來設定資料表值參數, 以插入資料。 這裡的 sourceTVPObject 可以是 SQLServerDataTable, 或 ResultSet 或 ISQLServerDataRecord 物件。 範例假設連接是使用中的連線物件。  
+下列兩個程式碼片段示範如何使用 SQLServerPreparedStatement 和 SQLServerCallableStatement 來設定資料表值參數，以插入資料。 這裡的 sourceTVPObject 可以是 SQLServerDataTable，或 ResultSet 或 ISQLServerDataRecord 物件。 範例假設連線是作用中的連線物件。  
 
 ```java
 // Using table-valued parameter with a SQLServerPreparedStatement.  
@@ -123,11 +123,11 @@ pStmt.execute();
 ```
 
 > [!NOTE]  
-> 如需可用於設定資料表值參數之 Api 的完整清單, 請參閱下列**JDBC 驅動程式的資料表值參數 API**一節。  
+> 如需可用來設定資料表值參數之 API 的完整清單，請參閱下面的 **JDBC 驅動程式的資料表值參數 API** 一節。  
   
-## <a name="passing-a-table-valued-parameter-as-a-sqlserverdatatable-object"></a>將資料表值參數傳遞為 SQLServerDataTable 物件  
+## <a name="passing-a-table-valued-parameter-as-a-sqlserverdatatable-object"></a>將資料表值參數作為 SQLServerDataTable 物件傳遞  
 
-從 Microsoft JDBC Driver 6.0 for SQL Server 開始, SQLServerDataTable 類別代表關聯式資料的記憶體中資料表。 這個範例示範如何使用 SQLServerDataTable 物件, 從記憶體中的資料來建立資料表值參數。 此程式碼會先建立 SQLServerDataTable 物件、定義其架構, 並在資料表中填入資料。 然後, 程式碼會設定 SQLServerPreparedStatement, 以將此資料表當做資料表值參數傳遞給 SQL Server。  
+從 Microsoft JDBC Driver 6.0 for SQL Server 開始，SQLServerDataTable 類別代表關聯式資料的記憶體內部資料表。 這個範例示範如何使用 SQLServerDataTable 物件，從記憶體內部資料來建構資料表值參數。 此程式碼會先建立 SQLServerDataTable 物件、定義其結構描述，並在資料表中填入資料。 然後，程式碼會設定 SQLServerPreparedStatement，以將此資料表當做資料表值參數傳遞給 SQL Server。  
 
 ```java
 /* Assumes connection is an active Connection object. */
@@ -152,11 +152,11 @@ pStmt.execute();
 ```
 
 > [!NOTE]  
-> 如需可用於設定資料表值參數之 Api 的完整清單, 請參閱下列**JDBC 驅動程式的資料表值參數 API**一節。  
+> 如需可用來設定資料表值參數之 API 的完整清單，請參閱下面的 **JDBC 驅動程式的資料表值參數 API** 一節。  
   
-## <a name="passing-a-table-valued-parameter-as-a-resultset-object"></a>以 ResultSet 物件的形式傳遞資料表值參數  
+## <a name="passing-a-table-valued-parameter-as-a-resultset-object"></a>將資料表值參數作為 ResultSet 物件傳遞  
 
-這個範例示範如何將資料列從結果集串流至資料表值參數。 程式碼會先從中的來源資料表抓取資料, 以建立 SQLServerDataTable 物件、定義其架構, 並在資料表中填入資料。 然後, 程式碼會設定 SQLServerPreparedStatement, 以將此資料表當做資料表值參數傳遞給 SQL Server。  
+這個範例示範如何將資料列從 ResultSet 串流至資料表值參數。 程式碼會先從來源資料表擷取資料，然後建立 SQLServerDataTable 物件、定義其結構描述，並在資料表中填入資料。 然後，程式碼會設定 SQLServerPreparedStatement，以將此資料表當做資料表值參數傳遞給 SQL Server。  
 
 ```java
 /* Assumes connection is an active Connection object. */
@@ -173,11 +173,11 @@ pStmt.execute();
 ```
 
 > [!NOTE]  
-> 如需可用於設定資料表值參數之 Api 的完整清單, 請參閱下列**JDBC 驅動程式的資料表值參數 API**一節。  
+> 如需可用來設定資料表值參數之 API 的完整清單，請參閱下面的 **JDBC 驅動程式的資料表值參數 API** 一節。  
 
-## <a name="passing-a-table-valued-parameter-as-an-isqlserverdatarecord-object"></a>將資料表值參數傳遞為 ISQLServerDataRecord 物件  
+## <a name="passing-a-table-valued-parameter-as-an-isqlserverdatarecord-object"></a>將資料表值參數作為 ISQLServerDataRecord 物件傳遞  
 
-從 Microsoft JDBC Driver 6.0 for SQL Server 開始, 有一個新的介面 ISQLServerDataRecord 可供串流資料使用 (視使用者如何為其提供其執行方式而定)。 下列範例示範如何執行 ISQLServerDataRecord 介面, 以及如何將它當做資料表值參數傳遞。 為了簡單起見, 下列範例只會將具有硬式編碼值的一個資料列傳遞至資料表值參數。 在理想的情況下, 使用者會執行此介面來串流任何來源的資料列, 例如, 從文字檔。  
+從 Microsoft JDBC Driver 6.0 for SQL Server 開始，有新的介面 ISQLServerDataRecord 可用於使用資料表值參數串流資料 (取決於使用者如何為其提供實作而定)。 下列範例示範如何實作 ISQLServerDataRecord 介面，以及如何將它作為資料表值參數傳遞。 為了簡單起見，下列範例只會將具有硬式編碼值的一個資料列傳遞至資料表值參數。 在理想的情況下，使用者會實作此介面來串流任何來源 (例如，文字檔) 的資料列。  
 
 ```java
 class MyRecords implements ISQLServerDataRecord  
@@ -229,28 +229,28 @@ pStmt.execute();
 ```
 
 > [!NOTE]  
-> 如需可用於設定資料表值參數之 Api 的完整清單, 請參閱下列**JDBC 驅動程式的資料表值參數 API**一節。
+> 如需可用來設定資料表值參數之 API 的完整清單，請參閱下面的 **JDBC 驅動程式的資料表值參數 API** 一節。
 
 ## <a name="table-valued-parameter-api-for-the-jdbc-driver"></a>JDBC 驅動程式的資料表值參數 API
 
 ### <a name="sqlservermetadata"></a>SQLServerMetaData
 
-此類別代表資料行的中繼資料。 它會在 ISQLServerDataRecord 介面中用來將資料行中繼資料傳遞至資料表值參數。 此類別中的方法包括:  
+此類別代表資料行的中繼資料。 它會在 ISQLServerDataRecord 介面中用來將資料行中繼資料傳遞至資料表值參數。 此類別中的方法包括：  
 
 | 名稱                                                                                                                                                                             | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| public SQLServerMetaData (字串 columnName, int sqlType, int precision, int scale, boolean useServerDefault, boolean isUniqueKey, SQLServerSortOrder sortOrder, int sortOrdinal) | 使用指定的資料行名稱、sql 類型、有效位數、小數位數和伺服器預設值, 初始化 SQLServerMetaData 的新實例。 這種形式的此格式器可讓您指定資料行在資料表值參數中是否為唯一、資料行的排序次序, 以及排序資料行的序數, 藉此支援資料表值參數。 <br/><br/>useServerDefault-指定這個資料行是否應該使用預設的伺服器值。預設值為 false。<br>isUniqueKey-指出資料表值參數中的資料行是否為唯一的;預設值為 false。<br>sortOrder-指出資料行的排序次序;預設值為 SQLServerSortOrder。未指定。<br>sortOrdinal-指定排序資料行的序數;sortOrdinal 從0開始;預設值為-1。 |
-| public SQLServerMetaData (字串 columnName, int sqlType)                                                                                                                        | 使用資料行名稱和 sql 類型, 初始化 SQLServerMetaData 的新實例。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| public SQLServerMetaData (字串 columnName, int sqlType, int length)                                                                                                                        | 使用資料行名稱、sql 類型和長度 (針對字串資料), 初始化 SQLServerMetaData 的新實例。 長度是用來區別長度小於4000個字元之字串的大型字串。 在 JDBC driver 7.2 版中引進。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| public SQLServerMetaData (字串 columnName, int sqlType, int precision, int scale)                                                                                              | 使用資料行名稱、sql 類型、有效位數和小數位數, 初始化 SQLServerMetaData 的新實例。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Public SQLServerMetaData(SQLServerMetaData sqlServerMetaData)                                                                                                                    | 從另一個 SQLServerMetaData 物件, 初始化 SQLServerMetaData 的新實例。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| public String getColumName()                                                                                                                                                     | 抓取資料行名稱。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| public int getSqlType()                                                                                                                                                          | 抓取 java sql 型別。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| public int getPrecision ()                                                                                                                                                        | 抓取傳遞至資料行之類型的有效位數。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| public int getScale()                                                                                                                                                            | 抓取傳遞至資料行之類型的小數值。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| public SQLServerSortOrder getSortOrder()                                                                                                                                         | 抓取排序次序。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| public int getSortOrdinal()                                                                                                                                                      | 抓取排序序數。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| public boolean isUniqueKey()                                                                                                                                                     | 傳回資料行是否為唯一的。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| public SQLServerMetaData(String columnName, int sqlType, int precision, int scale, boolean useServerDefault, boolean isUniqueKey, SQLServerSortOrder sortOrder, int sortOrdinal) | 使用指定的資料行名稱、SQL 型別、精確度、小數位數與伺服器預設值，初始化 SQLServerMetaData 的新的執行個體。 這種形式的建構函式支援資料表值參數，方法是透過允許您指定資料表值參數中的資料行是否為唯一、資料行的排序次序，以及排序資料行的序數。 <br/><br/>useServerDefault - 指定這個資料行是否應該使用預設的伺服器值；預設值為 false。<br>isUniqueKey - 指出資料表值參數中的資料行是否為唯一；預設值為 false。<br>sortOrder - 指出資料行的排序次序；預設值為 SQLServerSortOrder.Unspecified。<br>sortOrdinal - 指定排序資料行的序數；sortOrdinal 從 0 開始；預設值為 -1。 |
+| public SQLServerMetaData( String columnName, int sqlType)                                                                                                                        | 使用資料行名稱和 SQL 型別，初始化 SQLServerMetaData 的新的執行個體。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| public SQLServerMetaData( String columnName, int sqlType, int length)                                                                                                                        | 使用資料行名稱、SQL 型別和長度 (針對字串資料)，初始化 SQLServerMetaData 的新的執行個體。 長度是用來區別大型字串和長度小於 4000 個字元的字串。 在 JDBC 驅動程式 7.2 版中引進。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| public SQLServerMetaData( String columnName, int sqlType, int precision, int scale)                                                                                              | 使用資料行名稱、SQL 型別、精確度與小數位數，初始化 SQLServerMetaData 的新的執行個體。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Public SQLServerMetaData(SQLServerMetaData sqlServerMetaData)                                                                                                                    | 從另一個 SQLServerMetaData 物件，初始化 SQLServerMetaData 的新的執行個體。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| public String getColumName()                                                                                                                                                     | 擷取資料行名稱。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| public int getSqlType()                                                                                                                                                          | 擷取 java sql 型別。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| public int getPrecision()                                                                                                                                                        | 擷取傳遞至資料行之型別的精確度。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| public int getScale()                                                                                                                                                            | 擷取傳遞至資料行之型別的小數位數。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| public SQLServerSortOrder getSortOrder()                                                                                                                                         | 擷取排序次序。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| public int getSortOrdinal()                                                                                                                                                      | 擷取排序序數。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| public boolean isUniqueKey()                                                                                                                                                     | 傳回資料行是否為唯一。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | public boolean useServerDefault()                                                                                                                                                | 傳回資料行是否使用預設的伺服器值。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
   
 ### <a name="sqlserversortorder"></a>SQLServerSortOrder
@@ -259,58 +259,58 @@ pStmt.execute();
   
 ### <a name="sqlserverdatatable"></a>SQLServerDataTable
 
-此類別代表要搭配資料表值參數使用的記憶體中資料表。 此類別中的方法包括:  
+此類別代表要搭配資料表值參數使用的記憶體內部資料表。 此類別中的方法包括：  
 
 | 名稱                                                          | 描述                                          |
 | ------------------------------------------------------------- | ---------------------------------------------------- |
-| Public SQLServerDataTable()                                   | 初始化 SQLServerDataTable 的新實例。    |
-| public Iterator<Entry\<Integer, Object[]>> getIterator()      | 在資料表的資料列上抓取反覆運算器。 |
-| public void addColumnMetadata(String columnName, int sqlType) | 加入指定資料行的中繼資料。              |
-| public void addColumnMetadata(SQLServerDataColumn column)     | 加入指定資料行的中繼資料。              |
-| public void addRow (Object .。。閾值                          | 將一個資料列加入至資料表。              |
-| public Map\<Integer, SQLServerDataColumn> getColumnMetadata() | 抓取此資料表的資料行中繼資料。       |
+| Public SQLServerDataTable()                                   | 初始化 SQLServerDataTable 的新的執行個體。    |
+| public Iterator<Entry\<Integer, Object[]>> getIterator()      | 擷取資料表資料列上的迭代器。 |
+| public void addColumnMetadata(String columnName, int sqlType) | 新增指定之資料行的中繼資料。              |
+| public void addColumnMetadata(SQLServerDataColumn column)     | 新增指定之資料行的中繼資料。              |
+| public void addRow(Object... values)                          | 將一個資料列新增至資料表。              |
+| public Map\<Integer, SQLServerDataColumn> getColumnMetadata() | 擷取此資料表的資料行中繼資料。       |
 | public void clear()                                           | 清除此資料表。                              |
 
 ### <a name="sqlserverdatacolumn"></a>SQLServerDataColumn
 
-此類別代表 SQLServerDataTable 所表示之記憶體中資料表的資料行。 此類別中的方法包括:  
+此類別代表 SQLServerDataTable 所代表之記憶體內部資料表的資料行。 此類別中的方法包括：  
 
 | 名稱                                                       | 描述                                                                      |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| public SQLServerDataColumn (字串 columnName, int sqlType) | 使用資料行名稱和類型, 初始化 SQLServerDataColumn 的新實例。 |
-| public String getColumnName()                              | 抓取資料行名稱。                                                       |
-| public int getColumnType()                                 | 抓取資料行類型。                                                       |
+| public SQLServerDataColumn(String columnName, int sqlType) | 使用資料行名稱和型別，初始化 SQLServerDataColumn 的新的執行個體。 |
+| public String getColumnName()                              | 擷取資料行名稱。                                                       |
+| public int getColumnType()                                 | 擷取資料行型別。                                                       |
 
 ### <a name="isqlserverdatarecord"></a>ISQLServerDataRecord
 
-此類別代表使用者可以執行來將資料串流至資料表值參數的介面。 此介面中的方法包括:  
+此類別代表使用者可以實作，以將資料串流至資料表值參數的介面。 此介面中的方法包括：  
   
 | 名稱                                                    | 描述                                                                                             |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| public SQLServerMetaData getColumnMetaData(int column); | 抓取指定之資料行索引的資料行中繼資料。                                               |
-| public int getColumnCount();                            | 抓取資料行總數。                                                                  |
+| public SQLServerMetaData getColumnMetaData(int column); | 擷取指定之資料行索引的資料行中繼資料。                                               |
+| public int getColumnCount();                            | 擷取資料行總數。                                                                  |
 | public Object[] getRowData();                           | 取得目前資料列的資料當作物件的陣列。                                          |
-| public boolean next();                                  | 移至下一個資料列。 如果移動成功且有下一個資料列, 則傳回 True, 否則傳回 false。 |
+| public boolean next();                                  | 移至下一個資料列。 如果移動成功且有下一個資料列，則傳回 True，否則傳回 False。 |
 
 ### <a name="sqlserverpreparedstatement"></a>SQLServerPreparedStatement
 
-下列方法已加入至這個類別, 以支援傳遞資料表值參數。  
+下列方法已新增至此類別中，以支援傳遞資料表值參數。  
 
 | 名稱                                                                                                    | 描述                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| public final void setStructured (int parameterIndex, String tvpName, SQLServerDataTable tvpDataTable)    | 使用資料表填入資料表值參數。 parameterIndex 是參數索引, tvpName 是資料表值參數的名稱, 而 tvpDataTable 是來源資料表物件。                                                                                                          |
-| public final void setStructured (int parameterIndex, String tvpName, ResultSet tvpResultSet)             | 使用從另一個資料表抓取的結果集填入資料表值參數。 parameterIndex 是參數索引, tvpName 是資料表值參數的名稱, 而 tvpResultSet 是來源結果集物件。                                                                               |
-| public final void setStructured (int parameterIndex, String tvpName, ISQLServerDataRecord tvpDataRecord) | 以 ISQLServerDataRecord 物件填入資料表值參數。 ISQLServerDataRecord 用於串流資料, 而使用者決定如何使用它。 parameterIndex 是參數索引, tvpName 是資料表值參數的名稱, 而 tvpDataRecord 是 ISQLServerDataRecord 物件。 |
+| public final void setStructured(int parameterIndex, String tvpName, SQLServerDataTable tvpDataTable)    | 使用資料表填入資料表值參數。 parameterIndex 是參數索引，tvpName 是資料表值參數的名稱，而 tvpDataTable 是來源資料表物件。                                                                                                          |
+| public final void setStructured(int parameterIndex, String tvpName, ResultSet tvpResultSet)             | 使用從另一個資料表擷取的 ResultSet 填入資料表值參數。 parameterIndex 是參數索引，tvpName 是資料表值參數的名稱，而 tvpResultSet 是來源結果集物件。                                                                               |
+| public final void setStructured(int parameterIndex, String tvpName, ISQLServerDataRecord tvpDataRecord) | 使用 ISQLServerDataRecord 物件填入資料表值參數。 ISQLServerDataRecord 用於串流資料，而使用者決定如何使用它。 parameterIndex 是參數索引，tvpName 是資料表值參數的名稱，而 tvpDataRecord 是 ISQLServerDataRecord 物件。 |
   
 ### <a name="sqlservercallablestatement"></a>SQLServerCallableStatement
 
-下列方法已加入至這個類別, 以支援傳遞資料表值參數。  
+下列方法已新增至此類別中，以支援傳遞資料表值參數。  
   
 | 名稱                                                                                                        | 描述                                                                                                                                                                                                                                                                                                                      |
 | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| public final void setStructured (String paratemeterName, String tvpName, SQLServerDataTable tvpDataTable)    | 使用資料表填入傳遞至預存程式的資料表值參數。 paratemeterName 是參數的名稱, tvpName 是 TVP 類型的名稱, 而 tvpDataTable 是資料表物件。                                                                                                                 |
-| public final void setStructured (字串 paratemeterName, 字串 tvpName, ResultSet tvpResultSet)             | 使用從另一個資料表抓取的結果集, 填入傳遞給預存程式的資料表值參數。 paratemeterName 是參數的名稱, tvpName 是 TVP 類型的名稱, 而 tvpResultSet 是來源結果集物件。                                                                              |
-| public final void setStructured (String paratemeterName, String tvpName, ISQLServerDataRecord tvpDataRecord) | 使用 ISQLServerDataRecord 物件, 填入傳遞至預存程式的資料表值參數。 ISQLServerDataRecord 用於串流資料, 而使用者決定如何使用它。 paratemeterName 是參數的名稱, tvpName 是 TVP 類型的名稱, 而 tvpDataRecord 是 ISQLServerDataRecord 物件。 |
+| public final void setStructured(String paratemeterName, String tvpName, SQLServerDataTable tvpDataTable)    | 使用資料表填入傳遞至預存程序的資料表值參數。 paratemeterName 是參數的名稱，tvpName 是型別 TVP 的名稱，而 tvpDataTable 是資料表物件。                                                                                                                 |
+| public final void setStructured(String paratemeterName, String tvpName, ResultSet tvpResultSet)             | 使用從另一個資料表擷取的 ResultSet 填入傳遞至預存程序的資料表值參數。 paratemeterName 是參數的名稱，tvpName 是型別 TVP 的名稱，而 tvpResultSet 是來源結果集物件。                                                                              |
+| public final void setStructured(String paratemeterName, String tvpName, ISQLServerDataRecord tvpDataRecord) | 使用 ISQLServerDataRecord 物件填入傳遞至預存程序的資料表值參數。 ISQLServerDataRecord 用於串流資料，而使用者決定如何使用它。 paratemeterName 是參數的名稱，tvpName 是型別 TVP 的名稱，而 tvpDataRecord 是 ISQLServerDataRecord 物件。 |
 
 ## <a name="see-also"></a>另請參閱
 

@@ -12,33 +12,33 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 76c314159faf15e63bf77b17a8a45abf217b205c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68265148"
 ---
-# <a name="formatting-decimal-strings-and-money-values-pdosqlsrv-driver"></a>將十進位字串及貨幣值格式化 (PDO_SQLSRV 驅動程式)
+# <a name="formatting-decimal-strings-and-money-values-pdo_sqlsrv-driver"></a>將十進位字串及貨幣值格式化 (PDO_SQLSRV 驅動程式)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-為了保留精確度, [decimal 或 numeric 類型](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)一律會以具有精確精確度和縮放比例的字串形式提取。 如果任何值小於 1, 則會遺漏前置零。 這與 money 和 smallmoney 欄位相同, 因為它們是具有固定小數位數等於4的十進位欄位。
+為了維持正確性，[decimal 或 numeric 類型](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)一律是以完全符合的精確度與小數位數擷取為字串。 如果值小於 1，則會遺漏前置零。 money 和 smallmoney 欄位也是如此，因為其為小數位數固定為 4 的 decimal 欄位。
 
-## <a name="add-leading-zeroes-if-missing"></a>如果遺漏, 請新增前置零
-從 version 5.6.0 版開始, connection 或語句屬性`PDO::SQLSRV_ATTR_FORMAT_DECIMALS`可讓使用者格式化十進位字串。 這個屬性必須是布林值 (true 或 false), 而且只會影響提取結果中的十進位或數值格式。 換句話說, 這個屬性不會影響插入或更新等其他作業。
+## <a name="add-leading-zeroes-if-missing"></a>若遺漏前置零則加以新增
+從 5.6.0 版開始，連線或陳述式屬性 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 允許使用者對小數字串進行格式設定。 此屬性預期的是布林值 (true 或 false)，且只影響所擷取結果中 decimal 或 numeric 值的格式設定。 換句話說，此屬性不影響插入或更新等其他作業。
 
-根據預設，`PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 是 **false**。 如果設定為 true, 則會針對小於1的任何十進位值, 加入前置的零到十進位字串。
+根據預設，`PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 是 **false**。 如果設定為 true，則會將小數字串的前置零新增至小於 1 的任何小數值。
 
-## <a name="configure-number-of-decimal-places"></a>設定小數位數
-在開啟的情況下, 另一個 connection 或`PDO::SQLSRV_ATTR_DECIMAL_PLACES`語句屬性可讓使用者設定顯示 money 和 smallmoney 資料時的小數位數。 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 它接受 [0, 4] 範圍內的整數值, 而在顯示時可能會發生舍入。 不過, 基礎 money 資料會維持不變。
+## <a name="configure-number-of-decimal-places"></a>設定小數位數的數目
+當 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 開啟時，另一個連接或陳述式屬性 (`PDO::SQLSRV_ATTR_DECIMAL_PLACES`) 可讓使用者設定顯示 money 和 smallmoney 資料時的小數位數數目。 其接受範圍在 [0, 4] 內的整數值，而在顯示時可能會發生進位。 不過，底層 money 資料會維持不變。
 
-語句屬性一律會覆寫對應的連接設定。 請注意,  `PDO::SQLSRV_ATTR_FORMAT_DECIMALS`選項只會影響 money 資料, 而且必須設定為 true。 `PDO::SQLSRV_ATTR_DECIMAL_PLACES`  否則, 無論`PDO::SQLSRV_ATTR_DECIMAL_PLACES`設定為何, 都會關閉格式設定。
+陳述式屬性一律會覆寫對應的連線設定。 請注意，`PDO::SQLSRV_ATTR_DECIMAL_PLACES` 選項**只會**影響 money 資料，且 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 必須設定為 true。 否則，不論 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 設定為何，格式設定都會關閉。
 
 > [!NOTE]
-> 由於 money 或 smallmoney 欄位的小數位數為`PDO::SQLSRV_ATTR_DECIMAL_PLACES` 4, 因此將會忽略設定為任何負數或大於4的任何值。 不建議使用任何格式化的 money 資料做為任何計算的輸入。
+> 因為 money 或 smallmoney 欄位的小數位數為 4，所以將 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 設定為任何負數或大於 4 的任何值，都會被忽略。 不建議使用任何已設定格式的 money 資料作為任何計算的輸入。
 
-### <a name="to-set-the-connection-attributes"></a>若要設定連接屬性
+### <a name="to-set-the-connection-attributes"></a>設定連接屬性
 
--   在連接點設定屬性:
+-   在連線時設定屬性：
 
     ```php
     $attrs = array(PDO::SQLSRV_ATTR_FORMAT_DECIMALS => true,
@@ -47,7 +47,7 @@ ms.locfileid: "68265148"
     $conn = new PDO("sqlsrv:Server = myServer; Database = myDB", $username, $password, $attrs);
     ```
 
--   設定屬性後的連接:
+-   在連線後設定屬性：
 
     ```php
     $conn = new PDO("sqlsrv:Server = myServer; Database = myDB", $username, $password);
@@ -55,8 +55,8 @@ ms.locfileid: "68265148"
     $conn->setAttribute(PDO::SQLSRV_ATTR_DECIMAL_PLACES, 2);
     ```
 
-## <a name="example---format-money-data"></a>範例-格式化 money 資料
-下列範例顯示如何使用[PDOStatement:: bindColumn](../../connect/php/pdostatement-bindcolumn.md)提取 money 資料:
+## <a name="example---format-money-data"></a>範例 - 設定 money 資料的格式
+下列範例顯示如何使用 [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md) 擷取 money 資料：
 
 ```php
 <?php
@@ -80,8 +80,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---override-connection-attributes"></a>範例-覆寫連接屬性
-下列範例顯示如何覆寫連接屬性:
+## <a name="example---override-connection-attributes"></a>範例 - 覆寫連接屬性
+下列範例顯示如何覆寫連接屬性：
 
 ```php
 <?php

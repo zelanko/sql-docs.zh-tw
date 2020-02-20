@@ -1,5 +1,5 @@
 ---
-title: setString 方法 (SQLServerCallableStatement) |Microsoft Docs
+title: setString 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f38b97b5-d4f0-4f74-a33d-740241a85842
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff224739664e55a1e05d45f684f199969903fc04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972637"
 ---
 # <a name="setstring-method-sqlservercallablestatement"></a>setString 方法 (SQLServerCallableStatement)
@@ -47,7 +47,7 @@ public void setString(java.lang.String sCol,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 setString 方法是由 java.sql.CallableStatement 介面中的 setString 方法指定。  
   
  只有當 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 知道目標類型是二進位時，才可執行字串到二進位的轉換。 在 JDBC 驅動程式不知道基礎類型為何的情況下，它將傳遞 **String** 常值，並在伺服器無法執行轉換作業時傳回伺服器錯誤。  

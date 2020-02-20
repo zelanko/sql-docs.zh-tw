@@ -1,5 +1,5 @@
 ---
-title: '如何: 執行交易 |Microsoft Docs'
+title: 如何：執行交易 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26ca7fbe56a17e1bf2a7c69b9e8c2dcd63073f87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936430"
 ---
 # <a name="how-to-perform-transactions"></a>如何：執行交易
@@ -42,7 +42,7 @@ PDO_SQLSRV 驅動程式提供三個方法來執行交易：
   
 本主題的其餘部分說明並示範如何使用 SQLSRV 驅動程式來執行交易。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 執行交易的步驟可以摘要如下：  
   
 1.  以 **sqlsrv_begin_transaction**開始交易。  
@@ -61,7 +61,7 @@ PDO_SQLSRV 驅動程式提供三個方法來執行交易：
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
 以下範例會在交易期間執行數個查詢。 如果所有查詢都成功，就會認可交易。 如果其中一個查詢失敗，則會復原交易。  
   
 此範例會嘗試從 *Sales.SalesOrderDetail* 資料表刪除銷售訂單，並在銷售訂單中每項產品的 *Product.ProductInventory* 資料表中調整產品庫存量。 這些查詢會包含在交易中，因為對資料庫而言，所有查詢都必須成功，才能正確地反映訂單狀態和產品可用性。  
@@ -150,7 +150,7 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>註解  
-為了將焦點放在交易行為上，上述範例中並未包含一些建議的錯誤處理方式。 對於生產應用程式, 我們建議您檢查任何對**sqlsrv**函數的呼叫是否有錯誤, 並據以處理它們。
+為了將焦點放在交易行為上，上述範例中並未包含一些建議的錯誤處理方式。 對於生產應用程式，我們建議檢查任何對 **sqlsrv** 函式的呼叫是否有錯誤並予以處理。
   
 ## <a name="see-also"></a>另請參閱  
 [更新資料 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)

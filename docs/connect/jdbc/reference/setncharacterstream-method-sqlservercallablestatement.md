@@ -1,5 +1,5 @@
 ---
-title: Reader 物件的 setNCharacterStream 方法 |Microsoft Docs
+title: setNCharacterStream 方法設定為 Reader 物件 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 77905630-0135-46ad-a419-215e648996e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cdefec49aebd2c5042d9fb8f99486a0ee8d3811e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973861"
 ---
 # <a name="setncharacterstream-method-sqlservercallablestatement"></a>setNCharacterStream 方法 (SQLServerCallableStatement)
@@ -24,9 +24,9 @@ ms.locfileid: "67973861"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
-|[setNCharacterStream 方法 &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md)|將所指定參數設定為指定的 Reader 物件。|  
+|[setNCharacterStream 方法 &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md)|將指定的參數設定為所指定 Reader 物件。|  
 |[setNCharacterStream 方法 &#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader-long.md)|將指定的參數設定為所指定 Reader 物件，該物件長度為指定的字元數。|  
   
 ## <a name="see-also"></a>另請參閱  

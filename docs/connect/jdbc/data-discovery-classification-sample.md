@@ -10,19 +10,19 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 722cf9bf616d1e98beb7b9cbd1dc0bbdd89d8a4b
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028127"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 資料探索與分類
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-這個[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]範例應用程式示範如何使用結果集 getter 方法, 從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]保存這類資訊的資料表中取出「SQL 資料探索與分類資訊」。
+這個 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何使用結果集 getter 方法，從保留這類資訊的資料表中擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]「SQL 資料探索與分類資訊」。
   
-這個範例的程式碼檔案名為 DataDiscoveryAndClassification, 而且可以在下列位置找到:  
+這個範例的程式碼檔案名稱為 DataDiscoveryAndClassification.java，而且可在下列位置中找到：  
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\dataclassification  

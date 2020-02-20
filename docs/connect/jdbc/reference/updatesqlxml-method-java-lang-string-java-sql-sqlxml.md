@@ -11,10 +11,10 @@ ms.assetid: 60021881-ef83-499b-9977-e20ff23c1312
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0e2772b43c084e1780b8e65cd6425b67d01092f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998292"
 ---
 # <a name="updatesqlxml-method-javalangstring-javasqlsqlxml"></a>updateSQLXML 方法 (java.lang.String, java.sql.SQLXML)
@@ -42,8 +42,8 @@ public void updateSQLXML(java.lang.String columnLabel,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 updateSQLXML 方法是由 sql-dmo 介面中的 updateSQLXML 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 updateSQLXML 方法是由 java.sql.ResultSet 介面中的 updateSQLXML 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [updateSQLXML 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)   

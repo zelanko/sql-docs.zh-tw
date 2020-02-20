@@ -1,5 +1,5 @@
 ---
-title: setDate 方法到日期和行事曆-字串 |Microsoft Docs
+title: setDate 方法設定為 date 和 calendar - string | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: fd152ad6-dd5e-49ef-b166-917371a2cba6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f986b7fd5faadfbd24708ec9a339d3bd2f104f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974575"
 ---
 # <a name="setdate-method-javalangstring-javasqldate-javautilcalendar"></a>setDate 方法 (java.lang.String, java.sql.Date, java.util.Calendar)
@@ -47,12 +47,12 @@ public void setDate(java.lang.String sCol,
   
  *c*  
   
- 行事曆物件。  
+ Calendar 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 setDate 方法是由 java.sql.CallableStatement 介面中的 setDate 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

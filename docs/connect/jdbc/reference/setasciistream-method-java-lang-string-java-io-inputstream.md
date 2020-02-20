@@ -1,5 +1,5 @@
 ---
-title: 輸入資料流程的 setAsciiStream 方法 |Microsoft Docs
+title: setAsciiStream 方法設定為輸入資料流 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: dc2caa44-9eb5-4ed8-a889-36148b50901d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72da8111b115c9c1eda4a328fc2cc173eebea5c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975438"
 ---
 # <a name="setasciistream-method-javalangstring-javaioinputstream"></a>setAsciiStream 方法 (java.lang.String, java.io.InputStream)
@@ -42,8 +42,8 @@ public final void setAsciiStream(java.lang.String parameterName,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 setAsciiStream 方法是由 JAVA.sql.preparedstatement 介面中的 setAsciiStream 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 setAsciiStream 方法是由 java.sql.PreparedStatement 介面中的 setAsciiStream 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [setAsciiStream &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setasciistream-sqlservercallablestatement.md)   

@@ -1,20 +1,20 @@
 ---
-title: 使用 pip 安裝 Python 套件
+title: 使用 sqlmlutils 安裝 Python 套件
 description: 了解如何使用 Python pip，在 SQL Server 機器學習服務服務的執行個體上安裝新的 Python 套件。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/22/2019
+ms.date: 01/30/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 2e3452a6aad04d0d524e4eb0e6bd473fd39a2bf7
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 9d759921ac82f34156856b587161f44c64269ea0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542156"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929894"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>使用 sqlmlutils 安裝 Python 套件
 
@@ -25,7 +25,7 @@ ms.locfileid: "72542156"
 如需套件位置和安裝路徑的詳細資訊，請參閱[取得 Python 套件資訊](../package-management/python-package-information.md)。
 
 > [!NOTE]
-> 標準 Python `pip install` 命令不建議用於在 SQL Server 上新增 Python 套件。 相反地，請按照本文所述使用 **sqlmlutils**。
+> 不建議使用標準 Python `pip install` 命令在 SQL Server 2019 上新增 Python 套件。 請依照此文章所述改為使用 **sqlmlutils**。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -33,7 +33,7 @@ ms.locfileid: "72542156"
 
 + 在用來連線到 SQL Server 的用戶端電腦上安裝 [python](https://www.python.org/)。 您也可能想要有 Python 開發環境，例如加裝 [Python 延伸模組](https://marketplace.visualstudio.com/items?itemName=ms-python.python)的 [Visual Studio Code](https://code.visualstudio.com/download)。 
 
-+ 在用來連線到 SQL Server 的用戶端電腦上安裝 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) 或 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS)。 您可以使用其他資料庫管理或查詢工具，但本文假設使用 Azure Data Studio 或 SSMS。
++ 在用來連線到 SQL Server 的用戶端電腦上安裝 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) 或 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS)。 您可以使用其他資料庫管理或查詢工具，但此文章假設使用 Azure Data Studio 或 SSMS。
 
 ### <a name="other-considerations"></a>其他考量
 
@@ -49,21 +49,22 @@ ms.locfileid: "72542156"
 
   + 如果您新增的套件為伺服器帶來過多的計算壓力，效能將會受到影響。
 
-  + 在已強化的 SQL Server 環境中，您可能會想要避免下列情況：
+  + 在已強化的 SQL Server 環境中，您可以避免下列情況：
     + 需要網路存取的套件
     + 需要提升檔案系統存取權的套件
     + 用於網頁程式開發或其他工作，但無法透過在 SQL Server 內部執行而獲益的套件
 
 ## <a name="install-sqlmlutils-on-the-client-computer"></a>在用戶端電腦上安裝 sqlmlutils
 
-若要使用 **sqlmlutils**，您必須先將其安裝在用來連接到 SQL Server 的用戶端電腦上。
+若要使用 **sqlmlutils**，您必須先將其安裝在用來連接到 SQL Server 的用戶端電腦上。 請確定您已安裝 `pip`，並請參閱 [pip 安裝](https://pip.pypa.io/en/stable/installing/)以了解詳細資訊。
 
 1. 從 https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist 將最新的 **sqlmlutils** ZIP 檔案下載到用戶端電腦。 請勿解壓縮檔案。
 
-1. 開啟 [命令提示字元]  並執行下列命令，以安裝 **sqlmlutils** 套件。 以您所下載 **sqlmlutils** ZIP 檔案的完整路徑取代，此範例假設下載的檔案是 `c:\temp\sqlmlutils_0.6.0.zip`。
+1. 開啟 [命令提示字元]  並執行下列命令，以安裝 **sqlmlutils** 套件。 以您所下載 **sqlmlutils** ZIP 檔案的完整路徑取代，此範例假設下載的檔案是 `c:\temp\sqlmlutils_0.7.2.zip`。
 
    ```console
-   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.6.0.zip
+   pip install "pymssql<3.0"
+   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.7.2.zip
    ```
 
 ## <a name="add-a-python-package-on-sql-server"></a>在 SQL Server 上新增 Python 套件

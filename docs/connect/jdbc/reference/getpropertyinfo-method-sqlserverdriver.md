@@ -1,5 +1,5 @@
 ---
-title: getPropertyInfo 方法 (SQLServerDriver) |Microsoft Docs
+title: getPropertyInfo 方法 (SQLServerDriver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b5eaad8a-31ef-44ac-af11-d5caa13ac3e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d89a29af5aa3d2518f94101854371cea757e135c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980677"
 ---
 # <a name="getpropertyinfo-method-sqlserverdriver"></a>getPropertyInfo 方法 (SQLServerDriver)
@@ -38,7 +38,7 @@ public java.sql.DriverPropertyInfo[] getPropertyInfo(java.lang.String Url,
 #### <a name="parameters"></a>參數  
  *Url*  
   
- **String** 值，包含用來連接到資料庫的 URL。  
+ **String** 值，其中包含用來連接到資料庫的 URL。  
   
  *Info*  
   
@@ -50,8 +50,8 @@ public java.sql.DriverPropertyInfo[] getPropertyInfo(java.lang.String Url,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getPropertyInfo 方法是由 sql-dmo 介面中的 getPropertyInfo 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getPropertyInfo 方法是由 java.sql.Driver 介面中的 getPropertyInfo 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDriver 方法](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

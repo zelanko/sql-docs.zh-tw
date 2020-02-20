@@ -1,5 +1,5 @@
 ---
-title: getObjectInstance 方法 (SQLServerDataSourceObjectFactory) |Microsoft Docs
+title: getObjectInstance 方法 (SQLServerDataSourceObjectFactory) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0a1503e2-e991-4d70-a223-087fc63baf73
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de25e608c9fbdbdf6ff91d08e7a6502765bb590e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981056"
 ---
 # <a name="getobjectinstance-method-sqlserverdatasourceobjectfactory"></a>getObjectInstance 方法 (SQLServerDataSourceObjectFactory)
@@ -60,8 +60,8 @@ public java.lang.Object getObjectInstance(java.lang.Object ref,
 ## <a name="exceptions"></a>例外狀況  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- 這個 getObjectInstance 方法是由 javax.xml.transform.dom.domresult 中的 getObjectInstance 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getObjectInstance 方法是由 javax.naming.spi.ObjectFactory 介面中的 getObjectInstance 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSourceObjectFactory 方法](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-methods.md)   

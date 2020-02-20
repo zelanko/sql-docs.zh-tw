@@ -1,5 +1,5 @@
 ---
-title: MSSQL JDBC Driver 的空間資料類型範例 |Microsoft Docs
+title: 適用於 MSSQL JDBC 驅動程式的空間資料類型範例 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e0557030bdec7b566a69696a8fd50cb543a7fc1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027688"
 ---
 # <a name="spatial-data-types-sample"></a>空間資料類型範例
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-這個[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]範例應用程式會示範如何建立、插入和取出空間資料類型 (Geometry 和 Geography)。
+此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何建立、插入和擷取空間資料類型 (Geometry 和 Geography)。
   
 此範例的程式碼檔案名稱為 SpatialDataTypes.java，並位於下列位置：  
 
@@ -37,11 +37,11 @@ ms.locfileid: "69027688"
   
 ## <a name="example"></a>範例
 
-在下列範例中, 範例程式碼會建立一個名為 SpatialDataTypesTable_JDBC_Sample 的資料表, 其中包含「Geometry」和「Geography」資料行。
+在下列範例中，範例程式碼會建立一個名為 SpatialDataTypesTable_JDBC_Sample 的資料表，其中包含 'Geometry' 和 'Geography' 資料行。
 
-此範例會先從代表某個點的知名文字 (WKT), 建立「Geometry」和「Geography」物件。 它會使用具有參數化查詢的 SQLServerPreparedStatement, 據此將資料對應至每個資料行。
+此範例會先從代表某個 POINT 的 Well-Known-Text (WKT)，建立 'Geometry' 和 'Geography' 物件。 其會搭配參數化查詢使用 SQLServerPreparedStatement，來將資料對應到每個資料行。
 
-最後, 此範例會將資料插入資料表中, 並加以抓取。 資料會以 WKT 的形式顯示。
+最後，此範例會將資料插入到資料表，並加以擷取。 這些資料會以 WKT 的形式顯示。
 
 ```java
 import java.sql.Connection;

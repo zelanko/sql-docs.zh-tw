@@ -1,5 +1,5 @@
 ---
-title: updateBytes 方法 (java. lang.ini, byte) |Microsoft Docs
+title: updateBytes 方法 (java.lang.String, byte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 4fb9de2b-61bc-4c96-89a5-c07cd7ee201a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 19ebdfb5b13cd528e5690fe2eeae9bec35e2134d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996899"
 ---
 # <a name="updatebytes-method-javalangstring-byte"></a>updateBytes 方法 (java.lang.String, byte)
@@ -42,7 +42,7 @@ public void updateBytes(java.lang.String columnName,
   
  *x*  
   
- **位元組**值的陣列。  
+ **byte** 值的陣列。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

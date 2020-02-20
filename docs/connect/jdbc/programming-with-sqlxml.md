@@ -1,5 +1,5 @@
 ---
-title: 使用 SQLXML 進行程式設計 |Microsoft Docs
+title: 使用 SQLXML 設計程式 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027775"
 ---
 # <a name="programming-with-sqlxml"></a>使用 SQLXML 進行程式設計
@@ -27,11 +27,11 @@ ms.locfileid: "69027775"
 ## <a name="reading-and-writing-xml-data-with-sqlxml-objects"></a>讀取和寫入具有 SQLXML 物件的 XML 資料  
  下列清單描述如何使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] API 方法來讀取和寫入具有 SQLXML 物件的 XML 資料：  
   
--   若要建立 SQLXML 物件，請使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法。 請注意，這種方法會建立不含任何資料的 SQLXML 物件。 若要將**xml**資料加入至 sqlxml 物件, 請呼叫 sqlxml 介面中指定的下列其中一種方法: SetResult、SetCharacterStream、SetBinaryStream 或 setString。  
+-   若要建立 SQLXML 物件，請使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法。 請注意，這種方法會建立不含任何資料的 SQLXML 物件。 若要將 **xml** 資料加入至 SQLXML 物件，請呼叫 SQLXML 介面中指定的下列其中一種方法：setResult、setCharacterStream、setBinaryStream 或 setString。  
   
 -   若要擷取 SQLXML 物件本身，請使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別或 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別的 getSQLXML 方法。  
   
--   若要從 SQLXML 物件中取出**xml**資料, 請使用 sqlxml 介面中指定的下列其中一種方法: GetSource、GetCharacterStream、GetBinaryStream 或 getString。  
+-   若要從 SQLXML 物件擷取 **xml** 資料，請使用 SQLXML 介面中指定的下列其中一種方法：getSource、getCharacterStream、getBinaryStream 或 getString。  
   
 -   若要更新 SQLXML 物件中的 **xml** 資料，請使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的 [updateSQLXML](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md) 方法。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "69027775"
  XML 剖析器無法處理空值。 不過，SQL Server 允許應用程式在 XML 資料類型的資料庫資料行中擷取和儲存空值。 這表示，剖析 XML 資料時，如果基礎值是空的，剖析器就會擲回例外狀況。 若為 DOM 輸出，JDBC Driver 會捕捉例外狀況並擲回錯誤。 若為 SAX 和 Stax 輸出，錯誤則直接來自剖析器。  
   
 ## <a name="adaptive-buffering-and-sqlxml-support"></a>自適性緩衝和 SQLXML 支援  
- SQLXML 物件所傳回的二進位和字元資料流會遵循適應性或完整緩衝模式。 反之，如果 XML 剖析器不是資料流，它們就不會遵循適應性或完整設定。 如需自適性緩衝的詳細資訊, 請參閱[使用自適性緩衝](../../connect/jdbc/using-adaptive-buffering.md)。  
+ SQLXML 物件所傳回的二進位和字元資料流會遵循適應性或完整緩衝模式。 反之，如果 XML 剖析器不是資料流，它們就不會遵循適應性或完整設定。 如需有關自適性緩衝的詳細資訊，請參閱[使用自適性緩衝](../../connect/jdbc/using-adaptive-buffering.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [支援 XML 資料](../../connect/jdbc/supporting-xml-data.md)  

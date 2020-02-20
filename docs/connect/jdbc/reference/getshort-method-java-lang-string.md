@@ -16,10 +16,10 @@ ms.assetid: cd39ed03-b3e8-443d-9c7a-e8cf2581e581
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f303d05d7ff38f7f410868103c486e44df84b36b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979801"
 ---
 # <a name="getshort-method-javalangstring"></a>getShort 方法 (java.lang.String)
@@ -40,7 +40,7 @@ public short getShort(java.lang.String sCol)
  包含參數名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
- **Short**值。  
+ **short** 值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: getResultSetType 方法 (SQLServerStatement) |Microsoft Docs
+title: getResultSetType 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 260da35f-ddf6-4111-8519-69956ea3072e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7a0293a48a354bba911a11ecf91a17211a9f8a12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980306"
 ---
 # <a name="getresultsettype-method-sqlserverstatement"></a>getResultSetType 方法 (SQLServerStatement)
@@ -40,8 +40,8 @@ public final int getResultSetType()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getResultSetType 方法是由 sql 語句介面中的 getResultSetType 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getResultSetType 方法是由 java.sql.Statement 介面中的 getResultSetType 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
