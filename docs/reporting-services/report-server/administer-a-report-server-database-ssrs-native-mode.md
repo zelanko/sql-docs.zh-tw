@@ -16,10 +16,10 @@ ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7822cadea8dbe051c0e7dbc11417987dd5e5c543
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593769"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>管理報表伺服器資料庫 (SSRS 原生模式)
@@ -29,7 +29,7 @@ ms.locfileid: "73593769"
   
  為了管理報表伺服器資料庫， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供許多工具。  
   
--   若要備份或還原報表伺服器資料庫、移動報表伺服器資料庫，或復原1表伺服器資料庫，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令或資料庫命令提示字元公用程式。 如需指示，請參閱 [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) (將報表伺服器資料庫移至其他電腦 &#40;SSRS 原生模式&#41;)。  
+-   若要備份或還原報表伺服器資料庫、移動報表伺服器資料庫，或復原報表伺服器資料庫，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 命令或資料庫命令提示字元公用程式。 如需指示，請參閱 [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) (將報表伺服器資料庫移至其他電腦 &#40;SSRS 原生模式&#41;)。  
   
 -   若要將現有的資料庫內容複製到其他報表伺服器資料庫，您可以附加報表伺服器資料庫的複本，並將這個複本與不同的報表伺服器執行個體一起使用。 或者，您也可以建立並執行使用 SOAP 呼叫的指令碼，在新的資料庫中重新建立報表伺服器內容。 您可以使用 **rs** 公用程式執行指令碼。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73593769"
  發生這個錯誤是因為 ReportServerTempdb 名稱是儲存於內部，以供預存程序執行內部作業之用， 如果重新命名此暫存資料庫將會造成預存程序無法正常運作。  
   
 ## <a name="enabling-snapshot-isolation-on-the-report-server-database"></a>在報表伺服器資料庫上啟用快照集隔離  
- 您無法在報表伺服器資料庫上啟用快照集隔離。 如果快照隔離已開啟，您將會遇到下列錯誤：「選取的報表還無法檢視。 報表仍在轉譯中，或報表快照集無法使用」。  
+ 您無法在報表伺服器資料庫上啟用快照集隔離。 如已開啟快照隔離，您將會遇到下列錯誤：「選取的報表還無法檢視。 報表仍在轉譯中，或報表快照集無法使用」。  
   
  如果您並未刻意啟用快照集隔離，表示可能有另一個應用程式已經設定此屬性，或者 **model** 資料庫可能啟用了快照集隔離，因而導致所有新資料庫都繼承此設定。  
   

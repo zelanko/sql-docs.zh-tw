@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 3a6592781464bb148bf31fdaa135d17a159b5e13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68136525"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 版本資訊
@@ -64,7 +64,7 @@ ms.locfileid: "68136525"
 <pre>The following error has occurred:  
 Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
   
-中的多個  
+或  
   
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
@@ -392,11 +392,11 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
   
 -   在 .xls 檔案中，移除超過第 255 個資料行之所有資料行的資料、儲存檔案，然後將 .xls 檔案的值匯入定義域中。  
   
-### <a name="416-activity-monitoring-feature-is-unavailable-for-roles-other-than-dqsadministrator"></a>4.16 dqs_administrator 以外的角色無法使用活動監控功能  
+### <a name="416-activity-monitoring-feature-is-unavailable-for-roles-other-than-dqs_administrator"></a>4.16 dqs_administrator 以外的角色無法使用活動監控功能  
 活動監控功能只適用於擁有 dqs_administrator 角色的使用者。 如果您的使用者帳戶具有 dqs_kb_editor 或 dqs_kb_operator 角色，則 Data Quality Client 應用程式中將無法使用活動監控功能。  
   
 ### <a name="417-error-on-opening-a-knowledge-base-in-the-recent-knowledge-base-list-for-domain-management"></a>4.17 在最近使用的知識庫清單中針對定義域管理開啟知識庫時發生錯誤  
-問題如果您在 Data Quality Client 首頁畫面中，於 [最近使用的知識庫]  清單中針對定義域管理活動開啟知識庫，您可能會收到以下錯誤：  
+問題：如果您在 Data Quality Client 首頁畫面中，於 [最近使用的知識庫]  清單中針對定義域管理活動開啟知識庫，您可能會收到以下錯誤：  
   
 `"A configuration with name 'RecentList:KB:<domain>\<username>' already exists in the database."`  
   
@@ -478,7 +478,7 @@ Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
 **因應措施**：None  
   
 ### <a name="56-intellisense-has-limitations-when-logged-in-to-a-contained-database"></a>5.6 登入自主資料庫時，Intellisense 有限制  
-問題當自主使用者登入自主資料庫時，SQL Server Management Studio (SSMS) 和 SQL Server Data Tools (SSDT) 中的 Intellisense 無法如預期般運作。 在這類情況下會看到以下行為：  
+問題：當自主使用者登入自主資料庫時，SQL Server Management Studio (SSMS) 和 SQL Server Data Tools (SSDT) 中的 Intellisense 無法如預期般運作。 在這類情況下會看到以下行為：  
   
 1.  無效物件的底線不會出現。  
   
@@ -630,7 +630,7 @@ SQL Server 2012 包括 StreamInsight 2.0。 StreamInsight 2.0 需要 Microsoft S
 ## <a name="UA"></a>10.0 Upgrade Advisor  
   
 ### <a name="101-link-to-install-upgrade-advisor-is-not-enabled-on-chinese-hk-operating-systems"></a>10.1 在中文 (HK) 作業系統上並未啟用安裝 Upgrade Advisor 的連結  
-問題當您嘗試在任何支援的中文 (香港) 作業系統 (OS) Windows 版本上安裝升級建議程式時，可能會發現未啟用安裝升級建議程式的連結。  
+問題：當您嘗試在任何支援的中文 (香港) 作業系統 (OS) Windows 版本上安裝升級建議程式時，可能會發現未啟用安裝升級建議程式的連結。  
   
 **因應措施**：在 SQL Server 2012 媒體中的 `\1028_CHT_LP\x64\redist\Upgrade Advisor` 或 `\1028_CHT_LP\x86\redist\Upgrade Advisor` 上找出 **SQLUA.msi** 檔案，視您的作業系統架構而定。  
   

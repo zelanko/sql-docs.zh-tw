@@ -12,10 +12,10 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72278236"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services 中的檔案共用傳遞
@@ -68,9 +68,9 @@ ms.locfileid: "72278236"
 ##  <a name="bkmk_file_options"></a> 檔案選項  
  當您建立檔案共用訂閱時，可以設定檔案名稱的建立方式，以及檔案是否會覆寫報表的舊版本。 完整檔案名稱有三個部分：名稱、副檔名，以及附加至檔案以建立唯一檔案名稱的文字或數字  
   
- **檔案名稱** ：預設檔案名稱是以來源報表名稱為基礎，但是您可以在訂閱中提供自訂名稱。 副檔名為選擇性，但是如果您有指定副檔名，報表伺服器將會建立對應到轉譯格式的副檔名。  
+ **檔案名稱：** 預設檔案名稱是以來源報表名稱為基礎，但是您可以在訂用帳戶中提供自訂名稱。 副檔名為選擇性，但是如果您有指定副檔名，報表伺服器將會建立對應到轉譯格式的副檔名。  
   
- **覆寫** ：您可以指定覆寫選項，針對每一次報表傳遞重複使用相同的檔案名稱，或者建立新的檔案。 若要覆寫檔案，您必須使用相同的檔案名稱和副檔名。  
+ **覆寫：** 您可以指定覆寫選項，針對每一次報表傳遞重複使用相同的檔案名稱，或者也可以建立新的檔案。 若要覆寫檔案，您必須使用相同的檔案名稱和副檔名。  
   
  有一個替代方式可以在每一次傳遞中建立唯一的檔案，就是在檔案名稱中加入時間戳記。 若要這樣做，請將 **\@timestamp** 變數加入檔案名稱 (例如 *CompanySales@timestamp* )。 使用這個方法時，會讓檔案名稱依照定義成為唯一的檔案名稱，所以絕對不會遭到覆寫。  
   
@@ -80,6 +80,6 @@ ms.locfileid: "72278236"
   
 ## <a name="see-also"></a>另請參閱  
  [建立及管理原生模式報表伺服器的訂閱](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [訂閱設定與檔案共用帳戶 &#40;組態管理員&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
+ [訂閱設定與檔案共用帳戶 &#40;設定管理員&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: SQL Server 使用方式和診斷資料收集的本機稽核 | Microsoft Docs
-ms.custom: ''
+title: 本機稽核使用狀況與診斷資料收集
+description: 了解 SQL Server 用於收集使用方式與診斷資料並傳送給 Microsoft 的本機審核。
+ms.custom: seo-lt-2019
 ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: security
@@ -13,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3c7697d72aa98429bdaff64044f447dd11384f6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b34d69ea0d402f568efa4e6951367cce3cfa0eca
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984773"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558037"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server 使用狀況和診斷資料收集的本機稽核 (CEIP)
 
@@ -30,7 +31,7 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 
 從 SQL Server 2016 CU2 開始，可以在 SQL Server 資料庫引擎和 Analysis Services (SSAS) 的執行個體層級設定。 在 SQL Server 2016 CU4 與 SQL Server 2016 SP1 中，也會啟用 SQL Server Integration Services (SSIS) 的本機稽核。 安裝程式執行期間所安裝的其他 SQL Server 元件，以及在安裝程式執行之後下載或安裝的 SQL Server 工具，沒有使用方式和診斷資料收集的本機稽核功能。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
  - 不支援移除或停用 SQL CEIP 服務。 
  - 不支援從叢集群組移除 SQL CEIP 資源。 
@@ -64,7 +65,7 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
  
 1. 啟動 [服務]  主控台。 若要這樣做，請在鍵盤上選取 **Windows 鍵 + R** 來開啟 [執行]  對話方塊。 接下來，在文字欄位中鍵入 *services.msc*，並選取 [確定]  來啟動 [服務]  主控台。  
 
-2. 瀏覽至適當的服務。 例如，若為資料庫引擎，請找出 **SQL Server CEIP 服務** **(您的執行個體名稱  )** 。 若為 Analysis Services，請找出 **SQL Server Analysis Services CEIP** **(您的執行個體名稱  )** 。 若為 Integration Services，則找出 **SQL Server Integration Services CEIP 服務**。
+2. 瀏覽至適當的服務。 例如，針對資料庫引擎，請找出 **SQL Server CEIP 服務** **(您的執行個體名稱  )** 。 針對 Analysis Services，請找出 **SQL Server Analysis Services CEIP** **(您的執行個體名稱  )** 。 若為 Integration Services，則找出 **SQL Server Integration Services CEIP 服務**。
 
 3. 以滑鼠右鍵按一下服務並選擇 [屬性]  。 
 
@@ -93,7 +94,7 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 
 1. 在 [安全性]  索引標籤上，選取 [編輯]  管理權限。
 
-1. 選取 [新增]  ，並鍵入 SQL Server CEIP 服務的認證。 例如 `NT Service\SQLTELEMETRY`。
+1. 選取 [新增]  ，並鍵入 SQL Server CEIP 服務的認證。 例如 `NT Service\SQLTELEMETRY` 。
 
 1. 選取 [檢查名稱]  驗證您提供的名稱，然後選取 [確定]  。
 
@@ -107,23 +108,26 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 
 1. 巡覽至適當的 CPE 路徑：
 
-   | Version | <資料庫引擎> - 登錄機碼 |
+   | 版本 | <資料庫引擎> - 登錄機碼 |
    | :------ | :----------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**13**.<您的執行個體名稱>  \\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**14**.<您的執行個體名稱>  \\CPE |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**15**.<您的執行個體名稱>  \\CPE |
    | &nbsp; | &nbsp; |
 
-   | Version | ***Analysis Services*** - 登錄機碼 |
+   | 版本 | ***Analysis Services*** - 登錄機碼 |
    | :------ | :------------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**13**.<您的執行個體名稱>  \\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**14**.<您的執行個體名稱>  \\CPE |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**15**.<您的執行個體名稱>  \\CPE |  
    | &nbsp; | &nbsp; |
 
-  | Version | ***Integration Services*** - 登錄機碼 |
-  | :------ | :---------------------------------- |
-  | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
-  | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
-  | &nbsp; | &nbsp; |
+   | 版本 | ***Integration Services*** - 登錄機碼 |
+   | :------ | :---------------------------------- |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
+   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**150** |
+   | &nbsp; | &nbsp; |
 
 1. 以滑鼠右鍵按一下 CPE 路徑，然後選擇 [新增]  。 選取 [字串值]  。
 
@@ -156,6 +160,7 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
     - 若為 Integration Services， 
         - 如果是 SQL 2016，請使用「SQL Server Integration Services CEIP 服務 13.0」  。
         - 如果是 SQL 2017，請使用「SQL Server Integration Services CEIP 服務 14.0」  。
+    - 針對 SQL 2019，請使用「SQL Server Integration Services CEIP 服務 15.0」  。
 
 1. 以滑鼠右鍵按一下服務並選擇 [重新啟動]。 
 
@@ -185,18 +190,18 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 
 | 邏輯本機稽核資訊階層 | 相關的資料行 |
 | ------ | -------|
-| 標頭 | emitTime, schemaVersion 
+| 頁首 | emitTime, schemaVersion 
 | 電腦 | operatingSystem 
 | 執行個體 | instanceUniqueID、correlationID、clientVersion 
-| Session | sessionID, traceName 
+| 工作階段 | sessionID, traceName 
 | 查詢 | sequence, querySetVersion, queryIdentifier, query, queryTimeInTicks 
-| data |  data 
+| 資料 |  data 
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>名稱/值配對的定義和範例 
 
 下面所列的資料行代表本機稽核檔案輸出的順序。 使用 SHA 256 的單向雜湊用於底下許多資料行的匿名值。  
 
-| [屬性] | Description | 範例值
+| 名稱 | 描述 | 範例值
 |-------|--------| ----------|
 |instanceUniqueID| 匿名的執行個體識別碼 | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
 |schemaVersion| SQLCEIP 結構描述版本 |  3 

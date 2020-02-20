@@ -1,23 +1,24 @@
 ---
-title: 使用參考資料庫中的資料比較和同步處理一個或多個資料表中的資料 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 使用參考資料庫中資料來比較和同步處理資料表中的資料
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 055731473f94003440f4a78c6446ec965f1d0a2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: e30ec27733885521f8d6e5b487fde40afafca4dd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984672"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241701"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>使用參考資料庫中的資料比較和同步處理一個或多個資料表中的資料
+
 您可以比較「來源」  資料庫與「目標」  資料庫的資料，以及指定應該比較的資料表。 您可以檢閱資料並決定要同步處理哪些變更。 然後您可以更新目標來同步處理資料庫，也可以將更新指令碼匯出至 Transact\-SQL 編輯器或檔案。  
   
 例如，您可以使用生產資料副本來更新開發用伺服器，同步處理資料庫。 您也可以使用其他資料庫的資料填入資料表，同步處理一個或多個資料表。 此外，在執行測試之前或之後，您可以比較資料，當做其他形式的驗證。  
@@ -55,7 +56,7 @@ ms.locfileid: "67984672"
 ## <a name="UnderstandingDataCompareResults"></a>了解比較結果  
 下表描述 [資料比較]  視窗的五個資料行。  
   
-|「資料行」|注意|  
+|資料行|注意|  
 |----------|---------|  
 |Object|顯示資料表或檢視表的名稱，以及指示當您寫入更新或匯出更新指令碼時是否應該同步處理目標的核取方塊。 如果資料表或檢視表不包含資料，核取方塊會無法使用。|  
 |不同的記錄|顯示目標中與來源的索引鍵相同但資料不同的記錄數目。 括號中的數字是當您寫入更新或匯出更新指令碼時標示要更新的記錄數目。|  

@@ -1,6 +1,7 @@
 ---
-title: 針對 IntelliSense 進行疑難排解 (SQL Server Management Studio) | Microsoft 文件
-ms.custom: ''
+title: 識別 IntelliSense 的問題 (SSMS)
+description: 了解如何使用 SQL Server Management Studio (SSMS) 來識別 Intellisense 的問題，並對其進行疑難排解。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -15,14 +16,14 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9dcff5c71d8093f4049983393ee7a10622f57f5b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: de4491bdeecdc635d12dca7cb0a51426524bdd67
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253111"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558670"
 ---
-# <a name="troubleshooting-intellisense"></a>針對 IntelliSense 進行疑難排解
+# <a name="identify-issues-with-intellisense---sql-server-management-studio-ssms"></a>識別 IntelliSense 的問題 - SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   在某些情況下，IntelliSense 選項的運作可能會不符合您的預期。  
   

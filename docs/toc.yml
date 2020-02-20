@@ -130,6 +130,8 @@
           items:
             - name: SQL Server 主要執行個體
               href: big-data-cluster/configure-sql-server-master-instance.md
+            - name: 設定 Apache Spark 與 Apache Hadoop
+              href: big-data-cluster/configure-spark-hdfs.md
         - name: 資料虛擬化
           items:
             - name: 關聯式資料
@@ -461,6 +463,8 @@
                   href: relational-databases/backup-restore/transaction-log-backups-sql-server.md
                 - name: 系統資料庫
                   href: relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md
+                - name: VSS 與 SQL 寫入器
+                  href: relational-databases/backup-restore/sql-server-vss-writer-backup-guide.md
             - name: 組態
               items:
                 - name: 壓縮
@@ -907,11 +911,11 @@
               items:
                 - name: 監視可用性群組的效能
                   href: database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md
-                - name: 疑難排解：可用性群組超過 RPO
+                - name: 疑難排解：可用性群組已超過 RPO
                   href: database-engine/availability-groups/windows/troubleshoot-availability-group-exceeded-rpo.md
-                - name: 疑難排解：可用性群組超過 RTO
+                - name: 疑難排解：可用性群組已超過 RTO
                   href: database-engine/availability-groups/windows/troubleshoot-availability-group-exceeded-rto.md
-                - name: 疑難排解：對主要的變更未反映在次要複本上
+                - name: 疑難排解：對主要複本的變更未反映在次要複本上
                   href: database-engine/availability-groups/windows/troubleshoot-primary-changes-not-reflected-on-secondary.md
                 - name: 對進行疑難排解有助益的工具
                   href: database-engine/availability-groups/windows/useful-tools-for-troubleshooting.md
@@ -1759,7 +1763,7 @@
               href: relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md
             - name: 第 1 課：將資料表轉換為階層式結構
               href: relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md
-            - name: 第 2 課：在階層式資料表中建立及管理資料
+            - name: 第 2 課：在階層式資料表中建立與管理資料
               href: relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
         - name: 參考
           items:
@@ -1985,11 +1989,11 @@
                   href: relational-databases/xml/example-retrieving-product-model-information-as-xml.md
                 - name: 範例：使用 ELEMENTS 指示詞指定 XSINIL
                   href: relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md
-                - name: 範例：使用 XMLDATA 和 XMLSCHEMA 選項要求結構描述作為結果
+                - name: 範例：使用 XMLDATA 與 XMLSCHEMA 選項要求結構描述作為結果
                   href: relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
                 - name: 範例：擷取二進位資料
                   href: relational-databases/xml/example-retrieving-binary-data.md
-                - name: 範例：重新命名 <row> 項目
+                - name: 範例：為 <row> 元素重新命名
                   href: relational-databases/xml/example-renaming-the-row-element.md
                 - name: 範例：為 FOR XML 產生的 XML 指定根元素
                   href: relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
@@ -2707,11 +2711,11 @@
           items:
             - name: 書籤
               href: relational-databases/native-client-ole-db-rowsets/bookmarks.md
-            - name: 以 IOpenRowset 建立資料列集
+            - name: 使用 IOpenRowset 建立資料列集
               href: relational-databases/native-client-ole-db-rowsets/creating-a-rowset-with-iopenrowset.md
-            - name: '使用 ICommand:: Execute 建立資料列集'
+            - name: '使用 ICommand::Execute 建立資料列集'
               href: relational-databases/native-client-ole-db-rowsets/creating-rowsets-with-icommand-execute.md
-            - name: 使用 IRow 來提取單一資料列
+            - name: 使用 IRow 擷取單一資料列
               href: relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md
             - name: '使用 IRow::GetColumns 與 ISequentialStream 擷取 BLOB 資料'
               href: relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-getcolumns-and-isequentialstream.md
@@ -2719,13 +2723,13 @@
               href: relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-open-and-isequentialstream.md
             - name: 擷取資料列 - 下一個擷取位置
               href: relational-databases/native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md
-            - name: 提取資料列
+            - name: 擷取資料列
               href: relational-databases/native-client-ole-db-rowsets/fetching-rows.md
             - name: 資料列集屬性與行為
               href: relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md
             - name: 資料列集與資料指標
               href: relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md
-            - name: 重新同步資料列集中的資料列
+            - name: 重新同步處理資料列集中的資料列
               href: relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md
             - name: 更新資料列集中的資料
               href: relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md
@@ -2986,7 +2990,7 @@
                   href: relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md
                 - name: 取得相互 Kerberos 驗證
                   href: relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md
-                - name: 如何：將資料列插入至 Geography 資料行
+                - name: 如何：將資料列插入 Geography 資料行
                   href: relational-databases/native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
                 - name: 管理 Text 與 Image 資料行 - 使用資料執行中資料行
                   href: relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-columns.md
@@ -3308,11 +3312,11 @@
         - name: Text 與 Image 資料行
           href: relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md
           items:
-            - name: 繫結與未繫結的文字與影像資料行比較
+            - name: 繫結與未繫結的 Text 與 Image 資料行
               href: relational-databases/native-client-odbc-text-image-columns/bound-vs-unbound-text-and-image-columns.md
             - name: 資料執行中與 Text、ntext 或 Image 資料行
               href: relational-databases/native-client-odbc-text-image-columns/data-at-execution-and-text-ntext-or-image-columns.md
-            - name: 已記錄及未記錄的修改
+            - name: 已記錄與未記錄的修改
               href: relational-databases/native-client-odbc-text-image-columns/logged-vs-unlogged-modifications.md
         - name: 資料表值參數
           href: relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md
@@ -3529,7 +3533,7 @@
           items:
             - name: 用戶端與伺服器端
               href: relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md
-            - name: 用戶端與伺服器端的比較
+            - name: 用戶端與伺服器端
               href: relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
             - name: 用戶端
               href: relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md
@@ -6103,12 +6107,12 @@
                   href: relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md
                 - name: 確認最大工作者執行緒設定
                   href: relational-databases/policy-based-management/verify-max-worker-threads-setting.md
-            - name: 教學課程：使用以原則為基礎的管理來管理伺服器
+            - name: 教學課程：使用原則式管理來管理伺服器
               href: relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md
               items:
-                - name: 第 1 課：建立及套用預設關閉原則
+                - name: 第 1 課：建立與套用 Off By Default 原則
                   href: relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md
-                - name: 第 2 課：建立及套用命名標準原則
+                - name: 第 2 課：建立與套用命名標準原則
                   href: relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
             - name: 參考
               items:
@@ -6275,7 +6279,7 @@
           items:
             - name: 快速入門
               items:
-                - name: 快速入門：SQL Server 中的擴充事件
+                - name: 快速入門：SQL Server 中的延伸事件
                   href: relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
             - name: 教學課程
               items:
@@ -7525,17 +7529,17 @@
                       href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
                 - name: 輪替 Always Encrypted 金鑰
                   items:
-                    - name: 使用 SSMS 輪替 Always Encrypted 金鑰
+                    - name: SQL Server Management Studio (SSMS)
                       href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md
-                    - name: 使用 PowerShell 輪替 Always Encrypted 金鑰
+                    - name: PowerShell
                       href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
                 - name: 使用 Always Encrypted 設定資料行
                   items:
-                    - name: 使用 Always Encrypted 精靈設定資料行加密
+                    - name: 精靈
                       href: relational-databases/security/encryption/always-encrypted-wizard.md
-                    - name: 使用 Always Encrypted 與 PowerShell 設定資料行加密
+                    - name: PowerShell
                       href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
-                    - name: 使用 Always Encrypted 與 DAC 套件設定資料行加密
+                    - name: DAC 封裝
                       href: relational-databases/security/encryption/configure-always-encrypted-using-dacpac.md
                 - name: 使用 Always Encrypted 查詢資料行
                   items:
@@ -7543,13 +7547,13 @@
                       href: relational-databases/security/encryption/always-encrypted-query-columns-ssms.md
                 - name: 使用 Always Encrypted 移轉敏感性資料
                   items:
-                    - name: 使用 Always Encrypted 匯出和匯入資料庫
+                    - name: 匯出和匯入
                       href: relational-databases/security/encryption/always-encrypted-migrate-using-bacpac.md
-                    - name: 使用 Always Encrypted 備份和還原資料庫
+                    - name: 備份及還原
                       href: relational-databases/security/encryption/always-encrypted-migrate-using-backup-restore.md
-                    - name: 使用匯入和匯出精靈移轉資料
+                    - name: '使用 [匯入與匯出精靈] 移轉資料'
                       href: relational-databases/security/encryption/always-encrypted-migrate-using-import-export-wizard.md
-                    - name: 使用 Always Encrypted 將大量的加密資料載入資料行
+                    - name: 將大量的加密資料載入資料行
                       href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
                 - name: 使用 Always Encrypted 開發應用程式
                   items:
@@ -8200,7 +8204,7 @@
               href: ssdt/check-for-updates-dialog-box.md
             - name: 資料庫專案設定
               href: ssdt/database-project-settings.md
-            - name: HOW TO：瀏覽 SQL Server 資料庫專案中的物件
+            - name: 如何：瀏覽 SQL Server 資料庫專案中的物件
               href: ssdt/how-to-browse-objects-in-a-sql-server-database-project.md
             - name: 資料工具作業視窗
               href: ssdt/data-tools-operations-window.md
@@ -8210,7 +8214,7 @@
               href: ssdt/how-to-create-a-new-database-project.md
             - name: 如何：使用結構描述比較，比較不同的資料庫定義
               href: ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md
-            - name: 如何：建置及部署至本機資料庫
+            - name: 如何：建置與部署到本機資料庫
               href: ssdt/how-to-build-and-deploy-to-a-local-database.md
             - name: 如何：在專案中使用 Microsoft SQL Server 2012 物件
               href: ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md
@@ -8218,11 +8222,11 @@
               href: ssdt/how-to-work-with-clr-database-objects.md
             - name: 如何：建立專案的快照集
               href: ssdt/how-to-create-a-snapshot-of-a-project.md
-            - name: 如何：變更目標平台及發行資料庫專案
+            - name: 如何：變更目標平台與發行資料庫專案
               href: ssdt/how-to-change-target-platform-and-publish-a-database-project.md
             - name: 如何：將 Visual Studio 2010 資料庫專案轉換成 SQL Server 資料庫專案，並將目標重定為不同的平台
               href: ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md
-            - name: HOW TO：指定預先部署或部署後指令碼
+            - name: 如何：指定預先部署或部署後指令碼
               href: ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md
             - name: 使用命令列工具進行專案導向的資料庫開發
               href: ssdt/project-oriented-database-development-using-command-line-tools.md
@@ -8232,11 +8236,11 @@
             - name: 連接的資料庫開發
               href: ssdt/connected-database-development.md
               items:
-                - name: 如何：連線到資料庫及瀏覽現有的物件
+                - name: 如何：連線到資料庫與瀏覽現有的物件
                   href: ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md
                 - name: 如何：使用資料表設計工具建立資料庫物件
                   href: ssdt/how-to-create-database-objects-using-table-designer.md
-                - name: 如何：使用 Power Buffer 更新連接的資料庫
+                - name: 如何：使用 Power Buffer 更新連線的資料庫
                   href: ssdt/how-to-update-a-connected-database-with-power-buffer.md
                 - name: 篩選與排序對話方塊
                   href: ssdt/filter-and-sort-dialog-box.md
@@ -8244,9 +8248,9 @@
                   href: ssdt/how-to-create-new-database-objects-using-queries.md
                 - name: 如何：使用查詢編輯現有的資料表
                   href: ssdt/how-to-edit-an-existing-table-using-queries.md
-                - name: 如何：檢視及編輯資料表中的資料
+                - name: 如何：檢視與編輯資料表中的資料
                   href: ssdt/how-to-view-and-edit-data-in-a-table.md
-                - name: 如何：刪除物件及解析相依性
+                - name: 如何：刪除物件與解析相依性
                   href: ssdt/how-to-delete-objects-and-resolve-dependencies.md
                 - name: 如何：複製現有的資料庫
                   href: ssdt/how-to-clone-an-existing-database.md
@@ -8255,13 +8259,13 @@
             - name: 使用參考資料庫中的資料比較與同步一或多個資料表中的資料
               href: ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md
               items:
-                - name: 如何：比較及同步兩個資料庫的資料
+                - name: 如何：比較與同步兩個資料庫的資料
                   href: ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md
                 - name: 如何：檢視資料差異
                   href: ssdt/how-to-view-data-differences.md
                 - name: 使用 T-SQL 編輯器編輯與執行指令碼
                   href: ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md
-                - name: 如何：在 T-SQL 指令碼中設定大綱及新增程式碼片段
+                - name: 如何：在 T-SQL 指令碼中設定大綱與新增程式碼片段
                   href: ssdt/how-to-outline-and-add-snippets-to-transact-sql-script.md
                 - name: 如何：在指令碼之間巡覽
                   href: ssdt/how-to-navigate-between-scripts.md
@@ -8269,7 +8273,7 @@
                   href: ssdt/how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md
                 - name: 如何：執行部分查詢
                   href: ssdt/how-to-execute-a-partial-query.md
-                - name: 如何：偵錯預存程序
+                - name: 如何：針對預存程序進行偵錯
                   href: ssdt/how-to-debug-stored-procedures.md
                 - name: 分析指令碼效能
                   href: ssdt/analyze-script-performance.md
@@ -8283,7 +8287,7 @@
             - name: 使用 SQL Server 單元測試驗證資料庫程式碼
               href: ssdt/verifying-database-code-by-using-sql-server-unit-tests.md
               items:
-                - name: 逐步解說：建立並執行 SQL Server 單元測試
+                - name: 逐步解說：建立與執行 SQL Server 單元測試
                   href: ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md
                 - name: 建立與定義 SQL Server 單元測試
                   href: ssdt/creating-and-defining-sql-server-unit-tests.md
@@ -8296,19 +8300,19 @@
                       href: ssdt/using-test-conditions-in-sql-server-unit-tests.md
                     - name: 在 SQL Server 單元測試中使用 T-SQL 判斷提示
                       href: ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md
-                    - name: HOW TO：建立 SQL Server 資料庫單元測試的測試專案
+                    - name: 如何：建立 SQL Server 資料庫單元測試的測試專案
                       href: ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md
-                    - name: HOW TO：建立空白 SQL Server 單元測試
+                    - name: 如何：建立空白 SQL Server 單元測試
                       href: ssdt/how-to-create-an-empty-sql-server-unit-test.md
-                    - name: 如何：針對函式、觸發程序與預存程序建立 SQL Server 單元測試
+                    - name: 如何：建立針對函式、觸發程序與預存程序的 SQL Server 單元測試
                       href: ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md
-                    - name: HOW TO：將測試條件加入至 SQL Server 單元測試
+                    - name: 如何：將測試條件新增至 SQL Server 單元測試
                       href: ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md
-                    - name: HOW TO：開啟要編輯的 SQL Server 單元測試
+                    - name: 如何：開啟要編輯的 SQL Server 單元測試
                       href: ssdt/how-to-open-a-sql-server-unit-test-to-edit.md
-                    - name: HOW TO：撰寫在單一交易範圍內執行的 SQL Server 單元測試
+                    - name: 如何：撰寫在單一交易範圍內執行的 SQL Server 單元測試
                       href: ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md
-                    - name: HOW TO：設定 SQL Server 單元測試執行
+                    - name: 如何：設定 SQL Server 單元測試執行
                       href: ssdt/how-to-configure-sql-server-unit-test-execution.md
                     - name: 連接字串與權限概觀
                       href: ssdt/overview-of-connection-strings-and-permissions.md
@@ -8317,11 +8321,11 @@
                 - name: 執行 SQL Server 單元測試
                   href: ssdt/running-sql-server-unit-tests.md
                   items:
-                    - name: HOW TO：偵錯資料庫物件
+                    - name: 如何：針對資料庫物件進行偵錯
                       href: ssdt/how-to-debug-database-objects.md
-                    - name: HOW TO：從 Team Foundation Build 執行 SQL Server 單元測試
+                    - name: 如何：從 Team Foundation Build 執行 SQL Server 單元測試
                       href: ssdt/how-to-run-sql-server-unit-tests-from-team-foundation-build.md
-                    - name: HOW TO：執行 SQL Server 單元測試
+                    - name: 如何：執行 SQL Server 單元測試
                       href: ssdt/how-to-run-sql-server-unit-tests.md
                     - name: 解譯 SQL Server 單元測試結果
                       href: ssdt/interpreting-sql-server-unit-test-results.md
@@ -8330,11 +8334,11 @@
                 - name: SQL Server 單元測試的自訂測試條件
                   href: ssdt/custom-test-conditions-for-sql-server-unit-tests.md
                   items:
-                    - name: HOW TO：建立 SQL Server 單元測試設計工具的測試條件
+                    - name: 如何：建立 SQL Server 單元測試設計工具的測試條件
                       href: ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md
                     - name: 逐步解說：使用自訂測試條件來驗證預存程序的結果
                       href: ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md
-                    - name: HOW TO：將 Visual Studio 2010 自訂測試條件從舊版升級至 SQL Server Data Tools
+                    - name: 如何：將 Visual Studio 2010 自訂測試條件從舊版升級至 SQL Server Data Tools
                       href: ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md
                 - name: 疑難排解 SQL Server 資料庫單元測試的問題
                   href: ssdt/troubleshooting-sql-server-database-unit-testing-issues.md
@@ -8346,16 +8350,16 @@
                   items:
                     - name: 逐步解說：擴充資料庫專案組建，以產生模型統計資料
                       href: ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md
-                    - name: 逐步解說：擴充資料庫專案部署以分析部署計畫
+                    - name: 逐步解說：擴充資料庫專案部署以分析部署計劃
                       href: ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md
-                    - name: 逐步解說：擴充資料庫專案部署以修改部署計畫
+                    - name: 逐步解說：擴充資料庫專案部署以修改部署計劃
                       href: ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md
                 - name: 資料庫程式碼分析規則的擴充性概觀
                   href: ssdt/overview-of-extensibility-for-database-code-analysis-rules.md
                   items:
                     - name: 為 SQL Server 編寫自訂靜態程式碼分析規則組件的逐步解說
                       href: ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md
-                - name: 如何：安裝及管理功能延伸模組
+                - name: 如何：安裝與管理功能延伸模組
                   href: ssdt/how-to-install-and-manage-feature-extensions.md
             - name: SQL Server Data Tools 的必要權限
               href: ssdt/required-permissions-for-sql-server-data-tools.md
@@ -9730,9 +9734,9 @@
         - name: 開始使用
           href: relational-databases/tutorial-getting-started-with-the-database-engine.md
           items:
-            - name: 第 1 課：連接到 Database Engine
+            - name: 第 1 課：連線到資料庫引擎
               href: relational-databases/lesson-1-connecting-to-the-database-engine.md
-            - name: 第 2 課：從另一部電腦連接
+            - name: 第 2 課：從另一部電腦連線
               href: relational-databases/lesson-2-connecting-from-another-computer.md
         - name: 使用憑證簽署預存程序
           href: relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
@@ -9743,11 +9747,11 @@
     - name: 撰寫 T-SQL 陳述式
       href: t-sql/tutorial-writing-transact-sql-statements.md
       items:
-        - name: 課程 1：建立及查詢資料庫物件
+        - name: 第 1 課：建立及查詢資料庫物件
           href: t-sql/lesson-1-creating-database-objects.md
-        - name: 課程 2：設定資料庫物件的權限
+        - name: 第 2 課：設定資料庫物件的權限
           href: t-sql/lesson-2-configuring-permissions-on-database-objects.md
-        - name: 課程 3：刪除資料庫物件
+        - name: 第 3 課：刪除資料庫物件
           href: t-sql/lesson-3-deleting-database-objects.md
 - name: Linux 上的 SQL Server
   href: linux/sql-server-linux-overview.md
@@ -10076,7 +10080,7 @@
       items:
         - name: 範例概觀
           href: samples/sql-samples-where-are.md
-        - name: 所有 Github 範例 >>
+        - name: 所有 GitHub 範例 >>
           href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
         - name: AdventureWorks
           items:
@@ -11073,25 +11077,25 @@
               href: relational-databases/event-classes/dtctransaction-event-class.md
             - name: SQLTransaction 事件類別
               href: relational-databases/event-classes/sqltransaction-event-class.md
-            - name: 'TM: Begin Tran Completed 事件類別'
+            - name: TM：Begin Tran Completed 事件類別
               href: relational-databases/event-classes/tm-begin-tran-completed-event-class.md
-            - name: 'TM: Begin Tran Starting 事件類別'
+            - name: TM：Begin Tran Starting 事件類別
               href: relational-databases/event-classes/tm-begin-tran-starting-event-class.md
-            - name: 'TM: Commit Tran Completed 事件類別'
+            - name: TM：Commit Tran Completed 事件類別
               href: relational-databases/event-classes/tm-commit-tran-completed-event-class.md
-            - name: 'TM: Commit Tran Starting 事件類別'
+            - name: TM：Commit Tran Starting 事件類別
               href: relational-databases/event-classes/tm-commit-tran-starting-event-class.md
-            - name: 'TM: Promote Tran Completed 事件類別'
+            - name: TM：Promote Tran Completed 事件類別
               href: relational-databases/event-classes/tm-promote-tran-completed-event-class.md
-            - name: 'TM: Promote Tran Starting 事件類別'
+            - name: TM：Promote Tran Starting 事件類別
               href: relational-databases/event-classes/tm-promote-tran-starting-event-class.md
-            - name: 'TM: Rollback Tran Completed 事件類別'
+            - name: TM：Rollback Tran Completed 事件類別
               href: relational-databases/event-classes/tm-rollback-tran-completed-event-class.md
-            - name: 'TM: Rollback Tran Starting 事件類別'
+            - name: TM：Rollback Tran Starting 事件類別
               href: relational-databases/event-classes/tm-rollback-tran-starting-event-class.md
-            - name: 'TM: Save Tran Completed 事件類別'
+            - name: TM：Save Tran Completed 事件類別
               href: relational-databases/event-classes/tm-save-tran-completed-event-class.md
-            - name: 'TM: Save Tran Starting 事件類別'
+            - name: TM：Save Tran Starting 事件類別
               href: relational-databases/event-classes/tm-save-tran-starting-event-class.md
             - name: TransactionLog 事件類別
               href: relational-databases/event-classes/transactionlog-event-class.md
@@ -14644,7 +14648,7 @@
               href: t-sql/data-types/getancestor-database-engine.md
             - name: GetDescendant
               href: t-sql/data-types/getdescendant-database-engine.md
-            - name: GetLevel)
+            - name: GetLevel
               href: t-sql/data-types/getlevel-database-engine.md
             - name: GetRoot
               href: t-sql/data-types/getroot-database-engine.md
@@ -16039,7 +16043,7 @@
                       href: t-sql/language-elements/or-transact-sql.md
                     - name: SOME | ANY
                       href: t-sql/language-elements/some-any-transact-sql.md
-                - name: ':: (範圍解析)'
+                - name: '::(範圍解析)'
                   href: t-sql/language-elements/scope-resolution-operator-transact-sql.md
                 - name: String
                   href: t-sql/language-elements/string-operators-transact-sql.md

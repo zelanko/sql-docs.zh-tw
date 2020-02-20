@@ -1,6 +1,6 @@
 ---
-title: SQLdiag 公用程式 | Microsoft Docs
-ms.custom: ''
+title: SQLdiag 公用程式
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7eadacbf0e3137cf22c9a870783da41a046c86fb
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.openlocfilehash: a94daa3fc9756c690a5cd6188e59a9bfd97ca27d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251364"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306665"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "72251364"
   
 -   Windows 效能記錄  
   
--   Windows 事件記錄檔  
+-   Windows 事件記錄  
   
 -   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 追蹤  
   
@@ -83,7 +83,7 @@ sqldiag
   
 ## <a name="arguments"></a>引數  
  **/?**  
- 顯示使用方式資訊。  
+ 顯示使用資訊。  
   
  **/I** _configuration_file_  
  設定 **SQLdiag** 要使用的組態檔。 依預設， **/I** 會設為 SQLDiag.Xml。  
@@ -103,7 +103,7 @@ sqldiag
 >  **SQLDIAG /P %cd%**  
   
  **/N** _output_folder_management_option_  
- 設定 **SQLdiag** 在啟動時，是要覆寫或重新命名輸出資料夾。 可用的選項如下：  
+ 設定 **SQLdiag** 在啟動時，是要覆寫或重新命名輸出資料夾。 可用選項：  
   
  1 = 覆寫輸出資料夾 (預設值)  
   
@@ -118,7 +118,7 @@ sqldiag
  使用 *\@machinelistfile* 指定要儲存在組態檔中的電腦清單檔案名稱。  
   
  **/C** _file_compression_type_  
- 設定 **SQLdiag** 輸出資料夾檔案所用的檔案壓縮類型。 可用的選項如下：  
+ 設定 **SQLdiag** 輸出資料夾檔案所用的檔案壓縮類型。 可用選項：  
   
  0 = 無 (預設值)  
   
@@ -231,7 +231,7 @@ sqldiag
  **SQLDIAG START /A** _SQLdiag_application_name_  
   
 ## <a name="security-requirements"></a>安全性需求  
- 除非 **SQLdiag** 於一般模式下執行 (藉由指定 **/G** 命令列引數)，否則執行 **SQLdiag** 的使用者必須是 Windows **Administrator** 群組的成員，及 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **系統管理員** 固定伺服器角色的成員。 依預設， **SQLdiag** 會使用 Windows 驗證來連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，但它也支援 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證。  
+ 除非 **SQLdiag** 於一般模式下執行 (藉由指定 **/G** 命令列引數)，否則執行 **SQLdiag** 的使用者必須是 Windows **Administrator** 群組成員，以及 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **系統管理員** 固定伺服器角色的成員。 依預設， **SQLdiag** 會使用 Windows 驗證來連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，但它也支援 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證。  
   
 ## <a name="performance-considerations"></a>效能考量  
  執行 **SQLdiag** 的效能結果，會隨著您設定它要收集的診斷資料類型而不同。 例如，如果您已設定 **SQLdiag** 會收集 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 追蹤資訊，則您選擇要追蹤的事件類別愈多，伺服器效能受到的影響就愈大。  
@@ -260,7 +260,7 @@ sqldiag
   
  如果您利用 **SQLdiag** 診斷可以重現的問題，請等到收到這則訊息之後，再於伺服器中重現此問題。  
   
- **SQLdiag** 會以平行方式收集大部分的診斷資料。 除了從 Windows 效能記錄檔和事件記錄檔收集資訊之外，所有診斷資訊都是藉由連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sqlcmd** 公用程式或 Windows 命令處理器之類的工具加以收集。 **SQLdiag** 會在每部電腦上各使用一個工作者執行緒，監視這些其他工具的診斷資料收集，通常會同時等待多個工具完成。 在收集過程期間， **SQLdiag** 會將每一個診斷的輸出路由傳送至輸出資料夾。  
+ **SQLdiag** 會以平行方式收集大部分的診斷資料。 除了從 Windows 效能記錄檔和事件記錄檔收集資訊之外，所有診斷資訊都是藉由連線到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sqlcmd** 公用程式或 Windows 命令處理器之類的工具加以收集。 **SQLdiag** 會在每部電腦上各使用一個工作者執行緒，監視這些其他工具的診斷資料收集，通常會同時等待多個工具完成。 在收集過程期間， **SQLdiag** 會將每一個診斷的輸出路由傳送至輸出資料夾。  
   
 ## <a name="stopping-data-collection"></a>停止收集資料  
  在 **SQLdiag** 開始收集診斷資料之後，除非您將它停止，或將它設定成在指定的時間停止，否則它會持續作業。 您可以利用可讓您指定停止時間的 **/E** 引數，或利用使 **SQLdiag** 以快照集模式執行的 **/X** 引數，將 **SQLdiag** 設定成於指定的時間停止。  
@@ -303,7 +303,7 @@ sqldiag /B +01:00:00 /E +03:00:00
   
  指定相對的 *start_time* 之後， **SQLdiag** 就會在相對於目前日期和時間的時間啟動。 指定相對的 *end_time* 之後， **SQLdiag** 就會在相對於指定的 *start_time*的時間結束。 如果您指定的開始或結束日期和時間已經過去， **SQLdiag** 會強制變更開始日期，讓開始日期和時間設定在未來。  
   
- 對您選擇的開始和結束日期而言，這有重要的影響。 請設想下列範例：  
+ 對您選擇的開始和結束日期而言，這有重要的影響。 請考慮下列範例：  
   
 ```  
 sqldiag /B +01:00:00 /E 08:30:00  

@@ -1,8 +1,10 @@
 ---
-title: 關於 URL 保留項目和註冊 (SSRS 設定管理員) | Microsoft Docs
-ms.date: 06/20/2019
+title: URL 保留項目和註冊 (組態管理員) | Microsoft Docs
+description: Reporting Services 應用程式的 URL 會當做 URL 保留項目定義在 HTTP.SYS 中。
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
@@ -11,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dba8913c5aa5fa0aa8d93dd1c4dd639f85ac3081
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.openlocfilehash: 64c458b703d740fa50ff7bcdd6fce20752e6746a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314032"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259331"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>關於 URL 保留項目和註冊 (SSRS 組態管理員)
   Reporting Services 應用程式的 URL 會當做 URL 保留項目定義在 HTTP.SYS 中。 URL 保留項目會定義 Web 應用程式之 URL 端點的語法。 當您在報表伺服器上設定應用程式時，會同時針對報表伺服器 Web 服務和入口網站定義 URL 保留項目。 當您透過安裝程式或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具設定 URL 時，將會自動為您建立 URL 保留項目：  
@@ -80,10 +82,10 @@ ms.locfileid: "67314032"
   
 -   [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]  
   
-|執行個體類型|應用程式|預設 URL|HTTP.SYS 中的實際 URL 保留項目|  
+|執行個體類型|Application|預設 URL|HTTP.SYS 中的實際 URL 保留項目|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|預設執行個體|報表伺服器 Web 服務|`https://\<servername>/reportserver`|`https://<servername>:80/reportserver`|  
-|預設執行個體|入口網站|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|預設執行個體|報表伺服器 Web 服務|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|預設執行個體|入口網站|`https://<servername>/reports`|`https://<servername>:80/reports`|  
 |具名執行個體|報表伺服器 Web 服務|`https://<servername>/reportserver_<instancename>`|`https://<servername>:80/reportserver_<instancename>`|  
 |具名執行個體|入口網站|`https://<servername>/reports_<instancename>`|`https://<servername>:80/reports_<instancename>`|  
 |SQL Server Express|報表伺服器 Web 服務|`https://<servername>/reportserver_SQLExpress`|`https://<servername>:80/reportserver_SQLExpress`|  

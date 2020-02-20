@@ -1,5 +1,5 @@
 ---
-title: 下載 SQL Server Data Tools (SSDT) | Microsoft Docs
+title: 下載 SQL Server Data Tools (SSDT)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
@@ -8,16 +8,17 @@ keywords: 安裝 SSDT, 下載 SSDT, 最新的 SSDT
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 author: markingmyname
 ms.author: maghan
+manager: jroth
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: a79940fa5696a65ed580d8550984d090a48eebdf
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 48426127a379efecbc61587f60a798fff14190b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807450"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688232"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>下載並安裝 SQL Server Data Tools (SSDT) for Visual Studio
 
@@ -60,15 +61,17 @@ ms.locfileid: "72807450"
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017 (獨立安裝程式)
 
-[![下載](../ssdt/media/download.png) 下載 SSDT for Visual Studio 2017 (15.9.2)](https://go.microsoft.com/fwlink/?linkid=2095463)
+[![下載](../ssdt/media/download.png) 下載 SSDT for Visual Studio 2017 (15.9.3)](https://go.microsoft.com/fwlink/?linkid=2110080)
 
 > [!IMPORTANT]
-> - 如果已安裝「Analysis Services 專案」  和「Reporting Services 專案」  延伸模組，請先解除安裝並關閉所有 VS 執行個體，然後安裝 SSDT for Visual Studio 2017 (15.9.2)。
+> - 如果已安裝「Analysis Services 專案」  與「Reporting Services 專案」  延伸模組，請先解除安裝並關閉所有 VS 執行個體，再安裝 SSDT for Visual Studio 2017 (15.9.3)。
+> - 已移除 Power Query Source for SQL Server 2017 的收件匣元件。 我們現在宣告 Power Query Source for SQL Server 2017 與 2019 為 OOB 元件，您可以在[這裡](https://www.microsoft.com/en-us/download/details.aspx?id=100619)下載。
+> - 已移除 Microsoft Oracle Connector for SQL Server 2019 的收件匣元件。 我們現在宣告 Microsoft Oracle Connector for SQL Server 2019 為 OOB 元件，您可以在[這裡](https://www.microsoft.com/en-us/download/details.aspx?id=58228)下載。
 > - 請將適用於 Visual Studio 2017 的 SSDT (15.8.0) 或先前版本用於設計包含 Teradata 來源/目的地的 SSIS 套件。 15.8.0 以後的適用於 Visual Studio 2017 的 SSDT無法設計包含 Attunity 之 Teradata 來源/目的地的 SSIS 套件。
 
 ### <a name="version-information"></a>版本資訊
 
-版本號碼：15.9.2 組建編號：14.0.16194.0 發行日期：2019 年 7 月 17 日 
+版本號碼：15.9.3 組建編號：14.0.16203.0 發行日期：2020 年 1 月 3 日 
 
 如需完整變更清單，請參閱 [SQL Server Data Tools (SSDT) 的版本資訊](release-notes-ssdt.md)。
 
@@ -78,17 +81,17 @@ SSDT for Visual Studio 2017 與 Visual Studio 具有相同的[系統需求](http
 
 這版**適用於 VS 2017 的 SSDT** 提供下列語言版本：
 
-- [簡體中文]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x804)
-- [繁體中文]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x404)
-- [英文 (美國)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x409)
-- [法文]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40c)
-- [德文]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x407)
-- [義大利文]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x410)
-- [日文]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x411)
-- [韓文]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x412)
-- [葡萄牙文 (巴西)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x416)
-- [俄文]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x419)
-- [西班牙文]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40a)
+- [簡體中文]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x804)
+- [繁體中文]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x404)
+- [英文 (美國)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x409)
+- [法文]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40c)
+- [德文]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x407)
+- [義大利文]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x410)
+- [日文]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x411)
+- [韓文]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x412)
+- [葡萄牙文 (巴西)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x416)
+- [俄文]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x419)
+- [西班牙文]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40a)
 
 ## <a name="offline-install"></a>離線安裝
 

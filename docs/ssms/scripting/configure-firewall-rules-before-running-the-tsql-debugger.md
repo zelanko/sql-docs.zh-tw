@@ -1,5 +1,7 @@
 ---
-title: 先設定防火牆規則再執行 TSQL 偵錯工具
+title: 先設定防火牆規則再執行 T-SQL 偵錯工具
+description: 了解如何在連線到 SQL Server Management Studio 中的 SQL Server 時，在執行 Transact-SQL (T-SQL) 偵錯工具之前，先設定 Windows 防火牆規則。
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: scripting
@@ -19,15 +21,14 @@ ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
 ms.date: 10/20/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd9d501f8acdbdbbc9a2942ef522714a445e62fb
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: de184b30270ff301e343b1598327a449907fb508
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097947"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558255"
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>先設定防火牆規則再執行 TSQL 偵錯工具
 
@@ -133,7 +134,7 @@ ms.locfileid: "74097947"
 
    3. 在 [程式]  對話方塊中，選取 [這個程式路徑:]  ，然後輸入下列三個值的其中一個。
 
-       - 針對 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 輸入 ssms.exe 的完整路徑。 根據預設，ssms.exe 安裝於 C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\Management Studio。
+       - 針對 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]輸入 ssms.exe 的完整路徑。 根據預設，ssms.exe 安裝於 C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\Management Studio。
 
        - 針對 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 輸入 devenv.exe 的完整路徑：
 
@@ -141,7 +142,7 @@ ms.locfileid: "74097947"
 
             2. 根據預設，Visual Studio 2012 的 devenv.exe 位於 C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE
 
-            3. 您可以從用來啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的捷徑找到 ssms.exe 的路徑。 您可以從用來啟動 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的捷徑找到 devenv.exe 的路徑。 以滑鼠右鍵按一下捷徑，然後選取 [屬性]  。 可執行檔和路徑會在 [目標]  方塊中列出。
+            3. 您可以從用來啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的捷徑找到 ssms.exe 的路徑。 您可以從用來啟動 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的捷徑找到 devenv.exe 的路徑。 以滑鼠右鍵按一下捷徑，然後選取 [屬性]  。 可執行檔和路徑會在 [目標]  方塊中列出。
 
    4. 在 [動作]  對話方塊中，選取 [允許連線]  ，然後按一下 [下一步]  。
 

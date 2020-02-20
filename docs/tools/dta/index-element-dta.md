@@ -1,10 +1,7 @@
 ---
-title: Index 元素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Index 元素 (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e7b86c8ac990c7add4856e2c00e43550903f55a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 1d865d3ea2893f255155ee03c229731eed9d48a8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034830"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307700"
 ---
 # <a name="index-element-dta"></a>Index 元素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  包含您要建立或卸除的使用者指定組態索引的相關資訊。  
+
+包含您要建立或卸除的使用者指定組態索引的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,14 +42,14 @@ ms.locfileid: "68034830"
   
 ## <a name="element-attributes"></a>元素屬性  
   
-|索引屬性|資料類型|Description|  
+|索引屬性|資料類型|描述|  
 |---------------------|---------------|-----------------|  
 |**叢集**|**boolean**|選擇性。 指定叢集索引。 設為 "true" 或 "false"，例如：<br /><br /> `<Index Clustered="true">`<br /><br /> 依預設，這個屬性設為 "false"。|  
 |**唯一**|**boolean**|選擇性。 指定唯一索引。 設為 "true" 或 "false"，例如：<br /><br /> `<Index Unique="true">`<br /><br /> 依預設，這個屬性設為 "false"。|  
 |**線上存取**|**boolean**|選擇性。 指定伺服器在線上時，能夠執行作業的索引，需要暫存磁碟空間。 設為 "true" 或 "false"，例如：<br /><br /> `<Index Online="true">`<br /><br /> 依預設，這個屬性設為 "false"。<br /><br /> 如需詳細資訊，請參閱 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。|  
 |**IndexSizeInMB**|**double**|選擇性。 指定索引的大小上限 (MB)，例如：<br /><br /> `<Index IndexSizeInMB="873.75">`<br /><br /> 沒有預設值。|  
 |**NumberOfRows**|**integer**|選擇性。 模擬不同的索引大小，它能夠有效模擬不同的資料表大小，例如：<br /><br /> `<Index NumberOfRows="3000">`<br /><br /> 沒有預設值。|  
-|**QUOTED_IDENTIFIER**|**boolean**|選擇性。 在分隔識別碼和文字字串的引號方面，使 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遵照 ISO 規則。 如果索引是在計算資料行或檢視上，就必須開啟這個屬性。 例如，下列語法會將這個屬性設為開啟：<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> 依預設，會關閉這個屬性。<br /><br /> 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。|  
+|**QUOTED_IDENTIFIER**|**boolean**|選擇性。 在分隔識別碼與文字字串的引號方面，使 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遵循該 ISO 規則。 如果索引是在計算資料行或檢視上，就必須開啟這個屬性。 例如，下列語法會將這個屬性設為開啟：<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> 依預設，會關閉這個屬性。<br /><br /> 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。|  
 |**ARITHABORT**|**boolean**|選擇性。 在查詢執行期間，當發生溢位或除以零的錯誤時，會使查詢終止。 如果索引是在計算資料行或檢視上，就必須開啟這個屬性。 例如，下列語法會將這個屬性設為開啟：<br /><br /> `<Index ARITHABORT [...]>`<br /><br /> 依預設，會關閉這個屬性。<br /><br /> 如需詳細資訊，請參閱 [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)。|  
 |**CONCAT_NULL_YIELDS_**<br /><br /> **NULL**|**boolean**|選擇性。 控制是否將串連結果當作 Null 或空字串值來處理。 如果索引是在計算資料行或檢視上，就必須開啟這個屬性。 例如，下列語法會將這個屬性設為開啟：<br /><br /> `<Index CONCAT_NULL_YIELDS_NULL [...]>`<br /><br /> 依預設，會關閉這個屬性。<br /><br /> 如需詳細資訊，請參閱 [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)。|  
 |**ANSI_NULLS**|**boolean**|選擇性。 指定搭配 null 值一起使用時，等於 (=) 和不等於 (<>) 比較運算子的 ISO 相容行為。 如果索引是在計算資料行或檢視上，就必須開啟這個屬性。 例如，下列語法會將這個屬性設為開啟：<br /><br /> `<Index ANSI_NULLS [...]>`<br /><br /> 依預設，會關閉這個屬性。<br /><br /> 如需詳細資訊，請參閱 [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)。|  
@@ -56,7 +59,7 @@ ms.locfileid: "68034830"
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|Description|  
+|特性|描述|  
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  

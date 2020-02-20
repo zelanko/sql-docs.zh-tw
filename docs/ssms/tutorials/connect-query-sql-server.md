@@ -1,22 +1,22 @@
 ---
-title: 使用 SQL Server Management Studio (SSMS) 連線至 SQL Server 執行個體並進行查詢
+title: 連接及查詢 SQL Server 執行個體
 description: 透過使用 SQL Server Management Studio 並執行基本 T-SQL 查詢，來連線至 SQL Server 執行個體的教學課程。
 keywords: SQL Server, SSMS, SQL Server Management Studio
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: sstein
+author: markingmyname
+ms.author: maghan
+ms.reviewer: sstein; maghan
 ms.topic: quickstart
 ms.prod_service: sql-tools
 ms.prod: sql
 ms.technology: ssms
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: eaf544085bfe6040bdf9f54300eb733ee4fd92f0
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: c1d13b939dc0846c88e9bd05a1384d259c3f911c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708335"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76162647"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>教學課程：使用 SQL Server Management Studio (SSMS) 連線至 SQL Server 執行個體並進行查詢
 
@@ -195,11 +195,16 @@ ms.locfileid: "71708335"
     > [!NOTE]
     > 此動作只會變更查詢視窗所連線的伺服器，而不會變更 [物件總管] 所使用的伺服器。
 
+## <a name="azure-data-studio"></a>Azure Data Studio
+
+您也可以使用 Azure Data Studio 來連接及查詢 [SQL Server](../../azure-data-studio/quickstart-sql-server.md)、[Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md) 和 [Azure SQL 資料倉儲](../../azure-data-studio/quickstart-sql-dw.md)。
+
 ## <a name="next-steps"></a>後續步驟
 
-熟悉 SSMS 的最佳方式是實際練習。 這些文章可協助您使用 SSMS 內所提供的各種功能。  這些文章會告訴您如何管理 SSMS 的元件及如何尋找您經常使用的功能。
+熟悉 SSMS 的最佳方式是實際練習。 這些文章可協助您使用 SSMS 內所提供的各種功能。 這些文章會告訴您如何管理 SSMS 的元件及如何尋找您經常使用的功能。
 
 * [指令碼](scripting-ssms.md)
 * [在 SSMS 中使用範本](../template/templates-ssms.md)
 * [SSMS 組態](ssms-configuration.md)
 * [使用 SSMS 的其他提示與訣竅](ssms-tricks.md)
+* [Azure Data Studio](../../azure-data-studio/download.md)

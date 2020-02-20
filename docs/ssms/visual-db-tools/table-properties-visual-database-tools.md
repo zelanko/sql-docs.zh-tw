@@ -1,10 +1,9 @@
 ---
-title: 資料表屬性 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 資料表屬性
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d40b20c75b6ce9c86767ee655e6e7992ed32cff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b53bed28d05d490b9b6d603260917f7ffbb4d047
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261569"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242176"
 ---
 # <a name="table-properties-visual-database-tools"></a>資料表屬性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "68261569"
 > [!CAUTION]  
 > 如果現有的查詢、檢視、使用者自訂函數、預存程序或程式參考此資料表，則名稱修改將使這些物件失效。  
   
-**資料庫名稱**  
+**Database Name**  
 顯示選取資料表的資料來源名稱。  
   
 **說明**  
@@ -59,10 +60,10 @@ ms.locfileid: "68261569"
 **Identity Column**  
 顯示做為資料表識別欄位的資料行。 若要變更識別欄位，請從下拉式清單中選擇。 清單中只會顯示數字資料類型的資料行。  
   
-**Is Indexable**  
+**為可編索引**  
 顯示是否可對資料表進行索引。 如果資料表不可索引，可能是因為您不是資料表擁有人，或是因為資料表包含具有 text、ntext 或 image 等資料類型的資料行。  
   
-**Is Replicated**  
+**為已複寫**  
 顯示是否已在其他位置複寫資料表。  
   
 **規則資料空間規格分類**  
@@ -84,5 +85,5 @@ ms.locfileid: "68261569"
 提供下拉式清單，供您選擇具有 text 或 image 資料類型之資料行的檔案群組。 如果資料表是以資料分割配置加以儲存，請將此欄位留白。  
   
 ## <a name="see-also"></a>另請參閱  
-[設計資料表 (Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[設計資料表](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   

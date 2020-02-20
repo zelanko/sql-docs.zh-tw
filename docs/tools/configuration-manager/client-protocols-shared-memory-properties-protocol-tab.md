@@ -1,6 +1,6 @@
 ---
-title: 用戶端通訊協定 - 共用記憶體屬性 ([通訊協定] 索引標籤) | Microsoft Docs
-ms.custom: ''
+title: 用戶端通訊協定 - 共用記憶體屬性 (通訊協定索引標籤)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,16 +14,16 @@ ms.assetid: 941369bd-cd4d-4a64-8e42-724d9a866eb7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 436016fbcb703244a75ba9b77191f0c488bd4283
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 94d4a6995b605a88c4f64e41620d0cfc109247e3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010236"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306500"
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>用戶端通訊協定 - 共用記憶體屬性 (通訊協定索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  在「 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」中，使用 **[共用記憶體屬性]** 對話方塊的 **[通訊協定]** 索引標籤來檢視或修改共用記憶體。 如需有關連接字串的詳細資訊，請參閱＜ [使用共用記憶體通訊協定建立有效的連接字串](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)＞。  
+  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，使用 [共用記憶體屬性]  對話方塊的 [通訊協定]  索引標籤來檢視或修改共用記憶體。 如需有關連接字串的詳細資訊，請參閱＜ [使用共用記憶體通訊協定建立有效的連接字串](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)＞。  
   
 ## <a name="options"></a>選項。  
  **已啟用**  

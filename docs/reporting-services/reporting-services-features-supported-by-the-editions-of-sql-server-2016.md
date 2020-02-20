@@ -1,39 +1,39 @@
 ---
-title: SQL Server 版本所支援的 Reporting Services 功能
+title: 不同版本支援的功能 - SQL Server Reporting Services | Microsoft Docs
+description: 本文說明 SQL Server 不同版本所支援的 SQL Server Reporting Services (SSRS) 功能。 SQL Server Evaluation Edition 提供了 180 天的試用期。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/20/2019
-ms.openlocfilehash: 3e61381c2298a197be698ed82c247023ad708789
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.date: 12/16/2019
+ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893280"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76516599"
 ---
-# <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>SQL Server 版本所支援的 Reporting Services 功能
+# <a name="sql-server-reporting-services-features-supported-by-editions"></a>下列版本支援的 SQL Server Reporting Services 功能
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 本文說明 SQL Server 不同版本所支援的 SQL Server Reporting Services (SSRS) 功能。 SQL Server Evaluation Edition 提供了 180 天的試用期。  
+
+## <a name="related-links"></a>相關連結
   
- 如需最新的 SQL Server 版本資訊，請參閱 [SQL Server 2017 版本資訊](../sql-server/sql-server-2017-release-notes.md)。 如需新功能的最新資訊，請參閱 [Reporting Services (SSRS) 中的新功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。
+ - [SQL Server Reporting Services (SSRS) 的版本資訊](release-notes-reporting-services.md)。 
+ - [SQL Server Reporting Services (SSRS) 中的新功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。
+ - [SQL Server 版本支援的功能](~/sql-server/editions-and-components-of-sql-server-version-15.md)
 
- ## <a name="try-sql-server-2017"></a>試用 SQL Server 2017
-
-> [![下載 SQL Server 2017](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[從 Evaluation Center 下載 SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)**    
->
-> ![Azure 虛擬機器 (小型)](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[使用已安裝的 SQL Server 2017 加速虛擬機器](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+##  <a name="SSRS"></a> SQL Server Reporting Services  
 
 若要了解 Evaluation 和 Developer 版所支援的功能，請參閱下表 SQL Server Enterprise 版那一欄。
 
-##  <a name="SSRS"></a> SQL Server Reporting Services  
-  
-|功能名稱|Enterprise|Standard|Web|Express with Advanced Services|Developer|  
-|------------------|---------|------------------------------------|------------------------|-------------|---------------|  
+|功能名稱|Enterprise|標準|Web|Express with Advanced Services|開發人員|  
+|------|---------|---------------|-----------|-------|---------|  
+| Power BI 報表與 Excel 活頁簿 | 是，具有軟體保證 | | | | 是 |
 |行動報表和分析|是||||是|  
 |支援的目錄資料庫 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|Standard 或更高版本|Standard 或更高版本|Web|Express|Standard 或更高版本|  
 |支援的資料來源 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 所有版本|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 所有版本|Web|Express|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 所有版本|  
@@ -78,16 +78,17 @@ ms.locfileid: "68893280"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services 的這個版本，|使用資料庫引擎執行個體的這個版本來裝載資料庫。|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
 |Enterprise|Enterprise 或 Standard 版 (本機或遠端)|  
-|Standard|Enterprise 或 Standard 版 (本機或遠端)|  
+|標準|Enterprise 或 Standard 版 (本機或遠端)|  
 |Web|Web Edition (僅限本機)|  
 |Express with Advanced Services|Express with Advanced Services (僅限本機)|  
-|Evaluation|Evaluation|  
+|評估|評估|  
   
 ##  <a name="BIC"></a> 商業智慧用戶端  
 下列軟體用戶端應用程式可從 Microsoft 下載中心取得。 這些應用程式可協助您建立執行於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的商業智慧文件。 當您在伺服器環境中裝載這些文件時，請使用支援該文件類型的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 下表將識別哪些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本包含裝載在這些用戶端應用程式中建立之文件所需的伺服器功能。  
   
-|工具名稱|Enterprise|Standard|Web|Express with Advanced Services|Developer|  
-|---------------|----------------|--------------|------------------------|-------------|---------------|  
+|工具名稱|Enterprise|標準|Web|Express with Advanced Services|開發人員|  
+|---------------|----------------|--------------|------------------------|-------------|---------------| 
+| 針對 Power BI 報表伺服器最佳化的 Power BI Desktop， **.pbix** | 是，具有軟體保證 | | | | 是 |
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]、 **.rdl** 和 **.rds**|是|是|是|是|是|  
 |[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]、 **.rsmobile**|是||||是|  
 |Power BI 行動裝置應用程式 (iOS、Windows 10 和 Android)、 **.rsmobile**|是||||是|  

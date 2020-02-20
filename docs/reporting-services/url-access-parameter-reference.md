@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fba128636ce726396b499200b060592a63db5f65
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
-ms.translationtype: MTE75
+ms.openlocfilehash: 18b60a7359392a973a9486c9d4c8266e6997c9df
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542178"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76516519"
 ---
 # <a name="url-access-parameter-reference"></a>URL 存取參數參考
   您可以使用下列參數當做 URL 的一部分，以設定 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]報表的外觀及操作。 本章節中將列出最常用的參數。 參數會區分大小寫，而且如果是導向至報表伺服器，則以參數前置字元 *rs:* 開頭，如果是導向至 HTML 檢視器，則以 *rc:* 開頭。 您也可以指定裝置或轉譯延伸模組特定的參數。 如需裝置特定參數的詳細資訊，請參閱 [在 URL 中指定裝置資訊設定](../reporting-services/specify-device-information-settings-in-a-url.md)。  
@@ -43,7 +43,7 @@ ms.locfileid: "72542178"
     > [!IMPORTANT]  
     >  *rc:Toolbar*=**false** 不適用於不使用網域名稱，而使用 IP 位址指出 SharePoint 網站上所裝載之報表的 URL 存取字串。  
   
--   *Parameters* ：顯示或隱藏工具列的參數區。 如果將這個參數設定為 **true**，工具列的參數區就會顯示。 如果將這個參數設定為 **false**，參數區就不會顯示，且無法由使用者顯示。 如果將這個參數設定為 **Collapsed**的值，參數區就不會顯示，但可以由使用者切換顯示。 此參數的預設值為 **true**。  
+-   *Parameters*：顯示或隱藏工具列的參數區。 如果將這個參數設定為 **true**，工具列的參數區就會顯示。 如果將這個參數設定為 **false**，參數區就不會顯示，且無法由使用者顯示。 如果將這個參數設定為 **Collapsed**的值，參數區就不會顯示，但可以由使用者切換顯示。 此參數的預設值為 **true**。  
   
      例如在 **Native** 模式下：  
   
@@ -57,7 +57,7 @@ ms.locfileid: "72542178"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
--   *Zoom* ：將報表縮放值設定為整數百分比或一串常數。 標準字串值包括 **Page Width** 和 **Whole Page**。 Internet Explorer 5.0 之前的舊版 Internet Explorer 和所有非[!INCLUDE[msCoName](../includes/msconame-md.md)] 瀏覽器都會忽略這個參數。 此參數的預設值為 **100**。  
+-   *Zoom*：將報表縮放值設定為整數百分比或字串常數。 標準字串值包括 **Page Width** 和 **Whole Page**。 Internet Explorer 5.0 之前的舊版 Internet Explorer 和所有非[!INCLUDE[msCoName](../includes/msconame-md.md)] 瀏覽器都會忽略這個參數。 此參數的預設值為 **100**。  
   
      例如 **Native** 模式：  
   
@@ -71,7 +71,7 @@ ms.locfileid: "72542178"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page Width  
     ```  
   
--   *Section* ：設定要顯示報表中的哪一頁。 任何大於報表中頁數的值都會顯示最後一頁。 任何小於 **0** 的值都會顯示報表的第 1 頁。 此參數的預設值為 **1**。  
+-   *Section*：設定要顯示報表中的哪一頁。 任何大於報表中頁數的值都會顯示最後一頁。 任何小於 **0** 的值都會顯示報表的第 1 頁。 此參數的預設值為 **1**。  
   
      例如在 **Native** 模式下，顯示報表的第 2 頁：  
   
@@ -99,7 +99,7 @@ ms.locfileid: "72542178"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
     ```  
   
--   *StartFind* ：指定要搜尋的最後一部分。 此參數的預設值是報表的最後一頁。  
+-   *StartFind*：指定要搜尋的最後一部分。 此參數的預設值是報表的最後一頁。  
   
      例如在 **原生** 模式下，在 Product Catalog 範例報表中搜尋第一個出現的 "Mountain-400" 文字 (搜尋開始於頁面 1，終止於頁面 5)。  
   
@@ -107,22 +107,22 @@ ms.locfileid: "72542178"
     https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
     ```  
   
--   *EndFind* ：設定要在搜尋中使用的最後一頁的頁碼。 例如， **5** 的值指出要搜尋的最後一頁為報表的第 5 頁。 預設值為目前頁面的頁碼。 將此參數搭配 *StartFind* 參數使用。 請參閱上述範例。  
+-   *EndFind*：設定要在搜尋中使用的最後一頁的頁碼。 例如， **5** 的值指出要搜尋的最後一頁為報表的第 5 頁。 預設值為目前頁面的頁碼。 將此參數搭配 *StartFind* 參數使用。 請參閱上述範例。  
   
--   *FallbackPage* ：設定在搜尋或文件引導模式選取項目失敗時所顯示頁面的頁碼。 預設值為目前頁面的頁碼。  
+-   *FallbackPage*：設定在搜尋或文件引導模式選取項目失敗時所顯示頁面的頁碼。 預設值為目前頁面的頁碼。  
   
--   *GetImage* ：取得 HTML 檢視器使用者介面的特定圖示。  
+-   *GetImage*：取得 HTML 檢視器使用者介面的特定圖示。  
   
--   *Icon* ：取得特定轉譯延伸模組的圖示。  
+-   *Icon*：取得特定轉譯延伸模組的圖示。  
   
 -   *Stylesheet*：指定要套用至 HTML 檢視器的樣式表。  
   
--   裝置資訊設定：將裝置資訊設定指定為 `rc:tag=value`的形式，其中 *tag* 是指定給目前所使用轉譯延伸模組的裝置資訊設定名稱 (請參閱 *Format* 參數的說明)。 例如，您可以利用 IMAGE 轉譯延伸模組的 *OutputFormat* 裝置資訊設定，使用下列 URL 存取字串的參數將報表轉譯為 JPEG 影像： `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`。 如需所有延伸模組特定裝置資訊設定的詳細資訊，請參閱[轉譯延伸模組的裝置資訊設定 &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)。  
+-   裝置資訊設定：將裝置資訊設定指定為 `rc:tag=value` 的形式，其中 *tag* 是目前所使用轉譯延伸模組的特定裝置資訊設定名稱 (請參閱 *Format* 參數的描述)。 例如，您可以利用 IMAGE 轉譯延伸模組的 *OutputFormat* 裝置資訊設定，使用下列 URL 存取字串的參數將報表轉譯為 JPEG 影像： `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`。 如需所有延伸模組特定裝置資訊設定的詳細資訊，請參閱[轉譯延伸模組的裝置資訊設定 &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)。  
   
 ##  <a name="bkmk_reportserver"></a> 報表伺服器命令 (rs:)  
  報表伺服器命令前面會加上 *rs:* ，而且用來針對下列報表伺服器︰  
   
--   *Command*：  
+-   *命令*：  
                   目錄項目上所執行的動作，視其項目類型而定。 預設值取決於 URL 存取字串中所參考目錄項目的類型。 有效值為：  
   
     -   **ListChildren** 和 **GetChildren** ：顯示資料夾的內容。 資料夾項目會顯示在一般項目導覽頁中。  
@@ -212,9 +212,13 @@ ms.locfileid: "72542178"
   
     -   **IMAGE**  
   
-    -   **EXCEL**  
+    -   **EXCEL** (適用於 .xls)
+    
+    -   **EXCELOPENXML** (適用於 .xlsx)
   
-    -   **WORD**  
+    -   **WORD** (適用於 .doc)
+    
+    -   **WORDOPENXML** (適用於 .docx)
   
     -   **CSV**  
   
@@ -247,7 +251,7 @@ ms.locfileid: "72542178"
     https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
     ```  
   
--   *Snapshot* ：根據報表記錄快照集來轉譯報表。 如需詳細資訊，請參閱 [使用 URL 存取轉譯報表記錄快照集](../reporting-services/render-a-report-history-snapshot-using-url-access.md)。  
+-   *Snapshot*：根據報表記錄快照集來轉譯報表。 如需詳細資訊，請參閱 [使用 URL 存取轉譯報表記錄快照集](../reporting-services/render-a-report-history-snapshot-using-url-access.md)。  
   
      例如在 **原生** 模式下，擷取日期為 2003-04-07 且時間戳記為 13:40:02 的報表記錄快照集：  
   
@@ -278,7 +282,7 @@ ms.locfileid: "72542178"
 ##  <a name="bkmk_webpart"></a> 報表檢視器 Web 組件命令 (rv:)  
  下列 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 保留報表參數名稱，而這些名稱用於將報表檢視器 Web 組件作為目標，該組件與 SharePoint 整合。 這些參數名稱都使用 *rv:* 做為字首。 報表檢視器 Web 組件也接受 *rs:ParameterLanguage* 參數。  
   
--   *Toolbar*：控制報表檢視器 Web 組件的工具列顯示。 預設值是 **Full**秒。 其值可能是：  
+-   *Toolbar*：控制報表檢視器 Web 組件的工具列顯示。 預設值是 **Full**秒。 值可以是：  
   
     -   **Full**：顯示完整的工具列。  
   
@@ -292,7 +296,7 @@ ms.locfileid: "72542178"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
     ```  
   
--   *HeaderArea*：控制報表檢視器 Web 組件的標頭顯示。 預設值是 **Full**秒。 其值可能是：  
+-   *HeaderArea*：控制報表檢視器 Web 組件的標頭顯示。 預設值是 **Full**秒。 值可以是：  
   
     -   **Full**：顯示完整的標頭。  
   
@@ -310,7 +314,7 @@ ms.locfileid: "72542178"
   
 -   *AsyncRender*：控制是否要以非同步方式轉譯報表。 預設值為 **true**，此值指定以非同步方式轉譯報表。 此值必須為 **true** 或 **false**的布林值。  
   
--   *ParamMode*：控制報表檢視器網頁組件的參數提示區域在整頁模式中的顯示方式。 預設值是 **Full**秒。 有效值為：  
+-   *ParamMode*：控制報表檢視器 Web 組件的參數提示區域，在整頁檢視中的顯示方式。 預設值是 **Full**秒。 有效值為：  
   
     -   **Full**：顯示參數提示區域。  
   
@@ -324,7 +328,7 @@ ms.locfileid: "72542178"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
--   *DocMapMode*：控制報表檢視器網頁組件的文件引導模式區域在整頁模式中的顯示方式。 預設值是 **Full**秒。 有效值為：  
+-   *DocMapMode*：控制報表檢視器 Web 組件的文件引導模式區域，在整頁檢視中的顯示方式。 預設值是 **Full**秒。 有效值為：  
   
     -   **Full**：顯示文件引導模式區域。  
   
@@ -332,7 +336,7 @@ ms.locfileid: "72542178"
   
     -   **Hidden**：隱藏文件引導模式區域。  
   
--   *DockToolBar*：控制報表檢視器網頁組件工具列是否停駐在頂部或底部。 有效值為 **Top** 和 **Bottom**。 預設值是 **Top**秒。  
+-   *DockToolBar*：控制報表檢視器 Web 組件工具列是否停駐在頂部或底部。 有效值為 **Top** 和 **Bottom**。 預設值是 **Top**秒。  
   
      例如，在 **SharePoint** 模式中，將工具列停駐在底部。  
   
@@ -372,6 +376,6 @@ ms.locfileid: "72542178"
   
 ## <a name="see-also"></a>另請參閱  
  [URL 存取 &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)  
+ [使用 URL 存取匯出報表](../reporting-services/export-a-report-using-url-access.md)  
   
   

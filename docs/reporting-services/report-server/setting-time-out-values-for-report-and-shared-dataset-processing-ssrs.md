@@ -1,6 +1,7 @@
 ---
 title: 設定報表和共用資料集處理的逾時值 (SSRS) | Microsoft Docs
-ms.date: 05/30/2019
+description: 在 Reporting Services 中，您可以指定逾時值，以便設定系統資源的使用限制。
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f4d98747a2f00de41dd5661b76a05a9f22d341df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1bc1f2f27fa46f8262d3c0ca99549d23f2381ff0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506442"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259408"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>設定報表和共用資料集處理的逾時值 (SSRS)
-  您可以 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 指定逾時值，以便設定系統資源的使用限制。 報表伺服器支援兩種逾時值：  
+您可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中指定逾時值，以便設定系統資源的使用限制。 報表伺服器支援兩種逾時值：  
   
 - 內嵌資料集查詢逾時值是報表伺服器等候資料庫回應的秒數。 此值是在報表中定義的。  
   
@@ -33,7 +34,10 @@ ms.locfileid: "66506442"
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>設定報表中內嵌資料集的查詢逾時  
  當您定義內嵌資料集時，可在報表撰寫期間指定查詢逾時值。 逾時值會與報表一起儲存在報表定義的 **Timeout** 元素中。 依預設，此值設定為 30 秒。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
-  
+ 
+ > [!NOTE]  
+ > 針對 **Power BI 中的編頁報表**，預設值設為 **600 秒**。
+ 
  擁有權限修改已發行報表之屬性的使用者，可以編輯報表定義檔案，重設此值。  
   
  您也可以指定資料驅動訂閱的查詢逾時值。 查詢逾時值是在 [資料驅動訂閱] 頁面中指定的。 您指定的值會決定報表伺服器從訂閱者資料來源擷取資料時，等候查詢處理完成的時間長度。  

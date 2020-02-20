@@ -1,10 +1,9 @@
 ---
-title: 儲存圖表上所選的資料表 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 儲存圖表上所選的資料表
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +11,14 @@ helpviewer_keywords:
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c473a6af4ee2bcf10c482f223d442da0936c0a40
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 9a5e54642e5ee6250d8c01294f7f618288236cc3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256383"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255084"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>儲存圖表上所選的資料表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,5 +40,5 @@ ms.locfileid: "68256383"
     > 資料表清單可能包含選取項目以外的資料表。 例如，若要變更某個資料行的資料類型，而該資料行又與另一個資料表有關聯性，那麼這兩個資料表都會包含在此清單中。  
   
 ## <a name="see-also"></a>另請參閱  
-[使用資料庫圖表 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[使用資料庫圖表](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

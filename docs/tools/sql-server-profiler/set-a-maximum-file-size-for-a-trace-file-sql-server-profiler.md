@@ -1,26 +1,25 @@
 ---
-title: 設定追蹤檔案的檔案大小上限 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 設定追蹤檔案的大小上限
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- maximum file size for traces
-- size [SQL Server], trace files
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7eb97c28901f5f88c5e741d0d34b845bc40b93ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 74d0d90ed27da0cd66ccf4a14232731a9eeb8f7b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928737"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307916"
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>設定追蹤檔案的檔案大小上限 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用下列程序，可設定追蹤檔案的檔案大小上限。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "67928737"
      檔案換用選項開啟時，追蹤會一直繼續，直到被其他方法停止為止。 若要在您達到檔案大小限制後停止追蹤，請停用檔案換用選項。  
   
     > [!NOTE]  
-    >  FAT32 檔案系統的檔案限制為略小於 4 GB。 當追蹤檔案到達該大小時，追蹤即失敗，並產生「磁碟空間不足」錯誤。 若要建立更大的檔案，請使用 NTFS 檔案系統。  
+    >  FAT32 檔案系統的檔案限制為略小於 4 GB。 當追蹤檔案到達該大小上限時，追蹤即會失敗，並顯示「磁碟空間不足」錯誤。 若要建立更大的檔案，請使用 NTFS 檔案系統。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

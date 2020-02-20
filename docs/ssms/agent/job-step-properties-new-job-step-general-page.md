@@ -1,10 +1,7 @@
 ---
-title: 作業步驟屬性 - 新增作業步驟 (一般頁面) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: 新增作業步驟屬性 (一般頁面)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,21 +9,26 @@ f1_keywords:
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 173f317ba66a9b05bfa6d99bf28f60ecf518ae19
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7c8c707e8a1916041b32a2509e54d6150ea8df9a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267568"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242215"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>作業步驟屬性 - 新增作業步驟 (一般頁面)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-使用此頁面來檢視和變更 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式作業步驟的屬性，或定義新的作業步驟。  
+使用此頁面來檢視和變更 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟的屬性，或定義新的作業步驟。  
   
 若要導覽至此頁面，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管中，展開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，以滑鼠右鍵按一下 [作業]  ，按一下 [新增作業]  ，選取 [步驟]  頁面，然後按一下 [新增]  。 您也可用滑鼠右鍵按一下物件總管中的作業，按一下 [屬性]  、選取 [步驟]  頁面，然後按一下 [新增]  、[插入]  或 [編輯]  ，以導覽至此頁面。  
   
@@ -40,10 +42,10 @@ ms.locfileid: "68267568"
 **執行身分**  
 設定作業步驟的 Proxy 帳戶。 系統管理員 (sysadmin) 固定伺服器角色的成員也會指定 [SQL 代理程式服務帳戶]  。  
   
-**[資料庫備份]**  
+**Database**  
 設定作業步驟執行所在的資料庫。 並非所有作業步驟類型都可使用這個選項。  
   
-**Command**  
+**命令**  
 設定作業步驟執行的命令。  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Transact-SQL 作業步驟的選項  
@@ -138,7 +140,7 @@ ms.locfileid: "68267568"
 貼上剪貼簿的內容。  
   
 ## <a name="options-for-replication-queue-reader-job-steps"></a>複寫佇列讀取器作業步驟的選項  
-**[資料庫備份]**  
+**Database**  
 作業步驟將使用的資料庫。  
   
 **全選**  
@@ -190,7 +192,7 @@ ms.locfileid: "68267568"
 **Server**  
 選取作業步驟執行所在的伺服器。  
   
-**資料庫**  
+**Database**  
 作業步驟將使用的資料庫。  
   
 **開啟**  
@@ -231,7 +233,7 @@ ms.locfileid: "68267568"
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供驗證的目的在提供回溯相容性。 為了提升安全性，如果可能的話請使用 Windows 驗證。  
   
-**封裝**  
+**套件**  
 輸入封裝的位置。  
   
 > [!IMPORTANT]  
@@ -243,7 +245,7 @@ ms.locfileid: "68267568"
 **組態檔**  
 列出封裝的組態檔。  
   
-**[加入]**  
+**加入**  
 加入封裝的組態檔。  
   
 **移除**  
@@ -261,7 +263,7 @@ ms.locfileid: "68267568"
 **命令檔**  
 列出封裝的命令檔。  
   
-**[加入]**  
+**加入**  
 加入命令檔。  
   
 **移除**  

@@ -1,6 +1,6 @@
 ---
 title: Oracle 連線類型 (SSRS、Power BI 報表伺服器和報表產生器) |Microsoft Docs
-ms.date: 07/26/2019
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -8,31 +8,55 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2942ad1432b2674ab0b9906b5ab6e2f07be83ae7
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
-ms.translationtype: MTE75
+ms.openlocfilehash: f6918d240a6da7f961899d1a4cb71996bbec9ec6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632082"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259396"
 ---
 # <a name="oracle-connection-type-ssrs-power-bi-report-server-and-report-builder"></a>Oracle 連線類型 (SSRS、Power BI 報表伺服器和報表產生器)
 
-若要在報表中使用來自 Oracle 資料庫的資料，您必須具有以 Oracle 類型的報表資料來源為基礎的資料集。 此內建資料來源類型會直接使用 Oracle 資料提供者，並且需要 Oracle 用戶端軟體元件。 此文章說明如何下載和安裝 Reporting Services、Power BI 報表伺服器和報表產生器的驅動程式。
+若要在報表中使用來自 Oracle 資料庫的資料，您必須具有以 Oracle 類型的報表資料來源為基礎的資料集。 此內建資料來源類型會直接使用 Oracle 資料提供者，並且需要 Oracle 用戶端軟體元件。 本文說明如何下載及安裝 Reporting Services、Power BI 報表伺服器和報表產生器的驅動程式。
 
-## <a name="64-bit-drivers-for-the-report-servers"></a>適用于報表伺服器的64位驅動程式
+## <a name="64-bit-drivers-for-the-report-servers"></a>適用於報表伺服器的 64 位元驅動程式
 
-Power BI 報表伺服器和 SQL Server Reporting Services 2016 和2017全都使用受控 ODP.NET。 只有在使用最新的18x 驅動程式時, 才需要執行下列步驟。 它們會假設您已將檔案安裝至 c:\oracle64。
+Power BI 報表伺服器和 SQL Server Reporting Services 2016 和 2017 都使用受控 ODP.NET。 只有在使用最新的 18x 驅動程式時，才需要下列步驟。 這些步驟假設您已將檔案安裝至 c:\oracle64。
 
-1. 在 Oracle 下載網站上, 安裝 oracle [64 位 ODAC Oracle 通用安裝程式 (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html)。 
-2. 向 GAC 註冊 ODP.NET Managed 用戶端: C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: GAC/providerpath: C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
-3. 將 ODP.NET Managed 用戶端專案新增至 machine.config: C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: config/force/product: odpm/frameworkversion: v 4.0.30319/productversion: 4.122.18。3
+1. 在 Oracle 下載網站上，安裝 [Oracle 64-bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html)。 
+2. 向 GAC 註冊 ODP.NET 受控用戶端：C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+3. 將 ODP.NET 受控用戶端項目新增至 machine.config：C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /productversion:4.122.18.3
 
-## <a name="32-bit-drivers-for-report-builder"></a>適用于報表產生器的32位驅動程式
-只有在使用最新的18x 驅動程式時, 才需要執行下列步驟。 它們會假設您已將檔案安裝至 c:\oracle32。
+### <a name="power-bi-reports-use-unmanaged-odpnet"></a>Power BI 報表使用非受控 ODP.NET
 
-1. 在 Oracle 下載網站上, 安裝 oracle [32 位 ODAC Oracle 通用安裝程式 (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html)。
-2. 向 GAC 註冊 ODP.NET Managed 用戶端: C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: GAC/providerpath: C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
-3. 將 ODP.NET Managed 用戶端專案新增至 machine.config: C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: config/force/product: odpm/frameworkversion: v 4.0.30319/productversion: 4.122.18。3
+Power BI 報表使用**非受控 ODP.NET**。 遵循這些步驟來註冊非受控 ODP.NET：
+
+1. 向 GAC 註冊 ODP.NET 受控用戶端：
+
+   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+2. 將 ODP.NET 非受控用戶端項目新增至 machine.config：
+
+   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /productversion:4.122.18.3
+ 
+## <a name="32-bit-drivers-for-report-builder"></a>適用於報表產生器的 32 位元驅動程式
+
+只有在使用最新的 18x 驅動程式時，才需要下列步驟。 這些步驟假設您已將檔案安裝至 c:\oracle32。
+
+1. 在 Oracle 下載網站上，安裝 [Oracle 32-bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html)。
+2. 向 GAC 註冊 ODP.NET 受控用戶端：C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+3. 將 ODP.NET 受控用戶端項目新增至 machine.config：C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /productversion:4.122.18.3
+
+### <a name="power-bi-reports-use-unmanaged-odpnet"></a>Power BI 報表使用非受控 ODP.NET  
+
+Power BI 報表使用**非受控 ODP.NET**。 遵循這些步驟來註冊非受控 ODP.NET：
+
+1. 向 GAC 註冊 ODP.NET 受控用戶端：
+
+   C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+2. 將 ODP.NET 非受控用戶端項目新增至 machine.config：
+
+   C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /productversion:4.122.18.3
+ 
 
  您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱 [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
@@ -43,7 +67,7 @@ Power BI 報表伺服器和 SQL Server Reporting Services 2016 和2017全都使�
 Data Source="Oracle"; Unicode="True"  
 ```  
   
- 如需更多連接字串範例，請參閱 [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+ 如需詳細的連接字串範例，請參閱[建立資料連接字串 - 報表產生器與 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 ##  <a name="Credentials"></a> 認證  
  需要有認證才能夠執行報表、於本機預覽報表並且從報表伺服器預覽報表。  
@@ -67,7 +91,7 @@ Data Source="Oracle"; Unicode="True"
 ##  <a name="Remarks"></a> 備註  
  系統管理員必須先安裝支援從 Oracle 資料庫擷取資料的 .NET Data Provider for Oracle 版本，您才能夠連接 Oracle 資料來源。 此資料提供者必須與報表產生器安裝在同一部電腦上，並且同樣位於報表伺服器上。  
   
- 如需詳細資訊，請參閱下列內容：  
+ 如需詳細資訊，請參閱下列文章：  
   
 -   [如何使用 Reporting Services 設定及存取 Oracle 資料來源 (機器翻譯)](https://support.microsoft.com/kb/834305)  
 -   [如何新增 NETWORK SERVICE 安全性主體的權限 (機器翻譯)](https://support.microsoft.com/kb/870668)  

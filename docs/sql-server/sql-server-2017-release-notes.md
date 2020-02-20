@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68136475"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 版本資訊
@@ -99,7 +99,7 @@ ms.locfileid: "68136475"
 
     3. 視剩下的伺服器為何，移至下一個資料夾，亦即 *SSRS* 或 *PBIRS*。
     4. 移至 WMI 資料夾。
-    5. 執行下列命令：
+    5. 執行以下命令：
 
         ```console
         regsvr32 /i ReportingServicesWMIProvider.dll
@@ -131,7 +131,7 @@ ms.locfileid: "68136475"
 - **問題和對客戶的影響：** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文件有所限制，且內容會隨附於 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 文件集。  文中專門針對 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的內容會以「適用於」  標示。 
 - **問題和對客戶的影響：** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 未提供任何離線內容。
 
-### <a name="always-on-availability-groups"></a>AlwaysOn 可用性群組
+### <a name="always-on-availability-groups"></a>Always On 可用性群組
 
 - **問題和對客戶的影響：** 如果 SQL Server 主要版本低於裝載主要複本的執行個體，裝載可用性群組次要複本的 SQL Server 執行個體就會當機。 影響從所有裝載可用性群組的受支援版本 SQL Server 升級到 SQL server [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 2.0 的作業。 在下列狀況下會發生這個問題。 
 

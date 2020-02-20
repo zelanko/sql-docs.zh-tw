@@ -12,10 +12,10 @@ ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b26db3656ee548e08f9e5d4737033bb3393a969
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593876"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>啟用遠端錯誤 (Reporting Services)
@@ -58,7 +58,7 @@ ms.locfileid: "73593876"
   
 4.  按一下 **[在本機模式中啟用遠端錯誤]** 。  
   
-5.  按一下 **[確定]** 。  
+5.  按一下 [檔案] &gt; [新增] &gt; [專案]   
   
 ##  <a name="bkmk_mgtStudio"></a> 透過 SQL Server Management Studio 啟用遠端錯誤 (原生模式)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "73593876"
   
 3.  按一下 **[進階]** ，即可開啟屬性頁面。 如需詳細資訊，請參閱 [Server Properties &#40;Advanced Page&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md) (伺服器屬性 &#40;進階頁面&#41; - Reporting Services)。  
   
-4.  在 [**安全性**] 區段的 [ **EnableRemoteErrors**] 中，選取 [ **True**]。  
+4.  在 [安全性]  區段的 **EnableRemoteErrors** 中，選取 **True**。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

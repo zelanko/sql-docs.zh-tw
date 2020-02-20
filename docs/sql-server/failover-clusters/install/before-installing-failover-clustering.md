@@ -14,10 +14,10 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72517937"
 ---
 # <a name="before-installing-failover-clustering"></a>安裝容錯移轉叢集之前
@@ -39,7 +39,7 @@ ms.locfileid: "72517937"
   
 ##  <a name="BestPractices"></a> 最佳作法  
   
--   檢閱 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][版本資訊](https://go.microsoft.com/fwlink/?LinkId=296445)  
+-   檢閱 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [版本資訊](https://go.microsoft.com/fwlink/?LinkId=296445)  
   
 -   安裝必要元件軟體。 執行安裝程式來安裝或升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]之前，請先安裝下列必要元件以縮短安裝時間。 您可以在執行安裝程式之前，於每個容錯移轉叢集節點上安裝必要元件軟體，然後重新啟動節點一次。  
   
@@ -202,7 +202,7 @@ ms.locfileid: "72517937"
 ##  <a name="MultiSubnet"></a> 多重子網路組態的其他考量  
  安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集時，請將下列章節描述的需求謹記在心。 一個多重子網路設定涉及了多重子網路間的叢集，因此涉及使用多重 IP 位址，及改變 IP 位址資源的相依性。  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本與作業系統考量  
+### <a name="ssnoversion-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本與作業系統考量  
   
 -   如需支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的資訊，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
@@ -253,7 +253,7 @@ ms.locfileid: "72517937"
 > [!IMPORTANT]  
 >  如果已安裝至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本機叢集群組的 MSDTC 執行個體失敗， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 並不會自動嘗試使用預設叢集執行個體或本機電腦的 MSDTC 執行個體。 您需要從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群組完全移除失敗的 MSDTC 執行個體，才能使用其他的 MSDTC 執行個體。 同樣地，如果您建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的對應，而對應的 MSDTC 執行個體失敗，您的分散式交易也將失敗。 如果您希望 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用不同的 MSDTC 執行個體，就必須將 MSDTC 執行個體加入到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的本機叢集群組或刪除對應。  
   
-### <a name="configure-includemsconameincludesmsconame-mdmd-distributed-transaction-coordinator"></a>設定 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分散式交易協調器  
+### <a name="configure-msconame-distributed-transaction-coordinator"></a>設定 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分散式交易協調器  
  安裝作業系統並設定叢集之後，您必須使用「叢集管理員」來設定 MSDTC 以搭配叢集使用。 如果無法將 MSDTC 設定為搭配叢集使用，也不會封鎖 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式，但如果沒有正確設定 MSDTC，則 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 應用程式功能可能會受到影響。  
   
 ## <a name="see-also"></a>另請參閱  

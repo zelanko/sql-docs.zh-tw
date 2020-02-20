@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e0a18b05395cffaa4154e8f4a7d74ed04750e430
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5492b4ff50baa805989df3521b01856eb028328e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904306"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831620"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server 文件導覽指南 
 
@@ -37,7 +37,7 @@ ms.locfileid: "72904306"
 
 ![下載 PDF](media/sql-server-docs-navigation-guide/download-pdf.png)
 
-## <a name="toc-navigation-hints"></a>TOC 導覽提示
+## <a name="toc-symbols"></a>TOC 符號 
 
 目錄 (TOC) 中其結尾具有 `>` 的項目，表示會帶您前往具有不同目錄的技術文件。 
 
@@ -51,7 +51,7 @@ TOC 中具有 `>>` 的項目，表示會帶您離開 docs.microsoft.com。
 
 ![巡覽回 SQL TOC](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
-## <a name="toc-search-tip"></a>TOC 搜尋提示
+## <a name="toc-search"></a>TOC 搜尋 
 在 docs.microsoft.com 上，您可以使用頂端的篩選搜尋方塊來在目錄中搜尋內容： 
 
 ![使用篩選方塊](media/sql-server-docs-navigation-guide/sql-docs-toc-filter.gif)
@@ -63,14 +63,13 @@ SQL Server 技術文件提供數個 SQL Server 版本及變體的內容。 不�
 
 ![SQL 文件版本篩選](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-選取 [All SQL]  \(所有 SQL\) \>[Hide nothing]  \(不隱藏任何內容\) 可確保您能看見所有內容，且版本篩選沒有隱藏任何項目。 [不隱藏任何內容]  選項可能會顯示相同文章中許多不同版本 SQL Server 的相關內容，這可能會有衝突、不清楚或令人困惑。 [不建議例行性地使用 [不隱藏任何內容]  選項](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing)。 
+選取 [所有 SQL]  \> [不隱藏任何內容]  可確保您能看見所有內容，且版本篩選沒有隱藏任何項目。 [不隱藏任何內容]  選項可能會顯示相同文章中許多不同版本 SQL Server 的相關內容，這可能會有衝突、不清楚或令人困惑。 [不建議例行性地使用 [不隱藏任何內容]  選項](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing)。 
 
 ## <a name="breadcrumbs"></a>階層連結
 
 您可以在標頭的下方及目錄的上方找到階層連結，該階層連結會指出目前文章在目錄中的位置。  這不僅有助於將內容設為您正在閱讀的內容類型，還可以讓您巡覽回目錄樹狀結構：
 
 ![SQL 文件階層連結](media/sql-server-docs-navigation-guide/sql-docs-bread-crumbs.gif)
-
 
 ## <a name="article-section-navigation"></a>文章區段導覽
 
@@ -95,4 +94,4 @@ SQL Server 技術文件提供數個 SQL Server 版本及變體的內容。 不�
 
 - 開始使用 [SQL Server 技術文件](index.yml)。
 - 如需提交意見反應或取得 SQL Server 協助的詳細資訊，請參閱[取得協助](sql-server-get-help.md)頁面。 
-- 若要快速存取所有快速入門和教學課程，請前往 [SQL Server 教育中心](../lp/sql-server/sql-education-center.md)。
+- 若要快速存取所有快速入門和教學課程，請參閱[教育性 SQL 資源](../sql-server/educational-sql-resources.yml)。

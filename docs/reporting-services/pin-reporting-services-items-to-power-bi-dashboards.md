@@ -1,6 +1,6 @@
 ---
 title: 將編頁報表項目釘選到 Power BI 儀表板 - Reporting Services | Microsoft Docs
-ms.date: 12/05/2018
+ms.date: 01/14/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e91341c5c1d6b4f9ddd521a4735f22f63907784
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: da984efa4e0b4d964cf947929094ee7b392063f2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891996"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75952474"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>將 Reporting Services 編頁報表項目釘選到 Power BI 中的儀表板
 
@@ -40,7 +40,7 @@ ms.locfileid: "68891996"
   
 -   如果您想要重新整理釘選的項目，您需要設定報表使用預存認證。  當您固定項目，就會自動建立 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂閱來管理儀表板的項目資料重新整理。  如果報表不使用預存認證，則當訂閱執行時，您會在 [我的訂閱]  頁面看到類似下面的訊息。  
   
-    「Power BI 傳遞錯誤: 儀表板: IT 花費分析範例，視覺效果: Chart2，錯誤: 無法完成目前的動作。 使用者資料來源認證不符合需求，無法執行這份報表或執行共用資料集。 任一使用者資料來源認證。」
+    「Power BI 傳遞錯誤：儀表板：IT 支出分析範例，視覺效果：Chart2，錯誤：無法完成目前的動作。 使用者資料來源認證不符合需求，無法執行這份報表或執行共用資料集。 任一使用者資料來源認證。」
  
     請參閱 [在 Reporting Services 資料來源中儲存認證](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)中的＜為報表特定的資料來源設定預存認證 (原生模式)＞一節  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68891996"
   
 4. 選取您要釘選到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]的報表項目。 一次只能固定一個項目。  報表檢視器會以陰影檢視顯示報表，醒目提示您可以釘選的報表項目，並以深色陰影顯示無法釘選的項目。  
   
-    **(1)** 選取包含您要釘選之目的地儀表板的群組， **(2)** 選取您也要釘選項目的儀表板，以及 **(3)** 選取您要在儀表板中更新磚的頻率。   ![注意](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")：重新整理由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂用帳戶管理，而釘選項目之後，您可以編輯訂用帳戶和設定不同的重新整理排程。  
+    **(1)** 選取包含您要釘選之目的地儀表板的群組， **(2)** 選取您也要釘選項目的儀表板，以及 **(3)** 選取您要在儀表板中更新磚的頻率。   ![注意](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意") 重新整理由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂用帳戶管理，而釘選項目之後，您可以編輯訂用帳戶及設定不同的重新整理排程。  
   
     ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png)  
   
@@ -96,40 +96,42 @@ ms.locfileid: "68891996"
   
 ##  <a name="bkmk-troubleshoot"></a> 疑難排解問題  
   
--   **報表檢視器工具列上沒有 [[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]] 按鈕︰** 此訊息表示報表伺服器尚未與 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 整合。 如需詳細資訊，請參閱 [Power BI 報表伺服器整合 &#40;組態管理員&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)。  
+-   **報表檢視器工具列上沒有 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 按鈕：** 此訊息表示報表伺服器尚未與 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 整合。 如需詳細資訊，請參閱 [Power BI 報表伺服器整合 &#40;組態管理員&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)。  
   
-- **無法釘選**︰當您嘗試釘選項目時，會看到下列錯誤訊息︰請參閱 [您可以釘選的項目](#bkmk_supported_items)一節。  
+- **無法釘選**：當您嘗試釘選項目時，會看到下列錯誤訊息：請參閱[您可以釘選的項目](#bkmk_supported_items)一節。  
   
-      Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
+    「無法釘選：這個頁面上沒有任何報表項目可以固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]。」  
   
 -   **儀表板中** 的項目顯示過時資料 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ，但它確實已更新了一段時間。  使用者認證 Token 已過期，您需要再次登入。  向 Azure 註冊的使用者認證， [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 的有效期為 90 天。 在[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中，按一下 [我的設定]  。 如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](my-settings-for-power-bi-integration-web-portal.md)。  
   
 -   **儀表板中** 固定的項目顯示過時資料 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ，它根本沒有重新整理過。  問題在於報表未設定使用預存認證。 報表必須使用預存認證，因為釘選報表項目的動作會建立 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂閱來管理磚的重新整理排程。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂閱需要預存的認證。 如果您檢閱 [我的訂閱]  頁面，會看到類似下面的錯誤訊息：  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
+    「Power BI 傳遞錯誤：儀表板：SSRS 專案，視覺效果：Image3，錯誤：無法完成目前的動作。 使用者資料來源認證不符合需求，無法執行這份報表或執行共用資料集。 使用者資料來源認證未儲存在報表伺服器資料庫中，或使用者資料來源設定為不需要認證，但未指定自動的執行帳戶。 (rsInvalidDataSourceCredentialSetting)」
   
--   **過期的 Power BI 認證︰**  您嘗試固定項目，但看到下列錯誤訊息。 在[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中，按一下 [我的設定]  ，然後按一下 [我的設定] 頁面上的 [登入]  。 如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](my-settings-for-power-bi-integration-web-portal.md)。  
+-   **過期的 Power BI 認證：** 您嘗試釘選項目，但看到下列錯誤訊息。 在[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中，按一下 [我的設定]  ，然後按一下 [我的設定] 頁面上的 [登入]  。 如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](my-settings-for-power-bi-integration-web-portal.md)。  
   
-        Cannot Pin: Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
+    「無法釘選：未預期的伺服器錯誤：Power BI 認證遺失、無效或已過期。」  
   
--   **無法釘選**︰如果您嘗試將項目釘選到唯讀狀態的儀表板，您會看到類似這個的錯誤訊息：  
+-   **無法釘選**：如果您嘗試將項目釘選到唯讀狀態的儀表板，您會看到類似下面的錯誤訊息：  
   
-        Server Error: The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' can't be found. (rsItemNotFound)  
-  
+    「伺服器錯誤：找不到『儀表板已刪除 015cf022-8e2f-462e-88e5-75ab0a04c4d0』項目。 (rsItemNotFound)」  
+
+-   **Power BI 應用程式中的磚會顯示過時資料：** 如果您將 Reporting Services 報表項目釘選到儀表板，然後在應用程式中散發該儀表板，則該儀表板中的釘選報表項目將不會更新。 
+
 ##  <a name="bkmk_subscription_management"></a> 訂閱管理  
  除了＜疑難排解＞一節描述的訂閱相關問題，下列資訊也會協助您維護 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 的相關訂閱。
   
--   **項目名稱變更︰** 如果重新命名或刪除固定的報表項目，則 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 圖格就不再更新，而您會看到類似下面的錯誤訊息。  如果您將項目重新命名回原來的名稱，訂閱就會再次開始工作，而圖格會按照訂閱排程重新整理。  
+-   **項目名稱變更：** 如果重新命名或刪除釘選的報表項目，則 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 磚就不再更新，而您會看到類似下面的錯誤訊息。  如果您將項目重新命名回原來的名稱，訂閱就會再次開始工作，而圖格會按照訂閱排程重新整理。  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image1, error: Error: Report item 'Image1' cannot be found.  
+    「Power BI 傳遞錯誤：儀表板：SSRS 專案，視覺效果：Image1，錯誤：錯誤：找不到 "Image1" 報表項目。」  
   
-     您也可以編輯訂閱內容，並將 [報表視覺效果名稱]  變更為適當的報表項目名稱。 ![變更用於 Power BI 重新整理的視覺效果](../reporting-services/media/ssrs-powerbi-subscription-visual.png "變更用於 Power BI 重新整理的視覺效果")  
+    您也可以編輯訂閱內容，並將 [報表視覺效果名稱]  變更為適當的報表項目名稱。 ![變更用於 Power BI 重新整理的視覺效果](../reporting-services/media/ssrs-powerbi-subscription-visual.png "變更用於 Power BI 重新整理的視覺效果")  
   
--   **刪除圖格**。 如果您在 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]中刪除圖格，就不會在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中刪除相關聯的訂閱，而在 [我的訂閱]  頁面上會看到類似下面的錯誤。 您可以刪除訂閱。  
+-   **刪除圖格**。 如果您在 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 中刪除磚，就不會在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中刪除相關聯的訂閱，而在 [我的訂閱]  頁面上會看到類似下面的錯誤。 您可以刪除訂閱。  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The item 'Tile deleted af7131d9-5eaf-480f-ba45-943a07d19c9f' cannot be found.  
+    「Power BI 傳遞錯誤：儀表板：SSRS 專案，視覺效果：Image3，錯誤：找不到『磚已刪除 af7131d9-5eaf-480f-ba45-943a07d19c9f』項目。」  
 
-## <a name="video"></a>視訊
+## <a name="video"></a>影片
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
 

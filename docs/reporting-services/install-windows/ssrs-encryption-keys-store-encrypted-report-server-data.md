@@ -15,10 +15,10 @@ ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ca402d8170c9954f8a85e3b439e14d1d3644d9bb
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593473"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS 加密金鑰 - 儲存加密的報表伺服器資料
@@ -52,7 +52,7 @@ ms.locfileid: "73593473"
   
  在報表伺服器向外延展部署中，如果多個報表伺服器執行個體共用相同的報表伺服器資料庫，則所有報表伺服器節點都使用單一對稱金鑰。 每個節點都必須有共用對稱金鑰的副本。 設定向外延展部署時，會自動為每個節點建立對稱金鑰的副本。 每個節點都會利用 Windows 服務帳戶之特定金鑰組的公開金鑰來加密其對稱金鑰副本。 若要深入了解如何為單一執行個體和向外延展部署建立對稱金鑰，請參閱[初始化報表伺服器 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
  
- 此外，從2019開始，您可以使用 SQL Server 中的透明資料加密來設定報表伺服器資料庫，以提供待用資料的額外保護。
+ 此外，自 2019 年起，您可以使用 SQL Server 中的透明資料加密來設定報表伺服器資料庫，以為待用資料提供額外的保護。
   
 > [!NOTE]  
 >  當您變更報表伺服器 Windows 服務帳戶時，非對稱金鑰可能會變成無效，因而中斷伺服器作業。 若要避免此問題，請永遠利用 Reporting Services 組態工具來修改服務帳戶設定。 當您使用組態工具時，系統會自動為您更新金鑰。 如需詳細資訊，請參閱《 [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  

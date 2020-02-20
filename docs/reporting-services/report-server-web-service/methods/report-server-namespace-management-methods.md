@@ -14,10 +14,10 @@ ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7639cd7ce7cd33f59fbc65116264a8b887879b77
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72278291"
 ---
 # <a name="report-server-namespace-management-methods"></a>報表伺服器命名空間管理方法
@@ -28,7 +28,7 @@ ms.locfileid: "72278291"
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|取消執行作業。|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|將資料夾加入至報表伺服器資料庫或 SharePoint 文件庫。|  
 |<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|將新項目加入至報表伺服器資料庫或 SharePoint 文件庫。 這個方法適用於**報表**、**模型**、**資料集**、**元件**、**資源**和**資料來源**項目類型。|  
-|M:ReportService2010.ReportingService2010.CreateReportEditSession （System.string，system.object，System.string []，ReportService2010. Warning [] @）|建立新的報表編輯工作階段。|  
+|M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String, System.String,System.Byte[],ReportService2010.Warning[]@)|建立新的報表編輯工作階段。|  
 |<xref:ReportService2010.ReportingService2010.DeleteItem%2A>|從報表伺服器資料庫或 SharePoint 文件庫移除項目。|  
 |<xref:ReportService2010.ReportingService2010.FindItems%2A>|傳回報表伺服器資料庫或 SharePoint 文件庫中符合指定搜尋準則的項目。|  
 |<xref:ReportService2010.ReportingService2010.FireEvent%2A>|根據提供的參數觸發事件。|  

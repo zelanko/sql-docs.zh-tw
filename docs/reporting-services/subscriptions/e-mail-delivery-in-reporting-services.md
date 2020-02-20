@@ -13,10 +13,10 @@ ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72305042"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的電子郵件傳遞
@@ -32,7 +32,7 @@ ms.locfileid: "72305042"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式|  
   
 ## <a name="e-mail-delivery-options"></a>電子郵件傳遞選項  
  報表伺服器電子郵件傳遞可以利用下列方式傳遞報表  
@@ -58,7 +58,7 @@ ms.locfileid: "72305042"
 ## <a name="native-mode-role-based-e-mail-settings"></a>原生模式角色型電子郵件設定  
  在原生模式報表伺服器環境中，您所使用的電子郵件傳遞設定會依您的角色包含的是「管理個別訂閱」工作或「管理所有訂閱」工作而異。  
   
-|工作|可用的設定|  
+|Task|可用的設定|  
 |----------|------------------------|  
 |管理個別訂閱|顯示讓使用者可自動化並傳遞報表給自己的欄位。 在此模式下，接受電子郵件別名的欄位無法使用。|  
 |管理所有訂閱|顯示支援全域散發的欄位，包括 [收件者:]、[副本:]、[密件副本:] 和 [回覆至:] 欄位，提供更多方式傳送報表給更多訂閱者。 電子郵件別名欄位的可用性是透過 RSReportServer 組態檔設定定義。|  
@@ -81,7 +81,7 @@ ms.locfileid: "72305042"
  對於原生模式報表伺服器，您可以透過原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員並藉由編輯 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態檔，設定電子郵件傳遞延伸模組。 對於 SharePoint 模式報表伺服器，您可在 SharePoint 管理頁面和 PowerShell 指令碼中設定電子郵件傳遞延伸模組。  
   
  
- 如需如何設定原生模式報表伺服器的資訊，請參閱 [電子郵件設定 - Reporting Services 原生模式 (組態管理員)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
+ 如需如何設定原生模式報表伺服器的資訊，請參閱[電子郵件設定 - Reporting Services 原生模式 (設定管理員)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
  
  
  如需如何設定 SharePoint 模式報表伺服器的詳細資訊，請參閱下列內容：  
@@ -90,7 +90,7 @@ ms.locfileid: "72305042"
 ## <a name="see-also"></a>另請參閱  
  [工作和權限](../../reporting-services/security/tasks-and-permissions.md)   
  [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [資料驅動訂閱](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [角色指派](../../reporting-services/security/role-assignments.md)  
   
   

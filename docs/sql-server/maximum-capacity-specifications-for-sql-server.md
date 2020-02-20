@@ -21,10 +21,10 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0fae5c47de0b8017d3f374afe18e926eea9818cc
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72008444"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量規格
@@ -43,7 +43,7 @@ ms.locfileid: "72008444"
 ##  <a name="Engine"></a> [!INCLUDE[ssDE](../includes/ssde-md.md)] 物件  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中已定義或 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中所參考之各種物件的大小和數目上限。  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 物件 (object)||大小/數目上限 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 位元)|其他資訊|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 物件||大小/數目上限 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 位元)|其他資訊|  
 |---------------------------------------------------------|-|------------------------------------------------------------------|----------------------------|  
 |批次大小||65,536 * 網路封包大小|網路封包大小是表格式資料流 (TDS) 封包的大小，這些封包用於應用程式與關聯式 [!INCLUDE[ssDE](../includes/ssde-md.md)]之間的通訊。 預設封包大小是 4 KB，由 network packet size 組態選項所控制。|  
 |每個短字串資料行的位元組數||8,000||  

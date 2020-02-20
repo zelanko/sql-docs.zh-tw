@@ -1,5 +1,5 @@
 ---
-title: 教學課程： 將參數加入至報表 （報表產生器） |Microsoft 文件
+title: 教學課程：將參數新增至報表 (報表產生器) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72252134"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教學課程：將參數加入至報表 (報表產生器)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教學課程：將參數新增至報表 (報表產生器)
 在本教學課程中，您可以將參數新增至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表，讓報表讀者可以篩選報表資料中的一或多個值。 
   
 ![report-builder-parameter-tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
@@ -25,7 +25,7 @@ ms.locfileid: "72252134"
 > [!NOTE]  
 > 在本教學課程中，精靈的步驟會合併為一個程序。 如需如何瀏覽至報表伺服器、選擇資料來源以及建立資料集的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
-完成本教學課程的估計時間：25 分鐘。  
+完成此教學課程的估計時間：25 分鐘。  
   
 ## <a name="requirements"></a>需求  
 如需需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
@@ -82,7 +82,7 @@ ms.locfileid: "72252134"
   
 11. 在查詢設計工具工具列上，按一下 [執行]  \( **!** ) 查看資料。   
   
-    結果集包含 11 個資料列，這些資料列會顯示四間商店中每個子類別目錄所銷售的項目數量，並包含下列資料行：StoreID、Subcategory、Quantity。商店名稱並不屬於結果集的內容。 稍後在本教學課程中，您會利用個別資料集查詢對應於商店識別碼的商店名稱。  
+    結果集包含 11 個資料列，在下列資料行中顯示四家店每個子類別的銷售項目數量：StoreID、Subcategory、Quantity。結果集中沒有商店名稱。 稍後在本教學課程中，您會利用個別資料集查詢對應於商店識別碼的商店名稱。  
   
     此查詢並不包含查詢參數。 您稍後將在本教學課程中加入參數。   
   
@@ -109,7 +109,7 @@ ms.locfileid: "72252134"
   
 6.  按 [下一步]  。  
   
-8.  按一下 **[完成]** 。  
+8.  按一下 [完成]  。  
   
     矩陣會加入至設計介面。 此矩陣會顯示 3 個資料行和 3 個資料列。 第一個資料列的資料格內容為 Subcategory、StoreID 和 Total。 第二個資料列的資料格內容包含多個運算式，分別表示子類別、每家商店所售出的項目數量以及所有商店之每個子類別的數量總計。 最後一個資料列的資料格顯示每家商店的銷售總額。  
       
@@ -308,7 +308,7 @@ ms.locfileid: "72252134"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    商店資料行標頭包含複雜運算式的顯示文字： **Expr**。  
+    商店的資料行標題包含複雜運算式的顯示文字：**Expr**。  
   
 8.  預覽報表。  
   
@@ -379,7 +379,7 @@ ms.locfileid: "72252134"
   
 5.  在 [報表資料] 窗格中，展開 [資料集]  資料夾，並以滑鼠右鍵按一下 **DataSet1**，然後按一下 [查詢]  。  
   
-6.  在查詢最後一行的 [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** 子句中，將**等號** (=) 變更為 **IN**：  
+6.  在查詢最後一行的 [!INCLUDE[tsql](../includes/tsql-md.md)]**WHERE** 子句中，將**等號** (=) 變更為 **IN**：  
   
     ```  
     WHERE StoreID IN (@StoreID)  
@@ -492,11 +492,11 @@ ms.locfileid: "72252134"
   
 4.  在 **[名稱]** 中，將預設名稱取代為「參數化產品銷售」。  
   
-5.  按一下 **[儲存]** 。  
+5.  按一下 [檔案]  。  
   
 報表就會儲存至報表伺服器。 您所連接的報表伺服器會顯示在視窗底部的狀態列中。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
 以上總結如何將參數加入至報表的逐步解說。 若要深入了解參數，請參閱[報表參數 &#40;報表產生器和報表設計師&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
 ## <a name="see-also"></a>另請參閱  

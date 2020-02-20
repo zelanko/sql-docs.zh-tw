@@ -14,10 +14,10 @@ ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6bd60789112a8aa28481b3bb615f1df2a957125a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68067569"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server 版本的計算容量限制
@@ -28,7 +28,7 @@ ms.locfileid: "68067569"
   
  下表說明上圖中的標記法：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |0..1|零個或一個|  
 |1|只有一個|  
@@ -80,8 +80,8 @@ ms.locfileid: "68067569"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|單一執行個體的計算容量上限 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|單一執行個體的計算容量上限 (AS、RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition：核心授權\*|作業系統最大值|作業系統最大值|  
-|Developer|作業系統最大值|作業系統最大值|  
-|Standard|限制為 4 個插槽或 24 個核心的較小者|限制為 4 個插槽或 24 個核心的較小者|  
+|開發人員|作業系統最大值|作業系統最大值|  
+|標準|限制為 4 個插槽或 24 個核心的較小者|限制為 4 個插槽或 24 個核心的較小者|  
 |Express|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
 
 \*伺服器與用戶端存取使用權 (CAL) 的 Enterprise Edition 授權限制為每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體 20 個核心。 (新協議未提供此授權。)核心伺服器授權模式之下沒有任何限制。  

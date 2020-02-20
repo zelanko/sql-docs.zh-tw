@@ -1,34 +1,28 @@
 ---
-title: 儲存追蹤和追蹤範本 |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 儲存追蹤及追蹤範本
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- saving traces
-- traces [SQL Server], saving
-- templates [SQL Server], SQL Server Profiler
-- Profiler [SQL Server Profiler], templates
-- trace templates [SQL Server]
-- exporting trace templates
-- importing trace templates
-- SQL Server Profiler, templates
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d3c8a9ddcaa11f4bcfae6e5abd4c000f1ffbdba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 9d3437ca51d12de09c7f0ae386b2e1c09ad50eab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928748"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307419"
 ---
 # <a name="save-traces-and-trace-templates"></a>儲存追蹤及追蹤範本
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  區分儲存追蹤檔案與儲存追蹤範本是很重要的。 儲存追蹤檔案牽涉到將擷取的事件資料儲存到指定的位置上。 儲存追蹤範本則牽涉到儲存追蹤的定義，例如指定的資料行、事件類別或篩選等。  
+
+區分儲存追蹤檔案與儲存追蹤範本是很重要的。 儲存追蹤檔案牽涉到將擷取的事件資料儲存到指定的位置上。 儲存追蹤範本則牽涉到儲存追蹤的定義，例如指定的資料行、事件類別或篩選等。  
   
 ## <a name="saving-traces"></a>儲存追蹤  
  若您必須於稍後分析或重新執行擷取的資料，請將擷取的事件資料儲存到檔案或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。 使用追蹤檔案可執行下列作業：  
@@ -51,7 +45,7 @@ ms.locfileid: "67928748"
  追蹤的範本定義包含事件類別、資料行、篩選和用於建立追蹤的所有其他屬性 (擷取的事件資料除外)。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 針對一般追蹤工作和特定工作，例如建立可供 Database Engine Tuning Advisor 用來微調實體資料庫設計的工作負載，提供了預先定義的系統範本。 您也可以建立與儲存使用者自訂的範本。  
   
 ### <a name="importing-and-exporting-templates"></a>匯入和匯出範本  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可讓您在不同的伺服器之間匯入和匯出範本。 匯出範本時，會將現有範本的副本移至您所指定的目錄中。 匯入範本時，則會複製您所指定的範本。 在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中檢視這些範本時，您可以藉由範本名稱後的 "(user)" 這個詞彙來與系統範本作區別。 您無法覆寫或直接修改預先定義的系統範本。  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可讓您在不同的伺服器之間匯入和匯出範本。 匯出範本時，會將現有範本的副本移至您所指定的目錄中。 匯入範本時，則會複製您所指定的範本。 在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中檢視這些範本時，您可以藉由範本名稱後的 "(user)" 這個詞彙來與系統範本作區別。 您無法覆寫或直接修改預先定義的系統範本。  
   
 ### <a name="analyzing-performance-with-templates"></a>以範本分析效能  
  若您經常監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請使用範本來分析效能。 範本每次都會擷取相同的事件資料，並使用相同的追蹤定義來監視相同的事件。 您不需在每次建立追蹤時都定義事件類別與資料行。 此外，範本可以提供給另一位使用者，用來監視特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 例如，支援提供者可以為使用者提供範本。 客戶可使用範本來擷取所需的事件資料，再將事件資料傳送給支援提供者以進行分析。  
@@ -68,6 +62,6 @@ ms.locfileid: "67928748"
  [從執行中的追蹤衍生範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [從追蹤檔案或追蹤資料表衍生範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [匯出追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
- [匯出追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
+ [匯入追蹤範本 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
   

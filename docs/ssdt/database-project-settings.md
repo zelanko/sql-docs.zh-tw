@@ -1,11 +1,7 @@
 ---
-title: 資料庫專案設定 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 資料庫專案設定
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.DebugProperties
@@ -40,14 +36,19 @@ f1_keywords:
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4921df6e1602d4cfc98aa6da3733452d6b5d33d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 3a57f52df4dced4f110135cce1ff30346cc1ebb0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912848"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241677"
 ---
 # <a name="database-project-settings"></a>資料庫專案設定
+
 您可以使用資料庫專案設定，控制資料庫、偵錯與組建組態的各個部分。 這些設定可分類如下：  
   
 -   [專案設定](#bkmk_proj_settings)  
@@ -83,7 +84,7 @@ ms.locfileid: "67912848"
 ## <a name="bkmk_proj_settings"></a>專案設定  
 下列表格中的設定會套用至這個資料庫專案的所有組態。  
   
-|欄位|預設值|Description|  
+|欄位|預設值|描述|  
 |---------|-----------------|---------------|  
 |目標平台|Microsoft SQL Server 2012|指定這個資料庫專案所設定的目標 SQL Server 版本。|  
 |為一般物件啟用擴充的 Transact\-SQL 驗證。|當您建立新專案時，不會啟用。<br /><br />當您從 [SQL Server 物件總管] 連接至 SQL Azure 以建立專案、將 SQL Azure 資料庫匯入專案或將專案的目標平台變更為 SQL Azure 時，則會啟用。|一旦啟用此選項，將報告在專案中所發現造成 SQL Server 編譯器驗證失敗的錯誤。 如果您將目標平台變更為 SQL Azure，擴充驗證就會變成啟用狀態。 儘管您變更目標平台，也不會取消勾選此選項。<br /><br />您可以對其他版本的 SQL Server 啟用此選項，但是驗證只限於 Microsoft SQL Server 2012 部分自主資料庫和 SQL Azure。 並非所有 SQL Server 版本都支援全部的 Transact\-SQL 語法。<br /><br />如需詳細資訊，請參閱本主題稍後的[擴充的 Transact-SQL 驗證](#bkmk_evf)|  
@@ -177,7 +178,7 @@ Compiler Service 具有兩種限制分類。
   
 1.  在 [ **方案總管**] 中，按一下要為其指定建置組態的方案節點。  
   
-2.  按一下 [ **建置** ] 功能表上的 [ **組態管理員**]。 [ **組態管理員** ] 對話方塊隨即出現。  
+2.  從 [建置]  功能表中，按一下 [組態管理員]  。 [組態管理員]  對話方塊隨即出現。  
   
     指定您要用於方案中每個專案的組態設定。  
   
@@ -189,12 +190,12 @@ Compiler Service 具有兩種限制分類。
   
 下列表格中的設定會套用至這個資料庫專案的建置組態。  
   
-|欄位|預設值|Description|  
+|欄位|預設值|描述|  
 |---------|-----------------|---------------|  
 |建置輸出路徑|bin\Debug\|指定當您建置或部署資料庫專案時，產生建置輸出的位置。 如果指定相對路徑，您必須指定該路徑會相對於資料庫專案路徑。 如果路徑不存在，則會建立路徑。|  
 |建置輸出檔名稱|*DatabaseProjectName*|指定當您建置資料庫專案時，要賦予所產生之輸出的名稱。|  
 |將 Transact\-SQL 警告視為錯誤|否|指定出現 Transact\-SQL 警告時是否應取消建置和部署處理程序。 如果已清除此核取方塊，則會出現警告，但是建置和部署程序會繼續進行。 此設定為專案而不是使用者特有的，並儲存在 .sqlproj 檔案中。|  
-|隱藏 Transact\-SQL 警告|空白|指定以逗號或分號分隔的警告編號清單，以識別隱藏的警告。<br /><br />即使選取了 [將 Transact\-SQL 警告當成錯誤]  核取方塊，已隱藏的警告也不會出現在 [錯誤清單]  視窗中，而且不會影響建置順利完成。|  
+|隱藏 Transact\-SQL 警告|Blank|指定以逗號或分號分隔的警告編號清單，以識別隱藏的警告。<br /><br />即使選取了 [將 Transact\-SQL 警告當成錯誤]  核取方塊，已隱藏的警告也不會出現在 [錯誤清單]  視窗中，而且不會影響建置順利完成。|  
   
 ## <a name="bkmk_sqlcmd_variables"></a>SQLCMD 變數  
 在 SQL Server 資料庫專案中，您可以利用 SQLCMD 變數，提供用於偵錯或發行的動態置換功能。 透過輸入變數名稱和值，這些值將在建置期間遭置換。 若是沒有區域數值，則會使用預設值。 在專案屬性中輸入各個變數後，發行時便會自動提供這些變數，且變數將儲存於發行設定檔。 您可以透過 [載入值] 按鈕，提取專案的變數值將其納入發行。  
@@ -206,7 +207,7 @@ Compiler Service 具有兩種限制分類。
 ## <a name="bkmk_build_events"></a>建置事件  
 您可以使用這些設定指定命令列在建置作業開始前執行，同時指定另一個命令列在建置作業完成後執行。  
   
-|欄位|預設值|Description|  
+|欄位|預設值|描述|  
 |---------|-----------------|---------------|  
 |建置前事件命令列|None|指定建置專案前執行的命令列。 按一下 [建置前進行編輯]  可修改命令列。|  
 |建置後事件命令列|None|指定建置專案後執行的命令列。 按一下 [建置後進行編輯]  可修改命令列。|  
@@ -215,7 +216,7 @@ Compiler Service 具有兩種限制分類。
 ## <a name="bkmk_debug"></a>偵錯  
 您可以使用下列設定來控制資料庫專案的偵錯。  
   
-|欄位|預設值|Description|  
+|欄位|預設值|描述|  
 |---------|-----------------|---------------|  
 |啟動執行|None|指定對專案進行偵錯時要執行的指令碼或外部程式。|  
 |目標連接字串|Data Source=(localdb)\\*SolutionName*;Initial Catalog=*DatabaseProjectName*;Integrated Security=True;Pooling=False;Connect Timeout=30|指定連接資訊，以連接所指定建置組態的目標資料庫伺服器。 預設連接字串的對象為動態建立的 SQL Server LocalDB 執行個體和資料庫。|  

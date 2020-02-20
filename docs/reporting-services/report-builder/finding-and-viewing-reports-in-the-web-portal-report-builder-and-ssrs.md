@@ -9,10 +9,10 @@ ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2f98607ce8544a913ace04bbc70aa578d1090557
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71923791"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>在入口網站中尋找和檢視報表 (報表產生器及 SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "71923791"
 ## <a name="navigating-the-folder-hierarchy-in-report-manager"></a>在報表管理員中導覽資料夾階層  
  若要瀏覽您要執行的報表，您可以使用 [首頁]，該頁面會在您啟動「報表管理員」時，以及您在資料夾階層中開啟任何資料夾時自動出現。 [首頁] 僅會顯示您有檢視權限的項目。 在 [首頁] 的上方，資料夾路徑會顯示為一列連結。 資料夾名稱會從根資料夾 (主資料夾) 開始，依照順序列出。 在開啟每一個額外的資料夾時，資料夾名稱就會加入頁面上方的資料夾路徑中。 下圖中的 **(1)** 。 開啟報表時，報表的名稱也會加入資料夾路徑中。  
   
- ![報表管理員功能區及瀏覽](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "報表管理員功能區及瀏覽")  
+ ![報表管理員功能區及導覽](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "報表管理員功能區及導覽")  
 報表管理員功能區  
   
  請使用下列技巧來導覽資料夾階層：  

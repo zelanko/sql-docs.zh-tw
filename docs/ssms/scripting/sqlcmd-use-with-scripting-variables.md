@@ -1,6 +1,6 @@
 ---
-title: 以指令碼變數使用 sqlcmd | Microsoft Docs
-ms.custom: ''
+title: 以指令碼變數使用 sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 08/09/2016
 ms.prod: sql
 ms.technology: scripting
@@ -18,18 +18,18 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 142fd6bdd0ceb39003aba5c8ec8131c9df6427dd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3a084f84473dd6394aa0ad09e1730bcdb13e4a22
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262856"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761612"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - 搭配指令碼變數使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   用於指令碼中的變數稱為指令碼變數。 指令碼變數可讓一個指令碼使用於多個狀況中。 例如，如果您想要針對多個伺服器執行一個指令碼，而不針對每個伺服器修改指令碼，您可以使用指令碼變數來代表伺服器名稱。 只要變更提供給指令碼變數的伺服器名稱，相同的指令碼就可以在不同的伺服器上執行。  
   
- 指令碼變數可以使用 **setvar** 命令來明確定義，或使用 **sqlcmd-v** 選項來隱含定義。  
+ 指令碼變數可以使用 **setvar** 命令來明確定義，或使用 **sqlcmd -v** 選項來隱含定義。  
   
  本主題也包含在 Cmd.exe 命令提示字元中使用 **SET**來定義環境變數的範例。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68262856"
   
 3.  在啟動**SET X=Y**之前，於命令提示字元設定命令殼層 ( **SET X=Y**)  
   
-4.  **sqlcmd-v** X=Y  
+4.  **sqlcmd -v** X=Y  
   
 5.  **:Setvar** X Y  
   
@@ -100,7 +100,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 -   如果引號是變數值的一部分，則必須逸出。 例如：`setvar MyVar "spac""e"`。  
   
 ## <a name="guidelines-for-cmdexe-set-variable-values-and-names"></a>Cmd.exe SET 變數值和名稱的指導方針  
- 使用 SET 所定義的變數是 Cmd.exe 環境的一部分，並且可供 **sqlcmd**參考。 請考慮下列指導方針：  
+ 使用 SET 所定義的變數是 Cmd.exe 環境的一部分，並且可供 **sqlcmd**參考。 請參考下列指引：  
   
 -   變數名稱不能包含空白字元或引號。  
   
@@ -119,9 +119,9 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 | SQLCMDLOGINTIMEOUT      | -l             | R/W | "8" (秒)           |
 | SQLCMDSTATTIMEOUT       | -t             | R/W | "0" = 永遠等候 |
 | SQLCMDHEADERS           | -H             | R/W | "0"                     |
-| SQLCMDCOLSEP            | -S             | R/W | 「 」                     |
+| SQLCMDCOLSEP            | -S             | R/W | " "                     |
 | SQLCMDCOLWIDTH          | -w             | R/W | "0"                     |
-| SQLCMDPACKETSIZE        | -A             | R   | "4096"                  |
+| SQLCMDPACKETSIZE        | -a             | R   | "4096"                  |
 | SQLCMDERRORLEVEL        | -M             | R/W | "0"                     |
 | SQLCMDMAXVARTYPEWIDTH   | -y             | R/W | "256"                   |
 | SQLCMDMAXFIXEDTYPEWIDTH | -y             | R/W | "0" = 無限制         |
@@ -189,9 +189,9 @@ C:\>sqlcmd -d AdventureWorks2012
 ```
   
 ### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. 在 sqlcmd 內使用使用者層級環境變數  
- 下列範例在命令提示字元中設定了使用者層級環境變數 `%Temp%`，並將其傳遞至 `sqlcmd` 輸入檔。 若要取得使用者層級環境變數，請在 [控制台]  中按兩下 [系統]  。 按一下 [進階]  索引標籤，然後按一下 [環境變數]  。  
+ 下列範例在命令提示字元中設定了使用者層級環境變數 `%Temp%` ，並將其傳遞至 `sqlcmd` 輸入檔。 若要取得使用者層級環境變數，請在 [控制台]  中按兩下 [系統]  。 按一下 [進階]  索引標籤，然後按一下 [環境變數]  。  
   
- 下列程式碼是在輸入檔 `c:\testscript.txt` 中：
+ 下列程式碼是在輸入檔 `c:\testscript.txt`中：
 
 ```
 :OUT $(MyTempDirectory)
@@ -332,7 +332,7 @@ C:\> sqlcmd
   
 ## <a name="see-also"></a>另請參閱  
  [使用 sqlcmd 公用程式](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   
- [-b](../../tools/sqlcmd-utility.md)   
+ [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)   
  [命令提示字元公用程式參考 &#40;Database Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

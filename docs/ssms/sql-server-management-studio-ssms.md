@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQL Server Management Studio for Integration Services
 - SQL Server Management Studio for Reporting Services
 - SQL Server Management Studio for Analysis Services
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: a185d7506b23931787699b52fedddfddf21c1cb8
-ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
+ms.openlocfilehash: 613e3eddce55fbc52cd011f5070def12d31d83b9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71038850"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76037179"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>什麼是 SQL Server Management Studio (SSMS)？
 
@@ -37,7 +37,7 @@ ms.locfileid: "71038850"
 
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 元件  
   
-|Description|元件|  
+|描述|元件|  
 |---------------|---------|  
 |使用 **物件總管** 檢視及管理一個或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體中的所有物件。|[物件總管](../ssms/object/object-explorer.md)|  
 |如何使用 [範本總管]  建立及管理重複使用文字的檔案，以用來加快查詢與指令碼的開發速度。|[範本總管](../ssms/template/template-explorer.md)|  
@@ -68,7 +68,7 @@ ms.locfileid: "71038850"
 
 使用 SQL Server Management Studio 可啟用 Reporting Services 功能、管理服務和資料庫，以及管理角色和作業。
 
-您可使用 [共用排程] 資料夾來管理共用排程，並管理報表伺服器資料庫 (ReportServer、ReportServerTempdb)。 當您將報表伺服器資料庫移到新的或另一個 SQL Server Database Engine ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]) 時，您也會在 Master 系統資料庫中建立 RSExecRole。 如需這些工作的詳細資訊，請參閱下列文章：  
+您可使用 [共用排程] 資料夾來管理共用排程，並管理報表伺服器資料庫 (ReportServer、ReportServerTempdb)。 當您將報表伺服器資料庫移到新的或另一個 SQL Server 資料庫引擎 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]) 時，您也會在 Master 系統資料庫中建立 RSExecRole。 如需這些工作的詳細資訊，請參閱下列文章：  
 
 - [SSMS 中的 Reporting Services](../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)
 - [管理報表伺服器資料庫](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)
@@ -91,6 +91,10 @@ ms.locfileid: "71038850"
 - 從 SSMS 17.0 開始，SQL 工具小組採用 [Microsoft 現代化生命週期原則](https://support.microsoft.com/help/30881/modern-lifecycle-policy)。
 - 請閱讀原始[現代化生命週期原則公告](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy)。 如需詳細資訊，請參閱[現代化原則常見問題集](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq)。
 - 如需診斷資料收集和功能使用方式的詳細資訊，請參閱 [SQL Server 隱私權補充](https://docs.microsoft.com/sql/sql-server/sql-server-privacy)。
+
+## <a name="cross-platform-tool"></a>跨平台工具
+
+[!INCLUDE[ssms-azure-data-studio-mention](../includes/ssms-azure-data-studio-mention.md)]
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

@@ -8,14 +8,14 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3aa251e7d31f21cf51f4f528b1f0ccd35c0afb2c
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 0cddfe78555d5e5f57e57346aff1ead52f05cebf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844560"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831556"
 ---
-# <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
+# <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
 
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -29,9 +29,14 @@ ms.locfileid: "73844560"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了適用於 [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] 的 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]。 它也提供 SQL Server 資料庫引擎、SQL Server Analysis Services、SQL Server 機器學習服務、Linux 上的 SQL Server 與 SQL Server Master Data Services 的額外功能與改進。
 
+下列影片提供 SQL Server 2019 的 13 分鐘簡介：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-SQL-Server-2019/player?WT.mc_id=dataexposed-c9-niner]
+
+
 下列各節將提供這些功能的概觀。
 
-## <a name="data-virtualization-and-includebig-data-clusters-2019includesssbigdataclusters-ver15md"></a>資料虛擬化和 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
+## <a name="data-virtualization-and-big-data-clusters-2019"></a>資料虛擬化和 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 
 現今企業通常會管轄大量資料資產，這是由整個公司的分散資料來源所裝載大量資料集所組成。 使用 SQL Server 2019 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]從您所有資料取得近乎即時的見解，可提供完整的環境來處理大型資料集，包括機器學習和 AI 功能。
 
@@ -60,7 +65,7 @@ ms.locfileid: "73844560"
 
 
 ### <a name="in-memory-database"></a>記憶體內資料庫
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [記憶體內部資料庫](../relational-databases/in-memory-database.md)技術利用新式硬體創新，提供無與倫比的效能和規模。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以此領域中的記憶體內部線上交易處理 (OLTP) 等早期創新為基礎，可在所有資料庫工作負載上實現新的延展性層級。  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [記憶體內部資料庫](../relational-databases/in-memory-database.md)技術利用新式硬體創新來提供無與倫比的效能和規模。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以此領域中的記憶體內部線上交易處理 (OLTP) 等早期創新為基礎，可在所有資料庫工作負載上實現新的延展性層級。  
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|
@@ -70,7 +75,7 @@ ms.locfileid: "73844560"
 | &nbsp; | &nbsp; |
 
 ### <a name="intelligent-performance"></a>智慧型效能
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以舊版中的智慧型資料庫創新為基礎，以確保[其執行速度更快](https://blogs.msdn.microsoft.com/bobsql/tag/it-just-runs-faster/)。 這些改善有助於克服已知的資源瓶頸，並提供選項讓您設定資料庫伺服器，以在所有工作負載中提供可預測的效能。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以舊版中的智慧型資料庫創新為基礎，以確保[其執行速度更快](https://docs.microsoft.com/archive/blogs/bobsql/)。 這些改善有助於克服已知的資源瓶頸，並提供選項讓您設定資料庫伺服器，以在所有工作負載中提供可預測的效能。
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|
@@ -79,7 +84,7 @@ ms.locfileid: "73844560"
 |資源管理| `CREATE WORKLOAD GROUP` 和 `ALTER WORKLOAD GROUP` 的 `REQUEST_MAX_MEMORY_GRANT_PERCENT` 選項可設定值，已從整數變更為浮動資料類型，以允許對記憶體限制採取更細微的控制。 請參閱 [ALTER 工作負載群組](../t-sql/statements/alter-workload-group-transact-sql.md)和[建立工作負載群組](../t-sql/statements/create-workload-group-transact-sql.md)。|
 |減少對工作負載的重新編譯| 藉由減少不必要的重新編譯，跨多個範圍使用暫存資料表來改善效能。 請參閱[減少對工作負載的重新編譯](../relational-databases/tables/tables.md#ctp23)。 |
 |間接檢查點延展性 |請參閱[改善的間接檢查點延展性](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)。|
-|並行 PFS 更新|[分頁可用空間 (PFS) 分頁](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125)是資料庫檔案中的特殊分頁，SQL Server 在配置物件的空間時，可使用這些特殊分頁來協助找出可用空間。 PFS 分頁上的頁面閂鎖爭用通常與 [TempDB](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d) 建立關聯，但在有許多並行物件配置執行緒時，也可能會發生在使用者資料庫上。 這種改進會改變使用 PFS 更新來管理並行的方式，使其可以在共用閂鎖下更新，而不是獨佔閂鎖。 此行為在從 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 開始的所有資料庫 (包括 TempDB) 中預設為啟用。|
+|並行 PFS 更新|[分頁可用空間 (PFS) 分頁](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125)是資料庫檔案中的特殊分頁，SQL Server 在配置物件的空間時，可使用這些特殊分頁來協助找出可用空間。 PFS 分頁上的頁面閂鎖爭用通常與 [TempDB](https://support.microsoft.com/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d) 建立關聯，但在有許多並行物件配置執行緒時，也可能會發生在使用者資料庫上。 這種改進會改變使用 PFS 更新來管理並行的方式，使其可以在共用閂鎖下更新，而不是獨佔閂鎖。 此行為在從 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 開始的所有資料庫 (包括 TempDB) 中預設為啟用。|
 |排程器背景工作角色移轉 |背景工作角色移轉可讓閒置排程器從相同 NUMA 節點上另一個排程器的可執行佇列中移轉背景工作角色，並立即繼續所移轉背景工作角色的作業。 這項增強功能可在將長時間執行工作指派給相同排程器的情況下，提供更平衡的 CPU 使用率。 如需詳細資訊，請參閱 [SQL Server 2019 智慧型效能 - 背景工作角色移轉](https://techcommunity.microsoft.com/t5/SQL-Server/SQL-Server-2019-Intelligent-Performance-Worker-Migration/ba-p/939610)。 |
 | &nbsp; | &nbsp; |
 
@@ -101,7 +106,7 @@ ms.locfileid: "73844560"
 ## <a name="developer-experience"></a>開發人員體驗
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 繼續提供世界級的開發人員體驗，包括圖形和空間資料類型的增強功能、UTF-8 支援，以及新的擴充性架構，讓開發人員可以使用其所選語言來取得其所有資料的見解。
 
-### <a name="graph"></a>圖表
+### <a name="graph"></a>圖形
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|
@@ -152,8 +157,9 @@ ms.locfileid: "73844560"
 |新功能或更新 | 詳細資料 |
 |:---|:---|
 |具有安全記憶體保護區的 Always Encrypted|透過在伺服器端安全記憶體保護區中啟用純文字資料上的計算，在具備就地加密和豐富計算的 Always Encrypted 上進行擴充。 就地加密可改善密碼編譯作業 (加密資料行、輪換資料行、加密金鑰等) 的效能和可靠性，因為就地加密會避免將資料移出資料庫。<br><br> 支援豐富計算 (模式比對和比較作業) 可讓更多的範例適用 Always Encypted，以及要求敏感資料保護，但同時也需要在 Transact-SQL 查詢中擁有更豐富功能的應用程式。 請參閱[具有安全記憶體保護區的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)。|
-|SQL Server 組態管理員中的憑證管理|請參閱[憑證管理 (SQL Server 組態管理員)](../database-engine/configure-windows/manage-certificates.md)。|
-|資料探索與分類|資料探索與分類提供原生內建於 SQL Server 的進階功能，可用於分類、標記與保護資料庫中的敏感性資料。 分類最敏感的資料 (商務、財務、醫療、PII 等等) 可以扮演組織資訊保護成長的關鍵角色。 它可以作為下列的基礎結構：<ul><li>協助符合資料隱私權標準和法規合規性需求</li><li>各種安全性情節，例如監視 (稽核)，以及警示敏感性資料的異常存取</li><li>更輕鬆地識別敏感性資料在企業中的位置，讓系統管理員可以採取正確的步驟來保護資料庫</li></ul>也已經增強[稽核](../relational-databases/security/auditing/sql-server-audit-database-engine.md)，在稱為 `data_sensitivity_information` 的稽核記錄中包含新欄位，其中記錄查詢所傳回的實際資料敏感度分類 (標籤)。 如需詳細資料和範例，請參閱[新增敏感度分類](../t-sql/statements/add-sensitivity-classification-transact-sql.md)。|
+|SQL Server 組態管理員中的憑證管理|您現在可以使用 SQL Server 組態管理員來進行憑證管理工作，例如檢視及部署憑證。 請參閱[憑證管理 (SQL Server 組態管理員)](../database-engine/configure-windows/manage-certificates.md)。|
+|資料探索與分類|資料探索與分類可提供在使用者資料表中分類及標記資料行的功能。 分類敏感資料 (商務、財務、醫療、PII 等) 可以扮演組織資訊保護成長的關鍵角色。 它可以作為下列的基礎結構：<ul><li>協助符合資料隱私權標準和法規合規性需求</li><li>各種安全性情節，例如監視 (稽核)，以及警示敏感性資料的異常存取</li><li>更輕鬆地識別敏感性資料在企業中的位置，讓系統管理員可以採取正確的步驟來保護資料庫</li></ul>|
+|SQL Server Audit|也已經增強稽核[稽核](../relational-databases/security/auditing/sql-server-audit-database-engine.md)，以在稽核記錄中包含新欄位 `data_sensitivity_information`，其中包含查詢所傳回的實際資料敏感度分類 (標籤)。 如需詳細資料和範例，請參閱 [`ADD SENSITIVITY CLASSIFICATION`](../t-sql/statements/add-sensitivity-classification-transact-sql.md)。|
 | &nbsp; | &nbsp; |
 
 ## <a name="high-availability"></a>高可用性
@@ -200,7 +206,7 @@ ms.locfileid: "73844560"
 | 異動資料擷取 (CDC) 支援 | 在 Linux 上現在已針對 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支援異動資料擷取 (CDC)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="containers"></a>[設定 SSIS 記錄]
+### <a name="containers"></a>容器
 開始使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的最簡單方式就是使用容器。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以舊版中引進的創新為基礎，可讓您以安全方式在新的平台上部署 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 容器，並提供更多功能。
 
 |新功能或更新 | 詳細資料 |
@@ -217,6 +223,7 @@ ms.locfileid: "73844560"
 |:---|:---| 
 |新的記憶體設定選項 | 設定安裝期間的 [最小伺服器記憶體 (MB)]  與 [最大伺服器記憶體 (MB)]  伺服器設定。 請參閱[資料庫引擎設定 - 記憶體頁面](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)，以及[從命令提示字元安裝 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY` 與 `SQLMAXMEMORY` 參數。 建議值會與[伺服器記憶體設定選項](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)中的記憶體設定指導方針一致。| 
 |新平行處理原則設定選項 | 在安裝期間設定 [平行處理原則的最大程度]  伺服器設定。 請參閱[資料庫引擎設定 - MaxDOP 頁面](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)，以及[從命令提示字元安裝 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `SQLMAXDOP` 參數。 預設值將會與[設定 max degree of parallelism 伺服器設定選項](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)中平行處理原則的最大程度指導方針一致。| 
+|伺服器/CAL 授權產品金鑰上的設定警告|如果輸入企業伺服器/CAL 授權產品金鑰，且電腦具有 20 個以上的實體核心，或在啟用超執行緒時有 40 個邏輯核心，則會在安裝期間顯示警告。 使用者仍然可以確認該限制並繼續設定，或輸入可支援作業系統最大處理器數量的授權金鑰。|
 | &nbsp; | &nbsp; |
 
 ## <a id="ml"></a> SQL Server 機器學習服務
@@ -250,7 +257,7 @@ ms.locfileid: "73844560"
 |彈性檔案工作 |在本機檔案系統、Azure Blob 儲存體和 Azure Data Lake Storage Gen2 上執行檔案作業。 請參閱[彈性檔案工作](../integration-services/control-flow/flexible-file-task.md)。|
 |彈性檔案來源和目的地 |讀取和寫入 Azure Blob 儲存體的資料，以及 Azure Data Lake Storage Gen2。 請參閱[彈性檔案來源](../integration-services/data-flow/flexible-file-source.md)和[彈性檔案目的地](../integration-services/data-flow/flexible-file-destination.md)。 |
 
-## <a name="sql-server-includemaster-data-servicesincludesssmdsshort-mdmd"></a>SQL Server [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+## <a name="sql-server-master-data-services"></a>SQL Server [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
 
 | 新功能或更新 | 詳細資料 |
 |:---|:---|

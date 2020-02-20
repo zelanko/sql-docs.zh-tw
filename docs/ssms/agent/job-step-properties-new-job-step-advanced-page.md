@@ -1,10 +1,7 @@
 ---
-title: 作業步驟屬性 - 新增作業步驟 (進階頁面) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: 新增作業步驟屬性 (進階頁面)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +9,20 @@ f1_keywords:
 ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f9395e9d1f7af28f0ff8a7d3f50d25eb665b7bb9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1d51de2031e8187e96eaea3fcb344df133928779
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263298"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242237"
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>作業步驟屬性 - 新增作業步驟 (進階頁面)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -48,8 +50,8 @@ ms.locfileid: "68263298"
 **...**  
 瀏覽作業步驟輸出所用的檔案。  
   
-**[檢視]**  
-在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，會停用檢視輸出檔的這個按鈕。 而改用 [記事本] 來檢視作業步驟輸出檔。  
+**檢視**  
+在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，會停用檢視輸出檔的這個按鈕。 而改用 [記事本] 來檢視作業步驟輸出檔。  
   
 **將輸出附加至現有檔案**  
 將輸出附加至現有的檔案內容。 否則，每次執行作業步驟時會覆寫先前的檔案內容。  
@@ -57,7 +59,7 @@ ms.locfileid: "68263298"
 **記錄至資料表**  
 將作業步驟輸出記錄至 **msdb** 資料庫中的 **sysjobstepslogs** 資料表。  
   
-**[檢視]**  
+**檢視**  
 至少執行一次作業步驟之後，按一下 [檢視]  即可在資料表中檢視其輸出。  
   
 **將輸出附加至資料表的現有項目**  
@@ -76,8 +78,8 @@ ms.locfileid: "68263298"
 **...**  
 瀏覽作業步驟輸出所用的檔案。  
   
-**[檢視]**  
-在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，會停用檢視輸出檔的這個按鈕。 而改用 [記事本] 來檢視作業步驟輸出檔。  
+**檢視**  
+在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，會停用檢視輸出檔的這個按鈕。 而改用 [記事本] 來檢視作業步驟輸出檔。  
   
 **將輸出附加至現有檔案**  
 每次執行作業步驟時，將作業步驟輸出附加至先前的檔案內容。  
@@ -85,7 +87,7 @@ ms.locfileid: "68263298"
 **記錄至資料表**  
 將作業步驟輸出記錄至 **msdb** 資料庫中的 **sysjobstepslogs** 資料表。  
   
-**[檢視]**  
+**檢視**  
 至少執行一次作業步驟之後，按一下 [檢視]  即可在資料表中檢視其輸出。  
   
 **將輸出附加至資料表的現有項目**  
@@ -101,8 +103,8 @@ ms.locfileid: "68263298"
 **...**  
 瀏覽作業步驟輸出所用的檔案。  
   
-**[檢視]**  
-在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，會停用檢視輸出檔的這個按鈕。 而改用 [記事本] 來檢視作業步驟輸出檔。  
+**檢視**  
+在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，會停用檢視輸出檔的這個按鈕， 而改用 [記事本] 來檢視作業步驟輸出檔。  
   
 **將輸出附加至現有檔案**  
 每次執行作業步驟時，將作業步驟輸出附加至先前的檔案內容。  
@@ -110,7 +112,7 @@ ms.locfileid: "68263298"
 **記錄至資料表**  
 將作業步驟輸出記錄至 **msdb** 資料庫中的 **sysjobstepslogs** 資料表。  
   
-**[檢視]**  
+**檢視**  
 至少執行一次作業步驟之後，按一下 [檢視]  即可在資料表中檢視其輸出。  
   
 **將輸出附加至資料表的現有項目**  
@@ -123,7 +125,7 @@ ms.locfileid: "68263298"
 **Server**  
 設定複寫佇列讀取器作業步驟所用的伺服器。  
   
-**[資料庫備份]**  
+**Database**  
 設定複寫佇列讀取器作業步驟所用的資料庫。  
   
 ## <a name="options-for-sql-server-analysis-services-job-steps"></a>SQL Server Analysis Services 作業步驟的選項  
@@ -142,7 +144,7 @@ ms.locfileid: "68263298"
 **記錄至資料表**  
 將作業步驟輸出記錄至 **msdb** 資料庫中的 **sysjobstepslogs** 資料表。  
   
-**[檢視]**  
+**檢視**  
 至少執行一次作業步驟之後，按一下 [檢視]  即可在資料表中檢視其輸出。  
   
 **將輸出附加至資料表的現有項目**  

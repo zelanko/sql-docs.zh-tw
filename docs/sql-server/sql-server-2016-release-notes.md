@@ -13,12 +13,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 741aec40bf972ae6caedfc0301e7a3dcd080d593
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632913"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76909848"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 版本資訊
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ SQL Server 2016 SP2 安裝在安裝之後可能需要重新開機。 最佳做�
 
 SQL Server 2016 SP2 中包含有關效能和規模調整的改善。
 
-|功能|Description|詳細資訊|
+|功能|描述|詳細資訊|
 |---|---|---|
 |已改善散發 DB 清除程序 |   過度龐大的散發資料庫資料表會造成封鎖和死結情況。 改善的清除程序旨在排除其中一些封鎖或死結情況。 |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding) \(機器翻譯\)  |
 |變更追蹤清除    |   已改善針對變更追蹤資料表的變更追蹤清除效能和效率。    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) \(機器翻譯\) |
@@ -54,7 +54,7 @@ SQL Server 2016 SP2 中包含有關效能和規模調整的改善。
 
 SQL Server 2016 SP2 中已包含支援能力和診斷相關的改善。
 
-|功能|Description|詳細資訊|
+|功能|描述|詳細資訊|
 |---|---|---|
 |針對可用性群組中資料庫的完整 DTC 支援    |   SQL Server 2016 中目前不支援可用性群組中資料庫的跨資料庫交易。 在 SQL Server 2016 SP2 中，我們針對可用性群組資料庫的分散式交易推出完整支援。   |       |
 |更新 sys.databases 的 is_encrypted 資料行，以正確反映 TempDB 的加密狀態 |   TempDB 之 sys.databases 中的 is_encryptedcolumn 資料行的值為 1，即使在您關閉所有使用者資料庫的加密並重新啟動 SQL Server 之後也一樣。 預期的行為是該值為 0，因為在此情況下 TempDB 已經不再加密。 從 SQL Server 2016 SP2 開始，sys.databases.is_encrypted 現在會正確地反映 TempDB 的加密狀態。  |       |
@@ -91,7 +91,7 @@ SQL Server 2016 SP2 中已包含支援能力和診斷相關的改善。
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 包含截至 SQL Server 2016 RTM CU3 的所有累計更新，包括安全性更新 MS16-136。 它包含 SQL Server 2016 累積更新提供的解決方案彙總，截至並且包含最新的累積更新 - CU3 和 2016 年 11 月 8 日發行的安全性更新 MS16-136。
 
 SQL Server SP1 Standard、Web、Express 和 Local DB 版本提供下列功能 (除非另有附註)：
-- Always Encrypted
+- 一律加密
 - 異動資料擷取 (Express 未提供)
 - columnstore
 - 壓縮
@@ -105,7 +105,7 @@ SQL Server SP1 Standard、Web、Express 和 Local DB 版本提供下列功能 (�
 
 下表摘要說明 SQL Server 2016 SP1 中提供的重要改善。
 
-|功能|Description|詳細資訊|
+|功能|描述|詳細資訊|
 |---|---|---|
 |在 TF 715 下，使用自動 TABLOCK 大量插入堆積| 追蹤旗標 715 可啟用資料表鎖定，以將作業大量載入到不含非叢集索引的堆積。|[將 SAP 工作負載移轉至 SQL Server 的速度加快 2.5 倍](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
 |CREATE 或 ALTER|部署預存程序、觸發程序、使用者定義的函式和檢視等物件。|[SQL Server 資料庫引擎部落格](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
@@ -141,7 +141,7 @@ SQL Server 2016 SP1 安裝可能需要在安裝後重新開機。 最佳做法�
 -   [查詢存放區 (GA)](#bkmk_ga_query_store)
 -   [產品文件 (GA)](#bkmk_ga_docs)
 
-### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA)
+### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> 安裝修補程式需求 (GA)
 **問題和對客戶的影響：** Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL Server 2016 必須安裝這些二進位檔。 已提供修正此問題的更新。 如果不安裝 VC Runtime 二進位檔的這項更新，SQL Server 2016 就可能在特定情況下遇到穩定性問題。 安裝 SQL Server 2016 之前，請先檢查電腦是否需要 [KB 3164398](https://support.microsoft.com/kb/3164398)中所述的填補。 修補程式也包含在 [SQL Server 2016 RTM 的累計更新套件 1 (CU1)](https://www.microsoft.com/download/details.aspx?id=53338)。
 
 **解決方案：** 使用下列其中一個解決方案：

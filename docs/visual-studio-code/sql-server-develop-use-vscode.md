@@ -1,6 +1,5 @@
 ---
-title: 使用適用於 SQL Server 的 Visual Studio Code mssql 延伸模組
-titleSuffix: SQL Server
+title: 使用 Visual Studio Code MSSQL 延伸模組
 description: 使用適用於 Visual Studio Code 的 mssql 延伸模組，在 Linux 上編輯和執行適用於 SQL Server 的 Transact-SQL 指令碼。
 ms.topic: conceptual
 ms.prod: sql
@@ -9,12 +8,12 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 author: markingmyname
 ms.author: maghan
 ms.date: 10/28/2019
-ms.openlocfilehash: 91cc06b4d0d2791f91a26ecc1800859713267d9b
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
+ms.openlocfilehash: 615e205566ced2c1d0a66ab69b3e9eb80c7f82f3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73588982"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558453"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>使用 Visual Studio Code 建立和執行 Transact-SQL 指令碼
 
@@ -83,12 +82,12 @@ Visual Studio Code 是跨平台的圖形化程式碼編輯器，可支援延伸�
 
 5. 遵循提示來指定新連線設定檔的屬性。 指定每個值之後，按 **Enter** 鍵繼續。
 
-   | 連線屬性 | Description |
+   | 連線屬性 | 描述 |
    |---|---|
    | **伺服器名稱或 ADO 連接字串** | 指定 SQL Server 執行個體名稱。 使用 *localhost* 連線到本機電腦上的 SQL Server 執行個體。 若要連線到遠端 SQL Server，請輸入目標 SQL Server 的名稱或其 IP 位址。 若要連線到 SQL Server 容器，則指定容器主機電腦的 IP 位址。 如果您需要指定連接埠，可使用逗號來將它與名稱隔開。 例如，針對接聽連接埠 1401 的伺服器，輸入 `<servername or IP>,1401`。<br/><br/>或者，您也可以在這裡輸入資料庫的 ADO 連接字串。 |
    | **資料庫名稱** (選擇性) | 您要使用的資料庫。 若要連線到預設資料庫，請不要在這裡指定資料庫名稱。 |
    | **驗證類型** | 選擇 [整合式]  或 [SQL 登入]  。 |
-   | **User name** | 如果您選取 [SQL 登入]  ，請輸入有權存取伺服器上之資料庫的使用者名稱。 |
+   | **使用者名稱** | 如果您選取 [SQL 登入]  ，請輸入有權存取伺服器上之資料庫的使用者名稱。 |
    | **密碼** | 請輸入指定之使用者的密碼。 |
    | **儲存密碼** | 按 **Enter** 鍵以選取 [是]  並儲存密碼。 每次使用連線設定檔時，當系統提示您輸入密碼時選取 [否]  。 |
    | **設定檔名稱** (選擇性) | 輸入連線設定檔的名稱，例如 *localhost profile*。 |

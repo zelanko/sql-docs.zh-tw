@@ -1,6 +1,6 @@
 ---
-title: 物件相依性 | Microsoft 文件
-ms.custom: ''
+title: 物件相依性
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 78be395cccceff6c01152b38ddf9aa7008a273c8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 82aa0e5ae67d3dbbf4e2a897ba5e49976cfc09a6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264086"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257166"
 ---
 # <a name="object-dependencies"></a>物件相依性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,14 +28,14 @@ ms.locfileid: "68264086"
 在變更或刪除選取的物件之前，請使用此對話方塊來了解相依性。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
-**相依於** \<所選取物件>  的物件  
+**相依於 \<所選物件>  的物件**  
 按一下此按鈕會顯示已進行相依性追蹤，並相依於所選取物件的物件清單。  
   
- \<所選取物件>  **相依的物件**  
+ _\<所選物件>_ **所相依的物件**  
 按一下此按鈕會顯示已進行相依性追蹤，所選取物件相依的物件清單。  
   
-**相依性**  
-若按一下**相依於** *<selected object>* 的物件，將會以階層檢視顯示相依於所選物件的物件。 若按一下  *<selected object>* **所相依**的物件，將會以階層檢視顯示所選物件相依的物件。  
+**Dependencies** (相依性)  
+按一下**相依於 *<selected object>* 的物件**時，系統會以階層檢視顯示相依於所選物件的物件。 按一下  *<selected object>* **所相依的物件**時，系統會以階層檢視顯示所選物件相依的物件。  
   
 **名稱**  
 顯示在上述 [相依性]  樹狀檢視中選取之物件的名稱。  
@@ -43,7 +43,7 @@ ms.locfileid: "68264086"
 **型別**  
 顯示在上述 [相依性]  樹狀檢視中選取之物件的類型。  
   
-**上次同步時間**  
+**上次同步處理時間**  
 > [!NOTE]  
 > 只有 [進階]  頁面會提供此選項。  
   

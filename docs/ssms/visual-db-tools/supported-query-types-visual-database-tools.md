@@ -1,10 +1,9 @@
 ---
-title: 支援的查詢類型 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 支援的查詢類型
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,14 @@ helpviewer_keywords:
 ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 36da701cefd3f74cd21bd960d74b684336a7858c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: a8f5fae345543a3a63bacad0c5cdf0d8f62d2aa5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263178"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242171"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>支援的查詢類型 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,6 +54,6 @@ ms.locfileid: "68263178"
 當您使用 SQL 陳述式建立的查詢無法在圖形窗格顯示時，查詢和檢視設計師將使這些窗格變成暗灰色，表示他們無法反映您所建立的查詢。 但這些暗灰色的窗格仍處於作用中狀態，而且在許多情況下，您可以在這些窗格中變更查詢。 如果您的變更使得圖形窗格可以顯示查詢，這些窗格就不再是暗灰色了。  
   
 ## <a name="see-also"></a>另請參閱  
-[設計查詢和檢視使用說明主題 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[查詢類型 (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[設計查詢與檢視表操作說明主題](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[查詢類型](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   
