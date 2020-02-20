@@ -1,37 +1,46 @@
 ---
 title: 下載離線安裝的更新
-description: 下載 R 與 Python CAB 以及 SQL Server 機器學習服務與 SQL Server 2016 R Services 的套件檔案。
+description: 下載適用於 SQL Server 機器學習服務的 Python 與 R CAB 檔案。 這些 CAB 檔案包含機器學習服務 (Python 與 R) 功能的更新，當您在無法存取網際網路的伺服器上安裝 SQL Server 時就會使用這些檔案。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e7266d90e04071c242145fc0df2e59ce86d86a16
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: b2b84349e60bf89a066fb2157a9c521d7be8ecbd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727632"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75776520"
 ---
-# <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>SQL Server 資料庫內分析執行個體之累積更新的 CAB 下載
+# <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>適用於 SQL Server 機器學習服務之累積更新的 CAB 下載
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-針對資料庫內分析所設定的 SQL Server 執行個體包括 R 與 Python 功能。 這些功能隨附於封包檔中，並透過 SQL Server 安裝程式進行服務。 在連線到網際網路的裝置上，CAB 更新通常會透過 Windows Update 套用。 在中斷連線的伺服器上，必須手動下載並套用 CAB 檔案。 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+下載適用於 SQL Server 機器學習服務的 Python 與 R CAB 檔案。 這些 CAB 檔案包含機器學習服務 (Python 與 R) 功能的更新，當您在無法存取網際網路的伺服器上安裝 SQL Server 時就會使用這些檔案。
+::: moniker-end
 
-此文章提供每個累積更新之 CAB 檔案的下載連結。 如需有關離線安裝的詳細資訊，請參閱[在無法存取網際網路的情況下安裝 SQL server 機器學習元件](sql-ml-component-install-without-internet-access.md#apply-cu)。
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+下載適用於 SQL Server 2016 R Services 的 Python 與 R CAB 檔案。 這些 CAB 檔案包含 R Services 功能的更新，當您在無法存取網際網路的伺服器上安裝 SQL Server 時就會使用這些檔案。
+::: moniker-end
+
+您將可在下方找到適用於每個累積更新之 CAB 檔案的下載連結。 如需有關離線安裝的詳細資訊，請參閱[在無法存取網際網路的情況下安裝 SQL server 機器學習元件](sql-ml-component-install-without-internet-access.md#apply-cu)。
 
 ## <a name="prerequisites"></a>Prerequisites
 
-從基準安裝開始。
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+從基準安裝開始。 在 SQL Server 機器學習服務上，初始版本是基準安裝。 
+::: moniker-end
 
-+ 在 SQL Server 機器學習服務上，初始版本是基準安裝。 
-+ 在 SQL Server 2016 R Services 上，您可以從初始版本、SP1 或 SP2 開始。 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+從基準安裝開始。  在 SQL Server 2016 R Services 上，您可以從初始版本、SP1 或 SP2 開始。 
+::: moniker-end
 
-您也可以將累積更新套用到獨立伺服器。
+您也可以套用累積更新。
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
@@ -94,7 +103,7 @@ CAB 檔案會以反向時間順序列出。 當您下載 CAB 檔並將它們傳�
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
 <a name="bkmk_2016Installers"></a>
 
@@ -106,34 +115,34 @@ CAB 檔案會以反向時間順序列出。 當您下載 CAB 檔並將它們傳�
 |---------|---------------|
 |**SQL Server 2016 SP2 CU6**     |
 |Microsoft R Open     |[SRO_3.2.2.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079936&clcid=1033)|
-|Microsoft R Server    |[SRS_8.0.3.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079933&clcid=1033)|
+|Microsoft R 伺服器    |[SRS_8.0.3.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079933&clcid=1033)|
 |**SQL Server 2016 SP2 CU1-CU5**     |
 |Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
-|Microsoft R Server    |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038)|
+|Microsoft R 伺服器    |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038)|
 |**SQL Server 2016 SP2**     |
 |Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
-|Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317)|
+|Microsoft R 伺服器    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317)|
 |**SQL Server 2016 SP1 CU14**     |
 |Microsoft R Open     |[SRO_3.2.2.16100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2080130&clcid=1033)|
-|Microsoft R Server    |[SRS_8.0.3.17200_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079935&clcid=1033)|
+|Microsoft R 伺服器    |[SRS_8.0.3.17200_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079935&clcid=1033)|
 |**SQL Server 2016 SP1 CU1-CU13**     |
 |Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
-|Microsoft R Server    |[SRS_8.0.3.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836818)|
+|Microsoft R 伺服器    |[SRS_8.0.3.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836818)|
 |**SQL Server 2016 SP1**     |
 |Microsoft R Open     |[SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879)|
-|Microsoft R Server     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881)|
+|Microsoft R 伺服器     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881)|
 |**SQL Server 2016 CU4-CU9**     |
 |Microsoft R Open     |[SRO_3.2.2.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831785)|
-|Microsoft R Server     |[SRS_8.0.3.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831676)|
+|Microsoft R 伺服器     |[SRS_8.0.3.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831676)|
 |**SQL Server 2016 CU2-CU3**     |
 |Microsoft R Open     |[SRO_3.2.2.12000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=827398)|
-|Microsoft R Server     |[SRS_8.0.3.12000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=827399)|
+|Microsoft R 伺服器     |[SRS_8.0.3.12000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=827399)|
 |**SQL Server 2016 CU1**     |
 |Microsoft R Open     |[SRO_3.2.2.10000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=808803)|
-|Microsoft R Server     |[SRS_8.0.3.10000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=808805)|
+|Microsoft R 伺服器     |[SRS_8.0.3.10000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=808805)|
 |**SQL Server 2016 RTM**     |
 |Microsoft R Open     |[SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266)|
-|Microsoft R Server     |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051)|
+|Microsoft R 伺服器     |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051)|
 
 > [!NOTE]
 > 

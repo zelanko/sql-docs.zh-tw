@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 5ef73529119245397932a3a2414ce65f381b55bd
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 7f9893d7ac9dd83ae5212684678fc240a8d77097
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452109"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251139"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>將 XML 值指定為參數
 
@@ -33,7 +33,7 @@ ms.locfileid: "72452109"
   
 此範例會準備 <xref:Microsoft.Data.SqlClient.SqlCommand> 物件，以便在新的資料表中插入資料列。 已儲存的檔案為 **SalesInfo** 資料行提供必要的 XML 資料。  
   
-若要建立執行範例所需的檔案，請在與專案相同的資料夾中建立新的文字檔。 將檔案命名為 MyTestStoreData。 在 [記事本] 中開啟檔案，並複製並貼上下列文字：  
+若要建立執行範例所需的檔案，請在與專案相同的資料夾中建立新的文字檔。 將檔案命名為 MyTestStoreData.xml。 在 [記事本] 中開啟該檔案，然後複製並貼上下列文字：  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  

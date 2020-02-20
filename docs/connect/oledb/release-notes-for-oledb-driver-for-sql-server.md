@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 350856cc27bdec601e0db2998f9ff9953cdf6ec7
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
-ms.translationtype: MTE75
+ms.openlocfilehash: 23c730ce0bba9003b47b777108907763d981c551
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381726"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74401537"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server 的版本資訊
 
@@ -38,14 +38,14 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 | 新增功能 | 詳細資料 |
 | :------------ | :------ |
 | Azure Active Directory 驗證支援 (`ActiveDirectoryInteractive`、`ActiveDirectoryMSI`)。 | [使用 Azure Active Directory](features/using-azure-active-directory.md)。 |
-| 支援內嵌 Active Directory 驗證程式庫（ADAL）。 | 不需要另外安裝 ADAL，即可使用特定的驗證方法。 |
+| 在安裝程式中包含 Azure Active Directory 驗證程式庫 (adal.dll) | 現已包含在基底驅動程式安裝中，這將會升級適用於 SQL Server 的 Microsoft Active Directory 驗證程式庫的現有安裝，將其從 Windows 中的已安裝應用程式清單中移除。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>修正的 Bug
 
 | 已修正的錯誤 (Bug) | 詳細資料 |
 | :-------- | :------ |
-| 已修正 IIndexDefinition 中的 drop index 邏輯[：:D ropindex](https://go.microsoft.com/fwlink/?linkid=2106448)。 | 當索引擁有者的架構識別碼和使用者識別碼不相等時，舊版的 OLE DB 驅動程式無法卸載主鍵索引。 |
+| 已修正 [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448) \(英文\) 中的卸除索引邏輯。 | 舊版的 OLE DB 驅動程式無法在索引擁有者的結構描述識別碼和使用者識別碼不相等時卸除主索引鍵索引。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="1823"></a>18.2.3
@@ -56,7 +56,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | 新增功能 | 詳細資料 |
 | :------------ | :------ |
-| 支援從 SQL Server 卸載式媒體升級驅動程式。 | 這種改善可直接從 SQL Server 卸載式媒體升級驅動程式。 |
+| 支援從 SQL Server 抽取式媒體進行驅動程式升級。 | 此改善可允許直接從 SQL Server 抽取式媒體進行驅動程式升級。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="1822"></a>18.2.2
@@ -90,7 +90,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | 新增功能 | 詳細資料 |
 | :------------ | :------ |
-| 支援 `UseFMTONLY` 連接字串關鍵字及`SSPROP_INIT_USEFMTONLY` 初始化屬性。 | `UseFMTONLY` 控制連線到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]及更新版本時，如何擷取中繼資料。<br/><br/>如需詳細資訊，請參閱：搭配[使用連接字串關鍵字與 OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。 |
+| 支援 `UseFMTONLY` 連接字串關鍵字及`SSPROP_INIT_USEFMTONLY` 初始化屬性。 | `UseFMTONLY` 控制連線到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]及更新版本時，如何擷取中繼資料。<br/><br/>如需詳細資訊，請參閱[利用 OLE DB Driver for SQL Server 使用連接字串關鍵字](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>修正的 Bug
@@ -106,7 +106,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | 新增功能 | 詳細資料 |
 | :------------ | :------ |
-| 支援 `MultiSubnetFailover` 連接字串關鍵字及 `SSPROP_INIT_MULTISUBNETFAILOVER` 初始化屬性。 | 如需詳細資訊，請參閱：<br/>&bull; &nbsp; [OLE DB Driver for SQL Server 高可用性和災害復原支援](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)、<br/>&bull; &nbsp; [ OLE DB Driver for SQL Server 使用連接字串關鍵字](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。 |
+| 支援 `MultiSubnetFailover` 連接字串關鍵字及 `SSPROP_INIT_MULTISUBNETFAILOVER` 初始化屬性。 | 如需詳細資訊，請參閱<br/>&bull; &nbsp; [OLE DB Driver for SQL Server 高可用性和災害復原支援](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)、<br/>&bull; &nbsp; [利用 OLE DB Driver for SQL Server 使用連接字串關鍵字](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>另請參閱

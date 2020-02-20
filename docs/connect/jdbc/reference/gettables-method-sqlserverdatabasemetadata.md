@@ -1,5 +1,5 @@
 ---
-title: getTables 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getTables 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8dfd7f14d6006f5a41a7cd2a9b0cae4933804fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979208"
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>getTables 方法 (SQLServerDatabaseMetaData)
@@ -48,7 +48,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
   
  *tableName*  
   
- 包含資料表名稱模式的**字串**。  
+ 包含資料表名稱模式的 **String**。  
   
  *types*  
   
@@ -60,12 +60,12 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getTables 方法是由 java.sql.DatabaseMetaData 介面中的 getTables 方法指定。  
   
  透過 getTables 方法所傳回的結果將包含下列資訊：  
   
-|[屬性]|類型|Description|  
+|名稱|類型|描述|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|指定之資料表所在的資料庫名稱。|  
 |TABLE_SCHEM|**String**|資料表結構描述名稱。|  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: c2dbe0f90af6d3c51c55698ebd74c4972ea1d4db
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 03399ea4653df03c873739b24a167d88564c3927
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252154"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911112"
 ---
 # <a name="using-xa-transactions"></a>使用 XA 交易
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,13 +25,13 @@ ms.locfileid: "68252154"
 
 ## <a name="overview"></a>概觀
 
-從17.3 版開始的 Microsoft ODBC Driver for SQL Server 可支援在 Windows、Linux 和 Mac 上使用分散式交易協調器 (DTC) 的 XA 交易。 驅動程式端的 XA 執行可讓用戶端應用程式將序列作業 (例如啟動、認可、回復交易分支等) 傳送至交易管理員 (TM)。 然後, TM 會根據這些作業與 Resource Manager (RM) 進行通訊。 如需有關 XA 規格和適用于 DTC 的 Microsoft 執行 (MS DTC) 的詳細資訊, 請參閱[運作方式: SQL SERVER DTC (MSDTC 和 XA 交易)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/)。
+從 17.3 版開始的 Microsoft ODBC Driver for SQL Server 可支援在 Windows、Linux 和 Mac 上使用分散式交易協調器 (DTC) 進行 XA 交易。 驅動程式端的 XA 實作可讓用戶端應用程式將序列作業 (例如啟動、認可、復原交易分支等) 傳送至交易管理員 (TM)。 然後，TM 將會根據這些作業，與 Resource Manager (RM) 進行通訊。 如需有關 XA 規格和適用於 DTC 的 Microsoft 實作 (MS DTC) 的詳細資訊，請參閱[運作方式：SQL Server DTC (MSDTC 和 XA 交易)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/) \(英文\)。
 
 
 
 ## <a name="the-xacallparam-structure"></a>XACALLPARAM 結構
 
-`XACALLPARAM`結構會定義 XA 交易管理員要求所需的資訊。 其定義如下:
+`XACALLPARAM` 結構會定義 XA 交易管理員要求所需的資訊。 其定義如下：
 
 ```
 typedef struct XACallParam {    
@@ -46,27 +46,27 @@ typedef struct XACallParam {
 ```
 
 *sizeParam*  
-`XACALLPARAM`結構的大小。 這會排除後面`XACALLPARAM`的資料大小。
+`XACALLPARAM` 結構的大小。 這不包括 `XACALLPARAM` 之後的資料大小。
 
 *operation*  
-要傳遞至 TM 的 XA 作業。 可能的作業會定義在[xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh)中。
+要傳遞至 TM 的 XA 作業。 可能的作業會在 [xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh) 中定義。
 
 *xid*  
 交易分支識別碼。
 
 *flags*  
-與 TM 要求相關聯的旗標。 可能的值定義于[xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh)中。
+與 TM 要求相關聯的旗標。 可能的值會在 [xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh) 中定義。
 
 *status*  
-從 TM 返回狀態。 如需可能的傳回狀態, 請參閱[xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh)標頭。
+從 TM 傳回狀態。 如需可能的傳回狀態，請參閱 [xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh) 標頭。
 
 *sizeData*  
-之後`XACALLPARAM`的資料緩衝區大小。 
+`XACALLPARAM` 之後的資料緩衝區大小。 
 
 *sizeReturned*  
-傳回的資料大小。
+所傳回資料的大小。
 
-為了提出 TM 要求, 必須使用屬性_SQL_COPT_SS_ENLIST_IN_XA_和`XACALLPARAM`物件的指標來呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)函式。  
+若要提出 TM 要求，必須使用屬性 _SQL_COPT_SS_ENLIST_IN_XA_ 和 `XACALLPARAM` 物件的指標來呼叫 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 函式。  
 
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
@@ -75,7 +75,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 
 ## <a name="code-sample"></a>程式碼範例 
 
-下列範例示範如何與 TM 交易通訊, 以及如何從用戶端應用程式執行不同的作業。 如果測試是針對 Microsoft SQL Server 執行, 則必須正確設定 MS DTC, 才能啟用 XA 交易。 您可以在[xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh)標頭檔中找到 XA 定義。 
+下列範例示範如何與 TM 通訊以進行 XA 交易，以及如何從用戶端應用程式執行不同的作業。 如果測試是針對 Microsoft SQL Server 執行，則必須正確設定 MS DTC，才能啟用 XA 交易。 您可以在 [xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh) 標頭檔中找到 XA 定義。 
 
 ```
 
@@ -368,7 +368,7 @@ bool TestRecover(HDBC hdbc, const char* connectionString)
             rc = testRunner->Commit(*pXid, false, xaStatus);
             if (SQL_SUCCEEDED(xaStatus))
             {
-                std::cout << "TestRecover::Successfully commited recovered transaction " << tr << " formatId=" << pXid->formatID << std::endl;
+                std::cout << "TestRecover::Successfully committed recovered transaction " << tr << " formatId=" << pXid->formatID << std::endl;
             }
             else
             {
@@ -434,7 +434,7 @@ int main(int argc, char** argv)
 
 ```
 
-`XATestRunner`類別會在與伺服器通訊時, 執行可能的 XA 呼叫。
+`XATestRunner` 類別會在與伺服器進行通訊時，實作可能的 XA 呼叫。
 
 ```
 

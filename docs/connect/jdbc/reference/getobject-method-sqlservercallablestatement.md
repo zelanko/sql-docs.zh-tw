@@ -1,5 +1,5 @@
 ---
-title: getObject 方法 (SQLServerCallableStatement) |Microsoft Docs
+title: getObject 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c5cc562f-2c5a-4fdb-a552-dfb08c2bf0ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb479f471f4df2a90521ec0f47d8d5396881f53f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981087"
 ---
 # <a name="getobject-method-sqlservercallablestatement"></a>getObject 方法 (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67981087"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getObject (int)](../../../connect/jdbc/reference/getobject-method-int.md)|使用 Java 程式語言，並配合給定的參數索引來擷取指定之參數的值當做物件。|  
 |[getObject (int, java.util.Map)](../../../connect/jdbc/reference/getobject-method-int-java-util-map.md)|使用 Java 程式語言，並配合所指定參數索引和 Map 物件來擷取指定的參數值當作物件。|  

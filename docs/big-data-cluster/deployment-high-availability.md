@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 231a33f4d149e442487a7c93c1e2b4c5cdfad8d5
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 31e5d851b6c049bdd7fd81a4c90be1de7ceff77f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531997"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76115425"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>部署高可用性 SQL Server 巨量資料叢集
 
@@ -129,7 +129,7 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 ## <a id="instance-connect"></a> 連接到 SQL Server 執行個體
 
-針對設定伺服器層級設定或手動將資料庫新增至可用性群組等特定作業，您必須連接到 SQL Server 執行個體。 `sp_configure`、`RESTORE DATABASE` 或任何可用性群組 DDL 等作業都需要這種連接類型。 根據預設，巨量資料叢集不會包含啟用執行個體連接的端點，您必須手動公開此端點。 
+針對設定伺服器層級設定或手動將資料庫新增至可用性群組等特定作業，您必須連接到 SQL Server 執行個體。 `sp_configure`、`RESTORE DATABASE` 或任何可用性群組 DDL 等作業都需要這種連線類型。 根據預設，巨量資料叢集不會包含啟用執行個體連接的端點，您必須手動公開此端點。 
 
 > [!IMPORTANT]
 > 針對 SQL Server 執行個體連接所公開的端點只支援 SQL 驗證，即使在已啟用 Active Directory 的叢集中也一樣。 根據預設，在巨量資料叢集部署期間，會停用 `sa` 登入，並根據部署時為 `AZDATA_USERNAME` 和 `AZDATA_PASSWORD` 環境變數所提供值佈建新的 `sysadmin` 登入。
@@ -200,6 +200,7 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 - 因 `CREATE DATABASE` 以外的工作流程 (例如 `RESTORE DATABSE`、`CREATE DATABASE FROM SNAPSHOT`) 所建立資料庫不會自動新增至可用性群組。 請[連接到執行個體](#instance-connect)，然後手動將資料庫新增至可用性群組。
 - 使用 `sp_configure` 執行伺服器組態設定等特定作業會需要連接到 SQL Server 執行個體 `master` 資料庫，而不是可用性群組 `master`。 您無法使用對應的主要端點。 請遵循[指示](#instance-connect)來公開端點並連接到 SQL Server 執行個體，然後執行 `sp_configure`。 當您手動公開端點來連接到 SQL Server 執行個體 `master` 資料庫時，只能使用 SQL 驗證。
 - 部署巨量資料叢集之後，必須建立高可用性設定。 您無法在可用性群組部署後啟用高可用性設定。
+- 雖然可用性群組中包含 msdb 資料庫，且 SQL Agent 工作會複寫到整個群組，但不會每個排程都觸發作業。 解決方法是[連線到每個 SQL Server 執行個體](#instance-connect)，並在執行個體 msdb 中建立作業。
 
 ## <a name="next-steps"></a>後續步驟
 

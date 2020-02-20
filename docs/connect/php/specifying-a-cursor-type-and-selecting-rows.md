@@ -1,5 +1,5 @@
 ---
-title: 指定資料指標類型及選取資料列 |Microsoft Docs
+title: 指定資料指標類型及選取資料列 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ ms.assetid: 51147e4f-5f07-4ee6-8245-e937eefec71f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: adc776d009a6836a6ce46207d0d426f7e444259b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935870"
 ---
 # <a name="specifying-a-cursor-type-and-selecting-rows"></a>指定資料指標類型及選取資料列

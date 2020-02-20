@@ -1,5 +1,5 @@
 ---
-title: '如何: 使用 Windows 驗證進行連接 |Microsoft Docs'
+title: 如何：使用 Windows 驗證進行連線 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84707c67491d4f02be41e6506fb233ee7afef9fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936500"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>如何：使用 Windows 驗證進行連接
@@ -39,7 +39,7 @@ ms.locfileid: "67936500"
   
 -   使用者受制於集中式帳戶管理；會強制執行安全性原則，例如；密碼到期日、最小密碼長度，以及帳戶在多次無效登入要求後鎖定。  
   
-如果 Windows 驗證不是實際的選項，請參閱 [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)。  
+如果 Windows 驗證不是可行的選項，請參閱[如何：使用 SQL Server 驗證進行連線](../../connect/php/how-to-connect-using-sql-server-authentication.md)。  
   
 ## <a name="example"></a>範例  
 使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的 SQLSRV 驅動程式，下列範例會使用 Windows 驗證來連接 SQL Server 的本機執行個體。 建立連接之後，會向伺服器查詢正在存取資料庫之使用者的登入。  
@@ -105,15 +105,15 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[如何：使用 SQL Server 驗證進行連線](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+[操作說明：使用 SQL Server 驗證進行連線](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
 [Microsoft Drivers for PHP for SQL Server 的程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[如何：建立 SQL Server 登入](../../relational-databases/security/authentication-access/create-a-login.md)
+[操作說明：建立 SQL Server 登入](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[如何：建立資料庫使用者](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[操作說明：建立資料庫使用者](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [管理使用者、角色和登入](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 

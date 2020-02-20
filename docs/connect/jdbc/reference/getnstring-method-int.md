@@ -1,5 +1,5 @@
 ---
-title: getNString 方法 (int) |Microsoft Docs
+title: getNString 方法 (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.assetid: 2048bb9f-7d9b-4aaa-b135-c716910cc800
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbe3bc040ba79ad7699a571b13b48f2c41965c60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981427"
 ---
 # <a name="getnstring-method-int"></a>getNString 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用 JAVA 程式設計語言, 將指定的**NCHAR**、 **NVARCHAR**或**LONGNVARCHAR**參數值抓取為字串。  
+  使用 Java 程式設計語言，以字串的形式擷取指定 **NCHAR**、**NVARCHAR** 或 **LONGNVARCHAR** 參數的值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,12 +35,12 @@ public final java.lang.String getNString(int parameterIndex)
  指出參數索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- AStringobject.  
+ String 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getNString 方法是由 java.sql.CallableStatement 介面中的 getNString 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

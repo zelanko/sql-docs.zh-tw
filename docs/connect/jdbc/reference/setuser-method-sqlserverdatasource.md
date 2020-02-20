@@ -1,5 +1,5 @@
 ---
-title: setUser 方法 (SQLServerDataSource) |Microsoft Docs
+title: setUser 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: d2ea7906-2d10-438d-aa51-f576eea923c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 945033f96b5c8c36ea7b3d4c75aafa382a057164
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972069"
 ---
 # <a name="setuser-method-sqlserverdatasource"></a>setUser 方法 (SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setUser(java.lang.String user)
   
  包含使用者名稱的**字串**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  setUser 方法會設定將用來連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的使用者名稱。 如果未設定使用者名稱值，[getUser](../../../connect/jdbc/reference/getuser-method-sqlserverdatasource.md) 方法會傳回預設值 null。  
   
 ## <a name="see-also"></a>另請參閱  

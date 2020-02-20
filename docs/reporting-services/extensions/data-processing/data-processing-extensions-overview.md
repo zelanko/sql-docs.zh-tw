@@ -11,10 +11,10 @@ ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67e20d8d0bdcfbb03d0188ac62b4d89bc12b704f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194235"
 ---
 # <a name="data-processing-extensions-overview"></a>資料處理延伸模組概觀
@@ -22,7 +22,7 @@ ms.locfileid: "63194235"
   
  下表列出 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 隨附的資料處理延伸模組。  
   
-|資料處理延伸模組|Description|  
+|資料處理延伸模組|描述|  
 |-------------------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料處理延伸模組|使用 .NET Framework Data Provider for SQL Server 來連線和擷取 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 的資料。|  
 |OLE DB 的資料處理延伸模組|使用 .NET Framework Data Provider for OLE DB。 透過這個延伸模組，報表伺服器可以查詢具有 OLE DB 提供者的資料來源。|  
@@ -74,7 +74,7 @@ Reporting Services 資料處理延伸模組架構
   
 -   對 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 架構、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 資料提供者、ADO.NET DataSet 物件以及常用的 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 介面有深入的了解。  
   
--   [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 語言的開發體驗，例如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 或是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET。  
+-   [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 語言的開發經驗，例如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 延伸模組](../../../reporting-services/extensions/reporting-services-extensions.md)   

@@ -1,6 +1,6 @@
 ---
 title: 教學課程的紐約市計程車示範資料
-description: 下載紐約市計程車範例資料和建立資料庫的指示。 資料用於 SQL Server Python 和 R 語言教學課程，示範如何在 SQL Server 預存程序和 T-SQL 函數中內嵌指令碼。
+description: 建立包含紐約市計程車範例資料的資料庫。 此資料集會用於 SQL Server 機器學習服務的 R 和 Python 教學課程。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/31/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8413456563a85f9c126dd9981e3e6df548cd30c4
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e55076a539cb2a932c2f1e0c432daf774899518f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727161"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908924"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 和 R 教學課程的紐約市計程車示範資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

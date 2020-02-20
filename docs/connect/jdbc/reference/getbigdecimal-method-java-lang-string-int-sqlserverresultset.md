@@ -16,10 +16,10 @@ ms.assetid: 572a1799-c232-400f-b8d8-37a5719a8d5e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 701afddaeaad79356a6b76a05a02f5cff1df1f39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953907"
 ---
 # <a name="getbigdecimal-method-javalangstring-int-sqlserverresultset"></a>getBigDecimal 方法 (java.lang.String, int) (SQLServerResultSet)
@@ -48,13 +48,13 @@ public java.math.BigDecimal getBigDecimal(java.lang.String columnName,
  **int**，指出小數點右邊的位數。  
   
 ## <a name="return-value"></a>傳回值  
- JAVA.math.bigdecimal 物件。  
+ BigDecimal 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getBigDecimal 方法是由 sql-dmo 介面中的 getBigDecimal 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getBigDecimal 方法是由 java.sql.ResultSet 介面中的 getBigDecimal 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [getBigDecimal 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)   

@@ -1,6 +1,6 @@
 ---
-title: 執行大量複製作業 |Microsoft Docs
-description: 使用適用于 SQL Server 的 OLE DB 驅動程式執行大量複製作業
+title: 執行大量複製作業 | Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 執行大量複製作業
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c6b1d33f4a0a768d33ebe9613c0c0cb97c5e77c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988978"
 ---
 # <a name="performing-bulk-copy-operations"></a>執行大量複製作業
@@ -29,7 +29,7 @@ ms.locfileid: "67988978"
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大量複製功能支援將大量資料傳送進出 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表或檢視。 資料也可以藉由指定 SELECT 陳述式而向外傳送。 您可在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和作業系統資料檔 (例如 ASCII 檔) 之間移動。 資料檔可能具有不同的格式；您可將格式定義為以格式檔來大量複製。 或者，也可以使用大量複製函數和方法，將資料載入程式變數，然後傳送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- 如需示範這項功能的範例應用程式, 請參閱[使用&#40;IRowsetFastLoad&#41;OLE DB 大量資料複製](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)。  
+ 如需示範此功能的範例應用程式，請參閱[使用 IRowsetFastLoad 大量複製資料 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)。  
   
  應用程式通常會以下列其中一種方式使用大量複製：  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67988978"
   
  大量複製函數所使用的資料檔不必由其他的大量複製程式建立。 任何其他的系統都可以根據大量複製定義產生資料檔和格式檔；之後可以將這些檔案搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大量複製程式使用，以將資料匯入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 例如，您可以從試算表將資料匯出至 Tab 鍵分隔檔案、建立描述 Tab 鍵分隔檔案的格式檔，然後使用大量複製程式將資料快速匯入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 大量複製所產生的資料檔也可以匯入至其他應用程式。 例如，您可以使用大量複製函數，將資料從資料表或檢視匯出至 Tab 鍵分隔檔案，然後再將該檔案載入至試算表。  
   
- 程式設計人員在撰寫使用大量複製函數的應用程式時，應該遵照大量複製良好效能的一般規則。 如需有關中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]大量複製作業支援的詳細資訊, 請參閱[大量匯入&#40;和&#41;匯出資料 SQL Server](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
+ 程式設計人員在撰寫使用大量複製函數的應用程式時，應該遵照大量複製良好效能的一般規則。 如需有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中大量複製作業支援的詳細資訊，請參閱[資料的大量匯入及匯出 &#40;SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
  CLR 使用者定義型別 (UDT) 必須繫結為二進位資料。 即使格式檔指定 SQLCHAR 做為目標 UDT 資料行的資料類型，BCP 公用程式也會將該資料視為二進位。  
@@ -57,18 +57,18 @@ ms.locfileid: "67988978"
  請勿將 SET FMTONLY OFF 用於大量複製作業。 SET FMTONLY OFF 可能會導致大量複製作業失敗或提供未預期的結果。  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server 
- SQL Server 的 OLE DB 驅動程式會執行兩個方法, 以使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫執行大量複製作業。 第一個方法涉及使用 [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) 介面進行以記憶體為基礎的大量複製作業；第二個方法則涉及使用 [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) 介面進行以檔案為基礎的大量複製作業。  
+ OLE DB Driver for SQL Server 會實作兩個方法，以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫執行大量複製作業。 第一個方法涉及使用 [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) 介面進行以記憶體為基礎的大量複製作業；第二個方法則涉及使用 [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) 介面進行以檔案為基礎的大量複製作業。  
   
 ### <a name="using-memory-based-bulk-copy-operations"></a>使用以記憶體為基礎的大量複製作業  
  OLE DB Driver for SQL Server 實作 **IRowsetFastLoad** 介面，以公開對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以記憶體為基礎之大量複製作業的支援。 **IRowsetFastLoad** 介面會實作 [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) 和 [IRowsetFastLoad::InsertRow](../../oledb/ole-db-interfaces/irowsetfastload-insertrow-ole-db.md) 方法。  
   
 #### <a name="enabling-a-session-for-irowsetfastload"></a>針對 IRowsetFastLoad 啟用工作階段  
- 取用者會藉由將 SQL Server 特定資料來源屬性 SSPROP_ENABLEFASTLOAD 的 OLE DB 驅動程式設定為 VARIANT_TRUE, 來通知 OLE DB 驅動程式 SQL Server 其大量複製的需求。 在資料來源上設定屬性之後, 取用者會為 SQL Server 會話建立 OLE DB 驅動程式。 新的工作階段可以讓取用者存取 **IRowsetFastLoad** 介面。  
+ 取用者會將其大量複製的需求通知 OLE DB Driver for SQL Server，方法是，將 OLE DB Driver for SQL Server 特有的資料來源屬性 SSPROP_ENABLEFASTLOAD 設定為 VARIANT_TRUE。 在資料來源上設定該屬性後，取用者會建立 OLE DB Driver for SQL Server 工作階段。 新的工作階段可以讓取用者存取 **IRowsetFastLoad** 介面。  
   
 > [!NOTE]  
 >  如果使用 **IDataInitialize** 介面來初始化資料來源，則必須在 **IOpenRowset::OpenRowset** 方法的 *rgPropertySets* 參數中設定 SSPROP_IRowsetFastLoad 屬性，否則對 **OpenRowset** 方法的呼叫將傳回 E_NOINTERFACE。  
   
- 啟用大量複製的會話會限制 OLE DB 驅動程式, 以取得會話上介面的 SQL Server 支援。 啟用大量複製功能的工作階段只會公開下列介面：  
+ 針對大量複製而啟用工作階段，會限制 OLE DB Driver for SQL Server 對該工作階段上介面的支援。 啟用大量複製功能的工作階段只會公開下列介面：  
   
 -   **IDBSchemaRowset**  
   
@@ -83,7 +83,7 @@ ms.locfileid: "67988978"
  若要停止建立啟用大量複製功能的資料列集，並導致 OLE DB Driver for SQL Server 工作階段還原為標準處理，請將 SSPROP_ENABLEFASTLOAD 重設為 VARIANT_FALSE。  
   
 #### <a name="irowsetfastload-rowsets"></a>IRowsetFastLoad Rowsets  
- OLE DB Driver for SQL Server 大量複製資料列集是唯寫的，但會公開介面讓取用者得以判斷 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表的結構。 下列介面會在 SQL Server 資料列集的已啟用大量複製的 OLE DB 驅動程式上公開:  
+ OLE DB Driver for SQL Server 大量複製資料列集是唯寫的，但會公開介面讓取用者得以判斷 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表的結構。 下列介面會在啟用大量複製功能的 OLE DB Driver for SQL Server 資料列集上公開：  
   
 -   **IAccessor**  
   
@@ -99,13 +99,13 @@ ms.locfileid: "67988978"
   
 -   **ISupportErrorInfo**  
   
- 提供者特定的屬性 SSPROP_FASTLOADOPTIONS、SSPROP_FASTLOADKEEPNULLS 和 SSPROP_FASTLOADKEEPIDENTITY 可控制 OLE DB Driver for SQL Server 大量複製資料列集的行為。 這些屬性是指定於 *rgPropertySets* **IOpenRowset** 參數成員的 *rgProperties* 成員中。  
+ 提供者特定的屬性 SSPROP_FASTLOADOPTIONS、SSPROP_FASTLOADKEEPNULLS 和 SSPROP_FASTLOADKEEPIDENTITY 可控制 OLE DB Driver for SQL Server 大量複製資料列集的行為。 這些屬性是在 *rgPropertySets* **IOpenRowset** 參數成員的 *rgProperties* 成員中指定的。  
   
-|屬性識別碼|Description|  
+|屬性識別碼|描述|  
 |-----------------|-----------------|  
-|SSPROP_FASTLOADKEEPIDENTITY|資料行：否<br /><br /> R/W：讀取/寫入<br /><br /> 類型：VT_BOOL<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：維護取用者所提供的識別值。<br /><br /> VARIANT_FALSE：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表中識別資料行的值是由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 產生。 SQL Server 的 OLE DB 驅動程式會忽略資料行所系結的任何值。<br /><br /> VARIANT_TRUE：取用者會繫結為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 識別資料行提供值的存取子。 在接受 NULL 的資料行上不提供識別屬性，所以取用者會在每個 **IRowsetFastLoad::Insert** 呼叫上提供唯一值。|  
-|SSPROP_FASTLOADKEEPNULLS|資料行：否<br /><br /> R/W：讀取/寫入<br /><br /> 類型：VT_BOOL<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：針對具有 DEFAULT 條件約束的資料行維護 NULL。 只對接受 NULL 且套用 DEFAULT 條件約束的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料行造成影響。<br /><br /> VARIANT_FALSE：當 OLE DB Driver for SQL Server 取用者插入的資料列包含資料行要用的 NULL 時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會插入資料行的預設值。<br /><br /> VARIANT_TRUE：當 OLE DB Driver for SQL Server 取用者插入的資料列包含資料行要用的 NULL 時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會插入 NULL 作為資料行值。|  
-|SSPROP_FASTLOADOPTIONS|資料行：否<br /><br /> R/W：讀取/寫入<br /><br /> 類型：VT_BSTR<br /><br /> 預設值：無<br /><br /> 描述：這個屬性與 **bcp** 公用程式的 **-h** "*hint*[,...*n*]" 選項相同。 將資料大量複製到資料表時，可使用下列字串做為選項。<br /><br /> **ORDER**(*column*[**ASC** &#124; **DESC**][,...*n*])：資料在資料檔案中的排序次序。 如果載入的資料檔是依照資料表的叢集索引來排序，將可增進大量複製的效能。<br /><br /> **ROWS_PER_BATCH** = *bb*：每批次的資料列數目 (記為 *bb*)。 伺服器根據 *bb*值，將大量載入最佳化。 根據預設，**ROWS_PER_BATCH** 是未知的。<br /><br /> **KILOBYTES_PER_BATCH** = *cc*：每批次資料的千位元組 (KB) 數目 (記為 cc)。 根據預設，**KILOBYTES_PER_BATCH** 是未知的。<br /><br /> **TABLOCK**：在大量複製作業期間取得資料表層級鎖定。 這個選項會大幅提升效能，因為只在大量複製作業期間保留鎖定，會減少競爭資料表鎖定的情況。 如果資料表沒有索引，且指定了 **TABLOCK**，多個用戶端便可以同時載入這份資料表。 根據預設，鎖定行為由資料表選項 **table lock on bulk load** (大量載入時鎖定資料表) 來決定。<br /><br /> **CHECK_CONSTRAINTS**：在大量複製作業期間會檢查 *table_name* 上的任何條件約束。 依預設，會忽略條件約束。<br /><br /> **FIRE_TRIGGER**：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會將資料列版本設定用於觸發程序，並將資料列版本儲存在 **tempdb** 的版本存放區內。 因此，即使啟用了觸發程序，也可以使用記錄最佳化。 在觸發程序啟用的情況下，您可能需要先擴充 **tempdb** 的大小，然後才能大量匯入具有大量資料列的批次。|  
+|SSPROP_FASTLOADKEEPIDENTITY|資料行：否<br /><br /> R/W︰讀取/寫入<br /><br /> 輸入：VT_BOOL<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：維護取用者所提供的識別值。<br /><br /> VARIANT_FALSE：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表中識別資料行的值是由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 產生。 OLE DB Driver for SQL Server 會忽略為資料行所繫結的任何值。<br /><br /> VARIANT_TRUE：取用者會繫結為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 識別資料行提供值的存取子。 在接受 NULL 的資料行上不提供識別屬性，所以取用者會在每個 **IRowsetFastLoad::Insert** 呼叫上提供唯一值。|  
+|SSPROP_FASTLOADKEEPNULLS|資料行：否<br /><br /> R/W︰讀取/寫入<br /><br /> 輸入：VT_BOOL<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：針對具有 DEFAULT 條件約束的資料行維護 NULL。 只對接受 NULL 且套用 DEFAULT 條件約束的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料行造成影響。<br /><br /> VARIANT_FALSE：當 OLE DB Driver for SQL Server 取用者插入的資料列包含資料行要用的 NULL 時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會插入資料行的預設值。<br /><br /> VARIANT_TRUE：當 OLE DB Driver for SQL Server 取用者插入的資料列包含資料行要用的 NULL 時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會插入 NULL 作為資料行值。|  
+|SSPROP_FASTLOADOPTIONS|資料行：否<br /><br /> R/W︰讀取/寫入<br /><br /> 輸入：VT_BSTR<br /><br /> 預設值：無<br /><br /> 描述：這個屬性與 **bcp** 公用程式的 **-h** "*hint*[,...*n*]" 選項相同。 將資料大量複製到資料表時，可使用下列字串做為選項。<br /><br /> **ORDER**(*column*[**ASC** &#124; **DESC**][,...*n*]):資料檔案中資料的排序次序。 如果載入的資料檔是依照資料表的叢集索引來排序，將可增進大量複製的效能。<br /><br /> **ROWS_PER_BATCH** = *bb*：每一批資料的資料列數目 (如 *bb*)。 伺服器根據 *bb*值，將大量載入最佳化。 根據預設，**ROWS_PER_BATCH** 是未知的。<br /><br /> **KILOBYTES_PER_BATCH** = *cc*：每一批資料的 KB 數目 (如 cc)。 根據預設，**KILOBYTES_PER_BATCH** 是未知的。<br /><br /> **TABLOCK**：在大量複製作業期間必須使用資料表層級鎖定。 這個選項會大幅提升效能，因為只在大量複製作業期間保留鎖定，會減少競爭資料表鎖定的情況。 如果資料表沒有索引，且指定了 **TABLOCK**，多個用戶端便可以同時載入這份資料表。 根據預設，鎖定行為由資料表選項 **table lock on bulk load** (大量載入時鎖定資料表) 來決定。<br /><br /> **CHECK_CONSTRAINTS**：在大量複製作業期間會檢查 *table_name* 上的任何條件約束。 依預設，會忽略條件約束。<br /><br /> **FIRE_TRIGGER**：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會將資料列版本設定用於觸發程序，並將資料列版本儲存在 **tempdb** 的版本存放區內。 因此，即使啟用了觸發程序，也可以使用記錄最佳化。 在觸發程序啟用的情況下，您可能需要先擴充 **tempdb** 的大小，然後才能大量匯入具有大量資料列的批次。|  
   
 ### <a name="using-file-based-bulk-copy-operations"></a>使用以檔案為基礎的大量複製作業  
  OLE DB Driver for SQL Server 實作 **IBCPSession** 介面，以公開對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以檔案為基礎之大量複製作業的支援。 **IBCPSession** 介面會實作 [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)、[IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md)、[IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md)、[IBCPSession::BCPDone](../../oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md)[IBCPSession::BCPExec](../../oledb/ole-db-interfaces/ibcpsession-bcpexec-ole-db.md)、[IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)、[IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) 和 [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) 方法。  

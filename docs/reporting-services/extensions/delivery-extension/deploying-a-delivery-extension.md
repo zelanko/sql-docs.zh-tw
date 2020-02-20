@@ -13,10 +13,10 @@ ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 06cffe614eaa55713fed862dc03f7c81da7bc287
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193768"
 ---
 # <a name="deploying-a-delivery-extension"></a>部署傳遞延伸模組
@@ -31,7 +31,7 @@ ms.locfileid: "63193768"
   
  下表說明傳遞延伸模組之 **Extension** 項目的屬性。  
   
-|attribute|Description|  
+|屬性|描述|  
 |---------------|-----------------|  
 |**名稱**|延伸模組的唯一名稱 (例如，供電子郵件傳遞延伸模組使用的 "Report Server E-Mail"，或是供檔案共用傳遞延伸模組使用的 "Report Server FileShare")。 **Name** 屬性的最大長度為 255 個字元。 該名稱在組態檔之 **Extension** 元素的所有元素中，必須是唯一的。 如果重複的名稱存在，報表伺服器會傳回錯誤。|  
 |**型別**|以逗號分隔的清單，包括完整的命名空間以及組件的名稱。|  
@@ -49,7 +49,7 @@ ms.locfileid: "63193768"
     > [!IMPORTANT]  
     >  如果您嘗試覆寫現有的傳遞延伸模組件，必須先停止報表伺服器服務，再複製更新的組件。 在組件完成複製之後，重新啟動服務。  
   
-2.  在複製組件檔之後，開啟 RSReportServer.config 檔。 RSReportServer.config 檔案位於 %ProgramFiles%\Microsoft SQL Server\MSRS13.\<執行個體名稱>\Reporting Services\ReportServer 目錄。 您需要在傳遞延伸模組組件檔的組態檔中建立項目。 您可以利用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或簡單的文字編輯器 (如 [記事本]) 開啟設定檔。  
+2.  在複製組件檔之後，開啟 RSReportServer.config 檔。 RSReportServer.config 檔案位於 %ProgramFiles%\Microsoft SQL Server\MSRS13.\<執行個體名稱>\Reporting Services\ReportServer 目錄。 您需要在傳遞延伸模組組件檔的組態檔中建立項目。 您可以利用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或簡單的文字編輯器 (例如 [記事本]) 開啟設定檔。  
   
 3.  在 RSReportServer.config 檔中，找出 **Delivery** 項目。 應該針對您新建立的傳遞延伸模組，在下列位置建立項目：  
   

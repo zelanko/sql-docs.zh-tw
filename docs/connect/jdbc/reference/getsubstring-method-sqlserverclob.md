@@ -1,5 +1,5 @@
 ---
-title: getSubString 方法 (SQLServerClob) |Microsoft Docs
+title: getSubString 方法 (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73b82c550c78d409accd423b485fc7b9825dbc8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979331"
 ---
 # <a name="getsubstring-method-sqlserverclob"></a>getSubString 方法 (SQLServerClob)
@@ -50,8 +50,8 @@ public java.lang.String getSubString(long pos,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getSubString 方法是由 Clob 介面中的 getSubString 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getSubString 方法是由 java.sql.Clob 介面中的 getSubString 方法所指定。  
   
  嘗試從 null 或零長度 CLOB 中取得零個字元時，將會傳回空字串。 嘗試在零長度 CLOB 中的位置 1 以外之任何位置取得任何長度的字元時，將會擲回位置例外狀況。  
   

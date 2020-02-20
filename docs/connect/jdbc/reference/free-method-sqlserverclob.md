@@ -1,5 +1,5 @@
 ---
-title: free 方法 (SQLServerClob) |Microsoft Docs
+title: free 方法 (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f3845548-5186-4986-953c-ddce14057ec1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8bfbd2cd3bbde4f9ee5750c28d705ee27072d419
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954469"
 ---
 # <a name="free-method-sqlserverclob"></a>free 方法 (SQLServerClob)
@@ -32,7 +32,7 @@ public void free()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 free 方法是由 java.sql.Clob 介面中的 free 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

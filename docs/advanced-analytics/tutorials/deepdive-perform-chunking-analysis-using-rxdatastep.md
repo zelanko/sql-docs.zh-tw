@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR 中的區塊化分析
-description: 如何在 SQL Server 上使用 R 語言將資料區塊化以進行分散式分析的教學課程逐步解說。
+description: RevoScaleR 教學課程 12：如何在 SQL Server 上使用 R 語言將資料區塊化以進行分散式分析。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,22 +9,22 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c7aa853f44a04e55802012e81e59a15d2b5282b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0ad082c3a21292b782d5888b48b698c986c0b5b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727242"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947205"
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>使用 rxDataStep 執行區塊化分析 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本課程是 [RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分，說明如何將 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server 搭配使用。
+此教學課程是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 12 個，該系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
 
-在本課程中，您會使用 **rxDataStep** 函式以區塊形式處理資料，而不需要將整個資料集載入記憶體並且一次處理，就像傳統的 R 一樣。**rxDataStep** 函式會以區塊形式讀取資料、依序將 R 函式套用至每個資料區塊，然後將每個區塊的摘要結果儲存到通用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源。 當所有資料都已讀取時，會合併結果。
+在此教學課程中，您將會使用 **rxDataStep** 函式以區塊形式處理資料，而不需要將整個資料集載入記憶體並且一次處理，就像傳統的 R 一樣。**rxDataStep** 函式會以區塊形式讀取資料、依序將 R 函式套用至每個資料區塊，然後將每個區塊的摘要結果儲存到通用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源。 當所有資料都已讀取時，會合併結果。
 
 > [!TIP]
-> 在本課程中，您會使用 R 中的 **table** 函式來計算應變資料表。這個範例僅供教學之用。 
+> 在此教學課程中，您會使用 R 中的 **table** 函式來計算應變資料表。這個範例僅供教學之用。 
 > 
 > 如果您需要將實際的資料集製成表格，建議您使用 **RevoScaleR** 中的 **rxCrossTabs** 或 **rxCube** 函式，它們已針對這類的作業進行最佳化。
 

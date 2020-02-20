@@ -1,5 +1,5 @@
 ---
-title: getProcedureColumns 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getProcedureColumns 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1767519cc2f36bac4a70da84efeb8da9e2a1ec3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980749"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>getProcedureColumns 方法 (SQLServerDatabaseMetaData)
@@ -60,12 +60,12 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getProcedureColumns 方法是由 JAVA.sql.databasemetadata 介面中的 getProcedureColumns 方法指定。  
+## <a name="remarks"></a>備註  
+ 此 getProcedureColumns 方法是由 java.sql.DatabaseMetaData 介面中的 getProcedureColumns 方法所指定。  
   
  透過 getProcedureColumns 方法所傳回的結果集將包含下列資訊：  
   
-|[屬性]|類型|Description|  
+|名稱|類型|描述|  
 |----------|----------|-----------------|  
 |PROCEDURE_CAT|**String**|指定之預存程序所在之資料庫的名稱。|  
 |PROCEDURE_SCHEM|**String**|預存程序的結構描述。|  
@@ -82,7 +82,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |REMARKS|**String**|程序資料行的描述。<br /><br /> <br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
 |COLUMN_DEF|**String**|資料行的預設值。|  
 |SQL_DATA_TYPE|**smallint**|除了 **datetime** 和 **ISO interval** 資料類型，這個資料行與 **DATA_TYPE** 資料行相同。|  
-|SQL_DATETIME_SUB|**smallint**|**datetime** ISO **interval** 子代碼 (如果 **SQL_DATA_TYPE** 的值是 **SQL_DATETIME** 或 **SQL_INTERVAL**)。 若為**datetime**和 ISO **interval**以外的資料類型, 這個資料行就是 Null。|  
+|SQL_DATETIME_SUB|**smallint**|**datetime** ISO **interval** 子代碼 (如果 **SQL_DATA_TYPE** 的值是 **SQL_DATETIME** 或 **SQL_INTERVAL**)。 如果是 **datetime** 和 ISO **interval** 以外的資料類型，這個資料行便是 NULL。|  
 |CHAR_OCTET_LENGTH|**int**|資料行中的最大位元組數。|  
 |ORDINAL_POSITION|**int**|資料表內資料行的索引。|  
 |IS_NULLABLE|**String**|指出資料行是否允許為 Null 值。|  
@@ -94,7 +94,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|XML 結構描述集合的名稱。 如果找不到該名稱，這就是空字串。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|包含使用者定義型別 (UDT) 的目錄名稱。|  
 |SS_XML_SCHEMACOLLECTION_NAME|**String**|包含使用者定義型別 (UDT) 的結構描述名稱。|  
-|SS_DATA_TYPE|**tinyint**|擴充預存程序所使用的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型。<br /><br /> <br /><br /> **注意：** 如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 傳回之資料類型的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》中的＜資料類型 (Transact-SQL)＞。|  
+|SS_DATA_TYPE|**tinyint**|擴充預存程序所使用的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型。<br /><br /> <br /><br /> **注意：** 如需有關由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 傳回之資料類型的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》的＜資料類型 (Transact-SQL)＞。|  
   
 > [!NOTE]  
 >  如需由 getProcedureColumns 方法所傳回資料的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》中的＜sp_sproc_columns (Transact-SQL)＞。  

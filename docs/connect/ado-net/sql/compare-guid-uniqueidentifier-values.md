@@ -9,29 +9,29 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 8a4c5fcc63c2d2ddb8414227ea049e78db1cba10
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 35fc93a9ce6eb5b1709c6671adb21eb3030dea63
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452288"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247846"
 ---
 # <a name="comparing-guid-and-uniqueidentifier-values"></a>比較 GUID 和 uniqueidentifier 值
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-SQL Server 中的全域唯一識別碼（GUID）資料類型是以 `uniqueidentifier` 資料類型表示，它會儲存16位元組的二進位值。 GUID 是二進位數字，主要當成識別項使用，在許多電腦位於許多站台上的網路中，該識別項必須是唯一的。 Guid 可以藉由呼叫 Transact-sql NEWID 函式來產生，並保證在整個世界中都是唯一的。 如需詳細資訊，請參閱[uniqueidentifier （transact-sql）](../../../t-sql/data-types/uniqueidentifier-transact-sql.md)。  
+SQL Server 中的全域唯一識別碼 (GUID) 資料類型會以 `uniqueidentifier` 資料類型來表示，它會儲存 16 位元組的二進位值。 GUID 是二進位數字，主要當成識別項使用，在許多電腦位於許多站台上的網路中，該識別項必須是唯一的。 GUID 可藉由呼叫 Transact-SQL NEWID 函數來產生，並保證在全世界都是唯一的。 如需詳細資訊，請參閱 [uniqueidentifier (Transact-SQL)](../../../t-sql/data-types/uniqueidentifier-transact-sql.md)。  
   
 ## <a name="working-with-sqlguid-values"></a>使用 SqlGuid 值  
-因為 Guid 值很長且不明顯，所以不會對使用者有意義。 如果隨機產生的 Guid 會用於索引鍵值，而且您插入大量資料列，您會在索引中取得隨機的 i/o，這可能會對效能產生負面影響。 相較于其他資料類型，Guid 也相當大。 一般來說，我們建議僅針對不適用其他資料類型的非常窄案例，使用 Guid。  
+由於 GUID 值很長且難理解，因此它們對使用者而言不具任何意義。 如果會針對索引鍵值使用隨機產生的 GUID，而且您插入了大量資料列，則您會在索引中取得隨機的 I/O，這可能會對效能產生負面影響。 相較於其他資料類型，GUID 也相對較大。 一般來說，我們建議僅針對範圍非常侷限且不適用其他資料類型的案例使用 GUID。  
   
 ### <a name="comparing-guid-values"></a>比較 GUID 值  
 比較運算子可以搭配使用 `uniqueidentifier` 值。 不過排序並不是比較兩值的位元模式加以實作的。 `uniqueidentifier` 值允許的運算只有比較 (=、<>、\<、>、\<=、>=)，以及檢查其是否為 NULL (IS NULL 及 IS NOT NULL)。 不允許其他算術運算子。  
   
-<xref:System.Guid> 和 <xref:System.Data.SqlTypes.SqlGuid> 都有 `CompareTo` 的方法，可比較不同的 GUID 值。 不過，`System.Guid.CompareTo` 和 `SqlTypes.SqlGuid.CompareTo` 會以不同的方式執行。 <xref:System.Data.SqlTypes.SqlGuid> 使用 SQL Server 行為來執行 `CompareTo`，在值的最後六個位元組中是最重要的。 <xref:System.Guid> 會評估所有的16個位元組。 下列範例示範這項行為差異。 程式碼的第一個區段會顯示未排序的 <xref:System.Guid> 值，而程式碼的第二個區段會顯示已排序的 <xref:System.Guid> 值。 第三個區段會顯示已排序的 <xref:System.Data.SqlTypes.SqlGuid> 值。 輸出會顯示在程式代碼清單下方。  
+<xref:System.Guid> 和 <xref:System.Data.SqlTypes.SqlGuid> 都具有 `CompareTo` 方法，可用來比較不同的 GUID 值。 不過，`System.Guid.CompareTo` 和 `SqlTypes.SqlGuid.CompareTo` 的實作方式不同。 <xref:System.Data.SqlTypes.SqlGuid> 會使用 SQL Server 行為來實作 `CompareTo`，值的最後六個位元組最重要。 <xref:System.Guid> 會評估所有的 16 個位元組。 下列範例示範這項行為差異。 程式碼的第一個區段會顯示未排序的 <xref:System.Guid> 值，而程式碼的第二個區段會顯示已排序的 <xref:System.Guid> 值。 第三個區段則會顯示已排序的 <xref:System.Data.SqlTypes.SqlGuid> 值。 輸出會顯示於程式碼清單下方。  
   
 [!code-csharp[DataWorks SqlGuid#1](~/../sqlclient/doc/samples/SqlGuid.cs#1)]
   

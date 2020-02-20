@@ -1,27 +1,26 @@
 ---
-title: 快速入門：建立 R 指令碼
-titleSuffix: SQL Server Machine Learning Services
-description: 使用 SQL Server 機器學習服務，在 SQL Server 執行個體中建立及執行簡單的 R 指令碼。
+title: 快速入門：執行 R 指令碼
+description: 使用 SQL Server 機器學習服務執行一組簡單的 R 指令碼。 了解如何使用預存程序 sp_execute_external_script 在 SQL Server 執行個體中執行指令碼。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a8e2779e930671faa9fa3ab94a7384ab1bdca83
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 495bb56cf76391c8baa1734665d5064b586d4be8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726992"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831785"
 ---
-# <a name="quickstart-create-and-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server 機器學習服務建立及執行簡單的 R 指令碼
+# <a name="quickstart-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server 機器學習服務執行簡單的 R 指令碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在本快速入門中，您將使用 [SQL Server 機器學習服務](../what-is-sql-server-machine-learning.md)來建立和執行一組簡單的 R 指令碼。 您將了解如何將格式正確的 R 指令碼包裝在預存程式 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 中，並在 SQL Server 執行個體中執行指令碼。
+在此快速入門中，您將會使用 [SQL Server 機器學習服務](../what-is-sql-server-machine-learning.md)來執行一組簡單的 R 指令碼。 您將會了解如何使用預存程序 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 在 SQL Server 執行個體中執行指令碼。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -91,7 +90,7 @@ GO
 | | |
 |-|-|
 | @language | 定義要呼叫的語言擴充功能，在本例中為 R |
-| @script | 定義要傳遞至 R 執行階段的命令。 您的整個 R 指令碼必須以 Unicode 文字的格式包含在此引數中。 您也可以將文字新增至 **Nvarchar** 類型的變數，並呼叫該變數 |
+| @script | 定義要傳遞至 R 執行階段的命令。 整個 R 指令碼都必須包含在這個引數中 (作為 Unicode 文字)。 您也可以將文字新增至 **Nvarchar** 類型的變數，並呼叫該變數 |
 | @input_data_1 | 查詢所傳回的資料會傳遞到 R 執行階段，它會以資料框架的格式將資料傳回 SQL Server |
 |使用結果集 | 子句會定義 SQL Server 傳回資料表的結構描述，然後加入 "Hello World" 做為資料行名稱，並將 **int** 用於資料類型 |
 
@@ -161,7 +160,7 @@ GO
     請注意，R 區分大小寫。 R 指令碼 (**SQL_out** **SQL_in**) 中所使用的輸入和輸出變數必須比對以 `@input_data_1_name` 和 `@output_data_1_name` 定義的名稱，包括大小寫。
 
    > [!TIP]
-   > 只有一個輸入資料集可以當作參數傳遞，您只能傳回一個資料集。 不過，您可以從 R 程式碼內部呼叫其他資料集，而且除了資料集之外，您還可以傳回其他類型的輸出。 您也可以將 OUTPUT 關鍵字新增至任何參數，讓它傳回結果。
+   > 只有一個輸入資料集可以傳入作為參數，而且您只能傳回一個資料集。 不過，您可以從 R 程式碼內呼叫其他資料集，而且可以在資料集以外傳回其他類型的輸出。 您也可以為任何參數加上 OUTPUT 關鍵字，使其與結果一起傳回。
 
 1. 您也可以在無輸入資料的情況下 (`@input_data_1` 設為空白)，只使用 R 指令碼產生值。
 

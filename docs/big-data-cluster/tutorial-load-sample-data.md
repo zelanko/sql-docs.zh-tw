@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 52285164928e1a4811abc17e931a1af1921c6d07
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653280"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831415"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>教學課程：將範例資料載入 SQL Server 巨量資料叢集
 
@@ -36,7 +36,7 @@ ms.locfileid: "69653280"
  
 ## <a id="sampledata"></a> 載入範例資料
 
-下列步驟會使用啟動程序指令碼來下載 SQL Server 資料庫備份，並將資料載入您的巨量資料叢集中。 為了方便，這些步驟已細分為 [Windows](#windows) 和 [Linux](#linux) 章節。
+下列步驟會使用啟動程序指令碼來下載 SQL Server 資料庫備份，並將資料載入您的巨量資料叢集中。 為了方便，這些步驟已細分為 [Windows](#windows) 和 [Linux](#linux) 章節。 如果您想要使用基本使用者名稱/密碼作為驗證機制，請在執行指令碼之前，先設定 AZDATA_USERNAME 與 AZDATA_PASSWORD 環境變數。 否則，指令碼將使用整合式驗證來連線到 SQL Server 主要執行個體與 Knox 閘道。 此外，也應該為端點指定 DNS 名稱以使用整合式驗證。
 
 ## <a id="windows"></a> Windows
 
@@ -61,21 +61,19 @@ ms.locfileid: "69653280"
 
 1. 啟動程序指令碼需要巨量資料叢集的下列位置參數：
 
-   | 參數 | Description |
+   | 參數 | 描述 |
    |---|---|
    | <CLUSTER_NAMESPACE> | 您為巨量資料叢集提供的名稱。 |
-   | <SQL_MASTER_IP> | 主要執行個體的 IP 位址。 |
-   | <SQL_MASTER_SA_PASSWORD> | 主要執行個體的 SA 密碼。 |
-   | <KNOX_IP> | HDFS/Spark 閘道的 IP 位址。 |
-   | <KNOX_PASSWORD> | HDFS/Spark 閘道的密碼。 |
-
+   | <SQL_MASTER_ENDPOINT> | 主要執行個體的 DNS 名稱或 IP 位址。 |
+   | <KNOX_ENDPOINT> | HDFS/Spark 閘道的 DNS 名稱或 IP 位址。 |
+   
    > [!TIP]
    > 使用 [kubectl](cluster-troubleshooting-commands.md) 來尋找 SQL Server 主要執行個體和 Knox 的 IP 位址。 執行 `kubectl get svc -n <your-big-data-cluster-name>` 並查看主要執行個體 (**master-svc-external**) 和 Knox (**gateway-svc-external**) 的外部 IP 位址。 叢集的預設名稱是 **mssql-cluster**。
 
 1. 執行啟動程序指令碼。
 
    ```cmd
-   .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
 ## <a id="linux"></a> Linux
@@ -97,13 +95,11 @@ ms.locfileid: "69653280"
 
 1. 啟動程序指令碼需要巨量資料叢集的下列位置參數：
 
-   | 參數 | Description |
+   | 參數 | 描述 |
    |---|---|
    | <CLUSTER_NAMESPACE> | 您為巨量資料叢集提供的名稱。 |
-   | <SQL_MASTER_IP> | 主要執行個體的 IP 位址。 |
-   | <SQL_MASTER_SA_PASSWORD> | 主要執行個體的 SA 密碼。 |
-   | <KNOX_IP> | HDFS/Spark 閘道的 IP 位址。 |
-   | <KNOX_PASSWORD> | HDFS/Spark 閘道的密碼。 |
+   | <SQL_MASTER_ENDPOINT> | 主要執行個體的 DNS 名稱或 IP 位址。 |
+   | <KNOX_ENDPOINT> | HDFS/Spark 閘道的 DNS 名稱或 IP 位址。 |
 
    > [!TIP]
    > 使用 [kubectl](cluster-troubleshooting-commands.md) 來尋找 SQL Server 主要執行個體和 Knox 的 IP 位址。 執行 `kubectl get svc -n <your-big-data-cluster-name>` 並查看主要執行個體 (**master-svc-external**) 和 Knox (**gateway-svc-external**) 的外部 IP 位址。 叢集的預設名稱是 **mssql-cluster**。
@@ -111,7 +107,7 @@ ms.locfileid: "69653280"
 1. 執行啟動程序指令碼。
 
    ```bash
-   sudo env "PATH=$PATH" ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
 ## <a name="next-steps"></a>後續步驟

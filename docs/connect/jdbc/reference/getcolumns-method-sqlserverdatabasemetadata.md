@@ -1,5 +1,5 @@
 ---
-title: getColumns 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getColumns 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d34f5748a5a85d67754ea9a001ba1819935e53a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952831"
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>getColumns 方法 (SQLServerDatabaseMetaData)
@@ -60,12 +60,12 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 getColumns 方法是由 java.sql.DatabaseMetaData 介面中的 getColumns 方法指定。  
   
  透過 getColumns 方法所傳回的結果將包含下列資訊：  
   
-|[屬性]|類型|Description|  
+|名稱|類型|描述|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|目錄的名稱。|  
 |TABLE_SCHEM|**String**|資料表結構描述名稱。|  
@@ -109,13 +109,13 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型|JDBC Driver 2.0 中傳回類型及關聯的數值常數 (若連線到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)])|JDBC Driver 3.0 中的傳回類型 (當連線到 [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] 或更新版本時)|  
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|  
 |大於 8 kB 的使用者定義型別|LONGVARBINARY (-4)|VARBINARY (-3)|  
-|地理位置|LONGVARBINARY (-4)|VARBINARY (-3)|  
+|geography|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |幾何|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |varbinary(max)|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |nvarchar(max)|LONGVARCHAR (-1) 或 LONGNVARCHAR (JDBC 4) (-16)|VARCHAR (12) 或 NVARCHAR (JDBC 4) (-9)|  
 |varchar(max)|LONGVARCHAR (-1)|VARCHAR (12)|  
 |time|VARCHAR (12) 或 NVARCHAR (JDBC 4) (-9)|TIME (-154)|  
-|日期|VARCHAR (12) 或 NVARCHAR (JDBC 4) (-9)|DATE (91)|  
+|date|VARCHAR (12) 或 NVARCHAR (JDBC 4) (-9)|DATE (91)|  
 |datetime2|VARCHAR (12) 或 NVARCHAR (JDBC 4) (-9)|TIMESTAMP (93)|  
 |datetimeoffset|VARCHAR (12) 或 NVARCHAR (JDBC 4) (-9)|microsoft.sql.Types.DATETIMEOFFSET  (-155)|  
   
@@ -124,10 +124,10 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型|JDBC Driver 2.0 中的傳回類型|JDBC Driver 3.0 中的傳回類型|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |nvarchar(max)|1073741823|2147483647 (資料庫中繼資料)|  
-|xml|1073741823|2147483647 (資料庫中繼資料)|  
+|Xml|1073741823|2147483647 (資料庫中繼資料)|  
 |小於或等於 8 kB 的使用者定義型別|8 kB (結果集和參數中繼資料)|預存程序傳回的實際大小。|  
 |time||該類型的字串表示法長度 (以字元為單位)，假設最大值可以容納分數秒元件的有效位數。|  
-|日期||與 time 相同|  
+|date||與 time 相同|  
 |datetime2||與 time 相同|  
 |datetimeoffset||與 time 相同|  
   
@@ -149,7 +149,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 類型|JDBC Driver 2.0|JDBC Driver 3.0|  
 |--------------------------------------------------------------|---------------------|---------------------|  
 |time|null|7 (如果有指定的話，則為更小的值)|  
-|日期|null|null|  
+|date|null|null|  
 |datetime2|null|7 (如果有指定的話，則為更小的值)|  
 |datetimeoffset|null|7 (如果有指定的話，則為更小的值)|  
   
@@ -159,14 +159,14 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|  
 |varchar(max)|-10|-9|  
 |nvarchar(max)|-1|-9|  
-|xml|-10|-152|  
+|Xml|-10|-152|  
 |小於或等於 8 kB 的使用者定義型別|-3|-151|  
 |大於 8 kB 的使用者定義型別|不適用於 JDBC Driver 2.0|-151|  
-|地理位置|-4|-151|  
+|geography|-4|-151|  
 |幾何|-4|-151|  
 |hierarchyid|-4|-151|  
 |time|-9|92|  
-|日期|-9|91|  
+|date|-9|91|  
 |datetime2|-9|93|  
 |datetimeoffset|-9|-155|  
   

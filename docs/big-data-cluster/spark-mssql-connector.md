@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7720db661d90c3ff2ebec593b22a5aa638038132
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 105fa47ecaa560eace9d798a39950639ecbcb5c0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844221"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831180"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>如何使用 MSSQL Spark 連接器從 Spark 讀取和寫入 SQL Server
 
@@ -39,7 +39,7 @@ SQL Server 2019 為巨量資料叢集提供 **MSSQL Spark 連接器**，使用 S
 
 下表描述已變更或新增的介面參數：
 
-| 屬性名稱 | 選擇性 | Description |
+| 屬性名稱 | 選用 | 描述 |
 |---|---|---|
 | **isolationLevel** | 是 | 這會描述連線的隔離等級。 MSSQL Spark 連接器的預設值為 **READ_COMMITTED** |
 
@@ -78,10 +78,10 @@ SQL Server 2019 為巨量資料叢集提供 **MSSQL Spark 連接器**，使用 S
 
 若要示範如何以 MSSQL Spark 連接器運用此資料，您可以下載範例筆記本，並於 Azure Data Studio 中開啟，然後執行每個程式碼區塊。 如需使用筆記本的詳細資訊，請參閱[如何在 SQL Server 中使用筆記本](notebooks-guidance.md)。
 
-1. 從 PowerShell 或 Bash 命令列，執行下列命令，下載 **mssql_spark_connector.ipynb** 範例筆記本：
+1. 從 PowerShell 或 bash 命令列執行下列命令，以下載 **mssql_spark_connector_non_ad_pyspark.ipynb** 範例筆記本：
 
    ```PowerShell
-   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector.ipynb"
+   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector_non_ad_pyspark.ipynb"
    ```
 
 1. 在 Azure Data Studio 中，開啟範例筆記本檔案。 確認已連線到巨量資料叢集的 HDFS/Spark 閘道。

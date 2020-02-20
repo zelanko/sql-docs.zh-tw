@@ -1,5 +1,5 @@
 ---
-title: deletesAreDetected 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: deletesAreDetected 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/20/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aef2ebd78b1aed2d03ba56ef3371d7f0dbfade31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955126"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>deletesAreDetected 方法 (SQLServerDatabaseMetaData)
@@ -58,15 +58,15 @@ public boolean deletesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>傳回值  
- 如果間距取代了已刪除的資料列,**則為 true** 。 如果移除已刪除的資料列, 則為**false** 。  
+ 如果間距取代已刪除的資料列，則為 **true**。 如果移除已刪除的資料列，則為 **false**。  
   
  當配合 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫使用 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 時，這個方法會針對 TYPE_SS_SCROLL_KEYSET 資料指標傳回 **true**，而針對所有的其他結果集類型傳回 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 deletesAreDetected 方法是由 JAVA.sql.databasemetadata 介面中的 deletesAreDetected 方法指定。  
+## <a name="remarks"></a>備註  
+ 此 deletesAreDetected 方法是由 java.sql.DatabaseMetaData 介面中的 deletesAreDetected 方法所指定。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會偵測所有可更新資料指標類型的資料列，雖然順向和動態資料指標的偵測作業屬於暫時性質。  

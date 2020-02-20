@@ -5,53 +5,24 @@ description: 本文說明 SQL Server 巨量資料叢集的最新更新和已知�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc5928a7e3015545d36900b52ef01a42d9694cc0
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: ba9d87d4985655b314faf391eaffb8f28ba35519
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706174"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721627"
 ---
-# <a name="sql-server-big-data-clusters-release-notes"></a>SQL Server 巨量資料叢集版本資訊
+# <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 巨量資料叢集版本資訊
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-使用 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 從您所有資料取得近乎即時的見解，可提供完整的環境來處理大型資料集，包括機器學習和 AI 功能。
+下列版本資訊適用於 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。 此文章已針對每個版本細分為數個小節。 每個版本都具有描述 CU 變更的支援文章連結，以及能下載 Linux 套件的連結。 此文章也列出最新版 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (BDC) 的[已知問題](#known-issues)。
 
-本文列出最新版 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (BDC) 的更新和已知問題。
-
-## <a id="rtm"></a> SQL Server 2019
-
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 引進 SQL Server 巨量資料叢集。
-
-使用 SQL Server 巨量資料叢集可執行下列動作：
-
-- 為 Kubernetes 上執行的 SQL Server、Spark 和 HDFS 容器[部署可擴充叢集](../big-data-cluster/deploy-get-started.md)。 
-- 讀取、寫入及處理來自 Transact-SQL 或 Spark 的巨量資料。
-- 輕鬆結合及分析含有大量巨量資料的高價值關聯式資料。
-- 查詢外部資料來源。
-- 在 SQL Server 的受控 HDFS 中儲存巨量資料。
-- 透過叢集查詢來自多個外部資料來源的資料。
-- 使用 AI、機器學習和其他分析工作的資料。
-- 在 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] 中[部署及執行應用程式](../big-data-cluster/concept-application-deployment.md)。
-- 使用 [PolyBase](../relational-databases/polybase/polybase-guide.md) 將資料虛擬化。 使用外部資料表來查詢來自外部 SQL Server、Oracle、Teradata、MongoDB 及 ODBC 資料來源的資料。
-- 使用 Always On 可用性群組技術，為 SQL Server 主要執行個體和所有資料庫提供高可用性。
-
-## <a name="sql-server-version"></a>SQL Server 版本
-
-目前的 SQL Server 版本為 `15.0.2070.34`。
-
-## <a name="image-tags"></a>映像標籤
-
-此版本的映像標籤是 `2019-GDR1-ubuntu-16.04`。
-
-[!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
-
-## <a name="supportability"></a>可支援性
+## <a name="supported-platforms"></a>支援的平台
 
 本節說明 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (BDC) 支援的平台。
 
@@ -69,39 +40,154 @@ ms.locfileid: "73706174"
 |Red Hat Enterprise Linux|7.3、7.4、7.5、7.6|
 |Ubuntu|16.04|
 
-### <a name="tools"></a>工具
-
-|平台|支援的版本|
-|---------|---------|
-|`azdata`|必須與伺服器具有相同的次要版本 (與 SQL Server 主要執行個體相同)。<br/>執行 `azdata –-version` 以驗證版本。 目前，版本為 `15.0.2070`。|
-|Azure Data Studio|取得 [Azure Data Studio](https://aka.ms/getazuredatastudio) 的最新組建。|
-
 ### <a name="sql-server-editions"></a>SQL Server 版本
 
 |版本|注意|
 |---------|---------|
 |Enterprise<br/>標準<br/>開發人員| 巨量資料叢集版本是由 SQL Server 主要執行個體版本所決定。 在部署時，預設會部署 Developer Edition。 在部署後可以變更此版本。 請參閱[設定 SQL Server 主要執行個體](../big-data-cluster/configure-sql-server-master-instance.md)。 |
 
+## <a name="tools"></a>工具
+
+|平台|支援的版本|
+|---------|---------|
+|`azdata`|必須與伺服器具有相同的次要版本 (與 SQL Server 主要執行個體相同)。<br/>執行 `azdata –-version` 以驗證版本。 目前，版本為 `15.0.2070`。|
+|Azure Data Studio|取得 [Azure Data Studio](https://aka.ms/getazuredatastudio) 的最新組建。|
+
+## <a name="release-history"></a>版本歷程記錄
+
+下表列出 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的版本歷程記錄。
+
+| 版本               | 版本       | 發行日期 |
+|-----------------------|---------------|--------------|
+| [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
+| [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
+
+## <a name="how-to-install-updates"></a>如何安裝更新
+
+若要安裝更新，請參閱[如何升級 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md)。
+
+## <a id="cu1"></a> CU1 (2020 年 1 月)
+
+SQL Server 2019 的累積更新 1 (CU1) 版。 此版本的 SQL Server 資料庫引擎版本為 15.0.4003.23。
+
+|套件版本 | 映像標籤 |
+|-----|-----|
+|15.0.4003.23|[2019-CU1-ubuntu-16.04]
+
+## <a id="rtm"></a> GDR1 (2019 年 11 月)
+
+SQL Server 2019 一般發行版本 1 (GDR1) - 引進 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)] 的公開推出。 此版本的 SQL Server 資料庫引擎版本為 15.0.2070.34。
+
+|套件版本 | 映像標籤 |
+|-----|-----|
+|15.0.2070.34|[2019-GDR1-ubuntu-16.04]
+
+[!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
+
 ## <a name="known-issues"></a>已知問題
+
+### <a name="deployment-with-private-repository"></a>使用私人存放庫進行部署
+
+- **問題和對客戶的影響**︰從私人存放庫升級具有特定需求
+
+- **因應措施**：如果您使用私人存放庫來預先提取要部署或升級 BDC 的映像，請確定目前的組建映像與目標組建映像都在私人存放庫中。 這可確保成功的復原 (如果有必要)。 此外，如果您在原始部署之後變更私人存放庫的認證，請在升級之前，先更新 Kubernetes 中對應的祕密。 `azdata` 不支援透過 `AZDATA_PASSWORD` 與 `AZDATA_USERNAME` 環境變數來更新認證。 使用 [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret) 更新祕密。 
+
+不支援使用不同的存放庫來進行目前與目標組建升級。
+
+### <a name="upgrade-may-fail-due-to-timeout"></a>升級可能會因為逾時而失敗
+
+- **問題和對客戶的影響**︰升級可能會因為逾時而失敗。
+
+   下列程式碼顯示失敗看起來的樣子：
+
+   ```
+   >azdata.EXE bdc upgrade --name <mssql-cluster>
+   Upgrading cluster to version 15.0.4003
+
+   NOTE: Cluster upgrade can take a significant amount of time depending on
+   configuration, network speed, and the number of nodes in the cluster.
+
+   Upgrading Control Plane.
+   Control plane upgrade failed. Failed to upgrade controller.
+   ```
+
+   當您在 Azure Kubernetes Service (AKS) 中升級 BDC 時，很可能會發生此錯誤。
+
+- **因應措施**：增加升級的逾時。 
+
+   若要增加升級的逾時，請編輯升級設定對應。 若要編輯升級設定對應：
+
+   1. 執行以下命令：
+
+      ```bash
+      kubectl edit configmap controller-upgrade-configmap
+      ```
+
+   2.   編輯下列欄位：
+
+       **`controllerUpgradeTimeoutInMinutes`** 指定等待控制器或控制器資料庫完成升級的分鐘數。 預設值為 5。 更新為至少 20。
+
+       **`totalUpgradeTimeoutInMinutes`** ：指定控制器與控制器資料庫完成升級的合併時間量 (控制器 + 控制器資料庫升級)。預設值為 10。 更新為至少 40。
+
+       **`componentUpgradeTimeoutInMinutes`** ：指定升級必須完成之每個後續階段的時間量。  預設值為 30。 更新為 45。
+
+   3.   儲存並結束
+
+   下面的 python 指令碼是設定逾時的另一種方式：
+
+   ```python
+   from kubernetes import client, config
+   import json
+
+   def set_upgrade_timeouts(namespace, controller_timeout=20, controller_total_timeout=40, component_timeout=45):
+       """ Set the timeouts for upgrades
+
+       The timeout settings are as follows
+
+       controllerUpgradeTimeoutInMinutes: sets the max amount of time for the controller
+           or controllerdb to finish upgrading
+
+       totalUpgradeTimeoutInMinutes: sets the max amount of time to wait for both the
+           controller and controllerdb to complete their upgrade
+
+       componentUpgradeTimeoutInMinutes: sets the max amount of time allowed for
+           subsequent phases of the upgrade to complete
+       """
+       config.load_kube_config()
+
+       upgrade_config_map = client.CoreV1Api().read_namespaced_config_map("controller-upgrade-configmap", namespace)
+
+       upgrade_config = json.loads(upgrade_config_map.data["controller-upgrade"])
+
+       upgrade_config["controllerUpgradeTimeoutInMinutes"] = controller_timeout
+
+       upgrade_config["totalUpgradeTimeoutInMinutes"] = controller_total_timeout
+
+       upgrade_config["componentUpgradeTimeoutInMinutes"] = component_timeout
+
+       upgrade_config_map.data["controller-upgrade"] = json.dumps(upgrade_config)
+
+       client.CoreV1Api().patch_namespaced_config_map("controller-upgrade-configmap", namespace, upgrade_config_map)
+   ```
 
 ### <a name="livy-job-submission-from-azure-data-studio-ads-or-curl-fail-with-500-error"></a>從 Azure Data Studio (ADS) 或 curl 提交 Livy 作業失敗，並出現 500 錯誤
 
-**問題和對客戶的影響**︰在 HA 設定中，會使用多個複本來設定 Spark 共用資源 (sparkhead)。 在此情況下，您可能會遇到從 Azure Data Studio (ADS) 或 `curl` 提交 Livy 作業失敗。 若要確認，則對任何 sparkhead Pod 執行 `curl` 都會導致拒絕連線。 例如，`curl https://sparkhead-0:8998/` 或 `curl https://sparkhead-1:8998` 會傳回 500 錯誤。
+- **問題和對客戶的影響**︰在 HA 設定中，會使用多個複本來設定 Spark 共用資源 `sparkhead`。 在此情況下，您可能會遇到從 Azure Data Studio (ADS) 或 `curl` 提交 Livy 作業失敗。 若要確認，則對任何 `sparkhead` Pod 執行 `curl` 都會導致拒絕連線。 例如，`curl https://sparkhead-0:8998/` 或 `curl https://sparkhead-1:8998` 會傳回 500 錯誤。
 
-在下列案例中會發生這個情況：
+   在下列案例中會發生這個情況：
 
-- 每個 Zookeeper 執行個體的 Zookeeper Pod 或處理序會重新啟動幾次。
-- 當 Sparkhead Pod 與 Zookeeper Pod 之間的網路連線不可靠時。
+   - 每個 Zookeeper 執行個體的 Zookeeper Pod 或處理序都會重新啟動幾次。
+   - 當 `sparkhead` Pod 與 Zookeeper Pod 之間的網路連線不可靠時。
 
-**因應措施**：重新啟動這兩部 Livy 伺服器。
+- **因應措施**：重新啟動這兩部 Livy 伺服器。
 
-```bash
-kubectl -n <clustername> exec sparkhead-0 -c hadoop-livy-sparkhistory supervisorctl restart livy
-```
+   ```bash
+   kubectl -n <clustername> exec sparkhead-0 -c hadoop-livy-sparkhistory supervisorctl restart livy
+   ```
 
-```bash
-kubectl -n <clustername> exec sparkhead-1 -c hadoop-livy-sparkhistory supervisorctl restart livy
-```
+   ```bash
+   kubectl -n <clustername> exec sparkhead-1 -c hadoop-livy-sparkhistory supervisorctl restart livy
+   ```
 
 ### <a name="create-memory-optimized-table-when-master-instance-in-an-availability-group"></a>當主要執行個體在可用性群組中時，建立記憶體最佳化資料表
 
@@ -119,6 +205,12 @@ kubectl -n <clustername> exec sparkhead-1 -c hadoop-livy-sparkhistory supervisor
    ```
 
 - **因應措施**：使用下列其中一種方式來修改查詢。 將儲存集區資料表聯結至本機資料表，或先插入本機資料表，然後從本機資料表讀取以插入資料集區。
+
+### <a name="transparent-data-encryption-capabilities-can-not-be-used-with-databases-that-are-part-of-the-availability-group-in-the-sql-server-master-instance"></a>透明資料加密功能無法搭配屬於 SQL Server 主要執行個體中可用性群組一部分的資料庫使用
+
+- **問題和對客戶的影響**︰在 HA 設定中，已啟用加密的資料庫無法在容錯移轉之後使用，因為在每個複本上用來加密的主要金鑰都不同。 
+
+- **因應措施**：此問題目前沒有任何因應措施。 建議您在修正程式準備就緒之前，不要在此設定中啟用加密。
 
 ## <a name="next-steps"></a>後續步驟
 

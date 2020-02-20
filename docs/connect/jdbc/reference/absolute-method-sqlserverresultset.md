@@ -16,10 +16,10 @@ ms.assetid: 638e8148-8ca0-4e1f-9ec2-04a11bc9809b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 66bdbfa417077e70be7969b28ae851a0244e54ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67956060"
 ---
 # <a name="absolute-method-sqlserverresultset"></a>absolute 方法 (SQLServerResultSet)
@@ -40,7 +40,7 @@ public boolean absolute(int row)
  **int**，指出要移至的資料列編號。 可以為正數、負數或 0。  
   
 ## <a name="return-value"></a>傳回值  
- 如果游標移到指定的位置,**則為 true** 。 如果它是在第一個資料列之前或最後一個資料列之後, 則**為 false** 。  
+ 如果資指標移到指定位置，則為 **true**。 如果其位於第一個資料列之前或最後一個資料列之後，則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

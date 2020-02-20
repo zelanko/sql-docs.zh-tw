@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1b2a838f8ad386b8a236304401308d5be0f63ff1
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: b2f96f79b81b79d2abfaadc40c37b864d20a93dc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706352"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831396"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>使用 Python 指令碼在 Azure Kubernetes Service (AKS) 上部署 SQL Server 巨量資料叢集
 
@@ -57,7 +57,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="run-the-deployment-script"></a>執行部署指令碼
 
-使用下列步驟來執行部署指令碼。 此指令碼會在 Azure 中建立 AKS 服務，然後將 SQL Server 2019 巨量資料叢集部署至 AKS。 您也可以使用其他[環境變數](deployment-guidance.md#configfile)來修改指令碼以建立自訂部署。
+使用下列步驟在 Windows PowerShell 或 Linux Bash 命令提示字元中執行部署指令碼。 此指令碼會在 Azure 中建立 AKS 服務，然後將 SQL Server 2019 巨量資料叢集部署至 AKS。 您也可以使用其他[環境變數](deployment-guidance.md#configfile)來修改指令碼以建立自訂部署。
 
 1. 使用下列命令來執行指令碼：
 
@@ -70,7 +70,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 1. 出現提示時，輸入下列資訊：
 
-   | ReplTest1 | Description |
+   | 值 | 描述 |
    |---|---|
    | **Azure 訂用帳戶識別碼** | 用於 AKS 的 Azure 訂用帳戶識別碼。 您可以從另一個命令列執行 `az account list` 以列出您所有訂用帳戶及其識別碼。 |
    | **Azure 資源群組** | 要為 AKS 叢集建立的 Azure 資源群組名稱。 |
@@ -88,8 +88,6 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    > 部署巨量資料叢集期間無法使用 SQL Server `sa` 帳戶。 新系統管理員登入會佈建於 SQL Server 的主要執行個體中，而其名稱即是為**使用者名稱**輸入所指定的名稱，密碼則會對應到**密碼**輸入。 佈建控制器管理使用者時，會使用相同的**使用者名稱**與**密碼**值。 閘道 (Knox) 僅支援**根使用者**，密碼與上述相同。
 
 1. 指令碼會使用您指定的參數來開始建立 AKS 叢集。 此步驟需要幾分鐘的時間。
-
-   <img src="./media/quickstart-big-data-cluster-deploy/script-parameters.png" width="800px" alt="Script parameters and AKS cluster creation"/>
 
 ## <a name="monitor-the-status"></a>監視狀態
 

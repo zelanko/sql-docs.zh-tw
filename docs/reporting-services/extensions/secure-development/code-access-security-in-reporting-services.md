@@ -16,14 +16,14 @@ ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d629f820dfa2efd87e6460c1c85566e7b33cde8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193827"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Reporting Services 中的程式碼存取安全性
-  程式碼存取安全性是以下列核心概念為主：辨識項、程式碼群組與具名使用權限集合。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，報表管理員、報表設計師和報表伺服器元件都各自具有一個原則檔，其中針對自訂組件以及資料、傳遞、轉譯和安全性延伸模組設定了程式碼存取安全性。 下列各節將提供程式碼存取安全性的概觀。 如需本節中涵蓋之主題的詳細資訊，請參閱 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 文件中的＜安全性原則模型＞。  
+  程式碼存取安全性是以下列核心概念為主：辨識項、程式碼群組與具名使用權限集合。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，報表管理員、報表設計師和報表伺服器元件都各自具有一個原則檔，其中針對自訂組件以及資料、傳遞、轉譯和安全性延伸模組設定了程式碼存取安全性。 下列各節將提供程式碼存取安全性的概觀。 如需此節中涵蓋之主題的詳細資訊，請參閱 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 文件中的＜安全性原則模型＞。  
   
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用程式碼存取安全性的原因是，雖然報表伺服器是以 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 技術為基礎，但是一般 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式與報表伺服器之間仍有大幅差異。 一般 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式不會執行使用者程式碼。 反之，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會使用開放且可延伸的架構，允許使用者使用報表定義語言的 **Code** 項目針對報表定義檔案進行程式設計，以及在自訂組件中開發專用功能，以便用於報表中。 此外，開發人員可以設計和開發功能強大的延伸模組，以便強化報表伺服器的功能。 由於這項強大功能與彈性，因此產生了盡可能提供保護與安全性的需求。  
   

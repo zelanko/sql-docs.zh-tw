@@ -1,6 +1,6 @@
 ---
 title: 在主控台應用程式中輪詢
-description: 提供範例示範如何使用輪詢，以等待從主控台應用程式完成非同步命令執行。 這項技術在類別庫或其他沒有使用者介面的應用程式中也是有效的。
+description: 提供範例來示範如何使用輪詢，以等候主控台應用程式的非同步命令執行完成。 此技術在類別庫或其他沒有使用者介面的應用程式中也有效。
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: e8dc5597743a277b53f36d0bfb1487a12cbd80d9
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: bf89d2d111452970955953132edd76e602590668
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452107"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247681"
 ---
 # <a name="polling-in-console-applications"></a>在主控台應用程式中輪詢
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-ADO.NET 中的非同步作業可讓您在另一個執行緒上執行其他工作時，在一個執行緒上起始耗時的資料庫作業。 不過，在大部分的情況下，您最後會到達應用程式不應該繼續的點，直到資料庫作業完成為止。 在這種情況下，輪詢非同步作業以判斷作業是否已完成會很有用。  
+ADO.NET 中的非同步作業可讓您在一個執行緒上起始耗時的資料庫作業，同時在另一個執行緒上執行其他工作。 不過，在大部分情況下，您最後將會到達應用程式不應該繼續執行的時機點，直到資料庫作業完成為止。 在這種情況下，輪詢非同步作業以判斷作業是否已經完成會很有用。  
   
-您可以使用 <xref:System.IAsyncResult.IsCompleted%2A> 屬性來找出作業是否已完成。  
+您可以使用 <xref:System.IAsyncResult.IsCompleted%2A> 屬性來知道作業是否已經完成。  
   
 ## <a name="example"></a>範例  
-下列主控台應用程式會更新 **AdventureWorks** 範例資料庫中的資料，且會非同步地執行其工作。 為了模擬長時間執行的進程，此範例會在命令文字中插入 WAITFOR 語句。 一般來說，您不會嘗試讓命令執行得較慢，但在此情況下，這樣做可讓您更輕鬆地示範非同步行為。  
+下列主控台應用程式會更新 **AdventureWorks** 範例資料庫中的資料，且會非同步地執行其工作。 為了模擬長時間執行的程序，此範例會在命令文字中插入 WAITFOR 陳述式。 一般來說，您不會嘗試讓命令執行速度變慢，但在此案例中，這樣做可讓您更輕鬆地示範非同步行為。  
   
 ```csharp  
 using System;  

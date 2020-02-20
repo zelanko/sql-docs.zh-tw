@@ -1,5 +1,5 @@
 ---
-title: C++存取 SQL 資料庫的 ODBC 應用程式
+title: 存取 SQL 資料庫的 C++ ODBC 應用程式
 ms.custom: ''
 ms.date: 07/08/2019
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 541757a8a6919577cfe54c7dd6efa461ae0f1449
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67690552"
 ---
-# <a name="c-odbc-example-application-accesses-a-sql-database"></a>C++ODBC 範例應用程式來存取 SQL 資料庫
+# <a name="c-odbc-example-application-accesses-a-sql-database"></a>C++ ODBC 範例應用程式會存取 SQL 資料庫
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-這個C++範例應用程式示範如何使用 ODBC Api 來連線及存取 SQL database。
+這個 C++ 範例應用程式會示範如何使用 ODBC API 來連線及存取 SQL 資料庫。
 
-2013 年 10 月和年 7 月 2019，此範例之間C++ODBC 應用程式下載 47,300 的時間。 在 2019 年 7 月此應用程式來源已從 Microsoft 的程式碼庫移至這個網頁。
+在 2013 年 10 月和 2019 年 7 月之間，此範例 C++ ODBC 應用程式下載次數高達 47,300 次。 在 2019 年 7 月，此應用程式來源已從 Microsoft 的程式碼資源庫移至此網頁。
 
 <!-- 
 docs/connect/odbc/ , cpp-code-example-app-connect-access-sql-db.md

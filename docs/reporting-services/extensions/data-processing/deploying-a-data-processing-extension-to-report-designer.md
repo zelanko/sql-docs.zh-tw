@@ -12,10 +12,10 @@ ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3ff2fbd4cc5b910cdb5191d4fc51941167d8bfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194034"
 ---
 # <a name="deploying-a-data-processing-extension-to-report-designer"></a>將資料處理延伸模組部署到報表設計師
@@ -25,7 +25,7 @@ ms.locfileid: "63194034"
   
 1.  將組件從您的執行位置複製到報表設計師目錄。 報表設計師目錄的預設位置是 C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies。  
   
-2.  在複製組件檔之後，開啟 RSReportDesigner.config 檔。 RSReportDesigner.config 檔案也位於 Report Designer 目錄中。 您需要在資料處理延伸模組組件檔案的組態檔中建立項目。 您可以利用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或簡單的文字編輯器 (如 [記事本]) 開啟設定檔。  
+2.  在複製組件檔之後，開啟 RSReportDesigner.config 檔。 RSReportDesigner.config 檔案也位於 Report Designer 目錄中。 您需要在資料處理延伸模組組件檔案的組態檔中建立項目。 您可以利用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或簡單的文字編輯器 (例如 [記事本]) 開啟設定檔。  
   
 3.  在 RSReportDesigner.config 檔中，找出 **Data** 元素。 應該針對您新建立的資料處理延伸模組，在下列位置建立項目：  
   

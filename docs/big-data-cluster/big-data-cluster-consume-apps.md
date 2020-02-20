@@ -5,18 +5,19 @@ description: 使用 RESTful Web 服務取用部署在 SQL Server 巨量資料叢
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 01/07/2020
+ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 32b3884b48e20b73da186f8c0d80e6c85516a8ed
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 305080d5c3b0a1c517d757c1f6f2bd07fefb216c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73707175"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721403"
 ---
-# <a name="consume-an-app-deployed-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-using-a-restful-web-service"></a>使用 RESTful Web 服務取用部署在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上的應用程式
+# <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>使用 RESTful Web 服務取用部署在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上的應用程式
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -28,11 +29,11 @@ ms.locfileid: "73707175"
 - [azdata 命令列公用程式](deploy-install-azdata.md)
 - 使用 [azdata](big-data-cluster-create-apps.md) 或[應用程式部署擴充功能](app-deployment-extension.md)部署的應用程式
 
-## <a name="capabilities"></a>Capabilities
+## <a name="capabilities"></a>功能
 
 將應用程式部署到您的 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]之後，您就可以使用 RESTful Web 服務來存取和取用該應用程式。 這樣能夠從其他應用程式或服務 (例如，行動應用程式或網站) 整合該應用程式。 下表描述您可以搭配 **azdata** 使用的應用程式部署命令，以取得應用程式的 RESTful Web 服務相關資訊。
 
-|命令 |Description |
+|Command |描述 |
 |:---|:---|
 |`azdata app describe` | 描述應用程式。 |
 
@@ -90,7 +91,16 @@ azdata app describe --name add-app --version v1
 
 ## <a name="generate-a-jwt-access-token"></a>產生 JWT 存取權杖
 
-為了存取您已部署之應用程式的 RESTful Web 服務，您必須先產生 JWT 存取權杖。 在您的瀏覽器中，使用您執行上述 `describe` 命令所擷取的 IP 位址和連接埠開啟下列 URL：`https://[IP]:[PORT]/docs/swagger.json`。 您必須使用您用於 `azdata login` 的相同認證來登入。
+為了存取您已部署之應用程式的 RESTful Web 服務，您必須先產生 JWT 存取權杖。 存取權杖的 URL 相依於巨量資料叢集的版本。 
+
+|版本 |URL|
+|------------|------|
+|GDR1|  `https://[IP]:[PORT]/docs/swagger.json`|
+|CU1 與更新版本| `https://[IP]:[PORT]/api/v1/swagger.json`|
+
+> 如需版本資訊，請參閱[發行記錄](release-notes-big-data-cluster.md#release-history)。
+
+使用您以上述 [`describe`](#retrieve-the-endpoint) 命令擷取的 IP 位址與連接埠，在瀏覽器中開啟適當的 URL。 使用您用於 `azdata login` 的相同認證來登入。
 
 將 `swagger.json` 的內容貼入 [Swagger 編輯器](https://editor.swagger.io) \(英文\)，以了解可以使用哪些方法：
 

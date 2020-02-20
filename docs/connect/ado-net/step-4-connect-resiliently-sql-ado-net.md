@@ -1,73 +1,73 @@
 ---
-title: 步驟4：使用 ADO.NET 將彈性地連接到 SQL |Microsoft Docs
-description: 說明如何將 reciliently 連接至 SQL
+title: 步驟 4：使用 ADO.NET 復原連線到 SQL | Microsoft Docs
+description: 描述如何復原連線到 SQL
 ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: rothja
+ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 dev_langs:
 - CSharp
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: 62ec2eb775ef5fba76b402d1871afe6c87bcc606
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6c323880153939b4f7229e5f04cf4b9a9ed16b99
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451808"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253325"
 ---
-# <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>步驟 4︰使用 ADO.NET 彈性地連線到 SQL
+# <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>步驟 4：使用 ADO.NET 彈性地連線到 SQL
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[下載 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-- 上一篇文章：&nbsp;&nbsp;&nbsp;[步驟 3︰使用 ADO.NET 連線到 SQL 的概念證明](step-3-connect-sql-ado-net.md)  
+- 上一篇文章：&nbsp;&nbsp;&nbsp;[步驟 3：使用 ADO.NET 連線到 SQL 的概念證明](step-3-connect-sql-ado-net.md)  
 
   
-本主題提供的 C# 程式碼範例示範自訂的重試邏輯。 重試邏輯可提供可靠性。 重試邏輯的設計是為了正常處理暫時性錯誤或*暫時性*錯誤，如果程式等待數秒後重試，這通常會消失。  
+本主題提供的 C# 程式碼範例示範自訂的重試邏輯。 重試邏輯會提供可靠性。 重試邏輯的設計目的在於妥善處理暫時錯誤或「暫時性錯誤」  ，此類錯誤通常會在程式等候數秒並重試之後消失。  
   
 暫時性錯誤的來源包括：  
   
 - 支援網際網路的網路短暫失敗。  
-- 雲端系統可能會在您的查詢傳送時，對其資源進行負載平衡。  
+- 傳送您的查詢時，雲端系統可能正在對其資源進行負載平衡。  
   
   
-用於連接到本機 Microsoft SQL Server 的 ADO.NET 類別也可以連接到 Azure SQL Database。 不過，ADO.NET 類別本身無法提供在生產環境中使用所需的所有穩定性和可靠性。 您的用戶端程式可能會遇到暫時性錯誤，其應該以無訊息模式和適當的方式自行復原和繼續。  
+用於連接到本機 Microsoft SQL Server 的 ADO.NET 類別也可以連接到 Azure SQL Database。 不過，ADO.NET 類別本身無法提供在生產環境使用所需的所有穩定性和可靠性。 用戶端程式可能會遇到暫時性錯誤，用戶端程式應該會從失敗中無訊息且正常自行復原並繼續。  
   
-## <a name="step-1-identify-transient-errors"></a>步驟1：識別暫時性錯誤  
+## <a name="step-1-identify-transient-errors"></a>步驟 1:識別暫時性錯誤  
   
-您的程式必須區分暫時性錯誤與持續性錯誤。 暫時性錯誤是可能在短時間內清除的錯誤狀況，例如暫時性網路問題。  持續性錯誤的範例是，如果您的程式拼錯了目標資料庫名稱-在此情況下，就會保存「找不到這類資料庫」錯誤，而且不可能在短時間內清除。  
+您的程式必須區分暫時性錯誤與持續性錯誤。 暫時性錯誤是可能在短時間內清除的錯誤狀況，例如暫時性網路問題。  假設您的程式拼錯了目標資料庫名稱，就是一個持續性錯誤的範例：在此情況下，「找不到這類資料庫」錯誤就會持續存在，而且沒有機會在短時間內清除。  
   
-分類為暫時性錯誤的錯誤號碼清單可在[SQL Database 用戶端應用程式的錯誤訊息中取得](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+您可以在 [SQL Database 用戶端應用程式的錯誤訊息](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/) \(部分機器翻譯\) 上取得已分類為暫時性錯誤的錯誤號碼清單。  
   
-## <a name="step-2-create-and-run-sample-application"></a>步驟2：建立並執行範例應用程式  
+## <a name="step-2-create-and-run-sample-application"></a>步驟 2:建立並執行範例應用程式  
   
-這個範例假設已安裝 .NET Framework 4.5.1 或更新版本。  此C#程式碼範例是由一個名為 Program.cs 的檔案所組成。 下一節會提供其程式碼。  
+此範例假設已安裝 .NET Framework 4.5.1 或更新版本。  C# 程式碼範例包含一個名為 Program.cs 的檔案。 下一節會提供它的程式碼。  
   
-### <a name="step-2a-capture-and-compile-the-code-sample"></a>步驟2：捕捉和編譯器代碼範例  
+### <a name="step-2a-capture-and-compile-the-code-sample"></a>步驟 2.a：擷取並編譯程式碼範例  
   
-您可以使用下列步驟來編譯範例：  
+您可以使用下列步驟編譯此範例：  
   
-1. 在[免費的 Visual Studio Community 版本](https://www.visualstudio.com/products/visual-studio-community-vs)中，從 [ C#主控台應用程式] 範本建立新的專案。  
-    - 檔案 > 新的 > 專案 > 安裝 > 範本 > C# Visual > Windows > 傳統桌面 > 主控台應用程式  
-    - 將專案命名為**retryado2.exe**。  
+1. 在 [免費的 Visual Studio Community 版本](https://www.visualstudio.com/products/visual-studio-community-vs)中，透過 C# 主控台應用程式範本建立新的專案。  
+    - [檔案] > [新增] > [專案] > [已安裝] > [範本] > [Visual C#] > [Windows] > [傳統桌面] > [主控台應用程式]  
+    - 將專案命名為 **RetryAdo2**。  
 2. 開啟 [方案總管] 窗格。  
-    - 請參閱您專案的名稱。  
-    - 請參閱 Program.cs 檔案的名稱。  
+    - 查看專案的名稱。  
+    - 查看 Program.cs 檔案的名稱。  
 3. 開啟 Program.cs 檔案。  
-4. 使用下列程式碼區塊中的程式碼，將 Program.cs 檔案的內容完全取代。  
-5. 按一下 [建立 > 組建方案] 功能表。  
+4. 使用下列程式碼區塊中的程式碼，取代 Program.cs 檔案的所有內容。  
+5. 按一下 [建置] 功能表 > [建置解決方案]。  
   
-### <a name="step-2b-copy-and-paste-sample-code"></a>步驟 2. b：複製並貼上範例程式碼  
+### <a name="step-2b-copy-and-paste-sample-code"></a>步驟 2.b：複製並貼上範例程式碼  
   
-將此程式碼貼到您的**Program.cs**檔案中。  
+將此程式碼到貼到您的 **Program.cs** 檔案中。  
   
-接著，您必須編輯伺服器名稱、密碼等的字串。 您可以在名為**GetSqlConnectionStringBuilder**的方法中找到這些字串。  
+接著，您必須編輯伺服器名稱、密碼等項目的字串。 您可以在名為 **GetSqlConnectionStringBuilder**的方法中找到這些字串。  
   
-注意：伺服器名稱的連接字串是針對 Azure SQL Database 而提供，因為它包含**tcp：** 的四個字元前置詞。 但是，您可以調整伺服器字串來連接到您的 Microsoft SQL Server。  
+注意：伺服器名稱的連接字串適用於 Azure SQL Database，因其包含 **tcp:** 這四個字元前置詞。 但是，您可以調整伺服器字串，以連線到您的 Microsoft SQL Server。  
   
   
 ```csharp
@@ -244,13 +244,13 @@ SELECT TOP 3
 }  
 ```  
   
-###  <a name="step-2c-run-the-program"></a>步驟 2. c：執行程式  
+###  <a name="step-2c-run-the-program"></a>步驟 2.c：執行程式  
   
   
-**Retryado2.exe**可執行檔不會輸入任何參數。 若要執行 .exe：  
+**RetryAdo2.exe** 可執行檔不會輸入任何參數。 執行 .exe：  
   
-1. 開啟您已在其中編譯 Retryado2.exe 二進位檔的主控台視窗。  
-2. 執行 Retryado2.exe，不含任何輸入參數。  
+1. 開啟主控台視窗至您編譯 RetryAdo2.exe 二進位檔的位置。  
+2. 執行 RetryAdo2.exe，不含輸入參數。  
   
   
   
@@ -262,19 +262,19 @@ filetable_updates_2105058535    2105058535
   
   
   
-## <a name="step-3-ways-to-test-your-retry-logic"></a>步驟3：測試重試邏輯的方式  
+## <a name="step-3-ways-to-test-your-retry-logic"></a>步驟 3：測試重試邏輯的方式  
   
-有各種方式可以模擬暫時性錯誤，以測試您的重試邏輯。  
+有許多種方式可讓您模擬暫時性錯誤，以便測試您的重試邏輯。  
   
   
-###  <a name="step-3a-throw-a-test-exception"></a>步驟 3. 答：擲回測試例外狀況  
+###  <a name="step-3a-throw-a-test-exception"></a>步驟 3.a：擲回測試例外狀況  
   
-此程式碼範例包含：  
+程式碼範例包含：  
   
-- 名為**TestSqlException**的小型第二個類別，具有名為**Number**的屬性。  
-- `//throw new TestSqlException(4060);`，您可以將它取消批註。  
+- 第二個名為 **TestSqlException** 的小型類別，其中含有名為 **Number** 的屬性。  
+- `//throw new TestSqlException(4060);` ，您可以將它取消註解。  
   
-如果您取消批註 throw 語句並重新編譯，則下一次執行**retryado2.exe**時，會輸出類似下面的內容。  
+如果您將 throw 陳述式取消註解，並重新編譯，那麼下次執行的 **RetryAdo2.exe** 輸出會類似下列內容。  
   
 ```  
 [C:\VS15\RetryAdo2\RetryAdo2\bin\Debug\]  
@@ -292,31 +292,31 @@ ERROR: Unable to access the database!
 >>  
 ```  
   
-###  <a name="step-3b-retest-with-a-persistent-error"></a>步驟 3. b：使用持續性錯誤重新測試  
+###  <a name="step-3b-retest-with-a-persistent-error"></a>步驟 3.b：使用持續性錯誤重新測試  
   
-若要證明程式碼正確地處理持續性錯誤，請重新執行上述測試，但不使用實際暫時性錯誤的數目，例如4060。 請改用沒有意義的數位7654321。 程式應將此視為持續性錯誤，而且應該略過任何重試。  
+若要證明程式碼正確地處理持續性錯誤，請重新執行先前的測試，但不要使用類似 4060 的真正暫時性錯誤的數字。 請改為使用無意義的數字 7654321。 此程式應該將這視為持續性錯誤，並且應該略過任何重試。  
   
-###  <a name="step-3c-disconnect-from-the-network"></a>步驟 3. c：中斷與網路的連線  
+###  <a name="step-3c-disconnect-from-the-network"></a>步驟 3.c：中斷網路連線  
   
-1. 中斷用戶端電腦與網路的連線。  
-    - 若為桌上型電腦，請拔下網路線。  
-    - 若為膝上型電腦，請按下按鍵的功能組合，以關閉網路介面卡。  
-2. 啟動 Retryado2.exe，並等候主控台顯示第一個暫時性錯誤，可能是11001。  
-3. 重新連線到網路，而 Retryado2.exe 則會繼續執行。  
-4. 在後續的重試時，監看主控台報告成功。  
+1. 中斷用戶端電腦的網路連線。  
+    - 若為桌上型電腦，請拔除網路線。  
+    - 若為膝上型電腦，請按功能鍵組合來關閉網路介面卡。  
+2. 啟動 RetryAdo2.exe，並等候主控台顯示第一個暫時性錯誤，可能是 11001。  
+3. 在 RetryAdo2.exe 繼續執行時，重新連接網路。  
+4. 觀看主控台報告後續的重試成功。  
   
   
-###  <a name="step-2d-temporarily-misspell-the-server-name"></a>步驟 2. d：暫時拼錯伺服器名稱  
+###  <a name="step-2d-temporarily-misspell-the-server-name"></a>步驟 2.d：暫時拼錯伺服器名稱  
   
-1. 暫時新增40615做為要**TransientErrorNumbers**的另一個錯誤號碼，然後重新編譯。  
-2. 在行上設定中斷點： `new QC.SqlConnectionStringBuilder()`。  
-3. 使用 [*編輯後繼續*] 功能，刻意拼錯伺服器名稱，這是以下幾行。  
-    - 讓程式執行，然後回到您的中斷點。  
-    - 發生錯誤40615。  
-4. 修正拼錯的問題。  
-5. 讓程式執行並順利完成。  
-6. 移除40615，然後重新編譯。  
+1. 暫時將 40615 當作另一個錯誤號碼加入 **TransientErrorNumbers**中，並重新編譯。  
+2. 在 `new QC.SqlConnectionStringBuilder()`這行設定中斷點。  
+3. 使用「編輯後繼續」  功能，在以下幾行中刻意拼錯伺服器名稱。  
+    - 讓程式執行，並返回您的中斷點。  
+    - 會發生錯誤 40615。  
+4. 修正拼字錯誤。  
+5. 讓程式執行並成功完成。  
+6. 移除 40615，然後重新編譯。  
   
 ## <a name="next-steps"></a>後續步驟  
   
-若要探索其他最佳 practicies 和設計指導方針，請造訪[連接到 SQL Database：連結、最佳作法和設計指導方針](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
+若要探索其他最佳做法和設計指導方針，請造訪[連線至 SQL Database：連結、最佳做法和設計指導方針](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/) \(部分機器翻譯\)  

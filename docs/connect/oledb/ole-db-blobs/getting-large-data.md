@@ -1,6 +1,6 @@
 ---
-title: 取得大型資料 |Microsoft Docs
-description: 使用適用于 SQL Server 的 OLE DB 驅動程式來取得大型資料
+title: 取得大型資料 | Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 取得大型資料
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: fc9b1ccc24a31083e2a6ef111ad2e79781eef6d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936539"
 ---
 # <a name="getting-large-data"></a>取得大型資料
@@ -39,7 +39,7 @@ ms.locfileid: "67936539"
   
  如果 DBPROP_ACCESSORDER 屬性 (在資料列集屬性群組中) 設定為 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS，取用者應該在 **GetNextRows** 方法的呼叫中，僅提取資料的單一資料列。 這是因為 BLOB 資料不會經過緩衝處理。 如果 DBPROP_ACCESSORDER 的值設定為 DBPROPVAL_AO_RANDOM，取用者可以在 **GetNextRows** 中提取資料的多個資料列。  
   
- SQL Server 的 OLE DB 驅動程式不會從[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]抓取大型資料, 直到取用者要求這麼做為止。 取用者應該在一個存取子中繫結所有短資料，然後在需要時，使用一或多個暫存的存取子來擷取大型資料值。  
+ 在取用者要求之前，OLE DB Driver for SQL Server 不會從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 擷取大型資料。 取用者應該在一個存取子中繫結所有短資料，然後在需要時，使用一或多個暫存的存取子來擷取大型資料值。  
   
 ## <a name="example"></a>範例  
  此範例會從單一資料行擷取大型資料值：  

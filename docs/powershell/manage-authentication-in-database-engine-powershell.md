@@ -1,6 +1,8 @@
 ---
-title: 管理資料庫引擎 PowerShell 中的驗證 | Microsoft Docs
-ms.custom: ''
+title: PowerShell：管理驗證
+titleSuffix: SQL Server on Linux
+description: 了解如何使用 PowerShell 管理對 SQL Server 的 Windows 與 SQL 驗證。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c246a68216d6de4b1a21d2d2c5c0999703362c36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22c48323aa7570440a3edb06400d9a96e9bd9924
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049140"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75557961"
 ---
-# <a name="manage-authentication-in-database-engine-powershell"></a>管理 Database Engine PowerShell 中的驗證
+# <a name="powershell-manage-authentication-to-sql-server"></a>PowerShell：管理對 SQL Server 的驗證
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 依預設，連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體時， [!INCLUDE[ssDE](../includes/ssde-md.md)]PowerShell 元件會使用 Windows 驗證。 藉由定義 PowerShell 虛擬磁碟機，或指定 **Invoke-Sqlcmd** 的 **-Username** 和 **-Password** 參數，即可使用 SQL Server 驗證。  
@@ -88,6 +90,6 @@ Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyCompu
 ## <a name="see-also"></a>另請參閱  
  [SQL Server PowerShell](sql-server-powershell.md)   
  [SQL Server PowerShell 提供者](sql-server-powershell-provider.md)   
- [Invoke-Sqlcmd 指令程式](invoke-sqlcmd-cmdlet.md)  
+ [Invoke-Sqlcmd Cmdlet](invoke-sqlcmd-cmdlet.md)  
   
   

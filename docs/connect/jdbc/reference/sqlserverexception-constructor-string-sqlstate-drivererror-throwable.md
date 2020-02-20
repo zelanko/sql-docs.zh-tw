@@ -1,5 +1,5 @@
 ---
-title: SQLServerException 的構造函式 (SQLState、DriverError、java. lang. JAVA.lang.throwable) |Microsoft Docs
+title: SQLServerException 建構函式 (java.lang.String, SQLState, DriverError, java.lang.Throwable) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13b0e3aea694b0cedb3594cb76650ca7c938eb55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971099"
 ---
-# <a name="sqlserverexception-constructor-javalangstring-sqlstate-drivererror-javalangthrowable"></a>SQLServerException 的函式 (SQLState, DriverError, java. lang. JAVA.lang.throwable)
+# <a name="sqlserverexception-constructor-javalangstring-sqlstate-drivererror-javalangthrowable"></a>SQLServerException 建構函式 (java.lang.String, SQLState, DriverError, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定**string**物件、 **sqlstate**物件、 **drivererror**物件和**java.lang.throwable**物件時, 初始化[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)類別的新實例。
+  當提供 **string** 物件、**sqlstate** 物件、**drivererror** 物件，以及 **throwable** 物件時，初始化 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 類別的新執行個體。
 
 ## <a name="syntax"></a>語法  
   
@@ -38,11 +38,11 @@ public SQLServerException(java.lang.String errText,
 #### <a name="parameters"></a>參數  
  *errText*  
   
- 保存錯誤文字的字串。
+ 持有錯誤文字的字串。
   
  *sqlState*  
   
- 保留 SQL 狀態的列舉物件。
+ 持有 SQL 狀態的列舉物件。
  
  *driverError*  
   
@@ -50,7 +50,7 @@ public SQLServerException(java.lang.String errText,
  
  *cause*  
   
- 保存例外狀況原因的 java.lang.throwable 物件。
+ 持有例外狀況原因的 Throwable 物件。
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerException 建構函式](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

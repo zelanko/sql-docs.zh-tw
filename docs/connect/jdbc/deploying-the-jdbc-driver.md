@@ -11,10 +11,10 @@ ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049839"
 ---
 # <a name="deploying-the-jdbc-driver"></a>部署 JDBC 驅動程式
@@ -52,11 +52,11 @@ ms.locfileid: "73049839"
   
  `tar -xf sqljdbc_<version>_<language>.tar`  
 
-## <a name="legalities-of-driver-redistribution"></a>驅動程式轉散發合法性
+## <a name="legalities-of-driver-redistribution"></a>轉散發驅動程式的合法性
 
-JDBC 驅動程式版本6.0、6.2、6.4 和7.0 是可轉散發套件。 檢閱授權合約中的「可轉散發程式碼」  條款。
+JDBC Driver 6.0、6.2、6.4 與 7.0 版都是可轉散發的。 檢閱授權合約中的「可轉散發程式碼」  條款。
 
-JDBC 驅動程式1.x 版已過時且已淘汰。 4\.x 的支援將于2018之前過期。
+JDBC Driver 4.x 版已過時且已淘汰。 對 4.x 的支援已於 2018 年之前過期。
 
 ## <a name="see-also"></a>另請參閱  
  [JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

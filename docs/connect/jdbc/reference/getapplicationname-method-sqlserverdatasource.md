@@ -1,5 +1,5 @@
 ---
-title: getApplicationName 方法 (SQLServerDataSource) |Microsoft Docs
+title: getApplicationName 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f71e501c-ccd7-4a1e-b6ea-4d47a81c18c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3b7e55cbaa630a4c191eead93d3e016aa07ea5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954391"
 ---
 # <a name="getapplicationname-method-sqlserverdatasource"></a>getApplicationName 方法 (SQLServerDataSource)
@@ -37,7 +37,7 @@ public java.lang.String getApplicationName()
 ## <a name="return-value"></a>傳回值  
  一個包含應用程式名稱的**字串**，如果未設定任何值，則為 "[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]"。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此應用程式名稱會用來識別各種 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分析工具與記錄工具中的特定應用程式。 如果未設定應用程式名稱，getApplicationName 方法會傳回未當地語系化的字串 "[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]"。  
   
 ## <a name="see-also"></a>另請參閱  

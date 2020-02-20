@@ -1,5 +1,5 @@
 ---
-title: PDO_SQLSRV 驅動程式參考 |Microsoft Docs
+title: PDO_SQLSRV 驅動程式參考 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: a618a360-d4aa-475b-97d0-81979ebad444
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8aa5f04ab9ae510ec0a7c3ead0c30600ebb9b48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936186"
 ---
-# <a name="pdosqlsrv-driver-reference"></a>PDO_SQLSRV 驅動程式參考
+# <a name="pdo_sqlsrv-driver-reference"></a>PDO_SQLSRV 驅動程式參考
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 有兩個物件支援 PDO：  

@@ -1,20 +1,21 @@
 ---
-title: 在 SQL Server 巨量資料叢集上搭配適用於 VS Code 的 Spark & Hive Tools 執行 Spark 作業
-titleSuffix: SQL Server big data clusters
+title: 執行作業：適用於 VS Code 的 Spark 與 Hive 工具
+titleSuffix: SQL Server Big Data Clusters
 description: 在 SQL Server 巨量資料叢集上搭配適用於 Visual Studio Code 的 Spark & Hive Tools 提交 Spark 作業。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653736"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255922"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>在 Visual Studio Code 中於 SQL Server 巨量資料叢集上提交 Spark 作業
 
@@ -146,7 +147,7 @@ ms.locfileid: "69653736"
 
    ![PySpark 互動式 Python 互動式視窗](./media/spark-hive-tools-vscode/pyspark-interactive-python-interactive-window.png) 
 
-6. 輸入 **"%%info"** ，然後按 **Shift + Enter** 以檢視作業資訊。 (選擇性)
+6. 輸入 **"%%info"** ，然後按 **Shift + Enter** 以檢視作業資訊。 (選用)
 
    ![檢視作業資訊](./media/spark-hive-tools-vscode/pyspark-interactive-view-job-information.png)
 
@@ -200,36 +201,36 @@ ms.locfileid: "69653736"
 
 **要求本文**
 
-| NAME | description | 型別 |
+| NAME | description | type |
 | :- | :- | :- |
 | 檔案 | 包含要執行之應用程式的檔案 | 路徑 (必要) |
-| proxyUser | 執行作業時要模擬的使用者 | string |
-| className | 應用程式 Java/Spark 主要類別 | string |
+| proxyUser | 執行作業時要模擬的使用者 | 字串 |
+| className | 應用程式 Java/Spark 主要類別 | 字串 |
 | args | 適用於應用程式的命令列引數 | 字串清單 |
 | jars | 要用於此工作階段的 jars | 字串清單 |
 | pyFiles | 要用於此工作階段的 Python 檔案 | 字串清單 |
 | files | 要用於此工作階段的檔案 | 字串清單 |
-| driverMemory | 要用於驅動程式程序的記憶體數量 | string |
-| driverCores | 要用於驅動程式程序的核心數目 | INT |
-| executorMemory | 要用於每個執行程式程序的記憶體數量 | string |
-| executorCores | 要用於每個執行程式的核心數目 | INT |
-| numExecutors | 要針對此工作階段啟動的執行程式數目 | INT |
+| driverMemory | 要用於驅動程式程序的記憶體數量 | 字串 |
+| driverCores | 要用於驅動程式程序的核心數目 | int |
+| executorMemory | 要用於每個執行程式程序的記憶體數量 | 字串 |
+| executorCores | 要用於每個執行程式的核心數目 | int |
+| numExecutors | 要針對此工作階段啟動的執行程式數目 | int |
 | archives | 要用於此工作階段的封存 | 字串清單 |
-| queue | 提交至的 YARN 佇列名稱 | string |
-| NAME | 此工作階段的名稱 | string |
+| queue | 提交至的 YARN 佇列名稱 | 字串 |
+| NAME | 此工作階段的名稱 | 字串 |
 | conf | Spark 設定屬性 | key=val 的對應 |
 
 #### <a name="response-body"></a>回應本文
 
 建立的批次物件。
 
-| NAME | description | 型別 |
+| NAME | description | type |
 | :- | :- | :- |
-| id | 工作階段識別碼 | INT |
+| id | 工作階段識別碼 | int |
 | appId | 此工作階段的應用程式識別碼 | String |
 | appInfo | 詳細的應用程式資訊 | key=val 的對應 |
 | log | 記錄行 | 字串清單 |
-| state | 批次狀態 | string |
+| state | 批次狀態 | 字串 |
 
 >[!NOTE]
 >提交指令碼時，已指派的 Livy 設定將會顯示在 [輸出] 窗格中。

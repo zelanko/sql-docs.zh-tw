@@ -1,27 +1,26 @@
 ---
-title: 快速入門：R 資料類型
-titleSuffix: SQL Server Machine Learning Services
-description: 在本快速入門中，了解如何在 R 和具有 SQL Server 機器學習服務的 SQL Server 中使用資料類型和資料物件。
+title: 快速入門：R 資料結構、資料類型與物件
+description: 在此快速入門中，您將會了解如何在 SQL Server 機器學習服務中使用 R 來使用資料結構、資料類型與物件。 在此快速入門中，您將會了解如何在 R 與 SQL Server 之間移動資料，以及可能發生的常見問題。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4dab7cca8edcc01052ced81ec33a1f411da7ba9a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: a3f978865d2fdd643650a7c7308adb65d2c79fa7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726973"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76916408"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>快速入門：在 SQL Server 機器學習服務中使用 R 處理資料類型和物件
+# <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>快速入門：在 SQL Server 機器學習服務中使用 R 的資料結構、資料類型與物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在本快速入門中，您將了解在 R 與 SQL Server 之間移動資料時所發生的常見問題。 透過此練習所獲得的體驗，可提供您在使用自己指令碼資料時的基本背景。
+在此快速入門中，您將會了解當您在 SQL Server 機器學習服務中使用 R 時，如何使用資料結構與資料類型。 在此快速入門中，您將會了解如何在 R 與 SQL Server 之間移動資料，以及可能發生的常見問題。
 
 首先要瞭解的常見問題包括：
 
@@ -124,7 +123,7 @@ $ c..world..: Factor w/ 1 level "world": 1
 
 ## <a name="implicit-conversion-of-data-objects"></a>資料物件的隱含轉換
 
-如果這兩個資料物件具有相同數目的維度，或者如果任一個資料類型包含異質資料類型，則每個 R 資料物件都會有自己的規則，用於在結合其他資料物件時如何處理資料。
+每個 R 資料物件都有自己的規則，如果在結合其他資料物件時，兩個資料物件具有相同數目的維度，或者如果任一個資料類型包含異質資料類型，就會按照規則處理其值。
 
 首先，建立測試資料的小型資料表。
 
@@ -186,7 +185,7 @@ R 現在會傳回單一值做為結果。
 |---|
 |1542|
 
-為什麼？ 在此案例中，因為這兩個引數可以當做長度相同的向量來處理，所以 R 會傳回內積做為矩陣。  根據線性代數的規則，這是預期的行為；不過，如果下游應用程式預期輸出結構描述永遠不會變更，則它可能會造成問題！
+原因為何？ 在此案例中，因為這兩個引數可以當做長度相同的向量來處理，所以 R 會傳回內積做為矩陣。  根據線性代數的規則，這是預期的行為；不過，如果下游應用程式預期輸出結構描述永遠不會變更，則它可能會造成問題！
 
 > [!TIP]
 > 

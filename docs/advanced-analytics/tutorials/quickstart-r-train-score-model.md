@@ -1,32 +1,31 @@
 ---
 title: 快速入門：在 R 中將模型定型
-titleSuffix: SQL Server Machine Learning Services
-description: 使用 SQL Server 機器學習服務在 R 中建立簡單的預測模型，然後使用新資料來預測結果。
+description: 在此快速入門中，您將使用 T 來建立及定型預測模型。您會將模型儲存至 SQL Server 執行個體中的資料表，然後透過 SQL Server 機器學習服務使用該模型來從新資料預測值。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bd91191a84aac8c245bdcbbe0afd2bf3241aa6b3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: b6be97041912027cf284ff34c2c826a37edabe93
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726514"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831725"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server 機器學習服務在 R 中建立預測模型並計算其分數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在本快速入門中，您將使用 R 建立和定型預測模型、將模型儲存至 SQL Server 執行個體中的資料表，然後使用模型預測經由 [SQL Server 機器學習服務](../what-is-sql-server-machine-learning.md)所產生的新資料提供的值。
+在此快速入門中，您將會使用 T 來建立及定型預測模型。您會將模型儲存至 SQL Server 執行個體中的資料表，然後透過 [SQL Server 機器學習服務](../what-is-sql-server-machine-learning.md)使用該模型來從新資料預測值。
 
 您將建立並執行在 SQL 中執行的兩個預存程序。 第一個預存程序使用 R 隨附的 **mtcars** 資料集，並產生簡易的一般化線性模型 (GLM)，預測車輛已裝有手排變速箱的可能性。 第二個程序為評分用，會呼叫在第一個程式中產生的模型，並根據新資料輸出一組預測。 將 R 程式碼放入 SQL 預存程序後，作業會包含在 SQL 中、可重複使用，而且可由其他預存程序和用戶端應用程式呼叫。
 
 > [!TIP]
-> 如果您需要複習一下線性模型，請參閱下列教學課程，該課程說明使用 rxLinMod 來調整線性模型的程序：[調整線性模型 (英文)](/machine-learning-server/r/how-to-revoscaler-linear-model)
+> 如果您需要複習一下線性模型，請參閱下列教學課程，該課程說明使用 rxLinMod 來調整線性模型的程序：[配適線性模型](/machine-learning-server/r/how-to-revoscaler-linear-model)
 
 完成本快速入門課程後，您將學習到：
 
@@ -80,7 +79,7 @@ ms.locfileid: "73726514"
    ```
 
    > [!TIP]
-   > R 執行階段隨附許多大大小小的資料集。 若要取得隨 R 一起安裝的資料集清單，請從 R 命令提示字元處，輸入 `library(help="datasets")`。
+   > R 執行階段附有許多資料集，大小不一。 若要取得隨 R 一起安裝的資料集清單，請從 R 命令提示字元處，輸入 `library(help="datasets")`。
 
 ### <a name="create-and-train-the-model"></a>建立和定型模型
 
@@ -107,7 +106,7 @@ GO
 ```
 
 - `glm` 的第一個引數是 *formula* 參數，此參數將 `am` 定義成與 `hp + wt` 相依。
-- 輸入資料儲存在變數 `MTCarsData` 中，會由 SQL 查詢填入。 如果您沒有為輸入資料指定特定的名稱，預設變數名稱將會是 _InputDataSet_。
+- 輸入資料儲存在變數 `MTCarsData` 中，會由 SQL 查詢填入。 如果您未將特定名稱指派給輸入資料，預設變數名稱將是 _InputDataSet_。
 
 ### <a name="store-the-model-in-the-sql-database"></a>將模型儲存在 SQL 資料庫中
 
@@ -132,7 +131,7 @@ GO
    ```
 
    > [!TIP]
-   > 如果您二度執行此陳述式，會收到以下錯誤：「違反 PRIMARY KEY 條件約束 ...無法在物件 dbo. stopping_distance_models 中插入重複的索引鍵。 有一個可避免發生此錯誤的選項，就是更新每個新模型的名稱。 例如，您可以將名稱變更成更具描述性且包含模型類型、模型建立日期等等的名稱。
+   > 如果您二度執行此陳述式，會收到以下錯誤：「違反 PRIMARY KEY 條件約束 ...無法在物件 dbo. stopping_distance_models 中插入重複的索引鍵。 若要避免發生此錯誤，選項之一是更新每個新模型的名稱。 例如，您可以將名稱變得更具描述性，並加入模型類型、模型的建立日期等。
 
      ```sql
      UPDATE GLM_models
@@ -202,11 +201,11 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 上述指令碼會執行下列步驟：
 
-- 使用 SELECT 陳述式，從資料表取得單一模型，並傳遞它做為輸入參數。
+- 使用 SELECT 陳述式從資料表中取得單一模型，並將其傳入作為輸入參數。
 
-- 從資料表擷取模型之後，在模型上呼叫 `unserialize` 函數。
+- 從資料表中擷取模型之後，請對模型呼叫 `unserialize` 函式。
 
-- 搭配適當引數將 `predict` 函數套用至模型，並提供新的輸入資料。
+- 將 `predict` 函式搭配適當的引數套用至模型，並提供新的輸入資料。
 
 > [!NOTE]
 > 此範例在測試階段新增了 `str` 函數，以檢查從 R 傳回的資料結構描述。您稍後可移除該陳述式。

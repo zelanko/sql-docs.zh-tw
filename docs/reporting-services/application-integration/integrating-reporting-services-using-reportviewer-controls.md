@@ -1,9 +1,11 @@
 ---
-title: 使用報表檢視器控制項整合 Reporting Services | Microsoft Docs
+title: 使用報表檢視器控制項進行整合
+description: Visual Studio 提供兩個報表檢視器控制項，可將報表檢視功能整合到應用程式。
 ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - Report Viewer controls
@@ -11,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ffaeb12bc961256959571d18808e2869a1d7485
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1ce8530e2f7afb998c14838efb91c93d0b1cae3c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741871"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796859"
 ---
-# <a name="integrating-reporting-services-using-report-viewer-controls"></a>使用報表檢視器控制項整合 Reporting Services
+# <a name="integrate-reporting-services-using-report-viewer-controls"></a>使用報表檢視器控制項整合 Reporting Services
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2015 提供兩個報表檢視器控制項，可將報表檢視功能整合到應用程式。 一個版本是用於 Windows Form 應用程式，另一個版本則是用於 Web Form 應用程式。 每個控制項都提供類似的功能，但是每個功能都是針對其個別的環境所設計的。 兩個控制項都可以處理已經部署到報表伺服器的報表 (遠端處理模式)，或是已經複製到尚未安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之電腦上的報表 (本機處理模式)。  
   
  報表檢視器控制項並未內建支援動態適應具有不同螢幕解析度的不同裝置。  

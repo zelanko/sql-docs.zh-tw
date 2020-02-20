@@ -16,10 +16,10 @@ ms.assetid: cdddc572-05c1-480d-b3e5-28270001575c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 174deb24d78821e30d69dc899c5657909241ad3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953286"
 ---
 # <a name="getcharacterstream-method-javalangstring"></a>getCharacterStream 方法 (java.lang.String)
@@ -46,7 +46,7 @@ public java.io.Reader getCharacterStream(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 這個 getCharacterStream 方法是由 sql-dmo 介面中的 getCharacterStream 方法指定。  
+ 這個 getCharacterStream 方法是由 java.sql.ResultSet 介面中的 getCharacterStream 方法指定。  
   
  這個方法只會讀取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Unicode 字元資料類型，例如 nchar、nvarchar、nvarchar(max) 和 ntext。 所有其他資料型別 (包括 ASCII 字元型別) 將擲回例外狀況。 若要讀取 ASCII 資料類型，請使用 [getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md) 方法。  
   

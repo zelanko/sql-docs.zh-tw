@@ -1,7 +1,7 @@
 ---
 title: PDO::prepare | Microsoft Docs
 ms.custom: ''
-ms.date: 04/25/2019
+ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3bb02fefe4e4845a1ab1e7b7a7117845fdaebf13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 902a1e986f79205dfd676c635ac54814382c2ec3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993199"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941200"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,27 +29,27 @@ PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 ```
 
 #### <a name="parameters"></a>參數
-$*statement*：一個包含 SQL 陳述式的字串。
+$*statement*：包含 SQL 陳述式的字串。
 
 *key_pair*：包含屬性名稱和值的陣列。 如需詳細資訊，請參閱「備註」一節。
 
 ## <a name="return-value"></a>傳回值
 如果成功，則傳回 PDOStatement 物件。 如果失敗，則會根據 `PDO::ATTR_ERRMODE` 的值傳回 PDOException 物件或 false。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 在執行之前不會評估備妥的陳述式。
 
 下表列出可能的 *key_pair* 值。
 
-|索引鍵|Description|
+|Key|描述|
 |-------|---------------|
-|PDO::ATTR_CURSOR|指定資料指標行為。 預設值為 `PDO::CURSOR_FWDONLY`，此為不可捲動的順向資料指標。 `PDO::CURSOR_SCROLL` 為可捲動的資料指標。<br /><br />例如， `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`。<br /><br />設定為 `PDO::CURSOR_SCROLL` 時，您接著可以使用 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` 來設定可捲動資料指標類型，如下所述。<br /><br />如需 PDO_SQLSRV 驅動程式中的結果集和資料指標的詳細資訊，請參閱[資料指標類型 &#40;PDO_SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。|
+|PDO::ATTR_CURSOR|指定資料指標行為。 預設值為 `PDO::CURSOR_FWDONLY`，此為不可捲動的順向資料指標。 `PDO::CURSOR_SCROLL` 為可捲動的資料指標。<br /><br />例如： `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )` 。<br /><br />設定為 `PDO::CURSOR_SCROLL` 時，您接著可以使用 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` 來設定可捲動資料指標類型，如下所述。<br /><br />如需 PDO_SQLSRV 驅動程式中的結果集和資料指標的詳細資訊，請參閱[資料指標類型 &#40;PDO_SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。|
 |PDO::ATTR_EMULATE_PREPARES|根據預設，此屬性為 false，您可以使用這個 `PDO::ATTR_EMULATE_PREPARES => true` 進行變更。 如需詳細資訊和範例，請參閱[模擬準備](#emulate-prepare)。|
 |PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE|指定可捲動資料指標的類型。 只有在將 `PDO::ATTR_CURSOR` 設定為 `PDO::CURSOR_SCROLL` 時有效。 如需此屬性可接受的值，請參閱下方內容。|
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|指定將擷取的貨幣值格式化時的小數位數。 此選項只有當 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 為 true 時才能運作。 如需詳細資訊，請參閱[將十進位字串及貨幣值格式化 (PDO_SQLSRV 驅動程式)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|若為 True，將會指定直接查詢執行。 False 表示備妥的陳述式執行。 如需 `PDO::SQLSRV_ATTR_DIRECT_QUERY` 的詳細資訊，請參閱 [PDO_SQLSRV 驅動程式中的直接陳述式執行和已備妥的陳述式執行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (預設值)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|指定是否要以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 物件形式擷取日期和時間類型。 如需詳細資訊，請參閱[操作說明：使用 PDO_SQLSRV 驅動程式以 PHP DateTime 物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|指定是否要以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) \(英文\) 物件形式擷取日期和時間類型。 如需詳細資訊，請參閱[如何：使用 PDO_SQLSRV 驅動程式以 PHP DateTime 物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|處理從數值 SQL 類型資料行擷取的數值。 如需詳細資訊，請參閱 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。|
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|指定是否要在適當時於十進位字串中新增前置零。 如果設定，此選項就會啟用 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 選項來將貨幣類型格式化。 如需詳細資訊，請參閱[將十進位字串及貨幣值格式化 (PDO_SQLSRV 驅動程式)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|如需詳細資訊，請參閱 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。|
@@ -60,7 +60,7 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
 ```
 下表會顯示 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` 的可能值。 如需可捲動資料指標的詳細資訊，請參閱[資料指標類型 &#40;PDO_SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。
 
-|ReplTest1|Description|
+|值|描述|
 |---------|---------------|
 |PDO::SQLSRV_CURSOR_BUFFERED|建立用戶端 (已緩衝處理) 的靜態資料指標，其會在用戶端電腦上的記憶體中緩衝處理結果集。|
 |PDO::SQLSRV_CURSOR_DYNAMIC|建立伺服器端 (無緩衝) 動態資料指標，它可讓您以任何順序存取資料列，且會反映資料庫中的變更。|
@@ -139,6 +139,33 @@ print_r($row);
 ?>
 ```
 
+## <a name="example"></a>範例
+下列兩個程式碼片段會顯示如何搭配以 CHAR/VARCHAR 資料行為目標的資料使用 PDO::prepare。 由於 PDO::prepare 的預設編碼為 UTF-8，使用者可以使用 `PDO::SQLSRV_ENCODING_SYSTEM` 選項來避免隱含轉換。
+
+**選項 1**
+```
+$options = array(PDO::SQLSRV_ATTR_ENCODING => PDO::SQLSRV_ENCODING_SYSTEM);
+$statement = $pdo->prepare(
+  'SELECT *
+   FROM myTable
+   WHERE myVarcharColumn = :myVarcharValue',
+  $options
+);
+
+$statement->bindValue(':myVarcharValue', 'my data', PDO::PARAM_STR);
+```
+
+**選項 2**
+```
+$statement = $pdo->prepare(
+  'SELECT *
+   FROM myTable
+   WHERE myVarcharColumn = :myVarcharValue'
+);
+$p = 'my data';
+$statement->bindParam(':myVarcharValue', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCODING_SYSTEM);
+```
+
 <a name="emulate-prepare" />
 
 ## <a name="example"></a>範例
@@ -209,13 +236,59 @@ Information on :con_name parameter
 > [!NOTE]
 > 若將模擬準備設定為 true，參數化查詢的安全性就沒有任何作用。 所以，您的應用程式應確定繫結至參數的資料並不包含惡意 Transact-SQL 程式碼。
 
-### <a name="encoding"></a>編碼方式
+### <a name="encoding"></a>編碼
 
 如果使用者想要繫結含不同編碼 (例如 UTF-8 或二進位) 的參數，則使用者應該明確地在 PHP 指令碼中指定編碼。
 
 PDO_SQLSRV 驅動程式會先檢查 `PDO::bindParam()` 中指定的編碼 (例如 `$statement->bindParam(:cus_name, "Cardinal", PDO::PARAM_STR, 10, PDO::SQLSRV_ENCODING_UTF8)`)。
 
 如果找不到，驅動程式就會檢查是否已在 `PDO::prepare()` 或 `PDOStatement::setAttribute()` 中設定任何編碼。 否則，此驅動程式將使用 `PDO::__construct()` 或 `PDO::setAttribute()` 中所指定的編碼。
+
+此外，從 5.8.0 版開始，搭配將 `PDO::ATTR_EMULATE_PREPARES` 設定為 true 來使用 PDO::prepare 時，使用者可以使用[在 PHP 7.2 中引進的擴充字串類型](https://wiki.php.net/rfc/extended-string-types-for-pdo) \(英文\) 來確保會使用 `N` 前置詞。 下列程式碼片段會顯示各種替代方案。
+
+> [!NOTE]
+> 根據預設，emulate prepares 會設定為 false；在該情況下，系統將會忽略擴充的 PDO 字串常數。
+
+**繫結時使用驅動程式選項 PDO::SQLSRV_ENCODING_UTF8**
+
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->bindParam(':value', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCODING_UTF8);
+$stmt->execute();
+```
+
+**使用 PDO::SQLSRV_ATTR_ENCODING 屬性**
+
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true, PDO::SQLSRV_ATTR_ENCODING => PDO::SQLSRV_ENCODING_UTF8);
+$stmt = $conn->prepare($sql, $options);
+$stmt->execute([':value' => $p]);
+```
+
+**使用 PDO 常數 PDO::PARAM_STR_NATL**
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->bindParam(':value', $p, PDO::PARAM_STR | PDO::PARAM_STR_NATL);
+$stmt->execute();
+```
+
+**設定預設字串參數類型 PDO::PARAM_STR_NATL**
+```
+$conn->setAttribute(PDO::ATTR_DEFAULT_STR_PARAM, PDO::PARAM_STR_NATL);
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->execute([':value' => $p]);
+```
 
 ### <a name="limitations"></a>限制
 

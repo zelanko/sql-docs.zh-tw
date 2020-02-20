@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d553d991bd07785a6a6a7592cee38a1e66badf29
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0117ff1ccbd90a18c1198c9a46fa60c27d28107d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73723706"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479387"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>部署 R 模型，並將其用於 SQL Server (逐步解說)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "73723706"
 
     + 您可以使用 SELECT 陳述式，從 SQL 資料表呼叫預存模型。 系統會從資料表擷取模型作為 **varbinary(max)** 資料，儲存在 SQL 變數 _\@lmodel2_ 中，並將其當作 *mod* 參數，傳遞到系統預存程序 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
-    + 當作評分輸入使用的資料會定義為 SQL 查詢，並以字串形式儲存在 SQL 變數 _\@輸入_中。 從資料庫擷取資料時，它會儲存在名為 *InputDataSet* 的資料框架中，這只是 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 程序中輸入資料的預設名稱；您可以使用參數 *_\@input_data_1_name_* ，視需要定義另一個變數名稱。
+    + 當作評分輸入使用的資料會定義為 SQL 查詢，並以字串形式儲存在 SQL 變數 _\@輸入_中。 從資料庫擷取資料時，它會儲存在名為 *InputDataSet* 的資料框架中，其只是 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 程序中輸入資料的預設名稱；您可以視需要使用參數 _\@input_data_1_name_ 來定義另一個變數名稱。
 
     + 預存程序會從 **RevoScaleR** 程式庫呼叫 rxPredict 函式來產生分數。
 

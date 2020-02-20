@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR 的資料庫教學課程
-description: 如何為 R 教學課程建立 SQL Server 資料庫的教學課程逐步解說。
+description: RevoScaleR 教學課程 1：如何為 R 教學課程建立 SQL Server 資料庫。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 537bfb64562dfad9dbefbce70423892cd6e1e431
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: ae2fd2d200b6a231dd76f04556d6d221df00809f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727129"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947192"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>建立資料庫和權限 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本課程是 [RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分，說明如何將 [RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server 搭配使用。
+此教學課程是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 1 個，該系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
 
-第一課是關於設定 SQL Server 資料庫，以及完成本教學課程所需的權限。 使用 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 或另一個查詢編輯器來完成以下工作：
+此教學課程描述如何建立 SQL Server 資料庫，並設定完成此系列中其他教學課程所需的權限。 使用 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 或另一個查詢編輯器來完成以下工作：
 
 > [!div class="checklist"]
 > * 建立新的資料庫來儲存資料，以定型和評分兩個 R 模型
@@ -29,7 +29,7 @@ ms.locfileid: "73727129"
   
 ## <a name="create-the-database"></a>建立資料庫
 
-本教學課程需要資料庫來儲存資料和程式碼。 如果您不是系統管理員，請要求您的 DBA 建立資料庫並登入。 您需要權限以寫入和讀取資料，以及執行 R 指令碼。
+本教學課程需要資料庫來儲存資料和程式碼。 如果您不是系統管理員，請要求您的 DBA 為您建立資料庫與登入。 您將會需要寫入和讀取資料，以及執行 R 指令碼的權限。
 
 1. 在 SQL Server Management Studio 中，連線到已啟用 R 的資料庫執行個體。
 
@@ -37,7 +37,6 @@ ms.locfileid: "73727129"
   
 2. 輸入新資料庫的名稱：RevoDeepDive。
   
-
 ## <a name="create-a-login"></a>建立登入
   
 1. 將資料庫內容變更為 master 資料庫並按一下 [新增查詢]  。
@@ -115,7 +114,7 @@ GO
   
 - **我沒有 DDL 權限，是否仍可以執行本教學課程？**
   
-    是，但您應該要求某人將資料預先載入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表，然後直接跳到下一課。 在這個教學課程中，盡可能提出需要 DDL 權限的函數。
+    是，但您應該要求某人將資料預先載入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表，然後直接跳到下一個教學課程。 在這個教學課程中，盡可能提出需要 DDL 權限的函數。
 
     此外，請要求您的系統管理員授與權限，並執行任何外部指定碼。 無論是遠端或使用 `sp_execute_external_script`，都需要執行 R 指令碼。
 
