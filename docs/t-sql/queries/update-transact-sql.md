@@ -461,7 +461,7 @@ ID     Value
  UPDATE 陳述式永遠都會取得它所修改之資料表的獨佔 (X) 鎖定，並保留該鎖定直到交易完成為止。 使用獨佔鎖定時，任何其他交易都無法修改資料。 您可以指定資料表提示，透過指定其他鎖定方法來覆寫 UPDATE 陳述式持續時間的這個預設行為，但是，我們建議僅將提示做為由資深開發人員及資料庫管理員採取的最後手段。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
 ## <a name="logging-behavior"></a>記錄行為  
- 記錄 UPDATE 陳述式；不過，利用 **.** WRITE 子句來進行大數值資料類型的部分更新，只會有最低限度記錄。 如需詳細資訊，請參閱前面＜資料類型＞一節中的＜更新大數值資料類型＞。  
+ 記錄 UPDATE 陳述式；不過，利用 \ **.** WRITE 子句來進行大數值資料類型的部分更新，只會有最低限度記錄。 如需詳細資訊，請參閱前面＜資料類型＞一節中的＜更新大數值資料類型＞。  
   
 ## <a name="security"></a>安全性  
   
@@ -1067,7 +1067,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="ad-using-a-simple-update-statement"></a>AD. 使用簡單的 UPDATE 陳述式  
  下列範例顯示當沒有用 WHERE 子句來指定要更新的資料列時，會如何影響所有資料列。  

@@ -332,7 +332,7 @@ data <- RxSqlServerData(
 
     啟用 FileTable 之後，若要撰寫模型，您可以使用 FileTable API 來取得 SQL 的路徑，然後從您的程式碼將模型寫入至該位置。 當您需要讀取模型時，您會取得 SQL 的路徑，然後從指令碼中使用該路徑來呼叫模型。 如需詳細資訊，請參閱[使用檔案輸入輸出 API 存取 FileTable](../relational-databases/blob/access-filetables-with-file-input-output-apis.md)。
 
-### <a name="7-avoid-clearing-workspaces-when-you-execute-r-code-in-a-includessnoversionincludesssnoversion-mdmd-compute-context"></a>7.避免在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 計算內容中執行 R 程式碼時清除工作區
+### <a name="7-avoid-clearing-workspaces-when-you-execute-r-code-in-a-ssnoversion-compute-context"></a>7.避免在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 計算內容中執行 R 程式碼時清除工作區
 
 如果在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 計算內容中執行 R 程式碼時，使用 R 命令來清除物件的工作區，或者，如果將工作區當成使用 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 呼叫的 R 指令碼一部分來清除，您可能會發生此錯誤︰找不到工作區物件 'revoScriptConnection'  。
 
@@ -570,9 +570,9 @@ go
 
 從 SQL Server 2017 CU2 開始，即使 Python 程式碼執行成功，也可能出現下列訊息：
 
-> 來自外部指令碼的 STDERR 訊息: ** 
-> ~PYTHON_SERVICES \lib\site-packages\revoscalepy\utils\RxTelemetryLogger ** 
-> SyntaxWarning: telemetry_state 會在全域宣告之前使用 **
+> 來自外部指令碼的 STDERR 訊息:
+> ~PYTHON_SERVICES \lib\site-packages\revoscalepy\utils\RxTelemetryLogger
+> SyntaxWarning: telemetry_state 會在全域宣告之前使用 ** ** **
 
 此問題已在 SQL Server 2017 累積更新 3 (CU3) 中修正。 
 
