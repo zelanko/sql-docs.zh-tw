@@ -1,5 +1,5 @@
 ---
-title: 範例應用程式 (SQLSRV 驅動程式) |Microsoft Docs
+title: 範例應用程式 (SQLSRV 驅動程式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1276097ce011560471e8d25b10d70a240a2dce3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015087"
 ---
 # <a name="example-application-sqlsrv-driver"></a>範例應用程式 (SQLSRV 驅動程式)
@@ -29,12 +29,12 @@ AdventureWorks Product Reviews 範例應用程式是使用 [!INCLUDE[ssDriverPHP
 1.  安裝 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 如需詳細資訊，請參閱 < [開始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)。
 2.  將本文件稍後所列的程式碼複製到兩個檔案中：adventureworks_demo.php 和 photo.php。  
 3.  將 adventureworks_demo.php 和 photo.php 檔案放入您的 Web 伺服器的根目錄中。  
-4.  從瀏覽器啟動`https://localhost/adventureworks_demo.php`以執行應用程式。  
+4.  從您的瀏覽器啟動 `https://localhost/adventureworks_demo.php` 來執行應用程式。  
   
 ## <a name="requirements"></a>需求  
 若要執行 AdventureWorks Product Reviews 範例應用程式，您的電腦的下列項目必須相符：  
   
--   您的系統符合 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的需求。 如需詳細資訊, 請參閱適用于[PHP 的 Microsoft 驅動程式的系統需求 SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md)。  
+-   您的系統符合 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的需求。 如需詳細資訊，請參閱 [Microsoft Drivers for PHP for SQL Server 的系統需求](../../connect/php/system-requirements-for-the-php-sql-driver.md)。  
 -   adventureworks_demo.php 和 photo.php 檔案位於您的 Web 伺服器的根目錄中。 這些檔案必須包含本文件稍後所列的程式碼。  
 -   本機電腦上已安裝 SQL Server 2005 或 SQL Server 2008，並附加 [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。  
 -   已安裝網頁瀏覽器。  
@@ -558,7 +558,7 @@ sqlsrv_close( $conn );
 ## <a name="see-also"></a>另請參閱  
 [連線到伺服器](../../connect/php/connecting-to-the-server.md)
 
-[比較執行函數](../../connect/php/comparing-execution-functions.md)
+[比較執行函式](../../connect/php/comparing-execution-functions.md)
 
 [擷取資料](../../connect/php/retrieving-data.md)
 

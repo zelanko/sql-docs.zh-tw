@@ -1,6 +1,6 @@
 ---
-title: 設定大型資料 |Microsoft Docs
-description: 使用 SQL Server 的 OLE DB 驅動程式來設定大型資料
+title: 設定大型資料 | Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 設定大型資料
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 03baaafbc3fed654bcd463a2971bf1fca6712304
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936521"
 ---
 # <a name="setting-large-data"></a>設定大型資料
@@ -28,7 +28,7 @@ ms.locfileid: "67936521"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  使用 SQL Server 的 OLE DB 驅動程式, 您可以藉由傳遞取用者儲存物件的指標來設定 BLOB 資料。  
+  您可以利用 OLE DB Driver for SQL Server，藉由傳遞取用者儲存物件的指標來設定 BLOB 資料。  
   
  取用者會建立包含資料的儲存物件，並將此儲存物件的指標傳遞給提供者。 接著，提供者會從取用者儲存物件讀取資料，並將其寫入到 BLOB 資料行。  
   

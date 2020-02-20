@@ -1,5 +1,5 @@
 ---
-title: getProcedures 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getProcedures 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 66c9a8b0-dc4c-4cbb-8004-c7157368cab4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 054ce4f6f646f873d4aff05fbe1d31aa9903ded9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980746"
 ---
 # <a name="getprocedures-method-sqlserverdatabasemetadata"></a>getProcedures 方法 (SQLServerDatabaseMetaData)
@@ -55,12 +55,12 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getProcedures 方法是由 JAVA.sql.databasemetadata 介面中的 getProcedures 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getProcedures 方法是由 java.sql.DatabaseMetaData 介面中的 getProcedures 方法所指定。  
   
  透過 getProcedures 方法所傳回的結果將包含下列資訊：  
   
-|[屬性]|類型|Description|  
+|名稱|類型|描述|  
 |----------|----------|-----------------|  
 |PROCEDURE_CAT|**String**|指定之預存程序所在之資料庫的名稱。|  
 |PROCEDURE_SCHEM|**String**|預存程序的結構描述。|  

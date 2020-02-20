@@ -1,5 +1,5 @@
 ---
-title: rollback 方法 (SQLServerConnection) |Microsoft Docs
+title: rollback 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: cda48c7e-9ce1-42c4-8fba-f6641cecb093
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f072040dc4be3fd92af01e32232ee90bb0b52ad0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975747"
 ---
 # <a name="rollback-method-sqlserverconnection"></a>rollback 方法 (SQLServerConnection)
@@ -29,7 +29,7 @@ ms.locfileid: "67975747"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[rollback ()](../../../connect/jdbc/reference/rollback-method.md)|復原目前交易中所做的所有變更，並釋放目前由這個 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件保留的所有資料庫鎖定。|  
 |[rollback (java.sql.Savepoint)](../../../connect/jdbc/reference/rollback-method-java-sql-savepoint.md)|復原在設定指定 [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) 物件之後所做的所有變更。|  

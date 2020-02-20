@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7b24d5499e618a09c4d80e8614b08219e6c6f788
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706766"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (SQL Server 中的 R 程式庫)
@@ -36,7 +36,7 @@ RevoScaleR 可作為分散式資料科學的平台。 例如，您可以在 [Mic
 **RevoScaleR** 程式庫以 R 3.4.3 為基礎，且只有當您安裝下列其中一個 Microsoft 產品或下載項目時才會提供：
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
-+ [SQL Server 機器學習服務](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 或更新版本](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R 用戶端](set-up-a-data-science-client.md)
 
@@ -53,7 +53,7 @@ RevoScaleR 可作為分散式資料科學的平台。 例如，您可以在 [Mic
 
 在某些情況下，SQL Server 和 R 會使用不同的資料類型。 如需 SQL 與 R 資料類型間的對應清單，請參閱 [R 與 SQL 的對應資料類型](r-libraries-and-data-types.md)。
 
-| 函數| Description|
+| 函式| 描述|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  建立 SQL Server 計算內容物件以將計算推送至遠端執行個體。 數個 **RevoScaleR** 函式會以計算內容作為引數。 |
 |[rxGetComputeContext / rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | 取得或設定使用中的計算內容。 |
@@ -68,7 +68,7 @@ RevoScaleR 可作為分散式資料科學的平台。 例如，您可以在 [Mic
 
 您可以從 R 執行 DDL 陳述式，前提是您具有執行個體及資料庫的必要權限。 下列函式會使用 ODBC 呼叫來執行 DDL 陳述式或擷取資料庫結構描述。
 
-| 函數| Description|
+| 函式| 描述|
 | ------- | ---------- |
 | [rxSqlServerTableExists 和 rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) | 置放 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 資料表，或檢查資料庫資料表或物件是否存在。 |
 | [rxExecuteSQLDDL](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexecutesqlddl) | 執行定義或操作資料庫物件的資料定義語言 (DDL) 命令。 此函式無法傳回資料，而且只會用來擷取或修改物件結構描述或中繼資料。|
@@ -77,7 +77,7 @@ RevoScaleR 可作為分散式資料科學的平台。 例如，您可以在 [Mic
 
 建立資料來源物件之後，您可以使用物件將資料載入其中、轉換資料，或將新的資料寫入至指定的目的地。 根據來源中的資料大小，您也可以定義資料來源中的批次大小，以及以區塊移動資料。
 
-| 函數 | Description |
+| 函式 | 描述 |
 |----------|-------------|
 | [rxOpen-methods](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | 檢查資料來源是否可用、開啟或關閉資料來源、從來源讀取資料、將資料寫入至目標，以及關閉資料來源。|
 | [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) | 將資料從資料來源移到檔案儲存體或資料框架中。|
@@ -87,7 +87,7 @@ RevoScaleR 可作為分散式資料科學的平台。 例如，您可以在 [Mic
 
 ## <a name="3-graphing-functions"></a>3-圖形函式
 
-| 函數名稱 | Description |
+| 函式名稱 | 描述 |
 |---------------|-------------|
 |[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)  |從資料建立長條圖。 | 
 |[rxLinePlot](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlineplot) |從資料建立線繪圖。 | 
@@ -98,12 +98,12 @@ RevoScaleR 可作為分散式資料科學的平台。 例如，您可以在 [Mic
 
 ## <a name="4-descriptive-statistics"></a>4-描述性統計資料
 
-| 函數名稱 | Description |
+| 函式名稱 | 描述 |
 |---------------|-------------|
-|[rxQuantile](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxquantile) <sup>*</sup> |計算 .xdf 檔案和資料框架的近似分位數，而不需要排序。 | 
-|[rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) <sup>*</sup> |資料的基本摘要統計資料，包括依群組計算。 不支援依群組計算寫入至 .xdf 檔案。 | 
-|[rxCrossTabs](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) <sup>*</sup> |資料以公式為基礎的交叉資料表。 | 
-|[rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) <sup>*</sup> |以公式為基礎的替代交叉資料表，針對有效表示傳回的 Cube 結果所設計。 不支援將輸出寫入至 .xdf 檔案。 | 
+|[rxQuantile](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxquantile) \(英文\) <sup>*</sup> |計算 .xdf 檔案和資料框架的近似分位數，而不需要排序。 | 
+|[rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) \(英文\) <sup>*</sup> |資料的基本摘要統計資料，包括依群組計算。 不支援依群組計算寫入至 .xdf 檔案。 | 
+|[rxCrossTabs](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) \(英文\) <sup>*</sup> |資料以公式為基礎的交叉資料表。 | 
+|[rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) \(英文\) <sup>*</sup> |以公式為基礎的替代交叉資料表，針對有效表示傳回的 Cube 結果所設計。 不支援將輸出寫入至 .xdf 檔案。 | 
 |[rxMarginals](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxmarginals)  |交叉資料表的臨界摘要。 | 
 |[as.xtabs](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/as.xtabs)  |將交叉資料表結果轉換為 xtabs 物件。 | 
 |[rxChiSquaredTest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxchisquaredtest)  |針對 xtabs 物件執行卡方檢定。 搭配小型資料集使用，而且不會將資料區塊化。 | 
@@ -119,18 +119,18 @@ RevoScaleR 可作為分散式資料科學的平台。 例如，您可以在 [Mic
 
 ## <a name="5-prediction-functions"></a>5-預測函式
 
-| 函數名稱 | Description |
+| 函式名稱 | 描述 |
 |---------------|-------------|
-|[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) <sup>*</sup> |將線性模型套入資料。 | 
-|[rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) <sup>*</sup> |將羅吉斯迴歸模型套入資料。 | 
-|[rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm) <sup>*</sup> |將廣義線性模型套入資料。 | 
-|[rxCovCor](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor) <sup>*</sup> |計算一組變數的共變數、相關性或正方形 / 交叉乘積矩陣的總和。 | 
-|[rxDTree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) <sup>*</sup> |將分類或迴歸樹狀結構套入資料。 | 
-|[rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) <sup>*</sup> |使用隨機梯度提升演算法，將分類或迴歸決策樹系套入資料。 | 
-|[rxDForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) <sup>*</sup> |將分類或迴歸決策樹系套入資料。 | 
-|[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxPredict) <sup>*</sup> |計算適合模型的預測。 輸出必須是 XDF 資料來源。 | 
-|[rxKmeans](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxkmeans) <sup>*</sup> |執行 K 平均數叢集。 | 
-|[rxNaiveBayes](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxnaivebayes) <sup>*</sup> |執行貝氏機率分類。 | 
+|[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) \(英文\) <sup>*</sup> |將線性模型套入資料。 | 
+|[rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) \(英文\) <sup>*</sup> |將羅吉斯迴歸模型套入資料。 | 
+|[rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm) \(英文\) <sup>*</sup> |將廣義線性模型套入資料。 | 
+|[rxCovCor](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor) \(英文\) <sup>*</sup> |計算一組變數的共變數、相關性或正方形 / 交叉乘積矩陣的總和。 | 
+|[rxDTree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) \(英文\) <sup>*</sup> |將分類或迴歸樹狀結構套入資料。 | 
+|[rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) \(英文\) <sup>*</sup> |使用隨機梯度提升演算法，將分類或迴歸決策樹系套入資料。 | 
+|[rxDForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) \(英文\) <sup>*</sup> |將分類或迴歸決策樹系套入資料。 | 
+|[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxPredict) \(英文\) <sup>*</sup> |計算適合模型的預測。 輸出必須是 XDF 資料來源。 | 
+|[rxKmeans](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxkmeans) \(英文\) <sup>*</sup> |執行 K 平均數叢集。 | 
+|[rxNaiveBayes](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxnaivebayes) \(英文\) <sup>*</sup> |執行貝氏機率分類。 | 
 |[rxCov](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor) |計算一組變數的共變數矩陣。 | 
 |[rxCor](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor)  |計算一組變數的相關矩陣。 | 
 |[rxSSCP](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcovcor)  |計算一組變數的正方形/交叉乘積矩陣總和。 | 

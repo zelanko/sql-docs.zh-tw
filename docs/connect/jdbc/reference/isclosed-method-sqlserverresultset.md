@@ -11,10 +11,10 @@ ms.assetid: 6081aa34-fc88-4dd0-9a3f-05e8488219dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa1f768e79da36ce681b4096c64e5d46e21f5461
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977738"
 ---
 # <a name="isclosed-method-sqlserverresultset"></a>isClosed 方法 (SQLServerResultSet)
@@ -35,8 +35,8 @@ public boolean isClosed()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 isClosed 方法是由 sql-dmo 介面中的 isClosed 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 isClosed 方法是由 java.sql.ResultSet 介面中的 isClosed 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

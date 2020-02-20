@@ -1,6 +1,8 @@
 ---
-title: 開始使用 ReportViewer 2016 控制項 | Microsoft Docs
-ms.date: 09/18/2018
+title: 開始使用報表檢視器控制項
+description: 報表檢視器控制項可以用來將 Reporting Services RDL 報表整合到 WebForms 和 WinForms 應用程式。
+ms.custom: seo-lt-2019
+ms.date: 12/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -8,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1fd408e5459aea50c04c29d234fce54d8a3ab772
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: d7e1e64bddcdcc7efed701770aea0e97c8e84ec5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503912"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241831"
 ---
 # <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>使用報表檢視器控制項整合 Reporting Services - 入門
 
@@ -48,7 +50,7 @@ ms.locfileid: "65503912"
     
 最後的頁面應該類似下例。
 
-```
+```html
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Sample" %>
 
 <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
@@ -69,7 +71,6 @@ ms.locfileid: "65503912"
     </form>
 </body>
 </html>
-
 ```
 
 ## <a name="updating-an-existing-project-to-use-the-report-viewer-control"></a>更新現有的專案以使用報表檢視器控制項
@@ -78,7 +79,7 @@ ms.locfileid: "65503912"
 
 ### <a name="sample-webconfig-changes"></a>範例 web.config 變更
 
-```
+```xml
 <?xml version="1.0"?>
 <!--
   For more information on how to configure your ASP.NET application, please visit
@@ -145,9 +146,9 @@ ms.locfileid: "65503912"
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
-3. 從程式碼新增新的控制項，或[將控制項新增至 [工具箱]](##adding-control-to-visual-studio-toolbar)。
+3. 從程式碼新增新的控制項，或[將控制項新增至 [工具箱]](#adding-control-to-visual-studio-toolbar)。
 
-    ```
+    ```csharp
     private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     
     private void InitializeComponent()
@@ -175,7 +176,7 @@ ms.locfileid: "65503912"
 
 ### <a name="setting-the-height-of-all-the-ancestors-to-100"></a>將所有上階的高度設定為 100%
 
-```
+```html
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -196,14 +197,13 @@ ms.locfileid: "65503912"
     </form>
 </body>
 </html>
-
 ```
 
 ### <a name="setting-the-parents-height-attribute"></a>設定父代的高度屬性
 
 如需檢視區百分比長度的詳細資訊，請參閱 [Viewport-percentage lengths](http://www.w3.org/TR/css3-values/#viewport-relative-lengths) (檢視區百分比長度)。
 
-```
+```html
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -219,7 +219,6 @@ ms.locfileid: "65503912"
     </form>
 </body>
 </html>
-
 ```
 
 ## <a name="adding-control-to-visual-studio-toolbar"></a>將控制項新增至 Visual Studio 工具列
@@ -249,7 +248,7 @@ ms.locfileid: "65503912"
 
     ![ssRS-toolbox-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
-## <a name="common-issues"></a>常見的問題
+## <a name="common-issues"></a>常見問題
     
 檢視器控制項是為現代瀏覽器所設計。 如果瀏覽器使用 IE 相容性模式呈現頁面，則控制項可能無法正常運作。 內部網路網站可能需要中繼標籤覆寫預設瀏覽器行為。
 

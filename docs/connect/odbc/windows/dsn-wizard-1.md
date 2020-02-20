@@ -1,5 +1,5 @@
 ---
-title: 資料來源嚮導畫面 1 (ODBC Driver for SQL Server) |Microsoft Docs
+title: 資料來源精靈畫面 1 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f6edf465f5b853008c9bdc8c420f6e862e360593
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936607"
 ---
 # <a name="data-source-wizard-screen-1"></a>資料來源精靈畫面 1
@@ -23,17 +23,17 @@ ms.locfileid: "67936607"
     
 ## <a name="options"></a>選項。
 
-### <a name="name"></a>[屬性]
+### <a name="name"></a>名稱
 
 當 ODBC 應用程式要求連接到資料來源時所使用的資料來源名稱。 例如，Personnel。 資料來源名稱會顯示於 [ODBC 資料來源系統管理員] 對話方塊中。
 
-### <a name="description"></a>Description
+### <a name="description"></a>描述
 
 (選擇性) 資料來源的描述。 例如，「所有員工的雇用日期、薪資記錄以及目前的複查」。
 
 ### <a name="select-or-enter-a-server-name"></a>選取或輸入伺服器名稱
 
-在您的網路上 SQL Server 實例的名稱。 您必須在下一個編輯方塊中指定伺服器。
+網路上 SQL Server 執行個體的名稱。 您必須在下一個編輯方塊中指定伺服器。
 
 在大多數情況下，ODBC 驅動程式都可以使用預設通訊協定順序及此方塊中提供的伺服器名稱進行連接。 如果您要為伺服器建立別名或設定用戶端網路程式庫，請使用 SQL Server 設定管理員。
 
@@ -45,9 +45,9 @@ ms.locfileid: "67936607"
 
 如果在此畫面上指定的資訊即為連接到 SQL Server 所需全部資訊，可按一下 [完成]。  在精靈其他螢幕上指定的所有屬性都使用預設值。
 
-### <a name="next"></a>下一個
+### <a name="next"></a>下一頁
 
-若要繼續前往 wizard 的下一個畫面, 請按 **[下一步**]。
+若要繼續前往精靈的下一個畫面，按一下 [下一頁]  。
 
 ## <a name="next-steps"></a>後續步驟
 

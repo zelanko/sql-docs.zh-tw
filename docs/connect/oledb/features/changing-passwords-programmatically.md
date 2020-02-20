@@ -1,6 +1,6 @@
 ---
-title: 以程式設計方式變更密碼 |Microsoft Docs
-description: 使用 SQL Server 的 OLE DB 驅動程式以程式設計方式變更密碼
+title: 以程式設計方式變更密碼 | Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 以程式設計方式變更密碼
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,10 +21,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: a6c9e52dc46818d3d188f2fa742e2bccad769cf8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989127"
 ---
 # <a name="changing-passwords-programmatically"></a>以程式設計方式變更密碼
@@ -32,7 +32,7 @@ ms.locfileid: "67989127"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，當使用者密碼到期時，只有系統管理員可以重設密碼。 從開始, OLE DB Driver for SQL Server 支援透過 OLE DB 驅動程式以程式設計方式處理密碼到期, 以及透過變更**SQL Server 登**入對話方塊。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]  
+  在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，當使用者密碼到期時，只有系統管理員可以重設密碼。 從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 開始，OLE DB Driver for SQL Server 支援透過 OLE DB Driver，以及透過變更 [SQL Server 登入]  對話方塊，以程式設計方式處理密碼到期。  
   
 > [!NOTE]  
 >  如果可能的話，請在執行階段提示使用者輸入其認證，並避免以保存的格式儲存其認證。 如果您必須保存其認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。 如需使用密碼的詳細資訊，請參閱[強式密碼](../../../relational-databases/security/strong-passwords.md)。  
@@ -42,18 +42,18 @@ ms.locfileid: "67989127"
   
 |SQL Server 錯誤碼|錯誤訊息|  
 |---------------------------|-------------------|  
-|15113|使用者 '%.*ls' 登入失敗。原因: 密碼驗證失敗。 帳戶已經鎖定。|  
-|18463|使用者 '%.*ls' 的登入失敗。 原因: 密碼變更失敗。 密碼此時不適用。|  
-|18464|使用者 '%.*ls' 的登入失敗。 原因: 密碼變更失敗。 因為密碼太短而不符合原則需求。|  
-|18465|使用者 '%.*ls' 的登入失敗。 原因: 密碼變更失敗。 因為密碼太長而不符合原則需求。|  
-|18466|使用者 '%.*ls' 的登入失敗。 原因: 密碼變更失敗。 因為密碼不夠複雜而不符合原則需求。|  
-|18467|使用者 '%.*ls' 的登入失敗。 原因: 密碼變更失敗。 密碼不符合密碼篩選 DLL 的需求。|  
-|18468|使用者 '%.*ls' 的登入失敗。 原因: 密碼變更失敗。 密碼驗證期間發生意外的錯誤。|  
-|18487|使用者 '%.*ls' 的登入失敗。 原因: 帳戶的密碼已過期。|  
-|18488|使用者 '%.*ls' 的登入失敗。 原因: 必須變更帳戶的密碼。|  
+|15113|使用者 '%.*ls' 的登入失敗。原因:密碼驗證失敗。 帳戶已經鎖定。|  
+|18463|使用者 '%.*ls' 的登入失敗。 理由：密碼變更失敗。 密碼此時不適用。|  
+|18464|使用者 '%.*ls' 的登入失敗。 理由：密碼變更失敗。 因為密碼太短而不符合原則需求。|  
+|18465|使用者 '%.*ls' 的登入失敗。 理由：密碼變更失敗。 因為密碼太長而不符合原則需求。|  
+|18466|使用者 '%.*ls' 的登入失敗。 理由：密碼變更失敗。 因為密碼不夠複雜而不符合原則需求。|  
+|18467|使用者 '%.*ls' 的登入失敗。 理由：密碼變更失敗。 密碼不符合密碼篩選 DLL 的需求。|  
+|18468|使用者 '%.*ls' 的登入失敗。 理由：密碼變更失敗。 密碼驗證期間發生意外的錯誤。|  
+|18487|使用者 '%.*ls' 的登入失敗。 理由：帳戶的密碼已過期。|  
+|18488|使用者 '%.*ls' 的登入失敗。 理由：必須變更帳戶的密碼。|  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server  
- SQL Server 的 OLE DB 驅動程式可透過使用者介面和程式設計的方式來支援密碼到期。  
+ OLE DB Driver for SQL Server 支援透過使用者介面及以程式設計方式來處理密碼到期。  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>OLE DB 使用者介面密碼逾期  
  OLE DB Driver for SQL Server 支援透過 [SQL Server 登入]  對話方塊上所做的變更來處理密碼逾期。 如果 DBPROP_INIT_PROMPT 的值設定為 DBPROMPT_NOPROMPT，則密碼到期時，初始連接嘗試將會失敗。  
@@ -89,7 +89,7 @@ ms.locfileid: "67989127"
   
  如果嘗試變更密碼時意外失敗，伺服器會傳回錯誤碼 18468。 標準 OLEDB 錯誤會從連線嘗試傳回。  
   
- 如需 DBPROPSET_SQLSERVERDBINIT 屬性集的詳細資訊, 請參閱[初始化和授權屬性](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
+ 如需 DBPROPSET_SQLSERVERDBINIT 屬性集的詳細資訊，請參閱[初始化和授權屬性](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
 
   
 ## <a name="see-also"></a>另請參閱  

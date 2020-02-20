@@ -1,5 +1,5 @@
 ---
-title: 設定加密的用戶端 |Microsoft Docs
+title: 為用戶端設定加密 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 123e847e01c07ab04bf5be97593af838abfdc4bd
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71713282"
 ---
 # <a name="configuring-the-client-for-encryption"></a>為用戶端設定加密
@@ -65,7 +65,7 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
   
  此範例使用名稱為 "caCert.cer" 的檔案當做憑證檔案。 您必須從伺服器取得此憑證檔案。 下列步驟說明如何將伺服器憑證匯出到檔案：  
   
-1.  按一下 [開始]、[執行]，然後輸入 MMC (MMC 是 Microsoft Management Console 的縮寫字)。  
+1.  按一下 [開始]、[執行]，然後輸入 MMC  (MMC 是 Microsoft Management Console 的縮寫字)。  
   
 2.  在 MMC 中，開啟 [憑證]。  
   

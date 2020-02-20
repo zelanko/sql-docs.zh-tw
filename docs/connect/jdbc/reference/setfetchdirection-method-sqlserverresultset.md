@@ -1,5 +1,5 @@
 ---
-title: setFetchDirection 方法 (SQLServerResultSet) |Microsoft Docs
+title: setFetchDirection 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 4ee82290-508d-4bff-a5c5-8a56338deef8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d801a0184259ae22f86ea5ec23391ef78b23ce38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974273"
 ---
 # <a name="setfetchdirection-method-sqlserverresultset"></a>setFetchDirection 方法 (SQLServerResultSet)
@@ -51,8 +51,8 @@ public void setFetchDirection(int direction)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 setFetchDirection 方法是由 sql-dmo 介面中的 setFetchDirection 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 setFetchDirection 方法是由 java.sql.ResultSet 介面中的 setFetchDirection 方法所指定。  
   
  這個方法的初始值，是由產生此 SQLServerResultSet 物件的 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件所決定。 提取方向可以隨時變更。  
   

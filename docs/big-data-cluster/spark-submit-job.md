@@ -1,22 +1,23 @@
 ---
-title: 在 Azure Data Studio 中於 SQL Server 巨量資料叢集上提交 Spark 作業
-titleSuffix: SQL Server big data clusters
+title: 提交 Spark 作業：Azure Data Studio
+titleSuffix: SQL Server Big Data Clusters
 description: 在 Azure Data Studio 的 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上提交 Spark 作業。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3c7d346148d7967543e334af07d6f06402d72a0d
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: fc4f40981d246c47f923cb2a1afa5533a98081ac
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844254"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244066"
 ---
-# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-azure-data-studio"></a>在 Azure Data Studio 的 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上提交 Spark 作業
+# <a name="submit-spark-jobs-on-big-data-clusters-2019-in-azure-data-studio"></a>在 Azure Data Studio 的 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上提交 Spark 作業
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 

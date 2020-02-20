@@ -1,20 +1,21 @@
 ---
-title: 使用 Azure Data Studio 筆記本管理 SQL Server 巨量資料叢集
-titleSuffix: Manage SQL Server Big Data Clusters with Azure Data Studio notebooks
+title: 管理：Azure Data Studio 筆記本
+titleSuffix: SQL Server Big Data Clusters
 description: 使用來自 Azure Data Studio 的筆記本，來管理巨量資料叢集與進行疑難排解。
 author: yualan
 ms.author: alanyu
 ms.reviewer: mikeray
-ms.date: 09/09/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 860524daa5e6ab2db17fdf95cf5aa785aeb4fdf7
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: d2a051e297b48ed8d813fce0e0e8ffa748a84d16
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844291"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252017"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>使用 Azure Data Studio 筆記本管理 SQL Server 巨量資料叢集
 

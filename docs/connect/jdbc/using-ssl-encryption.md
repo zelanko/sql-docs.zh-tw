@@ -11,10 +11,10 @@ ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f769e35477d564365df702bd768ac1953c7affa
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71712968"
 ---
 # <a name="using-encryption"></a>使用加密
@@ -32,11 +32,11 @@ ms.locfileid: "71712968"
 本節中的主題將描述 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 版本如何支援 TLS 加密 (包括新的連線屬性)，以及如何在用戶端設定信任的存放區。  
   
 > [!NOTE]  
-> 建議使用**hostNameInCertificate**連接屬性來驗證 TLS 憑證。  
+> 建議使用 **hostNameInCertificate** 連接屬性來驗證 TLS 憑證。  
 
 ## <a name="in-this-section"></a>本節內容  
 
-| 主題                                                                                                        | Description                                                                                                                                           |
+| 主題                                                                                                        | 描述                                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [了解加密支援](../../connect/jdbc/understanding-ssl-support.md)                                 | 描述 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 如何支援 TLS 加密。                                              |
 | [使用加密連線](../../connect/jdbc/connecting-with-ssl-encryption.md)                       | 描述如何使用新的 TLS 特定連線屬性連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 |

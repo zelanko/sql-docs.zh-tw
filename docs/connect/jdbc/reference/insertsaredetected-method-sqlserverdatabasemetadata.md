@@ -1,5 +1,5 @@
 ---
-title: insertsAreDetected 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: insertsAreDetected 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f296cc42-9d26-48c3-a360-bcf51c31f7fb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d2889af814e7c7122c9784f5ac9a70421731c09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977870"
 ---
 # <a name="insertsaredetected-method-sqlserverdatabasemetadata"></a>insertsAreDetected 方法 (SQLServerDatabaseMetaData)
@@ -63,8 +63,8 @@ public boolean insertsAreDetected(int type)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 insertsAreDetected 方法是由 JAVA.sql.databasemetadata 介面中的 insertsAreDetected 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 insertsAreDetected 方法是由 java.sql.DatabaseMetaData 介面中的 insertsAreDetected 方法所指定。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會偵測任何資料指標類型的插入資料列。  

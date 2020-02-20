@@ -1,5 +1,5 @@
 ---
-title: getColumnLabel 方法 (SQLServerResultSetMetaData) |Microsoft Docs
+title: getColumnLabel 方法 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: cf67692c-24aa-49e6-8e88-a47d4e8c021c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9784c4aa2dd892473e4ac0ef46f0e8f62d359c5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952951"
 ---
 # <a name="getcolumnlabel-method-sqlserverresultsetmetadata"></a>getColumnLabel 方法 (SQLServerResultSetMetaData)
@@ -45,8 +45,8 @@ public java.lang.String getColumnLabel(int column)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getColumnLabel 方法是由 ResultSetMetaData 介面中的 getColumnLabel 方法指定。  
+## <a name="remarks"></a>備註  
+ 此 getColumnLabel 方法是由 java.sql.ResultSetMetaData 介面中的 getColumnLabel 方法所指定。  
   
  這個方法會傳回資料行的別名名稱。 如果沒有別名名稱，這個方法會傳回資料行名稱。  
   

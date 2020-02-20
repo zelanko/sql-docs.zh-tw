@@ -16,10 +16,10 @@ ms.assetid: 7dea981b-b4fd-4f8d-954f-e686124627e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c7fca859273c5eff58cde02b98f98699307ff1b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979578"
 ---
 # <a name="getstatement-method-sqlserverresultset"></a>getStatement 方法 (SQLServerResultSet)
@@ -40,8 +40,8 @@ public java.sql.Statement getStatement()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getStatement 方法是由 sql-dmo 介面中的 getStatement 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getStatement 方法是由 java.sql.ResultSet 介面中的 getStatement 方法所指定。  
   
  如果結果集是以其他方式所產生，例如透過 [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 方法，這個方法會傳回 null。  
   

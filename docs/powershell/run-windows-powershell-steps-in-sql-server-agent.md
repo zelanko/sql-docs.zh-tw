@@ -1,6 +1,7 @@
 ---
-title: 在 SQL Server Agent 中執行 Windows PowerShell 步驟 | Microsoft 文件
-ms.custom: ''
+title: 在 SQL Server Agent 中執行 Windows PowerShell 步驟
+description: 了解如何在 SQL Server Agent 作業中執行 Windows PowerShell 步驟。
+ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e1fe4fa35e5916bd64c88dd9276f09d111ca1a7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 700aa5adb410c7718667bf05313f18636be01a69
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049105"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75557943"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>在 SQL Server Agent 中執行 Windows PowerShell 步驟
 
@@ -76,7 +77,7 @@ ms.locfileid: "68049105"
   
 7.  在 **[命令]** 方塊中，輸入內含指定執行 PowerShell 指令碼之參數的 powershell.exe。  
   
-8.  按一下 **[進階]** 頁面設定作業步驟選項，例如：作業步驟成功或失敗時要採取什麼動作、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 應該嘗試執行作業步驟多少次，以及可供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 寫入作業步驟輸出的檔案。 只有 **sysadmin** 固定伺服器角色的成員，可以將作業步驟輸出寫入作業系統檔案。  
+8.  按一下 **[進階]** 頁面設定作業步驟選項，例如：作業步驟成功或失敗時要採取什麼動作、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 應該嘗試執行作業步驟多少次，以及可供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 寫入作業步驟輸出的檔案。 只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，可以將作業步驟輸出寫入作業系統檔案。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server PowerShell](sql-server-powershell.md)  

@@ -1,6 +1,6 @@
 ---
-title: 使用 IOpenRowset 建立資料列集 |Microsoft Docs
-description: 使用 OLE DB 驅動程式的 IOpenRowset 介面建立資料列集以進行 SQL Server
+title: 以 IOpenRowset 建立資料列集 | Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 的 IOpenRowset 介面建立資料列集
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2c6da41d19fed61fd83a7d4a1521ddba8726ba46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994306"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>以 IOpenRowset 建立資料列集
@@ -27,7 +27,7 @@ ms.locfileid: "67994306"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驅動程式支援**IOpenRowset:: OpenRowset**方法, 但有下列限制:  
+  OLE DB Driver for SQL Server 支援 **IOpenRowset::OpenRowset** 方法，但有下列限制：  
   
 -   *pTableID* 參數指向的資料庫識別碼 (DBID) 結構中必須指定基底資料表或檢視表。  
   

@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5e283ab478a6d65243e9962fd5c26f5f91d87c15
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 64799766b8b9d69a5577fd589c8f610be75ebb8f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70196341"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479406"
 ---
 # <a name="tips-for-using-r-packages"></a>使用 R 套件的祕訣
 
@@ -90,6 +90,11 @@ library("c:/Users/<username>/R/win-library/packagename")
 
 ## <a name="see-also"></a>另請參閱
 
-+ [安裝新的 R 封裝](install-additional-r-packages-on-sql-server.md)
+::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
++ [使用 R 工具來安裝套件](install-r-packages-standard-tools.md)
+::: moniker-end
+::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
++ [使用 sqlmlutils 來安裝新的 R 套件](install-additional-r-packages-on-sql-server.md)
+::: moniker-end
 + [安裝新的 Python 封裝](../python/install-additional-python-packages-on-sql-server.md)
 + [教學課程、範例、解決方案](../tutorials/machine-learning-services-tutorials.md)

@@ -6,15 +6,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-ms.reviewer: MightyPen
+ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: c06f6e9f95af02ba6240f9f71ac6a92c25bec755
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.openlocfilehash: bf9b755176913ad144781c5be0ad53150aedcd1b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712923"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911242"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 和連接字串關鍵字和屬性
 
@@ -22,7 +22,7 @@ ms.locfileid: "71712923"
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>支援的 DSN/連接字串關鍵字和連接屬性
 
-下表列出每個平台可用的關鍵字和屬性 (L: Linux；M: Mac；W: Windows)。 按一下關鍵字或屬性，以查看詳細資料。
+下表列出每個平台可用的關鍵字和屬性 (L:Linux；M:Mac；W:Windows)。 按一下關鍵字或屬性，以查看詳細資料。
 
 | DSN/連接字串關鍵字 | 連線屬性 | 平台 |
 |-|-|-|
@@ -37,7 +37,7 @@ ms.locfileid: "71712923"
 | [ColumnEncryption](../../connect/odbc/dsn-connection-string-attribute.md#columnencryption---sql_copt_ss_column_encryption) | [SQL_COPT_SS_COLUMN_ENCRYPTION](../../connect/odbc/dsn-connection-string-attribute.md#columnencryption---sql_copt_ss_column_encryption) | LMW |
 | [ConnectRetryCount](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_COUNT](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
 | [ConnectRetryInterval](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_INTERVAL](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
-| [[資料庫備份]](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_ATTR_CURRENT_CATALOG](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
+| [Database](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_ATTR_CURRENT_CATALOG](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
 | [說明](../../connect/odbc/dsn-connection-string-attribute.md#description) | | LMW |
 | [驅動程式](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [DSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
@@ -45,8 +45,8 @@ ms.locfileid: "71712923"
 | [Failover_Partner](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssfailoverpartner) | W |
 | [FailoverPartnerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | W |
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) （v 17.4 +，僅限 DSN）| | LMW |
-| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) （v 17.4 +，僅限 DSN） | | LMW |
+| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+，僅限 DSN)| | LMW |
+| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+，僅限 DSN) | | LMW |
 | [KeystoreAuthentication](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystorePrincipalId](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystoreSecret](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
@@ -113,6 +113,7 @@ ms.locfileid: "71712923"
 | | [SQL_COPT_SS_OLDPWD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssoldpwd) | LMW |
 | | [SQL_COPT_SS_PERF_DATA_LOG_NOW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdatalognow) | W |
 | | [SQL_COPT_SS_PRESERVE_CURSORS](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsspreservecursors) | LMW |
+| | [SQL_COPT_SS_SPID](../../connect/odbc/dsn-connection-string-attribute.md#sql_copt_ss_spid) (v17.5+) | LMW |
 | | [SQL_COPT_SS_TXN_ISOLATION](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstxnisolation) | LMW |
 | | [SQL_COPT_SS_USER_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssuserdata) | LMW |
 | | [SQL_COPT_SS_WARN_ON_CP_ERROR](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsswarnoncperror) | LMW |
@@ -122,7 +123,7 @@ ms.locfileid: "71712923"
 
 以下是[搭配 SQL Server Native Client 使用連接字串關鍵字](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)、[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 和 [SQLSetConnectAttr 函式](../../odbc/reference/syntax/sqlsetconnectattr-function.md)中所未記載的一些連接字串關鍵字和連接屬性。
 
-### <a name="description"></a>Description
+### <a name="description"></a>描述
 
 用於描述資料來源。
 
@@ -130,7 +131,7 @@ ms.locfileid: "71712923"
 
 控制 ANSI 至 OEM 的資料轉換。 
 
-| 屬性值 | Description |
+| 屬性值 | 描述 |
 |-|-|
 | SQL_AO_OFF | (預設) 不執行轉譯。 |
 | SQL_AO_ON | 執行轉譯。 |
@@ -139,7 +140,7 @@ ms.locfileid: "71712923"
 
 控制 SQL Server 後援連線的使用。 這一項已不再支援。
 
-| 屬性值 | Description |
+| 屬性值 | 描述 |
 |-|-|
 | SQL_FB_OFF | (預設) 已停用後援連線。 |
 | SQL_FB_ON | 已啟用後援連線。 |
@@ -152,7 +153,7 @@ ms.locfileid: "71712923"
 
 設定連線到 SQL Server 時要使用的驗證模式。 如需詳細資訊，請參閱[使用 Azure Active Directory](using-azure-active-directory.md)。
 
-| 關鍵字值 | 屬性值 | Description |
+| 關鍵字值 | 屬性值 | 描述 |
 |-|-|-|
 | |SQL_AU_NONE|(預設) 未設定。 其他屬性的組合會決定驗證模式。|
 |SqlPassword|SQL_AU_PASSWORD|SQL Server 驗證 (使用使用者名稱和密碼)。|
@@ -169,9 +170,9 @@ ms.locfileid: "71712923"
 
 控制透明的資料行加密 (Always Encrypted)。 如需詳細資訊，請參閱[使用 Always Encrypted (ODBC)](using-always-encrypted-with-the-odbc-driver.md)。
 
-| 關鍵字值 | 屬性值 | Description |
+| 關鍵字值 | 屬性值 | 描述 |
 |-|-|-|
-|已啟用|SQL_CE_ENABLED|啟用 Always Encrypted。|
+|啟用|SQL_CE_ENABLED|啟用 Always Encrypted。|
 |已停用|SQL_CE_DISABLED|(預設) 停用 Always Encrypted。|
 | |SQL_CE_RESULTSETONLY|只啟用解密 (結果和傳回值)。|
 
@@ -179,16 +180,16 @@ ms.locfileid: "71712923"
 
 控制透明網路 IP 解析功能，它會與 MultiSubnetFailover 互動，以允許更快的重新連線嘗試。 如需詳細資訊，請參閱[使用透明網路 IP 解析](using-transparent-network-ip-resolution.md)。
 
-| 關鍵字值 | 屬性值| Description |
+| 關鍵字值 | 屬性值| 描述 |
 |-|-|-|
-|是|SQL_IS_ON|(預設) 啟用透明網路 IP 解析。|
-|否|SQL_IS_OFF|停用透明網路 IP 解析。|
+|啟用|SQL_IS_ON|(預設) 啟用透明網路 IP 解析。|
+|已停用|SQL_IS_OFF|停用透明網路 IP 解析。|
 
 ### <a name="usefmtonly"></a>UseFMTONLY
 
 控制在連線到 SQL Server 2012 及更新版本時，對中繼資料使用 SET FMTONLY。
 
-| 關鍵字值 | Description |
+| 關鍵字值 | 描述 |
 |-|-|
 |否|(預設) 如果有的話，對中繼資料使用 sp_describe_first_result_set。 |
 |是| 對中繼資料使用 SET FMTONLY。 |
@@ -196,33 +197,33 @@ ms.locfileid: "71712923"
 
 ## <a name="clientcertificate"></a>ClientCertificate
 
-指定要用於驗證的憑證。 選項包括： 
+指定要用於驗證的憑證。 可用選項包括： 
 
-| 選項值 | Description |
+| 選項值 | 描述 |
 |-|-|
-| sha1：`<hash_value>` | ODBC 驅動程式會使用 SHA1 雜湊來尋找 Windows 憑證存放區中的憑證 |
-| 主旨：`<subject>` | ODBC 驅動程式會使用主旨來尋找 Windows 憑證存放區中的憑證 |
-| 檔案： `<file_location>` [，密碼： `<password>`] | ODBC 驅動程式會使用憑證檔案。 |
+| sha1：`<hash_value>` | ODBC 驅動程式會使用 SHA1 雜湊來找出 Windows 憑證存放區中的憑證 |
+| 主旨：`<subject>` | ODBC 驅動程式會使用主旨來找出 Windows 憑證存放區中的憑證 |
+| file:`<file_location>`[,password:`<password>`] | ODBC 驅動程式會使用憑證檔案。 |
 
-如果憑證是 PFX 格式，且 PFX 憑證內的私密金鑰受到密碼保護，則需要 password 關鍵字。 針對 PEM 和 DER 格式的憑證，ClientKey 屬性為必要項
+如果憑證採用 PFX 格式，且 PFX 憑證內的私密金鑰受到密碼保護，則需要密碼關鍵字。 若是 PEM 和 DER 格式的憑證，ClientKey 屬性為必要項
 
 
 ## <a name="clientkey"></a>ClientKey
 
-針對 ClientCertificate 屬性所指定的 PEM 或 DER 憑證，指定私密金鑰的檔案位置。 格式： 
+針對 ClientCertificate 屬性所指定的 PEM 或 DER 憑證，請指定私密金鑰的檔案位置。 格式： 
 
-| 選項值 | Description |
+| 選項值 | 描述 |
 |-|-|
-| 檔案： `<file_location>` [，密碼： `<password>`] | 指定私密金鑰檔案的位置。 |
+| file:`<file_location>`[,password:`<password>`] | 指定私密金鑰檔案的位置。 |
 
-如果私密金鑰檔案受到密碼保護，則需要 password 關鍵字。 如果密碼包含任何 "，" 字元，則會緊接在每個字元之後加入一個額外的 "，" 字元。 例如，如果密碼是 "a，b，c"，則連接字串中的已轉義密碼會是 "a，，b，，c"。 
+如果私密金鑰檔案受到密碼保護，則需要密碼關鍵字。 如果密碼包含任何 "," 字元，則會緊接在每個字元之後加入一個額外的 "," 字元。 例如，如果密碼是 "a,b,c"，則連接字串中的逸出密碼會是 "a,,b,,c"。 
     
 
 ### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 
 允許使用 Azure Active Directory 存取權杖進行驗證。 如需詳細資訊，請參閱[使用 Azure Active Directory](using-azure-active-directory.md)。
 
-| 屬性值 | Description |
+| 屬性值 | 描述 |
 |-|-|
 | NULL | (預設) 不提供任何存取權杖。 |
 | ACCESSTOKEN* | 存取權杖的指標。 |
@@ -231,7 +232,7 @@ ms.locfileid: "71712923"
 
 與載入的金鑰儲存區提供者程式庫通訊。 請參閱＜控制透明的資料行加密 (Always Encrypted)＞。 此屬性沒有預設值。 如需詳細資訊，請參閱[自訂金鑰儲存區提供者](custom-keystore-providers.md)。
 
-| 屬性值 | Description |
+| 屬性值 | 描述 |
 |-|-|
 | CEKEYSTOREDATA * | 金鑰儲存區提供者程式庫的通訊資料結構 |
 
@@ -239,7 +240,7 @@ ms.locfileid: "71712923"
 
 載入 Always Encrypted 的金鑰儲存區提供者程式庫，或擷取載入的金鑰儲存區提供者程式庫名稱。 如需詳細資訊，請參閱[自訂金鑰儲存區提供者](custom-keystore-providers.md)。 此屬性沒有預設值。
 
-| 屬性值 | Description |
+| 屬性值 | 描述 |
 |-|-|
 | char * | 金鑰儲存區提供者程式庫路徑 |
 
@@ -254,10 +255,18 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 ``` 
 
-|ReplTest1|Description|平台|  
+|值|描述|平台|  
 |-----------|-----------------|-----------------|  
 |XACALLPARAM 物件*|指向 `XACALLPARAM` 物件的指標。|Windows、Linux 和 Mac|
 |TRUE|建立 XA 交易與 ODBC 連接的關聯。 所有相關的資料庫活動都將在 XA 交易的保護底下進行。|Windows|  
 |FALSE|取消 XA 交易與 ODBC 連接的關聯。|Windows|
 
  如需 XA 交易的詳細資訊，請參閱[使用 XA 交易](../../connect/odbc/use-xa-with-dtc.md)。
+
+### <a name="sql_copt_ss_spid"></a>SQL_COPT_SS_SPID
+
+擷取連接的伺服器處理序識別碼。 這相當於 T-SQL [@@SPID](../../t-sql/functions/spid-transact-sql.md) 變數，不同之處在於其不會對伺服器產生額外的往返。
+
+| 屬性值 | 描述 |
+|-|-|
+| DWORD | SPID |

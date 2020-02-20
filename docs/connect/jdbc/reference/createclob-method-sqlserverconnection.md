@@ -1,5 +1,5 @@
 ---
-title: createClob 方法 (SQLServerConnection) |Microsoft Docs
+title: createClob 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 58b0865a-1cde-4046-9761-51e471294023
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 417a5048d809cb4498c543c589324e151a843a18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955403"
 ---
 # <a name="createclob-method-sqlserverconnection"></a>createClob 方法 (SQLServerConnection)
@@ -35,10 +35,10 @@ public java.sql.Clob createClob()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 createClob 方法是由連接介面中的 createClob 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 createClob 方法是由 java.sql.Connection 介面中的 createClob 方法指定。  
   
- 這個方法會取代 SQLServerClob 函式[ &#40;SQLServerConnection (java&#41;)](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md)的需求。  
+ 此方法會取代使用 [SQLServerClob 建構函式 &#40;SQLServerConnection, java.lang.String&#41;](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md) 的需求。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

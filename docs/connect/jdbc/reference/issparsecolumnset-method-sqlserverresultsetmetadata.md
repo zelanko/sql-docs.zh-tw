@@ -1,5 +1,5 @@
 ---
-title: isSparseColumnSet 方法 (SQLServerResultSetMetaData) |Microsoft Docs
+title: isSparseColumnSet 方法 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: ac363670-78ae-49f1-aeda-4fba3329a258
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2b902ddf8e9e05900e55492116ee9e22a3dbbccc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977227"
 ---
 # <a name="issparsecolumnset-method-sqlserverresultsetmetadata"></a>isSparseColumnSet 方法 (SQLServerResultSetMetaData)
@@ -36,7 +36,7 @@ public boolean isSparseColumnSet(int column)
 ## <a name="return-value"></a>傳回值  
  若結果集中的資料行為疏鬆資料行集，即為 **true**；否則為 **false**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此方法不會從資料庫中擷取資訊。  
   
 ## <a name="see-also"></a>另請參閱  

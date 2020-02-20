@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: genemi
-ms.openlocfilehash: d87e39bcabeabe5c0ea5d5648456eded8ea75510
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
-ms.translationtype: MTE75
+ms.openlocfilehash: bf0961b8ef53060904ad797832e7c7467a859c2b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742793"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911182"
 ---
 # <a name="programming-guidelines"></a>程式設計指導方針
 
@@ -64,7 +64,7 @@ macOS 和 Linux 上此版本的 ODBC 驅動程式不提供下列功能：
     -   SQL_COPT_SS_PERF_QUERY  
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
--   SQLBrowseConnect (版本17.2 之前)
+-   SQLBrowseConnect (17.2 版之前)
 -   C 間隔類型，如 SQL_C_INTERVAL_YEAR_TO_MONTH (相關文件請參閱[資料類型識別碼和描述項](https://msdn.microsoft.com/library/ms716351(VS.85).aspx))
 -   SQLSetConnectAttr 函式之 SQL_ATTR_ODBC_CURSORS 屬性的 SQL_CUR_USE_ODBC 值。
 
@@ -74,7 +74,12 @@ macOS 和 Linux 上此版本的 ODBC 驅動程式不提供下列功能：
 
 若為 ODBC Driver 17，支援其中一種下列字元集/編碼的 SQLCHAR 資料：
 
-|[屬性]|描述|
+> [!NOTE]  
+> 由於 `musl` 和 `glibc` 之間的 `iconv` 差異，因此，Alpine Linux 不支援這其中許多地區設定。
+>
+> 如需詳細資訊，請參閱[與 glibc 的功能差異](https://wiki.musl-libc.org/functional-differences-from-glibc.html) \(英文\)。
+
+|名稱|描述|
 |-|-|
 |UTF-8|Unicode|
 |CP437|MS-DOS Latin US|
@@ -118,10 +123,13 @@ Windows 與 Linux 和 macOS 上的數個 iconv 程式庫版本之間有一些編
 在 ODBC 驅動程式 13 和 13.1 中，當 UTF-8 多位元組字元或 UTF-16 代理分在各個 SQLPutData 緩衝區時，會導致資料損毀。 對於最後不是部分字元編碼的串流 SQLPutData，請使用緩衝區。 ODBC Driver 17 已移除這項限制。
 
 ## <a name="bkmk-openssl"></a>OpenSSL
-從17.4 版開始, 驅動程式會以動態方式載入 OpenSSL, 這可讓它在版本1.0 或1.1 的系統上執行, 而不需要個別的驅動程式檔案。 當有多個版本的 OpenSSL 時, 驅動程式會嘗試載入最新的版本。 驅動程式目前支援 OpenSSL 1.0. x 和 1.1. x
+從 17.4 版開始，驅動程式會以動態方式載入 OpenSSL，使其可在具有 1.0 或 1.1 版的系統上執行，而不需個別的驅動程式檔案。 若有多個版本的 OpenSSL 存在，驅動程式將嘗試載入最新版本。 驅動程式目前支援 OpenSSL 1.0.x 和 1.1.x。
 
 > [!NOTE]  
-> 如果使用驅動程式的應用程式 (或它的其中一個元件) 連結到或動態載入不同版本的 OpenSSL, 可能會發生衝突。 如果系統上有數個版本的 OpenSSL, 而且應用程式使用它, 強烈建議您特別小心確認應用程式和驅動程式所載入的版本不相符, 因為錯誤可能會損毀記憶體, 因此不一定會以明顯或一致的方式來進行資訊清單。
+> 如果使用驅動程式 (或其中一個元件) 的應用程式會連結到或動態載入不同版本的 OpenSSL，可能就會發生衝突。 如果系統上有數個版本的 OpenSSL 存在，而且應用程式會加以使用，則強烈建議您特別小心地確認應用程式和驅動程式所載入的版本不相符，因為錯誤可能會損毀記憶體，因此不一定會以明顯或一致的方式表現出來。
+
+## <a name="bkmk-alpine"></a>Alpine Linux
+撰寫本文時，MUSL 中的預設堆疊大小是 128K，這對於基本的 ODBC 驅動程式功能就已足夠，但根據應用程式的用途，超過此限制並不困難，尤其是從多個執行緒呼叫驅動程式時。 建議使用 `-Wl,-z,stack-size=<VALUE IN BYTES>` 來編譯 Alpine Linux 上的 ODBC 應用程式，以增加堆疊大小。 大部分 GLIBC 系統上的預設堆疊大小為 2MB (僅供參考)。
 
 ## <a name="additional-notes"></a>其他注意事項  
 
@@ -136,7 +144,7 @@ Windows 與 Linux 和 macOS 上的數個 iconv 程式庫版本之間有一些編
     
 2.  如果陳述式屬性是透過 SQLSetConnectAttr 來傳遞的，則 UnixODBC 驅動程式對於所有的陳述式屬性都會傳回「無效的屬性/選項識別碼」。 在 Windows 上，當 SQLSetConnectAttr 收到陳述式屬性值時，會導致驅動程式在屬於連線控制代碼子系的所有作用中陳述式上設定值。  
 
-3.  使用具有高度多執行緒應用程式的驅動程式時, unixODBC 的控制碼驗證可能會變成效能瓶頸。 在這種情況下, 您可以使用`--enable-fastvalidate`選項編譯 unixODBC, 以獲得更高的效能。 不過, 請注意, 這可能會導致將無效控制碼傳遞給 ODBC api 的應用程式`SQL_INVALID_HANDLE`損毀, 而不會傳回錯誤。
+3.  搭配高度多執行緒的應用程式使用驅動程式時，unixODBC 的控制代碼驗證可能會變成效能瓶頸。 在這種情況下，您可以使用 `--enable-fastvalidate` 選項來編譯 unixODBC，以獲得大幅提高的效能。 不過，請注意，這可能導致將無效控制代碼傳遞給 ODBC API 的應用程式損毀，而不會傳回 `SQL_INVALID_HANDLE` 錯誤。
 
 ## <a name="see-also"></a>另請參閱  
 [常見問題集](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)

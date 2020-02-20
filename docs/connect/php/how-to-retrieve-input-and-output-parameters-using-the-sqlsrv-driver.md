@@ -12,10 +12,10 @@ ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27290272b72b27d3bb051da4e7d9a8df202461c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993463"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式擷取輸入和輸出參數
@@ -30,7 +30,7 @@ ms.locfileid: "67993463"
 下列範例會呼叫從指定員工的可用休假時數中扣除掉已用休假時數的預存程序。 代表已用休假時數的變數 *$vacationHrs*，會傳遞至預存程序做為輸入參數。 在更新可用休假時數之後，預存程序會使用相同的參數傳回剩餘休假時數。  
   
 > [!NOTE]  
-> 將 *$vacationHrs* 初始化為 4，會將傳回的 PHPTYPE 設為整數。 若要確保資料類型的完整性，應在呼叫預存程序之前初始化輸入/輸出參數，或應指定所需的 PHPTYPE。 如需指定 PHPTYPE 的相關資訊，請參閱 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
+> 將 *$vacationHrs* 初始化為 4，會將傳回的 PHPTYPE 設為整數。 若要確保資料類型的完整性，應在呼叫預存程序之前初始化輸入/輸出參數，或應指定所需的 PHPTYPE。 如需指定 PHPTYPE 的相關資訊，請參閱[如何：指定 PHP 資料類型](../../connect/php/how-to-specify-php-data-types.md)。  
   
 由於預存程序會傳回兩個結果，因此 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) 必須在預存程序執行完成之後呼叫，輸出參數的值才可供使用。 在呼叫 **sqlsrv_next_result** 之後， *$vacationHrs* 會包含預存程序所傳回的輸出參數值。  
   
@@ -122,10 +122,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> 將輸入/輸出參數系結至 Bigint 類型時, 如果值的結尾可能超出[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)的範圍, 您就必須將其 SQL 欄位類型指定為 SQLSRV_SQLTYPE_BIGINT。 否則, 它可能會產生「值超出範圍」例外狀況。
+> 將輸入/輸出參數繫結至 bigint 類型時，如果值可能會超出[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)範圍，您必須將其 SQL 欄位類型指定為 SQLSRV_SQLTYPE_BIGINT。 否則，這可能會導致「值超出範圍」例外狀況。
 
 ## <a name="example-2"></a>範例 2
-此程式碼範例示範如何將大型 Bigint 值系結為輸入/輸出參數。  
+此程式碼範例顯示如何將大型 bigint 值繫結為輸入/輸出參數。  
 
 ```
 <?php
@@ -152,9 +152,9 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="see-also"></a>另請參閱  
-[如何：使用 SQLSRV 驅動程式指定參數方向](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+[操作說明：使用 SQLSRV 驅動程式指定參數方向](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
-[如何：使用 SQLSRV 驅動程式擷取輸出參數](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+[操作說明：使用 SQLSRV 驅動程式擷取輸出參數](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
 [擷取資料](../../connect/php/retrieving-data.md)  
   

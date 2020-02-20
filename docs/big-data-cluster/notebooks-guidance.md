@@ -1,26 +1,32 @@
 ---
-title: 在 Azure Data Studio 中執行筆記本
-titleSuffix: SQL Server big data clusters
+title: 執行筆記本：Azure Data Studio
+titleSuffix: SQL Server Big Data Clusters
 description: 此文章說明如何在連線到 SQL Server 2019 巨量資料叢集的 Azure Data Studio 中執行 Jupyter 筆記本。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 05/08/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 23ff737a0fe1434c29b9cdf09102bc5042e68dc3
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: ff3f569761b7ba95a64f693f1726df589ce7e579
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844304"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244097"
 ---
 # <a name="how-to-use-notebooks-in-sql-server"></a>如何在 SQL Server 中使用筆記本
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 此文章說明如何在最新版本的 [**Azure Data Studio**](../azure-data-studio/download.md) 中啟動 Notebook 體驗，以及如何開始撰寫您自己的筆記本。 它也會說明如何使用不同的核心來撰寫筆記本。
+
+觀看這段簡短的 5 分鐘影片，以取得 Azure Data Studio 中的筆記本簡介：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introduction-to-Azure-Data-Studio-Notebooks/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="connect-to-sql-server"></a>連接至 SQL Server
 
@@ -81,7 +87,7 @@ SQL 核心也可用於連線 PostgreSQL 伺服器執行個體。 如果您是 Po
 
 ![Markdown 儲存格](media/notebooks-guidance/notebook-markdown-cell.png)
 
-若按一下文字儲存格以外的地方，將會顯示 Markdown 文字。
+按一下文字儲存格以外的地方，將會顯示 Markdown 的文字。
 
 ![Markdown 文字](media/notebooks-guidance/notebook-markdown-preview.png)
 
@@ -96,7 +102,7 @@ SQL 核心也可用於連線 PostgreSQL 伺服器執行個體。 如果您是 Po
 
 ![Jupyter 後端](media/notebooks-guidance/jupyter-backend.png)
 
-|核心|Description
+|核心|描述
 |:-----|:-----
 | SQL 核心 | 撰寫以您的關聯式資料庫為目標的 SQL 程式碼。
 |PySpark3 和 PySpark 核心| 使用來自叢集的 Spark 計算來撰寫 Python 程式碼。
@@ -113,7 +119,7 @@ SQL 核心也可用於連線 PostgreSQL 伺服器執行個體。 如果您是 Po
 
 按一下工具列中的 [+程式碼]  命令來加入新的程式碼儲存格。
 
-按一下工具列中的 [+文字]  命令來加入新的文字儲存格。
+按一下工具列中的 [+文字]  命令，以加入新的文字儲存格。
 
 ![筆記本工具列](media/notebooks-guidance/notebook-toolbar.png)
 
@@ -121,7 +127,7 @@ SQL 核心也可用於連線 PostgreSQL 伺服器執行個體。 如果您是 Po
 
 ![Markdown 儲存格](media/notebooks-guidance/notebook-markdown-cell.png)
 
-若按一下文字儲存格以外的地方，將會顯示 Markdown 文字。
+按一下文字儲存格以外的地方，將會顯示 Markdown 的文字。
 
 ![Markdown 文字](media/notebooks-guidance/notebook-markdown-preview.png)
 
@@ -129,7 +135,7 @@ SQL 核心也可用於連線 PostgreSQL 伺服器執行個體。 如果您是 Po
 
 在 Azure Data Studio 中開啟的 Notebooks 預設是 [受信任]  。
 
-如果您從其他來源開啟筆記本，它會以 [不信任的]  模式開啟，而您可以接著將它設為 [信任的]  。
+如果您從某個其他來源開啟 Notebook，它會以 [不受信任]  模式開啟，然後您就可以將它設為 [受信任]  。
 
 ### <a name="run-cells"></a>執行儲存格
 如果您想要執行筆記本中的所有儲存格，請按一下工具列中的 [執行儲存格]  按鈕。
@@ -169,7 +175,7 @@ Spark 應用程式已啟動，並傳回下列輸出：
 
 ![Spark Scala](media/notebooks-guidance/spark-scala.png)
 
-當您按一下下方的選項圖示時，也可以查看「儲存格選項」：
+當您按一下下方的選項圖示時，也可以查看「儲存格選項」–
 
 ![儲存格選項](media/notebooks-guidance/scala-cell-options.png)
 
@@ -181,7 +187,7 @@ Spark 應用程式已啟動，並傳回下列輸出：
 
 ### <a name="local-python-kernel"></a>本機 Python 核心
 
-選擇本機 Python 核心，然後在儲存格中輸入：
+選擇本機 Python 核心，然後在儲存格中輸入 -
 
 ![本機 Python](media/notebooks-guidance/local-python.png)
 
@@ -204,7 +210,7 @@ import <package-name>
    > [!Tip]
    > 在 Mac 上，請遵循 [終端機] 視窗中的指示來安裝套件。 
 
-安裝套件之後，您應該能夠移至筆記本儲存格中，並輸入下列命令：
+安裝套件之後，您應該能夠進入 [筆記本] 儲存格，並輸入下列命令：
 
 ```python
 import <package-name>

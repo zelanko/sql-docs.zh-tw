@@ -1,5 +1,5 @@
 ---
-title: getUser 方法 (SQLServerDataSource) |Microsoft Docs
+title: getUser 方法 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 3513dd7f-6ae5-4010-bde0-454ac4365bce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5562f9b19b59096784ad3dd2a09e9135a7e07cf2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978181"
 ---
 # <a name="getuser-method-sqlserverdatasource"></a>getUser 方法 (SQLServerDataSource)
@@ -37,7 +37,7 @@ public java.lang.String getUser()
 ## <a name="return-value"></a>傳回值  
  包含使用者名稱的**字串**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) 方法會設定當連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體時將要使用的使用者名稱。 如果未設定使用者名稱值，getUser 方法會傳回預設值 null。  
   
 ## <a name="see-also"></a>另請參閱  

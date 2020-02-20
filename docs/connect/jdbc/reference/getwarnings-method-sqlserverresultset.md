@@ -16,10 +16,10 @@ ms.assetid: eb4339b0-383b-4337-a935-e8ec3f0d4123
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 242ad42751fac88a08046346915f298378a66b39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978097"
 ---
 # <a name="getwarnings-method-sqlserverresultset"></a>getWarnings 方法 (SQLServerResultSet)
@@ -44,7 +44,7 @@ public java.sql.SQLWarning getWarnings()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 這個 getWarnings 方法是由 sql-dmo 介面中的 getWarnings 方法指定。  
+ 這個 getWarnings 方法是由 java.sql.ResultSet 介面中的 getWarnings 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

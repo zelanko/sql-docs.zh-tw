@@ -1,27 +1,26 @@
 ---
 title: 快速入門：在 Python 中將模型定型
-titleSuffix: SQL Server Machine Learning Services
-description: 使用 SQL Server 機器學習服務在 Python 中建立簡單的預測模型，然後使用新資料來預測結果。
+description: 在此快速入門中，您將會使用 Python 來建立及定型預測模型。 您會將模型儲存至 SQL Server 執行個體中的資料表，然後使用模型預測以 SQL Server 機器學習服務所產生新資料的值。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/14/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fcf43d57488578020eed09080668156fb926d1b0
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c8fd7d734bee00a22af02b014e950f6694b534a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727002"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831759"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server 機器學習服務在 Python 中建立預測模型並計算其分數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在本快速入門中，您將使用 Python 建立和定型預測模型、將模型儲存至 SQL Server 執行個體中的資料表，然後使用模型預測經由 [SQL Server 機器學習服務](../what-is-sql-server-machine-learning.md)所產生的新資料提供的值。
+在此快速入門中，您將會使用 Python 來建立及定型預測模型。 您會將模型儲存至 SQL Server 執行個體中的資料表，然後使用模型預測以 [SQL Server 機器學習服務](../what-is-sql-server-machine-learning.md)所產生新資料的值。
 
 您將建立並執行在 SQL 中執行的兩個預存程序。 第一個預存程序使用傳統的鳶尾花資料集，並產生貝氏機率分類模型，以根據花卉特徵來預測鳶尾花的品種。 第二個程序為評分用，會呼叫在第一個程式中產生的模型，並根據新資料輸出一組預測。 將 Python 程式碼放入 SQL 預存程序後，作業會包含在 SQL 中、可重複使用，而且可由其他預存程序和用戶端應用程式呼叫。
 

@@ -11,10 +11,10 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3eb2778f11aa83498bdfc47ece599aa07c403fe0
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027257"
 ---
 # <a name="understanding-java-ee-support"></a>了解 Java EE 支援
@@ -39,7 +39,7 @@ ms.locfileid: "69027257"
 
 若是 JDBC Driver 7.4，驅動程式包含於 **mssql-jdbc-7.4.1.jre8.jar**、**mssql-jdbc-7.4.1.jre11.jar** 或 **mssql-jdbc-7.4.1.jre12.jar**。
   
-每當您載入具有 JDBC DriverManager 類別的驅動程式時, 以及每當您在任何驅動程式設定中指定驅動程式的類別名稱時, 就會使用類別名稱。 例如，在 Java EE 應用程式伺服器中設定資料來源可能需要您輸入驅動程式類別名稱。  
+每當您載入具有 JDBC DriverManager 類別的驅動程式時，以及每當您在任何驅動程式設定中指定驅動程式的類別名稱時，就會使用類別名稱。 例如，在 Java EE 應用程式伺服器中設定資料來源可能需要您輸入驅動程式類別名稱。  
   
 ## <a name="data-sources"></a>資料來源
 
@@ -59,7 +59,7 @@ JDBC Driver 會提供 Java EE / JDBC 3.0 資料來源的支援。 JDBC 驅動程
 
 所有資料來源都支援設定和取得與基礎驅動程式屬性集相關聯之任何屬性的能力。  
   
-範例:  
+範例：  
   
 `setServerName("localhost");`  
 `setDatabaseName("AdventureWorks");`  

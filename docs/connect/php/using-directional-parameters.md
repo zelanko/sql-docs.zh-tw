@@ -1,5 +1,5 @@
 ---
-title: 使用方向參數 |Microsoft Docs
+title: 使用方向參數 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: cfe35e14-49cb-45df-b444-addbb94a773f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43de9c84bcb1356961d2e5fa0b0c48d05a72de3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935792"
 ---
 # <a name="using-directional-parameters"></a>使用方向參數
@@ -26,11 +26,11 @@ ms.locfileid: "67935792"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |---------|---------------|  
-|[如何：使用 SQLSRV 驅動程式指定參數方向](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)|示範如何在呼叫預存程序時指定參數方向。|  
-|[如何：使用 SQLSRV 驅動程式擷取輸出參數](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)|示範如何以輸出參數呼叫預存程序，以及如何擷取其值。|  
-|[如何：使用 SQLSRV 驅動程式擷取輸入和輸出參數](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)|示範如何以輸入/輸出參數呼叫預存程序，以及如何擷取其值。|  
+|[操作說明：使用 SQLSRV 驅動程式指定參數方向](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)|示範如何在呼叫預存程序時指定參數方向。|  
+|[操作說明：使用 SQLSRV 驅動程式擷取輸出參數](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)|示範如何以輸出參數呼叫預存程序，以及如何擷取其值。|  
+|[操作說明：使用 SQLSRV 驅動程式擷取輸入和輸出參數](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)|示範如何以輸入/輸出參數呼叫預存程序，以及如何擷取其值。|  
   
 ## <a name="see-also"></a>另請參閱  
 [擷取資料](../../connect/php/retrieving-data.md)  

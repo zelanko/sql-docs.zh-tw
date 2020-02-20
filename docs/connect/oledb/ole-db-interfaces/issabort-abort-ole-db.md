@@ -1,5 +1,5 @@
 ---
-title: 'ISSAbort:: Abort (OLE DB) |Microsoft Docs'
+title: ISSAbort::Abort (OLE DB) | Microsoft Docs
 description: ISSAbort::Abort (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 72ce7fa29adfb349fab8c9e60872740c94484108
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994392"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
@@ -40,7 +40,7 @@ ms.locfileid: "67994392"
 HRESULT Abort(void);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  如果要中止的命令位於預存程序中，預存程序 (以及已經呼叫該程序的任何程序) 以及包含預存程序呼叫之命令批次的執行將會終止。 如果伺服器正在將結果集傳送到用戶端，將會停止傳送。 如果用戶端不想要取用結果集，在釋放資料列集前呼叫 **ISSAbort::Abort** 將會加速資料列集的釋放，但是如果有開啟的交易，而且 XACT_ABORT 為 ON，呼叫 **ISSAbort::Abort** 時，將會回復交易  
   
  **ISSAbort::Abort** 傳回 S_OK 之後，相關聯的 **IMultipleResults** 介面會進入無法使用狀態，並將 DB_E_CANCELED 傳回到所有方法呼叫 (除了 **IUnknown** 介面所定義的方法之外)，直到釋放它為止。 如果在呼叫 **Abort** 前已經從 **IMultipleResults** 取得 **IRowset**，它也會進入無法使用狀態，並將 DB_E_CANCELED 傳回到所有方法呼叫 (除了 **IUnknown** 介面和 **IRowset::ReleaseRows** 所定義的方法以外)，直到成功呼叫 **ISSAbort::Abort** 後釋放它為止。  

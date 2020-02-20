@@ -1,5 +1,5 @@
 ---
-title: setNClob 方法 (SQLServerPreparedStatement) |Microsoft Docs
+title: setNClob 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 7ec1d24d-f732-44f3-9608-734ce2df4489
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 051ed3bd89ee2addae12460101221443b7ff54d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973673"
 ---
 # <a name="setnclob-method-sqlserverpreparedstatement"></a>setNClob 方法 (SQLServerPreparedStatement)
@@ -24,7 +24,7 @@ ms.locfileid: "67973673"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[setNClob 方法 &#40;int, java.sql.NClob&#41;](../../../connect/jdbc/reference/setnclob-method-int-java-sql-nclob.md)|將指定參數設定為所指定 java.sql.NClob 物件。|  
 |[setNClob 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setnclob-method-int-java-io-reader.md)|將指定參數設定為指定的 java.io.Reader 物件。|  

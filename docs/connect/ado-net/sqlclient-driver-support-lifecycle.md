@@ -1,7 +1,7 @@
 ---
 title: SqlClient 驅動程式支援生命週期
 description: 包含產品支援週期資訊的頁面。
-ms.date: 08/15/2019
+ms.date: 11/25/2019
 dev_langs:
 - csharp
 - vb
@@ -10,29 +10,39 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: eafe3463a091ea6d511b1ca71dea6a977411cff6
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 42a64af2e638521a3428d656240944a16b29cd44
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451877"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253357"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>SqlClient 驅動程式支援生命週期
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[下載 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Microsoft SqlClient Data Provider for SQL Server 的每個反復專案都會隨附其相關聯的平臺。 以下是生命週期詳細資料：
+Microsoft.Data.SqlClient 程式庫會遵循適用於所有版本的最新 .NET Core 支援原則。
 
-## <a name="microsoft-support-for-net-core"></a>適用于 .NET Core 的 Microsoft 支援
+[檢視 .NET Core 支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) \(英文\)
 
-|  版本  |  發行日期 | 支援層級 | 支援的修補程式版本 | 結束支援 |
-| -- | -- | -- | -- | -- |
-| [.NET Core 2。2](https://aka.ms/netcore22announce) | 2018 年 12 月 04 日 | 目前 | [2.2.6](https://www.microsoft.com/net/download/dotnet-core/runtime-2.2.6) | |
-| [.NET Core 2。1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1) | 2018 年 5 月 30 日 | LTS | [2.1.12](https://www.microsoft.com/net/download/dotnet-core/runtime-2.1.12) | LTS 宣告至少有三年（2018年8月21日）。 |
+## <a name="microsoftdatasqlclient-release-cadence"></a>Microsoft.Data.SqlClient 發行步調
 
-## <a name="microsoft-support-for-net-framework"></a>Microsoft 對 .NET Framework 的支援
+從 1.2 版開始，每隔六個月就會定期發行穩定的新 (GA) 版本，期間還會提供 2 到 3 個預覽版本。 專案關係人和維護人員將根據一些資格和客戶回應，來選擇長期支援 (LTS) 版本。
 
-您可以從[這個](https://support.microsoft.com/lifecycle/search?alpha=.net%20framework)頁面查看 .net Framework 產品生命週期。
+## <a name="release-life-cycles"></a>版本生命週期
+
+| 版本 | 正式發行日期 | 最新修補程式版本 | 修補程式發行日期 | 支援層級  | 結束支援 |
+| -- | -- | -- | -- | -- | -- |
+| 1.1 | 2019 年 11 月 20 日 |  |  | 目前 |  |
+| 1.0 | 2019 年 8 月 28 日 | 1.0.19269.1 | 2019 年 9 月 26 日 | 目前 | 2020 年 2 月 20 日 |
+
+## <a name="long-term-support-lts-releases"></a>長期支援 (LTS) 版本
+
+LTS 版本會在初始版本之後的三年內受到支援。
+
+## <a name="current-releases"></a>目前版本
+
+目前版本會在後續的目前或 LTS 版本之後的三個月內受到支援。

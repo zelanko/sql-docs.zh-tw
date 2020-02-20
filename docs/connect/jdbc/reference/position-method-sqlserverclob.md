@@ -1,5 +1,5 @@
 ---
-title: position 方法 (SQLServerClob) |Microsoft Docs
+title: position 方法 (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 20e04cb0-34ea-4b7a-ba74-4de13b8645b6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3cd2ddc9c0728df5f5fe27227f64d7af035439c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976387"
 ---
 # <a name="position-method-sqlserverclob"></a>position 方法 (SQLServerClob)
@@ -29,7 +29,7 @@ ms.locfileid: "67976387"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[position (java.sql.Clob, long)](../../../connect/jdbc/reference/position-method-java-sql-clob-long.md)|依據給定的開始位置，傳回 CLOB 內指定之 CLOB 物件的字元位置。|  
 |[position (java.lang.String, long)](../../../connect/jdbc/reference/position-method-java-lang-string-long.md)|依據給定的開始位置，傳回 CLOB 內指定之子字串的字元位置。|  

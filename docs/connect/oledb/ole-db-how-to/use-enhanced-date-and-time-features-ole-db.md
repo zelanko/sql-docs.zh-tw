@@ -1,5 +1,5 @@
 ---
-title: 使用增強型日期和時間功能 (OLE DB) |Microsoft Docs
+title: 使用增強型日期和時間功能 (OLE DB) | Microsoft Docs
 description: 使用增強型日期和時間功能 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 907d810c1579229ea69d39ecb32af9f06dec01b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015534"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>使用增強型日期和時間功能 (OLE DB)
@@ -22,7 +22,7 @@ ms.locfileid: "68015534"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  此範例會示範如何使用在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中導入的日期/時間功能。 此範例會使用四個新的日期和時間類型 (**date**、 **time**、 **datetime2**和**datetimeoffset**) 來執行具有參數的命令, 並取出資料列集結果。  
+  此範例會示範如何使用在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中導入的日期/時間功能。 此範例使用四個新的日期和時間類型 (**date**、**time**、**datetime2** 和 **datetimeoffset**) 執行包含參數的命令，並擷取資料列集結果。  
   
  此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   

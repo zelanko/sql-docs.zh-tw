@@ -1,5 +1,5 @@
 ---
-title: 記錄活動 |Microsoft Docs
+title: 記錄活動 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29c7c1e3b536e237e2c61a8e3303313ec53fe679
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993335"
 ---
 # <a name="logging-activity"></a>記錄活動
@@ -24,7 +24,7 @@ ms.locfileid: "67993335"
 
 依預設不會記錄 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 所產生的錯誤和警告。 本主題討論如何設定記錄活動。  
   
-## <a name="logging-activity-using-the-pdosqlsrv-driver"></a>使用 PDO_SQLSRV 驅動程式記錄活動  
+## <a name="logging-activity-using-the-pdo_sqlsrv-driver"></a>使用 PDO_SQLSRV 驅動程式記錄活動  
 唯一適用於 PDO_SQLSRV 驅動程式的組態，是 php.ini 檔案中的 pdo_sqlsrv.log_severity 項目。  
   
 在 php.ini 檔案的結尾加入下列項目：  
@@ -36,7 +36,7 @@ pdo_sqlsrv.log_severity = <number>
   
 **log_severity** 可以是下列其中一個值：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |---------|---------------|  
 |0|停用記錄 (這是沒有任何定義時的預設值)。|  
 |-1|指定會記錄錯誤、警告和通知。|  
@@ -61,7 +61,7 @@ PHP 會在初始化時讀取組態檔，並將資料儲存在快取中；它也�
   
 下表說明可做為 **LogSubsystems** 設定值的常數：  
   
-|值 (括號中的整數對等項目)|Description|  
+|值 (括號中的整數對等項目)|描述|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|開啟所有子系統的記錄。|  
 |SQLSRV_LOG_SYSTEM_OFF (0)|關閉記錄。 這是預設值。|  
@@ -92,7 +92,7 @@ PHP 會在初始化時讀取組態檔，並將資料儲存在快取中；它也�
   
 下表說明可做為 **LogSeverity** 設定值的常數：  
   
-|值 (括號中的整數對等項目)|Description|  
+|值 (括號中的整數對等項目)|描述|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|指定會記錄錯誤、警告和通知。|  
 |SQLSRV_LOG_SEVERITY_ERROR (1)|指定記錄錯誤。 這是預設值。|  

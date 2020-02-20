@@ -1,5 +1,5 @@
 ---
-title: isValid 方法 (SQLServerConnection) |Microsoft Docs
+title: isValid 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 3b0a8bbf-9369-4456-9ab8-1434ccacdd7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3915690475e5ce9321af7fc15498c2bde018c640
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977135"
 ---
 # <a name="isvalid-method-sqlserverconnection"></a>isValid 方法 (SQLServerConnection)
@@ -40,8 +40,8 @@ public boolean isValid(int timeout)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 isValid 方法是由 .java 介面中的 isValid 方法所指定。  
+## <a name="remarks"></a>備註  
+ 這個 isValid 方法是由 java.sql.Connection 介面中的 isValid 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

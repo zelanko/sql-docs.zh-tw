@@ -1,6 +1,6 @@
 ---
 title: 建立 RxSqlServerData 物件
-description: 如何在 SQL Server 上使用 R 語言建立資料物件的教學課程逐步解說。
+description: RevoScaleR 教學課程 2：如何在 SQL Server 上使用 R 語言建立資料物件。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fb6c88c5ce53a072d8cd9611d80cbe621c0fa485
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 7869fc3fc67cb24542223c2300cd7b6ebcf1eb41
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727254"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76922575"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>使用 RxSqlServerData 建立 SQL Server 資料物件 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本課程是 [RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分，說明如何將 [RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server 搭配使用。
+此教學課程是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 2 個，該系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
 
-第二課是接續資料庫建立：新增資料表和載入資料。 如果 DBA 在[第一課](deepdive-work-with-sql-server-data-using-r.md)建立資料庫並且登入，您可以使用 R IDE (例如 RStudio) 或內建工具 (例如 **Rgui**) 來新增資料表。
+此教學課程接續資料庫建立：新增資料表及載入資料。 如果 DBA 在[教學課程二](deepdive-work-with-sql-server-data-using-r.md)中建立資料庫並登入，您可以使用 R IDE (例如 RStudio) 或內建工具 (例如 **Rgui**) 來新增資料表。
 
 從 R 連線到 SQL Server，並且使用 **RevoScaleR** 函式來執行下列工作：
 
@@ -145,7 +145,7 @@ ms.locfileid: "73727254"
     
     如果連接字串沒有任何問題，則在短暫暫停之後，您應該會看到類似如下的結果：
   
-    *寫入的資料列總數：10000，總時間：0.466* *讀取的資料列：10000，已處理的資料列總數：10000，總區塊時間：0.577 秒*
+    *寫入的資料列總數：10000，總時間：0.466* *讀取的資料列:10000，已處理的資料列總數：10000，總區塊時間：0.577 秒*
   
 5. 重新整理資料表清單。 若要確認每個變數具有正確的資料類型且已順利匯入，您也可以使用滑鼠右鍵按一下 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的資料表，然後選取 [選取前 1000 個資料列]  。
 

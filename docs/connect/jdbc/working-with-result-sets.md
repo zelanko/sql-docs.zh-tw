@@ -1,5 +1,5 @@
 ---
-title: 使用結果集 |Microsoft Docs
+title: 使用結果集 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d38cb92fbbf83f9b8a110d2e17f60af70c177ab4
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025443"
 ---
 # <a name="working-with-result-sets"></a>使用結果集
@@ -26,7 +26,7 @@ ms.locfileid: "69025443"
 此外，SQLServerResultSet 物件也提供數種方法，可用來瀏覽其資料列、取得或設定其包含的資料，以及對基礎資料庫中的變更建立各種敏感性層級。  
   
 > [!NOTE]  
-> 如需管理結果集的詳細資訊, 包括其對變更的敏感度, 請參閱[使用 JDBC 驅動程式管理結果集](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)。  
+> 如需管理結果集的詳細資訊 (包括其對變更的敏感性)，請參閱[使用 JDBC 驅動程式管理結果集](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)。  
   
 本節的主題描述您可以使用結果集，操作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中所包含資料的不同方法。  
   

@@ -12,10 +12,10 @@ ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 69dce8309f96988a9d339aefbb684116c0df2eb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193777"
 ---
 # <a name="delivery-extensions-overview"></a>傳遞延伸模組概觀
@@ -23,7 +23,7 @@ ms.locfileid: "63193777"
   
  下表列出 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 隨附的傳遞延伸模組。  
   
-|傳遞延伸模組|Description|  
+|傳遞延伸模組|描述|  
 |------------------------|-----------------|  
 |報表伺服器電子郵件|使用 SMTP 伺服器以電子郵件將報表寄到個別的使用者或群組。|  
 |報表伺服器檔案共用|用以將組織中的報表散發到網路檔案共用。 提供依指定排程將報表自動複製到檔案共用的功能。|  
@@ -51,7 +51,7 @@ Reporting Services 傳遞延伸模組架構
   
 -   如果您計劃為報表管理員實作自訂的訂閱使用者介面，需要對 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 與 Web 控制項有深入的了解。  
   
--   [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 語言的開發體驗，例如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 或是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET。  
+-   [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 語言的開發經驗，例如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET。  
   
 ## <a name="see-also"></a>另請參閱  
  [實作傳遞延伸模組](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   

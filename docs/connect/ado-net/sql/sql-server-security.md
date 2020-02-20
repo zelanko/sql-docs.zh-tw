@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: bb9e02743122958cb567e01f5011fc9f8b3481e6
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: e3b32e0d0224ee6402b69f112560127eb970b9ae
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452002"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246955"
 ---
 # <a name="sql-server-security"></a>SQL Server 安全性
 
@@ -23,13 +23,13 @@ ms.locfileid: "72452002"
 
 SQL Server 具有許多功能，可支援安全資料庫應用程式的建立。  
   
-資料竊取或破壞等一般的安全性考量，則適用於所使用的 SQL Server 版本。 資料完整性也應該視為安全性問題。 如果資料未受到保護，可能會因為特定的資料操作已被允許，且資料不小心或惡意地修改了不正確的值或整個刪除，而變成不萬能。 此外，通常必須遵守法律需求，例如機密資訊的正確儲存。 儲存某些類型的個人資料會完全禁止，這取決於特定管轄區中的法律。  
+資料竊取或破壞等一般的安全性考量，則適用於所使用的 SQL Server 版本。 資料完整性也應被視為安全性問題。 若資料未受到保護，那麼，如果允許進行特定的資料操作，並且利用不正確的值意外或惡意地修改資料或將其完全刪除，則它可能就會變得毫無價值。 此外，通常還必須遵守法律需求，例如正確儲存機密資訊。 視特定管轄區所適用的法律而定，會完全禁止儲存某些類型的個人資料。  
   
-每個 SQL Server 版本和每個 Windows 版本一樣，都具有不同的安全性功能，而越新的版本功能越強。 請務必瞭解，安全性功能本身無法保證安全的資料庫應用程式。 每個資料庫應用程式在其需求、執行環境、部署模型、實體位置和使用者群體中都是唯一的。 部分在範圍中的應用程式可能只需要最少的安全性，而透過網際網路部署的其他本機應用程式或應用程式則可能需要嚴格的安全性措施，以及進行中的監視和評估。  
+每個 SQL Server 版本和每個 Windows 版本一樣，都具有不同的安全性功能，而越新的版本功能越強。 請務必了解，安全性功能本身無法保證安全的資料庫應用程式。 每個資料庫應用程式在其需求、執行環境、部署模型、實體位置及使用者群體中都是唯一的。 範圍內的某些本機應用程式可能只需要最低的安全性，而透過網際網路部署的其他本機應用程式或應用程式可能就需要嚴格的安全性措施以及持續的監視和評估。  
   
-您應該在設計階段就考量 SQL Server 資料庫應用程式的安全性需求，而不是事後才加以考量。 及早在開發週期中評估威脅，可讓您在偵測到弱點的任何地方，減輕潛在損害的機會。  
+您應該在設計階段就考量 SQL Server 資料庫應用程式的安全性需求，而不是事後才加以考量。 在開發週期的早期評估威脅，可讓您有機會減輕偵測到弱點之處所受到的潛在損害。  
   
-即使應用程式的初始設計是音效，隨著系統的發展，新威脅可能會出現。 藉由建立多個資料庫的防線，您可以將安全性缺口所造成的損害降到最低。 您的第一道防線是要減少受攻擊面的範圍，不要授與絕對必要的許可權。  
+即使應用程式的初始設計很健全，但隨著系統的發展，可能就會出現新的威脅。 藉由在資料庫周圍建立多道防線，您就能將安全性缺口所造成的損害降到最低。 您的第一道防線是減少受攻擊面的範圍，除非絕對必要，否則不要授與權限。  
   
 本節中的主題簡要說明與開發人員相關的 SQL Server 安全性功能，並提供連結至《SQL Server 線上叢書》中相關主題的連結，以及提供更深入探討的其他資源。  
   
@@ -45,10 +45,10 @@ SQL Server 具有許多功能，可支援安全資料庫應用程式的建立。
   
 ## <a name="related-sections"></a>相關章節  
 [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-說明 SQL Server 和 Azure SQL Database 的安全性考慮。
+描述 SQL Server 和 Azure SQL Database 的安全性考量。
 
 [SQL Server 安裝的安全性考量](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
-說明安裝 SQL Server 之前要考慮的安全性考慮。
+描述安裝 SQL Server 之前要考慮的安全性考量。
 
 ## <a name="next-steps"></a>後續步驟
 - [SQL Server and ADO.NET](index.md) (SQL Server 和 ADO.NET)

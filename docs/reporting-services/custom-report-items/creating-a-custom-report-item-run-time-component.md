@@ -11,14 +11,14 @@ ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f92a148ec6f967fe1d3fe4282af68c0f801aa0c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194015"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>建立自訂報表項目執行階段元件
-  自訂報表項目執行階段元件會使用任何 CLS 相容語言而實作為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 元件，並在執行階段由報表處理器呼叫。 您可藉由修改自訂報表項目對應的設計階段元件，在設計環境中定義執行階段元件的屬性。  
+  自訂報表項目執行階段元件是使用任何符合 CLS 規範之語言實作為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 元件，並在執行階段由報表處理器呼叫的。 您可藉由修改自訂報表項目對應的設計階段元件，在設計環境中定義執行階段元件的屬性。  
   
  如需完全實作的自訂報表項目的範例，請參閱 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
   
@@ -133,6 +133,6 @@ namespace Microsoft.Samples.ReportingServices
  [自訂報表項目架構](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
  [建立自訂報表項目設計階段元件](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)   
  [自訂報表項目類別庫](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
- [如何：部署自訂報表項目](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [操作說明：部署自訂報表項目](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

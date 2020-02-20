@@ -1,5 +1,5 @@
 ---
-title: 步驟 3︰使用 pymssql 連線到 SQL 的概念證明 | Microsoft Docs
+title: 步驟 3：使用 pymssql 連線到 SQL 的概念證明 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 27b56a20a0456bef04553c614432bde270d8e98d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: c1dfce515eeadbdbaf1fd96e6dcf1a08cd536ab5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935778"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74200451"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>步驟 3︰使用 pymssql 連線到 SQL 的概念證明
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>步驟 3：使用 pymssql 連線到 SQL 的概念證明
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
-這個範例應該僅視為概念證明。  為了清楚起見, 範例程式碼已簡化, 不一定代表 Microsoft 建議的最佳作法。  
+這個範例只應被視為一個概念證明。  為了清楚起見，已將範例程式碼簡化，而其不一定代表 Microsoft 建議的最佳做法。  
   
-## <a name="step-1--connect"></a>步驟 1: 連接  
+## <a name="step-1--connect"></a>步驟 1:連線  
   
-[Pymssql](https://pymssql.org/en/latest/ref/pymssql.html)函數是用來連接到 SQL Database。  
+[pymssql.connect](https://pypi.org/project/pymssql/) 函式可用來連接到 SQL Database。  
   
 ```python
     import pymssql  
@@ -32,9 +32,9 @@ ms.locfileid: "67935778"
 ```  
   
   
-## <a name="step-2--execute-query"></a>步驟 2: 執行查詢  
+## <a name="step-2--execute-query"></a>步驟 2:執行查詢  
   
-您可以使用[cursor. execute](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute)函數, 從查詢針對 SQL Database 取出結果集。 此函式基本上會接受任何查詢並傳回結果集, 而您可以使用[cursor.fetchone ()](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone)來反復查看它。  
+[cursor.execute](https://pypi.org/project/pymssql/) 函式可用來擷取對 SQL Database 查詢的結果集。 這個函式基本上會接受任何查詢並傳回結果集，您可以使用 [cursor.fetchone()](https://pypi.org/project/pymssql/)反覆查詢結果集。  
   
   
 ```python
@@ -48,9 +48,9 @@ ms.locfileid: "67935778"
         row = cursor.fetchone()  
 ```  
   
-## <a name="step-3--insert-a-row"></a>步驟 3: 插入資料列  
+## <a name="step-3--insert-a-row"></a>步驟 3：插入資料列  
   
-在此範例中, 您將瞭解如何安全地執行[INSERT](../../../t-sql/statements/insert-transact-sql.md)語句、傳遞可保護您的應用程式免于[SQL 插入](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)值的參數。    
+在這個範例中，您將了解如何安全地執行 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 陳述式，傳遞可保護您應用程式來防禦 [SQL 插入](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)值的參數。    
   
   
 ```python
@@ -66,13 +66,13 @@ ms.locfileid: "67935778"
     conn.close()
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>步驟 4: 復原交易  
+## <a name="step-4--rollback-a-transaction"></a>步驟 4：復原交易  
   
-這個程式碼範例會示範交易的使用方式, 您可以在其中:  
+這個程式碼範例示範如何使用交易，您將：  
   
 * 開始交易  
-* 插入資料列  
-* 復原您的交易以復原插入  
+* 插入一列資料  
+* 回復您的交易以復原插入  
   
 ```python
     import pymssql  
@@ -86,4 +86,4 @@ ms.locfileid: "67935778"
     
   ## <a name="next-steps"></a>後續步驟  
   
-如需詳細資訊, 請參閱[Python 開發人員中心](https://azure.microsoft.com/develop/python/)。
+如需詳細資訊，請參閱 [Python 開發人員中心](https://azure.microsoft.com/develop/python/)。

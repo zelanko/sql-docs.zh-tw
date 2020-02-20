@@ -1,6 +1,6 @@
 ---
-title: 從結果集提取資料列 (OLE DB) |Microsoft Docs
-description: 使用 SQL Server 的 OLE DB 驅動程式從結果集提取資料列
+title: 從結果集擷取資料列 (OLE DB) | Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 從結果集擷取資料列
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 8aed6ce5eb93c68f22217667fe01306e28d9910e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015557"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>從結果集提取資料列 (OLE DB)
@@ -33,7 +33,7 @@ ms.locfileid: "68015557"
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  使用 ole32.lib oleaut32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連線到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 msoledbsql.h。  
   
 ### <a name="code"></a>程式碼  

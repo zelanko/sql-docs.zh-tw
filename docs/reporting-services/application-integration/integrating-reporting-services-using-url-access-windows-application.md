@@ -1,9 +1,11 @@
 ---
-title: 在 Windows 應用程式中使用 URL 存取 | Microsoft Docs
+title: 在 Windows 應用程式中使用 URL 存取
+description: 對報表伺服器的 URL 存取已針對 Web 環境最佳化，但您也可以使用 URL 存取來將 Reporting Services 報表內嵌到 Windows 應用程式中。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - Windows applications [Reporting Services]
@@ -14,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30ebdf11faf4780e8091f44ef1460d8980e82505
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f133f6cf53123ed7c05f7a7181d5c829b45a258d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63012180"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796908"
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>使用 URL 存取整合 Reporting Services - Windows 應用程式
   雖然會為 Web 環境最佳化報表伺服器的 URL 存取，不過，您也可以使用 URL 存取來將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表內嵌到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式。 不過，需要 Windows Form 的 URL 存取仍然需要您使用網頁瀏覽器技術。 您可以透過 URL 存取與 Windows Form 使用下列整合案例：  

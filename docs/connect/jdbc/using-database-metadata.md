@@ -1,5 +1,5 @@
 ---
-title: 使用資料庫中繼資料 |Microsoft Docs
+title: 使用資料庫中繼資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 8b048371-e912-4ed1-afd7-436978f48888
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fce2bf9d72136b303ee3bc974f3aede313233a82
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026424"
 ---
 # <a name="using-database-metadata"></a>使用資料庫中繼資料
@@ -25,7 +25,7 @@ ms.locfileid: "69026424"
 
 若要建立 SQLServerDatabaseMetaData 物件，您可以使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [getMetaData](../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md) 方法來取得有關它連線之資料庫的資訊。
 
-在下列範例中, 連至[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]範例資料庫的開啟連接會傳遞至函式中, SQLServerConnection 類別的 getMetaData 方法會用來傳回 SQLServerDatabaseMetadata 物件, 然後使用下列各項的方法:SQLServerDatabaseMetaData 物件是用來顯示驅動程式、驅動程式版本、資料庫名稱和資料庫版本的相關資訊。
+在下列範例中，針對 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫的開啟連線會傳遞至函式中，並使用 SQLServerConnection 類別的 getMetaData 方法傳回 SQLServerDatabaseMetadata 物件，然後使用 SQLServerDatabaseMetaData 物件的各種方法來顯示有關驅動程式、驅動程式版本、資料庫名稱和資料庫版本的資訊。
 
 [!code[JDBC#UsingDBMetaData1](../../connect/jdbc/codesnippet/Java/using-database-metadata_1.java)]
 

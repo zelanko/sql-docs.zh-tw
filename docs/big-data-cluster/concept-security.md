@@ -1,7 +1,7 @@
 ---
 title: 安全性概念
 titleSuffix: SQL Server big data clusters
-description: 本文描述 SQL Server 巨量資料叢集的安全性概念。 其中包括叢集端點和叢集驗證的說明。
+description: 本文描述 SQL Server 巨量資料叢集的安全性概念。 此內容包括叢集端點與叢集驗證的說明。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,24 +9,29 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 35eb5e0a3236d8f016ed5ca99b769d628a4d81ed
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0219022ee2f4d813261aa6181416521e88e5d0f6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532368"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253117"
 ---
-# <a name="security-concepts-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的安全性概念
+# <a name="security-concepts-for-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的安全性概念
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文將涵蓋巨量資料叢集中與安全性相關的重要概念
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 能提供一致的授權和驗證。 巨量資料叢集可以與 Active Directory 整合，方法是透過自動化部署針對現有網域設定 Active Directory 整合。 在搭配 Active Directory 整合設定巨量資料叢集之後，您可以利用現有的身分識別和使用者群組在所有端點上進行統一存取。 此外，在您於 SQL Server 中建立外部資料表之後，您可以透過將外部資料表的存取權授與 Active Directory 使用者和群組，進而將資料存取原則集中到單一位置，來控制對資料來源的存取。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 能提供一致的授權和驗證。 巨量資料叢集可以與 Active Directory (AD) 整合，方法是透過完全自動化部署針對現有網域設定 AD 整合。 在搭配 AD 整合設定巨量資料叢集之後，您可以利用現有的身分識別與使用者群組在所有端點上進行統一存取。 此外，在您於 SQL Server 中建立外部資料表之後，您可以透過將外部資料表的存取權授與 AD 使用者與群組，進而將資料存取原則集中到單一位置，來控制對資料來源的存取。
+
+在這段 14 分鐘的影片中，您將會看到巨量資料叢集安全性的概觀：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Big-Data-Cluster-Security/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="authentication"></a>驗證
 
-外部叢集端點支援 Active Directory 驗證。 這代表您可以使用您的 AD 身分識別來向巨量資料叢集進行驗證。
+外部叢集端點支援 AD 驗證。 使用您的 AD 身分識別來向巨量資料叢集進行驗證。
 
 ### <a name="cluster-endpoints"></a>叢集端點
 
@@ -34,7 +39,7 @@ ms.locfileid: "73532368"
 
 * 主要執行個體 - 用來透過資料庫工具和如 SSMS 或 Azure Data Studio 之類的應用程式存取叢集中 SQL Server 主要執行個體的 TDS 端點。 使用來自 Azdata 的 HDFS 或 SQL Server 命令時，視作業而定，該工具將會連線到其他端點。
 
-* 用來存取 HDFS 檔案的閘道，Spark (Knox) - 這是 HTTPS 式的端點。 此端點是用來存取 webHDFS 和 Spark 等服務。
+* 用來存取 HDFS 檔案的閘道，Spark (Knox) - 用來存取服務 (例如 webHDFS 與 Spark) 的 HTTPS 端點。
 
 * 叢集管理服務 (控制器) 端點 - 公開 REST API 來管理叢集的巨量資料叢集管理服務。 Azdata 工具需要連線到此端點。
 
@@ -48,13 +53,13 @@ ms.locfileid: "73532368"
 
 ## <a name="authorization"></a>授權
 
-在整個叢集中，從 Spark 和 SQL Server 一路將查詢發送到 HDFS 時，不同元件之間的整合式安全性將能使原始使用者的身分識別能夠傳遞。 如上所述，有各式各樣的外部叢集端點支援 AD 驗證。
+在整個叢集中，從 Spark 與 SQL Server 一路將查詢發送到 HDFS 時，不同元件之間的整合式安全性將能使原始使用者的身分識別能夠傳遞。 如上所述，有各式各樣的外部叢集端點支援 AD 驗證。
 
 在管理資料存取的叢集中有兩個層級的授權檢查。 巨量資料內容中的授權是在 SQL Server 中完成，方法是在物件上和具有控制清單 (ACL) 的 HDFS 中使用傳統 SQL Server 權限，這會將使用者身分識別與特定權限相關聯。
 
 安全的巨量資料叢集是指在 SQL Server 與 HDFS/Spark 之間，針對驗證和授權案例提供一致且連貫的支援。 驗證是驗證使用者或服務識別的程序，並確保其為所宣稱的身分。 授權是指根據要求使用者的識別，授與或拒絕對特定資源的存取。 此步驟是在透過驗證識別使用者之後執行。
 
-巨量資料內容中的授權通常是透過存取控制清單 (ACL) 執行，這會建立使用者識別與特定權限的關聯。 HDFS 藉由限制對服務 API、HDFS 檔案和作業執行的存取來支援授權。
+巨量資料內容中的授權通常是透過存取控制清單 (ACL) 執行，這會建立使用者識別與特定權限的關聯。 HDFS 透限制對服務 API、HDFS 檔案與作業執行的存取來支援授權。
 
 ## <a name="encryption-and-other-security-mechanisms"></a>加密及其他安全性機制
 
@@ -64,15 +69,14 @@ SQL Server 與 SQL Server 之間的所有通訊 (例如與資料集區通訊的 
 
 ## <a name="basic-administrator-login"></a>基本系統管理員登入
 
-您可以選擇在 Active Directory 模式中，或是僅使用基本系統管理員登入來部署叢集。 不過，使用基本系統管理員登入並非生產環境所支援的安全性模式，且主要是用來評估產品。
+您可以選擇在 AD 模式中，或是僅使用基本系統管理員登入來部署叢集。 不過，只使用基本系統管理員登入並非生產環境所支援的安全性模式，只應用於評估產品。
 
-即使您選擇 Active Directory 模式，系統仍然會為叢集系統管理員建立基本登入。 這能在 AD 連線中斷時提供「後門」。
+即使您選擇 Active Directory 模式，系統仍然會為叢集系統管理員建立基本登入。 此功能會提供替代存取權，以在 AD 連線中斷時使用。
 
-在部署之後，系統便會將叢集中的系統管理員權限授與此基本登入。 這代表該使用者將會成為 SQL Server 主要執行個體中的系統管理員，以及叢集控制器中的系統管理員。
-Hadoop 元件不支援混合模式驗證，這代表基本系統管理員登入並無法用來對閘道 (Knox) 進行驗證。
+在部署之後，系統便會將叢集中的系統管理員權限授與此基本登入。 登入的使用者將會成為 SQL Server 主要執行個體中的系統管理員，以及叢集控制器中的系統管理員。
+Hadoop 元件不支援混合模式驗證，這表示基本系統管理員登入無法用來向閘道 (Knox) 進行驗證。
 
-
-這些是您需要在部署時定義的登入認證。
+這些是您需要在部署期間定義的登入認證。
 
 叢集管理使用者名稱：
  + `AZDATA_USERNAME=<username>`

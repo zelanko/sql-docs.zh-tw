@@ -5,16 +5,16 @@ description: 了解如何安裝與 [!INCLUDE[big-data-clusters-2019](../includes
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 964b6db780564797e35c4a40377227d3b56e4a3e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: fd1cab79ce226a710de1f701cfff5094a82704a5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532232"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721663"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安裝 SQL Server 2019 巨量資料工具
 
@@ -26,16 +26,16 @@ ms.locfileid: "73532232"
 
 下表列出常見的巨量資料叢集工具和其安裝方式：
 
-| 工具 | 必要項 | Description | 安裝 |
+| 工具 | 必要 | 描述 | 安裝 |
 |---|---|---|---|
 | `python` | 是 | Python 是具有動態語意的直譯物件導向高階程式設計語言。 SQL Server 巨量資料叢集的許多部分都使用 python。 | [安裝 python](#python)|
 | `azdata` | 是 | 用於安裝和管理巨量資料叢集的命令列工具。 | [安裝](deploy-install-azdata.md) |
-| `kubectl`<sup>1</sup> | 是 | 用於監視基礎 Kuberentes 叢集的命令列工具 ([詳細資訊](https://kubernetes.io/docs/tasks/tools/install-kubectl/))。 | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
+| `kubectl`<sup>1</sup> | 是 | 用於監視基礎 Kuberentes 叢集的命令列工具 ([詳細資訊](https://kubernetes.io/docs/tasks/tools/install-kubectl/))。 | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \(英文\) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) \(英文\) |
 | **Azure Data Studio** | 是 | 用於查詢 SQL Server 的跨平台圖形化工具。 | [安裝](https://aka.ms/getazuredatastudio) |
 | **資料虛擬化延伸模組** | 是 | 提供 [資料虛擬化精靈] 之 Azure Data Studio 的延伸模組。 | [安裝](../azure-data-studio/data-virtualization-extension.md) |
 | **Azure CLI**<sup>2</sup> | 對於 AKS | 用於管理 Azure 服務的新式命令列介面。 與 AKS 巨量資料叢集部署搭配使用 ([詳細資訊](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest))。 | [安裝](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
-| **mssql-cli** | 選擇性 | 用於查詢 SQL Server 的新式命令列介面 ([詳細資訊](https://github.com/dbcli/mssql-cli/blob/master/README.rst) \(英文\))。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \(英文\) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) \(英文\) |
-| **sqlcmd** | 對於某些指令碼 | 用於查詢 SQL Server 的舊版命令列工具 ([詳細資訊](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15) \(部分機器翻譯\))。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
+| **mssql-cli** | 選用 | 用於查詢 SQL Server 的新式命令列介面 ([詳細資訊](https://github.com/dbcli/mssql-cli/blob/master/README.rst) \(英文\))。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \(英文\) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) \(英文\) |
+| **sqlcmd** | 對於某些指令碼 | 用於查詢 SQL Server 的舊版命令列工具 ([詳細資訊](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15) \(部分機器翻譯\))。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \(英文\) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl` <sup>3</sup> | 對於某些指令碼 | 使用 URL 傳送資料的命令列工具。 | [Windows](https://curl.haxx.se/windows/) \(英文\) \| Linux：安裝 curl 套件 |
 
 <sup>1</sup> 您必須使用 `kubectl` 1.13 版或更新版本。 此外，`kubectl` 的版本應該是 Kubernetes 叢集的次要版本加上或減去一。 如果您想要在 `kubectl` 用戶端上安裝特定版本，請參閱[透過 curl 安裝 `kubectl` 二進位檔](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (在 Windows 10 上，請使用 cmd.exe 執行 curl，而不是使用 Windows PowerShell)。
@@ -58,7 +58,7 @@ ms.locfileid: "73532232"
 - `azdata`
 - `kubectl`
 - **Azure Data Studio**
-- **SQL Server 2019 擴充功能**
+- **資料虛擬化延伸模組**
 
 其餘工具只有在某些情況下才需要。 **Azure CLI** 可以用來管理與 AKS 部署相關聯的 Azure 服務。 **mssql-cli** 是選擇性但實用的工具，可讓您連線到叢集中的 SQL Server 主要執行個體，並從命令列執行查詢。 如果您打算使用 GitHub 指令碼來安裝範例資料，則需要 **sqlcmd** 和 `curl`。
 

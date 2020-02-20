@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 201314f5869b9b1aab52b2f101f2396656448f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994783"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>使用 ISequentialStream 從 FILESTREAM 資料行擷取資料 (OLE DB)
@@ -24,7 +24,7 @@ ms.locfileid: "67994783"
 
   此範例會範例如何在 ICommandText 介面中使用 ISequentialStream 介面來擷取 Filestream 資料行中的單一記錄。  
   
- 如需有關 filestream 功能的詳細資訊, 請參閱[Filestream 支援](../../../oledb/features/filestream-support.md)。  
+ 如需 Filestream 功能的詳細資訊，請參閱 [FILESTREAM 支援](../../../oledb/features/filestream-support.md)。  
   
 ## <a name="example"></a>範例  
  請確認您的 INCLUDE 環境變數包含的目錄內含 msoledbsql.h。  

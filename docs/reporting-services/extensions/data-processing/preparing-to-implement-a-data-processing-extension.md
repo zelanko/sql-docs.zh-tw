@@ -12,10 +12,10 @@ ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3ae11d41956f37f1a203235abad71639f942ae7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193900"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>準備實作資料處理延伸模組
@@ -62,19 +62,19 @@ ms.locfileid: "63193900"
 ## <a name="available-extension-interfaces"></a>可用的延伸模組介面  
  下表描述可用的介面，以及實作是否為必要或為選擇性。  
   
-|介面|Description|實作|  
+|介面|描述|實作|  
 |---------------|-----------------|--------------------|  
-|IDbConnection|代表資料來源的唯一工作階段。 在用戶端/伺服器資料庫系統的情況下，此工作階段可能相當於伺服器的網路連接。|必要項|  
-|IDbConnectionExtension|代表有關安全性與驗證之 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 資料處理延伸模組所實作的其他連接屬性。|選擇性|  
-|IDbTransaction|表示本機交易。|必要項|  
-|IDbTransactionExtension|代表可由 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 資料處理延伸模組所實作的其他交易屬性。|選擇性|  
-|IDbCommand|代表當連接到資料來源時所使用的查詢或命令。|必要項|  
-|IDbCommandAnalysis|代表分析查詢和傳回用於查詢的參數名稱清單的其他命令資訊。|選擇性|  
-|IDataParameter|代表傳遞到命令或查詢的參數或名稱/值組。|必要項|  
-|IDataParameterCollection|代表所有與命令或查詢相關的參數集合。|必要項|  
-|IDataReader|提供一種方法，可順向且唯讀地讀取來自資料來源的資料流。|必要項|  
-|IDataReaderExtension|提供方法來讀取一或多個藉由在資料來源處執行命令所取得的順向資料流之結果集。 這個介面會提供其他支援的欄位彙總。|選擇性|  
-|IExtension|提供 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組的基底類別。 另外也可讓實作者包括當地語系化的延伸模組名稱，並將組態設定從組態檔傳遞到延伸模組。|必要項|  
+|IDbConnection|代表資料來源的唯一工作階段。 在用戶端/伺服器資料庫系統的情況下，此工作階段可能相當於伺服器的網路連接。|必要|  
+|IDbConnectionExtension|代表有關安全性與驗證之 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 資料處理延伸模組所實作的其他連接屬性。|選用|  
+|IDbTransaction|表示本機交易。|必要|  
+|IDbTransactionExtension|代表可由 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 資料處理延伸模組所實作的其他交易屬性。|選用|  
+|IDbCommand|代表當連接到資料來源時所使用的查詢或命令。|必要|  
+|IDbCommandAnalysis|代表分析查詢和傳回用於查詢的參數名稱清單的其他命令資訊。|選用|  
+|IDataParameter|代表傳遞到命令或查詢的參數或名稱/值組。|必要|  
+|IDataParameterCollection|代表所有與命令或查詢相關的參數集合。|必要|  
+|IDataReader|提供一種方法，可順向且唯讀地讀取來自資料來源的資料流。|必要|  
+|IDataReaderExtension|提供方法來讀取一或多個藉由在資料來源處執行命令所取得的順向資料流之結果集。 這個介面會提供其他支援的欄位彙總。|選用|  
+|IExtension|提供 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組的基底類別。 另外也可讓實作者包括當地語系化的延伸模組名稱，並將組態設定從組態檔傳遞到延伸模組。|必要|  
   
  資料處理延伸模組介面會盡可能與 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 資料提供者介面、方法及屬性的子集相同。 如需有關實作完整 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 資料提供者的詳細資訊，請參閱＜[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 軟體開發套件 (SDK) 文件集中的＜實作 .NET Framework 資料提供者＞。  
   

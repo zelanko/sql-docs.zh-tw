@@ -1,5 +1,5 @@
 ---
-title: SQLServerException 的構造函式 (JAVA.lang.throwable) |Microsoft Docs
+title: SQLServerException 建構函式 (java.lang.String, java.lang.Throwable) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 14984450507b5eea63d2fbe88bb2e7f957f61868
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971072"
 ---
-# <a name="sqlserverexception-constructor-javalangstring-javalangthrowable"></a>SQLServerException 的構造函式 (JAVA.lang.throwable)
+# <a name="sqlserverexception-constructor-javalangstring-javalangthrowable"></a>SQLServerException 建構函式 (java.lang.String, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定**字串**物件和**java.lang.throwable**物件時, 初始化[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)類別的新實例。
+  當給定 **string** 物件和 **throwable** 物件時，初始化 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 類別的新執行個體。
 
 ## <a name="syntax"></a>語法  
   
@@ -40,7 +40,7 @@ public SQLServerException(java.lang.String errText,
  
  *cause*  
   
- 包含例外狀況原因的 java.lang.throwable 物件。
+ 包含例外狀況原因的 Throwable 物件。
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerException 建構函式](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

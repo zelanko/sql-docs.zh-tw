@@ -1,6 +1,6 @@
 ---
 title: 大量複製範例設定
-description: 描述大量複製範例中使用的資料表，並提供 SQL 腳本來建立 AdventureWorks 資料庫中的資料表。
+description: 描述大量複製範例中所使用的資料表，並提供可用來在 AdventureWorks 資料庫中建立資料表的 SQL 指令碼。
 ms.date: 09/30/2019
 dev_langs:
 - sql
@@ -9,23 +9,23 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 68a453efa165d73df521bc2ce3a00984f843f4fd
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 129dc64fc9bac2111cd0bc5cb61f3ce7f1d98ee1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452305"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247869"
 ---
 # <a name="bulk-copy-example-setup"></a>大量複製範例設定
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-<xref:Microsoft.Data.SqlClient.SqlBulkCopy> 類別只能用來將資料寫入 SQL Server 資料表。 本主題中所顯示的程式碼範例會使用 SQL Server 範例資料庫 **AdventureWorks**。 若要避免變更現有資料表的程式碼範例，請將資料寫入您必須先建立的資料表。  
+<xref:Microsoft.Data.SqlClient.SqlBulkCopy> 類別只能用來將資料寫入到 SQL Server 資料表。 本主題中所顯示的程式碼範例會使用 SQL Server 範例資料庫 **AdventureWorks**。 若要避免變更現有資料表的程式碼範例，請將資料寫入您必須先建立的資料表。  
   
-**BulkCopyDemoMatchingColumns** 和 **BulkCopyDemoDifferentColumns** 資料表都是以 **AdventureWorks** **Production.Products** 資料表為基礎。 在使用這些資料表的程式碼範例中，會將來自 **Production.Products** 資料表的資料新增至其中一個範例資料表。 當此範例說明如何將來源資料的資料行對應至目的地資料表時，會使用 **BulkCopyDemoDifferentColumns** 資料表；**BulkCopyDemoMatchingColumns** 也適用於大部分其他範例。  
+**BulkCopyDemoMatchingColumns** 和 **BulkCopyDemoDifferentColumns** 資料表都會以 **AdventureWorks** **Production.Products** 資料表為基礎。 在使用這些資料表的程式碼範例中，會將來自 **Production.Products** 資料表的資料新增至其中一個範例資料表。 當此範例說明如何將來源資料的資料行對應至目的地資料表時，會使用 **BulkCopyDemoDifferentColumns** 資料表；**BulkCopyDemoMatchingColumns** 也適用於大部分其他範例。  
   
 幾個程式碼範例示範如何使用一個 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 類別來寫入多個資料表。 在這些範例中，**BulkCopyDemoOrderHeader** 和 **BulkCopyDemoOrderDetail** 資料表用來當作目的地資料表。 這些資料表以 **AdventureWorks** 中的 **Sales.SalesOrderHeader** 和 **Sales.SalesOrderDetail** 資料表為基礎。  
   

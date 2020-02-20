@@ -1,9 +1,11 @@
 ---
-title: 使用 SOAP 整合 Reporting Services | Microsoft Docs
+title: 使用 SOAP 進行整合
+description: Reporting Services SOAP API 為開發自訂報表方案提供數個 Web 服務端點。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - Report Server Web service, application integration
@@ -14,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6bc17af5-883c-4bfa-87d9-48cd7056d145
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67e87a097ed9b4aac773404b517ae3c69b54680c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c19676b59b2de393f7d68a6660ec33db50c29e09
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741741"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796966"
 ---
 # <a name="integrating-reporting-services-using-soap"></a>使用 SOAP 整合 Reporting Services
   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP API 為開發自訂報表方案提供數個 Web 服務端點。 這些端點目前分為兩個類別：管理與執行。 管理功能是透過 <xref:ReportService2005>、<xref:ReportService2006> 和 <xref:ReportService2010> 端點公開。 <xref:ReportService2005> 端點是用於管理以原生模式設定的報表伺服器，而 <xref:ReportService2006> 端點則是用於管理為 SharePoint 整合模式所設定的報表伺服器。 <xref:ReportService2010> 合併了 <xref:ReportService2005> 和 <xref:ReportService2006> 的功能，並能管理以原生模式或 SharePoint 整合模式設定的報表伺服器。  

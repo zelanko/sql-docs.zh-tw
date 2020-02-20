@@ -11,10 +11,10 @@ ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 57ba9918769655c6823e8837641342f75f3795e5
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71974318"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>下載 ODBC Driver for SQL Server
@@ -28,9 +28,9 @@ ms.locfileid: "71974318"
 ### <a name="linux-and-macos"></a>Linux 與 macOS
 
 #### <a name="debian"></a>Debian
-- [Debian 10. deb 套件](https://packages.microsoft.com/debian/10/prod/pool/main/m/msodbcsql17/)
-- [Debian 9. deb 套件](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql17/)
-- [Debian 8. deb 套件](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
+- [Debian 10 .deb 套件](https://packages.microsoft.com/debian/10/prod/pool/main/m/msodbcsql17/) \(英文\)
+- [Debian 9 .deb 套件](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql17/) \(英文\)
+- [Debian 8 .deb 套件](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/) \(英文\)
 
 #### <a name="redhat"></a>RedHat
 - [RedHat 8 .rpm 套件 (msodbcsql17-*)](https://packages.microsoft.com/rhel/8/prod/)
@@ -43,14 +43,14 @@ ms.locfileid: "71974318"
 - [SuSE 11 .rpm 套件 (msodbcsql17-*)](https://packages.microsoft.com/sles/11/prod/)
 
 #### <a name="ubuntu"></a>Ubuntu
-- [Ubuntu 19.04. deb 套件](https://packages.microsoft.com/ubuntu/19.04/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 18.10. deb 套件](https://packages.microsoft.com/ubuntu/18.10/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 18.04. deb 套件](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 16.04. deb 套件](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 14.04. deb 套件](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/) 
+- [Ubuntu 19.04 .deb 套件](https://packages.microsoft.com/ubuntu/19.04/prod/pool/main/m/msodbcsql17/) \(英文\)
+- [Ubuntu 18.10 .deb 套件](https://packages.microsoft.com/ubuntu/18.10/prod/pool/main/m/msodbcsql17/) \(英文\)
+- [Ubuntu 18.04 .deb 套件](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/) \(英文\)
+- [Ubuntu 16.04 .deb 套件](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/) \(英文\)
+- [Ubuntu 14.04 .deb 套件](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/) \(英文\) 
 
 #### <a name="macos"></a>macOS
-- [macOS 10.12、10.13、10.14 Homebrew homebrew 公式](https://github.com/Microsoft/homebrew-mssql-release)
+- [macOS 10.12、10.13、10.14 Homebrew 公式](https://github.com/Microsoft/homebrew-mssql-release) \(英文\)
 
 另請參閱[安裝驅動程式](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。
 
@@ -64,7 +64,7 @@ ms.locfileid: "71974318"
 ### <a name="linux-and-macos"></a>Linux 與 macOS
 
 #### <a name="debian"></a>Debian
-- [Debian 8. deb 套件](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
+- [Debian 8 .deb 套件](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/) \(英文\)
 
 #### <a name="redhat"></a>RedHat
 - [RedHat 7 .rpm 套件 (msodbcsql-*)](https://packages.microsoft.com/rhel/7/prod/)
@@ -75,14 +75,14 @@ ms.locfileid: "71974318"
 - [SuSE 11 .rpm 套件 (msodbcsql-*)](https://packages.microsoft.com/sles/11/prod/)
 
 #### <a name="ubuntu"></a>Ubuntu
-- [Ubuntu 17.04. deb 套件](https://packages.microsoft.com/ubuntu/17.04/prod/pool/main/m/msodbcsql/)
-- [Ubuntu 16.04. deb 套件](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/)
-- [Ubuntu 16.10. deb 套件](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/)
-- [Ubuntu 15.10. deb 套件](https://packages.microsoft.com/ubuntu/15.10/prod/pool/main/m/msodbcsql/)
-- [Ubuntu 14.04. deb 套件](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql/) 
+- [Ubuntu 17.04 .deb 套件](https://packages.microsoft.com/ubuntu/17.04/prod/pool/main/m/msodbcsql/) \(英文\)
+- [Ubuntu 16.04 .deb 套件](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/) \(英文\)
+- [Ubuntu 16.10 .deb 套件](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/) \(英文\)
+- [Ubuntu 15.10 .deb 套件](https://packages.microsoft.com/ubuntu/15.10/prod/pool/main/m/msodbcsql/) \(英文\)
+- [Ubuntu 14.04 .deb 套件](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql/) \(英文\) 
 
 #### <a name="macos"></a>macOS
-- [OS X 10.11 和 macOS 10.12，10.13 Homebrew homebrew 公式](https://github.com/Microsoft/homebrew-mssql-release)
+- [OS X 10.11 和 macOS 10.12、10.13 Homebrew 公式](https://github.com/Microsoft/homebrew-mssql-release) \(英文\)
 
 另請參閱[安裝驅動程式](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。
 

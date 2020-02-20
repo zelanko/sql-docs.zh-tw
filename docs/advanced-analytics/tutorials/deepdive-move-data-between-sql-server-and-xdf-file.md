@@ -1,6 +1,6 @@
 ---
 title: 使用 XDF 檔案移動資料
-description: 如何在 SQL Server 上使用 XDF 和 R 語言移動資料的教學課程逐步解說。
+description: RevoScaleR 教學課程 13：如何在 SQL Server 上使用 XDF 與 R 語言移動資料。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6935276a47061652647666184637af8ba1535edd
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: d55bdf59eef4c8e7baa0553487a92a06e76326a9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727203"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947361"
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>在 SQL Server 與 XDF 檔案之間移動資料 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本課程是 [RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分，說明如何將 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server 搭配使用。
+此教學課程是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 13 個，該系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
 
-在此步驟中，您將了解如何使用 XDF 檔案，在遠端和本機計算內容之間傳輸資料。 將資料儲存在 XDF 檔案中，可讓您對資料執行轉換。
+在此教學課程中，您將了解如何使用 XDF 檔案，在遠端與本機計算內容之間傳輸資料。 將資料儲存在 XDF 檔案中，可讓您對資料執行轉換。
 
 完成時，使用檔案中的資料來建立新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) 函式可以將轉換套用至資料，並執行資料框架與 .xdf 檔案之間的轉換。
   
@@ -110,7 +110,7 @@ ms.locfileid: "73727203"
 
 ## <a name="next-steps"></a>後續步驟
 
-本課程以 **RevoScaleR** 和 SQL Server 上的多部分教學課程系列作為結尾。 它為您介紹了許多與資料相關和計算的概念，讓您能夠以自己的資料和專案需求作為基礎繼續進行。
+此教學課程為 **RevoScaleR** 與 SQL Server 的多部分教學課程系列作總結。 它為您介紹了許多與資料相關和計算的概念，讓您能夠以自己的資料和專案需求作為基礎繼續進行。
 
 若要加深對於 **RevoScaleR** 的知識，您可以返回 R 教學課程清單，逐步執行您可能錯過的任何練習。 或者，請檢閱目錄中的操作說明文章，以取得一般工作的相關資訊。
 

@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL escape 序列 |Microsoft Docs
+title: 使用 SQL 逸出序列 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da2ae6b5353448d5281910d94aeef05ee0999c6a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025889"
 ---
 # <a name="using-sql-escape-sequences"></a>使用 SQL 逸出序列
@@ -69,9 +69,9 @@ SELECT {fn UCASE(Name)} FROM Employee
 
 下表列出使用函數逸出序列時，JDBC 驅動程式支援的各種函數：  
   
-| 字串函數                                                                                                                                                                                                                                                                                                                        | 數值函數                                                                                                                                                                                                                                                                                                                                                                                                   | 日期時間函數                                                                                                                                                                                                                                                                                                                                             | 系統函數                             |
+| 字串函式                                                                                                                                                                                                                                                                                                                        | 數值函數                                                                                                                                                                                                                                                                                                                                                                                                   | 日期時間函數                                                                                                                                                                                                                                                                                                                                             | 系統函數                             |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> Insert<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> DAYOFWEEK<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTER<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> YEAR | DATABASE<br /><br /> IFNULL<br /><br /> 使用者 |
+| ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> Insert<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> 記錄<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> DAYOFWEEK<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> 月<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTER<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> 年 | DATABASE<br /><br /> IFNULL<br /><br /> USER |
 
 > [!NOTE]  
 > 如果您嘗試使用資料庫不支援的函數，將會發生錯誤。  
@@ -88,7 +88,7 @@ SELECT {fn UCASE(Name)} FROM Employee
   
 | 常值類型 | 描述 | 值格式               |
 | ------------ | ----------- | -------------------------- |
-| d            | date        | yyyy-mm-dd                 |
+| d            | Date        | yyyy-mm-dd                 |
 | t            | Time        | hh:mm:ss [1]               |
 | ts           | TimeStamp   | yyyy-mm-dd hh:mm:ss[.f...] |
   
@@ -111,7 +111,7 @@ JDBC 驅動程式支援預存程序呼叫的 `{? = call proc_name(?,...)}` 和 `
 
 其中的 `procedure-name` 指定預存程序的名稱，而 `parameter` 則指定預存程序參數。  
   
-如需搭配預存程式`call`使用逸出序列的詳細資訊, 請參閱[using 語句與預存](../../connect/jdbc/using-statements-with-stored-procedures.md)程式。  
+如需搭配預存程序使用 `call` 逸出序列的詳細資訊，請參閱[搭配預存程序使用陳述式](../../connect/jdbc/using-statements-with-stored-procedures.md)。  
 
 ## <a name="outer-joins"></a>外部聯結
 

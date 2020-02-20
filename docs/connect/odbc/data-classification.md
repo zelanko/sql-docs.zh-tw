@@ -1,5 +1,5 @@
 ---
-title: 搭配 Microsoft ODBC Driver for SQL Server 使用資料分類 |Microsoft Docs
+title: 使用資料分類搭配 Microsoft ODBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2018
 ms.prod: sql
@@ -14,21 +14,21 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: 8f0f821890cabe25a9abb572e453c9846c75ec94
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72041128"
 ---
 # <a name="data-classification"></a>資料分類
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="overview"></a>概觀
-基於管理敏感性資料的目的，SQL Server 和 Azure SQL Server 引進了提供具有敏感性中繼資料之資料庫資料行的功能，可讓用戶端應用程式處理不同類型的敏感性資料（例如健康情況、財務等等）。）（根據資料保護原則）。
+基於管理敏感性資料的目的，SQL Server 和 Azure SQL Server 引進了提供具有敏感性中繼資料之資料庫資料行的功能，讓用戶端應用程式能夠根據資料保護原則來處理不同類型的敏感性資料 (例如，健康情況、財務等)。
 
-如需如何將分類指派至資料行的詳細資訊，請參閱[SQL 資料探索和分類](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017)。
+如需如何將分類指派給資料行的詳細資訊，請參閱 [SQL 資料探索與分類](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017)。
 
-Microsoft ODBC Driver 17.2 允許使用 SQL_CA_SS_DATA_CLASSIFICATION 欄位識別碼，透過 SQLGetDescField 來抓取此中繼資料。
+Microsoft ODBC Driver 17.2 允許使用 SQL_CA_SS_DATA_CLASSIFICATION 欄位識別碼，透過 SQLGetDescField 來擷取此中繼資料。
 
 ## <a name="format"></a>[格式]
 SQLGetDescField 具有下列語法：
@@ -43,7 +43,7 @@ SQLRETURN SQLGetDescField(
      SQLINTEGER *    StringLengthPtr);  
 ```
 *DescriptorHandle*  
- 源IRD （執行資料列描述項）控制碼。 可透過呼叫 SQLGetStmtAttr 與 SQL_ATTR_IMP_ROW_DESC 語句屬性來抓取
+ [輸入] IRD (實作資料列描述項) 控制代碼。 可以透過 SQL_ATTR_IMP_ROW_DESC 陳述式屬性呼叫 SQLGetStmtAttr 來擷取
   
  *RecNumber*  
  [輸入] 0
@@ -52,44 +52,44 @@ SQLRETURN SQLGetDescField(
  [輸入] SQL_CA_SS_DATA_CLASSIFICATION
   
  *ValuePtr*  
- 輸出輸出緩衝區
+ [輸出] 輸出緩衝區
   
  *BufferLength*  
- 源輸出緩衝區的長度（以位元組為單位）
+ [輸入] 輸出緩衝區的長度 (以位元組為單位)
 
- *StringLengthPtr* [Output] 要傳回*valueptr 是*中傳回之位元組總數的緩衝區指標。
+ *StringLengthPtr* [輸出] 緩衝區的指標，此緩衝區會傳回可在 *ValuePtr* 中傳回的位元組總數。
  
 > [!NOTE]
-> 如果緩衝區的大小不明，可以藉由呼叫 SQLGetDescField 並將*valueptr 是*當做 Null，並檢查*StringLengthPtr*的值來判斷。
+> 如果緩衝區的大小是未知的，則可搭配 NULL 的 *ValuePtr* 來呼叫 SQLGetDescField，並檢查 *StringLengthPtr* 的值來進行判斷。
  
-如果資料分類資訊無法使用，則會傳回*不正確描述項欄位*錯誤。
+如果無法取得資料分類資訊，將會傳回「描述項欄位無效」  錯誤。
 
-成功呼叫 SQLGetDescField 時， *valueptr 是*所指向的緩衝區會包含下列資料：
+成功呼叫 SQLGetDescField 之後，透過 *Valueptr* 指向其中的緩衝區將包含下列資料：
 
  `nn nn [n sensitivitylabels] tt tt [t informationtypes] cc cc [c columnsensitivitys]`
 
 > [!NOTE]
-> `nn nn`，`tt tt`，而 `cc cc` 是多位元組整數，以最低的位址儲存最小的位元組。
+> `nn nn`、`tt tt` 和 `cc cc` 是多位元組整數，其會以最小顯著性位元組儲存於最低位址。
 
-*`sensitivitylabel`* 和 *`informationtype`* 的格式都是
+*`sensitivitylabel`* 和 *`informationtype`* 的形式如下
 
  `nn [n bytes name] ii [i bytes id]`
 
-*`columnsensitivity`* 的格式為
+*`columnsensitivity`* 的形式如下
 
  `nn nn [n sensitivityprops]`
 
-針對每個資料行 *（c）* ，會有*n* 4 位元組 *`sensitivityprops`* ：
+針對每個資料行 *(c)* ，均存在 *n* 個 4 位元組的 *`sensitivityprops`* ：
 
  `ss ss tt tt`
 
-s-索引至 *`sensitivitylabels`* 陣列中，`FF FF` （如果未加上標籤）
+s：在 *`sensitivitylabels`* 陣列中編製索引，如果未加上標籤，則為 `FF FF`
 
-t-索引至 *`informationtypes`* 陣列中，`FF FF` （如果未加上標籤）
+t：在 *`informationtypes`* 陣列中編製索引，如果未加上標籤，則為 `FF FF`
 
 
 <br><br>
-資料的格式可以表示為下列虛擬結構：
+資料的格式可以利用下列虛擬結構來表示：
 
 ```
 struct IDnamePair {
@@ -117,7 +117,7 @@ struct {
 
 
 ## <a name="code-sample"></a>程式碼範例
-示範如何讀取資料分類中繼資料的測試應用程式。 在 Windows 上，可以使用 `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` 來編譯，並以連接字串執行，並使用 SQL 查詢（傳回分類的資料行）做為參數：
+示範如何讀取資料分類中繼資料的測試應用程式。 在 Windows 上，可以使用 `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` 進行編譯，並以連接字串和 SQL 查詢 (傳回已分類的資料行) 作為參數來執行：
 
 ```
 #ifdef _WIN32
@@ -244,22 +244,22 @@ int main(int argc, char **argv)
 ```
 
 ## <a name="bkmk-version"></a>支援的版本
-如果 `FieldIdentifier` 設定為 `SQL_CA_SS_DATA_CLASSIFICATION` （1237），Microsoft ODBC 驅動程式17.2 允許透過 `SQLGetDescField` 來抓取資料分類資訊。 
+如果將 `FieldIdentifier` 設定為 `SQL_CA_SS_DATA_CLASSIFICATION` (1237)，Microsoft ODBC Driver 17.2 就允許透過 `SQLGetDescField` 擷取資料分類資訊。 
 
-從 Microsoft ODBC Driver 17.4.1.1 開始，您可以使用 `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` （1238）欄位識別碼，透過 `SQLGetDescField` 來抓取伺服器所支援的資料分類版本。 在17.4.1.1 中，支援的資料分類版本設定為 "2"。
+從 Microsoft ODBC Driver 17.4.1.1 開始，您可以使用 `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238) 欄位識別碼，透過 `SQLGetDescField` 來擷取伺服器所支援的資料分類版本。 在 17.4.1.1 中，會將支援的資料分類版本設定為 "2"。
 
  
 
-從17.4.2.1 開始導入了預設版本的資料分類，其設為 "1"，而是將版本驅動程式報告為支援的 SQL Server。 新的連接屬性 `SQL_COPT_SS_DATACLASSIFICATION_VERSION` （1400）可以讓應用程式將支援的資料分類版本從 "1" 變更為支援的最大值。  
+從 17.4.2.1 開始導入了預設版本的資料分類，並將其設定為 "1"，而且版本驅動程式正在向 SQL Server 報告支援此版本。 新的連線屬性 `SQL_COPT_SS_DATACLASSIFICATION_VERSION` (1400) 可讓應用程式將支援的資料分類版本從 "1" 變更為支援的最大值。  
 
 範例： 
 
-若要設定此呼叫應該在 SQLConnect 或 SQLDriverConnect 呼叫之前進行的版本：
+若要設定版本，應該在 SQLConnect 或 SQLDriverConnect 呼叫之前進行此呼叫：
 ```
 ret = SQLSetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)2, SQL_IS_INTEGER);
 ```
 
-目前支援的資料分類版本值可透過 SQLGetConnectAttr 呼叫來 retirved： 
+目前支援的資料分類版本值可以透過 SQLGetConnectAttr 呼叫來擷取： 
 ```
 ret = SQLGetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)&dataClassVersion, SQL_IS_INTEGER, 0);
 ```

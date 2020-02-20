@@ -11,10 +11,10 @@ ms.assetid: 7320c383-0b06-446d-963b-7005e50324a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11d8f8e346fdb0f07770feec815e5aa5fe88355f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68001582"
 ---
 # <a name="valueof-method-javasqltimestamp-javautilcalendar"></a>valueOf 方法 (java.sql.Timestamp, java.util.Calendar)
@@ -36,13 +36,13 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, java.util.Cal
   
  *calendar*  
   
- 位移值。  行事*曆*的日期和時間元件將會根據*時間戳記*值來設定。  
+ 位移值。  *行事曆*的日期和時間元件將會根據 *timestamp* 值來設定。  
   
 ## <a name="return-value"></a>傳回值  
- 傳回 DateTimeOffset 物件, 代表位於給定 util 行事曆物件時區的 java. Timestamp 物件所提供的時間點。  
+ 傳回 DateTimeOffset 物件，這個物件表示 java.sql.Timestamp 物件在給定 java.util.Calendar 物件時區所指定的時間點。  
   
-## <a name="remarks"></a>Remarks  
- 這個方法也會將 util 設定為由 sql-dmo 物件所指定的時間點。  
+## <a name="remarks"></a>備註  
+ 這個方法也會將 java.util.Calendar 物件設定為由 java.sql.Timestamp 物件所指定的時間點。  
   
 ## <a name="see-also"></a>另請參閱  
  [DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)   

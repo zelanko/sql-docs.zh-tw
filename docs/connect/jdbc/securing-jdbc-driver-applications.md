@@ -1,5 +1,5 @@
 ---
-title: 保護 JDBC 驅動程式應用程式 |Microsoft Docs
+title: 保護 JDBC 驅動程式應用程式 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61a17b302499f87d552ec61c90208effc688e164
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027749"
 ---
 # <a name="securing-jdbc-driver-applications"></a>保護 JDBC 驅動程式應用程式

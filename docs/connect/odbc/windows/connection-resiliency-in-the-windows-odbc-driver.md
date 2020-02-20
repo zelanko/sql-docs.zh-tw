@@ -11,10 +11,10 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eecf4868791a9dcd963a31963f742f90a2cf3843
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008429"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 驅動程式中的連接恢復功能
@@ -35,7 +35,7 @@ ms.locfileid: "68008429"
   
      您可以在執行下列作業時修改連接重試次數：  
   
-    -   透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接重試計數 **控制項定義或修改使用 ODBC Driver for** 的資料來源。  
+    -   透過**連接重試計數**控制項定義或修改使用 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料來源。  
   
     -   使用 **ConnectRetryCount** 連接字串關鍵字。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68008429"
   
      您可以在執行下列作業時修改連接重試間隔：  
   
-    -   透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接重試間隔 **控制項定義或修改使用 ODBC Driver for** 的資料來源。  
+    -   透過**連接重試間隔**控制項定義或修改使用 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料來源。  
   
     -   使用 **ConnectRetryInterval** 連接字串關鍵字。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68008429"
 |IMC06|連接中斷，且無法復原。 用戶端驅動程式將連接標示為無法復原。 未嘗試還原連接。|  
   
 ## <a name="example"></a>範例  
- 下列範例包含兩個函數。 **func1** 說明如何連接使用 Windows 版 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料來源名稱 (DSN)。 DSN 會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證，而且它會指定使用者識別碼。 然後, **func1**會使用**SQL_COPT_SS_CONNECT_RETRY_COUNT**來抓取連接重試次數。  
+ 下列範例包含兩個函數。 **func1** 說明如何連接使用 Windows 版 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料來源名稱 (DSN)。 DSN 會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證，而且它會指定使用者識別碼。 然後，**func1** 會透過 **SQL_COPT_SS_CONNECT_RETRY_COUNT** 擷取連接重試次數。  
   
  **func2** 會使用 **SQLDriverConnect**、 **ConnectRetryCount** 連接字串關鍵字和連接屬性來擷取連接重試與重試間隔的設定。  
   
@@ -173,6 +173,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Windows 上適用於 SQL Server 的 Microsoft ODBC 驅動程式](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
+ [Windows 上的 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

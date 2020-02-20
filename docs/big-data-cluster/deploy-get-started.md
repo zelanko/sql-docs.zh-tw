@@ -9,14 +9,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2bbb4c05a6760709fcb873cd8c39f301c37aeb2b
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 02c3e6e217ea2918ab36829d6f0cceb4a6269e81
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706358"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190394"
 ---
-# <a name="get-started-with-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>開始使用 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="get-started-with-big-data-clusters-2019"></a>開始使用 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -33,16 +33,21 @@ ms.locfileid: "73706358"
 > [!TIP]
 > 若要快速部署 Kubernetes 與巨量資料叢集環境，以協助您提升其功能，請使用[指令碼區段](#scripts)中指出的任一項範例指令碼。 在部署之後若要管理叢集，可使用下一區段中的[用戶端工具](#tools)。
 
+觀看這段 9 分鐘的影片，以取得如何部署巨量資料叢集的概觀：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
+
+
 ## <a id="tools"></a> 用戶端工具
 
 巨量資料叢集需要一組特定的用戶端工具。 在您將巨量資料叢集部署至 Kubernetes 之前，應該先安裝下列工具：
 
-| 工具 | Description |
+| 工具 | 描述 |
 |---|---|
 | **azdata** | 部署及管理巨量資料叢集。 |
 | **kubectl** | 建立及管理基礎 Kubernetes 叢集。 |
 | **Azure Data Studio** | 用來使用巨量資料叢集的圖形化介面。 |
-| **SQL Server 2019 擴充** | 能提供巨量資料叢集功能的 Azure Data Studio 擴充。 |
+| **SQL Server 2019 延伸模組** | 能提供巨量資料叢集功能的 Azure Data Studio 擴充。 |
 
 針對不同的案例，還會需要其他工具。 每篇文章都應該會說明執行某個特定工作的必要工具。 如需工具和安裝連結的完整清單，請參閱[安裝 SQL Server 2019 巨量資料工具](deploy-big-data-tools.md)。
 

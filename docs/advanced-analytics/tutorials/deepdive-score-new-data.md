@@ -1,6 +1,6 @@
 ---
 title: 使用 RevoScaleR 對資料評分
-description: 如何在 SQL Server 上使用 R 語言對資料評分的教學課程逐步解說。
+description: RevoScaleR 教學課程 8：如何在 SQL Server 上使用 R 語言為資料評分。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf4198e4f8baa0c572f5da3d2b4cf457e695a4b7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 26f5c7b56298e6a3bd5f1fa9d8bc1d4db79d60af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727182"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947186"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>對新資料評分 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本課程是 [RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分，說明如何將 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server 搭配使用。
+這是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的教學課程 8；此教學課程系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
 
-在此步驟中，您會使用在上一個課程中建立的羅吉斯回歸模型，為另一個使用相同獨立變數作為輸入的資料集評分。
+在此教學課程中，您將會使用在上一個教學課程中建立的羅吉斯迴歸模型，為另一個使用相同獨立變數作為輸入的資料集評分。
 
 > [!div class="checklist"]
 > * 為新資料評分
@@ -32,7 +32,7 @@ ms.locfileid: "73727182"
 
 ## <a name="generate-and-save-scores"></a>產生並儲存分數
   
-1. 更新 sqlScoreDS 資料來源 (在[第二課](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)中建立)，以使用上一個課程所建立的資料行資訊。
+1. 更新 sqlScoreDS 資料來源 (在[教學課程二](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)中建立)，以使用在上一個教學課程中建立的資料行資訊。
   
     ```R
     sqlScoreDS <- RxSqlServerData(

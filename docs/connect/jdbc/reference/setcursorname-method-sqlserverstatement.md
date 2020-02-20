@@ -1,5 +1,5 @@
 ---
-title: setCursorName 方法 (SQLServerStatement) |Microsoft Docs
+title: setCursorName 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 3f3ec4f2-103a-4e16-9206-c5bd8639f946
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f743ddb27b079a4b98d5e00c8ab378a5a6859a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974509"
 ---
 # <a name="setcursorname-method-sqlserverstatement"></a>setCursorName 方法 (SQLServerStatement)
@@ -45,8 +45,8 @@ public final void setCursorName(java.lang.String name)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 setCursorName 方法是由 sql 語句介面中的 setCursorName 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 setCursorName 方法是由 java.sql.Statement 介面中的 setCursorName 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

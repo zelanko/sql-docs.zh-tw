@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 634f9f62a3ff1de70be84fd5a7721d8efed891bf
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: fe7a83c66dba9af372e82fc2814828aae32d6a2d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149933"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558284"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>什麼是 SQL Server 機器學習服務 (Python 和 R)？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ SQL Server 機器學習服務，可讓您在資料庫中執行 Python 和 R 指�
 
 ## <a name="what-can-i-do-with-machine-learning-services"></a>我可以使用機器學習服務來做些什麼？
 
-您可以使用機器學習服務，在 SQL Server 內建置機器學習和深度學習模型，並加以訓練。 您也可以將現有模型部署至機器學習服務，並使用關聯式資料來進行預測。
+您可以使用機器學習服務，在 SQL Server 內建置機器學習和深度學習模型，並加以定型。 您也可以將現有模型部署至機器學習服務，並使用關聯式資料來進行預測。
 
 您可以使用 SQL Server 機器學習服務來進行的預測類型範例包括：
 
@@ -67,7 +67,7 @@ SQL Server 機器學習服務，可讓您在資料庫中執行 Python 和 R 指�
 
 除了 Microsoft 的企業套件之外，您還可以使用開放原始碼套件和架構。 最常見的開放原始碼 Python 和 R 套件都已預先安裝在機器學習服務中。 此外，也包含下列來自 Microsoft 的 Python 和 R 套件：
 
-| Language | 封裝 | Description |
+| Language | Package | 描述 |
 |-|-|-|
 | Python | [revoscalepy](python/ref-py-revoscalepy.md) | 可調整 Python 的主要套件。 資料轉換與操作、統計摘要、視覺化，以及許多模型化形式。 此外，此套件中的函式會自動在可用的核心之間分配工作負載來進行平行處理。 |
 | Python | [microsoftml](python/ref-py-microsoftml.md) | 新增機器學習演算法來建立自訂模型，以進行文字分析、影像分析及情感分析。 | 

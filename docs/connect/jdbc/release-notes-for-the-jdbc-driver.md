@@ -11,10 +11,10 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04a179492b151e664dfe31f4fe4e51c5440fcef5
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027793"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver 的版本資訊
@@ -24,15 +24,15 @@ ms.locfileid: "69027793"
 本文會列出 _Microsoft JDBC Driver for SQL Server_ 的版本。 針對每個發行版本，會將變更命名並加以描述。
 ## <a name="741"></a>7.4.1
 
-### <a name="compliance"></a>遵循
+### <a name="compliance"></a>法規遵循
 
-2019年8月2日
+2019 年 8 月 2 日
 
 | 合規性變更 | 詳細資料 |
 | :---------------- | :------ |
-| 下載 JDBC Driver 7.4 的最新更新。 | &bull; &nbsp; [Microsoft 下載中心](https://go.microsoft.com/fwlink/?linkid=2099962)<br/>&bull; &nbsp; [GitHub，7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven 中心](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| 下載 JDBC Driver 7.4 的最新更新。 | &bull;&nbsp;[Microsoft 下載中心](https://go.microsoft.com/fwlink/?linkid=2099962)<br/>&bull; &nbsp; [GitHub，7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven 中心](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | 完全符合 JDBC API 規格 4.2 的規範。 | 7\.4 套件中的 jar 會根據 Java 版本相容性命名。<br/><br/>例如，來自 7.4 套件的 mssql-jdbc-7.4.1.jre11.jar 檔案應該與 Java 11 搭配使用。 |
-| 與 JAVA 開發工具組 (JDK) 12.0、11.0 和1.8 版本相容。 | 除了 JDK 11.0 和 1.8 之外，Microsoft JDBC Driver 7.4 for SQL Server 現在還與 Java 開發套件 (JDK) 12.0 版相容。 |
+| 與 Java 開發套件 (JDK) 12.0、11.0 和 1.8 版相容。 | 除了 JDK 11.0 和 1.8 之外，Microsoft JDBC Driver 7.4 for SQL Server 現在還與 Java 開發套件 (JDK) 12.0 版相容。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="support-for-jdk-12"></a>JDK 12 支援
@@ -43,16 +43,16 @@ ms.locfileid: "69027793"
 
 | NTLM 變更 | 詳細資料 |
 | :--------- | :------ |
-| 支援 NTLM 驗證模式。 | 這種驗證模式可讓 Windows 和非 Windows 用戶端使用 Windows 網域使用者, 針對 SQL Server 進行驗證。 |
-| 更多詳細資料及一個範例應用程式來使用此驗證模式。 | 請參閱[使用 NTLM 驗證進行連接](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md)。 |
+| 支援 NTLM 驗證模式。 | 這種驗證模式可讓 Windows 與非 Windows 用戶端，使用 Windows 網域使用者身分針對 SQL Server 自行驗證。 |
+| 更多詳細資料及一個範例應用程式來使用此驗證模式。 | 請參閱 [使用 NTLM 驗證連線](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>透過_useFmtOnly_介紹查詢 java.sql.parametermetadata
+### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>介紹如何透過 _useFmtOnly_ 查詢 ParameterMetaData
 
 | useFmtOnly 變更 | 詳細資料 |
 | :---------- | :------ |
-| 已新增**useFmtOnly**連接屬性。 | 這項功能可讓使用者透過`SET FMTONLY ON`舊版 API 選擇性地查詢 java.sql.parametermetadata。 這適用于`sp_describe_undeclared_parameters`不會如預期般執行的案例。 |
-| 更多詳細資料和限制。 | 請參閱 [Using useFmtOnly](../../connect/jdbc/using-usefmtonly.md) |
+| 已新增 **useFmtOnly** 連線屬性屬性。 | 此功能可讓使用者透過 `SET FMTONLY ON` 舊版 API 選擇性地查詢 ParameterMetaData。 這對於 `sp_describe_undeclared_parameters` 未如預期執行的情況很有用。 |
+| 更多詳細資料與限制。 | 請參閱 [Using useFmtOnly](../../connect/jdbc/using-usefmtonly.md) |
 | &nbsp; | &nbsp; |
 
 ### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-121"></a>更新了「適用於 Java 的 Microsoft Azure Key Vault SDK」  1.2.1 版
@@ -69,12 +69,12 @@ ms.locfileid: "69027793"
 | 已知問題 | 詳細資料 |
 | :----------- | :------ |
 | 使用 NTLM 驗證時。 | 目前不支援同時啟用擴充保護與加密連線。 |
-| 使用 useFmtOnly 時。 | 有一些功能問題與是由 SQL 剖析邏輯中的缺陷所造成。 如需詳細資訊和因應措施建議, 請參閱[使用 useFmtOnly](../../connect/jdbc/using-usefmtonly.md) 。 |
+| 使用 useFmtOnly 時。 | 有一些功能問題與是由 SQL 剖析邏輯中的缺陷所造成。 如需更多詳細資料與因應措施建議，請參閱[使用 useFmtOnly](../../connect/jdbc/using-usefmtonly.md)。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="722"></a>7.2.2
 
-### <a name="compliance"></a>遵循
+### <a name="compliance"></a>法規遵循
 
 2019 年 4 月 16 日
 
@@ -195,7 +195,7 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
             SQLServerKeyVaultAuthenticationCallback authenticationCallback) throws SQLServerException;
 ```
 
-### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-160"></a>更新「適用於 Java 的 Microsoft Azure Active Directory 驗證程式庫 (ADAL4J)」。版本：1.6.0
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-160"></a>已更新「適用於 Java 的 Microsoft Azure Active Directory 驗證程式庫 (ADAL4J)」版本：1.6.0
 
 Microsoft JDBC Driver 7.0 for SQL Server 已將其在「適用於 Java 的 Microsoft Azure Active Directory 驗證程式庫 (ADAL4J)」上的 Maven 相依性更新為 1.6.0 版。 如需有關相依性的詳細資訊，請參閱 [Microsoft JDBC Driver for SQL Server 的功能相依性](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。
 
@@ -213,7 +213,7 @@ Microsoft JDBC Driver 6.4 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 �
 
 ### <a name="added-connection-property-sslprotocol"></a>已新增連線屬性：sslProtocol
 
-新的連線屬性讓使用者能夠指定 TLS 通訊協定關鍵字。 可能的值為："TLS"、"TLSv1"、"TLSv1.1" 和 "TLSv1.2"。 如需詳細資訊，請參閱 [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol) \(英文\)。
+新的連線屬性讓使用者能夠指定 TLS 通訊協定關鍵字。 可能的值包括：TLS、TLSv1、TLSv1.1 與 TLSv1.2。 如需詳細資訊，請參閱 [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol) \(英文\)。
 
 ### <a name="deprecated-connection-property-fipsprovider"></a>已取代連線屬性：fipsProvider
 
@@ -251,7 +251,7 @@ Microsoft JDBC Driver 6.4 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 �
 
 JDBC 驅動程式現在透過 Kerberos，在所有支援的作業系統 (Windows、Linux 與 Mac) 上支援 Azure Active Directory (Azure AD) 整合式驗證。 或者，在 Windows 作業系統上，使用者可以使用 sqljdbc_auth.dll 進行驗證。
 
-### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>更新「適用於 Java 的 Microsoft Azure Active Directory 驗證程式庫 (ADAL4J)」。版本：1.4.0
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>已更新「適用於 Java 的 Microsoft Azure Active Directory 驗證程式庫 (ADAL4J)」版本：1.4.0
 
 此 JDBC Driver 已將其在「適用於 Java 的 Microsoft Azure Active Directory 驗證程式庫 (ADAL4J)」上的 Maven 相依性更新為 1.4.0 版。 如需有關相依性的詳細資訊，請參閱 [Microsoft JDBC Driver for SQL Server 的功能相依性](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。
 
@@ -297,7 +297,7 @@ Microsoft JDBC Driver 6.1 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 �
 
 Microsoft JDBC Driver 6.0 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 的規範。 6\.0 套件中的 jar 會根據其與 JDBC API 版本的合規性進行命名。 例如，6.0 套件中的 sqljdbc42.jar 檔案會符合 JDBC API 4.2 的規範。 同樣地，sqljdbc41.jar 檔案會符合 JDBC API 4.1 的規範。
 
-若要確保您擁有正確的 sqljdbc42.jar 或 sqljdbc41.jar 檔案，請執行下列程式碼行。 如果輸出為 "Driver version: 6.0.7507.100"，則您具有 JDBC Driver 6.0 套件。
+若要確保您擁有正確的 sqljdbc42.jar 或 sqljdbc41.jar 檔案，請執行下列程式碼行。 如果輸出為「驅動程式版本：6.0.7507.100」，表示您有 JDBC 驅動程式 6.0 套件。
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
@@ -334,7 +334,7 @@ TVP 提供從用戶端應用程式，將多個資料列的資料封送至 SQL Se
 
 Microsoft JDBC Driver 4.2 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 的規範。 4\.2 套件中的 jar 會根據其與 JDBC API 版本的合規性進行命名。 例如，4.2 套件中的 sqljdbc42.jar 檔案會符合 JDBC API 4.2 的規範。 同樣地，sqljdbc41.jar 檔案會符合 JDBC API 4.1 的規範。
 
-若要確保您擁有正確的 sqljdbc42.jar 或 sqljdbc41.jar 檔案，請執行下列程式碼行。 如果輸出為 "Driver version: 4.2.6420.100"，則您具有 JDBC Driver 4.2 套件。
+若要確保您擁有正確的 sqljdbc42.jar 或 sqljdbc41.jar 檔案，請執行下列程式碼行。 如果輸出為「驅動程式版本：4.2.6420.100」，表示您有 JDBC 驅動程式 4.2 套件。
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
@@ -359,7 +359,7 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ### <a name="new-kerberos-principal-connection-property"></a>新的 Kerberos 主體連線屬性
 
-驅動程式使用新的連線屬性，讓 Kerberos 連線更具彈性。 如需詳細資訊，請參閱[使用 Kerberos 整合式驗證連接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。
+驅動程式使用新的連線屬性，讓 Kerberos 連線更具彈性。 如需詳細資訊，請參閱[使用 Kerberos 整合式驗證連線到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。
 
 ## <a name="41"></a>4.1
 

@@ -1,5 +1,5 @@
 ---
-title: 使用 JDBC 驅動程式管理結果集 |Microsoft Docs
+title: 使用 JDBC 驅動程式管理結果集 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 273a03e088036057f6d7b31c98074391138de07e
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027916"
 ---
 # <a name="managing-result-sets-with-the-jdbc-driver"></a>使用 JDBC 驅動程式管理結果集

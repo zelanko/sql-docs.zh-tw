@@ -11,10 +11,10 @@ ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9374c76a76aa12f60fc3fa5f911916f39000d8b4
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028465"
 ---
 # <a name="basic-data-types-sample"></a>基本資料類型範例
@@ -33,7 +33,7 @@ ms.locfileid: "69028465"
 
 若要執行此範例應用程式，您必須將 Classpath 設定為包含 mssql-jdbc jar 檔案。 您也必須存取 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫。 如需如何設定 classpath 的詳細資訊，請參閱[使用 JDBC 驅動程式](../../connect/jdbc/using-the-jdbc-driver.md)。
 
-此範例會建立所需的資料表, 並在[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]範例資料庫中插入範例資料:
+範例將會建立必要的資料表，然後插入 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫中的範例資料：
 
 > [!NOTE]  
 > [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 mssql-jdbc 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定來使用。 如需選擇哪個 JAR 檔案的詳細資訊，請參閱 [JDBC Driver 的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。
@@ -42,7 +42,7 @@ ms.locfileid: "69028465"
 
 在下列範例中，範例程式碼會建立 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 資料庫的連線，然後從 DataTypesTable 測試資料表中擷取單一資料列。 接著呼叫自訂 displayRow 方法，使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的各種 get\<類型> 方法顯示結果集中的所有資料。
 
-接下來，範例會使用 SQLServerResultSet 類別的各種 update\<類型> 方法來更新結果集中的資料，然後呼叫 [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 方法，將該資料存回資料庫。
+接下來，範例會使用 SQLServerResultSet 類別的各種 update\<類型> 方法更新結果集中的資料，然後呼叫 [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 方法，將該資料存回資料庫。
 
 最後，範例會重新整理結果集中的資料，然後呼叫自訂 displayRow 方法顯示結果集中的資料。
 

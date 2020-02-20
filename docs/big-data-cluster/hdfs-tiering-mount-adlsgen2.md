@@ -9,16 +9,16 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ddf088bc8f7ba3d53bb989145e778deb3472e2a7
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: 2afc9fce446d277422c564330c5cc7db254f2d00
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632786"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252010"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>如何在巨量資料叢集中掛接 ADLS Gen2 以進行 HDFS 階層處理
 
-下列各節提供如何使用 Azure Data Lake Storage Gen2 儲存體資料來源設定 HDFS 階層處理的範例。
+下列各節提供如何使用 Azure Data Lake Storage Gen2 儲存體資料來源來設定 HDFS 階層處理的範例。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -84,7 +84,7 @@ ms.locfileid: "73632786"
 您也可以使用可在 Azure 入口網站上為您 ADLS 帳戶取得的存取金鑰來進行掛接。
 
  > [!TIP]
-   > 如需如何尋找儲存體帳戶存取金鑰 (`<storage-account-access-key>`) 的詳細資訊，請參閱[檢視帳戶金鑰和連接字串](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string)。
+   > 如需如何尋找儲存體帳戶存取金鑰 (`<storage-account-access-key>`) 的詳細資訊，請參閱[檢視帳戶金鑰和連接字串](/azure/storage/common/storage-account-keys-manage#view-access-keys-and-connection-string)。
 
 ### <a name="set-environment-variable-for-access-key-credentials"></a>設定存取金鑰認證的環境變數
 
@@ -159,4 +159,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>後續步驟
 
-如需 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的詳細資訊，請參閱[什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)。
+如需 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]的詳細資訊，請參閱[什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)。

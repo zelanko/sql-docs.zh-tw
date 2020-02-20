@@ -1,5 +1,5 @@
 ---
-title: 使用基本資料類型 |Microsoft Docs
+title: 使用基本資料類型 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: abbd2aa3c277ad36f419de849b02433f17d27403
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026516"
 ---
 # <a name="using-basic-data-types"></a>使用基本資料類型
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 使用 JDBC 基本資料類型，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型和 Java 程式設計語言轉換成彼此理解的格式。 JDBC 驅動程式提供 JDBC 4.0 API 的支援, 其中包括**SQLXML**資料類型和國家 (Unicode) 資料類型, 例如**NCHAR**、 **NVARCHAR**、 **LONGNVARCHAR**和**NCLOB**。  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 使用 JDBC 基本資料類型，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型和 Java 程式設計語言轉換成彼此理解的格式。 JDBC 驅動程式提供 JDBC 4.0 API 的支援，其中包括 **SQLXML** 資料類型和國家 (Unicode) 資料類型，例如 **NCHAR**、**NVARCHAR**、**LONGNVARCHAR** 和 **NCLOB**。  
   
 ## <a name="data-type-mappings"></a>資料類型對應
 
@@ -33,27 +33,27 @@ ms.locfileid: "69026516"
 | BINARY             | BINARY                                             | byte[]                       |
 | bit                | BIT                                                | boolean                      |
 | char               | CHAR                                               | String                       |
-| 日期               | DATE                                               | java.sql.Date                |
-| DATETIME           | timestamp                                          | java.sql.Timestamp           |
+| date               | 日期                                               | java.sql.Date                |
+| Datetime           | timestamp                                          | java.sql.Timestamp           |
 | datetime2          | timestamp                                          | java.sql.Timestamp           |
 | datetimeoffset (2) | microsoft.sql.Types.DATETIMEOFFSET                 | microsoft.sql.DateTimeOffset |
-| Decimal            | DECIMAL                                            | java.math.BigDecimal         |
+| decimal            | DECIMAL                                            | java.math.BigDecimal         |
 | FLOAT              | DOUBLE                                             | double                       |
 | image              | LONGVARBINARY                                      | byte[]                       |
-| INT                | INTEGER                                            | INT                          |
+| int                | INTEGER                                            | int                          |
 | money              | DECIMAL                                            | java.math.BigDecimal         |
 | NCHAR              | CHAR<br /><br /> NCHAR (Java SE 6.0)               | String                       |
 | ntext              | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | String                       |
 | NUMERIC            | NUMERIC                                            | java.math.BigDecimal         |
 | NVARCHAR           | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | String                       |
 | nvarchar(max)      | VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)         | String                       |
-| REAL               | real                                               | FLOAT                        |
+| real               | real                                               | FLOAT                        |
 | smalldatetime      | timestamp                                          | java.sql.Timestamp           |
 | SMALLINT           | SMALLINT                                           | short                        |
 | SMALLMONEY         | DECIMAL                                            | java.math.BigDecimal         |
 | text               | LONGVARCHAR                                        | String                       |
 | time               | TIME (1)                                           | java.sql.Time (1)            |
-| TIMESTAMP          | BINARY                                             | byte[]                       |
+| timestamp          | BINARY                                             | byte[]                       |
 | TINYINT            | TINYINT                                            | short                        |
 | udt                | VARBINARY                                          | byte[]                       |
 | UNIQUEIDENTIFIER   | CHAR                                               | String                       |
@@ -61,14 +61,14 @@ ms.locfileid: "69026516"
 | varbinary(max)     | VARBINARY                                          | byte[]                       |
 | varchar            | VARCHAR                                            | String                       |
 | varchar(max)       | VARCHAR                                            | String                       |
-| xml                | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | String<br /><br /> SQLXML    |
+| Xml                | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | String<br /><br /> SQLXML    |
 | sqlvariant         | SQLVARIANT                                         | Object                       |
 | 幾何           | VARBINARY                                          | byte[]                       |
-| 地理位置          | VARBINARY                                          | byte[]                       |
+| geography          | VARBINARY                                          | byte[]                       |
   
 (1) 若要搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型 time 使用 java.sql.Time，您必須將 **sendTimeAsDatetime** 連線屬性設為 false。  
   
-(2) 您可以使用[Datetimeoffset 類別](../../connect/jdbc/reference/datetimeoffset-class.md)以程式設計方式存取**datetimeoffset**的值。  
+(2) 您可以使用 [DateTimeOffset 類別](../../connect/jdbc/reference/datetimeoffset-class.md)來以程式設計方式存取 **datetimeoffset** 的值。  
   
 下列章節會提供如何使用 JDBC Driver 與基本資料類型的範例。 如需如何在 Java 應用程式中使用基本資料類型的更詳細範例，請參閱[基本資料類型範例](../../connect/jdbc/basic-data-types-sample.md)。  
   
@@ -85,11 +85,11 @@ ms.locfileid: "69026516"
 [!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
   
 > [!NOTE]  
-> 具有 scale 方法的 getUnicodeStream 和 getBigDecimal 已被取代, 且 JDBC 驅動程式不支援。
+> 搭配 scale 方法的 getUnicodeStream 與 getBigDecimal 皆已淘汰，JDBC 驅動程式並不支援。
 
 ## <a name="updating-data-by-data-type"></a>依資料類型更新資料
 
-如果您必須更新資料來源中的欄位值, 請使用 SQLServerResultSet 類別的其中一個更新\<類型 > 方法。 在下列範例中，[updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) 方法會結合 [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 方法使用，以更新資料來源中的資料：  
+如果您必須更新資料來源中的欄位值，請使用 SQLServerResultSet 類別的其中一個 update\<Type> 方法。 在下列範例中，[updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) 方法會結合 [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 方法使用，以更新資料來源中的資料：  
   
 [!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
   
@@ -102,7 +102,7 @@ ms.locfileid: "69026516"
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   
-如需參數化查詢的詳細資訊, 請參閱搭配[使用 SQL 語句與參數](../../connect/jdbc/using-an-sql-statement-with-parameters.md)。  
+如需參數化查詢的詳細資訊，請參閱[使用含參數的 SQL 陳述式](../../connect/jdbc/using-an-sql-statement-with-parameters.md)。  
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>傳遞參數至預存程序
 
@@ -113,7 +113,7 @@ ms.locfileid: "69026516"
 > [!NOTE]  
 > 在此範例中，結果集會傳回執行預存程序的結果。
 
-如需有關搭配預存程式與輸入參數使用 JDBC 驅動程式的詳細資訊，請參閱[使用含輸入參數的預存程序](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)。  
+如需搭配預存程序和輸入參數使用 JDBC 驅動程式的詳細資訊，請參閱[使用含輸入參數的預存程序](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)。  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>從預存程序中擷取參數
 
@@ -124,7 +124,7 @@ ms.locfileid: "69026516"
 > [!NOTE]  
 > 除了傳回的 out 參數之外，結果集也會傳回執行預存程序的結果。  
   
-如需有關如何使用 JDBC 驅動程式搭配預存程式和輸出參數的詳細資訊, 請參閱[使用具有輸出參數的預存](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)程式。  
+如需如何搭配預存程序和輸出參數使用 JDBC 驅動程式的詳細資訊，請參閱[使用含輸出參數的預存程序](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)。  
 
 ## <a name="see-also"></a>另請參閱
 

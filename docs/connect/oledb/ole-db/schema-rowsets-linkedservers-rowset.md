@@ -1,5 +1,5 @@
 ---
-title: LINKEDSERVERS 資料列集 (OLE DB) |Microsoft Docs
+title: LINKEDSERVERS 資料列集 (OLE DB) | Microsoft Docs
 description: LINKEDSERVERS 資料列集 (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 75b443df235fd99f262cf3fda0abf6a6354da413
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993887"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>結構描述資料列集 - LINKEDSERVERS 資料列集
@@ -29,7 +29,7 @@ ms.locfileid: "67993887"
   
  **LINKEDSERVERS** 資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|Description|  
+|資料行名稱|類型指標|描述|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|連結伺服器的名稱。|  
 |SVR_PRODUCT|DBTYPE_WSTR|製造商或是識別由連結伺服器名稱表示之資料存放區類型的其他名稱。|  

@@ -1,5 +1,5 @@
 ---
-title: 連接到 Azure SQL database |Microsoft Docs
+title: 連線到 Azure SQL 資料庫 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58a0b6f11fa28dca0e8aae98cb1794b12e3fc227
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70155104"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>連接到 Azure SQL Database
@@ -25,14 +25,14 @@ ms.locfileid: "70155104"
   
 - [SQL Azure 資料庫](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
-- [如何：使用 JDBC 連線到 SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [操作說明：使用 JDBC 連線到 SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
 - [使用 Azure Active Directory 驗證連接](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>詳細資料
 
-連接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]時, 您應該連接至 master 資料庫以呼叫**SQLServerDatabaseMetaData. getCatalogs**。  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 不支援從使用者資料庫傳回整組目錄。 **SQLServerDatabaseMetaData. getCatalogs**使用 sys.databases view 來取得目錄。 請參閱[sys.databases (transact-sql)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)中的許可權討論, 以瞭解上的**SQLServerDatabaseMetaData getCatalogs** [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]行為。  
+連線到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 時，您應該連線到 master 資料庫來呼叫 **SQLServerDatabaseMetaData.getCatalogs**。  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 不支援從使用者資料庫傳回整組目錄。 **SQLServerDatabaseMetaData.getCatalogs** 會使用 sys.databases 檢視來取得目錄。 請參閱 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 中對於權限的討論，以了解 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 上的 **SQLServerDatabaseMetaData.getCatalogs** 行為。  
   
 ## <a name="connections-dropped"></a>連線中斷
 
@@ -76,11 +76,11 @@ shutdown /r /t 1
 
 ## <a name="appending-the-server-name-to-the-userid-in-the-connection-string"></a>將伺服器名稱附加至連接字串中的 userId  
 
-在 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版之前，連線到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 時，您必須將伺服器名稱附加至連接字串中的 UserId。 例如， user@servername。 從 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版開始，您不再需要將 @servername 附加至連接字串中的 UserId。  
+在 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版之前，連線到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 時，您必須將伺服器名稱附加至連接字串中的 UserId。 例如： user@servername 。 從 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版開始，您不再需要將 @servername 附加至連接字串中的 UserId。  
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>使用加密需要設定 hostNameInCertificate
 
-在7.2 版[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]之前, 連接到時, 如果您指定**encrypt = true** (如果連接字串中的伺服器名稱是*簡短名稱*, 則應指定**hostNameInCertificate** 。*domainName*, 將**hostNameInCertificate**屬性設定為\*。*domainName*)。 從7.2 版的驅動程式中, 這個屬性是選擇性的。
+在 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 7.2 版之前，連線到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 時，如果您指定了 **encrypt=true** (如果連接字串中的伺服器名稱為 *shortName*.*domainName*，請將 **hostNameInCertificate** 屬性設定為 \*.*domainName*)，則應該指定 **hostNameInCertificate**。 從驅動程式 7.2 版開始，這個屬性是選擇性的。
 
 例如：
 

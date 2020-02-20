@@ -1,6 +1,6 @@
 ---
-title: 使用 IRowsetFastLoad (OLE DB) 進行大量資料複製 |Microsoft Docs
-description: 使用適用于 SQL Server 的 OLE DB 驅動程式 IRowsetFastLoad 介面, 將資料大量複製到 SQL Server 資料表
+title: 使用 IRowsetFastLoad 大量複製資料 (OLE DB) | Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 的 IRowsetFastLoad 介面，大量複製資料到 SQL Server 資料表中
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 926cc4f4d3dd1f3022c2b653a32f12ee58492b24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015637"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>使用 IRowsetFastLoad 大量複製資料 (OLE DB)
@@ -29,7 +29,7 @@ ms.locfileid: "68015637"
 
   此範例會示範如何使用 IRowsetFastLoad，將記錄大量複製到資料表中。  
   
- 取用者會透過將 SQL Server 驅動程式特定屬性 SSPROP_ENABLEFASTLOAD 的 OLE DB 驅動程式設定為 VARIANT_TRUE, 來通知 OLE DB 驅動程式 SQL Server 其大量複製的需求。 在資料來源上設定屬性之後, 取用者會為 SQL Server 會話建立 OLE DB 驅動程式。 新的會話允許取用者存取**IRowsetFastLoad**。  
+ 取用者會將其大量複製的需求通知 OLE DB Driver for SQL Server，方法是將 OLE DB Driver for SQL Server 特有的屬性 SSPROP_ENABLEFASTLOAD 設定為 VARIANT_TRUE。 在資料來源上設定該屬性後，取用者會建立 OLE DB Driver for SQL Server 工作階段。 新的工作階段可以讓取用者存取 **IRowsetFastLoad**。  
   
  完整的範例會示範使用 **IRowsetFastLoad** 將記錄大量複製到資料表中。 在這個範例中，10 筆記錄會加入至資料表 **IRFLTable**。 您必須在資料庫中建立資料表 **IRFLTable**。  
   
@@ -42,17 +42,17 @@ ms.locfileid: "68015637"
   
 1.  建立資料來源的連接。  
   
-2.  將 SQL Server 驅動程式特定資料來源屬性 SSPROP_ENABLEFASTLOAD 的 OLE DB 驅動程式設定為 VARIANT_TRUE。 當這個屬性設定為 VARIANT_TRUE 之後，新建立的工作階段就會允許取用者存取 **IRowsetFastLoad**。  
+2.  將 Microsoft OLE DB Driver for SQL Server 特有的資料來源屬性 SSPROP_ENABLEFASTLOAD 設定為 VARIANT_TRUE。 當這個屬性設定為 VARIANT_TRUE 之後，新建立的工作階段就會允許取用者存取 **IRowsetFastLoad**。  
   
-3.  建立要求**IOpenRowset**介面的會話。  
+3.  建立要求 **IOpenRowset** 介面的工作階段。  
   
 4.  呼叫 **IOpenRowset::OpenRowset**，以便開啟包含資料表中所有資料列的資料列集 (使用大量複製作業複製資料)。  
   
-5.  執行必要的系結, 並使用**IAccessor:: CreateAccessor**建立存取子。  
+5.  進行必要的繫結，並且使用 **IAccessor::CreateAccessor** 來建立存取子。  
   
 6.  設定要將資料複製到資料表的來源記憶體緩衝區。  
   
-7.  呼叫**IRowsetFastLoad:: InsertRow** , 將資料大量複製到資料表中。  
+7.  呼叫 **IRowsetFastLoad::InsertRow** 來將資料大量複製到資料表中。  
   
 ## <a name="example"></a>範例  
  在這個範例中，10 筆記錄會加入至資料表 IRFLTable。 您必須在資料庫中建立資料表 IRFLTable。 IA64 不支援此範例。  

@@ -16,10 +16,10 @@ ms.assetid: fd6be063-08eb-40cf-9201-5a9f62387726
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0265f06d589ea89b38f995f8a9616fd22bcf92ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975269"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream-int"></a>setBinaryStream 方法 (int, java.io.InputStream, int)
@@ -52,8 +52,8 @@ public final void setBinaryStream(int n,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 setBinaryStream 方法是由 JAVA.sql.preparedstatement 介面中的 setBinaryStream 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 setBinaryStream 方法是由 java.sql.PreparedStatement 介面中的 setBinaryStream 方法所指定。  
   
  如果此資料流長度與 *length* 參數中所指定的長度不同，JDBC 驅動程式就會在更新或插入資料列時擲回例外狀況。  
   

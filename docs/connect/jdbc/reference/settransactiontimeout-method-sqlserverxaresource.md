@@ -1,5 +1,5 @@
 ---
-title: setTransactionTimeout 方法 (SQLServerXAResource) |Microsoft Docs
+title: setTransactionTimeout 方法 (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 38bf4a1a-6ad3-437c-b9ed-8792ab6dde7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 481843393f15998df059bb7a732c64010b2c8bf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972286"
 ---
 # <a name="settransactiontimeout-method-sqlserverxaresource"></a>setTransactionTimeout 方法 (SQLServerXAResource)
@@ -37,7 +37,7 @@ public boolean setTransactionTimeout(int seconds)
 #### <a name="parameters"></a>參數  
  *seconds*  
   
- **Int**值。  
+ **int** 值。  
   
 ## <a name="return-value"></a>傳回值  
  如果已成功設定逾時，則為 **true**。 否則為 **false**。  
@@ -45,8 +45,8 @@ public boolean setTransactionTimeout(int seconds)
 ## <a name="exceptions"></a>例外狀況  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Remarks  
- 這個 setTransactionTimeout 方法是由 javax.xml.transform.dom.domresult 中的 setTransactionTimeout 方法指定。  
+## <a name="remarks"></a>備註  
+ 此 setTransactionTimeout 方法是由 javax.transaction.xa.XAResource 介面中的 setTransactionTimeout 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerXAResource 方法](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

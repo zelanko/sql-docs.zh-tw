@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: fetch |Microsoft Docs'
+title: PDOStatement::fetch | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a69b1093240112a804504f8d0e636ffbdfe8439e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993065"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
@@ -30,19 +30,19 @@ mixed PDOStatement::fetch ([ $fetch_style[, $cursor_orientation[, $cursor_offset
 ```  
   
 #### <a name="parameters"></a>參數  
-$*fetch_style*：選擇性 (整數) 符號，用於指定資料列資料的格式。 如需 $*fetch_style* 的可能值清單，請參閱＜備註＞一節。 預設值為 PDO::FETCH_BOTH。提取方法中的  $*fetch_style* 會覆寫 PDO::query 方法中指定的 $*fetch_style*。  
+$*fetch_style*：選擇性 (整數) 符號，用以指定資料列資料的格式。 如需 $*fetch_style* 的可能值清單，請參閱＜備註＞一節。 預設值為 PDO::FETCH_BOTH。提取方法中的  $*fetch_style* 會覆寫 PDO::query 方法中指定的 $*fetch_style*。  
   
 $*cursor_orientation*：選擇性 (整數) 符號，指出在準備陳述式指定 `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL` 時所要擷取的資料列。 如需 $*cursor_orientation* 的可能值清單，請參閱＜備註＞一節。 如需使用可捲動資料指標的範例，請參閱 [PDO::prepare](../../connect/php/pdo-prepare.md) 。  
   
-$*cursor_offset*：選擇性 (整數) 符號，指定在 $*cursor_orientation* 為 PDO::FETCH_ORI_ABS 或 PDO::FETCH_ORI_REL，且 PDO::ATTR_CURSOR 為 PDO::CURSOR_SCROLL 時所要提取的資料列。  
+$*cursor_offset*：選擇性 (整數) 符號，指定在 $*cursor_orientation* 為 PDO::FETCH_ORI_ABS 或 PDO::FETCH_ORI_REL，且 PDO::ATTR_CURSOR 為 PDO::CURSOR_SCROLL 時所要擷取的資料列。  
   
 ## <a name="return-value"></a>傳回值  
 傳回資料列或 false 的混合值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 在呼叫提取時，資料指標會自動前進。 下表包含可能的 $*fetch_style* 值清單。  
   
-|$*fetch_style*|Description|  
+|$*fetch_style*|描述|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|指定依資料行名稱編製索引的陣列。|  
 |PDO::FETCH_BOTH|指定依資料行名稱且以 0 起始而編製索引的陣列。 這是預設值。|  
@@ -57,7 +57,7 @@ $*cursor_offset*：選擇性 (整數) 符號，指定在 $*cursor_orientation* �
   
 如果資料指標是可捲動的 (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL)，則提取會在結果集界限內移動資料指標。 下表包含可能的 $*cursor_orientation* 值清單。  
   
-|$*cursor_orientation*|Description|  
+|$*cursor_orientation*|描述|  
 |--------------------------|---------------|  
 |PDO::FETCH_ORI_NEXT|擷取下一個資料列。 這是預設值。|  
 |PDO::FETCH_ORI_PRIOR|擷取上一個資料列。|  

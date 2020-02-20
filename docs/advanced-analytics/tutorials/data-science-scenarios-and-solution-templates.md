@@ -1,6 +1,6 @@
 ---
 title: 資料科學解決方案範本
-description: 本文說明示範最佳做法的範本，並提供可協助您快速實作解決方案的建置組塊。 每個範本都是針對特定類別或產業來解決特定問題而設計的。
+description: 此文章描述示範最佳做法的產業特定範本，並提供可協助您實作機器學習解決方案的建置組塊。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 03/29/2019
@@ -9,17 +9,26 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 01893edd0174ec7aeab262b8aeddc3babb8194f7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 6d87fbbb60f70292075d4f24080798d017ee5288
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727276"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947275"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>資料科學案例和解決方案範本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-範本是範例解決方案，其示範最佳做法，並提供可協助您快速實作解決方案的建置組塊。 每個範本都是針對特定類別或產業來解決特定問題而設計的。 每個範本所包含的工作，從資料準備和特徵工程，到模型定型和計分，應有盡有。 使用這些範本來了解 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 的運作方式。 然後，您可以隨意自訂範本以符合自己的案例，並建置自訂解決方案。 
+此文章描述數個 SQL Server 機器學習服務解決方案範本。 這些範本示範最佳做法，並提供可協助您快速實作機器學習解決方案的建置組塊。 每個範本都是針對特定類別或產業來解決特定資料科學問題而設計的。
+每個範本所包含的工作，從資料準備和特徵工程，到模型定型和計分，應有盡有。 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+使用這些範本來了解 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 的運作方式。 然後，您可以隨意自訂範本以符合自己的案例，並建置自訂解決方案。
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+使用這些範本來了解 SQL Server 機器學習服務的運作方式。 然後，您可以隨意自訂範本以符合自己的案例，並建置自訂解決方案。
+::: moniker-end
 
 每個解決方案都包含範例資料、R 程式碼或 Python 程式碼，以及 SQL 預存程序 (如果適用的話)。 您可以在慣用的 R 或 Python 開發環境中執行程式碼，並在 SQL Server 中進行計算。 在某些情況下，您可以使用 T-SQL 和任何 SQL 用戶端工具 (例如 SQL Server Management Studio) 直接執行程式碼。
 
@@ -33,18 +42,18 @@ ms.locfileid: "73727276"
 
 [線上詐騙偵測範本 (SQL Server R Services)](https://github.com/Microsoft/r-server-fraud-detection)
 
-**何事：** 偵測詐騙交易的功能對線上商務而言很重要。 為了減少退款損失，企業必須快速找出使用遭竊付款方式或認證進行的交易。 發現詐騙交易時，企業通常會盡快採取措施來封鎖特定帳戶，以避免進一歩損失。 在此案例中，您會了解如何使用線上購物交易資料來識別可能的詐騙。
+**對象：** 偵測詐騙交易的功能對線上商務而言很重要。 為了減少退款損失，企業必須快速找出使用遭竊付款方式或認證進行的交易。 發現詐騙交易時，企業通常會盡快採取措施來封鎖特定帳戶，以避免進一歩損失。 在此案例中，您會了解如何使用線上購物交易資料來識別可能的詐騙。
 
-**如何：** 詐騙偵測會當作二元分類問題來解決。 此範本中所使用的方法可輕易地應用在其他網域中的詐騙偵測。
+**方式：** 詐騙偵測會當作二元分類問題來解決。 此範本中所使用的方法可輕易地應用在其他網域中的詐騙偵測。
 
 
 ## <a name="campaign-optimization"></a>行銷活動最佳化
 
 [預測聯絡潛在客戶的方式和時機](https://microsoft.github.io/r-server-campaign-optimization/)
 
-**何事：** 此解決方案使用保險產業資料，根據人口統計、歷程記錄回應資料和產品特定詳細資料來預測潛在客戶。  也會產生建議，以指出接觸使用者以影響購買行為的最佳頻道和時間。
+**對象：** 此解決方案使用保險產業資料，根據人口統計、歷程記錄回應資料和產品特定詳細資料來預測潛在客戶。  也會產生建議，以指出接觸使用者以影響購買行為的最佳頻道和時間。
 
-**如何：** 解決方案會建立並比較多個模型。 此解決方案也會示範使用預存程序的自動化資料整合和資料準備。 平行範例是針對資料庫內、Azure 和 HDInsight Spark 中的 SQL Server 所提供。 
+**方式：** 解決方案會建立並比較多個模型。 此解決方案也會示範使用預存程序的自動化資料整合和資料準備。 平行範例是針對資料庫內、Azure 和 HDInsight Spark 中的 SQL Server 所提供。 
 
 ## <a name="health-care-predict-length-of-stay-in-hospital"></a>醫療保健：預測停留在醫院的時間長度 
 

@@ -14,10 +14,10 @@ ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bc0b052bd2d932a54a1a857c7aebfe770395c556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194937"
 ---
 # <a name="deploying-a-custom-assembly"></a>部署自訂組件

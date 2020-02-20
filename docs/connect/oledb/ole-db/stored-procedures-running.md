@@ -1,5 +1,5 @@
 ---
-title: 執行預存程式 (OLE DB) |Microsoft Docs
+title: 執行預存程序 (OLE DB) | Microsoft Docs
 description: 執行預存程序 (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4297feae08376871c68ffab2aa9b977e034c6364
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993800"
 ---
 # <a name="stored-procedures---running"></a>預存程序 - 執行
@@ -38,7 +38,7 @@ ms.locfileid: "67993800"
   
 -   增加的功能。  
   
- SQL Server 的 OLE DB 驅動程式支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]預存程式用來傳回資料的三種機制:  
+ OLE DB Driver for SQL Server 支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預存程序用來傳回資料的其中三種機制：  
   
 -   程序中的每個 SELECT 陳述式都會產生一個結果集。  
   

@@ -1,5 +1,5 @@
 ---
-title: storesUpperCaseIdentifiers 方法 |Microsoft Docs
+title: storesUpperCaseIdentifiers 方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a622b748-d10b-4f02-afe3-fba4a5bca17b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17b42f50fe28ba9d727ea6c897280dcd36034038
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969883"
 ---
 # <a name="storesuppercaseidentifiers-method-sqlserverdatabasemetadata"></a>storesUpperCaseIdentifiers 方法 (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public boolean storesUpperCaseIdentifiers()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 storesUpperCaseIdentifiers 方法是由 JAVA.sql.databasemetadata 介面中的 storesUpperCaseIdentifiers 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 storesUpperCaseIdentifiers 方法是由 java.sql.DatabaseMetaData 介面中的 storesUpperCaseIdentifiers 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

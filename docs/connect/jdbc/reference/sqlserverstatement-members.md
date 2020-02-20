@@ -1,5 +1,5 @@
 ---
-title: SQLServerStatement 成員 |Microsoft Docs
+title: SQLServerStatement 成員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 828cbaa9-ea7a-4986-95c3-5ba0d7d01d83
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72eededd01cd61d6845cc92bbdfbfd073668dd76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970358"
 ---
 # <a name="sqlserverstatement-members"></a>SQLServerStatement 成員
@@ -30,13 +30,13 @@ ms.locfileid: "67970358"
   
 ## <a name="inherited-fields"></a>繼承的欄位  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |java.sql.Statement|CLOSE_ALL_RESULTS, CLOSE_CURRENT_RESULT, EXECUTE_FAILED, KEEP_CURRENT_RESULT, NO_GENERATED_KEYS, RETURN_GENERATED_KEYS, SUCCESS_NO_INFO|  
   
 ## <a name="methods"></a>方法  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverstatement.md)|將所指定 SQL 命令新增至這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件的目前命令清單中。|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|取消目前正由這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件執行的 SQL 陳述式。|  
@@ -51,15 +51,15 @@ ms.locfileid: "67970358"
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverstatement.md)|擷取從資料庫資料表中提取資料列的方向，此方向是從這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件所產生結果集的預設值。|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverstatement.md)|擷取結果集資料列數目，這個數目是從這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件所產生結果集物件的預設提取大小。|  
 |[getGeneratedKeys](../../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md)|擷取執行這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件最後所建立的任何自動產生索引鍵。|  
-|[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|擷取最大位元組數目，此位元組可傳回作為這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件所產生 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中的字元和二進位資料行值。|  
-|[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|擷取最大資料列數目，即這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件所產生 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件可以包含的資料列。|  
+|[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|擷取最大位元組數目，此位元組可傳回作為 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中字元和二進位資料行的值．而該物件是由這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件產生。|  
+|[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|擷取最大資料列數目，即這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件產生 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件可以包含的資料列。|  
 |[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|移至這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件的下一個結果。|  
 |[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|擷取 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 將等候這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件執行的秒數。|  
 |[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)|擷取這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件的回應緩衝模式。|  
 |[getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md)|擷取目前結果作為 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。|  
-|[getResultSetConcurrency](../../../connect/jdbc/reference/getresultsetconcurrency-method-sqlserverstatement.md)|擷取由這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件產生的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件結果集並行。|  
+|[getResultSetConcurrency](../../../connect/jdbc/reference/getresultsetconcurrency-method-sqlserverstatement.md)|擷取 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的結果集並行，此物件是由這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件產生。|  
 |[getResultSetHoldability](../../../connect/jdbc/reference/getresultsetholdability-method-sqlserverstatement.md)|擷取由這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件產生的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件結果集保留性。|  
-|[getResultSetType](../../../connect/jdbc/reference/getresultsettype-method-sqlserverstatement.md)|擷取由這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件產生的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件結果集類型。|  
+|[getResultSetType](../../../connect/jdbc/reference/getresultsettype-method-sqlserverstatement.md)|擷取 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的結果集類型，此物件是由這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件產生。|  
 |[getUpdateCount](../../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md)|擷取目前結果當做更新計數。|  
 |[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverstatement.md)|擷取由呼叫這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件所報告的第一個警告。|  
 |[isClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverstatement.md)|指出這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件是否已關閉。|  

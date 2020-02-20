@@ -16,10 +16,10 @@ ms.assetid: e0e2bd28-6949-47dc-b9dd-145ffb337069
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ffe17993b3a03563ec20e8f509e6eae2f6ed47cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977796"
 ---
 # <a name="isbeforefirst-method-sqlserverresultset"></a>isBeforeFirst 方法 (SQLServerResultSet)
@@ -35,13 +35,13 @@ public boolean isBeforeFirst()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 如果資料指標位於第一個資料列之前,**則為 true** 。 如果資料指標位於任何其他位置, 或結果集未包含任何資料列, 則**為 false** 。  
+ 如果資料指標在第一個資料列之前，則為 **true**。 如果資料指標位於其他任何位置或者結果集未包含任何資料列，則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 這個 isBeforeFirst 方法是由 sql-dmo 介面中的 isBeforeFirst 方法指定。  
+ 這個 isBeforeFirst 方法是由 java.sql.ResultSet 介面中的 isBeforeFirst 方法所指定。  
   
  如果搭配動態資料指標使用這個方法，包括順向的唯讀資料指標，而且 selectMethod 連接屬性設定為 "cursor"，則會發生例外狀況。  
   

@@ -1,5 +1,5 @@
 ---
-title: 資料來源物件 (OLE DB) |Microsoft Docs
+title: 資料來源物件 (OLE DB) | Microsoft Docs
 description: 資料來源物件 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e0394c5fd3b72c538904c9b8cf946316e76e6650
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015919"
 ---
 # <a name="data-source-objects-ole-db"></a>資料來源物件 (OLE DB)
@@ -30,15 +30,15 @@ ms.locfileid: "68015919"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 會針對用於建立資料存放區連結的 OLE DB 介面集合，使用資料來源這個詞；例如，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 建立提供者之資料來源物件的實例是 SQL Server 取用者之 OLE DB 驅動程式的第一項工作。  
+  OLE DB Driver for SQL Server 會針對用於建立資料存放區連結的 OLE DB 介面集合，使用資料來源這個詞；例如，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 建立提供者資料來源物件的執行個體，是 OLE DB Driver for SQL Server 取用者的第一個工作。  
   
- 每個 OLE DB 提供者都會為自己宣告一個類別識別碼 (CLSID)。 SQL Server 的 OLE DB 驅動程式的 CLSID 是 C/C++ GUID CLSID_MSOLEDBSQL (符號 MSOLEDBSQL_CLSID 會解析為您參考的內含 msoledbsql.h 檔案中正確的 progid)。 透過 CLSID，取用者會使用 OLE **CoCreateInstance** 函式來製造資料來源物件的執行個體。  
+ 每個 OLE DB 提供者都會為自己宣告一個類別識別碼 (CLSID)。 適用於 OLE DB Driver for SQL Server 的 CLSID 是 C/C++ GUID CLSID_MSOLEDBSQL (MSOLEDBSQL_CLSID 符號將在您參考之 msoledbsql.h 檔案中解析為正確的 progid)。 透過 CLSID，取用者會使用 OLE **CoCreateInstance** 函式來製造資料來源物件的執行個體。  
   
- SQL Server 的 OLE DB 驅動程式是同進程伺服器。 OLE DB Driver for SQL Server 物件的執行個體會使用 CLSCTX_INPROC_SERVER 巨集來建立，以便指示可執行的內容。  
+ OLE DB Driver for SQL Server 是一個同處理序伺服程式。 OLE DB Driver for SQL Server 物件的執行個體會使用 CLSCTX_INPROC_SERVER 巨集來建立，以便指示可執行的內容。  
   
  OLE DB Driver for SQL Server 資料來源物件會公開允許取用者連線到現有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫的 OLE DB 初始化介面。  
   
- 透過的 OLE DB 驅動程式所建立 SQL Server 的每個連接都會自動設定這些選項:  
+ 透過 OLE DB Driver for SQL Server 建立的每個連線都會自動設定這些選項：  
   
 -   SET ANSI_WARNINGS ON  
   

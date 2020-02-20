@@ -1,5 +1,5 @@
 ---
-title: setNull 方法 (SQLServerPreparedStatement) |Microsoft Docs
+title: setNull 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 90dcd2f1-ad58-440c-8bf2-0f146fa727a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9bcfa1d8b17cf663130e617304ac0bdda46d9cac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973493"
 ---
 # <a name="setnull-method-sqlserverpreparedstatement"></a>setNull 方法 (SQLServerPreparedStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67973493"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[setNull (int, int)](../../../connect/jdbc/reference/setnull-method-int-int.md)|在給定要設定之參數的類型時，將指定的參數設定為 null 值。|  
 |[setNull (int, int, java.lang.String)](../../../connect/jdbc/reference/setnull-method-int-int-java-lang-string.md)|在給定要設定之參數的類型和名稱時，將指定的參數設定為 null 值。|  

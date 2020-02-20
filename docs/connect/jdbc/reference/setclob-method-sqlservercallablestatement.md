@@ -1,5 +1,5 @@
 ---
-title: setClob 方法 (SQLServerCallableStatement) |Microsoft Docs
+title: setClob 方法 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 222ea248-1185-4c33-ae10-5158bf3f6430
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4c3c6e2b0331f00e5d9fe5d7212a1a48bff8e2c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974524"
 ---
 # <a name="setclob-method-sqlservercallablestatement"></a>setClob 方法 (SQLServerCallableStatement)
@@ -24,7 +24,7 @@ ms.locfileid: "67974524"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[setClob 方法 &#40;java.lang.String, java.sql.Clob&#41;](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-sql-clob.md)|將指定的參數設定為所指定 Clob 物件。|  
 |[setClob 方法 &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-io-reader.md)|將指定的參數設定為所指定 Reader 物件。|  

@@ -1,6 +1,6 @@
 ---
-title: 更新資料列集中的資料 |Microsoft Docs
-description: 使用 SQL Server 的 OLE DB 驅動程式更新資料列集中的資料
+title: 更新資料列集中的資料 | Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 更新資料列集中的資料
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e19128d6defa2c154cc8bddbcc4bcaa761b58a2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015344"
 ---
 # <a name="updating-data-in-rowsets"></a>更新資料列集中的資料
@@ -31,9 +31,9 @@ ms.locfileid: "68015344"
 
   當取用者更新包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料的可修改資料列集時，OLE DB Driver for SQL Server 會更新該資料。 當取用者要求 **IRowsetChange** 或 **IRowsetUpdate** 介面的支援時，就會建立可修改的資料列集。  
   
- SQL Server 可修改資料列集的所有 OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]驅動程式都會使用資料指標來支援資料列集。 資料列集屬性 DBPROP_LOCKMODE 會改變資料指標中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 並行控制行為，並且決定可更新資料列集中的資料列集資料列擷取以及資料完整性錯誤產生的行為。  
+ 所有 OLE DB Driver for SQL Server 可修改的資料列集都會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料指標來支援資料列集。 資料列集屬性 DBPROP_LOCKMODE 會改變資料指標中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 並行控制行為，並且決定可更新資料列集中的資料列集資料列擷取以及資料完整性錯誤產生的行為。  
   
- SQL Server 的 OLE DB 驅動程式支援更新前後的資料列同步處理。  
+ OLE DB Driver for SQL Server 支援更新前後的資料列同步處理。  
   
 > [!NOTE]  
 >  IRowChange::SetColumns 可用來設定資料列物件的一或多個具名資料行的值。  

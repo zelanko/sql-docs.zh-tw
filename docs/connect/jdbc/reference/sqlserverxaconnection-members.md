@@ -1,5 +1,5 @@
 ---
-title: SQLServerXAConnection 成員 |Microsoft Docs
+title: SQLServerXAConnection 成員 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4b61dabd-369b-460c-8450-9fe424f76541
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85d106ad25c1823f873ade24800e44987d78a2f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970259"
 ---
 # <a name="sqlserverxaconnection-members"></a>SQLServerXAConnection 成員
@@ -33,7 +33,7 @@ ms.locfileid: "67970259"
   
 ## <a name="methods"></a>方法  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|(繼承自 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)) 註冊指定的事件接聽程式，如此一來，當這個 Connection 物件上發生事件時，它就可以收到通知。|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|(繼承自 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)) 關閉這個 Connection 物件所代表的實體連接。|  

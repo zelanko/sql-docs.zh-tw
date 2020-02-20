@@ -1,5 +1,5 @@
 ---
-title: getMaxStatementLength 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getMaxStatementLength 方法 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f45fcf45-b9e7-4d14-a90a-ebc542ac7755
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 205b939a870ede1a5a4a02fec81d73ea8dba073d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981981"
 ---
 # <a name="getmaxstatementlength-method-sqlserverdatabasemetadata"></a>getMaxStatementLength 方法 (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public int getMaxStatementLength()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getMaxStatementLength 方法是由 JAVA.sql.databasemetadata 介面中的 getMaxStatementLength 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getMaxStatementLength 方法是由 java.sql.DatabaseMetaData 介面中的 getMaxStatementLength 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

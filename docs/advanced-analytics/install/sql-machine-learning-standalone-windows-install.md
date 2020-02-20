@@ -1,29 +1,29 @@
 ---
 title: 安裝 Machine Learning Server (獨立式)
-description: 使用 RevoScaleR、revoscalepy、MicrosoftML 和其他套件，設定適用於 R 和 Python 開發的非執行個體感知獨立式機器學習伺服器。
+description: 安裝適用於 Python 與 R 的獨立機器學習伺服器。SQL Server 安裝程式所安裝的獨立伺服器在功能上相當於非 SQL 品牌版本的 Microsoft Machine Learning Server。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.date: 01/03/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 02df024801dad815b640f4ef4222a0c8face485b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 319ae61fbdca64bc6f27143bdd4a42aec635d129
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727636"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76891721"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>使用 SQL Server 安裝程式安裝 Machine Learning Server (獨立式) 或 R Server (獨立式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-SQL Server 安裝程式包含 [共用功能]  選項，用於安裝在 SQL Server 外部執行的非執行個體感知、獨立機器學習伺服器。 它稱為 **Machine Learning Server (獨立式)** ，且包括 R 和 Python。 
+SQL Server 安裝程式包含 [共用功能]  選項，可用於安裝在 SQL Server 外部執行的獨立機器學習伺服器。 其稱為 **Machine Learning Server (獨立式)** ，且包括 Python 與 R。 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-SQL Server 安裝程式包含 [共用功能]  選項，用於安裝在 SQL Server 外部執行的非執行個體感知、獨立機器學習伺服器。 在 SQL Server 2016 中，這項功能稱為 **R Server (獨立式)** 。  
+SQL Server 安裝程式包含 [共用功能]  選項，可用於安裝在 SQL Server 外部執行的獨立機器學習伺服器。 在 SQL Server 2016 中，這項功能稱為 **R Server (獨立式)** 。  
 ::: moniker-end
 
 SQL Server 安裝程式所安裝的獨立伺服器在功能上相當於非 SQL 品牌版本的 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)，支援相同的使用案例和情節，包括：
@@ -196,11 +196,7 @@ SQL Server 安裝程式所安裝的獨立伺服器在功能上相當於非 SQL �
 
 3. 如果您已啟用作業作為 Web 服務部署的 Web 節點和計算節點，請備份 **AppSettings.json** 檔案以作為預防措施。 套用 SQL Server 2017 CU13 或更新版本會修訂此檔案，因此您可能會想要保留原始版本的備份副本。
 
-4. 在連線到網際網路的裝置上，按一下您 SQL Server 版本的累積更新連結。
-
-  + SQL Server 2019 更新 (尚未提供任何更新) 
-  + [SQL Server 2017 更新](https://sqlserverupdates.com/sql-server-2017-updates/) \(英文\)
-  + [SQL Server 2016 更新](https://sqlserverupdates.com/sql-server-2016-updates/) \(英文\)
+4. 在連線到網際網路的電腦上，從[適用於 Microsoft SQL Server 的最新更新](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)下載適用於您版本的最新累積更新。
 
 5. 下載最新的累積更新。 這是可執行檔。
 
@@ -214,7 +210,7 @@ SQL Server 安裝程式所安裝的獨立伺服器在功能上相當於非 SQL �
 
    + 按兩下 .exe 以執行安裝程式。 在沒有網際網路連線的伺服器上安裝累積更新時，系統會提示您選取 R 和 Python 的 .cab 檔案的位置。
 
-8. 安裝後，在您已使用 Web 節點和計算節點啟用作業的伺服器上，編輯 **AppSettings.json**、並直接在 "MMLNativePath" 下新增 "MMLResourcePath" 項目。 例如：
+8. 安裝後，在您已啟用使用 Web 節點與計算節點進行部署的伺服器上，編輯 **AppSettings.json**，並直接在 "MMLNativePath" 下新增 "MMLResourcePath" 項目。 例如：
 
     ```json
     "ScorerParameters": {

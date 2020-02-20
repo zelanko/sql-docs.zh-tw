@@ -11,10 +11,10 @@ ms.assetid: e9470a6d-a758-4c56-96ec-7b37139e36a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 01f59f44d42af1d0880df48b043080525d9821ee
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027025"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>使用不含參數的預存程序
@@ -28,7 +28,7 @@ ms.locfileid: "69027025"
 `{call procedure-name}`
 
 > [!NOTE]  
-> 如需 SQL escape 序列的詳細資訊, 請參閱[使用 sql escape 序列](../../connect/jdbc/using-sql-escape-sequences.md)。
+> 如需 SQL 逸出序列的詳細資訊，請參閱[使用 SQL 逸出序列](../../connect/jdbc/using-sql-escape-sequences.md)。
 
 例如，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫中建立下列預存程序：
 

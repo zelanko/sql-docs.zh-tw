@@ -11,18 +11,18 @@ ms.assetid: 40d7fced-cce1-4534-b794-71bc735e53e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad3e197fb7e2e26a7652cf6a5aa9e6c3d0366cc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67999063"
 ---
 # <a name="updatedatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  這個方法是在 [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 中所新增。  
+  這個方法是在 [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 中新增。  
   
- 將指定的資料行值更新為[DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)值。  
+ 將指定的資料行值更新為 [DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)值。  
   
 ## <a name="overload-list"></a>多載清單  
   

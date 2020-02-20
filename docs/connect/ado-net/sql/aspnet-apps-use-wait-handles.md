@@ -1,6 +1,6 @@
 ---
 title: 使用 Wait 控制代碼的 ASP.NET 應用程式
-description: 提供範例示範如何從 ASP.NET 網頁執行多個並行命令，並使用等候控制碼來管理完成所有命令的作業。
+description: 提供範例來示範如何從 ASP.NET 網頁執行多個並行命令，並使用 Wait 控制代碼來管理完成所有命令的作業。
 ms.date: 09/30/2019
 dev_langs:
 - csharp
@@ -9,32 +9,32 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: f7d242410b5f7aadd74494bb33a7572afe23be54
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 0550b67d32d18aa9095b316816ebcbf3494cf195
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452333"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75250961"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>使用 Wait 控制代碼的 ASP.NET 應用程式
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-當您的應用程式一次只處理一個非同步作業時，用於處理非同步作業的回呼和輪詢模型很有用。 等候模型提供更有彈性的方式來處理多個非同步作業。 有兩種等候模式，名為用來執行它們的 <xref:System.Threading.WaitHandle> 方法：等候（任何）模型和等候（全部）模型。  
+當您的應用程式一次只處理一個非同步作業時，用於處理非同步作業的回呼和輪詢模型就很實用。 等候模型提供更有彈性的方式來處理多個非同步作業。 等候模型有兩種，這兩者都是針對用於實作它們的 <xref:System.Threading.WaitHandle> 方法而命名：等候 (任何) 模型和等候 (全部) 模型。  
   
-若要使用任一等候模型，您必須使用 <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 或 <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 方法所傳回之 <xref:System.IAsyncResult> 物件的 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 屬性。 <xref:System.Threading.WaitHandle.WaitAny%2A> 和 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法都要求您傳送 <xref:System.Threading.WaitHandle> 物件做為引數，並在陣列中群組在一起。  
+若要使用任一種等候模型，您必須使用 <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 或 <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 方法所傳回之 <xref:System.IAsyncResult> 物件的 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 屬性。 <xref:System.Threading.WaitHandle.WaitAny%2A> 和 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法都會要求您傳送 <xref:System.Threading.WaitHandle> 物件作為引數，並於陣列中群組在一起。  
   
 這兩種等候方法都會監視非同步作業，等待完成。 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法會等候任意一項作業完成或逾時。一旦您知道某項特定作業已完成，就可處理其結果，然後繼續等候下一項作業完成或逾時。<xref:System.Threading.WaitHandle.WaitAll%2A> 方法會等候 <xref:System.Threading.WaitHandle> 執行個體陣列中的所有處理序完成或逾時後才繼續。  
   
-當您需要在不同的伺服器上執行某個長度的多個作業，或當您的伺服器的功能足以同時處理所有查詢時，「等候模型」的優點是最驚人的。 在這裡顯示的範例中，三個查詢會藉由將不同長度的 WAITFOR 命令新增至不重要 SELECT 查詢來模擬較長的進程。  
+當您需要在不同伺服器上執行某個長度的多個作業時，或者，當您伺服器的功能強大到足以同時處理所有查詢時，等候模型的優點最為顯著。 在這裡顯示的範例中，三個查詢會藉由將不同長度的 WAITFOR 命令新增到無關緊要的 SELECT 查詢來模擬較長的處理序。  
   
-## <a name="example-wait-any-model"></a>範例：等候（任何）模型  
-下列範例說明等候（任何）模型。 啟動三個非同步進程之後，會呼叫 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法，等候其中任何一個處理常式完成。 當每個進程完成時，會呼叫 <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteReader%2A> 方法，並讀取產生的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 物件。 此時，真實世界的應用程式可能會使用 <xref:Microsoft.Data.SqlClient.SqlDataReader> 來填入頁面的一部分。 在這個簡單的範例中，會將進程完成的時間加入至對應于該進程的文字方塊。 結合在一起，文字方塊中的時間會說明這點：程式碼會在每次進程完成時執行。  
+## <a name="example-wait-any-model"></a>範例：等候 (任何) 模型  
+下列範例說明等候 (任何) 模型。 一旦啟動三個非同步處理序之後，即會呼叫 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法，以等候其中任一個處理序完成。 當每個處理序完成時，即會呼叫 <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteReader%2A> 方法，並讀取產生的 <xref:Microsoft.Data.SqlClient.SqlDataReader> 物件。 此時，真實世界的應用程式可能會使用 <xref:Microsoft.Data.SqlClient.SqlDataReader> 來填入頁面的一部分。 在這個簡單範例中，會將處理序完成的時間新增至對應到該處理序的文字方塊。 總括來說，文字方塊中的時間可說明：每次處理序完成時，就會執行程式碼。  
   
-若要設定此範例，請建立新的 ASP.NET 網站專案。 在頁面上放置一個 <xref:System.Web.UI.WebControls.Button> 控制項和四個 <xref:System.Web.UI.WebControls.TextBox> 控制項（接受每個控制項的預設名稱）。  
+若要設定此範例，請建立新的 ASP.NET 網站專案。 在頁面上放置一個 <xref:System.Web.UI.WebControls.Button> 控制項和四個 <xref:System.Web.UI.WebControls.TextBox> 控制項 (接受每個控制項的預設名稱)。  
   
 將下列程式碼新增至表單的類別，並視您的環境需要修改連接字串。  
   
@@ -191,12 +191,12 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="example-wait-all-model"></a>範例：等候（全部）模型  
-下列範例說明等候（全部）模型。 啟動三個非同步進程之後，會呼叫 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法，等待處理常式完成或超時。  
+## <a name="example-wait-all-model"></a>範例：等候 (全部) 模型  
+下列範例說明等候 (全部) 模型。 一旦啟動三個非同步處理序之後，即會呼叫 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法，以等候處理序完成或逾時。  
   
-就像等候（任何）模型的範例一樣，程式完成的時間會新增至對應至進程的文字方塊。 同樣地，文字方塊中的時間會說明這點：只有在完成所有進程之後，才會執行 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法後面的程式碼。  
+如同等候 (任何) 模型的範例，會將處理序完成的時間新增至對應到該處理序的文字方塊。 同樣地，文字方塊中的時間可說明：只有當所有處理序都完成之後，才會執行 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法後的程式碼。  
   
-若要設定此範例，請建立新的 ASP.NET 網站專案。 在頁面上放置一個 <xref:System.Web.UI.WebControls.Button> 控制項和四個 <xref:System.Web.UI.WebControls.TextBox> 控制項（接受每個控制項的預設名稱）。  
+若要設定此範例，請建立新的 ASP.NET 網站專案。 在頁面上放置一個 <xref:System.Web.UI.WebControls.Button> 控制項和四個 <xref:System.Web.UI.WebControls.TextBox> 控制項 (接受每個控制項的預設名稱)。  
   
 將下列程式碼新增至表單的類別，並視您的環境需要修改連接字串。  
   

@@ -1,36 +1,36 @@
 ---
-title: 步驟 3︰使用 ADO.NET 連接到 SQL 的概念證明 | Microsoft Docs
-description: 包含C#用來連接到 SQL Server、執行查詢和插入資料列的程式碼範例。
+title: 步驟 3：使用 ADO.NET 連線到 SQL 的概念證明 | Microsoft Docs
+description: 包含用來連線到 SQL Server、執行查詢及插入資料列的 C# 程式碼範例。
 ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: rothja
+ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: 2819697746f810e0c0b19a9ab7d076fa79c15a2f
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cff776c4881dcc012a825bcd48f6d6271b95bb75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451812"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247522"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>步驟 3︰使用 ADO.NET 連線到 SQL 的概念證明
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>步驟 3：使用 ADO.NET 連線到 SQL 的概念證明
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[下載 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-- 上一篇文章：&nbsp;&nbsp;&nbsp;[步驟 2：針對 ADO.NET 開發建立 SQL 資料庫](step-2-create-sql-database-ado-net-development.md)  
-- 下一篇文章：&nbsp;&nbsp;&nbsp;[步驟 4︰使用 ADO.NET 彈性地連接到 SQL](step-4-connect-resiliently-sql-ado-net.md)  
+- 上一篇文章：&nbsp;&nbsp;&nbsp;[步驟 2：建立用於 ADO.NET 開發的 SQL 資料庫](step-2-create-sql-database-ado-net-development.md)  
+- 下一篇文章：&nbsp;&nbsp;&nbsp;[步驟 4：使用 ADO.NET 復原連線到 SQL](step-4-connect-resiliently-sql-ado-net.md)  
 
   
-這個C#程式碼範例只應視為概念證明。 為了清楚起見，範例程式碼已簡化，不一定代表 Microsoft 建議的最佳作法。  
+這個 C# 程式碼範例只應被視為一個概念證明。 為了清楚起見，已將範例程式碼簡化，而其不一定代表 Microsoft 建議的最佳做法。  
   
-## <a name="step-1-connect"></a>步驟1：連接
+## <a name="step-1-connect"></a>步驟 1:連線
   
-方法**SqlConnection. Open**是用來連接到您的 SQL 資料庫。  
+**SqlConnection.Open** 方法可用來連線到您的 SQL 資料庫。  
 
 
 ```csharp
@@ -67,12 +67,12 @@ Press any key to finish...
 ```  
 
 
-## <a name="step-2-execute-a-query"></a>步驟 2：執行查詢  
+## <a name="step-2-execute-a-query"></a>步驟 2:執行查詢  
   
-方法 SqlCommand. ExecuteReader：  
+SqlCommand. ExecuteReader 方法：  
   
-- 向 SQL 系統發出 SQL SELECT 語句。  
-- 傳回 SqlDataReader 的實例，以提供結果資料列的存取權。  
+- 向 SQL 系統發出 SQL SELECT 陳述式。  
+- 傳回 SqlDataReader 的執行個體，以提供對結果資料列的存取。  
   
   
   
@@ -153,14 +153,14 @@ Press any key to finish...
   
   
   
-## <a name="step-3-insert-a-row"></a>步驟3：插入資料列  
+## <a name="step-3-insert-a-row"></a>步驟 3：插入資料列  
   
   
 此範例示範如何：  
   
-- 藉由傳遞參數來安全地執行 SQL INSERT 語句。  
+- 藉由傳遞參數來安全地執行 SQL INSERT 陳述式。  
   - 使用參數可防止 SQL 插入式攻擊。  
-- 取出自動產生的值。  
+- 擷取自動產生的值。  
   
   
   

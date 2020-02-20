@@ -13,10 +13,10 @@ ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e3c6614425cf8796bd7ec462a62f9410b9ca5857
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936386"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>載入 Microsoft Drivers for PHP for SQL Server
@@ -24,14 +24,14 @@ ms.locfileid: "67936386"
 
 本頁提供將 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 載入 PHP 處理序空間的指示。  
   
-您可以從適用于 PHP for SQL Server Github 專案頁面的[Microsoft 驅動程式](https://github.com/Microsoft/msphpsql/releases)下載適用于您平臺的預建驅動程式。 每個安裝套件都包含以執行緒和非執行緒形式變體的 SQLSRV 和 PDO_SQLSRV 驅動程式檔案。 在 Windows 上, 它們也可以在32位和64位的變數中使用。 如需每個套件中包含的驅動程式檔案清單, 請參閱適用于[PHP 的 Microsoft 驅動程式 SQL Server 的系統需求](../../connect/php/system-requirements-for-the-php-sql-driver.md)。 驅動程式檔案必須符合 PHP 環境的 PHP 版本、架構和 threadedness。
+您可以從 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) \(英文\) GitHub 專案頁面，下載適用於您的平台的預先建置驅動程式。 每個安裝套件都包含執行緒和非執行緒形式變體的 SQLSRV 和 PDO_SQLSRV 驅動程式檔案。 在 Windows 上，其也以 32 位元與 64 位元變體提供。 請參閱 [Microsoft Drivers for PHP for SQL Server 的系統需求](../../connect/php/system-requirements-for-the-php-sql-driver.md)以取得包含在每個套件中的驅動程式檔案清單。 驅動程式檔案必須符合您 PHP 環境的 PHP 版本、架構及執行緒狀態。
 
-在 Linux 和 macOS 上, 您也可以使用 PECL 來安裝驅動程式, 如[安裝教學](../../connect/php/installation-tutorial-linux-mac.md)課程中所找到。
+在 Linux 和 macOS 上，可以改為使用 PECL 來安裝驅動程式，如[安裝教學課程](../../connect/php/installation-tutorial-linux-mac.md)中所述。
 
-您也可以在建立 PHP 或使用`phpize`時, 從來源建立驅動程式。 如果您選擇從來源建立驅動程式, 您可以選擇將它們以靜態方式建立到 PHP, 而不是藉由將 (在`--enable-sqlsrv=static --with-pdo_sqlsrv=static` Linux 和 macOS 上) 或`--enable-sqlsrv=static --with-pdo-sqlsrv=static` ( `./configure`在 Windows 上) 新增至命令, 而將其建立為共用擴充功能建立 PHP。 如需 php 組建系統和`phpize`的詳細資訊, 請參閱[php 檔](http://php.net/manual/install.php)。
+您也可以在建置 PHP 時，或是使用 `phpize` 來從來源建置驅動程式。 如果您選擇從來源建置驅動程式，您可以透過在建置 PHP 時將 `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (於 Linux 和 macOS 上) 或 `--enable-sqlsrv=static --with-pdo-sqlsrv=static` (於 Windows 上) 命令新增至 `./configure` 命令，來選擇以靜態方式將其建置到 PHP 中，而非將其建置為共用擴充。 如需 PHP 建置系統和 `phpize` 的詳細資訊，請參閱 [PHP 文件](http://php.net/manual/install.php) \(英文\)。
   
 ## <a name="moving-the-driver-file-into-your-extension-directory"></a>將驅動程式檔案移至您的延伸目錄中  
-驅動程式檔案必須位於 PHP 執行時間可以找到的目錄中。 最簡單的方式是將驅動程式檔案放在您的預設 PHP 延伸目錄中, 以尋找預設`php -i | sls extension_dir`目錄、在`php -i | grep extension_dir` Windows 或 Linux/macOS 上執行。 如果您不是使用預設的延伸目錄, 請使用**extension_dir**選項, 在 PHP 設定檔 (php .ini) 中指定一個目錄。 例如, 在 Windows 上, 如果您將驅動程式檔案放在`c:\php\ext`目錄中, 請將下面這一行新增至 php .ini:
+驅動程式檔案必須位於 PHP 執行階段可找到的目錄中。 最簡單的方式是將驅動程式檔案置於您的預設 PHP 擴充目錄。若要尋找預設目錄，請在 Windows 上執行 `php -i | sls extension_dir`，或在 Linux/macOS 上執行 `php -i | grep extension_dir`。 如果您不使用預設擴充目錄，請使用 **extension_dir** 選項在 PHP 設定檔 (php.ini) 中指定目錄。 例如，在 Windows 上，如果您將驅動程式檔案置於 `c:\php\ext` 目錄中，請將下列行新增至 php.ini：
   
 ```  
 extension_dir = "c:\PHP\ext"  
@@ -40,40 +40,40 @@ extension_dir = "c:\PHP\ext"
 ## <a name="loading-the-driver-at-php-startup"></a>在 PHP 啟動時載入驅動程式  
 若要在 PHP 啟動時載入 SQLSRV 驅動程式，請先將驅動程式檔案移入延伸目錄中。 然後，請遵循下列步驟：  
   
-1.  若要啟用**SQLSRV**驅動程式, 請將下列程式程式碼新增至延伸區段, 並視需要變更檔案名, 以修改**php。**  
+1.  若要啟用 **SQLSRV** 驅動程式，請修改 **php.ini**，方法是將下列行新增至擴充區段，並適當地變更檔案名稱：  
   
     在 Windows 上： 
     ```  
     extension=php_sqlsrv_72_ts.dll  
     ```  
-    在 Linux 上, 如果您已為散發套件下載預先建立的二進位檔: 
+    在 Linux 上，如果您已下載適用於您發行版本的預先建置二進位檔： 
     ```  
     extension=php_sqlsrv_72_nts.so  
     ```
-    如果您已從來源或使用 PECL 編譯 SQLSRV 二進位檔, 則會改為將其命名為 sqlsrv.so:
+    如果您已從來源或搭配 PECL 編譯 SQLSRV 二進位檔，系統會改為將其命名為 sqlsrv.so：
     ```
     extension=sqlsrv.so
     ```
   
-2.  若要啟用**PDO_SQLSRV**驅動程式, PHP 資料物件 (PDO) 延伸模組必須是可用的內建延伸模組, 或是以動態方式載入的延伸模組。
+2.  若要啟用 **PDO_SQLSRV** 驅動程式，PHP 資料物件 (PDO) 擴充必須可供使用，無論是以內建擴充的形式，還是以動態方式載入之擴充的形式。
 
-    在 Windows 上, 預先建立的 PHP 二進位檔隨附 PDO 內建功能, 因此不需要修改 PHP .ini 就能載入它。 不過, 如果您已從來源編譯 PHP, 並指定要建立的個別 PDO 延伸模組, 則會將其`php_pdo.dll`命名為, 而且您必須將下列程式碼複製到您的延伸模組目錄, 並將下行新增至 PHP .ini:  
+    在 Windows 上，預先建置的 PHP 二進位檔已內建 PDO，因此不需要修改 php.ini 便能加以載入。 不過，如果您已從來源編譯 PHP 並指定個別的 PDO 擴充來加以建置，其名稱將會是 `php_pdo.dll`，且您必須將其複製到您的擴充目錄，並將下列行新增至 php.ini：  
     ```
     extension=php_pdo.dll  
     ```
-    在 Linux 上, 如果您已使用系統的套件管理員安裝 PHP, PDO 可能會安裝為名為 pdo.so 的動態載入延伸模組。 PDO 延伸模組必須在 PDO_SQLSRV 擴充功能之前載入, 否則載入將會失敗。 延伸模組通常會使用個別的 .ini 檔案載入, 而這些檔案會在 php .ini 之後讀取。 因此, 如果 pdo.so 是透過自己的 .ini 檔案載入, 則在需要 PDO 之後載入 PDO_SQLSRV 驅動程式的個別檔案。 
+    在 Linux 上，如果您已使用系統的套件管理員安裝 PHP，PDO 可能已經以名為 pdo.so 之動態載入擴充的形式安裝。 PDO 擴充必須在 PDO_SQLSRV 擴充之前載入，否則載入將會失敗。 擴充通常會使用個別的 .ini 檔案載入，且這些檔案會在 php.ini 之後讀取。 因此，如果 pdo.so is 是透過其自己的 .ini 檔案載入，在 PDO 之後便需要載入 PDO_SQLSRV 驅動程式的個別檔案。 
 
-    若要找出擴充功能專屬 .ini 檔案的所在目錄, 請執行`php --ini` , 並記下`Scan for additional .ini files in:`所列的目錄。 尋找載入 pdo.so 的檔案--它的前面可能會加上數位, 例如10-pdo。 數值前置詞表示 .ini 檔案的載入順序, 而沒有數值前置詞的檔案則會依字母順序載入。 建立檔案, 以載入名為30-pdo_sqlsrv 的 PDO_SQLSRV 驅動程式檔案 (任何大於以 pdo 或 PDO_SQLSRV 首碼的數位) 或 (如果 PDO .ini 不是以數位做為前置詞), 然後在其中加入下列一行, 將檔案名變更為適當  
+    若要找出擴充特定的 .ini 檔案位於哪個目錄，請執行 `php --ini` 並記下列於 `Scan for additional .ini files in:` 底下的目錄。 找出載入 pdo.so 的檔案，其名稱前端很可能會有號碼，例如 10-pdo.ini。 數值前置詞會指出 .ini 檔案的載入順序，而不具有數值前置詞的檔案則會以字母順序載入。 建立載入 PDO_SQLSRV 驅動程式檔案的檔案，並將其命名為 30-pdo_sqlsrv.ini (大於 pdo.ini 數值前置詞的任何數字皆可) 或 pdo_sqlsrv.ini (如果 pdo.ini 沒有數值前置詞的話)，然後為其新增下列行，並適當地變更檔案名稱：  
     ```
     extension=php_pdo_sqlsrv_72_nts.so
     ```
-    如同 SQLSRV, 如果您已從來源或使用 PECL 編譯 PDO_SQLSRV 二進位檔, 則會改為將它命名為 PDO_SQLSRV。因此:
+    和 SQLSRV 相同，如果您已從來源或搭配 PECL 編譯 PDO_SQLSRV 二進位檔，系統會改為將其命名為 pdo_sqlsrv.so：
     ```
     extension=pdo_sqlsrv.so
     ```
     將此檔案複製到包含其他 .ini 檔案的目錄。 
 
-    如果您已使用內建 PDO 支援從來源編譯 PHP, 則不需要個別的 .ini 檔案, 而且您可以將適當的一行新增至 PHP .ini。
+    如果您已搭配內建 PDO 支援從來源編譯 PHP，便不需要個別的 .ini 檔案，且您可以將上述適當的行新增至 php.ini。
   
 3.  重新啟動 Web 伺服器。  
   

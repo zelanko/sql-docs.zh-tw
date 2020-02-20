@@ -1,5 +1,5 @@
 ---
-title: 資料來源範例 |Microsoft Docs
+title: 資料來源範例 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: b4a933ee-f2c6-4e0d-a96d-6dd061abf759
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c1ad1118b6576a5740f7c5a0f36309d39736407
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028346"
 ---
 # <a name="data-source-sample"></a>資料來源範例

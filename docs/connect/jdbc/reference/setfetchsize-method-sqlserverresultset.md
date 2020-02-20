@@ -16,10 +16,10 @@ ms.assetid: 233bf4f8-4758-42d0-a80b-33e34fa78027
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b253ad989593fa88b2281d933387dfe38fee1732
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974250"
 ---
 # <a name="setfetchsize-method-sqlserverresultset"></a>setFetchSize 方法 (SQLServerResultSet)
@@ -43,7 +43,7 @@ public void setFetchSize(int rows)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 這個 setFetchSize 方法是由 sql-dmo 介面中的 setFetchSize 方法指定。  
+ 這個 setFetchSize 方法是由 java.sql.ResultSet 介面中的 setFetchSize 方法指定。  
   
  如果指定的提取大小為零，則 JDBC 驅動程式會忽略此值，並預估應有的提取大小。 預設值由建立結果集的 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件設定。 提取大小可以隨時變更。  
   

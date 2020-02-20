@@ -1,6 +1,6 @@
 ---
 title: 使用 RevoScaleR 計算內容
-description: 如何在 SQL Server 上使用 R 語言定義計算內容的教學課程逐步解說。
+description: RevoScaleR 教學課程 4：如何在 SQL Server 上使用 R 語言定義計算內容。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0ae3f3ac7747410730cb91cf56733130ab9f0abb
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c90c935f85584f8886ae112d5cfc03759c0a129a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727196"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947211"
 ---
 # <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>定義和使用計算內容 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本課程是 [RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分，說明如何將 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server 搭配使用。
+這是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的教學課程 4；此教學課程系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
 
-在上一個課程中，您使用 **RevoScaleR** 函式來檢查資料物件。 本課程介紹 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 函式，可讓您定義遠端 SQL Server 的計算內容。 使用遠端計算內容，您可以將 R 執行從本機工作階段轉移到伺服器上的遠端工作階段。 
+在上一個教學課程中，您已使用 **RevoScaleR** 函式來檢查資料物件。 本課程介紹 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) \(英文\) 函式，其可讓您定義遠端 SQL Server 的計算內容。 使用遠端計算內容，您可以將 R 執行從本機工作階段轉移到伺服器上的遠端工作階段。 
 
 > [!div class="checklist"]
 > * 了解遠端 SQL Server 計算內容的元素
@@ -108,7 +108,7 @@ ms.locfileid: "73727196"
     rxGetComputeContext()
     ```
 
-7. 指定 "local" 關鍵字 (下一個課程會使用遠端計算內容進行示範)，將計算內容重設回本機電腦。
+7. 指定 "local" 關鍵字來將計算內容重設回本機電腦 (下一個教學課程會示範使用遠端計算內容)。
 
     ```R
     rxSetComputeContext("local")

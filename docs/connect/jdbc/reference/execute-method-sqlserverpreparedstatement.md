@@ -1,5 +1,5 @@
 ---
-title: execute 方法 (SQLServerPreparedStatement) |Microsoft Docs
+title: execute 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: db876c2e-dffe-4ef2-8fea-486cf27b0eb3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 90ea4731b4004c908cfcd60f31f51205f893431f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954942"
 ---
 # <a name="execute-method-sqlserverpreparedstatement"></a>execute 方法 (SQLServerPreparedStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67954942"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[execute ()](../../../connect/jdbc/reference/execute-method.md)|在這個 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 物件中執行可為任何類型的 SQL 陳述式。|  
 |[execute (java.lang.String)](../../../connect/jdbc/reference/execute-method-java-lang-string.md)|執行給定的 SQL 陳述式，此陳述式可傳回多個結果。|  

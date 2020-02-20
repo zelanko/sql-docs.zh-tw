@@ -1,20 +1,21 @@
 ---
 title: 使用 Spark 作業內嵌資料
-titleSuffix: SQL Server big data clusters
-description: 本教學課程示範如何使用 Azure Data Studio 中的 Spark 作業，將資料內嵌至 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的資料集區。
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: shivsood
-ms.date: 08/21/2019
+titleSuffix: SQL Server Big Data Clusters
+description: 此教學課程示範如何使用 Azure Data Studio 中的 Spark 作業，將資料內嵌至 SQL Server 巨量資料叢集的資料集區。
+author: rajmera3
+ms.author: raajmera
+ms.reviewer: mikeray
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c6f66b42fe280ef6612a5e9974ddcf4f1f7ccfcb
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 1f3a8956120f16282cf0a3829f03bf5586c9d791
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119203"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75776526"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教學課程：使用 Spark 作業將資料內嵌至 SQL Server 資料集區
 
@@ -22,7 +23,7 @@ ms.locfileid: "74119203"
 
 本教學課程示範如何使用 Spark 作業將資料載入 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的[資料集區](concept-data-pool.md)。 
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您會了解如何：
 
 > [!div class="checklist"]
 > * 在資料集區中建立外部資料表。
@@ -50,6 +51,23 @@ ms.locfileid: "74119203"
 
    ![SQL Server 主要執行個體查詢](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
+1. 建立 MSSQL-Spark 連接器的權限。
+   ```sql
+   USE Sales
+   CREATE LOGIN sample_user  WITH PASSWORD ='password123!#' 
+   CREATE USER sample_user FROM LOGIN sample_user
+
+   -- To create external tables in data pools
+   GRANT ALTER ANY EXTERNAL DATA SOURCE TO sample_user;
+
+   -- To create external table
+   GRANT CREATE TABLE TO sample_user;
+   GRANT ALTER ANY SCHEMA TO sample_user;
+
+   ALTER ROLE [db_datareader] ADD MEMBER sample_user
+   ALTER ROLE [db_datawriter] ADD MEMBER sample_user
+   ```
+
 1. 如果資料集區沒有外部資料來源，請加以建立。
 
    ```sql
@@ -74,8 +92,15 @@ ms.locfileid: "74119203"
          DISTRIBUTION = ROUND_ROBIN
       );
    ```
-  
-1. 在 CTP 3.1 中，資料集區的建立是非同步的，但目前沒有方法可判斷何時完成。 請等候兩分鐘，確保資料集區建立完成，再繼續進行。
+   
+1. 建立資料集區的登入，並提供權限給使用者。
+   ```sql 
+   EXECUTE( ' Use Sales; CREATE LOGIN sample_user  WITH PASSWORD = ''password123!#'' ;') AT  DATA_SOURCE SqlDataPool;
+
+   EXECUTE('Use Sales; CREATE USER sample_user; ALTER ROLE [db_datareader] ADD MEMBER sample_user;  ALTER ROLE [db_datawriter] ADD MEMBER sample_user;') AT DATA_SOURCE SqlDataPool;
+   ```
+   
+資料集區外部資料表的建立是封鎖作業。 當指定的資料表已經在所有後端資料集區節點上建立之後，就會恢復控制權。 如果建立作業期間發生失敗，錯誤訊息會傳回給呼叫者。
 
 ## <a name="start-a-spark-streaming-job"></a>啟動 Spark 串流作業
 
@@ -125,14 +150,14 @@ ms.locfileid: "74119203"
                   .option("dataPoolDataSource",datasource_name).save()
                }.start()
 
-      query.processAllAvailable()
       query.awaitTermination(40000)
+      query.stop()
       ```
 ## <a name="query-the-data"></a>查詢資料
 
 下列步驟顯示 Spark 串流作業已將來自 HDFS 的資料載入資料集區。
 
-1. 在查詢內嵌資料前，請查看 Spark 執行狀態 (包括 Yarn 應用程式識別碼、Spark UI 和驅動程式記錄)。
+1. 在查詢內嵌資料前，請查看 Spark 執行狀態 (包括 Yarn 應用程式識別碼、Spark UI 和驅動程式記錄)。 當您第一次啟動 Spark 應用程式時，此資訊會顯示在筆記本中。
 
    ![Spark 執行詳細資料](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 

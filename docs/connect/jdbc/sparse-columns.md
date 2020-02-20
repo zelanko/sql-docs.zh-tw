@@ -11,10 +11,10 @@ ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 328b25b4494ff69368147c9369a0949f3094108f
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027726"
 ---
 # <a name="sparse-columns"></a>疏鬆資料行
@@ -39,7 +39,7 @@ ms.locfileid: "69027726"
 
 此範例示範如何使用偵測資料行集。 它也會示範如何剖析資料行集的 XML 輸出以取得疏鬆資料行中的資料。
 
-程式碼清單是 Java 原始程式碼。 在編譯應用程式之前, 請變更連接字串。
+程式碼清單是 Java 原始程式碼。 在編譯應用程式之前，請先變更連接字串。
 
 ### <a name="code"></a>程式碼
 

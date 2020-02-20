@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 272e92bed10261b5701e2dcb4d35092ad11d59c3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727733"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>使用 SQL Server 機器學習服務中的擴充事件來監視 Python 與 R 指令碼
@@ -46,7 +46,7 @@ AND p.name = 'SQLSatellite';
 
 ## <a name="table-of-extended-events"></a>擴充事件表
 
-|事件|Description|注意|  
+|事件|描述|注意|  
 |-----------|-----------------|---------|  
 |connection_accept|接受新連線時會發生。 此事件是用來記錄所有的連線嘗試。||  
 |failed_launching|啟動失敗。|表示發生錯誤。|  
@@ -95,9 +95,9 @@ SQL Server 機器學習服務會啟動一些在 SQL Server 處理序外執行的
   
     若要擷取與 BXLServer 相關的事件，請將 *.config* 檔案放在 R 或 Python 安裝目錄中。 在預設的安裝中，這會是：
      
-    **R：** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
+    **R：** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`。  
 
-    **Python：** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`.
+    **Python：** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`。
 
 組態檔必須以 "[名稱].xevents.xml" 格式命名為和可執行檔相同的名稱。 也就是說，檔案必須用以下的格式命名︰
 

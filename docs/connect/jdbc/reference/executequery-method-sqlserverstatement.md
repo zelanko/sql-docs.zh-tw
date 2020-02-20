@@ -1,5 +1,5 @@
 ---
-title: executeQuery 方法 (SQLServerStatement) |Microsoft Docs
+title: executeQuery 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 599cf463-e19f-4baa-bacb-513cad7c6cd8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d66ceda5c9afee28240de5af9fe833acd4e25bbb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954770"
 ---
 # <a name="executequery-method-sqlserverstatement"></a>executeQuery 方法 (SQLServerStatement)
@@ -45,7 +45,7 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 executeQuery 方法是由 java.sql.Statement 介面中的 executeQuery 方法指定。  
   
  如果指定的 SQL 陳述式產生單一 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件以外的任何項目，則會擲回 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)。  

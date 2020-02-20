@@ -1,20 +1,20 @@
 ---
 title: Python 教學課程：定型模型
-description: 在本教學課程中，您將在 SQL Server 機器學習服務中使用 Python 和線性迴歸來預測滑雪工具租用的數目。 您將使用 Python 來定型線性迴歸模型。
+description: 在此教學課程系列的第三部分 (總共四個部分)，您將會在 SQL Server 機器學習服務中使用 Python 定型線性迴歸模型以預測雪橇租賃。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/03/2019
+ms.date: 01/20/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e5f83fe37890c997865c44198cbe30bc13cdea4e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c564ac26c5706e67d9a633a05f81cb48d00fb771
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727052"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75681759"
 ---
 # <a name="python-tutorial-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python 教學課程：在 SQL Server 機器學習服務中定型線性迴歸模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "73727052"
 
 ```python
 # Store the variable we'll be predicting on.
-target = "RentalCount"
+target = "Rentalcount"
 
 # Generate the training set.  Set random_state to be able to replicate results.
 train = df.sample(frac=0.8, random_state=1)
@@ -84,16 +84,17 @@ lin_mse = mean_squared_error(lin_predictions, test[target])
 print("Computed error:", lin_mse)
 ```
 
+您應該會看見如下所示的結果。
+
 ```results
-Predictions: [  40.   38.  240.   39.  514.   48.  297.   25.  507.   24.   30.   54.
-   40.   26.   30.   34.   42.  390.  336.   37.   22.   35.   55.  350.
-  252.  370.  499.   48.   37.  494.   46.   25.  312.  390.   35.   35.
-  421.   39.  176.   21.   33.  452.   34.   28.   37.  260.   49.  577.
-  312.   24.   24.  390.   34.   64.   26.   32.   33.  358.  348.   25.
-   35.   48.   39.   44.   58.   24.  350.  651.   38.  468.   26.   42.
-  310.  709.  155.   26.  648.  617.   26.  846.  729.   44.  432.   25.
-   39.   28.  325.   46.   36.   50.   63.]
-Computed error: 3.59831533436e-26
+Predictions: [ 40.  38. 240.  39. 514.  48. 297.  25. 507.  24.  30.  54.  40.  26.
+  30.  34.  42. 390. 336.  37.  22.  35.  55. 350. 252. 370. 499.  48.
+  37. 494.  46.  25. 312. 390.  35.  35. 421.  39. 176.  21.  33. 452.
+  34.  28.  37. 260.  49. 577. 312.  24.  24. 390.  34.  64.  26.  32.
+  33. 358. 348.  25.  35.  48.  39.  44.  58.  24. 350. 651.  38. 468.
+  26.  42. 310. 709. 155.  26. 648. 617.  26. 846. 729.  44. 432.  25.
+  39.  28. 325.  46.  36.  50.  63.]
+Computed error: 2.9960763804270902e-27
 ```
 
 ## <a name="next-steps"></a>後續步驟

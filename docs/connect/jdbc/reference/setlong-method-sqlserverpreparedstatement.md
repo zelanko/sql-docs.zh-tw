@@ -1,5 +1,5 @@
 ---
-title: setLong 方法 (SQLServerPreparedStatement) |Microsoft Docs
+title: setLong 方法 (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 08223a62-6489-44e4-85e8-b45bfbb11cfc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ed2fa6801b1d81c209abeadece0f463b489091f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974004"
 ---
 # <a name="setlong-method-sqlserverpreparedstatement"></a>setLong 方法 (SQLServerPreparedStatement)
@@ -42,12 +42,12 @@ public final void setLong(int n,
   
  *x*  
   
- **Long**值。  
+ **long** 值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 setLong 方法由 java.sql.PreparedStatement 介面中的 setLong 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

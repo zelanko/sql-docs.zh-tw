@@ -1,5 +1,5 @@
 ---
-title: executeUpdate 方法 (SQLServerStatement) |Microsoft Docs
+title: executeUpdate 方法 (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 10ae662a-ce3c-4b24-875c-5c2df319d93b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c13b439c687ea59e895bea8db162a0d64e887e5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954590"
 ---
 # <a name="executeupdate-method-sqlserverstatement"></a>executeUpdate 方法 (SQLServerStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67954590"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[executeUpdate (java.lang.String)](../../../connect/jdbc/reference/executeupdate-method-java-lang-string-sqlserverstatement.md)|執行可能是 INSERT、UPDATE、DELETE 或 MERGE 陳述式的給定 SQL 陳述式，否則會是不傳回任何內容的 SQL 陳述式，例如 SQL DDL 陳述式。|  
 |[executeUpdate (java.lang.String, int)](../../../connect/jdbc/reference/executeupdate-method-java-lang-string-int.md)|執行指定的 SQL 陳述式，並透過指定的旗標向 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 發出訊號，通知是否要提供由這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件產生的自動產生索引鍵來進行擷取。|  

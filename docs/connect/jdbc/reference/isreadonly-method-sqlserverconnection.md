@@ -1,5 +1,5 @@
 ---
-title: isReadOnly 方法 (SQLServerConnection) |Microsoft Docs
+title: isReadOnly 方法 (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 902fd2c1-05e0-436e-9779-c048cdb8475a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 708060b6192e47a126c9c4c3ea47052c098bb1fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977326"
 ---
 # <a name="isreadonly-method-sqlserverconnection"></a>isReadOnly 方法 (SQLServerConnection)
@@ -43,8 +43,8 @@ public boolean isReadOnly()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 isReadOnly 方法是由連接介面中的 isReadOnly 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 isReadOnly 方法是由 java.sql.Connection 介面中的 isReadOnly 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

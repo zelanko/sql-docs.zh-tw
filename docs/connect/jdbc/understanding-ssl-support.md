@@ -1,5 +1,5 @@
 ---
-title: 瞭解加密支援 |Microsoft Docs
+title: 了解加密支援 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ec3ad142e3dc5e2945afebeb2c9a6c97350672c
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71713303"
 ---
 # <a name="understanding-encryption-support"></a>了解加密支援
@@ -30,7 +30,7 @@ ms.locfileid: "71713303"
 >
 > 如需如何為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定 TLS 的詳細資訊，請參閱[啟用資料庫引擎的加密連接](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 為了讓應用程式能夠使用 TLS 加密，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 已從 1.2 版起引入下列連線屬性：**encrypt**、**trustServerCertificate**、**trustStore**、**trustStorePassword** 和 **hostNameInCertificate**。 如需詳細資訊，請參閱[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "71713303"
   
 - **空白**：「屬性不存在於連接字串中」  
   
-- **值**：「屬性存在於連接字串中，而且其值有效」  
+- **value**：「屬性存在於連接字串中，而且其值有效」  
   
 - **任意**：「屬性是否存在於連接字串中，或者其值是否有效都不重要」  
   
@@ -66,7 +66,7 @@ ms.locfileid: "71713303"
   
 - 使用不同的 JVM  
   
-## <a name="validating-server-tls-certificate"></a>正在驗證服務器 TLS 憑證  
+## <a name="validating-server-tls-certificate"></a>驗證伺服器 TLS 憑證  
 
 在 TLS 交握期間，伺服器會將其公開金鑰憑證傳送到用戶端。 JDBC 驅動程式或用戶端必須驗證伺服器憑證是由用戶端所信任的憑證授權單位發行。 驅動程式會要求伺服器憑證必須符合下列條件：  
   

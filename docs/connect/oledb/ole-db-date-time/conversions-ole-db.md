@@ -1,5 +1,5 @@
 ---
-title: 系結和轉換 (OLE DB) |Microsoft Docs
+title: 繫結和轉換 (OLE DB) | Microsoft Docs
 description: 繫結和轉換 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: dc86193f40474fc373c1b0e7dd48e579e8548821
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015843"
 ---
 # <a name="conversions-ole-db"></a>轉換 (OLE DB)
@@ -26,11 +26,11 @@ ms.locfileid: "68015843"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  本節討論如何在**datetime**和**datetimeoffset**值之間轉換。 本節中所描述的轉換已由 OLE DB 提供，或是一致的 OLE DB 延伸模組。  
+  本節討論如何在 **datetime** 和 **datetimeoffset** 值之間進行轉換。 本節中所描述的轉換已由 OLE DB 提供，或是一致的 OLE DB 延伸模組。  
   
- 在 OLE DB 中，日期和時間之常值和字串的格式通常會遵循 ISO，而且不會相依於用戶端地區設定。 有一個例外是 DBTYPE_DATE，其中的標準為 OLE Automation。 不過, 因為 SQL Server 的 OLE DB 驅動程式只會在資料傳輸至用戶端或從中轉換時, 在類型之間轉換, 所以應用程式無法強制 SQL Server 的 OLE DB 驅動程式在 DBTYPE_DATE 和字串格式之間轉換。 否則，字串會使用下列格式 (以方括弧括住的文字表示選擇性的元素)：  
+ 在 OLE DB 中，日期和時間之常值和字串的格式通常會遵循 ISO，而且不會相依於用戶端地區設定。 有一個例外是 DBTYPE_DATE，其中的標準為 OLE Automation。 不過，由於資料在用戶端來回傳輸時，OLE DB Driver for SQL Server 只會在類型之間進行轉換，因此，應用程式無法強制 OLE DB Driver for SQL Server 在 DBTYPE_DATE 和字串格式之間進行轉換。 否則，字串會使用下列格式 (以方括弧括住的文字表示選擇性的元素)：  
   
--   **Datetime**和**datetimeoffset**字串的格式為:  
+-   **datetime** 和 **datetimeoffset** 字串的格式為：  
   
      *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
@@ -38,14 +38,14 @@ ms.locfileid: "68015843"
   
      *hh*:*mm*:*ss*[.*9999999*]  
   
--   **日期**字串的格式為:  
+-   **date** 字串的格式為：  
   
      *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
->  如果標準轉換失敗，舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和 SQLOLEDB 會實作 OLE 轉換。 SQL Server 的 OLE DB 驅動程式會遵循與[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 相同的行為。 因此, OLE DB Driver for SQL Server 所執行的某些轉換與 OLE DB 規格不同。  
+>  如果標準轉換失敗，舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和 SQLOLEDB 會實作 OLE 轉換。 OLE DB Driver for SQL Server 會遵循與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 相同的行為。 因此，OLE DB Driver for SQL Server 所執行的某些轉換與 OLE DB 規格不同。  
   
- 字串的轉換在空白和欄位寬度上允許彈性。 如需詳細資訊, 請參閱資料類型支援中的「資料格式: 字串和常值」一節,[以瞭解 OLE DB 日期和時間改善](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。  
+ 字串的轉換在空白和欄位寬度上允許彈性。 如需詳細資訊，請參閱「資料格式：字串和常值」一節 (位於[對 OLE DB 日期和時間改善的資料類型支援](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)中)。  
   
  下面是一般轉換規則：  
   

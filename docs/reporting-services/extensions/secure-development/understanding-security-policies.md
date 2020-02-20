@@ -20,14 +20,14 @@ ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6649017002fb3dd5df2dc3ee68a0d759ded24887
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193399"
 ---
 # <a name="understanding-security-policies"></a>了解安全性原則
-  報表伺服器所執行的任何程式碼都必須屬於特定程式碼存取安全性原則的一部分。 這些安全性原則包含將辨識項對應至一組具名使用權限集合的程式碼群組。 通常，程式碼群組會與為該群組中程式碼指定允許權限的具名使用權限集合產生關聯。 執行階段會使用受信任主應用程式或載入程式所提供的辨識項來決定程式碼所屬的程式碼群組，以及因此授與程式碼的權限。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會遵守 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 所定義的安全性原則架構。 下列各節將描述 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的各種程式碼類型以及與它們相關聯的原則規則。  
+  報表伺服器所執行的任何程式碼都必須屬於特定程式碼存取安全性原則的一部分。 這些安全性原則包含將辨識項對應至一組具名使用權限集合的程式碼群組。 通常，程式碼群組會與為該群組中程式碼指定允許權限的具名使用權限集合產生關聯。 執行階段會使用受信任主應用程式或載入程式所提供的辨識項來決定程式碼所屬的程式碼群組，以及因此授與程式碼的權限。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會遵守 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 通用語言執行平台 (CLR) 所定義的安全性原則架構。 下列各節將描述 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的各種程式碼類型以及與它們相關聯的原則規則。  
   
 ## <a name="report-server-assemblies"></a>報表伺服器組件  
  報表伺服器組件是包含屬於 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 產品一部分之程式碼的組件。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 是使用 Managed 程式碼組件撰寫而成。所有這些組件都是強式名稱 (亦即，經過數位簽署)。 這些組件的程式碼群組都是使用 **StrongNameMembershipCondition** 所定義，可根據組件強式名稱的公開金鑰資訊提供辨識項。 此程式碼群組會被授與 **FullTrust** 權限集合。  

@@ -1,27 +1,26 @@
 ---
-title: 快速入門：撰寫 Python 函式
-titleSuffix: SQL Server Machine Learning Services
-description: 在本快速入門中，您將了解如何使用 SQL Server 機器學習服務撰寫 Python 函數，以進行進階統計計算。
+title: 快速入門：Python 函式
+description: 在此快速入門中，您將會了解如何搭配 SQL Server 機器學習服務使用 Python 數學與公用程式函式。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08f43c6406d0ca2c95cc21a207cae63af6e86902
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: d939e04c4a82575cf8210f2c11e734b9912c0fe5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727006"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831400"
 ---
-# <a name="quickstart-write-advanced-python-functions-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server 機器學習服務撰寫進階 Python 函數
+# <a name="quickstart-python-functions-with-sql-server-machine-learning-services"></a>快速入門：Python 函式搭配 SQL Server 機器學習服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本快速入門說明如何使用 SQL Server 機器學習服務，在 SQL 預存程序中內嵌 Python 數學和公用程式函數。 在 T-SQL 中難以執行的進階統計函數，只需要單一程式碼就可以在 Python 中完成。
+在此快速入門中，您將會了解如何搭配 SQL Server 機器學習服務使用 Python 數學與公用程式函式。 使用 T-SQL 實作統計函數通常會很複雜，但若使用 Python，只需要幾行程式碼就可以完成。
 
 ## <a name="prerequisites"></a>Prerequisites
 
