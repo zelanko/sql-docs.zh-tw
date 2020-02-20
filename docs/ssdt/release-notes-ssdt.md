@@ -1,5 +1,5 @@
 ---
-title: SQL Server Data Tools (SSDT) 的版本資訊 | Microsoft Docs
+title: SQL Server Data Tools (SSDT) 的版本資訊
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
@@ -7,16 +7,17 @@ ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: markingmyname
 ms.author: maghan
+manager: jroth
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 08/15/2019
+ms.custom: seo-lt-2019
+ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f4fa51ff0ba9a5ce3e2960ab07e3e1994ddb881
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 860888bf0f2292a68fa6a4c6a6b92489466a586c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874896"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688782"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的版本資訊
 
@@ -44,7 +45,41 @@ GeneMi , 2019/03/22.
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
 
-## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2，適用於 VS 2017 的 SSDT
+## <a name="1593nbsp-ssdt-for-vs-2017"></a>15.9.3，&nbsp; 適用於 VS 2017 的 SSDT
+
+發行日期：  &nbsp; 2020 年 1 月 3 日  
+組建編號：  &nbsp; 14.0.16203.0  
+適用於 Visual Studio 2017 的 SSDT。 
+
+### <a name="whats-new"></a>新功能
+
+| 新項目 | 詳細資料 |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | 已移除 Power Query Source for SQL Server 2017 的收件匣元件。 我們現在宣告 Power Query Source for SQL Server 2017 與 2019 為 OOB 元件，您可以在[這裡](https://www.microsoft.com/en-us/download/details.aspx?id=100619)下載。 |
+| Integration Services (SSIS) | 已移除 Microsoft Oracle Connector for SQL Server 2019 的收件匣元件。 我們現在宣告 Microsoft Oracle Connector for SQL Server 2019 為 OOB 元件，您可以在[這裡](https://www.microsoft.com/en-us/download/details.aspx?id=58228)下載。 |
+| Integration Services (SSIS) | 已修正 SSIS 偵錯工具偶爾因為目標伺服器版本為 SQL Server 2017 或 2019 導致 IDtsHost 介面未註冊而無法啟動的問題。 |
+| Integration Services (SSIS) | 已修正高 DPI 模式中的主要 UI 版面配置問題。 |
+| Integration Services (SSIS) | 已將指令碼工作/元件的 .NET framework 版本升級為 4.7 (適用於目標伺服器版本為 SQL Server 2019 時)。 |
+| Integration Services (SSIS) | 已在 ODBC 連線管理員中新增 ConnectByProxy 屬性，以支援在 ODBC 連線管理員中，將自我裝載整合執行階段啟用為 Proxy。 |
+| Integration Services (SSIS) | 已修正使用者無法在套件部署模式下新增資料來源的問題。 |
+| Integration Services (SSIS) | 已修正當程式碼使用 .NET 4.5 之後引進的任何新語法時，使用者無法對指令碼工作/元件進行偵錯的問題。 |
+| Integration Services (SSIS) | 已修正透過 [整合執行階段建立精靈] 來建立 Azure 訂用帳戶的第一個 Data Factory 時，可能會因為未註冊 Data Factory 資源提供者而失敗的問題。 |
+| Integration Services (SSIS) | 已修正當訂用帳戶中含有僅限檔案的儲存體帳戶時，[ADF 連線精靈] 中的 SSIS 無法正確顯示 Azure 儲存體帳戶清單的問題。 |
+| Integration Services (SSIS) | 已修正當套件包含容器時，「在 Azure 中執行」沒有作用的問題。 |
+| Integration Services (SSIS) | 已修正 Char (n Char) 與 Varchar2 (n Char) 對應到 Oracle 連接器中 DTS 類型不正確的問題。 |
+
+### <a name="known-issues"></a>已知問題
+
+| 已知問題 | 詳細資料 |
+| :---------- | :------ |
+| 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 | 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。 |
+| SSDT for Visual Studio 2017 (15.8 以上版本) 不支援設計包含 Teradata 來源/目的地的套件。 | 使用適用於 Visual Studio 2017 (15.8) 的 SSDT。 |
+| 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援 OData v4。 | &nbsp; |
+| 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援使用 ODBC 連接到 Oracle。 | &nbsp; |
+| Power Query 來源未當地語系化 | &nbsp; |
+| &nbsp; | &nbsp; |
+
+## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2，&nbsp;適用於 VS 2017 的 SSDT
 
 發行日期：  &nbsp; 2019 年 7 月 17 日  
 組建編號：  &nbsp; 14.0.16194.0  
@@ -116,7 +151,7 @@ P.S.  There is no need to keep this large HTML comment indefinitely.
 | Integration Services (SSIS) | 在 ADF 2017 中新增適用於 SSIS 的 Power Query 來源 (預覽)。 |
 | Integration Services (SSIS) | 再次新增對 SQL Server 2012 的支援。 |
 | Integration Services (SSIS) | 新增 SQL Server 2019 的 Oracle 來源和目的地。 |
-| Integration Services (SSIS) | 目標為 SQL Server 2019 的 Oracle 來源和目的地已由 SSDT 安裝。 <br/></br> 若要設計目標伺服器版本為 2017 或更低版本的套件，請從 Microsoft 下載網站下載相對應的 Oracle 連接器版本，並在 SSDT 機器上安裝它。 <br/></br> [目標為 SQL Server 2017 的 Microsoft Connector Version 5.0 for Oracle by Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=55179 ) \(英文\) <br/></br> [目標為 SQL Server 2016 的 Microsoft Connector Version 4.0 for Oracle by Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=52950 ) \(英文\)<br/></br> [目標為 SQL Server 2014 的 Microsoft Connector Version 3.0 for Oracle by Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=44582 ) \(英文\)<br/></br> [目標為 SQL Server 2012 的 Microsoft Connector Version 2.0 for Oracle by Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=29283 ) \(英文\) |
+| Integration Services (SSIS) | 目標為 SQL Server 2019 的 Oracle 來源和目的地已由 SSDT 安裝。 <br/></br> 若要設計目標伺服器版本為 2017 或更低版本的套件，請從 Microsoft 下載網站下載相對應的 Oracle 連接器版本，並在 SSDT 機器上安裝它。 <br/></br> [目標為 SQL Server 2017 的 Microsoft Connector Version 5.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=55179 ) \(英文\) <br/></br> [目標為 SQL Server 2016 的 Microsoft Connector Version 4.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=52950 ) \(英文\)<br/></br> [目標為 SQL Server 2014 的 Microsoft Connector Version 3.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=44582 ) \(英文\)<br/></br> [目標為 SQL Server 2012 的 Microsoft Connector Version 2.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=29283 ) \(英文\) |
 | Integration Services (SSIS) | 修正從舊版 SSIS 移轉時無法載入指令碼工作/元件的問題。 |
 | Integration Services (SSIS) | 修正資料檢視器在 Windows 7 SP1 和 Windows 8.1 上無法運作的問題。 |
 | Integration Services (SSIS) | 修正在某些情況下，儲存套件會導致 Visual Studio 損毀的問題。 |
@@ -641,7 +676,7 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
     - 使用 PowerQuery 的額外資料來源 (檔案資料來源)
         - Excel 
         - 文字/CSV 
-        - XML 
+        - Xml 
         - Json 
         - 資料夾 
         - Access 資料庫 
