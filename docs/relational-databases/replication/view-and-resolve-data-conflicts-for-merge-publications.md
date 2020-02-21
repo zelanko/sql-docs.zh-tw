@@ -30,7 +30,7 @@ ms.locfileid: "75321885"
 
 -   針對 [**sp_addmergepublication &#40;Transact-SQL&#41;**](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@conflict_retention` 參數指定保留值。
   
--   針對 [**sp_changemergepublication &#40;Transact-SQL&#41;**](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 的 `@property` 參數指定一個 **flict_retention** 值，並且為 `@value` 參數指定保留值。
+- 針對 `@property` 參數指定 **conflict_retention** 值，並為 [**sp_changemergepublication &#40;Transact-SQL&#41;**](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 的 `@value` 參數指定保留值。
   
  依預設，會儲存衝突資訊：    
 -   如果發行集相容性層級為 90RTM 或更高，則是在「發行者」與「訂閱者」端。   
