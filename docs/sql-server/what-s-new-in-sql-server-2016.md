@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 103f74b4a1be1ee2111f8ed3e983f8a468f8db2c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dba29bb00f0b8d54edd8c8c98d4134cf794fe2fd
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893028"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478508"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -52,7 +52,6 @@ ms.locfileid: "68893028"
     - **動態資料遮罩：** 如果已在資料表定義中指定，則受遮罩的資料會對大部分的使用者隱藏，且只有具有 UNMASK 權限的使用者可查看完整資料。
     - **資料列層級安全性：** 資料存取可限制於資料庫引擎層級，來讓使用者只能看見與他們相關的項目。 
 
-請參閱[資料庫引擎](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)。
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services 針對以「1200 (含) 相容性層級」  為基礎的表格式模型資料庫，能提供更佳的效能、撰寫功能、資料庫管理、篩選、處理及其他優化。
 - **[SQL Server R 服務](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** 能將用於統計分析的 R 程式設計語言整合到 SQL Server 中。 

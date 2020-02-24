@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9f8e46dd253514329ee486c940a14f8dc48b4e9b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 442a6ad69681a257355d5743d10cb4f933008b8a
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68702687"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971324"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
+
+[!INCLUDE[ODBC_Current_Version](../../includes/odbc-latest-release.md)]
 
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 

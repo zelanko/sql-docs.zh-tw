@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c46cf3fbc2138350c50e3f520871b0b6a8efde7a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 34599160e206d89eaee04074ddbaee2bac7c5f89
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74317032"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173564"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>在 Kubernetes 上使用 SQL Server 巨量資料叢集的資料持續性
 
@@ -30,7 +30,7 @@ SQL Server 巨量資料叢集透過使用[儲存類別](https://kubernetes.io/do
 
 - 若要成功部署巨量資料叢集，請確定您有所需的永久性磁碟區數目可供使用。 若要在 Azure Kubernetes Service (AKS) 叢集上部署，而且使用內建儲存類別 (`default` 或 `managed-premium`)，則此類別均支援永久性磁碟區的動態佈建。 因此，您不需要預先建立永久性磁碟區，但必須確保 AKS 叢集中可用的背景工作角色節點，可以連接部署所需的永久性磁碟區數目。 根據為背景工作節點指定的 [VM 大小](https://docs.microsoft.com/azure/virtual-machines/linux/sizes)，每個節點都可連接特定數目的磁碟。 針對預設大小叢集 (沒有高可用性)，最少需要 24 個磁碟。 如果您要啟用高可用性或相應增加任何集區，則不論您要相應增加的資源為何，請確保每個額外的複本都有至少兩個永久性磁碟區。
 
-- 如果您在設定中提供之儲存類別的儲存體佈建程式不支援動態佈建，您必須預先建立永久性磁碟區。 例如，`local-storage` 佈建程式不會啟用動態佈建。 如需如何在使用 `kubeadm` 部署的 Kubernetes 叢集中繼續進行的指引，請參閱此[範例指令碼](https://github.com/microsoft/sql-server-samples/tree/cu1-bdc/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) \(英文\)。
+- 如果您在設定中提供之儲存類別的儲存體佈建程式不支援動態佈建，您必須預先建立永久性磁碟區。 例如，`local-storage` 佈建程式不會啟用動態佈建。 如需如何在使用 `kubeadm` 部署的 Kubernetes 叢集中繼續進行的指引，請參閱此[範例指令碼](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) \(英文\)。
 
 - 當您部署巨量資料叢集時，可以將相同的儲存類別設定為可供叢集中的所有元件使用。 但是，作為實際執行環境部署的最佳做法，各種元件都將需要不同的儲存體設定，以根據大小或輸送量來容納各種不同的工作負載。 您可以針對每個 SQL Server 主要執行個體、資料集與存放集區，覆寫控制器中指定的預設儲存體設定。 此文章提供如何執行此操作的範例。
 

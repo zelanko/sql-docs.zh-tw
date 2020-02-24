@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: d94e90e67814ec2dd1541abdbd52b04152681d84
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9b953861799e380e4b4221a2cd7fe80badf83ffe
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75776398"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507532"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>快速入門：在 Red Hat 上安裝 SQL Server 並建立資料庫
 
@@ -117,6 +117,11 @@ RHEL 7.3、7.4、7.5、7.6 或 8 機器必須**至少有 2 GB** 的記憶體。
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ## <a id="install"></a>安裝 SQL Server
+
+> [!NOTE]
+> 下列 SQL Server 2019 命令會指向 RHEL 8 存放庫。 SQL Server 需要使用 python2，但 RHEL 8 未預先安裝。 如需詳細資訊，請參閱下列說明如何安裝 python2 並將其設為預設解譯器的部落格： https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta 。
+>
+> 如果您使用的是 RHEL 7，請將下列路徑變更為 `/rhel/7`，而非 `/rhel/8`。
 
 若要在 RHEL 上設定 SQL Server，請從終端執行下列命令，安裝 **mssql-server** 套件：
 

@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a2a3258dfa0fbb234cf4f888e4ae98f27c215993
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 570ac300f8f522d0ea4acfb711d78bd7cfaf7ef2
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67988526"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146288"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>在 Always On 可用性群組的次要複本上設定備份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell，針對 AlwaysOn 可用性群組設定次要複本的備份。  
   
 > [!NOTE]  
->  如需備份次要複本的簡介，請參閱 [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)或 PowerShell，針對 AlwaysOn 可用性群組設定次要複本的備份。  
+>  如需在次要複本上備份的簡介，請參閱[使用中次要：在次要複本上備份 &#40;Always On 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
 ##  <a name="Prerequisites"></a> 必要條件  
  您必須連接到裝載主要複本的伺服器執行個體。  
@@ -72,7 +72,7 @@ ms.locfileid: "67988526"
      指定當您選擇要執行備份的複本時，您希望備份作業忽略可用性複本的角色。 請注意，備份作業可能會評估其他因素，例如每個可用性複本的備份優先權，搭配其操作狀態和連接狀態。  
   
     > [!IMPORTANT]  
-    >  不會強制執行自動備份喜好設定。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 自動備份喜好設定對於特定備份沒有任何影響。 如需詳細資訊，請參閱本主題稍後的＜ [後續操作：設定次要複本的備份之後](#FollowUp) ＞。  
+    >  不會強制執行自動備份喜好設定。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 自動備份喜好設定對於特定備份沒有任何影響。 如需詳細資訊，請參閱本主題稍後的[後續操作：設定次要複本的備份之後](#FollowUp)。  
   
 6.  您可以使用 **[複本備份優先權]** 方格來變更可用性複本的備份優先權。 此方格顯示裝載可用性群組複本的每個伺服器執行個體的目前備份優先權。 方格資料行如下所示：  
   
@@ -140,7 +140,7 @@ ms.locfileid: "67988526"
      指定當您選擇要執行備份的複本時，您希望備份作業忽略可用性複本的角色。 請注意，備份作業可能會評估其他因素，例如每個可用性複本的備份優先權，搭配其操作狀態和連接狀態。  
   
     > [!IMPORTANT]  
-    >  不會強制執行 **AutomatedBackupPreference**。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 自動備份喜好設定對於特定備份沒有任何影響。 如需詳細資訊，請參閱本主題稍後的＜ [後續操作：設定次要複本的備份之後](#FollowUp) ＞。  
+    >  不會強制執行 **AutomatedBackupPreference**。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 自動備份喜好設定對於特定備份沒有任何影響。 如需詳細資訊，請參閱本主題稍後的[後續操作：設定次要複本的備份之後](#FollowUp)。  
   
      例如，下列命令會將可用性群組 **的** AutomatedBackupPreference `MyAg` 屬性設定為 **SecondaryOnly**。 這個可用性群組中資料庫的自動備份永遠不會在主要複本上進行，但是會重新導向至備份優先權設定最高的次要複本。  
   
@@ -162,11 +162,11 @@ ms.locfileid: "67988526"
 ##  <a name="FollowUp"></a> 後續操作：設定次要複本的備份之後  
  若要針對給定可用性群組將自動備份喜好設定納入考量，您必須在備份優先權大於零 (>0) 之裝載可用性複本的每個伺服器執行個體上，針對可用性群組中的資料庫編寫備份作業的指令碼。 若要判斷目前的複本是否為慣用的備份複本，請在您的備份指令碼中使用 [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 函數。 如果目前伺服器執行個體所裝載的可用性複本是慣用的備份複本，此函數會傳回 1。 如果不是，函數會傳回 0。 透過在每個可用性複本上執行簡單的指令碼來查詢這個函數，您就可以判斷哪個複本應該執行給定的備份作業。 例如，備份作業指令碼的一般程式碼片段看起來可能像是：  
   
-```  
+```sql  
 IF (NOT sys.fn_hadr_backup_is_preferred_replica(@DBNAME))  
 BEGIN  
       Select 'This is not the preferred replica, exiting with success';  
-      RETURN 0 - This is a normal, expected condition, so the script returns success  
+      RETURN 0 -- This is a normal, expected condition, so the script returns success  
 END  
 BACKUP DATABASE @DBNAME TO DISK=<disk>  
    WITH COPY_ONLY;  
@@ -191,10 +191,10 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 -   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 團隊部落格：SQL Server AlwaysOn 官方團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [使用中次要：在次要複本上備份 &#40;Always On 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: DROP FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/28/2017
+ms.date: 02/11/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b318f7be6b403cb540305eb492cf99a776efc9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5cc1eb2d3c2953fd2bdf24fdf3c13c94872f6632
+ms.sourcegitcommit: 74afe6bdd021f62275158a8448a07daf4cb6372b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68044220"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144191"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,12 +50,12 @@ DROP FUNCTION [ IF EXISTS ] { [ schema_name. ] function_name } [ ,...n ]
 ```  
  -- Azure SQL Data Warehouse, Parallel Data Warehouse 
 
-DROP FUNCTION [ schema_name. ] function_name
+DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 [;] 
 ```  
    
   
-## <a name="arguments"></a>引數  
+## <a name="arguments"></a>引數
  *IF EXISTS*    
  只有在函數已存在時，才能有條件地將其卸除。 從 [!INCLUDE[ssnoversion_md](../../includes/ssnoversion-md.md)] 2016 和 [!INCLUDE[sssds_md](../../includes/sssds-md.md)] 開始可用。
   
@@ -76,7 +76,7 @@ DROP FUNCTION [ schema_name. ] function_name
 ## <a name="examples"></a>範例  
   
 ### <a name="a-dropping-a-function"></a>A. 卸除函數  
- 下列範例會從 `fn_SalesByStore` 範例資料庫的 `Sales` 結構描述，卸除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 使用者定義的函數。 若要建立此函數，請參閱範例 B 中的 [CREATE FUNCTION & #40;TRANSACT-SQL & #41;](../../t-sql/statements/create-function-transact-sql.md)。  
+ 下列範例會從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫的 `Sales` 結構描述，卸除 `fn_SalesByStore` 使用者定義的函數。 若要建立此函數，請參閱範例 B 中的 [CREATE FUNCTION & #40;TRANSACT-SQL & #41;](../../t-sql/statements/create-function-transact-sql.md)。  
   
 ```  
 DROP FUNCTION Sales.fn_SalesByStore;  

@@ -18,12 +18,12 @@ ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 845c621291331fdf75e257a3f71ec8068df13ffd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 262830dfa4bf32dfb49638b3f0d730ea8aeadde5
+ms.sourcegitcommit: a195cfddedf57044a3d7878a9ee220124e54bb96
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68109348"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77037004"
 ---
 # <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
 
@@ -126,7 +126,7 @@ ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
 DECLARE @jsonInfo NVARCHAR(MAX)
 DECLARE @town NVARCHAR(32)
 
-SET @jsonInfo=N'{"info":{"address":[{"town":"Paris"},{"town":"London"}]}';
+SET @jsonInfo=N'{"info":{"address":[{"town":"Paris"},{"town":"London"}]}}';
 
 SET @town=JSON_VALUE(@jsonInfo,'$.info.address[0].town'); -- Paris
 SET @town=JSON_VALUE(@jsonInfo,'$.info.address[1].town'); -- London
