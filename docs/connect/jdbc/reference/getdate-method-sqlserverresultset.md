@@ -34,7 +34,7 @@ ms.locfileid: "67983883"
 |[getDate 方法 (int)](../../../connect/jdbc/reference/getdate-method-int-sqlserverresultset.md)|使用 Java 程式設計語言，從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取指定的資料行索引值來當作 java.sql.Date 物件。|  
 |[getDate (int, java.util.Calendar)](../../../connect/jdbc/reference/getdate-method-int-java-util-calendar-sqlserverresultset.md)|使用 Java 程式設計語言，並透過指定 Calendar 物件，擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中指定資料行索引的值來當作 java.sql.Date 物件。|  
 |[getDate (java.lang.String)](../../../connect/jdbc/reference/getdate-method-java-lang-string-sqlserverresultset.md)|使用 Java 程式語言，擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行名稱的值來當作 java.sql.Date 物件。|  
-|[getDate (java.lang.String, java.util.Calendar)](../../../connect/jdbc/reference/getdate-method-java-lang-string-java-util-calendar-sqlserverresultset.md)|使用Java 程式設計語言，透過指定的 Calender 物件，從 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的目前資料列內擷取指定資料行名稱值作為 java.sql.Date 物件。|  
+|[getDate (java.lang.String, java.util.Calendar)](../../../connect/jdbc/reference/getdate-method-java-lang-string-java-util-calendar-sqlserverresultset.md)|使用Java 程式設計語言，透過指定的 Calendar 物件，從 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的目前資料列內擷取指定資料行名稱值作為 java.sql.Date 物件。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
