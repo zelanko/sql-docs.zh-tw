@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69cc078dc5ce605f1d7bf55d872c2a4629eb3301
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5bcfeabda2eda62a6a4118ac5542e83a4b0afd66
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66403258"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971309"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>建立及管理原生模式報表伺服器的訂閱
   標準訂閱是希望能透過電子郵件傳遞報表，或傳遞到共用資料夾之個別使用者所建立的訂閱。 此主題提供有關由個別使用者建立或管理的標準訂閱資訊。 資料驅動訂閱有不同的需求和步驟，且會在另一個主題中討論。 如需詳細資訊，請參閱 [建立、修改和刪除資料驅動訂閱](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
@@ -46,7 +46,7 @@ ms.locfileid: "66403258"
   
  本文並未說明如何建立資料驅動訂閱。 如需如何建立資料驅動訂閱的指示，請參閱[建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)。  
   
-###  <a name="bkmk_create_fileshare_subscription"></a> 建立檔案共用訂閱  
+## <a name="bkmk_create_fileshare_subscription"></a> 建立檔案共用訂閱  
   
 1. 瀏覽[報表伺服器的入口網站 (SSRS 原生模式)](../../reporting-services/web-portal-ssrs-native-mode.md)。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66403258"
   
 報表會以靜態檔案傳遞。 如果報表包括互動式功能 (例如，連結到其他資料列或資料行)，則那些功能無法使用。  
   
-###  <a name="bkmk_create_email_subscription"></a> 建立電子郵件訂閱  
+##  <a name="bkmk_create_email_subscription"></a> 建立電子郵件訂閱  
   
 1. 瀏覽[報表伺服器的入口網站 (SSRS 原生模式)](../../reporting-services/web-portal-ssrs-native-mode.md)。  
   
@@ -170,4 +170,3 @@ ms.locfileid: "66403258"
  [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
  [報表伺服器的入口網站 (SSRS 原生模式)](../../reporting-services/web-portal-ssrs-native-mode.md)  
  [使用我的訂用帳戶 &#40;原生模式報表伺服器&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
-  

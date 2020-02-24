@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 02/19/2020
 ms.prod: sql
 ms.reviewer: dphansen
 ms.technology: language-extensions
@@ -10,12 +10,12 @@ author: nelgson
 ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3f2911406b902ea4d4e7840676dcf08b0318664d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 65f805c0d2467f3b4301ed1d237284cb61224b97
+ms.sourcegitcommit: 5a9b8bc4fcb5e875d5ef25362b68ffe7f8a1b6d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73536238"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77520891"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -31,16 +31,15 @@ ms.locfileid: "73536238"
 CREATE EXTERNAL LANGUAGE language_name  
 [ AUTHORIZATION owner_name ]  
 FROM <file_spec> [ ,...2 ]  
-WITH (<option_spec>)
 [ ; ]  
 
 <file_spec> ::=  
 {
-    ( CONTENT = { <external_lang_specifier> | <content_bits>,
+    ( CONTENT = { <external_lang_specifier> | <content_bits> },
     FILE_NAME = <external_lang_file_name>
     [ , PLATFORM = <platform> ]
     [ , PARAMETERS = <external_lang_parameters> ]
-    [ , ENVIRONMENT_VARIABLES = <external_lang_env_variables> )
+    [ , ENVIRONMENT_VARIABLES = <external_lang_env_variables> ] )
 }
 
 <external_lang_specifier> :: =  

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: f6758760d8ea73d9ec0ac95a0e824a0fd46a6dbb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 651467463e0563c9da00e23115ffb7bc4f151d23
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68045193"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479686"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>設定 Windows 和 Linux 上的 SQL Server Always On 可用性群組 (跨平台)
 
@@ -55,7 +55,7 @@ ms.locfileid: "68045193"
 
    **設定混合模式驗證**
 
-   如需指示，請參閱[變更伺服器驗證模式](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure)。
+   如需指示，請參閱[變更伺服器驗證模式](../database-engine/configure-windows/change-server-authentication-mode.md#change-authentication-mode-with-ssms)。
 
 1. 在 Linux 上安裝 SQL Server 2017。 如需指示，請參閱[在 Linux 上安裝 SQL Server](sql-server-linux-setup.md)。 透過 mssql-conf 啟用 `hadr`。
 

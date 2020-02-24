@@ -1,7 +1,7 @@
 ---
 title: STSymDifference (geometry 資料類型) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 02/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ea26c364621910d6dd5148a5753bd6709d3e0f07
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2845ecc6189b113bc31ae85b869985cf2ddfdb16
+ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68066281"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77051678"
 ---
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "68066281"
   
 ## <a name="arguments"></a>引數  
  *other_geometry*  
- 這是除了 **叫用所在的執行個體之外的另一個**geometry`STSymDistance()` 執行個體。  
+ 這是除了 `STSymDifference()` 叫用所在的執行個體之外的另一個 **geometry** 執行個體。  
   
 ## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geometry**  
   
- CLR 傳回類型：**SqlGeometry**  
+ CLR 傳回型別：**SqlGeometry**  
   
 ## <a name="remarks"></a>備註  
  如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一律會傳回 Null。 只有當輸入執行個體包含圓弧線段時，結果才能包含圓弧線段。  

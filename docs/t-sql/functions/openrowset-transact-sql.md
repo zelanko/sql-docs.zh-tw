@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a20b058d187f7c1ddade6b609b0002f7bbcbdb60
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5f1a134e6792eedca184c74b7973d4cb267b104b
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910141"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074456"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -75,13 +75,23 @@ OPENROWSET
 
 ## <a name="arguments"></a>引數
 
-'*provider_name*' 為一個字元字串，代表在登錄中所指定 OLE DB 提供者的易記名稱 (或 PROGID)。 *provider_name* 沒有預設值。
+### <a name="provider_name"></a>'*provider_name*'
+這是一個字元字串，代表在登錄中指定之 OLE DB 提供者的易記名稱 (或 PROGID)。 *provider_name* 沒有預設值。
 
 '*datasource*' 為一個對應至特定 OLE DB 資料來源的字串常數。 *datasource* 是指要傳遞到提供者的 IDBProperties 介面，將提供者初始化所用的 DBPROP_INIT_DATASOURCE 屬性。 這個字串通常都包含資料庫檔案的名稱、資料庫伺服器的名稱，或是提供者尋找資料庫所用的名稱。
 
 '*user_id*' 為一個字串常數，代表傳遞到所指定 OLE DB 提供者的使用者名稱。 *user_id* 會指定連線的安全性內容，而且會當做 DBPROP_AUTH_USERID 屬性傳入來初始化提供者。 *user_id* 不可以是 Microsoft Windows 登入名稱。
 
 '*password*' 為一個字串常數，代表傳遞到 OLE DB 提供者的使用者密碼。 *password* 在將提供者初始化時，會當做 DBPROP_AUTH_PASSWORD 屬性來傳入。 *password* 不可以是 Microsoft Windows 密碼。
+
+```sql
+SELECT a.*
+   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
+                   'C:\SAMPLES\Northwind.mdb';
+                   'admin';
+                   'password',
+                   Customers) AS a;
+```
 
 '*provider_string*' 為一個提供者特定的連接字串，會當作 DBPROP_INIT_PROVIDERSTRING 屬性傳入來初始化 OLE DB 提供者。 *provider_string* 通常會封裝將提供者初始化所需的所有連線資訊。 如需由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者辨識的關鍵字清單，請參閱[初始化和授權屬性](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)。
 
@@ -91,9 +101,23 @@ OPENROWSET
 
 *object* 這是唯一識別所處理物件的物件名稱。
 
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+                 AdventureWorks2012.HumanResources.Department) AS a;
+```
+
 '*query*' 這是傳給提供者且由提供者執行的字串常數。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本機執行個體不會處理這項查詢，但會處理提供者傳回的查詢結果，亦即通過查詢。 如果提供者不是透過資料表名稱，而只透過命令語言使用其資料表資料，通過查詢將會很實用。 只要查詢提供者支援 OLE DB Command 物件與其必要介面，遠端伺服器就支援通過查詢。 如需詳細資訊，請參閱 [SQL Server Native Client &#40;OLE DB&#41; 參考](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)。
 
-BULK 使用 BULK 資料列集提供者，讓 OPENROWSET 讀取檔案資料。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，OPENROWSET 可以從資料檔讀取，而不必將資料載入到目標資料表中。 此舉可讓您搭配簡單的 SELECT 陳述式來使用 OPENROWSET。
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+     'SELECT TOP 10 GroupName, Name
+     FROM AdventureWorks2012.HumanResources.Department') AS a;
+```
+
+### <a name="bulk"></a>BULK
+使用 BULK 資料列集提供者，讓 OPENROWSET 讀取檔案資料。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，OPENROWSET 可以從資料檔讀取，而不必將資料載入到目標資料表中。 此舉可讓您搭配簡單的 SELECT 陳述式來使用 OPENROWSET。
 
 > [!IMPORTANT]
 > Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
@@ -181,10 +205,23 @@ SINGLE_CLOB
 
 SINGLE_NCLOB 以 UNICODE 格式讀取 *data_file*，且使用目前資料庫的定序，將內容當作 **varchar(max)** 類型的單一資料列、單一資料行資料列集加以傳回。
 
+```sql
+SELECT *
+   FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_NCLOB) AS Document;
+```
+
 ### <a name="input-file-format-options"></a>輸入檔案格式選項
 
 FORMAT **=** 'CSV' **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 指定符合 [RFC 4180](https://tools.ietf.org/html/rfc4180) 規範的逗點分隔值檔案。
+
+```sql
+SELECT *
+FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
+    FORMATFILE = N'D:\XChange\test-csv.fmt',
+    FIRSTROW=2,
+    FORMAT='CSV') AS cars;
+```
 
 FORMATFILE ='*format_file_path*' 指定格式檔案的完整路徑。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援兩種類型的格式檔案：XML 和非 XML。
 
