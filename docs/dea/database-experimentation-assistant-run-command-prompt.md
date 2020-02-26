@@ -2,7 +2,7 @@
 title: 在命令提示字元中執行資料庫測試助理
 description: 在命令提示字元中執行資料庫測試助理
 ms.custom: seo-lt-2019
-ms.date: 01/24/2020
+ms.date: 02/25/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,28 +12,58 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 8055ae8b66c2f2b59f18b0ee40dcac8753c0eb7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f2640e9018f29385851839932572aeaa3ee91ad9
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76831754"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600126"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>在命令提示字元中執行資料庫測試助理
 
 本文說明如何在資料庫測試助理（DEA）中捕捉追蹤，然後從命令提示字元分析結果。
 
+   > [!NOTE]
+   > 若要深入瞭解每個 DEA 作業，請嘗試執行下列命令：
+   >
+   > `Deacmd.exe -o <operation> --help`
+   >
+   > 需要作業名稱;有效的作業包括**分析**、 **StartCapture**和**StopCapture**。
+
 ## <a name="start-a-new-workload-capture-by-using-the-dea-command"></a>使用 DEA 命令來啟動新的工作負載捕獲
 
 若要啟動新的工作負載捕獲，請在命令提示字元中執行下列命令：
 
-`Deacmd.exe -o startcapturetrace -s <SQLServerInstance> -e <encryptconnection> -u <trustservercertificate> -d <database name> -p <trace file path> -f <trace file name> -t <Max duration>`
+`Deacmd.exe -o StartCapture -h <SQLServerInstance> -e <encryptconnection> -u <trustservercertificate> -d <database name> -p <trace file path> -f <trace file name> -t <Max duration>`
 
 **範例**
 
-`Deacmd.exe -o startcapturetrace -s localhost -e -d adventureworks -p c:\test -f sql2008capture -t 60`
+`Deacmd.exe -o StartCapture -h localhost -e -d adventureworks -p c:\test -f sql2008capture -t 60`
+
+**其他選項**
+
+使用`Deacmd.exe`命令啟動新的工作負載捕捉時，您可以使用下列其他選項：
+
+| 選項| 描述 |  
+| --- | --- |
+| -n, --name | 具備追蹤檔案名 |
+| -x，--format | 具備追蹤的格式（Trace = 0，XEvents = 1） |
+| -d，--duration | 具備捕捉的最大持續時間（以分鐘為單位） |
+| -l, --location | 具備在主機電腦上儲存追蹤/xevent 檔案的輸出檔案夾位置 |
+| -t，--類型 | （預設值：0） Sql Server 的類型/版本（SqlServer = 0，AzureSQLDB = 1，Azure SQL 受控執行個體 = 2） |
+| -h, --host | 具備SQL Server 主機名稱和/或實例名稱，以開始捕獲 |
+| -e、--encrypt | （預設值： True）SQL Server 實例的加密連接。 預設值為 true。 |
+| --信任 | （預設值： False）連接到 SQL Server 實例時，信任伺服器憑證。 預設值為 false。 |
+| -f、--databasename | （預設值：）要篩選追蹤的資料庫名稱，如果未指定，則會在所有資料庫上啟動 capture |
+| -m、--authmode | （預設值：0）驗證模式（Windows = 0，Sql 驗證 = 1） |
+| -u、--username | 用來連接到 SQL Server 的使用者名稱 |
+| -p、--password | 用來連接到 SQL Server 的密碼 |
 
 ## <a name="replay-a-workload-capture"></a>重新執行工作負載捕獲
+
+**使用 Distributed Replay**
+
+如果您使用的是 Distributed Replay，請執行下列步驟。
 
 1. 登入 Distributed Replay 控制器電腦。
 2. 若要將使用 DEA 命令所捕獲的工作負載追蹤轉換成 IRF 檔案，請在命令提示字元中執行下列命令：
@@ -65,15 +95,42 @@ ms.locfileid: "76831754"
 7. [ `@Tracefile`編輯] 以符合執行 SQL Server 之目的電腦上的追蹤檔案路徑。
 8. 針對執行 SQL Server 的目的電腦執行腳本。
 
+**使用內建重新執行**
+
+如果您使用內建重新執行，則不需要設定 Distributed Replay。 您可以透過命令列使用內建重新執行功能，但在過渡期間，您可以使用我們的 GUI，使用內建的重新執行來執行重新播放。
+
 ## <a name="analyze-traces-using-the-dea-command"></a>使用 DEA 命令來分析追蹤
 
 若要開始新的追蹤分析，請在命令提示字元中執行下列命令：
 
-`Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -s <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
+`Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -h <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
 
 **範例**
 
 `Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -s localhost -e`
+
+若要查看這些追蹤檔案的分析報表，您需要使用 GUI 來查看圖表和組織的計量。  不過，分析資料庫會寫入至指定的 SQL Server 實例，因此您也可以直接查詢產生的分析資料表。
+
+**其他選項**
+
+使用 DEA 命令分析追蹤時，您可以使用下列其他選項：
+
+| 選項| 描述 |  
+| --- | --- |
+| -a、--traceA | 具備實例之事件檔案的檔案路徑。 範例 C:\traces\Sql2008trace.trc。  如果有一批次檔，請選取第一個檔案，DEA 會自動檢查換用檔案。 如果檔案是在 blob 中，請提供您想要在本機儲存事件檔案的資料夾路徑。  範例 C:\traces\ |
+| -b，--traceB | 具備B 實例之事件檔案的檔案路徑。 範例 C:\traces\Sql2014trace.trc。 如果有一批次檔，請選取第一個檔案，DEA 會自動檢查換用檔案。 如果檔案是在 blob 中，請提供您想要在本機儲存事件檔案的資料夾路徑。  範例 C:\traces\ |
+| -r、--ReportName | 具備目前分析的名稱。 產生的分析報表將會以這個名稱來識別。 |
+| -t，--類型 | （預設值：0） Sql Server 的類型/版本（SqlServer = 0，AzureSQLDB = 1，Azure SQL 受控執行個體 = 2） |
+| -h, --host | 具備SQL Server 主機名稱和（或）實例名稱 |
+| -e、--encrypt | （預設值： True）SQL Server 實例的加密連接。 預設值為 true。 |
+| --信任 | （預設值： False）連接到 SQL Server 實例時，信任伺服器憑證。 預設值為 false。 |
+| -m、--authmode | （預設值：0）驗證模式（Windows = 0，Sql 驗證 = 1） |
+| -u、--username | 用來連接到 SQL Server 的使用者名稱 |
+| --p | 用來連接到 SQL Server 的密碼 |
+| --ab | （預設值： False）追蹤 A 的儲存位置是在 blob 中。 若已使用，也必須指定--阿布達比（追蹤 Blob Url） |
+| --bb | （預設值： False）追蹤 B 的儲存位置在 blob 中。 若使用，則必須同時指定--bbu （追蹤 B Blob Url） |
+| --阿布達比 | 具有 SAS 金鑰之實例的 Blob URL |
+| --bbu | 具有 SAS 金鑰的 B 實例 Blob URL |
 
 ## <a name="see-also"></a>另請參閱
 
