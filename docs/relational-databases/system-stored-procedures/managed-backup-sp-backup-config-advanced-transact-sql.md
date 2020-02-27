@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cbbbfbf442d36a5f78771e4d097888a86b441065
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0178d4df6a5941b8896e6ff530802fd4c6bc6909
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942141"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652947"
 ---
 # <a name="managed_backupsp_backup_config_advanced-transact-sql"></a>managed_backup. sp_backup_config_advanced （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "67942141"
   
 ## <a name="syntax"></a>語法  
   
-```vb  
+```sql  
 EXEC managed_backup.sp_backup_config_advanced   
     [@database_name = ] 'database_name'  
     ,[@encryption_algorithm = ] 'name of the encryption algorithm'  
@@ -86,7 +86,7 @@ EXEC managed_backup.sp_backup_config_advanced
 ## <a name="examples"></a>範例  
  下列範例會[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]針對 SQL Server 的實例，設定的 advanced configuration 選項。  
   
-```  
+```sql
 Use msdb;  
 Go  
    EXEC managed_backup.sp_backup_config_advanced  
