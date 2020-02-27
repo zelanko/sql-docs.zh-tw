@@ -570,9 +570,9 @@ go
 
 從 SQL Server 2017 CU2 開始，即使 Python 程式碼執行成功，也可能出現下列訊息：
 
-> 來自外部指令碼的 STDERR 訊息:
-> ~PYTHON_SERVICES \lib\site-packages\revoscalepy\utils\RxTelemetryLogger
-> SyntaxWarning: telemetry_state 會在全域宣告之前使用 ** ** **
+> 來自外部指令碼的 *STDERR* 訊息:
+>  *~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
+> *SyntaxWarning: telemetry_state* 會在全域宣告之前使用
 
 此問題已在 SQL Server 2017 累積更新 3 (CU3) 中修正。 
 

@@ -31,10 +31,10 @@ ms.locfileid: "75321865"
 -   如果是點對點複寫，則在預設情況下，當散發代理程式偵測到衝突時，就會發生失敗。 衝突錯誤會記錄到錯誤記錄檔中，但是不會將任何衝突資料記錄到衝突資料表中；因此，此資料表無法供人檢視。 如果允許散發代理程式繼續進行，會將衝突記錄在本機中偵測到衝突的每一個節點上。 如需詳細資訊，請參閱＜ [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)＞中的「處理衝突」。  
   
 -   如果是佇列更新訂閱，則會針對每一個衝突提供資料。 複寫衝突檢視器可以在衝突保留期限指定的時間內使用衝突資料 (預設為 14 天)。 若要設定衝突保留期限，您可以執行以下其中一項作業：  
-    
-    -  針對 [**sp_addpublication**](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 的 `@conflict_retention` 參數指定保留值。
-    
-    -   針對 [**sp_changepublication**](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 的 `@property` 參數指定一個 **'conflict_retention'** 值，並且為 `@value` 參數指定保留值。
+  
+    -   針對 [**sp_addpublication**](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 的 `@conflict_retention` 參數指定保留值。  
+  
+    -   針對 [**sp_changepublication**](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 的 `@property` 參數指定一個 **'conflict_retention'** 值，並且為 `@value` 參數指定保留值。  
   
 ### <a name="to-view-conflicts"></a>若要檢視衝突  
   
