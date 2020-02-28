@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c7515ae9b453a1d3a65b317f20ab4e13b8fb15e8
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 27fd489c9076be08a814f3ea0c27ad92f1f07fa7
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256761"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705853"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ EXEC master..xp_cmdshell 'dir *.exe'
 USE master;  
   
 EXEC xp_cmdshell 'copy c:\SQLbcks\AdvWorks.bck  
-    \\server2\backups\SQLbcks, NO_OUTPUT';  
+    \\server2\backups\SQLbcks', NO_OUTPUT;  
 GO  
 ```  
   
