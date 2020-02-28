@@ -22,16 +22,16 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 - rank
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 376438a45d6b104cbf4e66dbdf8e5542cf3fd2c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 4ee73a840be6ec29e3ac34c4c43fe0c8e87185f6
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74542056"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903897"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 針對資料庫中的每個分類專案，各傳回一個資料列。
 
