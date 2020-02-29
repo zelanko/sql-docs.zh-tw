@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 35f9cdfcc40d417a6aed19a3abe0e590061b2eb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e2bd7a4ce174d547d0cb8d0f9bcb89d23e6543db
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75256008"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180084"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys.databases dm_exec_query_statistics_xml （Transact-sql）
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 傳回進行中要求的查詢執行計畫。 使用此 DMV 來抓取具有暫時性統計資料的顯示計畫 XML。 
 
@@ -66,7 +66,8 @@ sys.dm_exec_query_statistics_xml(session_id)
 由於**xml**資料類型所允許的嵌套層級數目有限制，因此**dm_exec_query_statistics_xml**無法傳回符合或超過128個嵌套元素層級的查詢計劃。 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這會讓查詢計畫無法傳回並產生錯誤 6335。 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 和更新版本中， **query_plan**資料行傳回 Null。   
 
 ## <a name="permissions"></a>權限  
- 需要伺服器的 `VIEW SERVER STATE` 權限。  
+在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要伺服器的許可權。  
+在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]高階層級上， `VIEW DATABASE STATE`需要資料庫的許可權。 在[!INCLUDE[ssSDS](../../includes/sssds-md.md)] [標準] 和 [基本] 層上，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。
 
 ## <a name="examples"></a>範例  
   

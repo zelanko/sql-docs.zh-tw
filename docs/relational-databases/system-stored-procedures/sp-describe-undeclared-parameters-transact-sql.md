@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1205572235b141709cd463476182d9b405446188
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: efa15bffc3b00dfce2c1c5d11bc3705f2b6f677e
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72908332"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180123"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
 
   傳回結果集，其中包含[!INCLUDE[tsql](../../includes/tsql-md.md)]批次中未宣告之參數的中繼資料。 會考慮** \@tsql**批次中使用的每個參數，但不會在** \@params**中宣告。 傳回的結果集中，針對每一個這類參數包含一個資料列，內含該參數的推算類型資訊。 如果** \@tsql**輸入批次除了在** \@params**中宣告的參數以外，則會傳回空的結果集。  
   
@@ -40,7 +40,10 @@ sp_describe_undeclared_parameters
     [ @tsql = ] 'Transact-SQL_batch'   
     [ , [ @params = ] N'parameters' data type ] [, ...n]  
 ```  
-  
+
+> [!Note] 
+> 若要在 Azure Synapse Analytics （先前稱為 SQL DW）中使用此預存程式，資料庫的相容性層級必須大於10。 
+
 ## <a name="arguments"></a>引數  
 `[ \@tsql = ] 'Transact-SQL\_batch'`一或多[!INCLUDE[tsql](../../includes/tsql-md.md)]個語句。 *交易 SQL_batch*可以是**Nvarchar （**_n_**）** 或**Nvarchar （max）**。  
   

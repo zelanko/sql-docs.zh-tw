@@ -37,6 +37,8 @@
       href: ../advanced-analytics/install/sql-ml-component-commandline-install.md
     - name: 升級 Python 與 R
       href: ../advanced-analytics/install/upgrade-r-and-python.md
+    - name: Azure Data Studio 筆記本
+      href: ../advanced-analytics/install/sql-machine-learning-azure-data-studio.md
     - name: 設定 Python 用戶端
       href: ../advanced-analytics/python/setup-python-client-tools-sql.md
     - name: 設定 R 用戶端
