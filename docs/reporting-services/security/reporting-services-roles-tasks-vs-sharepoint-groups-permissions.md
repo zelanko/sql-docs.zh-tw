@@ -17,10 +17,10 @@ ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2200027e65978ea0af8cdcc100cda830e8a35881
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 02/27/2020
 ms.locfileid: "75240619"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 角色工作與SharePoint 群組權限

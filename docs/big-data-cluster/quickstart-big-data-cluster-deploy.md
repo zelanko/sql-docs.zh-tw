@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b2f96f79b81b79d2abfaadc40c37b864d20a93dc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: eea087ed3a4859e179f7bb0d1e77140bb8229a17
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831396"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608390"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>使用 Python 指令碼在 Azure Kubernetes Service (AKS) 上部署 SQL Server 巨量資料叢集
 
@@ -82,7 +82,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **使用者名稱** | 控制器使用者的使用者名稱 (預設：**admin**)。 |
 
    > [!IMPORTANT]
-   > 預設的 **Standard_L8s** 機器大小可能無法在每個 Azure 區域中使用。 如果您選擇不同的機器大小，請確定可在叢集中節點之間連結的磁碟總數大於或等於 24。 叢集中的每個持續性磁碟區宣告，都需要連結的磁碟。 目前，巨量資料叢集需要 24 個持續性磁碟區宣告。 例如，[Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) 機器大小支援 32 個連結的磁碟，因此您可以使用此機器大小的單一節點來評估巨量資料叢集。
+   > 預設的 **Standard_L8s** 機器大小可能無法在每個 Azure 區域中使用。 如果您選擇不同的機器大小，請確定可在叢集中節點之間連結的磁碟總數大於或等於 24。 叢集中的每個持續性磁碟區宣告，都需要連結的磁碟。 目前，巨量資料叢集需要 24 個持續性磁碟區宣告。 例如，[Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/lsv2-series) 機器大小支援 32 個連結的磁碟，因此您可以使用此機器大小的單一節點來評估巨量資料叢集。
 
    > [!NOTE]
    > 部署巨量資料叢集期間無法使用 SQL Server `sa` 帳戶。 新系統管理員登入會佈建於 SQL Server 的主要執行個體中，而其名稱即是為**使用者名稱**輸入所指定的名稱，密碼則會對應到**密碼**輸入。 佈建控制器管理使用者時，會使用相同的**使用者名稱**與**密碼**值。 閘道 (Knox) 僅支援**根使用者**，密碼與上述相同。

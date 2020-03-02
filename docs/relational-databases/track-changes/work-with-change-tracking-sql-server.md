@@ -22,12 +22,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11cfb403fb6bd038549f2273810bb937e625eaf7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: dbe4665a1f690a41883ca3339e2e70f251c52a1a
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74564778"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78177368"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>使用變更追蹤 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,6 +65,8 @@ ms.locfileid: "74564778"
  下列範例將說明如何取得初始同步處理版本和初始資料集。  
   
 ```sql  
+    declare @synchronization_version bigint;
+
     -- Obtain the current synchronization version. This will be used next time that changes are obtained.  
     SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
@@ -79,6 +81,8 @@ ms.locfileid: "74564778"
  若要取得資料表的變更資料列和這些變更的相關資訊，請使用 CHANGETABLE(CHANGES...)。例如，下列查詢會取得 `SalesLT.Product` 資料表的變更。  
   
 ```sql  
+declare @last_synchronization_version bigint;
+
 SELECT  
     CT.ProductID, CT.SYS_CHANGE_OPERATION,  
     CT.SYS_CHANGE_COLUMNS, CT.SYS_CHANGE_CONTEXT  

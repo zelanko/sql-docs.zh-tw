@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/25/2019
+ms.date: 02/24/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bff3ea5a3b1faeae92acf1c945486772406e964f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7e90aea4fc05a01f67527e33cac4ba90913405c7
+ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74542168"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77568091"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -204,7 +204,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 < table_index > ::=
 {  
     {  
-      INDEX index_name [ CLUSTERED | NONCLUSTERED ] [ UNIQUE ]
+      INDEX index_name  [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ]
          (column_name [ ASC | DESC ] [ ,... n ] )
     | INDEX index_name CLUSTERED COLUMNSTORE
     | INDEX index_name [ NONCLUSTERED ] COLUMNSTORE (column_name [ ,... n ] )

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68232821ac186aa63d113319373b8326dae987a4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ee31095ad1650ce17af6ddaa19237cd3ae73486d
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74165184"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903885"
 ---
 # <a name="soft-numa-sql-server"></a>軟體 NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "74165184"
   
  發生大量 I/O 的執行個體 A 現在有兩個 I/O 執行緒和一個延遲寫入器執行緒。 執行處理器密集作業的執行個體 B 只有一個 I/O 執行緒和一個延遲寫入器執行緒。 不同記憶體數量可以指派給執行個體，但與硬體 NUMA 不同，它們都是從相同作業系統記憶體區塊接收記憶體，而沒有記憶體對處理器的親和性。  
   
- 延遲寫入器執行緒會繫結至實體 NUMA 記憶體節點的 SQLOS 檢視。 因此，只要硬體呈現為數個實體 NUMA 節點，這就會是建立的延遲寫入器執行緒數目。 如需詳細資訊，請參閱 [How It Works:Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)(運作方式：軟體 NUMA、I/O 完成執行緒、LAZY WRITER 背景工作角色和記憶體節點)。  
+ 延遲寫入器執行緒會繫結至實體 NUMA 記憶體節點的 SQLOS 檢視。 因此，只要硬體呈現為數個實體 NUMA 節點，這就會是建立的延遲寫入器執行緒數目。 如需詳細資訊，請參閱 [How It Works:Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers/ba-p/316044)(運作方式：軟體 NUMA、I/O 完成執行緒、LAZY WRITER 背景工作角色和記憶體節點)。  
   
 > [!NOTE]
 > 當您升級 **執行個體時，不會複製** 軟體 NUMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登錄機碼。  
