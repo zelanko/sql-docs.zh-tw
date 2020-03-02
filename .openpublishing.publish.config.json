@@ -6,7 +6,10 @@
       "build_source_folder": "docs",
       "build_output_subfolder": "sql",
       "locale": "zh-tw",
-      "xref_query_tags": ["/uwp/api", "/dotnet"],
+      "xref_query_tags": [
+        "/uwp/api",
+        "/dotnet"
+      ],
       "monikers": [],
       "moniker_ranges": [
         "sql-server-2014",
@@ -108,6 +111,9 @@
   "targets": {},
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
-  "enable_branch_build_custom_validation": true,	
-  "enable_pull_request_custom_validation": true
+  "enable_branch_build_custom_validation": true,
+  "enable_pull_request_custom_validation": true,
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  }
 }
