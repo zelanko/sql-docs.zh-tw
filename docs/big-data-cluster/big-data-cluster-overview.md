@@ -9,12 +9,13 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+feedback_product_url: https://feedback.azure.com/forums/927307-sql-server-big-data-clusters/
+ms.openlocfilehash: 69281b0708b2603f232481a5661da111d1b0aae9
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77173640"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903763"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 

@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/18/2020
+ms.date: 02/26/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 681b0343ff6cdd6a2eb078013695d78e7dc458da
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.openlocfilehash: 461ce274af8d58574afa3e55e44e950b77cb6014
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77466159"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705883"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -297,7 +297,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
   ( LOCATION = 'wasbs://daily@logs.blob.core.windows.net/' ,
     CREDENTIAL = AzureStorageCredential ,
-    TYPE = HADOOP
+    TYPE = BLOB_STORAGE
   ) ;
 ```
 
@@ -722,7 +722,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
   ( LOCATION = 'wasbs://daily@logs.blob.core.windows.net/' ,
     CREDENTIAL = AzureStorageCredential ,
-    TYPE = HADOOP
+    TYPE = BLOB_STORAGE
   ) ;
 ```
 
@@ -1049,7 +1049,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
   ( LOCATION = 'wasbs://daily@logs.blob.core.windows.net/'
     CREDENTIAL = AzureStorageCredential
-    TYPE = HADOOP
+    TYPE = BLOB_STORAGE
   ) ;
 ```
 

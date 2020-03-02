@@ -1,6 +1,6 @@
 ---
 title: Oracle 連線類型 (報表產生器與 Power BI 報表伺服器) |Microsoft Docs
-ms.date: 01/16/2020
+ms.date: 02/26/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2e9ee78c6a033443b960ba972b74be2a1e6aebd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 216ab9a4d5dcfe18fe6346eadeec8778415cdeb4
+ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77081742"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634837"
 ---
 # <a name="oracle-connection-type-report-builder--power-bi-report-server--microsoft-docs"></a>Oracle 連線類型 ((報表產生器與 Power BI 報表伺服器) |Microsoft Docs)
 
@@ -93,7 +93,7 @@ Data Source="Oracle"; Unicode="True"
   
  如需詳細資訊，請參閱下列文章：  
   
--   [如何使用 Reporting Services 設定及存取 Oracle 資料來源 (機器翻譯)](https://support.microsoft.com/kb/834305)  
+-   [如何使用 Reporting Services 設定及存取 Oracle 資料來源 (機器翻譯)](https://docs.microsoft.com/archive/blogs/dataaccesstechnologies/configure-oracle-data-source-for-sql-server-reporting-services-ssdt-and-report-server)  
 -   [如何新增 NETWORK SERVICE 安全性主體的權限 (機器翻譯)](https://support.microsoft.com/kb/870668)  
   
 ### <a name="alternate-data-extensions"></a>替代資料延伸模組 
