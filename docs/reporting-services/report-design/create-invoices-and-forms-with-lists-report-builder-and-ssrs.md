@@ -1,5 +1,5 @@
 ---
-title: 建立發票和表單的清單 (報表產生器及 SSRS) | Microsoft Docs
+title: 建立發票和表單的清單 (報表產生器) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b8ec0531056ea1a4ae3ff1850baed21dfb61df8e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ce4867fdbaff2ff83f2c7e36d450e6c3b0f07471
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581503"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078586"
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>建立發票和表單的清單 (報表產生器及 SSRS)
   清單資料區域會隨 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表資料集中的每一個群組或資料列重複。 清單可以用於建立自由形式的報表或表單 (如發票)，也可以與其他資料區域一起使用。 您可以定義包含任何數目之報表項目的清單。 清單可以是巢狀 WIT  

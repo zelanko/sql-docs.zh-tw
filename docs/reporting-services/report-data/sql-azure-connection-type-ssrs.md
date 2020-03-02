@@ -1,5 +1,5 @@
 ---
-title: SQL Azure 連線類型 (SSRS) | Microsoft Docs
+title: SQL Azure 連線類型 | Microsoft Docs
 description: SQL Azure 連線資料延伸模組支援多值參數、伺服器彙總，以及與連接字串分開管理的認證。
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c9ffc6865a6dd7ccc9665eb85da8142bc918b4af
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0d81923ba623765e8929cf0c1cb4da2e73ac6e8c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75244574"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081756"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 連接類型 (SSRS)
 
@@ -57,7 +57,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 - 不需要認證。 若要使用這個選項，您先前必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
-如需詳細資訊，請參閱[建立資料連接字串 - 報表產生器及 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 和[指定報表資料來源的認證及連線資訊](specify-credential-and-connection-information-for-report-data-sources.md)。  
+如需詳細資訊，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[指定報表資料來源的認證及連接資訊](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
 ## <a name="Query"></a> 查詢
 

@@ -1,5 +1,5 @@
 ---
-title: 圖表類型 (報表產生器及 SSRS) | Microsoft Docs
+title: 圖表類型 (報表產生器) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9c041a300e9d64e5446f43a68f675f2290dd8963
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b2d1d58a5a37078021e8ef6c30ed387fe1f2c406
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581650"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081733"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>圖表類型 (報表產生器及 SSRS)
 

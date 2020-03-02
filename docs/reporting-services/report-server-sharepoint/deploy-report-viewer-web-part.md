@@ -7,16 +7,16 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3dc42904701ce69e762a203e09cb320cc797c15c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 232338818620069fc31bb57bc29cf07901d0f712
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579983"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256679"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>將 SQL Server Reporting Services 報表檢視器網頁組件部署至 SharePoint 頁面
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)]  [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 報表檢視器網頁組件是自訂的網頁組件，可用於檢視 SharePoint 網站中的 SQL Server Reporting Services (原生模式) 報表。 您可以在使用網頁組件來檢視、巡覽、列印並匯出報表伺服器的報表。 報表檢視器網頁組件與 SQL Server Reporting Services 報表伺服器或 Power BI 報表伺服器所處理的報表定義 (.rdl) 檔建立關聯。 此報表檢視器網頁組件不能搭配 Power BI 報表伺服器中裝載的 Power BI 報表使用。
 
@@ -170,6 +170,6 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
 ## <a name="next-steps"></a>後續步驟
 
-部署並啟動報表檢視器網頁組件後，您可以將網頁組件新增至 SharePoint 網頁。 如需詳細資訊，請參閱[將報表檢視器網頁組件新增到 SharePoint 頁面](add-report-viewer-web-part-to-page.md)。
+部署並啟動報表檢視器網頁組件後，您就可以將網頁組件新增至 SharePoint 網頁。 如需詳細資訊，請參閱[將報表檢視器網頁組件新增到 SharePoint 頁面](add-report-viewer-web-part-to-page.md)。
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

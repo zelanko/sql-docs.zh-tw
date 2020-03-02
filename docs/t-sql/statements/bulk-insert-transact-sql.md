@@ -1,7 +1,7 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/25/2019
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d6802e2f93c4f171797198eda2132e8b0353621f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 999ae75343a71efafd7348065b2a1d3533b4bd10
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910131"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558365"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -59,7 +59,7 @@ BULK INSERT
    [ [ , ] ERRORFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] FIRSTROW = first_row ]
    [ [ , ] FIRE_TRIGGERS ]
-   [ [ , ] FORMATFILE_DATASOURCE = 'data_source_name' ]
+   [ [ , ] FORMATFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] KEEPIDENTITY ]
    [ [ , ] KEEPNULLS ]
    [ [ , ] KILOBYTES_PER_BATCH = kilobytes_per_batch ]
@@ -166,7 +166,7 @@ FIRE_TRIGGERS 指定在大量匯入作業期間，執行目的地資料表上所
 
 如果未指定 FIRE_TRIGGERS，就不會執行任何插入觸發程序。
 
-FORMATFILE_DATASOURCE **=** 'data_source_name' **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1。
+FORMATFILE_DATA_SOURCE **=** 'data_source_name' **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1。
 這是具名的外部資料來源，指向格式檔案的 Azure Blob 儲存體位置，該檔案將定義所匯入資料的結構描述。 必須使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中新增的 `TYPE = BLOB_STORAGE` 選項來建立外部資料來源。 如需詳細資訊，請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
 
 KEEPIDENTITY 指定識別欄位所要使用匯入資料檔案中的一或多個識別值。 如果未指定 KEEPIDENTITY，就會驗證這個資料行的識別值但不會匯入它，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會根據建立資料表期間所指定的種子值和遞增值來自動指派唯一值。 如果資料檔案中沒有資料表或檢視表中之識別欄位的值，請利用格式檔來指定，在匯入資料時略過資料表或檢視表中的識別欄位；[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動指派資料行的唯一值。 如需詳細資訊，請參閱 [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)。
@@ -338,7 +338,9 @@ FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
 
 ### <a name="permissions"></a>權限
 
-需要 INSERT 和 ADMINISTER BULK OPERATIONS 權限。 在 Azure SQL Database 中，需要 INSERT 和 ADMINISTER DATABASE BULK OPERATIONS 權限。 另外，如果以下一個或多個狀況成立，則需要 ALTER TABLE 權限：
+需要 INSERT 和 ADMINISTER BULK OPERATIONS 權限。 在 Azure SQL Database 中，需要 INSERT 和 ADMINISTER DATABASE BULK OPERATIONS 權限。 Linux 上的 SQL Server 不支援 ADMINISTER BULK OPERATIONS 權限或 bulkadmin 角色。 只有 `sysadmin` 可以針對 Linux 上的 SQL Server 執行大量插入。 
+
+另外，如果以下一個或多個狀況成立，則需要 ALTER TABLE 權限：
 
 - 有條件約束存在而且未指定 CHECK_CONSTRAINTS 選項。
 

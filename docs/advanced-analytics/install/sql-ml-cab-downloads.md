@@ -3,18 +3,18 @@ title: 下載離線安裝的更新
 description: 下載適用於 SQL Server 機器學習服務的 Python 與 R CAB 檔案。 這些 CAB 檔案包含機器學習服務 (Python 與 R) 功能的更新，當您在無法存取網際網路的伺服器上安裝 SQL Server 時就會使用這些檔案。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/07/2020
+ms.date: 01/13/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b2b84349e60bf89a066fb2157a9c521d7be8ecbd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7b50e11995cc1f07b848a460ecd096f97d7b7f9b
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75776520"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256675"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>適用於 SQL Server 機器學習服務之累積更新的 CAB 下載
 
@@ -24,7 +24,7 @@ ms.locfileid: "75776520"
 下載適用於 SQL Server 機器學習服務的 Python 與 R CAB 檔案。 這些 CAB 檔案包含機器學習服務 (Python 與 R) 功能的更新，當您在無法存取網際網路的伺服器上安裝 SQL Server 時就會使用這些檔案。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 下載適用於 SQL Server 2016 R Services 的 Python 與 R CAB 檔案。 這些 CAB 檔案包含 R Services 功能的更新，當您在無法存取網際網路的伺服器上安裝 SQL Server 時就會使用這些檔案。
 ::: moniker-end
 
@@ -36,7 +36,7 @@ ms.locfileid: "75776520"
 從基準安裝開始。 在 SQL Server 機器學習服務上，初始版本是基準安裝。 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 從基準安裝開始。  在 SQL Server 2016 R Services 上，您可以從初始版本、SP1 或 SP2 開始。 
 ::: moniker-end
 
@@ -50,7 +50,12 @@ CAB 檔案會以反向時間順序列出。 當您下載 CAB 檔並將它們傳�
 
 |版本  |元件 | 下載連結  | 解決的問題 | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)** |  |  |  |
+|**[SQL Server 2017 CU19](https://support.microsoft.com/en-us/help/4535007/)** |  |  |  |
+| | Microsoft R Open | [SRO_3.3.3.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106367&clcid=1033) | 修正 Bug：`sp_execute_external_script` 執行 R 指令碼會顯示警告訊息 |
+| | R 伺服器| [SRS_9.2.0.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106460&clcid=1033) | 從舊版到現在都沒有變更。 |
+| | Microsoft Python Open | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033) | 從舊版到現在都沒有變更。 |
+| | Python Server | [SPS_9.2.0.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106459&clcid=1033) | 修正 Bug：以 OutputDataSet 格式將 Varbinary 或 binary 資料類型傳回 SQL Server 時，`sp_execute_external_script` 執行 python 指令碼有時會遺失資料。 |
+|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)-[CU17](https://support.microsoft.com/en-us/help/4515579/)-[CU18](https://support.microsoft.com/en-us/help/4527377/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| 套件內的二進位檔案現在已簽署。 |
 | | R 伺服器      |[SRS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2069739&clcid=1033)| 套件內的二進位檔案現在已簽署。 |
 | | Microsoft Python Open     | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033)| 套件內的二進位檔案現在已簽署。 |

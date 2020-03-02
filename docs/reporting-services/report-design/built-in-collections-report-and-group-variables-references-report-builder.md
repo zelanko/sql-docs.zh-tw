@@ -1,5 +1,5 @@
 ---
-title: 報表和群組變數集合參考 (報表產生器及 SSRS) | Microsoft Docs
+title: 報表和群組變數集合參考 (報表產生器) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 97123f3e9802ddbdf452f66e83a1b3c00f99764d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 77373c2a1a160c7621f54f3701564eebe1312618
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581774"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081447"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>內建集合 - 報表和群組變數參考 (報表產生器)
   當您要進行的複雜計算是在報表的運算式中使用一次以上時，建議您建立一個變數。 您可以建立報表變數或群組變數。 變數名稱在報表中必須是唯一的。  

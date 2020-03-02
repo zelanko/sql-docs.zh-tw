@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10e46d39d312f47fa327d79523a2613ef4b80634
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251204"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173612"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>針對 SQL Server 巨量資料叢集部署設定 Azure Kubernetes Service
 
@@ -70,7 +70,13 @@ Azure 資源群組是部署及管理 Azure 資源所在的邏輯群組。 下列
    az account set --subscription <subscription id>
    ```
 
-1. 使用 **az group create** 命令來建立資源群組。 下列範例會在 `sqlbdcgroup` 位置建立名為 `westus2` 的資源群組。
+1. 使用以下命令，找出您想要部署叢集和資源的 Azure 區域：
+
+   ```azurecli
+   az account list-locations -o table
+   ```
+
+1. 使用 **az group create** 命令來建立資源群組。 下列範例會在 `westus2` 位置建立名為 `sqlbdcgroup` 的資源群組。
 
    ```azurecli
    az group create --name sqlbdcgroup --location westus2
@@ -132,7 +138,7 @@ Azure 資源群組是部署及管理 Azure 資源所在的邏輯群組。 下列
    --kubernetes-version <version number>
    ```
 
-   您可以透過變更 `--node-count <n>` 來增加或減少 Kubernetes 代理程式節點的數目，其中 `<n>` 是您想要使用的代理程式節點數目。 這並不包含主要 Kubernetes 節點，其是由 AKS 在幕後管理。 基於評估目的，上述範例只會使用單一節點。
+   您可以透過變更 `--node-count <n>` 來增加或減少 Kubernetes 代理程式節點的數目，其中 `<n>` 是您想要使用的代理程式節點數目。 這並不包含主要 Kubernetes 節點，其是由 AKS 在幕後管理。 基於評估目的，上述範例只會使用單一節點。 您也可以變更 `--node-vm-size`，以選取符合您工作負載需求的適當虛擬機器大小。 使用 `az vm list-sizes --location westus2 -o table` 命令列出您區域中可用的虛擬機器大小。
 
    在數分鐘之後，該命令會完成並傳回關於節點的 JSON 格式資料。
 
@@ -161,6 +167,7 @@ Azure 資源群組是部署及管理 Azure 資源所在的邏輯群組。 下列
 
 - 確定您已安裝[最新版本的 Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)。
 - 使用不同的資源群組和叢集名稱來嘗試相同的步驟。
+- 請參閱詳細的 [AKS 疑難排解文件](https://docs.microsoft.com/azure/aks/troubleshooting)。
 
 ## <a name="next-steps"></a>後續步驟
 

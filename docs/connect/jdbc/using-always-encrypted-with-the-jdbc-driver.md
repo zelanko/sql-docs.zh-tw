@@ -1,7 +1,7 @@
 ---
 title: 搭配使用 Always Encrypted 與 JDBC 驅動程式 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/05/2020
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ae119c85877768f7a3356a139c5aaf3f70dc6f8e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 41c91f87a62e9f4d912c7e8bbdebe86574ceebe6
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75681709"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004608"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>搭配使用 Always Encrypted 與 JDBC 驅動程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -147,7 +147,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> 雖然此文章中的其他金鑰儲存區提供者皆可在驅動程式所支援的所有平台上使用，JDBC 驅動程式的 SQLServerColumnEncryptionCertificateStoreProvider 實作僅適用於 Windows 作業系統。 其具有針對 sqljdbc_auth.dll 的相依性，該檔案於驅動程式套件中提供。 若要使用此提供者，請將 sqljdbc_auth.dll 檔案複製到安裝 JDBC 驅動程式之電腦上 Windows 系統路徑中的目錄。 或者，您也可以設定 java.library.path 系統屬性來指定 sqljdbc_auth.dll 的目錄。 如果您執行的是 32 位元的 Java Virtual Machine (JVM)，即使作業系統為 x64 版，也請使用 x86 資料夾中的 sqljdbc_auth.dll 檔案。 如果您是在 x64 處理器上執行 64 位元的 JVM，請使用 x64 資料夾中的 sqljdbc_auth.dll 檔案。 例如，如果您要使用 32 位元 JVM，且 JDBC 驅動程式安裝在預設目錄中，您就可以在 Java 應用程式啟動時，使用下列虛擬機器 (VM) 引數來指定 DLL 的位置：`-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> 雖然此文章中的其他金鑰儲存區提供者皆可在驅動程式所支援的所有平台上使用，JDBC 驅動程式的 SQLServerColumnEncryptionCertificateStoreProvider 實作僅適用於 Windows 作業系統。 其具有針對 mssql-jdbc_auth-\<版本>-\<架構>.dll 的相依性，該檔案於驅動程式套件中提供。 若要使用此提供者，請將 mssql-jdbc_auth-\<版本>-\<>.dll 檔案複製到 JDBC 驅動程式安裝電腦上 Windows 系統路徑中的目錄。 或者，您也可以設定 java.library.path 系統屬性來指定 mssql-jdbc_auth-\<版本>-\<架構>.dll 的目錄。 如果您正在執行 32 位元的 Java 虛擬機器 (JVM)，則即使作業系統為 x64 版，也請使用 x86 資料夾中的 mssql-jdbc_auth-\<版本>-x86.dll 檔案。 如果您是在 x64 處理器上執行 64 位元的 JVM，請使用 x64 資料夾中的 mssql-jdbc_auth-\<版本>-x64.dll 檔案。 例如，如果您要使用 32 位元 JVM，且 JDBC 驅動程式安裝在預設目錄中，您就可以在 Java 應用程式啟動時，使用下列虛擬機器 (VM) 引數來指定 DLL 的位置：`-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>使用 Java Key Store 提供者
 JDBC 驅動程式隨附於 Java 金鑰存放區的內建金鑰存放區提供者實作。 如果 **keyStoreAuthentication** 連接字串屬性存在於連接字串中，且已設定為 "JavaKeyStorePassword"，驅動程式會自動具現化並註冊 Java Key Store 的提供者。 Java Key Store 提供者的名稱是 MSSQL_JAVA_KEYSTORE。 此名稱也可使用 SQLServerColumnEncryptionJavaKeyStoreProvider.getName() API 來查詢。 
@@ -458,7 +458,7 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 - 針對插入至資料庫資料行的值 (包括加密的資料行)，會使用 SQLServerPreparedStatement 傳遞為參數。 雖然將值傳送到未加密的資料行時，使用參數是選擇性項目 (還是強烈建議使用，因有利於防止 SQL 插入式攻擊)，但它對以加密資料行為目標的值卻是必要項目。 如果將插入加密資料行中的值當作內嵌在查詢陳述式中的常值傳遞，則查詢會失敗，因為驅動程式無法判斷目標加密資料行中的值，且其不會將那些值加密。 結果，伺服器會因與加密資料行不相容而拒絕它們。
 - 程式列印的所有值都是純文字格式，Microsoft JDBC Driver for SQL Server 會以清晰簡明的方式解密從已加密資料行擷取的資料。
 - 如果您正在使用 WHERE 子句進行查閱，用於 WHERE 子句中的值需要以參數形式傳遞，來使驅動程式能先透明地加以加密，再將其傳送至資料庫。 在下列範例中，會以參數形式傳遞 SSN，但會以常值形式傳遞 LastName，因為 LastName 不會加密。
-- 用於以 SSN 資料行為目標之參數的 setter 方法為 setString()，其會對應至 char/varchar SQL Server 資料類型。 如果用於此參數的 setter 方法為對應至 nchar/nvarchar 的 setNString()，則查詢會失敗；因為 Always Encrypted 不支援從加密的 nchar/nvarchar 值轉換成加密的 char/varchar 值。
+- 用於以 SSN 資料行為目標之參數的 setter 方法為 setString()，其會對應至 char/varchar SQL Server 資料類型。 針對此參數，若其使用的 setter 方法為對應至 nchar/nvarchar 的 setNString()，則查詢會失敗；因為 Always Encrypted 不支援從已加密 nchar/nvarchar 值轉換成加密的 char/varchar 值。
 
 ```java
 // <Insert keystore-specific code here>

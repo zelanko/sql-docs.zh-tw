@@ -1,5 +1,5 @@
 ---
-title: Previous 函式 (報表產生器及 SSRS) | Microsoft Docs
+title: Previous 函式 (報表產生器) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3a54bd68b1bac51581329224aa7e9405cee8e93
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 882a098aaabcd4610fc6623e9741f7eeaa4f53ec
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577201"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081176"
 ---
 # <a name="report-builder-functions---previous-function"></a>報表產生器函式 - Previous 函式
   傳回某個項目在指定之範圍內上一個執行個體的值或指定的彙總值。  

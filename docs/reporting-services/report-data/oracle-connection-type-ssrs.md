@@ -1,5 +1,5 @@
 ---
-title: Oracle 連線類型 (SSRS、Power BI 報表伺服器和報表產生器) |Microsoft Docs
+title: Oracle 連線類型 (報表產生器與 Power BI 報表伺服器) |Microsoft Docs
 ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f6918d240a6da7f961899d1a4cb71996bbec9ec6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c2e9ee78c6a033443b960ba972b74be2a1e6aebd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76259396"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081742"
 ---
-# <a name="oracle-connection-type-ssrs-power-bi-report-server-and-report-builder"></a>Oracle 連線類型 (SSRS、Power BI 報表伺服器和報表產生器)
+# <a name="oracle-connection-type-report-builder--power-bi-report-server--microsoft-docs"></a>Oracle 連線類型 ((報表產生器與 Power BI 報表伺服器) |Microsoft Docs)
 
 若要在報表中使用來自 Oracle 資料庫的資料，您必須具有以 Oracle 類型的報表資料來源為基礎的資料集。 此內建資料來源類型會直接使用 Oracle 資料提供者，並且需要 Oracle 用戶端軟體元件。 本文說明如何下載及安裝 Reporting Services、Power BI 報表伺服器和報表產生器的驅動程式。
 

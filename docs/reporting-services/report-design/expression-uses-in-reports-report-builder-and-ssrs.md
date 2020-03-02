@@ -1,5 +1,5 @@
 ---
-title: 報表中的運算式用法 (報表產生器及 SSRS) | Microsoft Docs
+title: 報表中的運算式用法 (報表產生器) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd0b847ba4ebaa2d669927abe0665b18a2d517bc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e781df6f5ccbdbb427de7e8b68c9dbc06522be71
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579165"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080275"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>報表中的運算式用法 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，整個報表定義中都會使用運算式來指定或計算參數、查詢、篩選、報表項目屬性、群組和排序定義、文字方塊屬性、書籤、文件引導模式、動態頁首和頁尾內容、影像及動態資料來源定義的值。 本主題提供的範例將說明您可以在許多地方使用運算式來將報表的內容或外觀差異化。 這份清單並不是完整的清單。 您可以在顯示運算式 (**fx**) 按鈕的對話方塊中或在顯示 **\<運算式...>** 的下拉式清單中，為任何屬性設定運算式。  

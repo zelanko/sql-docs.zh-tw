@@ -1,5 +1,5 @@
 ---
-title: 設定報表和共用資料集處理的逾時值 (SSRS) | Microsoft Docs
+title: 設定報表和共用資料集處理的逾時值 | Microsoft Docs
 description: 在 Reporting Services 中，您可以指定逾時值，以便設定系統資源的使用限制。
 ms.date: 01/16/2020
 ms.prod: reporting-services
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1bc1f2f27fa46f8262d3c0ca99549d23f2381ff0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5996c21b09a722a3cbeac41917bf83ca132feed2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76259408"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082329"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>設定報表和共用資料集處理的逾時值 (SSRS)
 您可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中指定逾時值，以便設定系統資源的使用限制。 報表伺服器支援兩種逾時值：  

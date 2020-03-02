@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 31e5d851b6c049bdd7fd81a4c90be1de7ceff77f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5d6edf4115156bda58c44615e99ffcb19b87913f
+ms.sourcegitcommit: 38c61c7e170b57dddaae5be72239a171afd293b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76115425"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77259216"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>部署高可用性 SQL Server 巨量資料叢集
 
@@ -197,7 +197,7 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 巨量資料叢集中 SQL Server 主要的可用性群組具有已知問題和限制：
 
-- 因 `CREATE DATABASE` 以外的工作流程 (例如 `RESTORE DATABSE`、`CREATE DATABASE FROM SNAPSHOT`) 所建立資料庫不會自動新增至可用性群組。 請[連接到執行個體](#instance-connect)，然後手動將資料庫新增至可用性群組。
+- 因 `CREATE DATABASE` 以外的工作流程 (例如 `RESTORE DATABASE` 和 `CREATE DATABASE FROM SNAPSHOT`) 所建立的資料庫，不會自動新增至可用性群組。 請[連接到執行個體](#instance-connect)，然後手動將資料庫新增至可用性群組。
 - 使用 `sp_configure` 執行伺服器組態設定等特定作業會需要連接到 SQL Server 執行個體 `master` 資料庫，而不是可用性群組 `master`。 您無法使用對應的主要端點。 請遵循[指示](#instance-connect)來公開端點並連接到 SQL Server 執行個體，然後執行 `sp_configure`。 當您手動公開端點來連接到 SQL Server 執行個體 `master` 資料庫時，只能使用 SQL 驗證。
 - 部署巨量資料叢集之後，必須建立高可用性設定。 您無法在可用性群組部署後啟用高可用性設定。
 - 雖然可用性群組中包含 msdb 資料庫，且 SQL Agent 工作會複寫到整個群組，但不會每個排程都觸發作業。 解決方法是[連線到每個 SQL Server 執行個體](#instance-connect)，並在執行個體 msdb 中建立作業。

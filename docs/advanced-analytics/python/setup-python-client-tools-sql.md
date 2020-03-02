@@ -306,4 +306,4 @@ display.Image(data=image)
 您已經具有工具和針對 SQL Server 的運作連線，現在請使用 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)完成 Python 快速入門來擴展您的技能。
 
 > [!div class="nextstepaction"]
-> [Quickstart: Create and run simple Python scripts with SQL Server Machine Learning Services](../tutorials/quickstart-python-create-script.md)
+> [快速入門：使用 SQL Server 機器學習服務，建立及執行簡單的 Python 指令碼](../tutorials/quickstart-python-create-script.md)

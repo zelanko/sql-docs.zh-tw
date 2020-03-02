@@ -1,5 +1,5 @@
 ---
-title: 什麼是 SQL Server Reporting Services (SSRS) | Microsoft Docs
+title: 什麼是 SQL Server Reporting Services | Microsoft Docs
 description: 深入了解適用於內部部署行動和分頁 Reporting Services 報表的工具與服務。
 ms.date: 05/06/2019
 ms.prod: reporting-services
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 26fa81278afd686d25192fdd49bbc3f2119a5762
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2654fba3904788e1eefa2aaa17d4defbad4039a8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65571571"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082632"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>什麼是 SQL Server Reporting Services (SSRS)？
 

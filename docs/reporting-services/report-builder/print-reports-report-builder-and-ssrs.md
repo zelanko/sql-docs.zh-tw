@@ -1,5 +1,5 @@
 ---
-title: 列印報表 (SSRS) | Microsoft Docs
+title: 列印報表 | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 45b38940afcd0fe73ad2c79abc59db9dc7b549b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4dd9fc438ba1ec30a85119ceef6d5e1503a5ea1f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581160"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082489"
 ---
 # <a name="print-reports---reporting-services-ssrs"></a>列印報表 - Reporting Services (SSRS)
   將報表儲存至報表伺服器之後，您就可以從入口網站或任何用來檢視所匯出報表的應用程式，檢視及列印報表。 儲存報表之前，您可以在預覽報表時將它列印出來。  
@@ -44,7 +44,7 @@ ms.locfileid: "65581160"
  描述如何列印已匯出至另一個應用程式的報表。  
   
  [列印報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
- 提供逐步指示，說明如何列印報表、如何控制頁面邊界，以及如何針對手動分頁轉譯器 (PDF、影像或列印) 所轉譯的報表指定紙張大小。  
+ 提供逐步指示，說明如何列印報表、如何控制頁面邊界，以及如何指定強制分頁轉譯器轉譯的報表紙張大小：PDF、影像或列印。  
   
 ## <a name="see-also"></a>另請參閱  
  [匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   

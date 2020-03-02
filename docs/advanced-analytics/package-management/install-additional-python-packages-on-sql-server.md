@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d759921ac82f34156856b587161f44c64269ea0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 83635ac9cb5b35aba25ace6947bc1281d468cb65
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76929894"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558318"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>使用 sqlmlutils 安裝 Python 套件
 
@@ -37,7 +37,7 @@ ms.locfileid: "76929894"
 
 ### <a name="other-considerations"></a>其他考量
 
-+ 套件必須符合 Python 3.5 規範，並可在 Windows 上執行。
++ 套件必須與您擁有的 Python 版本相容。 如需每個 SQL Server 版本所隨附 Python 版本的詳細資訊，請參閱[什麼是 SQL Server 機器學習服務 (Python 與 R) 中的 Python 與 R 版本](../what-is-sql-server-machine-learning.md#versions)
 
 + Python 套件程式庫位於 SQL Server 執行個體的 Program Files 資料夾中，而且根據預設，在此資料夾中安裝需要系統管理員權限。 如需詳細資訊，請參閱[套件程式庫位置](../package-management/python-package-information.md#default-python-library-location)。
 
@@ -64,7 +64,7 @@ ms.locfileid: "76929894"
 
    ```console
    pip install "pymssql<3.0"
-   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.7.2.zip
+   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-0.7.2.zip
    ```
 
 ## <a name="add-a-python-package-on-sql-server"></a>在 SQL Server 上新增 Python 套件
@@ -77,11 +77,11 @@ ms.locfileid: "76929894"
 
 1. 在用戶端電腦上，開啟 **Python** 或 Python 環境。
 
-1. 使用下列命令來安裝 **text-tools** 套件。 以您自己的 SQL Server 資料庫連線資訊取代 (如果您未使用 Windows 驗證，請新增 `uid` 和 `pwd` 參數)。
+1. 使用下列命令來安裝 **text-tools** 套件。 替換為您自己的 SQL Server 資料庫連線資訊。
 
    ```python
    import sqlmlutils
-   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
+   connection = sqlmlutils.ConnectionInfo(server="server", database="database", uid="username", pwd="password")
    sqlmlutils.SQLPackageManager(connection).install("text-tools")
    ```
 

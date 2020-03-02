@@ -1,7 +1,7 @@
 ---
 title: JDBC Driver 的版本資訊 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,18 +10,70 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 04a179492b151e664dfe31f4fe4e51c5440fcef5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6d55a856096a830172ced69f9fb28f66c11733e7
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69027793"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004541"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver 的版本資訊
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 本文會列出 _Microsoft JDBC Driver for SQL Server_ 的版本。 針對每個發行版本，會將變更命名並加以描述。
+
+## <a name="820"></a>8.2.0
+
+### <a name="compliance"></a>法規遵循
+
+2020 年 1 月 29 日
+
+| 合規性變更 | 詳細資料 |
+| :---------------- | :------ |
+| 下載 JDBC Driver 8.2 的最新更新。 | &bull; &nbsp; [Microsoft 下載中心](https://go.microsoft.com/fwlink/?linkid=2116870)<br/>&bull; &nbsp; [GitHub，8.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.2.0)<br/>&bull; &nbsp; [Maven 中心](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| 完全符合 JDBC API 規格 4.2 的規範。 | 8\.2 套件中的 jar 會根據 Java 版本相容性命名。<br/><br/>例如，來自 8.2 套件的 mssql-jdbc-8.2.0.jre11.jar 檔案應該與 Java 11 搭配使用。 |
+| 與 Java 開發套件 (JDK) 13.0、11.0 和 1.8 版相容。 | 除了 JDK 11.0 和 1.8 之外，Microsoft JDBC Driver 8.2 for SQL Server 現在還與 Java 開發套件 (JDK) 13.0 版相容。 |
+| &nbsp; | &nbsp; |
+
+### <a name="support-for-jdk-13"></a>JDK 13 支援
+
+除了 JDK 11.0 和 1.8 之外，Microsoft JDBC Driver 8.2.0 for SQL Server 現在還與 Java 開發套件 (JDK) 13.0 版相容。
+
+### <a name="always-encrypted-with-secure-enclaves"></a>具有安全記憶體保護區的 Always Encrypted
+
+| Always Encrypted 變更 | 詳細資料 |
+| :--------- | :------ |
+| Microsoft JDBC Driver 8.2.0 for SQL Server 現在支援具有安全記憶體保護區的 Always Encrypted。 在這裡可以找到詳細資料：具有安全記憶體保護區的 Always Encrypted。 |
+| 更多詳細資料和範例程式碼。 | 請參閱[具有安全記憶體保護區的 Always Encrypted](../../connect/jdbc/always-encrypted-with-secure-enclaves.md)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="performance-improvement-when-retrieving-temporal-datatypes-from-sql-server"></a>從 SQL Server 擷取時態性資料類型時的效能改善
+
+| 時態性資料類型變更 | 詳細資料 |
+| :---------- | :------ |
+| Microsoft JDBC Driver 8.2.0 for SQL Server 已改善從 SQL Server 擷取時態性資料類型時的效能。 | 這項變更會盡可能避免使用 java.util.Calendar，藉以排除不必要的時態性資料類型轉換。 |
+| 下列為受此效能改善影響的時態性資料類型清單；格式為 SQL Server 資料類型，後面接著個別的 Java 對應。 | date (java.sql.Date)、datetime (java.sql.Timestamp)、datetime2 (java.sql.Timestamp)、smalldatetime (java.sql.Timestamp) 和 time (java.sql.Time)。 |
+| &nbsp; | &nbsp; |
+
+> [!NOTE]
+> 由於 java.util.Calendar 與 java.time.LocalDateTime API 之間處理時區方式的差異，因此使用者所提供 java.util.Calendar 物件與其建立關聯的時態性資料類型或 microsoft.sql.DateTimeOffset 資料類型，都無法從這項改善中受益。
+
+### <a name="deployment-of-mssql-jdbc_auth-version-archdll-previously-sqljdbc_authdll-to-maven-repository"></a>將 mssql-jdbc_auth-\<版本>-\<架構>.dll (之前為 sqljdbc_auth.dll) 部署至 Maven 存放庫
+
+| sqljdbc_auth.dll 變更 | 詳細資料 |
+| :------------------- | :------ |
+| 從 Microsoft JDBC Driver 8.2.0 for SQL Server 開始，驅動程式會依賴 mssql-jdbc_auth-\<版本>-\<架構>.dll (而不是 sqljdbc_auth.dll) 來使用 Azure Active Directory 驗證功能。 | &nbsp; |
+| DLL 也已上傳至 Maven 存放庫，以方便存取。 | 請參閱[本頁面](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>已知問題
+
+| 已知問題 | 詳細資料 |
+| :----------- | :------ |
+| 搭配使用具有安全記憶體保護區的 Always Encrypted 與 Java 8。 | 使用者必須包含 BouncyCastle 提供者作為相依性，或對應/載入支援 RSASSA-PSS 簽章演算法的安全性提供者。 |
+| &nbsp; | &nbsp; |
+
 ## <a name="741"></a>7.4.1
 
 ### <a name="compliance"></a>法規遵循
@@ -249,7 +301,7 @@ Microsoft JDBC Driver 6.4 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 �
 
 ### <a name="added-support-for-azure-ad-integrated-authentication-on-linuxmac"></a>已在 Linux/Mac 上新增支援 Azure AD 整合式驗證
 
-JDBC 驅動程式現在透過 Kerberos，在所有支援的作業系統 (Windows、Linux 與 Mac) 上支援 Azure Active Directory (Azure AD) 整合式驗證。 或者，在 Windows 作業系統上，使用者可以使用 sqljdbc_auth.dll 進行驗證。
+JDBC 驅動程式現在透過 Kerberos，在所有支援的作業系統 (Windows、Linux 與 Mac) 上支援 Azure Active Directory (Azure AD) 整合式驗證。 或者，在 Windows 作業系統上，使用者可以使用 mssql-jdbc_auth-\<版本>-\<架構>.dll 進行驗證。
 
 ### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>已更新「適用於 Java 的 Microsoft Azure Active Directory 驗證程式庫 (ADAL4J)」版本：1.4.0
 

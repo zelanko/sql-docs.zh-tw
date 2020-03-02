@@ -1,5 +1,5 @@
 ---
-title: 停駐報表設計師中的報表資料窗格 (SSRS) | Microsoft Docs
+title: 停駐報表設計師中的報表資料窗格 | Microsoft Docs
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2480d94a6a6815c18c7464a7441daad1dd3595db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e865cb5d12a66a1225a037fdc3a191333de7179c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190420"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080582"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>停駐報表設計師中的報表資料窗格 (SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 的 [ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]報表設計師] 中，[報表資料] 窗格會顯示您可用於報表之資料物件的階層式檢視，包括資料來源、資料集、欄位、參數和影像。 此檢視中的資料來源可以內嵌，或參考 [方案總管] 內顯示的共用資料來源。  

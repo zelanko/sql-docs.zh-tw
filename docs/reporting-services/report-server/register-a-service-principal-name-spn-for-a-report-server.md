@@ -1,6 +1,6 @@
 ---
 title: 為報表伺服器註冊服務主體名稱 (SPN) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 02/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 92c0943b17f22c63481f1dbfb0f76977a4b71381
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9bfe7a68dc64d2248b9ff9fc4c0696970f692b60
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66500226"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256421"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>為報表伺服器註冊服務主要名稱 (SPN)
   如果您在使用 Kerberos 通訊協定進行相互驗證的網路中部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，當您想要將報表伺服器服務設定為以網域使用者帳戶的身分執行時，必須為此服務建立服務主要名稱 (SPN)。  
@@ -23,17 +23,18 @@ ms.locfileid: "66500226"
   
  若要建立 SPN，可以使用 **SetSPN** 命令列公用程式。 如需詳細資訊，請參閱下列：  
   
--   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx) 。  
+-   [Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) (https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) 。  
   
 -   [服務主體名稱 (SPN) SetSPN 語法 (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) 。  
   
  您必須是網域管理員，才能在網域控制站上執行此公用程式。  
   
 ## <a name="syntax"></a>語法  
- 使用 SetSPN 公用程式來建立報表伺服器之 SPN 的命令語法如下：  
+
+當您使用 setspn 操作 SPN 時，必須以正確的格式輸入 SPN。 SPN 的格式為 `<serviceclass>/host:<por>`。 使用 SetSPN 公用程式來建立報表伺服器之 SPN 的命令語法如下：  
   
 ```  
-Setspn -s http/<computername>.<domainname> <domain-user-account>  
+Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
 ```  
   
  Windows Server 上提供**SetSPN** 。 **-s** 引數會在確認沒有重複存在之後加入 SPN。 **注意：-s** 從 Windows Server 2008 開始已可於 Windows Server 中使用。  
@@ -44,7 +45,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
   
 ## <a name="register-an-spn-for-domain-user-account"></a>為網域使用者帳戶註冊 SPN  
   
-#### <a name="to-register-an-spn-for-a-report-server-service-running-as-a-domain-user"></a>若要以網域使用者的身分為報表伺服器服務註冊 SPN  
+### <a name="to-register-an-spn-for-a-report-server-service-running-as-a-domain-user"></a>若要以網域使用者的身分為報表伺服器服務註冊 SPN  
   
 1.  以網域使用者帳戶的身分安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，並設定要執行的報表伺服器服務。 請注意，要等到您完成下列步驟以後，您才能夠連接報表伺服器。  
   
@@ -55,10 +56,10 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
 4.  複製下列命令，使用對您的網路有效的實際值來取代預留位置值：  
   
     ```  
-    Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
+    Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
     ```  
   
-     例如： `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
+    例如： `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
   
 5.  執行命令。  
   

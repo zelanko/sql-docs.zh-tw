@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 54c9145e40d9ad326faf0c897281fedb9a9fe9dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 73718d8fa49715a2cec91c43a9a91402fad6e031
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831615"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429029"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -144,13 +144,13 @@ CREATE WORKLOAD CLASSIFIER wcELTLoads WITH
 請考慮下列分類器設定。
 
 ```sql
-CREATE WORKLOAD CLASSIFIER classiferA WITH  
+CREATE WORKLOAD CLASSIFIER classifierA WITH  
 ( WORKLOAD_GROUP = 'wgDashboards'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = HIGH
  ,WLM_LABEL      = 'salereport' )
 
-CREATE WORKLOAD CLASSIFIER classiferB WITH  
+CREATE WORKLOAD CLASSIFIER classifierB WITH  
 ( WORKLOAD_GROUP = 'wgUserQueries'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = LOW
@@ -158,7 +158,7 @@ CREATE WORKLOAD CLASSIFIER classiferB WITH
  ,END_TIME       = '07:00' )
 ```
 
-使用者 `userloginA` 是針對這兩個分類器所設定。  如果 userloginA 在 UTC 下午 6 點和上午 7 點之間執行帶有等於 `salesreport` 的標籤的查詢，則該要求將被分類為具有高重要性的 wgDashboards 工作負載群組。  預期可能會針對非工作時間報告將要求分類為重要性較低的 wgUserQueries，但是 WLM_LABEL 的加權高於 START_TIME/END_TIME。  分類器 A 的加權為 80 (使用者 64，加上 WLM_LABEL 的 16)。  分類器 B 的加權為 68 (使用者 64，加上 START_TIME/END_TIME 的 4)。  在此案例中，您可以將 WLM_LABEL 新增至分類器 B。
+使用者 `userloginA` 是針對這兩個分類器所設定。  如果 userloginA 在 UTC 下午 6 點和上午 7 點之間執行帶有等於 `salesreport` 的標籤的查詢，則該要求將被分類為具有高重要性的 wgDashboards 工作負載群組。  預期可能會針對非工作時間報告將要求分類為重要性較低的 wgUserQueries，但是 WLM_LABEL 的加權高於 START_TIME/END_TIME。  分類器 A 的加權為 80 (使用者 64，加上 WLM_LABEL 的 16)。  分類器 B 的加權為 68 (使用者 64，加上 START_TIME/END_TIME 的 4)。  在本例中，您可以將 WLM_LABEL 新增至分類器 B。
 
  如需詳細資訊，請參閱[工作負載加權](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting)。
 

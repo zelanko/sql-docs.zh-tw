@@ -5,16 +5,16 @@ description: 了解如何將 SQL Server 巨量資料叢集升級至新版本。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afb12477dd220e71cf2cf97d6a13b54aa2d35be4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75831839"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256861"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>如何升級 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -34,7 +34,7 @@ ms.locfileid: "75831839"
 
 ## <a name="upgrade-from-supported-release"></a>從支援的版本升級
 
-此節說明如何將 SQL Server BDC 從支援的版本 (從 SQL Server 2019 GDR1 起) 升級至較新的支援版本。
+本節會說明如何將 SQL Server BDC 從支援的版本 (從 SQL Server 2019 GDR1 起) 升級至較新的支援版本。
 
 1. 備份 SQL Server 主要執行個體。
 2. 備份 HDFS。
@@ -76,7 +76,7 @@ ms.locfileid: "75831839"
 >您可以在 [SQL Server 2019 巨量資料叢集版本資訊](release-notes-big-data-cluster.md)取得最新的映像標籤。
 
 >[!IMPORTANT]
->如果您使用私人存放庫來預先提取要部署或升級 BDC 的映像，請確定目前的組建映像與目標組建映像都在私人存放庫中。 這可確保成功的復原 (如果有必要)。 此外，如果您在原始部署之後變更私人存放庫的認證，請在升級之前，先更新 Kubernetes 中對應的祕密。 不支援透過 DOCKER_PASSWORD 與 DOCKER_USERNAME 環境變數來更新認證。 使用 [kubectl edit secrets](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret) \(英文\) 來更新祕密。 不支援使用不同私人存放庫來進行目前與目標組建升級。
+>如果您使用私人存放庫來預先提取要部署或升級 BDC 的映像，請確定目前的組建映像與目標組建映像都在私人存放庫中。 這可確保成功的復原 (如果有必要)。 此外，如果在原始部署之後變更了私人存放庫的認證，請更新對應的環境變數 DOCKER_PASSWORD 和 >DOCKER_USERNAME。 不支援使用不同私人存放庫升級目前組建與目標組建。
 
 ### <a name="increase-the-timeout-for-the-upgrade"></a>增加升級的逾時
 
@@ -93,7 +93,15 @@ ms.locfileid: "75831839"
    Control plane upgrade failed. Failed to upgrade controller.
    ```
 
-若要增加升級的逾時，請編輯升級設定對應。 編輯升級設定對應：
+若要增加升級的逾時，請使用 **--controller-timeout** 和 **--component-timeout** 參數，在您發出升級時指定較高的值。 僅自 SQL Server 2019 CU2 版本開始提供此選項。 例如：
+
+   ```bash
+   azdata bdc upgrade -t 2019-CU2-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   ```
+**--controller-timeout** 指定等待控制器或控制器資料庫完成升級的分鐘數。
+**--component-timeout** 指定升級所必須完成每個後續階段的時間長度。
+
+若要在 SQL Server 2019 CU2 以前的版本中增加升級逾時，請編輯升級 config 對應。 編輯升級設定對應：
 
 執行以下命令：
 
@@ -104,7 +112,7 @@ ms.locfileid: "75831839"
 編輯下列欄位：
 
    **controllerUpgradeTimeoutInMinutes** 指定等待控制器或控制器資料庫完成升級的分鐘數。 預設值為 5。 更新為至少 20。
-   **totalUpgradeTimeoutInMinutes**：指定控制器與控制器資料庫完成升級的合併時間量 (控制器 + 控制器資料庫升級)。預設值為 10。 更新為至少 40。
+   **totalUpgradeTimeoutInMinutes**：指定控制器與控制器資料庫完成升級的合併時間長度 (控制器 + 控制器資料庫升級)。預設值為 10。 更新為至少 40。
    **componentUpgradeTimeoutInMinutes**：指定升級必須完成之每個後續階段的時間量。 預設值為 30。 更新為 45。
 
 儲存並結束。

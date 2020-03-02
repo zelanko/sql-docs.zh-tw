@@ -33,12 +33,12 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 327b084471155c9e7d8451fc8dceec8e4c00496f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 50587bc33f6fd37e4c114fa28a7171e6ea951b84
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68116475"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074441"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -158,28 +158,30 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="restrictions"></a>限制  
  DBCC SHOW_STATISTICS 不會提供空間或 xVelocity 記憶體最佳化的資料行存放區索引之統計資料。  
   
-## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的權限  
-使用者必須擁有資料表，或者使用者必須是系統管理員 (`sysadmin`) 固定伺服器角色、`db_owner` 固定資料庫角色或 `db_ddladmin` 固定資料庫角色的成員，才能檢視統計資料物件。
-  
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 修改了權限限制，允許具有 SELECT 權限的使用者使用此命令。 請注意，必須先符合下列需求，足夠的 SELECT 權限才能執行此命令：
+## <a name="permissions-for-ssnoversion-and-sssds"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的權限  
+若要檢視統計資料物件，使用者必須具有資料表的 SELECT 權限。
+請注意，必須先符合下列需求，足夠的 SELECT 權限才能執行此命令：
 -   使用者必須有統計資料物件的所有資料行的權限  
 -   使用者必須有篩選條件 (如果有) 的所有資料行的權限  
--   資料表不能有資料列層級安全性原則。  
+-   資料表不能有資料列層級安全性原則。
+-   如果統計資料物件內的任何資料行是以動態資料遮罩規則進行遮罩，則除了 SELECT 權限之外，使用者還必須具有 UNMASK 權限
+
+在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 之前的版本中，使用者必須擁有資料表，或使用者必須是 `sysadmin` 固定伺服器角色、`db_owner` 固定資料庫角色或 `db_ddladmin` 固定資料庫角色的成員。
+[!NOTE]
+若要將行為變更回 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 之前版本的行為，請使用追蹤旗標 9485。
   
-若要停用此行為，請使用追蹤旗標 9485。
-  
-## <a name="permissions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的權限  
+## <a name="permissions-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的權限  
 DBCC SHOW_STATISTICS 需要資料表上的 SELECT 權限或下列其中一項的成員資格：
 -   sysadmin 固定伺服器角色  
 -   db_owner 固定資料庫角色  
 -   db_ddladmin 固定資料庫角色  
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的限制事項  
+## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的限制事項  
 DBCC SHOW_STATISTICS 會顯示在控制節點層級的 Shell 資料庫中儲存的統計資料。 不會顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在計算節點上自動建立的統計資料。
   
 不支援在外部資料表上使用 DBCC SHOW_STATISTICS。
   
-## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>範例：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+## <a name="examples-ssnoversion-and-sssds"></a>範例：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 ### <a name="a-returning-all-statistics-information"></a>A. 傳回所有的統計資料資訊  
 下列範例會顯示 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Person.Address` 資料表之 `AK_Address_rowguid` 索引的所有統計資料資訊。
   
@@ -196,7 +198,7 @@ DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="c-display-the-contents-of-one-statistics-object"></a>C. 顯示一個統計資料物件的內容  
  下列範例會顯示 DimCustomer 資料表上 Customer_LastName 統計資料的內容。  
   

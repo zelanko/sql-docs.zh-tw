@@ -1,5 +1,5 @@
 ---
-title: 格式化量測計上的指標 (報表產生器及 SSRS)| Microsoft Docs
+title: 格式化量測計上的指標 (報表產生器)| Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 780cda075d8280d71f3438c79359c58ad1ac3133
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 541cc806804dc2095d7a33c33c449d6cf8768608
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65575638"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079774"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>格式化量測計上的指標 (報表產生器及 SSRS)
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，量測計指標會指出量測計目前的值。   

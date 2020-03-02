@@ -1,29 +1,35 @@
 ---
 title: 安裝報表產生器 | Microsoft Docs
 description: 報表產生器是一種獨立式應用程式，由您或系統管理員安裝在電腦上。
-ms.date: 01/03/2020
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70cf4c586f6fe38bd36ca99cd1ed36026969a446
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d256ac7cc7f7925ad307c527378abcca5b6d121f
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75776450"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971379"
 ---
 # <a name="install-report-builder"></a>安裝報表產生器
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]是一種獨立式應用程式，由您或系統管理員安裝在電腦上。 您可以透過 Microsoft 下載中心、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 報表伺服器，或整合 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的 SharePoint 網站進行安裝。  
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]是一種獨立式應用程式，由您或系統管理員安裝在電腦上。 您可以透過 Microsoft 下載中心、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 報表伺服器，或整合 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的 SharePoint 網站進行安裝。  
 
 > [!NOTE]
-> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
-  
+> 要改為尋找 Power BI Report Builder 的安裝資訊嗎？ 前往下載中心的 [Microsoft Power BI Report Builder](https://www.microsoft.com/download/details.aspx?id=58158) 頁面。 
+
  系統管理員通常會安裝及設定[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、授與從入口網站下載[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]的權限，以及管理儲存到報表伺服器之報表、報表組件和共用資料集的資料夾和權限。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理的詳細資訊，請參閱 [Reporting Services 報表伺服器 &#40;原生模式&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)。  
   
 ## <a name="install-ssrbnoversion-from--a--web-portal-or-sharepoint-library"></a>從 Web 入口網站或 SharePoint 文件庫安裝 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 
+
+> [!NOTE]
+> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
   
  您可以從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 入口網站或整合 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 SharePoint 網站來啟動 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]。 如需資訊，請參閱 [啟動報表產生器](../../reporting-services/report-builder/start-report-builder.md)。  
 

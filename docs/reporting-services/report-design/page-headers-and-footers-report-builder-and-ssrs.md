@@ -1,5 +1,5 @@
 ---
-title: 頁首和頁尾 (報表產生器及 SSRS) | Microsoft Docs
+title: 頁首和頁尾 (報表產生器) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +21,12 @@ f1_keywords:
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 217b1ea42ae7af0aef2ece4c6c345b2fac7be89e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8a94f7bf5e149431135972e4911463c5f86ffaa5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576332"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082463"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>頁首和頁尾 (報表產生器及 SSRS)
   報表可以包含分別在每個頁面的頂端和底端邊緣處的頁首和頁尾。 頁首和頁尾可以包含靜態文字、影像、線條、矩形、框線、背景色彩、背景影像和運算式。 運算式包含剛好具有一個資料集之報表的資料集欄位參考，以及包含該資料集做為範圍的彙總函式呼叫。  

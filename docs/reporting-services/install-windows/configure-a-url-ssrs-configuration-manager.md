@@ -1,5 +1,5 @@
 ---
-title: 設定 URL (SSRS 設定管理員) | Microsoft Docs
+title: 設定 URL (組態管理員) | Microsoft Docs
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 616d04205fdf079435bf7810a3c6957f0cf8b32f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 894ba4f1b73cb482ab521e859d0472f7039bfabf
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73594111"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077065"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>設定 URL (SSRS 組態管理員)
   使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或報表伺服器 Web 服務之前，您至少必須為每一個應用程式設定一個 URL。 如果您在「僅限檔案」模式下安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (意即在安裝精靈的 [報表伺服器安裝選項] 頁面中選取 [安裝但不設定伺服器]  選項)，就一定要設定 URL。 如果您在預設組態中安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，就表示已經為每一個應用程式設定了 URL。  
@@ -105,7 +105,7 @@ ms.locfileid: "73594111"
 > 
 >  若要更正這個問題，請刪除所有繫結，然後使用唯一的設定建立新繫結，或設定包含萬用字元的 Reporting Services URL 註冊。
   
-### <a name="to-create-a-url-reservation-for-the-includessrswebportalincludesssrswebportalmd"></a>建立 URL 保留項目 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  
+### <a name="to-create-a-url-reservation-for-the-ssrswebportal"></a>建立 URL 保留項目 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，並連接到報表伺服器執行個體。  
   

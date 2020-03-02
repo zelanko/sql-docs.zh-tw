@@ -1,7 +1,7 @@
 ---
 title: JDBC 驅動程式的系統需求 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5759a1f9936fdb8a6df4de422ae2ff0542dc63a8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e9e74d080ed0e7cd91dcde6cbaa2ca2e32f04dc6
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69027676"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004560"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 驅動程式的系統需求
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,6 +26,8 @@ ms.locfileid: "69027676"
 - Java Runtime Environment
 
 ## <a name="java-runtime-environment-requirements"></a>Java Runtime Environment 需求  
+
+ 自 Microsoft JDBC Driver 8.2 for SQL Server 起開始支援 Java 開發套件 (JDK) 13.0 及 Java Runtime Environment (JRE) 13.0。
 
  自 Microsoft JDBC Driver 7.4 for SQL Server 起開始支援 Java 開發套件 (JDK) 12.0 及 Java Runtime Environment (JRE) 12.0。
 
@@ -42,6 +44,31 @@ ms.locfileid: "69027676"
  從 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 開始，JDBC 驅動程式的 Java Database Connectivity (JDBC) Spec API 支援已經過擴充，可包含 JDBC 4.0 API。 Sun Java SE 開發套件 (JDK) 6.0 及 Java Runtime Environment (JRE) 6.0 同時引進了 JDBC 4.0 API。 JDBC 4.0 是 JDBC 3.0 API 的超集。
   
  當您在 Windows 及 UNIX 作業系統上部署 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 時，必須分別使用安裝套件 *sqljdbc_\<版本>_enu.exe* 及 *sqljdbc_\<版本>_enu.tar.gz*。 如需如何部署 JDBC 驅動程式的詳細資訊，請參閱[部署 JDBC 驅動程式](../../connect/jdbc/deploying-the-jdbc-driver.md)主題。  
+
+**Microsoft JDBC Driver 8.2 for SQL Server：**  
+
+  JDBC Driver 8.2 在每個安裝套件中包含三個 JAR 類別庫：**mssql-jdbc-8.2.0.jre8.jar**、**mssql-jdbc-8.2.0.jre11.jar** 和 **mssql-jdbc-8.2.0.jre13.jar**。
+
+  JDBC Driver 8.2 專為搭配所有主要 Java 虛擬機器運作而設計，且所有 Java 虛擬機器皆能支援，但只在 OpenJDK 1.8、OpenJDK 11.0、OpenJDK 13.0、Azul Zulu JRE 1.8、Azul Zulu JRE 11.0 與 Azul Zulu JRE 13.0 上測試過。
+  
+  以下摘要說明 Microsoft JDBC Drivers 8.2 for SQL Server 所隨附這兩個 JAR 檔案提供的支援：  
+  
+  |JAR|JDBC 版本相容性|建議的 Java 版本|描述|  
+|---------|-----------------------------|----------------------|-----------------|   
+|mssql-jdbc-8.2.0.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 1.8。 使用 JRE 1.7 或更舊版本會擲回例外狀況。<br /><br /> 8\.2 中的新功能包括：JDK 13 支援、具有安全記憶體保護區的 Always Encrypted，以及時態性資料類型效能改善。 |
+|mssql-jdbc-8.2.0.jre11.jar|4.3|11|需要 Java Runtime Environment (JRE) 11.0。 使用 JRE 10.0 或更舊版本會擲回例外狀況。<br /><br /> 8\.2 中的新功能包括：JDK 13 支援、具有安全記憶體保護區的 Always Encrypted，以及時態性資料類型效能改善。 |
+|mssql-jdbc-8.2.0.jre13.jar|4.3|13|需要 Java Runtime Environment (JRE) 13.0。 使用 JRE 11.0 或更舊版本會擲回例外狀況。<br /><br /> 8\.2 中的新功能包括：JDK 13 支援、具有安全記憶體保護區的 Always Encrypted，以及時態性資料類型效能改善。 |
+
+
+  JDBC Driver 8.2 也可在 Maven 中央存放庫上取得，且可藉由在 POM.XML 中新增下列程式碼來新增至 Maven 專案：  
+  
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>8.2.0.jre11</version>
+</dependency>
+```
 
 **Microsoft JDBC Driver 7.4 for SQL Server：**  
 
@@ -196,7 +223,7 @@ JDBC Driver 6.4 也可在 Maven 中央存放庫上取得，而且可在 POM.XML 
  JDBC 驅動程式支援與 Azure SQL 資料庫及 SQL Server 的連線。 從 SQL Server 2008 開始支援 Microsoft JDBC Driver 4.2 與 4.1 for SQL Server。
   
 ## <a name="operating-system-requirements"></a>作業系統需求  
- JDBC Driver 設計為可以在支援使用 JAVA 虛擬機器 (JVM) 的任何作業系統上運作。 不過，僅在 Sun Solaris、SUSE Linux 及 Windows 作業系統上正式測試過。  
+ JDBC Driver 設計為可以在支援使用 JAVA 虛擬機器 (JVM) 的任何作業系統上運作。 不過，僅在 Sun Solaris、SUSE Linux、Ubuntu Linux、CentOS Linux、macOS 及 Windows 作業系統上正式測試過。  
   
 ## <a name="supported-languages"></a>支援的語言  
  JDBC 驅動程式支援所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行定序。 如需有關 JDBC 驅動程式所支援的定序詳細資訊，請參閱 [JDBC 驅動程式的國際功能](../../connect/jdbc/international-features-of-the-jdbc-driver.md)。  

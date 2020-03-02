@@ -1,5 +1,5 @@
 ---
-title: 顯示頁碼或其他報表屬性 (報表產生器及 SSRS) | Microsoft Docs
+title: 顯示頁碼或其他報表屬性 (報表產生器) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0f9e826ff115183180ad42a1c065619f2196cd3e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 14496cc4e46118b5421f4d061136f7b1c5b16850
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580886"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080487"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>顯示頁碼或其他報表屬性 (報表產生器及 SSRS)
   您可以輕鬆地將頁碼、報表標題、檔案名稱和其他報表屬性加入至報表的頁首或頁尾。 在 [報表資料] 窗格的 [內建欄位] 資料夾中，這些屬性會儲存成欄位：  
@@ -60,7 +60,7 @@ ms.locfileid: "65580886"
   
 1.  以滑鼠右鍵按一下包含 [&PageNumber] 的文字方塊，然後按一下 [運算式]  。  
   
-     [設定運算式對象: 值]  文字方塊包含運算式 =Globals!PageNumber。  
+     [設定運算式對象：  值] 文字方塊包含運算式 =Globals!PageNumber。  
   
 2.  將游標放在等號 (=) 之後，然後鍵入 **"Page " &** 。  
   

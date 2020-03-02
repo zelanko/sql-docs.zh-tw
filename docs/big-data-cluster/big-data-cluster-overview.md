@@ -9,14 +9,14 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 23eb15b1f7b763688a3657406bab12106a18f977
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75720933"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173640"
 ---
-# <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
+# <a name="what-are-big-data-clusters-2019"></a>什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -71,12 +71,11 @@ SQL Server 巨量資料叢集包含可調整的 HDFS「存放集區」  。 這�
 
 管理和監視是透過命令列工具、API、入口網站和動態管理檢視的組合來提供。
 
-您可以使用 Azure Data Studio 在巨量資料叢集上執行各種工作。 這是由新的 **SQL Server 2019 延伸模組**所促成。 此延伸模組提供：
-
+您可以使用 [Azure Data Studio](../azure-data-studio/what-is.md) 對巨量資料叢集執行各種工作：
 - 常見管理工作的內建程式碼片段。
 - 能夠瀏覽 HDFS、上傳檔案、預覽檔案及建立目錄。
 - 能夠建立、開啟並執行與 Jupyter 相容的筆記本。
-- 資料虛擬化精靈可簡化外部資料源的建立。
+- 資料虛擬化精靈可簡化外部資料來源的建立流程 (由**資料虛擬化延伸模組**啟用)。
 
 ## <a id="architecture"></a> 架構
 

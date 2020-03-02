@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db98f5aa3cdec76b59e51f743200b24725231f95
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: a8dce4ae0ec739bad6df3ac064ca96d04e91dcf7
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831629"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558358"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -87,7 +87,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
     | DEFERRED_COMPILATION_TV = { ON | OFF }
     | ACCELERATED_PLAN_FORCING = { ON | OFF }
-    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+    | GLOBAL_TEMPORARY_TABLE_AUTO_DROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
@@ -316,7 +316,7 @@ ACCELERATED_PLAN_FORCING **=** { **ON** | OFF }
 > [!NOTE]
 > 不建議停用加速強制執行計劃。
 
-GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
+GLOBAL_TEMPORARY_TABLE_AUTO_DROP **=** { **ON** | OFF }
 
 **適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (功能處於公開預覽階段)
 

@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: b93f85235b2676773ea3686c17d7d17e3a424d7f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 20580d1c746a678771ff3be0e67bab72e2b72be8
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67906836"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179269"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -41,17 +41,17 @@ STRING_SPLIT 需要為至少 130 的相容性層級。 當層級小於 130 時�
   
 ## <a name="syntax"></a>語法  
 
-```sql
+```
 STRING_SPLIT ( string , separator )  
 ```
 
 ## <a name="arguments"></a>引數
 
  *string*  
- 這是任何字元類型 (例如 [nvarchar](../../t-sql/language-elements/expressions-transact-sql.md)、**varchar**、**nchar** 或 **char**) 的**運算式**。  
+ 這是任何字元類型 (例如 **nvarchar**、**varchar**、**nchar** 或 **char**) 的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *separator*  
- 這是任何字元類型 (例如 [nvarchar(1)](../../t-sql/language-elements/expressions-transact-sql.md)、**varchar(1)** 、**nchar(1)** 或 **char(1)** ) 的單一字元**運算式**，可作為串連子字串的分隔符號。  
+ 這是任何字元類型 (例如 **nvarchar(1)** 、**varchar(1)** 、**nchar(1)** 或 **char(1)** ) 的單一字元[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，可作為串連子字串的分隔符號。  
   
 ## <a name="return-types"></a>傳回型別  
 
@@ -62,6 +62,8 @@ STRING_SPLIT ( string , separator )
 **STRING_SPLIT** 輸入有已分隔之子字串的字串，並輸入一個字元作為分隔符號 (delimiter) 或分隔符號 (separator)。 STRING_SPLIT 輸出單一資料行資料表，其資料列包含子字串。 輸出資料行的名稱為 **value**。
 
 輸出資料列可能為任何順序。 子字串的順序「不」  保證與輸入字串的相同。 您可以在 SELECT 陳述式上使用 ORDER BY 子句的 (`ORDER BY value`)，以覆寫最終的排序次序。
+
+0x0000 (**char(0)** ) 是 Windows 定序中未定義的字元，且不得包含在 STRING_SPLIT 中。
 
 當輸入字串包含兩個或更多個連續出現的分隔符號字元時，會出現長度為零的空白子字串。 空白子字串視為純文字子字串來處理。 您可以使用 WHERE 子句將包含空白字串的任何資料列篩選掉 (`WHERE value <> ''`)。 如果輸入字串是 NULL，則 STRING_SPLIT 資料表值函數會傳回空白資料表。  
 

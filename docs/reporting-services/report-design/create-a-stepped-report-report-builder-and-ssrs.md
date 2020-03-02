@@ -1,5 +1,5 @@
 ---
-title: 建立階梯狀報表 (報表產生器及 SSRS) | Microsoft Docs
+title: 建立階梯狀報表 (報表產生器) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: adfde8e92d249c40749dba76f42c6d1d5ba20d71
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dca297ff55b9bd845e6fcb8379dcb7cc7147d32e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581532"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080615"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>建立階梯狀報表 (報表產生器及 SSRS)
 階梯狀報表是一種  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表類型，會在相同的資料行中，顯示父群組底下縮排的詳細資料列或子群組，如以下範例所示：  

@@ -1,5 +1,5 @@
 ---
-title: First 函式 (報表產生器及 SSRS) | Microsoft Docs
+title: First 函式 (報表產生器) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8d7f2db5b2b212dd529ac800819c5aa58b5d121a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c7dee0fc2085ff370a5c76ece56f9ed54f6e2e4a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579523"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081267"
 ---
 # <a name="report-builder-functions---first-function"></a>報表產生器函式 - First 函式
   傳回所指定運算式給定範圍中的第一個值。  

@@ -9,12 +9,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 1e5a45aa66d7d49f2c7499e0dcf975e5ebcb5b78
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 979d0f5d57c7d761e5c9c3f1b302046312396554
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75255436"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77147422"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>設定 PolyBase 存取 Hadoop 中的外部資料
 
@@ -161,7 +161,7 @@ ms.locfileid: "75255436"
 
 下列查詢會提供具有虛構車輛感應器資料的範例。
 
-### <a name="ad-hoc-queries"></a>臨機操作查詢  
+### <a name="ad-hoc-queries"></a>特定查詢  
 
 下列臨機操作查詢會聯結與 Hadoop 資料的關聯式。 它會選取開車速度超過 35 mph 的客戶，並聯結 SQL Server 中所儲存的結構化客戶資料與 Hadoop 中儲存的車輛感應器資料。  
 

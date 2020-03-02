@@ -1,5 +1,5 @@
 ---
-title: 建立文件引導模式 (報表產生器及 SSRS) | Microsoft Docs
+title: 建立文件引導模式 (報表產生器) | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cbfbc1b1d26f53e5ee8d3e04fc506048d76b3d28
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c6f1d18c8559625c6e58b45b4e9810ed29e0ef28
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73593679"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082293"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>建立文件引導模式 (報表產生器及 SSRS)
 

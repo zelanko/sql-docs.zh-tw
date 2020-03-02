@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f91edadf5e33c0938a6af0be0244fec7635dd36d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7fe202e213f200dcf98a7f0479c29451d36b8a8f
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952344"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77255972"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -406,7 +406,7 @@ FROM EXTERNAL PROVIDER </br>
 
 PASSWORD **=** '*password*' 指定要建立的 SQL 登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
 
-密碼會區分大小寫。 密碼長度應該一律至少為 8 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name*。
+密碼會區分大小寫。 密碼長度應一律至少 10 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name*。
 
 SID **=** *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 對於 SQL Database，這通常是由 `0x01060000000000640000000000000000` 再加上代表 GUID 的 16 位元組組成的 32 位元組 (**binary(32)** ) 常值。 例如： `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` 。
 

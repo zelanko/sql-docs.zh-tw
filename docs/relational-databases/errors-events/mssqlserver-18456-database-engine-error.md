@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 737e64973e4651dd36c58fa9ff97a61c65a604a9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ab33fa19b968990e81851edac9d91fb55db81049
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68137087"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146312"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,6 +73,7 @@ ms.locfileid: "68137087"
 |12|登入是有效的登入，但伺服器存取失敗。|  
 |18|密碼必須變更。|  
 |38, 46|找不到使用者所要求的資料庫。|
+|58| 當 SQL Server 設定為僅限使用 Windows 驗證，而用戶端嘗試使用 SQL 驗證登入時。 另一個原因是當 SID 不符時。|
 |102 - 111|AAD 失敗。|
 |122 - 124|因為使用者名稱或密碼空白而失敗。|
 |126|使用者所要求的資料庫不存在。|

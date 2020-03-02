@@ -12,12 +12,12 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c7912e3048021255da0340f19f5d449d1c13a6c7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9314afbfa0cdcb917edd8942157c87e7db605b9d
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75245290"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544942"
 ---
 # <a name="accelerated-database-recovery"></a>加速資料庫復原
 
@@ -92,6 +92,10 @@ ADR 復原處理序與目前復原處理序具有相同的三個階段。 這些
 - **復原階段**
 
    ADR 的復原階段會搭配邏輯還原來使用 sLog 以復原未建立版本的作業及持續版本存放區 (PVS)，以幾乎立即的方式來完成執行資料列版本式復原。
+
+您也可以觀看這段說明加速資料庫復原的 8 分鐘影片
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Advanced-Database-Recovery--Data-Exposed/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="adr-recovery-components"></a>ADR 復原元件
 

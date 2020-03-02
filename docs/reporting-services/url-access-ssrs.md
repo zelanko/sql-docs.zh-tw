@@ -1,5 +1,5 @@
 ---
-title: URL 存取 (SSRS) | Microsoft Docs
+title: URL 存取 | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a18ad4fd1d79bc7eae5f45318cece55037c78010
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 59f183a3a5063b894bfa8a52a5334bb377119794
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574242"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078945"
 ---
 # <a name="url-access-ssrs"></a>URL 存取 (SSRS)
   在 SQL Server Reporting Services (SSRS) 中，報表伺服器的 URL 存取權可讓您透過 URL 要求，傳送命令至報表伺服器。 例如，您可在原生模式報表伺服器或 SharePoint 文件庫中自訂報表的轉譯。 您可能已使用特定一組報表參數值來檢視過報表，或報表中您感興趣的特定頁面。 您可以使用預先定義的 URL 存取參數，封裝 URL 中的資訊。 您還可以內嵌轉譯格式或調整報表檢視器外觀的參數，以進一步自訂報表伺服器處理報表的方式。 然後，您可以直接將此 URL 貼入電子郵件或網頁，讓其他人在瀏覽器中用相同方式存取您的報表。  
@@ -102,7 +102,7 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  對應至要使用的參數值之 URL 文字。  
   
- **注意** ：如需可用的 URL 存取參數清單，請參閱 [URL 存取參數參考](../reporting-services/url-access-parameter-reference.md)。 如需透過 URL 傳遞報表參數的範例，請參閱 [在 URL 內傳遞報表參數](../reporting-services/pass-a-report-parameter-within-a-url.md)。  
+ **注意：** 如需可用的 URL 存取參數清單，請參閱 [URL 存取參數參考](../reporting-services/url-access-parameter-reference.md)。 如需透過 URL 傳遞報表參數的範例，請參閱 [在 URL 內傳遞報表參數](../reporting-services/pass-a-report-parameter-within-a-url.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
   

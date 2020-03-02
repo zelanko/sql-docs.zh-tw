@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 03399ea4653df03c873739b24a167d88564c3927
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: fc73cec066671c70699b4baa1dc75d249b1860c3
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76911112"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544923"
 ---
 # <a name="using-xa-transactions"></a>使用 XA 交易
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -89,7 +89,6 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 #include <sqlext.h>
 #include "XaTestRunner.h"
 
-#include <stdio.h>
 #include <iostream>
 #include <string>
 #include <memory>
@@ -105,21 +104,21 @@ RETCODE GetRowCount(HSTMT hstmt, const std::string tableName, int& count)
     count = 0;
     sprintf_s(query, sizeof(query), "SELECT COUNT(*) FROM %s", tableName.c_str());
     RETCODE rc = SQLExecDirectA(hstmt, (SQLCHAR*)query, SQL_NTS);
-    TestRunner::CheckRC(rc, "GetRowCount::SQLExecDirectA", hstmt, SQL_HANDLE_STMT);
+    XaTestRunner::CheckRC(rc, "GetRowCount::SQLExecDirectA", hstmt, SQL_HANDLE_STMT);
     if (!SQL_SUCCEEDED(rc))
     {
         return rc;
     }
 
     rc = SQLFetch(hstmt);
-    TestRunner::CheckRC(rc, "GetRowCount::SQLFetch", hstmt, SQL_HANDLE_STMT);
+    XaTestRunner::CheckRC(rc, "GetRowCount::SQLFetch", hstmt, SQL_HANDLE_STMT);
     if (!SQL_SUCCEEDED(rc))
     {
         return rc;
     }
 
     rc = SQLGetData(hstmt, 1, SQL_C_LONG, &count, sizeof(count), NULL);
-    TestRunner::CheckRC(rc, "GetRowCount::SQLGetData", hstmt, SQL_HANDLE_STMT);
+    XaTestRunner::CheckRC(rc, "GetRowCount::SQLGetData", hstmt, SQL_HANDLE_STMT);
 
     return rc;
 }
@@ -127,7 +126,7 @@ RETCODE GetRowCount(HSTMT hstmt, const std::string tableName, int& count)
 bool TestXaRunner(HDBC hdbc, const char* connString, TestType testType, int timeout = 0)
 {
     SQLRETURN rc = SQLDriverConnect(hdbc, NULL, (SQLCHAR*)connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);
-    TestRunner::CheckRC(rc, "TestXaRunner::Connecting", hdbc, SQL_HANDLE_DBC);
+    XaTestRunner::CheckRC(rc, "TestXaRunner::Connecting", hdbc, SQL_HANDLE_DBC);
     if (!SQL_SUCCEEDED(rc))
     {
         return false;
@@ -135,9 +134,9 @@ bool TestXaRunner(HDBC hdbc, const char* connString, TestType testType, int time
 
     SQLHSTMT hstmt;
     rc = SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt);
-    TestRunner::CheckRC(rc, "TestXaRunner::Alloc statement", hdbc, SQL_HANDLE_DBC);
+    XaTestRunner::CheckRC(rc, "TestXaRunner::Alloc statement", hdbc, SQL_HANDLE_DBC);
 
-    const int ROWS_TO_TEST = 10; 
+    const int ROWS_TO_TEST = 10;
     int rowCount = 0;
     bool result = false;
 
@@ -171,7 +170,7 @@ bool TestXaRunner(HDBC hdbc, const char* connString, TestType testType, int time
             if (SQL_SUCCEEDED(xaStatus))
             {                
                 rc = testRunner->ExecuteInsertSequence(tableName, ROWS_TO_TEST, hstmt);
-                TestRunner::CheckRC(rc, "TestXaRunner::ExecuteInsertSequence", hstmt, SQL_HANDLE_STMT);
+                XaTestRunner::CheckRC(rc, "TestXaRunner::ExecuteInsertSequence", hstmt, SQL_HANDLE_STMT);
 
                 if (isTimeoutTest)
                 {
@@ -289,7 +288,7 @@ bool TestSetTimeout(HDBC hdbc, const char* connectionString)
 bool TestRecover(HDBC hdbc, const char* connectionString)
 {
     SQLRETURN rc = SQLDriverConnect(hdbc, NULL, (SQLCHAR*)connectionString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);
-    TestRunner::CheckRC(rc, "TestXaRunner::Connecting", hdbc, SQL_HANDLE_DBC);
+    XaTestRunner::CheckRC(rc, "TestXaRunner::Connecting", hdbc, SQL_HANDLE_DBC);
     if (!SQL_SUCCEEDED(rc))
     {
         return false;
@@ -411,13 +410,12 @@ int main(int argc, char** argv)
     SQLRETURN rc;
 
     rc = SQLAllocHandle(SQL_HANDLE_ENV, NULL, &henv);
-    TestRunner::CheckRC(rc, "Allocating environment", NULL, 0);
+    XaTestRunner::CheckRC(rc, "Allocating environment", NULL, 0);
 
     rc = SQLSetEnvAttr(henv, SQL_ATTR_ODBC_VERSION, (SQLPOINTER)SQL_OV_ODBC3, 0);
 
     rc = SQLAllocHandle(SQL_HANDLE_DBC, henv, &hdbc);
-    TestRunner::CheckRC(rc, "Allocating connection", henv, SQL_HANDLE_ENV);
-
+    XaTestRunner::CheckRC(rc, "Allocating connection", henv, SQL_HANDLE_ENV);
     bool result;
 
     result = TestSetTimeout(hdbc, pConnStr);
@@ -436,12 +434,95 @@ int main(int argc, char** argv)
 
 `XATestRunner` 類別會在與伺服器進行通訊時，實作可能的 XA 呼叫。
 
+## <a name="xatestrunnerh"></a>XaTestRunner.h
+```
+#pragma once
+#include "xadefs.h"
+#include "sqlwindef.h"
+#include "xplatsec.h"
+
+#include <sql.h>
+#include <sqlext.h>
+#include <random>
+
+
+struct RandomProvider
+{
+    std::random_device rd;    
+};
+
+class XidMgr 
+{
+public:
+    static void GetUniqueXid(XID& xid);    
+    static void GetUniqueXid(XID& xid, int formatId, unsigned char* globalId = nullptr, unsigned int sizeGlobalId = 0);
+    static int  GetRandomNumber(int low = 0, int high = 0xffffffff);
+    static void GetRandomBuffer(unsigned char* buffer, unsigned int sizeBuffer);
+
+    static RandomProvider rndPrv;
+
+};
+
+class XaTestRunner
+{
+public:
+    XaTestRunner(HDBC dbc);
+    ~XaTestRunner();
+
+    RETCODE Start(const XID& xid, const int flags, RETCODE& xaStatus);
+    RETCODE End(const XID& xid, const int flags, RETCODE& xaStatus);
+    RETCODE Prepare(const XID& xid, RETCODE& xaStatus);
+    RETCODE Commit(const XID& xid, const bool onePhase, RETCODE& xaStatus);
+    RETCODE Rollback(const XID& xid, RETCODE& xaStatus);
+    RETCODE Forget(const XID& xid, RETCODE& xaStatus);
+    RETCODE Recover(const int flags, unsigned char* buffer, unsigned int& sizeBuffer, RETCODE& xaStatus);
+
+    bool CreateTable(const std::string& name, SQLHSTMT stmt = NULL);
+    bool DropTable(const std::string& name, SQLHSTMT stmt = NULL);
+
+    void GetUniqueName(std::string& name);
+    bool ExecuteInsertSequence(const std::string& nameTable, int rows, SQLHSTMT stmt = NULL);
+
+    static int CheckRC(SQLRETURN rc, const char *msg, SQLHANDLE handle, SQLSMALLINT htype);
+
+    void SetTimeout(const int tmo);
+    int GetTimeout();
+
+    static void GetUniqueXid(XID& xid) { XidMgr::GetUniqueXid(xid); }
+    static void GetUniqueXid(XID& xid, int formatId, unsigned char* globalId = nullptr, unsigned int sizeGlobalId = 0)
+    {
+        XidMgr::GetUniqueXid(xid, formatId, globalId, sizeGlobalId);
+    }
+
+    static void XidShortToXid(const XID_SHORT& xids, XID& xid);
+
+private:
+    HDBC m_hdbc;
+    std::string m_tableName;
+    std::string m_commandCreateTable;
+    std::string m_commandInsertRow;
+
+    static const char* COMMAND_CREATE_TABLE;
+    static const char* COMMAND_INSERT_ROW;
+
+    bool ExecuteQuery(const char* query, const char* msg, SQLHSTMT stmt = NULL);
+    RETCODE IssueXaCall(const XID* xid, int operation, const int flags, unsigned char* buffer, unsigned int& sizeBuffer, RETCODE& xaStatus);
+
+};
+
+
 ```
 
-// XATestRunner.cpp : Implemented XA calls to communicate with the server.
-//
-
+## <a name="xatestrunnercpp"></a>XaTestRunner.cpp
+```
 #include "XaTestRunner.h"
+#include <chrono>
+#include <thread>
+#include <ctime>
+#include <atomic>
+
+const char* XaTestRunner::COMMAND_CREATE_TABLE = "CREATE TABLE %s (c1 INT, c2 VARCHAR(300))";
+const char* XaTestRunner::COMMAND_INSERT_ROW = "INSERT INTO %s Values (%d, 'Varchar data for row %d')";
 
 RandomProvider XidMgr::rndPrv;
 
@@ -463,8 +544,11 @@ void XidMgr::GetRandomBuffer(unsigned char* buffer, unsigned int sizeBuffer)
 }
 
 XaTestRunner::XaTestRunner(HDBC dbc)
-             : TestRunner(dbc)
+             : m_hdbc(dbc)
 {
+    GetUniqueName(m_tableName);
+    m_commandCreateTable = COMMAND_CREATE_TABLE;
+    m_commandInsertRow = COMMAND_INSERT_ROW;
 }
 
 XaTestRunner::~XaTestRunner()
@@ -496,6 +580,48 @@ void XidMgr::GetUniqueXid(XID& xid, int formatId, unsigned char* globalId, unsig
     GetRandomBuffer(&xid.data[xid.gtrid_length], xid.bqual_length);
 }
 
+int XaTestRunner::CheckRC(SQLRETURN rc, const char *msg, SQLHANDLE handle, SQLSMALLINT htype)
+{
+    if (rc == SQL_ERROR)
+    {
+        printf("Error occurred upon [%s]\n", msg);
+
+        if (handle)
+        {
+            SQLSMALLINT i = 0;
+            SQLSMALLINT outlen = 0;
+            SQLCHAR errmsg[1024];
+            SQLCHAR sql_state[6];
+            SQLINTEGER native_error = 0;
+
+            while ((rc = SQLGetDiagRec(htype, handle, ++i, sql_state, &native_error, errmsg, sizeof(errmsg), &outlen)) == SQL_SUCCESS
+                || rc == SQL_SUCCESS_WITH_INFO)
+            {
+                printf("Error# %d: [%s] state [%s]\n", i, errmsg, sql_state);
+            }
+        }
+
+        return 0;
+    }
+    else if (rc == SQL_SUCCESS_WITH_INFO && handle)
+    {
+        SQLSMALLINT i = 0;
+        SQLSMALLINT outlen = 0;
+        SQLCHAR errmsg[1024];
+        SQLCHAR sql_state[6];
+        SQLINTEGER native_error = 0;
+
+        printf("Success with info for [%s]:\n", msg);
+
+        while ((rc = SQLGetDiagRec(htype, handle, ++i, sql_state, &native_error, errmsg, sizeof(errmsg), &outlen)) == SQL_SUCCESS
+            || rc == SQL_SUCCESS_WITH_INFO)
+        {
+            printf("Msg# %d: [%s] state [%s]\n", i, errmsg, sql_state);
+        }
+    }
+    return 1;
+}
+
 RETCODE XaTestRunner::IssueXaCall(const XID* pXid, int operation, const int flags, unsigned char* buffer, unsigned int& sizeBuffer, RETCODE& xaStatus)
 {
     auto sizeLimit = sizeBuffer;
@@ -516,8 +642,8 @@ RETCODE XaTestRunner::IssueXaCall(const XID* pXid, int operation, const int flag
         memcpy_s(&param[1], sizeBuffer, buffer, sizeBuffer);
     }
 
-    RETCODE rc = SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);
-    CheckRC(rc, " XaTestRunner::IssueXaCall", hdbc, SQL_HANDLE_DBC);
+    RETCODE rc = SQLSetConnectAttr(m_hdbc, SQL_ATTR_ENLIST_IN_XA, param, SQL_IS_POINTER);
+    CheckRC(rc, " XaTestRunner::IssueXaCall", m_hdbc, SQL_HANDLE_DBC);
     xaStatus = SQL_SUCCEEDED(rc) ? param->status : rc;
     sizeBuffer = param->sizeReturned;
     if (sizeBuffer)
@@ -595,7 +721,98 @@ void XaTestRunner::XidShortToXid(const XID_SHORT& xids, XID& xid)
     memcpy_s(&xid.data[0], sizeof(xid.data), &xids.data[0], sizeof(xids.data));
 }
 
+void XaTestRunner::GetUniqueName(std::string& name)
+{
+    static std::atomic<unsigned short> counter(0);
+    auto id = counter++;
 
+    auto duration = std::chrono::system_clock::now().time_since_epoch();
+    long long millis = std::chrono::duration_cast<std::chrono::milliseconds>(duration).count();
+    char szName[64];
+    sprintf_s(szName, sizeof(szName), "test_%d_%lld", id, millis);
+    name = szName;
+}
+
+bool XaTestRunner::ExecuteQuery(const char* query, const char* msg, SQLHSTMT stmt)
+{
+    RETCODE rc = SQL_SUCCESS;
+    SQLHSTMT hstmt = stmt;
+    bool isAllocateStatement = (stmt == NULL);
+
+    if (isAllocateStatement)
+    {
+        rc = SQLAllocHandle(SQL_HANDLE_STMT, m_hdbc, &hstmt);
+    }
+
+    if (SQL_SUCCEEDED(rc))
+    {
+        rc = SQLExecDirectA(hstmt, (SQLCHAR*)query, SQL_NTS);
+        if (!SQL_SUCCEEDED(rc))
+        {
+            CheckRC(rc, msg, hstmt, SQL_HANDLE_STMT);
+        }
+
+        if (isAllocateStatement)
+        {
+            SQLFreeStmt(hstmt, SQL_CLOSE);
+        }
+    }
+    else
+    {
+        CheckRC(rc, "Alloc Statement", m_hdbc, SQL_HANDLE_DBC);
+    }
+
+    return SQL_SUCCEEDED(rc);
+
+}
+
+bool XaTestRunner::CreateTable(const std::string& name, SQLHSTMT stmt)
+{
+    char query[256];
+    sprintf_s(query, sizeof(query), m_commandCreateTable.c_str(), name.empty() ? "testRunner" : name.c_str());
+
+    return ExecuteQuery(query, "Create Table", stmt);
+}
+
+bool XaTestRunner::DropTable(const std::string& name, SQLHSTMT stmt)
+{
+    char query[256];
+    const char* tableName = name.empty() ? "testRunner" : name.c_str();
+    sprintf_s(query, sizeof(query), " IF OBJECT_ID('%s', 'U') IS NOT NULL DROP TABLE %s", tableName, tableName);
+
+    return ExecuteQuery(query, "Drop Table", stmt);
+}
+
+bool XaTestRunner::ExecuteInsertSequence(const std::string& nameTable, int rows, SQLHSTMT stmt)
+{
+    SQLHSTMT hstmt = stmt;
+    bool isAllocateStatement = (stmt == NULL);
+    RETCODE rc = SQL_SUCCESS;
+
+    if (isAllocateStatement)
+    {
+        rc = SQLAllocHandle(SQL_HANDLE_STMT, m_hdbc, &hstmt);
+        if (!SQL_SUCCEEDED(rc))
+        {
+            CheckRC(rc, "Alloc Statement", m_hdbc, SQL_HANDLE_DBC);
+            return false;
+        }
+    }
+
+    for (auto r = 0; r < rows; r++)
+    {
+        char query[256];
+        sprintf_s(query, sizeof(query), m_commandInsertRow.c_str(), nameTable.c_str(), r, r);
+        rc = ExecuteQuery(query, "Insert Row", hstmt);
+    }
+
+    if (isAllocateStatement)
+    {
+        SQLFreeStmt(hstmt, SQL_CLOSE);
+    }
+
+    return true;
+}
 ```
 
 

@@ -1,7 +1,7 @@
 ---
 title: 建立連線 URL | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2461413e6f41c82404ac11cc5769b74993f13ed8
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69028447"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004533"
 ---
 # <a name="building-the-connection-url"></a>建立連接 URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -92,18 +92,18 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 >  大括弧內的空格是常值，不會被修剪。  
   
 ##  <a name="Connectingintegrated"></a> 在 Windows 上使用整合式驗證連線  
- JDBC 驅動程式支援在 Windows 作業系統上使用類型 2 整合式驗證，方法是透過 integratedSecurity 連接字串屬性。 若要使用整合式驗證，請將 sqljdbc_auth.dll 檔複製到安裝 JDBC 驅動程式的電腦上 Windows 系統路徑中的目錄。  
+ JDBC 驅動程式支援在 Windows 作業系統上使用類型 2 整合式驗證，方法是透過 integratedSecurity 連接字串屬性。 若要使用整合式驗證，請將 mssql-jdbc_auth-\<版本>-\<架構>.dll 檔案複製到安裝 JDBC 驅動程式的電腦上 Windows 系統路徑中目錄。  
   
- sqljdbc_auth.dll 檔會安裝在下列位置：  
+ mssql-jdbc_auth-\<版本>-\<架構>.dll 檔案會安裝在下列位置：  
   
  \<*安裝目錄*>\sqljdbc_\<*版本*>\\<*語言*>\auth\  
   
  如需 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援哪些作業系統的資訊，請參閱[使用 Kerberos 整合式驗證連線到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) 以取得 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 中所新增功能的描述，讓應用程式能夠搭配類型 4 Kerberos 使用整合式驗證連線到資料庫。  
   
 > [!NOTE]  
->  如果您執行的是 32 位元的 Java Virtual Machine (JVM)，即使作業系統為 x64 版，也請使用 x86 資料夾中的 sqljdbc_auth.dll 檔案。 如果您是在 x64 處理器上執行 64 位元的 JVM，請使用 x64 資料夾中的 sqljdbc_auth.dll 檔案。  
+>  如果您執行的是 32 位元的 Java 虛擬機器 (JVM)，則即使作業系統為 x64 版，也請使用 x86 資料夾中的 mssql-jdbc_auth-\<版本>-\<架構>.dll 檔案。 如果您是在 x64 處理器上執行 64 位元的 JVM，請使用 x64 資料夾中的 mssql-jdbc_auth-\<版本>-\<架構>.dll 檔案。  
   
- 或者，您也可以設定 java.library.path 系統屬性來指定 sqljdbc_auth.dll 的目錄。 例如，如果 JDBC Driver 安裝在預設目錄中，您就可以在 Java 應用程式啟動時，使用下列虛擬機器 (VM) 引數來指定 DLL 的位置：  
+ 或者，您也可以設定 java.library.path 系統屬性來指定 mssql-jdbc_auth-\<版本>-\<架構>.dll 的目錄。 例如，如果 JDBC Driver 安裝在預設目錄中，您就可以在 Java 應用程式啟動時，使用下列虛擬機器 (VM) 引數來指定 DLL 的位置：  
   
  `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   

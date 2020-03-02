@@ -1,7 +1,7 @@
 ---
 title: 部署 JDBC 驅動程式 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 01/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 99ca0fab9a23689ac9c20cad6ebf0d94dd7b2113
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73049839"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004679"
 ---
 # <a name="deploying-the-jdbc-driver"></a>部署 JDBC 驅動程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,15 +30,8 @@ ms.locfileid: "73049839"
 >  如需一般部署 Java 應用程式的相關資訊，請參閱 Java 網站。  
   
 ## <a name="deploying-the-jdbc-driver-on-windows-systems"></a>在 Windows 系統上部署 JDBC 驅動程式  
- 在 Windows 作業系統上部署 JDBC 驅動程式時，您必須使用安裝套件的可執行 ZIP 檔版本，通常名為 `sqljdbc_<version>_<language>.exe`。  
-  
- 若要無訊息地執行可執行的 ZIP 檔，必須在命令列上或批次檔中使用 `/auto` 命令列選項，如下所示：  
-  
- `sqljdbc_<version>_<language>.exe /auto`  
-  
-> [!NOTE]  
->  使用 `/auto` 選項時，它並不是真的無訊息安裝，因為 WinZip 對話方塊仍會出現在使用者的畫面上。 不過，您將不需要與其互動，而且解壓縮作業一完成，它就會關閉。  
-  
+ 在 Windows 作業系統上部署 JDBC 驅動程式時，您必須將通常名為 `sqljdbc_<version>_<language>.zip` 的 ZIP 壓縮安裝套件解壓縮。
+
 ## <a name="deploying-the-driver-on-unix-systems"></a>在 UNIX 系統上部署驅動程式 
  在 UNIX 作業系統上部署 JDBC 驅動程式時，您必須使用安裝套件的 GZIP 檔版本，通常名為 `sqljdbc_<version>_<language>.tar.gz`。  
   
@@ -54,9 +47,9 @@ ms.locfileid: "73049839"
 
 ## <a name="legalities-of-driver-redistribution"></a>轉散發驅動程式的合法性
 
-JDBC Driver 6.0、6.2、6.4 與 7.0 版都是可轉散發的。 檢閱授權合約中的「可轉散發程式碼」  條款。
+JDBC Driver 6.0、6.2、6.4、7.0、7.2、7.4 與 8.2 版均為可轉散發。 檢閱授權合約中的「可轉散發程式碼」  條款。
 
-JDBC Driver 4.x 版已過時且已淘汰。 對 4.x 的支援已於 2018 年之前過期。
+JDBC 驅動程式 4.x 版已過時且已淘汰。 對 4.x 的支援已於 2018 年之前過期。
 
 ## <a name="see-also"></a>另請參閱  
  [JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

@@ -1,7 +1,7 @@
 ---
 title: 適用於 SQL Server 的 Microsoft JDBC 驅動程式支援對照表 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 950fa902d2772d131f5ecd626653ad58c97c0fb1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1f3c44f9f133d95a821cac7a1a97fe0c8ca60252
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69027888"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004524"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft JDBC Driver for SQL Server 支援對照表
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "69027888"
   此頁面包含 Microsoft JDBC Driver for SQL Server 的支援對照表與支援週期原則。  
   
 ## <a name="microsoft-jdbc-driver-support-lifecycle-matrix-and-policy"></a>Microsoft JDBC Driver 支援生命週期對照表及原則  
- Microsoft 支援週期 (MSL) 原則為 Microsoft 產品的支援生命週期提供透明而可預測的資訊。 JDBC 驅動程式 3.0、4.x、6.x 和 7.x 版自發行日期起提供五年的主要支援。 主要支援定義在 Microsoft 支援生命週期網站上。  
+ Microsoft 支援週期 (MSL) 原則為 Microsoft 產品的支援生命週期提供透明而可預測的資訊。 JDBC 驅動程式 3.0、4.x、6.x、7.x 和 8.x 版自驅動程式發行日期起提供五年的主要支援。 主要支援定義在 Microsoft 支援生命週期網站上。  
   
  Microsoft JDBC Driver 不提供延長支援與自訂支援選項。  
     
@@ -32,6 +32,7 @@ ms.locfileid: "69027888"
   
 |驅動程式名稱|驅動程式套件版本|適用的 JAR|主要支援結束日期|
 |-|-|-|-|  
+|Microsoft JDBC Driver 8.2 for SQL Server|8.2|mssql-jdbc-8.2.0.jre13.jar<br> mssql-jdbc-8.2.0.jre11.jar<br> mssql-jdbc-8.2.0.jre8.jar|2025 年 1 月 31 日|
 |Microsoft JDBC Driver 7.4 for SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|2024 年 8 月 2 日|
 |Microsoft JDBC Driver 7.2 for SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|2024 年 4 月 16 日|
 |Microsoft JDBC Driver 7.0 for SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|2023 年 7 月 31 日|  
@@ -39,12 +40,12 @@ ms.locfileid: "69027888"
 |Microsoft JDBC Driver 6.2 for SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|2022 年 6 月 30 日|    
 |Microsoft JDBC Driver 6.0 for SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|2021 年 7 月 14 日|    
 |Microsoft JDBC Driver 4.2 for SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|2020 年 8 月 24 日|  
-|Microsoft JDBC Driver 4.1 for SQL Server|4.1|sqljdbc41.jar|2019 年 12 月 12 日|  
   
  下列 Microsoft JDBC Driver 不再支援。  
  
 |驅動程式名稱|驅動程式套件版本|主要支援結束日期|  
 |-|-|-|
+|Microsoft JDBC Driver 4.1 for SQL Server|4.1|2019 年 12 月 12 日| 
 |Microsoft JDBC Driver 4.0 for SQL Server|4.0|2017 年 3 月 6 日|  
 |Microsoft SQL Server JDBC Driver 3.0|3.0|2015 年 4 月 23 日|  
 |Microsoft SQL Server JDBC Driver 2.0|2.0|2012 年 12 月 31 日|  
@@ -57,6 +58,7 @@ ms.locfileid: "69027888"
   
 |驅動程式版本|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
 |-|-|-|-|-|-|-|-|-|-|-|
+|8.2|N|N|Y|Y|Y|Y|Y|Y|Y|
 |7.4|N|N|Y|Y|Y|Y|Y|Y|Y|
 |7.2|N|Y|Y|Y|Y|Y|Y|Y|N| 
 |7.0|N|Y|Y|Y|Y|Y|Y|Y|N| 
@@ -88,6 +90,7 @@ ms.locfileid: "69027888"
   
 |JDBC 驅動程式版本|JRE 版本|JDBC API 版本| 
 |-|-|-|  
+|8.2|1.8、11、13|4.2、4.3 (部份)|
 |7.4|1.8、11、12|4.2、4.3 (部份)|
 |7.2|1.8、11|4.2、4.3 (部份)|
 |7.0|1.8、10|4.2、4.3 (部份)|
@@ -108,8 +111,7 @@ ms.locfileid: "69027888"
 ## <a name="supported-operating-systems"></a>支援的作業系統  
  Microsoft JDBC Driver 的設計可以在所有支援 JAVA 虛擬機器 (JVM) 的作業系統上運作。 一些常用的平台包括 Windows 10、Windows 8.1、Windows 8、Windows 7、Windows Server 2008 R2、Windows Vista、Linux、Unix、AIX、MacOS 等等。  
   
- JDBC 產品小組在 Windows、Sun Solaris、SUSE Linux 及 RedHat Linux 上測試過我們的驅動程式。  所有平台的客戶皆可享有客戶支援服務，但我們可能會要求您在平台 (例如 Windows) 上重現問題。  
-  
+ JDBC 產品小組在 Windows、Sun Solaris、SUSE Linux、Ubuntu Linux、CentOS Linux 及 macOS 上測試過我們的驅動程式。
 ## <a name="application-server-support"></a>應用程式伺服器支援  
  Microsoft JDBC Driver for SQL Server 已在各種應用程式伺服器上經過測試。  如需產品相容之驅動程式版本的詳細資訊，請洽詢您的應用程式伺服器廠商。
  

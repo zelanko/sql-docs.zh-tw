@@ -1,5 +1,5 @@
 ---
-title: 將多個資料區連結至相同的資料集 (報表產生器及 SSRS) | Microsoft Docs
+title: 將多個資料區連結至相同的資料集 (報表產生器) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c67ddcb48847d3618c9544c50868b555e263fd7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d282c2c84060fb205dc0421d531a5fe23003b77e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580143"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081963"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>將多個資料區連結至相同的資料集 (報表產生器及 SSRS)
 

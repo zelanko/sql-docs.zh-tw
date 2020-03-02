@@ -5,16 +5,16 @@ description: 本文說明 SQL Server 巨量資料叢集的最新更新和已知�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba9d87d4985655b314faf391eaffb8f28ba35519
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9de368594383ef1f7fe3ae3c062f92873fb15698
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75721627"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256897"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 巨量資料叢集版本資訊
 
@@ -50,7 +50,7 @@ ms.locfileid: "75721627"
 
 |平台|支援的版本|
 |---------|---------|
-|`azdata`|必須與伺服器具有相同的次要版本 (與 SQL Server 主要執行個體相同)。<br/>執行 `azdata –-version` 以驗證版本。 目前，版本為 `15.0.2070`。|
+|`azdata`|必須與伺服器具有相同的次要版本 (與 SQL Server 主要執行個體相同)。<br/><br/>執行 `azdata –-version` 以驗證版本。<br/><br/>自 SQL Server 2019 CU2 起，本版為 `15.0.4013`。|
 |Azure Data Studio|取得 [Azure Data Studio](https://aka.ms/getazuredatastudio) 的最新組建。|
 
 ## <a name="release-history"></a>版本歷程記錄
@@ -59,12 +59,21 @@ ms.locfileid: "75721627"
 
 | 版本               | 版本       | 發行日期 |
 |-----------------------|---------------|--------------|
+| [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
 | [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
 | [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
 
 ## <a name="how-to-install-updates"></a>如何安裝更新
 
 若要安裝更新，請參閱[如何升級 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md)。
+
+## <a id="cu2"></a> CU2 (2020 年 2 月)
+
+SQL Server 2019 的累積更新 2 (CU2) 版本。 此版本的 SQL Server 資料庫引擎版本為 15.0.4003.23。
+
+|套件版本 | 映像標籤 |
+|-----|-----|
+|15.0.4013.40 |[2019-CU2-ubuntu-16.04]
 
 ## <a id="cu1"></a> CU1 (2020 年 1 月)
 
@@ -115,7 +124,7 @@ SQL Server 2019 一般發行版本 1 (GDR1) - 引進 [!INCLUDE[big-data-clusters
 
 - **因應措施**：增加升級的逾時。 
 
-   若要增加升級的逾時，請編輯升級設定對應。 若要編輯升級設定對應：
+   若要增加升級的逾時，請編輯升級設定對應。 編輯升級設定對應：
 
    1. 執行以下命令：
 

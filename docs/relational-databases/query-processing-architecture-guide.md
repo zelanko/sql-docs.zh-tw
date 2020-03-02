@@ -1,7 +1,7 @@
 ---
 title: 查詢處理架構指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/24/2019
+ms.date: 02/14/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - row mode execution
 - batch mode execution
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: e5b890ff4a9d58f531f3a72e41e8280faf2511a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+author: pmasl
+ms.author: pelopes
+ms.openlocfilehash: b6000c540d2847686fd8f14c4ae6a0926f8dbb72
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909748"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77466169"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ GO
 
 從許多可能的計畫中選擇其中一個執行計畫的程序，便稱為最佳化。 查詢最佳化工具是 SQL 資料庫系統中最重要的元件之一。 因為查詢最佳化工具使用部份負擔來分析查詢並選取計畫，所以當查詢最佳化工具挑出最有效率的執行計畫時，這個負擔通常已經儲存了好幾層。 例如，兩家營造公司可能對同一間房屋有相同的藍圖。 如果有一家公司在剛開始時，願意花幾天的時間計畫將如何建造房屋，而另一家公司則不計畫就開始建造，那麼有花時間規劃其專案的公司，最有可能在第一時間完成。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具是以成本為基礎的查詢最佳化工具。 每個可能的執行計畫都有計算所使用資源量的相關成本。 查詢最佳化工具必須分析可能的計畫並選擇最低估計成本的計畫。 有些複雜的 `SELECT` 陳述式具備數千個可能的執行計畫。 在這樣的情況下，查詢最佳化工具不會分析所有可能的組合。 相反的，它會使用複雜的演算法來尋找最接近最小可能成本的執行計畫。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具是以費用為基礎的最佳化工具。 每個可能的執行計畫都有計算所使用資源量的相關成本。 查詢最佳化工具必須分析可能的計畫並選擇最低估計成本的計畫。 有些複雜的 `SELECT` 陳述式具備數千個可能的執行計畫。 在這樣的情況下，查詢最佳化工具不會分析所有可能的組合。 相反的，它會使用複雜的演算法來尋找最接近最小可能成本的執行計畫。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具並不僅是選擇最低資源成本的執行計畫，也選擇傳回給使用者的結果中，具合理的資源成本，以及傳回結果速度最快的計畫。 例如，一般平行處理查詢時，需使用比循序處理時使用更多的資源，但完成的速度較快。 如果伺服器的負載不會受到負面的影響，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具將會使用平行執行計畫來傳回結果。
 
@@ -127,12 +127,12 @@ GO
 
 1. 剖析器會掃描 `SELECT` 陳述式，並將其分成數個邏輯單位，例如關鍵字、運算式、運算子和識別碼。
 2. 然後系統會建立查詢樹 (有時也稱為序列樹)，描述將來源資料轉換成結果集所需格式的邏輯步驟。
-3. 查詢最佳化工具會分析可存取來源資料表的數種方式。 接著它會選取一系列的步驟，以利使用更少的資源以最快的速度傳回結果。 將會更新查詢以記錄所有的系列步驟。 查詢樹的最後最佳版本就稱為執行計畫。
+3. 查詢最佳化工具會分析可存取來源資料表的數種方式。 接著會選取一系列使用較少資源，但能最快傳回結果的步驟。 將會更新查詢以記錄所有的系列步驟。 查詢樹的最後最佳版本就稱為執行計畫。
 4. 關聯式引擎開始執行執行計畫。 當在處理需要基底資料表中資料的步驟時，關聯式引擎會要求儲存引擎，從取自關聯式引擎的資料列集中傳回資料。
 5. 關聯式引擎處理從儲存引擎傳回的資料，並將其設定成結果集所定義的格式，然後將結果集傳回給用戶端。
 
 ### <a name="ConstantFolding"></a> 常數摺疊和運算式評估 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會在早期評估某些常數運算式，以改進查詢效能。 這個作業稱為常數摺疊 (Constant Folding)。 常數是 [!INCLUDE[tsql](../includes/tsql-md.md)] 常值，例如 3、'ABC'、'2005-12-31'、1.0e3 或 0x12345678。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會在早期評估某些常數運算式，以改進查詢效能。 這個作業稱為常數摺疊 (Constant Folding)。 常數是 [!INCLUDE[tsql](../includes/tsql-md.md)] 常值，例如 `3`、`'ABC'`、`'2005-12-31'`、`1.0e3` 或 `0x12345678`。
 
 #### <a name="foldable-expressions"></a>可摺疊運算式
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會在下列運算式類型中使用常數摺疊：
@@ -203,11 +203,11 @@ GO
 CREATE PROCEDURE MyProc2( @d datetime )
 AS
 BEGIN
-DECLARE @d2 datetime
-SET @d2 = @d+1
-SELECT COUNT(*)
-FROM Sales.SalesOrderHeader
-WHERE OrderDate > @d2
+  DECLARE @d2 datetime
+  SET @d2 = @d+1
+  SELECT COUNT(*)
+  FROM Sales.SalesOrderHeader
+  WHERE OrderDate > @d2
 END;
 ```
 
@@ -219,7 +219,7 @@ END;
 即使資料定義語言 (DDL) 陳述式 (例如 `CREATE PROCEDURE` 或 `ALTER TABLE`) 最後會解析為系統目錄資料表上一連串的關聯式作業，但有時還是會根據資料表來解析 (例如 `ALTER TABLE ADD COLUMN`)。
 
 ### <a name="worktables"></a>工作資料表
-關聯式引擎在執行 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中所指定的邏輯作業前，可能需要先建立一個工作資料表。 工作資料表屬於內部資料表，可用來保存中繼結果。 工作資料表會針對特定的 `GROUP BY`、 `ORDER BY`或 `UNION` 查詢而產生。 例如，如果 `ORDER BY` 子句會參考不在任何索引範圍內的資料行，則關聯式引擎可能需要產生工作資料表，根據所要求的順序來排序結果集。 工作資料表有時候也當作多工緩衝處理使用，可暫時保存執行部份查詢計畫的結果。 工作資料表會建立在 tempdb 中，並且在不需再使用時自動卸除。
+關聯式引擎必須建置工作資料表，以執行 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中指定的邏輯作業。 工作資料表屬於內部資料表，可用來保存中繼結果。 工作資料表會針對特定的 `GROUP BY`、 `ORDER BY`或 `UNION` 查詢而產生。 例如，若 `ORDER BY` 子句參考的資料行不在任何索引範圍內，關聯式引擎便須產生工作資料表，將結果集排序成要求的順序。 工作資料表有時候也當作多工緩衝處理使用，可暫時保存執行部份查詢計畫的結果。 工作資料表會建立在 tempdb 中，並且在不需再使用時自動卸除。
 
 ### <a name="view-resolution"></a>檢視解析
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢處理器對待索引及非索引檢視的方式不同： 
@@ -240,7 +240,7 @@ CREATE VIEW EmployeeName AS
 SELECT h.BusinessEntityID, p.LastName, p.FirstName
 FROM HumanResources.Employee AS h 
 JOIN Person.Person AS p
-ON h.BusinessEntityID = p.BusinessEntityID;
+  ON h.BusinessEntityID = p.BusinessEntityID;
 GO
 ```
 
@@ -251,16 +251,16 @@ GO
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
 JOIN AdventureWorks2014.dbo.EmployeeName AS EmpN
-ON (soh.SalesPersonID = EmpN.BusinessEntityID)
+  ON (soh.SalesPersonID = EmpN.BusinessEntityID)
 WHERE OrderDate > '20020531';
 
 /* SELECT referencing the Person and Employee tables directly. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.HumanResources.Employee AS e 
 JOIN AdventureWorks2014.Sales.SalesOrderHeader AS soh
-ON soh.SalesPersonID = e.BusinessEntityID
+  ON soh.SalesPersonID = e.BusinessEntityID
 JOIN AdventureWorks2014.Person.Person AS p
-ON e.BusinessEntityID =p.BusinessEntityID
+  ON e.BusinessEntityID =p.BusinessEntityID
 WHERE OrderDate > '20020531';
 ```
 
@@ -328,7 +328,7 @@ WHERE TableA.ColZ = TableB.Colz;
   * `ARITHABORT`
   * `CONCAT_NULL_YIELDS_NULL`
   * `QUOTED_IDENTIFIER` 
-  * `NUMERIC_ROUNDABORT` 工作階段選項會設定為 OFF。
+* `NUMERIC_ROUNDABORT` 工作階段選項會設定為 OFF。
 * 查詢最佳化工具會從檢視索引資料行與查詢中的元素之間找出相符之處，例如： 
   * 位於 WHERE 子句中的搜尋條件述詞
   * 聯結作業
@@ -348,7 +348,6 @@ WHERE TableA.ColZ = TableB.Colz;
 查詢最佳化工具會將 `FROM` 子句中參考的索引檢視表視為標準檢視表。 在最佳化程序開始時，查詢最佳化工具會將檢視的定義擴充到查詢中。 接著，會執行索引檢視比對。 索引檢視表可用在查詢最佳化工具所選取的最終執行計畫中，或者，此計畫可存取檢視表所參考的基底資料表，藉以從檢視表具體化必要的資料。 查詢最佳化工具會選擇成本最低的方式。
 
 #### <a name="using-hints-with-indexed-views"></a>搭配索引檢視使用提示
-
 您可以使用 `EXPAND VIEWS` 查詢提示來防止在查詢中使用檢視表索引，或者可以使用 `NOEXPAND` 資料表提示，針對查詢的 `FROM` 子句所指定的索引檢視表強制使用索引。 然而，您應該讓查詢最佳化工具動態判斷每個查詢最適用的存取方法。 只有在測試已顯現出其大幅改善效能的特定情況下，才能使用 `EXPAND` 和 `NOEXPAND` 。
 
 `EXPAND VIEWS` 選項指定查詢最佳化工具在整個查詢中不會使用任何檢視表索引。 
@@ -364,7 +363,6 @@ WHERE TableA.ColZ = TableB.Colz;
 不允許在索引檢視表的定義中使用提示。 在 80 與更高的相容性模式下，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在維護索引檢視表定義時，或在執行使用索引檢視表的查詢時，都會忽略定義中的提示。 雖然在 80 相容性模式下使用索引檢視定義中的提示並不會產生語法錯誤，但這些提示還是會被忽略。
 
 ### <a name="resolving-distributed-partitioned-views"></a>解析分散式資料分割檢視
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢處理器最佳化分散式資料分割檢視的效能。 分散式資料分割檢視效能最重要的一點，便是將在成員伺服器間傳輸的資料量最小化。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會建立智慧型的動態計畫，以有效使用分散式查詢來存取遠端成員資料表的資料： 
@@ -408,34 +406,66 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有時候甚至會為尚未參數化的查詢建立這些動態執行計畫類型。 查詢最佳化工具可能會參數化查詢以重複使用執行計畫。 如果查詢最佳化工具將對參考資料分割檢視的查詢進行參數化，則查詢最佳化工具不會再假設需要的資料列將取自指定的基底資料表。 接著在執行計畫中必須使用動態篩選。
 
 ## <a name="stored-procedure-and-trigger-execution"></a>預存程序與觸發程序執行
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 只會儲存預存程序和觸發程序的來源。 當先執行預存程序或觸發程序時，會將來源編譯成執行計畫。 如果在執行計畫從記憶體中淘汰之前，再執行一次預存程序或觸發程序，關聯式引擎會偵測到現有的計畫並重複使用它。 如果計畫已從記憶體淘汰，就會建立新計畫。 此處理序與 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 對於所有 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式所依循的處理序類似。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，相較於動態 [!INCLUDE[tsql](../includes/tsql-md.md)] 的批次，預存程序與觸發程序的主要效能優點為，其 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式一律是相同的。 因此，關聯式引擎可以輕易地將這些陳述式與任何現有的執行計畫配對。 就可以輕易地重複使用預存程序及觸發程序計畫
 
 預存程序及觸發程序的執行計畫，將分別自呼叫預存程序，或引發觸發程序之批次的執行計畫中執行。 這可以允許更多次重複使用預存程序及觸發程序執行計畫。
 
 ## <a name="execution-plan-caching-and-reuse"></a>執行計畫快取與重複使用
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 具有一個記憶體集區，可用來儲存執行計畫以及資料緩衝區。 配置給執行計畫或資料緩衝區的集區百分比，會依系統的狀態而動態調整。 記憶體集區中用來儲存執行計畫的那一部分，稱為計畫快取。
+
+計畫快取有兩個可用於存放經過編譯的計畫：
+-  **物件計畫**快取存放區 (OBJCP) 用於持續性物件 (預存程序、函數和觸發程序) 相關的計畫。
+-  **SQL 計畫**快取存放區 (SQLCP) 用於與自動參數化、動態或預查詢相關的計畫。
+
+下列查詢提供這兩個快取存放區的憶體使用量相關資訊：
+
+```sql
+SELECT * FROM sys.dm_os_memory_clerks
+WHERE name LIKE '%plans%';
+```
+
+> [!NOTE]
+> 計畫快取有兩個額外存放區，但不會用於存放計畫：     
+> -  **繫結樹狀結構**快取存放區 (PHDR) 用於檢視、條件約束與預設值計畫編譯期間所使用的資料結構。 這些結構稱為繫結樹狀結構或 Algebrizer 樹狀結構。      
+> -  **擴充預存程序**快取存放區 (XPROC) 用於預先定義的系統程序，例如 `sp_executeSql`，或是使用 DLL 而不是 Transact-SQL 陳述式定義的 `xp_cmdshell`。 快取的結構只包含程序實作的函式名稱與 DLL 名稱。      
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行計畫具有下列主要元件： 
 
-- **查詢執行計畫**     
-  大多數的執行計畫是可重新進入的唯讀資料結構，而且可供任意數目的使用者所使用。 此稱為查詢計畫。 查詢計畫中並不會儲存任何使用者內容。 記憶體中絕不會有超過一或兩個的查詢計畫副本：一個是所有序列執行的副本，另一個則是所有平行執行的副本。 平行副本會涵蓋所有的平行執行，不論其平行處理原則的程度為何。 
+- **已編譯計畫** (或查詢計畫)     
+  編譯程序產生的查詢計畫，大多是可重複使用的唯讀資料結構，可供任意數量的使用者使用。 該計畫會儲存下列資訊：
+  -  實作邏輯運算子所描述之作業的實體運算子。 
+  -  這些運算子的順序，決定資料存取、篩選及彙總的順序。 
+  -  預估會流經運算子的資料列數。 
+  
+     > [!NOTE]
+     > 較新版的 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 也會儲存[基數估計](../relational-databases/performance/cardinality-estimation-sql-server.md)時所使用之統計資料物件的相關資訊。
+     
+  -  必須建立的支援物件，例如 tempdb 中的[工作資料表](#worktables)或工作檔案。 
+  查詢計畫中不會儲存任何使用者內容或執行階段資訊。 記憶體中絕不會有超過一或兩個的查詢計畫副本：一個是所有序列執行的副本，另一個則是所有平行執行的副本。 平行副本會涵蓋所有的平行執行，不論其平行處理原則的程度為何。   
+  
 - **執行內容**     
-  目前執行查詢的每位使用者都有資料結構，其中保存了與其執行相關的特定資料，例如參數值。 此資料結構即稱為執行內容。 而此執行內容資料結構將會重複使用。 如果使用者執行查詢，而且其中有一個結構不在使用中，則系統會根據新使用者的內容來重新初始化該結構。 
+  目前執行查詢的每位使用者都有資料結構，其中保存了與其執行相關的特定資料，例如參數值。 此資料結構即稱為執行內容。 執行內容資料結構會重複使用，但內容不會。 若其他使用者執行相同的查詢，將會為新使用者的內容重新初始化資料結構。 
 
-![execution_context](../relational-databases/media/execution-context.gif)
-
-在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中執行任何 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式時，關聯式引擎會先尋找整個計畫快取，以確認相同 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的現有執行計畫是否存在。 如果 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式與先前執行之 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述的快取計畫每個字元都相符，它就符合存在的資格。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 找到任何現有的計畫，就會加以重複使用，如此可減輕重新編譯 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的負擔。 如果沒有現有的執行計畫，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會為查詢建立新執行計畫。
+  ![execution_context](../relational-databases/media/execution-context.gif)
 
 > [!NOTE]
-> 不會快取某些 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式，例如在資料列存放區上執行的大量作業陳述式，或包含之字串常值大小大於 8 KB 的陳述式。
+> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 有三個選項可顯示執行計畫：        
+> -  ***[估計執行計畫](../relational-databases/performance/display-the-estimated-execution-plan.md)***：這是編譯過的計畫。        
+> -  ***[實際執行計畫](../relational-databases/performance/display-an-actual-execution-plan.md)***：這與編譯過的計畫相同，再加上其執行內容。 這包括執行完成之後可用的執行階段資訊，例如執行警告；在較新版的 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 中則是執行的經過時間與所使用的 CPU 時間。        
+> -  ***[即時查詢統計資料](../relational-databases/performance/live-query-statistics.md)***：這與編譯過的計畫相同，加上其執行內容。 這包括執行過程中的執行階段資訊，會每秒更新一次。 舉例來說，執行階段資訊包括流經運算子的實際資料列數。       
+
+當任何 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中執行時，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 會先搜尋整個計畫快取，確認同一 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式已有執行計畫。 如果 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式與先前執行之 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述的快取計畫每個字元都相符，它就符合存在的資格。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 找到任何現有的計畫，就會加以重複使用，如此可減輕重新編譯 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的負擔。 若無執行計畫，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會為該查詢產生新的執行計畫。
+
+> [!NOTE]
+> 有一些 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的執行計畫不會保存在計畫快取中，例如對資料列存放區執行的大量作業陳述式，或包含大於 8 KB 之字串常值的陳述式。 這些計劃只會存在於查詢執行過程之中。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有一個非常有效率的演算法，可尋找任何特定 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的現有執行計畫。 在大部分的系統中，這個掃描所使用的最少資源，比能夠重複使用現有計畫來取代編譯每個 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式所節省下來的資源還少。
 
-此演算法若要能使得新 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式符合快取中現有、未使用的執行計畫，所有物件參考必須是完整的。 例如，假設對於執行以下 `Person` 陳述式的使用者，`SELECT` 是預設結構描述。 但是在此範例中，`Person` 不需要是完整的，這表示第二個陳述式與現有的計畫不相符合，但第三個是相符合的：
+此演算法要能比對新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式與現有的陳述式，計畫快取中未使用之執行計畫的所有物件參考都必須完整。 例如，假設對於執行以下 `Person` 陳述式的使用者，`SELECT` 是預設結構描述。 但是在此範例中，`Person` 不需要是完整的，這表示第二個陳述式與現有的計畫不相符合，但第三個是相符合的：
 
 ```sql
+USE AdventureWorks2014;
+GO
 SELECT * FROM Person;
 GO
 SELECT * FROM Person.Person;
@@ -444,8 +474,154 @@ SELECT * FROM Person.Person;
 GO
 ```
 
-### <a name="removing-execution-plans-from-the-plan-cache"></a>從計畫快取中移除執行計畫
+變更指定執行的下列任何 SET 選項，將會影響重複使用計畫的能力。這是因為 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 會執行[常數摺疊](#ConstantFolding)，而這些選項將會影響這類運算式的結果：
 
+|||   
+|-----------|------------|------------|    
+|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|    
+|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|    
+|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|    
+|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|    
+|ANSI_NULLS|NO_BROWSETABLE|ANSI_DEFAULTS|    
+
+### <a name="caching-multiple-plans-for-the-same-query"></a>為相同的查詢快取多個計畫 
+查詢與執行計畫在 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 中都是獨一無二的，與指紋非常類似：
+-  **查詢計畫雜湊**是針對指定查詢之執行計畫計算所得的二進位雜湊值，可用於專門識別類似的執行計畫。 
+-  **查詢雜湊**是針對 [!INCLUDE[tsql](../includes/tsql-md.md)] 查詢文字計算所得的二進位雜湊值，可用於專門識別查詢。 
+
+您可以使用**計畫控制代碼**，從計畫快取中擷取經過編譯的計畫，但該代碼只是暫時性識別碼，只在計畫仍保留在快取中時，才會保持不變。 計畫控制代碼是從整個批次中經過編譯之計畫衍生而來的雜湊值。 即使在批次中有一或多個陳述式重新編譯，經過編譯之計畫的計畫控制代碼仍維持不變。
+
+> [!NOTE]
+> 若是針對批次編譯計畫，而不是針對單一陳述式，可以使用計畫控制代碼與陳述式位移，擷取批次中個別陳述式的計畫。     
+> `sys.dm_exec_requests` DMV 包含每一筆記錄的 `statement_start_offset` 與 `statement_end_offset` 資料行，而這些記錄會參考目前正在執行之批次或保存物件目前正在執行的陳述式。 如需詳細資訊，請參閱 [sys.dm_exec_requests (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。       
+> `sys.dm_exec_query_stats` DMV 也包含每一筆記錄的這些資料行，而這些記錄會參考批次中的陳述式位置或保存物件的位置。 如需詳細資訊，請參閱 [sys.dm_exec_query_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)。     
+
+批次的實際 [!INCLUDE[tsql](../includes/tsql-md.md)] 文字會儲存在計畫快取的個別記憶體空間中，稱為 **SQL 管理員**快取 (SQLMGR)。 您可以使用 **SQL 控制代碼**，從 SQL 管理員快取中擷取經過編譯之計畫的 [!INCLUDE[tsql](../includes/tsql-md.md)] 文字。此項文字是暫時性的識別碼，只在計畫快取中至少有一個計畫仍在參考該代碼時，才會保持不變。 SQL 控制代碼是從整個批次文字衍生而來的雜湊值，而且在每個批次都是獨一無二。
+
+> [!NOTE]
+> 一如經過編譯的計畫般，每個批次的 [!INCLUDE[tsql](../includes/tsql-md.md)] 文字包括註解在內，均會加以儲存。 SQL 控制代碼包括整個批次文字的 MD5 雜湊值，而且在每個批次都是獨一無二。
+
+下列查詢提供 SQL 管理員快取之記憶體使用量的相關資訊：
+
+```sql
+SELECT * FROM sys.dm_os_memory_objects
+WHERE type = 'MEMOBJ_SQLMGR';
+```
+
+SQL 控制代碼與計畫控制代碼之間存在 1:N 的關聯性。 當經過編譯之計畫的快取索引鍵不同時，就會出現此情況。 若同一批次在兩次執行時 SET 選項有所變更，就可能會出現此情況。
+
+請考慮下列預存程序：
+
+```sql
+USE WideWorldImporters;
+GO
+CREATE PROCEDURE usp_SalesByCustomer @CID int
+AS
+SELECT * FROM Sales.Customers
+WHERE CustomerID = @CID
+GO
+
+SET ANSI_DEFAULTS ON
+GO
+
+EXEC usp_SalesByCustomer 10
+GO
+```
+
+您可以使用下列查詢，確認可以在計畫快取中找到的內容：
+
+```sql
+SELECT cp.memory_object_address, cp.objtype, refcounts, usecounts, 
+    qs.query_plan_hash, qs.query_hash,
+    qs.plan_handle, qs.sql_handle
+FROM sys.dm_exec_cached_plans AS cp
+CROSS APPLY sys.dm_exec_sql_text (cp.plan_handle)
+CROSS APPLY sys.dm_exec_query_plan (cp.plan_handle)
+INNER JOIN sys.dm_exec_query_stats AS qs ON qs.plan_handle = cp.plan_handle
+WHERE text LIKE '%usp_SalesByCustomer%'
+GO
+```
+
+[!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+現在，請使用不同的參數執行預存程序，但不變更執行內容：
+
+```sql
+EXEC usp_SalesByCustomer 8
+GO
+```
+
+再次確認可以在計畫快取中找到的內容。 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+請注意，`usecounts` 已增加至 2。這表示因為重複使用了執行內容資料結構，所以重複使用了相同內容的快取計畫。 現在，請變更 `SET ANSI_DEFAULTS` 選項，並使用相同的參數執行預存程序。
+
+```sql
+SET ANSI_DEFAULTS OFF
+GO
+
+EXEC usp_SalesByCustomer 8
+GO
+```
+
+再次確認可以在計畫快取中找到的內容。 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CD01DEC060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02B031F111CD01000001000000000000000000000000000000000000000000000000000000
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+請注意，現在 `sys.dm_exec_cached_plans` DMV 輸出中有兩個項目：
+-  `usecounts` 資料行顯示第一筆記錄中 `1` 的值，這是使用 `SET ANSI_DEFAULTS OFF` 執行一次的計畫。
+-  `usecounts` 資料行顯示第二筆記錄中 `2` 的值，這是使用 `SET ANSI_DEFAULTS ON` 執行的計畫，因為其執行了兩次。    
+-  不同的 `memory_object_address` 指向計畫快取中的不同執行計畫項目。 但這兩個項目因為參考了同一批次，所以兩者的 `sql_handle` 值都相同。 
+   -  執行設定為 OFF 的 `ANSI_DEFAULTS` 有一個新的 `plan_handle`，而且可以重複用於呼叫具有相同 SET 選項集合。 由於執行內容已因為 SET 選項的變更而重新初始化，所以需要新的計畫控制代碼。 這並不會觸發重新編譯：由同一 `query_plan_hash` 及 `query_hash` 值可證，這兩個項目都會參考相同的計畫與查詢。
+
+實際上，這表示在快取中我們會有兩個計劃項目對應到至相同的批次，顯示確認會對 SET 選項造成影響的計畫快取相同十分重要，當重複執行相同的查詢時，須最佳化以利計畫重複使用，以及將計畫快取大小維持在其所需的最小值。 
+
+> [!TIP]
+> 常見的缺點是，不同的用戶端可能會有不同的 SET 選項預設值。 例如，透過 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 所建立的連線，會自動將 `QUOTED_IDENTIFIER` 設定為 ON，而 SQLCMD 會將 `QUOTED_IDENTIFIER` 設定為 OFF。 從這兩個用戶端執行相同的查詢，將會產生多個計畫 (如上述範例所述)。
+
+### <a name="removing-execution-plans-from-the-plan-cache"></a>從計畫快取中移除執行計畫
 只要記憶體足以存放執行計畫，執行計畫就會保留在計畫快取中。 當記憶體壓力存在時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 就會使用以成本為基礎的方法來判斷要從計畫快取中移除哪些執行計畫。 為了進行以成本為基礎的決策，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會根據下列因素，針對每個執行計畫增加和減少目前的成本變數。
 
 當使用者處理序將執行計畫插入快取時，該使用者處理序會將目前的成本設定為等於原始查詢編譯成本。若為特定執行計畫，使用者處理序則會將目前成本設定為零。 因此，每當使用者程序參考執行計畫時，它都會將目前成本重設為原始編譯成本；如果是特定執行計畫，使用者程序會增加目前成本。 對於所有計畫而言，目前成本的最大值就是原始編譯成本。
@@ -503,14 +679,13 @@ GO
 
 > [!NOTE]
 > 在沒有 xEvents 可用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中，可以針對報告陳述式層級重新編譯的相同目的，使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) 追蹤事件。
-> 追蹤事件 [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) 也會報告陳述式層級重新編譯，而且此追蹤事件也可用來追蹤及偵錯重新編譯。 SP:Recompile 只能針對預存程序及觸發程序來產生；相較之下，`SQL:StmtRecompile` 可針對預存程序、觸發程序、隨選批次、使用 `sp_executesql` 執行的批次、準備查詢及動態 SQL 來產生。
+> 追蹤事件 `SQL:StmtRecompile` 也會報告陳述式層級重新編譯，而且此追蹤事件也可用來追蹤及偵錯重新編譯。 `SP:Recompile` 只能針對預存程序及觸發程序來產生；相較之下， `SQL:StmtRecompile` 可針對預存程序、觸發程序、特定批次、使用 `sp_executesql`執行的批次、準備查詢及動態 SQL 來產生。
 > `SP:Recompile` 和 `SQL:StmtRecompile` 的 *EventSubClass* 資料行包含一個整數碼，可指出重新編譯的原因。 程式碼的說明請參閱[這裡](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)。
 
 > [!NOTE]
 > 當 `AUTO_UPDATE_STATISTICS` 資料庫選項設定為 `ON` 時，若其目標資料表或索引檢視表的統計資料或基數明顯和上次執行不同時，就會重新編譯查詢。 此行為適用於標準使用者定義的資料表、暫存資料表，以及 DML 觸發程序所建立的插入和刪除資料表。 如果過多的重新編譯影響了查詢效能，請考慮將此設定值變更為 `OFF`。 當 `AUTO_UPDATE_STATISTICS` 資料庫選項設定為 `OFF` 時，就不會基於統計資料或基數變更發生重新編譯，但 DML `INSTEAD OF` 觸發程序所建立的插入和刪除資料表例外。 因為這些資料表是在 tempdb 中建立的，所以存取它們的查詢是否要重新編譯，取決於 tempdb 中 `AUTO_UPDATE_STATISTICS` 的設定。 請注意，在 2005 版之前的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，即使此設定為 `OFF`，還是會繼續根據 DML 觸發程序所插入和刪除之資料表的基數變更來重新編譯查詢。
 
 ### <a name="PlanReuse"></a> 參數和執行計畫的重複使用
-
 參數的使用，包括 ADO、OLE DB、和 ODBC 應用程式中的參數標記，可以增加執行計畫的重複使用。 
 
 > [!WARNING] 
@@ -579,7 +754,6 @@ WHERE AddressID = 1 + 2;
 不過，可根據簡單參數化規則將它參數化。 如果強制參數化嘗試失敗，後續仍會嘗試簡單參數化。
 
 ### <a name="SimpleParam"></a> 簡單參數化
-
 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 Transact-SQL 陳述式中使用參數或參數標記時，可以提升關聯式引擎將新 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式與先前編譯之現有執行計畫配對的能力。
 
 > [!WARNING] 
@@ -615,7 +789,6 @@ WHERE ProductSubcategoryID = 4;
 此外，您可以指定單一查詢，以及任何其他語法相同但唯有參數值不同的查詢，使其進行參數化。 
 
 ### <a name="ForcedParam"></a> 強制參數化
-
 您可以藉由指定將資料庫中所有的 `SELECT`、`INSERT`、`UPDATE` 及 `DELETE` 陳述式依據特定限制進行參數化，以覆寫 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設的簡單參數化行為。 您可以藉由將 `PARAMETERIZATION` 陳述式中的 `FORCED` 選項設為 `ALTER DATABASE` ，來啟用強制參數化。 強制參數化可藉由降低查詢編譯與重新編譯的頻率，來增進特定資料庫的效能。 可經由強制參數化獲益的資料庫通常會有來自來源 (如銷售點應用程式) 的大量並行查詢。
 
 將 `PARAMETERIZATION` 選項設為 `FORCED`時，出現在 `SELECT`、 `INSERT`、 `UPDATE`或 `DELETE` 陳述式中且以任何形式提交的所有常值，都會在查詢編譯期間轉換為參數。 但出現於下列查詢結構中的常值則為例外： 
@@ -654,7 +827,6 @@ WHERE ProductSubcategoryID = 4;
 > 參數名稱可以是任意的名稱。 使用者或應用程式不應依賴特定的命名順序。 而且，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本和 Service Pack 升級版之間可變更下列各項：參數名稱、參數化的常值選項和參數化文字的間距。
 
 #### <a name="data-types-of-parameters"></a>參數的資料類型
-
 當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 將常值參數化時，參數會轉換為下列資料類型：
 
 * 將以其他方式調整大小以符合 int 資料類型的整數常值會參數化為 int。屬於含有任何比較運算子之述詞的較大整數常值 (包括 <、\<=、=、!=、>、>=,、!\<、!>、<>、`ALL`、`ANY`、`SOME`、`BETWEEN` 和 `IN`) 會參數化為 numeric(38,0)。 不屬於含有比較運算子之述詞的較大常值會參數化為 numeric，其有效位數夠大正好足以支援其大小，而其小數位數為 0。
@@ -666,7 +838,6 @@ WHERE ProductSubcategoryID = 4;
 * Money 類型常值會參數化為 money。
 
 #### <a name="ForcedParamGuide"></a> 強制參數化的使用指南
-
 將 `PARAMETERIZATION` 選項設為 FORCED 時，請考量下列事項：
 
 * 強制參數化一旦生效後，會在編譯查詢時將查詢中的常值 (常數) 變更為參數。 因此，查詢最佳化工具可能會選擇到次佳的查詢計畫。 特別是，查詢最佳化工具較不可能比對查詢與索引檢視或計算資料行上的索引。 它也可會為資料分割資料表與分散式資料分割檢視上的查詢選擇次佳的計畫。 針對非常依賴索引檢視或計算資料行上索引的環境，就不應該使用強制參數化。 一般而言，應由具有經驗的資料庫管理員判斷 `PARAMETERIZATION FORCED` 選項的執行不會對效能造成不良影響後，才能使用此選項。
@@ -681,7 +852,6 @@ WHERE ProductSubcategoryID = 4;
 > 將 `PARAMETERIZATION` 選項設為 `FORCED` 時，錯誤訊息的報告可能會與 `PARAMETERIZATION` 選項設為 `SIMPLE` 時不同：強制參數化下可能報告了多個錯誤訊息，簡單參數化下報告的訊息則較少，而發生錯誤的行號可能未正確回報。
 
 ### <a name="preparing-sql-statements"></a>準備 SQL 陳述式
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 關聯式引擎在執行 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式之前，會先引入準備陳述式的完整支援。 如果應用程式需要執行 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式數次，它可以使用資料庫 API 來執行下列動作： 
 
 * 準備一次陳述式。 這可將 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式編譯成執行計畫。
@@ -734,7 +904,6 @@ WHERE ProductID = 63;
 > 若是使用 `RECOMPILE` 提示的查詢，則會探查參數值和區域變數的目前值。 探查到的值 (參數和區域變數值) 是存在於批次中具有 `RECOMPILE` 提示的陳述式之前位置的值。 特別是對於參數，不會探查批次引動過程呼叫隨附的值。
 
 ## <a name="parallel-query-processing"></a>平行查詢處理
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供平行查詢，讓擁有多個處理器 (CPU) 的電腦，也能獲得最佳的查詢執行和索引作業。 因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可利用數個作業系統背景工作執行緒平行地執行查詢或索引作業，所以可快速而有效率地完成作業。
 
 在查詢最佳化期間，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會搜尋得益於平行執行的查詢或索引作業。 對於這些查詢，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會在查詢執行計畫中插入交換運算子，以準備平行執行的查詢。 所謂的交換運算子，是指查詢執行計畫中，提供存取管理、資料重新散佈以及流量控制的運算子。 交換運算子包括當做子類型的 `Distribute Streams`、 `Repartition Streams`及 `Gather Streams` 邏輯運算子，其中的一或多個可以出現在平行查詢之查詢計畫的執行程序表輸出中。 
@@ -766,23 +935,22 @@ WHERE ProductID = 63;
 * 此查詢包含無法平行執行的純量或關聯式運算子。 特定運算子可能造成查詢計畫的一個區段以序列模式執行，或整個計畫以序列模式執行。
 
 ### <a name="DOP"></a> 平行處理原則的程度
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會針對平行查詢執行或索引資料定義語言 (DDL) 作業的每一個執行個體，自動偵測最佳程度的平行處理原則。 其作法是依據下列條件： 
 
 1. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是否正在具有多個微處理器或 CPU 的電腦上執行，例如對稱微處理電腦 (SMP)。  
-  具有一個以上 CPU 的電腦，才能使用平行查詢。 
+   具有一個以上 CPU 的電腦，才能使用平行查詢。 
 
 2. 是否有足夠的背景工作執行緒可用。  
-  每一個查詢或索引作業都需要某個數目的背景工作執行緒來執行。 執行平行計畫所需的背景工作執行緒會比執行序列計畫還多，而且所需的背景工作執行緒數目會隨著平行處理原則的程度增加。 當無法滿足針對平行處理原則之特定程度的平行計畫背景工作執行緒需求時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會自動降低平行處理原則的程度，或是完全放棄指定工作負載內容中的平行計畫。 然後，它會執行序列計畫 (一個背景工作執行緒)。 
+   每一個查詢或索引作業都需要某個數目的背景工作執行緒來執行。 執行平行計畫所需的背景工作執行緒會比執行序列計畫還多，而且所需的背景工作執行緒數目會隨著平行處理原則的程度增加。 當無法滿足針對平行處理原則之特定程度的平行計畫背景工作執行緒需求時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會自動降低平行處理原則的程度，或是完全放棄指定工作負載內容中的平行計畫。 然後，它會執行序列計畫 (一個背景工作執行緒)。 
 
 3. 已執行的查詢或索引作業類型。  
-  建立或重建索引，或是卸除叢集索引的索引作業，以及大量使用 CPU 循環的查詢，最適合使用平行計畫。 例如，聯結大型資料表、大型彙總及排序大型結果集，皆適用於平行計畫。 經常在交易處理應用程式中發現的簡單查詢，會尋找執行平行查詢時所需的其他協調作業，此平行查詢比潛在的效能提升更為重要。 為區分能否從平行處理原則中獲益的查詢，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會比較執行查詢或索引作業的預估成本與[平行處理的成本臨界值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)的值。 如果適當測試發現不同的值更適合執行的工作負載，使用者可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 來變更預設值 5。 
+   建立或重建索引，或是卸除叢集索引的索引作業，以及大量使用 CPU 循環的查詢，最適合使用平行計畫。 例如，聯結大型資料表、大型彙總及排序大型結果集，皆適用於平行計畫。 經常在交易處理應用程式中發現的簡單查詢，會尋找執行平行查詢時所需的其他協調作業，此平行查詢比潛在的效能提升更為重要。 為區分能否從平行處理原則中獲益的查詢，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會比較執行查詢或索引作業的預估成本與[平行處理的成本臨界值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)的值。 如果適當測試發現不同的值更適合執行的工作負載，使用者可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 來變更預設值 5。 
 
 4. 要處理的資料列數目是否足夠。  
-  如果查詢最佳化工具判定資料列數目太少，則它不會引進交換運算子來散發資料列。 因此，運算子會循序執行。 在序列計畫中執行運算子，可避免啟動、散發、協調成本超過執行平行運算子所獲得的利益時的案例。
+   如果查詢最佳化工具判定資料列數目太少，則它不會引進交換運算子來散發資料列。 因此，運算子會循序執行。 在序列計畫中執行運算子，可避免啟動、散發、協調成本超過執行平行運算子所獲得的利益時的案例。
 
 5. 目前是否有可用的散發統計資料。  
-  如果無法使用平行處理原則的最高程度，則在放棄平行計畫前，會先考慮降低程度。  
+   如果無法使用平行處理原則的最高程度，則在放棄平行計畫前，會先考慮降低程度。  
   例如，當您在檢視中建立叢集索引時，因為叢集索引尚未存在，所以無法評估散發統計資料。 在此情況下，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 無法為索引作業提供平行處理原則的最高程度。 然而，有些運算子 (如排序及掃描) 仍可從平行執行獲益。
 
 > [!NOTE]
@@ -795,7 +963,6 @@ WHERE ProductID = 63;
 靜態和索引鍵集衍生的資料指標可以利用平行執行計畫來擴展。 但是，動態資料指標的行為僅能由序列執行來提供。 而最佳化工具所產生的查詢序列執行計畫，一定是動態資料指標的一部份。
 
 #### <a name="overriding-degrees-of-parallelism"></a>覆寫平行處理原則的程度
-
 您可以使用[平行處理原則的最大程度](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (MAXDOP) 伺服器組態選項 ([!INCLUDE[ssSDS_md](../includes/sssds-md.md)] 上的 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md))，來限制要在平行計畫執行中使用的處理器數目。 對於個別查詢及索引作業陳述式，可以指定 MAXDOP 查詢提示或 MAXDOP 索引選項，來覆寫 [平行處理原則的最大程度] 選項。 MAXDOP 所提供的控制會比個別的查詢及索引作業還多。 例如，您可以使用 MAXDOP 選項，利用增加或減少，來控制線上索引作業專用的處理器數目。 如此一來，您就可以平衡索引作業所使用的資源及並行使用者的資源。 
 
 將 [平行處理原則的最大程度] 選項設為 0 (預設)，可讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在平行計畫執行中使用所有可用的處理器 (最大值為 64 個處理器)。 雖然當 MAXDOP 選項設定為 0 時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會將執行階段目標設定為 64 個邏輯處理器，但必要時可手動設定不同的值。 針對查詢或索引將 MAXDOP 設定為 0，讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可針對平行計畫執行中指定的查詢或索引使用所有可用的處理器 (最大值為 64 個處理器)。 MAXDOP 不是所有平行查詢的強制值，而是符合平行處理原則資格之所有查詢的暫訂目標。 這表示，如果執行階段沒有足夠的背景工作執行緒可用，查詢可能會使用比 MAXDOP 伺服器組態選項更低的平行處理原則程度來執行。
@@ -803,7 +970,6 @@ WHERE ProductID = 63;
 如需設定 MAXDOP 的最佳做法，請參閱這篇 [Microsoft 支援文章](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)。
 
 ### <a name="parallel-query-example"></a>平行查詢範例
-
 下列查詢會計算從 2000 年 4 月 1 日起，某一季之內所下的訂單數量，而這一季的訂單中，至少有一項產品晚於交付日期才送達客戶。 這個查詢會列出這類的訂單數量，並依訂單的優先順序分組，然後以遞增的優先順序排序訂單。 
 
 這個範例使用假設性的資料表和資料行名稱。
@@ -913,7 +1079,6 @@ CREATE UNIQUE INDEX o_datkeyopr_idx
 個別的 `CREATE TABLE` 或 `ALTER TABLE` 陳述式可以有多個條件約束，來要求建立索引。 這幾個索引建立作業會以序列方式來執行，即使在有多個 CPU 的電腦上，每個個別索引建立作業可能是平行作業。
 
 ## <a name="distributed-query-architecture"></a>分散式查詢結構
-
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援兩種可在 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中參考異質 OLE DB 資料來源的方法：
 
 * 連結伺服器名稱  
@@ -1013,16 +1178,15 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 
 #### <a name="partitioned-attribute"></a>Partitioned 屬性
 
-在資料分割的資料表或索引上執行類似 `Index Seek` 的運算子時， `Partitioned` 屬性會出現在編譯時間和執行階段的計畫內，而且會設定為 `True` (1)。 當這個屬性設定為 `False` (0) 時，就不會顯示。
+在對資料分割的資料表或索引執行類似索引搜尋的運算子時，`Partitioned` 屬性會出現在編譯時間和執行階段的計畫內，而且會設定為 `True` (1)。 當這個屬性設定為 `False` (0) 時，就不會顯示。
 
 `Partitioned` 屬性可出現在下列實體和邏輯運算子內：  
-* `Table Scan`  
-* `Index Scan`  
-* `Index Seek`  
-* `Insert`  
-* `Update`  
-* `Delete`  
-* `Merge`  
+|||
+|--------|--------|
+|資料表掃描|索引掃描|
+|索引搜尋|插入|
+|更新|刪除|
+|合併||
 
 如同上圖所示，這個屬性 (Attribute) 會顯示在其定義所在之運算子的屬性 (Property) 內。 在 XML 執行程序表輸出中，這個屬性會以 `Partitioned="1"` 的形式出現在其定義所在之運算子的 `RelOp` 節點內。
 

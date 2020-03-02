@@ -1,5 +1,5 @@
 ---
-title: 建立遞迴階層群組 (報表產生器及 SSRS) | Microsoft Docs
+title: 建立遞迴階層群組 (報表產生器) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a506442cca08dfa40cb3665571662a477ef5345
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2d1a73f72cc267b8a58c70dd4ea958be3560a4fc
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581553"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080554"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>建立遞迴階層群組 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中，遞迴階層群組會組織包含多個階層層級之單一報表資料集內的資料，例如組織階層內經理-員工關聯性的報告結構。  
@@ -48,7 +48,7 @@ ms.locfileid: "65581553"
     > [!NOTE]  
     >  如果看不到 [屬性] 窗格，請按一下 [檢視]  索引標籤上的 [屬性]  。  
   
-2.  在 [屬性] 窗格中，展開 [Padding]  節點，然後按一下 [左]  ，再從下拉式清單中選取 [**運算式>]\<** 。  
+2.  在 [屬性] 窗格中，展開 [Padding]  節點，然後按一下 [左]  ，再從下拉式清單中選取 [\<運算式>]  。  
   
 3.  在 [運算式] 窗格中，輸入下列運算式：  
   

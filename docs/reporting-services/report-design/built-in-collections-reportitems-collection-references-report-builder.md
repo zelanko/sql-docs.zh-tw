@@ -1,5 +1,5 @@
 ---
-title: ReportItems 集合參考 (報表產生器及 SSRS) | Microsoft Docs
+title: ReportItems 集合參考 (報表產生器) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24a50de92a2b182295abc926c98358fa56e2f379
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e8819e97cbece0ab9682252c3afdedee7d671428
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581769"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081886"
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>內建集合 - ReportItems 集合參考 (報表產生器)
   **ReportItems** 內建集合是報表項目的文字方塊集合，例如，報表設計介面上的資料區或文字方塊列。 **ReportItems** 集合包含在頁首、頁尾或報表主體目前範圍中的文字方塊。 這個集合是在執行階段由報表處理器和報表轉譯器而決定。 隨著報表處理器連續地將報表資料和報表項目配置元素結合為報表的使用者檢視頁面，目前的範圍也會變更。 您可以使用 **ReportItems** 內建集合來產生字典樣式的頁首，以在每個頁面上顯示第一個及最後一個項目。  

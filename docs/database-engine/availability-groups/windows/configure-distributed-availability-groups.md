@@ -2,7 +2,7 @@
 title: 設定分散式可用性群組
 description: '描述如何建立和設定 Always On 分散式可用性群組。 '
 ms.custom: seodec18
-ms.date: 08/17/2017
+ms.date: 01/28/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c49fb6ad9ad1d824a91f2a91c399770f3032b8aa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ebe6152ea59de28c9df7f3bb3abfa149900c826f
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952490"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146298"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>設定 Always On 分散式可用性群組  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,7 +146,7 @@ GO
 ### <a name="create-a-listener-for--the-secondary-availability-group"></a>建立次要可用性群組的接聽程式  
  接下來要在第二個 WSFC 上建立次要可用性群組。 在此範例中，接聽程式會命名為 `ag2-listener`。 如需建立接聽程式的詳細指示，請參閱[建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
-```  
+```sql  
 ALTER AVAILABILITY GROUP [ag2]    
     ADD LISTENER 'ag2-listener' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173);    
 GO  
@@ -228,15 +228,15 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
 目前僅支援手動容錯移轉。 若要手動容錯移轉分散式可用性群組：
 
-1. 若要確保不會遺失任何資料，請將分散式可用性群組設為同步認可。
-1. 等候分散式可用性群組完成同步處理。
+1. 若要確保不會遺失任何資料，請停止全域主要資料庫 (也就是主要可用性群組的資料庫) 上的所有交易，然後將分散式可用性群組設定為同步認可。
+1. 等候分散式可用性群組完成同步，且針對每個資料庫都有相同的 last_hardened_lsn。 
 1. 在全域主要複本上，將分散式可用性群組角色設為 `SECONDARY`。
 1. 測試容錯移轉整備。
 1. 容錯移轉主要可用性群組。
 
 下列 Transact-SQL 範例說明對名為 `distributedag` 的分散式可用性群組進行容錯移轉的詳細步驟：
 
-1. 透過同時  在全域主要與轉寄站上執行下列程式碼，以將分散式可用性群組設定為同步認可。   
+1. 若要確保不會遺失任何資料，請停止全域主要資料庫 (也就是主要可用性群組的資料庫) 上的所有交易。 然後透過「同時」  在全域主要與轉寄站上執行下列程式碼，以將分散式可用性群組設定為同步認可。   
     
       ```sql  
       -- sets the distributed availability group to synchronous commit 
@@ -262,24 +262,29 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
        GO
 
       ```  
-   >[!NOTE]
-   >在分散式可用性群組中，兩個可用性群組之間的同步處理狀態會取決於這兩個複本的可用性模式。 使用同步認可模式時，目前的主要可用性群組與目前的次要可用性群組都必須具有 `SYNCHRONOUS_COMMIT` 可用性模式。 因此，您必須同時對全域主要複本和轉寄站執行上述指令碼。
+   > [!NOTE]
+   > 在分散式可用性群組中，兩個可用性群組之間的同步處理狀態會取決於這兩個複本的可用性模式。 使用同步認可模式時，目前的主要可用性群組與目前的次要可用性群組都必須具有 `SYNCHRONOUS_COMMIT` 可用性模式。 因此，您必須同時對全域主要複本和轉寄站執行上述指令碼。
 
-1. 等到分散式可用性群組的狀態變更為 `SYNCHRONIZED`。 在裝載主要可用性群組之主要複本的全域主要上，執行下列查詢。 
+
+1. 等候分散式可用性群組的狀態變更為 `SYNCHRONIZED`，且所有複本都有相同的 last_hardened_lsn (每個資料庫)。 同時在全域主要 (主要可用性群組的主要複本) 與轉寄站上執行下列查詢，以檢查 synchronization_state_desc 和 last_hardened_lsn： 
     
       ```sql  
+      -- Run this query on the Global Primary and the forwarder
+      -- Check the results to see if synchronization_state_desc is SYNCHRONIZED, and the last_hardened_lsn is the same per database on both the global primary and       forwarder 
+      -- If not rerun the query on both side every 5 seconds until it is the case
+      --
       SELECT ag.name
              , drs.database_id
+             , db_name(drs.database_id) as database_name
              , drs.group_id
              , drs.replica_id
              , drs.synchronization_state_desc
-             , drs.end_of_log_lsn 
-        FROM sys.dm_hadr_database_replica_states drs,
-        sys.availability_groups ag
-          WHERE drs.group_id = ag.group_id;      
+             , drs.last_hardened_lsn  
+      FROM sys.dm_hadr_database_replica_states drs 
+      INNER JOIN sys.availability_groups ag on drs.group_id = ag.group_id;
       ```  
 
-    當可用性群組 **synchronization_state_desc** 成為 `SYNCHRONIZED`之後繼續進行。 如果 **synchronization_state_desc** 不是 `SYNCHRONIZED`，請每隔五秒執行命令一次，直到變更為止。 在 **synchronization_state_desc** = `SYNCHRONIZED`之前，請不要繼續進行。 
+    在可用性群組 **synchronization_state_desc** 為 `SYNCHRONIZED`，且全域主要和轉寄站上每個資料庫的 last_hardened_lsn 皆相同之後，請繼續進行。  如果 **synchronization_state_desc** 不是 `SYNCHRONIZED`，或 last_hardened_lsn 不同，請每隔五秒執行命令一次，直到變更為止。 在 **synchronization_state_desc** = `SYNCHRONIZED`，且每個資料庫的 last_hardened_lsn 皆相同之前，請不要繼續進行。 
 
 1. 在全域主要上，將分散式可用性群組角色設定為 `SECONDARY`。 
 
@@ -289,23 +294,41 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
     目前無法使用分散式可用性群組。
 
-1. 測試容錯移轉整備。 執行下列查詢：
+1. 測試容錯移轉整備。 同時在全域主要與轉寄站上執行下列查詢：
 
     ```sql
-    SELECT ag.name, 
-        drs.database_id, 
-        drs.group_id, 
-        drs.replica_id, 
-        drs.synchronization_state_desc, 
-        drs.end_of_log_lsn 
-    FROM sys.dm_hadr_database_replica_states drs, sys.availability_groups ag
-    WHERE drs.group_id = ag.group_id; 
+     -- Run this query on the Global Primary and the forwarder
+     -- Check the results to see if the last_hardened_lsn is the same per database on both the global primary and forwarder 
+     -- The availability group is ready to fail over when the last_hardened_lsn is the same for both availability groups per database
+     --
+     SELECT ag.name, 
+         drs.database_id, 
+         db_name(drs.database_id) as database_name,
+         drs.group_id, 
+         drs.replica_id,
+         drs.last_hardened_lsn
+     FROM sys.dm_hadr_database_replica_states drs
+     INNER JOIN sys.availability_groups ag ON drs.group_id = ag.group_id;
     ```  
-    當 **synchronization_state_desc** 為 `SYNCHRONIZED`，且兩個可用性群組的 **end_of_log_lsn** 皆相同時，可用性群組即準備好進行容錯移轉。 
 
-1. 從主要可用性群組容錯移轉至次要可用性群組。 在裝載次要可用性群組之主要複本的 SQL Server 上，執行下列命令。 
+    當兩個可用性群組的 **last_hardened_lsn** 針對每個資料庫皆相同時，可用性群組即準備好進行容錯移轉。 如果 last_hardened_lsn 在一段時間後不同，為了避免資料遺失，請在全域主要上執行此命令以容錯回復至全域主要，然後從第二個步驟重新開始： 
 
     ```sql
+    -- If the last_hardened_lsn is not the same after a period of time, to avoid data loss, 
+    -- we need to fail back to the global primary by running this command on the global primary 
+    -- and then start over from the second step:
+
+    ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
+    ```
+
+
+1. 從主要可用性群組容錯移轉至次要可用性群組。 在轉寄站 (裝載次要可用性群組主要複本的 SQL Server) 上執行下列命令。 
+
+    ```sql
+    -- Once the last_hardened_lsn is the same per database on both sides
+    -- We can Fail over from the primary availability group to the secondary availability group. 
+    -- Run the following command on the forwarder, the SQL Server instance that hosts the primary replica of the secondary availability group.
+
     ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
     ```  
 

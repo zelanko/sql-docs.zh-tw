@@ -1,5 +1,5 @@
 ---
-title: 從報表產生資料摘要 (報表產生器及 SSRS) | Microsoft Docs
+title: 從報表產生資料摘要 (報表產生器) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a94df8959adf40edfe2e78c7c281dd5d57f90266
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 177dbefd38e00d70a58b283bdeb52d2aa80abf97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580767"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079198"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>從報表產生資料摘要 (報表產生器及 SSRS)
 

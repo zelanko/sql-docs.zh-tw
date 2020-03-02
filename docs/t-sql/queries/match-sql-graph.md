@@ -131,8 +131,8 @@ n -  positive integer only.
 
 *al_pattern_quantifier*   
 任意長度的模式，接受規則運算式樣式的模式數量詞，來指定重複指定搜尋模式的次數。 支援的搜尋模式數量詞包括：   
-* **+**: Repeat the pattern 1 or more times. 在找到最短路徑後立即終止。    
-* **{1,n}**: Repeat the pattern 1 to ‘n’ times. 在找到最短路徑後立即終止。     
+* **+** ：重複模式 1 或多次。 在找到最短路徑後立即終止。    
+* **{1,n}** ：重複模式 1 至 'n' 次。 在找到最短路徑後立即終止。     
 
 ## <a name="remarks"></a>備註  
 MATCH 內的節點名稱可以重複。  換句話說，在同一個查詢中，可以對某個節點周遊任意的次數。  

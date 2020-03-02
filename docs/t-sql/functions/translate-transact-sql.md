@@ -16,12 +16,12 @@ ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 025aaad5c92a448114355c8700aee1b6bc0a7d2f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 374e9c1ba9bd93900e8a6677984f5e0e63a7c454
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68098834"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173591"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 
@@ -49,9 +49,11 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="remarks"></a>備註
 
-如果 `TRANSLATE`characters*和*translations*運算式的長度不同，則* 函數會傳回錯誤。 如果任何引數是 NULL，`TRANSLATE` 會傳回 NULL。  
+如果 *characters* 和 *translations* 運算式的長度不同，則 `TRANSLATE` 函數會傳回錯誤。 如果任何引數是 NULL，`TRANSLATE` 會傳回 NULL。  
 
-`TRANSLATE` 函式的行為類似於使用多個 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 函式。 不過，`TRANSLATE` 不會多次取代字元。 這與多個 `REPLACE` 函式不同，因為每次使用時都會取代相關的所有字元。 
+`TRANSLATE` 函式的行為類似於使用多個 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 函式。 不過，`TRANSLATE` 不會多次取代 `inputString` 中的任何個別字元。 `characters` 參數中單一值可以取代 `inputString` 中的多個字元。 
+
+這與多個 `REPLACE` 函式的行為不同，因為每個函式呼叫都會取代相關的所有字元，即使先前的巢狀 `REPLACE` 函式呼叫已取代這些字元也一樣。 
 
 `TRANSLATE` 永遠是 SC 定序感知。
 

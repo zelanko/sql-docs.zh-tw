@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 94e2fe49e52ed224a35183f9629bf8eeab112d17
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9e2204000400c06ea0fd884dbf4db6c08085d495
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831608"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256875"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -71,7 +71,7 @@ kubectl config view
 
 ## <a name="ensure-you-have-storage-configured"></a>確定已設定儲存體
 
-讓大多數的巨量資料叢集部署擁有永續性儲存體。 此時，您需要先確定已為如何在 Kubernetes 叢集上提供永續性儲存體進行規劃，才能部署 BDC。
+大多數的巨量資料叢集部署都應該擁有永續性儲存體。 此時，您需要先確定已為如何在 Kubernetes 叢集上提供永續性儲存體進行規劃，才能部署 BDC。
 
 若您在 AKS 中進行部署，則不需要任何儲存體設定。 AKS 提供具備動態佈建的內建儲存類別。 您可以在部署設定檔中自訂儲存類別 (`default` 或 `managed-premium`)。 內建設定檔會使用 `default` 儲存類別。 若正在以使用 `kubeadm` 所部署的 Kubernetes 叢集上進行部署，則您將需要確定針對所需規模的叢集具備了足夠儲存體，且該儲存體已經設定且可供使用。 若要自訂儲存體的使用方式，建議在繼續前先執行此操作。 請參閱[在 Kubernetes 上使用 SQL Server 巨量資料叢集的資料持續性](concept-data-persistence.md)。
 

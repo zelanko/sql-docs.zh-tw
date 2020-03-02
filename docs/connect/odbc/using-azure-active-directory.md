@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c0f9d73dace4e17d87e1c93da703786fc920b2fb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e32889ceafa78d6c6eac716fca213f17badc5cea
+ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "70176165"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77363229"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>搭配 ODBC 驅動程式使用 Azure Active Directory
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "70176165"
 具有 13.1 版或更新版本的 Microsoft ODBC Driver for SQL Server 讓 ODBC 應用程式能夠在 Azure Active Directory 中，搭配使用者名稱/密碼、Azure Active Directory 存取權杖、Azure Active Directory 受控服務身分識別或 Windows 整合式驗證 (「僅限 Windows 驅動程式」  )，使用同盟識別身分來連線到 SQL Azure 的執行個體。 針對 ODBC Driver 13.1 版，Azure Active Directory 存取權杖驗證僅限 _Windows_。 ODBC Driver 17 版和更新版本支援跨所有平台 (Windows、Linux 及 Mac) 進行此驗證。 具有登入識別碼的新 Azure Active Directory 互動式驗證是在適用於 Windows 的 ODBC Driver 17.1 版中引進的。 在 ODBC Driver 17.3.1.1 版中，針對系統指派和使用者指派的身分識別，新增了新的 Azure Active Directory 受控服務識別驗證方法。 所有這些驗證方法都是透過使用新的 DSN 和連接字串關鍵字，以及連線屬性來完成。
 
 > [!NOTE]
-> Linux 和 macOS 上的 ODBC 驅動程式不支援 Active Directory 同盟服務。 如果您使用來自 Linux 或 macOS 用戶端的 Azure Active Directory 使用者名稱/密碼驗證，且您的 Active Directory 設定包含同盟服務，則驗證可能會失敗。
+> Linux 和 macOS 上 ODBC 驅動程式只支援直接針對 Azure Active Directory 的 Azure Active Directory 驗證。 如果在 Linux 或 macOS 用戶端使用 Azure Active Directory 使用者名稱/密碼，而您的 Active Directory 組態需要用戶端驗證 Active Directory 同盟服務端點，則驗證可能會失敗。
 
 ## <a name="new-andor-modified-dsn-and-connection-string-keywords"></a>新的和/或已修改的 DSN 與連接字串關鍵字
 

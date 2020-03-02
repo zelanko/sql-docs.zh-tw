@@ -1,20 +1,20 @@
 ---
-title: 以 Active Directory 模式部署 SQL Server 巨量資料叢集
-titleSuffix: Deploy SQL Server Big Data Cluster in Active Directory mode
+title: 以 Active Directory 模式部署
+titleSuffix: SQL Server Big Data Cluster
 description: 了解如何升級 Active Directory 網域中的 SQL Server 巨量資料叢集。
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 12/02/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e47af4ef20bc3dac6c61b9c5f851822348d36650
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bd8e571417e7b2171dc135e986fa77f1f0eff089
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253112"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544881"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>以 Active Directory 模式部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -164,23 +164,23 @@ export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 
 AD 整合需要下列參數。 使用本文稍後在下面顯示的 `config replace` 命令，將這些參數新增至 `control.json` 和 `bdc.json` 檔案。 以下所有範例都使用範例網域 `contoso.local`。
 
-- `security.ouDistinguishedName`：要新增叢集部署所建立所有 AD 帳戶的組織單位 (OU) 辨別名稱。 如果網域稱為 `contoso.local`，則 OU 辨別名稱為：`OU=BDC,DC=contoso,DC=local`。
+- `security.activeDirectory.ouDistinguishedName`：要新增叢集部署所建立所有 AD 帳戶的組織單位 (OU) 辨別名稱。 如果網域稱為 `contoso.local`，則 OU 辨別名稱為：`OU=BDC,DC=contoso,DC=local`。
 
-- `security.dnsIpAddresses`：網域控制站的 IP 位址清單
+- `security.activeDirectory.dnsIpAddresses`：網域控制站的 IP 位址清單
 
-- `security.domainControllerFullyQualifiedDns`:網域控制站的 FQDN 清單。 FQDN 包含網域控制站的機器/主機名稱。 如果您有多個網域控制站，您可以在這裡提供清單。 範例： `HOSTNAME.CONTOSO.LOCAL`
+- `security.activeDirectory.domainControllerFullyQualifiedDns`:網域控制站的 FQDN 清單。 FQDN 包含網域控制站的機器/主機名稱。 如果您有多個網域控制站，您可以在這裡提供清單。 範例： `HOSTNAME.CONTOSO.LOCAL`
 
-- `security.realm`**選擇性參數**：在大部分的情況下，領域等於網域名稱。 如果它們不相同，請使用此參數來定義領域的名稱 (例如 `CONTOSO.LOCAL`)。
+- `security.activeDirectory.realm`**選擇性參數**：在大部分的情況下，領域等於網域名稱。 如果它們不相同，請使用此參數來定義領域的名稱 (例如 `CONTOSO.LOCAL`)。
 
-- `security.domainDnsName`:您網域的名稱 (例如 `contoso.local`)。
+- `security.activeDirectory.domainDnsName`:您網域的名稱 (例如 `contoso.local`)。
 
-- `security.clusterAdmins`:此參數接受**一個 AD 群組**。 此群組的成員將會得到叢集中的系統管理員權限。 這表示這些成員將會有 SQL Server 中的系統管理員權限、HDFS 中的超級使用者權限，以及控制器中的系統管理員權限。 **請注意，此群組必須先存在於 AD 中，才能開始部署。另請注意，此群組不能在 Active Directory 中設定 DomainLocal 範圍。設定網域本機範圍的群組將導致部署失敗。**
+- `security.activeDirectory.clusterAdmins`:此參數接受**一個 AD 群組**。 此群組的成員將會得到叢集中的系統管理員權限。 這表示這些成員將會有 SQL Server 中的系統管理員權限、HDFS 中的超級使用者權限，以及控制器中的系統管理員權限。 **請注意，此群組必須先存在於 AD 中，才能開始部署。另請注意，此群組不能在 Active Directory 中設定 DomainLocal 範圍。設定網域本機範圍的群組將導致部署失敗。**
 
-- `security.clusterUsers`:大型資料叢集中屬於一般使用者 (無系統管理員權限) 的 AD 群組清單。 **請注意，在開始部署之前，這些群組就必須存在於 AD 中。另請注意，這些群組不能在 Active Directory 中設定 DomainLocal 範圍。設定網域本機範圍的群組將導致部署失敗。**
+- `security.activeDirectory.clusterUsers`:大型資料叢集中屬於一般使用者 (無系統管理員權限) 的 AD 群組清單。 **請注意，在開始部署之前，這些群組就必須存在於 AD 中。另請注意，這些群組不能在 Active Directory 中設定 DomainLocal 範圍。設定網域本機範圍的群組將導致部署失敗。**
 
-- `security.appOwners`**選擇性參數**：AD 使用者或群組的清單，他們有權限建立、刪除和執行任何應用程式。 **請注意，在開始部署之前，這些群組就必須存在於 AD 中。另請注意，這些群組不能在 Active Directory 中設定 DomainLocal 範圍。設定網域本機範圍的群組將導致部署失敗。**
+- `security.activeDirectory.appOwners`**選擇性參數**：AD 使用者或群組的清單，他們有權限建立、刪除和執行任何應用程式。 **請注意，在開始部署之前，這些群組就必須存在於 AD 中。另請注意，這些群組不能在 Active Directory 中設定 DomainLocal 範圍。設定網域本機範圍的群組將導致部署失敗。**
 
-- `security.appReaders`**選擇性參數**：AD 群組的清單，此群組的成員必須有執行任何應用程式的權限。 **請注意，在開始部署之前，這些群組就必須存在於 AD 中。另請注意，這些群組不能在 Active Directory 中設定 DomainLocal 範圍。設定網域本機範圍的群組將導致部署失敗。**
+- `security.activeDirectory.appReaders`**選擇性參數**：AD 群組的清單，此群組的成員必須有執行任何應用程式的權限。 **請注意，在開始部署之前，這些群組就必須存在於 AD 中。另請注意，這些群組不能在 Active Directory 中設定 DomainLocal 範圍。設定網域本機範圍的群組將導致部署失敗。**
 
 **如何檢查 AD 群組範圍：** 
 [按一下這裡以取得檢查 AD 群組範圍的指示](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) \(英文\)，以判斷是否是 DomainLocal。
@@ -193,7 +193,22 @@ azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 
 若要在 `control.json` 檔案中設定上述參數，請使用下列 `azdata` 命令。 該命令會取代設定，並在部署之前提供您自己的值。
 
-以下範例會取代部署設定中與 AD 相關的參數值。以下的網域詳細資料是範例值。
+ > [!IMPORTANT]
+ > 在 SQL Server 2019 CU2 版本中，部署設定檔案中安全性組態區段的結構已有顯著的變更，且所有 Active Directory 相關設定都位於 *control.json* 檔案內 「安全性」  底下 JSON 樹狀目錄的新 *activeDirectory* 中。
+
+以下範例是以使用 SQL Server 2019 CU2 為基礎。 此範例會示範如何取代部署組態中與 AD 相關的參數值。以下的網域詳細資料是範例值。
+
+```bash
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.ouDistinguishedName=OU\=bdc\,DC\=contoso\,DC\=local"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.dnsIpAddresses=[\"10.100.10.100\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.domainControllerFullyQualifiedDns=[\"HOSTNAME.CONTOSO.LOCAL\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.domainDnsName=contoso.local"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterAdmins=[\"bdcadminsgroup\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterUsers=[\"bdcusersgroup\"]"
+#Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
+```
+
+同樣地，在 SQL Server 2019 CU2 之前的版本中，您可以執行：
 
 ```bash
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.ouDistinguishedName=OU\=bdc\,DC\=contoso\,DC\=local"

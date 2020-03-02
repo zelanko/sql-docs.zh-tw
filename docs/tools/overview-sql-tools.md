@@ -10,14 +10,14 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 12/06/2019
+ms.date: 02/04/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f4aaea790cf1e308b0675792b110ed129a55ed97
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3f457b485994d2619e68b4315a308e66a05715cb
+ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76516259"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77051668"
 ---
 # <a name="sql-tools-overview"></a>SQL 工具概觀
 
@@ -47,13 +47,13 @@ ms.locfileid: "76516259"
 
 | 工具 | 描述 | 作業系統 |
 |:--|:--|:--|
+|[**bcp**](bcp-utility.md)|**b**ulk **c**opy **p**rogram 公用程式 (**bcp**) 會以使用者指定的格式在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體與資料檔案之間大量複製資料。| **Windows</br>macOS</br>Linux** |
 |[**mssql-cli (預覽)** ](mssql-cli.md)|**mssql-cli** 是用於查詢 SQL Server 的互動式命令列查詢工具。 此外，請使用具備 IntelliSense、語法醒目提示等功能的命令列工具來查詢 SQL Server。 | **Windows</br>macOS</br>Linux** |
+|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md) | **mssql-conf** 可設定在 Linux 上執行的 SQL Server。 | **Linux** |
+|[**mssql-scripter (預覽)** ](https://github.com/Microsoft/mssql-scripter) | **mssql-scripter** 是多平台命令列體驗，用於撰寫 SQL Server 資料庫的指令碼。 | **Windows</br>macOS</br>Linux** |
+| [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd** 公用程式可讓您在命令列提示字元中輸入 Transact-SQL 陳述式、系統程序和指令檔。 | **Windows</br>macOS</br>Linux** |
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage** 是命令列公用程式，可將數種資料庫開發工作自動化。 |**Windows</br>macOS</br>Linux** |
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** 提供可用於 SQL 的 Cmdlet。 | **Windows</br>macOS</br>Linux** |
-| [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd** 公用程式可讓您在命令列提示字元中輸入 Transact-SQL 陳述式、系統程序和指令檔。 | **Windows</br>macOS</br>Linux** |
-|[**bcp**](bcp-utility.md)|**b**ulk **c**opy **p**rogram 公用程式 (**bcp**) 會以使用者指定的格式在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體與資料檔案之間大量複製資料。| **Windows</br>macOS</br>Linux** |
-|[**mssql-scripter (預覽)** ](https://github.com/Microsoft/mssql-scripter) | **mssql-scripter** 是多平台命令列體驗，用於撰寫 SQL Server 資料庫的指令碼。 | **Windows</br>macOS</br>Linux** |
-|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md) | **mssql-conf** 可設定在 Linux 上執行的 SQL Server。 | **Linux** |
 
 ## <a name="migration-and-other-tools"></a>移轉和其他工具
 
@@ -62,9 +62,10 @@ ms.locfileid: "76516259"
 | 工具 | 描述 |
 |:--|:--|
 | **[組態管理員](../tools/configuration-manager/sql-server-configuration-manager-help.md)** | 使用 SQL Server 組態管理員來設定 SQL Server 服務以及設定網路連線能力。 組態管理員在 Windows 上執行|
-| **[SQL Server 移轉小幫手](../ssma/sql-server-migration-assistant.md)** | 使用 SQL Server 移轉小幫手將從 Microsoft Access、DB2、MySQL、Oracle 及 Sybase 到 SQL Server 的資料庫移轉作業自動化。|
 | **[資料庫測試助理](../dea/database-experimentation-assistant-overview.md)** | 使用資料庫測試助理來評估指定工作負載的 SQL 目標版本。 |
+| **[Data Migration Assistant](../dma/dma-overview.md)** | Data Migration Assistant 工具可藉由偵測可能對您新版 SQL Server or Azure SQL Database 中資料庫功能造成影響的相容性問題，以協助您升級至新式資料平台。 |
 | **[Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md)** | 使用 Distributed Replay 功能來協助您評定未來 SQL Server 升級的影響。 您也可以使用 Distributed Replay 來協助評定硬體和作業系統升級以及 SQL Server 微調的影響。 |
 | **[ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)** | ssbdiagnose 公用程式會報告 Service Broker 交談或 Service Broker 服務組態中的問題。 |
+| **[SQL Server 移轉小幫手](../ssma/sql-server-migration-assistant.md)** | 使用 SQL Server 移轉小幫手將從 Microsoft Access、DB2、MySQL、Oracle 及 Sybase 到 SQL Server 的資料庫移轉作業自動化。|
 
-如果您要尋找此頁面未提及的其他工具，請參閱 [SQL 命令提示字元公用程式](command-prompt-utility-reference-database-engine.md)。
+如果您要尋找此頁面未提及的其他工具，請參閱 [SQL 命令提示字元公用程式](command-prompt-utility-reference-database-engine.md)和[下載 SQL Server 擴充功能及工具](download-sql-feature-packs.md)

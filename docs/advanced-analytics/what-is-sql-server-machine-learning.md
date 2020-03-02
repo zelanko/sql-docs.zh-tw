@@ -4,17 +4,17 @@ titleSuffix: ''
 description: 機器學習服務是 SQL Server 內的一項功能，能夠使用關聯式資料執行 Python 和 R 指令碼。 您可以使用開放原始碼套件和架構，以及 Microsoft Python 和 R 套件，來進行預測性分析與機器學習。 指令碼會在資料庫中執行，不需在 SQL Server 外部或透過網路來移動資料。 本文說明 SQL Server 機器學習服務的基本概念。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/07/2019
+ms.date: 02/04/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fe7a83c66dba9af372e82fc2814828aae32d6a2d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3cf2b6f61e01230c8657051388647e336d46ed71
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75558284"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004568"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>什麼是 SQL Server 機器學習服務 (Python 和 R)？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,6 +61,19 @@ SQL Server 機器學習服務，可讓您在資料庫中執行 Python 和 R 指�
 
 + 您也可以使用慣用的 Python 或 R 用戶端，然後撰寫會將執行 (稱為「遠端計算內容」  ) 推送至遠端 SQL Server 的指令碼。 如需詳細資訊，請參閱設定適用於 [Python 開發](python/setup-python-client-tools-sql.md)與 [R 開發](r/set-up-a-data-science-client.md)的資料科學用戶端。
 
+<a name="versions"></a>
+
+## <a name="python-and-r-versions"></a>Python 和 R 版本
+
+機器學習服務包含哪個版本的 Python 和 R，視您使用的 SQL Server 版本而定。 
+
+| SQL Server 版本 | Python 版本 | R 版本 |
+|-|-|-|
+| SQL Server 2017 | 3.5.2 | 3.3.3 |
+| SQL Server 2019 | 3.7.3 | 3.5.2 |
+
+若為 SQL Server 2016 中的 R 版本，請參閱[什麼是 R 服務中的 R 版本一節](r/sql-server-r-services.md#version)
+
 <a name="packages"></a>
 
 ## <a name="python-and-r-packages"></a>Python 和 R 套件
@@ -95,11 +108,10 @@ SQL Server 機器學習服務，可讓您在資料庫中執行 Python 和 R 指�
 
 1. 撰寫您的第一個 Python 或 R 指令碼
 
-    + 快速入門：[在 SQL 中建立和執行簡單的 R 指令碼](tutorials/quickstart-r-create-script.md)
-    + 快速入門：[在 R 中建立預測模型並加以訓練](tutorials/quickstart-r-train-score-model.md)
+    + 快速入門：[執行簡單的 Python 指令碼](tutorials/quickstart-python-create-script.md)
+    + 快速入門：[執行簡單的 R 指令碼](tutorials/quickstart-r-create-script.md)
     + 教學課程：[在 T-SQL 中使用 Python](tutorials/sqldev-in-database-python-for-sql-developers.md)：探索資料、執行特徵工程、訓練模型並加以部署，以及進行預測 (五部分系列)
     + 教學課程：[在 T-SQL 中使用 R](tutorials/sqldev-in-database-r-for-sql-developers.md)：探索資料、執行特徵工程、訓練模型並加以部署，以及進行預測 (五部分系列)
-    + 教學課程：[在 R 工具中使用機器學習服務](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)：探索資料、建立圖表和繪圖、執行特徵工程、訓練模型並加以部署，以及進行預測 (六部分系列)
 
 ## <a name="next-steps"></a>後續步驟
 

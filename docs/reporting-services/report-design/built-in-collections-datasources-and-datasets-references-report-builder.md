@@ -1,5 +1,5 @@
 ---
-title: DataSources 和 DataSets 集合參考 (報表產生器及 SSRS) | Microsoft Docs
+title: DataSources 和 DataSets 集合參考 (報表產生器) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 930dfe2773b72723c2b8dc8571272847bb0d62d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2f65020a094258e4d6ee4a3906d29d33438b0783
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581810"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081464"
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>內建集合 - DataSources 和 DataSets 參考 (報表產生器)
   **DataSources** 集合代表報表中使用的所有資料來源。 同樣地， **DataSets** 集合則代表報表中所有資料來源的所有資料集。 請使用 [報表資料]  窗格以階層的方式檢視報表資料集 (排列在所參考資料來源的下方)。 如果加入這些集合的參考，就不會在預覽報表時看到值。 只有發行報表至報表伺服器後，才可以使用這些集合。  
@@ -26,7 +26,7 @@ ms.locfileid: "65581810"
   
 |**變數**|**型別**|**說明**|  
 |------------------|--------------|---------------------|  
-|**DataSourceReference**|**String**|報表伺服器上資料來源定義的完整路徑。 例如，您可以包含報表用來做為報表記錄一部分的所有資料來源的清單。 以下範例將示範名為 AdventureWorks2012 的資料來源完整路徑：<br /><br /> `/DataSources/AdventureWorks2012`第 1 課：建立 Windows Azure 儲存體物件{2}。|  
+|**DataSourceReference**|**String**|報表伺服器上資料來源定義的完整路徑。 例如，您可以包含報表用來做為報表記錄一部分的所有資料來源的清單。 以下範例將示範名為 AdventureWorks2012 的資料來源完整路徑：<br /><br /> 第 1 課：建立 Windows Azure 儲存體物件`/DataSources/AdventureWorks2012`。|  
 |**型別**|**String**|資料來源的資料提供者類型。 例如： `SQL` 。|  
   
 ## <a name="datasets"></a>DataSets  

@@ -1,5 +1,5 @@
 ---
-title: 新增或移除頁首或頁尾 (報表產生器及 SSRS) | Microsoft Docs
+title: 新增或移除頁首或頁尾 (報表產生器) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b8c05a90f2d077e76bbbdebb9f285c3f2e8b3f86
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: adb2d9d24bc353c7d1c64c328b342b24022faef8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581920"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081556"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>加入或移除頁首或頁尾 (報表產生器及 SSRS)
   您可以將靜態文字、影像、線條、矩形和框線加入至頁首或頁尾。 如果您想要在頁首或頁尾放入變數或計算的資料，可以在文字方塊中放置運算式和資料繫結影像。  

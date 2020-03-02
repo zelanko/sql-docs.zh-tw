@@ -1,5 +1,5 @@
 ---
-title: 匯出報表 (報表產生器及 SSRS) | Microsoft Docs
+title: 匯出報表 (報表產生器) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +7,12 @@ ms.technology: report-builder
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0cb5c07545a719571c9fee26edc820006e9f0827
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a213d0decf0b2765dca07faec69135ddd3e44d99
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580813"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078495"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>匯出報表 (報表產生器及 SSRS)
 

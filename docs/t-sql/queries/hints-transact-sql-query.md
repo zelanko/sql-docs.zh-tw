@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: ca998b57715b874d6bc9b851f4710bb3c3e749d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 15165b25ba9b8bb4b44172ccd99c3c0c1a2f29bf
+ms.sourcegitcommit: 74afe6bdd021f62275158a8448a07daf4cb6372b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75002333"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144198"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,6 +105,7 @@ ms.locfileid: "75002333"
   | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
   | PARAMETERIZATION { SIMPLE | FORCED }   
+  | QUERYTRACEON trace_flag   
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
@@ -186,7 +187,7 @@ KEEPFIXED PLAN
 強制查詢最佳化工具不因統計資料中的變更而重新編譯查詢。 指定 KEEPFIXED PLAN 可確保只有在基礎資料表的結構描述有了改變，或針對這些資料表執行 **sp_recompile** 時，才重新編譯查詢。  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本開始。  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 起) 和更新版本。  
   
 防止查詢使用非叢集之記憶體最佳化的資料行存放區索引。 如果查詢同時包含禁止使用資料行存放區索引的查詢提示，以及使用資料行索引的索引提示，將會因為兩提示相互衝突而傳回錯誤。  
   
@@ -240,7 +241,7 @@ OPTIMIZE FOR UNKNOWN
 指示查詢最佳化工具在編譯及最佳化查詢時，將統計資料 (而非初始值) 用於所有的區域變數。 這項最佳化會包含以強制參數化所建立的參數。  
   
 如果您使用 OPTIMIZE FOR @variable_name = _literal\_constant_，且在相同的查詢提示中使用 OPTIMIZE FOR UNKNOWN，則查詢最佳化工具會將指定的 _literal\_constant_ 用於特定值。 查詢最佳化工具會將 UNKNOWN 用於其餘的變數值。 只有在查詢最佳化期間才使用這些值，查詢執行期間則不使用這些值。  
-  
+
 PARAMETERIZATION { SIMPLE | FORCED }     
 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具在查詢完成時套用到查詢的參數化規則。  
   
@@ -249,6 +250,11 @@ PARAMETERIZATION { SIMPLE | FORCED }
 > 如需詳細資訊，請參閱[使用計劃指南指定查詢參數化行為](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)。
   
 SIMPLE 指示查詢最佳化工具嘗試使用簡單參數化。 FORCED 指示查詢最佳化工具嘗試使用強制參數化。 如需詳細資訊，請參閱[查詢處理架構指南中的強制參數化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)和[查詢處理架構指南中的簡單參數化](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)。  
+
+QUERYTRACEON trace_flag    
+此選項可讓您只在單一查詢編譯期間啟用影響計畫的追蹤旗標。 如同其他查詢層級的選項，您可以將此選項與計畫指南一起使用，以便比對任何工作階段所執行查詢的文字，並在編譯此查詢時，自動套用影響計畫的追蹤旗標。 只有在 [詳細資訊] 區段的資料表和 [追蹤旗標](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 中記錄的查詢最佳化工具追蹤旗標，才支援 QUERYTRACEON 選項。 不過，如果使用不支援的追蹤旗標編號，此選項將不會傳回任何錯誤或警告。 如果所指定追蹤旗標不是影響查詢執行計畫的追蹤旗標，則會以無訊息方式忽略此選項。
+
+如果 QUERYTRACEON trace_flag_number 以不同的追蹤旗標編號重複，則可以在 OPTION 子句中指定一個以上的追蹤旗標。
 
 RECOMPILE  
 指示 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 針對查詢產生新的暫時計畫，並在查詢完成執行之後立即捨棄該計畫。 在沒有 RECOMPILE 提示的情況下執行相同查詢時，產生的查詢計畫不會取代快取中儲存的計畫。 在未指定 RECOMPILE 的情況下，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會快取查詢計劃並重複使用。 在編譯查詢計畫時，RECOMPILE 查詢提示會在查詢中使用任何區域變數的目前值。 如果查詢是在預存程序內，則將目前值傳遞給任何參數。  
@@ -599,7 +605,24 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 
 GO  
 ```  
-    
+### <a name="m-using-querytraceon-hint"></a>M. 使用 QUERYTRACEON 提示  
+ 下列範例使用 QUERYTRACEON 查詢提示。 此範例會使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫。 您可以使用下列查詢，針對特定查詢啟用由追蹤旗標 4199 所控制所有影響計畫的 Hotfix：
+  
+```sql  
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (QUERYTRACEON 4199);
+```  
+
+ 您也可以使用多個追蹤旗標，如下列查詢所示：
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
+```
+
+
 ## <a name="see-also"></a>另請參閱  
 [提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
 [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   

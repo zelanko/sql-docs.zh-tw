@@ -1,5 +1,5 @@
 ---
-title: 技術參考 (SSRS) | Microsoft Docs
+title: 技術參考 | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5cefdef6a787b522f7d185a67f329054ed868eb5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9d368a5156651ed47ed6942f8fb5ba7925a397c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68892817"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077864"
 ---
 # <a name="technical-reference-ssrs"></a>技術參考 (SSRS)
 

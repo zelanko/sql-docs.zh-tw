@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 149e83acd2a8e0e6d3022d74f929584190c91374
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9d5da60bc3e2716fb808c47f949b3b918b4e9d85
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68118465"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479669"
 ---
 # <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +30,11 @@ ms.locfileid: "68118465"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC3_CHECK_CATALOG|  
-|訊息文字|檢查目錄訊息 ERROR 層級 LEVEL 狀態 STATE: MESSAGE。|  
-  
+|訊息文字|檢查目錄訊息 ERROR 層級 LEVEL 狀態 STATE:MESSAGE。|  
+
+> [!NOTE]
+> 8992 錯誤訊息會參考有關實際不一致的另一項特定訊息 (範圍從 3851 到 3858)。
+
 ## <a name="explanation"></a>說明  
 DBCC CHECKCATALOG 或 DBCC CHECKDB 在指定之物件的系統中繼資料表中發現不一致。 亦即，在記錄的物件識別碼和錯誤訊息中指定的物件之間發生不一致。  
   
@@ -40,23 +43,18 @@ DBCC CHECKCATALOG 或 DBCC CHECKDB 在指定之物件的系統中繼資料表中
 根據已經從 SQL Server 2000 升級到 SQL Server 2005 或更新版本的資料庫執行 DBCC CHECKDB 時，可能會發生這個錯誤。 在 SQL Server 2000 中，DBCC CHECKDB 不包含 DBCC CHECKCATALOG 功能，因此，除非特別針對 SQL Server 2000 中的資料庫執行 DBCC CHECKCATALOG，否則在升級前不會造成錯誤。  
   
 您可能會看到下列任一種錯誤和錯誤 8992 一起出現：  
-  
-訊息 3851：在系統資料表 sys.%ls%ls 中發現無效的資料列 (%ls)。  
-  
-訊息 3852：sys.%ls%ls 中的資料列 (%ls) 在 sys.%ls%ls 之中並沒有相符的資料列 (%ls)。  
-  
-3853：sys.%ls%ls 中資料列 (%ls) 的屬性 (%ls) 在 sys.%ls%ls 中並沒有相符的資料列 (%ls)。  
-  
-3854：sys.%ls%ls 中資料列 (%ls) 的屬性 (%ls) 在 sys.%ls%ls 中相符的資料列 (%ls) 無效。  
-  
-3855：屬性 (%ls) 存在，但是在 sys.%ls%ls 中沒有資料列 (%ls)。  
-  
-3856：屬性 (%ls) 存在，但應該不是 sys.%ls%ls 中資料列 (%ls) 的屬性。  
-  
-3857：必須有屬性 (%ls)，但是 sys.%ls%ls 中的資料列 (%ls) 缺少此屬性。  
-  
-3858：sys.%ls%ls 中資料列 (%ls) 的屬性 (%ls) 有無效的值。  
-  
+|||
+|-|-| 
+|訊息識別碼|訊息文字|
+|3851|在系統資料表 sys.%ls%ls 上發現無效的資料列 (%ls)。|
+|3852|sys.%ls%ls 中的資料列 (%ls) 在 sys.%ls%ls 之中並沒有相符的資料列 (%ls)。|
+|3853|sys.%ls%ls 中資料列 (%ls) 的屬性 (%ls) 在 sys.%ls%ls 中並沒有相符的資料列 (%ls)。|
+|3854|sys.%ls%ls 中資料列 (%ls) 的屬性 (%ls) 在 sys.%ls%ls 中相符的資料列 (%ls) 無效。|
+|3855|屬性 (%ls) 存在，但是在 sys.%ls%ls 中沒有資料列 (%ls)。|
+|3856|屬性 (%ls) 存在，但應該不是 sys.%ls%ls 中資料列 (%ls) 的屬性。|
+|3857|必須有屬性 (%ls)，但是 sys.%ls%ls 中的資料列 (%ls) 遺漏此屬性。|
+|3858|sys.%ls%ls 中資料列 (%ls) 的屬性 (%ls) 有無效的值。|
+
 ## <a name="user-action"></a>使用者動作  
   
 ### <a name="drop-and-re-create-the-specified-object"></a>卸除指定的物件後再重新建立  
@@ -72,8 +70,22 @@ DBCC CHECKCATALOG 或 DBCC CHECKDB 在指定之物件的系統中繼資料表中
 此錯誤無法修復。  如果無法從備份還原資料庫，請連絡 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客戶服務及支援中心 (CSS)。  
   
 ### <a name="do-not-manually-update-system-tables"></a>不要手動更新系統資料表  
-不要手動更新系統資料表。 SQL Server 不支援對系統資料庫進行任何手動變更。 如果您更新 SQL Server 資料庫中的系統資料表，則會記錄兩個事件 (事件識別碼 17659 和事件識別碼 3859)。 如需詳細資訊，請參閱知識庫文件 2688307＜當您更新 SQL Server 資料庫中的系統資料表時，會記錄事件識別碼 17659 和事件識別碼 3859＞(機器翻譯)。  
-  
-## <a name="see-also"></a>另請參閱  
-[Event ID 17659 and event ID 3859 are logged when you update system tables in a SQL Server database](https://support.microsoft.com/kb/2688307/EN-US) (當您更新 SQL Server 資料庫中的系統資料表時，會記錄事件識別碼 17659 和事件識別碼 3859)  
+
+不要手動更新系統資料表。 SQL Server 不支援對系統資料庫進行任何手動變更。 如果您更新 SQL Server 資料庫中的系統資料表，則會記錄下列事件：
+
+#### <a name="when-a-system-table-is-manually-updated"></a>手動更新系統資料表時
+
+訊息 17659：警告：已直接在資料庫識別碼 <id> 中更新系統資料表識別碼 <id>，可能未能保持快取的連貫性。 應該重新啟動 SQL Server。
+
+#### <a name="starting-a-database-with-a-system-table-that-was-manually-updated"></a>使用手動更新的系統資料表啟動資料庫
+
+訊息 3859：警告：已直接在資料庫識別碼 <id> 中更新系統目錄，最近一次在 date_time
+
+#### <a name="when-you-execute-the-dbcc_checkdb-command-after-a-system-table-is-manually-updated"></a>當您在手動更新系統資料表後執行 DBCC_CHECKDB 命令時
+
+訊息 3859：警告：已直接在資料庫識別碼 <id> 中更新系統目錄，最近一次在 date_time。  
+
+## <a name="see-also"></a>另請參閱
+
+[系統基底資料表](../system-tables/system-base-tables.md)
   

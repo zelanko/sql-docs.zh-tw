@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8fd7d734bee00a22af02b014e950f6694b534a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c6c74d73a531a40e0f8e57e7104109de71e27ce3
+ms.sourcegitcommit: acfdeacc80c112992c1201748e0b5c59a473032d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831759"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76977542"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server 機器學習服務在 Python 中建立預測模型並計算其分數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -174,7 +174,7 @@ ms.locfileid: "76831759"
 
 您在本練習中已了解如何建立不同工作專用的預存程序，其中每個預存程序都使用系統預存程序 `sp_execute_external_script` 來啟動 Python 流程。 Python 流程的輸入會傳遞至 `sp_execute_external` 做為參數。 Python 指令碼本身和 SQL Server 資料庫中的資料變數都會當做輸入進行傳遞。
 
-一般來說，您應該只打算使用 Python 程式碼已經完善的 SSMS，或是傳回資料列輸出的簡易 Python 程式碼。 SSMS 這項工具可支援 T-SQL 等查詢語言，並傳回扁平化資料列集。 如果您的程式碼會產生散佈圖或長條圖等視覺效果輸出，您就需要可轉譯影像的工具或使用者應用程式。
+一般來說，您應該只打算使用 Python 程式碼已經完善的 SSMS，或是傳回資料列輸出的簡易 Python 程式碼。 SSMS 這項工具可支援 T-SQL 等查詢語言，並傳回扁平化資料列集。 如果您的程式碼會產生散佈圖或長條圖等視覺效果輸出，則需要可在預存程序之外轉譯影像的個別工具或終端使用者應用程式。
 
 對於習慣撰寫全功能指令碼來處理各種作業的 Python 開發人員而言，可能不需要將工作整理成不同的程序。 但定型和評分有不同的使用案例。 區隔這兩者後，您可以將每個工作放在不同的排程裡，並設定每個作業的權限範圍。
 

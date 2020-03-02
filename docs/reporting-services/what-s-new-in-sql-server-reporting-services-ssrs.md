@@ -1,5 +1,5 @@
 ---
-title: Reporting Services (SSRS) 中的新功能 | Microsoft Docs
+title: Reporting Services 中的新功能 | Microsoft Docs
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: 5ea40e80ddd378cfee73b932d9f5a1de2e7749a6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cb50ca237fb1b9fae87b73fd81a9e6f2426b4775
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831710"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079614"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新功能
 

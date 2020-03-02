@@ -1,5 +1,5 @@
 ---
-title: 設定文字方塊方向 (報表產生器及 SSRS) | Microsoft Docs
+title: 設定文字方塊方向 (報表產生器) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 64bd53f4-2f31-4732-8c2e-64c7b54b6972
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 119e9f04ddbaf91da420d69343d7fe741fbdd63d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 322c393749f60b1fb505577bf3af57238eb093c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576842"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081004"
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>設定文字方塊方向 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，您可以將文字方塊旋轉到不同方向︰   
@@ -42,6 +42,6 @@ ms.locfileid: "65576842"
   
 ## <a name="see-also"></a>另請參閱  
  [文字方塊 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [教學課程：格式化文字 &#40;報表產生器&#41;](../../reporting-services/tutorial-format-text-report-builder.md)  
+ [教學課程：對文字進行格式化 &#40;報表產生器&#41;](../../reporting-services/tutorial-format-text-report-builder.md)  
   
   

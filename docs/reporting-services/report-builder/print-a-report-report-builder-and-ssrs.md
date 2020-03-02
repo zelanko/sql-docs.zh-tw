@@ -1,5 +1,5 @@
 ---
-title: 列印報表 (報表產生器及 SSRS) | Microsoft Docs
+title: 列印報表 (報表產生器) | Microsoft Docs
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67d9e057b7ed307377e59172948d56d92c45e7f3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ec88487e55015edcea264e3530ad13f732ca5fc9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581172"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082518"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>列印報表 (報表產生器及 SSRS)
   將報表儲存至報表伺服器之後，您就可以從瀏覽器、 Reporting Services 入口網站或任何用來檢視所匯出報表的應用程式，檢視及列印報表。 儲存報表之前，您可以在預覽報表時將它列印出來。  
   
- 當您列印報表時，可以指定所要使用的紙張大小。 紙張大小會決定報表中的頁數及哪些報表資料適合每一頁的大小。 紙張大小只會影響以硬分頁轉譯器所轉譯的報表：PDF、影像和列印。 設定紙張大小對於其他轉譯器沒有任何作用。 如需詳細資訊，請參閱[轉譯行為 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)。  
+ 當您列印報表時，可以指定所要使用的紙張大小。 紙張大小會決定報表中的頁數及哪些報表資料適合每一頁的大小。 紙張大小只會影響以強制分頁轉譯器所轉譯的報表：PDF、影像和列印。 設定紙張大小對於其他轉譯器沒有任何作用。 如需詳細資訊，請參閱[轉譯行為 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)。  
   
  您可以從 Reporting Services 入口網站的報表檢視器工具列或報表產生器中的預覽，將報表匯出到手動分頁轉譯器，或是按一下 [列印] 按鈕來列印報表的複本。 您可能需要設定紙張大小或是其他版面設定屬性。 使用 **[報表屬性]** 對話方塊可變更版面設定屬性，包括紙張大小。  
   

@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8bf76e0929dea69758b1f9152af0df8f3170227d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: cb7ac494a8a87b0ac5f2f6692763d526b7f26af6
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75235198"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256661"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>次要到主要複本讀取/寫入連線重新導向 (Always On 可用性群組)
 
@@ -46,7 +46,7 @@ ms.locfileid: "75235198"
 讓次要複本重新導向讀取/寫入連線要求：
 * 次要複本必須為線上。 
 * 複本規格 `PRIMARY_ROLE` 必須包含 `READ_WRITE_ROUTING_URL`。
-* 連接字串必須將 `ApplicationIntent` 定義為 `ReadWrite`；這是預設值。
+* 連接字串必須是 `ReadWrite`，可透過將 `ApplicationIntent` 定義為 `ReadWrite`，或不設定 `ApplicationIntent` 並讓預設值 (`ReadWrite`) 生效來完成。
 
 ## <a name="set-read_write_routing_url-option"></a>設定 READ_WRITE_ROUTING_URL 選項
 

@@ -1,5 +1,5 @@
 ---
-title: 設定圖表上數列色彩的格式 (報表產生器及 SSRS) | Microsoft Docs
+title: 設定圖表上數列色彩的格式 (報表產生器) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e2bdcd1df91408f33c25ad0a8eefa4c9ef2ee771
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f1d56ecf79c427c885814e87437264ca23c13e18
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580309"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079515"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>設定圖表上數列色彩的格式 (報表產生器及 SSRS)
   Reporting Services 為圖表提供數個內建的調色盤，或者您也可以定義自訂的調色盤。 依預設，圖表會使用內建的 **Pacific** 調色盤來填滿每個數列。 這些色彩也會出現在圖例中。 在圖表中加入多個序列時，圖表會以調色盤定義色彩的順序為序列指派色彩。  

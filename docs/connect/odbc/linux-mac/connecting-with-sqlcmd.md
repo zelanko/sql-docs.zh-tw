@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a782db89033da42ebf17ed33565ec680fafa0d04
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c73ee7914d0d9ac560d57a204458e5cd4ba57a0d
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68005918"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971440"
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 連接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -52,6 +52,9 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -e 將輸入指令碼寫入至標準輸出裝置 (stdout)。
 
 - -E 使用信任連接 (整合式驗證)。如需有關如何從 Linux 或 macOS 用戶端建立使用整合式驗證的信任連接的詳細資訊，請參閱[使用整合式驗證](../../../connect/odbc/linux-mac/using-integrated-authentication.md)。
+
+- -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage] 指定輸入和輸出字碼頁。 字碼頁碼是一個數值，指定已安裝的 Linux 字碼頁。
+(自 17.5.1.1 起提供)
 
 - -h *number_of_rows* 指定資料行標頭之間所要列印的資料列數目。  
   
@@ -159,8 +162,6 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 在目前版本中，下列選項無法使用：  
 
 - -A 使用專用管理員連線 (DAC) 來登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如需如何建立專用管理員連線 (DAC) 的資訊，請參閱[程式設計指導方針](../../../connect/odbc/linux-mac/programming-guidelines.md)。  
-  
-- -f *code_page* 指定輸入和輸出字碼頁。  
   
 - -L 列出設定在本機的伺服器電腦，以及在網路中進行廣播的伺服器電腦名稱。  
   

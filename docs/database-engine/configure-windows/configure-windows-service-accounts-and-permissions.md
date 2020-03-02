@@ -50,12 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f8097f477368a9aa4cd8846b8da77e8bff73324e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 491d1e260206121b431276088ff5b34516b4d337
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76929151"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173600"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>設定 Windows 服務帳戶與權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -387,7 +387,7 @@ ms.locfileid: "76929151"
 ||\<ToolsDir>\DReplayClient\IRDefinition.xml|讀取、執行、列出資料夾內容|  
 |Launchpad|%binn|讀取、執行|
 ||ExtensiblilityData|完整控制|
-||Log\ExtensibiltityLog|完整控制|
+||Log\ExtensibilityLog|完整控制|
   
  \*[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 與 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services 的執行個體會停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A代理程式服務。  
   

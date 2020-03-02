@@ -1,6 +1,6 @@
 ---
 title: 將自訂地圖新增至 Reporting Services 行動報表 | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2f2d3b15021569fe53bfc886f744ed7e53c1444
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9410aac6b74fbb515010517a2fe0667f3c197802
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63141236"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971401"
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>將自訂地圖加入 Reporting Services 行動報表
 自訂地圖需要兩個檔案︰  
@@ -22,11 +22,11 @@ ms.locfileid: "63141236"
   
 請閱讀 [Reporting Services 行動報表中的自訂地圖](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)。  
   
-將這兩個檔案儲存在相同的資料夾中。 兩者的檔案名稱必須相符 (例如 canada.shp 和 canada.dbf)。 中繼資料 (DBF file) 必須包含 [名稱] 欄位和地圖的圖形名稱值 (索引鍵)，以在地圖中填入資料時使用。   
+將這兩個檔案儲存在相同的資料夾中。 兩者的檔案名稱必須相符 (例如 canada.shp 和 canada.dbf)。 中繼資料 (DBF 檔案) 的第一個資料行用來與對應圖形名稱 (索引鍵) 的索引鍵值相符，以在地圖中填入資料時使用。
   
 ## <a name="load-a-custom-map"></a>載入自訂地圖  
   
-1. 在 [配置]  索引標籤上選取地圖類型：[漸層熱度圖]  、[範圍停止熱度圖]  或 [泡泡圖]  ，將其拖曳至設計介面，並調整為您想要的大小。  
+1. 在 [版面配置]  索引標籤上，選取地圖類型：[漸層熱度圖]  、[範圍停止熱度圖]  或 [泡泡地圖]  ，將其拖曳至設計介面，並調整為您想要的大小。  
   
    ![SSMRP_MapsGallery](../../reporting-services/mobile-reports/media/ssmrp-mapsgallery.png)  
   

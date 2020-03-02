@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 994d7f21df09f49329e7547c4330aa95b5745873
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3a6a21cf82a7b94d5526e4492d69bc5f1578b716
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75236304"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478452"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組概觀 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "75236304"
 > [!TIP]  
 >  您可為主要資料庫建立任何類型的備份。 或者，您亦可為次要資料庫建立記錄備份和僅限複製的完整備份。 如需詳細資訊，請參閱[使用中次要：在次要複本上備份 &#40;Always On 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。   
 
- 每一組可用性資料庫都是由 *「可用性複本」* (Availability Replica) 主控。 有兩種類型的可用性複本：單一 *「主要複本」* (Primary Replica)， 以及一到八個「次要複本」  (Secondary Replica)。前者裝載主要資料庫，後者各裝載一組次要資料庫，而且可以當做可用性群組的潛在容錯移轉目標。 可用性群組會在可用性複本層級容錯移轉。 可用性複本僅在資料庫層級針對某個可用性群組中的一組資料庫提供備援。 資料庫問題，例如資料庫因為資料檔案遺失而變得可疑或交易記錄損毀，並不會造成容錯移轉。  
+ 每一組可用性資料庫都是由 *「可用性複本」* (Availability Replica) 主控。 有兩種類型的可用性複本：單一 *「主要複本」* (Primary Replica)， 以及一到八個「次要複本」  (Secondary Replica)。前者裝載主要資料庫，後者各裝載一組次要資料庫，而且可以當做可用性群組的潛在容錯移轉目標。 可用性群組會在可用性複本層級容錯移轉。 可用性複本僅會針對某個可用性群組中一組資料庫提供資料庫層級的備援。 資料庫問題，例如資料庫因為資料檔案遺失而變得可疑或交易記錄損毀，並不會造成容錯移轉。  
   
  主要複本提供主要資料庫，以供用戶端讀寫連接使用。 主要複本會將每個主要資料庫的交易記錄檔記錄傳送到每個次要資料庫。 這個稱為「資料同步處理」  的程序是在資料庫層級發生。 每個次要複本都會快取交易記錄檔記錄 (「強行寫入」  記錄檔)，然後將它們套用到對應的次要資料庫。 資料同步處理在主要資料庫和每個連接的次要資料庫之間發生，與其他資料庫無關。 因此，次要資料庫可以暫停或失敗，而不影響其他次要資料庫，主要資料庫也可以暫停或失敗，而不影響其他主要資料庫。  
   

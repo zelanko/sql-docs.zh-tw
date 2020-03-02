@@ -22,13 +22,13 @@ author: dnethi
 ms.author: dinethi
 ms.reviewer: sstein, maghan
 ms.custom: seo-lt-2019
-ms.date: 11/04/2019
-ms.openlocfilehash: 3532c1d7cfe148c4fe4f1d5331e711a994916818
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.date: 02/18/2020
+ms.openlocfilehash: 5004b46f878a5098e63fb3842569e826b21b764f
+ms.sourcegitcommit: 5a9b8bc4fcb5e875d5ef25362b68ffe7f8a1b6d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76761772"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77520941"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 
@@ -54,7 +54,7 @@ SSMS 18.4 是 SSMS 最新的正式運作 (GA) 版本。 若先前已安裝 SSMS 
 
 若您有意見或建議，或是要回報問題，則連絡 SSMS 小組的最佳方式是透過 [UserVoice](https://aka.ms/sqlfeedback)。
 
-SSMS 18.x 安裝不會升級或取代 SSMS 17.x 版或更早版本。 SSMS 18.x 會與舊版本並存安裝，讓兩個版本同時可供使用。 不過，如果您已安裝 SSMS 18.x「預覽」版本，則必須在安裝 SSMS 18.4 前先將其**解除安裝**。
+SSMS 18.x 安裝不會升級或取代 SSMS 17.x 版或更早版本。 SSMS 18.x 會與舊版本並存安裝，讓兩個版本同時可供使用。 不過，如果您已安裝 SSMS 18.x「預覽」版本，則必須在安裝 SSMS 18.4 前先將其**解除安裝**。 可以前往 [說明] > [關於] 視窗，以查看您是否有「預覽」  版本。
 
 如果電腦中包含並存安裝的 SSMS，請確認已針對您的特定需求啟動正確的版本。 最新版本會標記為 **Microsoft SQL Server Management Studio 18**
 
@@ -71,25 +71,15 @@ SQL Server Management Studio 18.4：
 > [!NOTE]
 > SQL Server PowerShell 模組為透過 PowerShell 資源庫個別安裝的模組。 如需詳細資訊，請參閱[下載 SQL Server PowerShell 模組](download-sql-server-ps-module.md)。
 
-## <a name="new-in-this-release-ssms-184"></a>此版本 (SSMS 18.4) 中的新功能
+## <a name="whats-new"></a>新功能
 
-| 新項目 | 詳細資料 |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 資料分類 | 已新增資料分類的自訂資訊保護原則支援。 |
-| 查詢存放區 | 已新增對話方塊屬性中的「每個查詢的計劃上限」  值。 |
-| 查詢存放區 | 已新增新自訂擷取原則的支援。 |
-| SMO/指令碼 | 支援 SQL DW 中具體化檢視的指令碼。 |
-| SMO/指令碼 | 已新增「SQL 隨需」  的支援。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已新增 50 個評定規則 (請參閱 GitHub 上的詳細資料)。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已新增基底數學運算式和規則條件的比較。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已新增 RegisteredServer 物件的支援。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 升級了以 JSON 格式來儲存規則的方式，也升級了套用覆寫/自訂的機制。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已更新支援 Linux 上 SQL 的規則。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已更新規則集 JSON 格式，並已新增結構描述版本。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已更新 Cmdlet 輸出以改善建議的可讀性。 |
-| XEvent 分析工具 | 已將 *error_reported* 事件新增至 XEvent Profiler 工作階段。 |
+如需此版本中最新功能的詳細資訊，請參閱 [SSMS 版本資訊](release-notes-ssms.md)。
 
-如需此版本中最新功能的詳細資料，請參閱 [SSMS 版本資訊](release-notes-ssms.md)。
+此版本有一些[已知問題](release-notes-ssms.md#known-issues-184)。
+
+## <a name="previous-versions"></a>舊版
+
+本文僅適用於最新版本的 SSMS。 若要下載舊版的 SSMS，請前往[舊版 SSMS](../ssms/release-notes-ssms.md#previous-ssms-releases)。
 
 ## <a name="supported-sql-offerings-ssms-184"></a>支援的 SQL 供應項目 (SSMS 18.4)
 
@@ -113,16 +103,6 @@ SQL Server Management Studio 18.4：
 
 > [!NOTE]
 > SSMS 只能在 Windows (AMD 或 Intel) 上執行。 若您需要能在 Windows 以外平台上執行的工具，請查看 Azure Data Studio。 Azure Data Studio 是一個新的跨平台工具，可在 macOS、Linux 以及 Windows 上執行。 如需詳細資料，請參閱 [Azure Data Studio](../azure-data-studio/what-is.md)。
-
-## <a name="release-notes-ssms-184"></a>版本資訊 (SSMS 18.4)
-
-此版本有一些[已知問題](release-notes-ssms.md#known-issues-184)。
-
-如需此版本的詳細資料，請參閱 [SSMS 版本資訊](release-notes-ssms.md)。
-
-## <a name="previous-ssms-releases"></a>舊版 SSMS
-
-[先前 SQL Server Management Studio 版本](../ssms/release-notes-ssms.md#previous-ssms-releases)
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

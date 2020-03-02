@@ -1,7 +1,7 @@
 ---
 title: 使用 Kerberos 整合驗證連接到 SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2215e9f6b6c8cd0e19c220d16ebc7a1520550a42
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cfa4c91dc0d4d40f8cf903301acb2433dcaf6f7a
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69026189"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004631"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>使用 Kerberos 整合式驗證連接到 SQL Server
 
@@ -37,13 +37,13 @@ ms.locfileid: "69026189"
 
 ## <a name="remarks"></a>備註
 
-在 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 之前，應用程式可以使用 **integratedSecurity** 連線屬性及參考 **sqljdbc_auth.dll** 來指定整合式驗證 (使用 Kerberos 或 NTLM，取決於哪一個為可用狀態)，如[建置連線 URL](../../connect/jdbc/building-the-connection-url.md) 中所述。
+在 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 之前，應用程式可以使用 **integratedSecurity** 連線屬性及參考 **mssql-jdbc_auth-\<版本>-\<架構>.dll** 來指定整合式驗證 (使用 Kerberos 或 NTLM，取決於哪一個為可用狀態)，如[建置連線 URL](../../connect/jdbc/building-the-connection-url.md) 中所述。
 
 從 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 開始，應用程式可使用 **authenticationScheme** 連線屬性來指定透過純 Java Kerberos 實作使用 Kerberos 整合驗證連線到資料庫：
 
 - 如果您想要使用 **Krb5LoginModule** 的整合式驗證，您仍然必須指定 **integratedSecurity=true** 連線屬性。 您接著也要指定 **authenticationScheme=JavaKerberos** 連線屬性。
 
-- 若要繼續搭配 **sqljdbc_auth.dll** 使用整合式驗證，只需指定 **integratedSecurity=true** 連線屬性 (並選擇性地指定 **authenticationScheme=NativeAuthentication**)。
+- 若要繼續搭配 **mssql-jdbc_auth-\<版本>-\<架構>.dll** 使用整合式驗證，只需指定 **integratedSecurity=true** 連線屬性 (並選擇性地指定 **authenticationScheme=NativeAuthentication**)。
 
 - 如果您指定 **authenticationScheme=JavaKerberos** 但未同時指定 **integratedSecurity=true**，則驅動程式將會忽略 **authenticationScheme** 連線屬性，而且它將會預期能在連接字串中找到使用者名稱與密碼認證。
 

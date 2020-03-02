@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b34d69ea0d402f568efa4e6951367cce3cfa0eca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 626b4277edcb049b2c7b755b70199df899dc5637
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75558037"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256651"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server 使用狀況和診斷資料收集的本機稽核 (CEIP)
 
@@ -29,7 +29,7 @@ ms.locfileid: "75558037"
 
 Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能可能會收集並傳送電腦或裝置的相關資訊。 這稱為「標準電腦資訊」  。 [SQL Server 使用方式和診斷資料收集](usage-and-diagnostic-data-configuration-for-sql-server.md) \(英文\) 的本機稽核元件會將服務收集的資料寫入至指定的資料夾，代表將傳送給 Microsoft 的資料 (記錄)。 本機稽核的目的是要讓客戶看到 Microsoft 以此功能收集的所有資料，以用於相容性、法規或隱私權驗證的理由。  
 
-從 SQL Server 2016 CU2 開始，可以在 SQL Server 資料庫引擎和 Analysis Services (SSAS) 的執行個體層級設定。 在 SQL Server 2016 CU4 與 SQL Server 2016 SP1 中，也會啟用 SQL Server Integration Services (SSIS) 的本機稽核。 安裝程式執行期間所安裝的其他 SQL Server 元件，以及在安裝程式執行之後下載或安裝的 SQL Server 工具，沒有使用方式和診斷資料收集的本機稽核功能。
+若為 SQL Server 2016 CU2 和 CU3，則可在 SQL Server 資料庫引擎和 Analysis Services (SSAS) 的執行個體層級設定本機稽核。 若為 SQL Server 2016 CU4、2016 SP1 和更新版本，則也會啟用 SQL Server Integration Services (SSIS) 的本機稽核。 安裝程式執行期間所安裝的其他 SQL Server 元件，以及在安裝程式執行之後下載或安裝的 SQL Server 工具，沒有使用方式和診斷資料收集的本機稽核功能。
 
 ## <a name="remarks"></a>備註
 
@@ -42,7 +42,7 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 
 若要在每個 SQL Server 執行個體上啟用本機稽核，下列是必要條件︰ 
 
-1. 執行個體已修補為 SQL Server 2016 RTM CU2 或更新版本。 針對 Integration Services，執行個體已修補為 SQL 2016 RTM CU4 或 SQL 2016 SP1
+1. 執行個體已修補為 SQL Server 2016 RTM CU2 或更新版本。 若為 Integration Services，則執行個體會修補至 SQL 2016 RTM CU4、SQL 2016 SP1 或更新版本。
 
 1. 使用者必須是系統管理員或具有存取權可新增和修改登錄機碼、建立資料夾、管理資料夾安全性及停止/啟動 Windows 服務的角色。  
 
@@ -320,7 +320,7 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 將不會寫入本機稽核檔案。
 
 **防火牆後面沒有網際網路連線/電腦的話會有何影響？**
-SQL Server 2016 使用方式和診斷資料將不會傳送給 Microsoft。 它仍然會嘗試寫入本機稽核記錄檔，如果已正確設定的話。
+SQL Server 的使用方式和診斷資料將不會傳送給 Microsoft。 它仍然會嘗試寫入本機稽核記錄檔，如果已正確設定的話。
 
 **DBA 如何停用本機稽核？**
 請移除 UserRequestedLocalAuditDirectory 登錄機碼項目。
@@ -333,7 +333,7 @@ DBA 必須自行管理目錄的檔案清除工作，以避免耗用太多磁碟�
 
 **是否有用戶端或工具，可用於讀取此 JSON 輸出？**
 可以使用 [記事本]、Visual Studio 或您選擇的任何 JSON 讀取器來讀取輸出。
-或者，您可以在 SQL Server 2016 執行個體中讀取 JSON 檔案並分析資料，如下所示。 如需如何在 SQL Server 中讀取 JSON 檔案的詳細資訊，請瀏覽 [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(使用 OPENROWSET (BULK) 和 OPENJSON (Transact-SQL) 將 JSON 檔案匯入到 SQL Server)。
+或者，您可以如下所示，在 SQL Server 執行個體中讀取 JSON 檔案並分析資料。 如需如何在 SQL Server 中讀取 JSON 檔案的詳細資訊，請瀏覽 [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(使用 OPENROWSET (BULK) 和 OPENJSON (Transact-SQL) 將 JSON 檔案匯入到 SQL Server)。
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

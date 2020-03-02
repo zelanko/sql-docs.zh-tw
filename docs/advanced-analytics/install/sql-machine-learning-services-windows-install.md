@@ -3,18 +3,18 @@ title: 在 Windows 上安裝
 description: 了解如何在 Windows 上安裝 SQL Server 機器學習服務。 您可以使用機器學習服務來在資料庫中執行 Python 和 R 指令碼。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/23/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 26fe15ff88a52b6673d5e7de7dcad3a047fca6ba
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9ce47719415c97f7e9e6cecb27768717710537d4
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76891722"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507584"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>在 Windows 上安裝 SQL Server 機器學習服務 (Python 和 R)
 
@@ -40,7 +40,8 @@ ms.locfileid: "76891722"
   + 在外部程式庫中執行的 R 與 Python 指令碼無法由 SQL Server 管理，因而會導致資源競爭。
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-+ 根據預設，系統會在 SQL Server 巨量資料叢集上安裝機器學習服務。 如果您使用的是巨量資料叢集，就不需要依照此文章中的步驟。 如需詳細資訊，請參閱[在巨量資料叢集上使用機器學習服務 (Python 和 R)](../../big-data-cluster/machine-learning-services.md)。
+> [!NOTE]
+> 根據預設，系統會在 **SQL Server 巨量資料叢集**上安裝機器學習服務。 如果您使用的是**巨量資料叢集**，即無須遵循此文章中的步驟。 如需詳細資訊，請參閱[在巨量資料叢集上使用機器學習服務 (Python 和 R)](../../big-data-cluster/machine-learning-services.md)。
 ::: moniker-end
 
 > [!IMPORTANT]

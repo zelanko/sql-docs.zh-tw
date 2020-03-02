@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e9435c52cc0bf318291d38a2511f496c818c2fd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0e28d62292c8bcc4b98d8991fbf4bd8708bbbc76
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74479434"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558372"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>使用 sqlmlutils 安裝新的 R 套件
 
@@ -51,7 +51,7 @@ ms.locfileid: "74479434"
 
 若用戶端電腦可以存取網際網路，您可以在線上下載並安裝 **sqlmlutils** 與其相依套件。
 
-1. 從 **將最新的**sqlmlutils https://github.com/Microsoft/sqlmlutils/tree/master/R/dist ZIP 檔案下載到用戶端電腦。 請勿解壓縮檔案。
+1. 從 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 將最新的 **sqlmlutils** ZIP 檔案下載到用戶端電腦。 請勿解壓縮檔案。
 
 1. 開啟 [命令提示字元]  並執行下列命令，以安裝 **sqlmlutils** 與 **RODBCext** 套件。 取代為您下載之 **sqlmlutils** ZIP 檔案的完整路徑 (此範例假設該檔案位於您的 [文件] 資料夾中)。 會在線上找到 **RODBCext** 套件並安裝。
 
@@ -108,7 +108,7 @@ ms.locfileid: "74479434"
     , @script = N'print(R.version)'
    ```
 
-1. 從 **下載最新的**sqlmlutils https://github.com/Microsoft/sqlmlutils/tree/master/R/dist ZIP 檔案 (不要將該檔案解壓縮)。 例如，將檔案下載到 `c:\downloads\sqlmlutils_0.7.1.zip`。
+1. 從 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 下載最新的 **sqlmlutils** ZIP 檔案 (不要將該檔案解壓縮)。 例如，將檔案下載到 `c:\downloads\sqlmlutils_0.7.1.zip`。
 
 1. 將整個 **RODBCext** 存放庫資料夾 (`c:\downloads\rodbcext`) 與 **sqlmlutils** ZIP 檔案 (`c:\downloads\sqlmlutils_0.7.1.zip`) 複製到用戶端電腦。 例如，將它們複製到用戶端電腦上的 `c:\temp\packages` 資料夾。
 
@@ -129,13 +129,15 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 
 1. 在用戶端電腦上，開啟 RStudio，並建立新的 **R 指令碼**檔案。
 
-1. 使用下列 R 指令碼，使用 **sqlmlutils** 安裝 **glue** 套件。 以您自己的 SQL Server 資料庫連線資訊取代 (如果您未使用 Windows 驗證，請新增 `uid` 和 `pwd` 參數)。
+1. 使用下列 R 指令碼，使用 **sqlmlutils** 安裝 **glue** 套件。 替換為您自己的 SQL Server 資料庫連線資訊。
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
-     server= "yourserver",
-     database = "yourdatabase")
+     server   = "server",
+     database = "database",
+     uid      = "username",
+     pwd      = "password")
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC")
    ```
@@ -146,7 +148,7 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 ### <a name="add-the-package-offline"></a>離線新增套件
 
 若用戶端電腦沒有網際網路連線，您可以透過可以存取網際網路的電腦，使用**miniCRAN** 來下載 **glue** 套件。 接著，將該套件複製到用戶端電腦，以便離線安裝套件。
-如需有關安裝 [miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) 的詳細資訊，請參閱**安裝 miniCRAN**。
+如需有關安裝 **miniCRAN** 的詳細資訊，請參閱[安裝 miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran)。
 
 在可以存取網際網路的電腦上：
 

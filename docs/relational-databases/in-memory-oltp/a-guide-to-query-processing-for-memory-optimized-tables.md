@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef5c610cb71a0f638c2dfba8aad1fbdb77308dfa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 652d37ec9f19ccc91e1e0d472cb98d734b65df52
+ms.sourcegitcommit: 99ce0c9b28283d292d19637def982e971115dfbc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74412822"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125285"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>記憶體最佳化資料表的查詢處理指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  在這個查詢中，Orders 資料表的資料列是使用叢集索引擷取。 **Hash Match** 實體運算子現在用於 **Inner Join**。 Order 上的叢集索引不會在 CustomerID 上排序，因此 **Merge Join** 會需要排序運算子，而這樣就會影響效能。 請記下與上一個範例中 **Merge Join** 運算子成本 (46%) 相較的 **Hash Match** 運算子相對成本 (75%)。 最佳化工具原本也會在上一個範例中考慮 **Hash Match** 運算子，但結果卻是 **Merge Join** 運算子提供更佳效能的結果。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁碟資料表的查詢處理  
+## <a name="ssnoversion-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁碟資料表的查詢處理  
  下圖概述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中隨選查詢的查詢處理流程：  
   
  ![SQL Server 查詢處理管線。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "SQL Server 查詢處理管線。")  
@@ -119,7 +119,7 @@ SQL Server 查詢處理管線。
 
  在第一個範例查詢中，執行引擎會從 Access Methods 要求 Customer 上叢集索引中的資料列，以及 Order 上非叢集索引中的資料列。 Access Methods 會周遊 B 型樹狀目錄索引結構，擷取所要求的資料列。 在這種情況下，當計畫需要完整索引掃描時，就會擷取所有資料列。  
   
-## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取  
+## <a name="interpreted-tsql-access-to-memory-optimized-tables"></a>對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 隨選批次和預存程序，也稱為解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 解譯是指查詢計劃是由查詢計劃中每個運算子的查詢執行引擎所解譯。 執行引擎會讀取運算子及其參數，並執行作業。  
   
  解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可用來存取記憶體最佳化和磁碟為基礎的資料表。 下圖說明對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取之查詢處理：  
@@ -225,7 +225,7 @@ END
   
  原生編譯預存程序的引動過程描述如下：  
   
-1.  使用者發出 **EXEC**_usp_myproc_ 陳述式。  
+1.  使用者發出 **EXEC** _usp_myproc_ 陳述式。  
   
 2.  剖析器會擷取名稱和預存程序參數。  
   

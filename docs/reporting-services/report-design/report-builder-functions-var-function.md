@@ -1,5 +1,5 @@
 ---
-title: Var 函式 (報表產生器及 SSRS) | Microsoft Docs
+title: Var 函式 (報表產生器) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7b2018ce-c5f9-4f8b-bd44-4201379a584b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2fba0fc4720e10fc2c90dcdecf783bd01f849fd8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c8fc31dec4f6e4cfc289c5d01ab03c9ecbbd5a7d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576751"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081105"
 ---
 # <a name="report-builder-functions---var-function"></a>報表產生器函式 - Var 函式
   傳回運算式指定的所有非 Null 數值的變異數 (在給定範圍中評估)。  

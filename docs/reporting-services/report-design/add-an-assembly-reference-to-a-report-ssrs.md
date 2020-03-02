@@ -1,5 +1,5 @@
 ---
-title: 將組件參考新增至報表 (SSRS) | Microsoft Docs
+title: 將組件參考新增至報表 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a03939e-48ce-4c30-b227-98533f2e0ccb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e13f6c0d8c4c81a60e1a93898119bbb0884b2d8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c9725d51c934172c6c6291b6a7f1592a3ddc057c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582142"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080677"
 ---
 # <a name="add-an-assembly-reference-to-a-report-ssrs"></a>將組件參考加入至報表 (SSRS)
   當您內嵌的自訂程式碼包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別的參考，而該類別不在 <xref:System.Math> 或 <xref:System.Convert> 中時，則必須提供此報表的組件參考以讓報表處理器可以解析名稱。 如需詳細資訊，請參閱[將程式碼加入至報表 &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)。  

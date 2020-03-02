@@ -16,12 +16,12 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: ff3d3db1ab4fc3d02e8710cf482225523285c0a0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 633618142e6e7548f47d78fadcc8af8f7a076dd4
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68031520"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507568"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -146,8 +146,8 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="c-query-temporal-tables-using-local-time-zone"></a>C. 使用本地時區的查詢時態表  
- 下列範例會從時態表選取資料。  
+### <a name="c-query-temporal-tables-using-a-specific-time-zone"></a>C. 使用特定時區的查詢時態表  
+ 下列範例會從使用太平洋標準時間的時態表中選取資料。  
   
 ```sql
 USE AdventureWorks2016;  

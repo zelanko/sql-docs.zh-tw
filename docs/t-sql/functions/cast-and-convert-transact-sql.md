@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 943d0e840c0c407e66f0d47deec4c1e78fc57afa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f8eecd6d0a1d54d56fd93eacf96154f57e4afec6
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76761622"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77440690"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -171,7 +171,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 隱含轉換不需要指定 CAST 函式或 CONVERT 函式。 明確轉換需要指定 CAST 函式或 CONVERT 函式。 下圖顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統提供之資料類型所能使用的所有明確和隱含資料類型轉換。 這些包含 **bigint**、**sql_variant** 和 **xml**。 從 **sql_variant** 資料類型進行指派時，不可使用隱含轉換，但可以隱含轉換成 **sql_variant**。
   
 > [!TIP]  
-> 可在 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=35834)將此圖表下載為 PDF 檔案。  
+> [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=35834)提供此圖表，可下載為 PNG 檔案。  
   
 ![資料類型轉換資料表](../../t-sql/data-types/media/lrdatahd.png "資料類型轉換資料表")
   
@@ -760,7 +760,7 @@ SELECT @notastring + '1'
 
 在此情況下，字串 `'1'` 可轉換成整數值 1，所以此 SELECT 陳述式將會傳回值 2。 在提供的資料類型為整數時，+ 運算子會變成加法數學運算子，而非字串串連。
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="l-using-cast-and-convert"></a>L. 使用 CAST 和 CONVERT  
 此範例會擷取定價第一位數是 `3` 的產品名稱，而且會將這些產品的 `ListPrice` 轉換成 **int**。其會使用 `AdventureWorksDW2016` 資料庫。

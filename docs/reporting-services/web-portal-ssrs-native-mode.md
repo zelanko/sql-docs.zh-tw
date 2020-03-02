@@ -1,6 +1,6 @@
 ---
-title: 報表伺服器的入口網站 (SSRS 原生模式) | Microsoft Docs
-ms.date: 12/05/2018
+title: 報表伺服器的入口網站 (原生模式) | Microsoft Docs
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42844a8783f5d1e1066667ed828906c0549f84c2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 24afa6ec8daa26730ad202d1aad612ba01213bb4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "70874908"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082514"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>報表伺服器的入口網站 (SSRS 原生模式)
 
@@ -30,7 +30,7 @@ Reporting Services 報表伺服器的入口網站是一種 Web 體驗。 在入�
 
 - 檢視、搜尋、列印與訂閱報表。
 - 建立、保護和維護資料夾階層，以組織伺服器上的項目。
-- 設定以角色為基礎的安全性，此安全性決定對項目與作業的存取權。
+- 設定以角色為基礎的安全性，此安全性決定對項目與作業的存取權。 如需詳細資料，請參閱[角色定義 - 預先定義的角色](security/role-definitions-predefined-roles.md)。
 - 設定報表執行屬性、報表記錄和報表參數。
 - 建立共用排程與共用資料來源，讓排程與資料來源連接更容易管理。
 - 建立資料驅動訂閱，將報表傳遞至大型收件者清單。

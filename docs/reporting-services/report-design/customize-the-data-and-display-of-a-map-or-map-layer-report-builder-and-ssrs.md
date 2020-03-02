@@ -1,5 +1,5 @@
 ---
-title: 自訂地圖或地圖圖層的資料和顯示 (報表產生器及 SSRS) | Microsoft Docs
+title: 自訂地圖或地圖圖層的資料和顯示 (報表產生器) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +21,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 96f1fd480d0260c24bf534dec80eef2e4ff6fda2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 53b1495299dd3a71843ceaa1ad3a43464c374210
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65572338"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080525"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自訂地圖或地圖圖層的資料和顯示 (報表產生器及 SSRS)
   使用精靈將地圖或地圖圖層加入至 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表之後，您可能會想要變更地圖在報表中的外觀。 您可以考慮下列構想來進行改善：  
@@ -121,7 +121,7 @@ ms.locfileid: "65572338"
   
  群組運算式會指定與空間資料具有關聯性的分析資料如何針對圖層上的每個地圖元素進行彙總。 根據預設，群組運算式是針對空間資料與分析資料之間的關聯性指定的一組符合欄位組。 例如，對於顯示國家或地區之城市位置和人口數多寡的泡泡地圖，符合欄位包含城市名稱 [City] 和地區名稱 [Region]，因為可能會有多個城市擁有相同的名稱。 對應的群組運算式包含兩個欄位：[City] 和 [Region]。  
   
- 如需詳細資訊，請參閱 [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991)(地圖提示：如何將形狀檔匯入 SQL Server 及彙總空間資料中)。  
+ 如需詳細資訊，請參閱 [Map Tips:How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991) (地圖提示：如何將形狀檔匯入 SQL Server 及彙總空間資料中)。  
   
 ##  <a name="MapElements"></a> 變更圖層上地圖元素的選項  
  在以空間資料為基礎的圖層上，地圖元素為點、線條或多邊形。 您可以為地圖元素設定下列選項。 不會是否內嵌地圖元素，這些選項都會套用到圖層上的所有地圖元素：  

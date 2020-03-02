@@ -14,14 +14,14 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 66d7ac0e15ebfee2c79a90f8c5041ba899dbff93
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 355cb8b80e4a27a7f58bb42dd37ca9b91059fa25
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73926042"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479718"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -38,11 +38,11 @@ LocalDB 安裝會複製啟動 [!INCLUDE[ssDEnoversion](../../includes/ssdenovers
  >[!TIP]
  > 您也可以安裝 LocalDB 作為 Visual Studio 的一部分。 在 Visual Studio 安裝期間，選取 [.NET 桌面開發]  工作負載，它包含了 SQL Server Express LocalDB。
 
-- 有 Azure 帳戶嗎？ [開始使用](https://azure.microsoft.com/services/virtual-machines/sql-server/)並啟動已安裝 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的虛擬機器。
+- 有 Azure 帳戶嗎？ [開始使用](https://azure.microsoft.com/services/virtual-machines/sql-server/)並啟動已安裝 SQL Server 的虛擬機器。
 
 ## <a name="install-localdb"></a>安裝 LocalDB
 
-透過安裝精靈或使用 SqlLocalDB.msi 程式來安裝 LocalDB。 LocalDB 是安裝 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] 時的選項。 
+透過安裝精靈或使用 SqlLocalDB.msi 程式來安裝 LocalDB。 LocalDB 是安裝 SQL Server Express LocalDB 時的選項。 
  
 在安裝期間，在 [功能選取]/[共用功能]  頁面上選取 [LocalDB]。 每個主要 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]版本都只能有 LocalDB 二進位檔案的一個安裝。 多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理序可以啟動，而且全部都會使用相同的二進位檔案。 以 LocalDB 形式啟動的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體，其限制與 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 相同。
 
@@ -134,7 +134,7 @@ REM Gather information about the instance of LocalDB
 
 ## <a name="permissions"></a>權限
 
-[!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]LocalDB 執行個體是使用者所建立供他們使用的執行個體。 電腦上的任何使用者都可以使用 LocalDB 執行個體建立資料庫、在其使用者設定檔之下儲存檔案，並在其認證之下執行此處理序。 根據預設，對 LocalDB 執行個體的存取只限其擁有者。 LocalDB 中所容納的資料受到資料庫檔案之檔案系統存取的保護。 如果使用者資料庫檔案儲存在共用位置，擁有該位置之檔案系統存取權的任何人都可以使用其擁有的 LocalDB 執行個體開啟資料庫。 如果資料庫檔案位於受保護的位置，例如使用者資料夾，則只有該使用者和擁有該資料夾存取權的任何系統管理員才可以開啟資料庫。 LocalDB 檔案一次只能由一個 LocalDB 執行個體開啟。
+SQL Server Express LocalDB 執行個體是使用者為了自用而建立的執行個體。 電腦上的任何使用者都可以使用 LocalDB 執行個體建立資料庫、在其使用者設定檔之下儲存檔案，並在其認證之下執行此處理序。 根據預設，對 LocalDB 執行個體的存取只限其擁有者。 LocalDB 中所容納的資料受到資料庫檔案之檔案系統存取的保護。 如果使用者資料庫檔案儲存在共用位置，擁有該位置之檔案系統存取權的任何人都可以使用其擁有的 LocalDB 執行個體開啟資料庫。 如果資料庫檔案位於受保護的位置，例如使用者資料夾，則只有該使用者和擁有該資料夾存取權的任何系統管理員才可以開啟資料庫。 LocalDB 檔案一次只能由一個 LocalDB 執行個體開啟。
 
 >[!NOTE]
 >LocalDB 永遠都會在使用者安全性內容之下執行，也就是說，LocalDB 絕對不會使用本機系統管理員群組的認證執行。 這表示，LocalDB 執行個體使用的所有資料庫檔案都必須可使用擁有使用者的 Windows 帳戶存取，而不必考量本機系統管理員群組的成員資格。

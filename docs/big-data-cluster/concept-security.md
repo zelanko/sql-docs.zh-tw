@@ -9,12 +9,12 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0219022ee2f4d813261aa6181416521e88e5d0f6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0fc816325d4008d1913f0e07e3032677a0eddb4d
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253117"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074419"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的安全性概念
 
@@ -66,6 +66,10 @@ ms.locfileid: "75253117"
 針對用戶端和外部端點之間，以及叢集內元件之間通訊的加密，是搭配 TLS/SSL 使用憑證來保護。
 
 SQL Server 與 SQL Server 之間的所有通訊 (例如與資料集區通訊的 SQL 主要執行個體) 都是使用 SQL 登入來保護。
+
+> [!IMPORTANT]
+>  巨量資料叢集會使用 etcd 來儲存認證。 最佳做法是，您必須確定 Kubernetes 叢集已設定為使用待用的 etcd 加密。 根據預設，不會加密儲存在 etcd 中的祕密。 Kubernetes 文件提供此管理工作的詳細資料： https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ 和 https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/ 。
+
 
 ## <a name="basic-administrator-login"></a>基本系統管理員登入
 

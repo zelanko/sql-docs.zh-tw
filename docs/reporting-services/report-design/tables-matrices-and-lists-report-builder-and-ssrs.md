@@ -1,5 +1,5 @@
 ---
-title: 資料表、矩陣和清單 (報表產生器及 SSRS) | Microsoft Docs
+title: 資料表、矩陣和清單 (報表產生器) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -33,12 +33,12 @@ f1_keywords:
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a326ce7ea6701b1fe55f76861bced6c3c86174d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e3390f952eaa553c144d8dd50e906276d4f96649
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574680"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080877"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>資料表、矩陣和清單 (報表產生器及 SSRS)
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中，資料表、矩陣和清單都是「資料區」  ，這些資料區會將分頁報表資料顯示在分為資料列與資料行的資料格中。 資料格通常包含文字資料 (例如文字、日期和數字)，但也可以包含量測計、圖表或報表項目 (例如影像)。 資料表、矩陣和清單經常統稱為 *Tablix* 資料區。  

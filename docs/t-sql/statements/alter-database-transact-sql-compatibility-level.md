@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ed32cf93d5bbf13580fc15d649ad403b98524cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1980e9c96e568352fe616b6de8a6c7320c3d6c86
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909648"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544901"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
 
@@ -307,6 +307,7 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 |請參閱下方＜範例＞一節中的範例 E。|請參閱下方＜範例＞一節中的範例 F。|低|
 |ODBC 函數 {fn CONVERT()} 會使用語言的預設日期格式。 對於某些語言來說，預設格式為 YDM，這可能會在 CONVERT() 結合其他必須是 YMD 格式的函數 (例如 `{fn CURDATE()}`) 使用時產生轉換錯誤。|當 ODBC 函數 `{fn CONVERT()}` 轉換成 ODBC 資料類型 SQL_TIMESTAMP、SQL_DATE、SQL_TIME、SQLDATE、SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP 時，會使用樣式 121 (與語言無關的 YMD 格式)。|低|
 |日期時間內建 (如 DATEPART) 不會要求字串輸入值必須是有效的日期時間常值。 例如，`SELECT DATEPART (year, '2007/05-30')` 會編譯成功。|日期時間內建 (如 `DATEPART`) 會要求字串輸入值必須是有效的日期時間常值。 當使用無效的日期時間常值時會傳回錯誤 241。|低|
+|當參數的類型為 Char 時，在 REPLACE 函式的第一個輸入參數內所指定尾端空格將會被修剪。 例如，在 SELECT '<' + REPLACE(CONVERT(char(6), 'ABC '), ' ', 'L') + '>' 陳述式中，值 'ABC ' 會被錯誤地判斷為 'ABC'。|一律保留尾端空格。 如果是依賴舊版函式行為的應用程式，則當您為此函式指定第一個輸入參數時，請使用 RTRIM 函式。 例如，下列語法會重現 SQL Server 2005 的行為：SELECT '<' + REPLACE(RTRIM(CONVERT(char(6), 'ABC ')), ' ', 'L') + '>'。|低|
 
 ## <a name="reserved-keywords"></a>保留關鍵字
 

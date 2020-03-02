@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fd1cab79ce226a710de1f701cfff5094a82704a5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 12dea4163feba35af6346d347503f42ab31c852a
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75721663"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173626"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安裝 SQL Server 2019 巨量資料工具
 
@@ -35,7 +35,7 @@ ms.locfileid: "75721663"
 | **資料虛擬化延伸模組** | 是 | 提供 [資料虛擬化精靈] 之 Azure Data Studio 的延伸模組。 | [安裝](../azure-data-studio/data-virtualization-extension.md) |
 | **Azure CLI**<sup>2</sup> | 對於 AKS | 用於管理 Azure 服務的新式命令列介面。 與 AKS 巨量資料叢集部署搭配使用 ([詳細資訊](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest))。 | [安裝](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | 選用 | 用於查詢 SQL Server 的新式命令列介面 ([詳細資訊](https://github.com/dbcli/mssql-cli/blob/master/README.rst) \(英文\))。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \(英文\) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) \(英文\) |
-| **sqlcmd** | 對於某些指令碼 | 用於查詢 SQL Server 的舊版命令列工具 ([詳細資訊](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15) \(部分機器翻譯\))。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \(英文\) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
+| **sqlcmd** | 對於某些指令碼 | 用於查詢 SQL Server 的舊版命令列工具 ([詳細資訊](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15) \(部分機器翻譯\))。 您可能需要先安裝 Microsoft ODBC Driver 11 for SQL Server，才能安裝 SQLCMD 套件。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \(英文\) \| [Linux](../linux/sql-server-linux-setup-tools.md) \(英文\) |
 | `curl` <sup>3</sup> | 對於某些指令碼 | 使用 URL 傳送資料的命令列工具。 | [Windows](https://curl.haxx.se/windows/) \(英文\) \| Linux：安裝 curl 套件 |
 
 <sup>1</sup> 您必須使用 `kubectl` 1.13 版或更新版本。 此外，`kubectl` 的版本應該是 Kubernetes 叢集的次要版本加上或減去一。 如果您想要在 `kubectl` 用戶端上安裝特定版本，請參閱[透過 curl 安裝 `kubectl` 二進位檔](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (在 Windows 10 上，請使用 cmd.exe 執行 curl，而不是使用 Windows PowerShell)。
