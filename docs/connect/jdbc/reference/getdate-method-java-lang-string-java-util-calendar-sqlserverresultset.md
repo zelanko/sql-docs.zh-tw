@@ -25,7 +25,7 @@ ms.locfileid: "67984003"
 # <a name="getdate-method-javalangstring-javautilcalendar-sqlserverresultset"></a>getDate 方法 (java.lang.String, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用Java 程式設計語言，透過指定的 Calendar 物件，從 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的目前資料列內擷取指定資料行名稱值作為 java.sql.Date 物件。  
+  使用 Java 程式設計語言，透過指定的 Calendar 物件，從 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的目前資料列內擷取指定資料行名稱值作為 java.sql.Date 物件。  
   
 ## <a name="syntax"></a>語法  
   
