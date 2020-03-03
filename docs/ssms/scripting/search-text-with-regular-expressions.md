@@ -26,7 +26,7 @@ ms.locfileid: "75253682"
 # <a name="search-text-with-regular-expressions"></a>使用規則運算式搜尋文字
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-規則運算式是在尋找及取代文字模式時所使用，為既簡明、又有彈性的標記法。 A specific set of regular expressions can be used in the **Find what** field of the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
+規則運算式是在尋找及取代文字模式時所使用，為既簡明、又有彈性的標記法。 特定的規則運算式集可用在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [尋找和取代]  對話方塊的 [尋找目標]  欄位。  
   
 ## <a name="find-using-regular-expressions"></a>使用規則運算式來尋找  
   

@@ -59,7 +59,7 @@ ms.locfileid: "75253907"
   
 3.  在 [SQL 編輯器]  工具列的 [可用資料庫]  清單中，選取 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]。  
   
-4.  In the Query Editor window, type the following two [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and the `!!DIR` **sqlcmd** statement:  
+4.  在查詢編輯器視窗中鍵入下列兩項 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式及 `!!DIR` **sqlcmd** 陳述式：  
   
     ```  
     SELECT DISTINCT Type FROM Sales.SpecialOffer;  

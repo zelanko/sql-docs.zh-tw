@@ -60,7 +60,7 @@ ms.locfileid: "75307529"
   
  下圖顯示重新執行追蹤時，檢查權限的程序：  
   
- ![SQL Server Profiler replay trace permissions](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif"SQL Server Profiler replay trace permissions")  
+ ![SQL Server Profiler 重新執行追蹤權限](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif"SQL Server Profiler replay trace permissions")  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler 預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   

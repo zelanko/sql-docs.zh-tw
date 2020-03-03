@@ -1,5 +1,5 @@
 ---
-title: Configure FailureConditionLevel property settings
+title: 進行 FailureConditionLevel 屬性設定
 describes: 'Use the FailureConditionLevel property to set the conditions for the Always On Failover Cluster Instance (FCI) to fail over or restart. '
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,13 +17,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/31/2020
 ms.locfileid: "74822017"
 ---
-# <a name="configure-failureconditionlevel-property-settings"></a>Configure FailureConditionLevel property settings
+# <a name="configure-failureconditionlevel-property-settings"></a>進行 FailureConditionLevel 屬性設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用 FailureConditionLevel 屬性，即可將 AlwaysOn 容錯移轉叢集執行個體 (FCI) 的條件設定為容錯移轉或重新啟動。 對這個屬性的變更會立即套用，而不需要重新啟動 Windows Server 容錯移轉叢集 (WSFC) 服務或 FCI 資源。  
   
--   **Before you begin:**  [FailureConditionLevel Property Settings](#Restrictions), [Security](#Security)  
+-   **開始之前：** [FailureConditionLevel 屬性設定](#Restrictions)[安全性](#Security)  
   
--   **To configure the FailureConditionLevel property settings using,** [PowerShell](#PowerShellProcedure), [Failover Cluster Manager](#WSFC), [Transact-SQL](#TsqlProcedure)  
+-   **若要進行 FailureConditionLevel 屬性設定，請使用**  [PowerShell](#PowerShellProcedure)、[容錯移轉叢集管理員](#WSFC)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   

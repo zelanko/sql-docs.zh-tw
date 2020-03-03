@@ -1,5 +1,5 @@
 ---
-title: Add Table Dialog Box (Query and View Designers)
+title: 新增資料表對話方塊 (查詢及檢視表設計工具)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
