@@ -1,7 +1,7 @@
 ---
 title: JDBC 驅動程式的系統需求 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 02/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e9e74d080ed0e7cd91dcde6cbaa2ca2e32f04dc6
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 1a6aac999ef6877356f66f4db1d6d6763cc0f1ea
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004560"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903725"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 驅動程式的系統需求
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "77004560"
 
 **Microsoft JDBC Driver 8.2 for SQL Server：**  
 
-  JDBC Driver 8.2 在每個安裝套件中包含三個 JAR 類別庫：**mssql-jdbc-8.2.0.jre8.jar**、**mssql-jdbc-8.2.0.jre11.jar** 和 **mssql-jdbc-8.2.0.jre13.jar**。
+  JDBC Driver 8.2 在每個安裝套件中均包含三個 JAR 類別庫：**mssql-jdbc-8.2.1.jre8.jar**、**mssql-jdbc-8.2.1.jre11.jar** 和 **mssql-jdbc-8.2.1.jre13.jar**。
 
   JDBC Driver 8.2 專為搭配所有主要 Java 虛擬機器運作而設計，且所有 Java 虛擬機器皆能支援，但只在 OpenJDK 1.8、OpenJDK 11.0、OpenJDK 13.0、Azul Zulu JRE 1.8、Azul Zulu JRE 11.0 與 Azul Zulu JRE 13.0 上測試過。
   
@@ -55,9 +55,9 @@ ms.locfileid: "77004560"
   
   |JAR|JDBC 版本相容性|建議的 Java 版本|描述|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-8.2.0.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 1.8。 使用 JRE 1.7 或更舊版本會擲回例外狀況。<br /><br /> 8\.2 中的新功能包括：JDK 13 支援、具有安全記憶體保護區的 Always Encrypted，以及時態性資料類型效能改善。 |
-|mssql-jdbc-8.2.0.jre11.jar|4.3|11|需要 Java Runtime Environment (JRE) 11.0。 使用 JRE 10.0 或更舊版本會擲回例外狀況。<br /><br /> 8\.2 中的新功能包括：JDK 13 支援、具有安全記憶體保護區的 Always Encrypted，以及時態性資料類型效能改善。 |
-|mssql-jdbc-8.2.0.jre13.jar|4.3|13|需要 Java Runtime Environment (JRE) 13.0。 使用 JRE 11.0 或更舊版本會擲回例外狀況。<br /><br /> 8\.2 中的新功能包括：JDK 13 支援、具有安全記憶體保護區的 Always Encrypted，以及時態性資料類型效能改善。 |
+|mssql-jdbc-8.2.1.jre8.jar|4.2|8|需要 Java Runtime Environment (JRE) 1.8。 使用 JRE 1.7 或更舊版本會擲回例外狀況。<br /><br /> 8\.2 中的新功能包括：JDK 13 支援、具有安全記憶體保護區的 Always Encrypted，以及時態性資料類型效能改善。 |
+|mssql-jdbc-8.2.1.jre11.jar|4.3|11|需要 Java Runtime Environment (JRE) 11.0。 使用 JRE 10.0 或更舊版本會擲回例外狀況。<br /><br /> 8\.2 中的新功能包括：JDK 13 支援、具有安全記憶體保護區的 Always Encrypted，以及時態性資料類型效能改善。 |
+|mssql-jdbc-8.2.1.jre13.jar|4.3|13|需要 Java Runtime Environment (JRE) 13.0。 使用 JRE 11.0 或更舊版本會擲回例外狀況。<br /><br /> 8\.2 中的新功能包括：JDK 13 支援、具有安全記憶體保護區的 Always Encrypted，以及時態性資料類型效能改善。 |
 
 
   JDBC Driver 8.2 也可在 Maven 中央存放庫上取得，且可藉由在 POM.XML 中新增下列程式碼來新增至 Maven 專案：  
@@ -66,7 +66,7 @@ ms.locfileid: "77004560"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.0.jre11</version>
+    <version>8.2.1.jre11</version>
 </dependency>
 ```
 

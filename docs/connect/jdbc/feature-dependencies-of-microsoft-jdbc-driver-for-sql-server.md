@@ -1,7 +1,7 @@
 ---
 title: Microsoft JDBC Driver for SQL Server 的功能相依性 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 02/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a5babb916ba9c8f2f4ca5a7855eb98c2f485fd17
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 56964eabd62246eefe660c949155cf671fb14970
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004614"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903705"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 的功能相依性
 
@@ -44,7 +44,7 @@ ms.locfileid: "77004614"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.0.jre11</version>
+    <version>8.2.1.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -67,7 +67,7 @@ ms.locfileid: "77004614"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.0.jre11</version>
+    <version>8.2.1.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -94,7 +94,7 @@ ms.locfileid: "77004614"
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>使用 Azure Key Vault 提供者：
 
-- JDBC 驅動程式 8.2.0 版 - 相依性版本：Azure-Keyvault (1.2.2 版)、 Adal4j (1.6.4 版)、Client-Runtime-for-AutoRest (1.7.0) 與其相依性 ([範例應用程式](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
+- JDBC 驅動程式 8.2.1 版 - 相依性版本：Azure-Keyvault (1.2.2 版)、 Adal4j (1.6.4 版)、Client-Runtime-for-AutoRest (1.7.0) 與其相依性 ([範例應用程式](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - JDBC 驅動程式版本 7.4.1 - 相依性版本：Azure-Keyvault (1.2.1 版)、 Adal4j (1.6.4 版)、Client-Runtime-for-AutoRest (1.6.10) 與其相依性 ([範例應用程式](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - JDBC 驅動程式版本 7.2.2 - 相依性版本：Azure-Keyvault (1.2.0 版)、Azure-Keyvault-Webkey (1.2.0 版)、 Adal4j (1.6.3 版)、Client-Runtime-for-AutoRest (1.6.5) 與其相依性 ([範例應用程式](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - JDBC 驅動程式版本 7.0.0 - 相依性版本：Azure-Keyvault (1.0.0 版)、Adal4j (1.6.0 版) 與其相依性 ([範例應用程式](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
@@ -109,7 +109,7 @@ ms.locfileid: "77004614"
 
 ### <a name="working-with-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證：
 
-- JDBC 驅動程式 8.2.0 版 - 相依性版本：Adal4j (1.6.4 版)、Client-Runtime-for-AutoRest (1.7.0) 及其相依性。 在此版本的驅動程式中，'sqljdbc_auth.dll' 已重新命名為 'mssql-jdbc_auth-\<版本>-\<架構>.dll'。
+- JDBC 驅動程式 8.2.1 版 - 相依性版本：Adal4j (1.6.4 版)、Client-Runtime-for-AutoRest (1.7.0) 及其相依性。 在此版本的驅動程式中，'sqljdbc_auth.dll' 已重新命名為 'mssql-jdbc_auth-\<版本>-\<架構>.dll'。
 - JDBC 驅動程式版本 7.4.1 - 相依性版本：Adal4j (1.6.4 版)、Client-Runtime-for-AutoRest (1.6.10) 及其相依性
 - JDBC 驅動程式版本 7.2.2 - 相依性版本：Adal4j (1.6.3 版)、Client-Runtime-for-AutoRest (1.6.5) 及其相依性
 - JDBC 驅動程式版本 7.0.0 - 相依性版本：Adal4j (1.6.0 版) 及其相依性
@@ -121,7 +121,7 @@ ms.locfileid: "77004614"
 
 針對 *Windows 作業系統*，驅動程式預設會尋找 sqljdbc_auth.dll，而且不需要設定 Kerberos 票證或 Azure 程式庫相依性。 如果 sqljdbc_auth.dll 無法使用，驅動程式就會尋找可用來向 Active Directory 進行驗證的 Kerberos 票證，就像在其他作業系統上一樣。
 
-從驅動程式 8.2.0 版開始，'sqljdbc_auth.dll' 會重新命名為 'mssql-jdbc_auth-\<版本>-\<架構>.dll'。 例如 'mssql-jdbc_auth-8.2.0.x64.dll'。
+自驅動程式 8.2.1 版起，'sqljdbc_auth.dll' 將重新命名為 'mssql-jdbc_auth-\< 版本>-\< 架構>.dll'。 例如 'mssql-jdbc_auth-8.2.1.x64.dll'。
 
 您可以取得使用此功能的[範例應用程式](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)。
 

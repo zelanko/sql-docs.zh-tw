@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 15d27881378a88c8f4ae6d65640be6218ecd3530
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 15049436b0d1769361ae1cfc47b52bfb503ba763
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632761"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256874"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.databases dm_pdw_exec_requests （Transact-sql）
 
@@ -44,10 +44,26 @@ ms.locfileid: "73632761"
 |group_name|**sysname** |對於使用資源的要求，group_name 是執行要求之工作負載群組的名稱。  如果要求未利用資源，group_name 是 null。</br>適用對象：Azure SQL 資料倉儲|
 |classifier_name|**sysname**|針對使用資源的要求，用於指派資源和重要性的分類器名稱。||
 |resource_allocation_percentage|**decimal （5，2）**|配置給要求的資源數量百分比。</br>適用對象：Azure SQL 資料倉儲|
-|result_set_cache|**bit**|詳細說明完成的查詢是否為結果快取點擊（1）或不是（0）。 </br>適用對象：Azure SQL 資料倉儲|0、1|
+|result_set_cache|**bit**|詳細說明已完成的查詢是否使用結果集快取。  </br>適用對象：Azure SQL 資料倉儲| 1 = 結果集快取點擊 </br> 0 = 結果集快取遺漏 </br> 負值 = 未使用結果集快取的原因。  如需詳細資訊，請參閱備註一節。|
 ||||
   
+## <a name="remarks"></a>備註 
  如需此視圖所保留之最大資料列的詳細資訊，請參閱[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主題中的 Metadata 一節。
+
+ Result_set_cache 是查詢使用結果集快取的位元遮罩。  此資料行可以是[|（位 OR）](../../t-sql/language-elements/bitwise-or-transact-sql.md)下列其中一個或多個值的乘積：  
+  
+|值|描述|  
+|-----------|-----------------|  
+|**1**|結果集快取點擊|  
+|-**0x00**|結果集快取遺漏|  
+|-**0x01**|資料庫上的結果集快取已停用。|  
+|-**0x02**|會話上的結果集快取已停用。 | 
+|-**0x04**|結果集快取已停用，因為沒有查詢的資料來源。|  
+|-**0x08**|結果集快取已停用，因為資料列層級安全性述詞。|  
+|-**0x10**|結果集快取已停用，因為在查詢中使用系統資料表、臨時表或外部資料表。|  
+|-**0x20**|結果集快取已停用，因為查詢包含執行時間常數、使用者定義函數或不具決定性的函數。|  
+|-**0x40**|結果集快取已停用，因為估計的結果集大小太大（> 1000000 個數據列）。|  
+|-**0x80**|結果集快取已停用，因為結果集包含大小龐大（>64kb）的資料列。|  
   
 ## <a name="permissions"></a>權限
 

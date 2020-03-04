@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b6000c540d2847686fd8f14c4ae6a0926f8dbb72
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.openlocfilehash: 88e2325af328e32a246ca484ab447cc99be887c0
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77466169"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903865"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,19 +139,22 @@ GO
 - 只包含常數的算術運算式，例如 1+1, 5/3*2。
 - 只包含常數的邏輯運算式，例如 1=1 和 1>2 AND 3>4。
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 視為可摺疊的內建函式，包括 `CAST` 和 `CONVERT`。 如果內建函數只包含其輸入，並且不含其他內容資訊 (例如 SET 選項、語言設定、資料庫選項和加密金鑰) 時，此內建函數通常是可摺疊。 非決定性函數不可摺疊。 決定性內建函數可摺疊，但有一些例外。
+- 由 CLR 使用者定義之類型的決定性方法，以及由 CLR 使用者定義，具決定性純量值 CLR 的函式 (自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起)。 如需詳細資訊，請參閱 [CLR 使用者定義之函式與方法的常數摺疊](https://docs.microsoft.com/sql/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods)。
 
 > [!NOTE] 
-> 例外之一是大型物件類型。 如果摺疊程序的輸出類型是大型物件類型 (text、image、nvarchar(max)、varchar(max) 或 varbinary(max))，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會摺疊此運算式。
+> 例外之一是大型物件類型。 若摺疊處理序的輸出類型為大型物件類型 (text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max)，或 XML)，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會摺疊此運算式。
 
 #### <a name="nonfoldable-expressions"></a>不可摺疊運算式
 所有其他運算式類型都不可摺疊， 尤其是下列運算式類型不可折疊：
 - 非常數運算式，例如結果相依於資料行值的運算式。
 - 結果相依於本機變數或參數 (例如 @x) 的運算式。
 - 非決定性函數。
-- 使用者自訂函數 ([!INCLUDE[tsql](../includes/tsql-md.md)] 和 CLR 這兩者)。
+- 使用者定義的 [!INCLUDE[tsql](../includes/tsql-md.md)] 函式 <sup>1</sup>。
 - 結果相依於語言設定的運算式。
 - 結果相依於 SET 選項的運算式。
 - 結果相依於伺服器組態選項的運算式。
+
+<sup>1</sup> 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 之前無法摺疊由 CLR 使用者定義，具決定性純量值 CLR 的 函式及 CLR 使用者定義之類型的方法。 
 
 #### <a name="examples-of-foldable-and-nonfoldable-constant-expressions"></a>可摺疊和不可摺疊常數運算式的範例
 請考慮以下查詢：
@@ -912,21 +915,27 @@ WHERE ProductID = 63;
 > 某些建構禁止 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在整個執行計畫，或部分的執行計畫上利用平行處理原則的能力。
 
 禁止平行處理原則的建構包括：
->
-> - **純量 UDF**    
->   如需有關純量使用者定義函式的詳細資訊，請參閱[建立使用者定義函式](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)。 從 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 開始，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 能夠內嵌這些函式，且已經將在查詢處理期間使用平行處理原則的限制解除鎖定。 如需內嵌純量 UDF 的詳細資訊，請參閱 [SQL 資料庫中的智慧型查詢處理](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)。
-> - **遠端查詢**    
->   如需遠端查詢的詳細資訊，請參閱[執行程序表邏輯和實體運算子參考](../relational-databases/showplan-logical-and-physical-operators-reference.md)。
-> - **動態資料指標**    
->   如需資料指標的詳細資訊，請參閱 [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)。
-> - **遞迴查詢**    
->   如需遞迴的詳細資訊，請參閱[定義和使用遞迴通用資料表運算式的方針](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)和 [T-SQL 中的遞迴](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)。
-> - **資料表值函式 (TVFs)**     
->   如需 TVF 的詳細資訊，請參閱[建立使用者定義函式 (資料庫引擎)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
-> - **TOP 關鍵字**    
->   如需詳細資訊，請參閱 [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md)。
+-   **純量 UDF**        
+    如需有關純量使用者定義函式的詳細資訊，請參閱[建立使用者定義函式](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)。 從 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 開始，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 能夠內嵌這些函式，且已經將在查詢處理期間使用平行處理原則的限制解除鎖定。 如需內嵌純量 UDF 的詳細資訊，請參閱 [SQL 資料庫中的智慧型查詢處理](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)。
+    
+-   **遠端查詢**        
+    如需遠端查詢的詳細資訊，請參閱[執行程序表邏輯和實體運算子參考](../relational-databases/showplan-logical-and-physical-operators-reference.md)。
+    
+-   **動態資料指標**        
+    如需資料指標的詳細資訊，請參閱 [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)。
+    
+-   **遞迴查詢**        
+    如需遞迴的詳細資訊，請參閱[定義和使用遞迴通用資料表運算式的方針](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)和 [T-SQL 中的遞迴](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)。
 
-插入交換運算子之後，結果便是平行查詢執行計畫。 平行查詢執行計畫可以使用一個以上的背景工作執行緒。 非平行查詢所使用的序列執行計畫，執行時只會使用一個背景工作執行緒。 平行查詢實際所使用的背景工作執行緒數目，是在查詢計畫執行初始化時，由計畫的複雜度與平行處理原則的程度決定。 平行處理原則的程度決定將要使用的 CPU 最大數目，而不是將要使用的背景工作執行緒數目。 平行處理原則的程度值是在伺服器層級設定的，可以使用 sp_configure 系統預存程序來修改。 您可以指定 `MAXDOP` 查詢提示或 `MAXDOP` 索引選項，來覆寫個別查詢或索引陳述式的這個值。 
+-   **資料表值函式 (TVFs)**         
+    如需 TVF 的詳細資訊，請參閱[建立使用者定義函式 (資料庫引擎)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
+    
+-   **TOP 關鍵字**        
+    如需詳細資訊，請參閱 [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md)。
+
+插入交換運算子之後，結果便是平行查詢執行計畫。 平行查詢執行計畫可以使用一個以上的背景工作執行緒。 非平行 (序列) 查詢使用的序列執行計畫，在執行時只會使用一個背景工作執行緒。 平行查詢實際所使用的背景工作執行緒數目，是在查詢計畫執行初始化時，由計畫的複雜度與平行處理原則的程度決定。 
+
+平行處理原則的程度 (DOP) 決定所要使用的的 CPU 數目上限，而不是所要使用的背景工作執行緒數。 DOP 限制的設定以[工作](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)為準。 它不是根據[要求](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)或查詢限制。 這表示在平行查詢執行期間，單一要求可能會繁衍指派至[排程器](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)的多個工作。 當有不同工作同時執行時，將能在任何指定的查詢執行點，同時執行多於 MAXDOP 所指定的處理器數量。 如需詳細資訊，請參閱[執行緒與工作架構指南](../relational-databases/thread-and-task-architecture-guide.md)。
 
 如果下列任何條件為真，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具不使用平行執行計畫進行查詢：
 
@@ -937,21 +946,15 @@ WHERE ProductID = 63;
 ### <a name="DOP"></a> 平行處理原則的程度
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會針對平行查詢執行或索引資料定義語言 (DDL) 作業的每一個執行個體，自動偵測最佳程度的平行處理原則。 其作法是依據下列條件： 
 
-1. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是否正在具有多個微處理器或 CPU 的電腦上執行，例如對稱微處理電腦 (SMP)。  
-   具有一個以上 CPU 的電腦，才能使用平行查詢。 
+1. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是否**在搭載多個微處理器或 CPU 的電腦上執行**，例如對稱式微處理電腦 (SMP)。 具有一個以上 CPU 的電腦，才能使用平行查詢。 
 
-2. 是否有足夠的背景工作執行緒可用。  
-   每一個查詢或索引作業都需要某個數目的背景工作執行緒來執行。 執行平行計畫所需的背景工作執行緒會比執行序列計畫還多，而且所需的背景工作執行緒數目會隨著平行處理原則的程度增加。 當無法滿足針對平行處理原則之特定程度的平行計畫背景工作執行緒需求時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會自動降低平行處理原則的程度，或是完全放棄指定工作負載內容中的平行計畫。 然後，它會執行序列計畫 (一個背景工作執行緒)。 
+2. **是否有足夠的背景工作執行緒可以使用**。 每一個查詢或索引作業都需要某個數目的背景工作執行緒來執行。 執行平行計畫所需的背景工作執行緒會比執行序列計畫還多，而且所需的背景工作執行緒數目會隨著平行處理原則的程度增加。 當無法滿足針對平行處理原則之特定程度的平行計畫背景工作執行緒需求時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會自動降低平行處理原則的程度，或是完全放棄指定工作負載內容中的平行計畫。 然後，它會執行序列計畫 (一個背景工作執行緒)。 
 
-3. 已執行的查詢或索引作業類型。  
-   建立或重建索引，或是卸除叢集索引的索引作業，以及大量使用 CPU 循環的查詢，最適合使用平行計畫。 例如，聯結大型資料表、大型彙總及排序大型結果集，皆適用於平行計畫。 經常在交易處理應用程式中發現的簡單查詢，會尋找執行平行查詢時所需的其他協調作業，此平行查詢比潛在的效能提升更為重要。 為區分能否從平行處理原則中獲益的查詢，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會比較執行查詢或索引作業的預估成本與[平行處理的成本臨界值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)的值。 如果適當測試發現不同的值更適合執行的工作負載，使用者可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 來變更預設值 5。 
+3. **已執行之查詢或索引作業的類型**。 建立或重建索引，或是卸除叢集索引的索引作業，以及大量使用 CPU 循環的查詢，最適合使用平行計畫。 例如，聯結大型資料表、大型彙總及排序大型結果集，皆適用於平行計畫。 經常在交易處理應用程式中發現的簡單查詢，會尋找執行平行查詢時所需的其他協調作業，此平行查詢比潛在的效能提升更為重要。 為區分能否從平行處理原則中獲益的查詢，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會比較執行查詢或索引作業的預估成本與[平行處理的成本臨界值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)的值。 如果適當測試發現不同的值更適合執行的工作負載，使用者可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 來變更預設值 5。 
 
-4. 要處理的資料列數目是否足夠。  
-   如果查詢最佳化工具判定資料列數目太少，則它不會引進交換運算子來散發資料列。 因此，運算子會循序執行。 在序列計畫中執行運算子，可避免啟動、散發、協調成本超過執行平行運算子所獲得的利益時的案例。
+4. **要處理的資料列數量是否足夠**。 如果查詢最佳化工具判定資料列數目太少，則它不會引進交換運算子來散發資料列。 因此，運算子會循序執行。 在序列計畫中執行運算子，可避免啟動、散發、協調成本超過執行平行運算子所獲得的利益時的案例。
 
-5. 目前是否有可用的散發統計資料。  
-   如果無法使用平行處理原則的最高程度，則在放棄平行計畫前，會先考慮降低程度。  
-  例如，當您在檢視中建立叢集索引時，因為叢集索引尚未存在，所以無法評估散發統計資料。 在此情況下，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 無法為索引作業提供平行處理原則的最高程度。 然而，有些運算子 (如排序及掃描) 仍可從平行執行獲益。
+5. **是否能使用目前的散發統計資料**。 如果無法使用平行處理原則的最高程度，則在放棄平行計畫前，會先考慮降低程度。 例如，當您在檢視中建立叢集索引時，因為叢集索引尚未存在，所以無法評估散發統計資料。 在此情況下，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 無法為索引作業提供平行處理原則的最高程度。 然而，有些運算子 (如排序及掃描) 仍可從平行執行獲益。
 
 > [!NOTE]
 > 只有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise、Developer 和 Evaluation 版本才可使用平行索引作業。
@@ -963,11 +966,23 @@ WHERE ProductID = 63;
 靜態和索引鍵集衍生的資料指標可以利用平行執行計畫來擴展。 但是，動態資料指標的行為僅能由序列執行來提供。 而最佳化工具所產生的查詢序列執行計畫，一定是動態資料指標的一部份。
 
 #### <a name="overriding-degrees-of-parallelism"></a>覆寫平行處理原則的程度
-您可以使用[平行處理原則的最大程度](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (MAXDOP) 伺服器組態選項 ([!INCLUDE[ssSDS_md](../includes/sssds-md.md)] 上的 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md))，來限制要在平行計畫執行中使用的處理器數目。 對於個別查詢及索引作業陳述式，可以指定 MAXDOP 查詢提示或 MAXDOP 索引選項，來覆寫 [平行處理原則的最大程度] 選項。 MAXDOP 所提供的控制會比個別的查詢及索引作業還多。 例如，您可以使用 MAXDOP 選項，利用增加或減少，來控制線上索引作業專用的處理器數目。 如此一來，您就可以平衡索引作業所使用的資源及並行使用者的資源。 
+平行處理原則的程度設定平行計畫執行中所要使用的處理器數量。 此設定可在各種層級上設定：
+
+1.  伺服器層級：使用**最大平行處理原則程度 (MAXDOP)** [伺服器設定選項](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。</br> **適用對象：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+
+    > [!NOTE]
+    > [!INCLUDE [sssqlv15-md](../includes/sssqlv15-md.md)] 引入自動建議，於安裝過程設定 MAXDOP 伺服器設定選項時提供。 安裝程式使用者介面可讓您接受建議的設定，或輸入您自己的值。 如需詳細資訊，請參閱[資料庫引擎設定 - MaxDOP 頁面](../sql-server/install/instance-configuration.md#maxdop)。
+
+2.  工作負載層級：使用 **MAX_DOP** [Resource Governor 工作負載群組設定選項](../t-sql/statements/create-workload-group-transact-sql.md)。</br> **適用對象：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+
+3.  資料庫層級，使用 **MAXDOP** [資料庫範圍設定](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。</br> **適用於：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
+
+4.  查詢或索引陳述式層級：使用 **MAXDOP** [查詢提示](../t-sql/queries/hints-transact-sql-query.md)或 **MAXDOP** 索引選項。 例如，您可以使用 MAXDOP 選項，利用增加或減少，來控制線上索引作業專用的處理器數目。 如此一來，您就可以平衡索引作業所使用的資源及並行使用者的資源。</br> **適用於：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
 
 將 [平行處理原則的最大程度] 選項設為 0 (預設)，可讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在平行計畫執行中使用所有可用的處理器 (最大值為 64 個處理器)。 雖然當 MAXDOP 選項設定為 0 時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會將執行階段目標設定為 64 個邏輯處理器，但必要時可手動設定不同的值。 針對查詢或索引將 MAXDOP 設定為 0，讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可針對平行計畫執行中指定的查詢或索引使用所有可用的處理器 (最大值為 64 個處理器)。 MAXDOP 不是所有平行查詢的強制值，而是符合平行處理原則資格之所有查詢的暫訂目標。 這表示，如果執行階段沒有足夠的背景工作執行緒可用，查詢可能會使用比 MAXDOP 伺服器組態選項更低的平行處理原則程度來執行。
 
-如需設定 MAXDOP 的最佳做法，請參閱這篇 [Microsoft 支援文章](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)。
+> [!TIP]
+> 如需設定 MAXDOP 的指導方針，請參閱此[文件頁面](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)。
 
 ### <a name="parallel-query-example"></a>平行查詢範例
 下列查詢會計算從 2000 年 4 月 1 日起，某一季之內所下的訂單數量，而這一季的訂單中，至少有一項產品晚於交付日期才送達客戶。 這個查詢會列出這類的訂單數量，並依訂單的優先順序分組，然後以遞增的優先順序排序訂單。 

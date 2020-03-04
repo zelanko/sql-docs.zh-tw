@@ -8521,7 +8521,7 @@
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
                     - name: Database Engine 查詢編輯器
-                      href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+                      href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                     - name: XML 編輯器
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
                     - name: 查詢編輯器中的色彩編碼

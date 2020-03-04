@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 97f4ebef586d7e0deb77f753ff264120f97cef5a
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: 6be69f873785f413b4edddf42f303e8eb7d4b14c
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544904"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652937"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>下載適用於 Visual Studio 的 SQL Server Data Tools (SSDT)
 
@@ -32,13 +32,16 @@ ms.locfileid: "77544904"
 
 用於建立資料庫專案的 SSDT 核心功能，對於 Visual Studio 一直是不可或缺的。
 
-在 Visual Studio 2019 中，啟用 Analysis Services、Integration Services 和 Reporting Services 專案其所需功能已移至個別限定的 Visual Studio (VSIX) 延伸模組。 您已不再需要獨立安裝 SSDT。
+在 Visual Studio 2019 中，啟用 Analysis Services、Integration Services 和 Reporting Services 專案其所需功能已移至個別限定的 Visual Studio (VSIX) 延伸模組。
+
+> [!NOTE]
+> 沒有適用於 Visual Studio 2019 的 SSDT 獨立安裝程式。
 
 ### <a name="install-ssdt-with-visual-studio-2019"></a>使用 Visual Studio 2019 安裝 SSDT
 
 如果已安裝 [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)，則可編輯工作負載清單以包含 SSDT。
 
-* 針對 SQL 資料庫專案，請在 [資料儲存和處理]  底下選取 [SQL Server Data Tools]  。
+* 對於 SQL Database 專案，請選取 [資料儲存和處理]  的 [SQL Server Data Tools]  。
 
    ![資料儲存和處理工作負載](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
 
@@ -46,7 +49,7 @@ ms.locfileid: "77544904"
 
 如果您尚未安裝 Visual Studio 2019，則可下載並安裝 [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)。 
 
-* 針對 SQL 資料庫專案，請於安裝期間，在工作負載清單中的 [資料儲存和處理]  底下選取 [SQL Server Data Tools]  。
+* 對於 SQL Database 專案，請在安裝時，從工作負載清單中，選取 [資料儲存和處理]  下的 [SQL Server Data Tools]  。
 
 * 針對 Analysis Services、Integration Services 或 Reporting Services 專案，請從 [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance) 或 [工具] > [延伸模組與更新]  安裝適當的[延伸模組](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions)。
 
@@ -56,7 +59,7 @@ ms.locfileid: "77544904"
 
 從 Visual Studio 2017 開始，建立資料庫專案的功能已整合到 Visual Studio 安裝。 不需要針對核心 SSDT 體驗安裝 SSDT 獨立安裝程式。
 
-若要建立 Analysis Services、Integration Services 或 Reporting Services 專案，您仍然需要 SSDT 獨立安裝程式。
+現在建立 Analysis Services、Integration Services 或 Reporting Services 專案仍須使用 SSDT 獨立安裝程式。
 
 ### <a name="install-ssdt-with-visual-studio-2017"></a>使用 Visual Studio 2017 安裝 SSDT
 

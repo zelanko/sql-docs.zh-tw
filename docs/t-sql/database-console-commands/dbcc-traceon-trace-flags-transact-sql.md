@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 99e38f169b250a2a1ab6a81d8983a428f2334606
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.openlocfilehash: 058becae07f15857f0509cbbc90261b960bc4713
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558332"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705913"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
 
-追蹤旗標用來設定特定的伺服器特性，或變更特定行為。 例如，追蹤旗標 3226 是常用的啟動追蹤旗標，可隱藏錯誤記錄檔中的成功備份訊息。 追蹤旗標經常用來診斷效能問題，或是針對預存程序或複雜電腦系統進行偵錯，但 Microsoft 支援服務也可能會建議使用它們來解決對特定工作負載產生負面影響的行為。  按照指示使用時，生產環境完全支援所有記錄的追蹤旗標，以及 Microsoft 支援服務所提供的建議。  請注意，這份清單中的追蹤旗標可能有其特定使用方式的額外考量，因此建議您仔細檢閱此處及/或支援工程師提供的所有建議。 此外，如同 SQL Server 中的任何設定變更一樣，最好一律在部署之前於非生產環境中徹底測試旗標。
+追蹤旗標用來設定特定的伺服器特性，或變更特定行為。 例如，追蹤旗標 3226 是常用的啟動追蹤旗標，可隱藏錯誤記錄檔中的成功備份訊息。 追蹤旗標經常用來診斷效能問題，或是針對預存程序或複雜電腦系統進行偵錯，但 Microsoft 支援服務也可能會建議使用它們來解決對特定工作負載產生負面影響的行為。 按照指示使用時，生產環境完全支援所有記錄的追蹤旗標，以及 Microsoft 支援服務所提供的建議。 請注意，這份清單中的追蹤旗標可能有其特定使用方式的額外考量，因此建議您仔細檢閱此處及/或支援工程師提供的所有建議。 此外，如同在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中變更任何設定般，建議在部署之前，先於非生產環境中仔細測試旗標。
 
 ## <a name="remarks"></a>備註  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，追蹤旗標的使用範圍有三種：查詢、工作階段以及全域。 查詢追蹤旗標可用於特定查詢的內容。 工作階段追蹤旗標用於某個連接，而且只會在該連接顯示出來。 全域追蹤旗標是設在伺服器層級，只要是該伺服器上的連接，都看得到它們。 某些旗標只能啟用為全域旗標，某些則可以啟用為全域或工作階段範圍。  
@@ -54,7 +54,7 @@ ms.locfileid: "77558332"
 下表列出並描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的追蹤旗標。 
 
 > [!NOTE]
-> Azure SQL Database 受控執行個體支援下列全域追蹤旗標：460、2301、2389、2390、2453、2467、7471、8207、9389、1 0316 以及 11024。 受控執行個體中尚未支援工作階段追蹤旗標。
+> Azure SQL Database 受控執行個體支援下列全域追蹤旗標：460、2301、2389、2390、2453、2467、7471、8207、9389、10316 及 11024。 受控執行個體中尚未支援工作階段追蹤旗標。
  
 > [!NOTE]
 > 某些追蹤旗標已導入特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 如需適當版本的詳細資訊，請參閱與特定追蹤旗標相關聯的 Microsoft 支援服務文章。
@@ -64,8 +64,8 @@ ms.locfileid: "77558332"
   
 |追蹤旗標|描述|  
 |---|---|
-|**101**|使合併式複寫代理程式記錄更加詳盡。<br /><br />**警告：** 追蹤旗標 101 的用途並非在生產環境中持續啟用，而是僅用於限期的疑難排解。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2892633) \(機器翻譯\)。<br /><br />**範圍**：只限全域|
-|**102**|使合併式複寫代理程式記錄更加詳盡，並將其導向至\<分佈伺服器>..msmerge_history  資料表。<br /><br />**警告：** 追蹤旗標 102 的用途並非在生產環境中持續啟用，而是僅用於限期的疑難排解。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2892633) \(機器翻譯\)。<br /><br />**範圍**：只限全域|
+|**101**|使合併式複寫代理程式記錄更加詳盡。<br /><br />**重要：** 僅當從命令提示字元執行 **replmerg.exe** 時，才能使用 **-T** 選項，為[複寫合併代理程式](../../relational-databases/replication/agents/replication-merge-agent.md)啟用追蹤旗標 101。<br /><br />**警告：** 追蹤旗標 101 的用途並非在生產環境中持續啟用，而是僅用於限期的疑難排解。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2892633) \(機器翻譯\)。<br /><br />**範圍**：僅複寫合併代理程式|
+|**102**|使合併式複寫代理程式記錄更加詳盡，並將其導向至\<分佈伺服器>..msmerge_history  資料表。<br /><br />**重要：** 僅當從命令提示字元執行 **replmerg.exe** 時，才能使用 **-T** 選項，為[複寫合併代理程式](../../relational-databases/replication/agents/replication-merge-agent.md)啟用追蹤旗標 102。<br /><br />**警告：** 追蹤旗標 102 的用途並非在生產環境中持續啟用，而是僅用於限期的疑難排解。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2892633) \(機器翻譯\)。<br /><br />**範圍**：僅複寫合併代理程式|
 |**139**| 在相容性層級較低的資料庫上分析針對特定資料類型導入之相容性層級 130 所改善的精確度和轉換邏輯時，於 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、[DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) 和 [DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md) 等 DBCC 檢查命令範圍中強制正確的轉換語意。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/help/4010261) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 和更新版本的組建。<br /><br />**警告：** 追蹤旗標 139 不應在生產環境中持續啟用，其唯一的用途是執行資料庫驗證檢查，如 [Microsoft 支援服務文章](https://support.microsoft.com/help/4010261)中所述。 在完成驗證檢查後，應立即將它停用。<br /><br />**範圍**：只限全域|
 |**174**|將 64 位元系統上的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 計畫快取貯體計數從 40,009 增加至 160,001。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3026083) \(機器翻譯\)。<br /><br />**注意：** 請確定您已徹底測試此選項後，再將其部署到生產環境。<br /><br />**範圍**：只限全域|
 |**176**|使修正解決當資料表包含計算的分割資料行時，線上重建資料表分割區會發生的錯誤。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3213683)和此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4541096)。<br /><br />**範圍**：全域或工作階段|
@@ -90,7 +90,7 @@ ms.locfileid: "77558332"
 |**1211**|停用以記憶體壓力或鎖定個數為基礎的鎖定擴大。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 不會將資料列或頁面鎖定擴大到資料表鎖定。<br /><br />使用此追蹤旗標可能會產生過多的鎖定數目，且如果鎖定記憶體增長到一定程度，則嘗試為任何查詢配置額外的鎖定可能會失敗。 這可能會降低 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的效能，或因記憶體不足而造成 1204 錯誤 (無法配置鎖定資源)。<br /><br />如果同時設定追蹤旗標 1211 與 1224，則將會優先採用 1211。 但是，由於追蹤旗標 1211 會在每一個情況下防止鎖定擴大 (即使是在記憶體壓力下)，所以建議您改用 1224。 如此可避免在使用許多鎖定時，發生「鎖定不足」錯誤。<br /><br />如需如何解決 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中鎖定擴大所造成的封鎖問題詳細資訊，請參閱這篇 [Microsoft 支援服務文章](https://support.microsoft.com/help/323630)。<br /><br />**範圍**：全域或工作階段|  
 |**1222**|以不符合任何 XSD 結構描述的 XML 格式來傳回參與死結之鎖定的資源和類型，以及目前受影響的命令。<br /><br />**範圍**：只限全域|  
 |**1224**|停用以鎖定個數為基礎的鎖定擴大。 不過，記憶體壓力仍然可以啟動鎖定擴大。 如果鎖定物件使用的記憶體數量超出下列其中一個條件，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會將資料列或頁面鎖定擴大至資料表 (或資料分割) 鎖定：<br /><ul><li>[!INCLUDE[ssDE](../../includes/ssde-md.md)] 所用記憶體的 40%。 只有當 sp_configure 的 **locks** 參數設為 0 時，這個條件才適用。 <li>使用 sp_configure 的 **locks** 參數設定之鎖定記憶體的 40%。 如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。</li></ul><br />如果同時設定追蹤旗標 1211 與 1224，則將會優先採用 1211。 但是，由於追蹤旗標 1211 會在每一個情況下防止鎖定擴大 (即使是在記憶體壓力下)，所以建議您最好使用 1224。 如此可避免在使用許多鎖定時，發生「鎖定不足」錯誤。<br /><br />**注意：** 您也可以使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 陳述式的 LOCK_ESCALATION 選項來控制鎖定擴大到資料表層級或 HoBT 層級的資料粒度。<br /><br />如需如何解決在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中鎖定擴大所造成的封鎖問題詳細資訊，請參閱這篇 [Microsoft 支援服務文章](https://support.microsoft.com/help/323630)<br /><br />**範圍：** 全域或工作階段|
-|**1229**|不論 CPU 的數目為何，都會停用所有鎖定資料分割。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在伺服器具有 16 或更多個 CPU 時啟用鎖定資料分割，以改善較大型系統的延展性特性。 如需鎖定資料分割的詳細資訊，請參閱[交易鎖定和資料列版本設定指南](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#lock_partitioning)。<br /><br />**警告：** 追蹤旗標 1229 可能會導致執行緒同步鎖定爭用和效能不佳，或在切換資料分割時造成非預期的行為。<br /><br />**範圍**：只限全域|  
+|**1229**|不論 CPU 的數目為何，都會停用所有鎖定資料分割。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在伺服器具有 16 或更多個 CPU 時啟用鎖定資料分割，以改善較大型系統的延展性特性。 如需鎖定資料分割的詳細資訊，請參閱[交易鎖定和資料列版本設定指南](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#lock_partitioning)。<br /><br />**警告：** 追蹤旗標 1229 可能導致執行緒同步鎖定競爭及效能不佳。<br /><br />**範圍**：只限全域|  
 |**1236**|啟用資料庫鎖定資料分割。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2926217) \(機器翻譯\)。<br /><br />**注意：** 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP3 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 開始，此行為由引擎控制，追蹤旗標 1236 沒有任何作用。<br /><br />**範圍**：只限全域|
 |**1237**|使 ALTER PARTITION FUNCTION 陳述式遵循目前使用者定義的工作階段死結優先權，而非成為預設情況下可能的死結犧牲者。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/help/4025261) \(機器翻譯\)。<br /><br />**注意：** 從 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 和資料庫[相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 140 開始，這是預設行為，追蹤旗標 1237 沒有任何作用。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)|
 |**1260**|停用排程器監視器傾印。<br /><br />**範圍**：只限全域|   

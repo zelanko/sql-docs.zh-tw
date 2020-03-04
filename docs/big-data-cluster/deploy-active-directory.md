@@ -5,16 +5,16 @@ description: 了解如何升級 Active Directory 網域中的 SQL Server 巨量�
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd8e571417e7b2171dc135e986fa77f1f0eff089
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: e2ce3fd5655655686d6fb27f628f6bdb3d22ceb1
+ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544881"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78200959"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>以 Active Directory 模式部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -311,6 +311,6 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - 目前，安全 AD 模式只適用於 `kubeadm` 部署環境，而不適用於 AKS 上。 根據預設，`kubeadm-prod` 部署設定檔包含安全性區段。
 
-- 目前，每個網域只允許一個 BDC。 已針對未來版本規劃啟用每個網域多個 BDC。
+- 目前，每個網域 (Active Directory) 只可有一個 BDC。 已針對未來版本規劃啟用每個網域多個 BDC。
 
 - 安全性設定中指定的任何 AD 群組都不能設定 DomainLocal 範圍。 您可以遵循[這些指示](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)，以檢查 AD 群組的範圍。

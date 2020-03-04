@@ -1,7 +1,7 @@
 ---
 title: JDBC Driver 的版本資訊 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 02/26/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6d55a856096a830172ced69f9fb28f66c11733e7
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 76607fbe96ef954ce90c7d24daf9a12b69a3fce6
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004541"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903735"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver 的版本資訊
 
@@ -23,28 +23,28 @@ ms.locfileid: "77004541"
 
 本文會列出 _Microsoft JDBC Driver for SQL Server_ 的版本。 針對每個發行版本，會將變更命名並加以描述。
 
-## <a name="820"></a>8.2.0
+## <a name="821"></a>8.2.1
 
 ### <a name="compliance"></a>法規遵循
 
-2020 年 1 月 29 日
+2020 年 2 月 26 日
 
 | 合規性變更 | 詳細資料 |
 | :---------------- | :------ |
-| 下載 JDBC Driver 8.2 的最新更新。 | &bull; &nbsp; [Microsoft 下載中心](https://go.microsoft.com/fwlink/?linkid=2116870)<br/>&bull; &nbsp; [GitHub，8.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.2.0)<br/>&bull; &nbsp; [Maven 中心](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
-| 完全符合 JDBC API 規格 4.2 的規範。 | 8\.2 套件中的 jar 會根據 Java 版本相容性命名。<br/><br/>例如，來自 8.2 套件的 mssql-jdbc-8.2.0.jre11.jar 檔案應該與 Java 11 搭配使用。 |
+| 下載 JDBC Driver 8.2 的最新更新。 | &bull; &nbsp; [Microsoft 下載中心](https://go.microsoft.com/fwlink/?linkid=2116870)<br/>&bull; &nbsp; [GitHub，8.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.2.1)<br/>&bull; &nbsp; [Maven 中心](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| 完全符合 JDBC API 規格 4.2 的規範。 | 8\.2 套件中的 jar 會根據 Java 版本相容性命名。<br/><br/>例如，8.2 套件的 mssql-jdbc-8.2.1.jre11.jar 檔案應搭配 Java 11 一起使用。 |
 | 與 Java 開發套件 (JDK) 13.0、11.0 和 1.8 版相容。 | 除了 JDK 11.0 和 1.8 之外，Microsoft JDBC Driver 8.2 for SQL Server 現在還與 Java 開發套件 (JDK) 13.0 版相容。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="support-for-jdk-13"></a>JDK 13 支援
 
-除了 JDK 11.0 和 1.8 之外，Microsoft JDBC Driver 8.2.0 for SQL Server 現在還與 Java 開發套件 (JDK) 13.0 版相容。
+除了 JDK 11.0 與 1.8 之外，Microsoft JDBC Driver 8.2.1 for SQL Server 現在也與 Java 開發套件 (JDK) 13.0 版相容。
 
 ### <a name="always-encrypted-with-secure-enclaves"></a>具有安全記憶體保護區的 Always Encrypted
 
 | Always Encrypted 變更 | 詳細資料 |
 | :--------- | :------ |
-| Microsoft JDBC Driver 8.2.0 for SQL Server 現在支援具有安全記憶體保護區的 Always Encrypted。 在這裡可以找到詳細資料：具有安全記憶體保護區的 Always Encrypted。 |
+| Microsoft JDBC Driver 8.2.1 for SQL Server 現也支援使用安全記憶體保護區的 Always Encrypted。 在這裡可以找到詳細資料：具有安全記憶體保護區的 Always Encrypted。 |
 | 更多詳細資料和範例程式碼。 | 請參閱[具有安全記憶體保護區的 Always Encrypted](../../connect/jdbc/always-encrypted-with-secure-enclaves.md)。 |
 | &nbsp; | &nbsp; |
 
@@ -52,7 +52,7 @@ ms.locfileid: "77004541"
 
 | 時態性資料類型變更 | 詳細資料 |
 | :---------- | :------ |
-| Microsoft JDBC Driver 8.2.0 for SQL Server 已改善從 SQL Server 擷取時態性資料類型時的效能。 | 這項變更會盡可能避免使用 java.util.Calendar，藉以排除不必要的時態性資料類型轉換。 |
+| Microsoft JDBC Driver 8.2.1 for SQL Server 改善了從 SQL Server 擷取暫存資料類型時的效能。 | 這項變更會盡可能避免使用 java.util.Calendar，藉以排除不必要的時態性資料類型轉換。 |
 | 下列為受此效能改善影響的時態性資料類型清單；格式為 SQL Server 資料類型，後面接著個別的 Java 對應。 | date (java.sql.Date)、datetime (java.sql.Timestamp)、datetime2 (java.sql.Timestamp)、smalldatetime (java.sql.Timestamp) 和 time (java.sql.Time)。 |
 | &nbsp; | &nbsp; |
 
@@ -63,7 +63,7 @@ ms.locfileid: "77004541"
 
 | sqljdbc_auth.dll 變更 | 詳細資料 |
 | :------------------- | :------ |
-| 從 Microsoft JDBC Driver 8.2.0 for SQL Server 開始，驅動程式會依賴 mssql-jdbc_auth-\<版本>-\<架構>.dll (而不是 sqljdbc_auth.dll) 來使用 Azure Active Directory 驗證功能。 | &nbsp; |
+| 自 Microsoft JDBC Driver 8.2.1 for SQL Server 起，驅動程式將會使用 mssql-jdbc_auth-\< 版本>-\< 架構>.dll (而不是 sqljdbc_auth.dll)，從而使用 Azure Active Directory Authentication 功能。 | &nbsp; |
 | DLL 也已上傳至 Maven 存放庫，以方便存取。 | 請參閱[本頁面](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth)。 |
 | &nbsp; | &nbsp; |
 

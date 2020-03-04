@@ -1,24 +1,33 @@
 ---
 title: SSMA for MySQL 的新功能（MySQLToSql） |Microsoft Docs
+authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 01/22/2020
+ms.date: 3/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
-author: HJToland3
-ms.author: Shamikg
-ms.openlocfilehash: 96e27e6ec25d500b55ec71f5ca1c24d48c230ac5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.author: jtoland;alexiva
+ms.openlocfilehash: 035bdbb2fe2661d6015924a9b474420d59ca9ed4
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76516531"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256828"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 的新功能 (MySqlToSql)
 
 本文列出每個版本中 MySQL 變更的 SQL Server 移轉小幫手（SSMA）。
+
+## <a name="ssma-v87"></a>SSMA v 8。7
+
+適用于 MySQL 的 SSMA 的8.7 版在圖形化使用者介面中有次要的修正和效能改進。
+
+此外，SSMA for MySQL 現在會在以 Azure `LIMIT` SQL 為目標時，提供子句的轉換。
+
+> [!IMPORTANT]
+> 在 SSMA 的8.5 和更新版本中，.NET 4.7.2 是必要的安裝。 如果您需要安裝此版本，您可以從[這裡](https://dotnet.microsoft.com/download/dotnet-framework/net472)下載執行時間檔案。
 
 ## <a name="ssma-v86"></a>SSMA v 8。6
 
@@ -29,34 +38,34 @@ ms.locfileid: "76516531"
 ![省略擴充屬性設定](../mysql/media/ssma-omit-extended-properties.png)
 
 > [!IMPORTANT]
-> 在 SSMA 的8.5 和更新版本中，.Net 4.7.2 是必要的安裝。 如果您需要安裝此版本，您可以從[這裡](https://dotnet.microsoft.com/download/dotnet-framework/net472)下載執行時間檔案。
+> 在 SSMA 的8.5 和更新版本中，.NET 4.7.2 是必要的安裝。 如果您需要安裝此版本，您可以從[這裡](https://dotnet.microsoft.com/download/dotnet-framework/net472)下載執行時間檔案。
 
 ## <a name="ssma-v85"></a>SSMA v 8。5
 
 SSMA for MySQL 的第8.5 版已增強，並支援 SQL server 中的 Azure Active Directory 驗證和 JSON 功能的基本支援，以及一組專為改善可用性和效能而設計的目標修正程式。
 
 > [!IMPORTANT]
-> 使用 SSMA v 8.5 時，.Net 4.7.2 是必要的安裝。 如果您需要安裝此版本，您可以從[這裡](https://dotnet.microsoft.com/download/dotnet-framework/net472)下載執行時間檔案。
+> 使用 SSMA v 8.5 時，.NET 4.7.2 是必要的安裝。 如果您需要安裝此版本，您可以從[這裡](https://dotnet.microsoft.com/download/dotnet-framework/net472)下載執行時間檔案。
 
 ## <a name="ssma-v84"></a>SSMA v 8。4
 
 SSMA for MySQL 的 v2.0 版本已透過專為處理協助工具問題而設計的目標修正來增強，並修正適用于 SQL Server 2016 和更新版本的最大索引資料行（允許32，而不是16）的相關錯誤。
 
 > [!IMPORTANT]
-> 透過8.4 的 SSMA 版本7.4，.Net 4.5.2 是必要的安裝。
+> 透過8.4 的 SSMA 版本7.4，.NET 4.5.2 是必要的安裝。
 
 ## <a name="ssma-v83"></a>SSMA v 8。3
 
 SSMA for MySQL 的 v 8.3 版本已透過專為改善品質和轉換計量而設計的目標修正來增強。 此外，這一版的 SSMA for MySQL 提供了下列修正：
 
-* 解決協助工具問題
-* 在 SQL Server 中新增 ' hierarchyid ' 類型的基本支援
+* 解決協助工具問題。
+* 在 SQL Server 中新增`hierarchyid`類型的基本支援。
 
 ## <a name="ssma-v82"></a>SSMA 8。2
 
 SSMA for MySQL 的 v4.0 版本已透過一組目標修正來增強，其設計目的是要改善品質和轉換計量，以及的修正：
 
-* 資料移轉後停用非叢集索引的問題。
+* 在資料移轉後停用非叢集索引的問題。
 * 在無訊息安裝期間偵測 .NET Framework。
 * 下載新版本時，會發生間歇性損毀。
 
@@ -136,7 +145,7 @@ SSMA for MySQL 的7.4 版包含下列變更：
 * 品質和轉換度量已根據客戶的意見反應，以目標修正進行改善。
 
 > [!IMPORTANT]
-> .Net 4.5.2 是安裝 SSMA 7.4 的必要條件。 此外，從7.4 開始，32位版本的 SSMA 即將中止。
+> .NET 4.5.2 是安裝 SSMA 7.4 的必要條件。 此外，從7.4 開始，32位版本的 SSMA 即將中止。
 
 ## <a name="ssma-v73"></a>SSMA 7.3 版
 
@@ -168,113 +177,114 @@ SSMA for MySQL 的7.3 版包含下列變更：
 * SSMA 現在支援自動更新，以在最新版本的 SSMA 推出時立即下載。
 * SSMA 可安裝的二進位檔現在會透過 Windows Installer 套件檔案（.msi）傳遞。
 
-## <a name="may-2016"></a>2016 年 5 月  
+## <a name="may-2016"></a>2016 年 5 月
+
 適用于 MySQL 的 SSMA 2016 年5月版本包含下列變更：
 
 * 已新增 SQL Server 2016 的支援。
 * 改良的剖析器和解析程式。
-* 已移除 .Net 2.0 的安裝程式檢查。
-* 已將延伸模組套件相依性從 .Net 3.5 更新為 .Net 4.0。
+* 已移除 .NET 2.0 的安裝程式檢查。
+* 已將延伸模組套件相依性從 .NET 3.5 更新為 .NET 4.0。
 * 已修正 MySql 的預設 BigInt 類型對應。
-* 已修正 SSMA 主控台的 [儲存專案] 和 [開啟專案] 命令。
-* 已修正 SSMA 主控台的 "securepassword" 命令。
+* 已`save-project`修正`open-project` SSMA 主控台的命令。
+* 已`securepassword`修正 SSMA 主控台的命令。
 * 已修正初始載入物件的計數。
 * 已修正 MsSql 物件載入。
 * 已修正全域設定中的 bug。
 
 ## <a name="march-2016"></a>2016 年 3 月
 
-SSMA for MySQL 的2016年3月預覽版本新增了遷移至 SQL Server 2016 的支援。 
+SSMA for MySQL 的2016年3月預覽版本新增了遷移至 SQL Server 2016 的支援。
   
 ## <a name="january-2016"></a>2016 年 1 月
 
-適用于 MySQL 的 SSMA 2016 年1月維護版本包含下列變更：  
+適用于 MySQL 的 SSMA 2016 年1月維護版本包含下列變更：
 
-* 已將 [查看記錄] 功能表項目新增至 SSMA （RFC 5706203）。  
-* 已新增遙測。  
+* 已將 [查看記錄] 功能表項目新增至 SSMA （RFC 5706203）。
+* 已新增遙測。
   
 ## <a name="july-2014"></a>2014年7月
 
-2014年7月版的 SSMA for MySQL 包含下列變更：  
+2014年7月版的 SSMA for MySQL 包含下列變更：
   
-* 改良的 Azure SQL DB 程式碼轉換。 
-* 延伸模組套件功能已移至架構，以支援 Azure SQL DB。  
-* 已針對具有超過10k 物件的資料庫測試效能改進。  
-* 處理大量物件的 UI 改善。  
-* 反白顯示「知名的」 LOB 架構（因此可以在轉換時予以忽略）。  
-* 轉換速度改進。  
-* 在 UI 中顯示物件計數。  
-* 超過25% 的報表大小縮減。  
-* 已改善未分析之結構的錯誤訊息。  
+* 改良的 Azure SQL DB 程式碼轉換。
+* 延伸模組套件功能已移至架構，以支援 Azure SQL DB。
+* 已針對具有超過10k 物件的資料庫測試效能改進。
+* 處理大量物件的 UI 改善。
+* 反白顯示知名的 LOB 架構（因此可以在轉換時忽略）。
+* 轉換速度改進。
+* 在 UI 中顯示物件計數。
+* 超過25% 的報表大小縮減。
+* 已改善未分析之結構的錯誤訊息。
   
 ## <a name="april-2014"></a>2014 年 4 月
 
-2014年4月版的 SSMA for MySQL 包含下列變更：  
+2014年4月版的 SSMA for MySQL 包含下列變更：
   
-* 已新增 MS SQL Server 2014 的支援。  
+* 已新增 SQL Server 2014 的支援。
 * 已修正關於轉換至 Azure 的 bug。
-* 已修正 IE 10 中不可見報表頁面的相關 bug。  
+* 已修正 IE 10 中不可見報表頁面的相關 bug。
   
 ## <a name="july-2011"></a>2011 年 7 月
 
-2011年7月版的 SSMA for MySQL 包含下列變更：  
+2011年7月版的 SSMA for MySQL 包含下列變更：
   
-* 支援將限制轉換為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "DENALI" 位移。  
-* 改善資料移轉期間的錯誤報表。  
+* 支援`LIMIT`將轉換成[!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] `OFFSET`。
+* 改善資料移轉期間的錯誤報表。
   
 ## <a name="april-2011"></a>2011年4月
 
-2011年4月版的 SSMA for MySQL 包含下列變更：  
+2011年4月版的 SSMA for MySQL 包含下列變更：
   
-* 單一安裝「適用于 MySQL 的 SSMA」，其[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援 2005 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、2008 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、"Denali" 和 Azure SQL。  
-* 連接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali" 的能力。  
-* 加強的用戶端資料移轉引擎，支援資料的平行遷移。  
-* 使用簡單和大量記錄復原模式來改善資料移轉效能。  
-* SSMA for MySQL 主控台版本支援回溯相容性。 您可以開啟先前版本所建立的專案，以 SSMA 5.0 版。  
-* SSMA for MySQL v 5.0 產品可以並存安裝（SxS）與舊版的 SSMA 產品。  
+* 單一安裝「適用于 MySQL 的 SSMA」，其[!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]支援[!INCLUDE [ssSQL10](../../includes/sssql10-md.md)]、 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]和 Azure SQL。
+* 連接[!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]的能力。
+* 加強的用戶端資料移轉引擎，支援資料的平行遷移。
+* 使用簡單和大量記錄復原模式來改善資料移轉效能。
+* SSMA for MySQL 主控台版本支援回溯相容性。 您可以開啟先前版本所建立的專案，以 SSMA 5.0 版。
+* SSMA for MySQL v 5.0 產品可以並存安裝（SxS）與舊版的 SSMA 產品。
   
 ## <a name="july-2010"></a>2010 年 7 月
 
-2010年7月版的 SSMA for MySQL 包含下列功能：  
+2010年7月版的 SSMA for MySQL 包含下列功能：
   
-1. **使用者介面的增強功能：**  
+**1. 使用者介面的增強功能：**
+
+* MySQL 資料庫物件的 [SQL 模式] 索引標籤
+* MySQL 資料庫物件的 [設定] 索引標籤
+* MySQL 資料表的 [資料] 索引標籤
+* 已更新轉換和遷移頁面中的專案設定
+* 資料表層級的「資料移轉設定」
   
-    * MySQL 資料庫物件的 [SQL 模式] 索引標籤  
-    * MySQL 資料庫物件的 [設定] 索引標籤  
-    * MySQL 資料表的 [資料] 索引標籤  
-    * 已更新轉換和遷移頁面中的專案設定  
-    * 資料表層級的「資料移轉設定」  
+**2. 連接到 MySQL 和 SQL Server 的改良功能：**
   
-2. **連接到 MySQL 和 SQL Server 的改良功能：**  
+* MySQL 中的 SSL 連線能力
+* SQL Server 中的加密連接
   
-    * MySQL 中的 SSL 連線能力  
-    * SQL Server 中的加密連接  
+**3. MySQL 的 [元資料庫] Explorer 的改良功能：**
   
-3. **MySQL 元資料庫 Explorer 的改良功能：**  
+* 載入所有 MySQL 資料庫物件及其各自的索引標籤。
   
-    * 載入所有 MySQL 資料庫物件及其各自的索引標籤。  
+**4. 物件轉換的改良功能：**
   
-4. **物件轉換的改良功能：**
+* MySQL 元資料庫物件的轉換-程式、函數、視圖、觸發程式和語句。
+* 針對資料表中的空間資料類型提供有限的支援。
+* 將 MySQL 函數轉換成 SQL Server 預存程式的選項
+* 在物件轉換期間套用 SQL 模式和字元集對應的選項
   
-    * MySQL 元資料庫物件的轉換-程式、函數、視圖、觸發程式和語句。  
-    * 針對資料表中的空間資料類型提供有限的支援。
-    * 將 MySQL 函數轉換成 SQL Server 預存程式的選項  
-    * 在物件轉換期間套用 SQL 模式和字元集對應的選項  
+**5. 資料移轉的改良功能：**  
   
-5. **資料移轉的改良功能：**  
+* 支援使用伺服器端和用戶端資料移轉引擎來進行資料移轉
+* 支援空間資料遷移
+* 資料表的資料移轉自訂 SQL
   
-    * 支援使用伺服器端和用戶端資料移轉引擎來進行資料移轉  
-    * 支援空間資料遷移  
-    * 資料表的資料移轉自訂 SQL  
+**6. 適用于 MySQL 的 SSMA 主控台：**  
   
-6. **適用于 MySQL 的 SSMA 主控台：**  
-  
-    * 適用于 MySQL 的 SSMA 支援主控台功能  
-    * 腳本層級介面的支援  
+* 適用于 MySQL 的 SSMA 支援主控台功能  
+* 腳本層級介面的支援  
   
 ## <a name="january-2010"></a>2010年1月
 
-2010年1月版的 SSMA for MySQL 是最初發行版本。 其中包含下列功能： 
+2010年1月版的 SSMA for MySQL 是最初發行版本。 其中包含下列功能：
   
 * 已新增遷移至內部部署 SQL Server 和 Azure SQL 的支援。  
   
