@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 805ca71b22a0c5f280c6e3475ba21133bef6dd6e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6b6f11ac0a41b52f6b8e197b21279a22df46703d
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71298023"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903749"
 ---
-# <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>使用彙總轉換來彙總資料集中的值
+# <a name="aggregate-values-in-a-dataset-with-the-aggregate-transformation"></a>使用彙總轉換來彙總資料集中的值
 
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

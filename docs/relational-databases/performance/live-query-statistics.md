@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 724eb513c3a48916e1083e3ce5bb50251896d381
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 82634dc8169fa266e6fb1c92ec9a14129e40e947
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73983245"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180087"
 ---
 # <a name="live-query-statistics"></a>即時查詢統計資料
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可供檢視作用中查詢的即時執行計畫。 這個即時查詢計畫會隨著控制項在[查詢計畫運算子](../../relational-databases/showplan-logical-and-physical-operators-reference.md)之間流動，提供查詢執行程序的即時深入資訊。 即時查詢計畫會顯示整體的查詢進度，以及運算子層級的執行階段執行統計資料，如產生的資料列數目、耗用時間、運算子進度等等。因為這份資料是即時提供，不需要等待查詢完成，所以這些執行統計資料在偵錯查詢效能問題方面非常有用。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 開始即提供這項功能，但這項功能也可以搭配 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 使用。  
 
 > [!NOTE]
 > 在內部，即時查詢統計資料會利用 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV。
   
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本)。  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 起) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
 > [!WARNING]  
 > 這項功能主要用在疑難排解。 使用這項功能不會過度降低整體查詢效能，尤其在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中。 如需詳細資訊，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。  
@@ -62,7 +62,9 @@ ms.locfileid: "73983245"
  必須先啟用統計資料設定檔基礎結構，即時查詢統計資料才可以擷取查詢進度資訊。 視版本而定，額外負荷可能十分可觀。 如需此額外負荷的詳細資訊，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。
   
 ## <a name="permissions"></a>權限  
- 填入 [即時查詢統計資料]  結果頁面需要資料庫等級的 `SHOWPLAN` 權限，查看即時統計資料需要伺服器等級的 `VIEW SERVER STATE` 權限，而執行查詢則需要任何必要權限。  
+填入 [即時查詢統計資料]  結果頁面需要資料庫層級的 `SHOWPLAN` 權限，而執行查詢則需要任何必要權限。
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，需要伺服器層級的 `VIEW SERVER STATE` 權限才能查看即時統計資料。  
+在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 進階層上，需要資料庫的 `VIEW DATABASE STATE` 權限才能查看即時統計資料。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 標準和基本層上，需要**伺服器管理員**或 **Azure Active Directory 系統管理員**帳戶，才能查看即時統計資料。
   
 ## <a name="see-also"></a>另請參閱  
  [效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

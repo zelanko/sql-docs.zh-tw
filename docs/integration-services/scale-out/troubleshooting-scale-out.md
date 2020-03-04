@@ -1,5 +1,5 @@
 ---
-title: 針對 SQL Server Integration Services (SSIS) Scale Out 進行疑難排解 | Microsoft Docs
+title: 針對 SSIS Scale Out 進行疑難排解 | Microsoft Docs
 description: 本文描述如何針對 SSIS Scale Out 的常見問題進行疑難排解
 ms.custom: performance
 ms.date: 01/09/2019
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 87f5ab815fc7d3a5df23aa3675e92ffa206bfcdf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 987217c1afe07b5e917f415b9a5bc0d784ab7c6d
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67896157"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903767"
 ---
 # <a name="troubleshoot-scale-out"></a>針對 Scale Out 進行疑難排解
 

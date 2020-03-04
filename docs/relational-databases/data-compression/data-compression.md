@@ -23,12 +23,12 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e31898c8252084a34ed645e5b3f5113f9893ee48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3360957d62c6af05c6d650c0143f9f45fde3bd19
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68055447"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705871"
 ---
 # <a name="data-compression"></a>資料壓縮
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68055447"
 -   如果是分割資料行存放區資料表和資料行存放區索引，您可以針對每個資料分割設定封存壓縮選項，而不同資料分割則不必擁有相同的封存壓縮設定。  
   
 > [!NOTE]  
->  資料也可以使用 GZIP 演算法格式進行壓縮。 這是額外的步驟，最適合在封存舊資料進行長期儲存時壓縮部分資料。 使用 COMPRESS 函數壓縮的資料無法編製索引。 如需詳細資訊，請參閱 [COMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md)。  
+> 資料也可以使用 GZIP 演算法格式進行壓縮。 這是額外的步驟，最適合在封存舊資料進行長期儲存時壓縮部分資料。 使用 `COMPRESS` 函式壓縮的資料無法編製索引。 如需詳細資訊，請參閱 [COMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md)。  
   
 ## <a name="considerations-for-when-you-use-row-and-page-compression"></a>使用資料列和頁面壓縮時的考量  
  當您使用資料列和頁面壓縮時，請注意以下考量事項：  
@@ -57,7 +57,7 @@ ms.locfileid: "68055447"
 -   每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中都無法使用壓縮。 如需詳細資訊，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
 -   壓縮不適用於系統資料表。  
 -   壓縮可讓更多的資料列儲存在頁面上，但是不會變更資料表或索引的資料列大小上限。  
--   當資料列大小上限加上壓縮負擔超過 8060 個位元組的資料列大小上限時，資料表將無法啟用壓縮。 例如，因為有額外的壓縮負荷，所以無法壓縮具有資料行 c1**char(8000)** 及 c2**char(53)** 的資料表。 當使用 Vardecimal 儲存格式時，將會在啟用此格式時執行資料列大小檢查。 對於資料列和頁面壓縮而言，最初壓縮物件時會執行資料列大小檢查，然後在插入或修改每一個資料列時加以檢查。 壓縮會強制執行下列兩個規則：  
+-   當資料列大小上限加上壓縮負擔超過 8060 個位元組的資料列大小上限時，資料表將無法啟用壓縮。 例如，由於額外壓縮負荷的緣故，所以具有資料行 `c1 CHAR(8000)` 和 `c2 CHAR(53)` 的資料表無法加以壓縮。 當使用 Vardecimal 儲存格式時，將會在啟用此格式時執行資料列大小檢查。 對於資料列和頁面壓縮而言，最初壓縮物件時會執行資料列大小檢查，然後在插入或修改每一個資料列時加以檢查。 壓縮會強制執行下列兩個規則：  
     -   固定長度類型的更新一定要成功。  
     -   停用資料壓縮一定要成功。 即使壓縮的資料列適合頁面大小，這表示它小於 8060 個位元組；如果它未壓縮， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會防止不適合資料列大小的更新。  
 -   當指定了資料分割清單時，壓縮類型可以在個別資料分割上設定為 ROW、PAGE 或 NONE。 如果未指定資料分割的清單，將會設定所有資料分割，並包含陳述式中所指定的資料壓縮屬性。 在建立資料表或索引時，除非另外指定，否則資料壓縮會設定為 NONE。 在修改資料表時，除非另外指定，否則會保留現有的壓縮。  
@@ -66,8 +66,8 @@ ms.locfileid: "68055447"
 -   在堆積上建立叢集索引時，此叢集索引會繼承堆積的壓縮狀態，除非指定了替代的壓縮狀態。  
 -   當堆積設定了頁面層級壓縮時，頁面只會以下列方式接收頁面層級壓縮：  
     -   資料會在啟用大量最佳化的情況下大量匯入。  
-    -   使用 INSERT INTO ...WITH (TABLOCK) 語法與資料表沒有非叢集索引。  
-    -   執行 ALTER TABLE ...REBUILD 陳述式並指定 PAGE 壓縮選項來重建資料表。  
+    -   使用 `INSERT INTO ... WITH (TABLOCK)` 語法來插入資料，此資料表沒有非叢集索引。  
+    -   執行 `ALTER TABLE ... REBUILD` 陳述式並指定 PAGE 壓縮選項來重建資料表。  
 -   重建堆積之前，配置在堆積中成為 DML 作業一部分的新頁面不會使用 PAGE 壓縮。 您可以透過移除並重新套用壓縮，或建立並移除叢集索引，重建堆積。  
 -   變更堆積的壓縮設定需要重建資料表上的所有非叢集索引，好讓它們擁有指向堆積內新資料列位置的指標。  
 -   您可以在線上或離線時啟用或停用 ROW 或 PAGE 壓縮。 在堆積上啟用壓縮對於線上作業而言是單一執行緒的作業。  
@@ -78,11 +78,11 @@ ms.locfileid: "68055447"
 -   在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中實作 Vardecimal 儲存格式的資料表會在升級時保留此設定。 您可以將資料列壓縮套用到具有 Vardecimal 儲存格式的資料表。 但是，由於資料列壓縮是 Vardecimal 儲存格式的超集，所以沒有理由保留 Vardecimal 儲存格式。 當您將 Vardecimal 儲存格式結合資料列壓縮時，十進位值不會取得額外的壓縮。 您可以將頁面壓縮套用到具有 Vardecimal 儲存格式的資料表；但是，Vardecimal 儲存格式資料行可能不會封存其他壓縮。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援 Vardecimal 儲存格式；但是，由於資料列層級的壓縮會達成相同的目標，所以 Vardecimal 儲存格式已被取代。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    > [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援 Vardecimal 儲存格式；但是，由於資料列層級的壓縮會達成相同的目標，所以 Vardecimal 儲存格式已被取代。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>使用資料行存放區和資料行存放區封存壓縮  
   
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))、[!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]。  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]。  
   
 ### <a name="basics"></a>基本概念  
  資料行存放區資料表和索引永遠都會以資料行存放區壓縮形式來儲存。 您可以進一步減少資料行存放區資料的大小，只要設定稱為封存壓縮的額外壓縮即可。  為了執行封存壓縮， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對資料執行 Microsoft XPRESS 壓縮演算法。 您可以使用下列資料壓縮類型來新增或移除封存壓縮：  
@@ -92,7 +92,8 @@ ms.locfileid: "68055447"
 若要新增封存壓縮，請使用 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 或 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) 搭配 REBUILD 選項和 DATA COMPRESSION = COLUMNSTORE_ARCHIVE。  
   
 #### <a name="examples"></a>範例：  
-```  
+
+```sql  
 ALTER TABLE ColumnstoreTable1   
 REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE) ;  
   
@@ -107,7 +108,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
   
 #### <a name="examples"></a>範例：  
   
-```  
+```sql  
 ALTER TABLE ColumnstoreTable1   
 REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  COLUMNSTORE) ;  
   
@@ -120,7 +121,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE ON PARTITIONS (2,4
   
 下一個範例會在某些資料分割上將資料壓縮設定為資料行存放區，以及在其他資料分割上設定為資料行存放區封存。  
   
-```  
+```sql  
 ALTER TABLE ColumnstoreTable1   
 REBUILD PARTITION = ALL WITH (  
     DATA_COMPRESSION =  COLUMNSTORE ON PARTITIONS (4,5),  
@@ -142,33 +143,37 @@ REBUILD PARTITION = ALL WITH (
   
 ## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>壓縮對分割資料表和索引有何影響  
  當您搭配分割資料表和索引使用資料壓縮時，請注意以下考量事項：  
--   當使用 ALTER PARTITION 陳述式分割資料分割時，兩個資料分割都會繼承原始資料分割的資料壓縮屬性。  
+-   當使用 `ALTER PARTITION` 陳述式分割這些分割區時，兩個分割區都會繼承原始分割區的資料壓縮屬性。  
 -   當合併兩個資料分割時，所產生的資料分割會繼承目標資料分割的資料壓縮屬性。  
 -   若要切換資料分割，此資料分割的資料壓縮屬性必須符合資料表的壓縮屬性。  
 -   您可以使用兩種語法變化來修改分割資料表或索引的壓縮：  
     -   下列語法只會重建參考的資料分割：  
-        ```  
+    
+        ```sql  
         ALTER TABLE <table_name>   
         REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  <option>)  
         ```  
+    
     -   下列語法會將現有的壓縮設定用於任何未參考的資料分割，藉以重建整個資料表：  
-        ```  
+    
+        ```sql  
         ALTER TABLE <table_name>   
         REBUILD PARTITION = ALL   
         WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(<range>),  
         ... )  
         ```  
   
-     分割索引會遵循使用 ALTER INDEX 的相同原則。  
+     資料分割索引會遵循使用 `ALTER INDEX` 的相同準則。  
   
 -   當卸除叢集索引時，除非修改了資料分割配置，否則對應的堆積資料分割會保留其資料壓縮設定。 如果資料分割配置有所變更，所有資料分割都會重建為未壓縮的狀態。 若要卸除叢集索引及變更資料分割配置，您需要執行以下步驟：  
      1. 卸除叢集索引。  
-     2. 使用指定壓縮選項的 ALTER TABLE ...REBUILD ... 選項來修改資料表。  
+     2. 使用指定壓縮選項的 `ALTER TABLE ... REBUILD` 選項來修改資料表。  
   
      在線上卸除叢集索引將會是非常快速的作業，因為只會移除叢集索引的上層。 在線上卸除叢集索引時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須重建堆積兩次，一次在步驟 1，另一次在步驟 2。  
   
 ## <a name="how-compression-affects-replication"></a>壓縮將如何影響複寫 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。   
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。   
+
 當您搭配複寫使用資料壓縮時，請注意以下考量事項：  
 -   當快照集代理程式產生最初的結構描述指令碼時，新的結構描述會將相同的壓縮設定用於資料表和它的索引。 不能只在資料表上啟用壓縮，而不在索引上啟用壓縮。  
 -   如果是異動複寫，發行項結構描述選項會判斷哪些相依的物件和屬性必須編寫指令碼。 如需詳細資訊，請參閱 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。  
@@ -186,7 +191,7 @@ REBUILD PARTITION = ALL WITH (
 |如果所有資料分割都在發行者上壓縮，則壓縮訂閱者上的資料表，但是不複寫資料分割配置。|False|True|檢查所有資料分割是否啟用壓縮。<br /><br /> 針對資料表層級上的壓縮編寫指令碼。|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>壓縮對於其他 SQL Server 元件有何影響 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
    
  壓縮會發生在儲存引擎中，而且資料會以非壓縮狀態呈現給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的大多數其他元件。 這樣會將壓縮對其他元件的影響限制為以下情況：  
 -   大量匯入及匯出作業  

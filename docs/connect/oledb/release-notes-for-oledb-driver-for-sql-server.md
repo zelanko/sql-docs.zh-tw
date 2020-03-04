@@ -1,18 +1,18 @@
 ---
 title: 版本資訊 (OLE DB Driver for SQL Server) | Microsoft Docs
-ms.date: 10/11/2019
+ms.date: 02/27/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 23c730ce0bba9003b47b777108907763d981c551
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 90da0d1d42878fcbe65b1086663775d546751c80
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74401537"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78177358"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server 的版本資訊
 
@@ -31,7 +31,14 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1830"></a>18.3.0
 
-2019 年 10 月
+![下載](../../ssdt/media/download.png) [下載 x64 安裝程式](https://go.microsoft.com/fwlink/?linkid=2117515)  
+![下載](../../ssdt/media/download.png) [下載 x86 安裝程式](https://go.microsoft.com/fwlink/?linkid=2117517)  
+
+發行日期：2019 年 10 月
+
+如果您需要下載非所偵測語言的安裝程式，則可以使用下列直接連結。  
+若為 x64 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x40a)  
+若為 x86 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x40a)  
 
 ### <a name="features-added"></a>新增的功能
 
@@ -48,9 +55,20 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 | 已修正 [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448) \(英文\) 中的卸除索引邏輯。 | 舊版的 OLE DB 驅動程式無法在索引擁有者的結構描述識別碼和使用者識別碼不相等時卸除主索引鍵索引。 |
 | &nbsp; | &nbsp; |
 
+## <a name="previous-releases"></a>舊版
+
+按一下下列各節中的下載連結，以下載舊版的 OLE DB 驅動程式：
+
 ## <a name="1823"></a>18.2.3
 
-2019 年 6 月
+![下載](../../ssdt/media/download.png) [下載 x64 安裝程式](https://go.microsoft.com/fwlink/?linkid=2119554)  
+![下載](../../ssdt/media/download.png) [下載 x86 安裝程式](https://go.microsoft.com/fwlink/?linkid=2119738)  
+
+發行日期：2019 年 6 月
+
+如果您需要下載非所偵測語言的安裝程式，則可以使用下列直接連結。  
+若為 x64 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40a)  
+若為 x86 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40a)  
 
 ### <a name="features-added"></a>新增的功能
 
@@ -61,7 +79,14 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1822"></a>18.2.2
 
-2019 年 5 月
+![下載](../../ssdt/media/download.png) [下載 x64 安裝程式](https://go.microsoft.com/fwlink/?linkid=2118512)  
+![下載](../../ssdt/media/download.png) [下載 x86 安裝程式](https://go.microsoft.com/fwlink/?linkid=2118415)  
+
+發行日期：2019 年 5 月
+
+如果您需要下載非所偵測語言的安裝程式，則可以使用下列直接連結。  
+若為 x64 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40a)  
+若為 x86 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40a)  
 
 ### <a name="bugs-fixed"></a>修正的 Bug
 
@@ -72,7 +97,14 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1821"></a>18.2.1
 
-2019 年 2 月
+![下載](../../ssdt/media/download.png) [下載 x64 安裝程式](https://go.microsoft.com/fwlink/?linkid=2118511)  
+![下載](../../ssdt/media/download.png) [下載 x86 安裝程式](https://go.microsoft.com/fwlink/?linkid=2118278)  
+
+發行日期：2019 年 2 月
+
+如果您需要下載非所偵測語言的安裝程式，則可以使用下列直接連結。  
+若為 x64 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40a)  
+若為 x86 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40a)  
 
 ### <a name="features-added"></a>新增的功能
 
@@ -84,7 +116,14 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1810"></a>18.1.0
 
-2018 年 7 月
+![下載](../../ssdt/media/download.png) [下載 x64 安裝程式](https://go.microsoft.com/fwlink/?linkid=2118506)  
+![下載](../../ssdt/media/download.png) [下載 x86 安裝程式](https://go.microsoft.com/fwlink/?linkid=2118509)  
+
+發行日期：2018 年 7 月
+
+如果您需要下載非所偵測語言的安裝程式，則可以使用下列直接連結。  
+若為 x64 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40a)  
+若為 x86 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2118509&2118509=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40a)  
 
 ### <a name="features-added"></a>新增的功能
 
@@ -101,6 +140,15 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 | &nbsp; | &nbsp; |
 
 ## <a name="1802"></a>18.0.2
+
+![下載](../../ssdt/media/download.png) [下載 x64 安裝程式](https://go.microsoft.com/fwlink/?linkid=2118504)  
+![下載](../../ssdt/media/download.png) [下載 x86 安裝程式](https://go.microsoft.com/fwlink/?linkid=2118277)  
+
+發行日期：2018 年 3 月
+
+如果您需要下載非所偵測語言的安裝程式，則可以使用下列直接連結。  
+若為 x64 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40a)  
+若為 x86 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40a)  
 
 ### <a name="features-added"></a>新增的功能
 

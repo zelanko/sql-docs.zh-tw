@@ -17,15 +17,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 40c2c30ff3d44b41d4ddcac4cc9fe0954a06d72e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e4c2a2e56f9dab75bfe3873e721ccfca0bd16df3
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257668"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705903"
 ---
 # <a name="query-profiling-infrastructure"></a>查詢分析基礎結構
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 讓您能夠存取有關查詢執行計畫的執行階段資訊。 發生效能問題時最重要的動作之一，是準確地了解正在執行的工作負載以及衍生資源使用量的方式。 基於此因素，存取[實際執行計畫](../../relational-databases/performance/display-an-actual-execution-plan.md)就很重要。
 
@@ -119,9 +119,9 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v3"></a>輕量型查詢執行統計資料分析基礎結構 v3
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 包含最新修訂的輕量型分析版本，可收集所有執行的資料列計數資訊。 輕量型分析預設會在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 上啟用，而追蹤旗標 7412 不會有任何作用。 可以在資料庫層級使用 LIGHTWEIGHT_QUERY_PROFILING [資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)來停用輕量級分析：`ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`。
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 包含最新修訂的輕量型分析版本，可收集所有執行的資料列計數資訊。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上預設會啟用輕量型分析。 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，追蹤旗標 7412 沒有任何作用。 可以在資料庫層級使用 LIGHTWEIGHT_QUERY_PROFILING [資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)來停用輕量級分析：`ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`。
 
 現已引進新的 DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)，它在大多數查詢中會傳回最後一個已知實際執行計畫的對等項目，稱為「最後一個執行計畫統計資料」  。 可以在資料庫層級使用 LAST_QUERY_PLAN_STATS [資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)來啟用最後一個查詢計畫統計資料：`ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`。
 

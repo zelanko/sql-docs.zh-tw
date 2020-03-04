@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 0f11b1e7300027d024b5961f73ffa71c7b07a2bd
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72909312"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608492"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查詢存放區監視效能
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "72909312"
 ##  <a name="Enabling"></a> 啟用查詢存放區  
  新的資料庫預設不會啟用查詢存放區。  
   
-#### <a name="use-the-query-store-page-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [查詢存放區] 頁面  
+#### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [查詢存放區] 頁面  
   
 1.  在 [物件總管] 中，以滑鼠右鍵按一下資料庫，然後按一下 [屬性]  。  
   
@@ -595,7 +595,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
 #### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/>強制支援向前快轉及靜態資料指標
   
-從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 開始，查詢存放區支援強制查詢執行計劃，以進行向前快轉及提供靜態 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 API 資料指標。 強制執行會透過 `sp_query_store_force_plan` 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢存放區報告支援。
+從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和 Azure SQL Database (所有部署模型) 開始，查詢存放區支援強制查詢執行計劃，以進行向前快轉及提供靜態 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 API 資料指標。 強制執行會透過 `sp_query_store_force_plan` 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢存放區報告支援。
 
 ### <a name="remove-plan-forcing-for-a-query"></a>針對查詢移除強制執行計畫
 

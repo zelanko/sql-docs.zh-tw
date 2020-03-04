@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：設定 SQL Server Integration Services Scale Out | Microsoft Docs
+title: 逐步解說：設定 SSIS Scale Out | Microsoft Docs
 description: 本文將引導您完成 SSIS Scale Out 的安裝和設定
 ms.custom: performance
 ms.date: 12/13/2017
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
-ms.openlocfilehash: d3b6ea9f53a54b7f02042b85781bc8fe24028a69
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67896129"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903646"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>逐步解說：設定 Integration Services (SSIS) Scale Out
 

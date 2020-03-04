@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 66d9c24a31002f0c991fbf1dfdd7210adbf53172
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1dfa8438e7afb1763129748368a7f6e08fa892c3
+ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74249708"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575340"
 ---
 # <a name="using-table-valued-parameters"></a>使用資料表值參數
 
@@ -42,7 +42,7 @@ ms.locfileid: "74249708"
 
 在 SQL Server 2008 中引進資料表值參數之前，將多個資料列傳遞至預存程序或參數化 SQL 命令的選項有所限制。 開發人員可以從下列選項中選擇將多個資料列傳遞至伺服器的方式：  
   
-- 使用一系列的個別參數來代表多個資料行和資料列中的值。 使用這個方法時，可以傳遞的資料量會受到允許的參數數目限制。 SQL Server 程序最多可以有 2100 個參數。 這需要伺服器端邏輯，才能將這些個別的值組合成資料表變數或暫存資料表來加以處理。  
+- 使用一系列的個別參數來代表多個資料行與資料列中的值。 使用這個方法時，可以傳遞的資料量會受到允許的參數數目限制。 SQL Server 程序最多可以有 2100 個參數。 需要伺服器端邏輯，才能將這些個別的值組合成資料表變數或暫存資料表來進行處理。  
   
 - 將多個資料值組合成分隔字串或 XML 文件，然後將那些文字值傳遞給程序或陳述式。 這需要程序或陳述式包含驗證資料結構及拆開值所需的邏輯。  
   
@@ -68,9 +68,9 @@ CREATE PROCEDURE usp_UpdateCategories
 
 ## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>使用資料表值參數修改資料 (Transact-SQL)  
 
-資料表值參數可透過執行單一陳述式，在以集合為基礎且會影響多個資料列的資料修改中使用。 例如，您可以選取資料表值參數中的所有資料列，並將它們插入資料庫資料表中，或者您可以藉由將資料表值參數聯結至您要更新的資料表，以建立更新陳述式。  
+資料表值參數可透過執行單一陳述式，在以集合為基礎且會影響多個資料列的資料修改中使用。 例如，您可以選取資料表值參數中的所有資料列，並將其插入資料庫資料表中，或者您可以透過將資料表值參數聯結至您要更新的資料表，以建立更新陳述式。  
   
-下列 Transact-SQL UPDATE 陳述式會示範如何將資料表值參數聯結至 Categories 資料表，藉以運用此參數。 當您在 FROM 子句中搭配 JOIN 使用資料表值參數時，也必須為它設定別名，例如下方所示，為資料表值參數設定別名 "ec"：  
+下列 Transact-SQL UPDATE 陳述式會示範如何將資料表值參數聯結至 Categories 資料表，藉以運用此參數。 當您在 FROM 子句中搭配 JOIN 使用資料表值參數時，也必須為其設定別名，例如下方所示，其中資料表值參數設定別名 "ec"：  
 
 ```sql
 UPDATE dbo.Categories  
@@ -127,7 +127,7 @@ pStmt.execute();
   
 ## <a name="passing-a-table-valued-parameter-as-a-sqlserverdatatable-object"></a>將資料表值參數作為 SQLServerDataTable 物件傳遞  
 
-從 Microsoft JDBC Driver 6.0 for SQL Server 開始，SQLServerDataTable 類別代表關聯式資料的記憶體內部資料表。 這個範例示範如何使用 SQLServerDataTable 物件，從記憶體內部資料來建構資料表值參數。 此程式碼會先建立 SQLServerDataTable 物件、定義其結構描述，並在資料表中填入資料。 然後，程式碼會設定 SQLServerPreparedStatement，以將此資料表當做資料表值參數傳遞給 SQL Server。  
+從 Microsoft JDBC Driver 6.0 for SQL Server 開始，SQLServerDataTable 類別代表關聯式資料的記憶體內部資料表。 這個範例示範如何使用 SQLServerDataTable 物件，從記憶體內部資料來建構資料表值參數。 首先，此程式碼會建立 SQLServerDataTable 物件、定義其結構描述，並在資料表中填入資料。 然後，程式碼會設定 SQLServerPreparedStatement，以將此資料表當做資料表值參數傳遞給 SQL Server。  
 
 ```java
 /* Assumes connection is an active Connection object. */
@@ -156,7 +156,7 @@ pStmt.execute();
   
 ## <a name="passing-a-table-valued-parameter-as-a-resultset-object"></a>將資料表值參數作為 ResultSet 物件傳遞  
 
-這個範例示範如何將資料列從 ResultSet 串流至資料表值參數。 程式碼會先從來源資料表擷取資料，然後建立 SQLServerDataTable 物件、定義其結構描述，並在資料表中填入資料。 然後，程式碼會設定 SQLServerPreparedStatement，以將此資料表當做資料表值參數傳遞給 SQL Server。  
+這個範例示範如何將資料列從 ResultSet 串流至資料表值參數。 首先，此程式碼會從 SQLServerDataTable 物件的來源資料表擷取資料、定義其結構描述，並在資料表中填入資料。 然後，程式碼會設定 SQLServerPreparedStatement，以將此資料表當做資料表值參數傳遞給 SQL Server。  
 
 ```java
 /* Assumes connection is an active Connection object. */

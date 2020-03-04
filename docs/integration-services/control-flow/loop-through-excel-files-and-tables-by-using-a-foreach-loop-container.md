@@ -1,5 +1,5 @@
 ---
-title: 使用 Foreach 迴圈容器執行 Excel 檔案和資料表迴圈 | Microsoft Docs
+title: 使用 Foreach 迴圈容器來執行 Excel 檔案和資料表迴圈 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c636138358dda82c758ab2db70fab8d315f9b9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c82f5f361bf04b7d3d4a4c7012cee92d2a85ebfd
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71294026"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903746"
 ---
-# <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表
+# <a name="loop-through-excel-files-and-tables-with-a-foreach-loop-container"></a>使用 Foreach 迴圈容器來執行 Excel 檔案和資料表迴圈
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

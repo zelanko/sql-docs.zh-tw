@@ -1,7 +1,7 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 02/26/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 35cf1b37a7c10992e17a52e4a44a473127ffb586
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 183edfbae4da98f12d9ed32b594e74b1932b6f1b
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73982788"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705893"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -313,7 +313,7 @@ RETURNS return_data_type
  如果函數的參數有預設值，則必須在呼叫函數來擷取該預設值時指定關鍵字 DEFAULT。 這個行為與使用預存程序中具有預設值的參數不一樣，因為在預存程序中，省略參數也意味著使用預設值。 不過，使用 EXECUTE 陳述式來叫用純量函數時，不需要 DEFAULT 關鍵字。  
   
  READONLY  
- 指示無法在函數的定義內更新或修改參數。 如果參數類型是使用者定義資料表類型，應該指定 READONLY。  
+ 指示無法在函數的定義內更新或修改參數。 使用者定義資料表類型參數 (TVP) 需要 READONLY，且 READONLY 不能用於任何其他參數類型。
   
  *return_data_type*  
  這是純量使用者定義函數的傳回值。 就 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式而言，所有資料類型 (包括 CLR 使用者定義型別) 都是允許的資料類型，但 **timestamp** 資料類型除外。 就 CLR 函式而言，所有資料類型 (包括 CLR 使用者定義類型) 都是允許的資料類型，但 **text** **ntext** **image** 及 **timestamp** 資料類型除外。 非純量類型 **cursor** 和 **table** 不能指定為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 CLR 函式中的傳回資料類型。  
@@ -810,7 +810,7 @@ GO
   
  如需如何建立 CLR 資料表值函式的範例，請參閱 [CLR 資料表值函式](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)。  
   
-### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>E. 顯示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用者定義函式的定義  
+### <a name="e-displaying-the-definition-of-tsql-user-defined-functions"></a>E. 顯示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用者定義函式的定義  
   
 ```sql  
 SELECT definition, type   

@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: e8acc3ef73c51ccbbf195f9d18dc5f12d661931f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: fd41b851ac7240ded3b0508f0bfd45fad0377c27
+ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75226738"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77568071"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -50,7 +50,7 @@ ms.locfileid: "75226738"
 
 此文章說明 Azure SQL 資料倉儲中用於開發解決方案的 CREATE MATERIALIZED VIEW AS SELECT T-SQL 陳述式。 此文章也提供程式碼範例。
 
-具體化檢視會保存從檢視定義查詢傳回的資料，並在底層資料表中的資料變更時自動取得更新。   它可以改進複雜查詢 (通常是具有聯結與會總的查詢) 的效能，同時提供簡單的維護作業。   使用其執行計畫的自動比對功能，不需要在查詢中參考具體化檢視，最佳化工具就能考慮要替代的檢視。  這可讓資料工程師將具體化檢視實作為改進查詢回應時間的機制，而不需要變更查詢。  
+具體化檢視會保存從檢視定義查詢傳回的資料，並在底層資料表中的資料變更時自動取得更新。   它可以改進複雜查詢 (通常是具有聯結與會總的查詢) 的效能，同時提供簡單的維護作業。   使用其執行計畫的自動比對功能，不需要在查詢中參考具體化檢視，最佳化工具就能考慮要替代的檢視。  這項功能可讓資料工程師將具體化檢視實作為改善查詢回應時間的機制，而不需要變更查詢。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -108,22 +108,26 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
   
 ## <a name="remarks"></a>備註
 
-Azure 資料倉儲中的具體化檢視非常類似 SQL Server 中的索引檢視表。  它的限制幾乎與索引檢視表相同 (請參閱[建立索引檢視表](/sql/relational-databases/views/create-indexed-views)以取得詳資訊)，不過具體化檢視支援彙總函式。   具體化檢視有其他考量事項。  
- 
+Azure 資料倉儲中具體化檢視類似 SQL Server 中的索引檢視表。  它的限制幾乎與索引檢視表相同 (請參閱[建立索引檢視表](/sql/relational-databases/views/create-indexed-views)以取得詳資訊)，不過具體化檢視支援彙總函式。   
+
 只有具體化檢視才支援 CLUSTERED COLUMNSTORE INDEX。 
 
 具體化檢視無法參考其他檢視。  
- 
-具體化檢視可在資料分割資料表上建立。  具體化檢視中參考的資料表上支援 SPLIT/MERGE 作業。  具體化檢視中參考的資料表上不支援 SWITCH。 若嘗試，使用者將會看到錯誤 `Msg 106104, Level 16, State 1, Line 9`
+
+您無法在具有動態資料遮罩 (DDM) 的資料表上建立具體化檢視，即使 DDM 資料行不是具體化檢視的一部分亦是如此。  如果資料表資料行是使用中具體化檢視或已停用具體化檢視的一部分，則無法將 DDM 新增至此資料行。  
+
+無法在已啟用資料列層級安全性的資料表上建立具體化檢視。
+
+具體化檢視可在資料分割資料表上建立。  具體化檢視的基底資料表支援分割區 SPLIT/MERGE，不支援分割區 SWITCH。  
  
 具體化檢視中參考的資料表上不支援 ALTER TABLE SWITCH。 在使用 ALTER TABLE SWITCH 之前停用或捨棄具體化檢視。 在下列案例中，具體化檢視建立要求必須將新資料行新增到具體化檢視：
 
 |狀況|新資料行必須新增到具體化檢視|註解|  
 |-----------------|---------------|-----------------|
-|在具體化檢視定義的 SELECT 清單中，遺漏 COUNT_BIG ()| COUNT_BIG (*) |已由具體化檢視建立自動新增。  使用者不必採取任何動作。|
-|SUM(a) 是由使用者在具體化檢視定義的 SELECT 清單中指定的，而且 ‘a’ 是可為 Null 的運算式 |COUNT_BIG (a) |使用者必須手動在具體化檢視定義中新增運算式 ‘a’。|
-|AVG(a) 是由使用者在 ‘a’ 是運算式之具體化檢視定義的 SELECT 清單中指定的。|SUM(a)、COUNT_BIG(a)|已由具體化檢視建立自動新增。  使用者不必採取任何動作。|
-|STDEV(a) 是由使用者在 ‘a’ 是運算式之具體化檢視定義的 SELECT 清單中指定的。|SUM(a)、COUNT_BIG(a)、SUM(square(a))|已由具體化檢視建立自動新增。  使用者不必採取任何動作。 |
+|在具體化檢視定義的 SELECT 清單中，遺漏 COUNT_BIG()| COUNT_BIG (*) |已由具體化檢視建立自動新增。  使用者不必採取任何動作。|
+|SUM(a) 是由使用者在具體化檢視定義的 SELECT 清單中所指定，且 ‘a’ 是可為 Null 的運算式 |COUNT_BIG (a) |使用者必須手動在具體化檢視定義中新增運算式 ‘a’。|
+|AVG(a) 是由使用者在具體化檢視定義的 SELECT 清單中所指定，其中 ‘a’ 是運算式。|SUM(a)、COUNT_BIG(a)|已由具體化檢視建立自動新增。  使用者不必採取任何動作。|
+|STDEV(a) 是由使用者在具體化檢視定義的 SELECT 清單中所指定，其中 ‘a’ 是運算式。|SUM(a)、COUNT_BIG(a)、SUM(square(a))|已由具體化檢視建立自動新增。  使用者不必採取任何動作。 |
 | | | |
 
 一旦建立，具體化檢視在 SQL Server Management Studio 內 Azure SQL 資料倉儲執行個體的檢視資料夾下就是可見的。

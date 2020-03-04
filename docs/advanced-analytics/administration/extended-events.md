@@ -3,18 +3,18 @@ title: 使用擴充事件監視指令碼
 description: 了解如何使用擴充事件來監視與 SQL Server 機器學習服務、SQL Server Launchpad 和 Python 或 R 作業外部指令碼相關的操作及針對其進行疑難排解。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2019
+ms.date: 02/28/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 272e92bed10261b5701e2dcb4d35092ad11d59c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: fe8601801a92b28022a83b54ea06ec5836c6c013
+ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73727733"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78200979"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>使用 SQL Server 機器學習服務中的擴充事件來監視 Python 與 R 指令碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,13 +87,13 @@ SQL Server 機器學習服務會啟動一些在 SQL Server 處理序外執行的
   
 + **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
-    若要擷取與 Launchpad 相關的事件，請將 *.config* 檔案放在 SQL Server 執行個體的 Binn 目錄中。 在預設的安裝中，這會是：
+    若要擷取與 Launchpad 相關的事件，請將 *.xml* 檔案放在 SQL Server 執行個體的 Binn 目錄中。 在預設的安裝中，這會是：
 
     第 1 課：建立 Windows Azure 儲存體物件`C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`。  
   
 + **BXLServer** 是支援 SQL 擴充性搭配外部指令碼語言 (例如 R 或 Python) 的附屬處理序。 會針對每個外部語言執行個體啟動個別的 BxlServer 執行個體。
   
-    若要擷取與 BXLServer 相關的事件，請將 *.config* 檔案放在 R 或 Python 安裝目錄中。 在預設的安裝中，這會是：
+    若要擷取與 BXLServer 相關的事件，請將 *.xml* 檔案放在 R 或 Python 安裝目錄中。 在預設的安裝中，這會是：
      
     **R：** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`。  
 
@@ -145,7 +145,7 @@ SQL Server 機器學習服務會啟動一些在 SQL Server 處理序外執行的
 </event_sessions>  
 ```
 
-+ 將 *.config* 檔案放在 SQL Server 執行個體的 Binn 目錄中。
++ 將 *.xml* 檔案放在 SQL Server 執行個體的 Binn 目錄中。
 + 此檔案必須命名為 `Launchpad.xevents.xml`。
 
 ### <a name="example-capturing-bxlserver-events"></a>範例：擷取 BXLServer 事件  
@@ -175,7 +175,7 @@ SQL Server 機器學習服務會啟動一些在 SQL Server 處理序外執行的
 </event_sessions>  
 ```
 
-+ 將 *.config* 檔案放在 BXLServer 可執行檔所在的相同目錄中。
++ 將 *.xml* 檔案放在 BXLServer 可執行檔所在的相同目錄中。
 + 此檔案必須命名為 `bxlserver.xevents.xml`。
 
 ## <a name="next-steps"></a>後續步驟

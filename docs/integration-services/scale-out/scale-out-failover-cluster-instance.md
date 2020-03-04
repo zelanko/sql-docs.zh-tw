@@ -1,5 +1,5 @@
 ---
-title: SQL Server Integration Services (SSIS) Scale Out 透過 SQL Server 容錯移轉叢集執行個體支援高可用性 | Microsoft Docs
+title: Scale Out 透過 SQL Server 容錯移轉叢集執行個體支援高可用性 | Microsoft Docs
 description: 本文描述如何使用 SQL Server 容錯移轉叢集執行個體設定 SSIS Scale Out 的高可用性
 ms.custom: performance
 ms.date: 04/10/2018
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 5c4d5cc303d297a21b730abc30e10b85c65cc3d2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ba171a1ec1082bbcedd77bd5c7bb7a666efd3d04
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68811205"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903795"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Scale Out 透過 SQL Server 容錯移轉叢集執行個體支援高可用性
 

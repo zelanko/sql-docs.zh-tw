@@ -24,12 +24,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b88680cb965ff44384d54b09e0c7244a074bd0db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8baf9a3ab87f53bf1e193f680e5977dc9631c4b3
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75252690"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608481"
 ---
 # <a name="alerts"></a>警示
 
@@ -104,6 +104,12 @@ ms.locfileid: "75252690"
   
     > [!NOTE]  
     > 效能資料是定期取樣的，因此在到達臨界值與發出效能警示之間可能會有一點延遲 (幾秒鐘)。  
+  
+    > [!NOTE]  
+    > 儲存伺服器名稱的事件記錄變數限制為 32 個字元。 因此，如果主機名稱和執行個體名稱的組合大小大於 32 個字元，您可能會收到下列錯誤：
+    
+    警告，[466] 在產生效能計數器警示時，無法複製伺服器名稱 LONGNAMESQLSERV\LONGINSTANCENAME。
+  
   
 ## <a name="selecting-a-wmi-event"></a>選取 WMI 事件  
 您可以指定一個為回應特定 WMI 事件而產生的警示。 若要選取 WMI 事件，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 [一般]  頁面上定義 [新增警示]  或 [警示屬性]  對話方塊中的下列項目：  

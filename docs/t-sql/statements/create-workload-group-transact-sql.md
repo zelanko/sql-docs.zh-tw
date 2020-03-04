@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: ca80b2f95ee049d763d22f35e4ff6d35e344a8c0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: b217787d0cba0a1d62ab8393ef7fac76d7665bb0
+ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75956504"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77568061"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -68,9 +68,11 @@ CREATE WORKLOAD GROUP group_name
 
 ## <a name="arguments"></a>引數
 
-*group_name* 是工作負載群組的使用者定義名稱。 *group_name* 是英數字元，最多可有 128 個字元，而且在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體內必須是唯一的，並須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。
+*group_name*</br>
+這是工作負載群組的使用者定義名稱。 *group_name* 是英數字元，最多可有 128 個字元，而且在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體內必須是唯一的，並須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。
 
-IMPORTANCE = { LOW | **MEDIUM** | HIGH } 指定要求在工作負載群組中的相對重要性。 下列任一個為其重要性，其中 MEDIUM 為預設值：
+IMPORTANCE = { LOW | **MEDIUM** | HIGH }</br>
+指定要求在工作負載群組中的相對重要性。 下列任一個為其重要性，其中 MEDIUM 為預設值：
 
 - LOW
 - MEDIUM (預設值)
@@ -81,9 +83,10 @@ IMPORTANCE = { LOW | **MEDIUM** | HIGH } 指定要求在工作負載群組中的
 
 IMPORTANCE 的資源集區範圍為本機；相同資源集區內部不同重要性的工作負載群組會彼此影響，但不會影響另一個資源集區中的工作負載群組。
 
-REQUEST_MAX_MEMORY_GRANT_PERCENT = *value* 指定單一要求可由集區中獲取的記憶體最大數量。 *value* 是相對於 MAX_MEMORY_PERCENT 所指定的資源集區大小的百分比。
+REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*</br>
+指定單一要求可由集區中獲取的記憶體最大數量。 *value* 是相對於 MAX_MEMORY_PERCENT 所指定的資源集區大小的百分比。
 
-*value* 是最高到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 的整數、從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始的浮點數。 預設值為 25。 允許的 *value* 範圍為 1 至 100。
+*value* 在 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 之前是整數，從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始以及在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 受控執行個體中則為浮點數。 預設值為 25。 允許的 *value* 範圍為 1 至 100。
 
 > [!IMPORTANT]  
 > 指定的數量僅參考查詢執行授與記憶體。
@@ -100,22 +103,26 @@ REQUEST_MAX_MEMORY_GRANT_PERCENT = *value* 指定單一要求可由集區中獲�
 >
 > 請注意，如果伺服器沒有足夠的實體記憶體，這兩種情況都會受限於逾時錯誤 8645。
 
-REQUEST_MAX_CPU_TIME_SEC = *value* 指定要求可以使用的最大 CPU 時間量 (以秒為單位)。 *value* 必須是 0 或正整數。 *value* 的預設設定為 0，這代表沒有限制。
+REQUEST_MAX_CPU_TIME_SEC = *value*</br>
+指定要求可以使用的最大 CPU 時間量 (以秒為單位)。 *value* 必須是 0 或正整數。 *value* 的預設設定為 0，這代表沒有限制。
 
 > [!NOTE]
 > 根據預設，Resource Governor 不會在超過最大時間時，阻止要求繼續執行。 不過，系統將會產生某個事件。 如需詳細資訊，請參閱[超過 CPU 閾值事件類別](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。
 > [!IMPORTANT]
 > 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始，並使用[追蹤旗標 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，Resource Governor 將在超過時間上限時中止要求。
 
-REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *value* 指定查詢能夠等待記憶體授權 (工作緩衝區記憶體) 變成可用的最大時間 (以秒為單位)。 *value* 必須是 0 或正整數。 *value* 的預設設定 0 會根據查詢成本使用內部計算來判斷最大時間。
+REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *value*</br>
+指定查詢能夠等待記憶體授權 (工作緩衝區記憶體) 變成可用的最大時間 (以秒為單位)。 *value* 必須是 0 或正整數。 *value* 的預設設定 0 會根據查詢成本使用內部計算來判斷最大時間。
 
 > [!NOTE]
 > 到達記憶體授權的逾時值時，查詢不一定會失敗。 只有當有太多並行的查詢正在執行時，查詢才會失敗。 否則，查詢可能只會得到最小的記憶體授權，導致查詢效能降低。
 
-MAX_DOP = *value*，為平行查詢執行指定**平行處理原則的最大程度 (MAXDOP)** 。 *value* 必須是 0 或正整數。 *value* 允許範圍是從 0 至 64。 *value* 的預設設定 0 會使用全域設定。 MAX_DOP 會以下列方式處理：
+MAX_DOP = *value*</br>
+為平行查詢執行指定**平行處理原則的最大程度 (MAXDOP)** 。 *value* 必須是 0 或正整數。 *value* 允許範圍是從 0 至 64。 *value* 的預設設定 0 會使用全域設定。 MAX_DOP 會以下列方式處理：
 
 > [!NOTE]
 > 工作負載群組 MAX_DOP 會覆寫[平行處理原則的最大程度伺服器組態](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)與 **MAXDOP** [資料庫範圍組態](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。
+
 > [!TIP]
 > 若要在查詢層級完成此操作，請使用 **MAXDOP** [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)。 將平行處理原則的最大程度設定為查詢提示非常有效，只要它不預期工作負載群組 MAX_DOP。 如果 MAXDOP 查詢提示值超過使用 Resource Governor 所設定的值，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 就會使用 Resource Governor `MAX_DOP` 值。 MAXDOP [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)一律會覆寫[平行處理原則的最大程度伺服器組態](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
 >
@@ -123,16 +130,19 @@ MAX_DOP = *value*，為平行查詢執行指定**平行處理原則的最大程�
 >
 > 若要在伺服器層級完成此操作，請使用**平行處理原則的最大程度 (MAXDOP)** [伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
 
-GROUP_MAX_REQUESTS = *value* 指定在工作負載群組中可允許執行的最大同時要求數。 *value* 必須為 0 或正整數。 *value* 的預設值為 0，會允許無限制的要求。 達到最大並行要求時，該群組中的使用者可以登入，但是會處於等候狀態，直到並行要求低於指定的值為止。
+GROUP_MAX_REQUESTS = *value*</br>
+指定在工作負載群組中可允許執行的最大同時要求數。 *value* 必須為 0 或正整數。 *value* 的預設值為 0，會允許無限制的要求。 達到最大並行要求時，該群組中的使用者可以登入，但是會處於等候狀態，直到並行要求低於指定的值為止。
 
-USING { *pool_name* |  **"default"** } 建立工作負載群組與 *pool_name* 識別之使用者定義資源集區的關聯。 這樣會將工作負載群組實際放到資源集區中。 如果未提供 *pool_name* 或未使用 USING 引數，工作負載群組會放入預先定義的 Resource Governor 預設集區。
+USING { *pool_name* |  **"default"** }</br>
+將工作負載群組與 *pool_name* 所識別之使用者定義資源集區產生關聯。 這樣會將工作負載群組實際放到資源集區中。 如果未提供 *pool_name* 或未使用 USING 引數，工作負載群組會放入預先定義的 Resource Governor 預設集區。
 
 "default" 是保留字，而且當搭配 USING 使用時，必須加上引號 ("") 或方括號 ([])。
 
 > [!NOTE]
 > 預先定義的工作負載群組和資源集區都會使用小寫名稱，例如 "default"。 如果是使用區分大小寫之定序的伺服器，則應該將此列入考量。 具有不區分大小寫之定序 (如 SQL_Latin1_General_CP1_CI_AS) 的伺服器會將 "default" 和 "Default" 視為相同。
 
-EXTERNAL external_pool_name | "default" **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本)。
+EXTERNAL external_pool_name | "default"</br>
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起)。
 
 工作負載群組可指定外部資源集區。 您可以定義工作負載群組，並與兩個集區產生關聯：
 
@@ -161,7 +171,11 @@ EXTERNAL external_pool_name | "default" **適用於**：[!INCLUDE[ssNoVersion](.
 
 ```sql
 CREATE WORKLOAD GROUP newReports
-    USING "default" ;
+WITH
+    (REQUEST_MAX_MEMORY_GRANT_PERCENT = 2.5
+      , REQUEST_MAX_CPU_TIME_SEC = 100
+      , MAX_DOP = 4)    
+USING "default" ;
 GO
 ```
 
@@ -191,14 +205,15 @@ GO
 
 ```
 CREATE WORKLOAD GROUP group_name
- WITH
- (        MIN_PERCENTAGE_RESOURCE = value
-      ,   CAP_PERCENTAGE_RESOURCE = value
-      ,   REQUEST_MIN_RESOURCE_GRANT_PERCENT = value
+[ WITH
+ (  [ MIN_PERCENTAGE_RESOURCE = value ]
+  [ [ , ] CAP_PERCENTAGE_RESOURCE = value ]
+  [ [ , ] REQUEST_MIN_RESOURCE_GRANT_PERCENT = value ]
   [ [ , ] REQUEST_MAX_RESOURCE_GRANT_PERCENT = value ]
-  [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]
+  [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } ]
   [ [ , ] QUERY_EXECUTION_TIMEOUT_SEC = value ] )
   [ ; ]
+]
 ```
 
 *group_name*</br>
@@ -216,10 +231,11 @@ CREATE WORKLOAD GROUP group_name
 例如：
 
 ```sql
-CREATE WORKLOAD GROUP wgSample WITH
-( MIN_PERCENTAGE_RESOURCE = 26              -- integer value
- ,REQUEST_MIN_RESOURCE_GRANT_PERCENT = 3.25 -- factor of 26 (guaranteed a minimum of 8 concurrency)
- ,CAP_PERCENTAGE_RESOURCE = 100 )
+CREATE WORKLOAD GROUP wgSample 
+WITH
+  ( MIN_PERCENTAGE_RESOURCE = 26                -- integer value
+    , REQUEST_MIN_RESOURCE_GRANT_PERCENT = 3.25 -- factor of 26 (guaranteed a minimum of 8 concurrency)
+    , CAP_PERCENTAGE_RESOURCE = 100 )
 ```
 
 請考慮用於資源類別的值，作為 request_min_resource_grant_percent 的指導方針。  下表包含 Gen2 的資源配置。
@@ -232,10 +248,10 @@ CREATE WORKLOAD GROUP wgSample WITH
 |Xlargerc|70%|
 |||
 
-*REQUEST_MAX_RESOURCE_GRANT_PERCENT* = 值</br>
+*REQUEST_MAX_RESOURCE_GRANT_PERCENT* = 值</br>         
 設定每個要求配置的資源數量上限。 *value* 為選擇性參數，預設值等於 request_min_resource_grant_percent。 *value* 必須大於或等於 request_min_resource_grant_percent。 當 equest_max_resource_grant_percent 的值大於 request_min_resource_grant_percent 而且有可用的系統資源時，會將其他資源配置給要求。
 
-*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>
+*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>        
 指定要求在工作負載群組中的相對重要性。 下列任一個為其重要性，其中 NORMAL 為預設值：
 
 - LOW
@@ -246,18 +262,18 @@ CREATE WORKLOAD GROUP wgSample WITH
 
 在工作負載群組中設定的重要性，是工作負載群組中所有要求的預設重要性。 使用者也可以在分類器層級設定重要性，該重要性可以覆寫工作負載群組的重要性設定。 這樣可以區分工作負載群組內要求的重要性，以便更快速地存取非保留的資源。 當跨工作負載群組的 min_percentage_resource 總和小於 100 時，會根據重要性來指派非保留的資源。
 
-*QUERY_EXECUTION_TIMEOUT_SEC* = 值</br>
+*QUERY_EXECUTION_TIMEOUT_SEC* = 值</br>     
 指定查詢在取消之前可以執行的最長時間 (以秒為單位)。 *value* 必須是 0 或正整數。 值的預設設定為 0，這代表查詢永不逾時。QUERY_EXECUTION_TIMEOUT_SEC 會在查詢處於執行中狀態時計算，而非在查詢排入佇列時。
 
 ## <a name="remarks"></a>備註
 
 系統會針對回溯相容性自動建立對應至資源類別的工作負載群組。 這些系統定義的工作負載群組無法卸除。 可以建立額外 8 位使用者定義的工作負載群組。
 
-如果工作負載群組是在 min_percentage_resource 大於零的情況下建立，`CREATE WORKLOAD GROUP` 陳述式將會排入佇列，直到有足夠的資源可建立工作負載群組為止。
+如果工作負載群組是在 `min_percentage_resource` 大於零的情況下建立，則 `CREATE WORKLOAD GROUP` 陳述式將會排入佇列，直到有足夠的資源可建立工作負載群組為止。
 
 ## <a name="effective-values"></a>有效值
 
-min_percentage_resource、cap_percentage_resource、request_min_resource_grant_percent 和 request_max_resource_grant_percent 參數具有在目前服務層級和其他工作負載群組的內容中調整的有效值。
+`min_percentage_resource`、`cap_percentage_resource`、`request_min_resource_grant_percent` 和 `request_max_resource_grant_percent` 參數具有在目前服務層級內容及其他工作負載群組組態中調整的有效值。
 
 每個服務層級支援的並行與使用資源類定義每個查詢的資源授與時相同，因此，request_min_resource_grant_percent 的支援值取決於執行個體所設定的服務層級。 在最低服務層級 DW100c，每個要求需要最少 25% 的資源。 在 DW100c，已設定之工作負載群組的有效 request_min_resource_grant_percent 可以是 25% 以上。 請參閱下表，以取得如何衍生有效值的進一步詳細資料。
 
@@ -281,15 +297,15 @@ min_percentage_resource、cap_percentage_resource、request_min_resource_grant_p
 |DW30000c|0.75%|128|
 ||||
 
-同樣地，request_min_resource_grant_percent、min_percentage_resource 必須大於或等於有效的 request_min_resource_grant_percent。 min_percentage_resource 設定為小於有效 min_percentage_resource 的工作負載群組，其值在執行階段會調整為零。 發生這種情況時，針對 min_percentage_resource 設定的資源可在所有工作負載群組間共用。 例如，min_percentage_resource 為 10% 且在 DW1000c 上執行的工作負載群組 wgAdHoc，會有 10% 的有效 min_percentage_resource (3.25% 是 DW1000c 所支援的最小值)。 DW100c 的 wgAdhoc 的有效 min_percentage_resource 為 0%。 針對 wgAdhoc 設定的 10% 會在所有工作負載群組之間共用。
+同樣地，request_min_resource_grant_percent、min_percentage_resource 必須大於或等於有效的 request_min_resource_grant_percent。 `min_percentage_resource` 設定為小於有效 `min_percentage_resource` 的工作負載群組，其值在執行階段會調整為零。 發生這種情況時，針對 `min_percentage_resource` 設定的資源可在所有工作負載群組間共用。 例如，`min_percentage_resource` 為 10% 且在 DW1000c 上執行的工作負載群組 `wgAdHoc`，會有 10% 的有效 `min_percentage_resource` (3.25% 是 DW1000c 所支援的最小值)。 `wgAdhoc` 在 DW100c 上的有效 min_percentage_resource 為 0%。 針對 `wgAdhoc` 設定的 10% 會在所有工作負載群組之間共用。
 
-cap_percentage_resource也具有有效值。 如果工作負載群組 wgAdhoc 是以 100% cap_percentage_resource 設定，而另一個工作負載群組 wgDashboards 是以 25% min_percentage_resource 建立，則 wgAdhoc 的有效 cap_percentage_resource 會變成 75%。
+`cap_percentage_resource` 也具有有效值。 如果工作負載群組 `wgAdhoc` 設定為 100% 的 `cap_percentage_resource`，而另一個工作負載群組 `wgDashboards` 是以 25% 的 `min_percentage_resource` 所建立，則 `wgAdhoc` 的有效 `cap_percentage_resource` 會變成 75%。
 
 若要了解工作負載群組的執行階段值，最簡單的方式就是查詢系統檢視 [sys.databases dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md)。
 
 ## <a name="permissions"></a>權限
 
-需要 CONTROL DATABASE 權限
+需要 `CONTROL DATABASE` 權限
 
 ## <a name="see-also"></a>另請參閱
 

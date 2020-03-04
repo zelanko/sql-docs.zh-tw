@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server 的 [匯入及匯出精靈] 連線到資料來源 | Microsoft Docs
+title: 連線到資料來源 (SQL Server 的匯入及匯出精靈) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/15/2017
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd76d5aa66567dde3c5dc7b5ce4c2c6d787d2136
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 4598eba24c44bddb66ef97120d4c1decc9ca7d63
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71296325"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903933"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 的 [匯入及匯出精靈] 連線到資料來源
 

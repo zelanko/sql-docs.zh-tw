@@ -1,5 +1,5 @@
 ---
-title: SQL Server Integration Services (SSIS) Scale Out 高可用性支援 | Microsoft Docs
+title: Scale Out 對高可用性的支援 | Microsoft Docs
 description: 本文描述如何設定 SSIS Scale Out 的高可用性
 ms.custom: performance
 ms.date: 05/23/2018
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 36f4dce1559df59a61ee25d26b76d0ddd4dda3c1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d3dadf7955dcb61b5d652a1190280926af09c4ae
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "69028755"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903675"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性的 Scale Out 支援
 

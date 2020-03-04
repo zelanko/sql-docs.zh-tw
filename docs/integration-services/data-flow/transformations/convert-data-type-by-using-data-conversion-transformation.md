@@ -1,5 +1,5 @@
 ---
-title: 使用資料轉換轉換資料類型 | Microsoft Docs
+title: 使用資料轉換來轉換資料類型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2587c08c3ebf919a1665989863dc46e23a0ae690
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9d25c3d7cf2c58af5b7daceeadb1daf3a9122a6d
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71297985"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903898"
 ---
-# <a name="convert-data-type-by-using-data-conversion-transformation"></a>使用資料轉換轉換資料類型
+# <a name="convert-data-type-with-data-conversion-transformation"></a>使用資料轉換來轉換資料類型
 
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

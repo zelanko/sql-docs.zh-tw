@@ -14,12 +14,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c705c60504dd6de0b143fd129d6660db9457b48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9b59f204fafd7e1b912eea2673783290f67fa786
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71127367"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608518"
 ---
 # <a name="tables"></a>資料表
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "71127367"
 
 #### <a name="ctp23"></a> 使用多個範圍的暫存資料表減少重新編譯工作負載
 
-[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] 使用多個範圍的暫存資料表，減少對工作負載的重新編譯。 在此功能推出之前，使用資料操作語言 (DML) 陳述式 (`SELECT`、`INSERT`、`UPDATE`、`DELETE`) 參考暫存資料表時，若暫存資料表是由外部範圍批次建立的，便會導致在每一次執行陳述式時重新編譯 DML 陳述式。 透過這項改善，SQL Server 可執行額外的輕量檢查，避免不必要的重新編譯：
+[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] 在所有資料庫相容性層級下，使用多個範圍的暫存資料表來減少重新編譯工作負載。 也會針對所有部署模型，在 Azure SQL Database 的資料庫相容性層級 150 下啟用這項功能。  在此功能推出之前，使用資料操作語言 (DML) 陳述式 (`SELECT`、`INSERT`、`UPDATE`、`DELETE`) 參考暫存資料表時，若暫存資料表是由外部範圍批次建立的，便會導致在每一次執行陳述式時重新編譯 DML 陳述式。 透過這項改善，SQL Server 可執行額外的輕量檢查，避免不必要的重新編譯：
 
 - 檢查在編譯時期用於建立暫存資料表之外部範圍模組是否與用於連續執行的模組相同。 
 - 追蹤任何在初始編譯時進行的資料定義語言 (DDL) 變更，並將其與連續執行的 DDL 作業比較。

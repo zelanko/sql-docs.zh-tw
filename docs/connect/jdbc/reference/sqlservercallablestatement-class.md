@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 30710a63-c05d-47d9-9cf9-c087a1c76373
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 637b56c7f64d35501be0efef30e8f2a055b5be4b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f47c034a720be5409d83868a7a61dd229ab70e24
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67971910"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600134"
 ---
 # <a name="sqlservercallablestatement-class"></a>SQLServerCallableStatement 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  讓您指定要呼叫的預存程序名稱，連同輸入和輸出參數。 這個類別也會提供擷取傳回狀態值的能力，其方式是使用 ? = call( ?, ..) 語法。  
+  讓您指定要呼叫的預存程序名稱，連同輸入和輸出參數。 這個類別也會提供擷取傳回狀態值的能力，其方式是使用 `? = call( ?, ..)` 語法。  
   
  **套件：** com.microsoft.sqlserver.jdbc  
   

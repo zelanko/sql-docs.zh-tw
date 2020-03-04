@@ -1,10 +1,8 @@
 ---
 title: Analysis Services 處理工作 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 92e0656fd3625f2b93a1e097d2f81291056d01cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e95fd78657a043683d04fa86fd66edd345e2f483
+ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71298462"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634787"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 處理工作
 
@@ -119,7 +117,8 @@ ms.locfileid: "71298462"
  **相關主題：** [Analysis Services 連線管理員](../../integration-services/connection-manager/analysis-services-connection-manager.md)、[加入 Analysis Services 連線管理員對話方塊 UI 參考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **物件清單**  
- |屬性|描述|  
+ 
+|屬性|描述|  
 |--------------|-----------------|  
 |**Object Name**|列出指定的物件名稱。|  
 |**型別**|列出指定的物件類型。|  
@@ -138,7 +137,8 @@ ms.locfileid: "71298462"
  **相關主題：** [影響分析對話方塊 &#40;Analysis Services - 多維度資料&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **批次設定摘要**  
- |屬性|描述|  
+ 
+|屬性|描述|  
 |--------------|-----------------|  
 |**處理順序**|指定循序地或在批次中處理物件；如果使用平行處理，請指定要並行處理的物件數目。|  
 |**交易模式**|指定循序處理的交易模式。|  
@@ -150,4 +150,3 @@ ms.locfileid: "71298462"
  變更維度索引鍵中的處理選項和錯誤處理。  
   
  **相關主題：** [變更設定對話方塊 &#40;Analysis Services - 多維度資料&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
-  

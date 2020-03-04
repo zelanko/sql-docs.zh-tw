@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ece6ef614e336b2478779107a4e4f37d2903841a
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "70846743"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705863"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,8 @@ replmerg [-?]
 [-SubscriberSecurityMode [0|1]]  
 [-SubscriberType [0|1|2|3|4|5|6|7|8|9]]  
 [-SubscriptionType [0|1|2]]  
-[-SyncToAlternate [0|1]  
+[-SyncToAlternate [0|1]]  
+[-T [101|102]]  
 [-UploadGenerationsPerBatch upload_generations_per_batch]  
 [-UploadReadChangesPerBatch upload_read_changes_per_batch]  
 [-UploadWriteChangesPerBatch upload_write_changes_per_batch]  
@@ -358,7 +359,10 @@ replmerg [-?]
   
  **-SyncToAlternate** [ **0|1**]  
  指定合併代理程式是否會在訂閱者與替代發行者之間進行同步處理。 值為 **1** 表示它是替代發行者。 預設為 **0**。  
-  
+ 
+ **-T** [**101|102**]  
+ 為合併代理程式啟用額外功能的追蹤旗標。 值 **101** 會啟用額外的詳細資訊記錄資訊，以協助判斷合併式複寫同步處理程序的每個步驟所花費時間。 值 **102** 會寫入與追蹤旗標 **101** 相同的統計資料，但改為寫入到 <Distribution server>..msmerge_history 資料表。 當您使用追蹤旗標 101 時，請使用 `-output` 和 `-outputverboselevel` 參數來啟用合併代理程式記錄。  例如，將下列參數新增至合併代理程式，然後重新啟動代理程式：`-T 101, -output, -outputverboselevel`。 
+ 
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  這是將變更從訂閱者上傳至發行者時，要在單一批次中處理的層代數目。 層代會定義為每個發行項的邏輯變更群組。 可靠通訊連結的預設值為 **100**。 不可靠通訊連結的預設值為 **1**。  
   
@@ -394,7 +398,12 @@ replmerg [-?]
   
  若要啟動合併代理程式，請從命令提示字元執行 **replmerg.exe** 。 如需詳細資訊，請參閱＜ [複寫代理程式可執行檔](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)＞。  
   
+ ### <a name="troubleshooting-merge-agent-performance"></a>針對合併代理程式效能進行疑難排解 
  在連續模式執行時，不會移除目前工作階段的合併代理程式記錄。 長時間執行的代理程式會在合併記錄資料表中產生可能會影響效能的大量項目。 若要解決這個問題，請切換到排程模式或是繼續使用連續模式，但是要建立專門作業來定期重新啟動合併代理程式，或是減少記錄層級的詳細資訊來減少資料列數，這樣會降低效能影響。  
+ 
+  在某些情況下，複寫合併代理程式可能會需要很長的時間來複寫變更。 若要判斷合併式複寫同步處理程序的哪一個步驟需要花費最多時間，請使用追蹤旗標 101 搭配合併代理程式記錄。 若要這樣做，請針對合併代理程式參數使用下列參數，然後重新啟動代理程式：   <br/>-T 101   <br/>-output   <br/>-outputverboselevel
+
+此外，如果您必須將統計資料寫入 <Distribution server>..msmerge_history 資料表中，請使用追蹤旗標 -T 102。
   
 ## <a name="see-also"></a>另請參閱  
  [複寫代理程式管理](../../../relational-databases/replication/agents/replication-agent-administration.md)  

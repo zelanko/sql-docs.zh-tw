@@ -10,17 +10,16 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/28/2019
-ms.openlocfilehash: df1e49af0378b6af4a3d82b5a5ec2a4293be5e35
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: b2651dd2d95f0fb8b5aba37b1d755bc26a781dde
+ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74957082"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575461"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>如何在 Azure Data Studio 中使用筆記本
 
 此文章說明如何在 Azure Data Studio 中啟動 Notebook 體驗，以及如何開始撰寫您自己的筆記本。 它也會說明如何使用不同的核心來撰寫筆記本。
-
 
 ## <a name="connect-to-sql-server"></a>連接至 SQL Server
 
@@ -37,16 +36,16 @@ ms.locfileid: "74957082"
 
     ![image3](media/sql-notebooks/file-new-notebook.png)
 
-3. 以滑鼠右鍵按一下 **SQL Server** 連線，然後啟動 [新增筆記本]  。 
+2. 以滑鼠右鍵按一下 **SQL Server** 連線，然後啟動 [新增筆記本]  。 
     ![image3](media/sql-notebooks/server-new-notebook.png)
 
-4. 開啟命令選擇區 (**Ctrl+Shift+P**) 然後輸入**新增筆記本**。 系統會隨即開啟名為 `Notebook-1.ipynb` 的新檔案。
+3. 開啟命令選擇區 (**Ctrl+Shift+P**) 然後輸入**新增筆記本**。 系統會隨即開啟名為 `Notebook-1.ipynb` 的新檔案。
 
 ## <a name="supported-kernels-and-attach-to-context"></a>支援的核心及附加至內容
 
-Azure Data Studio 中的筆記本安裝能原生支援 SQL 核心。 如果您是 SQL 開發人員，而且想要使用 Notebooks，這便是您應選擇的核心。 
+Azure Data Studio 中的筆記本安裝能原生支援 SQL 核心。 如果您是 SQL 開發人員，且想要使用筆記本，這便是您應選擇的核心。
 
-SQL 核心也可用於連線 PostgreSQL 伺服器執行個體。 如果您是PostgreSQL開發人員並且想要連線到 PostgreSQL 伺服器，請在 Azure Data Stud 延伸模組市集中下載 [**PostgreSQL 延伸模組**](postgres-extension.md)。
+SQL 核心也可用於連線 PostgreSQL 伺服器執行個體。 如果您是 PostgreSQL 開發人員，且想要連線到 PostgreSQL 伺服器，請在 Azure Data Studio 延伸模組市集中下載 [**PostgreSQL 延伸模組**](postgres-extension.md)。
 
 ![image7](media/sql-notebooks/sql-kernel-dropdown.png)
 
@@ -74,11 +73,11 @@ SQL 核心也可用於連線 PostgreSQL 伺服器執行個體。 如果您是Pos
 
 ### <a name="configure-python-for-notebooks"></a>設定適用於 Notebooks 的 Python
 
-當您從核心下拉式清單中選取 [SQL] 以外的任何其他核心時，系統會提示您**設定適用於 Notebooks 的 Python**。 筆記本相依性會被安裝在指定的位置，但是您可以決定是否要設定安裝位置。 此安裝可能需要一些時間，而且在安裝完成之前，建議您不要關閉應用程式。 安裝完成之後，您就可以開始以支援的語言撰寫程式碼。
+當您從核心下拉式清單中選取 [SQL] 以外的任何其他核心時，系統會提示您**設定適用於 Notebooks 的 Python**。 筆記本相依性會被安裝在指定的位置，但是您可以決定是否要設定安裝位置。 此安裝可能需要一些時間，且在安裝完成之前，建議您不要關閉應用程式。 安裝完成之後，您就可以開始以支援的語言撰寫程式碼。
 
 ![image21](media/sql-notebooks/configure-python.png)
 
-安裝成功後，您將能在 [工作歷程記錄] 中找到通知，以及在 [輸出終端機] 中找到 Jupyter 後端伺服器執行所在的位置。
+安裝成功後，您將能在 [工作記錄] 中找到通知，以及在 [輸出終端機] 中找到 Jupyter 後端伺服器執行所在的位置。
 
 ![image22](media/sql-notebooks/jupyter-backend.png)
 
@@ -89,11 +88,11 @@ SQL 核心也可用於連線 PostgreSQL 伺服器執行個體。 如果您是Pos
 |Spark 核心|使用來自叢集的 Spark 計算來撰寫 Scala 和 R 程式碼。
 |Python 核心|撰寫 Python 程式碼以進行本機開發。
 
-`Attach to` 能提供要附加之核心的內容。 如果您是使用 SQL 核心，則可以 `Attach to` 任何 SQL Server 執行個體。
+`Attach to` 能提供要附加之核心的內容。 如果您正在使用 SQL 核心，則可以 `Attach to` 任何 SQL Server 執行個體。
 
-如果您是使用 Python3 核心，則 `Attach to` 將會是 `localhost`。 您可以使用此核心來進行本機 Python 開發。
+如果您正在使用 Python3 核心，則 `Attach to` 將會是 `localhost`。 您可以使用此核心來進行本機 Python 開發。
 
-當您連線到 SQL Server 2019 巨量資料叢集時，預設的 `Attach to` 將會是叢集的端點，並可讓您使用叢集的 Spark 計算來提交 Python、Scala 和 R 程式碼。
+當您連線到 SQL Server 2019 巨量資料叢集時，預設的 `Attach to` 將會是叢集的端點，可讓您使用叢集的 Spark 計算來提交 Python、Scala 和 R 程式碼。
 
 ### <a name="code-cells-and-markdown-cells"></a>程式碼儲存格和 Markdown 儲存格
 
@@ -103,11 +102,11 @@ SQL 核心也可用於連線 PostgreSQL 伺服器執行個體。 如果您是Pos
 
 ![image8](media/sql-notebooks/notebook-toolbar.png)
 
-儲存格會變更為編輯模式；現在當您輸入 Markdown 時，您會同時看到預覽
+資料格會變更為編輯模式；現在當您鍵入 Markdown 時，即可同時查看預覽
 
 ![image9](media/sql-notebooks/notebook-markdown-cell.png)
 
-按一下文字儲存格以外的地方，將會顯示 Markdown 的文字。
+按一下文字資料格以外的地方，將會顯示 Markdown 的文字。
 
 ![image10](media/sql-notebooks/notebook-markdown-preview.png)
 
@@ -115,9 +114,9 @@ SQL 核心也可用於連線 PostgreSQL 伺服器執行個體。 如果您是Pos
 
 在 Azure Data Studio 中開啟的 Notebooks 預設是 [受信任]  。
 
-如果您從某個其他來源開啟 Notebook，它會以 [不受信任]  模式開啟，然後您就可以將它設為 [受信任]  。
+如果您從某個其他來源開啟筆記本，該筆記本會以 [不受信任]  模式開啟，然後您就可以將其設為 [受信任]  。
 
-### <a name="save"></a>儲存 
+### <a name="save"></a>儲存
 
 您可以透過 **Ctrl+S** 儲存筆記本，或按一下 [檔案] 功能表中的 [儲存檔案]  、[另存新檔]  和 [儲存所有檔案]  命令，以及在命令選擇區中輸入 [File:  Save] 命令。
 
@@ -154,7 +153,8 @@ Spark 應用程式已啟動，並傳回下列輸出：
 ![image16](media/sql-notebooks/local-python.png)
 
 ## <a name="manage-packages"></a>管理套件
-我們針對本機 Python 開發最佳化的其中一個項目，就是提供安裝客戶案例所需之套件的能力。 根據預設，我們會包含像 `pandas`、`numpy` 等常見的套件，但如果您預期不會包含套件，請在 [筆記本] 儲存格中撰寫下列程式碼： 
+
+我們針對本機 Python 開發最佳化的其中一個項目，就是提供安裝客戶案例所需之套件的能力。 根據預設，我們會包含像 `pandas`、`numpy` 等常見的套件，但如果您預期不會包含套件，請在筆記本資料格中撰寫下列程式碼：
 
 ```python
 import <package-name>
@@ -166,17 +166,17 @@ import <package-name>
 
 ![image17](media/sql-notebooks/manage-packages.png)
 
-在此精靈中，您將能夠看到**已安裝**的套件。 您可以搜尋清單和每個套件相關聯的版本。 如果您需要**解除安裝**其中任一套件，您可以按一下其中一個套件，然後按一下 [解除安裝選取的套件]  選項。
+在此精靈中，您能夠看到**已安裝**的套件。 您可以搜尋清單和每個套件相關聯的版本。 如果您需要解除安裝這些套件的任何一項，您可以按一下其中一個套件，然後按一下 [解除安裝選取的套件]  選項。
 
-您也可以按一下 [新增套件]  來**搜尋**特定套件、選擇相關版本，然後按一下 [安裝]  。 根據預設，我們會選取搜尋套件的最新版本。 
+您也可以按一下 [新增]  套件來**搜尋**特定套件、選擇相關版本，然後按一下 [安裝]  。 根據預設，我們會選取搜尋套件的最新版本。
 
-安裝套件之後，您應該能夠進入 [筆記本] 儲存格，並輸入下列命令：
+安裝套件之後，您可以進入筆記本資料格，並鍵入下列命令：
 
 ```python
 import <package-name>
 ```
 
-如果您需要**解除安裝**這些套件中的任何一項，您可以按一下一或多個套件，然後按一下 [解除安裝選取的套件]  選項。
+如果您需要解除安裝這些套件的任何一項，您可以按一下一或多個套件，然後按一下 [解除安裝選取的套件]  選項。
 
 ## <a name="next-steps"></a>後續步驟
 

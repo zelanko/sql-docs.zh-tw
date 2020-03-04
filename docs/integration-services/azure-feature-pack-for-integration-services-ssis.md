@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 563f984ed5aa401ae67572ad0f915698286f0aa4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c50eee13c4831bfb8d3830da6dbd20b9efc64298
+ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75329950"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77568081"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack for Integration Services (SSIS)
 
@@ -191,8 +191,17 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
  您可以搭配 Azure Blob 列舉程式使用 Foreach 迴圈容器，來處理多個 Bob 檔案中的資料。
 
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
-  
+
 ## <a name="release-notes"></a>版本資訊
+
+### <a name="version-1170"></a>1\.17.0 版
+
+這是僅針對 SQL Server 2019 發行的 Hotfix 版本。
+
+#### <a name="bugfixes"></a>Bug 修正
+
+1. 在 Visual Studio 2019 中執行並以 SQL Server 2019 為目標時，彈性檔案工作/來源/目的地可能會失敗，並出現錯誤訊息 `Attempted to access an element as a type incompatible with the array.`
+1. 在 Visual Studio 2019 中執行並以 SQL Server 2019 為目標時，使用 ORC/Parquet 格式的彈性檔案來源/目的地可能會失敗，並出現錯誤訊息 `Microsoft.DataTransfer.Common.Shared.HybridDeliveryException: An unknown error occurred. JNI.JavaExceptionCheckException.`
 
 ### <a name="version-1160"></a>版本 1.16.0
 

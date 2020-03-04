@@ -1,5 +1,5 @@
 ---
-title: 第 6 課：在 SSIS 中搭配專案部署模型使用參數 | Microsoft Docs
+title: 第 6 課：搭配專案部署模型使用參數 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f6370319091d4326adbe2d11d1f92e19cd88695a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: afc1e7ceb6dca21bd562745fe7250500cc9c2033
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71282642"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903869"
 ---
 # <a name="lesson-6-use-parameters-with-the-project-deployment-model-in-ssis"></a>第 6 課：在 SSIS 中搭配專案部署模型使用參數
 
