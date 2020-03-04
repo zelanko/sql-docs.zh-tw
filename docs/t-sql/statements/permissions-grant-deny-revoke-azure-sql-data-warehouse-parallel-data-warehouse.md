@@ -81,7 +81,7 @@ REVOKE
  \<permission>[ **,** ...*n* ]  
  一或多個要授與、拒絕或撤銷的權限。  
   
- ON [ \<class_type> :: ] *securable***ON** 子句描述要作為授與、拒絕或撤銷權限時之執行對象的 securable 參數。  
+ ON [ \<class_type> :: ] *securable* **ON** 子句描述要作為授與、拒絕或撤銷權限時之執行對象的 securable 參數。  
   
  \<class_type> 安全性實體的類別類型。 這可以是 **LOGIN**、**DATABASE**、**OBJECT**、**SCHEMA**、**ROLE** 或 **USER**。 您也可以將權限授與 **SERVER**_class\_type_，但針對這些權限不需指定 **SERVER**。 當權限包含 **DATABASE** 一字 (例如 **ALTER ANY DATABASE**) 時，不需指定 **DATABASE**。 未指定任何 *class_type* 且權限類型未限制為伺服器或資料庫類別時，會假設類別為 **OBJECT**。  
   
