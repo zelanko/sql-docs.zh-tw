@@ -8520,8 +8520,6 @@
                 - name: 查詢與文字編輯器
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
-                    - name: Database Engine 查詢編輯器
-                      href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                     - name: XML 編輯器
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
                     - name: 查詢編輯器中的色彩編碼
@@ -9023,6 +9021,8 @@
               items:
                 - name: 伺服器連線的 F1 說明 (SSMS)
                   href: ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
+                - name: Database Engine 查詢編輯器
+                  href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                 - name: 連接到 Microsoft Azure 儲存體
                   href: ssms/f1-help/connect-to-microsoft-azure-storage.md
                 - name: 從 SQL Server Management Studio 連接到任何 SQL Server 元件
