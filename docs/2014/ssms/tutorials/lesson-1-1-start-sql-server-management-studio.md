@@ -10,12 +10,12 @@ ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd7fed6fff4ddd55ef56e4c5b342c56b6c2f462f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: af3f08bcde8b2a325784ef7a99ba5ffad89ce617
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632791"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288987"
 ---
 # <a name="start-sql-server-management-studio"></a>啟動 SQL Server Management Studio
   在開始這個教學課程之前，我們先看一下 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
@@ -28,7 +28,7 @@ ms.locfileid: "73632791"
   
     > [!NOTE]  
     >  預設不會安裝 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如果沒有 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，請執行安裝程式來安裝它。 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 未提供 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express 可從[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=7593)免費下載，但其使用者介面與本教學課程中所述的不同。  
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 未提供 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express 可從[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=14630)免費下載，但其使用者介面與本教學課程中所述的不同。  
   
 2.  在 [連接到伺服器]**** 對話方塊中，驗證預設值，然後按一下 [連接]****。 若要連接，[**伺服器名稱**] 方塊必須包含已安裝之電腦[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的名稱。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]如果是已命名的實例，[**伺服器名稱**] 方塊也應該包含實例名稱\<，格式為*computer_name*>\\<*instance_name*>。  
   

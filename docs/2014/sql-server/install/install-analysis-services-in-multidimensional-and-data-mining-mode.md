@@ -16,12 +16,12 @@ ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 2353d2f623a5aa0e0f1f5c25710724f836093998
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 002a4ce66108622ce5efcf33231edaed9cd1c99b
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68890379"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280835"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>以多維度及資料採礦模式安裝 Analysis Services
   
@@ -70,7 +70,7 @@ ms.locfileid: "68890379"
   
  [判斷 Analysis Services 實例的伺服器模式](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)  
   
- [SQL Server 資料採礦增益集](https://go.microsoft.com/fwlink/?LinkId=197091)  
+ [SQL Server 資料採礦增益集](https://www.microsoft.com/download/details.aspx?id=35578)  
   
  根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程序中不會安裝範例資料庫、範例程式碼和用戶端應用程式增益集。 若要安裝範例資料庫和範例程式碼，請參閱 [CodePlex 網站](https://go.microsoft.com/fwlink/?LinkId=87843)。  
   
