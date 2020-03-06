@@ -35,7 +35,7 @@ catalog.enable_worker_agent [@WorkerAgentId =] WorkerAgentId
 [@WorkerAgentId =] *WorkerAgentId*：Scale Out Worker 的背景工作代理程式識別碼。 *WorkerAgentId* 是 **uniqueidentifier**。
 
 ## <a name="example"></a>範例
-這個範例會在 MachineA 上啟用相應放大背景工作。
+這個範例會在 MachineA 上啟用擴增背景工作。
 
 ```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]

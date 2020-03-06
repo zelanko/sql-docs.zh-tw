@@ -17,7 +17,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082076"
 ---
-# <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) 相應放大背景工作
+# <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) 擴增背景工作
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -30,25 +30,25 @@ Scale Out Worker 會執行 Scale Out Worker 服務，以從 Scale Out Master 提
 
 |組態  |描述  |預設值|
 |---------|---------|---------|
-|DisplayName|相應放大背景工作的顯示名稱。 **未在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。**|電腦名稱|
-|描述|相應放大背景工作的描述。 **未在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。**|空白|
-|MasterEndpoint|要連接到相應放大主機的端點。|在相應放大背景工作安裝期間設定的端點|
-|MasterHttpsCertThumbprint|驗證相應放大主機所使用的用戶端 SSL 憑證指紋|在相應放大背景工作安裝期間指定的用戶端憑證指紋。|
-|WorkerHttpsCertThumbprint|相應放大主機驗證相應放大背景工作所使用的憑證指紋。|在相應放大背景工作安裝期間自動建立並安裝的憑證指紋|
+|DisplayName|擴增背景工作的顯示名稱。 **未在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。**|電腦名稱|
+|描述|擴增背景工作的描述。 **未在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。**|空白|
+|MasterEndpoint|要連接到擴增主機的端點。|在擴增背景工作安裝期間設定的端點|
+|MasterHttpsCertThumbprint|驗證擴增主機所使用的用戶端 SSL 憑證指紋|在擴增背景工作安裝期間指定的用戶端憑證指紋。|
+|WorkerHttpsCertThumbprint|擴增主機驗證擴增背景工作所使用的憑證指紋。|在擴增背景工作安裝期間自動建立並安裝的憑證指紋|
 |StoreLocation|背景工作憑證的儲存位置。|LocalMachine|
 |StoreName|背景工作憑證所在的存放區名稱。|My|
-|AgentHeartbeatInterval|相應放大背景工作的活動訊號間隔。|00:01:00|
-|TaskHeartbeatInterval|相應放大背景工作報告工作狀態的間隔。|00:00:10|
+|AgentHeartbeatInterval|擴增背景工作的活動訊號間隔。|00:01:00|
+|TaskHeartbeatInterval|擴增背景工作報告工作狀態的間隔。|00:00:10|
 |HeartbeatErrorTolerance|在最後一個成功的工作活動訊號時段後，如果收到活動訊號的錯誤回應，便會終止工作。|00:10:00|
-|TaskRequestMaxCPU|相應放大背景工作要求工作的 CPU 上限。|70.0|
-|TaskRequestMinMemory|相應放大背景工作要求工作的記憶體 MB 下限。|100.0|
-|MaxTaskCount|相應放大背景工作可以保留的最大工作數目。|10|
-|LeaseInterval|相應放大背景工作保留的工作租用間隔。|00:01:00|
-|TasksRootFolder|工作記錄檔的資料夾。 如果值空白，則會使用 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` 資料夾路徑。 [帳戶] 是執行相應放大背景工作服務的帳戶。 預設的帳戶是 SSISScaleOutWorker140。|空白|
-|TaskLogLevel|相應放大背景工作的工作記錄層級。 (詳細資訊 0x01，資訊 0x02，警告 0x04，錯誤 0x08，進度 0x10，嚴重錯誤 0x20，稽核 0x40)|126 (資訊，警告，錯誤，進度，嚴重錯誤，稽核)|
+|TaskRequestMaxCPU|擴增背景工作要求工作的 CPU 上限。|70.0|
+|TaskRequestMinMemory|擴增背景工作要求工作的記憶體 MB 下限。|100.0|
+|MaxTaskCount|擴增背景工作可以保留的最大工作數目。|10|
+|LeaseInterval|擴增背景工作保留的工作租用間隔。|00:01:00|
+|TasksRootFolder|工作記錄檔的資料夾。 如果值空白，則會使用 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` 資料夾路徑。 [帳戶] 是執行擴增背景工作服務的帳戶。 預設的帳戶是 SSISScaleOutWorker140。|空白|
+|TaskLogLevel|擴增背景工作的工作記錄層級。 (詳細資訊 0x01，資訊 0x02，警告 0x04，錯誤 0x08，進度 0x10，嚴重錯誤 0x20，稽核 0x40)|126 (資訊，警告，錯誤，進度，嚴重錯誤，稽核)|
 |TaskLogSegment|工作記錄檔的時間範圍。|00:00:00|
 |TaskLogEnabled|指定是否啟用工作記錄檔。|true|
-|ExecutionLogCacheFolder|用以快取封裝執行記錄檔的資料夾。 如果值空白，則會使用 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` 資料夾路徑。 [帳戶] 是執行相應放大背景工作服務的帳戶。 預設的帳戶是 SSISScaleOutWorker140。|空白|
+|ExecutionLogCacheFolder|用以快取封裝執行記錄檔的資料夾。 如果值空白，則會使用 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` 資料夾路徑。 [帳戶] 是執行擴增背景工作服務的帳戶。 預設的帳戶是 SSISScaleOutWorker140。|空白|
 |ExecutionLogMaxBufferLogCount|記憶體中一個執行記錄檔緩衝的最大快取執行記錄檔數目。|10000|
 |ExecutionLogMaxInMemoryBufferCount|執行記錄檔的記憶體中的最大執行記錄檔緩衝數目。|10|
 |ExecutionLogRetryCount|執行記錄失敗時的重試次數。|3|

@@ -1,6 +1,6 @@
 ---
 title: SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs
-description: 本文提供 SQL Server Integration Services (SSIS) 相應放大功能的概觀，此功能可高效能執行 SSIS 套件
+description: 本文提供 SQL Server Integration Services (SSIS) 擴增功能的概觀，此功能可高效能執行 SSIS 套件
 ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
@@ -18,17 +18,17 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295658"
 ---
-# <a name="integration-services-ssis-scale-out"></a>Integration Services (SSIS) 相應放大
+# <a name="integration-services-ssis-scale-out"></a>Integration Services (SSIS) 擴增
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out 透過將套件執行散佈到多部電腦，來提供 SSIS 套件的高效能執行。 設定 Scale Out 之後，您可以從 SQL Server Management Studio (SSMS)，透過相應放大模式來平行執行多個套件執行。
+SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out 透過將套件執行散佈到多部電腦，來提供 SSIS 套件的高效能執行。 設定 Scale Out 之後，您可以從 SQL Server Management Studio (SSMS)，透過擴增模式來平行執行多個套件執行。
 
 ## <a name="components"></a>元件
 [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out 包含一個 [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out Master 及一或多個 [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out Worker。
 
--   相應放大主機負責相應放大管理，以及接收來自使用者的套件執行要求。 如需詳細資訊，請參閱 [Scale Out Master](integration-services-ssis-scale-out-master.md)。
+-   擴增主機負責擴增管理，以及接收來自使用者的套件執行要求。 如需詳細資訊，請參閱 [Scale Out Master](integration-services-ssis-scale-out-master.md)。
 
 -   Scale Out Worker 會從 Scale Out Master 提取執行工作，並執行套件。 如需詳細資訊，請參閱 [Scale Out Worker](integration-services-ssis-scale-out-worker.md)。
 

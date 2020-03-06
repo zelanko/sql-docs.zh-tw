@@ -59,7 +59,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>重新啟動 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="restart-ssnoversion-md"></a>重新啟動 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 如同在 Windows 上，啟用可用性群組之後必須重新啟動 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 這可以透過下列方式完成：
 
 ```bash
@@ -316,7 +316,7 @@ sudo systemctl restart mssql-server
 
 本節涵蓋如何使用 [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) 或 Transact-SQL 來建立 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的可用性群組。
 
-### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>使用[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
+### <a name="use-ssmanstudiofull-md"></a>使用[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
 
 本節顯示如何使用 SSMS 搭配 [新增可用性群組精靈]，建立叢集類型為「外部」的 AG。
 
@@ -533,7 +533,7 @@ sudo systemctl restart mssql-server
     GO
     ```
 
-## <a name="create-the-includessnoversion-mdincludesssnoversion-mdmd-login-and-permissions-for-pacemaker"></a>建立 Pacemaker 的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 登入和權限
+## <a name="create-the-ssnoversion-md-login-and-permissions-for-pacemaker"></a>建立 Pacemaker 的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 登入和權限
 
 Linux 上的基礎 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Pacemaker 高可用性叢集，需要存取 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 執行個體存，以及可用性群組本身的權限。 這些步驟會建立登入和相關聯的權限，以及告訴 Pacemaker 如何登入 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的檔案。
 

@@ -54,7 +54,7 @@ SQL Server 2017 有一些可用性群組的新功能和增強功能：
 * 叢集類型
 * REQUIRED_SECONDARIES_TO_COMMIT
 * Windows Server 組態的增強式 Microsoft 分散式交易協調器 (DTC) 支援
-* 其他唯讀資料庫的相應放大案例 (本文稍後敘述)
+* 其他唯讀資料庫的擴增案例 (本文稍後敘述)
 
 ##### <a name="always-on-availability-group-cluster-types"></a>AlwaysOn 可用性群組叢集類型
 
@@ -245,7 +245,7 @@ Linux IaaS 虛擬機器的部署可以使用 Azure 安裝 SQL Server。 與內�
 
 ## <a name="summary"></a>摘要
 
-在 Windows Server 和 Linux 上使用相同的功能，可令 SQL Server 2017 的執行個體與資料庫成為高可用性。 除了本機高可用性和災害復原的標準可用性案例外，SQL Server 的可用性功能可以將因升級和移轉所致的停機時間降到最低。 可用性群組也可以提供資料庫的其他複本，當作相同架構的一部分，以相應放大可讀取的複本。 無論是使用 SQL Server 2017 部署新的解決方案或考慮升級，SQL Server 2017 都有您需要的可用性與可靠性。
+在 Windows Server 和 Linux 上使用相同的功能，可令 SQL Server 2017 的執行個體與資料庫成為高可用性。 除了本機高可用性和災害復原的標準可用性案例外，SQL Server 的可用性功能可以將因升級和移轉所致的停機時間降到最低。 可用性群組也可以提供資料庫的其他複本，當作相同架構的一部分，以擴增可讀取的複本。 無論是使用 SQL Server 2017 部署新的解決方案或考慮升級，SQL Server 2017 都有您需要的可用性與可靠性。
  
 [SimpleAG]:media\sql-server-ha-story\image1.png
 [SSMSAGOptions]:media\sql-server-ha-story\image2.png
