@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6478be669b53cd4d1a919ff6142be834de187dcc
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177128"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339276"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 資料警示
   
@@ -59,9 +59,9 @@ ms.locfileid: "78177128"
  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支援報表中各種不同的認證類型。 您可以在資料來源設定為使用預存認證或不使用認證的報表上建立資料警示。 不過您無法在設定為使用整合式安全性認證或提示輸入認證的報表上建立警示。 報表會在處理警示定義時一併執行，而沒有認證的情況下處理會失敗。 如需詳細資訊，請參閱下列：
 
--   [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)
+-   [指定報表資料來源的認證及連線資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)
 
--   [角色和許可權 &#40;Reporting Services&#41;](security/roles-and-permissions-reporting-services.md)
+-   [角色與權限 &#40;Reporting Services&#41;](security/roles-and-permissions-reporting-services.md)
 
 -   [報表伺服器的驗證](security/authentication-with-the-report-server.md)
 
@@ -202,7 +202,7 @@ ms.locfileid: "78177128"
 ##  <a name="Permissions"></a>資料警示的許可權
  您必須具有在 SharePoint 網站上執行報表和建立警示的權限，才能在報表上建立資料警示。 若要了解有關報表權限的詳細資訊，請參閱下列主題。
 
--   [從報表產生資料摘要 &#40;報表產生器和 SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)
+-   [從多個報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)
 
 -   [設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)
 

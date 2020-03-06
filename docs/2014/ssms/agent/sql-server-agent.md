@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68188833"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339091"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 是一項 Microsoft Windows 服務，它會執行排程的管理工作** （在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中稱為「作業」）。  
@@ -86,10 +86,9 @@ ms.locfileid: "68188833"
   
  警示可回應下列條件之一：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能條件  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能條件  
   
 -   在執行 SQL Server Agent 之電腦上的 Microsoft Windows Management Instrumentation (WMI) 事件  
   

@@ -13,11 +13,11 @@ ms.author: jtoland
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: f82aba87632abea4ac5fbc8b54daa6dfd0eb5b4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76831860"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338317"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>在資料庫測試助理中建立分析報表（SQL Server）
 
@@ -64,7 +64,7 @@ DEA 會使用統計測試來分析您的工作負載，並判斷每個查詢從�
 
 登入 DEA 的使用者必須具有 analysis server 的 sysadmin 許可權。 如果使用者是群組的一部分，請確定該群組具有 sysadmin 許可權。
 
-|可能的錯誤|方案|  
+|可能的錯誤|解決方法|  
 |---|---|  
 |無法連接到資料庫。 請確定您具有系統管理員許可權，可分析及查看報表。|您可能沒有伺服器或資料庫的存取權或系統管理員（sysadmin）許可權。 請確認您的登入許可權，然後再試一次。|  
 |無法在伺服器**伺服器名稱**上產生**報告名稱**。 如需詳細資訊，請參閱**報表名稱**報表。|您可能沒有產生新報告所需的系統管理員許可權。 若要查看詳細錯誤，請選取錯誤時報告，並檢查% temp%\\DEA 中的記錄。|  
@@ -84,7 +84,7 @@ DEA 會使用統計測試來分析您的工作負載，並判斷每個查詢從�
 
 如果在建立報表時發生錯誤，[進度] 頁面會顯示分析產生失敗的特定步驟。 您可以在% temp%\\DEA 的記錄中查看更多詳細資料。 請確認您具有所需使用者權限的有效連接伺服器，然後重試。 如果問題持續發生，請洽詢產品小組。
 
-|可能的錯誤|方案|  
+|可能的錯誤|解決方法|  
 |---|---|  
 |RInterop 在啟動時遇到錯誤。 請檢查 RInterop 記錄，然後再試一次。|DEA 需要有網際網路存取權，才能下載相依的 R 套件。 檢查% temp%\\RInterop 中的 RInterop 記錄和% temp%\\DEA 中的 DEA 記錄。 如果 RInterop 未正確地初始化，或如果沒有正確的 R 封裝進行初始化，您可能會在 DEA 記錄中的 InitializeRInterop 步驟之後看到「無法產生新的分析報表」例外狀況。<br><br>RInterop 記錄也可能會顯示類似「沒有可用的 jsonlite 套件」的錯誤。 如果您的電腦無法存取網際網路，您可以手動下載必要的 jsonlite R 套件：<br><br><li>移至電腦檔案系統上\\的% userprofile% DEARPackages 資料夾。 此資料夾包含 R 用於 DEA 的封裝。</li><br><li>如果已安裝的套件清單中遺漏 jsonlite 資料夾，您需要具有網際網路存取權的電腦，才能從\_ [https://cran.r-project.org/web/packages/jsonlite/index.html](https://cran.r-project.org/web/packages/jsonlite/index.html)下載 jsonlite 1.4 的發行版本。</li><br><li>將 .zip 檔案複製到您正在執行 DEA 的電腦。  解壓縮 jsonlite 資料夾，並將它複製到% userprofile\\% DEARPackages。 此步驟會自動在 R 中安裝 jsonlite 套件。資料夾應命名為**jsonlite** ，而內容應直接放在資料夾內，而不是以下的一個層級。</li><br><li>關閉 DEA，重新開啟，然後再試一次分析。</li><br>您也可以使用 RGUI.EXE。 移至 [**從 zip 安裝****套件** > ]。 移至您稍早下載的套件並安裝。<br><br>如果 RInterop 已初始化並正確設定，您應該會在 RInterop 記錄檔中看到「正在安裝相依 R 封裝 jsonlite」。|  
 |無法連接到 SQL Server 實例，請確定伺服器名稱正確，並檢查是否有登入的使用者所需的存取權。|您可能沒有伺服器的存取權或使用者權限，或伺服器名稱可能不正確。|

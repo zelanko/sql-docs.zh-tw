@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 499ac56d8a462f62dac92b97654a9ace12bd356e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177173"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339567"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>管理平行處理資料倉儲中的許可權
 本文說明用來管理 SQL Server PDW 的資料庫許可權的需求和選項。

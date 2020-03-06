@@ -39,11 +39,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
-ms.translationtype: HT
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68742838"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339446"
 ---
 # <a name="database-level-roles"></a>資料庫層級角色
 
@@ -86,7 +86,7 @@ ms.locfileid: "68742838"
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-includesssds_mdincludessssds-mdmd-and-includesssdw_mdincludessssdw-mdmd"></a>針對 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 及 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]的特殊角色
+## <a name="special-roles-for-sssds_md-and-sssdw_md"></a>針對 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 及 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]的特殊角色
 
 這些資料庫角色只存在於虛擬 master 資料庫中。 其權限僅限於能在 master 中執行的動作。 只有 master 資料庫使用者可以加入這些角色中。 這些角色中不能加入登入，但可以根據登入建立使用者，然後將這些使用者加入角色中。 包含的 master 資料庫使用者，也可加入這些角色中。 但是，加入到 **dbmanager** 角色的包含的 master 資料庫使用者不能用來建立新的資料庫。
 

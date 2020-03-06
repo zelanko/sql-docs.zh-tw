@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75232317"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339017"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
   本主題將介紹使用 Azure Blob 儲存體服務作為備份目的地所需的概念、需求和元件。 使用磁碟或磁帶時，備份和還原功能相同或類似，只有些許的差異。 這些差異在於許多顯而易見的例外狀況，本主題中將內含某些程式碼範例。  
@@ -33,11 +33,11 @@ ms.locfileid: "75232317"
   
 -   [限制](#limitations)  
   
--   [支援 Backup/Restore 語句](#Support)  
+-   [支援 Backup/Restore 陳述式](#Support)  
   
 -   [在 SQL Server Management Studio 中使用備份工作](sql-server-backup-to-url.md#BackupTaskSSMS)  
   
--   [使用維護計畫 Wizard SQL Server 備份至 URL](sql-server-backup-to-url.md#MaintenanceWiz)  
+-   [使用 [維護計畫精靈] 將 SQL Server 備份至 URL](sql-server-backup-to-url.md#MaintenanceWiz)  
   
 -   [使用 SQL Server Management Studio 從 Azure 儲存體還原](sql-server-backup-to-url.md#RestoreSSMS)  
   
@@ -51,11 +51,10 @@ ms.locfileid: "75232317"
   
 -   用來發出 BACKUP 或 RESTORE 命令的使用者帳戶應該位於擁有 **改變任何認證** 權限的 **db_backup 運算子** 資料庫角色中。  
   
-###  <a name="intorkeyconcepts"></a>重要元件和概念簡介  
+###  <a name="intorkeyconcepts"></a> 重要元件和概念簡介  
  下列兩節將介紹 Azure Blob 儲存體服務，以及備份至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] azure blob 儲存體服務或從中還原時使用的元件。 請務必瞭解這些元件，以及它們之間的互動，以執行 Azure Blob 儲存體服務的備份或還原。  
   
- 建立 Azure 帳戶是此程式的第一個步驟。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會使用**Azure 儲存體帳戶名稱**及其**存取金鑰**值來驗證和讀取 blob，並將其寫入儲存體服務。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證會儲存這項驗證資訊，並且在備份或還原作業期間使用。 如需建立儲存體帳戶和執行簡單還原的完整逐步解說，請參閱[使用 Azure 儲存體服務進行 SQL Server 備份和還原的教學](https://go.microsoft.com/fwlink/?LinkId=271615)課程。  
+ 建立 Azure 帳戶是此程式的第一個步驟。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會使用**Azure 儲存體帳戶名稱**及其**存取金鑰**值來驗證和讀取 blob，並將其寫入儲存體服務。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證會儲存這項驗證資訊，並且在備份或還原作業期間使用。 如需建立儲存體帳戶和執行簡單還原的完整逐步解說，請參閱[使用 Azure 儲存體服務進行 SQL Server 備份和還原的教學](https://go.microsoft.com/fwlink/?LinkId=271615)課程。  
   
  ![將儲存體帳戶對應至 SQL 認證](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "將儲存體帳戶對應至 SQL 認證")  
   
@@ -72,15 +71,15 @@ ms.locfileid: "75232317"
   
  如需有關分頁 Blob 的詳細資訊，請參閱 [了解區塊 Blob 和分頁 Blob](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)  
   
-###  <a name="sqlserver"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件  
- **URL：** URL 會指定唯一備份檔案的統一資源識別元（URI）。 此 URL 是用來提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份檔案的位置和名稱。 在此執行中，唯一有效的 URL 是指向 Azure 儲存體帳戶中分頁 Blob 的 URL。 此 URL 必須指向實際的 Blob，而非只有容器。 如果 Blob 不存在，就會建立 Blob。 如果指定了現有的 Blob，除非指定了 "WITH FORMAT" 選項，否則 BACKUP 會失敗。  
+###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件  
+ **URL：** URL 會指定唯一備份檔案的統一資源識別項 (URI)。 此 URL 是用來提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份檔案的位置和名稱。 在此執行中，唯一有效的 URL 是指向 Azure 儲存體帳戶中分頁 Blob 的 URL。 此 URL 必須指向實際的 Blob，而非只有容器。 如果 Blob 不存在，就會建立 Blob。 如果指定了現有的 Blob，除非指定了 "WITH FORMAT" 選項，否則 BACKUP 會失敗。  
   
 > [!WARNING]  
 >  如果您選擇將備份檔案複製並上傳至 Azure Blob 儲存體服務，請使用分頁 Blob 作為儲存體選項。 不支援從區塊 Blob 還原。 從區塊 Blob 類型進行 RESTORE 會失敗，並出現錯誤。  
   
  以下是 URL 值範例： HTTP [s]：//ACCOUNTNAME.Blob.core.windows.net/\<CONTAINER>/\<FILENAME .bak>。 HTTPS 不是必要項目，但是建議使用。  
   
- **認證：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認證是用來儲存連接到 SQL Server 外部資源所需之驗證資訊的物件。  在這裡[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，備份和還原程式會使用認證來向 Azure Blob 儲存體服務進行驗證。 認證會儲存儲存體帳戶的名稱以及儲存體帳戶的 **存取金鑰** 值。 一旦建立認證之後，您必須在發出 BACKUP/RESTORE 陳述式時，在 WITH CREDENTIAL 選項中指定認證。 如需有關如何查看、複製或重新產生儲存體帳戶**存取金鑰**的詳細資訊，請參閱[儲存體帳戶存取金鑰](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
+ **認證：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是用來儲存連線到 SQL Server 外部資源所需之驗證資訊的物件。  在這裡[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，備份和還原程式會使用認證來向 Azure Blob 儲存體服務進行驗證。 認證會儲存儲存體帳戶的名稱以及儲存體帳戶的 **存取金鑰** 值。 一旦建立認證之後，您必須在發出 BACKUP/RESTORE 陳述式時，在 WITH CREDENTIAL 選項中指定認證。 如需有關如何查看、複製或重新產生儲存體帳戶**存取金鑰**的詳細資訊，請參閱[儲存體帳戶存取金鑰](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
   
  如需有關如何建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證的逐步指示，請參閱本主題稍後的＜ [建立認證](#credential) ＞範例。  
   
@@ -117,10 +116,9 @@ ms.locfileid: "75232317"
   
 -   不支援指定備份組選項 - `RETAINDAYS` 和 `EXPIREDATE`。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份裝置名稱大小上限為 259 個字元。 BACKUP TO URL 會用 36 個字元的必要項目指定 URL - 'https://.blob.core.windows.net//.bak'，而保留 223 個字元供帳戶、容器和 Blob 名稱共用。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份裝置名稱大小上限為 259 個字元。 BACKUP TO URL 會用 36 個字元的必要項目指定 URL - 'https://.blob.core.windows.net//.bak '，而保留 223 個字元供帳戶、容器和 Blob 名稱共用。  
   
-###  <a name="Support"></a>支援 Backup/Restore 語句  
+###  <a name="Support"></a> 支援 Backup/Restore 陳述式  
   
 |||||  
 |-|-|-|-|  
@@ -141,7 +139,7 @@ ms.locfileid: "75232317"
   
 |||||  
 |-|-|-|-|  
-|引數|支援|Exception|註解|  
+|引數|支援|例外狀況|註解|  
 |DATABASE|&#x2713;|||  
 |記錄|&#x2713;|||  
 ||  
@@ -152,8 +150,8 @@ ms.locfileid: "75232317"
 |DIFFERENTIAL|&#x2713;|||  
 |COPY_ONLY|&#x2713;|||  
 |COMPRESSION&#124;NO_COMPRESSION|&#x2713;|||  
-|描述|&#x2713;|||  
-|名稱|&#x2713;|||  
+|DESCRIPTION|&#x2713;|||  
+|NAME|&#x2713;|||  
 |EXPIREDATE &#124; RETAINDAYS|&#x2713;|||  
 |NOINIT &#124; INIT|&#x2713;||如果使用這個選項，則會被忽略。<br /><br /> 您無法附加至 Blob。 若要覆寫備份，請使用 FORMAT 引數。|  
 |NOSKIP &#124; SKIP|&#x2713;|||  
@@ -181,7 +179,7 @@ ms.locfileid: "75232317"
 |DATABASE|&#x2713;|||  
 |記錄|&#x2713;|||  
 |FROM (URL)|&#x2713;||FROM URL 引數是用來指定備份檔案的 URL 路徑。|  
-|**WITH 選項：**||||  
+|**WITH Options:**||||  
 |CREDENTIAL|&#x2713;||只有在使用 [從 URL 還原] 選項從 Azure Blob 儲存體服務還原時，才支援 WITH CREDENTIAL。|  
 |PARTIAL|&#x2713;|||  
 |RECOVERY &#124; NORECOVERY &#124; STANDBY|&#x2713;|||  
@@ -232,7 +230,7 @@ ms.locfileid: "75232317"
   
     4.  **URL 前置詞：** 這會使用先前步驟中所述的欄位中所指定的資訊，自動建立。 如果您手動編輯此值，請確定其與您先前提供的其他資訊相符。 例如，如果您修改了儲存體 URL，請確定 SQL 認證已設定為對相同的儲存體帳戶進行驗證。  
   
- 當您選取 URL 作為目的地時，[媒體選項]**** 頁面中的某些選項會停用。  下列主題包含有關備份資料庫對話方塊的詳細資訊：  
+ 當您選取 **URL** 作為目的地時，[媒體選項]  頁面中的某些選項會停用。  下列主題包含有關備份資料庫對話方塊的詳細資訊：  
   
  [備份資料庫 &#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
@@ -242,7 +240,7 @@ ms.locfileid: "75232317"
   
  [建立認證 - 向 Azure 儲存體驗證](create-credential-authenticate-to-azure-storage.md)  
   
-##  <a name="MaintenanceWiz"></a>使用維護計畫 Wizard SQL Server 備份至 URL  
+##  <a name="MaintenanceWiz"></a> 使用 [維護計畫精靈] 將 SQL Server 備份至 URL  
  與先前所述的備份工作類似，SQL Server Management Studio 中的維護計畫 Wizard 已增強為包含**URL**作為其中一個目的地選項，以及備份至 Azure 儲存體（例如 SQL 認證）所需的其他支持對象。 如需詳細資訊，請參閱＜ **Using Maintenance Plan Wizard** ＞中的＜ [定義備份工作](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)＞一節。  
   
 ##  <a name="RestoreSSMS"></a>使用 SQL Server Management Studio 從 Azure 儲存體還原  
@@ -252,7 +250,7 @@ ms.locfileid: "75232317"
   
 2.  當您選取 **[URL]** 並按一下 **[新增]** 時，會開啟 **[連接到 Azure 儲存體]** 對話。 指定要向 Azure 儲存體驗證的 SQL 認證資訊。  
   
-3.  SQL Server 接著會使用您提供的 SQL 認證資訊連接到 Azure 儲存體，並開啟 [**在 Azure 中尋找備份檔案**] 對話方塊。 位於儲存體中的備份檔案，會顯示在此頁面上。 選取您要用以還原的檔案，並按一下 **[確定]**。 這會讓您回到 [**選取備份裝置**] 對話方塊，然後按一下此對話方塊上的 **[確定**]，會帶您回到主要的 [**還原**] 對話方塊，讓您能夠完成還原。  如需詳細資訊，請參閱下列主題：  
+3.  SQL Server 接著會使用您提供的 SQL 認證資訊連接到 Azure 儲存體，並開啟 [**在 Azure 中尋找備份檔案**] 對話方塊。 位於儲存體中的備份檔案，會顯示在此頁面上。 選取您要用以還原的檔案，並按一下 **[確定]** 。 這會讓您回到 [**選取備份裝置**] 對話方塊，然後按一下此對話方塊上的 **[確定**]，會帶您回到主要的 [**還原**] 對話方塊，讓您能夠完成還原。  如需詳細資訊，請參閱下列主題：  
   
      [還原資料庫 &#40;一般頁面&#41;](restore-database-general-page.md)  
   
@@ -260,7 +258,7 @@ ms.locfileid: "75232317"
   
      [還原資料庫 &#40;選項頁面&#41;](restore-database-options-page.md)  
   
-##  <a name="Examples"></a>程式碼範例  
+##  <a name="Examples"></a> 程式碼範例  
  本節包含下列範例。  
   
 -   [建立認證](#credential)  
@@ -277,7 +275,7 @@ ms.locfileid: "75232317"
   
 -   [使用 STOPAT 還原至時間點](#PITR)  
   
-###  <a name="credential"></a>建立認證  
+###  <a name="credential"></a> 建立認證  
  下列範例會建立儲存 Azure 儲存體驗證資訊的認證。  
 
    ```sql
@@ -685,7 +683,7 @@ ms.locfileid: "75232317"
    Restore-SqlDatabase -Database AdventureWorks2012 -SqlCredential $credentialName -BackupFile $backupdbFile -RelocateFile @($newDataFilePath,$newLogFilePath)
    ```  
   
-###  <a name="PITR"></a>使用 STOPAT 還原至時間點  
+###  <a name="PITR"></a> 使用 STOPAT 還原至時間點  
  下列範例會將資料庫還原至某個時間點的狀態，並且顯示還原作業。  
   
    ```sql

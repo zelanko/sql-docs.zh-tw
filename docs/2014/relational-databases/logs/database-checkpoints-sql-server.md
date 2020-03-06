@@ -27,11 +27,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33f85b2f1cd8b259e46851aab818b258a6d78291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68206107"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339306"
 ---
 # <a name="database-checkpoints-sql-server"></a>資料庫檢查點 (SQL Server)
   本主題提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫檢查點的概觀。 *檢查點*會建立一個已知的正確點， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]以便在非預期的關機或損毀之後，于復原期間開始套用包含在記錄檔中的變更。  
@@ -72,8 +72,7 @@ ms.locfileid: "68206107"
 |>0|不適用。|由 TARGET_RECOVERY_TIME 設定決定目標復原時間 (以秒鐘表示) 的間接檢查點。|  
   
 ###  <a name="AutomaticChkpt"></a>自動檢查點  
- 每次記錄檔記錄數目到達[!INCLUDE[ssDE](../../includes/ssde-md.md)]預估它在`recovery interval`伺服器設定選項中指定的時間內可以處理的數目時，就會發生自動檢查點。 在沒有使用者定義之目標復原時間的每個資料庫中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 都會產生自動檢查點。 自動檢查點的頻率取決於`recovery interval` advanced server configuration 選項，它會指定給定伺服器實例在系統重新開機期間應該用來復原資料庫的最長時間。 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會預估它在復原間隔內可以處理的記錄檔記錄數目上限。 當使用自動檢查點的資料庫到達這個記錄檔數目上限時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會發出資料庫的檢查點。 自動檢查點之間的時間間隔可能會有很大的變化。 具有大量交易工作負載的資料庫所擁有的檢查點會比主要用於唯讀作業的資料庫更頻繁。  
+ 每次記錄檔記錄數目到達[!INCLUDE[ssDE](../../includes/ssde-md.md)]預估它在`recovery interval`伺服器設定選項中指定的時間內可以處理的數目時，就會發生自動檢查點。 在沒有使用者定義之目標復原時間的每個資料庫中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 都會產生自動檢查點。 自動檢查點的頻率取決於`recovery interval` advanced server configuration 選項，它會指定給定伺服器實例在系統重新開機期間應該用來復原資料庫的最長時間。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會預估它在復原間隔內可以處理的記錄檔記錄數目上限。 當使用自動檢查點的資料庫到達這個記錄檔數目上限時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會發出資料庫的檢查點。 自動檢查點之間的時間間隔可能會有很大的變化。 具有大量交易工作負載的資料庫所擁有的檢查點會比主要用於唯讀作業的資料庫更頻繁。  
   
  此外，在簡單復原模式下，如果記錄檔已填滿百分之 70，則自動檢查點也會排入佇列。  
   

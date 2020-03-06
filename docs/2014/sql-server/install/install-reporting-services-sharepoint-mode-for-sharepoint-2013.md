@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8874d4c57e2fb7b94e4efac44c90e93865d2b40f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72798344"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339189"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>安裝適用於 SharePoint 2013 的 Reporting Services SharePoint 模式
   本主題中的程序會引導您完成 SharePoint 模式之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的單一伺服器安裝。 這些步驟包含執行 [SQL Server 安裝精靈]，以及使用 SharePoint 管理中心的設定工作。 本主題也可以用於更新現有安裝的個別程序，例如建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。  
@@ -62,8 +62,8 @@ ms.locfileid: "72798344"
 |**sha-1**|從 SQL Server 安裝所安裝的 SharePoint 服務。 您可以建立一個或多個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。|  
 |**2**|
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 適用於 SharePoint 產品的增益集會在 SharePoint 伺服器上提供使用者介面元件。|  
-|**(3)**|由 Power View 和 PowerPivot 所使用的 Excel 服務應用程式。|  
-|**(4)**|PowerPivot 服務應用程式。|  
+|**第**|由 Power View 和 PowerPivot 所使用的 Excel 服務應用程式。|  
+|**4gb**|PowerPivot 服務應用程式。|  
   
  ![SSRS SharePoint 模式單一伺服器部署](../../../2014/sql-server/install/media/rs-sharepoint-1server-deployment.gif "SSRS SharePoint 模式單一伺服器部署")  
   
@@ -418,7 +418,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
   
 ## <a name="see-also"></a>另請參閱  
  [適用于 Reporting Services SharePoint 模式的 PowerShell Cmdlet](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
- [升級和遷移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [升級和移轉 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [內容藍圖：安裝及設定 SharePoint Server 和 SQL Server BI](https://technet.microsoft.com/library/dn205112.aspx)   
  [SQL Server 2012 版本所支援的功能](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Reporting Services SharePoint 服務和服務應用程式](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)

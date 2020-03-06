@@ -35,14 +35,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 105e8022775642d915cbcedf180ed9e07f8bc958
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70153819"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339015"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>使用維護計畫精靈
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的維護計畫精靈，建立單一伺服器或多伺服器維護計畫。 維護計畫嚮導會建立一個可定期執行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的維護計畫。 這樣可讓您依指定間隔執行各種資料庫管理工作，包括備份、資料庫完整性檢查，或資料庫統計資料更新。  
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的維護計畫精靈，建立單一伺服器或多伺服器維護計畫。 [維護計畫精靈] 會建立可讓 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 定期執行的維護計畫。 這樣可讓您依指定間隔執行各種資料庫管理工作，包括備份、資料庫完整性檢查，或資料庫統計資料更新。  
   
  **本主題內容**  
   

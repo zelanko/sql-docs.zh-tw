@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63144614"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338272"
 ---
 # <a name="the-transaction-log-sql-server"></a>交易記錄 (SQL Server)
   每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫都有交易記錄來記錄所有交易及每項交易所作的資料庫修改。 必須定期截斷交易記錄，以免被填滿。 但是，某些因素會影響記錄的截斷，所以監控記錄大小非常重要。 某些作業可使用最低限度記錄，以減少其對交易記錄大小的影響。  

@@ -10,11 +10,11 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3ed6d0a694370cf6dbaa14ea861bf3d0d6c618f7
-ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
-ms.translationtype: HT
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77146278"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340370"
 ---
 # <a name="database-engine-errors"></a>資料庫引擎錯誤
 

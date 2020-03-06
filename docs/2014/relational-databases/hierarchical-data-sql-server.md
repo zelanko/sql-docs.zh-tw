@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63065699"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339236"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層式資料 (SQL Server)
   內`hierarchyid`建的資料類型可讓您更輕鬆地儲存及查詢階層式資料。 `hierarchyid`已針對表示樹狀結構（這是最常見的階層式資料類型）進行優化。  

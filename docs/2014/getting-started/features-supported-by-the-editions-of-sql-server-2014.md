@@ -11,11 +11,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70176122"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339288"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 各版本所支援的功能
 
@@ -169,7 +169,7 @@ ms.locfileid: "70176122"
 |Distributed Replay - Client|是|否|是|是||||  
 |Distributed Replay - Controller|Yes (Enterprise 最多支援 16 個用戶端，Developer 僅支援 1 個用戶端)|否|Yes (僅支援 1 個用戶端)|Yes (僅支援 1 個用戶端)||||  
 |SQL Profiler|是|是|是|否<sup>2</sup>|否<sup>2</sup>|否<sup>2</sup>|否<sup>2</sup>|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]代理程式|是|是|是|是||||  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent|是|是|是|是||||  
 |Microsoft System Center Operations Manager 管理組件|是|是|是|是||||  
 |Database Tuning Advisor (DTA)|是|是|是<sup>3</sup>|是<sup>3</sup>||||  
 |將[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫部署至 Azure VM Wizard|是|是|是|是|是|是|是|  

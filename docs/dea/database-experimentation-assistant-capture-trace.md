@@ -13,11 +13,11 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76831539"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338318"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>在資料庫測試助理中捕捉追蹤
 
@@ -138,7 +138,7 @@ SQL Server 中的查詢快取可能會影響評估結果。 我們建議您重�
 
 以下是您可能會看到的一些可能的錯誤，以及解決這些問題的解決方案：
 
-|可能的錯誤|方案|  
+|可能的錯誤|解決方法|  
 |---|---|  
 |無法在目標 SQL Server 上啟動追蹤，請檢查您是否擁有必要的許可權，以及 SQL Server 帳戶是否具有指定之追蹤檔案路徑的寫入權限 Sql 錯誤碼（53）|執行 DEA 工具的使用者必須具有執行 SQL Server 之電腦的存取權。 必須將系統管理員（sysadmin）角色指派給使用者。|  
 |無法在目標 SQL Server 上啟動追蹤，請檢查您是否擁有必要的許可權，以及 SQL Server 帳戶是否具有指定之追蹤檔案路徑的寫入權限 Sql 錯誤碼（19062）|指定的追蹤路徑可能不存在，或資料夾沒有執行 SQL Server 服務之帳戶的寫入權限（例如 NETWORK SERVICE）。 路徑必須存在，而且必須具有啟動追蹤所需的許可權。|  
