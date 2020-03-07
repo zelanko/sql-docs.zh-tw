@@ -9,11 +9,11 @@ ms.topic: article
 ms.date: 06/18/2018
 ms.author: genemi
 ms.openlocfilehash: 71254b937c4c0173af9e1549efb98a0b42f65e02
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73632812"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338609"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 資料庫的連線模組
 
