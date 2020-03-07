@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d79007dccddef604315c57beca1e1274d23c6f0f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74095686"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339666"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>交易鎖定與資料列版本設定指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -258,7 +258,7 @@ GO
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援並行控制的範圍。 使用者可針對連接來選取交易隔離等級，或是在資料指標上選取並行選項，以指定並行控制的類型。 這些屬性可用 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式來定義，或是透過資料庫應用程式開發介面 (API) (例如 ADO、ADO.NET、OLE DB 及 ODBC) 的內容及屬性來定義。  
   
-#### <a name="isolation-levels-in-the-includessdenoversionincludesssdenoversion-mdmd"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]中的隔離等級  
+#### <a name="isolation-levels-in-the-ssdenoversion"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]中的隔離等級  
  交易可指定隔離等級，以定義某個交易必須與其他交易所修改之資源或資料隔離的程度。 隔離等級是以並行副作用來表示，例如，允許中途讀取 (dirty read) 或虛設項目讀取 (phantom read)。  
   
  交易隔離等級控制：  
@@ -275,7 +275,7 @@ GO
   
  較低的隔離等級將可讓更多的使用者同時存取資料，但也會增加使用者可能遇到並行作用 (例如，中途讀取或遺失的更新) 的數目。 相反的，較高的隔離等級將可減少使用者遇到並行作用的類型，但是將需要更多的系統資源並且會增加一個交易封鎖另一個交易的可能性。 選擇適當的隔離等級需視應用程式的資料完整性需求與每個隔離等級的額外負荷平衡而定。 最高的隔離等級為可序列化，可確保每次交易重複讀取作業時都能擷取相同的資料，但它是透過執行鎖定層級來達成此目的，因此在多使用者系統中有可能會影響其他使用者。 最低隔離等級為讀取未認可，可能會擷取到其他交易已修改但尚未認可的資料。 在讀取未認可中可能會發生所有的並行副作用，但由於沒有讀取鎖定或版本控制，因此可將額外負荷降到最低。  
   
-##### <a name="includessdenoversionincludesssdenoversion-mdmd-isolation-levels"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]隔離等級  
+##### <a name="ssdenoversion-isolation-levels"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]隔離等級  
  ISO 標準會定義以下隔離等級， [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]支援所有的這些隔離等級：  
   
 |隔離等級|定義|  
