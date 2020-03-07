@@ -30,11 +30,11 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71282568"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338345"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 記錄
 
