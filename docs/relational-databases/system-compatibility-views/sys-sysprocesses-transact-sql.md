@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9da0f09c2506e0d596a485aee112f9f188b6d12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6aa40d6a7363dd991dc37ed5c619b656e74f0eed
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74947150"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866366"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "74947150"
 |kpid|**smallint**|Windows 執行緒識別碼。|  
 |blocked|**smallint**|封鎖要求之工作階段的識別碼。 如果這個資料行是 NULL，表示要求沒有被封鎖，或者封鎖工作階段的工作階段資訊無法使用 (或無法識別)。<br /><br /> -2 = 封鎖資源是由被遺棄的分散式交易所擁有。<br /><br /> -3 = 封鎖資源是由延遲的復原交易所擁有。<br /><br /> -4 = 由於內部閂鎖狀態轉換，而無法判斷封鎖閂鎖擁有者的工作階段識別碼。|  
 |waittype|**binary （2）**|已保留。|  
-|waittime|**Bigint**|目前的等候時間 (以毫秒為單位)。<br /><br /> 0 = 處理序未在等待中。|  
+|waittime|**bigint**|目前的等候時間 (以毫秒為單位)。<br /><br /> 0 = 處理序未在等待中。|  
 |lastwaittype|**Nchar （32）**|一個指出上次或目前等待類型之名稱的字串。|  
 |waitresource|**Nchar （256）**|鎖定資源的文字表示法。|  
 |dbid|**smallint**|處理序目前所使用的資料庫識別碼。|  
 |UID|**smallint**|執行命令的使用者識別碼。 如果使用者和角色數目超過 32,767 個，則會造成溢位或傳回 NULL。|  
 |cpu|**int**|處理序的累計 CPU 時間。 不論 SET STATISTICS TIME 選項設為 ON 或 OFF，所有處理序的這個項目都會更新。|  
-|physical_io|**Bigint**|處理序的累計磁碟讀取和寫入。|  
+|physical_io|**bigint**|處理序的累計磁碟讀取和寫入。|  
 |memusage|**int**|在程序快取中目前配置給此處理序的頁數。 負數表示處理序正在釋放其他處理序配置的記憶體。|  
 |login_time|**datetime**|用戶端處理序登入伺服器的時間。|  
 |last_batch|**datetime**|上次用戶端處理序執行遠端預存程序呼叫或 EXECUTE 陳述式的時間。|  
@@ -58,7 +58,7 @@ ms.locfileid: "74947150"
 |主機名稱|**Nchar （128）**|工作站的名稱。|  
 |program_name|**Nchar （128）**|應用程式的名稱。|  
 |hostprocess|**Nchar （10）**|工作站處理序識別碼。|  
-|cmd|**Nchar （26）**|目前正在執行的命令。|  
+|cmd|**Nchar （52）**|目前正在執行的命令。|  
 |nt_domain|**Nchar （128）**|用戶端的 Windows 網域 (如果使用 Windows 驗證的話) 或信任連接。|  
 |nt_username|**Nchar （128）**|處理序的 Windows 使用者名稱 (如果使用 Windows 驗證的話) 或信任連接。|  
 |net_address|**Nchar （12）**|在每一個使用者的工作站上指派的網路配接器唯一識別碼。 當使用者登入時，這個識別碼會插入 net_address 資料行中。|  
