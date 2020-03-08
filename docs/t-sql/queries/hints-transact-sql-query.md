@@ -56,11 +56,11 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
 ms.openlocfilehash: 7a4c7733bd346f0631d353af228955dbd8e0b46b
-ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77608505"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338405"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -171,7 +171,7 @@ FORCE ORDER
 { FORCE | DISABLE } EXTERNALPUSHDOWN  
 強制或停用在 Hadoop 中下推合格運算式的計算。 僅適用於使用 PolyBase 的查詢。 將不會下推到 Azure 儲存體。  
 
-{ FORCE | DISABLE } SCALEOUTEXECUTION 強制或停用 SQL Server 2019 巨量資料叢集中 PolyBase 查詢 (使用外部資表) 的相應放大執行。 只有使用 SQL 巨量資料叢集主要執行個體的查詢才會接受此提示。 相應放大會在巨量資料叢集的計算集區中發生。 
+{ FORCE | DISABLE } SCALEOUTEXECUTION 強制或停用 SQL Server 2019 巨量資料叢集中 PolyBase 查詢 (使用外部資表) 的擴增執行。 只有使用 SQL 巨量資料叢集主要執行個體的查詢才會接受此提示。 擴增會在巨量資料叢集的計算集區中發生。 
 
 KEEP PLAN  
 強制查詢最佳化工具放寬查詢的估計重新編譯臨界值。 所預估重新編譯臨界值是資料表因執行下列其中一個陳述式而變更預估數目的索引資料行時，即會啟動查詢的自動重新編譯：
