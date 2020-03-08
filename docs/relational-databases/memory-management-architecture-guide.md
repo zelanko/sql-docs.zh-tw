@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68115271"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338400"
 ---
 # <a name="memory-management-architecture-guide"></a>記憶體管理架構指南
 
@@ -47,7 +47,7 @@ ms.locfileid: "68115271"
 > [!NOTE]
 > 在記憶體負載極高的系統中，若在查詢計畫中使用合併聯結、排序與點陣圖的查詢，當查詢無法取得點陣圖所需的最低記憶體時，會卸除點陣圖。 這樣會影響查詢效能，且若排序處理序無法放入記憶體中，它會增加 tempdb 資料庫中工作資料表的使用數目，導致 tempdb 成長。 若要解決此問題，請新增記憶體或微調查詢以使用不同與更快的查詢計畫。
  
-### <a name="providing-the-maximum-amount-of-memory-to-includessnoversionincludesssnoversion-mdmd"></a>為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供記憶體數量上限
+### <a name="providing-the-maximum-amount-of-memory-to-ssnoversion"></a>為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供記憶體數量上限
 
 透過使用 AWE 與 [鎖定記憶體中的分頁] 權限，您可以為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine 提供下列記憶體數量。 
 
@@ -72,7 +72,7 @@ ms.locfileid: "68115271"
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 
-## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始對記憶體管理進行的變更
+## <a name="changes-to-memory-management-starting-with-sssql11"></a>從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始對記憶體管理進行的變更
 
 在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 及 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) 中，使用了五種不同的機制配置記憶體：
 -  **單一頁面配置器 (SPA)** ，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理序中只包含少於或等於 8 KB 的記憶體配置。 [最大伺服器記憶體 (MB)]  與 [最小伺服器記憶體 (MB)]  設定選項決定了 SPA 可取用的實體記憶體上限。 緩衝集區同時是 SPA 的機制，以及單一分頁配置的最大取用者。
@@ -107,7 +107,7 @@ ms.locfileid: "68115271"
 -  需要儲存大量輸入參數的追蹤作業。
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
-## <a name="changes-to-memory_to_reserve-starting-with-includesssql11includessssql11-mdmd"></a>從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始對 "memory_to_reserve" 所進行的變更
+## <a name="changes-to-memory_to_reserve-starting-with-sssql11"></a>從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始對 "memory_to_reserve" 所進行的變更
 在舊版 SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 及 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) 中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體管理員保留了一部分處理序虛擬位址空間 (VAS)，供**多頁配置器 (MPA)** 、**CLR 配置器**、SQL Server 處理序中 **執行緒堆疊** 的記憶體配置，以及**直接 Windows 配置 (DWA)** 使用。 這部分的虛擬位址空間又稱為「假釋記憶體」(Mem-To-Leave) 或「非緩衝集區」區域。
 
 為這些配置保留的虛擬位址空間會依 _**memory\_to\_reserve**_ 設定選項而定。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用的預設值為 256 MB。 若要覆寫預設值，請使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* 啟動參數。 如需 [-g](../database-engine/configure-windows/database-engine-service-startup-options.md) 啟動參數的詳細資訊，請參閱*資料庫引擎服務啟動選項*的文件頁面。
