@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e887c718c76563a7fcd8388c46a3e9e684faf6d5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 92d9a7518e0a6176199f39dcd69c87ea25c8004d
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "70304846"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280876"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux 上的 Always On 可用性群組容錯移轉
 
@@ -104,7 +104,7 @@ ms.locfileid: "70304846"
 
 其他資訊：
 - [Red Hat：管理叢集資源 (英文)](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html)
-- [acemaker - Move Resources Manually](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_manually_moving_resources_around_the_cluster.html) (Pacemaker - 手動移動資源)
+- [acemaker - Move Resources Manually](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_move_resources_manually.html) (Pacemaker - 手動移動資源)
  [SLES Administration Guide - Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) (SLES 管理指南 - 資源) 
  
 ## <a name="forceFailover"></a> 強制容錯移轉 

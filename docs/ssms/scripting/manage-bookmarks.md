@@ -13,12 +13,12 @@ ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3cbe866530d9c2dfe7db299ea913db8749e4709
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7879c6c7d07e7e0caeb075652b87b42fdf3ab66c
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253818"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261827"
 ---
 # <a name="manage-bookmarks"></a>管理書籤
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,4 +93,4 @@ ms.locfileid: "75253818"
  在 [書籤]  視窗中，清除或啟用所有書籤的核取方塊。 這不會移除書籤，或改變它們標示的程式碼行。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Management Studio 鍵盤快速鍵](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio 鍵盤快速鍵](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

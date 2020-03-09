@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76909848"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338824"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 版本資訊
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ SQL Server 2016 SP2 中包含有關效能和規模調整的改善。
 |變更追蹤清除    |   已改善針對變更追蹤資料表的變更追蹤清除效能和效率。    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) \(機器翻譯\) |
 |使用 CPU 逾時來取消 Resource Governor 要求   |   藉由實際取消要求來改善查詢要求的處理 (如果針對要求達到 CPU 閾值)。 此行為會在追蹤旗標 2422 下啟用。 |   [KB4038419](https://support.microsoft.com/help/4038419/add-cpu-timeout-to-resource-governor-request-max-cpu-time-sec) \(英文\)   |
 |使用 SELECT INTO 來在檔案群組中建立目標資料表    |   從 SQL Server 2016 SP2 開始，SELECT INTO T-SQL 語法開始支援將資料表載入其他檔案群組，而不是使用 T-SQL 語法中 ON <Filegroup name> 關鍵字使用者的預設檔案群組。 |       |
-|改善 TempDB 的間接檢查點    |   已改善 TempDB 的間接檢查點，以最小化 DPLists 上的執行緒同步鎖定競爭。 此改善可讓 SQL Server 2016 上的 TempDB 工作負載，在 TempDB 的間接檢查點為 ON 的情況下，預設便能進行相應放大。    |   [KB4040276](https://support.microsoft.com/help/4040276) \(機器翻譯\) |
+|改善 TempDB 的間接檢查點    |   已改善 TempDB 的間接檢查點，以最小化 DPLists 上的執行緒同步鎖定競爭。 此改善可讓 SQL Server 2016 上的 TempDB 工作負載，在 TempDB 的間接檢查點為 ON 的情況下，預設便能進行擴增。    |   [KB4040276](https://support.microsoft.com/help/4040276) \(機器翻譯\) |
 |已改善大型記憶體機器上的資料庫備份效能  |   SQL Server 2016 SP2 將於備份期間清空進行中 I/O 的方式最佳化，進而大幅提升小型至中型資料庫的備份效能。 我們已在對 2TB 的機器進行系統資料庫備份時，觀察到超過 100x 的改善。 效能提升會隨著資料庫大小增加而減少，因為要備份的分頁和備份 I/O 與反覆運算緩衝集區相較之下需要更多時間。 針對在配備大量記憶體的大型高階伺服器上裝載多個小型資料庫的客戶，此變更有助於提升備份效能。    |       |
 |針對啟用 TDE 之資料庫的 VDI 備份壓縮支援   |   SQL Server 2016 SP2 新增了 VDI 支援，可讓 VDI 備份解決方案針對啟用 TDE 的資料庫利用壓縮功能。 此改善引入新的備份格式，以針對啟用 TDE 的資料庫支援備份壓縮。 SQL Server 引擎會透明地處理新的和舊的備份格式以還原備份。   |       |
 |複寫代理程式設定檔參數的動態載入    |   這個新的增強功能能以動態方式載入複寫代理程式參數，而不需要重新啟動代理程式。 這個變更僅適用於最常使用的代理程式設定檔參數。 |       |

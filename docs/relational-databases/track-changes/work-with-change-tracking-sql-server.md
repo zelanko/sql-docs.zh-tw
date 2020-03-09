@@ -22,12 +22,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbe4665a1f690a41883ca3339e2e70f251c52a1a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 905c1dc08c2d2e766425b62d7e0a920730ae2b41
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177368"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256991"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>使用變更追蹤 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,16 +65,16 @@ ms.locfileid: "78177368"
  下列範例將說明如何取得初始同步處理版本和初始資料集。  
   
 ```sql  
-    declare @synchronization_version bigint;
+declare @synchronization_version bigint;
 
-    -- Obtain the current synchronization version. This will be used next time that changes are obtained.  
-    SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
+-- Obtain the current synchronization version. This will be used next time that changes are obtained.  
+SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
-    -- Obtain initial data set.  
-    SELECT  
-        P.ProductID, P.Name, P.ListPrice  
-    FROM  
-        SalesLT.Product AS P  
+-- Obtain initial data set.  
+SELECT  
+    P.ProductID, P.Name, P.ListPrice  
+FROM  
+   SalesLT.Product AS P  
 ```  
   
 ### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>使用變更追蹤函數來取得變更  
@@ -87,8 +87,7 @@ SELECT
     CT.ProductID, CT.SYS_CHANGE_OPERATION,  
     CT.SYS_CHANGE_COLUMNS, CT.SYS_CHANGE_CONTEXT  
 FROM  
-    CHANGETABLE(CHANGES SalesLT.Product, @last_synchronization_version) AS CT  
-  
+    CHANGETABLE(CHANGES SalesLT.Product, @last_synchronization_version) AS CT
 ```  
   
  一般而言，用戶端會想要取得資料列的最新資料，而非只有該資料列的主索引鍵。 因此，應用程式會讓 CHANGETABLE(CHANGES ...) 的結果與使用者資料表中的資料聯結。 例如，下列查詢會與 `SalesLT.Product` 資料表聯結，以便取得 `Name` 和 `ListPrice` 資料行的值。 請注意 `OUTER JOIN`的用法。 這是確保系統會針對已經從使用者資料表中刪除的這些資料列傳回變更資訊的必要條件。  
@@ -107,11 +106,11 @@ ON
 ```  
   
  若要取得可在下一次變更列舉中使用的版本，請使用 CHANGE_TRACKING_CURRENT_VERSION()，如下列範例所示。  
-  
+
 ```sql  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION()  
 ```  
-  
+ 
  當應用程式取得變更時，它必須同時使用 CHANGETABLE(CHANGES...) 和 CHANGE_TRACKING_CURRENT_VERSION()，如下列範例所示。  
   
 ```sql  
@@ -371,20 +370,20 @@ END
  內容資訊通常是用來識別變更的來源。 如果能夠識別變更的來源，再度同步處理時，資料存放區就可以使用該項資訊來避免取得變更。  
   
 ```sql  
-  -- Try to update the row and check for a conflict.  
-  WITH CHANGE_TRACKING_CONTEXT (@source_id)  
-  UPDATE  
-     SalesLT.Product  
-  SET  
-      ListPrice = @new_listprice  
-  FROM  
-      SalesLT.Product AS P  
-  WHERE  
-     ProductID = @product_id AND  
-     @last_sync_version >= ISNULL (  
-         (SELECT CT.SYS_CHANGE_VERSION FROM CHANGETABLE(VERSION SalesLT.Product,  
-         (ProductID), (P.ProductID)) AS CT),  
-         0)  
+-- Try to update the row and check for a conflict.  
+WITH CHANGE_TRACKING_CONTEXT (@source_id)  
+UPDATE  
+  SalesLT.Product  
+SET  
+  ListPrice = @new_listprice  
+FROM  
+  SalesLT.Product AS P  
+WHERE  
+  ProductID = @product_id AND  
+    @last_sync_version >= ISNULL (  
+    (SELECT CT.SYS_CHANGE_VERSION FROM CHANGETABLE(VERSION SalesLT.Product,  
+    (ProductID), (P.ProductID)) AS CT),  
+       0)  
 ```  
   
 ### <a name="ensuring-consistent-and-correct-results"></a>確保一致且正確的結果  

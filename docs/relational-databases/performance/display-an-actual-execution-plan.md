@@ -16,12 +16,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6e96322cdd6dcd310a550fa1cd94d80dba38738
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: eaa3002837dd19335abcc8383612bcb31642265e
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67946880"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256866"
 ---
 # <a name="display-an-actual-execution-plan"></a>顯示實際執行計畫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,3 +56,7 @@ ms.locfileid: "67946880"
 > [!NOTE] 
 > 或者，使用 [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)，在執行各陳述式後傳回其執行計畫資訊。 如果用於 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，[結果]  索引標籤會有連結，以圖形格式開啟執行計畫。   
 > 如需詳細資訊，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。
+  
+## <a name="see-also"></a>另請參閱  
+ [執行計畫](../../relational-databases/performance/execution-plans.md)    
+ [查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)  

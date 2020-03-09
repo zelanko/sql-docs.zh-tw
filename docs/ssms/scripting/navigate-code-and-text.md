@@ -21,12 +21,12 @@ ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b03a4fdc2d7a49cdd9896768fb7e7d989bc4d3d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4c1a77dfbe88a3018d7ae170675b84461f69a12b
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253747"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261835"
 ---
 # <a name="navigate-code-and-text"></a>導覽程式碼與文字
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "75253747"
 -   [移至]  命令。  
   
 > [!NOTE]  
->  如需完整的鍵盤快速鍵清單，請參閱 [SQL Server Management Studio 鍵盤快速鍵](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)。  
+>  如需完整的鍵盤快速鍵清單，請參閱 [SQL Server Management Studio 鍵盤快速鍵](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)。  
   
 ## <a name="navigating-with-bookmarks"></a>利用書籤導覽  
  若要在其他位置編輯文件，之後，再返回原始位置，請加入書籤。 您先設定好書籤，再利用鍵盤快速鍵來移到書籤。 請在書籤視窗中檢視書籤。  

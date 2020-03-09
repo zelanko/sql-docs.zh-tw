@@ -26,12 +26,12 @@ ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 741fce0949ce1a07f0f164c7f131579c220d4cfc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6d1c9bd306cf30ee0974aff2396946c131bfb824
+ms.sourcegitcommit: 639842f0b70e8c2c9ad5e86f9bfc3a4aad61a1df
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253812"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261857"
 ---
 # <a name="manage-code-formatting"></a>管理程式碼格式設定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "75253812"
 3.  若要將文字轉換成小寫，請按 CTRL+SHIFT+L，或按一下 [編輯]  功能表 [進階]  子功能表中的 [設成小寫]  。  
   
 > [!NOTE]  
->  如需完整的鍵盤快速鍵清單，請參閱 [SQL Server Management Studio 鍵盤快速鍵](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)。  
+>  如需完整的鍵盤快速鍵清單，請參閱 [SQL Server Management Studio 鍵盤快速鍵](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)。  
   
 ## <a name="displaying-and-linking-to-urls"></a>顯示和連結到 URL  
  您可以在程式碼中，建立和顯示可點按的 URL。 依預設，這些 URL：  

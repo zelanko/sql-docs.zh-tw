@@ -11,11 +11,11 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903646"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338955"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>逐步解說：設定 Integration Services (SSIS) Scale Out
 
@@ -25,48 +25,48 @@ ms.locfileid: "77903646"
 完成下列工作，以設定 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out。 
 
 > [!TIP]
-> 如果您要在一部電腦上安裝 Scale Out，請同時安裝 Scale Out Master 和 Scale Out Worker 功能。 當您同時安裝這些功能時，會自動產生端點，以連接至相應放大主機。 
+> 如果您要在一部電腦上安裝 Scale Out，請同時安裝 Scale Out Master 和 Scale Out Worker 功能。 當您同時安裝這些功能時，會自動產生端點，以連接至擴增主機。 
 
-* [安裝相應放大主機](#InstallMaster)
+* [安裝擴增主機](#InstallMaster)
 
-* [安裝相應放大背景工作](#InstallWorker)
+* [安裝擴增背景工作](#InstallWorker)
 
-* [安裝相應放大背景工作用戶端憑證](#InstallCert)
+* [安裝擴增背景工作用戶端憑證](#InstallCert)
 
 * [開啟防火牆通訊埠](#Firewall)
 
-* [啟動 SQL Server 相應放大主機和背景工作服務](#Start)
+* [啟動 SQL Server 擴增主機和背景工作服務](#Start)
 
-* [啟用相應放大主機](#EnableMaster)
+* [啟用擴增主機](#EnableMaster)
 
 * [啟用 SQL Server 驗證模式](#EnableAuth)
 
-* [啟用相應放大背景工作](#EnableWorker)
+* [啟用擴增背景工作](#EnableWorker)
 
-## <a name="InstallMaster"></a> 安裝相應放大主機
+## <a name="InstallMaster"></a> 安裝擴增主機
 
 若要設定 Scale Out Master，您必須在設定 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 時安裝 Database Engine Services、[!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 以及 SSIS 的 Scale Out Master 功能。 
 
 如需設定 Database Engine 和 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 的資訊，請參閱[安裝 SQL Server Database Engine](../../database-engine/install-windows/install-sql-server-database-engine.md) 和[安裝 Integration Services](../install-windows/install-integration-services.md)。
 
 > [!NOTE]
-> 若要使用預設 SQL Server 驗證帳戶進行 Scale Out 記錄，請在資料庫引擎安裝期間，於 [資料庫引擎設定]  頁面上選取 [混合模式] 作為驗證模式。 如需詳細資訊，請參閱[變更相應放大記錄的帳戶](change-logdb-account.md)。
+> 若要使用預設 SQL Server 驗證帳戶進行 Scale Out 記錄，請在資料庫引擎安裝期間，於 [資料庫引擎設定]  頁面上選取 [混合模式] 作為驗證模式。 如需詳細資訊，請參閱[變更擴增記錄的帳戶](change-logdb-account.md)。
 
 若要安裝 Scale Out Master 功能，請使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安裝精靈或命令提示字元。
 
 ### <a name="install-scale-out-master-with-the-sql-server-installation-wizard"></a>使用 SQL Server 安裝精靈安裝 Scale Out Master
-1.  在 [特徵選取]  頁面上，選取列在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 下方的 [相應放大主機]  。   
+1.  在 [特徵選取]  頁面上，選取列在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 下方的 [擴增主機]  。   
   
     ![特徵選取主要](media/feature-select-master.PNG)
   
-2.  在 [伺服器組態]  頁面上，選取要執行 [SQL Server Integration Services 相應放大主機服務]  的帳戶，然後選取 [啟動類型]  。  
+2.  在 [伺服器組態]  頁面上，選取要執行 [SQL Server Integration Services 擴增主機服務]  的帳戶，然後選取 [啟動類型]  。  
     ![伺服器組態](media/server-config.PNG)
 
-3.  在 [Integration Services 相應放大主機組態]  頁面上，指定相應放大主機用來與相應放大背景工作通訊的通訊埠編號。 預設通訊埠編號是 8391。  
+3.  在 [Integration Services 擴增主機組態]  頁面上，指定擴增主機用來與擴增背景工作通訊的通訊埠編號。 預設通訊埠編號是 8391。  
 
     ![主機組態](media/master-config.PNG "主機設定")
 
-4.  執行下列其中一項，以指定用來保護相應放大主機與相應放大背景工作間之通訊的 SSL 憑證。
+4.  執行下列其中一項，以指定用來保護擴增主機與擴增背景工作間之通訊的 SSL 憑證。
     * 按一下 [建立新的 SSL 憑證]  ，讓安裝程序建立預設自我簽署 SSL 憑證。  預設憑證會安裝到 [受信任的根憑證授權單位] 的 [本機電腦] 下方。 您可以在此憑證中指定 CN。 主要端點的主機名稱應該併入 CN 中。 預設會包含 Master 節點的電腦名稱和 IP。
     * 按一下 [使用現有的 SSL 憑證]  ，然後按一下 [瀏覽]  選取憑證，以選取本機電腦上的現有 SSL 憑證。 憑證的指紋會出現在文字方塊中。 按一下 [瀏覽]  會顯示在 [受信任的根憑證授權單位] 的 [本機電腦] 中所儲存的憑證。 您選取的憑證必須儲存在這裡。       
 
@@ -91,7 +91,7 @@ ms.locfileid: "77903646"
     > [!NOTE]
     > 如果 Scale Out Master 未與資料庫引擎一起安裝，而且資料庫引擎執行個體是一個具名執行個體，則您需要在安裝之後於 Scale Out Master 服務設定檔中設定 `SqlServerName`。 如需詳細資訊，請參閱 [Scale Out Master](integration-services-ssis-scale-out-master.md)。
 
-## <a name="InstallWorker"></a> 安裝相應放大背景工作
+## <a name="InstallWorker"></a> 安裝擴增背景工作
  
 若要設定 Scale Out Worker，您必須在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安裝時安裝 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 和其 Scale Out Worker 功能。
 
@@ -99,15 +99,15 @@ ms.locfileid: "77903646"
 
 ### <a name="install-scale-out-worker-with-the-sql-server-installation-wizard"></a>使用 SQL Server 安裝精靈安裝 Scale Out Worker
 
-1.  在 [特徵選取]  頁面上，選取列在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 下方的 [相應放大背景工作]  。
+1.  在 [特徵選取]  頁面上，選取列在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 下方的 [擴增背景工作]  。
 
     ![特徵選取背景工作](media/feature-select-worker.PNG)
 
-2.  在 [伺服器組態]  頁面上，選取要執行 [SQL Server Integration Services 相應放大背景工作服務]  的帳戶，然後選取 [啟動類型]  。
+2.  在 [伺服器組態]  頁面上，選取要執行 [SQL Server Integration Services 擴增背景工作服務]  的帳戶，然後選取 [啟動類型]  。
 
     ![伺服器組態 2](media/server-config-2.PNG "伺服器組態 2")
 
-3.  在 [Integration Services 相應放大背景工作組態]  頁面上，指定連接至相應放大主機的端點。 
+3.  在 [Integration Services 擴增背景工作組態]  頁面上，指定連接至擴增主機的端點。 
 
     - 針對**單一電腦**環境，同時安裝 Scale Out Master 和 Scale Out Worker 時，即會自動產生端點。 
 
@@ -125,7 +125,7 @@ ms.locfileid: "77903646"
     ![背景工作組態 2](media/worker-config-2.PNG "背景工作組態 2")
 
     > [!NOTE]
-    > 自我簽署 Scale Out Master 所使用的 SSL 憑證時，需要在具有 Scale Out Worker 的電腦上安裝對應的用戶端 SSL 憑證。 如果您在 [Integration Services 相應放大背景工作設定]  頁面上提供用戶端 SSL 憑證的檔案路徑，則會自動安裝憑證；否則，您稍後必須手動安裝憑證。 
+    > 自我簽署 Scale Out Master 所使用的 SSL 憑證時，需要在具有 Scale Out Worker 的電腦上安裝對應的用戶端 SSL 憑證。 如果您在 [Integration Services 擴增背景工作設定]  頁面上提供用戶端 SSL 憑證的檔案路徑，則會自動安裝憑證；否則，您稍後必須手動安裝憑證。 
      
 5. 完成 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安裝精靈。
 
@@ -142,7 +142,7 @@ ms.locfileid: "77903646"
     -   `/ISWORKERSVCMASTER` (選擇性)
     -   `/ISWORKERSVCCERT` (選擇性)
  
-## <a name="InstallCert"></a> 安裝相應放大背景工作用戶端憑證
+## <a name="InstallCert"></a> 安裝擴增背景工作用戶端憑證
 
 在安裝 Scale Out Worker 期間，將會在電腦上自動建立和安裝背景工作憑證。 同時，會在 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` 下方安裝對應的用戶端憑證 SSISScaleOutWorker.cer。 若要讓 Scale Out Master 驗證 Scale Out Worker，您必須將此用戶端憑證新增至具有 Scale Out Master 之本機電腦的根存放區。
   
@@ -155,7 +155,7 @@ ms.locfileid: "77903646"
 > [!Note]
 > 在您開啟防火牆連接埠之後，也需要重新啟動 Scale Out Worker 服務。
     
-## <a name="Start"></a> 啟動 SQL Server 相應放大主機和背景工作服務
+## <a name="Start"></a> 啟動 SQL Server 擴增主機和背景工作服務
 
 如果您未在安裝期間將服務的啟動類型設定為 [自動]  ，請啟動下列服務：
 
@@ -163,9 +163,9 @@ ms.locfileid: "77903646"
 
 -   SQL Server Integration Services Scale Out Worker 14.0 (SSISScaleOutWorker140)
 
-## <a name="EnableMaster"></a> 啟用相應放大主機
+## <a name="EnableMaster"></a> 啟用擴增主機
 
-在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)] 中建立 SSISDB 目錄時，請選取 [建立目錄]  對話方塊中的 [啟用此伺服器作為 SSIS 相應放大主機]  。
+在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)] 中建立 SSISDB 目錄時，請選取 [建立目錄]  對話方塊中的 [啟用此伺服器作為 SSIS 擴增主機]  。
 
 建立目錄之後，您可以使用 [Scale Out Manager](integration-services-ssis-scale-out-manager.md) 來啟用 Scale Out Master。
 
@@ -174,7 +174,7 @@ ms.locfileid: "77903646"
 
 停用 SQL Server 驗證時，不會封鎖執行套件。 不過，執行記錄無法寫入至 SSISDB 資料庫。
 
-## <a name="EnableWorker"></a> 啟用相應放大背景工作
+## <a name="EnableWorker"></a> 啟用擴增背景工作
 
 您可以使用 [Scale Out Manager](integration-services-ssis-scale-out-manager.md) (可提供圖形化使用者介面) 或預存程序來啟用 Scale Out Worker。
 

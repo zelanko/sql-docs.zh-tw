@@ -20,12 +20,12 @@ ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d0d5930734bb48c0914300a735f81e3ca2ced38
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 224b7023df4187702c14b41f17caad7c0b53b911
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67946863"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256858"
 ---
 # <a name="display-the-estimated-execution-plan"></a>顯示估計的執行計畫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,3 +53,7 @@ ms.locfileid: "67946863"
  
 > [!NOTE] 
 > 或者，使用 [SET STATISTICS XML](../../t-sql/statements/set-showplan-xml-transact-sql.md)，在不執行各個陳述式的情況下傳回其執行計畫資訊。 如果用於 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，[結果]  索引標籤會有連結，以圖形格式開啟執行計畫。   
+  
+## <a name="see-also"></a>另請參閱  
+ [執行計畫](../../relational-databases/performance/execution-plans.md)    
+ [查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)  

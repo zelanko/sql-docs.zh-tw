@@ -22,11 +22,11 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fe82e7d6746f3a5fc76fda3f960f069ef4345525
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71282602"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339536"
 ---
 # <a name="run-integration-services-ssis-packages"></a>執行 Integration Services (SSIS) 封裝
 
@@ -48,7 +48,7 @@ ms.locfileid: "71282602"
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
 |**SQL Server Data Tools**|否|否<br /><br /> 但是，您可以將 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區中現有的封裝加入專案，其中包括 msdb 資料庫。 用這種方式來將現有封裝加入專案，會在檔案系統中建立封裝的本機複本。|是|  
 |**SQL Server Management Studio (當您連接到主控 Integration Services 伺服器的 Database Engine 執行個體時)**<br /><br /> 如需詳細資訊，請參閱 [執行封裝對話方塊](#execute_package_dialog)|是|否<br /><br /> 但是，您可以將封裝從這些位置匯入伺服器。|否<br /><br /> 但是，您可以將封裝從檔案系統匯入伺服器。|
-|**SQL Server Management Studio (當您連接到主控已啟用為相應放大主機之 Integration Services 伺服器的 Database Engine 執行個體時)**<br /><br /> 如需詳細資訊，請參閱 [在 [相應放大] 中執行套件](../../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md)|是|否|否|
+|**SQL Server Management Studio (當您連接到主控已啟用為擴增主機之 Integration Services 伺服器的 Database Engine 執行個體時)**<br /><br /> 如需詳細資訊，請參閱 [在 [擴增] 中執行套件](../../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md)|是|否|否|
 |**SQL Server Management Studio (當連接到管理 SSIS 套件存放區的 Integration Services 服務時)**|否|是|否<br /><br /> 但是，您可以從檔案系統將封裝匯入 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區。|  
 |**dtexec**<br /><br /> 如需詳細資訊，請參閱 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。|是|是|是|  
 |**dtexecui**<br /><br /> 如需詳細資訊，請參閱[執行封裝公用程式 &#40;DtExecUI&#41; UI 參考](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)|否|是|是|  

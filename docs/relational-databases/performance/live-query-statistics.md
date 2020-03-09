@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 82634dc8169fa266e6fb1c92ec9a14129e40e947
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 03e19dd52f7ea996690eaf55bad9cdf9d5eccb6b
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78180087"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256929"
 ---
 # <a name="live-query-statistics"></a>即時查詢統計資料
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,6 +67,8 @@ ms.locfileid: "78180087"
 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 進階層上，需要資料庫的 `VIEW DATABASE STATE` 權限才能查看即時統計資料。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 標準和基本層上，需要**伺服器管理員**或 **Azure Active Directory 系統管理員**帳戶，才能查看即時統計資料。
   
 ## <a name="see-also"></a>另請參閱  
+ [執行計畫](../../relational-databases/performance/execution-plans.md)    
+ [查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)    
  [效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [效能監視及微調工具](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [開啟活動監視器 &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     
