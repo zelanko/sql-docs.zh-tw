@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 9d44a77a95b8b6a46fbc37a21a8abbd5ee75dfce
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76287148"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338222"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>修改 SQL 複寫的快照集初始化選項 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "76287148"
 [使用快照集來初始化訂閱](initialize-a-subscription-with-a-snapshot.md)時，有幾個要指定的選項。
 
 ## <a name="specify-snapshot-format-sql-server-management-studio"></a>指定快照集格式 (SQL Server Management Studio)
-  在 [發行集屬性 - **發行集>]** **對話方塊的 [快照集]\<** 頁面上，指定快照集格式。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
+  在 [發行集屬性 - \<發行集>]  對話方塊的 [快照集]  頁面上，指定快照集格式。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
   
 ### <a name="to-specify-snapshot-format"></a>若要指定快照集格式  
   
-1.  在 [發行集屬性 - **發行集>]** **對話方塊的 [快照集]\<** 頁面上，選取 [原生 SQL Server - 所有訂閱者都必須是執行 SQL Server 的伺服器]  或 [字元 - 如果發行者或訂閱者沒有執行 SQL Server 則需要]  。  
+1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [快照集]  頁面上，選取 [原生 SQL Server - 所有訂閱者都必須是執行 SQL Server 的伺服器]  或 [字元 - 如果發行者或訂閱者沒有執行 SQL Server 則需要]  。  
   
     > [!NOTE]  
     >  建議您選取原生格式，除非此發行集必須支援對 SQL Server Compact 資料庫或非 SQL Server 資料庫的訂閱。  
@@ -44,12 +44,12 @@ ms.locfileid: "76287148"
 ### <a name="default-snapshot-location"></a>預設快照集位置
 在「設定散發精靈」的 **[快照集資料夾]** 頁面中指定預設快照集位置。 如需使用此精靈的詳細資訊，請參閱[設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)。 如果您在未設定為「散發者」的伺服器上建立發行集，則請在「新增發行集精靈」的 **[快照集資料夾]** 頁面中指定預設快照集位置。 如需使用此精靈的詳細資訊，請參閱[建立發行集](../../relational-databases/replication/publish/create-a-publication.md)。  
   
- 在 [散發者屬性 - **散發者>]** **對話方塊的 [發行者]\<** 頁面上，修改預設快照集位置。 如需詳細資訊，請參閱[檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。 在 [發行集屬性 - **發行集>]\<** 對話方塊中為每個發行集設定快照集資料夾。 如需詳細資訊，請參閱 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在 [散發者屬性 - \<散發者>]  對話方塊的 [發行者]  頁面上，修改預設快照集位置。 如需詳細資訊，請參閱[檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。 在 [發行集屬性 - \<發行集>]  對話方塊中為每個發行集設定快照集資料夾。 如需詳細資訊，請參閱 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 ### <a name="to-modify-the-default-snapshot-location"></a>若要修改預設快照集位置  
   
-1.  在 [散發者屬性 - **散發者>]** **對話方塊的 [發行者]\<** 頁面上，按一下您要變更其預設快照集位置之發行者的屬性按鈕 ( **...** )。    
-2.  在 [發行者屬性 - **發行者>]\<** 對話方塊中，輸入 [預設快照集資料夾]  屬性的值。  
+1.  在 [散發者屬性 - \<散發者>]  對話方塊的 [發行者]  頁面上，按一下您要變更其預設快照集位置之發行者的屬性按鈕 ( **...** )。    
+2.  在 [發行者屬性 - \<發行者>]  對話方塊中，輸入 [預設快照集資料夾]  屬性的值。  
   
     > [!NOTE]  
     >  快照集代理程式必須有您指定之目錄的寫入權限，而散發代理程式或合併代理程式則必須有讀取權限。 如果使用提取訂閱，您必須指定一個共用目錄作為通用命名慣例 (UNC) 路徑，例如 \\\computername\snapshot。 如需詳細資訊，請參閱[保護快照集資料夾](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。    
@@ -70,7 +70,7 @@ ms.locfileid: "76287148"
 >  請勿同時使用 WebSync 和替代快照集資料夾位置。  
   
 #### <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio
-1.  在 [發行集屬性 - **發行集>]** **對話方塊的 [快照集]\<** 頁面上：  
+1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [快照集]  頁面上：  
   
     1.  選取 **[將檔案放在下列資料夾中]** ，然後按一下 **[瀏覽]** 以瀏覽至目錄，或者輸入應儲存快照集檔案之目錄的路徑。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "76287148"
 >  在某些情況下，壓縮的快照集可以改善網路之間傳送快照集檔案的效能。 不過，壓縮快照集需要由快照集代理程式在產生快照集檔案時，進行其他處理動作；並於套用快照集檔案時，進行散發代理程式或合併代理程式。 如此可能會減緩快照集的產生且在某些情況下會增加套用快照集的時間。 此外，若發生網路失敗，則無法繼續壓縮快照集；因此並不適合不穩定的網路。 透過網路使用壓縮快照集時，仔細考量這些權衡問題。  
   
 ### <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio
-1.  在 [發行集屬性 - **發行集>]** **對話方塊的 [快照集]\<** 頁面上：  
+1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [快照集]  頁面上：  
   
     1.  選取 **[將檔案放在下列資料夾中]** ，然後按一下 **[瀏覽]** 以瀏覽至目錄，或者輸入應儲存快照集檔案之目錄的路徑。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "76287148"
 
 ### <a name="execute-a-script"></a>執行指令碼 
 
-1.  在 [發行集屬性 - **發行集>]** **對話方塊的 [快照集]\<** 頁面上：    
+1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [快照集]  頁面上：    
     -   若要在套用快照集之前指定要執行的指令碼，請按一下 **[瀏覽]** 以瀏覽到指令碼，或在 **[套用快照前執行此指令碼]** 文字方塊中輸入指令碼的路徑。  
   
         > [!NOTE]  
