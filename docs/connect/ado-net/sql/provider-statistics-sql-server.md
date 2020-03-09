@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 837bb71e81ac2d2ead661915c332ad826c4f944f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 76fc14c112d47f04fc790df118eea77f1bec42cb
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251188"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896600"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server 的提供者統計資料
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 從 .NET Framework 2.0 版與 .NET Core 1.0 版開始，適用於 SQL Server 的 Microsoft SqlClient Data Provider 就支援執行階段統計資料。 您必須在建立有效的連線物件之後，將 <xref:Microsoft.Data.SqlClient.SqlConnection> 物件的 <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 屬性設定為 `True`，以啟用統計資料。 啟用統計資料之後，您可以透過 <xref:Microsoft.Data.SqlClient.SqlConnection> 物件的 <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 方法來擷取 <xref:System.Collections.IDictionary> 參考，以「及時快照集」方式加以檢閱。 您可以將清單列舉為一組名稱/值對字典項目。 這些名稱/值對並未排序。 您隨時都可以呼叫 <xref:Microsoft.Data.SqlClient.SqlConnection> 物件的 <xref:Microsoft.Data.SqlClient.SqlConnection.ResetStatistics%2A> 方法來重設計數器。 如果尚未啟用統計資料收集功能，就不會產生例外狀況。 此外，如果在未先呼叫 <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 的情況下呼叫 <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>，擷取的值會是每個項目的初始值。 如果您啟用統計資料、執行應用程式一段時間，然後停用統計資料，擷取的值將會反映出直到停用統計資料那一刻為止，所收集到的值。 所有收集到的統計值都是以個別連線為基礎。  
   

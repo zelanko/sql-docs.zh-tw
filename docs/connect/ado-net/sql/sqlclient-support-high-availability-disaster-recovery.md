@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: b84790960455d60411cae14ae180be0d8891e4a2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a7aa6a28a64e35c13c135e509b758a1636b3f896
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75258553"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896281"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient 對高可用性、災害復原的支援
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 此主題將討論 Microsoft SqlClient Data Provider for SQL Server 對高可用性、災害復原 (AlwaysOn 可用性群組) 的支援。  SQL Server 2012 新增了 AlwaysOn 可用性群組功能。 如需 AlwaysOn 可用性群組的詳細資訊，請參閱《SQL Server 線上叢書》。  
   

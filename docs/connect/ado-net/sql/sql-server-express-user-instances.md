@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 1b81b179657fc3564105a113712929ca8f3e10da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 91b00848fb42c64f1c180019a7618bf649488bd9
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75246973"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896247"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 使用者執行個體
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Microsoft SQL Server Express Edition (SQL Server Express) 支援只有在使用 Microsoft SqlClient Data Provider for SQL Server 時才提供的使用者執行個體功能。 使用者執行個體是 SQL Server Express 資料庫引擎的個別執行個體，這是由 SQL Server Express 的父執行個體所產生的。 使用者執行個體可讓不是本機電腦上系統管理員的使用者附加及連線到 SQL Server Express 資料庫。 每個執行個體都會在個別使用者的資訊安全內容下，以每個使用者一個執行個體為基礎的方式執行。  
   

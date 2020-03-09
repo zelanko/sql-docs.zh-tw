@@ -1,1 +1,1 @@
-![下載](../ssdt/media/download.png)[下載 OLE DB 驅動程式](../connect/oledb/download-oledb-driver-for-sql-server.md)
+![下載](../ssms/media/download-icon.png)[下載 OLE DB 驅動程式](../connect/oledb/download-oledb-driver-for-sql-server.md)

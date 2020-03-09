@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 613ae5b3326bc49ab25f30628ecd85e13959e2dc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9d80f5eec2c33fed635c18937185e2e21798e93b
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247737"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896727"
 ---
 # <a name="inserting-an-image-from-a-file"></a>從檔案插入影像
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 視資料來源的欄位類型而定，您可以將二進位大型物件 (BLOB) 當做二進位或字元資料寫入到資料庫。 BLOB 是參考 `text`、`ntext` 與 `image` 資料類型的一般詞彙，通常包含文件與圖片。  
   

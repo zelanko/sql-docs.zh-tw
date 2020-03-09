@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 129dc64fc9bac2111cd0bc5cb61f3ce7f1d98ee1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4b156f3f9deeb6f74393631555c0fc8ad0e9acf2
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247869"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897042"
 ---
 # <a name="bulk-copy-example-setup"></a>大量複製範例設定
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 類別只能用來將資料寫入到 SQL Server 資料表。 本主題中所顯示的程式碼範例會使用 SQL Server 範例資料庫 **AdventureWorks**。 若要避免變更現有資料表的程式碼範例，請將資料寫入您必須先建立的資料表。  
   

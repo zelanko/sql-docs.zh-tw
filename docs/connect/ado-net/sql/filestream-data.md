@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 602dfe9c96c1e8713b90c607806dd09ed16a37b6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e3e26a76522d1c1a99794076c5f152e6ec1e1f7d
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247764"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896746"
 ---
 # <a name="filestream-data"></a>FILESTREAM 資料
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 FILESTREAM 儲存體屬性適用於儲存在 varbinary(max) 資料行中的二進位 (BLOB) 資料。 在 FILESTREAM 之前，需要特殊處理才能儲存二進位資料。 非結構化資料 (例如文字文件、影像與影片) 通常會儲存在資料庫外部，因此難以管理。
 

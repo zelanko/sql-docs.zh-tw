@@ -5,22 +5,22 @@ ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: dd0f6329-d379-458e-aba1-7b0b9e7277ae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 707a03e0c79ce5d3bf536b36b16260004253d9c5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.reviewer: v-kaywon
+ms.openlocfilehash: e3e6a76e1404f8b75fcf54b9f0eda94eb967a281
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253342"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78895968"
 ---
 # <a name="step-2-create-a-sql-database-for-adonet-development"></a>步驟 2:建立 ADO.NET 開發的 SQL 資料庫
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[下載 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 [!INCLUDE[CreateDatabase](../../includes/createdatabase.md)]
 

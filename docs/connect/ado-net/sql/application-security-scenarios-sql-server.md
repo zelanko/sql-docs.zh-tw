@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 2173a6aaf0f07ffaa50d87ed7563dca8022ceebc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 76ed05f39cba61ea7f26deaef6cd38552b11f199
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75250969"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897086"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server 中的應用程式安全性案例
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 並沒有單一的正確方式可建立安全的 SQL Server 用戶端應用程式。 每個應用程式的需求、部署環境與使用者母體都是唯一的。 一開始部署時相當安全的應用程式，其安全性可能會隨著時間過去而降低。 沒有任何方式能夠準確預測未來可能會出現什麼樣的威脅。  
   

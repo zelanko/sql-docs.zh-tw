@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 7a070d71b653b0afc9e94c898653432e7e388d07
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bc2a921e3aec0068c11b2baab45c396d853a1a36
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75250929"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897058"
 ---
 # <a name="asynchronous-operations"></a>非同步作業
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 某些資料庫作業 (例如命令執行) 可能需要大量時間才能完成。 在這種情況下，單一執行緒的應用程式必須封鎖其他作業並等候命令完成，才會繼續它們自己的作業。 相反地，能夠將長時間執行的作業指定給背景執行緒，即允許前景執行緒在整個作業期間保持使用中。 例如，在 Windows 應用程式中，將長時間執行的作業委派給背景執行緒，可讓使用者介面執行緒在作業執行時維持回應。  
   

@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 2d2e27fafabc259be6bfbc0137b66e34d310f449
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 35b19b89a0539d9cc07bca0b1f09efda71cd5624
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251151"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896618"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server 中的快照集隔離
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 快照集隔離可增強 OLTP 應用程式的並行存取。  
   

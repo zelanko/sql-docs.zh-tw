@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 354b3ef1f0db45c64363d508d4bb055ee32d6416
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c7ace2feb39bcc3f5f257c0ac2c7360649cfc33c
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247825"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897003"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server 中的資料庫鏡像
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server 中的資料庫鏡像可讓您將 SQL Server 資料庫的複本或鏡像保存在待命伺服器上。 鏡像可確保隨時都有兩個個別的資料複本，進而提供高可用性與完整的資料備援能力。 SQL Server 的 Microsoft SqlClient 提供者提供對資料庫鏡像的隱含支援，這樣將其設定給 SQL Server 資料庫後，則開發人員無需採取任何動作或撰寫任何程式碼。 此外，<xref:Microsoft.Data.SqlClient.SqlConnection> 物件支援可在 <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A> 中提供容錯移轉夥伴伺服器名稱的明確連線模式。  
   

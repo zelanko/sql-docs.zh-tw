@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 85d24b6695dfe9f592bfefabb13c2042cf3450c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1029d9a0121b23963ccfc12582bd9d9cc7fd6cd6
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251174"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896592"
 ---
 # <a name="single-bulk-copy-operations"></a>單一大量複製作業
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 執行 SQL Server 大量複製作業最簡單的方式為執行對資料庫的單一作業。 根據預設，大量複製作業會做為隔離作業執行：該複製作業會以非交易的方式進行，且沒有機會復原。  
   

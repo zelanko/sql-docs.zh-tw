@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 423300788a020a18914a5bd25abac379cbb71500
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f052e70d55a789eab731f94ae086d2f47384593c
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247693"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896585"
 ---
 # <a name="multiple-bulk-copy-operations"></a>多項大量複製作業
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 您可以使用 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 類別的單一執行個體，執行多項大量複製作業。 如果複製作業在複本 (例如目的地資料表名稱) 之間變更，您必須在後續呼叫任何 **WriteToServer** 方法之前加以更新，如下列範例所示。 除非已明確地變更，所有屬性值與之前指定執行個體上的大量複製作業維持相同。  
   

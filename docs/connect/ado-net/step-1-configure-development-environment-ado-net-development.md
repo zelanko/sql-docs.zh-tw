@@ -5,22 +5,22 @@ ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fd1b2327271fb29d75a529670d9e0800b2dc30a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 6ef7c4e9a1040783f535f58e595b0c9840e94cec
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253332"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78895841"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>步驟 1:設定 ADO.NET 開發的開發環境
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[下載 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 - 下一篇文章：&nbsp;&nbsp;&nbsp;[步驟 2：建立用於 ADO.NET 開發的 SQL 資料庫](step-2-create-sql-database-ado-net-development.md)  
 
@@ -30,7 +30,7 @@ ms.locfileid: "75253332"
 
 ### <a name="adonet-for-windows"></a>ADO.NET (適用於 Windows)
 
-- ![Download-DownArrow-Circled](../../ssdt/media/download.png)[下載並安裝 .NET Framework，包含 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[下載並安裝 .NET Framework，包含 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 - 安裝 Visual Studio Community 或類似的整合式開發環境 (IDE)，以撰寫和編譯 C# 原始程式碼。 Microsoft 現在 *免費*提供 Visual Studio Community。  
     - [下載 Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs)  
@@ -41,4 +41,4 @@ ms.locfileid: "75253332"
 
 您可以從下列位置取得下載適用於各種作業系統之 .NET Core 的連結：
 
-- ![Download-DownArrow-Circled](../../ssdt/media/download.png)[下載並安裝 .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[下載並安裝 .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)

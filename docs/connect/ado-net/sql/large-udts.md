@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: af8402a7ff58e5d5b90d655547abcaf159bb67b4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e572b8fcf1550562c7a9f1841eec1c311f18c3f8
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247715"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896699"
 ---
 # <a name="large-udts"></a>大型 UDT
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 使用者定義類型 (UDT) 可讓開發人員將 Common Language Runtime (CLR) 物件儲存在 SQL Server 資料庫中來擴充伺服器的純量類型系統。 UDT 可包含多個項目並可具有不同的行為，與只含單一 SQL Server 系統資料類型的傳統別名資料類型有所不同。  
   
@@ -110,3 +110,4 @@ reader.close
   
 ## <a name="next-steps"></a>後續步驟
 - [SQL Server 二進位和大型數值資料](sql-server-binary-large-value-data.md)
+ 

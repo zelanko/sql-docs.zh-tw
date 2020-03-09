@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: aa02072e139c2446ae67086ef43668af4403890c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4fd63ceb329fd6e6f7768425a1ccf43afa27dd21
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75244006"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896252"
 ---
 # <a name="sql-xml-column-values"></a>SQL XML 資料行值
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server 支援 `xml` 資料類型，開發人員可以使用 <xref:Microsoft.Data.SqlClient.SqlCommand> 類別的標準行為擷取包含此類型的結果集。 `xml` 資料行的擷取方式就如同擷取任何資料行 (例如，擷取到 <xref:Microsoft.Data.SqlClient.SqlDataReader>)，但如果您想要將資料行的內容當做 XML 使用，則必須使用 <xref:System.Xml.XmlReader>。  
   

@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 7f9893d7ac9dd83ae5212684678fc240a8d77097
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b4d0f31c8f5fbb282c880abaee62f05dc190bbfc
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251139"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896657"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>將 XML 值指定為參數
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 如果查詢需要值為 XML 字串的參數，則開發人員可以使用 **SqlXml** 資料類型的執行個體提供該值。 這其實沒什麼訣竅；SQL Server 中的 XML 資料行接受參數值的方式與其他資料類型完全相同。  
   

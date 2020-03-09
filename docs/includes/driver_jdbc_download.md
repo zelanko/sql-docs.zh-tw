@@ -1,1 +1,1 @@
-![下載](../ssdt/media/download.png)[下載 JDBC 驅動程式](../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)
+![下載](../ssms/media/download-icon.png)[下載 JDBC 驅動程式](../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)

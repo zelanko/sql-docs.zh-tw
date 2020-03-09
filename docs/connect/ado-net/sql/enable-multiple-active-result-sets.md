@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: a6907e7f5581ea5160a2c3d5c4b9170c1bced523
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: adcedcdfd0c8909d6834c25df8f03a9b5dc2fa5d
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247802"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896957"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>啟用 Multiple Active Result Set
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Multiple Active Result Set (MARS) 是與 SQL Server 搭配使用的功能，允許在單一連線中執行多個批次作業。 在啟用 MARS 以與 SQL Server 搭配使用時，使用的每個命令物件都會在連線中新增工作階段。  
   

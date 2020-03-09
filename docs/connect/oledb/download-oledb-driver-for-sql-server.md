@@ -7,12 +7,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a49f0ffe4de2f3242daf147ecb80dc950f8d8a9f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: b7c0e54f4193fcb918a5b4b5a362e1bbd9fee646
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177398"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866458"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>下載 Microsoft OLE DB Driver for SQL Server
 
@@ -24,8 +24,8 @@ OLE DB Driver for SQL Server 是用於 OLE DB 的獨立資料存取應用程式�
 
 Microsoft OLE DB Driver 18.3 for SQL Server 是最新的正式運作 (GA) 版本。 如果您已安裝舊版的 Microsoft OLE DB Driver 18 for SQL Server，則安裝 18.3 會將其升級至 18.3。
 
-**[![下載](../../ssdt/media/download.png) 下載 Microsoft OLE DB Driver for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2117515)**  
-**[![下載](../../ssdt/media/download.png) 下載 Microsoft OLE DB Driver for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2117517)**  
+**[![下載](../../ssms/media/download-icon.png) 下載 Microsoft OLE DB Driver for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2117515)**  
+**[![下載](../../ssms/media/download-icon.png) 下載 Microsoft OLE DB Driver for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2117517)**  
 
 ### <a name="version-information"></a>版本資訊
 

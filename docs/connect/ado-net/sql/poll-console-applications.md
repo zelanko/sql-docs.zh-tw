@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: bf89d2d111452970955953132edd76e602590668
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 89bcaa6d6e92ccde2d1c151b493c26fe1279d89f
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247681"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896641"
 ---
 # <a name="polling-in-console-applications"></a>在主控台應用程式中輪詢
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 ADO.NET 中的非同步作業可讓您在一個執行緒上起始耗時的資料庫作業，同時在另一個執行緒上執行其他工作。 不過，在大部分情況下，您最後將會到達應用程式不應該繼續執行的時機點，直到資料庫作業完成為止。 在這種情況下，輪詢非同步作業以判斷作業是否已經完成會很有用。  
   

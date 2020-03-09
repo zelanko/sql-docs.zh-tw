@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 83dca011087150eef5d8fdc948bb65cc6808830e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e8c5fbecb8892639e5e4e0cb608c3c4de0447508
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253385"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896015"
 ---
 # <a name="windows-applications-using-callbacks"></a>使用回撥的 Windows 應用程式
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 在大部分的非同步處理案例中，您想要啟動資料庫作業，並繼續執行其他處理序，而不需等候資料庫作業完成。 不過，許多案例都需要在資料庫作業結束後執行某些動作。 例如，在 Windows 應用程式中，您可以將長時間執行的作業委派給背景執行緒，同時讓使用者介面執行緒維持回應。 不過，當資料庫作業完成時，您想要使用結果來填入表單。 這種類型的案例最適合使用回呼來實作。  
   

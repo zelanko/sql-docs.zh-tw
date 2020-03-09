@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d1b5742d082fdb40b03663cf2db719399290a010
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bd0dbbedcb2fa33af80e0a1a1d593bf7df27edb6
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247770"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896952"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>列舉 SQL Server 的執行個體 (ADO.NET)
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server 允許應用程式在目前網路內尋找 SQL Server 執行個體。 <xref:System.Data.Sql.SqlDataSourceEnumerator> 類別會向應用程式開發人員公開此資訊，並提供包含所有可見伺服器相關資訊的 <xref:System.Data.DataTable>。 這個傳回的資料表包含網路上可用伺服器執行個體的清單 (該清單與使用者嘗試建立新連線時所提供的清單相符)，並展開包含 [連線屬性]  對話方塊上所有可用伺服器的下拉式清單。 顯示的結果不一定完整。  
   

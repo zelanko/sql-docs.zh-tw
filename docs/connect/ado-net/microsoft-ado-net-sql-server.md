@@ -5,22 +5,22 @@ ms.custom: ''
 ms.date: 09/30/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad2ad93bd44cba25649c55b816ce59b2fd5245b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 0fc4e3bd7565d4227da1e2d29853ff65ed2b7ca5
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75250989"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866402"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[下載 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 ADO.NET 是 .NET 語言的核心資料存取技術。 使用 Microsoft.Data.SqlClient 命名空間可存取 SQL Server，或使用來自其他供應商的提供者來存取其存放區。 使用 System.Data.Odbc 或 System.Data.Oledb 可從使用其他資料存取技術的 .NET 語言存取資料。 當您在客戶端應用程式中需要離線資料快取時可使用 System.Data.Dataset。 其同時提供在 Web 服務中相當實用的本機持續性和 XML 功能。  
   

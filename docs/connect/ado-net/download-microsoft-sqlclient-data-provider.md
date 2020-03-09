@@ -13,16 +13,14 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 5a590b6ad105837408db8454493a7a9d4e28862f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ca06e65c1794416cbc6a33fee1b7508a44c289a9
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251040"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897138"
 ---
 # <a name="download-microsoft-sqlclient-data-provider-for-sql-server"></a>下載適用於 SQL Server 的 Microsoft SqlClient Data Provider
-
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[下載 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ## <a name="downloading-the-driver"></a>下載驅動程式
 Microsoft.Data.SqlClient 套件可在 NuGet.org 上取得。請參閱下列連結中的相依性區段，以下載相依性。

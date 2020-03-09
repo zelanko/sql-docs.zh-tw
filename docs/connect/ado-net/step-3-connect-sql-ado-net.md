@@ -5,22 +5,22 @@ ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cff776c4881dcc012a825bcd48f6d6271b95bb75
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.reviewer: v-kaywon
+ms.openlocfilehash: e3e062aa9c0418bb76209e5e8f45c973b7a0f816
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247522"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78895977"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>步驟 3：使用 ADO.NET 連線到 SQL 的概念證明
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[下載 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 - 上一篇文章：&nbsp;&nbsp;&nbsp;[步驟 2：建立用於 ADO.NET 開發的 SQL 資料庫](step-2-create-sql-database-ado-net-development.md)  
 - 下一篇文章：&nbsp;&nbsp;&nbsp;[步驟 4：使用 ADO.NET 復原連線到 SQL](step-4-connect-resiliently-sql-ado-net.md)  

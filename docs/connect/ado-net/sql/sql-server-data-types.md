@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 46edb611f29c447f7e1ca2228212ef3e0d594fff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 50a6e158f5678b30028337b70e1da6914038e64a
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75244035"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896545"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 資料類型和 ADO.NET
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server 與 .NET 是以不同的型別系統為基礎，這可能會導致資料遺失。 為維持資料完整性，Microsoft SqlClient Data Provider for SQL Server (<xref:Microsoft.Data.SqlClient>) 提供了可用於處理 SQL Server 資料的具型別存取子方法。 您可以使用 <xref:System.Data.SqlDbType> 類別中的列舉來指定 <xref:Microsoft.Data.SqlClient.SqlParameter> 資料類型。  
   

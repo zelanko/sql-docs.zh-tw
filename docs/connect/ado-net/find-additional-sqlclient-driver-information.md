@@ -13,16 +13,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 08ff52be06f976171623b4af91da3ebc1d26d53b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 39723f61eaa5bf2fc18e950bbd3432837ee8620a
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251028"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897114"
 ---
 # <a name="finding-additional-sqlclient-driver-information"></a>尋找其他 SqlClient 驅動程式資訊
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[下載 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 如需 Microsoft SqlClient Data Provider for SQL Server 開發的整體詳細資訊，請參閱下列線上資源：
 

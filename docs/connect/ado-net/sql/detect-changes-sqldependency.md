@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 6a003670c15ac95b6f0a5f70d0997c1c854b089e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 90b11516e9fa8ed993792bfec2a77757249b696d
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247815"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896982"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>使用 SqlDependency 偵測變更
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 <xref:Microsoft.Data.SqlClient.SqlDependency> 物件可以與 <xref:Microsoft.Data.SqlClient.SqlCommand> 相關聯，以偵測查詢結果與原先擷取的結果是否不同。 您也可以將委派指派給 `OnChange` 事件，這會在相關聯命令的結果變更時引發。 執行命令之前，必須先將 <xref:Microsoft.Data.SqlClient.SqlDependency> 與命令建立關聯。 <xref:Microsoft.Data.SqlClient.SqlDependency> 的 `HasChanges` 屬性也可以用來判斷自第一次擷取資料之後，查詢結果是否已經變更。
 

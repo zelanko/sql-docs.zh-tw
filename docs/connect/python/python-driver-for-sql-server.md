@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ccd2ce331f6e88933ff546c18446b5edbc956511
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1f59b2d14ab34cee3e703eda9fb9db6750da96a2
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67935671"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866636"
 ---
 # <a name="python-sql-driver"></a>Python SQL 驅動程式
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[安裝適用於 Python 的 SQL 驅動程式](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[安裝適用於 Python 的 SQL 驅動程式](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 您可以在 Windows、Linux 或 Mac 上使用 Python 連線到 SQL Database。   
   

@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 7855ef064061957cbc44dfcb4b075ebbd3893325
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a3a567d86cb70c5d6d931d631a0f744ea59d359f
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247727"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896698"
 ---
 # <a name="manipulating-data"></a>操作資料
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 在引進 Multiple Active Result Set (MARS) 之前，開發人員必須使用多個連線或伺服器端資料指標來解決特定案例。 此外，當在交易情況中使用多重連線時，需要繫結連線 (使用 **sp_getbindtoken** 及 **sp_bindsession**)。 下列案例示範如何使用已啟用 MARS 的連線，而不是多個連線。  
   

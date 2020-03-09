@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 4c2c2d0dcc12c38cd462f0bcfe86db7bbe829dce
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8e159a6db1820169cd81caa05e70765ac32f0d56
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75243994"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896234"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>ASP.NET 應用程式中的 SqlDependency
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 此節的範例示範如何利用 ASP.NET <xref:System.Web.Caching.SqlCacheDependency> 物件，間接使用 <xref:Microsoft.Data.SqlClient.SqlDependency>。 <xref:System.Web.Caching.SqlCacheDependency> 物件會使用 <xref:Microsoft.Data.SqlClient.SqlDependency> 來接聽通知，並正確更新快取。  
   
