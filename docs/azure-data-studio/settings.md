@@ -11,11 +11,11 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: a874aaf9ec136ff9ea27cbeaa92011a07f3718c7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67959275"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340440"
 ---
 # <a name="modify-user-and-workspace-settings"></a>修改使用者與工作區設定
 
@@ -28,9 +28,9 @@ ms.locfileid: "67959275"
 
 ## <a name="creating-user-and-workspace-settings"></a>建立使用者與工作區設定
 
-功能表命令 [檔案]   > [喜好設定]   > [設定]  (在 Mac 上為 [程式碼]   > [喜好設定]   > [設定]  )，提供可設定使用者與工作區設定的進入點。 系統會提供您一份 [預設設定] 清單。 將您任何要變更的設定複製到適當的 `settings.json` 檔案。 右側的索引標籤可讓您在使用者與工作區設定檔案之間快速切換。
+功能表命令 [檔案] ****  > [喜好設定] ****  > [設定] **** (在 Mac 上為 [程式碼] ****  > [喜好設定] ****  > [設定] **** )，提供可設定使用者與工作區設定的進入點。 系統會提供您一份 [預設設定] 清單。 將您任何要變更的設定複製到適當的 `settings.json` 檔案。 右側的索引標籤可讓您在使用者與工作區設定檔案之間快速切換。
 
-您也可以從**命令選擇區** (**Ctrl+Shift+P**) 使用 [喜好設定:  開啟使用者設定] 和 [喜好設定:  開啟工作區設定]，或使用鍵盤快速鍵 (**Ctrl+,** )，開啟使用者與工作區設定。
+您也可以從**命令選擇區** (**Ctrl+Shift+P**) 使用 [喜好設定: **** 開啟使用者設定] 和 [喜好設定: **** 開啟工作區設定]，或使用鍵盤快速鍵 (**Ctrl+,** )，開啟使用者與工作區設定。
 
 下列範例會停用編輯器中的行號，並將程式碼行設定為自動縮排。
 
