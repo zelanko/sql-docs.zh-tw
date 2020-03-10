@@ -10,11 +10,11 @@ ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
 ms.openlocfilehash: b459877be731da11b33d13772bbf186ecf72198c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "72381854"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339586"
 ---
 # <a name="using-azure-active-directory"></a>使用 Azure Active Directory
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -118,7 +118,7 @@ ms.locfileid: "72381854"
 ### <a name="azure-active-directory-authentication-using-an-access-token"></a>使用存取權杖進行 Azure Active Directory 驗證
 
 - 使用 `IDataInitialize::GetDataSource`：
-    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Access Token=[access token]**;Use Encryption for Data=true
+    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Access Token=[access token]** ;Use Encryption for Data=true
 - 使用 `DBPROP_INIT_PROVIDERSTRING`：
     > 不支援透過 `DBPROP_INIT_PROVIDERSTRING` 提供存取權杖
 

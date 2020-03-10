@@ -14,11 +14,11 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "70228429"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338853"
 ---
 # <a name="common-errors-with-database-mail"></a>使用 Database Mail 的常見錯誤 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ALTER DATABASE msdb SET ENABLE_BROKER ;
 GO
 ``` 
 
-Database Mail 仰賴許多內部預存程序。 為降低介面區，安裝新的 SQL Server 時會停用這些預存程序。 若要啟用這些預存程序，請使用 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 系統預存程序的 **Database Mail XP 選項**，如下例所示：
+Database Mail 仰賴許多內部預存程序。 為降低介面區，安裝新的 SQL Server 時會停用這些預存程序。 若要啟用這些預存程序，請使用 **sp_configure** 系統預存程序的 [Database Mail XP 選項](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)，如下例所示：
 
 ```sql
 EXEC sp_configure 'show advanced options', 1;  

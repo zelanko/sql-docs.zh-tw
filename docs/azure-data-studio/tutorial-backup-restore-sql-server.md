@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73532438"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339866"
 ---
-# <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 備份及還原資料庫
+# <a name="backup-and-restore-databases-using-name-sos"></a>使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 備份及還原資料庫
 
 在本教學課程中，您將了解如何使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 執行下列動作：
 > [!div class="checklist"]

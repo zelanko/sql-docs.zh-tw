@@ -13,11 +13,11 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75254097"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340512"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>使用自動植入將 Always On 可用性群組的次要複本初始化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,11 +103,11 @@ WITH (
  GO
 ```
 
-於 `SEEDING_MODE` 陳述式執行期間在主要複本上設定 `CREATE AVAILABILITY GROUP` 沒有效用，因為主要複本已經包含資料庫的主要讀取/寫入複本。 只有將另一個複本變成主要，而且新增資料庫時，才會套用 `SEEDING_MODE`。 您可於稍後變更植入模式，請參閱[變更複本的植入模式](#change-the-seeding-mode-of-a-replica)。
+於 `CREATE AVAILABILITY GROUP` 陳述式執行期間在主要複本上設定 `SEEDING_MODE` 沒有效用，因為主要複本已經包含資料庫的主要讀取/寫入複本。 只有將另一個複本變成主要，而且新增資料庫時，才會套用 `SEEDING_MODE`。 您可於稍後變更植入模式，請參閱[變更複本的植入模式](#change-the-seeding-mode-of-a-replica)。
 
 在變成次要複本的執行個體上，一旦加入該執行個體，下列訊息就會新增至 SQL Server 記錄檔：
 
->可用性群組 'AGName' 的本機可用性複本並未被授與建立資料庫的權限，但有 `SEEDING_MODE` 的 `AUTOMATIC`。 使用 `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` 命令可建立主要可用性複本植入的資料庫。
+>可用性群組 'AGName' 的本機可用性複本並未被授與建立資料庫的權限，但有 `AUTOMATIC` 的 `SEEDING_MODE`。 使用 `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` 命令可建立主要可用性複本植入的資料庫。
 
 ### <a name = "grantCreate"></a> 授與可用性群組在次要複本上建立資料庫的權限
 

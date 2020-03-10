@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74412515"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339442"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>原生編譯的 T-SQL 模組支援的功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -199,27 +199,27 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   所有[數學函數 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 
--   日期函數：CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME 和 YEAR。  
+-   日期函式：CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME 和 YEAR。  
 
--   字串函數：LEN、LTRIM、RTRIM 和 SUBSTRING。  
+-   字串函式：LEN、LTRIM、RTRIM 和 SUBSTRING。  
     - **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
-      從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 開始，也支援下列內建函式︰TRIM、TRANSLATE 及 CONCAT_WS。  
+      從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 開始，也支援下列內建函式：TRIM、TRANSLATE 及 CONCAT_WS。  
 
--   Identity 函數：SCOPE_IDENTITY  
+-   識別函式：SCOPE_IDENTITY  
 
--   NULL 函數：ISNULL  
+-   NULL 函式：ISNULL  
 
--   Uniqueidentifier 函數：NEWID 和 NEWSEQUENTIALID  
+-   Uniqueidentifier 函式：NEWID 和 NEWSEQUENTIALID  
 
 -   JSON 函數  
     - **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
       從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 開始，原生編譯模組支援 JSON 函式。
 
--   錯誤函數：ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE  
+-   錯誤函式：ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE  
 
 -   系統函式：@@rowcount。 原生編譯預存程序內的陳述式會更新 @@rowcount，您可以在原生編譯預存程序中使用 @@rowcount，來判斷該原生編譯預存程序內最後執行之陳述式所影響的資料列數。 不過，@@rowcount 會在原生編譯預存程序開始及結束執行時重設為 0。  
 
--   安全性函數：IS_MEMBER({'group' | 'role'})、IS_ROLEMEMBER ('role' [, 'database_principal'])、IS_SRVROLEMEMBER ('role' [, 'login'])、ORIGINAL_LOGIN()、SESSION_USER、CURRENT_USER、SUSER_ID(['login'])、SUSER_SID(['login'] [, Param2])、SUSER_SNAME([server_user_sid])、SYSTEM_USER、SUSER_NAME、USER、USER_ID(['user'])、USER_NAME([id])、CONTEXT_INFO()。
+-   安全性函式：IS_MEMBER({'group' | 'role'})、IS_ROLEMEMBER ('role' [, 'database_principal'])、IS_SRVROLEMEMBER ('role' [, 'login'])、ORIGINAL_LOGIN()、SESSION_USER、CURRENT_USER、SUSER_ID(['login'])、SUSER_SID(['login'] [, Param2])、SUSER_SNAME([server_user_sid])、SYSTEM_USER、SUSER_NAME、USER、USER_ID(['user'])、USER_NAME([id])、CONTEXT_INFO()。
 
 -   原生模組可以巢狀方式執行。
 
@@ -244,13 +244,13 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 ##  <a name="los"></a> 排序的限制  
  在使用 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) 的查詢中，您可以排序 8000 多個資料列。 但是沒有 [ORDER BY 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)，[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 最多只能排序 8000 個資料列 (如果有聯結則資料列更少)。  
 
- 如果查詢同時使用 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 運算子和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)，TOP 運算子最多可以指定 8192 個資料列。 如果您指定超過 8192 個資料列，則會收到錯誤訊息：**Msg 41398，層級 16，狀態 1、程序 *\<程序名稱>* 、行 *\<行號>* 。TOP 運算子最多可以傳回 8192 個資料列；要求 *\<數字>* 。**  
+ 如果查詢同時使用 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 運算子和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)，TOP 運算子最多可以指定 8192 個資料列。 如果您指定超過 8192 個資料列，則會收到錯誤訊息：**Msg 41398，層級 16，狀態 1、程序\<程序名稱>  、行 \<行號>  。TOP 運算子最多可以傳回 8192 個資料列；要求 \<數字>  個。**  
 
  如果您沒有 TOP 子句，則可以使用 ORDER BY 排序任意數目的資料列。  
 
  如果您未使用 ORDER BY 子句，則可以使用任何整數值搭配 TOP 運算子。  
 
- TOP N = 8192 的範例：編譯  
+ 使用 TOP N = 8192 的範例：編譯  
 
 ```sql  
 CREATE PROCEDURE testTop  
@@ -263,7 +263,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- TOP N > 8192 的範例：編譯失敗。  
+ 使用 TOP N > 8192 的範例：無法編譯。  
 
 ```sql  
 CREATE PROCEDURE testTop  

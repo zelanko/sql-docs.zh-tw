@@ -11,11 +11,11 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6cce219b5e5d5d324e5e116bb9f55a931d7caaf8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71298622"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339670"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 資料庫
 
@@ -102,7 +102,7 @@ ms.locfileid: "71298622"
 |----------|-----------------|  
 |version|這會追蹤 CDC 執行個體組態的版本。 每當更新資料表以及加入新的擷取執行個體或是移除現有的擷取執行個體時，都會更新此項目。|  
 |connect_string|Oracle 連接字串。 基本範例如下：<br /><br /> `<server>:<port>/<instance>` (例如 `erp.contoso.com:1521/orcl`)。<br /><br /> 連接字串還可以指定 Oracle Net 連接描述項，例如， `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`。<br /><br /> 如果使用目錄伺服器或 tnsnames，則連接字串可以是連接的名稱。<br /><br /> 如需 Oracle 連接字串的詳細資訊，請參閱 [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153)，以取得 Oracle CDC 服務所使用之 Oracle Instant Client 的 Oracle 資料庫連接字串詳細資訊。|  
-|use_windows_authentication|下列其中一個值的布林值：<br /><br /> **0**：提供 Oracle 使用者名稱和密碼進行驗證 (預設)<br /><br /> **1**：使用 Windows 驗證連接到 Oracle 資料庫。 只有當設定 Oracle 資料庫使用 Windows 驗證時，才可使用這個選項。|  
+|use_windows_authentication|下列其中一個值的布林值：<br /><br /> **0**:提供 Oracle 使用者名稱和密碼進行驗證 (預設)<br /><br /> **1**:使用 Windows 驗證連接到 Oracle 資料庫。 只有當設定 Oracle 資料庫使用 Windows 驗證時，才可使用這個選項。|  
 |username|記錄採礦之 Oracle 資料庫使用者的名稱。 只有當 **use_windows_authentication = 0**時，才會強制這項設定。|  
 |密碼|記錄採礦之 Oracle 資料庫使用者的密碼。 只有當 **use_windows_authentication = 0**時，才會強制這項設定。|  
 |transaction_staging_timeout|未認可的 Oracle 交易在寫入 **cdc.xdbcdc_staged_transactions** 資料表之前保留在記憶體中的時間 (以秒數為單位)。 預設值是 120 秒。|  
@@ -145,8 +145,8 @@ ms.locfileid: "71298622"
 |----------|-----------------|  
 |status|目前 Oracle CDC 執行個體的目前狀態碼。 此狀態會描述 CDC 的目前狀態。|  
 |sub_status|提供有關目前狀態之其他資訊的第二層狀態。|  
-|作用中|下列其中一個值的布林值：<br /><br /> **0**：Oracle CDC 執行個體處理序不在使用中。<br /><br /> **1**：Oracle CDC 執行個體處理序為使用中。|  
-|error|下列其中一個值的布林值：<br /><br /> **0**：Oracle CDC 執行個體處理序不在錯誤狀態中。<br /><br /> **1**：Oracle CDC 執行個體在錯誤狀態中。|  
+|作用中|下列其中一個值的布林值：<br /><br /> **0**:Oracle CDC 執行個體處理序不在使用中。<br /><br /> **1**:Oracle CDC 執行個體處理序為使用中。|  
+|error|下列其中一個值的布林值：<br /><br /> **0**:Oracle CDC 執行個體處理序不在錯誤狀態中。<br /><br /> **1**:Oracle CDC 執行個體在錯誤狀態中。|  
 |status_message|提供錯誤或狀態描述的字串。|  
 |timestamp|包含上次更新擷取狀態之時間 (UTC) 的時間戳記。|  
 |active_capture_node|目前正在執行 Oracle CDC 服務和 Oracle CDC 執行個體 (它正在處理 Oracle 交易記錄) 的主機名稱 (此主機可以是叢集上的節點)。|  
