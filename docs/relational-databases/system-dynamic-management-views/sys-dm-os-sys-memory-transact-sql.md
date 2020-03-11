@@ -20,12 +20,12 @@ ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ca8b0f6e700e97c5cbc33964cc450ad54ea1a7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 891ae8c4f21d0a38302a7213aab22b8a70e855ba
+ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67899708"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79027950"
 ---
 # <a name="sysdm_os_sys_memory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "67899708"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**total_physical_memory_kb**|**Bigint**|可供作業系統使用之實體記憶體的大小總計 (以 KB 為單位)。|  
-|**available_physical_memory_kb**|**Bigint**|可用實體記憶體的大小 (以 KB 為單位)。|  
-|**total_page_file_kb**|**Bigint**|由作業系統回報之認可限制的大小 (以 KB 為單位)。|  
-|**available_page_file_kb**|**Bigint**|未使用之分頁檔的總容量 (以 KB 為單位)。|  
-|**system_cache_kb**|**Bigint**|系統快取記憶體的總容量 (以 KB 為單位)。|  
-|**kernel_paged_pool_kb**|**Bigint**|分頁核心集區的總容量 (以 KB 為單位)。|  
-|**kernel_nonpaged_pool_kb**|**Bigint**|未分頁核心集區的總容量 (以 KB 為單位)。|  
+|**total_physical_memory_kb**|**bigint**|可供作業系統使用之實體記憶體的大小總計 (以 KB 為單位)。|  
+|**available_physical_memory_kb**|**bigint**|可用實體記憶體的大小 (以 KB 為單位)。|  
+|**total_page_file_kb**|**bigint**|由作業系統回報之認可限制的大小 (以 KB 為單位)。|  
+|**available_page_file_kb**|**bigint**|未使用的分頁檔總量（以 KB 為單位）。|  
+|**system_cache_kb**|**bigint**|系統快取記憶體的總容量 (以 KB 為單位)。|  
+|**kernel_paged_pool_kb**|**bigint**|分頁核心集區的總容量 (以 KB 為單位)。|  
+|**kernel_nonpaged_pool_kb**|**bigint**|未分頁核心集區的總容量 (以 KB 為單位)。|  
 |**system_high_memory_signal_state**|**bit**|系統記憶體資源充足通知的狀態。 值為 1 表示 Windows 已經設定了記憶體充足的訊號。 如需詳細資訊，請參閱 MSDN library 中的[CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) 。|  
 |**system_low_memory_signal_state**|**bit**|系統記憶體資源不足通知的狀態。 值為 1 表示 Windows 已經設定了記憶體不足的訊號。 如需詳細資訊，請參閱 MSDN library 中的[CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) 。|  
 |**system_memory_state_desc**|**nvarchar(256)**|記憶體狀態的描述。 請參閱下表。|  
