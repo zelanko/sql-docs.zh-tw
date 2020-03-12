@@ -11,12 +11,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/16/2015
-ms.openlocfilehash: adee6ee7d0d769d8e87e228c475b224a3e78675b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1d6a27c171fafc8480cbbcdb03c4683816ec30d4
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637871"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112180"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置
 
@@ -58,7 +58,7 @@ ms.locfileid: "73637871"
 ##  <a name="bkmk_sql2008sp2"></a>適用于 SharePoint 2007 產品和技術的 SQL Server 2008 SP2 Reporting Services 增益集  
  Microsoft SQL Server 2008 SP2 Reporting Services 增益集是 2008 增益集的更新版，其中加入了 2008 R2 報表伺服器與 SharePoint 2007 產品的支援整合。  
   
- 您可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心的 [適用 Microsoft SharePoint 技術的 Microsoft SQL Server 2008 SP2 Reporting Services 增益集](https://www.microsoft.com/download/details.aspx?id=793)線上取得這個檔案的最新版本。  
+ 您可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心的 [適用 Microsoft SharePoint 技術的 Microsoft SQL Server 2008 SP2 Reporting Services 增益集](https://www.microsoft.com/download/details.aspx?id=43344)線上取得這個檔案的最新版本。  
   
 ##  <a name="bkmk_sql2008"></a>適用于 SharePoint 2007 產品和技術的 SQL Server 2008 Reporting Services 增益集  
  適用 Microsoft SharePoint 技術的 Microsoft SQL Server 2008 Reporting Services 增益集提供在 Windows SharePoint Services 3.0 或 Microsoft Office SharePoint Server 2007 部署內執行報表伺服器的功能。  

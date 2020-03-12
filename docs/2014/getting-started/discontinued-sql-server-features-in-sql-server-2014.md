@@ -10,23 +10,23 @@ ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8f7ab6cdbc1b6e0e3dc7d26fb579943a0c8fa95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637777"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112227"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>在 SQL Server 2014 中停止 SQL Server 的功能
   本主題描述升級至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 之後無法再使用的功能。  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>
+## <a name="discontinued-features-in-sssql14"></a>
   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]
   
  
   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中沒有已停止的功能。  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>
+## <a name="discontinued-features-in-sssql11"></a>
   [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
   
   
@@ -46,7 +46,7 @@ ms.locfileid: "73637777"
 ## <a name="discontinued-features-in-sql-server-2008"></a>SQL Server 2008 中停止的功能  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>已停止 SQL Server Express 安裝中的 SQL-DMO  
- 已經從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中移除適用於 [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)] 的 SQL-DMO。 我們建議您盡快修改目前仍使用這項功能的應用程式。 如果您必須支援 SQL-DMO for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express，請從[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=24793)的 Feature pack 安裝回溯相容性元件。 請在新的開發工作中使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO)。  
+ 已經從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中移除適用於 [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)] 的 SQL-DMO。 我們建議您盡快修改目前仍使用這項功能的應用程式。 如果您必須支援 SQL-DMO for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express，請從[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [Microsoft 下載中心](https://www.microsoft.com/download/)的 Feature pack 安裝回溯相容性元件。 請在新的開發工作中使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO)。  
   
 ### <a name="discontinued-option-for-web-assistant"></a>已停止用於 Web 助理的選項  
  啟用 Web 助理的 `sp_configure` 選項已經從 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中移除了。 我們建議您改用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 。  

@@ -20,15 +20,15 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 78c3ba452d3ba681823e5c9f473d7a86f55809a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 18575c95602f73baa959d35b176cf16220fc8e64
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62833775"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112163"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 連接
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]封裝會使用連接來執行不同的工作， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]並實行功能： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件會使用連線來執行不同的工作以及實作 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能：  
   
 -   連接至來源和目的地資料存放區，例如文字、XML、Excel 活頁簿，以及用來擷取及載入資料的關聯式資料庫。  
   
@@ -46,17 +46,16 @@ ms.locfileid: "62833775"
   
 -   指定現有檔案和資料或建立新檔案和資料夾，以便搭配「Foreach 迴圈」列舉值和工作一起使用。  
   
--   連接至訊息佇列，並連接至 Windows Management Instrumentation (WMI)、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO)、Web 及郵件伺服器。  
+-   連接至訊息佇列，並連接至 Windows Management Instrumentation (WMI)、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO)、Web 及郵件伺服器。  
   
  若要建立這些連接， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會使用連接管理員，如下節中所述。  
   
 ## <a name="connection-managers"></a>連接管理員  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會使用連接管理員做為連接的邏輯表示法。 在設計階段，您可以設定連接管理員的屬性，以描述 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在封裝執行時建立的實體連接。 例如，連接管理員會包含您可在設計階段設定的 `ConnectionString` 屬性；在執行階段，會使用連接字串屬性中的值建立實體連接。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會使用連接管理員做為連接的邏輯表示法。 在設計階段，您可以設定連接管理員的屬性，以描述 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在封裝執行時建立的實體連接。 例如，連接管理員會包含您可在設計階段設定的 `ConnectionString` 屬性；在執行階段，會使用連接字串屬性中的值建立實體連接。  
   
  封裝可使用連接管理員類型的多個執行個體，並且您可以在每個執行個體上設定屬性。 在執行階段，連接管理員類型的每個執行個體都會建立具有不同屬性的連接。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]提供不同類型的連接管理員，可讓封裝連接到各種資料來源和伺服器：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會提供不同類型的連線管理員，其可讓套件連線到各種資料來源和伺服器：  
   
 -   當您安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]時，安裝程式會安裝內建的連接管理員。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "62833775"
 |ORACLE|連接到 Oracle \<版本資訊> 伺服器。|Oracle 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的連接管理員元件。 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
 |SAPBI|連接到 SAP NetWeaver BI 7 系統。|SAP BI 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的連接管理員元件。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=262016)＞。|  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440)＞。|  
 |TERADATA|連接到 Teradata \<版本資訊> 伺服器。|Teradata 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的連接管理員元件。 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
   

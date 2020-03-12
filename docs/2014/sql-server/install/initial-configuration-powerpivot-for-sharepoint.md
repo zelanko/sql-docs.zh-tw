@@ -10,12 +10,12 @@ ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bc9b053b62a19cbe2c234f87010ae2a9652fb95c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 24a52b9dd190032a55306c1fe738c3c1e1787dad
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74200440"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112213"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>初始組態 (PowerPivot for SharePoint)
   您可以使用本主題的步驟，設定 PowerPivot for SharePoint 的初始安裝。 設定初始安裝最簡單的方式為使用 PowerPivot 組態工具， 以自動化下列所述的各項組態步驟。  
@@ -227,7 +227,7 @@ ms.locfileid: "74200440"
   
  安裝提供者可讓參考資料連接字串中 MSOLAP.4 的活頁簿在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 伺服器上正常運作。 安裝 SQL Server 2008 R2 OLE DB 提供者是升級舊版 PowerPivot for Excel 所建立之活頁簿的替代方式。  
   
- 您可以從[SQL Server 2008 R2 功能套件] 頁面](https://www.microsoft.com/download/details.aspx?id=16978)下載提供者。 尋找適用于**microsoft® SQL Server® 2008 R2 的 microsoft® Analysis Services OLE DB Provider**，然後下載`SQLServer2008_ASOLEDB10.msi`安裝程式的 x64 封裝。  
+ 您可以從[SQL Server 2008 R2 功能套件] 頁面](https://www.microsoft.com/download/details.aspx?id=44272)下載提供者。 尋找適用于**microsoft® SQL Server® 2008 R2 的 microsoft® Analysis Services OLE DB Provider**，然後下載`SQLServer2008_ASOLEDB10.msi`安裝程式的 x64 封裝。  
   
  如需安裝提供者的詳細資訊，包括驗證步驟，請參閱[在 SharePoint 伺服器上安裝 Analysis Services OLE DB Provider](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)。  
   

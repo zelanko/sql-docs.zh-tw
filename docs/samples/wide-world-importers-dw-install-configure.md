@@ -1,5 +1,6 @@
 ---
 title: 安裝 & 設定 DW WideWorldImporters 範例資料庫
+description: 遵循這些指示，下載、安裝及設定具有 SQL Server Management Studio 的 WideWorldImportersDW 範例資料庫。
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -10,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: d8768fec2f96c725a9ba4bbf91996e95de4c800a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: eb5940de6968707bac66cbaa8d3c91ce930868e3
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74056306"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112301"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW 安裝和設定
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]

@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68811066"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112249"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>記憶體最佳化資料表的查詢處理指南
   記憶體中 OLTP 推出記憶體最佳化資料表以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的原生編譯預存程序。 本文針對記憶體最佳化資料表和原生編譯的預存程序提供查詢處理的概觀。  
@@ -60,7 +60,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- 為了建構本文中所顯示的查詢計劃，這兩個資料表中已填入 Northwind 範例資料庫中的範例資料，您可以從 [Northwind and pubs Sample Databases for SQL Server 2000](https://www.microsoft.com/download/details.aspx?id=23654)(SQL Server 2000 的 Northwind 和 pubs 範例資料庫) 下載該資料庫。  
+ 為了建構本文中所顯示的查詢計劃，這兩個資料表中已填入 Northwind 範例資料庫中的範例資料，您可以從 [Northwind and pubs Sample Databases for SQL Server 2000](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)(SQL Server 2000 的 Northwind 和 pubs 範例資料庫) 下載該資料庫。  
   
  請看下列查詢，其中聯結了 Customer 和 Order 這兩個資料表，並且會傳回訂單識別碼和相關聯的客戶資訊：  
   
@@ -96,7 +96,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  在這個查詢中，Orders 資料表的資料列是使用叢集索引擷取。 
   `Hash Match` 實體運算子現在用於 `Inner Join`。 Order 上的叢集索引不會在 CustomerID 上排序，因此 `Merge Join` 會需要排序運算子，而這樣就會影響效能。 請記下與上一個範例中 `Hash Match` 運算子成本 (46%) 相較的 `Merge Join` 運算子相對成本 (75%)。 最佳化工具原本也會在上一個範例中考慮 `Hash Match` 運算子，但結果卻是 `Merge Join` 運算子提供更佳效能的結果。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 磁碟資料表的查詢處理  
+## <a name="ssnoversion-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 磁碟資料表的查詢處理  
  下圖概述 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中隨選查詢的查詢處理流程：  
   
  ![SQL Server 查詢處理管線。](../../database-engine/media/hekaton-query-plan-3.gif "SQL Server 查詢處理管線。")  
@@ -118,7 +118,7 @@ SQL Server 查詢處理管線。
   
  在第一個範例查詢中，執行引擎會從 Access Methods 要求 Customer 上叢集索引中的資料列，以及 Order 上非叢集索引中的資料列。 Access Methods 會周遊 B 型樹狀目錄索引結構，擷取所要求的資料列。 在這種情況下，當計畫需要完整索引掃描時，就會擷取所有資料列。  
   
-## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存取  
+## <a name="interpreted-tsql-access-to-memory-optimized-tables"></a>對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存取  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 隨選批次和預存程序，也稱為解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。 解譯是指查詢計劃是由查詢計劃中每個運算子的查詢執行引擎所解譯。 執行引擎會讀取運算子及其參數，並執行作業。  
   
  解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 可用來存取記憶體最佳化和磁碟為基礎的資料表。 下圖說明對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存取之查詢處理：  
@@ -203,7 +203,7 @@ END
 ### <a name="compilation-and-query-processing"></a>編譯和查詢處理  
  下圖說明原生編譯預存程序的編譯程序：  
   
- ![預存程式的原生編譯。](../../database-engine/media/hekaton-query-plan-6.gif "預存程序的原生編譯。")  
+ ![預存程序的原生編譯。](../../database-engine/media/hekaton-query-plan-6.gif "預存程序的原生編譯。")  
 預存程序的原生編譯。  
   
  這個程序描述為：  
@@ -220,7 +220,7 @@ END
   
  原生編譯預存程序的引動過程會轉譯為在 DLL 中呼叫函數。  
   
- ![執行原生編譯的預存程式。](../../database-engine/media/hekaton-query-plan-7.gif "執行原生編譯預存程序。")  
+ ![執行原生編譯預存程序。](../../database-engine/media/hekaton-query-plan-7.gif "執行原生編譯預存程序。")  
 執行原生編譯預存程序。  
   
  原生編譯預存程序的引動過程描述如下：  
@@ -235,14 +235,14 @@ END
   
 4.  然後會執行 DLL 中的機器碼，再將其結果傳回用戶端。  
   
- **參數探查**  
+ **參數探測**  
   
  與在建立時編譯的原生編譯預存程序相反，解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 預存程序會在第一次執行時編譯。 在引動過程中編譯解譯的預存程序時，最佳化工具會在產生執行計畫時使用提供給這個引動過程的參數值。 在編譯期間使用參數的動作，就稱為參數探測。  
   
  參數探測不會用於編譯原生編譯的預存程序。 預存程序的所有參數都會視為具有 UNKNOWN 值。 與解譯的預存程序相同，原生編譯的預存程序也支援 `OPTIMIZE FOR` 提示。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)。  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>擷取原生編譯預存程序的查詢執行計畫  
- 原生編譯預存程序的查詢執行計畫，可以使用 ** 中的 [Estimated Execution Plan (估計的執行計畫)]**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中的 SHOWPLAN_XML 選項加以擷取。 例如：  
+ 原生編譯預存程序的查詢執行計畫，可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 [Estimated Execution Plan (估計的執行計畫)]  或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中的 SHOWPLAN_XML 選項加以擷取。 例如：  
   
 ```sql  
 SET SHOWPLAN_XML ON  

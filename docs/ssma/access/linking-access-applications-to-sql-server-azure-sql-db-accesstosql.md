@@ -23,12 +23,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: c4e6d16645b8a7ecab9ed2e814ed345834e80f1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 58abfde651fb59bc69207db810324eb4c74b8c26
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75245921"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112070"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>將存取應用程式連結至 SQL Server-Azure SQL DB （AccessToSQL）
 如果您想要搭配使用現有的 Access 應用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程式與，可以將原始的 access 資料表連結到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遷移或 SQL Azure 資料表。 連結會修改您的 Access 資料庫，讓您的查詢、表單、報表和資料存取頁面使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫中的資料，而非 Access 資料庫中的資料。  
@@ -56,7 +56,7 @@ ms.locfileid: "75245921"
   
 > [!IMPORTANT]  
 > 若要連結具有 Azure 資料庫的存取資料表，您需要 SQL Server Native Client （SNAC）10.5 版或更新版本。   
-> 您可以從[Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)取得最新版本的 SNAC。  
+> 您可以從[Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)取得最新版本的 SNAC。  
   
 ## <a name="unlinking-access-tables"></a>取消連結 Access 資料表  
 當您從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料表取消存取資料表的連結時，SSMA 會還原原始的 access 資料表和其資料。  

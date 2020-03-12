@@ -33,12 +33,12 @@ ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b06e98d5ef3dfc4ad8ab99e374e2d7b5539c98be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 71aba1741b777a593f951300a975df4736525211
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637902"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112199"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 插入資料 (SQLXML 4.0)
   當記錄實例出現在** \<>區塊之後**，而不是在對應** \<的>** 區塊中時，updategram 表示插入作業。 在此情況下，updategram 會將** \<>區塊後**的記錄插入資料庫中。  
@@ -212,7 +212,7 @@ ms.locfileid: "73637902"
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，資料表名稱可以包含空格，例如 Northwind 資料庫中的 Order Details 資料表。 不過，這在 XML 字元中無效，但不是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]有效的識別碼，但不能使用 ' __xHHHH\_\_' 作為編碼值來編碼，其中 hhhh hhhh 會以最高有效位優先的順序，代表該字元的四位數十六進位 UCS-2 代碼。  
   
 > [!NOTE]  
->  此範例會使用 Northwind 資料庫。 您可以使用可從這個[Microsoft 網站](https://www.microsoft.com/download/details.aspx?id=23654)下載的 SQL 腳本來安裝 Northwind 資料庫。  
+>  此範例會使用 Northwind 資料庫。 您可以使用可從這個[Microsoft 網站](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)下載的 SQL 腳本來安裝 Northwind 資料庫。  
   
  此外，元素名稱也必須加上方括號 ([ ])。 因為字元 [和] 在 XML 中無效，所以您必須分別將它們編碼為\_ _x005B 和\__x005D。 (如果您使用對應結構描述，則可以提供不包含空格之類無效字元的元素。 對應結構描述會進行必要的對應，因此您就不必進行這些字元的編碼)。  
   

@@ -1,5 +1,6 @@
 ---
 title: Wide World 匯入工具-適用于 SQL 的範例資料庫 |Microsoft Docs
+description: 瞭解 WideWorldImporters 範例資料庫如何支援虛構 WideWorldImporters 公司的工作流程。
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 872892d307883bb7df31b08de701b2030d9aeb1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2fb0c990c03e0dfbf1cd279efa7a249bb5bc9645
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68794603"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112388"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>適用于 Microsoft SQL 的 Wide World 匯入範例資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

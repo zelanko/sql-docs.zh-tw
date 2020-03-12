@@ -1,5 +1,6 @@
 ---
 title: WideWorldImporters OLTP 資料庫目錄-SQL |Microsoft Docs
+description: 瞭解 WideWorldImporters 範例資料庫目錄的架構、資料表、預存程式和設計考慮。
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2560043ca6acc4b5df141bcbc898ac09b21f97a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d4502a64a3822741c1928fcf6faee69d80d893d5
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68811526"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112400"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters 資料庫目錄
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

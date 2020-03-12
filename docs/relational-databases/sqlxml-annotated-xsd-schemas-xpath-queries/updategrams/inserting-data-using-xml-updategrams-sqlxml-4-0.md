@@ -34,12 +34,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: caf6c6bc9e9807b042baf365c3a1efbe9d2b74c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 671dc9c8a0091a2fb14a4aa1c42ea8246b376c7a
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75252503"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112265"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 插入資料 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -213,7 +213,7 @@ ms.locfileid: "75252503"
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，資料表名稱可以包含空格，例如 Northwind 資料庫中的 Order Details 資料表。 不過，這在 XML 字元中無效，但不是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]有效的識別碼，但不能使用 ' __xHHHH\_\_' 作為編碼值來編碼，其中 hhhh hhhh 會以最高有效位優先的順序，代表該字元的四位數十六進位 UCS-2 代碼。  
   
 > [!NOTE]  
->  此範例會使用 Northwind 資料庫。 您可以使用可從這個[Microsoft 網站](https://www.microsoft.com/download/details.aspx?id=23654)下載的 SQL 腳本來安裝 Northwind 資料庫。  
+>  此範例會使用 Northwind 資料庫。 您可以使用可從這個[Microsoft 網站](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)下載的 SQL 腳本來安裝 Northwind 資料庫。  
   
  此外，元素名稱也必須加上方括號 ([ ])。 因為字元 [和] 在 XML 中無效，所以您必須分別將它們編碼為\_ _x005B 和\__x005D。 (如果您使用對應結構描述，則可以提供不包含空格之類無效字元的元素。 對應結構描述會進行必要的對應，因此您就不必進行這些字元的編碼)。  
   
@@ -250,7 +250,7 @@ ms.locfileid: "75252503"
 ### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>D. 使用 at-identity 屬性來擷取插入至 IDENTITY 類型之資料行的值  
  下列 Updategram 會插入兩筆記錄：在 Sales.SalesOrderHeader 資料表中插入一筆，而在 Sales.SalesOrderDetail 資料表中插入另一筆。  
   
- 首先，Updategram 會將記錄加入至 Sales.SalesOrderHeader 資料表。 在這個資料表中，SalesOrderID 資料行是 IDENTITY 類型的資料行。 因此，當您將此記錄加入至資料表時，updategram 會使用**identity**屬性來將指派的 SalesOrderID 值捕捉為 "x" （預留位置值）。 然後，updategram 會在**** SalesOrderDetail> 元素中\<，將此身分識別變數指定為 SalesOrderID 屬性的值。  
+ 首先，Updategram 會將記錄加入至 Sales.SalesOrderHeader 資料表。 在這個資料表中，SalesOrderID 資料行是 IDENTITY 類型的資料行。 因此，當您將此記錄加入至資料表時，updategram 會使用**identity**屬性來將指派的 SalesOrderID 值捕捉為 "x" （預留位置值）。 然後，updategram 會在**at-identity** SalesOrderDetail> 元素中\<，將此身分識別變數指定為 SalesOrderID 屬性的值。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

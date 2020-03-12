@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a87e7819d96151ea918b8b5f33fb5f4c9e1fbd3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cbf570a09f3316172a60206730b91644cc603f0b
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68096988"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090574"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "68096988"
 |**freq_interval**|**int**|執行作業的天數。 取決於**freq_type**的值。 預設值為**0**，表示未使用**freq_interval** 。 如需可能的值及其效果，請參閱下表。|  
 |**freq_subday_type**|**int**|**Freq_subday_interval**的單位。 以下是可能的值及其描述。<br /><br /> <br /><br /> **1** ：在指定的時間<br /><br /> **2** ：秒<br /><br /> **4** ：分鐘<br /><br /> **8** ：小時|  
 |**freq_subday_interval**|**int**|每次執行作業之間所發生的**freq_subday_type**週期數。|  
-|**freq_relative_interval**|**int**|當每個月發生**freq_interval**時，如果**freq_interval**為**32** （每月相對）。 可以是下列其中一個值：<br /><br /> **0** = **freq_relative_interval**未使用<br /><br /> **1** = 第一個<br /><br /> **2** = 秒<br /><br /> **4** = 第三個<br /><br /> **8** = 第四個<br /><br /> **16** = 最後|  
+|**freq_relative_interval**|**int**|當每個月發生**freq_interval**時，如果**freq_type**為**32** （每月相對）。 可以是下列其中一個值：<br /><br /> **0** = **freq_relative_interval**未使用<br /><br /> **1** = 第一個<br /><br /> **2** = 秒<br /><br /> **4** = 第三個<br /><br /> **8** = 第四個<br /><br /> **16** = 最後|  
 |**freq_recurrence_**<br /><br /> **在內**|**int**|作業的排程執行之間的週數或月數。 只有在**freq_type**是**8**、 **16**或**32**時，才會使用**freq_recurrence_factor** 。 如果此資料行包含**0**，則不會使用**freq_recurrence_factor** 。|  
 |**active_start_date**|**int**|可以開始執行作業的日期。 日期格式為 YYYYMMDD。 NULL 表示今天的日期。|  
 |**active_end_date**|**int**|可以停止執行作業的日期。 日期格式為 YYYYMMDD。|  

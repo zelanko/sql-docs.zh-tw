@@ -1,5 +1,6 @@
 ---
 title: WideWorldImportersDW-ETL 工作流程 |Microsoft Docs
+description: 使用 ETL 套件搭配 SQL Server Integration Services （SSIS），定期將資料從 WideWorldImporters 資料庫移轉至 WideWorldImportersDW。
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f33d36cccbbea6f37139410f9d3d6e03f740ee96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 000d12b97eb2eefbfcd9a6a73e02c0098b2afdbb
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68067625"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112393"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL 工作流程
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -62,7 +63,7 @@ ms.locfileid: "68067625"
    2. 輸入名稱，例如*WIDEWORLDIMPORTERS ETL*。
    3. 新增**SQL Server Integration Services 封裝**類型的**作業步驟**。
    4. 選取具有 [Integration Services 目錄] 的伺服器，然後選取 [*每日 ETL* ] 套件。
-   5. 在 [設定**連線管理員**] 下，確定已正確設定與來源和目標的連接。 ****  >  預設值是連接到本機實例。
+   5. 在 [設定**連線管理員**] 下，確定已正確設定與來源和目標的連接。 **Configuration**  >  預設值是連接到本機實例。
    6. 選取 **[確定]** 以建立作業。
 
 3. 執行或排程工作。

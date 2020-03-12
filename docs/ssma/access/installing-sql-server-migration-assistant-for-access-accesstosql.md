@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 80fc19b17ac1c01f0c57d828a3bc4821050f761d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cbbb7ed7a20937d9963af7080fb16be4f6c78da5
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75257895"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79111903"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>安裝 SQL Server 移轉小幫手以進行存取（AccessToSQL）
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手（SSMA） for Access 是使用以 Windows Installer 為基礎的 wizard 來安裝。 本主題提供安裝必要條件的相關資訊、SSMA 最新版本的連結，以及安裝、授權、卸載和升級 SSMA 的指示。  
@@ -45,7 +45,7 @@ ms.locfileid: "75257895"
   
 -   Microsoft Data Access Object （DAO）提供者版本12.0 或14.0。 您可以從 Microsoft Office 2010/2007 產品安裝 DAO 提供者，或從 Microsoft 網站下載。  
   
--   適用于遷移至 SQL Azure 的 SQL Server Native Access 用戶端（SNAC）10.5 版和更新版本。 您可以從[Microsoft® SQL Server® 2008 R2 功能套件](https://www.microsoft.com/download/details.aspx?id=16978)取得最新版本的 SNAC  
+-   適用于遷移至 SQL Azure 的 SQL Server Native Access 用戶端（SNAC）10.5 版和更新版本。 您可以從[Microsoft® SQL Server® 2008 R2 功能套件](https://www.microsoft.com/download/details.aspx?id=44272)取得最新版本的 SNAC  
   
 -   4 GB RAM （建議選項）。  
   

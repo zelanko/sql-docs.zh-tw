@@ -10,12 +10,12 @@ ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 476159031ad00ada2e70b0c9eca5c775dab67285
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e107dde8a3f811cbc1a24533705863c954dd85c4
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73705299"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112157"
 ---
 # <a name="data-mining-projects"></a>資料採礦專案
   資料採礦專案為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 方案的一部分。 在設計過程中，您在此專案中建立的物件可當做工作空間資料庫的一部分來測試及查詢。 當您希望使用者能夠查詢或瀏覽專案中的物件時，您必須將此專案部署到以多維度模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
@@ -161,7 +161,7 @@ ms.locfileid: "73705299"
   
  這些視覺效果是暫時性的，而且當您結束 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的工作階段時會關閉而不儲存。 因此，如果您需要將這些視覺效果匯出到另一個應用程式或簡報或是進行進一步分析，請使用檢視器介面上每一個索引標籤或窗格中提供的 [複製]**** 命令。  
   
- 適用於 Excel 的資料採礦增益集也提供一個 Visio 範本，您可用來在 Visio 圖表中呈現您的模型，並使用 Visio 工具為圖表加上註解和修改圖表。 如需詳細資訊，請參閱 [Microsoft Office 2007 適用之 Microsoft SQL Server 2008 SP2 資料採礦增益集](https://www.microsoft.com/download/details.aspx?id=7294)。
+ 適用於 Excel 的資料採礦增益集也提供一個 Visio 範本，您可用來在 Visio 圖表中呈現您的模型，並使用 Visio 工具為圖表加上註解和修改圖表。 如需詳細資訊，請參閱 [Microsoft Office 2007 適用之 Microsoft SQL Server 2008 SP2 資料採礦增益集](https://www.microsoft.com/download/details.aspx?id=8569)。
   
 ###  <a name="bkmk_Validate"></a>測試和驗證模型  
  建立模型後，您可以調查結果，並判定效能最佳的模型。  
