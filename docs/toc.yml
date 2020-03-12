@@ -4165,10 +4165,6 @@
       items:
         - name: 新功能
           href: sql-server/install/what-s-new-in-sql-server-installation.md
-        - name: 最大容量規格
-          href: sql-server/maximum-capacity-specifications-for-sql-server.md
-        - name: 版本的計算容量限制
-          href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
     - name: 版本資訊
       items:
         - name: SQL Server 中已中止的功能
@@ -4188,6 +4184,10 @@
     - name: 規劃
       href: sql-server/install/planning-a-sql-server-installation.md
       items:
+        - name: 容量規格上限
+          href: sql-server/maximum-capacity-specifications-for-sql-server.md
+        - name: 版本的計算容量限制
+          href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
         - name: 硬體與軟體需求
           items:
             - name: SQL Server 2019
@@ -4196,17 +4196,17 @@
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
         - name: 安全性考量
           href: sql-server/install/security-considerations-for-a-sql-server-installation.md
-        - name: 網路通訊協定與網路程式庫
+        - name: 網路通訊協定與程式庫
           href: sql-server/install/network-protocols-and-network-libraries.md
-        - name: 使用多個版本與執行個體
+        - name: 使用多重版本與執行個體
           href: sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md
-        - name: 當地語言版本
+        - name: 語言版本
           href: sql-server/install/local-language-versions-in-sql-server.md
         - name: 檔案位置
           href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
         - name: 使用量和診斷資料集合
           items:
-            - name: SQL Server 隱私權聲明補充
+            - name: SQL Server 隱私權補充
               items:
                 - name: SQL Server 2017 與舊版
                   href: sql-server/sql-server-privacy.md
@@ -9837,6 +9837,8 @@
               href: linux/sql-server-linux-setup-ssis.md
             - name: 安裝 SQL Server 機器學習服務
               href: linux/sql-server-linux-setup-machine-learning.md
+            - name: 在 Docker 上安裝 SQL Server 機器學習服務
+              href: linux/sql-server-setup-machine-learning-docker.md
             - name: 安裝 SQL Server 語言延伸模組
               href: linux/sql-server-linux-setup-language-extensions.md
             - name: 設定存放庫

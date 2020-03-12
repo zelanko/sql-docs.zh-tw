@@ -2774,8 +2774,10 @@
           href: ../connect/odbc/linux-mac/system-requirements.md
         - name: 安裝驅動程式管理員
           href: ../connect/odbc/linux-mac/installing-the-driver-manager.md
-        - name: 安裝 Microsoft ODBC Driver for SQL Server
+        - name: 安裝 ODBC 驅動程式 (Linux)
           href: ../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md
+        - name: 安裝 ODBC 驅動程式 (macOS)
+          href: ../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md
         - name: 功能指南
           items:
             - name: 連接字串關鍵字和資料來源名稱 (DSN)
