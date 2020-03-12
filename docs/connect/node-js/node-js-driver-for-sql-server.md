@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6fa534b756084f74606e9d40a8c1c69934b240d1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 66e45137b75eaa22e4945113101d0cc0d91901cd
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67916057"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896779"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Node.js Driver for SQL Server
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[下載 Node.js SQL 驅動程式](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[下載 Node.js SQL 驅動程式](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-此冗長乏味模組是 TDS 通訊協定的 JavaScript 實作，其支援所有現代化版本 SQL Server。 此驅動程式是開放原始碼專案，可在 Github 上取得。  
+此冗長乏味模組是 TDS 通訊協定的 JavaScript 實作，其支援所有現代化版本 SQL Server。 驅動程式是開放原始碼專案，可在 GitHub 上找到。  
   
 您可以在 Windows、Linux 或 Mac 上使用 Node.js 連線到 SQL Database。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67916057"
   
 ## <a name="documentation"></a>文件  
   
-[Github 上的 Tedious 模組文件](https://tediousjs.github.io/tedious/)  
+[GitHub 上的 Tedious 模組文件](https://tediousjs.github.io/tedious/) \(英文\)  
   
 ## <a name="community"></a>社群  
 * [Azure Node.js 開發人員中心](https://azure.microsoft.com/develop/nodejs/)  

@@ -13,12 +13,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: df31dd31192d3aa877301c63ac425af6477dedd3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cdcfe6cd4f0c48a6774b8e2518968b8c3d1997f2
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75255535"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280923"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>檢查條件約束對話方塊 (Visual Database Tools)
 
@@ -44,7 +44,7 @@ ms.locfileid: "75255535"
 展開以顯示 [運算式]  屬性欄位。  
   
 **運算式**  
-顯示已選取之檢查條件約束的運算式。 對於新的條件約束，退出此方塊之前必須先輸入運算式。 您也可以編輯現有的檢查條件約束。 如需詳細資訊，請參閱[使用條件約束(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) 。  
+顯示已選取之檢查條件約束的運算式。 對於新的條件約束，退出此方塊之前必須先輸入運算式。 您也可以編輯現有的檢查條件約束。 如需詳細資訊，請參閱[使用條件約束](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)。  
   
 **識別類別目錄**  
 展開以顯示 [名稱]  與 [描述]  屬性。  

@@ -16,12 +16,12 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a659583df74cdc2e5100fcc25aa25e90af3bf22
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 09fb423dc4d3685b22c67b2a86a74443633ba74a
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73843837"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370541"
 ---
 # <a name="user-defined-functions"></a>使用者定義的函式
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "73843837"
   
 -   可降低網路傳輸量。  
   
-     對於無法以單一純量運算式表示的作業 (例如，根據某些複雜條件約束來篩選資料)，可以利用函數來表示。 接著，您可以在 WHERE 子句中叫用函數，減少傳送到用戶端的資料列數。  
+     對於無法以單一純量運算式表示的作業 (例如，根據某些複雜條件約束來篩選資料)，可以利用函數來表示。 接著，您可以在 WHERE 子句中叫用函式，以減少傳送到用戶端的資料列數。  
   
 > [!IMPORTANT]
 > 查詢中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] UDF 只能在單一執行緒上執行 (序列執行計劃)。 因此使用 UDF 會禁止平行查詢處理。 如需平行查詢處理的詳細資訊，請參閱[查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)。
@@ -115,7 +115,7 @@ ms.locfileid: "73843837"
 ##  <a name="SchemaBound"></a> 結構描述繫結的函式  
  `CREATE FUNCTION` 支援 `SCHEMABINDING` 子句，它可將函式與其參考的任何物件結構描述繫結在一起，例如資料表、檢視及其他使用者定義函式。 嘗試更改或卸除任何被結構描述繫結函數所參考的物件將會失敗。  
   
- 必須滿足以下條件，您才可以在 `SCHEMABINDING`CREATE FUNCTION[ 中指定 ](../../t-sql/statements/create-function-transact-sql.md)：  
+ 必須滿足以下條件，您才可以在 [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) 中指定 `SCHEMABINDING`：  
   
 -   函數所參考的所有檢視及使用者自訂函數，都必須是結構描述繫結的。  
   

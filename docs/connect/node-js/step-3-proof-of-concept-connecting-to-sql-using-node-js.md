@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7dc49b466885e63ad9bd380a53a432a936310e18
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7925b376fa7ec751faf0b109b6598ab86a348b3f
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68419263"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897148"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>步驟 3：使用 Node.js 連線到 SQL 的概念證明
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[下載 Node.js SQL 驅動程式](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[下載 Node.js SQL 驅動程式](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-這個範例只應被視為一個概念證明。  為了清楚起見，已將範例程式碼簡化，而其不一定代表 Microsoft 建議的最佳做法。 Github 上提供使用相同重要功能的其他範例：
+這個範例只應被視為一個概念證明。  為了清楚起見，已將範例程式碼簡化，而其不一定代表 Microsoft 建議的最佳做法。 GitHub 上提供使用相同重要功能的其他範例：
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
@@ -113,7 +113,7 @@ ms.locfileid: "68419263"
   
 ## <a name="step-3-insert-a-row"></a>步驟 3：插入資料列  
   
-在這個範例中，您將了解如何安全地執行 [INSERT](../../t-sql/statements/insert-transact-sql.md) 陳述式、傳遞可保護您應用程式來防禦 [SQL 插入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值的參數。    
+在此範例中，您將了解如何安全地執行 [INSERT](../../t-sql/statements/insert-transact-sql.md) 陳述式，傳遞可協助您應用程式防禦 [SQL 插入](../../relational-databases/security/sql-injection.md)值的參數。    
   
   
 ```javascript  

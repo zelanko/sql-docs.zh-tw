@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 88b8e54867aba5439af9ed87e4a42b2083a479b3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6a1f903d0be82d6f5057af68dce80bda1e48238a
+ms.sourcegitcommit: 951740963d5fe9cea7f2bfe053c45ad5d846df04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76281866"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78225923"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps 工具 (預覽)
 
@@ -38,6 +38,8 @@ ms.locfileid: "76281866"
 
 要建置之專案資料夾或檔案的路徑。 如果指定了資料夾路徑，SSIS 建置工作會以遞迴方式搜尋此資料夾下的所有 dtproj 檔案，並建置所有檔案。
 
+專案路徑不能是*空的*，設定為 **.** 以從存放庫的根資料夾建立。
+
 #### <a name="project-configuration"></a>專案組態
 
 要用於建置的專案組態名稱。 如果未提供，則會預設為每個 dtproj 檔案中第一個定義的專案組態。
@@ -50,9 +52,19 @@ ms.locfileid: "76281866"
 
 - SSIS 建置工作依賴 Visual Studio 和 SSIS 設計工具，這在建置代理程式上是必要的。 因此，若要在管線中執行 SSIS 建置工作，您必須針對 Microsoft 裝載的代理程式選擇 **vs2017-win2016**，或在自我裝載的代理程式上安裝 Visual Studio 和 SSIS 設計工具 (VS2017 + SSDT2017，或者 VS2019 + SSIS 專案延伸模組)。
 
-- 若要使用任何現成可用的元件 (包括 SSIS Azure Feature Pack 和其他協力廠商元件) 來建置 SSIS 專案，必須在執行管線代理程式的電腦上安裝這些現成可用的元件。  針對 Microsoft 裝載的代理程式，使用者可以在執行 SSIS 建置工作之前，新增 [PowerShell 指令碼工作](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) \(英文\) 或[命令列指令碼工作](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) \(英文\) 下載並安裝元件。
+- 若要使用任何現成可用的元件 (包括 SSIS Azure Feature Pack 和其他協力廠商元件) 來建置 SSIS 專案，必須在執行管線代理程式的電腦上安裝這些現成可用的元件。  針對 Microsoft 裝載的代理程式，使用者可以在執行 SSIS 建置工作之前，新增 [PowerShell 指令碼工作](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) \(英文\) 或[命令列指令碼工作](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) \(英文\) 下載並安裝元件。 面下面是可用於安裝 Azure Feature Pack 的範例 PowerShell 指令碼： 
 
-- 在 SSIS 建置工作中不支援 **EncryptSensitiveWithPassword** 和 **EncryptAllWithPassword** 的保護層級。 請確定程式碼基底中的所有 SSIS 專案都不是使用這兩個保護層級，否則 SSIS 建置工作會在執行期間停止回應和逾時。
+```powershell
+wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
+
+start -Wait -FilePath msiexec -Args "/i AFP.msi /quiet /l* log.txt"
+
+cat log.txt
+```
+
+- 在 SSIS 建置工作中不支援 **EncryptSensitiveWithPassword** 和 **EncryptAllWithPassword** 的保護層級。 確定程式碼基底中的所有 SSIS 專案都不是使用這兩個保護層級，否則 SSIS 建置工作會在執行期間停止回應並逾時。
+
+- **ConnectByProxy** 是最近在 SSDT 中新增的屬性。 Microsoft 裝載的代理程式上安裝的 SSDT 未更新，因此請使用自我裝載的代理程式作為因應措施。
 
 ## <a name="ssis-deploy-task"></a>SSIS 部署工作
 
@@ -82,7 +94,7 @@ ms.locfileid: "76281866"
 - /SSISDB/\<folderName\>
 - \\\\\<machineName\>\\\<shareFolderName\>\\\<optionalSubfolderName\>
 
-SSIS 部署工作將會建立資料夾和子資料夾 (如果不存在)。
+SSIS 部署工作將會建立資料夾與子資料夾 (如果不存在)。
 
 #### <a name="authentication-type"></a>驗證類型
 

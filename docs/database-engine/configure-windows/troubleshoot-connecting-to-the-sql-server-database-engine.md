@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b2394fc73483b78e5e90a4ccffa9ce45205dc237
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 562fda7c79681fa70e36bf19221ceb44b2dc87ec
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74542309"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866373"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>對 SQL Server 資料庫引擎的連線進行疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,12 +160,12 @@ SQL Server 的預設執行個體並不需要 SQL Server Browser 服務。
     - IPv4：`ping 192.168.1.101`
     - IPv6：`ping fe80::d51d:5ab5:6f09:8f48%11`
 
-1. 若您的網路已適當進行設定，`ping` 會傳回 `Reply from <IP address>` 與一些額外資訊。 若 `ping` 傳回 `Destination host unreachable` 或 `Request timed out`，表示 TCP/IP 未設定正確。 此時的錯誤可能表示用戶端電腦、伺服器電腦，或網路方面 (例如路由器) 發生了問題。 若要對網路問題進行疑難排解，請參閱[TCP/IP 問題進階疑難排解]a(/windows/client-management/troubleshoot-tcpip)。
+1. 若您的網路已適當進行設定，`ping` 會傳回 `Reply from <IP address>` 與一些額外資訊。 若 `ping` 傳回 `Destination host unreachable` 或 `Request timed out`，表示 TCP/IP 未設定正確。 此時的錯誤可能表示用戶端電腦、伺服器電腦，或網路方面 (例如路由器) 發生了問題。 若要針對網路問題進行疑難排解，請參閱[針對 TCP/IP 問題進行進階疑難排解](/windows/client-management/troubleshoot-tcpip)。
 1. 接下來，如果使用 IP 位址順利完成 ping 測試，請再測試電腦名稱可否解析成 TCP/IP 位址。 在用戶端電腦的命令提示字元視窗中，先輸入 `ping` ，然後再輸入執行 SQL Server 的電腦名稱。 例如， `ping newofficepc` 
 1. 若向 IP 位址發出的 `ping` 成功，但向電腦發出的 `ping` 傳回 `Destination host unreachable` 或 `Request timed out`，表示您在用戶端電腦上可能擁有舊 (過時) 的快取名稱解析資訊。 輸入 `ipconfig /flushdns` 以清除 DNS (動態名稱解析) 快取。 再次用名稱 ping 電腦。 清空 DNS 快取後，用戶端電腦會檢查伺服器電腦 IP 位址的最新資訊。 
 1. 若您的網路已適當進行設定，`ping` 會傳回 `Reply from <IP address>` 與一些額外資訊。 若您可以成功使用 IP 位址 ping 伺服器電腦，但在使用電腦名稱 ping 時收到例如 `Destination host unreachable.` 或 `Request timed out.` 等錯誤，表示名稱解析並未設定正確。 (如需詳細資訊，請參閱先前參考的 2006 年文章 [Chapter 16 – Troubleshooting TCP/IP](https://support.microsoft.com/kb/169790) (第 16 章 – 疑難排解 TCP/IP)。)成功的名稱解析不需要連接到 SQL Server，但如果電腦名稱無法解析為 IP 位址，則必須指定 IP 位址才能連線。 名稱解析可在稍後進行修正。
 
-## <a name = "openport"></a>在防火牆中開啟連接埠
+## <a name="open-a-port-in-the-firewall"></a>在防火牆中開啟連接埠
 
 根據預設會開啟 Windows 防火牆，並會封鎖來自另一部電腦的連線。 若要從另一部電腦使用 TCP/IP 連接，您必須在 SQL Server 電腦上設定防火牆允許連接到 Database Engine 所使用的 TCP 連接埠。 根據預設，預設執行個體正在 TCP 連接埠 1433 上接聽。 若您擁有具名執行個體，或是您變更了預設執行個體連接埠，則 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] TCP 連接埠可能會在另一個連接埠上接聽。 請參閱[取得 SQL Server 執行個體 TCP 連接埠](#getTCP)。
 

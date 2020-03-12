@@ -17,12 +17,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68809956"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288980"
 ---
 # <a name="row-level-security"></a>資料列層級安全性
 
@@ -63,7 +63,7 @@ RLS 可支援兩種類型的安全性述詞。
   
  篩選器述詞、Block 述詞及安全性原則皆具有下列行為：  
   
-- 您可定義與另一個資料表聯結和/或叫用函數的述詞函數。 如果以 `SCHEMABINDING = ON`來建立安全性原則，則聯結或函數可從查詢存取，並且如預期般運作，而不需任何額外的權限檢查。 如果以 `SCHEMABINDING = OFF` 來建立安全性原則，則使用者需要對這些額外的資料表和函式具有 **SELECT** 或 **EXECUTE** 權限，才能查詢目標資料表。
+- 您可定義與另一個資料表聯結和/或叫用函數的述詞函數。 若在 `SCHEMABINDING = ON` (預設值) 的情況下建立安全性原則，則聯結或函式可從查詢存取並如預期般運作，而不需任何額外的權限檢查。 若在 `SCHEMABINDING = OFF` 的情況下建立安全性原則，則使用者需要有這些額外資料表與函式的 **SELECT** 權限，才能查詢目標資料表。 若述詞函式叫用 CLR 純量值函式，則還需要**執行**權限。
   
 - 可對己定義但停用安全性述詞的資料表發出查詢。 不會影響任何已篩選或封鎖的資料列。  
   
@@ -121,7 +121,7 @@ RLS 可支援兩種類型的安全性述詞。
   
 ## <a name="Best"></a> 最佳作法  
   
-- 強烈建議為 RLS 物件、述詞函式和安全性原則建立另一個結構描述。  
+- 強烈建議為 RLS 物件 (述詞函式與安全性原則) 建立個別的結構描述。 這有助於將這些特殊物件上所需的權限與目標資料表分開。 多租用戶資料庫中可能需要不同原則與述詞函式的其他分隔，但這並非每個案例的標準情況。
   
 - **ALTER ANY SECURITY POLICY** 權限旨在供高權限使用者 (例如安全性原則管理員) 使用。 安全性原則管理員不需要其所保護資料表的 **SELECT** 權限。  
   

@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 22a1a64e11d7cae779531c46ee6b39d26ae403f4
-ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
+ms.openlocfilehash: 4aad2c9bfbd79079e96339e40d5e36a9146f3ae0
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634847"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280895"
 ---
 # <a name="bcp-utility"></a>bcp 公用程式
 
@@ -121,18 +121,18 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  _**database\_name**_ <a name="db_name"></a>  
  這是指定之資料表或檢視表所在的資料庫名稱。 若未指定，這就是使用者的預設資料庫。  
 
- 您也可以使用 **d-** 明確指定資料庫名稱。  
+ 您也可以使用 **-d** 明確指定資料庫名稱。  
 
  **in** *data_file* | **out** *data_file* | **queryout** *data_file* | **format nul**  
  請依照下列方式指定大量複製的方向：  
   
 -   **in**<a name="in"></a> 會從檔案複製到資料庫資料表或檢視。  
   
--   **out**<a name="out"></a> 會從資料庫資料表或檢視複製到檔案。 若您指定現有的檔案，將會覆寫該檔案。 擷取資料時，請注意 **bcp** 公用程式會以 null 代表空白字串，並以空白字串代表 null 字串。  
+-   **out**<a name="out"></a> 會從資料庫資料表或檢視複製到檔案。 若您指定現有的檔案，將會覆寫該檔案。 擷取資料時，**bcp** 公用程式會以 Null 代表空白字串，並以空白字串代表 Null 字串。  
   
 -   **queryout**<a name="qry_out"></a> 會從查詢複製資料，而且只有從查詢複製大量資料時才可指定。  
   
--   **format**<a name="format"></a> 會依據指定的選項 ( **-n**、 **-c**、 **-w**或 **-N**) 及資料表或檢視分隔符號建立格式檔案。 大量複製資料時， **bcp** 命令可以參考格式檔案，您不需要以互動方式重新輸入格式資訊。 **format** 選項需要 **-f** 選項；建立 XML 格式檔案也需要 **-x** 選項。 如需詳細資訊，請參閱[建立格式檔案 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)。 您必須將 **nul** 指定為值 (**format nul**)。  
+-   **format**<a name="format"></a> 會依據指定的選項 ( **-n**、 **-c**、 **-w**或 **-N**) 及資料表或檢視分隔符號建立格式檔案。 大量複製資料時， **bcp** 命令可以參考格式檔案，讓您不需要以互動方式重新輸入格式資訊。 **format** 選項需要 **-f** 選項；建立 XML 格式檔案也需要 **-x** 選項。 如需詳細資訊，請參閱[建立格式檔案 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)。 您必須將 **nul** 指定為值 (**format nul**)。  
   
  _**owner**_ <a name="schema"></a>  
  這是資料表或檢視表的擁有者名稱。 如果執行該作業的使用者擁有指定的資料表或檢視表，則可選擇是否要使用*owner* 。 如果未指定 *owner* ，且執行作業的使用者並不擁有指定的資料表或檢視表，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會傳回錯誤訊息，並取消作業。  
@@ -187,10 +187,11 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  如果 *err_file* 的開頭是連字號 (-) 或斜線 (/)，請勿在 **-e** 與 *err_file* 值之間加上空格。  
   
- **-E**<a name="E"></a>   
- 指定識別欄位要使用匯入之資料檔案中的一個或多個識別值。 如果未提供 **-E** ，就會略過匯入的資料檔案中此資料行的識別值，且 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會根據建立資料表期間所指定的初始值與遞增值，自動指派唯一值。  
+**-E**<a name="E"></a>
+
+指定識別欄位要使用匯入之資料檔案中的一個或多個識別值。 如果未提供 **-E** ，就會略過匯入的資料檔案中此資料行的識別值，且 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會根據建立資料表期間所指定的初始值與遞增值，自動指派唯一值。  如需詳細資訊，請參閱 [DBCC CHECKIDENT](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)。
   
- 如果資料檔案中沒有資料表或檢視表中之識別欄位的值，請利用格式檔指定，在匯入資料時，應該略過資料表或檢視表中的識別欄位； [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會自動指派資料行的唯一值。 如需詳細資訊，請參閱 [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)。  
+ 如果資料檔案中沒有資料表或檢視表中之識別欄位的值，請利用格式檔指定，在匯入資料時，應該略過資料表或檢視表中的識別欄位； [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會自動指派資料行的唯一值。
   
  **-E** 選項有特殊權限需求。 如需詳細資訊，請參閱本主題稍後的[備註](#remarks)一節。  
    
@@ -228,13 +229,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     下列範例使用 Azure AD 使用者名稱和密碼來匯出資料，其中使用者和密碼是 AAD 認證。 此範例會從 `aadserver.database.windows.net` Azure 伺服器的 `testdb` 資料庫匯出 `bcptest` 資料表，並將資料儲存在 `c:\last\data1.dat` 檔案中：
 
-    ```console
+    ```cmd
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
     下列範例使用 Azure AD 使用者名稱和密碼來匯入資料，其中使用者和密碼是 AAD 認證。 此範例會使用 Azure AD 使用者/密碼，將資料從 `c:\last\data1.dat` 檔案匯入 `aadserver.database.windows.net` Azure 伺服器上 `testdb` 資料庫的 `bcptest` 資料表：
 
-    ```console
+    ```cmd
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
@@ -244,13 +245,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     下列範例使用 Azure AD 整合帳戶來匯出資料。 範例會使用從 Azure server `bcptest` 整合的 Azure AD，從資料庫 `testdb``aadserver.database.windows.net` 匯出資料表，並將資料儲存在檔案中 `c:\last\data2.dat`：
 
-    ```console
+    ```cmd
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
     下列範例使用 Azure AD 整合驗證來匯入資料。此範例會使用 Azure AD 整合驗證將資料從 `c:\last\data2.txt` 檔案匯入 `aadserver.database.windows.net` Azure 伺服器上 `testdb` 資料庫的 `bcptest` 資料表：
 
-    ```console
+    ```cmd
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
@@ -266,13 +267,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
    互動模式需要手動輸入密碼，若為已啟用多重要素驗證的帳戶，請完成您已設定的 MFA 驗證方法。
 
-   ```console
+   ```cmd
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com
    ```
 
    如果 Azure AD 使用者是使用 Windows 帳戶的網域同盟使用者，則命令列中所需的使用者名稱會包含其網域帳戶 (例如，joe@contoso.com 如下所示)：
 
-   ```console
+   ```cmd
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
@@ -448,7 +449,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     
     若要判斷所有已安裝 BCP 公用程式版本的位置，請在命令提示字元中鍵入：
     
-    ```console
+    ```cmd
     where bcp.exe
     ```
 
@@ -604,7 +605,7 @@ END
 
 請在命令提示字元之下，輸入下列命令：
 
-```console
+```cmd
 bcp -v
 ```
   
@@ -616,7 +617,7 @@ bcp -v
 
   請在命令提示字元之下，輸入下列命令：
 
-  ```console
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -638,7 +639,7 @@ bcp -v
 
 請在命令提示字元之下，輸入下列命令：\(系統會提示您輸入密碼。\)
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```
 
@@ -650,7 +651,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
 
   請在命令提示字元之下，輸入下列命令：
 
-  ```console
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -658,7 +659,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
   
 請在命令提示字元之下，輸入下列命令：
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
 ```
 
@@ -670,7 +671,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTr
   
 請在命令提示字元之下，輸入下列命令：
 
-```console
+```cmd
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```
 
@@ -680,7 +681,7 @@ bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTr
   
 請在命令提示字元之下，輸入下列命令：
 
-```console
+```cmd
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```
 
@@ -690,7 +691,7 @@ bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\
 
 請在命令提示字元之下，輸入下列命令：
 
-```console
+```cmd
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```
 
@@ -700,7 +701,7 @@ bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People O
 
 請在命令提示字元之下，輸入下列命令：
 
-```console
+```cmd
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -722,7 +723,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stoc
 
 請在命令提示字元之下，輸入下列命令：
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
 ```
 

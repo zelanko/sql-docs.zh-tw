@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 1637b46d896e0114d5b66004bc1c160e23521e30
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 99c252c81b081a7d4e0583e6722c5c853904cc27
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78180073"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288970"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -121,7 +121,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 
 < set_options > ::=
 {
-    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 }
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } -- Preview 
 }
 ```
 
@@ -397,7 +397,7 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
 可讓您控制[資料列層級安全性](../../relational-databases/security/row-level-security.md) (RLS) 述詞是否會影響整體使用者查詢的執行計畫基數。 當 ISOLATE_SECURITY_POLICY_CARDINALITY 為 ON 時，RLS 述詞不會影響執行計畫的基數。 例如，假設某資料表包含 1 百萬個資料列以及一個 RLS 述詞，此述詞會針對發出查詢的特定使用者將結果限制為 10 個資料列。 將此資料庫範圍的設定設為 OFF 時，此述詞的基數估計值會是 10。 當此資料庫範圍的設定為 ON 時，查詢最佳化會估計 1 百萬個資料列。 建議針對大部分工作負載使用預設值。
 
-DW 相容性層級 **=** { **AUTO** | 10 | 20 }
+DW_COMPATIBILITY_LEVEL (預覽) **=** {**AUTO** | 10 | 20 }
 
 **適用於**：僅限 Azure Synapse Analytics (前身為 SQL DW)
 

@@ -3,18 +3,18 @@ title: 使用擴充事件監視指令碼
 description: 了解如何使用擴充事件來監視與 SQL Server 機器學習服務、SQL Server Launchpad 和 Python 或 R 作業外部指令碼相關的操作及針對其進行疑難排解。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2020
+ms.date: 03/04/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fe8601801a92b28022a83b54ea06ec5836c6c013
-ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
+ms.openlocfilehash: cf0253788e19061fe54b8e2b0b8dfd3142856472
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "78200979"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78335734"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>使用 SQL Server 機器學習服務中的擴充事件來監視 Python 與 R 指令碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,12 @@ AND p.name = 'SQLSatellite';
 ### <a name="collecting-events-from-external-processes"></a>從外部處理序收集事件
 
 SQL Server 機器學習服務會啟動一些在 SQL Server 處理序外執行的服務。 若要擷取這些外部處理序的相關事件，您必須建立事件追蹤組態檔，並將該檔案放在處理序可執行檔所在的相同目錄中。  
-  
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!IMPORTANT]
+> 從 SQL Server 2019 開始，隔離機制已經變更。 因此您必須授與事件追蹤設定檔所在目錄的適當權限。 如需有關如何設定這些權限的詳細資訊，請參閱 [Windows 上 SQL Server 2019 中的檔案權限區段：機器學習服務的隔離變更](../install/sql-server-machine-learning-services-2019.md#file-permissions)
+::: moniker-end
+
 + **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
     若要擷取與 Launchpad 相關的事件，請將 *.xml* 檔案放在 SQL Server 執行個體的 Binn 目錄中。 在預設的安裝中，這會是：

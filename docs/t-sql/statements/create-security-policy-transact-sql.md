@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8cf0332d2a82113145e549d9419b855a222f7441
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 45a1b461c5a56bfd894122eeb67e69672c36d093
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68117288"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288951"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -76,11 +76,11 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
   
  *\<block_dml_operation>* 要套用封鎖述詞的特定 DML 作業。 AFTER 可指定在 DML 作業 (INSERT 或 UPDATE) 執行之後，根據資料列的值來評估述詞。 BEFORE 可指定在 DML 作業 (UPDATE 或 DELETE) 執行之前，根據資料列的值來評估述詞。 如果沒有指定作業，則會將述詞套用至所有作業。  
   
- [ STATE = { ON | **OFF** } ]  
+ [ STATE = { **ON** | OFF } ]  
  啟用或停用強制對目標資料表執行其安全性述詞的安全性原則。 如果未指定，則會啟用正在建立的安全性原則。  
   
- [ SCHEMABINDING = { ON | OFF } ]  
- 指出是否必須使用 SCHEMABINDING 選項來建立原則中的所有述詞函式。 根據預設，所有函式都必須以 SCHEMABINDING 來建立。  
+ [ SCHEMABINDING = { **ON** | OFF } ]  
+ 指出是否必須使用 SCHEMABINDING 選項來建立原則中的所有述詞函式。 根據預設，此設定為 **ON**，且所有函式都必須以 SCHEMABINDING 來建立。  
   
  NOT FOR REPLICATION  
  表示當複寫代理程式修改目標物件時，不應執行安全性原則。 如需詳細資訊，請參閱[在同步處理期間控制觸發程序和條件約束的行為 &#40;複寫 Transact-SQL 程式設計&#41;](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md)。  

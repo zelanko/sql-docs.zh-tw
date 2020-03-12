@@ -1,7 +1,7 @@
 ---
 title: Microsoft Drivers for PHP for SQL Server 的版本資訊 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 03/05/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-dapugl, kenvh
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5e279ba446e790a2262e5f0effe160632065dcba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: edc5d8122f1cb2c0fad747e480843c559f650434
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76941213"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866508"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的版本資訊
 
@@ -41,7 +41,17 @@ For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
 
-## <a name="whats-new-in-version-58"></a>5\.8 版的新功能
+## <a name="58"></a>5.8
+
+![下載](../../ssms/media/download-icon.png) [下載 Windows 套件](https://go.microsoft.com/fwlink/?linkid=2120362)  
+[GitHub 發行標記 (您可以在這裡找到 Linux 與 macOS 套件)](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.0)
+
+### <a name="version-information"></a>版本資訊
+
+- 版本號碼：5.8.0
+- 發行日期：2020 年 1 月 31 日
+
+## <a name="whats-new-in-58"></a>5\.8 的新功能
 
 | 新項目 | 詳細資料 |
 | :------- | :------ |
@@ -59,9 +69,40 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | 已藉由在擷取時快取中繼資料，以及忽略多餘呼叫來改善效能。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
-<sup>1</sup> 5.8 版的 Alpine Linux 支援是實驗性的。
+<sup>1</sup> Alpine Linux 支援針對 5.8 版為實驗性。
 
-## <a name="whats-new-in-version-56"></a>5\.6 版的新功能
+## <a name="previous-releases"></a>舊版
+
+## <a name="561"></a>5.6.1
+
+![下載](../../ssms/media/download-icon.png) [下載 Windows 套件](https://go.microsoft.com/fwlink/?linkid=2120446)  
+[GitHub 發行標記 (您可以在這裡找到 Linux 與 macOS 套件)](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.1)
+
+### <a name="version-information"></a>版本資訊
+
+- 版本號碼：5.6.1
+- 發行日期：2019 年 3 月 19 日
+
+## <a name="whats-new-in-561"></a>5\.6.1 的新功能：
+
+| 新項目 | 詳細資料 |
+| :------- | :------ |
+| 錯誤 (bug) 修正 | 已修正計算欄位或資料行中繼資料時所作的假設，這可能導致應用程式終止。 |
+| 錯誤 (bug) 修正 | 已修改 sqlsrv 設定檔，使其可以獨立於 pdo_sqlsrv 之外進行編譯。 |
+| 錯誤 (bug) 修正 | 已修正 PDOStatement::getColumnMeta() 以在發生錯誤時傳回 false。 |
+| &nbsp; | &nbsp; |
+
+## <a name="56"></a>5.6
+
+![下載](../../ssms/media/download-icon.png) [下載 Windows 套件](https://go.microsoft.com/fwlink/?linkid=2120450)  
+[GitHub 發行標記 (您可以在這裡找到 Linux 與 macOS 套件)](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
+
+### <a name="version-information"></a>版本資訊
+
+- 版本號碼：5.6.0
+- 發行日期：2019 年 2 月 21 日
+
+## <a name="whats-new-in-56"></a>5\.6 的新功能
 
 | 新項目 | 詳細資料 |
 | :------- | :------ |
@@ -78,7 +119,17 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | 已藉由在擷取時快取中繼資料，以及加快 Unicode 字串轉換來改善效能。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
-## <a name="whats-new-in-version-53"></a>5\.3 版的新功能
+## <a name="53"></a>5.3
+
+![下載](../../ssms/media/download-icon.png) [下載 Windows 套件](https://go.microsoft.com/fwlink/?linkid=2120447)  
+[GitHub 發行標記 (您可以在這裡找到 Linux 與 macOS 套件)](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
+
+### <a name="version-information"></a>版本資訊
+
+- 版本號碼：5.3.0
+- 發行日期：2018 年 7 月 20 日
+
+## <a name="whats-new-in-53"></a>5\.3 的新功能
 
 - 所有平台上 Microsoft ODBC Driver 17.2 的支援
 - macOS High Sierra 的支援 (需要 ODBC Driver 17 和更新版本)
@@ -86,7 +137,17 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - 支援 Ubuntu 18.04 LTS (需要 ODBC Driver 17.2)
 - Linux 以及 macOS 中連線復原的支援 (需要 ODBC Driver 17.2)
 
-## <a name="whats-new-in-version-52"></a>5\.2 版的新功能
+## <a name="52"></a>5.2
+
+![下載](../../ssms/media/download-icon.png) [下載 Windows 套件](https://go.microsoft.com/fwlink/?linkid=2120451)  
+[GitHub 發行標記 (您可以在這裡找到 Linux 與 macOS 套件)](https://github.com/Microsoft/msphpsql/releases/tag/v5.2.0)
+
+### <a name="version-information"></a>版本資訊
+
+- 版本號碼：5.2.0
+- 發行日期：2018 年 3 月 23 日
+
+## <a name="whats-new-in-52"></a>5\.2 的新功能
 
 - Windows 上 PHP 7.2.1 和更新版本，以及其他平台上 7.2.0 和更新版本的支援
 - Microsoft ODBC Driver 17 的支援
@@ -101,7 +162,17 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Azure SQL 資料倉儲的支援
 - Azure SQL 受控執行個體的支援
 
-## <a name="whats-new-in-version-43"></a>4\.3 版的新功能
+## <a name="43"></a>4.3
+
+![下載](../../ssms/media/download-icon.png) [下載 Windows 套件](https://go.microsoft.com/fwlink/?linkid=2120616)  
+[GitHub 發行標記 (您可以在這裡找到 Linux 與 macOS 套件)](https://github.com/Microsoft/msphpsql/releases/tag/v4.3.0)
+
+### <a name="version-information"></a>版本資訊
+
+- 版本號碼：4.3.0
+- 發行日期：2017 年 7 月 6 日
+
+## <a name="whats-new-in-43"></a>4\.3 的新功能
 
 - PHP 7.1 的支援
 - macOS Sierra 和 macOS El Capitan 的支援
@@ -113,24 +184,53 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Linux 和 macOS 的連線共用支援。 如需詳細資訊，請參閱[連接共用](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md)。
 - 使用 ActiveDirectoryPassword 和 SqlPassword 進行 Azure Active Directory 驗證的支援。 如需詳細資訊，請參閱 [Connection Options](../../connect/php/connection-options.md)。
 
-## <a name="whats-new-in-version-40"></a>4\.0 版的新功能
+## <a name="40"></a>4.0
+
+![下載](../../ssms/media/download-icon.png) [下載 Windows 套件](https://go.microsoft.com/fwlink/?linkid=2120448)  
+[GitHub 發行標記 (您可以在這裡找到 Linux 與 macOS 套件)](https://github.com/microsoft/msphpsql/releases/tag/v4.0-RTW)
+
+### <a name="version-information"></a>版本資訊
+
+- 版本號碼：4.0
+- 發行日期：2016 年 7 月 1 日
+
+## <a name="whats-new-in-40"></a>4\.0 的新功能
 
 - PHP 7.0 的支援  
 - 完整 64 位元支援
 - Ubuntu 15.04、Ubuntu 16.04 和 RedHat 7 的支援
 
-## <a name="whats-new-in-version-32"></a>3\.2 版的新功能
+## <a name="32"></a>3.2
 
-- PHP 5.6 的支援   
-- 包含 PHP 舊有的 5.5 和 5.4 版最新的更新   
+![下載](../../ssms/media/download-icon.png) [下載 Windows 套件](https://go.microsoft.com/fwlink/?linkid=2120449)  
+[GitHub 發行標記 (您可以在這裡找到 Linux 與 macOS 套件)](https://github.com/microsoft/msphpsql/releases/tag/v3.2.0.0)
+
+### <a name="version-information"></a>版本資訊
+
+- 版本號碼：3.2
+- 發行日期：2015 年 3 月 9 日
+
+## <a name="whats-new-in-32"></a>3\.2 的新功能
+
+- PHP 5.6 的支援  
+- 包含 PHP 舊有的 5.5 和 5.4 版最新的更新  
 - 需要 Microsoft ODBC Driver 11 for SQL Server  
 
-## <a name="whats-new-in-version-31"></a>3\.1 版的新功能
+## <a name="31"></a>3.1
+
+[GitHub 發行標記 (您可以在這裡找到 Linux 與 macOS 套件)](https://github.com/microsoft/msphpsql/releases/tag/v3.1.0.0)
+
+### <a name="version-information"></a>版本資訊
+
+- 版本號碼：3.1
+- 發行日期：2014 年 12 月 12 日
+
+## <a name="whats-new-in-31"></a>3\.1 的新功能
 
 - PHP 5.5 的支援  
 - 需要 Microsoft ODBC Driver 11 for SQL Server。 舊版需要 SQL Native Client。  
 
-## <a name="whats-new-in-version-30"></a>3\.0 版的新功能  
+## <a name="whats-new-in-30"></a>3\.0 的新功能  
 
 - PHP 5.4 的支援  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]第 3 版不支援 PHP 5.2。  
 - 已加入 AttachDBFileName 連接選項。 如需詳細資訊，請參閱 [Connection Options](../../connect/php/connection-options.md)。  
@@ -140,7 +240,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - 用戶端資料指標的支援 (快取記憶體中的結果集)。 如需詳細資訊，請參閱[資料指標類型 &#40;SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-sqlsrv-driver.md) 和[資料指標類型 &#40;PDO_SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。
 - 已加入 PDO::ATTR_EMULATE_PREPARES 屬性。 如需詳細資訊，請參閱 [PDO::prepare](../../connect/php/pdo-prepare.md)。  
 
-## <a name="whats-new-in-version-20"></a>2\.0 版的新功能
+## <a name="whats-new-in-20"></a>2\.0 的新功能
 
 在 2.0 版中，已加入對 PDO_SQLSRV 驅動程式的支援。 如需詳細資訊，請參閱 [PDO_SQLSRV 驅動程式參考](../../connect/php/pdo-sqlsrv-driver-reference.md)。  
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: cf6cd4cce3435491632afa98195650a73fe4a23b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 39e010f87b9cf0785ba025cfb8a9cf96825ae9d9
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76911191"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896765"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上的 Microsoft ODBC Driver to SQL Server 版本資訊
 
@@ -35,6 +35,15 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## <a name="1752-march-2020"></a>17.5.2，2020 年 3 月
+
+| 新增功能 | 詳細資料 |
+| :------------ | :------ |
+| 支援使用 Azure Key Vault 受控識別進行驗證 | 請參閱[搭配 ODBC 驅動程式使用 Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md)。 |
+| 支援其他的 Azure Key Vault 端點 | 請參閱[搭配 ODBC 驅動程式使用 Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md)。 |
+| 錯誤修正。 | 請參閱 [Bug 修正](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="175-january-2020"></a>17.5，2020 年 1 月
 
@@ -87,7 +96,7 @@ GeneMi.  2019/04/03.
 | 適用於 Azure SQL Database 和 SQL Server 的資料分類。 | 請參閱[資料分類](../data-classification.md)。 |
 | 支援 UTF-8 伺服器編碼。 | &nbsp; |
 | `SQLBrowseConnect` | &nbsp; |
-| 對 `libcurl` 具有動態相依性。 | 從此版本開始，`libcurl` 套件不是明確的相依性。<br/>使用 Azure Key Vault 或 Azure Active Directory 驗證時，需要 OpenSSL 或 NSS 的 `libcurl` 套件。<br/>如果您遇到有關 `libcurl` 的錯誤，請確定它已安裝。 |
+| 對 `libcurl` 具有動態相依性。 | 從此版本開始，`libcurl` 套件不是明確相依性。<br/>使用 Azure Key Vault 或 Azure Active Directory 驗證時，需要 OpenSSL 或 NSS 的 `libcurl` 套件。<br/>如果您遇到有關 `libcurl` 的錯誤，請確定它已安裝。 |
 | 連接字串中 ConnectRetryCount 和 ConnectRetryInterval 關鍵字的閒置連接復原功能。 | &bull; &nbsp; &nbsp; 使用 `SQL_COPT_SS_CONNECT_RETRY_COUNT` (唯讀) 來擷取連線重試嘗試次數。<br/><br/>&bull; &nbsp; &nbsp; 使用 `SQL_COPT_SS_CONNECT_RETRY_INTERVAL` (唯讀) 來擷取連線重試間隔的長度。<br/><br/>請參閱 [Windows ODBC 驅動程式中的連接復原功能](../windows/connection-resiliency-in-the-windows-odbc-driver.md)。 |
 | 錯誤修正。 | [錯誤修正](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
