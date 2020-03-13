@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 1d968559ee41b2a52f90bf784401fe81679864cf
-ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
+ms.openlocfilehash: adee14219a29fef48abdcdcec9d7aac7894c2270
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77600149"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198185"
 ---
 # <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>主動式異地複寫-sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "77600149"
   
 ||  
 |-|  
-|**適用**于： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
+|**適用於**： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
   
 ## <a name="syntax"></a>語法  
   
@@ -76,8 +76,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [dm_continuous_copy_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
- [sp_wait_for_database_copy_sync](active-geo-replication-sp-wait-for-database-copy-sync.md)   
- [異地複寫動態管理檢視（Dmv）和函數 &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
- [sp_wait_for_database_copy_sync](active-geo-replication-sp-wait-for-database-copy-sync.md)
+ [異地複寫動態管理檢視（Dmv）和函數 &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
+ [sys. dm_geo_replication_link_status](../system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)
   
   

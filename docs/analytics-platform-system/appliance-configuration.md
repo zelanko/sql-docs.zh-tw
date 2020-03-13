@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340463"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289736"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>分析平臺系統的設備設定檢查清單
 針對您自己的環境設定分析平臺系統所需的工作，提供檢查清單。 您必須先進行這些設定工作，才能使用設備。  

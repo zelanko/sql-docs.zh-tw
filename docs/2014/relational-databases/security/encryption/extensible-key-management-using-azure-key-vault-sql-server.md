@@ -17,11 +17,11 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: f826ce7ff54bb28738f79fbf22c8c8435035008c
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339041"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289446"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>使用 Azure Key Vault 進行可延伸金鑰管理 (SQL Server)
   適用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]于[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault 的連接器[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可讓加密利用 Azure Key Vault 服務作為可延伸[金鑰管理 &#40;EKM&#41;](extensible-key-management-ekm.md)提供者，以保護其加密金鑰。
@@ -350,4 +350,4 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
 ```
 
 ## <a name="see-also"></a>另請參閱
- [建立密碼編譯提供者 &#40;transact-sql&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql) [建立認證 &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql) [建立非對稱金鑰 &#40;transact-sql&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql) [建立對稱金鑰 &#40;TRANSACT-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)&#41;可延伸[金鑰管理 &#40;EKM&#41;](extensible-key-management-ekm.md) [使用 ekm 備份加密來啟用 TDE](enable-tde-on-sql-server-using-ekm.md) [](../../backup-restore/backup-encryption.md) [建立加密備份](../../backup-restore/create-an-encrypted-backup.md)
+ [建立密碼編譯提供者 &#40;transact-sql&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql) [建立認證 &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql) [建立非對稱金鑰 &#40;transact-sql&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql) [建立對稱金鑰 &#40;TRANSACT-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)&#41;可延伸[金鑰管理 &#40;EKM&#41;](extensible-key-management-ekm.md) [使用 ekm 備份加密來啟用 TDE](enable-tde-on-sql-server-using-ekm.md) [Backup Encryption](../../backup-restore/backup-encryption.md) [建立加密備份](../../backup-restore/create-an-encrypted-backup.md)

@@ -13,11 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ffd46d75f0d3dc803f2fa3739b363bbb53b7d55b
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339187"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289556"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>使用報表設計師設計報表 (SSRS)
   使用報表設計師建立完整功能的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表和報表方案。 報表設計師提供一個圖形介面，您可以在此介面中定義資料來源、資料集與查詢、資料區域與欄位的報表配置位置，以及定義互動式功能，例如搭配使用的參數和報表集。  
@@ -120,7 +120,7 @@ ms.locfileid: "78339187"
      如果您使用建立報表但是未部署報表的專案組態，則在目前組態之 `StartItem` 屬性中所指定的報表，會在另一個預覽視窗中開啟。  
   
     > [!NOTE]  
-    >  若要使用偵錯模式，您必須設定啟動項目。 在方案總管中，以滑鼠右鍵按一下報表專案， **** 然後按一下 [屬性`StartItem`]，然後在中選取要顯示的報表名稱。  
+    >  若要使用偵錯模式，您必須設定啟動項目。 在方案總管中，以滑鼠右鍵按一下報表專案， **Properties**然後按一下 [屬性`StartItem`]，然後在中選取要顯示的報表名稱。  
   
      如果您想要預覽並非專案之啟動項目的特定報表，請選取建立報表但未部署報表的組態 (例如 DebugLocal 組態)，以滑鼠右鍵按一下報表，然後按一下 [執行]  。 您必須選擇並未部署報表的組態；否則，報表將會發行至報表伺服器，而非在本機的預覽視窗中顯示。  
   

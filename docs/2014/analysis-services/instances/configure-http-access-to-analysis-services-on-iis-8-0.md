@@ -10,12 +10,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f4f911ebf60852fd4ab11c5813fc567deb2d0c87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8431de73b450179592bda39066c72550991a393c
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75225405"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217081"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>設定 Internet Information Services (IIS) 8.0 上 Analysis Services 的 HTTP 存取
   本文說明如何設定 HTTP 端點來存取 Analysis Services 執行個體。 您可以設定 MSMDPUMP.dll (這是在 Internet Information Services (IIS) 中執行的一個 ISAPI 擴充程式，可以在用戶端應用程式與 Analysis Services 伺服器之間來回提取資料) 來啟用 HTTP 存取。 此方法會在您的 BI 方案需要下列功能時，提供連接至 Analysis Services 的替代方式。  
@@ -40,7 +40,7 @@ ms.locfileid: "75225405"
   
 -   [概觀](#bkmk_overview)  
   
--   [必要條件](#bkmk_prereq)  
+-   [先決條件](#bkmk_prereq)  
   
 -   [將 MSMDPUMP 複製到 Web 服務器上的資料夾](#bkmk_copy)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "75225405"
   
 -   [測試組態](#bkmk_test)  
   
-##  <a name="bkmk_overview"></a>簡要  
+##  <a name="bkmk_overview"></a> 概觀  
  MSMDPUMP 是一個 ISAPI 擴充程式，會載入到 IIS 並可重新導向至本機或遠端 Analysis Services 執行個體。 藉由設定此 ISAPI 擴充程式，即可建立 Analysis Services 執行個體的 HTTP 端點。  
   
  您必須為每個 HTTP 端點建立及設定一個虛擬目錄。 每個端點都需要一組自己的 MSMDPUMP 檔案，用於您要連接的每個 Analysis Services 執行個體。 這組檔案中的組態檔會指定用於每個 HTTP 端點的 Analysis Services 執行個體名稱。  
@@ -293,7 +293,7 @@ ms.locfileid: "75225405"
   
  `Data Source=https://<servername>/olap/msmdpump.dll; Initial Catalog=AdventureWorksDW2012; Integrated Security=Basic; User ID=XXXX; Password=XXXXX;`  
   
- 如需關於以程式設計方式設定連接的詳細資訊，請參閱 [在 ADOMD.NET 中建立安全連接](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)。  
+ 如需關於以程式設計方式設定連接的詳細資訊，請參閱 [在 ADOMD.NET 中建立安全連接](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)。  
   
  最後一個步驟是確實使用更嚴格的測試進行後續追蹤，方法是，使用在連接來源之網路環境中執行的用戶端電腦。  
   

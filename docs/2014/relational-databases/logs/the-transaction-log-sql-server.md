@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338272"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289406"
 ---
 # <a name="the-transaction-log-sql-server"></a>交易記錄 (SQL Server)
   每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫都有交易記錄來記錄所有交易及每項交易所作的資料庫修改。 必須定期截斷交易記錄，以免被填滿。 但是，某些因素會影響記錄的截斷，所以監控記錄大小非常重要。 某些作業可使用最低限度記錄，以減少其對交易記錄大小的影響。  
@@ -106,7 +106,7 @@ ms.locfileid: "78338272"
   
  下列作業 (在完整復原模式下會完整記錄) 在簡單和大量記錄復原模式下會進行最低限度記錄：  
   
--   大量匯入作業 ([bcp](../../tools/bcp-utility.md)、 [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql)及 [INSERT...SELECT](/sql/t-sql/statements/insert-transact-sql))。 如需何時大量匯入至資料表會採用最低限度記錄的詳細資訊，請參閱＜ [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)＞。  
+-   大量匯入作業 ([bcp](../../tools/bcp-utility.md)、[BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) 及 [INSERT...SELECT](/sql/t-sql/statements/insert-transact-sql))。 如需何時大量匯入至資料表會採用最低限度記錄的詳細資訊，請參閱＜ [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)＞。  
   
     > [!NOTE]  
     >  啟用異動複寫時，即使在大量記錄復原模式下也會完整記錄 BULK INSERT 作業。  

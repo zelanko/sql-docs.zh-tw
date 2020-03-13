@@ -14,12 +14,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 365834e3c1cd239a245c1523947a359b7c2dcc57
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67934550"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289116"
 ---
 # <a name="automatic-tuning"></a>自動微調
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 手動強制計畫不應永遠強制執行，因為[!INCLUDE[ssde_md](../../includes/ssde_md.md)]應該能夠套用最佳計畫。 使用者或 DBA 最終應該會使用`sp_query_store_unforce_plan`程式來取消強制執行計畫，並讓[!INCLUDE[ssde_md](../../includes/ssde_md.md)]尋找最佳的計畫。 
 
 > [!TIP]
-> Alternativelly，使用**具有強制計畫的查詢**查詢存放區 view 來尋找和取消強制執行計畫。
+> 或者，使用**具有強制計畫的查詢**查詢存放區 view 來尋找並取消強制執行計畫。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供在查詢存放區中監視效能和修正問題所需的所有必要的視圖和程式。
 
@@ -188,5 +188,5 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
  [執行計畫](../../relational-databases/performance/execution-plans.md)    
  [效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [效能監視及微調工具](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [查詢調整小幫手](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)

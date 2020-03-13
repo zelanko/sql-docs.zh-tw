@@ -10,12 +10,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 048f737266e815a02058a51ebebce0b0f1ff46af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9d83a7111bbea13733190eeb612373d9136dd058
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66084920"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217125"
 ---
 # <a name="data-mining-services-and-data-sources"></a>資料採礦服務與資料來源
   資料採礦會要求建立與 SQL Server Analysis Services 執行個體的連接。 資料採礦不需要 Cube 中的資料，而且建議您使用關聯式來源；但是資料採礦會使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 引擎所提供的元件。  
@@ -117,7 +117,7 @@ ms.locfileid: "66084920"
   
  如果此程序傳回資料集，用戶端將會收到資料集或資料表，其中具有包含資料列的巢狀資料表。 例如，如果您針對模型內容建立查詢，此查詢會傳回整個模型。 若要避免傳回太多資料列，您可以使用 ADOMD+ 物件模型來撰寫預存程序。  
   
- 若要撰寫伺服器預存程序，您必須參考 Microsoft.AnalysisServices.AdomdServer 命名空間。 如需如何建立和使用預存程序的詳細資訊，請參閱 [使用者定義函數和預存程序](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)。  
+ 若要撰寫伺服器預存程序，您必須參考 Microsoft.AnalysisServices.AdomdServer 命名空間。 如需如何建立和使用預存程序的詳細資訊，請參閱 [使用者定義函數和預存程序](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)。  
   
 > [!NOTE]  
 >  預存程序無法用來變更資料伺服器物件的安全性。 當您執行某個預存程序時，使用者的目前內容就會用來決定所有伺服器物件的存取權。 因此，使用者必須針對他們所存取的任何資料庫物件擁有適當的權限。  

@@ -10,12 +10,12 @@ ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a02d8d5b113e4773aa7cdfbbf20975fd70218e1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66079576"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217114"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>使用動態管理檢視 (DMV) 監視 Analysis Services
   Analysis Services 動態管理檢視 (DMV) 是公開本機伺服器作業和伺服器健全狀況相關資訊的查詢結構。 查詢結構是傳回 Analysis Services 執行個體中繼資料和監視資訊之結構描述資料列集的介面。  
@@ -112,7 +112,7 @@ ORDER BY TABLE_NAME ASC
 |[DBSCHEMA_TABLES 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-tables-rowset)|傳回目前資料庫中所有資料表的清單。 您可以使用此清單來建構 DMV 查詢。|  
 |[DISCOVER_CALC_DEPENDENCY 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)|傳回模型中所用資料行和資料表的清單，而這些有其他資料行和資料表的相依性。|  
 |[DISCOVER_COMMAND_OBJECTS 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-command-objects-rowset)|提供所參考命令使用中之物件的資源使用量與活動資訊。|  
-|[DISCOVER_COMMANDS 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-commands-rowset)|提供有關目前執行中命令的資源使用量和活動資訊。|  
+|[DISCOVER_COMMANDS 資料列集](https://docs.microsoft.com/analysis-services/instances/analysis-services-schema-rowsets)|提供有關目前執行中命令的資源使用量和活動資訊。|  
 |[DISCOVER_CONNECTIONS 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-connections-rowset)|提供有關 Analysis Services 開啟連接之資源使用量與活動資訊。|  
 |[DISCOVER_CSDL_METADATA 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)|傳回表格式模型的相關資訊。<br /><br /> 需要加入 SYSTEMRESTRICTSCHEMA 和其他參數。|  
 |[DISCOVER_DB_CONNECTIONS 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-db-connections-rowset)|提供從 Analysis Services 到外部資料來源的開啟連接 (例如處理或匯入期間) 的資源使用量與活動資訊。|  
@@ -159,9 +159,9 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_INPUT_DATASOURCES 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)|傳回目前資料庫所定義之資料來源物件的相關資訊。|  
 |[MDSCHEMA_KPIS 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-kpis-rowset)|傳回目前資料庫所定義之 KPI 的相關資訊。|  
 |[MDSCHEMA_LEVELS 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-levels-rowset)|傳回目前資料庫所定義之階層層級的相關資訊。|  
-|[MDSCHEMA_MEASUREGROUP_DIMENSIONS 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset)|列出量值群組的維度。|  
+|[MDSCHEMA_MEASUREGROUP_DIMENSIONS 資料列集](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/e6399481-a289-41f3-94d2-e081bf29e094)|列出量值群組的維度。|  
 |[MDSCHEMA_MEASUREGROUPS 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset)|傳回目前連接中量值群組的清單。|  
-|[MDSCHEMA_MEASURES 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measures-rowset)|傳回目前連接中量值的清單。|  
+|[MDSCHEMA_MEASURES 資料列集](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/ab8e721f-9b9c-4ba1-b105-37a5f200d67c)|傳回目前連接中量值的清單。|  
 |[MDSCHEMA_MEMBERS 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)|傳回目前連接上所有成員的清單，依資料庫、Cube 和維度列出。|  
 |[MDSCHEMA_PROPERTIES 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)|傳回每個屬性的完整名稱，以及屬性類型、資料類型和其他中繼資料。|  
 |[MDSCHEMA_SETS 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|傳回目前連接所定義之集合的清單。|  

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338991"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289266"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 資料庫
   Oracle CDC 執行個體與目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上同名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關聯。 此資料庫稱為 Oracle CDC 資料庫 (或 CDC 資料庫)。  
@@ -98,7 +98,7 @@ ms.locfileid: "78338991"
 |----------|-----------------|  
 |version|這會追蹤 CDC 執行個體組態的版本。 每當更新資料表以及加入新的擷取執行個體或是移除現有的擷取執行個體時，都會更新此項目。|  
 |connect_string|Oracle 連接字串。 基本範例如下：<br /><br /> `<server>:<port>/<instance>` (例如 `erp.contoso.com:1521/orcl`)。<br /><br /> 連接字串還可以指定 Oracle Net 連接描述項，例如， `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`。<br /><br /> 如果使用目錄伺服器或 tnsnames，則連接字串可以是連接的名稱。<br /><br /> 如需 Oracle 連接字串的詳細資訊，請參閱 [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153)，以取得 Oracle CDC 服務所使用之 Oracle Instant Client 的 Oracle 資料庫連接字串詳細資訊。|  
-|use_windows_authentication|下列其中一個值的布林值：<br /><br /> **0**：提供 Oracle 使用者名稱和密碼進行驗證 (預設)<br /><br /> **1**：使用 Windows 驗證連接到 Oracle 資料庫。 只有當設定 Oracle 資料庫使用 Windows 驗證時，才可使用這個選項。|  
+|use_windows_authentication|下列其中一個值的布林值：<br /><br /> **0**:提供 Oracle 使用者名稱和密碼進行驗證 (預設)<br /><br /> **1**:使用 Windows 驗證連接到 Oracle 資料庫。 只有當設定 Oracle 資料庫使用 Windows 驗證時，才可使用這個選項。|  
 |username|記錄採礦之 Oracle 資料庫使用者的名稱。 只有當 **use_windows_authentication = 0**時，才會強制這項設定。|  
 |密碼|記錄採礦之 Oracle 資料庫使用者的密碼。 只有當 **use_windows_authentication = 0**時，才會強制這項設定。|  
 |transaction_staging_timeout|未認可的 Oracle 交易在寫入 **cdc.xdbcdc_staged_transactions** 資料表之前保留在記憶體中的時間 (以秒數為單位)。 預設值是 120 秒。|  
@@ -109,7 +109,7 @@ ms.locfileid: "78338991"
   
 |名稱|預設|最小值|最大值|靜態|描述|  
 |----------|-------------|---------|---------|------------|-----------------|  
-|追蹤|False|-|-|False|可用的值：<br /><br /> **True**<br /><br /> **False**<br /><br /> **的**<br /><br /> **關**|  
+|追蹤|False|-|-|False|可用的值：<br /><br /> **True**<br /><br /> **False**<br /><br /> **on**<br /><br /> **關**|  
 |cdc_update_state_interval|10|1|120|False|配置給交易的記憶體區塊大小，以 KB 為單位 (一筆交易可以配置一個以上的區塊)。 請參閱 [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) 資料表中的 memory_limit 資料行。|  
 |target_max_batched_transactions|100|1|1000|True|可以在 SQL Server CT 資料表更新中當做一筆交易來處理的最大 Oracle 交易數目。|  
 |target_idle_lsn_update_interval|10|0|1|False|當擷取的資料表沒有活動時，用來更新 **lsn_time_mapping** 資料表的間隔 (以秒數為單位)。|  
@@ -141,8 +141,8 @@ ms.locfileid: "78338991"
 |----------|-----------------|  
 |status|目前 Oracle CDC 執行個體的目前狀態碼。 此狀態會描述 CDC 的目前狀態。|  
 |sub_status|提供有關目前狀態之其他資訊的第二層狀態。|  
-|作用中|下列其中一個值的布林值：<br /><br /> **0**：Oracle CDC 執行個體處理序不在使用中。<br /><br /> **1**：Oracle CDC 執行個體處理序為使用中。|  
-|error|下列其中一個值的布林值：<br /><br /> **0**：Oracle CDC 執行個體處理序不在錯誤狀態中。<br /><br /> **1**：Oracle CDC 執行個體在錯誤狀態中。|  
+|作用中|下列其中一個值的布林值：<br /><br /> **0**:Oracle CDC 執行個體處理序不在使用中。<br /><br /> **1**:Oracle CDC 執行個體處理序為使用中。|  
+|error|下列其中一個值的布林值：<br /><br /> **0**:Oracle CDC 執行個體處理序不在錯誤狀態中。<br /><br /> **1**:Oracle CDC 執行個體在錯誤狀態中。|  
 |status_message|提供錯誤或狀態描述的字串。|  
 |timestamp|包含上次更新擷取狀態之時間 (UTC) 的時間戳記。|  
 |active_capture_node|目前正在執行 Oracle CDC 服務和 Oracle CDC 執行個體 (它正在處理 Oracle 交易記錄) 的主機名稱 (此主機可以是叢集上的節點)。|  
