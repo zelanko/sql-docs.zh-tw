@@ -1,7 +1,7 @@
 ---
 title: 資料指標 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2018
+ms.date: 03/11/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de565a5d34ddbf8388e2c20a564bc8c872a0a1c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: a053f49a6ab3b42e31c5b71c2d2d558ea3170440
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68140805"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112333"
 ---
 # <a name="cursors"></a>資料指標
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ API 指標可支援 OLE DB 和 ODBC 中的 API 資料指標函數。 API 伺服�
   
 > [!NOTE]
 > 因為靜態資料指標的結果集是儲存在 **tempdb** 中的工作資料表，所以結果集中的資料列大小不可超過 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表的資料列大小的上限。  
-> 如需詳細資訊，請參閱[查詢處理架構指南中的工作資料表](../relational-databases/query-processing-architecture-guide.md#worktables)。 如需最大資料列大小的詳細資訊，請參閱 [SQL Server 的最大容量規格](../sql-server/maximum-capacity-specifications-for-sql-server.md#Engine)。  
+> 如需詳細資訊，請參閱[查詢處理架構指南中的工作資料表](../relational-databases/query-processing-architecture-guide.md#worktables)。 如需最大資料列大小的詳細資訊，請參閱 [SQL Server 的最大容量規格](../sql-server/maximum-capacity-specifications-for-sql-server.md)。  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] 對靜態資料指標不太能區分。 部分資料庫 API 會將它們識別為快照集資料指標。  
   

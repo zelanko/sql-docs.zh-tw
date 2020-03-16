@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab12a58134dd5b7a183a60a2837f013a4de162b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fb4fe31bfddb1c2312ae7e99e8a53609b5e5d70c
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77081717"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112350"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Power Pivot 連接類型 (SSRS)
   您可以使用 SQL Server Analysis Services 資料處理延伸模組，從已在 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中發行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿中擷取資料。  
@@ -23,7 +23,7 @@ ms.locfileid: "77081717"
 ## <a name="prerequisites"></a>Prerequisites  
  您必須在 SharePoint 網站的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中發行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料來源。  
   
- 若要支援報表產生器與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的連接，您的工作站電腦上必須擁有 SQL Server 2008 R2 ADOMD.NET。 此用戶端程式庫是隨 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 一併安裝，但是如果您使用的電腦沒有此應用程式，則必須從 [SQL Server 2008 R2 功能套件](https://www.microsoft.com/download/details.aspx?id=16978)下載並安裝 ADOMD.NET。  
+ 若要支援報表產生器與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的連接，您的工作站電腦上必須擁有 SQL Server 2008 R2 ADOMD.NET。 此用戶端程式庫是隨 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 一併安裝，但是如果您使用的電腦沒有此應用程式，則必須從 [SQL Server 2008 R2 功能套件](https://www.microsoft.com/download/details.aspx?id=44272)下載並安裝 ADOMD.NET。  
   
 ## <a name="data-source-type"></a>資料來源類型  
  請使用報表資料來源類型： **Microsoft SQL Server Analysis Services**。  

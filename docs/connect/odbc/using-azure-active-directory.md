@@ -11,11 +11,11 @@ ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e32889ceafa78d6c6eac716fca213f17badc5cea
-ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77363229"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286422"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>搭配 ODBC 驅動程式使用 Azure Active Directory
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

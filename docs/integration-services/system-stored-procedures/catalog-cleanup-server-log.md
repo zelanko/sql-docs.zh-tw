@@ -11,11 +11,11 @@ ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b80b346c426ae68a1c6b0750bca112417861f51e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71295585"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288072"
 ---
 # <a name="catalogcleanup_server_log"></a>catalog.cleanup_server_log 
 
@@ -78,7 +78,7 @@ catalog.cleanup_server_log
   
      您可以指定範圍或層級 (執行/專案) 以及要刪除的金鑰數目。 刪除的預設批次大小是 1000。 如果您將層級設為 2，則只有在刪除相關的專案時，才會刪除金鑰和憑證。  
   
- 如需詳細資訊，請參閱下列知識庫文章：[FIX: Performance issues when you use SSISDB as your deployment store in SQL Server 2012](https://support.microsoft.com/kb/2972285) (修正：當您在 SQL Server 2012 中使用 SSISDB 作為部署存放區時的效能問題)  
+ 如需詳細資訊，請參閱下列知識庫文章：[修正：當您在 SQL Server 2012 中使用 SSISDB 作為部署存放區時的效能問題](https://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a>範例  
  下列範例會呼叫 cleanup_server_log 預存程序。  

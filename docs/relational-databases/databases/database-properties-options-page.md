@@ -13,11 +13,11 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68049032"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286742"
 ---
 # <a name="database-properties-options-page"></a>資料庫屬性 (選項頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +131,7 @@ ms.locfileid: "68049032"
  針對與選定資料庫相關的 FILESTREAM 資料指定目錄名稱。  
   
  **FILESTREAM 非交易存取**  
- 針對從檔案系統到 FileTable 中所儲存之 FILESTREAM 資料的非交易存取，指定下列其中一個選項： **OFF**、 **READ_ONLY**或 **FULL**。 如果伺服器上未啟用 FILESTREAM，這個值會設定為 OFF 而且會停用。 如需詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。  
+ 指定下列其中一個選項，可進行透過檔案系統到 FileTable 中所儲存 FILESTREAM 資料的非交易存取：**OFF**、**READ_ONLY** 或 **FULL**。 如果伺服器上未啟用 FILESTREAM，這個值會設定為 OFF 而且會停用。 如需詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。  
   
 ## <a name="miscellaneous"></a>其他  
 **允許快照集隔離**  

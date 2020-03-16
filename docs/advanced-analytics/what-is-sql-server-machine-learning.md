@@ -4,24 +4,22 @@ titleSuffix: ''
 description: 機器學習服務是 SQL Server 內的一項功能，能夠使用關聯式資料執行 Python 和 R 指令碼。 您可以使用開放原始碼套件和架構，以及 Microsoft Python 和 R 套件，來進行預測性分析與機器學習。 指令碼會在資料庫中執行，不需在 SQL Server 外部或透過網路來移動資料。 本文說明 SQL Server 機器學習服務的基本概念。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/04/2020
+ms.date: 02/06/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3cf2b6f61e01230c8657051388647e336d46ed71
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: a94a3aea418a4c404b568fe6df7af701bc46de34
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004568"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79285902"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>什麼是 SQL Server 機器學習服務 (Python 和 R)？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 機器學習服務是 SQL Server 內的一項功能，能夠使用關聯式資料執行 Python 和 R 指令碼。 您可以使用開放原始碼套件和架構，以及 [Microsoft Python 和 R 套件](#packages)，來進行預測性分析與機器學習。 指令碼會在資料庫中執行，不需在 SQL Server 外部或透過網路來移動資料。 本文說明 SQL Server 機器學習服務的基本概念。
-
-Azure SQL Database 中，[機器學習服務](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)目前處於公開預覽階段。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]

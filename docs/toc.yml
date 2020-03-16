@@ -220,6 +220,10 @@
               href: big-data-cluster/spark-hive-tools-vscode.md
             - name: 使用擴充的 Spark 歷程記錄伺服器
               href: big-data-cluster/spark-history-server.md
+        - name: 疑難排解
+          items:
+            - name: Active Directory 部署
+              href: big-data-cluster/troubleshoot-active-directory.md
     - name: 參考
       items:
         - name: 部署參考

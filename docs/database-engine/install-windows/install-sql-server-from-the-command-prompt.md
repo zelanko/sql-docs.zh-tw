@@ -85,11 +85,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ebf82ec10f01b52b606a1250266884bbcd0a4497
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75557772"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288612"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>從命令提示字元安裝 SQL Server
 
@@ -853,8 +853,8 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |RS_SHPWFE||安裝 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集。 從 SQL Server 2017 開始移除。 |  
 |DQC||安裝 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]。|  
 |IS||安裝所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件。|  
-||IS_Master|包含適用於 Integration Services 相應放大的相應放大主機。| 
-||IS_Worker|包含適用於 Integration Services 相應放大的相應放大背景工作角色。| 
+||IS_Master|包含適用於 Integration Services 擴增的擴增主機。| 
+||IS_Worker|包含適用於 Integration Services 擴增的擴增背景工作角色。| 
 |MDS||安裝 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。|  
 |SQL_SHARED_MPY||安裝適用於 [SQL Server 2017 Machine Learning Server (獨立式)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-standalone-windows-install) 的 Python 套件 |  
 |SQL_SHARED_MR||安裝適用於 [SQL Server 2016 R Server (獨立式)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-standalone-windows-install) 或 SQL Server 2017 Machine Learning Server (獨立式) 的 R 套件 |  

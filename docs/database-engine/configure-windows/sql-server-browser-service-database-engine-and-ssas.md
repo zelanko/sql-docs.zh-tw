@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fade5e48340e8cc2b51b354f9717a561c632e4d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 19479786362d6773339cc30953451f02e466c2ec
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68028636"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375555"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server Browser 服務 (Database Engine 和 SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 程式會以 Windows 服務的方式執行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 會接聽 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的內送要求，並提供有關電腦上所安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資訊。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 完成下列動作：  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 程式會以 Windows 服務的方式執行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 會接聽 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的內送要求，並提供有關在電腦上所安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資訊。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 完成下列動作：  
   
 -   瀏覽可用伺服器的清單  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68028636"
   
  在啟動時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 會啟動並要求 UDP 通訊埠 1434。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 會讀取登錄項目、識別電腦上的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，並記下它們使用的通訊埠與具名管道。 當伺服器擁有兩張或多張網路卡時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所遇到的第一個已啟用連接埠。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 支援 ipv6 和 ipv4。  
   
- 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端要求 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源時，用戶端網路程式庫會使用通訊埠 1434 傳送 UDP 訊息到伺服器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器回應要求之執行個體的 TCP/IP 通訊埠或具名管道。 於是，用戶端應用程式上的網路程式庫會使用所要的執行個體的通訊埠或具名管道，將要求傳送至伺服器來完成連接。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 不會傳回預設執行個體的通訊埠資訊。  
+ 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端要求 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源時，用戶端網路程式庫會使用通訊埠 1434 傳送 UDP 訊息到伺服器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器回應要求之執行個體的 TCP/IP 通訊埠或具名管道。 於是，用戶端應用程式上的網路程式庫會使用所要的執行個體的通訊埠或具名管道，將要求傳送至伺服器來完成連接。 
   
  如需啟動和停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務的相關資訊，請參閱 [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   

@@ -11,11 +11,11 @@ author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74317960"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287142"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>規劃主機守護者服務證明
 
@@ -112,7 +112,7 @@ TPM 證明需要安全開機，以確保 UEFI 載入 Microsoft 簽署的合法�
 
 在您開始之前，請勿將 HGS 電腦加入網域。
 
-### <a name="include-ssnoversion-mdincludesssnoversion-mdmd-computer-prerequisites"></a>[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 電腦先決條件
+### <a name="ssnoversion-md-computer-prerequisites"></a>[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 電腦先決條件
 
 執行 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 的電腦必須同時符合[安裝 SQL Server 的需求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)和 [Hyper-V 硬體需求](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)。
 

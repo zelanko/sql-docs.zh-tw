@@ -10,11 +10,11 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 38982119f9c4485d99263a53c73d1e1c1e4404dc
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
-ms.translationtype: MT
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339416"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287732"
 ---
 # <a name="system-objects-that-support-extended-events"></a>支援擴充事件的系統物件
 

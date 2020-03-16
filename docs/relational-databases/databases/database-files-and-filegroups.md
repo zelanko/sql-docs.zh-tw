@@ -33,11 +33,11 @@ ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 782536e79336c0224638707538e8a12a31f5af84
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338751"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287982"
 ---
 # <a name="database-files-and-filegroups"></a>資料庫檔案與檔案群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

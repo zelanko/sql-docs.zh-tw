@@ -17,12 +17,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3e77699ce94f150bc5ec38fa40c400884d38faa
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7e41a75e543c325dce4353a512a8396887fe853c
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75243464"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090597"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 使用公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -312,7 +312,7 @@ ms.locfileid: "75243464"
   
  `1> :Setvar LastName Achong`  
   
- `1> EXEC dbo.ContactEmailAddress $(Gustavo),$(Achong)`  
+ `1> EXEC dbo.ContactEmailAddress $(FirstName),$(LastName)`  
   
  `2> GO`  
   

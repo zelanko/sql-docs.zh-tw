@@ -39,11 +39,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
-ms.translationtype: MT
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339446"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287332"
 ---
 # <a name="database-level-roles"></a>資料庫層級角色
 
@@ -96,7 +96,7 @@ ms.locfileid: "78339446"
 |**loginmanager** | 可以建立及刪除虛擬 master 資料庫的登入。|
 
 > [!NOTE]
-> 伺服器層級主體和 Azure Active Directory 系統管理員 (如已設定) 具有 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] 的所有權限，而不必是任何角色成員。 如需詳細資訊，請參閱 [SQL Database 驗證和授權：授與存取](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)。 
+> 伺服器層級主體和 Azure Active Directory 系統管理員 (如已設定) 具有 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] 的所有權限，而不必是任何角色成員。 如需詳細資訊，請參閱 [SQL Database 驗證和授權：授與存取權](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)。 
   
 ## <a name="msdb-roles"></a>msdb 角色  
  msdb 資料庫含有下表所示的特殊用途角色。  
@@ -114,7 +114,7 @@ ms.locfileid: "78339446"
 
 ## <a name="working-with-r-services"></a>使用 R 服務  
 
-**適用於：** SQL Server (從 [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
+**適用範圍：** SQL Server (從 [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)] 開始)   
 
 安裝 R 服務時，可使用額外的資料庫角色來管理封裝。 如需詳細資訊，請參閱 [SQL Server 的 R 封裝管理](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)。
 

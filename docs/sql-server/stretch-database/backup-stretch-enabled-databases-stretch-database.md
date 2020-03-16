@@ -12,11 +12,11 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 897f748c5aeab43c7e3ef98f6dbfff84b9da69d7
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
-ms.translationtype: MT
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338262"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286302"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>備份已啟用延展功能的資料庫(Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "78338262"
   
 若要備份已啟用 Stretch 的 SQL Server 資料庫，您可以繼續使用目前所使用的 SQL Server 備份方法。 如需詳細資訊，請參閱 [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。
   
- 已啟用 Stretch 之 SQL Server 資料庫的備份只包含本機資料及適合在執行備份的時間點進行移轉的資料。 (合格資料是尚未遷移，但會視資料表的移轉設定而遷移到 Azure 的資料。)這稱為 **淺層** 備份，而且不包含已遷移到 Azure 的資料。  
+ 已啟用 Stretch 之 SQL Server 資料庫的備份只包含本機資料及適合在執行備份的時間點進行移轉的資料。 (合格資料是尚未遷移，但會視資料表的移轉設定而遷移到 Azure 的資料。)這稱為**淺層**備份，而且不包含已遷移到 Azure 的資料。  
   
 ## <a name="back-up-your-remote-azure-data"></a>備份遠端 Azure 資料   
   

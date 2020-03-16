@@ -10,12 +10,12 @@ ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 6fba15e73edf14b9bb794012c8fe56ec8264a5b2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e06daf1c4963df2706781ba222ef5efd07ab9249
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73632957"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112376"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack 版本資訊
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ Service Pack 僅於線上提供，安裝媒體上並不提供，並可依下列�
 |32 位元版本的 SQL Server 2012 用戶端和管理能力工具 (包括 SQL Server 2012 Management Studio)|將用戶端和管理能力工具升級為 32 位元版本的 SQL Server 2012 SP1|SQLManagementStudio_x86_CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |32 位元版本的 SQL Server 2012 Management Studio Express|升級為 32 位元版本的 SQL Server 2012 SP1 Management Studio Express|SQLManagementStudio_x86_CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |32 位元版本的任何 SQL Server 2012 版本， **以及** 32 位元版本的用戶端和管理能力工具 (包括 SQL Server 2012 RTM Management Studio)|將所有產品升級為 32 位元版本的 SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x86-CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|[Microsoft SQL Server 2012 RTM 功能套件](https://www.microsoft.com/download/details.aspx?id=16978)中一個或多個 32 位元版本的工具|將工具升級為 32 位元版本的 Microsoft SQL Server 2012 SP1 功能套件|[Microsoft SQL Server 2012 SP1 功能套件](https://go.microsoft.com/fwlink/p/?LinkID=268266)中的一個或多個檔案|  
+|[Microsoft SQL Server 2012 RTM 功能套件](https://www.microsoft.com/download/details.aspx?id=44272)中一個或多個 32 位元版本的工具|將工具升級為 32 位元版本的 Microsoft SQL Server 2012 SP1 功能套件|[Microsoft SQL Server 2012 SP1 功能套件](https://go.microsoft.com/fwlink/p/?LinkID=268266)中的一個或多個檔案|  
 |無 32 位元的 SQL Server 2012 安裝|安裝包括 SP1 的 32 位元 Server 2012 (已預先安裝 SP1 的新執行個體)|SQLServer2012SP1-FullSlipstream-x86-CHT.exe **以及** SQLServer2012SP1-FullSlipstream-x86-CHT.box 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |無 32 位元的 SQL Server 2012 Management Studio 安裝|安裝包括 SP1 的 32 位元 SQL Server 2012 Management Studio|SQLManagementStudio_x86_CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=267905)|  
 |無 32 位元版本的 SQL Server 2012 RTM Express|安裝包括 SP1 的 32 位元 SQL Server 2012 Express|SQLEXPR32_x86_CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=267905)|  
@@ -118,7 +118,7 @@ Service Pack 僅於線上提供，安裝媒體上並不提供，並可依下列�
 |64 位元版本的 SQL Server 2012 用戶端和管理能力工具 (包括 SQL Server 2012 Management Studio)|將用戶端和管理能力工具升級為 64 位元版本的 SQL Server 2012 SP1|SQLManagementStudio_x64_CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |64 位元版本的 SQL Server 2012 Management Studio Express|升級為 64 位元版本的 SQL Server 2012 SP1 Management Studio Express|SQLManagementStudio_x64_CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |64 位元版本的任何 SQL Server 2012 版本， **以及** 64 位元版本的用戶端和管理能力工具 (包括 SQL Server 2012 RTM Management Studio)|將所有產品升級為 64 位元版本的 SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|[Microsoft SQL Server 2012 RTM 功能套件](https://www.microsoft.com/download/en/details.aspx?id=16978)中一個或多個 64 位元版本的工具|將工具升級為 64 位元版本的 Microsoft SQL Server 2012 SP1 功能套件|[Microsoft SQL Server 2012 SP1 功能套件](https://go.microsoft.com/fwlink/p/?LinkID=268266)中的一個或多個檔案|  
+|[Microsoft SQL Server 2012 RTM 功能套件](https://www.microsoft.com/download/details.aspx?id=44272)中一個或多個 64 位元版本的工具|將工具升級為 64 位元版本的 Microsoft SQL Server 2012 SP1 功能套件|[Microsoft SQL Server 2012 SP1 功能套件](https://go.microsoft.com/fwlink/p/?LinkID=268266)中的一個或多個檔案|  
 |無 64 位元的 SQL Server 2012 安裝|安裝包括 SP1 的 64 位元 Server 2012 (已預先安裝 SP1 的新執行個體)|SQLServer2012SP1-FullSlipstream-x64-CHT.exe， **以及** SQLServer2012SP1-FullSlipstream-x64-CHT.box 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |無 64 位元的 SQL Server 2012 Management Studio 安裝|安裝 64 位元的 SQL Server 2012 Management Studio，包括 SP1|SQLManagementStudio_x64_CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |無 64 位元版本的 SQL Server 2012 RTM Express|安裝 64 位元的 SQL Server 2012 Express，包括 SP1|SQLEXPR_x64_CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  

@@ -19,11 +19,11 @@ ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 498fe2391cd3e8109aed3f6e1e02436234ffe6f7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74957322"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288262"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明資料加密 (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -244,7 +244,7 @@ ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
 ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
 ```
 
-為了顯示目前的加密掃描狀態，`encryption_scan_state` 動態管理檢視中已新增 `sys.dm_database_encryption_keys`。 此外也有名為 `encryption_scan_modify_date` 的新資料行，會包含上次加密掃描狀態變更的日期和時間。 同時請注意，如果在加密掃描處於暫止狀態時重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，在啟動時將會在錯誤記錄中記錄一則訊息，指出有現有的掃描已暫停。
+為了顯示目前的加密掃描狀態，`sys.dm_database_encryption_keys` 動態管理檢視中已新增 `encryption_scan_state`。 此外也有名為 `encryption_scan_modify_date` 的新資料行，會包含上次加密掃描狀態變更的日期和時間。 同時請注意，如果在加密掃描處於暫止狀態時重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，在啟動時將會在錯誤記錄中記錄一則訊息，指出有現有的掃描已暫停。
   
 ## <a name="transparent-data-encryption-and-buffer-pool-extension"></a>透明資料加密和緩衝集區擴充  
  使用 TDE 將資料庫加密時，與緩衝集區擴充 (BPE) 相關的檔案未受到加密。 您必須針對 BPE 相關檔案使用 Bitlocker 或 EFS 等檔案系統層級加密工具。  

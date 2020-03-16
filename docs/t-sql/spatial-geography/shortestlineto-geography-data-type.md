@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7844f1d38f5d2e6f36f971eb83d8961596483142
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 4832f28fbd07d85c9afaaf7874a51655b6922dc3
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68042602"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090589"
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68042602"
 ## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型：**SqlGeography**  
+ CLR 傳回型別：**SqlGeography**  
   
 ## <a name="remarks"></a>備註  
  方法會傳回 **LineString** 執行個體，其端點在兩個非交集 **geography** 比較執行個體的框線上。 所傳回 **LineString** 的長度等於兩個 **geography** 執行個體之間的最短距離。 當兩個 **geography** 執行個體彼此交集時，會傳回空白 **LineString** 執行個體。  
@@ -70,5 +70,5 @@ ms.locfileid: "68042602"
   
 ## <a name="see-also"></a>另請參閱  
  [地理例項上擴充的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
+ [ShortestLineTo (geometry 資料類型)](../../t-sql/spatial-geometry/shortestlineto-geometry-data-type.md)  
   

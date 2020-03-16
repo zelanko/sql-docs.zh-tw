@@ -22,11 +22,11 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: mikeray
 ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "69028744"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288352"
 ---
 # <a name="server-memory-configuration-options"></a>伺服器記憶體設定選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "69028744"
 
 <sup>2</sup> 如需在目前主機中，為指定數量之親和 CPU 而計算出的預設背景工作執行緒數目相關資訊，請參閱如何[設定最大背景工作執行緒伺服器設定選項](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)的文件頁面。
 
-## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設定記憶體選項  
+## <a name="how-to-configure-memory-options-using-ssmanstudiofull"></a>如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設定記憶體選項  
 您可使用 [最小伺服器記憶體]  與 **[最大伺服器記憶體]** 這兩個伺服器記憶體選項，針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體重新設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體管理員所管理的記憶體數量 (MB)。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以根據可用的系統資源，動態變更其記憶體需求。  
   
 ### <a name="procedure-for-configuring-a-fixed-amount-of-memory-not-recommended"></a>設定固定記憶體數量的程序 (不建議)  
@@ -105,7 +105,7 @@ ms.locfileid: "69028744"
   
 6.  在 [本機安全性原則設定]  對話方塊中，新增具有 sqlservr.exe 執行權限的帳戶 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動帳戶)。  
   
-## <a name="running-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>執行多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體  
+## <a name="running-multiple-instances-of-ssnoversion"></a>執行多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體  
  當您執行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的多個執行個體時，您有三個方式可以用來管理記憶體：  
   
 -   使用 [最大伺服器記憶體]  來控制記憶體使用量，[如上詳述](#max_server_memory)。 建立每一個執行個體的最大設定值，注意，扣除總額不大於機器的總實體記憶體。 您想要提供與執行個體的預期工作負載或資料庫大小成比例的記憶體給每一個執行個體。 此方式的優點是當新的處理序或執行個體啟動時，立刻有記憶體可用。 缺點是，如果您不是執行所有執行個體，則任何執行中執行個體都不能利用剩餘可用的記憶體。  

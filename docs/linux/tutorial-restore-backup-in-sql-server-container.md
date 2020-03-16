@@ -3,17 +3,17 @@ title: 在 Docker 中還原 SQL Server 資料庫
 description: 本教學課程說明如何在新的 Linux Docker 容器中還原 SQL Server 資料庫備份。
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 2b34fb6b368f042e39776a25628472c336e21392
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 21b25edb34d89cb9ef3629955dd06a357a8607a2
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75721791"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198266"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>在 Linux Docker 容器中還原 SQL Server 資料庫
 
@@ -115,11 +115,11 @@ ms.locfileid: "75721791"
 1. 從 Docker Hub 提取 SQL Server 2019 Linux 容器映像。
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    > [!TIP]
@@ -131,14 +131,14 @@ ms.locfileid: "75721791"
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
       --name 'sql1' -p 1401:1433 \
       -v sql1data:/var/opt/mssql \
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       --name "sql1" -p 1401:1433 `
       -v sql1data:/var/opt/mssql `
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    此命令會建立 Developer 版本 (預設值) 的 SQL Server 2019 容器。 SQL Server 連接埠 **1433** 在主機上會公開為連接埠 **1401**。 選擇性的 `-v sql1data:/var/opt/mssql` 參數會建立名為 **sql1ddata** 的資料磁碟區容器。 這會用來保存 SQL Server 所建立的資料。
@@ -407,7 +407,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 ## <a name="use-the-persisted-data"></a>使用保存的資料
 
-除了使用資料庫備份來保護您的資料之外，您也可以使用資料磁碟區容器。 本教學課程一開始已使用 **參數建立**sql1`-v sql1data:/var/opt/mssql` 容器。 **sql1data** 資料磁碟區容器即使在該容器被移除後，也會保存 **/var/opt/mssql** 資料。 下列步驟會將 **sql1** 容器完全移除，然後使用保存的資料來建立新容器 **sql2**。
+除了使用資料庫備份來保護您的資料之外，您也可以使用資料磁碟區容器。 本教學課程一開始已使用 `-v sql1data:/var/opt/mssql` 參數建立 **sql1** 容器。 **sql1data** 資料磁碟區容器即使在該容器被移除後，也會保存 **/var/opt/mssql** 資料。 下列步驟會將 **sql1** 容器完全移除，然後使用保存的資料來建立新容器 **sql2**。
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -492,13 +492,13 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
        --name 'sql2' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
        --name "sql2" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
     ```
 
 1. Wide World Importers 資料庫現在已位於新的容器中。 執行查詢以確認您先前進行的變更。

@@ -13,12 +13,12 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: b206d31d349119ed361e00ff1ff697c438ec3ba4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: eb0d82c1693c452462b8bef2e55cd4e41b13689b
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75254269"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198383"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>在圖表上建立資料表之間的關聯性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,6 +50,6 @@ ms.locfileid: "75254269"
   
 ## <a name="see-also"></a>另請參閱  
 [資料表和資料行對話方塊 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md)  
-[使用條件約束(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[使用條件約束](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [使用資料庫圖表中的資料表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   

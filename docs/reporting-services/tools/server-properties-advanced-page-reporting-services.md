@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.date: 01/28/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d1bfbb7a1abb13df05ce402fa79a1598ee04ca1f
-ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77054841"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286462"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>伺服器屬性進階頁面 - Power BI 報表伺服器和 Reporting Services
 

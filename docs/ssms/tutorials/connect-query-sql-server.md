@@ -12,11 +12,11 @@ ms.technology: ssms
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
 ms.openlocfilehash: ac805437d716bbc7e8fdf95f491c64331ddb4658
-ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77575543"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286262"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>教學課程：使用 SQL Server Management Studio (SSMS) 連線至 SQL Server 執行個體並進行查詢
 

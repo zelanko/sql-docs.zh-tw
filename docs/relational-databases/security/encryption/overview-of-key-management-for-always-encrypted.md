@@ -12,11 +12,11 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73594102"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288732"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted 的金鑰管理概觀
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "73594102"
 ## <a name="managing-keys-with-role-separation"></a>使用角色隔離管理金鑰
 使用角色隔離管理永遠加密金鑰時，會由組織中的不同人員擔任安全性系統管理員和 DBA 角色。 使用角色隔離的金鑰管理程序可確保 DBA 無法存取金鑰或保留實際金鑰的金鑰存放區，且安全性系統管理員無法存取包含敏感性資料的資料庫。 如果您的目標是確保組織中的 DBA 無法存取敏感性資料，建議使用角色隔離管理金鑰。 
 
-**注意：** 安全性系統管理員會產生並處理純文字金鑰，因此永遠都不應該在裝載資料庫系統的相同電腦，或是 DBA 或其他可能成為潛在敵人之任何人可存取的電腦上執行其工作。 
+**注意：** 安全性系統管理員會產生並處理純文字金鑰，因此永遠都不應該在裝載資料庫系統的相同電腦，或是 DBA 或任何可能成為潛在敵人的人員所能存取的電腦上執行其工作。 
 
 ## <a name="managing-keys-without-role-separation"></a>不使用角色隔離管理金鑰
 不使用角色隔離管理永遠加密金鑰時，某個人員可同時擔任安全性系統管理員和 DBA 角色，這表示該人員必須能夠存取及管理金鑰/金鑰存放區和金鑰中繼資料。 針對使用 DevOps 模型的組織，或是如果資料庫裝載於雲端且主要目標是限制雲端管理員 (而不是內部部署 DBA) 存取敏感性資料，可建議不使用角色隔離來管理金鑰。
