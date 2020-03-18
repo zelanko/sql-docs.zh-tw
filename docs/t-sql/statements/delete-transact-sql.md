@@ -259,7 +259,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. 使用資料指標來判斷要刪除的資料列  
- 以下範例會使用名為 `EmployeePayHistory` 的資料指標，從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `complex_cursor` 資料表中刪除單一資料列。 刪除作業只會影響目前從資料指標中提取的單一資料列。  
+ 以下範例會使用名為 `complex_cursor` 的資料指標，從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `EmployeePayHistory` 資料表中刪除單一資料列。 刪除作業只會影響目前從資料指標中提取的單一資料列。  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  
@@ -431,7 +431,7 @@ ORDER BY ProductModelID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="k-delete-all-rows-from-a-table"></a>K. 刪除資料表中的所有資料列  
  下列範例會刪除 `Table1` 資料表中的所有資料列，因為並未利用 WHERE 子句來限制刪除的資料列數。  
