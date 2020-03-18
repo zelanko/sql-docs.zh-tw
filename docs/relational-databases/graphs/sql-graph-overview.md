@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ca26af4738de25937b71e0c97c6272414a0957a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74096090"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79428149"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 和 Azure SQL Database 的圖表處理
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -30,19 +30,19 @@ ms.locfileid: "74096090"
 
 ## <a name="what-is-a-graph-database"></a>什麼是圖形資料庫？  
 圖表資料庫是節點 (或頂點) 與邊線 (或關聯性) 的集合。 節點代表實體 (例如，個人或組織)，而邊緣代表其所連接的兩個節點之間的關聯性 (例如，按讚數或朋友)。 節點和邊緣可能會有相關聯的屬性。 以下是讓圖表資料庫變成唯一的一些功能：  
--   邊緣或關聯性是圖形資料庫中的第一級實體，可以有與其相關聯的屬性。 
--   單一邊緣可以彈性地連接圖形資料庫中的多個節點。
--   您可以輕鬆地表達模式比對和多躍點導覽查詢。
--   您可以輕鬆地表達遞移閉包和多型查詢。
+-    邊緣或關聯性是圖形資料庫中的第一級實體，可以有與其相關聯的屬性。 
+-    單一邊緣可以彈性地連接圖形資料庫中的多個節點。
+-    您可以輕鬆地表達模式比對和多躍點導覽查詢。
+-    您可以輕鬆地表達遞移閉包和多型查詢。
 
 ## <a name="when-to-use-a-graph-database"></a>使用圖形資料庫的時機
 
-使用關聯式資料庫可以達成圖形資料庫所能達成的一切。 不過，圖形資料庫可以讓您更輕鬆地表達特定種類的查詢。 此外，使用特定的優化功能，某些查詢的效能可能較佳。 您可以根據下列因素來決定選擇哪一種：  
--   您的應用程式有階層式資料。 HierarchyID 資料類型可以用來執行階層，但有一些限制。 例如，它不允許您儲存節點的多個父代。
--   您的應用程式具有複雜的多對多關聯性;隨著應用程式發展，會加入新的關聯性。
--   您需要分析互連的資料和關聯性。
+關係資料庫可以達到圖形資料庫的任何目標。 不過，圖表資料庫可讓您更輕鬆地表達特定種類的查詢。 此外，使用特定的優化功能，某些查詢的效能可能較佳。 您決定選擇關聯式或圖形資料庫的方式，取決於下列因素：  
+-    您的應用程式有階層式資料。 HierarchyID 資料類型可以用來執行階層，但有一些限制。 例如，它不允許您儲存節點的多個父代。
+-    您的應用程式具有複雜的多對多關聯性;隨著應用程式發展，會加入新的關聯性。
+-    您需要分析互連的資料和關聯性。
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>中引進的圖形功能[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-sssqlv14"></a>中引進的圖形功能[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 我們即將開始將圖形擴充功能新增至 SQL Server，讓您更輕鬆地儲存和查詢圖形資料。 第一版引進了下列功能。 
 
 
@@ -68,7 +68,7 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>在引擎中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]完全整合 
+### <a name="fully-integrated-in-ssnoversion-engine"></a>在引擎中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]完全整合 
 圖表延伸模組已完全整合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到引擎中。 使用相同的儲存引擎、中繼資料、查詢處理器等來儲存和查詢圖形資料。 在單一查詢中跨圖表和關聯式資料進行查詢。 結合圖形功能與其他[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]技術（例如資料行存放區、HA、R 服務等）。SQL graph 資料庫也支援所提供的所有安全性和合規性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能。
  
 ### <a name="tooling-and-ecosystem"></a>工具和生態系統
