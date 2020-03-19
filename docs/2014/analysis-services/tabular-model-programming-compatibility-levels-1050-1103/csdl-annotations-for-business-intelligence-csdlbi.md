@@ -10,12 +10,12 @@ ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 760e90c34c84bd4b44af90cbbb78aec7e025689a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0348c262453d2de8e4db0c379b5bf70a2d7d7977
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62757955"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525449"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>商業智慧的 CSDL 註解 (CSDLBI)
   
@@ -36,7 +36,7 @@ ms.locfileid: "62757955"
   
  CSDLBI 結構描述是 Analysis Services 伺服器為回應用戶端 (例如 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]) 的模型定義要求而產生的。 用戶端應用程式將 XML 查詢傳送至裝載模型資料的 Analysis Services 伺服器。 然後伺服器使用 CSDLBI 註解傳送包含模型中實體定義的 XML 訊息，以做為回應。 接著報表用戶端會使用此資訊來呈現模型中所提供的欄位、彙總以及量值。 CSDLBI 註解也會提供有關如何分組、排序與格式化資料的資訊。  
   
- 如需有關 CSDLBI 的一般資訊，請參閱[CSDLBI 概念](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)。  
+ 如需有關 CSDLBI 的一般資訊，請參閱[CSDLBI 概念](/analysis-services/csdlbi/csdlbi-concepts)。  
   
 ### <a name="working-with-csdl"></a>使用 CSDL  
  代表任何特定表格式模型的 CSDLBI 註解集都是 XML 文件，其中同時包含簡單和複雜的實體集合。 實體會定義包含在導出資料行、量值或 KPI 中的資料表 (或維度)、資料行 (屬性)、關聯 (關聯性) 及公式。  
@@ -72,12 +72,12 @@ ms.locfileid: "62757955"
   
 -   支援檢視方塊。  
   
- 如需 CSDLBI 批註中個別元素的詳細資訊，請參閱[適用于 CSDL 的 BI 批註技術參考](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)。 如需核心 CSDL 規格的詳細資訊，請參閱[CSDL V3 規格](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)。  
+ 如需 CSDLBI 批註中個別元素的詳細資訊，請參閱[適用于 CSDL 的 BI 批註技術參考](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl)。 如需核心 CSDL 規格的詳細資訊，請參閱[CSDL V3 規格](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)。  
   
   
 ## <a name="see-also"></a>另請參閱  
  [瞭解表格式物件模型](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
- [CSDLBI 概念](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
+ [CSDLBI 概念](/analysis-services/csdlbi/csdlbi-concepts)   
  [了解表格式物件模型](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
   

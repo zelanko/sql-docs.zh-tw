@@ -10,12 +10,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5bf8d4af44f7596bb632a05483c387752ba2e056
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3a35afb1c1bd38aa123211ae1801d914494aec91
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67284850"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525469"
 ---
 # <a name="tabular-model-data-access"></a>表格式模型資料存取
   Analysis Services 中的表格式模型資料庫可由您用來擷取多維度模型中之資料或中繼資料的大部分相同用戶端、介面和語言所存取。 如需詳細資訊，請參閱[多維度模型資料存取 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
@@ -40,7 +40,7 @@ ms.locfileid: "67284850"
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 使用者介面中用來篩選資料、執行計算或彙總及顯示相關資料的後續作業是由用戶端所控制，而且無法以程式設計方式操作。  
   
  
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 用戶端傳送給模型的查詢會當做 DAX 陳述式發出，您可以在模型上設定追蹤來加以監視。  在初始結構描述定義中，用戶端也會發出要求給伺服器，該定義是根據概念結構定義語言 (CSDL) 而呈現。 如需詳細資訊，請參閱 [商業智慧的 CSDL 註解 &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 用戶端傳送給模型的查詢會當做 DAX 陳述式發出，您可以在模型上設定追蹤來加以監視。  在初始結構描述定義中，用戶端也會發出要求給伺服器，該定義是根據概念結構定義語言 (CSDL) 而呈現。 如需詳細資訊，請參閱 [商業智慧的 CSDL 註解 &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  您可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來管理裝載表格式模型的執行個體及查詢其中的中繼資料和資料。 您可以處理模型或模型中的物件、建立及管理資料分割，以及設定可用於管理資料存取的安全性。 如需詳細資訊，請參閱下列主題：  
@@ -78,7 +78,7 @@ ms.locfileid: "67284850"
 ### <a name="csdl"></a>CSDL  
  概念結構定義語言本身並不是查詢語言，但是可用來擷取有關模型和模型中繼資料的資訊，該資訊之後可用來建立報表或是針對模型建立查詢。  
   
- 如需如何在表格式模型中使用 CSDL 的詳細資訊，請參閱 [商業智慧的 CSDL 註解 &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)。  
+ 如需如何在表格式模型中使用 CSDL 的詳細資訊，請參閱 [商業智慧的 CSDL 註解 &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)。  
   
 ## <a name="programmatic-interfaces"></a>程式設計介面  
  用來與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式模型互動的主要介面為結構描述資料列集、XMLA 及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]所提供的查詢用戶端和查詢工具。  
@@ -94,7 +94,7 @@ ms.locfileid: "67284850"
   
  您也可以直接從 Analysis Services 執行個體擷取 XML 架構格式的資料。 您可以使用 DISCOVER_CSDL_METADATA 資料列集來擷取表格式模型的結構描述，或者搭配現有的 ASSL 元素、物件或屬性使用 EXECUTE 或 DISCOVER 命令。 如需詳細資訊，請參閱下列資源：  
   
--   [商業智慧 &#40;CSDLBI&#41;的 CSDL 注釋](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+-   [商業智慧 &#40;CSDLBI&#41;的 CSDL 注釋](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="manipulate-analysis-services-objects"></a>操作 Analysis Services 物件  
  您可以利用 XMLA 命令或 AMO 來建立、修改、刪除和處理表格式模型以及模型中的物件，其中包括資料表、資料行、檢視方塊、量值和資料分割。 AMO 和 XMLA 都已更新，可支援表格式模型中所使用的其他屬性，以增強報告和模型化功能。  
