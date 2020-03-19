@@ -1,37 +1,45 @@
 ---
-title: 在 Linux 和 macOS 上安裝 Microsoft ODBC Driver for SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 12/05/2018
+title: 安裝 Microsoft ODBC Driver for SQL Server (Linux)
+ms.date: 03/05/2020
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - driver, installing
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-author: MightyPen
+author: rothja
 ms.author: v-jizho2
-manager: kenvh
-ms.openlocfilehash: 5a7e7a5b528779092ff7740289c8325ba95ce3d5
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+manager: jroth
+ms.openlocfilehash: 934bd563af82c5fb8ca1d08ae7dc1b17160e3284
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78896797"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058832"
 ---
-# <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS (在 Linux 及 macOS 上安裝 Microsoft ODBC Driver for SQL Server)
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+# <a name="install-the-microsoft-odbc-driver-for-sql-server-linux"></a>安裝 Microsoft ODBC Driver for SQL Server (Linux)
 
-本文說明如何安裝 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS，以及適用於 SQL Server 的選擇性命令列工具 (`bcp` 和 `sqlcmd`) 和 unixODBC 開發標頭。
+本文說明如何在 Linux 上安裝 Microsoft ODBC Driver for SQL Server， 以及如何使用適用於 SQL Server (`bcp` 和 `sqlcmd`) 與 unixODBC 開發標頭的選擇性命令列工具。
 
-## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver 17 for SQL Server 
+本文提供從 Bash Shell 安裝 ODBC 驅動程式的命令。 如果想要直接下載套件，請參閱[下載 ODBC Driver for SQL Server](../download-odbc-driver-for-sql-server.md)。
+
+## <a id="17"></a> Microsoft ODBC 17
+
+下列各節說明如何從不同 Linux 發行版本的 Bash Shell 安裝 Microsoft ODBC Driver 17。
+
+- [Alpine Linux](#alpine17)
+- [Debian](#debian17)
+- [Red Hat Enterprise Linux 與 Oracle](#redhat17)
+- [SUSE Linux Enterprise Server](#suse17)
+- [Ubuntu](#ubuntu17)
 
 > [!IMPORTANT]
 > 如果您已安裝短暫提供的第 17 版 `msodbcsql` 套件，您應該先移除它，再安裝 `msodbcsql17` 套件。 如此可避免衝突。 `msodbcsql17` 套件可以和 `msodbcsql` 第 13 版套件並存安裝。
 
-### <a name="alpine-linux"></a>Alpine Linux
-```
+### <a id="alpine17"></a> Alpine Linux
+
+```bash
 #Download the desired package(s)
 curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.apk
 curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.5.2.1-1_amd64.apk
@@ -49,14 +57,15 @@ gpg --verify mssql-tools_17.5.2.1-1_amd64.sig mssql-tools_17.5.2.1-1_amd64.apk
 #Install the package(s)
 sudo apk add --allow-untrusted msodbcsql17_17.5.2.1-1_amd64.apk
 sudo apk add --allow-untrusted mssql-tools_17.5.2.1-1_amd64.apk
-
 ```
+
 > [!NOTE]
-> - Alpine 支援需要驅動程式 17.5 版或更新版本。
+> Alpine 支援需要驅動程式 17.5 版或更新版本。
 
-### <a name="debian"></a>Debian
-```
-sudo su 
+### <a id="debian17"></a> Debian
+
+```bash
+sudo su
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 
 #Download appropriate package for the OS version
@@ -86,11 +95,11 @@ sudo apt-get install libgssapi-krb5-2
 ```
 
 > [!NOTE]
-> - 您可以改為設定 debconf 變數 'msodbcsql/ACCEPT_EULA' 來替代設定環境變數 'ACCEPT_EULA'：`echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
+> 您可以改為設定 debconf 變數 'msodbcsql/ACCEPT_EULA' 來替代設定環境變數 'ACCEPT_EULA'：`echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
 
+### <a id="redhat17"></a> Red Hat Enterprise Server 與 Oracle Linux
 
-### <a name="redhat-enterprise-server-and-oracle-linux"></a>RedHat Enterprise Server 和 Oracle Linux
-```
+```bash
 sudo su
 
 #Download appropriate package for the OS version
@@ -117,9 +126,9 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### <a name="suse-linux-enterprise-server"></a>SUSE Linux Enterprise Server
+### <a id="suse17"></a> SUSE Linux Enterprise Server
 
-```
+```bash
 sudo su
 
 #Download appropriate package for the OS version
@@ -146,11 +155,12 @@ echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
 sudo zypper install unixODBC-devel
-``` 
-
-### <a name="ubuntu"></a>Ubuntu
 ```
-sudo su 
+
+### <a id="ubuntu17"></a> Ubuntu
+
+```bash
+sudo su
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 
 #Download appropriate package for the OS version
@@ -176,26 +186,29 @@ source ~/.bashrc
 # optional: for unixODBC development headers
 sudo apt-get install unixodbc-dev
 ```
+
 > [!NOTE]
 > - Ubuntu 18.04 支援需要驅動程式 17.2 版或更高版本。
 > - Ubuntu 18.10 支援需要驅動程式 17.3 版或更高版本。
 
 > [!NOTE]
-> - 您可以改為設定 debconf 變數 'msodbcsql/ACCEPT_EULA' 來替代設定環境變數 'ACCEPT_EULA'：`echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
+> 您可以改為設定 debconf 變數 'msodbcsql/ACCEPT_EULA' 來替代設定環境變數 'ACCEPT_EULA'：`echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
 
-### <a name="macos"></a>MacOS
+## <a name="previous-versions"></a>舊版
 
-```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
-brew update
-HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql17 mssql-tools
-```
+下列各節提供在 Linux 上安裝舊版 Microsoft ODBC 驅動程式的指示。 涵蓋下列驅動程式版本：
 
-## <a name="microsoft-odbc-driver-131-for-sql-server"></a>Microsoft ODBC Driver 13.1 for SQL Server 
+- [Microsoft ODBC Driver 13.1 for SQL Server](#13.1)
+- [Microsoft ODBC Driver 13 for SQL Server](#13)
+- [Microsoft ODBC Driver 11 for SQL Server](#11)
+
+## <a id="13.1"></a> ODBC 13.1
+
+下列各節說明如何從不同 Linux 發行版本的 Bash Shell 安裝 Microsoft ODBC Driver 13.1。
 
 ### <a name="debian-8"></a>Debian 8
-```
+
+```bash
 sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 curl https://packages.microsoft.com/config/debian/8/prod.list > /etc/apt/sources.list.d/mssql-release.list
@@ -212,7 +225,8 @@ sudo apt-get install unixodbc-dev
 ```
 
 ### <a name="redhat-enterprise-server-6"></a>RedHat Enterprise Server 6
-```
+
+```bash
 sudo su
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
 exit
@@ -228,7 +242,8 @@ sudo yum install unixODBC-devel
 ```
 
 ### <a name="redhat-enterprise-server-7"></a>RedHat Enterprise Server 7
-```
+
+```bash
 sudo su
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
 exit
@@ -245,7 +260,7 @@ sudo yum install unixODBC-devel
 
 ### <a name="suse-linux-enterprise-server-11"></a>SUSE Linux Enterprise Server 11
 
-```
+```bash
 sudo su
 zypper ar https://packages.microsoft.com/config/sles/11/prod.repo
 exit
@@ -257,11 +272,11 @@ echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
 sudo zypper install unixODBC-devel
-``` 
+```
 
 ### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
 
-```
+```bash
 sudo su
 zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
 exit
@@ -273,10 +288,11 @@ echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
 sudo zypper install unixODBC-devel
-``` 
+```
 
 ### <a name="ubuntu-1510"></a>Ubuntu 15.10
-```
+
+```bash
 sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 curl https://packages.microsoft.com/config/ubuntu/15.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
@@ -293,8 +309,9 @@ sudo apt-get install unixodbc-dev
 ```
 
 ### <a name="ubuntu-1604"></a>Ubuntu 16.04
-```
-sudo su 
+
+```bash
+sudo su
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 exit
@@ -310,8 +327,9 @@ sudo apt-get install unixodbc-dev
 ```
 
 ### <a name="ubuntu-1610"></a>Ubuntu 16.10
-```
-sudo su 
+
+```bash
+sudo su
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 curl https://packages.microsoft.com/config/ubuntu/16.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 exit
@@ -326,19 +344,13 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### <a name="os-x-1011-el-capitan-and-macos-1012-sierra"></a>OS X 10.11 (El Capitan) 和 macOS 10.12 (Sierra)
+## <a id="13"></a> ODBC 13
 
-```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
-brew update
-brew install msodbcsql@13.1.9.2 mssql-tools@14.0.6.0
-```
-
-## <a name="microsoft-odbc-driver-13-for-sql-server"></a>Microsoft ODBC Driver 13 for SQL Server
+下列各節說明如何從不同 Linux 發行版本的 Bash Shell 安裝 Microsoft ODBC Driver 13。
 
 ### <a name="redhat-enterprise-server-6"></a>RedHat Enterprise Server 6
-```
+
+```bash
 sudo su
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
 exit
@@ -352,7 +364,8 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
 ### <a name="redhat-enterprise-server-7"></a>RedHat Enterprise Server 7
-```
+
+```bash
 sudo su
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
 exit
@@ -366,7 +379,8 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
 ### <a name="ubuntu-1510"></a>Ubuntu 15.10
-```
+
+```bash
 sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 curl https://packages.microsoft.com/config/ubuntu/15.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
@@ -380,7 +394,8 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
 ### <a name="ubuntu-1604"></a>Ubuntu 16.04
-```
+
+```bash
 sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
@@ -395,7 +410,7 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 
 ### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
 
-```
+```bash
 sudo su 
 zypper ar https://packages.microsoft.com/config/sles/12/prod.repo 
 zypper update 
@@ -407,146 +422,98 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
 ### <a name="offline-installation"></a>離線安裝
+
 如果您希望/需要在沒有網際網路連線的電腦上安裝 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13，您必須手動解析套件相依性。 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 有下列直接相依性：
 - Ubuntu: libc6 (>= 2.21), libstdc++6 (>= 4.9), libkrb5-3, libcurl3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1-1)
 - Red Hat：```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
-- SuSE：```glibc, libuuid1, krb5, openssl, unixODBC```
+- SUSE：```glibc, libuuid1, krb5, openssl, unixODBC```
 
 這些每個套件都有自己的相依性，而這些不一定會存在於系統上。 如需此問題的一般解決方案，請參閱散發套件的套件管理員文件：[Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos) \(英文\)、[Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian) \(英文\) 和 [SUSE](https://en.opensuse.org/Portal:Zypper) \(英文\)。
 
 也很常發生手動下載所有相依的套件並將它們一起放在安裝電腦上，然後依次手動安裝每個套件，最後安裝 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 套件。
 
 #### <a name="redhat-linux-enterprise-server-7"></a>Redhat Linux Enterprise Server 7
-  - 從這裡下載最新的 `msodbcsql` `.rpm`： https://packages.microsoft.com/rhel/7/prod/
-  - 安裝相依性和驅動程式
+
+- 從這裡下載最新的 `msodbcsql` `.rpm`：[https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/)。
+- 安裝相依性和驅動程式。
   
-```
+```bash
 yum install glibc e2fsprogs krb5-libs openssl unixODBC unixODBC-devel #install dependencies
 sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
 #### <a name="ubuntu-1604"></a>Ubuntu 16.04
-- 從這裡下載最新的 `msodbcsql` `.deb`： https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
-- 安裝相依性和驅動程式 
 
-```
+- 從這裡下載最新的 `msodbcsql` `.deb`：[https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/)。
+- 安裝相依性和驅動程式。
+
+```bash
 sudo apt-get install libc6 libstdc++6 libkrb5-3 libcurl3 openssl debconf unixodbc unixodbc-dev #install dependencies
 sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
-- 從這裡下載最新的 `msodbcsql` `.rpm`： https://packages.microsoft.com/sles/12/prod/
-- 安裝相依性和驅動程式
 
-```
+- 從這裡下載最新的 `msodbcsql` `.rpm`：[https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/)。
+- 安裝相依性和驅動程式。
+
+```bash
 zypper install glibc, libuuid1, krb5, openssl, unixODBC unixODBC-devel #install dependencies
 sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
-一旦您完成套件安裝，便可以藉由執行 ldd 並查看其輸出是否有遺漏的程式庫來確認 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 可以找到其所有相依性：
-```
+在套件安裝完成後，即可執行 ldd 並查看其輸出是否有缺少的程式庫，以此確認 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 能夠找到其所有相依性：
+
+```bash
 ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
 ```
-  
-## <a name="microsoft-odbc-driver-11-for-sql-server-on-linux"></a>Microsoft ODBC Driver 11 for SQL Server on Linux
 
-您必須先安裝 unixODBC 驅動程式管理員，才能使用驅動程式。 如需詳細資訊，請參閱[安裝驅動程式管理員](../../../connect/odbc/linux-mac/installing-the-driver-manager.md)。
+## <a id="11"></a> ODBC 11
 
-**安裝步驟**  
+下列各節說明如何在 Linux 上安裝 Microsoft ODBC Driver 11。 您必須先安裝 unixODBC 驅動程式管理員，才能使用驅動程式。 如需詳細資訊，請參閱[安裝驅動程式管理員](../../../connect/odbc/linux-mac/installing-the-driver-manager.md)。
+
+### <a name="installation-steps"></a>安裝步驟  
 
 > [!IMPORTANT]  
 > 這些指令參照 `msodbcsql-11.0.2270.0.tar.gz`，這是 Red Hat Linux 的安裝檔案。 如果您要安裝 SUSE Linux (預覽)，檔案名稱為 `msodbcsql-11.0.2260.0.tar.gz`。  
   
 若要安裝驅動程式：
 
-1.  請確定您擁有根權限。  
+1. 請確定您擁有根權限。  
 
-2.  切換至用於放置所下載檔案 `msodbcsql-11.0.2270.0.tar.gz` 的目錄。 請確定您有與您的 Linux 版本相符的 \*.tar.gz 檔案。 若要擷取檔案，請執行下列命令：`tar xvzf msodbcsql-11.0.2270.0.tar.gz`。  
+2. 切換至用於放置所下載檔案 `msodbcsql-11.0.2270.0.tar.gz` 的目錄。 請確定您有與您的 Linux 版本相符的 \*.tar.gz 檔案。 若要擷取檔案，請執行下列命令：`tar xvzf msodbcsql-11.0.2270.0.tar.gz`。  
   
-3.  切換至 `msodbcsql-11.0.2270.0` 目錄，在該處您應會看到稱為 **install.sh** 的檔案。  
+3. 切換至 `msodbcsql-11.0.2270.0` 目錄，在該處您應會看到稱為 **install.sh** 的檔案。  
   
-4.  若要檢視可用的安裝選項清單，請執行下列命令： **./install.sh**。  
+4. 若要檢視可用的安裝選項清單，請執行下列命令： **./install.sh**。  
   
-5.  備份 **odbcinst.ini**。 驅動程式安裝會更新 **odbcinst.ini**。 odbcinst.ini 包含會向 unixODBC 驅動程式管理員註冊的驅動程式清單。 若要探索 odbcinst.ini 在電腦上的位置，請執行下列命令：```odbc_config --odbcinstini```。  
+5. 備份 **odbcinst.ini**。 驅動程式安裝會更新 **odbcinst.ini**。 odbcinst.ini 包含會向 unixODBC 驅動程式管理員註冊的驅動程式清單。 若要探索 odbcinst.ini 在電腦上的位置，請執行下列命令：```odbc_config --odbcinstini```。  
   
-6.  安裝驅動程式之前，請執行下列命令：`./install.sh verify`。 `./install.sh verify` 的輸出會報告您的電腦是否具有必要的軟體可支援 ODBC Driver on Linux。  
+6. 安裝驅動程式之前，請執行下列命令：`./install.sh verify`。 `./install.sh verify` 的輸出會報告您的電腦是否具有必要的軟體可支援 ODBC Driver on Linux。  
   
-7.  當您準備好要安裝 ODBC Driver on Linux 時，請執行下列命令：`./install.sh install`。 如果您要指定安裝命令 (`bin-dir` 或 `lib-dir`)，請在 **install** 選項之後指定該命令。  
+7. 當您準備好要安裝 ODBC Driver on Linux 時，請執行下列命令：`./install.sh install`。 如果您要指定安裝命令 (`bin-dir` 或 `lib-dir`)，請在 **install** 選項之後指定該命令。  
   
-8.  檢閱授權合約之後，請輸入 **YES** 繼續安裝。  
+8. 檢閱授權合約之後，請輸入 **YES** 繼續安裝。  
   
 安裝會將驅動程式放在 `/opt/microsoft/msodbcsql/11.0.2270.0`。 驅動程式及其支援檔案必須位於 `/opt/microsoft/msodbcsql/11.0.2270.0`。  
   
 若要確認已成功註冊 Microsoft ODBC Driver on Linux，請執行下列命令：```odbcinst -q -d -n "ODBC Driver 11 for SQL Server"```。  
   
-[使用 ODBC Driver on Linux 的現有 MSDN C++ ODBC 範例](https://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) ，會顯示使用 ODBC Driver on Linux 連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的程式碼範例。  
-  
-**解除安裝**  
+### <a name="uninstall"></a>解除安裝  
   
 您可以執行下列命令，以解除安裝 ODBC Driver 11 on Linux：  
   
-1.  `rm -f /usr/bin/sqlcmd`
+1. `rm -f /usr/bin/sqlcmd`
   
-2.  `rm -f /usr/bin/bcp`  
+2. `rm -f /usr/bin/bcp`  
   
-3.  `rm -rf /opt/microsoft/msodbcsql`  
+3. `rm -rf /opt/microsoft/msodbcsql`  
   
-4.  `odbcinst -u -d -n "ODBC Driver 11 for SQL Server"`
-  
-## <a name="troubleshooting-connection-problems"></a>連接問題的疑難排解  
-如果您無法使用 ODBC 驅動程式連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，請使用下列資訊來識別問題。  
-  
-最常見的連接問題是安裝了兩個 UnixODBC 驅動程式管理員複本。 請在 /usr 中搜尋 libodbc\*.so\*。 如果您看見多個檔案版本，表示您 (可能) 安裝了多個驅動程式管理員。 您的應用程式可能使用了錯誤的版本。
-  
-藉由編輯 `/etc/odbcinst.ini` 檔案以包含下列區段和這些項目來啟用連接記錄檔：
-
-```
-[ODBC]
-Trace = Yes
-TraceFile = (path to log file, or /dev/stdout to output directly to the terminal)
-```  
-  
-如果連接再次失敗，且未出現記錄檔，表示您的電腦上 (可能) 有兩個驅動程式管理員複本。 否則，記錄輸出應如下所示：  
-  
-```  
-[ODBC][28783][1321576347.077780][SQLDriverConnectW.c][290]  
-        Entry:  
-            Connection = 0x17c858e0  
-            Window Hdl = (nil)  
-            Str In = [DRIVER={ODBC Driver 13 for SQL Server};SERVER={contoso.com};Trusted_Connection={YES};WSID={mydb.contoso.com};AP...][length = 139 (SQL_NTS)]  
-            Str Out = (nil)  
-            Str Out Max = 0  
-            Str Out Ptr = (nil)  
-            Completion = 0  
-        UNICODE Using encoding ASCII 'UTF8' and UNICODE 'UTF16LE'  
-```  
-  
-如果 ASCII 字元編碼不是 UTF-8，例如： 
-  
-```  
-UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'  
-```  
-  
-安裝了多個驅動程式管理員，且應用程式使用了錯誤的管理員，或是驅動程式管理員未正確建置。  
-  
-如需解決連接失敗的詳細資訊，請參閱：  
-  
--   [疑難排解 SQL 連接性問題的步驟](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
-  
--   [SQL Server 2005 連接問題的疑難排解 - 第 1 部分](https://blogs.msdn.com/b/sql_protocols/archive/2005/10/22/sql-server-2005-connectivity-issue-troubleshoot-part-i.aspx)  
-  
--   [使用連接信號緩衝區在 SQL Server 2008 中進行連接的疑難排解](https://blogs.msdn.com/b/sql_protocols/archive/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer.aspx)  
-  
--   [SQL Server 驗證疑難排解員](https://blogs.msdn.com/b/sqlsecurity/archive/2010/03/29/sql-server-authentication-troubleshooter.aspx)  
-  
--   [錯誤詳細資料 (https://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](https://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
-  
-    應變更 URL 中指定的錯誤號碼 (11001)，以符合您所看到的錯誤。  
+4. `odbcinst -u -d -n "ODBC Driver 11 for SQL Server"`
   
 ## <a name="driver-files"></a>驅動程式檔案
-ODBC Driver on Linux and MacOS 是由下列元件所組成：
 
-### <a name="linux"></a>Linux
+Linux 上的 ODBC 驅動程式包含下列元件：
 
 |元件|描述|  
 |---------------|-----------------|  
@@ -556,31 +523,16 @@ ODBC Driver on Linux and MacOS 是由下列元件所組成：
 |LICENSE.txt|文字檔案，其中包含授權條款。 針對 Driver 17，這個檔案會放在 `/usr/share/doc/msodbcsql17/`，針對 Driver 13 則在 `/usr/share/doc/msodbcsql/`。|
 |RELEASE_NOTES|文字檔案，其中包含版本資訊。 針對 Driver 17，這個檔案會放在 `/usr/share/doc/msodbcsql17/`，針對 Driver 13 則在 `/usr/share/doc/msodbcsql/`。|
 
+## <a name="resource-file-loading"></a>載入資源檔
 
-### <a name="macos"></a>MacOS
+驅動程式需要載入資源檔，才能運作。 這個檔案稱為 `msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`，視驅動程式版本而定。 `.rll` 檔案的位置是相對於驅動程式本身 (`so` 或 `dylib`) 的位置，如上表所述。 到 17.1 版為止，驅動程式也會嘗試從預設目錄載入 `.rll`，如果從相對路徑載入失敗的話。 Linux 上的預設資源檔路徑為 `/opt/microsoft/msodbcsql17/share/resources/en_US/`。
 
-|元件|描述|  
-|---------------|-----------------|  
-|libmsodbcsql.17.dylib 或 libmsodbcsql.13.dylib|動態連結程式庫 (`dylib`) 檔案，其中包含驅動程式的所有功能。 這個檔案會安裝在 `/usr/local/lib/`。|  
-|`msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`|隨附驅動程式程式庫的資源檔。 針對 Driver 17，這個檔案會安裝在 `[driver .dylib directory]../share/msodbcsql17/resources/en_US/`，針對 Driver 13 則在 `[driver .dylib directory]../share/msodbcsql/resources/en_US/`。 | 
-|msodbcsql.h|標頭檔，其中包含使用驅動程式所需的所有新定義。<br /><br /> **注意：** 您無法在同一個程式中參考 msodbcsql.h 和 odbcss.h。<br /><br /> 針對 Driver 17，msodbcsql.h 會安裝在 `/usr/local/include/msodbcsql17/`，針對 Driver 13 則在 `/usr/local/include/msodbcsql/`。 |
-|LICENSE.txt|文字檔案，其中包含授權條款。 針對 Driver 17，這個檔案會放在 `/usr/local/share/doc/msodbcsql17/`，針對 Driver 13 則在 `/usr/local/share/doc/msodbcsql/`。 |
-|RELEASE_NOTES|文字檔案，其中包含版本資訊。 針對 Driver 17，這個檔案會放在 `/usr/local/share/doc/msodbcsql17/`，針對 Driver 13 則在 `/usr/local/share/doc/msodbcsql/`。 |
+## <a name="troubleshooting"></a>疑難排解
 
-## <a name="resource-file-loading"></a>資源檔載入
+如果無法使用 ODBC 驅動程式建立與 SQL Server 的連線，請參閱已知問題一文中的[＜針對連線問題進行疑難排解＞](known-issues-in-this-version-of-the-driver.md#connectivity)。
 
-驅動程式需要載入資源檔，才能運作。 這個檔案稱為 `msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`，視驅動程式版本而定。 `.rll` 檔案的位置是相對於驅動程式本身 (`so` 或 `dylib`) 的位置，如上表所述。 到 17.1 版為止，驅動程式也會嘗試從預設目錄載入 `.rll`，如果從相對路徑載入失敗的話。 預設資源檔路徑為：
+## <a name="next-steps"></a>後續步驟
 
-Linux：`/opt/microsoft/msodbcsql17/share/resources/en_US/`
+在安裝驅動程式後，即可嘗試使用 [C++ ODBC 範例應用程式](../../odbc/cpp-code-example-app-connect-access-sql-db.md)。 如需開發 ODBC 應用程式的詳細資訊，請參閱[開發應用程式](../../../odbc/reference/develop-app/developing-applications.md)。
 
-MacOS：`/usr/local/share/msodbcsql17/resources/en_US/`
-
-
-  
-## <a name="see-also"></a>另請參閱
-
-[安裝驅動程式管理員](../../../connect/odbc/linux-mac/installing-the-driver-manager.md)
-
-[版本資訊](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
-
-[系統需求](../../../connect/odbc/linux-mac/system-requirements.md)
+如需詳細資訊，請參閱 ODBC 驅動程式的[版本資訊](release-notes-odbc-sql-server-linux-mac.md)與[系統需求](system-requirements.md)。
