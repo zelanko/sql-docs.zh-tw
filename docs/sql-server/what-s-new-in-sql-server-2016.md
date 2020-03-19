@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2016 的新功能
+description: 了解新的 SQL Server 2016 安全性功能、查詢功能、Hadoop 和雲端整合、R 分析等。
 ms.custom: ''
 ms.date: 07/22/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dba29bb00f0b8d54edd8c8c98d4134cf794fe2fd
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.openlocfilehash: b0b4a72519a0fa20d0c4a7472760a8f06a9ced32
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77478508"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190616"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  

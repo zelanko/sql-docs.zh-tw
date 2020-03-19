@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 7cb6fabaa6d1dcbfb632e234b04e2e7bbc95541e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a4edde16397c865d0bc79e280e382857afde8714
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75254651"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198465"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>設計資料庫圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "75254651"
   
 如果您已經修改某個資料表但尚未儲存，該資料表名稱的後方將出現星號 (*) 表示尚未儲存變更。 如需儲存修改過的資料表和圖表的詳細資訊，請參閱 [使用資料庫圖表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-**資料列選取器** ：您可以按一下資料列選取器，選取資料表中的資料庫資料行。 如果該資料行位於資料表的主索引鍵，資料列選取器將顯示索引鍵符號。 如需主索引鍵的資訊，請參閱[使用索引鍵(https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd) 。  
+**資料列選取器** ：您可以按一下資料列選取器，選取資料表中的資料庫資料行。 如果該資料行位於資料表的主索引鍵，資料列選取器將顯示索引鍵符號。 如需主索引鍵的資訊，請參閱[使用索引鍵](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)。  
   
 **屬性資料行** ：屬性資料行組只有在資料表中的特定檢視才可見。 您可以使用五種檢視方法來檢視資料表，任何一種方法都可以協助您管理圖表的大小和配置。  
   

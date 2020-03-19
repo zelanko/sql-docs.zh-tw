@@ -18,11 +18,11 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b16e58b8535d91fd29281aa986ab5ba26875dc38
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68014995"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286542"
 ---
 # <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,11 +37,11 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 ```  
   
 #### <a name="parameters"></a>參數  
-*$conn*：與已建立的陳述式相關聯的連接資源。  
+*$conn*：與已建立陳述式建立關聯的連線資源。  
   
-*$tsql*：與所建立陳述式對應的 Transact-SQL 運算式。  
+*$tsql*：與已建立陳述式相對應的 Transact-SQL 運算式。  
   
-*$params* [選用]：與參數化查詢中之參數對應的值**陣列**。 陣列的每個元素可以是下列其中一項：
+*$params* [OPTIONAL]：對應至參數化查詢中參數的值**陣列**。 陣列的每個元素可以是下列其中一項：
   
 -   常值。  
   
@@ -61,11 +61,11 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |元素|描述|  
     |-----------|---------------|  
     |*&$value*|常值或 PHP 變數的參考。|  
-    |*$direction*[OPTIONAL]|下列其中一項 **SQLSRV_PARAM_\*** 常數，用於指定參數方向：**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 預設值為 **SQLSRV_PARAM_IN**。<br /><br />如需 PHP 常數的詳細資訊，請參閱 [常數 &#40;適用於 SQL Server 之 PHP 的 Microsoft 驅動程序&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
+    |*$direction*[OPTIONAL]|下列其中一項 **SQLSRV_PARAM_\*** 常數，用來指定參數方向：**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 預設值為 **SQLSRV_PARAM_IN**。<br /><br />如需 PHP 常數的詳細資訊，請參閱 [常數 &#40;適用於 SQL Server 之 PHP 的 Microsoft 驅動程序&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
     |*$phpType*[OPTIONAL]|**SQLSRV_PHPTYPE_\*** 常數，指定傳回值的 PHP 資料類型。|  
     |*$sqlType*[OPTIONAL]|**SQLSRV_SQLTYPE_\*** 常數，指定輸入值的 SQL Server 資料類型。|  
   
-*$options* [OPTIONAL]：設定<a name="properties">查詢屬性</a>的關聯陣列。 下表列出支援的 Key 和對應的值：
+*$options* [選擇性]：設定<a name="properties">查詢屬性</a>的關聯陣列。 下表列出支援的 Key 和對應的值：
 
 |Key|支援的值|描述|  
 |-------|--------------------|---------------|  
@@ -73,7 +73,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 |DecimalPlaces|介於 0 和 4 (含) 之間的整數|指定將擷取的貨幣值格式化時的小數位數。<br /><br />將忽略任何大於 4 的負整數或值。<br /><br />這個選項只有當 FormatDecimals 為 **true** 時才能運作。|
 |FormatDecimals|**[True]** 或 **[False]**<br /><br />預設值為 **false**。|指定是否要在適當時於十進位字串中新增前置零，並啟用 `DecimalPlaces` 選項來將貨幣類型格式化。<br /><br />如需詳細資訊，請參閱[將十進位字串及貨幣值格式化 (SQLSRV 驅動程式)](../../connect/php/formatting-decimals-sqlsrv-driver.md)。|
 |QueryTimeout|正整數|設定查詢逾時 (以秒為單位)。 根據預設，驅動程式會無限期等候結果。|  
-|ReturnDatesAsStrings|**[True]** 或 **[False]**<br /><br />預設值為 **false**。|設定陳述式，以使用字串形式來擷取日期和時間類型 (**true**)。 如需詳細資訊，請參閱[如何：使用 SQLSRV 驅動程式以字串的形式擷取日期和時間類型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)。
+|ReturnDatesAsStrings|**[True]** 或 **[False]**<br /><br />預設值為 **false**。|設定陳述式，以使用字串形式來擷取日期和時間類型 (**true**)。 如需詳細資訊，請參閱[如何：使用 SQLSRV 驅動程式以字串形式擷取日期和時間類型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)。
 |可捲動|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|如需這些值的詳細資訊，請參閱 [指定資料指標類型及選取資料列](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。|  
 |SendStreamParamsAtExec|**[True]** 或 **[False]**<br /><br />預設值為 **true**。|設定驅動程式在執行時傳送所有資料流資料 (**true**)，或是以區塊傳送資料流資料 (**false**)。 依預設，此值設定為 **true**。 如需詳細資訊，請參閱 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)。|  
   
@@ -87,7 +87,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 如需寫入和讀取大量資訊的替代策略，請參閱 [SQL 陳述式的批次](../../odbc/reference/develop-app/batches-of-sql-statements.md) 和 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
-如需詳細資訊，請參閱 [如何：使用 SQLSRV 驅動程式擷取輸出參數](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
+如需詳細資訊，請參閱[如何：使用 SQLSRV 驅動程式擷取輸出參數](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
   
 ## <a name="example"></a>範例  
 下列範例會準備及執行陳述式。 若執行陳述式 (請參閱 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md))，其會更新 AdventureWorks 資料庫之 *Sales.SalesOrderDetail* 資料表中的欄位。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
@@ -252,11 +252,11 @@ sqlsrv_close($conn);
 ## <a name="see-also"></a>另請參閱  
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[如何：執行參數化查詢](../../connect/php/how-to-perform-parameterized-queries.md)
+[操作說明：執行參數化查詢](../../connect/php/how-to-perform-parameterized-queries.md)
 
 [關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[如何：以資料流形式傳送資料](../../connect/php/how-to-send-data-as-a-stream.md)
+[操作說明：以資料流形式傳送資料](../../connect/php/how-to-send-data-as-a-stream.md)
 
 [使用方向參數](../../connect/php/using-directional-parameters.md)
 

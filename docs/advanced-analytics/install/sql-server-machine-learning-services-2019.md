@@ -3,17 +3,17 @@ title: Windows 的隔離變更
 description: 本文說明 Windows 上 SQL Server 2019 中機器學習服務的隔離機制變更。 這些變更會影響 SQLRUserGroup、防火牆規則、檔案權限，以及隱含驗證。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 03/05/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4fae460e78682263c604d8e1e86ca40b7b62df97
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ad95817a7b1eb9afb8377b06d20a577eda49ea23
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69531036"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79285912"
 ---
 # <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>Windows 上的 SQL Server 2019：機器學習服務的隔離變更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,26 @@ ms.locfileid: "69531036"
 > [!Note]
 > 如果需要網路呼叫，您可以停用 Windows 防火牆中的輸出規則。
 
-## <a name="program-file-permissions"></a>程式檔權限
+<a name="file-permissions"></a>
+
+## <a name="file-permissions"></a>檔案權限
+
+根據預設，外部 Python 與 R 指令碼只能讀取其工作目錄。 
+
+如果 Python 或 R 指令碼需要存取任何其他目錄，則必須為 **NT Service\MSSQLLaunchpad** 服務使用者帳戶以及此目錄中的**所有應用程式套件**提供 [讀取並執行]  及/或 [寫入]  權限。
+
+請遵循下列步驟來授與存取權。
+
+1. 在 檔案總管中，以滑鼠右鍵按一下您要作為工作目錄的資料夾，然後選取 [屬性]  。
+1. 選取 [安全性]  然後按一下 [編輯...]  以變更權限。
+1. 按一下 [新增...] 
+1. 請確定 [從這個位置]  為本機電腦名稱。
+1. 在 [輸入要選取的物件名稱]  中輸入**所有應用程式套件**，然後按一下 [檢查名稱]  。 按一下 [確定]  。
+1. 選取 [允許]  欄位內的 [讀取並執行]  。
+1. 如果想要授與寫入權限，請選取 [允許]  欄位下的 [寫入]  。
+1. 按一下 [確定]  ，然後按一下 [確定]  。
+
+### <a name="program-file-permissions"></a>程式檔權限
 
 與以前的版本一樣，**SQLRUserGroup** 繼續提供 SQL Server **Binn**、**R_SERVICES** 和 **PYTHON_SERVICES** 目錄中可執行檔的讀取和執行權限。 在此版本中，**SQLRUserGroup** 的唯一成員是 SQL Server Launchpad 服務帳戶。  當 Launchpad 服務啟動 R 或 Python 執行環境時，程序會以 Launchpad 服務的方式執行。
 

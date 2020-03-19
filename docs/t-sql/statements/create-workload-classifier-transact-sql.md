@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD 分類器 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/27/2020
+ms.date: 03/11/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 73718d8fa49715a2cec91c43a9a91402fad6e031
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.openlocfilehash: 67f844ff5955f51b0c878f2a3161cc4762834f74
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77429029"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112258"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -43,12 +43,12 @@ ms.locfileid: "77429029"
 ```
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
-    (   WORKLOAD_GROUP = ‘name’  
-    ,   MEMBERNAME = ‘security_account’ 
-[ [ , ] WLM_LABEL = ‘label’ ]  
-[ [ , ] WLM_CONTEXT = ‘context’ ]  
-[ [ , ] START_TIME = ‘HH:MM’ ]  
-[ [ , ] END_TIME = ‘HH:MM’ ]  
+    (   WORKLOAD_GROUP = 'name'  
+    ,   MEMBERNAME = 'security_account' 
+[ [ , ] WLM_LABEL = 'label' ]  
+[ [ , ] WLM_CONTEXT = 'context' ]  
+[ [ , ] START_TIME = 'HH:MM' ]  
+[ [ , ] END_TIME = 'HH:MM' ]  
   
 [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]) 
 [;]
@@ -64,8 +64,8 @@ WITH
 
  可用的工作負載群組可以在 [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md) 目錄檢視中找到。
 
- *MEMBERNAME* ='security_account'*    
- 這是加入角色的安全性帳戶。  Security_account 是一種 sysname，沒有預設值。 Security_account 可以是資料庫使用者、資料庫角色、Azure Active Directory 登入或 Azure Active Directory 群組。
+ *MEMBERNAME* =  *'security_account'*     
+ 用來分類的安全性帳戶。  Security_account 是一種 sysname，沒有預設值。 Security_account 可以是資料庫使用者、資料庫角色、Azure Active Directory 登入或 Azure Active Directory 群組。
  
  *WLM_LABEL*   
  指定可分類要求的標籤值。  Label 是 nvarchar(255) 類型的選擇性參數。  在要求中使用 [OPTION (LABEL)](/azure/sql-data-warehouse/sql-data-warehouse-develop-label)，以符合分類器設定。

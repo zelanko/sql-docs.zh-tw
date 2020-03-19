@@ -1,5 +1,6 @@
 ---
 title: 報表伺服器 Web 服務 | Microsoft Docs
+description: Reporting Services 提供報表伺服器與報表伺服器 Web 服務 (用於報表執行和管理的 SOAP 服務端點) 的功能。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 16c21dec-6b46-4497-9a0c-1b0f2b6ab8fc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 455fc4c5ea881f370257769d6794628a45017b3a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6fb059d867a7a3448e5a842929df48ad009f2518
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63070345"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198475"
 ---
 # <a name="report-server-web-service"></a>報表伺服器 Web 服務
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 透過報表伺服器 Web 服務提供報表伺服器的完整功能。 報表伺服器 Web 服務是一種具有 SOAP API 的 XML Web 服務。 它使用 SOAP over HTTP，並做為用戶端程式與報表伺服器之間的通訊介面。 Web 服務提供兩個端點 (一個用於報表執行，一個用於報表管理)，並含有可公開報表伺服器功能的方法，這些方法可讓您為任何部分的報表生命週期建立自訂工具。  

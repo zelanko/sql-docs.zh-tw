@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61c8728fede661a91090d5cb15ee4feed5816e7c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 86702d159d3cc658a3c2e9e31477cca80f1eb6cc
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831970"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112453"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -103,7 +103,7 @@ LOCATION = '*folder_or_filepath*' 指定 Hadoop 或 Azure Blob 儲存體中實�
 
 若您將 LOCATION 指定為資料夾，會從外部資料表中選取的 PolyBase 查詢，將會從該資料夾及其所有子資料夾中擷取檔案。 PolyBase 和 Hadoop 相同，並不會傳回隱藏的資料夾。 它也不會傳回檔案名稱是以底線 (_) 或句號 (.) 開始的檔案。
 
-在此範例中，若 LOCATION='/webdata/'，PolyBase 查詢將會傳回來自 mydata.txt 和 mydata2.txt 的資料列。 它不會傳回 mydata3.txt，因為它是隱藏資料夾的子資料夾。 它不會傳回 _hidden.txt，因為它是隱藏的檔案。
+在此範例中，若 LOCATION='/webdata/'，PolyBase 查詢將會傳回來自 mydata.txt 和 mydata2.txt 的資料列。 其不會傳回 mydata3.txt，因為該檔案是隱藏資料夾中的檔案。 它不會傳回 _hidden.txt，因為它是隱藏的檔案。
 
 ![外部資料表的遞迴資料](../../t-sql/statements/media/aps-polybase-folder-traversal.png "外部資料表的遞迴資料")
 
@@ -623,7 +623,7 @@ column_name <data_type>
 
 DATA_SOURCE DATA_SOURCE 子句定義用於外部資料表的外部資料來源 (分區對應)。 如需範例，請參閱[建立外部資料表](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)。
 
-SCHEMA_NAME 和 OBJECT_NAME SCHEMA_NAME 和 OBJECT_NAME 子句會將外部資料表定義對應至不同結構描述中的資料表。 如果省略，即會假設遠端物件的結構描述為 "dbo" 並假設其名稱與所定義的外部資料表名稱相同。 如果您的遠端資料表名稱已存在於您要建立外部資料表的資料庫中，這會很有用。 例如，您想要定義外部資料表以取得相應放大的資料層上目錄檢視或 DMV 的彙總檢視。 由於目錄檢視和 DMV 已經存在於本機，所以您無法將其名稱使用於外部資料表定義。 您需改為在 SCHEMA_NAME 和/或 OBJECT_NAME 子句中，使用不同的名稱以及使用目錄檢視名稱或 DMV 名稱。 如需範例，請參閱[建立外部資料表](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)。
+SCHEMA_NAME 和 OBJECT_NAME SCHEMA_NAME 和 OBJECT_NAME 子句會將外部資料表定義對應至不同結構描述中的資料表。 如果省略，即會假設遠端物件的結構描述為 "dbo" 並假設其名稱與所定義的外部資料表名稱相同。 如果您的遠端資料表名稱已存在於您要建立外部資料表的資料庫中，這會很有用。 例如，您想要定義外部資料表以取得相應放大的資料層上目錄檢視或 DMV 的彙總檢視。 由於目錄檢視和 DMV 已經存在於本機，所以您無法將其名稱使用於外部資料表定義。 可以改為使用不同的名稱，並使用目錄檢視名稱，或 SCHEMA_NAME 和/或 OBJECT_NAME 子句中 DMV 的名稱。 如需範例，請參閱[建立外部資料表](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)。
 
 DISTRIBUTION DISTRIBUTION 子句指定用於此資料表的資料散發。 查詢處理器會利用 DISTRIBUTION 子句中提供的資訊來建置最有效率的查詢計劃。
 
@@ -881,7 +881,7 @@ SCHEMARESOLUTION 物件上的共用鎖定。
 
 ## <a name="examples"></a>範例
 
-### <a name="a-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>A. 將資料從 ADLS 匯入至 Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]
+### <a name="a-importing-data-from-adls-into-azure-ssdw"></a>A. 將資料從 ADLS 匯入至 Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]
 
 ```sql
 

@@ -1,19 +1,20 @@
 ---
 title: SqlPackage.exe
 ms.prod: sql
-ms.technology: ssdt
-ms.date: 06/28/2018
-ms.reviewer: alayu; sstein
+ms.prod_service: sql-tools
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: d08ee2e48fca1cf7cd473dbd02714b460089353f
-ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
+ms.reviewer: alayu; sstein
+ms.date: 06/28/2018
+ms.openlocfilehash: f5a1391865b2f08d6eb127fc360d94437c08155e
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77250593"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286482"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -228,7 +229,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新 SQL Server 將路由保留在路由表中之時間長短的差異。|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新 T-SQL 陳述式間之分號的差異。|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|指定當您發行至資料庫時，將忽略或更新資料表選項的差異。|
-|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|指定當您發佈至資料庫時，要忽略還是更新資料表分割區選項的差異。  此選項只適用於 Azure Synapse Analytics 資料倉儲資料庫。|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|指定當您發佈至資料庫時，要忽略還是更新資料表分割區選項的差異。  此選項只適用於 Azure Synapse Analytics SQL 集區 (資料倉儲) 資料庫。|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|指定當您發行至資料庫時，將忽略或更新使用者設定物件的差異。|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|指定當您發行至資料庫時，將忽略或更新空白字元的差異。|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|指定當您發行至資料庫時，將忽略或更新檢查條件約束之 WITH NOCHECK 子句值的差異。|

@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
-ms.date: 11/04/2019
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -13,12 +13,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 40c1573fb16bbf6d7cdbb98a168dcda064b59087
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: afc420ffe62f31c5793f00f3acea12dedac7f509
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75558669"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198385"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入門：使用 Docker 執行 SQL Server 容器映像
 
@@ -36,13 +36,17 @@ ms.locfileid: "75558669"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
+> [!NOTE]
+> 從 SQL Server 2019 CU3 開始支援 Ubuntu 18.04。
+
 在本快速入門中，您將使用 Docker 來提取與執行 SQL Server 2019 容器映像 [mssql-server](https://hub.docker.com/r/microsoft/mssql-server)。 然後與 **sqlcmd**連線來建立您的第一個資料庫並執行查詢。
 
 > [!TIP]
 > 本快速入門會建立 SQL Server 2019 容器。 如果您想要建立 SQL Server 2017 容器，請參閱[本文的 SQL Server 2017 版本。](quickstart-install-connect-docker.md?view=sql-server-linux-2017)
+
 ::: moniker-end
 
-此映像包含以 Ubuntu 16.04 為基礎，在 Linux 上執行的 SQL Server。 您可於適用於 Mac/Windows 的 Docker 上將其與 Docker 引擎 1.8 以上版本搭配使用。 本快速入門將著重於在 **linux** 映像上使用 SQL Server。 Windows 映像則不涵蓋在內，但您可於 [mssql-server-windows-developer Docker Hub 頁面](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)進一步加以了解。
+此映像包含以 Ubuntu 18.04 為基礎，在 Linux 上執行的 SQL Server。 您可於適用於 Mac/Windows 的 Docker 上將其與 Docker 引擎 1.8 以上版本搭配使用。 本快速入門將著重於在 **linux** 映像上使用 SQL Server。 Windows 映像則不涵蓋在內，但您可於 [mssql-server-windows-developer Docker Hub 頁面](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)進一步加以了解。
 
 ## <a id="requirements"></a> 必要條件
 
@@ -86,7 +90,7 @@ any changes to one section should be duplicated in the other-->
    上述命令會提取最新的 SQL Server 2017 容器映像。 若要提取特定映像，您需要新增欄位與標籤名稱 (例如，`mcr.microsoft.com/mssql/server:2017-GA-ubuntu`)。 若要查看所有可用的映像，請參閱 [mssql-server Docker Hub 頁面](https://hub.docker.com/r/microsoft/mssql-server)。
 
    ::: zone pivot="cs1-bash"
-   本文中的 Bash 命令會使用 `sudo`。 在 MacOS 上，可能不需要 `sudo`。 在 Linux 上，如果您不想使用 `sudo` 來執行 Docker，您可以設定 **Docker** 群組，並將使用者新增至該群組。 如需詳細資訊，請參閱 [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/) (適用於 Linux 的安裝後步驟)。
+   本文中的 Bash 命令會使用 `sudo`。 在 macOS 上，可能不需要 `sudo`。 在 Linux 上，如果您不想使用 `sudo` 來執行 Docker，您可以設定 **Docker** 群組，並將使用者新增至該群組。 如需詳細資訊，請參閱 [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/) (適用於 Linux 的安裝後步驟)。
    ::: zone-end
 
 2. 若要以 Docker 執行容器映像，您可以從 Bash 殼層 (Linux/macOS) 或提高權限的 PowerShell 命令提示字元使用下列命令。
@@ -183,19 +187,19 @@ SELECT @@SERVERNAME,
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -205,7 +209,7 @@ SELECT @@SERVERNAME,
    先前的命令會提取以 Ubuntu 為基礎的 SQL Server 2019 容器映像。 若要改為使用以 RedHat 為基礎的容器映像，請參閱[執行 RHEL 型的容器映像](sql-server-linux-configure-docker.md#rhel)。 若要查看所有可用的映像，請參閱 [mssql-server-linux Docker Hub 頁面](https://hub.docker.com/_/microsoft-mssql-server)。
 
    ::: zone pivot="cs1-bash"
-   本文中的 Bash 命令會使用 `sudo`。 在 MacOS 上，可能不需要 `sudo`。 在 Linux 上，如果您不想使用 `sudo` 來執行 Docker，您可以設定 **Docker** 群組，並將使用者新增至該群組。 如需詳細資訊，請參閱 [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/) (適用於 Linux 的安裝後步驟)。
+   本文中的 Bash 命令會使用 `sudo`。 在 macOS 上，可能不需要 `sudo`。 在 Linux 上，如果您不想使用 `sudo` 來執行 Docker，您可以設定 **Docker** 群組，並將使用者新增至該群組。 如需詳細資訊，請參閱 [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/) (適用於 Linux 的安裝後步驟)。
    ::: zone-end
 
 2. 若要以 Docker 執行容器映像，您可以從 Bash 殼層 (Linux/macOS) 或提高權限的 PowerShell 命令提示字元使用下列命令。
@@ -214,7 +218,7 @@ SELECT @@SERVERNAME,
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -222,7 +226,7 @@ SELECT @@SERVERNAME,
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -230,7 +234,7 @@ SELECT @@SERVERNAME,
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -248,7 +252,7 @@ SELECT @@SERVERNAME,
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | 指定您自己的強式密碼，該密碼長度至少需為 8 個字元且符合 [SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 此為 SQL Server 映像的必要設定。 |
    | **-p 1433:1433** | 將主機環境上的 TCP 連接埠 (第一個值) 對應至容器中的 TCP 連接埠 (第二個值)。 在本範例中，SQL Server 正在接聽容器中的 TCP 1433 且對主機上的連接埠 1433 公開。 |
    | **--name sql1** | 為容器指定自訂名稱，而不使用隨機產生的名稱。 若您執行數個容器，就無法使用此相同名稱。 |
-   | **mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04** | SQL Server 2019 Ubuntu Linux 容器映像。 |
+   | **mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04** | SQL Server 2019 Ubuntu Linux 容器映像。 |
 
 3. 若要檢視 Docker 容器，請使用 `docker ps` 命令。
 

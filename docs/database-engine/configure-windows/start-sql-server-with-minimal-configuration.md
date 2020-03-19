@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 71fd26df641c1ac551dcc430c0fef555fc3c5df8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 0c919ad9202c99c7b010b6aee9c921e76784eb24
+ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68037151"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79027957"
 ---
 # <a name="start-sql-server-with-minimal-configuration"></a>以最低組態啟動 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,6 +34,8 @@ ms.locfileid: "68037151"
 -   不會執行啟動預存程序。  
 
 -   `tempdb` 已設定最小可能大小。
+
+-   稽核將會停用，但仍可發出稽核 DDL。 在實務上， **-m** 應足以應付大多數要求重新設定 SQL Server 稽核的情況。 如需審核組態的安全性詳細資料，請參閱[在 SQL Server 中稽核](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security) (英文)。
   
  在伺服器以最低組態啟動後，您應該變更適當的伺服器選項值，然後將伺服器停止，再重新啟動。  
   

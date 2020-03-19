@@ -1,6 +1,6 @@
 ---
 title: 在 Windows 應用程式中使用 SOAP API
-description: 您可以透過 Reporting Services SOAP API 存取報表伺服器的完整功能。 只要撰寫呼叫服務的程式碼，即可在 Windows 應用程式中存取 Web 服務。
+description: 您可使用 Reporting Services SOAP API 來存取報表伺服器的功能。 呼叫 Web 服務，以在 Windows 應用程式中存取該服務。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a2cd3fce2844fc815981f7e5ad4850236445f281
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 78bdfb5335f00df64e1ae3a98a6a34aa26f71881
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796986"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198192"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>使用 SOAP 整合 Reporting Services - Windows 應用程式
   您可以透過 Reporting Services SOAP API 存取報表伺服器的完整功能。 SOAP API 是一種 Web 服務，因此可以輕易地存取，以提供企業報表功能給自訂商務應用程式。 您只要撰寫呼叫服務的程式碼，即可在 Windows 應用程式中存取 Web 服務。 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，您就可以產生公開 Web 服務的屬性與方法之 Proxy 類別，而且可讓您使用熟悉的基礎結構與工具，建立以 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 技術為基礎的商務應用程式。  

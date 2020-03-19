@@ -1,5 +1,6 @@
 ---
 title: Web 服務驗證 | Microsoft Docs
+description: 如果用戶端對報表伺服器發出 SOAP 要求，請實作驗證的用戶端部分。 了解如何實作 Web 服務的驗證。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 852b4947-a090-4e54-8555-5a503945ceab
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3ea255c03803f6191d3161d3ef2fa149ef157f56
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 34873835231c122f3d086c3490be2bab7a684925
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63069889"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198530"
 ---
 # <a name="web-service-authentication"></a>Web 服務驗證
   您可以使用 Windows 驗證或是基本驗證，以驗證對報表伺服器 Web 服務的呼叫。 任何對報表伺服器提出 SOAP 要求的用戶端，都必須實作其中一個支援的驗證通訊協定之用戶端部分。 如果您正在使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，則可使用受控碼 HTTP 類別來實作驗證。 使用這些 API 使得連同 SOAP 要求一起傳送驗證資訊變得更容易。  

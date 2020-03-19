@@ -1,5 +1,6 @@
 ---
 title: 排程方法 | Microsoft Docs
+description: 在 Reporting Services 中，這些方法可以建立並管理執行和傳遞報表的共用排程，並快取報表伺服器使用的重新整理計畫。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 640564af3d2c46045d328c2d86788e803672512c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 087e2111987de00b347c400ce7255cb7f9eee97e
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284426"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198335"
 ---
 # <a name="scheduling-methods"></a>排程方法
   您可以使用這些方法來建立並管理執行和傳遞報表的共用排程，並快取報表伺服器所運用的重新整理計劃。  

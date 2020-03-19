@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 88e2325af328e32a246ca484ab447cc99be887c0
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: d6f17b46cb396ee34133e67a528e22cab571cceb
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903865"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288382"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可在多種資料儲存架構處理查詢，例如本機資料表、資料分割資料表及散發到多部伺服器的資料表。 下列主題涵蓋了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何處理查詢以及透過執行計畫快取最佳化查詢重複使用。
 
@@ -86,7 +86,7 @@ GO
 ```
 
 ### <a name="optimizing-select-statements"></a>最佳化 SELECT 陳述式
-`SELECT` 陳述式為非程序性，它無法敘述資料庫伺服器應用來擷取所需資料的正確步驟。 這是表示資料庫伺服器應該先分析陳述式，才能判斷出取得所需資料的最有效方式。 這稱為將 `SELECT` 陳述式最佳化。 執行此動作的元件稱為查詢最佳化工具。 查詢最佳化工具的輸入是由查詢、資料庫結構描述 (資料表和索引定義) 以及資料庫統計資料所組成。 查詢最佳化工具的輸出是查詢執行計畫，有時稱為查詢計畫或只是計畫。 在本主題稍後將更詳盡地描述查詢計畫的內容。
+`SELECT` 陳述式為非程序性，它無法敘述資料庫伺服器應用來擷取所需資料的正確步驟。 這是表示資料庫伺服器應該先分析陳述式，才能判斷出取得所需資料的最有效方式。 這稱為將 `SELECT` 陳述式最佳化。 執行此動作的元件稱為查詢最佳化工具。 查詢最佳化工具的輸入是由查詢、資料庫結構描述 (資料表和索引定義) 以及資料庫統計資料所組成。 查詢最佳化工具的輸出是查詢執行計畫，有時稱為查詢計劃或執行計畫。 在本主題稍後將更詳盡地描述執行計畫的內容。
 
 下圖說明在單一 `SELECT` 陳述式最佳化期間，查詢最佳化工具的輸入與輸出：
 
@@ -100,17 +100,19 @@ GO
 
 查詢執行計畫是用以定義下列項目： 
 
-* 存取來源資料表的順序。  
-  一般而言，資料庫伺服器存取基底資料表以建立結果集的順序有很多種。 例如，如果 `SELECT` 陳述式參考三個資料表，則資料庫伺服器會先存取 `TableA`、使用 `TableA` 中的資料來擷取 `TableB`中相符的資料列，然後使用 `TableB` 中的資料來擷取 `TableC`中的資料。 資料庫伺服器可以存取資料表的其他順序如下：  
+- **存取來源資料表的順序。** 一般而言，資料庫伺服器存取基底資料表以建立結果集的順序有很多種。 例如，如果 `SELECT` 陳述式參考三個資料表，則資料庫伺服器會先存取 `TableA`、使用 `TableA` 中的資料來擷取 `TableB`中相符的資料列，然後使用 `TableB` 中的資料來擷取 `TableC`中的資料。 資料庫伺服器可以存取資料表的其他順序如下：  
   `TableC`、 `TableB`、 `TableA`或  
   `TableB`、 `TableA`、 `TableC`或  
   `TableB`、 `TableC`、 `TableA`或  
   `TableC`、`TableA`、`TableB`  
 
-* 從各資料表取得資料所用的方法。  
+- **用來從每個資料表擷取資料的方法。**  
   一般而言，有各種不同的方式可存取每個資料表中的資料。 如果僅需要特定索引鍵值的一些資料列，則資料庫伺服器可以使用索引。 如果需要資料表中的所有資料列，則資料庫伺服器可以忽略索引，並執行資料表掃描。 如果需要資料表中的所有資料列，但其中有一個索引的索引鍵資料行是在 `ORDER BY`中，那麼，執行索引掃描來替代資料表掃描，就能儲存不同排序的結果集。 如果資料表非常小，則資料表掃描可能是所有資料表存取中最有效率的方式。
+  
+- **用來計算計算，以及如何篩選、彙總及排序每個資料表中的資料的方法。**  
+  從資料表存取資料時，有不同的方法可以針對資料執行計算 (例如計算純量值)，以及彙總和排序查詢文字中定義的資料 (例如使用 `GROUP BY` 或 `ORDER BY` 子句時)，以及如何篩選資料 (例如使用 `WHERE` 或 `HAVING` 子句時)。
 
-從許多可能的計畫中選擇其中一個執行計畫的程序，便稱為最佳化。 查詢最佳化工具是 SQL 資料庫系統中最重要的元件之一。 因為查詢最佳化工具使用部份負擔來分析查詢並選取計畫，所以當查詢最佳化工具挑出最有效率的執行計畫時，這個負擔通常已經儲存了好幾層。 例如，兩家營造公司可能對同一間房屋有相同的藍圖。 如果有一家公司在剛開始時，願意花幾天的時間計畫將如何建造房屋，而另一家公司則不計畫就開始建造，那麼有花時間規劃其專案的公司，最有可能在第一時間完成。
+從許多可能的計畫中選擇其中一個執行計畫的程序，便稱為最佳化。 查詢最佳化工具是 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 中最重要的元件之一。 因為查詢最佳化工具使用部份負擔來分析查詢並選取計畫，所以當查詢最佳化工具挑出最有效率的執行計畫時，這個負擔通常已經儲存了好幾層。 例如，兩家營造公司可能對同一間房屋有相同的藍圖。 如果有一家公司在剛開始時，願意花幾天的時間計畫將如何建造房屋，而另一家公司則不計畫就開始建造，那麼有花時間規劃其專案的公司，最有可能在第一時間完成。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具是以費用為基礎的最佳化工具。 每個可能的執行計畫都有計算所使用資源量的相關成本。 查詢最佳化工具必須分析可能的計畫並選擇最低估計成本的計畫。 有些複雜的 `SELECT` 陳述式具備數千個可能的執行計畫。 在這樣的情況下，查詢最佳化工具不會分析所有可能的組合。 相反的，它會使用複雜的演算法來尋找最接近最小可能成本的執行計畫。
 
@@ -121,6 +123,12 @@ GO
 <sup>1</sup> 密度會定義資料中唯一值的分佈，或指定資料行中重複值的平均數。 當密度降低時，值的選擇性會增加。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具非常重要，因為它可以讓資料庫伺服器隨著資料庫中的狀況變更來進行動態調整，而不需要由程式設計人員或資料庫管理員來輸入。 這樣程式設計師便不用將焦點集中在描述查詢的最後結果。 他們可以相信每次執行陳述式時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具將依資料庫的狀態建立最有效率的執行計畫。
+
+> [!NOTE]
+> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 有三個選項可顯示執行計畫：        
+> -  ***[預估的執行計畫](../relational-databases/performance/display-the-estimated-execution-plan.md)***，這是已編譯的計畫，且是由查詢最佳化工具所產生。        
+> -  ***[實際執行計畫](../relational-databases/performance/display-an-actual-execution-plan.md)***：這與編譯過的計畫相同，再加上其執行內容。 這包括執行完成之後可用的執行階段資訊，例如執行警告；在較新版的 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 中則是執行的經過時間與所使用的 CPU 時間。        
+> -  ***[即時查詢統計資料](../relational-databases/performance/live-query-statistics.md)***：這與編譯過的計畫相同，加上其執行內容。 這包括執行過程中的執行階段資訊，會每秒更新一次。 舉例來說，執行階段資訊包括流經運算子的實際資料列數。       
 
 ### <a name="processing-a-select-statement"></a>處理 SELECT 陳述式
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理單一 SELECT 陳述式所使用的基本步驟如下： 
@@ -450,12 +458,6 @@ WHERE name LIKE '%plans%';
   目前執行查詢的每位使用者都有資料結構，其中保存了與其執行相關的特定資料，例如參數值。 此資料結構即稱為執行內容。 執行內容資料結構會重複使用，但內容不會。 若其他使用者執行相同的查詢，將會為新使用者的內容重新初始化資料結構。 
 
   ![execution_context](../relational-databases/media/execution-context.gif)
-
-> [!NOTE]
-> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 有三個選項可顯示執行計畫：        
-> -  ***[估計執行計畫](../relational-databases/performance/display-the-estimated-execution-plan.md)***：這是編譯過的計畫。        
-> -  ***[實際執行計畫](../relational-databases/performance/display-an-actual-execution-plan.md)***：這與編譯過的計畫相同，再加上其執行內容。 這包括執行完成之後可用的執行階段資訊，例如執行警告；在較新版的 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 中則是執行的經過時間與所使用的 CPU 時間。        
-> -  ***[即時查詢統計資料](../relational-databases/performance/live-query-statistics.md)***：這與編譯過的計畫相同，加上其執行內容。 這包括執行過程中的執行階段資訊，會每秒更新一次。 舉例來說，執行階段資訊包括流經運算子的實際資料列數。       
 
 當任何 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中執行時，[!INCLUDE[ssde_md](../includes/ssde_md.md)] 會先搜尋整個計畫快取，確認同一 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式已有執行計畫。 如果 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式與先前執行之 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述的快取計畫每個字元都相符，它就符合存在的資格。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 找到任何現有的計畫，就會加以重複使用，如此可減輕重新編譯 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的負擔。 若無執行計畫，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會為該查詢產生新的執行計畫。
 

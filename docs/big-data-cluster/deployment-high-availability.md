@@ -5,16 +5,16 @@ description: 了解如何部署高可用性 SQL Server 巨量資料叢集。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d6edf4115156bda58c44615e99ffcb19b87913f
-ms.sourcegitcommit: 38c61c7e170b57dddaae5be72239a171afd293b9
+ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77259216"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286042"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>部署高可用性 SQL Server 巨量資料叢集
 
@@ -32,11 +32,11 @@ ms.locfileid: "77259216"
 - 所有資料庫都會自動新增至可用性群組，包括所有使用者和系統資料庫 (例如 `master` 和 `msdb`)。 此功能提供跨可用性群組複本的單一系統檢視。 其他模型資料庫 `model_replicatedmaster` 和 `model_msdb` 可用來植入系統資料庫的複寫部分。 除了這些資料庫，如果您直接連接到執行個體，還會看到 `containedag_master` 和 `containedag_msdb` 資料庫。 `containedag` 資料庫代表可用性群組內的 `master` 和 `msdb`。
 
   > [!IMPORTANT]
-  > 在 SQL Server 2019 CU1 版本中，只有因 CREATE DATABASE 陳述式而建立的資料庫會自動新增至可用性群組。 因其他工作流程 (例如還原) 而在執行個體上建立的資料庫尚未新增至可用性群組，且巨量資料叢集管理員必須手動執行這項操作。 如需指示，請參閱[＜連接到 SQL Server 執行個體＞](#instance-connect)一節。
+  > 在 SQL Server 2019 CU1 版本中，只有因 CREATE DATABASE 陳述式而建立的資料庫會自動新增至可用性群組。 因其他工作流程 (例如附加資料庫) 而在執行個體上建立的資料庫尚未新增至可用性群組，且巨量資料叢集管理員必須手動執行這項操作。 如需指示，請參閱[＜連接到 SQL Server 執行個體＞](#instance-connect)一節。 在 SQL Server 2019 CU2 版本之前，因 restore 陳述式而建立的資料庫具有相同行為，且需要手動將資料庫新增至包含的可用性群組。
   >
 - Polybase 設定資料庫由於包含每個複本特定的執行個體層級中繼資料，因此不會包含在可用性群組中。
 - 系統會自動佈建外部端點來連接到可用性群組中的資料庫。 `master-svc-external` 這個端點扮演可用性群組接聽程式的角色。
-- 佈建第二個外部端點，對次要複本進行唯讀連接以擴充讀取工作負載。
+- 佈建第二個外部端點，對次要複本進行唯讀連接以擴增讀取工作負載。
 
 ## <a name="deploy"></a>部署
 
@@ -129,12 +129,15 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 ## <a id="instance-connect"></a> 連接到 SQL Server 執行個體
 
-針對設定伺服器層級設定或手動將資料庫新增至可用性群組等特定作業，您必須連接到 SQL Server 執行個體。 `sp_configure`、`RESTORE DATABASE` 或任何可用性群組 DDL 等作業都需要這種連線類型。 根據預設，巨量資料叢集不會包含啟用執行個體連接的端點，您必須手動公開此端點。 
+針對設定伺服器層級設定或手動將資料庫新增至可用性群組等特定作業，您必須連接到 SQL Server 執行個體。 在 SQL Server 2019 CU2 版本之前，`sp_configure`、`RESTORE DATABASE` 或任何可用性群組 DDL 等作業都需要這種連線類型。 根據預設，巨量資料叢集不會包含啟用執行個體連接的端點，您必須手動公開此端點。 
 
 > [!IMPORTANT]
 > 針對 SQL Server 執行個體連接所公開的端點只支援 SQL 驗證，即使在已啟用 Active Directory 的叢集中也一樣。 根據預設，在巨量資料叢集部署期間，會停用 `sa` 登入，並根據部署時為 `AZDATA_USERNAME` 和 `AZDATA_PASSWORD` 環境變數所提供值佈建新的 `sysadmin` 登入。
 
 下列範例示範如何公開此端點，然後將使用還原工作流程建立的資料庫新增至可用性群組。 當您想要使用 `sp_configure` 變更伺服器設定時，也適用設定 SQL Server 主要執行個體連接的類似指示。
+
+> [!NOTE]
+> 從 SQL Server 2019 CU2 版本開始，因還原工作流程而建立的資料庫會自動新增至所包含可用性群組。
 
 - 判斷裝載主要複本的 Pod，方法是連接到 `sql-server-master` 端點並執行：
 
@@ -197,10 +200,11 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 巨量資料叢集中 SQL Server 主要的可用性群組具有已知問題和限制：
 
-- 因 `CREATE DATABASE` 以外的工作流程 (例如 `RESTORE DATABASE` 和 `CREATE DATABASE FROM SNAPSHOT`) 所建立的資料庫，不會自動新增至可用性群組。 請[連接到執行個體](#instance-connect)，然後手動將資料庫新增至可用性群組。
+- 在 SQL Server 2019 CU2 版本之前，因 `CREATE DATABASE` 與 `RESTORE DATABASE` 以外的工作流程 (例如 `CREATE DATABASE FROM SNAPSHOT`) 而建立的資料庫不會自動新增至可用性群組。 請[連接到執行個體](#instance-connect)，然後手動將資料庫新增至可用性群組。
+- 若要從另一部伺服器上所建立備份成功還原已啟用 TDE 的資料庫，則必須確定已同時在 SQL Server 執行個體主機以及包含的 AG 主機上還原[必要憑證](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)。 如需如何備份和還原憑證的範例，請參閱[此處](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/)。
 - 使用 `sp_configure` 執行伺服器組態設定等特定作業會需要連接到 SQL Server 執行個體 `master` 資料庫，而不是可用性群組 `master`。 您無法使用對應的主要端點。 請遵循[指示](#instance-connect)來公開端點並連接到 SQL Server 執行個體，然後執行 `sp_configure`。 當您手動公開端點來連接到 SQL Server 執行個體 `master` 資料庫時，只能使用 SQL 驗證。
 - 部署巨量資料叢集之後，必須建立高可用性設定。 您無法在可用性群組部署後啟用高可用性設定。
-- 雖然可用性群組中包含 msdb 資料庫，且 SQL Agent 工作會複寫到整個群組，但不會每個排程都觸發作業。 解決方法是[連線到每個 SQL Server 執行個體](#instance-connect)，並在執行個體 msdb 中建立作業。
+- 雖然可用性群組中包含 msdb 資料庫，且 SQL Agent 工作會複寫到整個群組，但不會每個排程都觸發作業。 解決方法是[連線到每個 SQL Server 執行個體](#instance-connect)，並在執行個體 msdb 中建立作業。 從 SQL Server 2019 CU2 版本開始，僅支援在主要執行個體的每個複本中所建立作業。
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -2,19 +2,19 @@
 title: 以 Active Directory 模式部署
 titleSuffix: SQL Server Big Data Cluster
 description: 了解如何升級 Active Directory 網域中的 SQL Server 巨量資料叢集。
-author: NelGson
-ms.author: negust
+author: mihaelablendea
+ms.author: mihaelab
 ms.reviewer: mikeray
 ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e2ce3fd5655655686d6fb27f628f6bdb3d22ceb1
-ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
+ms.openlocfilehash: 1cd604c754113f7196963daf714eab3dd41143cc
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "78200959"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190586"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>以 Active Directory 模式部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -174,16 +174,27 @@ AD 整合需要下列參數。 使用本文稍後在下面顯示的 `config repl
 
 - `security.activeDirectory.domainDnsName`:您網域的名稱 (例如 `contoso.local`)。
 
-- `security.activeDirectory.clusterAdmins`:此參數接受**一個 AD 群組**。 此群組的成員將會得到叢集中的系統管理員權限。 這表示這些成員將會有 SQL Server 中的系統管理員權限、HDFS 中的超級使用者權限，以及控制器中的系統管理員權限。 **請注意，此群組必須先存在於 AD 中，才能開始部署。另請注意，此群組不能在 Active Directory 中設定 DomainLocal 範圍。設定網域本機範圍的群組將導致部署失敗。**
+- `security.activeDirectory.clusterAdmins`:此參數接受一個 AD 群組。 AD 群組範圍必須是通用或網域全域。 此群組成員將會得到叢集中的系統管理員權限。 這表示這些成員將會有 SQL Server 中 `sysadmin` 權限、HDFS 中超級使用者權限，以及控制器中系統管理員權限。 
 
-- `security.activeDirectory.clusterUsers`:大型資料叢集中屬於一般使用者 (無系統管理員權限) 的 AD 群組清單。 **請注意，在開始部署之前，這些群組就必須存在於 AD 中。另請注意，這些群組不能在 Active Directory 中設定 DomainLocal 範圍。設定網域本機範圍的群組將導致部署失敗。**
+  >[!IMPORTANT]
+  >開始部署之前，請在 AD 中建立此群組。 如果此 AD 群組的範圍是網域本機，則部署會失敗。
 
-- `security.activeDirectory.appOwners`**選擇性參數**：AD 使用者或群組的清單，他們有權限建立、刪除和執行任何應用程式。 **請注意，在開始部署之前，這些群組就必須存在於 AD 中。另請注意，這些群組不能在 Active Directory 中設定 DomainLocal 範圍。設定網域本機範圍的群組將導致部署失敗。**
+- `security.activeDirectory.clusterUsers`:大型資料叢集中屬於一般使用者 (無系統管理員權限) 的 AD 群組清單。 此清單可以包含以通用或網域全域群組為範圍的 AD 群組。 其不能是網域本機群組。
 
-- `security.activeDirectory.appReaders`**選擇性參數**：AD 群組的清單，此群組的成員必須有執行任何應用程式的權限。 **請注意，在開始部署之前，這些群組就必須存在於 AD 中。另請注意，這些群組不能在 Active Directory 中設定 DomainLocal 範圍。設定網域本機範圍的群組將導致部署失敗。**
+  >[!IMPORTANT]
+  >開始部署之前，請先在 AD 中建立這些群組。 若這些 AD 群組的範圍是網域本機，則部署會失敗。
 
-**如何檢查 AD 群組範圍：** 
-[按一下這裡以取得檢查 AD 群組範圍的指示](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) \(英文\)，以判斷是否是 DomainLocal。
+- `security.activeDirectory.appOwners`**選擇性參數**：AD 群組的清單，這些群組具備建立、刪除和執行任何應用程式的權限。 此清單可以包含以通用或網域全域群組為範圍的 AD 群組。 其不能是網域本機群組。
+
+  >[!IMPORTANT]
+  >開始部署之前，請先在 AD 中建立這些群組。 若這些 AD 群組的範圍是網域本機，則部署會失敗。
+
+- `security.activeDirectory.appReaders`**選擇性參數**：AD 群組的清單，這些群組具備執行任何應用程式的權限。 此清單可以包含以通用或網域全域群組為範圍的 AD 群組。 其不能是網域本機群組。
+
+  >[!IMPORTANT]
+  >開始部署之前，請先在 AD 中建立這些群組。 若這些 AD 群組的範圍是網域本機，則部署會失敗。
+
+[檢查 AD 群組範圍](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)，以判斷該範圍是否為 DomainLocal。
 
 如果您尚未初始化部署設定檔案，您可以執行此命令來取得設定的複本。
 

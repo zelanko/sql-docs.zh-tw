@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a0c194903b0f9b5f5e1c06baabc17d607c68cd61
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.openlocfilehash: f953d3b36818ce4d44d80ddb1c67033fa468f093
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866349"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058732"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
@@ -52,7 +52,8 @@ ODBC 驅動程式隨附 [**sqlcmd**](../../tools/sqlcmd-utility.md) 及 [**bcp**
 
 ### <a name="linux-and-macos"></a>Linux 與 macOS
 
-- [安裝驅動程式](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [在 Linux 上安裝驅動程式](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [在 macOS 上安裝驅動程式](../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
 - [連線到 SQL Server](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 - [使用 **bcp** 進行連線](../../connect/odbc/linux-mac/connecting-with-bcp.md)
 - [使用 **sqlcmd** 進行連線](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)

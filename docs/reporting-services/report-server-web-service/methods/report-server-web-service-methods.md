@@ -1,5 +1,6 @@
 ---
 title: 報表伺服器 Web 服務方法 | Microsoft Docs
+description: 報表伺服器 Web 服務包含以透過 Web 服務端點 (透過產生的類別來公開) 所提供元件功能為基礎的方法。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b7425b205bdc630d17e5c962519348d2b1ce7a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 88a79f66c6cb062dfe563883fbc5fef5eeebfe08
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284655"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198355"
 ---
 # <a name="report-server-web-service-methods"></a>報表伺服器 Web 服務方法
   報表伺服器 Web 服務包含數個以元件功能為基礎的方法類別。 這些方法是透過多個 Web 服務端點 (三個用於報表管理，一個用於報表執行) 而提供，這些端點會公開為 <xref:ReportService2010.ReportingService2010> 和 <xref:ReportExecution2005.ReportExecutionService> 類別的成員。 這些類別可透過 wsdl.exe 之類的 Proxy 類別工具產生，此工具包含在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 中。 如需報表伺服器 Web 服務和 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的詳細資訊，請參閱[使用 Web 服務和 .NET Framework 建置應用程式](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)。  

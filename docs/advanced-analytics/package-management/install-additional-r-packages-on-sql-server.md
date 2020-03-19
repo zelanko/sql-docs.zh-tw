@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e28d62292c8bcc4b98d8991fbf4bd8708bbbc76
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.openlocfilehash: ff2d40dab5fa2d8f03bf3d1fa32b08e66a0ccdbc
+ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558372"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79027940"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>使用 sqlmlutils 安裝新的 R 套件
 
@@ -108,7 +108,7 @@ ms.locfileid: "77558372"
     , @script = N'print(R.version)'
    ```
 
-1. 從 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 下載最新的 **sqlmlutils** ZIP 檔案 (不要將該檔案解壓縮)。 例如，將檔案下載到 `c:\downloads\sqlmlutils_0.7.1.zip`。
+1. 從 [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist) 下載最新的 **sqlmlutils** ZIP 檔案 (不要解壓縮該檔案)。 例如，將檔案下載到 `c:\downloads\sqlmlutils_0.7.1.zip`。
 
 1. 將整個 **RODBCext** 存放庫資料夾 (`c:\downloads\rodbcext`) 與 **sqlmlutils** ZIP 檔案 (`c:\downloads\sqlmlutils_0.7.1.zip`) 複製到用戶端電腦。 例如，將它們複製到用戶端電腦上的 `c:\temp\packages` 資料夾。
 

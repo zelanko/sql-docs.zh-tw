@@ -1,5 +1,6 @@
 ---
 title: 建立 Web 服務 Proxy | Microsoft Docs
+description: 用戶端與 Web 服務可以使用 SOAP 訊息進行通訊。 將 Proxy 類別新增至專案，以將參數對應至 XML 元素並傳送 SOAP 訊息。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 116e4ca4ef2080c186a11b6816a08d4c3c5ba169
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e666496383b738b11f20cd9b3d7e3a76e8613416
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284643"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198308"
 ---
 # <a name="creating-the-web-service-proxy"></a>建立 Web 服務 Proxy
   用戶端與 Web 服務可以使用 SOAP 訊息來進行通訊，這會以 XML 來封裝輸入與輸出參數。 Proxy 類別會將參數對應至 XML 元素，然後透過網路傳送 SOAP 訊息。 以此方式，Proxy 類別可讓您免於在 SOAP 層級與 Web 服務通訊，並可讓您在任何支援 SOAP 與 Web 服務 Proxy 的開發環境中，叫用 Web 服務方法。  

@@ -1,6 +1,6 @@
 ---
 title: 在 URL 存取和 SOAP 之間選擇
-description: 有兩種方式可以將 Reporting Services 整合到自訂應用程式：URL 存取和 Reporting Services SOAP API。 要使用哪個方法取決於多個因素。
+description: 有兩種方式可以將 Reporting Services 整合到自訂應用程式：URL 存取和 Reporting Services SOAP API。 了解如何選擇。
 ms.date: 10/19/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ ms.topic: reference
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d401c7d95cff5011dffbfaac2ebcc9bfa5ea5c24
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 115ff4521e347c1eb905f63c579df04f0a11adae
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796918"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198215"
 ---
 # <a name="choose-between-url-access-and-soap-in-reporting-services"></a>在 Reporting Services 的 URL 存取與 SOAP 之間選擇
 
@@ -32,7 +32,7 @@ ms.locfileid: "74796918"
   
 -   使用者在操作時通常需要哪些類型的環境？ 商務應用程式是 Web 應用程式或 Windows 應用程式？ 使用者從 Win32 環境切換到 Web 環境有多容易？ 在執行和管理報表的環境中，您需要哪些類型的控制項？  
   
- 一旦您已回答上述問題，即可決定如何將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 整合到 IT 基礎結構中。 通常，檢視和導覽個別報表時，較適合使用 URL 存取。 URL 存取可讓您隨心所欲且快速地導覽報表，而不會有 Web 服務的負擔。 此外，URL 存取是目前唯一為報表導覽使用完整 HTML 檢視器的程式設計技術。 此外，URL 存取提供比 SOAP 更佳的效能，因為它會略過對伺服器和來自伺服器之 SOAP 要求的封送處理。 在需要使用檢視和導覽內建工具來快速且輕鬆地存取報表的整合案例中，URL 存取是較佳的選擇。  
+ 一旦您已回答上述問題，即可決定如何將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 整合到 IT 基礎結構中。 通常，檢視和導覽個別報表時，較適合使用 URL 存取。 URL 存取可讓您隨心所欲且快速地導覽報表，而不會有 Web 服務的負擔。 此外，URL 存取是目前唯一為報表導覽使用完整 HTML 檢視器的程式設計技術。 此外，因為 URL 存取略過封送處理來回伺服器的 SOAP 要求，所以提供比 SOAP 更佳的效能。 在需要使用檢視和導覽內建工具來快速且輕鬆地存取報表的整合案例中，URL 存取是較佳的選擇。  
   
 > [!NOTE]  
 > 報表伺服器 URL 存取支援報表工具列的 HTML 檢視器與擴充功能。 SOAP API 並不支援這類型的轉譯報表。 如果您使用 SOAP API 轉譯報表，請設計和開發自己的報表工具列。

@@ -27,12 +27,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4661fa1963b120a091953bff883a0510a396345e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2d727044455bcee06155848aee2bd6749bd475ff
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68099987"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79315052"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,6 +61,8 @@ SET TRANSACTION ISOLATION LEVEL
   
 SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 ```
+>[!NOTE]
+> SQL 資料倉儲實作 ACID 交易。 交易式支援的隔離等級預設為 READ UNCOMMITTED。  您可在連線至 master 資料庫時，開啟使用者資料庫的 [READ_COMMITTED_SNAPSHOT] 資料庫選項，將其變更為 [READ COMMITTED SNAPSHOT ISOLATION]。  啟用之後，此資料庫中所有交易都會在 READ COMMITTED SNAPSHOT ISOLATION 的狀態下執行，且將不會接受在工作階段層級上設定為 READ UNCOMMITTED。 如需詳細資料，請參閱 [ALTER DATABASE SET 選項 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
 
 ## <a name="arguments"></a>引數  
  READ UNCOMMITTED  

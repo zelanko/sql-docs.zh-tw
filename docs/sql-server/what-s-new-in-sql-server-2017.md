@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2017 的新功能 | Microsoft Docs
+description: 了解 SQL Server 2017 的新功能，可將 SQL Server 功能帶入 Linux 和以 Linux 為基礎的 Docker 容器，以及 Windows。
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 92f289ec22ca35834420dc7ee84d667c55e29a19
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.openlocfilehash: 48188e98d992f45ca282c3687bf56e255d15a40a
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77478491"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190628"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -56,14 +57,14 @@ SQL Server 2017 包含許多新的 Database Engine 功能、增強功能和效�
 - 新增了資料庫 **COMPATIBILITY_LEVEL 140**。 (CTP 1.0)  
 
 ## <a name="sql-server-2017-integration-services-ssis"></a>SQL Server 2017 Integration Services (SSIS)
-- SSIS 中新的 [相應放大]  功能有下列新的和已變更的功能。 如需詳細資訊，請參閱 [SQL Server 2017 Integration Services 的新功能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)。 (RC1)
-    -   相應放大主機現在支援高可用性。
-    -   相應放大背景工作中執行記錄的容錯移轉處理已獲得改善。
+- SSIS 中新的 [擴增]  功能有下列新的和已變更的功能。 如需詳細資訊，請參閱 [SQL Server 2017 Integration Services 的新功能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)。 (RC1)
+    -   擴增主機現在支援高可用性。
+    -   擴增背景工作中執行記錄的容錯移轉處理已獲得改善。
     -   為了一致性和可讀性，預存程序 **[catalog].[create_execution]** 的參數 *runincluster* 已重新命名為 *runinscaleout*。
     -   SSIS 目錄有新的全域屬性，可指定執行 SSIS 套件的預設模式。
-- 在 SSIS 的新 [相應放大]  功能中，您現在可以在觸發執行時使用 **Use32BitRuntime** 參數。 (CTP 2.1)
+- 在 SSIS 的新 [擴增]  功能中，您現在可以在觸發執行時使用 **Use32BitRuntime** 參數。 (CTP 2.1)
 - SQL Server 2017 Integration Services (SSIS) 現在支援 **Linux 上的 SQL Server**，並新增套件讓您從命令列在 Linux 上執行 SSIS 套件。 如需詳細資訊，請參閱[宣佈對 Linux 提供 SSIS 支援的部落格文章](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)。 (CTP 2.1)
-- SSIS 的新 [相應放大]  功能讓您更容易在多部電腦上執行 SSIS。 請參閱 [Integration Services 相應放大](~/integration-services/scale-out/integration-services-ssis-scale-out.md)。(CTP 1.0)
+- SSIS 的新 [擴增]  功能讓您更容易在多部電腦上執行 SSIS。 請參閱 [Integration Services 擴增](~/integration-services/scale-out/integration-services-ssis-scale-out.md)。(CTP 1.0)
 - OData 來源和 OData 連線管理員現在支援連線到 Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online 的 OData 摘要。 (CTP 1.0)
 
 如需詳細資訊，請參閱 [SQL Server 2017 Integration Services 的新功能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)。

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 8e654dd5be4a306078bd6262220e29470b9a16e7
-ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
+ms.openlocfilehash: 637198e079c6aa1b1e08e1a69e204b36f54f3827
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77363232"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79285842"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>搭配使用 Always Encrypted 與 ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -390,12 +390,15 @@ Azure Key Vault (AKV) 是存放和管理 Always Encrypted 資料行主要金鑰�
 
 - 用戶端識別碼/祕密 - 使用此方法時，認證係指應用程式用戶端識別碼和應用程式祕密。
 
+- 受控識別 (17.5.2+) - 系統或使用者指派；如需詳細資訊，請參閱 [Azure 資源受控識別](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/)。
+
 為了允許驅動程式使用儲存在 AKV 中的 CMK 來進行資料行加密，請使用下列僅限連接字串的關鍵字：
 
 |認證類型| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
 |使用者名稱/密碼| `KeyVaultPassword`|使用者主體名稱|密碼|
 |用戶端識別碼/祕密| `KeyVaultClientSecret`|用戶端識別碼|祕密|
+|受控識別|`KeyVaultManagedIdentity`|物件識別碼 (選擇性，僅適用於使用者指派)|(未指定)|
 
 #### <a name="example-connection-strings"></a>範例連接字串
 
@@ -413,7 +416,23 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
 ```
 
+**受控識別 (系統指派)**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity
+```
+
+**受控識別 (使用者指派)**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity;KeyStorePrincipalId=<objectID>
+```
+
 無須進行其他 ODBC 應用程式變更，即可使用 AKV 來儲存 CMK。
+
+> [!NOTE]
+> 驅動程式包含其信任的 AKV 端點清單。 從驅動程式 17.5.2 版開始，您可設定這份清單：在驅動程式或 DSN 的 ODBCINST.INI 或 ODBC.INI 登錄機碼 (Windows)，或在 `odbcinst.ini`、`odbc.ini` 檔案區段 (Linux/Mac) 中，將 `AKVTrustedEndpoints` 屬性設定為以分號分隔的清單。 在 DSN 中設定該屬性會優先於驅動程式中的設定。 如果值以分號開頭，則會延伸預設清單；否則會取代預設清單。 預設清單 (從 17.5 版開始) 為 `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`。
+
 
 ### <a name="using-the-windows-certificate-store-provider"></a>使用 Windows 憑證存放區提供者
 

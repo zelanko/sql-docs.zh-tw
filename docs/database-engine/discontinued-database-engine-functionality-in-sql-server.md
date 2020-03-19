@@ -1,5 +1,6 @@
 ---
-title: 已中止的資料庫引擎功能 | Microsoft Docs
+title: 已中止的資料庫引擎功能
+description: 了解 SQL Server 2019 (15.x)、SQL Server 2016 (13.x) 和舊版中已停止的資料庫引擎功能和功能。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -35,19 +36,19 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: db10b57b5eda73cb2bb2105f4f99fb6e5cbed733
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 25da4c94448a6527e50fe759e6c75cdbad10b007
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258123"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190530"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>SQL Server 中已中止的資料庫引擎功能
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主題描述 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中不再可用的 [!INCLUDE[ssCurrent](../includes/ssnoversion-md.md)]功能。  
 
-## <a name="discontinued-features-in-includesssqlv15includessssqlv15-mdmd"></a>[!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)] 中已中止的功能  
+## <a name="discontinued-features-in-sssqlv15"></a>[!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)] 中已中止的功能  
 
 - 下列資料庫範圍設定選項已中止：
 
@@ -60,7 +61,7 @@ ms.locfileid: "75258123"
 >[!NOTE]
 >[!INCLUDE[ssSQLv14](../includes/sssqlv14-md.md)] 中沒有任何已中止的功能。
 
-## <a name="discontinued-features-in-includesssql15includessssql15-mdmd"></a>[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 中已中止的功能
+## <a name="discontinued-features-in-sssql15"></a>[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 中已中止的功能
 
 - [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 是 64 位元應用程式。 即使有些元素是以 32 位元元件的形式執行，32 位元安裝已然中止。  
 

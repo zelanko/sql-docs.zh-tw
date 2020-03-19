@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: aca4ce5392b9cbac7903666b13e7a9cf544f1004
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 913b6d95a7bb9a690f0a8cdd7d8c88b29782f876
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76918382"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058572"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的 Linux 和 macOS 安裝教學課程
 下列指示假設一個全新的環境，並示範如何在 Ubuntu 16.04、18.04 及 19.10；RedHat 7 和 8；Debian 8、9 和 10；Suse 12 和 15；Alpine 3.11 (實驗性)，以及 macOS 10.13、10.14 及 10.15 上安裝 PHP 7.x、Microsoft ODBC 驅動程式、Apache Web 伺服器，以及 Microsoft Drivers for PHP for SQL Server。 這些指示建議使用 PECL 安裝驅動程式，但您也可以從 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) \(英文\) GitHub 專案頁面中下載預先建置的二進位檔，並遵循[載入 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) 中的指示進行安裝。 如需載入延伸模組以及我們未將延伸模組新增至 php.ini 的原因說明，請參閱關於[載入驅動程式](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup)的小節。
@@ -46,7 +46,7 @@ apt-get update
 apt-get install php7.4 php7.4-dev php7.4-xml -y --allow-unauthenticated
 ```
 ### <a name="step-2-install-prerequisites"></a>步驟 2： 安裝必要條件
-遵循 [Linux 和 macOS 安裝頁面](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)上的指示來安裝適用於 Ubuntu 的 ODBC 驅動程式。
+遵循 [Linux 安裝文章](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)上指示來安裝適用於 Ubuntu 的 ODBC 驅動程式。
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步驟 3： 安裝適用於 Microsoft SQL Server 的 PHP 驅動程式
 ```
@@ -93,7 +93,7 @@ apt-get install php7.4 php7.4-dev php7.4-xml php7.4-fpm -y --allow-unauthenticat
 systemctl status php7.4-fpm
 ```
 ### <a name="step-2-install-prerequisites"></a>步驟 2： 安裝必要條件
-遵循 [Linux 和 macOS 安裝頁面](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)上的指示來安裝適用於 Ubuntu 的 ODBC 驅動程式。
+遵循 [Linux 安裝文章](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)上指示來安裝適用於 Ubuntu 的 ODBC 驅動程式。
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步驟 3： 安裝適用於 Microsoft SQL Server 的 PHP 驅動程式
 ```
@@ -177,7 +177,7 @@ dnf install php-pdo php-pear php-devel
 ```
 
 ### <a name="step-2-install-prerequisites"></a>步驟 2： 安裝必要條件
-遵循 [Linux 和 macOS 安裝頁面](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)上的指示來安裝適用於 Red Hat 7 或 8 的 ODBC 驅動程式。
+遵循 [Linux 安裝文章](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)上指示來安裝適用於 Red Hat 7 或 8 的 ODBC 驅動程式。
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步驟 3： 安裝適用於 Microsoft SQL Server 的 PHP 驅動程式
 ```
@@ -222,7 +222,7 @@ apt-get update
 apt-get install -y php7.4 php7.4-dev php7.4-xml php7.4-intl
 ```
 ### <a name="step-2-install-prerequisites"></a>步驟 2： 安裝必要條件
-遵循 [Linux 和 macOS 安裝頁面](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)上的指示來安裝適用於 Debian 的 ODBC 驅動程式。 
+遵循 [Linux 安裝文章](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)上指示來安裝適用於 Debian 的 ODBC 驅動程式。 
 
 此外，您可能也需要產生正確的地區設定，以取得要在瀏覽器中正確顯示的 PHP 輸出。 例如，針對 en_US UTF-8 地區設定，執行下列命令：
 ```
@@ -276,7 +276,7 @@ zypper --gpg-auto-import-keys refresh
 zypper -n install php7 php7-devel php7-openssl
 ```
 ### <a name="step-2-install-prerequisites"></a>步驟 2： 安裝必要條件
-遵循 [Linux 和 macOS 安裝頁面](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)上的指示來安裝適用於 Suse 的 ODBC 驅動程式。
+遵循 [Linux 安裝文章](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)上指示來安裝適用於 Suse 的 ODBC 驅動程式。
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步驟 3： 安裝適用於 Microsoft SQL Server 的 PHP 驅動程式
 > [!NOTE]
@@ -325,7 +325,7 @@ apk update
 apk add php7 php7-dev php7-pear php7-pdo php7-openssl autoconf make g++
 ```
 ### <a name="step-2-install-prerequisites"></a>步驟 2： 安裝必要條件
-遵循 [Linux 和 macOS 安裝頁面](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)上的指示來安裝適用於 Alpine 的 ODBC 驅動程式。 
+遵循 [Linux 安裝文章](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)上指示來安裝適用於 Alpine 的 ODBC 驅動程式。 
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步驟 3： 安裝適用於 Microsoft SQL Server 的 PHP 驅動程式
 ```
@@ -373,7 +373,7 @@ brew link --force --overwrite php@7.4
 ```
 
 ### <a name="step-2-install-prerequisites"></a>步驟 2： 安裝必要條件
-遵循 [Linux 和 macOS 安裝頁面](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)上的指示來安裝適用於 macOS 的 ODBC 驅動程式。 
+遵循 [macOS 安裝文章](../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)上指示來安裝適用於 macOS 的 ODBC 驅動程式。 
 
 此外，您可能需要安裝 GNU 製作工具：
 ```

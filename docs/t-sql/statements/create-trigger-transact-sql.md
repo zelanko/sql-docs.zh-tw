@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7735298fc669d8e5b385501cd3f235a0a08abb9d
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: 0e3a0829702dfe46a2d6c00925a82938d23bad92
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340690"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287682"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ DDL 觸發程序的執行目的是回應各種資料定義語言 (DDL) 事件。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>語法  
+## <a name="sql-server-syntax"></a>SQL Server 語法  
   
 ``` 
 -- SQL Server Syntax  
@@ -127,7 +127,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-## <a name="syntax"></a>語法  
+## <a name="azure-sql-database-syntax"></a>Azure SQL Database 語法  
   
 ``` 
 -- Azure SQL Database Syntax   
@@ -215,7 +215,7 @@ INSTEAD OF
   
 您最多只能在資料表或檢視表上的每個 INSERT、UPDATE 或 DELETE 陳述式，各定義一個 INSTEAD OF 觸發程序。 不過，您可以定義檢視表中的檢視表，讓每份檢視表都有它自己的 INSTEAD OF 觸發程序。  
   
-您不能在使用 WITH CHECK OPTION 的可更新檢視表上定義 INSTEAD OF 觸發程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將 INSTEAD OF 觸發程序新增至已指定 WITH CHECK OPTION 的可更新檢視表時，這樣做會產生錯誤。 您可以在定義 INSTEAD OF 觸發程序之前，使用 ALTER VIEW 來移除這個選項。  
+您不能在使用 WITH CHECK OPTION 的可更新檢視表上定義 INSTEAD OF 觸發程序。 將 INSTEAD OF 觸發程序新增至已指定 WITH CHECK OPTION 的可更新檢視表時，這樣做會發生錯誤。 您可以在定義 INSTEAD OF 觸發程序之前，使用 ALTER VIEW 來移除這個選項。  
   
 { [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }  
 指定當試圖針對這份資料表或檢視表執行此動作時，會啟動 DML 觸發程序的資料修改陳述式。 請至少指定一個選項。 您可以在觸發程序定義中，依照任何順序來使用這些選項的任何組合。  

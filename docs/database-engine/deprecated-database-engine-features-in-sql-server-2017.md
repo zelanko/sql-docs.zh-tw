@@ -1,6 +1,7 @@
 ---
 title: 已淘汰的資料庫引擎功能 | Microsoft Docs
 titleSuffix: SQL Server 2019
+description: 了解 SQL Server 2017 (14.x) 中仍然可以使用，但由於已淘汰，因此不應在新應用程式中使用的資料庫引擎功能。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2f8529b7fca4782709f8c8981a27e62dae2029a2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 03203f80f3b35fa961fb9faa4eae4099b4744217
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76364102"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190540"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 中已取代的資料庫引擎功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

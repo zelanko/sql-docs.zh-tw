@@ -1,7 +1,7 @@
 ---
 title: 資料庫引擎：重大變更 | Microsoft Docs
 titleSuffix: SQL Server 2016
-description: SQL Server 2016 資料庫引擎功能的重大變更
+description: 了解升級時 SQL Server 2016 (13.x) 及更早版本中可能會中斷先前版本功能的資料庫引擎變更。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 67a37dd07810facf3e18e94dc0f9e552ea05778a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: b2003a0adfd2883b83623f5b367e775cc526e052
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75244715"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190572"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 資料庫引擎功能的重大變更
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  此主題描述 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 及舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的重大變更。 這些變更可能會中斷以舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]為根據的應用程式、指令碼或功能。 當您升級時可能會遇到這些問題。  
+  此主題描述 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 及舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的重大變更。 這些變更可能會中斷以舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]為根據的應用程式、指令碼或功能。 當您升級時可能會遇到這些問題。  
   
 ##  <a name="SQL15"></a>[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 的重大變更  
   

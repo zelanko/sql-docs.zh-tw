@@ -1,5 +1,6 @@
 ---
 title: 設定 Web 服務的 Url 屬性 | Microsoft Docs
+description: 您可在 Microsoft .NET Framework 應用程式中，修改報表伺服器 Web 服務的基礎 URL (該 URL 為應用程式的導向目標)。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13fc37cd6b0b7396196ad8f514ec34fb9b317a16
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 982b1c80e9c9cd71b67e0f5a2fb227a9dc8d999f
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128838"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198505"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>設定 Web 服務的 URL 屬性
   在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 應用程式中，您隨時都可以針對目前應用程式導向目標的報表伺服器 Web 服務來修改其基礎 URL。 若要這樣做，請直接設定服務物件的 **Url** 屬性。 例如：  

@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: be126095fc300820a60bd4b195d43ec7d2059072
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 83337465d8f8a7c12c9a1d69d7e9e2186485f549
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256673"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198375"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教學課程：透過 Linux 上的 SQL Server 使用 Active Directory 驗證
 
@@ -125,6 +125,7 @@ ms.locfileid: "77256673"
 
    > [!NOTE]
    > 上述命令允許 AES 和 RC4 加密編碼器進行 AD 驗證。 RC4 是較舊的加密編碼器，如果需要較高的安全性等級，您可以選擇只使用 AES 加密編碼器來建立 Keytab 項目。
+   > 最後兩個 `UserName` 項目必須是小寫，否則授權驗證可能會失敗。
 
 1. 執行上述命令之後，您應該會有名為 mssql.keytab 的 Keytab 檔案。 將檔案複製到 SQL Server 機器的 `/var/opt/mssql/secrets` 資料夾下。
 

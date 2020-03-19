@@ -1,7 +1,7 @@
 ---
 title: 追蹤旗標 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/12/2019
+ms.date: 03/11/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 058becae07f15857f0509cbbc90261b960bc4713
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.openlocfilehash: e19d4af33285f68033dbcead3f7bc275b2e029cb
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77705913"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288632"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 
@@ -86,9 +86,9 @@ ms.locfileid: "77705913"
 |**902**|安裝累計更新或 Service Pack 時略過執行資料庫升級指令碼。 如果在指令碼升級模式期間發生錯誤，建議您連絡 Microsoft SQL 客戶服務及支援 (CSS) 取得進一步指示。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2163980) \(機器翻譯\)。<br /><br />**警告：** 此追蹤旗標用於針對指令碼升級模式期間失敗的更新進行疑難排解，而且不支援在生產環境中連續執行。 資料庫升級指令碼必須順利執行，以完整安裝累積更新與 Service Pack。 否則可能會導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體發生未預期的問題。<br /><br />**範圍**：只限全域|
 |**1117**|當檔案群組中的某個檔案達到自動成長閾值時，檔案群組中的所有檔案都會成長。 此追蹤旗標會影響所有資料庫，且僅在每個資料庫都可以安全地以相同數量增加檔案群組中的所有檔案時才建議使用。<br /><br />**注意：** 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，此行為由 ALTER DATABASE 的 AUTOGROW_SINGLE_FILE 和 AUTOGROW_ALL_FILES 選項控制，追蹤旗標 1117 沒有任何作用。 如需詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。<br /><br />**範圍：** 只限全域|
 |**1118**|強制在統一範圍 (而不是混合範圍) 內進行頁面配置，以減少 SGAM 頁面上的爭用。 建立新物件時，根據預設，前八頁會從不同的範圍 (混合範圍) 進行配置。 之後若需要更多頁面時，將會從相同的範圍 (統一範圍) 加以配置。 SGAM 頁面可用以追蹤這些混合範圍，因此若出現多個混合頁面配置，它會很快地成為瓶頸。 這個追蹤旗標會在建立新物件時，從相同的範圍配置所有八個頁面，進而將掃描 SGAM 頁面的需求降到最低。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/328551) \(機器翻譯\)。<br /><br />**注意：** 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，此行為由 ALTER DATABASE 的 SET MIXED_PAGE_ALLOCATION 選項控制，追蹤旗標 1118 沒有任何作用。 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。<br /><br />**範圍：** 只限全域|  
-|**1204**|傳回參與死結之鎖定的資源和類型，以及目前受影響的命令。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/832524) \(機器翻譯\)。<br /><br />**範圍：** 只限全域|  
+|**1204**|傳回參與死結之鎖定的資源和類型，以及目前受影響的命令。 如需死結的詳細資訊，請參閱[交易鎖定與資料列版本設定指南](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlocks)。<br /><br />**注意：** 請避免在會導致死結的大工作負載系統上使用追蹤旗標 1204。 如需其他偵測死結方式的詳細資訊，請參閱[交易鎖定和資料列版本設定指南](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlock_detection)。<br /><br />**範圍：** 只限全域|  
 |**1211**|停用以記憶體壓力或鎖定個數為基礎的鎖定擴大。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 不會將資料列或頁面鎖定擴大到資料表鎖定。<br /><br />使用此追蹤旗標可能會產生過多的鎖定數目，且如果鎖定記憶體增長到一定程度，則嘗試為任何查詢配置額外的鎖定可能會失敗。 這可能會降低 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的效能，或因記憶體不足而造成 1204 錯誤 (無法配置鎖定資源)。<br /><br />如果同時設定追蹤旗標 1211 與 1224，則將會優先採用 1211。 但是，由於追蹤旗標 1211 會在每一個情況下防止鎖定擴大 (即使是在記憶體壓力下)，所以建議您改用 1224。 如此可避免在使用許多鎖定時，發生「鎖定不足」錯誤。<br /><br />如需如何解決 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中鎖定擴大所造成的封鎖問題詳細資訊，請參閱這篇 [Microsoft 支援服務文章](https://support.microsoft.com/help/323630)。<br /><br />**範圍**：全域或工作階段|  
-|**1222**|以不符合任何 XSD 結構描述的 XML 格式來傳回參與死結之鎖定的資源和類型，以及目前受影響的命令。<br /><br />**範圍**：只限全域|  
+|**1222**|以不符合任何 XSD 結構描述的 XML 格式來傳回參與死結之鎖定的資源和類型，以及目前受影響的命令。 如需死結的詳細資訊，請參閱[交易鎖定與資料列版本設定指南](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlocks)。<br /><br />**注意：** 請避免在會導致死結的大工作負載系統上使用追蹤旗標 1222。 如需其他偵測死結方式的詳細資訊，請參閱[交易鎖定和資料列版本設定指南](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlock_detection)。<br /><br />**範圍**：只限全域|  
 |**1224**|停用以鎖定個數為基礎的鎖定擴大。 不過，記憶體壓力仍然可以啟動鎖定擴大。 如果鎖定物件使用的記憶體數量超出下列其中一個條件，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會將資料列或頁面鎖定擴大至資料表 (或資料分割) 鎖定：<br /><ul><li>[!INCLUDE[ssDE](../../includes/ssde-md.md)] 所用記憶體的 40%。 只有當 sp_configure 的 **locks** 參數設為 0 時，這個條件才適用。 <li>使用 sp_configure 的 **locks** 參數設定之鎖定記憶體的 40%。 如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。</li></ul><br />如果同時設定追蹤旗標 1211 與 1224，則將會優先採用 1211。 但是，由於追蹤旗標 1211 會在每一個情況下防止鎖定擴大 (即使是在記憶體壓力下)，所以建議您最好使用 1224。 如此可避免在使用許多鎖定時，發生「鎖定不足」錯誤。<br /><br />**注意：** 您也可以使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 陳述式的 LOCK_ESCALATION 選項來控制鎖定擴大到資料表層級或 HoBT 層級的資料粒度。<br /><br />如需如何解決在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中鎖定擴大所造成的封鎖問題詳細資訊，請參閱這篇 [Microsoft 支援服務文章](https://support.microsoft.com/help/323630)<br /><br />**範圍：** 全域或工作階段|
 |**1229**|不論 CPU 的數目為何，都會停用所有鎖定資料分割。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在伺服器具有 16 或更多個 CPU 時啟用鎖定資料分割，以改善較大型系統的延展性特性。 如需鎖定資料分割的詳細資訊，請參閱[交易鎖定和資料列版本設定指南](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#lock_partitioning)。<br /><br />**警告：** 追蹤旗標 1229 可能導致執行緒同步鎖定競爭及效能不佳。<br /><br />**範圍**：只限全域|  
 |**1236**|啟用資料庫鎖定資料分割。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2926217) \(機器翻譯\)。<br /><br />**注意：** 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP3 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 開始，此行為由引擎控制，追蹤旗標 1236 沒有任何作用。<br /><br />**範圍**：只限全域|

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 486d26dd3afeb91cb43181875e22592fb482af5f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 159aedf0665df441a31c93760c26523b843921bb
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68702799"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058712"
 ---
 # <a name="connecting-to-sql-server"></a>連線到 SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -93,8 +93,8 @@ SSL 會使用 OpenSSL 程式庫。 下表顯示 OpenSSL 的最低支援版本，
 |Red Hat Enterprise Linux 8|1.1.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
-|SuSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
-|SuSE Linux Enterprise 11、12|1.0.1|/etc/ssl/certs|
+|SUSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
+|SUSE Linux Enterprise 11、12|1.0.1|/etc/ssl/certs|
 |Ubuntu 18.10、19.04|1.1.1|/etc/ssl/certs|
 |Ubuntu 18.04|1.1.0|/etc/ssl/certs|
 |Ubuntu 16.04、16.10、17.10|1.0.2|/etc/ssl/certs|
@@ -111,7 +111,8 @@ SSL 會使用 OpenSSL 程式庫。 下表顯示 OpenSSL 的最低支援版本，
 
 - `KeepAliveInterval=<integer>` 可決定在收到回應之前，用以分隔 keep-alive 重新傳輸的間隔。  預設值為 **1** 秒。
 
+## <a name="see-also"></a>另請參閱
 
-## <a name="see-also"></a>另請參閱  
-[在 Linux 和 macOS 上安裝 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)  
-[程式設計指導方針](../../../connect/odbc/linux-mac/programming-guidelines.md)
+- [在 Linux 上安裝 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [在 macOS 上安裝 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
+- [程式設計指導方針](../../../connect/odbc/linux-mac/programming-guidelines.md)

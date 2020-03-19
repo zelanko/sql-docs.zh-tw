@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 63134fcbb7204bd701af073eee1bcaab22e68b05
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b0467a9e2e00efc695095c631bb8545a9abc9313
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75224610"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090541"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>對應多對多關聯性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "75224610"
   
 4.  將兩個資料表的主索引鍵資料行都複製到聯合資料表。 您可以將其他資料行加入到此資料表，也可以加入到其他資料表。  
   
-5.  在聯合資料表中，將主索引鍵設定為包含來自其他兩個資料表的所有主索引鍵資料行。 如需詳細資料，請參閱[如何：建立主索引鍵(https://msdn.microsoft.com/85c623ca-4656-4d70-a9db-ee4d897cd214) 。  
+5.  在聯合資料表中，將主索引鍵設定為包含來自其他兩個資料表的所有主索引鍵資料行。 如需詳細資料，請參閱[如何：建立主索引鍵](https://msdn.microsoft.com/85c623ca-4656-4d70-a9db-ee4d897cd214)。  
   
-6.  定義兩個主資料表和聯合資料表之間的一對多關聯性。 聯合資料表應該位於所建立的兩個關聯性「多」的一方。 如需詳細資料，請參閱[如何：建立資料表之間的關聯性(https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c) 。  
+6.  定義兩個主資料表和聯合資料表之間的一對多關聯性。 聯合資料表應該位於所建立的兩個關聯性「多」的一方。 如需詳細資料，請參閱[如何：建立資料表之間的關聯性](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)。  
   
     > [!NOTE]  
     > 在資料庫圖表中建立聯合資料表，並不會將關聯資料表的資料插入至聯合資料表。 如需將資料插入資料表的詳細資訊，請參閱[建立插入結果查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)。  

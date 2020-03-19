@@ -1,5 +1,6 @@
 ---
 title: 在自訂應用程式中使用 RSClientPrint 控制項 | Microsoft Docs
+description: RSPrintClient 提供在 HTML 檢視器中所檢視報表的用戶端列印。 報表伺服器會在影像 (EMF) 轉譯延伸模組中轉譯報表。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a2c548860065672147428c6a5b64bf4ac8be4b79
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f352c393f1386dae1839a76a4fd6e5a2553a54c3
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73593770"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198555"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自訂應用程式中使用 RSClientPrint 控制項
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 控制項 **RSPrintClient** 提供在 HTML 檢視器中檢視的報表之用戶端列印。 它提供 [列印]  對話方塊，讓使用者能夠起始列印工作、預覽報表、指定要列印的頁面，以及變更邊界。 在用戶端列印作業期間，報表伺服器會在影像 (EMF) 轉譯延伸模組中轉譯報表，然後使用作業系統的列印功能來建立列印工作，並將它傳送到印表機。  

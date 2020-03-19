@@ -1,5 +1,6 @@
 ---
 title: 報表參數方法 | Microsoft Docs
+description: 這些方法會取得和設定項目的參數屬性，並驗證參數值、取得支援的參數狀態，以及取得參數類型。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cedf68af-646a-47e4-9fbb-39b5dc3de235
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 08fd75eadd21dd074a751d39c6423fd47d8af81f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e510bb9509d8c643eab4240f66af44c457e19a7f
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284454"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198345"
 ---
 # <a name="report-parameters-methods"></a>報表參數方法
   您可以使用這些方法來設定和擷取報表的參數。  

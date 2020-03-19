@@ -1,5 +1,5 @@
 ---
-title: 版本資訊 (OLE DB Driver for SQL Server) | Microsoft Docs
+title: 版本資訊 (OLE DB Driver for SQL Server)
 ms.date: 02/27/2020
 ms.prod: sql
 ms.technology: connectivity
@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 8c06b83241f377aa05d7e5c0e4cb0d83a424f15a
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.openlocfilehash: c0a9e1726958a1eda7cf71817479f7c37dcfe854
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866224"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090533"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server 的版本資訊
 
@@ -45,7 +45,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 | 新增功能 | 詳細資料 |
 | :------------ | :------ |
 | Azure Active Directory 驗證支援 (`ActiveDirectoryInteractive`、`ActiveDirectoryMSI`)。 | [使用 Azure Active Directory](features/using-azure-active-directory.md)。 |
-| 在安裝程式中包含 Azure Active Directory 驗證程式庫 (adal.dll) | 現已包含在基底驅動程式安裝中，這將會升級適用於 SQL Server 的 Microsoft Active Directory 驗證程式庫的現有安裝，將其從 Windows 中的已安裝應用程式清單中移除。 |
+| 在安裝程式中包含 Azure Active Directory 驗證程式庫 (adal.dll) | OLE DB 安裝程式現已包含在基底驅動程式安裝中，會升級適用於 SQL Server 的 Microsoft Active Directory 驗證程式庫現有安裝，將其從 Windows 中的已安裝應用程式清單內移除。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>修正的 Bug
@@ -70,7 +70,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 若為 x64 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40a)  
 若為 x86 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40a)  
 
-### <a name="features-added"></a>新增的功能
+### <a name="features-added-in-1823"></a>在 18.2.3 版中新增的功能
 
 | 新增功能 | 詳細資料 |
 | :------------ | :------ |
@@ -88,7 +88,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 若為 x64 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40a)  
 若為 x86 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40a)  
 
-### <a name="bugs-fixed"></a>修正的 Bug
+### <a name="bugs-fixed-in-1822"></a>在 18.2.2 中修正的 Bug
 
 | 已修正的錯誤 (Bug) | 詳細資料 |
 | :-------- | :------ |
@@ -106,7 +106,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 若為 x64 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40a)  
 若為 x86 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40a)  
 
-### <a name="features-added"></a>新增的功能
+### <a name="features-added-in-1821"></a>在 18.2.1 版中新增的功能
 
 | 新增功能 | 詳細資料 |
 | :------------ | :------ |
@@ -125,14 +125,14 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 若為 x64 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40a)  
 若為 x86 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2118509&2118509=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40a)  
 
-### <a name="features-added"></a>新增的功能
+### <a name="features-added-in-1810"></a>在 18.1.0 版中新增的功能
 
 | 新增功能 | 詳細資料 |
 | :------------ | :------ |
 | 支援 `UseFMTONLY` 連接字串關鍵字及`SSPROP_INIT_USEFMTONLY` 初始化屬性。 | `UseFMTONLY` 控制連線到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]及更新版本時，如何擷取中繼資料。<br/><br/>如需詳細資訊，請參閱[利用 OLE DB Driver for SQL Server 使用連接字串關鍵字](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="bugs-fixed"></a>修正的 Bug
+### <a name="bugs-fixed-in-1810"></a>在 18.1.0 中修正的 Bug
 
 | 已修正的錯誤 (Bug) | 詳細資料 |
 | :-------- | :------ |
@@ -150,7 +150,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 若為 x64 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40a)  
 若為 x86 驅動程式：[簡體中文](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40a)  
 
-### <a name="features-added"></a>新增的功能
+### <a name="features-added-in-1802"></a>在 18.0.2 版中新增的功能
 
 | 新增功能 | 詳細資料 |
 | :------------ | :------ |

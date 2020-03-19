@@ -14,12 +14,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 9bb0911a0aa678ee160894e6297e5636644bf475
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3e7f0abd6003583858fbf323f96b4cf203236083
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75307649"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286642"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>第 1 課：Database Engine Tuning Advisor (DTA) 基本導覽
 
@@ -57,7 +57,7 @@ Database Engine Tuning Advisor 提供一種以圖形化使用者介面 (GUI) 為
 ![Database Engine Tuning Advisor 預設視窗](media/dta-tutorials/dta-default-gui.png)
   
 > [!NOTE]  
-> [工作階段監視器]  索引標籤會顯示工作階段名稱，其為已連線使用者以及目前資料的名稱。 
+> [工作階段監視器]  索引標籤會顯示工作階段名稱，其為已連線使用者的名稱以及目前日期。 
   
 在第一次開啟 Database Engine Tuning Advisor 時，它的 GUI 會出現兩個主要窗格。  
   

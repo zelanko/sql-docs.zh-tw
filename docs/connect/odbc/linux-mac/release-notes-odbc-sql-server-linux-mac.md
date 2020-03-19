@@ -1,7 +1,7 @@
 ---
-title: Linux 和 macOS 上的 ODBC 版本資訊 | Microsoft Docs
+title: Linux 和 macOS 上的 ODBC Driver for SQL Server 版本資訊
 ms.custom: ''
-ms.date: 06/30/2018
+ms.date: 03/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-jizho2
@@ -10,14 +10,14 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 39e010f87b9cf0785ba025cfb8a9cf96825ae9d9
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.openlocfilehash: b2adbb0fca6c717a5864570cad40c65d7c332f90
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78896765"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090502"
 ---
-# <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上的 Microsoft ODBC Driver to SQL Server 版本資訊
+# <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上 Microsoft ODBC Driver for SQL Server 的版本資訊
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -49,9 +49,9 @@ GeneMi.  2019/04/03.
 
 | 新增功能 | 詳細資料 |
 | :------------ | :------ |
-| SQL_COPT_SS_SPID 連線屬性，不需往返伺服器即可擷取 SPID | 請參閱 [DSN 與連接字串屬性和關鍵字](../dsn-connection-string-attribute.md)。 |
+| SQL_COPT_SS_SPID 連線屬性，無需往返伺服器即可擷取 SPID | 請參閱 [DSN 與連接字串屬性和關鍵字](../dsn-connection-string-attribute.md)。 |
 | 支援透過 Debian 和 Ubuntu 上的 `debconf` 來指示接受 EULA | 請參閱[安裝驅動程式](./installing-the-microsoft-odbc-driver-for-sql-server.md)。 |
-| 支援新的散發套件。 | &bull; &nbsp; &nbsp; Alpine Linux (3.10、3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nsbp; &nbsp; macOS 10.15 |
+| 支援新的散發套件。 | &bull; &nbsp; &nbsp; Alpine Linux (3.10、3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nbsp; &nbsp; macOS 10.15 |
 | 錯誤修正。 | 請參閱 [Bug 修正](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
 
@@ -66,7 +66,7 @@ GeneMi.  2019/04/03.
 
 **已知問題：**
 
-使用具有安全記憶體保護區的 Always Encrypted 與 Azure Key Vault 時，奇數的金鑰路徑長度可能會導致 CMK 簽章驗證錯誤。 如果您遇到此問題，請將 AKV 金鑰重新命名，利用一個字元來變更金鑰路徑的長度。
+使用具有安全記憶體保護區的 Always Encrypted 與 Azure Key Vault 時，奇數的金鑰路徑長度可能會導致 CMK 簽章驗證錯誤。 如果遇到此問題，請嘗試將 AKV 金鑰重新命名，以透過增加/刪除一個字元來變更金鑰路徑的長度。
 
 ## <a name="174-august-2019"></a>17.4，2019 年 8 月
 
@@ -82,7 +82,7 @@ GeneMi.  2019/04/03.
 
 | 新項目 | 詳細資料 |
 | :------- | :------ |
-| 支援新的散發套件。 | &bull; &nbsp; &nbsp; SuSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
+| 支援新的散發套件。 | &bull; &nbsp; &nbsp; SUSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
 | Azure Active Directory 受控服務識別 (系統和使用者指派) 驗證模式。 | 請參閱[搭配 ODBC 驅動程式使用 Azure Active Directory](../using-azure-active-directory.md)。 |
 | 針對 Always Encrypted 資料行串流輸入參數的能力。 | 如需詳細資訊，請參閱[使用 Always Encrypted 時的 ODBC 驅動程式限制](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)。 |
 | XA 分散式交易。 | 請參閱[使用 XA 交易](../use-xa-with-dtc.md)。<br/><br/>XA 是 _eXtended Architecture_ (延伸架構) 的縮寫，這是針對存取多個伺服器端資料儲存系統的全域交易執行標準。 |
@@ -122,7 +122,7 @@ BCP API 的 Always Encrypted 支援
 
 新連接字串屬性 UseFMTOnly 會導致驅動程式在需要暫存資料表的特殊案例中使用舊版中繼資料。
 
-對 Azure SQL 受控執行個體 (延伸個人預覽版) 的支援。 
+Azure SQL 受控執行個體的支援。 
 > [!NOTE]
 > 使用受控執行個體時，有一些差異：
 > -   不支援 FILESTREAM 
@@ -140,7 +140,7 @@ BCP API 的 Always Encrypted 支援
 
 ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 新增在與 Microsoft SQL Server 2016 一起使用時對 Always Encrypted 及 Azure Active Directory 的支援。
 
-**支援新的散發套件**：macOS 上的第一個 ODBC Driver 版本支援 OS X 10.11 和 macOS 10.12。 Ubuntu 16.10 現在也已連同 Red Hat 6、7 和 SUSE 12 受到支援。 每個平台都有平台相關的套件 (RPM 或 DEB)，以便簡化安裝和設定。  如需安裝指示，請參閱[安裝驅動程式](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。
+**支援新的散發套件**：macOS 上的第一個 ODBC Driver 版本支援 OS X 10.11 和 macOS 10.12。 Ubuntu 16.10 現在也已連同 Red Hat 6、7 和 SUSE 12 受到支援。 每個平台都有平台相關的套件 (RPM 或 DEB)，以便簡化安裝和設定。 如需詳細資訊，請參閱 [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) 與 [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md) 的 ODBC 驅動程式安裝指示。
 
 **unixODBC Driver Manager 2.3.1 支援變更**：ODBC 驅動程式不再依賴 unixODBC Driver Manager 的自訂封裝 (RedHat 6 上除外)，並改為依賴散發套件管理員，從散發套件存放庫解析 UnixODBC 相依性。
 

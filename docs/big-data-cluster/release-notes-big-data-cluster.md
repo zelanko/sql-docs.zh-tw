@@ -5,16 +5,16 @@ description: 本文說明 SQL Server 巨量資料叢集的最新更新和已知�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/13/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9de368594383ef1f7fe3ae3c062f92873fb15698
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 136665cbe354ce0fdbbc575d2e97759f35cb3444
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256897"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286222"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 巨量資料叢集版本資訊
 
@@ -50,7 +50,7 @@ ms.locfileid: "77256897"
 
 |平台|支援的版本|
 |---------|---------|
-|`azdata`|必須與伺服器具有相同的次要版本 (與 SQL Server 主要執行個體相同)。<br/><br/>執行 `azdata –-version` 以驗證版本。<br/><br/>自 SQL Server 2019 CU2 起，本版為 `15.0.4013`。|
+|`azdata`|必須與伺服器具有相同的次要版本 (與 SQL Server 主要執行個體相同)。<br/><br/>執行 `azdata –-version` 以驗證版本。<br/><br/>自 SQL Server 2019 CU3 起，此版本為 `15.0.4023`。|
 |Azure Data Studio|取得 [Azure Data Studio](https://aka.ms/getazuredatastudio) 的最新組建。|
 
 ## <a name="release-history"></a>版本歷程記錄
@@ -59,6 +59,7 @@ ms.locfileid: "77256897"
 
 | 版本               | 版本       | 發行日期 |
 |-----------------------|---------------|--------------|
+| [CU3](#cu3)           | 15.0.4023.6    | 2020-03-12   |
 | [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
 | [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
 | [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
@@ -67,9 +68,24 @@ ms.locfileid: "77256897"
 
 若要安裝更新，請參閱[如何升級 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md)。
 
+## <a id="cu3"></a> CU3 (2020 年 3 月)
+
+SQL Server 2019 的累積更新 3 (CU3) 版本。 此版本的 SQL Server 資料庫引擎版本為 15.0.4023.6。
+
+|套件版本 | 映像標籤 |
+|-----|-----|
+|15.0.4023.6 |[2019-CU3-ubuntu-16.04]
+
+### <a name="resolved-issues"></a>已解決的問題
+
+SQL Server 2019 CU3 解決先前版本的下列問題。
+
+- [使用私人存放庫進行部署](#deployment-with-private-repository)
+- [升級可能會因為逾時而失敗](#upgrade-may-fail-due-to-timeout)
+
 ## <a id="cu2"></a> CU2 (2020 年 2 月)
 
-SQL Server 2019 的累積更新 2 (CU2) 版本。 此版本的 SQL Server 資料庫引擎版本為 15.0.4003.23。
+SQL Server 2019 的累積更新 2 (CU2) 版本。 此版本的 SQL Server 資料庫引擎版本為 15.0.4013.40。
 
 |套件版本 | 映像標籤 |
 |-----|-----|
@@ -97,6 +113,8 @@ SQL Server 2019 一般發行版本 1 (GDR1) - 引進 [!INCLUDE[big-data-clusters
 
 ### <a name="deployment-with-private-repository"></a>使用私人存放庫進行部署
 
+- **受影響的版本**：GDR1、CU1、CU2。 已針對 CU3 解決。
+
 - **問題和對客戶的影響**︰從私人存放庫升級具有特定需求
 
 - **因應措施**：如果您使用私人存放庫來預先提取要部署或升級 BDC 的映像，請確定目前的組建映像與目標組建映像都在私人存放庫中。 這可確保成功的復原 (如果有必要)。 此外，如果您在原始部署之後變更私人存放庫的認證，請在升級之前，先更新 Kubernetes 中對應的祕密。 `azdata` 不支援透過 `AZDATA_PASSWORD` 與 `AZDATA_USERNAME` 環境變數來更新認證。 使用 [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret) 更新祕密。 
@@ -104,6 +122,8 @@ SQL Server 2019 一般發行版本 1 (GDR1) - 引進 [!INCLUDE[big-data-clusters
 不支援使用不同的存放庫來進行目前與目標組建升級。
 
 ### <a name="upgrade-may-fail-due-to-timeout"></a>升級可能會因為逾時而失敗
+
+- **受影響的版本**：GDR1、CU1、CU2。 已針對 CU3 解決。
 
 - **問題和對客戶的影響**︰升級可能會因為逾時而失敗。
 
@@ -132,7 +152,7 @@ SQL Server 2019 一般發行版本 1 (GDR1) - 引進 [!INCLUDE[big-data-clusters
       kubectl edit configmap controller-upgrade-configmap
       ```
 
-   2.   編輯下列欄位：
+   2. 編輯下列欄位：
 
        **`controllerUpgradeTimeoutInMinutes`** 指定等待控制器或控制器資料庫完成升級的分鐘數。 預設值為 5。 更新為至少 20。
 
@@ -140,7 +160,7 @@ SQL Server 2019 一般發行版本 1 (GDR1) - 引進 [!INCLUDE[big-data-clusters
 
        **`componentUpgradeTimeoutInMinutes`** ：指定升級必須完成之每個後續階段的時間量。  預設值為 30。 更新為 45。
 
-   3.   儲存並結束
+   3. 儲存並結束
 
    下面的 python 指令碼是設定逾時的另一種方式：
 

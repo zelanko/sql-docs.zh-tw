@@ -1,5 +1,6 @@
 ---
 title: 資料來源和連線方法 | Microsoft Docs
+description: 在 Report Services 中，可使用這些方法來設定和管理資料來源連接與認證。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 50999b52-fc7c-4333-9fb0-d04c37a4c90f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 464a24e9a23103323a14140c25563e753c6c3e18
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c30b5343041c2fd8f1916d560a8ca2556990be09
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62512590"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198255"
 ---
 # <a name="data-sources-and-connection-methods"></a>資料來源和連接方法
   您可以使用這些方法來設定和管理資料來源連接與認證。  

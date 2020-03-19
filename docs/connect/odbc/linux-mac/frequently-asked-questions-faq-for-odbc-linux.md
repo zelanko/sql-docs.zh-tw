@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65bfd6d2-c83d-4528-a5e1-a85b125a4f4a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cc31a8ae385f2dbb28db30b299377ab5b38058f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cab35e67c7c93ce0634a2bf1cd5a8c3c5677179d
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68702773"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058784"
 ---
 # <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>ODBC Linux 和 macOS 的常見問題集 (FAQ)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -46,4 +46,6 @@ UTF-8 用於 SQL_CHAR 資料，UTF-16 則用於 SQL_WCHAR 資料。 視系統地
 不是，Linux 和 macOS 上的 ODBC 驅動程式不是開放原始碼產品。  
 
 ## <a name="see-also"></a>另請參閱
-[在 Linux 和 macOS 上安裝 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+
+- [在 Linux 上安裝 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [在 macOS 上安裝 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)

@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/03/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cef5bdc57a5fb5f0a2cbeed6be3356aade1ba491
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.openlocfilehash: 685397689b390175bd15f6241fc7036004e1e97a
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335769"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198525"
 ---
 # <a name="ssms-query-editor"></a>SSMS 查詢編輯器
 
@@ -116,7 +116,7 @@ ms.locfileid: "78335769"
 
 指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中是否有提供 IntelliSense 功能。 預設會設定此選項。
 
-您也可以透過從[捷徑功能表](#intellisense-enabled-using-the-context-menu)選取 Ctrl + B 並選取 Ctrl + I，來選取 [IntelliSense 已啟用]  。
+您也可以透過選取 Ctrl + B 然後選取 Ctrl + I (或從[內容功能表](#intellisense-enabled-using-the-context-menu)) 來選取 [IntelliSense 已啟用]  。
 
 ### <a name="include-actual-execution-plan-using-the-editor-toolbar"></a>包括實際執行計畫 (使用編輯器工具列)
 
@@ -164,7 +164,7 @@ ms.locfileid: "78335769"
 
 在行頭移除任何註解運算子 (--)，將目前的行標示為使用中的來源陳述式。
 
-您也可以選取 Ctrl + K，然後選取 Ctrl + U 將某行標示為住解。
+您也可以選取 Ctrl + K，然後選取 Ctrl + U 以取消某行的註解。
 
 ### <a name="decrease-indent-using-the-editor-toolbar"></a>減少縮排 (使用編輯器工具列)
 

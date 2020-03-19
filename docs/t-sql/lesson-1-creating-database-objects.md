@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b2a0c7a298cda42940e08b532be0df39221a21b
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.openlocfilehash: d2bea423a9ea039dbc9f0128c7d6b6f106ee03fe
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78280952"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198405"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>第 1 課：建立及查詢資料庫物件
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "78280952"
 
 - 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
-若您沒有 SQL Server 執行個體存取權，請從下列連結選取您的平台。 若您選擇 SQL 驗證，請使用您的 SQL Server 登入認證。
+如果您沒有 SQL Server 執行個體，請建立一個。 請從下列連結選取平台來建立 SQL Server 執行個體。 若您選擇 SQL 驗證，請使用您的 SQL Server 登入認證。
 - **Windows**：[下載 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
 - **macOS**：[下載 Docker 上的 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
 
 ## <a name="create-a-database"></a>建立資料庫
-和許多 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式一樣，CREATE DATABASE 陳述式也有一個必要參數，那就是資料庫的名稱。 CREATE DATABASE 另外還有許多選擇性參數，例如，要用來放置資料庫檔案的磁碟位置。 當您執行 CREATE DATABASE 但未指定任何選擇性參數時， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 多半會使用這些參數的預設值。 這個教學課程使用的選擇性語法參數非常少。   
+和許多 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式一樣，[`CREATE DATABASE`](statements/create-database-transact-sql.md) 陳述式也有一個必要參數，亦即資料庫的名稱。` CREATE DATABASE` 另外還有許多選擇性參數，例如要用來放置資料庫檔案的磁碟位置。 當執行 `CREATE DATABASE` 但未指定任何選擇性參數時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 針對這些參數的大部分會使用預設值。
 
 1.  在 [查詢編輯器] 視窗中，輸入下列程式碼 (但不要執行)：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "78280952"
     GO  
     ```  
   
-2.  使用指標選取 `CREATE DATABASE`這兩個字，然後按 **F1**鍵。 這時應該會開啟《SQL Server 線上叢書》中的＜CREATE DATABASE＞主題。 您可以利用這種方式找到 CREATE DATABASE 以及在這個教學課程中所使用之其他陳述式的完整語法。  
+2.  使用指標選取 `CREATE DATABASE`這兩個字，然後按 **F1**鍵。 這時應該會開啟《SQL Server 線上叢書》中的 `CREATE DATABASE` 主題。 您可使用此技術來找到 `CREATE DATABASE`，以及在這個教學課程中所使用的其他陳述式完整語法。  
   
 3.  在 [查詢編輯器] 中按 **F5** ，執行陳述式並建立名為 `TestData`的資料庫。  
   
@@ -63,6 +63,7 @@ ms.locfileid: "78280952"
 > 如果在單一批次中提交了一個以上的陳述式，可用關鍵字 GO 來分隔陳述式； 如果批次中只包含一個陳述式，則 GO 可有可無。  
 
 ## <a name="create-a-table"></a>建立資料表
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 若要建立資料表，您必須提供資料表的名稱，以及資料表中各資料行的名稱和資料類型， 最好也能指出各資料行中是否允許有 Null 值。 若要建立資料表，您必須擁有 `CREATE TABLE` 權限，以及將包含資料表之結構描述的 `ALTER SCHEMA` 權限。 [`db_ddladmin`](../relational-databases/security/authentication-access/database-level-roles.md) 固定資料庫角色擁有這些權限。  
@@ -76,6 +77,7 @@ ms.locfileid: "78280952"
   
   
 ### <a name="switch-the-query-editor-connection-to-the-testdata-database"></a>將查詢編輯器連接切換到 TestData 資料庫  
+
 在 [查詢編輯器] 視窗中，輸入並執行下列程式碼，將連接變更為 `TestData` 資料庫。  
   
   ```sql  
@@ -84,7 +86,8 @@ ms.locfileid: "78280952"
   ```  
   
 ### <a name="create-the-table"></a>建立資料表
-在 [查詢編輯器] 視窗中，輸入並執行下列程式碼，建立名稱為 `Products`的簡單資料表。 此資料表中的資料行名稱分別為 `ProductID`、 `ProductName`、 `Price`和 `ProductDescription`。 `ProductID` 資料行是此資料表的主索引鍵。 `int`、 `varchar(25)`、 `money`和 `varchar(max)` 全部都是資料類型。 在插入或變更資料列時，只有 `Price` 和 `ProductionDescription` 資料行可以不含任何資料。 這個陳述式包含一個選擇性的元素 (`dbo.`)，稱為「結構描述」。 結構描述就是擁有資料表的資料庫物件。 如果您是系統管理員，則 `dbo` 是預設的結構描述。 `dbo` 代表資料庫擁有者。  
+
+在 [查詢編輯器] 視窗中鍵入並執行下列程式碼，以建立名為 `Products` 的資料表。 此資料表中的資料行名稱分別為 `ProductID`、 `ProductName`、 `Price`和 `ProductDescription`。 `ProductID` 資料行是此資料表的主索引鍵。 `int`、 `varchar(25)`、 `money`和 `varchar(max)` 全部都是資料類型。 在插入或變更資料列時，只有 `Price` 和 `ProductionDescription` 資料行可以不含任何資料。 這個陳述式包含一個選擇性的元素 (`dbo.`)，稱為「結構描述」。 結構描述就是擁有資料表的資料庫物件。 如果您是系統管理員，則 `dbo` 是預設的結構描述。 `dbo` 代表資料庫擁有者。  
   
   ```sql  
   CREATE TABLE dbo.Products  
@@ -103,13 +106,13 @@ ms.locfileid: "78280952"
 |1|Clamp|12.48|Workbench clamp|  
 |50|Screwdriver|3.17|Flat head|  
 |75|Tire Bar||Tool for changing tires.|  
-|3000|3mm Bracket|.52||  
+|3000|3 mm Bracket|0.52||  
   
 基本語法如下：INSERT、資料表、資料行清單、VALUES，以及要插入的值清單。 程式行前面的兩個連字號表示該程式行是註解，而編譯器會忽略這行文字。 在本案例中，註解說明所允許的語法變化。  
   
 ### <a name="insert-data-into-a-table"></a>將資料插入資料表中  
   
-1.  執行下列陳述式，將資料列插入上一項工作中建立的 `Products` 資料表。 以下是基本語法。  
+1.  執行下列陳述式，將資料列插入上一項工作中建立的 `Products` 資料表。
   
    ```sql 
    -- Standard syntax  
@@ -117,7 +120,21 @@ ms.locfileid: "78280952"
        VALUES (1, 'Clamp', 12.48, 'Workbench clamp')  
    GO   
    ```  
-  
+
+   > [!NOTE]
+   > 如果插入成功，請繼續進行下一個步驟。
+   >
+   > 如果插入失敗，可能是因為 `Product` 資料表已經具有資料列，其中包含該產品識別碼。 若要繼續，請刪除資料表中的所有資料列，並重複上述步驟。 [`TRUNCATE TABLE`](statements/truncate-table-transact-sql.md) 刪除資料表中的所有資料列。 
+   >
+   > 執行下列命令來刪除資料表中的所有資料列：
+   > 
+   > ```sql
+   >TRUNCATE TABLE TestData.dbo.Products;
+   > GO
+   >```
+   >
+   > 截斷資料表後，請重複此步驟中的 `INSERT` 命令。
+
 2.  下列陳述式示範如何可以在透過切換欄位清單 (括號內) 和值清單內 `ProductID` 和 `ProductName` 的位置所提供的參數中變更順序。  
   
    ```sql  
@@ -141,7 +158,7 @@ ms.locfileid: "78280952"
    ```sql  
    -- Dropping the optional dbo and dropping the ProductDescription column  
    INSERT Products (ProductID, ProductName, Price)  
-       VALUES (3000, '3mm Bracket', .52)  
+       VALUES (3000, '3 mm Bracket', 0.52)  
    GO  
    ```  
   
@@ -169,7 +186,7 @@ ms.locfileid: "78280952"
   GO  
   ```  
   
-2.  您可以使用星號，選取資料表中的所有資料行。 這個方法常在隨選查詢中使用。 您應該在固定程式碼中提供資料行清單，使陳述式會傳回預期的資料行，即使以後加入新資料行還是一樣。  
+2.  您可使用星號 (`*`) 來選取資料表中的所有資料行。 星號適用於特定查詢。 請在固定程式碼中提供資料行清單，讓陳述式傳回預期的資料行，即使以後將新資料行新增至資料表也一樣。  
   
   ```sql  
   -- Returns all columns in the table  
@@ -224,7 +241,7 @@ ms.locfileid: "78280952"
   
 ### <a name="create-a-view"></a>建立檢視  
   
-執行下列陳述式建立簡單的檢視，其中會執行 SELECT 陳述式並將產品名稱及價格傳回給使用者。  
+執行下列陳述式來建立會執行 SELECT 陳述式並將產品名稱及價格傳回給使用者的檢視。  
   
   ```sql  
   CREATE VIEW vw_Names  

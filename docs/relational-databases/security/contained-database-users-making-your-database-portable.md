@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 028ab6917a8d41a2231e94253ff353910e65b865
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: b11a263953e0b58c4b3dc7072662b291f3d215ab
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75557883"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375505"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>自主的資料庫使用者 - 使資料庫可攜
 
@@ -54,7 +54,7 @@ ms.locfileid: "75557883"
 
  Windows 防火牆規則適用所有連線，並對登入 (傳統模型連線) 與自主資料庫使用者具備相同的效果。 如需 Windows 防火牆的詳細資訊，請參閱＜ [設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)＞。  
   
-### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 防火牆
+### <a name="sssds-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 防火牆
 
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 允許對伺服器層級連線 (登入) 和資料庫層級連線 (自主資料庫使用者) 使用不同的防火牆規則。 連接到使用者資料庫時，會檢查第一個資料庫的防火牆規則。 如果沒有允許存取資料庫的規則，就會檢查伺服器層級防火牆規則，其需要存取 SQL Database 伺服器的 master 資料庫。 結合自主資料庫使用者的資料庫層級防火牆規則，不必在連線期間存取伺服器的 master 資料庫，藉此提供改善的連線延展性。  
   
@@ -74,6 +74,31 @@ ms.locfileid: "75557883"
 |傳統的模型|自主的資料庫使用者模型|  
 |-----------------------|-----------------------------------|  
 |若要變更密碼，在 master 資料庫的內容中：<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|若要變更密碼，在使用者資料庫的內容中：<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
+
+### <a name="managed-instance"></a>受控執行個體
+
+Azure SQL Database 受控執行個體的運作方式，類似於自主資料庫內容中的內部部署 SQL Server。 建立包含的使用者時，請務必將資料庫的內容從 master 資料庫變更為使用者資料庫。 此外，設定內含項目選項時，使用者資料庫不應有使用中的連線。 
+
+例如： 
+
+```sql
+Use MASTER;
+GO 
+
+ALTER DATABASE Test
+SET containment=partial
+
+
+USE Test;  
+GO  
+CREATE USER Carlo  
+WITH PASSWORD='Enterpwdhere*'  
+
+
+SELECT containment_desc FROM sys.databases
+WHERE name='test'
+```
+
   
 ## <a name="remarks"></a>備註  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 49cb24120d6c476e5b03c4a0cad2ddda511a9360
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9bc5f0a66cc891c1efa4810253a02d98f384e081
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76911189"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058742"
 ---
 # <a name="system-requirements"></a>系統需求
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -46,9 +46,9 @@ Linux 和 macOS 驅動程式僅適用於下列作業系統的 64 位元版本︰
 |RedHat Enterprise Linux 6|13、13.1、17+|
 |RedHat Enterprise Linux 7|13、13.1、17+|
 |RedHat Enterprise Linux 8|17.4+|
-|SuSE Linux Enterprise Server 11|13、13.1、17+ <br /><br /> **注意：** ODBC 驅動程式 17 僅支援 SuSE Linux Enterprise Server 11 SP4|
-|SuSE Linux Enterprise Server 12|13、13.1、17+|
-|SuSE Linux Enterprise Server 15|17+|
+|SUSE Linux Enterprise Server 11|13、13.1、17+ <br /><br /> **注意：** ODBC 驅動程式 17 僅支援 SUSE Linux Enterprise Server 11 SP4|
+|SUSE Linux Enterprise Server 12|13、13.1、17+|
+|SUSE Linux Enterprise Server 15|17+|
 |Ubuntu Linux 14.04|13、13.1、17.4|
 |Ubuntu Linux 15.10|13、13.1|
 |Ubuntu Linux 16.04|13、13.1、17+|
