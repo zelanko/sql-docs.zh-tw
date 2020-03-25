@@ -113,14 +113,9 @@
         "sql-server/**/*.md": "GitHub",
         "ssms/**/*.md": "GitHub",
         "tools/**/*.md": "GitHub",
-        "t-sql/**/*.md": "GitHub",
-        "kb-support/*.md": "None",
-        "kb-support/**/*.md": "None"
+        "t-sql/**/*.md": "GitHub"
       },
-      "disable_contribution_on_translation_quality": {
-        "kb-support/*.md": ["HT","MT","MTE75","MTE95","Blank"],
-        "kb-support/**/*.md": ["HT","MT","MTE75","MTE95","Blank"]
-      },
+      "disable_contribution_on_translation_quality": {},
       "feedback_product_url": {
         "azure-data-studio/**/*.md": "https://github.com/microsoft/azuredatastudio/issues/",
         "big-data-cluster/**/*.md": "https://feedback.azure.com/forums/927307-sql-server-big-data-clusters/"
