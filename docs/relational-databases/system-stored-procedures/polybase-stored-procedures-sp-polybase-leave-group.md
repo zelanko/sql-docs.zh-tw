@@ -1,5 +1,6 @@
 ---
 title: sp_polybase_leave_group （Transact-sql） |Microsoft Docs
+description: Sp_polybase_leave_group Transact-sql 命令會從 PolyBase 群組移除 SQL Server 實例，以進行相應放大計算。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0071746f2d65dd0c9c699beeacf404bf3dd7bb65
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3fd28f5a3cecb6da28603ae6f8a88d751081e80c
+ms.sourcegitcommit: df21fd156cc833f107d22413c76991b67f3715c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67941929"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80216498"
 ---
 # <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
