@@ -198,7 +198,7 @@ GO
   
  如果 LIKE 模式中逸出字元之後沒有任何字元，模式便無效，且 LIKE 會傳回 FALSE。 如果逸出字元之後的字元不是萬用字元，就會捨棄萬用字元，並將之後的字元當作一般字元來處理。 這些字元包括用一組左右括弧 ([ ]) 括住的百分比符號 (%)、底線 (_) 和左括弧 ([) 萬用字元。 逸出字元也可以在左右括弧字元 ([ ]) 中使用，包括用來逸出插入號 (^)、連字號 (-) 或右括弧 (])。  
   
- 0x0000 (**char(0)** ) 是 Windows 定序中未定義的字元，且不得包含在 LIKE 中。  
+ 0x0000 (**char(0)**) 是 Windows 定序中未定義的字元，且不得包含在 LIKE 中。  
   
 ## <a name="examples"></a>範例  
   
@@ -268,7 +268,7 @@ Gail                  Westover             305-555-0100
 ```
 
 ### <a name="c-using-the-escape-clause"></a>C. 使用 ESCAPE 子句  
- 下列範例會利用 `ESCAPE` 子句和逸出字元來尋找 `10-15%` 資料表 `c1` 資料行中完全相符的 `mytbl2` 字元字串。  
+ 下列範例會利用 `ESCAPE` 子句和逸出字元來尋找 `mytbl2` 資料表 `c1` 資料行中完全相符的 `10-15%` 字元字串。  
   
 ```sql
 USE tempdb;  
@@ -316,7 +316,7 @@ ORDER BY LastName ASC, FirstName ASC;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. 使用 LIKE 搭配 % 萬用字元  
  下列範例會在 `DimEmployee` 資料表中尋找電話號碼是以 `612` 開頭的所有員工。  
@@ -343,7 +343,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the-_-wildcard-character"></a>G. 使用 LIKE 搭配 _ 萬用字元  
- 下列範例會在 `6` 資料表中尋找區碼是以 `2` 開頭且以 `DimEmployee` 結尾的所有電話號碼。 % 萬用字元會包含在搜尋模式的結尾，用來比對電話資料行值中的所有後續字元。  
+ 下列範例會在 `DimEmployee` 資料表中尋找區碼是以 `6` 開頭且以 `2` 結尾的所有電話號碼。 % 萬用字元會包含在搜尋模式的結尾，用來比對電話資料行值中的所有後續字元。  
   
 ```sql  
 -- Uses AdventureWorks  
