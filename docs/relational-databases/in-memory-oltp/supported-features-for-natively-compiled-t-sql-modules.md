@@ -44,7 +44,7 @@ ms.locfileid: "79286662"
 
  如需有關不支援之建構的完整資訊，以及如何處理某些原生編譯模組不支援功能的相關資訊，請參閱 [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)。 如需不支援功能的詳細資訊，請參閱 [記憶體中的 OLTP 不支援 Transact-SQL 建構](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
 
-##  <a name="qsancsp"></a> 原生模組中的查詢介面區  
+##  <a name="query-surface-area-in-native-modules"></a><a name="qsancsp"></a> 原生模組中的查詢介面區  
 
 以下為支援的查詢結構：  
 
@@ -142,7 +142,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 這些原生編譯限制 [!INCLUDE[tsql](../../includes/tsql-md.md)] 不適用於記憶體最佳化資料表上解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取。  
 
 
-##  <a name="dml"></a> 資料修改  
+##  <a name="data-modification"></a><a name="dml"></a> 資料修改  
 
 以下為支援的 DML 陳述式。  
 
@@ -154,7 +154,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   UPDATE 和 DELETE 陳述式支援 WHERE。  
 
-##  <a name="cof"></a> 流程控制語言  
+##  <a name="control-of-flow-language"></a><a name="cof"></a> 流程控制語言  
  支援下列的流程控制語言建構。  
 
 -   [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
@@ -175,7 +175,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   BEGIN ATOMIC (在預存程序的外部等級)。 如需詳細資訊，請參閱 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)。  
 
-##  <a name="so"></a> 支援的運算子  
+##  <a name="supported-operators"></a><a name="so"></a> 支援的運算子  
  下列為支援的運算子。  
 
 -   [比較運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (例如，>、\<、>= 和 <=)  
@@ -194,7 +194,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
     - **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
       從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 開始，原生編譯模組支援 APPLY 運算子。
 
-##  <a name="bfncsp"></a> 原生編譯模組中的內建函數  
+##  <a name="built-in-functions-in-natively-compiled-modules"></a><a name="bfncsp"></a> 原生編譯模組中的內建函數  
  記憶體最佳化資料表條件約束和原生編譯 T-SQL 模組支援下列函數。  
 
 -   所有[數學函數 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
@@ -223,12 +223,12 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   原生模組可以巢狀方式執行。
 
-##  <a name="auditing"></a> 稽核  
+##  <a name="auditing"></a><a name="auditing"></a> 稽核  
  原生編譯預存程序中支援程序層級稽核。  
 
- 如需有關稽核的詳細資訊，請參閱＜ [Create a Server Audit and Database Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)＞。  
+ 如需有關稽核的詳細資訊，請參閱＜ [建立伺服器稽核和資料庫稽核規格](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)＞。  
 
-##  <a name="tqh"></a> 資料表和查詢提示  
+##  <a name="table-and-query-hints"></a><a name="tqh"></a> 資料表和查詢提示  
  支援下列功能：  
 
 -   在資料表提示語法或查詢的 [OPTION 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md) 中的 INDEX、FORCESCAN 和 FORCESEEK 提示。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
@@ -241,7 +241,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
  如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
 
-##  <a name="los"></a> 排序的限制  
+##  <a name="limitations-on-sorting"></a><a name="los"></a> 排序的限制  
  在使用 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) 的查詢中，您可以排序 8000 多個資料列。 但是沒有 [ORDER BY 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)，[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 最多只能排序 8000 個資料列 (如果有聯結則資料列更少)。  
 
  如果查詢同時使用 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 運算子和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)，TOP 運算子最多可以指定 8192 個資料列。 如果您指定超過 8192 個資料列，則會收到錯誤訊息：**Msg 41398，層級 16，狀態 1、程序\<程序名稱>  、行 \<行號>  。TOP 運算子最多可以傳回 8192 個資料列；要求 \<數字>  個。**  
