@@ -18,27 +18,27 @@ helpviewer_keywords:
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 379dae51b913fc02a16a562037776620b1e0433c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 79c81cafe588fd827ece6184cab5470df8ec4c42
+ms.sourcegitcommit: eef5ab1966062e190dc1cd49409bc0429ba6d1e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67904469"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80290849"
 ---
 # <a name="sysresource_governor_external_resource_pools-transact-sql"></a>sys.databases resource_governor_external_resource_pools （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**適用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]和[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 和 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 傳回中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]儲存的外部資源集區設定。 檢視的每個資料列都會決定集區的組態。
   
 |資料行名稱|資料類型|描述|
 |-----------------|---------------|-----------------|
-|pool_id|**int**|資源集區的唯一識別碼。 不可為 Null。<br /><br /> **注意：** 未來可能會重新命名。|
+|external_pool_id|**int**|資源集區的唯一識別碼。 不可為 Null。|
 |NAME|**sysname**|資源集區的名稱。 不可為 Null。|
 |max_cpu_percent|**int**|當 CPU 出現瓶頸時，針對資源集區中的所有要求所允許的最大平均 CPU 頻寬。 不可為 Null。|
 |max_memory_percent|**int**|在此資源集區中，可供要求所用的伺服器記憶體總量百分比。 不可為 Null。 有效的最大值取決於集區最小值。 例如，max_memory_percent 可以設定為 100，但有效的最大值比較低。|
 |max_processes|**int**|並行外部進程的最大數目。 預設值為 0 時，不會指定任何限制。 不可為 Null。|
-|version|**Bigint**|內部版本號碼。|
+|version|**bigint**|內部版本號碼。|
   
 ## <a name="permissions"></a>權限
 
