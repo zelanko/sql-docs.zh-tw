@@ -185,12 +185,12 @@ GO
 |符號|意義|  
 |------------|-------------|  
 |LIKE '5[%]'|5%|  
-|LIKE '[_]n'|_n|  
+|LIKE '[\_]n'|_n|  
 |LIKE '[a-cdf]'|a、b、c、d 或 f|  
 |LIKE '[-acdf]'|-、a、c、d 或 f|  
 |LIKE '[ [ ]'|[|  
 |LIKE ']'|]|  
-|LIKE 'abc[_]d%'|abc_d 和 abc_de|  
+|LIKE 'abc[\_]d%'|abc_d 和 abc_de|  
 |LIKE 'abc[def]'|abcd、abce 和 abcf|  
   
 ## <a name="pattern-matching-with-the-escape-clause"></a>含 ESCAPE 子句的模式比對  
@@ -198,7 +198,7 @@ GO
   
  如果 LIKE 模式中逸出字元之後沒有任何字元，模式便無效，且 LIKE 會傳回 FALSE。 如果逸出字元之後的字元不是萬用字元，就會捨棄萬用字元，並將之後的字元當作一般字元來處理。 這些字元包括用一組左右括弧 ([ ]) 括住的百分比符號 (%)、底線 (_) 和左括弧 ([) 萬用字元。 逸出字元也可以在左右括弧字元 ([ ]) 中使用，包括用來逸出插入號 (^)、連字號 (-) 或右括弧 (])。  
   
- 0x0000 (**char(0)**) 是 Windows 定序中未定義的字元，且不得包含在 LIKE 中。  
+ 0x0000 (**char(0)** ) 是 Windows 定序中未定義的字元，且不得包含在 LIKE 中。  
   
 ## <a name="examples"></a>範例  
   
