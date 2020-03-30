@@ -16,10 +16,10 @@ ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ce5ddca1cb39d7d4f375232e3588900b5b1ebe6a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570601"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>在 SharePoint Web 應用程式中設定報表伺服器作業的權限
@@ -51,7 +51,7 @@ ms.locfileid: "65570601"
   
  「瀏覽使用者資訊」權限可讓報表伺服器傳回項目建立者以及項目最後修改者的相關資訊。 沒有這個權限，報表伺服器將會傳回下列錯誤。 針對瀏覽作業，錯誤為「報表伺服器發生 SharePoint 錯誤。 ---> System.UnauthorizedAccessException：存取遭到拒絕。」 針對發行作業，錯誤為「授與使用者 '\<網域>\\<使用者\>' 的權限不足以執行此作業。」  
   
-##  <a name="permissionReports"></a> 檢視和管理報表的權限  
+##  <a name="permissions-for-viewing-and-managing-reports"></a><a name="permissionReports"></a> 檢視和管理報表的權限  
  報表定義權限是透過包含報表的文件庫上的「清單」權限定義，不過，如果您要限制存取，可以在個別報表上設定權限。 下表提供工作以及支援各項工作之權限的清單。  
   
 |Task|權限|  
@@ -69,7 +69,7 @@ ms.locfileid: "65570601"
 |刪除報表記錄中的快照集，以及刪除已簽出且修改一段時間的特定報表定義版本。|「刪除項目」  ，針對包含要刪除其報表記錄之報表的文件庫。|  
 |檢視報表記錄中的快照集，以及檢視已簽出且修改一段時間的特定報表定義版本。|「檢視版本」  ，針對將包含報表的文件庫。|  
   
-##  <a name="permissionReportBuilder"></a> 使用報表產生器建立報表的權限  
+##  <a name="permissions-for-creating-reports-and-using-report-builder"></a><a name="permissionReportBuilder"></a> 使用報表產生器建立報表的權限  
  報表產生器是可以用來建立特定報表的報表編輯工具。 報表產生器使用報表模型做為資料來源，以支援特定資料瀏覽。 您可以載入報表產生器中模型以建立報表、執行報表、瀏覽模型中的資料，以及選擇性地將報表儲存至程式庫。 具備足夠權限的使用者可以接著開啟相同的報表，還能執行特定資料瀏覽。  
   
 > [!NOTE]  
@@ -90,7 +90,7 @@ ms.locfileid: "65570601"
   
  建立和使用訂閱、報表記錄，以及在報表產生器報表上設定報表或資料處理選項的權限，與在標準報表定義檔案上用來執行相同動作的權限相同。  
   
-##  <a name="permissionSharedSchedules"></a> 建立和管理共用排程的權限  
+##  <a name="permissions-for-creating-and-managing-shared-schedules"></a><a name="permissionSharedSchedules"></a> 建立和管理共用排程的權限  
  共用排程並非儲存在文件庫中的文件。 基於這個理由，建立和管理這些排程便需要網站權限。 您無法限制存取特定共用排程。 您建立的任何共用排程將會提供給任何具備整個網站的「開啟」權限的使用者。  
   
  下表提供建立、管理和使用共用排程的工作和權限清單：  
@@ -100,7 +100,7 @@ ms.locfileid: "65570601"
 |建立、編輯或刪除共用排程。|「管理網站」  ，針對網站。|  
 |選取訂閱處理或資料擷取的共用排程。|「開啟」  ，針對包含文件庫的網站。|  
   
-##  <a name="permissionSubscriptions"></a> 建立和管理訂閱的權限  
+##  <a name="permissions-for-creating-and-managing-subscriptions"></a><a name="permissionSubscriptions"></a> 建立和管理訂閱的權限  
  SharePoint 會強制執行訂閱與檢視權限間的相依性。 您無法訂閱未具備檢視權限的報表。 如果您授與訂閱報表的權限，則會自動授與檢視權限。  
   
  下表提供建立、管理和使用訂閱的工作和權限清單：  
@@ -111,7 +111,7 @@ ms.locfileid: "65570601"
 |選取搭配訂閱使用的共用排程。|「開啟」  ，針對包含文件庫的網站。|  
 |建立、編輯或刪除整個網站的任何訂閱。|「管理提醒」  ，針對網站。|  
   
-##  <a name="permissionDataSources"></a> 建立和管理共用資料來源以及報表模型的權限  
+##  <a name="permissions-for-creating-and-managing-shared-data-sources-and-report-models"></a><a name="permissionDataSources"></a> 建立和管理共用資料來源以及報表模型的權限  
  共用資料來源 (.rsds) 檔包含可供多個報表和模型使用的資料來源連接資訊。 若為標準報表，使用 .rsds 檔指定資料來源連接資訊則是選擇性的操作。 若為模型導向的報表，則必須使用 .rsds 檔。 報表模型會固定使用 .rsds 檔連接外部資料來源。  
   
  您可以設定共用資料來源上的屬性，以決定個別使用者是否可以檢視或管理共用資料來源。 檢視或管理共用資料來源的權限與報表檢視權限不同；您不需具備檢視 .rsds 檔本身的權限，也可以檢視使用 .rsds 檔的報表。  

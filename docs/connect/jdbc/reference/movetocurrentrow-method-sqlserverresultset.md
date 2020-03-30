@@ -16,10 +16,10 @@ ms.assetid: 9a7c754c-2d72-4207-b3bd-2afc6047fb3d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11a92c879995d198658853ef9b5cec9d00449230
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976834"
 ---
 # <a name="movetocurrentrow-method-sqlserverresultset"></a>moveToCurrentRow 方法 (SQLServerResultSet)

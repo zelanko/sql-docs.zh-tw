@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: abdbbd7659221fb27df12ff03995b2d246241463
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253863"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>產生指令碼 (SQL Server Management Studio)
@@ -28,13 +28,13 @@ ms.locfileid: "75253863"
 ## <a name="before-you-begin"></a>開始之前  
  選擇最符合您需求的機制。  
   
-###  <a name="GenPubScriptWiz"></a> [產生和發佈指令碼精靈]  
+###  <a name="generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> [產生和發佈指令碼精靈]  
  使用 [產生和發佈指令碼精靈]  ，為多個物件建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 此精靈會產生資料庫中所有物件的指令碼，或是您所選取之物件子集的指令碼。 此精靈具有許多適用於指令碼的選項，例如是否要包含權限、定序及條件約束等。 如需有關使用此精靈的指示，請參閱 [產生和發佈指令碼精靈](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md)。  
   
-###  <a name="OEScriptAsMenu"></a> 物件總管的 [編寫組件的指令碼為] 功能表  
+###  <a name="object-explorer-script-as-menu"></a><a name="OEScriptAsMenu"></a> 物件總管的 [編寫組件的指令碼為] 功能表  
  您可以使用物件總管的 [編寫指令碼為]  功能表來編寫單一物件、多個物件或單一物件之多個陳述式的指令碼。 您可以選擇數種指令碼的其中一種，例如建立、變更或卸除物件。 您可以將指令碼儲存到 [查詢編輯器] 視窗，或是儲存到檔案或剪貼簿。 指令碼是使用 Unicode 格式所建立。  
   
-##  <a name="ScriptSingleObject"></a> 產生單一物件的指令碼  
+##  <a name="to-generate-a-script-of-a-single-object"></a><a name="ScriptSingleObject"></a> 產生單一物件的指令碼  
  **編寫單一物件的指令碼**  
   
 1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  

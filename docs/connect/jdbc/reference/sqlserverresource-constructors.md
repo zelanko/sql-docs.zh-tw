@@ -11,10 +11,10 @@ ms.assetid: 3d13d934-542c-4aaa-8fe2-1bcb36c8cc4c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2edd88ab5bb371818e1b60888c4c59679f525524
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970677"
 ---
 # <a name="sqlserverresource-constructors"></a>SQLServerResource 建構函式

@@ -11,10 +11,10 @@ ms.assetid: fbc5bf3c-120c-4aec-a4f2-f5391bd415f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0032f92c79916cbd12962e792b51a05e9f353388
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581027"
 ---
 # <a name="configurationsetting-method---getadminsiteurl"></a>ConfigurationSetting 方法 - GetAdminSiteUrl

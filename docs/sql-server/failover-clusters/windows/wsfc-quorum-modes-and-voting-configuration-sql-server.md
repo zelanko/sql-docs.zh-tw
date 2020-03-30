@@ -15,10 +15,10 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 448d3679530c689befa59e2b8a70d409d93f6dd4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74822172"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 仲裁模式和投票組態 (SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "74822172"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 AlwaysOn 容錯移轉叢集執行個體 (FCI) 都會利用 Windows Server 容錯移轉叢集 (WSFC) 作為平台技術。  WSFC 使用以仲裁為基礎的方法，監視整體叢集健全狀況並最大化節點層級容錯能力。 WSFC 仲裁模式和節點投票組態的基礎了解，對於 AlwaysOn 高可用性和災害復原方案的設計、操作和疑難排解非常重要。  
   
   
-##  <a name="ClusterHealthDetectionbyQuorum"></a> 使用仲裁進行叢集健全狀況偵測  
+##  <a name="cluster-health-detection-by-quorum"></a><a name="ClusterHealthDetectionbyQuorum"></a> 使用仲裁進行叢集健全狀況偵測  
  WSFC 叢集中的每個節點都會參與定期的活動訊號通訊，與其他節點共用節點的健全狀況。 沒有回應的節點是視為處於失敗狀態。  
   
  *「仲裁」* (Quorum) 節點集是 WSFC 叢集中的多數投票節點和見證。 WSFC 叢集的整體健全狀況和狀態是由定期 *「仲裁投票」* (Quorum Vote) 所決定。  仲裁的存在意味著叢集狀況良好，能提供節點層級的容錯功能。  
@@ -36,9 +36,9 @@ ms.locfileid: "74822172"
 > [!IMPORTANT]  
 >  如果 WSFC 叢集因為仲裁失敗而設為離線，則需要手動操作，將其恢復上線。  
 >   
->  如需詳細資訊，請參閱[透過強制仲裁執行 WSFC 災害復原 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)。  
+>  如需詳細資訊，請參閱： [透過強制仲裁執行 WSFC 災害復原 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)(Quorum Vote) 所決定。  
   
-##  <a name="QuorumModes"></a> 仲裁模式  
+##  <a name="quorum-modes"></a><a name="QuorumModes"></a> 仲裁模式  
  *「仲裁模式」* (Quorum Mode) 是在 WSFC 叢集層級設定，指出仲裁投票所使用的方法。  容錯移轉叢集管理員公用程式會根據叢集中的節點數來建議仲裁模式。  
   
  下列仲裁模式可用於決定何者構成投票仲裁：  
@@ -56,7 +56,7 @@ ms.locfileid: "74822172"
 > [!TIP]  
 >  使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]非對稱儲存組態時，如果投票節點為奇數，通常應該使用節點多數仲裁模式，如果投票節點為偶數，則使用節點與檔案共用多數仲裁模式。  
   
-##  <a name="VotingandNonVotingNodes"></a> 投票和非投票節點  
+##  <a name="voting-and-non-voting-nodes"></a><a name="VotingandNonVotingNodes"></a> 投票和非投票節點  
  根據預設，WSFC 叢集中的每個節點都是叢集仲裁成員，每個節點都有一票決定整體叢集健全狀況，而且每個節點都會持續嘗試建立仲裁。  仲裁討論至此，針對投票決定叢集健全狀況的 WSFC 叢集節點集仔細限定為「投票節點」  。  
   
  WSFC 叢集中沒有個別節點可針對叢集整體狀況良好或狀況不良做最後決定。  在任何給定時刻，從每個節點的觀點來看，某些其他節點可能看起來離線、看起來正在進行容錯移轉，或因為網路通訊失敗而看起來沒有回應。  仲裁投票的關鍵功能是決定 WSFC 叢集中每個節點的表面狀態是否確實為這些節點的實際狀態。  
@@ -75,9 +75,9 @@ ms.locfileid: "74822172"
 > [!IMPORTANT]  
 >  為了能夠使用 NodeWeight 設定，必須將以下 Hotfix 套用至 WSFC 叢集中的所有伺服器：  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036)：提供 Hotfix 讓您設定叢集節點，該節點在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 中沒有仲裁投票  
+>  [KB2494036](https://support.microsoft.com/kb/2494036)：提供 Hotfix 讓您設定叢集節點，該節點在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
-##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> 建議的仲裁投票調整  
+##  <a name="recommended-adjustments-to-quorum-voting"></a><a name="RecommendedAdjustmentstoQuorumVoting"></a> 建議的仲裁投票調整  
  在啟用或停用指定 WSFC 節點的投票時，請遵循下列方針：  
   
 -   **預設沒有任何投票。** 假設每個節點一定要有明確的合理原因才能投票。  
@@ -104,21 +104,21 @@ ms.locfileid: "74822172"
 > 
 >  如需詳細資訊，請參閱：  [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md), [sys.dm_hadr_cluster_members](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md), [sys.dm_os_cluster_nodes](../../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md), [sys.dm_hadr_cluster_networks](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql.md)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [檢視叢集仲裁 NodeWeight 設定](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
 -   [設定叢集仲裁 NodeWeight 設定](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [AlwaysOn 可用性群組精靈中的仲裁投票組態檢查](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
--   [Windows Server Technologies:Failover Clusters](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx) (Windows Server 技術：容錯移轉叢集)  
+-   [Windows Server 技術：容錯移轉叢集](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [Failover Cluster Step-by-Step Guide:Configuring the Quorum in a Failover Cluster](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx) (容錯移轉叢集逐步指南：在容錯移轉叢集中設定仲裁)  
+-   [容錯移轉叢集逐步指南：在容錯移轉叢集中設定仲裁](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [透過強制仲裁執行 WSFC 災害復原 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

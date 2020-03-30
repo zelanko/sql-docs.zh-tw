@@ -17,15 +17,15 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 766bb8d9a90fb3f1af5a7697e52ae42f6c8fc8d7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253617"
 ---
 # <a name="search-text-with-wildcards"></a>使用萬用字元搜尋文字
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  下列運算式可以取代 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [尋找和取代]  對話方塊中 [尋找目標]  欄位的字元或數字。  
+  下列運算式可以取代  **[尋找和取代]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對話方塊中 [尋找目標]  欄位的字元或數字。  
   
 #### <a name="to-search-using-wildcards"></a>若要利用萬用字元搜尋  
   

@@ -11,10 +11,10 @@ ms.assetid: 030a1631-cfcd-41e0-beb5-47f93c01e8e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e30758f99b3b3aa1b40319fda91760b253d17a9a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977488"
 ---
 # <a name="isqlservercallablestatement-interface"></a>ISQLServerCallableStatement 介面

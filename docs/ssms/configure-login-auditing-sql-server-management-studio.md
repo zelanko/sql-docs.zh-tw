@@ -15,10 +15,10 @@ ms.assetid: 16961116-57ac-4eef-8037-791b26ade548
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: b9f82ea8f779d7347f436c8a696940db039b5191
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243953"
 ---
 # <a name="configure-login-auditing-sql-server-management-studio"></a>設定登入稽核 (SQL Server Management Studio)
@@ -33,7 +33,7 @@ ms.locfileid: "75243953"
   
 您必須重新啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，這個選項才會生效。  
   
-## <a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
   
 #### <a name="to-configure-login-auditing"></a>若要設定登入稽核  
   

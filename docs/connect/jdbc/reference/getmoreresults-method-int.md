@@ -16,10 +16,10 @@ ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08760680774b2e760b66d9e210c4ef939872444e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981772"
 ---
 # <a name="getmoreresults-method-int"></a>getMoreResults 方法 (int)

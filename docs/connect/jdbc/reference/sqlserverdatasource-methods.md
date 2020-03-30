@@ -11,10 +11,10 @@ ms.assetid: fac054f1-60dc-4261-bc1b-ed70d1ceb85f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 555d3f69d2087388e7f7e07ff66d79cc9b01eacc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971390"
 ---
 # <a name="sqlserverdatasource-methods"></a>SQLServerDataSource 方法

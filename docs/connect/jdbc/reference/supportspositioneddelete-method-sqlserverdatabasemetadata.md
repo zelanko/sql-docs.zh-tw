@@ -16,10 +16,10 @@ ms.assetid: 8011659a-d74b-489b-a88b-08bd9e8b48b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1dbe35f0d0068cabd92f3f8ff538e15fc0b81668
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969029"
 ---
 # <a name="supportspositioneddelete-method-sqlserverdatabasemetadata"></a>supportsPositionedDelete 方法 (SQLServerDatabaseMetaData)

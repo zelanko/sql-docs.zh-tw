@@ -16,10 +16,10 @@ ms.assetid: 770668d9-2e52-4ff0-be2f-ebf78fd41644
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2f77ce20c948623322b328c52d3f40db812551d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978766"
 ---
 # <a name="gettimestamp-method-javalangstring-javautilcalendar"></a>getTimestamp 方法 (java.lang.String, java.util.Calendar)

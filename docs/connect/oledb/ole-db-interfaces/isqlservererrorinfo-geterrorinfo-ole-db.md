@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 54e9c71ca21647004ea3899306dcb15689dcc3d0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015445"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
@@ -82,7 +82,7 @@ SSERRORINFO;
 |*pwszMessage*|來自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的錯誤訊息。 此訊息會透過 **IErrorInfo::GetDescription** 方法傳回。|  
 |*pwszServer*|發生錯誤之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。|  
 |*pwszProcedure*|如果在預存程序中發生錯誤，則是產生錯誤之預存程序的名稱，否則為空字串。|  
-|*lNative*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 錯誤號碼。 此錯誤號碼與 **ISQLErrorInfo::GetSQLInfo** 方法之 *plNativeError* 參數中所傳回的錯誤號碼相同。|  
+|*lNative*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 錯誤號碼。 此錯誤號碼與 *ISQLErrorInfo::GetSQLInfo* 方法之 **plNativeError** 參數中所傳回的錯誤號碼相同。|  
 |*bState*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 錯誤的狀態。|  
 |*bClass*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 錯誤的嚴重性。|  
 |*wLineNumber*|在適用時，這是產生錯誤訊息之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預存程序的行號。 如果不包含任何程序，預設值為 1。|  

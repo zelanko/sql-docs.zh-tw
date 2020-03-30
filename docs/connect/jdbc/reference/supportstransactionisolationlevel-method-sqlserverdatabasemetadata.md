@@ -16,10 +16,10 @@ ms.assetid: b716ed6c-6ec3-47a7-8e6d-16cbf2469d6d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ecfbc637db90531378d589043b637596c4ec2ee3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67968662"
 ---
 # <a name="supportstransactionisolationlevel-method-sqlserverdatabasemetadata"></a>supportsTransactionIsolationLevel 方法 (SQLServerDatabaseMetaData)

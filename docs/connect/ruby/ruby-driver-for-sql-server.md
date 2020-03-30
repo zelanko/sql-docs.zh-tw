@@ -11,10 +11,10 @@ ms.assetid: 45d1b1b6-363d-4924-bcb1-b2582b60f76b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d35336d1414df78e5d24c3133a176d3d232deadb
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866541"
 ---
 # <a name="ruby-driver-for-sql-server"></a>Ruby Driver for SQL Server
@@ -24,9 +24,9 @@ ms.locfileid: "78866541"
 您可以在 Windows、Linux 或 Mac 上使用 Ruby 連線到 SQL Database。   
   
 ## <a name="getting-started"></a>開始使用  
-* [步驟 1：設定 Ruby 開發的開發環境](step-1-configure-development-environment-for-ruby-development.md)  
-* [步驟 2：建立 Ruby 開發的 SQL 資料庫](step-2-create-a-sql-database-for-ruby-development.md)  
-* [步驟 3：使用 Ruby 連線到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-ruby.md)  
+* [步驟 1︰設定 Ruby 開發的開發環境](step-1-configure-development-environment-for-ruby-development.md)  
+* [步驟 2︰建立 Ruby 開發的 SQL 資料庫](step-2-create-a-sql-database-for-ruby-development.md)  
+* [步驟 3︰使用 Ruby 連接到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-ruby.md)  
   
 ## <a name="documentation"></a>文件  
 [Ruby-lang.org 上的文件](https://www.ruby-lang.org/en/documentation/) \(英文\)  

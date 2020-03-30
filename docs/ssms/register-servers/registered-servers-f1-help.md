@@ -15,10 +15,10 @@ ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: f8422cd501258d15365e7125c11e616c94d7dc8d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256232"
 ---
 # <a name="registered-servers-f1-help"></a>已註冊的伺服器 F1 說明
@@ -63,7 +63,7 @@ ms.locfileid: "75256232"
  **記住密碼**  
  請儲存您輸入的密碼。 唯有已按一下 **[基本驗證]** 或 **[表單驗證]** 時，才能使用此選項。  
   
-> **注意：** 如果您已儲存密碼但不想再儲存，請清除此核取方塊，然後按一下 [儲存]  。  
+> **注意：** 如果您已儲存密碼而要停止儲存密碼，請清除此核取方塊，然後按一下 [儲存]  。  
   
  **已註冊的伺服器名稱**  
  您要在 [已註冊的伺服器] 上顯示的名稱。 此名稱不需與 **[伺服器名稱]** 方塊中的名稱相符。  

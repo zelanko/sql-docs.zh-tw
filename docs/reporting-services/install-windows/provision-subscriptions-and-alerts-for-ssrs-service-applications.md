@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ef70b3430cc1028b7486bf663280cfcf740d9290
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62651950"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>SSRS 服務應用程式的佈建訂閱及警示
@@ -57,7 +57,7 @@ ms.locfileid: "62651950"
   
 5.  按一下 [確定]  按鈕。  
   
-##  <a name="bkmk_download"></a> 下載 Transact-SQL 指令碼  
+##  <a name="to-download-the-transact-sql-script"></a><a name="bkmk_download"></a> 下載 Transact-SQL 指令碼  
   
 1.  從 SharePoint 管理中心，按一下 [應用程式管理]  群組中的 [管理服務應用程式]  。  
   

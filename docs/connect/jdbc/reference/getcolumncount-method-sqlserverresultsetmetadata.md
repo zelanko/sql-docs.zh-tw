@@ -16,10 +16,10 @@ ms.assetid: a1fc3f50-3635-4fc5-b570-94d2c5a1873c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: df819ddaf8f6f574af26c5f7973beb7ae97384e1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67952987"
 ---
 # <a name="getcolumncount-method-sqlserverresultsetmetadata"></a>getColumnCount 方法 (SQLServerResultSetMetaData)

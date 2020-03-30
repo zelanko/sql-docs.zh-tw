@@ -1,6 +1,6 @@
 ---
 title: SQL Server 的提供者統計資料
-description: 描述對於取得 SQL Server 執行階段統計資料的支援。
+description: 描述對取得 SQL Server 執行階段統計資料的支援。
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -13,20 +13,20 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 76fc14c112d47f04fc790df118eea77f1bec42cb
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896600"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server 的提供者統計資料
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-從 .NET Framework 2.0 版與 .NET Core 1.0 版開始，適用於 SQL Server 的 Microsoft SqlClient Data Provider 就支援執行階段統計資料。 您必須在建立有效的連線物件之後，將 <xref:Microsoft.Data.SqlClient.SqlConnection> 物件的 <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 屬性設定為 `True`，以啟用統計資料。 啟用統計資料之後，您可以透過 <xref:Microsoft.Data.SqlClient.SqlConnection> 物件的 <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 方法來擷取 <xref:System.Collections.IDictionary> 參考，以「及時快照集」方式加以檢閱。 您可以將清單列舉為一組名稱/值對字典項目。 這些名稱/值對並未排序。 您隨時都可以呼叫 <xref:Microsoft.Data.SqlClient.SqlConnection> 物件的 <xref:Microsoft.Data.SqlClient.SqlConnection.ResetStatistics%2A> 方法來重設計數器。 如果尚未啟用統計資料收集功能，就不會產生例外狀況。 此外，如果在未先呼叫 <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 的情況下呼叫 <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>，擷取的值會是每個項目的初始值。 如果您啟用統計資料、執行應用程式一段時間，然後停用統計資料，擷取的值將會反映出直到停用統計資料那一刻為止，所收集到的值。 所有收集到的統計值都是以個別連線為基礎。  
+從 .NET Framework 2.0 版與 .NET Core 1.0 版開始，適用於 SQL Server 的 Microsoft SqlClient Data Provider 就支援執行階段統計資料。 您必須在建立有效的連線物件之後，將 <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 物件的 <xref:Microsoft.Data.SqlClient.SqlConnection> 屬性設定為 `True`，以啟用統計資料。 啟用統計資料之後，您可以透過 <xref:System.Collections.IDictionary> 物件的 <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 方法來擷取 <xref:Microsoft.Data.SqlClient.SqlConnection> 參考，以「及時快照集」方式加以檢閱。 您可以將清單列舉為一組名稱/值對字典項目。 這些名稱/值對並未排序。 您隨時都可以呼叫 <xref:Microsoft.Data.SqlClient.SqlConnection.ResetStatistics%2A> 物件的 <xref:Microsoft.Data.SqlClient.SqlConnection> 方法來重設計數器。 如果尚未啟用統計資料收集功能，就不會產生例外狀況。 此外，如果在未先呼叫 <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 的情況下呼叫 <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>，擷取的值會是每個項目的初始值。 如果您啟用統計資料、執行應用程式一段時間，然後停用統計資料，擷取的值將會反映出直到停用統計資料那一刻為止，所收集到的值。 所有收集到的統計值都是以個別連線為基礎。  
   
 ## <a name="statistical-values-available"></a>可用的統計值  
-Microsoft SQL Server 提供者目前提供了 18 個不同的項目。 可以透過 <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 傳回之 <xref:System.Collections.IDictionary> 介面參考的 **Count** 屬性，存取可用的項目數目。 提供者統計資料的所有計數器均使用 Common Language Runtime <xref:System.Int64> 類型 (C# 及 Visual Basic 中的 **long**)，寬度為 64 位元。 如 **int64.MaxValue** 欄位所定義，**int64** 資料類型的最大值是 ((2^63)-1))。 當計數器的值達到此最大值時，應該就不會再被視為準確的值。 這表示 **int64.MaxValue**-1((2^63)-2) 實際上是任何統計資料的最大有效值。  
+Microsoft SQL Server 提供者目前提供了 18 個不同的項目。 可以透過 **傳回之** 介面參考的 <xref:System.Collections.IDictionary>Count<xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 屬性，存取可用的項目數目。 提供者統計資料的所有計數器均使用 Common Language Runtime <xref:System.Int64> 類型 (C# 及 Visual Basic 中的 **long**)，寬度為 64 位元。 如 **int64.MaxValue** 欄位所定義，**int64** 資料類型的最大值是 ((2^63)-1))。 當計數器的值達到此最大值時，應該就不會再被視為準確的值。 這表示 **int64.MaxValue**-1((2^63)-2) 實際上是任何統計資料的最大有效值。  
   
 > [!NOTE]
 >  字典是用來傳回提供者統計資料，因為未來所傳回統計資料的數目、名稱與順序可能會變更。 應用程式不應該依賴在字典中找到的特定值，而應該改為檢查值是否存在，並據以進行分支處理。  
@@ -58,7 +58,7 @@ Microsoft SQL Server 提供者目前提供了 18 個不同的項目。 可以透
 下列主控台應用程式會顯示如何在連線上啟用統計資料、擷取四個獨立統計資料值，並將其寫到主控台視窗。  
   
 > [!NOTE]
->  下列範例使用包含於 SQL Server 的 **AdventureWorks** 範例資料庫。 範例程式碼中提供的連接字串會假設資料庫安裝在本機電腦且可供使用。 請依據環境需求修改連接字串。  
+>  下列範例使用包含於 SQL Server 的 **AdventureWorks** 範例資料庫。 範例程式碼中提供的連接字串會假設資料庫安裝在本機電腦且可供使用。 請依據您的環境需求修改連接字串。  
   
 ```csharp  
 using System;  
@@ -143,7 +143,7 @@ namespace CS_Stats_Console_GetValue
 下列主控台應用程式會顯示如何在連線上啟用統計資料、使用列舉程式擷取所有可用的統計資料值，並將其寫到主控台視窗。  
   
 > [!NOTE]
->  下列範例使用包含於 SQL Server 的 **AdventureWorks** 範例資料庫。 範例程式碼中提供的連接字串會假設資料庫安裝在本機電腦且可供使用。 請依據環境需求修改連接字串。  
+>  下列範例使用包含於 SQL Server 的 **AdventureWorks** 範例資料庫。 範例程式碼中提供的連接字串會假設資料庫安裝在本機電腦且可供使用。 請依據您的環境需求修改連接字串。  
   
 ```csharp  
 using System;  

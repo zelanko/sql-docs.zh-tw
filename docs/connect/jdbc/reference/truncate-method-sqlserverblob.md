@@ -16,10 +16,10 @@ ms.assetid: ef181e04-003a-442a-9b7e-0c508a7cc873
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3195b0eafb5eb48f7ec6b159fef05036d6efd7df
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67968494"
 ---
 # <a name="truncate-method-sqlserverblob"></a>truncate 方法 (SQLServerBlob)

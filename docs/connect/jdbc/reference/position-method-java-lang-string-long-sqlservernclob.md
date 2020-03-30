@@ -11,10 +11,10 @@ ms.assetid: 46d4beec-831a-449f-98b6-322a80cc499a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4dd9e30039b0d5ef429b8e729ce36f7b085e5cfc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976462"
 ---
 # <a name="position-method-javalangstring-long-sqlservernclob"></a>position 方法 (java.lang.String, long) (SQLServerNClob)
@@ -46,7 +46,7 @@ public long position(java.lang.String searchstr,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 這個 position 方法是由 java.sql.NClob 介面中的 position 方法指定。  
+ 這個 position 方法是由 java.sql.NClob 介面中的 position 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [position 方法 &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   

@@ -16,10 +16,10 @@ ms.assetid: 4d9db847-df22-40ab-8a5c-ec9158c576ca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1f83c94559eeedba5ab01e2ffa1835215d40af9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953669"
 ---
 # <a name="getboolean-method-int"></a>getBoolean 方法 (int)

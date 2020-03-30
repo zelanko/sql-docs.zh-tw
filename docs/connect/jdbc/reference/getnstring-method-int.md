@@ -11,10 +11,10 @@ ms.assetid: 2048bb9f-7d9b-4aaa-b135-c716910cc800
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbe3bc040ba79ad7699a571b13b48f2c41965c60
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981427"
 ---
 # <a name="getnstring-method-int"></a>getNString 方法 (int)

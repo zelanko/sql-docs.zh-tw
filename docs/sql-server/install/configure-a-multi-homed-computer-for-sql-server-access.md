@@ -14,10 +14,10 @@ ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d8733c9a4624bcadb60eb5cfa70cf81f242f43a7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244455"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>設定多重主目錄電腦進行 SQL Server 存取
@@ -67,9 +67,9 @@ ms.locfileid: "75244455"
   
 #### <a name="to-determine-the-ip-addresses-and-ports-used-by-ssnoversion"></a>判斷使用的 IP 位址和連接埠 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  按一下 [開始]  並依序指向 [所有程式]  、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 [組態工具]  ，然後按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員]  。  
+1.  按一下 [開始]  並依序指向 [所有程式]  、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 [組態工具]  ，然後按一下 [ **組態管理員][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 。  
   
-2.  在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員]  的主控台窗格中，展開 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 網路組態]  ，再展開 [\<執行個體名稱> 的通訊協定]  ，然後按兩下 [TCP/IP]  。  
+2.  在 [ **組態管理員][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 的主控台窗格中，展開 [ **網路組態][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ，再展開 [**執行個體名稱> 的通訊協定]\<** ，然後按兩下 [TCP/IP]  。  
   
 3.  在 [TCP/IP 內容]  對話方塊的 [IP 位址]  索引標籤上會出現數個 IP 位址，這些 IP 位址的格式是 **IP1**、**IP2** 到 **IPAll**。 其中一個是供回送介面卡的 IP 位址 127.0.0.1 使用。 此時會出現額外的 IP 位址，代表電腦上設定的每個 IP 位址。  
   

@@ -9,10 +9,10 @@ ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 990dba53ca575e09bcfefead21b5e37c82754c40
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63187305"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>SharePoint 整合中的報表檢視器 Web 組件可程式性

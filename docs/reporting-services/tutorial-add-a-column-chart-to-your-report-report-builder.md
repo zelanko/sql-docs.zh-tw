@@ -9,10 +9,10 @@ ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041305"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教學課程：將直條圖加入至報表 (報表產生器)
@@ -35,7 +35,7 @@ ms.locfileid: "63041305"
 ## <a name="requirements"></a>需求  
 如需需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="Chart"></a>1.從圖表精靈建立圖表報表  
+## <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1.從圖表精靈建立圖表報表  
 在本節中，您可以使用 [圖表精靈] 建立內嵌資料集，並選擇共用資料來源，然後建立直條圖。  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ ms.locfileid: "63041305"
   
 9. 按 [下一步]  。  
   
-## <a name="ChartType"></a>2.選擇圖表類型  
+## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2.選擇圖表類型  
 您可以從數個預先定義的圖表類型中進行選擇，然後在完成精靈之後修改圖表。  
   
 ### <a name="to-add-a-column-chart"></a>加入直條圖  
@@ -114,7 +114,7 @@ ms.locfileid: "63041305"
 
 請注意，圖表並未在水平軸上標示每個類別目錄。 根據預設，只有容納在軸旁的標籤才會包含在內。 
   
-## <a name="Horizontal"></a>3.格式化水平軸上的日期  
+## <a name="3-format-a-date-on-the-horizontal-axis"></a><a name="Horizontal"></a>3.格式化水平軸上的日期  
 根據預設，水平軸會以一般格式顯示值，此格式會自動調整為適合圖表的大小。  
   
 1.  切換到報表設計檢視。  
@@ -159,7 +159,7 @@ ms.locfileid: "63041305"
 
 ![report-builder-column-chart-rotate-x-axis-preview](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
   
-## <a name="Legend"></a>5.移動圖例  
+## <a name="5-move-the-legend"></a><a name="Legend"></a>5.移動圖例  
 圖例是從類別目錄和數列資料自動建立。 您可以移動直條圖之圖表區域下方的圖例。  
   
 1.  切換到報表設計檢視。  
@@ -176,7 +176,7 @@ ms.locfileid: "63041305"
   
 6.  按一下 **[執行]** 預覽報表。  
   
-## <a name="ChartTitle"></a>6.為圖表加上標題  
+## <a name="6-title-the-chart"></a><a name="ChartTitle"></a>6.為圖表加上標題  
     
 1.  切換到報表設計檢視。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "63041305"
   
 3.  按一下 **[執行]** 預覽報表。  
   
-## <a name="Vertical"></a>7.格式化及標示垂直軸  
+## <a name="7-format-and-label-the-vertical-axis"></a><a name="Vertical"></a>7.格式化及標示垂直軸  
 根據預設，垂直軸會以一般格式顯示值，此格式會自動調整為適合圖表的大小。   
   
 1.  切換到報表設計檢視。  
@@ -235,7 +235,7 @@ ms.locfileid: "63041305"
     
     現在，圖表會顯示其所有標籤。
   
-## <a name="Average"></a>9.新增具有導出數列的移動平均  
+## <a name="9-add-a-moving-average-with-a-calculated-series"></a><a name="Average"></a>9.新增具有導出數列的移動平均  
 
 移動平均是數列中資料的平均，是根據時間而計算。 移動平均可以找出趨勢。
   
@@ -261,7 +261,7 @@ ms.locfileid: "63041305"
 
 ![report-builder-column-chart-moving-average](../reporting-services/media/report-builder-column-chart-moving-average.png)
   
-## <a name="Title"></a>10.加入報表標題  
+## <a name="10-add-a-report-title"></a><a name="Title"></a>10.加入報表標題  
   
 1.  切換到報表設計檢視。  
   
@@ -283,7 +283,7 @@ ms.locfileid: "63041305"
   
 7.  按一下 **[執行]** 預覽報表。  
   
-## <a name="Save"></a>11.儲存報表  
+## <a name="11-save-the-report"></a><a name="Save"></a>11.儲存報表  
   
 ### <a name="to-save-the-report"></a>若要儲存報表  
   

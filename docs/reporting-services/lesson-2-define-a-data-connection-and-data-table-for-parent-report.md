@@ -9,10 +9,10 @@ ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e8bcfe976a8094c6faa22d8aab3db8a4a833d8cd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62651596"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>第 2 課：定義父報表的資料連接和資料表

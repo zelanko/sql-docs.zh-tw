@@ -11,10 +11,10 @@ ms.assetid: 9383e14d-c83e-43c5-980c-50a3e0bedc31
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 264de7ac150aca7494a380fbbd4f5b490607c5c6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974638"
 ---
 # <a name="setdatetimeoffset-method-sqlservercallablestatement"></a>setDateTimeOffset 方法 (SQLServerCallableStatement)
@@ -22,7 +22,7 @@ ms.locfileid: "67974638"
 
   這個方法是在 [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 中新增。  
   
- 將指定的資料行值設定為 [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 值。  
+ 將指定的資料行值設定為 [DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,7 +44,7 @@ public void setDateTimeOffset(String sCol, microsoft.sql.DateTimeOffset t)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 您可以使用 [SQLServerCallableStatement.getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md) 來擷取 [DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)值。  
+ 您可以使用 [SQLServerCallableStatement.getDateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) 來擷取 [DateTimeOffset 類別](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)值。  
   
  [setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md) 會採用資料行的序數。  
   

@@ -16,10 +16,10 @@ ms.assetid: ad871d09-ec43-4885-9067-20854b439b0c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ba397d39378e6e45bf63dffa4eb2efbca3b432c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953020"
 ---
 # <a name="getclob-method-javalangstring"></a>getClob 方法 (java.lang.String)

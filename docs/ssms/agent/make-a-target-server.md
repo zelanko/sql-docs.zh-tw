@@ -22,10 +22,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0c115e8d11a72bb7b066169e4f2a21d570adc366
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242863"
 ---
 # <a name="make-a-target-server"></a>設為目標伺服器
@@ -36,9 +36,9 @@ ms.locfileid: "75242863"
 
 本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQL Server 管理物件 (SMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中設定目標伺服器。  
   
-## <a name="BeforeYouBegin"></a>開始之前  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>開始之前  
   
-### <a name="Security"></a>安全性  
+### <a name="security"></a><a name="Security"></a>安全性  
 具有與 Proxy 相關聯之步驟的散發式作業，而該 Proxy 是在目標伺服器上的 Proxy 帳戶內容下執行 。 請確保符合以下條件，否則與 Proxy 相關聯之作業步驟將不會從主要伺服器下載至目標：  
   
 -   主要伺服器登錄子機碼 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<&#42;執行個體名稱&#42;>\SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) 設定為 1 (true)。 依預設，這個子機碼設為 0 (False)。  
@@ -55,10 +55,10 @@ ms.locfileid: "75242863"
   
     若要解決這個錯誤，請確定目標伺服器上有 Proxy 帳戶，且帳戶名稱與執行該作業步驟的主要伺服器 Proxy 帳戶相同。  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
 這個程序的執行權限預設會授與 **系統管理員 (sysadmin)** 固定伺服器角色的成員。  
   
-## <a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
   
 #### <a name="to-make-a-target-server"></a>若要設為目標伺服器  
   
@@ -79,7 +79,7 @@ ms.locfileid: "75242863"
     **如有必要，請建立新的登入，並指派存取 MSX 的權限給該登入**  
     如果指定的登入並不存在，就會在目標伺服器上建立新的登入。  
   
-## <a name="TsqlProcedure"></a>使用 Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>使用 Transact-SQL  
   
 #### <a name="to-make-a-target-server"></a>若要設為目標伺服器  
   

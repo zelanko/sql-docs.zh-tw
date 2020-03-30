@@ -11,10 +11,10 @@ ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: dnethi
 ms.author: dinethi
 ms.openlocfilehash: 2b46da30a4ea3c7548ca4696f144373feea7b986
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245671"
 ---
 # <a name="sql-server-management-studio-ssms-support-policy"></a>SQL Server Management Studio (SSMS) 支援原則
