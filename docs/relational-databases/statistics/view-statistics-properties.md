@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 45c297ea29dbab974f72f4ecf69deb5c65f57bbb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908020"
 ---
 # <a name="view-statistics-properties"></a>檢視統計資料屬性
@@ -38,14 +38,14 @@ ms.locfileid: "72908020"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  使用者必須擁有資料表，或者使用者必須是 **系統管理員** 固定伺服器角色、 **db_owner** 固定資料庫角色或 **db_ddladmin** 固定資料庫角色的成員，才能檢視統計資料物件。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-statistics-properties"></a>若要檢視統計資料屬性  
   
@@ -59,9 +59,9 @@ ms.locfileid: "72908020"
   
 5.  以滑鼠右鍵按一下要檢視其屬性的統計資料物件，然後選取 [屬性]  。  
   
-6.  在 [統計資料屬性 - _statistics_name_]  對話方塊的 [選取頁面]  窗格中，選取 [詳細資料]  。  
+6.  在 [統計資料屬性 - **statistics_name**]  對話方塊的 [選取頁面]  窗格中，選取 [詳細資料]  。  
   
-     下列屬性會在 [統計資料屬性 - _statistics_name_]  對話方塊的 [詳細資料]  頁面中顯示。  
+     下列屬性會在 [統計資料屬性 - **statistics_name**]  對話方塊的 [詳細資料]  頁面中顯示。  
   
      **資料表名稱**  
      顯示統計資料所描述的資料表名稱。  
@@ -70,7 +70,7 @@ ms.locfileid: "72908020"
      顯示儲存統計資料的資料庫物件名稱。  
   
      **INDEXstatistics_name 的統計資料**  
-     此文字方塊顯示從統計資料物件傳回的屬性。 此屬性分為三個區段：統計資料標頭、密度向量和長條圖。  
+     此文字方塊顯示從統計資料物件傳回的屬性。 屬性分為三個部分：統計資料標頭、密度向量和長條圖。  
   
      下列資訊描述結果集針對統計資料標頭所傳回的資料行。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "72908020"
   
 7.  按一下 [確定]  。  
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-statistics-properties"></a>若要檢視統計資料屬性  
   

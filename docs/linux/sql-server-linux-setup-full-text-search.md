@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70874760"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>在 Linux 上安裝 SQL Server 全文檢索搜尋
@@ -30,7 +30,7 @@ ms.locfileid: "70874760"
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-## <a name="RHEL">在 RHEL 上安裝</a>
+## <a name=""></a><a name="RHEL">在 RHEL 上安裝</a>
 
 使用下列命令，在 Red Hat Enterprise Linux 上安裝 **mssql-server-fts**。 
 
@@ -47,7 +47,7 @@ sudo yum update mssql-server-fts
 
 如果您需要離線安裝，請在[版本資訊](sql-server-linux-release-notes.md)中找到全文檢索搜尋套件下載。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
 
-## <a name="ubuntu">在 Ubuntu 上安裝</a>
+## <a name=""></a><a name="ubuntu">在 Ubuntu 上安裝</a>
 
 使用下列命令，在 Ubuntu 上安裝 **mssql-server-fts**。 
 
@@ -65,7 +65,7 @@ sudo apt-get install -y mssql-server-fts
 
 如果您需要離線安裝，請在[版本資訊](sql-server-linux-release-notes.md)中找到全文檢索搜尋套件下載。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
 
-## <a name="SLES">在 SLES 上安裝</a>
+## <a name=""></a><a name="SLES">在 SLES 上安裝</a>
 
 使用下列命令，在 SUSE Linux Enterprise Server 上安裝 **mssql-server-fts**。 
 
@@ -142,7 +142,7 @@ sudo zypper update mssql-server-fts
 | 烏都文 | 1056 |
 | 越南文 | 1066 |
 
-## <a id="filters"></a> 篩選
+## <a name="filters"></a><a id="filters"></a> 篩選
 
 全文檢索搜尋也適用於儲存在二進位檔案中的文字。 但是在此情況下，您必須已安裝篩選才能處理檔案。 如需篩選的詳細資訊，請參閱[設定及管理搜尋的篩選](../relational-databases/search/configure-and-manage-filters-for-search.md)。
 

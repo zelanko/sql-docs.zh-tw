@@ -11,10 +11,10 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cdc58884e65fb243bbb75f257e19ccef3faa2b9f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908939"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>刪除擁有使用中租用的備份 Blob 檔案
@@ -42,7 +42,7 @@ ms.locfileid: "72908939"
   
 1. **刪除 Blob：** 若要刪除擁有使用中租用的 Blob，必須先中斷租用。  
 
-###  <a name="Code_Example"></a> PowerShell 指令碼範例  
+###  <a name="powershell-script-example"></a><a name="Code_Example"></a> PowerShell 指令碼範例  
   
 > [!IMPORTANT]
 > 如果您執行的是 PowerShell 2.0，載入 Microsoft WindowsAzure.Storage.dll 組件時可能會發生問題。 建議您升級 [PowerShell](https://docs.microsoft.com/powershell/) 以解決這項問題。 您也可以使用下列因應措施來建立或修改 powershell.exe.config 檔案，以便在執行階段載入 .NET 2.0 和 .NET 4.0 組件：  

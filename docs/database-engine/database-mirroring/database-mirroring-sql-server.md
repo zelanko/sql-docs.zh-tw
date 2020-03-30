@@ -24,10 +24,10 @@ ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3f8ebb1119e84caa80c0faa03c5c1405992723b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006340"
 ---
 # <a name="database-mirroring-sql-server"></a>資料庫鏡像 (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "68006340"
 >  如需資料庫鏡像支援、限制、必要條件、設定夥伴伺服器之建議及部署資料庫鏡像之建議的資訊，請參閱 [資料庫鏡像的必要條件、限制和建議事項](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)。  
   
   
-##  <a name="Benefits"></a> 資料庫鏡像的優點  
+##  <a name="benefits-of-database-mirroring"></a><a name="Benefits"></a> 資料庫鏡像的優點  
  資料庫鏡像是一種簡單的策略，提供了下列優點：  
   
 -   提高資料庫的可用性。  
@@ -53,14 +53,14 @@ ms.locfileid: "68006340"
   
      資料庫鏡像可提供完整或近乎完整的資料備援性，端視作業模式是高安全性模式或高效能模式而定。 如需詳細資訊，請參閱本主題稍後的 [作業模式](#OperatingModes)。  
   
-     在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 或更新版本上執行的資料庫鏡像夥伴會自動嘗試解決阻礙讀取資料頁面的特定錯誤類型。 無法讀取頁面的夥伴會向其他夥伴要求全新副本。 如果這個要求成功，無法讀取的頁面就會使用副本取代，這通常會解決錯誤。 如需詳細資訊，請參閱[自動修復頁面 &#40;可用性群組：資料庫鏡像&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)。  
+     在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 或更新版本上執行的資料庫鏡像夥伴會自動嘗試解決阻礙讀取資料頁面的特定錯誤類型。 無法讀取頁面的夥伴會向其他夥伴要求全新副本。 如果這個要求成功，無法讀取的頁面就會使用副本取代，這通常會解決錯誤。 如需詳細資訊，請參閱本主題稍後的 [自動修復頁面 &#40;可用性群組：資料庫鏡像&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)。  
   
 -   提升實際執行的資料庫在升級期間的可用性。  
   
      若要將鏡像資料庫的停機時間減至最少，您可以循序升級裝載容錯移轉夥伴的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 這只需要承擔單一容錯移轉的停機時間。 這種升級形式就稱為 *「輪流升級」* 。 如需詳細資訊，請參閱 [升級鏡像執行個體](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)。  
   
   
-##  <a name="TermsAndDefinitions"></a> 資料庫鏡像詞彙和定義  
+##  <a name="database-mirroring-terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 資料庫鏡像詞彙和定義  
  自動容錯移轉  
  如果主體伺服器變得無法使用，鏡像伺服器接替主體伺服器的角色，並使其資料庫副本連接成為主體資料庫的程序。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "68006340"
  只能搭配高安全性模式使用的一種 SQL Server 選擇性執行個體，可讓鏡像伺服器辨別何時要起始自動容錯移轉。 與兩個容錯移轉夥伴不同的是，見證並不是為資料庫服務。 支援自動容錯移轉是見證的唯一角色。  
   
   
-##  <a name="HowWorks"></a> 資料庫鏡像概觀  
+##  <a name="overview-of-database-mirroring"></a><a name="HowWorks"></a> 資料庫鏡像概觀  
  資料庫鏡像會維護單一資料庫的兩份副本，而這兩份副本必須位於不同的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]伺服器執行個體上。 這些伺服器執行個體通常位於不同位置的電腦上。 在資料庫上啟動資料庫鏡像，起始這些伺服器執行個體之間的關係，稱為 *「資料庫鏡像工作階段」* (database mirroring session)。  
   
  其中一個伺服器執行個體會提供資料庫給用戶端 (「主體伺服器」  )。 另一個執行個體則當做熱或暖待命伺服器 (「鏡像伺服器」  )，端視鏡像工作階段的組態而定。 同步處理資料庫鏡像工作階段時，資料庫鏡像會提供熱待命伺服器來支援快速容錯移轉，因而不會遺失任何已認可的交易資料。 當工作階段無法同步處理時，鏡像伺服器通常會當做暖待命伺服器使用 (可能發生資料遺失)。  
@@ -140,7 +140,7 @@ ms.locfileid: "68006340"
 -   [暫停工作階段對主體交易記錄的影響](#ImpactOfPausing)  
   
   
-###  <a name="OperatingModes"></a> 作業模式  
+###  <a name="operating-modes"></a><a name="OperatingModes"></a> 作業模式  
  資料庫鏡像工作階段可與同步或非同步作業一起執行。 在非同步作業下，交易不會等待鏡像伺服器將記錄寫入磁碟，即逕行認可，藉以達到最大效能。 在同步作業下，交易將同時在兩個夥伴上進行認可，代價是會增加交易延遲性。  
   
  鏡像作業模式共有兩種。 其中一種模式 (「高安全性模式」  ) 可支援同步作業。 在高安全性模式下，當工作階段開始時，鏡像伺服器會儘快將鏡像資料庫與主體資料庫進行同步處理。 一旦資料庫同步處理完成之後，交易將同時在兩個夥伴上進行認可，代價是會增加交易延遲性。  
@@ -165,7 +165,7 @@ ms.locfileid: "68006340"
 >  建立新的鏡像工作階段或將見證加入至現有鏡像組態時，會要求所有涉及的伺服器執行個體都執行相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不過，當您升級為 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本時，這些相關執行個體的版本可能會不同。 如需詳細資訊，請參閱 [升級鏡像執行個體](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)。  
   
   
-####  <a name="TxnSafety"></a> 交易安全性與作業模式  
+####  <a name="transaction-safety-and-operating-modes"></a><a name="TxnSafety"></a> 交易安全性與作業模式  
  作業模式為同步或非同步作業需視其交易安全性設定而定。 如果您以獨佔模式使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來設定資料庫鏡像，系統便會在您選取作業模式時自動設定交易安全性設定。  
   
  如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 來設定資料庫鏡像，您就必須了解設定交易安全性的方式。 交易安全性是由 ALTER DATABASE 陳述式的 SAFETY 屬性所控制。 在要進行鏡像的資料庫上，SAFETY 不是 FULL 就是 OFF。  
@@ -177,7 +177,7 @@ ms.locfileid: "68006340"
  如需詳細資訊，請參閱 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
   
   
-###  <a name="RoleSwitching"></a> 角色切換  
+###  <a name="role-switching"></a><a name="RoleSwitching"></a> 角色切換  
  在資料庫鏡像工作階段的內容中，主體與鏡像角色通常可以用一種稱為 *「角色切換」* 的程序交換。 角色切換包括將主體角色傳送給鏡像伺服器。 在角色切換中，鏡像伺服器將充當主體伺服器的 *「容錯移轉夥伴」* 。 發生角色切換時，鏡像伺服器將接替主體角色，並使其資料庫副本變成線上狀態以做為主體資料庫。 先前的主體伺服器 (如果有的話) 將會擔任鏡像角色，而其資料庫則會變成新的鏡像資料庫。 原則上，各角色可以重複來回切換。  
   
  角色切換有下列三種形式。  
@@ -202,7 +202,7 @@ ms.locfileid: "68006340"
  在任何角色切換案例中，一旦新主體資料庫變成線上狀態之後，用戶端應用程式就可以重新連接到該資料庫來快速復原。  
   
   
-###  <a name="ConcurrentSessions"></a> 並行工作階段  
+###  <a name="concurrent-sessions"></a><a name="ConcurrentSessions"></a> 並行工作階段  
  給定的伺服器執行個體可以參與具有相同或不同伺服器執行個體的多個並行資料庫鏡像工作階段 (每個鏡像資料庫一個)。 通常，伺服器執行個體在所有資料庫鏡像工作階段中會專門當做夥伴或見證服務。 不過，由於每個工作階段獨立於其他工作階段，所以伺服器執行個體可以在某些工作階段中當做夥伴，而在其他工作階段中當做見證。 例如，請考慮下列在三個伺服器執行個體 (`SSInstance_1`、 `SSInstance_2`及 `SSInstance_3`) 中的四個工作階段。 每個伺服器執行個體會在某些工作階段中當做夥伴服務，而在其他工作階段中當做見證服務：  
   
 |伺服器執行個體|資料庫 A 的工作階段|資料庫 B 的工作階段|資料庫 C 的工作階段|資料庫 D 的工作階段|  
@@ -224,19 +224,19 @@ ms.locfileid: "68006340"
 > [!NOTE]  
 >  由於鏡像資料庫彼此獨立，因此資料庫不能當做群組來容錯移轉。  
   
-###  <a name="ClientConnections"></a> 用戶端連接  
+###  <a name="client-connections"></a><a name="ClientConnections"></a> 用戶端連接  
  資料庫鏡像工作階段的用戶端連接支援是由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供。 如需詳細資訊，請參閱本主題稍後的 [將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   
   
-###  <a name="ImpactOfPausing"></a> 暫停工作階段對主體交易記錄的影響  
+###  <a name="impact-of-pausing-a-session-on-the-principal-transaction-log"></a><a name="ImpactOfPausing"></a> 暫停工作階段對主體交易記錄的影響  
  資料庫擁有者可以隨時暫停工作階段。 暫停會保留工作階段狀態，同時移除鏡像。 工作階段暫停時，主體伺服器不會將任何新的記錄傳送到鏡像伺服器。 這些記錄全都保持使用中狀態，並累積到主體資料庫的交易記錄中。 只要資料庫鏡像工作階段保持暫停狀態，交易記錄便無法截斷。 因此，如果資料庫鏡像工作階段暫停太久，就會填滿記錄。  
   
  如需詳細資訊，請參閱本主題稍後的 [暫停與繼續資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md)。  
   
-##  <a name="SettingUpDbmSession"></a> 設定資料庫鏡像工作階段  
+##  <a name="setting-up-database-mirroring-session"></a><a name="SettingUpDbmSession"></a> 設定資料庫鏡像工作階段  
  資料庫擁有者或系統管理員必須先建立鏡像資料庫、設定端點與登入，而在某些情況下，還必須建立並設定憑證，之後才可以開始鏡像工作階段。 如需詳細資訊，請參閱本主題稍後的 [設定資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。  
   
-##  <a name="InterOp"></a> 與其他 Database Engine 功能的互通性和共存性  
+##  <a name="interoperability-and-coexistence-with-other-database-engine-features"></a><a name="InterOp"></a> 與其他 Database Engine 功能的互通性和共存性  
  資料庫鏡像可與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的下列功能或元件搭配使用。  
   
 -   [記錄傳送](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
@@ -247,7 +247,7 @@ ms.locfileid: "68006340"
   
 -   [複寫](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
-##  <a name="InThisSection"></a> 本節內容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 本節內容  
  [資料庫鏡像的必要條件、限制和建議事項](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  描述設定資料庫鏡像的必要條件和建議事項。  
   
@@ -282,7 +282,7 @@ ms.locfileid: "68006340"
  包含有關如何使用「資料庫鏡像監視器」或 **dbmmonitor** 預存程序來監視資料庫鏡像或工作階段的資訊。  
   
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 ### <a name="configuration-tasks"></a>組態工作  
  **使用 SQL Server Management Studio**  

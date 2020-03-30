@@ -28,10 +28,10 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68100466"
 ---
 # <a name="move-system-databases"></a>移動系統資料庫
@@ -56,7 +56,7 @@ ms.locfileid: "68100466"
 >  移動檔案之後， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 服務帳戶必須具有權限來存取新檔案資料夾位置中的檔案。
     
   
-##  <a name="Planned"></a> 計畫的重新放置與排程的磁碟維謢程序  
+##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a> 計畫的重新放置與排程的磁碟維謢程序  
  若要以計畫的重新放置或排程的維護作業來移動系統資料庫資料或記錄檔，請遵照下列步驟執行。 此程序適用於 master 和 Resource 資料庫以外的所有系統資料庫。  
   
 1.  對於要移動的每個檔案執行下列陳述式。  
@@ -93,7 +93,7 @@ ms.locfileid: "68100466"
   
 2.  透過傳送測試郵件，確認 Database Mail 是否可正常運作。  
   
-##  <a name="Failure"></a> 失敗復原程序  
+##  <a name="failure-recovery-procedure"></a><a name="Failure"></a> 失敗復原程序  
  如果因為硬體失敗必須移動檔案，請遵照下列步驟將檔案重新放置到新位置。 此程序適用於 master 和 Resource 資料庫以外的所有系統資料庫。  
   
 > [!IMPORTANT]  
@@ -141,7 +141,7 @@ ms.locfileid: "68100466"
     WHERE database_id = DB_ID(N'<database_name>');  
     ```  
   
-##  <a name="master"></a> 移動 master 資料庫  
+##  <a name="moving-the-master-database"></a><a name="master"></a> 移動 master 資料庫  
  若要移動 master 資料庫，請遵循下列步驟。  
   
 1.  從 **[開始]** 功能表上，依序指向 **[程式集]** 、 **[Microsoft SQL Server]** 和 **[組態工具]** ，再按一下 **[SQL Server 組態管理員]** 。  
@@ -188,10 +188,10 @@ ms.locfileid: "68100466"
 10. SQL Server 目前應該會正常執行。 不過，Microsoft 也建議調整 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`的登錄項目，其中 *instance_ID* 就像 `MSSQL13.MSSQLSERVER`。 在該登錄區中，將 `SQLDataRoot` 值變更為新路徑。 更新登錄失敗可能會導致無法修補和升級。
 
   
-##  <a name="Resource"></a> 移動 Resource 資料庫  
+##  <a name="moving-the-resource-database"></a><a name="Resource"></a> 移動 Resource 資料庫  
  Resource 資料庫的位置是 \<*磁碟機*>:\Program Files\Microsoft SQL Server\MSSQL\<版本>.\<*執行個體名稱*>\MSSQL\Binn\\。 此資料庫無法移動。  
   
-##  <a name="Follow"></a> 後續工作：移動所有系統資料庫之後  
+##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> 後續工作：移動所有系統資料庫之後  
  如果您將所有系統資料庫移動至新的磁碟機或磁碟區，或是移動至使用不同磁碟機代號的另一部伺服器，請進行下列更新。  
   
 -   變更 SQL Server Agent 記錄路徑。 如果您未更新此路徑，SQL Server Agent 將無法啟動。  
@@ -216,7 +216,7 @@ ms.locfileid: "68100466"
   
 4.  停止 SQL Server 服務然後啟動它來完成變更。  
   
-##  <a name="Examples"></a> 範例  
+##  <a name="examples"></a><a name="Examples"></a> 範例  
   
 ### <a name="a-moving-the-tempdb-database"></a>A. 移動 tempdb 資料庫  
  下列範例會以計畫的重新放置，將 `tempdb` 資料和記錄檔移到新位置。  
