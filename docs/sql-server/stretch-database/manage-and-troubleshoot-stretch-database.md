@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285772"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Stretch Database 的管理和疑難排解
@@ -27,7 +27,7 @@ ms.locfileid: "79285772"
   若要管理 Stretch Database 並對其進行疑難排解，請使用本文所述的工具和方法。  
 ## <a name="manage-local-data"></a>管理本機資料  
   
-###  <a name="LocalInfo"></a> 取得針對 Stretch Database 啟用之本機資料庫和資料表的相關資訊  
+###  <a name="get-info-about-local-databases-and-tables-enabled-for-stretch-database"></a><a name="LocalInfo"></a> 取得針對 Stretch Database 啟用之本機資料庫和資料表的相關資訊  
  開啟 **sys.databases** 和 **sys.tables** 目錄檢視，即可查看已啟用延展功能之 SQL Server 資料庫和資料表的相關資訊。 如需詳細資訊，請參閱 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 和 [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)。  
  
  若要查看 SQL Server 中啟用延展功能的資料表使用了多少空間，請執行下列陳述式。
@@ -44,17 +44,17 @@ GO
 ### <a name="check-the-filter-function-applied-to-a-table"></a>檢查篩選函數是否已套用至資料表  
  開啟 **sys.remote_data_archive_tables** 目錄檢視，並檢查 **filter_predicate** 資料行的值，以識別 Stretch Database 用什麼函數來選取要移轉的資料列。 如果值為 Null，便代表整個資料表皆符合移轉資格。 如需詳細資訊，請參閱 [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) 和[使用篩選函數選取要移轉的資料列](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。  
   
-###  <a name="Migration"></a> 檢查資料移轉狀態  
+###  <a name="check-the-status-of-data-migration"></a><a name="Migration"></a> 檢查資料移轉狀態  
  若要在 Stretch Database 監視器中監視資料移轉，請針對 SQL Server Management Studio 中的資料庫，選取 [工作 | 延展 | 監視]  。 如需詳細資訊，請參閱 [監視和疑難排解資料移轉 &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)。  
   
  或者，開啟 **sys.dm_db_rda_migration_status** 動態管理檢視，查看已移轉的批次和資料列數目。  
   
-###  <a name="Firewall"></a> 對資料移轉進行疑難排解  
+###  <a name="troubleshoot-data-migration"></a><a name="Firewall"></a> 對資料移轉進行疑難排解  
  如需疑難排解建議，請參閱 [監視和疑難排解資料移轉 &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)。  
   
 ## <a name="manage-remote-data"></a>管理遠端資料  
   
-###  <a name="RemoteInfo"></a> 取得 Stretch Database 所使用之遠端資料庫和資料表的相關資訊  
+###  <a name="get-info-about-remote-databases-and-tables-used-by-stretch-database"></a><a name="RemoteInfo"></a> 取得 Stretch Database 所使用之遠端資料庫和資料表的相關資訊  
  開啟 **sys.remote_data_archive_databases** 和 **sys.remote_data_archive_tables** 目錄檢視，即可查看已移轉資料儲存所在之遠端資料庫和資料表的相關資訊。 如需詳細資訊，請參閱 [sys.remote_data_archive_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md) 和 [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md)。  
  
 若要查看 Azure 中啟用延展功能的資料表使用了多少空間，請執行下列陳述式。
@@ -103,7 +103,7 @@ GO
  ### <a name="change-the-scope-of-queries-for-all-queries-by-all-users"></a>針對所有使用者進行的一切查詢來變更查詢範圍  
  若要針對所有使用者進行的一切查詢來變更查詢範圍，請執行 **sys.sp_rda_set_query_mode**預存程序。 您可以將範圍縮小為僅查詢本機資料、停用所有查詢，或還原預設範圍。 如需詳細資訊，請參閱 [sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)。  
    
- ### <a name="queryHints"></a>針對系統管理員進行的單一查詢來變更查詢範圍  
+ ### <a name="change-the-scope-of-queries-for-a-single-query-by-an-administrator"></a><a name="queryHints"></a>針對系統管理員進行的單一查詢來變更查詢範圍  
  若要變更 db_owner 角色成員進行的單一查詢範圍，請將 **WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE = *value* )** 查詢提示加入 SELECT 陳述式中。 REMOTE_DATA_ARCHIVE_OVERRIDE 查詢提示可以為下列值。  
  -   **LOCAL_ONLY**。 僅查詢本機資料。  
    
@@ -120,7 +120,7 @@ SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = 
 GO
 ```  
    
- ## <a name="adminHints"></a>進行管理更新和刪除  
+ ## <a name="make-administrative-updates-and-deletes"></a><a name="adminHints"></a>進行管理更新和刪除  
  在已啟用延展功能的資料表中，依預設無法 UPDATE (更新) 或 DELETE (刪除) 可進行移轉的資料列或已移轉的資料列。 當您必須修正問題時，db_owner 角色的成員可將 **WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE = *value* )** 查詢提示加入陳述式中，以執行 UPDATE 或 DELETE 作業。 REMOTE_DATA_ARCHIVE_OVERRIDE 查詢提示可以為下列值。  
  -   **LOCAL_ONLY**。 僅更新或刪除本機資料。  
    

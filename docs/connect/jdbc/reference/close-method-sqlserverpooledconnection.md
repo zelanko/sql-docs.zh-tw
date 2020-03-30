@@ -16,10 +16,10 @@ ms.assetid: 8de23939-aa84-47a1-aeb9-b03c69c090dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e04edd22f354440d1ef3704090f3d3c0b8189f23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955579"
 ---
 # <a name="close-method-sqlserverpooledconnection"></a>close 方法 (SQLServerPooledConnection)

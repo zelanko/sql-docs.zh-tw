@@ -16,10 +16,10 @@ ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 248213fed555ffc029162c44bdcccb656c311703
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974284"
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>setEncrypt 方法 (SQLServerDataSource)
@@ -37,7 +37,7 @@ public void setEncypt(boolean encrypt)
 #### <a name="parameters"></a>參數  
  *encrypt*  
   
- 如果用戶端與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之間啟用安全通訊端層 (SSL) 加密，則為 **true** 否則為 **false**。  
+ 如果用戶端與 **之間啟用安全通訊端層 (SSL) 加密，則為**true[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 否則為 **false**。  
   
 ## <a name="remarks"></a>備註  
  如果 encrypt 屬性已設定為 **true**，則 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 會確定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 將針對用戶端和伺服器之間傳送的所有資料使用 SSL 加密，條件是伺服器上必須先安裝憑證。 預設值為 **false**。  

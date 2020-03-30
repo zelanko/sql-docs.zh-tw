@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571598"
 ---
 # <a name="data-alert-designer"></a>資料警示設計工具
@@ -54,7 +54,7 @@ ms.locfileid: "65571598"
   
  若要開啟 [資料警示設計工具]，請在報表工具列上按一下 [動作]  功能表上的 [新資料警示]  選項。 如果您看不見 [新資料警示]  選項，表示報表未設定為使用預存認證。 您可以藉由從 SharePoint 文件庫更新報表資料來源的方式更新認證類型。  
   
-##  <a name="AlertDesigner"></a> 資料警示設計工具使用者介面  
+##  <a name="data-alert-designer-user-interface"></a><a name="AlertDesigner"></a> 資料警示設計工具使用者介面  
  [資料警示設計工具] 分成下列幾個區域。 選取報表資料摘要的區域、將規則加入條件中以建立簡單或複雜條件的區域等。 下圖顯示 [資料警示設計工具] 中的區域。  
   
  ![警示設計工具使用者介面中的區域](../reporting-services/media/rs-alertdesigner.gif "警示設計工具使用者介面中的區域")  
@@ -170,13 +170,13 @@ ms.locfileid: "65571598"
 ### <a name="email-settings"></a>電子郵件設定  
  您可在 [收件者]  選項中指定要接收資料警示訊息電子郵件之收件者的電子郵件地址。 多個電子郵件是以分號分隔，與 Microsoft Office Outlook 電子郵件中的方式相同。 您也可以指定通訊群組做為收件者，如此可讓管理收件者清單的工作更容易且更有效率。 如果建立警示定義時，SharePoint 可以判斷您的電子郵件地址，則您的電子郵件地址會自動加入收件者清單，否則您就必須明確將自己加入為收件者。  
   
- 預設的電子郵件主旨為 [\<警示名稱> 的資料警示]  。 您可以依需要變更主旨。  
+ 預設的電子郵件主旨為 [**警示名稱> 的資料警示]\<** 。 您可以依需要變更主旨。  
   
  您也可以在 [描述]  選項中提供要包含在資料警示訊息中的描述。 包含描述 (尤其是擁有類似的資料警示時) 有助於迅速區分和了解警示訊息。 除了在報表資料滿足指定的規則時傳送的警示訊息之外，警示訊息還會在發生錯誤時傳送至所有收件者。 如需相關資訊，請參閱 [Data Alert Messages](../reporting-services/data-alert-messages.md)。  
   
  如需如何產生電子郵件的詳細資訊，請參閱 [Reporting Services 資料警示](../reporting-services/reporting-services-data-alerts.md)。  
   
-##  <a name="CreateAlert"></a> 建立資料警示定義  
+##  <a name="create-a-data-alert-definition"></a><a name="CreateAlert"></a> 建立資料警示定義  
  如果您擁有「SharePoint 檢視項目」和「建立提醒」權限，只要報表使用預存認證或不使用認證，您就可以為任何可以檢視的報表建立資料警示定義。 您會從 SharePoint 文件庫執行報表。 您可在 [資料警示設計工具] 中使用的資料是來自該報表。 如果報表已參數化，您可能需要使用不同的參數值來執行報表，以確保您想要的資料會出現在報表中。 報表開啟之後，在報表工具列上按一下 [動作]  功能表上的 [新資料警示]  選項，開啟 [資料警示設計工具]。 下圖說明如何開啟 [資料警示設計工具]。  
   
  ![從 SharePoint 文件庫開啟警示設計工具](../reporting-services/media/rs-openalertdesigneriw.gif "從 SharePoint 文件庫開啟警示設計工具")  
@@ -184,7 +184,7 @@ ms.locfileid: "65571598"
  如需詳細資訊，請參閱 [在資料警示設計工具中建立資料警示](../reporting-services/create-a-data-alert-in-data-alert-designer.md)。  
   
   
-##  <a name="SaveAlert"></a> 儲存資料警示定義  
+##  <a name="save-a-data-alert-definition"></a><a name="SaveAlert"></a> 儲存資料警示定義  
  [資料警示設計工具] 會顯示將儲存資料警示定義的目標網站 URL。 資料警示定義會固定儲存到報表所在的網站。  
   
 > [!NOTE]  
@@ -193,7 +193,7 @@ ms.locfileid: "65571598"
  警示定義儲存之前，會先進行驗證。 您必須先更正所有錯誤，才能成功儲存警示定義。 如需詳細資訊，請參閱 [在資料警示設計工具中建立資料警示](../reporting-services/create-a-data-alert-in-data-alert-designer.md)。  
   
   
-##  <a name="EditAlert"></a> 編輯資料警示定義  
+##  <a name="edit-a-data-alert-definition"></a><a name="EditAlert"></a> 編輯資料警示定義  
  儲存資料警示定義之後，您就可以在 [資料警示設計工具] 中再次開啟該警示定義並進行編輯。 您可以加入、變更或刪除規則和子句，以及變更排程和電子郵件設定。 如果警示使用的報表資料摘要已變更，而且不再提供警示規則參考的欄位，或是欄位的資料類型或其他中繼資料已變更，則警示定義就不再有效，您必須修正它，才能再次儲存。 如果您想要使用不同的資料摘要，則必須建立新的警示定義。  
   
  若要編輯資料警示定義，請在 [資料警示管理員] 中以滑鼠右鍵按一下該資料警示定義，然後按一下 [編輯]  。 下圖說明 [資料警示管理員] 中資料警示的內容功能表。  
@@ -203,7 +203,7 @@ ms.locfileid: "65571598"
  如需詳細資訊，請參閱 [在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
   
   
-##  <a name="HowTo"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="HowTo"></a> 相關工作  
  本節列出如何建立和編輯警示的程序。  
   
 -   [在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)  

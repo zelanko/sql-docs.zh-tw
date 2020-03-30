@@ -11,10 +11,10 @@ ms.assetid: f1cfa4e4-3e1f-4504-b0de-cc626d653661
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 004f5d89eaaa4293ae7da0058733b261c01c7531
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981691"
 ---
 # <a name="getncharacterstream-method-int-sqlserverresultset"></a>getNCharacterStream 方法 (int) (SQLServerResultSet)
@@ -43,7 +43,7 @@ public java.io.Reader getNCharacterStream(int columnIndex)
 ## <a name="remarks"></a>備註  
  這個 getNCharacterStream 方法是由 java.sql.ResultSet 介面中的 getNCharacterStream 方法所指定。  
   
- 這個方法可以用來擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中 **nvarchar**、**nchar**、**nvarchar(max)** 、**ntext** 或 **xml** 資料行的值。 如果嘗試使用這個方法來擷取其他資料類型的值，將擲回例外狀況。  
+ 這個方法可以用來擷取這個 **SQLServerResultSet** 物件目前資料列中 **nvarchar**、**nchar**、**nvarchar(max)** 、**ntext** 或 [xml](../../../connect/jdbc/reference/sqlserverresultset-class.md) 資料行的值。 如果嘗試使用這個方法來擷取其他資料類型的值，將擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱  
  [getNCharacterStream 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)   

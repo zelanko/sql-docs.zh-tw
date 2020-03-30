@@ -11,10 +11,10 @@ ms.assetid: d97c99b3-2224-4abb-8b32-40aff49fe759
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f7406bce05278cad83b28b14f95a241b3eff026
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67986053"
 ---
 # <a name="unwrap-method-sqlserverxadatasource"></a>unwrap 方法 (SQLServerXADataSource)
@@ -45,7 +45,7 @@ public <T> T unwrap(Class<T> iface)
   
  應用程式可能必須存取 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 特定的 JDBC API 延伸模組。 在類別公開供應商延伸模組的情況下，unwrap 方法支援解除包裝為這個物件可擴充的公用類別。  
   
- [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) 類別會擴充 [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 類別，而後者是由 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 類別擴充所得到的類別。 當呼叫這個方法時，物件會解除包裝成為下列類別：[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)、[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)，以及 [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)。  
+ [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) 類別會擴充 [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 類別，而後者是由 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 類別擴充所得到的類別。 當呼叫這個方法時，物件會解除包裝為下列類別：[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)、[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 和 [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)。  
   
  如需詳細資訊，請參閱[包裝函式與介面](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   

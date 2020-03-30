@@ -11,10 +11,10 @@ ms.assetid: b616632b-5987-470d-b36c-b22fa9213145
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf4c90644282ff420e064e7a7b5b99a93c257194
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971386"
 ---
 # <a name="sqlserverdatasourceobjectfactory-class"></a>SQLServerDataSourceObjectFactory 類別

@@ -10,10 +10,10 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 ms.openlocfilehash: 918b3b6bfcb217ef90ae08a9fb746a4836d51900
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256891"
 ---
 # <a name="sql-server-big-data-clusters-partners"></a>SQL Server 巨量資料叢集合作夥伴

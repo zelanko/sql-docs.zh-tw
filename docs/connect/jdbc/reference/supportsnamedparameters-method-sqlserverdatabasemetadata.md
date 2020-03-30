@@ -16,10 +16,10 @@ ms.assetid: 158be08f-387d-4c5b-b567-a1fe590d6f16
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c5c0ac339c60b4e88138d18a1f66798b4c66d8b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969138"
 ---
 # <a name="supportsnamedparameters-method-sqlserverdatabasemetadata"></a>supportsNamedParameters 方法 (SQLServerDatabaseMetaData)

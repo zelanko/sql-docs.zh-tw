@@ -9,10 +9,10 @@ ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8cff1f3e79c383dbcbfe365ab36d9fa6912d6e28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080356"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>運算式 (報表產生器及 SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "77080356"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Types"></a> 了解簡單和複雜運算式  
+##  <a name="understanding-simple-and-complex-expressions"></a><a name="Types"></a> 了解簡單和複雜運算式  
  運算式是以等號 (=) 作為開頭，且是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 撰寫。 運算式可以包含常數、運算子及內建值 (欄位、集合和函數) 和外部或自訂程式碼參考的組合。  
   
  您可以使用運算式來指定許多報表項目屬性的值。 最常見的屬性為文字方塊與預留位置文字的值。 如果文字方塊只包含一個運算式，該運算式通常就是文字方塊屬性的值。 如果文字方塊包含多個運算式，每個運算式都是文字方塊中的預留位置文字值。  
@@ -56,7 +56,7 @@ ms.locfileid: "77080356"
   
  如需詳細資訊，請參閱 [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)(建立發票和表單的清單)。  
   
-## <a name="DisplayText"></a> 了解簡單運算式中的字首符號  
+## <a name="understanding-prefix-symbols-in-simple-expressions"></a><a name="DisplayText"></a> 了解簡單運算式中的字首符號  
 
 簡單運算式會使用符號來指示參考是指向欄位、參數、內建集合還是報表項目集合。 下表顯示了顯示和運算式文字的範例：  
   
@@ -67,7 +67,7 @@ ms.locfileid: "77080356"
 |內建欄位|`[&ReportName]`|`=Globals!ReportName.Value`|  
 |用於顯示文字的常值字元|`\[Sales\]`|`[Sales]`|  
   
-##  <a name="References"></a> 撰寫複雜運算式  
+##  <a name="writing-complex-expressions"></a><a name="References"></a> 撰寫複雜運算式  
  運算式可以包含函數、運算子、常數、欄位、參數、內建集合的項目，以及內嵌自訂程式碼或自訂組件的參考。  
   
 > [!NOTE]
@@ -83,7 +83,7 @@ ms.locfileid: "77080356"
 |[內建報表和彙總函式](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)|描述可以從運算式存取的內建函數，例如， `Sum` 或 `Previous`。|`=Previous(Sum(Fields!Sales.Value))`|  
 |[報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|描述如何存取內建的 CLR 類別 <xref:System.Math> 和 <xref:System.Convert>、其他的 CLR 類別、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 執行階段程式庫函數，或來自外部組件的方法。<br /><br /> 描述如何存取內嵌於報表，或在編譯後安裝在報表用戶端和報表伺服器上做為自訂組件的自訂程式碼。|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
    
-##  <a name="Valid"></a> 驗證運算式  
+##  <a name="validating-expressions"></a><a name="Valid"></a> 驗證運算式  
  為特定的報表項目屬性建立運算式時，包含在運算式中的參考取決於報表項目屬性可以接受的值，以及評估屬性的範圍。 例如：  
   
 -   根據預設，運算式 [Sum] 會計算評估運算式時範圍內資料的總和。 若是資料表資料格，範圍則視資料列和資料行群組成員資格而定。 如需詳細資訊，請參閱 [總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
@@ -94,7 +94,7 @@ ms.locfileid: "77080356"
   
  如需詳細資訊，請參閱 [運算式參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md)。  
   
-##  <a name="Section"></a> 本節內容  
+##  <a name="in-this-section"></a><a name="Section"></a> 本節內容  
  [加入運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)  
   
  [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  

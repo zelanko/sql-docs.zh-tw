@@ -16,10 +16,10 @@ ms.assetid: 09491a8a-1931-411e-9b35-2b269c1b7f12
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08d74e16d8d841503ea729d28518be8018e2bc6a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983077"
 ---
 # <a name="getfloat-method-javalangstring-sqlserverresultset"></a>getFloat 方法 (java.lang.String) (SQLServerResultSet)

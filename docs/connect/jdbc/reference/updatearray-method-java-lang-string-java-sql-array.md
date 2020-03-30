@@ -16,10 +16,10 @@ ms.assetid: 6f2ced5a-1c7d-439a-aaa5-472b9f4fdeab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d70293862bb147b7eab40862368709c338646fb0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67985561"
 ---
 # <a name="updatearray-method-javalangstring-javasqlarray"></a>updateArray 方法 (java.lang.String, java.sql.Array)

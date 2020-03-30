@@ -16,10 +16,10 @@ ms.assetid: 2e4fa385-8f61-4394-8f75-3e839930a57d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74cc1b97c121b5e1a6e7d55127ec18cd2caec4fd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955353"
 ---
 # <a name="createstatement-method-int-int-int"></a>createStatement 方法 (int, int, int)
@@ -56,7 +56,7 @@ public java.sql.Statement createStatement(int nType,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 這個 createStatement 方法是由 java.sql.Connection 介面中的 createStatement 方法指定。  
+ 這個 createStatement 方法是由 java.sql.Connection 介面中的 createStatement 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [createStatement 方法 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   

@@ -10,17 +10,17 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68259358"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services 中的樹狀圖與放射環狀圖 
 
 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀圖和放射環狀視覺效果是以視覺呈現階層資料的絕佳方式。 本文是如何新增樹狀圖或放射環狀圖到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表的概觀。 本文也包含可協助您開始使用的 AdventureWorks 範例查詢。  
   
-##  <a name="bkmk_treemap_chart"></a> 樹狀圖圖表  
+##  <a name="treemap-chart"></a><a name="bkmk_treemap_chart"></a> 樹狀圖圖表  
 
 樹狀圖圖表會將圖表區域分割成矩形，該矩形代表資料階層的不同層級與相對大小。 樹狀圖類似樹上的樹枝，從主幹開始，分割為越來越小的分支。 每個矩形會分成較小的矩形，表示階層中的下一個層級。 最上層的樹狀圖矩形的排列方式是，最大的矩形排列在圖表左上角，最小的矩形在右下角。  在矩形中，更高的下一層級也會從左上到右下排列矩形。  
 
@@ -45,7 +45,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
     * **類別目錄群組** (依下列順序)：
         1. CategoryName
         2. SubcategoryName
-    * **序列群組**：TerritoryName  
+    * **數列群組**：TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -67,7 +67,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
   
 7. 顯示的標籤值數目會受字型大小、整體圖表區域大小，和特定矩形的大小影響。 若要看到更多標籤，將 **LineTotal** 的 **Label Font** 屬性從預設的 **8pt** 變更為 **10pt**。  
 
-##  <a name="bkmk_sunburst_chart"></a> 放射環狀圖表  
+##  <a name="sunburst-chart"></a><a name="bkmk_sunburst_chart"></a> 放射環狀圖表  
 
 在放射環狀圖表中，階層以一系列的圓形表示。 在中心是階層的最高層級，階層的較低層級則會顯示在中心之外的環。  最低層級的階層在環形外部。  
   
@@ -91,7 +91,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
         1. CategoryName
         2. SubcategoryName
         3. SalesReasonName
-    * **序列群組**：TerritoryName  
+    * **數列群組**：TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -107,7 +107,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
 
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
 
-##  <a name="bkmk_sample_data"></a> 範例 AdventureWorks 資料
+##  <a name="sample-adventureworks-data"></a><a name="bkmk_sample_data"></a> 範例 AdventureWorks 資料
 
 本節包含範例查詢及在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中建立資料來源和資料集的基本步驟。 如果報表已包含資料來源及資料集，您可以略過本節。  
   
@@ -115,7 +115,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
   
 1. **取得資料**。  
   
-     本節中的查詢是以 AdventureWorks 資料庫為基礎，此資料庫可從 GitHub 下載：[AdventureWorks 2016 完整資料庫備份](https://github.com/Microsoft/sql-server-samples/releases)。  
+     本節中的查詢是以 AdventureWorks 資料庫為基礎，該資料庫可從 GitHub：[AdventureWorks 2016 完整資料庫備份](https://github.com/Microsoft/sql-server-samples/releases)下載取得。  
 
 2. **建立資料來源**。  
   
@@ -180,4 +180,4 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
 
 * [教學課程：Power BI 中的樹狀圖](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
 
-* [Treemap:Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx) (樹狀圖：適用於 Office 之 Microsoft 研究的資料視覺效果應用程式)
+* [樹狀圖：適用於 Office 的 Microsoft 研究資料視覺效果應用程式](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)

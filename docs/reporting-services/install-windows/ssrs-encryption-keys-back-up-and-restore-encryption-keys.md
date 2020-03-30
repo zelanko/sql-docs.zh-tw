@@ -13,10 +13,10 @@ ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3a1066e06ca5a526cbfa4cb6f7d54014e4ef520d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65502855"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 加密金鑰 - 備份與還原加密金鑰
@@ -46,18 +46,18 @@ ms.locfileid: "65502855"
 
  備份對稱金鑰的程序是將金鑰寫入您指定的檔案，然後使用您提供的密碼將金鑰加密。 對稱金鑰絕不能以未加密的狀態儲存，因此您將金鑰儲存到磁碟時，必須提供密碼將其加密。 檔案建立之後，您必須將其儲存在安全的位置，並 **記住用來解除檔案鎖定的密碼** 。 若要備份對稱金鑰，您可以使用下列工具：  
   
- **原生模式：** Reporting Services 組態管理員或 **rskeymgmt** 公用程式。  
+ **原生模式** ：Reporting Services 組態管理員或 **rskeymgmt** 公用程式。  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
- **SharePoint 模式：** SharePoint 管理中心頁面或 PowerShell。  
+ **SharePoint 模式** ：SharePoint 管理中心頁面或 PowerShell。  
   
-##  <a name="bkmk_backup_sharepoint"></a> 備份 SharePoint 模式報表伺服器  
+##  <a name="backup-sharepoint-mode-report-servers"></a><a name="bkmk_backup_sharepoint"></a> 備份 SharePoint 模式報表伺服器  
  對於 SharePoint 模式報表伺服器，您可以使用 PowerShell 命令，或使用適用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面。 如需詳細資訊，請參閱[管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的＜金鑰管理＞一節  
 
 ::: moniker-end
   
-##  <a name="bkmk_backup_configuration_manager"></a> 備份加密金鑰 - Reporting Services 組態管理員 (原生模式)  
+##  <a name="back-up-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> 備份加密金鑰 - Reporting Services 組態管理員 (原生模式)  
   
 1.  啟動報表伺服器組態管理員，然後連線到您要設定的報表伺服器執行個體。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65502855"
   
 5.  選取 [確定]  。  
   
-###  <a name="bkmk_backup_rskeymgmt"></a> 備份加密金鑰 - rskeymgmt (原生模式)  
+###  <a name="back-up-encryption-keys--rskeymgmt-native-mode"></a><a name="bkmk_backup_rskeymgmt"></a> 備份加密金鑰 - rskeymgmt (原生模式)  
   
 1.  在主控報表伺服器的本機電腦上，執行 **[rskeymgmt.exe]** 。 您必須使用 **-e** 擷取引數來複製金鑰、提供檔案名稱，並指定密碼。 下列範例說明您必須指定的引數：  
   
@@ -90,7 +90,7 @@ ms.locfileid: "65502855"
   
  若要還原加密金鑰，檔案上必須有一個加密金鑰的副本。 您也必須知道解除鎖定儲存之副本的密碼。 如果您有金鑰和密碼，就可以執行 Reporting Services 組態工具或 **rskeymgmt** 公用程式來還原金鑰。 對稱金鑰必須和鎖定與解除鎖定目前儲存在報表伺服器資料庫中之加密資料的金鑰相同。 如果您還原無效的副本，報表伺服器將無法存取目前儲存在報表伺服器資料庫中的加密資料。 萬一發生這種情形，如果無法還原有效的金鑰，就必須刪除所有的加密值。 如果因故無法還原加密金鑰 (例如，您若沒有備份副本)，則必須刪除現有的金鑰和加密內容。 如需詳細資訊，請參閱[刪除和重新建立加密金鑰 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)。 如需建立對稱金鑰的詳細資訊，請參閱[初始化報表伺服器 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
   
-###  <a name="bkmk_restore_configuration_manager"></a> 還原加密金鑰 - Reporting Services 組態管理員 (原生模式)  
+###  <a name="restore-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> 還原加密金鑰 - Reporting Services 組態管理員 (原生模式)  
   
 1.  啟動 Reporting Services 組態管理員，然後連接到您要設定的報表伺服器執行個體。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "65502855"
   
 5.  選取 [確定]  。 
   
-###  <a name="bkmk_restore_rskeymgmt"></a> 還原加密金鑰 - rskeymgmt (原生模式)  
+###  <a name="restore-encryption-keys---rskeymgmt-native-mode"></a><a name="bkmk_restore_rskeymgmt"></a> 還原加密金鑰 - rskeymgmt (原生模式)  
   
 1.  在主控報表伺服器的本機電腦上，執行 **[rskeymgmt.exe]** 。 使用 **-a** 引數還原金鑰。 您必須提供完整的檔案名稱，並指定密碼。 下列範例說明您必須指定的引數：  
   

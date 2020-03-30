@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242694"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>逐步解說：擴充資料庫專案組建，以產生模型統計資料
@@ -70,7 +70,7 @@ ms.locfileid: "75242694"
   
 在此案例中，屬性的第一個參數應該是唯一識別碼，用來識別專案檔中的參與者。 最佳作法是結合程式庫的命名空間 (在這個逐步解說中為 "ExampleContributors") 與類別名稱 (在這個逐步解說中為 "ModelStatistics")，以產生識別碼。 在這個逐步解說後面，您會看到這個命名空間如何用來指定應該執行參與者。  
   
-## <a name="CreateBuildContributor"></a>建立組建參與者  
+## <a name="create-a-build-contributor"></a><a name="CreateBuildContributor"></a>建立組建參與者  
 若要建立組建參與者，您必須執行下列工作：  
   
 -   建立類別庫專案並加入必要參考。  
@@ -452,7 +452,7 @@ ms.locfileid: "75242694"
   
     下一步，您必須安裝組件，以便在建置 SQL 專案時將其載入。  
   
-## <a name="InstallBuildContributor"></a>安裝組建參與者  
+## <a name="install-a-build-contributor"></a><a name="InstallBuildContributor"></a>安裝組建參與者  
 若要安裝組建參與者，您必須將組件和關聯的 .pdb 檔案複製到 Extensions 資料夾。  
   
 #### <a name="to-install-the-mybuildcontributor-assembly"></a>若要安裝 MyBuildContributor 組件  
@@ -464,7 +464,7 @@ ms.locfileid: "75242694"
     > [!NOTE]  
     > 根據預設，編譯過的 .dll 檔案的路徑是 YourSolutionPath\YourProjectPath\bin\Debug 或 YourSolutionPath\YourProjectPath\bin\Release。  
   
-## <a name="TestBuildContributor"></a>執行或測試您的組建參與者  
+## <a name="run-or-test-your-build-contributor"></a><a name="TestBuildContributor"></a>執行或測試您的組建參與者  
 若要執行或測試組建參與者，您必須執行下列工作：  
   
 -   將屬性加入至要建置的 .sqlproj 檔案。  
@@ -525,7 +525,7 @@ ms.locfileid: "75242694"
   
 1.  在 Visual Studio 中，以滑鼠右鍵按一下專案並選取 [重建]。 這會重建專案，而且您應該會看見產生的模型統計資料，其輸出包含在建置輸出中並儲存至 ModelStatistics.xml。 請注意，您可能需要在方案總管中選取 [顯示所有檔案] 才能看得到 xml 檔案。  
   
-2.  開啟 Visual Studio 命令提示字元：在 [開始] 功能表  上，依序按一下 [所有程式]  、[Microsoft Visual Studio <Visual Studio Version>]  和 [Visual Studio 工具]  ，然後按一下 [Visual Studio 命令提示字元 (<Visual Studio Version>)]  。  
+2.  開啟 Visual Studio 命令提示字元：在 [開始]  功能表上，依序按一下 [所有程式]  、[Microsoft Visual Studio **]<Visual Studio Version>** 、[Visual Studio Tools]  ，然後按一下 [Visual Studio 命令提示字元 ( **)]<Visual Studio Version>** 。  
   
 3.  在命令提示字元中，巡覽至包含 SQL 專案的資料夾。  
   
@@ -593,5 +593,5 @@ Relationships
   
 ## <a name="see-also"></a>另請參閱  
 [使用組建和部署參與者自訂資料庫建置和部署](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[逐步解說：延伸資料庫專案部署以分析部署計畫](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[逐步解說：擴充資料庫專案部署以分析部署計畫](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

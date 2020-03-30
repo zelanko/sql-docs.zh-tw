@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 50a6e158f5678b30028337b70e1da6914038e64a
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896545"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 資料類型和 ADO.NET
@@ -29,26 +29,26 @@ SQL Server 2008 引進了新的資料類型，其設計目的是為了符合商�
   
 ## <a name="in-this-section"></a>本節內容  
 [SqlTypes 和資料集](sqltypes-dataset.md)  
-說明針對 `DataSet` 中的 `SqlTypes` 所提供的類型支援。  
+說明針對 `SqlTypes` 中的 `DataSet` 所提供的類型支援。  
   
 [處理 Null 值](handle-null-values.md)  
 示範如何處理 Null 值與三值邏輯。  
   
 [比較 GUID 和 uniqueidentifier 值](compare-guid-uniqueidentifier-values.md)  
-示範如何在 SQL Server 與 .NET 中使用 GUID 與 uniqueidentifier 值。  
+示範如何在 SQL Server 和 .NET 中使用 GUID 和 uniqueidentifier 值。  
   
 [日期和時間資料](date-time-data.md)  
 描述如何使用 SQL Server 2008 中引進的新日期和時間資料類型。  
   
 [大型 UDT](large-udts.md)  
-示範如何從 SQL Server 2008 引進的大型值 UDT 擷取資料。  
+示範如何從 SQL Server 2008 導入的大型值 UDT 擷取資料。  
   
 [SQL Server 中的 XML 資料](xml-data-sql-server.md)  
-描述如何使用從 SQL Server 擷取的 XML 資料。  
+說明如何使用從 SQL Server 擷取的 XML 資料。  
   
 ## <a name="reference"></a>參考  
 <xref:System.Data.DataSet>  
-描述 `DataSet` 類別與其所有成員。  
+描述 `DataSet` 類別及其所有成員。  
   
 <xref:System.Data.SqlTypes>  
 描述 `SqlTypes` 命名空間與其所有成員。  

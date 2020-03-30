@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 33b5bf6061e9168fd150adcb4a7ccf29302bce63
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253151"
 ---
 # <a name="how-to-deploy-an-app-on-big-data-clusters-2019"></a>如何：在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上部署應用程式
@@ -106,11 +106,11 @@ azdata app create --spec <directory containing spec file>
 azdata app create --spec ./addpy
 ```
 
-這會假設您已將應用程式儲存在 `addpy` 資料夾中。 此資料夾也應該包含應用程式的規格檔案，稱為 `spec.yaml`。 如需 `spec.yaml` 檔案的詳細資訊，請參閱[應用程式部署頁面](concept-application-deployment.md)。
+這會假設您已將應用程式儲存在 `addpy` 資料夾中。 此資料夾也應該包含應用程式的規格檔案，稱為 `spec.yaml`。 如需 [ 檔案的詳細資訊，請參閱](concept-application-deployment.md)應用程式部署頁面`spec.yaml`。
 
 若要部署此應用程式範例應用程式請在稱為 `addpy` 的目錄中建立下列檔案：
 
-- 第 1 課：建立 Windows Azure 儲存體物件`add.py`。 將下列 Python 程式碼複製到此檔案中：
+- `add.py`第 1 課：建立 Windows Azure 儲存體物件{2}。 將下列 Python 程式碼複製到此檔案中：
    ```py
    #add.py
   def add(x, y):
@@ -118,7 +118,7 @@ azdata app create --spec ./addpy
     return result
   result=add(x,y)
    ```
-- 第 1 課：建立 Windows Azure 儲存體物件`spec.yaml`。 將下列程式碼複製到此檔案中：
+- `spec.yaml`第 1 課：建立 Windows Azure 儲存體物件{2}。 將下列程式碼複製到此檔案中：
    ```yaml
    #spec.yaml
    name: add-app #name of your python script

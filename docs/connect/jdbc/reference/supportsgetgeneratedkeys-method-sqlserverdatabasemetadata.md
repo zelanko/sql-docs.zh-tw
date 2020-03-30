@@ -16,10 +16,10 @@ ms.assetid: 4f0e4659-14e7-4743-aed8-1768ee2b29dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a212f6e8c320140edfb8092a9c15649bf9b792db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969409"
 ---
 # <a name="supportsgetgeneratedkeys-method-sqlserverdatabasemetadata"></a>supportsGetGeneratedKeys 方法 (SQLServerDatabaseMetaData)

@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d2f56ed8036602357f8128b0426fbb90c0bab801
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028276"
 ---
 # <a name="spatial-data-types-sample"></a>空間資料類型範例
@@ -39,7 +39,7 @@ ms.locfileid: "69028276"
 
 在下列範例中，範例程式碼會建立一個名為 SpatialDataTypesTable_JDBC_Sample 的資料表，其中包含 'Geometry' 和 'Geography' 資料行。
 
-此範例會先從代表某個 POINT 的 Well-Known-Text (WKT)，建立 'Geometry' 和 'Geography' 物件。 它會搭配參數化查詢使用 SQLServerPreparedStatement，來將資料對應到每個資料行。
+此範例會先從代表某個 POINT 的 Well-Known-Text (WKT)，建立 'Geometry' 和 'Geography' 物件。 其會搭配參數化查詢使用 SQLServerPreparedStatement，來將資料對應到每個資料行。
 
 最後，此範例會將資料插入到資料表，並加以擷取。 這些資料會以 WKT 的形式顯示。
 

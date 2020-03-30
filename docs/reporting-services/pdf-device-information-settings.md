@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5442980dd2f67cf72e301a82ae3730f90a173116
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 10633ef2ed778a7b7c3d5bcd64ee006cefe24752
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70911323"
 ---
 # <a name="pdf-device-information-settings"></a>PDF 裝置資訊設定
@@ -28,7 +28,6 @@ ms.locfileid: "70911323"
 |**ColumnSpacing**|為報表所設定的資料行間距。 這個值會覆寫報表的原始設定。|  
 |**DpiX**|輸出裝置在 x 方向的解析度。|  
 |**DpiY**|輸出裝置在 y 方向的解析度。|  
-|**EmbedFonts**|指出是否要將字型內嵌在 PDF 檔案中，報表字型大小會比較大，但所有用戶端都能看到正確呈現的內容。 [無]  值會停用字型內嵌。|  
 |**EndPage**|要轉譯之報表的最後一頁。 預設值為 **StartPage**的值。|  
 |**HumanReadablePDF**|指出是否要轉譯為未壓縮的 PDF 檔案，其大小會較大的，但在純文字編輯器中較易閱讀。 預設值為 **false**。|  
 |**MarginBottom**|為報表所設定的下邊界值 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，1in)。 這個值會覆寫報表的原始設定。|  

@@ -14,10 +14,10 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72517937"
 ---
 # <a name="before-installing-failover-clustering"></a>安裝容錯移轉叢集之前
@@ -37,7 +37,7 @@ ms.locfileid: "72517937"
   
  
   
-##  <a name="BestPractices"></a> 最佳作法  
+##  <a name="best-practices"></a><a name="BestPractices"></a> 最佳作法  
   
 -   檢閱 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [版本資訊](https://go.microsoft.com/fwlink/?LinkId=296445)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72517937"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式不再安裝 .NET Framework 3.5 SP1，但是在較舊的 Windows 作業系統上安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，可能需要 .NET Framework 3.5 SP1。 如需詳細資訊，請參閱 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][版本資訊](https://go.microsoft.com/fwlink/?LinkId=296445)。  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新封裝：** 為避免在安裝程期間電腦因安裝 .NET Framework 4 而重新啟動，[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安裝程式要求電腦上必須已安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新。  如果您是在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安裝 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，則會包含這項更新。 如果您是在較舊的 Windows 作業系統上安裝，請從 [Windows Vista 和 Windows Server 2008 上之 .NET Framework 4.0 適用的 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)下載此更新。  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新套件：** 為避免在安裝程期間電腦因安裝 .NET Framework 4 而重新啟動， [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安裝程式會要求在電腦上安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新。  如果您是在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安裝 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，則會包含這項更新。 如果您是在較舊的 Windows 作業系統上安裝，請從 [Windows Vista 和 Windows Server 2008 上之 .NET Framework 4.0 適用的 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)下載此更新。  
   
     -   .NET Framework 4：安裝程式會在叢集作業系統上安裝 .NET Framework 4。 若要縮短安裝時間，您可以考慮在執行安裝程式前先安裝 .NET Framework 4。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "72517937"
   
     -   如果您使用 SMB 檔案共用做為儲存選項， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝帳戶必須具有檔案伺服器的 SeSecurityPrivilege。 若要執行這項操作，請使用檔案伺服器上的 [本機安全性原則] 主控台，將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝帳戶加入 **[管理稽核及安全性記錄]** 權限。  
   
-##  <a name="Hardware"></a> 驗證硬體方案  
+##  <a name="verify-your-hardware-solution"></a><a name="Hardware"></a> 驗證硬體方案  
   
 -   如果叢集方案包括位於不同地點的叢集節點，則必須驗證如網路延遲及共用磁碟支援等其他項目。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "72517937"
   
 -   若要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 來源安裝檔案與叢集位於不同網域時安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，請將安裝檔案複製到可供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集使用的目前網域。  
   
-##  <a name="Security"></a> 預覽安全考量  
+##  <a name="review-security-considerations"></a><a name="Security"></a> 預覽安全考量  
   
 -   若要使用加密，請利用 WSFC 叢集的完整 DNS 名稱，在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集中的所有節點上安裝伺服器憑證。 例如，如果您具有兩個節點的叢集 (節點名稱為 "Test1.DomainName.com" 及 "Test2.DomainName.com")，以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (名稱為 "Virtsql")，則您必須取得 "Virtsql.DomainName.com" 的憑證，並將憑證安裝在 test1 及 test2 節點上。 接著，您可以選取「 **組態管理員」中的** [強制通訊協定加密] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 核取方塊，為您的容錯移轉叢集設定加密。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "72517937"
     *   網域 + 工作群組叢集上的 SQL FCI。 
 
   
-##  <a name="Network"></a> 預覽網絡、通訊埠和防火牆的考量  
+##  <a name="review-network-port-and-firewall-considerations"></a><a name="Network"></a> 預覽網絡、通訊埠和防火牆的考量  
   
 -   開始 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式之前，請確認您已停用所有私人網路卡的 NetBIOS。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "72517937"
   
     5.  在安裝程式完成之後，請返回 [控制台] 中的 [網路連線] 並停用目前非使用中的任何網路介面卡。  
   
-##  <a name="OS_Support"></a> 驗證您的作業系統  
+##  <a name="verify-your-operating-system"></a><a name="OS_Support"></a> 驗證您的作業系統  
  確定您已正確安裝作業系統，而且其設計可支援容錯移轉叢集。 下表是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本及支援這些版本之作業系統的清單。  
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
@@ -199,7 +199,7 @@ ms.locfileid: "72517937"
   
  **支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集。  
   
-##  <a name="MultiSubnet"></a> 多重子網路組態的其他考量  
+##  <a name="additional-considerations-for-multi-subnet-configurations"></a><a name="MultiSubnet"></a> 多重子網路組態的其他考量  
  安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集時，請將下列章節描述的需求謹記在心。 一個多重子網路設定涉及了多重子網路間的叢集，因此涉及使用多重 IP 位址，及改變 IP 位址資源的相依性。  
   
 ### <a name="ssnoversion-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本與作業系統考量  
@@ -225,7 +225,7 @@ ms.locfileid: "72517937"
 #### <a name="related-content"></a>相關內容  
  如需 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 多站台容錯移轉的詳細資訊，請參閱 [Failover Clusters in Windows Server 2008 R2](https://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) (Windows Server 2008 R2 的容錯移轉叢集) 和 [Design for a Clustered Service or Application in a Multi-Site Failover Cluster](https://go.microsoft.com/fwlink/?LinkId=177873)(針對多站台容錯移轉叢集中的叢集服務或應用程式進行設計)。  
   
-##  <a name="WSFC"></a> 設定 Windows Server 容錯移轉叢集  
+##  <a name="configure-windows-server-failover-cluster"></a><a name="WSFC"></a> 設定 Windows Server 容錯移轉叢集  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 您至少必須在伺服器叢集的一個節點上設定 Cluster Service (WSFC)。 您也必須結合 WSFC 一併執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise 最多支援含有 16 個節點的容錯移轉叢集。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard 支援兩個節點的容錯移轉叢集。  
   
@@ -235,7 +235,7 @@ ms.locfileid: "72517937"
   
 -   設定網域名稱服務 (DNS) 或 Windows 網際網路名稱服務 (WINS)。 DNS 伺服器或 WINS 伺服器必須要在安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集的環境中執行。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] IP 介面虛擬參考的動態網域名稱服務註冊。 DNS 伺服器組態應該要允許叢集節點動態登錄對應至網路名稱的線上 IP 位址。 如果無法完成動態註冊，安裝程式會失敗，而且會回復安裝。 如需詳細資訊，請參閱＜ [此知識庫文件](https://support.microsoft.com/kb/947048)＞(機器翻譯)。  
   
-##  <a name="MSDTC"></a> 安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分散式交易協調器  
+##  <a name="install-msconame-distributed-transaction-coordinator"></a><a name="MSDTC"></a> 安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分散式交易協調器  
  在容錯移轉叢集上安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前，請判斷是否必須建立 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分散式交易協調器 (MSDTC) 叢集資源。 如果您只要安裝 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]，則不需要 MSDTC 叢集資源。 如果您要安裝 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 和 SSIS 或工作站元件，或是將要使用分散式交易，則必須安裝 MSDTC。 請注意，MSDTC 並非僅限 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體的必要項目。  
   
  在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]中，您可以在單一的容錯移轉叢集上安裝 MSDTC 的多個執行個體。 第一個安裝的 MSDTC 執行個體將會是 MSDTC 的叢集預設執行個體。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 將會透過自動使用 MSDTC 執行個體的方式，利用已安裝到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本機叢集資源群組的 MSDTC 執行個體。 但是，個別的應用程式可以對應到叢集上的任何 MSDTC 執行個體。  

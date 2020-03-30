@@ -10,10 +10,10 @@ ms.author: maggies
 ms.date: 11/19/2019
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: d062e301346e11984b0ab0d72c418f71db992fd2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74320292"
 ---
 # <a name="discontinued-functionality-in-sql-server-2019-reporting-services-ssrs"></a>SQL Server 2019 Reporting Services (SSRS) 中已停止的功能

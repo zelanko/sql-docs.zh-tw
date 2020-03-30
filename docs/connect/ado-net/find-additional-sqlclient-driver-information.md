@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 39723f61eaa5bf2fc18e950bbd3432837ee8620a
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78897114"
 ---
 # <a name="finding-additional-sqlclient-driver-information"></a>尋找其他 SqlClient 驅動程式資訊

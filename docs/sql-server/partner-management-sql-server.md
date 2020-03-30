@@ -9,10 +9,10 @@ ms.technology: ''
 ms.author: mikeray
 author: MikeRayMSFT
 ms.openlocfilehash: f483b643d2d1b1c8ec1e58c0772de021092b2594
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75656933"
 ---
 # <a name="sql-server-managing-partners"></a>SQL Server 管理夥伴

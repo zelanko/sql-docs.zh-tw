@@ -16,10 +16,10 @@ ms.assetid: 7c2bd899-0d79-47ed-bb8d-60941594ee0d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bb207fdf76cad851d45d1b712490fc8e0bf14539
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971376"
 ---
 # <a name="sqlserverdatasourceobjectfactory-constructor-"></a>SQLServerDataSourceObjectFactory 建構函式 ()

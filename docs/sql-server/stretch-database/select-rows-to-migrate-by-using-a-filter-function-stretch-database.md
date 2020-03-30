@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f744dbde25bf5f7b307ccb44e03de70c1b60cc66
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73844554"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>使用篩選函數選取要移轉的資料列 (Stretch Database)
@@ -197,7 +197,7 @@ ALTER TABLE SensorTelemetry
   )
 ```
   
-## <a name="addafterwiz"></a>在執行精靈後新增篩選函數  
+## <a name="add-a-filter-function-after-running-the-wizard"></a><a name="addafterwiz"></a>在執行精靈後新增篩選函數  
   
 如果您想要使用無法在 [啟用資料庫的延展功能精靈]  中建立的函數，您可以在結束精靈後，執行 **ALTER TABLE** 陳述式來指定函數。 不過，您必須先停止已經在進行中的資料移轉並回復已移轉的資料，才能套用函數。 (如需為什麼必須這麼做的詳細資訊，請參閱 [取代現有的篩選函數](#replacePredicate)。)
   
@@ -492,7 +492,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
   
  若函數為資料列傳回非空白結果，資料列便符合遷移資格。  
   
-## <a name="replacePredicate"></a>取代現有的篩選函數  
+## <a name="replace-an-existing-filter-function"></a><a name="replacePredicate"></a>取代現有的篩選函數  
  您可再次執行 **ALTER TABLE** 陳述式，並為 **FILTER_PREDICATE** 參數指定新的值，以取代先前指定的篩選函數。 例如：  
   
 ```sql  

@@ -16,10 +16,10 @@ ms.assetid: 5e46b129-9fe1-469f-b2e8-7ce7fb832996
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b4f78d918b597d9e336feb58d512c0156eadd4e9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974156"
 ---
 # <a name="setint-method-sqlserverpreparedstatement"></a>setInt 方法 (SQLServerPreparedStatement)

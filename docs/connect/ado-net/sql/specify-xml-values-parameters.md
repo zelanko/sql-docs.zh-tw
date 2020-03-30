@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: b4d0f31c8f5fbb282c880abaee62f05dc190bbfc
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896657"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>將 XML 值指定為參數
@@ -29,7 +29,7 @@ ms.locfileid: "78896657"
 下列主控台應用程式會在 **AdventureWorks** 資料庫中建立新的資料表。 新資料表包括名為 **SalesID** 的資料行及名為 **SalesInfo** 的 XML 資料行。  
   
 > [!NOTE]
->  當您安裝 SQL Server 時，預設不會安裝 **AdventureWorks** 範例資料庫。 您可以執行 SQL Server 安裝程式來安裝它。  
+>  當您安裝 SQL Server 時，預設不會安裝 **AdventureWorks** 範例資料庫。 您可以執行 SQL Server 安裝程式加以安裝。  
   
 此範例會準備 <xref:Microsoft.Data.SqlClient.SqlCommand> 物件，以便在新的資料表中插入資料列。 已儲存的檔案為 **SalesInfo** 資料行提供必要的 XML 資料。  
   

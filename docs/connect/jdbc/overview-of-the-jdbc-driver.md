@@ -11,10 +11,10 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 10a2411f26315a7c0cf50e9eca4daec45567fab4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73049823"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC 驅動程式概觀
@@ -25,9 +25,9 @@ Microsoft JDBC Driver for SQL Server 是類型 4 Java 資料庫連線 (JDBC) 4.2
 
 ## <a name="redistribution"></a>可轉散發
 
-JDBC 驅動程式 6.0、6.2、6.4 與 7.0 版均為可轉散發。 檢閱授權合約中的「可轉散發程式碼」  條款。
+JDBC Driver 6.0、6.2、6.4 與 7.0 版都是可轉散發的。 檢閱授權合約中的「可轉散發程式碼」  條款。
 
-JDBC 驅動程式 4.x 版已過時且已淘汰。 對 4.x 的支援將於 2018 之前到期。
+JDBC 驅動程式 4.x 版已過時且已淘汰。 對 4.x 的支援已於 2018 年之前過期。
 
 ## <a name="in-this-section"></a>本節內容  
 

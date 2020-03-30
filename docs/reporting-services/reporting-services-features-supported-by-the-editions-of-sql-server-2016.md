@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 12/16/2019
 ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76516599"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-editions"></a>下列版本支援的 SQL Server Reporting Services 功能
@@ -27,7 +27,7 @@ ms.locfileid: "76516599"
  - [SQL Server Reporting Services (SSRS) 中的新功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。
  - [SQL Server 版本支援的功能](~/sql-server/editions-and-components-of-sql-server-version-15.md)
 
-##  <a name="SSRS"></a> SQL Server Reporting Services  
+##  <a name="sql-server-reporting-services"></a><a name="SSRS"></a> SQL Server Reporting Services  
 
 若要了解 Evaluation 和 Developer 版所支援的功能，請參閱下表 SQL Server Enterprise 版那一欄。
 
@@ -83,7 +83,7 @@ ms.locfileid: "76516599"
 |Express with Advanced Services|Express with Advanced Services (僅限本機)|  
 |評估|評估|  
   
-##  <a name="BIC"></a> 商業智慧用戶端  
+##  <a name="business-intelligence-clients"></a><a name="BIC"></a> 商業智慧用戶端  
 下列軟體用戶端應用程式可從 Microsoft 下載中心取得。 這些應用程式可協助您建立執行於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的商業智慧文件。 當您在伺服器環境中裝載這些文件時，請使用支援該文件類型的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 下表將識別哪些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本包含裝載在這些用戶端應用程式中建立之文件所需的伺服器功能。  
   
 |工具名稱|Enterprise|標準|Web|Express with Advanced Services|開發人員|  

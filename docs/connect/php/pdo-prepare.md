@@ -11,10 +11,10 @@ ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 902a1e986f79205dfd676c635ac54814382c2ec3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76941200"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
@@ -29,7 +29,7 @@ PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 ```
 
 #### <a name="parameters"></a>參數
-$*statement*：包含 SQL 陳述式的字串。
+$*statement*：一個包含 SQL 陳述式的字串。
 
 *key_pair*：包含屬性名稱和值的陣列。 如需詳細資訊，請參閱「備註」一節。
 
@@ -49,7 +49,7 @@ $*statement*：包含 SQL 陳述式的字串。
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|指定將擷取的貨幣值格式化時的小數位數。 此選項只有當 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 為 true 時才能運作。 如需詳細資訊，請參閱[將十進位字串及貨幣值格式化 (PDO_SQLSRV 驅動程式)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|若為 True，將會指定直接查詢執行。 False 表示備妥的陳述式執行。 如需 `PDO::SQLSRV_ATTR_DIRECT_QUERY` 的詳細資訊，請參閱 [PDO_SQLSRV 驅動程式中的直接陳述式執行和已備妥的陳述式執行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (預設值)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|指定是否要以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) \(英文\) 物件形式擷取日期和時間類型。 如需詳細資訊，請參閱[如何：使用 PDO_SQLSRV 驅動程式以 PHP DateTime 物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|指定是否要以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) \(英文\) 物件形式擷取日期和時間類型。 如需詳細資訊，請參閱[操作說明：使用 PDO_SQLSRV 驅動程式以 PHP DateTime 物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|處理從數值 SQL 類型資料行擷取的數值。 如需詳細資訊，請參閱 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。|
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|指定是否要在適當時於十進位字串中新增前置零。 如果設定，此選項就會啟用 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 選項來將貨幣類型格式化。 如需詳細資訊，請參閱[將十進位字串及貨幣值格式化 (PDO_SQLSRV 驅動程式)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|如需詳細資訊，請參閱 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。|
@@ -295,7 +295,7 @@ $stmt->execute([':value' => $p]);
 如您所見，繫結會在內部由驅動程式來完成。 有效的查詢會在不含任何參數的情況下傳送到伺服器來執行。 相較於一般情況，會在未使用參數化查詢功能時產生一些限制。
 
 - 不適用繫結為 `PDO::PARAM_INPUT_OUTPUT` 的參數。
-    - 當使用者在 `PDO::bindParam()` 中指定 `PDO::PARAM_INPUT_OUTPUT` 時，即會擲回 PDO 例外狀況。
+    - 當使用者在 `PDO::PARAM_INPUT_OUTPUT` 中指定 `PDO::bindParam()` 時，即會擲回 PDO 例外狀況。
 - 它不適用繫結為輸出參數的參數。
     - 當使用者搭配用來作為輸出參數的預留位置 (也就是，在預留位置後面緊接著等號，例如 `SELECT ? = COUNT(*) FROM Table1`) 建立已備妥的陳述式時，即會擲回 PDO 例外狀況。
     - 當已備妥的陳述式使用預留位置作為輸出參數的引數來叫用預存程序時，不會擲回任何例外狀況，因為驅動程式無法偵測到該輸出參數。 不過，使用者針對輸出參數提供的變數將維持不變。

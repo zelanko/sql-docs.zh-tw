@@ -11,10 +11,10 @@ ms.assetid: 1e8cb175-5f4c-4208-b4f5-3646990a30e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33d0ffe12cce457e744395fd946c5bfd009621e3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981707"
 ---
 # <a name="getmultisubnetfailover-method-sqlserverdatasource"></a>getMultiSubnetFailover 方法 (SQLServerDataSource)

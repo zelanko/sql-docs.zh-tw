@@ -10,10 +10,10 @@ reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
 ms.openlocfilehash: c6d5ebdcc4866c30b9fda3967304cda747a13a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081842"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>從外部資料來源加入資料 (SSRS)
@@ -21,7 +21,7 @@ ms.locfileid: "77081842"
   
  如需資料來源類型的詳細資訊，請參閱 [本節內容](#InThisSection)。  
   
-##  <a name="DataAccess"></a> 了解資料存取技術  
+##  <a name="understanding-data-access-technology"></a><a name="DataAccess"></a> 了解資料存取技術  
  為了擷取報表的資料，資料集會需要多層資料存取軟體。 下列清單提供簡單的描述，說明報表使用資料存取技術的方式。  
   
 -   **應用程式和使用者介面** ：報表產生器應用程式，用來建立資料來源、加入共用資料來源的參考、加入共用資料集，或是加入包含所依據之資料來源和資料集的報表組件。  
@@ -41,7 +41,7 @@ ms.locfileid: "77081842"
 > [!NOTE]  
 >  當您未連接至報表伺服器時，可以選擇隨報表產生器一併安裝的資料延伸模組。 您可以使用電腦上的認證，以單一使用者身分存取資料。 當您連接至報表伺服器時，可以選擇安裝在報表伺服器上的資料延伸模組。 您會以執行報表的其中一位使用者身分存取資料，而且您會使用報表伺服器上的認證。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
-##  <a name="ReportData"></a> 了解報表資料  
+##  <a name="understanding-report-data"></a><a name="ReportData"></a> 了解報表資料  
  報表會以最簡單的形式在報表頁面的資料區中，顯示報表資料集的資料，也就是使用單一資料表、圖表、矩陣或其他類型的報表資料區。 報表資料集的資料來自從單一查詢命令傳回的第一個結果集，該命令是以外部資料來源的唯讀存取權執行。 每一個資料區都會視需要展開，以顯示資料集中的所有資料。  
   
  資料集的資料基本上是表格式。 資料行是資料集查詢中的欄位。 資料列則來自結果集中的資料列。 您可以在報表中使用下列通用類型的資料：  
@@ -59,11 +59,11 @@ ms.locfileid: "77081842"
 -   支援遞迴的資料。 包含遞迴資料階層的結果集，會包括矩形結果集中階層結構的所有相關資訊。 例如，公司內的主管-下屬 (Report-to) 結構可以透過包括兩個資料行的資料表呈現：員工與經理。 每位經理也是另一位經理的員工。 最上層的經理通常包含 null 或某些其他識別碼，表示此員工沒有經理。  
   
   
-##  <a name="DataTypes"></a> 使用資料類型  
+##  <a name="working-with-data-types"></a><a name="DataTypes"></a> 使用資料類型  
  當您建立資料集時，欄位的資料類型會從 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]對應到 Common Language Runtime (CLR) 資料類型的子集。 無法明確對應的資料類型會以字串的形式傳回。 如需使用欄位資料類型的詳細資訊，請參閱 [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)。 當您建立參數時，資料類型必須是支援的報表定義資料類型。 如需將資料類型從資料提供者對應到報表參數的詳細資訊，請參閱[運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)。  
   
   
-##  <a name="HowTo"></a> 如何主題  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 如何主題  
  本節包含使用資料連接、資料來源與資料集的逐步指示。  
   
  [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -73,7 +73,7 @@ ms.locfileid: "77081842"
  [將篩選加入資料集中 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="InThisSection"></a> 本節內容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 本節內容  
  下列主題提供有關每一個內建資料延伸模組的資訊。  
   
 |主題|資料來源類型|  
@@ -90,14 +90,14 @@ ms.locfileid: "77081842"
 |[ODBC 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md)|ODBC|  
 |[XML 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)|XML|  
   
-##  <a name="Related"></a> 相關章節
+##  <a name="related-sections"></a><a name="Related"></a> 相關章節
 
  本文件集的這些章節會提供報表資料的深入概念性資訊，以及如何定義、自訂和使用與報表資料相關組件的程序資訊。  
   
 |主題|描述|  
 |-----------|-----------------|  
 |[報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)|提供存取報表資料的概觀。|  
-|[建立資料連接字串 - 報表產生器及 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|提供資料連接與資料來源的相關資訊。|  
+|[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|提供資料連接與資料來源的相關資訊。|  
 |[報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|提供內嵌與共用資料集的相關資訊。|  
 |[資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|提供查詢所產生之資料集欄位集合的相關資訊。|  
 |[Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)|提供支援每一個資料延伸模組之平台與版本的深入資訊。|  

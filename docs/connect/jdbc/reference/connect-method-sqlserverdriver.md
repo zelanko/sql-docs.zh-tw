@@ -16,10 +16,10 @@ ms.assetid: 43813a4c-1cc7-4659-ba27-f1786f1371eb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 518be09d4a4929a06866eec253a49a39d7865263
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955412"
 ---
 # <a name="connect-method-sqlserverdriver"></a>connect 方法 (SQLServerDriver)

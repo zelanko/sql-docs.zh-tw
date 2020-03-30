@@ -16,10 +16,10 @@ ms.assetid: c9e7b904-2e98-459f-9173-382919d741e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 189b35b98c6b604563d056f286b9640ee47637a8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980449"
 ---
 # <a name="getreference-method-sqlserverxadatasource"></a>getReference 方法 (SQLServerXADataSource)
@@ -38,7 +38,7 @@ public javax.naming.Reference getReference()
  Reference 物件。  
   
 ## <a name="remarks"></a>備註  
- 這個 getReference 方法是由 javax.naming.Referenceable 介面中的 getReference 方法所指定。  
+ 這個 getReference 方法是由 javax.naming.Referenceable 介面中的 getReference 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerXADataSource 方法](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   

@@ -16,10 +16,10 @@ ms.assetid: 8dff954f-b458-4fa6-abe6-be62ff75e2b9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5fd4d7b32c9480fec28e20a9dcbc9c22530eb4a4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980638"
 ---
 # <a name="getquerytimeout-method-sqlserverstatement"></a>getQueryTimeout 方法 (SQLServerStatement)

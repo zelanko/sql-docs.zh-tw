@@ -16,10 +16,10 @@ ms.assetid: 64ac78b8-d5b3-4134-9b72-d2b0c52168a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c305ccf63e1bb8b1253eb8fb0219278d8720cb5b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954966"
 ---
 # <a name="execute-method-javalangstring-sqlserverstatement"></a>execute 方法 (java.lang.String) (SQLServerStatement)

@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: b19b2df1b39bcc88332d60f1389be12b32d7b921
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485263"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>使用 T-SQL (CREATE EXTERNAL LIBRARY) 在 SQL Server 上安裝 R 套件
@@ -35,7 +35,7 @@ ms.locfileid: "74485263"
 
 如果您是要安裝單一套件，請以壓縮格式下載套件。
 
-因為套件相依性的緣故，通常都會安裝多個套件。 當某個套件需要其他套件時，您必須在安裝期間確認它們彼此都能夠互相存取。 建議使用 [miniCRAN](https://andrie.github.io/miniCRAN/) [建立本機存放庫](create-a-local-package-repository-using-minicran.md)，以組合完整的套件集合，以及使用 [igraph](https://igraph.org/r/) 來分析套件相依性。 安裝錯誤的套件版本或省略套件相依性，可能會導致 CREATE EXTERNAL LIBRARY 陳述式失敗。 
+因為套件相依性的緣故，通常都會安裝多個套件。 當某個套件需要其他套件時，您必須在安裝期間確認它們彼此都能夠互相存取。 建議使用 [miniCRAN](create-a-local-package-repository-using-minicran.md) [建立本機存放庫](https://andrie.github.io/miniCRAN/)，以組合完整的套件集合，以及使用 [igraph](https://igraph.org/r/) 來分析套件相依性。 安裝錯誤的套件版本或省略套件相依性，可能會導致 CREATE EXTERNAL LIBRARY 陳述式失敗。 
 
 ## <a name="copy-the-file-to-a-local-folder"></a>將檔案複製到本機資料夾
 

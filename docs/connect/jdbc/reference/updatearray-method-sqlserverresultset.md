@@ -16,10 +16,10 @@ ms.assetid: 66b4473d-a8c1-4d19-8487-b39d6d0597c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85a8b46d88ab783c7742ba2af911211baefcffe1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67985988"
 ---
 # <a name="updatearray-method-sqlserverresultset"></a>updateArray 方法 (SQLServerResultSet)

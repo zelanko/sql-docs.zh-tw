@@ -16,10 +16,10 @@ ms.assetid: 67fb5407-55b9-48b6-87f3-112700f304ba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ab90493a897d5b9561f3e1f4f58413a5de8e8b9e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982317"
 ---
 # <a name="getmaxcolumnnamelength-method-sqlserverdatabasemetadata"></a>getMaxColumnNameLength 方法 (SQLServerDatabaseMetaData)

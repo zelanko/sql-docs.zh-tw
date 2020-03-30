@@ -11,10 +11,10 @@ ms.assetid: bbdcea53-d23d-4769-89a0-95c7cf4d5390
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4b159e57f6f2335e894490f7e34d159bd95b2b6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993140"
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
@@ -30,9 +30,9 @@ bool PDOStatement::bindColumn($column, &$param[, $type[, $maxLen[, $driverdata ]
 ```  
   
 #### <a name="parameters"></a>參數  
-$*column*：結果集內資料行的 (混合) 號碼 (以 1 為基準的索引) 或資料行的名稱。  
+$*column*：結果集內資料行的 (混合) 號碼 (以 1 起始的索引) 或資料行的名稱。  
   
-&$*param*：資料行將繫結至的 PHP 變數的 (混合) 名稱。  
+&$*param*：資料行將繫結之 PHP 變數的 (混合) 名稱。  
   
 $*type*：參數的選擇性資料類型 (以 PDO::PARAM_* 常數表示)。  
   

@@ -16,10 +16,10 @@ ms.assetid: 1ffa599c-d0c8-43b6-8e9b-7c856a846630
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f5fa0433b801ed9a0a3fc92cb3768b4cd727424
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969898"
 ---
 # <a name="storesmixedcasequotedidentifiers-method-sqlserverdatabasemetadata"></a>storesMixedCaseQuotedIdentifiers 方法 (SQLServerDatabaseMetaData)

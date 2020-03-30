@@ -13,10 +13,10 @@ ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866331"
 ---
 # <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>建立原生模式報表伺服器資料庫 (SSRS 組態管理員)
@@ -32,7 +32,7 @@ ms.locfileid: "74866331"
   
  如果您在預設組態中安裝了原生模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，當安裝了報表伺服器執行個體時，就會自動建立及設定報表伺服器資料庫。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來檢視或修改安裝程式為您進行的設定。  
   
-##  <a name="rsdbrequirements"></a> 開始之前  
+##  <a name="before-you-start"></a><a name="rsdbrequirements"></a> 開始之前  
  建立或設定報表伺服器資料庫是多重步驟的程序。 在您建立報表伺服器資料庫之前，請考慮您要如何指定以下項目：  
   
  **選取資料庫伺服器**  

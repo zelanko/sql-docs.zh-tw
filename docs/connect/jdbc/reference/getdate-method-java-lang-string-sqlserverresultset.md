@@ -16,10 +16,10 @@ ms.assetid: 821058ae-cbe3-4a14-aa02-d55e45491437
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c534c043de11d9123beaaa36f38c4bbd009012c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983907"
 ---
 # <a name="getdate-method-javalangstring-sqlserverresultset"></a>getDate 方法 (java.lang.String) (SQLServerResultSet)

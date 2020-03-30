@@ -9,10 +9,10 @@ ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c822f0b6a3a17ccba2afbaf8bf0a9e4a4e2f7b12
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579816"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>總計、彙總與內建集合的運算式範圍
@@ -41,7 +41,7 @@ ms.locfileid: "65579816"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DataScope"></a> 了解資料範圍和資料階層  
+##  <a name="understanding-data-scope-and-data-hierarchy"></a><a name="DataScope"></a> 了解資料範圍和資料階層  
  資料範圍會指定一組報表資料。 資料範圍擁有自然階層以及繼承的內含項目關聯性。 階層上的範圍越高，包含的範圍在階層上越低。 下列資料範圍清單依序描述階層 (資料從最多到最少)：  
   
 -   **套用資料集篩選後的資料集** ：指定連結到報表主體中之資料區或報表項目的報表資料集。 用於彙總的資料是在套用資料集篩選運算式之後取自報表資料集。 若是共用資料集，這表示共用資料集定義中的篩選與報表之共用資料集執行個體中的篩選。  
@@ -56,7 +56,7 @@ ms.locfileid: "65579816"
   
  撰寫包含彙總函式的運算式時，了解包含和被包含的範圍相當重要。  
   
-##  <a name="Aggregates"></a> 資料格範圍和運算式  
+##  <a name="cell-scope-and-expressions"></a><a name="Aggregates"></a> 資料格範圍和運算式  
  當您指定範圍時，表示您向報表處理器指示要用於彙總計算的資料。 根據運算式和運算式的位置，有效範圍可能是 *「包含的範圍」* (Containing Scope) (亦稱為父範圍) 或 *「被包含的範圍」* (Contained Scope) (亦稱為子範圍或巢狀範圍)。 一般而言，您無法在彙總計算中指定個別的群組執行個體。 您可以跨所有群組執行個體指定彙總。  
   
  報表處理器會結合來自報表資料集中的資料以及 Tablix 資料區，因此，它會評估群組運算式，並建立表示群組執行個體所需的資料列和資料行。 在每個 Tablix 資料格中，文字方塊內的運算式值會在資料格範圍的內容中評估。 根據 Tablix 結構，資料格可以屬於多個資料列群組和資料行群組。 若是彙總函式，您可以使用下列其中一個範圍指定要使用的範圍：  
@@ -77,7 +77,7 @@ ms.locfileid: "65579816"
   
  每個彙總函式主題都會列出適用於其用途的範圍。 如需詳細資訊，請參閱 [彙總函式參考 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
-##  <a name="Examples"></a> 資料表資料區的彙總運算式範例  
+##  <a name="example-aggregate-expressions-for-a-table-data-region"></a><a name="Examples"></a> 資料表資料區的彙總運算式範例  
  撰寫指定非預設範圍的運算式需要一些練習。 為協助您了解不同範圍，請使用下列圖表與資料表。 此圖表會在銷售資訊資料表中標示每個資料格，依年度和季度以及銷售領域顯示銷售的項目數量。 請注意顯示資料列與資料行群組結構之資料列控制代碼和資料行控制代碼上，表示巢狀群組的視覺提示。 資料表的結構如下：  
   
 -   包含邊角資料格與三個資料列 (包括資料行群組標頭) 的資料表標頭。  
@@ -117,7 +117,7 @@ ms.locfileid: "65579816"
  如需解譯 Tablix 資料區之視覺提示的詳細資訊，請參閱 [Tablix 資料區域資料格、資料列及資料行 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。 如需 Tablix 資料區的詳細資訊，請參閱 [Tablix 資料區域資料格、資料列及資料行 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。 如需運算式和彙總的詳細資訊，請參閱[報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 和[彙總函式參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
   
-##  <a name="Sparklines"></a> 同步處理走勢圖的縮放比例  
+##  <a name="synchronizing-scales-for-sparklines"></a><a name="Sparklines"></a> 同步處理走勢圖的縮放比例  
  若要針對內嵌在資料表或矩陣中的走勢圖，跨時間比較水平軸上的值，您可以同步處理類別目錄群組值。 這稱為對齊座標軸。 透過選取要對齊座標軸的選項，報表會自動設定座標軸的最小值和最大值，並提供預留位置給不存在於每個類別目錄中的彙總值。 這會使走勢圖中的值跨每個類別目錄對齊，並讓您比較彙總資料之每個資料列的值。 透過選取這個選項，表示您要從運算式評估的範圍變更為 *「網域範圍」* (Domain Scope)。 設定巢狀圖表的網域範圍也會間接地控制每個類別目錄在圖例中的色彩指派。  
   
  例如，在顯示每週趨勢的走勢圖中，假設某個城市有 3 個月的銷售資料，而另一個城市有 12 個月的銷售資料。 如果沒有同步處理的縮放比例，第一個城市的走勢圖只會有 3 個橫條，而且這 3 個橫條會比較寬，所佔用的空間會與第二個城市 12 個月的橫條相同。  
@@ -125,13 +125,13 @@ ms.locfileid: "65579816"
  如需詳細資訊，請參閱[在資料表或矩陣的圖表上對齊資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)。  
   
   
-##  <a name="Indicators"></a> 同步處理指標的範圍  
+##  <a name="synchronizing-ranges-for-indicators"></a><a name="Indicators"></a> 同步處理指標的範圍  
  若要指定用於一組指標的資料值，您必須指定一個範圍。 根據包含指標之資料區的配置，您可以指定一個範圍或一個包含的範圍。 例如，在與 sales 類別目錄相關聯的群組標頭資料列中，一組箭頭 (向上、向下、側邊) 可以表示相對於臨界值的銷售值。 包含的範圍是包含指標之資料表或矩陣的名稱。  
   
  如需詳細資訊，請參閱 [設定同步處理範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)。  
   
   
-##  <a name="Page"></a> 從頁首或頁尾指定範圍  
+##  <a name="specifying-scopes-from-the-page-header-or-page-footer"></a><a name="Page"></a> 從頁首或頁尾指定範圍  
  若要在每個報表頁面上顯示不同的資料，您要將運算式加入至必須位於轉譯頁面上的報表項目中。 報表在轉譯時會分成好幾頁，因此，只有在轉譯期間可以決定要存在於頁面上的項目。 例如，詳細資料列中的資料格所擁有的文字方塊在一個頁面上有多個執行個體。  
   
  基於此目的，有一個稱為 ReportItems 的全域集合。 這是在目前頁面上的文字方塊集合。  
@@ -139,7 +139,7 @@ ms.locfileid: "65579816"
  如需詳細資訊，請參閱[頁首和頁尾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md) 和 [ReportItems 集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md)。  
   
   
-##  <a name="Toggles"></a> 指定向下鑽研和條件式可見性的切換項目  
+##  <a name="specifying-a-toggle-item-for-drilldown-and-conditional-visibility"></a><a name="Toggles"></a> 指定向下鑽研和條件式可見性的切換項目  
  切換是加入到文字方塊中的加號或減號影像，使用者按一下就可以顯示或隱藏其他報表項目。 在多數報表項目屬性的 **[可見性]** 頁面上，您可以指定要加入切換的目標報表項目。 切換項目所在的內含項目範圍必須比要顯示或隱藏的項目高。  
   
  在 Tablix 資料區中，若要建立向下鑽研效果，讓您按一下某個文字方塊就可以展開資料表來顯示更多資料，您必須在群組上設定 **[可見性]** 屬性，然後在與包含的群組相關聯之群組標頭中選取一個文字方塊做為切換。  
@@ -147,13 +147,13 @@ ms.locfileid: "65579816"
  如需詳細資訊，請參閱 [將展開或摺疊動作加入項目中 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)。  
   
   
-##  <a name="Sort"></a> 指定要同步處理排序次序的排序運算式  
+##  <a name="specifying-a-sort-expression-to-synchronize-sort-order"></a><a name="Sort"></a> 指定要同步處理排序次序的排序運算式  
  當您將互動式排序按鈕加入至資料表資料行時，您可以針對擁有通用包含範圍的多個項目，同步處理排序。 例如，您可以將排序按鈕加入至矩陣中的資料行標頭，然後指定包含的範圍做為繫結至矩陣之資料集的名稱。 當使用者按一下排序按鈕時，除了會排序矩陣資料列之外，也會排序繫結至相同資料集之圖表的圖表數列群組。 利用這個方式，與該資料集相依的所有資料區都可以進行同步處理，以顯示相同的排序次序。  
   
  如需詳細資訊，請參閱 [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)(將互動式排序加入資料表或矩陣 (報表產生器及 SSRS))。  
   
   
-##  <a name="Nulls"></a> 在資料格中隱藏 Null 或零值  
+##  <a name="suppressing-null-or-zero-values-in-a-cell"></a><a name="Nulls"></a> 在資料格中隱藏 Null 或零值  
  對於許多報表而言，群組範圍的計算可能會建立許多值為零 (0) 或 Null 的資料格。 為減少報表中混亂的情形，加入一個運算式，以便在彙總值為 0 時，傳回空白。 如需詳細資訊，請參閱 [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)。  
   
   

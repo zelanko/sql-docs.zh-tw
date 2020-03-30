@@ -16,10 +16,10 @@ ms.assetid: f5291217-2a0c-4daa-9e39-9f348fc911f7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d125e9dad6d5c6f82ff177abdaced9d784295c11
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981919"
 ---
 # <a name="getmaxtablesinselect-method-sqlserverdatabasemetadata"></a>getMaxTablesInSelect 方法 (SQLServerDatabaseMetaData)

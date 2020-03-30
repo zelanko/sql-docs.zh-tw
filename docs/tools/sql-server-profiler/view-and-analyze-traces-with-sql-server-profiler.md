@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: bd9c65d104e6b397ea3483cd3873f4014d7798b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307786"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>使用 SQL Server Profiler 檢視和分析追蹤
@@ -66,7 +66,7 @@ AND     CPU < (Duration * 1000)
   
     -   開啟追蹤檔案或資料表，然後展開想要的事件類別節點；例如， **Deadlock Chain**。 如需詳細資訊，請參閱 [開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) 或 [開啟追蹤資料表 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)隨附的預先定義「微調」範本。  
   
-    -   搜尋整個追蹤資料直到您找到要查看的事件為止 (請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 之 [編輯]  功能表上的 [尋找]  命令來協助您在追蹤中尋找值)。 請注意位於追蹤事件之 **ClientProcessID** 與 **Start Time** 資料行的值。  
+    -   搜尋整個追蹤資料直到您找到要查看的事件為止 (請使用  **之 [編輯]** **功能表上的 [尋找]** [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 命令來協助您在追蹤中尋找值)。 請注意位於追蹤事件之 **ClientProcessID** 與 **Start Time** 資料行的值。  
   
 3.  在內容中顯示事件。  
   

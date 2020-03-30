@@ -11,10 +11,10 @@ ms.assetid: ce680176-ef04-4e44-bb6c-ec50bd06e7e6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9b57c0d984198a40e04c1dfe6eeb6ce946d2d13
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67985602"
 ---
 # <a name="unwrap-method-sqlserverstatement"></a>unwrap 方法 (SQLServerStatement)

@@ -15,10 +15,10 @@ ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ad41870ac9bcb162e792dc6abd8ca21ceeeb3f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082183"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 公用程式 (SSRS)
@@ -70,7 +70,7 @@ rsconfig {-?}
   
 -   設定特殊帳戶，供報表伺服器在無法使用其他認證時，用來登入遠端資料庫伺服器。  
   
-您可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的本機或遠端執行個體上執行**rsconfig** 公用程式。 您無法使用 **rsconfig** 公用程式解密及檢視已設定的值。  
+您可以在  **的本機或遠端執行個體上執行**rsconfig[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 公用程式。 您無法使用 **rsconfig** 公用程式解密及檢視已設定的值。  
   
 在執行這個公用程式之前，您必須先將 Windows Management Instrumentation (WMI) 安裝在您要設定的電腦中。  
   

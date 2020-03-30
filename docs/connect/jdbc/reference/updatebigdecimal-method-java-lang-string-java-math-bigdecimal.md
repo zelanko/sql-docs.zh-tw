@@ -16,10 +16,10 @@ ms.assetid: b844cd9d-3d2d-4385-ab01-ecc89692054f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5eb50fafceefa312fe1b73daf2b2d88d4238403d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67985437"
 ---
 # <a name="updatebigdecimal-method-javalangstring-javamathbigdecimal"></a>updateBigDecimal 方法 (java.lang.String, java.math.BigDecimal)

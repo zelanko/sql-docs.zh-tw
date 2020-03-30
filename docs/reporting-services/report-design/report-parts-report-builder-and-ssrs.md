@@ -11,10 +11,10 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0bd0dd7c77e7ebc2501b507324b02ba1bb364190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081115"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>報表組件 (報表產生器及 SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "77081115"
   
  您加入至報表的報表組件藉由唯一識別碼，與網站或伺服器上的報表組件執行個體維持關聯性。 將報表組件從網站或伺服器加入至報表後，不管原始的報表組件位於網站或伺服器上，您都可以修改它們。 您可以接受其他人針對網站或伺服器上之報表組件所進行的更新，而且您可以將修改過的報表組件，透過加入新的報表組件或覆寫原始報表組件，存回網站或伺服器 (如果您有足夠的權限)。  
   
-##  <a name="ComponentWorkflow"></a> 報表組件的生命週期  
+##  <a name="life-cycle-of-a-report-part"></a><a name="ComponentWorkflow"></a> 報表組件的生命週期  
  ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  某甲使用與內嵌資料集相依的圖表建立報表。  
@@ -42,7 +42,7 @@ ms.locfileid: "77081115"
 6.  某乙接受來自伺服器的已更新圖表。 這會覆寫某乙在自己報表中對圖表所做的變更。  
   
   
-##  <a name="PublishingComponents"></a> 發行報表組件  
+##  <a name="publishing-report-parts"></a><a name="PublishingComponents"></a> 發行報表組件  
  當您發行報表組件時，報表產生器會為它指派一個不同於報表組件名稱的唯一識別碼。 不論您變更了報表組件的什麼內容，報表產生器都會維護該識別碼。 識別碼會連結您報表中的原始報表項目至報表組件。 當其他報表作者重複使用此報表組件時，該識別碼也會將其報表中的報表組件連結到報表伺服器上的報表組件。  
   
  以下是您可以發行為報表組件的報表項目：  
@@ -81,7 +81,7 @@ ms.locfileid: "77081115"
  您也可以編輯 [屬性] 窗格中的描述。  
   
   
-##  <a name="ReusingComponents"></a> 重複使用報表組件  
+##  <a name="reusing-report-parts"></a><a name="ReusingComponents"></a> 重複使用報表組件  
  建立報表最簡單的方式，就是將現有的報表組件 (如資料表和圖表) 從報表組件庫加入到您的報表。 當您將報表組件加入至報表之後，您可以盡量修改它，或接受來自伺服器的更新。 變更報表中的報表項目不會影響在網站或伺服器上發行之報表組件的執行個體，也不會中斷報表中的執行個體與網站或伺服器上的執行個體之間的關聯性。 如果您足夠的權限，可以將更新的複本存回網站或伺服器。 如果有其他人修改網站或伺服器上的複本，您可以決定要將複本保留原狀，或是更新它，使它成為網站或伺服器上的複本。  
   
 ### <a name="searching-for-report-parts"></a>搜尋報表組件  
@@ -103,7 +103,7 @@ ms.locfileid: "77081115"
  當您加入其他報表組件 (使用與報表中已有之資料集相同的資料集) 時，精靈不會將該資料集的其他版本加入至報表中；它會重新導向報表組件中的參考以移至現有的資料集中。 如需詳細資訊，請參閱 [報表產生器中的報表組件和資料集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)。  
   
   
-##  <a name="UpdatingComponents"></a> 使用來自伺服器的變更更新報表組件  
+##  <a name="updating-report-parts-with-changes-from-the-server"></a><a name="UpdatingComponents"></a> 使用來自伺服器的變更更新報表組件  
  每當您開啟報表時，報表產生器都會檢查伺服器上是否已經更新該報表中之報表組件的伺服器執行個體。 它也會檢查報表組件的相依項目 (如資料集和參數) 是否有變更。 如果伺服器上已經更新任何已發行的報表組件或其相依性，報表中的資訊列會顯示已經更新的數目。 您可以選擇檢視並接受或拒絕更新，或是解除資訊列。 如果選擇檢視更新，您會看到報表組件的縮圖、上次修改者，以及上次修改時間。 接著，您可以接受任何或所有更新的項目。  
   
 > [!NOTE]  
@@ -120,7 +120,7 @@ ms.locfileid: "77081115"
  若要還原到伺服器上的版本，只要刪除您在報表中擁有的版本，然後再加入一次即可。  
   
   
-##  <a name="RepublishingComponents"></a> 更新已經在伺服器上的報表組件  
+##  <a name="updating-report-parts-already-on-the-server"></a><a name="RepublishingComponents"></a> 更新已經在伺服器上的報表組件  
  您可以選擇更新伺服器上的現有報表組件，或將其發行為新的報表組件，而不取代現有的報表組件。 當您更新伺服器上的報表組件時，它不會自動修改其他報表中的報表組件複本。 如果其他報表作者已經將該報表組件加入至報表中，下次開啟該報表時就會接到變更的通知。 他們可以選擇接受您所做的變更與否。  
   
  如果您選擇將其發行為新的報表組件，報表產生器會為它提供一個新的唯一識別碼，而且不會再連結到原始的報表組件。  
@@ -128,10 +128,10 @@ ms.locfileid: "77081115"
  如果資料集內嵌在報表組件中，則每次發行報表組件時，資料集將會顯示在 **[發行報表組件]** 對話方塊中。 共用資料集不會顯示在 **[發行報表組件]** 對話方塊中。  
   
   
-##  <a name="RptPartsRptDesigner"></a> 在報表設計師中使用報表組件  
+##  <a name="working-with-report-parts-in-report-designer"></a><a name="RptPartsRptDesigner"></a> 在報表設計師中使用報表組件  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的報表設計師中，報表組件的運作方式稍有不同。 在報表設計師中，發行作業是單向的：您可以從報表設計師發行報表組件，但不能在報表設計師中重複使用現有的報表組件。 如需詳細資訊，請參閱[報表設計師中的報表組件 &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
   
-##  <a name="HowTo"></a> 如何主題  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 如何主題  
  [發行與重新發行報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
  [瀏覽報表組件及設定預設資料夾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  

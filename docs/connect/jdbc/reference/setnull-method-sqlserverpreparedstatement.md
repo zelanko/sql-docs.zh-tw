@@ -16,10 +16,10 @@ ms.assetid: 90dcd2f1-ad58-440c-8bf2-0f146fa727a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9bcfa1d8b17cf663130e617304ac0bdda46d9cac
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973493"
 ---
 # <a name="setnull-method-sqlserverpreparedstatement"></a>setNull 方法 (SQLServerPreparedStatement)

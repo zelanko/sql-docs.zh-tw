@@ -15,10 +15,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1d51de2031e8187e96eaea3fcb344df133928779
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242237"
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>作業步驟屬性 - 新增作業步驟 (進階頁面)
@@ -51,7 +51,7 @@ ms.locfileid: "75242237"
 瀏覽作業步驟輸出所用的檔案。  
   
 **檢視**  
-在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，會停用檢視輸出檔的這個按鈕。 而改用 [記事本] 來檢視作業步驟輸出檔。  
+在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，會停用檢視輸出檔的這個按鈕， 而改用 [記事本] 來檢視作業步驟輸出檔。  
   
 **將輸出附加至現有檔案**  
 將輸出附加至現有的檔案內容。 否則，每次執行作業步驟時會覆寫先前的檔案內容。  
@@ -79,7 +79,7 @@ ms.locfileid: "75242237"
 瀏覽作業步驟輸出所用的檔案。  
   
 **檢視**  
-在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，會停用檢視輸出檔的這個按鈕。 而改用 [記事本] 來檢視作業步驟輸出檔。  
+在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，會停用檢視輸出檔的這個按鈕， 而改用 [記事本] 來檢視作業步驟輸出檔。  
   
 **將輸出附加至現有檔案**  
 每次執行作業步驟時，將作業步驟輸出附加至先前的檔案內容。  

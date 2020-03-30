@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: v-makouz
 ms.author: genemi
 ms.openlocfilehash: bf0961b8ef53060904ad797832e7c7467a859c2b
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285862"
 ---
 # <a name="programming-guidelines"></a>程式設計指導方針
@@ -22,7 +22,7 @@ ms.locfileid: "79285862"
 
 macOS 和 Linux 上 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的程式設計功能以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中 ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) 的 ODBC 為基礎。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 以 Windows Data Access Components ([ODBC 程式設計人員的參考](https://go.microsoft.com/fwlink/?LinkID=45250)) 中的 ODBC 為基礎。  
 
-ODBC 應用程式可在納入 unixODBC 標頭 (`sql.h`、`sqlext.h`、`sqltypes.h` 和 `sqlucode.h`) 之後納入 `/usr/local/include/msodbcsql.h`，藉以使用 Multiple Active Result Sets (MARS) 和其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定功能。 接著，請針對您要在 Windows ODBC 應用程式中使用的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 專屬項目，使用相同的符號名稱。
+ODBC 應用程式可在納入 unixODBC 標頭 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、`/usr/local/include/msodbcsql.h`、`sql.h` 和 `sqlext.h`) 之後納入 `sqltypes.h`，藉以使用 Multiple Active Result Sets (MARS) 和其他 `sqlucode.h` 特定功能。 接著，請針對您要在 Windows ODBC 應用程式中使用的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 專屬項目，使用相同的符號名稱。
 
 ## <a name="available-features"></a>可用的功能  
 在 macOS 和 Linux 上使用 ODBC 驅動程序時，您可參考 ODBC 之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 文件 ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) 內的下列章節：  
@@ -75,7 +75,7 @@ macOS 和 Linux 上此版本的 ODBC 驅動程式不提供下列功能：
 若為 ODBC Driver 17，支援其中一種下列字元集/編碼的 SQLCHAR 資料：
 
 > [!NOTE]  
-> 由於 `musl` 和 `glibc` 之間的 `iconv` 差異，因此，Alpine Linux 不支援這其中許多地區設定。
+> 由於 `iconv` 和 `musl` 之間的 `glibc` 差異，因此，Alpine Linux 不支援這其中許多地區設定。
 >
 > 如需詳細資訊，請參閱[與 glibc 的功能差異](https://wiki.musl-libc.org/functional-differences-from-glibc.html) \(英文\)。
 
@@ -122,13 +122,13 @@ Windows 與 Linux 和 macOS 上的數個 iconv 程式庫版本之間有一些編
 
 在 ODBC 驅動程式 13 和 13.1 中，當 UTF-8 多位元組字元或 UTF-16 代理分在各個 SQLPutData 緩衝區時，會導致資料損毀。 對於最後不是部分字元編碼的串流 SQLPutData，請使用緩衝區。 ODBC Driver 17 已移除這項限制。
 
-## <a name="bkmk-openssl"></a>OpenSSL
+## <a name="openssl"></a><a name="bkmk-openssl"></a>OpenSSL
 從 17.4 版開始，驅動程式會以動態方式載入 OpenSSL，使其可在具有 1.0 或 1.1 版的系統上執行，而不需個別的驅動程式檔案。 若有多個版本的 OpenSSL 存在，驅動程式將嘗試載入最新版本。 驅動程式目前支援 OpenSSL 1.0.x 和 1.1.x。
 
 > [!NOTE]  
 > 如果使用驅動程式 (或其中一個元件) 的應用程式會連結到或動態載入不同版本的 OpenSSL，可能就會發生衝突。 如果系統上有數個版本的 OpenSSL 存在，而且應用程式會加以使用，則強烈建議您特別小心地確認應用程式和驅動程式所載入的版本不相符，因為錯誤可能會損毀記憶體，因此不一定會以明顯或一致的方式表現出來。
 
-## <a name="bkmk-alpine"></a>Alpine Linux
+## <a name="alpine-linux"></a><a name="bkmk-alpine"></a>Alpine Linux
 撰寫本文時，MUSL 中的預設堆疊大小是 128K，這對於基本的 ODBC 驅動程式功能就已足夠，但根據應用程式的用途，超過此限制並不困難，尤其是從多個執行緒呼叫驅動程式時。 建議使用 `-Wl,-z,stack-size=<VALUE IN BYTES>` 來編譯 Alpine Linux 上的 ODBC 應用程式，以增加堆疊大小。 大部分 GLIBC 系統上的預設堆疊大小為 2MB (僅供參考)。
 
 ## <a name="additional-notes"></a>其他注意事項  

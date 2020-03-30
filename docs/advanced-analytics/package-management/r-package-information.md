@@ -10,10 +10,10 @@ author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 41e5f384878dfb284c31d6ba2886c9e223d03ca3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74479421"
 ---
 # <a name="get-r-package-information"></a>取得 Python 資訊
@@ -134,7 +134,7 @@ R 支援包括開放原始碼 R，因此您可以呼叫基底 R 函式及安裝�
 
 ## <a name="list-all-installed-r-packages"></a>列出所有已安裝的 R 套件
 
-下列範例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序中的 R 函式 `installed.packages()`，來顯示已在目前 SQL 執行個體的 R_SERVICES 程式庫中安裝的 R 套件清單。 此指令碼會傳回 DESCRIPTION 檔案中的套件名稱和版本欄位。
+下列範例使用 `installed.packages()` 預存程序中的 R 函式 [!INCLUDE[tsql](../../includes/tsql-md.md)]，來顯示已在目前 SQL 執行個體的 R_SERVICES 程式庫中安裝的 R 套件清單。 此指令碼會傳回 DESCRIPTION 檔案中的套件名稱和版本欄位。
 
 ```sql
 EXECUTE sp_execute_external_script

@@ -16,10 +16,10 @@ ms.assetid: b1d3a50c-3d05-44b3-b1ba-404a013fd627
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f355974fb2d3710f50f052dc5a800c48e60a3b35
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955689"
 ---
 # <a name="clearwarnings-method-sqlserverstatement"></a>clearWarnings 方法 (SQLServerStatement)

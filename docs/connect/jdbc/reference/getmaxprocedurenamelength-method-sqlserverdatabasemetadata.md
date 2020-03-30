@@ -16,10 +16,10 @@ ms.assetid: e1c05eb3-8465-46fd-99bc-5e8effcafee5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c47ca9fc50031e08479bfc78ffacbc66be73e14f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982110"
 ---
 # <a name="getmaxprocedurenamelength-method-sqlserverdatabasemetadata"></a>getMaxProcedureNameLength 方法 (SQLServerDatabaseMetaData)

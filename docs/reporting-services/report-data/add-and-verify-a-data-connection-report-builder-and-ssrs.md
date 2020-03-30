@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/01/2017
 ms.openlocfilehash: 26ea58eaaaffbbd0c53d78ca971f472413be322b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082264"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>加入及驗證資料連接 (報表產生器及 SSRS)
@@ -52,9 +52,9 @@ ms.locfileid: "77082264"
 
 2. 按一下 **[測試連接]** 。
 
-3. 如果連線成功，即會出現下列訊息：「成功建立連線」。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3. 如果連接成功，將會出現下列訊息：「成功建立連接」。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-4. 如果連線不成功，即會出現下列訊息：「無法連線到資料來源。」  
+4. 如果連接未能成功，將會出現下列訊息：「無法連接到資料來源」。  
 
 5. 按一下 **[詳細資料]** ，並使用該資訊來更正問題。
 

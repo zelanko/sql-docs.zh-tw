@@ -16,10 +16,10 @@ ms.assetid: 4f9f230d-be4c-469a-b3dc-f24531429aae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c0dd69211302a10fe72fc2742cbcd8b6bda7c933
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68213691"
 ---
 # <a name="getcharacterstream-method-int"></a>getCharacterStream 方法 (int)

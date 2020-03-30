@@ -16,10 +16,10 @@ ms.assetid: 1af26ac2-76e5-4a26-a600-9919211333ba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72b483091a3466527f5a394ab37ff21b985857c8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67997146"
 ---
 # <a name="updatebinarystream-method-sqlserverresultset"></a>updateBinaryStream 方法 (SQLServerResultSet)

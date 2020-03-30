@@ -16,10 +16,10 @@ ms.assetid: 2cd2bed9-adf4-4bcd-ae5a-d0e3428bc709
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 53c47f912711a486ea60cf0181411e7ed68029ab
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982146"
 ---
 # <a name="getmaxcursornamelength-method-sqlserverdatabasemetadata"></a>getMaxCursorNameLength 方法 (SQLServerDatabaseMetaData)

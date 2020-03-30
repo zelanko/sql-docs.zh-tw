@@ -17,10 +17,10 @@ ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f133f6cf53123ed7c05f7a7181d5c829b45a258d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74796908"
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>使用 URL 存取整合 Reporting Services - Windows 應用程式
@@ -89,7 +89,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 1.  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 建立新的 Windows 應用程式。  
   
-2.  在 [工具箱]  對話方塊中找出 <xref:System.Windows.Forms.WebBrowser> 控制項。  
+2.  在 [工具箱]<xref:System.Windows.Forms.WebBrowser>**對話方塊中找出** 控制項。  
   
      如果看不到 [工具箱]  ，可以按一下 [檢視]  功能表項目，並選取 [工具箱]  來存取。  
   
@@ -97,7 +97,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
      名為 webBrowser1 的 <xref:System.Windows.Forms.WebBrowser> 控制項會新增至 Form  
   
- 您可以呼叫其 **Navigate** 方法，將 <xref:System.Windows.Forms.WebBrowser> 控制項導向 URL。 您可以在執行階段將特定的 URL 存取字串指派到 <xref:System.Windows.Forms.WebBrowser> 控制項，如下列範例所示。  
+ 您可以呼叫其 <xref:System.Windows.Forms.WebBrowser>Navigate**方法，將** 控制項導向 URL。 您可以在執行階段將特定的 URL 存取字串指派到 <xref:System.Windows.Forms.WebBrowser> 控制項，如下列範例所示。  
   
 ```vb  
 Dim url As String = "https://localhost/reportserver?/" & _  

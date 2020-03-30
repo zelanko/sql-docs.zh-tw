@@ -11,10 +11,10 @@ ms.assetid: a025d124-3634-49fa-8bb5-e9b98f2d5de3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9e21d32c0a0ecd9e76769d3edeb1ab4580822cc5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998856"
 ---
 # <a name="updatenclob-method-javalangstring-javasqlnclob"></a>updateNClob 方法 (java.lang.String, java.sql.NClob)

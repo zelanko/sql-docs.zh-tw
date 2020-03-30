@@ -11,10 +11,10 @@ ms.assetid: 5ac360e8-a1ee-4577-93b4-bb2018f1087a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 89f3262eab50e539d2a37b9152d5af20f0a541b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981328"
 ---
 # <a name="getnstring-method-sqlservercallablestatement"></a>getNString 方法 (SQLServerCallableStatement)

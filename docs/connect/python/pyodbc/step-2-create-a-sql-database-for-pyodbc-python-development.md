@@ -11,10 +11,10 @@ ms.assetid: 9dd871b1-358f-4161-bb79-290bdb024d9d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5af059a98f32be562678516bacfd6383114ddac4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67935717"
 ---
 # <a name="step-2-create-a-sql-database-for-pyodbc-python-development"></a>步驟 2︰建立用於 pyodbc Python 開發的 SQL 資料庫

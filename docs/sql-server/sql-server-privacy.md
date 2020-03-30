@@ -10,10 +10,10 @@ helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 946e99884b4c261393c29cd06747823c3aa7e3a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76761802"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 隱私權補充
@@ -132,14 +132,14 @@ ms.locfileid: "76761802"
 - 事件名稱和錯誤碼
 - 硬體設定和識別，例如 OEM 製造商
 
-Microsoft 不會檢查由其他使用 SQL Server 之程式所設定的應用程式名稱值 (範例：SharePoint 或第三方封裝程式且在啟用「使用狀況資料」之情況下在傳送給 Microsoft 的系統中繼資料中包括此資訊)。 客戶不應該放置個人資料 (例如，[系統中繼資料] 欄位中的終端使用者識別資訊)，或建立設計在這些欄位中儲存個人資料的應用程式。 
+Microsoft 會檢查其他程式使用 SQL Server 所設定的應用程式名稱值 (例如：Sharepoint 或協力廠商封裝程式，且會在使用方式資料啟用時在傳送給 Microsoft 的系統中繼資料中包含此資訊)。 客戶不應該放置個人資料 (例如，[系統中繼資料] 欄位中的終端使用者識別資訊)，或建立設計在這些欄位中儲存個人資料的應用程式。 
 
 ### <a name="permitted-usage-scenarios"></a>允許的使用方式情節
 
 |狀況  |存取限制  |保留需求|
 |---------|---------|---------|
 |Microsoft 可以用來改善功能及 (或) 修正目前功能中的 Bug。|限制為供 Microsoft 內部使用且協力廠商不可存取。 |最少 90 天 - 最多 3 年 |
-|可以用來對客戶提出建議。  例如，「根據所使用產品方式，請考慮使用執行效果更佳的功能 *X*。」 |Microsoft 可以向原始客戶公開資料，例如透過儀表板。 |客戶資料安全性記錄：最小 3 年 - 最多 6 年 |
+|可以用來對客戶提出建議。  例如，「根據所使用產品方式，請考慮使用執行效果更佳的功能 *X*。」 |Microsoft 可以向原始客戶公開資料，例如透過儀表板。 |客戶資料安全性記錄：最少 3 年 - 最多 6 年 |
 |Microsoft 可以用來進行未來的產品規劃。 |Microsoft 可能會與其他硬體和軟體廠商共用這項資訊，以改善其產品如何與 Microsoft 軟體搭配執行。 |最少 90 天 - 最多 3 年|
 |Microsoft 可以用來根據發出的使用方式和診斷資料來提供雲端服務。 例如，客戶儀表板顯示跨組織之所有 SQL Server 安裝的功能使用方式。 |Microsoft 可以向原始客戶公開資料，例如透過儀表板。 |最少 90 天 - 最多 3 年 |
 |客戶與其同意可以傳送包含給 Microsoft 之「客戶內容」的「使用者意見反應」。 |限制為供 Microsoft 內部使用且協力廠商不可存取。 Microsoft 可以向原始客戶公開資料。 |使用者意見反應：最多 1 年 |

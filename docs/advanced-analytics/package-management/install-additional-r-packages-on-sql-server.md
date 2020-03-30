@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ff2d40dab5fa2d8f03bf3d1fa32b08e66a0ccdbc
-ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79027940"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>使用 sqlmlutils 安裝新的 R 套件
@@ -51,7 +51,7 @@ ms.locfileid: "79027940"
 
 若用戶端電腦可以存取網際網路，您可以在線上下載並安裝 **sqlmlutils** 與其相依套件。
 
-1. 從 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 將最新的 **sqlmlutils** ZIP 檔案下載到用戶端電腦。 請勿解壓縮檔案。
+1. 從 **將最新的**sqlmlutils https://github.com/Microsoft/sqlmlutils/tree/master/R/dist ZIP 檔案下載到用戶端電腦。 請勿解壓縮檔案。
 
 1. 開啟 [命令提示字元]  並執行下列命令，以安裝 **sqlmlutils** 與 **RODBCext** 套件。 取代為您下載之 **sqlmlutils** ZIP 檔案的完整路徑 (此範例假設該檔案位於您的 [文件] 資料夾中)。 會在線上找到 **RODBCext** 套件並安裝。
 
@@ -108,7 +108,7 @@ ms.locfileid: "79027940"
     , @script = N'print(R.version)'
    ```
 
-1. 從 [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist) 下載最新的 **sqlmlutils** ZIP 檔案 (不要解壓縮該檔案)。 例如，將檔案下載到 `c:\downloads\sqlmlutils_0.7.1.zip`。
+1. 從  [ 下載最新的 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist sqlmlutils](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist) ZIP 檔案 (不要解壓縮該檔案)。 例如，將檔案下載到 `c:\downloads\sqlmlutils_0.7.1.zip`。
 
 1. 將整個 **RODBCext** 存放庫資料夾 (`c:\downloads\rodbcext`) 與 **sqlmlutils** ZIP 檔案 (`c:\downloads\sqlmlutils_0.7.1.zip`) 複製到用戶端電腦。 例如，將它們複製到用戶端電腦上的 `c:\temp\packages` 資料夾。
 
@@ -148,7 +148,7 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 ### <a name="add-the-package-offline"></a>離線新增套件
 
 若用戶端電腦沒有網際網路連線，您可以透過可以存取網際網路的電腦，使用**miniCRAN** 來下載 **glue** 套件。 接著，將該套件複製到用戶端電腦，以便離線安裝套件。
-如需有關安裝 **miniCRAN** 的詳細資訊，請參閱[安裝 miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran)。
+如需有關安裝 [miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) 的詳細資訊，請參閱**安裝 miniCRAN**。
 
 在可以存取網際網路的電腦上：
 

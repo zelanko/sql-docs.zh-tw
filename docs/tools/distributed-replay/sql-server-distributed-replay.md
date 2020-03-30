@@ -10,10 +10,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.openlocfilehash: c52325045cd21d0eb11edef8b0664d14c292e729
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74993424"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
@@ -46,11 +46,11 @@ ms.locfileid: "74993424"
 ## <a name="distributed-replay-concepts"></a>Distributed Replay 概念  
  下列元件構成 Distributed Replay 環境：  
   
--   **Distributed Replay 系統管理工具**：用來與 Distributed Replay Controller 進行通訊的主控台應用程式 **DReplay.exe**。 您可以使用管理工具來控制分散式重新執行。  
+-   **Distributed Replay 管理工具**：用來與 Distributed Replay Controller 進行通訊的主控台應用程式 **DReplay.exe**。 您可以使用管理工具來控制分散式重新執行。  
   
--   **Distributed Replay Controller**：執行 Windows 服務且名為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 的電腦。 Distributed Replay Controller 可協調 Distributed Replay Client 的動作。 每個 Distributed Replay 環境都只能有一個 Controller 執行個體。  
+-   **Distributed Replay Controller**：執行 Windows 服務 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller) 的電腦。 Distributed Replay Controller 可協調 Distributed Replay Client 的動作。 每個 Distributed Replay 環境都只能有一個 Controller 執行個體。  
   
--   **Distributed Replay Client**：一或多部執行 Windows 服務且名為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 的 (實體或虛擬) 電腦。 Distributed Replay Client 會共同運作以模擬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的工作負載。 每個 Distributed Replay 環境中可以有一個或多個用戶端。  
+-   **Distributed Replay Client**：一部或多部執行 Windows 服務 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client) 的電腦 (實體或虛擬)。 Distributed Replay Client 會共同運作以模擬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的工作負載。 每個 Distributed Replay 環境中可以有一個或多個用戶端。  
   
 -   **目標伺服器**：Distributed Replay Client 可用來重新執行追蹤資料的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 我們建議您將目標伺服器放置於測試環境中。  
   

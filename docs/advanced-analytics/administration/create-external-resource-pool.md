@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1f8661101fa5b0f859723a168e149ae9747b3da4
-ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/29/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78200989"
 ---
 # <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>建立 SQL Server 機器學習服務的資源集區

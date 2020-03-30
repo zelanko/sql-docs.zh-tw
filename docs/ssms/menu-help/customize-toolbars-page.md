@@ -13,10 +13,10 @@ ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 1d6297151c5f31c88d108835f1c6c4955bfbccf8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242194"
 ---
 # <a name="customize-toolbars-page"></a>自訂 (工具列頁面)

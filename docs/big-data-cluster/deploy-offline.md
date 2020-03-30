@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 15af041e94ac0abfdae13635345de62262a4b086
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73531978"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>執行 SQL Server 巨量資料叢集的離線部署
@@ -55,7 +55,7 @@ ms.locfileid: "73531978"
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
 
-### <a id="images"></a> 巨量資料叢集容器映像
+### <a name="big-data-cluster-container-images"></a><a id="images"></a> 巨量資料叢集容器映像
 
 離線安裝需要下列巨量資料叢集容器映像：
 - **mssql-app-service-proxy**
@@ -85,7 +85,7 @@ ms.locfileid: "73531978"
 - **mssql-ssis-app-runtime**
 
 
-## <a id="automated"></a> 自動化指令碼
+## <a name="automated-script"></a><a id="automated"></a> 自動化指令碼
 
 您可以使用自動化的 Python 指令碼來自動提取所有必要容器映像，並將其推送至私人存放庫。
 
@@ -120,7 +120,7 @@ ms.locfileid: "73531978"
 
 巨量資料叢集部署需要幾項工具，包括 **Python**、`azdata` 和 **kubectl**。 遵循下列步驟，在離線伺服器上安裝這些工具。
 
-### <a id="python"></a> 離線安裝 python
+### <a name="install-python-offline"></a><a id="python"></a> 離線安裝 python
 
 1. 在能存取網際網路的電腦上，下載下列其中一個包含 Python 的壓縮檔案：
 
@@ -138,7 +138,7 @@ ms.locfileid: "73531978"
    installLocalPythonPackages.bat "C:\python-3.6.6-win-x64-0.0.1-offline\0.0.1"
    ```
 
-### <a id="azdata"></a> 離線安裝 azdata
+### <a name="install-azdata-offline"></a><a id="azdata"></a> 離線安裝 azdata
 
 1. 在能存取網際網路並具有 [Python](https://wiki.python.org/moin/BeginnersGuide/Download) 的電腦上執行下列命令，將所有 `azdata` 套件下載至目前的資料夾。
 
@@ -154,7 +154,7 @@ ms.locfileid: "73531978"
    pip install --no-index --find-links <path-to-packages> -r <path-to-requirements.txt>
    ```
 
-### <a id="kubectl"></a> 離線安裝 kubectl
+### <a name="install-kubectl-offline"></a><a id="kubectl"></a> 離線安裝 kubectl
 
 若要將 **kubectl** 安裝至離線電腦，請遵循下列步驟。
 

@@ -13,10 +13,10 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 153de78e01099cf1079c6fe0ad34c15c6d7afc44
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258159"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
@@ -34,7 +34,7 @@ ms.locfileid: "75258159"
 > [!IMPORTANT]  
 >  AlwaysOn 可用性群組不允許 FCI 來回自動容錯移轉。 不過，AlwaysOn 可用性群組允許 FCI 來回手動容錯移轉。  
   
-##  <a name="Concepts"></a> 容錯移轉原則概觀  
+##  <a name="failover-policy-overview"></a><a name="Concepts"></a> 容錯移轉原則概觀  
  容錯移轉程序可以分為下列步驟：  
   
 1.  [監視健全狀態](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md#monitor)  
@@ -43,7 +43,7 @@ ms.locfileid: "75258159"
   
 3.  [回應失敗](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md#respond)  
   
-###  <a name="monitor"></a> 監視健全狀態  
+###  <a name="monitor-the-health-status"></a><a name="monitor"></a> 監視健全狀態  
  對 FCI 三種類型的健全狀態進行監視：  
   
 -   [SQL Server 服務的狀態](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md#service)  
@@ -52,10 +52,10 @@ ms.locfileid: "75258159"
   
 -   [SQL Server 元件診斷](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md#component)  
   
-####  <a name="service"></a> SQL Server 服務的狀態  
+####  <a name="state-of-the-sql-server-service"></a><a name="service"></a> SQL Server 服務的狀態  
  WSFC 服務會監視使用中 FCI 節點上 SQL Server 服務的啟動狀態，以偵測 SQL Server 服務停止的情況。  
   
-####  <a name="instance"></a> SQL Server 執行個體的回應性  
+####  <a name="responsiveness-of-the-sql-server-instance"></a><a name="instance"></a> SQL Server 執行個體的回應性  
  在 SQL Server 啟動期間，WSFC 服務會使用 SQL Server Database Engine 資源 DLL，以獨佔模式用於監視健全狀態的不同執行緒上建立新的連接。 這可以確保 SQL 執行個體在負載下有必要資源可報告其健全狀態。 SQL Server 會使用這個專用連線，以重複模式執行 [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系統預存程序，定期向資源 DLL 回報 SQL Server 元件的健全狀態。  
   
  資源 DLL 使用健全狀況檢查逾時來判斷 SQL 執行個體的回應性。 HealthCheckTimeout 屬性會定義資源 DLL 應該等候 sp_server_diagnostics 預存程序的時間，以便在超過該時間後，向 WSFC 服務回報 SQL 執行個體沒有回應。 此屬性可透過使用 T-SQL 和容錯移轉叢集管理員嵌入式管理單元進行設定。 如需詳細資訊，請參閱＜ [Configure HealthCheckTimeout Property Settings](../../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md)＞。 下列項目會描述此屬性會如何影響逾時和重複間隔設定：  
@@ -66,7 +66,7 @@ ms.locfileid: "75258159"
   
 -   如果專用連接中斷，資源 DLL 會在 HealthCheckTimeout 所指定的間隔內重試連接到 SQL 執行個體，才向 WSFC 服務回報 SQL 執行個體沒有回應。  
   
-####  <a name="component"></a> SQL Server 元件診斷  
+####  <a name="sql-server-component-diagnostics"></a><a name="component"></a> SQL Server 元件診斷  
  系統預存程序 sp_server_diagnostics 會定期收集 SQL 執行個體上的元件診斷。 收集到的診斷資訊會在下列每一個元件中顯示為一個資料列，並傳遞給呼叫執行緒。  
   
 1.  系統  
@@ -86,7 +86,7 @@ ms.locfileid: "75258159"
 > [!TIP]  
 >  sp_server_diagnostic 預存程序可供 SQL Server AlwaysOn 技術使用，它也可供任何 SQL Server 執行個體用於偵測問題及疑難排解。  
   
-####  <a name="determine"></a> 判斷失敗  
+####  <a name="determining-failures"></a><a name="determine"></a> 判斷失敗  
  SQL Server Database Engine 資源 DLL 會使用 FailureConditionLevel 屬性，判斷偵測到的健全狀態是否為失敗狀況。 FailureConditionLevel 屬性定義了哪些偵測到的健全狀態導致重新啟動或容錯移轉。 多個選項等級可供使用，包括沒有自動重新啟動或容錯移轉，以及導致自動重新啟動或容錯移轉的所有可能失敗狀況。 如需有關如何設定這個屬性的詳細資訊，請參閱＜ [Configure FailureConditionLevel Property Settings](../../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)＞。  
   
  失敗狀況會設定為遞增等級。 對於等級 1-5，每個等級都包含來自上一個等級的所有狀況，並加上自身的狀況。 這表示，每個等級都具有更高的容錯移轉或重新啟動可能性。 下表描述的是失敗狀況等級。  
@@ -104,8 +104,8 @@ ms.locfileid: "75258159"
   
  *預設值  
   
-####  <a name="respond"></a> 回應失敗  
- 在偵測到一個或多個失敗狀況後，WSFC 服務回應失敗的方式取決於 WSFC 仲裁狀態以及 FCI 資源群組的重新啟動和容錯移轉設定。 如果 FCI 已經失去其 WSFC 仲裁，整個 FCI 就會離線，而且 FCI 已經失去其高可用性。 如果 FCI 仍然保留其 WSFC 仲裁，WSFC 服務的回應方式可能會先嘗試重新啟動失敗的節點，如果重新啟動嘗試不成功則容錯移轉。 重新啟動和容錯移轉設定是在容錯移轉叢集管理員嵌入式管理單元中進行設定。 如需這些設定的詳細資訊，請參閱[\<資源> 屬性：原則索引標籤](https://technet.microsoft.com/library/cc725685.aspx)。  
+####  <a name="responding-to-failures"></a><a name="respond"></a> 回應失敗  
+ 在偵測到一個或多個失敗狀況後，WSFC 服務回應失敗的方式取決於 WSFC 仲裁狀態以及 FCI 資源群組的重新啟動和容錯移轉設定。 如果 FCI 已經失去其 WSFC 仲裁，整個 FCI 就會離線，而且 FCI 已經失去其高可用性。 如果 FCI 仍然保留其 WSFC 仲裁，WSFC 服務的回應方式可能會先嘗試重新啟動失敗的節點，如果重新啟動嘗試不成功則容錯移轉。 重新啟動和容錯移轉設定是在容錯移轉叢集管理員嵌入式管理單元中進行設定。 如需有關這些設定的詳細資訊，請參閱 [\<Resource> 內容：原則索引標籤](https://technet.microsoft.com/library/cc725685.aspx)。  
   
  如需維護仲裁健全狀況的詳細資訊，請參閱 [WSFC 仲裁模式和投票組態 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)。  
   

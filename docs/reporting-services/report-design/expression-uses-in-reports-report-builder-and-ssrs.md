@@ -11,10 +11,10 @@ ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e781df6f5ccbdbb427de7e8b68c9dbc06522be71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080275"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>報表中的運算式用法 (報表產生器及 SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "77080275"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Simple"></a> 使用簡單運算式  
+##  <a name="using-simple-expressions"></a><a name="Simple"></a> 使用簡單運算式  
  簡單運算式會出現在設計介面和對話方塊的方括號內，例如資料集欄位會以 `[ProductID]`形式出現。 當您從資料集將欄位拖曳到文字方塊上時，系統會自動為您建立簡單運算式。 便會建立預留位置，而且此運算式會定義基礎值。 您也可以將運算式直接輸入資料區資料格或文字方塊中，兩者都位於設計介面或對話方塊中 (例如 `[ProductID]`)。  
   
  下表列出您可以使用簡單運算式之方法的範例。 此表描述其功能、要設定的屬性、您通常用來設定它的對話方塊，以及屬性的值。 您可以在設計介面上、對話方塊中或 [屬性] 窗格內直接輸入簡單運算式，或者可以在 [運算式] 對話方塊中編輯它，就像是任何運算式一樣。  
@@ -46,7 +46,7 @@ ms.locfileid: "77080275"
 |將查詢參數連結到報表參數。|資料集上的參數集合。 使用 **[資料集屬性對話方塊、參數]** 。|`[@Category]`<br /><br /> `[@Category]`|  
 |將參數從主報表傳遞到子報表。|子報表上的參數集合。 使用 **[子報表屬性對話方塊、參數]** 。|`[@Category]`<br /><br /> `[@Category]`|  
   
-##  <a name="Complex"></a> 使用複雜運算式  
+##  <a name="using-complex-expressions"></a><a name="Complex"></a> 使用複雜運算式  
  複雜運算式可包含多個內建參考、運算子和函數呼叫，而且會以 `<<Expr>>`形式出現在設計介面上。 若要查看或變更運算式文字，您必須開啟 **[運算式]** 對話方塊或是直接在 [屬性] 窗格內輸入。 下表列出您可以使用複雜運算式來顯示或組織資料或是變更報表外觀的典型方法，包括所要設定的屬性、通常用來設定它的對話方塊及屬性的值。 您可以在對話方塊中、設計介面上或 [屬性] 窗格內直接輸入運算式。  
   
 |功能|屬性、內容和對話方塊|屬性值|  
@@ -57,7 +57,7 @@ ms.locfileid: "77080275"
 |根據值格式化文字方塊內的資料。|Tablix 的詳細資料資料列中，文字方塊內的預留位置色彩。 使用 **[文字方塊屬性對話方塊、字型]** 。|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |計算值一次，以便在整個報表中參考。|報表變數的值。 使用 **[報表屬性對話方塊、變數]** 。|`=Variables!MyCalculation.Value`|  
 |從資料集中併入一個以上欄位的特定值。|Tablix 中群組的篩選方程式。 使用 **[Tablix 屬性對話方塊、篩選]** 。|選取 **[布林值]** 做為資料類型。<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|隱藏設計介面上的文字方塊，使用者可以使用名為 *Show*的布林參數進行切換。|文字方塊上的 Hidden 屬性。 使用 **[文字方塊屬性對話方塊、可見性]** 。|`=Not Parameters!` Show\<布林參數>  `.Value`|  
+|隱藏設計介面上的文字方塊，使用者可以使用名為 *Show*的布林參數進行切換。|文字方塊上的 Hidden 屬性。 使用 **[文字方塊屬性對話方塊、可見性]** 。|`=Not Parameters!` Show*布林參數>\<* `.Value`|  
 |指定動態頁首或頁尾內容。|放置在頁首或頁尾之文字方塊內的預留位置值。|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |使用參數動態指定資料來源。|資料來源上的連接字串。 使用 **[資料來源屬性對話方塊、一般]** 。|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |識別使用者選擇之多值參數的所有值。|文字方塊內的預留位置值。 使用 **[Tablix 屬性對話方塊、篩選]** 。|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  

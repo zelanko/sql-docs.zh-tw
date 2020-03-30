@@ -11,10 +11,10 @@ ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
 ms.openlocfilehash: 494b682853425b40699ff698117d2941805ab7da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68941143"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>報表參數 (報表產生器和報表設計師)
@@ -33,9 +33,9 @@ ms.locfileid: "68941143"
 
 本主題說明 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表參數的一般用法、您可以設定的屬性，以及其他資訊。 報表參數可讓您控制報表資料、將相關的報表連接在一起，以及變更報表呈現方式。 報表參數可以使用於您在[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]和報表設計師中建立的分頁報表，也可以使用於您在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中建立的行動報表。 深入了解 [報表參數概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)。  
 
-若要嘗試自行將參數新增至報表，請參閱[教學課程：將參數新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)。  
+若要嘗試自行將參數加入報表，請參閱 [教學課程：將參數加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)中建立的行動報表。  
 
-## <a name="bkmk_Common_Uses_for_Parameters"></a> 參數的一般使用方式
+## <a name="common-uses-for-parameters"></a><a name="bkmk_Common_Uses_for_Parameters"></a> 參數的一般使用方式
 
  以下提供部分最常使用參數的方式。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68941143"
   
     如需詳細資訊，請參閱[參數集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)。  
   
-## <a name="UserInterface"></a> 檢視具有參數的報表
+## <a name="viewing-a-report-with-parameters"></a><a name="UserInterface"></a> 檢視具有參數的報表
 
 當您檢視具有參數的報表時，報表檢視器工具列會顯示每一個參數，讓您能夠以互動的方式指定值。 下圖顯示使用參數 @ReportMonth、@ReportYear、@EmployeeID、@ShowAll、@ExpandTableRows、@CategoryQuota 及 @SalesDate 之報表的參數區域。  
 
@@ -85,7 +85,7 @@ ms.locfileid: "68941143"
   
 6. **檢視報表**：輸入參數值之後，您可以按一下 [檢視報表]  以執行報表。 如果所有參數都有預設值，則報表會在第一次檢視時自動執行。  
   
-## <a name="bkmk_Create_Parameters"></a> 建立參數
+## <a name="creating-parameters"></a><a name="bkmk_Create_Parameters"></a> 建立參數
 
 您可以利用幾個不同方式建立報表參數。
   
@@ -142,7 +142,7 @@ ms.locfileid: "68941143"
   
 - 不需要先選取參數值就能執行報表，因為已經為參數建立預設值。  
   
-## <a name="bkmk_Report_Parameters"></a> 報表參數屬性
+## <a name="report-parameter-properties"></a><a name="bkmk_Report_Parameters"></a> 報表參數屬性
 
  您可以使用 [報表屬性] 對話方塊來變更報表參數屬性。 下表摘要說明您可以針對每個參數設定的屬性：  
   
@@ -161,7 +161,7 @@ ms.locfileid: "68941143"
 |預設值|設定來自查詢或靜態清單的預設值。<br /><br /> 如果每個參數都有預設值，則報表會在第一次檢視時自動執行。|  
 |進階|設定報表定義屬性 **UsedInQuery**，其值指出此參數直接或間接影響報表中的資料。<br /><br /> **自動判斷何時重新整理**<br /> 當您想要讓報表處理器判斷此值的設定時，請選擇此選項。 如果報表處理器偵測到一個資料集查詢，且其中包含一個這個參數的直接或間接參照，或者如果報表中有子報表，則此值為 **True** 。<br /><br /> **永遠重新整理**<br /> 在資料集查詢或參數運算式中直接或間接使用報表參數時，請選擇此選項。 此選項會將 **UsedInQuery** 設定為 True。<br /><br /> **永不重新整理**<br /> 不在資料集查詢或參數運算式中直接或間接使用報表參數時，請選擇此選項。 此選項會將 **UsedInQuery** 設定為 False。<br /><br /> **警告**：請小心使用 [永不重新整理]  。 在報表伺服器上， **UsedInQuery** 用於協助控制報表資料與已轉譯之報表的快取選項，以及快照集報表的參數選項。 如果未正確設定 **[永不重新整理]** ，您可能會快取不正確的報表資料或報表，或者使快照集報表的資料不一致。 如需詳細資訊，請參閱[報表定義語言 &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)。|  
   
-##  <a name="bkmk_Dataset_Parameters"></a> 資料集查詢  
+##  <a name="dataset-query"></a><a name="bkmk_Dataset_Parameters"></a> 資料集查詢  
  若要篩選資料集查詢中的資料，您可以加入限制子句，透過指定結果集中要包含或排除的值限制擷取的資料。  
   
  使用資料來源的查詢設計工具，可協助您建立參數化查詢。  
@@ -170,7 +170,7 @@ ms.locfileid: "68941143"
   
 -   針對依據多維資料來源 (例如 Microsoft SQL Server Analysis Services、SAP NetWeaver BI 或 Hyperion Essbase) 的查詢，您可以指定是否根據您在查詢設計工具中指定的篩選建立參數。 如需詳細資訊，請參閱[查詢設計工具 &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md) 中對應於資料延伸模組的查詢設計工具主題。  
   
-##  <a name="bkmk_Manage_Parameters"></a> 在發行的報表上管理參數  
+##  <a name="parameter-management-for-a-published-report"></a><a name="bkmk_Manage_Parameters"></a> 在發行的報表上管理參數  
  當您設計報表時，報表參數會儲存在報表定義中。 當您發行報表時，報表參數會儲存，並且與報表定義分開管理。  
   
  在已發行的報表中，可以使用下列項目：  
@@ -193,7 +193,7 @@ ms.locfileid: "68941143"
   
  報表執行選項會影響處理參數的方式。 以快照集執行的報表無法使用從查詢所衍生的參數，除非查詢包括參數的預設值。  
   
-##  <a name="bkmk_Parameters_Subscription"></a> 訂閱的參數  
+##  <a name="parameters-for-a-subscription"></a><a name="bkmk_Parameters_Subscription"></a> 訂閱的參數  
  您可以定義視需要或快照集報表的訂閱，並指定在訂閱處理過程中要使用的參數值。  
   
 -   **隨選報表。**  您可以為隨選報表中所列的每個參數，指定不同於發佈值的參數值。 例如，假設您有一個呼叫服務報表，使用 *Time Period* 參數傳回客戶在目前日期、星期、或月份的服務要求。 如果報表的預設參數值設定為 **today**，您的訂閱可以使用不同的參數值 (例如， **week** 或 **month**)，以產生包含每週或每月數字的報表。  
@@ -209,7 +209,7 @@ ms.locfileid: "68941143"
   
  如需詳細資訊，請參閱[訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
-##  <a name="bkmk_Parameters_Security"></a> 參數和資料保護  
+##  <a name="parameters-and-securing-data"></a><a name="bkmk_Parameters_Security"></a> 參數和資料保護  
  散發包含機密或敏感資訊的參數化報表時，請特別小心。 使用者可以輕鬆地以其他值取代報表參數，造成您不希望發生的資訊洩露。  
   
  使用員工或個人資料之參數的一個安全替代方式，就是根據包含 Users 集合之 **UserID** 欄位的運算式來選取資料。 Users 集合提供一種方法，來取得執行報表之使用者的識別，並使用該識別來擷取使用者特定資料。  
@@ -221,9 +221,9 @@ ms.locfileid: "68941143"
 >   
 >  若要減輕不小心執行惡意指令碼的風險，請只從信任的來源開啟轉譯的報表。 如需保護報表安全的詳細資訊，請參閱 [保護報表和資源的安全](../../reporting-services/security/secure-reports-and-resources.md)。  
 
-##  <a name="bkmk_Related_Topics"></a> 相關章節  
+##  <a name="related-sections"></a><a name="bkmk_Related_Topics"></a> 相關章節  
 
- [教學課程：將參數新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [教學課程：將參數加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
 [報表參數概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   

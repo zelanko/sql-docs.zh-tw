@@ -9,10 +9,10 @@ ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e527b4059e225b012a2fa39cf21033b8af5ab9e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081095"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>報表設計提示 (報表產生器及 SSRS)
@@ -21,7 +21,7 @@ ms.locfileid: "77081095"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DesigningReports"></a> 設計報表  
+##  <a name="designing-reports"></a><a name="DesigningReports"></a> 設計報表  
   
 -   設計良好的報表會將可引導動作的資訊傳遞給使用者。 識別報表協助解答的問題， 並在設計報表的過程中牢記這些問題。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "77081095"
   
  如需設計報表時應考慮之事項的詳細資訊，請參閱[規劃報表 &#40;報表產生器&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)。  
   
-##  <a name="NamingConventions"></a> 報表、資料來源和資料集的命名慣例  
+##  <a name="naming-conventions-for-reports-data-sources-and-datasets"></a><a name="NamingConventions"></a> 報表、資料來源和資料集的命名慣例  
   
 -   使用資料來源的命名慣例以及記載資料來源的資料集。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "77081095"
   
 -   在報表名稱中使用底線來取代空格。 如果您從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站下載報表，就會以底線取代空格。 如果您使用下載功能在本機儲存報表，然後將其併入 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，則使用底線有助於保留報表相依性，讓子報表和鑽研連結正確無誤。  
   
-##  <a name="Data"></a> 使用資料  
+##  <a name="working-with-data"></a><a name="Data"></a> 使用資料  
   
 -   在第一個步驟中，讓您想要使用的所有資料出現在 [報表資料] 窗格中。 當您精簡報表所要解答的問題時，請考慮如何將報表資料集中的資料限制為所需的資料。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "77081095"
   
 -   根據您的需求而定，您可以在報表中顯示報表資料來源的名稱和位置、資料集查詢命令文字和參數值。 許多新使用者會提出的第一個問題是資料來自何處。 為減少報表中混亂的情形，您可以有條件地隱藏含有這種資訊類型的文字方塊，讓使用者選擇是否要查看。 請嘗試在報表的最後一頁上加入這項資訊。 您可以根據使用者可變更的參數，設定文字方塊可見性。  
   
-##  <a name="DesignSurface"></a> 與報表設計介面互動  
+##  <a name="interacting-with-the-report-design-surface"></a><a name="DesignSurface"></a> 與報表設計介面互動  
  報表設計介面並非 WYSIWIG。 當您將報表項目放在設計介面上時，其相對位置會影響這些項目顯示在轉譯報表頁面上的方式。 空白會獲得保留。  
   
 -   使用對齊線和配置按鈕，在報表設計介面上對齊及排列項目。 例如，您可以對齊選取項目的頂端或邊緣、擴展某個項目以符合另一個項目的大小，或是調整項目之間的間距。  
@@ -88,7 +88,7 @@ ms.locfileid: "77081095"
   
 -   若要從 [報表資料] 窗格將欄位拖曳到 [群組] 窗格，請避免橫跨設計介面上的其他報表項目拖曳欄位，因為這樣做會選取其他項目並取消選取 Tablix 資料區。 請從 [報表資料] 窗格向下拖曳欄位，然後橫跨至 [群組] 窗格。  
   
-###  <a name="Selecting"></a> 選取項目  
+###  <a name="selecting-items"></a><a name="Selecting"></a> 選取項目  
  若要選取您希望出現在報表設計介面上的物件，請使用 ESC 鍵，並以滑鼠右鍵按一下內容功能表、[屬性] 窗格和 [群組] 窗格。  
   
 -   -   按 ESC 鍵，在佔據設計介面上相同空間的報表項目堆疊之間循環。  
@@ -101,31 +101,31 @@ ms.locfileid: "77081095"
   
  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的報表設計師中，您可以從 [屬性] 窗格工具列的下拉式物件清單中選取，也可以從 [文件大綱] 視窗的報表項目階層式檢視中選取。 您可以在這個窗格內選取項目，並查看已在設計介面上選取哪一個項目。 若要開啟 [文件大綱] 視窗，請在 **[檢視]** 功能表中，指向 **[其他視窗]** ，然後按一下 **[文件大綱]** 。  
   
-##  <a name="ReportItems"></a> 使用特定類型的報表項目  
+##  <a name="working-with-specific-types-of-report-items"></a><a name="ReportItems"></a> 使用特定類型的報表項目  
   
-###  <a name="Parameters"></a> 使用參數  
+###  <a name="working-with-parameters"></a><a name="Parameters"></a> 使用參數  
   
 -   報表參數的主要用途是篩選資料來源的資料，並且單獨擷取報表用途所需的資料。  
   
 -   如果是報表參數，請在啟用互動性及協助使用者得到想要的結果之間，取得一個平衡點。 例如，您可以將參數的預設值設定為比較常用的值。  
   
-###  <a name="Text"></a> 使用文字  
+###  <a name="working-with-text"></a><a name="Text"></a> 使用文字  
   
 -   當您將多行文字貼入文字方塊時，該文字會當做一次文字往返加入。 每次文字往返都只能格式化成一個單位。 若要獨立設定每一行的格式，請視需要在文字往返中按下 RETURN，藉以插入新行。 然後，您就可以將格式設定和樣式套用至文字方塊中的每個獨立文字行。  
   
 -   您可以針對文字方塊或是文字方塊中的預留位置文字，設定屬性和動作的格式。 如果只有一行文字，在文字方塊上設定屬性會比在文字上設定屬性更有效率。  
   
-###  <a name="Expressions"></a> 使用運算式  
+###  <a name="working-with-expressions"></a><a name="Expressions"></a> 使用運算式  
   
 -   了解簡單和複雜運算式格式。 您可以直接在文字方塊、[屬性] 窗格的屬性，或是對話方塊內接受運算式的位置中輸入簡單運算式格式。 如需詳細資訊，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
   
 -   當您建立運算式時，它會協助您獨立建立每一部分，並驗證其值。 然後您可以在最終運算式中結合所有部分。 一個實用的方法是在矩陣資料格中加入文字方塊、顯示運算式的每一個部分，並在文字方塊上設定條件式可見性。 若要在隱藏文字方塊時控制框線樣式和色彩，請先將文字方塊放在矩形中，然後設定矩形的框線樣式和色彩，使其符合矩陣。  
   
-###  <a name="Indicators"></a> 使用指標  
+###  <a name="working-with-indicators"></a><a name="Indicators"></a> 使用指標  
   
 -   根據預設，指標至少會顯示三個狀態。 當您將指標加入至報表之後，就可以透過加入或移除狀態進行設定。 為了讓使用者更方便檢視，請選擇依照色彩和形狀改變的指標。  
   
-##  <a name="Rendering"></a> 控制報表項目在報表頁面上的轉譯方式  
+##  <a name="controlling-the-rendering-of-report-items-on-the-report-page"></a><a name="Rendering"></a> 控制報表項目在報表頁面上的轉譯方式  
   
 -   在報表設計介面上，報表項目會成長以容納相關聯資料集、運算式、子報表或文字中的內容。  
   

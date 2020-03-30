@@ -11,10 +11,10 @@ ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 273a03e088036057f6d7b31c98074391138de07e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027916"
 ---
 # <a name="managing-result-sets-with-the-jdbc-driver"></a>使用 JDBC 驅動程式管理結果集
@@ -22,9 +22,9 @@ ms.locfileid: "69027916"
 
   結果集代表從資料來源傳回的一組資料，通常是作為查詢的結果。 結果集包含用來保留所要求之資料元素的資料列和資料行，它是以資料指標來導覽。 結果集可以更新，這表示它可加以修改，並將那些修改發送到原始資料來源。 結果集對於基礎資料來源中的變更，也可以有不同的敏感性層級。  
   
- 結果集的類型是在建立陳述式時決定，也就是呼叫 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 方法時。 結果集的基礎角色是要提供 Java 應用程式可用的資料庫資料表示法。 這一點通常是以對結果集資料元素使用具類型的 getter 和 setter 方法來完成。  
+ 結果集的類型是在建立陳述式時決定，也就是呼叫 [SQLServerConnection](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 類別的 [createStatement](../../connect/jdbc/reference/sqlserverconnection-class.md) 方法時。 結果集的基礎角色是要提供 Java 應用程式可用的資料庫資料表示法。 這一點通常是以對結果集資料元素使用具類型的 getter 和 setter 方法來完成。  
   
- 下列範例是以 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫為基礎，透過呼叫 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別的 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法來建立結果集。 接著使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的 [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) 方法來顯示結果集的資料。  
+ 下列範例是以 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫為基礎，透過呼叫 [SQLServerStatement](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 類別的 [executeQuery](../../connect/jdbc/reference/sqlserverstatement-class.md) 方法來建立結果集。 接著使用 [SQLServerResultSet](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) 類別的 [getString](../../connect/jdbc/reference/sqlserverresultset-class.md) 方法來顯示結果集的資料。  
   
  [!code[JDBC#ManagingResultSets1](../../connect/jdbc/codesnippet/Java/managing-result-sets-with-t_1.java)]  
   

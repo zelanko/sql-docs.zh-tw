@@ -16,10 +16,10 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2654fba3904788e1eefa2aaa17d4defbad4039a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082632"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>什麼是 SQL Server Reporting Services (SSRS)？
@@ -83,7 +83,7 @@ Reporting Services 與「傳統」分頁報表相關聯，適用於已針對列�
 
 原生模式 Reporting Services 使用者的首頁，就是您可以在大部分瀏覽器中檢視的新式入口網站。 您可以在新的入口網站中存取您所有的 Reporting Services 行動裝置、分頁報表和 KPI。 KPI 可以在瀏覽器中呈現關鍵業務指標概覽，而不必開啟報表。
 
-新的入口網站完全是報表管理員的重寫。 它現在是單頁面的標準 HTML5 型應用程式，為新式瀏覽器的最佳化對象：Microsoft Edge、Internet Explorer 10 和 11、Chrome、Firefox、Safari 和所有主要瀏覽器。
+新的入口網站完全是報表管理員的重寫。 現在它是單一頁面的標準式 HTML5 應用程式，並已針對下列新式瀏覽器最佳化︰Microsoft Edge、Internet Explorer 10 和 11、Chrome、Firefox、Safari，以及所有主要瀏覽器。
 
 入口網站的內容依類型組織：
 

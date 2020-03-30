@@ -11,10 +11,10 @@ ms.assetid: 432901eb-57b6-44ad-98b4-43164bcbc2b6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5957c26c25f03d5c2c8369bf5279861384733df7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981437"
 ---
 # <a name="getnclob-method-sqlserverresultset"></a>getNClob 方法 (SQLServerResultSet)

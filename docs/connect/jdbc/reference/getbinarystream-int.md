@@ -16,10 +16,10 @@ ms.assetid: a766818e-cd05-4a07-a1ae-88966017448c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0e5e2a85e2db6dd89e571185712514a27621e835
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953752"
 ---
 # <a name="getbinarystream-int"></a>getBinaryStream (int)

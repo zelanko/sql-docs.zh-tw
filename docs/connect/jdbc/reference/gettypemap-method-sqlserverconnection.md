@@ -16,10 +16,10 @@ ms.assetid: c81bcf9a-2e24-4dfc-8c04-d612e9b7baca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9733494af58ef9fe12655281224be5081c72e205
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978507"
 ---
 # <a name="gettypemap-method-sqlserverconnection"></a>getTypeMap 方法 (SQLServerConnection)

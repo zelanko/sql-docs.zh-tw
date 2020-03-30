@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: cf6e061b0ca4fca7c843575a87038a801ab8f758
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75728549"
 ---
 # <a name="install-azdata-with-yum"></a>使用 yum 安裝 `azdata`
@@ -65,7 +65,7 @@ azdata --version
 
 ## <a name="update"></a>更新
 
-使用 `yum update` 命令更新 `azdata-cli`。
+使用 `azdata-cli` 命令更新 `yum update`。
 
 ```bash
 sudo yum update azdata-cli
@@ -73,7 +73,7 @@ sudo yum update azdata-cli
 
 ## <a name="uninstall"></a>解除安裝
 
-1. 從系統移除套件。
+1. 從系統移除套件
 
    ```bash
    sudo yum remove azdata-cli

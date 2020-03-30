@@ -12,10 +12,10 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72278236"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services 中的檔案共用傳遞
@@ -37,7 +37,7 @@ ms.locfileid: "72278236"
   
 -   [檔案選項](#bkmk_file_options)  
   
-##  <a name="bkmk_Characteristics"></a> 傳遞給共用資料夾之報表的特性  
+##  <a name="characteristics-reports-delivered-to-shared-folders"></a><a name="bkmk_Characteristics"></a> 傳遞給共用資料夾之報表的特性  
   
 -   傳遞給共用資料夾的報表屬於靜態檔案，這和報表伺服器所主控及管理的報表不同。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72278236"
   
 -   如果您想要在傳遞的報表中保留互動式功能，請改用電子郵件傳遞。 電子郵件會包含報表伺服器上報表的連結，而且使用者可以使用互動式功能。 如需詳細資訊，請參閱 [Reporting Services 中的電子郵件傳遞](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)。  
   
-##  <a name="bkmk_target_folders"></a> 目標資料夾  
+##  <a name="target-folders"></a><a name="bkmk_target_folders"></a> 目標資料夾  
  定義使用檔案共用傳遞的訂閱時，必須指定現有的資料夾做為目標資料夾。 報表伺服器不會在檔案系統中建立資料夾。 您指定的資料夾必須可以透過網路連接來存取。  
   
  確認要 **檢視** 共用資料夾中報表的使用者擁有讀取權限。  
@@ -60,17 +60,17 @@ ms.locfileid: "72278236"
   
  建立資料夾時，請考慮您需要的連接限制。 雖然報表伺服器只需要兩個連接，但您必須包含足夠的連接來滿足其他想要開啟共用資料夾報表的使用者。  
   
-##  <a name="bkmk_file_formats"></a> 檔案格式  
+##  <a name="file-formats"></a><a name="bkmk_file_formats"></a> 檔案格式  
  可以使用各種檔案格式 (例如 HTML、DOCX 和 Excel) 來轉譯報表。 若要以特定的檔案格式儲存報表，請在建立您的訂閱時選取該轉譯格式。 例如，選擇 **[Excel]** 會將報表儲存為 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 檔案。 雖然您可以選擇任何支援的轉譯格式，當轉譯檔案時有些格式會運作的比較好。  
   
  若為檔案共用傳遞，請選擇以單一檔案傳遞報表的格式，其中所有影像和相關內容會包括在報表內。 適當的格式包括網頁封存、PDF、TIFF 和 Excel。 請避免使用 HTML4.0。 如果您的報表包含影像，HTML 4.0 格式就不會在檔案中包含這些影像。  
   
-##  <a name="bkmk_file_options"></a> 檔案選項  
+##  <a name="file-options"></a><a name="bkmk_file_options"></a> 檔案選項  
  當您建立檔案共用訂閱時，可以設定檔案名稱的建立方式，以及檔案是否會覆寫報表的舊版本。 完整檔案名稱有三個部分：名稱、副檔名，以及附加至檔案以建立唯一檔案名稱的文字或數字  
   
- **檔案名稱：** 預設檔案名稱是以來源報表名稱為基礎，但是您可以在訂用帳戶中提供自訂名稱。 副檔名為選擇性，但是如果您有指定副檔名，報表伺服器將會建立對應到轉譯格式的副檔名。  
+ **檔案名稱** ：預設檔案名稱是以來源報表名稱為基礎，但是您可以在訂閱中提供自訂名稱。 副檔名為選擇性，但是如果您有指定副檔名，報表伺服器將會建立對應到轉譯格式的副檔名。  
   
- **覆寫：** 您可以指定覆寫選項，針對每一次報表傳遞重複使用相同的檔案名稱，或者也可以建立新的檔案。 若要覆寫檔案，您必須使用相同的檔案名稱和副檔名。  
+ **覆寫** ：您可以指定覆寫選項，針對每一次報表傳遞重複使用相同的檔案名稱，或者建立新的檔案。 若要覆寫檔案，您必須使用相同的檔案名稱和副檔名。  
   
  有一個替代方式可以在每一次傳遞中建立唯一的檔案，就是在檔案名稱中加入時間戳記。 若要這樣做，請將 **\@timestamp** 變數加入檔案名稱 (例如 *CompanySales@timestamp* )。 使用這個方法時，會讓檔案名稱依照定義成為唯一的檔案名稱，所以絕對不會遭到覆寫。  
   

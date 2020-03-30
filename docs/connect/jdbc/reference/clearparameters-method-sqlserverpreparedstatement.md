@@ -16,10 +16,10 @@ ms.assetid: cb1d0f36-d2de-4685-b97a-626608e50e5c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de9b950923f1b4729f44ddeac0d812bd1c6102c7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955762"
 ---
 # <a name="clearparameters-method-sqlserverpreparedstatement"></a>clearParameters 方法 (SQLServerPreparedStatement)

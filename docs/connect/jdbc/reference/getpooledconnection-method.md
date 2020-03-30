@@ -16,10 +16,10 @@ ms.assetid: aad6c325-3398-462c-aa6e-201dc89fa5ef
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 89b0379d9708a0f0d8809362afed6e64fe19f052
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980827"
 ---
 # <a name="getpooledconnection-method-"></a>getPooledConnection 方法 ()

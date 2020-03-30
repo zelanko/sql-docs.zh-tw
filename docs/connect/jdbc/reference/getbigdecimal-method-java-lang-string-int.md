@@ -16,10 +16,10 @@ ms.assetid: 6967ba55-9c9a-4f6f-a4d2-8ee9c9a82c14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd2d46569386637b5082288b83268a80dac013e5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953899"
 ---
 # <a name="getbigdecimal-method-javalangstring-int"></a>getBigDecimal 方法 (java.lang.String, int)

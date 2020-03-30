@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: a7aa6a28a64e35c13c135e509b758a1636b3f896
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896281"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient 對高可用性、災害復原的支援
@@ -59,7 +59,7 @@ Microsoft SqlClient Data Provider for SQL Server 支援下列連線屬性：
   
 - 連線到設定超過 64 個 IP 位址的 SQL Server 執行個體會導致連線失敗。  
   
-- 使用 `MultiSubnetFailover` 連線屬性的應用程式行為不會受到驗證類型影響：SQL Server 驗證、Kerberos 驗證或 Windows 驗證。  
+- 使用 `MultiSubnetFailover` 連線屬性之應用程式的行為不受驗證類型影響：SQL Server 驗證、Kerberos 驗證或 Windows 驗證。  
   
 - 提高 `Connect Timeout` 的值來配合容錯移轉時間，並減少應用程式連線重試次數。  
   
@@ -76,9 +76,9 @@ Microsoft SqlClient Data Provider for SQL Server 支援下列連線屬性：
 如果設定主要複本拒絕唯讀工作負載，而且連接字串包含 `ApplicationIntent=ReadOnly`，則連接會失敗。  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>從資料庫鏡像升級到使用多重子網路叢集  
-如果連接字串中有 `MultiSubnetFailover` 和 `Failover Partner` 連線關鍵字，或者如果使用了 `MultiSubnetFailover=True` 和 TCP 以外的通訊協定，則將會發生連線錯誤 (<xref:System.ArgumentException>)。 如果使用 `MultiSubnetFailover` 而且 SQL Server 傳回容錯移轉夥伴回應，指出其是資料庫鏡像配對的一部分，也會發生錯誤 (<xref:Microsoft.Data.SqlClient.SqlException>)。  
+如果連接字串中有 <xref:System.ArgumentException> 和 `MultiSubnetFailover` 連線關鍵字，或者如果使用了 `Failover Partner` 和 TCP 以外的通訊協定，則將會發生連線錯誤 (`MultiSubnetFailover=True`)。 如果使用 <xref:Microsoft.Data.SqlClient.SqlException> 而且 SQL Server 傳回容錯移轉夥伴回應，指出其是資料庫鏡像配對的一部分，也會發生錯誤 (`MultiSubnetFailover`)。  
   
-如果您將目前使用資料庫鏡像的 SqlClient 應用程式升級為多重子網路案例，應該移除 `Failover Partner` 連線屬性，並以設為 `True` 的 `MultiSubnetFailover` 加以取代，然後以可用性群組接聽程式取代連接字串中的伺服器名稱。 如果連接字串使用 `Failover Partner` 和 `MultiSubnetFailover=True`，驅動程式會發生錯誤。 不過，如果連接字串使用 `Failover Partner` 和 `MultiSubnetFailover=False` (或 `ApplicationIntent=ReadWrite`)，應用程式就會使用資料庫鏡像。  
+如果您將目前使用資料庫鏡像的 SqlClient 應用程式升級為多重子網路案例，應該移除 `Failover Partner` 連線屬性，並以設為 `MultiSubnetFailover` 的 `True` 加以取代，然後以可用性群組接聽程式取代連接字串中的伺服器名稱。 如果連接字串使用 `Failover Partner` 和 `MultiSubnetFailover=True`，驅動程式會發生錯誤。 不過，如果連接字串使用 `Failover Partner` 和 `MultiSubnetFailover=False` (或 `ApplicationIntent=ReadWrite`)，應用程式就會使用資料庫鏡像。  
   
 如果在 AG 的主要資料庫上使用資料庫鏡像，而且在連線至主要資料庫 (而非可用性群組接聽程式) 的連接字串中使用 `MultiSubnetFailover=True`，則驅動程式會傳回錯誤。  
   
@@ -87,7 +87,7 @@ Microsoft SqlClient Data Provider for SQL Server 支援下列連線屬性：
   
 `ApplicationIntent` 關鍵字不適用於舊版唯讀資料庫。  
   
-資料庫可以允許或不允許 AlwaysOn 目標資料庫上的讀取工作負載 (這會透過 `PRIMARY_ROLE` 和 `SECONDARY_ROLE` Transact-SQL 陳述式的 `ALLOW_CONNECTIONS` 子句來完成)。  
+資料庫可以允許或不允許 AlwaysOn 目標資料庫上的讀取工作負載 (這會透過 `ALLOW_CONNECTIONS` 和 `PRIMARY_ROLE` Transact-SQL 陳述式的 `SECONDARY_ROLE` 子句來完成)。  
   
 `ApplicationIntent` 關鍵字用於啟用唯讀路由。  
   

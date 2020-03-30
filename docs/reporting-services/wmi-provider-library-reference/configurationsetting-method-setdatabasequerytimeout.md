@@ -16,10 +16,10 @@ ms.assetid: bd2809e5-7848-45b3-a502-b04fc698b646
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59c7b026884244d37aaa59722abf2e07b3e4cc6f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580042"
 ---
 # <a name="configurationsetting-method---setdatabasequerytimeout"></a>ConfigurationSetting 方法 - SetDatabaseQueryTimeout

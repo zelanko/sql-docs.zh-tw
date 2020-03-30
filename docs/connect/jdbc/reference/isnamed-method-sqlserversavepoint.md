@@ -16,10 +16,10 @@ ms.assetid: 66bcc445-9226-4419-b845-e0334875c80b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ccf64f404926f2fa2c27d6fd3d3d0f417d93619c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977550"
 ---
 # <a name="isnamed-method-sqlserversavepoint"></a>isNamed 方法 (SQLServerSavepoint)

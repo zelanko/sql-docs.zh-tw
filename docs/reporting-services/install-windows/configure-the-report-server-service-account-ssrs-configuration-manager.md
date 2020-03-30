@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 12/04/2019
 ms.openlocfilehash: 49a5f8e19db65691fe8e521d7ca6a65e828fe6bd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866021"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>設定報表伺服器服務帳戶 (SSRS 組態管理員)
@@ -78,7 +78,7 @@ ms.locfileid: "74866021"
 |**本機服務**|**[本機服務]** 是一個內建帳戶，類似於經過驗證的本機 Windows 使用者帳戶。 以 **[本機服務]** 帳戶身分執行的服務會以不含認證的 Null 工作階段來存取網路資源。 此帳戶不適合內部網路部署狀況，在此狀況下，報表伺服器必須連接到遠端報表伺服器資料庫或網域控制站，才能在開啟報表或處理訂閱之前先驗證使用者。|  
 |**本機系統**|**[本機系統]** 是具有高權限的帳戶，執行報表伺服器不需要使用它。 請避免使用此帳戶進行報表伺服器安裝。 請改為選擇網域帳戶或 **[網路服務]** 。|  
   
-## <a name="localaccounts"></a> 使用本機帳戶的考量
+## <a name="considerations-for-using-local-accounts"></a><a name="localaccounts"></a> 使用本機帳戶的考量
 
  使用本機帳戶的主要考量為報表伺服器是否需要存取遠端資料庫伺服器、郵件伺服器和網域控制站。 如果您設定報表伺服器以本機 Windows 使用者帳戶、本機服務或本機系統的身分執行，您就必須考量您要如何設定其他組態設定，以及考量訂閱的建立和傳遞方式：  
   

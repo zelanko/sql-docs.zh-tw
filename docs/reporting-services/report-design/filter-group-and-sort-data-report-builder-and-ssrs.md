@@ -18,10 +18,10 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e08a4a43897c1497c81a9e01f010fa99a252130e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080175"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>篩選、分組和排序資料 (報表產生器及 SSRS)
@@ -52,7 +52,7 @@ ms.locfileid: "77080175"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Filtering"></a> 篩選報表中的資料  
+##  <a name="filtering-data-in-the-report"></a><a name="Filtering"></a> 篩選報表中的資料  
  篩選是報表的一部分，有助於控制從資料連接擷取的報表資料。 如果您無法在從外部資料來源擷取資料之前，變更資料集查詢來篩選資料，請使用篩選。  
   
  如果可能，請建立只會傳回需要顯示在報表中之資料的資料集查詢。 您可透過減少必須擷取和處理的資料量，協助增進報表效能。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
@@ -66,7 +66,7 @@ ms.locfileid: "77080175"
  若要自訂每個使用者的檢視，您可以在篩選中包含內建欄位 UserID 的參考。 如需詳細資訊，請參閱[內建的全域和使用者參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)。  
   
   
-##  <a name="Grouping"></a> 群組報表中的資料  
+##  <a name="grouping-data-in-the-report"></a><a name="Grouping"></a> 群組報表中的資料  
  群組可組織報表中的資料以供顯示或計算彙總值。 了解如何定義群組以及使用群組功能可協助您設計更精確的報表。  
   
  系統會在您執行下列作業時自動建立群組運算式：  
@@ -102,12 +102,12 @@ ms.locfileid: "77080175"
  當您在資料表、矩陣或清單的資料格中建立巢狀資料區時，您會自動將資料的範圍設定成該資料格的最內層群組成員資格。 例如，假設您將圖表加入到同時位於資料列群組和資料行群組的資料格中。 可用於該圖表的資料範圍在執行階段便為最內層的資料列群組執行個體與最內層的資料行群組執行個體。 如需詳細資訊，請參閱 [總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
   
-##  <a name="Sorting"></a> 排序報表中的資料  
+##  <a name="sorting-data-in-the-report"></a><a name="Sorting"></a> 排序報表中的資料  
  若要控制報表中資料的排序次序，您可以在資料集查詢中排序資料，或針對資料區或群組定義排序運算式。 您也可以將互動式排序按鈕加入到資料表和矩陣，讓使用者變更資料列的排序次序。  
   
  三種類型的排序全都可以在相同的報表中結合。 依預設，排序次序是由資料集查詢傳回資料的順序來決定。 排序運算式會套用在資料區和資料區群組中。 互動式排序則是在排序運算式之後套用。  
   
- 對於包含彙總函式的運算式，大部分的結果都不會受排序次序影響。 下列彙總函式的傳回值會受排序次序影響：第一個、最後一個和上一個。 如需詳細資訊，請參閱 [彙總函式參考 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
+ 對於包含彙總函式的運算式，大部分的結果都不會受排序次序影響。 下列彙總函式的傳回值會受排序次序影響：First、Last 和 Previous。 如需詳細資訊，請參閱 [彙總函式參考 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>排序資料集查詢中的資料  
  將資料集查詢中的排序次序加入到預先排序資料，然後再針對報表進行擷取。 透過排序查詢中的資料，排序工作將由資料來源而非報表處理器完成。  
@@ -159,13 +159,13 @@ FROM Production.Product
   
  如需詳細資訊，請參閱[在資料區中排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md) 和 [Lookup 函數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)。  
   
-###  <a name="Interactive"></a> 加入使用者的互動式排序  
+###  <a name="adding-interactive-sorting-for-the-user"></a><a name="Interactive"></a> 加入使用者的互動式排序  
  您可以將互動式排序按鈕加入到資料行標頭和群組首，讓使用者變更資料表或矩陣中報表資料的排序次序。 使用者可以按一下按鈕來切換排序次序。 系統以可讓使用者互動的轉譯格式支援互動式排序，例如 HTML。  
   
  您可以將互動式排序按鈕加入到 Tablix 資料區資料格裡的文字方塊中。 依預設，每個資料格都包含一個文字方塊。 在文字方塊屬性中，您可以指定要排序資料表或矩陣資料區的哪個部分 (父群組值、子群組值或詳細資料列)、排序的依據，以及是否要將排序運算式套用到具有對等關聯性的其他報表項目。 例如，如果在相同資料集中提供檢視的資料表和圖表都包含在矩形中，它們就是對等資料區域。 當使用者在資料表中切換排序次序時，圖表的排序次序也會切換。 如需詳細資訊，請參閱[互動式排序 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)。  
   
   
-##  <a name="HowTo"></a> 如何主題  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 如何主題  
  [在報表中捲動時將標頭保持可見 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
  [與群組一起顯示頁首和頁尾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
@@ -184,14 +184,14 @@ FROM Production.Product
   
  [將總計加入到群組或 Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
-##  <a name="Section"></a> 本節內容  
+##  <a name="in-this-section"></a><a name="Section"></a> 本節內容  
  [群組運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
   
  [篩選方程式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
   
  [加入資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)  
   
-##  <a name="Related"></a> 相關章節  
+##  <a name="related-sections"></a><a name="Related"></a> 相關章節  
  [了解群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)  
   
  [建立遞迴階層群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0d81923ba623765e8929cf0c1cb4da2e73ac6e8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081756"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 連接類型 (SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "77081756"
   
 您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱 [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
-## <a name="Connection"></a> 連接字串
+## <a name="connection-string"></a><a name="Connection"></a> 連接字串
 
 當您連線到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 時，您是連線到雲端中的資料庫物件。 就像現場的資料庫一般，主控資料庫可能有包含多個資料表、檢視和預存程序的多個結構描述。 您會指定在查詢設計工具中使用的資料庫物件。 若您並未在連接字串中指定資料庫，則您會連線到管理員指派給您的預設資料庫。  
   
@@ -45,7 +45,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 如需連接字串範例的詳細資訊，請參閱[建立資料連接字串 - 報表產生器及 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
-## <a name="Credentials"></a> 認證
+## <a name="credentials"></a><a name="Credentials"></a> 認證
 
 不支援 Windows 驗證 (整合式安全性)。 如果您嘗試使用 Windows 驗證連接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，就會發生錯誤。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 僅支援 SQL Server 驗證 (使用者名稱和密碼)，而且使用者必須在每次連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]時提供認證 (登入和密碼)。  
   
@@ -59,9 +59,9 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 如需詳細資訊，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[指定報表資料來源的認證及連接資訊](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
-## <a name="Query"></a> 查詢
+## <a name="queries"></a><a name="Query"></a> 查詢
 
-查詢會指定要為報表資料集擷取的資料。 查詢結果集中的資料行會填入資料集的欄位集合。 如果查詢傳回多個結果集，報表只會處理查詢擷取的第一個結果集。 雖然 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]之間有些許差異 (例如支援的資料庫大小)，但是依據 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]撰寫查詢的方式類似於依據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫撰寫查詢的方式。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中不支援部分 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (例如 BACKUP)，但是您不會在報表查詢中使用這些陳述式。 如需詳細資訊，請參閱 [SQL Server 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)。  
+查詢會指定要為報表資料集擷取的資料。 查詢結果集中的資料行會填入資料集的欄位集合。 如果查詢傳回多個結果集，報表只會處理查詢擷取的第一個結果集。 雖然 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]之間有些許差異 (例如支援的資料庫大小)，但是依據 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]撰寫查詢的方式類似於依據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫撰寫查詢的方式。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中不支援部分 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 陳述式 (例如 BACKUP)，但是您不會在報表查詢中使用這些陳述式。 如需詳細資訊，請參閱 [SQL Server 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)。  
   
 根據預設，如果您建立新查詢或開啟現有查詢，而查詢可在圖形化查詢設計工具中表示，就可使用關聯式查詢設計工具。 您可以利用下列方式指定查詢：  
   
@@ -81,7 +81,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 使用的圖形化查詢設計工具會為群組和彙總提供內建的支援，幫助您撰寫僅擷取摘要資料的查詢。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言功能包括 GROUP BY 子句、DISTINCT 關鍵字以及如 SUM 和 COUNT 等彙總。 以文字為基礎的查詢設計工具提供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言的完整支援，包括群組和彙總。 如需 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的詳細資訊，請參閱 [Transact-SQL 參考 &#40;資料庫引擎&#41;](../../t-sql/transact-sql-reference-database-engine.md)。  
   
-### <a name="QueryText"></a> 使用 Text 查詢類型
+### <a name="using-query-type-text"></a><a name="QueryText"></a> 使用 Text 查詢類型
 
 在以文字為基礎的查詢設計工具中，您可以輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令來定義資料集內的資料。 例如，下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢會選取所有行銷助理員工的名字：
 
@@ -108,7 +108,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
 
 當您執行查詢時，會自動建立與查詢參數對應的報表參數。 如需詳細資訊，請參閱本主題稍後的 [查詢參數](#Parameters) 。  
   
-### <a name="QueryStoredProcedure"></a> 使用 StoredProcedure 查詢類型
+### <a name="using-query-type-storedprocedure"></a><a name="QueryStoredProcedure"></a> 使用 StoredProcedure 查詢類型
 
 您可以用下列其中一種方式指定資料集查詢的預存程序：  
   
@@ -126,7 +126,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
   
 如需預存程序的詳細資訊，請參閱[預存程序 (資料庫引擎)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)。  
   
-## <a name="Parameters"></a> 參數
+## <a name="parameters"></a><a name="Parameters"></a> 參數
 
 當查詢文字包含具有輸入參數的查詢變數或預存程序時，會自動產生資料集的對應查詢參數和報表的報表參數。 查詢文字的查詢變數不能包含 DECLARE 陳述式。  
   
@@ -140,7 +140,7 @@ WHERE EmployeeID = (@EmpID)
 
 根據預設，每個報表參數的資料類型為 Text，並具有自動建立的資料集，以提供可用值的下拉式清單。 建立報表參數後，您可能必須變更預設值。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
 
-## <a name="Remarks"></a> 備註
+## <a name="remarks"></a><a name="Remarks"></a> 備註
   
 ###### <a name="alternate-data-extensions"></a>替代資料延伸模組
 
@@ -167,7 +167,7 @@ WHERE EmployeeID = (@EmpID)
 
 ::: moniker-end
 
-## <a name="HowTo"></a> 如何主題
+## <a name="how-to-topics"></a><a name="HowTo"></a> 如何主題
 
 本節包含使用資料連接、資料來源與資料集的逐步指示。  
   
@@ -177,14 +177,14 @@ WHERE EmployeeID = (@EmpID)
   
 [將篩選加入資料集中 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
-## <a name="Related"></a> 相關章節
+## <a name="related-sections"></a><a name="Related"></a> 相關章節
 
 本文件集的這些章節會提供報表資料的深入概念性資訊，以及如何定義、自訂和使用與報表資料相關組件的程序資訊。  
   
 [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
 提供存取報表資料的概觀。  
   
-[建立資料連接字串 - 報表產生器及 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
 提供資料連接與資料來源的相關資訊。  
   
 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

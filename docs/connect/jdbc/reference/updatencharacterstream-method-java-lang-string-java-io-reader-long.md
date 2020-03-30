@@ -11,10 +11,10 @@ ms.assetid: db0a96a8-248f-4664-9c13-f480f309ab91
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee869c9d9bdcc707456f1cb04b5dcacdacee89a0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998686"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader-long"></a>updateNCharacterStream 方法 (java.lang.String, java.io.Reader, long)
@@ -48,7 +48,7 @@ public void updateNCharacterStream(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 這個 updateNCharacterStream 方法是由 java.sql.ResultSet 介面中的 updateNCharacterStream 方法指定。  
+ 這個 updateNCharacterStream 方法是由 java.sql.ResultSet 介面中的 updateNCharacterStream 方法所指定。  
   
  這個方法會從 Reader 物件將 Unicode 字元傳遞到選取的 **nchar**、**nvarchar(max)** 、**ntext** 和 **xml** 資料行。 在其他資料類型資料行上使用這個方法，將會擲回例外狀況。  
   

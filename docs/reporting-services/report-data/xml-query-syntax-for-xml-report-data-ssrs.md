@@ -14,10 +14,10 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dd1bccb6bff8f19e9abb779310033f4685b31f67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081355"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML 報表資料的 XML 查詢語法 (SSRS)
@@ -61,7 +61,7 @@ ms.locfileid: "77081355"
 |使用預設值的 XML 文件。|*沒有查詢*。<br /><br /> 元素路徑衍生自 XML 文件本身，而且與命名空間無關。|  
   
 > [!NOTE]  
->  第一個 Web 服務範例會使用 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法中的 Web 服務 XML 資料。 若要執行這個查詢，您必須建立新的資料來源，然後設定 `https://localhost/reportserver/reportservice2006.asmx` 的連接字串。 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法接受兩個參數：**Item** 和 **Recursive**。 將 **Item** 的預設值設定為 **/** ，而 **Recursive** 的預設值設定為 **1**。  
+>  第一個 Web 服務範例會使用 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法中的 Web 服務 XML 資料。 若要執行這個查詢，您必須建立新的資料來源，然後設定 `https://localhost/reportserver/reportservice2006.asmx` 的連接字串。 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法會採用兩個參數︰**Item** 和 **Recursive**。 將 **Item** 的預設值設定為 **/** ，而 **Recursive** 的預設值設定為 **1**。  
   
 ## <a name="specifying-namespaces"></a>指定命名空間  
  使用 XML **查詢** 元素可指定用於資料來源中 XML 資料的命名空間。 下列 XML 查詢會使用命名空間 **sales**。 **和** 的 XML `sales:LineItems` ElementPath `sales:LineItem` 節點會使用命名空間 **sales**。  

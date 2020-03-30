@@ -9,10 +9,10 @@ ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee04e2cef1f4f4681b42ff8ffb4ce549aeae624d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082454"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>頁面配置和轉譯 (報表產生器及 SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "77082454"
   
  讓匯出的報表得到最佳效果通常是一個反覆的程序。您會在報表產生器或報表設計師中撰寫並預覽報表、將報表匯出至慣用的格式、檢閱匯出的報表，然後針對報表進行變更。  
     
-##  <a name="PageLayout"></a> 報表項目  
+##  <a name="report-items"></a><a name="PageLayout"></a> 報表項目  
  報表項目是指與不同類型的報表資料相關聯的配置元素。 
  
 * 資料表、矩陣、清單、圖表和量測計都是資料區報表項目，每一個都會連結到報表資料集。 處理報表時，資料區會展開到報表頁面的下方，以便顯示資料。 
@@ -44,14 +44,14 @@ ms.locfileid: "77082454"
   
  報表可以合併多個頁面，每一個頁面上都有重複的頁首和頁尾。 報表可以包含類似影像和線條的圖形元素，也可以有多種字型、色彩和樣式 (可以根據運算式)。  
   
-##  <a name="ReportSections"></a> 報表區段  
+##  <a name="report-sections"></a><a name="ReportSections"></a> 報表區段  
  報表是由三個主要區段所組成：選擇性頁首  、選擇性頁尾  和報表主體。 報表  頁首和頁尾不是報表的個別區段，而是由放置於報表主體頂端和底部的報表項目所組成。 頁首和頁尾會在每個報表頁面的上方和底部重複相同的內容。 您可以將影像、文字方塊和線條放在頁首和頁尾中。 您也可以將所有類型的報表項目都放在報表主體中。  
   
  您可以在報表項目上設定屬性，即可一開始在頁面上隱藏或顯示這些項目。 您可以在資料列或資料行或是資料區的群組上設定可見性屬性，並提供切換按鈕讓使用者以互動方式顯示或隱藏報表資料。 您可以使用運算式 (包括了根據報表參數的運算式) 來設定可見性或初始可見性。  
   
  當處理報表時，報表資料會結合報表配置元素，而已結合的資料則會傳送到報表轉譯器。 此轉譯器遵循報表項目展開的預先定義規則，而且可決定每個頁面所容納的資料量。 若要設計容易閱讀的報表，並針對您打算使用的轉譯器最佳化此報表，您應該了解用於控制 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中之分頁的規則。 如需詳細資訊，請參閱 [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
   
-##  <a name="RenderingExtensions"></a> 轉譯器  
+##  <a name="renderers"></a><a name="RenderingExtensions"></a> 轉譯器  
  Reporting Services 包含一組轉譯器 (也稱為轉譯延伸模組)，您可以使用這組轉譯器將報表匯出為不同的格式。 轉譯器有三種類型：  
   
 -   **資料轉譯器** ：資料轉譯器會從報表移除所有格式與版面配置資訊，而僅顯示資料。 所產生的檔案可用於將原始報表資料匯入到其他檔案類型 (例如，Excel)、其他資料庫、XML 資料訊息，或是自訂應用程式。 可用的資料轉譯器為 CSV 和 XML。  
@@ -65,7 +65,7 @@ ms.locfileid: "77082454"
   
  當您在報表產生器或報表設計師中預覽報表，或在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器上執行報表時，報表一定會先以 HTML 轉譯。 在執行報表後，您可以將它匯出為其他的檔案格式。 如需詳細資訊，請參閱 [匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)中之分頁的規則。  
   
-##  <a name="RenderingBehaviors"></a> 轉譯行為  
+##  <a name="rendering-behaviors"></a><a name="RenderingBehaviors"></a> 轉譯行為  
  根據所選取的轉譯器，當轉譯報表時，系統會套用某些規則。 將報表項目全部容納在一頁的方式，取決於下列因素的組合：  
   
 -   轉譯規則。  
@@ -78,7 +78,7 @@ ms.locfileid: "77082454"
   
  如需詳細資訊，請參閱[轉譯行為 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)。  
    
-##  <a name="Pagination"></a> 分頁  
+##  <a name="pagination"></a><a name="Pagination"></a> 分頁  
  分頁指的是報表內的頁數，以及如何在這些頁面上排列報表項目。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的分頁會根據您用於檢視和傳遞報表的轉譯延伸模組，以及您設定報表使用的分頁符號和保持在一起的選項而有所不同。  
   
  若要為使用者成功設計容易閱讀的報表，並針對計畫用於傳遞報表的轉譯器最佳化該報表，您必須了解用於控制 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中之分頁的規則。 使用 **資料** 與 **軟分頁** 轉譯延伸模組匯出的報表通常不會受到分頁影響。 當您使用資料轉譯延伸模組時，報表會以 XML 或 CSV 格式轉譯為表格式資料列集。 為確保匯出的報表資料可以使用，您應該了解從報表套用至已轉譯之扁平化表格式資料列集的規則。  
@@ -87,7 +87,7 @@ ms.locfileid: "77082454"
   
  **手動分頁** 轉譯器對於報表版面配置與實際頁面大小擁有最大的影響力。 若要深入了解，請參閱 [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
    
-##  <a name="HowTo"></a> 如何主題  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 如何主題  
  本節列出的程序可以為您逐步示範如何在報表中使用分頁。  
   
 -   [加入分頁符號 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md)  
@@ -102,7 +102,7 @@ ms.locfileid: "77082454"
   
 -   [隱藏第一頁或最後一頁的頁首或頁尾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
-##  <a name="InThisSection"></a> 本節內容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 本節內容  
  下列主題提供有關頁面配置與轉譯的其他資訊。  
   
  [頁首和頁尾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  

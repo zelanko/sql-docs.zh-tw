@@ -16,10 +16,10 @@ ms.assetid: 5d00242c-4d9c-42cc-86bb-b76f5ef876b8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cdd197be6327b84a6c299239f1198fe005dff0f0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67975899"
 ---
 # <a name="registeroutparameter-method-javalangstring-int"></a>registerOutParameter 方法 (java.lang.String, int)

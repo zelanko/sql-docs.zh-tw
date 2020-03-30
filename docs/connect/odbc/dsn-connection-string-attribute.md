@@ -10,10 +10,10 @@ ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
 ms.openlocfilehash: bf9b755176913ad144781c5be0ad53150aedcd1b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76911242"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 和連接字串關鍵字和屬性
@@ -22,7 +22,7 @@ ms.locfileid: "76911242"
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>支援的 DSN/連接字串關鍵字和連接屬性
 
-下表列出每個平台可用的關鍵字和屬性 (L:Linux；M:Mac；W:Windows)。 按一下關鍵字或屬性，以查看詳細資料。
+下表列出每個平台可用的關鍵字和屬性 (L: Linux；M: Mac；W: Windows)。 按一下關鍵字或屬性，以查看詳細資料。
 
 | DSN/連接字串關鍵字 | 連線屬性 | 平台 |
 |-|-|-|

@@ -9,10 +9,10 @@ ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9fcef802f6c61b85b4905365bda075a9f11d9e10
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68223235"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>如何安裝自訂安全性延伸模組
@@ -51,7 +51,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 
 ## <a name="deployment-and-configuration"></a>部署與設定
 
-自訂安全性延伸模組所需的基本設定與舊版相同。 web.config 和 rsreportserver.config 需要進行變更：如需詳細資訊，請參閱[設定報表伺服器上的自訂或表單驗證](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)。
+自訂安全性延伸模組所需的基本設定與舊版相同。 web.config 和 rsreportserver.config 需要變更：如需詳細資訊，請參閱[設定報表伺服器上的自訂或表單驗證](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)。
 
 報表管理員不會再有個別的 web.config，入口網站會繼承與 reportserver 端點相同的設定。
 

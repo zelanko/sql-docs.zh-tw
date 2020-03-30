@@ -11,10 +11,10 @@ ms.assetid: 75622982-1815-4d96-906c-a0494c8a0b53
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ff612b0d4682726f559e0a1eff41b96bd2a84f5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993728"
 ---
 # <a name="connecting-to-microsoft-azure-sql-database"></a>連線到 Microsoft Azure SQL Database

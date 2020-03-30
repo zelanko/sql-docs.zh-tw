@@ -24,12 +24,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8baf9a3ab87f53bf1e193f680e5977dc9631c4b3
-ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
+ms.openlocfilehash: 666b10f91db9fa5cdf53dd2a826b38752708e3cd
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77608481"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216974"
 ---
 # <a name="alerts"></a>警示
 
@@ -108,7 +108,9 @@ ms.locfileid: "77608481"
     > [!NOTE]  
     > 儲存伺服器名稱的事件記錄變數限制為 32 個字元。 因此，如果主機名稱和執行個體名稱的組合大小大於 32 個字元，您可能會收到下列錯誤：
     
-    警告，[466] 在產生效能計數器警示時，無法複製伺服器名稱 LONGNAMESQLSERV\LONGINSTANCENAME。
+   ``` 
+   Warning,[466] Failed to copy server name LONGNAMESQLSERV\LONGINSTANCENAME while generating performance counter alerts.
+   ```
   
   
 ## <a name="selecting-a-wmi-event"></a>選取 WMI 事件  

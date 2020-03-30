@@ -16,10 +16,10 @@ ms.assetid: 3749776b-69b8-4f57-a192-568705200ca6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 393b14287c27d20fbbda2bb0cdf1ba2eedab24b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982777"
 ---
 # <a name="getinstancename-method-sqlserverdatasource"></a>getInstanceName 方法 (SQLServerDataSource)

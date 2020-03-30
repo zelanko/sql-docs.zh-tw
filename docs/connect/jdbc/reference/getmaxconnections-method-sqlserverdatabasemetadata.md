@@ -16,10 +16,10 @@ ms.assetid: 745410f7-e59b-4423-9728-c903adedc399
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02aa3fcb7feed842a2da7b13c5609ea516ef40b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982177"
 ---
 # <a name="getmaxconnections-method-sqlserverdatabasemetadata"></a>getMaxConnections 方法 (SQLServerDatabaseMetaData)

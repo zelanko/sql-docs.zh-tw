@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20ca1afc5261c2a03a10b2f146cb9aad9b67a315
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028473"
 ---
 # <a name="azure-key-vault-sample-version-600"></a>Azure Key Vault 範例版本 6.0.0
@@ -22,7 +22,7 @@ ms.locfileid: "69028473"
 
 ## <a name="sample-application-using-azure-key-vault-feature"></a>使用 Azure Key Vault 功能的範例應用程式
 
-此應用程式可使用 JDBC 驅動程式 6.0.0 與 Azure-Keyvault (0.9.7 版)、Adal4j (1.3.0 版) 與其相依性來執行。  透過將這些程式庫新增至專案的 pom 檔案，即可解析底層相依性，如[這裡](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)所述：
+此應用程式可使用 JDBC 驅動程式 6.0.0 與 Azure-Keyvault (0.9.7 版)、Adal4j (1.3.0 版) 與其相依性來執行。  藉由將這些程式庫新增至專案的 pom 檔案，即可解析底層相依性，如[這裡](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)所述：
 
 ```java
 import java.net.URISyntaxException;

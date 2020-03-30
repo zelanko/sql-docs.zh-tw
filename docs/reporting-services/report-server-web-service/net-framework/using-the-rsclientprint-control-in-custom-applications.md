@@ -15,10 +15,10 @@ ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f352c393f1386dae1839a76a4fd6e5a2553a54c3
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198555"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自訂應用程式中使用 RSClientPrint 控制項
@@ -40,7 +40,7 @@ ms.locfileid: "79198555"
     
   
 ## <a name="rsprintclient-overview"></a>RSPrintClient 概觀  
- 控制項會顯示自訂列印對話方塊，其中支援與其他列印對話方塊一樣的一般功能，包括預覽列印、可指定要列印的特定頁面及範圍、頁面邊界和列印方向等選擇。 此控制項已封裝成 CAB 檔。 [列印]  對話方塊中的文字，已當地語系化成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援的所有語言。 **RSPrintClient** ActiveX 控制項會使用影像轉譯延伸模組 (EMF) 來列印報表。 會使用下列 EMF 裝置資訊：StartPage、EndPage、MarginBottom、MarginLeft、MarginTop、MarginRight、PageHeight 和 PageWidth。 影像轉譯的其他裝置資訊設定則不支援。  
+ 控制項會顯示自訂列印對話方塊，其中支援與其他列印對話方塊一樣的一般功能，包括預覽列印、可指定要列印的特定頁面及範圍、頁面邊界和列印方向等選擇。 此控制項已封裝成 CAB 檔。 [列印]  對話方塊中的文字，已當地語系化成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援的所有語言。 **RSPrintClient** ActiveX 控制項會使用影像轉譯延伸模組 (EMF) 來列印報表。 其中使用下列 EMF 裝置資訊：StartPage、EndPage、MarginBottom、MarginLeft、MarginTop、MarginRight、PageHeight 和 PageWidth。 影像轉譯的其他裝置資訊設定則不支援。  
   
 ### <a name="language-support"></a>語言支援  
  列印控制項會以不同的語言呈現使用者介面文字，並接受根據不同度量系統所輸入的值。 所使用的語言和度量系統是由 **Culture** 和 **UICulture** 屬性來決定。 這兩個屬性都接受 LCID 值。 如果您指定的 LCID 是受支援語言的變異語言，就會呈現最相近的語言。 如果您指定的 LCID 不受支援，而且找不到其他相近的 LCID，就會呈現英文 (美國)。  
@@ -72,7 +72,7 @@ ms.locfileid: "79198555"
 |PageWidth|Double|RW|報表設定|取得或設定頁寬。 如果開發人員未設定或是報表定義為 215.9 公釐，則為預設值。|  
 |PageHeight|Double|RW|報表設定|取得或設定頁高。 如果開發人員未設定或是報表定義為 279.4 公釐，則為預設值。|  
 |文化特性|Int32|RW|瀏覽器地區設定|指定地區設定識別碼 (LCID)。 此值會決定使用者輸入的度量單位。 例如，若使用者鍵入 **3**，當語言為法文時，此值的度量單位是公釐，若語言為英文 (美國)，則度量單位是英吋。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
-|UICulture|String|RW|用戶端文化特性|指定對話方塊的字串當地語系化。 [列印] 對話方塊中的文字會當地語系化成下列語言：簡體中文、繁體中文、英文、法文、德文、義大利文、日文、韓文和西班牙文。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
+|UICulture|String|RW|用戶端文化特性|指定對話方塊的字串當地語系化。 [列印] 對話方塊中的文字會採用下列語言的當地語系化：簡體中文、繁體中文、英文、法文、德文、義大利文、日文、韓文和西班牙文。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
 |Authenticate|Boolean|RW|False|指定控制項是否對報表伺服器發出 GET 命令，以起始連接來執行工作階段外的列印。|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>何時設定驗證屬性  

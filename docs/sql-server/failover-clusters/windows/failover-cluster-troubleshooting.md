@@ -14,10 +14,10 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e1cf8ea99cac00670bd96437e0a5484d2888cbe9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68044795"
 ---
 # <a name="failover-cluster-troubleshooting"></a>容錯移轉叢集疑難排解
@@ -33,7 +33,7 @@ ms.locfileid: "68044795"
 -   使用擴充預存程序及 COM 物件。  
   
 ## <a name="basic-troubleshooting-steps"></a>基本疑難排解步驟  
- 第一個診斷步驟是執行全新的叢集驗證檢查。 如需驗證的詳細資料，請參閱 [Failover Cluster Step-by-Step Guide:Validating Hardware for a Failover Cluster](https://technet.microsoft.com/library/cc732035.aspx) (容錯移轉叢集逐步指南：驗證容錯移轉叢集的硬體)。  您不需要中斷任何服務就可完成此作業，而不會影響任何線上叢集資源。 一旦安裝容錯移轉叢集功能之後，就能隨時執行驗證，包括在部署叢集之前、在叢集建立期間，以及在叢集正在執行時。 事實上，若叢集正在使用中，即可執行其他測試，來檢查是否遵循適用於高可用性工作量的最佳做法。 在這些大量測試中，其中只有一些會影響執行中的叢集工作負載，而這些全都位於儲存分類中，因此，略過這整個類別是避免干擾性測試的簡單方法。  
+ 第一個診斷步驟是執行全新的叢集驗證檢查。 如需驗證的詳細資訊，請參閱 [容錯移轉叢集逐步指南：驗證容錯移轉叢集的硬體](https://technet.microsoft.com/library/cc732035.aspx)。  您不需要中斷任何服務就可完成此作業，而不會影響任何線上叢集資源。 一旦安裝容錯移轉叢集功能之後，就能隨時執行驗證，包括在部署叢集之前、在叢集建立期間，以及在叢集正在執行時。 事實上，若叢集正在使用中，即可執行其他測試，來檢查是否遵循適用於高可用性工作量的最佳做法。 在這些大量測試中，其中只有一些會影響執行中的叢集工作負載，而這些全都位於儲存分類中，因此，略過這整個類別是避免干擾性測試的簡單方法。  
 容錯移轉叢集隨附內建防護措施，避免在驗證期間執行儲存測試時發生意外的停機時間。 如果叢集在初始驗證時有任何線上群組，而且仍保留選取儲存測試，就會提示使用者確認他們是否想要執行所有測試 (並導致停機時間)，或略過測試任何線上群組的磁碟以避免產生停機時間。 如果測試中已排除整個儲存分類，則不會顯示此提示。 這將進行叢集驗證，但不會產生停機時間。  
   
 #### <a name="how-to-revalidate-your-cluster"></a>如何重新驗證您的叢集  
@@ -77,60 +77,60 @@ ms.locfileid: "68044795"
   
      用這種方式來復原錯誤的作業系統會需要一些時間。 如果可以輕易復原作業系統錯誤，請避免使用這項技術。  
   
-     如需詳細資訊，請參閱[建立新的 SQL Server 容錯移轉叢集 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)和[如何：從案例 2 中的容錯移轉叢集失敗進行還原](recover-from-failover-cluster-instance-failure.md)。  
+     如需詳細資訊，請參閱[建立新的 SQL Server 容錯移轉叢集 &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) 和[如何：從狀況 2 中的容錯移轉叢集失敗進行還原](recover-from-failover-cluster-instance-failure.md)。  
   
 ## <a name="resolving-common-problems"></a>解決一般問題  
  下列清單描述常見的使用狀況問題，並說明如何解決。  
   
 ### <a name="problem-incorrect-use-of-command-prompt-syntax-to-install-sql-server"></a>問題：使用錯誤的命令列提示語法安裝 SQL Server  
- **問題 1：** 從命令提示字元使用 **/qn** 參數將難以診斷安裝程式問題，因為 **/qn** 參數會隱藏所有安裝程式對話方塊與錯誤訊息。 如果指定 **/qn** 參數，所有的安裝程式訊息 (包括錯誤訊息) 都會寫入安裝程式記錄檔。 如需記錄檔的詳細資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
+ **問題 1：** 從命令提示字元使用 **/qn** 參數將難以診斷安裝程式問題，因為 **/qn** 參數會抑制所有安裝程式對話方塊與錯誤訊息。 如果指定 **/qn** 參數，所有的安裝程式訊息 (包括錯誤訊息) 都會寫入安裝程式記錄檔。 如需記錄檔的詳細資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
- **解決方法 1**：使用 **/qb** 參數，而不使用 **/qn** 參數。 如果使用 **/qb** 參數，將會顯示每個步驟的基本 UI (包括錯誤訊息)。  
+ **解決方式 1**：使用 **/qb** 參數，而不使用 **/qn** 參數。 如果使用 **/qb** 參數，將會顯示每個步驟的基本 UI (包括錯誤訊息)。  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>問題：SQL Server 無法在移轉至另一個節點之後登入至網路  
  **問題 1：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶無法與網域控制站連絡。  
   
- **解決方法 1**：檢查您的事件記錄檔，尋找是否有網路問題的相關記錄 (例如：介面卡失敗或 DNS 問題)。 確認您可以偵測到 (ping) 您的網域控制站。  
+ **解決方式 1：** 檢查您的事件記錄檔，尋找是否有網路問題的相關記錄 (例如：網路卡失敗或 DNS 問題)。 確認您可以偵測到 (ping) 您的網域控制站。  
   
  **問題 2：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶密碼在所有叢集節點上並不相同，或節點並未重新啟動從失敗節點移轉的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務。  
   
- **解決方法 2：** 使用「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員」來變更 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶密碼。 若您不想這麼做，那麼當您變更了某個節點上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶密碼時，也必須同時變更其他所有節點上的密碼。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員」會替您自動執行此作業。  
+ **解決方式 2：** 使用「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員」來變更 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶密碼。 若您不想這麼做，那麼當您變更了某個節點上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶密碼時，也必須同時變更其他所有節點上的密碼。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員」會替您自動執行此作業。  
   
 ### <a name="problem-sql-server-cannot-access-the-cluster-disks"></a>問題：SQL Server 無法存取叢集磁碟  
  **問題 1：** 所有節點上的韌體或驅動程式都未更新。  
   
- **解決方法 1：** 確定所有節點都使用正確韌體版本與相同的驅動程式版本。  
+ **解決方式 1：** 確定每個節點都已執行正確的韌體版本與相同的驅動程式版本。  
   
- **問題 2：** 節點無法復原從共用叢集磁碟 (具有不同磁碟機代號) 的失敗節點所移轉叢集磁碟。  
+ **問題 2：** 節點無法復原從共用叢集磁碟 (具有不同的磁碟機代號) 上之失敗節點移轉的叢集磁碟。  
   
- **解決方法 2：** 叢集磁碟在這兩部伺服器上的磁碟機代號必須相同。 若不相同，請檢查作業系統和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cluster Service (MSCS) 的原始安裝。  
+ **解決方式 2：** 兩台伺服器上的叢集磁碟的磁碟機代號必須相同。 若不相同，請檢查作業系統和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cluster Service (MSCS) 的原始安裝。  
   
 ### <a name="problem-failure-of-a-sql-server-service-causes-failover"></a>問題：SQL Server 服務失敗導致容錯移轉  
- **解決方案：** 為預防特定服務失敗導致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群組發生容錯移轉，請使用 Windows 中的「叢集管理員」來設定這些服務，如下所示：  
+ **解決方式：** 為預防特定伺服器失敗導致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群組發生容錯移轉，請使用 Windows 中的「叢集管理員」來設定這些服務，如下所示：  
   
 -   清除 **[全文檢索屬性]** 對話方塊之 **[進階]** 索引標籤上的 **[影響群組]** 核取方塊。 然而，如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 導致容錯移轉，全文檢索搜尋服務就會重新啟動。  
   
 ### <a name="problem-sql-server-does-not-start-automatically"></a>問題：SQL Server 未自動啟動  
- **解決方案：** 使用 MSCS 中的「叢集管理員」自動啟動容錯移轉叢集。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務應設定為手動啟動，而且您應該在 MSCS 中設定「叢集管理員」來啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務。 如需詳細資訊，請參閱 [管理服務](https://msdn.microsoft.com/library/ms178096\(v=sql.105\).aspx)。  
+ **解決方式：** 使用 MSCS 中的「叢集管理員」自動啟動容錯移轉叢集。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務應設定為手動啟動，而且您應該在 MSCS 中設定「叢集管理員」來啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務。 如需詳細資訊，請參閱 [管理服務](https://msdn.microsoft.com/library/ms178096\(v=sql.105\).aspx)。  
   
-### <a name="problem-the-network-name-is-offline-and-you-cannot-connect-to-sql-server-using-tcpip"></a>問題：「網路名稱」已離線，且您無法使用 TCP/IP 離線到 SQL Server  
+### <a name="problem-the-network-name-is-offline-and-you-cannot-connect-to-sql-server-using-tcpip"></a>問題：「網路名稱」已離線，且您無法使用 TCP/IP 連接到 SQL Server  
  **問題 1：** 對於設定為要求 DNS 的叢集資源，DNS 發生失敗。  
   
- **解決方法 1：** 更正 DNS 問題。  
+ **解決方式 1：** 更正 DNS 問題。  
   
  **問題 2：** 網路上有重複的名稱。  
   
- **解決方法 2：** 使用 NBTSTAT 來尋找重複的名稱，然後更正此問題。  
+ **解決方式 2：** 使用 NBTSTAT 來尋找重複的名稱，然後更正此問題。  
   
  **問題 3：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 並非使用具名管道來連線。  
   
- **解決方法 3：** 若要使用具名管道來連線，請使用 SQL Server 組態管理員來建立別名以連線到適當的電腦。 例如，若您有一個具有兩個節點的叢集 (**節點 A** 與 **節點 B**)，以及具有預設執行個體的容錯移轉叢集執行個體 (**Virtsql**)，則您可以利用下列步驟連接到網路名稱資源已離線的伺服器：  
+ **解決方式 3：** 若要使用具名管道來連接，請使用「SQL Server 組態管理員」來建立別名以連接到適當的電腦。 例如，若您有一個具有兩個節點的叢集 (**節點 A** 與 **節點 B**)，以及具有預設執行個體的容錯移轉叢集執行個體 (**Virtsql**)，則您可以利用下列步驟連接到網路名稱資源已離線的伺服器：  
   
 1.  使用「叢集管理員」來判斷含有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的群組是在哪個節點上執行。 就此範例而言，是 **節點 A**。  
   
 2.  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] net start **來啟動該電腦上的**服務。 如需使用 **net start**的詳細資訊，請參閱 [手動啟動 SQL Server](https://msdn.microsoft.com/library/ms191193\(v=sql.105\).aspx)。  
   
-3.  啟動**節點 A** 上的「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL Server 組態管理員」。檢視伺服器所接聽的管道名稱， 應該類似於 \\\\.\\$$\VIRTSQL\pipe\sql\query。  
+3.  啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 節點 A **上的「** SQL Server 組態管理員」。檢視伺服器所接聽的管道名稱， 應該類似於 \\\\.\\$$\VIRTSQL\pipe\sql\query。  
   
 4.  在用戶端電腦上，啟動「SQL Server 組態管理員」。  
   
@@ -141,12 +141,12 @@ ms.locfileid: "68044795"
 ### <a name="problem-sql-server-setup-fails-on-a-cluster-with-error-11001"></a>問題：SQL Server 安裝程式在叢集上失敗，錯誤為 11001  
  **問題：** [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.X\Cluster] 中被遺棄的登錄機碼  
   
- **解決方案：** 確定目前並未使用 MSSQL.X 登錄區，然後刪除該叢集機碼。  
+ **解決方式：** 確定目前並未使用 MSSQL.X 登錄區，然後刪除該叢集機碼。  
   
-### <a name="problem-cluster-setup-error-the-installer-has-insufficient-privileges-to-access-this-directory-drivemicrosoft-sql-server-the-installation-cannot-continue-log-on-as-an-administrator-or-contact-your-system-administrator"></a>問題：叢集設定錯誤：「安裝程式的權限不足，無法存取這個目錄：\<磁碟機>\Microsoft SQL Server。 安裝無法繼續， 以管理員的身分登入或是連絡您的系統管理員」  
- **問題：** 此問題是由未正確分割的 SCSI 共用磁碟機所造成。  
+### <a name="problem-cluster-setup-error-the-installer-has-insufficient-privileges-to-access-this-directory-drivemicrosoft-sql-server-the-installation-cannot-continue-log-on-as-an-administrator-or-contact-your-system-administrator"></a>問題：叢集設定錯誤：「安裝程式的權限不足，無法存取這個目錄：\<drive>\Microsoft SQL Server。 安裝無法繼續， 以管理員的身分登入或是連絡您的系統管理員」  
+ **問題：** 此問題是由未正確分割的共用磁碟機所造成。  
   
- **解決方案：** 使用下列步驟，在共用磁碟上重新建立單一分割區：  
+ **解決方式：** 使用下列步驟，在共用磁碟上重新建立單一分割區：  
   
 1.  從叢集中刪除磁碟資源。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "68044795"
 ### <a name="problem-applications-fail-to-enlist-sql-server-resources-in-a-distributed-transaction"></a>問題：應用程式無法在分散式交易中編列 SQL Server 資源  
  **問題：** 因為 Windows 中的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 設定不完整，因此應用程式可能無法將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源編列為分散式交易。 這個問題會影響使用分散式交易的連結伺服器、分散式查詢和遠端預存程序。 如需有關如何設定 MS DTC 的詳細資訊，請參閱＜ [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)＞。  
   
- **解決方案：** 若要預防這類問題發生，您必須在有安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 及設定 MS DTC 的伺服器上完整啟用 MS DTC 服務。  
+ **解決方案** ：若要預防這類問題發生，您必須在有安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 及設定 MS DTC 的伺服器上完整啟用 MS DTC 服務。  
   
  若要完整啟用 MS DTC，請使用下列步驟：  
   

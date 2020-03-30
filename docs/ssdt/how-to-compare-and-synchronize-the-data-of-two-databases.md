@@ -15,10 +15,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: c53dc1e11d242d6864525aba677e78c67671277c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241575"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>HOW TO：比較和同步處理兩個資料庫的資料
@@ -41,7 +41,7 @@ ms.locfileid: "75241575"
 > [!NOTE]  
 > 您也可以比較兩個資料庫或相同資料庫兩個版本的「結構描述」  。 如需詳細資訊，請參閱[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)。  
   
-## <a name="CompareDatabaseData"></a>比較資料庫資料  
+## <a name="comparing-database-data"></a><a name="CompareDatabaseData"></a>比較資料庫資料  
   
 #### <a name="to-compare-data-by-using-the-new-data-comparison-wizard"></a>若要使用新增資料比較精靈來比較資料  
   
@@ -87,7 +87,7 @@ ms.locfileid: "75241575"
   
     對指定的來源和目標資料庫中的資料進行比較。 在資料比較工作階段中顯示結果。 如需如何檢視結果或同步處理資料的詳細資訊，請參閱[檢視資料差異](#ViewDifferences)和[同步處理資料庫資料](#Synchronize)。  
   
-## <a name="ViewDifferences"></a>檢視資料差異  
+## <a name="viewing-data-differences"></a><a name="ViewDifferences"></a>檢視資料差異  
 當您比較兩個資料庫的資料之後，[資料比較] 會列出所比較的每個「資料庫物件」  及其狀態。 您也可以檢視每個物件內記錄的結果 (依狀態分組)。 如需狀態指定的詳細資訊，請參閱[使用參考資料庫中的資料比較和同步處理一個或多個資料表中的資料](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)。  
   
 當您檢視差異之後，可以針對不同、遺漏或新增的部分或所有物件或記錄，更新目標以符合來源。 如需詳細資訊，請參閱[同步處理資料庫資料](#Synchronize)。  
@@ -102,7 +102,7 @@ ms.locfileid: "75241575"
   
     -   若要檢視在特定物件內記錄的結果，請按一下主要結果窗格中的物件，然後按一下記錄檢視窗格的索引標籤。 每個索引標籤會顯示該物件中具有特定狀態的所有記錄：不同、僅限於來源、僅限於目標和相同。 資料會以記錄和資料行顯示。  
   
-## <a name="Synchronize"></a>同步處理資料庫資料  
+## <a name="synchronizing-database-data"></a><a name="Synchronize"></a>同步處理資料庫資料  
 當您比較兩個資料庫的資料之後，可以更新目標的全部或部分以符合來源，進行同步處理。 您可以比較兩種資料庫物件中的資料：資料表和檢視表。  
   
 #### <a name="to-update-target-data-by-using-the-write-updates-command"></a>若要利用寫入更新命令來更新目標資料  

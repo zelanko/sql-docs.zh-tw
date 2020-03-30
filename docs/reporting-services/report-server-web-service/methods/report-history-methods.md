@@ -14,10 +14,10 @@ ms.assetid: ebfb4834-5445-480c-9a51-6868c60308af
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 07bd44de33f634b12fe21c004c34a20b5a5544cd
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198365"
 ---
 # <a name="report-history-methods"></a>報表記錄方法

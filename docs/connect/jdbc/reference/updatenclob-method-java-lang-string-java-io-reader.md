@@ -11,10 +11,10 @@ ms.assetid: 87621ca7-e64a-49e2-b9c2-551390adaa26
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 429ff64469bb904a3cc8de65f518b0e5fa72abad
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998622"
 ---
 # <a name="updatenclob-method-javalangstring-javaioreader"></a>updateNClob 方法 (java.lang.String, java.io.Reader)

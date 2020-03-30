@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190396"
 ---
 # <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上設定 HDFS 階層處理
@@ -57,7 +57,7 @@ HDFS 階層處理支援重新整理。 針對遠端資料的最新快照集重�
 - [如何在巨量資料叢集中掛接 ADLS Gen2 以進行 HDFS 階層處理](hdfs-tiering-mount-adlsgen2.md)
 - [如何在巨量資料叢集中掛接 S3 以進行 HDFS 階層處理](hdfs-tiering-mount-s3.md)
 
-## <a id="issues"></a> 已知問題和限制
+## <a name="known-issues-and-limitations"></a><a id="issues"></a> 已知問題和限制
 
 下列清單提供在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]中使用 HDFS 階層處理時的已知問題和目前限制：
 

@@ -13,10 +13,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 85dfbf5b8843325f445a73b7e470c54cf3c91d58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243523"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>在 SQL Server 單元測試中使用測試條件
@@ -75,7 +75,7 @@ ms.locfileid: "75243523"
   
 如需如何使用預期的例外狀況和負面的 SQL Server 單元測試的範例，請參閱[逐步解說：建立及執行 SQL Server 單元測試](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)。  
   
-## <a name="SpecifyDataChecksum"></a>指定資料總和檢查碼  
+## <a name="specifying-a-data-checksum"></a><a name="SpecifyDataChecksum"></a>指定資料總和檢查碼  
 若要顯示 SQL Server 單元測試設計工具，請在 [方案總管]  中按兩下單元測試原始程式碼檔。  
   
 在資料庫單元測試中加入 [資料總和檢查碼] 測試條件之後，必須使用下列程序來設定預期的總和檢查碼：  
@@ -107,7 +107,7 @@ ms.locfileid: "75243523"
   
     測試條件的 [ **值** ] 資料行會顯示預期的總和檢查碼值。  
   
-## <a name="SpecifyExpectedSchema"></a>指定預期的結構描述  
+## <a name="specifying-an-expected-schema"></a><a name="SpecifyExpectedSchema"></a>指定預期的結構描述  
 在您於 SQL Server 單元測試中加入 [預期的結構描述] 測試條件之後，必須使用下列程序來設定預期的結構描述：  
   
 #### <a name="to-specify-an-expected-schema"></a>若要指定預期的結構描述  

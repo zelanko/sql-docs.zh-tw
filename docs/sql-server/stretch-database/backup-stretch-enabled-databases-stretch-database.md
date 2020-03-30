@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 897f748c5aeab43c7e3ef98f6dbfff84b9da69d7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286302"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>備份已啟用延展功能的資料庫(Stretch Database)
@@ -35,7 +35,7 @@ ms.locfileid: "79286302"
   
 若要備份已啟用 Stretch 的 SQL Server 資料庫，您可以繼續使用目前所使用的 SQL Server 備份方法。 如需詳細資訊，請參閱 [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。
   
- 已啟用 Stretch 之 SQL Server 資料庫的備份只包含本機資料及適合在執行備份的時間點進行移轉的資料。 (合格資料是尚未遷移，但會視資料表的移轉設定而遷移到 Azure 的資料。)這稱為**淺層**備份，而且不包含已遷移到 Azure 的資料。  
+ 已啟用 Stretch 之 SQL Server 資料庫的備份只包含本機資料及適合在執行備份的時間點進行移轉的資料。 (合格資料是尚未遷移，但會視資料表的移轉設定而遷移到 Azure 的資料。)這稱為 **淺層** 備份，而且不包含已遷移到 Azure 的資料。  
   
 ## <a name="back-up-your-remote-azure-data"></a>備份遠端 Azure 資料   
   
@@ -46,7 +46,7 @@ Azure 上的 SQL Server Stretch Database 服務會至少每隔 8 小時使用自
 ### <a name="azure-reduces-the-risk-of-data-loss-with-geo-redundancy"></a>Azure 可降低異地備援的資料遺失風險  
 Azure 資料庫備份儲存在異地備援的 Azure 儲存體 (RA-GRS) 中，因此預設會啟用異地備援。 異地備援的儲存體會將您的資料複寫到與主要區域相距甚遠的次要區域。 在主要和次要區域中，您的資料會在不同的容錯網域和升級網域之間各複寫三次。 這可確保即使在發生全面性地區中斷或損毀而造成其中一個 Azure 區域無法使用的情況下，也能持續使用您的資料。
 
-### <a name="stretchRPO"></a>Stretch Database 透過暫時保留已移轉的資料列，來降低 Azure 資料的資料遺失風險
+### <a name="stretch-database-reduces-the-risk-of-data-loss-for-your-azure-data-by-retaining-migrated-rows-temporarily"></a><a name="stretchRPO"></a>Stretch Database 透過暫時保留已移轉的資料列，來降低 Azure 資料的資料遺失風險
 在 Stretch Database 將合格的資料列從 SQL Server 移轉到 Azure 之後，它會在暫存表格中保留這些資料列至少 8 小時。 如果您還原 Azure 資料庫的備份，Stretch Database 會使用儲存在暫存表格中的資料列，來協調 SQL Server 和 Azure 資料庫。
 
 還原 Azure 資料的備份之後，您必須執行預存程序 [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) ，將已啟用 Stretch 的 SQL Server 資料庫重新連接到遠端 Azure 資料庫。 當您執行 **sys.sp_rda_reauthorize_db**時，Stretch Database 會自動協調 SQL Server 和 Azure 資料庫。

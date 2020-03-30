@@ -15,10 +15,10 @@ author: rene-ye
 ms.author: v-reye
 manager: kenvh
 ms.openlocfilehash: 6877a6421622ab52a92b89502c68f47c4c315d93
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69025499"
 ---
 # <a name="retrieving-parametermetadata-via-usefmtonly"></a>透過 useFmtOnly 擷取 ParameterMetaData
@@ -34,7 +34,7 @@ ms.locfileid: "69025499"
   
 -   對檢視執行 
   
-  這些使用案例的建議解決方案是針對參數和資料表目標剖析使用者的 SQL 查詢，然後執行已啟用 `FMTONLY` 的 `SELECT` 查詢。 下列程式碼片段有助於將功能視覺化。
+  這些使用案例的建議解決方案是針對參數和資料表目標剖析使用者的 SQL 查詢，然後執行已啟用 `SELECT` 的 `FMTONLY` 查詢。 下列程式碼片段有助於將功能視覺化。
   
 ```sql
 --create a normal table 'Foo' and a temporary table 'Bar'

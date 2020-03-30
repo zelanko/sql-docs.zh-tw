@@ -12,17 +12,17 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
 ms.openlocfilehash: 89089c07a3b13ee7764770df3d582ba449b65f53
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307790"
 ---
 # <a name="run-sql-server-profiler"></a>執行 SQL Server Profiler
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-您可以使用多種不同的方式來執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，以支援在各種狀況中收集追蹤輸出。 您可以從 Windows 10 的 [開始]  功能表、[!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 的 [工具]  功能表，以及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的數個位置啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
+您可以使用多種不同的方式來執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，以支援在各種狀況中收集追蹤輸出。 您可以從 Windows 10 的 [開始][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **功能表、** Tuning Advisor 的 [工具]  功能表，以及 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的數個位置啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 當您第一次啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，且從 [檔案]  功能表中選取 [新增追蹤]  時，應用程式會顯示一個 [連線到伺服器]  對話方塊，您可在此指定要連線的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
 ## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>從 Windows 10 的 [開始] 功能表啟動 SQL Server Profiler  
@@ -32,7 +32,7 @@ ms.locfileid: "75307790"
 -  在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 的 **[工具]** 功能表上，按一下 **[SQL Server Profiler]** 。  
 
 ## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>若要在 SQL Server Management Studio 中啟動 SQL Server Profiler  
- 您可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的數個位置啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 當 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 啟動時，它會載入連線內容、追蹤範本及其啟動點的篩選內容。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會在自己的執行個體中啟動每個 SQL Server Profiler 工作階段，即便在您關閉 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 後 Profiler 仍會繼續執行。  
+ 您可以從 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中的數個位置啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 當 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 啟動時，它會載入連線內容、追蹤範本及其啟動點的篩選內容。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會在自己的執行個體中啟動每個 SQL Server Profiler 工作階段，即便在您關閉 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 後 Profiler 仍會繼續執行。  
 ### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>從工具功能表啟動 SQL Server Profiler  
 -  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [工具]  功能表中，按一下 [SQL Server Profiler]  。  
 

@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: e30ec27733885521f8d6e5b487fde40afafca4dd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241701"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>使用參考資料庫中的資料比較和同步處理一個或多個資料表中的資料
@@ -27,9 +27,9 @@ ms.locfileid: "75241701"
   
 本節包含下列主題：  
   
--   [操作說明：比較和同步處理兩個資料庫的資料](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
+-   [如何：比較和同步處理兩個資料庫的資料](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
   
--   [操作說明：檢視資料差異](../ssdt/how-to-view-data-differences.md)  
+-   [如何：檢視資料差異](../ssdt/how-to-view-data-differences.md)  
   
 ## <a name="requirements"></a>需求  
 當您比較資料表或檢視表的資料時，來源資料庫的資料表或檢視表必須與目標資料庫的資料表或檢視表共用數個屬性。 不符合下列條件的資料表和檢視不會比較，也不會出現在 [新增資料比較]  精靈的第二個頁面：  
@@ -49,11 +49,11 @@ ms.locfileid: "75241701"
 ## <a name="common-tasks"></a>一般工作  
 在本節中，您可以找到支援此狀況的一般工作描述。  
   
-**設定選項以控制比較資料的方式：** 當您比較資料時，可以安全地忽略識別欄位，停用觸發和停用外部索引鍵。 您也可以從更新指令碼卸除主索引鍵、索引和唯一的條件約束。  
+**設定選項來控制如何比較資料：** 當您比較資料時，可以放心略識別欄位，停用觸發程序和停用外部索引鍵。 您也可以從更新指令碼卸除主索引鍵、索引和唯一的條件約束。  
   
-**比較資料表中的資料並選擇性地更新目標以符合來源：** 在指定要比較的來源和目標資料庫並執行比較之後，您可以在 [資料比較]  視窗中檢視結果。 您不只可以檢視差異的詳細資料，也可以檢視用來同步處理資料的更新指令碼。 在您識別兩個資料庫之間的差異之後，可以針對每個差異指定動作。 然後您可以更新目標，也可以將更新指令碼匯出至 Transact\-SQL 編輯器或檔案。 您可以匯出此指令碼，以便您或其他人在套用變更之前可以檢閱它。  
+**比較資料表資料並選擇性地更新目標以符合來源：** 在指定要比較的來源和目標資料庫和執行比較之後，您可以在 [資料比較]  視窗中檢視結果。 您不只可以檢視差異的詳細資料，也可以檢視用來同步處理資料的更新指令碼。 在您識別兩個資料庫之間的差異之後，可以針對每個差異指定動作。 然後您可以更新目標，也可以將更新指令碼匯出至 Transact\-SQL 編輯器或檔案。 您可以匯出此指令碼，以便您或其他人在套用變更之前可以檢閱它。  
   
-## <a name="UnderstandingDataCompareResults"></a>了解比較結果  
+## <a name="understanding-comparison-results"></a><a name="UnderstandingDataCompareResults"></a>了解比較結果  
 下表描述 [資料比較]  視窗的五個資料行。  
   
 |資料行|注意|  
@@ -69,5 +69,5 @@ ms.locfileid: "75241701"
   
 ## <a name="see-also"></a>另請參閱  
 [SQL Server Data Tools](../ssdt/sql-server-data-tools.md)  
-[操作說明：使用結構描述比較以比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   
