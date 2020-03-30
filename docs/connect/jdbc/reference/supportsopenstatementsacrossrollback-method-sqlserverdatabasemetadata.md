@@ -16,10 +16,10 @@ ms.assetid: 4e38b938-f39f-4c5d-9b32-4ba489535c45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ea2ba789b3b2d34671f07acad9f5a7e6636326c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969063"
 ---
 # <a name="supportsopenstatementsacrossrollback-method-sqlserverdatabasemetadata"></a>supportsOpenStatementsAcrossRollback 方法 (SQLServerDatabaseMetaData)

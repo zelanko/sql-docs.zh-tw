@@ -24,10 +24,10 @@ ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 6301ce8d1500cb4c71bbcf725e5abe81fa2130b8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243864"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>屬性視窗 F1 說明 (Management Studio)

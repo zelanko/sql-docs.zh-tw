@@ -11,10 +11,10 @@ ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3e00728af89cf85beb53ef667e91f4011b3fd9e0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573561"
 ---
 # <a name="configurationsetting-method---setvirtualdirectory"></a>ConfigurationSetting 方法 - SetVirtualDirectory

@@ -9,10 +9,10 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041573"
 ---
 # <a name="tutorial-map-report-report-builder"></a>教學課程：地圖報表 (報表產生器)
@@ -27,21 +27,21 @@ ms.locfileid: "63041573"
 在本教學課程中，您將建立地圖報表，用於顯示紐約州各郡的商店位置。  
    
 > [!NOTE]  
-> 在本教學課程中，精靈的步驟會合併成兩個程序：一個程序用來建立資料集，另一個程序用來建立資料表。 如需如何瀏覽至報表伺服器、選擇資料來源、建立資料集，以及執行精靈的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+> 在本教學課程中，精靈的步驟會合併成兩個程序：一個程序用來建立資料集，另一個程序用來建立資料表。 如需如何瀏覽至報表伺服器、選擇資料來源、建立資料集以及執行精靈的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
-完成此教學課程的估計時間：30 分鐘。  
+完成本教學課程的估計時間：30 分鐘。  
   
 ## <a name="requirements"></a>需求  
 針對本教學課程，報表伺服器必須設定為支援 Bing Maps 作為背景。 如需詳細資訊，請參閱 [對應報表支援規劃](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。 
 
 如需其他需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="Map"></a>1.從地圖精靈建立含多邊形圖層的地圖  
+## <a name="1-create-a-map-with-a-polygon-layer-from-the-map-wizard"></a><a name="Map"></a>1.從地圖精靈建立含多邊形圖層的地圖  
 在本節中，您會從地圖庫將地圖新增至報表。 地圖中包含一個顯示紐約州各郡的圖層。 各郡的形狀是以空間資料為基礎的多邊形，這些資料內嵌於地圖庫的地圖中。  
   
 ### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>使用新報表中的地圖精靈加入地圖  
   
-1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  從您的電腦、[ Web 入口網站或 SharePoint 整合模式](../reporting-services/report-builder/start-report-builder.md)啟動報表產生器[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]。  
   
     [新報表或資料集]  對話方塊隨即開啟。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "63041573"
   
 地圖圖例和色階因為沒有與各郡相關聯的分析資料，因此不會顯示。 您稍後將在本教學課程中加入分析資料。  
   
-## <a name="PointLayer"></a>2.加入地圖點圖層以顯示商店位置  
+## <a name="2-add-a-map-point-layer-to-display-store-locations"></a><a name="PointLayer"></a>2.加入地圖點圖層以顯示商店位置  
 在本節中，您會使用地圖圖層精靈新增點圖層，用於顯示商店的位置。  
   
 > [!NOTE]  
@@ -169,13 +169,13 @@ ms.locfileid: "63041573"
 9. 在查詢設計工具工具列上，按一下 **[執行]** \( **!** )。  
   
     結果集包含七個資料行，代表一組販賣消費品的紐約州商店。 以下是清單，以及對於較不明顯者的說明︰ 
-    *   **StoreKey**：商店識別碼。  
+    *   **StoreKey**︰商店識別碼。  
     *   **StoreName**。
-    *   **SellingArea**：可用於產品展示的區域，範圍從 455 平方英尺到 1125 平方英尺。
+    *   **SellingArea**︰可用於產品展示的區域，範圍是從 455 平方英尺到 1125 平方英尺。
     *   **City**。
     *   **County**。
-    *   **銷售**：總銷售額。 
-    *   **SpatialLocation**：經度和緯度位置。 
+    *   **Sales**：總銷售額。 
+    *   **SpatialLocation**︰經度和緯度位置。 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
   
@@ -227,7 +227,7 @@ ms.locfileid: "63041573"
 
 
   
-## <a name="LineLayer"></a>3.加入地圖線條圖層以顯示路線  
+## <a name="3-add-a-map-line-layer-to-display-a-route"></a><a name="LineLayer"></a>3.加入地圖線條圖層以顯示路線  
 使用地圖圖層精靈，加入顯示兩個商店之間路線的地圖圖層。 在本教學課程中，路徑是從三個商店位置建立。 在商業應用程式中，路徑可能是商店之間的最佳路線。  
   
 ### <a name="to-add-a-line-layer-to-map"></a>將線條圖層加入至地圖  
@@ -284,7 +284,7 @@ ms.locfileid: "63041573"
 
       這是縮放百分比。 在 125%，您會看到完整的州。
   
-## <a name="TileLayer"></a>4.加入 Bing Maps 圖格背景  
+## <a name="4-add-a-bing-maps-tile-background"></a><a name="TileLayer"></a>4.加入 Bing Maps 圖格背景  
 在本節中，您會新增顯示 Bing Maps 圖格背景的地圖圖層。  
   
 1.  切換至 [設計] 檢視。  
@@ -306,7 +306,7 @@ ms.locfileid: "63041573"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Transparent"></a>5.使圖層變透明  
+## <a name="5-make-a-layer-transparent"></a><a name="Transparent"></a>5.使圖層變透明  
 在本節中，若要讓某一個圖層上的項目透過另一個圖層顯示，您可以調整圖層的順序以及透明度，以獲得需要的效果。 請從您建立的第一個圖層 PolygonLayer1 開始。 
   
 1.  按兩下地圖來顯示 **[地圖圖層]** 窗格。  
@@ -321,12 +321,12 @@ ms.locfileid: "63041573"
 
     ![report-builder-map-transparency](../reporting-services/media/report-builder-map-transparency.png)
   
-## <a name="Vary"></a>6.依據銷售量變化郡的色彩  
+## <a name="6-vary-county-color-based-on-sales"></a><a name="Vary"></a>6.依據銷售量變化郡的色彩  
 多邊形圖層上的每個郡都有不同的色彩，因為報表處理器會自動根據您在地圖精靈最後一頁上選擇的主題，指派色彩調色盤中的色彩值。  
   
 在本節中，您會指定一個色彩規則，讓特定色彩與每個郡的商店銷售額範圍產生關聯。 紅色、黃色、綠色分別表示相對的高、中、低銷售額。 格式化色階來顯示貨幣。 在新的圖例中顯示年度銷售額範圍。 對於未包含商店的郡，不使用色彩則表示沒有相關聯的資料。  
   
-### <a name="Relationship"></a>6a. 建立空間資料與分析資料之間的關聯性  
+### <a name="6a-build-a-relationship-between-spatial-and-analytical-data"></a><a name="Relationship"></a>6a. 建立空間資料與分析資料之間的關聯性  
 若要根據分析資料的色彩變化郡的形狀，您需要先讓分析資料與空間資料產生關聯。 在本教學課程中，您將使用郡名稱進行比對。 
   
 1.  切換至 [設計] 檢視。  
@@ -355,7 +355,7 @@ ms.locfileid: "63041573"
   
 每一個有商店的郡所使用的色彩，都是依據您在精靈中所選擇樣式的調色盤而定。 其他郡是灰色。  
   
-### <a name="ColorRules"></a>6b. 指定多邊形的色彩規則  
+### <a name="6b-specify-color-rules-for-polygons"></a><a name="ColorRules"></a>6b. 指定多邊形的色彩規則  
 若要建立讓各郡的色彩隨商店銷售額變化的規則，您必須指定範圍值、該範圍中要顯示的區間數目，以及要使用的色彩。  
   
 #### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>為所有擁有相關資料的多邊形指定色彩規則  
@@ -398,7 +398,7 @@ ms.locfileid: "63041573"
   
     色階會顯示四種色彩：紅色、橙色、黃色與綠色。 每一種色彩都代表一個銷售額範圍，該範圍是根據各郡的銷售額自動計算。  
   
-### <a name="ColorScale"></a>6c. 依據貨幣格式化色階中的資料  
+### <a name="6c-format-the-data-in-the-color-scale-as-currency"></a><a name="ColorScale"></a>6c. 依據貨幣格式化色階中的資料  
 根據預設，資料會使用一般格式。 在本節中，您會套用自訂格式。  
   
 1. 切換至 [設計] 檢視。  
@@ -409,7 +409,7 @@ ms.locfileid: "63041573"
   
     色階會以每個範圍的貨幣格式顯示年度銷售額。  
   
-### <a name="NewLegend"></a>6d. 新增圖例標題   
+### <a name="6d-add-a-legend-title"></a><a name="NewLegend"></a>6d. 新增圖例標題   
   
 1.  在仍然選取色階的情況下，在 [屬性] 窗格中您會看到 **MapColorScale**的屬性。 
   
@@ -423,7 +423,7 @@ ms.locfileid: "63041573"
   
 與商店和銷售額相關聯的郡會依據色彩規則顯示。 沒有銷售額的郡則不會顯示任何色彩。  
   
-### <a name="NoData"></a>6f. 變更未包含資料之郡的色彩  
+### <a name="6f-change-color-for-counties-with-no-data"></a><a name="NoData"></a>6f. 變更未包含資料之郡的色彩  
 您可以針對圖層上的所有地圖元素設定預設顯示選項。 色彩規則的優先順序高於這些顯示選項。  
   
 #### <a name="to-set-the-display-properties-for-all-elements-on-a-layer"></a>設定圖層上所有元素的顯示屬性  
@@ -448,7 +448,7 @@ ms.locfileid: "63041573"
   
 沒有相關資料的郡會顯示為灰藍色。 只有包含相關分析資料的郡會具有您所指定色彩規則中的 [紅色]  到 [綠色]  等色彩。  
   
-## <a name="CustomPoint"></a>7.加入自訂點  
+## <a name="7-add-a-custom-point"></a><a name="CustomPoint"></a>7.加入自訂點  
 若要代表尚未建造的新門市，就在此區段中使用 [星形]  標記類型指定一個點。  
   
 1.  切換至 [設計] 檢視。  
@@ -491,7 +491,7 @@ ms.locfileid: "63041573"
 
 ![report-builder-map-custom-point-new-store](../reporting-services/media/report-builder-map-custom-point-new-store.png)
   
-## <a name="CenterView"></a>8.置中與縮放地圖   
+## <a name="8-center-and-resize-the-map"></a><a name="CenterView"></a>8.置中與縮放地圖   
 在本節中，您會學習如何變更地圖中心，以及變更縮放層級的另一種方式。  
  
 1.  切換至 [設計] 檢視。  
@@ -512,7 +512,7 @@ ms.locfileid: "63041573"
   
 在 [設計] 檢視中，顯示介面和檢視上的地圖是以範例資料為基礎。 在呈現的報表中，地圖檢視會在您指定的檢視上置中。  
   
-## <a name="Title"></a>9.加入報表標題  
+## <a name="9-add-a-report-title"></a><a name="Title"></a>9.加入報表標題  
   
 1.  切換至 [設計] 檢視。
   
@@ -522,7 +522,7 @@ ms.locfileid: "63041573"
   
 這個標題就會顯示在報表的頂端。 沒有定義任何頁首時，位於報表主體頂端的項目就相當於報表頁首。  
   
-## <a name="Save"></a>10.儲存報表  
+## <a name="10-save-the-report"></a><a name="Save"></a>10.儲存報表  
   
 1.  在 [設計] 檢視或 [預覽] 中，在 [檔案]  功能表 > [另存新檔]  。
  

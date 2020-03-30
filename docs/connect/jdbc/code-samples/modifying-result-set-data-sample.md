@@ -11,10 +11,10 @@ ms.assetid: b5ae54dc-2a79-4664-bb21-cacdb7d745e1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52ef5b12771cb7ef65f34dd7d890f19a8541d3ee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028327"
 ---
 # <a name="modifying-result-set-data-sample"></a>修改結果集資料範例

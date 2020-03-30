@@ -28,10 +28,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0b91be419419d7dab1904068b1600def88106023
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256325"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 編輯器選項
@@ -42,7 +42,7 @@ ms.locfileid: "75256325"
   
 [查詢結果](#QueryResults)  
   
-## <a name="QueryExecution"></a>查詢執行  
+## <a name="query-execution"></a><a name="QueryExecution"></a>查詢執行  
   
 |屬性|描述|  
 |------------|---------------|  
@@ -70,7 +70,7 @@ ms.locfileid: "75256325"
 |**SET ANSI_WARNINGS**|指定數個錯誤狀況的 SQL-92 標準行為。如需詳細資訊，請參閱 [SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758)。|  
 |**SET ANSI_NULLS**|等於 ( **=** ) 和不等於 ( **<>** ) 比較運算子搭配 Null 值一起使用時，指定符合 SQL-92 規範的行為。如需詳細資訊，請參閱 [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)。|  
   
-## <a name="QueryResults"></a>查詢結果  
+## <a name="query-results"></a><a name="QueryResults"></a>查詢結果  
   
 |屬性|描述|  
 |------------|---------------|  
@@ -79,7 +79,7 @@ ms.locfileid: "75256325"
 |**執行之後捨棄結果**|在螢幕顯示已收到查詢結果後，將查詢結果捨棄以釋放記憶體。|  
 |**在其他索引標籤中顯示結果**|在新的文件視窗中顯示結果集，而非在查詢文件視窗的下方顯示。|  
 |**執行查詢後，切換至結果索引標籤**|自動將螢幕焦點設定為結果集。|  
-|**已擷取的最大字元數**|非 XML 資料：<br /><br />輸入從 1 到 65535 的數字，來指定每個資料格中會顯示的最大字元數。 **注意：** 指定大量字元可能造成結果集內顯示的資料截斷。 每個資料格中所顯示的最大字元數，會視字型大小而定。 若傳回了大量的結果集，且此方塊中所設定的值較大，就可能會造成 SQL Server Management Studio 的可用記憶體不足而降低系統的效能。<br /><br />XML 資料：<br /><br />選取 1 MB、2 MB 或 5 MB。 選取 [無限制] 以擷取所有字元。|  
+|**已擷取的最大字元數**|非 XML 資料：<br /><br />輸入從 1 到 65535 的數字，來指定每個資料格中會顯示的最大字元數。 **注意：** 指定大量字元可能造成結果集內顯示的資料遭截斷。 每個資料格中所顯示的最大字元數，會視字型大小而定。 若傳回了大量的結果集，且此方塊中所設定的值較大，就可能會造成 SQL Server Management Studio 的可用記憶體不足而降低系統的效能。<br /><br />XML 資料：<br /><br />選取 1 MB、2 MB 或 5 MB。 選取 [無限制] 以擷取所有字元。|  
 |**輸出格式**|根據預設，輸出會顯示在以空格填補結果所建立的資料行中。 其他選項包括使用逗號、索引標籤，或空格來分隔資料行。 選取 **[自訂分隔符號]** 核取方塊，即可在 **[自訂分隔符號]** 方塊中指定不同的分隔字元。|  
 |**自訂分隔符號**|指定您要用來分隔資料行的字元。 只有當您在 [ **輸出格式** ] 方塊中選取了 [ **自訂分隔符號** ] 核取方塊時，才能使用此選項。|  
 |**在結果集內包含資料行標頭**|如果您不希望每個資料行均標示資料行標題，請清除此核取方塊。|  

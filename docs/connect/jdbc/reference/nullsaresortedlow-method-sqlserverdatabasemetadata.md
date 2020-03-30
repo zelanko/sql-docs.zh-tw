@@ -16,10 +16,10 @@ ms.assetid: 30c06a9d-3513-42d0-8b2a-5a20ac31eb0e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2259a68458b6ec1d82019bec7167ca167aa99d9e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976640"
 ---
 # <a name="nullsaresortedlow-method-sqlserverdatabasemetadata"></a>nullsAreSortedLow 方法 (SQLServerDatabaseMetaData)

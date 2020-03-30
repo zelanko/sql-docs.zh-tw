@@ -19,10 +19,10 @@ ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 59414abbc5c098382ec83d308d135af92f9dbb35
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015008"
 ---
 # <a name="sqlsrv_next_result"></a>sqlsrv_next_result

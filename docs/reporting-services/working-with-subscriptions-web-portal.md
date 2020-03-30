@@ -9,10 +9,10 @@ ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 046faa5ff137f62ac2554192012ff0917bfb17e2
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76971232"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>處理訂閱 (Web 入口網站)

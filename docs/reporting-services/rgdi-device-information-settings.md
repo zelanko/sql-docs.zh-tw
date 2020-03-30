@@ -9,10 +9,10 @@ ms.assetid: b11fd9cc-3b84-4038-9611-a43feb2f6fdd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a8f72dd611e9d0838001091b450ea88e61213a0f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65572325"
 ---
 # <a name="rgdi-device-information-settings"></a>RGDI 裝置資訊設定

@@ -11,10 +11,10 @@ ms.assetid: 9eaafb0e-8bfa-456c-a481-8e06e5d539e1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5c85b92a7c404cda846e7c8189a383877c7d744e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974601"
 ---
 # <a name="setclientinfo-method-sqlserverconnection"></a>setClientInfo 方法 (SQLServerConnection)

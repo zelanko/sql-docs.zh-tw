@@ -11,10 +11,10 @@ ms.assetid: 9c77b68d-0649-44af-96fa-586cbb319f5f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b016d850286daf0c2cda9604302d78faa6cc6ae1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936280"
 ---
 # <a name="pdo-class"></a>PDO 類別

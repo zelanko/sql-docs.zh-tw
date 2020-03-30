@@ -14,10 +14,10 @@ ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6463dc7e4b17992138a61e6a37277149fccfda68
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66270196"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>啟動與停止報表伺服器服務

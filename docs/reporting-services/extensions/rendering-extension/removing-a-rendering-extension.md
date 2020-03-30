@@ -13,10 +13,10 @@ ms.assetid: 2abfebfb-065f-45cc-a904-c914394cf900
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0ee3563074e2379061006b72f55dab99f80094cd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193459"
 ---
 # <a name="removing-a-rendering-extension"></a>移除轉譯延伸模組

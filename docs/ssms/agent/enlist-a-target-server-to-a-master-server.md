@@ -19,10 +19,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 936c40de1bebd463ad0213ebdfc99171a0fd91a2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242385"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>將目標伺服器編列至主要伺服器
@@ -37,7 +37,7 @@ ms.locfileid: "75242385"
   
 依預設，主要伺服器和目標伺服器之間的連接會啟用完整的安全通訊端層 (SSL) 加密與憑證驗證。 如需詳細資訊，請參閱 [在目標伺服器上設定加密選項](../../ssms/agent/set-encryption-options-on-target-servers.md)。  
   
-## <a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
   
 #### <a name="to-enlist-a-target-server"></a>若要編列目標伺服器  
   
@@ -47,7 +47,7 @@ ms.locfileid: "75242385"
   
 3.  完成「目標伺服器精靈」，精靈將引導您完成此程序。  
   
-## <a name="TsqlProcedure"></a>使用 Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>使用 Transact-SQL  
   
 #### <a name="to-enlist-a-target-server"></a>若要編列目標伺服器  
   

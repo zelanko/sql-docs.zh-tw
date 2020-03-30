@@ -16,10 +16,10 @@ ms.assetid: ed8344eb-4d1d-43d3-ade8-935ec677f73c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b232fa2d89844d94b04878e9db99fdd04e819646
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67968528"
 ---
 # <a name="supportsunionall-method-sqlserverdatabasemetadata"></a>supportsUnionAll 方法 (SQLServerDatabaseMetaData)

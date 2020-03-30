@@ -16,10 +16,10 @@ ms.assetid: 2071c1e4-eca0-4ed4-b50f-85d3c861185d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cfe3f65125f9369630cac6e2f8e8cd4533107b82
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953446"
 ---
 # <a name="getbyte-method-javalangstring"></a>getByte 方法 (java.lang.String)

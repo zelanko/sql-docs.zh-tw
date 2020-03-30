@@ -16,10 +16,10 @@ ms.assetid: ab575792-fd11-4ff3-8847-1368e7a322c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 766c09aca5256d369ebad98cb1c002f4498dda7a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67968947"
 ---
 # <a name="supportsresultsetholdability-method-sqlserverdatabasemetadata"></a>supportsResultSetHoldability 方法 (SQLServerDatabaseMetaData)

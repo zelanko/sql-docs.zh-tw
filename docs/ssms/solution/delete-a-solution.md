@@ -15,10 +15,10 @@ ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 1edd4563386ad88e5f7df1fecb42f9e13537ad87
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251921"
 ---
 # <a name="delete-a-solution"></a>刪除方案

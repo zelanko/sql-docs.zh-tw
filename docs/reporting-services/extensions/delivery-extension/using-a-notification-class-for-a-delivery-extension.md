@@ -14,10 +14,10 @@ ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ad2792a390597223a98b8606af4cb361d17b9e8d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193678"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>使用傳遞延伸模組的通知類別

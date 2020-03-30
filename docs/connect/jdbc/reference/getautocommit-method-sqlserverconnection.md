@@ -16,10 +16,10 @@ ms.assetid: af1f67f4-f568-4e58-abcc-5c809a89b547
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cbd009f2052c911c469b842e2cd5353276d5d2c8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954048"
 ---
 # <a name="getautocommit-method-sqlserverconnection"></a>getAutoCommit 方法 (SQLServerConnection)

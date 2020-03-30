@@ -16,10 +16,10 @@ ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1670638b32f2f5bd32a9ee7b12e28e7a468b75da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74821998"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>從容錯移轉叢集執行個體失敗的狀況中復原
@@ -30,7 +30,7 @@ ms.locfileid: "74821998"
   
 -   [從軟體失敗中復原](#Scenario2)  
   
-##  <a name="Scenario1"></a> 從無法修復的失敗中復原  
+##  <a name="recover-from-an-irreparable-failure"></a><a name="Scenario1"></a> 從無法修復的失敗中復原  
  您可以使用下列步驟從無法修復的失敗中復原。 舉例來說，這種失敗可能是磁碟控制卡或作業系統失敗所引起。 在此情況下，失敗是兩節點叢集之節點 1 中的硬體故障所造成。  
   
 1.  在節點 1 失敗之後， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 會容錯移轉至節點 2。  
@@ -47,7 +47,7 @@ ms.locfileid: "74821998"
   
 7.  執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式，將節點 1 加入至 FCI。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
-##  <a name="Scenario2"></a> 從可修復的失敗中復原  
+##  <a name="recover-from-a-reparable-failure"></a><a name="Scenario2"></a> 從可修復的失敗中復原  
  您可以使用下列步驟從可修復的失敗中復原。 在此情況下，錯誤是節點 1 當機或離線所造成，但並非無可挽回的嚴重錯誤。 這種失敗可能是因為作業系統失敗、硬體故障或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體本身失敗所導致。  
   
 1.  在節點 1 失敗之後，FCI 會容錯移轉至節點 2。  

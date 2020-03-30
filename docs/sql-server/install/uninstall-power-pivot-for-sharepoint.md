@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b39d5f4e33b9ecae8617cb414854d423945637d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "71952729"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>解除安裝 PowerPivot for SharePoint
@@ -40,7 +40,7 @@ ms.locfileid: "71952729"
   
 -   [步驟 6：解除安裝後的檢查清單](#bkmk_post)  
   
-##  <a name="prereq"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="prereq"></a> 必要條件  
   
 -   您必須是 SharePoint 伺服器陣列管理員或服務應用程式管理員，才能解除安裝伺服器陣列中的功能和方案。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "71952729"
   
 -   您必須是 Analysis Services 系統管理員和本機 Administrators 群組的成員，才能解除安裝 Analysis Services 和 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
   
-##  <a name="bkmk_before"></a> 步驟 1：解除安裝前的檢查清單  
+##  <a name="step-1-pre-uninstall-checklist"></a><a name="bkmk_before"></a> 步驟 1：解除安裝前的檢查清單  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 一旦支援查詢及資料處理的軟體從伺服器陣列中移除之後，就會停用資料存取。 因此第一步，您必須先刪除不再運作的檔案及文件庫。 此動作有助於解決解除安裝此軟體之前所發生任何有關「資料遺失」的問題。  
   
 1.  刪除所有與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝有關的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿、文件及文件庫。 此軟體一經解除安裝，所有文件庫及文件皆無法再行運作。  
@@ -65,7 +65,7 @@ ms.locfileid: "71952729"
   
 5.  您也可選擇停止服務，然後等候數日之後再解除安裝此軟體。 這不是解除安裝的必要步驟，但可以讓您在解決先前未完全解決的資料移轉或技術代換問題時，暫時恢復服務。  
   
-##  <a name="bkmk_remove"></a> 步驟 2：從 SharePoint 移除功能和方案  
+##  <a name="step-2-remove-features-and-solutions-from-sharepoint"></a><a name="bkmk_remove"></a> 步驟 2：從 SharePoint 移除功能和方案  
  使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具，從 SharePoint 中移除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務和應用程式。  
   
 -   您必須是伺服器陣列管理員、Analysis Services 執行個體的伺服器管理員，以及伺服器陣列組態資料庫的 **db_owner**。  
@@ -134,7 +134,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  或者，您可以使用 PowerShell 從伺服器陣列移除功能和方案。 如需詳細資訊，請參閱 [Power Pivot for SharePoint 的 PowerShell 參考](https://docs.microsoft.com/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)。  
   
-##  <a name="bkmk_uninstall"></a> 步驟 3：執行 SQL Server 安裝程式以便從本機電腦移除程式  
+##  <a name="step-3-run-sql-server-setup-to-remove-programs-from-the-local-computer"></a><a name="bkmk_uninstall"></a> 步驟 3：執行 SQL Server 安裝程式以便從本機電腦移除程式  
  刪除程式檔案需要您執行 SQL Server 安裝程式來解除安裝軟體。 解除安裝會移除安裝程式所建立的檔案和登錄項目。 您可以使用 [程式和功能] 頁面解除安裝軟體。 安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 是安裝 SQL Server 的一部分。  
   
  您可以解除安裝部分安裝，而不影響已安裝的其他 SQL Server 執行個體 (或同一個執行個體中的功能)。 例如，您可以解除安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，但保留安裝其他元件，例如 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或 Database Engine。  
@@ -147,10 +147,10 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      您可以從安裝程式選取 [ **][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** 執行個體，然後選取 [Analysis Services]  和 [Analysis Services SharePoint 整合]  只移除該功能，但保留其他所有功能。  
   
-##  <a name="bkmk_addin"></a> 步驟 4：解除安裝 PowerPivot for SharePoint 增益集  
+##  <a name="step-4-uninstall-the-power-pivot-for-sharepoint-add-in"></a><a name="bkmk_addin"></a> 步驟 4：解除安裝 PowerPivot for SharePoint 增益集  
  如果您的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署包含兩部以上的伺服器，而且已安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 增益集，請從 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 增益集安裝所在的每一部伺服器上解除安裝增益集，以便完整解除安裝所有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 檔案。 如需詳細資訊，請參閱 [安裝或解除安裝 Power Pivot for SharePoint 增益集 &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)。  
   
-##  <a name="verify"></a> 步驟 5：確認解除安裝  
+##  <a name="step-5-verify-uninstall"></a><a name="verify"></a> 步驟 5：確認解除安裝  
   
 1.  在管理中心的 [管理伺服器上的服務]  中，連接到您要解除安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 所在的伺服器。  
   
@@ -168,7 +168,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
     4.  在 [一般應用程式設定] 中，確認 [ **管理儀表板][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** 不再出現於頁面中。  
   
-##  <a name="bkmk_post"></a> 步驟 6：解除安裝後的檢查清單  
+##  <a name="step-6-post-uninstall-checklist"></a><a name="bkmk_post"></a> 步驟 6：解除安裝後的檢查清單  
  使用下列清單移除解除安裝期間未刪除的軟體與檔案。  
   
 1.  刪除 `C:\Program Files\Microsoft SQL Server\MSAS13.PowerPivot`中的所有資料檔和子資料夾，然後再刪除該資料夾。 此步驟也會刪除先前快取在 DATA 目錄中的檔案。  

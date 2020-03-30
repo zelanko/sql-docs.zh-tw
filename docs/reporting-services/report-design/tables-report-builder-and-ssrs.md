@@ -9,10 +9,10 @@ ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 319f221116d49cab52b0c01a273db565a9049669
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574727"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>資料表 (報表產生器及 SSRS)
@@ -20,13 +20,13 @@ ms.locfileid: "65574727"
    
  您可以依單一欄位、多個欄位或透過撰寫自己的運算式來分組資料。 您可以建立巢狀群組或獨立、相鄰的群組。 若要顯示群組資料的彙總值，將總計加入到群組中。 格式化資料列和資料行以反白顯示您要強調的資料。 您可以一開始隱藏詳細資料或群組資料並加入向下鑽研切換，以便讓使用者以互動方式選擇要顯示多少資料。  
   
- 若要快速地開始使用資料表，請參閱[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) 或[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。  
+ 若要快速地開始使用資料表，請參閱[教學課程︰建立基本資料表報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) 或[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。  
   
 > [!NOTE]  
 >  您可以將資料表當做報表組件，與報表分開發行。 深入了解 [報表組件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
   
-##  <a name="AddingTable"></a> 加入資料表以顯示詳細資料  
+##  <a name="adding-a-table-to-display-detail-data"></a><a name="AddingTable"></a> 加入資料表以顯示詳細資料  
  將資料表從功能區上的 [插入] 索引標籤加入至設計介面。 您可以使用「資料表或矩陣精靈」(包括建立資料來源連接和資料集與設定資料表) 來加入資料表，或根據您可以手動設定的資料表範本來加入資料表。  
   
 > [!NOTE]  
@@ -63,7 +63,7 @@ ms.locfileid: "65574727"
   
  如需詳細資訊，請參閱[將總計加入到群組或 Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)。  
   
-##  <a name="AddingRowGroups"></a> 將資料列群組加入到資料表  
+##  <a name="adding-row-groups-to-a-table"></a><a name="AddingRowGroups"></a> 將資料列群組加入到資料表  
  如同您可以將欄位從 [報表資料] 窗格拖曳到資料格來顯示詳細資料，您也可以將欄位拖曳到 [群組] 窗格來加入群組。 若是資料表，將欄位拖曳到 [資料列群組] 窗格。 加入群組之後，資料表會在要顯示群組值之資料列群組區域的新資料行中，自動加入資料格。 如需詳細資訊，請參閱 [Tablix 資料區的區域 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)。  
   
  下圖顯示 [設計] 檢視中包含兩個巢狀資料列群組的資料表。 若要建立資料列群組，拖曳 Order 欄位，然後將 Date 欄位拖曳到 [資料列群組] 窗格，並插入每個群組，當做現有群組的父系。 此圖表顯示一個以日期為基礎的父群組與一個以訂單號碼為基礎的子群組，以及依預設定義的詳細資料群組。  
@@ -87,7 +87,7 @@ ms.locfileid: "65574727"
   
  如需詳細資訊，請參閱[將總計加入到群組或 Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)。  
   
-##  <a name="RemovingHidingRows"></a> 移除或隱藏詳細資料列  
+##  <a name="removing-or-hiding-detail-rows"></a><a name="RemovingHidingRows"></a> 移除或隱藏詳細資料列  
  預覽報表中的資料表之後，您可能會決定移除現有的詳細資料列。 或者，您可能決定依預設隱藏這些資料列，然後讓使用者在檢視更多或更少詳細資料之間切換，就像在向下鑽研報表中一樣。  
   
  若要從資料表移除詳細資料列，請使用 [群組] 窗格。 選取詳細資料群組，然後使用快速鍵功能表刪除顯示詳細資料的群組和資料列。 下圖顯示依日期和訂單號碼分組之資料表的設計檢視，但是其中沒有詳細資料列。 在此資料表中沒有加入任何總計資料列。  

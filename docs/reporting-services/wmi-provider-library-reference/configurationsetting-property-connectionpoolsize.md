@@ -16,10 +16,10 @@ ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 052aef53b4a02e26757493ab6cdd89578c39f4f2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570940"
 ---
 # <a name="configurationsetting-property---connectionpoolsize"></a>ConfigurationSetting 屬性 - ConnectionPoolSize

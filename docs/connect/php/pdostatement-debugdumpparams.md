@@ -11,10 +11,10 @@ ms.assetid: cf156d65-d933-4235-b89a-18e172d61c15
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5584d645bc506d1399a47852bed481791988623
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993094"
 ---
 # <a name="pdostatementdebugdumpparams"></a>PDOStatement::debugDumpParams

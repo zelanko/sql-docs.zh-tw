@@ -10,10 +10,10 @@ ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 776326093518aa33f8f031e4c4d6675791acf82d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242553"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder--ssrs"></a>將展開或摺疊動作新增至項目 (報表產生器及 SSRS)
@@ -49,7 +49,7 @@ ms.locfileid: "75242553"
   
     -   選取 **[True]** 來隱藏報表項目。  
   
-    -   選取 [\<運算式>]  開啟 [運算式]  對話方塊，即可建立在執行階段評估的運算式來決定可見度。  
+    -   選取 [**運算式>]\<** 開啟 [運算式]  對話方塊，即可建立在執行階段評估的運算式來決定可見度。  
   
 5.  在 **ToggleItem**中，從下拉式方塊選取要加入切換影像之目標文字方塊的名稱。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75242553"
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>若要將展開和摺疊動作加入至報表項目中  
   
-1.  在報表設計檢視中，以滑鼠右鍵按一下要顯示或隱藏的報表項目，然後按一下 [\<報表項目>  屬性]  。 該報表項目的 [\<報表項目>  屬性]  對話方塊隨即開啟。  
+1.  在報表設計檢視中，以滑鼠右鍵按一下要顯示或隱藏的報表項目，然後按一下 [*報表項目>\<* 屬性]  。 該報表項目的 [*報表項目>\<* 屬性]  對話方塊隨即開啟。  
   
 2.  按一下 **[可見性]** 。  
   

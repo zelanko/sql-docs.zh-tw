@@ -9,10 +9,10 @@ ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e65c3ca2bd6866ede2eb9924f8465e5b66d37c0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079023"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 連接類型 (SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "77079023"
   
  您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱 [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
-##  <a name="Connection"></a> 連接字串  
+##  <a name="connection-string"></a><a name="Connection"></a> 連接字串  
  下列連接字串範例會指定伺服器上的 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 資料來源使用通訊埠 13080，並指定網際網路上的 XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (XMLA) 使用 SOAP，以連接到範例目錄：  
   
 ```  
@@ -30,7 +30,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  如需連接字串範例的詳細資訊，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
   
-##  <a name="Credentials"></a> 認證  
+##  <a name="credentials"></a><a name="Credentials"></a> 認證  
  需要有認證才能夠執行報表、於本機預覽報表並且從報表伺服器預覽報表。  
   
  發行報表之後，您可能需要變更資料來源的認證，如此當報表在報表伺服器上執行時，擷取資料的權限就會是有效的。  
@@ -38,7 +38,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
   
-##  <a name="Query"></a> 查詢  
+##  <a name="queries"></a><a name="Query"></a> 查詢  
  您可以利用下列方式指定查詢：  
   
 -   以互動方式建立查詢。 請於設計模式或查詢模式中使用圖形化查詢設計工具，在外部資料來源中瀏覽中繼資料，並以多維度運算式 (MDX) 語法產生查詢。  
@@ -56,14 +56,14 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 資料處理延伸模組支援擴充資料集欄位屬性。 這些值可從外部資料來源取得，但是不會出現在 [報表資料] 窗格中。 如需詳細資訊，請參閱本主題後面的＜ [擴充欄位屬性](#Extended) ＞。  
   
   
-##  <a name="Parameters"></a> 查詢參數  
+##  <a name="query-parameters"></a><a name="Parameters"></a> 查詢參數  
 
  若要包含查詢參數，請在查詢設計工具的篩選區域中建立篩選，然後再將該篩選標示成參數。 系統會針對每一個篩選自動建立一個資料集，以提供可用的值。 根據預設，這些資料集不會出現在 [報表資料] 窗格內。 如需詳細資訊，請參閱[針對多維度資料的參數值顯示隱藏的資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)。
 
  根據預設，每個報表參數都具有 **[文字]** 資料類型。 建立報表參數後，您可能必須變更預設值。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
   
   
-##  <a name="Extended"></a> 擴充欄位屬性  
+##  <a name="extended-field-properties"></a><a name="Extended"></a> 擴充欄位屬性  
  [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 資料處理延伸模組支援擴充欄位屬性。 擴充欄位屬性是資料集欄位 **Value** 和 **IsMissing** 以外的屬性，由資料處理延伸模組所定義。 擴充屬性包括預先定義的屬性和自訂屬性。 預先定義的屬性是多個資料來源常用的屬性。 自訂屬性對於每個資料來源都是唯一的屬性。  
   
  在 [報表資料] 窗格中，並不會顯示擴充欄位屬性，因為您無法將項目拖曳至報表配置上。 相反地，將該屬性的父欄位拖曳至報表，然後將預設屬性從 **Value** 變更為想要使用的屬性。  
@@ -75,7 +75,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>預先定義的欄位屬性  
- 預先定義的欄位屬性一般是由多個資料提供者支援，而且會出現在報表資料集的 MDX 基礎查詢中。 例如，MDX 維度屬性 MEMBER_UNIQUE_NAME 會對應到預先定義的報表資料集欄位屬性 **UniqueName**。 若要在文字方塊中包含唯一的名稱值，請使用運算式 `=Fields!`\<欄位名稱>  `.UniqueName`。  
+ 預先定義的欄位屬性一般是由多個資料提供者支援，而且會出現在報表資料集的 MDX 基礎查詢中。 例如，MDX 維度屬性 MEMBER_UNIQUE_NAME 會對應到預先定義的報表資料集欄位屬性 **UniqueName**。 若要在文字方塊中包含唯一的名稱值，請使用運算式 `=Fields!`*欄位名稱>\<* `.UniqueName`。  
   
  下表提供可用在 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 資料來源之預先定義的欄位屬性清單。  
   
@@ -92,7 +92,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="custom-properties"></a>自訂屬性  
- 自訂欄位屬性是由資料提供者支援，而且會出現在報表資料集的 MDX 基礎查詢中，但不會出現在報表的 [資料集] 窗格中，當做該資料集下的欄位。 例如， **[Long Names]** 是一個針對維度層級而定義的成員屬性。 若要在文字方塊中包含值，您可以使用運算式 `=Fields!`\<欄位名稱>  `("Long Names")`。 運算式中的欄位名稱會區分大小寫。  
+ 自訂欄位屬性是由資料提供者支援，而且會出現在報表資料集的 MDX 基礎查詢中，但不會出現在報表的 [資料集] 窗格中，當做該資料集下的欄位。 例如， **[Long Names]** 是一個針對維度層級而定義的成員屬性。 若要在文字方塊中包含值，您可以使用運算式 `=Fields!`*欄位名稱>\<* `("Long Names")`。 運算式中的欄位名稱會區分大小寫。  
   
  請使用下列語法來參考運算式中自訂的擴充屬性：  
   
@@ -105,13 +105,13 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
 |**FORMAT_STRING**|**String**|在量值上的定義，這是可當做 String 類型使用的 **FormattedValue** 。|  
   
   
-##  <a name="Remarks"></a> 備註  
+##  <a name="remarks"></a><a name="Remarks"></a> 備註  
  這個資料提供者並沒有支援所有的報表傳遞模式。 這個資料處理延伸模組不支援透過資料驅動訂閱所傳遞的報表。 如需詳細資訊，請參閱[使用外部資料來源以取得訂閱者資料 &#40;資料驅動訂閱&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。 
   
  如需詳細資訊，請參閱＜ [使用 SQL Server 2005 Reporting Services 搭配 Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970)＞。  
   
   
-##  <a name="HowTo"></a> 如何主題  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 如何主題  
  本節包含使用資料連接、資料來源與資料集的逐步指示：  
   
  [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -121,13 +121,13 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [將篩選加入資料集中 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a> 相關章節  
+##  <a name="related-sections"></a><a name="Related"></a> 相關章節  
  本文件集的這些章節會提供報表資料的深入概念性資訊，以及如何定義、自訂和使用與報表資料相關組件的程序資訊。  
   
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供存取報表資料的概觀。  
   
- [建立資料連接字串 - 報表產生器及 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  提供資料連接與資料來源的相關資訊。  
   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

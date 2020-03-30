@@ -16,10 +16,10 @@ ms.assetid: a757ea51-ff2e-4848-adaf-d9373e418fa3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b7dd44915a066753e367beb82d88258c3a0d3abf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67968569"
 ---
 # <a name="supportsunion-method-sqlserverdatabasemetadata"></a>supportsUnion 方法 (SQLServerDatabaseMetaData)

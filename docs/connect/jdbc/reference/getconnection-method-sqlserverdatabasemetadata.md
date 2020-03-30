@@ -16,10 +16,10 @@ ms.assetid: 16e46603-a678-4b0f-998e-479abbea151c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3397faaf4c1e6380ef7456d0d5a67e8bb8ca4f2f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67952730"
 ---
 # <a name="getconnection-method-sqlserverdatabasemetadata"></a>getConnection 方法 (SQLServerDatabaseMetaData)

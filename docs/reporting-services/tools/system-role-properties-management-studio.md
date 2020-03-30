@@ -11,16 +11,16 @@ ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f3084f12a417986571c3feb2195e513f071f9dbb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65576025"
 ---
 # <a name="system-role-properties-management-studio"></a>系統角色屬性 (Management Studio)
   您可以使用 [系統角色] 頁面來檢視目前為報表伺服器定義的系統角色定義。 系統角色定義包含相對於整個網站 (而非個別項目) 所執行之工作的具名集合。 角色定義會指派給使用者或群組，以便建立產生的角色指派。 角色定義中的工作會指定使用者或群組可執行的工作。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 有兩個預先定義的系統角色定義：**系統管理員**和**系統使用者**。 您可以藉由變更工作清單來修改這些角色定義，也可以建立支援不同工作組合的新系統角色。 編輯角色定義將影響包含該角色定義的所有角色指派。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 有兩個預先定義的系統角色定義： **系統管理員** 和 **系統使用者**。 您可以藉由變更工作清單來修改這些角色定義，也可以建立支援不同工作組合的新系統角色。 編輯角色定義將影響包含該角色定義的所有角色指派。  
   
 > [!NOTE]  
 >  系統角色定義只會用於以原生模式執行的報表伺服器。 如果報表伺服器是針對 SharePoint 整合所設定，這個頁面就無法使用。  

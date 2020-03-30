@@ -16,10 +16,10 @@ ms.assetid: 787412c2-4342-49c8-9ca2-7a9ddcd3277c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf8cfa3bb6aed74c7689639698715dc24803d46d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976471"
 ---
 # <a name="position-method-byte-long"></a>position 方法 (byte, long)

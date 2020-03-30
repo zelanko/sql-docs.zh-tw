@@ -11,10 +11,10 @@ ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b4886b1bd0f4ff62df06334af469a76b64600839
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027395"
 ---
 # <a name="understanding-isolation-levels"></a>了解隔離等級
@@ -55,7 +55,7 @@ ms.locfileid: "69027395"
   
 交易必須至少在可重複讀取的隔離等級執行，以防在兩個交易個別擷取相同的資料列，然後在稍後根據原始擷取的值更新資料列時可能發生的更新遺失。 如果兩個交易都使用單一 UPDATE 陳述式更新資料列，而且沒有以先前擷取的值做為更新的基礎，就不會在讀取認可的預設隔離等級發生更新的遺失。  
 
-若要設定交易的隔離等級，您可以使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) 方法。 這個方法會根據下列其中一個連線常數，接受 **int** 值作為其引數：  
+若要設定交易的隔離等級，您可以使用 [SQLServerConnection](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) 類別的 [setTransactionIsolation](../../connect/jdbc/reference/sqlserverconnection-class.md) 方法。 這個方法會根據下列其中一個連線常數，接受 **int** 值作為其引數：  
 
 ```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  

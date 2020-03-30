@@ -13,10 +13,10 @@ ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1fecf1add70a7b3bd96484cbd3634db2cfda01cb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992895"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的安全性考量
@@ -31,7 +31,7 @@ ms.locfileid: "67992895"
   
 -   **使用者受到集中的帳戶管理。** 會強制執行安全性原則，例如；密碼到期日、最小密碼長度，以及帳戶在多次無效登入要求後鎖定。  
   
-如需如何使用 Windows 驗證連線到伺服器的相關資訊，請參閱[如何：使用 Windows 驗證進行連線](../../connect/php/how-to-connect-using-windows-authentication.md)。  
+如需如何使用 Windows 驗證連接到伺服器的相關資訊，請參閱 [如何：使用 Windows 驗證進行連接](../../connect/php/how-to-connect-using-windows-authentication.md)。  
   
 當您使用 Windows 驗證進行連接時，建議您設定您的環境，讓 SQL Server 可以使用 Kerberos 驗證通訊協定。 如需詳細資訊，請參閱[對 SQL Server 2005 的執行個體建立遠端連線時如何確實使用 Kerberos 驗證](https://support.microsoft.com/en-ca/help/909801/how-to-make-sure-that-you-are-using-kerberos-authentication-when-you-c)或 [Kerberos 驗證和 SQL Server](https://msdn.microsoft.com/library/cc280744.aspx)。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67992895"
 在每次要對 SQL Server 傳送或擷取敏感性資料時，均應使用加密連接。 如需如何啟用加密連線的資訊，請參閱[如何啟用 Database Engine 的加密連線 (SQL Server 設定管理員)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。 若要使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]建立安全連接，請在連接到伺服器時使用 Encrypt 連接屬性。 如需連接屬性的詳細資訊，請參閱 [Connection Options](../../connect/php/connection-options.md)。  
   
 ## <a name="use-parameterized-queries"></a>使用參數化查詢  
-使用參數化查詢，可降低 SQL 資料隱碼攻擊的風險。 如需執行參數化查詢的範例，請參閱[如何：執行參數化查詢](../../connect/php/how-to-perform-parameterized-queries.md)。  
+使用參數化查詢，可降低 SQL 資料隱碼攻擊的風險。 如需執行參數化查詢的範例，請參閱 [How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md)。  
   
 如需 SQL 插入式攻擊和相關安全性考量的詳細資訊，請參閱 [SQL 插入式攻擊](https://msdn.microsoft.com/library/ms161953.aspx)。  
   

@@ -21,10 +21,10 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 694a2c4c14564a1d3d57322e1300beddd8bfab98
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66500572"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>編寫部署和管理工作的指令碼

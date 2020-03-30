@@ -17,10 +17,10 @@ helpviewer_keywords:
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
 ms.openlocfilehash: 613e3eddce55fbc52cd011f5070def12d31d83b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76037179"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>什麼是 SQL Server Management Studio (SSMS)？

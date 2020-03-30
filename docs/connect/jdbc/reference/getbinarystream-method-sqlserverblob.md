@@ -11,10 +11,10 @@ ms.assetid: 4fb5a2d3-5db6-4e62-8000-d0f486c7cf46
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 75167fbaf5bf3f24b133c1a7d1a3eb7ca4896c6b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953916"
 ---
 # <a name="getbinarystream-method-sqlserverblob"></a>getBinaryStream 方法 (SQLServerBlob)

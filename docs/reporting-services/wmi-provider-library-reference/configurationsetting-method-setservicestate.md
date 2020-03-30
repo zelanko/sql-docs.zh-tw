@@ -16,10 +16,10 @@ ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 83aa9fb906fc71b1dfb7fd3d036c119d9b4e41e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580982"
 ---
 # <a name="configurationsetting-method---setservicestate"></a>ConfigurationSetting 方法 - SetServiceState

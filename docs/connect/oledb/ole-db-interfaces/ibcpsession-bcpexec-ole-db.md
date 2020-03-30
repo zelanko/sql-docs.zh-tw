@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6ace2ccd8fbba9c8c3566ad706754ed314152d4a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015490"
 ---
 # <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
@@ -38,7 +38,7 @@ HRESULT BCPExec(
 ```  
   
 ## <a name="remarks"></a>備註  
- 根據與 [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法搭配使用之 *eDirection* 參數的值，**BCPExec** 方法會將資料從使用者檔案複製到資料庫資料表，反之亦然。  
+ 根據與 **IBCPSession::BCPInit** 方法搭配使用之 *eDirection* 參數的值，[BCPExec](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法會將資料從使用者檔案複製到資料庫資料表，反之亦然。  
   
  呼叫 **BCPExec** 之前，請使用有效的使用者檔案名稱來呼叫 **BCPInit** 方法。 無法執行這項操作時，會發生錯誤。 唯一的例外狀況是針對大量複製輸出作業使用查詢。 在該情況下，請針對 **BCPInit** 方法中的資料表名稱指定 NULL，然後使用 BCP_OPTION_HINTS 選項來指定查詢。  
   

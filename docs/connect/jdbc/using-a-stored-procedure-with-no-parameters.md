@@ -11,10 +11,10 @@ ms.assetid: e9470a6d-a758-4c56-96ec-7b37139e36a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 01f59f44d42af1d0880df48b043080525d9821ee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027025"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>使用不含參數的預存程序

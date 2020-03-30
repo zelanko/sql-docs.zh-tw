@@ -16,10 +16,10 @@ ms.assetid: ccc32b87-8451-46c8-a173-068d33374e57
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ed7c88520657d822da288a7b66c1f99f2a5bfa50
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982615"
 ---
 # <a name="getlabel-method-sqlserversavepoint"></a>getLabel 方法 (SQLServerSavepoint)

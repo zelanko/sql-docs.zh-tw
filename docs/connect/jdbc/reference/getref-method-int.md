@@ -16,10 +16,10 @@ ms.assetid: 905dd02a-0c7f-475b-8be4-341b4359c766
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f7796b766ac8593f557e64d2ebb6e324abf0ec82
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980597"
 ---
 # <a name="getref-method-int"></a>getRef 方法 (int)

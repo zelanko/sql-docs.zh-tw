@@ -16,10 +16,10 @@ ms.assetid: 1d80d9e1-4f58-4cc2-9ed6-786fdf3e2660
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6146fb97d700cd7908bcd56648cf00593a824f69
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998382"
 ---
 # <a name="updateref-method-sqlserverresultset"></a>updateRef 方法 (SQLServerResultSet)

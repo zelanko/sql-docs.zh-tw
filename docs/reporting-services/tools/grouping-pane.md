@@ -14,10 +14,10 @@ ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0359a53fafa4c738b80d4ad44b3c9babdd534cf7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68892557"
 ---
 # <a name="grouping-pane"></a>群組窗格
@@ -40,7 +40,7 @@ ms.locfileid: "68892557"
   
  [群組] 窗格會顯示對應的資料列和資料行群組。 在下圖中，以子類別目錄為基礎的群組已在 [資料列群組] 窗格中選取，而 [Subcat] 群組資料格則已在 Tablix 資料區域中選取：  
   
- ![巢狀資料列和資料行群組的分組窗格](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "巢狀資料列和資料行群組的分組窗格")  
+ ![巢狀資料列和資料行群組的分組窗格](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "巢狀資料列和資料行群組的 [群組] 窗格")  
   
  在 [資料列群組] 窗格中，以子類別目錄為基礎之群組是以類別目錄為基礎之群組的子系。 在 [資料行群組] 窗格中，國家/地區群組是地理位置群組的子系。 年份群組和國家/地區群組則是相鄰的群組。  
   

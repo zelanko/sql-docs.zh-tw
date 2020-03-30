@@ -16,10 +16,10 @@ ms.assetid: 0c8f7741-daba-4c04-adc0-8d76345a899a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 486958cb6df51accc3446d1545b734efe9a6fc66
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953626"
 ---
 # <a name="getbinarystream-method-"></a>getBinaryStream 方法 ()

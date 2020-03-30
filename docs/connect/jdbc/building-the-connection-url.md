@@ -11,10 +11,10 @@ ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2461413e6f41c82404ac11cc5769b74993f13ed8
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77004533"
 ---
 # <a name="building-the-connection-url"></a>建立連接 URL
@@ -50,7 +50,7 @@ ms.locfileid: "77004533"
 > [!NOTE]  
 >  雖然先前的範例是在連接字串中使用使用者名稱及密碼，但是您應該使用整合式安全性，因為它更安全。 如需詳細資訊，請參閱本主題稍後的[使用整合式驗證連線](#Connectingintegrated)。  
   
- 下列連接字串示範如何從 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援的任何作業系統上執行的應用程式，使用整合式驗證和 Kerberos 連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫：  
+ 下列連接字串示範如何從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援的任何作業系統上執行的應用程式，使用整合式驗證和 Kerberos 連線到 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 資料庫：  
   
 ```java
 jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos  
@@ -91,7 +91,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  大括弧內的空格是常值，不會被修剪。  
   
-##  <a name="Connectingintegrated"></a> 在 Windows 上使用整合式驗證連線  
+##  <a name="connecting-with-integrated-authentication-on-windows"></a><a name="Connectingintegrated"></a> 在 Windows 上使用整合式驗證連線  
  JDBC 驅動程式支援在 Windows 作業系統上使用類型 2 整合式驗證，方法是透過 integratedSecurity 連接字串屬性。 若要使用整合式驗證，請將 mssql-jdbc_auth-\<版本>-\<架構>.dll 檔案複製到安裝 JDBC 驅動程式的電腦上 Windows 系統路徑中目錄。  
   
  mssql-jdbc_auth-\<版本>-\<架構>.dll 檔案會安裝在下列位置：  

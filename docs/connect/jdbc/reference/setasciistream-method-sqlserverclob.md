@@ -16,10 +16,10 @@ ms.assetid: 6e1779df-3b2a-41d1-8dca-99692cc9da14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fff312217f9191e6752f8eb753096ff7499a0496
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67975431"
 ---
 # <a name="setasciistream-method-sqlserverclob"></a>setAsciiStream 方法 (SQLServerClob)

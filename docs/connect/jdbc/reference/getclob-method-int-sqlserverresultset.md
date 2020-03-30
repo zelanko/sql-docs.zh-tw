@@ -16,10 +16,10 @@ ms.assetid: 91020fad-a9e2-4ea4-9c72-c63cf6b1051c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dedfec8f5d6f04f4bb9b564dd3dbe0dab3d26b1a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953090"
 ---
 # <a name="getclob-method-int-sqlserverresultset"></a>getClob 方法 (int) (SQLServerResultSet)

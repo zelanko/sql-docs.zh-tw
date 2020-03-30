@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4b53e333802af9bd70e51ad320300c6f868dea43
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843766"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>還原已啟用 Stretch 的資料庫 (Stretch Database)
@@ -58,13 +58,13 @@ Azure 的 SQL Server Stretch Database 服務，會在卸除資料庫前擷取資
 5. 指定新的**資料庫名稱**，然後按一下 [建立]  。
 6. 資料庫還原程序就會開始，您可以使用 **NOTIFICATIONS**監視。
 
-## <a name="reconnect"></a>還原 SQL Server 資料庫與遠端 Azure 資料庫之間的連線
+## <a name="restore-the-connection-between-the-sql-server-database-and-the-remote-azure-database"></a><a name="reconnect"></a>還原 SQL Server 資料庫與遠端 Azure 資料庫之間的連線
 
 1.  如果您打算使用不同的名稱或在不同的區域連接到還原的 Azure 資料庫，請執行預存程序 [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md) 中斷與前一個 Azure 資料庫的連線。  
   
 2.  執行預存程序 [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 將本機已啟用 Stretch 的資料庫重新連接到 Azure 資料庫。  
   
-    -   提供以 sysname 或 varchar(128) 值為認證範圍的現有資料庫。 (請勿使用 varchar(max)。)您可以在 **sys.database_scoped_credentials** 檢視中查詢認證名稱。  
+    -   提供以 sysname 或 varchar(128) 值為認證範圍的現有資料庫。 (請勿使用 varchar(max)。)您可以在 **sys.database_scoped_credentials**檢視中查詢認證名稱。  
   
     -   指定是否要複製一份遠端資料，並連接到複本 (建議選項)。  
   

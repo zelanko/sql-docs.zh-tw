@@ -16,10 +16,10 @@ ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a1888599934b6641e4e6501e36c7c4eaeb0eee92
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571305"
 ---
 # <a name="configurationsetting-method---restoreencryptionkey"></a>ConfigurationSetting 方法 - RestoreEncryptionKey

@@ -20,10 +20,10 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5ebbda456c402372e7505968414bc044eec87ec4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082153"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 公用程式 (SSRS)
@@ -145,7 +145,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  報表伺服器向外延展部署是指多個報表伺服器執行個體共用相同報表伺服器資料庫的部署模型。 對稱金鑰儲存在報表伺服器資料庫中的任何報表伺服器執行個體，都可以使用報表伺服器資料庫。 例如，如果報表伺服器資料庫包含三個報表伺服器執行個體的金鑰資訊，這三個執行個體都會被視為相同向外延展部署的成員。  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>在相同電腦上聯結報表伺服器執行個體  
- 您可以從安裝在相同電腦上的多個報表伺服器執行個體中建立向外延展部署。 如果您要聯結的報表伺服器執行個體是安裝在本機，請不要設定 **-u** 和 **-v** 引數。 只有當您從遠端電腦聯結執行個體時，才要使用 **-u** 和 **-v** 引數。 如果您指定這些引數，將會出現下列錯誤：「使用者認證無法用於本機連線。」  
+ 您可以從安裝在相同電腦上的多個報表伺服器執行個體中建立向外延展部署。 如果您要聯結的報表伺服器執行個體是安裝在本機，請不要設定 **-u** 和 **-v** 引數。 只有當您從遠端電腦聯結執行個體時，才要使用 **-u** 和 **-v** 引數。 如果您指定這些引數，會出現下列錯誤：「使用者認證無法用於本機連接。」  
   
  下列範例說明使用多個本機執行個體建立向外延展部署的語法。 在這個範例中，\<**已初始化的執行個體**> 是已初始化為使用報表伺服器資料庫的執行個體名稱，\<**新的執行個體**> 是您要新增部署的執行個體名稱：  
   

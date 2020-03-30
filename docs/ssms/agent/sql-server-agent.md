@@ -16,10 +16,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e62d4502feb6985717e9aad1bf2f6da63100e60c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257927"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
@@ -31,7 +31,7 @@ ms.locfileid: "75257927"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 是 Microsoft Windows 服務，它會執行排程的管理工作 (在 *中稱為* 「作業」 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)](Job))。  
 
-## <a name="Benefits"></a>SQL Server Agent 的優點 
+## <a name="benefits-of-sql-server-agent"></a><a name="Benefits"></a>SQL Server Agent 的優點 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來儲存作業資訊。 作業包含了一個或多個作業步驟。 每一個步驟包含它自己的工作 (例如備份資料庫)。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75257927"
 > [!NOTE]  
 > 根據預設，除非使用者明確地選擇要自動啟動服務，否則在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Agent 服務是停用的。  
   
-## <a name="Components"></a>SQL Server Agent 元件  
+## <a name="sql-server-agent-components"></a><a name="Components"></a>SQL Server Agent 元件  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用下列元件來定義要執行的工作，何時執行工作以及報告工作成功或失敗的方式。  
   
 ### <a name="jobs"></a>工作  
@@ -114,7 +114,7 @@ ms.locfileid: "75257927"
   
 您可以將操作員定義成一群人員的別名。 用這種方法，可以同時告知具有該別名的所有成員。 如需詳細資訊，請參閱 [運算子](../../ssms/agent/operators.md)。  
   
-## <a name="Security"></a>SQL Server Agent 管理的安全性  
+## <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>SQL Server Agent 管理的安全性  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會在 **msdb**資料庫中使用 **SQLAgentUserRole**、 **SQLAgentReaderRole** 與 **SQLAgentOperatorRole** 固定資料庫角色控制非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin **(系統管理員) 固定伺服器角色成員對** Agent 的存取。 除了這些固定資料庫角色之外，子系統與 Proxy 可協助資料庫管理員確保每一個作業步驟都以執行工作所需的最小權限來執行。  
   
 ### <a name="roles"></a>角色  

@@ -16,10 +16,10 @@ ms.assetid: 85d4eb84-6d0a-4671-b6e5-a7085e086fcf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4afcc9c8f4554375f2c87ccc0c70302c84aaa2f0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67968681"
 ---
 # <a name="supportstablecorrelationnames-method-sqlserverdatabasemetadata"></a>supportsTableCorrelationNames 方法 (SQLServerDatabaseMetaData)

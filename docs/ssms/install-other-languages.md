@@ -10,10 +10,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/25/2019
 ms.openlocfilehash: cc4d98322f0422053402bdf097674c90807e11a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246878"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>安裝非英文語言版本的 SQL Server Management Studio (SSMS)
@@ -45,7 +45,7 @@ SSMS 提供數種語言版本，但是當系統地區設定與 SSMS 語言不相
    - 下載所需的 Visual Studio 2015 Shell (獨立模式) 語言套件並加以安裝。
 
    > [!IMPORTANT]
-   > 請使用先前的步驟來安裝 Visual Studio 2015 Shell (獨立模式) 語言套件，不要使用 [工具]   | [選項]   | [國際設定]  上的 [取得其他語言]  連結。
+   > 請使用先前的步驟來安裝 Visual Studio 2015 Shell (獨立模式) 語言套件，不要使用 [工具]  **[選項]**  |  **[國際設定]**  |  上的 [取得其他語言]  連結。
 
 5. 執行 SSMS，並選取您想要使用的語言：
    - [工具]   | [選項]   | [國際設定] 

@@ -11,10 +11,10 @@ ms.assetid: 3d3883a2-c39c-439f-bbc0-01e73968672b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6775f44c2d220e6b0f13312b8fcf47d133def00d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970963"
 ---
 # <a name="sqlservernclob-class"></a>SQLServerNClob 類別

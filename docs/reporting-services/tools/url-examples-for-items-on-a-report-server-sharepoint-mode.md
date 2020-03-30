@@ -9,10 +9,10 @@ ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574012"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>報表伺服器上的項目 URL 範例 - SharePoint 模式
@@ -98,9 +98,9 @@ ms.locfileid: "65574012"
 |SharePoint 伺服器網站或子網站。|`https://TestServer/toplevelsite/subsite`|  
 |在 **或** 部署上， [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] Shared Documents [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 中的 Company Sales 範例報表。|`https://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
 |在 **或** 執行個體上， [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] Documents/Doc [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 資料夾中的 Company Sales 範例報表。|`https://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
-|在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 執行個體上，[報告中心]  中的 Company Sales 範例報表。|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
+|在 **或** 執行個體上，[報告中心][!INCLUDE[offSPServ](../../includes/offspserv-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 中的 Company Sales 範例報表。|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
-##  <a name="publishingToDocLib"></a> 從撰寫工具發行到 SharePoint 文件庫  
+##  <a name="publishing-from-an-authoring-tool-to-a-sharepoint-library"></a><a name="publishingToDocLib"></a> 從撰寫工具發行到 SharePoint 文件庫  
  當您使用報表撰寫工具將報表和相關的檔案發行至文件庫時，加入這些檔案之前會先進行驗證。 如果您在 SharePoint 文件庫上使用 [上傳]  動作來上傳報表與相關檔案，則不會進行任何驗證檢查。 因此，在您藉由管理、編輯或執行檔案來存取報表前，將不會知道檔案是否有效。  
   
 > [!NOTE]  

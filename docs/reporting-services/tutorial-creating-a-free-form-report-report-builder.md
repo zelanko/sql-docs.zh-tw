@@ -9,10 +9,10 @@ ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66499557"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教學課程：建立自由格式報表 (報表產生器)
@@ -22,19 +22,19 @@ ms.locfileid: "66499557"
 
 此報表會依領域將資訊分組，並顯示各領域的銷售經理姓名以及詳細和摘要銷售資訊。 您一開始會使用清單資料區作為自由格式報表的基礎，然後新增含有影像的裝飾面板、插入資料的靜態文字、顯示詳細資訊的資料表，以及 (選擇性) 顯示摘要資訊的圓形圖和直條圖。  
   
-完成此教學課程的估計時間：20 分鐘。  
+完成這個教學課程的估計時間：30 分鐘。  
   
 ## <a name="requirements"></a>需求  
 如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="BlankReport"></a>1.建立空白報表、資料來源與資料集  
+## <a name="1-create-a-blank-report-data-source-and-dataset"></a><a name="BlankReport"></a>1.建立空白報表、資料來源與資料集  
   
 > [!NOTE]  
 > 在本教學課程中，查詢會包含資料值，因此不需要外部資料來源。 這樣會使查詢相當冗長。 在商業環境中，查詢不會包含資料。 這僅供教學之用。  
   
 ### <a name="to-create-a-blank-report"></a>建立空白報表  
   
-1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  從您的電腦、[ Web 入口網站或 SharePoint 整合模式](../reporting-services/report-builder/start-report-builder.md)啟動報表產生器[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]。  
   
     [新報表或資料集]  對話方塊隨即開啟。  
   
@@ -48,11 +48,11 @@ ms.locfileid: "66499557"
   
 1.  在 [報表資料] 窗格中，按一下 [新增]   > [資料來源]  。  
   
-2.  在 [名稱]  方塊中，輸入：**ListDataSource**  
+2.  在 **[名稱]** 方塊中，輸入 **ListDataSource**。  
   
 3.  按一下 **[使用內嵌於報表中的連接]** 。  
   
-4.  確認連接類型為 Microsoft SQL Server，然後在 [連接字串]  方塊中輸入：**Data Source = \<伺服器名稱>**  
+4.  確認連線類型為 Microsoft SQL Server，接著在 [連接字串]  方塊中鍵入 **Data Source = \<伺服器名稱>**  
   
     **\<伺服器名稱>** (例如 Report001) 指定已安裝 SQL Server Database Engine 執行個體的電腦名稱。 由於此報表的資料不是擷取自 SQL Server 資料庫，您不必加上資料庫的名稱。 指定之伺服器上的預設資料庫只用來剖析查詢。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66499557"
   
 1.  在 [報表資料] 窗格中，按一下 [新增]   > [資料集]  。  
   
-2.  在 [名稱]  方塊中，輸入：**ListDataset**。  
+2.  在 [名稱]  方塊中，鍵入 **ListDataset**。  
   
 3.  按一下 [使用內嵌在我的報表中的資料集]  ，並確認資料來源是 **ListDataSource**。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66499557"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="List"></a>2.加入及設定清單  
+## <a name="2-add-and-configure-a-list"></a><a name="List"></a>2.加入及設定清單  
 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，清單範本相當適合用來建立自由格式報表。 它是根據 *tablix* 資料區域，就和資料表和矩陣一樣。 如需詳細資訊，請參閱 [使用清單建立發票和表單](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
   
 您將使用清單，在格式類似新聞稿的報表中顯示各銷售領域的銷售資訊。 此資訊是依領域分組。 您要加入新的資料列群組來依領域分組資料，然後刪除內建的 [詳細資料] 資料列群組。  
@@ -167,7 +167,7 @@ ms.locfileid: "66499557"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Graphics"></a>3.新增圖形元素  
+## <a name="3-add-graphic-elements"></a><a name="Graphics"></a>3.新增圖形元素  
 清單資料區的一項好處是，您可以在任何位置加入矩形和文字方塊等報表項目，而不必侷限於表格式配置。 您將要透過加入圖形 (有填色的矩形) 加強報表的外觀。  
   
 ### <a name="to-add-graphic-elements-to-the-report"></a>加入圖形元素至報表中  
@@ -190,7 +190,7 @@ ms.locfileid: "66499557"
   
 ![report-builder-free-form-gray-rectangle](../reporting-services/media/report-builder-free-form-gray-rectangle.png)
  
-## <a name="Text"></a>4.加入自由格式文字  
+## <a name="4-add-free-form-text"></a><a name="Text"></a>4.加入自由格式文字  
 您可以新增文字方塊以顯示在每個報表頁面上重複的靜態文字，還有資料欄位。  
   
 ### <a name="to-add-text-to-the-report"></a>在報表中加入文字  
@@ -199,7 +199,7 @@ ms.locfileid: "66499557"
   
 2.  在 [插入]  索引標籤 > [文字方塊]  上。 按一下清單的左上角，在您先前新增的矩形內，並拖曳形成大約寬 3.45 英吋且高約 5 英吋的文字方塊。  
   
-3.  將游標置於文字方塊內，然後輸入：**Newsletter for**。 在單字 "for" 後面加上一個空格來分隔的文字和您將在下一個步驟新增的欄位。   
+3.  將滑鼠游標置於文字方塊內，然後輸入： **Newsletter for** 。 在單字 "for" 後面加上一個空格來分隔的文字和您將在下一個步驟新增的欄位。   
   
     ![新增電子報標題文字](../reporting-services/media/tutorial-newsletterfor.png "新增電子報標題文字")  
   
@@ -215,7 +215,7 @@ ms.locfileid: "66499557"
     *  [20 pt]  。
     *  [蕃茄紅]  。  
   
-9. 將滑鼠游標置於您在步驟 3 鍵入的文字下方，然後鍵入：**Hello**，在單字後面加上一個空格，以分隔文字和您將在下一個步驟中新增的欄位。  
+9. 將滑鼠游標置於您在步驟 3 輸入的文字下方，然後輸入： **Hello** ，並在這個字後加上一個空格以分隔文字和您將在下一個步驟中新增的欄位。  
  
 10. 將 `[FullName]` 欄位從 [報表資料] 窗格中的 ListDataSet 拖曳到文字方塊，放在 "Hello " 之後，然後輸入一個逗號 (,)。  
    
@@ -244,7 +244,7 @@ ms.locfileid: "66499557"
       *  [10 pt]  。
       *  **黑色**。  
  
-20. 將游標置於文字方塊內，然後在無意義的文字底下輸入：**Congratulations on your total sales of**，在單字後面加上一個空格，以分隔文字和您將在下一個步驟中新增的欄位。 
+20. 將滑鼠游標置於文字方塊內，在無意義文字底下輸入︰ **Congratulations on your total sales of**，並在文字之後以一個空格分隔文字和您將在下一個步驟新增的欄位。 
   
 21. 將 [Sales] 欄位拖曳到文字方塊中，置於您在前一個步驟輸入的文字後面，然後輸入一個驚嘆號 (!)。  
 
@@ -282,7 +282,7 @@ ms.locfileid: "66499557"
   
 ![report-builder-newsletter-page-preview](../reporting-services/media/report-builder-newsletter-page-preview.png)
   
-## <a name="Table"></a>5.加入資料表以顯示銷售詳細資料  
+## <a name="5-add-a-table-to-show-sales-details"></a><a name="Table"></a>5.加入資料表以顯示銷售詳細資料  
 使用新增資料表和矩陣精靈，將資料表加入至自由格式報表。 在完成精靈之後，您將要手動加入一個總計資料列。  
   
 ### <a name="to-add-a-table"></a>加入資料表  
@@ -328,7 +328,7 @@ ms.locfileid: "66499557"
   
 ![report-builder-free-form-with-table](../reporting-services/media/report-builder-free-form-with-table.png)
    
-## <a name="Save"></a>6.儲存報表  
+## <a name="6-save-the-report"></a><a name="Save"></a>6.儲存報表  
 您可以將報表儲存至報表伺服器、SharePoint 文件庫或您的電腦上。  
   
 本教學課程會將報表儲存至報表伺服器。 如果您沒有報表伺服器的存取權，請將報表儲存在您的電腦上。  
@@ -359,7 +359,7 @@ ms.locfileid: "66499557"
   
 4.  按一下 [檔案]  。  
   
-## <a name="Line"></a>7.(選擇性) 加入線條以區隔報表的各區域  
+## <a name="7-optional-add-a-line-to-separate-areas-of-the-report"></a><a name="Line"></a>7.(選擇性) 加入線條以區隔報表的各區域  
 加入線條以區隔報表的編輯區和詳細資料區。  
   
 ### <a name="to-add-a-line"></a>加入線條  
@@ -374,7 +374,7 @@ ms.locfileid: "66499557"
      * **寬度** 選取 **3** pt。
      * **色彩** 選取 [蕃茄紅]  。  
   
-## <a name="Visualization"></a>8.(選擇性) 新增摘要資料視覺效果  
+## <a name="8-optional-add-summary-data-visualizations"></a><a name="Visualization"></a>8.(選擇性) 新增摘要資料視覺效果  
 矩形可以協助您控制報表的轉譯方式。 將圓形圖和直條圖放到矩形內，以確保報表轉譯為您希望的外觀。  
   
 ### <a name="to-add-a-rectangle"></a>若要加入矩形  
@@ -405,7 +405,7 @@ ms.locfileid: "66499557"
   
 9. 將圖表拖曳到矩形內。  
    
-10. 選取圖表標題，然後輸入︰**Product Quantities Sold**。  
+10. 選取圖表標題，然後輸入︰ **Product Quantities Sold**。  
   
 12. 在 [主資料夾]  索引標籤 > [字型]  ，讓標題成為︰
     * **字型** **Segoe UI Semibold**。
@@ -444,7 +444,7 @@ ms.locfileid: "66499557"
   
 9. 將圖表拖曳到矩形內。  
    
-10. 選取圖表標題，然後輸入︰**Product Sales**。  
+10. 選取圖表標題，然後輸入︰ **Product Sales**。  
   
 12. 在 [主資料夾]  索引標籤 > [字型]  ，讓標題成為︰
     * **字型** **Segoe UI Semibold**。

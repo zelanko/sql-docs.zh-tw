@@ -1,5 +1,5 @@
 ---
-title: SQL Server 複寫發行集屬性-|Microsoft Docs
+title: SQL 伺服器複製發佈屬性 - |微軟文檔
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 17b2e566be6bedbb032b7a4fc06c938075bd32e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 19fee33c63b1287e43077640f381d4b57f489535
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63022457"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380719"
 ---
-# <a name="sql-server-replication-publication-properties"></a>SQL Server 複寫發行集屬性 
-  本節提供 [**發行集屬性**] 對話方塊之所有頁面的相關資訊。 
+# <a name="sql-server-replication-publication-properties"></a>SQL 伺服器複製發佈屬性 
+  本節提供有關 **"發佈屬性"** 對話方塊的所有頁面的資訊。 
 
 ## <a name="general"></a>一般
   **[發行集屬性]** 對話方塊的 **[一般]** 頁面，包含發行集的基本資訊，例如名稱、描述和訂閱到期原則。  
@@ -37,17 +37,17 @@ ms.locfileid: "63022457"
  **名稱**  
  發行集的名稱 (唯讀)。  
   
- **Database**  
+ **資料庫**  
  發行集資料庫的名稱 (唯讀)。  
   
- **說明**  
+ **描述**  
  發行集的描述。  
   
- **型別**  
+ **類型**  
  發行集的類型 (唯讀)。  
   
  **訂閱過期**  
- 選取訂閱過期的選項之一： **[訂閱永遠不會過期]** 或 **[訂閱會過期]** ，並提供明確的時間週期 ( **[間隔]** )。  
+ 選取訂閱過期的選項之一： **[訂閱永遠不會過期]** 或 **[訂閱會過期]**，並提供明確的時間週期 (**[間隔]**)。  
   
  針對快照式發行集和交易式發行集， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您接受預設的 **[訂閱永遠不會過期]** 設定。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "63022457"
  如需詳細資訊，請參閱 [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)。  
   
  **相容性層級**  
- 僅限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本，而且僅限合併式發行集。 選取與此發行集同步處理之訂閱者所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最低版本。 決定相容性層級的相關規則有數個。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本;僅合併發佈。 選取與此發行集同步處理之訂閱者所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最低版本。 決定相容性層級的相關規則有數個。  
 
 ## <a name="filter-rows"></a>篩選資料列
 
@@ -83,8 +83,8 @@ ms.locfileid: "63022457"
  **已篩選的資料表**  
  當您在發行集的資料表發行項中加入篩選時，這些篩選就會擴展到窗格中。 含有資料列篩選的資料表，會顯示為窗格中的最上層節點。 若為合併式發行集，則透過聯結篩選而擴充篩選的資料表，就會顯示為子節點。  
   
- **加入**  
- 按一下 **[加入]** 即可啟動一個可讓您篩選資料表發行項的對話方塊。 在快照集或交易式發行集按一下 **[加入]** 會立即啟動對話方塊。 針對合併式發行集按一下 **[加入]** ，就會顯示三個選項： **[加入篩選]** 、 **[加入聯結以擴充選取的篩選]** 和 **[自動產生篩選]** 。  
+ **新增**  
+ 按一下 **[加入]** 即可啟動一個可讓您篩選資料表發行項的對話方塊。 在快照集或交易式發行集按一下 **[加入]** 會立即啟動對話方塊。 針對合併式發行集按一下 **[加入]** ，就會顯示三個選項： **[加入篩選]**、 **[加入聯結以擴充選取的篩選]** 和 **[自動產生篩選]**。  
   
 -   選取 **[加入篩選]** 即可啟動 **[加入篩選]** 對話方塊。 這個對話方塊可以讓您套用資料列篩選至資料表發行項。 例如，在 **[加入篩選]** 對話方塊中，您可以指定含有客戶資料的資料表在複寫到訂閱者時，只能包含法國客戶的資料。  
   
@@ -107,18 +107,18 @@ ms.locfileid: "63022457"
  **尋找資料表**  
  僅合併式發行集。 按一下 **[尋找資料表]** ，即可在複雜篩選樹中尋找資料表。 在含有複雜關聯性的資料庫中，因為資料表可以聯結到多個資料表，所以資料表可能重複出現在篩選樹的多個位置。  
   
- 實際資料表只出現在篩選樹的一個位置，而在其他位置，資料表是以捷徑方式顯示。 資料表的捷徑只是資料表的參考，它不會顯示資料表的子節點。 捷徑節點會以捷徑箭頭標示，展開該節點會顯示這段文字：按一下 [尋找資料表]，以檢視 **資料表名稱> 的資料表\<** 。  
+ 實際資料表只出現在篩選樹的一個位置，而在其他位置，資料表是以捷徑方式顯示。 資料表的捷徑只是資料表的參考，它不會顯示資料表的子節點。 捷徑節點會以捷徑箭頭標示，展開該節點會顯示這段文字：按一下 [尋找資料表]，以檢視 \<資料表名稱> 的資料表****。  
   
  在窗格中選取捷徑節點，然後按一下 **[尋找資料表]** ，窗格就會展開並反白該資料表。 如果您按一下 **[尋找資料表]** 但未選取捷徑節點，則會啟動 **[尋找資料表]** 對話方塊。  
   
- **Filter**  
+ **篩選器**  
  包含在篩選窗格中選取之篩選的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定義。  
 
 ## <a name="ftp-snapshot-and-internet"></a>FTP 快照集和網際網路
   
 此頁面可以讓您：  
   
--   設定屬性以經由檔案傳輸通訊協定 (File Transfer Protocol，FTP) 傳遞快照集。 如需詳細資訊，請參閱[透過 FTP Windows 檔案傳輸快照](transfer-snapshots-through-ftp.md)集以取得詳細資訊。  
+-   設定屬性以經由檔案傳輸通訊協定 (File Transfer Protocol，FTP) 傳遞快照集。 有關詳細資訊，請參閱通過[FTP](transfer-snapshots-through-ftp.md) Windows 文檔傳輸快照的詳細資訊。  
   
     > [!NOTE]  
     >  FTP 設定若有任何變更，就需要產生新的快照集。  
@@ -127,12 +127,12 @@ ms.locfileid: "63022457"
   
 ### <a name="options"></a>選項。  
  **透過 FTP 存取快照集檔案**  
- 選取 **[允許訂閱者使用 FTP (檔案傳輸通訊協定) 下載快照集檔案]** ，並指定 **[FTP 伺服器名稱]** 、 **[通訊埠編號]** 、 **[FTP 根資料夾的路徑]** 、 **[登入]** 和 **[密碼]** ，即可讓訂閱者使用 FTP 傳遞快照集。  
+ 選取 **[允許訂閱者使用 FTP (檔案傳輸通訊協定) 下載快照集檔案]**，並指定 **[FTP 伺服器名稱]**、 **[通訊埠編號]**、 **[FTP 根資料夾的路徑]**、 **[登入]** 和 **[密碼]**，即可讓訂閱者使用 FTP 傳遞快照集。  
   
  此選項可以讓訂閱者使用 FTP 擷取快照集檔案，但這並不是必要的。 如果您選取此選項，新增訂閱精靈就會預設讓訂閱者經由 FTP 擷取快照集檔案。 若要變更此設定，請使用 **[訂閱屬性]** 對話方塊。 如果您讓訂閱者經由 FTP 存取快照集檔案，請在 **[快照集屬性]** 對話方塊的 **[快照集]** 頁面上，指定 FTP 資料夾作為快照集檔案的位置。 這樣做會在新的快照集產生時，讓快照集代理程式自動更新 FTP 資料夾中的檔案。 如果位置沒有設定到 FTP 資料夾，當新的快照集產生時，您就必須手動更新檔案。 如需詳細資訊，請參閱[透過 FTP 傳遞快照集](publish/deliver-a-snapshot-through-ftp.md)。  
   
  **Web 同步處理**  
- 僅限合併式複寫。 選取 **[允許訂閱者連接到 Web 伺服器進行同步處理]** ，並指定 Web 伺服器位址讓合併式訂閱者使用 Web 同步處理。 Web 伺服器必須使用安全通訊端層 (SSL)，且網址必須完整，例如 https://server.domain.com/synchronize。 如需詳細資訊，請參閱 [Configure Web Synchronization](configure-web-synchronization.md)。  
+ 僅限合併式複寫。 選取 **[允許訂閱者連接到 Web 伺服器進行同步處理]**，並指定 Web 伺服器位址讓合併式訂閱者使用 Web 同步處理。 Web 伺服器必須使用安全通訊端層 (SSL)，且網址必須完整，例如 `https://server.domain.com/synchronize`。 如需詳細資訊，請參閱 [Configure Web Synchronization](configure-web-synchronization.md)。  
 
 ## <a name="publication-access-list"></a>發行集存取清單
 
@@ -141,7 +141,7 @@ ms.locfileid: "63022457"
  當訂閱者連接到發行者或散發者並要求存取發行集時，訂閱者的登入會與 PAL 的驗證資訊比較。 如此可以為發行者提供額外的安全性，因為這會防止用戶端工具利用發行者與散發者的登入直接在發行者上進行修改。 如需詳細資訊，請參閱[保護發行者](security/secure-the-publisher.md)。  
   
 ### <a name="options"></a>選項。  
- **加入**  
+ **新增**  
  加入一個新項目到清單中。 您只能加入在發行者端和散發者端都已經定義的登入、帳戶或群組。 如果您使用網域帳戶或在兩個伺服器上都已經建立本機帳戶，則它們就已同時在兩個伺服器上定義完成。  
   
  **移除**  
@@ -153,7 +153,7 @@ ms.locfileid: "63022457"
 
   此頁面可以讓您：  
   
--   設定屬性以經由檔案傳輸通訊協定 (File Transfer Protocol，FTP) 傳遞快照集。 如需詳細資訊，請參閱[透過 FTP Windows 檔案傳輸快照](transfer-snapshots-through-ftp.md)集以取得詳細資訊。  
+-   設定屬性以經由檔案傳輸通訊協定 (File Transfer Protocol，FTP) 傳遞快照集。 有關詳細資訊，請參閱通過[FTP](transfer-snapshots-through-ftp.md) Windows 文檔傳輸快照的詳細資訊。  
   
     > [!NOTE]  
     >  FTP 設定若有任何變更，就需要產生新的快照集。  
@@ -162,12 +162,12 @@ ms.locfileid: "63022457"
   
 ### <a name="options"></a>選項。  
  **透過 FTP 存取快照集檔案**  
- 選取 **[允許訂閱者使用 FTP (檔案傳輸通訊協定) 下載快照集檔案]** ，並指定 **[FTP 伺服器名稱]** 、 **[通訊埠編號]** 、 **[FTP 根資料夾的路徑]** 、 **[登入]** 和 **[密碼]** ，即可讓訂閱者使用 FTP 傳遞快照集。  
+ 選取 **[允許訂閱者使用 FTP (檔案傳輸通訊協定) 下載快照集檔案]**，並指定 **[FTP 伺服器名稱]**、 **[通訊埠編號]**、 **[FTP 根資料夾的路徑]**、 **[登入]** 和 **[密碼]**，即可讓訂閱者使用 FTP 傳遞快照集。  
   
  此選項可以讓訂閱者使用 FTP 擷取快照集檔案，但這並不是必要的。 如果您選取此選項，新增訂閱精靈就會預設讓訂閱者經由 FTP 擷取快照集檔案。 若要變更此設定，請使用 **[訂閱屬性]** 對話方塊。 如果您讓訂閱者經由 FTP 存取快照集檔案，請在 **[快照集屬性]** 對話方塊的 **[快照集]** 頁面上，指定 FTP 資料夾作為快照集檔案的位置。 這樣做會在新的快照集產生時，讓快照集代理程式自動更新 FTP 資料夾中的檔案。 如果位置沒有設定到 FTP 資料夾，當新的快照集產生時，您就必須手動更新檔案。 如需詳細資訊，請參閱[透過 FTP 傳遞快照集](publish/deliver-a-snapshot-through-ftp.md)。  
   
  **Web 同步處理**  
- 僅限合併式複寫。 選取 **[允許訂閱者連接到 Web 伺服器進行同步處理]** ，並指定 Web 伺服器位址讓合併式訂閱者使用 Web 同步處理。 Web 伺服器必須使用安全通訊端層 (SSL)，且網址必須完整，例如 https://server.domain.com/synchronize。 如需詳細資訊，請參閱 [Configure Web Synchronization](configure-web-synchronization.md)。  
+ 僅限合併式複寫。 選取 **[允許訂閱者連接到 Web 伺服器進行同步處理]**，並指定 Web 伺服器位址讓合併式訂閱者使用 Web 同步處理。 Web 伺服器必須使用安全通訊端層 (SSL)，且網址必須完整，例如 `https://server.domain.com/synchronize`。 如需詳細資訊，請參閱 [Configure Web Synchronization](configure-web-synchronization.md)。  
 
 ## <a name="agent-security"></a>代理程式安全性
   **[發行集屬性]** 對話方塊的 **[代理程式安全性]** 頁面，可以讓您存取執行下列代理程式的帳戶設定，並與複寫拓撲中的電腦建立連接：  
@@ -183,10 +183,10 @@ ms.locfileid: "63022457"
  如果已建立代理程式作業，請按一下 **[安全性設定]** 來存取對話方塊，即可讓您變更代理程式的安全性設定。 如果尚未建立代理程式作業，請按一下 **[建立代理程式]** ，即可建立代理程式並指定安全性設定。  
 
 ## <a name="data-partitions"></a>分割區
-  **[發行集屬性]** 對話方塊的 **[資料分割]** 頁面，可讓您定義使用參數化篩選之合併式發行集的資料分割。 定義資料分割之後，您可以為這些資料分割產生快照集，依據訂閱者的連接屬性 (登入及/或電腦名稱)，為不同的訂閱者提供不同的初始資料集。 如果訂閱者在第一次同步處理資料分割時沒有可用的快照集，您也可以選取來允許訂閱者要求快照集傳遞和產生。 如需詳細資訊，請參閱 [使用參數化篩選建立合併式發行集的快照集](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
+   [發行集屬性]**** 對話方塊的 [資料分割]**** 頁面，可讓您定義使用參數化篩選之合併式發行集的資料分割。 定義資料分割之後，您可以為這些資料分割產生快照集，依據訂閱者的連接屬性 (登入及/或電腦名稱)，為不同的訂閱者提供不同的初始資料集。 如果訂閱者在第一次同步處理資料分割時沒有可用的快照集，您也可以選取來允許訂閱者要求快照集傳遞和產生。 如需詳細資訊，請參閱 [使用參數化篩選建立合併式發行集的快照集](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 ### <a name="options"></a>選項。  
- **加入**  
+ **新增**  
  按一下 **[加入]** 即可定義資料分割。 在 **[加入資料分割]** 對話方塊中，指定 **HOST_NAME()** 及/或 **SUSER_SNAME()** 的值，並定義排程來重新整理快照集。  
   
  **編輯**  
@@ -215,17 +215,17 @@ ms.locfileid: "63022457"
  **快照集格式**  
  為快照集格式選取原生模式或字元模式。  
   
--   如果所有的訂閱者都是   的執行個體，而非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請選取 [原生 SQL Server - 所有訂閱者都必須是執行 SQL Server 的伺服器][!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssEW](../../includes/ssew-md.md)]。 原生快照集格式可以提供最佳的效能。    
+-   如果所有的訂閱者都是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，而非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 的執行個體，請選取 [原生 SQL Server - 所有訂閱者都必須是執行 SQL Server 的伺服器]****。 原生快照集格式可以提供最佳的效能。    
 -   如果有任何訂閱者正在執行 **，或為非** 訂閱者，請選取 [!INCLUDE[ssEW](../../includes/ssew-md.md)] [字元 - 如果發行者或訂閱者沒有執行 SQL Server 則需要][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  **快照集檔案的位置**  
  選取儲存快照集檔案的位置。 這些檔案可以儲存在預設位置；也可以儲存在取代預設位置的替代位置，或除了預設位置以外的替代位置。 儲存在替代位置的檔案可以壓縮。  
   
--   選取 **[將檔案放在預設資料夾]** ，以使用發行者的預設快照集資料夾。 在此對話方塊中的快照集資料夾位置是唯讀的，因為只能在 **[散發者屬性]** 對話方塊中為發行者進行變更。 如需詳細資訊，請參閱[指定預設快照集位置](snapshot-options.md#snapshot-folder-locations)。   
+-   選取 **[將檔案放在預設資料夾]** ，以使用發行者的預設快照集資料夾。 在此對話方塊中的快照集資料夾位置是唯讀的，因為只能在 **[散發者屬性]** 對話方塊中為發行者進行變更。 有關詳細資訊，請參閱[指定預設快照位置](snapshot-options.md#snapshot-folder-locations)。   
 -   選取 **[將檔案放在下列資料夾中]** ，以指定取代預設位置的替代位置，或除了預設位置以外的替代位置。 在文字方塊中輸入路徑，或按一下 **[瀏覽]** 並瀏覽到適當位置。 選取 **[壓縮此資料夾中的快照集檔案]** ，以壓縮在替代快照集位置中的檔案。 替代位置可以位於其他伺服器、網路磁碟機或抽取式媒體 (例如 CD-ROM 或抽取式磁碟) 上。 如需相關資訊，請參閱 [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md) 及 [Compressed Snapshots](compressed-snapshots.md)。  
   
  **執行其他指令碼**  
- 指定在訂閱者端套用快照集之前和之後要執行的指令碼。 如果 **[快照集格式]** 是 **[字元]** ，則無法指定指令碼。  
+ 指定在訂閱者端套用快照集之前和之後要執行的指令碼。 如果 **[快照集格式]** 是 **[字元]**，則無法指定指令碼。  
   
  指令碼是選擇性的，但可提供便於執行命令以及在訂閱者端套用管理變更的方式。 如需執行指令碼的詳細資訊，請參閱[在套用快照集之前及之後執行指令碼](snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。  
   
@@ -235,11 +235,11 @@ ms.locfileid: "63022457"
 
 
 ## <a name="see-also"></a>另請參閱  
- [Create a Publication](publish/create-a-publication.md)   
- [檢視及修改發行集屬性](publish/view-and-modify-publication-properties.md)   
- [發行資料和資料庫物件](publish/publish-data-and-database-objects.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [SQL Server 複寫安全性](security/view-and-modify-replication-security-settings.md)  
+ [創建出版物](publish/create-a-publication.md)   
+ [查看和修改發佈屬性](publish/view-and-modify-publication-properties.md)   
+ [發佈資料和資料庫物件](publish/publish-data-and-database-objects.md)   
+ [複製安全最佳實踐](security/replication-security-best-practices.md)   
+ [SQL 伺服器複製安全性](security/view-and-modify-replication-security-settings.md)  
  [使用快照集初始化訂閱](initialize-a-subscription-with-a-snapshot.md)   
   
   

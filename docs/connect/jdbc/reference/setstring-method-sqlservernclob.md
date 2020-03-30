@@ -11,10 +11,10 @@ ms.assetid: 2195ec6b-3cd1-4e57-90ba-89d111e20ea4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e3bed8e642cb480c403c3cb1596a6e0e0fd0a9c2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972616"
 ---
 # <a name="setstring-method-sqlservernclob"></a>setString 方法 (SQLServerNClob)

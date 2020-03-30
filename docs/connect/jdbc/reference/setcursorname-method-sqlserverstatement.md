@@ -16,10 +16,10 @@ ms.assetid: 3f3ec4f2-103a-4e16-9206-c5bd8639f946
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f743ddb27b079a4b98d5e00c8ab378a5a6859a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974509"
 ---
 # <a name="setcursorname-method-sqlserverstatement"></a>setCursorName 方法 (SQLServerStatement)

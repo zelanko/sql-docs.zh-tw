@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 9625b8f37d69a8360859c8fd17a207b696234b9f
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79112361"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
@@ -55,7 +55,7 @@ ms.locfileid: "79112361"
 |無 64 位元版本的 SQL Server 2008 R2 Management Studio 安裝|安裝 SQL Server 2008 R2 Management Studio，包括 SP2|SQLManagementStudio_x64_ENU.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=251791) ，可供免費安裝 SQL Server 2008 R2 SP2 Management Studio Express Edition。|  
   
 ### <a name="22-setup-might-fail-if-sqagtresdll-is-locked-by-another-process"></a>2.2 如果 SQAGTRES.dll 已由其他處理序鎖定，安裝程式可能發生失敗  
-**問題**：SQL Server 安裝程式作業可能會失敗並出現以下錯誤：`Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.`根本原因是 C:\Windows\system32\SQAGTRES.DLL 已由另一個處理序鎖定，使安裝程式無法加以更新。  
+**問題**：SQL Server 安裝程式作業可能會失敗並出現以下錯誤： `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` 起因是 C:\Windows\system32\SQAGTRES.DLL 已由另一個處理序鎖定，而安裝程式無法加以更新。  
   
 **因應措施**：暫時將 C:\Windows\system32\SQAGTRES.DLL 重新命名，例如 C:\Windows\system32\SQAGTRES_old.DLL，然後選取安裝程式錯誤訊息上的 [重試] 選項。 如此，安裝程式就能繼續執行。 重新開機之後，您可以刪除暫存檔 C:\Windows\system32\SQAGTRES_old.DLL。  
   

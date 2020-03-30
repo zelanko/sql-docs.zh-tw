@@ -11,10 +11,10 @@ ms.assetid: 3a0ad63f-87f9-4ca1-b0c2-c85fa991634a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 870f1fbc49e99e2cd43c6adb857137776c275550
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574083"
 ---
 # <a name="rsmodelgenerationerror---reporting-services-error"></a>rsModelGenerationError - Reporting Services 錯誤

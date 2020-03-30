@@ -16,10 +16,10 @@ ms.assetid: 75d03ced-3614-4997-9abd-24642b1d1aae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b7b91071c97c46d7516907459539303ddbd45822
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978328"
 ---
 # <a name="geturl-method-int"></a>getURL 方法 (int)

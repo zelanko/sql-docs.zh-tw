@@ -15,10 +15,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5b870368136055ea2df6e5473c1b33640cea57b8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75234536"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server Agent 屬性 (警示系統頁面)
@@ -43,7 +43,7 @@ ms.locfileid: "75234536"
 > 在變更電子郵件系統之後，您必須重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務，才能使變更生效。  
   
 **郵件設定檔**  
-設定設定檔供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用。 您也可以選取 [\<新增 Database Mail 設定檔>]  ，以建立新的設定檔。  
+設定設定檔供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用。 您也可以選取 [**新增 Database Mail 設定檔>]\<** ，以建立新的設定檔。  
   
 **呼叫器電子郵件**  
 本節中的選項可以讓您設定傳送到呼叫器號碼的電子郵件訊息，以搭配呼叫系統使用。  

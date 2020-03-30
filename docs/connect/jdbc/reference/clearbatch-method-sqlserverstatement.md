@@ -16,10 +16,10 @@ ms.assetid: e6fc1461-bbc6-45ae-85b1-a824aba51085
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dbd52e2576bc9924c623a2a4627d998b74571edb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955777"
 ---
 # <a name="clearbatch-method-sqlserverstatement"></a>clearBatch 方法 (SQLServerStatement)

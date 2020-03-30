@@ -16,10 +16,10 @@ ms.assetid: d7031a89-e964-4ffd-87b7-63825799435d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4ad0910814cd4600b3d70c9037c03e1b9997888
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972863"
 ---
 # <a name="setshort-method-sqlservercallablestatement"></a>setShort 方法 (SQLServerCallableStatement)

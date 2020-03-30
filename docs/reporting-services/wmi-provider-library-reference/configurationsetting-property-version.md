@@ -11,10 +11,10 @@ ms.assetid: 10266c94-d4da-4f4a-8cdd-5a64f57ada5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 60c7c5b3e49dff88ff6f55c3f97052c7ae38ef92
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570158"
 ---
 # <a name="configurationsetting-property---version"></a>ConfigurationSetting 屬性 - Version

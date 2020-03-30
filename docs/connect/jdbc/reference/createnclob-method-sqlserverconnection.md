@@ -11,10 +11,10 @@ ms.assetid: fa160884-394e-4fb2-a6e8-0437b81c149d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7c2c8a91e3c3f3eee050fefce1d24f87e245cb8c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955341"
 ---
 # <a name="createnclob-method-sqlserverconnection"></a>createNClob 方法 (SQLServerConnection)

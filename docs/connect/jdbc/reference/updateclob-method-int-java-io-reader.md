@@ -11,10 +11,10 @@ ms.assetid: df60fbf1-44b2-4658-84a5-5cb129ce2dc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4aebc496766fbf8358e7e18004cd74779cbbfafa
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67996633"
 ---
 # <a name="updateclob-method-int-javaioreader"></a>updateClob 方法 (int, java.io.Reader)

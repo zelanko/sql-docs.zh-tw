@@ -11,10 +11,10 @@ ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9c36e81631435e4e079d2b52aea4fe9bce587159
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028099"
 ---
 # <a name="diagnosing-problems-with-the-jdbc-driver"></a>診斷 JDBC 驅動程式的問題

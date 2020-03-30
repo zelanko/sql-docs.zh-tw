@@ -16,10 +16,10 @@ ms.assetid: 90dbf639-c3d8-4519-9300-5447c79aec17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84afda93fa79d226eec21cb92c16ff5ebbc55fa5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955318"
 ---
 # <a name="createstatement-method-int-int"></a>createStatement 方法 (int, int)
@@ -45,7 +45,7 @@ public java.sql.Statement createStatement(int resultSetType,
  表示結果集並行類型的 **int** 值。  
   
 ## <a name="return-value"></a>傳回值  
- 陳述式物件。  
+ Statement 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

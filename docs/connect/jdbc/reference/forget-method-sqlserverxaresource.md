@@ -16,10 +16,10 @@ ms.assetid: 6d83138d-aa45-4d94-9da6-fdfe7ed28edc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5eaaa98b2d79dc29558d32a254d338c9891372f4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954541"
 ---
 # <a name="forget-method-sqlserverxaresource"></a>forget 方法 (SQLServerXAResource)

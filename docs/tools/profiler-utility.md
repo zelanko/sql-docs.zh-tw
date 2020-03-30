@@ -17,10 +17,10 @@ ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 9ed207e5fa854dc25a07edfff49a75aad9d370ff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307390"
 ---
 # <a name="profiler-utility"></a>Profiler 公用程式
@@ -61,7 +61,7 @@ profiler
  這是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證的使用者登入識別碼。 登入識別碼會區分大小寫。  
   
 > [!NOTE]  
->  第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]。  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。  
   
  **/P** *password*  
  指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證之使用者指定的密碼。  
@@ -110,7 +110,7 @@ profiler
 |ss|兩位數的秒鐘|  
   
 > [!NOTE]  
->  只有當 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 中已啟用 [使用地區設定顯示日期與時間值]  選項時，才能使用 "MM-DD-YY hh:mm:ss" 格式。 如果這個選項未啟用，您必須使用 "YYYY-MM-DD hh:mm:ss" 日期和時間格式。  
+>  只有當  **中已啟用 [使用地區設定顯示日期與時間值]** [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 選項時，才能使用 "MM-DD-YY hh:mm:ss" 格式。 如果這個選項未啟用，您必須使用 "YYYY-MM-DD hh:mm:ss" 日期和時間格式。  
   
  **/R**  
  啟用追蹤檔的換用。  

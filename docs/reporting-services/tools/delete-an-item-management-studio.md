@@ -13,10 +13,10 @@ ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8eaed89901b98cecb90e0c3a4ecae24714c7c180
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574322"
 ---
 # <a name="delete-an-item-management-studio"></a>刪除項目 (Management Studio)

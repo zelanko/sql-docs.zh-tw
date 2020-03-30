@@ -16,10 +16,10 @@ ms.assetid: ed079327-0bb0-4245-adb5-e46a90cf3586
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9ceb89253cea8feac0b4255984b30aa7fd74216d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571113"
 ---
 # <a name="msreportserver_instance-methods"></a>MSReportServer_Instance 方法

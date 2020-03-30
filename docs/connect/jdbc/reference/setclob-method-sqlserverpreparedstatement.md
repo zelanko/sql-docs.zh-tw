@@ -11,10 +11,10 @@ ms.assetid: 1b148388-01a8-4e2e-bc72-470ce29164de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fd21b8bcd3876186e76d0dcee10e900a0dccda2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974804"
 ---
 # <a name="setclob-method-sqlserverpreparedstatement"></a>setClob 方法 (SQLServerPreparedStatement)

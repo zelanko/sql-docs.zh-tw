@@ -11,10 +11,10 @@ ms.assetid: 19411e6c-c456-4533-8252-54569a2a6b1f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e565a5c6b41ad2b5b1e13063547268f9ff4b4a7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954406"
 ---
 # <a name="getapplicationintent-method-sqlserverdatasource"></a>getApplicationIntent 方法 (SQLServerDataSource)
@@ -32,7 +32,7 @@ public java.lang.String getApplicationIntent();
  傳回 **applicationIntent** 連線屬性的值。  
   
 ## <a name="remarks"></a>備註  
- 如需 **applicationIntent** 連線屬性的詳細資訊，請參閱[設定連線屬性](../../../connect/jdbc/setting-the-connection-properties.md)。  
+ 如需 **applicationIntent** 連接屬性的相關詳細資訊，請參閱[設定連接屬性](../../../connect/jdbc/setting-the-connection-properties.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource.setApplicationIntent](../../../connect/jdbc/reference/setapplicationintent-method-sqlserverdatasource.md)   

@@ -11,10 +11,10 @@ ms.assetid: ab9c7b10-026f-4a51-8d60-e6871d1abd02
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ecf5030c4722f2e5681cb199993a48fea0e22462
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979678"
 ---
 # <a name="getsqlxml-method-javalangstring-sqlserverresultset"></a>getSQLXML 方法 (java.lang.String) (SQLServerResultSet)
@@ -35,7 +35,7 @@ public final java.sql.SQLXML getSQLXML(java.lang.String columnLabel)
  **String** 指出資料行標籤。  
   
 ## <a name="return-value"></a>傳回值  
- SQLXML 物件。  
+ ASQLXMLobject。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

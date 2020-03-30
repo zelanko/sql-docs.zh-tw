@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 817e09e25695f985de8397bca5436da817deda2d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75254755"
 ---
 # <a name="view-job-activity"></a>檢視作業活動
@@ -36,10 +36,10 @@ ms.locfileid: "75254755"
   
 ## <a name="before-you-begin"></a>開始之前  
   
-### <a name="Security"></a>安全性  
+### <a name="security"></a><a name="Security"></a>安全性  
 如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
-## <a name="SSMS"></a>使用 SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>使用 SQL Server Management Studio  
   
 #### <a name="to-view-job-activity"></a>若要檢視作業活動  
   
@@ -55,7 +55,7 @@ ms.locfileid: "75254755"
   
 6.  若要更新「作業活動監視器」，請按一下 **[重新整理]** 。 若不要檢視那麼多資料列，請按一下 **[篩選]** ，並輸入篩選參數。  
   
-## <a name="TSQL"></a>使用 Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>使用 Transact-SQL  
   
 #### <a name="to-view-job-activity"></a>若要檢視作業活動  
   

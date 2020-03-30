@@ -11,10 +11,10 @@ ms.assetid: e77b9be3-1a02-4769-8acf-ac71d48d6a76
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f3acffe6a922084fd63e38a8e212b5cf86d6b278
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "71096911"
 ---
 # <a name="tostring-method-datetimeoffset"></a>toString 方法 (DateTimeOffset)

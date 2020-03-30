@@ -16,10 +16,10 @@ ms.assetid: f71e501c-ccd7-4a1e-b6ea-4d47a81c18c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3b7e55cbaa630a4c191eead93d3e016aa07ea5b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954391"
 ---
 # <a name="getapplicationname-method-sqlserverdatasource"></a>getApplicationName 方法 (SQLServerDataSource)

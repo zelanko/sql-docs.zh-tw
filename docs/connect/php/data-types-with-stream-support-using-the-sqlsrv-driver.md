@@ -13,10 +13,10 @@ ms.assetid: a16fe7da-e4c8-45f5-be54-aad03c4fa168
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 92c28fe249d766fff33d2c52e20497cebd1f486b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993684"
 ---
 # <a name="data-types-with-stream-support-using-the-sqlsrv-driver"></a>使用 SQLSRV 驅動程式支援資料流的資料類型

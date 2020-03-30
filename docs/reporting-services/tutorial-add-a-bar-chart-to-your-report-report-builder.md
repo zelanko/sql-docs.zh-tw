@@ -9,13 +9,13 @@ ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041177"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教學課程：將橫條圖新增至報表 (報表產生器)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教學課程：將橫條圖加入至報表 (報表產生器)
 在本教學課程中，您會使用[!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]中的精靈，在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表中建立橫條圖。 接著新增篩選，並加強圖表。 
 
 橫條圖會以水平方向顯示類別目錄資料。 這樣有助於：  
@@ -30,14 +30,14 @@ ms.locfileid: "63041177"
   
  
 > [!NOTE]  
-> 在本教學課程中，精靈的步驟會合併為一個程序。 如需如何瀏覽至報表伺服器、建立資料集及選擇資料來源的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+> 在本教學課程中，精靈的步驟會合併為一個程序。 如需如何瀏覽至報表伺服器、建立資料集以及選擇資料來源的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
-完成此教學課程的估計時間：15 分鐘。  
+完成本教學課程的估計時間：15 分鐘。  
   
 ## <a name="requirements"></a>需求  
 如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="Chart"></a>1.從圖表精靈建立圖表報表  
+## <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1.從圖表精靈建立圖表報表  
 在其中，您可以建立內嵌資料集、選擇共用資料來源，以及使用 [圖表精靈] 建立橫條圖。  
   
 > [!NOTE]  
@@ -87,13 +87,13 @@ ms.locfileid: "63041177"
   
 9. 按 [下一步]  。  
   
-## <a name="ChartType"></a>2.建立橫條圖  
+## <a name="2-create-a-bar-chart"></a><a name="ChartType"></a>2.建立橫條圖  
  
 1.  在 [選擇圖表類型]  頁面上，直條圖是預設圖表類型。  
   
 2.  按一下 [橫條圖]  ，然後按一下 [下一步]  。  
   
-    [排列圖表欄位]  頁面上的 [可用欄位]  窗格中有四個欄位：FirstName、LastName、SalesYear2015 及 SalesYear2014。  
+    [排列圖表欄位]  頁面上的 [可用的欄位]  窗格中有四個欄位：FirstName、LastName、SalesYear2015 和 SalesYear2014。  
   
 3.  將 [LastName] 拖曳至 [類別目錄] 窗格。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "63041177"
   
 橫條圖會顯示每位銷售人員 2014 和 2015 年的銷售額。 橫條圖的長度對應至銷售總額。  
   
-## <a name="AllValues"></a>3.在垂直軸上顯示所有名稱  
+## <a name="3-display-all-the-names-on-the-vertical-axis"></a><a name="AllValues"></a>3.在垂直軸上顯示所有名稱  
 根據預設，垂直軸上只會顯示部分值。 您可以變更圖表以顯示所有類別目錄。  
   
 1.  切換到報表設計檢視。  
@@ -129,7 +129,7 @@ ms.locfileid: "63041177"
 > [!NOTE]  
 > 如果您無法在垂直軸上讀到銷售人員的名稱，可增加圖表的高度或變更軸標籤的格式選項。  
   
-### <a name="CategoryExpression"></a>在垂直軸上顯示姓氏和名字  
+### <a name="display-last-name-and-first-name-on-vertical-axis"></a><a name="CategoryExpression"></a>在垂直軸上顯示姓氏和名字  
 您可以變更類別目錄運算式，以依序包含每位銷售人員的姓氏和名字。  
   
 1.  切換到報表設計檢視。  
@@ -155,7 +155,7 @@ ms.locfileid: "63041177"
 > [!NOTE]  
 > 如果您無法在垂直軸上讀到銷售人員的名稱，可增加圖表的高度或變更軸標籤的格式選項。  
   
-## <a name="Sort"></a>4.變更垂直軸的排序次序  
+## <a name="4-change-the-sort-order-on-the-vertical-axis"></a><a name="Sort"></a>4.變更垂直軸的排序次序  
 當您排序圖表上的資料時，也會變更類別目錄軸上值的順序。  
   
 1.  切換到報表設計檢視。  
@@ -176,7 +176,7 @@ ms.locfileid: "63041177"
   
 水平軸上的名稱會從最大到最小 (2015 年銷售額) 進行排序，而 **Zeng** 位於頂端。  
   
-## <a name="Legend"></a>5.移動圖例  
+## <a name="5-move-the-legend"></a><a name="Legend"></a>5.移動圖例  
 為了改善圖表值的可讀性，您可能會想要移動圖表圖例。 例如，在水平顯示橫條的橫條圖中，您可以變更圖例的位置，讓它位於圖表區域的上方或下方。 這樣會提供更多水平空間給橫條。  
   
 #### <a name="to-display-the-legend-below-the-chart-area-of-a-bar-chart"></a>在橫條圖的圖表區域下方顯示圖例  
@@ -195,17 +195,17 @@ ms.locfileid: "63041177"
   
 6.  按一下 **[執行]** 預覽報表。  
   
-## <a name="ChartTitle"></a>6.為圖表加上標題  
+## <a name="6-title-the-chart"></a><a name="ChartTitle"></a>6.為圖表加上標題  
   
 1.  切換到報表設計檢視。  
   
-2.  選取圖表頂端的 [圖表標題]  這幾個字，然後鍵入：**2014 年與 2015 年的銷售額**。  
+2.  選取圖表頂端的 [圖表標題]  這幾個字，然後鍵入：**Sales for 2014 and 2015**。  
   
 3.  在 [屬性] 窗格中，於選取標題的情況下，將 [色彩]  設為 [黑色]  ，並將 [字型大小]  設為 [12 pt]  。 
   
 4.  按一下 **[執行]** 預覽報表。  
   
-## <a name="Horizontal"></a>7.格式化及標示水平軸  
+## <a name="7-format-and-label-the-horizontal-axis"></a><a name="Horizontal"></a>7.格式化及標示水平軸  
 根據預設，水平軸會以一般格式顯示值，此格式會自動調整為適合圖表的大小。 您可以將它變更為貨幣格式。  
    
 1.  切換到報表設計檢視。  
@@ -226,13 +226,13 @@ ms.locfileid: "63041177"
   
 7.  在 [軸標題]  方塊中，鍵入 **Sales in thousands**，然後按 Enter。  
 
-    >**注意：** 鍵入時，[軸標題] 方塊會顯示在垂直軸上。 但是，當您按 Enter 時，它會移至水平軸。
+    >**注意︰** 輸入時，[軸標題] 方塊會顯示在垂直軸上。 但是，當您按 Enter 時，它會移至水平軸。
   
 9. 按一下 **[執行]** 預覽報表。  
   
 報表會將水平軸上的銷售量顯示為以千為單位的貨幣，且沒有小數位數。  
   
-## <a name="Filter"></a>8.加入篩選以顯示前五個值  
+## <a name="8-add-a-filter-to-display-the-top-five-values"></a><a name="Filter"></a>8.加入篩選以顯示前五個值  
 您可以將篩選加入至圖表，以指定要在圖表中包含或排除資料集中的哪些資料。   
   
 1.  切換到報表設計檢視。  
@@ -261,7 +261,7 @@ ms.locfileid: "63041177"
   
 此圖表就會顯示 2015 銷售資料中前五名的銷售人員名稱。  
   
-## <a name="Title"></a>9.加入報表標題  
+## <a name="9-add-a-report-title"></a><a name="Title"></a>9.加入報表標題  
   
 1.  在設計介面上，按一下 **[按一下以加入標題]** 。  
   
@@ -281,7 +281,7 @@ ms.locfileid: "63041177"
   
 6.  按一下 **[執行]** 預覽報表。  
   
-## <a name="Save"></a>10.儲存報表  
+## <a name="10-save-the-report"></a><a name="Save"></a>10.儲存報表  
   
 1.  切換到報表設計檢視。  
   

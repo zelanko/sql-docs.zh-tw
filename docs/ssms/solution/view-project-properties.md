@@ -14,10 +14,10 @@ ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: c63fe4710c35870ab5ff7d52167179146f3874a3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242801"
 ---
 # <a name="view-project-properties"></a>檢視專案屬性

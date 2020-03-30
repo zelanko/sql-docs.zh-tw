@@ -15,15 +15,15 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 017292aa073c0b5745f313b61592a5c57199567c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f5f8840e0204847d447ea794e94312221ec1cc72
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66106953"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380789"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML 報表資料的 XML 查詢語法 (SSRS)
-  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可以建立 XML 資料來源的資料集。 當您定義資料來源之後，要建立此資料集的查詢。 根據資料來源所指向的 XML 資料類型而定，您可藉由加入 XML `Query` 或元素路徑來建立資料集查詢。 XML `Query`會從>標記的** \<查詢**開始，並包含依資料來源而異的命名空間和 XML 元素。 元素路徑與命名空間無關，而且會指定當搭配類似 XPath 語法使用基礎 XML 資料時，要使用哪些節點和節點屬性。 如需項目路徑的詳細資訊，請參閱 [XML 報表資料的項目路徑語法 &#40;SSRS&#41;](report-data-ssrs.md)。  
+  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可以建立 XML 資料來源的資料集。 當您定義資料來源之後，要建立此資料集的查詢。 根據資料來源所指向的 XML 資料類型而定，您可藉由加入 XML `Query` 或元素路徑來建立資料集查詢。 XML`Query`以**\<查詢>** 標記開頭，包括命名空間和 XML 元素，這些元素因數據源而異。 元素路徑與命名空間無關，而且會指定當搭配類似 XPath 語法使用基礎 XML 資料時，要使用哪些節點和節點屬性。 如需項目路徑的詳細資訊，請參閱 [XML 報表資料的項目路徑語法 &#40;SSRS&#41;](report-data-ssrs.md)。  
   
  您可以針對下列 XML 資料類型建立 XML 資料來源：  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66106953"
   
 -   針對 URL 要求，查詢參數會包含為標準 URL 參數。  
   
--   針對 Web 服務要求，查詢參數會傳遞至 Web 服務方法。 若要定義查詢參數，請使用 [資料集屬性]  對話方塊的 [參數]  頁面。 如需詳細資訊，請參閱 [資料集屬性對話方塊、參數](dataset-properties-dialog-box-parameters.md)。  
+-   針對 Web 服務要求，查詢參數會傳遞至 Web 服務方法。 若要定義查詢參數，請使用 [資料集屬性]**** 對話方塊的 [參數]**** 頁面。 如需詳細資訊，請參閱 [資料集屬性對話方塊、參數](dataset-properties-dialog-box-parameters.md)。  
   
 ### <a name="example"></a>範例  
  下表中的範例會說明如何從報表伺服器 Web 服務、XML 文件和內嵌 XML 資料中擷取資料。  
@@ -63,12 +63,10 @@ ms.locfileid: "66106953"
 |使用預設值的 XML 文件。|*沒有查詢*。<br /><br /> 元素路徑衍生自 XML 文件本身，而且與命名空間無關。|  
   
 > [!NOTE]  
->  第一個 Web 服務範例會使用 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法中的 Web 服務 XML 資料。 若要執行這個查詢，您必須建立新的資料來源，然後設定 http://localhost/reportserver/reportservice2006.asmx 的連接字串。 
-  <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法接受兩個參數：`Item` 和 `Recursive`。 將 `Item` 的預設值設定為 `/`，並將 `Recursive` 的預設值設定為 `1`。  
+>  第一個 Web 服務範例會使用 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法中的 Web 服務 XML 資料。 若要執行這個查詢，您必須建立新的資料來源，然後設定 http://localhost/reportserver/reportservice2006.asmx 的連接字串。 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法接受兩個參數：`Item` 和 `Recursive`。 將 `Item` 的預設值設定為 `/`，並將 `Recursive` 的預設值設定為 `1`。  
   
 ## <a name="specifying-namespaces"></a>指定命名空間  
- 使用 XML `Query` 元素可指定用於資料來源中 XML 資料的命名空間； 下列 XML 查詢會使用命名空間 `sales`。 
-  `ElementPath` 和 `sales:LineItems` 的 XML `sales:LineItem` 節點會使用命名空間 `sales`。  
+ 使用 XML `Query` 元素可指定用於資料來源中 XML 資料的命名空間； 下列 XML 查詢會使用命名空間 `sales`。 `sales:LineItems` 和 `sales:LineItem` 的 XML `ElementPath` 節點會使用命名空間 `sales`。  
   
 ```  
 <Query xmlns:sales=  
@@ -89,11 +87,11 @@ ms.locfileid: "66106953"
   
 |XML 查詢元素|在資料集中產生欄位|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|值 A： https://schemas.microsoft.com/..。<br /><br /> 值 B： https://schemas.microsoft.com/..。<br /><br /> 值 C： https://schemas.microsoft.com/..。|  
-|\<xmldp： Query xmlns： xmldp = "https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns： ns = "https://schemas.microsoft.com/..."><br /><br /> \<xmldp： ElementPath>根{}/Ns： Element2/Node\</xmldp： ElementPath><br /><br /> \</xmldp：查詢>|D 值<br /><br /> E 值<br /><br /> F 值|  
+|\<Query/>|值 A： `https://schemas.microsoft.com/..`.<br /><br /> 值 B： `https://schemas.microsoft.com/..`.<br /><br /> 值 C： `https://schemas.microsoft.com/.`. .|  
+|\<xmldp：查詢https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQueryxmlns：xmldp_""xmlns：ns="。https://schemas.microsoft.com/..><br /><br /> \<xmldp：元素路徑>根{}/ns：元素2/節點\</xmldp：元素路徑><br /><br /> \</xmldp：查詢>|D 值<br /><br /> E 值<br /><br /> F 值|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML 文件：DPNamespace.xml  
- 您可以複製這段 XML，並將它儲存為報表設計師可以使用的 URL，以便當做 XML 資料來源使用；例如 http://localhost/DPNamespace.xml 。  
+ 您可以複製這段 XML，並將它儲存為報表設計師可以使用的 URL，以便當做 XML 資料來源使用；例如 http://localhost/DPNamespace.xml。  
   
 ```  
 <Root xmlns:ns="https://schemas.microsoft.com/...">  
@@ -111,7 +109,7 @@ ms.locfileid: "66106953"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 連接類型 &#40;SSRS&#41;](xml-connection-type-ssrs.md)   
+ [XML 連線類型&#40;SSRS&#41;](xml-connection-type-ssrs.md)   
  [Reporting Services 教學課程 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   
   

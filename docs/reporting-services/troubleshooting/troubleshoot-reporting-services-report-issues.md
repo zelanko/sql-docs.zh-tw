@@ -9,10 +9,10 @@ ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5217684ab98bd70a996f0a8a0bb50170daf57bf0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573881"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>針對 Reporting Services 報表問題進行疑難排解
@@ -34,7 +34,7 @@ ms.locfileid: "65573881"
   
 請使用本機管理員認證登入報表伺服器，然後以滑鼠右鍵按一下 [報表管理員] 頁面，再按一下 [檢視來源]  ，即可檢視呼叫堆疊。 呼叫堆疊會提供錯誤訊息的詳細內容。  
   
-## <a name="use-includessmanstudiofullincludesssmanstudiofullmd-to-verify-queries-and-credentials"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] 驗證查詢和認證  
+## <a name="use-ssmanstudiofull-to-verify-queries-and-credentials"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] 驗證查詢和認證  
 將複雜查詢加入報表之前，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] 驗證複雜查詢。   
   
 如需詳細資訊，請參閱 [Database Engine 查詢編輯器](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) 和 [使用物件總管管理物件](~/ssms/object/manage-objects-by-using-object-explorer.md)。  

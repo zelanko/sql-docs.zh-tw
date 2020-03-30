@@ -11,10 +11,10 @@ ms.assetid: 9fc9938c-b821-41c7-8df7-e21cb83a46d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4abac6b892ae5960e8cafc5f265d6a81081e878b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973778"
 ---
 # <a name="setnclob-method-int-javaioreader"></a>setNClob 方法 (int, java.io.Reader)

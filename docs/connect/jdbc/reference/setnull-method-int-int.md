@@ -16,10 +16,10 @@ ms.assetid: 7e7f08e9-278a-495a-8ce3-ca173d055021
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3299dc2063cd63498af7f3e03aa9dafec4d9b972
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973544"
 ---
 # <a name="setnull-method-int-int"></a>setNull 方法 (int, int)

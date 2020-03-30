@@ -16,10 +16,10 @@ ms.assetid: 39df58b1-86e0-438e-a22b-280feb3ac033
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a3fb6ba51d875807d4936e90b5d0cd1b3997bc3d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573543"
 ---
 # <a name="configurationsetting-property---installationid"></a>ConfigurationSetting 屬性 - InstallationID

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 11/18/2019
 ms.openlocfilehash: 6317e8161871d7094486ed8b6178847549d8ab96
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190725"
 ---
 # <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services 中的報表資料簡介 (SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "74190725"
 6.  **外部資料來源** ：從關聯式資料庫、多維資料庫、SharePoint 清單或 Web 服務擷取資料。  
 
 
-##  <a name="BkMk_ReportDataTerms"></a> 定義字詞  
+##  <a name="defining-terms"></a><a name="BkMk_ReportDataTerms"></a> 定義字詞  
   
 - **資料連接。** 也稱為 *資料來源*。 資料連接包括相依於連接類型的名稱和連接屬性。 依預設，資料連接不包括認證。 資料連接不會指定要從外部資料來源擷取的資料。 若要執行這項操作，您可以在建立資料集時指定查詢。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74190725"
   
 - **認證。** 認證是驗證資訊，您必須提供這項資訊才能存取外部資料。  
   
-##  <a name="BkMk_ReportDataTips"></a> 指定報表資料的秘訣
+##  <a name="tips-for-specifying-report-data"></a><a name="BkMk_ReportDataTips"></a> 指定報表資料的秘訣
 
  使用下列資訊可以設計您的報表資料策略。  
   

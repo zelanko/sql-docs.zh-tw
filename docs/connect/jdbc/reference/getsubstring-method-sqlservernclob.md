@@ -11,10 +11,10 @@ ms.assetid: 1d91c930-1bac-4da9-b9a5-ac2cfd31541b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf2caa03e047bb53ca946153205492c417448e85
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979324"
 ---
 # <a name="getsubstring-method-sqlservernclob"></a>getSubString 方法 (SQLServerNClob)

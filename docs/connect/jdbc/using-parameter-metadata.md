@@ -11,10 +11,10 @@ ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80ff8cebcc4141e8363c25f83821cb4924e6c46a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026079"
 ---
 # <a name="using-parameter-metadata"></a>使用參數中繼資料
@@ -32,8 +32,8 @@ ms.locfileid: "69026079"
 > [!NOTE]  
 > 搭配備妥的陳述式使用 SQLServerParameterMetaData 類別時有一些限制。
 >
-> **使用適用於 SQL Server 的 Microsoft JDBC Driver 6.0 (或更新版本)** ：使用 SQL Server 2008 或 2008 R2 時，JDBC 驅動程式支援 SELECT、DELETE、INSERT 與 UPDATE 陳述式 (只要這些陳述式不包含子查詢和/或聯結)。
+> **使用 Microsoft JDBC Driver 6.0 (或更高版本) for SQL Server**：使用 SQL Server 2008 或 2008 R2 時，JDBC 驅動程式支援 SELECT、DELETE、INSERT 與 UPDATE 陳述式 (只要這些陳述式不包含子查詢及/或聯結)。
 
 使用 SQL Server 2008 或 2008 R2 時，對 SQLServerParameterMetaData 類別也不支援 MERGE 查詢。 若是 SQL Server 2012 及更高版本，則支援具備複雜查詢的參數中繼資料。
 
-不支援擷取加密資料行的參數中繼資料。 **使用適用於 SQL Server 的 Microsoft JDBC Driver 4.1 或 4.2**：JDBC 驅動程式支援 SELECT、DELETE、INSERT 與 UPDATE 陳述式 (只要這些陳述式不包含子查詢和/或聯結)。 SQLServerParameterMetaData 類別也不支援 MERGE 查詢。
+不支援擷取加密資料行的參數中繼資料。 **使用 Microsoft JDBC Driver 4.1 或 4.2 for SQL Server**：JDBC 驅動程式支援 SELECT、DELETE、INSERT 與 UPDATE 陳述式 (只要這些陳述式不包含子查詢及/或聯結)。 SQLServerParameterMetaData 類別也不支援 MERGE 查詢。

@@ -11,17 +11,17 @@ ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 553c0e742b34406b23a68f1403c372dcc7080088
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69025833"
 ---
 # <a name="using-statements-with-sql"></a>使用 SQL 陳述式
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 及內嵌 SQL 陳述式來處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料時，有不同的類別可供您使用。 使用哪一種類別視您想要執行的 SQL 陳述式類型而定。  
+使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及內嵌 SQL 陳述式來處理 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 資料庫中的資料時，有不同的類別可供您使用。 使用哪一種類別視您想要執行的 SQL 陳述式類型而定。  
   
 如果您的 SQL 陳述式不含任何 IN 參數，請使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別，但如果它確實含有 IN 參數，則請使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 類別。  
   

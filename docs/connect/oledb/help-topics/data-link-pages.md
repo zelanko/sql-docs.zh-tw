@@ -11,10 +11,10 @@ ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
 ms.openlocfilehash: d92555fba1d9e0a380ffdc9051817ddfae9ca4b7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72381763"
 ---
 # <a name="universal-data-link-udl-configuration"></a>通用資料連結 (UDL) 設定
@@ -37,7 +37,7 @@ ms.locfileid: "72381763"
 |[使用者名稱]|輸入當您登入到資料來源時要用來進行驗證的使用者識別碼。|
 |密碼|輸入當您登入到資料來源時要用來進行驗證的密碼。|
 |空白密碼|核取時，讓指定的提供者能夠在連接字串中使用空白密碼。|
-|允許儲存密碼|核取時，允許將密碼與連接字串一起儲存。 密碼是否可包含於連接字串中完全取決於呼叫應用程式的功能。 <br/><br/>**注意：** 若已儲存，系統會傳回密碼並以未設定遮罩且未加密的方式儲存密碼。|
+|允許儲存密碼|核取時，允許將密碼與連接字串一起儲存。 密碼是否可包含於連接字串中完全取決於呼叫應用程式的功能。 <br/><br/>**注意：** 若已儲存，系統會傳回密碼並以未遮罩與未加密的方式儲存密碼。|
 |使用高度加密資料|核取時，透過連線傳遞的資料將會加密。|
 |信任伺服器憑證|核取時，將會驗證伺服器的憑證。 伺服器的憑證必須具有伺服器的正確主機名稱，且由信任的憑證授權單位所發出。|
 |選取資料庫|選取或輸入您要存取的資料庫名稱。|

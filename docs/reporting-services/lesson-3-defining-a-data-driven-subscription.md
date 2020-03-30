@@ -9,20 +9,20 @@ ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66826862"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>第 3 課：定義資料驅動訂閱
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 在這個 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教學課程中，您將利用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 入口網站的資料驅動訂閱頁面來連線到訂閱資料來源、建立擷取訂閱資料的查詢，以及將結果集對應至報表和傳遞選項。  
   
 > [!NOTE]  
 > 開始之前，請確認 **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent** 服務正在執行。 若未執行，您就無法儲存訂閱。  驗證的其中一個方法是開啟 [SQL Server 組態管理員](../relational-databases/sql-server-configuration-manager.md)。
-這一課會假設您已完成第 1 課和第 2 課，而且報表資料來源使用預存認證。  如需詳細資訊，請參閱[第 2 課：修改報表資料來源屬性](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+這一課會假設您已完成第 1 課和第 2 課，而且報表資料來源使用預存認證。  如需詳細資訊，請參閱 [第 2 課：修改報表資料來源屬性](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
-## <a name="bkmk_startwizard"></a>啟動資料驅動訂閱精靈  
+## <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>啟動資料驅動訂閱精靈  
   
 1.  在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 入口網站中，按一下 [首頁]  ，然後巡覽至包含 **Sales Orders** 報表的資料夾。  
   

@@ -17,10 +17,10 @@ ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ec4c97ad3627ae91fd01cf0d8d73a2569a0c41a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578173"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Pause and Resume Shared Schedules
@@ -36,7 +36,7 @@ ms.locfileid: "65578173"
   
 -   [暫停及繼續共用排程 (SharePoint 模式)](#bkmk_sharepoint)  
   
-##  <a name="bkmk_native"></a> 暫停及繼續共用排程 (原生模式)  
+##  <a name="pause-and-resume-shared-schedules-native-mode"></a><a name="bkmk_native"></a> 暫停及繼續共用排程 (原生模式)  
  若要暫停和繼續共用排程，請使用報表管理員的 [排程] 頁面。 您不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，因為其未提供暫停和繼續排程的選項。 如需詳細資訊，請參閱 [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)。  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>若要暫停或繼續共用排程  
@@ -47,7 +47,7 @@ ms.locfileid: "65578173"
   
 3.  選取排程，然後按一下功能區中的 **[暫停]** 或 **[繼續]** 。 如果排程目前為暫停狀態，則 **[狀態]** 資料行將包含 **[已暫停]** 。  
   
-##  <a name="bkmk_sharepoint"></a> 暫停及繼續共用排程 (SharePoint 模式)  
+##  <a name="pause-and-resume-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> 暫停及繼續共用排程 (SharePoint 模式)  
  若要暫停及繼續共用排程，請使用 [站台設定] 頁面或 PowerShell。 排程是以每個 SharePoint 網站為單位管理。  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>若要暫停或繼續共用排程  

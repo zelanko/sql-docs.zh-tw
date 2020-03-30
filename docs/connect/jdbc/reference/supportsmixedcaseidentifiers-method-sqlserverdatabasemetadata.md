@@ -16,10 +16,10 @@ ms.assetid: 0f68d9f7-0d8d-4d8d-9188-14e253a2576a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f11d0b52c6852a76bafa11eeb07433a1ac2a1de
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969270"
 ---
 # <a name="supportsmixedcaseidentifiers-method-sqlserverdatabasemetadata"></a>supportsMixedCaseIdentifiers 方法 (SQLServerDatabaseMetaData)

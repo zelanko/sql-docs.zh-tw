@@ -16,10 +16,10 @@ ms.assetid: fd152ad6-dd5e-49ef-b166-917371a2cba6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f986b7fd5faadfbd24708ec9a339d3bd2f104f0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974575"
 ---
 # <a name="setdate-method-javalangstring-javasqldate-javautilcalendar"></a>setDate 方法 (java.lang.String, java.sql.Date, java.util.Calendar)

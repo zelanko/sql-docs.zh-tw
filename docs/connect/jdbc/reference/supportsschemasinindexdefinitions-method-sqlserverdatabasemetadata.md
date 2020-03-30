@@ -16,10 +16,10 @@ ms.assetid: 55ce9e4f-6e3f-482a-93a5-b9ae1b91d7a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b472c7df1b0bade87dad979421636cb8a386c3bd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67968906"
 ---
 # <a name="supportsschemasinindexdefinitions-method-sqlserverdatabasemetadata"></a>supportsSchemasInIndexDefinitions 方法 (SQLServerDatabaseMetaData)

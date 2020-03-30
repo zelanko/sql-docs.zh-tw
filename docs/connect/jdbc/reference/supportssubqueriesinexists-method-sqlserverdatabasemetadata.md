@@ -16,10 +16,10 @@ ms.assetid: 14c08c7f-5c1e-4e21-8373-ae32c22e47d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22da8ae3f7f86501bdd15669c439a8d177ebd5f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67968747"
 ---
 # <a name="supportssubqueriesinexists-method-sqlserverdatabasemetadata"></a>supportsSubqueriesInExists 方法 (SQLServerDatabaseMetaData)

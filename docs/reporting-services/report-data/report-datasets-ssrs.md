@@ -9,10 +9,10 @@ ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 73de47423caed308e1a9ae433bdcc7b24b3e69d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081945"
 ---
 # <a name="report-datasets-ssrs"></a>報表資料集 (SSRS)
@@ -36,12 +36,12 @@ ms.locfileid: "77081945"
   
  您也可以透過加入包含相依資料集的報表組件，將資料集加入至報表中。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- 若要了解如何建立報表，以顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料，請參閱[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。 若要建置包含自己資料的報表，請參閱[教學課程：離線建立快速圖表報表 &#40;報表產生器&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
+ 若要了解如何建立報表，以顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料，請參閱[教學課程︰建立基本資料表報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。 若要建立包括自己本身資料的報表，請參閱[教學課程︰離線建立快速圖表報表 &#40;報表產生器&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Methods"></a> 加入報表資料  
+##  <a name="adding-report-data"></a><a name="Methods"></a> 加入報表資料  
  在報表產生器中，您可以使用下列方式加入報表資料。  
   
 -   將報表組件從報表伺服器加入至報表中。 每個報表組件都是獨立的，並包含相依的資料集。 系統會預先定義資料集。  
@@ -76,7 +76,7 @@ ms.locfileid: "77081945"
 -   [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
-##  <a name="QuickStart"></a> 加入包含報表組件的資料  
+##  <a name="adding-data-with-report-parts"></a><a name="QuickStart"></a> 加入包含報表組件的資料  
  報表組件包含它們所相依的資料集。 這些資料集是在報表伺服器上提供的共用資料來源上建立的。 在報表產生器中，當您將報表組件加入至報表時，相依的資料集也會加入到報表中，就像您手動加入它們一樣。 例如，預先定義的圖表包含資料集。 若要查看資料，請預覽報表。  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ ms.locfileid: "77081945"
 -   如需詳細資訊，請參閱[報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) 和[報表設計師中的報表組件 &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
   
   
-##  <a name="Queries"></a> 查詢和查詢設計工具  
+##  <a name="queries-and-query-designers"></a><a name="Queries"></a> 查詢和查詢設計工具  
  若要指定資料來源中所需的資料，您要建立一個查詢命令。 每種資料來源類型都會提供一個相關的 *「查詢設計工具」* (Query Designer) 來協助您建立查詢。 查詢設計工具可以是圖形化或以文字為基礎。 在圖形化查詢設計工具中，您可以檢視代表外部資料來源之資料的中繼資料，並將欄位或項目拖曳到查詢設計介面，以互動方式建立查詢。 在以文字為基礎的查詢設計工具中，您可以使用外部資料來源支援的查詢語法撰寫或匯入查詢。  
   
  在查詢設計工具中，您可以執行查詢來檢視範例資料並驗證查詢命令語法。 在結果集中的資料行名稱會變成您在 [報表資料] 窗格中看到的欄位名稱。 結果集必須是單一一組資料列和資料行，其中每個資料列都有相同數目的值。 不支援來自單一查詢的多個結果集。 不支援沒有固定資料行數目，而且每個資料列可能產生不同資料值數目的不完全階層。  
@@ -97,7 +97,7 @@ ms.locfileid: "77081945"
  資料延伸模組和外部資料來源之間的通訊是由資料提供者處理。 查詢命令語法、查詢參數，以及結果集中之值資料類型的支援取決於每個資料提供者。 如需詳細資訊，請參閱特定資料延伸模組類型的主題和[查詢設計工具 &#40;SSRS&#41;](query-design-tools-ssrs.md)。  
   
   
-##  <a name="HowTo"></a> 如何主題  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 如何主題  
  [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
@@ -117,7 +117,7 @@ ms.locfileid: "77081945"
  [在 Analysis Services 的 MDX 查詢設計工具中定義參數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
   
-##  <a name="Section"></a> 本節內容  
+##  <a name="in-this-section"></a><a name="Section"></a> 本節內容  
  [報表產生器中的報表組件和資料集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
   
  [建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  

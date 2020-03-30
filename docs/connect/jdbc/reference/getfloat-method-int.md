@@ -16,10 +16,10 @@ ms.assetid: 40178471-4f35-4df9-b3fb-80cdf43de274
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bb0f1d7376c92eb5710e9d308d40f10fce1e3fa1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983110"
 ---
 # <a name="getfloat-method-int"></a>getFloat 方法 (int)

@@ -32,10 +32,10 @@ ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d8df41eb7c0a0463648898c08091dd8f8c01f29
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581735"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>變更地圖圖例、色階與相關的規則 (報表產生器及 SSRS)
@@ -51,22 +51,22 @@ ms.locfileid: "65581735"
   
  ![rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "rs_MapElements")  
   
-##  <a name="Viewport"></a> 變更圖例相對於檢視區的位置  
+##  <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a><a name="Viewport"></a> 變更圖例相對於檢視區的位置  
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>變更圖例相對於檢視區的位置  
   
-1.  在 [設計] 檢視中，以滑鼠右鍵按一下圖例，然後開啟 [\<報表項目>  屬性]  頁面。  
+1.  在 [設計] 檢視中，以滑鼠右鍵按一下圖例，然後開啟 [_報表項目>\<_ 屬性]  頁面。  
   
 2.  在 [位置]  中，按一下指定讓圖例顯示在相對於檢視區的位置。  
   
-3.  若要在檢視區外顯示圖例，請選取 [在檢視區外顯示 <報表項目\<]  。  
+3.  若要在檢視區外顯示圖例，請選取 [在檢視區外顯示 <報表項目 **]\<** 。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  在預覽中，只有在與該圖例相關的規則有結果時，才會顯示地圖圖例和色階。 如果沒有要顯示的項目，則圖例不會出現在轉譯的報表中。  
   
-##  <a name="MapLegend"></a> 變更地圖圖例的配置  
+##  <a name="to-change-the-layout-of-a-map-legend"></a><a name="MapLegend"></a> 變更地圖圖例的配置  
   
 #### <a name="to-change-the-layout-of-a-map-legend"></a>變更地圖圖例的配置  
   
@@ -76,19 +76,19 @@ ms.locfileid: "65581735"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="MapLegendTitle"></a> 顯示或隱藏地圖圖例標題  
+##  <a name="to-show-or-hide-a-map-legend-title"></a><a name="MapLegendTitle"></a> 顯示或隱藏地圖圖例標題  
   
 #### <a name="to-show-or-hide-a-map-legend-title"></a>顯示或隱藏地圖圖例標題  
   
 -   在設計介面上以滑鼠右鍵按一下地圖圖例，然後按一下 [顯示圖例標題]  。  
   
-##  <a name="ColorScaleTitle"></a> 顯示或隱藏色階標題  
+##  <a name="to-show-or-hide-a-color-scale-title"></a><a name="ColorScaleTitle"></a> 顯示或隱藏色階標題  
   
 #### <a name="to-show-or-hide-a-color-scale-title"></a>顯示或隱藏色階標題  
   
 -   在設計介面上以滑鼠右鍵按一下色階，然後按一下 [顯示色階標題]  。  
   
-##  <a name="MoveItems"></a> 從第一個圖例中移出項目  
+##  <a name="to-move-items-out-of-the-first-legend"></a><a name="MoveItems"></a> 從第一個圖例中移出項目  
  依您需要建立多個額外的圖例，然後更新每個地圖圖層的規則，指定要在哪一個圖例中顯示規則結果。  
   
 #### <a name="to-create-a-new-legend"></a>建立新的圖例  
@@ -101,7 +101,7 @@ ms.locfileid: "65581735"
   
 1.  在 [設計] 檢視中，按一下地圖，直到 [地圖] 窗格出現為止。  
   
-2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [\<地圖元素類型>  色彩規則]  。  
+2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [_地圖元素類型>\<_ 色彩規則]  。  
   
 3.  按一下 **[圖例]** 。  
   
@@ -109,13 +109,13 @@ ms.locfileid: "65581735"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TemplateStyle"></a> 根據範本樣式更改地圖元素色彩  
+##  <a name="to-vary-map-element-colors-based-on-a-template-style"></a><a name="TemplateStyle"></a> 根據範本樣式更改地圖元素色彩  
   
 #### <a name="to-vary-map-element-colors-based-on-a-template-style"></a>根據範本樣式更改地圖元素色彩  
   
 1.  在 [設計] 檢視中，按一下地圖，直到 [地圖] 窗格出現為止。  
   
-2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [\<地圖元素類型>  色彩規則]  。  
+2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [_地圖元素類型>\<_ 色彩規則]  。  
   
 3.  按一下 [套用範本樣式]  。  
   
@@ -123,13 +123,13 @@ ms.locfileid: "65581735"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorPalette"></a> 根據色彩調色盤更改地圖元素色彩  
+##  <a name="to-vary-map-element-colors-based-on-color-palette"></a><a name="ColorPalette"></a> 根據色彩調色盤更改地圖元素色彩  
   
 #### <a name="to-vary-map-element-colors-based-on-color-palette"></a>根據色彩調色盤更改地圖元素色彩  
   
 1.  在 [設計] 檢視中，按一下地圖，直到 [地圖] 窗格出現為止。  
   
-2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [\<地圖元素類型>  色彩規則]  。  
+2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [_地圖元素類型>\<_ 色彩規則]  。  
   
 3.  按一下 [使用調色盤將資料視覺化]  。  
   
@@ -141,13 +141,13 @@ ms.locfileid: "65581735"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorRanges"></a> 根據色彩範圍更改地圖元素色彩  
+##  <a name="to-vary-map-element-colors-based-on-color-ranges"></a><a name="ColorRanges"></a> 根據色彩範圍更改地圖元素色彩  
   
 #### <a name="to-vary-map-element-colors-based-on-color-ranges"></a>根據色彩範圍更改地圖元素色彩  
   
 1.  在 [設計] 檢視中，按一下地圖，直到 [地圖] 窗格出現為止。  
   
-2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [\<地圖元素類型>  色彩規則]  。  
+2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [_地圖元素類型>\<_ 色彩規則]  。  
   
 3.  按一下 [使用色彩範圍將資料視覺化]  。  
   
@@ -163,13 +163,13 @@ ms.locfileid: "65581735"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="CustomColors"></a> 根據自訂色彩更改地圖元素色彩  
+##  <a name="to-vary-map-element-colors-based-on-custom-colors"></a><a name="CustomColors"></a> 根據自訂色彩更改地圖元素色彩  
   
 #### <a name="to-vary-map-element-colors-based-on-custom-colors"></a>根據自訂色彩更改地圖元素色彩  
   
 1.  在 [設計] 檢視中，按一下地圖，直到 [地圖] 窗格出現為止。  
   
-2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [\<地圖元素類型>  色彩規則]  。  
+2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [_地圖元素類型>\<_ 色彩規則]  。  
   
 3.  按一下 [使用自訂色彩將資料視覺化]  。  
   
@@ -181,15 +181,15 @@ ms.locfileid: "65581735"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="DistributionOptions"></a> 設定圖例的分佈選項  
+##  <a name="to-set-distribution-options-for-a-legend"></a><a name="DistributionOptions"></a> 設定圖例的分佈選項  
   
 #### <a name="to-set-distribution-options-for-a-legend"></a>設定圖例的分佈選項  
   
 1.  在 [設計] 檢視中，按一下地圖，直到 [地圖] 窗格出現為止。  
   
-2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [\<地圖元素類型>  色彩規則]  。  
+2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [_地圖元素類型>\<_ 色彩規則]  。  
   
-3.  選取 [使用 \<規則類型> 將資料視覺化]  選項。 若要使用分佈選項，您必須根據與圖層相關聯的分析資料，在 [分佈]  頁面上建立範圍。  
+3.  選取 [使用 **規則類型> 將資料視覺化]** \< 選項。 若要使用分佈選項，您必須根據與圖層相關聯的分析資料，在 [分佈]  頁面上建立範圍。  
   
 4.  按一下 **[分佈]** 。  
   
@@ -213,15 +213,15 @@ ms.locfileid: "65581735"
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="RuleLegend"></a> 變更規則圖例的內容  
+##  <a name="to-change-the-contents-of-a-rule-legend"></a><a name="RuleLegend"></a> 變更規則圖例的內容  
   
 #### <a name="to-change-the-contents-of-a-color-size-width-or-marker-type-legend"></a>變更色彩、大小、寬度或標記類型圖例的內容  
   
 1.  在 [設計] 檢視中，按一下地圖，直到 [地圖] 窗格出現為止。  
   
-2.  以滑鼠右鍵按一下其中包含所需資料的圖層，然後按一下 [\<地圖元素類型>  規則]  。  
+2.  以滑鼠右鍵按一下其中包含所需資料的圖層，然後按一下 [_地圖元素類型>\<_ 規則]  。  
   
-3.  確認已選取 [使用 \<規則類型  > 將資料視覺化]  選項。  
+3.  確認已選取 [使用 **規則類型**\<> 將資料視覺化]  選項。  
   
 4.  在 [資料欄位]  中，確認已選取您要在圖層上視覺化的分析資料。  
   
@@ -234,15 +234,15 @@ ms.locfileid: "65581735"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ColorScale"></a> 變更色階的內容  
+##  <a name="to-change-the-contents-of-the-color-scale"></a><a name="ColorScale"></a> 變更色階的內容  
   
 #### <a name="to-change-the-contents-of-the-color-scale-or-a-color-legend"></a>變更色階或色彩圖例的內容  
   
 1.  在 [設計] 檢視中，按一下地圖，直到 [地圖] 窗格出現為止。  
   
-2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [\<地圖元素類型>  色彩規則]  。  
+2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [_地圖元素類型>\<_ 色彩規則]  。  
   
-3.  選取要使用的色彩規則選項。 若要以地圖圖例或色階顯示項目，您必須選取其中一個 [使用 \<規則類型> 將資料視覺化]  選項。  
+3.  選取要使用的色彩規則選項。 若要以地圖圖例或色階顯示項目，您必須選取其中一個 [使用 **規則類型> 將資料視覺化]** \< 選項。  
   
 4.  在 [資料欄位]  中，確認已選取您要在圖層上視覺化的分析資料。  
   
@@ -255,26 +255,26 @@ ms.locfileid: "65581735"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="HideItems"></a> 移除圖例中的所有項目  
+##  <a name="to-remove-all-items-from-a-legend"></a><a name="HideItems"></a> 移除圖例中的所有項目  
   
 #### <a name="to-hide-items-based-on-a-rule"></a>根據規則隱藏項目  
   
 1.  在 [設計] 檢視中，按一下地圖，直到 [地圖] 窗格出現為止。  
   
-2.  以滑鼠右鍵按一下其中包含所需資料的圖層，然後按一下 [\<地圖元素類型>  規則]  。  
+2.  以滑鼠右鍵按一下其中包含所需資料的圖層，然後按一下 [_地圖元素類型>\<_ 規則]  。  
   
 3.  按一下 **[圖例]** 。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ChangeFormatItems"></a> 變更圖例中的內容格式  
+##  <a name="to-change-the-format-of-content-in-a-legend"></a><a name="ChangeFormatItems"></a> 變更圖例中的內容格式  
  設定與地圖圖例相關聯之規則的圖例選項。  
   
 #### <a name="to-change-the-format-of-content-in-a-legend"></a>變更圖例中的內容格式  
   
 1.  在 [設計] 檢視中，按一下地圖，直到 [地圖] 窗格出現為止。  
   
-2.  以滑鼠右鍵按一下其中包含所需資料的圖層，然後按一下 [\<地圖元素類型>  規則]  。  
+2.  以滑鼠右鍵按一下其中包含所需資料的圖層，然後按一下 [_地圖元素類型>\<_ 規則]  。  
   
 3.  按一下 **[圖例]** 。  
   

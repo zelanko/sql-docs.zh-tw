@@ -16,10 +16,10 @@ ms.assetid: 8eab6a8e-91f3-47b1-8707-5e57368ad0c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81faa132ccdba32537615aeed4a34aa39e1b7c76
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983538"
 ---
 # <a name="getdouble-method-javalangstring"></a>getDouble 方法 (java.lang.String)
@@ -40,7 +40,7 @@ public double getDouble(java.lang.String sCol)
  包含參數名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
- **雙精度浮點數**值。  
+ **double** 值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

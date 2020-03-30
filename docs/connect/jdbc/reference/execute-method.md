@@ -16,10 +16,10 @@ ms.assetid: fa96d0f8-101b-422f-a767-405be9a5f74f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f7e87040fa74954435ed52f9923568e8bfed3fd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954920"
 ---
 # <a name="execute-method-"></a>execute 方法 ()

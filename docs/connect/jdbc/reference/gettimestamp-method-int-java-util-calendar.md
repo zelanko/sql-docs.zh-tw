@@ -16,10 +16,10 @@ ms.assetid: 161c559a-8651-44ba-a914-15eb6a612417
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50aa202837bee9e091cbb2ad31f56da6ea15eef0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978868"
 ---
 # <a name="gettimestamp-method-int-javautilcalendar"></a>getTimestamp 方法 (int, java.util.Calendar)
@@ -42,10 +42,10 @@ public java.sql.Timestamp getTimestamp(int index,
   
  *cal*  
   
- 行事曆物件。  
+ Calendar 物件。  
   
 ## <a name="return-value"></a>傳回值  
- 時間戳記物件。  
+ Timestamp 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

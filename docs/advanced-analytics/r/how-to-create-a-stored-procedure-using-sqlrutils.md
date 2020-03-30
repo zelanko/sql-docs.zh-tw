@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727466"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>使用 sqlrutils 建立預存程序
@@ -21,7 +21,7 @@ ms.locfileid: "73727466"
 
 本文描述如何轉換 R 程式碼，以透過 T-SQL 預存程序形式加以執行的步驟。 為了獲得最佳的結果，您的程式碼可能需要稍加修改，以確保所有輸入皆可參數化。
 
-## <a name="bkmk_rewrite"></a>步驟 1. 重寫 R 指令碼
+## <a name="step-1-rewrite-r-script"></a><a name="bkmk_rewrite"></a>步驟 1. 重寫 R 指令碼
 
 為了獲得最佳結果，您應該重寫 R 程式碼，將它封裝為單一函式。
 
@@ -145,7 +145,7 @@ StoredProcedure (foosql, sp_rsample, queryinput, sqloutput, filePath = "C:\\Temp
 2. 針對每個輸入參數，定義 `$query` 或設定 `$value` 。
 3. 使用 `executeStoredProcedure` 以從 R 開發環境執行預存程序，同時傳遞您所設定的輸入參數物件清單。
 
-## <a name = "samples"></a>範例
+## <a name="example"></a><a name = "samples"></a>範例
 
 此範例會顯示 R 指令碼的前後版本，該指令碼從 SQL Server 資料庫取得資料、對資料執行一些轉換，然後將其保存到不同的資料庫中。
 

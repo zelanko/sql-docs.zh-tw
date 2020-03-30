@@ -16,10 +16,10 @@ ms.assetid: 7c32ea64-460e-4636-8a3b-07c8abeed687
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eb65d3a7cc512b6131d32d386c04530234ee6121
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969121"
 ---
 # <a name="supportsnonnullablecolumns-method-sqlserverdatabasemetadata"></a>supportsNonNullableColumns 方法 (SQLServerDatabaseMetaData)

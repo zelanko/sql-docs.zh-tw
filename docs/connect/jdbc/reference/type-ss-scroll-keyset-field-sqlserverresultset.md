@@ -16,10 +16,10 @@ ms.assetid: 2b16123e-07ab-4c73-9509-e0425910680b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 51c00329a51bba6a1b2b94d6b3a15fd1c147c301
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67968435"
 ---
 # <a name="type_ss_scroll_keyset-field-sqlserverresultset"></a>TYPE_SS_SCROLL_KEYSET 欄位 (SQLServerResultSet)

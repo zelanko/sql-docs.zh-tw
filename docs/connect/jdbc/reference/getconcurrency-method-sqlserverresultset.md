@@ -16,10 +16,10 @@ ms.assetid: 207e25f4-769c-4ff3-913c-3517b06208e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5d0d59186e15dc07d1d4e91ac673c456ec592d01
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67952828"
 ---
 # <a name="getconcurrency-method-sqlserverresultset"></a>getConcurrency 方法 (SQLServerResultSet)

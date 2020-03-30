@@ -11,10 +11,10 @@ ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027587"
 ---
 # <a name="tracing-driver-operation"></a>追蹤驅動程式作業
@@ -59,8 +59,8 @@ ms.locfileid: "69027587"
 |WARNING|表示潛在問題。|  
 |INFO|提供參考訊息。|  
 |FINE|提供追蹤資訊，包括基本物件建立和解構。 此外，還提供了公用方法所擲回的所有例外狀況。|  
-|FINER|提供詳細的追蹤資訊，包括所有公用方法的進入和結束點 (包含相關聯的參數資料類型)，以及公用類別的所有公用屬性。 此外，還提供輸入參數、輸出參數和方法傳回值 (CLOB、BLOB、NCLOB、Reader、\<stream> 傳回值類型除外)。<br /><br /> 下列記錄類別存在於 JDBC 驅動程式 1.2 版中，而且具有 FINE 記錄層級：[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、XA 及 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)。 從 2.0 版開始，這些項目已升級為 FINER 層級。|  
-|FINEST|提供非常詳細的追蹤資訊。 這是最低的記錄層級。<br /><br /> 下列記錄類別存在於 JDBC 驅動程式 1.2 版中，而且具有 FINEST 記錄層級：TDS.DATA 和 TDS.TOKEN。 從 2.0 版開始，它們保留 FINEST 記錄層級。|  
+|FINER|提供詳細的追蹤資訊，包括所有公用方法的進入和結束點 (包含相關聯的參數資料類型)，以及公用類別的所有公用屬性。 此外，還提供輸入參數、輸出參數和方法傳回值 (CLOB、BLOB、NCLOB、Reader、\<stream> 傳回值類型除外)。<br /><br /> 下列記錄類別目錄存在於 JDBC 驅動程式 1.2 版中，而且具有 FINE 記錄層級：[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、XA 和 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)。 從 2.0 版開始，這些項目已升級為 FINER 層級。|  
+|FINEST|提供非常詳細的追蹤資訊。 這是最低的記錄層級。<br /><br /> 下列記錄類別目錄存在 JDBC Driver 1.2 版中，而且具有 FINEST 記錄層級：TDS.DATA 和 TDS.TOKEN。 從 2.0 版開始，它們保留 FINEST 記錄層級。|  
 |OFF|關閉記錄。|  
 |ALL|啟用所有訊息的記錄。|  
   

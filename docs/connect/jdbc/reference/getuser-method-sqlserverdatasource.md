@@ -16,10 +16,10 @@ ms.assetid: 3513dd7f-6ae5-4010-bde0-454ac4365bce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5562f9b19b59096784ad3dd2a09e9135a7e07cf2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978181"
 ---
 # <a name="getuser-method-sqlserverdatasource"></a>getUser 方法 (SQLServerDataSource)

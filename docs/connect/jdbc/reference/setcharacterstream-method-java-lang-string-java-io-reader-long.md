@@ -11,10 +11,10 @@ ms.assetid: 54fb2f13-f8d8-47b5-bec1-4a5af3e86a84
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d5200ba88b259e75d1417bcb876de9bdbd20899
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974687"
 ---
 # <a name="setcharacterstream-method-javalangstring-javaioreader-long"></a>setCharacterStream 方法 (java.lang.String, java.io.Reader, long)

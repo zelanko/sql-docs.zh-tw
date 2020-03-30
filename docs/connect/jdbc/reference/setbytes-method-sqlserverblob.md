@@ -16,10 +16,10 @@ ms.assetid: cd193265-3a65-4b1e-86ec-7818c3c0c1e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 00bc342081260af4740f20e6ec88c02061623b28
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974901"
 ---
 # <a name="setbytes-method-sqlserverblob"></a>setBytes 方法 (SQLServerBlob)

@@ -18,10 +18,10 @@ ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32b095c37f6a0b039e0836da4508ed8cbfe5fd3b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015021"
 ---
 # <a name="sqlsrv_fetch"></a>sqlsrv_fetch
@@ -42,7 +42,7 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
 > [!NOTE]  
 > 陳述式必須在擷取結果之前執行。 如需執行陳述式的相關資訊，請參閱 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)。  
   
-*row* [選用]：下列其中一個值，指定要在使用可捲動資料指標的結果集內存取的資料列：  
+*row* [選擇性]：下列其中一個值，指定要在使用可捲動資料指標之結果集內存取的資料列：  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -58,7 +58,7 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
   
 如需這些值的詳細資訊，請參閱 [指定資料指標類型及選取資料列](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。  
   
-*offset* [選用]：與 SQLSRV_SCROLL_ABSOLUTE 和 SQLSRV_SCROLL_RELATIVE 搭配使用，以指定要擷取的資料列。 結果集內的第一個記錄為 0。  
+*offset* [選擇性]：與 SQLSRV_SCROLL_ABSOLUTE 和 SQLSRV_SCROLL_RELATIVE 搭配使用，以指定要擷取的資料列。 結果集內的第一個記錄為 0。  
   
 ## <a name="return-value"></a>傳回值  
 如果已成功擷取結果集的下一個資料列，將會傳回 **true** 。 如果結果集內已沒有其他結果，則會傳回 **Null** 。 如果發生錯誤，將會傳回 **false** 。  

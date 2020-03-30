@@ -11,10 +11,10 @@ ms.assetid: f9b1be55-6c2b-4568-a768-5294675ae35f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9b8f11b05f2e10fe5d0569f4f8b4565aa438abb6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970410"
 ---
 # <a name="sqlserversavepoint-constructors"></a>SQLServerSavepoint 建構函式

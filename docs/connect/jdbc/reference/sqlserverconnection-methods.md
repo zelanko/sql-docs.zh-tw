@@ -11,10 +11,10 @@ ms.assetid: c3db6be0-9e2b-4408-ab22-b6ecfc42961e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0a07ef7ede3c8ac7898692c5726b665fee92988d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971710"
 ---
 # <a name="sqlserverconnection-methods"></a>SQLServerConnection 方法

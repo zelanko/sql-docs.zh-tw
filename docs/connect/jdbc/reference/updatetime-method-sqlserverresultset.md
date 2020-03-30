@@ -16,10 +16,10 @@ ms.assetid: 74570541-a041-413b-8abd-73ced9bf8900
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f361f4c7f6435682414f27040a3f28c31c097f82
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998172"
 ---
 # <a name="updatetime-method-sqlserverresultset"></a>updateTime 方法 (SQLServerResultSet)

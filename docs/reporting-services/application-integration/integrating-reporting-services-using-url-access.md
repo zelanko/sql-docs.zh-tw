@@ -14,10 +14,10 @@ ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 56ef7e673e9002e2144cef37c6d01284888ed483
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74796822"
 ---
 # <a name="integrate-reporting-services-using-url-access"></a>使用 URL 存取整合 Reporting Services

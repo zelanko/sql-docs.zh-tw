@@ -18,10 +18,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.openlocfilehash: 026b25a81401f1c21523a80cca9003c41b9606ab
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256237"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>移除伺服器群組 (SQL Server Management Studio)

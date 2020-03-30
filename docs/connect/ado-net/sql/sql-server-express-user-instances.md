@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 91b00848fb42c64f1c180019a7618bf649488bd9
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896247"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 使用者執行個體
@@ -113,7 +113,7 @@ private static void OpenSqlConnection()
 ```  
   
 > [!NOTE]
->  在 SQL Server 內部執行的通用語言執行平台 (CLR) 程式碼不支援使用者執行個體。 如果在連接字串中有 `User Instance=true` 的 <xref:Microsoft.Data.SqlClient.SqlConnection> 上呼叫 `Open`，會擲回 <xref:System.InvalidOperationException>。  
+>  在 SQL Server 內部執行的通用語言執行平台 (CLR) 程式碼不支援使用者執行個體。 如果在連接字串中有 <xref:System.InvalidOperationException> 的 `Open` 上呼叫 <xref:Microsoft.Data.SqlClient.SqlConnection>，會擲回 `User Instance=true`。  
   
 ## <a name="lifetime-of-a-user-instance-connection"></a>使用者執行個體連線的存留期  
 不同於以服務方式執行的 SQL Server 版本，SQL Server Express 執行個體不需要手動啟動及停止。 每次使用者登入並連線到使用者執行個體時，如果使用者執行個體尚未執行，就會啟動該執行個體。 使用者執行個體資料庫已設定 `AutoClose` 選項，因此資料庫會在一段時間沒有活動之後自動關閉。 在執行個體的最後一個連線關閉之後，已啟動的 sqlservr.exe 程序會繼續執行一段有限的逾時期間，因此，如果在逾時到期之前開啟另一個連線，就不需要重新啟動該處理序。 如果在該逾時期間到期之前未開啟任何新的連線，使用者執行個體會自動關閉。 父執行個體的系統管理員可以使用 **sp_configure** 來變更 **user instance timeout** 選項，藉此設定使用者執行個體的逾時期限持續期間。 預設值是 60 分鐘。  

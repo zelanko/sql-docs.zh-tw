@@ -11,10 +11,10 @@ ms.assetid: fe13326b-799d-4bf3-b4f1-32ab1841d0ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5136e4502b3101bfe53998cbf268962e2761d574
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974821"
 ---
 # <a name="setcharacterstream-method-sqlserverpreparedstatement"></a>setCharacterStream 方法 (SQLServerPreparedStatement)

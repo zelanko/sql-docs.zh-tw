@@ -12,10 +12,10 @@ ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 996a7f53b5969c9c1d8c39edcd23b62d45a7ff15
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65502732"
 ---
 # <a name="mhtml-device-information-settings"></a>MHTML 裝置資訊設定

@@ -16,10 +16,10 @@ ms.assetid: f3c54bfe-d5b7-4f6e-ae6c-3e8954e5b1c9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3bc8420b9f79ce61874dbb03e73924e7be6eca96
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976781"
 ---
 # <a name="movetoinsertrow-method-sqlserverresultset"></a>moveToInsertRow 方法 (SQLServerResultSet)

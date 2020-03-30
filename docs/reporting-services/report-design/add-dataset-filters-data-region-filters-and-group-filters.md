@@ -9,10 +9,10 @@ ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65582058"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>新增資料集篩選、資料區篩選和群組篩選
@@ -25,12 +25,12 @@ ms.locfileid: "65582058"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="When"></a> 選擇要設定篩選的時機  
+##  <a name="choosing-when-to-set-a-filter"></a><a name="When"></a> 選擇要設定篩選的時機  
  當您無法篩選來源的資料時，請指定報表項目的篩選。 例如，當資料來源不支援查詢參數、您必須執行預存程序但無法修改查詢，或者參數化報表快照集會針對不同的使用者顯示自訂資料時，請使用報表篩選。  
   
  您可以在擷取報表資料集之前或之後來篩選報表資料。 若要在擷取資料之前進行篩選，請針對每個資料集變更查詢。 當您篩選查詢中的資料時，您會篩選資料來源中的資料，這樣會減少在報表中擷取及處理所需的資料量。 若要在擷取資料之後進行篩選，請在報表中建立篩選運算式。 您可以為資料集、資料區或群組 (包括詳細資料群組) 設定篩選運算式。 您也可以在篩選運算式中包含參數，提供一個方式來為特定值或特定使用者篩選資料，例如，篩選可識別檢視報表之使用者的值。  
   
-##  <a name="Where"></a> 選擇要設定篩選的位置  
+##  <a name="choosing-where-to-set-a-filter"></a><a name="Where"></a> 選擇要設定篩選的位置  
  依據您想要在報表中達成的效果，判斷要設定篩選的位置。 在執行階段，報表處理器會按照下列順序套用篩選：套用至資料集、套用至資料區，然後由上而下套用至每個群組階層中的群組。 在資料表、矩陣和清單上，系統會針對資料列群組、資料行群組和相鄰群組獨立套用篩選。 在圖表上，系統會針對類別目錄群組和數列群組獨立套用篩選。 當報表處理器套用篩選時，系統就會按照在每個報表項目之 [屬性]  對話方塊的 [篩選]  頁面上定義的順序套用所有篩選方程式，而這就相當於使用布林值 AND 作業來結合這些篩選方程式。  
   
  下列清單會比較針對不同報表項目設定篩選的效果：  
@@ -47,7 +47,7 @@ ms.locfileid: "65582058"
   
  回到頁首  
   
-##  <a name="FilterEquations"></a> 了解篩選方程式  
+##  <a name="understanding-a-filter-equation"></a><a name="FilterEquations"></a> 了解篩選方程式  
  在執行階段，報表處理器會將值轉換成指定的資料類型，然後使用指定的運算子來比較運算式和值。 下列清單將描述篩選方程式的每個部分：  
   
 -   **運算式** ：定義您要篩選的項目。 一般而言，這是資料集欄位。  

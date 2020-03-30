@@ -16,10 +16,10 @@ ms.assetid: 3336d4c1-d999-43cc-b36b-ff1532e899bc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2c1a5a30c6bc303f7e2caf094e9c1d803ab6781
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980687"
 ---
 # <a name="getprocedureterm-method-sqlserverdatabasemetadata"></a>getProcedureTerm 方法 (SQLServerDatabaseMetaData)

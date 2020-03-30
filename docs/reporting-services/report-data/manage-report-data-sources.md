@@ -14,10 +14,10 @@ ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 68125acb2c810e7463c8612936e545026ea94d69
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74190813"
 ---
 # <a name="manage-report-data-sources"></a>管理報表資料來源
@@ -37,7 +37,7 @@ ms.locfileid: "74190813"
   
  請注意，修改查詢不是資料來源連接管理的一部分。 若要針對報表或模型修改查詢，您必須使用撰寫工具，並在報表或模型定義內進行變更。  
   
-## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>受控屬性：資料來源類型、連接字串和認證  
+## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Managed 屬性：資料來源類型、連接字串和認證  
  您可以在報表伺服器上管理的資料來源屬性如下：  
   
 |屬性|描述|如何管理|  

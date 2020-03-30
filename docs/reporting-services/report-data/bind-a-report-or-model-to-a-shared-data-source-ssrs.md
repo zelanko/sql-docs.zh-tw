@@ -12,10 +12,10 @@ ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c5aa5e504c8434d3634b903c08b6a03c0e62345c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081416"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>將報表繫結至共用資料來源 (SSRS)

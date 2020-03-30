@@ -16,10 +16,10 @@ ms.assetid: 480f21b6-50cc-4b1e-a0b0-8774ecfe94f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 54a69c6a7ae62d96b6d2df08c671a5f8d92ced3f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955227"
 ---
 # <a name="createstatement-method-"></a>createStatement 方法 ()
@@ -35,7 +35,7 @@ public java.sql.Statement createStatement()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 陳述式物件。  
+ Statement 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

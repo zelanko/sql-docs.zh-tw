@@ -9,10 +9,10 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73637988"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教學課程：建立鑽研及主報表 (報表產生器)
@@ -35,7 +35,7 @@ ms.locfileid: "73637988"
     
 如需一般需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="DMatrixAndDataset"></a>1.從資料表或矩陣精靈建立鑽研報表  
+## <a name="1-create-a-drillthrough-report-from-the-table-or-matrix-wizard"></a><a name="DMatrixAndDataset"></a>1.從資料表或矩陣精靈建立鑽研報表  
 從 [使用者入門] 對話方塊中，使用 **[資料表或矩陣精靈]** 建立矩陣報表。 精靈中可用的模式有兩種：報表設計和共用資料集設計。 在本教學課程中，您將使用報表設計模式。  
   
 #### <a name="to-create-a-new-report"></a>建立新的報表  
@@ -50,7 +50,7 @@ ms.locfileid: "73637988"
   
 3.  在右窗格中，確認已選取 **[資料表或矩陣精靈]** 。  
   
-## <a name="DConnection"></a>1a. 指定資料連接  
+## <a name="1a-specify-a-data-connection"></a><a name="DConnection"></a>1a. 指定資料連接  
 資料連接包含連接至外部資料來源所需的資訊，例如 Analysis Services Cube 或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。 若要指定資料連接，您可以使用來自報表伺服器的共用資料來源，或是建立僅在此報表中使用的內嵌資料來源。 在本教學課程中，您將使用內嵌資料來源。 若要深入了解如何使用共用資料來源，請參閱[取得資料連線的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
 #### <a name="to-create-an-embedded-data-source"></a>建立內嵌資料來源  
@@ -96,7 +96,7 @@ ms.locfileid: "73637988"
   
 14. 按 [下一步]  。  
   
-## <a name="DMDXQuery"></a>1b. 建立 MDX 查詢  
+## <a name="1b-create-an-mdx-query"></a><a name="DMDXQuery"></a>1b. 建立 MDX 查詢  
 在報表中，您可以使用擁有預先定義查詢的共用資料集，或是建立只在報表中使用的內嵌資料集。 在本教學課程中，您將建立內嵌資料集。  
   
 #### <a name="to-create-query-filters"></a>若要建立查詢篩選  
@@ -149,7 +149,7 @@ ms.locfileid: "73637988"
     > [!NOTE]  
     > 此參數包含產品類別目錄的名稱。 當您按一下主報表中的產品類別目錄名稱時，系統會使用此參數將其名稱傳遞到鑽研報表。  
   
-### <a name="DSkip"></a>建立資料集  
+### <a name="to-create-the-dataset"></a><a name="DSkip"></a>建立資料集  
   
 1.  從 Channel 維度中，將 Channel Name 拖曳至資料窗格。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "73637988"
   
 7.  按 [下一步]  。  
   
-## <a name="DLayout"></a>1c. 將資料組織為群組  
+## <a name="1c-organize-data-into-groups"></a><a name="DLayout"></a>1c. 將資料組織為群組  
 當您選取將資料分組的欄位時，會設計包含資料列和資料行的矩陣，以顯示詳細資料和彙總資料。  
   
 #### <a name="to-organize-data-into-groups"></a>若要將資料組織為群組  
@@ -191,7 +191,7 @@ ms.locfileid: "73637988"
   
 6.  按 [下一步]  。  
   
-## <a name="DTotals"></a>1d. 加入小計和總計  
+## <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1d. 加入小計和總計  
 建立群組之後，您可以加入並格式化要顯示欄位彙總值的資料列。 您也可以選擇要顯示所有資料，或是讓使用者以互動方式展開和摺疊分組資料。  
   
 #### <a name="to-add-subtotals-and-totals"></a>加入小計和總計  
@@ -208,7 +208,7 @@ ms.locfileid: "73637988"
   
 3.  若要預覽報表，按一下 **[執行 (!)]** 。  
   
-## <a name="DFormat"></a>2.將資料格式化為貨幣  
+## <a name="2-format-data-as-currency"></a><a name="DFormat"></a>2.將資料格式化為貨幣  
 將貨幣格式套用到鑽研報表中的銷售量欄位。  
   
 #### <a name="to-format-data-as-currency"></a>若要將資料格式化為貨幣  
@@ -219,7 +219,7 @@ ms.locfileid: "73637988"
   
 3.  在 **[主資料夾]** 索引標籤的 **[數值]** 群組中，按一下 **[貨幣]** 。  
   
-## <a name="DSparkline"></a>3.加入資料行以便在走勢圖中顯示銷售值  
+## <a name="3-add-columns-to-show-sales-values-in-sparklines"></a><a name="DSparkline"></a>3.加入資料行以便在走勢圖中顯示銷售值  
 報表會顯示走勢圖中的值，而不會將銷售額與銷售報酬顯示為貨幣值。  
   
 #### <a name="to-add-sparklines-to-columns"></a>若要將走勢圖加入至資料行  
@@ -252,7 +252,7 @@ ms.locfileid: "73637988"
   
 13. 若要預覽報表，按一下 **[執行]** 。  
   
-## <a name="DReportTitle"></a>4.加入具有產品類別目錄名稱的報表標題  
+## <a name="4-add-report-title-with-product-category-name"></a><a name="DReportTitle"></a>4.加入具有產品類別目錄名稱的報表標題  
 報表標題會出現在報表的頂端。 您可以將報表標題放置在報表頁首，如果報表不使用報表頁首，則可以放置在報表主體頂端的文字方塊中。 在本教學課程中，您將使用自動放置在報表主體頂端的文字方塊。  
   
 #### <a name="to-add-a-report-title"></a>若要加入報表標題  
@@ -279,7 +279,7 @@ ms.locfileid: "73637988"
   
 報表標題包含第一個產品類別目錄的名稱。 稍後，在您當做鑽研報表執行此報表之後，產品類別目錄名稱將會動態變更，以反映在主報表中按下之產品類別目錄的名稱。  
   
-## <a name="DParameter"></a>5.更新參數屬性  
+## <a name="5-update-parameter-properties"></a><a name="DParameter"></a>5.更新參數屬性  
 參數預設是可見的，但不適合這個報表。 您將要更新鑽研報表的參數屬性。  
   
 #### <a name="to-hide-a-parameter"></a>若要隱藏參數  
@@ -302,7 +302,7 @@ ms.locfileid: "73637988"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="DSave"></a>6.將報表儲存至 SharePoint 文件庫  
+## <a name="6-save-the-report-to-a-sharepoint-library"></a><a name="DSave"></a>6.將報表儲存至 SharePoint 文件庫  
 您可以將報表儲存至 SharePoint 文件庫、報表伺服器或您的電腦上。 如果將報表儲存到您的電腦，就無法使用數個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能，例如報表組件和子報表。 在本教學課程中，您會將報表儲存至 SharePoint 程式庫。  
   
 #### <a name="to-save-the-report"></a>若要儲存報表  
@@ -335,7 +335,7 @@ ms.locfileid: "73637988"
   
 7.  按一下 [檔案]  。  
   
-## <a name="MMatrixAndDataset"></a>1.從資料表或矩陣精靈建立主報表  
+## <a name="1-create-the-main-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1.從資料表或矩陣精靈建立主報表  
 從 **[使用者入門]** 對話方塊中，使用 **[資料表或矩陣精靈]** 建立矩陣報表。  
   
 #### <a name="to-create-the-main-report"></a>建立主報表  
@@ -348,7 +348,7 @@ ms.locfileid: "73637988"
  
 2.  在 **[使用者入門]** 對話方塊中，確認已選取 **[新增報表]** ，然後按一下 **[資料表或矩陣精靈]** 。  
   
-## <a name="MConnection"></a>1a. 指定資料連接  
+## <a name="1a-specify-a-data-connection"></a><a name="MConnection"></a>1a. 指定資料連接  
 您會將內嵌的資料來源儲存到主報表。  
   
 #### <a name="to-create-an-embedded-data-source"></a>建立內嵌資料來源  
@@ -387,7 +387,7 @@ ms.locfileid: "73637988"
   
 14. 按 [下一步]  。  
   
-## <a name="MMDXQuery"></a>1b. 建立 MDX 查詢  
+## <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>1b. 建立 MDX 查詢  
 接著，建立內嵌的資料集。 若要這樣做，您將使用查詢設計工具建立篩選、參數、導出成員，以及資料集本身。  
   
 #### <a name="to-create-query-filters"></a>若要建立查詢篩選  
@@ -469,7 +469,7 @@ ms.locfileid: "73637988"
   
 8.  在 **[名稱]** 方塊中輸入  **Net Sales**，然後按一下 **[確定]** 。[導出成員] 窗格會列出 **Net Sales** 導出成員。  
   
-### <a name="MSkip"></a>建立資料集  
+### <a name="to-create-the-dataset"></a><a name="MSkip"></a>建立資料集  
   
 1.  從 Channel 維度中，將 Channel Name 拖曳至資料窗格。  
   
@@ -485,7 +485,7 @@ ms.locfileid: "73637988"
   
 6.  按 [下一步]  。  
   
-## <a name="MLayout"></a>1c. 將資料組織為群組  
+## <a name="1c-organize-data-into-groups"></a><a name="MLayout"></a>1c. 將資料組織為群組  
 當您選取將資料分組的欄位時，會設計包含資料列和資料行的矩陣，以顯示詳細資料和彙總資料。  
   
 #### <a name="to-organize-data-into-groups"></a>若要將資料組織為群組  
@@ -504,7 +504,7 @@ ms.locfileid: "73637988"
   
     步驟 3 和步驟 4 指定了矩陣中要顯示的資料。  
   
-## <a name="MTotals"></a>1d. 加入小計和總計  
+## <a name="1d-add-subtotals-and-totals"></a><a name="MTotals"></a>1d. 加入小計和總計  
 您可以在報表中顯示小計和總計。 主報表中的資料會顯示為指標，而且您將會在完成精靈後移除總計。  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>若要加入小計和總計  
@@ -519,7 +519,7 @@ ms.locfileid: "73637988"
   
 3.  若要預覽報表，按一下 **[執行]** 。  
   
-## <a name="MGrandTotal"></a>2.移除總計資料列  
+## <a name="2-remove-the-grand-total-row"></a><a name="MGrandTotal"></a>2.移除總計資料列  
 資料值會顯示為指標狀態，包括資料行群組總計。 移除顯示總計的資料列。  
   
 #### <a name="to-remove-the-grand-total-row"></a>若要移除總計資料列  
@@ -530,7 +530,7 @@ ms.locfileid: "73637988"
   
 3.  若要預覽報表，按一下 **[執行]** 。  
   
-## <a name="MDrillthrough"></a>3.設定用於鑽研的文字方塊動作  
+## <a name="3-configure-text-box-action-for-drillthrough"></a><a name="MDrillthrough"></a>3.設定用於鑽研的文字方塊動作  
 若要啟用鑽研，請在主報表的文字方塊上指定動作。  
   
 #### <a name="to-enable-an-action"></a>若要啟用動作  
@@ -574,7 +574,7 @@ ms.locfileid: "73637988"
   
 產品類別目錄名稱會採用一般連結的格式 (藍色和底線)。  
   
-## <a name="MIndicators"></a>4.以指標取代數值  
+## <a name="4-replace-numeric-values-with-indicators"></a><a name="MIndicators"></a>4.以指標取代數值  
 使用指標顯示 [線上] 與 [轉售商] 通道之數量與銷售額的狀態。  
   
 #### <a name="to-add-an-indicator-for-net-qty-values"></a>若要加入 Net QTY 值的指標  
@@ -605,7 +605,7 @@ ms.locfileid: "73637988"
   
 6.  若要預覽報表，按一下 **[執行]** 。  
   
-## <a name="MParameter"></a>5.更新參數屬性  
+## <a name="5-update-parameter-properties"></a><a name="MParameter"></a>5.更新參數屬性  
 參數預設是可見的，但不適合這個報表。 您將更新參數屬性，讓參數變成內部的。  
   
 #### <a name="to-make-the-parameter-internal"></a>若要將參數變成內部的  
@@ -620,7 +620,7 @@ ms.locfileid: "73637988"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="MTitle"></a>6.加入報表標題  
+## <a name="6-add-a-report-title"></a><a name="MTitle"></a>6.加入報表標題  
 將標題加入到主報表中  
   
 #### <a name="to-add-a-report-title"></a>若要加入報表標題  
@@ -635,7 +635,7 @@ ms.locfileid: "73637988"
   
 5.  若要預覽報表，按一下 **[執行]** 。  
   
-## <a name="MSave"></a>7.將主報表儲存至 SharePoint 文件庫  
+## <a name="7-save-the-main-report-to-a-sharepoint-library"></a><a name="MSave"></a>7.將主報表儲存至 SharePoint 文件庫  
 將主報表儲存至 SharePoint 文件庫。  
   
 #### <a name="to-save-the-report"></a>若要儲存報表  
@@ -661,7 +661,7 @@ ms.locfileid: "73637988"
   
 7.  按一下 [檔案]  。  
   
-## <a name="MRunReports"></a>8.執行主報表和鑽研報表  
+## <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8.執行主報表和鑽研報表  
 執行主報表，然後按一下產品類別目錄資料行中的值以執行鑽研報表。  
   
 #### <a name="to-run-the-reports"></a>若要執行報表  

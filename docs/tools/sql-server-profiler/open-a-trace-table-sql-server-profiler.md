@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.openlocfilehash: b3779c75b0cc90bc10a208cf592a080ff067b5b6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307148"
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>開啟追蹤資料表 (SQL Server Profiler)

@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2c9f3a7cd06f801555ab373e7e54fbf1b620d894
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993969"
 ---
 # <a name="isolation-levels-ole-db"></a>隔離等級 (OLE DB)
@@ -33,9 +33,9 @@ ms.locfileid: "67993969"
   
      等級的 OLE DB Driver for SQL Server 預設值是 DBPROPVAL_TI_READCOMMITTED。  
   
--   適用於本機手動認可交易之 **ITransactionLocal::StartTransaction** 方法的 *isoLevel* 參數。  
+-   適用於本機手動認可交易之 *ITransactionLocal::StartTransaction* 方法的 **isoLevel** 參數。  
   
--   適用於 MS DTC 協調分散式交易之 **ITransactionDispenser::BeginTransaction** 方法的 *isoLevel* 參數。  
+-   適用於 MS DTC 協調分散式交易之 *ITransactionDispenser::BeginTransaction* 方法的 **isoLevel** 參數。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允許中途讀取隔離等級的唯讀存取。 其他所有等級藉由將鎖定套用至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 物件以限制並行存取。 由於用戶端需要更高的並行存取等級，因此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會對資料並行存取套用更大的限制。 若要維持資料並行存取的最高等級，OLE DB Driver for SQL Server 取用者應該以智慧方式控制它對特定並行存取等級的要求。  
   

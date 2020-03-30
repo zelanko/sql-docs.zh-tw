@@ -15,10 +15,10 @@ ms.assetid: a62bbaf4-9ec3-44b5-8a26-7213786b67b3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f28dd938839fa5a0bae0bba8da6cc947c4758a3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970078"
 ---
 # <a name="sqlserverxaresource-fields"></a>SQLServerXAResource 欄位

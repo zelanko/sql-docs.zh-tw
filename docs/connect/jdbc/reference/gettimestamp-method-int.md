@@ -16,10 +16,10 @@ ms.assetid: a9fd6496-c72e-4cc6-b46a-4aa9f13f90ff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b9a349122b907ff535de8ba3f90e0746465d244
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978821"
 ---
 # <a name="gettimestamp-method-int"></a>getTimestamp 方法 (int)
@@ -40,7 +40,7 @@ public java.sql.Timestamp getTimestamp(int index)
  指出參數索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- 時間戳記物件。  
+ Timestamp 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

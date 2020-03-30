@@ -11,10 +11,10 @@ ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1bd284f6fb8021164aa3edf6aa31761b7483406e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028263"
 ---
 # <a name="updating-large-data-sample"></a>更新大型資料範例
@@ -40,13 +40,13 @@ ms.locfileid: "69028263"
 
 在下列範例中，範例程式碼會建立與 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 資料庫的連線。 然後，範例程式碼會建立 Statement 物件並使用 [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 方法來檢查此 Statement 物件是否為指定之 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 類別的包裝函式。 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 方法用來存取驅動程式特有的回應緩衝方法。
 
-接下來，範例程式碼會使用 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 類別的 [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法，將回應緩衝模式設定為 "**adaptive**"，而且也將示範如何取得自適性緩衝模式。
+接下來，範例程式碼會使用 **SQLServerStatement** 類別的 [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法，將回應緩衝模式設定為 "[adaptive](../../../connect/jdbc/reference/sqlserverstatement-class.md)"，而且也將示範如何取得自適性緩衝模式。
 
 然後，它會執行 SQL 陳述式，並且將所傳回的資料放入可更新的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中。
 
 最後，範例程式碼會逐一查看結果集中的資料列。 如果它找到空的文件摘要，就會使用 [updateString](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) 與 [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 方法的組合來更新資料列，並且再次將資料保存在資料庫中。 如果已經存在資料，它就會使用 [getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) 方法來顯示部分資料。
 
-此驅動程式的預設行為是 "**adaptive**"。 不過，若為順向可更新結果集，而且結果集中的資料大小超過應用程式記憶體時，應用程式就必須使用 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 類別的 [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法來明確設定自適性緩衝模式。
+此驅動程式的預設行為是 "**adaptive**"。 不過，若為順向可更新結果集，而且結果集中的資料大小超過應用程式記憶體時，應用程式就必須使用 [SQLServerStatement](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 類別的 [setResponseBuffering](../../../connect/jdbc/reference/sqlserverstatement-class.md) 方法來明確設定自適性緩衝模式。
 
 [!code[JDBC#UsingAdaptiveBuffering3](../../../connect/jdbc/codesnippet/Java/updating-large-data-sample_1.java)]
 

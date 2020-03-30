@@ -11,13 +11,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 56b69a6b84aa3c529c02690f7e6554e76e46b079
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244270"
 ---
-# <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>如何：指定預先部署或部署後指令碼
+# <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>HOW TO：指定預先部署或部署後指令碼
 
 預先部署和部署後指令碼會分別執行主要部署指令碼前後的 Transact\-SQL 陳述式，主要部署指令碼則是從資料庫專案產生。 從 Visual Studio 中的結構描述比較結果更新目標時，將不會執行預先部署指令碼。 專案中只能有一個預先部署指令碼和一個部署後指令碼。 這些指令碼有許多用途。 例如：  
   

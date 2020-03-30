@@ -11,10 +11,10 @@ ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e2632e93cf325a560434e0833e3bb5a7288f83ef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579001"
 ---
 # <a name="set-report-server-properties-management-studio"></a>設定報表伺服器屬性 (Management Studio)

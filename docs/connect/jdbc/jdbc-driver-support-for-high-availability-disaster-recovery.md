@@ -11,10 +11,10 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a959292b7adc2b5bb547d447f67f2a392de8af4c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027947"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>JDBC 驅動程式對於高可用性、災害復原的支援
@@ -22,7 +22,7 @@ ms.locfileid: "69027947"
 
   本主題討論 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 對於高可用性、災害復原的支援 -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]。 如需有關 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]的詳細資訊，請參閱《 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 線上叢書》。  
   
- 從 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版開始，您可以在連線屬性中指定 (高可用性、災害復原) 可用性群組 (AG) 的可用性群組接聽程式。 如果 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 應用程式連線到容錯移轉的 AlwaysOn 資料庫，原始連線會中斷，應用程式必須開啟新的連線，才能在容錯移轉後繼續工作。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 中已新增下列[連線屬性](../../connect/jdbc/setting-the-connection-properties.md)：  
+ 從 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版開始，您可以在連線屬性中指定 (高可用性、災害復原) 可用性群組 (AG) 的可用性群組接聽程式。 如果 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 應用程式連線到容錯移轉的 AlwaysOn 資料庫，原始連線會中斷，應用程式必須開啟新的連線，才能在容錯移轉後繼續工作。 [ 中已新增下列](../../connect/jdbc/setting-the-connection-properties.md)連線屬性[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]：  
   
 -   **multiSubnetFailover**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "69027947"
  
   
 ## <a name="connecting-with-multisubnetfailover"></a>使用 multiSubnetFailover 進行連線  
- 在連線到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 容錯移轉叢集執行個體時，一律指定 **multiSubnetFailover=true**。 對於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中的所有可用性群組和容錯移轉叢集執行個體，**multiSubnetFailover** 可促進更快的容錯移轉，並大幅縮短單一和多重子網路 AlwaysOn 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會平行嘗試連接。 在子網路容錯移轉期間，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會積極重試 TCP 連線。  
+ 在連線到 **可用性群組的可用性群組接聽程式或** 容錯移轉叢集執行個體時，一律指定 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]multiSubnetFailover=true[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。 對於  **中的所有可用性群組和容錯移轉叢集執行個體，** multiSubnetFailover[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可促進更快的容錯移轉，並大幅縮短單一和多重子網路 AlwaysOn 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會平行嘗試連接。 在子網路容錯移轉期間，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會積極重試 TCP 連線。  
   
  **multiSubnetFailover** 連線屬性表示正在可用性群組或容錯移轉叢集執行個體中部署應用程式，而且 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會嘗試連線到所有 IP 位址，以嘗試連線到主要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的資料庫。 為連線指定 **MultiSubnetFailover=true** 時，用戶端會以比作業系統預設 TCP 重新傳輸間隔更快的速度，重試 TCP 連線嘗試。 這種方式可在容錯移轉 AlwaysOn 可用性群組或 AlwaysOn 容錯移轉叢集執行個體之後更快重新連線，且同時適用於單一和多重子網路可用性群組和容錯移轉叢集執行個體。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "69027947"
   
 -   連接到設定超過 64 個 IP 位址的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會導致連接失敗。  
   
--   應用程式如果使用 **multiSubnetFailover** 連線屬性，其行為不會依據驗證類型受到影響：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證、Kerberos 驗證或 Windows 驗證。  
+-   根據驗證的類型，使用 **multiSubnetFailover** 連線屬性的應用程式其行為不會受到影響：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證、Kerberos 驗證或 Windows 驗證。  
   
 -   提高 **loginTimeout** 的值來配合容錯移轉時間，並減少應用程式連線重試次數。  
   

@@ -16,10 +16,10 @@ ms.assetid: f6363288-1415-4b25-8bb3-c34d6211c6d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e8d0ad2332d1990445b8c6fb3c1ebd5914453d4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998803"
 ---
 # <a name="updatelong-method-int-long"></a>updateLong 方法 (int, long)

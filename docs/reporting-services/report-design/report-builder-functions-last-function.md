@@ -9,10 +9,10 @@ ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e1856df527f071c5366be84c8260d16ea92bf087
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081249"
 ---
 # <a name="report-builder-functions---last-function"></a>報表產生器函式 - Last 函式

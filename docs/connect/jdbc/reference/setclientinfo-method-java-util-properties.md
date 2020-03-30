@@ -11,10 +11,10 @@ ms.assetid: b2a8ec0b-40a2-44d1-90d9-a810d4132e56
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a332f42c8193c851a33036af214ac31366986023
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974745"
 ---
 # <a name="setclientinfo-method-javautilproperties"></a>setClientInfo 方法 (java.util.Properties)
@@ -40,7 +40,7 @@ public void setClientInfo (java.util.Properties properties)
 ## <a name="remarks"></a>備註  
  此 setClientInfo 方法是由 java.sql.Connection 介面中的 setClientInfo 方法所指定。  
   
- [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 不支援任何用戶端資訊屬性。 如果 *properties* 輸入參數不會參考空的屬性集，則這個方法就會產生警告。 換句話說，這個方法會針對應用程式將要設定的屬性產生警告。 應用程式必須使用 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md) 方法來擷取各個警告。  
+ [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 不支援任何用戶端資訊屬性。 如果 *properties* 輸入參數不會參考空的屬性集，則這個方法就會產生警告。 換句話說，這個方法會針對應用程式將要設定的屬性產生警告。 應用程式必須使用 [SQLServerConnection](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md) 類別的 [getWarnings](../../../connect/jdbc/reference/sqlserverconnection-class.md) 方法來擷取各個警告。  
   
 ## <a name="see-also"></a>另請參閱  
  [setClientInfo 方法 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/setclientinfo-method-sqlserverconnection.md)   

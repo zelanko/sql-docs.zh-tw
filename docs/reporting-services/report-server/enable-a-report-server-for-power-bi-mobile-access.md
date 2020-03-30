@@ -9,10 +9,10 @@ ms.assetid: c1a71522-394b-46a7-b9ec-f964bdd81d82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d14c8e092a030c88dbc4d0b5d4375bb56a8eb82c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63308175"
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>啟用報表伺服器進行 Power BI 行動存取

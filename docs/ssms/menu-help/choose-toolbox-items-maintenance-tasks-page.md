@@ -16,10 +16,10 @@ ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: decc1918fbc8da03ce4724dfb0dd5ec69f8fed35
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257728"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>選擇工具箱項目 (維護工作頁面)

@@ -16,10 +16,10 @@ ms.assetid: f38b97b5-d4f0-4f74-a33d-740241a85842
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff224739664e55a1e05d45f684f199969903fc04
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972637"
 ---
 # <a name="setstring-method-sqlservercallablestatement"></a>setString 方法 (SQLServerCallableStatement)

@@ -16,10 +16,10 @@ ms.assetid: bef3ef12-cdda-4a18-90d6-4a501b8e30f0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4ed9b8f6e4b29d5609ced88592b96de9c196d89
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953819"
 ---
 # <a name="getblob-method-int"></a>getBlob 方法 (int)

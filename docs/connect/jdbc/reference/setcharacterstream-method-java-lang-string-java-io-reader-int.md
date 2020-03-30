@@ -16,10 +16,10 @@ ms.assetid: 88a8e89e-8817-4161-85b1-9a9a2fd01cdb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27e19162aca466235c9242d2ea4a2f65d7b33630
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974692"
 ---
 # <a name="setcharacterstream-method-javalangstring-javaioreader-int"></a>setCharacterStream 方法 (java.lang.String, java.io.Reader, int)
@@ -53,7 +53,7 @@ public final void setCharacterStream(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 此 setCharacterStream 方法是由 java.sql.CallableStatement 介面中的 setCharacterStream 方法所指定。  
+ 這個 setCharacterStream 方法是由 java.sql.CallableStatement 介面中的 setCharacterStream 方法指定。  
   
  如果此資料流的長度與 *length* 參數中所指定的長度不同，JDBC 驅動程式就會在更新或插入資料列時擲回例外狀況。  
   

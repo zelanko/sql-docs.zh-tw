@@ -13,10 +13,10 @@ author: MightyPen
 ms.reviewer: carlrab
 ms.author: genemi
 ms.openlocfilehash: f384e121d3b4ce0aa7ebcb380ebe5eaaa0ee3d45
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76917816"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的系統需求
@@ -46,20 +46,20 @@ PHP 執行所在的電腦上需要正確版本的 Microsoft ODBC Driver for SQL 
 
 如果您要在 64 位元版本的 Windows 上下載 Windows 版本的驅動程式，ODBC 64 位元安裝程式會同時安裝 32 位元和 64 位元的 ODBC 驅動程式。 如果您使用 32 位元版本的 Windows，請使用 ODBC x86 安裝程式。 在非 Windows 平台上，只有 64 位元版本的驅動程式可供使用。
 
-|PHP for SQL Server 驅動程式版本 &#8594;<br />&#8595; ODBC 驅動程式版本|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|適用於 SQL Server 的 PHP 驅動程式版本 &#8594;<br />&#8595; ODBC 驅動程式版本|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |ODBC 驅動程式 17+ |Y|Y|Y|Y| | | |
 |ODBC 驅動程式 13.1|Y|Y|Y|Y|Y|Y| |
 |ODBC Driver 13  | | | | | |Y| |
 |ODBC Driver 11  |Y|Y|Y|Y|Y|Y|Y|
 
-如果您使用 SQLSRV 驅動程式，[sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) 會傳回 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 正在使用哪個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server 版本的相關資訊。 如果您使用 PDO_SQLSRV 驅動程式，您可以使用 [PDO::getAttribute](../../connect/php/pdo-getattribute.md) 來探索版本。
+如果您使用 SQLSRV 驅動程式，[sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) 會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在使用哪個 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Microsoft ODBC Driver for SQL Server 版本的相關資訊。 如果您使用 PDO_SQLSRV 驅動程式，您可以使用 [PDO::getAttribute](../../connect/php/pdo-getattribute.md) 來探索版本。
 
 ## <a name="sql-server"></a>SQL Server
 
 如需搭配 Azure SQL Database 使用 PHP 的詳細資訊，請參閱[連接到 Microsoft Azure SQL Database](../../connect/php/connecting-to-microsoft-azure-sql-database.md)。
 
-|PHP for SQL Server 驅動程式版本 &#8594;<br />&#8595; SQL Server 版本|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|適用於 SQL Server 的 PHP 驅動程式版本 &#8594;<br />&#8595; SQL Server 版本|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Azure SQL Database (所有部署選項)        |Y|Y|Y|Y| | | |
 |Azure SQL Synapse  |Y|Y|Y|Y| | | |
@@ -77,7 +77,7 @@ PHP 執行所在的電腦上需要正確版本的 Microsoft ODBC Driver for SQL 
 
 ## <a name="driver-versions"></a>驅動程式版本
 
-此節列出每個 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 版本中所包含的驅動程式檔案。 每個安裝套件都包含以執行緒和非執行緒形式變數的 SQLSRV 和 PDO_SQLSRV 驅動程式檔案。 在 Windows 上，它們也有 32 位元與 64 位元的變數。 若要設定用於 PHP 執行階段的驅動程式，請遵循[載入 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) 中的安裝指示。
+此節列出每個 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 版本中所包含的驅動程式檔案。 每個安裝套件都包含執行緒和非執行緒形式變體的 SQLSRV 和 PDO_SQLSRV 驅動程式檔案。 在 Windows 上，其也以 32 位元與 64 位元變體提供。 若要設定用於 PHP 執行階段的驅動程式，請遵循[載入 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) 中的安裝指示。
 
 在支援的 Linux 和 macOS 版本上，可以使用 PHP 的 PECL 套件系統來安裝適當的驅動程式，請遵循 [Linux 和 macOS 安裝指示](../../connect/php/installation-tutorial-linux-mac.md)。 或者，您可以從 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub 專案頁面下載適用於您平台的預先建立的二進位套件 -- 下表列出在預先建立的二進位套件中找到的檔案。
 

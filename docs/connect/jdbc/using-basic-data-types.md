@@ -11,10 +11,10 @@ ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: abbd2aa3c277ad36f419de849b02433f17d27403
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026516"
 ---
 # <a name="using-basic-data-types"></a>使用基本資料類型
@@ -68,13 +68,13 @@ ms.locfileid: "69026516"
   
 (1) 若要搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型 time 使用 java.sql.Time，您必須將 **sendTimeAsDatetime** 連線屬性設為 false。  
   
-(2) 您可以使用 [DateTimeOffset 類別](../../connect/jdbc/reference/datetimeoffset-class.md)來以程式設計方式存取 **datetimeoffset** 的值。  
+(2) 您可以使用 **DateTimeOffset 類別**來以程式設計方式存取 [datetimeoffset](../../connect/jdbc/reference/datetimeoffset-class.md) 的值。  
   
 下列章節會提供如何使用 JDBC Driver 與基本資料類型的範例。 如需如何在 Java 應用程式中使用基本資料類型的更詳細範例，請參閱[基本資料類型範例](../../connect/jdbc/basic-data-types-sample.md)。  
   
 ## <a name="retrieving-data-as-a-string"></a>擷取資料為字串
 
-如果您必須從對應至任何 JDBC 基本資料類型的資料來源擷取資料，以作為字串檢視，或者如果不需要強型別資料，則可以使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的 [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) 方法，如下所示：  
+如果您必須從對應至任何 JDBC 基本資料類型的資料來源擷取資料，以作為字串檢視，或者如果不需要強型別資料，則可以使用 [SQLServerResultSet](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) 類別的 [getString](../../connect/jdbc/reference/sqlserverresultset-class.md) 方法，如下所示：  
   
 [!code[JDBC#UsingBasicDataTypes1](../../connect/jdbc/codesnippet/Java/using-basic-data-types_1.java)]  
   
@@ -98,7 +98,7 @@ ms.locfileid: "69026516"
   
 ## <a name="updating-data-by-parameterized-query"></a>依參數化查詢更新資料
 
-如果您必須使用參數化查詢更新資料來源中的資料，可以使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 類別的其中一個 set\<Type> 方法 (也稱為「setter 方法」  )，來設定參數的資料類型。 在下列範例中，[prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) 方法用來預先編譯參數化查詢，然後在呼叫 [executeUpdate](../../connect/jdbc/reference/executeupdate-method.md) 方法之前，使用 [setString](../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md) 方法設定參數的字串值。  
+如果您必須使用參數化查詢更新資料來源中的資料，可以使用 \<SQLServerPreparedStatement[ 類別的其中一個 set](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)Type> 方法 (也稱為「setter 方法」  )，來設定參數的資料類型。 在下列範例中，[prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) 方法用來預先編譯參數化查詢，然後在呼叫 [executeUpdate](../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md) 方法之前，使用 [setString](../../connect/jdbc/reference/executeupdate-method.md) 方法設定參數的字串值。  
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   
@@ -106,7 +106,7 @@ ms.locfileid: "69026516"
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>傳遞參數至預存程序
 
-如果您必須將具類型的參數傳遞至預存程序，可使用 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別的其中一個 set\<Type> 方法，依索引或名稱設定參數。 在下列範例中，[prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法用來設定發送給預存程序的呼叫，然後在呼叫 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法之前，使用 [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) 方法設定呼叫的參數。  
+如果您必須將具類型的參數傳遞至預存程序，可使用 \<SQLServerCallableStatement[ 類別的其中一個 set](../../connect/jdbc/reference/sqlservercallablestatement-class.md)Type> 方法，依索引或名稱設定參數。 在下列範例中，[prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法用來設定發送給預存程序的呼叫，然後在呼叫 [executeQuery](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) 方法之前，使用 [setString](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法設定呼叫的參數。  
   
 [!code[JDBC#UsingBasicDataTypes5](../../connect/jdbc/codesnippet/Java/using-basic-data-types_5.java)]  
   

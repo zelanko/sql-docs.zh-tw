@@ -12,10 +12,10 @@ ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee4e9f30dc190aae78e1e3e763451e42b3a52ecb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571018"
 ---
 # <a name="xml-device-information-settings"></a>XML 裝置資訊設定

@@ -16,10 +16,10 @@ ms.assetid: c99d0772-b26c-492c-a643-2813b5429993
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15991cb98860ccc471229ae3abb8e3b24e35c799
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954016"
 ---
 # <a name="getbigdecimal-method-int-int-sqlserverresultset"></a>getBigDecimal 方法 (int, int) (SQLServerResultSet)

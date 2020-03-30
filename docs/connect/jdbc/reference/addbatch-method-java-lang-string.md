@@ -16,10 +16,10 @@ ms.assetid: 093f6c3b-49a6-4043-9993-bd0482de04dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 42045bee1dca5d2a9c5fc748f5d7a1c5ebbca9de
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67956018"
 ---
 # <a name="addbatch-method-javalangstring"></a>addBatch 方法 (java.lang.String)
@@ -43,7 +43,7 @@ public void addBatch(java.lang.String sql)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 這個 addBatch 方法是由 java.sql.Statement 介面中的 addBatch 方法指定。  
+ 這個 addBatch 方法是由 java.sql.Statement 介面中的 addBatch 方法所指定。  
   
  呼叫這個方法將會產生例外狀況，因為當建立 SQLServerPreparedStatement 物件時，已指定此物件的 SQL 陳述式。  
   

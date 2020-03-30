@@ -11,10 +11,10 @@ ms.assetid: c548fed8-5e04-4faf-8b10-b37c86178056
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0bac72cf23cfebf48f58b24bea0b50aa9033bf5d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573732"
 ---
 # <a name="configurationsetting-property---issharepointintegrated"></a>ConfigurationSetting 屬性 - IsSharePointIntegrated

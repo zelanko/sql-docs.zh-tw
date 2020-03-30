@@ -15,10 +15,10 @@ ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: c6dc23b79346a3e163f896b3f85f120cc9ccc903
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257176"
 ---
 # <a name="name-not-found-dialog-box"></a>找不到名稱對話方塊

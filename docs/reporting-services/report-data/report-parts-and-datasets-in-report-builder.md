@@ -9,10 +9,10 @@ ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a06344a119dfba635a07d0050a61f561065a2984
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571201"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>報表產生器中的報表組件和資料集
@@ -23,14 +23,14 @@ ms.locfileid: "65571201"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Adding"></a> 將包含相依資料集的報表組件加入至您的報表  
+##  <a name="adding-a-report-part-with-dependent-datasets-to-your-report"></a><a name="Adding"></a> 將包含相依資料集的報表組件加入至您的報表  
  當您將報表組件加入至報表時，其中包含的相依資料集也會加入到報表中。 報表組件可能包含其中內含許多其他報表項目的矩形，因此，它可以將多個相依資料集加入至報表中。 每個共用資料集都是一個獨立的參考；其相依的共用資料來源不會加入到您的報表中。 每個內嵌資料集也會加入相依的內嵌或共用資料來源。  
   
  內嵌資料來源的認證不會儲存為報表組件的一部分。 如果將內嵌資料來源加入到您的報表，系統會在您執行報表時提示您提供認證。 為避免系統提示您提供認證，請搭配預存認證使用以共用資料來源為基礎的報表組件。  
   
  將報表組件加入至報表之後，加入的資料集就與您建立的內嵌或共用資料集沒什麼不同了。 您可以在 [報表資料] 窗格中，檢視額外的資料集。 內嵌資料集會出現在對應的共用資料來源下方，而共用資料集則出現在 [共用資料集] 資料夾的下方。  
   
-##  <a name="Customizing"></a> 自訂相依資料集  
+##  <a name="customizing-dependent-datasets"></a><a name="Customizing"></a> 自訂相依資料集  
  將報表組件加入至報表之後，您可以進行預覽，並決定是否要對資料進行一些變更。 您可以變更的內容取決於您要使用的資料集類型。  
   
  若要變更內嵌資料集的資料和資料選項，您可以編輯包括查詢在內的資料集屬性，就像您先前自己建立資料集一樣。  
@@ -39,7 +39,7 @@ ms.locfileid: "65571201"
   
  如需如何變更共用資料集定義，或如何顯示報表中共用資料集之最新資料變更的詳細資訊，請參閱[建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) 和[加入、編輯、重新整理報表資料窗格中的欄位 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。  
   
-##  <a name="Publishing"></a> 將相依資料集當做共用資料集發行  
+##  <a name="publishing-dependent-datasets-as-shared-datasets"></a><a name="Publishing"></a> 將相依資料集當做共用資料集發行  
  當您發行包含相依資料集的報表項目時，您可以選擇將每個資料集當做共用資料集發行，或當做仍然內嵌在報表項目中的內嵌資料集發行。  
   
  當您選取共用資料集選項時，資料集會儲存至報表伺服器，做為共用資料集定義。 在您的報表中，使用該資料集的每個報表項目都會進行更新，以指向現在位於報表伺服器上的共用資料集。 因此會發生兩件事：  

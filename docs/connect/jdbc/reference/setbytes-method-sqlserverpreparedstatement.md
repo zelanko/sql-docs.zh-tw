@@ -16,10 +16,10 @@ ms.assetid: 52e99ef9-b786-4a14-bfc5-4162e46aafbb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ce55a2dbae90ca84708e236c8688cbbb20dcb9d9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974841"
 ---
 # <a name="setbytes-method-sqlserverpreparedstatement"></a>setBytes 方法 (SQLServerPreparedStatement)

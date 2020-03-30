@@ -11,10 +11,10 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58a0b6f11fa28dca0e8aae98cb1794b12e3fc227
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70155104"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>連接到 Azure SQL Database
@@ -25,14 +25,14 @@ ms.locfileid: "70155104"
   
 - [SQL Azure 資料庫](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
-- [操作說明：使用 JDBC 連線到 SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [如何：使用 JDBC 連線到 SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
 - [使用 Azure Active Directory 驗證連接](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>詳細資料
 
 連線到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 時，您應該連線到 master 資料庫來呼叫 **SQLServerDatabaseMetaData.getCatalogs**。  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 不支援從使用者資料庫傳回整組目錄。 **SQLServerDatabaseMetaData.getCatalogs** 會使用 sys.databases 檢視來取得目錄。 請參閱 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 中對於權限的討論，以了解 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 上的 **SQLServerDatabaseMetaData.getCatalogs** 行為。  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 不支援從使用者資料庫傳回整組目錄。 **SQLServerDatabaseMetaData.getCatalogs** 會使用 sys.databases 檢視來取得目錄。 請參閱 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 中對於權限的討論，以了解 **上的**SQLServerDatabaseMetaData.getCatalogs[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 行為。  
   
 ## <a name="connections-dropped"></a>連線中斷
 
@@ -80,7 +80,7 @@ shutdown /r /t 1
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>使用加密需要設定 hostNameInCertificate
 
-在 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 7.2 版之前，連線到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 時，如果您指定了 **encrypt=true** (如果連接字串中的伺服器名稱為 *shortName*.*domainName*，請將 **hostNameInCertificate** 屬性設定為 \*.*domainName*)，則應該指定 **hostNameInCertificate**。 從驅動程式 7.2 版開始，這個屬性是選擇性的。
+在 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 7.2 版之前，連線到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 時，如果您指定了 **encrypt=true** (如果連接字串中的伺服器名稱為 **shortName**.*domainName*，請將 *hostNameInCertificate* 屬性設定為 **.** domainName\*)，則應該指定 *hostNameInCertificate*。 從驅動程式 7.2 版開始，這個屬性是選擇性的。
 
 例如：
 

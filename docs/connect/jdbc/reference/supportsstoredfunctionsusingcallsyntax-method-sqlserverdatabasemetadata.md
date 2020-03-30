@@ -11,10 +11,10 @@ ms.assetid: 0e5c0579-84b5-4717-b128-0bcd512f6022
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cd5c761a44af410a39136942490d4f4ab6241b5e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67968773"
 ---
 # <a name="supportsstoredfunctionsusingcallsyntax-method-sqlserverdatabasemetadata"></a>supportsStoredFunctionsUsingCallSyntax 方法 (SQLServerDatabaseMetaData)

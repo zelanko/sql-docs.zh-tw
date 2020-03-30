@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6b336404d3b69e31ffb6f1a2aa82ade04804eb9e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78172180"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>在 SQL Server 中使用 R 進行資料探索和建立預測模型
@@ -70,7 +70,7 @@ RevoScaleR 封裝也支援變更 *「執行內容」* (execution context)。 這
 
 + **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]：** 一個 R 執行階段發行版本及一組可提升標準 R 作業效能的套件，例如 Intel Math Kernel Library。  
   
-+ **RevoScaleR：** 一個可讓您將計算推送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 R 封裝。 第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]。 它也包含一組常見的 R 函數，這些函數已經過重新設計，可提供更佳的效能和延展性。 您可以依據 **rx** 前置詞識別這些改良的函數。 它也包含適用於各種來源的增強型資料提供者；這些函數的前面會加上 **Rx**。
++ **RevoScaleR：** 一個可讓您將計算推送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 R 套件。 [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。 它也包含一組常見的 R 函數，這些函數已經過重新設計，可提供更佳的效能和延展性。 您可以依據 **rx** 前置詞識別這些改良的函數。 它也包含適用於各種來源的增強型資料提供者；這些函數的前面會加上 **Rx**。
 
 您可以使用任何支援 R 的 Windows 型程式碼編輯器，例如 [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] 或 RStudio。 [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] 的下載也包含適用於 R 的常見命令列工具，例如 RGui.exe。
 

@@ -16,10 +16,10 @@ ms.assetid: 03649d56-3319-4867-bef1-559dfd221b8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b76d6e6f88580585f00148d8b01be586e3937b96
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970205"
 ---
 # <a name="sqlserverxadatasource-constructor-"></a>SQLServerXADataSource 建構函式 ()

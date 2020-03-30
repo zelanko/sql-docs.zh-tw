@@ -16,10 +16,10 @@ ms.assetid: 467d32e6-b47e-4095-9f8b-73e07fb814e8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6766181d669498dedd09a475d75315cb2770f414
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67968759"
 ---
 # <a name="supportssubqueriesincomparisons-method-sqlserverdatabasemetadata"></a>supportsSubqueriesInComparisons 方法 (SQLServerDatabaseMetaData)

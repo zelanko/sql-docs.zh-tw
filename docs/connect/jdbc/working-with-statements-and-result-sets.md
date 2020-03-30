@@ -11,10 +11,10 @@ ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a57ffc5c9314f8e84c077b6c15ab88ed5411f028
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69025362"
 ---
 # <a name="working-with-statements-and-result-sets"></a>使用陳述式與結果集

@@ -9,10 +9,10 @@ ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8196e045704adedbf235fcba566ba22b009536f7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62704580"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>以程式設計方式存取 WMI 提供者

@@ -16,10 +16,10 @@ ms.assetid: f89ce642-9eac-4d5b-b1ba-45aa3031ab3b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9cde443dc067e21ff0385e988a312095a04da0c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983503"
 ---
 # <a name="getdouble-method-sqlservercallablestatement"></a>getDouble 方法 (SQLServerCallableStatement)

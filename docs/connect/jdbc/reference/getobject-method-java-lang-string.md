@@ -16,10 +16,10 @@ ms.assetid: a1e955ce-13db-4828-ad59-d9b6a8b2c6cc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e06642390b060164d0e7fba3a8584200e5bc4dd8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981128"
 ---
 # <a name="getobject-method-javalangstring"></a>getObject 方法 (java.lang.String)

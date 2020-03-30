@@ -16,10 +16,10 @@ ms.assetid: a871917e-d286-46c3-96cf-2e8e8b22111c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09adea323a5a2930e9c636a1b2e1b00567dbd9ce
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954951"
 ---
 # <a name="execute-method-javalangstring"></a>execute 方法 (java.lang.String)
@@ -48,7 +48,7 @@ public final boolean execute(java.lang.String sql)
 ## <a name="remarks"></a>備註  
  這個 execute 方法是由 java.sql.Statement 介面中的 execute 方法指定。  
   
- 這個方法會覆寫 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 類別中找到的 [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法。  
+ 這個方法會覆寫 [SQLServerStatement](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 類別中找到的 [execute](../../../connect/jdbc/reference/sqlserverstatement-class.md) 方法。  
   
  呼叫這個方法將會產生例外狀況，因為當建立 SQLServerPreparedStatement 物件時，已指定此物件的 SQL 陳述式。  
   

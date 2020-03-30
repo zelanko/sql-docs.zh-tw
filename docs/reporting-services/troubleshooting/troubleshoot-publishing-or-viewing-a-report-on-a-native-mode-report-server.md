@@ -9,10 +9,10 @@ ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6e3a96e3eef90778b0e7877b88ba79cb4e0dd43e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573854"
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>在原生模式報表伺服器上疑難排解發行或檢視報表

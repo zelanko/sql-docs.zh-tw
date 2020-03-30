@@ -17,10 +17,10 @@ ms.assetid: eea655fe-43ed-418d-8233-b288a8f4daa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2fc536de2312bc9adf1cba103ffde0999a83609e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570662"
 ---
 # <a name="roles-and-permissions-reporting-services"></a>角色與權限 (Reporting Services)

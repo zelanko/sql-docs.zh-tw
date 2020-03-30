@@ -12,10 +12,10 @@ ms.assetid: 270075c5-bf12-4467-a775-abbda3d954a5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 03234369ed7422433b35a5e3d296f6db1d1b2223
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570652"
 ---
 # <a name="reporting-services-security-and-protection"></a>Reporting Services 安全性與保護

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69652300"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>如何在巨量資料叢集中掛接 S3 以進行 HDFS 階層處理
@@ -43,7 +43,7 @@ ms.locfileid: "69652300"
    > [!TIP]
    > 如需有關如何建立 S3 存取金鑰的詳細資訊，請參閱[S3 存取金鑰](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys)。
 
-## <a id="mount"></a> 掛接遠端 HDFS 儲存體
+## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> 掛接遠端 HDFS 儲存體
 
 現在您已備妥具有存取金鑰的認證檔案，您可以開始裝載。 下列步驟會將 S3 中的遠端 HDFS 儲存體掛接到您巨量資料叢集的本機 HDFS 儲存體。
 
@@ -72,7 +72,7 @@ ms.locfileid: "69652300"
 
 如果已成功掛接，您應該能夠查詢 HDFS 資料，並對其執行 Spark 作業。 掛接會出現在您巨量資料叢集的 HDFS 中，位於 `--mount-path` 所指定的位置。
 
-## <a id="status"></a> 取得掛接的狀態
+## <a name="get-the-status-of-mounts"></a><a id="status"></a> 取得掛接的狀態
 
 若要列出巨量資料叢集中所有掛接的狀態，請使用下列命令：
 
@@ -94,7 +94,7 @@ azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a> 刪除掛接
+## <a name="delete-the-mount"></a><a id="delete"></a> 刪除掛接
 
 若要刪除掛接，請使用 **azdata bdc hdfs mount delete** 命令，並在 HDFS 中指定掛接路徑：
 

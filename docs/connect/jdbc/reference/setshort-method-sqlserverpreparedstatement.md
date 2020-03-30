@@ -16,10 +16,10 @@ ms.assetid: 6a9171a4-3e44-44ea-a453-23f57e5320e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d0311bb060214b6fb654fd1794185cbf081866c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972848"
 ---
 # <a name="setshort-method-sqlserverpreparedstatement"></a>setShort 方法 (SQLServerPreparedStatement)

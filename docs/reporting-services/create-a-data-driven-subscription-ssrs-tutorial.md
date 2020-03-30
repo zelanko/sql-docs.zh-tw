@@ -13,10 +13,10 @@ ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: baff01bd8bc02af409a37c5cc1ce193e69663387
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63194831"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>建立資料驅動訂閱 (SSRS 教學課程)
@@ -53,7 +53,7 @@ ms.locfileid: "63194831"
 ## <a name="requirements"></a>需求  
 資料驅動訂閱通常是由報表伺服器管理員來建立和維護。 建立資料驅動訂閱的步驟需要建立查詢、包含訂閱者資料之資料來源的知識，以及具備較高的報表伺服器權限。  
   
-本教學課程使用 *建立基本資料表報表 &#40;SSRS 教學課程&#41;* 教學課程中所建立的 [建立基本資料表報表 &amp;#40;SSRS 教學課程&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) 報表，以及範例資料庫 **AdventureWorks2014**中的資料。  
+本教學課程使用 *建立基本資料表報表 &amp;#40;SSRS 教學課程&amp;#41;* 教學課程中所建立的 [建立基本資料表報表 &#40;SSRS 教學課程&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) 報表，以及範例資料庫 **AdventureWorks2014**中的資料。  
   
 您的電腦必須安裝下列項目，才能使用此教學課程：  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63194831"
   
 -   SQL Server Agent 服務必須在執行中。  
   
--   包括參數的報表。 本教學課程採用您使用 `Sales Orders` 建立基本資料表報表 &#40;SSRS 教學課程&#41; [建立基本資料表報表 &amp;#40;SSRS 教學課程&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)中的資料。  
+-   包括參數的報表。 本教學課程採用您使用 `Sales Orders` 建立基本資料表報表 &amp;#40;SSRS 教學課程&amp;#41; [建立基本資料表報表 &#40;SSRS 教學課程&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)中的資料。  
   
 -   **AdventureWorks2014** 範例資料庫，它會將資料提供給範例報表。  
   

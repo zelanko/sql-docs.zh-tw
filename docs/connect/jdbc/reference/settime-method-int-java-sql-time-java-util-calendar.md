@@ -16,10 +16,10 @@ ms.assetid: 79ff6eef-6ad7-4e33-95be-c2d552c65546
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6388ea031c6cbd5c492b5af03bd37a091592868
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972565"
 ---
 # <a name="settime-method-int-javasqltime-javautilcalendar"></a>setTime 方法 (int, java.sql.Time, java.util.Calendar)

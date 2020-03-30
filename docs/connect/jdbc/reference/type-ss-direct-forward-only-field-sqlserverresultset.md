@@ -16,10 +16,10 @@ ms.assetid: f8eb2fc2-f624-4fd5-a408-ae4bb1de4913
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6717c68136614ddff91f852426284915fcd1f6bd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67968449"
 ---
 # <a name="type_ss_direct_forward_only-field-sqlserverresultset"></a>TYPE_SS_DIRECT_FORWARD_ONLY 欄位 (SQLServerResultSet)

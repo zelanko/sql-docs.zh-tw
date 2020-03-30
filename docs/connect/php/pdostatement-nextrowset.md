@@ -11,10 +11,10 @@ ms.assetid: 048a6d8f-7fc4-449e-8161-19268c68f41d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3099d6e5d69d9b16e87c4d2eb14ed7706cf4d5f6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992956"
 ---
 # <a name="pdostatementnextrowset"></a>PDOStatement::nextRowset

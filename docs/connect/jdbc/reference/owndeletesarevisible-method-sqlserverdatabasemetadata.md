@@ -16,10 +16,10 @@ ms.assetid: 2dd6d976-9f8f-4a24-9354-ff239cfd4364
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ecb8ca48f9f4b76a9d3bf22aff3930eec63667dc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976557"
 ---
 # <a name="owndeletesarevisible-method-sqlserverdatabasemetadata"></a>ownDeletesAreVisible 方法 (SQLServerDatabaseMetaData)

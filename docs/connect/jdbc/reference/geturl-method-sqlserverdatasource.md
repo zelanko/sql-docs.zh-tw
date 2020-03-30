@@ -16,10 +16,10 @@ ms.assetid: dd0d5d2c-91fe-4b0f-a162-69d898ba176e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f3922e5cf97b6c7b5a795f295249950fd21a9f3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978205"
 ---
 # <a name="geturl-method-sqlserverdatasource"></a>getURL 方法 (SQLServerDataSource)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3436ac152de56d06d5e928d271f8b143b695ba70
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: 36f66c64cb3055aad20dee7a87d429065ca54cc6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79126001"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510219"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量規格
 
@@ -36,7 +36,7 @@ ms.locfileid: "79126001"
 >[!NOTE]
 >除了本文中的資訊外，您可能也發現下列連結有所幫助：
 >
->* [下載 SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads_)
+>* [下載 SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)
 >* [安裝 SQL Server 的硬體與軟體需求](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 >* [檢查 System Configuration Checker 的參數](../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)
 >

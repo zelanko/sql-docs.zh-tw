@@ -16,10 +16,10 @@ ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fdb8fc97b8b2403366e19456b7c744012ee9007f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570255"
 ---
 # <a name="configurationsetting-property---secureconnectionlevel"></a>ConfigurationSetting 屬性 - SecureConnectionLevel

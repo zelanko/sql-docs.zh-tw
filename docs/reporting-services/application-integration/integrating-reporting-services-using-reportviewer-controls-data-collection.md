@@ -11,10 +11,10 @@ ms.technology: application-integration
 ms.topic: reference
 ms.date: 09/18/2018
 ms.openlocfilehash: 078b36034d48dbb4389c69e64d8b8b18d240b24c
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198175"
 ---
 # <a name="integrate-reporting-services-using-reportviewer-controls---data-collection"></a>使用 ReportViewer 控制項整合 Reporting Services - 資料收集

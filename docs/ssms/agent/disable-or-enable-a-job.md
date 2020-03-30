@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 30b1023ab732bdc711afa2a15b70df5646a90826
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242415"
 ---
 # <a name="disable-or-enable-a-job"></a>停用或啟用作業
@@ -32,12 +32,12 @@ ms.locfileid: "75242415"
 
 此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中停用 [!INCLUDE[tsql](../../includes/tsql-md.md)]Agent 作業。 當您停用作業時，該項作業並未刪除，而且必要時可以重新啟用。  
   
-## <a name="BeforeYouBegin"></a>開始之前  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>開始之前  
   
-### <a name="Security"></a>安全性  
+### <a name="security"></a><a name="Security"></a>安全性  
 如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
-## <a name="SSMS"></a>使用 SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>使用 SQL Server Management Studio  
   
 #### <a name="to-disable-or-enable-a-job"></a>若要停用或啟用作業  
   
@@ -49,7 +49,7 @@ ms.locfileid: "75242415"
   
 4.  若要停用作業，請按一下 **[停用]** 。 若要啟用作業，請按一下 **[啟用]** 。  
   
-## <a name="TSQL"></a>使用 Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>使用 Transact-SQL  
   
 #### <a name="to-disable-or-enable-a-job"></a>若要停用或啟用作業  
   

@@ -18,10 +18,10 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ff907d83a4d793169872d5abaa059e8b6a1d91b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65572742"
 ---
 # <a name="graphical-query-designer-user-interface"></a>圖形化查詢設計工具使用者介面
@@ -48,7 +48,7 @@ ms.locfileid: "65572742"
 ### <a name="command-type-text"></a>Text 命令類型  
  在 **Text** 類型中，圖形化查詢設計工具提供了四個區域，或稱窗格。 您可以指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢的資料行、別名、排序值和篩選值。 您也可以檢視依據選取項目所產生的查詢文字、執行查詢，以及檢視結果集。 下圖顯示了這四個窗格。  
   
- ![SQL 查詢適用的圖形化查詢設計工具](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "SQL 查詢適用的圖形化查詢設計工具")  
+ ![適用於 SQL 查詢的圖形化查詢設計工具](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "適用於 SQL 查詢的圖形化查詢設計工具")  
   
  下表會描述各個窗格的功能。  
   

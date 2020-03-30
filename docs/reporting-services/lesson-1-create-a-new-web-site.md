@@ -9,10 +9,10 @@ ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ac670743ba36e3e1d880f152317956115ccf8c78
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62651563"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>第 1 課：建立新的網站

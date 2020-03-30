@@ -1,5 +1,5 @@
 ---
-title: 多重實例報表伺服器部署的 URL 保留專案（SSRS Configuration Manager） |Microsoft Docs
+title: 多實例報表伺服器部署的 URL 預留（SSRS 組態管理員） |微軟文檔
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f49a13fa50254e4c485a228d506b49e14d190959
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c91db169984bbb2969a8339ed20e8e6bc5b804b6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66108614"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380689"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>多重執行個體報表伺服器部署的 URL 保留項目 (SSRS 組態管理員)
   如果您在相同電腦上安裝多個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體，您就必須考慮要如何為每一個執行個體定義 URL 保留項目。 在每一個執行個體中，報表伺服器 Web 服務和報表管理員至少每一個都必須有一個 URL 保留項目。 完整的保留項目集合在 HTTP.SYS 中必須是唯一的。  
@@ -42,13 +42,13 @@ ms.locfileid: "66108614"
 |報表伺服器預設執行個體 (MSSQLSERVER)|ReportServer_MyNamedInstance|唯一性|  
 |----------------------------------------------------|-----------------------------------|----------------|  
 |http://+:80/reportserver|http://+:8888/reportserver|每個執行個體會接聽不同的通訊埠。|  
-|http://www.contoso.com/reportserver|http://SRVR-46/reportserver|每一個執行個體都會對應到不同的伺服器名稱 (完整網域名稱和電腦名稱)。|  
+|`http://www.contoso.com/reportserver`|`http://SRVR-46/reportserver`|每一個執行個體都會對應到不同的伺服器名稱 (完整網域名稱和電腦名稱)。|  
   
 ## <a name="uniqueness-requirements"></a>唯一性規定  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用的基礎技術對於唯一的名稱有一些規定。 HTTP.SYS 要求它的儲存機制內的所有 URL 都必須是唯一的。 您可以讓通訊埠、主機名稱或虛擬目錄名稱不同，以建立唯一的 URL。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 要求相同處理序內的應用程式識別必須是唯一的。 這項規定會影響虛擬目錄名稱， 它指定您不能在相同的報表伺服器執行個體內重複虛擬目錄名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [配置報表伺服器 URL &#40;SSRS 組態管理員&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [設定 URL &#40;SSRS 組態管理員&#41;](configure-a-url-ssrs-configuration-manager.md)  
   
   

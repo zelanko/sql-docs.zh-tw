@@ -11,10 +11,10 @@ ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb7131e96277ea05b43f30923dcc64c5be602696
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936202"
 ---
 # <a name="pdoquery"></a>PDO::query
@@ -32,7 +32,7 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 #### <a name="parameters"></a>參數  
 *$statement*：您要執行的 SQL 陳述式。  
   
-*$fetch_style*：有關如何執行查詢的選擇性指示。 如需詳細資訊，請參閱＜備註＞一節。可以使用 PDO::fetch 中的 $*fetch_style* 覆寫 PDO::query 中的  $*fetch_style*。  
+*$fetch_style*：有關如何執行查詢的選擇性指示。 如需詳細資訊，請參閱＜備註＞一節。可以使用 PDO::fetch 中的 $ $fetch_style*覆寫 PDO::query 中的* *fetch_style*。  
   
 ## <a name="return-value"></a>傳回值  
 如果呼叫成功，PDO::query 會傳回 PDOStatement 物件。 如果呼叫失敗，PDO::query 會擲回 PDOException 物件或傳回 false (視 PDO::ATTR_ERRMODE 的設定而定)。  

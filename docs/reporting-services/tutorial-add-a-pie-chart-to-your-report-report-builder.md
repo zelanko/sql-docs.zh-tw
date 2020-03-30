@@ -9,10 +9,10 @@ ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041232"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教學課程：將圓形圖加入至報表 (報表產生器)
@@ -34,7 +34,7 @@ ms.locfileid: "63041232"
 ## <a name="requirements"></a>需求  
 如需需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="Chart"></a>1.從圖表精靈建立圓形圖  
+## <a name="1-create-a-pie-chart-from-the-chart-wizard"></a><a name="Chart"></a>1.從圖表精靈建立圓形圖  
 在本節中，您可以使用 [圖表精靈] 建立內嵌資料集，並選擇共用資料來源，然後建立圓形圖。  
 
   
@@ -77,7 +77,7 @@ ms.locfileid: "63041232"
   
 9. 按 [下一步]  。  
   
-## <a name="ChartType"></a>2.選擇圖表類型  
+## <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2.選擇圖表類型  
 您可以選擇各種不同預先定義的圖表類型。  
 
   
@@ -103,7 +103,7 @@ ms.locfileid: "63041232"
 
 ![report-builder-pie-chart-first-preview](../reporting-services/media/report-builder-pie-chart-first-preview.png)
   
-## <a name="Percentages"></a>3.在每一塊配量中顯示百分比  
+## <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3.在每一塊配量中顯示百分比  
 在圓形圖的每個配量上，您可以顯示這個配量相較於整個圓形圖的百分比。  
 
   
@@ -130,7 +130,7 @@ ms.locfileid: "63041232"
 
 ![report-builder-pie-chart-preview-percents](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
   
-## <a name="CombineSlices"></a>4.將較小的配量收集成一塊配量  
+## <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4.將較小的配量收集成一塊配量  
 圓形圖中有 3 塊配量極少。 您可以將多個小配量合併為一個代表這三個配量的較大「其他」配量。  
 
 1.  切換到報表設計檢視。  
@@ -155,7 +155,7 @@ ms.locfileid: "63041232"
 
 ![report-builder-pie-chart-start-at-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
-## <a name="DrawingEffect"></a>5.在頂端開始繪製圓形圖值 
+## <a name="5-start-pie-chart-values-at-the-top"></a><a name="DrawingEffect"></a>5.在頂端開始繪製圓形圖值 
 
 根據預設，在圓形圖中，資料集的第一個值是從 90 度開始 (從圓形圖頂端算起)。 您可以查看先前各節中的圓形圖。
 
@@ -173,7 +173,7 @@ ms.locfileid: "63041232"
 
 ![report-builder-pie-chart-start-at-top](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
   
-## <a name="Title"></a>6.加入報表標題  
+## <a name="6-add-a-report-title"></a><a name="Title"></a>6.加入報表標題  
   
 因為圓形圖是報表中的唯一視覺效果，所以圖表不需要有其專屬標題。 有報表標題即可。
   
@@ -197,7 +197,7 @@ ms.locfileid: "63041232"
   
 6.  按一下 **[執行]** 預覽報表。  
   
-## <a name="Save"></a>7.儲存報表  
+## <a name="7-save-the-report"></a><a name="Save"></a>7.儲存報表  
   
 ### <a name="to-save-the-report"></a>若要儲存報表  
   

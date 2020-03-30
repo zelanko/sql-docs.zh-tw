@@ -16,10 +16,10 @@ ms.assetid: 92e30537-5fd9-4b67-8b0f-486c6e840e03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd7081c6ece290be866b395388ae28ee8b56b312
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982440"
 ---
 # <a name="getlong-method-javalangstring"></a>getLong 方法 (java.lang.String)
@@ -48,7 +48,7 @@ public long getLong(java.lang.String sCol)
 ## <a name="remarks"></a>備註  
  此 getLong 方法由 java.sql.CallableStatement 介面中的 getLong 方法指定。  
   
- 只有可以安全傳回整數值 (如 **bigint**、**int**、**smallint**、**tinyint** 和 **bit**) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型才支援這個方法。 對任何其他資料類型使用這個方法，將擲回例外狀況。  
+ 只有可以安全傳回整數值 (如 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]bigint **、** int **、** smallint **、** tinyint**和**bit **) 的**  資料類型才支援這個方法。 對任何其他資料類型使用這個方法，將擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱  
  [getLong 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)   

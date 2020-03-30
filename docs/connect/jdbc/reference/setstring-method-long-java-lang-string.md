@@ -16,10 +16,10 @@ ms.assetid: 1b2190e9-5ace-497a-8554-0e913ea9b0cb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e3e1dfb6447907caa0bd5970df47fe9989b4aab
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972635"
 ---
 # <a name="setstring-method-long-javalangstring"></a>setString 方法 (long, java.lang.String)

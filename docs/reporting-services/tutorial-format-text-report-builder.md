@@ -9,10 +9,10 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63042951"
 ---
 # <a name="tutorial-format-text-report-builder"></a>教學課程：格式化文字 (報表產生器)
@@ -30,7 +30,7 @@ ms.locfileid: "63042951"
 ## <a name="requirements"></a>需求  
 如需需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="CreateReport"></a>建立含資料來源和資料集的空白報表  
+## <a name="create-a-blank-report-with-a-data-source-and-dataset"></a><a name="CreateReport"></a>建立含資料來源和資料集的空白報表  
   
 ### <a name="to-create-a-blank-report"></a>建立空白報表  
   
@@ -119,7 +119,7 @@ ms.locfileid: "63042951"
 
 9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="AddField"></a>將欄位加入至報表設計介面  
+## <a name="add-a-field-to-the-report-design-surface"></a><a name="AddField"></a>將欄位加入至報表設計介面  
 如果希望擷取自資料集的欄位出現在報表中，您可能會不加思索地直接將欄位拖曳到設計介面。 此練習將點出為何這樣做無效，以及應該改用的方法。  
   
 ### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>將欄位加入至報表 (會得到錯誤的結果)  
@@ -174,7 +174,7 @@ ms.locfileid: "63042951"
   
 7.  選取清單方塊，然後按下 DELETE 鍵。  
   
-## <a name="AddTable"></a>將資料表加入至報表設計介面  
+## <a name="add-a-table-to-the-report-design-surface"></a><a name="AddTable"></a>將資料表加入至報表設計介面  
 建立這個資料表，以便能夠在其中放置超連結和旋轉的文字。   
   
 1.  在 [插入]  索引標籤 > [資料表]   > [資料表精靈]  。  
@@ -209,7 +209,7 @@ ms.locfileid: "63042951"
     
     ![report-builder-format-one-total](../reporting-services/media/report-builder-format-one-total.png)
   
-## <a name="AddHyperlink"></a>加入超連結至報表  
+## <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>加入超連結至報表  
 在本節中，您要加入超連結指向上一節資料表中的文字。  
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
@@ -234,7 +234,7 @@ ms.locfileid: "63042951"
   
 10. 按一下該連結。 如果您的電腦已連接至網際網路，瀏覽器將會開啟報表產生器說明主題。  
   
-## <a name="RotateText"></a>旋轉報表中的文字  
+## <a name="rotate-text-in-the-report"></a><a name="RotateText"></a>旋轉報表中的文字  
 在本節中，您要旋轉前幾節資料表中的部分文字。  
  
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
@@ -260,7 +260,7 @@ ms.locfileid: "63042951"
 
 ![report-builder-format-rotate-270](../reporting-services/media/report-builder-format-rotate-270.png)
 
-## <a name="FormatCurrency"></a>將貨幣格式化  
+## <a name="format-currency"></a><a name="FormatCurrency"></a>將貨幣格式化  
   
 1.  按一下 **[設計]** ，切換到 [設計] 檢視。  
   
@@ -280,7 +280,7 @@ ms.locfileid: "63042951"
 
 ![report-build-format-report](../reporting-services/media/report-build-format-report.png)
     
-## <a name="FormatHTML"></a>顯示 HTML 格式的文字  
+## <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>顯示 HTML 格式的文字  
   
 1.  按一下 **[設計]** ，切換到 [設計] 檢視。  
   
@@ -322,7 +322,7 @@ ms.locfileid: "63042951"
   
 ![report-builder-format-html](../reporting-services/media/report-builder-format-html.png)
 
-## <a name="Save"></a>儲存報表  
+## <a name="save-the-report"></a><a name="Save"></a>儲存報表  
 您可以將報表儲存至報表伺服器、SharePoint 文件庫或您的電腦上。  
   
 本教學課程會將報表儲存至報表伺服器。 如果您沒有報表伺服器的存取權，請將報表儲存在您的電腦上。  

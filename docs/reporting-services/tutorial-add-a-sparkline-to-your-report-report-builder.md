@@ -9,10 +9,10 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63043091"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教學課程：將走勢圖加入至報表 (報表產生器)
@@ -28,7 +28,7 @@ ms.locfileid: "63043091"
 ## <a name="requirements"></a>需求  
 如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="CreateTable"></a>1.建立含資料表的報表  
+## <a name="1-create-a-report-with-a-table"></a><a name="CreateTable"></a>1.建立含資料表的報表  
   
 1.  從您的電腦、[ Web 入口網站或 SharePoint 整合模式](../reporting-services/report-builder/start-report-builder.md)啟動報表產生器[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63043091"
   
 13. 按 [下一步]  。  
   
-## <a name="Query"></a>2.在資料表精靈中建立查詢和資料表配置  
+## <a name="2-create-a-query-and-table-layout-in-the-table-wizard"></a><a name="Query"></a>2.在資料表精靈中建立查詢和資料表配置  
 在報表中，您可以使用擁有預先定義查詢的共用資料集，或是建立只在報表中使用的內嵌資料集。 在本教學課程中，您將建立內嵌資料集。  
   
 > [!NOTE]  
@@ -160,7 +160,7 @@ ms.locfileid: "63043091"
   
 15. 按一下 **[執行]** 預覽報表。  
 
-### <a name="FormatCurrency"></a>2a. 將資料格式化為貨幣  
+### <a name="2a-format-data-as-currency"></a><a name="FormatCurrency"></a>2a. 將資料格式化為貨幣  
 根據預設， **Sales** 欄位的摘要資料會顯示一般數字。 格式化該欄位，將數字顯示為貨幣。 切換 [預留位置樣式]  ，將格式化的文字方塊和預留位置文字顯示為範例值。  
   
 1.  按一下 **[設計]** ，切換到 [設計] 檢視。  
@@ -177,7 +177,7 @@ ms.locfileid: "63043091"
     
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
    
-### <a name="FormatDates"></a>2b. (選擇性) 將資料格式化為日期  
+### <a name="2b-optional-format-data-as-dates"></a><a name="FormatDates"></a>2b. (選擇性) 將資料格式化為日期  
 根據預設， **SalesDate** 欄位會同時顯示日期和時間資訊。 您可以將該欄位格式化，以便只顯示日期。  
   
 1.  按一下包含 `[SalesDate]`的資料格。  
@@ -190,7 +190,7 @@ ms.locfileid: "63043091"
   
 **SalesDate** 值會以預設的日期格式顯示，而 **Sales** 的摘要值會顯示為貨幣。   
   
-## <a name="Sparkline"></a>3.加入走勢圖    
+## <a name="3-add-a-sparkline"></a><a name="Sparkline"></a>3.加入走勢圖    
   
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
   
@@ -224,7 +224,7 @@ ms.locfileid: "63043091"
   
      ![report-builder-sparkline-misaligned](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
-## <a name="AlignSparklines"></a>4.垂直與水平對齊走勢圖  
+## <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4.垂直與水平對齊走勢圖  
 走勢圖應使用相同的度量，否則會很難讀取。 每一個走勢圖的水平和垂直軸都需要符合其餘的走勢圖。  
    
 1.  按一下 **[設計]** 返回 [設計] 檢視。  
@@ -251,7 +251,7 @@ ms.locfileid: "63043091"
   
 ![report-builder-sparkline-aligned](../reporting-services/media/report-builder-sparkline-aligned.png)
   
-## <a name="Width"></a>7.(選擇性) 變更資料行寬度  
+## <a name="7-optional-change-column-widths"></a><a name="Width"></a>7.(選擇性) 變更資料行寬度  
 根據預設，資料表中的每個資料格都會包含一個文字方塊。 頁面轉譯時，文字方塊會垂直展開以容納文字。 在轉譯的報表中，每一個資料列都會依照資料列中最高的轉譯文字方塊高度展開。 設計介面上資料列的高度對於轉譯報表中資料列的高度並無影響。  
   
 若要減少每個資料列佔用的垂直空間數量，請展開資料行寬度以容納一行上資料行中預期的文字方塊內容。  
@@ -266,7 +266,7 @@ ms.locfileid: "63043091"
   
 4.  按一下 [執行]  預覽報表，以查看寬度是否足夠。  
   
-## <a name="Title"></a>8.(選擇性) 加入報表標題  
+## <a name="8-optional-add-a-report-title"></a><a name="Title"></a>8.(選擇性) 加入報表標題  
 報表標題會出現在報表的頂端。 您可以將報表標題放置在報表頁首，如果報表不使用報表頁首，則可以放置在報表主體頂端的文字方塊中。 在本教學課程中，您將使用自動放置在報表主體頂端的文字方塊。  
   
 您可以將不同的字型樣式、大小和色彩套用到文字的片語和個別字元，進一步加強文字。 如需詳細資訊，請參閱[在文字方塊中將文字格式化 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
@@ -285,7 +285,7 @@ ms.locfileid: "63043091"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Save"></a>9.儲存報表  
+## <a name="9-save-the-report"></a><a name="Save"></a>9.儲存報表  
 將報表儲存至報表伺服器或您的電腦。 如果沒有將報表儲存到報表伺服器，就無法使用數個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能，例如報表組件和子報表。  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>若要將報表儲存在報表伺服器上  

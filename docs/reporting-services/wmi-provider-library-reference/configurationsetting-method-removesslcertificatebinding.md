@@ -11,10 +11,10 @@ ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ae98fa644b5aa200db807fd93380802e66eb4eb4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571280"
 ---
 # <a name="configurationsetting-method---removesslcertificatebinding"></a>ConfigurationSetting 方法 - RemoveSSLCertificateBinding

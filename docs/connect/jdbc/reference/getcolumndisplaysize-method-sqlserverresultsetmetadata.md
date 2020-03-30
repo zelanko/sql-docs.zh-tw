@@ -16,10 +16,10 @@ ms.assetid: 21c25443-bd2b-4b60-9798-4efe2c158952
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3de927351c2474c60af8ba1e168b0d7e76f98260
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67952962"
 ---
 # <a name="getcolumndisplaysize-method-sqlserverresultsetmetadata"></a>getColumnDisplaySize 方法 (SQLServerResultSetMetaData)

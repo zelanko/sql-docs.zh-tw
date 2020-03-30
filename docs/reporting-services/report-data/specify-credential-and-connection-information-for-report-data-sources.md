@@ -28,10 +28,10 @@ ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244557"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>指定報表資料來源的認證及連接資訊
@@ -147,7 +147,7 @@ ms.locfileid: "75244557"
 ## <a name="user-name-and-password-login"></a>使用者名稱和密碼登入  
  當您選取 **[使用此使用者名稱和密碼]** 時，必須提供使用者名稱和密碼才能存取資料來源。 若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，這些認證可能會用於資料庫登入。 認證將會傳遞至資料來源以供驗證。  
   
-##  <a name="DataSourceConfigurationConnections"></a> 資料來源組態和網路連接  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a> 資料來源組態和網路連接  
  下表顯示如何為認證類型和資料處理延伸模組的特定組合進行連接。 如果您要使用自訂資料處理延伸模組，請參閱 [為自訂資料處理延伸模組指定連接](../../reporting-services/report-data/specify-connections-for-custom-data-processing-extensions.md)。  
   
 |**型別**|**網路連接的內容**|**資料來源類型**<br /><br /> **(SQL Server、Oracle、ODBC、OLE DB、Analysis Services、XML、SAP NetWeaver BI、Hyperion Essbase)**|  
@@ -162,7 +162,7 @@ ms.locfileid: "75244557"
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
- [建立資料連接字串 - 報表產生器及 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [管理報表資料來源](../../reporting-services/report-data/manage-report-data-sources.md)   
  [設定報表的資料來源屬性](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   

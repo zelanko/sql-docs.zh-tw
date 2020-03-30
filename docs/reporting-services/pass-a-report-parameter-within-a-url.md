@@ -12,10 +12,10 @@ ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 551fc19b3d39ef6cf12c5fdd4e77196b0abbb9fe
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580833"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>在 URL 內傳遞報表參數
@@ -81,7 +81,7 @@ SalesOrderNumber:isnull=true
 > [!NOTE]  
 >  如果報表中包含具有預設值的報表參數，而且 **Prompt** 屬性的值是 **false** (也就是在報表管理員中未選取 [提示使用者] 屬性)，則您無法在 URL 內傳遞該報表參數的值。 這可讓管理員選擇防止使用者加入或修改某些報表參數值。  
   
-##  <a name="bkmk_examples"></a> 其他範例  
+##  <a name="additional-examples"></a><a name="bkmk_examples"></a> 其他範例  
  下列 URL 範例包含空格和多個參數。  
   
 -   資料夾名稱 "SQL Server User Education Team" 包含空格，因此 "+" 會取代每個空格。  

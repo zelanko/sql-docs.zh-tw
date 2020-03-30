@@ -11,10 +11,10 @@ ms.assetid: 8aa2b24d-68ed-488f-ad33-e2c688f945cc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1c1c6a6330fec261de12a1ee64f7384f7e2ab59
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970815"
 ---
 # <a name="sqlserverpooledconnection-members"></a>SQLServerPooledConnection 成員

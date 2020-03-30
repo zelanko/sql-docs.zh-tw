@@ -14,10 +14,10 @@ ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6089e521e5b5fb5015816d2d18ce5a885a4c3327
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193797"
 ---
 # <a name="implementing-a-security-extension"></a>實作安全性延伸模組

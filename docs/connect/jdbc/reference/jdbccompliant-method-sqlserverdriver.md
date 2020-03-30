@@ -16,10 +16,10 @@ ms.assetid: b299b20d-d1cd-45b3-91dc-dcf579498570
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c36d7980355eed1e1a1e8f42fb53c75fdb70d0ed
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976955"
 ---
 # <a name="jdbccompliant-method-sqlserverdriver"></a>jdbcCompliant 方法 (SQLServerDriver)

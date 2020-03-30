@@ -16,10 +16,10 @@ ms.assetid: 240983e8-bd59-4bb1-a37a-5ba71f85fb72
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae69ea0bcbd77d509e541d34594560863af0475e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67996925"
 ---
 # <a name="updatebyte-method-sqlserverresultset"></a>updateByte 方法 (SQLServerResultSet)

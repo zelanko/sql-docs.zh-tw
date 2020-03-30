@@ -16,10 +16,10 @@ ms.assetid: 49bc879d-822b-42da-bc20-2394865f1f0f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7afb8728b92ac7460173950bf42e38f968e056af
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954575"
 ---
 # <a name="finalize-method-sqlserverresultset"></a>finalize 方法 (SQLServerResultSet)

@@ -16,10 +16,10 @@ ms.assetid: 139a5b74-8d7d-41cf-991a-a142349c58f6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3002c3375f14eb4c33554c960c567e4a3d8526b0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974770"
 ---
 # <a name="setcharacterstream-method-int-javaioreader-int"></a>setCharacterStream 方法 (int, java.io.Reader, int)

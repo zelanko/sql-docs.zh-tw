@@ -16,10 +16,10 @@ ms.assetid: 7c29994a-0b53-420b-8a9b-82a9eef08587
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 24aed500f5b345e2ba3762bdd7a888fc5f8f31ba
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954578"
 ---
 # <a name="findcolumn-method-sqlserverresultset"></a>findColumn 方法 (SQLServerResultSet)

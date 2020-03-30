@@ -11,10 +11,10 @@ ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 026583e0093812dbf683c93de9d11fd8ffabb7e4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65576148"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Management Studio F1 說明中的報表伺服器

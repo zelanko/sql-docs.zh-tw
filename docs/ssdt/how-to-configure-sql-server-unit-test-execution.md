@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: d01703ff133fb8bac0425fc283190042d8dfcd1f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241571"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>HOW TO：設定 SQL Server 單元測試執行
@@ -32,7 +32,7 @@ ms.locfileid: "75241571"
     > [!NOTE]  
     > 測試不會在方案資料夾中執行，而是在本機硬碟上的另一個資料夾中執行。 雖然您可以設定測試部署的各部分，但通常不需要針對單元測試設定部署。 如需有關測試部署的詳細資訊，請參閱[執行測試](https://msdn.microsoft.com/library/dd286680(VS.100).aspx)。  
   
-## <a name="SpecifyConnectionStrings"></a>指定連接字串  
+## <a name="specify-connection-strings"></a><a name="SpecifyConnectionStrings"></a>指定連接字串  
   
 #### <a name="to-specify-database-connection-strings"></a>若要指定資料庫連接字串  
   
@@ -54,7 +54,7 @@ ms.locfileid: "75241571"
   
 4.  重建測試專案來套用組態變更。  
   
-## <a name="DeployingDBSchema"></a>部署資料庫結構描述  
+## <a name="deploy-a-database-schema"></a><a name="DeployingDBSchema"></a>部署資料庫結構描述  
   
 #### <a name="to-deploy-to-a-database-the-schema-of-a-database-project"></a>若要將資料庫專案的結構描述部署到資料庫  
   

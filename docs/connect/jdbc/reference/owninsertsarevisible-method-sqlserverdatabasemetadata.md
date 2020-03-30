@@ -16,10 +16,10 @@ ms.assetid: 9fe76aa3-a539-4335-822f-69cc35a9e7e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a78b6d90c58f7d04f5a3d9f6c8225cf592153d2d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976535"
 ---
 # <a name="owninsertsarevisible-method-sqlserverdatabasemetadata"></a>ownInsertsAreVisible 方法 (SQLServerDatabaseMetaData)

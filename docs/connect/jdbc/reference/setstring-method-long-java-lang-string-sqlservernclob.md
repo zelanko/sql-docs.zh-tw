@@ -11,10 +11,10 @@ ms.assetid: 698073b2-3f0c-449c-ad68-48144698fe8f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9c549d3e1b7b9b63663333a59b263a2aa6ad4113
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972673"
 ---
 # <a name="setstring-method-long-javalangstring-sqlservernclob"></a>setString 方法 (long, java.lang.String) (SQLServerNClob)

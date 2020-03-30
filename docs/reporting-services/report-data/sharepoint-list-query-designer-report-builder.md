@@ -11,10 +11,10 @@ ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bd0c32d753abf6b907e35daa91851acdd286f417
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66500054"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>SharePoint 清單查詢設計工具 (報表產生器)
@@ -54,15 +54,15 @@ ms.locfileid: "66500054"
  [查詢結果](#QueryResults)  
  針對自動產生的查詢顯示結果集的範例資料。  
   
-###  <a name="DatabaseView"></a> SharePoint 清單窗格  
+###  <a name="sharepoint-lists-pane"></a><a name="DatabaseView"></a> SharePoint 清單窗格  
  [SharePoint 清單] 窗格會顯示您有權檢視之資料庫物件的中繼資料，而這個權限是由資料來源連接和認證所決定。 階層式檢視會檢視依照資料庫結構描述所組織的資料庫物件。 您可以展開每個結構描述的節點，以便檢視資料表、檢視表、預存程序和資料表值函式。 您可以展開資料表或檢視表來顯示資料行。  
   
-###  <a name="SelectedFields"></a> 選取的欄位窗格  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a> 選取的欄位窗格  
  [選取的欄位] 窗格會顯示您為 SharePoint 清單項目選取的清單項目欄位。 顯示在這個窗格中的欄位會成為報表資料集的欄位集合。 在您建立資料集和查詢之後，請使用 [報表資料] 窗格來檢視報表資料集的欄位集合。 這些欄位代表檢視報表時，您可以在資料表、圖表和其他報表項目中顯示的資料。  
   
  若要在這個窗格中加入或移除欄位，請在 [SharePoint 清單] 窗格中選取或清除資料表或檢視欄位的核取方塊。  
   
-###  <a name="AppliedFilters"></a> 套用的篩選窗格  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> 套用的篩選窗格  
  [套用的篩選] 窗格會顯示用來限制在執行階段擷取之資料列數目的準則。 在這個窗格中指定的準則會用來產生 [!INCLUDE[tsql](../../includes/tsql-md.md)] WHERE 子句。 當您選取參數選項時，就會自動建立報表參數。 以查詢參數為基礎的報表參數可讓使用者指定查詢的值，以便控制報表中的資料。  
   
  系統會顯示下列資料行：  
@@ -75,7 +75,7 @@ ms.locfileid: "66500054"
   
 -   **參數** ：顯示要將查詢參數加入至查詢的選項。 您可以使用資料集屬性來檢視查詢參數與報表參數之間的關聯性。  
   
-###  <a name="QueryResults"></a> 查詢結果窗格  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> 查詢結果窗格  
  [查詢結果] 窗格會針對其他窗格中之選取項目所指定的自動產生查詢顯示結果。 結果集中的資料行就是您在 [選取的欄位] 窗格中指定的欄位，而且資料列資料是由您在 [套用的篩選] 窗格中指定的篩選所限制。  
   
  這項資料代表您執行查詢時來自資料來源的值。 這項資料不會儲存在報表定義中。報表中的實際資料是在處理報表時擷取的。  

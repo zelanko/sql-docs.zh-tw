@@ -16,16 +16,16 @@ ms.assetid: 6aece4e5-027d-434e-a8cf-a67c0484f189
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0b9df5512466c5f12c5fda1b4e5cb4a91504499
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982077"
 ---
 # <a name="getmaxrows-method-sqlserverstatement"></a>getMaxRows 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取最大資料列數目，即這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件產生 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件可以包含的資料列。  
+  擷取最大資料列數目，即這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件產生 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件可以包含的資料列。  
   
 ## <a name="syntax"></a>語法  
   

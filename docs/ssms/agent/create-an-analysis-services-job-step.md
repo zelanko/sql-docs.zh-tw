@@ -15,10 +15,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 45f053ee1c69e5e36885fd72c6099823647381f1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258489"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
@@ -44,17 +44,17 @@ ms.locfileid: "75258489"
   
     [SQL Server 管理物件](#SMO)  
   
-## <a name="BeforeYouBegin"></a>開始之前  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>開始之前  
   
-### <a name="Restrictions"></a>限制事項  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>限制事項  
   
 -   如果作業步驟使用 Analysis Services 命令，命令陳述式必須是 XML for Analysis Services **Execute** 方法。 此陳述式可能不包含完整的簡易物件存取通訊協定 (SOAP) Envelope 或 XML for Analysis **Discover** 方法。 雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支援完整的 SOAP Envelope 與 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟則不支援。 如需有關 XML for Analysis Services 的詳細資訊，請參閱 [XML for Analysis 概觀 (XMLA)](https://msdn.microsoft.com/library/ms187190.aspx)。  
   
 -   如果作業步驟使用 Analysis Services 查詢，查詢陳述式必須是多維度運算式 (MDX) 查詢。 如需 MDX 的詳細資訊，請參閱 [MDX 陳述式基礎觀念 (MDX)](https://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b)。  
   
-### <a name="Security"></a>安全性  
+### <a name="security"></a><a name="Security"></a>安全性  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
   
 -   若要執行使用 Analysis Services 子系統的作業步驟，使用者必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員，或具有已定義能使用此子系統之有效 Proxy 帳戶的存取權。 此外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶或 Proxy 必須是 Analysis Services 管理員，且必須是有效的 Windows 網域帳戶。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "75258489"
   
 -   如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
-## <a name="SSMS"></a>使用 SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>使用 SQL Server Management Studio  
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>若要建立 Analysis Services 命令作業步驟  
   
@@ -104,7 +104,7 @@ ms.locfileid: "75258489"
   
 9. 按一下 **[進階]** 頁面以定義這個作業步驟的選項，例如在作業步驟成功或失敗時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所該採取的行動、應該嘗試作業步驟多少次，以及應該在何處寫入作業步驟輸出。  
   
-## <a name="TSQL"></a>使用 Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>使用 Transact-SQL  
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>若要建立 Analysis Services 命令作業步驟  
   
@@ -176,7 +176,7 @@ ms.locfileid: "75258489"
   
 如需詳細資訊，請參閱 [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)。  
   
-## <a name="SMO"></a>使用 SQL Server 管理物件  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>使用 SQL Server 管理物件  
 **建立 PowerShell 指令碼作業步驟**  
   
 透過所選的程式語言，例如 XMLA 或 MDX，使用 **JobStep** 類別。 如需詳細資訊，請參閱 [SQL Server 管理物件 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  

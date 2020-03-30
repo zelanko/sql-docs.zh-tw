@@ -11,10 +11,10 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75247285"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>SQL Server Management Studio 元件和設定
@@ -47,7 +47,7 @@ ms.locfileid: "75247285"
 * **物件總管** (F8)：物件總管是含有伺服器中所有資料庫物件的樹狀檢視。 該檢視包含 SQL Server 資料庫引擎、SQL Server Analysis Services、SQL Server Reporting Services 和 SQL Server Integration Services 的資料庫。 [物件總管] 含有它所連線之所有伺服器的資訊。 
 
     ![物件總管](media/ssms-configuration/objectexplorer.png)
-* **查詢視窗** (Ctrl+N)：選取 [新增查詢]  之後，在這個視窗中輸入 Transact-SQL (T-SQL) 查詢。 此處也會顯示您的查詢結果。
+* **查詢視窗** (Ctrl + N)：選取 [新增查詢]  之後，在這個視窗中輸入 Transact-SQL (T-SQL) 查詢。 此處也會顯示您的查詢結果。
 
     ![新增查詢視窗](media/ssms-configuration/newquery.png)
 
@@ -55,11 +55,11 @@ ms.locfileid: "75247285"
 
     ![屬性](media/ssms-configuration/properties.png)
 
-* **範本瀏覽器** (Ctrl+Alt+T)：[範本瀏覽器] 具有各種預先建立的 T-SQL 範本。 您可以使用這些範本來執行各種功能，例如建立或備份資料庫。 
+* **範本瀏覽器** (Ctrl+Alt+T)：範本瀏覽器具有各種預先建立之 T-SQL 的範本。 您可以使用這些範本來執行各種功能，例如建立或備份資料庫。 
 
     ![範本瀏覽器](media/ssms-configuration/templates.png)
 
-* **物件總管詳細資料** (F7)：此檢視會比使用 [物件總管] 中的檢視更精細。 您可以使用 [物件總管詳細資料]，同時管理多個物件。 例如，在這個視窗中，您可以選取多個資料庫，然後同時加以刪除或編寫其指令碼。 
+* **物件總管詳細資料** (F7)：此檢視會比使用 [物件總管] 中的檢視更細微。 您可以使用 [物件總管詳細資料]，同時管理多個物件。 例如，在這個視窗中，您可以選取多個資料庫，然後同時加以刪除或編寫其指令碼。 
 
     ![物件總管詳細資料](media/ssms-configuration/objectexplorerdetails.PNG) 
 

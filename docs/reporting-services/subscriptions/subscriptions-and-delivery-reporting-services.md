@@ -20,10 +20,10 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fd9288a630dd24dd8d79deef184cfc4c4fabcd9f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578037"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
@@ -71,7 +71,7 @@ ms.locfileid: "65578037"
   
 -   [使用 PowerShell 變更及列出 Reporting Services 訂閱擁有者並執行訂閱](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
-##  <a name="bkmk_subscription_scenarios"></a> 訂閱與傳遞案例  
+##  <a name="subscription-and-delivery-scenarios"></a><a name="bkmk_subscription_scenarios"></a> 訂閱與傳遞案例  
  當您為每個訂閱設定傳遞選項時，可用的選項將取決於您選擇的傳遞延伸模組而定。 傳遞延伸模組是支援某些散發方式的模組。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含數種傳遞延伸模組，且可透過協力廠商取得傳遞延伸模組。  
   
  如果您是開發人員，可以建立自訂傳遞延伸模組來支援其他案例。 如需詳細資訊，請參閱 [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)。  
@@ -85,7 +85,7 @@ ms.locfileid: "65578037"
 |預先載入快取|如果您有多個參數化報表的執行個體或是大量檢視報表的報表使用者，可以將報表預先載入快取中，以縮短顯示報表所需的處理時間。|  
 |資料驅動報表|使用資料驅動訂閱可以在執行階段自訂報表輸出、傳遞選項和報表參數設定。 訂閱會在執行階段使用查詢從資料來源取得輸入值。 您可以使用資料驅動訂閱執行郵件合併作業，將報表傳送至處理訂閱時所決定的訂閱者清單。|  
   
-##  <a name="bkmk_standard_and_datadriven"></a> 標準與資料驅動訂閱  
+##  <a name="standard-and-data-driven-subscriptions"></a><a name="bkmk_standard_and_datadriven"></a> 標準與資料驅動訂閱  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援兩種訂閱： **標準** 與 **資料驅動**。 標準訂閱是由個別使用者建立及管理的。 標準訂閱由在訂閱處理期間無法改變的靜態值所組成。 針對每一個標準訂閱，都有一個報表呈現方式選項、傳遞選項和報表參數的集合。  
   
  資料驅動訂閱會透過查詢提供用於指定收件者、報表參數或應用程式格式之值的外部資料來源，在執行階段取得訂閱資訊。 如果您的收件者清單很大，或者想要變化每個收件者的報表輸出，就可以使用資料驅動訂閱。 若要使用資料驅動訂閱，您必須具備建立查詢和了解參數使用方式的專門技術。 報表伺服器管理員通常會建立和管理這些訂閱。 如需詳細資訊，請參閱下列：  
@@ -94,7 +94,7 @@ ms.locfileid: "65578037"
   
 -   [建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
   
-##  <a name="bkmk_subscription_requirements"></a> 訂閱需求  
+##  <a name="subscription-requirements"></a><a name="bkmk_subscription_requirements"></a> 訂閱需求  
  在建立對報表的訂閱之前，必須符合下列必要條件：  
   
 |需求|描述|  
@@ -105,7 +105,7 @@ ms.locfileid: "65578037"
 |沒有模型項目安全性|如果「報表產生器」報表是使用模型當做資料來源，而該模型包含模型項目安全性設定，您便無法訂閱此報表。 這項限制中只包含使用模型項目安全性的報表。|  
 |參數值|如果報表使用參數，則參數值必須在報表本身、或您所定義的訂閱中指定。 如果在報表中定義了預設值，您就可以設定參數值以使用預設值。|  
   
-##  <a name="bkmk_delivery_extensions"></a> 傳遞延伸模組  
+##  <a name="delivery-extensions"></a><a name="bkmk_delivery_extensions"></a> 傳遞延伸模組  
  訂閱會在報表伺服器上處理，而且會透過伺服器上所部署的傳遞延伸模組散發。 根據預設，您可以建立將報表傳送至共用資料夾或電子郵件地址的訂閱。 如果報表伺服器是針對 SharePoint 整合模式所設定，您也可以將報表傳送至 SharePoint 文件庫。  
   
  使用者建立訂閱時，可以選擇其中一個可用的傳遞延伸模組，以決定如何傳遞報表。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含下列傳遞延伸模組。  
@@ -120,7 +120,7 @@ ms.locfileid: "65578037"
 > [!NOTE]  
 >  報表傳遞是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 架構的可延伸部分。 協力廠商可以建立自訂傳遞延伸模組，將報表傳送到其他位置或裝置。 如需有關自訂傳遞延伸模組的詳細資訊，請參閱＜ [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)＞。  
   
-##  <a name="bkmk_parts_of_subscription"></a> 訂閱的組件  
+##  <a name="parts-of-a-subscription"></a><a name="bkmk_parts_of_subscription"></a> 訂閱的組件  
  訂閱定義包含下列組件：  
   
 -   可自動執行之報表 (亦即，使用預存認證或不使用認證的報表) 的指標。  
@@ -139,7 +139,7 @@ ms.locfileid: "65578037"
   
  訂閱資訊和個別報表一同儲存在報表伺服器資料庫中。 您無法將訂閱與其相關聯的報表分開管理。 請注意，無法將訂閱擴充以包括描述、其他自訂文字或其他元素。 訂閱僅能包含前述項目。  
   
-##  <a name="bkmk_subscription_processing"></a> 處理訂閱的方式  
+##  <a name="how-subscriptions-are-processed"></a><a name="bkmk_subscription_processing"></a> 處理訂閱的方式  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含排程與傳遞處理器，其可提供排程報表並將報表傳遞給使用者的功能。 報表伺服器會持續回應其監視的事件。 當符合訂閱所定義之條件的事件發生時，報表伺服器將讀取訂閱，以決定如何處理與傳遞報表。 報表伺服器要求在訂閱中指定的傳遞延伸模組。 傳遞延伸模組執行之後，報表伺服器會從訂閱擷取傳遞資訊，並將其傳送至傳遞延伸模組以供處理。  
   
  傳遞延伸模組會以訂閱中所定義的格式轉譯報表，然後傳遞報表或通知到指定的目的地。 如果無法傳遞報表，就會在報表伺服器記錄檔中記錄一個項目。 如果想要支援重試作業，可以設定報表伺服器在第一次嘗試失敗時，重新嘗試傳遞。  
@@ -167,7 +167,7 @@ ms.locfileid: "65578037"
   
  快照集更新事件使用報表快照集的排程更新來觸發訂閱。 您可以依據在報表上設定的報表執行屬性，定義只要以新資料更新了報表，就會觸發的訂閱。  
   
-##  <a name="bkmk_code"></a> 訂閱的程式設計方式控制  
+##  <a name="programmatic-control-of-subscriptions"></a><a name="bkmk_code"></a> 訂閱的程式設計方式控制  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 物件模型可讓您以程式設計方式稽核和控制訂閱和訂閱處理。  請參閱以下的範例和快速入門︰  
   
 -   [使用 PowerShell 變更及列出 Reporting Services 訂閱擁有者並執行訂閱](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
@@ -176,7 +176,7 @@ ms.locfileid: "65578037"
   
 -   <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
--   如需 PowerShell 指令碼範例以列出所有設為使用 [檔案共用帳戶]  的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱，請參閱[訂閱設定與檔案共用帳戶 &#40;組態管理員&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。  
+-   如需 PowerShell 指令碼範例以列出所有設為使用 [檔案共用帳戶][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**的** 訂閱，請參閱[訂閱設定與檔案共用帳戶 &#40;組態管理員&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   

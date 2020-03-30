@@ -11,10 +11,10 @@ ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc81bae599bcd9e401aad7e610a7c43ed1a0dcec
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027879"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server
@@ -27,9 +27,9 @@ Microsoft JDBC Driver for SQL Server 已在主要的應用程式伺服器上經�
   
 ## <a name="getting-started"></a>開始使用  
 
-* [步驟 1：設定開發環境以進行 Java 開發](step-1-configure-development-environment-for-java-development.md)  
-* [步驟 2：建立 SQL 資料庫以進行 Java 開發](step-2-create-a-sql-database-for-java-development.md)  
-* [步驟 3：使用 Java 連線到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
+* [步驟 1︰設定 Java 開發的開發環境](step-1-configure-development-environment-for-java-development.md)  
+* [步驟 2︰建立 Java 開發的 SQL 資料庫](step-2-create-a-sql-database-for-java-development.md)  
+* [步驟 3︰使用 Java 連接到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>文件  
 

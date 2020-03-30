@@ -13,23 +13,23 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 8e159a6db1820169cd81caa05e70765ac32f0d56
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896234"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>ASP.NET 應用程式中的 SqlDependency
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-此節的範例示範如何利用 ASP.NET <xref:System.Web.Caching.SqlCacheDependency> 物件，間接使用 <xref:Microsoft.Data.SqlClient.SqlDependency>。 <xref:System.Web.Caching.SqlCacheDependency> 物件會使用 <xref:Microsoft.Data.SqlClient.SqlDependency> 來接聽通知，並正確更新快取。  
+此節的範例示範如何利用 ASP.NET <xref:Microsoft.Data.SqlClient.SqlDependency> 物件，間接使用 <xref:System.Web.Caching.SqlCacheDependency>。 <xref:System.Web.Caching.SqlCacheDependency> 物件會使用 <xref:Microsoft.Data.SqlClient.SqlDependency> 來接聽通知，並正確更新快取。  
   
 > [!NOTE]
 >  此範例程式碼假設您已藉由執行[啟用查詢通知](enable-query-notifications.md)中的指令碼來啟用查詢通知。  
   
 ## <a name="about-the-sample-application"></a>關於範例應用程式  
-此範例應用程式會使用單一 ASP.NET 網頁，在 <xref:System.Web.UI.WebControls.GridView> 控制項中顯示 **AdventureWorks** SQL Server 資料庫的產品資訊。 當頁面載入時，程式碼會將目前的時間寫入至 <xref:System.Web.UI.WebControls.Label> 控制項。 然後會定義 <xref:System.Web.Caching.SqlCacheDependency> 物件，並在 <xref:System.Web.Caching.Cache> 物件上設定屬性，以儲存快取資料長達三分鐘。 然後，程式碼會連線到資料庫並擷取資料。 當頁面載入且應用程式正在執行時，ASP.NET 將從快取中擷取資料，您可以透過注意頁面上的時間不會變更來驗證這一點。 如果監視的資料變更，ASP.NET 就會讓快取失效，並以全新的資料重新填入 `GridView` 控制項，進而更新 `Label` 控制項中顯示的時間。  
+此範例應用程式會使用單一 ASP.NET 網頁，在 **控制項中顯示**AdventureWorks<xref:System.Web.UI.WebControls.GridView> SQL Server 資料庫的產品資訊。 當頁面載入時，程式碼會將目前的時間寫入至 <xref:System.Web.UI.WebControls.Label> 控制項。 然後會定義 <xref:System.Web.Caching.SqlCacheDependency> 物件，並在 <xref:System.Web.Caching.Cache> 物件上設定屬性，以儲存快取資料長達三分鐘。 然後，程式碼會連線到資料庫並擷取資料。 當頁面載入且應用程式正在執行時，ASP.NET 將從快取中擷取資料，您可以透過注意頁面上的時間不會變更來驗證這一點。 如果監視的資料變更，ASP.NET 就會讓快取失效，並以全新的資料重新填入 `GridView` 控制項，進而更新 `Label` 控制項中顯示的時間。  
   
 ## <a name="creating-the-sample-application"></a>建立範例應用程式  
 遵循下列步驟，以建立並執行範例應用程式：  

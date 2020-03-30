@@ -9,10 +9,10 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4679ed954ac7f422a0f3caa0c59c24e5012c927f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77078179"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "77078179"
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式 | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式   
   
-##  <a name="bkmk_ReportServerConcepts"></a> 報表伺服器概念  
+##  <a name="report-server-concepts"></a><a name="bkmk_ReportServerConcepts"></a> 報表伺服器概念  
  報表伺服器是其上安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 執行個體的電腦。 報表伺服器會在內部儲存分頁與行動報表、報表相關項目以及資源、排程和訂閱這類項目。 報表伺服器可以設定為獨立單一伺服器或向外延展伺服器陣列，也可以與 SharePoint Server 整合。 與報表伺服器項目的互動方式是透過 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web 服務、WMI 提供者、URL 存取或透過指令碼進行程式設計。 與報表伺服器的互動方式則取決於部署拓撲和組態。  
   
 ### <a name="native-mode-report-servers"></a>原生模式報表伺服器
@@ -59,7 +59,7 @@ ms.locfileid: "77078179"
  如需用以與報表伺服器互動的工具清單，請參閱 [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)。  
   
   
-##  <a name="bkmk_ReportsandRelatedItemConcepts"></a> 報表及相關項目概念  
+##  <a name="reports-and-related-item-concepts"></a><a name="bkmk_ReportsandRelatedItemConcepts"></a> 報表及相關項目概念  
 ### <a name="reports-and-report-definitions"></a>報表與報表定義
 
 
@@ -145,7 +145,7 @@ ms.locfileid: "77078179"
  資料警示是儲存在警示資料庫內部的項目。 資料警示定義包含要從現有報表資料摘要中使用的資料、要符合的條件、排程，以及警示的收件者。 只有發行至報表伺服器的報表才提供資料警示，而報表伺服器是與 SharePoint 伺服器整合。 原生報表伺服器安裝上未提供資料警示。 如需詳細資訊，請參閱 [Reporting Services 資料警示](../reporting-services/reporting-services-data-alerts.md)。  
   
   
-##  <a name="bkmk_TypesofReports"></a> Reporting Services 分頁報表的類型  
+##  <a name="types-of-reporting-services-paginated-reports"></a><a name="bkmk_TypesofReports"></a> Reporting Services 分頁報表的類型  
  在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中， *「報表」* (Report) 這個詞彙可以套用至特定類型的報表伺服器項目、配置設計或方案設計。 單一 Reporting Services 分頁報表可以具有一種以上類型的特性，例如，報表可以同時是獨立報表、主報表所參考的子報表、不同主報表中鑽研報表的目標及連結報表。  
   
 ### <a name="drilldown-reports"></a>向下鑽研報表 
@@ -183,7 +183,7 @@ ms.locfileid: "77078179"
  升級的報表是一種已發行的報表定義，可在將報表伺服器從某個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本升級至更新版本時轉換為較新的結構描述。 會保留原始報表定義。 報表是在記憶體中進行升級、編譯，而編譯的版本則是儲存在內部。 如需詳細資訊，請參閱 [升級 Reporting Services 報表](../reporting-services/install-windows/upgrade-reports.md)。  
   
   
-##  <a name="bkmk_StagesofReports"></a> Reporting Services 分頁報表的階段  
+##  <a name="stages-of-reporting-services-paginated-reports"></a><a name="bkmk_StagesofReports"></a> Reporting Services 分頁報表的階段  
  您可以建立、發行或儲存、編譯、處理、快取、轉譯、檢視和匯出報表定義，以及將報表定義儲存為記錄。 執行報表時，報表伺服器會以三個步驟來處理報表：報表處理、資料處理，以及轉譯。 資料和報表處理是在報表定義上執行，而結果為內部中繼格式。 中繼格式的報表接下來會轉譯成特定的檢視格式。 下列圖表顯示報表處理的階段和元素。  
   
  ![report processing diagram](../reporting-services/media/report-execution.gif "報表處理圖")  

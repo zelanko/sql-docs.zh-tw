@@ -16,10 +16,10 @@ ms.assetid: eb709f6b-64e1-4d0c-a704-290891627dd7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ec61791897011781cbe93776bb58bfdd144bd6e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978296"
 ---
 # <a name="geturl-method-javalangstring"></a>getURL 方法 (java.lang.String)

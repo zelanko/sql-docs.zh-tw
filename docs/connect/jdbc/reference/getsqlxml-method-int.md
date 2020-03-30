@@ -11,10 +11,10 @@ ms.assetid: a1b32d3a-d7c9-4086-ae2b-fc1da96949b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 957def695287bbd63d21e02859a441f07e3583be
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979691"
 ---
 # <a name="getsqlxml-method-int"></a>getSQLXML 方法 (int)
@@ -35,7 +35,7 @@ public final java.sql.SQLXML getSQLXML(int parameterIndex)
  指出參數索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- SQLXML 物件。  
+ ASQLXMLobject。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

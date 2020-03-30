@@ -12,10 +12,10 @@ ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2f101df8f160e7d6bab50dd96e7a156622c7699a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67228586"
 ---
 # <a name="update-a-resource-web-portal"></a>更新資源 (入口網站)

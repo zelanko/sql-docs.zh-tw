@@ -18,10 +18,10 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b0b4a72519a0fa20d0c4a7472760a8f06a9ced32
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79190616"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
@@ -50,7 +50,7 @@ ms.locfileid: "79190616"
     - 具備針對排序的資料行存放區索引增強功能，以及 Always On 可用性群組支援。
 - 新的安全性功能：
     - **Always Encrypted：** 啟用時，只有具備加密金鑰的應用程式才能存取 SQL Server 2016 資料庫中加密的敏感性資料。 金鑰一律不會傳遞至 SQL Server。
-    - **動態資料遮罩：** 如果已在資料表定義中指定，則受遮罩的資料會對大部分的使用者隱藏，且只有具有 UNMASK 權限的使用者可查看完整資料。
+    - **動態資料遮罩：** 如果有在資料表定義中指定，則受遮罩的資料會對大部分的使用者隱藏，且只有具有 UNMASK 權限的使用者可查看完整資料。
     - **資料列層級安全性：** 資料存取可限制於資料庫引擎層級，來讓使用者只能看見與他們相關的項目。 
 
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)

@@ -16,10 +16,10 @@ ms.assetid: 8b3c3938-e057-4919-9e9f-01eb8a4ad937
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b08ca8e8cb96329d29310f9c0c0e250ab6b10e12
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978775"
 ---
 # <a name="gettimestamp-method-javalangstring-sqlserverresultset"></a>getTimestamp 方法 (java.lang.String) (SQLServerResultSet)

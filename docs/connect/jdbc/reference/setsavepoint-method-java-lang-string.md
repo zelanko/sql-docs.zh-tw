@@ -16,10 +16,10 @@ ms.assetid: 1cf15ec4-d9d9-4ab3-bfee-2ea43ff609a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cae36f62cba9f7c8b97ae13c06d1f01960f616e8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973095"
 ---
 # <a name="setsavepoint-method-javalangstring"></a>setSavepoint 方法 (java.lang.String)
@@ -46,7 +46,7 @@ public java.sql.Savepoint setSavepoint(java.lang.String sName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 此 setSavePoint 方法是由 java.sql.Connection 介面中的 setSavePoint 方法所指定。  
+ 這個 setSavePoint 方法是由 java.sql.Connection 介面中的 setSavePoint 方法所指定。  
   
  *sName* 引數會由 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 自動逸出。  
   

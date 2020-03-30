@@ -13,23 +13,23 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578232"
 ---
 # <a name="project-property-pages-dialog-box"></a>專案屬性頁對話方塊
 
-  使用專案屬性頁，即可設定報表伺服器專案的部署屬性。 若要開啟此對話方塊，請從 專案  功能表按一下 \<報表專案名稱>  屬性  。  
+  使用專案屬性頁，即可設定報表伺服器專案的部署屬性。 若要開啟此對話方塊，請從 專案  功能表按一下 _報表專案名稱>\<_ 屬性  。  
   
  在您定義組態屬性之後，可以從工具列的 [方案組態]  下拉式清單中選取組態。  
 
 ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png)
   
 ## <a name="options"></a>選項。  
- **Configuration**  
- 選取要編輯的組態。 一開始會有下列的組態可用：**Debug**、**DebugLocal** 和 **Release**。 使用中組態會先出現，例如 **Active(Debug)** 。  
+ **組態**  
+ 選取要編輯的組態。 一開始會有下列的組態可用： **Debug**、 **DebugLocal**和 **Release**。 使用中組態會先出現，例如 **Active(Debug)** 。  
   
  若要同時查看多個組態的屬性，請選取 **[所有組態]** 或 **[多重組態]** 。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "65578232"
  發行至以 SharePoint 整合模式執行的報表伺服器時，請使用 SharePoint 頂層網站或子網站的 URL。 若未指定網站，則會使用預設的最上層網站。 例如： 
 + `http:\\<servername>`, 
 + `http:\\<servername\<site>` 
-+ 第 1 課：建立 Windows Azure 儲存體物件`http:\\<servername>\<site>\<subsite>`。  
++ `http:\\<servername>\<site>\<subsite>`第 1 課：建立 Windows Azure 儲存體物件{2}。  
 
 ## <a name="next-steps"></a>後續步驟
 

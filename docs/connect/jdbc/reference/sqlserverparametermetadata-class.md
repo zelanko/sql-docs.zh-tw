@@ -11,10 +11,10 @@ ms.assetid: 546290e0-9411-4a2b-aa36-61251e70e9cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0721341cbf095e0aa27fab392c8d03f72dc2e3a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970896"
 ---
 # <a name="sqlserverparametermetadata-class"></a>SQLServerParameterMetaData 類別

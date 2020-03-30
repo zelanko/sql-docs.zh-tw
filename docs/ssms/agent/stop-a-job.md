@@ -17,10 +17,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 26fbc4c13cca5a84c92130fd7541e7d3e63d3ae9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257913"
 ---
 # <a name="stop-a-job"></a>停止作業
@@ -45,18 +45,18 @@ ms.locfileid: "75257913"
   
     [SQL Server 管理物件](#SMO)  
   
-## <a name="BeforeYouBegin"></a>開始之前  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>開始之前  
   
-### <a name="Restrictions"></a>限制事項  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>限制事項  
   
 -   如果作業目前正在執行 **CmdExec** 或 **PowerShell**類型的步驟，則會強制提前結束執行中的處理序 (如 MyProgram.exe)。 提前結束可能造成無法預期的行為，例如，由維持開啟狀態的處理序所使用的檔案。  
   
 -   對於多伺服器作業，作業的 STOP 指令會發佈到作業的所有目標伺服器。  
   
-### <a name="Security"></a>安全性  
+### <a name="security"></a><a name="Security"></a>安全性  
 如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
-## <a name="SSMS"></a>使用 SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>使用 SQL Server Management Studio  
   
 #### <a name="to-stop-a-job"></a>若要停止作業  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75257913"
   
 3.  若要停止多個作業，請以滑鼠右鍵按一下 **[作業活動監視器]** ，然後按一下 **[檢視作業活動]** 。 在「作業活動監視器」中，選取要停止的作業，以滑鼠右鍵按一下選取範圍，然後按一下 **[停止作業]** 。  
   
-## <a name="TSQL"></a>使用 Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>使用 Transact-SQL  
   
 #### <a name="to-stop-a-job"></a>若要停止作業  
   
@@ -88,7 +88,7 @@ ms.locfileid: "75257913"
   
 如需詳細資訊，請參閱 [sp_stop_job (Transact-SQL)](https://msdn.microsoft.com/64b4cc75-99a0-421e-b418-94e37595bbb0)。  
   
-## <a name="SMO"></a>使用 SQL Server 管理物件  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>使用 SQL Server 管理物件  
 **若要停止作業**  
   
 使用所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell，呼叫 **Job** 類別的 **Stop** 方法。 如需詳細資訊，請參閱 [SQL Server 管理物件 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  

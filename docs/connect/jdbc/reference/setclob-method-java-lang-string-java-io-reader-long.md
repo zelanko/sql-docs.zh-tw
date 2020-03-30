@@ -11,10 +11,10 @@ ms.assetid: bc9fddea-134e-4440-ba54-a1f74bb40c46
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98069f3b907d923a7eeca295b1c2a0d983c2edc1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974551"
 ---
 # <a name="setclob-method-javalangstring-javaioreader-long"></a>setClob 方法 (java.lang.String, java.io.Reader, long)

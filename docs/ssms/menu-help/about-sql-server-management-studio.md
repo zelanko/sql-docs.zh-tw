@@ -15,10 +15,10 @@ ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: acb6ad109fb34641ab5661f48db8906cf4de1430
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253304"
 ---
 # <a name="about-sql-server-management-studio"></a>關於 SQL Server Management Studio

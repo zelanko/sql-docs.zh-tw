@@ -13,10 +13,10 @@ ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 5b0d34ac6849f47f841a26736ebc0c0224073c42
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257125"
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>選項 (SQL Server 物件總管 - 命令)

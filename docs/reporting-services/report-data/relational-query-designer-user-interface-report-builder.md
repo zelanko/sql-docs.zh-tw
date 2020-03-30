@@ -15,10 +15,10 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593383"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>關聯式查詢設計工具使用者介面 (報表產生器)
@@ -66,10 +66,10 @@ ms.locfileid: "73593383"
  [查詢結果](#QueryResults)  
  針對自動產生的查詢顯示結果集的範例資料。  
   
-###  <a name="DatabaseView"></a> 資料庫檢視窗格  
+###  <a name="database-view-pane"></a><a name="DatabaseView"></a> 資料庫檢視窗格  
  [資料庫檢視] 窗格會顯示您有權檢視之資料庫物件的中繼資料，而這個權限是由資料來源連接和認證所決定。 階層式檢視會檢視依照資料庫結構描述所組織的資料庫物件。 您可以展開每個結構描述的節點，以便檢視資料表、檢視表、預存程序和資料表值函式。 您可以展開資料表或檢視表來顯示資料行。  
   
-###  <a name="SelectedFields"></a> 選取的欄位窗格  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a> 選取的欄位窗格  
  [選取的欄位] 窗格會顯示報表資料集中的欄位，以及查詢中要包含的群組和彙總。  
   
  以下為顯示的選項：  
@@ -114,14 +114,14 @@ ms.locfileid: "73593383"
 |Var Distinct|傳回唯一統計變異數。 實作 VAR 彙總和 DISTINCT 關鍵字的組合。|  
 |VarP Distinct|傳回唯一統計變異數。 實作 VARP 彙總和 DISTINCT 關鍵字的組合。|  
   
-###  <a name="FunctionParameters"></a> 函數參數窗格  
+###  <a name="function-parameters-pane"></a><a name="FunctionParameters"></a> 函數參數窗格  
  [函數參數] 窗格會顯示預存程序或資料表值函式的參數。 系統會顯示下列資料行：  
   
 -   **參數名稱** ：顯示預存程序或資料表值函式所定義之參數的名稱。  
   
 -   **值** ：在設計階段執行查詢時，用於參數的值，以便擷取要顯示於 [查詢結果] 窗格中的資料。 在執行階段執行報表時，不會使用這個值。  
   
-###  <a name="Relationships"></a> 關聯性窗格  
+###  <a name="relationships-pane"></a><a name="Relationships"></a> 關聯性窗格  
  [關聯性] 窗格會顯示聯結關聯性。 關聯性可以從擷取自資料庫中繼資料的外部索引鍵關聯性自動偵測，您也可以手動建立關聯性。  
   
  以下為顯示的選項：  
@@ -159,7 +159,7 @@ ms.locfileid: "73593383"
   
 -   **聯結欄位** ：列出聯結的欄位組，如果關聯性有多個聯結條件，則會以逗號 (,) 分隔聯結的欄位組。  
   
-###  <a name="AppliedFilters"></a> 套用的篩選窗格  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> 套用的篩選窗格  
  [套用的篩選器] 窗格會顯示用來限制在執行階段擷取之資料列數目的準則。 此窗格中指定的準則會用來產生 SQL WHERE 子句。 當您選取參數選項時，就會自動建立報表參數。 以查詢參數為基礎的報表參數可讓使用者指定查詢的值，以便控制報表中的資料。  
   
  系統會顯示下列資料行：  
@@ -172,7 +172,7 @@ ms.locfileid: "73593383"
   
 -   **參數** ：顯示要將查詢參數加入至查詢的選項。 您可以使用資料集屬性來檢視查詢參數與報表參數之間的關聯性。  
   
-###  <a name="QueryResults"></a> 查詢結果窗格  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> 查詢結果窗格  
  [查詢結果] 窗格會針對其他窗格中之選取項目所指定的自動產生查詢顯示結果。 結果集中的資料行就是您在 [選取的欄位] 窗格中指定的欄位，而且資料列資料是由您在 [套用的篩選] 窗格中指定的篩選所限制。 如果查詢包含彙總，結果集就會包含新的彙總資料行。 例如，如果 **Color** 資料行是使用 Count 彙總進行彙總，則查詢結果會包含新的資料行。 依預設，此資料行的名稱為 **Count_Color**。  
   
  這項資料代表您執行查詢時來自資料來源的值。 這項資料不會儲存在報表定義中。報表中的實際資料是在處理報表時擷取的。  

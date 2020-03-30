@@ -16,10 +16,10 @@ ms.assetid: 1fafb076-2bb7-4845-9c02-788479f00ca2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de5afaab5a6d5d0cce1f895330a3409e4f96709a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998101"
 ---
 # <a name="useslocalfilepertable-method-sqlserverdatabasemetadata"></a>usesLocalFilePerTable 方法 (SQLServerDatabaseMetaData)

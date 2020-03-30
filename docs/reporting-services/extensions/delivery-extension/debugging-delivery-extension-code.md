@@ -13,10 +13,10 @@ ms.assetid: a7d959da-5005-4a50-aca7-2cef36aa9947
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1abe30a462e8bf303b0171dbeeb82c407c80ca2a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193749"
 ---
 # <a name="debugging-delivery-extension-code"></a>偵錯傳遞延伸模組程式碼

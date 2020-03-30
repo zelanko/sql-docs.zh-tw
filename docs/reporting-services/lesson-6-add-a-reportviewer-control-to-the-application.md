@@ -9,10 +9,10 @@ ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9b13a3653b19d4079a47941a0bb05faa2821c823
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62512533"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>第 6 課：將 ReportViewer 控制項加入到應用程式

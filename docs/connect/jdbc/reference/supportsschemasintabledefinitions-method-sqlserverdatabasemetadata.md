@@ -16,10 +16,10 @@ ms.assetid: 3326b1b0-53e2-42ae-9ff7-98e8c7017ffa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5803fe31d5e46682ed31f483addff7593c399211
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67968879"
 ---
 # <a name="supportsschemasintabledefinitions-method-sqlserverdatabasemetadata"></a>supportsSchemasInTableDefinitions 方法 (SQLServerDatabaseMetaData)

@@ -9,10 +9,10 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581250"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>規劃報表設計與報表部署 | Reporting Services
@@ -22,7 +22,7 @@ ms.locfileid: "65581250"
   
  RDL 檔案是利用報表產生器於 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 專案的報表設計師中撰寫。 RDLC 檔案則是使用包含在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中的 ReportViewer 控制項撰寫。
   
-##  <a name="bkmk_rdl_schema_versions"></a> RDL 結構描述版本  
+##  <a name="rdl-schema-versions"></a><a name="bkmk_rdl_schema_versions"></a> RDL 結構描述版本  
  下表列出本主題其餘部分所使用的每個可用結構描述版本與縮寫：  
   
 |縮寫|結構描述版本|  
@@ -43,14 +43,14 @@ ms.locfileid: "65581250"
   
  如需 ReportViewer 控制項的詳細資訊，請參閱 [ReportViewer 控制項 (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)。  
   
-##  <a name="bkmk_report_server_rdl_schema_support"></a> 報表伺服器與 RDL 結構描述支援  
+##  <a name="report-server-and-rdl-schema-support"></a><a name="bkmk_report_server_rdl_schema_support"></a> 報表伺服器與 RDL 結構描述支援  
  報表定義檔案可以透過下列方式部署至 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 報表伺服器：  
   
--   **報表設計師：** 從報表設計師將報表部署在 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 中。  
+-   **報表設計師：** 從 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]中的報表設計師部署報表。  
   
 -   **報表產生器：** 從報表產生器將報表儲存至報表伺服器。  
   
--   **入口網站：** 從 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 將報表上傳至原生模式報表伺服器。  
+-   **入口網站** ：從 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]將報表上傳至原生模式報表伺服器。  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -58,7 +58,7 @@ ms.locfileid: "65581250"
 
 ::: moniker-end
   
--   **以程式設計方式：** 使用 SOAP API 介面，以程式設計方式將報表發佈至報表伺服器。 如需詳細資訊，請參閱 [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md)。  
+-   **程式設計方式：** 使用 SOAP API 介面，以程式設計的方式將報表發行至報表伺服器。 如需詳細資訊，請參閱 [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md)。  
   
  下表依照報表伺服器的版本列出支援的 rdl 結構描述版本。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "65581250"
   
  如需所支援之報表升級與結構描述版本的詳細資訊，請參閱 [升級報表](../reporting-services/install-windows/upgrade-reports.md)。  
   
-##  <a name="bkmk_report_authoring_and_deployment"></a> 報表撰寫與報表部署支援  
+##  <a name="report-authoring-and-deployment-support"></a><a name="bkmk_report_authoring_and_deployment"></a> 報表撰寫與報表部署支援  
  報表撰寫環境是指 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 專案中的報表設計師，以及報表產生器。 報表撰寫環境為報表升級、報表設計、本機模式下的報表預覽、報表伺服器上的報表預覽，以及報表部署提供各種支援。  
   
  下表摘要說明撰寫與部署不同結構描述版本之報表定義的支援：  
@@ -101,7 +101,7 @@ ms.locfileid: "65581250"
   
 -   [SQL Server Data Tools for Visual Studio 2015](../ssdt/download-sql-server-data-tools-ssdt.md)。  
   
-##  <a name="bkmk_reportviewer"></a> ReportViewer 控制項  
+##  <a name="reportviewer-controls"></a><a name="bkmk_reportviewer"></a> ReportViewer 控制項  
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ReportViewer 控制項可採用本機預覽模式或遠端模式顯示 .rdlc 報表，此控制項可以顯示 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器上裝載的 .rdl 檔案。 下表提供 ReportViewer 控制項所支援、用於本機處理 (.rdlc) 的 RDL 版本清單。 伺服器端 RDL 支援的摘要在此節中 [報表伺服器與 RDL 結構描述支援](#bkmk_report_server_rdl_schema_support)。  
   
 |產品中的 ReportViewer 控制項|用於本機預覽的 RDL 版本|  

@@ -11,10 +11,10 @@ ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1dfa8438e7afb1763129748368a7f6e08fa892c3
-ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77575340"
 ---
 # <a name="using-table-valued-parameters"></a>使用資料表值參數
@@ -46,7 +46,7 @@ ms.locfileid: "77575340"
   
 - 將多個資料值組合成分隔字串或 XML 文件，然後將那些文字值傳遞給程序或陳述式。 這需要程序或陳述式包含驗證資料結構及拆開值所需的邏輯。  
   
-- 針對會影響多個資料列的資料修改建立一系列的獨立 SQL 陳述式。 變更可以以個別方式，或以批次處理成群組的方式提交給伺服器。 不過，即使是以包含多個陳述式的批次方式提交，每個陳述式都會在伺服器上個別執行。  
+- 針對會影響多個資料列的資料修改建立一系列的獨立 SQL 陳述式。 變更能以個別方式，或以批次處理成群組的方式提交到伺服器。 不過，即使是以包含多個陳述式的批次方式提交，每個陳述式還是會在伺服器上個別執行。  
   
 - 使用 bcp 公用程式或 [SQLServerBulkCopy](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md)，將許多資料列載入至資料表。 雖然此技術非常有效率，但除非將資料載入暫存資料表或資料表變數中，否則不支援伺服器端處理。
   
@@ -88,7 +88,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 
 ## <a name="limitations-of-table-valued-parameters"></a>資料表值參數的限制
 
-資料表值參數有幾項限制：  
+資料表值參數有幾個限制：  
   
 - 您無法將資料表值參數傳遞至使用者定義函式。  
   

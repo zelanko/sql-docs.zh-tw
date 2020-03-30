@@ -16,16 +16,16 @@ ms.assetid: 2c118790-5dd2-4b10-93b6-7f065ee324ce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 37c791c80c679afd70f4f1d2f3f2770fb0f38a16
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67952991"
 ---
 # <a name="getcolumnclassname-method-sqlserverresultsetmetadata"></a>getColumnClassName 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  傳回 Java 類別的完整名稱，此類別執行個體會在呼叫 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的 [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) 方法來從資料行擷取值時進行製造。  
+  傳回 Java 類別的完整名稱，此類別執行個體會在呼叫 [SQLServerResultSet](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) 類別的 [getObject](../../../connect/jdbc/reference/sqlserverresultset-class.md) 方法來從資料行擷取值時進行製造。  
   
 ## <a name="syntax"></a>語法  
   

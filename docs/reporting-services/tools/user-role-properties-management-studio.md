@@ -11,10 +11,10 @@ ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f7c663f1a6d13b910492e21b1bd05145dc2a5833
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65575780"
 ---
 # <a name="user-role-properties-management-studio"></a>使用者角色屬性 (Management Studio)

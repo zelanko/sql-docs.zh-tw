@@ -11,10 +11,10 @@ ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4021211b212ace43257637dad348a0da1e82f21
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76910730"
 ---
 # <a name="sample-jdbc-driver-applications"></a>範例 JDBC 驅動程式應用程式

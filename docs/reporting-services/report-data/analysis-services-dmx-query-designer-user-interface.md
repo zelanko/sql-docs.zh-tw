@@ -16,16 +16,16 @@ ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 42313894264979caf49ccbbe54d25b91261a8a10
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573581"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Analysis Services DMX 查詢設計工具使用者介面
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了圖形化查詢設計工具，可用來建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源的資料採礦運算式 (DMX) 查詢和多維度運算式 (MDX) 查詢。 此主題即描述 DMX 查詢設計工具。 如需 MDX 查詢設計工具的詳細資訊，請參閱 [Analysis Services MDX 查詢設計工具使用者介面](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)。  
   
- DMX 圖形化查詢設計工具有三種模式：設計、查詢和結果。 若要切換模式，請以滑鼠右鍵按一下 [查詢設計工具] 窗格並選取模式。 每一種模式都會提供 [中繼資料] 窗格，您可以在這個窗格中，從選取的 Cube 中拖曳成員，以建立 DMX 查詢，在處理報表時為資料集擷取資料。  
+ DMX 圖形化查詢設計工具有三種模式：「設計」、「查詢」和「結果」。 若要切換模式，請以滑鼠右鍵按一下 [查詢設計工具] 窗格並選取模式。 每一種模式都會提供 [中繼資料] 窗格，您可以在這個窗格中，從選取的 Cube 中拖曳成員，以建立 DMX 查詢，在處理報表時為資料集擷取資料。  
   
 ## <a name="graphical-dmx-query-designer-toolbar"></a>圖形化 DMX 查詢設計工具工具列  
  查詢設計工具工具列會提供按鈕，協助您使用圖形化介面設計 DMX 查詢。 下表描述這些按鈕及其功能。  
@@ -38,7 +38,7 @@ ms.locfileid: "65573581"
 |![變更為 DMX 查詢語言檢視](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "變更為 DMX 查詢語言檢視")|切換到 DMX 查詢設計工具模式。|  
 |![重新整理結果資料](../../reporting-services/report-data/media/rsqdicon-refresh.gif "重新整理結果資料")|重新整理資料來源中的中繼資料。|  
 |![刪除](../../reporting-services/report-data/media/rsqdicon-delete.gif "刪除")|從查詢中刪除 [資料] 窗格中選取的資料行。|  
-|![[查詢參數] 對話方塊圖示](../../reporting-services/report-data/media/iconqueryparameter.gif "[查詢參數] 對話方塊圖示")|顯示 **[查詢參數]** 對話方塊。 當您指派預設值給變數時，就會在您切換到 [報表設計師] 中的 [配置] 檢視時建立對應的報表參數。|  
+|![[查詢參數] 對話方塊圖示](../../reporting-services/report-data/media/iconqueryparameter.gif "查詢參數對話方塊圖示")|顯示 **[查詢參數]** 對話方塊。 當您指派預設值給變數時，就會在您切換到 [報表設計師] 中的 [配置] 檢視時建立對應的報表參數。|  
 |![執行查詢](../../reporting-services/report-data/media/rsqdicon-run.gif "執行查詢")|準備查詢。|  
 |![切換到設計模式](../../reporting-services/media/rsqdicon-designmode.gif "切換到設計模式")|在「設計」模式與「查詢」模式之間切換。 若要變更為結果檢視，請以滑鼠右鍵按一下 [設計] 窗格並選擇 [結果]  。|  
   

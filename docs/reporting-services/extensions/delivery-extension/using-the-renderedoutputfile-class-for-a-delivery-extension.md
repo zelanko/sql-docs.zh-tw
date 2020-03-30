@@ -13,10 +13,10 @@ ms.assetid: 8b591801-42d5-49fa-b710-bf7e6917accf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 152a60911157b261ed95f7a68364e59470110637
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193670"
 ---
 # <a name="using-the-renderedoutputfile-class-for-a-delivery-extension"></a>使用傳遞延伸模組的 RenderedOutputFile 類別

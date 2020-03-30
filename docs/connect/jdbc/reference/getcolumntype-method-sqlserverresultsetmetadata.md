@@ -16,10 +16,10 @@ ms.assetid: 81815a41-9265-4574-a4d8-f6341a68d9fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80f1177506090d459833f70bdc0b5fdcb115d792
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67952816"
 ---
 # <a name="getcolumntype-method-sqlserverresultsetmetadata"></a>getColumnType 方法 (SQLServerResultSetMetaData)

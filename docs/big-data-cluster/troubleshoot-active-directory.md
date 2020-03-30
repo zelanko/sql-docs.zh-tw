@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5d887eadd021641241516a1478c6ac13e0d0bdec
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79191209"
 ---
 # <a name="troubleshoot-sql-server-big-data-cluster-active-directory-mode-deployment"></a>對 SQL Server 巨量資料叢集 Active Directory 模式部署進行疑難排解

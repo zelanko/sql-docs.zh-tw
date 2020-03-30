@@ -11,10 +11,10 @@ ms.assetid: 37587981-2979-49a3-a6ab-df4bfb9b8748
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5998d16986c23b351fe565bbad0d84d2619aaa2f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970527"
 ---
 # <a name="sqlserverresultsetmetadata-members"></a>SQLServerResultSetMetaData 成員
@@ -39,7 +39,7 @@ ms.locfileid: "67970527"
 |名稱|描述|  
 |----------|-----------------|  
 |[getCatalogName](../../../connect/jdbc/reference/getcatalogname-method-sqlserverresultsetmetadata.md)|取得包含所指定之資料行之資料表的目錄名稱。|  
-|[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|傳回 Java 類別的完整名稱，此類別執行個體會在呼叫 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的 [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) 方法來從資料行擷取值時進行製造。|  
+|[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|傳回 Java 類別的完整名稱，此類別執行個體會在呼叫 [SQLServerResultSet](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) 類別的 [getObject](../../../connect/jdbc/reference/sqlserverresultset-class.md) 方法來從資料行擷取值時進行製造。|  
 |[getColumnCount](../../../connect/jdbc/reference/getcolumncount-method-sqlserverresultsetmetadata.md)|傳回結果集中的資料行數目。|  
 |[getColumnDisplaySize](../../../connect/jdbc/reference/getcolumndisplaysize-method-sqlserverresultsetmetadata.md)|傳回所指定資料行的正常最大寬度，以字元為單位。|  
 |[getColumnLabel](../../../connect/jdbc/reference/getcolumnlabel-method-sqlserverresultsetmetadata.md)|取得建議在指定之資料行之列印輸出和顯示中使用的標題。|  

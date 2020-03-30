@@ -16,10 +16,10 @@ ms.assetid: d6c1a8a4-5647-439f-87b8-310b6e9b778a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd79beffea0558c68208c43a9f10633f9bb4c591
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982415"
 ---
 # <a name="getlong-method-sqlservercallablestatement"></a>getLong 方法 (SQLServerCallableStatement)

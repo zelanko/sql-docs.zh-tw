@@ -16,10 +16,10 @@ ms.assetid: 0c52c4f9-784d-412e-aac1-888179ba549f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1d247dacc79e237f06a513aaa8673d4462151b1b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573800"
 ---
 # <a name="configurationsetting-property---isinitialized"></a>ConfigurationSetting 屬性 - IsInitialized

@@ -12,10 +12,10 @@ ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b26db3656ee548e08f9e5d4737033bb3393a969
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593876"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>啟用遠端錯誤 (Reporting Services)
@@ -31,7 +31,7 @@ ms.locfileid: "73593876"
   
 -   [修改 ConfigurationInfo 資料表 (原生模式)](#bkmk_ConfigurationInfo)  
   
-##  <a name="bkmk_sharepoint"></a> 啟用 SharePoint 模式的遠端錯誤  
+##  <a name="enable-remote-errors-for-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> 啟用 SharePoint 模式的遠端錯誤  
  您可以透過兩種不同的程序啟用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的遠端錯誤。 兩種不同的報表伺服器架構會採用不同的程序。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本中導入的較新 SharePoint 服務架構會使用可針對每個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式進行的設定。 較舊的架構則使用單一網站層級設定。  
   
 #### <a name="enable-remote-errors-for-a-reporting-services-service-application"></a>啟用 Reporting Services 服務應用程式的遠端錯誤  
@@ -60,7 +60,7 @@ ms.locfileid: "73593876"
   
 5.  按一下 [檔案] &gt; [新增] &gt; [專案]   
   
-##  <a name="bkmk_mgtStudio"></a> 透過 SQL Server Management Studio 啟用遠端錯誤 (原生模式)  
+##  <a name="enable-remote-errors-through-sql-server-management-studio-native-mode"></a><a name="bkmk_mgtStudio"></a> 透過 SQL Server Management Studio 啟用遠端錯誤 (原生模式)  
   
 1.  啟動 Management Studio，然後連接到報表伺服器執行個體。 如需詳細資訊，請參閱 [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) (連線至 Management Studio 中的報表伺服器)。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "73593876"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="bkmk_script"></a> 透過指令碼啟用遠端錯誤 (原生模式)  
+##  <a name="enable-remote-errors-through-script-native-mode"></a><a name="bkmk_script"></a> 透過指令碼啟用遠端錯誤 (原生模式)  
   
 1.  建立一個文字檔案，然後將下列指令碼複製到這個檔案中。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "73593876"
   
 6.  如需詳細資訊，請參閱 [RS.exe 公用程式 &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
-##  <a name="bkmk_ConfigurationInfo"></a> 修改 ConfigurationInfo 資料表 (原生模式)  
+##  <a name="modifying-the-configurationinfo-table-native-mode"></a><a name="bkmk_ConfigurationInfo"></a> 修改 ConfigurationInfo 資料表 (原生模式)  
   
 > [!NOTE]  
 >  您可以編輯報表伺服器資料庫中的 **ConfigurationInfo** 資料表，將 **EnableRemoteErrors** 設為 **True**，但是如果目前正在使用報表伺服器，則應該使用 SQL Server Management Studio 或指令碼來修改設定。 如果您修改資料庫中的設定，則須先重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務，變更才會生效。  

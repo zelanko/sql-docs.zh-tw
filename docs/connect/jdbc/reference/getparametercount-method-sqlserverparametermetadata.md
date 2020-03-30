@@ -16,10 +16,10 @@ ms.assetid: 7dbbdacb-74ef-42e7-9bdc-a3229505dad8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74c2228b944dce2f9c59f4f8fcfc4bc0ac2e5753
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980997"
 ---
 # <a name="getparametercount-method-sqlserverparametermetadata"></a>getParameterCount 方法 (SQLServerParameterMetaData)

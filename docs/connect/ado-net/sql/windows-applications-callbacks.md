@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: e8c5fbecb8892639e5e4e0cb608c3c4de0447508
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896015"
 ---
 # <a name="windows-applications-using-callbacks"></a>使用回撥的 Windows 應用程式
@@ -25,7 +25,7 @@ ms.locfileid: "78896015"
 
 在大部分的非同步處理案例中，您想要啟動資料庫作業，並繼續執行其他處理序，而不需等候資料庫作業完成。 不過，許多案例都需要在資料庫作業結束後執行某些動作。 例如，在 Windows 應用程式中，您可以將長時間執行的作業委派給背景執行緒，同時讓使用者介面執行緒維持回應。 不過，當資料庫作業完成時，您想要使用結果來填入表單。 這種類型的案例最適合使用回呼來實作。  
   
-您可以藉由在 <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 或 <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 方法中指定 <xref:System.AsyncCallback> 委派來定義回呼。 當作業完成時，即會呼叫委派。 您可以將 <xref:Microsoft.Data.SqlClient.SqlCommand> 本身的參考傳遞給委派，輕鬆存取 <xref:Microsoft.Data.SqlClient.SqlCommand> 物件，並呼叫適當的 `End` 方法，而不需使用全域變數。  
+您可以藉由在 <xref:System.AsyncCallback>、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> 或 <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 方法中指定 <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 委派來定義回呼。 當作業完成時，即會呼叫委派。 您可以將 <xref:Microsoft.Data.SqlClient.SqlCommand> 本身的參考傳遞給委派，輕鬆存取 <xref:Microsoft.Data.SqlClient.SqlCommand> 物件，並呼叫適當的 `End` 方法，而不需使用全域變數。  
   
 ## <a name="example"></a>範例  
 下列 Windows 應用程式示範如何使用 <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> 方法，來執行包含數秒延遲的 Transact-SQL 陳述式 (模擬長時間執行的命令)。  

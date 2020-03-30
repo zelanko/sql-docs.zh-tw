@@ -16,10 +16,10 @@ ms.assetid: 372515da-3b0e-46f6-8c0b-01b1b45c5a2f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63416d8d6fcc5eb43fe71645877aae9e4a50ebb5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976661"
 ---
 # <a name="nullsaresortedatstart-method-sqlserverdatabasemetadata"></a>nullsAreSortedAtStart 方法 (SQLServerDatabaseMetaData)

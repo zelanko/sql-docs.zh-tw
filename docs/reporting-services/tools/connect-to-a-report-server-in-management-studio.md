@@ -19,10 +19,10 @@ ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 602c939c382bc5946e64340736f73bb88f17c655
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574102"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>連接至 Management Studio 中的報表伺服器
@@ -49,7 +49,7 @@ ms.locfileid: "65574102"
 
 2. 選取 [連線]  以檢視伺服器類型的清單，然後選取 [Reporting Services]  。
 
-3. 在 [連線到伺服器]  對話方塊中，輸入報表伺服器執行個體的名稱。 報表伺服器執行個體名稱以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱為基礎。 根據預設，本機報表伺服器執行個體的執行個體名稱就是電腦名稱。 如果您將報表伺服器安裝為具名執行個體，請使用此語法來指定伺服器：\<伺服器名稱>[\\<執行個體名稱\>]  。
+3. 在 [連線到伺服器]  對話方塊中，輸入報表伺服器執行個體的名稱。 報表伺服器執行個體名稱以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱為基礎。 根據預設，本機報表伺服器執行個體的執行個體名稱就是電腦名稱。 如果您將報表伺服器安裝為具名執行個體，請使用此語法來指定伺服器：*伺服器名稱>[\<<執行個體名稱\\]\>* 。
 
 4. 選取 [驗證類型]  。 如果您是使用 Windows 驗證，請使用您的認證進行連接。 如果您選取了 [基本驗證] 或 [表單驗證]，請輸入帳戶和密碼。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "65574102"
 
 4. 針對 [伺服器名稱]  ，輸入一個值。 您可以依據伺服器模式指定值：
 
-    - 若為原生模式報表伺服器，請輸入報表伺服器執行個體的名稱。 報表伺服器執行個體名稱以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱為基礎。 根據預設，本機報表伺服器執行個體的執行個體名稱就是電腦名稱。 如果您將報表伺服器安裝為具名執行個體，請使用此語法來指定伺服器：\<伺服器名稱>[\\<執行個體名稱\>]  。
+    - 若為原生模式報表伺服器，請輸入報表伺服器執行個體的名稱。 報表伺服器執行個體名稱以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱為基礎。 根據預設，本機報表伺服器執行個體的執行個體名稱就是電腦名稱。 如果您將報表伺服器安裝為具名執行個體，請使用此語法來指定伺服器：*伺服器名稱>[\<<執行個體名稱\\]\>* 。
 
     - 若為以 SharePoint 整合模式執行的報表伺服器，要連接的伺服器就是與報表伺服器連接的 SharePoint 網站。 連線至 SharePoint 網站，以檢視權限等級。 這些權限會控制對報表伺服器內容和作業的存取。 您可以在網站集合中指定任何網站。 下列範例說明語法：`https://mysharepointsite`。
 
@@ -100,7 +100,7 @@ ms.locfileid: "65574102"
 
  下表將摘要列出執行特定工作所需的連線語法、步驟和權限。
 
- 當您在 [連線到伺服器]  對話方塊中，將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 指定為 [伺服器類型] 時，就可以指定報表伺服器名稱或 Web 服務的端點。
+ 當您在 [連線到伺服器][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**對話方塊中，將** 指定為 [伺服器類型] 時，就可以指定報表伺服器名稱或 Web 服務的端點。
 
 |連接至|   工作   |   權限   |
 |----------|-----------|-----------------|  

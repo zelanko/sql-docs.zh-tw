@@ -16,10 +16,10 @@ ms.assetid: c70e210f-0288-47cc-9268-a29c45979729
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f16880bdeca2afb2512ae84b72266a57b6dd38e1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953180"
 ---
 # <a name="getcharacterstream-method-sqlserverresultset"></a>getCharacterStream 方法 (SQLServerResultSet)

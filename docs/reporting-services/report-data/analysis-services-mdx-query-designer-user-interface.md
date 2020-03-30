@@ -15,10 +15,10 @@ ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 41d02ba0cd1dc9067bd6425895e53d9a949fd0d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573270"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services MDX 查詢設計工具使用者介面
@@ -37,7 +37,7 @@ ms.locfileid: "65573270"
   
  下圖會標示出設計模式的窗格。  
   
- ![Analysis Services MDX 查詢設計工具，設計檢視](../../reporting-services/report-data/media/rsqd-dsawas-mdx-designmode.gif "Analysis Services MDX 查詢設計工具，設計檢視")  
+ ![Analysis Services MDX 查詢設計工具，[設計] 檢視](../../reporting-services/report-data/media/rsqd-dsawas-mdx-designmode.gif "Analysis Services MDX 查詢設計工具，[設計] 檢視")  
   
  下表列出此模式下的窗格：  
   
@@ -74,7 +74,7 @@ ms.locfileid: "65573270"
 |![自動執行查詢](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "自動執行查詢")|每次進行變更時，自動執行查詢並顯示結果。 結果會顯示在 [資料] 窗格中。|  
 |![顯示彙總按鈕](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "顯示彙總按鈕")|將彙總顯示在 [資料] 窗格中。|  
 |![刪除](../../reporting-services/report-data/media/rsqdicon-delete.gif "刪除")|從查詢中刪除 [資料] 窗格中選取的資料行。|  
-|![[查詢參數] 對話方塊圖示](../../reporting-services/report-data/media/iconqueryparameter.gif "[查詢參數] 對話方塊圖示")|顯示 **[查詢參數]** 對話方塊。 當您指定查詢參數的值時，將會自動建立同名的報表參數。 查詢參數的值會設定為參考此報表參數的運算式。|  
+|![[查詢參數] 對話方塊圖示](../../reporting-services/report-data/media/iconqueryparameter.gif "查詢參數對話方塊圖示")|顯示 **[查詢參數]** 對話方塊。 當您指定查詢參數的值時，將會自動建立同名的報表參數。 查詢參數的值會設定為參考此報表參數的運算式。|  
 |![準備查詢按鈕](../../reporting-services/report-data/media/rsqdicon-preparequery.gif "準備查詢按鈕")|準備查詢。|  
 |![執行查詢](../../reporting-services/report-data/media/rsqdicon-run.gif "執行查詢")|執行查詢並將結果顯示在 [資料] 窗格中。|  
 |![取消查詢](../../reporting-services/report-data/media/rsqdicon-cancel.gif "取消查詢")|取消查詢。|  

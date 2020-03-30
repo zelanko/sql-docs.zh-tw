@@ -16,10 +16,10 @@ ms.assetid: c4abf03a-7a0e-4087-8aa6-91e4277ab65c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a5e292a91ff23e658ca31ae42401df8ea846fcc5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570227"
 ---
 # <a name="configurationsetting-property---sendusingsmtpserver"></a>ConfigurationSetting 屬性 - SendUsingSMTPServer

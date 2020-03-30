@@ -16,10 +16,10 @@ ms.assetid: 7934276d-5ac9-4cbc-a2a0-2c65c93733ac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e82bdcef16c854d0bcc1f11757b0bb2ed6030145
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973006"
 ---
 # <a name="setselectmethod-method-sqlserverdatasource"></a>setSelectMethod 方法 (SQLServerDataSource)

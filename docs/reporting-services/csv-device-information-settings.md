@@ -12,10 +12,10 @@ ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9423f82e025146773c5d04a276cf15c76c6b1101
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571602"
 ---
 # <a name="csv-device-information-settings"></a>CSV 裝置資訊設定

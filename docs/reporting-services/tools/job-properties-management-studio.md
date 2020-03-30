@@ -11,10 +11,10 @@ ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fb1a989876126a57553a1ae833bcf847f9c005bc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571122"
 ---
 # <a name="job-properties-management-studio"></a>作業屬性 (Management Studio)

@@ -11,10 +11,10 @@ ms.assetid: 19a71b27-b788-43a3-a76d-fe3001a6f016
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3ed890ee562d3fcc2221877b23ee09bbf9a8ccf9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027143"
 ---
 # <a name="user-defined-types"></a>使用者定義類型

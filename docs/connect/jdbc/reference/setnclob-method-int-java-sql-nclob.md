@@ -11,10 +11,10 @@ ms.assetid: 48c8aa2a-4185-4837-b592-830e60f8ca0b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cfb93f1ee08a7b5791679d189a73f75c5506fda7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973754"
 ---
 # <a name="setnclob-method-int-javasqlnclob"></a>setNClob 方法 (int, java.sql.NClob)
