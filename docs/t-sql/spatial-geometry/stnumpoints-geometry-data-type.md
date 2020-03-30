@@ -18,10 +18,10 @@ ms.assetid: a19520fc-7f91-4a2c-856f-4d8b99a7e496
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: b15d0601255cc7f53b677c333f531057a05573a5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68075084"
 ---
 # <a name="stnumpoints-geometry-data-type"></a>STNumPoints (geometry 資料類型)

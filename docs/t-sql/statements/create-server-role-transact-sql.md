@@ -25,10 +25,10 @@ ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 89f1338f2e127742a3e76b4b2dbc2f2ae5e8b8ef
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68117133"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)

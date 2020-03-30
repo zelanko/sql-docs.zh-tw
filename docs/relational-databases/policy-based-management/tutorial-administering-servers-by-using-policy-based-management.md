@@ -15,10 +15,10 @@ ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ed0fc25f704624e740b1c3d1c1a8d2671c692f03
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558227"
 ---
 # <a name="tutorial-managing-servers-using-policy-based-management"></a>教學課程：使用原則式管理來管理伺服器

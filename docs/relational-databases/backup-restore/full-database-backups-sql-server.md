@@ -20,10 +20,10 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b447bec3817dbaa173c544dcb31200a702b8661d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68890070"
 ---
 # <a name="full-database-backups-sql-server"></a>完整資料庫備份 (SQL Server)
@@ -46,12 +46,12 @@ ms.locfileid: "68890070"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="DbBuRMs"></a> 簡單復原模式下的資料庫備份  
+##  <a name="database-backups-under-the-simple-recovery-model"></a><a name="DbBuRMs"></a> 簡單復原模式下的資料庫備份  
  在簡單復原模式下，每次備份之後，如果會發生損毀，資料庫都將承受可能遺失工作的風險。 工作遺失風險隨著每一次更新而增加，直到下次備份為止；此時工作遺失風險便會歸零，但是又會重新開始另一循環的工作遺失風險。 一段時間之後，備份之間的工作遺失風險會增加。 下圖顯示只使用完整資料庫備份之備份策略的工作遺失風險。  
   
  ![顯示資料庫備份之間的工作遺失風險](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "顯示資料庫備份之間的工作遺失風險")  
   
-### <a name="example--includetsqlincludestsql-mdmd"></a>範例 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example--tsql"></a>範例 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  下列範例顯示如何使用 WITH FORMAT 來覆寫任何現有備份並建立新的媒體集，以建立完整資料庫備份。  
   
 ```  
@@ -62,14 +62,14 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="DbBuRMf"></a> 完整復原模式下的資料庫備份  
+##  <a name="database-backups-under-the-full-recovery-model"></a><a name="DbBuRMf"></a> 完整復原模式下的資料庫備份  
  若為使用完整和大量記錄復原的資料庫，資料庫備份是必要的，但還是不足夠。 交易記錄備份也是必要的。 下圖顯示完整復原模式下可行的最不複雜的備份策略。  
   
  ![完整資料庫備份和記錄備份系列](../../relational-databases/backup-restore/media/bnr-rmfull-1-fulldb-log-backups.gif "完整資料庫備份和記錄備份系列")  
   
  如需如何建立記錄備份的相關資訊，請參閱[交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
   
-### <a name="example--includetsqlincludestsql-mdmd"></a>範例 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example--tsql"></a>範例 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  下列範例顯示如何使用 WITH FORMAT 來覆寫任何現有備份並建立新的媒體集，以建立完整資料庫備份。 然後，此範例會接著備份交易記錄。 在實際的情況下，您必須執行一連串的定期記錄備份。 就此範例而言， [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫會設定為使用完整復原模式。  
   
 ```  
@@ -86,12 +86,12 @@ BACKUP LOG AdventureWorks2012 TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012F
 GO  
 ```  
   
-##  <a name="RestoreDbBu"></a> 使用完整資料庫備份來還原資料庫  
+##  <a name="use-a-full-database-backup-to-restore-the-database"></a><a name="RestoreDbBu"></a> 使用完整資料庫備份來還原資料庫  
  您可以將資料庫從完整資料庫備份還原到任何位置，在一個步驟中重新建立整個資料庫。 在備份中包含足夠的交易記錄，以讓您將資料庫復原至在備份完成時的時間點。 還原的資料庫會符合資料庫備份完成時的原本狀態，再扣除掉任何未認可的交易。 在完整復原模式之下，應該接著還原所有後續的交易記錄備份。 在資料庫復原之後，會回復未認可的交易。  
   
  如需詳細資訊，請參閱[完整資料庫還原 &#40;簡單復原模式&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md) 或[完整資料庫還原 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **建立完整資料庫備份**  
   
 -   [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  

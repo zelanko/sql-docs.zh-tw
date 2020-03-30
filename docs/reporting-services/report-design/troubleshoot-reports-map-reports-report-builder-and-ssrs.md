@@ -9,10 +9,10 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 87c034202eb5a4c17fd73e75f881361c04b3b636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080836"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>報表疑難排解：地圖報表 (報表產生器及 SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "77080836"
  * 在 [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server) 記錄問題或建議。  
 
   
-##  <a name="Embedded"></a> 報表定義大小問題  
+##  <a name="report-definition-size-issues"></a><a name="Embedded"></a> 報表定義大小問題  
  使用本節協助解決與報表定義大小相關的問題。  
   
 ## <a name="how-do-i-reduce-the-report-definition-size"></a>如何縮減報表定義大小？  
@@ -49,7 +49,7 @@ ms.locfileid: "77080836"
   
  來自地圖庫之報表中的地圖元素永遠會內嵌在地圖圖層中。  
   
-##  <a name="Spatial"></a> 空間資料問題  
+##  <a name="spatial-data-issues"></a><a name="Spatial"></a> 空間資料問題  
  使用本節協助解決與空間資料相關的問題。  
   
 ## <a name="on-the-design-surface-i-see-sample-spatial-data"></a>在設計介面上，我看到範例空間資料。  
@@ -100,7 +100,7 @@ ms.locfileid: "77080836"
   
 -   如果空間資料來自 SQL Server 資料庫，變更查詢來使用空間功能可將資料限制為較小的區域。  
   
-##  <a name="Viewport"></a> 檢視區置中與檢視問題  
+##  <a name="viewport-center-and-view-issues"></a><a name="Viewport"></a> 檢視區置中與檢視問題  
  使用本節協助解決與檢視區選項相關的問題。  
   
 ## <a name="i-cannot-set-the-center-and-view-on-an-embedded-map-element"></a>我無法在內嵌的地圖元素上設定置中與檢視。  
@@ -122,7 +122,7 @@ ms.locfileid: "77080836"
   
 -   將空間資料內嵌在報表中，並刪除您不想要包含的位置。  
   
-##  <a name="Layers"></a> 圖層問題  
+##  <a name="layer-issues"></a><a name="Layers"></a> 圖層問題  
  使用本節協助解決與圖層選項相關的問題。  
   
 ## <a name="i-do-not-see-one-or-more-layers-in-my-map"></a>我在地圖中看不到一個或多個圖層。  
@@ -144,7 +144,7 @@ ms.locfileid: "77080836"
 ## <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>我在地圖圖層上設定了一個篩選，但是沒有作用。  
  若要篩選圖層的資料，必須指定篩選運算式中的資料類型。 請確認您已經指定正確的基礎資料類型，讓篩選方程式可以正確評估指定的條件。 如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
-##  <a name="Legend"></a> 圖例、色階與規則問題  
+##  <a name="legend-color-scale-and-rule-issues"></a><a name="Legend"></a> 圖例、色階與規則問題  
  使用本節協助解決與規則、圖例和色階選項相關的問題。  
   
 ## <a name="how-do-i-control-the-values-in-the-map-legend"></a>如何控制地圖圖例中的值？  
@@ -175,7 +175,7 @@ ms.locfileid: "77080836"
   
  若要顯示色階，請針對圖層或內嵌的地圖元素指定色彩規則。 如需詳細資訊，請參閱 [變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
   
-##  <a name="Tile"></a> 影像分割問題  
+##  <a name="tile-issues"></a><a name="Tile"></a> 影像分割問題  
  使用本節協助解決與影像分割背景選項相關的問題。  
   
 ## <a name="i-cannot-see-the-bing-maps-tile-background"></a>我看不到 Bing 地圖底圖背景。  
@@ -196,7 +196,7 @@ ms.locfileid: "77080836"
   
  若要加入沒有文字的影像分割圖層，選取 **[空中]** 檢視。  
   
-##  <a name="Tooltip"></a> 工具提示與標籤問題  
+##  <a name="tooltip-and-label-issues"></a><a name="Tooltip"></a> 工具提示與標籤問題  
  使用本節協助解決與標籤或工具提示選項相關的問題。  
   
 ## <a name="i-get-an-expression-error-about-dataset-scope-when-i-set-a-label-or-tooltip-to-an-expression"></a>當我將標籤或工具提示設定為運算式時，出現有關資料集範圍的運算式錯誤。  

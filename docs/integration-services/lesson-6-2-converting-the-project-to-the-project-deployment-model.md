@@ -11,10 +11,10 @@ ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0563ceff3185f856692292884fe63e79c16e4216
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295876"
 ---
 # <a name="lesson-6-2-convert-the-project-to-the-project-deployment-model"></a>第 6-2 課：將專案轉換為專案部署模型

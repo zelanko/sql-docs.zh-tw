@@ -10,10 +10,10 @@ ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: db412b18a0189f9f68caff79f8e904db5424d673
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244317"
 ---
 # <a name="lesson-1-create-a-report-server-project-reporting-services"></a>第 1 課：建立報表伺服器專案 (Reporting Services)

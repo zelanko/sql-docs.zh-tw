@@ -20,10 +20,10 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294185"
 ---
 # <a name="execute-package-task"></a>執行封裝工作
@@ -137,13 +137,13 @@ ms.locfileid: "71294185"
   
 -   [設定 [參數繫結] 頁面上的 [選項]](#parameter)  
   
-###  <a name="open"></a> 開啟 [執行封裝工作編輯器]  
+###  <a name="open-the-execute-package-task-editor"></a><a name="open"></a> 開啟 [執行封裝工作編輯器]  
   
 1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中開啟包含 [執行封裝] 工作的 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 專案。  
   
 2.  以滑鼠右鍵按一下 SSIS 設計師中的工作，然後按一下 [編輯]  。  
   
-###  <a name="general"></a> 設定 [一般] 頁面上的 [選項]  
+###  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> 設定 [一般] 頁面上的 [選項]  
  **名稱**  
  為執行封裝工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "71294185"
  **說明**  
  輸入「執行封裝」工作的描述。  
   
-###  <a name="package"></a> 設定 [封裝] 頁面上的 [選項]  
+###  <a name="set-the-options-on-the-package-page"></a><a name="package"></a> 設定 [封裝] 頁面上的 [選項]  
  **ReferenceType**  
  為專案中的子封裝選取 [專案參考]  。 為封裝外部的子封裝選取 [外部參考]   
   
@@ -207,7 +207,7 @@ ms.locfileid: "71294185"
  **PackageNameReadOnly**  
  顯示封裝名稱。  
   
-###  <a name="parameter"></a> 設定 [參數繫結] 頁面上的 [選項]  
+###  <a name="set-the-options-on-the-parameter-bindings-page"></a><a name="parameter"></a> 設定 [參數繫結] 頁面上的 [選項]  
  您可以將值從父封裝或專案傳遞至子封裝。 專案必須使用專案部署模型，而且子封裝必須包含在包含父封裝的相同專案中。  
   
  如需將專案轉換為專案部署模型的資訊，請參閱 [部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  

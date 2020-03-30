@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79ce697e86adcd7a2b11d4ec1d5f4564d51692e5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68024996"
 ---
 # <a name="create-clustered-indexes"></a>建立叢集索引
@@ -45,9 +45,9 @@ ms.locfileid: "68024996"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Implementations"></a> 一般實作  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> 一般實作  
  實作叢集索引的方法如下：  
   
 -   **PRIMARY KEY 與 UNIQUE 條件約束**  
@@ -62,7 +62,7 @@ ms.locfileid: "68024996"
   
      如果已指定非叢集的主索引鍵條件約束，您可以在主索引鍵資料行以外的資料行上建立叢集索引。  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   建立叢集索引結構時，個別的檔案和檔案群組中都必須有磁碟空間來保存舊 (來源) 結構和新 (目標) 結構。 除非認可整個交易，否則舊結構的配置不會取消。 此外，可能還需要額外的暫存磁碟空間以供排序之用。 如需詳細資訊，請參閱 [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)。  
   
@@ -72,12 +72,12 @@ ms.locfileid: "68024996"
   
 -   叢集索引的索引鍵所包含的 **varchar** 資料行不能在 ROW_OVERFLOW_DATA 配置單位中有現有的資料。 如果在 **varchar** 資料行上建立叢集索引，且現有的資料在 IN_ROW_DATA 配置單位中，則後續在可能發送資料非資料列的資料行上進行的插入或更新動作會失敗。 若要取得可能包含資料列溢位資料之資料表的相關資訊，請使用 [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 動態管理函數。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>若要使用物件總管建立叢集索引  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68024996"
   
 10. 在 [檔案]  功能表上，按一下 [儲存 **table**name _]\__ 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-clustered-index"></a>若要建立叢集索引  
   

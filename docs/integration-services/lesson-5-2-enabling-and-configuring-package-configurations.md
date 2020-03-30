@@ -11,10 +11,10 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7706c124160f1f08f39279956d7685085859badd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71283133"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>第 5-2 課：啟用和設定套件設定

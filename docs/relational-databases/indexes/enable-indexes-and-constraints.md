@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c1f860f69ef95af42627d0d2bad869afbb366fc4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68107113"
 ---
 # <a name="enable-indexes-and-constraints"></a>啟用索引與條件約束
@@ -44,9 +44,9 @@ ms.locfileid: "68107113"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   在重建索引後，任何因為停用索引而停用的條件約束，都必須手動啟用。 重建關聯索引將可啟用 PRIMARY KEY 與 UNIQUE 條件約束。 您必須先重建 (啟用) 索引，才可以啟用參考 PRIMARY KEY 或 UNIQUE 條件約束的 FOREIGN KEY 條件約束。 FOREIGN KEY 條件約束是使用 ALTER TABLE CHECK CONSTRAINT 陳述式來啟用。  
   
@@ -73,12 +73,12 @@ ms.locfileid: "68107113"
 
 -   重建已停用的壓縮非叢集索引時，data_compression 會預設為 'none'，表示將解壓縮索引。 原因是停用非叢集索引時，壓縮設定中繼資料遺失。 若要解決這個問題，您必須在重建陳述式中指定明確的資料壓縮。
 
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 如果使用 DBCC DBREINDEX，使用者必須擁有該資料表，或者是 **系統管理員** 固定伺服器角色或 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-enable-a-disabled-index"></a>啟用已停用的索引  
   
@@ -108,7 +108,7 @@ ms.locfileid: "68107113"
   
  **[重建索引]** 對話方塊中提供下列資訊：  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>使用 ALTER INDEX 啟用已停用的索引  
   

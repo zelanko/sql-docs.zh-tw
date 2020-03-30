@@ -20,10 +20,10 @@ ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7d2da79cc46ac546099e492af3b6d5f4f726a2a2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75320475"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>從備份初始化交易式訂閱

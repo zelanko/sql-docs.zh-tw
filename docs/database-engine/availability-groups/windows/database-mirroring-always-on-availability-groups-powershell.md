@@ -15,10 +15,10 @@ ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d8cc91d628c365d4f9092ca24a8b4df06f17adf2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252902"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>使用 PowerShell 針對可用性群組建立資料庫鏡像端點
@@ -28,20 +28,20 @@ ms.locfileid: "75252902"
   
 
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要 CREATE ENDPOINT 權限或系統管理員 (sysadmin) 固定伺服器角色的成員資格。 如需詳細資訊，請參閱 [GRANT 端點權限 &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
 
 > [!IMPORTANT]  
 >  RC4 演算法已被取代。 [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 我們建議您改用 AES。  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要建立資料庫鏡像端點**  
   
 1.  將目錄 (**cd**) 變更為您要建立資料庫鏡像端點的伺服器執行個體。  
   
 2.  使用 **New-SqlHadrEndpoint** Cmdlet 建立端點，然後使用 **Set-SqlHadrEndpoint** 啟動端點。  
   
-###  <a name="PShellExample"></a> 範例 (PowerShell)  
+###  <a name="example-powershell"></a><a name="PShellExample"></a> 範例 (PowerShell)  
  下列 PowerShell 命令會在 SQL Server 執行個體 (機器  \\執行個體  ) 上建立資料庫鏡像端點。 此端點使用通訊埠 5022。  
   
 > [!IMPORTANT]  
@@ -56,7 +56,7 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
 ```  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要設定資料庫鏡像端點**  
   
 -   [建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  

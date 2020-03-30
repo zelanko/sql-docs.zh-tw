@@ -14,10 +14,10 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fc6bb3164b54f0799073e8b959f68b0dd625c47e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258177"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>遠端 Blob 存放區 (RBS) (SQL Server)
@@ -82,7 +82,7 @@ ms.locfileid: "75258177"
  使用 RBS 時，您應該定期更換認證存放區對稱金鑰。 這是符合組織安全性原則的一般安全性最佳作法。  更換 RBS 認證存放區對稱金鑰的其中一個方法是，在 RBS 資料庫中使用 [下列指令碼](#Key_rotation) 。  您也可以使用此指令碼移轉到更強的加密強度屬性，例如演算法或金鑰長度。 更換金鑰之前，請備份您的資料庫。  在指令碼結束時，會有一些驗證步驟。  
 如果您的安全性原則需要的金鑰屬性 (例如演算法或金鑰長度) 與所提供的不同，則可以使用指令碼作為範本。 您可以在兩種情況下修改金鑰屬性：1) 建立暫存金鑰時 2) 建立永久金鑰時。  
   
-##  <a name="rbsresources"></a> RBS 資源  
+##  <a name="rbs-resources"></a><a name="rbsresources"></a> RBS 資源  
   
  **RBS 範例**  
  [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) 上提供的 RBS 範例會示範如何開發 RBS 應用程式，以及如何開發與安裝自訂的 RBS 提供者。  
@@ -90,7 +90,7 @@ ms.locfileid: "75258177"
  **RBS 部落格**  
  [RBS 部落格](https://go.microsoft.com/fwlink/?LinkId=210315) 會提供其他資訊來協助您了解、部署，以及維護 RBS。  
   
-##  <a name="Key_rotation"></a> 金鑰輪替指令碼  
+##  <a name="key-rotation-script"></a><a name="Key_rotation"></a> 金鑰輪替指令碼  
  此範例會建立名為 `sp_rotate_rbs_symmetric_credential_key` 的預存程序，以您選擇的金鑰來取代目前使用的 RBS  
 認證存放區對稱金鑰。  如果安全性原則需要定期更換金鑰，   
 或者如果有特定演算法需求，您可能會想要執行這項作業。  

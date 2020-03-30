@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5cc1eb2d3c2953fd2bdf24fdf3c13c94872f6632
-ms.sourcegitcommit: 74afe6bdd021f62275158a8448a07daf4cb6372b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77144191"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
@@ -76,7 +76,7 @@ DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 ## <a name="examples"></a>範例  
   
 ### <a name="a-dropping-a-function"></a>A. 卸除函數  
- 下列範例會從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫的 `Sales` 結構描述，卸除 `fn_SalesByStore` 使用者定義的函數。 若要建立此函數，請參閱範例 B 中的 [CREATE FUNCTION & #40;TRANSACT-SQL & #41;](../../t-sql/statements/create-function-transact-sql.md)。  
+ 下列範例會從 `fn_SalesByStore` 範例資料庫的 `Sales` 結構描述，卸除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 使用者定義的函數。 若要建立此函數，請參閱範例 B 中的 [CREATE FUNCTION & #40;TRANSACT-SQL & #41;](../../t-sql/statements/create-function-transact-sql.md)。  
   
 ```  
 DROP FUNCTION Sales.fn_SalesByStore;  

@@ -9,10 +9,10 @@ ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 18d10f94696f901efd4f3938bf9b5e06d1c7078d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70176283"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼
@@ -21,10 +21,10 @@ ms.locfileid: "70176283"
 
 本文包含並描述範例 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 指令碼，其可使用 **RS.exe** 公用程式將一部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器的內容項目和設定複製到另一部報表伺服器。 不論是原生或 SharePoint 模式，RS.exe 都會和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安裝。 這個指令碼會在伺服器之間複製 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 項目，例如報表和訂閱。 這個指令碼同時支援 SharePoint 模式和原生模式報表伺服器。  
 
-##  <a name="bkmk_download_script"></a> 下載 ssrs_migration.rss 指令碼  
+##  <a name="to-download-the-ssrs_migrationrss-script"></a><a name="bkmk_download_script"></a> 下載 ssrs_migration.rss 指令碼  
  從 GitHub 網站 [Reporting Services RS.exe migration script](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/reporting-services/ssrs-migration-rss) (Reporting Services RS.exe 移轉指令碼) 下載指令碼至本機資料夾。 如需詳細資訊，請參閱本文的[如何使用指令碼](#bkmk_how_to_use_the_script)一節。  
   
-##  <a name="bkmk_supported_scenarios"></a> 支援的案例  
+##  <a name="supported-scenarios"></a><a name="bkmk_supported_scenarios"></a> 支援的案例  
  這個指令碼同時支援 SharePoint 模式和原生模式報表伺服器。 指令碼支援報表伺服器版本 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 和更新版本，以及 Power BI 報表伺服器。  
   
 這個指令碼可用來在相同模式或不同模式的報表伺服器之間複製內容。 例如，您可以執行指令碼將內容從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 原生模式報表伺服器複製到 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint 模式報表伺服器。 您可以安裝 RS.exe 的任何伺服器執行這個指令碼。 例如，在下列部署中，您可以：  
@@ -43,7 +43,7 @@ ms.locfileid: "70176283"
   
  如需 RS.exe 公用程式的詳細資訊，請參閱 [RS.exe 公用程式 &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)。  
   
-###  <a name="bkmk_what_is_migrated"></a> 指令碼移轉的項目及資源  
+###  <a name="items-and-resources-the-script-migrates"></a><a name="bkmk_what_is_migrated"></a> 指令碼移轉的項目及資源  
  這個指令碼不會覆寫相同名稱的現有內容項目。  如果指令碼偵測到來源伺服器與目的地伺服器上有相同名稱的項目，則個別項目將會產生「失敗」訊息，但指令碼會繼續。 下表列出指令碼可移轉至目標報表伺服器模式的內容和資源類型。  
   
 |Item|已移轉|SharePoint|描述|  
@@ -67,7 +67,7 @@ ms.locfileid: "70176283"
 |影像|是|是||  
 |報表組件|是|是||  
   
-##  <a name="bkmk_required_permissions"></a>必要權限  
+##  <a name="required-permissions"></a><a name="bkmk_required_permissions"></a>必要權限  
  指令碼中用來讀取或寫入項目和資源之所有方法所需的權限不盡相同。 下表摘要列出每個項目或資源使用的方式，以及相關內容的連結。 請瀏覽至個別文章以查看必要的權限。 例如，ListChildren 方法主題說明下列操作的必要權限：  
   
 -   **原生模式需要的權限：** 項目的 ReadProperties  
@@ -90,7 +90,7 @@ ms.locfileid: "70176283"
   
  如需詳細資訊，請參閱 [將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)。  
   
-##  <a name="bkmk_how_to_use_the_script"></a> 如何使用指令碼  
+##  <a name="how-to-use-the-script"></a><a name="bkmk_how_to_use_the_script"></a> 如何使用指令碼  
   
 1.  將指令碼檔案下載至本機資料夾，例如 **c:\rss\ssrs_migration.rss**。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "70176283"
   
 -   密碼不會移轉，而且必須重新輸入，例如具有預存認證的資料來源。  
   
-##  <a name="bkmk_parameter_description"></a> 參數描述  
+##  <a name="parameter-description"></a><a name="bkmk_parameter_description"></a> 參數描述  
   
 |參數|描述|必要|  
 |---------------|-----------------|--------------|  
@@ -211,9 +211,9 @@ ms.locfileid: "70176283"
 |**-v tf** ="TARGETFOLDER"|設定為 "/" 表示移轉至根層級。 設定為 "/folder/subfolder" 表示複製到已存在的資料夾。 "SOURCEFOLDER" 內的所有內容都會複製到 "TARGETFOLDER"。|(選擇性) 預設值為 "/"。|  
 |**-v security**= "True/False"|如果設為 "False"，則目的地目錄項目將會根據目標系統的設定繼承安全性設定。 這是在不同報表伺服器類型 (例如，原生模式到 SharePoint 模式) 之間進行移轉的建議設定。 如果設為 "True"，則指令碼會嘗試移轉安全性設定。|(選擇性) 預設值為 "False"。|  
   
-##  <a name="bkmk_more_examples"></a> 更多範例  
+##  <a name="more-examples"></a><a name="bkmk_more_examples"></a> 更多範例  
   
-###  <a name="bkmk_native_2_native"></a> 原生模式報表伺服器到原生模式報表伺服器  
+###  <a name="native-mode-report-server-to-native-mode-report-server"></a><a name="bkmk_native_2_native"></a> 原生模式報表伺服器到原生模式報表伺服器  
  下列範例將從原生模式 **Sourceserver** 將內容移轉至原生模式 **Targetserver**。  
   
 ```  
@@ -226,7 +226,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password" -v security="True"  
 ```  
   
-###  <a name="bkmk_native_2_sharepoint_root"></a> 原生模式到 SharePoint 模式 - 根網站  
+###  <a name="native-mode-to-sharepoint-mode---root-site"></a><a name="bkmk_native_2_sharepoint_root"></a> 原生模式到 SharePoint 模式 - 根網站  
  下列範例將從原生模式 **SourceServer** 將內容移轉至 SharePoint 模式伺服器 **TargetServer** 上的「根網站」。 原生模式伺服器上的 [報表] 和 [資料來源] 資料夾會在 SharePoint 部署上移轉為新文件庫。  
   
  ![ssrs_rss_migrate_root_site](../../reporting-services/tools/media/ssrs-rss-migrate-root-site.gif "ssrs_rss_migrate_root_site")  
@@ -235,14 +235,14 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p Password -v ts="https://TargetServer/_vti_bin/ReportServer" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_2_sharepoint_with_site"></a> 原生模式到 SharePoint 模式 - 'bi' 網站集合  
+###  <a name="native-mode-to-sharepoint-mode--bi-site-collection"></a><a name="bkmk_native_2_sharepoint_with_site"></a> 原生模式到 SharePoint 模式 - 'bi' 網站集合  
  下列範例將從原生模式伺服器將內容移轉至包含網站集合 "sites/bi" 和共用文件庫的 SharePoint 伺服器。 指令碼會在目的地文件庫中建立資料夾。 例如，指令碼將在目標文件庫中建立 [報表] 和 [資料來源] 資料夾。  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_sharepoint_2_sharepoint"></a> SharePoint 模式到 SharePoint 模式 - 'bi' 網站集合  
+###  <a name="sharepoint-mode-to-sharepoint-mode--bi-site-collection"></a><a name="bkmk_sharepoint_2_sharepoint"></a> SharePoint 模式到 SharePoint 模式 - 'bi' 網站集合  
  下列範例會移轉內容：  
   
 -   從包含 "sites/bi" 網站集合和共用文件庫的 SharePoint 伺服器 **SourceServer** 。  
@@ -253,7 +253,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_to_native_Azure_vm"></a> 原生模式到原生模式 - Azure 虛擬機器  
+###  <a name="native-mode-to-native-mode---azure-virtual-machine"></a><a name="bkmk_native_to_native_Azure_vm"></a> 原生模式到原生模式 - Azure 虛擬機器  
  下列範例會移轉內容：  
   
 -   從原生模式報表伺服器 **SourceServer**。  
@@ -267,7 +267,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 > [!TIP]  
 > 如需如何使用 Windows PowerShell 在 Windows Azure 虛擬機器上建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器的詳細資訊，請參閱[使用 PowerShell 建立具有原生模式報表伺服器的 Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report) \(不分機器翻譯\)。  
   
-##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint 模式 -'bi' 站台集合到 Azure 虛擬機器上的原生模式伺服器。 
+##  <a name="sharepoint-mode--bi-site-collection-to-a-native-mode-server-on-an-azure-virtual-machine"></a><a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint 模式 -'bi' 站台集合到 Azure 虛擬機器上的原生模式伺服器。 
  下列範例會移轉內容：  
   
 -   從包含 "sites/bi" 網站集合和共用文件庫的 SharePoint 模式報表伺服器 **SourceServer** 。  
@@ -278,7 +278,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="https://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  
 ```  
   
-##  <a name="bkmk_verification"></a> 驗證  
+##  <a name="verification"></a><a name="bkmk_verification"></a> 驗證  
  本節摘要說明在目的地伺服器上驗證內容和原則是否成功移轉所採取的一些步驟。  
   
 ### <a name="schedules"></a>排程  
@@ -307,7 +307,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
   
 3.  按一下 [角色]  。  
   
-##  <a name="bkmk_troubleshoot"></a> 疑難排解  
+##  <a name="troubleshooting"></a><a name="bkmk_troubleshoot"></a> 疑難排解  
  使用追蹤旗標 **-t** 取得詳細資訊。 例如，如果您執行指令碼並且看到類似下面的訊息  
   
 -   無法連線到伺服器: https://\<servername>/ReportServer/ReportService2010.asmx  

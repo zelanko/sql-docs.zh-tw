@@ -16,10 +16,10 @@ ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 87201ed5c3d2368f54e2ffb0c57391322066a30b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014469"
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>進度頁面 (AlwaysOn 可用性群組精靈)
@@ -49,7 +49,7 @@ ms.locfileid: "68014469"
  **取消**  
  按一下可略過任何其餘作業，然後結束精靈。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

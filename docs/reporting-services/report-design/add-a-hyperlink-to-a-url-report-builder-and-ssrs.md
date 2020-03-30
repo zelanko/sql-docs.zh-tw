@@ -9,10 +9,10 @@ ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 85f3b3cabf180d85da9c348a7ec2cf9062b3a4c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080724"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>將超連結加入到 URL (報表產生器及 SSRS)

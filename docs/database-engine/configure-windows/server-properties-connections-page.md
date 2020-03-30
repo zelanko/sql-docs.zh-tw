@@ -13,10 +13,10 @@ ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 15ab408465890a13fc6e87efd2f2e15e8f8a7fad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68025495"
 ---
 # <a name="server-properties---connections-page"></a>伺服器屬性 - 連接頁面

@@ -15,10 +15,10 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 1ccffc653225645de94355707ae2116982d2deb4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557434"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>使用 Azure Key Vault 進行 SQL Server TDE 可延伸金鑰管理 - 設定步驟
@@ -238,7 +238,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
  > 金鑰保存庫支援多種版本的同名金鑰，但不應該復原 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器所使用的金鑰或建立其版本。 如果系統管理員想要復原 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密所使用的金鑰，應該在保存庫中建立不同名稱的新金鑰，用來加密 DEK。  
    
   
-## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>第 III 部分：安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器  
+## <a name="part-iii-install-the-ssnoversion-connector"></a>第 III 部分：安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器  
  從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/p/?LinkId=521700)下載 SQL Server 連接器。 (這應該由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 電腦的系統管理員所完成)。  
 
 > [!NOTE]  
@@ -262,7 +262,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
 -   [C.SQL Server Connector 的錯誤碼說明](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
   
-## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>第 IV 部分：設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="part-iv-configure-ssnoversion"></a>第 IV 部分：設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  請參閱 [B. 常見問題集](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB) ，以查看本節中每個動作所需最小權限等級的附註。  
   
 1.  **啟動 sqlcmd.exe 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio**  

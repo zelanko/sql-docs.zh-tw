@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 7975474859081eb5567c2ee12adf26f9e6501556
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72689664"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>設定 Always On 可用性群組的複寫
@@ -27,7 +27,7 @@ ms.locfileid: "72689664"
 
   設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫和 AlwaysOn 可用性群組包含七個步驟。 下列各節將詳細說明每個步驟。  
   
-##  <a name="step1"></a> 1.設定資料庫發行集和訂閱  
+##  <a name="1-configure-the-database-publications-and-subscriptions"></a><a name="step1"></a> 1.設定資料庫發行集和訂閱  
  **設定散發者**  
   
  散發資料庫不能搭配 SQL Server 2012 和 SQL Server 2014 置於可用性群組中。 SQL 2016 和更新版本支援將散發資料庫放置到可用性群組內。 如需詳細資訊，請參閱[在可用性群組中設定散發資料庫](../../../relational-databases/replication/configure-distribution-availability-group.md)。
@@ -98,7 +98,7 @@ ms.locfileid: "72689664"
   
 3.  建立複寫發行集、發行項和訂閱。 如需有關如何設定複寫的詳細資訊，請參閱＜發行資料和資料庫物件＞。  
   
-##  <a name="step2"></a> 2.設定 AlwaysOn 可用性群組  
+##  <a name="2-configure-the-always-on-availability-group"></a><a name="step2"></a> 2.設定 AlwaysOn 可用性群組  
  在預期的主要複本上，建立具有已發行 (或即將發行) 資料庫做為成員資料庫的可用性群組。 如果使用可用性群組精靈，您就可以允許精靈一開始同步處理次要複本資料庫，也可以使用備份和還原來手動執行初始化。  
   
  針對可用性群組建立複寫代理程式將用來連接到目前主要複本的 DNS 接聽程式。 指定的接聽程式名稱將當做原始發行者/已發行資料庫配對的重新導向目標使用。 例如，如果您要使用 DDL 來設定可用性群組，可以使用下列程式碼範例，針對名為 `MyAG` 的現有可用性群組指定可用性群組接聽程式：  
@@ -111,7 +111,7 @@ ALTER AVAILABILITY GROUP 'MyAG'
  如需詳細資訊，請參閱[建立及設定可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)。  
 
   
-##  <a name="step3"></a> 3.確定所有次要複本主機都設定為複寫  
+##  <a name="3-ensure-that-all-of-the-secondary-replica-hosts-are-configured-for-replication"></a><a name="step3"></a> 3.確定所有次要複本主機都設定為複寫  
  在每個次要複本主機上，確認 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 已經設定為支援複寫。 您可以在每個次要複本主機上執行下列查詢，以便判斷是否已安裝複寫：  
   
 ```  
@@ -124,7 +124,7 @@ SELECT @installed;
   
  如果 *\@installed* 為 0，您就必須將複寫新增到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝。  
   
-##  <a name="step4"></a> 4.將次要複本主機設定為複寫發行者  
+##  <a name="4-configure-the-secondary-replica-hosts-as-replication-publishers"></a><a name="step4"></a> 4.將次要複本主機設定為複寫發行者  
  次要複本無法做為複寫發行者或重新發行者，但是您必須設定複寫，才能讓次要複本在容錯移轉之後接管。 在散發者端，設定每個次要複本主機的散發。 請指定當原始發行者加入至散發者時指定的相同散發資料庫和工作目錄。 如果您要使用預存程序來設定散發，請使用 **sp_adddistpublisher** ，讓遠端發行者與散發者產生關聯。 如果 *\@login* 和 *\@password* 已用於原始發行者，請在您新增次要複本主機作為發行者時，針對每個項目指定相同的值。  
   
 ```  
@@ -151,7 +151,7 @@ EXEC sys.sp_addlinkedserver
     @server = 'MySubscriber';  
 ```  
   
-##  <a name="step5"></a> 5.將原始發行者重新導向至 AG 接聽程式名稱  
+##  <a name="5-redirect-the-original-publisher-to-the-ag-listener-name"></a><a name="step5"></a> 5.將原始發行者重新導向至 AG 接聽程式名稱  
  在散發者端的散發資料庫中，執行 **sp_redirect_publisher** 預存程序，以便讓原始發行者和已發行資料庫與可用性群組的可用性群組接聽程式名稱產生關聯。  
   
 ```  
@@ -163,7 +163,7 @@ EXEC sys.sp_redirect_publisher
     @redirected_publisher = 'MyAGListenerName';  
 ```  
   
-##  <a name="step6"></a> 6.執行複寫驗證預存程序以確認組態  
+##  <a name="6-run-the-replication-validation-stored-procedure-to-verify-the-configuration"></a><a name="step6"></a> 6.執行複寫驗證預存程序以確認組態  
  在散發者端的散發資料庫中，執行 **sp_validate_replica_hosts_as_publishers** 預存程序，以便確認所有複本主機現在都設定為當作已發行資料庫的發行者。  
   
 ```  
@@ -189,10 +189,10 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
  這是預期行為。 您必須直接在主機上查詢 sysserver 項目，藉以確認訂閱者伺服器項目是否存在這些次要複本主機上。  
   
-##  <a name="step7"></a> 7.將原始發行者加入至複寫監視器  
+##  <a name="7-add-the-original-publisher-to-replication-monitor"></a><a name="step7"></a> 7.將原始發行者加入至複寫監視器  
  在每個可用性群組複本上，將原始發行者加入至複寫監視器。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **複寫**  
   
 -   [維護 AlwaysOn 發行集資料庫 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  

@@ -10,10 +10,10 @@ ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6357f98627842ab790b494cf1b4a1f9b2110ec9c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727352"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server 機器學習或 R Server 的升級和安裝常見問題集
@@ -92,7 +92,7 @@ SQL Server 2016 的早期發行版本無法在離線安裝期間，於沒有網�
 
 解除安裝 SQL Server 機器學習元件的發行前版本可能會很複雜，而且可能需要執行特殊指令碼。 請連絡技術支援部門以尋求協助。
 
-###  <a name="bkmk_Uninstall"></a> 在從舊版 Microsoft R Server 升級之前先解除安裝
+###  <a name="uninstall-prior-to-upgrading-from-an-older-version-of-microsoft-r-server"></a><a name="bkmk_Uninstall"></a> 在從舊版 Microsoft R Server 升級之前先解除安裝
 
 如已安裝 Microsoft R Server 發行前版本，您必須先解除安裝它，才能升級至較新版本。
 

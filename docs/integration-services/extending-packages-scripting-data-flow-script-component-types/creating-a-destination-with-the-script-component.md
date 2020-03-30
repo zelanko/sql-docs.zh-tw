@@ -17,10 +17,10 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 946fc77d3bde2814176ebefce4102742a0288a91
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296482"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>以指令碼元件建立目的地

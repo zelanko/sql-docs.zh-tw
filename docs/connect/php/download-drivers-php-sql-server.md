@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 829370c413614c6cb2d5a38ff1e3dcc8b40c5ab8
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78866468"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>下載 Microsoft Drivers for PHP for SQL Server

@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 4d380954be720a6cb839b0c4259a408733f8e176
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056329"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字元格式匯入或匯出資料 (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "74056329"
 
 
   
-## 使用字元格式的考量<a name="considerations"></a>
+## <a name="considerations-for-using-character-format"></a>使用字元格式的考量<a name="considerations"></a>
 使用字元格式時，請考慮下列事項：  
   
 -   [bcp 公用程式](../../tools/bcp-utility.md) 預設會使用定位字元分隔字元資料欄位，並使用新行字元終止記錄。  如需如何指定其他結束字元的相關資訊，請參閱[指定欄位與資料列結束字元 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
@@ -58,7 +58,7 @@ ms.locfileid: "74056329"
   
 -   [bcp 公用程式](../../tools/bcp-utility.md) 會將 [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 值匯出成小數點後 4 位數的字元格式資料檔案，但不會使用任何數字分位符號 (例如逗點分隔符號)。 例如， [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 資料行包含的值 1,234,567.123456，會採用 1234567.1235 的字元字串，大量匯出到資料檔。  
   
-## 字元格式的命令選項<a name="command_options"></a>  
+## <a name="command-options-for-character-format"></a>字元格式的命令選項<a name="command_options"></a>  
 您可以將字元格式資料匯入資料表，方法是使用 [bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)。對於 [bcp](../../tools/bcp-utility.md) 命令或 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 陳述式，您可以在陳述式中指定資料格式。  對於 [INSERT...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 陳述式，您必須在格式檔案中指定資料格式。  
   
 下列命令列選項支援字元格式：  
@@ -74,10 +74,10 @@ ms.locfileid: "74056329"
 > [!NOTE]
 >  或者，您可以在格式檔案中按照每個欄位指定格式。 如需詳細資訊，請參閱 [匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)＞。
 
-## 範例測試條件<a name="etc"></a>  
+## <a name="example-test-conditions"></a>範例測試條件<a name="etc"></a>  
 本主題中的範例採用下列定義的資料表、資料檔案與格式檔案。
 
-### **範例資料表**<a name="sample_table"></a>
+### <a name="sample-table"></a>**範例資料表**<a name="sample_table"></a>
 下列指令碼會建立測試資料庫、名為 `myChar` 的資料表，以及在資料表中填入一些初始值。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 
 ```sql
@@ -104,7 +104,7 @@ VALUES
 SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
-### **範例非 XML 格式檔案**<a name="nonxml_format_file"></a>
+### <a name="sample-non-xml-format-file"></a>**範例非 XML 格式檔案**<a name="nonxml_format_file"></a>
 SQL Server 支援兩種類型的格式檔案：非 XML 格式和 XML 格式。  非 XML 格式是舊版 SQL Server 所支援的原始格式。  如需詳細資訊，請參閱 [非 XML 格式檔案 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。  下列命令將使用 [bcp 公用程式](../../tools/bcp-utility.md) ，根據 `myChar.fmt`的結構描述產生非 XML 格式檔案 `myChar`。  使用 [bcp](../../tools/bcp-utility.md) 命令建立格式檔案時，請指定 **format** 引數並使用 **nul** 取代資料檔案路徑。  format 選項也需要 **-f** 選項。  此外，以此範例為例，限定詞 **c** 會用於指定字元資料， **T** 會用於指定使用整合式安全性的信任連線。  請在命令提示字元之下，輸入下列命令：
 
 ```cmd
@@ -120,10 +120,10 @@ Notepad D:\BCP\myChar.fmt
 > `SQLState = S1000, NativeError = 0`  
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
-## 範例<a name="examples"></a>
+## <a name="examples"></a>範例<a name="examples"></a>
 下列範例使用以上所建立的資料庫、資料檔案與格式檔案。
 
-### **使用 bcp 與字元格式匯出資料**<a name="bcp_char_export"></a>
+### <a name="using-bcp-and-character-format-to-export-data"></a>**使用 bcp 與字元格式匯出資料**<a name="bcp_char_export"></a>
 **-c** 參數與 **OUT** 命令。  注意︰後續所有範例皆會使用此範例中所建立的資料檔案。  請在命令提示字元之下，輸入下列命令：
 
 ```cmd
@@ -133,7 +133,7 @@ REM Review results
 NOTEPAD D:\BCP\myChar.bcp
 ```
 
-### **不使用格式檔案而使用 bcp 與字元格式匯入資料**<a name="bcp_char_import"></a>
+### <a name="using-bcp-and-character-format-to-import-data-without-a-format-file"></a>**不使用格式檔案而使用 bcp 與字元格式匯入資料**<a name="bcp_char_import"></a>
 **-c** 參數與 **IN** 命令。  請在命令提示字元之下，輸入下列命令：
 
 ```cmd
@@ -147,7 +147,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 ```
 
-### **使用 bcp 與字元格式匯入非 XML 格式檔案的資料**<a name="bcp_char_import_fmt"></a>
+### <a name="using-bcp-and-character-format-to-import-data-with-a-non-xml-format-file"></a>**使用 bcp 與字元格式匯入非 XML 格式檔案的資料**<a name="bcp_char_import_fmt"></a>
 **-c** 與 **-f** 參數與 **IN** 命令。  請在命令提示字元之下，輸入下列命令：
 
 ```cmd
@@ -161,7 +161,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 ```
 
-### **不使用格式檔案而使用 BULK INSERT 與字元格式**<a name="bulk_char"></a>
+### <a name="using-bulk-insert-and-character-format-without-a-format-file"></a>**不使用格式檔案而使用 BULK INSERT 與字元格式**<a name="bulk_char"></a>
 **DATAFILETYPE** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 
 ```sql
@@ -176,7 +176,7 @@ BULK INSERT TestDatabase.dbo.myChar
 SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
-### **對非 XML 格式檔案使用 BULK INSERT 與字元格式**<a name="bulk_char_fmt"></a>
+### <a name="using-bulk-insert-and-character-format-with-a-non-xml-format-file"></a>**對非 XML 格式檔案使用 BULK INSERT 與字元格式**<a name="bulk_char_fmt"></a>
 **FORMATFILE** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 
 ```sql
@@ -191,7 +191,7 @@ BULK INSERT TestDatabase.dbo.myChar
 SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
-### **對非 XML 格式檔案使用 OPENROWSET 與字元格式**<a name="openrowset_char_fmt"></a>
+### <a name="using-openrowset-and-character-format-with-a-non-xml-format-file"></a>**對非 XML 格式檔案使用 OPENROWSET 與字元格式**<a name="openrowset_char_fmt"></a>
 **FORMATFILE** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 
 ```sql
@@ -207,7 +207,7 @@ INSERT INTO TestDatabase.dbo.myChar
 SELECT * FROM TestDatabase.dbo.myChar;
 ```
   
-## 相關工作<a name="RelatedTasks"></a>  
+## <a name="related-tasks"></a>相關工作<a name="RelatedTasks"></a>  
 若要使用大量匯入或大量匯出的資料格式 
   
 -   [從舊版 SQL Server 匯入原生與字元格式資料](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  

@@ -22,10 +22,10 @@ ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 83aff89cf0651d338105788a4ca7ef7f751b8528
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68109253"
 ---
 # <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;LANGID (Transact-SQL)

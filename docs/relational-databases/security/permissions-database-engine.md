@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68995856"
 ---
 # <a name="permissions-database-engine"></a>權限 (Database Engine)
@@ -40,7 +40,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
 如需規劃權限系統的秘訣，請參閱 [資料庫引擎權限使用者入門](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
   
-##  <a name="_conventions"></a> 權限命名慣例  
+##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a> 權限命名慣例  
  以下描述一般權限命名慣例：  
   
 -   CONTROL  
@@ -96,7 +96,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 權限的圖表  
 [!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
-##  <a name="_securables"></a> 適用於特定安全性實體的權限  
+##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a> 適用於特定安全性實體的權限  
  下表列出主要的權限類別，以及這些類別的權限適用的安全性實體。  
   
 |權限|適用於|  
@@ -118,7 +118,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 > [!CAUTION]  
 >  在安裝時為系統物件授與的預設權限，經過仔細評估可能面臨的威脅，因此在強化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的過程中無須改變。 系統物件的任何權限變更，都可能會限制或破壞其功效，而可能會讓您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝處於不支援的狀態。  
   
-##  <a name="_permissions"></a> SQL Server 權限  
+##  <a name="sql-server-permissions"></a><a name="_permissions"></a> SQL Server 權限  
  下表提供完整的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 權限清單。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 權限僅供支援的基底安全性實體之用。 無法在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中授與伺服器層級權限，不過，在某些情況下，會改為提供資料庫權限。  
   
 |基底安全性實體|基底安全性實體上更細微的權限|權限類型代碼|包含基底安全性實體的安全性實體|容器安全性實體上隱含基底安全性實體之小權限的權限|  
@@ -361,7 +361,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="_algorithm"></a> 權限檢查演算法的摘要  
+##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> 權限檢查演算法的摘要  
  檢查權限可能很複雜。 權限檢查演算法包含重疊的群組成員資格和擁有權鏈結 (明確和隱含權限)，而且可能會受到包含安全性實體之安全性實體類別的權限影響。 此演算法的一般程序是收集所有相關的權限。 如果找不到任何封鎖的 DENY，此演算法就會搜尋提供足夠存取權的 GRANT。 此演算法包含三個基本元素： **安全性內容**、 **權限空間**和 **必要權限**。  
   
 > [!NOTE]  
@@ -423,7 +423,7 @@ GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 資料行上的 GRANT 會覆寫資料表上的 DENY。 不過，後續資料表上的 DENY 將會移除資料行的 GRANT。 
   
-##  <a name="_examples"></a> 範例  
+##  <a name="examples"></a><a name="_examples"></a> 範例  
  本節中的範例示範如何擷取權限資訊。  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. 傳回完整的可授與權限清單  

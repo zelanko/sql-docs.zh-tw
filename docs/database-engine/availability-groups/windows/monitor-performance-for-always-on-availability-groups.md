@@ -11,10 +11,10 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014686"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>監視 Always On 可用性群組的效能
@@ -436,7 +436,7 @@ ms.locfileid: "68014686"
   
  您可以檢視作業記錄以檢查評估結果。 評估失敗也會記錄在事件識別碼為 34052 的 Windows 應用程式記錄檔中 (位於 [事件檢視器])。 您也可以設定 SQL Server Agent 在原則失敗時傳送警示。 如需詳細資訊，請參閱[設定警示，在原則失敗時通知原則系統管理員](~/relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)。  
   
-##  <a name="BKMK_SCENARIOS"></a> 效能疑難排解案例  
+##  <a name="performance-troubleshooting-scenarios"></a><a name="BKMK_SCENARIOS"></a> 效能疑難排解案例  
  下表列出常見的效能相關疑難排解案例。  
   
 |狀況|描述|  
@@ -445,7 +445,7 @@ ms.locfileid: "68014686"
 |[疑難排解：可用性群組已超過 RPO](troubleshoot-availability-group-exceeded-rpo.md)|在您執行強制手動容錯移轉之後，遺失的資料超過您的 RPO。 或者，當您計算非同步認可次要複本的潛在資料遺失時，發現它超過您的 RPO。|  
 |[疑難排解：對主要複本的變更未反映在次要複本上](troubleshoot-primary-changes-not-reflected-on-secondary.md)|用戶端應用程式在主要複本上成功完成更新，但是查詢次要複本卻顯示未反映變更。|  
   
-##  <a name="BKMK_XEVENTS"></a> 實用的擴充事件  
+##  <a name="useful-extended-events"></a><a name="BKMK_XEVENTS"></a> 實用的擴充事件  
  當針對**同步處理中**狀態的複本進行疑難排解時，下列擴充事件很有用。  
   
 |活動名稱|類別|通路|可用性複本|  

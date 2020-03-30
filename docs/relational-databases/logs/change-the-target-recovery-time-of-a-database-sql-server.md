@@ -11,10 +11,10 @@ ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 24a87adf77ea4217cb27b20d2452fcbd5ba26135
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056249"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>變更資料庫的目標復原時間 (SQL Server)
@@ -28,19 +28,19 @@ ms.locfileid: "74056249"
   
 -   **使用以下方式變更目標復原時間：** [SQL Server Management Studio](#SSMSProcedure) 或 [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項 
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項 
   
 > [!CAUTION]  
 >  設定間接檢查點的資料庫線上交易式工作負載可能會導致效能降低。 間接檢查點可確定中途分頁的數目，低於特定臨界值，如此即可在目標復原時間內完成資料庫的復原。 相對於使用中途分頁數目的間接檢查點，復原間隔設定選項會使用交易數目來判斷復原時間。 在接收到大量 DML 作業的資料庫上啟用間接檢查點時，背景寫入器就會開始積極地將中途緩衝區排清到磁碟，以確保執行復原所需的時間會在資料庫上所設定的目標復原時間內。 這會在某些系統上造成額外的 I/O 活動，如果磁碟子系統的運作超過或接近 I/O 閾值，就會形成效能瓶頸。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要變更目標復原時間**  
   
 1.  在 [物件總管]  中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
@@ -51,7 +51,7 @@ ms.locfileid: "74056249"
   
 4.  在 [復原]  面板的 [目標復原時間 (秒)]  欄位中，指定您想要作為此資料庫復原時間上限的秒數。  
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要變更目標復原時間**  
   
 1.  連接到資料庫所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  

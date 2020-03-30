@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68136475"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 版本資訊
@@ -71,9 +71,9 @@ ms.locfileid: "68136475"
 ## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>SQL Server 2017 候選版 (RC1 - 2017 年 7 月)
 ### <a name="sql-server-integration-services-ssis-rc1---july-2017"></a>SQL Server Integration Services (SSIS) (RC1 - 2017 年 7 月)
 - **問題和對客戶的影響：** 為了一致性和可讀性，預存程序 **[catalog].[create_execution]** 的參數 *runincluster* 已重新命名為 *runinscaleout*。
-- **因應措施：** 如果您的現有指令碼可在相應放大中執行套件，則必須將參數名稱從 *runincluster* 變更為 *runinscaleout*，以確保這些指令碼在 RC1 中正常運作。
+- **因應措施：** 如果您的現有指令碼可在擴增中執行套件，則必須將參數名稱從 *runincluster* 變更為 *runinscaleout*，以確保這些指令碼在 RC1 中正常運作。
 
-- **問題和對客戶的影響：** SQL Server Management Studio (SSMS) 17.1 和舊版本無法在 RC1 的相應放大中觸發套件執行。 錯誤訊息為：「 *@runincluster* 不是程序 **create_execution** 的參數。」 SSMS 的下一個版本 17.2 版中將會修正此問題。 SSMS 17.2 版和更新版本支援 [相應放大] 中的新參數名稱和套件執行。 
+- **問題和對客戶的影響：** SQL Server Management Studio (SSMS) 17.1 和舊版本無法在 RC1 的擴增中觸發套件執行。 錯誤訊息為：「 *@runincluster* 不是程序 **create_execution** 的參數。」 SSMS 的下一個版本 17.2 版中將會修正此問題。 SSMS 17.2 版和更新版本支援 [擴增] 中的新參數名稱和套件執行。 
 - **因應措施：** 在 SSMS 17.2 版可用之前：
   1. 使用現有的 SSMS 版本來產生套件執行指令碼。
   2. 將指令碼中 *runincluster* 參數的名稱變更為 *runinscaleout*。

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 523b082be7b61991db13d588a7203ad4ce5597ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68055428"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>停用資料表或索引的壓縮
@@ -40,9 +40,9 @@ ms.locfileid: "68055428"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   如果資料表是堆積，ONLINE 模式的重建作業將會是單一執行緒。 請針對多執行緒的堆積重建作業使用 OFFLINE 模式。 如需資料壓縮的詳細資訊，請參閱 [資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
   
@@ -50,12 +50,12 @@ ms.locfileid: "68055428"
   
 -   您無法在資料表具有非對齊索引時變更單一分割區的壓縮設定。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表或索引的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-disable-compression-on-a-table"></a>若要停用資料表的壓縮  
   
@@ -191,7 +191,7 @@ ms.locfileid: "68055428"
   
      完成後，請按一下 **[關閉]** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-disable-compression-on-a-table"></a>若要停用資料表的壓縮  
   

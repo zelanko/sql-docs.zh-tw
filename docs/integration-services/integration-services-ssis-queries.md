@@ -18,10 +18,10 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d24d4e8bdebca82ec0541132b52ac84de6c9c271
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71284486"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) 查詢

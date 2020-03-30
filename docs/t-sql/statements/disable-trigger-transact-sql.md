@@ -24,10 +24,10 @@ ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8e426d6af578cd822befdeab928c522a55f98d7e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76259416"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)

@@ -10,17 +10,17 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
 ms.openlocfilehash: 667f18f449a1f2564c04a03ca593c917a7b46005
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68254860"
 ---
 # <a name="report-server-service-trace-log"></a>報表伺服器服務追蹤記錄
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器追蹤記錄是 ASCII 文字檔，其中包含了報表伺服器服務作業的詳細資訊。  檔案中的資訊包括報表伺服器 Web 服務、Web 入口網站及背景處理執行的作業。 追蹤記錄檔包括已記錄於其他記錄檔的重複資訊，加上別處所沒有的其他資訊。 如果您要偵錯包含報表伺服器的應用程式，或者調查寫入事件記錄或執行記錄的特定問題，追蹤記錄資訊會很有用。 例如，疑難排解訂閱問題時。  
 
-## <a name="bkmk_view_log"></a> 報表伺服器記錄檔在何處？
+## <a name="where-are-the-report-server-log-files"></a><a name="bkmk_view_log"></a> 報表伺服器記錄檔在何處？
 
 追蹤記錄檔為 `ReportServerService_<timestamp>.log` 和 `Microsoft.ReportingServices.Portal.WebHost_<timestamp>.log`，位於下列資料夾：
 
@@ -28,7 +28,7 @@ ms.locfileid: "68254860"
 
 系統每天都會建立追蹤記錄，從午夜過後 (當地時間) 發生的第一個項目，以及每次服務重新啟動時開始。 此時間戳記是以國際標準時間 (UTC) 為基礎。 此檔案採用 EN-US 格式。 追蹤記錄檔的預設大小上限為 32 MB，且預設會在 14 天後刪除。  
 
-## <a name="bkmk_trace_configuration_settings"></a> 追蹤組態設定
+## <a name="trace-configuration-settings"></a><a name="bkmk_trace_configuration_settings"></a> 追蹤組態設定
 
 追蹤記錄檔的行為在設定檔 **ReportingServicesService.exe.config** 中管理。下列資料夾路徑中可找到組態檔：  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68254860"
 |**元件類別**|使用下列格式來指定要產生追蹤記錄資訊的元件以及追蹤層級：<br /><br /> \<元件類別>:\<追蹤層級><br /><br /> 您可以指定全部或部分元件 (**all**、 **RunningJobs**、 **SemanticQueryEngine**、 **SemanticModelGenerator**)。 如果不要產生特定元件的資訊，可以停用該元件的追蹤 (例如 "SemanticModelGenerator:0")。 請不要停用 **all**的追蹤。<br /><br /> 如果要檢視為每個語意查詢產生的 Transact-SQL 陳述式，您可以設定 "SemanticQueryEngine:4"。 Transact-SQL 陳述式就會記錄在追蹤記錄中。 下列範例說明將 Transact-SQL 陳述式加入記錄的組態設定：<br /><br /> \<add name="元件" value="all,SemanticQueryEngine:4" />|元件類別可設定為：<br /><br /> <br /><br /> **All** 用於針對所有不屬於特定類別的程序，追蹤其一般報表伺服器活動。<br /><br /> **RunningJobs** 用於追蹤進行中報表或訂閱作業。<br /><br /> **SemanticQueryEngine** 用於追蹤語意查詢，語意查詢會在使用者對以模型為基礎的報表執行隨選資料瀏覽時處理。<br /><br /> **SemanticModelGenerator** 用於追蹤模型產生。<br /><br /> **http** 是用於啟用報表伺服器 HTTP 記錄檔。 如需詳細資訊，請參閱＜ [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md)＞。|  
 |元件類別的 **tracelevel** 值|\<元件類別>:\<追蹤層級><br /><br /> <br /><br /> 如果您沒有將追蹤層級附加至元件，就會使用針對 **DefaultTraceSwitch** 所指定的值。 例如，如果指定 "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator"，所有元件都會使用預設追蹤層級。|追蹤層級的有效值包括：<br /><br /> <br /><br /> 0= 停用追蹤<br /><br /> 1= 例外狀況和重新啟動<br /><br /> 2= 例外、重新啟動和警告<br /><br /> 3= 例外、重新啟動、警告和狀態訊息 (預設值)<br /><br /> 4= 詳細資訊模式<br /><br /> 報表伺服器的預設值是："all:3"。|  
   
-## <a name="bkmk_add_custom"></a> 新增自訂組態設定來指定傾印檔位置  
+## <a name="adding-custom-configuration-setting-to-specify-a-dump-file-location"></a><a name="bkmk_add_custom"></a> 新增自訂組態設定來指定傾印檔位置  
 您可以新增自訂設定，來設定 Windows 的 Dr. Watson for Windows 工具用於儲存傾印檔案。 自訂設定為 **Directory**。 下列範例說明如何在 **RStrace** 區段中指定這個組態設定：  
 
 ```
@@ -77,7 +77,7 @@ ms.locfileid: "68254860"
   
 如需詳細資訊，請參閱 [網站上的](https://support.microsoft.com/?kbid=913046) 知識庫文件 913046 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
-##  <a name="bkmk_log_file_fields"></a> 記錄檔欄位
+##  <a name="log-file-fields"></a><a name="bkmk_log_file_fields"></a> 記錄檔欄位
 
 您可以在追蹤記錄中找到下列欄位：  
   

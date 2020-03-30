@@ -14,10 +14,10 @@ ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7ec0d571fe219719a22e841c43dedd0716ef5a4a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293450"
 ---
 # <a name="azure-blob-destination"></a>Azure Blob 目的地

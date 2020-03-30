@@ -13,10 +13,10 @@ ms.assetid: 02265d6f-44fb-4e28-af58-115ba1ef6c75
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: dcf26d7720a8ca35be9202d0e5765b338ec6a59b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70211206"
 ---
 # <a name="database-console-commands"></a>資料庫主控台命令

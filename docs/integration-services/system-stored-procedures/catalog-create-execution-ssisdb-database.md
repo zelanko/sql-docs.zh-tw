@@ -11,10 +11,10 @@ ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8076434e550f27ac292eec1b7385fce93d60e3ec
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295552"
 ---
 # <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution (SSISDB 資料庫)
@@ -58,7 +58,7 @@ catalog.create_execution [@folder_name = folder_name
  指出是否要使用 32 位元執行階段，在 64 位元作業系統上執行封裝。 使用 1 值，即可在執行 64 位元作業系統時執行含 32 位元執行階段的套件。 使用 0 值，即可在執行 64 位元作業系統時執行 64 位元執行階段。 這是選擇性參數。 *Use32bitruntime* 是 **bit**。  
  
  [@runinscaleout =] *runinscaleout*  
- 指出是否以相應放大執行。使用 1 值，即可使用相應放大執行套件。使用 0 值，即可不使用相應放大執行套件。這是選擇性參數。 如果未指定，會在 [SSISDB].[catalog].[catalog_properties] 中將其值設定為 DEFAULT_EXECUTION_MODE。 *runinscaleout* 是 **bit**。 
+ 指出是否以擴增執行。使用 1 值，即可使用擴增執行套件。使用 0 值，即可不使用擴增執行套件。這是選擇性參數。 如果未指定，會在 [SSISDB].[catalog].[catalog_properties] 中將其值設定為 DEFAULT_EXECUTION_MODE。 *runinscaleout* 是 **bit**。 
  
 [@useanyworker =] *useanyworker*  
 指出是否允許任何 Scale Out Worker 進行執行。

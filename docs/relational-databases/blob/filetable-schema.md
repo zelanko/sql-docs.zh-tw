@@ -13,10 +13,10 @@ ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d5f53246717621e2482a352d25cf2a24fd24f2f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68125166"
 ---
 # <a name="filetable-schema"></a>FileTable 結構描述

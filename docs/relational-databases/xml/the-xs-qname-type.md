@@ -13,10 +13,10 @@ ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd21cae531e41359c797bc3197e3e5bacce65a0f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68078135"
 ---
 # <a name="the-xsqname-type"></a>xs:QName 類型

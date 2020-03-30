@@ -21,10 +21,10 @@ ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 726b071c222580ec75091477dc68509cdb71e1e3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940257"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)

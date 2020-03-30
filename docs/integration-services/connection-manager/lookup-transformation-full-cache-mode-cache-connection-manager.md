@@ -13,10 +13,10 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1ae22daf218c65bc0aa95068d6162a7b966c838c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298512"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>查閱轉換完整快取模式 - 快取連線管理員
