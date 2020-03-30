@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6d87fbbb60f70292075d4f24080798d017ee5288
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74947275"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>資料科學案例和解決方案範本
@@ -96,7 +96,7 @@ ms.locfileid: "74947275"
 **方式：** 此範本使用 SQL Server R Services 來預測電力需求。 用於預測的模型是以 **rxDForest** 為基礎的隨機樹系迴歸模型，這是 Microsoft R Server 隨附的高效能機器學習演算法。 此解決方案包含需求模擬器、定型模型需要的所有 R 和 T-SQL 程式碼，以及您可以用來產生及報告預測的預存程序。 
 
 
-## <a name="bkmk_HowTo"></a>如何使用範本
+## <a name="how-to-use-the-templates"></a><a name="bkmk_HowTo"></a>如何使用範本
 
 若要下載每個範本中所包含的檔案，您可以使用 GitHub 命令，或開啟連結，然後按一下 [Download Zip (下載 Zip)]  將所有檔案儲存至您的電腦。  下載後的解決方案通常會包含下列資料夾：
   

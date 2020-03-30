@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: fc4b442fc6d6afb7f5e913293733296cdaa4c2b9
-ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77074418"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)

@@ -11,10 +11,10 @@ ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027775"
 ---
 # <a name="programming-with-sqlxml"></a>使用 SQLXML 進行程式設計

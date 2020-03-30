@@ -14,10 +14,10 @@ ms.assetid: d58d8f93-7888-4d66-af4d-969ef6a2dbee
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8c8a83b68febee5e00a80bd9977713a786b70f9a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822457"
 ---
 # <a name="configure-database-mirroring-security-wizard-service-accounts"></a>設定資料庫鏡像安全性精靈：服務帳戶

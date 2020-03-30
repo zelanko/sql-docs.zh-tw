@@ -22,10 +22,10 @@ ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3c0d1ed26fa58934a51ec051eb3aa4e1d5b9a2bd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67902098"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)

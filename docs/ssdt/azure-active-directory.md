@@ -11,10 +11,10 @@ ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: ed7bc77b48881351a144ed5d217454518abafcc2
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286202"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支援

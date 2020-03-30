@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 3e9353cc5d22cae0f148661ca5a31651803bc00e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76286353"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>在複寫監視器中檢視發行集和訂閱狀態

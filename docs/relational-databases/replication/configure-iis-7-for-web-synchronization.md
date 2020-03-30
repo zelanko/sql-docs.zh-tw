@@ -14,10 +14,10 @@ ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b77faf60734e6aad7248c59d37033b26bb6b92e4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67903206"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>針對 Web 同步處理設定 IIS 7

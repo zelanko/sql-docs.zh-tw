@@ -19,10 +19,10 @@ author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: 2c6647dfab3a095228023fd56af2c766a8b40fee
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903815"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (預覽)

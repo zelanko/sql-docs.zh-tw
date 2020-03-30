@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/04/2019
 ms.openlocfilehash: 76a6e99d06061ae581b753ce0edd96a5a82d0f95
-ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78946714"
 ---
 # <a name="sql-assessment-api"></a>SQL 評定 API

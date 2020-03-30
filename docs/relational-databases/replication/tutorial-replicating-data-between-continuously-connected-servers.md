@@ -16,10 +16,10 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 603846718e4e21c7af8ee81d94210d12242c35c7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321925"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>教學課程：設定兩個已完全連線伺服器之間的複寫 (異動)

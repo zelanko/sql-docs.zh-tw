@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9740e8c93fbac0d7727ba9922342df96d9190e10
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73658795"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>教學課程：在 Java 中使用規則運算式 (regex) 搜尋字串

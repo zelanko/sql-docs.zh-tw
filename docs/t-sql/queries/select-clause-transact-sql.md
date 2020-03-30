@@ -27,10 +27,10 @@ ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 51707d97a738df13b7aae3c9e7208af76d440492
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68141058"
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 子句 (Transact-SQL)

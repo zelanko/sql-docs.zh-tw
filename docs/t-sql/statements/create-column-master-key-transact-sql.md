@@ -27,10 +27,10 @@ ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: cd6148499c6e9d906d0077632001d3fe32ce9cc3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73593899"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)

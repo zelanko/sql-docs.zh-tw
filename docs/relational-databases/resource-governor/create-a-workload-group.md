@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 237ec09347ab139aabcc9f475f5e3b64aba0f054
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73633007"
 ---
 # <a name="create-a-workload-group"></a>建立工作負載群組
@@ -28,9 +28,9 @@ ms.locfileid: "73633007"
   
 -   **若要建立工作負載群組，請使用下列方式：** [SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="LimitationsRestrictions"></a> 限制事項
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制事項
 
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
   
@@ -38,11 +38,11 @@ ms.locfileid: "73633007"
   
  允許索引建立使用比一開始授與之記憶體更多的記憶體工作空間來改善效能。 資源管理員支援這種特殊的處理，不過，初始授與和任何額外的記憶體授與都受到工作負載群組和資源集區設定的限制。  
   
-###  <a name="Permissions"></a> 權限
+###  <a name="permissions"></a><a name="Permissions"></a> 權限
 
  建立工作負載群組需要 CONTROL SERVER 權限。  
   
-##  <a name="CreRPProp"></a> 使用 SQL Server Management Studio 建立工作負載群組
+##  <a name="create-a-workload-group-using-sql-server-management-studio"></a><a name="CreRPProp"></a> 使用 SQL Server Management Studio 建立工作負載群組
 
  **若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "73633007"
   
 7.  若要儲存變更，請按一下 **[確定]** 。  
 
-##  <a name="CreRPTSQL"></a> 使用 Transact-SQL 建立工作負載群組  
+##  <a name="create-a-workload-group-using-transact-sql"></a><a name="CreRPTSQL"></a> 使用 Transact-SQL 建立工作負載群組  
  **若要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  執行 CREATE WORKLOAD GROUP 陳述式，指定要設定的屬性值。  

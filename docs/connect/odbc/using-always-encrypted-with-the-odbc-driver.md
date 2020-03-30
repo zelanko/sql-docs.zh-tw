@@ -9,10 +9,10 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
 ms.openlocfilehash: 637198e079c6aa1b1e08e1a69e204b36f54f3827
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285842"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>搭配使用 Always Encrypted 與 ODBC Driver for SQL Server

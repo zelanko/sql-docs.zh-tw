@@ -12,16 +12,14 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: edc5d8122f1cb2c0fad747e480843c559f650434
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.openlocfilehash: 30b4b646beda19bb36eb4e046fce86379f9242df
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866508"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80345419"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的版本資訊
-
-[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 此頁面討論每版 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的新功能。  
 

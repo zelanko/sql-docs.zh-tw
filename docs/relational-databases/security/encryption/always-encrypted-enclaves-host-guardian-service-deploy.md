@@ -11,13 +11,13 @@ author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6794f5fd57d1c89e7c1989e79b5072a8c15cf43e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74320051"
 ---
-# <a name="deploy-the-host-guardian-service-for-include-ssnoversion-mdincludesssnoversion-mdmd"></a>針對 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 部署主機守護者服務
+# <a name="deploy-the-host-guardian-service-for-ssnoversion-md"></a>針對 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] 部署主機守護者服務
 
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 

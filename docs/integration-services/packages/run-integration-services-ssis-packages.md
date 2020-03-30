@@ -22,10 +22,10 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fe82e7d6746f3a5fc76fda3f960f069ef4345525
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287382"
 ---
 # <a name="run-integration-services-ssis-packages"></a>執行 Integration Services (SSIS) 封裝
@@ -111,7 +111,7 @@ ms.locfileid: "79287382"
   
      使用預存程序來執行封裝。 按一下 [指令碼]  ，產生用以建立執行之執行個體與啟動執行之執行個體的 Transact-SQL 陳述式。 此陳述式包含了對 catalog.create_execution、catalog.set_execution_parameter_value 和 catalog.start_execution 預存程序的呼叫。 如需這些預存程序的詳細資訊，請參閱 [catalog.create_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)、[catalog.set_execution_parameter_value &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) 和 [catalog.start_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)。  
 
-## <a name="execute_package_dialog"></a> 執行封裝對話方塊
+## <a name="execute-package-dialog-box"></a><a name="execute_package_dialog"></a> 執行封裝對話方塊
   使用 **[執行封裝]** 對話方塊，即可執行儲存在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上的封裝。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝可能會包含參考儲存在環境變數中之值的參數。 在執行這種封裝前，您必須指定要使用何種環境來提供環境變數值。 專案可能包含多個環境，但是執行期間只能使用一個環境來繫結環境變數值。 如果封裝中沒有使用環境變數，就不需要環境。  
@@ -130,7 +130,7 @@ ms.locfileid: "79287382"
   
 -   [編寫執行封裝對話方塊中之選項的指令碼](#script)  
   
-###  <a name="open_dialog"></a> 開啟 [執行封裝] 對話方塊  
+###  <a name="open-the-execute-package-dialog-box"></a><a name="open_dialog"></a> 開啟 [執行封裝] 對話方塊  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
@@ -144,16 +144,16 @@ ms.locfileid: "79287382"
   
 5.  以滑鼠右鍵按一下封裝，然後按一下 [執行]  。  
   
-###  <a name="general"></a> 設定 [一般] 頁面上的 [選項]  
+###  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> 設定 [一般] 頁面上的 [選項]  
  選取 **[環境]** 來指定適用於執行執行封裝的環境。  
   
-###  <a name="parameters"></a> 設定 [參數] 索引標籤上的 [選項]  
+###  <a name="set-the-options-on-the-parameters-tab"></a><a name="parameters"></a> 設定 [參數] 索引標籤上的 [選項]  
  使用 **[參數]** 索引標籤來修改封裝執行時所使用的參數值。  
   
-###  <a name="connection"></a> 設定[連接管理員] 索引標籤上的 [選項]  
+###  <a name="set-the-options-on-the-connection-managers-tab"></a><a name="connection"></a> 設定[連接管理員] 索引標籤上的 [選項]  
  使用 [連接管理員] 索引標籤設定封裝連接管理員的屬性。  
   
-###  <a name="advanced"></a> 設定 [進階] 索引標籤上的 [選項]  
+###  <a name="set-the-options-on-the-advanced-tab"></a><a name="advanced"></a> 設定 [進階] 索引標籤上的 [選項]  
  使用 [進階] 索引標籤管理屬性和其他封裝設定。  
   
  [加入]  、[編輯]  、[移除]   
@@ -168,7 +168,7 @@ ms.locfileid: "79287382"
  **32 位元執行階段**  
  指定封裝將會在 32 位元系統上執行。  
   
-###  <a name="script"></a> 編寫執行封裝對話方塊中之選項的指令碼  
+###  <a name="scripting-the-options-in-the-execute-package-dialog-box"></a><a name="script"></a> 編寫執行封裝對話方塊中之選項的指令碼  
  當您位於 **[執行封裝]** 對話方塊時，也可以使用工具列上的 **[指令碼]** 按鈕來為您撰寫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼。 產生的指令碼會使用您在 [執行封裝]  對話方塊中已選取的相同選項來呼叫預存程序 [catalog.start_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)。 指令碼會出現在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的新指令碼視窗中。  
 
 ## <a name="see-also"></a>另請參閱  

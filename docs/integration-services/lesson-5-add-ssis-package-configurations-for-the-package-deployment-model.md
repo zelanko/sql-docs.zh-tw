@@ -11,10 +11,10 @@ ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d3b3ccea56d367e7870826b39830e415e26bb2ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295904"
 ---
 # <a name="lesson-5-add-ssis-package-configurations-for-the-package-deployment-model"></a>第 5 課：新增套件部署模型的 SSIS 套件設定

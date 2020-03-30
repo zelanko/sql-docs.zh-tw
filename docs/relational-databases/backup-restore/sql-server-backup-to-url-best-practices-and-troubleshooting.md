@@ -11,10 +11,10 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5f744f0bb5d1ced6424fc8882a0a215042fbfc69
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76920347"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 備份至 URL 的最佳做法和疑難排解
@@ -29,7 +29,7 @@ ms.locfileid: "76920347"
   
 -   [教學課程：SQL Server 備份及還原至 Azure Blob 儲存體服務](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## <a name="managing-backups-mb1"></a> 管理備份  
+## <a name="managing-backups"></a><a name="managing-backups-mb1"></a> 管理備份  
  下列清單包含管理備份的一般建議：  
   
 -   建議針對每個備份使用唯一的檔案名稱，避免不小心覆寫 Blob。  

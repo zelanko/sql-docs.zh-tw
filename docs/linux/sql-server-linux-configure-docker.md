@@ -11,10 +11,10 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 ms.openlocfilehash: e97f535dedd2b6ee25abfc886d1f08272697c549
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287502"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>在 Docker 上設定 SQL Server 容器映像
@@ -54,7 +54,7 @@ ms.locfileid: "79287502"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="rhel"></a> 執行 RHEL 型容器映像
+## <a name="run-rhel-based-container-images"></a><a id="rhel"></a> 執行 RHEL 型容器映像
 
 適用於 SQL Server Linux 容器映像的文件都指向 Ubuntu 型容器。 從 SQL Server 2019 開始，您可以使用 Red Hat Enterprise Linux (RHEL) 型容器。 在所有 Docker 命令中，將容器存放庫從 **mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04** 變更為 **mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8**。
 
@@ -73,7 +73,7 @@ docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="production"></a> 執行生產容器映像
+## <a name="run-production-container-images"></a><a id="production"></a> 執行生產容器映像
 
 上一節中的快速入門會從 Docker Hub 執行免費的 SQL Server 開發人員版本。 如果您想要執行生產容器映像 (例如 Enterprise、Standard 或 Web 版本)，大部分的資訊仍然適用。 但仍有一些此處概述的差異。
 
@@ -210,7 +210,7 @@ sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourPassword>"
 sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 ```
 
-## <a id="customcontainer"></a> 建立自訂容器
+## <a name="create-a-customized-container"></a><a id="customcontainer"></a> 建立自訂容器
 
 您能夠建立自己的 [Dockerfile](https://docs.docker.com/engine/reference/builder/#usage) \(英文\)，來建立自訂的 SQL Server 容器。 如需詳細資訊，請參閱[結合 SQL Server 和 Node 應用程式的示範](https://github.com/twright-msft/mssql-node-docker-demo-app) \(英文\)。 如果您建立自己的 Dockerfile，請留意前景程序，因為此程序會控制容器的生命週期。 如果結束，容器將會關閉。 例如，如果您想要執行指令碼並啟動 SQL Server，請確定 SQL Server 程序是最右邊的命令。 所有其他命令都會在背景執行。 下列命令會在 Dockerfile 的內部進行示範：
 
@@ -220,7 +220,7 @@ sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 
 如果您反轉上一個範例中的命令，容器就會在 do-my-sql-commands.sh 指令碼完成時關閉。
 
-## <a id="persist"></a> 保存您的資料
+## <a name="persist-your-data"></a><a id="persist"></a> 保存您的資料
 
 您的 SQL Server 設定變更和資料庫檔案都會保存於容器中，即使您使用 `docker stop` 和 `docker start` 來將容器重新啟動也一樣。 不過，如果您使用 `docker rm` 來移除容器，則會刪除容器中的所有項目，包括 SQL Server 和您的資料庫。 下一節將說明如何使用**資料磁碟區**來保存您的資料庫檔案，即使已刪除相關聯的容器也一樣。
 
@@ -368,7 +368,7 @@ docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```PowerShell
 docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
-## <a id="tz"></a> 設定時區
+## <a name="configure-the-timezone"></a><a id="tz"></a> 設定時區
 
 若要在具有特定時區的 Linux 容器中執行 SQL Server，請設定 `TZ` 環境變數。 若要尋找正確的時區值，請從 Linux Bash 提示執行 `tzselect` 命令：
 
@@ -425,7 +425,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 ```
 ::: moniker-end
 
-## <a id="tags"></a> 執行特定的 SQL Server 容器映像
+## <a name="run-a-specific-sql-server-container-image"></a><a id="tags"></a> 執行特定的 SQL Server 容器映像
 
 在某些情況下，您可能不想使用最新的 SQL Server 容器映像。 若要執行特定的 SQL Server 容器映像，請使用下列步驟：
 
@@ -449,7 +449,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 
 這些步驟也可以用來將現有的容器降級。 例如，您可能想要復原或降級執行中的容器，以進行疑難排解或測試。 若要將執行中的容器降級，您必須使用適用於資料資料夾的持續性技術。 遵循[升級小節](#upgrade)中概述的相同步驟，但在執行新容器時指定較舊版本的標記名稱。
 
-## <a id="version"></a> 檢查容器版本
+## <a name="check-the-container-version"></a><a id="version"></a> 檢查容器版本
 
 如果您想要知道執行中 Docker 容器內的 SQL Server 版本，請執行下列命令來顯示它。 以目標容器識別碼或名稱取代 `<Container ID or name>`。 以用來進行 SA 登入的 SQL Server 密碼取代 `<YourStrong!Passw0rd>`。
 
@@ -505,7 +505,7 @@ Packages
   sqlagent.sfp                  14.0.3029.16
 ```
 
-## <a id="upgrade"></a> 在容器中升級 SQL Server
+## <a name="upgrade-sql-server-in-containers"></a><a id="upgrade"></a> 在容器中升級 SQL Server
 
 若要使用 Docker 來升級容器映像，請先識別適用於您升級之版本的標記。 使用 `docker pull` 命令，從登錄中提取此版本：
 
@@ -528,7 +528,7 @@ docker pull mcr.microsoft.com/mssql/server:<image_tag>
 
 1. (選擇性) 使用 `docker rm` 來移除舊容器。
 
-## <a id="buildnonrootcontainer"></a> 建置並執行非根 SQL Server 2017 容器
+## <a name="build-and-run-non-root-sql-server-2017-containers"></a><a id="buildnonrootcontainer"></a> 建置並執行非根 SQL Server 2017 容器
 
 請遵循下列步驟來建置以 `mssql` (非根) 使用者身分啟動的 SQL Server 2017 容器。
 
@@ -566,7 +566,7 @@ docker exec -it sql1 bash
 whoami
 ```
 
-## <a id="nonrootuser"></a> 以主機上不同的非根使用者身分執行容器
+## <a name="run-container-as-a-different-non-root-user-on-the-host"></a><a id="nonrootuser"></a> 以主機上不同的非根使用者身分執行容器
 
 若要以不同的非根使用者執行 SQL Server 容器，請將 -u 旗標新增至 docker run 命令。 非根容器包含限制，除非磁碟區是掛接到非根使用者可存取的 '/var/opt/mssql'，否則必須作為根群組的一部分執行。 根群組不會授與任何額外的根權限給非根使用者。
 
@@ -603,7 +603,7 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PT
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u (id -u myusername):(id -g myusername) -v /path/to/mssql:/var/opt/mssql -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
-## <a id="storagepermissions"></a> 為非根容器設定永續性儲存體權限
+## <a name="configure-persistent-storage-permissions-for-non-root-containers"></a><a id="storagepermissions"></a> 為非根容器設定永續性儲存體權限
 
 若要允許非根使用者存取已掛接磁碟區上的 DB 檔案，請確認您執行容器的使用者/群組可接觸永續性檔案儲存體。  
 
@@ -632,7 +632,7 @@ chmod -R g=u <database file dir>
 chown -R 10001:0 <database file dir>
 ```
 
-## <a id="changefilelocation"></a> 變更預設檔案位置
+## <a name="change-the-default-file-location"></a><a id="changefilelocation"></a> 變更預設檔案位置
 
 新增 `MSSQL_DATA_DIR` 變數來在您 `docker run` 命令中變更您的資料目錄，然後將磁碟區掛接到您容器使用者可存取的該位置。
 
@@ -640,7 +640,7 @@ chown -R 10001:0 <database file dir>
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
-## <a id="troubleshooting"></a> 疑難排解
+## <a name="troubleshooting"></a><a id="troubleshooting"></a> 疑難排解
 
 下列各節提供在容器中執行 SQL Server 的疑難排解建議。
 
@@ -760,7 +760,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 
 - 使用 `docker run` 命令的 `-h YOURHOSTNAME` 參數，明確設定容器主機名稱。 當您設定可用性群組時，會使用此主機名稱。 如果您未使用 `-h` 來指定它，則會預設為容器識別碼。
 
-### <a id="errorlogs"></a> SQL Server 設定和錯誤記錄檔
+### <a name="sql-server-setup-and-error-logs"></a><a id="errorlogs"></a> SQL Server 設定和錯誤記錄檔
 
 您可以在 **/var/opt/mssql/log** 中查看 SQL Server 設定和錯誤記錄檔。 如果容器並未執行，請先啟動容器。 接著，使用互動式命令提示字元來檢查記錄。
 

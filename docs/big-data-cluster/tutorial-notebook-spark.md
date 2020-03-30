@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 4acb5c2306064da29d3537fc881dbfc3d312ad2f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73844236"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>教學課程：在 SQL Server 巨量資料叢集上執行範例筆記本
@@ -25,7 +25,7 @@ ms.locfileid: "73844236"
 > [!TIP]
 > 如果您想要的話，也可以下載並執行用於本教學課程中命令的指令碼。 如需指示，請參閱 GitHub 上的 [Spark 範例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark)。
 
-## <a id="prereqs"></a> 必要條件
+## <a name="prerequisites"></a><a id="prereqs"></a> 必要條件
 
 - [巨量資料工具](deploy-big-data-tools.md)
    - **kubectl**

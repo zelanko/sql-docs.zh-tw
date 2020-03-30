@@ -18,10 +18,10 @@ ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 32cc95fa56d909602ab66d3ddad403bf4ceacebc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68065823"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (Transact-SQL) 資料庫鏡像

@@ -11,10 +11,10 @@ ms.assetid: 74e69704-e63c-450b-9207-5c1491d0e0f5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1a43540d866faaf79b1c020eb255689862e6d97
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992517"
 ---
 # <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>步驟 1:設定 pyodbc Python 開發的開發環境

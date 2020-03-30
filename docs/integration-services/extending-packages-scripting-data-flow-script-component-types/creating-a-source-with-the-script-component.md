@@ -17,10 +17,10 @@ ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6b3362c4761d6ad17618a2c390ada247be9071f1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296451"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>以指令碼元件建立來源

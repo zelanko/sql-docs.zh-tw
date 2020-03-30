@@ -13,10 +13,10 @@ ms.author: haoqian
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.openlocfilehash: 68a24188a307dd84a28342d89559630efa9a9d80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72305080"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>執行 Integration Services (SSIS) Scale Out 中的套件
@@ -26,17 +26,17 @@ ms.locfileid: "72305080"
 
 將套件部署至 Integration Services 伺服器之後，即可使用下列其中一種方法在 Scale Out 中予以執行：
 
--   [在相應放大中執行套件對話方塊](#scale_out_dialog)
+-   [在擴增中執行套件對話方塊](#scale_out_dialog)
 
 -   [預存程序](#stored_proc)
 
 -   [SQL Server Agent 作業](#sql_agent)
 
-## <a name="scale_out_dialog"></a> 使用 [在相應放大中執行套件] 對話方塊執行套件
+## <a name="run-packages-with-the-execute-package-in-scale-out-dialog-box"></a><a name="scale_out_dialog"></a> 使用 [在擴增中執行套件] 對話方塊執行套件
 
-1. 開啟 [在相應放大中執行套件] 對話方塊。
+1. 開啟 [在擴增中執行套件] 對話方塊。
 
-    在 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]中連接到 Integration Services 伺服器。 在 [物件總管] 中，展開樹狀目錄以顯示 [Integration Services 目錄]  下的節點。 以滑鼠右鍵按一下 [SSISDB]  節點或您要執行的專案或封裝，再按一下 [在相應放大中執行]  。
+    在 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]中連接到 Integration Services 伺服器。 在 [物件總管] 中，展開樹狀目錄以顯示 [Integration Services 目錄]  下的節點。 以滑鼠右鍵按一下 [SSISDB]  節點或您要執行的專案或封裝，再按一下 [在擴增中執行]  。
 
 2. 選取套件，並設定選項。
 
@@ -61,7 +61,7 @@ ms.locfileid: "72305080"
 
     按一下 [確定]  開始執行封裝。 若要檢視封裝的執行報表，請以滑鼠右鍵按一下 [物件總管] 中的封裝，再依序按一下 [報表]  及 [所有執行]  ，找到執行。
     
-## <a name="stored_proc"></a> 以預存程序執行套件
+## <a name="run-packages-with-stored-procedures"></a><a name="stored_proc"></a> 以預存程序執行套件
 
 1.  建立執行。
 
@@ -112,20 +112,20 @@ GO
 -   **sysadmin** 伺服器角色中的成員資格  
 
 ## <a name="set-default-execution-mode"></a>設定預設執行模式
-若要將套件的預設執行模式設定為 [相應放大]  ，請執行下列動作：
+若要將套件的預設執行模式設定為 [擴增]  ，請執行下列動作：
 
 1.  在 SSMS 的物件總管中，以滑鼠右鍵按一下 [SSISDB]  節點，然後選取 [屬性]  。
 
-2.  在 [目錄屬性]  對話方塊中，將 [全伺服器的預設執行模式]  設定為 [相應放大]  。
+2.  在 [目錄屬性]  對話方塊中，將 [全伺服器的預設執行模式]  設定為 [擴增]  。
 
-設定這個預設執行模式之後，在呼叫 `[catalog].[create_execution]` 預存程序時，就不再需要指定 **\@runinscaleout** 參數。 套件會自動以相應放大模式執行。 
+設定這個預設執行模式之後，在呼叫 `[catalog].[create_execution]` 預存程序時，就不再需要指定 **\@runinscaleout** 參數。 套件會自動以擴增模式執行。 
 
 ![執行模式](media/exe-mode.PNG)
 
-若要重新切換預設執行模式，讓套件不再預設以相應放大模式執行，請將 [全伺服器的預設執行模式]  設定為 [伺服器]  。
+若要重新切換預設執行模式，讓套件不再預設以擴增模式執行，請將 [全伺服器的預設執行模式]  設定為 [伺服器]  。
 
-## <a name="sql_agent"></a> 在 SQL Server Agent 作業中執行套件
-在 SQL Server Agent 作業中，您可以將 SSIS 套件執行為作業的一個步驟。 若要以相應放大執行套件，請將預設執行模式設定為 [相應放大]  。將預設執行模式設定為 [相應放大]  之後，即會以相應放大模式執行 SQL Server Agent 作業中的套件。
+## <a name="run-package-in-sql-server-agent-job"></a><a name="sql_agent"></a> 在 SQL Server Agent 作業中執行套件
+在 SQL Server Agent 作業中，您可以將 SSIS 套件執行為作業的一個步驟。 若要以擴增執行套件，請將預設執行模式設定為 [擴增]  。將預設執行模式設定為 [擴增]  之後，即會以擴增模式執行 SQL Server Agent 作業中的套件。
 
 ## <a name="next-steps"></a>後續步驟
--   [為相應放大進行疑難排解](troubleshooting-scale-out.md)
+-   [為擴增進行疑難排解](troubleshooting-scale-out.md)

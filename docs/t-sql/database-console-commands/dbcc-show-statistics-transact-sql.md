@@ -34,10 +34,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50587bc33f6fd37e4c114fa28a7171e6ea951b84
-ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77074441"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
@@ -126,11 +126,11 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |DISTINCT_RANGE_ROWS|在長條圖步驟內具有相異資料行值的預估資料列數，不包括上限。|  
 |AVG_RANGE_ROWS|在長條圖步驟內具有重複資料行值的平均資料列數，不包括上限。 當 DISTINCT_RANGE_ROWS 大於 0 時，AVG_RANGE_ROWS 的計算方式為 RANGE_ROWS 除以 DISTINCT_RANGE_ROWS。 當 DISTINCT_RANGE_ROWS 為 0 時，AVG_RANGE_ROWS 會針對長條圖步驟傳回 1。| 
   
-## <a name="Remarks"></a> 備註 
+## <a name="remarks"></a><a name="Remarks"></a> 備註 
 
 統計資料更新日期儲存在[統計資料 Blob 物件](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，其中還有[長條圖](#histogram)和[密度向量](#density)，不是儲存在中繼資料中。 如果沒有讀取資料以產生統計資料，則不會建立統計 Blob、沒有日期，且「已更新」  資料行為 NULL。 這是已篩選統計資料的情況，其中述詞未傳回任何資料列，或為新的空白資料表的情況。
   
-## <a name="histogram"></a> 長條圖  
+## <a name="histogram"></a><a name="histogram"></a> 長條圖  
 長條圖會測量資料集中每一個相異值的發生頻率。 查詢最佳化工具會計算有關統計資料物件之第一個索引鍵資料行中資料行值的長條圖，以統計方式取樣資料列或執行資料表或檢視表中所有資料列的完整掃描來選取資料行值。 如果長條圖是從一組取樣的資料列所建立，資料列數和相異值數的儲存總計會是預估值，而且不需要為整數。
   
 若要建立長條圖，查詢最佳化工具會排序資料行值、計算符合每一個相異資料行值的值數目，然後將資料行值彙總成最多 200 個連續長條圖步驟。 每一個步驟都包含某個範圍的資料行值，後面緊接著上限資料行值。 此範圍包括界限值之間的所有可能資料行值，但是不包括界限值本身。 最低的已排序資料行值就是第一個長條圖步驟的上限值。
@@ -146,7 +146,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 查詢最佳化工具會根據長條圖步驟的統計重要性來定義長條圖步驟。 它會使用最大值差異演算法，讓長條圖中的步驟數減至最少，同時讓界限值之間的差異最大化。 步驟數的最大值為 200。 長條圖步驟的數目可以少於相異值數目，即使包含了少於 200 個界限點的資料行也是如此。 例如，包含 100 個相異值的資料行可以擁有少於 100 個界限點的長條圖。
   
-## <a name="density"></a> 密度向量  
+## <a name="density-vector"></a><a name="density"></a> 密度向量  
 查詢最佳化工具會使用密度來增強查詢的基數預估，這些查詢會從相同的資料表或索引檢視表傳回多個資料行。 密度向量針對統計資料物件中資料行的每個前置詞各包含一個密度。 例如，如果統計資料物件具有 `CustomerId`、`ItemId` 和 `Price` 等索引鍵資料行，就會根據下列每一個資料行前置詞來計算密度。
   
 |資料行前置詞|計算密度的依據|  

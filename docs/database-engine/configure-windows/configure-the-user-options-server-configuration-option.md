@@ -15,10 +15,10 @@ ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d06cb92287537293739fa9bd7b1a86ea7ffd767a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012160"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>設定 user options 伺服器組態選項
@@ -44,9 +44,9 @@ ms.locfileid: "68012160"
   
 -   **後續操作：** [設定使用者選項設定選項之後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   下表列出及描述 **user options**的組態值。 不是所有組態值都彼此相容。 例如，不能同時設定 ANSI_NULL_DFLT_ON 與 ANSI_NULL_DFLT_OFF。  
   
@@ -70,12 +70,12 @@ ms.locfileid: "68012160"
   
 -   **user options** 中的位元位置與 @@OPTIONS 中的位元位置完全一樣。 每個連接都有它自己的 @@OPTIONS 函數，代表組態環境。 登入 \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，使用者會收到將目前 **user options** 值指派給 @@OPTIONS 的預設環境。 為 **user options** 執行 SET 陳述式會影響工作階段的 @@OPTIONS 函式中的對應值。 在變更這個設定值後建立的連接都會接收新的值。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>若要設定 user options 組態選項  
   
@@ -87,7 +87,7 @@ ms.locfileid: "68012160"
   
      預設是無設定任何使用者選項。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>若要設定 user options 組態選項  
   
@@ -107,7 +107,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> 後續操作：設定使用者選項設定選項之後  
+##  <a name="follow-up-after-you-configure-the-user-options-configuration-option"></a><a name="FollowUp"></a> 後續操作：設定使用者選項設定選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

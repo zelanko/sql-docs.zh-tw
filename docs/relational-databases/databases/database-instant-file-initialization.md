@@ -18,10 +18,10 @@ ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 87257431940b527fda01bc1704a519b37b6d4e05
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982454"
 ---
 # <a name="database-file-initialization"></a>資料庫檔案初始化

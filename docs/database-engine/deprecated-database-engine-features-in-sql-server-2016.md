@@ -17,10 +17,10 @@ ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 77c45273b5381a158d8a5cf317f292fd46dec55d
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79190551"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中已被取代的 Database Engine 功能

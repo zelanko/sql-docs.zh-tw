@@ -11,10 +11,10 @@ author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 06db927ec2d77f07e82a9647239f87bc46e8a953
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74320061"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>向主機守護者服務註冊電腦

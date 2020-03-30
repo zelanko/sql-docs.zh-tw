@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 0a402c50e8a7f1c2467b00fbbaa599d6c289ebab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67896184"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>將 SQL Server Integration Services 工作負載隨即轉移至雲端
@@ -28,7 +28,7 @@ ms.locfileid: "67896184"
 將內部部署 SSIS 工作負載移至 Azure 有下列優點：
 -   **降低營運成本**，並降低您在內部部署環境或 Azure 虛擬機器上執行 SSIS 時所擁有的管理基礎結構負擔。
 -   **提高高可用性** 而且可以指定每個叢集有多個節點，以及 Azure 和 Azure SQL Database 的高可用性功能。
--   **提高延展性**以及指定每個節點的多個核心 (相應增加) 和每個叢集的多個節點 (相應放大) 的能力。
+-   **提高延展性**以及指定每個節點的多個核心 (擴增) 和每個叢集的多個節點 (擴大) 的能力。
 
 ## <a name="architecture-of-ssis-on-azure"></a>Azure 上的 SSIS 架構
 下表強調顯示內部部署環境上的 SSIS 與 Azure 上的 SSIS 之間的差異。
@@ -54,7 +54,7 @@ ms.locfileid: "67896184"
 > [!NOTE]
 > 所有 Azure 區域都還無法使用 Azure-SSIS Integration Runtime。 如需所支援區域的資訊，請參閱[區域可用的產品 - Microsoft Azure](https://azure.microsoft.com/regions/services/)。
 
-**相應增加和相應放大**。當您佈建 Azure SSIS IR 時，可以指定下列選項的值來相應增加和相應放大：
+**擴大和擴增**。當您佈建 Azure SSIS IR 時，可以指定下列選項的值來擴大和擴增：
 -   節點大小 (包含核心數目) 以及叢集中的節點數目。
 -   裝載 SSIS 目錄資料庫 (SSISDB) 的現有 Azure SQL Database 執行個體，以及資料庫的服務層。
 -   每個節點的最大平行執行。

@@ -10,10 +10,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f175e9639b07c945b92b6fd715fa8b34ebea60c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73049912"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 版本設定系統文件
@@ -130,13 +130,13 @@ ms.locfileid: "73049912"
 | `sql-server-2019` | 這也適用於值為 `sql-server-2017` 的案例，差別僅在參數和控制項會設為 2019。 |
 | &nbsp; | &nbsp; |
 
-### <a name="anchor-allsql-hidenothing"></a> 所有 SQL - 不隱藏項目，特殊的 moniker
+### <a name="all-sql---hide-nothing-special-moniker"></a><a name="anchor-allsql-hidenothing"></a> 所有 SQL - 不隱藏項目，特殊的 moniker
 
 有一個特殊的 moniker 產品名稱是**所有 SQL**，且其唯一的版本是**不隱藏項目**。 此 moniker 的目的是用於在內部測試特定變更。 若由客戶使用，則相較於通知，此 moniker 更可能會誤導客戶。
 
 有些文章包含與多個 SQL Server 版本相關的資訊。 每個一般 moniker 都會隱藏已建立版本的區段；這些區段原先可能會顯示 moniker 版本的不正確、令人困惑或矛盾資訊。 特殊的**所有 SQL** moniker 會顯示所有版本區段，且顯示不正確的資訊時可能並不明顯。
 
-## <a name="anchor-message-unavailable-for-moniker"></a> 訊息：要求的頁面無法提供 \<moniker\> 使用
+## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> 訊息：要求的頁面無法提供 \<moniker\> 使用
 
 下列案例會導致在 :::no-loc text="Docs"::: 網頁接近頂端的位置顯示資訊訊息：
 

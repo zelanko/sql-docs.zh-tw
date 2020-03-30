@@ -33,10 +33,10 @@ author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75831818"
 ---
 # <a name="collation-and-unicode-support"></a>定序與 Unicode 支援
@@ -49,7 +49,7 @@ ms.locfileid: "75831818"
     
 為了有效運用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的定序支援，您應了解本主題中定義的字詞，以及它們與資料特性的關聯。    
     
-##  <a name="Terms"></a> 定序字詞    
+##  <a name="collation-terms"></a><a name="Terms"></a> 定序字詞    
     
 -   [定序](#Collation_Defn) 
     - [定序集](#Collation_sets)
@@ -58,7 +58,7 @@ ms.locfileid: "75831818"
 -   [字碼頁](#Code_Page_Defn)    
 -   [排序次序](#Sort_Order_Defn)    
     
-###  <a name="Collation_Defn"></a> 定序    
+###  <a name="collation"></a><a name="Collation_Defn"></a> 定序    
 定序指定位元模式，代表資料集中的每一個字元。 定序也可以決定排序和比較資料的規則。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援在單一資料庫中儲存具備不同定序的物件。 對於非 Unicode 資料行，定序設定則指定資料的字碼頁以及可代表的字元。 在非 Unicode 資料行之間移動的資料必須從來源字碼頁轉換成目的地字碼頁。    
     
 當[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式在各有不同定序設定的不同資料庫內容中執行時，陳述式的結果可能不同。 如果可能的話，請針對組織使用標準化定序。 這樣您就不需要在每一個字元或 Unicode 運算式中指定定序。 如果您必須使用有不同定序和字碼頁設定的物件，則在編寫查詢程式碼時，必須考量定序優先順序的規則。 如需詳細資訊，請參閱 [定序優先順序 (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)。    
@@ -110,7 +110,7 @@ ms.locfileid: "75831818"
 
 <sup>2</sup> 新增 UTF-8 選項 (\_UTF8) 會啟用使用 UTF-8 來編碼 Unicode 資料。 如需詳細資訊，請參閱本文的[＜UTF-8 支援＞](#utf8)一節。 
 
-### <a name="Collation_sets"></a> 定序集
+### <a name="collation-sets"></a><a name="Collation_sets"></a> 定序集
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列定序集：    
 
@@ -118,10 +118,10 @@ ms.locfileid: "75831818"
 -  [二進位定序](#Binary-collations)
 -  [SQL Server 定序](#SQL-collations)
     
-#### <a name="Windows-collations"></a> Windows 定序    
+#### <a name="windows-collations"></a><a name="Windows-collations"></a> Windows 定序    
 Windows 定序會定義規則，以便依據相關聯的 Windows 系統地區設定來儲存字元資料。 針對 Windows 定序，您可以使用與 Unicode 資料相同的演算法，來執行非 Unicode 資料的比較。 基本 Windows 定序規則會指定套用字典排序時使用的字母或語言。 這些規則也會指定用來儲存非 Unicode 字元資料的字碼頁。 Unicode 和非 Unicode 排序都與特定 Windows 版本中的字串比較相容。 如此可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的各種資料類型取得一致性，同時讓開發人員能夠使用與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相同的規則在應用程式中排序字串。 如需詳細資訊，請參閱 [Windows 定序名稱 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)。    
     
-#### <a name="Binary-collations"></a> 二進位定序    
+#### <a name="binary-collations"></a><a name="Binary-collations"></a> 二進位定序    
 二進位定序依據地區設定和資料類型所定義的字碼值順序來排序資料。 它們區分大小寫。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中二進位定序會定義所使用的地區設定和 ANSI 字碼頁。 這會強制使用二進位排序次序。 因為它們相對而言較為簡單，所以二進位定序可提升應用程式效能。 如果是非 Unicode 資料類型，資料比較是依據 ANSI 字碼頁中所定義的字碼指標。 如果是 Unicode 資料類型，資料比較則是依據 Unicode 字碼指標。 如果是 Unicode 資料類型的二進位定序，在資料排序時不會考量地區設定。 例如，**Latin_1_General_BIN** 和 **Japanese_BIN** 用於 Unicode 資料時會產生相同的排序結果。 如需詳細資訊，請參閱 [Windows 定序名稱 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)。   
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中有兩種二進位定序類型：
@@ -130,7 +130,7 @@ Windows 定序會定義規則，以便依據相關聯的 Windows 系統地區設
 
 -  較新的 **BIN2** 定序會實作純字碼指標比較。 在 BIN2 定序中，所有字元都是根據其字碼指標排序。 因為 Intel 平台是 Little Endian 架構，所以 Unicode 字碼字元一律以位元組交換的方式儲存。     
     
-#### <a name="SQL-collations"></a> SQL Server 定序    
+#### <a name="sql-server-collations"></a><a name="SQL-collations"></a> SQL Server 定序    
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序 (SQL_\*) 會提供與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 舊版的排序次序相容性。 非 Unicode 資料的字典排序規則與 Windows 作業系統所提供任何排序常式不相容。 不過，Unicode 資料的排序與 Windows 排序規則的特定版本相容。 因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序對非 Unicode 和 Unicode 資料使用不同的比較規則，所以您會看到相同資料的比較有不同的結果，這取決於基礎資料類型而定。 如需詳細資訊，請參閱 [SQL Server 定序名稱 (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。 
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定期間，預設安裝定序設定會由作業系統 (OS) 地區設定決定。 您可以在安裝期間變更伺服器層級的定序，也可以在安裝之前變更 OS 地區設定。 基於回溯相容性的原因，預設定序會設定為與每個特定地區設定建立關聯的最舊可用版本。 因此，此定序不一定是建議的定序。 若要完全利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能，請變更預設安裝設定以使用 Windows 定序。 例如，針對 OS 地區設定 [英文 (美國)] (字碼頁 1252)，安裝期間的預設定序是 **SQL_Latin1_General_CP1_CI_AS**，且可以變更為與其最接近的 Windows 定序對應項目 **Latin1_General_100_CI_AS_SC**。
@@ -141,7 +141,7 @@ Windows 定序會定義規則，以便依據相關聯的 Windows 系統地區設
 > -   應用程式的程式碼視先前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序行為而定。    
 > -   您必須儲存反映多國語言的字元資料。    
     
-### <a name="Collation_levels"></a> 定序層級
+### <a name="collation-levels"></a><a name="Collation_levels"></a> 定序層級
 您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的下列層級設定定序：    
 
 -  [伺服器層級定序](#Server-level-collations)
@@ -149,7 +149,7 @@ Windows 定序會定義規則，以便依據相關聯的 Windows 系統地區設
 -  [資料行層級定序](#Column-level-collations)
 -  [運算式層級定序](#Expression-level-collations)
 
-#### <a name="Server-level-collations"></a> 伺服器層級定序   
+#### <a name="server-level-collations"></a><a name="Server-level-collations"></a> 伺服器層級定序   
 預設伺服器定序是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定期間決定，因此會成為系統資料庫和所有使用者資料庫的預設定序。 
 
 下表顯示由作業系統 (OS) 地區設定決定的預設定序指定，包括其 Windows 和 SQL 語言代碼識別碼 (LCID)：
@@ -388,7 +388,7 @@ SELECT CONVERT(varchar, SERVERPROPERTY('collation'));
 SELECT * FROM sys.fn_helpcollations();
 ```
     
-#### <a name="Database-level-collations"></a> 資料庫層級定序    
+#### <a name="database-level-collations"></a><a name="Database-level-collations"></a> 資料庫層級定序    
 當建立資料庫時，您可以使用 `CREATE DATABASE` 的 `COLLATE` 子句或 `ALTER DATABASE` 陳述式來指定預設資料庫定序。 如果未指定定序，則會將伺服器定序指派給資料庫。    
     
 除非變更伺服器的定序，否則無法變更系統資料庫的定序。
@@ -413,7 +413,7 @@ ALTER DATABASE myDB COLLATE Greek_CS_AI;
 SELECT CONVERT (VARCHAR(50), DATABASEPROPERTYEX('database_name','collation'));
 ```
 
-#### <a name="Column-level-collations"></a> 資料行層級定序    
+#### <a name="column-level-collations"></a><a name="Column-level-collations"></a> 資料行層級定序    
 建立或改變資料表時，可以使用 `COLLATE` 子句來指定每個字元字串資料行的定序。 如果您沒有指定定序，就會將資料庫的預設定序指派給資料行。    
 
 您可以使用類似下列 `ALTER TABLE` 陳述式來變更資料行的定序：
@@ -422,23 +422,23 @@ SELECT CONVERT (VARCHAR(50), DATABASEPROPERTYEX('database_name','collation'));
 ALTER TABLE myTable ALTER COLUMN mycol NVARCHAR(10) COLLATE Greek_CS_AI;
 ```
     
-#### <a name="Expression-level-collations"></a> 運算式層級定序    
+#### <a name="expression-level-collations"></a><a name="Expression-level-collations"></a> 運算式層級定序    
 運算式層級定序是在執行陳述式時設定的，而且它們會影響傳回結果集的方式。 這樣可讓 `ORDER BY` 將結果排序為地區設定特定。 若要執行運算式層級定序，請使用 `COLLATE` 子句，如下所示：    
     
 ```sql    
 SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;    
 ```    
     
-###  <a name="Locale_Defn"></a> 地區設定    
+###  <a name="locale"></a><a name="Locale_Defn"></a> 地區設定    
 地區設定是一組與某個地點或文化特性建立關聯的資訊。 這項資訊包括口語的名稱和識別碼、用來撰寫該語言的指令碼及文化習慣。 定序可與一個或多個地區設定產生關聯。 如需詳細資訊，請參閱 [Microsoft 指派的地區設定識別碼](https://msdn.microsoft.com/goglobal/bb964664.aspx)。    
     
-###  <a name="Code_Page_Defn"></a> 字碼頁    
+###  <a name="code-page"></a><a name="Code_Page_Defn"></a> 字碼頁    
 字碼頁是給定的指令碼的已排序字元集，其中每一個字元與數字索引或字碼指標值相關聯。 Windows 字碼頁一般稱為「字元集」  或 *charset*。 字碼頁是用來提供不同 Windows 系統地區設定所使用的字元集和鍵盤配置的支援。     
  
-###  <a name="Sort_Order_Defn"></a> 排序次序    
+###  <a name="sort-order"></a><a name="Sort_Order_Defn"></a> 排序次序    
 排序次序會指定如何排序資料值。 次序會影響資料比較的結果。 資料是使用定序來排序，而且可以使用索引來最佳化。    
     
-##  <a name="Unicode_Defn"></a> Unicode 支援    
+##  <a name="unicode-support"></a><a name="Unicode_Defn"></a> Unicode 支援    
 Unicode 是將字碼指標對應到字元的標準用法。 由於 Unicode 主要設計為涵蓋世界上所有語言的字元，因此您不需要使用不同字碼頁來處理不同的字元集。
 
 ### <a name="unicode-basics"></a>Unicode 基本概念
@@ -505,7 +505,7 @@ Unicode 是將字碼指標對應到字元的標準用法。 由於 Unicode 主�
 |非 Unicode|Unicode|這不是使用多國語言資料的理想設定。 您無法將 Unicode 資料寫入非 Unicode 伺服器。 當資料傳送到在此伺服器的字碼頁以外的伺服器時，就可能發生問題。|    
 |非 Unicode|非 Unicode|這是多國語言資料的限制狀況。 您只能使用單一字碼頁。|    
     
-##  <a name="Supplementary_Characters"></a> 增補字元    
+##  <a name="supplementary-characters"></a><a name="Supplementary_Characters"></a> 增補字元    
 Unicode Consortium 會為每個字元配置唯一的字碼指碼，其值介於 000000 到 10FFFF 的範圍。 最常用的字元會具備介於 000000 到 00FFFF 範圍 (65,535 個字元) 內的字碼指碼值，其在記憶體和硬碟上可容於 8 位元或 16 位元的字組中。 此範圍通常會指定為基本多語系平面 (BMP)。 
 
 但 Unicode Consortium 已建立其它 16 個字元「平面」，每個平面的大小都與 BMP 相同。 此定義可讓 Unicode 具備表示 1,114,112 個字元的潛力 (即 2<sup>16</sup> * 17 個字元)，介於字碼指碼範圍 000000 到 10FFFF 中。 字碼元素值大於 00FFFF 的字元需要二至四個連續的 8 位元字組 (UTF-8) 或兩個連續的 16 位元字組 (UTF-16)。 這些字元位於 BMP 範圍之外，稱為「增補字元」  的範圍內，並且額外的連續 8 位元或 16 位元字組稱為「代理字組」  。 如需增補字元、代理及代理字組的詳細資訊，請參閱 [Unicode Standard](http://www.unicode.org/standard/standard.html) (Unicode 標準)。    
@@ -544,7 +544,7 @@ Unicode Consortium 會為每個字元配置唯一的字碼指碼，其值介於 
 |[UNICODE](../../t-sql/functions/unicode-transact-sql.md)|傳回 UTF-16 字碼指標 在範圍 0 到 0x10FFFF 中)。|傳回 UCS-2 字碼指標 (在範圍 0 到 0x10FFFF 中)。|    
 |[符合單一萬用字元](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [萬用字元 - 不相符的字元](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|增補字元支援所有萬用字元作業。|增補字元不支援這些萬用字元作業。 但支援其他萬用字元運算子。|    
     
-## <a name="GB18030"></a> GB18030 支援    
+## <a name="gb18030-support"></a><a name="GB18030"></a> GB18030 支援    
 GB18030 是一種獨立標準，可供中華人民共和國進行中文字元的編碼。 在 GB18030 中，字元的長度可以是 1、2 或 4 個位元組。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可在 GB18030 編碼的字元從用戶端應用程式進入伺服器時加以辨識，並在轉換後以原生模式將其儲存為 Unicode 字元，藉以支援這種編碼的字元。 當 GB18030 編碼的字元儲存在伺服器後，任何後續作業都會將其視為 Unicode 字元。 
 
 您可以使用任何中文定序，最好是使用最新的 100 版本。 所有 \_100 層級定序都支援含有 GB18030 字元的語言排序。 如果資料包含增補字元 (代理字組)，您就可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所提供的 SC 定序來改善搜尋和排序。    
@@ -552,7 +552,7 @@ GB18030 是一種獨立標準，可供中華人民共和國進行中文字元的
 > [!NOTE]
 > 確認您的用戶端工具 (例如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) 使用 Dengxian 字型，以正確顯示包含 GB18030 編碼字元的字串。
     
-## <a name="Complex_script"></a> 複雜字集支援    
+## <a name="complex-script-support"></a><a name="Complex_script"></a> 複雜字集支援    
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以支援輸入、儲存、變更和顯示複雜字集。 複雜字集包括下列類型：    
     
 -   包括由右至左和由左至右兩種文字之組合的字集，如阿拉伯文和英文文字的組合。    
@@ -561,7 +561,7 @@ GB18030 是一種獨立標準，可供中華人民共和國進行中文字元的
     
 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 互動的資料庫應用程式必須使用支援複雜字集的控制項。 受控碼中所建立標準 Windows Form 控制項具有複雜字集的功能。    
 
-## <a name="Japanese_Collations"></a> 在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 中新增的日文定序
+## <a name="japanese-collations-added-in--sssqlv14_md"></a><a name="Japanese_Collations"></a> 在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 中新增的日文定序
  
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 開始，支援新的日文定序系列，可使用不同選項 (\_CS、\_AS、\_KS、\_WS 和 \_VSS) 的排列。 
 
@@ -578,12 +578,12 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 
 <a name="ctp23"></a>
 
-## <a name="utf8"></a> UTF-8 支援
+## <a name="utf-8-support"></a><a name="utf8"></a> UTF-8 支援
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始完整支援將廣泛使用的 UTF-8 字元編碼作為匯入或匯出編碼，和作為字串資料的資料庫層級或資料行層級定序。 UTF-8 允許用於 **char** 和 **varchar** 資料類型，且會在您建立物件定序或將其變更為具有 *UTF8* 尾碼的定序時啟用。 例如，**LATIN1_GENERAL_100_CI_AS_SC**至 **LATIN1_GENERAL_100_CI_AS_SC_UTF8**。 
 
 UTF-8 僅適用於支援增補字元的 Windows 定序，已於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中推出。 **nchar** 和 **nvarchar** 資料類型只允許 UCS-2 或 UTF-16 編碼，沒有產生任何變更。
 
-### <a name="storage_differences"></a> UTF-8 和 UTF-16 間的儲存差異
+### <a name="storage-differences-between-utf-8-and-utf-16"></a><a name="storage_differences"></a> UTF-8 和 UTF-16 間的儲存差異
 Unicode Consortium 會為每個字元配置唯一的字碼指碼，其值介於 000000 到 10FFFF 的範圍。 透過 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]，UTF-8 和 UTF-16 編碼都能夠表示完整範圍：    
 -  透過 UTF-8 編碼，ASCII 範圍 (000000–00007F) 中的字元需要 1 個位元組，字碼指碼 000080–0007FF 需要 2 個位元組，字碼指碼 000800–00FFFF 需要 3 個位元組，字碼指碼 0010000–0010FFFF 需要 4 個位元組。 
 -  透過 UTF-16 編碼，字碼指碼 000000–00FFFF 需要 2 個位元組，字碼指碼 0010000–0010FFFF 需要 4 個位元組。 
@@ -616,7 +616,7 @@ Unicode Consortium 會為每個字元配置唯一的字碼指碼，其值介於 
 
 針對其它考量事項，請參閱[撰寫國際 Transact-SQL 陳述式](../../relational-databases/collations/write-international-transact-sql-statements.md)。
 
-### <a name="converting"></a> 正在轉換為 UTF-8
+### <a name="converting-to-utf-8"></a><a name="converting"></a> 正在轉換為 UTF-8
 因為在 [CHAR(*n*) 和 VARCHAR(*n*) 中](../../t-sql/data-types/char-and-varchar-transact-sql.md)，或在 [NCHAR(*n*) 和 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，*n* 定義的是儲存體位元組大小，而不是可儲存的字元數，因此請務必判斷您必須轉換成的資料類型大小，以避免資料截斷。 
 
 例如，假設有一個資料行定義為 **NVARCHAR(100)** ，其中儲存 180 個位元組的日文字元。 在此範例中，資料行資料目前是使用 UCS-2 或 UTF-16 編碼，每個字元是使用 2 個位元組。 將資料行類型轉換成 **VARCHAR(200)** 不足以防止資料截斷，因為新的資料類型只能儲存 200 個位元組，但日文字元以 UTF-8 編碼時需要 3 個位元組。 因此，必須將資料行定義為 **VARCHAR(270)** 以避免資料因資料截斷而遺失。
@@ -627,7 +627,7 @@ Unicode Consortium 會為每個字元配置唯一的字碼指碼，其值介於 
 
 若要變更資料庫定序，讓新物件根據預設繼承資料庫定序，或變更伺服器定序，讓新資料庫根據預設繼承系統定序，請參閱此文章的[相關工作](#Related_Tasks)一節。 
 
-##  <a name="Related_Tasks"></a> Related tasks    
+##  <a name="related-tasks"></a><a name="Related_Tasks"></a> Related tasks    
     
 |Task|主題|    
 |----------|-----------|    
@@ -638,7 +638,7 @@ Unicode Consortium 會為每個字元配置唯一的字碼指碼，其值介於 
 |描述如何撰寫 Transact-SQL 陳述式，讓它們可以從某種語言攜至另一種語言，或更輕鬆地支援多種語言|[撰寫國際通用的 Transact-SQL 陳述式](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
 |描述如何變更錯誤訊息的語言，以及日期、時間和貨幣資料的使用和顯示方式喜好設定|[設定工作階段語言](../../relational-databases/collations/set-a-session-language.md)|    
     
-##  <a name="Related_Content"></a> Related content    
+##  <a name="related-content"></a><a name="Related_Content"></a> Related content    
 如需詳細資訊，請參閱下列相關內容：
 * [SQL Server 最佳作法定序變更](https://go.microsoft.com/fwlink/?LinkId=113891)  
 * [使用 Unicode 字元格式匯入或匯出資料 (SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)

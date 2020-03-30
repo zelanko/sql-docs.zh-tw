@@ -14,10 +14,10 @@ ms.assetid: 5ca9d821-7d61-4727-9133-5f9cb485c7f3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0312349652ad1854efdeacdbfc25726e1766862f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298041"
 ---
 # <a name="source-assistant"></a>Source Assistant

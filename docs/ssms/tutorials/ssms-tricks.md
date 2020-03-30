@@ -20,10 +20,10 @@ helpviewer_keywords:
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
 ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245514"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 的提示和訣竅
@@ -231,7 +231,7 @@ ms.locfileid: "75245514"
 
 6. 在 [記事本] 中開啟 errorlog.log 檔案。 
 
-## <a name="determine-sql-server-name"></a>尋找 SQL Server 執行個體名稱
+## <a name="find-sql-server-instance-name"></a><a name="determine-sql-server-name"></a>尋找 SQL Server 執行個體名稱
 
 您有一些選項可用來在連線到 SQL Server 之前和之後尋找您的 SQL Server 名稱。  
 

@@ -19,10 +19,10 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6829260583ebc3c1b0dec3fec5d3158ddbbea297
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293521"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目的地

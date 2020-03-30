@@ -15,10 +15,10 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 09b3759af6fc956d83daee464b5120fa80462dcf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72278318"
 ---
 # <a name="create-a-database-mail-profile"></a>建立 Database Mail 設定檔
@@ -31,18 +31,18 @@ ms.locfileid: "72278318"
   
 -   **使用下列方式建立 Database Mail 公用設定檔：** [Database Mail 設定精靈](#SSMSProcedure)、[Transact-SQL](#PublicProfile)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  替該設定檔建立一個或多個 Database Mail 帳戶。 如需建立 Database Mail 帳戶的詳細資訊，請參閱 [建立 Database Mail 帳戶](../../relational-databases/database-mail/create-a-database-mail-account.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  公用設定檔可以讓任何可存取 **msdb** 資料庫的使用者使用該設定檔來傳送電子郵件。 使用者或角色可以使用私人設定檔。 為角色授與設定檔的存取權限時，會建立能夠更輕鬆維護的架構。 您必須是 **msdb** 資料庫中之 **DatabaseMailUserRole** 的成員，而且至少可以存取一個 Database Mail 設定檔，才能傳送郵件。  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  建立設定檔帳戶以及執行預存程序的使用者，應該是系統管理員 (sysadmin) 固定伺服器角色的成員。  
   
-##  <a name="SSMSProcedure"></a> 使用 Database Mail 組態精靈  
+##  <a name="using-database-mail-configuration-wizard"></a><a name="SSMSProcedure"></a> 使用 Database Mail 組態精靈  
  **建立 Database Mail 設定檔**  
   
 -   在 [物件總管] 中，連接到想要在其上設定 Database Mail 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，並展開伺服器樹狀目錄。  
@@ -85,7 +85,7 @@ ms.locfileid: "72278318"
   
 ## <a name="using-transact-sql"></a>使用 TRANSACT-SQL  
   
-###  <a name="PrivateProfile"></a> 建立 Database Mail 私人設定檔  
+###  <a name="to-create-a-database-mail-private-profile"></a><a name="PrivateProfile"></a> 建立 Database Mail 私人設定檔  
   
 -   連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
@@ -153,7 +153,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
     @is_default = 1 ;  
 ```  
   
-###  <a name="PublicProfile"></a> 建立 Database Mail 公用設定檔  
+###  <a name="to-create-a-database-mail-public-profile"></a><a name="PublicProfile"></a> 建立 Database Mail 公用設定檔  
   
 -   連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   

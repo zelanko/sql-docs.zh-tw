@@ -13,10 +13,10 @@ ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: cd95caaa746204084c0d4748cd8bb20fede39f9a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907177"
 ---
 # <a name="create-a-policy-based-management-policy"></a>建立原則式管理原則
@@ -33,14 +33,14 @@ ms.locfileid: "72907177"
   
      [Transact-SQL](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要 msdb 資料庫中 PolicyAdministratorRole 角色的成員資格。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-policy"></a>若要建立原則  
   

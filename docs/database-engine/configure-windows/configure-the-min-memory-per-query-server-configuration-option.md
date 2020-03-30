@@ -17,10 +17,10 @@ ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9e7a08defb9ff222ac1699c924691c923a7f2c2e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287482"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>設定 min memory per query 伺服器組態選項
@@ -46,13 +46,13 @@ ms.locfileid: "79287482"
   
 -   **後續操作：** [設定每個查詢的最小記憶體選項之後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   每個查詢的最小記憶體數量之優先順序，高於 [[索引建立記憶體]](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) 選項。 若您同時變更了兩個選項，且索引建立記憶體選項小於每個查詢的最小記憶體，您會看到警告訊息，但仍會設定該值。 執行查詢時，您會看到另一個類似的警告。  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   此選項是進階選項，只有具經驗的資料庫管理員或通過認證的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專業人員才可變更。  
   
@@ -62,12 +62,12 @@ ms.locfileid: "79287482"
 
 <sup>1</sup> 在此情況下，等候類型通常是 RESOURCE_SEMAPHORE。 如需詳細資訊，請參閱 [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。
 
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-the-min-memory-per-query-option"></a>設定 min memory per query 選項  
   
@@ -77,7 +77,7 @@ ms.locfileid: "79287482"
   
 3.  在 **[每個查詢的最小記憶體]** 方塊中，輸入將為執行查詢而配置的最小記憶體數量 (以 KB 為單位)。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-configure-the-min-memory-per-query-option"></a>設定 min memory per query 選項  
   
@@ -100,7 +100,7 @@ RECONFIGURE;
 GO    
 ```  
   
-##  <a name="FollowUp"></a> 後續操作：設定每個查詢的最小記憶體選項之後  
+##  <a name="follow-up-after-you-configure-the-min-memory-per-query-option"></a><a name="FollowUp"></a> 後續操作：設定每個查詢的最小記憶體選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

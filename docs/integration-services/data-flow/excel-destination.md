@@ -19,10 +19,10 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 418d3c214f667807df997902f97bfa271c8c4742
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292823"
 ---
 # <a name="excel-destination"></a>Excel 目的地

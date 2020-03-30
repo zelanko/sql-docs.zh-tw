@@ -36,10 +36,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8eecd6d0a1d54d56fd93eacf96154f57e4afec6
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286942"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
@@ -338,7 +338,7 @@ SELECT CAST (@x AS NVARCHAR(3));
 
 將資料庫升級為相容性層級高於及等於 110 並不會變更已經儲存至磁碟的使用者資料。 您必須依適當情況手動更正這項資料。 例如，如果您已使用 SELECT INTO，根據包含上述計算資料行運算式的來源建立資料表，則系統會儲存資料 (使用樣式 0) 而非計算資料行定義本身。 您必須手動更新這項資料，以符合樣式 121。
   
-## <a name="BKMK_examples"></a> 範例  
+## <a name="examples"></a><a name="BKMK_examples"></a> 範例  
   
 ### <a name="a-using-both-cast-and-convert"></a>A. 使用 CAST 和 CONVERT  
 這些範例會擷取定價第一位數是 `3` 的產品名稱，而且會將它們的 `ListPrice` 轉換成 `int`。
@@ -714,7 +714,7 @@ SELECT @dt1 AS [datetime], CAST (@dt1 AS date) AS [datetime as date],
 |130|`SELECT CONVERT(nvarchar, GETDATE(), 130)`|22 ذو الحجة 1440  1:39:17.090P|
 |131|`SELECT CONVERT(nvarchar, GETDATE(), 131)`|22/12/1440  1:39:17.090PM|
 
-### <a name="precedence-example"></a> K. 經允許轉換中的資料類型優先順序效果  
+### <a name="k-effects-of-data-type-precedence-in-allowed-conversions"></a><a name="precedence-example"></a> K. 經允許轉換中的資料類型優先順序效果  
 下列範例會定義 VARCHAR 類型的變數、將整數值指派給變數，然後使用字串選取變數的串連。
 
 ```sql

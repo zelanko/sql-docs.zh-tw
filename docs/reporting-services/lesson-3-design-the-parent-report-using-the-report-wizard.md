@@ -9,10 +9,10 @@ ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ad06a5a76344348c71838873edcc490c75b7b2e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62651274"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>第 3 課：使用報表精靈設計父報表

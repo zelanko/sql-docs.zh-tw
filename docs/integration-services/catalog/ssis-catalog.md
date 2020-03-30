@@ -15,10 +15,10 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287722"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
@@ -71,7 +71,7 @@ ms.locfileid: "79287722"
   
 -   [執行和驗證](../../integration-services/catalog/ssis-catalog.md#Executions)  
 
-##  <a name="CatalogObjectIdentifiers"></a> 目錄物件識別碼  
+##  <a name="catalog-object-identifiers"></a><a name="CatalogObjectIdentifiers"></a> 目錄物件識別碼  
  當您在目錄中建立新的物件時，請為此物件指派名稱。 物件名稱是識別碼。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會定義哪些字元可以在識別碼中使用的規則。 隨後的物件名稱必須遵照識別碼規則。  
   
 -   資料夾  
@@ -84,7 +84,7 @@ ms.locfileid: "79287722"
   
 -   環境變數  
   
-###  <a name="Folder"></a> 資料夾、專案、環境  
+###  <a name="folder-project-environment"></a><a name="Folder"></a> 資料夾、專案、環境  
  在重新命名資料夾、專案或環境時，請考慮以下規則。  
   
 -   無效的字元包括 ASCII/Unicode 字元 1 到 31、引號 (")、小於 (\<)、大於 (>)、直立線符號 (|)、退格鍵 (\b)、null (\0) 和 Tab 鍵 (\t)。  
@@ -95,14 +95,14 @@ ms.locfileid: "79287722"
   
 -   名稱的長度必須大於 0 且小於或等於 128。  
   
-###  <a name="Parameter"></a> 參數  
+###  <a name="parameter"></a><a name="Parameter"></a> 參數  
  在命名參數時，請考慮以下規則。  
   
 -   名稱的第一個字元必須是 Unicode Standard 2.0 中所定義的字母，或是底線 (_)。  
   
 -   後續的字元可以是 Unicode Standard 2.0 中定義的字母或數字，或是底線 (_)。  
   
-###  <a name="EnvironmentVariable"></a> 環境變數  
+###  <a name="environment-variable"></a><a name="EnvironmentVariable"></a> 環境變數  
  在命名環境變數時，請考慮以下規則。  
   
 -   無效的字元包括 ASCII/Unicode 字元 1 到 31、引號 (")、小於 (\<)、大於 (>)、直立線符號 (|)、退格鍵 (\b)、null (\0) 和 Tab 鍵 (\t)。  
@@ -117,10 +117,10 @@ ms.locfileid: "79287722"
   
 -   後續的字元可以是 Unicode Standard 2.0 中定義的字母或數字，或是底線 (_)。  
   
-##  <a name="Configuration"></a> 目錄組態  
+##  <a name="catalog-configuration"></a><a name="Configuration"></a> 目錄組態  
  您會藉由調整目錄屬性來微調目錄的行為模式。 目錄屬性會定義如何加密敏感性資料以及如何保留作業和專案版本設定資料。 若要設定目錄屬性，請使用 [目錄屬性]  對話方塊，或是呼叫 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md) 預存程序。 若要檢視屬性，請使用對話方塊或查詢 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)。 您可在物件總管中以滑鼠右鍵按一下 [SSISDB]  來存取此對話方塊。  
   
-###  <a name="Cleanup"></a> 作業和專案版本清除  
+###  <a name="operations-and-project-version-cleanup"></a><a name="Cleanup"></a> 作業和專案版本清除  
  目錄中許多作業的狀態資料會儲存在內部資料庫資料表中。 例如，目錄會追蹤封裝執行和專案部署的狀態。 為了維護作業資料的大小， **中的** [SSIS Server 維護作業] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會用來移除舊的資料。 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時會建立此 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Agent 作業。  
   
  若要更新或重新部署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，請使用相同名稱將它部署到目錄中的相同資料夾。 根據預設，每當您重新部署專案時， **SSISDB** 目錄都會保留此專案的舊版。 為了維護作業資料的大小， **[SSIS Server 維護作業]** 會用來移除專案的舊版。  
@@ -143,7 +143,7 @@ ms.locfileid: "79287722"
  **每一專案的版本數目上限**  
  定義多少個專案版本儲存在目錄中。 移除專案的舊版。  
   
-###  <a name="Encryption"></a> 加密演算法  
+###  <a name="encryption-algorithm"></a><a name="Encryption"></a> 加密演算法  
  **[加密演算法]** 屬性會指定用來加密敏感性參數值的加密類型。 您可以從以下類型的加密中選擇。  
   
 -   AES_256 (預設)  
@@ -181,7 +181,7 @@ ms.locfileid: "79287722"
 |每一專案的版本數目上限|MAX_PROJECT_VERSIONS|  
 |全伺服器的預設記錄層次|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
  專案、環境和封裝會包含在屬於安全性實體物件的資料夾中。 您可以將權限授與資料夾，包括 MANAGE_OBJECT_PERMISSIONS 權限。 MANAGE_OBJECT_PERMISSIONS 可讓您將資料夾內容管理委派給使用者，而不必將使用者成員資格授與 ssis_admin 角色。 您還可以授與權限給專案、環境和作業。 作業包括初始化 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、部署專案、建立及啟動執行、驗證專案和封裝及設定 **SSISDB** 目錄。  
   
  如需資料庫角色的詳細資訊，請參閱 [資料庫層級角色](../../relational-databases/security/authentication-access/database-level-roles.md)。  
@@ -203,7 +203,7 @@ ms.locfileid: "79287722"
 
  若要使用 Transact-SQL 來管理權限，請呼叫 [catalog.grant_permission &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)、[catalog.deny_permission &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md) 及 [catalog.revoke_permission &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md)。 若要檢視對所有物件之目前主體有效的權限，請查詢 [catalog.effective_object_permissions &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md)。 此主題會提供不同類型之權限的描述。 若要檢視已明確指派給使用者的權限，請查詢 [catalog.explicit_object_permissions &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md)。  
   
-##  <a name="Folders"></a> 資料夾  
+##  <a name="folders"></a><a name="Folders"></a> 資料夾  
  資料夾包含 **SSISDB** 目錄中的一個或多個專案和環境。 您可以使用 [catalog.folders &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-folders-ssisdb-database.md) 檢視來存取目錄中資料夾的相關資訊。 您可以使用以下預存程序來管理資料夾：  
   
 -   [catalog.create_folder &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md)  
@@ -214,7 +214,7 @@ ms.locfileid: "79287722"
   
 -   [catalog.set_folder_description &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md)  
   
-##  <a name="ProjectsAndPackages"></a> 專案和套件  
+##  <a name="projects-and-packages"></a><a name="ProjectsAndPackages"></a> 專案和套件  
  每一個專案都可包含多個封裝。 專案和封裝都可以包含參數及環境的參考。 您可以使用 [Configure Dialog Box](../../integration-services/catalog/configure-dialog-box.md)來存取參數和環境參考。  
   
  您可以藉由呼叫以下預存程序來完成其他專案工作： 
@@ -237,7 +237,7 @@ ms.locfileid: "79287722"
   
 -   [catalog.object_versions &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-object-versions-ssisdb-database.md)  
   
-##  <a name="Parameters"></a> 參數  
+##  <a name="parameters"></a><a name="Parameters"></a> 參數  
  您在封裝執行時，可使用參數將值指派給封裝屬性。 若要設定封裝或專案參數的值及清除該值，請呼叫 [catalog.set_object_parameter_value &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md) 和 [catalog.clear_object_parameter_value &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md)。 若要為執行的執行個體設定參數值，請呼叫 [catalog.set_execution_parameter_value &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)。 您可以藉由呼叫 [catalog.get_parameter_values &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md) 擷取預設參數值。  
   
  這些檢視表會顯示所有封裝和專案的參數，以及用於執行執行個體的參數值。  
@@ -246,7 +246,7 @@ ms.locfileid: "79287722"
   
 -   [catalog.execution_parameter_values &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)  
   
-##  <a name="ServerEnvironments"></a> 伺服器環境、伺服器變數和伺服器環境參考  
+##  <a name="server-environments-server-variables-and-server-environment-references"></a><a name="ServerEnvironments"></a> 伺服器環境、伺服器變數和伺服器環境參考  
  伺服器環境包含伺服器變數。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上執行或驗證封裝時，可以使用變數值。  
   
  以下預存程序可讓您執行環境與變數的許多其他管理工作。  
@@ -287,7 +287,7 @@ ms.locfileid: "79287722"
   
 -   [catalog.environment_references &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-environment-references-ssisdb-database.md)  
   
-##  <a name="Executions"></a> 執行和驗證  
+##  <a name="executions-and-validations"></a><a name="Executions"></a> 執行和驗證  
  執行是封裝執行的執行個體。 呼叫 [catalog.create_execution &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) 及 [catalog.start_execution &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) 可建立並開始執行。 若要停止執行或封裝/專案驗證，請呼叫 [catalog.stop_operation &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md)。  
   
  若要使執行中的封裝暫停並建立傾印檔案，請呼叫 catalog.create_execution_dump 預存程序。 傾印檔案會提供有關封裝執行的資訊，可幫助您針對執行問題進行疑難排解。 如需有關產生及設定傾印檔案的詳細資訊，請參閱＜ [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)＞。  
@@ -372,7 +372,7 @@ ms.locfileid: "79287722"
   
 -   [設定選項](#options)  
   
-###  <a name="open_dialog"></a> 開啟目錄屬性對話方塊  
+###  <a name="open-the-catalog-properties-dialog-box"></a><a name="open_dialog"></a> 開啟目錄屬性對話方塊  
   
 1.  開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
@@ -380,7 +380,7 @@ ms.locfileid: "79287722"
   
 3.  在物件總管中，展開 [Integration Services]  節點，並以滑鼠右鍵按一下 [SSISDB]  ，然後按一下 [屬性]  。  
   
-###  <a name="options"></a> 設定選項  
+###  <a name="configure-the-options"></a><a name="options"></a> 設定選項  
   
 #### <a name="options"></a>選項。  
  下表描述對話方塊中的特定屬性，以及 `catalog.catalog_properties` 檢視表中的對應屬性。  
@@ -399,7 +399,7 @@ ms.locfileid: "79287722"
   
  **SSISDB** 目錄會儲存您已經部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝。 如需目錄的詳細資訊，請參閱 [SSIS 目錄](../../integration-services/catalog/ssis-catalog.md)。  
   
-###  <a name="backup"></a> 若要備份 SSIS 資料庫  
+###  <a name="to-back-up-the-ssis-database"></a><a name="backup"></a> 若要備份 SSIS 資料庫  
   
 1.  開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 並連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。  
   
@@ -579,7 +579,7 @@ ms.locfileid: "79287722"
   
 3.  [在可用性群組中升級 SSISDB](#Upgrade)  
   
-###  <a name="prereq"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="prereq"></a> 必要條件  
 針對 SSISDB 資料庫啟用 Always On 支援之前，請先執行下列必要條件步驟。  
   
 1.  設定 Windows 容錯移轉叢集。 如需相關指示，請參閱 [安裝適用於 Windows Server 2012 的容錯移轉叢集功能和工具](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 部落格文章。 在所有叢集節點上安裝功能和工具。  
@@ -588,7 +588,7 @@ ms.locfileid: "79287722"
   
 3.  啟用每個 SQL Server 執行個體的 Always On 可用性群組。 如需詳細資訊，請參閱 [啟用和停用 AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md) 。  
   
-###  <a name="Firsttime"></a> 設定適用於 AlwaysOn 的 SSIS 支援  
+###  <a name="configure-ssis-support-for-always-on"></a><a name="Firsttime"></a> 設定適用於 AlwaysOn 的 SSIS 支援  
   
 -   [步驟 1：建立 Integration Services 目錄](#Step1)  
   
@@ -603,7 +603,7 @@ ms.locfileid: "79287722"
 > [!NOTE]
 > 如需此程序的詳細資訊，請參閱下列由 Data Platform MVP Marcos Freccia 提供的逐步解說與其他螢幕擷取畫面：[Adding SSISDB to AG for SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/) (將 SSISDB 新增至 SQL Server 2016 的 AG)。
 
-####  <a name="Step1"></a> 步驟 1：建立 Integration Services 目錄  
+####  <a name="step-1-create-integration-services-catalog"></a><a name="Step1"></a> 步驟 1：建立 Integration Services 目錄  
   
 1.  啟動 **SQL Server Management Studio** 並連接到您想要在叢集中設定為適用於 SSISDB 的 AlwaysOn 高可用性群組 **主要節點** 的 SQL Server 執行個體。  
   
@@ -615,14 +615,14 @@ ms.locfileid: "79287722"
   
 5.  輸入 **密碼**，然後按一下 [確定]  。 此密碼保護用來加密目錄資料的資料庫主要金鑰。 請將密碼儲存在安全位置。 建議您同時備份資料庫主要金鑰。 如需相關資訊，請參閱 [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
   
-####  <a name="Step2"></a> 步驟 2：將 SSISDB 新增至 Always On 可用性群組  
+####  <a name="step-2-add-ssisdb-to-an-always-on-availability-group"></a><a name="Step2"></a> 步驟 2：將 SSISDB 新增至 Always On 可用性群組  
 將 SSISDB 資料庫加入 AlwaysOn 可用性群組，幾乎等於是將任何其他使用者資料庫加入可用性群組。 請參閱 [使用可用性群組精靈](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)。  
   
 提供您在 [新增可用性群組]  精靈的 [選取資料庫]  頁面中建立 SSIS 目錄時指定的密碼。
 
 ![新增可用性群組](../../integration-services/service/media/ssis-newavailabilitygroup.png "新增可用性群組")  
   
-####  <a name="Step3"></a> 步驟 3：啟用適用於 Always On 的 SSIS 支援  
+####  <a name="step-3-enable-ssis-support-for-always-on"></a><a name="Step3"></a> 步驟 3：啟用適用於 Always On 的 SSIS 支援  
  建立 Integration Services 目錄之後，以滑鼠右鍵按一下 [Integration Services 目錄]  節點，然後按一下 [啟用 Always On 支援]  。 您應該會看到下列 [啟用 AlwaysOn 支援]  對話方塊。 如果這個功能表項目已停用，請確認您已安裝的所有必要條件，然後按一下 [重新整理]  。  
   
  ![啟用 Always On 支援](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
@@ -637,7 +637,7 @@ ms.locfileid: "79287722"
 2.  請確定您已連線到主要節點。 您必須啟用主要節點上的 Always On 支援。
 3.  請確定 SQL Server 版本為 13.0 或更新版本。 只有在 SQL Server 2016 和更新版本上，SSIS 才會支援 Always On。
 
-###  <a name="Upgrade"></a> 在可用性群組中升級 SSISDB  
+###  <a name="upgrading-ssisdb-in-an-availability-group"></a><a name="Upgrade"></a> 在可用性群組中升級 SSISDB  
  如果您要從先前的版本升級 SQL Server，而且 SSISDB 在 AlwaysOn 可用性群組中，則您的升級可能會遭到「SSISDB 在 AlwaysOn 可用性群組中檢查」規則所封鎖。 因為升級是在單一使用者模式中執行，而可用性資料庫必須是多使用者資料庫，就會發生此封鎖。 因此，在升級或修補期間，所有的可用性資料庫 (包括 SSISDB) 都要離線，而且不會進行升級或修補。 若要讓升級繼續，請先從可用性群組移除 SSISDB，再升級或修補每個節點，然後將 SSISDB 新增回可用性群組。  
   
  如果您被「AlwaysOn 可用性群組中的 SSISDB 檢查規則」封鎖，就必須遵循這些步驟來升級 SQL Server。  
@@ -662,7 +662,7 @@ ms.locfileid: "79287722"
   
 5.  遵循[步驟 3：啟用適用於 Always On 的 SSIS 支援](#Step3)中的指示進行。  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   blogs.msdn.com 上的部落格文章： [SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。  
   

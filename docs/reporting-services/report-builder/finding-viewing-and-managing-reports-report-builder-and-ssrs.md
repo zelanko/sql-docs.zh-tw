@@ -10,10 +10,10 @@ ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 74c4591122fa45d4e050718e78296ed672a4c210
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258097"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>尋找、檢視和管理報表 (報表產生器及 SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "75258097"
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FindingAndViewingReportsRB30"></a> 在報表產生器中尋找及檢視報表  
+##  <a name="finding-and-viewing-reports-in-report-builder"></a><a name="FindingAndViewingReportsRB30"></a> 在報表產生器中尋找及檢視報表  
  若要尋找您要使用的報表，或選取要在報表中使用的共用資料來源、影像或子報表，請瀏覽您的電腦，報表伺服器上的資料夾，或與 Reporting Services 整合的 SharePoint 網站。  
   
  若要尋找報表伺服器上的報表，您必須指定報表伺服器的 URL，並具備資料夾的適當權限，以讓您讀取和儲存報表項目。 請向報表伺服器的系統管理員要求適當的 URL 和權限。  
@@ -49,7 +49,7 @@ ms.locfileid: "75258097"
 -   **檢視報表** ：建立或更新報表時，可以在報表產生器中進行預覽。 當報表產生器連接至報表伺服器時，報表伺服器會載入並處理報表；否則，報表會在本機進行處理。 報表產生器中的報表檢視器會顯示轉譯的報表。  
   
  
-##  <a name="ViewingAndManagingReportServer"></a> 檢視和管理報表伺服器上的報表  
+##  <a name="viewing-and-managing-reports-on-a-report-server"></a><a name="ViewingAndManagingReportServer"></a> 檢視和管理報表伺服器上的報表  
  您可以使用 Web 入口網站來檢視和管理報表伺服器上的報表。 瀏覽伺服器上的資料夾以找出報表、執行報表以便在瀏覽器中檢視這些報表，然後執行管理工作。  
   
  Web 入口網站可以協助您進行下列管理工作：  
@@ -90,7 +90,7 @@ Web 入口網站通常包含資料夾、報表、資料來源及 [我的報表] 
 |CTRL+F5 組合鍵|與按一下報表工具列的 **[重新整理]** 按鈕的結果相同。|  
   
   
-##  <a name="ViewingAndManagingSharePointSite"></a> 從 SharePoint 網站檢視和管理報表伺服器項目  
+##  <a name="viewing-and-managing-report-server-items-from-a-sharepoint-site"></a><a name="ViewingAndManagingSharePointSite"></a> 從 SharePoint 網站檢視和管理報表伺服器項目  
  當系統管理員將報表伺服器設定為以 SharePoint 整合模式執行時，您就可以從 SharePoint 網站檢視和管理報表及其他報表伺服器項目。  
   
  SharePoint 網站包含用於設定資料來源屬性、報表記錄、報表處理選項、排程、訂閱、報表參數和建立共用排程的頁面。 您可以在 SharePoint 網站上管理報表伺服器項目，方法就像使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的其他工具來建立和管理這些項目一樣。  
@@ -119,11 +119,11 @@ Web 入口網站通常包含資料夾、報表、資料來源及 [我的報表] 
  ![報表伺服器項目的功能表命令](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "報表伺服器項目的功能表命令")  
   
   
-##  <a name="DeskTop"></a> 在桌面應用程式中檢視報表  
+##  <a name="viewing-reports-in-a-desktop-application"></a><a name="DeskTop"></a> 在桌面應用程式中檢視報表  
  您可以完全略過瀏覽器檢視，改用桌面應用程式 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel) 作為報表檢視器。 若要這樣做，請定義指定桌面應用程式格式和共用資料夾目的地的訂閱。 報表伺服器會將報表建立成應用程式檔案，加上副檔名，然後將報表儲存成硬碟中的檔案。 之後，您便可以改用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel (或其他應用程式) 取代瀏覽器來檢視報表。  
   
   
-##  <a name="AboutUserSessions"></a> 關於使用者工作階段  
+##  <a name="about-user-sessions"></a><a name="AboutUserSessions"></a> 關於使用者工作階段  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用瀏覽器工作階段來維持檢視報表時的一致性。 工作階段是以瀏覽器連接為基礎，並非以驗證的使用者為基礎。 每次使用者在新的瀏覽器視窗中開啟報表時，就會建立新的工作階段。 建立瀏覽器工作階段之後，您就可以繼續使用工作階段開始時所開啟的報表版本，即使該報表後來已經在報表伺服器上修改過也一樣。 例如，若您在下午 11:00 開啟報表，且報表作者在下午 11:01 重新發行相同的報表，則您的工作階段期間將會繼續使用您所開啟的版本。  
   
  如果您在相同工作階段內使用 **[重新整理]** 按鈕重新整理報表，則會顯示報表的原始工作階段版本。 如果您使用報表工具列上的 **[重新整理]** 按鈕來重新整理視需要執行的報表，則會重新執行報表並顯示新資料 (如果有的話)。  
@@ -131,7 +131,7 @@ Web 入口網站通常包含資料夾、報表、資料來源及 [我的報表] 
  工作階段資訊會儲存在報表伺服器的暫存資料庫中。 報表伺服器不會使用 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 工作階段管理。 如果您重新啟動伺服器或執行資料庫復原作業，並不會還原工作階段狀態。 如需工作階段管理的詳細資訊，請參閱 [識別執行狀態](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)。  
   
  
-##  <a name="InThisSection"></a> 本節內容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 本節內容  
  下列文章提供有關檢視與管理報表的其他資訊。  
   
  [尋找、檢視和管理報表](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)

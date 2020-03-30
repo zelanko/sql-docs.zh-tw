@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: abc9aa1f61d241f3fe24196ad9d8ad4244b951f2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412773"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>從資料存取應用程式呼叫原生編譯預存程序
@@ -39,7 +39,7 @@ ms.locfileid: "74412773"
 - SqlClient 不支援針對原生編譯預存程序所傳回的結果集而擷取其僅限結構描述的資訊 (中繼資料探索) (CommandType.SchemaOnly)。
   - 請改用 [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。
 
-### <a name="includessnoversionincludesssnoversion-mdmd-native-client"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client
+### <a name="ssnoversion-native-client"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client
 
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 版本不支援針對原生編譯預存程序所傳回的結果集而擷取其僅限結構描述的資訊 (中繼資料探索)。
   - 請改用 [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。

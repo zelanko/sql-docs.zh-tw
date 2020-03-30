@@ -11,10 +11,10 @@ ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5fb38e4be2b7d7c780dae3ee819e146958541c9f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295971"
 ---
 # <a name="lesson-4-1-copy-the-lesson-3-package"></a>課程 4-1：複製第 3 課套件

@@ -23,10 +23,10 @@ ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bfda79efac4e64fbb735e424cad4b8bb9ba93851
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70176270"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
@@ -96,10 +96,10 @@ ms.locfileid: "70176270"
  **[鏡像媒體集](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)**  
  多份媒體集副本 (鏡像)。  
   
-##  <a name="BackupCompression"></a> 備份壓縮  
+##  <a name="backup-compression"></a><a name="BackupCompression"></a> 備份壓縮  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 和更新版本支援壓縮備份，而 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本可以還原壓縮的備份。 如需詳細資訊，請參閱[備份壓縮 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md)。  
   
-##  <a name="Restrictions"></a>  備份作業限制 
+##  <a name="backup-operations-restrictions"></a><a name="Restrictions"></a>  備份作業限制 
  可在資料庫仍在線上運作以及正在使用中的時候進行備份。 不過，會有下列限制：  
   
 ### <a name="cannot-back-up-offline-data"></a>無法備份離線資料  
@@ -128,7 +128,7 @@ ms.locfileid: "70176270"
   
  如果備份作業與檔案管理或壓縮作業重疊，便會發生衝突。 不論哪一個衝突的作業先開始，第二項作業都會等候第一項作業設定的鎖定逾時(逾時期間由工作階段逾時設定控制)。如果在逾時期間解除鎖定，第二項作業就會繼續下去。 如果鎖定逾時，第二項作業就會失敗。  
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
  **備份裝置和備份媒體**  
   
 -   [定義磁碟檔案的邏輯備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  

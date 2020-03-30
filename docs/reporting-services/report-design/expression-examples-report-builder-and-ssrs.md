@@ -24,10 +24,10 @@ ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 12933c259fa02e77a76b8c31edf61db916dcde49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080336"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>運算式範例 (報表產生器及 SSRS)
@@ -68,7 +68,7 @@ ms.locfileid: "77080336"
 ## <a name="functions"></a>函式  
  報表中的許多運算式都有包含函數， 您可以使用這些函數來格式化資料、套用邏輯以及存取報表中繼資料。 您可撰寫運算式，使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 執行階段程式庫及 <xref:System.Convert> 和 <xref:System.Math> 命名空間中的函式。 您可以加入其他組件或自訂程式碼中函數的參考， 您也可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]的類別，包括 <xref:System.Text.RegularExpressions>。  
   
-##  <a name="VisualBasicFunctions"></a> Visual Basic 函數  
+##  <a name="visual-basic-functions"></a><a name="VisualBasicFunctions"></a> Visual Basic 函數  
  您可以利用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函數來操作文字方塊所顯示的資料，或參數、屬性或報表的其他區域所用的資料。 此章節提供示範其中一些函數的範例。 如需詳細資訊，請參閱 MSDN 上的 [Visual Basic 執行階段程式庫成員](https://go.microsoft.com/fwlink/?LinkId=198941) 。  
   
  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供許多自訂格式選項，例如特定的日期格式。 如需詳細資訊，請參閱 MSDN 上的 [格式化型別](https://go.microsoft.com/fwlink/?LinkId=112024) 。  
@@ -87,7 +87,7 @@ ms.locfileid: "77080336"
     = Round(1.3*5)/5  
     ```  
   
-###  <a name="DateFunctions"></a> 日期函數  
+###  <a name="date-functions"></a><a name="DateFunctions"></a> 日期函數  
   
 -   **Today** 函數會提供目前的日期。 此運算式可用於文字方塊，以顯示報表中的日期，或根據目前的日期在參數中篩選資料。  
   
@@ -192,7 +192,7 @@ ms.locfileid: "77080336"
 |一年前|`=DateSerial(Year(Parameters!TodaysDate.Value)-1,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 |兩年前|`=DateSerial(Year(Parameters!TodaysDate.Value)-2,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
   
-###  <a name="StringFunctions"></a> 字串函數  
+###  <a name="string-functions"></a><a name="StringFunctions"></a> 字串函數  
   
 -   您可以使用串連運算子和 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 常數，將一個以上的欄位結合在一起。 下列運算式會傳回兩個欄位，分別位於相同文字方塊中的不同行：  
   
@@ -258,7 +258,7 @@ ms.locfileid: "77080336"
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
     ```  
   
-###  <a name="ConversionFunctions"></a> 轉換函數  
+###  <a name="conversion-functions"></a><a name="ConversionFunctions"></a> 轉換函數  
  您可以使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函數，將欄位從一種資料類型轉換成不同的資料類型。 轉換函數可用來將欄位的預設資料類型轉換為計算或結合文字時所需的資料類型。  
   
 -   下列運算式會將常數 500 轉換為 Decimal 類型，以便與篩選運算式之值欄位中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] money 資料類型相比較。  
@@ -273,7 +273,7 @@ ms.locfileid: "77080336"
     =CStr(Parameters!MySelection.Count)  
     ```  
   
-###  <a name="DecisionFunctions"></a> 決策函數  
+###  <a name="decision-functions"></a><a name="DecisionFunctions"></a> 決策函數  
   
 -   **lif** 函數會根據運算式是否評估為 true 而傳回兩個值之一。 當 **超過 100 時，下列運算式會使用** lif **函數來傳回布林值** True `LineTotal` ， 否則它會傳回 **False**：  
   
@@ -328,10 +328,10 @@ ms.locfileid: "77080336"
   
     ```  
   
-##  <a name="ReportFunctions"></a> 報表函數  
+##  <a name="report-functions"></a><a name="ReportFunctions"></a> 報表函數  
  在運算式中，您可以加入在報表中操作資料之其他報表函數的參考。 此章節提供這些函數的其中兩個範例。 如需報表函數和範例的詳細資訊，請參閱[彙總函數參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
-###  <a name="Sum"></a> Sum  
+###  <a name="sum"></a><a name="Sum"></a> Sum  
   
 -   **Sum** 函數可以將群組或資料區域中的值加總。 群組的頁首或頁尾可以使用這個函數。 下列運算式會顯示 Order 群組或資料區域中資料的總和：  
   
@@ -345,7 +345,7 @@ ms.locfileid: "77080336"
     =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
     ```  
   
-###  <a name="RowNumber"></a> RowNumber  
+###  <a name="rownumber"></a><a name="RowNumber"></a> RowNumber  
   
 -   **RowNumber** 函數在用於資料區域內的文字方塊時，會為其中顯示此運算式的每個文字方塊執行個體顯示資料列號碼。 此函數對於計算資料表中的資料列數目非常有用。 它對於更複雜的工作也非常實用，例如，根據資料列數目提供分頁符號。 如需詳細資訊，請參閱這個主題中的 [分頁符號](#PageBreaks) 。  
   
@@ -355,10 +355,10 @@ ms.locfileid: "77080336"
     =RowNumber(Nothing)  
     ```  
   
-##  <a name="AppearanceofReportData"></a> 報表資料的外觀  
+##  <a name="appearance-of-report-data"></a><a name="AppearanceofReportData"></a> 報表資料的外觀  
  您可以使用運算式來操作報表中資料顯示的方式。 例如，可以在單一文字方塊中顯示兩個欄位的值、顯示有關報表的資訊，或影響報表中插入分頁符號的方式。  
   
-###  <a name="PageHeadersandFooters"></a> 頁首和頁尾  
+###  <a name="page-headers-and-footers"></a><a name="PageHeadersandFooters"></a> 頁首和頁尾  
  設計報表時，您需要顯示報表的名稱以及報表尾的頁碼。 若要這麼做，您可以使用下列運算式：  
   
 -   下列運算式提供報表的名稱和執行報表的時間。 它可以放置在報表尾的文字方塊中或是報表的主體中。 時間格式採用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的簡短日期格式字串：  
@@ -398,7 +398,7 @@ ms.locfileid: "77080336"
 > [!NOTE]  
 >  在頁首或頁尾中，每個運算式只能參考一個報表項目。 此外，您也可以在頁首或頁尾的運算式中參考文字方塊名稱，但不能參考文字方塊內實際的資料運算式。  
   
-###  <a name="PageBreaks"></a> 分頁符號  
+###  <a name="page-breaks"></a><a name="PageBreaks"></a> 分頁符號  
  在某些報表中，除了在群組或報表項目上放置分頁符號以外，您也可能會需要在指定資料列數目的結尾處放置分頁符號。 若要執行這個動作，請建立包含所要群組或細節記錄的群組，將分頁符號加入群組中，再依指定的資料列數，將群組運算式加入群組中。  
   
 -   下列運算式放在群組運算式中，每 25 個資料列即指派一個數字。 為群組定義分頁符號時，這個運算式每隔 25 個資料列就會產生一個分頁符號。  
@@ -415,10 +415,10 @@ ms.locfileid: "77080336"
   
      如需有關為群組設定分頁符號的詳細資訊，請參閱[加入分頁符號 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md)。  
   
-##  <a name="Properties"></a> 屬性  
+##  <a name="properties"></a><a name="Properties"></a> 屬性  
  運算式不只用來顯示文字方塊中的資料。 運算式也可以用來變更將屬性套用至報表項目的方式。 您可以變更報表項目的樣式資訊，或是變更其可見性。  
   
-###  <a name="Formatting"></a> 格式化  
+###  <a name="formatting"></a><a name="Formatting"></a> 格式化  
   
 -   當用在文字方塊的 Color 屬性時，下列運算式會依 `Profit` 欄位值而變更文字的色彩：  
   
@@ -448,7 +448,7 @@ ms.locfileid: "77080336"
 ### <a name="chart-colors"></a>圖表色彩  
  若要指定形狀圖的色彩，您可以使用自訂程式碼控制色彩對應到資料點值的順序。 這有助於針對擁有相同類別目錄群組的多個圖表，使用一致的色彩。 如需詳細資訊，請參閱[跨多個形狀圖指定一致的色彩 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)。  
   
-###  <a name="Visibility"></a> 可見性  
+###  <a name="visibility"></a><a name="Visibility"></a> 可見性  
  您可以使用報表項目的可見性屬性，來顯示和隱藏報表中的項目。 在如資料表的資料區域中，您可以根據運算式中的值一開始便隱藏詳細資料列。  
   
 -   當用於群組詳細資料列的初始可見性時，下列運算式會顯示 `PctQuota` 欄位超出 90% 之所有銷售的詳細資料列：  
@@ -469,7 +469,7 @@ ms.locfileid: "77080336"
     =IIF(Fields!Column_1.IsMissing, true, false)  
     ```  
   
-###  <a name="Hyperlinks"></a> URL  
+###  <a name="urls"></a><a name="Hyperlinks"></a> URL  
  您可以使用報表資料來自訂 URL，也可以條件式地控制是否要加入 URL 做為文字方塊的動作。  
   
 -   當下列運算式做為文字方塊的動作時，會產生自訂的 URL，將 `EmployeeID` 資料集欄位指定為 URL 參數。  
@@ -486,10 +486,10 @@ ms.locfileid: "77080336"
     =IIF(Parameters!IncludeURLs.Value,"https://adventure-works.com/productcatalog",Nothing)  
     ```  
   
-##  <a name="ReportData"></a> 報表資料  
+##  <a name="report-data"></a><a name="ReportData"></a> 報表資料  
  您可以使用運算式來操作用於報表中的資料。 您可以參考參數和其他的報表資訊。 您甚至可以變更用來擷取報表資料的查詢。  
   
-###  <a name="Parameters"></a> 參數  
+###  <a name="parameters"></a><a name="Parameters"></a> 參數  
  您可以在參數中使用運算式，以更改參數的預設值。 例如，您可以利用參數，根據用來執行報表的使用者識別碼來篩選特定使用者的資料。  
   
 -   使用下列運算式做為參數的預設值時，收集執行報表之人員的使用者識別碼：  
@@ -510,7 +510,7 @@ ms.locfileid: "77080336"
     =Fields(Parameters!ParameterField.Value).Value  
     ```  
   
-##  <a name="CustomCode"></a> 自訂程式碼  
+##  <a name="custom-code"></a><a name="CustomCode"></a> 自訂程式碼  
  您可以在報表中使用自訂程式碼， 自訂程式碼會內嵌在報表中，或是儲存在用於報表的自訂組件中。 如需自訂程式碼的詳細資訊，請參閱[報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>使用群組變數進行自訂彙總  

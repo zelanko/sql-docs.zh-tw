@@ -77,7 +77,7 @@ ms.locfileid: "72252182"
 ## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]  
->  如果 GET CONVERSATION GROUP 陳述式不是批次或預存程序中的第一個陳述式，就必須使用  **陳述式結束字元 (也就是分號 (** ;[!INCLUDE[tsql](../../includes/tsql-md.md)])) 來結束前一個陳述式。  
+>  如果 GET CONVERSATION GROUP 陳述式不是批次或預存程序中的第一個陳述式，就必須使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結束字元 (也就是分號 ( **;** )) 來結束前一個陳述式。  
   
  如果 GET CONVERSATION GROUP 陳述式中指定的佇列無法使用，陳述式便會發生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 錯誤而失敗。  
   

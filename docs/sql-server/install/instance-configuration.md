@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
 ms.openlocfilehash: b32ad209651c30f810f239b0c14689be497c4378
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286562"
 ---
 # <a name="installation-wizard-help"></a>安裝精靈說明
@@ -192,7 +192,7 @@ ms.locfileid: "79286562"
 * 如需目錄、檔案位置和執行個體識別碼命名的詳細資訊，請參閱 [SQL Server 的預設和具名執行個體的檔案位置](file-locations-for-default-and-named-instances-of-sql-server.md)  
 * [檔案伺服器的共用及 NTSF 權限](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions) \(英文\)
 
-## <a name="serverconfig"></a> 資料庫引擎組態 - 伺服器組態頁面
+## <a name="database-engine-configuration---server-configuration-page"></a><a name="serverconfig"></a> 資料庫引擎組態 - 伺服器組態頁面
 
 您可以使用此頁面來設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性模式，以及加入 Windows 使用者或群組作為 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的系統管理員。  
   
@@ -271,7 +271,7 @@ ms.locfileid: "79286562"
 
 如需選擇帳戶以執行 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的詳細資訊，請參閱[設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。
 
-## <a name ="datadir"></a> 資料庫引擎組態 - 資料目錄頁面
+## <a name="database-engine-configuration---data-directories-page"></a><a name ="datadir"></a> 資料庫引擎組態 - 資料目錄頁面
 
 使用此頁面可指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 程式和資料檔案的安裝位置。 根據安裝類型，支援的儲存體可能包括本機磁碟、共用儲存體或 SMB 檔案伺服器。  
   
@@ -330,7 +330,7 @@ ms.locfileid: "79286562"
   * 系統檔案所在的目錄
   * 容錯移轉叢集執行個體上的對應網路磁碟機  
   
-## <a name="a-nametempdba-database-engine-configuration---tempdb-page"></a><a name="tempdb"><a/> 資料庫引擎組態 - TempDB 頁面
+## <a name="a-nametempdb-database-engine-configuration---tempdb-page"></a><a name="tempdb"><a/> 資料庫引擎組態 - TempDB 頁面
 
 請使用此頁面指定 **tempdb** 資料和記錄檔位置、大小、成長設定，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的檔案數目。 根據安裝類型，支援的儲存體可能包括本機磁碟、共用儲存體或 SMB 檔案伺服器。  
   
@@ -417,7 +417,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="a-namemaxdopa-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/> 資料庫引擎設定 - MaxDOP 頁面
+## <a name="a-namemaxdop-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/> 資料庫引擎設定 - MaxDOP 頁面
 
 **最大平行程度 (MaxDOP)** 決定單一陳述式可以利用的處理器最大數目。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引進了在安裝期間設定此選項的功能。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 也會根據核心數目，自動偵測建議的伺服器 MaxDOP 設定。  
 
@@ -427,7 +427,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 * [平行處理原則的最大程度 (MaxDOP)]  是在單一陳述式的平行執行期間要使用的處理器數目上限值。 預設值將會與[設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)中的平行處理原則的最大程度指導方針一致。
 
-## <a name="a-namememorya-database-engine-configuration---memory-page"></a><a name="memory"><a/> 資料庫引擎設定 - 記憶體頁面
+## <a name="a-namememory-database-engine-configuration---memory-page"></a><a name="memory"><a/> 資料庫引擎設定 - 記憶體頁面
 
 [最小伺服器記憶體]  會決定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]將用於緩衝集區與其他快取的較低記憶體限制。 預設值為 0，而建議的值也是 0。 如需有關**最小伺服器記憶體**之效果的詳細資訊，請參閱[記憶體管理架構指南](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)。
 

@@ -38,7 +38,7 @@ ms.locfileid: "71295698"
 ## <a name="set-an-option-to-check-the-package-signature"></a>設定檢查套件簽章的選項  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 **dtexec** 公用程式都具有一個選項，可設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來檢查已簽署封裝的數位簽章。 您應該使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 **dtexec** 公用程式，取決於您想要檢查所有封裝或只檢查特定封裝：  
   
--   若要在設計階段載入封裝之前檢查所有封裝的數位簽章，請在  **中設定 [載入封裝時檢查數位簽章]** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 選項。 這個選項是 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中所有封裝的全域設定。
+-   若要在設計階段載入封裝之前檢查所有封裝的數位簽章，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中設定 [載入封裝時檢查數位簽章]  選項。 這個選項是 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中所有封裝的全域設定。
   
 -   若要檢查個別封裝的數位簽章，請在您使用 **dtexec** 公用程式來執行封裝時，指定 **/VerifyS[igned]** 選項。 如需詳細資訊，請參閱 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)。  
   

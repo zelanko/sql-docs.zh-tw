@@ -24,10 +24,10 @@ ms.custom: seo-lt-2019
 ms.date: 03/03/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 685397689b390175bd15f6241fc7036004e1e97a
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198525"
 ---
 # <a name="ssms-query-editor"></a>SSMS 查詢編輯器

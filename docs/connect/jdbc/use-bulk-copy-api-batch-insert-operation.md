@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3050cdf87775a67618902dfbb88b656003020769
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027099"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>使用大量複製 API 執行批次插入作業

@@ -15,41 +15,41 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 810dfbc7230171f59cb8f1df04ab1c7f4774e044
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907249"
 ---
 # <a name="modify-a-stored-procedure"></a>修改預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
     
-##  <a name="Top"></a> 本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來修改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的預存程序。  
+##  <a name="this-topic-describes-how-to-modify-a-stored-procedure-in-sscurrent-by-using-ssmanstudiofull-or-tsql"></a><a name="Top"></a> 本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來修改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的預存程序。  
   
 -   **開始之前：** [限制事項](#Restrictions)、[安全性](#Security)  
   
 -   **若要更改程序，請使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序無法修改成 CLR 預存程序，反之亦然。  
   
  如果先前的程序定義是利用 WITH ENCRYPTION 或 WITH RECOMPILE 來建立的，只有在 ALTER PROCEDURE 陳述式包括這些選項時，才會啟用這些選項。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要程序的 ALTER PROCEDURE 權限。  
   
-##  <a name="Procedures"></a> 如何修改預存程序  
+##  <a name="how-to-modify-a-stored-procedure"></a><a name="Procedures"></a> 如何修改預存程序  
  您可以使用下列其中一項：  
   
 -   [Transact-SQL](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要在 Management Studio 中修改程序**  
   
 1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
@@ -69,7 +69,7 @@ ms.locfileid: "72907249"
 > [!IMPORTANT]  
 >  驗證所有使用者輸入。 在使用者輸入完成驗證前，請勿加以串連。 請勿執行由未經驗證之使用者輸入所建構的命令。  
   
-###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要在查詢編輯器中修改程序**  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  

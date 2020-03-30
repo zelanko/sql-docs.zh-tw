@@ -15,10 +15,10 @@ ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c4d32598cfab0cc08ece6721b0ff593c8577394d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245401"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM 與其他 SQL Server 功能的相容性
@@ -48,18 +48,18 @@ ms.locfileid: "75245401"
   
 -   [自主資料庫](#contained)  
   
-##  <a name="ssis"></a> SQL Server Integration Services (SSIS)  
+##  <a name="sql-server-integration-services-ssis"></a><a name="ssis"></a> SQL Server Integration Services (SSIS)  
  SQL Server Integration Services (SSIS) 會使用 DT_IMAGE SSIS 資料類型來處理資料流程中的 FILESTREAM 資料，就像處理任何其他 BLOB 資料一樣。  
   
  您可以使用匯入資料行轉換，將檔案系統中的檔案載入 FILESTREAM 資料行中。 您也可以使用匯出資料行轉換，將檔案從 FILESTREAM 資料行擷取至檔案系統中的其他位置。  
   
-##  <a name="distqueries"></a> 分散式查詢和連結的伺服器  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distqueries"></a> 分散式查詢和連結的伺服器  
  可透過分散式查詢和連結的伺服器，將 FILESTREAM 資料當作 **varbinary(max)** 資料來使用。 在使用四部分名稱的分散式查詢中，即使此名稱參考本機伺服器，也無法使用 FILESTREAM **PathName()** 函數。 不過， **PathName()** 可在使用 **OPENQUERY()** 之傳遞查詢的內部查詢中使用。  
   
-##  <a name="encryption"></a> 加密  
+##  <a name="encryption"></a><a name="encryption"></a> 加密  
  即使啟用了透明資料加密，FILESTREAM 資料也不會加密。  
   
-##  <a name="DatabaseSnapshot"></a> 資料庫快照集  
+##  <a name="database-snapshots"></a><a name="DatabaseSnapshot"></a> 資料庫快照集  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援將 [資料庫快照集](../../relational-databases/databases/database-snapshots-sql-server.md) 用於 FILESTREAM 檔案群組。 如果 FILESTREAM 檔案群組包含在 CREATE DATABASE ON 子句中，此陳述式將會失敗，並引發錯誤。  
   
  當您使用 FILESTREAM 時，可以建立標準 (非 FILESTREAM) 檔案群組的資料庫快照集。 FILESTREAM 檔案群組將會針對這些資料庫快照集標示為離線。  
@@ -68,7 +68,7 @@ ms.locfileid: "75245401"
   
  `Could not continue scan with NOLOCK due to data movement.`  
   
-##  <a name="Replication"></a> Replication  
+##  <a name="replication"></a><a name="Replication"></a> Replication  
  在簽發者上啟用 FILESTREAM 屬性的 **varbinary(max)** 資料行可以複寫到訂閱者上 (不論有沒有 FILESTREAM 屬性)。 若要指定複寫資料行的方式，請使用 [發行項屬性 - \<發行項>]  對話方塊或是 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 或 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 @schema_option 參數。 複寫到沒有 FILESTREAM 屬性之 **varbinary(max)** 資料行的資料不能超過該資料類型的 2-GB 限制，否則會產生執行階段錯誤。 我們建議您最好複寫 FILESTREAM 屬性，除非您要將資料複寫到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 不論所指定的結構描述選項為何，目前皆不支援將含有 FILESTREAM 資料行的資料表複寫至 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 訂閱者。  
   
 > [!NOTE]  
@@ -100,24 +100,24 @@ ms.locfileid: "75245401"
   
 -   合併式複寫可以透過 HTTPS 連接同步處理 FILESTREAM 資料 (利用 [Web 同步處理](../../relational-databases/replication/web-synchronization-for-merge-replication.md))。 這項資料不能超過 Web 同步處理的 50 MB 限制，否則會產生執行階段錯誤。  
   
-##  <a name="LogShipping"></a> 記錄傳送  
+##  <a name="log-shipping"></a><a name="LogShipping"></a> 記錄傳送  
  [記錄傳送](../../database-engine/log-shipping/about-log-shipping-sql-server.md) 支援 FILESTREAM。 主要和次要伺服器都必須執行 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或更新的版本，並啟用 FILESTREAM。  
   
-##  <a name="DatabaseMirroring"></a> 資料庫鏡像  
+##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a> 資料庫鏡像  
  資料庫鏡像不支援 FILESTREAM。 不能在主體伺服器上建立 FILESTREAM 檔案群組。 不能針對包含 FILESTREAM 檔案群組的資料庫設定資料庫鏡像。  
   
-##  <a name="FullText"></a> 全文檢索索引  
+##  <a name="full-text-indexing"></a><a name="FullText"></a> 全文檢索索引  
  [全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md) 處理 FILESTREAM 資料行的方式，與處理 **varbinary(max)** 資料行的方式相同。 FILESTREAM 資料表必須有一個資料行包含每一個 FILESTREAM BLOB 的副檔名。 如需詳細資訊，請參閱[使用全文檢索搜尋進行查詢](../../relational-databases/search/query-with-full-text-search.md)、[設定及管理搜尋的篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)和 [sys.fulltext_document_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md)。  
   
  全文檢索引擎會針對 FILESTREAM BLOB 的內容建立索引。 為檔案 (如影像) 建立索引可能不會很實用。 當更新 FILESTREAM BLOB 時，會為它重新建立索引。  
   
-##  <a name="FailoverClustering"></a> 容錯移轉叢集  
+##  <a name="failover-clustering"></a><a name="FailoverClustering"></a> 容錯移轉叢集  
  當您進行容錯移轉叢集時，FILESTREAM 檔案群組必須放在共用磁碟上。 FILESTREAM 必須在叢集中主控 FILESTREAM 執行個體的每一個節點上啟用。 如需詳細資訊，請參閱 [設定容錯移轉叢集上的 FILESTREAM](../../relational-databases/blob/set-up-filestream-on-a-failover-cluster.md)。  
   
-##  <a name="SQLServerExpress"></a> SQL Server Express  
+##  <a name="sql-server-express"></a><a name="SQLServerExpress"></a> SQL Server Express  
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 支援 FILESTREAM。 10-GB 的資料庫大小限制不包括 FILESTREAM 資料容器。  
   
-##  <a name="contained"></a> 自主資料庫  
+##  <a name="contained-databases"></a><a name="contained"></a> 自主資料庫  
  FILESTREAM 功能必須先在資料庫外部進行一些設定。 因此，使用 FILESTREAM 或 FileTable 的資料庫並非完全自主。  
   
  若要使用自主資料庫的特定功能 (例如包含的使用者)，可以將資料庫內含項目設定為 PARTIAL。 但在此情況下，必須注意某些資料庫設定不會包含在資料庫中，因此不會隨資料庫移動自動移動。  

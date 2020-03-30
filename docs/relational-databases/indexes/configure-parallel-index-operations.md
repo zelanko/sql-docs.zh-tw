@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 627fa6a19c88507034bfbd8a7236b94e17242851
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908131"
 ---
 # <a name="configure-parallel-index-operations"></a>設定平行索引作業
@@ -48,9 +48,9 @@ ms.locfileid: "72908131"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   查詢最佳化工具所使用的處理器數目通常可以提供最佳的效能。 然而，諸如建立、重建、卸除非常大的索引都需要大量的資源，並可能在索引作業期間造成其他應用程式和資料庫作業的資源不足。 當發生此問題時，您可以限制索引作業要使用的處理器數目，藉以手動設定執行索引陳述式要使用的最大處理器數目。  
   
@@ -78,10 +78,10 @@ ms.locfileid: "72908131"
   
 -   如果查詢最佳化工具將平行處理原則的程度套用至建立作業，則需要排序的資料分割索引作業可能需要更多的記憶體。 平行處理原則的程度愈高，所需的記憶體就愈大。 如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。  
   
-###  <a name="Security"></a> <a name="Permissions"></a> 權限  
+###  <a name="permissions"></a><a name="Security"></a> <a name="Permissions"></a> 權限  
  必須具備資料表或檢視的 `ALTER` 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-index"></a>若要在索引上設定平行處理原則的最大程度  
   
@@ -101,7 +101,7 @@ ms.locfileid: "72908131"
   
 8.  按一下 [確定]  。  
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>若要在現有索引上設定平行處理原則的最大程度  
   

@@ -11,10 +11,10 @@ ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ec7514eeb2e614c1313fba81c4a48b8803f0c29d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296086"
 ---
 # <a name="lesson-1-9-test-the-lesson-1-package"></a>課程 1-9：測試第 1 課套件

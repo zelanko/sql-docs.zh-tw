@@ -14,10 +14,10 @@ ms.assetid: 888c8448-933b-41e3-8aa1-c206bc0cdb78
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d1559e997270712dd701a1295de4a896a2425642
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012301"
 ---
 # <a name="configure-the-remote-query-timeout-server-configuration-option"></a>設定 remote query timeout 伺服器組態選項
@@ -45,18 +45,18 @@ ms.locfileid: "68012301"
   
 -   **後續操作：** [設定遠端查詢逾時選項之後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   設定這個數值之前必須先允許遠端伺服器連接。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-the-remote-query-timeout-option"></a>設定 remote query timeout 選項  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68012301"
   
 3.  請在 **[遠端伺服器連接]** 下方的 **[遠端查詢逾時]** 方塊中，輸入或選取從 0 至 2,147,483,647 的值，以設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在逾時之前要等待的最大秒數。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-configure-the-remote-query-timeout-option"></a>設定 remote query timeout 選項  
   
@@ -88,7 +88,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 後續操作：設定遠端查詢逾時選項之後  
+##  <a name="follow-up-after-you-configure-the-remote-query-timeout-option"></a><a name="FollowUp"></a> 後續操作：設定遠端查詢逾時選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -21,10 +21,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68073138"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
@@ -150,7 +150,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  資料庫將會回報在資料匯出期間，於外部資料來源上發生的任何 Java 錯誤。  
   
-##  <a name="GeneralRemarks"></a> 一般備註  
+##  <a name="general-remarks"></a><a name="GeneralRemarks"></a> 一般備註  
  在 CETAS 陳述式執行完成之後，您便可以在外部資料表上執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢。 除非您使用 CREATE TABLE AS SELECT 陳述式來進行匯入，否則這些作業會在查詢的持續期間將資料匯入至資料庫。  
   
  外部資料表名稱和定義會儲存在資料庫中繼資料中。 資料會儲存在外部資料來源中。  
@@ -189,7 +189,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ## <a name="locking"></a>鎖定  
  在 SCHEMARESOLUTION 上採取共用鎖定。  
   
-##  <a name="Examples"></a> 範例  
+##  <a name="examples"></a><a name="Examples"></a> 範例  
   
 ### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>A. 使用 CREATE EXTERNAL TABLE AS SELECT (CETAS) 來建立 Hadoop 資料表  
  下列範例會使用來自來源資料表 `dimCustomer`的資料行定義和資料，來建立一個名為 `hdfsCustomer` 的新外部資料表。  

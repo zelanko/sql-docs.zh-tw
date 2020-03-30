@@ -17,10 +17,10 @@ ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aaeef70fe81699d0cbb00ba3d7e5a6dfcf1b6aa7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75241725"
 ---
 # <a name="configure-read-only-access-to-a-secondary-replica-of-an-always-on-availability-group"></a>設定對 Always On 可用性群組中次要複本的唯讀存取
@@ -30,18 +30,18 @@ ms.locfileid: "75241725"
  如需針對次要複本啟用唯讀存取的含意資訊，以及連線的簡介，請參閱[關於可用性複本的用戶端連線存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md) 和[使用中次要：可讀取的次要複本 &#40;Always On 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  
-##  <a name="Prerequisites"></a> 必要條件和限制  
+##  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> 必要條件和限制  
   
 -   若要設定不同的連接存取，您必須連接到裝載主要複本的伺服器執行個體。  
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
   
 |Task|權限|  
 |----------|-----------------|  
 |若要在建立可用性群組時設定複本|需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
 |若要修改可用性複本|需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要設定可用性複本的存取**  
   
 1.  在 [物件總管] 中，連接到裝載主要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
@@ -73,7 +73,7 @@ ms.locfileid: "75241725"
          **允取讀取/寫入連接**  
          當 Application Intent 屬性設為 **ReadWrite** 或是未設定 Application Intent 連接屬性時，便會允許連接。 不允許 Application Intent 連接屬性設為 **ReadOnly** 的連接。 這有助於防止客戶錯誤地將讀取意圖的工作負載連接至主要複本。 如需有關 Application Intent 連接屬性的詳細資訊，請參閱＜ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)＞。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要設定可用性複本的存取**  
   
 > [!NOTE]  
@@ -110,7 +110,7 @@ ms.locfileid: "75241725"
      ALL  
      主要複本的資料庫允許所有連接。 這是預設值。  
   
-###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  下列範例會將次要複本加入名為 *AG2*的可用性群組。 接著指定一個獨立伺服器執行個體 *COMPUTER03\HADR_INSTANCE*，以裝載新的可用性複本。 將此複本設定為只允許主要角色的讀寫連接以及只允許次要角色的讀取意圖連接。  
   
 ```  
@@ -125,7 +125,7 @@ ALTER AVAILABILITY GROUP AG2
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要設定可用性複本的存取**  
   
 > [!NOTE]  
@@ -161,7 +161,7 @@ GO
   
 -   [SQL Server PowerShell 提供者](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-###  <a name="PSExample"></a> 範例 (PowerShell)  
+###  <a name="example-powershell"></a><a name="PSExample"></a> 範例 (PowerShell)  
  下列範例將 **ConnectionModeInSecondaryRole** 和 **ConnectionModeInPrimaryRole** 參數設定為 **AllowAllConnections**。  
   
 ```  
@@ -174,7 +174,7 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
 ```  
   
-##  <a name="FollowUp"></a> 後續操作：針對可用性複本設定唯讀存取之後  
+##  <a name="follow-up-after-configuring-read-only-access-for-an-availability-replica"></a><a name="FollowUp"></a> 後續操作：針對可用性複本設定唯讀存取之後  
  **可讀取的次要複本的唯讀存取**  
   
 -   當您使用 [bcp 公用程式](../../../tools/bcp-utility.md) 或 [sqlcmd 公用程式](../../../tools/sqlcmd-utility.md)時，您可以藉由指定 **-K ReadOnly** 參數，為啟用唯讀存取的任何次要複本指定唯讀存取。  
@@ -196,13 +196,13 @@ DATABASEPROPERTYEX([db name],'UpdateAbility') = N'READ_ONLY'
   
  若要識別讀寫資料庫，請指定 READ_WRITE 做為值。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [設定可用性群組的唯讀路由 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
 -   [建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   [Always On:Value Proposition of Readable Secondary](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-value-proposition-of-readable-secondary.aspx) (Always On：可讀取次要的價值主張)  
   

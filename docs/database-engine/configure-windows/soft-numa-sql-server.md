@@ -18,10 +18,10 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ee31095ad1650ce17af6ddaa19237cd3ae73486d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288092"
 ---
 # <a name="soft-numa-sql-server"></a>軟體 NUMA (SQL Server)

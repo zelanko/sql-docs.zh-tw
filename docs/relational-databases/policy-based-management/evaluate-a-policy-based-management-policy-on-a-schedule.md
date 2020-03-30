@@ -13,10 +13,10 @@ ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ad7d22492411538a1f397f1a7d02436d1a02bde7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67901149"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>依照排程評估原則式管理原則
@@ -33,14 +33,14 @@ ms.locfileid: "67901149"
   
      [Transact-SQL](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要 msdb 資料庫中 PolicyAdministratorRole 角色的成員資格。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-evaluate-a-policy-on-a-schedule"></a>若要依照排程評估原則  
   

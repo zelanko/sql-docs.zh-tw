@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 498518fbc119629d2e7da7717b1f6e41c68984ce
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558575"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>設定容錯移轉叢集執行個體 - SMB - Linux 上的 SQL Server

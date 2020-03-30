@@ -13,10 +13,10 @@ ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 07c1743107d3edce7012740a3f1600d2157bf001
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68136892"
 ---
 # <a name="create-a-resource-pool"></a>建立資源集區
@@ -28,17 +28,17 @@ ms.locfileid: "68136892"
   
 -   **若要建立資源集區，請使用下列方式：** [SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="LimitationsRestrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制事項  
  最大 CPU 百分比必須大於或等於最小 CPU 百分比。 最大記憶體百分比必須大於或等於最小記憶體百分比。  
   
  所有資源集區之最小 CPU 百分比和最小記憶體百分比的總和不得超過 100。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="permissions"></a><a name="Permissions"></a> 權限  
  建立資源集區需要 CONTROL SERVER 權限。  
   
-##  <a name="CreRPProp"></a> 使用 SQL Server Management Studio 建立資源集區  
+##  <a name="create-a-resource-pool-using-sql-server-management-studio"></a><a name="CreRPProp"></a> 使用 SQL Server Management Studio 建立資源集區  
  **若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
@@ -53,7 +53,7 @@ ms.locfileid: "68136892"
   
 6.  若要儲存變更，請按一下 **[確定]** 。  
   
-##  <a name="CreRPTSQL"></a> 使用 Transact-SQL 建立資源集區  
+##  <a name="create-a-resource-pool-using-transact-sql"></a><a name="CreRPTSQL"></a> 使用 Transact-SQL 建立資源集區  
  **若要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  執行 [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md) 或 [CREATE EXTERNAL RESOURCE POOL](../../t-sql/statements/create-external-resource-pool-transact-sql.md) 陳述式，指定要變更的屬性值。  

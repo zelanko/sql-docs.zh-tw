@@ -23,10 +23,10 @@ ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6bbf98cbd0fc863c8e6ceaf7eeb5a0e9192055c4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822679"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>仲裁：見證如何影響資料庫可用性 (資料庫鏡像)

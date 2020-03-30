@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256861"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>如何升級 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -162,7 +162,7 @@ ms.locfileid: "77256861"
    > [!IMPORTANT]
    > 針對每個版本，`azdata` 的 `n-1` 版本路徑會有所變更。 即使您先前已安裝 `azdata`，您還是必須從最新的路徑重新安裝，才能建立新的叢集。
 
-### <a id="azdataversion"></a> 確認 azdata 版本
+### <a name="verify-the-azdata-version"></a><a id="azdataversion"></a> 確認 azdata 版本
 
 在您部署新的巨量資料叢集之前，請使用 `--version` 參數，確認您所使用的是最新版 `azdata`：
 

@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: ad36a17367b14a48810d83137b2887eaa75f6ef1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989257"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>將應用程式從 MDAC 更新為適用於 SQL Server 的 OLE DB 驅動程式

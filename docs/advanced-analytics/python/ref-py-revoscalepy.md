@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c6de9072c32155446b3ff40df3f81af9073c1090
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73706813"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (SQL Server 中的 Python 模組)

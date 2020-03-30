@@ -19,10 +19,10 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286822"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 專案和封裝
@@ -131,7 +131,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 4.  (選擇性) 建立部署專案的環境。 
   
-###  <a name="convert"></a> 將專案轉換為專案部署模型  
+###  <a name="to-convert-a-project-to-the-project-deployment-model"></a><a name="convert"></a> 將專案轉換為專案部署模型  
   
 1.  開啟 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的專案，然後在方案總管中，以滑鼠右鍵按一下該專案，並按一下 [轉換為專案部署模型]  。  
   
@@ -141,7 +141,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 2.  完成精靈。
   
-###  <a name="deploy"></a> 將專案部署至 Integration Services 伺服器  
+###  <a name="to-deploy-a-project-to-the-integration-services-server"></a><a name="deploy"></a> 將專案部署至 Integration Services 伺服器  
   
 1.  開啟 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的專案，然後從 [專案]  功能表中選取 [部署]  ，以啟動 [Integration Services 部署精靈]  。  
   
@@ -164,7 +164,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
 ## <a name="deploy-packages-to-integration-services-server"></a>將封裝部署至 Integration Services 伺服器
   [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 引進累加封裝部署功能，可讓您將一或多個封裝部署到現有或新的專案中，而不需部署整個專案。  
   
-###  <a name="DeployWizard"></a> 使用 Integration Services 部署精靈部署封裝  
+###  <a name="deploy-packages-by-using-the-integration-services-deployment-wizard"></a><a name="DeployWizard"></a> 使用 Integration Services 部署精靈部署封裝  
   
 1.  在命令提示字元中，從 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** 執行 **isdeploymentwizard.exe**。 64 位元的電腦上的 **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**也有提供 32 位元版本的工具。  
   
@@ -172,7 +172,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 3.  完成精靈。 遵循 [Package Deployment Model](#PackageModel)(封裝部署模型) 中所述的其餘步驟。  
   
-###  <a name="SSMS"></a> 使用 SQL Server Management Studio 部署封裝  
+###  <a name="deploy-packages-by-using-sql-server-management-studio"></a><a name="SSMS"></a> 使用 SQL Server Management Studio 部署封裝  
   
 1.  在 SQL Server Management Studio 中，依序展開物件總管中的 [Integration Services 目錄]   > [SISDB]  節點。  
   
@@ -184,7 +184,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 5.  完成精靈。 遵循 [Package Deployment Model](#PackageModel)(封裝部署模型) 中所述的其餘步驟。  
   
-###  <a name="SSDT"></a> 使用 SQL Server Data Tools 部署封裝 (Visual Studio)  
+###  <a name="deploy-packages-by-using-sql-server-data-tools-visual-studio"></a><a name="SSDT"></a> 使用 SQL Server Data Tools 部署封裝 (Visual Studio)  
   
 1.  在 Visual Studio 中，開啟 Integration Services 專案，並選取您想要部署的封裝。  
   
@@ -192,7 +192,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 3.  完成精靈。 遵循 [Package Deployment Model](#PackageModel)(封裝部署模型) 中所述的其餘步驟。  
   
-###  <a name="StoredProcedure"></a> 使用 deploy_packages 預存程序部署封裝  
+###  <a name="deploy-packages-by-using-the-deploy_packages-stored-procedure"></a><a name="StoredProcedure"></a> 使用 deploy_packages 預存程序部署封裝  
  您可以使用 **[catalog].[deploy_packages]** 預存程序，將一或多個 SSIS 封裝部署至 SSIS 目錄。 下列程式碼範例示範如何使用此預存程序，將封裝部署至 SSIS 伺服器。 如需詳細資訊，請參閱 [catalog.deploy_packages](../../integration-services/system-stored-procedures/catalog-deploy-packages.md)。  
   
 ```cs
@@ -235,7 +235,7 @@ private static void Main(string[] args)
   
 ```  
   
-###  <a name="MOMApi"></a> 使用管理物件模型 API 部署封裝  
+###  <a name="deploy-packages-using-the-management-object-model-api"></a><a name="MOMApi"></a> 使用管理物件模型 API 部署封裝  
  下列程式碼範例示範如何使用管理物件模型 API，將封裝部署到伺服器。  
   
 ```cs 
@@ -304,7 +304,7 @@ static void Main()
  
  此頁面上的設定視每種部署模型而異。 根據您在此頁面中選取的模型，遵循 [Project Deployment Model](#ProjectModel) 區段或 [Package Deployment Model](#PackageModel) 區段中的步驟執行。  
   
-###  <a name="ProjectModel"></a> Project Deployment Model  
+###  <a name="project-deployment-model"></a><a name="ProjectModel"></a> Project Deployment Model  
   
 #### <a name="select-source"></a>選取來源
 
@@ -322,7 +322,7 @@ static void Main()
 
  完成部署程序之後，您應該會看到 [結果]  頁面。 此頁面會顯示每個動作執行成功或失敗。 如果動作失敗，按一下 **[結果]** 資料行中的 **[失敗]** 以顯示錯誤的說明。 按一下 [儲存報表]  將結果儲存至 XML 檔案，或按一下 [關閉]  結束精靈。
   
-###  <a name="PackageModel"></a> Package Deployment Model  
+###  <a name="package-deployment-model"></a><a name="PackageModel"></a> Package Deployment Model  
   
 #### <a name="select-source"></a>選取來源
 
@@ -555,7 +555,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 -   [設定 [執行轉換] 上的選項](#conversion)  
   
-###  <a name="open_dialog"></a> 開啟 [Integration Services 專案轉換精靈]  
+###  <a name="open-the-integration-services-project-conversion-wizard"></a><a name="open_dialog"></a> 開啟 [Integration Services 專案轉換精靈]  
  執行下列其中一項作業來開啟 [Integration Services 專案轉換精靈]  。  
   
 -   開啟 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的專案，然後在方案總管中，以滑鼠右鍵按一下該專案，並按一下 [轉換為專案部署模型]  。  
@@ -564,7 +564,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  根據您是從 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 還是從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行 [Integration Services 專案轉換精靈]  ，此精靈會執行不同的轉換工作。   
   
-###  <a name="locate"></a> 設定 [尋找封裝] 頁面上的選項  
+###  <a name="set-options-on-the-locate-packages-page"></a><a name="locate"></a> 設定 [尋找封裝] 頁面上的選項  
   
 > [!NOTE]  
 >  只有在您從 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 執行此精靈時，才可以使用 [尋找封裝]  頁面。  
@@ -602,7 +602,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **資料夾**  
  輸入封裝路徑，或按一下 [瀏覽]  巡覽到封裝。  
   
-###  <a name="selectPackages"></a> 設定 [選取封裝] 頁面上的選項  
+###  <a name="set-options-on-the-select-packages-page"></a><a name="selectPackages"></a> 設定 [選取封裝] 頁面上的選項  
  **封裝名稱**  
  列出封裝檔案。  
   
@@ -621,7 +621,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **[重新整理]**  
  重新整理封裝的清單。  
   
-###  <a name="destination"></a> 設定 [選取目的地] 頁面上的選項  
+###  <a name="set-options-on-the-select-destination-page"></a><a name="destination"></a> 設定 [選取目的地] 頁面上的選項  
  在此頁面上，指定新專案部署檔案 (.ispac) 的名稱和路徑，或選取現有的檔案。  
   
 > [!NOTE]  
@@ -639,7 +639,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **專案描述**  
  選擇性地輸入專案的描述。  
   
-###  <a name="projectProperties"></a> 設定 [指定專案屬性] 頁面上的選項  
+###  <a name="set-options-on-the-specify-project-properties-page"></a><a name="projectProperties"></a> 設定 [指定專案屬性] 頁面上的選項  
   
 > [!NOTE]  
 >  只有在您從 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 執行此精靈時，才可以使用 [指定專案屬性]  頁面。  
@@ -653,7 +653,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **專案描述**  
  選擇性地輸入專案描述。  
   
-###  <a name="executePackage"></a> 設定 [更新執行封裝工作] 頁面上的選項  
+###  <a name="set-options-on-the-update-execute-package-task-page"></a><a name="executePackage"></a> 設定 [更新執行封裝工作] 頁面上的選項  
  更新執行封裝工作包含在封裝中，以使用專案參考。 如需詳細資訊，請參閱＜ [執行封裝工作編輯器](../../integration-services/control-flow/execute-package-task-editor.md)＞。  
   
  **父封裝**  
@@ -668,7 +668,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **指派參考**  
  選取專案中儲存的子封裝。  
   
-###  <a name="configurations"></a> 設定 [選取組態] 頁面上的選項  
+###  <a name="set-options-on-the-select-configurations-page"></a><a name="configurations"></a> 設定 [選取組態] 頁面上的選項  
  選取您要以參數取代的封裝組態。  
   
  **套件**  
@@ -694,7 +694,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  如果您沒有選取此選項，則只會移除您選擇以參數取代的組態。  
   
-###  <a name="createParameters"></a> 設定 [建立參數] 頁面上的選項  
+###  <a name="set-options-on-the-create-parameters-page"></a><a name="createParameters"></a> 設定 [建立參數] 頁面上的選項  
  選取每個組態屬性的參數名稱和範圍。  
   
  **套件**  
@@ -706,7 +706,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **範圍**  
  選取參數的範圍 (封裝或專案)。  
   
-###  <a name="configureParameters"></a> 設定 [設定參數] 頁面上的選項  
+###  <a name="set-options-on-the-configure-parameters-page"></a><a name="configureParameters"></a> 設定 [設定參數] 頁面上的選項  
  **名稱**  
  列出參數名稱。  
   
@@ -724,7 +724,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  [設定參數詳細資料]  對話方塊也會列出參數值的資料類型，以及參數的來源。  
   
-###  <a name="review"></a> 設定 [檢閱] 頁面上的選項  
+###  <a name="set-the-options-on-the-review-page"></a><a name="review"></a> 設定 [檢閱] 頁面上的選項  
  使用 [檢閱]  頁面確認您已經針對專案的轉換選取的選項。  
   
  **[上一步]**  
@@ -733,7 +733,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **轉換**  
  按一下可將專案轉換為專案部署模型。  
   
-###  <a name="conversion"></a> 設定 [執行轉換] 上的選項  
+###  <a name="set-the-options-on-the-perform-conversion"></a><a name="conversion"></a> 設定 [執行轉換] 上的選項  
  [執行轉換] 頁面會顯示專案轉換的狀態。  
   
  **動作**  

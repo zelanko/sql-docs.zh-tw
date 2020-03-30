@@ -16,10 +16,10 @@ ms.assetid: 840ecfcf-0dd3-4b7b-976f-dc9a96cd1464
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 92d7b0db997a6b77b43efb6d8104f629bb5507e3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976018"
 ---
 # <a name="recover-method-sqlserverxaresource"></a>recover 方法 (SQLServerXAResource)

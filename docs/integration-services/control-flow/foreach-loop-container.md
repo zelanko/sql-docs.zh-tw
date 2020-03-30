@@ -31,10 +31,10 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2266b837ce7822a6b03b3f6a26d4d1d818aade72
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298295"
 ---
 # <a name="foreach-loop-container"></a>Foreach 迴圈容器
@@ -433,7 +433,7 @@ ms.locfileid: "71298295"
   
  **相關主題：** [選取 SMO 列舉對話方塊](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
   
-####  <a name="ForeachHDFSFile"></a> 列舉值 = Foreach HDFS 檔案列舉值  
+####  <a name="enumerator--foreach-hdfs-file-enumerator"></a><a name="ForeachHDFSFile"></a> 列舉值 = Foreach HDFS 檔案列舉值  
  [Foreach HDFS 檔案列舉值]  可讓 SSIS 封裝列舉所指定 HDFS 位置中的 HDFS 檔案。 每個 HDFS 檔案的名稱可以儲存在變數中，也可以用於 Foreach 迴圈容器內的工作中。  
   
  **Hadoop 連線管理員**  
@@ -457,7 +457,7 @@ ms.locfileid: "71298295"
   
  在編輯器的 [變數對應]  頁面上，選取或建立變數來儲存所列舉 HDFS 檔案的名稱。  
   
-####  <a name="ForeachAzureBlob"></a> 列舉值 = Foreach Azure Blob 列舉值  
+####  <a name="enumerator--foreach-azure-blob-enumerator"></a><a name="ForeachAzureBlob"></a> 列舉值 = Foreach Azure Blob 列舉值  
  [Azure Blob Enumerator (Azure Blob 列舉值)]  可讓 SSIS 封裝列舉所指定 Blob 位置中的 Blob 檔案。 您可將列舉的 Blob 檔案名稱儲存在變數中，並用於 Foreach 迴圈容器內的工作中。  
   
  [Azure Blob Enumerator (Azure Blob 列舉值)]  是適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之 Azure SQL Server Integration Services (SSIS) 功能套件的元件。 請在 [這裡](https://go.microsoft.com/fwlink/?LinkID=626967)。  
@@ -482,7 +482,7 @@ ms.locfileid: "71298295"
  **Blob 的起迄時間範圍篩選**  
  指定時間範圍篩選條件。 這會列舉在 **TimeRangeFrom** 之後及在 **TimeRangeTo** 之前修改的檔案。 
 
-####  <a name="ForeachAdlsFile"></a> 列舉值 = Foreach ADLS 檔案列舉值 
+####  <a name="enumerator--foreach-adls-file-enumerator"></a><a name="ForeachAdlsFile"></a> 列舉值 = Foreach ADLS 檔案列舉值 
 **ADLS 檔案列舉值**可讓 SSIS 套件列舉 Azure Data Lake Store 中的檔案。 您可以將列舉檔案的完整路徑 (前面加上斜線 - `/`) 儲存在變數中，並在 Foreach 迴圈容器內的工作中使用此檔案路徑。
   
 **AzureDataLakeConnection**  
@@ -497,7 +497,7 @@ ms.locfileid: "71298295"
 **SearchRecursively**  
 指定是否在指定的目錄內以遞迴方式搜尋。  
 
-####  <a name="ForeachBlobFsFile"></a> 列舉程式 = Foreach Data Lake Storage Gen2 檔案列舉程式 
+####  <a name="enumerator--foreach-data-lake-storage-gen2-file-enumerator"></a><a name="ForeachBlobFsFile"></a> 列舉程式 = Foreach Data Lake Storage Gen2 檔案列舉程式 
 **Foreach Data Lake Storage Gen2 檔案列舉程式**可讓 SSIS 套件列舉 Azure Data Lake Storage Gen2 中的檔案。
 
 **AzureStorageConnection**  

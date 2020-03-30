@@ -13,10 +13,10 @@ ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 610f75fa8b706dab60b9691b4f5e5e82c2bdb93f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294617"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>準備查詢變更資料

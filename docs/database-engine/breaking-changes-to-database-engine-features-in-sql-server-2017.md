@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 2140c54c8954006c4285eaccbb59f2f0c4964577
-ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77074496"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sssqlv14-md"></a>[!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] 資料庫引擎功能的重大變更
@@ -35,7 +35,7 @@ ms.locfileid: "77074496"
   
 -  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 已淘汰 MD2、MD4、MD5、SHA 和 SHA1 演算法。 在 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 之前，會使用 SHA1 建立自我簽署憑證。 從 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 開始，則使用 SHA2_256 建立自我簽署憑證。
 
-## <a name="previous-versions"></a> 舊版  
+## <a name="previous-versions"></a><a name="previous-versions"></a> 舊版  
 
 - [SQL Server 2016 中對於 Database Engine 的重大變更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)
 

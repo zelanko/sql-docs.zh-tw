@@ -12,10 +12,10 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e59dfd9c79090bc20a517367e0145303822d8079
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78280885"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>啟用 SQL Server 到 Azure 的受控備份

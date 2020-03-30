@@ -18,10 +18,10 @@ ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 92f83bb31569a055bf9158a0388d9cb0630e9a1d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251268"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>暫止可用性資料庫 (SQL Server)
@@ -60,25 +60,25 @@ ms.locfileid: "75251268"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  一旦裝載目標資料庫的複本接受 SUSPEND 命令之後，就會將其傳回，但暫停資料庫實際上是以非同步方式進行。  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  您必須連接到裝載要暫停之資料庫的伺服器執行個體。 若要暫停主要資料庫和對應的次要資料庫，請連接到裝載主要複本的伺服器執行個體。 若要暫停次要資料庫，同時保留主要資料庫可用狀態，請連接到次要複本。  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
  出現瓶頸時，短暫暫停一個或多個次要資料庫，可能有助於暫時改善主要複本的效能。 只要次要資料庫保持暫停狀態，對應主要資料庫的交易記錄便無法截斷。 這會導致記錄檔記錄在主要資料庫上累積。 因此，我們建議您盡快恢復 (或移除) 暫停的次要資料庫。 如需詳細資訊，請參閱本主題稍後的[後續操作：避免填滿交易記錄](#FollowUp)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  
   
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要暫停資料庫**  
   
 1.  在 [物件總管] 中，連接到裝載您要暫停資料庫之可用性複本的伺服器執行個體，然後展開伺服器樹狀目錄。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#Prerequisites)＞。  
@@ -96,7 +96,7 @@ ms.locfileid: "75251268"
 > [!NOTE]  
 >  若要暫停此複本位置的其他資料庫，請針對每個資料庫重複步驟 4 和 5。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要暫停資料庫**  
   
 1.  連接至裝載您要暫停其資料庫之複本的伺服器執行個體。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#Prerequisites)＞。  
@@ -105,7 +105,7 @@ ms.locfileid: "75251268"
   
      ALTER DATABASE *database_name* SET HADR SUSPEND;
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要暫停資料庫**  
   
 1.  將目錄 (**cd**) 變更為裝載您要暫停其資料庫之複本的伺服器執行個體。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#Prerequisites)＞。  
@@ -126,7 +126,7 @@ ms.locfileid: "75251268"
   
 -   [SQL Server PowerShell 提供者](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 後續操作：避免填滿交易記錄  
+##  <a name="follow-up-avoiding-a-full-transaction-log"></a><a name="FollowUp"></a> 後續操作：避免填滿交易記錄  
  一般而言，在資料庫上執行自動檢查點時，交易記錄會在下一個記錄備份之後，截斷至該檢查點。 但在次要資料庫暫停時，所有目前的記錄檔記錄仍在主要資料庫作用中。 如果交易記錄已填滿 (因為已達到最大值，或者伺服器執行個體用盡空間)，資料庫就不能再執行其他更新。  
   
  若要避免這個問題，您應該執行下列其中一項工作：  
@@ -141,7 +141,7 @@ ms.locfileid: "75251268"
   
 -   [寫滿交易記錄疑難排解 &#40;SQL Server 錯誤 9002&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [繼續可用性資料庫 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   

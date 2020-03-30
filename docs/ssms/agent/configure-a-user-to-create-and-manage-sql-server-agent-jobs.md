@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6c492a7875eed70cc58efa2dcae8ac180229e5ad
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246501"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
@@ -36,17 +36,17 @@ ms.locfileid: "75246501"
   
 -   **設定使用者以建立及管理 SQL Server Agent 作業，使用：** [SQL Server Management Studio](#SSMS)  
   
-## <a name="BeforeYouBegin"></a>開始之前  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>開始之前  
   
-### <a name="Security"></a>安全性  
+### <a name="security"></a><a name="Security"></a>安全性  
 若要設定使用者以建立或執行 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，您必須先將現有 SQL Server 登入或 msdb 角色新增到 msdb 資料庫中的下列其中一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色：SQLAgentUserRole、SQLAgentReaderRole 或 SQLAgentOperatorRole。  
   
 根據預設，這些資料庫角色的成員可以在以其身分執行的自有作業步驟。 如果這些非管理使用者想要執行作業來執行其他作業步驟類型 (例如， [!INCLUDE[ssIS](../../includes/ssis_md.md)] 封裝)，則他們需要有 Proxy 帳戶的存取權。 系統管理員 (sysadmin) 固定伺服器角色的所有成員都擁有建立、修改和刪除 Proxy 帳戶的權限。 如需有關與這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色關聯之權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
 如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
-## <a name="SSMS"></a>使用 SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>使用 SQL Server Management Studio  
 **若要將 SQL 登入或 msdb 角色加入 SQL Server Agent 固定資料庫角色中**  
   
 1.  在 **[物件總管]** 中展開伺服器。  

@@ -15,10 +15,10 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa6235337aab70ed826a5507e7bd8ff2a45c4636
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286583"
 ---
 # <a name="understanding-the-script-component-object-model"></a>了解指令碼元件物件模型

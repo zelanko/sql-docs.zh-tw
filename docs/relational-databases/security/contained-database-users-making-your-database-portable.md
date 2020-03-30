@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b11a263953e0b58c4b3dc7072662b291f3d215ab
-ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79375505"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>自主的資料庫使用者 - 使資料庫可攜

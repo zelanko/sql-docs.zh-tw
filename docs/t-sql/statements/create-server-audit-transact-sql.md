@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: cc6f7c3ad9dc10e46a7abd1b044bcf70ff86f92d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982996"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
@@ -174,7 +174,7 @@ CREATE SERVER AUDIT HIPAA_Audit
     WITH ( QUEUE_DELAY = 1000,  ON_FAILURE = SHUTDOWN);  
 ```  
   
-###  <a name="ExampleWhere"></a> C. 建立包含 WHERE 子句的伺服器稽核  
+###  <a name="c-creating-a-server-audit-containing-a-where-clause"></a><a name="ExampleWhere"></a> C. 建立包含 WHERE 子句的伺服器稽核  
  下列範例會建立資料庫、結構描述和兩個範例資料表。 名為 `DataSchema.SensitiveData` 的資料表將包含機密資料，而且此資料表的存取權必須記錄在稽核中。 名為 `DataSchema.GeneralData` 的資料表則不包含機密資料。 資料庫稽核規格會稽核 `DataSchema` 結構描述中所有物件的存取權。 伺服器稽核是使用 WHERE 子句所建立，這個子句會將伺服器稽核限制為只有 `SensitiveData` 資料表。 伺服器稽核會假設稽核資料夾存在 `C:\SQLAudit` 中。  
   
 ```sql  

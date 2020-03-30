@@ -11,10 +11,10 @@ ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
 ms.openlocfilehash: 82ecd3fa04bbab0a1512ede08ebbc8bfaa3011f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244045"
 ---
 # <a name="tutorial-develop-a-net-application-using-always-encrypted-with-secure-enclaves"></a>教學課程：使用具有安全記憶體保護區的 Always Encrypted 開發 .NET 應用程式

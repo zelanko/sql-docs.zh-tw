@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: a1edfb7566d47b8c02dbd53fcccbd7441239a949
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67959302"
 ---
-# <a name="server-groups-in-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] 中的伺服器群組
+# <a name="server-groups-in-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] 中的伺服器群組
 
 伺服器群組可讓您管理所使用的伺服器和資料庫連線。 當您建立伺服器群組時，設定詳細資料會儲存至 [使用者設定]  。
 

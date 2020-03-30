@@ -13,10 +13,10 @@ ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6182b480c83b8e6b2d0f0a50217823fd14f30c30
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68033350"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>以時間為基礎之資料列篩選的最佳做法

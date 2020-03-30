@@ -11,10 +11,10 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1b831047e4c2b8bad166e5ddf5ce3bdc7f8b6165
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73532864"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)

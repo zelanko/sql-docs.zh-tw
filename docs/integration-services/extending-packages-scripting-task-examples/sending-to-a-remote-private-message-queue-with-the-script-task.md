@@ -17,10 +17,10 @@ ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 53fc016bc4657dd1dce7dd0eefcbea58a28ae14e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297000"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>以指令碼工作傳送至遠端私用訊息佇列
@@ -44,7 +44,7 @@ ms.locfileid: "71297000"
     FORMATNAME:DIRECT=OS:<computername>\private$\<queuename>  
     ```  
   
-2.  建立類型為 **String** 且名為 **MessageText** 的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 變數，以將訊息文字傳遞至指令碼中。 輸入預設訊息做為變數值。  
+2.  建立類型為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]String**且名為**MessageText**的** 變數，以將訊息文字傳遞至指令碼中。 輸入預設訊息做為變數值。  
   
 3.  將指令碼工作加入設計介面並編輯它。 在 [指令碼工作編輯器]  的 [指令碼]  索引標籤上，將 `MessageText` 變數加入 **ReadOnlyVariables** 屬性，以便在指令碼中使用此變數。  
   

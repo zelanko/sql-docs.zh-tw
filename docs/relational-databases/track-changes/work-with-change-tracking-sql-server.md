@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 905c1dc08c2d2e766425b62d7e0a920730ae2b41
-ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78256991"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>使用變更追蹤 (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "78256991"
 
   使用變更追蹤的應用程式必須能夠取得追蹤變更、將這些變更套用至另一個資料存放區，以及更新來源資料庫。 此主題描述如何執行這些工作，以及在進行容錯移轉而且必須從備份還原資料庫時，變更追蹤所扮演的角色。  
   
-##  <a name="Obtain"></a> 使用變更追蹤函數來取得變更  
+##  <a name="obtain-changes-by-using-change-tracking-functions"></a><a name="Obtain"></a> 使用變更追蹤函數來取得變更  
  描述如何使用變更追蹤函數來取得變更以及對資料庫所做變更的相關資訊。  
   
 ### <a name="about-the-change-tracking-functions"></a>關於變更追蹤函數  
@@ -295,7 +295,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  當您使用變更追蹤 (或任何自訂追蹤機制) 時，選擇適用於應用程式的方法需要進行大量分析。 因此，使用快照集隔離就簡單多了。  
   
-##  <a name="Handles"></a> 變更追蹤如何處理資料庫的變更  
+##  <a name="how-change-tracking-handles-changes-to-a-database"></a><a name="Handles"></a> 變更追蹤如何處理資料庫的變更  
  某些使用變更追蹤的應用程式會使用另一個資料存放區來執行雙向同步處理。 也就是說，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中進行的變更會在其他資料存放區中更新，而在其他存放區中進行的變更則會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中更新。  
   
  當某個應用程式使用另一個資料存放區的更新來更新本機資料庫時，此應用程式就必須執行下列作業：  
@@ -414,7 +414,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  當快照集交易啟動之後，快照集交易內所更新的資料列有可能已經在另一個交易內更新。 在此情況下，將會發生快照集隔離更新衝突，而且會導致交易結束。 如果發生這種情況，請重試更新。 然後，這會讓變更追蹤衝突得以偵測到，而且不會變更任何資料列。  
   
-##  <a name="DataRestore"></a> 變更追蹤和資料還原  
+##  <a name="change-tracking-and-data-restore"></a><a name="DataRestore"></a> 變更追蹤和資料還原  
  需要同步處理的應用程式必須考慮已啟用變更追蹤的資料庫還原成舊版資料的情況。 當容錯移轉到非同步資料庫鏡像，或是當使用記錄傳送而發生失敗時，從備份還原資料庫之後可能會發生此情況。 下列案例說明這個問題：  
   
 1.  資料表 T1 有進行變更追蹤，此資料表的最小有效版本為 50。  

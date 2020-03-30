@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87ad093d5be6f4fa394e934e6c0d88796a22e196
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401657"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>記憶體內部 OLTP 與記憶體最佳化
@@ -84,7 +84,7 @@ ms.locfileid: "74401657"
   
 -   [記憶體內部 OLTP 部落格](https://go.microsoft.com/fwlink/?LinkId=311696)  
 
-## <a name="anchorname-17minute-video"></a>17 分鐘的影片，已建立索引
+## <a name="17-minute-video-indexed"></a><a name="anchorname-17minute-video"></a>17 分鐘的影片，已建立索引
 
 - _影片標題：_ &nbsp; **SQL Server 2016 中的記憶體內部 OLTP**
 - _發佈日期：_ &nbsp; 2019-03-10，`YouTube.com` 上。
@@ -103,7 +103,7 @@ ms.locfileid: "74401657"
 2. 接下來我們會看到正在建立資料表記憶體最佳化版本，並在 SQL Server Management Studio (SSMS.exe) 中按幾下以進行填入的過程。
 3. 接著，會使用經記憶體最佳化的資料表再次執行示範。 我們可以測量到速度上的大幅改善。
 
-### <a name="anchorname-index-17minute-video"></a>影片中各區段的索引
+### <a name="index-to-each-section-in-the-video"></a><a name="anchorname-index-17minute-video"></a>影片中各區段的索引
 
 | 時間標記連結 | 區段標題 |
 | :------------- | :------------ |

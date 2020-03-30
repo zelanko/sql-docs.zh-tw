@@ -117,7 +117,7 @@ RAISERROR ( { msg_str | @local_variable }
 |x 或 X|不帶正負號的十六進位|  
   
 > [!NOTE]  
->  這些類型規格的基礎乃是原本為 C 標準程式庫中 **printf** 函數所定義的規格。 用於 RAISERROR 訊息字串的類型規格對應到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料類型，而用於 **printf** 的規格對應到 C 語言資料類型。 當 **沒有類似於相關聯 C 資料類型的資料類型時，RAISERROR 不支援用於**printf[!INCLUDE[tsql](../../includes/tsql-md.md)] 的類型規格。 例如，RAISERROR 不支援指標的 *%p* 規格，因為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 沒有指標資料類型。  
+>  這些類型規格的基礎乃是原本為 C 標準程式庫中 **printf** 函數所定義的規格。 用於 RAISERROR 訊息字串的類型規格對應到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料類型，而用於 **printf** 的規格對應到 C 語言資料類型。 當 [!INCLUDE[tsql](../../includes/tsql-md.md)] 沒有類似於相關聯 C 資料類型的資料類型時，RAISERROR 不支援用於 **printf** 的類型規格。 例如，RAISERROR 不支援指標的 *%p* 規格，因為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 沒有指標資料類型。  
   
 > [!NOTE]  
 >  若要將某個值轉換為 [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** 資料類型，請指定 **%I64d**。  

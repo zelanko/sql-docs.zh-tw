@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558023"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全記憶體保護區的 Always Encrypted
@@ -139,7 +139,7 @@ SQL Server 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中
 - 搭配啟用記憶體保護區的 CEK 使用隨機加密來加密資料行，可能會外洩儲存在資料行中資料的順序，因為這類資料行支援範圍比較。 例如，若包含員工薪資的加密資料行中具備索引，惡意 VBA 便可以掃描索引來尋找最大的加密薪資值，並識別薪資最高的人員 (假設人員的名稱未加密的話)。 
 - 若您使用 Always Encrypted 來保護敏感性資料，使其不受未獲授權的 DBA 存取，請不要與 DBA 共用資料行主要金鑰或資料行加密金鑰。 DBA 可以透過利用記憶體保護區內的資料行加密金鑰快取，在無須直接存取金鑰的情況下管理加密資料行上的索引。
 
-## <a name="anchorname-1-considerations-availability-groups-db-migration"></a> 可用性群組和資料庫移轉的考量事項
+## <a name="considerations-for-availability-groups-and-database-migration"></a><a name="anchorname-1-considerations-availability-groups-db-migration"></a> 可用性群組和資料庫移轉的考量事項
 
 設定支援使用記憶體保護區進行查詢所需要的 Always On 可用性群組時，您需要確保所有裝載可用性群組中資料庫的 SQL Server 執行個體都支援使用安全記憶體保護區的 Always Encrypted 功能，並已設定記憶體保護區。 若主要資料庫支援記憶體保護區，但次要複本不支援，任何嘗試搭配安全記憶體保護區使用 Always Encrypted 功能的查詢都會失敗。
 

@@ -16,10 +16,10 @@ ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7ba560e46aaebc1aa5bc6901a3c0067fae91bdb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68085938"
 ---
 # <a name="replication-queue-reader-agent"></a>複寫佇列讀取器代理程式

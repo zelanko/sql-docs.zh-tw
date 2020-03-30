@@ -13,10 +13,10 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0e0f85e21898ccf61d7c205305fc9179edc2af4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68810584"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server 物件與版本的 DAC 支援
@@ -42,7 +42,7 @@ ms.locfileid: "68810584"
   
 -   [部署動作的其他考量](#Considerations)  
   
-##  <a name="SupportedObjects"></a> 支援的 SQL Server 物件  
+##  <a name="supported-sql-server-objects"></a><a name="SupportedObjects"></a> 支援的 SQL Server 物件  
  在撰寫或編輯資料層應用程式時，只能在其中指定支援的物件。 您無法從包含 DAC 不支援之物件的現有資料庫中擷取、註冊或匯入 DAC。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援下列 DAC 中的物件。  
   
 |||  
@@ -63,7 +63,7 @@ ms.locfileid: "68810584"
 |TYPE：使用者定義資料表類型|USER|  
 |VIEW||  
   
-##  <a name="SupportByVersion"></a> SQL Server 版本的資料層應用程式支援  
+##  <a name="data-tier-application-support-by-the-versions-of-sql-server"></a><a name="SupportByVersion"></a> SQL Server 版本的資料層應用程式支援  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本對 DAC 作業有不同的支援層級。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的所有 DAC 作業，受到該版本的所有版本支援 (例如 Standard、Enterprise、Developer 或 Evaluation)。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體支援下列 DAC 作業：  
@@ -88,7 +88,7 @@ ms.locfileid: "68810584"
   
  任何新版 DAC Framework 都可以處理使用其中一個 DAC Framework 版本所建立的 DAC 封裝或匯出檔案。 例如，您可以使用 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 或新版用戶端工具部署使用 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 用戶端工具所擷取的 DAC 封裝。  
   
-##  <a name="DeploymentLimitations"></a> 資料部署限制  
+##  <a name="data-deployment-limitations"></a><a name="DeploymentLimitations"></a> 資料部署限制  
  請注意在 SQL Server 2012 SP1 中 DAC Framework 資料部署引擎內的這些精確度限制。 這些限制適用於下列 DAC Framework 動作：部署或發行 .dacpac 檔案，以及匯入 .bacpac 檔案。  
   
 1.  在某些情況下遺失中繼資料及 sql_variant 資料行內的基底類型。 在受影響的案例中，您將會看見包含下列訊息的警告：**由 DAC Framework 部署時，不會保留 sql_variant 資料行內所使用之特定資料類型的特定屬性。**  
@@ -113,7 +113,7 @@ ms.locfileid: "68810584"
   
     -   DECIMAL、NUMERIC 基底類型：如果值的有效位數大於 28。  
   
-##  <a name="Considerations"></a> 部署動作的其他考量  
+##  <a name="additional-considerations-for-deployment-actions"></a><a name="Considerations"></a> 部署動作的其他考量  
  請注意，DAC Framework 資料部署動作有下列考量：  
   
 -   **擷取/匯出** - 使用 DAC Framework 從資料庫建立套件的動作 (例如擷取 .dacpac 檔案、匯出 .bacpac 檔案)，這些限制都不適用。 封裝中的資料為來源資料庫中資料的不失真表示法。 如果封裝中有上述的任一情況，則擷取/匯出記錄將會透過上述的訊息包含問題摘要。 這是為了警告使用者，他們所建立的封裝中可能會發生資料部署問題。 使用者也會在記錄中看到下列摘要訊息：**這些限制不會影響由 DAC Framework 建立之 DAC 套件中所儲存資料類型和值的精確度，而只適用於將 DAC 套件部署到資料庫所產生的資料類型和值。如需受影響的資料以及如何解決這個限制的詳細資訊，請參閱**[這個主題](https://go.microsoft.com/fwlink/?LinkId=267086)。  

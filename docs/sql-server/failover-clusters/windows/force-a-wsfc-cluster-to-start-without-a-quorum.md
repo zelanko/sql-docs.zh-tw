@@ -14,10 +14,10 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 078b7087669547b183f8bd34daa6c6fe0cf98cc4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258146"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>在無仲裁情況下強制啟動 WSFC 叢集
@@ -30,15 +30,15 @@ ms.locfileid: "75258146"
   
 -   **後續操作：** [後續操作：在沒有仲裁的情況下強制啟動叢集之後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
  除了明確指示的內容以外，如果您從 WSFC 叢集中的任何節點執行本主題的程序，都應該有效。  但是，如果您從打算在無仲裁情況下強制啟動的節點執行這些步驟，您可能會得到更好的結果並避免網路問題發生。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  使用者必須是屬於 WSFC 叢集之每一個節點上本機 Administrators 群組成員的網域帳戶。  
   
-##  <a name="FailoverClusterManagerProcedure"></a> 使用容錯移轉叢集管理員  
+##  <a name="using-failover-cluster-manager"></a><a name="FailoverClusterManagerProcedure"></a> 使用容錯移轉叢集管理員  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>若要在無仲裁情況下強制啟動叢集  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75258146"
   
 4.  在 [摘要] 窗格中，確認目前 [仲裁設定]  值為：**警告：叢集正以 ForceQuorum 狀態執行**。  
   
-##  <a name="PowerShellProcedure"></a> 使用 Powershell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 Powershell  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>若要在無仲裁情況下強制啟動叢集  
   
@@ -83,7 +83,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 ```  
   
-##  <a name="CommandPromptProcedure"></a> 使用 Net.exe  
+##  <a name="using-netexe"></a><a name="CommandPromptProcedure"></a> 使用 Net.exe  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>若要在無仲裁情況下強制啟動叢集  
   
@@ -103,7 +103,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> 後續操作：在沒有仲裁的情況下強制啟動叢集之後  
+##  <a name="follow-up-after-forcing-cluster-to-start-without-a-quorum"></a><a name="FollowUp"></a> 後續操作：在沒有仲裁的情況下強制啟動叢集之後  
   
 -   在讓其他節點重新於線上工作之前，您必須重新評估及重新設定 NodeWeight 值，以正確建構新的仲裁。 否則，叢集可能會再次離線。  
   
@@ -121,7 +121,7 @@ net.exe start clussvc /forcequorum
   
      [容錯移轉至記錄傳送次要 &#40;SQL Server&#41;](../../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   [檢視容錯移轉叢集的事件和記錄檔](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   

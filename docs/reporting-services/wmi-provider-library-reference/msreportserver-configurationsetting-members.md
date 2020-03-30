@@ -17,10 +17,10 @@ ms.assetid: 5e21a53a-a2f8-4b35-a8d9-5483519e3857
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 134c115e48bd578f794ecce28d770ce955622f0b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65569170"
 ---
 # <a name="msreportserver_configurationsetting-members"></a>MSReportServer_ConfigurationSetting 成員

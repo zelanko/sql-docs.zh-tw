@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: dfc30b7934a928f8e5129ad93c08275ccd7989e4
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78180055"
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>利用 OLE DB Driver for SQL Server 使用連接字串關鍵字

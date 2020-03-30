@@ -13,10 +13,10 @@ ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0230354bfe53de8c362bcdb70caa597652706ee2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293977"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>資料分析工作的設定

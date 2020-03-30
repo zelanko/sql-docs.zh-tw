@@ -10,10 +10,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6a1f903d0be82d6f5057af68dce80bda1e48238a
-ms.sourcegitcommit: 951740963d5fe9cea7f2bfe053c45ad5d846df04
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78225923"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps 工具 (預覽)

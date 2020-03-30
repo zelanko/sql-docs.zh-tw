@@ -14,17 +14,17 @@ ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 63995b32f91419ef59184251299b5238d553905a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822572"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Always On 可用性群組的 [指定可用性群組選項] 頁面
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主題描述 [指定可用性群組名稱]  頁面的選項。 本主題同時適用於 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
-##  <a name="PageOptions"></a> 指定可用性群組選項  
+##  <a name="specify-availability-group-options"></a><a name="PageOptions"></a> 指定可用性群組選項  
  **可用性群組名稱**  
  指定可用性群組的名稱。 若為新的可用性群組，請指定在 Windows Server 容錯移轉叢集 (WSFC) 之所有可用性群組中唯一的有效 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 識別碼。 可用性群組名稱的最大長度為 128 個字元。  
 
@@ -47,7 +47,7 @@ ms.locfileid: "74822572"
 
 選取資料庫頁面 (新增可用性群組精靈和加入資料庫精靈)  
   
-##  <a name="LaunchWiz"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> 相關工作  
   
 -   [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

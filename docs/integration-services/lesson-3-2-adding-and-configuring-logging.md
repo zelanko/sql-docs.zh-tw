@@ -11,10 +11,10 @@ ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e2b43837de8617af559e2a810c89115e5a3963d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71283264"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>課程 3-2：新增及設定記錄

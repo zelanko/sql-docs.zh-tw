@@ -13,10 +13,10 @@ ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 515ca03f795901327b59871b1f6d78ef81a17d92
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75241984"
 ---
 # <a name="administration-of-an-availability-group"></a>可用性群組的管理
@@ -101,7 +101,7 @@ ms.locfileid: "75241984"
   
 -   [讓可用性群組離線 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/take-an-availability-group-offline-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   **部落格：**  
   

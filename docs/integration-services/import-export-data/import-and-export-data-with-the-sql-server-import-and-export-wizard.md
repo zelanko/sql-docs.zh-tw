@@ -23,10 +23,10 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e8838c92e2af7ca79ad1aa69972e46be0a1f64c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287432"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 匯入和匯出精靈來匯入或匯出資料
@@ -45,7 +45,7 @@ ms.locfileid: "79287432"
     \- 或 \-
 -   **看到一個範例。** 若要快速查看您在一般工作階段中看到的數個畫面，請在單一頁面查看此簡單範例 - [透過匯入和匯出精靈的簡單範例開始使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。  
 
-##  <a name="wizardSources"></a> 可以使用哪些資料來源與目的地？  
+##  <a name="what-sources-and-destinations-can-i-use"></a><a name="wizardSources"></a> 可以使用哪些資料來源與目的地？  
  [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 可以在下列資料表列出的資料來源中來回複製資料。 若要連線至這些資料來源的一部分，您可能必須要下載並安裝其他檔案。
  
 | 資料來源 | 必須下載其他檔案嗎？ |
@@ -87,7 +87,7 @@ ms.locfileid: "79287432"
 > [!TIP]
 > 在精靈的任何頁面或對話方塊中點選 F1 鍵，以查看目前頁面的文件。   
   
-##  <a name="wizardSSIS"></a> 精靈使用 SQL Server Integration Services (SSIS)  
+##  <a name="the-wizard-uses-sql-server-integration-services-ssis"></a><a name="wizardSSIS"></a> 精靈使用 SQL Server Integration Services (SSIS)  
  精靈使用 SQL Server Integration Services (SSIS) 複製資料。 SSIS 是擷取、轉換及載入資料 (ETL) 的工具。 精靈的頁面會使用一些 SSIS 語言。
   
  在 SSIS 中，基本的單位就是 **封裝**。 當您在精靈的頁面間移動並指定選項時，精靈會在記憶體中建立 SSIS 封裝。    

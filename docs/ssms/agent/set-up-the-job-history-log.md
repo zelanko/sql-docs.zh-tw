@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7d8ff3c1350bac2331ab6e895804e735318ba049
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245811"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
@@ -36,12 +36,12 @@ ms.locfileid: "75245811"
   
 -   **若要使用下列項目設定作業記錄：** [SQL Server Management Studio](#SSMS)  
   
-## <a name="BeforeYouBegin"></a>開始之前  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>開始之前  
   
-### <a name="Security"></a>安全性  
+### <a name="security"></a><a name="Security"></a>安全性  
 如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
-## <a name="SSMS"></a>使用 SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>使用 SQL Server Management Studio  
 **若要設定作業記錄**  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  

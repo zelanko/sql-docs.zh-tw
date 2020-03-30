@@ -47,10 +47,10 @@ author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 35ce03a8619eada5480d0cd656f20946bb11a11c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75924959"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
@@ -644,12 +644,12 @@ ALTER INDEX 無法用來重新進行索引的分割區，或將它移到另一�
 > [!IMPORTANT]
 > 如果索引所在的檔案群組離線或設為唯讀，便無法重新組織或重建索引。 當指定了 ALL 關鍵字，且有一個或多個索引在離線或唯讀檔案群組中，陳述式會失敗。  
   
-## <a name="rebuilding-indexes"></a> 重建索引  
+## <a name="rebuilding-indexes"></a><a name="rebuilding-indexes"></a> 重建索引  
 重建索引會卸除和重新建立索引。 這會移除片段；根據指定的或現有的填滿因數設定壓縮頁面來收回磁碟空間，以及重新排序連續頁面中的索引資料列。 當指定 ALL 時，會在單一交易中卸除和重建資料表的所有索引。 不需要事先卸除外部索引鍵條件約束。 當重建含有 128 個或更多範圍的索引時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會延遲取消配置實際的頁面，也會延遲其關聯鎖定，直到認可交易之後。  
  
 如需詳細資訊，請參閱 [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。 
   
-## <a name="reorganizing-indexes"></a> 重新組織索引
+## <a name="reorganizing-indexes"></a><a name="reorganizing-indexes"></a> 重新組織索引
 重新組織索引所用的系統資源最少。 它會實際重新排序分葉層級的頁面，使它們由左至右符合分葉節點的邏輯順序，以重新組織資料表和檢視表之叢集和非叢集索引的分葉層級。 重新組織也會壓縮索引頁面。 壓縮是以現有填滿因數值為基礎。 
   
 當指定 `ALL` 時，會重新組織資料表的叢集和非叢集關聯式索引及 XML 索引。 當指定 ALL 時，適用某些限制，請參閱本文＜引數＞一節中的 ALL 定義。  
@@ -659,7 +659,7 @@ ALTER INDEX 無法用來重新進行索引的分割區，或將它移到另一�
 > [!IMPORTANT]
 > 若為具有已排序叢集資料行存放區索引的 Azure SQL 資料倉儲資料表，則 `ALTER INDEX REORGANIZE` 不會重新排序資料。 若要重新排序資料，請使用 `ALTER INDEX REBUILD`。
   
-## <a name="disabling-indexes"></a> 停用索引  
+## <a name="disabling-indexes"></a><a name="disabling-indexes"></a> 停用索引  
 停用索引可防止使用者存取索引，如果是叢集索引，則可防止使用者存取基礎資料表的資料。 索引定義會保留在系統目錄中。 停用檢視的非叢集索引或叢集索引時，會實際刪除索引資料。 停用叢集索引可防止存取資料，資料仍會保留在 B 型樹狀目錄中，但不進行維護，直到卸除或重建索引為止。 若要檢視已啟用或已停用索引的狀態，請查詢 **sys.indexes** 目錄檢視中的 **is_disabled** 資料行。  
   
 如果資料表在異動複寫發行集中，您便無法停用關聯於主索引鍵資料行的任何索引。 複寫需要這些索引。 若要停用索引，您必須先從發行集中卸除資料表。 如需詳細資訊，請參閱[發行資料和資料庫物件](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  
@@ -682,7 +682,7 @@ ALTER INDEX 無法用來重新進行索引的分割區，或將它移到另一�
 |ALLOW_PAGE_LOCKS = ON|套用在堆積和任何相關聯的非叢集索引上。|  
 |ALLOW_PAGE_LOCKS = OFF|完整套用在非叢集索引上。 這表示在非叢集索引上，不允許所有頁面鎖定。 在堆積上，不允許的鎖定只有頁面的共用 (S)、更新 (U) 和獨佔 (X) 鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 仍能取得意圖頁面鎖定 (IS、IU 或 IX)，供內部使用。|  
   
-## <a name="online-index-operations"></a> 線上索引作業  
+## <a name="online-index-operations"></a><a name="online-index-operations"></a> 線上索引作業  
 當重建索引且 ONLINE 選項設為 ON 時，查詢和資料修改可以使用基礎物件、資料表和相關聯的索引。 您也可以在線上重建位於單一分割區之索引的一部分。 在改變過程中，只會在非常短的時間內，保留獨佔的資料表鎖定。  
   
 索引一律是在線上重新組織。 這個過程不會長期保留鎖定，因此，不會封鎖執行中的查詢或更新。  
@@ -695,7 +695,7 @@ ALTER INDEX 無法用來重新進行索引的分割區，或將它移到另一�
   
 同時執行的所有其他線上索引作業都會失敗。 例如，您不能在相同資料表上，同時重建兩個或更多索引，或在相同資料表上重建現有索引時，建立新的索引。  
 
-### <a name="resumable-indexes"></a> 可繼續的索引作業
+### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a> 可繼續的索引作業
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 

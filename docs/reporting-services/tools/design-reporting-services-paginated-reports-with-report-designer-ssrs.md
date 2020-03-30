@@ -11,10 +11,10 @@ ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e4cfac1ba56647ae0218242d0fb9228a3e80579
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286162"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Reporting Services 分頁的報表與報表設計工具 (SSRS) 的設計
@@ -37,7 +37,7 @@ ms.locfileid: "79286162"
  使用本主題中的資訊，為 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 方案中的單一報表專案設計分頁報表和相關項目。 如需 SQL Server Data Tools 中方案和多個專案的詳細資訊，請參閱 [SQL Server Data Tools 中的 Reporting Services](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)。  
 
   
-##  <a name="bkmk_SharedDataSources"></a> Shared Data Sources  
+##  <a name="shared-data-sources"></a><a name="bkmk_SharedDataSources"></a> Shared Data Sources  
  使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 定義及部署報表方案的共用資料來源。 透過使用 **OverwriteDataSources** 和 **TargetDataSourceFolder** 屬性，即可從專案中的其他項目獨立部署共用資料來源。 如需詳細資訊，請參閱[設定部署屬性 &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)。  
   
  在報表設計師中，可在 [報表資料] 窗格和 [方案總管] 中工作，以定義用於報表的資料來源。 如需詳細資訊，請參閱 [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)。 您無法使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 開啟已發行至報表伺服器或 SharePoint 網站的資料來源，但不包含在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 方案中。 針對該功能，請使用[報表產生器撰寫環境 &#40;SSRS&#41;](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md)。  
@@ -46,14 +46,14 @@ ms.locfileid: "79286162"
   
  如需詳細資訊，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
    
-##  <a name="bkmk_SharedDatasets"></a> 共用資料集  
+##  <a name="shared-datasets"></a><a name="bkmk_SharedDatasets"></a> 共用資料集  
  使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 定義及部署報表方案的共用資料集。 透過使用 **OverwriteDatasets** 和 **TargetDatasetFolder** 屬性，即可從專案中的其他項目獨立部署共用資料集。 如需詳細資訊，請參閱[設定部署屬性 &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)。  
   
  在報表設計師中，可在 [報表資料] 窗格和 [方案總管] 中工作，以定義用於報表的共用資料集。 如需詳細資訊，請參閱 [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)。 您無法使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 從報表伺服器或 SharePoint 網站直接開啟已發行的資料集。 針對該功能，請使用共用資料集模式中的[報表產生器撰寫環境 &#40;SSRS&#41;](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md)。  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 是一個用戶端工具。 您可以使用查詢設計工具以協助本機建立及測試預覽中的查詢結果。 部署後，您可以從共用資料來源和所根據的報表獨立管理共用資料集。 如需詳細資訊，請參閱[報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)、[查詢設計工具 &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md) 和[管理共用資料集](../../reporting-services/report-data/manage-shared-datasets.md)。  
   
-##  <a name="bkmk_Reports"></a> 分頁報表  
+##  <a name="paginated-reports"></a><a name="bkmk_Reports"></a> 分頁報表  
 分頁報表是儲存在報表專案中的檔案。 報表可用為獨立報表、子報表或主報表中鑽研動作的目標。 透過使用 **TargetReportFolder** 和其他屬性，即可從專案中的其他項目獨立部署報表。 如需詳細資訊，請參閱[設定部署屬性 &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)。  
   
 > [!NOTE]  
@@ -84,18 +84,18 @@ ms.locfileid: "79286162"
   
      如需詳細資訊，請參閱[報表定義語言 &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)。  
   
-##  <a name="bkmk_ReportParts"></a> 報表組件  
+##  <a name="report-parts"></a><a name="bkmk_ReportParts"></a> 報表組件  
  在報表設計師中，建立專案的資料表、圖表及其他分頁報表項目之後，您可以將它們當作 *「報表組件」* 發行至報表伺服器或與報表伺服器整合的 SharePoint 網站，以供您和其他人員在其他報表中重複使用這些組件。 如需詳細資訊，請參閱[報表設計師中的報表組件 &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
   
  透過使用 **TargetReportPartFolder** 和其他屬性，即可從專案中的其他項目獨立部署報表組件。 如需詳細資訊，請參閱[設定部署屬性 &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)。  
   
-##  <a name="bkmk_Resources"></a> 資源  
+##  <a name="resources"></a><a name="bkmk_Resources"></a> 資源  
  您可以將檔案加入與報表相關但不是由報表伺服器進行處理的專案。 例如，您可以加入圖片影像或空間資料的 ESRI 形狀檔。 如需詳細資訊，請參閱[資源](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources)。  
  
-##  <a name="bkmk_ReportLayout"></a> Paginated Report Layout  
+##  <a name="paginated-report-layout"></a><a name="bkmk_ReportLayout"></a> Paginated Report Layout  
  若要建立報表配置，請將報表項目和資料區從 [工具箱] 拖曳至設計介面，然後排列它們。 將資料集欄位拖曳至設計介面上的項目，即可將資料加入報表。 若要在 Tablix 資料區中組織群組的資料，請將資料集欄位拖曳至 [群組] 窗格。 因為報表撰寫工具是建立報表定義很重要的方法，所以報表設定的方法在報表建立器和報表設計師之間會相當類似。  
    
-##  <a name="bkmk_Preview"></a> Preview a Paginated Report  
+##  <a name="preview-a-paginated-report"></a><a name="bkmk_Preview"></a> Preview a Paginated Report  
  使用 **[預覽]** 確認報表資料和配置設計。 預覽報表時，報表處理器會驗證報表定義和運算式語法，並列出 [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) 視窗中的問題。  
   
 > [!NOTE]  
@@ -138,7 +138,7 @@ ms.locfileid: "79286162"
   
     -   報表配置需要修改列印格式才能清楚地閱讀。  
    
-##  <a name="bkmk_SaveandDeploy"></a> Save and Deploy Paginated Reports  
+##  <a name="save-and-deploy-paginated-reports"></a><a name="bkmk_SaveandDeploy"></a> Save and Deploy Paginated Reports  
  在報表設計師中，您可以本機儲存報表和其他專案檔案，或將它們部署至報表伺服器或 SharePoint 網站。 您可以根據所設定的部署屬性，獨立或同時部署共用資料來源、共用資料集、報表、報表資源及報表組件。 如需詳細資訊，請參閱 [Configuration and Deployment Properties](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties)。  
   
  在報表設計師中，請務必了解您設計的報表是使用報表定義結構描述，且此報表定義結構描述是由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中目前版本的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]所支援。 當您針對特定報表伺服器或 SharePoint 網站設定專案部署屬性並儲存報表時，報表設計師會將報表定義儲存至結構描述中的組建目錄，且此結構描述符合目標報表伺服器上的版本。 若要建立可在下層報表伺服器上發行的報表，報表設計師則會卸除不存在於目標結構描述中的報表項目。 這個動作會自動發生，而不需要提示。 如果出現此錯誤，原始的報表定義會保留在專案資料夾中。 部署的已修改報表定義位於組建資料夾中。  
@@ -159,7 +159,7 @@ ms.locfileid: "79286162"
 ### <a name="export-a-paginated-report-to-a-different-file-format"></a>將分頁報表匯出至不同的檔案格式  
  報表可以匯出為各種格式，而且這些格式會影響隨選報表配置與互動式功能如何運作。 如需各種輸出格式之設計考量的詳細資訊，請參閱[匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
    
-##  <a name="bkmk_ReportValidationandErrorLevels"></a> 報表驗證和錯誤等級  
+##  <a name="report-validation-and-error-levels"></a><a name="bkmk_ReportValidationandErrorLevels"></a> 報表驗證和錯誤等級  
  預覽前和部署期間，將會驗證報表。 建立報表時，可能會發生一些建立問題。 例如，報表包含的字串 (如運算式或查詢) 可能會與專案組態所指定的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本不相容。  
   
  使用 ErrorLevel 屬性管理建立警告與錯誤。 ErrorLevel 屬性所包含的值可以從 0 到 4 (包含)。 這個值會判斷回報為錯誤的建立問題，以及回報為警告的建立問題。 預設值為 2。 這些警告和錯誤會寫入 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [[輸出]](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) 視窗中。  

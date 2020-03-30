@@ -13,10 +13,10 @@ ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 10ead33635c1fc1e263252ec3ae0a3f86b173679
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822097"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>[加入 IP 位址] 對話方塊 (SQL Server Management Studio)
@@ -26,7 +26,7 @@ ms.locfileid: "74822097"
 ## <a name="prerequisites"></a>Prerequisites  
  開始將子網路加入至可用性群組接聽程式之前，請務必知道每個子網路的 IP 位址，以及 IPv4 位址的子網路遮罩。  
   
-##  <a name="PageOptions"></a> 加入 IP 位址選項  
+##  <a name="add-ip-address-options"></a><a name="PageOptions"></a> 加入 IP 位址選項  
  **子網路**  
  使用此下拉式清單，為您要加入至可用性群組接聽程式的子網路選取位址。 根據預設，子網路擁有 IPv4 位址和 IPv6 位址。 第一次使用 **[加入 IP 位址]** 對話方塊時， **[子網路]** 下拉式清單會為裝載可用性群組之複本的每個子網路顯示這兩種子網路位址。 若要將給定的子網路加入至接聽程式，請選取其中一個子網路位址。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74822097"
  **取消**  
  按一下以取消選取，並返回 [新增可用性群組接聽程式]  對話方塊或 [接聽程式]  索引標籤，而不加入任何子網路的靜態 IP 位址。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   

@@ -17,10 +17,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71713274"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>為 Always On 可用性群組設定分散式交易
@@ -102,7 +102,7 @@ ALTER AVAILABILITY GROUP MyaAG
       );
 ```
 
-## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>分散式交易 - 技術概念
+## <a name="distributed-transactions---technical-concepts"></a><a name="distTran"/>分散式交易 - 技術概念
 
 分散式交易跨越二或多個資料庫。 身為交易管理員，DTC 會協調 SQL Server 執行個體和其他資料來源之間的交易。 每個 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 資料庫引擎的執行個體都可以當成資源管理員運作。 當可用性群組設定有 `DTC_SUPPORT = PER_DB` 時，資料庫可以當成資源管理員運作。 如需詳細資訊，請參閱 MS DTC 文件集。
 

@@ -14,10 +14,10 @@ ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: cb62bd419c08b1562a6b636685e360501f574ae3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245013"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>連接到伺服器 (連接屬性頁面) Database Engine

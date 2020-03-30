@@ -11,10 +11,10 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908445"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解決記憶體不足問題
@@ -31,7 +31,7 @@ ms.locfileid: "72908445"
 |[解決有足夠的記憶體可用但卻記憶體不足所造成的頁面配置失敗](#bkmk_PageAllocFailure)|若您收到錯誤訊息：「不允許資料庫 '\<資料庫名稱>  ' 的頁面配置，因為資源集區 '\<資源集區名稱>  ' 中的記憶體不足」，該怎麼辦。 ...」(前提是可用的記憶體足夠供執行作業)。|
 |[在 VM 環境中使用記憶體內部 OLTP 的最佳做法](#bkmk_VMs)|在虛擬環境中使用記憶體內部 OLTP 的注意事項。|
   
-##  <a name="bkmk_resolveRecoveryFailures"></a> 解決由於 OOM 所造成的資料庫還原失敗  
+##  <a name="resolve-database-restore-failures-due-to-oom"></a><a name="bkmk_resolveRecoveryFailures"></a> 解決由於 OOM 所造成的資料庫還原失敗  
  當您嘗試還原資料庫時可能會收到錯誤訊息：「資料庫 ' *\<databaseName>* ' 的還原作業失敗，因為資源集區 ' *\<resourcePoolName>* ' 中的記憶體不足。」這表示伺服器沒有足夠的可用記憶體來還原資料庫。 
    
 您還原資料庫的目標伺服器針對資料庫備份的記憶體最佳化資料表必須有足夠的可用記憶體，否則資料庫將不會恢復連線，並會標記為可疑。  
@@ -70,19 +70,19 @@ ms.locfileid: "72908445"
 -   增加 **最大伺服器記憶體**。  
     如需設定**最大伺服器記憶體**的資訊，請參閱[伺服器記憶體伺服器設定選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md)。  
   
-##  <a name="bkmk_recoverFromOOM"></a> 解決低記憶體或 OOM 狀況對於工作負載的影響  
+##  <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a><a name="bkmk_recoverFromOOM"></a> 解決低記憶體或 OOM 狀況對於工作負載的影響  
  避免發生低記憶體或 OOM (記憶體不足) 的情況才是最上策。 良好的規劃和監視有助於避免 OOM 情況。 不過，最佳的規劃永遠無法預測實際發生的狀況，而最後可能會導致低記憶體或 OOM。 有兩個步驟可以從 OOM 中復原：  
   
 1.  [開啟 DAC (專用管理員連接)](#bkmk_openDAC)  
   
 2.  [採取更正動作](#bkmk_takeCorrectiveAction)  
 
-###  <a name="bkmk_openDAC"></a> 開啟 DAC (專用管理員連接)  
+###  <a name="open-a-dac-dedicated-administrator-connection"></a><a name="bkmk_openDAC"></a> 開啟 DAC (專用管理員連接)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供專用管理員連接 (DAC)。 即使伺服器對其他用戶端連接沒有回應，系統管理員也可以使用 DAC 來存取 SQL Server 資料庫引擎的執行中執行個體，以針對伺服器上的問題進行疑難排解。 您可以透過 `sqlcmd` 公用程式與 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來存取 DAC。  
   
  如需透過 SSMS 或 `sqlcmd` 使用 DAC 的指導，請參閱[資料庫管理員的診斷連線](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。  
   
-###  <a name="bkmk_takeCorrectiveAction"></a> 採取更正動作  
+###  <a name="take-corrective-action"></a><a name="bkmk_takeCorrectiveAction"></a> 採取更正動作  
  若要解決 OOM 狀況，您必須透過降低使用量，釋出現有的記憶體，或是將更多記憶體提供給記憶體中的資料表。  
   
 #### <a name="free-up-existing-memory"></a>釋出現有的記憶體  
@@ -135,14 +135,14 @@ GO
 >  如果伺服器是在 VM 上執行，而且不是專用的，請將 MIN_MEMORY_PERCENT 與 MAX_MEMORY_PERCENT 設為相同值。   
 > 如需詳細資訊，請參閱[在 VM 環境中使用記憶體內部 OLTP 的最佳做法](#bkmk_VMs)主題。  
   
-##  <a name="bkmk_PageAllocFailure"></a> 解決有足夠的記憶體可用但卻記憶體不足所造成的頁面配置失敗  
+##  <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a><a name="bkmk_PageAllocFailure"></a> 解決有足夠的記憶體可用但卻記憶體不足所造成的頁面配置失敗  
  若在可用的實體記憶體足以配置分頁時，於錯誤記錄檔中收到錯誤訊息 `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'https://go.microsoft.com/fwlink/?LinkId=330673' for more information.`，可能是因為停用 Resource Governor 所致。 若資源管理員已停用，MEMORYBROKER_FOR_RESERVE 會誘發不實的記憶體壓力。  
   
  為了解決此問題，您必須啟用資源管理員。  
   
  如需使用物件總管、資源管理員屬性或 Transact-SQL 來啟用資源管理員之限制事項的資訊和指引，請參閱 [啟用資源管理員](../../relational-databases/resource-governor/enable-resource-governor.md) 。  
  
-## <a name="bkmk_VMs"></a> 在 VM 環境中使用記憶體內部 OLTP 的最佳做法
+## <a name="best-practices-using-in-memory-oltp-in-a-vm-environment"></a><a name="bkmk_VMs"></a> 在 VM 環境中使用記憶體內部 OLTP 的最佳做法
 伺服器虛擬化技術可協助您降低 IT 資本和作業成本，並透過改善的應用程式佈建、維護、可用性和備份/復原程序，達到更高的 IT 效率。 隨著最近的技術進步，可以更輕易地運用虛擬化技術，將複雜的資料庫工作負載合併。 本主題涵蓋在虛擬化環境中使用 SQL Server 記憶體內部 OLTP 的最佳做法。
 
 ### <a name="memory-pre-allocation"></a>記憶體預先配置

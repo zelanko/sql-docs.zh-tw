@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc2d749f3963f0828a70bc1506581f5bd2a35a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75246234"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 和 varchar (Transact-SQL)
@@ -74,7 +74,7 @@ ms.locfileid: "75246234"
 > 每個非 null 的 varchar(max) 或 nvarchar(max) 資料行都需要額外 24 位元組的固定配置，而不利於排序作業期間 8,060 位元組的資料列限制。 因此可能會對資料表中可建立的非 null varchar(max) 或 nvarchar(max) 資料行數目建立隱含限制。
 建立資料表時 (高於最大資料列大小超過允許上限 8,060 位元組所引發的一般警告) 或插入資料時，不會提供任何特殊錯誤。 如此大型的資料列可能會在某些一般作業 (如叢集索引鍵更新，或排序整個資料行集) 期間造成錯誤 (如錯誤 512)。
 
-## <a name="_character"></a> 轉換字元資料
+## <a name="converting-character-data"></a><a name="_character"></a> 轉換字元資料
 
 將字元運算式轉換成不同大小的字元資料類型時，對新資料類型而言太大的值會被截斷。 **uniqueidentifier** 類型因為轉換字元運算式之故，視為字元類型；因此會受到轉換成字元類型之截斷規則的影響。 請參閱稍後的＜範例＞一節。
 

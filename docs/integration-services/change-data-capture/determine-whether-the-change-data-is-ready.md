@@ -13,10 +13,10 @@ ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 025961e39a4f0b1beb0588f0dc7ef2c668bd09a2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294774"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>判斷變更資料是否就緒

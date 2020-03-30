@@ -14,10 +14,10 @@ ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7e0e50e22fc257b3a8429e556fe7fd2cec2c97d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68017497"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>開始使用 Always On 可用性群組
@@ -26,21 +26,21 @@ ms.locfileid: "68017497"
 本主題介紹設定 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體，以支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 建立、管理及監視可用性群組的步驟。  
   
   
-##  <a name="RecommendedReading"></a> 建議閱讀資料  
+##  <a name="recommended-reading"></a><a name="RecommendedReading"></a> 建議閱讀資料  
  在您建立第一個可用性群組之前，建議您先閱讀下列主題：  
   
 -   [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
 -   [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
-##  <a name="ConfigSI"></a> Configuring an Instance of SQL Server to Support Always On Availability Groups  
+##  <a name="configuring-an-instance-of-sql-server-to-support-always-on-availability-groups"></a><a name="ConfigSI"></a> Configuring an Instance of SQL Server to Support Always On Availability Groups  
   
 ||步驟|連結|  
 |------|----------|-----------|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|**啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。** 您必須在要參與可用性群組的每一個 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 執行個體上，啟用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 功能。<br /><br /> **必要條件：** 主機電腦必須是 Windows Server 容錯移轉叢集 (WSFC) 節點。<br /><br /> 如需其他必要條件的資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。|[啟用和停用 AlwaysOn 可用性群組](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|**建立資料庫鏡像端點 (如果沒有)。** 確定每個伺服器執行個體擁有 [資料庫鏡像端點](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)： 伺服器執行個體使用這個端點，接收其他伺服器執行個體的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 連接。|若要判斷資料庫鏡像端點是否存在： <br />                    [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)<br /><br /> **Windows 驗證**：  若要建立資料庫鏡像端點，請使用：<br /><br /> [新增可用性群組精靈](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Transact-SQL](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [SQL Server PowerShell](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)<br /><br /> **憑證驗證**： 使用[Transact-SQL](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)建立資料庫鏡像端點|  
   
-##  <a name="ConfigAG"></a> Creating and Configuring a New Availability Group  
+##  <a name="creating-and-configuring-a-new-availability-group"></a><a name="ConfigAG"></a> Creating and Configuring a New Availability Group  
   
 ||步驟|連結|  
 |------|----------|-----------|  
@@ -52,7 +52,7 @@ ms.locfileid: "68017497"
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|**將接聽程式的 DNS 主機名稱提供給應用程式開發人員。**  開發人員需要在連接字串中指定這個 DNS 名稱，以便將連線要求導向可用性群組接聽程式。 如需詳細資訊，請參閱[可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。|「後續操作：建立可用性群組接聽程式之後＞(位於[建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md) 中)|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|**設定執行備份作業的位置。**  如果您要在次要資料庫上執行備份，則必須建立備份作業指令碼，以便將自動備份喜好設定納入考量。 在裝載可用性群組之可用性複本的每一個伺服器執行個體上，為可用性群組中的每個資料庫建立指令碼。|「後續操作：設定次要複本的備份之後＞(位於[設定可用性複本的備份 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md) 中)|  
   
-##  <a name="ManageAGsEtc"></a> Managing Availability Groups, Replicas, and Databases  
+##  <a name="managing-availability-groups-replicas-and-databases"></a><a name="ManageAGsEtc"></a> Managing Availability Groups, Replicas, and Databases  
   
 > [!NOTE]  
 >  如需可用性群組和複本屬性的資訊，請參閱 [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)。  
@@ -72,7 +72,7 @@ ms.locfileid: "68017497"
 |疑難排解加入檔案作業。 如果主要資料庫和次要資料庫具有不同的檔案路徑，則可能需要這個作業。|[疑難排解失敗的加入檔案作業](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|  
 |在可用性複本屬性之後。|[變更可用性模式](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)<br /><br /> [變更容錯移轉模式](../../../database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md)<br /><br /> [設定備份優先權 (及自動備份喜好設定)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)<br /><br /> [設定唯讀存取](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)<br /><br /> [設定唯讀路由](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)<br /><br /> [變更工作階段逾時期限](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)|  
   
-##  <a name="MonitorAGsEtc"></a> 監視可用性群組  
+##  <a name="monitoring-availability-groups"></a><a name="MonitorAGsEtc"></a> 監視可用性群組  
  若要監視 AlwaysOn 可用性群組的屬性和狀態，您可以使用以下工具。  
   
 |工具|簡短描述|連結|  
@@ -84,7 +84,7 @@ ms.locfileid: "68017497"
 |系統監視器|**SQLServer:Availability Replica** 效能物件含有效能計數器，可報告可用性複本的相關資訊。|[SQL Server、可用性複本](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |系統監視器|**SQLServer:Database Replica** 效能物件含有效能計數器，可報告給定次要複本上次要資料庫的相關資訊。<br /><br /> SQL Server 中的 **SQLServer:Databases** 物件含有效能計數器，可監視交易記錄活動以及其他項目。 下列計數器與監視可用性資料庫上的交易記錄活動特別相關：**Log Flush Write Time (ms)** 、**Log Flushes/sec**、**Log Pool Cache Misses/sec**、**Log Pool Disk Reads/sec** 和 **Log Pool Requests/sec**。|[SQL Server 的 Database Replica](../../../relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   **影片 - Always On 簡介：** [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1:Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (Microsoft SQL Server Code-Named "Denali" Always On 系列第 1 部分：新一代高可用性解決方案簡介)  
   

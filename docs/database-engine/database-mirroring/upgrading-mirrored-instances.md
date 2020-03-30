@@ -15,10 +15,10 @@ ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2d1b8c8060309cfb2f5137e5b1ea4ad2eaf31d1a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68050627"
 ---
 # <a name="upgrading-mirrored-instances"></a>升級鏡像執行個體

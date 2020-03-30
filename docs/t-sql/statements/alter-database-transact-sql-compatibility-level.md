@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1980e9c96e568352fe616b6de8a6c7320c3d6c86
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288662"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
@@ -121,7 +121,7 @@ SELECT name, compatibility_level FROM sys.databases;
 ## <a name="compatibility-levels-and-stored-procedures"></a>相容性層級和預存程序
 當執行預存程序時，它會使用定義所在之資料庫的目前相容性層級。 當資料庫的相容性設定改變時，也會同時自動重新編譯它的所有預存程序。
 
-## <a name="backwardCompat"></a> 使用相容性層級來提供回溯相容性
+## <a name="using-compatibility-level-for-backward-compatibility"></a><a name="backwardCompat"></a> 使用相容性層級來提供回溯相容性
 [資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)設定提供與 [!INCLUDE[tsql](../../includes/tsql-md.md)] 相關之舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的回溯相容性，以及僅針對指定資料庫的查詢最佳化行為，而不是針對整部伺服器。  
 
 從相容性模式 130 開始，任何會影響修正和功能的新查詢計劃只會刻意新增至新的相容性層級。 這種作法是為了將升級期間因新的查詢最佳化行為而可能引發的查詢計劃變更，所導致效能降低而產生的風險降到最低。      

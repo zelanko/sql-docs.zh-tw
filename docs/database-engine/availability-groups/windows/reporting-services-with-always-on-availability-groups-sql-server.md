@@ -44,7 +44,7 @@ ms.locfileid: "75243615"
  如需其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]需求的資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 功能不支援 **組態檔，例如**RSreportserver.config[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 如果您對其中一個報表伺服器的組態檔進行手動變更，就必須手動更新複本。  
+>  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能不支援 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態檔，例如 **RSreportserver.config**。 如果您對其中一個報表伺服器的組態檔進行手動變更，就必須手動更新複本。  
   
 ##  <a name="report-data-sources-and-availability-groups"></a><a name="bkmk_reportdatasources"></a> 報表資料來源和可用性群組  
  以 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 為基礎之 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 資料來源的行為可能會因系統管理員設定 AG 環境的方式而異。  
@@ -67,9 +67,9 @@ ms.locfileid: "75243615"
   
  報表的建立和發行方式將會決定您可以編輯連接字串的位置：  
   
--   **原生模式：** 針對已經發行至原生模式報表伺服器的共用的資料來源和報表，請使用 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)] 。  
+-   **原生模式：** 針對已經發行至原生模式報表伺服器的共用資料來源和報表，請使用[!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)]。  
   
--   **SharePoint 模式** ：您可以針對已經發行至 SharePoint 伺服器的報表使用文件庫中的 SharePoint 組態頁面。  
+-   **SharePoint 模式：** 您可以針對已經發行至 SharePoint 伺服器的報表使用文件庫中的 SharePoint 設定頁面。  
   
 -   **報表設計：** 您可以在建立新報表時使用 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]。 如需詳細資訊，請參閱本主題的＜報表設計＞一節。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "75243615"
   
 -   如需有關可用性群組接聽程式的詳細資訊，請參閱[建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
- **考量** ：接收來自主要複本的資料變更時，次要複本通常會發生延遲。 下列因素可能會影響主要與次要複本之間的更新延遲：  
+ **考量因素：** 接收來自主要複本的資料變更時，次要複本通常會發生延遲。 下列因素可能會影響主要與次要複本之間的更新延遲：  
   
 -   次要複本的數目。 延遲會隨著加入至組態的每個次要複本而增加。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "75243615"
   
 -   **本機預覽：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 會使用 .Net Framework 4.0 並且支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 連接字串屬性。  
   
--   **遠端或伺服器模式預覽：** 如果將報表發行至報表伺服器或在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)]中使用預覽功能之後，您看見類似下面的錯誤，就表示您正在根據報表伺服器預覽報表，而且報表伺服器尚未安裝 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 .Net Framework 3.5 SP1 Hotfix。  
+-   **遠端或伺服器模式預覽：** 如果將報表發行至報表伺服器或在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 中使用預覽功能之後，您看見類似下面的錯誤，就表示您正在根據報表伺服器預覽報表，而且報表伺服器尚未安裝 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 .Net Framework 3.5 SP1 Hotfix。  
   
 > **錯誤訊息：** 「不支援關鍵字 'applicationintent'」  
   
@@ -139,13 +139,13 @@ ms.locfileid: "75243615"
   
 -   建立您的可用性群組並且設定 *「接聽程式 DNS 名稱」* (Listener DNS Name)。  
   
--   **主要複本** ：將報表伺服器資料庫設定為單一可用性群組的一部分，並且建立包含所有報表伺服器資料庫的主要複本。  
+-   **主要複本：** 將報表伺服器資料庫設定為單一可用性群組的一部分，並且建立包含所有報表伺服器資料庫的主要複本。  
   
--   **次要複本** ：建立一個或多個次要複本。 將資料庫從主要複本複製到次要複本的常見方法是使用 'RESTORE WITH NORECOVERY'，將資料庫還原至每個次要複本。 如需有關建立次要複本以及驗證資料同步處理是否運作的詳細資訊，請參閱 [Start Data Movement on an AlwaysOn Secondary Database &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md) (於 AlwaysOn 次要資料庫啟動資料移動 (SQL Server))。  
+-   **次要複本：** 建立一或多個次要複本。 將資料庫從主要複本複製到次要複本的常見方法是使用 'RESTORE WITH NORECOVERY'，將資料庫還原至每個次要複本。 如需有關建立次要複本以及驗證資料同步處理是否運作的詳細資訊，請參閱 [Start Data Movement on an AlwaysOn Secondary Database &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md) (於 AlwaysOn 次要資料庫啟動資料移動 (SQL Server))。  
   
--   **報表伺服器認證** ：您必須在次要與主要複本上建立適當的報表伺服器認證。 確切步驟主要取決於您在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 環境中使用的驗證類型：Windows [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務帳戶、Windows 使用者帳戶或 SQL Server 驗證。 如需詳細資訊，請參閱[設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+-   **報表伺服器認證：** 您必須在次要與主要複本上建立適當的報表伺服器認證。 確切步驟主要取決於您在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 環境中使用的驗證類型：Windows [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務帳戶、Windows 使用者帳戶或 SQL Server 驗證。 如需詳細資訊，請參閱[設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
--   將資料庫連接更新為使用接聽程式 DNS 名稱。 若為原生模式報表伺服器，請在 **組態管理員中變更** [報表伺服器資料庫名稱] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。 若為 SharePoint 模式，請為  **服務應用程式變更 [資料庫伺服器名稱]** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。  
+-   將資料庫連接更新為使用接聽程式 DNS 名稱。 若為原生模式報表伺服器，請在 **組態管理員中變更** [報表伺服器資料庫名稱] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。 若為 SharePoint 模式，請為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務應用程式變更 [資料庫伺服器名稱]  。  
   
 ###  <a name="steps-to-complete-disaster-recovery-of-report-server-databases"></a><a name="bkmk_steps_to_complete_failover"></a> 完成報表伺服器資料庫之災害復原的步驟  
  您必須在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 容錯移轉至次要複本之後完成下列步驟：  

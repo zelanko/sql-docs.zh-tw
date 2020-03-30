@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6b9d0c843e9a116a6d89198db22053224c2f1d19
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242848"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>升級在 Windows Server 2008/2008 R2/2012 叢集上執行的 SQL Server 執行個體

@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: b8f767a5ae8bfe691ec5cb8e4128679a6e02ec8b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75306381"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>MSSQLSERVER 的通訊協定內容 (進階索引標籤)

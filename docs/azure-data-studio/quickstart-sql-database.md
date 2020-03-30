@@ -11,13 +11,13 @@ ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
 ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957072"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>快速入門：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連線與查詢 Azure SQL 資料庫
+# <a name="quickstart-use-name-sos-to-connect-and-query-azure-sql-database"></a>快速入門：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連線與查詢 Azure SQL 資料庫
 
 在本快速入門中，您將使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連線到 Azure SQL Database 伺服器。 接著，您會執行 Transact-SQL (T-SQL) 陳述式來建立和查詢 TutorialDB d資料庫，而此資料庫會在其他 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 教學課程中使用。
 

@@ -12,10 +12,10 @@ ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 3b746c7ed116627f8fe57cdb43724c619eeb5dd4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903924"
 ---
 # <a name="disable-resource-governor"></a>停用資源管理員
@@ -26,7 +26,7 @@ ms.locfileid: "72903924"
   
 -   **若要停用 Resource Governor，請使用下列方式：** [物件總管](#RGOffObjEx)、[Resource Governor 屬性](#RGOffProp)、[Transact-SQL](#RGOffTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
  停用資源管理員會產生下列結果：  
   
 -   系統不會執行分類函數。  
@@ -43,20 +43,20 @@ ms.locfileid: "72903924"
   
 -   一旦重新啟動 SQL Server 之後，資源管理員將不會載入其組態，而是只有預設和內部工作負載群組與資源集區。  
   
-###  <a name="LimitationsRestrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制事項  
  在使用者交易中時，您無法使用 **ALTER RESOURCE GOVERNOR** 陳述式停用資源管理員。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="permissions"></a><a name="Permissions"></a> 權限  
  停用資源管理員需要 CONTROL SERVER 權限。  
   
-##  <a name="RGOffObjEx"></a> 使用物件總管停用資源管理員  
+##  <a name="disable-resource-governor-using-object-explorer"></a><a name="RGOffObjEx"></a> 使用物件總管停用資源管理員  
  **若要使用物件總管停用資源管理員**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
   
 2.  以滑鼠右鍵按一下 [資源管理員]  ，然後按一下 [停用]  。  
 
-##  <a name="RGOffProp"></a> 使用資源管理員屬性停用資源管理員  
+##  <a name="disable-resource-governor-using-resource-governor-properties"></a><a name="RGOffProp"></a> 使用資源管理員屬性停用資源管理員  
  **若要使用資源管理員屬性頁面來停用資源管理員**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
@@ -65,7 +65,7 @@ ms.locfileid: "72903924"
   
 3.  按一下 **[啟用資源管理員]** 核取方塊，確定未選取方塊，然後按一下 **[確定]** 。  
   
-##  <a name="RGOffTSQL"></a> 使用 Transact-SQL 停用資源管理員  
+##  <a name="disable-resource-governor-using-transact-sql"></a><a name="RGOffTSQL"></a> 使用 Transact-SQL 停用資源管理員  
  **若要使用 Transact-SQL 停用資源管理員**  
   
 1.  執行 **ALTER RESOURCE GOVERNOR DISABLE** 陳述式。  

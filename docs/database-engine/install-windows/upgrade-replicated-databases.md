@@ -120,7 +120,7 @@ SQL Server 的升級路徑視部署模式而有所不同。 SQL Server 在一般
 
 
   >[!NOTE]
-  > 若要減少停機時間，建議您將「並存移轉」散發者作為一個活動執行，並將「就地升級至 SQL Server 2016」作為另一個活動執行。 這可讓您採取階段式方法、降低風險，並將停機時間縮至最短。
+  > 若要減少停機時間，建議您將「並存移轉」  散發者作為一個活動執行，並將「就地升級至 SQL Server 2016」  作為另一個活動執行。 這可讓您採取階段式方法、降低風險，並將停機時間縮至最短。
 
 ## <a name="web-synchronization-for-merge-replication"></a>合併式複寫的 Web 同步處理  
  合併式複寫的 Web 同步處理選項要求，必須將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (replisapi.dll) 複製到用於同步處理之 Internet Information Services (IIS) 伺服器上的虛擬目錄。 當您設定 Web 同步處理時，「設定 Web 同步處理精靈」會將檔案複製到虛擬目錄。 如果您升級安裝在 IIS 伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，就必須將 replisapi.dll 從 COM 目錄手動複製到 IIS 伺服器上的虛擬目錄。 如需設定 Web 同步處理的詳細資訊，請參閱 [設定 Web 同步處理](../../relational-databases/replication/configure-web-synchronization.md)。  

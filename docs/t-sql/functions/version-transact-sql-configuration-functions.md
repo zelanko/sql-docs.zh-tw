@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1894f0e4aa31e8b80255fb49f30c7cfe1c1a146b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67927536"
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;Version - Transact SQL Configuration Functions
@@ -83,16 +83,16 @@ ms.locfileid: "67927536"
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-return-the-current-version-of-includessnoversionincludesssnoversion-mdmd"></a>A：傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的目前版本  
+### <a name="a-return-the-current-version-of-ssnoversion"></a>A：傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的目前版本  
  下列範例會顯示傳回目前安裝架構的版本資訊。  
   
 ```  
 SELECT @@VERSION AS 'SQL Server Version';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-return-the-current-version-of-includessdwincludesssdw-mdmd"></a>B. 傳回 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 的目前版本  
+### <a name="b-return-the-current-version-of-ssdw"></a>B. 傳回 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 的目前版本  
   
 ```  
 SELECT @@VERSION AS 'SQL Server PDW Version';  

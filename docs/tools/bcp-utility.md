@@ -29,10 +29,10 @@ ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 4aad2c9bfbd79079e96339e40d5e36a9146f3ae0
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78280895"
 ---
 # <a name="bcp-utility"></a>bcp 公用程式
@@ -441,7 +441,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-x**<a name="x"></a>  
  與 **format** 和 **-f** *format_file* 選項一起使用會產生以 XML 為基礎的格式檔案，而非預設的非 XML 格式檔案。 匯入或匯出資料時， **-x** 無法運作。 如果沒有與 **format** 和 **-f** *format_file* 一起使用，則會產生錯誤。  
 
-## 備註<a name="remarks"></a>
+## <a name="remarks"></a>備註<a name="remarks"></a>
 
 - 您可以利用 **bcp** 工具時，也會安裝 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 13.0 用戶端。 如果同時為 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 和舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]安裝工具，則根據 PATH 環境變數值順序的不同，您也可以使用舊版的 **bcp** 用戶端來取代 **bcp** 13.0 用戶端。 這個環境變數定義了 Windows 用來搜尋可執行檔的一組目錄。 若要確定您正在使用的版本，請在 Windows 命令提示字元處執行 **bcp /v** 或 **bcp -v** 命令。 如需如何在 PATH 環境變數中設定命令路徑的詳細資訊，請參閱[環境變數](https://docs.microsoft.com/windows/win32/shell/user-environment-variables) (英文) 或在 Windows 說明中搜尋環境變數。
 

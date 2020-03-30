@@ -16,10 +16,10 @@ ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 6a7d9029d775b2d1255d683e6b4c3b9d44ccdb31
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252201"
 ---
 # <a name="use-the-toolbox"></a>使用工具箱

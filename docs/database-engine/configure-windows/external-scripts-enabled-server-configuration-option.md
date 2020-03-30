@@ -34,13 +34,13 @@ ms.locfileid: "72006044"
 
     [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 支援 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的 R 語言，以及一組 R 工作站工具和連線程式庫。
 
-    在  **安裝程式期間安裝 [進階分析擴充功能]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，以啟用 R 指令碼的執行。 預設會安裝 R 語言。
+    在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式期間安裝 [進階分析擴充功能]  功能，以啟用 R 指令碼的執行。 預設會安裝 R 語言。
 
 + 針對 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 
     [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 使用與 SQL Server 2016 相同的結構，但支援 Python 語言。
 
-    在  **安裝程式期間安裝 [進階分析擴充功能]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，以啟用外部指令碼的執行。 請務必在初始安裝期間選取至少一個語言：R、Python 或兩者。 
+    在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式期間安裝 [進階分析擴充功能]  功能，以啟用外部指令碼的執行。 請務必在初始安裝期間選取至少一個語言：R、Python 或兩者。 
 
 ## <a name="additional-requirements"></a>其他需求
 

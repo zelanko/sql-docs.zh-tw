@@ -15,10 +15,10 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 9edd73f5ef01d1d3f22db78400cc3c204efe1379
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68251899"
 ---
 # <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>如何：傳送及擷取 Linux 及 macOS 中的 ASCII 資料 

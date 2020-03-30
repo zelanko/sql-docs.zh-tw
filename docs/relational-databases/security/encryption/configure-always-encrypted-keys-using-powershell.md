@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2748ffa055927670b840a17590dc4e29436deb30
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73594469"
 ---
 # <a name="provision-always-encrypted-keys-using-powershell"></a>使用 PowerShell 佈建 Always Encrypted 金鑰
@@ -27,7 +27,7 @@ ms.locfileid: "73594469"
 如需如何開始針對永遠加密使用 SqlServer PowerShell 模組的詳細資訊，請參閱 [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)(使用 PowerShell 設定永遠加密)。
 
 
-## <a name="KeyProvisionWithoutRoles"></a> 不使用角色隔離的金鑰佈建
+## <a name="key-provisioning-without-role-separation"></a><a name="KeyProvisionWithoutRoles"></a> 不使用角色隔離的金鑰佈建
 
 本節中所述金鑰佈建方法不支援安全性系統管理員與 DBA 之間的角色隔離。 下列步驟有些會結合實體金鑰作業和金鑰中繼資料作業。 因此，使用 DevOps 模型的組織，或如果資料庫裝載於雲端且主要目標是限制雲端管理員 (而不是內部部署 DBA) 存取敏感性資料，則建議使用這種方法來佈建金鑰。 如果潛在的敵人包括 DBA，或 DBA 不應具有存取敏感性資料的權限，即不建議使用。
 
@@ -164,7 +164,7 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName
 ```
 
-## <a name="KeyProvisionWithRoles"></a> 使用角色隔離的金鑰佈建
+## <a name="key-provisioning-with-role-separation"></a><a name="KeyProvisionWithRoles"></a> 使用角色隔離的金鑰佈建
 
 對於安全性管理員不能存取資料庫，而資料庫管理員不能存取金鑰存放區或純文字金鑰，本節提供加密設定步驟。
 

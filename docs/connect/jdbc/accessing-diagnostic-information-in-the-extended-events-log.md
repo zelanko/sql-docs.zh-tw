@@ -11,10 +11,10 @@ ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f4dfb22027ca448848d7027232e41359ff1664d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028495"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>存取擴充事件記錄檔中的診斷資訊

@@ -12,10 +12,10 @@ ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
 ms.openlocfilehash: 00ae6ecf66bd52d5415c630dd2b66a1a9ecaebd6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75952505"
 ---
 # <a name="configure-replication-with-t-sql"></a>搭配 T-SQL 設定複寫

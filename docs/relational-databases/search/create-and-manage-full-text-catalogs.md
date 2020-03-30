@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed7e7f31da9cacaf4862c29ada9c98df9559f9c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903856"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>建立及管理全文檢索目錄
@@ -26,7 +26,7 @@ ms.locfileid: "72903856"
 
 全文檢索目錄是不屬於任何檔案群組的虛擬物件。
   
-##  <a name="creating"></a> 建立全文檢索目錄  
+##  <a name="create-a-full-text-catalog"></a><a name="creating"></a> 建立全文檢索目錄  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>使用 Transact-SQL 建立全文檢索目錄
 使用 [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)。 例如：
@@ -52,7 +52,7 @@ GO
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="props"></a> 取得全文檢索目錄的屬性  
+##  <a name="get-the-properties-of-a-full-text-catalog"></a><a name="props"></a> 取得全文檢索目錄的屬性  
 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式 **FULLTEXTCATALOGPROPERTY** 取得各種全文檢索目錄相關屬性的值。 如需詳細資訊，請參閱 [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)。
 
 例如，執行下列查詢來取得全文檢索目錄 `Catalog1` 中的索引計數。
@@ -77,7 +77,7 @@ GO
 |**PopulateStatus**|擴展狀態。<br /><br /> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**UniqueKeyCount**|全文檢索目錄中唯一索引鍵的數目。| 
 
-##  <a name="rebuildone"></a> 重建全文檢索目錄  
+##  <a name="rebuild-a-full-text-catalog"></a><a name="rebuildone"></a> 重建全文檢索目錄  
 
 執行 Transact-SQL 陳述式 [ALTER FULLTEXT CATALOG ...REBUILD](
 ../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)，或在 SQL Server Management Studio (SSMS) 中執行下列事項。
@@ -92,7 +92,7 @@ GO
   
 5.  在 [重建全文檢索目錄]  對話方塊中，按一下 [關閉]  。  
    
-##  <a name="rebuildall"></a> 重建資料庫的所有全文檢索目錄  
+##  <a name="rebuild-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a> 重建資料庫的所有全文檢索目錄  
 
 1.  在 SSMS 中，於物件總管中，展開伺服器，並展開 [資料庫]  ，然後展開含有您要重建之全文檢索目錄的資料庫。  
   
@@ -106,7 +106,7 @@ GO
   
   
   
-##  <a name="removing"></a> 從資料庫移除全文檢索目錄  
+##  <a name="remove-a-full-text-catalog-from-a-database"></a><a name="removing"></a> 從資料庫移除全文檢索目錄  
 
 執行 Transact-SQL 陳述式 [DROP FULLTEXT CATALOG](
 ../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)，或在 SQL Server Management Studio (SSMS) 中執行下列事項。

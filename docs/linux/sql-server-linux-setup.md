@@ -11,10 +11,10 @@ ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.openlocfilehash: ea308fca55cd5cc19a6d8cd74427a87e8fbe9ee2
-ms.sourcegitcommit: efb2bb07700f645b3fbfcb400a0666de01388305
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79319838"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的安裝指引
@@ -38,7 +38,7 @@ ms.locfileid: "79319838"
 
 如需常見問題的解答，請參閱 [Linux 上的 SQL Server 常見問題集](../linux/sql-server-linux-faq.md)。
 
-## <a id="supportedplatforms"></a> 支援的平台
+## <a name="supported-platforms"></a><a id="supportedplatforms"></a> 支援的平台
 
 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES) 及 Ubuntu 都支援 SQL Server。 它也支援 Docker 映像，可以在 Linux 上的 Docker 引擎 或適用於 Windows/Mac 的 Docker 上執行。
 
@@ -71,7 +71,7 @@ Microsoft 也支援使用 OpenShift 和 Kubernetes 來部署和管理 SQL Server
 > [!NOTE]
 > SQL Server 已針對先前列出的發行版本，在 Linux 上經過測試並受到支援。 但如果選擇在不支援的作業系統上安裝 SQL Server，請檢閱 [Microsoft SQL Server 的技術支援原則](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) \(機器翻譯\) 的＜支援原則＞  一節以了解隱含的支援。
 
-## <a id="system"></a> 系統需求
+## <a name="system-requirements"></a><a id="system"></a> 系統需求
 
 SQL Server 具有下列適用於 Linux 的系統需求：
 
@@ -90,11 +90,11 @@ SQL Server 具有下列適用於 Linux 的系統需求：
 - 僅尋找 NFS 掛接上的 **/var/opt/mssql** 目錄。 不支援其他檔案，例如 SQL Server 系統二進位檔案。
 - 確定 NFS 用戶端在裝載遠端共用時使用 'nolock' 選項。
 
-## <a id="repositories"></a> 設定來源存放庫
+## <a name="configure-source-repositories"></a><a id="repositories"></a> 設定來源存放庫
 
 當您安裝或升級 SQL Server 時，您會從已設定的 Microsoft 存放庫取得最新版本的 SQL Server。 快速入門會使用 SQL Server 的累積更新 **CU** 存放庫。 但是，您可以改為設定 **GDR** 存放庫。 如需存放庫和其設定方式的詳細資訊，請參閱[針對 Linux 上的 SQL Server 設定存放庫](sql-server-linux-change-repo.md)。
 
-## <a id="platforms"></a> 安裝 SQL Server
+## <a name="install-sql-server"></a><a id="platforms"></a> 安裝 SQL Server
 
 您可以在 Linux 上從命令列安裝 SQL Server 2017 或 SQL Server 2019。 如需逐步指示，請參閱下列其中一個快速入門：
 
@@ -109,7 +109,7 @@ SQL Server 具有下列適用於 Linux 的系統需求：
 
 安裝之後，請考慮進行其他設定變更以獲得最佳效能。 如需詳細資訊，請參閱 [Linux 上的 SQL Server 效能最佳做法和設定方針](sql-server-linux-performance-best-practices.md)。
 
-## <a id="upgrade"></a> 更新或升級 SQL Server
+## <a name="update-or-upgrade-sql-server"></a><a id="upgrade"></a> 更新或升級 SQL Server
 
 若要將 **mssql-server** 套件更新為最新版本，請根據您的平台，使用下列其中一個命令：
 
@@ -123,7 +123,7 @@ SQL Server 具有下列適用於 Linux 的系統需求：
 
 若要升級 SQL Server，請先[變更您設定的存放庫](sql-server-linux-change-repo.md)，將其設為所需的 SQL Server 版本。 然後使用相同的**升級**命令來升級 SQL Server 版本。 只有在兩個存放庫之間支援升級路徑時，才會發生這種情況。
 
-## <a id="rollback"></a> 復原 SQL Server
+## <a name="rollback-sql-server"></a><a id="rollback"></a> 復原 SQL Server
 
 若要將 SQL Server 復原或降級至先前的版本，請使用下列步驟：
 
@@ -140,7 +140,7 @@ SQL Server 具有下列適用於 Linux 的系統需求：
 > [!NOTE]
 > 其僅支援降級為相同主要版本 (例如 SQL Server 2019) 中的版本。
 
-## <a id="versioncheck"></a> 檢查已安裝的 SQL Server 版本
+## <a name="check-installed-sql-server-version"></a><a id="versioncheck"></a> 檢查已安裝的 SQL Server 版本
 
 若要驗證您 Linux 上的 SQL Server 目前的版本和版次，請使用下列程序：
 
@@ -152,7 +152,7 @@ SQL Server 具有下列適用於 Linux 的系統需求：
    sqlcmd -S localhost -U SA -Q 'select @@VERSION'
    ```
 
-## <a id="uninstall"></a> 解除安裝 SQL Server
+## <a name="uninstall-sql-server"></a><a id="uninstall"></a> 解除安裝 SQL Server
 
 若要移除 Linux 上的 **mssql-server** 套件，請根據您的平台，請使用下列其中一個命令：
 
@@ -168,7 +168,7 @@ SQL Server 具有下列適用於 Linux 的系統需求：
 sudo rm -rf /var/opt/mssql/
 ```
 
-## <a id="unattended"></a> 自動安裝
+## <a name="unattended-install"></a><a id="unattended"></a> 自動安裝
 
 您可以透過下列方式執行自動安裝：
 
@@ -189,7 +189,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 - [SUSE 自動安裝指令碼](sample-unattended-install-suse.md)
 - [Ubuntu 自動安裝指令碼](sample-unattended-install-ubuntu.md)
 
-## <a id="offline"></a> 離線安裝
+## <a name="offline-install"></a><a id="offline"></a> 離線安裝
 
 如果您的 Linux 電腦無法存取[快速入門](#platforms)中使用的線上儲存機制，您可以直接下載封裝檔案。 這些套件位於 Microsoft 存放庫 [https://packages.microsoft.com](https://packages.microsoft.com) 中。
 

@@ -16,10 +16,10 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 25a2d1fe5eba1f52fc9738b9191f9bdade40002d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295803"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>封裝的 SQL Server Agent 作業
@@ -43,7 +43,7 @@ ms.locfileid: "71295803"
   
 -   [疑難排解已排程封裝](#trouble)  
   
-##  <a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
+##  <a name="scheduling-jobs-in-sql-server-agent"></a><a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所安裝的服務，可讓您透過執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，以自動化並排程工作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務必須先執行，作業才能自動執行。 如需詳細資訊，請參閱 [Configure SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/configure-sql-server-agent)。  
   
  當您連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體時，[SQL Server Agent]  節點會出現在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中。  
@@ -56,7 +56,7 @@ ms.locfileid: "71295803"
   
  透過設定通知選項可以加強作業，例如，指定作業完成時要向其傳送電子郵件的操作員，或加入警示。 如需詳細資訊，請參閱 [警示](https://docs.microsoft.com/sql/ssms/agent/alerts)。  
   
-##  <a name="packages"></a> Scheduling Integration Services Packages  
+##  <a name="scheduling-integration-services-packages"></a><a name="packages"></a> Scheduling Integration Services Packages  
  當您建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業來排程 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝時，必須加入至少一個步驟，並將該步驟的類型設為 [SQL Server Integration Services 封裝]  。 作業可以包含多個步驟，且每個步驟都能執行不同的封裝。  
   
  從作業步驟執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，如同使用 **dtexec** (dtexec.exe) 和 **DTExecUI** (dtexecui.exe) 公用程式來執行封裝。 但不是透過使用命令列選項或 [執行封裝公用程式]  對話方塊來設定封裝的執行階段選項，而是在 [新增作業步驟]  對話方塊設定執行階段選項。 如需執行封裝之選項的詳細資訊，請參閱 [dtexec 公用程式](../../integration-services/packages/dtexec-utility.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "71295803"
   
  如需示範如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式執行套件的影片，請參閱影片首頁的[如何：使用 SQL Server Agent 自動化執行套件 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=141771)，位於 MSDN Library。  
   
-##  <a name="trouble"></a> 疑難排解  
+##  <a name="troubleshooting"></a><a name="trouble"></a> 疑難排解  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟可能無法啟動封裝，即使封裝在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中以及從命令列都順利執行。 此問題有一些常見的原因，以及數個建議的解決方案。 如需詳細資訊，請參閱下列資源。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫文件： [從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行](https://support.microsoft.com/kb/918760)  
@@ -100,7 +100,7 @@ ms.locfileid: "71295803"
   
     如需 [概觀]、[所有訊息] 和 [執行效能] 報告的詳細資訊，請參閱 [Integration Services 伺服器的報表](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。  
 
-## <a name="schedule"></a> 使用 SQL Server Agent 排程封裝
+## <a name="schedule-a-package-by-using-sql-server-agent"></a><a name="schedule"></a> 使用 SQL Server Agent 排程封裝
   下列程序會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟執行封裝，藉此提供自動化封裝執行的步驟。  
   
 ### <a name="to-automate-package-execution-by-using-sql-server-agent"></a>使用 SQL Server Agent 自動化封裝執行  

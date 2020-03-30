@@ -45,7 +45,7 @@ ms.locfileid: "72907539"
   
 1.  啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-2.  按一下 **[新增查詢]**。  
+2.  按一下 **[新增查詢]** 。  
   
 3.  將此程式碼貼入新查詢視窗，並執行每一個區段。  
 
@@ -137,7 +137,7 @@ ms.locfileid: "72907539"
   
 2.  在 [物件總管] 中，以滑鼠右鍵按一下要產生報表的資料庫。  
   
-3.  在操作功能表中，依序選取 [報表] -> [標準報表] -> [記憶體最佳化物件的記憶體使用量]  
+3.  在操作功能表中，依序選取 [報表]   -> [標準報表]   -> [記憶體最佳化物件的記憶體使用量]   
   
  ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   

@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 00f139a5fa608f40f7979f74b187efcb68bcf2ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75776393"
 ---
 # <a name="create-a-login"></a>建立登入
@@ -35,7 +35,7 @@ ms.locfileid: "75776393"
 
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立登入。 登入是連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的人員或程序的識別。  
   
-##  <a name="Background"></a> 背景  
+##  <a name="background"></a><a name="Background"></a> 背景  
  登入是安全性主體或可由安全系統驗證的實體。 使用者需要登入才能連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 您可以建立以 Windows 主體為基礎的登入 (例如網域使用者或 Windows 網域群組)，也可以建立不是以 Windows 主體為基礎的登入 (例如 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入)。  
   
 > **注意：** 若要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證，[!INCLUDE[ssDE](../../../includes/ssde-md.md)] 必須使用混合模式驗證。 如需詳細資訊，請參閱 [選擇驗證模式](../../../relational-databases/security/choose-an-authentication-mode.md)。  
@@ -44,13 +44,13 @@ ms.locfileid: "75776393"
   
 > **注意：** 當登入連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，身分識別會在 master 資料庫進行驗證。 使用自主資料庫使用者來驗證 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 資料庫層級的連線。 使用自主資料庫使用者時不需要登入。 「自主資料庫」(Contained Database) 是與其他資料庫和裝載資料庫的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 執行個體 (以及 master 資料庫) 隔離的資料庫。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援 Windows 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的自主資料庫使用者。 當使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]時，結合自主資料庫使用者與資料庫層級防火牆規則。 如需詳細資訊，請參閱 [自主的資料庫使用者 - 使資料庫可攜](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
-##  <a name="Security"></a> Security  
+##  <a name="security"></a><a name="Security"></a> Security  
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 需要伺服器的 **ALTER ANY LOGIN** 或 **ALTER LOGIN** 權限。  
   
  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 需要 **loginmanager** 角色的成員資格。  
   
-##  <a name="SSMSProcedure"></a> 使用 SSMS 建立登入  
+##  <a name="create-a-login-using-ssms"></a><a name="SSMSProcedure"></a> 使用 SSMS 建立登入  
   
   
 1.  在 [物件總管] 中，展開要建立新登入之伺服器執行個體的資料夾。  
@@ -226,7 +226,7 @@ ms.locfileid: "75776393"
  **SQL Server 驗證**  
  只有在選取的登入使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證進行連接，而且登入已經鎖定時，[登入已經鎖定]  核取方塊才可使用。此設定是唯讀的。 若要解除鎖定已經鎖定的登入，請搭配 UNLOCK 選項執行 ALTER LOGIN。  
   
-##  <a name="TsqlProcedure"></a> 透過 T-SQL 建立使用 Windows 驗證的登入  
+##  <a name="create-a-login-using-windows-authentication-using-t-sql"></a><a name="TsqlProcedure"></a> 透過 T-SQL 建立使用 Windows 驗證的登入  
   
  
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
@@ -263,7 +263,7 @@ ms.locfileid: "75776393"
   
  如需詳細資訊，請參閱 [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)。  
   
-##  <a name="FollowUp"></a> 後續操作：建立登入之後採取的步驟  
+##  <a name="follow-up-steps-to-take-after-you-create-a-login"></a><a name="FollowUp"></a> 後續操作：建立登入之後採取的步驟  
  建立登入之後，登入就可以連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，但是不一定有足夠的權限可以執行任何實際工作。 下列清單提供常用登入動作的連結。  
   
 -   若要讓登入加入角色，請參閱 [加入角色](../../../relational-databases/security/authentication-access/join-a-role.md)。  

@@ -11,10 +11,10 @@ ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 700aa5adb410c7718667bf05313f18636be01a69
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75557943"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>在 SQL Server Agent 中執行 Windows PowerShell 步驟
@@ -37,13 +37,13 @@ ms.locfileid: "75557943"
 
 - 使用命令提示字元作業步驟執行 PowerShell.exe，並指定匯入 **sqlps** 模組的指令碼。
 
-### <a name="LimitationsRestrictions"></a> 請注意記憶體耗用量
+### <a name="caution-about-memory-consumption"></a><a name="LimitationsRestrictions"></a> 請注意記憶體耗用量
 
 搭配 **sqlps** 模組執行 PowerShell 的每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業步驟，都會啟動大約耗用 **20 MB** 記憶體的處理序。 執行大量的並行 Windows PowerShell 作業步驟可能會對效能造成負面影響。  
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-##  <a name="PShellJob"></a> 建立 PowerShell 作業步驟  
+##  <a name="create-a-powershell-job-step"></a><a name="PShellJob"></a> 建立 PowerShell 作業步驟  
  **建立 PowerShell 作業步驟**  
   
 1.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]  。 如需建立作業的詳細資訊，請參閱＜ [建立作業](../ssms/agent/create-jobs.md)＞。  
@@ -60,7 +60,7 @@ ms.locfileid: "75557943"
   
 7.  按一下 **[進階]** 頁面，設定下列作業步驟選項：作業步驟成功或失敗時要採取什麼動作、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 應該嘗試執行作業步驟多少次，以及應該多久重試一次。  
   
-##  <a name="CmdExecJob"></a> 建立命令提示字元作業步驟  
+##  <a name="create-a-command-prompt-job-step"></a><a name="CmdExecJob"></a> 建立命令提示字元作業步驟  
  **建立 CmdExec 作業步驟**  
   
 1.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]  。 如需建立作業的詳細資訊，請參閱＜ [建立作業](../ssms/agent/create-jobs.md)＞。  

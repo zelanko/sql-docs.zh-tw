@@ -11,10 +11,10 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68889835"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的 Reporting Services (SSDT)
@@ -25,14 +25,14 @@ ms.locfileid: "68889835"
   
  若要開始設計報表，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)。  
   
-##  <a name="bkmk_SolutionsandProjects"></a> 方案與專案  
+##  <a name="solutions-and-projects"></a><a name="bkmk_SolutionsandProjects"></a> 方案與專案  
  報表專案是做為報表定義與資源的容器。 部署專案時，報表專案中的每一個檔案都會發行至報表伺服器。 當您第一次建立專案時，同時也會建立該專案的方案，以做為專案的容器。 您可以將多個專案加入單一方案。  
   
   
-##  <a name="bkmk_Configurations"></a> 組態  
+##  <a name="configurations"></a><a name="bkmk_Configurations"></a> 組態  
  若要針對不同部署建立多組專案屬性，例如企業測試和實際報表伺服器，請使用組態管理員。 如需詳細資訊，請參閱 [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)。  
   
-##  <a name="bkmk_ReportServerProjects"></a> 報表伺服器專案  
+##  <a name="report-server-projects"></a><a name="bkmk_ReportServerProjects"></a> 報表伺服器專案  
  當您安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]時， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]提供了下列專案範本：  
   
 -   **報表伺服器專案。** 當您選取報表伺服器專案時，就會開啟報表設計師。 報表伺服器專案是由 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 所安裝的商業智慧專案範本，而且可從 **[新增專案]** 對話方塊取得。 如需詳細資訊，請參閱[將新的或現有的報表新增至報表專案 &#40;SSRS&#41;](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md)。報表伺服器專案屬性會套用至 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 專案中的所有報表和所有共用資料來源。 這些屬性包括報表伺服器的 URL 以及報表和共用資料來源的資料夾名稱。 使用 **[專案屬性頁面]** 對話方塊可檢視目前的屬性值。 若要開啟此對話方塊，請從 [專案]  功能表按一下 [屬性]  。  
@@ -42,10 +42,10 @@ ms.locfileid: "68889835"
  ![SSDT 中的新專案範本](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "SSDT 中的新專案範本")  
   
   
-##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> 報表設計師視窗和窗格  
+##  <a name="report-designer-windows-and-panes"></a><a name="bkmk_ReportDesignerWindowsandPanes"></a> 報表設計師視窗和窗格  
  報表設計師支援兩種檢視：[設計]  (可定義報表資料和報表配置) 和 [預覽]  (可顯示報表的轉譯檢視)。 在每個檢視中，您可以顯示多個視窗來協助設計或檢視轉譯的報表。  
   
-###  <a name="bkmk_ReportDataPane"></a> 報表資料窗格  
+###  <a name="report-data-pane"></a><a name="bkmk_ReportDataPane"></a> 報表資料窗格  
  [報表資料] 窗格顯示內建欄位、資料來源、資料集、欄位集合、報表參數和影像。  
   
  您可以使用 [報表資料] 窗格來檢視：  
@@ -68,7 +68,7 @@ ms.locfileid: "68889835"
 >  如果您看不到 [報表資料] 窗格，請按一下 [設計] 區，然後再按一下 [檢視]  功能表上的 [報表資料]  。 如果 [報表資料] 窗格是浮動窗格，您可以錨定它。 如需詳細資訊，請參閱[停駐報表設計師中的報表資料窗格 &#40;SSRS&#41;](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md)。  
   
   
-###  <a name="bkmk_GroupingPane"></a> 群組窗格  
+###  <a name="grouping-pane"></a><a name="bkmk_GroupingPane"></a> 群組窗格  
  使用 [群組] 窗格，即可定義 Tablix 資料區的群組。 您可以定義資料表的資料列群組和詳細資料群組，以及矩陣的資料列和資料行群組。 您無法使用 [群組] 窗格定義 [圖表] 或其他資料區的群組。 如需詳細資訊，請參閱[了解群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
   
  [群組] 窗格有兩種模式：  
@@ -85,10 +85,10 @@ ms.locfileid: "68889835"
  如需詳細資訊，請參閱＜ [Grouping Pane](../../reporting-services/tools/grouping-pane.md)＞。  
   
   
-###  <a name="bkmk_Toolbox"></a> 工具箱  
+###  <a name="toolbox"></a><a name="bkmk_Toolbox"></a> 工具箱  
  [工具箱] 包含可讓您拖曳至設計介面的報表項目。 資料區是指您用於在報表上組織資料的報表項目。 [資料表]、[矩陣]、[清單]、[圖表]、[量測計]、[資料橫條]、[走勢圖] 和 [指示器] 都是資料區。 其他報表項目包含 [地圖]、[文字方塊]、[矩形]、[線條]、[影像] 和 [子報表]。 如果您的系統管理員已經安裝並註冊自訂報表項目，這些項目可能也會顯示在此清單上。  
   
-###  <a name="bkmk_PropertiesPane"></a> 屬性窗格  
+###  <a name="properties-pane"></a><a name="bkmk_PropertiesPane"></a> 屬性窗格  
  [屬性] 窗格是標準的 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 視窗，其中針對設計介面上目前選取的報表項目顯示屬性名稱和值。 在大部分情況下，屬性 (property) 名稱會對應至報表定義語言 (RDL) 檔案中的元素和屬性 (attribute)。 您可以使用選取項目的 [屬性] 對話方塊來設定最常用的屬性。 若要開啟對應的對話方塊，請按一下 [屬性] 窗格工具列上的 **[屬性頁]** 按鈕。 進階使用者可以直接在 [屬性] 窗格中設定屬性值。  
   
  您可以使用 [屬性] 窗格以：  
@@ -102,25 +102,25 @@ ms.locfileid: "68889835"
  若要顯示 [屬性] 窗格，請在 **[檢視]** 功能表中，按一下 **[屬性視窗]** 。 您可以取消停駐此窗格並將它移至 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]視窗的其他區域，或將它顯示成設計介面上的索引標籤式檢視。  
   
   
-###  <a name="bkmk_SolutionExplorer"></a> 方案總管  
+###  <a name="solution-explorer"></a><a name="bkmk_SolutionExplorer"></a> 方案總管  
  [方案總管] 是標準的 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 元件，它會顯示專案中的所有項目。 若為報表伺服器專案，這包含用於組織共用資料來源、共用資料集、報表及資源的資料夾。 開啟方案檔時，會自動依字母順序來排列資料夾項目。 若要檢視 [屬性] 窗格中的項目屬性，請選取項目。  
   
-###  <a name="bkmk_Output"></a> Output  
+###  <a name="output"></a><a name="bkmk_Output"></a> Output  
  當您預覽報表時，[輸出] 視窗就會顯示處理錯誤，而當您部署報表或共用資料來源時，則會顯示發行錯誤。  
   
  使用 [輸出] 及 [文件大綱] 視窗，即可協助偵錯運算式中的錯誤。  
   
   
-###  <a name="bkmk_DocumentOutline"></a> 文件大綱  
+###  <a name="document-outline"></a><a name="bkmk_DocumentOutline"></a> 文件大綱  
  [文件大綱] 視窗會顯示報表定義中所有報表項目的階層式清單。 若要開啟 [文件大綱] 窗格，請在 **[檢視]** 功能表中，指向 **[其他視窗]** ，然後按一下 **[文件視窗]** 。  
   
  您可以使用 [文件大綱] 窗格以協助依名稱識別文字方塊及其他報表項目。 在 [文件大綱] 中選取項目時，也會在 [設計介面] 上選取該項目。  
   
-###  <a name="bkmk_TaskList"></a> 工作清單  
+###  <a name="task-list"></a><a name="bkmk_TaskList"></a> 工作清單  
  當您從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 等其他應用程式匯入報表時，[工作清單] 視窗就會顯示不支援功能的建立錯誤。  
   
   
-##  <a name="bkmk_ReportDesignerDesignView"></a> 報表設計師設計檢視  
+##  <a name="report-designer-design-view"></a><a name="bkmk_ReportDesignerDesignView"></a> 報表設計師設計檢視  
  當您建立報表伺服器專案時，預設會以 [設計檢視] 開啟 [報表設計師]，並顯示設計介面。 設計介面預設會顯示報表主體及報表背景。  
   
  背景的快速鍵功能表會提供加入頁首和頁尾的選項，以及在 [檢視] 功能表中，提供顯示尺規和 [群組] 窗格的選項。  
@@ -130,7 +130,7 @@ ms.locfileid: "68889835"
  若要設計報表，請將報表項目從 [工具箱] 拖曳至設計介面，然後設定其屬性，並改變它們在報表上的排列方式。  
   
   
-##  <a name="bkmk_ReportDesignerPreview"></a> 報表設計師預覽  
+##  <a name="report-designer-preview"></a><a name="bkmk_ReportDesignerPreview"></a> 報表設計師預覽  
  使用 [預覽]，即可執行報表並在報表檢視器中檢視轉譯的報表。 [預覽] 會在本機快取報表資料。 您也可以將組態屬性設定成使用瀏覽器並在偵錯檢視中執行報表。  
   
  當您預覽報表時，報表設計師就會連接至報表資料來源、執行資料集查詢、在本機電腦上快取資料、處理報表以結合資料和配置，以及轉譯報表。 您可以在 [預覽] 索引標籤中檢視報表，也可以設定專案屬性，以便在偵錯模式中檢視報表，以及直接在瀏覽器中檢視報表。  
@@ -144,10 +144,10 @@ ms.locfileid: "68889835"
 -   **監視 [輸出] 窗格是否有錯誤訊息。** 當您預覽報表，而且報表處理器偵測到問題時，它就會將錯誤訊息寫入 [輸出] 窗格。  
   
   
-##  <a name="bkmk_ReportDesignerMenus"></a> 報表設計師的功能表  
+##  <a name="report-designer-menus"></a><a name="bkmk_ReportDesignerMenus"></a> 報表設計師的功能表  
  當報表設計師專案在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中作用時，下列工具列就會加入至主要工具列。 報表設計師的功能表只會在 [設計] 檢視中顯示。  
   
-###  <a name="FormatMenu"></a> 格式功能表  
+###  <a name="format-menu"></a><a name="FormatMenu"></a> 格式功能表  
  當您在設計介面上選取項目時， **[格式]** 功能表就會包含下列選項：  
   
 -   **前景色彩** ：選取文字色彩。 黑色是預設文字色彩。  
@@ -170,7 +170,7 @@ ms.locfileid: "68889835"
   
 -   **順序** ：將選取物件移至背景或前景。  
   
-###  <a name="ReportMenu"></a> 報表功能表  
+###  <a name="report-menu"></a><a name="ReportMenu"></a> 報表功能表  
  當報表設計介面取得焦點時， **[報表]** 功能表就會包含下列選項：  
   
 -   **報表屬性** ：選取即可開啟 **[報表屬性]** 對話方塊。 在這個對話方塊中，您可以指派一般報表屬性，例如作者名稱和方格間距，以及指定報表配置的屬性，例如資料行數和頁面大小。 您也可以包括自訂程式碼、組件和類別的參考、資料輸出元素的名稱、資料轉換和資料結構描述。  
@@ -183,7 +183,7 @@ ms.locfileid: "68889835"
   
 -   **群組窗格** ：顯示或隱藏 [群組] 窗格。  
   
-###  <a name="ViewMenu"></a> 檢視功能表  
+###  <a name="view-menu"></a><a name="ViewMenu"></a> 檢視功能表  
  您可以使用 **[檢視]** 功能表來顯示報表設計師視窗和工具列。  
   
 -   **錯誤清單** ：使用這個選項，即可顯示發行或預覽報表時所偵測的錯誤。  
@@ -202,7 +202,7 @@ ms.locfileid: "68889835"
   
 -   **報表資料** ：使用這個選項，即可顯示 [報表資料] 窗格，而且您可以在其中加入報表參數、資料來源、資料集和影像。  
   
-###  <a name="ProjectMenu"></a> 專案功能表  
+###  <a name="project-menu"></a><a name="ProjectMenu"></a> 專案功能表  
  您可以使用 **[專案]** 功能表來管理專案中的共用資料來源和報表。 當您在專案中加入或移除項目時，就會自動更新 [方案總管] 中專案項目的階層式顯示。  
   
 -   **加入新項目** ：在專案中加入新的共用資料來源或新的報表。  
@@ -220,7 +220,7 @@ ms.locfileid: "68889835"
 -   **屬性** ：開啟這個專案的 **[屬性頁]** 對話方塊。 如需詳細資訊，請參閱 [專案屬性頁對話方塊](../../reporting-services/tools/project-property-pages-dialog-box.md)。  
   
   
-##  <a name="bkmk_ReportDesignerToolbars"></a> 報表設計師的工具列  
+##  <a name="report-designer-toolbars"></a><a name="bkmk_ReportDesignerToolbars"></a> 報表設計師的工具列  
  報表設計師會提供下列可在設計報表時使用的專用工具列：  
   
 -   **報表** ：加入頁首或頁尾、設定報表屬性、切換尺規或 [群組] 窗格，或使用顯示比例來變更報表的檢視。  
@@ -236,16 +236,16 @@ ms.locfileid: "68889835"
  您可以使用 **[檢視]** 功能表來控制是否要顯示這些工具列。 如果其他 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 工具列的功能不適用於報表設計師功能，這些工具列的功能可能會停用。  
   
 
-##  <a name="bkmk_SourceControl"></a> 原始檔控制  
+##  <a name="source-control"></a><a name="bkmk_SourceControl"></a> 原始檔控制  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 可以與來源外掛程式整合。您可以使用 **[選項]** 對話方塊中的 [專案和方案] 頁面，以指定外掛程式，並設定屬性。  
   
-##  <a name="bkmk_CustomReportTemplates"></a> 自訂報表範本  
+##  <a name="custom-report-templates"></a><a name="bkmk_CustomReportTemplates"></a> 自訂報表範本  
  若要使用自訂報表做為新報表的範本，您只需將自訂報表複製到裝有 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 之電腦上的 ReportProject 資料夾即可。 此資料夾預設位於下列位置：`<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 將新項目加入報表專案時，您的自訂報表會顯示在 [範本] 窗格中。  
   
  您也可以將自訂樣式加入報表精靈。  
   
   
-##  <a name="bkmk_CommandLineSupportForssdt"></a> SQL Server 資料工具的命令列支援  
+##  <a name="command-line-support-for-sql-server-data-tools"></a><a name="bkmk_CommandLineSupportForssdt"></a> SQL Server 資料工具的命令列支援  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 及基礎 devenv.exe 應用程式為基礎。 您必須先為下列兩個項目設定有效的值，才能使用這些選項：  
   
 -   OverwriteDataSources、TargetDataSourceFolder、TargetReportFolder 和 TargetServerURL 的專案屬性。  
@@ -274,7 +274,7 @@ ms.locfileid: "68889835"
     devenv.exe "C:\Users\MyUser\Documents\Visual Studio 2015\Projects\Reports\Reports.sln" /build "Debug" /out mybuildlog.txt  
     ```  
   
-##  <a name="bkmk_KeyboardShortcuts"></a> Reporting Services 中的鍵盤快速鍵  
+##  <a name="keyboard-shortcuts-in-reporting-services"></a><a name="bkmk_KeyboardShortcuts"></a> Reporting Services 中的鍵盤快速鍵  
  您可以使用鍵盤快速鍵以：  
   
 -   控制 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的視窗和模式：  

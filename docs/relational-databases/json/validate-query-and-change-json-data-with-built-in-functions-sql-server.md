@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8ddc5fb198a62374fc43ebacb5fa7423ac9fadd5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287892"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>使用內建函數，驗證、查詢以及變更 JSON 資料 (SQL Server)
@@ -76,7 +76,7 @@ CREATE TABLE Families (
 )
 ``` 
 
-##  <a name="ISJSON"></a> 使用 ISJSON 函數來驗證 JSON 文字  
+##  <a name="validate-json-text-by-using-the-isjson-function"></a><a name="ISJSON"></a> 使用 ISJSON 函數來驗證 JSON 文字  
  **ISJSON** 函數可測試字串是否包含有效的 JSON。  
   
 下列範例會傳回 JSON 資料行包含有效 JSON 文字的資料列。 請注意，如果沒有明確的 JSON 限制，您可以在 NVARCHAR 資料行中輸入任何文字：  
@@ -89,7 +89,7 @@ WHERE ISJSON(doc) > 0
 
 如需詳細資訊，請參閱 [ISJSON &#40;Transact-SQL&#41;](../../t-sql/functions/isjson-transact-sql.md)。  
   
-##  <a name="VALUE"></a> 使用 JSON_VALUE 函數，從 JSON 文字中擷取值  
+##  <a name="extract-a-value-from-json-text-by-using-the-json_value-function"></a><a name="VALUE"></a> 使用 JSON_VALUE 函數，從 JSON 文字中擷取值  
 **JSON_VALUE** 函數可從 JSON 字串擷取純量值。 下列查詢會傳回 `id` JSON 欄位符合值 `AndersenFamily` 且依據 `city` 和 `state` JSON 欄位排序的文件：
 
 ```sql  
@@ -109,7 +109,7 @@ ORDER BY JSON_VALUE(f.doc, '$.address.city') DESC, JSON_VALUE(f.doc, '$.address.
 
 如需詳細資訊，請參閱 [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md)。  
   
-##  <a name="QUERY"></a> 使用 JSON_QUERY 函數，從 JSON 文字擷取物件或陣列  
+##  <a name="extract-an-object-or-an-array-from-json-text-by-using-the-json_query-function"></a><a name="QUERY"></a> 使用 JSON_QUERY 函數，從 JSON 文字擷取物件或陣列  
 
 **JSON_QUERY** 函數可從 JSON 字串擷取物件或陣列。 下列範例示範如何在查詢結果中傳回 JSON 片段。  
   
@@ -179,7 +179,7 @@ FROM Families f
 
 根文件會與第一個 `OPENJSON(children)` 呼叫所傳回的兩個 `children` 資料列聯結，形成兩個資料列 (或元組)。 然後，每個資料列會與 `OPENJSON(pets)` 使用 `OUTER APPLY` 運算子所產生的新資料列聯結。 Jesse 有兩隻寵物，因此 `(AndersenFamily, Jesse, Merriam)` 會與針對 Goofy 和 Shadow 產生的兩個資料列聯結。 Lisa 沒有寵物，因此這個元組沒有 `OPENJSON(pets)` 傳回的任何資料列。 不過，因為我們使用 `OUTER APPLY`，所以將在資料行中取得 `NULL`。 如果我們使用 `CROSS APPLY` 而不是 `OUTER APPLY`，則結果中不會傳回 Lisa，因為沒有任何可與這個元組聯結的寵物資料列。
 
-##  <a name="JSONCompare"></a> JSON_VALUE 與 JSON_QUERY 的比較  
+##  <a name="compare-json_value-and-json_query"></a><a name="JSONCompare"></a> JSON_VALUE 與 JSON_QUERY 的比較  
 **JSON_VALUE** 和 **JSON_QUERY** 的主要差別是 **JSON_VALUE** 傳回純量值，而 **JSON_QUERY** 傳回物件或陣列。  
   
 請參考下列 JSON 文字範例：  
@@ -242,7 +242,7 @@ GROUP BY JSON_VALUE(Info, '$.Customer.Name'), Status
 HAVING SUM(SubTotal)>1000
 ```  
   
-##  <a name="MODIFY"></a> 使用 JSON_MODIFY 函數來更新 JSON 文字中的屬性值  
+##  <a name="update-property-values-in-json-text-by-using-the-json_modify-function"></a><a name="MODIFY"></a> 使用 JSON_MODIFY 函數來更新 JSON 文字中的屬性值  
 **JSON_MODIFY** 函式會更新 JSON 字串中屬性的值，並傳回更新的 JSON 字串。  
   
 下列範例會更新包含 JSON 的變數中，JSON 屬性的值。  

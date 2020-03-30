@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d016e4f45a91a61c5918a4bfdfb9dd1073521c02
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056316"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>使用 Unicode 字元格式匯入或匯出資料 (SQL Server)
@@ -38,14 +38,14 @@ ms.locfileid: "74056316"
 |[範例](#examples)<br />&emsp;&#9679;&emsp;[使用 BCP 與 Unicode 字元格式匯出資料](#bcp_widechar_export)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 BCP 與 Unicode 字元格式匯入資料](#bcp_widechar_import)<br />&emsp;&#9679;&emsp;[使用 BCP 與 Unicode 字元格式匯入非 XML 格式檔案的資料](#bcp_widechar_import_fmt)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 BULK INSERT 與 Unicode 字元格式](#bulk_widechar)<br />&emsp;&#9679;&emsp;[對非 XML 格式檔案使用 BULK INSERT 與 Unicode 字元格式](#bulk_widechar_fmt)<br />&emsp;&#9679;&emsp;[對非 XML 格式檔案使用 OPENROWSET 與 Unicode 字元格式](#openrowset_widechar_fmt)|
 |[相關工作](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
  
-## 使用 Unicode 字元格式的注意事項<a name="considerations"></a>
+## <a name="considerations-for-using-unicode-character-format"></a>使用 Unicode 字元格式的注意事項<a name="considerations"></a>
 使用字元格式時，請考慮下列事項：  
 
 * [bcp 公用程式](../../tools/bcp-utility.md) 預設會使用定位字元分隔字元資料欄位，並使用新行字元終止記錄。  如需如何指定其他結束字元的相關資訊，請參閱[指定欄位與資料列結束字元 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。
 
 * 儲存在 Unicode 字元格式資料檔的 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 資料，其操作方式和在字元格式資料檔中相同，不同之處在於資料是儲存為 [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) ，而非 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 資料。 如需詳細資訊，請參閱 [定序和 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。  
 
-## 使用 Unicode 字元格式、bcp 與格式檔案的特殊注意事項<a name="special_considerations"></a>
+## <a name="special-considerations-for-using-unicode-character-format-bcp-and-a-format-file"></a>使用 Unicode 字元格式、bcp 與格式檔案的特殊注意事項<a name="special_considerations"></a>
 Unicode 字元格式資料檔遵循 Unicode 檔案的慣例。  檔案的前兩個位元組是十六進位數字 0xFFFE。  這些位元組會用為位元組順序標記 (BOM)，指定將高位位元組儲存到檔案中時的先後順序。  [bcp 公用程式](../../tools/bcp-utility.md) 可能會錯誤解譯 BOM，進而導致匯入程序失敗；因此，您可能會收到類似如下的錯誤訊息︰
 ```
 Starting copy...
@@ -77,7 +77,7 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
 
 * 重新匯出資料，並變更資料欄位順序，讓第一個資料欄位為字元。  接著使用格式檔案，將資料欄位重新對應到資料表中的實際順序。  如需範例，請參閱 [使用格式檔案將資料表資料行對應至資料檔案的欄位 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)。
   
-## Unicode 字元格式的命令選項<a name="command_options"></a>  
+## <a name="command-options-for-unicode-character-format"></a>Unicode 字元格式的命令選項<a name="command_options"></a>  
 您可以將 Unicode 字元格式資料匯入資料表，方法是使用 [bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)。對於 [bcp](../../tools/bcp-utility.md) 命令或 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 陳述式，您可以在陳述式中指定資料格式。  對於 [INSERT...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 陳述式，您必須在格式檔案中指定資料格式。  
   
 下列命令列選項支援 Unicode 字元格式：  
@@ -91,10 +91,10 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
 > [!NOTE]
 >  或者，您可以在格式檔案中按照每個欄位指定格式。 如需詳細資訊，請參閱 [匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)＞。
   
-## 範例測試條件<a name="etc"></a>  
+## <a name="example-test-conditions"></a>範例測試條件<a name="etc"></a>  
 本主題中的範例採用下列定義的資料表、資料檔案與格式檔案。
 
-### **範例資料表**<a name="sample_table"></a>
+### <a name="sample-table"></a>**範例資料表**<a name="sample_table"></a>
 下列指令碼會建立測試資料庫、名為 `myWidechar` 的資料表，以及在資料表中填入一些初始值。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 CREATE DATABASE TestDatabase;
@@ -120,7 +120,7 @@ VALUES
 SELECT * FROM TestDatabase.dbo.myWidechar;
 ```
 
-### **範例非 XML 格式檔案**<a name="nonxml_format_file"></a>
+### <a name="sample-non-xml-format-file"></a>**範例非 XML 格式檔案**<a name="nonxml_format_file"></a>
 SQL Server 支援兩種類型的格式檔案：非 XML 格式和 XML 格式。  非 XML 格式是舊版 SQL Server 所支援的原始格式。  如需詳細資訊，請參閱 [非 XML 格式檔案 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。  下列命令將使用 [bcp 公用程式](../../tools/bcp-utility.md) ，根據 `myWidechar.fmt`的結構描述產生非 XML 格式檔案 `myWidechar`。  使用 [bcp](../../tools/bcp-utility.md) 命令建立格式檔案時，請指定 **format** 引數並使用 **nul** 取代資料檔案路徑。  format 選項也需要 **-f** 選項。  此外，以此範例為例，限定詞 **c** 會用於指定字元資料， **T** 會用於指定使用整合式安全性的信任連線。  請在命令提示字元之下，輸入下列命令：
 
 ```
@@ -137,10 +137,10 @@ Notepad D:\BCP\myWidechar.fmt
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
 
-## 範例<a name="examples"></a>
+## <a name="examples"></a>範例<a name="examples"></a>
 下列範例使用以上所建立的資料庫、資料檔案與格式檔案。
 
-### **使用 bcp 與 Unicode 字元格式匯出資料**<a name="bcp_widechar_export"></a>
+### <a name="using-bcp-and-unicode-character-format-to-export-data"></a>**使用 bcp 與 Unicode 字元格式匯出資料**<a name="bcp_widechar_export"></a>
 **-w** 參數與 **OUT** 命令。  注意︰後續所有範例皆會使用此範例中所建立的資料檔案。  請在命令提示字元之下，輸入下列命令：
 ```
 bcp TestDatabase.dbo.myWidechar OUT D:\BCP\myWidechar.bcp -T -w
@@ -149,7 +149,7 @@ REM Review results
 NOTEPAD D:\BCP\myWidechar.bcp
 ```
 
-### **不使用格式檔案而使用 bcp 與 Unicode 字元格式匯入資料**<a name="bcp_widechar_import"></a>
+### <a name="using-bcp-and-unicode-character-format-to-import-data-without-a-format-file"></a>**不使用格式檔案而使用 bcp 與 Unicode 字元格式匯入資料**<a name="bcp_widechar_import"></a>
 **-w** 參數與 **IN** 命令。  請在命令提示字元之下，輸入下列命令：
 ```
 REM Truncate table (for testing)
@@ -161,7 +161,7 @@ bcp TestDatabase.dbo.myWidechar IN D:\BCP\myWidechar.bcp -T -w
 REM Review results is SSMS
 ```
 
-### **使用 bcp 與 Unicode 字元格式匯入非 XML 格式檔案的資料**<a name="bcp_widechar_import_fmt"></a>
+### <a name="using-bcp-and-unicode-character-format-to-import-data-with-a-non-xml-format-file"></a>**使用 bcp 與 Unicode 字元格式匯入非 XML 格式檔案的資料**<a name="bcp_widechar_import_fmt"></a>
 **-w** 與 **-f** 參數與 **IN** 命令。  因為此範例涉及 bcp、格式檔案與 Unicode 字元，以及資料檔案中的第一個資料欄位為字元，所以必須使用因應措施。  請參閱 [使用 Unicode 字元格式、bcp 與格式檔案的特殊注意事項](#special_considerations)。  資料檔案 `myWidechar.bcp` 會因為額外新增一筆 "dummy" 記錄而有所改變。`-F 2` 參數會略過該筆記錄。
 
 在命令提示字元中輸入下列命令，然後執行修改步驟︰
@@ -183,7 +183,7 @@ REM Return data file to original state for usage in other examples
 bcp TestDatabase.dbo.myWidechar OUT D:\BCP\myWidechar.bcp -T -w
 ```
   
-### **不使用格式檔案而使用 BULK INSERT 與 Unicode 字元格式**<a name="bulk_widechar"></a>
+### <a name="using-bulk-insert-and-unicode-character-format-without-a-format-file"></a>**不使用格式檔案而使用 BULK INSERT 與 Unicode 字元格式**<a name="bulk_widechar"></a>
 **DATAFILETYPE** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar; -- for testing
@@ -197,7 +197,7 @@ BULK INSERT TestDatabase.dbo.myWidechar
 SELECT * FROM TestDatabase.dbo.myWidechar;
 ```
   
-### **對非 XML 格式檔案使用 BULK INSERT 與 Unicode 字元格式**<a name="bulk_widechar_fmt"></a>
+### <a name="using-bulk-insert-and-unicode-character-format-with-a-non-xml-format-file"></a>**對非 XML 格式檔案使用 BULK INSERT 與 Unicode 字元格式**<a name="bulk_widechar_fmt"></a>
 **FORMATFILE** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar; -- for testing
@@ -211,7 +211,7 @@ BULK INSERT TestDatabase.dbo.myWidechar
 SELECT * FROM TestDatabase.dbo.myWidechar;
 ```
   
-### **對非 XML 格式檔案使用 OPENROWSET 與 Unicode 字元格式**<a name="openrowset_widechar_fmt"></a>
+### <a name="using-openrowset-and-unicode-character-format-with-a-non-xml-format-file"></a>**對非 XML 格式檔案使用 OPENROWSET 與 Unicode 字元格式**<a name="openrowset_widechar_fmt"></a>
 **FORMATFILE** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar;  -- for testing
@@ -227,7 +227,7 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
 ```
  
   
-## 相關工作<a name="RelatedTasks"></a>
+## <a name="related-tasks"></a>相關工作<a name="RelatedTasks"></a>
 若要使用大量匯入或大量匯出的資料格式  
 -   [從舊版 SQL Server 匯入原生與字元格式資料](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   

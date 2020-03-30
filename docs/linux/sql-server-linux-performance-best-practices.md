@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 548ab73e97b9bccb6a64a95b7294d3d5ca63493d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286842"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Linux 上 SQL Server 的效能最佳作法和設定方針
@@ -31,7 +31,7 @@ ms.locfileid: "79286842"
 
 - **針對節點和/或 CPU 使用處理程序親和性**
 
-   建議使用 `ALTER SERVER CONFIGURATION` 為 Linux 作業系統上用於 SQL Server (通常用於所有 NODE 和 CPU) 的所有 **NUMANODE** 和/或CPU 設定 `PROCESS AFFINITY`。 處理程序親和性有助於維護有效率的 Linux 和 SQL 排程行為。 使用 **NUMANODE** 選項是最簡單的方法。 請注意，即使您的電腦上只有一個 NUMA 節點，您還是應該使用**處理程序親和性**。  如需如何設定**處理程序親和性**的詳細資訊，請參閱 [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md)。
+   建議使用 `ALTER SERVER CONFIGURATION` 為 Linux 作業系統上用於 SQL Server (通常用於所有 NODE 和 CPU) 的所有 `PROCESS AFFINITY`NUMANODE**和/或CPU 設定**。 處理程序親和性有助於維護有效率的 Linux 和 SQL 排程行為。 使用 **NUMANODE** 選項是最簡單的方法。 請注意，即使您的電腦上只有一個 NUMA 節點，您還是應該使用**處理程序親和性**。  如需如何設定[處理程序親和性](../t-sql/statements/alter-server-configuration-transact-sql.md)的詳細資訊，請參閱 **ALTER SERVER CONFIGURATION**。
 
 - **設定多個 tempdb 資料檔案**
 

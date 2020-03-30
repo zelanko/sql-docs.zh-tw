@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: b789318f094b624d4ef1a72a1b3703067f528c0a
-ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79375524"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務中擴充性架構的安全性概觀

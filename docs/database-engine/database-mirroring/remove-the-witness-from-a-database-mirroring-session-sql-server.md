@@ -16,10 +16,10 @@ ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8d4ecd428d8d9d76ff4e9a543321d461b3983708
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822528"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>從資料庫鏡像工作階段移除見證 (SQL Server)
@@ -40,14 +40,14 @@ ms.locfileid: "74822528"
   
 -   **後續操作：** [移除見證之後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-remove-the-witness"></a>移除見證  
   
@@ -62,7 +62,7 @@ ms.locfileid: "74822528"
     > [!NOTE]  
     >  如果從具有自動容錯移轉的高安全性模式切換到高效能模式，則會自動清除 [見證]  欄位。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-remove-the-witness"></a>移除見證  
   
@@ -82,7 +82,7 @@ ms.locfileid: "74822528"
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
-##  <a name="FollowUp"></a> 後續操作：移除見證之後  
+##  <a name="follow-up-after-removing-the-witness"></a><a name="FollowUp"></a> 後續操作：移除見證之後  
  關閉見證會根據交易安全性設定來變更 [作業模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)：  
   
 -   如果交易安全性設定為 FULL (預設值)，則工作階段會使用高安全性的同步模式，而且不包含自動容錯移轉。  
@@ -92,7 +92,7 @@ ms.locfileid: "74822528"
 > [!TIP]  
 >  資料庫的交易安全性設定會記錄在每個夥伴之 **mirroring_safety_level** 和 **mirroring_safety_level_desc** 資料行的 [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) 目錄檢視中。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [使用 Windows 驗證新增資料庫鏡像見證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   

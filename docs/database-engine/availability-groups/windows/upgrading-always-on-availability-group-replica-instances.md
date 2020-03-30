@@ -28,11 +28,11 @@ ms.locfileid: "74822196"
 ## <a name="prerequisites"></a>Prerequisites  
 在開始之前，請檢閱以下重要資訊：  
   
-- [支援的版本與版本升級](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)︰確認您可從您的 Windows 作業系統版本與 SQL Server 版本升級至 SQL Server 2016。 例如，您無法直接從 SQL Server 2005 執行個體升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
+- [支援的版本與版本升級](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：確認您可從您的 Windows 作業系統版本與 SQL Server 版本升級至 SQL Server 2016。 例如，您無法直接從 SQL Server 2005 執行個體升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
-- [選擇資料庫引擎升級方法](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)︰若要依正確順序升級，請根據您檢閱的支援版本與版本升級，選取適當的升級方法和步驟，此外亦根據作業環境中安裝的其他元件。  
+- [選擇資料庫引擎升級方法](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)：若要依正確順序升級，請根據您檢閱的支援版本與版本升級，選取適當的升級方法和步驟，此外亦根據環境中安裝的其他元件。  
   
-- [計劃和測試資料庫引擎升級計畫](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)︰檢閱版本資訊與已知的升級問題、升級前檢查清單，並開發和測試升級計畫。  
+- [計劃和測試資料庫引擎升級計畫](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)：檢閱版本資訊與已知的升級問題、升級前檢查清單，並開發和測試升級計畫。  
   
 - [安裝 SQL Server 的硬體和軟體需求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：檢閱安裝 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的軟體需求。 如果需要其他軟體，請先將其安裝在每個節點上，然後開始升級程序，以將任何停機時間降到最低。  
 
@@ -202,7 +202,7 @@ ms.locfileid: "74822196"
 
 >[!IMPORTANT]
 >- 請在每個步驟之間驗證同步。 在繼續下一個步驟前，請確認您的同步認可複本在可用性群組內確實同步，而且您的全域主要與分散式 AG 中的轉寄站同步。 
->- **建議**：在您每次驗證同步時，都在 SQL Server Management Studio 中重新整理資料庫節點和分散式 AG 節點。 在所有項目都同步後，請儲存各複本狀態的螢幕擷取畫面。 這有助於您掌握當下進行到哪個步驟，證明在進行下一步之前一切運作正常，並在發生任何錯誤時協助您進行疑難排解。 
+>- **建議**：在您每次驗證同步時，請同時在 SQL Server Management Studio 中重新整理資料庫節點和分散式 AG 節點。 在所有項目都同步後，請儲存各複本狀態的螢幕擷取畫面。 這有助於您掌握當下進行到哪個步驟，證明在進行下一步之前一切運作正常，並在發生任何錯誤時協助您進行疑難排解。 
 
 
 ### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>分散式可用性群組輪流升級的圖表範例
@@ -234,7 +234,7 @@ ms.locfileid: "74822196"
 
 >[!IMPORTANT]
 >- 請在每個步驟之間驗證同步。 在繼續下一個步驟前，請確認您的同步認可複本在可用性群組內確實同步，而且您的全域主要與分散式 AG 中的轉寄站同步。 
->- 建議：在您每次驗證同步時，都在 SQL Server Management Studio 中重新整理資料庫節點和分散式 AG 節點。 在所有項目都同步處理後，請建立螢幕擷取畫面並加以儲存。 這有助於您掌握當下進行到哪個步驟，證明在進行下一步之前一切運作正常，並在發生任何錯誤時協助您進行疑難排解。 
+>- 建議：在您每次驗證同步時，請同時在 SQL Server Management Studio 中重新整理資料庫節點和分散式 AG 節點。 在所有項目都同步處理後，請建立螢幕擷取畫面並加以儲存。 這有助於您掌握當下進行到哪個步驟，證明在進行下一步之前一切運作正常，並在發生任何錯誤時協助您進行疑難排解。 
 
 
 ## <a name="special-steps-for-change-data-capture-or-replication"></a>異動資料擷取或複寫的特殊步驟

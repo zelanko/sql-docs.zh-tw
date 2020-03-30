@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c6c74d73a531a40e0f8e57e7104109de71e27ce3
-ms.sourcegitcommit: acfdeacc80c112992c1201748e0b5c59a473032d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76977542"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server 機器學習服務在 Python 中建立預測模型並計算其分數

@@ -21,10 +21,10 @@ ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b342e77c542cd9f3357bccd4b97f3a876d1f5f1d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115690"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>建立 SQL Server 公用程式控制點 (SQL Server 公用程式)
@@ -122,14 +122,14 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
 -   [建立公用程式控制點](#Creating_UCP)  
   
-##  <a name="Welcome"></a> 建立 UCP 精靈簡介  
+##  <a name="introduction-to-create-ucp-wizard"></a><a name="Welcome"></a> 建立 UCP 精靈簡介  
  如果您開啟公用程式總管，而且沒有連接的公用程式控制點，您必須連接到其中一個控制點或建立新的控制點。  
   
  **連線到現有的 UCP** - 如果您的部署中已經有公用程式控制點，則可按一下 [公用程式總管] 窗格上方的 [連線到公用程式]  按鈕 ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility") 來連線。 若要連接到現有的 UCP，您必須擁有系統管理員認證，或是具有公用程式讀取者角色成員的身分。 請注意，每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式上只能有一個 UCP，而且您也只能夠從一個 SSMS 執行個體連接到一個 UCP。  
   
  **建立新的 UCP** - 若要建立新的公用程式控制點，請按一下 [公用程式總管] 窗格上方的 [建立 UCP]  按鈕 ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")。 若要建立新的 UCP，您必須指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，並在連接對話方塊中提供系統管理員認證。 請注意，每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式只能有一個 UCP。  
   
-##  <a name="Instance_name"></a> 指定執行個體  
+##  <a name="specify-instance"></a><a name="Instance_name"></a> 指定執行個體  
  指定有關您建立之 UCP 的下列資訊：  
   
 -   **執行個體名稱** - 若要從連線對話方塊選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請按一下 [連線...]  。使用以下格式提供電腦名稱和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱：ComputerName\InstanceName。  
@@ -138,7 +138,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  若要繼續進行，請按 **[下一步]** 。  
   
-##  <a name="Connection_dialog"></a> 連線對話方塊  
+##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> 連線對話方塊  
  在 [連接到伺服器] 對話方塊中，確認伺服器類型、電腦名稱及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱資訊。 如需詳細資訊，請參閱[連接到伺服器 &#40;Database Engine&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
   
 > [!NOTE]  
@@ -146,7 +146,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  若要繼續，請按一下 [連線...]  。  
   
-##  <a name="Agent_configuration"></a> 公用程式收集組帳戶  
+##  <a name="utility-collection-set-account"></a><a name="Agent_configuration"></a> 公用程式收集組帳戶  
  指定要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式收集組的 Windows 網域帳戶。 此帳戶會當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式收集組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶來使用。 另外，您也可以使用現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶。 若要通過驗證需求，請使用下列方針來指定帳戶。  
   
  如果您指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶選項：  
@@ -155,7 +155,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  若要繼續進行，請按 **[下一步]** 。  
   
-##  <a name="Validation_rules"></a> 驗證規則  
+##  <a name="validation-rules"></a><a name="Validation_rules"></a> 驗證規則  
  在這一版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，以下條件必須在即將建立 UCP 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上成立：  
   
 |驗證規則|更正措施|  
@@ -181,7 +181,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  若要繼續進行，請按 **[下一步]** 。  
   
-##  <a name="Summary"></a> 摘要  
+##  <a name="summary"></a><a name="Summary"></a> 摘要  
  摘要頁面會顯示您提供之有關 UCP 的資訊：  
   
 -   主控 UCP 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。  
@@ -192,7 +192,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  若要變更 UCP 組態設定，請按 **[上一步]** 。 若要繼續進行，請按 **[下一步]** 。  
   
-##  <a name="Creating_UCP"></a> 建立公用程式控制點  
+##  <a name="creating-the-utility-control-point"></a><a name="Creating_UCP"></a> 建立公用程式控制點  
  在建立 UCP 作業的期間，此精靈會顯示步驟並提供狀態：  
   
 -   正在準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體以建立 UCP。  
@@ -217,7 +217,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  如需如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中註冊其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的詳細資訊，請參閱[註冊 SQL Server 的執行個體 &#40;SQL Server 公用程式&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)。 若要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中移除當做 受管理的執行個體的 UCP，請在 **[公用程式總管]** 窗格中選取 **[受管理的執行個體]** 來填入受管理的執行個體的清單檢視，然後以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [公用程式總管內容] **清單檢視中的** 執行個體名稱，再選取 **[將執行個體設為未受管理]** 。  
   
-##  <a name="PowerShell_create_UCP"></a> 使用 PowerShell 建立新的公用程式控制點  
+##  <a name="create-a-new-utility-control-point-using-powershell"></a><a name="PowerShell_create_UCP"></a> 使用 PowerShell 建立新的公用程式控制點  
  使用下列範例建立新的公用程式控制點：  
   
 ```  

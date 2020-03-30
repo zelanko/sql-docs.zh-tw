@@ -15,10 +15,10 @@ author: pelopes
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: b2c743d23ae9c9ee730c3c1daa8d41709e44fd6f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75728559"
 ---
 # <a name="performance-dashboard"></a>效能儀表板

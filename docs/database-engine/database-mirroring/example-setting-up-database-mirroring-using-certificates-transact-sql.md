@@ -17,10 +17,10 @@ ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5e7c3a2fd690b7a19f7d94de7e8d4fbbd9cac355
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75253586"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>範例：使用憑證設定資料庫鏡像 (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "75253586"
   
  將憑證複製到另一個系統時，請使用安全複製方法。 務必將您所有的憑證小心保管。  
   
-##  <a name="ExampleH2"></a> 範例  
+##  <a name="example"></a><a name="ExampleH2"></a> 範例  
  下列範例示範必須針對位於 HOST_A 的一個夥伴完成什麼動作。 此範例中的兩個夥伴都是三個電腦系統中的預設伺服器執行個體。 兩個伺服器執行個體在不受信任的 Windows 網域上執行，因此必須有憑證驗證。  
   
  由 HOST_A 取得初始主體角色，而由 HOST_B 取得鏡像角色。  
@@ -62,7 +62,7 @@ ms.locfileid: "75253586"
   
 4.  [設定鏡像夥伴](#ConfigureMirroringPartners)  
   
-###  <a name="ConfiguringOutboundConnections"></a> 設定傳出連接  
+###  <a name="configuring-outbound-connections"></a><a name="ConfiguringOutboundConnections"></a> 設定傳出連接  
  **若要設定傳出連接設定的 Host_A**  
   
 1.  在 master 資料庫上，若有需要，請建立資料庫主要索引鍵。  
@@ -156,7 +156,7 @@ ms.locfileid: "75253586"
   
  [[範例頂端]](#ExampleH2)  
   
-###  <a name="ConfigureInboundConnections"></a> 設定傳入連接  
+###  <a name="configuring-inbound-connections"></a><a name="ConfigureInboundConnections"></a> 設定傳入連接  
  **若要設定傳入連接設定的 Host_A**  
   
 1.  在 HOST_A 上建立 HOST_B 的登入。  
@@ -233,7 +233,7 @@ ms.locfileid: "75253586"
 ### <a name="creating-the-mirror-database"></a>建立鏡像資料庫  
  如需有關如何建立鏡像資料庫的資訊，請參閱 [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
-###  <a name="ConfigureMirroringPartners"></a> 設定鏡像夥伴  
+###  <a name="configuring-the-mirroring-partners"></a><a name="ConfigureMirroringPartners"></a> 設定鏡像夥伴  
   
 1.  在 HOST_B 的鏡像伺服器執行個體上，設定 HOST_A 上的伺服器執行個體為夥伴 (設定初始主體伺服器執行個體)。 以有效網路位址取代 `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024`。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   
@@ -267,7 +267,7 @@ ms.locfileid: "75253586"
   
  [[範例頂端]](#ExampleH2)  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

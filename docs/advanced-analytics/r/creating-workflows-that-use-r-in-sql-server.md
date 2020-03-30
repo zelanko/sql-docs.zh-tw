@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2b8d55e95991437e4d76911fd26afb5b1bc9c550
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68715176"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>使用 R 在 SQL Server 上建立 SSIS 和 SSRS 工作流程

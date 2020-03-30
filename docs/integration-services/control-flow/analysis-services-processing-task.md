@@ -16,10 +16,10 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e95fd78657a043683d04fa86fd66edd345e2f483
-ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77634787"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 處理工作

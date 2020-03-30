@@ -16,10 +16,10 @@ ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0f9435584579e36e46d55aa6723e0ade60b6642b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081955"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>註冊標準的 .NET Framework Data Provider (SSRS)

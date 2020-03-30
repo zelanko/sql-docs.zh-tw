@@ -14,10 +14,10 @@ ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3f7760618f042c31a531f60dfdf0fbfb274ee174
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012700"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>設定 default full-text language 伺服器組態選項
@@ -43,24 +43,24 @@ ms.locfileid: "68012700"
   
 -   **後續操作：** [設定預設全文檢索語言選項之後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   當在 CREATE FULLTEXT INDEX 或 ALTER FULLTEXT INDEX 陳述式上，未透過 LANGUAGE **language_term** 選項指定資料行的語言時，會在全文檢索索引中使用 **default full-text language** 選項的值。 如果不支援預設的全文檢索語言或無法使用語言分析封裝 (Linguistic Analysis Package)，CREATE 或 ALTER 作業會失敗，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將傳回錯誤訊息，表示指定的語言無效。  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   此選項是進階選項，只有具經驗的資料庫管理員或通過認證的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專業人員才可變更。  
   
 -   [預設全文檢索語言]  選項需要 LCID 值。 如需受支援的 LCID 及其相關語言的清單，請參閱 [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。 例如，其他語言也可以向獨立軟體廠商取得。 如果找不到特定的語言方言，全文檢索引擎就會自動切換至主要語言。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-the-default-full-text-language-option"></a>設定 default full-text language 選項  
   
@@ -70,7 +70,7 @@ ms.locfileid: "68012700"
   
 3.  在 [其他] 下方，使用 **[預設全文檢索語言]** 來指定全文檢索索引資料行的預設語言值。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-configure-the-default-full-text-language-option"></a>設定 default full-text language 選項  
   
@@ -96,7 +96,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 後續操作：設定預設全文檢索語言選項之後  
+##  <a name="follow-up-after-you-configure-the-default-full-text-language-option"></a><a name="FollowUp"></a> 後續操作：設定預設全文檢索語言選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

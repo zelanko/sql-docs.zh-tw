@@ -23,10 +23,10 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 994018ab8b574bc313072f7a353ff999d645e0d9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292757"
 ---
 # <a name="error-handling-in-data"></a>處理資料中的錯誤

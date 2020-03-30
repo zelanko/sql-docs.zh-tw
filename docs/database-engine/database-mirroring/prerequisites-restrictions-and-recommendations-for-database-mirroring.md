@@ -20,10 +20,10 @@ ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1f6a1c47cf5672cdf0f9a22be6a252cfc8cdbe87
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244371"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>資料庫鏡像的必要條件、限制和建議事項
@@ -35,13 +35,13 @@ ms.locfileid: "75244371"
  本主題描述設定資料庫鏡像的必要條件和建議事項。 如需資料庫鏡像的簡介，請參閱 [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
   
-##  <a name="DbmSupport"></a> 支援資料庫鏡像  
+##  <a name="support-for-database-mirroring"></a><a name="DbmSupport"></a> 支援資料庫鏡像  
  如需 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中資料庫鏡像支援的相關資訊，請參閱 [SQL Server 2016 的版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。
   
  請注意，資料庫鏡像適用於任何支援的資料庫相容性層級。 如需支援的相容性層級相關資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
   
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   如果要建立鏡像工作階段，則夥伴伺服器和見證伺服器 (如果有的話) 必須在相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本上執行。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "75244371"
     >  如果資料庫鏡像已停止，您必須先將主體資料庫上建立的所有後續記錄備份套用到鏡像資料庫，然後才能重新啟動鏡像。  
   
   
-##  <a name="Restrictions"></a> 限制  
+##  <a name="restrictions"></a><a name="Restrictions"></a> 限制  
   
 -   只有使用者資料庫可進行鏡像。 您無法鏡像處理 **master**、 **msdb**、 **tempdb**或 **model** 資料庫。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75244371"
 -   跨資料庫交易或分散式交易不支援資料庫鏡像。 如需詳細資訊，請參閱[資料庫鏡像或 AlwaysOn 可用性群組不支援跨資料庫交易 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。  
   
   
-##  <a name="RecommendationsForPartners"></a> 設定夥伴伺服器的建議  
+##  <a name="recommendations-for-configuring-partner-servers"></a><a name="RecommendationsForPartners"></a> 設定夥伴伺服器的建議  
   
 -   夥伴伺服器應該在可相比而且可以處理相同工作負載的系統上執行。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75244371"
 -   關於廣域網路 (WAN) 對於高安全性模式的資料庫鏡像而言是否可靠，我們不提供任何建議。 如果您決定在 WAN 上使用高安全性模式，則將見證伺服器加入工作階段時要小心謹慎，因為可能會發生不必要的自動容錯移轉。 如需詳細資訊，請參閱本主題稍後的 [部署資料庫鏡像的建議](#RecommendationsForDeploying)。  
   
   
-##  <a name="RecommendationsForDeploying"></a> 部署資料庫鏡像的建議  
+##  <a name="recommendations-for-deploying-database-mirroring"></a><a name="RecommendationsForDeploying"></a> 部署資料庫鏡像的建議  
  最佳資料庫鏡像效能是使用非同步作業所取得。 當使用同步作業之鏡像工作階段的工作負載產生大量交易記錄資料時，效能可能會變慢。  
   
  在測試環境中，適合瀏覽所有作業模式，以評估資料庫鏡像的效能。 然而，在實際環境中部署鏡像之前，必須先了解網路如何在實際環境中運作。  

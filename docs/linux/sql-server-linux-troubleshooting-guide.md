@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.openlocfilehash: a4103e22facbb717b6797b91d8b218cc6ce4b0b7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288112"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>針對 Linux 上的 SQL Server 進行疑難排解
@@ -24,7 +24,7 @@ ms.locfileid: "79288112"
 > [!TIP]
 > 如需常見問題的解答，請參閱 [Linux 上的 SQL Server 常見問題集](sql-server-linux-faq.md)。
 
-## <a id="connection"></a> 針對連線失敗進行疑難排解
+## <a name="troubleshoot-connection-failures"></a><a id="connection"></a> 針對連線失敗進行疑難排解
 如果您無法連線到 Linux SQL Server，有幾個事項需要檢查。
 
 - 如果您無法使用 **localhost** 來連線到本機，請嘗試改用 IP 位址 127.0.0.1。 有可能是 **localhost** 未正確地對應到此位址。

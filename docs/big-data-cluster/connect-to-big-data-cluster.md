@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0c5ba08a492be621e4b1f8871bdfcb49983af26d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285982"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>使用 Azure Data Studio 連線到 SQL Server 巨量資料叢集
@@ -30,7 +30,7 @@ ms.locfileid: "79285982"
    - **kubectl**
    - **azdata**
 
-## <a id="master"></a> 連線到叢集
+## <a name="connect-to-the-cluster"></a><a id="master"></a> 連線到叢集
 
 若要使用 Azure Data Studio 連線到巨量資料叢集，請建立與叢集中 SQL Server 主要執行個體的新連線。 方法如下。
 

@@ -13,10 +13,10 @@ f1_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bdebcba1d6313c1e8c6363faa147a3e6a275e9dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292401"
 ---
 # <a name="flexible-file-source"></a>彈性檔案來源

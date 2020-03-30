@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azure-sqldw-latest ||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 20cf6e1c3c98a99898a7b302980d76cef327be5d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70228489"
 ---
 # <a name="set-statements-transact-sql"></a>SET 陳述式 (Transact-SQL)

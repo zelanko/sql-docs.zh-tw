@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e11a4ac0bcbb66d6b3216d8c2f7a4a3b15cedfb8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246872"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebook"></a>使用 Azure Data Studio 筆記本部署 SQL Server 巨量資料叢集

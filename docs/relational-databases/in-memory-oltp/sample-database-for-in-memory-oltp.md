@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef40223423b1645ce2acd7944db2ba32f85d01db
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258777"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>記憶體內部 OLTP 的範例資料庫
@@ -43,13 +43,13 @@ ms.locfileid: "75258777"
   
 -   [範例中的記憶體和磁碟空間使用量](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 -   基於效能測試考量，伺服器的規格必須與您的實際執行環境類似。 針對此特定範例，您應該準備至少 16 GB 的記憶體供 SQL Server 使用。 如需有關「記憶體內部 OLTP」硬體的一般指導方針，請參閱下列部落格文章：[SQL Server 2014 中記憶體內部 OLTP 的硬體考量](blog-hardware-in-memory-oltp.md)
 
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>安裝以 AdventureWorks 為基礎的 In-Memory OLTP 範例  
+##  <a name="installing-the-in-memory-oltp-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>安裝以 AdventureWorks 為基礎的 In-Memory OLTP 範例  
  請遵循下列步驟來安裝範例：  
   
 1.  從 [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) 將 AdventureWorks2016CTP3.bak 和 SQLServer2016CTP3Samples.zip 下載至本機資料夾，例如 'c:\temp'。  
@@ -80,7 +80,7 @@ ms.locfileid: "75258777"
   
 3.  若要檢視範例指令碼和工作負載，請將檔案 SQLServer2016CTP3Samples.zip 解壓縮至本機資料夾。 如需執行工作負載的指示，請參閱記憶體內部 OLTP\readme.txt 中的檔案。  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a> 範例資料表和程序描述  
+##  <a name="description-of-the-sample-tables-and-procedures"></a><a name="Descriptionofthesampletablesandprocedures"></a> 範例資料表和程序描述  
  此範例以 AdventureWorks 中的現有資料表為基礎，為產品和銷售訂單建立新資料表。 新資料表的結構描述類似現有的資料表，但有一些差異 (如下所述)。  
   
  新的記憶體最佳化資料表具有後置詞 '_inmem'。 此範例也會包含具有後置詞 '_ondisk' 的對應資料表，這些資料表可用來在系統上的記憶體最佳化資料表與磁碟資料表之間，進行一對一的效能比較。  
@@ -309,7 +309,7 @@ ms.locfileid: "75258777"
   
     -   此程序依賴協助程式程序 dbo.usp_GenerateCKCheck、dbo.usp_GenerateFKCheck 和 dbo.GenerateUQCheck 來產生執行完整性檢查所需的 T-SQL。  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> 使用工作負載示範的效能度量  
+##  <a name="performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a> 使用工作負載示範的效能度量  
  Ostress 是由 Microsoft CSS SQL Server 支援小組所開發的命令列工具。 此工具可用來平行執行查詢或執行預存程序。 您可以設定平行執行給定 T-SQL 陳述式的執行緒數目，以及指定此執行緒上應該執行陳述式的次數，ostress 會加快執行緒的速度，並平行執行所有執行緒上的陳述式。 所有執行緒完成執行之後，ostress 會報告所有執行緒完成執行所花費的時間。  
   
 ### <a name="installing-ostress"></a>安裝 ostress  
@@ -434,7 +434,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
  建議每次執行示範之後將其重設。 由於此工作負載只能插入，每次執行會耗用更多記憶體，因此需要重設以防止記憶體不足。 [執行工作負載之後的記憶體使用量](#Memoryutilizationafterrunningtheworkload)章節中會討論執行後的記憶體耗用量。  
   
-###  <a name="Troubleshootingslow-runningtests"></a> 為執行緩慢的測試疑難排解  
+###  <a name="troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a> 為執行緩慢的測試疑難排解  
  測試結果通常會隨硬體而有所不同，也會隨測試執行中使用並行的程度而有所不同。 如果結果不如預期，可注意下列幾點：  
   
 -   並行交易數目：在單一執行緒上執行工作負載時，透過「記憶體內部 OLTP」提升的效能可能不到兩倍。 只有在高度並行的情況下，閂鎖競爭才會成為嚴重的問題。  
@@ -447,10 +447,10 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
     -   徵兆：執行記憶體最佳化資料表上的工作負載時，如果 CPU 使用率離 100% 有段距離或急起急落，可能會發生記錄 IO 瓶頸。 您可以開啟資源監視器並查看記錄磁碟機的佇列長度，以確認是否發生此瓶頸。  
   
-##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> 範例中的記憶體和磁碟空間使用量  
+##  <a name="memory-and-disk-space-utilization-in-the-sample"></a><a name="MemoryandDiskSpaceUtilizationintheSample"></a> 範例中的記憶體和磁碟空間使用量  
  以下將描述範例資料庫之記憶體和磁碟空間使用量的預期結果。 我們也將顯示在具有 16 個邏輯核心的測試伺服器上看到的結果。  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a> 記憶體最佳化資料表的記憶體使用量  
+###  <a name="memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a> 記憶體最佳化資料表的記憶體使用量  
   
 #### <a name="overall-utilization-of-the-database"></a>資料庫的整體使用情況  
  下列查詢可用來取得系統中記憶體內部 OLTP 的總記憶體使用量。  
@@ -505,7 +505,7 @@ WHERE t.type='U'
   
  此處值得注意的是，與資料表資料大小相較下，配置給索引的記憶體大小。 這是因為範例中的雜湊索引會預留大小以容納較大的資料。 請注意，雜湊索引有固定的大小，因此其大小不會隨資料表中的資料大小增加。  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a> 執行工作負載之後的記憶體使用量  
+####  <a name="memory-utilization-after-running-the-workload"></a><a name="Memoryutilizationafterrunningtheworkload"></a> 執行工作負載之後的記憶體使用量  
  插入 1,000 萬個銷售訂單之後，總記憶體使用量會類似如下：  
   
 ```sql

@@ -11,10 +11,10 @@ ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822187"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>疑難排解：可用性群組已超過 RPO
@@ -29,7 +29,7 @@ ms.locfileid: "74822187"
   
 2.  [磁碟 I/O 瓶頸會降低次要複本上的記錄強化](#BKMK_IO_BOTTLENECK)  
   
-##  <a name="BKMK_LATENCY"></a> 高度網路延遲或低網路輸送量會造成主要複本上的記錄累積  
+##  <a name="high-network-latency-or-low-network-throughput-causes-log-build-up-on-the-primary-replica"></a><a name="BKMK_LATENCY"></a> 高度網路延遲或低網路輸送量會造成主要複本上的記錄累積  
  資料庫超出其 RPO 的最常見原因是無法以夠快的速度傳送至次要複本。  
   
 ### <a name="explanation"></a>說明  
@@ -63,7 +63,7 @@ ms.locfileid: "74822187"
 若要解決此問題，請嘗試升級您的網路頻寬，或者移除或減少不必要的網路流量。  
 
 
-##  <a name="BKMK_IO_BOTTLENECK"></a> 磁碟 I/O 瓶頸會降低次要複本上的記錄強化  
+##  <a name="disk-io-bottleneck-slows-down-log-hardening-on-the-secondary-replica"></a><a name="BKMK_IO_BOTTLENECK"></a> 磁碟 I/O 瓶頸會降低次要複本上的記錄強化  
  根據資料庫檔案部署，記錄強化可能會因為報告工作負載的 I/O 競爭而變慢。  
   
 ### <a name="explanation"></a>說明  

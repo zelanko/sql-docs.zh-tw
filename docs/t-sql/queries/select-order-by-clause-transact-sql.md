@@ -537,7 +537,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName;  
 ```  
   
- 下列範例依據兩個資料行排序。 此查詢會先依據 `FirstName` 資料行以遞增順序排序，然後再依據 `FirstName` 資料行以遞減順序排序共同的 `LastName` 值。  
+ 下列範例依據兩個資料行排序。 此查詢會先依據 `FirstName` 資料行以遞增順序排序，然後再依據 `LastName` 資料行以遞減順序排序共同的 `FirstName` 值。  
   
 ```sql
 -- Uses AdventureWorks  

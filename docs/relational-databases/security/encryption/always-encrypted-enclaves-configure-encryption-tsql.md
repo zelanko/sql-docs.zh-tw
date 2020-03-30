@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: b7e8118dc6404bf0f23422e030737403857367d8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73595563"
 ---
 # <a name="configure-column-encryption-in-place-with-transact-sql"></a>使用 Transact-SQL 就地設定資料行加密

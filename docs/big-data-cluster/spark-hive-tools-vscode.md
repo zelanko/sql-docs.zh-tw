@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75255922"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>在 Visual Studio Code 中於 SQL Server 巨量資料叢集上提交 Spark 作業
@@ -176,7 +176,7 @@ ms.locfileid: "75255922"
 
 支援 [Apache Livy](https://livy.incubator.apache.org/) \(英文\) 設定，且可以在工作區資料夾中的 **.VSCode\settings.json** 設定它。 目前 Livy 設定僅支援 Python 指令碼。 如需詳細資料，請參閱 [Livy 讀我檔案](https://github.com/cloudera/livy/blob/master/README.rst )。
 
-### <a id="triggerlivyconf"></a>**如何觸發 Livy 設定**
+### <a name="how-to-trigger-livy-configuration"></a><a id="triggerlivyconf"></a>**如何觸發 Livy 設定**
 
 #### <a name="method-1"></a>方法 1
 

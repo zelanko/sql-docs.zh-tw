@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: cf0253788e19061fe54b8e2b0b8dfd3142856472
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78335734"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>使用 SQL Server 機器學習服務中的擴充事件來監視 Python 與 R 指令碼

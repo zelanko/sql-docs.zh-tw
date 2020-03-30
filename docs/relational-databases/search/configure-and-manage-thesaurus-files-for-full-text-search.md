@@ -23,9 +23,9 @@ ms.locfileid: "74056206"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>設定及管理全文檢索搜尋的同義字檔案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的全文檢索查詢可以透過使用「同義字」，搜尋使用者指定之詞彙的同義字。 每個同義字會針對特定語言定義一組同義字。 透過開發符合全文檢索資料的同義字，您可以有效地擴大針對該資料進行全文檢索查詢的範圍。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的全文檢索查詢可以透過使用「同義字」  ，搜尋使用者指定之詞彙的同義字。 每個同義字會針對特定語言定義一組同義字。 透過開發符合全文檢索資料的同義字，您可以有效地擴大針對該資料進行全文檢索查詢的範圍。
 
-系統會針對所有 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 查詢以及指定 [ 子句的任何 ](../../t-sql/queries/contains-transact-sql.md)CONTAINS[ 和 ](../../relational-databases/system-functions/containstable-transact-sql.md)CONTAINSTABLE`FORMSOF THESAURUS` 查詢進行同義字比對。
+系統會針對所有 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 查詢以及指定 `FORMSOF THESAURUS` 子句的任何 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 查詢進行同義字比對。
   
 全文檢索搜尋的同義字是一個 XML 文字檔。
   
@@ -44,7 +44,7 @@ ms.locfileid: "74056206"
 
 -   變音符號設定  
   
-     針對給定的同義字，所有搜尋模式都會區分或不區分變音符號，例如波狀符號 (**~**)、尖重音符號 (**&acute;**) 或母音變化 (**&uml;**) (亦即，「區分腔調字」或「不區分腔調字」)。 例如，假設您在全文檢索查詢中，指定以其他模式取代模式 "caf&eacute;"。 如果同義字不區分腔調字，全文檢索搜尋就會取代模式 "caf&eacute;" 和 "cafe"。 如果同義字區分腔調字，全文檢索搜尋只會取代模式 "caf&eacute;"。 根據預設，同義字不會區分腔調字。  
+     針對給定的同義字，所有搜尋模式都會區分或不區分變音符號，例如波狀符號 ( **~** )、尖重音符號 ( **&acute;** ) 或母音變化 ( **&uml;** ) (亦即，「區分腔調字」  或「不區分腔調字」  )。 例如，假設您在全文檢索查詢中，指定以其他模式取代模式 "caf&eacute;"。 如果同義字不區分腔調字，全文檢索搜尋就會取代模式 "caf&eacute;" 和 "cafe"。 如果同義字區分腔調字，全文檢索搜尋只會取代模式 "caf&eacute;"。 根據預設，同義字不會區分腔調字。  
   
 ##  <a name="default-thesaurus-files"></a><a name="initial_thesaurus_files"></a> 預設的同義字檔案
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一組 XML 同義字檔案 (每個支援的語言都有一個檔案)。 這些檔案基本上都是空的。 它們僅包含所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同義字通用的最上層 XML 結構以及標記為註解的範例同義字。  

@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 80f6d40fd2c548135595fd96de6de4b967460a90
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288142"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 資料

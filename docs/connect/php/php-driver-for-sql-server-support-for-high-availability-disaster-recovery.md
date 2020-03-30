@@ -11,10 +11,10 @@ ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f67a0cc7f564683ed11ce7d7de9da5200128434
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76929183"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>高可用性與災害復原的支援

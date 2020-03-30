@@ -17,10 +17,10 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ebd9d811c39247822d2200327fefe02026c067e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081695"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
@@ -45,10 +45,10 @@ rs {-?}
 {-t trace}  
 ```  
   
-##  <a name="bkmk_filelocation"></a> 檔案位置  
+##  <a name="file-location"></a><a name="bkmk_filelocation"></a> 檔案位置  
  **RS.exe** 位在 **\Program Files\Microsoft SQL Server\110\Tools\Binn**。 您可以從檔案系統上的任何資料夾執行此公用程式。  
   
-##  <a name="bkmk_arguments"></a> 引數  
+##  <a name="arguments"></a><a name="bkmk_arguments"></a> 引數  
  **-?**  
  (選擇性) 顯示 **rs** 引數的語法。  
   
@@ -97,10 +97,10 @@ rs {-?}
  **-t**  
  (選擇性) 追蹤記錄的輸出錯誤訊息。 此引數沒有取得值。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
-##  <a name="bkmk_permissions"></a> 權限  
+##  <a name="permissions"></a><a name="bkmk_permissions"></a> 權限  
  若要執行工具，您必須有足夠的權限，可以連接到要對其執行指令碼的報表伺服器執行個體。 您可以執行指令碼在本機電腦或遠端電腦執行變更。 若要對安裝在遠端電腦上的報表伺服器執行變更，請在 **-s** 引數中指定遠端電腦。  
   
-##  <a name="bkmk_examples"></a> 範例  
+##  <a name="examples"></a><a name="bkmk_examples"></a> 範例  
  下列範例說明如何指定指令碼檔案，其中包含您要執行的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 指令碼和 Web 服務方法。  
   
 ```  

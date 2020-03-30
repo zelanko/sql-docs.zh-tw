@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 82ee5bbda78f41796134a2d1ad3a639f76748bcd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287082"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 交易記錄架構與管理指南
@@ -34,7 +34,7 @@ ms.locfileid: "79287082"
   每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫都有交易記錄檔，這個記錄檔會記錄所有交易，以及個別交易在資料庫中所做的修改。 交易記錄是資料庫的重要元件，而且如果系統故障，就可能需要交易記錄讓資料庫返回一致的狀態。 本指南提供有關交易記錄實體及邏輯架構的資訊。 了解此架構可提升交易記錄管理的效能。  
 
   
-##  <a name="Logical_Arch"></a> 交易記錄邏輯架構  
+##  <a name="transaction-log-logical-architecture"></a><a name="Logical_Arch"></a> 交易記錄邏輯架構  
  在邏輯上， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 交易記錄檔會以記錄檔記錄字串的形式進行運作。 每個記錄檔記錄均由記錄序號 (LSN) 來識別。 每筆新記錄檔記錄都會寫入記錄檔的邏輯結尾處，並且其 LSN 比它前一個記錄的 LSN 來得大。 記錄檔記錄會儲存在序列中，因為其建立方式是若 LSN2 大於 LSN1，則 LSN2 所參考記錄檔記錄描述的變更會在記錄檔記錄 LSN1 所描述變更後發生。 每筆記錄檔記錄都包含所屬交易的識別碼。 對於每筆交易，所有與交易關聯的記錄檔記錄將使用反向指標個別地連結於鏈結之中，以加速交易的回復。  
   
  資料修改的記錄檔記錄可記錄所執行的邏輯作業，或是已修改資料的前置與後置資料影像。 前置資料影像為執行作業之前的資料副本；後置資料影像為執行作業之後的資料副本。  
@@ -69,7 +69,7 @@ ms.locfileid: "79287082"
 
 差異與記錄備份則可將已還原的資料庫推往更後面的時間點，因為它們對應到較高的 LSN。 
   
-##  <a name="physical_arch"></a> 交易記錄實體架構  
+##  <a name="transaction-log-physical-architecture"></a><a name="physical_arch"></a> 交易記錄實體架構  
 資料庫中的交易記錄會對應到一個或多個實體檔案。 從概念上來說，記錄檔是記錄的字串。 就實際上來說，記錄的順序必須有效地儲存在實作交易記錄的一組實體檔案中。 每個資料庫至少要有一個記錄檔。  
   
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會在內部將每個實體記錄檔分成數個虛擬記錄檔 (VLF)。 虛擬記錄檔沒有固定的大小，一個實體記錄檔也沒有固定的虛擬記錄檔數目。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 在建立或擴充記錄檔時，會動態選擇虛擬記錄檔的大小。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 會盡量維持少量的虛擬檔。 記錄檔擴充之後的虛擬檔大小，是現有記錄檔大小以及新檔案所增加的大小總和。 系統管理員無法設定虛擬記錄檔的大小或數目。  
@@ -130,14 +130,14 @@ ms.locfileid: "79287082"
   
  記錄截斷可能會因為各種因素而延遲。 如果在記錄截斷中發生長時間的延遲，交易記錄可能會填滿。 如需詳細資訊，請參閱[可能會延遲記錄截斷的因素](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)和[針對完整交易記錄 &#40;SQL Server 錯誤 9002&#41; 進行疑難排解](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。  
   
-##  <a name="WAL"></a> 預先寫入交易記錄  
+##  <a name="write-ahead-transaction-log"></a><a name="WAL"></a> 預先寫入交易記錄  
  本章節說明預先寫入交易記錄在將資料修改記錄至磁碟時所扮演的角色。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會使用預先寫入記錄 (WAL) 演算法，而這項功能可確保在相關記錄檔的記錄寫入磁碟之前，不會將任何資料修改寫入磁碟。 如此可保留交易的 ACID 屬性。  
   
  若要了解預寫記錄檔的運作方式，您一定要知道如何將修改的資料寫入磁碟。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會維護緩衝快取，當需要擷取資料時，就可以將資料頁讀取到其中。 當緩衝快取中的頁面被修改時，不會立即重新寫入磁碟；而是將頁面標示為「中途」  。 在實際將資料頁寫入磁碟之前，可以進行多次邏輯寫入。 每次邏輯寫入時，都會有交易記錄插入至記載修改的記錄快取中。 記錄檔記錄必須在關聯的中途分頁從緩衝區快取移除而寫入至磁碟之前，先寫入磁碟中。 檢查點處理序會定期掃描緩衝快取，檢查是否有內含來自指定資料庫之頁面的緩衝區，並將所有中途分頁寫入磁碟。 藉由建立一個點來確保所有中途分頁都已寫入磁碟中，檢查點可讓稍後的復原節省時間。  
   
  將緩衝區快取中之修改資料頁面寫入磁碟中的動作稱為清除頁面。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 含有防止中途分頁在寫入相關聯記錄檔記錄之前遭到清除的邏輯。 記錄檔記錄會在記錄檔緩衝區清除後寫入磁碟中。  交易認可後或記錄檔緩衝區已滿時會發生此情況。  
   
-##  <a name="Backups"></a> 交易記錄備份  
+##  <a name="transaction-log-backups"></a><a name="Backups"></a> 交易記錄備份  
  本章節提出有關如何備份和還原 (套用) 交易記錄的概念。 在完整和大量記錄復原模式下，進行交易記錄 (「記錄備份」  ) 的例行備份，對復原資料而言是必要的。 您可以在任何完整備份正在執行的同時備份記錄。 如需復原模型的詳細資訊，請參閱 [SQL Server 資料庫的備份與還原](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
  在建立第一個記錄備份之前，您必須建立完整備份，例如資料庫備份或檔案備份組中的第一個備份。 僅使用檔案備份來還原資料庫，可能會讓情況變得很複雜。 因此，我們建議您盡可能先從完整資料庫備份開始。 之後，則需要定期備份交易記錄。 這不僅是要降低工作損失的風險，也是為了在必要時可以截斷交易記錄。 交易記錄通常在每個傳統記錄備份之後截斷。  

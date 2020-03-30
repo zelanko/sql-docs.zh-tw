@@ -42,10 +42,10 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d4046228f4b0d37e72949f9bc87eac13786e6bba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291127"
 ---
 # <a name="transformation-custom-properties"></a>轉換自訂屬性
@@ -76,7 +76,7 @@ ms.locfileid: "71291127"
 ### <a name="transformations-without-custom-properties"></a>不含自訂屬性的轉換  
  下列轉換在元件、輸入或輸出層級沒有自訂屬性︰[合併轉換](../../../integration-services/data-flow/transformations/merge-transformation.md)、[多點傳送轉換](../../../integration-services/data-flow/transformations/multicast-transformation.md)和[全部聯集轉換](../../../integration-services/data-flow/transformations/union-all-transformation.md)。 它們只會使用所有資料流程元件通用的屬性。  
   
-##  <a name="aggregate"></a> 彙總轉換自訂屬性  
+##  <a name="aggregate-transformation-custom-properties"></a><a name="aggregate"></a> 彙總轉換自訂屬性  
  彙總轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是彙總轉換的自訂屬性。 所有屬性都是可讀寫的。  
@@ -111,7 +111,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [彙總轉換](../../../integration-services/data-flow/transformations/aggregate-transformation.md)。  
   
-##  <a name="audit"></a> 稽核轉換自訂屬性  
+##  <a name="audit-transformation-custom-properties"></a><a name="audit"></a> 稽核轉換自訂屬性  
  稽核轉換只有元件層級上所有資料流程元件通用的屬性。  
   
  下表描述的是稽核轉換之輸出資料行的自訂屬性。 所有屬性都是可讀寫的。  
@@ -124,7 +124,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [稽核轉換](../../../integration-services/data-flow/transformations/audit-transformation.md)。  
   
-##  <a name="cachetransform"></a> 快取轉換轉換自訂屬性  
+##  <a name="cache-transform-transformation-custom-properties"></a><a name="cachetransform"></a> 快取轉換轉換自訂屬性  
  快取轉換轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是快取轉換轉換的屬性。 所有屬性都是可讀寫的。  
@@ -137,7 +137,7 @@ ms.locfileid: "71291127"
 |InputColumns|String|選取之輸入資料行的清單。|  
 |CacheColumnName|String|指定對應至選取之輸入資料行的資料行名稱。<br /><br /> CacheColumnName 屬性中的資料行名稱必須與快取連接管理員編輯器  之 [資料行]  頁面上所列的對應資料行名稱相符。<br /><br /> 如需詳細資訊，請參閱 [快取連接管理員編輯器](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)|  
   
-##  <a name="charmap"></a> 字元對應轉換自訂屬性  
+##  <a name="character-map-transformation-custom-properties"></a><a name="charmap"></a> 字元對應轉換自訂屬性  
  字元對應轉換只有元件層級上所有資料流程元件通用的屬性。  
   
  下表描述的是字元對應轉換之輸出資料行的自訂屬性。 所有屬性都是可讀寫的。  
@@ -151,7 +151,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [字元對應轉換](../../../integration-services/data-flow/transformations/character-map-transformation.md)。  
   
-##  <a name="condsplit"></a> 條件式分割轉換自訂屬性  
+##  <a name="conditional-split-transformation-custom-properties"></a><a name="condsplit"></a> 條件式分割轉換自訂屬性  
  條件式分割轉換只有元件層級上所有資料流程元件通用的屬性。  
   
  下表描述的是條件式分割轉換之輸出的自訂屬性。 所有屬性都是可讀寫的。  
@@ -167,7 +167,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)。  
   
-##  <a name="copymap"></a> 複製資料行轉換自訂屬性  
+##  <a name="copy-column-transformation-custom-properties"></a><a name="copymap"></a> 複製資料行轉換自訂屬性  
  複製資料行轉換只有元件層級上所有資料流程元件通用的屬性。  
   
  下表描述的是複製資料行轉換之輸出資料行的自訂屬性。 所有屬性都是可讀寫的。  
@@ -180,7 +180,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [複製資料行轉換](../../../integration-services/data-flow/transformations/copy-column-transformation.md)。  
   
-##  <a name="dataconv"></a> 資料轉換自訂屬性  
+##  <a name="data-conversion-transformation-custom-properties"></a><a name="dataconv"></a> 資料轉換自訂屬性  
  資料轉換只有元件層級上所有資料流程元件通用的屬性。  
   
  下表描述的是資料轉換之輸出資料行的自訂屬性。 所有屬性都是可讀寫的。  
@@ -194,7 +194,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)。  
   
-##  <a name="dmquery"></a> 資料採礦查詢轉換自訂屬性  
+##  <a name="data-mining-query-transformation-custom-properties"></a><a name="dmquery"></a> 資料採礦查詢轉換自訂屬性  
  資料採礦查詢轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是資料採礦查詢轉換的自訂屬性。 所有屬性都是可讀寫的。  
@@ -213,7 +213,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [資料採礦查詢轉換](../../../integration-services/data-flow/transformations/data-mining-query-transformation.md)。  
   
-##  <a name="derived"></a> 衍生的資料行轉換自訂屬性  
+##  <a name="derived-column-transformation-custom-properties"></a><a name="derived"></a> 衍生的資料行轉換自訂屬性  
  衍生的資料行轉換只有元件層級上所有資料流程元件通用的屬性。  
   
  下表描述的是衍生的資料行轉換之輸入資料行和輸出資料行的自訂屬性。 當您選擇要加入衍生的資料行當做新資料行時，這些自訂屬性會套用至新的輸出資料行。當您選擇要使用衍生的結果來取代現有輸入資料行的內容時，這些自訂屬性會套用至現有的輸入資料行。 所有屬性都是可讀寫的。  
@@ -227,7 +227,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [衍生的資料行轉換](../../../integration-services/data-flow/transformations/derived-column-transformation.md)。  
   
-##  <a name="extract"></a> 匯出資料行轉換自訂屬性  
+##  <a name="export-column-transformation-custom-properties"></a><a name="extract"></a> 匯出資料行轉換自訂屬性  
  匯出資料行轉換只有元件層級上所有資料流程元件通用的屬性。  
   
  下表描述的是匯出資料行轉換之輸入資料行的自訂屬性。 所有屬性都是可讀寫的。  
@@ -243,7 +243,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [匯出資料行轉換](../../../integration-services/data-flow/transformations/export-column-transformation.md)。  
   
-##  <a name="insert"></a> 匯入資料行轉換自訂屬性  
+##  <a name="import-column-transformation-custom-properties"></a><a name="insert"></a> 匯入資料行轉換自訂屬性  
  匯入資料行轉換只有元件層級上所有資料流程元件通用的屬性。  
   
  下表描述的是匯入資料行轉換之輸入資料行的自訂屬性。 所有屬性都是可讀寫的。  
@@ -257,7 +257,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [匯入資料行轉換](../../../integration-services/data-flow/transformations/import-column-transformation.md)。  
   
-##  <a name="fgroup"></a> 模糊群組轉換自訂屬性  
+##  <a name="fuzzy-grouping-transformation-custom-properties"></a><a name="fgroup"></a> 模糊群組轉換自訂屬性  
  模糊群組轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是模糊群組轉換的自訂屬性。 所有屬性都是可讀寫的。  
@@ -290,7 +290,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [模糊群組轉換](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)。  
   
-##  <a name="flookup"></a> 模糊查閱轉換自訂屬性  
+##  <a name="fuzzy-lookup-transformation-custom-properties"></a><a name="flookup"></a> 模糊查閱轉換自訂屬性  
  模糊查閱轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是模糊查閱轉換的自訂屬性。 除了 **ReferenceMetadataXML** 以外的所有屬性都是讀取/寫入。  
@@ -335,7 +335,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [模糊查閱轉換](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)。  
   
-##  <a name="lookup"></a> 查閱轉換自訂屬性  
+##  <a name="lookup-transformation-custom-properties"></a><a name="lookup"></a> 查閱轉換自訂屬性  
  查閱轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是查閱轉換的自訂屬性。 除了 **ReferenceMetadataXML** 以外的所有屬性都是讀取/寫入。  
@@ -369,7 +369,7 @@ ms.locfileid: "71291127"
   
  如需相關資訊，請參閱 [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)。  
   
-##  <a name="mjoin"></a> 合併聯結轉換自訂屬性  
+##  <a name="merge-join-transformation-custom-properties"></a><a name="mjoin"></a> 合併聯結轉換自訂屬性  
  合併聯結轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是合併聯結轉換的自訂屬性。  
@@ -391,7 +391,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [合併聯結轉換](../../../integration-services/data-flow/transformations/merge-join-transformation.md)。  
   
-##  <a name="oledbcmd"></a> OLE DB 命令轉換自訂屬性  
+##  <a name="ole-db-command-transformation-custom-properties"></a><a name="oledbcmd"></a> OLE DB 命令轉換自訂屬性  
  OLE DB 命令轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是 OLE DB 命令轉換的自訂屬性。  
@@ -412,7 +412,7 @@ ms.locfileid: "71291127"
   
  如需相關資訊，請參閱 [OLE DB Command Transformation](../../../integration-services/data-flow/transformations/ole-db-command-transformation.md)。  
   
-##  <a name="percent"></a> 百分比取樣轉換自訂屬性  
+##  <a name="percentage-sampling-transformation-custom-properties"></a><a name="percent"></a> 百分比取樣轉換自訂屬性  
  百分比取樣轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是百分比取樣轉換的自訂屬性。  
@@ -432,7 +432,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [百分比取樣轉換](../../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)。  
   
-##  <a name="pivot"></a> 樞紐轉換自訂屬性  
+##  <a name="pivot-transformation-custom-properties"></a><a name="pivot"></a> 樞紐轉換自訂屬性  
  下表描述樞紐轉換的自訂元件屬性。  
   
 |屬性|資料類型|描述|  
@@ -454,7 +454,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [樞紐轉換](../../../integration-services/data-flow/transformations/pivot-transformation.md)。  
   
-##  <a name="rowcount"></a> 資料列計數轉換自訂屬性  
+##  <a name="row-count-transformation-custom-properties"></a><a name="rowcount"></a> 資料列計數轉換自訂屬性  
  資料列計數轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是資料列計數轉換的自訂屬性。 所有屬性都是可讀寫的。  
@@ -467,7 +467,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [Row Count Transformation](../../../integration-services/data-flow/transformations/row-count-transformation.md)。  
   
-##  <a name="rowsamp"></a> 資料列取樣轉換自訂屬性  
+##  <a name="row-sampling-transformation-custom-properties"></a><a name="rowsamp"></a> 資料列取樣轉換自訂屬性  
  資料列取樣轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是資料列取樣轉換的自訂屬性。 所有屬性都是可讀寫的。  
@@ -493,7 +493,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [資料列取樣轉換](../../../integration-services/data-flow/transformations/row-sampling-transformation.md)。  
   
-##  <a name="script"></a> 指令碼元件自訂屬性  
+##  <a name="script-component-custom-properties"></a><a name="script"></a> 指令碼元件自訂屬性  
  指令碼元件同時具有自訂屬性以及所有資料流程元件通用的屬性。 不論指令碼元件是當做來源、轉換或目的地，您都可以使用相同的自訂屬性。  
   
  下表描述的是指令碼元件的自訂屬性。 所有屬性都是可讀寫的。  
@@ -507,7 +507,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [指令碼元件](../../../integration-services/data-flow/transformations/script-component.md)。  
   
-##  <a name="scd"></a> 緩時變維度轉換自訂屬性  
+##  <a name="slowly-changing-dimension-transformation-custom-properties"></a><a name="scd"></a> 緩時變維度轉換自訂屬性  
  緩時變維度轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是緩時變維度轉換的自訂屬性。 所有屬性都是可讀寫的。  
@@ -533,7 +533,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [緩時變維度轉換](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)。  
   
-##  <a name="sort"></a> 排序轉換自訂屬性  
+##  <a name="sort-transformation-custom-properties"></a><a name="sort"></a> 排序轉換自訂屬性  
  排序轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是排序轉換的自訂屬性。 所有屬性都是可讀寫的。  
@@ -560,7 +560,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [排序轉換](../../../integration-services/data-flow/transformations/sort-transformation.md)。  
   
-##  <a name="textract"></a> 詞彙擷取轉換自訂屬性  
+##  <a name="term-extraction-transformation-custom-properties"></a><a name="textract"></a> 詞彙擷取轉換自訂屬性  
  詞彙擷取轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是詞彙擷取轉換的自訂屬性。 所有屬性都是可讀寫的。  
@@ -580,7 +580,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [詞彙擷取轉換](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)。  
   
-##  <a name="tlookup"></a> 詞彙查閱轉換自訂屬性  
+##  <a name="term-lookup-transformation-custom-properties"></a><a name="tlookup"></a> 詞彙查閱轉換自訂屬性  
  詞彙查閱轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是詞彙查閱轉換的自訂屬性。 所有屬性都是可讀寫的。  
@@ -607,7 +607,7 @@ ms.locfileid: "71291127"
   
  如需詳細資訊，請參閱 [詞彙查閱轉換](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)。  
   
-##  <a name="unpivot"></a> 取消樞紐轉換自訂屬性  
+##  <a name="unpivot-transformation-custom-properties"></a><a name="unpivot"></a> 取消樞紐轉換自訂屬性  
  取消樞紐轉換只有元件層級上所有資料流程元件通用的屬性。  
   
 > [!NOTE]  

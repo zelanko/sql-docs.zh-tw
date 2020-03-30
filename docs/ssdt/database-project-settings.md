@@ -41,10 +41,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 3a57f52df4dced4f110135cce1ff30346cc1ebb0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75241677"
 ---
 # <a name="database-project-settings"></a>資料庫專案設定
@@ -81,7 +81,7 @@ ms.locfileid: "75241677"
   
 3.  按一下 [ **專案設定** ] 索引標籤。現在您就可以設定資料庫專案屬性的一般屬性。 注意左窗格中各種索引標籤 (代表不同分類) 的可用性。  
   
-## <a name="bkmk_proj_settings"></a>專案設定  
+## <a name="project-settings"></a><a name="bkmk_proj_settings"></a>專案設定  
 下列表格中的設定會套用至這個資料庫專案的所有組態。  
   
 |欄位|預設值|描述|  
@@ -97,7 +97,7 @@ ms.locfileid: "75241677"
 |驗證識別項的大小寫。|是|指定是否要在建置專案時驗證專案中各個 SQL 物件識別項的大小寫。 此選項適用於指定資料庫定序區分大小寫的資料庫專案。|  
 |資料庫設定|由資料庫的標準組態設定所決定的預設值。|可供指定的幾項設定，例子包括 SQL Server 資料庫的定序方法和資料庫層級設定等。|  
   
-## <a name="bkmk_evf"></a>擴充的 Transact-SQL 驗證  
+## <a name="extended-transact-sql-verification"></a><a name="bkmk_evf"></a>擴充的 Transact-SQL 驗證  
   
 > [!IMPORTANT]  
 > 擴充的 Transact-SQL 驗證功能將從 SQL Server Data Tools 的下一個功能版本以及 Visual Studio 的下一個主要版本中移除。  
@@ -156,12 +156,12 @@ Compiler Service 具有兩種限制分類。
 ### <a name="special-considerations-for-collations"></a>定序的特殊考量  
 如需部分自主資料庫中之定序的詳細資訊，請參閱 [自主資料庫定序](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx)。  
   
-## <a name="bkmk_sqlclr"></a>SQLCLR  
+## <a name="sqlclr"></a><a name="bkmk_sqlclr"></a>SQLCLR  
 如需組件選項的詳細資訊，請參閱 [組件資訊對話方塊](https://msdn.microsoft.com/library/1h52t681.aspx?queryresult=true)。  
   
 如需簽署的詳細資訊，請參閱 **專案設計工具、簽署頁** 主題的＜ [組件簽署](https://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) ＞一節。  
   
-## <a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR 與 SQLCLR 建置  
+## <a name="sqlclr-and-sqlclr-build"></a><a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR 與 SQLCLR 建置  
 **[SQLCLR]** 和 **[SQLCLR 建置]** 屬性頁包含許多在專案中使用 SQL CLR 物件的設定。 具體來說， **[SQLCLR]** 屬性頁含有權限等級設定，可設定對 SQLCLR 組件的權限。 此頁亦提供「產生 DDL」設定，可控制是否要為已新增至專案的 SQLCLR 物件產生動態資料語言 (DDL)。 **[SQLCLR 建置]** 屬性頁包含所有的編譯器選項，可用來設定專案中 SQLCLR 程式碼的編譯組態。  
   
 **[SQLCLR 建置]** 屬性頁包含了建置 SQL CLR 物件時所用的進階建置設定。 根據 (VB or C#) 用於撰寫 SQL CLR 物件程式碼的語言而定，提供的選項有所不同。  
@@ -171,7 +171,7 @@ Compiler Service 具有兩種限制分類。
 2.  如果以 VB 撰寫物件，您可以先在 **[語言]** 中選擇 VB，然後按一下 **[進階]** 。 VB 選項的描述可以在[進階編譯器設定對話方塊 (Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx) 找到  
   
 
-## <a name="bkmk_build"></a>建置  
+## <a name="build"></a><a name="bkmk_build"></a>建置  
 您可以為方案中的每一個資料庫專案選擇建置組態。 組態預設只有一個，但是您可以新增自訂組態。 例如，如果您想要使用永遠會刪除並重新建立資料庫的自訂組態，就可以選擇這樣做。 在包含不同專案類型的方案中，可以建立含有個別專案特定建置組態的自訂方案組態。  
   
 #### <a name="to-specify-a-build-configuration-for-a-solution"></a>若要指定方案的建置組態  
@@ -197,14 +197,14 @@ Compiler Service 具有兩種限制分類。
 |將 Transact\-SQL 警告視為錯誤|否|指定出現 Transact\-SQL 警告時是否應取消建置和部署處理程序。 如果已清除此核取方塊，則會出現警告，但是建置和部署程序會繼續進行。 此設定為專案而不是使用者特有的，並儲存在 .sqlproj 檔案中。|  
 |隱藏 Transact\-SQL 警告|Blank|指定以逗號或分號分隔的警告編號清單，以識別隱藏的警告。<br /><br />即使選取了 [將 Transact\-SQL 警告當成錯誤]  核取方塊，已隱藏的警告也不會出現在 [錯誤清單]  視窗中，而且不會影響建置順利完成。|  
   
-## <a name="bkmk_sqlcmd_variables"></a>SQLCMD 變數  
+## <a name="sqlcmd-variables"></a><a name="bkmk_sqlcmd_variables"></a>SQLCMD 變數  
 在 SQL Server 資料庫專案中，您可以利用 SQLCMD 變數，提供用於偵錯或發行的動態置換功能。 透過輸入變數名稱和值，這些值將在建置期間遭置換。 若是沒有區域數值，則會使用預設值。 在專案屬性中輸入各個變數後，發行時便會自動提供這些變數，且變數將儲存於發行設定檔。 您可以透過 [載入值] 按鈕，提取專案的變數值將其納入發行。  
   
 請確定您在專案屬性中輸入的變數無誤，因為這些變數不會根據專案中的指令碼進行驗證，而指令碼所使用的變數也不會自動填入。  
   
 此外，命令列發行方式還可讓您透過命令列或使用設定檔覆寫這些值。  
   
-## <a name="bkmk_build_events"></a>建置事件  
+## <a name="build-events"></a><a name="bkmk_build_events"></a>建置事件  
 您可以使用這些設定指定命令列在建置作業開始前執行，同時指定另一個命令列在建置作業完成後執行。  
   
 |欄位|預設值|描述|  
@@ -213,7 +213,7 @@ Compiler Service 具有兩種限制分類。
 |建置後事件命令列|None|指定建置專案後執行的命令列。 按一下 [建置後進行編輯]  可修改命令列。|  
 |執行建置後事件|建置成功時|指定建置後命令列應永遠執行、只有在建置成功時執行，或只有在建置更新專案輸出 (建置指令碼) 時執行。|  
   
-## <a name="bkmk_debug"></a>偵錯  
+## <a name="debug"></a><a name="bkmk_debug"></a>偵錯  
 您可以使用下列設定來控制資料庫專案的偵錯。  
   
 |欄位|預設值|描述|  
@@ -227,10 +227,10 @@ Compiler Service 具有兩種限制分類。
 |請勿使用 ALTER ASSEMBLY 陳述式來更新 CLR 型別|否|指定當您部署變更時，是否要使用 ALTER ASSEMBLY 陳述式來更新 Common Language Runtime (CLR) 型別，或者是否會卸除執行個體化 CLR 型別的物件，然後再重新建立此物件。|  
 |進階...|否|此命令按鈕可讓您指定選項以控制事件和部署的行為。|  
   
-## <a name="bkmk_ref_paths"></a>參考路徑  
+## <a name="reference-paths"></a><a name="bkmk_ref_paths"></a>參考路徑  
 您可以使用這個頁面定義與跨資料庫參考相關的伺服器和資料庫變數。 此外，您也可以指定那些變數的值。 如需詳細資訊，請參閱 [在資料庫專案中使用參考](https://msdn.microsoft.com/library/bb386242.aspx)。  
   
-## <a name="bkmk_code_analysis"></a>程式碼分析  
+## <a name="code-analysis"></a><a name="bkmk_code_analysis"></a>程式碼分析  
 您可以使用程式碼分析，找出指令碼中的潛在問題，例如設計、命名和效能問題。 資料庫專案的規則會組織成預先定義的規則集，並且以特定方面為目標，您可以在 **[專案屬性]** 屬性頁的 **[程式碼分析]** 索引標籤中啟用或停用任何規則。 在相同索引標籤中，您可以指定要在每次建置專案時自動執行程式碼分析，或指定是否將警告視為錯誤。  
   
 若要手動使用程式碼分析，請以滑鼠右鍵按一下 [方案總管]  中的專案，再選取 [執行程式碼分析]  。 程式碼分析警告列在 **[錯誤清單]** 視窗中。 按兩下警告即可巡覽至有問題的原始程式碼，而且使用 [顯示錯誤說明]  快顯功能表也可以檢視警告的其他資訊與可能的修正方法。 如需程式碼分析的詳細資訊，請參閱[分析資料庫程式碼以改善程式碼品質](https://msdn.microsoft.com/library/dd172133.aspx)。  

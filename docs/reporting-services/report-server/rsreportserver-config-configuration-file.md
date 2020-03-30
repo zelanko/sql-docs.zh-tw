@@ -9,10 +9,10 @@ ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 351ca36275fbd782e3bf3e8d098aaf6a49287430
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66500415"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 組態檔
@@ -23,7 +23,7 @@ ms.locfileid: "66500415"
  設定在下列內容中出現的順序，是依據預設安裝的組態檔中出現的順序而定。 如需如何編輯此檔案的指示，請參閱 [修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
  
-##  <a name="bkmk_file_location"></a> 檔案位置  
+##  <a name="file-location"></a><a name="bkmk_file_location"></a> 檔案位置  
 
 RSReportServer.config 位於下列資料夾，端視報表伺服器模式而定：  
 
@@ -55,7 +55,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  
 如需編輯此檔案的詳細資訊，請參閱 [修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
-##  <a name="bkmk_generalconfiguration"></a> 一般組態設定 (rsreportserver.config)  
+##  <a name="general-configuration-settings-rsreportserverconfig"></a><a name="bkmk_generalconfiguration"></a> 一般組態設定 (rsreportserver.config)  
  下表提供有關檔案第一個部分中顯示之一般組態設定的資訊。 設定會依其出現在組態檔的順序顯示。 資料表的最後一個資料行會指出此設定適用於原生模式的報表伺服器 **(N)** 、SharePoint 模式的報表伺服器 **(S)** ，還是兩者。  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**WatsonDumpOnExceptions**|指定您想要在錯誤記錄檔中報告的例外狀況清單。 這在您有重複發生的問題，而且想要利用傳送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 進行分析的資訊建立傾印時相當實用。 建立傾印會影響效能，因此只有在診斷問題時，才能變更這個設定。|N、S|  
 |**WatsonDumpExcludeIfContainsExceptions**|指定您不想要在錯誤記錄檔中報告的例外狀況清單。 這在您要診斷問題，而且不想讓伺服器建立特定例外的傾印時相當實用。|N、S|  
   
-##  <a name="bkmk_URLReservations"></a> URLReservations (RSReportServer.config 檔)  
+##  <a name="urlreservations-rsreportserverconfig-file"></a><a name="bkmk_URLReservations"></a> URLReservations (RSReportServer.config 檔)  
  **URLReservations** 會針對目前的執行個體，定義報表伺服器 Web 服務及入口網站的 HTTP 存取。 當您設定報表伺服器時，URL 會保留並儲存在 HTTP.SYS 中。  
   
 > [!WARNING]  
@@ -110,7 +110,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**AccountSid**|指定建立保留的 URL 時使用之帳戶的安全性識別碼 (SID)。 這應該是報表伺服器服務執行時使用的帳戶。 如果 SID 與服務帳戶不符，報表伺服器可能就無法接聽該 URL 的要求。|N|  
 |**AccountName**|指定對應至 **AccountSid**的可讀取帳戶名稱。 雖然系統不會使用此設定，但是它會顯示在檔案中，讓您可以輕易地判斷用於 URL 保留項目的帳戶。|N|  
   
-##  <a name="bkmk_Authentication"></a> Authentication (RSReportServer.config 檔)  
+##  <a name="authentication-rsreportserverconfig-file"></a><a name="bkmk_Authentication"></a> Authentication (RSReportServer.config 檔)  
  **Authentication** 會指定報表伺服器所接受的一個或多個驗證類型。 預設設定和預設值是這個區段可用之設定和值的子集。 只有預設設定會自動加入。 若要加入其他設定，您必須使用文字編輯器，將元素結構加入至 RSReportServer.config 檔，然後設定其值。  
   
  預設值包括 **RSWindowsNegotiate** 和 **EnableAuthPersistance** 設為 **True** 的 **RSWindowsNTLM**：  
@@ -144,7 +144,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**RSWindowsExtendedProtectionScenario**|The default value is <bpt id="p1">**</bpt>Proxy<ept id="p1">**</ept>|N|  
 |**EnableAuthPersistence**|決定要在連接時或針對每個要求執行驗證。<br /><br /> 有效值為 **True** (預設值) 或 **False**。 如果設定為 **True**，來自相同連接的後續要求就會採用第一個要求的模擬內容。<br /><br /> 如果您正使用 Proxy 伺服器軟體 (例如 ISA Server) 來存取報表伺服器，這個值就必須設定為 **False** 。 使用 Proxy 伺服器可讓多位使用者使用 Proxy 伺服器的單一連接。 在這個狀況中，您應該停用驗證持續性機制，以便個別驗證每個使用者要求。 如果您沒有將 **EnableAuthPersistence** 設定為 **False**，則所有使用者都將使用第一個要求的模擬內容來進行連接。|N、S|  
   
-##  <a name="bkmk_service"></a> Service (RSReportServer.config 檔)  
+##  <a name="service-rsreportserverconfig-file"></a><a name="bkmk_service"></a> Service (RSReportServer.config 檔)  
  **Service** 會指定以整體方式套用至服務的應用程式設定。  
   
  下表的最後一個資料行會指出此設定適用於原生模式的報表伺服器 (N)、SharePoint 模式的報表伺服器 (S)，還是兩者。  
@@ -170,7 +170,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**FileShareStorageLocation**|指定檔案系統上儲存暫存快照集的單一資料夾。 雖然您可以將資料夾路徑指定為 UNC 路徑，但是不建議您這麼做。 預設值為空白。<br /><br /> `<FileShareStorageLocation>`<br /><br /> `<Path>`<br /><br /> `</Path>`<br /><br /> `</FileShareStorageLocation>`|N、S|  
 |**IsRdceEnabled**|指定是否啟用報表定義自訂延伸模組 (RDCE)。 有效值為 **True** 和 **False**。|N、S|  
   
-##  <a name="bkmk_UI"></a> UI (RSReportServer.config 檔)  
+##  <a name="ui-rsreportserverconfig-file"></a><a name="bkmk_UI"></a> UI (RSReportServer.config 檔)  
  **UI** 會指定套用至入口網站應用程式的組態設定。  
   
  下表的最後一個資料行會指出此設定適用於原生模式的報表伺服器 (N)、SharePoint 模式的報表伺服器 (S)，還是兩者。  
@@ -181,7 +181,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**ReportBuilderTrustLevel**|請勿修改這個值，因為它是無法設定的。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本中，報表產生器只能以 **FullTrust** 執行。 如需停用部分信任模式的詳細資訊，請參閱 [SQL Server 2016 中 SQL Server Reporting Services 已停止的功能](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)。|N、S|  
 |**PageCountMode**|(僅適用於入口網站) 這項設定會指定報表伺服器要在轉譯報表之前或檢視報表時計算頁面計數值。 有效值為 **Estimate** (預設值) 和 **Actual**。 在使用者檢視報表時，請使用 **Estimate** 來計算頁面計數資訊。 起初，頁面計數設定為 2 (代表目前的頁面加上一個額外頁面)，但是會隨著使用者在報表中逐次翻頁而向上調整。 如果您想要在顯示報表之前預先計算頁面計數，請使用 **Actual** 。 提供**Actual** 的目的，是為了與舊版相容。 請注意，如果您將 **PageCountMode** 設定為 **Actual**，則系統必須處理整份報表才能取得有效的頁面計數，因而增加顯示報表之前的等候時間。|N、S|  
   
-##  <a name="bkmk_extensions"></a> 延伸模組 (RSReportServer.config 檔) 原生模式  
+##  <a name="extensions-rsreportserverconfig-file-native-mode"></a><a name="bkmk_extensions"></a> 延伸模組 (RSReportServer.config 檔) 原生模式  
  ＜延伸模組＞一節會出現在 **僅適用於原生模式** 報表伺服器的 rsreportserver.config 檔案中。 SharePoint 模式報表伺服器的延伸模組資訊儲存在 SharePoint 組態資料庫中，而且會針對每個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式設定。  
   
  **Extensions** 會針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝的下列可延伸模組指定組態設定：  
@@ -208,7 +208,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  其中某些延伸模組僅供報表伺服器內部使用。 僅供內部使用之延伸模組的組態設定沒有記載。 下列各節描述預設延伸模組的組態設定。 如果您要使用具有自訂延伸模組的報表伺服器，組態檔可能會包含此處未描述的設定。 本節將依據顯示的順序列出這些延伸模組。 針對相同延伸模組類型之多個執行個體重複出現的設定只會描述一次。  
   
-###  <a name="bkmk_extensionsgeneral"></a> 傳遞延伸模組一般組態  
+###  <a name="delivery-extensions-general-configuration"></a><a name="bkmk_extensionsgeneral"></a> 傳遞延伸模組一般組態  
  指定透過訂閱傳遞報表所使用的預設 (也可能是自訂的) 傳遞延伸模組。 RSReportServer.config 檔案包含四個傳遞延伸模組的應用程式設定：  
   
 1.  報表伺服器電子郵件  
@@ -230,14 +230,14 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**SecondsBeforeRetry**|指定每次重試嘗試之間的時間間隔 (以秒為單位)。 預設值是 900。|  
 |**Configuration**|包含每個傳遞延伸模組專用的組態設定。|  
   
-####  <a name="bkmk_fileshare_extension"></a> 檔案共用傳遞延伸模組組態設定  
+####  <a name="file-share-delivery-extension-configuration-settings"></a><a name="bkmk_fileshare_extension"></a> 檔案共用傳遞延伸模組組態設定  
  檔案共用傳遞會將已經匯出成應用程式檔案格式的報表傳送至網路上的共用資料夾。 如需詳細資訊，請參閱＜ [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)＞。  
   
 |設定|描述|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats**、 **RenderingExtension**|這些設定是用於刻意排除無法搭配檔案共用傳遞使用的匯出格式。 這些格式通常用於互動式報表、預覽或預先載入報表快取。 它們不會產生可輕易地從桌上型電腦應用程式中檢視的應用程式檔案。<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
   
-####  <a name="bkmk_email_extension"></a> 報表伺服器電子郵件延伸模組組態設定  
+####  <a name="report-server-e-mail-extension-configuration-settings"></a><a name="bkmk_email_extension"></a> 報表伺服器電子郵件延伸模組組態設定  
  報表伺服器電子郵件會使用 SMTP 網路裝置，將報表傳送至電子郵件地址。 您必須先設定這個傳遞延伸模組，然後才能使用它。 如需詳細資訊，請參閱 [Reporting Services 中的電子郵件傳遞](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)。  
   
 |設定|描述|  
@@ -258,17 +258,17 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**DefaultHostName**|此值使用 **SendEmailToUserAlias**。<br /><br /> 指定當 **SendEmailToUserAlias** 設定為 true 時，表示附加到使用者別名之主機名稱的字串值。 此值可以是網域名稱系統 (DNS) 名稱或 IP 位址。|  
 |**PermittedHosts**|藉由明確地指定哪些主機可以接收電子郵件傳遞，來限制報表散發。 **PermittedHosts**中，將每個主機指定為一個 **HostName** 元素，其值為 IP 位址或 DNS 名稱。<br /><br /> 只有主機所定義的電子郵件帳戶為有效收件者。 如果您指定 **DefaultHostName**，務必要將該主機包含為 **PermittedHosts** 的 **HostName**元素。 此值必須是一或多個 DNS 名稱或 IP 位址。 依預設，未設定此值。 如果未設定此值，便不限制誰可以接收電子郵件報表。|  
   
-####  <a name="bkmk_documentlibrary_extension"></a> 報表伺服器 SharePoint 文件庫延伸模組組態  
+####  <a name="report-server-sharepoint-document-library-extension-configuration"></a><a name="bkmk_documentlibrary_extension"></a> 報表伺服器 SharePoint 文件庫延伸模組組態  
  報表伺服器文件庫會將已經匯出成應用程式檔案格式的報表傳送至文件庫。 只有設定為在 SharePoint 整合模式中執行的報表伺服器可以使用這個傳遞延伸模組。 如需詳細資訊，請參閱＜ [SharePoint Library Delivery in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)＞。  
   
 |設定|描述|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats、RenderingExtension**|這些設定是用於刻意排除無法搭配文件庫傳遞使用的匯出格式。 系統會排除 HTMLOWC、RGDI 和 Null 傳遞延伸模組。 這些格式通常用於互動式報表、預覽或預先載入報表快取。 它們不會產生可輕易地從桌上型電腦應用程式中檢視的應用程式檔案。|  
   
-####  <a name="bkmk_null_extension"></a> NULL 傳遞延伸模組組態  
+####  <a name="null-delivery-extension-configuration"></a><a name="bkmk_null_extension"></a> NULL 傳遞延伸模組組態  
  NULL 傳遞提供者是用於預先載入含有個別使用者之預先產生報表的快取。 這個傳遞延伸模組沒有任何組態設定。 如需詳細資訊，請參閱 [快取報表 &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)的版本中預先載入快取的唯一方法。  
   
-###  <a name="bkmk_ui"></a> 傳遞 UI 延伸模組一般組態  
+###  <a name="delivery-ui-extensions-general-configuration"></a><a name="bkmk_ui"></a> 傳遞 UI 延伸模組一般組態  
  指定包含使用者介面元件的傳遞延伸模組，而該元件會顯示於在入口網站中定義個別訂閱時使用的訂閱定義頁面中。 如果您建立並部署具有使用者定義選項的自訂傳遞延伸模組，而且您想要使用入口網站，就必須在這個區段中註冊該傳遞延伸模組。 根據預設，報表伺服器電子郵件和報表伺服器檔案共用都具有組態設定。 只在資料驅動訂閱或 SharePoint 應用程式頁面中使用的傳遞延伸模組沒有此區段的設定。  
   
 |設定|描述|  
@@ -277,7 +277,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**Configuration**|指定傳遞延伸模組的組態選項。 您可以針對每一個傳遞延伸模組設定預設轉譯格式。 有效值是在 rsreportserver.config 檔案的轉譯區段中，所註明的轉譯延伸模組名稱。|  
 |**DefaultRenderingExtension**|指定傳遞延伸模組是否為預設值。 報表伺服器電子郵件是預設的傳遞延伸模組。 有效值包括 **True** 或 **False**。 如果有多個延伸模組包含 **True**值，就會將第一個延伸模組視為預設的延伸模組。|  
   
-###  <a name="bkmk_rendering"></a> 轉譯延伸模組一般組態  
+###  <a name="rendering-extensions-general-configuration"></a><a name="bkmk_rendering"></a> 轉譯延伸模組一般組態  
  指定用於報表呈現的預設 (而且可能是自訂的) 轉譯延伸模組。  
   
  除非您要部署自訂轉譯延伸模組，否則請勿修改此區段。 如需詳細資訊，請參閱＜ [Implementing a Rendering Extension](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)＞。  
@@ -326,7 +326,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  除非您要部署自訂轉譯延伸模組，否則請勿修改此區段。 如需詳細資訊，請參閱＜ [Implementing a Rendering Extension](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)＞。  
   
-###  <a name="bkmk_data"></a> 資料延伸模組一般組態  
+###  <a name="data-extensions-general-configuration"></a><a name="bkmk_data"></a> 資料延伸模組一般組態  
  指定用於處理查詢的預設 (而且可能是自訂的) 資料處理延伸模組。 預設資料處理延伸模組包含以下內容：  
   
 -   SQL  
@@ -355,28 +355,28 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  除非您要加入自訂資料處理延伸模組，否則請勿修改此區段。 如需詳細資訊，請參閱＜ [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)＞。  
   
-###  <a name="bkmk_semantic"></a> 語意查詢延伸模組一般組態  
+###  <a name="semantic-query-extensions-general-configuration"></a><a name="bkmk_semantic"></a> 語意查詢延伸模組一般組態  
  指定用於處理報表模型的語意查詢處理延伸模組。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 隨附的語意查詢處理延伸模組會提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料、Oracle 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多維度資料的支援。 請勿修改此區段。 查詢處理不可延伸。  
   
-###  <a name="bkmk_model"></a> 模型產生組態  
+###  <a name="model-generation-configuration"></a><a name="bkmk_model"></a> 模型產生組態  
  指定模型產生延伸模組，它是用於根據已經在報表伺服器上發行的共用資料來源建立報表模型。 您可以針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料、Oracle 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多維度資料來源產生模型。 請勿修改此區段。 模型產生是無法延伸的。  
   
-###  <a name="bkmk_security"></a> 安全性延伸模組組態  
+###  <a name="security-extension-configuration"></a><a name="bkmk_security"></a> 安全性延伸模組組態  
  指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]所使用的授權元件。 這個元件是由 RSReportServer.config 檔之 **Authentication** 項目中註冊的驗證延伸模組所使用。 除非您要實作自訂驗證延伸模組，否則請勿修改此區段。 如需有關加入自訂安全性功能的詳細資訊，請參閱＜ [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)＞。 如需有關授權的詳細資訊，請參閱＜ [Authorization in Reporting Services](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)＞。  
   
-###  <a name="bkmk_authentication"></a> 驗證延伸模組組態  
+###  <a name="authentication-extension-configuration"></a><a name="bkmk_authentication"></a> 驗證延伸模組組態  
  指定報表伺服器所使用的預設和自訂驗證延伸模組。 預設的延伸模組是以 Windows 驗證為基礎。 除非您要實作自訂驗證延伸模組，否則請勿修改此區段。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中驗證的詳細資訊，請參閱 [Reporting Services 中的驗證](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md) 和 [使用報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)。 如需有關加入自訂安全性功能的詳細資訊，請參閱＜ [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)＞。  
   
-###  <a name="bkmk_eventprocessing"></a> 事件處理  
+###  <a name="event-processing"></a><a name="bkmk_eventprocessing"></a> 事件處理  
  指定預設事件處理常式。 請勿修改此區段。 這個區段無法延伸。  
   
-###  <a name="bkmk_reportdefinition"></a> Report Definition Customization  
+###  <a name="report-definition-customization"></a><a name="bkmk_reportdefinition"></a> Report Definition Customization  
  指定可修改報表定義之自訂延伸模組的名稱和類型。  
   
-###  <a name="bkmk_rdlsandboxing"></a> RDLSandboxing  
+###  <a name="rdlsandboxing"></a><a name="bkmk_rdlsandboxing"></a> RDLSandboxing  
  指定報表定義語言 (RDL) 模式，可在多個租用戶共用報表伺服器的單一 Web 伺服陣列的案例中，協助您偵測及限制個別租用戶所使用的特定報表資源類型。 如需詳細資訊，請參閱 [啟用與停用 RDL 沙箱](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md)。  
   
-##  <a name="bkmk_MapTileServer"></a> MapTileServerConfiguration (RSReportServer.config 檔案)  
+##  <a name="maptileserverconfiguration-rsreportserverconfig-file"></a><a name="bkmk_MapTileServer"></a> MapTileServerConfiguration (RSReportServer.config 檔案)  
  **MapTileServerConfiguration** 會定義 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing Maps Web 服務的組態設定，以便針對在報表伺服器上發行之報表中的地圖報表項目提供影像分割背景。 所有子元素都是必要的。  
   
 |設定|描述|  
@@ -386,7 +386,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**AppID**|指定要用於 Bing Maps Web 服務的應用程式識別碼 (AppID)。 **(預設值)** 會指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設 AppID。<br /><br /> 如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](https://go.microsoft.com/fwlink/?LinkId=151371)。<br /><br /> 除非您必須針對自己的 Bing Maps 授權合約指定自訂 AppID，否則請勿變更此值。 變更 AppID 時，您不需要重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，即可讓變更生效。|  
 |**CacheLevel**|根據 System.Net.Cache 的 HttpRequestCacheLevel 列舉型別指定值。 預設值為 **Default**。 如需詳細資訊，請參閱 [HttpRequestCacheLevel 列舉型別](https://go.microsoft.com/fwlink/?LinkId=153353)。|  
   
-##  <a name="bkmk_nativedefaultfile"></a> 原生模式報表伺服器的預設組態檔  
+##  <a name="default-configuration-file-for-a-native-mode-report-server"></a><a name="bkmk_nativedefaultfile"></a> 原生模式報表伺服器的預設組態檔  
  預設情況下，rsreportserver.config 檔案會安裝到以下位置：  
   
  **C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer**  
@@ -720,7 +720,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 </Configuration> 
 ```  
   
-##  <a name="bkmk_sharepointdefaultfile"></a> SharePoint 模式報表伺服器的預設組態檔  
+##  <a name="default-configuration-file-for-a-sharepoint-mode-report-server"></a><a name="bkmk_sharepointdefaultfile"></a> SharePoint 模式報表伺服器的預設組態檔  
  預設情況下，rsreportserver.config 檔案會安裝到以下位置：  
   
  **C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting**  

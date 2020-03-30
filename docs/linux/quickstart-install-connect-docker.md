@@ -14,10 +14,10 @@ ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
 ms.openlocfilehash: afc420ffe62f31c5793f00f3acea12dedac7f509
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198385"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入門：使用 Docker 執行 SQL Server 容器映像
@@ -48,7 +48,7 @@ ms.locfileid: "79198385"
 
 此映像包含以 Ubuntu 18.04 為基礎，在 Linux 上執行的 SQL Server。 您可於適用於 Mac/Windows 的 Docker 上將其與 Docker 引擎 1.8 以上版本搭配使用。 本快速入門將著重於在 **linux** 映像上使用 SQL Server。 Windows 映像則不涵蓋在內，但您可於 [mssql-server-windows-developer Docker Hub 頁面](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)進一步加以了解。
 
-## <a id="requirements"></a> 必要條件
+## <a name="prerequisites"></a><a id="requirements"></a> 必要條件
 
 - 在任何支援的 Linux 發行版本或適用於 Mac/Windows 上的 Docker 安裝 Docker 引擎 1.8 以上版本。 如需詳細資訊，請參閱[安裝 Docker](https://docs.docker.com/engine/installation/)。
 - Docker **overlay2** 儲存體驅動程式。 這是大部分使用者的預設值。 如果您發現您未使用此儲存提供者且需要進行變更，請參閱[用於設定 overlay2 的 Docker 文件](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver)中指示和警告。
@@ -60,7 +60,7 @@ ms.locfileid: "79198385"
 any changes to one section should be duplicated in the other-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="pullandrun2017"></a> 提取及執行容器映像
+## <a name="pull-and-run-the-container-image"></a><a id="pullandrun2017"></a> 提取及執行容器映像
 
 開始下列步驟之前，請確定您已在本文頂端選取您慣用的 Shell (Bash、PowerShell 或 cmd)。
 
@@ -179,7 +179,7 @@ SELECT @@SERVERNAME,
 <!--This is the 2019 version of the "Pull and run" section-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="pullandrun2019"></a> 提取及執行容器映像
+## <a name="pull-and-run-the-container-image"></a><a id="pullandrun2019"></a> 提取及執行容器映像
 
 開始下列步驟之前，請確定您已在本文頂端選取您慣用的 Shell (Bash、PowerShell 或 cmd)。
 
@@ -294,7 +294,7 @@ SELECT @@SERVERNAME,
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
 
-## <a id="sapassword"></a> 變更 SA 密碼
+## <a name="change-the-sa-password"></a><a id="sapassword"></a> 變更 SA 密碼
 
 <!-- This section was pasted in from includes/sql-server-linux-change-docker-password.md, to better support zone pivots. 2019/02/11 -->
 
@@ -443,7 +443,7 @@ SELECT @@SERVERNAME,
 
 2. 若要結束容器中的互動式命令提示字元，請鍵入 `exit`。 結束互動式 Bash 殼層後，容器會繼續執行。
 
-## <a id="connectexternal"></a> 從容器外部連線
+## <a name="connect-from-outside-the-container"></a><a id="connectexternal"></a> 從容器外部連線
 
 您也可以從支援 SQL 連線的任何外部 Linux、Windows 或 macOS 工具連線到 Docker 機器上的 SQL Server 執行個體。
 

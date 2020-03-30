@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286912"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具在 Linux 上設定 SQL Server
@@ -90,7 +90,7 @@ ms.locfileid: "79286912"
 
 * 這些範例會藉由指定完整路徑來執行 mssql-conf： **/opt/mssql/bin/mssql-conf**。 如果您選擇改為巡覽至該路徑，請在目前目錄的內容中執行 mssql-conf： **./mssql-conf**。
 
-## <a id="agent"></a> 啟用 SQL Server Agent
+## <a name="enable-sql-server-agent"></a><a id="agent"></a> 啟用 SQL Server Agent
 
 **sqlagent.enabled** 設定會啟用 [SQL Server Agent](sql-server-linux-run-sql-server-agent-job.md)。 預設會停用 SQL Server Agent。 如果 **sqlagent.enabled** 未出現在 mssql.conf 設定檔中，則 SQL Server 會在內部假設 SQL Server Agent 已停用。
 
@@ -108,7 +108,7 @@ ms.locfileid: "79286912"
    sudo systemctl restart mssql-server
    ```
 
-## <a id="collation"></a> 變更 SQL Server 定序
+## <a name="change-the-sql-server-collation"></a><a id="collation"></a> 變更 SQL Server 定序
 
 **set-collation** 選項會將定序值變更為任何支援的定序。
 
@@ -128,7 +128,7 @@ ms.locfileid: "79286912"
 
 如需支援的定序清單，請執行 [fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) 函數：`SELECT Name from sys.fn_helpcollations()`。
 
-## <a id="customerfeedback"></a> 設定客戶意見反應
+## <a name="configure-customer-feedback"></a><a id="customerfeedback"></a> 設定客戶意見反應
 
 **telemetry.customerfeedback** 設定會變更 SQL Server 是否要將意見反應傳送給 Microsoft。 預設會針對所有版本將此值設為 **true**。 若要變更此值，請執行下列命令：
 
@@ -149,7 +149,7 @@ ms.locfileid: "79286912"
 
 如需詳細資訊，請參閱[對於 Linux 上 SQL Server 的客戶意見反應](sql-server-linux-customer-feedback.md)和 [SQL Server 隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)。
 
-## <a id="datadir"></a> 變更預設資料或記錄目錄位置
+## <a name="change-the-default-data-or-log-directory-location"></a><a id="datadir"></a> 變更預設資料或記錄目錄位置
 
 **filelocation.defaultdatadir** 和 **filelocation.defaultlogdir** 設定會變更建立新資料庫和記錄檔的位置。 根據預設，此位置為 /var/opt/mssql/data。 若要變更這些設定，請使用下列步驟：
 
@@ -187,7 +187,7 @@ ms.locfileid: "79286912"
 1. 此命令也會假設 /tmp/log 目錄存在，而且它位於使用者和群組 **mssql** 之下。
 
 
-## <a id="masterdatabasedir"></a> 變更預設 master 資料庫檔案目錄位置
+## <a name="change-the-default-master-database-file-directory-location"></a><a id="masterdatabasedir"></a> 變更預設 master 資料庫檔案目錄位置
 
 **filelocation.masterdatafile** 和 **filelocation.masterlogfile** 設定會變更 SQL Server 引擎尋找 master 資料庫檔案的位置。 根據預設，此位置為 /var/opt/mssql/data。
 
@@ -238,7 +238,7 @@ ms.locfileid: "79286912"
    > [!NOTE]
    > 如果 SQL Server 在指定目錄中找不到 master.mdf 和 mastlog.ldf 檔案，將在指定目錄中自動建立系統資料庫的樣板化複本，而 SQL Server 將會成功啟動。 不過，中繼資料 (例如，使用者資料庫、伺服器登入、伺服器憑證、加密金鑰、SQL Agent 作業或舊的 SA 登入密碼) 將不會在新的 master 資料庫中更新。 您將必須停止 SQL Server，並將舊的 master.mdf 和 mastlog.ldf 移到新的指定位置，然後啟動 SQL Server 以繼續使用現有的中繼資料。
  
-## <a id="masterdatabasename"></a> 變更 master 資料庫檔案的名稱
+## <a name="change-the-name-of-master-database-files"></a><a id="masterdatabasename"></a> 變更 master 資料庫檔案的名稱
 
 **filelocation.masterdatafile** 和 **filelocation.masterlogfile** 設定會變更 SQL Server 引擎尋找 master 資料庫檔案的位置。 您也可以使用此動作來變更 master 資料庫和記錄檔的名稱。 
 
@@ -273,7 +273,7 @@ ms.locfileid: "79286912"
    sudo systemctl start mssql-server
    ```
 
-## <a id="dumpdir"></a> 變更預設傾印目錄位置
+## <a name="change-the-default-dump-directory-location"></a><a id="dumpdir"></a> 變更預設傾印目錄位置
 
 **filelocation.defaultdumpdir** 設定會變更在發生損毀時產生記憶體和 SQL 傾印的預設位置。 根據預設，這些檔案會產生於 /var/opt/mssql/log 中。
 
@@ -304,7 +304,7 @@ ms.locfileid: "79286912"
    sudo systemctl restart mssql-server
    ```
 
-## <a id="errorlogdir"></a> 變更預設錯誤記錄檔目錄位置
+## <a name="change-the-default-error-log-file-directory-location"></a><a id="errorlogdir"></a> 變更預設錯誤記錄檔目錄位置
 
 **filelocation.errorlogfile** 設定會變更建立新錯誤記錄檔、預設分析工具追蹤、系統健康情況工作階段 XE，以及 Hekaton 工作階段 XE 檔案的位置。 根據預設，此位置為 /var/opt/mssql/log。 設定 SQL 錯誤記錄檔的目錄會成為其他記錄的預設記錄目錄。
 
@@ -336,7 +336,7 @@ ms.locfileid: "79286912"
    ```
 
 
-## <a id="backupdir"></a> 變更預設備份目錄位置
+## <a name="change-the-default-backup-directory-location"></a><a id="backupdir"></a> 變更預設備份目錄位置
 
 **filelocation.defaultbackupdir** 設定會變更產生備份檔案的預設位置。 根據預設，這些檔案會產生於 /var/opt/mssql/data 中。
 
@@ -367,7 +367,7 @@ ms.locfileid: "79286912"
    sudo systemctl restart mssql-server
    ```
 
-## <a id="coredump"></a> 指定核心傾印設定
+## <a name="specify-core-dump-settings"></a><a id="coredump"></a> 指定核心傾印設定
 
 如果其中一個 SQL Server 程序中發生例外狀況，SQL Server 就會建立記憶體傾印。
 
@@ -400,14 +400,14 @@ ms.locfileid: "79286912"
     | **filtered** | Filtered 會使用以減法為基礎的設計，除非特別排除，否則會包含程序中的所有記憶體。 此設計瞭解 SQLPAL 和主機環境的內部，但不包括來自傾印的特定區域。
     | **full** | Full 是完整處理的傾印，其中包含位於 **/proc/$pid/maps** 的所有區域。 這不是由 **coredump.captureminiandfull** 設定所控制的。 |
 
-## <a id="dbmail"></a> 為 Linux 上的 SQL Server 設定預設 Database Mail 設定檔
+## <a name="set-the-default-database-mail-profile-for-sql-server-on-linux"></a><a id="dbmail"></a> 為 Linux 上的 SQL Server 設定預設 Database Mail 設定檔
 
 **sqlpagent.databasemailprofile** 可讓您針對電子郵件警示設定預設的 DB Mail 設定檔。
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 ```
-## <a id="hadr"></a> 高可用性
+## <a name="high-availability"></a><a id="hadr"></a> 高可用性
 
 **hadr.hadrenabled** 選項會在您的 SQL Server 執行個體上啟用可用性群組。 下列命令藉由將 **hadr.hadrenabled** 設定為 1 來啟用可用性群組。 您必須重新啟動 SQL Server，才能使設定生效。
 
@@ -422,7 +422,7 @@ sudo systemctl restart mssql-server
 - [在 Linux 上設定 SQL Server 的讀取級別可用性群組](sql-server-linux-availability-group-configure-rs.md)
 
 
-## <a id="localaudit"></a> 設定本機稽核目錄
+## <a name="set-local-audit-directory"></a><a id="localaudit"></a> 設定本機稽核目錄
 
 **telemetry.userrequestedlocalauditdirectory** 設定會啟用本機稽核，並讓您能夠設定建立本機稽核記錄的目錄。
 
@@ -453,7 +453,7 @@ sudo systemctl restart mssql-server
 
 如需詳細資訊，請參閱[對於 Linux 上 SQL Server 的客戶意見反應](sql-server-linux-customer-feedback.md)。
 
-## <a id="lcid"></a> 變更 SQL Server 地區設定
+## <a name="change-the-sql-server-locale"></a><a id="lcid"></a> 變更 SQL Server 地區設定
 
 **language.lcid** 設定會將 SQL Server 地區設定變更為任何支援的語言識別碼 (LCID)。 
 
@@ -469,7 +469,7 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
-## <a id="memorylimit"></a> 設定記憶體限制
+## <a name="set-the-memory-limit"></a><a id="memorylimit"></a> 設定記憶體限制
 
 **memory.memorylimitmb** 設定會控制 SQL Server 可用的實體記憶體數量 (以 MB 為單位)。 預設值為 80% 的實體記憶體。
 
@@ -487,7 +487,7 @@ sudo systemctl restart mssql-server
 
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="msdtc"></a> 設定 MSDTC
+## <a name="configure-msdtc"></a><a id="msdtc"></a> 設定 MSDTC
 
 **network.rpcport** 和 **distributedtransaction.servertcpport** 設定會用來設定 Microsoft 分散式交易協調器 (MSDTC)。 若要變更這些設定，請執行下列命令：
 
@@ -530,7 +530,7 @@ sudo systemctl restart mssql-server
 ::: moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="mlservices-eula"></a> 接受 MLServices EULA
+## <a name="accept-mlservices-eulas"></a><a id="mlservices-eula"></a> 接受 MLServices EULA
 
 將[機器學習 R 或 Python 套件](sql-server-linux-setup-machine-learning.md)新增至資料庫引擎，要求您接受適用於 R 和 Python 開放原始碼發行版本的授權條款。 下表列舉與 mlservices EULA 相關的所有可用命令或選項。 根據您安裝的內容而定，會針對 R 和 Python 使用相同的 EULA 參數。
 
@@ -560,7 +560,7 @@ accepteulaml = Y
 :::moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="mlservices-outbound-access"></a> 啟用輸出網路存取
+## <a name="enable-outbound-network-access"></a><a id="mlservices-outbound-access"></a> 啟用輸出網路存取
 
 預設會在 [SQL Server 機器學習服務](sql-server-linux-setup-machine-learning.md)功能中，停用 R、Python 和 JAVA 延伸模組的輸出網路存取。 若要啟用輸出要求，請使用 mssql-conf 來設定 "outboundnetworkaccess" 布林值屬性。
 
@@ -587,7 +587,7 @@ outboundnetworkaccess = 1
 ```
 :::moniker-end
 
-## <a id="tcpport"></a> 變更 TCP 通訊埠
+## <a name="change-the-tcp-port"></a><a id="tcpport"></a> 變更 TCP 通訊埠
 
 **network.tcpport** 設定會變更 SQL Server 用來接聽連線的 TCP 連接埠。 此連接埠預設為 1433。 若要變更此連接埠，請執行下列命令：
 
@@ -609,7 +609,7 @@ outboundnetworkaccess = 1
    sqlcmd -S localhost,<new_tcp_port> -U test -P test
    ```
 
-## <a id="tls"></a> 指定 TLS 設定
+## <a name="specify-tls-settings"></a><a id="tls"></a> 指定 TLS 設定
 
 下列選項會針對在 Linux 上執行的 SQL Server 執行個體設定 TLS。
 
@@ -624,7 +624,7 @@ outboundnetworkaccess = 1
 
 如需使用 TLS 設定的範例，請參閱[在 Linux 上加密 SQL Server 連線](sql-server-linux-encrypted-connections.md)。
 
-## <a id="traceflags"></a> 啟用/停用追蹤旗標
+## <a name="enabledisable-traceflags"></a><a id="traceflags"></a> 啟用/停用追蹤旗標
 
 這個**追蹤旗標**選項會啟用或停用啟動 SQL Server 服務的追蹤旗標。 若要啟用/停用追蹤旗標，請使用下列命令：
 
@@ -679,7 +679,7 @@ sudo cat /var/opt/mssql/mssql.conf
 請注意，此檔案中未顯示的任何設定都會使用其預設值。 下一節提供範例 **mssql.conf** 檔案。
 
 
-## <a id="mssql-conf-format"></a> mssql.conf 格式
+## <a name="mssqlconf-format"></a><a id="mssql-conf-format"></a> mssql.conf 格式
 
 下列 **/var/opt/mssql/mssql.conf** 檔案提供適用於每個設定的範例。 您可以視需要使用此格式，手動對 **mssql.conf** 檔案進行變更。 如果您手動變更檔案，則必須先重新啟動 SQL Server 之後才能套用變更。 若要搭配 Docker 使用 **mssql.conf** 檔案，您必須讓 Docker [保存您的資料](sql-server-linux-configure-docker.md)。 首先，將完整的 **mssql.conf** 檔案新增至您的主機目錄，然後執行該容器。 [客戶意見反應](sql-server-linux-customer-feedback.md)中有一個這類範例。
 

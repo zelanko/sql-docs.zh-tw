@@ -22,10 +22,10 @@ ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c9048efd86a7a4a993a9fff6bcab7f9058144f7e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73843760"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)

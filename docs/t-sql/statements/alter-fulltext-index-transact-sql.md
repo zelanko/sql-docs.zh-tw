@@ -22,10 +22,10 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981810"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
@@ -205,7 +205,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  如需搜尋屬性清單的詳細資訊，請參閱[使用搜尋屬性清單搜尋文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
-## <a name="change-tracking-no-population"></a> 變更追蹤與 NO POPULATION 參數之間的互動  
+## <a name="interactions-of-change-tracking-and-no-population-parameter"></a><a name="change-tracking-no-population"></a> 變更追蹤與 NO POPULATION 參數之間的互動  
  全文檢索索引是否會擴展，將取決於是否啟用變更追蹤及是否在 ALTER FULLTEXT INDEX 陳述式中指定 WITH NO POPULATION 而定。 下表摘要列出其互動的結果。  
   
 |變更追蹤|WITH NO POPULATION|結果|  
@@ -217,7 +217,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  如需填入全文檢索索引的詳細資訊，請參閱[填入全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。  
   
-## <a name="change-search-property-rebuild-index"></a> 變更搜尋屬性清單導致重建索引  
+## <a name="changing-the-search-property-list-causes-rebuilding-the-index"></a><a name="change-search-property-rebuild-index"></a> 變更搜尋屬性清單導致重建索引  
  第一次全文檢索索引與搜尋屬性清單相關聯時，索引必須重新擴展，以檢索屬性特定的搜尋詞彙。 現有的索引資料不會被截斷。  
   
  但是，如果您將全文檢索索引與不同的屬性清單產生關聯，則會重建索引。 重建會立即截斷全文檢索索引，移除所有現有的資料，而且必須重新擴展索引。 當母體擴展進行時，基底資料表上的全文檢索查詢只會在已由母體擴展編製索引的資料表資料列上進行搜尋。 重新擴展的索引資料會包含新加入搜尋屬性清單已註冊之屬性的中繼資料。  

@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: c1b9941b60dc8a5f1fc87627094513ce6f20711b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67897013"
 ---
 # <a name="add-a-scale-out-worker-with-scale-out-manager"></a>使用 Scale Out Manager 加入 Scale Out Worker
@@ -31,7 +31,7 @@ Integration Services Scale Out Manager 可簡化將 Scale Out Worker 新增至�
 在 [SQL Server 安裝精靈] 中，選取 [特徵選取]  頁面上的 [Integration Services] 和 [Scale Out Worker]。 
 ![特徵選取背景工作](media/feature-select-worker.PNG)
 
-在 [Integration Services 相應放大設定 - 背景工作節點]  頁面上，您目前可以按一下 [下一步]  略過設定，並在安裝之後使用 [Scale Out Manager]  來執行設定。
+在 [Integration Services 擴增設定 - 背景工作節點]  頁面上，您目前可以按一下 [下一步]  略過設定，並在安裝之後使用 [Scale Out Manager]  來執行設定。
 
 完成安裝精靈。
 
@@ -41,7 +41,7 @@ Integration Services Scale Out Manager 可簡化將 Scale Out Worker 新增至�
 ## <a name="3-add-a-scale-out-worker-with-scale-out-manager"></a>3.使用 Scale Out Manager 加入 Scale Out Worker
 以系統管理員身分執行 SQL Server Management Studio，並連接到 Scale Out Master 的 SQL Server 執行個體。
 
-在物件總管中，以滑鼠右鍵按一下 [SSISDB]  ，然後選取 [管理相應放大]  。 
+在物件總管中，以滑鼠右鍵按一下 [SSISDB]  ，然後選取 [管理擴增]  。 
 
 ![管理 Scale Out](media/manage-scale-out.PNG)
 

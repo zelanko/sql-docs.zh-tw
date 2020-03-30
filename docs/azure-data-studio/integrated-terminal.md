@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67959531"
 ---
 # <a name="integrated-terminal"></a>整合式終端
@@ -87,7 +87,7 @@ ms.locfileid: "67959531"
 * `terminal.integrated.fontSize`
 * `terminal.integrated.lineHeight`
 
-## <a id="key-bindings"></a>終端按鍵繫結關係
+## <a name="terminal-key-bindings"></a><a id="key-bindings"></a>終端按鍵繫結關係
 
 [View:  Toggle Integrated Terminal] \(檢視: 切換整合式終端\) 命令會繫結至 **Ctrl+`** ，快速在檢視中開啟和關閉整合式終端面板。
 

@@ -11,10 +11,10 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d6fdf58703d448e07c9be063b616f90c72f2411d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991559"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>設定 Always On 可用性群組的延伸事件
@@ -25,7 +25,7 @@ ms.locfileid: "67991559"
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
    
-##  <a name="BKMK_alwayson_health"></a> Alwayson_health 工作階段  
+##  <a name="alwayson_health-session"></a><a name="BKMK_alwayson_health"></a> Alwayson_health 工作階段  
  Alwayson_health 擴充事件工作階段是在您建立可用性群組時自動建立，會擷取可用性群組相關事件的子集。 此工作階段已預先設定為實用且方便的工具，可協助您對可用性群組進行疑難排解時快速開始。 「建立可用性群組精靈」會自動在精靈中設定的每個參與可用性複本上啟動工作階段。  
   
 > [!IMPORTANT]  
@@ -40,7 +40,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 如需 alwayson_health 所涵蓋部分事件的資訊，請參閱[擴充事件參考](always-on-extended-events.md#BKMK_Reference)。  
 
 
-##  <a name="BKMK_Debugging"></a> 偵錯的擴充事件  
+##  <a name="extended-events-for-debugging"></a><a name="BKMK_Debugging"></a> 偵錯的擴充事件  
  除了 Alwayson_health 工作階段涵蓋的擴充事件，SQL Server 也為可用性群組定義一組廣泛的偵錯事件。 若要在工作階段中利用這些額外的擴充事件，請遵循下列程序：  
   
 1.  在 [物件總管]  中，依序展開 [管理]  、[擴充事件]  和 [工作階段]  。  
@@ -57,7 +57,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
 7.  完成該工作階段之後，請按一下 [確定]  關閉。 請確定工作階段已啟動，才能擷取您所選取的事件。  
   
-##  <a name="BKMK_Reference"></a> Always On 可用性群組擴充事件參考  
+##  <a name="always-on-availability-groups-extended-events-reference"></a><a name="BKMK_Reference"></a> Always On 可用性群組擴充事件參考  
  本節描述一些可用來監視可用性群組的擴充事件。  
   
  [availability_replica_state_change](#BKMK_availability_replica_state_change)  
@@ -76,7 +76,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
  [error_reported (1480)：資料庫複本角色變更](#BKMK_error_reported_1480)  
   
-###  <a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
+###  <a name="availability_replica_state_change"></a><a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
  在可用性複本的狀態變更時發生。 建立可用性群組或加入可用性複本會觸發此事件。 它對於診斷失敗的自動容錯移轉很好用。 它也可以用來追蹤容錯移轉步驟。  
   
 #### <a name="event-information"></a>事件資訊  
@@ -107,7 +107,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_group_lease_expired"></a> availability_group_lease_expired  
+###  <a name="availability_group_lease_expired"></a><a name="BKMK_availability_group_lease_expired"></a> availability_group_lease_expired  
  當叢集和可用性群組有連線問題和租用到期時發生。 這個事件表示可用性群組與基礎 WSFC 叢集之間的連線已中斷。 如果主要複本上發生連線問題，事件可能會造成自動容錯移轉，或造成可用性群組離線。  
   
 #### <a name="event-information"></a>事件資訊  
@@ -135,7 +135,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_replica_automatic_failover_validation"></a> availability_replica_automatic_failover_validation  
+###  <a name="availability_replica_automatic_failover_validation"></a><a name="BKMK_availability_replica_automatic_failover_validation"></a> availability_replica_automatic_failover_validation  
  當自動容錯移轉將可用性複本的整備度驗證為主要複本時發生，會顯示目標可用性複本是否已準備好成為新的主要複本。 例如，容錯移轉驗證會在並非所有資料庫都同步處理或未聯結時傳回 false。 此事件是設計來提供容錯移轉期間的失敗點。 這項資訊是特別針對自動容錯移轉，對資料庫管理員很重要，因為自動容錯移轉是自動的作業。 資料庫管理員可以檢閱事件，以查看自動容錯移轉失敗的原因。  
   
 #### <a name="event-information"></a>事件資訊  
@@ -174,7 +174,7 @@ GO
   
 ```  
   
-###  <a name="BKMK_error_reported"></a> error_reported (多個錯誤號碼)：適用於傳輸或連線問題  
+###  <a name="error_reported-multiple-error-numbers-for-transport-or-connection-issues"></a><a name="BKMK_error_reported"></a> error_reported (多個錯誤號碼)：適用於傳輸或連線問題  
  每個篩選的事件指出在可用性群組所依賴的傳輸或資料庫鏡像端點中發生的連線問題。  
   
 |資料行|描述|  
@@ -235,7 +235,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_data_movement_suspend_resume"></a> data_movement_suspend_resume  
+###  <a name="data_movement_suspend_resume"></a><a name="BKMK_data_movement_suspend_resume"></a> data_movement_suspend_resume  
  資料庫複本的資料庫移動暫止或繼續時發生。  
   
 #### <a name="event-information"></a>事件資訊  
@@ -278,7 +278,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_alwayson_ddl_executed"></a> alwayson_ddl_executed  
+###  <a name="alwayson_ddl_executed"></a><a name="BKMK_alwayson_ddl_executed"></a> alwayson_ddl_executed  
  可用性群組資料定義語言 (DDL) 陳述式 (包括 CREATE、ALTER 或 DROP) 執行時發生。 事件的主要目的是指出可用性複本上使用者動作的問題，或指出作業動作的起點，後面接執行階段問題，例如手動容錯移轉、強制容錯移轉，暫止的資料移動，或繼續的資料移動。  
   
 #### <a name="event-information"></a>事件資訊  
@@ -311,7 +311,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_replica_manager_state"></a> availability_replica_manager_state  
+###  <a name="availability_replica_manager_state"></a><a name="BKMK_availability_replica_manager_state"></a> availability_replica_manager_state  
  在可用性複本管理員的狀態變更時發生。 此事件表示可用性複本管理員的活動訊號。 當可用性複本管理員不是處於狀況良好狀態時，SQL Server 執行個體中的所有可用性複本都將會關閉。  
   
 #### <a name="event-information"></a>事件資訊  
@@ -342,7 +342,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_error_reported_1480"></a> error_reported (1480)：資料庫複本角色變更  
+###  <a name="error_reported-1480-database-replica-role-change"></a><a name="BKMK_error_reported_1480"></a> error_reported (1480)：資料庫複本角色變更  
  此篩選的 error_reported 事件會在可用性複本角色變更之後以非同步方式發生。 它指出可用性資料庫在容錯移轉程序期間無法變更其預期的角色。  
   
 #### <a name="event-information"></a>事件資訊  

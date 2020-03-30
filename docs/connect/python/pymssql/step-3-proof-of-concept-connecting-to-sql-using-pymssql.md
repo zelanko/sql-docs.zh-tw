@@ -11,10 +11,10 @@ ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1dfce515eeadbdbaf1fd96e6dcf1a08cd536ab5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74200451"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>步驟 3：使用 pymssql 連線到 SQL 的概念證明

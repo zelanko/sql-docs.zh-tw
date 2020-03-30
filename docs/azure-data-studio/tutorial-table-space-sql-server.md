@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
 ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957012"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>教學課程：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 啟用資料表空間使用量範例深入解析小工具
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-name-sos"></a>教學課程：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 啟用資料表空間使用量範例深入解析小工具
 
 本教學課程示範如何在資料庫儀表板上啟用深入解析小工具，提供資料庫中所有資料表空間使用量的摘要檢視。 在本教學課程中，您將了解如何：
 
@@ -33,7 +33,7 @@ ms.locfileid: "74957012"
 * [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連線及查詢 SQL Server](quickstart-sql-server.md)
 * [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連線及查詢 Azure SQL Database](quickstart-sql-database.md)
 
-## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的資料庫儀表板上開啟管理深入解析
+## <a name="turn-on-a-management-insight-on-name-soss-database-dashboard"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的資料庫儀表板上開啟管理深入解析
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 內建範例小工具，可監視資料庫中資料表所使用的空間。
 

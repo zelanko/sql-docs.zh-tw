@@ -11,10 +11,10 @@ ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: afc1e7ceb6dca21bd562745fe7250500cc9c2033
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903869"
 ---
 # <a name="lesson-6-use-parameters-with-the-project-deployment-model-in-ssis"></a>第 6 課：在 SSIS 中搭配專案部署模型使用參數

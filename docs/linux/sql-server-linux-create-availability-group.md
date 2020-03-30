@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68077438"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>為 Linux 上的 SQL Server 建立和設定可用性群組
@@ -324,7 +324,7 @@ sudo systemctl restart mssql-server
 
 2.  在 [簡介] 對話方塊上，按 [下一步]  。
 
-3.  在 [指定可用性群組選項] 對話方塊中，輸入可用性群組的名稱，然後在下拉式清單中選取 [外部] 或 [無] 的叢集類型。 如果要部署 Pacemaker，應該使用 [外部]。 [無] 適用於特定案例，例如，讀取相應放大。選取 [資料庫層級健康情況偵測] 選項是選擇性的。 如需此選項的詳細資訊，請參閱[可用性群組資料庫層級健康情況偵測容錯移轉選項](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)。 按 [下一步]  。
+3.  在 [指定可用性群組選項] 對話方塊中，輸入可用性群組的名稱，然後在下拉式清單中選取 [外部] 或 [無] 的叢集類型。 如果要部署 Pacemaker，應該使用 [外部]。 [無] 適用於特定案例，例如，讀取擴增。選取 [資料庫層級健康情況偵測] 選項是選擇性的。 如需此選項的詳細資訊，請參閱[可用性群組資料庫層級健康情況偵測容錯移轉選項](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)。 按 [下一步]  。
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 

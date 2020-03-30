@@ -22,10 +22,10 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 486339cc1c5ef550dbf4eee227bec3ad67ce0e3a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294104"
 ---
 # <a name="message-queue-task"></a>Message Queue Task

@@ -10,10 +10,10 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1352a7f469e72100f7a2e0573c87cbb8422fe413
-ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77608485"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 離線說明和說明檢視器

@@ -54,11 +54,11 @@ ms.locfileid: "75321560"
 -   可以為一組資料表手動建立聯結篩選，或者根據資料表中定義的外部索引鍵與主索引鍵之間的關聯性自動產生篩選。 如需自動產生一組聯結篩選的詳細資訊，請參閱[在合併發行項之間自動產生一組聯結篩選 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md)。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - **發行集>]** **對話方塊的 [篩選資料列]\<** 頁面上，定義、修改及刪除聯結篩選。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 您可以在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - \<發行集>]  對話方塊的 [篩選資料列]  頁面上，定義、修改及刪除聯結篩選。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-define-a-join-filter"></a>若要定義聯結篩選  
   
-1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - **發行集>]** **對話方塊的 [篩選資料列]\<** 頁面上，從 [已篩選的資料表]  窗格中選取一個現有的資料列篩選或聯結篩選。  
+1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - \<發行集>]  對話方塊的 [篩選資料列]  頁面上，從 [已篩選的資料表]  窗格中選取一個現有的資料列篩選或聯結篩選。  
   
 2.  按一下 **[加入]** ，然後按一下 **[加入聯結以擴充選取的篩選]** 。  
   
@@ -89,11 +89,11 @@ ms.locfileid: "75321560"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  如果您在 [發行集屬性 - **發行集>]\<** 對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。  
+6.  如果您在 [發行集屬性 - \<發行集>]  對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。  
 
 #### <a name="to-modify-a-join-filter"></a>若要修改聯結篩選  
   
-1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - **發行集>]** **的 [篩選資料列]\<** 頁面上，從 [已篩選的資料表]  窗格中選取一個篩選，然後按一下 [編輯]  。  
+1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - \<發行集>]  的 [篩選資料列]  頁面上，從 [已篩選的資料表]  窗格中選取一個篩選，然後按一下 [編輯]  。  
   
 2.  在 **[編輯聯結]** 對話方塊中，修改篩選。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "75321560"
   
 #### <a name="to-delete-a-join-filter"></a>若要刪除聯結篩選  
   
-1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - **發行集>]** **的 [篩選資料列]\<** 頁面上，從 [已篩選的資料表]  窗格中選取一個篩選，然後按一下 [刪除]  。 如果您刪除的聯結篩選本身已由其他聯結擴充，也會一併刪除這些聯結。  
+1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - \<發行集>]  的 [篩選資料列]  頁面上，從 [已篩選的資料表]  窗格中選取一個篩選，然後按一下 [刪除]  。 如果您刪除的聯結篩選本身已由其他聯結擴充，也會一併刪除這些聯結。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  這些程序顯示父發行項上的參數化篩選，其中包含此發行項與相關子發行項之間的聯結篩選。 您可以使用複寫預存程序來以程式設計的方式定義及修改聯結篩選。  
@@ -141,7 +141,7 @@ ms.locfileid: "75321560"
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [針對合併式複寫篩選發行的資料](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
- [如何：定義和修改合併發行項之間的聯結篩選 (SQL Server Management Studio)](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [操作說明：定義和修改合併發行項之間的聯結篩選 (SQL Server Management Studio)](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [定義合併資料表發行項之間的邏輯記錄關聯性](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)   
  [針對合併發行項定義及修改參數化資料列篩選](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  

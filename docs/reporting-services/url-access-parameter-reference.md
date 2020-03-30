@@ -13,10 +13,10 @@ ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0ac67de4831d1785f17029bc6c68fa6f7d8aeb16
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77147378"
 ---
 # <a name="url-access-parameter-reference"></a>URL 存取參數參考
@@ -29,7 +29,7 @@ ms.locfileid: "77147378"
 > SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
   
 
-##  <a name="bkmk_htmlviewer"></a> HTML 檢視器命令 (rc:)
+##  <a name="html-viewer-commands-rc"></a><a name="bkmk_htmlviewer"></a> HTML 檢視器命令 (rc:)
  - HTML 檢視器命令的使用對象是 HTML 檢視器，其前置詞為 *rc:* ：
   
 -   **Toolbar**：顯示或隱藏工具列。 如果這個參數的值為 **false**，則會忽略所有剩餘的選項。 如果您省略這個參數，工具列就會自動顯示以轉譯支援該參數的格式。 這個參數的預設值為 **true**。
@@ -113,7 +113,7 @@ ms.locfileid: "77147378"
   
 -   **裝置資訊設定**：以 `rc:tag=value` 格式指定裝置資訊設定，其中 *tag* 是目前專用於轉譯延伸模組的特定裝置資訊設定名稱。 (請參閱 *Format* 參數的描述。)例如，您可以利用 IMAGE 轉譯延伸模組的 *OutputFormat* 裝置資訊設定，使用下列 URL 存取字串的參數將報表轉譯為 JPEG 影像：`...&rs:Format=IMAGE&rc:OutputFormat=JPEG`。 如需所有延伸模組特定裝置資訊設定的詳細資訊，請參閱[轉譯延伸模組的裝置資訊設定 &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)。
   
-##  <a name="bkmk_reportserver"></a> 報表伺服器命令 (rs:)
+##  <a name="report-server-commands-rs"></a><a name="bkmk_reportserver"></a> 報表伺服器命令 (rs:)
  報表伺服器命令前面會加上 *rs:* ，而且用來針對下列報表伺服器︰
   
 -   **命令**：目錄項目上所執行的動作，視其項目類型而定。 預設值取決於 URL 存取字串中所參考目錄項目的類型。 有效值為：
@@ -264,7 +264,7 @@ ms.locfileid: "77147378"
   
 -   **ShowHideToggle**：切換該報表區段的顯示和隱藏狀態。 指定正整數以表示要切換的區段。
   
-##  <a name="bkmk_webpart"></a> 報表檢視器網頁組件命令 (rv:)
+##  <a name="report-viewer-web-part-commands-rv"></a><a name="bkmk_webpart"></a> 報表檢視器網頁組件命令 (rv:)
  下列 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 保留報表參數名稱用於將與 SharePoint 整合的報表檢視器網頁組件指定為目標。 這些參數名稱都使用 *rv:* 做為字首。 報表檢視器網頁組件也接受 *rs:ParameterLanguage* 參數。
   
 -   **Toolbar**：控制報表檢視器網頁組件的工具列顯示。 預設值是 **Full**秒。 值可以是：

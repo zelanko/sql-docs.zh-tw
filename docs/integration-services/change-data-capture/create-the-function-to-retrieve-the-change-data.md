@@ -13,10 +13,10 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 43809c2be4dca62d150be31f62b833b08a2569b7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72251981"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>建立函數以擷取變更資料

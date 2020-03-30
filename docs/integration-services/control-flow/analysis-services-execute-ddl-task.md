@@ -18,10 +18,10 @@ ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a160e61e390f58dc640a5d1da265cdb77d5d9be1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294335"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services 執行 DDL 工作

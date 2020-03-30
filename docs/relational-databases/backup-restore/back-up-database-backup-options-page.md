@@ -14,10 +14,10 @@ ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f461997fbbbbc7e63256b67b8fecf40381aab788
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940970"
 ---
 # <a name="back-up-database-backup-options-page"></a>備份資料庫 (備份選項頁面)

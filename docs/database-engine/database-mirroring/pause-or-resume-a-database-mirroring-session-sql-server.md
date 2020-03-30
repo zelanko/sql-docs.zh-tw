@@ -18,10 +18,10 @@ ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c9d36b4818aa54a6f63b0b38a353cf69840519b9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244161"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>暫停或繼續資料庫鏡像工作階段 (SQL Server)
@@ -42,18 +42,18 @@ ms.locfileid: "75244161"
   
 -   **後續操作：** [暫停或繼續資料庫鏡像之後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
  您可以在任何時候暫停資料庫鏡像工作階段，此工作階段可能會在發生瓶頸時提高效能，而且您可以隨時繼續暫停的工作階段。  
   
 > [!CAUTION]  
 >  在強制服務之後，當原始主體伺服器重新連接時，便會暫停鏡像。 在這種情況下繼續執行鏡像，很可能會造成原始主體伺服器上的資料遺失。 如需管理潛在資料遺失的資訊，請參閱[資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  若要暫停或繼續資料庫鏡像工作階段，請使用 **[資料庫屬性鏡像]** 頁面。  
   
 #### <a name="to-pause-or-resume-database-mirroring"></a>若要暫停或繼續資料庫鏡像  
@@ -72,7 +72,7 @@ ms.locfileid: "75244161"
   
 5.  若要繼續工作階段，請按一下 **[繼續]** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-pause-database-mirroring"></a>若要暫停資料庫鏡像  
   
@@ -110,7 +110,7 @@ ms.locfileid: "75244161"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a> 後續操作：暫停或繼續資料庫鏡像之後  
+##  <a name="follow-up-after-pausing-or-resuming-database-mirroring"></a><a name="FollowUp"></a> 後續操作：暫停或繼續資料庫鏡像之後  
   
 -   **暫停資料庫鏡像之後**  
   
@@ -120,7 +120,7 @@ ms.locfileid: "75244161"
   
      繼續資料庫鏡像會使鏡像資料庫處於 SYNCHRONIZING 狀態。 若安全性層級為 FULL，則鏡像會追趕上主體，且鏡像資料庫會進入 SYNCHRONIZED 狀態。 此時即有可能發生容錯移轉。 若見證存在並處於 ON 的狀態，就有可能發生自動容錯移轉。 若見證不存在，則有可能發生手動容錯移轉。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   

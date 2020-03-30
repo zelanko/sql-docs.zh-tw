@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: a01b55cb67332617ea2e326756fb8ad6fc7bcf42
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288692"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>教學課程：使用 SSMS 提供安全記憶體保護區的 Always Encrypted

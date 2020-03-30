@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.openlocfilehash: e52132e0121b602092a9e1bb94cca3e5e8d1ba73
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286692"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 版本資訊
@@ -70,7 +70,7 @@ ms.locfileid: "79286692"
 | [CU1](#CU1)           | 14.0.3006.16  | 2017-10-24   |
 | [GA](#GA)             | 14.0.1000.169 | 2017-10-02   |
 
-## <a id="cuinstall"></a> 如何安裝更新
+## <a name="how-to-install-updates"></a><a id="cuinstall"></a> 如何安裝更新
 
 如果您已設定 CU 存放庫 (**mssql-server-2017**)，您就會在執行新安裝時取得 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 套件的最新 CU。 CU 存放庫是適用於 Linux 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之所有套件安裝發行項的預設值。 如果您已設定 GDR 存放庫 (**mssql-server-2017-gdr**)，則只會取得自 GA 之後發行的重大安全性更新。 如果您需要 Docker 容器 CU 或 GDR 更新，請參閱[適用於 Docker 引擎之 Linux 上的 Microsoft SQL Server](https://hub.docker.com/r/microsoft/mssql-server) \(英文\) 的官方映像。 如需有關存放庫設定的詳細資訊，請參閱[針對 Linux 上的 SQL Server 設定存放庫](sql-server-linux-change-repo.md)。
 
@@ -81,7 +81,7 @@ ms.locfileid: "79286692"
 - [安裝 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [啟用 SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
-## <a id="CU19"></a> CU19 (2020 年 2 月)
+## <a name="cu19-february-2020"></a><a id="CU19"></a> CU19 (2020 年 2 月)
 
 這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 19 (CU19) 版本。 此版次的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本為 14.0.3281.6。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4535007](https://support.microsoft.com/help/4535007)。
 
@@ -95,7 +95,7 @@ ms.locfileid: "79286692"
 | SLES RPM 套件 | 14.0.3281.6-2 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3281.6-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3281.6-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3281.6-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.3281.6-2 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3281.6-2_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3281.6-2_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3281.6-2_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU18"></a> CU18 (2019 年 12 月)
+## <a name="cu18-december-2019"></a><a id="CU18"></a> CU18 (2019 年 12 月)
 
 這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 18 (CU18) 版本。 此版本 (Release) 的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本 (Version) 是 14.0.3257.3。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4527377](https://support.microsoft.com/help/4527377)。
 
@@ -140,7 +140,7 @@ SQL Server 2017 容器現在有新的標記模式，如下所述，其中包含�
 > 未來，我們將不再針對 SQL Server 2017 容器的其他標記模式發佈容器。
 
 
-## <a id="CU17"></a> CU17 (2019 年 10 月)
+## <a name="cu17-october-2019"></a><a id="CU17"></a> CU17 (2019 年 10 月)
 
 這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 17 (CU17) 版本。 此版本 (Release) 的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本 (Version) 是 14.0.3238.1。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4515579](https://support.microsoft.com/help/4515579)。
 
@@ -154,7 +154,7 @@ SQL Server 2017 容器現在有新的標記模式，如下所述，其中包含�
 | SLES RPM 套件 | 14.0.3238.1-19 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3238.1-19.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3238.1-19.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3238.1-19.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.3238.1-19 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3238.1-19_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3238.1-19_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3238.1-19_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU16"></a> CU16 (2019 年 8 月)
+## <a name="cu16-august-2019"></a><a id="CU16"></a> CU16 (2019 年 8 月)
 
 這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 16 (CU16) 版本。 此版本 (Release) 的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本 (Version) 是 14.0.3223.3。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4508218](https://support.microsoft.com/help/4508218)。
 
@@ -174,7 +174,7 @@ SQL Server 2017 容器現在有新的標記模式，如下所述，其中包含�
 | SLES RPM 套件 | 14.0.3223.3-15 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3223.3-15.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3223.3-15.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3223.3-15.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.3223.3-15 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3223.3-15_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3223.3-15_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3223.3-15_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU15"></a> CU15 (2019 年 5 月)
+## <a name="cu15-may-2019"></a><a id="CU15"></a> CU15 (2019 年 5 月)
 
 這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 15 (CU15) 版。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.3162.1。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4498951](https://support.microsoft.com/help/4498951)。
 
@@ -188,7 +188,7 @@ SQL Server 2017 容器現在有新的標記模式，如下所述，其中包含�
 | SLES RPM 套件 | 14.0.3162.1-1 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3162.1-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3162.1-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3162.1-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.3162.1-1 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3162.1-1_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3162.1-1_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3162.1-1_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU14"></a> CU14 (2019 年 3 月)
+## <a name="cu14-mar-2019"></a><a id="CU14"></a> CU14 (2019 年 3 月)
 
 這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 14 (CU14) 版。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.3076.1。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4484710](https://support.microsoft.com/help/4484710)。
 
@@ -202,7 +202,7 @@ SQL Server 2017 容器現在有新的標記模式，如下所述，其中包含�
 | SLES RPM 套件 | 14.0.3076.1-2 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3076.1-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3076.1-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3076.1-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.3076.1-2 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3076.1-2_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3076.1-2_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3076.1-2_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU13"></a> CU13 (2018 年 12 月)
+## <a name="cu13-dec-2018"></a><a id="CU13"></a> CU13 (2018 年 12 月)
 
 這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 13 (CU13) 版。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.3048.4。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4466404](https://support.microsoft.com/help/4466404)。
 
@@ -216,7 +216,7 @@ SQL Server 2017 容器現在有新的標記模式，如下所述，其中包含�
 | SLES RPM 套件 | 14.0.3048.4-1 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3048.4-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3048.4-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3048.4-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.3048.4-1 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3048.4-1_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3048.4-1_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3048.4-1_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU12"></a> CU12 (2018 年 10 月)
+## <a name="cu12-oct-2018"></a><a id="CU12"></a> CU12 (2018 年 10 月)
 
 這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 12 (CU12) 版。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.3045.24。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4464082](https://support.microsoft.com/help/4464082)。
 
@@ -230,7 +230,7 @@ SQL Server 2017 容器現在有新的標記模式，如下所述，其中包含�
 | SLES RPM 套件 | 14.0.3045.24-1 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3045.24-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3045.24-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3045.24-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.3045.24-1 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3045.24-1_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3045.24-1_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3045.24-1_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU11"></a> CU11 (2018 年 9 月)
+## <a name="cu11-sept-2018"></a><a id="CU11"></a> CU11 (2018 年 9 月)
 
 這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 11 (CU11) 版。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.3038.14。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4462262](https://support.microsoft.com/help/4462262)。
 
@@ -244,7 +244,7 @@ SQL Server 2017 容器現在有新的標記模式，如下所述，其中包含�
 | SLES RPM 套件 | 14.0.3038.14-2 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3038.14-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3038.14-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3038.14-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.3038.14-2 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3038.14-2_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3038.14-2_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3038.14-2_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU10"></a> CU10 (2018 年 8 月)
+## <a name="cu10-aug-2018"></a><a id="CU10"></a> CU10 (2018 年 8 月)
 
 這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 10 (CU10) 版。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.3037.1。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4342123](https://support.microsoft.com/help/4342123)。
 
@@ -258,7 +258,7 @@ SQL Server 2017 容器現在有新的標記模式，如下所述，其中包含�
 | SLES RPM 套件 | 14.0.3037.1-2 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3037.1-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3037.1-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3037.1-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.3037.1-2 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3037.1-2_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3037.1-2_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3037.1-2_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU9-GDR2"></a> CU9-GDR2 (2018 年 8 月)
+## <a name="cu9-gdr2-aug-2018"></a><a id="CU9-GDR2"></a> CU9-GDR2 (2018 年 8 月)
 
 這是也包含先前發行之 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] CU (CU9) 的安全性更新。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.3035.2。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4293805](https://support.microsoft.com/help/4293805)。
 
@@ -272,7 +272,7 @@ SQL Server 2017 容器現在有新的標記模式，如下所述，其中包含�
 | SLES RPM 套件 | 14.0.3035.2-1 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3035.2-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3035.2-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3035.2-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.3035.2-1 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3035.2-1_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3035.2-1_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3035.2-1_amd64.deb)<br/> |
 
-## <a id="GDR2"></a> GDR2 (2018 年 8 月)
+## <a name="gdr2-aug-2018"></a><a id="GDR2"></a> GDR2 (2018 年 8 月)
 
 這是只包含 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] GDR2 (和 GDR1) 安全性修正的安全性更新。  此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.2002.14。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4293803](https://support.microsoft.com/help/4293803)。
 
@@ -286,7 +286,7 @@ SQL Server 2017 容器現在有新的標記模式，如下所述，其中包含�
 | SLES RPM 套件 | 14.0.2002.14-1 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2002.14-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2002.14-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2002.14-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.2002.14-1 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server/mssql-server_14.0.2002.14-1_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.2002.14-1_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.2002.14-1_amd64.deb) |
 
-## <a id="CU9"></a> CU9 (2018 年 7 月)
+## <a name="cu9-jul-2018"></a><a id="CU9"></a> CU9 (2018 年 7 月)
 
 這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 9 (CU9) 版。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.3030.27。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4341265](https://support.microsoft.com/help/4341265)。
 
@@ -300,7 +300,7 @@ SQL Server 2017 容器現在有新的標記模式，如下所述，其中包含�
 | SLES RPM 套件 | 14.0.3030.27-1 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3030.27-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3030.27-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3030.27-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.3030.27-1 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3030.27-1_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3030.27-1_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3030.27-1_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU8"></a> CU8 (2018 年 1 月)
+## <a name="cu8-jun-2018"></a><a id="CU8"></a> CU8 (2018 年 1 月)
 
 這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 8 (CU8) 版。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.3029.16。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4338363](https://support.microsoft.com/help/4338363)。
 
@@ -314,7 +314,7 @@ SQL Server 2017 容器現在有新的標記模式，如下所述，其中包含�
 | SLES RPM 套件 | 14.0.3029.16-1 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3029.16-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3029.16-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3029.16-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.3029.16-1 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3029.16-1_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3029.16-1_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3029.16-1_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU7"></a> CU7 (2018 年 5 月)
+## <a name="cu7-may-2018"></a><a id="CU7"></a> CU7 (2018 年 5 月)
 
 這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 7 (CU7) 版。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.3026.27。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4229789](https://support.microsoft.com/help/4229789)。
 
@@ -328,7 +328,7 @@ SQL Server 2017 容器現在有新的標記模式，如下所述，其中包含�
 | SLES RPM 套件 | 14.0.3026.27-2 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3026.27-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3026.27-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3026.27-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.3026.27-2 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3026.27-2_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3026.27-2_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3026.27-2_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU6"></a> CU6 (2018 年 4 月)
+## <a name="cu6-apr-2018"></a><a id="CU6"></a> CU6 (2018 年 4 月)
 
 這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 6 (CU6) 版。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.3025.34。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4101464](https://support.microsoft.com/help/4101464)。
 
@@ -342,7 +342,7 @@ SQL Server 2017 容器現在有新的標記模式，如下所述，其中包含�
 | SLES RPM 套件 | 14.0.3025.34-3 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.3025.34-3 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3025.34-3_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3025.34-3_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU5"></a> CU5 (2018 年 3 月)
+## <a name="cu5-mar-2018"></a><a id="CU5"></a> CU5 (2018 年 3 月)
 
 這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 5 (CU5) 版。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.3023.8。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4092643](https://support.microsoft.com/help/4092643)。
 
@@ -374,7 +374,7 @@ sudo systemctl start mssql-server
 | SLES RPM 套件 | 14.0.3023.8-5 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3023.8-5.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3023.8-5.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3023.8-5.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.3023.8-5 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3023.8-5_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3023.8-5_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3023.8-5_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU4"></a> CU4 (2018 年 2 月)
+## <a name="cu4-feb-2018"></a><a id="CU4"></a> CU4 (2018 年 2 月)
 
 這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 4 (CU4) 版。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.3022.28。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4056498](https://support.microsoft.com/help/4056498)。
 
@@ -391,7 +391,7 @@ sudo systemctl start mssql-server
 | SLES RPM 套件 | 14.0.3022.28-2 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3022.28-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3022.28-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3022.28-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.3022.28-2 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3022.28-2_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3022.28-2_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3022.28-2_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="GDR1"></a> GDR1 (2018 年 1 月)
+## <a name="gdr1-jan-2018"></a><a id="GDR1"></a> GDR1 (2018 年 1 月)
 
 這是只包含 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] GDR1 安全性修正的安全性更新。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.2000.63。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4057122](https://support.microsoft.com/help/4057122)。
 
@@ -405,7 +405,7 @@ sudo systemctl start mssql-server
 | SLES RPM 套件 | 14.0.2000.63-3 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2000.63-3.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2000.63-3.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2000.63-3.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.2000.63-3 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server/mssql-server_14.0.2000.63-3_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.2000.63-3_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.2000.63-3_amd64.deb) |
 
-## <a id="CU3"></a> CU3 (2018 年 1 月)
+## <a name="cu3-jan-2018"></a><a id="CU3"></a> CU3 (2018 年 1 月)
 
 這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 3 (CU3) 版。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.3015.40。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4052987](https://support.microsoft.com/help/4052987)。
 
@@ -419,7 +419,7 @@ sudo systemctl start mssql-server
 | SLES RPM 套件 | 14.0.3015.40-1 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3015.40-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3015.40-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)</br>[SQL Server Agent RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3015.40-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.3015.40-1 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3015.40-1_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3015.40-1_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3015.40-1_amd64.deb)</br>[SQL Server Agent Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3015.40-1_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU2"></a> CU2 (2017 年 11 月)
+## <a name="cu2-nov-2017"></a><a id="CU2"></a> CU2 (2017 年 11 月)
 
 這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 2 (CU2) 版。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.3008.27。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574)。
 
@@ -433,7 +433,7 @@ sudo systemctl start mssql-server
 | SLES RPM 套件 | 14.0.3008.27-1 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[SQL Server Agent RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.3008.27-1 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3008.27-1_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3008.27-1_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3008.27-1_amd64.deb)</br>[SQL Server Agent Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3008.27-1_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU1"></a> CU1 (2017 年 10 月)
+## <a name="cu1-oct-2017"></a><a id="CU1"></a> CU1 (2017 年 10 月)
 
 這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 1 (CU1) 版。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.3006.16。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/help/KB4053439](https://support.microsoft.com/help/4038634)。
 
@@ -447,7 +447,7 @@ sudo systemctl start mssql-server
 | SLES RPM 套件 | 14.0.3006.16-3 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3006.16-3.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3006.16-3.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3006.16-3.x86_64.rpm)</br>[SQL Server Agent RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3006.16-3.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.3006.16-3 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3006.16-3_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3006.16-3_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3006.16-3_amd64.deb)</br>[SQL Server Agent Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3006.16-3_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="GA"></a> GA (2017 年 10 月)
+## <a name="ga-oct-2017"></a><a id="GA"></a> GA (2017 年 10 月)
 
 這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的正式運作 (GA) 版。 此版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本是 14.0.1000.169。
 
@@ -567,7 +567,7 @@ sudo systemctl start mssql-server
 
 - 此版本並未提供所有篩選，包括適用於 Office 文件的篩選。 如需所支援篩選的清單，請參閱[在 Linux 上安裝 SQL Server 全文檢索搜尋](sql-server-linux-setup-full-text-search.md#filters)。
 
-#### <a id="ssis"></a> SQL Server Integration Services (SSIS)
+#### <a name="sql-server-integration-services-ssis"></a><a id="ssis"></a> SQL Server Integration Services (SSIS)
 
 - 此版本中在 SUSE 上不支援 **mssql-server-is** 套件。 目前在 Ubuntu 和 Red Hat Enterprise Linux (RHEL) 上支援此套件。
 
@@ -591,7 +591,7 @@ sudo systemctl start mssql-server
 -   [在 Linux 上安裝 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
 -   [使用 SSIS 在 Linux 上擷取、轉換和載入資料](sql-server-linux-migrate-ssis.md)
 
-#### <a id="ssms"></a> SQL Server Management Studio (SSMS)
+#### <a name="sql-server-management-studio-ssms"></a><a id="ssms"></a> SQL Server Management Studio (SSMS)
 
 以下限制適用於 Windows 上連線至 Linux 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。
 

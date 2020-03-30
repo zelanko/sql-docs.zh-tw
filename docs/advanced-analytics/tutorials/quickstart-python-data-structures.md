@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0f04e021664a92241c8c029d296a298b10c142d2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831905"
 ---
 # <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>快速入門：在 SQL Server 機器學習服務中使用 Python 的資料結構與物件

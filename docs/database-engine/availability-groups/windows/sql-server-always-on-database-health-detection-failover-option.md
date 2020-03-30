@@ -17,10 +17,10 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6fa77fa3ac4733d9672b5bc72523d72abe640fc8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251258"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性群組資料庫層級健全狀況偵測容錯移轉選項

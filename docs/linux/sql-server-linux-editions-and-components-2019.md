@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
 ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288552"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Linux 上 SQL Server 2019 的版本及支援功能
@@ -77,7 +77,7 @@ Linux 上的 SQL Server 2019 支援 SQL Server 資料庫引擎。 下表描述�
 
 Developer Edition 只持續支援一個 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md) 用戶端。 
   
-##  <a name="Cross-BoxScaleLimits"></a> 調整限制  
+##  <a name="scale-limits"></a><a name="Cross-BoxScaleLimits"></a> 調整限制  
   
 |功能|Enterprise|標準|Web|Express| 
 |-------------|----------------|--------------|---------|------------------------|
@@ -90,7 +90,7 @@ Developer Edition 只持續支援一個 [SQL Server Distributed Replay](../tools
   
 <sup>1</sup> 新合約不適用的 Enterprise 版本 (含伺服器 + 用戶端存取使用權 (CAL)) 授權限制為每個 SQL Server 執行個體最多 20 個核心。 核心伺服器授權模式之下沒有任何限制。 如需詳細資訊，請參閱 [SQL Server 版本的計算容量限制](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
  
-##  <a name="RDBMSHA"></a> RDBMS 高可用性  
+##  <a name="rdbms-high-availability"></a><a name="RDBMSHA"></a> RDBMS 高可用性  
   
 |功能|Enterprise|標準|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
@@ -118,7 +118,7 @@ Developer Edition 只持續支援一個 [SQL Server Distributed Replay](../tools
 
 <sup>3</sup> Standard 版本支援基本可用性群組。 基本可用性群組支援兩個複本，使用一個資料庫。 如需基本可用性群組的詳細資訊，請參閱[基本可用性群組](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。    
 
-##  <a name="RDBMSSP"></a> RDBMS 延展性和效能  
+##  <a name="rdbms-scalability-and-performance"></a><a name="RDBMSSP"></a> RDBMS 延展性和效能  
   
 |功能|Enterprise|標準|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
@@ -143,7 +143,7 @@ Developer Edition 只持續支援一個 [SQL Server Distributed Replay](../tools
 
 <sup>1</sup> 記憶體內部 OLTP 資料大小和資料行存放區區段快取都限制為版本「縮放限制」區段指定的記憶體數量。 平行處理原則的最大程度是有限的。 索引建置的平行處理原則 (DOP) 程度限制為 2 DOP (Standard 版本) 和 1 DOP (Web 和 Express 版本)。 這會參考以磁碟式資料表和記憶體最佳化資料表建立的資料行存放區索引。
 
-##  <a name="RDBMSS"></a> RDBMS 安全性  
+##  <a name="rdbms-security"></a><a name="RDBMSS"></a> RDBMS 安全性  
   
 |功能|Enterprise|標準|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
@@ -157,7 +157,7 @@ Developer Edition 只持續支援一個 [SQL Server Distributed Replay](../tools
 |自主資料庫|是|是|是|是| 
 |備份的加密|是|是|否|否|  
 
-##  <a name="RDBMSM"></a> RDBMS 管理能力  
+##  <a name="rdbms-manageability"></a><a name="RDBMSM"></a> RDBMS 管理能力  
   
 |功能|Enterprise|標準|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
@@ -176,7 +176,7 @@ Developer Edition 只持續支援一個 [SQL Server Distributed Replay](../tools
 |平行一致性檢查|是|否|否|否| 
 |SQL Server 公用程式控制點|是|否|否|否|    
 
-##  <a name="Programmability"></a> Programmability  
+##  <a name="programmability"></a><a name="Programmability"></a> Programmability  
   
 |功能|Enterprise|標準|Web|Express 
 |-------------|----------------|--------------|---------|------------------------|  
@@ -197,11 +197,11 @@ Developer Edition 只持續支援一個 [SQL Server Distributed Replay](../tools
 
 <sup>1</sup> 使用多個運算節點向外延展時需要標題節點。
 
-## <a name="IS"></a> Integration Services
+## <a name="integration-services"></a><a name="IS"></a> Integration Services
 
 如需 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 版本支援的 Integration Services (SSIS) 功能資訊，請參閱 [SQL Server 版本支援的 Integration Services 功能](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md)。
 
-##  <a name="SLS"></a> 空間和定位服務  
+##  <a name="spatial-and-location-services"></a><a name="SLS"></a> 空間和定位服務  
   
 |功能名稱|Enterprise|標準|Web|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
@@ -210,7 +210,7 @@ Developer Edition 只持續支援一個 [SQL Server Distributed Replay](../tools
 |進階空間程式庫|是|是|是|是|   
 |匯入/匯出業界標準空間資料格式|是|是|是|是|   
 
-## <a name="Unsupported"></a> 不支援的功能與服務
+## <a name="unsupported-features--services"></a><a name="Unsupported"></a> 不支援的功能與服務
 
 Linux 上的 SQL Server 2019 不支援下列功能和服務。 這些功能的支援將隨著時間逐漸啟用。
 

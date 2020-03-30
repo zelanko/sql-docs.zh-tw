@@ -11,10 +11,10 @@ ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 28b2750d96e1fbe5b5a1cfc3021a22415128b7df
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026803"
 ---
 # <a name="using-adaptive-buffering"></a>使用自適性緩衝

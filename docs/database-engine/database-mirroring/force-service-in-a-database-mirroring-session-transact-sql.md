@@ -40,9 +40,9 @@ ms.locfileid: "74822226"
   
 2.  發出下列陳述式：  
   
-     ALTER DATABASE <資料庫名稱> SET PARTNER FORCE_SERVICE_ALLOW_DATA_LOSS  
+     ALTER DATABASE <資料庫名稱>  SET PARTNER FORCE_SERVICE_ALLOW_DATA_LOSS  
   
-     其中 <資料庫名稱> 是鏡像資料庫。  
+     其中 <資料庫名稱>  是鏡像資料庫。  
   
      鏡像伺服器會立即轉換為主體伺服器，並暫停鏡像。  
   

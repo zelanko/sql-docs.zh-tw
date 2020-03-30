@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: d6f17b46cb396ee34133e67a528e22cab571cceb
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 57cd755c29262d64d7e5215c0ef053a28c5f3507
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288382"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79510199"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ GO
 4. 關聯式引擎開始執行執行計畫。 當在處理需要基底資料表中資料的步驟時，關聯式引擎會要求儲存引擎，從取自關聯式引擎的資料列集中傳回資料。
 5. 關聯式引擎處理從儲存引擎傳回的資料，並將其設定成結果集所定義的格式，然後將結果集傳回給用戶端。
 
-### <a name="ConstantFolding"></a> 常數摺疊和運算式評估 
+### <a name="constant-folding-and-expression-evaluation"></a><a name="ConstantFolding"></a> 常數摺疊和運算式評估 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會在早期評估某些常數運算式，以改進查詢效能。 這個作業稱為常數摺疊 (Constant Folding)。 常數是 [!INCLUDE[tsql](../includes/tsql-md.md)] 常值，例如 `3`、`'ABC'`、`'2005-12-31'`、`1.0e3` 或 `0x12345678`。
 
 #### <a name="foldable-expressions"></a>可摺疊運算式
@@ -181,7 +181,7 @@ WHERE TotalDue > 117.00 + 1000.00;
 
 另一方面，如果 `dbo.f` 是純量使用者定義函數，則運算式 `dbo.f(100)` 不可摺疊，因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會摺疊含有使用者定義函數的運算式，即使它們是決定性函數也是如此。 如需參數化的詳細資訊，請參閱本文後面的[強制參數化](#ForcedParam)。
 
-#### <a name="ExpressionEval"></a>運算式評估 
+#### <a name="expression-evaluation"></a><a name="ExpressionEval"></a>運算式評估 
 此外，在最佳化期間，結果集大小 (基數) 估計工具 (此為最佳化工具的一部份) 會評估部份運算式，這些運算式不是常數摺疊，但在編譯時間其引數為已知 (不論引數是參數或常數)。
 
 特別是在編譯時間會評估下列這些內建函式和特殊運算子，如果其所有輸入皆為已知：`UPPER`、`LOWER`、`RTRIM`、`DATEPART( YY only )`、`GETDATE`、`CAST` 和 `CONVERT`。 下列運算子的所有輸入若為已知，在編譯時間也會加以評估：
@@ -550,9 +550,9 @@ GO
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CC6C534060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060        Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -573,9 +573,9 @@ GO
 再次確認可以在計畫快取中找到的內容。 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060        Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -599,10 +599,10 @@ GO
 再次確認可以在計畫快取中找到的內容。 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
 ```
-memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
----------------------   -------   ---------   ---------   ------------------ ------------------ 
-0x000001CD01DEC060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
-0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
+memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------    -------   ---------   ---------   ------------------ ------------------ 
+0x000001CD01DEC060        Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+0x000001CC6C534060        Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
 
 plan_handle                                                                               
 ------------------------------------------------------------------------------------------
@@ -690,7 +690,7 @@ sql_handle
 > [!NOTE]
 > 當 `AUTO_UPDATE_STATISTICS` 資料庫選項設定為 `ON` 時，若其目標資料表或索引檢視表的統計資料或基數明顯和上次執行不同時，就會重新編譯查詢。 此行為適用於標準使用者定義的資料表、暫存資料表，以及 DML 觸發程序所建立的插入和刪除資料表。 如果過多的重新編譯影響了查詢效能，請考慮將此設定值變更為 `OFF`。 當 `AUTO_UPDATE_STATISTICS` 資料庫選項設定為 `OFF` 時，就不會基於統計資料或基數變更發生重新編譯，但 DML `INSTEAD OF` 觸發程序所建立的插入和刪除資料表例外。 因為這些資料表是在 tempdb 中建立的，所以存取它們的查詢是否要重新編譯，取決於 tempdb 中 `AUTO_UPDATE_STATISTICS` 的設定。 請注意，在 2005 版之前的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，即使此設定為 `OFF`，還是會繼續根據 DML 觸發程序所插入和刪除之資料表的基數變更來重新編譯查詢。
 
-### <a name="PlanReuse"></a> 參數和執行計畫的重複使用
+### <a name="parameters-and-execution-plan-reuse"></a><a name="PlanReuse"></a> 參數和執行計畫的重複使用
 參數的使用，包括 ADO、OLE DB、和 ODBC 應用程式中的參數標記，可以增加執行計畫的重複使用。 
 
 > [!WARNING] 
@@ -758,7 +758,7 @@ WHERE AddressID = 1 + 2;
 
 不過，可根據簡單參數化規則將它參數化。 如果強制參數化嘗試失敗，後續仍會嘗試簡單參數化。
 
-### <a name="SimpleParam"></a> 簡單參數化
+### <a name="simple-parameterization"></a><a name="SimpleParam"></a> 簡單參數化
 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 Transact-SQL 陳述式中使用參數或參數標記時，可以提升關聯式引擎將新 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式與先前編譯之現有執行計畫配對的能力。
 
 > [!WARNING] 
@@ -793,7 +793,7 @@ WHERE ProductSubcategoryID = 4;
 
 此外，您可以指定單一查詢，以及任何其他語法相同但唯有參數值不同的查詢，使其進行參數化。 
 
-### <a name="ForcedParam"></a> 強制參數化
+### <a name="forced-parameterization"></a><a name="ForcedParam"></a> 強制參數化
 您可以藉由指定將資料庫中所有的 `SELECT`、`INSERT`、`UPDATE` 及 `DELETE` 陳述式依據特定限制進行參數化，以覆寫 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設的簡單參數化行為。 您可以藉由將 `PARAMETERIZATION` 陳述式中的 `FORCED` 選項設為 `ALTER DATABASE` ，來啟用強制參數化。 強制參數化可藉由降低查詢編譯與重新編譯的頻率，來增進特定資料庫的效能。 可經由強制參數化獲益的資料庫通常會有來自來源 (如銷售點應用程式) 的大量並行查詢。
 
 將 `PARAMETERIZATION` 選項設為 `FORCED`時，出現在 `SELECT`、 `INSERT`、 `UPDATE`或 `DELETE` 陳述式中且以任何形式提交的所有常值，都會在查詢編譯期間轉換為參數。 但出現於下列查詢結構中的常值則為例外： 
@@ -842,7 +842,7 @@ WHERE ProductSubcategoryID = 4;
 * 如果二進位常值可容納於 8,000 個位元組中，就會參數化為 varbinary(8000)。 如果該常值大於 8,000 個位元組，就會轉換為 varbinary(max)。
 * Money 類型常值會參數化為 money。
 
-#### <a name="ForcedParamGuide"></a> 強制參數化的使用指南
+#### <a name="guidelines-for-using-forced-parameterization"></a><a name="ForcedParamGuide"></a> 強制參數化的使用指南
 將 `PARAMETERIZATION` 選項設為 FORCED 時，請考量下列事項：
 
 * 強制參數化一旦生效後，會在編譯查詢時將查詢中的常值 (常數) 變更為參數。 因此，查詢最佳化工具可能會選擇到次佳的查詢計畫。 特別是，查詢最佳化工具較不可能比對查詢與索引檢視或計算資料行上的索引。 它也可會為資料分割資料表與分散式資料分割檢視上的查詢選擇次佳的計畫。 針對非常依賴索引檢視或計算資料行上索引的環境，就不應該使用強制參數化。 一般而言，應由具有經驗的資料庫管理員判斷 `PARAMETERIZATION FORCED` 選項的執行不會對效能造成不良影響後，才能使用此選項。
@@ -894,7 +894,7 @@ WHERE ProductID = 63;
 * 應用程式可以控制何時建立及重複使用執行計畫。
 * 準備/執行模型可以移至其他資料庫使用，包括舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
-### <a name="ParamSniffing"></a> 參數探測
+### <a name="parameter-sniffing"></a><a name="ParamSniffing"></a> 參數探測
 「參數探測」是指 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在編譯或重新編譯期間「探查」目前的參數值，然後將它傳遞給查詢最佳化工具，以便可用來產生可能更有效率之查詢執行計畫的程序。
 
 在編譯或重新編譯期間會探查下列批次類型的參數值：
@@ -903,7 +903,7 @@ WHERE ProductID = 63;
 -  透過 sp_executesql 提交的查詢 
 -  準備查詢
 
-如需如何針對錯誤參數探測問題進行疑難排解的詳細資訊，請參閱[針對含參數敏感查詢執行計畫問題的查詢進行疑難排解](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-problems)。
+如需如何針對錯誤參數探測問題進行疑難排解的詳細資訊，請參閱[針對含參數敏感查詢執行計畫問題的查詢進行疑難排解](/azure/sql-database/sql-database-monitor-tune-overview)。
 
 > [!NOTE]
 > 若是使用 `RECOMPILE` 提示的查詢，則會探查參數值和區域變數的目前值。 探查到的值 (參數和區域變數值) 是存在於批次中具有 `RECOMPILE` 提示的陳述式之前位置的值。 特別是對於參數，不會探查批次引動過程呼叫隨附的值。
@@ -945,7 +945,7 @@ WHERE ProductID = 63;
 * 序列執行計畫被認為比特定查詢之任何可能的平行執行計畫更快。
 * 此查詢包含無法平行執行的純量或關聯式運算子。 特定運算子可能造成查詢計畫的一個區段以序列模式執行，或整個計畫以序列模式執行。
 
-### <a name="DOP"></a> 平行處理原則的程度
+### <a name="degree-of-parallelism"></a><a name="DOP"></a> 平行處理原則的程度
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會針對平行查詢執行或索引資料定義語言 (DDL) 作業的每一個執行個體，自動偵測最佳程度的平行處理原則。 其作法是依據下列條件： 
 
 1. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是否**在搭載多個微處理器或 CPU 的電腦上執行**，例如對稱式微處理電腦 (SMP)。 具有一個以上 CPU 的電腦，才能使用平行查詢。 
@@ -1285,12 +1285,12 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 
 再舉一例，假設資料表在資料行 A 上具有四個資料分割，而界限點為 (10、20、30)、在資料行 B 上有一個索引，而且查詢具有述詞子句 `WHERE B IN (50, 100, 150)`。 由於資料表資料分割是以 A 的值為根據，所以 B 的值可能會發生在任何資料表資料分割內。 因此，查詢處理器將會在這四個資料表資料分割的每一個中，搜尋 B (50, 100, 150) 的這三個值的每一個。 查詢處理器會依比例指派背景工作執行緒，好讓它可以透過平行方式執行這 12 個查詢掃描的每一個。
 
-|根據資料行 A 的資料表資料分割 |在每一個資料表資料分割中搜尋資料行 B |
+|根據資料行 A 的資料表資料分割    |在每一個資料表資料分割中搜尋資料行 B |
 |----|----|
-|資料表分割區 1：A < 10   |B=50, B=100, B=150 |
-|資料表分割區 2：A >= 10 AND A < 20   |B=50, B=100, B=150 |
-|資料表分割區 3：A >= 20 AND A < 30   |B=50, B=100, B=150 |
-|資料表分割區 4：A >= 30  |B=50, B=100, B=150 |
+|資料表分割區 1：A < 10     |B=50, B=100, B=150 |
+|資料表分割區 2：A >= 10 AND A < 20     |B=50, B=100, B=150 |
+|資料表分割區 3：A >= 20 AND A < 30     |B=50, B=100, B=150 |
+|資料表分割區 4：A >= 30     |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>最佳做法
 
@@ -1374,7 +1374,7 @@ SET STATISTICS XML OFF;
 GO
 ```
 
-##  <a name="Additional_Reading"></a> 其他閱讀資料  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 其他閱讀資料  
  [執行程序邏輯和實體運算子參考](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
  [擴充事件](../relational-databases/extended-events/extended-events.md)  
  [使用查詢存放區的最佳作法](../relational-databases/performance/best-practice-with-the-query-store.md)  

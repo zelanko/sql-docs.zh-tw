@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf9b8222453cea1bdaecad25256819aa7bcb1366
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67909551"
 ---
 # <a name="set-index-options"></a>設定索引選項
@@ -52,20 +52,20 @@ ms.locfileid: "67909551"
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> 開始之前
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前
 
-### <a name="Restrictions"></a> 限制事項
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項
 
 - 透過使用 ALTER INDEX 陳述式的 SET 子句，會在索引立即套用下列選項：ALLOW_PAGE_LOCKS、ALLOW_ROW_LOCKS、OPTIMIZE_FOR_SEQUENTIAL_KEY、IGNORE_DUP_KEY 和 STATISTICS_NORECOMPUTE。
 - 當您使用 ALTER INDEX REBUILD 或 CREATE INDEX WITH DROP_EXISTING 重建索引時，可以設定下列選項：PAD_INDEX、FILLFACTOR、SORT_IN_TEMPDB、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE、ONLINE、ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、MAXDOP 和 DROP_EXISTING (僅限 CREATE INDEX)。
 
-### <a name="Security"></a> Security
+### <a name="security"></a><a name="Security"></a> Security
 
-#### <a name="Permissions"></a> 權限
+#### <a name="permissions"></a><a name="Permissions"></a> 權限
 
 需要資料表或檢視表的 ALTER 權限。
 
-## <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
 
 ### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>在資料表設計工具中修改索引的屬性
 
@@ -89,7 +89,7 @@ ms.locfileid: "67909551"
 7. 變更任何和所有屬性的設定，以自訂索引。
 8. 若要新增、移除或變更索引資料行的位置，請選取 [索引屬性 - _index_name_]  對話方塊中的 [一般]  頁面。 如需相關資訊，請參閱 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)
 
-## <a name="TsqlProcedure"></a> 使用 Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL
 
 ### <a name="to-see-the-properties-of-all-the-indexes-in-a-table"></a>查看資料表中所有索引的屬性
 

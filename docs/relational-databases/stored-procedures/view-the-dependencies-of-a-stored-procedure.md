@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 027373f9ff65d02c6bc2fb49079be3e1eda817bb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68050909"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>檢視預存程序的相依性
@@ -30,13 +30,13 @@ ms.locfileid: "68050909"
   
 -   **若要檢視程序的相依性，請使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  系統函數： **sys.dm_sql_referencing_entities**  
  需要受參考實體的 CONTROL 權限和 sys.dm_sql_referencing_entities 的 SELECT 權限。 當受參考實體為資料分割函數時，便需要資料庫的 CONTROL 權限。 根據預設，SELECT 權限會授與 public。  
   
@@ -46,14 +46,14 @@ ms.locfileid: "68050909"
  物件目錄檢視： **sys.sql_expression_dependencies**  
  需要資料庫的 VIEW DEFINITION 權限和資料庫之 sys.sql_expression_dependencies 的 SELECT 權限。 根據預設，SELECT 權限只授與 db_owner 固定資料庫角色的成員。 當 SELECT 和 VIEW DEFINITION 權限授與其他使用者時，被授與者就可以檢視資料庫中的所有相依性。  
   
-##  <a name="Procedures"></a> 如何檢視預存程序的相依性  
+##  <a name="how-to-view-the-dependencies-of-a-stored-procedure"></a><a name="Procedures"></a> 如何檢視預存程序的相依性  
  您可以使用下列其中一項：  
   
 -   [Transact-SQL](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **在物件總管中檢視程序的相依性**  
   
 1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
@@ -68,7 +68,7 @@ ms.locfileid: "68050909"
   
 6.  按一下 [確定]  。  
   
-###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **在查詢編輯器中檢視程序的相依性**  
   
  系統函數： **sys.dm_sql_referencing_entities**  

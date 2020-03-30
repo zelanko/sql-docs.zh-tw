@@ -21,10 +21,10 @@ ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: be6b0825244dee9f80f88a1b211eee5881d2a96a
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77147371"
 ---
 # <a name="grant-permissions-on-a-native-mode-report-server"></a>在原生模式報表伺服器上授與權限

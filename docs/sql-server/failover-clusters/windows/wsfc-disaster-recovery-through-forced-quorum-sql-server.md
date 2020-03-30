@@ -15,10 +15,10 @@ ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 36eebd77371cf2cede1e36ab68873c080a752128
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74821988"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>透過強制仲裁執行 WSFC 災害復原 (SQL Server)
@@ -33,9 +33,9 @@ ms.locfileid: "74821988"
   
 -   [相關內容](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  強制仲裁程序會假設仲裁失敗之前存在狀況良好的仲裁。  
   
 > [!WARNING]  
@@ -43,10 +43,10 @@ ms.locfileid: "74821988"
 >   
 >  如需詳細資訊，請參閱[SQL Server 的 Windows Server 容錯移轉叢集 (WSFC)](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx)、[WSFC 仲裁模式和投票組態 (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  使用者必須是屬於 WSFC 叢集之每一個節點上本機 Administrators 群組成員的網域帳戶。  
   
-##  <a name="Main"></a> 透過強制仲裁程序執行 WSFC 災害復原  
+##  <a name="wsfc-disaster-recovery-through-the-forced-quorum-procedure"></a><a name="Main"></a> 透過強制仲裁程序執行 WSFC 災害復原  
  請記住，仲裁失敗會導致 WSFC 叢集中的所有叢集服務、SQL Server 執行個體和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]設定為離線，因為依照設定，叢集無法確保節點層級的容錯。  仲裁失敗表示 WSFC 叢集中狀況良好的投票節點無法再滿足仲裁模型。 某些節點可能已經完全失敗，而某些節點可能剛關閉 WSFC 服務且其他方面狀況良好，但是喪失與仲裁通訊的功能。  
   
  若要讓 WSFC 叢集重新上線，您必須在現有的組態下更正仲裁失敗的根本原因、視需要復原受影響的資料庫，而且您可能會想要重新設定 WSFC 叢集中的剩餘節點，以便反映存活叢集拓撲。  
@@ -104,7 +104,7 @@ ms.locfileid: "74821988"
   
 8.  **進行 RPO/RTO 分析。** 您應該分析 SQL Server 系統記錄檔、資料庫時間戳記和 Windows 事件記錄檔，以便判斷失敗的根本原因，並且記載實際的復原點和復原時間經驗。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [在無仲裁情況下強制啟動 WSFC 叢集](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -116,7 +116,7 @@ ms.locfileid: "74821988"
   
 -   [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   [檢視容錯移轉叢集的事件和記錄檔](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   

@@ -13,10 +13,10 @@ ms.assetid: 0d9fce3c-3772-46ce-a7a3-4f4988dc6cae
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f79710c168f87f1156f6bbce780f8fd154ea1dd0
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77013103"
 ---
 # <a name="mssqlserver-error-823"></a>MSSQLSERVER 錯誤 823

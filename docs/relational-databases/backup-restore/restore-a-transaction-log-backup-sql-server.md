@@ -20,10 +20,10 @@ ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 852c7f2c8f9f25903ee575d8e3b85df1d0009b1d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68111183"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>還原交易記錄備份 (SQL Server)
@@ -47,9 +47,9 @@ ms.locfileid: "68111183"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   備份必須依照它們建立的順序還原。 在還原特定交易記錄備份之前，您必須先還原下列先前的備份，而不必回復未認可的交易，即 WITH NORECOVERY：  
   
@@ -59,12 +59,12 @@ ms.locfileid: "68111183"
   
          如需交易記錄備份的詳細資訊，請參閱[交易記錄備份 &#40;SQL Server &#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md) 和[套用交易記錄備份 &#40;SQL Server &#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此；因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 > [!WARNING]  
 >  還原的一般程序是在 [還原資料庫]  對話方塊中選取記錄備份，還有資料與差異備份。  
@@ -191,7 +191,7 @@ ms.locfileid: "68111183"
   
 11. 在 **[待命資料庫檔案]** 文字方塊中指定待命資料庫檔案 (選擇性)。 如果您讓資料庫處於唯讀模式，就需要指定此選項。 您可以瀏覽待命資料庫檔案，或者在文字方塊中輸入其路徑名稱。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 > [!IMPORTANT]  
 >  我們建議您在每一個 RESTORE 陳述式中永遠明確指定 WITH NORECOVERY 或 WITH RECOVERY，以避免模稜兩可。 這在撰寫指令碼時尤其重要。  
@@ -236,7 +236,7 @@ ms.locfileid: "68111183"
     > [!IMPORTANT]  
     >  如果您建立鏡像資料庫，請省略復原步驟。 鏡像資料庫必須保留 RESTORING 狀態。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  根據預設， [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫使用簡單復原模式。 此範例需要修改資料庫以使用完整復原模式，如下所示：  
   
 ```sql  
@@ -289,7 +289,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [備份交易記錄 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   

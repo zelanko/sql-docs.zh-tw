@@ -15,10 +15,10 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a13799d353fcf1e1dff1999009cc2f1e8dcedc76
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294184"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)

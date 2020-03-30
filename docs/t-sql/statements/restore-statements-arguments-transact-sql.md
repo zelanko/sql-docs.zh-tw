@@ -16,10 +16,10 @@ ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a39f9cf72f08e80face176412851778f1afec174
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982455"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 陳述式 - 引數 (Transact-SQL)

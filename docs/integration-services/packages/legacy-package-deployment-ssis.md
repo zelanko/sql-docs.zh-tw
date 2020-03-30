@@ -32,10 +32,10 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287392"
 ---
 # <a name="legacy-package-deployment-ssis"></a>舊版封裝部署 (SSIS)
@@ -427,7 +427,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[完成]**  
  建立組態，並結束 [封裝組態精靈]  。  
 
-## <a name="child"></a> 在子套件中使用變數和參數的值
+## <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a><a name="child"></a> 在子套件中使用變數和參數的值
   此程序描述如何建立使用父變數組態類型的封裝組態。 此組態類型可讓從父封裝執行的子封裝存取父變數。  
   
 > [!NOTE]  

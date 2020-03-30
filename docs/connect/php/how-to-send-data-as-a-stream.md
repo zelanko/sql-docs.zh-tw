@@ -14,10 +14,10 @@ ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d524e7c7f00b08ce636f8a3b7b945f3e8b349af0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936402"
 ---
 # <a name="how-to-send-data-as-a-stream"></a>如何：以資料流形式傳送資料

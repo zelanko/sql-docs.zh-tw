@@ -11,10 +11,10 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba61e7cc35d9cd0a0f63e3e2f89980b12c6904d5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74833584"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 資料檔案
@@ -109,7 +109,7 @@ ON
 - 在 Azure 虛擬機器中執行的 SQL Server：如果您要將 [SQL Server 安裝在 Azure 虛擬機器上](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1)，請安裝 SQL Server 2016，或更新現有的執行個體。 同樣地，您也可以使用 SQL Server 2016 平台映像，在 Azure 中建立新的虛擬機器。
 
   
-###  <a name="bkmk_Limitations"></a> 限制  
+###  <a name="limitations"></a><a name="bkmk_Limitations"></a> 限制  
   
 - 在目前版本的功能中，不支援將 **FileStream** 資料儲存在 Azure 儲存體中。 您可以在同時包含 Azure 儲存體所儲存資料檔案的資料庫中儲存 **FileStream** 資料，但所有的 FileStream 資料檔案都必須儲存在本機儲存體上。  由於 FileStream 資料必須位於本機儲存體上，所以它無法在使用 Azure 儲存體的機器之間移動，因此建議您繼續使用[傳統技術](../../relational-databases/blob/move-a-filestream-enabled-database.md)，在不同電腦之間移動與 FileStream 建立關聯的資料。  
   
@@ -154,7 +154,7 @@ ON
 
 - **sys.master_files** 系統檢視中的新 **int**資料行： **credential_id** 。 **credential_id** 資料行是用來讓 Azure 儲存體資料檔案能夠交互參考 `sys.credentials`，以便取得針對它們建立的認證。 您可以使用其進行疑難排解，例如某個資料庫檔案正在使用認證，導致無法刪除認證時。  
   
-##  <a name="bkmk_Troubleshooting"></a> Microsoft Azure 中的 SQL Server 資料檔案疑難排解  
+##  <a name="troubleshooting-for-sql-server-data-files-in-microsoft-azure"></a><a name="bkmk_Troubleshooting"></a> Microsoft Azure 中的 SQL Server 資料檔案疑難排解  
  為了避免因為功能不支援或有限制而發生錯誤，請先檢閱＜ [Limitations](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md#bkmk_Limitations)＞。  
   
  使用 Azure 儲存體功能中的 SQL Server 資料檔案時，可能會收到的錯誤清單如下。  

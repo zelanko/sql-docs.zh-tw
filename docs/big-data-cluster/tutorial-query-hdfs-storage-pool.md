@@ -11,10 +11,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: cf20e6b02e67655b7347a2a53d1e62501d357f30
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75226475"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>教學課程：查詢 SQL Server 巨量資料叢集中的 HDFS
@@ -36,7 +36,7 @@ ms.locfileid: "75226475"
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Query-HDFS-data-inside-SQL-Server-big-data-cluster/player?WT.mc_id=dataexposed-c9-niner]
 
-## <a id="prereqs"></a> 必要條件
+## <a name="prerequisites"></a><a id="prereqs"></a> 必要條件
 
 - [巨量資料工具](deploy-big-data-tools.md)
    - **kubectl**

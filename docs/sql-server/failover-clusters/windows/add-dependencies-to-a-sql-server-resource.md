@@ -16,10 +16,10 @@ ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e78380d509d2b291c0794cb408909a10622c3f53
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74822068"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>將相依性加入 SQL Server 資源
@@ -30,9 +30,9 @@ ms.locfileid: "74822068"
   
 -   **使用下列項目將相依性新增至 SQL Server 資源：** [Windows 容錯移轉叢集管理員](#WinClusManager)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  如果將任何其他資源新增到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群組，那些資源必須永遠有唯一的 SQL 網路名稱資源以及它們自己的 SQL IP 位址資源，這是很重要的一點。  
   
  請不要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以外的地方，使用現有的 SQL 網路名稱資源與 SQL IP 位址資源。 如果與其他資源共用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源，可能會發生以下問題：  
@@ -55,10 +55,10 @@ ms.locfileid: "74822068"
   
      如果將 MS DTC 安裝在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 群組中，而且您有其他相依於 MS DTC 的資源，當此群組離線或發生容錯移轉時，MS DTC 將無法使用。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您將 MS DTC 放在本身具有實體磁碟資源的群組中 (如果可能)。  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  如果將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝到具有多部磁碟機的 WSFC 資源群組中，並選擇將您的資料放在其中一部磁碟機上，則 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源會被設定為僅相依於該磁碟機。 若要將資料或記錄檔放到其他磁碟，您就必須先對那台磁碟的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源新增相依性。  
   
-##  <a name="WinClusManager"></a> 使用容錯移轉叢集管理員嵌入式管理單元  
+##  <a name="using-the-failover-cluster-manager-snap-in"></a><a name="WinClusManager"></a> 使用容錯移轉叢集管理員嵌入式管理單元  
  **加入 SQL Server 資源的相依性**  
   
 -   開啟 [容錯移轉叢集管理員] 嵌入式管理單元。  

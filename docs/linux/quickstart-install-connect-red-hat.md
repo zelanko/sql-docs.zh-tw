@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.openlocfilehash: 9b953861799e380e4b4221a2cd7fe80badf83ffe
-ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77507532"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>快速入門：在 Red Hat 上安裝 SQL Server 並建立資料庫
@@ -62,7 +62,7 @@ RHEL 7.3、7.4、7.5、7.6 或 8 機器必須**至少有 2 GB** 的記憶體。
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="install"></a>安裝 SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>安裝 SQL Server
 
 若要在 RHEL 上設定 SQL Server，請從終端執行下列命令，安裝 **mssql-server** 套件：
 
@@ -116,7 +116,7 @@ RHEL 7.3、7.4、7.5、7.6 或 8 機器必須**至少有 2 GB** 的記憶體。
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="install"></a>安裝 SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>安裝 SQL Server
 
 > [!NOTE]
 > 下列 SQL Server 2019 命令會指向 RHEL 8 存放庫。 SQL Server 需要使用 python2，但 RHEL 8 未預先安裝。 如需詳細資訊，請參閱下列說明如何安裝 python2 並將其設為預設解譯器的部落格： https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta 。
@@ -166,7 +166,7 @@ RHEL 7.3、7.4、7.5、7.6 或 8 機器必須**至少有 2 GB** 的記憶體。
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="tools"></a>安裝 SQL Server 命令列工具
+## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>安裝 SQL Server 命令列工具
 
 若要建立資料庫，您必須與可在 SQL Server 上執行 Transact-SQL 陳述式的工具連線。 下列步驟會安裝 SQL Server 命令列工具：[sqlcmd](../tools/sqlcmd-utility.md) 和 [bcp](../tools/bcp-utility.md)。
 
@@ -201,7 +201,7 @@ RHEL 7.3、7.4、7.5、7.6 或 8 機器必須**至少有 2 GB** 的記憶體。
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="tools"></a>安裝 SQL Server 命令列工具
+## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>安裝 SQL Server 命令列工具
 
 若要建立資料庫，您必須與可在 SQL Server 上執行 Transact-SQL 陳述式的工具連線。 下列步驟會安裝 SQL Server 命令列工具：[sqlcmd](../tools/sqlcmd-utility.md) 和 [bcp](../tools/bcp-utility.md)。
 

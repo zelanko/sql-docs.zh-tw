@@ -21,17 +21,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0e94bdcf4770190d3d84986b511996213fac17f9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68702836"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜尋靠近另一個單字的字詞
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   您可以在 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 述詞或 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 函式中使用「鄰近字詞」  **NEAR**，以便搜尋彼此接近的單字或片語。 
   
-##  <a name="Custom_NEAR"></a> NEAR 的概觀  
+##  <a name="overview-of-near"></a><a name="Custom_NEAR"></a> NEAR 的概觀  
 **NEAR** 具有下列功能：  
 -   您可以指定分隔第一個和最後一個搜尋詞彙之非搜尋詞彙的數目上限。
 
@@ -129,7 +129,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
  您無法將 NEAR 與衍生詞彙 (ISABOUT ...) 或加權詞彙 (FORMSOF ...) 合併使用。  
   
-##  <a name="Additional_Considerations"></a> 深入了解鄰近搜尋  
+##  <a name="more-info-about-proximity-searches"></a><a name="Additional_Considerations"></a> 深入了解鄰近搜尋  
    
 -   搜尋詞彙的重疊項目  
   

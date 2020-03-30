@@ -13,10 +13,10 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.openlocfilehash: 83337465d8f8a7c12c9a1d69d7e9e2186485f549
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198375"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教學課程：透過 Linux 上的 SQL Server 使用 Active Directory 驗證
@@ -46,11 +46,11 @@ ms.locfileid: "79198375"
   * [SUSE Linux Enterprise Server (SLES)](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-## <a id="join"></a> 將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 主機加入 AD 網域
+## <a name="join-ssnoversion-host-to-ad-domain"></a><a id="join"></a> 將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 主機加入 AD 網域
 
 將 SQL Server Linux 主機加入 Active Directory 網域控制站。 如需如何加入 Active Directory 網域的資訊，請參閱[將 Linux 主機上的 SQL Server 加入 Active Directory 網域](sql-server-linux-active-directory-join-domain.md)。
 
-## <a id="createuser"></a> 建立用於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 AD 使用者並設定 SPN
+## <a name="create-ad-user-or-msa-for-ssnoversion-and-set-spn"></a><a id="createuser"></a> 建立用於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 AD 使用者並設定 SPN
 
 > [!NOTE]
 > 下列步驟會使用您的[完整網域名稱](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果您是在 **Azure** 上，您必須先 **[建立名稱](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** ，然後繼續執行。
@@ -80,14 +80,14 @@ ms.locfileid: "79198375"
 
 如需詳細資訊，請參閱 [註冊 Kerberos 連接的服務主體名稱](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。
 
-## <a id="configurekeytab"></a> 設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務 Keytab
+## <a name="configure-ssnoversion-service-keytab"></a><a id="configurekeytab"></a> 設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務 Keytab
 
 設定 Linux 上的 SQL Server 的 AD 驗證需要 AD 帳戶 (MSA 或 AD 使用者帳戶)，以及在上一節中建立的 SPN。
 
 > [!IMPORTANT]
 > 如果 AD 帳戶的密碼已變更，或受派 SPN 帳戶的密碼已變更，您就必須使用新的密碼和金鑰版本號碼 (KVNO) 來更新 Keytab。 某些服務也可能會自動輪替密碼。 請檢閱前述帳戶的任何密碼輪替原則，並將它們與排程的維護活動配合，以避免產生非預期的停機時間。
 
-### <a id="spn"></a> SPN Keytab 項目
+### <a name="spn-keytab-entries"></a><a id="spn"></a> SPN Keytab 項目
 
 1. 檢查上一個步驟中所建立的 AD 帳戶金鑰版本號碼 (KVNO)。 通常是 2，但如果您多次變更帳戶的密碼，則可能是另一個整數。 在 SQL Server 主機電腦上，請執行下列命令：
 
@@ -164,7 +164,7 @@ ms.locfileid: "79198375"
 
 此時，您已準備好在 SQL Server 中使用 AD 型登入。
 
-## <a id="createsqllogins"></a> 在 Transact-SQL 中建立以 AD 為基礎的登入
+## <a name="create-ad-based-logins-in-transact-sql"></a><a id="createsqllogins"></a> 在 Transact-SQL 中建立以 AD 為基礎的登入
 
 1. 連線到 SQL Server 並建立以 AD 為基礎的新登入：
 
@@ -178,7 +178,7 @@ ms.locfileid: "79198375"
    SELECT name FROM sys.server_principals;
    ```
 
-## <a id="connect"></a> 使用 AD 驗證連線到 SQL Server
+## <a name="connect-to-sql-server-using-ad-authentication"></a><a id="connect"></a> 使用 AD 驗證連線到 SQL Server
 
 使用您的網域認證來登入用戶端電腦。 現在您可以使用 AD 驗證連線到 SQL Server，而不需要重新輸入密碼。 如果您建立 AD 群組的登入，則任何屬於該群組成員的 AD 使用者都可以使用相同方式進行連線。
 
@@ -213,7 +213,7 @@ sqlcmd -S mssql-host.contoso.com
 | **ODBC** | 使用整合式驗證。 |
 | **ADO.NET** | 連接字串語法。 |
 
-## <a id="additionalconfig"></a> 其他設定選項
+## <a name="additional-configuration-options"></a><a id="additionalconfig"></a> 其他設定選項
 
 如果您使用 [PBIS](https://www.beyondtrust.com/)、[VAS](https://www.oneidentity.com/products/authentication-services/) 或 [Centrify](https://www.centrify.com/) 等協力廠商公用程式將 Linux 主機加入AD 網域，且想要強制 SQL Server 直接使用 openldap 程式庫，您可以使用 **mssql-conf** 來設定 **disablesssd** 選項，如下所示：
 

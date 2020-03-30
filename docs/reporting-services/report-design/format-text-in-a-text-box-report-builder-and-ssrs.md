@@ -9,10 +9,10 @@ ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f7448ee783e1e4a747942ef774a9106de09487fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079965"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>格式化文字方塊中的文字 (報表產生器及 SSRS)

@@ -12,10 +12,10 @@ ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
 ms.openlocfilehash: 8d13d6df17cad82076813c5fee93ed794d3439f2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68892578"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>升級 Power Pivot for SharePoint
@@ -58,7 +58,7 @@ ms.locfileid: "68892578"
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 增益集 (**spPowerPivot.msi**) 會與舊版並存安裝。 例如， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 增益集會安裝至資料夾 `c:\Program Files\Microsoft SQL Server\130\Tools\PowerPivotTools`。  
   
-##  <a name="bkmk_prereq"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 必要條件  
  **權限**  
   
 -   您必須是伺服器陣列管理員，才能升級 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝。 您必須是本機系統管理員，才能執行 SQL Server 安裝程式。  
@@ -75,7 +75,7 @@ ms.locfileid: "68892578"
   
 -   如果現有的安裝是執行 SharePoint 2010，請先安裝 SharePoint 2010 Service Pack 2，再升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。 如需詳細資訊，請參閱＜ [Service Pack 2 for Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672)＞。 使用 PowerShell 命令 `(Get-SPfarm).BuildVersion.ToString()` 來驗證版本。 若要將組建版本參照至發行日期，請參閱＜ [SharePoint 2010 組建編號](https://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224)＞。  
   
-##  <a name="bkmk_uprgade_sharepoint2013"></a> 升級現有的 SharePoint 2013 伺服器陣列  
+##  <a name="upgrade-an-existing-sharepoint-2013-farm"></a><a name="bkmk_uprgade_sharepoint2013"></a> 升級現有的 SharePoint 2013 伺服器陣列  
  若要將部署在 SharePoint 2013 中的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 升級，請執行下列動作：  
   
  ![PowerPivot for SharePoint 2013 升級](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "PowerPivot for SharePoint 2013 升級")  
@@ -139,7 +139,7 @@ ms.locfileid: "68892578"
   
 5.  透過執行升級後步驟以及檢查伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器版本，來確認升級成功。 如需詳細資訊，請參閱本文的[升級後的驗證工作](#verify)和下列章節：  
   
-##  <a name="bkmk_uprgade_sharepoint2010"></a> 升級現有的 SharePoint 2010 伺服器陣列  
+##  <a name="upgrade-an-existing-sharepoint-2010-farm"></a><a name="bkmk_uprgade_sharepoint2010"></a> 升級現有的 SharePoint 2010 伺服器陣列  
  若要將部署在 SharePoint 2010 中的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 升級，請執行下列動作：  
   
  ![PowerPivot for SharePoint 2010 升級](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "PowerPivot for SharePoint 2010 升級")  
@@ -231,13 +231,13 @@ ms.locfileid: "68892578"
   
      至於其他所有錯誤，請檢查 ULS 記錄檔。 如需詳細資訊，請參閱[設定及檢視 SharePoint 記錄檔與診斷記錄 &#40;Power Pivot for SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging)。  
   
-##  <a name="bkmk_workbooks"></a> 活頁簿  
+##  <a name="workbooks"></a><a name="bkmk_workbooks"></a> 活頁簿  
  升級伺服器不一定會升級伺服器上執行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿，但是使用舊版 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 建立的舊活頁簿仍可如常運作，並使用該版本提供的功能。 活頁簿可以維持運作，是由於已升級的伺服器具有屬於舊版安裝的 Analysis Services OLE DB 提供者版本所致。  
   
-##  <a name="bkmk_datarefresh"></a> 資料重新整理  
+##  <a name="data-refresh"></a><a name="bkmk_datarefresh"></a> 資料重新整理  
  升級會影響資料重新整理作業。 伺服器的排程資料重新整理僅適用於符合伺服器版本的活頁簿。 如果您裝載舊版的活頁簿，資料重新整理可能不再適用於這些活頁簿。 若要重新啟用資料重新整理，您必須升級活頁簿。 您可以在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 中手動升級每個活頁簿，或是針對 SharePoint 2010 中的資料重新整理功能啟用自動升級。 自動升級會在執行資料重新整理之前將活頁簿升級為最新版本，讓資料重新整理作業依排程執行。  
   
-##  <a name="bkmk_verify_versions"></a> 驗證 Power Pivot 元件和服務的版本  
+##  <a name="verify-the-versions-of-power-pivot-components-and-services"></a><a name="bkmk_verify_versions"></a> 驗證 Power Pivot 元件和服務的版本  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務和 Analysis Services 的所有執行個體必須是相同版本。 若要確認所有伺服器元件都是相同的版本，請檢查以下版本資訊：  
   
 ### <a name="verify-the-version-of-power-pivot-solutions-and-the-power-pivot-system-service"></a>驗證 Power Pivot 方案和 Power Pivot 系統服務的版本  
@@ -312,14 +312,14 @@ Get-PowerPivotSystemService
   
 3.  確認您有 13.0.\<組建編號> 版。  
   
-##  <a name="geminifarm"></a> 在 SharePoint 伺服器陣列中升級多部 Power Pivot for SharePoint 伺服器  
+##  <a name="upgrading-multiple-power-pivot-for-sharepoint-servers-in-a-sharepoint-farm"></a><a name="geminifarm"></a> 在 SharePoint 伺服器陣列中升級多部 Power Pivot for SharePoint 伺服器  
  在包含多部 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 伺服器的多重伺服器拓撲中，所有伺服器執行個體和元件都必須是相同版本。 執行最新軟體版本的伺服器會設定伺服陣列中所有伺服器的層級。 如果您只要升級部分伺服器，執行較舊版軟體的伺服器在升級之前將變成無法使用。  
   
  升級第一部伺服器之後，尚未升級的其他伺服器 **將會變成無法使用**。 在所有伺服器執行相同層級之後，即可恢復使用。  
   
  SQL Server 安裝程式會就地升級實體電腦上的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案檔，但若要升級伺服器陣列使用的方案，則必須使用本文上一節所述的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 設定工具。  
   
-##  <a name="qfe"></a> 將 QFE 套用至伺服器陣列中的 Power Pivot 執行個體  
+##  <a name="applying-a-qfe-to-a-power-pivot-instance-in-the-farm"></a><a name="qfe"></a> 將 QFE 套用至伺服器陣列中的 Power Pivot 執行個體  
  修補 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 伺服器，會將現有的程式檔案更新成包含特定問題修正的較新版本。 將 QFE 套用至多重伺服器拓撲時，沒有您必須先開始的主要伺服器。 只要您將相同的 QFE 套用至伺服器陣列中的其他 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器，就可以從任何伺服器開始。  
   
  套用 QFE 時，您也必須在伺服器陣列組態資料庫中執行更新伺服器版本資訊的組態設定。 已修補之伺服器的版本會變成預期的伺服陣列新版本。 在所有電腦上套用並設定 QFE 之前，沒有 QFE 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 執行個體將無法用於處理 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的要求。  
@@ -343,7 +343,7 @@ Get-PowerPivotSystemService
   
  若要檢查伺服器陣列中服務的版本資訊，請在管理中心中的 [升級與修補管理] 區段中，使用 **[檢查產品與修補程式安裝狀態]** 頁面。  
   
-##  <a name="verify"></a> 升級後的驗證工作  
+##  <a name="post-upgrade-verification-tasks"></a><a name="verify"></a> 升級後的驗證工作  
  升級完成後，使用下列步驟來驗證伺服器正常運作。  
   
 |Task|連結|  

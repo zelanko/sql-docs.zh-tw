@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 9dc0d760bd7fd6a89d9829fa5e883ef1ad9b59b7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76934195"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>從安裝精靈安裝 SQL Server 2016 (安裝程式)
@@ -50,7 +50,7 @@ ms.locfileid: "76934195"
 
 ::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
-###  <a name="bkmk_ga_instalpatch"></a> 安裝修補程式需求
+###  <a name="install-patch-requirement"></a><a name="bkmk_ga_instalpatch"></a> 安裝修補程式需求
 
 Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，SQL Server 2016 和 2017 必須安裝這些二進位檔。 已提供修正此問題的更新。 如未安裝這項 Visual C++ Runtime 二進位檔的更新，SQL Server 就可能在特定情況下遇到穩定性問題。 安裝 SQL Server 之前，請先遵循 [SQL Server 版本資訊](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)的指示，查看您的電腦是否需要 Visual C++ Runtime 二進位檔的修補程式。 
 

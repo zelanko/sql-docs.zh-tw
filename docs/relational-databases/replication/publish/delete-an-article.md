@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: d03b0e8d21414101940e4eb653e8f9a7fa3d2d30
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287660"
 ---
 # <a name="delete-an-article"></a>刪除發行項
@@ -39,7 +39,7 @@ ms.locfileid: "76287660"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用複寫預存程序來以程式設計的方式刪除發行項。 使用哪些預存程序要依發行項所屬的發行集類型而定。  
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>從快照式或交易式發行集中刪除發行項  
@@ -54,7 +54,7 @@ ms.locfileid: "76287660"
   
 2.  (選擇性) 若要從資料庫完全移除發行的物件，請在發行集資料庫的發行者上執行 `DROP <objectname>` 命令。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  下列範例會刪除交易式發行集中的發行項。 由於這項變更會讓現有的快照集失效，所以請為 **\@force_invalidate_snapshot** 參數指定 **1** 值。  
   
 ```  
@@ -95,7 +95,7 @@ EXEC sp_dropmergearticle
 GO  
 ```  
   
-##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
  您可以使用 Replication Management Objects (RMO) 以程式設計的方式刪除發行項。 用於刪除發行項的 RMO 類別，將取決於發行項所屬的發行集類型而定。  
   
 #### <a name="to-delete-an-article-that-belongs-to-a-snapshot-or-transactional-publication"></a>刪除屬於快照式或交易式發行集的發行項  

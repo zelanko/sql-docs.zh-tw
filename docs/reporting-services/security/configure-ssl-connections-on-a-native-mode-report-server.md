@@ -11,10 +11,10 @@ ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b90383fb387f8593db7aa4ee4760181a7322a475
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028923"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>在原生模式報表伺服器上設定 SSL 連線

@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b389f8ba8e99678f98ef4eb22d3fe51d8b04bee3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75325415"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教學課程：使用 Transact-SQL 將資料內嵌到 SQL Server 資料集區
@@ -32,7 +32,7 @@ ms.locfileid: "75325415"
 > [!TIP]
 > 如果您想要的話，也可以下載並執行用於本教學課程中命令的指令碼。 如需指示，請參閱 GitHub 上的[資料集區範例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)。
 
-## <a id="prereqs"></a> 必要條件
+## <a name="prerequisites"></a><a id="prereqs"></a> 必要條件
 
 - [巨量資料工具](deploy-big-data-tools.md)
    - **kubectl**

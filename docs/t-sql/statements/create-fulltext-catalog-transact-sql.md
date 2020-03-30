@@ -70,7 +70,7 @@ CREATE FULLTEXT CATALOG catalog_name
  ON FILEGROUP *filegroup*  
  從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，這個子句不會有任何作用。  
   
- IN PATH **'**_rootpath_**'**  
+ IN PATH **'** _rootpath_ **'**  
  > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -79,7 +79,7 @@ CREATE FULLTEXT CATALOG catalog_name
  ACCENT_SENSITIVITY = {ON|OFF}  
  指定全文檢索索引的目錄是否區分腔調字。 當這個屬性有了改變時，您必須重建索引。 預設值是使用資料庫定序所指定的區分腔調字屬性。 若要顯示資料庫定序，請使用 **sys.databases** 目錄檢視。  
   
- 若要判斷全文檢索目錄目前的區分重音字屬性設定，請針對 **catalog_name**，搭配 *accentsensitivity* 屬性值來使用 FULLTEXTCATALOGPROPERTY 函數。 如果傳回的值是 '1'，全文檢索目錄就會區分腔調字；如果傳回的值是 '0'，目錄就不會區分腔調字。  
+ 若要判斷全文檢索目錄目前的區分重音字屬性設定，請針對 *catalog_name*，搭配 **accentsensitivity** 屬性值來使用 FULLTEXTCATALOGPROPERTY 函數。 如果傳回的值是 '1'，全文檢索目錄就會區分腔調字；如果傳回的值是 '0'，目錄就不會區分腔調字。  
   
  AS DEFAULT  
  指定這個全文檢索目錄是預設目錄。 當建立全文檢索索引，卻沒有明確指定全文檢索目錄時，便使用預設目錄。 如果現有的全文檢索目錄已標示了 AS DEFAULT，將這個新目錄設成 AS DEFAULT，會使這個目錄成為預設的全文檢索目錄。  

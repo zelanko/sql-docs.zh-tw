@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 136665cbe354ce0fdbbc575d2e97759f35cb3444
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286222"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 巨量資料叢集版本資訊
@@ -68,7 +68,7 @@ ms.locfileid: "79286222"
 
 若要安裝更新，請參閱[如何升級 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md)。
 
-## <a id="cu3"></a> CU3 (2020 年 3 月)
+## <a name="cu3-mar-2020"></a><a id="cu3"></a> CU3 (2020 年 3 月)
 
 SQL Server 2019 的累積更新 3 (CU3) 版本。 此版本的 SQL Server 資料庫引擎版本為 15.0.4023.6。
 
@@ -83,7 +83,7 @@ SQL Server 2019 CU3 解決先前版本的下列問題。
 - [使用私人存放庫進行部署](#deployment-with-private-repository)
 - [升級可能會因為逾時而失敗](#upgrade-may-fail-due-to-timeout)
 
-## <a id="cu2"></a> CU2 (2020 年 2 月)
+## <a name="cu2-feb-2020"></a><a id="cu2"></a> CU2 (2020 年 2 月)
 
 SQL Server 2019 的累積更新 2 (CU2) 版本。 此版本的 SQL Server 資料庫引擎版本為 15.0.4013.40。
 
@@ -91,7 +91,7 @@ SQL Server 2019 的累積更新 2 (CU2) 版本。 此版本的 SQL Server 資料
 |-----|-----|
 |15.0.4013.40 |[2019-CU2-ubuntu-16.04]
 
-## <a id="cu1"></a> CU1 (2020 年 1 月)
+## <a name="cu1-jan-2020"></a><a id="cu1"></a> CU1 (2020 年 1 月)
 
 SQL Server 2019 的累積更新 1 (CU1) 版。 此版本的 SQL Server 資料庫引擎版本為 15.0.4003.23。
 
@@ -99,7 +99,7 @@ SQL Server 2019 的累積更新 1 (CU1) 版。 此版本的 SQL Server 資料庫
 |-----|-----|
 |15.0.4003.23|[2019-CU1-ubuntu-16.04]
 
-## <a id="rtm"></a> GDR1 (2019 年 11 月)
+## <a name="gdr1-nov-2019"></a><a id="rtm"></a> GDR1 (2019 年 11 月)
 
 SQL Server 2019 一般發行版本 1 (GDR1) - 引進 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)] 的公開推出。 此版本的 SQL Server 資料庫引擎版本為 15.0.2070.34。
 

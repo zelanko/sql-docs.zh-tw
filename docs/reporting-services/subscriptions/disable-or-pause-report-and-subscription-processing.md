@@ -20,16 +20,16 @@ ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 228cb40e1c0f40d9525ca83129878d30b722b910
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68893418"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>停用或暫停報表與訂閱處理  
 有好幾種方法，您可以用來停用或暫停 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表和訂閱處理。 此文章中的方式包括停用訂用帳戶以中斷資料來源連線。 並非所有的方法都可以使用這兩種 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器模式。 下表摘要說明這些方法和支援的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器模式：  
   
-##  <a name="bkmk_top"></a> 本文內容  
+##  <a name="in-this-article"></a><a name="bkmk_top"></a> 本文內容  
   
 ||支援的伺服器模式|  
 |-|---------------------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "68893418"
 |[移除角色的管理訂閱權限 (原生模式)](#bkmk_remove_manage_subscriptions_permission)|原生模式|  
 |[停用傳遞延伸模組](#bkmk_disable_extensions)|原生和 SharePoint 模式|  
   
-##  <a name="bkmk_disable_subscription"></a> 啟用和停用訂用帳戶  
+##  <a name="enable-and-disable-subscriptions"></a><a name="bkmk_disable_subscription"></a> 啟用和停用訂用帳戶  
   
 >[!TIP]  
 >SQL 2016 Reporting Services 的新功能，「啟用和停用訂用帳戶」  。 新的使用者介面選項可讓您快速啟用及停用訂用帳戶。 停用的訂閱會維持其中的其他組態屬性，例如排程，並且可以輕鬆重新啟用。 您也能以程式設計方式啟用及停用訂用帳戶或稽核哪些訂用帳戶已停用。  
@@ -117,14 +117,14 @@ ForEach ($subscription in $subscriptions)
 }  
 ```  
   
-##  <a name="bkmk_pause_schedule"></a> 暫停共用排程  
+##  <a name="pause-a-shared-schedule"></a><a name="bkmk_pause_schedule"></a> 暫停共用排程  
  如果報表或訂閱從共用排程執行，您可以暫停排程來禁止處理。 由排程驅動的所有報表與訂閱處理，會被延遲至排程繼續為止。  
   
 -   **SharePoint 模式：** ![SharePoint 設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")：在 [網站設定]  中，選取 [管理共用排程]  。 選取排程，然後按一下 [暫停選取的排程]  。  
   
 -   **原生模式：** 在入口網站中，從入口網站畫面頂端的功能表列中，選取 [設定]  按鈕 ![[設定] 按鈕](media/ssrs-portal-settings-gear.png)，然後從下拉式功能表中選取 [網站設定]  。 選取 [排程]  索引標籤，以顯示 [排程] 頁面。 選取您想要啟用或停用的排程旁核取方塊，然後分別選取 [啟用]  或 [停用]  按鈕來執行所需的動作。 [狀態] 欄會據此更新為「已停用」或「已啟用」。  
   
-##  <a name="bkmk_disable_shared_datasource"></a> 停用共用資料來源  
+##  <a name="disable-a-shared-data-source"></a><a name="bkmk_disable_shared_datasource"></a> 停用共用資料來源  
  使用共用資料來源的優點之一是您可以停用它，禁止執行報表或資料驅動訂閱。 停用共用資料來源會中斷報表與其外部來源的連接。 停用時，資料來源無法供所有使用它的報表與訂閱使用。  
   
  請注意，即使資料來源無法使用，報表仍然會載入。 報表不包含資料，但具備適當權限的使用者可以存取與報表相關聯的屬性頁面、安全性設定、報表記錄，以及訂閱資訊。  
@@ -133,12 +133,12 @@ ForEach ($subscription in $subscriptions)
   
 -   **原生模式：** 若要停用原生模式報表伺服器上的共用資料來源，請在入口網站中開啟資料來源，並清除 [啟用此資料來源]  核取方塊。  
   
-##  <a name="bkmk_modify_role_assignment"></a> 修改角色指派來禁止存取報表 (原生模式)  
+##  <a name="modify-role-assignments-to-prevent-access-to-a-report-native-mode"></a><a name="bkmk_modify_role_assignment"></a> 修改角色指派來禁止存取報表 (原生模式)  
 讓報表無法使用的一個方法，是暫時移除可以提供存取報表的角色指派。 無論建立資料來源連接的方式為何，此方法可以用於所有報表。 此方法僅會以報表為目標，不會影響其他報表或項目的作業。  
   
  若要移除角色指派，請在入口網站中，開啟報表的 [安全性]  頁面。 如果報表從父系繼承安全性，您可以選取 [自訂安全性]  並選取 [項目安全性]  對話方塊中的 [確認]  來建立嚴格的安全性原則，省略提供普遍存取權的角色指派 (例如，您可以移除提供 Everyone 存取權的角色指派，保留提供一小組使用者存取權的角色指派，例如系統管理員)。  
   
-##  <a name="bkmk_remove_manage_subscriptions_permission"></a> 移除角色的管理訂閱權限 (原生模式)  
+##  <a name="remove-manage-subscription-permissions-from-role-native-mode"></a><a name="bkmk_remove_manage_subscriptions_permission"></a> 移除角色的管理訂閱權限 (原生模式)  
  若要讓使用者無法建立訂閱，請從角色中清除「管理個別訂閱」  工作。 當您移除這個工作後，[訂閱] 頁面就無法使用。 在入口網站中，即使 [我的訂閱] 頁面原先含有訂閱，此時也會顯示空白 (無法刪除這個頁面)。 移除訂閱相關的工作會讓使用者無法建立與修改訂閱，但是不會刪除現有的訂閱。 現有的訂閱會繼續執行，直到刪除為止。 若要移除權限：  
   
 1.  開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 
@@ -156,7 +156,7 @@ ForEach ($subscription in $subscriptions)
 7.  選取 [確定]  以套用變更。
 
   
-##  <a name="bkmk_disable_extensions"></a> 停用傳遞延伸模組  
+##  <a name="disable-delivery-extensions"></a><a name="bkmk_disable_extensions"></a> 停用傳遞延伸模組  
  在報表伺服器上安裝的所有傳遞延伸模組都會提供給有權建立給定報表之訂閱的任何使用者。 系統會自動提供和設定下列傳遞延伸模組：  
   
 -   Windows 檔案共用  

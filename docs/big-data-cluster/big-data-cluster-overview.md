@@ -9,12 +9,11 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-feedback_product_url: https://feedback.azure.com/forums/927307-sql-server-big-data-clusters/
-ms.openlocfilehash: 69281b0708b2603f232481a5661da111d1b0aae9
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77903763"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
@@ -78,7 +77,7 @@ SQL Server 巨量資料叢集包含可調整的 HDFS「存放集區」  。 這�
 - 能夠建立、開啟並執行與 Jupyter 相容的筆記本。
 - 資料虛擬化精靈可簡化外部資料來源的建立流程 (由**資料虛擬化延伸模組**啟用)。
 
-## <a id="architecture"></a> 架構
+## <a name="architecture"></a><a id="architecture"></a> 架構
 
 SQL Server 巨量資料叢集是由 [Kubernetes](https://kubernetes.io/docs/concepts/) 協調的 Linux 容器叢集。
 
@@ -101,15 +100,15 @@ Kubernetes 是開放原始碼容器協調器，可根據需求調整容器部署
 
 ![架構概觀](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
-### <a id="controlplane"></a> 控制器
+### <a name="controller"></a><a id="controlplane"></a> 控制器
 
 控制器會提供叢集的管理和安全性。 其中包含控制項服務、設定存放區，以及其他叢集層級的服務 (例如 Kibana、Grafana 和彈性搜尋)。
 
-### <a id="computeplane"></a> 計算集區
+### <a name="compute-pool"></a><a id="computeplane"></a> 計算集區
 
 計算集區會將計算資源提供給叢集。 其中包含在 Linux Pod 上執行 SQL Server 的節點。 計算集區中的 Pod 會分割成 *SQL 計算執行個體*，以進行特定的處理工作。 
 
-### <a id="dataplane"></a> 資料集區
+### <a name="data-pool"></a><a id="dataplane"></a> 資料集區
 
 資料集區用於資料持續性和快取。 資料集區由在 Linux 上執行 SQL Server 的一或多個 Pod 所組成。 用於從 SQL 查詢或 Spark 作業中內嵌資料。 SQL Server 巨量資料叢集資料超市會保存在資料集區中。 
 

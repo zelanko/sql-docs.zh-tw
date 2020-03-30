@@ -17,10 +17,10 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3a6a21cf82a7b94d5526e4492d69bc5f1578b716
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77478452"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組概觀 (SQL Server)
@@ -55,7 +55,7 @@ ms.locfileid: "77478452"
   
  ![具有五個複本的可用性群組](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "具有五個複本的可用性群組")  
   
-##  <a name="AvDbs"></a> Availability Databases  
+##  <a name="availability-databases"></a><a name="AvDbs"></a> Availability Databases  
  若要將資料庫加入可用性群組，該資料庫必須是存在於裝載主要複本之伺服器執行個體的線上讀寫資料庫。 當您加入資料庫時，該資料庫會加入可用性群組做為主要資料庫，同時仍然可以供用戶端使用。 在新主要資料庫的備份還原到裝載次要複本的伺服器執行個體 (使用 RESTORE WITH NORECOVERY) 之前，不會存在任何對應的次要資料庫。 新的次要資料庫在加入可用性群組之前，處於 RESTORING 狀態。 如需詳細資訊，請參閱 [於 AlwaysOn 次要資料庫啟動資料移動 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
  加入時，會將次要資料庫置於 ONLINE 狀態，並起始對應主要資料庫的資料同步處理。 *「資料同步處理」* (Data Synchronization) 是將主要資料庫的變更重現在次要資料庫上的程序。 資料同步處理涉及主要資料庫將交易記錄檔記錄傳送到次要資料庫。  
@@ -63,7 +63,7 @@ ms.locfileid: "77478452"
 > [!IMPORTANT]  
 >  可用性資料庫有時候在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、PowerShell 和 SQL Server 管理物件 (SMO) 名稱中會稱為「資料庫複本」  。 例如，在 AlwaysOn 動態管理檢視名稱中就使用了「資料庫複本」一詞，這個檢視會傳回可用性資料庫的相關資訊：**sys.dm_hadr_database_replica_states** 和 **sys.dm_hadr_database_replica_cluster_states**。 但在《SQL Server 線上叢書》中，「複本」一詞通常是指可用性複本。 例如「主要複本」與「次要複本」一律指可用性複本。  
   
-##  <a name="AGsARsADBs"></a> 可用性複本  
+##  <a name="availability-replicas"></a><a name="AGsARsADBs"></a> 可用性複本  
  每個可用性群組都會定義一組兩個或多個容錯移轉夥伴，稱為可用性複本。 *「可用性複本」* (Availability Replica) 是可用性群組的元件。 每個可用性複本都會在可用性群組中裝載一個可用性資料庫的副本。 對於給定的可用性群組而言，可用性複本必須由位於某個 WSFC 叢集中不同節點上的個別 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所裝載。 這些伺服器執行個體每一個都必須啟用 AlwaysOn。  
   
  給定的執行個體只能裝載每個可用性群組的一個可用性複本。 但是，每一個執行個體都可以用於多個可用性群組。 給定的執行個體可以是獨立執行個體或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI)。 如果您需要伺服器層級的備援性，請使用容錯移轉叢集執行個體。  
@@ -73,7 +73,7 @@ ms.locfileid: "77478452"
 > [!NOTE]  
 >  當可用性複本的角色未定 (例如在容錯移轉期間) 時，其資料庫會暫時處於 NOT SYNCHRONIZING 狀態。 在可用性複本的角色解析之前，會將其角色設為 RESOLVING。 如果可用性複本解析為主要角色，其資料庫會變成主要資料庫。 如果可用性複本解析為次要角色，其資料庫會變成次要資料庫。  
   
-##  <a name="AvailabilityModes"></a> 可用性模式  
+##  <a name="availability-modes"></a><a name="AvailabilityModes"></a> 可用性模式  
  可用性模式是每個可用性複本的屬性。 可用性模式會決定在給定次要複本將交易記錄寫入至磁碟 (儲存記錄) 之前，主要複本是否等待認可資料庫上的交易。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]支援兩個可用性模式：「非同步認可模式」  和「同步認可模式」  。  
   
 -   **非同步認可模式**  
@@ -86,7 +86,7 @@ ms.locfileid: "77478452"
   
  如需詳細資訊，請參閱 [可用性模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。  
   
-##  <a name="FormsOfFailover"></a> 容錯移轉的類型  
+##  <a name="types-of-failover"></a><a name="FormsOfFailover"></a> 容錯移轉的類型  
  在主要複本與次要複本之間的工作階段內容中，主要和次要角色在程序中可能可以互換，稱為 *「容錯移轉」* (Failover)。 在容錯移轉期間，目標次要複本會轉換到主要角色，變成新的主要複本。 新的主要複本會將其資料庫變成線上狀態做為主要資料庫，而且用戶端應用程式可以連接至這些資料庫。 當先前的主要複本可以使用時，會轉換到次要角色，變成次要複本。 先前的主要資料庫就會變成次要資料庫，而且資料同步處理會繼續。  
   
  容錯移轉的形式共有三種：自動、手動和強制 (有遺失資料的可能)。 給定次要複本支援的容錯移轉形式取決於其可用性模式，而且針對同步認可模式，則取決於主要複本和目標次要複本上的容錯移轉模式，如下所示。  
@@ -111,7 +111,7 @@ ms.locfileid: "77478452"
   
  如需詳細資訊，請參閱本主題稍後的 [容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)。  
   
-##  <a name="ClientConnections"></a> 用戶端連接  
+##  <a name="client-connections"></a><a name="ClientConnections"></a> 用戶端連接  
  您可以建立可用性群組接聽程式，以便將用戶端連接提供給給定可用性群組的主要複本。 *「可用性群組接聽程式」* (Availability Group Listener) 會將連接至給定可用性群組的一組資源提供給適當可用性複本的直接用戶端連接。  
   
  可用性群組接聽程式與當做虛擬網路名稱 (VNN)、一個或多個虛擬 IP 位址 (VIP)，以及 TCP 通訊埠編號的唯一 DNS 名稱相關聯。 如需詳細資訊，請參閱[可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。  
@@ -119,7 +119,7 @@ ms.locfileid: "77478452"
 > [!TIP]  
 >  如果可用性群組只有兩個可用性複本，而且未設定為允許以唯讀方式存取次要複本，則用戶端可以使用 [資料庫鏡像連接字串](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)連接到主要複本。 在您將資料庫從資料庫鏡像移轉到 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]之後，這個方法可能暫時很實用。 在您加入其他次要複本之前，您需要為可用性群組建立可用性群組接聽程式，並更新您的應用程式使用此接聽程式的網路名稱。  
   
-##  <a name="ActiveSecondaries"></a> 使用中次要複本  
+##  <a name="active-secondary-replicas"></a><a name="ActiveSecondaries"></a> 使用中次要複本  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支援使用中次要複本。 使用中次要複本功能提供下列支援：  
   
 -   **對次要複本執行備份作業**  
@@ -132,7 +132,7 @@ ms.locfileid: "77478452"
   
      若可用性群組目前擁有可用性群組接聽程式及一或多個可讀取的次要複本，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會將讀取意圖的連接要求路由至其中一個複本 (「唯讀路由」  )。 如需詳細資訊，請參閱[可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。  
   
-##  <a name="SessionTimeoutPerios"></a> 工作階段逾時期限  
+##  <a name="session-timeout-period"></a><a name="SessionTimeoutPerios"></a> 工作階段逾時期限  
  工作階段逾時期限是可用性複本屬性，它決定在連接關閉之前，與另一個可用性複本的連接保持非使用中的時間。 主要與次要複本會彼此 Ping，表示它們仍在使用中。 在逾時期限內從另一個複本接收到 Ping，表示連接仍為開啟狀態，且伺服器執行個體正在進行通訊。 接收到 Ping 時，可用性複本會重設它在該連接上的工作階段逾時計數器。  
   
  工作階段逾時期限防止複本無限期地等候從另一個複本接收 Ping。 如果在工作階段逾時期限內未收到另一個複本的 Ping，則複本會逾時。它的連接會關閉，而逾時的複本則進入 DISCONNECTED 狀態。 即使中斷連接的複本設定成同步認可模式，交易仍不會等候該複本重新連接及重新同步處理。  
@@ -142,16 +142,16 @@ ms.locfileid: "77478452"
 > [!NOTE]  
 >  在解析角色中，工作階段逾時期限不適用，因為不會發生 Ping。  
   
-##  <a name="APR"></a> 自動修復頁面  
+##  <a name="automatic-page-repair"></a><a name="APR"></a> 自動修復頁面  
  每個可用性複本都會嘗試解決阻止讀取資料頁面的特定類型錯誤，以便從本機資料庫上的損毀頁面自動復原。 如果次要複本無法讀取某個頁面，此複本會向主要複本要求一個全新頁面副本。 如果主要複本無法讀取某個頁面，此複本會向所有次要複本廣播全新副本的要求，並先取得頁面以回應。 如果這個要求成功，無法讀取的頁面就會使用副本取代，這通常會解決錯誤。  
   
  如需詳細資訊，請參閱[自動修復頁面 &#40;可用性群組：資料庫鏡像&#41;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [開始使用 AlwaysOn 可用性群組 &#40;SQL Server &#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   **部落格：**  
   

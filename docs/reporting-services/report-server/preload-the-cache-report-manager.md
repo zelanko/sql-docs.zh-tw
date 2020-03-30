@@ -12,10 +12,10 @@ ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6b2be1e020354f47aa21dc83f17ff6169bcf2d72
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66174999"
 ---
 # <a name="preload-the-cache"></a>預先載入快取  

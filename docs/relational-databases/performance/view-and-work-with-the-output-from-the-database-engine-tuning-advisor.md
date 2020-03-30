@@ -27,10 +27,10 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 26ed3efa0738579d9abfde909f161105d95f91a8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165478"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>檢視及處理 Database Engine Tuning Advisor (DTA) 的輸出
@@ -39,7 +39,7 @@ ms.locfileid: "74165478"
 
   Database Engine Tuning Advisor 微調資料庫時，會建立摘要、建議、報表和微調記錄。 您可以使用微調記錄輸出針對 Database Engine Tuning Advisor 的微調工作階段進行疑難排解。 您可以使用摘要、建議和報表來判定是要實作微調建議或繼續微調，直到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的查詢效能改進達到所需的程度為止。 如需有關如何使用 Database Engine Tuning Advisor 來建立工作負載及微調資料庫的詳細資訊，請參閱＜ [啟動及使用 Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)＞。  
   
-##  <a name="View"></a> 檢視微調輸出  
+##  <a name="view-tuning-output"></a><a name="View"></a> 檢視微調輸出  
  下列程序描述如何使用 Database Engine Tuning Advisor GUI 來檢視微調建議、摘要、報表和微調記錄。 如需有關使用者介面選項的詳細資訊，請參閱本主題稍後的＜ [使用者介面描述](#UI) ＞。  
   
  您也可以使用 GUI 來檢視由 **dta** 命令列公用程式產生的微調輸出。  
@@ -85,7 +85,7 @@ ms.locfileid: "74165478"
   
      如果 Database Engine Tuning Advisor 已經分析過微調工作階段中的所有事件，則會顯示訊息指出該工作階段的微調記錄是空的。 若當初執行微調工作階段時並未勾選 **[一般]** 索引標籤上的 **[儲存微調記錄]** ，系統會顯示訊息指出此問題。  
   
-##  <a name="Implement"></a> 實作微調建議  
+##  <a name="implement-tuning-recommendations"></a><a name="Implement"></a> 實作微調建議  
  您可以手動實作 Database Engine Tuning Advisor 建議，或是作為微調工作階段的一部份自動實作。 如果實作前想要先檢查微調結果，請使用 Database Engine Tuning Advisor GUI。 然後您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來手動執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼，這些指令碼是 Database Engine Tuning Advisor 分析實作建議的工作負載而產生。 如果在實作前不需要檢查結果，可將 **-a** 選項與 **dta** 命令提示字元公用程式一起使用。 這會導致公用程式在分析工作負載後自動執行微調建議。 下列程序解釋如何使用兩種 Database Engine Tuning Advisor 介面，實作微調建議。  
   
 #### <a name="to-manually-implement-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>若要使用 Database Engine Tuning Advisor GUI 手動實作微調建議  
@@ -120,7 +120,7 @@ ms.locfileid: "74165478"
   
 3.  按 ENTER 鍵。  
   
-##  <a name="Analysis"></a> 執行探勘分析  
+##  <a name="perform-exploratory-analysis"></a><a name="Analysis"></a> 執行探勘分析  
  Database Engine Tuning Advisor 有一項由使用者指定的組態功能，可讓資料庫管理員執行探勘分析。 資料庫管理員可以使用此功能，將所需的實體資料庫設計指定給 Database Engine Tuning Advisor，並可在不實作的情況下，評估該設計的效能。 Database Engine Tuning Advisor 圖形使用者介面 (GUI) 及命令列公用程式皆可支援使用者指定的組態。 不過，命令列公用程式提供的彈性最大。  
   
  若您使用 Database Engine Tuning Advisor GUI，您可以評估實作 Database Engine Tuning Advisor 微調建議子集的效果，但您不能加入假設性的實體設計結構來供 Database Engine Tuning Advisor 評估。  
@@ -184,7 +184,7 @@ ms.locfileid: "74165478"
   
 7.  重複步驟 6 及 7，直到您建立的假設組態可產生出您所需的查詢效能改善。 然後您就可以實作這個新的組態。 如需詳細資訊，請參閱本主題前面的＜ [實作微調建議](#Implement) ＞。  
   
-##  <a name="ReviewEvaluateClone"></a> 檢閱、評估及複製微調工作階段  
+##  <a name="review-evaluate-and-clone-tuning-sessions"></a><a name="ReviewEvaluateClone"></a> 檢閱、評估及複製微調工作階段  
  每次當您開始分析一或多個資料庫上的工作負載影響時，Database Engine Tuning Advisor 都會建立新的微調工作階段。 您可以使用 Database Engine Tuning Advisor GUI 的 [工作階段監視器]  來檢視或重新載入在特定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上執行的所有微調工作階段。 讓所有現有的微調工作階段都可供檢視，您就可以輕鬆地：根據現有工作階段來複製工作階段、編輯現有的微調建議，然後使用 Database Engine Tuning Advisor 來評估已編輯的工作階段，或定期執行微調以監視資料庫的實際設計。 例如，您可以決定以每月排程來微調資料庫。  
   
  檢閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的任何微調工作階段前，您必須使用 Database Engine Tuning Advisor 來微調工作負載，以在伺服器執行個體上建立微調工作階段。 如需詳細資訊，請參閱 [啟動及使用 Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。  
@@ -242,7 +242,7 @@ ms.locfileid: "74165478"
   
 6.  按一下工具列上的 **[開始分析]** 按鈕，如同其他微調工作階段一樣分析工作負載的效果。 當 Database Engine Tuning Advisor 完成時，您可以就像平常對於任何工作階段一樣的檢視這個工作階段的結果。  
   
-##  <a name="UI"></a> 使用者介面描述  
+##  <a name="user-interface-descriptions"></a><a name="UI"></a> 使用者介面描述  
   
 ### <a name="sessions-monitor"></a>工作階段監視器  
  **[工作階段監視器]** 會顯示有關 Database Engine Tuning Advisor 中已開啟之工作階段的資訊。 若要顯示屬性視窗中有關工作階段的資訊，請在 **[工作階段監視器]** 中選取工作階段名稱。  

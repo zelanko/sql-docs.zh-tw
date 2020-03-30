@@ -13,10 +13,10 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1a9f888f651a7c5471014b151d60b0ad3844578b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252968"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>使用 Transact-SQL (T-SQL) 建立 Always On 可用性群組
@@ -30,17 +30,17 @@ ms.locfileid: "75252968"
 >  [!INCLUDE[tsql](../../../includes/tsql-md.md)]以外的替代方案是，使用 [建立可用性群組精靈] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 指令程式。 如需詳細資訊，請參閱 [使用可用性群組精靈 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)、 [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)或 [建立可用性群組 &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)。  
 
   
-## <a name="PrerequisitesRestrictions"></a> 必要條件、限制及建議  
+## <a name="prerequisites-restrictions-and-recommendations"></a><a name="PrerequisitesRestrictions"></a> 必要條件、限制及建議  
   
 -   建立可用性群組之前，請確認裝載可用性複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體位於相同 Windows Server 容錯移轉叢集 (WSFC) 容錯移轉叢集的不同 WSFC 節點上。 此外，請確認每個伺服器執行個體都符合所有其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 必要條件。 如需詳細資訊，強烈建議您閱讀 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL 建立和設定可用性群組 
+##  <a name="using-transact-sql-to-create-and-configure-an-availability-group"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL 建立和設定可用性群組 
 
-###  <a name="SummaryTsqlStatements"></a> 工作和對應 Transact-SQL 陳述式的摘要  
+###  <a name="summary-of-tasks-and-corresponding-transact-sql-statements"></a><a name="SummaryTsqlStatements"></a> 工作和對應 Transact-SQL 陳述式的摘要  
  下表列出與建立和設定可用性群組有關的基本工作，並指出哪些 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式要用於這些工作。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 工作必須依照其出現在表格中的順序來執行。  
   
 |Task|Transact-SQL 陳述式|在何處執行工作 **&#42;**|  
@@ -67,7 +67,7 @@ ms.locfileid: "75252968"
   
 5.  將每一個新的次要資料庫加入可用性群組。 如需詳細資訊，請參閱 [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
-##  <a name="ExampleConfigAGWinAuth"></a> 範例：設定使用 Windows 驗證的可用性群組  
+##  <a name="example-configuring-an-availability-group-that-uses-windows-authentication"></a><a name="ExampleConfigAGWinAuth"></a> 範例：設定使用 Windows 驗證的可用性群組  
  這個範例會建立範例 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 組態程序，此程序會使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 來設定使用 Windows 驗證的資料庫鏡像端點，並建立及設定可用性群組以及其次要資料庫。  
   
  此範例包含下列章節：  
@@ -78,7 +78,7 @@ ms.locfileid: "75252968"
   
 -   [範例組態程序的完整程式碼範例](#CompleteCodeExample)  
   
-###  <a name="PrerequisitesForExample"></a> 使用範例組態程序的必要條件  
+###  <a name="prerequisites-for-using-the-sample-configuration-procedure"></a><a name="PrerequisitesForExample"></a> 使用範例組態程序的必要條件  
  此範例程序有下列需求：  
   
 -   伺服器執行個體必須支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
@@ -118,7 +118,7 @@ ms.locfileid: "75252968"
   
  [&#91;回到範例頂端&#93;](#ExampleConfigAGWinAuth)  
   
-###  <a name="SampleProcedure"></a> 範例組態程序  
+###  <a name="sample-configuration-procedure"></a><a name="SampleProcedure"></a> 範例組態程序  
  在此範例組態中，將會於不同但受信任網域 (`DOMAIN1` 和 `DOMAIN2`) 底下執行其服務帳戶的兩個獨立伺服器執行個體上建立可用性複本。  
   
  下表摘要說明此範例組態中所使用的值。  
@@ -290,7 +290,7 @@ ms.locfileid: "75252968"
   
     ```  
   
-###  <a name="CompleteCodeExample"></a> 範例組態程序的完整程式碼範例  
+###  <a name="complete-code-example-for-sample-configuration-procedure"></a><a name="CompleteCodeExample"></a> 範例組態程序的完整程式碼範例  
  下列範例會合併範例組態程序之所有步驟的程式碼範例。 下表摘要說明此程式碼範例中所使用的預留位置值。 如需有關此程式碼範例中步驟的詳細資訊，請參閱本主題稍早的 [使用範例組態程序的必要條件](#PrerequisitesForExample) 和 [範例組態程序](#SampleProcedure)。  
   
 |預留位置|描述|  
@@ -446,7 +446,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要設定可用性群組和複本屬性**  
   
 -   [變更可用性複本的可用性模式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -505,7 +505,7 @@ GO
   
 -   [疑難排解失敗的加入檔案作業 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   **部落格：**  
   

@@ -22,10 +22,10 @@ ms.assetid: ecbb598e-58a2-4b6c-90b4-3ad5bdfcae39
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 80e34fe713d44993d3d0349485e9e05783980fa4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68121996"
 ---
 # <a name="lt-not-less-than-transact-sql"></a>!&lt;(不小於) (Transact-SQL)

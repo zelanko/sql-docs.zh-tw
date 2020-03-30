@@ -12,10 +12,10 @@ ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a24b1a2f008c23adc5445ec5ed36c51ade181486
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581333"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 組態檔

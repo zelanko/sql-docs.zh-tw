@@ -9,10 +9,10 @@ ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041197"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教學課程：建立基本資料表報表 (報表產生器)
@@ -26,7 +26,7 @@ ms.locfileid: "63041197"
 ## <a name="requirements"></a>需求  
 如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="CreateTable"></a>1.使用精靈建立報表  
+## <a name="1-create-a-report-using-a-wizard"></a><a name="CreateTable"></a>1.使用精靈建立報表  
 使用資料表或矩陣精靈建立資料表報表。 模式有兩種：報表設計和共用資料集設計。 在報表設計模式中，您可以在 [報表資料] 窗格中指定資料，並且在設計介面上指定報表配置。 在共用資料集設計模式中，您可以建立資料集查詢，以便與其他人共用。 在本教學課程中，您將使用報表設計模式。  
   
 ### <a name="to-create-a-report"></a>建立報表  
@@ -41,7 +41,7 @@ ms.locfileid: "63041197"
   
 3.  在右窗格中，選取 [資料表或矩陣精靈]  。  
   
-## <a name="DataConnection"></a>1a. 在資料表精靈中指定資料連接  
+## <a name="1a-specify-a-data-connection-in-the-table-wizard"></a><a name="DataConnection"></a>1a. 在資料表精靈中指定資料連接  
 資料連接包含連接至外部資料來源的資訊，例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。 通常您會向資料來源擁有者取得連接資訊以及要使用的認證類型。 若要指定資料連接，您可以使用來自報表伺服器的共用資料來源，或是建立僅在此報表中使用的內嵌資料來源。  
   
 在本教學課程中，您將使用內嵌資料來源。 若要深入了解如何使用共用資料來源，請參閱[取得資料連線的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -76,7 +76,7 @@ ms.locfileid: "63041197"
   
 9. 按 [下一步]  。  
   
-## <a name="Query"></a>1b. 在資料表精靈中建立查詢  
+## <a name="1b-create-a-query-in-the-table-wizard"></a><a name="Query"></a>1b. 在資料表精靈中建立查詢  
 在報表中，您可以使用擁有預先定義查詢的共用資料集，或是建立只在此一報表中使用的內嵌資料集。 在本教學課程中，您將建立內嵌資料集。  
   
 > [!NOTE]  
@@ -132,7 +132,7 @@ ms.locfileid: "63041197"
   
 4.  按 [下一步]  。  
   
-## <a name="Groups"></a>1c. 在資料表精靈中將資料組織成群組  
+## <a name="1c-organize-data-into-groups-in-the-table-wizard"></a><a name="Groups"></a>1c. 在資料表精靈中將資料組織成群組  
 選取做為群組對象的欄位時，您會設計包含資料列和資料行的資料表，以顯示詳細資料和彙總資料。  
   
 ### <a name="to-organize-data-into-groups"></a>若要將資料組織為群組  
@@ -159,7 +159,7 @@ ms.locfileid: "63041197"
   
 6.  按 [下一步]  。  
   
-## <a name="Subtotals"></a>1d. 在資料表精靈中加入小計和總計資料列  
+## <a name="1d-add-subtotal-and-total-rows-in-the-table-wizard"></a><a name="Subtotals"></a>1d. 在資料表精靈中加入小計和總計資料列  
 建立群組之後，您可以加入並格式化要顯示欄位彙總值的資料列。 您可以選擇要顯示所有資料，或是讓使用者以互動方式展開和摺疊分組資料。  
   
 ### <a name="to-add-subtotals-and-totals"></a>加入小計和總計  
@@ -186,7 +186,7 @@ ms.locfileid: "63041197"
   
 資料表會加入至設計介面。 這個資料表有 5 個資料行和 5 個資料列。 [資料列群組] 窗格會顯示三個資料列群組：SalesDate、Subcategory 和 Details。 詳細資料是資料集查詢擷取的所有資料。  
   
-## <a name="FormatCurrency"></a>2.將資料格式化為貨幣  
+## <a name="2-format-data-as-currency"></a><a name="FormatCurrency"></a>2.將資料格式化為貨幣  
 根據預設，[Sales] 欄位的摘要資料會顯示一般數字。 格式化該欄位，將數字顯示為貨幣。   
   
 ### <a name="to-format-a-currency-field"></a>格式化貨幣欄位  
@@ -203,7 +203,7 @@ ms.locfileid: "63041197"
   
 [Sales] 的摘要值會顯示為貨幣。  
   
-## <a name="FormatDate"></a>3.將資料格式化為日期  
+## <a name="3-format-data-as-date"></a><a name="FormatDate"></a>3.將資料格式化為日期  
 根據預設，[SalesDate] 欄位會同時顯示日期和時間。 您可以將該欄位格式化，以便只顯示日期。  
   
 ### <a name="to-format-a-date-field-as-the-default-format"></a>將日期欄位格式化成預設格式  
@@ -242,7 +242,7 @@ SalesDate 值會以預設的日期格式顯示。
   
 SalesDate 值會顯示月份的名稱，而不是月份的數字。  
   
-## <a name="Width"></a>4.變更資料行寬度  
+## <a name="4-change-column-widths"></a><a name="Width"></a>4.變更資料行寬度  
 根據預設，資料表中的每個資料格都會包含一個文字方塊。 頁面轉譯時，文字方塊會垂直展開以容納文字。 在轉譯的報表中，每一個資料列都會依照資料列中最高的轉譯文字方塊高度展開。 設計介面上資料列的高度對於轉譯報表中資料列的高度並無影響。  
   
 若要減少每個資料列佔用的垂直空間數量，請展開資料行寬度以容納一行上資料行中預期的文字方塊內容。  
@@ -259,7 +259,7 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
   
 4.  按一下 [執行]  以預覽報表。  
   
-## <a name="Title"></a>5.加入報表標題  
+## <a name="5-add-a-report-title"></a><a name="Title"></a>5.加入報表標題  
 報表標題會出現在報表的頂端。 您可以將報表標題放置在報表頁首，如果報表不使用報表頁首，則可以放置在報表主體頂端的文字方塊中。 在本教學課程中，您將使用自動放置在報表主體頂端的文字方塊。  
   
 您可以將不同的字型樣式、大小和色彩套用到文字的片語和個別字元，進一步加強文字。 如需詳細資訊，請參閱[在文字方塊中將文字格式化 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
@@ -282,7 +282,7 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Save"></a>6.儲存報表  
+## <a name="6-save-the-report"></a><a name="Save"></a>6.儲存報表  
 將報表儲存至報表伺服器或您的電腦。 如果沒有將報表儲存到報表伺服器，就無法使用數個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能，例如報表組件和子報表。  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>若要將報表儲存在報表伺服器上  
@@ -311,7 +311,7 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
   
 4.  按一下 [檔案]  。  
   
-## <a name="Export"></a>7.匯出報表  
+## <a name="7-export-the-report"></a><a name="Export"></a>7.匯出報表  
 報表可匯出為不同的格式，例如 Microsoft Excel 和逗號分隔值 (CSV) 檔案。 如需詳細資訊，請參閱 [匯出報表 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)中之分頁的規則。  
   
 在本教學課程中，您會將報表匯出到 Excel，並且設定報表上的屬性，為活頁簿索引標籤提供自訂名稱。  

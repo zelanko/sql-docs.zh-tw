@@ -14,10 +14,10 @@ ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: da0da7ae26d859c8bd7ea4b92ff126819d6bc2ae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68025396"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>移除資料庫鏡像 (SQL Server)
@@ -40,14 +40,14 @@ ms.locfileid: "68025396"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料庫的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-remove-database-mirroring"></a>若要移除資料庫鏡像  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68025396"
   
 5.  若要移除鏡像，請按一下 **[移除鏡像]** 。 會出現提示要求確認。 如果按一下 **[是]** ，會停止工作階段，並從資料庫移除鏡像。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  若要移除資料庫鏡像，請使用 **[資料庫屬性]** 。 使用 **[資料庫屬性]** 對話方塊的 **[鏡像]** 頁面。  
   
 #### <a name="to-remove-database-mirroring"></a>若要移除資料庫鏡像  
@@ -84,7 +84,7 @@ ms.locfileid: "68025396"
     ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
     ```  
   
-##  <a name="FollowUp"></a> 後續操作：移除資料庫鏡像  
+##  <a name="follow-up-removing-database-mirroring"></a><a name="FollowUp"></a> 後續操作：移除資料庫鏡像  
   
 > [!NOTE]  
 >  如需移除鏡像之影響的資訊，請參閱[移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)。  
@@ -104,7 +104,7 @@ ms.locfileid: "68025396"
     > [!IMPORTANT]  
     >  如果復原這個資料庫，線上將會有兩個名稱相同但內容不同的資料庫。 因此，您必須確定用戶端只能存取其中一個資料庫 (通常是最新的主體資料庫)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [暫停或繼續資料庫鏡像工作階段 &#40;SQL Server&#41;](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)  
   

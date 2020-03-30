@@ -13,10 +13,10 @@ ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1f2aafff1e63fbacc92dbbac40c93ef090a4aef9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297922"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>完成緩時變維度精靈

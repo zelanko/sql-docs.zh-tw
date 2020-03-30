@@ -16,10 +16,10 @@ ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 63456df52690b25605bce4f279283f608644f553
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079107"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>管理報表伺服器資料庫 (SSRS 原生模式)

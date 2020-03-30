@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 06708cc6770779f22bea45eddacba5a5d29f9092
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082132"
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out 管理員
@@ -31,7 +31,7 @@ Scale Out Manager 是一種管理工具，可讓您透過單一應用程式管�
 ### <a name="1-open-scale-out-manager-from-sql-server-management-studio"></a>1.從 SQL Server Management Studio 中開啟 Scale Out 管理員
 開啟 SQL Server Management Studio (SSMS)，並連線至 Scale Out Master 的 SQL Server 執行個體。
 
-在物件總管中，以滑鼠右鍵按一下 [SSISDB]  ，然後選取 [管理相應放大]  。
+在物件總管中，以滑鼠右鍵按一下 [SSISDB]  ，然後選取 [管理擴增]  。
 
 ![管理 Scale Out](media/manage-scale-out.PNG)
 

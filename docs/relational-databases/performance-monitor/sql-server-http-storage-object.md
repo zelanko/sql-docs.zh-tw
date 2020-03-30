@@ -11,10 +11,10 @@ ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 6ce8040b37ec08c82b11c9ff572c13125064523b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70155783"
 ---
 # <a name="sql-server-http-storage"></a>SQL Server、HTTP 儲存體

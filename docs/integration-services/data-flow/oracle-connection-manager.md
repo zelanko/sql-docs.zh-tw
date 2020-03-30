@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 092760fdd99a6840e77278fce96e2d321ea4edc9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "69553252"
 ---
 # <a name="oracle-connection-manager"></a>Oracle 連線管理員

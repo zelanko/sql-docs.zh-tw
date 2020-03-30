@@ -4,18 +4,18 @@ titleSuffix: Azure Data Studio
 description: 了解如何在 Azure Data Studio 中使用 SQL Notebooks
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: achatter; alayu; maghan; sstein
+ms.reviewer: achatter; alayu; maghan; mikeray
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/28/2019
-ms.openlocfilehash: b2651dd2d95f0fb8b5aba37b1d755bc26a781dde
-ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
+ms.openlocfilehash: 0cefd49b539c967a77faaa566fce9958182cc5df
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77575461"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448448"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>如何在 Azure Data Studio 中使用筆記本
 
@@ -32,14 +32,14 @@ ms.locfileid: "77575461"
 
 有多種方式可以啟動新的筆記本。
 
-1. 移至 Azure Data Studio 中的 [檔案]  功能表，然後按一下 [新增筆記本]  。
+* 移至 Azure Data Studio 中的 [檔案]  功能表，然後按一下 [新增筆記本]  。
 
     ![image3](media/sql-notebooks/file-new-notebook.png)
 
-2. 以滑鼠右鍵按一下 **SQL Server** 連線，然後啟動 [新增筆記本]  。 
+* 以滑鼠右鍵按一下 **SQL Server** 連線，然後啟動 [新增筆記本]  。
     ![image3](media/sql-notebooks/server-new-notebook.png)
 
-3. 開啟命令選擇區 (**Ctrl+Shift+P**) 然後輸入**新增筆記本**。 系統會隨即開啟名為 `Notebook-1.ipynb` 的新檔案。
+* 開啟命令選擇區 (**Ctrl+Shift+P**) 然後輸入**新增筆記本**。 系統會隨即開啟名為 `Notebook-1.ipynb` 的新檔案。
 
 ## <a name="supported-kernels-and-attach-to-context"></a>支援的核心及附加至內容
 

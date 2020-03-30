@@ -27,10 +27,10 @@ ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: a4c68ce8ca6174f036b2b893a664b758745369d0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982319"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)

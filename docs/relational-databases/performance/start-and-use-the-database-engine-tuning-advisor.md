@@ -19,17 +19,17 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 898c59cab6038b7025066906ea74ffd5b9222815
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73983273"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>啟動及使用 Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中啟動及使用 Database Engine Tuning Advisor。 如需如何在微調資料庫後檢視及處理結果的資訊，請參閱 [檢視及處理 Database Engine Tuning Advisor 的輸出](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)。  
   
-##  <a name="Initialize"></a> 初始化 Database Engine Tuning Advisor  
+##  <a name="initialize-the-database-engine-tuning-advisor"></a><a name="Initialize"></a> 初始化 Database Engine Tuning Advisor  
  在第一次使用時， **系統管理員 (sysadmin)** 固定伺服器角色的成員使用者必須初始化 Database Engine Tuning Advisor。 原因是必須在 **msdb** 資料庫中建立數個系統資料表，以支援微調作業。 初始化也可讓屬於 **db_owner** 固定資料庫角色成員的使用者，微調他們所擁有資料庫中資料表的工作負載。  
   
  具有系統管理員權限的使用者必須執行下列其中一種動作：  
@@ -38,7 +38,7 @@ ms.locfileid: "73983273"
   
 -   使用 **dta** 公用程式微調第一個工作負載。 如需詳細資訊，請參閱本主題稍後的＜ [使用 dta 公用程式](#dta) ＞。  
   
-##  <a name="Start"></a> 啟動 Database Engine Tuning Advisor  
+##  <a name="start-the-database-engine-tuning-advisor"></a><a name="Start"></a> 啟動 Database Engine Tuning Advisor  
  您可以利用若干不同方法來啟動 Database Engine Tuning Advisor 圖形化使用者介面 (GUI)，以支援各種狀況中的資料庫微調。 啟動 Database Engine Tuning Advisor 的不同方式包括：從 **[開始]** 功能表、從 **中的** [工具] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]功能表、從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的查詢編輯器，以及從 **中的** [工具] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]功能表。 當您第一次啟動 Database Engine Tuning Advisor 時，應用程式會顯示一個 **[連接到伺服器]** 對話方塊，供您指定要連接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
 > [!WARNING]  
@@ -62,7 +62,7 @@ ms.locfileid: "73983273"
   
 1.  在 SQL Server Profiler 的 **[工具]** 功能表上，按一下 **[Database Engine Tuning Advisor]** 。  
   
-##  <a name="Create"></a> 建立工作負載  
+##  <a name="create-a-workload"></a><a name="Create"></a> 建立工作負載  
  工作負載是針對需要微調的一或多個資料庫來執行的一組 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 Database Engine Tuning Advisor 會分析這些工作負載，以建議可改善伺服器查詢效能的索引或資料分割策略。  
   
  您可以使用下列其中一個方法，建立新的工作負載。  
@@ -85,7 +85,7 @@ ms.locfileid: "73983273"
   
 -   工作負載亦可內嵌於 XML 輸入檔中，您也可於該檔中指定各事件的加權。 如需有關指定內嵌工作負載的詳細資訊，請參閱本主題稍後的＜ [建立 XML 輸入檔](#XMLInput) ＞。  
   
-###  <a name="SSMS"></a> 建立 Transact-SQL 指令碼工作負載  
+###  <a name="to-create-transact-sql-script-workloads"></a><a name="SSMS"></a> 建立 Transact-SQL 指令碼工作負載  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中啟動 [查詢編輯器]。 如需詳細資訊，請參閱[查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "73983273"
   
 3.  請用 **.sql** 副檔名儲存檔案。 Database Engine Tuning Advisor GUI 及命令列 **dta** 公用程式，都可使用此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼作為工作負載。  
   
-###  <a name="Profiler"></a> 建立追蹤檔及追蹤資料表工作負載  
+###  <a name="to-create-trace-file-and-trace-table-workloads"></a><a name="Profiler"></a> 建立追蹤檔及追蹤資料表工作負載  
   
 1.  使用下列其中一種方法啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ：  
   
@@ -140,7 +140,7 @@ ms.locfileid: "73983273"
   
  由於追蹤中沒有指定登入資訊，所以 Database Engine Tuning Advisor 將會微調新的工作負載。 如果陳述式中沒有 **LoginName** ，Database Engine Tuning Advisor 便會模擬啟動微調工作階段的使用者 ( **系統管理員** 固定伺服器角色或 **db_owner** 固定資料庫角色的成員)，來微調該陳述式。  
   
-##  <a name="Tune"></a> 微調資料庫  
+##  <a name="tune-a-database"></a><a name="Tune"></a> 微調資料庫  
  若要微調資料庫，您可以使用 Database Engine Tuning Advisor GUI 或 **dta** 公用程式。  
   
 > [!NOTE]  
@@ -149,10 +149,10 @@ ms.locfileid: "73983273"
 ### <a name="use-the-database-engine-tuning-advisor-graphical-user-interface"></a>使用 Database Engine Tuning Advisor 圖形化使用者介面  
  在 Database Engine Tuning Advisor GUI，您可以使用計畫快取、工作負載檔案或工作負載資料表來微調資料庫。 您可以使用 Database Engine Tuning Advisor GUI 輕鬆檢視目前微調工作階段的結果，以及上次微調工作階段的結果。 如需有關使用者介面選項的詳細資訊，請參閱本主題稍後的＜ [使用者介面描述](#UI) ＞。 如需微調資料庫後處理輸出的詳細資訊，請參閱 [檢視及處理 Database Engine Tuning Advisor 的輸出](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)。  
 
-####  <a name="PlanCache"></a> 使用查詢存放區微調資料庫
+####  <a name="to-tune-a-database-by-using-the-query-store"></a><a name="PlanCache"></a> 使用查詢存放區微調資料庫
 如需詳細資訊，請參閱[使用查詢存放區的工作負載微調資料庫](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。
   
-####  <a name="PlanCache"></a> 使用計畫快取微調資料庫  
+####  <a name="to-tune-a-database-by-using-the-plan-cache"></a><a name="PlanCache"></a> 使用計畫快取微調資料庫  
   
 1.  啟動 Database Engine Tuning Advisor，登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。 如需詳細資訊，請參閱本主題前面的＜ [啟動 Database Engine Tuning Advisor](#Start) ＞。  
   
@@ -221,7 +221,7 @@ ms.locfileid: "73983273"
 > [!NOTE]  
 >  不支援暫停 Database Engine Tuning Advisor。 若在按下 [停止分析]  或 [停止分析 (附帶建議)]  工具列按鈕之後按下 [開始分析]  工具列按鈕，Database Engine Tuning Advisor 會啟動新的微調工作階段。  
   
-###  <a name="dta"></a> 使用 dta 公用程式  
+###  <a name="use-the-dta-utility"></a><a name="dta"></a> 使用 dta 公用程式  
  [dta 公用程式](../../tools/dta/dta-utility.md) 提供一個命令提示字元可執行檔，您可用來微調資料庫。 這個公用程式可讓您在批次檔和指令碼中使用 Database Engine Tuning Advisor 的功能。 您的 **dta** 公用程式會將計畫快取項目、追蹤檔案、追蹤資料表和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼視為工作負載； 它也會使用符合 Database Engine Tuning Advisor XML 結構描述的 XML 輸入，此結構描述可從此 [Microsoft 網站](https://go.microsoft.com/fwlink/?linkid=43100)取得。  
   
  開始使用 **dta** 公用程式微調工作負載之前，請先考慮下列事項：  
@@ -305,7 +305,7 @@ ms.locfileid: "73983273"
   
 5.  公用程式完成微調工作負載之後，您可以透過 Database Engine Tuning Advisor GUI 來檢視微調工作階段的結果。 或者，您也可以透過 **-ox** 選項，指定將微調建議寫入 XML 檔案。 如需詳細資訊，請參閱 [dta Utility](../../tools/dta/dta-utility.md)。  
   
-##  <a name="XMLInput"></a> 建立 XML 輸入檔  
+##  <a name="create-an-xml-input-file"></a><a name="XMLInput"></a> 建立 XML 輸入檔  
  如果您是有經驗的 XML 開發人員，即可建立 XML 格式的檔案供 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 用以微調工作負載。 若要建立這些 XML 檔案，請使用您喜好的 XML 工具來編輯範例檔，或是根據 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML 結構描述產生執行個體。  
   
  您的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中提供 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML 結構描述，其位置如下：  
@@ -331,7 +331,7 @@ ms.locfileid: "73983273"
 > [!NOTE]  
 >  若您想要使用內嵌工作負載 (此為在 XML 輸入檔中直接指定的工作負載)，請使用範例：[含內嵌工作負載的 XML 輸入檔範例 &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md)。  
   
-##  <a name="UI"></a> 使用者介面描述  
+##  <a name="user-interface-descriptions"></a><a name="UI"></a> 使用者介面描述  
   
 ### <a name="tools-menuoptions-page"></a>工具功能表/選項頁面  
  使用此對話方塊，來指定 Database Engine Tuning Advisor 的一般組態參數。  

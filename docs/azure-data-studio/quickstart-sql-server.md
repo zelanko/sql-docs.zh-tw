@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
 ms.openlocfilehash: 7398d918a027b28513b3f12a5101628cf1158e49
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75884055"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入門：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連線及查詢 SQL Server
+# <a name="quickstart-connect-and-query-sql-server-using-name-sos"></a>快速入門：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連線及查詢 SQL Server
 
 本快速入門說明如何使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連線到 SQL Server，然後使用 Transact-SQL (T-SQL) 陳述式建立 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 教學課程中所使用的 *TutorialDB*。
 

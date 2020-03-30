@@ -11,10 +11,10 @@ ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5bf2942b79cf7e72efbb36a53019de8208cd3b8e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67935821"
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>步驟 1:設定 pymssql Python 開發的開發環境

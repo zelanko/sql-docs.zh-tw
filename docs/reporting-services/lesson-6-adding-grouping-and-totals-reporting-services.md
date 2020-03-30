@@ -9,10 +9,10 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b5b9846a20615cf613dd50752ac63f2669b1e399
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65089670"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>第 6 課：新增群組和總計 (Reporting Services)

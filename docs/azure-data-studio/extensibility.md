@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: b263c3890ab9a03295212c723adad4a431fbf04f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76928003"
 ---
-# <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>開始使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 擴充性
+# <a name="getting-started-with-name-sos-extensibility"></a>開始使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 擴充性
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] 具有數個擴充性機制，可自訂使用者體驗，並將這些自訂項目提供給整個使用者社群。 核心 [!INCLUDE[name-sos](../includes/name-sos.md)] 平台是以 Visual Studio Code 為建置基礎，因此大部分的 Visual Studio Code 擴充性 API 都可供使用。 此外，我們也為資料管理特定活動提供了額外的擴充點。
 

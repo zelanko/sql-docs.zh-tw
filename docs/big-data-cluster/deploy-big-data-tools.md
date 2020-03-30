@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 12dea4163feba35af6346d347503f42ab31c852a
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77173626"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安裝 SQL Server 2019 巨量資料工具
@@ -62,7 +62,7 @@ ms.locfileid: "77173626"
 
 其餘工具只有在某些情況下才需要。 **Azure CLI** 可以用來管理與 AKS 部署相關聯的 Azure 服務。 **mssql-cli** 是選擇性但實用的工具，可讓您連線到叢集中的 SQL Server 主要執行個體，並從命令列執行查詢。 如果您打算使用 GitHub 指令碼來安裝範例資料，則需要 **sqlcmd** 和 `curl`。
 
-### <a id="python"></a> 離線安裝 python
+### <a name="install-python-offline"></a><a id="python"></a> 離線安裝 python
 
 1. 在能存取網際網路的電腦上，下載下列其中一個包含 Python 的壓縮檔案：
 

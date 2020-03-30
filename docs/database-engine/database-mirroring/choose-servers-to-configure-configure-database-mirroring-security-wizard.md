@@ -14,10 +14,10 @@ ms.assetid: 59e23ff3-d7ee-4e32-9629-0b54d3a258f7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cfb2396e97c4cceee534472c07c285aa2a8a371e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822317"
 ---
 # <a name="configure-database-mirroring-wizard-choose-servers-to-configure"></a>設定資料庫鏡像精靈：選擇要設定的伺服器 

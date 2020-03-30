@@ -28,10 +28,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 413d8fffc505c8b2cfb5404e70cdd9f64cd150de
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77544932"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 公用程式
@@ -867,7 +867,7 @@ sqlcmd
   
  雖然 `BusinessEntityID` 資料行的寬度只有四個字元，但它已擴充，能夠容納較長的資料行名稱。 依預設，輸出的長度最多為 80 個字元。 您可以利用 **-w** 選項或設定 SQLCMDCOLWIDTH 指令碼變數，變更此設定。  
   
-###  <a name="OutputXML"></a> XML 輸出格式  
+###  <a name="xml-output-format"></a><a name="OutputXML"></a> XML 輸出格式  
  FOR XML 子句所產生的 XML 輸出，會在連續資料流中以未格式化的形式輸出。  
   
  當您希望產生 XML 輸出時，請使用下列命令： `:XML ON`。  
@@ -884,7 +884,7 @@ sqlcmd
 > [!NOTE]  
 >  `:XML` 命令不支援 SET STATISTICS XML 陳述式。  
   
-###  <a name="OutputJSON"></a> JSON 輸出格式  
+###  <a name="json-output-format"></a><a name="OutputJSON"></a> JSON 輸出格式  
  當您希望產生 JSON 輸出時，請使用下列命令： `:XML ON`。 否則輸出會包含資料行名稱和 JSON 文字。 此輸出不是有效的 JSON。  
   
  若要將 XML 模式設定為關閉，請使用下列命令：`:XML OFF`。  

@@ -11,10 +11,10 @@ ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: df06f7dad35edcbdd299794a7724b3e52e7974f0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71287719"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>開發具有多個輸入的資料流程元件

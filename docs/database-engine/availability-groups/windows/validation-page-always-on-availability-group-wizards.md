@@ -17,10 +17,10 @@ ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f22ac0e249e693b7bcd102f6d9242c601e14331f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821845"
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>驗證頁面 (AlwaysOn 可用性群組精靈)
@@ -28,7 +28,7 @@ ms.locfileid: "74821845"
     
   本說明主題描述 [驗證]  頁面的選項。 本主題適用於 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]和[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用此頁面可以驗證環境是否支援您在精靈之先前頁面上所做的所有組態選擇。  
   
-##  <a name="PageOptions"></a> 驗證頁面選項  
+##  <a name="validation-page-options"></a><a name="PageOptions"></a> 驗證頁面選項  
  **可用性群組驗證的結果。**  
  此方格會顯示每個已完成驗證步驟的結果。 方格資料行如下所示：  
   
@@ -48,7 +48,7 @@ ms.locfileid: "74821845"
  **重新執行驗證**  
  如果您在精靈外部進行變更以回應驗證錯誤，按一下可重複驗證步驟。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

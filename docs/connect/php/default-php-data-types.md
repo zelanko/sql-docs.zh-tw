@@ -14,10 +14,10 @@ ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11026bcb372759f62aa0b0d5f406a6721b65c135
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993674"
 ---
 # <a name="default-php-data-types"></a>預設 PHP 資料類型

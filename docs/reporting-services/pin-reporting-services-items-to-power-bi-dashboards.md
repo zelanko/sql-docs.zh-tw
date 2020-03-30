@@ -16,10 +16,10 @@ ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: da984efa4e0b4d964cf947929094ee7b392063f2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75952474"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>將 Reporting Services 編頁報表項目釘選到 Power BI 中的儀表板
@@ -28,7 +28,7 @@ ms.locfileid: "75952474"
 
 您可以將內部部署 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 編頁報表項目釘選到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 服務中的儀表板，作為新的磚。   若要固定，您的系統管理員必須先整合報表伺服器和 Azure Active Directory 及 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]。  
   
-##  <a name="bkmk_requirements_to_pin"></a> 固定需求  
+##  <a name="requirements-to-pin"></a><a name="bkmk_requirements_to_pin"></a> 固定需求  
   
 -   針對 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 整合設定報表伺服器。 如需詳細資訊，請參閱 [Power BI 報表伺服器整合 &#40;組態管理員&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)。 如果尚未設定報表伺服器，您將不會在報表檢視器工具列上看到 [釘選到 Power BI 儀表板]  按鈕。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75952474"
  
     請參閱 [在 Reporting Services 資料來源中儲存認證](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)中的＜為報表特定的資料來源設定預存認證 (原生模式)＞一節  
   
-##  <a name="bkmk_supported_items"></a> 您可以固定的項目  
+##  <a name="items-you-can-pin"></a><a name="bkmk_supported_items"></a> 您可以固定的項目  
  下列報表項目可以固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 儀表板。  您無法釘選資料區域內部的巢狀項目。 例如，您無法釘選 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料表或清單內部的巢狀項目。  
   
 -   圖表  
@@ -54,7 +54,7 @@ ms.locfileid: "75952474"
 -   項目必須在報表主體中。  您無法釘選頁首或頁尾的項目。  
 -   您可以釘選最上層矩形內部的個別項目，但無法將它們全部釘選為單一群組。  
   
-##  <a name="bkmk_to_pin"></a> 固定報表項目  
+##  <a name="to-pin-a-report-item"></a><a name="bkmk_to_pin"></a> 固定報表項目  
   
 1. 確認您已登入 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中，選取 [我的設定]  功能表項目並登入。 如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](my-settings-for-power-bi-integration-web-portal.md)。
 
@@ -78,7 +78,7 @@ ms.locfileid: "75952474"
   
 6. 選取 [關閉]  返回報表的標準模式。  
   
-##  <a name="bkmk_in_the_dashboard"></a> 在儀表板中
+##  <a name="in-the-dashboard"></a><a name="bkmk_in_the_dashboard"></a> 在儀表板中
 
 在報表項目固定到儀表板之後，圖格看起來就和其他的儀表板圖格一樣，不會有任何視覺效果指示圖格來自 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 下列清單摘要說明如何從報表項目填入圖格屬性。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "75952474"
 
 ![ssrs_pinned_tile_details](../reporting-services/media/ssrs-pinned-tile-details.png "ssrs_pinned_tile_details")  
   
-##  <a name="bkmk-troubleshoot"></a> 疑難排解問題  
+##  <a name="troubleshoot-issues"></a><a name="bkmk-troubleshoot"></a> 疑難排解問題  
   
 -   **報表檢視器工具列上沒有 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 按鈕：** 此訊息表示報表伺服器尚未與 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 整合。 如需詳細資訊，請參閱 [Power BI 報表伺服器整合 &#40;組態管理員&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "75952474"
 
 -   **Power BI 應用程式中的磚會顯示過時資料：** 如果您將 Reporting Services 報表項目釘選到儀表板，然後在應用程式中散發該儀表板，則該儀表板中的釘選報表項目將不會更新。 
 
-##  <a name="bkmk_subscription_management"></a> 訂閱管理  
+##  <a name="subscription-management"></a><a name="bkmk_subscription_management"></a> 訂閱管理  
  除了＜疑難排解＞一節描述的訂閱相關問題，下列資訊也會協助您維護 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 的相關訂閱。
   
 -   **項目名稱變更：** 如果重新命名或刪除釘選的報表項目，則 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 磚就不再更新，而您會看到類似下面的錯誤訊息。  如果您將項目重新命名回原來的名稱，訂閱就會再次開始工作，而圖格會按照訂閱排程重新整理。  

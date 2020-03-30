@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 71ff0b6232eb69af7e5e138d2681f8126a12d915
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485253"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>適用於 SQL Server 的 R 套件同步

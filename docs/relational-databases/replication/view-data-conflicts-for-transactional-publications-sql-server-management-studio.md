@@ -32,9 +32,9 @@ ms.locfileid: "75321865"
   
 -   如果是佇列更新訂閱，則會針對每一個衝突提供資料。 複寫衝突檢視器可以在衝突保留期限指定的時間內使用衝突資料 (預設為 14 天)。 若要設定衝突保留期限，您可以執行以下其中一項作業：  
   
-    -   為 @conflict_retention sp_addpublication [的](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)參數指定保留值。  
+    -   針對 [**sp_addpublication**](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 的 `@conflict_retention` 參數指定保留值。  
   
-    -   為 **@property** 參數指定 @property 的值，並且為 @value sp_addpublication [的](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)＞。  
+    -   針對 [**sp_changepublication**](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 的 `@property` 參數指定一個 **'conflict_retention'** 值，並且為 `@value` 參數指定保留值。  
   
 ### <a name="to-view-conflicts"></a>若要檢視衝突  
   
@@ -46,7 +46,7 @@ ms.locfileid: "75321865"
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您要檢視衝突的發行集，然後按一下 **[檢視衝突]**。  
+3.  以滑鼠右鍵按一下您要檢視衝突的發行集，然後按一下 **[檢視衝突]** 。  
   
 4.  在 **[選取衝突資料表]** 對話方塊中，選取要檢視衝突的資料庫、發行集和資料表。  
   
@@ -56,11 +56,11 @@ ms.locfileid: "75321865"
   
     -   在上方格內選取資料列，以便於下方格的該資料列顯示資訊。  
   
-    -   在上方格中選取一個或多個資料列，然後按一下 **[移除]**，會從衝突中繼資料表中移除資料列。  
+    -   在上方格中選取一個或多個資料列，然後按一下 **[移除]** ，會從衝突中繼資料表中移除資料列。  
   
-    -   按一下屬性按鈕 (**[…]**) 以檢視更多有關於衝突的資料行資訊。  
+    -   按一下屬性按鈕 ( **[…]** ) 以檢視更多有關於衝突的資料行資訊。  
   
-    -   選取 **[記錄此衝突的詳細資料]** 即可將衝突資料記錄到檔案中。 若要指定檔案的位置，請指向 **[檢視]** 功能表，然後按一下 **[選項]**。 輸入值，或按一下瀏覽按鈕 (**[...]**)，然後導覽至適當的檔案。 按一下 **[確定]** 關閉 **[選項]** 對話方塊。  
+    -   選取 **[記錄此衝突的詳細資料]** 即可將衝突資料記錄到檔案中。 若要指定檔案的位置，請指向 **[檢視]** 功能表，然後按一下 **[選項]** 。 輸入值，或按一下瀏覽按鈕 ( **[...]** )，然後導覽至適當的檔案。 按一下 **[確定]** 關閉 **[選項]** 對話方塊。  
   
 6.  關閉複寫衝突檢視器。  
   

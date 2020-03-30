@@ -14,10 +14,10 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 562fda7c79681fa70e36bf19221ceb44b2dc87ec
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78866373"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>對 SQL Server 資料庫引擎的連線進行疑難排解
@@ -78,7 +78,7 @@ ms.locfileid: "78866373"
 
 若執行個體已停止，請以滑鼠右鍵按一下執行個體，然後按一下 [啟動]  。 伺服器執行個體隨即啟動，指示器也會變成綠色的箭頭。
 
-## <a name = "startbrowser"></a> 確認 - SQL Server Browser 服務正在執行中
+## <a name="verify---sql-server-browser-service-is-running"></a><a name = "startbrowser"></a> 確認 - SQL Server Browser 服務正在執行中
 
 若要連線到具名執行個體，SQL Server Browser 服務必須處於執行狀態。 在組態管理員中，找出 **SQL Server Browser** 服務並驗證其已在執行狀態。 若並未執行，請啟動它。 SQL Server Browser 服務不是預設執行個體的必要項目。
 
@@ -129,7 +129,7 @@ SQL Server 的預設執行個體並不需要 SQL Server Browser 服務。
 
   >SQL Server 可使用 IP 版本 4 通訊協定或 IP 版本 6 通訊協定連線。 您的網路允許其中的一個，或兩個都允許。 大部分的人是從疑難排解 **IPv4** 位址開始。 它比較短也比較好輸入。
 
-## <a name = "getTCP"></a>取得 SQL Server 執行個體 TCP 連接埠
+## <a name="get-the-sql-server-instance-tcp-port"></a><a name = "getTCP"></a>取得 SQL Server 執行個體 TCP 連接埠
 
 在大部分的情況下，您會使用 TCP 通訊協定從另一部電腦連線到資料庫引擎。
 
@@ -142,7 +142,7 @@ SQL Server 的預設執行個體並不需要 SQL Server Browser 服務。
   > [!NOTE]
   > 其中可能會列出 `IP address 127.0.0.1`。 這稱為迴路配接器位址。 只有位於相同電腦上的處理序能使用它來進行連線。 它可用於疑難排解，但無法使用它從另一部電腦連線。
 
-## <a name = "enableprotocols"></a>啟用通訊協定
+## <a name="enable-protocols"></a><a name = "enableprotocols"></a>啟用通訊協定
 
 在某些 SQL Server 安裝中，從另一部電腦連接到 Database Engine 並未啟用，除非系統管理員使用組態管理員啟用它，才會啟用。 啟用從其他電腦連接
 
@@ -150,7 +150,7 @@ SQL Server 的預設執行個體並不需要 SQL Server Browser 服務。
 1. 使用組態管理員，在左窗格中展開 [SQL Server 網路組態]  ，然後選取您想要連接的 SQL Server 執行個體。 右窗格會列出可用的連接通訊協定。 通常會啟用共用記憶體。 它只能從同一部電腦使用，因此大部分的安裝都會保持啟用共用記憶體。 若要從另一部電腦連線到 SQL Server，您一般會使用 TCP/IP。 如未啟用 TCP/IP，請以滑鼠右鍵按一下 [TCP/IP]  ，然後按一下 [啟用]  。
 1. 若您變更任何通訊協定的啟用設定，請重新啟動資料庫引擎。 在左窗格中選取 [SQL Server 服務]  。 在右窗格中，以滑鼠右鍵按一下 Database Engine 的執行個體，然後按一下 [重新啟動]  。
 
-## <a name="testTCPIP"></a>測試 TCP/IP 連線能力
+## <a name="testing-tcpip-connectivity"></a><a name="testTCPIP"></a>測試 TCP/IP 連線能力
 
 使用 TCP/IP 連接到 SQL Server，需要 Windows 能夠建立連線。 使用 `ping` 工具測試 TCP。
 

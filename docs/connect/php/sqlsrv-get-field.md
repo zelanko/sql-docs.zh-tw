@@ -18,10 +18,10 @@ ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64ddca64f049ba95426dec542d68dc8a84e7d9dc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015007"
 ---
 # <a name="sqlsrv_get_field"></a>sqlsrv_get_field

@@ -11,10 +11,10 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95dceade62e487db05a66df6b7986f23723b1303
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297762"
 ---
 # <a name="tutorial-using-the-odata-source"></a>教學課程：使用 OData 來源

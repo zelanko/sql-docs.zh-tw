@@ -17,10 +17,10 @@ ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: df23777c7e9ec22b629133c98da27c8a23ab6ccb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68038826"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>轉換非搜尋字伺服器組態選項

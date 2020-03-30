@@ -17,10 +17,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 9955b61f8c04aa890c156234838816976f41a585
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198435"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>移除查詢的資料表 (Visual Database Tools)

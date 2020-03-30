@@ -16,10 +16,10 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f170a279f591b496b4c69cbb80b4c719954c30ba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294131"
 ---
 # <a name="file-system-task"></a>檔案系統工作

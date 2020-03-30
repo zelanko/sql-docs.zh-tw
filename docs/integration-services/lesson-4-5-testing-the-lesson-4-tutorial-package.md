@@ -11,10 +11,10 @@ ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ba5766483def3dc357bc8f1bf65dd1048fa94b48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295912"
 ---
 # <a name="lesson-4-5-test-the-lesson-4-package"></a>課程 4-5：測試第 4 課套件

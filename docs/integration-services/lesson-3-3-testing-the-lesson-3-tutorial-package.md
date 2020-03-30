@@ -11,10 +11,10 @@ ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cdb19c6df46e3c24625bfb740c82771f0adcc1d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71283172"
 ---
 # <a name="lesson-3-3-test-the-lesson-3-tutorial-package"></a>課程 3-3：測試第 3 課教學課程套件

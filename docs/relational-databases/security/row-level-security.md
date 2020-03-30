@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78288980"
 ---
 # <a name="row-level-security"></a>資料列層級安全性
@@ -43,7 +43,7 @@ ms.locfileid: "78288980"
 > [!NOTE]
 > Azure SQL 資料倉儲僅支援篩選述詞。 Azure SQL 資料倉儲目前不支援封鎖述詞。
 
-## <a name="Description"></a> 描述
+## <a name="description"></a><a name="Description"></a> 描述
 
 RLS 可支援兩種類型的安全性述詞。  
   
@@ -89,7 +89,7 @@ RLS 可支援兩種類型的安全性述詞。
   
 - 連同 BULK INSERT 在內的大量 API 皆未變更。 這表示 Block 述詞 AFTER INSERT 會套用至大量插入作業，就如同一般的插入作業。  
   
-## <a name="UseCases"></a> 使用案例
+## <a name="use-cases"></a><a name="UseCases"></a> 使用案例
 
  以下是如何使用 RLS 的設計範例：  
   
@@ -103,7 +103,7 @@ RLS 可支援兩種類型的安全性述詞。
   
  在更正式的用語，RLS 將介紹述詞型的存取控制。 它具備彈性且集中的述詞型評估。 述詞能以中繼資料 (或任何其他系統管理員判斷為適當的準則) 為基礎。 述詞作為準則，以根據使用者屬性判斷使用者是否具有適當的資料存取權。 標籤型存取控制可透過述詞型存取控制來實作。  
   
-## <a name="Permissions"></a> 權限
+## <a name="permissions"></a><a name="Permissions"></a> 權限
 
  建立、 改變或卸除安全性原則需要 **ALTER ANY SECURITY POLICY** 權限。 建立或卸除安全性原則需要 **ALTER** 結構描述權限。  
   
@@ -119,7 +119,7 @@ RLS 可支援兩種類型的安全性述詞。
   
  如果以 `SCHEMABINDING = OFF`來建立安全性原則，則為了查詢目標資料表，使用者必須對述詞函數和述詞函數內使用的任何其他資料表、檢視或函數具有  **SELECT** 或 **EXECUTE** 權限。 如果以 `SCHEMABINDING = ON` (預設值) 來建立安全性原則，則當使用者查詢目標資料表時，會略過這些權限檢查。  
   
-## <a name="Best"></a> 最佳作法  
+## <a name="best-practices"></a><a name="Best"></a> 最佳作法  
   
 - 強烈建議為 RLS 物件 (述詞函式與安全性原則) 建立個別的結構描述。 這有助於將這些特殊物件上所需的權限與目標資料表分開。 多租用戶資料庫中可能需要不同原則與述詞函式的其他分隔，但這並非每個案例的標準情況。
   
@@ -141,7 +141,7 @@ RLS 可支援兩種類型的安全性述詞。
   
 - 述詞函數不應比較串連的字串與 **NULL**，因為此行為受到 [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md) 選項影響。  
 
-## <a name="SecNote"></a> 安全性注意事項：旁路攻擊
+## <a name="security-note-side-channel-attacks"></a><a name="SecNote"></a> 安全性注意事項：旁路攻擊
 
 ### <a name="malicious-security-policy-manager"></a>惡意的安全性原則管理員
 
@@ -151,7 +151,7 @@ RLS 可支援兩種類型的安全性述詞。
 
 很可能會透過使用精巧的查詢，造成資訊外洩。 例如， `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` 可讓惡意使用者知道 John Doe 薪資為 $100000。 即使有安全性述詞用來防止惡意使用者直接查詢其他人的薪資，當查詢傳回除以零的例外狀況時，使用者仍可以決定。  
 
-## <a name="Limitations"></a> 跨功能的相容性
+## <a name="cross-feature-compatibility"></a><a name="Limitations"></a> 跨功能的相容性
 
  一般情況下，資料列層級安全性將在所有功能下正常運作。 但仍有一些例外狀況。 本節說明搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的特定其他功能使用資料列層級安全性時，數個需要注意的事項及警告。  
   
@@ -177,9 +177,9 @@ RLS 可支援兩種類型的安全性述詞。
   
 - **時態表：** 時態表與 RLS 相容。 不過，目前資料表上的安全性述詞不會自動複製到歷程記錄資料表。 若要將安全性原則套用至目前和歷程記錄資料表，您必須個別在每個資料表上新增安全性述詞。  
   
-## <a name="CodeExamples"></a> 範例  
+## <a name="examples"></a><a name="CodeExamples"></a> 範例  
   
-### <a name="Typical"></a> A. 向資料庫驗證的使用者案例
+### <a name="a-scenario-for-users-who-authenticate-to-the-database"></a><a name="Typical"></a> A. 向資料庫驗證的使用者案例
 
  此範例會建立三個使用者，然後建立資料表並將六個資料列填入。 然後，它為資料表建立內嵌資料表值函式和安全性原則。 此範例接著示範如何針對不同使用者篩選 Select 陳述式。  
   
@@ -301,7 +301,7 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="external"></a> B. 在 Azure SQL 資料倉儲外部資料表上使用資料列層級安全性的案例
+### <a name="b-scenarios-for-using-row-level-security-on-an-azure-sql-data-warehouse-external-table"></a><a name="external"></a> B. 在 Azure SQL 資料倉儲外部資料表上使用資料列層級安全性的案例
 
 此範例會建立三個使用者，以及包含六個資料列的外部資料表。 它接著為該外部資料表建立內嵌資料表值函式和安全性原則。 此範例示範如何針對不同的使用者篩選 select 陳述式。
 
@@ -418,7 +418,7 @@ DROP LOGIN Sales2;
 DROP LOGIN Manager;
 ```
 
-### <a name="MidTier"></a> C. 透過中介層應用程式連接到資料庫的使用者案例
+### <a name="c-scenario-for-users-who-connect-to-the-database-through-a-middle-tier-application"></a><a name="MidTier"></a> C. 透過中介層應用程式連接到資料庫的使用者案例
 
 > [!NOTE]
 > 在此範例中，Azure SQL Data Warehouse 目前不支援區塊預測功能，因此插入錯誤使用者識別碼的列不會使用 Azure SQL Data Warehouse 封鎖。

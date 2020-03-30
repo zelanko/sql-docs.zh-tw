@@ -13,10 +13,10 @@ ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 87045f104bdf183c91c3b60b0d85c4a64929359e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67987190"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server 的 Batch Resp Statistics 物件

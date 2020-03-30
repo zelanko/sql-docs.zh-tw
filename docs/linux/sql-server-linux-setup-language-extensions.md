@@ -12,10 +12,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 561a683f6b4c9489121c8fe9910ca798c50ecd82
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76971227"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>在 Linux 上安裝 SQL Server 語言延伸模組

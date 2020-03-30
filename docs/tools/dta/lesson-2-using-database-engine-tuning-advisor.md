@@ -14,10 +14,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.openlocfilehash: 6352a5d32f7b173343729582cdb1bfb0c1de99b3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285742"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>第 2 課：使用 Database Engine Tuning Advisor

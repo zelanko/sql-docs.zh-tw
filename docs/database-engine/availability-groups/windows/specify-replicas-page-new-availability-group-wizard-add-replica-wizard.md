@@ -15,10 +15,10 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3bf32d532c2bf10adb1348352c472cd87f0b8413
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822568"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>指定複本頁面 (新增可用性群組精靈：新增複本精靈)
@@ -32,7 +32,7 @@ ms.locfileid: "74822568"
 |[備份喜好設定](#BackupPreferencesTab)|使用此索引標籤可指定整個可用性群組的備份喜好設定，以及個別可用性複本的備份優先權。|  
 |[接聽程式](#Listener)|使用此索引標籤 (如果有的話) 建立可用性群組接聽程式。 預設不會建立接聽程式。<br /><br /> 此索引標籤只有在您執行 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]時才可以使用。<br/><br/>叢集類型是 EXTERNAL 或 NONE 時，會停用 DHCP。 |  
   
-##  <a name="ReplicasTab"></a> 複本索引標籤  
+##  <a name="replicas-tab"></a><a name="ReplicasTab"></a> 複本索引標籤  
  **伺服器執行個體**  
  顯示將裝載可用性複本的伺服器執行個體名稱。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "74822568"
  **移除複本**  
  按一下可從可用性群組中移除選取的次要複本。  
   
-##  <a name="EndpointsTab"></a> 端點索引標籤  
+##  <a name="endpoints-tab"></a><a name="EndpointsTab"></a> 端點索引標籤  
  對於裝載可用性複本的每個伺服器執行個體， **[端點]** 索引標籤會顯示現有資料庫鏡像端點的實際值 (如果有的話)，或是將會使用 Windows 驗證的可能新端點的建議值。 對於現有和可能的端點而言，[端點值] 方格會顯示下列資訊：  
   
  **伺服器名稱**  
@@ -107,7 +107,7 @@ ms.locfileid: "74822568"
   
      如果您在設定端點時，將 **[指定可用性複本]** 頁面維持在開啟狀態，請返回 **[端點]** 索引標籤，然後按一下 **[重新整理]** 來更新 **[端點值]** 方格。  
   
-##  <a name="BackupPreferencesTab"></a> 備份喜好設定索引標籤  
+##  <a name="backup-preferences-tab"></a><a name="BackupPreferencesTab"></a> 備份喜好設定索引標籤  
  若要指定備份位置，請選擇下列其中一個選項：  
   
  **慣用次要**  
@@ -137,7 +137,7 @@ ms.locfileid: "74822568"
  **排除複本**  
  避免選擇這個可用性複本來執行備份作業。 例如，這對於您永遠不希望將備份容錯移轉到其中的遠端可用性複本十分有用。  
   
-##  <a name="Listener"></a> 接聽程式索引標籤  
+##  <a name="listener-tab"></a><a name="Listener"></a> 接聽程式索引標籤  
  指定[可用性群組接聽程式](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)的喜好設定，此接聽程式將會提供用戶端連接點，如下列的其中一項：  
   
  **現在不要建立可用性群組接聽程式。**  
@@ -195,7 +195,7 @@ ms.locfileid: "74822568"
 >  -   要求網路管理員將接聽程式的 IP 位址保留為專用。 將接聽程式的 DNS 主機名稱提供給應用程式開發人員，以便在要求與這個可用性群組進行用戶端連接時，用於連接字串中。  
 > -   將接聽程式的 DNS 主機名稱提供給應用程式開發人員，以便在要求與這個可用性群組進行用戶端連接時，用於連接字串中。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [使用可用性群組精靈 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   

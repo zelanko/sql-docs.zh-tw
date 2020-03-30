@@ -18,10 +18,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d9cd601d93666faad86fb8698bbc0b5ae8424454
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242381"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>強制目標伺服器輪詢主要伺服器
@@ -41,15 +41,15 @@ ms.locfileid: "75242381"
   
 -   **若要強制目標伺服器輪詢主要伺服器，請使用：** [SQL Server Management Studio](#SSMS)  
   
-## <a name="BeforeYouBegin"></a>開始之前  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>開始之前  
   
-### <a name="Restrictions"></a>限制事項  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>限制事項  
 目標伺服器必須是主要伺服器上已註冊的伺服器。 您必須從主要伺服器執行本主題中提供的指示。  
   
-### <a name="Security"></a>安全性  
+### <a name="security"></a><a name="Security"></a>安全性  
 如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md) ＞和＜ [Choose the Right SQL Server Agent Service Account for Multiserver Environments](../../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)＞。  
   
-## <a name="SSMS"></a>使用 SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>使用 SQL Server Management Studio  
 **若要強制目標伺服器輪詢主要伺服器**  
   
 1.  在 **[物件總管]** 中展開主要伺服器。  

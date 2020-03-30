@@ -22,10 +22,10 @@ ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2e7dbdb8ea5a422b91f290478eeca4dfc9b21cbc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73064643"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)

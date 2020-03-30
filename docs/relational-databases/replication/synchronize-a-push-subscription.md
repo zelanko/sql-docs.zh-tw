@@ -31,7 +31,7 @@ ms.locfileid: "72907872"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  訂閱是由散發代理程式 (適用於快照式與異動複寫) 或合併代理程式 (適用於合併式複寫) 同步處理。 代理程式可以繼續執行、視需要執行，或是依照排程執行。 如需指定同步處理排程的詳細資訊，請參閱[指定同步處理排程](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
- 需要時從   中的 [本機發行集]  和 [本機訂閱][!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 資料夾，以及複寫監視器中的 [所有訂閱]  索引標籤同步處理訂閱。 Oracle 發行集的訂閱無法在需要時從「訂閱者」同步處理。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+ 需要時從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [本機發行集]  和 [本機訂閱]  資料夾，以及複寫監視器中的 [所有訂閱]  索引標籤同步處理訂閱。 Oracle 發行集的訂閱無法在需要時從「訂閱者」同步處理。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-publisher"></a>需要時在 Management Studio 上同步處理發送訂閱 (發行者端)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "72907872"
   
 4.  以滑鼠右鍵按一下您要同步處理的訂閱，然後按一下 **[檢視同步處理的狀態]** 。  
   
-5.  在 [檢視同步處理的狀態 - **訂閱者>:\<訂閱資料庫>]\<** 對話方塊中，按一下 [啟動]  。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
+5.  在 [檢視同步處理的狀態 - \<訂閱者>:\<訂閱資料庫>]  對話方塊中，按一下 [啟動]  。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
   
 6.  按一下 [關閉]  。  
 
@@ -57,7 +57,7 @@ ms.locfileid: "72907872"
   
 4.  接著會顯示有關建立連接到「散發者」的訊息。 按一下 [確定]  。  
   
-5.  在 [檢視同步處理的狀態 - **訂閱者>:\<訂閱資料庫>]\<** 對話方塊中，按一下 [啟動]  。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
+5.  在 [檢視同步處理的狀態 - \<訂閱者>:\<訂閱資料庫>]  對話方塊中，按一下 [啟動]  。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
   
 6.  按一下 [關閉]  。  
   

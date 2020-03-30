@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
 ms.openlocfilehash: 99c252c81b081a7d4e0583e6722c5c853904cc27
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78288970"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
@@ -409,7 +409,7 @@ DW_COMPATIBILITY_LEVEL (預覽) **=** {**AUTO** | 10 | 20 }
 |**10**| 在引進相容性層級支援之前，先執行 Transact-SQL 與查詢處理行為。|
 |**20**| 第 1 層相容性層級包含受限的 Transact-SQL 與查詢處理行為。 |
 
-## <a name="Permissions"></a> 權限
+## <a name="permissions"></a><a name="Permissions"></a> 權限
 
 資料庫上需要 `ALTER ANY DATABASE SCOPE CONFIGURATION`。 可由在資料庫上具有 CONTROL 權限的使用者來授與此權限。
 

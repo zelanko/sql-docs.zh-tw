@@ -64,15 +64,15 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  指定可以撤銷的資料庫主體權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
  USER ::*database_user*  
- 指定撤銷其權限之使用者的類別和名稱。 範圍限定詞 (**::**) 是必要項。  
+ 指定撤銷其權限之使用者的類別和名稱。 範圍限定詞 ( **::** ) 是必要項。  
   
  ROLE ::*database_role*  
- 指定撤銷其權限之角色的類別和名稱。 範圍限定詞 (**::**) 是必要項。  
+ 指定撤銷其權限之角色的類別和名稱。 範圍限定詞 ( **::** ) 是必要項。  
   
  APPLICATION ROLE ::*application_role*  
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
- 指定撤銷其權限之應用程式角色的類別和名稱。 範圍限定詞 (**::**) 是必要項。  
+ 指定撤銷其權限之應用程式角色的類別和名稱。 範圍限定詞 ( **::** ) 是必要項。  
   
  GRANT OPTION  
  指出會撤銷對其他主體授與指定權限的權限。 不會撤銷權限本身。  
@@ -180,7 +180,7 @@ GO
 ```  
   
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. 從應用程式角色撤銷使用者的 IMPERSONATE 權限  
- 下列範例會從 `IMPERSONATE` 應用程式角色 `HamithaL` 撤銷使用者 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的 `AccountsPayable17` 權限。  
+ 下列範例會從 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 應用程式角色 `IMPERSONATE` 撤銷使用者 `HamithaL` 的 `AccountsPayable17` 權限。  
   
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   

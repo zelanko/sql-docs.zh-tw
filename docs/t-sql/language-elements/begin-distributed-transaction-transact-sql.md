@@ -27,10 +27,10 @@ ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0faddc5b763a2728dc507d2aad17b26501846452
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68125316"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)

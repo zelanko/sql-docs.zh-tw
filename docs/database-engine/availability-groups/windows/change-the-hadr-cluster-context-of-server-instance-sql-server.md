@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: c54c26c93d065f5b9d0beb741d9a7024ff8a2199
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75241811"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>變更哪個叢集管理 Always On 可用性群組複本的中繼資料
@@ -32,7 +32,7 @@ ms.locfileid: "75241811"
 > [!CAUTION]  
 >  僅在跨叢集移轉 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 部署時才切換 HADR 叢集內容。  
   
-##  <a name="Restrictions"></a> 限制事項  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   您只能將 HADR 叢集內容從本機 WSFC 叢集切換至遠端叢集，然後從遠端叢集切換回本機叢集。 您無法將 HADR 叢集內容從某一個遠端叢集切換至另一個遠端叢集。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75241811"
   
 -   遠端 HADR 叢集內容隨時可以切換回本機叢集。 不過，只要伺服器執行個體裝載任何可用性複本，內容就不能再次切換。  
   
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   您變更 HADR 叢集內容所在的伺服器執行個體必須執行 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 或更新版本 (Enterprise Edition 或更新版本)。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "75241811"
   
 -   所有同步認可複本都必須是 SYNCHRONIZED，您才能從遠端叢集切換至本機叢集。  
   
-##  <a name="Recommendations"></a> 建議  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   我們建議您指定完整網域名稱。 這是因為，為了尋找簡短名稱的目標 IP 位址，ALTER SERVER CONFIGURATION 會使用 DNS 解析。 在某些情況下，根據 DNS 搜尋順序，使用簡短名稱可能會產生混淆。 例如，請考慮下列命令，該命令是在 `abc` 網域 (`node1.abc.com`) 中的節點上執行。 預期的目的地叢集是 `CLUS01` 網域 ( `xyz` ) 中的`clus01.xyz.com`叢集。 不過，本機網域主機也會裝載名為 `CLUS01` (`clus01.abc.com`) 的叢集。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "75241811"
     ```  
   
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
   
 -   **SQL Server 登入**  
   
@@ -82,7 +82,7 @@ ms.locfileid: "75241811"
   
     -   遠端 WSFC 讀寫存取。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **變更可用性複本的 WSFC 叢集內容**  
   
 1.  連接到裝載可用性群組之主要複本或次要複本的伺服器執行個體。  
@@ -112,7 +112,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
 ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;  
 ```  
   
-##  <a name="FollowUp"></a> 後續操作：切換可用性複本的叢集內容之後  
+##  <a name="follow-up-after-switching-the-cluster-context-of-an-availability-replica"></a><a name="FollowUp"></a> 後續操作：切換可用性複本的叢集內容之後  
  新的 HADR 叢集內容會立即生效，不需要重新啟動伺服器執行個體。 HADR 叢集內容設定是持續性的執行個體層級設定，即使伺服器執行個體重新啟動也會保持不變。  
   
  藉由查詢 [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md) 動態管理檢視確認新的 HADR 叢集內容，如下所示：  
@@ -129,7 +129,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   之前屬於某個可用性複本的所有資料庫現在都會是 RESTORING 狀態。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [移除可用性群組接聽程式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
   
@@ -143,7 +143,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   [SQL Server 2012 技術文件](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   

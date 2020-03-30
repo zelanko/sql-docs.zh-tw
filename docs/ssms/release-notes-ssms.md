@@ -12,10 +12,10 @@ ms.reviewer: dnethi
 ms.custom: seo-lt-2019
 ms.date: 02/19/2020
 ms.openlocfilehash: 8be225915b657b4c3bcd8a141c6ebc4c3e6440c4
-ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77507558"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 版本資訊

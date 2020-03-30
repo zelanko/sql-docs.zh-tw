@@ -14,10 +14,10 @@ ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b0bd7ad95fcda039c6fd5a9299f4339d35b8a619
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67564125"
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services 組態檔
@@ -34,7 +34,7 @@ ms.locfileid: "67564125"
   
 -   [組態檔的摘要 (SharePoint 模式)](#bkmk_config_file_Summary_sharepoint_mode)  
   
-##  <a name="bkmk_config_file_Summary_native_mode"></a> 組態檔的摘要 (原生模式)  
+##  <a name="summary-of-configuration-files-native-mode"></a><a name="bkmk_config_file_Summary_native_mode"></a> 組態檔的摘要 (原生模式)  
  下表將提供儲存組態設定之位置的描述。 大部分組態設定都會儲存在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]隨附的組態檔中。 根據預設，其安裝目錄如下：  
   
 ```
@@ -57,7 +57,7 @@ C:\Program Files\Microsoft SQL Server Reporting Services\SSRS
 |RSReportDesigner.config|儲存報表設計師的組態設定。 如需詳細資訊，請參閱 [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。|\<磁碟機>:\Program Files\Microsoft Visual Studio 10\Common7\IDE\PrivateAssemblies|  
 |RSPreviewPolicy.config|儲存報表預覽期間使用之伺服器延伸模組的程式碼存取安全性原則。 如需有關這個檔案的詳細資訊，請參閱＜ [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)＞。|C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssembliesr|  
   
-##  <a name="bkmk_config_file_Summary_sharepoint_mode"></a> 組態檔的摘要 (SharePoint 模式)  
+##  <a name="summary-of-configuration-files-sharepoint-mode"></a><a name="bkmk_config_file_Summary_sharepoint_mode"></a> 組態檔的摘要 (SharePoint 模式)  
  下表提供用於 SharePoint 模式報表伺服器之組態檔的描述。 大部分組態設定都儲存在 SharePoint 服務應用程式資料庫中。 如需詳細資訊，請參閱 [Reporting Services SharePoint 服務和服務應用程式](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)。  
   
  根據預設，SharePoint 模式的安裝目錄如下：  

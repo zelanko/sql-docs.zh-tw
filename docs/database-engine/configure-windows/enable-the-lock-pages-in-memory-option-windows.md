@@ -13,10 +13,10 @@ ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8041f5f057962af79d75f121423233d3d6a3a806
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68011769"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>啟用鎖定記憶體分頁選項 (Windows)

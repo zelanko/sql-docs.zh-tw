@@ -22,7 +22,7 @@ ms.locfileid: "75254084"
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>可用性群組屬性：新增可用性群組 (一般頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題適用於 [新增可用性群組] 對話方塊和 [可用性群組屬性] 對話方塊的 [一般] 索引標籤。  [新增可用性群組] 對話方塊可讓您建立新的可用性群組，而不需要使用 [[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]]。 [可用性群組屬性] 對話方塊可讓您檢視和改變現有可用性群組的組態。  
+  本主題適用於 [新增可用性群組]  對話方塊和 [可用性群組屬性]  對話方塊的 [一般]  索引標籤。  [新增可用性群組]  對話方塊可讓您建立新的可用性群組，而不需要使用 [[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]]。 [可用性群組屬性]  對話方塊可讓您檢視和改變現有可用性群組的組態。  
   
  **若要檢視可用性群組屬性**  
   

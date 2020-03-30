@@ -11,10 +11,10 @@ ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: eaac8c264caf9009006853e0f02e258ad5d7408f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165737"
 ---
 # <a name="temporal-table-usage-scenarios"></a>時態表使用案例

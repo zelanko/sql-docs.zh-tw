@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
 ms.openlocfilehash: 0d27209448ece622a4906f6ba2cae28268c0210a
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79190602"
 ---
 # <a name="sql-server-2019-release-notes"></a>[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 版本資訊

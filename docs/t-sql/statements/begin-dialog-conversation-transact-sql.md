@@ -31,10 +31,10 @@ ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c456b6e34dba77b7e35cc24e8af673662725a2bb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70211379"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)

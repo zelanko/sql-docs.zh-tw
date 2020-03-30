@@ -17,10 +17,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 39f95bdd2e0285b655d077350ae21be957089964
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245823"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>Set the Polling Interval for Target Servers
@@ -35,16 +35,16 @@ ms.locfileid: "75245823"
   
 -   **若要使用下列項目設定目標伺服器的輪詢間隔：** [SQL Server Management Studio](#SSMS)、[Transact-SQL](#TSQL)  
   
-## <a name="BeforeYouBegin"></a>開始之前  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>開始之前  
 每一個目標伺服器可以同時執行相同作業的一個執行個體。 每個目標伺服器會定期輪詢主要伺服器、下載任何指派到目標伺服器的新作業之副本，然後中斷連接。 目標伺服器會先在本機執行作業，然後再重新連接到主要伺服器，以便上傳作業結果的狀態。  
   
 > [!NOTE]  
 > 如果當目標伺服器嘗試上傳作業狀態時無法存取主要伺服器，作業狀態會被多工緩衝處理，直到可以存取主要伺服器為止。  
   
-### <a name="Security"></a>安全性  
+### <a name="security"></a><a name="Security"></a>安全性  
 如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md) ＞和＜ [Choose the Right SQL Server Agent Service Account for Multiserver Environments](../../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)＞。  
   
-## <a name="SSMS"></a>使用 SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>使用 SQL Server Management Studio  
 **若要設定目標伺服器的輪詢間隔**  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
@@ -63,7 +63,7 @@ ms.locfileid: "75245823"
   
     2.  如果並非所有的目標伺服器都共用相同的輪詢間隔，請按一下 **[下列目標伺服器]** ，然後選取將使用此輪詢間隔的每一部目標伺服器。  
   
-## <a name="TSQL"></a>使用 Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>使用 Transact-SQL  
 **若要設定目標伺服器的輪詢間隔**  
   
 1.  在 [物件總管] 中，連接到 Database Engine 的執行個體，然後展開該執行個體。  

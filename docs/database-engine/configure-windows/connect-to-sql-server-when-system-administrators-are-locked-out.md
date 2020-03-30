@@ -15,10 +15,10 @@ ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ebaa078fc3be919a6114ad275b0ef5ece6f0d0d7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74761181"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>當系統管理員遭到鎖定時連接到 SQL Server

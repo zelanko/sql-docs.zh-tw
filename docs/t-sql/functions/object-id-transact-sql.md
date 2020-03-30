@@ -27,10 +27,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2191fbd39cea24142b866f0acc9a27717896dab9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67914859"
 ---
 # <a name="object_id-transact-sql"></a>OBJECT_ID (Transact-SQL)
@@ -55,7 +55,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
  這是要使用的物件。 *object_name* 是 **varchar** 或 **nvarchar**。 如果 *object_name* 是 **varchar**，則會隱含地轉換成 **nvarchar**。 資料庫和結構描述名稱的指定是選擇性的。  
   
  **'** *object_type* **'**  
- 這是結構描述範圍物件類型。 *object_type* 是 **varchar** 或 **nvarchar**。 如果 *object_type* 是 **varchar**，則會隱含地轉換成 **nvarchar**。 如需物件類型清單，請參閱 [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)中的**類型**資料行。  
+ 這是結構描述範圍物件類型。 *object_type* 是 **varchar** 或 **nvarchar**。 如果 *object_type* 是 **varchar**，則會隱含地轉換成 **nvarchar**。 如需物件類型清單，請參閱 **sys.objects &#40;Transact-SQL&#41;** 中的[類型](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)資料行。  
   
 ## <a name="return-types"></a>傳回型別  
  **int**  
@@ -77,7 +77,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 ## <a name="examples"></a>範例  
   
 ### <a name="a-returning-the-object-id-for-a-specified-object"></a>A. 傳回指定物件的物件識別碼  
- 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]資料庫之 `Production.WorkOrder` 資料表的物件識別碼。  
+ 下列範例會傳回 `Production.WorkOrder`資料庫之 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表的物件識別碼。  
   
 ```  
 USE master;  
@@ -98,7 +98,7 @@ GO
 ```  
   
 ### <a name="c-using-object_id-to-specify-the-value-of-a-system-function-parameter"></a>C. 使用 OBJECT_ID 來指定系統函數參數的值  
- 下列範例使用 [sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) 函數，來傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Person.Address` 資料表之所有索引和資料分割的資訊。  
+ 下列範例使用 `Person.Address`sys.dm_db_index_operational_stats[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 函數，來傳回 [ 資料庫中 ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) 資料表之所有索引和資料分割的資訊。  
   
 > [!IMPORTANT]  
 >  當您使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數 DB_ID 和 OBJECT_ID 傳回參數值時，請務必確定所傳回的是有效的識別碼。 如果找不到資料庫或物件名稱 (例如，因為不存在或是拼錯了)，這兩個函數都會傳回 NULL。 **sys.dm_db_index_operational_stats** 函數會將 NULL 解譯為指定所有資料庫或物件的萬用字元值。 由於這不見得是刻意安排的作業，因此本節所舉的範例，只會示範決定資料庫和物件識別碼的安全方法。  
@@ -123,10 +123,10 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-returning-the-object-id-for-a-specified-object"></a>D.傳回指定物件的物件識別碼  
- 下列範例會傳回 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]資料庫之 `FactFinance` 資料表的物件識別碼。  
+### <a name="d-returning-the-object-id-for-a-specified-object"></a>D：傳回指定物件的物件識別碼  
+ 下列範例會傳回 `FactFinance`資料庫之 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 資料表的物件識別碼。  
   
 ```  
 SELECT OBJECT_ID('AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';  

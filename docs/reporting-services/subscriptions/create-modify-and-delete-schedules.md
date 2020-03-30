@@ -21,10 +21,10 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 29b453914dce3d371ded8f401fd4af0380a115b8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140219"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
@@ -52,7 +52,7 @@ ms.locfileid: "67140219"
 
 已經過期的報表特定排程會繼續附加至報表。 您可以檢查排程的結束日期，判斷它是否過期。 過期的共用排程會保留在 [共用排程] 清單中。 [狀態] 欄位會指示排程是否已過期。 您可以延長結束日期來恢復排程，或者，若您不再需要排程參考時，可以移除它。
 
-## <a name="bkmk_native"></a> 建立、刪除或修改共用排程 (入口網站)
+## <a name="create-delete-or-modify-a-shared-schedule-web-portal"></a><a name="bkmk_native"></a> 建立、刪除或修改共用排程 (入口網站)
  建立與修改排程，包含決定排程何時執行的設定頻率選項。
 
  您可以在任何時候建立或修改排程。 不過，如果排程在您修改完成之前便開始執行，則會使用舊版排程。 修訂的排程在您儲存之前不會生效。
@@ -114,7 +114,7 @@ ms.locfileid: "67140219"
 
  如果您刪除了多個報表和訂閱所使用的共用排程，報表伺服器將會針對先前使用此共用排程的每個報表和訂閱建立個別的排程。 每個新的個別排程將包含共用排程中原本指定的日期、時間和循環模式。
 
-##  <a name="bkmk_sharepoint"></a>建立及管理共用排程 (SharePoint 模式)
+##  <a name="create-and-manage-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a>建立及管理共用排程 (SharePoint 模式)
  您必須具有網站管理員的身分，才能在 SharePoint 網站上建立、修改或刪除共用排程。
 
  您可以依排程的描述性名稱來識別特定的排程。 如果沒有指定名稱，便會根據排程的相關事實 (例如排程的循環模式或執行日期和時間) 來建立預設名稱。

@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73530946"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 陳述式 (Transact-SQL)
@@ -382,7 +382,7 @@ RESTORE 可以在發生錯誤之後，重新啟動。 另外，您也可以指�
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含備份與還原記錄資料表，以便用來為每個伺服器執行個體進行追蹤備份和還原活動。 當執行還原時，也會修改備份記錄資料表。 如需這些資料表的資訊，請參閱[備份記錄與標頭資訊](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)。
 
-## <a name="REPLACEoption"></a> REPLACE 選項影響
+## <a name="replace-option-impact"></a><a name="REPLACEoption"></a> REPLACE 選項影響
 REPLACE 不應經常使用，而且只應在審慎考量之後使用。 還原通常可以防止意外將資料庫覆寫成不同資料庫。 如果 RESTORE 陳述式中指定的資料庫已經存在於目前伺服器，而且指定的資料庫系列 GUID 與備份組中記錄的資料庫系列 GUID 不同，將不會還原資料庫。 這是重要的防護措施。
 
 REPLACE 選項會覆寫還原通常會執行的數項重要安全檢查。 會覆寫的檢查如下：
@@ -434,7 +434,7 @@ REPLACE 選項會覆寫還原通常會執行的數項重要安全檢查。 會�
 
 RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此；因此，`db_owner` 固定資料庫角色的成員並沒有 RESTORE 權限。
 
-## <a name="examples"></a> 範例
+## <a name="examples"></a><a name="examples"></a> 範例
 
 所有範例都假設已執行完整資料庫備份。
 
@@ -455,7 +455,7 @@ RESTORE 範例包括：
 > [!NOTE]
 > 如需其他範例，請參閱[還原和復原概觀](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)中所列的還原做法主題。
 
-### <a name="restoring_full_db"></a> A. 還原完整資料庫
+### <a name="a-restoring-a-full-database"></a><a name="restoring_full_db"></a> A. 還原完整資料庫
 
 下列範例會從 `AdventureWorksBackups` 邏輯備份裝置還原完整的資料庫備份。 如需有關建立這個裝置的範例，請參閱[備份裝置](../../relational-databases/backup-restore/backup-devices-sql-server.md)。
 
@@ -469,7 +469,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;範例頂端&#93;](#examples)
 
-### <a name="restoring_full_n_differential_db_backups"></a> B. 還原完整和差異資料庫備份
+### <a name="b-restoring-full-and-differential-database-backups"></a><a name="restoring_full_n_differential_db_backups"></a> B. 還原完整和差異資料庫備份
 
 下列範例會還原完整資料庫備份，接著再從包含這兩種備份 `Z:\SQLServerBackups\AdventureWorks2012.bak` 備份裝置進行差異備份。 將進行還原的完整備份是裝置上的第六個備份組 (`FILE = 6`)，而差異資料庫備份是裝置上的第九個備份組 (`FILE = 9`)。 只要差異備份一完成復原，資料庫就完成復原。
 
@@ -486,7 +486,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;範例頂端&#93;](#examples)
 
-### <a name="restoring_db_using_RESTART"></a> C. 使用 RESTART 語法還原資料庫
+### <a name="c-restoring-a-database-using-restart-syntax"></a><a name="restoring_db_using_RESTART"></a> C. 使用 RESTART 語法還原資料庫
 
 下列範例會利用 `RESTART` 選項來重新啟動因伺服器斷電而中斷的 `RESTORE` 作業。
 
@@ -501,7 +501,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;範例頂端&#93;](#examples)
 
-### <a name="restoring_db_n_move_files"></a> D. 還原資料庫和移動檔案
+### <a name="d-restoring-a-database-and-move-files"></a><a name="restoring_db_n_move_files"></a> D. 還原資料庫和移動檔案
 
 下列範例會還原完整的資料庫和交易記錄，並將還原的資料庫移至 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` 目錄。
 
@@ -520,7 +520,7 @@ RESTORE LOG AdventureWorks2012
 
 [&#91;範例頂端&#93;](#examples)
 
-### <a name="copying_db_using_bnr"></a> E. 使用 BACKUP 和 RESTORE 複製資料庫
+### <a name="e-copying-a-database-using-backup-and-restore"></a><a name="copying_db_using_bnr"></a> E. 使用 BACKUP 和 RESTORE 複製資料庫
 
 下列範例使用 `BACKUP` 和 `RESTORE` 陳述式建立 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的副本。 `MOVE` 陳述式會使資料和記錄檔還原到指定的位置。 `RESTORE FILELISTONLY` 陳述式是用來決定資料庫中所要還原的檔案數目及名稱。 新資料庫複本的名稱是 `TestDB`。 如需詳細資訊，請參閱 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)。
 
@@ -540,7 +540,7 @@ GO
 
 [&#91;範例頂端&#93;](#examples)
 
-### <a name="restoring_to_pit_using_STOPAT"></a> F. 使用 STOPAT 還原至時間點
+### <a name="f-restoring-to-a-point-in-time-using-stopat"></a><a name="restoring_to_pit_using_STOPAT"></a> F. 使用 STOPAT 還原至時間點
 
 下列範例會將資料庫還原至 `12:00 AM``April 15, 2020` 時的狀態，並顯示含有多個記錄備份的還原作業。 在備份裝置 `AdventureWorksBackups`上，要還原的完整資料庫備份是裝置上的第三個備份組 (`FILE = 3`)，第一個記錄備份是第四個備份組 (`FILE = 4`)，而第二個記錄備份是第五個備份組 (`FILE = 5`)。
 
@@ -562,7 +562,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 
 [&#91;範例頂端&#93;](#examples)
 
-### <a name="restoring_transaction_log_to_mark"></a> G. 將交易記錄還原到標記
+### <a name="g-restoring-the-transaction-log-to-a-mark"></a><a name="restoring_transaction_log_to_mark"></a> G. 將交易記錄還原到標記
 
 下列範例會將交易記錄還原到名為 `ListPriceUpdate`的標示交易中之標示。
 
@@ -601,7 +601,7 @@ RESTORE LOG AdventureWorks2012
 
 [&#91;範例頂端&#93;](#examples)
 
-### <a name="restoring_using_TAPE"></a> H. 使用 TAPE 語法進行還原
+### <a name="h-restoring-using-tape-syntax"></a><a name="restoring_using_TAPE"></a> H. 使用 TAPE 語法進行還原
 
 下列範例會從 `TAPE` 備份裝置還原完整的資料庫備份。
 
@@ -612,7 +612,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;範例頂端&#93;](#examples)
 
-### <a name="restoring_using_FILE_n_FG"></a> I. 使用 FILE 與 FILEGROUP 語法進行還原
+### <a name="i-restoring-using-file-and-filegroup-syntax"></a><a name="restoring_using_FILE_n_FG"></a> I. 使用 FILE 與 FILEGROUP 語法進行還原
 
 下列範例會還原名為 `MyDatabase` 的資料庫，此資料庫擁有兩個檔案，一個次要檔案群組和一個交易記錄， 而且使用完整復原模式。
 
@@ -656,7 +656,7 @@ GO
 
 [&#91;範例頂端&#93;](#examples)
 
-### <a name="reverting_from_db_snapshot"></a> J. 從資料庫快照集還原
+### <a name="j-reverting-from-a-database-snapshot"></a><a name="reverting_from_db_snapshot"></a> J. 從資料庫快照集還原
 
 下列範例會將資料庫還原到某個資料庫快照集。 這個範例假設資料庫目前只有一個快照集。 如需如何建立這個資料庫快照集的範例，請參閱[建立資料庫快照集](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)。
 
@@ -673,7 +673,7 @@ GO
 
 [&#91;範例頂端&#93;](#examples)
 
-### <a name="Azure_Blob"></a> K. 從 Microsoft Azure Blob 儲存體服務進行還原
+### <a name="k-restoring-from-the-microsoft-azure-blob-storage-service"></a><a name="Azure_Blob"></a> K. 從 Microsoft Azure Blob 儲存體服務進行還原
 
 下面三個範例涉及使用 Microsoft Azure Blob 儲存體服務。 儲存體帳戶名稱為 `mystorageaccount`。 資料檔案的容器名為 `myfirstcontainer`。 備份檔案的容器名為 `mysecondcontainer`。 已針對每個容器建立具有讀取、寫入、刪除及列出權限的預存存取原則。 已使用與此「預存存取原則」關聯的「共用存取簽章」建立 SQL Server 認證。 如需使用 Microsoft Azure Blob 儲存體來進行 SQL Server 備份及還原的特定資訊，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。
 
@@ -814,11 +814,11 @@ GRANT CREATE ANY DATABASE TO [mylogin];
 
 RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此；因此，`db_owner` 固定資料庫角色的成員並沒有 RESTORE 權限。
 
-## <a name="examples"></a> 範例
+## <a name="examples"></a><a name="examples"></a> 範例
 
 下列範例會從 URL　還原僅限複製資料庫備份，包括建立認證。
 
-### <a name="restore-mi-database"></a> A. 從四個備份裝置還原資料庫
+### <a name="a-restore-database-from-four-backup-devices"></a><a name="restore-mi-database"></a> A. 從四個備份裝置還原資料庫
 
 ```sql
 
@@ -842,7 +842,7 @@ Msg 1801, Level 16, State 1, Line 9
 Database 'WideWorldImportersStandard' already exists. Choose a different database name.
 ```
 
-### <a name="restore-mi-database-variables"></a> B. 還原透過變數所指定的資料庫
+### <a name="b-restore-database-specified-via-variable"></a><a name="restore-mi-database-variables"></a> B. 還原透過變數所指定的資料庫
 
 ```sql
 DECLARE @db_name sysname = 'WideWorldImportersStandard';
@@ -852,7 +852,7 @@ RESTORE DATABASE @db_name
 FROM URL = @url
 ```
 
-### <a name="restore-mi-database-progress"></a> C. 追蹤還原陳述式的進度
+### <a name="c-track-progress-of-restore-statement"></a><a name="restore-mi-database-progress"></a> C. 追蹤還原陳述式的進度
 
 ```sql
 SELECT query = a.text, start_time, percent_complete,

@@ -14,10 +14,10 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e2be902c241403ec044b3d348f90dc85327b8ad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909529"
 ---
 # <a name="unpack-a-dac-package"></a>解除封裝 DAC 封裝
@@ -28,10 +28,10 @@ ms.locfileid: "72909529"
   
 2.  **若要解除封裝 DAC，請使用下列方式：** [解除封裝資料層應用程式對話方塊](#UnpackDACDial)、[檢查 DAC 套件的內容](#ExamDACPack)  
 
-##  <a name="Security"></a> Security  
+##  <a name="security"></a><a name="Security"></a> Security  
  建議您不要部署來源不明或來源不受信任的 DAC 封裝。 這類 DAC 可能包含惡意程式碼，因此可能會執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述而造成錯誤。 在您使用來源不明或來源不受信任的 DAC 之前，請將它部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的隔離測試執行個體、解除封裝 DAC 並檢查程式碼，例如預存程序或其他使用者定義的程式碼。  
   
-##  <a name="UnpackDACDial"></a> 解除封裝資料層應用程式對話方塊  
+##  <a name="unpack-data-tier-application-dialog"></a><a name="UnpackDACDial"></a> 解除封裝資料層應用程式對話方塊  
  **解除封裝 DAC 封裝檔案**  
   
 -   在 Windows 檔案總管  中，巡覽至 DAC 封裝 (.dacpac) 檔案的位置。  
@@ -48,7 +48,7 @@ ms.locfileid: "72909529"
   
     -   [瀏覽資料夾](#Browse)  
   
-###  <a name="Unpack"></a> 解除封裝 Microsoft SQL Server DAC 封裝檔案  
+###  <a name="unpack-microsoft-sql-server-dac-package-file"></a><a name="Unpack"></a> 解除封裝 Microsoft SQL Server DAC 封裝檔案  
  使用此頁面可指定要放置解除封裝檔案的目的地資料夾，然後執行解除封裝作業。  
   
  **檔案將解除封裝至這個資料夾** - 指定放置解除封裝檔案之資料夾的完整路徑。 如果此資料夾已經存在，而且您知道完整路徑，請在方塊中輸入路徑。 如果不存在，請按一下 **[瀏覽]** 按鈕，導覽至資料夾或建立新的資料夾。  
@@ -59,7 +59,7 @@ ms.locfileid: "72909529"
   
  **取消** - 結束此對話方塊，而不解除封裝 DAC 封裝。  
   
-###  <a name="Browse"></a> 瀏覽資料夾  
+###  <a name="browse-for-folder"></a><a name="Browse"></a> 瀏覽資料夾  
  使用此頁面可選擇解除封裝作業的目的地資料夾。 您也可以選擇建立新的資料夾。  
   
  **資料夾清單** - 顯示電腦的檔案階層。 展開節點，導覽至要解除封裝 DAC 封裝的資料夾。 按一下此資料夾，然後按一下 **[確定]** 。  
@@ -70,7 +70,7 @@ ms.locfileid: "72909529"
   
  **取消** - 結束此對話方塊，而不選取資料夾。  
   
-##  <a name="ExamDACPack"></a> 檢查 DAC 封裝的內容  
+##  <a name="examine-the-contents-of-a-dac-package"></a><a name="ExamDACPack"></a> 檢查 DAC 封裝的內容  
  在解除封裝之後，您可以檢查 [解除封裝資料層應用程式]  對話方塊所產生的檔案。 此對話方塊會在選取的目的地資料夾中建置下列檔案：  
   
 1.  Transact-SQL 指令碼，其中包含建立 DAC 中所定義之物件的陳述式。 檔案名稱為 *DACName*.sql，其中 *DACName* 是 DAC 的名稱。  

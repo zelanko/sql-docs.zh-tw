@@ -22,10 +22,10 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: mikeray
 ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288352"
 ---
 # <a name="server-memory-configuration-options"></a>伺服器記憶體設定選項

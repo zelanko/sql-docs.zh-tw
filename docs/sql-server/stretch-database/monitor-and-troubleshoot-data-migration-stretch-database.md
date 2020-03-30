@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843783"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>監視和疑難排解資料移轉 (Stretch Database)
@@ -33,10 +33,10 @@ ms.locfileid: "73843783"
   
  ![Stretch Database 監視](../../sql-server/stretch-database/media/stretch-monitor.PNG "Stretch Database 監視")  
   
-##  <a name="Migration"></a> 在動態管理檢視中檢查資料移轉狀態  
+##  <a name="check-the-status-of-data-migration-in-a-dynamic-management-view"></a><a name="Migration"></a> 在動態管理檢視中檢查資料移轉狀態  
  開啟動態管理檢視 **sys.dm_db_rda_migration_status** 查看已移轉的批次和資料列數目。 如需詳細資訊，請參閱 [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md)。  
   
-##  <a name="Firewall"></a> 對資料移轉進行疑難排解  
+##  <a name="troubleshoot-data-migration"></a><a name="Firewall"></a> 對資料移轉進行疑難排解  
  **已啟用 Stretch 之資料表中的資料列沒有移轉到 Azure。發生什麼問題？**  
  有幾個問題會影響移轉。 請檢查下列事項。  
   

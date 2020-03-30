@@ -16,10 +16,10 @@ ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a8114722ac95c1404a45d8c85bf1736e541fa0ae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68093606"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server、Databases 物件

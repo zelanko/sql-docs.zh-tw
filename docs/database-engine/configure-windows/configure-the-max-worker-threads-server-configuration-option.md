@@ -14,10 +14,10 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5d27c61576c3af432acfa6c791d25b1bbe9a51de
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75776417"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>設定 max worker threads 伺服器組態選項
@@ -43,13 +43,13 @@ ms.locfileid: "75776417"
   
 -   **後續操作：** [設定 max worker threads 選項之後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   當實際的查詢要求數目小於 **max worker threads**的設定值時，就會由一個執行緒處理每一個查詢要求。 然而，當實際的查詢要求數目超過 **max worker threads**的設定值時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會將工作者執行緒納入集區中，好讓下一個可用的工作者執行緒來處理要求。  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   此選項是進階選項，只有具經驗的資料庫管理員或通過認證的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專業人員才可變更。 如果您懷疑發生效能問題，很可能並非是否能使用背景工作執行緒所致。 原因較有可能是因為 I/O 等作業導致背景工作執行緒處於等待狀態。 建議您在變更背景工作執行緒設定的上限前，先找出效能問題的根本原因。  
   
@@ -100,12 +100,12 @@ ms.locfileid: "75776417"
  WHERE s.is_user_process = 0;  
  ```  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 `RECONFIGURE` 陳述式時，使用者必須取得 `ALTER SETTINGS` 伺服器層級權限。 **sysadmin** 和 **serveradmin** 固定伺服器角色隱含地持有 `ALTER SETTINGS` 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+##  <a name="using-ssmanstudiofull"></a><a name="SSMSProcedure"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>設定 max worker threads 選項  
   
@@ -119,7 +119,7 @@ ms.locfileid: "75776417"
 > **Max worker threads** 選項可用來設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序可使用的工作者執行緒數目。 **max worker threads** 的預設值對大部份系統而言都是最合適的。 但依系統組態而定，將 **max worker threads** 設為較小的值有時候可提高效能。
 > 如需詳細資訊，請參閱此頁面中的 [[建議]](#Recommendations)。
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>設定 max worker threads 選項  
   
@@ -142,7 +142,7 @@ RECONFIGURE;
 GO  
 ```  
   
-##  <a name="FollowUp"></a> 後續操作：設定最大背景工作執行緒選項之後  
+##  <a name="follow-up-after-you-configure-the-max-worker-threads-option"></a><a name="FollowUp"></a> 後續操作：設定最大背景工作執行緒選項之後  
  無須重新啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，變更會在執行 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) 後立即生效。  
   
 ## <a name="see-also"></a>另請參閱  

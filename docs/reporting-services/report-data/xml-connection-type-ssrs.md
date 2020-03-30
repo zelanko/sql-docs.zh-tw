@@ -9,10 +9,10 @@ ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9355ac713c502acbbd319ec7bdc9cb035079ca34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081677"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 連接類型 (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "77081677"
   
  您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱 [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
-##  <a name="Connection"></a> 連接字串  
+##  <a name="connection-string"></a><a name="Connection"></a> 連接字串  
  連接字串必須是指向 Web 服務、網路架構應用程式或可透過 HTTP 使用之 XML 文件的 URL； XML 文件的副檔名必須是 XML。 您也可以針對內嵌在資料集查詢中的 XML 資料使用空的連接字串。  
   
  下列範例分別說明 Web 服務和 XML 文件的連接字串語法。 不支援 `file://` 通訊協定。  
@@ -35,7 +35,7 @@ ms.locfileid: "77081677"
   
  如需更多連接字串範例，請參閱 [報表產生器中的資料連接、資料來源及連接字串](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
-##  <a name="Credentials"></a> 認證  
+##  <a name="credentials"></a><a name="Credentials"></a> 認證  
  需要有認證才能夠執行報表、於本機預覽報表並且從報表伺服器預覽報表。  
   
  發行報表之後，您可能需要變更資料來源的認證，如此當報表在報表伺服器上執行時，擷取資料的權限就會是有效的。  
@@ -50,7 +50,7 @@ ms.locfileid: "77081677"
   
  如需詳細資訊，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 和[指定報表資料來源的認證及連接資訊](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
-##  <a name="Query"></a> 查詢  
+##  <a name="queries"></a><a name="Query"></a> 查詢  
  查詢會指定要為報表資料集擷取的資料。 查詢結果集中的資料行會填入資料集的欄位集合。 報表只會處理查詢所擷取的第一個結果集。  
   
  您必須使用以文字為基礎的查詢設計工具來建立查詢； 查詢必須傳回 XML 資料。  
@@ -131,17 +131,17 @@ ms.locfileid: "77081677"
   
  如需詳細資訊，請參閱 [Element Path Syntax for XML Report Data &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md) (XML 報表資料的元素路徑語法 &#40;SSRS&#41;)。  
   
-##  <a name="Parameters"></a> 參數  
+##  <a name="parameters"></a><a name="Parameters"></a> 參數  
  系統不會分析查詢來識別參數。  
   
  若要加入參數，您必須透過 [[資料集屬性](https://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)] 對話方塊上的 [參數]  頁面手動建立參數。  
   
-##  <a name="Remarks"></a> 備註  
+##  <a name="remarks"></a><a name="Remarks"></a> 備註  
  XML 資料延伸模組支援從表格式而非階層式 XML 資料進行報告的功能。 如需詳細資訊，請參閱[從外部資料來源新增資料 &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)。  
   
  沒有提供從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫擷取 XML 文件的內建支援。  
   
-##  <a name="HowTo"></a> 如何主題  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 如何主題  
  本節包含使用資料連接、資料來源與資料集的逐步指示。  
   
  [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -150,7 +150,7 @@ ms.locfileid: "77081677"
   
  [將篩選加入資料集中 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
-##  <a name="Related"></a> 相關章節  
+##  <a name="related-sections"></a><a name="Related"></a> 相關章節  
  本文件集的這些章節會提供報表資料的深入概念性資訊，以及如何定義、自訂和使用與報表資料相關組件的程序資訊。  
   
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

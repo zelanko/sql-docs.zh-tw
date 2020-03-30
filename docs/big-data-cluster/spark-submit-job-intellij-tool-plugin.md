@@ -11,10 +11,10 @@ ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 70cdc7e9738abdde2dfaf479320b11a94469f661
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244077"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>在 IntelliJ 中於 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上提交 Spark 作業

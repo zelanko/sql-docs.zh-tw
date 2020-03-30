@@ -11,10 +11,10 @@ ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e95b86d2d29bb3883f6fd76db29f17e5936d1b53
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71283683"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>課程 1-5：新增及設定一般檔案來源

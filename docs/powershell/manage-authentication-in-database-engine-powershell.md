@@ -12,10 +12,10 @@ ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 22c48323aa7570440a3edb06400d9a96e9bd9924
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75557961"
 ---
 # <a name="powershell-manage-authentication-to-sql-server"></a>PowerShell：管理對 SQL Server 的驗證
@@ -29,12 +29,12 @@ ms.locfileid: "75557961"
 > 若要安裝 **SqlServer** 模組，請參閱[安裝 SQL Server PowerShell](download-sql-server-ps-module.md)。
 
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您在 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的執行個體中可執行的所有動作，都是透過授與用來連接至執行個體之驗證認證的權限所控制。 依預設， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者和 Cmdlet 會使用用來建立 [!INCLUDE[ssDE](../includes/ssde-md.md)]之 Windows 驗證連接的 Windows 帳戶。  
   
  若要進行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證連接，您必須提供 SQL Server 驗證登入識別碼和密碼。 使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者時，您必須將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入認證與虛擬磁碟機產生關聯，然後使用變更目錄命令 (**cd**) 連接到該磁碟機。 在 Windows PowerShell 中，安全性認證只能與虛擬磁碟機產生關聯。  
   
-##  <a name="SQLAuthVirtDrv"></a> 使用虛擬磁碟機的 SQL Server 驗證  
+##  <a name="sql-server-authentication-using-a-virtual-drive"></a><a name="SQLAuthVirtDrv"></a> 使用虛擬磁碟機的 SQL Server 驗證  
  **建立與 SQL Server 驗證登入相關聯的虛擬磁碟機**  
   
 1.  建立的函數：  
@@ -72,7 +72,7 @@ sqldrive SQLAuth
 cd SQLAuth  
 ```  
   
-##  <a name="SQLAuthInvSqlCmd"></a> 使用 Invoke-Sqlcmd 的 SQL Server 驗證  
+##  <a name="sql-server-authentication-using-invoke-sqlcmd"></a><a name="SQLAuthInvSqlCmd"></a> 使用 Invoke-Sqlcmd 的 SQL Server 驗證  
  **搭配使用 Invoke-Sqlcmd 與 SQL Server 驗證**  
   
 1.  使用 **-Username** 參數可指定登入識別碼，而 **-Password** 參數則可指定相關聯的密碼。  

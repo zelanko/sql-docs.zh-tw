@@ -14,10 +14,10 @@ ms.assetid: cfbc6158-ab96-44b4-87eb-ea278c1b0c6b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9a372bf572373d0c3557ec4e40a32ba937d57d88
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012310"
 ---
 # <a name="configure-the-remote-proc-trans-server-configuration-option"></a>設定 remote proc trans 伺服器組態選項
@@ -48,22 +48,22 @@ ms.locfileid: "68012310"
   
 -   **後續操作：** [設定遠端程序交易選項之後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   設定這個數值之前必須先允許遠端伺服器連接。  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   此選項主要是針對使用遠端預存程序的應用程式提供舊版 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相容性。 請使用參考連結的伺服器 (使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)定義的) 之分散式查詢，而不要發出遠端預存程序呼叫。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-the-remote-proc-trans-option"></a>設定 remote proc trans 選項  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68012310"
   
 3.  在 **[遠端伺服器連接]** 之下，選取 **[需要伺服器對伺服器通訊的分散式交易]** 核取方塊。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-configure-the-remote-proc-trans-option"></a>設定 remote proc trans 選項  
   
@@ -95,7 +95,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 後續操作：設定遠端程序交易選項之後  
+##  <a name="follow-up-after-you-configure-the-remote-proc-trans-option"></a><a name="FollowUp"></a> 後續操作：設定遠端程序交易選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

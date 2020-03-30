@@ -11,10 +11,10 @@ ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75608027"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>連線至 ODBC 資料來源 (SQL Server 匯入和匯出精靈)
@@ -65,7 +65,7 @@ ms.locfileid: "75608027"
 
 如果您提供連接字串，[選擇資料來源]  或 [選擇目的地]  頁面會顯示精靈連線至資料來源將使用的所有連接資訊，例如伺服器和資料庫名稱以及驗證方法。 如果您提供 DSN，就不會顯示這項資訊。
 
-## <a name="odbc_dsn"></a> 選項 1 - 提供 DSN
+## <a name="option-1---provide-a-dsn"></a><a name="odbc_dsn"></a> 選項 1 - 提供 DSN
 如果您想要提供含有 DSN (資料來源名稱) 的連接資訊，請使用 [ODBC 資料來源管理員]  小程式來尋找現有 DSN 的名稱，或建立新的 DSN。
 1.  在 [開始] 功能表或 [控制台] 中搜尋或瀏覽至 [ODBC 資料來源 (64 位元)]  小程式。 如果您只有 32 位元驅動程式，或者必須使用 32 位元驅動程式，請改為搜尋或瀏覽至 [ODBC 資料來源 (32 位元)]  。
 2.  啟動小程式。 即會開啟 [ODBC 資料來源管理員]  視窗。 以下是小程式的外觀。
@@ -88,7 +88,7 @@ ms.locfileid: "75608027"
     
 8.  返回精靈，然後在 [選擇資料來源]  或 [選擇目的地]  頁面上的 [Dsn]  欄位中輸入 DSN 名稱。 繼續精靈的下一個步驟。
 
-## <a name="odbc_connstring"></a> 選項 2 - 提供連接字串
+## <a name="option-2---provide-a-connection-string"></a><a name="odbc_connstring"></a> 選項 2 - 提供連接字串
 如果您想要提供含有連接字串的連接資訊，本主題的其餘部分可協助您取得所需的連接字串。
 
 此範例將使用下列連接字串，以連線至 Microsoft SQL Server。 使用的資料庫範例是 **WideWorldImporters**，而且我們會連接到本機電腦上的 SQL Server。

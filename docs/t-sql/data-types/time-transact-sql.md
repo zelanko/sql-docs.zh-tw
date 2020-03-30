@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239d7ee532f4052caa067be7a20022720740ff3d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68000451"
 ---
 # <a name="time-transact-sql"></a>時間 (Transact-SQL)
@@ -88,7 +88,7 @@ ms.locfileid: "68000451"
   
  預設字串常值格式 (用於下層用戶端) 將會符合 SQL 標準格式 (定義為 hh:mm:ss[.nnnnnnn])。 這種格式與 TIME 的 ISO 8601 定義很相似 (不含小數秒數)。  
   
-##  <a name="BackwardCompatibilityforDownlevelClients"></a> 下層用戶端的回溯相容性  
+##  <a name="backward-compatibility-for-down-level-clients"></a><a name="BackwardCompatibilityforDownlevelClients"></a> 下層用戶端的回溯相容性  
  有些下層用戶端不支援 **time**、**date**、**datetime2** 及 **datetimeoffset** 資料類型。 下表顯示在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的上層執行個體與下層用戶端之間的類型對應。  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型|傳遞至下層用戶端的預設字串常值格式|下層 ODBC|下層 OLEDB|下層 JDBC|下層 SQLCLIENT|  
@@ -241,7 +241,7 @@ SELECT
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-###  <a name="ExampleB"></a> B. 將有效的時間字串常值插入 time(7) 資料行  
+###  <a name="b-inserting-valid-time-string-literals-into-a-time7-column"></a><a name="ExampleB"></a> B. 將有效的時間字串常值插入 time(7) 資料行  
  下表將列出可插入 **time(7)** 資料類型之資料行的不同字串常值，以及之後儲存在該資料行中的值。  
   
 |字串常值格式類型|插入的字串常值|儲存的 time(7) 值|描述|  

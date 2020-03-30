@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
 ms.openlocfilehash: cb50ca237fb1b9fae87b73fd81a9e6f2426b4775
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77079614"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新功能

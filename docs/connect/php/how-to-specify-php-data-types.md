@@ -14,10 +14,10 @@ ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae00c01e962da05015a5132608915fc9d70258f4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936390"
 ---
 # <a name="how-to-specify-php-data-types"></a>如何：指定 PHP 資料類型

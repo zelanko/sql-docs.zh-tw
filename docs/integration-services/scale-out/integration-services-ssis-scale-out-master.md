@@ -11,13 +11,13 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: e2ec01c0dcb22317e2e20e4485621d2a9aa8352a
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903805"
 ---
-# <a name="integration-services-ssis-scale-out-master"></a>Integration Services (SSIS) 相應放大主機
+# <a name="integration-services-ssis-scale-out-master"></a>Integration Services (SSIS) 擴增主機
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -25,7 +25,7 @@ ms.locfileid: "77903805"
 
 Scale Out Master 透過 SSISDB 目錄和 Scale Out Master 服務來管理 Scale Out 系統。 
 
-SSISDB 目錄儲存 Scale Out Worker、套件和執行的所有資訊。 它提供介面，以啟用相應放大背景工作以及在相應放大中執行封裝。如需詳細資訊，請參閱[逐步解說：設定 Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md) 和[在 Integration Services 中執行套件](run-packages-in-integration-services-ssis-scale-out.md)。
+SSISDB 目錄儲存 Scale Out Worker、套件和執行的所有資訊。 它提供介面，以啟用擴增背景工作以及在擴增中執行封裝。如需詳細資訊，請參閱[逐步解說：設定 Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md) 和[在 Integration Services 中執行套件](run-packages-in-integration-services-ssis-scale-out.md)。
 
 Scale Out Master 服務是一種 Windows 服務，負責與 Scale Out Worker 通訊。 它會透過 HTTPS 傳回 Scale Out Worker 上的套件執行狀態，並在 SSISDB 上處理資料。 
 
@@ -54,12 +54,12 @@ Scale Out Master 服務是一種 Windows 服務，負責與 Scale Out Worker 通
 
 |組態  |描述  |預設值  |
 |---------|---------|---------|
-|PortNumber|用來與相應放大背景工作通訊的網路連接埠號碼。|8391|
-|SSLCertThumbprint|用來保護與相應放大背景工作通訊的 SSL 憑證指紋。|在相應放大主機安裝期間指定的 SSL 憑證指紋|
+|PortNumber|用來與擴增背景工作通訊的網路連接埠號碼。|8391|
+|SSLCertThumbprint|用來保護與擴增背景工作通訊的 SSL 憑證指紋。|在擴增主機安裝期間指定的 SSL 憑證指紋|
 |SqlServerName|包含 SSISDB 目錄的 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 名稱。 例如，ServerName\\InstanceName。|使用 Scale Out Master 安裝的 SQL Server 名稱。|
 |CleanupCompletedJobsIntervalInMs|已完成執行工作的清除間隔，以毫秒為單位。|43200000|
 |DealWithExpiredTasksIntervalInMs|過期執行工作的處理間隔，以毫秒為單位。|300000|
-|MasterHeartbeatIntervalInMs|相應放大主機活動訊號的間隔，以毫秒為單位。 此屬性指定 Scale Out Master 更新其在 SSISDB 目錄中線上狀態的間隔。|30000|
+|MasterHeartbeatIntervalInMs|擴增主機活動訊號的間隔，以毫秒為單位。 此屬性指定 Scale Out Master 更新其在 SSISDB 目錄中線上狀態的間隔。|30000|
 |SqlConnectionTimeoutInSecs|連線至 SSISDB 時的 SQL 連線逾時，以秒為單位。|15|
 ||||    
 

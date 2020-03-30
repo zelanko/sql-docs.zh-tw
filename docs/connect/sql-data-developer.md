@@ -11,10 +11,10 @@ ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e750d14aae5006e1229130eb4055fac74a7029b
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198415"
 ---
 # <a name="sql-data-developer"></a>SQL 資料開發人員

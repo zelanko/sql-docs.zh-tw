@@ -11,10 +11,10 @@ ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: v-chojas
 author: MightyPen
 ms.openlocfilehash: 0cf2946517be732094d01ff9889faf080a36e85b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68006489"
 ---
 # <a name="custom-keystore-providers"></a>自訂金鑰儲存區提供者
@@ -99,7 +99,7 @@ int Init(CEKEYSTORECONTEXT *ctx, errFunc onError);
 
 |引數|描述|
 |:--|:--|
-|`ctx`|[輸入] 作業內容。|
+|`ctx`|[Input] 作業內容。|
 |`onError`|[輸入] 錯誤報告函式。|
 |`Return Value`|傳回非零表示成功，傳回零表示失敗。|
 

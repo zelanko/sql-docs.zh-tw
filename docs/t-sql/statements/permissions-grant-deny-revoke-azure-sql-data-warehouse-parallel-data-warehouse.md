@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 43292a665583962694974f524786356c747b7e9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75255472"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>權限：GRANT、DENY、REVOKE (Azure SQL 資料倉儲、平行處理資料倉儲)
@@ -120,9 +120,9 @@ REVOKE
  PDW 有時會執行預存程序，以將使用者動作散發至計算集點。 因此，不能拒絕整個資料庫的執行權限。 (例如 `DENY EXECUTE ON DATABASE::<name> TO <user>;` 會失敗)。因應之道就是拒絕對使用者結構描述或特定物件 (程序) 的執行權限。  
   
 ### <a name="implicit-and-explicit-permissions"></a>隱含和明確權限  
- 「明確權限」是藉由 **GRANT** 或 **DENY** 陳述式來賦予主體的 **GRANT** 或 **DENY** 權限。   
+ 「明確權限」  是藉由 **GRANT** 或 **DENY** 陳述式來賦予主體的 **GRANT** 或 **DENY** 權限。  
   
- 「隱含權限」是主體 (登入、使用者或資料庫角色) 從另一個資料庫角色繼承的 **GRANT** 或 **DENY** 權限。   
+ 「隱含權限」  是主體 (登入、使用者或資料庫角色) 從另一個資料庫角色繼承的 **GRANT** 或 **DENY** 權限。  
   
  隱含權限也可以繼承自涵蓋權限或父權限。 例如，藉由擁有資料表之上層結構描述的 **UPDATE** 權限或資料表的 **CONTROL** 權限，即可繼承資料表的 **UPDATE** 權限。  
   
@@ -263,7 +263,7 @@ REVOKE
   
 -   **USE** 陳述式不需要權限。 所有主體都可以在任何資料庫上執行 **USE** 陳述式。  
   
-##  <a name="Examples"></a> 範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+##  <a name="examples-sssdw-and-sspdw"></a><a name="Examples"></a> 範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-granting-a-server-level-permission-to-a-login"></a>A. 將伺服器層級權限授與登入  
  下列兩個陳述式會將伺服器層級權限授與某個登入。  

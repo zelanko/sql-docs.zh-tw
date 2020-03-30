@@ -9,10 +9,10 @@ ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 874fb7ba143c8f08a0f25501e1852b4d2b280cb2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67492858"
 ---
 # <a name="create-delete-or-modify-a-folder---reporting-services"></a>建立、刪除或修改資料夾 - Reporting Services

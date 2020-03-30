@@ -47,10 +47,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: c1065c56e3f07f1381e5056d1b2eca3a20ed0cd2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74249734"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
@@ -556,7 +556,7 @@ BACKUP LOG 的 NO_TRUNCATE 選項相當於同時指定 COPY_ONLY 和 CONTINUE_AF
 > [!NOTE]
 > 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中備份的簡介，請參閱[備份概觀](../../relational-databases/backup-restore/backup-overview-sql-server.md)。
 
-### <a name="Backup_Types"></a> 備份類型
+### <a name="backup-types"></a><a name="Backup_Types"></a> 備份類型
 
 支援的備份類型需視資料庫的復原模式而定，如下所示：
 
@@ -579,14 +579,14 @@ BACKUP LOG 的 NO_TRUNCATE 選項相當於同時指定 COPY_ONLY 和 CONTINUE_AF
 
 - 「僅複製備份」  是特殊用途的完整備份或記錄備份，與傳統備份的正常順序無關。 若要建立僅複製備份，請在 BACKUP 陳述式中指定 COPY_ONLY 選項。 如需詳細資訊，請參閱[只複製備份](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。
 
-### <a name="Tlog_Truncation"></a> 交易記錄截斷
+### <a name="transaction-log-truncation"></a><a name="Tlog_Truncation"></a> 交易記錄截斷
 
 為避免填滿資料庫的交易記錄，例行備份相當重要。 在簡單復原模式下，記錄截斷會自動在備份資料庫後發生，而在完整復原模式下，則會自動在備份交易記錄後發生。 不過，有時候您可以延遲截斷處理作業。 如需延遲記錄截斷可能因素的資訊，請參閱[交易記錄](../../relational-databases/logs/the-transaction-log-sql-server.md)。
 
 > [!NOTE]
 > `BACKUP LOG WITH NO_LOG` 和 `WITH TRUNCATE_ONLY` 選項已中止。 如果您要使用完整復原模式或大量記錄復原模式，而且您必須從資料庫移除記錄備份鏈結，請切換到簡單復原模式。 如需詳細資訊，請參閱[檢視或變更資料庫的復原模式](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)。
 
-### <a name="Formatting_Media"></a> 將備份媒體格式化
+### <a name="formatting-backup-media"></a><a name="Formatting_Media"></a> 將備份媒體格式化
 
 只有下列其中一種情況成立，BACKUP 陳述式才會將備份媒體格式化：
 
@@ -594,7 +594,7 @@ BACKUP LOG 的 NO_TRUNCATE 選項相當於同時指定 COPY_ONLY 和 CONTINUE_AF
 - 媒體是空的。
 - 作業正在寫入接續磁帶。
 
-### <a name="Backup_Devices_and_Media_Sets"></a> 使用備份裝置和媒體集
+### <a name="working-with-backup-devices-and-media-sets"></a><a name="Backup_Devices_and_Media_Sets"></a> 使用備份裝置和媒體集
 
 #### <a name="backup-devices-in-a-striped-media-set-a-stripe-set"></a>等量媒體集 (等量集) 中的備份裝置
 「等量集」  是一組磁碟檔案，其中的資料會分成幾個區塊，並依照固定順序散發。 等量集中所使用的備份裝置數目必須維持相同 (除非使用 `FORMAT` 來將媒體重新初始化)。
@@ -653,13 +653,13 @@ GO
 
 如需鏡像媒體集的詳細資訊，請參閱[鏡像備份媒體集](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)。 如需媒體集和媒體家族的一般詳細資訊，請參閱[媒體集、媒體家族與備份組](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)。
 
-### <a name="Restoring_Backups"></a> 還原 SQL Server 備份
+### <a name="restoring-sql-server-backups"></a><a name="Restoring_Backups"></a> 還原 SQL Server 備份
 
 若要還原資料庫，並選擇性地復原它以使其上線，或是還原檔案或檔案群組，請使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **還原**工作。 如需詳細資訊，請參閱[還原和復原概觀](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。
 
-## <a name="Additional_Considerations"></a> 關於 BACKUP 選項的其他考量
+## <a name="additional-considerations-about-backup-options"></a><a name="Additional_Considerations"></a> 關於 BACKUP 選項的其他考量
 
-### <a name="Interactions_SKIP_etc"></a> SKIP、NOSKIP、INIT 和 NOINIT 的互動
+### <a name="interaction-of-skip-noskip-init-and-noinit"></a><a name="Interactions_SKIP_etc"></a> SKIP、NOSKIP、INIT 和 NOINIT 的互動
 
 下列表格描述 { **NOINIT** | INIT } 與 { **NOSKIP** | SKIP } 選項之間的互動。
 
@@ -737,7 +737,7 @@ BACKUP DATABASE 和 BACKUP LOG 權限預設為 **sysadmin** 固定伺服器角�
 
 備份裝置實體檔案的擁有權和權限問題可能會干擾備份作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠讀取和寫入裝置；執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶必須具備寫入權限。 不過，在系統資料表中加入備份裝置項目的 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)並不會檢查檔案存取權限。 當您嘗試備份或還原時，存取實體資源之前不一定會出現備份裝置實體檔案的這些問題。
 
-## <a name="examples"></a> 範例
+## <a name="examples"></a><a name="examples"></a> 範例
 
 本區段包含下列範例：
 
@@ -755,7 +755,7 @@ BACKUP DATABASE 和 BACKUP LOG 權限預設為 **sysadmin** 固定伺服器角�
 > [!NOTE]
 > 備份的使用說明主題包含了其他的範例。 如需詳細資訊，請參閱[備份概觀](../../relational-databases/backup-restore/backup-overview-sql-server.md)。
 
-### <a name="backing_up_db"></a> A. 備份完整資料庫
+### <a name="a-backing-up-a-complete-database"></a><a name="backing_up_db"></a> A. 備份完整資料庫
 
 下列範例會將 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 資料庫備份到磁碟檔案。
 
@@ -766,7 +766,7 @@ BACKUP DATABASE AdventureWorks2012
 GO
 ```
 
-### <a name="backing_up_db_and_log"></a> B. 備份資料庫和記錄
+### <a name="b-backing-up-the-database-and-log"></a><a name="backing_up_db_and_log"></a> B. 備份資料庫和記錄
 
 下列範例會備份 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫，依預設採用簡單復原模式。 為了支援記錄備份，[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫會修改成使用完整復原模式。
 
@@ -804,7 +804,7 @@ GO
 > [!NOTE]
 > 如果是實際執行的資料庫，請定期備份記錄。 記錄的備份頻率必須足以保護資料不會遺失。
 
-### <a name="full_file_backup"></a> C. 建立次要檔案群組的完整檔案備份
+### <a name="c-creating-a-full-file-backup-of-the-secondary-filegroups"></a><a name="full_file_backup"></a> C. 建立次要檔案群組的完整檔案備份
 
 下列範例會為兩個次要檔案群組中的每個檔案建立完整檔案備份。
 
@@ -817,7 +817,7 @@ BACKUP DATABASE Sales
 GO
 ```
 
-### <a name="differential_file_backup"></a> D. 建立次要檔案群組的差異檔案備份
+### <a name="d-creating-a-differential-file-backup-of-the-secondary-filegroups"></a><a name="differential_file_backup"></a> D. 建立次要檔案群組的差異檔案備份
 
 下列範例會為兩個次要檔案群組中的每個檔案建立差異檔案備份。
 
@@ -832,7 +832,7 @@ BACKUP DATABASE Sales
 GO
 ```
 
-### <a name="create_single_family_mirrored_media_set"></a> E. 建立和備份至單一家族的鏡像媒體集中
+### <a name="e-creating-and-backing-up-to-a-single-family-mirrored-media-set"></a><a name="create_single_family_mirrored_media_set"></a> E. 建立和備份至單一家族的鏡像媒體集中
 
 下列範例會建立一個鏡像媒體集，其中包含單一媒體家族和四個鏡像，且會將 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 資料庫備份至其中。
 
@@ -847,7 +847,7 @@ WITH
     MEDIANAME = 'AdventureWorksSet0';
 ```
 
-### <a name="create_multifamily_mirrored_media_set"></a> F. 建立和備份至多重家族的鏡像媒體集中
+### <a name="f-creating-and-backing-up-to-a-multifamily-mirrored-media-set"></a><a name="create_multifamily_mirrored_media_set"></a> F. 建立和備份至多重家族的鏡像媒體集中
 
 下列範例會建立一個鏡像媒體集，其中的每個鏡像都由兩個媒體家族組成。 之後，這個範例會將 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 資料庫備份在這兩個鏡像中。
 
@@ -860,7 +860,7 @@ WITH
     MEDIANAME = 'AdventureWorksSet1';
 ```
 
-### <a name="existing_mirrored_media_set"></a> G. 備份至現有的鏡像媒體集中
+### <a name="g-backing-up-to-an-existing-mirrored-media-set"></a><a name="existing_mirrored_media_set"></a> G. 備份至現有的鏡像媒體集中
 
 下列範例會將備份組附加至先前範例所建立的媒體集中。
 
@@ -876,7 +876,7 @@ WITH
 > [!NOTE]
 > NOINIT 是預設值，這裡顯示它是為了更加清楚。
 
-### <a name="creating_compressed_backup_new_media_set"></a> H. 在新的媒體集中建立壓縮備份
+### <a name="h-creating-a-compressed-backup-in-a-new-media-set"></a><a name="creating_compressed_backup_new_media_set"></a> H. 在新的媒體集中建立壓縮備份
 
 下列範例會將媒體格式化、建立新的媒體集，並執行 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 資料庫的完整壓縮備份。
 
@@ -887,7 +887,7 @@ WITH
     COMPRESSION;
 ```
 
-### <a name="url"></a> I. 備份至 Microsoft Azure Blob 儲存體服務
+### <a name="i-backing-up-to-the-microsoft-azure-blob-storage-service"></a><a name="url"></a> I. 備份至 Microsoft Azure Blob 儲存體服務
 
 下列範例會為 `Sales` 執行完整資料庫備份以將它備份到 Microsoft Azure Blob 儲存體服務。 儲存體帳戶名稱為 `mystorageaccount`。 容器名稱為 `myfirstcontainer`。 已建立具有讀取、寫入、刪除和列出權限的預存存取原則。 已使用與預存存取原則相關聯的共用存取簽章來建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。 如需將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份至 Microsoft Azure Blob 儲存體服務的資訊，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)和 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。
 
@@ -897,7 +897,7 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5;
 ```
 
-### <a name="backup_progress"></a> J. 追蹤備份陳述式的進度
+### <a name="j-track-the-progress-of-backup-statement"></a><a name="backup_progress"></a> J. 追蹤備份陳述式的進度
 
 下列查詢會傳回目前正在執行備份陳述式的相關資訊：
 ```sql
@@ -1095,7 +1095,7 @@ BACKUP DATABASE 權限預設為**系統管理員**固定伺服器角色以及 **
 
 URL 的擁有權和權限問題可能會干擾備份作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須能夠讀取和寫入裝置；執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶必須具備寫入權限。
 
-## <a name="examples"></a> 範例
+## <a name="examples"></a><a name="examples"></a> 範例
 
 下列範例會為 `Sales` 執行 COPY_ONLY 備份以將它備份到 Microsoft Azure Blob 儲存體服務。 儲存體帳戶名稱為 `mystorageaccount`。 容器名稱為 `myfirstcontainer`。 已建立具有讀取、寫入、刪除和列出權限的預存存取原則。 已使用與預存存取原則相關聯的共用存取簽章來建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。 如需將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份至 Microsoft Azure Blob 儲存體服務的資訊，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)和 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。
 
@@ -1254,7 +1254,7 @@ DIFFERENTIAL 指定執行使用者資料庫的差異備份。 如果省略，預
 
 在 DATABASE 物件上採用 ExclusiveUpdate 鎖定。
 
-## <a name="Security"></a> Security
+## <a name="security"></a><a name="Security"></a> Security
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]備份不會儲存在應用裝置上。 因此，您的 IT 小組需負責管理備份安全性的所有層面。 例如，這包括管理備份資料的安全性、用來儲存備份之伺服器的安全性、以及將備份伺服器連線至[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]之網路基礎結構的安全性。
 

@@ -17,10 +17,10 @@ ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2a263cd161370a4d3f87c673209e82296ec2a28c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822259"
 ---
 # <a name="example-configure-database-mirroring-using-windows-authentication-transact-sql"></a>範例：使用 Windows 驗證設定資料庫鏡像 (Transact-SQL)
@@ -145,7 +145,7 @@ GO
     GO  
     ```  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
