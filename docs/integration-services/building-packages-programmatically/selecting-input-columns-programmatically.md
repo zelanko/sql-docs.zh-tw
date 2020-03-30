@@ -22,10 +22,10 @@ ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: edae052096c67e294f12a8f0f35e77b7f5a46187
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294885"
 ---
 # <a name="selecting-input-columns-programmatically"></a>以程式設計方式選取輸入資料行

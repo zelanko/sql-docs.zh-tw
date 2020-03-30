@@ -15,22 +15,22 @@ ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2b0b681ffb0b045ab5ba59c1a9fd28b3b295431f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70212316"
 ---
 # <a name="scm-services---change-the-service-startup-account"></a>SCM 服務 - 變更服務啟動帳戶
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來變更 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服務的啟動選項，以及變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所使用的服務帳戶。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 PowerShell。 如需如何選取適合的服務帳戶的詳細資訊，請參閱 [設定 Windows 服務帳戶和權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+  本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的啟動選項，以及變更 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所使用的服務帳戶。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 PowerShell。 如需如何選取適合的服務帳戶的詳細資訊，請參閱 [設定 Windows 服務帳戶和權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
 > [!IMPORTANT]  
 >  當您變更 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的服務啟動帳戶時，必須重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務 ( [!INCLUDE[ssDE](../../includes/ssde-md.md)])，才能讓變更生效。 重新啟動服務時，除非服務順利重新啟動，否則所有與該 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體相關的資料庫都會無法使用。 如果您必須變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的服務啟動帳戶，請確定您在定期排程的維護期間進行，或在可讓資料庫離線，而不會中斷每日作業時進行。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   叢集伺服器  
   
@@ -42,7 +42,7 @@ ms.locfileid: "70212316"
   
      在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 安裝期間， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務會設定成使用網路服務帳戶，但是它已停用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員可以變更指派給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務的帳戶，但是您無法啟用或啟動此服務。 在 SKU 從 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 升級為非 Express 之後，雖然不會自動啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務，但是您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員並將服務啟動模式變更為「手動」或「自動」，在需要時啟用此服務。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
   
 #### <a name="to-change-the-sql-server-service-startup-account"></a>變更 SQL Server 服務啟動帳戶  
   
@@ -60,7 +60,7 @@ ms.locfileid: "70212316"
   
 3.  在詳細資料窗格中，以滑鼠右鍵按一下您要變更服務啟動帳戶的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，然後按一下 [屬性]  。  
   
-4.  在 [SQL Server \<執行個體名稱> 屬性]    對話方塊中，按一下 [登入]  索引標籤，然後選取 [登入身分]  帳戶類型。  
+4.  在 [SQL Server **執行個體名稱> 屬性]\<**   對話方塊中，按一下 [登入]  索引標籤，然後選取 [登入身分]  帳戶類型。  
   
 5.  選取新的服務啟動帳戶之後，請按一下 **[確定]** 。  
   

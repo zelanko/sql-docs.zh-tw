@@ -19,10 +19,10 @@ ms.assetid: b0ef33fb-954a-4294-b05b-a87c14ce25a3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 09a7e9d6199b3227b51cb67a0687c2b812bd21d2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68031584"
 ---
 # <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;SERVERNAME (Transact-SQL)

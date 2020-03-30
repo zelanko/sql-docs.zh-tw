@@ -12,10 +12,10 @@ ms.assetid: 4fc7ec15-b722-4e3d-b7f9-3d39d171e96e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0844bcea9213a3f9272389ee9233ef1becdcd5ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68123167"
 ---
 # <a name="mssqlserver_41365"></a>MSSQLSERVER_41365

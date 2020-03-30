@@ -13,10 +13,10 @@ ms.assetid: f17abdd4-5f34-403a-ade4-7857d3056b83
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8ed9b592923c421c229706d69abf3b5de2c98bd0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68087104"
 ---
 # <a name="input-and-output-error-during-hard-page-fault"></a>硬性分頁錯誤期間的輸入和輸出錯誤

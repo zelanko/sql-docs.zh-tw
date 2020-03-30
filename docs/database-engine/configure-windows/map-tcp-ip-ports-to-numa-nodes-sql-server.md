@@ -21,10 +21,10 @@ ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 48c645bd85034f226650cf5e98ddd18a6b8efa9e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67997981"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>將 TCP/IP 連接埠對應到 NUMA 節點 (SQL Server)
@@ -45,11 +45,11 @@ ms.locfileid: "67997981"
 > [!NOTE]  
 >  若要讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能夠在每個 IP 位址的多個 TCP 通訊埠上接聽，請參閱 [設定 Database Engine 接聽多個 TCP 通訊埠](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
   
 #### <a name="to-map-a-tcpip-port-to-a-numa-node"></a>若要將 TCP/IP 通訊埠對應到 NUMA 節點  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中展開 [SQL Server 網路組態]  ，然後按一下 [\<執行個體名稱> 的通訊協定]   。  
+1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中展開 [SQL Server 網路組態]  ，然後按一下 [**執行個體名稱> 的通訊協定]** *\<* 。  
   
 2.  在詳細資料窗格中，按兩下 [TCP/IP]  。  
   

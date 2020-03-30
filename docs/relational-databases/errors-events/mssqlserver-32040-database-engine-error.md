@@ -12,10 +12,10 @@ ms.assetid: 709219b1-f8b2-4696-8923-dd2e91492eb8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8b5a78df53c3841ac84c59c8ef84233a8d7785b3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68105162"
 ---
 # <a name="mssqlserver_32040"></a>MSSQLSERVER_32040

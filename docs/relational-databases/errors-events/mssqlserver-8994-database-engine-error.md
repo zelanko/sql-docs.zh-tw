@@ -12,10 +12,10 @@ ms.assetid: 8f4b0e2f-04c0-46e4-9208-20a7085d7a1a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 917884670872daf6db0fa66c479c3d10a603e227
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68118383"
 ---
 # <a name="mssqlserver_8994"></a>MSSQLSERVER_8994

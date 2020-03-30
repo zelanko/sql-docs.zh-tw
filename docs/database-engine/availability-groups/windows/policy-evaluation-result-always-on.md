@@ -14,10 +14,10 @@ ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff428ab60ad51cfdf2cd19454c34e90644f30b5d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75235443"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>原則評估結果頁面 (Always On 儀表板)
@@ -25,7 +25,7 @@ ms.locfileid: "75235443"
 
   使用 AlwaysOn 儀表板的 [原則評估結果]  頁面檢視任何目前的原則問題。  
     
-##  <a name="Options"></a> 對話方塊選項  
+##  <a name="dialog-box-options"></a><a name="Options"></a> 對話方塊選項  
  **偵測到的問題**  
  針對每個偵測到的問題，各顯示一個資料列。 與問題相關的圖示提供視覺指標，以指出問題嚴重性，如下所示：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75235443"
  **其他資訊**  
  按一下此連結可開啟所選問題的說明主題。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   

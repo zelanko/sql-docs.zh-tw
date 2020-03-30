@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68697497"
 ---
 # <a name="data-type-conversion-database-engine"></a>資料類型轉換 (資料庫引擎)
@@ -135,7 +135,7 @@ SELECT @notastring + '1'
 |**datetime**、**smalldatetime**|**日期**|  
 |設成 NULL 的任何類型|**Variant** 設為 Null|  
   
-所有單一的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值皆會轉換成單一的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 值，但不包括 **binary**、**varbinary** 及 **image** 值。 這些值會在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中轉換成一維的 **Byte()** 陣列。 此陣列的範圍為 **Byte(** 0 到 _length_ 1 **)** ，其中 *length* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**、**varbinary** 或 **image** 值中的位元組數目。
+所有單一的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值皆會轉換成單一的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 值，但不包括 **binary**、**varbinary** 及 **image** 值。 這些值會在 **中轉換成一維的**Byte()[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 陣列。 此陣列的範圍為 **Byte(** 0 到 _length_ 1 **)** ，其中 *length* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**、**varbinary** 或 **image** 值中的位元組數目。
   
 這些轉換是從 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 資料類型到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。
   

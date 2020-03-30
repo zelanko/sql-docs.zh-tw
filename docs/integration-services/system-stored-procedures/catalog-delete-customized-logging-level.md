@@ -11,10 +11,10 @@ ms.assetid: 0aec1e34-f30b-4e5f-bba1-c26665cf2da6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b35576dc6a583f21f88547b40bc68ff23644cc72
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295481"
 ---
 # <a name="catalogdelete_customized_logging_level"></a>catalog.delete_customized_logging_level 

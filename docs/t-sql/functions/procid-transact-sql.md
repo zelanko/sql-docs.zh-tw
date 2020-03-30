@@ -25,10 +25,10 @@ ms.assetid: 0d4882c7-edb8-49b1-a470-2c7497b8998f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2e9f862ab78cbfd9db885ca2f0c7c9c0f483920d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67914316"
 ---
 # <a name="x40x40procid-transact-sql"></a>&#x40;&#x40;PROCID (Transact-SQL)

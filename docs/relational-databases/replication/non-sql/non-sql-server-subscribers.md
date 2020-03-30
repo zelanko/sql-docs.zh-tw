@@ -21,10 +21,10 @@ ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 26bda5e190f18469948f935302ee2cbf9ddd121c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940408"
 ---
 # <a name="non-sql-server-subscribers"></a>非 SQL Server 訂閱者  
@@ -87,7 +87,7 @@ Oracle 版本資訊：
   
 -   如果在發行集中新增或刪除發行項，則必須重新初始化非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」的訂閱。  
   
--   所有非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」支援的條件約束僅為：NULL 和 NOT NULL。 主索引鍵條件約束複寫為唯一的索引。  
+-   所有非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」支援之條件約束僅為：NULL 和 NOT NULL。 主索引鍵條件約束複寫為唯一的索引。  
   
 -   不同資料庫以不同方式處理值 NULL，這會影響空白值、空字串和 NULL 的表示方式。 進而會影響插入到定義了唯一條件約束的資料行之值的行為。 例如，Oracle 在視為唯一的資料行中允許有多個 NULL 值，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在唯一的資料行中只允許有一個 NULL 值。  
   

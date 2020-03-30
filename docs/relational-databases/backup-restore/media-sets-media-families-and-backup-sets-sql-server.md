@@ -23,10 +23,10 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 168a471a57b3f1d8cd3ea2a5428d8b0bd9063965
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258685"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>媒體集、媒體家族與備份組 (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "75258685"
   
 >**注意！** 如需將 SQL Server 備份放至 Azure Blob 儲存體服務的詳細資訊，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
    
-##  <a name="TermsAndDefinitions"></a> 詞彙  
+##  <a name="terms"></a><a name="TermsAndDefinitions"></a> 詞彙  
  **媒體集**  
  按順序排列的備份媒體集合 (磁帶或磁碟檔案)，由一個或多個備份作業使用固定的備份裝置類型與數量寫入。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "75258685"
  透過成功的備份作業，加入至媒體集的備份內容。  
   
 
-##  <a name="OvMediaSetsFamiliesBackupSets"></a> 媒體集、媒體家族和備份組的概觀  
+##  <a name="overview-of-media-sets-media-families-and-backup-sets"></a><a name="OvMediaSetsFamiliesBackupSets"></a> 媒體集、媒體家族和備份組的概觀  
  單一媒體集是由一組一個或多個備份媒體上的備份組成。 「媒體集」  (Media Set) 是按順序排列的「備份媒體」  (Backup Media) 集合 (磁帶、磁碟檔案或Azure Blob)，由一個或多個備份作業使用固定的備份裝置類型與數量寫入。 給定的媒體集會使用磁帶機、磁碟機或Azure Blob，但是不得為兩個以上的組合。 
  
 **範例：** 與媒體集相關的備份裝置可能是三個磁帶機，分別稱為 `\\.\TAPE0`、 `\\.\TAPE1`和 `\\.\TAPE2`。 此媒體集僅包含磁帶，一開始最少有三個磁帶 (每個磁帶機一個)。 備份裝置類型與數量是在媒體集建立時確立，而且無法變更。 不過，可在必要時以相同類型的裝置取代備份和還原作業間的指定裝置。  
@@ -166,7 +166,7 @@ GO
 -   備份組數量  
 
   
-##  <a name="CreatingMediaSet"></a> Creating a new media set  
+##  <a name="creating-a-new-media-set"></a><a name="CreatingMediaSet"></a> Creating a new media set  
  若要建立新的媒體集，您必須將備份媒體 (一個或多個磁帶或磁碟檔案) 格式化。 格式化的過程會變更備份媒體，如下所示：  
   
 1.  刪除舊標頭 (若有的話)，有效率地刪除備份媒體上先前的內容。  
@@ -176,7 +176,7 @@ GO
 2.  在每個備份裝置的備份媒體 (磁帶或磁碟檔案) 上寫入新的媒體標頭。  
 
   
-##  <a name="UseExistingMediaSet"></a> 備份至現有的媒體集  
+##  <a name="backing-up-to-an-existing-media-set"></a><a name="UseExistingMediaSet"></a> 備份至現有的媒體集  
  備份至現有的媒體集時，您有下列兩個選項：  
   
 -   附加至現有的媒體集。  
@@ -193,7 +193,7 @@ GO
 
     >  若要覆寫現有的備份組，可以使用 BACKUP 陳述式的 INIT 選項來指定。  
   
-##  <a name="Appending"></a> Appending to existing backup sets  
+##  <a name="appending-to-existing-backup-sets"></a><a name="Appending"></a> Appending to existing backup sets  
  不同時間執行的備份可以寫在相同的媒體上，不論是不是來自相同的資料庫。 藉由將另一個備份組附加至現有媒體的方法，就可以不影響媒體原先的內容，而在媒體最後一個備份結尾處寫入新的備份。  
   
  依預設值， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一定會將新備份附加至媒體。 附加只可以發生在媒體結尾。 例如，如果媒體磁碟區包含五個備份組，就無法跳過前三個備份組，而使用新的備份組覆寫第四個備份組。  
@@ -205,7 +205,7 @@ GO
 > **重要！** 壓縮和未壓縮的備份無法在媒體集中一起出現。 任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本都可以讀取壓縮的備份。 如需詳細資訊，請參閱[備份壓縮 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md)。  
   
  
-##  <a name="Overwriting"></a> Overwriting backup sets  
+##  <a name="overwriting-backup-sets"></a><a name="Overwriting"></a> Overwriting backup sets  
  若要覆寫現有的備份組，可以使用 BACKUP 陳述式的 INIT 選項來指定。 這個選項會覆寫媒體中的所有備份組，並保留媒體標頭 (如果有的話)。 如果沒有媒體標頭，就會加以建立。  
   
  針對磁帶標頭，適當地保留標頭有其意義。 對於磁碟備份媒體而言，只有備份作業中指定的備份裝置所用的檔案會被覆寫，磁碟上的其他檔案則不受影響。 覆寫備份時會保留任何現有的媒體標頭，而新的備份會建立為備份裝置上的第一個備份。 如果沒有現有的媒體標頭，則會自動寫入含相關媒體名稱與媒體描述的有效媒體標頭。 如果現有的媒體標頭無效，備份作業會終止。 若為空白媒體，則會以給定的 MEDIANAME、MEDIAPASSWORD 與 MEDIADESCRIPTION (若有的話) 來產生新的媒體標頭。  
@@ -227,7 +227,7 @@ GO
   
 
   
-##  <a name="SequenceNumbers"></a> 序號  
+##  <a name="sequence-numbers"></a><a name="SequenceNumbers"></a> 序號  
  對於媒體集或媒體家族內的多個備份媒體而言，有正確的順序很重要。 因此，備份會依照下列方式指派序號：  
   
 -   媒體集內的連續媒體家族  
@@ -238,7 +238,7 @@ GO
   
      媒體序號代表實體媒體在媒體家族內的順序。 初始備份媒體的序號是 1。 這會標記為 1；第二個 (第一個接續磁帶) 會標記為 2；依此類推。 在還原備份組時，媒體序號可確保還原備份的操作員以正確的順序掛載正確的媒體。  
   
-###  <a name="MultipleDevices"></a> 多個裝置  
+###  <a name="multiple-devices"></a><a name="MultipleDevices"></a> 多個裝置  
  使用多個磁帶機或磁碟檔案時，需考量以下事項：  
   
 -   備份方面：  
@@ -249,7 +249,7 @@ GO
   
      對磁碟備份中的任何還原以及任何線上還原而言，必須同時掛載全體媒體家族中的所有家族。 若要從磁帶備份中進行離線還原，則可以較少的備份裝置處理媒體家族。 對每個媒體家族而言，其處理必須先完成，另一個媒體家族的處理才會開始。 媒體家族永遠會平行處理，除非是以單一裝置進行還原。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **建立新的媒體集**  
   
 -   [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md) ([備份至新的媒體集，並清除所有現有的備份組]  選項)  

@@ -22,10 +22,10 @@ ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9964745ede5eb49dd56fbcf2a8d75aee3633fc3b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68075198"
 ---
 # <a name="goto-transact-sql"></a>GOTO (Transact-SQL)

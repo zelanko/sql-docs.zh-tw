@@ -20,25 +20,25 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1fae39a6cd0fcd61b18419f8e46786067a4a69dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134813"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 來部署資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   使用 [將資料庫部署到 SQL Azure]  精靈，在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體與 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 伺服器之間部署資料庫，或在兩個 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]伺服器之間部署資料庫。  
   
-##  <a name="BeforeBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeBegin"></a> 開始之前  
  精靈會使用資料層應用程式 (DAC) BACPAC 封存檔案，來部署資料和資料庫物件的定義。 它會從來源資料庫執行 DAC 匯出作業並對目的地資料庫執行 DAC 匯入。  
   
-###  <a name="DBOptSettings"></a> 資料庫選項和設定  
+###  <a name="database-options-and-settings"></a><a name="DBOptSettings"></a> 資料庫選項和設定  
  根據預設，部署期間建立的資料庫將會擁有 CREATE DATABASE 陳述式中的預設值。 例外是資料庫定序和相容性層級會設定為來源資料庫中的值。  
   
  資料庫選項 (例如 TRUSTWORTHY、DB_CHAINING 和 HONOR_BROKER_PRIORITY) 無法在部署過程中調整。 實體屬性 (如檔案群組數目或檔案數目和大小) 無法在部署過程中更改。 部署完成之後，您可以使用 ALTER DATABASE 陳述式、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 來修改資料庫。  
   
-###  <a name="LimitationsRestrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制事項  
  **[部署資料庫]** 精靈支援在下列項目上部署資料庫：  
   
 -   從 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體至 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
@@ -51,7 +51,7 @@ ms.locfileid: "68134813"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體必須執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本，才能使用精靈。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上的資料庫物件不受 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]支援，則無法使用此精靈將資料庫部署到 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 如果 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 上的資料庫物件不受 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援，則無法使用此精靈將資料庫部署到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  為了提高安全性，SQL Server 驗證登入會儲存在 DAC BACPAC 檔案中，而且沒有密碼。 當您匯入 BACPAC 之後，此登入會建立為停用的登入，而且會產生密碼。 若要啟用登入，請使用具有 ALTER ANY LOGIN 權限的登入進行登入，並使用 ALTER LOGIN 來啟用登入，然後指派可以傳達給使用者的新密碼。 Windows 驗證登入不需要這項處理，因為這類登入的密碼不是由 SQL Server 所管理。  
   
 #### <a name="permissions"></a>權限  
@@ -59,7 +59,7 @@ ms.locfileid: "68134813"
   
  精靈需要目的地執行個體或伺服器的 DAC 匯入權限。 登入必須是 **系統管理員 (sysadmin)** 或 **伺服器管理員 (serveradmin)** 固定伺服器角色的成員，或是具有 **dbcreator** 固定伺服器角色及擁有 ALTER ANY LOGIN 權限。 內建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶 (名稱為 **sa** ) 也可以匯入 DAC。 將具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 loginmanager 或 serveradmin 角色的成員資格。 將不具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 dbmanager 或 serveradmin 角色的成員資格。  
   
-##  <a name="UsingDeployDACWizard"></a> 使用部署資料庫精靈  
+##  <a name="using-the-deploy-database-wizard"></a><a name="UsingDeployDACWizard"></a> 使用部署資料庫精靈  
  **若要使用部署資料庫精靈移轉資料庫**  
   
 1.  連接至您要部署的資料庫位置。 您可以指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 伺服器。  
@@ -82,7 +82,7 @@ ms.locfileid: "68134813"
     
     -   [結果](#Results)  
   
-##  <a name="Introduction"></a> 簡介頁面  
+##  <a name="introduction-page"></a><a name="Introduction"></a> 簡介頁面  
  此頁面描述 **[部署資料庫]** 精靈的步驟。  
   
  **選項**  
@@ -93,7 +93,7 @@ ms.locfileid: "68134813"
   
 -   **取消** - 取消作業並關閉精靈。  
   
-##  <a name="Deployment_settings"></a> 部署設定頁面  
+##  <a name="deployment-settings-page"></a><a name="Deployment_settings"></a> 部署設定頁面  
  使用此頁面來指定目的地伺服器以及提供新資料庫的詳細資料。  
   
  **本機主機：**  
@@ -112,13 +112,13 @@ ms.locfileid: "68134813"
   
 -   指定暫存檔 (即 BACPAC 封存檔案) 的本機目錄。 請注意，檔案將在指定的位置上建立，而且作業完成之後，將保留在該位置。  
   
-##  <a name="Summary"></a> 摘要頁面  
+##  <a name="summary-page"></a><a name="Summary"></a> 摘要頁面  
  您可以使用此頁面來檢閱作業的指定來源和目標設定。 若要使用指定的設定來完成部署作業，請按一下 **[完成]** 。 若要取消部署作業並結束精靈，請按一下 **[取消]** 。  
   
-##  <a name="Progress"></a> 進度頁面  
+##  <a name="progress-page"></a><a name="Progress"></a> 進度頁面  
  此頁面會顯示進度列，指出作業的狀態。 若要檢視詳細狀態，請按一下 **[檢視詳細資料]** 選項。  
   
-##  <a name="Results"></a> 結果頁面  
+##  <a name="results-page"></a><a name="Results"></a> 結果頁面  
  此頁面會報告部署作業成功或失敗，並顯示每個動作的結果。 發生錯誤的所有動作在 **[結果]** 資料行中都會有一個連結。 按一下連結，即可檢視該動作的錯誤報告。  
   
  按一下 **[完成]** 關閉精靈。  

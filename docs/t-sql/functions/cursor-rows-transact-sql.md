@@ -21,10 +21,10 @@ ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ec6830916132a87a7beb50a8509f2f46bd2d1d74
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68026267"
 ---
 # <a name="x40x40cursor_rows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)

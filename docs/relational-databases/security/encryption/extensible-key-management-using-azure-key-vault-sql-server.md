@@ -18,10 +18,10 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: df42a2d0f7dea2e32df61670aff88374a6fcff54
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558043"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>使用 Azure Key Vault 進行可延伸金鑰管理 (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "75558043"
   
  本主題描述 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器。 [使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)、[搭配使用 SQL Server 連接器與 SQL 加密功能](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)和 [SQL Server 連接器維護和疑難排解](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)中提供其他資訊。  
   
-##  <a name="Uses"></a> 什麼是可延伸金鑰管理 (EKM) 以及使用它的原因？  
+##  <a name="what-is-extensible-key-management-ekm-and-why-use-it"></a><a name="Uses"></a> 什麼是可延伸金鑰管理 (EKM) 以及使用它的原因？  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供數種類型的加密來協助保護敏感性資料，包括[透明資料加密 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)、[資料行層級加密](../../../t-sql/functions/cryptographic-functions-transact-sql.md) (CLE) 和[備份加密](../../../relational-databases/backup-restore/backup-encryption.md)。 在上述所有情況的這個傳統金鑰階層中，資料會使用對稱資料加密金鑰 (DEK) 進行加密。 對稱資料加密金鑰會以儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的金鑰階層加密，受到更進一步的保護。 替代方案是 EKM 提供者模型，而不是此模型。 使用 EKM 提供者架構可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 透過儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之外部密碼編譯提供者中的非對稱金鑰，來保護資料加密金鑰。 此模型會多增加一層安全性，並分開管理金鑰和資料。  
    
  下圖比較使用 Azure 金鑰保存庫系統的傳統服務管理金鑰階層。  

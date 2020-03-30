@@ -14,10 +14,10 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 049bb90dddf4bbfb03b222a675bd4008eb83cc14
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294865"
 ---
 # <a name="validate-dialog-box"></a>驗證對話方塊
@@ -35,7 +35,7 @@ ms.locfileid: "71294865"
   
 -   [設定 [一般] 頁面上的選項](#general)  
   
-##  <a name="open_dialog"></a> 開啟 [驗證] 對話方塊  
+##  <a name="open-the-validate-dialog-box"></a><a name="open_dialog"></a> 開啟 [驗證] 對話方塊  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71294865"
   
 5.  以滑鼠右鍵按一下封裝，然後按一下 [驗證]  。  
   
-##  <a name="general"></a> 設定 [一般] 頁面上的選項  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> 設定 [一般] 頁面上的選項  
  **環境**  
  選取您要用來驗證專案或封裝的環境。  
   

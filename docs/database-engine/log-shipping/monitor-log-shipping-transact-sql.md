@@ -18,10 +18,10 @@ ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 33bb8320abf11400e5224af747d71bcb49fc2d16
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68030716"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>監視記錄傳送 (Transact-SQL)

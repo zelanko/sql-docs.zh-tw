@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e1f9d94f1ddf6f6d3e9a8ce73a263790acc516de
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76259386"
 ---
 # <a name="create-primary-keys"></a>建立主索引鍵
@@ -26,23 +26,23 @@ ms.locfileid: "76259386"
 
 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中定義主索引鍵。 建立主索引鍵會自動建立對應的唯一叢集索引，或若依此指定則建立非叢集索引。
 
-## <a name="BeforeYouBegin"></a> 開始之前
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前
 
-### <a name="Restrictions"></a> 限制事項
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項
 
 - 一份資料表只能有一個 PRIMARY KEY 條件約束。
 
 - PRIMARY KEY 條件約束內所定義的所有資料行，都必須定義成 NOT NULL。 如果未指定 Null 屬性，參與 PRIMARY KEY 條件約束的所有資料行，其 Null 屬性都會設成 NOT NULL。
 
-### <a name="Security"></a> Security
+### <a name="security"></a><a name="Security"></a> Security
 
-#### <a name="Permissions"></a> 權限
+#### <a name="permissions"></a><a name="Permissions"></a> 權限
 
 建立具有主索引鍵的新資料表，需要資料庫中的 CREATE TABLE 權限及建立資料表的結構描述之 ALTER 權限。
 
 在現有資料表中建立主索引鍵需要此資料表的 ALTER 權限。
 
-## <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
 
 ### <a name="to-create-a-primary-key"></a>若要建立主索引鍵
 
@@ -59,7 +59,7 @@ ms.locfileid: "76259386"
 
 如果您定義了複合索引鍵，主索引鍵中的資料行順序必須符合資料表所顯示的資料行順序。 然而，您可以在建立主索引鍵之後變更資料行的順序。 如需詳細資訊，請參閱 [修改主索引鍵](../../relational-databases/tables/modify-primary-keys.md)。
 
-## <a name="TsqlProcedure"></a> 使用 Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL
 
 ### <a name="to-create-a-primary-key-in-an-existing-table"></a>在現有的資料表建立主索引鍵
 

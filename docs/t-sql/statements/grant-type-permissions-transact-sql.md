@@ -18,10 +18,10 @@ ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7695fda9dd287239f4ef88ea5c279e11a0b5abdd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982503"
 ---
 # <a name="grant-type-permissions-transact-sql"></a>GRANT 類型權限 (Transact-SQL)

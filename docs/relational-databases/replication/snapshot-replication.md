@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c7199f12ac00d58f629096aa435c05eb862c4c51
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287158"
 ---
 # <a name="snapshot-replication"></a>快照式複寫
@@ -50,7 +50,7 @@ ms.locfileid: "76287158"
   
  [散發與合併代理程式](#DistAgent)  
   
-##  <a name="HowWorks"></a> 快照式複寫如何運作  
+##  <a name="how-snapshot-replication-works"></a><a name="HowWorks"></a> 快照式複寫如何運作  
  依預設，三種類型的複寫均使用快照集來初始化「訂閱者」。 「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 快照集代理程式」總是會產生快照集檔案，但是根據所使用的複寫類型，傳遞檔案的代理程式有所不同。 快照式複寫和異動複寫使用「散發代理程式」傳遞檔案，而合併式複寫則使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 合併代理程式」。 快照集代理程式於發行者端執行。 「散發代理程式」和「合併代理程式」則在發送訂閱的「散發者」端或提取訂閱的「訂閱者」端執行。  
   
  快照集的產生和套用可以在訂閱建立後立即進行，也可以在發行集建立時所排定的時間進行。 「快照集代理程式」會準備包含已發行資料表與資料庫物件之結構描述及資料的快照集檔案，將檔案儲存在「發行者」的快照集資料夾內，然後追蹤「散發者」散發資料庫中的資訊。 在設定「散發者」時指定預設快照集資料夾，但也可以為發行集指定預設位置以外的替代位置，或兩個位置均指定。  
@@ -61,7 +61,7 @@ ms.locfileid: "76287158"
   
  ![快照式複寫元件和資料流程](../../relational-databases/replication/media/snapshot.gif "快照式複寫元件和資料流程")  
   
-##  <a name="SnapshotAgent"></a> 快照集代理程式  
+##  <a name="snapshot-agent"></a><a name="SnapshotAgent"></a> 快照集代理程式  
  針對合併式複寫，每次執行快照集代理程式都會產生快照集。 針對異動複寫，是否產生快照集是依照發行集屬性 **immediate_sync**的設定而定。 若屬性設定為 TRUE (使用新增發行集精靈的預設)，每次執行快照集代理程式都會產生快照集，同時隨時可套用至訂閱者。 若屬性設定為 FALSE (使用 **sp_addpublication**時的預設)，則只有在上次執行快照集代理程式後有加入新訂閱的情況下，才會產生快照集。訂閱者必須等待快照集代理程式完成，才能同步處理。  
   
  「快照集代理程式」會執行下列步驟：  
@@ -86,7 +86,7 @@ ms.locfileid: "76287158"
   
  在快照集產生期間，無法對已發行的資料進行結構描述變更。 快照集檔案產生之後，您可以使用 Windows Explorer 在快照集資料夾中檢視這些檔案。  
   
-##  <a name="DistAgent"></a> 散發代理程式與合併代理程式  
+##  <a name="distribution-agent-and-merge-agent"></a><a name="DistAgent"></a> 散發代理程式與合併代理程式  
  對於快照式發行集，每次為發行集執行「散發代理程式」時，它都會將新快照集移至每個尚未同步處理但已標示要進行重新初始化的「訂閱者」，或包含新發行項。  
   
  對於快照式和異動複寫，「散發代理程式」執行下列步驟：  

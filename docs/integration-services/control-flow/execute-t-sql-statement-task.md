@@ -17,10 +17,10 @@ ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0e7b51e71feef1dcd30b3e63c38b6cf10598cd80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294164"
 ---
 # <a name="execute-t-sql-statement-task"></a>執行 T-SQL 陳述式工作

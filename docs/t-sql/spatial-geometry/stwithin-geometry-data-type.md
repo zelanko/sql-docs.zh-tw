@@ -18,10 +18,10 @@ ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1ca7e74743773fb42a85300a37cc6b8aaa9d8f39
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68066257"
 ---
 # <a name="stwithin-geometry-data-type"></a>STWithin (geometry 資料類型)

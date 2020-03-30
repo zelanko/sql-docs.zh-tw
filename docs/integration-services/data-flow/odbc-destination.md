@@ -16,10 +16,10 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 153cbd447fa84087b50501005d0ea457f47d1eda
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298219"
 ---
 # <a name="odbc-destination"></a>ODBC 目的地
@@ -33,7 +33,7 @@ ms.locfileid: "71298219"
   
  ODBC 目的地具有一個一般輸出和一個錯誤輸出。  
   
-##  <a name="BKMK_odbcdestination_loadoptions"></a> 載入選項  
+##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> 載入選項  
  ODBC 目的地可以使用兩種存取載入模組其中之一。 您會在 [ODBC 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md) 設定模式。 兩種模式為：  
   
 -   **批次**：在此模式中，ODBC 目的地會根據所見的 ODBC 提供者功能，嘗試使用最有效率的插入方法。 對於最新的 ODBC 提供者，這表示準備含有參數的 INSERT 陳述式，然後使用資料列取向的陣列參數繫結 (陣列大小是由 **BatchSize** 屬性所控制)。 如果您選取 [批次]  ，而提供者不支援此方法，ODBC 目的地會自動切換為**逐列**模式。  

@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72252044"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
@@ -117,7 +117,7 @@ RAISERROR ( { msg_str | @local_variable }
 |x 或 X|不帶正負號的十六進位|  
   
 > [!NOTE]  
->  這些類型規格的基礎乃是原本為 C 標準程式庫中 **printf** 函數所定義的規格。 用於 RAISERROR 訊息字串的類型規格對應到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料類型，而用於 **printf** 的規格對應到 C 語言資料類型。 當 [!INCLUDE[tsql](../../includes/tsql-md.md)] 沒有類似於相關聯 C 資料類型的資料類型時，RAISERROR 不支援用於 **printf** 的類型規格。 例如，RAISERROR 不支援指標的 *%p* 規格，因為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 沒有指標資料類型。  
+>  這些類型規格的基礎乃是原本為 C 標準程式庫中 **printf** 函數所定義的規格。 用於 RAISERROR 訊息字串的類型規格對應到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料類型，而用於 **printf** 的規格對應到 C 語言資料類型。 當 **沒有類似於相關聯 C 資料類型的資料類型時，RAISERROR 不支援用於**printf[!INCLUDE[tsql](../../includes/tsql-md.md)] 的類型規格。 例如，RAISERROR 不支援指標的 *%p* 規格，因為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 沒有指標資料類型。  
   
 > [!NOTE]  
 >  若要將某個值轉換為 [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** 資料類型，請指定 **%I64d**。  

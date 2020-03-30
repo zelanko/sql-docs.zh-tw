@@ -20,10 +20,10 @@ ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6215824f230001cb9d7add20d32c85780a65ede6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68098809"
 ---
 # <a name="trigger_nestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)

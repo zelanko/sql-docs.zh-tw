@@ -12,10 +12,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 67c1241906a83aeb1776d7fa5e1ecb584bc2c723
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055189"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>將搜尋所使用的文字分隔還原為舊版 (SQL Server 搜尋)
@@ -34,7 +34,7 @@ ms.locfileid: "74055189"
   
  如需斷詞工具與字幹分析器的一般資訊，請參閱 [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
-##  <a name="overview"></a> 還原斷詞工具和字幹分析器的概觀  
+##  <a name="overview-of-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="overview"></a> 還原斷詞工具和字幹分析器的概觀  
  還原斷詞工具和字幹分析器的指示取決於語言。 下表摘要說明還原為舊版元件可能需要的三組動作。  
   
 |目前檔案|舊版檔案|受影響語言的數目|檔案的動作|登錄項目的動作|  
@@ -50,7 +50,7 @@ ms.locfileid: "74055189"
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
-##  <a name="nl6nl6"></a> 目前和舊版斷詞工具的檔案名稱都是 NaturalLanguage6.dll 的語言  
+##  <a name="languages-for-which-the-file-name-of-both-the-current-and-previous-word-breaker-is-naturallanguage6dll"></a><a name="nl6nl6"></a> 目前和舊版斷詞工具的檔案名稱都是 NaturalLanguage6.dll 的語言  
  在下表中的語言，目前和舊版斷詞工具的檔案名稱都是 NaturalLanguage6.dll。 若要還原這些元件，您必須以相同檔案的不同版本覆寫 NaturalLanguage6.dll。 您不必變更任何登錄項目，因為此版本中未變更這些登錄項目。  
   
 > [!WARNING]  
@@ -97,7 +97,7 @@ ms.locfileid: "74055189"
   
  上表依縮寫資料行的字母順序排序。  
   
-###  <a name="nl6nl6revert"></a> 若要還原為舊版元件  
+###  <a name="to-revert-to-the-previous-components"></a><a name="nl6nl6revert"></a> 若要還原為舊版元件  
   
 1.  導覽至上述 Binn 資料夾。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "74055189"
   
 4.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
 
-###  <a name="nl6nl6restore"></a> 若要還原目前元件  
+###  <a name="to-restore-the-current-components"></a><a name="nl6nl6restore"></a> 若要還原目前元件  
   
 1.  導覽至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本 NaturalLanguage6.dll 的備份位置。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "74055189"
   
 3.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-##  <a name="newnl6"></a> 僅舊版斷詞工具的檔案名稱是 NaturalLanguage6.dll 的語言  
+##  <a name="languages-for-which-the-file-name-of-the-previous-word-breaker-only-is-naturallanguage6dll"></a><a name="newnl6"></a> 僅舊版斷詞工具的檔案名稱是 NaturalLanguage6.dll 的語言  
  在下表中的語言，舊版斷詞工具的檔案名稱不同於新版檔案名稱。 舊版檔案名稱為 NaturalLanguage6.dll。 若要還原為舊版元件，您必須以舊版的相同檔案覆寫目前版本的 NaturalLanguage6.dll。 您也必須變更一組登錄項目，以指定舊版或目前版本的元件。  
   
 > [!WARNING]  
@@ -141,7 +141,7 @@ ms.locfileid: "74055189"
   
  將以下指示與＜ [用於還原斷詞工具和字幹分析器的檔案名稱和登錄值](#newnl6values)＞一節中的值清單一起使用。  
   
-###  <a name="newnl6revert"></a> 若要還原為舊版元件  
+###  <a name="to-revert-to-the-previous-components"></a><a name="newnl6revert"></a> 若要還原為舊版元件  
   
 1.  導覽至上述 Binn 資料夾。  
   
@@ -174,7 +174,7 @@ ms.locfileid: "74055189"
   
 10. 重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-###  <a name="newnl6restore"></a> 若要還原目前元件  
+###  <a name="to-restore-the-current-components"></a><a name="newnl6restore"></a> 若要還原目前元件  
   
 1.  導覽至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本 NaturalLanguage6.dll 的備份位置。  
   
@@ -203,7 +203,7 @@ ms.locfileid: "74055189"
   
 8.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-###  <a name="newnl6values"></a> 用於還原斷詞工具和字幹分析器的檔案名稱和登錄值  
+###  <a name="file-names-and-registry-values-for-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="newnl6values"></a> 用於還原斷詞工具和字幹分析器的檔案名稱和登錄值  
  將下列的檔案名稱和登錄項目清單與上一節中的指示一起使用。 使用舊版值還原為舊版，或使用目前值還原目前版本的元件。  
   
  下列清單依各語言縮寫的字母順序排序。  
@@ -253,7 +253,7 @@ ms.locfileid: "74055189"
 |目前 CLSID|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
 |目前檔案名稱|MSWB7.dll|MSWB7.dll|  
   
-##  <a name="newnew"></a> 舊版或目前檔案名稱都不是 NaturalLanguage6.dll 的語言  
+##  <a name="languages-for-which-neither-the-previous-nor-the-current-file-name-is-naturallanguage6dll"></a><a name="newnew"></a> 舊版或目前檔案名稱都不是 NaturalLanguage6.dll 的語言  
  在下表中的語言，舊版斷詞工具和字幹分析器的檔案名稱不同於新版檔案名稱。 舊版或目前檔案名稱都不是 NaturalLanguage6.dll。 您不必取代任何檔案，因為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式會將目前版本和舊版元件都複製到 Binn 資料夾。 不過，您必須變更一組登錄項目，以指定舊版或目前版本的元件。  
   
  **受影響語言的清單**  
@@ -271,7 +271,7 @@ ms.locfileid: "74055189"
   
  將以下指示與＜ [用於還原斷詞工具和字幹分析器的檔案名稱和登錄值](#newnewvalues)＞一節中的值清單一起使用。  
   
-###  <a name="newnewrevert"></a> 若要還原為舊版元件  
+###  <a name="to-revert-to-the-previous-components"></a><a name="newnewrevert"></a> 若要還原為舊版元件  
   
 1.  不要從 Binn 資料夾中移除目前元件版本的檔案。  
   
@@ -295,7 +295,7 @@ ms.locfileid: "74055189"
   
 7.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-###  <a name="newnewrestore"></a> 若要還原舊版元件  
+###  <a name="to-restore-the-previous-components"></a><a name="newnewrestore"></a> 若要還原舊版元件  
   
 1.  不要從 Binn 資料夾中移除舊版元件的檔案。  
   
@@ -319,7 +319,7 @@ ms.locfileid: "74055189"
   
 7.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-###  <a name="newnewvalues"></a> 用於還原斷詞工具和字幹分析器的檔案名稱和登錄值  
+###  <a name="file-names-and-registry-values-for-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="newnewvalues"></a> 用於還原斷詞工具和字幹分析器的檔案名稱和登錄值  
  將下列的檔案名稱和登錄項目清單與上一節中的指示一起使用。 使用舊版值還原為舊版，或使用目前值還原目前版本的元件。  
   
  下列清單依各語言縮寫的字母順序排序。  

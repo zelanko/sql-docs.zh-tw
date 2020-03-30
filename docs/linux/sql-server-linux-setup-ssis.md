@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 0f400667e73effb73ff41c3c7270e3f89a2ca0da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76162639"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>在 Linux 上安裝 SQL Server Integration Services (SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "76162639"
 - [Ubuntu 16.04](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
-## <a name="ubuntu"></a> 在 Ubuntu 上安裝 SSIS
+## <a name="install-ssis-on-ubuntu"></a><a name="ubuntu"></a> 在 Ubuntu 上安裝 SSIS
 
 若要在 Ubuntu 上安裝 **mssql-server-is** 套件，請遵循下列步驟：
 
@@ -118,7 +118,7 @@ sudo apt-get install mssql-server-is
 sudo apt-get remove mssql-server-is
 ```
 
-## <a name="RHEL"></a> 在 RHEL 上安裝 SSIS
+## <a name="install-ssis-on-rhel"></a><a name="RHEL"></a> 在 RHEL 上安裝 SSIS
 若要在 RHEL 上安裝 **mssql-server-is** 套件，請遵循下列步驟：
 
 <!--SQL Server 2017 on Linux-->

@@ -18,10 +18,10 @@ ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 53b447b2a13c68c2c87536bc3c1f14f9efd74cfd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68132091"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)

@@ -21,10 +21,10 @@ ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 746d2f33d780e4eada7accabdd029998c9e61742
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68070186"
 ---
 # <a name="drop-search-property-list-transact-sql"></a>DROP SEARCH PROPERTY LIST (Transact-SQL)
@@ -65,7 +65,7 @@ SELECT name FROM sys.registered_search_property_lists;
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要搜尋屬性清單的 CONTROL 權限。  
   
 > [!NOTE]  

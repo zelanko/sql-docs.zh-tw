@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: ab4bb319460e3666c638b40a63b5676b81048dd1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76284744"
 ---
 # <a name="create-a-pull-subscription"></a>建立提取訂閱
@@ -38,7 +38,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
  為 P2P 複寫設定提取訂閱可透過指令碼來進行，但無法透過精靈進行。  
  
-  ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+  ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  使用「新增訂閱精靈」在「發行者」或「訂閱者」端建立提取訂閱。 依照精靈中各頁面進行：  
   
 -   指定發行者和發行集。  
@@ -81,7 +81,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 3.  以滑鼠右鍵按一下 **[區域訂閱]** 資料夾，然後按一下 **[新增訂閱]** 。  
   
-4.  在 [新增訂閱精靈] 的 **[發行集]** 頁面上，從 **[發行者]** 下拉式清單中選取 **[\<尋找 SQL Server 發行者>]** 或 **[\<尋找 Oracle 發行者>]** 。  
+4.  在 [新增訂閱精靈] 的 [發行集]  頁面上，從 [發行者] **\< 下拉式清單中選取 [** 尋找 SQL Server 發行者>] **\< 或 [** 尋找 Oracle 發行者>]  。  
   
 5.  連接到 **[連接到伺服器]** 對話方塊中的發行者。  
   
@@ -89,7 +89,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
 7.  在新增訂閱精靈中完成頁面。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用複寫預存程序以程式設計的方式建立提取訂閱。 使用哪些預存程序要依訂閱所屬的發行集類型而定。  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>若要建立快照式或交易式發行集的提取訂閱  
@@ -98,7 +98,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
     -   如果結果集中 **allow_pull** 的值為 **1**，則發行集支援提取訂閱。  
   
-    -   如果 **allow_pull** 的值為 **0**，請執行 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，並將 **\@property** 指定為 **allow_pull**，以及將 **\@value** 指定為 **true**。  
+    -   如果 **allow_pull** 的值為 **0**，請執行 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，並將  property **指定為 \@allow_pull**，以及將  value **指定為 \@true**。  
   
 2.  在訂閱者端，執行 [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)。 指定 **\@publisher** 和 **\@publication**。 如需有關更新訂閱的詳細資訊，請參閱＜ [建立交易式發行集的可更新訂閱](publish/create-an-updatable-subscription-to-a-transactional-publication.md)＞。   
   
@@ -111,11 +111,11 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
         > [!NOTE]  
         >  使用「Windows 整合式驗證」進行的連線一律使用由 **\@job_login** 和 **\@job_password** 所指定 Windows 認證。 散發代理程式一律使用「Windows 整合式驗證」建立與訂閱者的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到「散發者」。  
   
-    -   (選擇性) **\@distributor_security_mode** 的值 **0**，以及 **\@distributor_login** 和 **\@distributor_password** 的 SQL Server 登入資訊 (如果您在連線至散發者時需要使用「SQL Server 驗證」)。  
+    -   (選擇性)  distributor_security_mode **的值 \@0**，以及 **\@distributor_login** 和 **\@distributor_password** 的 SQL Server 登入資訊 (如果您在連線至散發者時需要使用「SQL Server 驗證」)。  
   
     -   此訂閱之散發代理程式作業的排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
-4.  在發行者端，執行 [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 來註冊提取訂閱。 指定 **\@publication**、 **\@subscriber** 和 **\@destination_db**。 為 **\@subscription_type** 指定 **pull** 的值。  
+4.  在發行者端，執行 [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 來註冊提取訂閱。 指定 **\@publication**、 **\@subscriber** 和 **\@destination_db**。 為  subscription_type **指定 \@pull** 的值。  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication"></a>若要建立合併式發行集的提取訂閱  
   
@@ -123,7 +123,7 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
   
     -   如果結果集中 **allow_pull** 的值為 **1**，則發行集支援提取訂閱。  
   
-    -   如果 **allow_pull** 的值為 **0**，請執行 [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，並將 **\@property** 指定為 **allow_pull**，以及將 **\@value** 指定為 **true**。  
+    -   如果 **allow_pull** 的值為 **0**，請執行 [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，並將  property **指定為 \@allow_pull**，以及將  value **指定為 \@true**。  
   
 2.  在訂閱者端，執行 [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)。 指定 **\@publisher**、 **\@publisher_db**、 **\@publication** 和下列參數：  
   
@@ -142,15 +142,15 @@ Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation de
         > [!NOTE]  
         >  使用「Windows 整合式驗證」進行的連線一律使用由 **\@job_login** 和 **\@job_password** 所指定 Windows 認證。 「合併代理程式」一律使用「Windows 整合式驗證」建立到「訂閱者」的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到「發行者」。  
   
-    -   (選擇性) **\@distributor_security_mode** 的值 **0**，以及 **\@distributor_login** 和 **\@distributor_password** 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入資訊 (如果您在連線至散發者時需要使用「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」)。  
+    -   (選擇性)  distributor_security_mode **的值 \@0**，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**distributor_login\@ 和** **distributor_password\@ 的**  登入資訊 (如果您在連線至散發者時需要使用「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」)。  
   
-    -   (選擇性) **\@publisher_security_mode** 的值 **0**，以及 **\@publisher_login** 和 **\@publisher_password** 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入資訊 (如果您在連線到「發行者」時需要使用「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」)。  
+    -   (選擇性)  publisher_security_mode **的值 \@0**，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**publisher_login\@ 和** **publisher_password\@ 的**  登入資訊 (如果您在連線到「發行者」時需要使用「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」)。  
   
     -   此訂閱之「合併代理程式」作業的排程。 如需詳細資訊，請參閱 [建立交易式發行集的可更新訂閱](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
-4.  在發行者端，執行 [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)。 指定 **\@publication**、 **\@subscriber**、 **\@subscriber_db**，以及為 **\@subscription_type** 指定 **pull** 值。 如此會註冊提取訂閱。  
+4.  在發行者端，執行 [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)。 指定 **\@publication**、 **\@subscriber**、 **\@subscriber_db**，以及為  subscription_type **指定 \@pull** 值。 如此會註冊提取訂閱。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  下列範例會建立交易式發行集的提取訂閱。 第一批次在「訂閱者」上執行，而第二批次在「發行者」上執行。 登入和密碼值是在執行階段使用 sqlcmd 指令碼變數提供的。  
   
 ```  
@@ -270,7 +270,7 @@ EXEC sp_addmergesubscription @publication = @myMergePub,
 GO  
 ```  
   
-##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
  用於建立提取訂閱的 RMO 類別依該訂閱所屬的發行集類型而定。  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>若要建立快照式或交易式發行集的提取訂閱  
@@ -304,7 +304,7 @@ GO
         > [!NOTE]  
         >  當訂閱是由 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> 固定伺服器角色的成員建立時，不需要設定 **P:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity** ，但還是建議您對其進行設定。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
-    -   (選擇性) **\@value** 指定為 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 值，以建立用於同步處理訂閱的代理程式作業。 如果指定 **false** (預設值)，則只能以程式設計的方式同步處理訂閱，而且您在從 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> 屬性存取此物件時必須指定其他屬性 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> 。 如需相關資訊，請參閱 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
+    -   (選擇性) **@value** 指定為 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 值，以建立用於同步處理訂閱的代理程式作業。 如果指定 **false** (預設值)，則只能以程式設計的方式同步處理訂閱，而且您在從 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> 屬性存取此物件時必須指定其他屬性 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> 。 如需相關資訊，請參閱 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
   
         > [!NOTE]  
         >  並非所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用 SQL Server Agent。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 當您為 Express 訂閱者指定值 **true** 時，不會建立代理程式作業。 不過，在「訂閱者」上會儲存重要的訂閱相關中繼資料。  
@@ -346,7 +346,7 @@ GO
         > [!NOTE]  
         >  當訂閱是由 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> 固定伺服器角色的成員建立時，不需要設定 **P:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity** ，但還是建議您對其進行設定。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
-    -   (選擇性) **\@value** 指定為 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 值，以建立用於同步處理訂閱的代理程式作業。 如果指定 **false** (預設值)，則只能以程式設計的方式同步處理訂閱，而且您在從 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> 屬性存取此物件時必須指定其他屬性 <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> 。 如需相關資訊，請參閱 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
+    -   (選擇性) **@value** 指定為 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 值，以建立用於同步處理訂閱的代理程式作業。 如果指定 **false** (預設值)，則只能以程式設計的方式同步處理訂閱，而且您在從 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> 屬性存取此物件時必須指定其他屬性 <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> 。 如需相關資訊，請參閱 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
   
     -   (選擇性) 在使用「SQL Server 驗證」連接到「散發者」時，設定 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (或 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> ) 欄位。  
   
@@ -356,7 +356,7 @@ GO
   
 9. 使用步驟 2 中 <xref:Microsoft.SqlServer.Replication.MergePublication> 類別的執行個體，呼叫 <xref:Microsoft.SqlServer.Replication.MergePublication.MakePullSubscriptionWellKnown%2A> 方法，以使用「發行者」註冊提取訂閱。 如果此註冊已存在，則會發生例外狀況。  
   
-###  <a name="PShellExample"></a> 範例 (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> 範例 (RMO)  
  此範例會建立交易式發行集的提取訂閱。 用於建立「散發代理程式」作業的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶認證是在執行階段傳遞的。  
   
 ```csharp  

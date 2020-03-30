@@ -22,10 +22,10 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 9b034e43f918a0f6c198c29cf2f6618ba38638f8
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288572"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>還原和復原概觀 (SQL Server)
@@ -47,7 +47,7 @@ ms.locfileid: "79288572"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份與還原可以跨所有支援的作業系統運作。 如需支援的作業系統詳細資訊，請參閱 [安裝 SQL Server 2016 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。 如需舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之備份支援的相關資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)的＜相容性支援＞一節。  
   
-##  <a name="RestoreScenariosOv"></a> 還原案例概觀  
+##  <a name="overview-of-restore-scenarios"></a><a name="RestoreScenariosOv"></a> 還原案例概觀  
  *中的* 「還原案例」 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Restore scenario) 是指先從一個或多個備份還原資料，再復原資料庫的程序。 支援的還原實例視資料庫的復原模式與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的版本而定。  
   
  下表介紹各種復原模式可能支援的還原實例。  
@@ -85,7 +85,7 @@ ms.locfileid: "79288572"
   
 -   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，還原檔案或頁面可以讓資料庫中的其他資料在還原作業期間維持線上狀態。  
 
-## <a name="TlogAndRecovery"></a> 復原和交易記錄
+## <a name="recovery-and-the-transaction-log"></a><a name="TlogAndRecovery"></a> 復原和交易記錄
 針對大多數的還原案例，必須套用交易記錄備份並允許 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行**復原流程**，資料庫才能上線。 復原是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的的流程，為的是讓每個資料庫都能以交易一致 (或正常) 狀態啟動。
 
 在容錯移轉或其他不正常關機的情況下，資料庫可能會停留在緩衝區快取中有些修改尚未寫入資料檔，且未完成交易已在資料檔中作了一些修改的狀態。 啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體時，其會執行每個資料庫的復原；這些復原都是以最後一個[資料庫檢查點](../../relational-databases/logs/database-checkpoints-sql-server.md)為基礎的三個階段所組成：
@@ -105,7 +105,7 @@ ms.locfileid: "79288572"
 > [!NOTE]
 > 為了最大化企業環境中資料庫的可用性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 可以在重做階段後，且「復原階段」仍在執行時就讓資料庫上線。 這稱為「快速復原」。
 
-##  <a name="RMsAndSupportedRestoreOps"></a> 復原模式和支援的還原作業  
+##  <a name="recovery-models-and-supported-restore-operations"></a><a name="RMsAndSupportedRestoreOps"></a> 復原模式和支援的還原作業  
  資料庫可用的還原作業，取決於其復原模式。 下表摘要說明每一種復原模式是否支援給定的還原實例，及其支援的範圍。  
   
 |還原作業|完整復原模式|大量記錄復原模式|簡單復原模式|  
@@ -123,7 +123,7 @@ ms.locfileid: "79288572"
 > [!IMPORTANT]  
 > 不論資料庫的復原模式為何，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份都無法還原至比建立備份版本還舊的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本。  
   
-## <a name="RMsimpleScenarios"></a> 簡單復原模式下的還原案例  
+## <a name="restore-scenarios-under-the-simple-recovery-model"></a><a name="RMsimpleScenarios"></a> 簡單復原模式下的還原案例  
  簡單復原模式在還原作業上具有下列限制：  
   
 -   檔案還原及分次還原僅適用於唯讀的次要檔案群組。 如需有關這些資訊還原案例，請參閱[檔案還原 &#40;簡單復原模式&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md) 和[分次還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)。  
@@ -137,7 +137,7 @@ ms.locfileid: "79288572"
 > [!IMPORTANT]  
 > 不論資料庫的復原模式為何，比建立備份之版本還舊的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，都無法還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。  
   
-##  <a name="RMblogRestore"></a> 大量記錄復原模式下的還原  
+##  <a name="restore-under-the-bulk-logged-recovery-model"></a><a name="RMblogRestore"></a> 大量記錄復原模式下的還原  
  本節討論大量記錄復原模式的特殊還原考量，此為專門用做完整復原模式的補充。  
   
 > [!NOTE]  
@@ -164,20 +164,20 @@ ms.locfileid: "79288572"
   
  如需有關如何執行線上還原的詳細資訊，請參閱[線上還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
   
-##  <a name="DRA"></a> Database Recovery Advisor (SQL Server Management Studio)  
+##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a> Database Recovery Advisor (SQL Server Management Studio)  
 Database Recovery Advisor 有助於建構實作最佳化正確還原順序的還原計畫。 我們已經處理了客戶所要求的許多已知資料庫還原問題和增強功能。 Database Recovery Advisor 導入的主要增強功能包括：  
   
--   **還原計畫演算法：** 用來建構還原計畫的演算法已經大幅改善，特別是針對複雜的還原狀況。 相較於舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而言，可更有效率地處理許多邊緣案例 (包括時間點還原的分岔案例)。  
+-   **還原計畫演算法：**  用來建構還原計畫的演算法已經大幅改善，特別是針對複雜的還原狀況。 相較於舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而言，可更有效率地處理許多邊緣案例 (包括時間點還原的分岔案例)。  
   
--   **時間點還原：** Database Recovery Advisor 大幅簡化了將資料庫還原到特定時間點的作業。 視覺備份時間表大幅增強時間點還原的支援。 這個視覺化時間表可讓您識別當做還原資料庫之目標復原點的可行時間點。 時間表可加快周遊分岔復原路徑 (跨多個復原分岔之路徑)。 特定時間點還原計畫會自動包含與還原至目標時間點 (日期和時間) 有關的備份。 如需詳細資訊，請參閱[將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
+-   **時間點還原：**  Database Recovery Advisor 大幅簡化資料庫還原到特定時間點的作業。 視覺備份時間表大幅增強時間點還原的支援。 這個視覺化時間表可讓您識別當做還原資料庫之目標復原點的可行時間點。 時間表可加快周遊分岔復原路徑 (跨多個復原分岔之路徑)。 特定時間點還原計畫會自動包含與還原至目標時間點 (日期和時間) 有關的備份。 如需詳細資訊，請參閱[將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
 如需有關 Database Recovery Advisor 的詳細資訊，請參閱下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理能力部落格：  
   
--   [Recovery Advisor：簡介](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx) \(英文\)  
+-   [Recovery Advisor：簡介](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Recovery Advisor：使用 SSMS 來建立/還原分割備份](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx) \(英文\)  
+-   [Recovery Advisor：使用 SSMS 建立/還原分割備份](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
 
-## <a name="adr"></a> 加速資料庫復原
+## <a name="accelerated-database-recovery"></a><a name="adr"></a> 加速資料庫復原
 [加速資料庫復原](/azure/sql-database/sql-database-accelerated-database-recovery/)可在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中使用。 加速資料庫復原藉由重新設計 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [復原流程](#TlogAndRecovery)來大幅改善資料庫可用性，尤其是針對長時間執行的交易。 啟用加速資料庫復原的資料庫，其在容錯移轉或其他非正常關機之後完成復原流程的速度會大幅加快。 啟用時，加速資料庫復原也會大幅加快完成復原已取消長時間執行交易的速度。
 
 您可以使用下列語法，為 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 上的每個資料庫上啟用加速資料庫復原：
@@ -189,7 +189,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
 > [!NOTE]
 > 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上，加速資料庫復原預設為啟用。
 
-## <a name="RelatedContent"></a> 另請參閱  
+## <a name="see-also"></a><a name="RelatedContent"></a> 另請參閱  
  [備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)      
  [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [SQL Server 交易記錄架構與管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     

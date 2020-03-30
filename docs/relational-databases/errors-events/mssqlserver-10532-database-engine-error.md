@@ -12,10 +12,10 @@ ms.assetid: 01da29ee-bf67-433f-8148-587a7e8d1d76
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 050f1c4e1c47458e513e02d16eb3ea6dc7e842a8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72005993"
 ---
 # <a name="mssqlserver_10532"></a>MSSQLSERVER_10532

@@ -13,10 +13,10 @@ ms.assetid: 32c0b4ec-c166-45a3-b41e-38a30fd56813
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 31ee9136f4c2b0f0864db0ecd3931e2e45ea4fdb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67942746"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Oracle 發行者的效能微調

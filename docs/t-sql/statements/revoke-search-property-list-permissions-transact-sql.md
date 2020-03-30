@@ -20,10 +20,10 @@ ms.assetid: a6b8b37c-0015-4596-898c-51a567659e2e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 84d15026a188bd24522195d22e70707a8803fda8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75255796"
 ---
 # <a name="revoke-search-property-list-permissions-transact-sql"></a>REVOKE 搜尋屬性清單權限 (Transact-SQL)

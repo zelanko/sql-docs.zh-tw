@@ -15,10 +15,10 @@ ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0de4fe433a1f34b49dbfb12082759c954e87a7a4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298563"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>加入 Analysis Services 連接管理員對話方塊 UI 參考

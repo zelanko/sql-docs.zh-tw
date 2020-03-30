@@ -11,10 +11,10 @@ ms.assetid: b14da361-a6b8-4d85-b196-7f2f13650f44
 author: jodebrui
 ms.author: jodebrui
 ms.openlocfilehash: d741f06741972637f7f9e6576a8dc5a21dabc681
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412564"
 ---
 # <a name="sql-server-in-memory-oltp-internals-for-sql-server-2016"></a>SQL Server 2016 的 SQL Server 記憶體內部 OLTP 內部

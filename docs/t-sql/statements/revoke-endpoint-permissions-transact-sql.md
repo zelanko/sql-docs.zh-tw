@@ -17,10 +17,10 @@ ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: db85df99a2b37e2d92997dce579d77d0f31f7c0e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082283"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE 端點權限 (Transact-SQL)

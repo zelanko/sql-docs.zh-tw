@@ -16,10 +16,10 @@ ms.assetid: a18c12a9-59ad-4711-a862-39d8f28476b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: dde95a91f78c8e22bb6452421e41b10750f5c5fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68130281"
 ---
 # <a name="metadata-functions-transact-sql"></a>中繼資料函數 (Transact-SQL)

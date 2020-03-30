@@ -18,10 +18,10 @@ ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7d284cb8c39307a6ee2568bd8e4fa5fa0df2c3e5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940100"
 ---
 # <a name="get_filestream_transaction_context-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)

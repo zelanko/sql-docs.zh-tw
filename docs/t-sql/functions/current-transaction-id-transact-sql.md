@@ -18,10 +18,10 @@ ms.assetid: 82cd9f92-d935-45a0-a433-620d6e15b467
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6bd6cbe675fa5e9aba72fc545d1108c3aad6f930
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68026340"
 ---
 # <a name="current_transaction_id-transact-sql"></a>CURRENT_TRANSACTION_ID (Transact-SQL)

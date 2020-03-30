@@ -19,10 +19,10 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6683cec953daf6146371d62e8db2e4add2bd42df
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298351"
 ---
 # <a name="data-flow-task"></a>資料流程工作
@@ -90,7 +90,7 @@ ms.locfileid: "71298351"
   
  許多記錄事件會寫入多個項目，並且有些記錄項目的訊息包含複雜的資料。 若要更容易了解和溝通複雜訊息的內容，您可以剖析訊息文字。 視記錄的位置而定，您可以使用 Transact-SQL 陳述式或指令碼元件，將複雜的文字區分成資料行或其他更有用的格式。  
   
- 例如，下表包含剖析成資料行的訊息：「資料列是提供給資料流程元件做為輸入。 :  :1185 :OLE DB 來源輸出 :1180 :排序 :1181 :排序輸入 :76"，剖析為資料行。 這個訊息是在資料列從 OLE DB 來源傳送到「排序」轉換時，由 **OnPipelineRowsSent** 事件寫入。  
+ 例如，下表包含剖析成資料行的訊息：「資料列是提供給資料流程元件做為輸入。 :  : 1185 : OLE DB 來源輸出 : 1180 : 排序 : 1181 : 排序輸入 : 76」。 這個訊息是在資料列從 OLE DB 來源傳送到「排序」轉換時，由 **OnPipelineRowsSent** 事件寫入。  
   
 |資料行|描述|值|  
 |------------|-----------------|-----------|  

@@ -18,10 +18,10 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a71c7c83afe2fcb8b0192f6dfd12c8072ccdc392
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322155"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>針對合併發行項實作自訂衝突解析程式
@@ -36,7 +36,7 @@ ms.locfileid: "75322155"
   
      [以 COM 為基礎的解析程式](#COM)  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以將自訂衝突解決器撰寫為每一個發行者上的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。 在同步處理期間，當解析程式註冊到的發行項中發生衝突時，就會叫用這個預存程序。 衝突資料列的相關資訊會由合併代理程式傳遞至程序的必要參數。 一定會在發行者上建立以預存程序為基礎的自訂衝突解決器。  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ ms.locfileid: "75322155"
   
 2.  執行 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，針對 **\@property** 指定 **\@publication**、  article **以及 \@resolver_info** 值，並針對 **\@value** 命名實作衝突解析程式邏輯的預存程序名稱。  
   
-##  <a name="COM"></a> 使用以 COM 為基礎的自訂解析程式  
+##  <a name="using-a-com-based-custom-resolver"></a><a name="COM"></a> 使用以 COM 為基礎的自訂解析程式  
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 命名空間會實作一個介面，此介面可讓您撰寫複雜的商務邏輯來處理事件，並解決合併複寫同步處理程序期間所發生的衝突。 如需詳細資訊，請參閱[為合併發行項實作商務邏輯處理常式](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)。 您也可以撰寫自己的原生程式碼式自訂商務邏輯，以解決衝突。 此邏輯會建置為 COM 元件，並編譯成動態連結程式庫 (DLL) (使用如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ 的產品)。 這種以 COM 為基礎的自訂衝突解析程式必須實作 **ICustomResolver** 介面，此介面是專門針對衝突解決所設計。  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>建立及註冊以 COM 為基礎的自訂衝突解決器  

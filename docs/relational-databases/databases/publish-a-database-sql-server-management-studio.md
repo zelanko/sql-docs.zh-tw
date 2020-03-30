@@ -11,10 +11,10 @@ ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bbcec1ab749b87f37397f94425226e5f4f523132
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908516"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>發行資料庫 (SQL Server Management Studio)

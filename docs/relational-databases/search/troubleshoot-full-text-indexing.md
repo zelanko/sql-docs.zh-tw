@@ -15,16 +15,16 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d8dd1cd471328859dd8bfa595fc341bda5f51f04
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68095298"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>疑難排解全文檢索索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
      
-##  <a name="failure"></a> 疑難排解全文檢索索引失敗  
+##  <a name="troubleshoot-full-text-indexing-failures"></a><a name="failure"></a> 疑難排解全文檢索索引失敗  
  擴展或維護全文檢索索引時，全文檢索索引子可能會因為下面所描述的原因而無法對一個或多個資料列進行檢索。 這些資料列層級錯誤不會讓母體擴展無法完成。 索引子會略過這些資料列，而這表示您無法查詢這些資料列中所含的內容。  
   
  下列情況可能會發生編製索引失敗：  
@@ -54,7 +54,7 @@ ms.locfileid: "68095298"
 >  略過簽章驗證會讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體變得較不安全。 建議您簽署任何所實作的元件，或確定所取得的任何元件都已進行簽署。 如需簽署元件的資訊，請參閱 [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)。  
   
   
-##  <a name="state"></a> 全文檢索索引在還原交易記錄之後處於不一致的狀態  
+##  <a name="full-text-index-in-inconsistent-state-after-transaction-log-restored"></a><a name="state"></a> 全文檢索索引在還原交易記錄之後處於不一致的狀態  
  當復原資料庫的交易記錄時，您會看到一個警告，指出全文檢索索引處於不一致的狀態。 原因是備份資料庫後，資料表的全文檢索索引已發生變更。 若要讓全文檢索索引的狀態一致，您必須在資料表上執行完整母體擴展 (搜耙)。 如需詳細資訊，請參閱 [擴展全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。  
   
   

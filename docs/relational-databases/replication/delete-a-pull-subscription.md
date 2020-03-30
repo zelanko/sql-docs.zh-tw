@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c97f69b69075a4ab60f8378344de139924dca788
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76284665"
 ---
 # <a name="delete-a-pull-subscription"></a>刪除提取訂閱
@@ -37,7 +37,7 @@ ms.locfileid: "76284665"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  在發行者端 (從 **的** [本機發行集] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]資料夾) 或訂閱者端 (從 **[本機訂閱]** 資料夾) 刪除提取訂閱。 刪除訂閱並無法從訂閱中移除物件或資料，這些必須手動移除。  
   
 #### <a name="to-delete-a-pull-subscription-at-the-publisher"></a>若要在發行者端刪除提取訂閱  
@@ -62,7 +62,7 @@ ms.locfileid: "76284665"
   
 4.  在確認對話方塊中，選取是否要連接發行者以刪除訂閱資訊。 若您清除 **[連接到發行者]** 核取方塊，應於稍後連接到發行者以便刪除資訊。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用複寫預存程序來以程式設計的方式刪除提取訂閱。 使用哪些預存程序要依訂閱所屬的發行集類型而定。  
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>刪除快照式或交易式發行集的提取訂閱  
@@ -77,7 +77,7 @@ ms.locfileid: "76284665"
   
 2.  在發行集資料庫的發行者端，執行 [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)。 指定 **\@publication**、 **\@subscriber** 和 **\@subscriber_db**。 為  subscription_type **指定 \@pull** 的值。 (選擇性) 如果無法存取散發者，請為  ignore_distributor **指定 \@1** 值來刪除此訂閱，而不需要移除散發者端上的相關物件。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  下列範例會刪除交易式發行集的提取訂閱。 第一批次是在「訂閱者」上執行，而第二批次是在「發行者」上執行。  
   
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/delete-a-pull-subscription_1.sql)]  
@@ -90,7 +90,7 @@ ms.locfileid: "76284665"
   
  [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/delete-a-pull-subscription_4.sql)]  
   
-##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
  您可以使用 Replication Management Objects (RMO) 以程式設計的方式刪除提取訂閱。 用於刪除提取訂閱的 RMO 類別依該提取訂閱所屬的發行集類型而定。  
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>刪除快照式或交易式發行集的提取訂閱  
@@ -125,7 +125,7 @@ ms.locfileid: "76284665"
   
 7.  呼叫 <xref:Microsoft.SqlServer.Replication.MergePublication.RemovePullSubscription%2A> 方法。 為 *subscriber* 和 *subscriberDB* 參數指定訂閱者和訂閱資料庫的名稱。  
   
-###  <a name="PShellExample"></a> 範例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 範例 (RMO)  
  此範例會刪除交易式發行集的提取訂閱，並在發行者上移除訂閱註冊。  
   
  [!code-cs[HowTo#rmo_DropTranPullSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_droptranpullsub)]  

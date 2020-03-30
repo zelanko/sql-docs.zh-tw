@@ -13,10 +13,10 @@ ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa9bf38512b2ba817156f216161d21bc1d27c129
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294855"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>將資料表加入至 CDC 執行個體

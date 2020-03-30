@@ -15,10 +15,10 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8b1f4f85fbd4806c164faef0c8bcac7a982cc4fe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71288499"
 ---
 # <a name="property-expressions-editor"></a>屬性運算式編輯器

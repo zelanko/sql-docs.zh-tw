@@ -22,10 +22,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056265"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>設定及管理搜尋的文字分隔與詞幹分析器 (SQL Server)
@@ -53,7 +53,7 @@ ms.locfileid: "74056265"
 SELECT * FROM sys.fulltext_languages
 ```
 
-##  <a name="register"></a> 取得已註冊的斷詞工具清單
+##  <a name="get-the-list-of-registered-word-breakers"></a><a name="register"></a> 取得已註冊的斷詞工具清單
 
 若要讓全文檢索搜尋使用語言的斷詞工具，必須先註冊斷詞工具。 若是已註冊的斷詞工具，全文檢索索引和查詢作業也可以使用相關聯的語言資源 (字幹分析器、非搜尋字 (停用字詞) 和同義字檔案)。
 
@@ -69,7 +69,7 @@ GO
 ## <a name="if-you-add-or-remove-a-word-breaker"></a>如需新增或移除斷詞工具  
 如果您加入、移除或更改了斷詞工具，就必須重新整理支援全文檢索索引和查詢的 Microsoft Windows 地區設定識別碼 (LCID) 清單。 如需詳細資訊，請參閱 [檢視或變更已註冊的篩選與斷詞工具](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)。  
   
-##  <a name="default"></a> 設定預設全文檢索語言選項  
+##  <a name="set-the-default-full-text-language-option"></a><a name="default"></a> 設定預設全文檢索語言選項  
  若為當地語系化的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式就會將 **default full-text language** 選項設定為伺服器的語言 (如果有相符項目存在的話)。 若 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]為非當地語系化的版本時，則 **或** 選項會是英文。  
   
  建立或更改全文檢索索引時，您可以為每個全文檢索索引資料行指定不同的語言。 如果沒有為資料行指定語言，則預設值會是 [預設全文檢索語言]  組態選項的值。  
@@ -77,7 +77,7 @@ GO
 > [!NOTE]  
 >  除非在查詢中指定 LANGUAGE 選項，否則列在單一全文檢索查詢函數子句的所有資料行都必須使用相同的語文。 查詢之全文檢索索引資料行所用的語言會決定要對全文檢索查詢述詞 ([CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)) 與函數 ([CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)) 之引數執行的語言分析。  
   
-##  <a name="lang"></a> 選擇索引資料行的語言  
+##  <a name="choose-the-language-for-an-indexed-column"></a><a name="lang"></a> 選擇索引資料行的語言  
  建立全文檢索索引時，建議您針對每個索引資料行指定語言。 如果沒有為資料行指定語言，就會使用系統預設語言。 資料行的語言會決定哪些斷詞工具和字幹分析器要用於建立該資料行的索引。 此外，資料行的全文檢索查詢會使用該語言的同義字檔案。  
   
  在選擇資料行語言以建立全文檢索索引時，必須考慮一些事項。 這些考量與文字如何 Token 化，然後如何由全文檢索引擎編製索引有關。 如需詳細資訊，請參閱 [選擇建立全文檢索索引時的語言](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)。  
@@ -90,7 +90,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 
 如需其他選項和詳細資訊，請參閱 [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)。
 
-##  <a name="tshoot"></a> 疑難排解斷詞逾時錯誤  
+##  <a name="troubleshoot-word-breaking-time-out-errors"></a><a name="tshoot"></a> 疑難排解斷詞逾時錯誤  
  斷詞逾時錯誤可能會在各種情況中發生。 如需這些情況以及如何回應每種情況的資訊，請參閱 [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md)。
 
 ### <a name="info-about-the-mssqlserver_30053-error"></a>MSSQLSERVER_30053 錯誤的相關資訊
@@ -130,7 +130,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 |篩選背景程式處理序的組態不正確。|請確定您使用最新的密碼，而且網域原則並未讓篩選背景程式帳戶無法登入。|  
 |伺服器執行個體正在執行非常繁重的查詢工作負載。|請嘗試在負載較輕時再執行一次查詢。|  
 
-##  <a name="impact"></a> 了解更新斷詞工具的影響  
+##  <a name="understand-the-impact-of-updated-word-breakers"></a><a name="impact"></a> 了解更新斷詞工具的影響  
  每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本一般都會包含新的斷詞工具，其語言規則比舊版斷詞工具更好而且更正確。 新斷詞工具的行為可能會與全文檢索索引內斷詞工具的行為稍有不同，而全文檢索索引是從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入。
  
 如果全文檢索目錄是在將資料庫升級為目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本時匯入，則這點就很明顯。 全文檢索目錄中全文檢索索引所使用的一種或多種語言現在可能會與新的斷詞工具相關聯。 如需詳細資訊，請參閱 [升級全文檢索搜尋](../../relational-databases/search/upgrade-full-text-search.md)。  

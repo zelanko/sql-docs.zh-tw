@@ -18,10 +18,10 @@ ms.assetid: 9abc79c5-43c9-4cc2-b37f-d2ecdec7c234
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c4c798c431b2eb71354dd803bd5701df0b6f9cad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68120661"
 ---
 # <a name="z-geography-data-type"></a>Z (geography 資料類型)

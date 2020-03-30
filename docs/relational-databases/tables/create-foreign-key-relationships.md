@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a26c03eaef6eecf0cee442d2b5b55f599c58065
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68123751"
 ---
 # <a name="create-foreign-key-relationships"></a>建立外部索引鍵關聯性
@@ -26,7 +26,7 @@ ms.locfileid: "68123751"
 
 此文章說明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中建立外部索引鍵關聯性。 當想要將一個資料表的資料列，與其他資料表的資料列建立相關時，可以建立兩者間的關聯性。
 
-## <a name="BeforeYouBegin"></a> 開始之前！ 限制事項
+## <a name="before-you-begin-limits-and-restrictions"></a><a name="BeforeYouBegin"></a> 開始之前！ 限制事項
 
 - 外部索引鍵條件約束不一定只能連結到另一個資料表中的主索引鍵條件約束；它也可以定義成參考另一個資料表中 UNIQUE 條件約束的資料行。
 - 在 FOREIGN KEY 條件約束的資料行中輸入 NULL 以外的值時，值必須在參考的資料行中；否則，系統會傳回外部索引鍵違規錯誤訊息。 若要確定會驗證複合外部索引鍵條件約束的所有值，請對所有參與的資料行指定 NOT NULL。

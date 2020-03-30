@@ -15,10 +15,10 @@ ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2a0648ea24162f59562f6d7a68dd5007ca78be3b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68051267"
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() 方法 (xml 資料類型)

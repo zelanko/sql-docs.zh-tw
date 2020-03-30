@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b59f204fafd7e1b912eea2673783290f67fa786
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287742"
 ---
 # <a name="tables"></a>資料表
@@ -44,7 +44,7 @@ ms.locfileid: "79287742"
 暫存資料表儲存在 **tempdb**中。 暫存資料表有兩種：區域與全域。 它們在名稱、可見性和可用性方面有些差異。 本機暫存資料表是以單一數字符號 (#) 作為名稱的第一個字元；只有目前連接的使用者才能看見它們，當使用者中斷與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的連接時，就會刪除它們。 全域暫存資料表是以兩個數字符號 (##) 做為名稱的前兩個字元；只要一建立好，任何使用者都能看見它們，只有當所有參考這些資料表的使用者都中斷與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的連接時，才會刪除它們。 
 
 
-#### <a name="ctp23"></a> 使用多個範圍的暫存資料表減少重新編譯工作負載
+#### <a name="reduced-recompilations-for-workloads-using-temporary-tables-across-multiple-scopes"></a><a name="ctp23"></a> 使用多個範圍的暫存資料表減少重新編譯工作負載
 
 [!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] 在所有資料庫相容性層級下，使用多個範圍的暫存資料表來減少重新編譯工作負載。 也會針對所有部署模型，在 Azure SQL Database 的資料庫相容性層級 150 下啟用這項功能。  在此功能推出之前，使用資料操作語言 (DML) 陳述式 (`SELECT`、`INSERT`、`UPDATE`、`DELETE`) 參考暫存資料表時，若暫存資料表是由外部範圍批次建立的，便會導致在每一次執行陳述式時重新編譯 DML 陳述式。 透過這項改善，SQL Server 可執行額外的輕量檢查，避免不必要的重新編譯：
 

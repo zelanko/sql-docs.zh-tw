@@ -29,10 +29,10 @@ ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: aa1521e40df7483c7a4dc336484d6ecf28e909cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75325445"
 ---
 # <a name="recovery-models-sql-server"></a>復原模式 (SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "75325445"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="RMov"></a> 復原模式概觀  
+##  <a name="recovery-model-overview"></a><a name="RMov"></a> 復原模式概觀  
  下表摘要說明三種復原模式。  
   
 |復原模式|描述|工作損失風險|復原至時間點？|  
@@ -54,7 +54,7 @@ ms.locfileid: "75325445"
 |**完整**|需要記錄備份。<br /><br /> 不因損失或損毀資料檔案而失去任何工作。<br /><br /> 可復原至任意時間點 (例如，應用程式或使用者錯誤前)。 如需完整復原模式下之資料庫備份的相關資訊，請參閱[完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md) 和[完整資料庫還原 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)。|通常沒有。<br /><br /> 如果記錄結尾損毀，必須重做最近一次記錄備份後的變更。|可以復原至特定時間點 (假設您已完成至該時間點的備份)。 如需使用記錄備份還原至失敗點的相關資訊，請參閱[將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。<br /><br /> 注意：如果您有兩個以上在邏輯上必須一致的完整復原模式資料庫，您可能需要實作特殊的程序，以確保這些資料庫能夠復原。 如需詳細資訊，請參閱 [復原包含標示之交易的相關資料庫](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)。|  
 |**大量記錄**|需要記錄備份。<br /><br /> 完整復原模式的輔助，允許執行高效能的大量複製作業。<br /><br /> 針對大多數的大量作業使用最少記錄，以減少記錄空間的使用量。 如需只記錄基本資訊之作業的相關資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。<br /><br /> 記錄備份的大小可能會十分龐大，因為記錄備份會擷取最低限度記錄的作業。 如需大量記錄復原模式下之資料庫備份的相關資訊，請參閱[完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md) 和[完整資料庫還原 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)。|如果記錄損毀，或在最近一次記錄備份後進行過大量記錄作業的話，必須重做最近一次備份後的變更。<br /><br /> 否則不會損失任何工作。|可復原至任何備份結束時。 不支援時間點復原。|  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [檢視或變更資料庫的復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   

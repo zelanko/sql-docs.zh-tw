@@ -12,10 +12,10 @@ ms.assetid: e2b7c1b2-3679-4206-9b25-6bd55ef96a2c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a25f3809221476c2cc4f80bae42d1e0b38a83429
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68043593"
 ---
 # <a name="mssqlserver_360"></a>MSSQLSERVER_360

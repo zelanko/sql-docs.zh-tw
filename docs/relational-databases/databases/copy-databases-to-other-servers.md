@@ -19,10 +19,10 @@ ms.assetid: 978406d6-a3c8-4902-b1f4-4ced75234be5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a16eb1e7d6c94f87d77cac93c4f07f6ae251cd4a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68137355"
 ---
 # <a name="copy-databases-to-other-servers"></a>複製資料庫至其他伺服器

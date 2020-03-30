@@ -17,10 +17,10 @@ ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a271b9dd9da2a4b21040a89145d9f2ab1fe84b68
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297585"
 ---
 # <a name="functions-ssis-expression"></a>函數 (SSIS 運算式)

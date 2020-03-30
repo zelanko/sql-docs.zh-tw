@@ -25,10 +25,10 @@ ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 29a30f6b8d65cf1b821c93de0f051925b3cb6626
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68112863"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
@@ -90,7 +90,7 @@ ALTER SERVICE MASTER KEY
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 是使用 AES 加密演算法來保護服務主要金鑰 (SMK) 及資料庫主要金鑰 (DMK)。 與舊版中使用的 3DES 相比，AES 是一種較新的加密演算法。 將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體升級至 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之後，應該會重新產生 SMK 和 DMK，以將主要金鑰升級至 AES。 如需重新產生 DMK 的詳細資訊，請參閱 [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)。  
   
-##  <a name="_changing"></a> 變更 SQL Server 服務帳戶  
+##  <a name="changing-the-sql-server-service-account"></a><a name="_changing"></a> 變更 SQL Server 服務帳戶  
  若要變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。 為管理服務帳戶的變更，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會儲存一個備用的服務主要金鑰，並由已將必要權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務群組的電腦帳戶所保護。 如果電腦經過重建，服務帳戶先前所使用的相同網域使用者可以復原服務主要金鑰。 這不適用於本機帳戶或本機系統、本機服務或網路服務帳戶。 當您要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移動到另一部電腦時，請使用備份和還原來移轉服務主要金鑰。  
   
  REGENERATE 片語會重新產生服務主要金鑰。 當重新產生服務主要金鑰時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會解密所有利用它加密的金鑰，然後利用新的服務主要金鑰來加密這些金鑰。 這是一項需要大量資源的作業。 除非已危害金鑰，否則，您應該將這項作業安排在低需求時進行。 如果任何一項解密失敗，整個陳述式便會失敗。  

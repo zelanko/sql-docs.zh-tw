@@ -11,10 +11,10 @@ ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 901f430f09621c6ad9be20759cddb757e2e96ee7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295509"
 ---
 # <a name="catalogcreate_execution_dump"></a>catalog.create_execution_dump 

@@ -18,10 +18,10 @@ ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2129c9990156fe970faa2ce134eaf2a17b35c764
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68042318"
 ---
 # <a name="stdisjoint-geography-data-type"></a>STDisjoint (geography 資料類型)

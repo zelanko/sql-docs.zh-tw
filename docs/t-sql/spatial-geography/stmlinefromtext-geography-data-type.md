@@ -18,10 +18,10 @@ ms.assetid: 66dfd722-a9bd-45d3-9788-f1946dd23e17
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 57d0edaed1d26de79813939c9606b9934646e5f7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68223656"
 ---
 # <a name="stmlinefromtext-geography-data-type"></a>STMLineFromText (geography 資料類型)

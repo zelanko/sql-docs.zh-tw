@@ -22,10 +22,10 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a437704946f379f38aa590ccbf53f240fad94cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296921"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>指令碼工作的程式碼撰寫和偵錯
@@ -55,7 +55,7 @@ ms.locfileid: "71296921"
   
 -   當為 [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] 程式語言設定指令碼工作時，**ScriptMain** 類別具有公用副程式：**Main**。 **ScriptMain.Main** 副程式是執行階段在您執行指令碼工作時所呼叫的方法。  
   
-     在新指令碼的 **Main** 副程式中的唯一程式碼預設是 `Dts.TaskResult = ScriptResults.Success` 這一行。 這行會通知執行階段，工作的作業已成功。 [從指令碼工作中傳回結果](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md)會討論 **Dts.TaskResult** 屬性。  
+     在新指令碼的 **Main** 副程式中的唯一程式碼預設是 `Dts.TaskResult = ScriptResults.Success` 這一行。 這行會通知執行階段，工作的作業已成功。 **從指令碼工作中傳回結果**會討論 [Dts.TaskResult](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md) 屬性。  
   
 -   針對 Visual C# 程式設計語言設定指令碼工作時，**ScriptMain** 類別具有公用方法 **Main**。 此方法是在指令碼工作執行時呼叫。  
   

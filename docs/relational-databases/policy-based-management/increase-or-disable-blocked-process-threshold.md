@@ -13,10 +13,10 @@ ms.assetid: 71db8ef6-341b-4465-99db-5c63e48d4c7d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ef493b3af967adf83b59a1d272f69b0b677149c5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68087225"
 ---
 # <a name="increase-or-disable-blocked-process-threshold"></a>增加或停用 Blocked Process Threshold

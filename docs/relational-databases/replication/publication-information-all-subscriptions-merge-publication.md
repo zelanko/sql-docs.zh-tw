@@ -14,10 +14,10 @@ ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 619406c884ec5067f569178094f9a3a0c05634e6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321404"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>發行集資訊，所有訂閱 (合併式發行集)

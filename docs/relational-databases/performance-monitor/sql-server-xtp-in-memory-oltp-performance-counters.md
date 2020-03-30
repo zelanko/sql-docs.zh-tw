@@ -11,10 +11,10 @@ ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f963d8d7fe186d889856c108de1541110beb16a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165516"
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>SQL Server XTP (記憶體中 OLTP) 效能計數器
@@ -28,7 +28,7 @@ ms.locfileid: "74165516"
   
  *\<版本>* 的值會是諸如 2016 之類。  
   
-##  <a name="SQLServerPOs"></a> SQL Server XTP 效能物件  
+##  <a name="sql-server-xtp-performance-objects"></a><a name="SQLServerPOs"></a> SQL Server XTP 效能物件  
  下表說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能物件。  
   
 |效能物件|描述|  

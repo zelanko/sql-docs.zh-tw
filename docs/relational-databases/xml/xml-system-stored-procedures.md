@@ -17,10 +17,10 @@ ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b07b7f782c534c7d98e6e20047f58787fe32e8e7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67902873"
 ---
 # <a name="xml-system-stored-procedures"></a>XML 系統預存程序

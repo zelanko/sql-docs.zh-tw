@@ -10,10 +10,10 @@ ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4598eba24c44bddb66ef97120d4c1decc9ca7d63
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903933"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 的 [匯入及匯出精靈] 連線到資料來源
@@ -40,7 +40,7 @@ ms.locfileid: "77903933"
 ## <a name="connect-to-other-data-providers"></a>連線到其他資料提供者
 如需如何連線至此處未列出之資料來源的資訊，請參閱 [The Connection Strings Reference](https://www.connectionstrings.com/) (連接字串參考)。 此第三方網站包含範例連接字串，以及資料提供者及其所需連線資訊的更多資訊。
 
-## <a name="related"></a> 相關的工作及內容  
+## <a name="related-tasks-and-content"></a><a name="related"></a> 相關的工作及內容  
 以下是一些其他基本工作。
 -   **請參閱精靈運作方式的簡單範例**。
 

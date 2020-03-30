@@ -11,10 +11,10 @@ ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f176ba79cc42610d706bb56896a8ca073ea8185a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68000714"
 ---
 # <a name="selective-xml-indexes-sxi"></a>選擇性 XML 索引 (SXI)
@@ -33,7 +33,7 @@ ms.locfileid: "68000714"
   
  選擇性 XML 索引功能也支援在已由選擇性 XML 索引進行索引之節點上的次要選擇性 XML 索引。 這些次要選擇性索引不但有效率，還能進一步提升查詢效能。  
   
-##  <a name="benefits"></a> 選擇性 XML 索引的優點  
+##  <a name="benefits-of-selective-xml-indexes"></a><a name="benefits"></a> 選擇性 XML 索引的優點  
  選擇性 XML 索引提供下列優點：  
   
 1.  大幅提升對一般查詢負載之 XML 資料類型的查詢效能。  
@@ -45,7 +45,7 @@ ms.locfileid: "68000714"
 4.  不需要更新應用程式就能受益於選擇性 XML 索引的優點。  
   
   
-##  <a name="compare"></a> 選擇性 XML 索引和主要 XML 索引  
+##  <a name="selective-xml-indexes-and-primary-xml-indexes"></a><a name="compare"></a> 選擇性 XML 索引和主要 XML 索引  
   
 > [!IMPORTANT]  
 >  在大部分情況下，建立選擇性 XML 索引會比一般 XML 索引獲得更佳的效能和更有效率的儲存。  
@@ -57,7 +57,7 @@ ms.locfileid: "68000714"
 -   在文件結構中支援未知元素或未知位置中元素的查詢。  
   
   
-##  <a name="example"></a> 簡單的選擇性 XML 索引範例  
+##  <a name="simple-example-of-a-selective-xml-index"></a><a name="example"></a> 簡單的選擇性 XML 索引範例  
  在大約有 500,000 個資料列的資料表中將下列 XML 片段視為 XML 文件：  
   
 ```xml  
@@ -101,7 +101,7 @@ FOR
   
 ## <a name="supported-features-prerequisites-and-limitations"></a>支援的功能、必要條件和限制  
   
-###  <a name="features"></a> 支援的 XML 功能  
+###  <a name="supported-xml-features"></a><a name="features"></a> 支援的 XML 功能  
  選擇性 XML 索引在 exist()、value() 和 nodes() 方法內支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所支援的 XQuery。  
   
 -   對於 exist()、value() 和 nodes() 方法，選擇性 XML 索引包含足夠的資訊可轉換整個運算式。  
@@ -113,7 +113,7 @@ FOR
 -   對於 modify() 方法，選擇性 XML 索引不會用來更新 XML 文件。  
   
   
-###  <a name="unsupported"></a> 不支援的 XML 功能  
+###  <a name="unsupported-xml-features"></a><a name="unsupported"></a> 不支援的 XML 功能  
  選擇性 XML 索引不支援 XML 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實作中支援的下列功能：  
   
 -   索引包含複雜 XS 類型的節點：聯集類型、序列類型和清單類型。  
@@ -129,7 +129,7 @@ FOR
 -   使用 id() 函數指定及擷取節點識別碼。  
   
   
-###  <a name="prereq"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="prereq"></a> 必要條件  
  下列必要條件必須存在，您才能在使用者資料表中的 XML 資料行上建立選擇性 XML 索引：  
   
 -   叢集索引必須存在於使用者資料表的主索引鍵上。  
@@ -139,7 +139,7 @@ FOR
 -   搭配選擇性 XML 索引使用時，使用者資料表的叢集索引鍵限制為 15 個資料行。  
   
   
-###  <a name="limits"></a> 限制  
+###  <a name="limitations"></a><a name="limits"></a> 限制  
  **一般需求與限制**  
   
 -   每一個選擇性 XML 索引只能在單一 XML 資料行上建立。  
@@ -191,7 +191,7 @@ FOR
 -   Database Tuning Advisor 中不支援選擇性 XML 索引和次要選擇性 XML 索引。  
   
   
-##  <a name="reltasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="reltasks"></a> 相關工作  
   
 |||  
 |-|-|  

@@ -11,10 +11,10 @@ ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4e8da4de862bf67a552da61a5d921e7c6c4c51fa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71281351"
 ---
 # <a name="catalogconfigure_catalog-ssisdb-database"></a>catalog.configure_catalog (SSISDB 資料庫)

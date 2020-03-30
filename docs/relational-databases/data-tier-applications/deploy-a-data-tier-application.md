@@ -22,10 +22,10 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74190121"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署資料層應用程式
@@ -114,7 +114,7 @@ ms.locfileid: "74190121"
   
  **記錄檔路徑和名稱:** - 為記錄檔指定完整路徑和檔案名稱。 此方塊中會填入預設路徑和檔案名稱。 在此方塊中編輯字串來變更預設值，或使用 **[瀏覽]** 按鈕導覽至放置記錄檔的資料夾。  
   
-###  <a name="Summary"></a> 摘要頁面  
+###  <a name="summary-page"></a><a name="Summary"></a> 摘要頁面  
  使用此頁面來檢閱部署 DAC 時，精靈將會採取的動作。  
   
  **將使用以下設定部署您的 DAC** - 檢閱顯示的資訊，以確保採取的動作將會是正確的。 此視窗會顯示您所選取的 DAC 封裝以及您針對部署的 DAC 執行個體所選取的名稱。 此視窗也會顯示當您建立與 DAC 相關聯的資料庫時，將要使用的設定。  

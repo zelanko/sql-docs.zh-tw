@@ -18,10 +18,10 @@ ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5b98f2283cfb9d89277ad97ffc7a883e43a42b4f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68042526"
 ---
 # <a name="spatial-types---geography"></a>空間類型 - geography

@@ -13,15 +13,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e469adf2c33327894a36e559ef69c49c989eefad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67913377"
 ---
 # <a name="audit-server-principal-impersonation-event-class"></a>Audit Server Principal Impersonation 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  當伺服器範圍內有模擬時發生，例如 EXECUTE AS \<登入>  ，就會發生 **Audit Server Principal Impersonation** 事件類別。  
+  當伺服器範圍內有模擬時發生，例如 EXECUTE AS **登入>** \<，就會發生 *Audit Server Principal Impersonation* 事件類別。  
   
 ## <a name="audit-server-principal-impersonation-event-class-data-columns"></a>Audit Server Principal Impersonation 事件類別資料行  
   

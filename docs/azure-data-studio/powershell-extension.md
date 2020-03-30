@@ -12,10 +12,10 @@ author: SQLvariant
 ms.author: aanelson
 manager: matthend
 ms.openlocfilehash: 72c4d64cc93ab564b9b8b04a838f8226982890f0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257583"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Azure Data Studio 的 PowerShell 編輯器支援

@@ -16,10 +16,10 @@ ms.assetid: 9cd7618d-6bd5-4f26-9351-87219b44775f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7c7c2f167924c6a733b459e95d8320e762bfe44a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68117531"
 ---
 # <a name="system-functions-transact-sql"></a>系統函數 (Transact-SQL)

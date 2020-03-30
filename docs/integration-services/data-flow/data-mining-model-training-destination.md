@@ -20,10 +20,10 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f064ad734e90d2748b959e7fdc9d5868b22c25cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293113"
 ---
 # <a name="data-mining-model-training-destination"></a>資料採礦模型定型目的地
@@ -58,7 +58,7 @@ ms.locfileid: "71293113"
   
 ### <a name="options"></a>選項。  
  **[ODBC 目的地編輯器]**  
- 從現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接清單中進行選取，或使用 [新增]  按鈕建立新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接，如下所述。  
+ 從現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接清單中進行選取，或使用 [新增][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**按鈕建立新的** 連接，如下所述。  
   
  **新增**  
  使用 [加入 Analysis Services 連接管理員]  對話方塊來建立新的連接。  

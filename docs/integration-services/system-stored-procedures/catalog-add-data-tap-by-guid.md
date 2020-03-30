@@ -11,10 +11,10 @@ ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6d31ad18b9a7de5b045a9ed868d20a0f35ab441b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71281375"
 ---
 # <a name="catalogadd_data_tap_by_guid"></a>catalog.add_data_tap_by_guid 

@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68053568"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
@@ -31,7 +31,7 @@ ms.locfileid: "68053568"
 -   若要比對單字和片語，請使用 **CONTAINS** 和 **CONTAINSTABLE**。
 -   若要比對意義，而不是確切的用字，請使用 **FREETEXT** 和 **FREETEXTTABLE**。
 
-## <a name="examples_simple"></a> 每個述詞和函式的範例
+## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a> 每個述詞和函式的範例
 
 下列範例使用 AdventureWorks 範例資料庫。 如需 AdventureWorks 的最終版本，請參閱 [SQL Server 2016 CTP3 的 AdventureWorks 資料庫與指令碼](https://www.microsoft.com/download/details.aspx?id=49502)。 若要執行範例查詢，您也必須設定全文檢索搜尋。 如需詳細資訊，請參閱[開始使用全文檢索搜尋](get-started-with-full-text-search.md)。 
 
@@ -172,9 +172,9 @@ GO
 
 **其他資訊**。 如需這些函式的語法和引數詳細資訊，請參閱[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)。
 
-## <a name="examples_specific"></a> 特定的搜尋類型
+## <a name="specific-types-of-searches"></a><a name="examples_specific"></a> 特定的搜尋類型
 
-###  <a name="Simple_Term"></a> 搜尋特定單字或片語 (簡單詞彙)  
+###  <a name="search-for-a-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a> 搜尋特定單字或片語 (簡單詞彙)  
  您可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 來搜尋資料表中的特定單字或片語。 例如，如果您要搜尋 **資料庫中的**ProductReview[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表，以尋找某產品具有 "learning curve" 片語的所有註解，可依照下列方式使用 CONTAINS 述詞：  
   
 ```sql
@@ -197,7 +197,7 @@ GO
 
 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 會尋找完全相符的片語。 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 會將片語分解成個別的字詞。
 
-###  <a name="Prefix_Term"></a> 搜尋具有前置詞的單字 (前置詞彙)  
+###  <a name="search-for-a-word-with-a-prefix-prefix-term"></a><a name="Prefix_Term"></a> 搜尋具有前置詞的單字 (前置詞彙)  
  您可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 或 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 來搜尋具有指定之前置詞的字詞或片語。 傳回資料行內包含以指定之前置詞開頭之文字的所有項目。 例如，若要搜尋包含 `top`- 前置詞的所有資料列，如同在 `top``ple`、 `top``ping`和 `top`中。 查詢看起來會像下列範例：  
   
 ```sql  
@@ -224,7 +224,7 @@ GO
 
 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)支持前置詞搜尋。
   
-###  <a name="Inflectional_Generation_Term"></a> 搜尋特定單字的字形變化 (衍生詞彙)  
+###  <a name="search-for-inflectional-forms-of-a-specific-word-generation-term"></a><a name="Inflectional_Generation_Term"></a> 搜尋特定單字的字形變化 (衍生詞彙)  
 您可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 搜尋動詞的所有不同時態和變化或名詞的單複數形式 (變化形式搜尋)，或是特定字詞的同義字形式 (同義字搜尋)。  
   
 下列範例會在 `Comments` 資料庫中 `ProductReview` 資料表的 `AdventureWorks` 資料行內，搜尋任何形式的 "foot" ("foot"、"feet" 等)： 
@@ -267,7 +267,7 @@ GO
 
 如需鄰近搜尋的詳細資訊，請參閱[使用 NEAR 搜尋靠近另一個單字的字詞](search-for-words-close-to-another-word-with-near.md)。
 
-###  <a name="Weighted_Term"></a> 使用加權值來搜尋單字或片語 (加權詞彙)  
+###  <a name="search-for-words-or-phrases-using-weighted-values-weighted-term"></a><a name="Weighted_Term"></a> 使用加權值來搜尋單字或片語 (加權詞彙)  
 您可以使用 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 來搜尋字詞或片語，並指定加權值。 加權值是介於 0.0 到 1.0 之間的數字，用來指示每個字詞與片語在一組字詞與片語中的重要程度。 最小的加權值是 0.0，最大則為 1.0。  
   
 下列範例顯示的查詢會搜尋所有客戶的地址，並使用加權值，找出以 "Bay" 字串開頭並含有 "Street" 或 "View" 的所有文字。 資料列中包含越多指定的字詞，結果就會為該資料列指定越高的等級。  
@@ -297,7 +297,7 @@ GO
 
 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 支援加權字詞搜尋。
 
-##  <a name="Using_Boolean_Operators"></a> 使用 AND、OR 和 NOT (布林運算子)
+##  <a name="use-and-or-and-not-boolean-operators"></a><a name="Using_Boolean_Operators"></a> 使用 AND、OR 和 NOT (布林運算子)
  
 CONTAINS 述詞與 CONTAINSTABLE 函數會使用相同的搜尋條件。 這兩個項目都支援使用布林運算子 (AND、OR 和 NOT) 來結合許多搜尋詞彙，以便執行邏輯作業。 例如，您可以使用 AND 來尋找同時包含 "latte" 和 "New York-style bagel" 的資料列。 例如，您可以使用 AND NOT 來尋找包含 "bagel" 但不包含 "cream cheese" 的資料列。  
   
@@ -319,7 +319,7 @@ WHERE ProductDescriptionID <> 5 AND
 GO  
 ```  
   
-##  <a name="Additional_Considerations"></a> 大小寫、停用字詞、語言和同義字
+##  <a name="case-stopwords-language-and-thesaurus"></a><a name="Additional_Considerations"></a> 大小寫、停用字詞、語言和同義字
 
  當您撰寫全文檢索查詢時，也可以指定下列選項：
   
@@ -331,7 +331,7 @@ GO
   
 -   **同義字**. FREETEXT 和 FREETEXTTABLE 查詢預設會使用同義字。 CONTAINS 和 CONTAINSTABLE 支援選擇性 THESAURUS 引數。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的同義字檔案](configure-and-manage-thesaurus-files-for-full-text-search.md)。
   
-##  <a name="tokens"></a> 檢查 Token 化結果
+##  <a name="check-the-tokenization-results"></a><a name="tokens"></a> 檢查 Token 化結果
 
 在查詢中套用指定的文字分隔、同義字和停用字詞表組合之後，您就可以使用 **sys.dm_fts_parser** 動態管理檢視來查看全文檢索搜尋如何將結化成 Token。 如需詳細資訊，請參閱 [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md)。  
   

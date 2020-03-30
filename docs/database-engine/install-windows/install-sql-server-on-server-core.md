@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75325454"
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安裝 SQL Server
@@ -36,7 +36,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
 |Windows PowerShell|隨附於 Server Core 安裝。|  
 |Java Runtime |若要使用 PolyBase，您需要安裝適當的 Java Runtime。 如需詳細資訊，請參閱 [PolyBase 安裝](../../relational-databases/polybase/polybase-installation.md)。|
   
-##  <a name="BK_SupportedFeatures"></a> 支援的功能  
+##  <a name="supported-features"></a><a name="BK_SupportedFeatures"></a> 支援的功能  
  您可以使用下表來尋找 Server Core 安裝上 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 所支援的功能。  
   
 |功能|支援|其他資訊|  
@@ -258,10 +258,10 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
   
          如果 DefaultSetup.ini 檔案不存在，請建立檔案並將其複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來源媒體根層級的 \x86 和 \x64 資料夾中。  
   
-## <a name="configure-remote-access-of-includessnoversionincludesssnoversion-mdmd-on-server-core"></a>設定 Server Core 上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的遠端存取  
+## <a name="configure-remote-access-of-ssnoversion-on-server-core"></a>設定 Server Core 上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的遠端存取  
  您可以執行下面描述的動作，設定在 Server Core 上執行之 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 執行個體的遠端存取。  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體上啟用遠端連接  
+### <a name="enable-remote-connections-on-the-instance-of-ssnoversion"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體上啟用遠端連接  
 
 若要啟用遠端連接，請在本機使用 SQLCMD.exe，然後針對 Server Core 執行個體執行下列陳述式：  
 
@@ -272,7 +272,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
    GO
    ```  
   
-### <a name="enable-and-start-the-includessnoversionincludesssnoversion-mdmd-browser-service"></a>啟用及啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
+### <a name="enable-and-start-the-ssnoversion-browser-service"></a>啟用及啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
  根據預設，Browser 服務是停用的。  如果在 Server Core 上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體已停用此服務，請從命令提示字元執行下列命令，以啟用服務：  
   
  `sc config SQLBROWSER start= auto`  
@@ -284,7 +284,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
 ### <a name="create-exceptions-in-windows-firewall"></a>在 Windows 防火牆中建立例外狀況  
  若要在 Windows 防火牆中建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取的例外狀況，請遵循 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)中指定的步驟。  
   
-### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體上啟用 TCP/IP  
+### <a name="enable-tcpip-on-the-instance-of-ssnoversion"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體上啟用 TCP/IP  
  您可以針對 Server Core 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，透過 Windows PowerShell 啟用 TCP/IP 通訊協定。 請遵循下列步驟：  
   
 1.  在伺服器上，啟動 [工作管理員]。  

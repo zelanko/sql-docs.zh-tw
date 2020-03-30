@@ -21,10 +21,10 @@ ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bf23672374db7d8348154e95ca6228723934aa5a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68064736"
 ---
 # <a name="col_length-transact-sql"></a>COL_LENGTH (Transact-SQL)

@@ -30,10 +30,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 0926264c25affe2f110227fad4c0fb2b113c9590
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287855"
 ---
 # <a name="programmatically-monitor-replication"></a>以程式設計方式監視複寫
@@ -56,7 +56,7 @@ ms.locfileid: "76287855"
   
  [Replication Management Objects (RMO)](#RMO)  
   
-##  <a name="Tsql"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="Tsql"></a> Transact-SQL  
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>若要從散發者監視發行者、發行集和訂閱  
   
@@ -106,7 +106,7 @@ ms.locfileid: "76287855"
   
     -   針對  mode **，指定 \@1** 的值以啟用監視臨界值標準；或指定 **2** 的值加以停用。  
   
-##  <a name="RMO"></a> Replication Management Objects (RMO)  
+##  <a name="replication-management-objects-rmo"></a><a name="RMO"></a> Replication Management Objects (RMO)  
   
 #### <a name="to-monitor-a-subscription-to-a-merge-publication-at-the-subscriber"></a>若要監視訂閱者端合併式發行集的訂閱  
   

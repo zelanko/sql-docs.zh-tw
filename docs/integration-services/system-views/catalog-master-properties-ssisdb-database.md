@@ -11,10 +11,10 @@ ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3ce06430094825bf3268836657661930fea058e4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296628"
 ---
 # <a name="catalogmaster_properties-ssisdb-database"></a>catalog.master_properties (SSISDB 資料庫)

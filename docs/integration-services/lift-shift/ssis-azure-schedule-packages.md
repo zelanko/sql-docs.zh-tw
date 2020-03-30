@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 4217acf163e8603c5993cfa8ade4207c9a79c6cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054559"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>排程部署於 Azure 中的 SQL Server Integration Services (SSIS) 套件執行
@@ -36,13 +36,13 @@ ms.locfileid: "68054559"
 - [間接排程套件作為 Azure Data Factory 管線的一部分](#activity)
 
 
-## <a name="ssms"></a> 使用 SSMS 排程套件
+## <a name="schedule-a-package-with-ssms"></a><a name="ssms"></a> 使用 SSMS 排程套件
 
 在 SQL Server Management Studio (SSMS) 中，您可以在部署到 SSIS 目錄資料庫 (SSISDB) 的套件上按一下滑鼠右鍵，然後選取 [排程]  以開啟 [新增排程]  對話方塊。 如需詳細資訊，請參閱[在 Azure 中以 SSMS 排程 SSIS 套件](ssis-azure-schedule-packages-ssms.md)。
 
 此功能需要 SQL Server Management Studio 17.7 版或更高版本。 若要取得最新版的 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
 
-## <a name="elastic"></a> 使用 SQL Database 彈性作業排程套件
+## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> 使用 SQL Database 彈性作業排程套件
 
 如需在 SQL Database 上彈性作業的詳細資訊，請參閱[管理相應放大的雲端資料庫](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)。
 
@@ -88,7 +88,7 @@ EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
     @schedule_interval_type='Minutes',Â @schedule_interval_count=60Â 
 ```
 
-## <a name="agent"></a> 使用 SQL Server Agent 在內部部署排程套件
+## <a name="schedule-a-package-with-sql-server-agent-on-premises"></a><a name="agent"></a> 使用 SQL Server Agent 在內部部署排程套件
 
 如需 SQL Server Agent 的詳細資訊，請參閱[套件的 SQL Server Agent 作業](../packages/sql-server-agent-jobs-for-packages.md)。
 
@@ -160,7 +160,7 @@ EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
 
 6.  完成設定和排程作業。
 
-## <a name="activity"></a> 排程套件作為 Azure Data Factory 管線的一部分
+## <a name="schedule-a-package-as-part-of-an-azure-data-factory-pipeline"></a><a name="activity"></a> 排程套件作為 Azure Data Factory 管線的一部分
 
 您可以使用觸發程序來執行將執行 SSIS 套件的 Azure Data Factory 管線，藉以間接排程套件。
 

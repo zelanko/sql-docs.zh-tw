@@ -17,15 +17,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6b71f68ad0c85f95af5d069eae8249b1d729cb42
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68127106"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>擴充屬性的值對話方塊
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  使用 [\<屬性名稱> 的值]   對話方塊來輸入或檢視值。 這是一般的對話方塊，可以從數個位置加以開啟。  
+  使用 [**屬性名稱> 的值]** _\<_ 對話方塊來輸入或檢視值。 這是一般的對話方塊，可以從數個位置加以開啟。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **擴充屬性名稱**  

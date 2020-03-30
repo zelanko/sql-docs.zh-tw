@@ -13,10 +13,10 @@ ms.assetid: d1822f1b-c1dd-4f2f-ab7c-6617c05a2b6c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 00c70a3b5b7bfba6bcd04fd622b4520c3a419848
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67930462"
 ---
 # <a name="extended-methods-on-geography-instances"></a>地理位置例項上擴充的方法

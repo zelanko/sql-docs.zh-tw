@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f600f45241016bc2f5bb59faa89b5f45b317c90d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72278147"
 ---
 # <a name="spatial-data-sql-server"></a>空間資料 (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "72278147"
   
  這兩種資料類型都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中實作為 .NET Common Language Runtime (CLR) 資料類型。  
   
-##  <a name="reltasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="reltasks"></a> 相關工作  
  [建立、建構及查詢幾何執行個體](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
  描述可以與 geometry 資料類型執行個體搭配使用的方法。  
   

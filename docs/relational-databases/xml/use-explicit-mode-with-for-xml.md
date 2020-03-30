@@ -15,10 +15,10 @@ ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68001794"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>搭配 FOR XML 使用 EXPLICIT 模式
@@ -156,9 +156,9 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [範例：使用 EXPLICIT 模式建構同層級](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [範例：指定識別碼和 IDREF 指示詞](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
+-   [範例：指定 ID 和 IDREF 指示詞](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [範例：指定識別碼和 IDREFS 指示詞](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [範例：指定 ID 和 IDREFS 指示詞](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
   
 -   [範例：指定 HIDE 指示詞](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
   

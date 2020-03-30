@@ -11,10 +11,10 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245434"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>SQL Server managed backup 至 Microsoft Azure
@@ -34,7 +34,7 @@ ms.locfileid: "75245434"
   
  您也可以加密備份來提供額外的安全性，並在產生備份時，設定要控制的自訂排程。 如需如何針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份使用 Microsoft Azure Blob 儲存體之優點的詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
-##  <a name="Prereqs"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prereqs"></a> 必要條件  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 會使用 Microsoft Azure 儲存體來儲存備份檔案。 需要下列必要條件：  
   
 |必要條件|描述|  
@@ -112,7 +112,7 @@ ms.locfileid: "75245434"
 > SQL Server managed backup 不支援 Proxy 伺服器。
 >
   
-##  <a name="support_limits"></a> 可支援性  
+##  <a name="supportability"></a><a name="support_limits"></a> 可支援性  
  下列支援限制和考量專屬於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]：  
   
 -   支援 **master**、 **model**和 **msdb** 系統資料庫的備份。 不支援 **tempdb** 的備份。 

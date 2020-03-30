@@ -14,10 +14,10 @@ ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 344e3eca9359d3bafa0dd0fd529c939f84575921
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297621"
 ---
 # <a name="day-ssis-expression"></a>DAY (SSIS 運算式)

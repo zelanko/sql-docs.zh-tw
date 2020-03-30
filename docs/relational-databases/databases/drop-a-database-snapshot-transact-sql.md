@@ -15,10 +15,10 @@ ms.assetid: ad70ec97-d5fb-41aa-b72a-915e74b61b76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0738c1e661c679022a6a635af756003fdd98dfe0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68086018"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>卸除資料庫快照集 (Transact-SQL)
@@ -27,10 +27,10 @@ ms.locfileid: "68086018"
   
 ## <a name="security"></a>安全性  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="permissions"></a><a name="Permissions"></a> 權限  
  具有 DROP DATABASE 權限的任何使用者都可以卸除資料庫快照集。  
   
-##  <a name="TsqlProcedure"></a> 如何卸除資料庫快照集 (使用 Transact-SQL)  
+##  <a name="how-to-drop-a-database-snapshot-using-transact-sql"></a><a name="TsqlProcedure"></a> 如何卸除資料庫快照集 (使用 Transact-SQL)  
  **若要卸除資料庫快照集**  
   
 1.  識別您想要卸除的資料庫快照集。 您可以檢視 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中之資料庫的快照集。 如需詳細資訊，請參閱 [檢視資料庫快照集 &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)中之資料庫的快照集。  
@@ -41,7 +41,7 @@ ms.locfileid: "68086018"
   
      其中， *database_snapshot_name* 是所要卸除之資料庫快照集的名稱。  
   
-####  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
+####  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  下列範例會卸除名為 SalesSnapshot0600 的資料庫快照集，而不會影響來源資料庫。  
   
 ```  
@@ -53,7 +53,7 @@ DROP DATABASE SalesSnapshot0600 ;
 > [!NOTE]  
 >  如需資料庫快照集使用疏鬆檔案的相關資訊，請參閱 [資料庫快照集 &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)中之資料庫的快照集。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [建立資料庫快照集 &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   

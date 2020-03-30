@@ -13,10 +13,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 3b548dd789bc7e234eb527ffe5766f433a06d77e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244773"
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>別名功能 (Azure SQL 資料倉儲、平行處理資料倉儲)
@@ -42,7 +42,7 @@ object_source [ AS ] alias
  *alias*  
  所需的資料表或資料行暫時參考名稱。 可以使用任何有效的物件名稱。 如需詳細資訊，請參閱[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的＜Object Naming Rules＞(物件命名規則)。  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例示範含有多個聯結的查詢。 此範例同時示範資料表和資料行別名功能。  
   
 -   資料行別名功能：在此範例中，資料行及涉及選取清單中資料行的運算式都採用別名。 `SalesTerritoryRegion AS SalesTR` 示範一個簡單的資料行別名。 `Sum(SalesAmountQuota) AS TotalSales` 示範  

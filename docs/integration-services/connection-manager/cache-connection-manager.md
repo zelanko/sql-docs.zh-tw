@@ -15,10 +15,10 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac44546e0f74e8cdee7e004f33a515b94e16aeb2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294449"
 ---
 # <a name="cache-connection-manager"></a>快取連接管理員
@@ -67,7 +67,7 @@ ms.locfileid: "71294449"
   
  [快取連線管理員編輯器]  對話方塊包含下列索引標籤：  
   
-###  <a name="generaltab"></a> General Tab  
+###  <a name="general-tab"></a><a name="generaltab"></a> General Tab  
  使用 [快取連線管理員編輯器]  對話方塊的 [一般]  索引標籤即可指出要從檔案中讀取快取，還是要將快取儲存至檔案。  
   
 #### <a name="options"></a>選項。  
@@ -98,7 +98,7 @@ ms.locfileid: "71294449"
  **重新整理中繼資料**  
  在快取連接管理員中，刪除資料行中繼資料，然後將選取快取檔案的資料行中繼資料重新填入快取連接管理員。  
   
-###  <a name="columnstab"></a> 資料行索引標籤  
+###  <a name="columns-tab"></a><a name="columnstab"></a> 資料行索引標籤  
  使用 **[快取連接管理員編輯器]** 對話方塊的 **[資料行]** 索引標籤即可設定快取中每個資料行的屬性。  
   
 #### <a name="options"></a>選項。  

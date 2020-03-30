@@ -21,15 +21,15 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bd0cafe74b558dc86f6709b23e2f1195ecada520
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68768470"
 ---
 # <a name="replication-agent-security-model"></a>複寫代理程式安全性模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  複寫代理程式安全性模型可允許針對複寫代理程式執行和建立連線時所使用的帳戶，進行更細微的控制：針對每個代理程式，可以指定不同的帳戶。 如需有關如何指定帳戶的詳細資訊，請參閱[用於複寫的身分識別和存取控制](../../../relational-databases/replication/security/identity-and-access-control-replication.md)。  
+  複寫代理程式安全性模型允許精確控制複寫代理程式執行並建立連接所使用的帳戶：您可為每個代理程式指定不同的帳戶。 如需有關如何指定帳戶的詳細資訊，請參閱[用於複寫的身分識別和存取控制](../../../relational-databases/replication/security/identity-and-access-control-replication.md)。  
 
 複寫代理程式安全性模型與 Azure SQL Database 受控執行個體略為不同，因為沒有任何 Windows 帳戶可供代理程式執行。 而是必須透過 SQL Server 驗證來完成所有作業。 
   
@@ -38,11 +38,11 @@ ms.locfileid: "68768470"
   
  跟所有可執行檔一樣，複寫代理程式也是在 Windows 帳戶的內容下執行。 代理程式會利用此帳戶來建立「Windows 整合式安全性」連接。 執行代理程式所使用的帳戶取決於代理程式的啟動方式：  
   
--   從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 作業啟動代理程式 (預設值)：使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 作業來啟動複寫代理程式時，代理程式會在您設定複寫時指定的帳戶內容下執行。 如需有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 和複寫的詳細資訊，請參閱本主題稍後的＜SQL Server Agent 下的代理程式安全性＞一節。 如需用來執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 之帳戶所需權限的資訊，請參閱[設定 SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md)。  
+-   從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 作業啟動代理程式 (預設值)：當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理程式作業用來啟動複寫代理程式時，代理程式會在您設定複寫時指定的帳戶內容下執行。 如需有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 和複寫的詳細資訊，請參閱本主題稍後的＜SQL Server Agent 下的代理程式安全性＞一節。 如需用來執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 之帳戶所需權限的資訊，請參閱[設定 SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md)。  
   
--   從 MS-DOS 命令列直接或透過指令碼啟動代理程式：代理程式會在於命令列執行代理程式之使用者的帳戶內容下執行。  
+-   從 MS-DOS 命令列直接啟動代理程式或透過指令碼啟動代理程式：代理程式會在特定使用者帳戶內容下執行，該特定帳戶就是在命令列執行代理程式的帳戶。  
   
--   從使用 Replication Management Objects (RMO) 或 ActiveX 控制項的應用程式啟動代理程式：代理程式會在呼叫 RMO 或 ActiveX 控制項之應用程式的內容下執行。  
+-   從使用 Replication Management Objects (RMO) 或 ActiveX 控制項的應用程式啟動代理程式：代理程式會在呼叫 RMO 或 ActiveX 控制項的應用程式的內容下執行。  
   
     > [!NOTE]  
     >  ActiveX 控制項已被取代。  

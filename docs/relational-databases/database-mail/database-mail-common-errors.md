@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288022"
 ---
 # <a name="common-errors-with-database-mail"></a>使用 Database Mail 的常見錯誤 
@@ -88,7 +88,7 @@ ALTER DATABASE msdb SET ENABLE_BROKER ;
 GO
 ``` 
 
-Database Mail 仰賴許多內部預存程序。 為降低介面區，安裝新的 SQL Server 時會停用這些預存程序。 若要啟用這些預存程序，請使用 **sp_configure** 系統預存程序的 [Database Mail XP 選項](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)，如下例所示：
+Database Mail 仰賴許多內部預存程序。 為降低介面區，安裝新的 SQL Server 時會停用這些預存程序。 若要啟用這些預存程序，請使用 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 系統預存程序的 **Database Mail XP 選項**，如下例所示：
 
 ```sql
 EXEC sp_configure 'show advanced options', 1;  
@@ -113,7 +113,7 @@ Service Broker 會在啟動時檢查訊息的對話存留時間，因此任何�
 
 
 
-##  <a name="RelatedContent"></a> 另請參閱
+##  <a name="see-also"></a><a name="RelatedContent"></a> 另請參閱
   
 -  [Database Mail 概觀](database-mail.md)
 -  [建立 Database Mail 設定檔](create-a-database-mail-profile.md)

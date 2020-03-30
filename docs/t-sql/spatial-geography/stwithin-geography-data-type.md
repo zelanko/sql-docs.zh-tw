@@ -15,10 +15,10 @@ ms.assetid: 6fc745cc-7976-418a-a89a-c267e64ab3a2
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ab4a3aee5c1828df80fc89f9fc5c230f41ead295
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68120689"
 ---
 # <a name="stwithin-geography-data-type"></a>STWithin (geography 資料類型)

@@ -13,10 +13,10 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 892c1dd28eb482eac046016c5cb59b3d711387c8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055174"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>建立維護計畫 (維護計畫設計介面)
@@ -33,20 +33,20 @@ ms.locfileid: "74055174"
   
 -   [使用維護計畫設計介面建立維護計畫](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   若要建立多伺服器維護計畫，必須設定多伺服器環境，其中包含一個主要伺服器以及一或多個目標伺服器。 多伺服器維護計畫必須在主要伺服器上建立和維護。 您可以在目標伺服器上檢視這些計畫，但不能加以維護。  
   
 -   **db_ssisadmin** 角色和 **dc_admin** 角色的成員可以將其權限提高為 **系統管理員**。 能夠提高權限是因為這些角色可以修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝；這些封裝可藉由使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 **sysadmin** 安全性內容由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行。 若要在執行維護計畫、資料收集組和其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝時預防此權限提高，請將執行封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業設為使用有限權限的 Proxy 帳戶，或是只將 **系統管理員** 成員加入 **db_ssisadmin** 和 **dc_admin** 角色。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  若要建立或管理維護計畫，您必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員。 只有在使用者是 **sysadmin** 固定伺服器角色的成員時，[物件總管] 才會顯示 **[維護計畫]** 節點。  
   
-##  <a name="SSMSProcedure"></a> 使用維護計畫設計介面  
+##  <a name="using-maintenance-plan-design-surface"></a><a name="SSMSProcedure"></a> 使用維護計畫設計介面  
   
 #### <a name="to-create-a-maintenance-plan"></a>若要建立維護計畫  
   
@@ -161,10 +161,10 @@ ms.locfileid: "74055174"
          定義條件約束在兩個工作之間的工作方式。  
   
          **評估作業**  清單  
-         指定優先順序條件約束所使用的評估作業。 這些作業有：[條件約束]  、[運算式]  、[運算式與條件約束]  ，以及 [運算式或條件約束]  。  
+         指定優先順序條件約束所使用的評估作業。 這些作業有： **[條件約束]** 、 **[運算式]** 、 **[運算式與條件約束]** ，以及 **[運算式或條件約束]** 。  
   
          **值** 清單  
-         指定條件約束值：[成功]  、[失敗]  或 [完成]  。 **[成功]** 是預設值。  
+         指定下列條件約束值：[成功]  、[失敗]  或 [完成]  。 **[成功]** 是預設值。  
   
         > [!NOTE]  
         >  優先順序條件約束線條若是綠色代表 [成功]  、紅色代表 [失敗]  ，而藍色代表 [完成]  。  
@@ -216,7 +216,7 @@ ms.locfileid: "74055174"
   
         1.  如果您選取 **[產生文字檔報表]** ，請選取 **[建立新檔案]** 或 **[附加至檔案]** 。  
   
-        2.  根據上述選項，透過在 **[資料夾]** 或 **[檔案名稱]** 方塊中輸入資訊，輸入新檔案或要附加之檔案的名稱和完整路徑。 或者，按一下省略符號 **(...)** ，然後從 [尋找資料夾 -_server\_name_]  或 [尋找資料庫檔案 -_server\_name_]  對話方塊中選取資料夾或檔案名稱的路徑。  
+        2.  根據上述選項，透過在 **[資料夾]** 或 **[檔案名稱]** 方塊中輸入資訊，輸入新檔案或要附加之檔案的名稱和完整路徑。 或者，按一下省略符號 **(...)** ，然後從 [尋找資料夾 -**server**name _]\__ 或 [尋找資料庫檔案 -**server**name _]\__ 對話方塊中選取資料夾或檔案名稱的路徑。  
   
         3.  如果您選取 **[傳送報表至電子郵件收件者]** ，請在 **[代理程式操作員]** 清單中選取電子郵件報表的收件者。  
   
@@ -231,7 +231,7 @@ ms.locfileid: "74055174"
   
 12. 若要在記錄檔檢視器中檢視結果，請在物件總管  中以滑鼠右鍵按一下 [維護計畫]  資料夾或特定維護計畫，然後選取 [檢視記錄]  。  
 
-     [記錄檔檢視器 -_server\_name_]  對話方塊有下列選項。  
+     [記錄檔檢視器 -**server**name _]\__ 對話方塊有下列選項。  
   
      **載入記錄**  
      開啟對話方塊供您指定所要載入的記錄檔。  
@@ -252,7 +252,7 @@ ms.locfileid: "74055174"
      停止載入記錄檔項目。 例如，如果遠端或離線記錄檔需要長時間才能載入，而您只要檢視最新項目時，就可以使用這個選項。  
   
      **記錄檔摘要**  
-     此資訊面板會顯示記錄檔篩選的摘要。 如果未篩選檔案，則會看到下列文字： **[未套用篩選]** 。 若篩選已套用到記錄檔，則會看到下列文字：**篩選記錄項目的準則：** \<篩選準則>。  
+     此資訊面板會顯示記錄檔篩選的摘要。 如果未篩選檔案，則會看到下列文字： **[未套用篩選]** 。 若篩選已套用到記錄，則會看到下列文字：**篩選記錄項目的準則：** \<篩選準則>。  
   
      **日期**  
      顯示事件的日期。  

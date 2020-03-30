@@ -14,10 +14,10 @@ ms.assetid: 09f591a1-cfae-4a08-b04d-50bd02e7b71a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bed264287d4e2aa6bdb8eabb0d846688fbf157c6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321655"
 ---
 # <a name="security-considerations-for-sql-server-compact-replication"></a>SQL Server Compact 複寫的安全性考量

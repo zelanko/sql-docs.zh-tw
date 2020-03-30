@@ -11,10 +11,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9efb96c0bb54e3887f6c3fd101633a0efe664bdc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68091048"
 ---
 # <a name="modify-a-partition-scheme"></a>修改資料分割配置
@@ -35,14 +35,14 @@ ms.locfileid: "68091048"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  只要是 ALTER PARTITION SCHEME 影響所及的檔案群組都必須在線上。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您可以使用下列權限來執行 ALTER PARTITION SCHEME：  
   
 -   ALTER ANY DATASPACE 權限。 這個權限預設會授與 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_ddladmin** 固定資料庫角色的成員。  
@@ -51,7 +51,7 @@ ms.locfileid: "68091048"
   
 -   在建立資料分割結構描述的資料庫中，其伺服器的 CONTROL SERVER 或 ALTER ANY DATABASE 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要修改資料分割配置：**  
   
  您無法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來執行這項特定動作。 若要修改資料分割配置，您必須先刪除此配置，然後再使用 [建立資料分割精靈] 來建立具有所需屬性的新配置。 如需詳細資訊，請參閱 [建立分割區資料表及索引](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)[建立分割區資料表及索引](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md#SSMSProcedure) 下方的 **使用 SQL Server Management Studio**。  
@@ -68,7 +68,7 @@ ms.locfileid: "68091048"
   
 5.  在 **[刪除物件]** 對話方塊中，確定已選取正確的資料分割配置，然後按一下 **[確定]** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-modify-a-partition-scheme"></a>若要修改資料分割配置  
   

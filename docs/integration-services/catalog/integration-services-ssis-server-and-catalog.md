@@ -14,10 +14,10 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fa5d6c780ce80e8f6de0493494f736f7049edc16
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298967"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services (SSIS) 伺服器與目錄
@@ -40,7 +40,7 @@ ms.locfileid: "71298967"
   
  您也可以利用 SSIS 和 Always On 可用性群組，以提供 SSISDB 及其內容的高可用性。 如需詳細資訊，請參閱[適用於 SSIS 目錄 (SSISDB) 的 AlwaysOn](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)。 另請參閱這篇 Matt Masson 撰寫的部落格文章：[SSIS 與 AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=255873)，網址為 blogs.msdn.com。  
   
-##  <a name="ssms"></a> SQL Server Management Studio 中的 Integration Services Server  
+##  <a name="integration-services-server-in-sql-server-management-studio"></a><a name="ssms"></a> SQL Server Management Studio 中的 Integration Services Server  
  當您連接到主控 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 資料庫之 **ssDEnoversion** 執行個體時，您會在 [物件總管] 中看到以下物件：  
   
 -   **SSISDB 資料庫**  

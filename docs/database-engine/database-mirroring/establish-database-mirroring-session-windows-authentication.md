@@ -14,10 +14,10 @@ ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f59dc7745f63b208b1a2a55361913a6eb290e08e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75253576"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>建立資料庫鏡像工作階段 - Windows 驗證

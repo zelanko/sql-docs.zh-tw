@@ -18,10 +18,10 @@ ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: af676b15dfb7cafe389566655589509bf47087c7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297151"
 ---
 # <a name="developing-a-custom-log-provider"></a>開發自訂記錄提供者

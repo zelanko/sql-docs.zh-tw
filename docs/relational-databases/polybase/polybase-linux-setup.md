@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
 ms.openlocfilehash: 117620c170b183b12d06eb717cfc1bb4b2dc559c
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77173563"
 ---
 # <a name="install-polybase-on-linux"></a>在 Linux 上安裝 PolyBase
@@ -36,7 +36,7 @@ ms.locfileid: "77173563"
 
 
 
-## <a name="RHEL">在 RHEL 上安裝</a>
+## <a name=""></a><a name="RHEL">在 RHEL 上安裝</a>
 
 使用下列命令，在 Red Hat Enterprise Linux 上安裝 **mssql-server-polybase**。 
 
@@ -55,7 +55,7 @@ sudo systemctl restart mssql-server
 
 如果您需要離線安裝，請在[版本資訊](../../linux/sql-server-linux-release-notes.md)中找到 PolyBase 套件下載。 然後使用[安裝 SQL Server](../../linux/sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
 
-## <a name="ubuntu">在 Ubuntu 上安裝</a>
+## <a name=""></a><a name="ubuntu">在 Ubuntu 上安裝</a>
 
 使用下列命令，在 Ubuntu 上安裝 **mssql-server-polybase**。 
 
@@ -74,7 +74,7 @@ sudo systemctl restart mssql-server
 
 如果您需要離線安裝，請在[版本資訊](../../linux/sql-server-linux-release-notes.md)中找到 PolyBase 套件下載。 然後使用[安裝 SQL Server](../../linux/sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
 
-## <a name="SLES">在 SLES 上安裝</a>
+## <a name=""></a><a name="SLES">在 SLES 上安裝</a>
 
 使用下列命令，在 SUSE Linux Enterprise Server 上安裝 **mssql-server-polybase**。 
 
@@ -95,7 +95,7 @@ sudo systemctl restart mssql-server
 如果您需要離線安裝，請在[版本資訊](../../linux/sql-server-linux-release-notes.md)中找到 PolyBase 套件下載。 然後使用[安裝 SQL Server](../../linux/sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
 
 
-## <a name="enable">啟用 PolyBase</a> 
+## <a name=""></a><a name="enable">啟用 PolyBase</a> 
 
 安裝之後，您必須啟用 PolyBase 來存取其功能。 請連線到已安裝的 SQL Server 執行個體，並使用下列 Transact-SQL 命令來啟用。
 

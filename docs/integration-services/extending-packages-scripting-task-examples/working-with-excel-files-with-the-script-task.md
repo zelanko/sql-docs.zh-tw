@@ -17,10 +17,10 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9386f146aee229eb4547ad54b4dd576fda1c0bfc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286579"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>以指令碼工作處理 Excel 檔案
@@ -36,7 +36,7 @@ ms.locfileid: "71286579"
 > [!TIP]  
 >  如果您想要建立可在多個套件之間重複使用的工作，請考慮使用此指令碼工作範例中的程式碼作為自訂工作的起點。 如需詳細資訊，請參閱 [開發自訂工作](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
 
-##  <a name="configuring"></a> 設定套件以測試範例  
+##  <a name="configuring-a-package-to-test-the-samples"></a><a name="configuring"></a> 設定套件以測試範例  
  您可以設定單一封裝以測試本主題中的所有範例。 範例使用許多相同的封裝變數與相同的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別。  
   
 ### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>設定封裝與本主題中的範例搭配使用  
@@ -69,7 +69,7 @@ ms.locfileid: "71286579"
   
 5.  請使用 [選項]  對話方塊中 [一般]  頁面上的 [指令碼語言]  選項，為指令碼元件設定預設的指令碼語言。 如需相關資訊，請參閱 [General Page](../general-page-of-integration-services-designers-options.md)。  
   
-##  <a name="example1"></a> 範例 1 描述：檢查 Excel 檔案是否存在  
+##  <a name="example-1-description-check-whether-an-excel-file-exists"></a><a name="example1"></a> 範例 1 描述：檢查 Excel 檔案是否存在  
  此範例會判斷 `ExcelFile` 變數中指定的 Excel 活頁簿檔案是否存在，然後將 `ExcelFileExists` 變數的布林值設定為結果。 您可以為封裝工作流程中的分支使用此布林值。  
   
 ### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
@@ -139,7 +139,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> 範例 2 描述：檢查 Excel 資料表是否存在  
+##  <a name="example-2-description-check-whether-an-excel-table-exists"></a><a name="example2"></a> 範例 2 描述：檢查 Excel 資料表是否存在  
  此範例會判斷 `ExcelTable` 變數中指定的 Excel 工作表或具名範圍是否存在於 `ExcelFile` 變數中指定的 Excel 活頁簿檔案，然後將 `ExcelTableExists` 變數的布林值設定為結果。 您可以為封裝工作流程中的分支使用此布林值。  
   
 ### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
@@ -246,7 +246,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> 範例 3 描述：取得資料夾中的 Excel 檔案清單  
+##  <a name="example-3-description-get-a-list-of-excel-files-in-a-folder"></a><a name="example3"></a> 範例 3 描述：取得資料夾中的 Excel 檔案清單  
  此範例會使用在 `ExcelFolder` 變數值中指定的資料夾內所找到的 Excel 檔案清單，來填滿陣列，然後將陣列複製到 `ExcelFiles` 變數中。 您可以使用 Foreach From Variable 列舉值來反覆運算陣列中的檔案。  
   
 ### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
@@ -318,7 +318,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>替代方案  
  您也可以使用 ForEach 檔案列舉值反覆運算資料夾中的所有 Excel 檔案，以代替使用指令碼工作將 Excel 檔案清單蒐集到陣列中的方式。 如需詳細資訊，請參閱[使用 Foreach 迴圈容器來執行 Excel 檔案和資料表迴圈](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)。  
   
-##  <a name="example4"></a> 範例 4 描述：取得 Excel 檔案中的資料表清單  
+##  <a name="example-4-description-get-a-list-of-tables-in-an-excel-file"></a><a name="example4"></a> 範例 4 描述：取得 Excel 檔案中的資料表清單  
  此範例會使用在 `ExcelFile` 變數值中指定的 Excel 活頁簿檔案內找到的工作表清單和具名範圍，來填滿陣列，然後將陣列複製到 `ExcelTables` 變數中。 您可以使用 Foreach From Variable 列舉值來反覆運算陣列中的資料表。  
   
 > [!NOTE]  
@@ -430,7 +430,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>替代方案  
  您也可以使用 Foreach ADO.NET 結構描述資料列集列舉值，反覆運算在 Excel 活頁簿檔案中的所有資料表 (也就是，工作表與具名範圍)，以代替使用指令碼工作將 Excel 資料表清單蒐集到陣列中的方式。 如需詳細資訊，請參閱[使用 Foreach 迴圈容器來執行 Excel 檔案和資料表迴圈](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)。  
   
-##  <a name="testing"></a> 顯示範例的結果  
+##  <a name="displaying-the-results-of-the-samples"></a><a name="testing"></a> 顯示範例的結果  
  如果您已在相同封裝中設定此主題中的每個範例，可以將所有的指令碼工作連接至其他顯示所有範例輸出的指令碼工作。  
   
 ### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>設定指令碼工作以顯示本主題中的範例輸出  

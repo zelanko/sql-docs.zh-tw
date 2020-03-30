@@ -26,10 +26,10 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fefd85737e5d58e71dae6fd81dc2c0306b0838e0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67927637"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - 觸發程序函式 (Transact-SQL)

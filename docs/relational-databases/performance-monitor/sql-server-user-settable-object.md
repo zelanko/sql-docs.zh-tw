@@ -14,17 +14,17 @@ ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: cddb71a35ac762ed602dd93e9e50f463da3e41f9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67947928"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server 的 User Settable 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Microsoft **的** User Settable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件可讓您建立自訂的計數器執行個體。 使用自訂計數器執行個體來監視現有計數器未監視的伺服器層面，例如您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫獨有的元件 (例如，記錄的客戶訂單數或產品庫存數)。  
   
- **User Settable** 物件包含 10 個查詢計數器執行個體：**User counter 1** 至 **User counter 10**。 這些計數器分別對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_user_counter1 **到** sp_user_counter10 **的**預存程序。 當使用者應用程式執行這些預存程序時，預存程序所設定的數值將顯示於「系統監視器」內。 計數器可監視任何一個整數值，例如計算特定產品在某天內發生的訂單數的預存程序。  
+ **User Settable** 物件包含從 **User counter 1** 到 **User counter 10**這 10 個查詢計數器執行個體。 這些計數器分別對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_user_counter1 **到** sp_user_counter10 **的**預存程序。 當使用者應用程式執行這些預存程序時，預存程序所設定的數值將顯示於「系統監視器」內。 計數器可監視任何一個整數值，例如計算特定產品在某天內發生的訂單數的預存程序。  
   
 > [!NOTE]  
 >  「系統監視器」不會自動輪詢使用者計數器預存程序。 必須由使用者應用程式明確執行，才會更新計數器的值。 請利用觸發程序來自動更新計數器的值。 例如，若要建立計數器來監視資料表的資料列數目，請在資料表建立 INSERT 和 DELETE 觸發程序來執行下列陳述式： `SELECT COUNT(*) FROM table`。 每當資料表因 INSERT 或 DELETE 作業而引發觸發程序時，「系統監視器」計數器就會自動更新。  

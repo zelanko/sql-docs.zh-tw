@@ -14,10 +14,10 @@ ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b621ebd5750d918c22f61ac005b02e1b8bea187
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297221"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>開發 Integration Services 的自訂物件

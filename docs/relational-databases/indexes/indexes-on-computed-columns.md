@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf54565115df53dc7d502f48aad68f9974adebd0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67909697"
 ---
 # <a name="indexes-on-computed-columns"></a>計算資料行的索引
@@ -115,7 +115,7 @@ COLUMNPROPERTY 函數的 **IsPrecise** 屬性會報告 *computed_column_expressi
 > [!NOTE]
 > 當資料庫的相容性層級設定為 90 或以上時，將 ANSI_WARNINGS 設定為 ON 也會將 ARITHABORT 隱含設定為 ON。  
   
-## <a name="BKMK_persisted"></a> 在保存的計算資料行上建立索引  
+## <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> 在保存的計算資料行上建立索引  
 
 有時候您可以建立使用具決定性但不精確運算式定義的計算資料行。 您可以在資料行於 CREATE TABLE 或 ALTER TABLE 陳述式中標記為 PERSISTED 時執行此動作。
 

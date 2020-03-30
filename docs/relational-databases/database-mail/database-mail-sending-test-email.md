@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ce8a48b7e8315a564eaa1338df35a04226e705d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72906065"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>使用 Database Mail 傳送測試電子郵件  
@@ -55,7 +55,7 @@ ms.locfileid: "72906065"
     ```
 
 
-##  <a name="RelatedContent"></a> 另請參閱 
+##  <a name="see-also"></a><a name="RelatedContent"></a> 另請參閱 
   
 -   [Database Mail 組態物件](../../relational-databases/database-mail/database-mail-configuration-objects.md)
 -   [Database Mail 訊息物件](../../relational-databases/database-mail/database-mail-messaging-objects.md)

@@ -14,10 +14,10 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2250030405a0c6bb2512e3b8446cb76e11a7080e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903903"
 ---
 # <a name="view-resource-governor-properties"></a>檢視資源管理員屬性
@@ -25,7 +25,7 @@ ms.locfileid: "72903903"
 
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 [資源管理員屬性] 頁面來建立或設定資源管理員實體，例如資源集區和工作負載群組。  
   
- ##  <a name="BeforeYouBegin"></a> 相關主題 
+ ##  <a name="related-topics"></a><a name="BeforeYouBegin"></a> 相關主題 
  除了檢視資源管理員實體的屬性之外，還可以使用 **[資源管理員屬性]** 頁面執行多個組態工作。 如需詳細資訊，請參閱下列主題：  
   
 -   [啟用資源管理員](../../relational-databases/resource-governor/enable-resource-governor.md)  
@@ -48,10 +48,10 @@ ms.locfileid: "72903903"
   
  您可以利用查詢 [sys.dm_resource_governor_configuration](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) 動態管理檢視的方式，查看目前 is_configuration_pending 的狀況，了解是否有暫止的組態。  
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
  檢視資源管理員屬性需要 VIEW SERVER STATER 權限。 資源管理員組態工作需要 CONTROL SERVER 權限。  
   
-##  <a name="ViewRGProp"></a> Resource Governor 屬性頁面  
+##  <a name="resource-governor-properties-page"></a><a name="ViewRGProp"></a> Resource Governor 屬性頁面  
  **若要使用下列項目中的 [Resource Governor 屬性] 頁面來檢視 Resource Governor 屬性： [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
@@ -62,7 +62,7 @@ ms.locfileid: "72903903"
   
 4.  若要儲存任何變更，請按一下 **[確定]** 。  
 
-##  <a name="RGProp"></a> Resource Governor properties  
+##  <a name="resource-governor-properties"></a><a name="RGProp"></a> Resource Governor properties  
  **分類函數名稱**  
  從清單中選取以指定分類函數。  
   

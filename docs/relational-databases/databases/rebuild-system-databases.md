@@ -16,10 +16,10 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e31a24a949968e3d17b50c32b42e92cdd0997483
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76516549"
 ---
 # <a name="rebuild-system-databases"></a>重建系統資料庫
@@ -32,7 +32,7 @@ ms.locfileid: "76516549"
   
      [限制事項](#Restrictions)  
   
-     [先決條件](#Prerequisites)  
+     [必要條件](#Prerequisites)  
   
 -   **程序：**  
   
@@ -46,12 +46,12 @@ ms.locfileid: "76516549"
   
      [疑難排解重建錯誤](#Troubleshoot)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  重建 master、model、msdb 和 tempdb 系統資料庫時，系統會在這些資料庫的原始位置中卸除並重新建立它們。 如果您在重建陳述式中指定了新的定序，系統就會使用該定序設定來建立系統資料庫。 使用者對這些資料庫所做的任何修改都將遺失。 例如，您可能會在 master 資料庫中設有使用者定義的物件、在 msdb 中設有排程的作業，或在 model 資料庫中變更預設資料庫設定。  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  請在重建系統資料庫之前執行下列工作，以便確保您可以將系統資料庫還原成目前的設定。  
   
 1.  記錄所有伺服器範圍的組態值。  
@@ -87,7 +87,7 @@ ms.locfileid: "76516549"
   
 7.  確認 master、model 和 msdb 資料與記錄範本檔案的副本都存在本機伺服器上。 這些範本檔案的預設位置為 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Templates。 這些檔案會在重建程序期間使用，而且它們必須存在，才能讓安裝程式順利執行。 如果這些檔案已遺失，請執行安裝程式的修復功能，或手動從安裝媒體中複製這些檔案。 若要在安裝媒體上找到這些檔案，請巡覽至適當的平台目錄 (x86 或 x64)，然後巡覽至 setup\sql_engine_core_inst_msi\Pfiles\SqlServr\MSSQL.X\MSSQL\Binn\Templates。  
   
-##  <a name="RebuildProcedure"></a> 重建系統資料庫  
+##  <a name="rebuild-system-databases"></a><a name="RebuildProcedure"></a> 重建系統資料庫  
  下列程序會重建 master、model、msdb 和 tempdb 系統資料庫。 您無法指定要重建的系統資料庫。 若為叢集執行個體，您必須在使用中節點上執行此程序，而且必須先讓對應叢集應用程式群組中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源離線，然後再執行此程序。  
   
  這項程序不會重建 resource 資料庫。 請參閱本主題後面的＜重建 resource 資料庫程序＞一節。  
@@ -111,10 +111,10 @@ ms.locfileid: "76516549"
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|指定 tempdb 資料檔案數目。 此值可以增加為 8 個或與核心數目相同 (兩者取其較高者)。<br /><br /> 預設值：8 個或核心數目 (兩者取其較低者)。|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|指定每個 tempdb 資料檔案的初始大小 (MB)。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值：8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|指定每個 tempdb 資料檔案的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值：64|  
-    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|指定 tempdb 記錄檔的初始大小 (MB)。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值：8.<br /><br /> 允許的範圍：最小值 = 8，最大值 = 1024。|  
-    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|指定 tempdb 記錄檔的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值：64<br /><br /> 允許的範圍：最小值 = 8，最大值 = 1024。|  
-    |[ /SQLTEMPDBDIR=Directories ]|指定 tempdb 資料檔案的目錄。 指定多個目錄時，請以空格隔開這些目錄。 若指定多個目錄，tempdb 資料檔案將以循環配置資源方式跨多個目錄存放。<br /><br /> 預設值：系統資料目錄|  
-    |[ /SQLTEMPDBLOGDIR=Directory ]|指定 tempdb 記錄檔的目錄。<br /><br /> 預設值：系統資料目錄|  
+    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|指定 tempdb 記錄檔的初始大小 (MB)。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值：8。<br /><br /> 允許的範圍︰最小值 = 8，最大值 = 1024。|  
+    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|指定 tempdb 記錄檔的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值：64<br /><br /> 允許的範圍︰最小值 = 8，最大值 = 1024。|  
+    |[ /SQLTEMPDBDIR=Directories ]|指定 tempdb 資料檔案的目錄。 指定多個目錄時，請以空格隔開這些目錄。 若指定多個目錄，tempdb 資料檔案將以循環配置資源方式跨多個目錄存放。<br /><br /> 預設值︰系統資料目錄|  
+    |[ /SQLTEMPDBLOGDIR=Directory ]|指定 tempdb 記錄檔的目錄。<br /><br /> 預設值︰系統資料目錄|  
   
 3.  當安裝程式完成系統資料庫的重建作業時，它就會返回命令提示字元，而且不會顯示任何訊息。 您可以檢查 Summary.txt 記錄檔來確認此程序是否順利完成。 這個檔案位於 C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Logs。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "76516549"
   
 -   確認伺服器範圍的組態值符合您先前記錄的值。  
   
-##  <a name="Resource"></a> 重建資源資料庫  
+##  <a name="rebuild-the-resource-database"></a><a name="Resource"></a> 重建資源資料庫  
  下列程序會重建 resource 系統資料庫。 當您重建資源資料庫時，所有 Hotfix 都會遺失，因此必須重新套用。  
   
 #### <a name="to-rebuild-the-resource-system-database"></a>若要重建 resource 系統資料庫：  
@@ -156,7 +156,7 @@ ms.locfileid: "76516549"
   
 6.  在 **[已完成修復準備工作]** 頁面中，按一下 **[修復]** 。 [完成] 頁面會指出作業已完成。  
   
-##  <a name="CreateMSDB"></a> 建立新的 msdb 資料庫  
+##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> 建立新的 msdb 資料庫  
  如果 **msdb** 資料庫損毀，而您沒有 **msdb** 資料庫的備份，可以使用 **instmsdb** 指令碼建立新的 **msdb** 。  
   
 > [!WARNING]  
@@ -186,7 +186,7 @@ ms.locfileid: "76516549"
   
 10. 備份 **msdb** 資料庫。  
   
-##  <a name="Troubleshoot"></a> 疑難排解重建錯誤  
+##  <a name="troubleshoot-rebuild-errors"></a><a name="Troubleshoot"></a> 疑難排解重建錯誤  
  語法和其他執行階段錯誤會顯示在 [命令提示字元] 視窗中。 您可以檢查安裝程式陳述式是否有下列語法錯誤：  
   
 -   在每個參數名稱前面遺漏了斜線 (/)。  

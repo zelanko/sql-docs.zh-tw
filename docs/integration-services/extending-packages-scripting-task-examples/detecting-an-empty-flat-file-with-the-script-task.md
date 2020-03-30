@@ -16,10 +16,10 @@ ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 70c8f2e18838ade1d5a2e98fd327c86e95a34a80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297043"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>以指令碼工作偵測空的一般檔案
@@ -33,7 +33,7 @@ ms.locfileid: "71297043"
 >  如果您想要建立可更輕鬆地在多個封裝之間重複使用的工作，請考慮使用此指令碼工作範例中的程式碼做為自訂工作的起點。 如需詳細資訊，請參閱 [開發自訂工作](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
 ## <a name="description"></a>描述  
- 下列範例會使用 **System.IO** 命名空間的方法來測試一般檔案連線管理員中指定的一般檔案，以便判斷此檔案是否空白，或者它是否僅包含預期的非資料列，例如資料行標頭或空白的行。 此指令碼會先檢查檔案的大小。如果大小為零個位元組，表示檔案是空白的。 如果檔案大小大於零，此指令碼就會從檔案中讀取各行，直到沒有其他行為止，或者直到行數超過預期的非資料列數目為止。 如果檔案中的行數小於或等於預期的非資料列數目，此檔案就會被視為空白。 結果會以布林值的形式傳入使用者變數中，而這個變數的值可用於在封裝的控制流程中分支。 **FireInformation** 方法也會在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 的 [輸出]  視窗中顯示結果。  
+ 下列範例會使用 **System.IO** 命名空間的方法來測試一般檔案連線管理員中指定的一般檔案，以便判斷此檔案是否空白，或者它是否僅包含預期的非資料列，例如資料行標頭或空白的行。 此指令碼會先檢查檔案的大小。如果大小為零個位元組，表示檔案是空白的。 如果檔案大小大於零，此指令碼就會從檔案中讀取各行，直到沒有其他行為止，或者直到行數超過預期的非資料列數目為止。 如果檔案中的行數小於或等於預期的非資料列數目，此檔案就會被視為空白。 結果會以布林值的形式傳入使用者變數中，而這個變數的值可用於在封裝的控制流程中分支。 **FireInformation** 方法也會在   Tools for Applications (VSTA) 的 [輸出][!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 視窗中顯示結果。  
   
 #### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
   

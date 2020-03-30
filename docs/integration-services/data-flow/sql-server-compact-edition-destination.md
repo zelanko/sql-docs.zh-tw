@@ -17,10 +17,10 @@ ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a9192e96bb99082b63e4feac451a378eabd8093
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298060"
 ---
 # <a name="sql-server-compact-edition-destination"></a>SQL Server Compact Edition 目的地

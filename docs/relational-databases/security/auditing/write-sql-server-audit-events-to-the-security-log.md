@@ -16,10 +16,10 @@ ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0c998b4d5ed5988d5a5e2a01bf0cbd611157f665
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68095106"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>將 SQL Server Audit 事件寫入安全性記錄檔  
@@ -41,17 +41,17 @@ ms.locfileid: "68095106"
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 將無法偵測出系統無法在安全性記錄檔中記錄事件，進而導致可能遺失稽核事件。  
 -   在方塊管理員修正安全性記錄檔之後，記錄行為才會返回正常狀態。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 電腦的管理員應該了解安全性記錄檔的本機設定可以由網域原則覆寫。 在此情況下，網域原則可能會覆寫子類別目錄設定 (**auditpol /get /subcategory:"application generated"** )。 這可能會影響 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 記錄事件的功能，讓它無法偵測出系統無法繼續記錄 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 正嘗試稽核的事件。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須是 Windows 管理員才能設定這些設定。  
   
-##  <a name="auditpolAccess"></a> 使用 auditpol 在 Windows 中設定稽核物件存取設定  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-auditpol"></a><a name="auditpolAccess"></a> 使用 auditpol 在 Windows 中設定稽核物件存取設定  
   
 1.  以系統管理權限開啟命令提示字元。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68095106"
   
 3.  關閉 [命令提示字元] 視窗。  
   
-##  <a name="secpolAccess"></a> 使用 secpol 將 generate security audits 權限授與帳戶  
+##  <a name="to-grant-the-generate-security-audits-permission-to-an-account-using-secpol"></a><a name="secpolAccess"></a> 使用 secpol 將 generate security audits 權限授與帳戶  
   
 1.  在任何 Windows 作業系統的 **[開始]** 功能表上，按一下 **[執行]** 。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "68095106"
   
 9. 重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以啟用此設定。  
   
-##  <a name="secpolPermission"></a> 使用 secpol 在 Windows 中設定稽核物件存取設定  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-secpol"></a><a name="secpolPermission"></a> 使用 secpol 在 Windows 中設定稽核物件存取設定  
   
 1.  如果作業系統是 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 或 Windows Server 2008 之前的版本，請在 **[開始]** 功能表上，按一下 **[執行]** 。  
   

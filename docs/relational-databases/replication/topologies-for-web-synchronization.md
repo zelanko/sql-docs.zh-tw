@@ -14,10 +14,10 @@ ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6d793f394b9ffdf329eefbd73889d3233476372b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68129813"
 ---
 # <a name="topologies-for-web-synchronization"></a>Web 同步處理的拓撲

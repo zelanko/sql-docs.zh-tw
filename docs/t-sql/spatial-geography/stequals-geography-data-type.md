@@ -18,10 +18,10 @@ ms.assetid: 0766ff37-0b9e-49bf-83c0-019f4354fe44
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: caa274b1571a9c0506acbe3f6d5d5d004588fede
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68042271"
 ---
 # <a name="stequals-geography-data-type"></a>STEquals (geography 資料類型)

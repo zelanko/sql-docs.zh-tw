@@ -23,10 +23,10 @@ ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5c2f1a1b1060ff2ce659ed87db9fabb5c6c5346a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74542274"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)

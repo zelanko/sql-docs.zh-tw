@@ -30,10 +30,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2e917d4dcd2f722bb9d683ebe0a6a8777487c61d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73729924"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
@@ -292,10 +292,10 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
 在這個內容中，default 這個字不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，如 ON **"** default **"** 或 ON **[** default **]** 。 如果指定了 "default"，目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
   
-##  <a name="GenRemarks"></a> 一般備註  
+##  <a name="general-remarks"></a><a name="GenRemarks"></a> 一般備註  
 資料行存放區索引可以在暫存資料表上建立。 當資料表卸除或工作階段結束時，也會卸除索引。  
 
 已排序的叢集資料行存放區索引可以建立在 Azure SQL 資料倉儲支援的任何資料類型的資料行上，但不包括字串資料行。  
@@ -331,7 +331,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
  如需篩選索引的詳細資訊，請參閱[建立篩選的索引](../../relational-databases/indexes/create-filtered-indexes.md)。 
   
-##  <a name="LimitRest"></a> 限制事項  
+##  <a name="limitations-and-restrictions"></a><a name="LimitRest"></a> 限制事項  
 
 **資料行存放區索引中的每個資料行都必須是下列其中一種一般商務資料類型：** 
 -   datetimeoffset [ ( *n* ) ]  
@@ -406,7 +406,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
  如需有關資料行存放區索引之效能優點和限制的詳細資訊，請參閱[資料行存放區索引概觀](../../relational-databases/indexes/columnstore-indexes-overview.md)。
   
-##  <a name="Metadata"></a> 中繼資料  
+##  <a name="metadata"></a><a name="Metadata"></a> 中繼資料  
  資料行存放區索引中的所有資料行都將儲存於中繼資料內成為內含資料行。 資料行存放區索引沒有索引鍵資料行。 這些系統檢視表提供有關資料行存放區索引的資訊。  
   
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
@@ -416,7 +416,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 -   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
 -   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
 
-##  <a name="convert"></a> 將資料列存放區資料表轉換為資料行存放區的範例  
+##  <a name="examples-for-converting-a-rowstore-table-to-columnstore"></a><a name="convert"></a> 將資料列存放區資料表轉換為資料行存放區的範例  
   
 ### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>A. 將堆積轉換成叢集資料行存放區索引  
  此範例會建立資料表做為堆積，然後將它轉換成名為 cci_Simple 的叢集資料行存放區索引。 這會將整個資料表的儲存體從資料列存放區變更為資料行存放區。  
@@ -601,7 +601,7 @@ REBUILD PARTITION = ALL
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-##  <a name="nonclustered"></a> 非叢集資料行存放區索引的範例  
+##  <a name="examples-for-nonclustered-columnstore-indexes"></a><a name="nonclustered"></a> 非叢集資料行存放區索引的範例  
   
 ### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. 在資料列存放區資料表上，建立資料行存放區索引作為次要索引。  
  這個範例會在資料列存放區資料表上，建立非叢集資料行存放區索引。 在這種情況下，只能建立一個資料行存放區索引。 資料行存放區索引需要額外的儲存體，因為它包含資料列存放區資料表中的資料複本。 這個範例會建立簡單資料表和叢集索引，然後示範建立非叢集資料行存放區索引的語法。  
@@ -651,7 +651,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
     WHERE EndDate IS NOT NULL;  
 ```  
   
-###  <a name="ncDML"></a> D. 變更非叢集資料行存放區索引中的資料  
+###  <a name="d-change-the-data-in-a-nonclustered-columnstore-index"></a><a name="ncDML"></a> D. 變更非叢集資料行存放區索引中的資料  
    適用於：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。
   
  一旦您在資料表上建立非叢集資料行存放區索引，就無法直接修改該資料表中的資料。 使用 INSERT、UPDATE、DELETE 或 MERGE 的查詢會失敗，並傳回錯誤訊息。 若要加入或修改資料表中的資料，您可以執行下列其中一項操作：  
@@ -668,7 +668,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   從具有資料行存放區索引的資料表分割區切換至空白的暫存資料表。 如果暫存資料表上有資料行存放區索引，請停用資料行存放區索引。 執行所有更新。 建立 (或重建) 資料行存放區索引。 將暫存資料表切換回 (現在為空白的) 主資料表分割區。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>A. 將叢集索引轉換成叢集資料行存放區索引  
  您可以使用 CREATE CLUSTERED COLUMNSTORE INDEX 陳述式和 DROP_EXISTING = ON 來完成以下事項：  

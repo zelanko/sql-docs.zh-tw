@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3581d9247979702a7c1e9af409b43121c4158334
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68111893"
 ---
 # <a name="non-xml-format-files-sql-server"></a>非 XML 格式檔案 (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "68111893"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 非 XML 格式檔案的優點  
+##  <a name="benefits-of-non-xml-format-files"></a><a name="Benefits"></a> 非 XML 格式檔案的優點  
   
 -   您可以在 **format** 命令中指定 **bcp** 選項，以自動建立非 XML 格式檔案。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68111893"
 > [!NOTE]  
 >  XML 格式檔案提供了許多優於非 XML 格式檔案的優點。 如需詳細資訊，請參閱 [XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)。  
   
-##  <a name="Structure"></a> 非 XML 格式檔案的結構  
+##  <a name="structure-of-non-xml-format-files"></a><a name="Structure"></a> 非 XML 格式檔案的結構  
  非 XML 格式檔案是具有特定結構的文字檔。 非 XML 格式檔案包含每個資料表資料行的檔案儲存類型、前置長度、欄位長度和欄位結束字元等相關資訊。  
   
  下圖說明非 XML 格式範例檔案的格式檔案欄位。  
@@ -79,7 +79,7 @@ ms.locfileid: "68111893"
 > [!NOTE]  
 >  您可以修改格式檔案，讓您從欄位數目或順序與資料表資料行數目或順序不同的資料檔，進行大量匯入。 如需詳細資訊，請參閱本主題稍後的 [相關工作](#RelatedTasks) 清單。  
   
-##  <a name="Examples"></a> 非 XML 格式檔案範例  
+##  <a name="example-of-a-non-xml-format-file"></a><a name="Examples"></a> 非 XML 格式檔案範例  
  下列範例顯示先前建立的非 XML 格式檔案 (`myDepartmentIdentical-f-c.fmt`)。 這個檔案針對 `HumanResources.Department` 範例資料庫的 `AdventureWorks2012` 資料表，描述其中每個資料行的字元資料欄位。  
   
  產生的格式檔案 `myDepartmentIdentical-f-c.fmt`包含下列資訊：  
@@ -96,7 +96,7 @@ ms.locfileid: "68111893"
 > [!NOTE]  
 >  如需與這個非 XML 格式範例檔案有關的格式檔案欄位圖解，請參閱本主題稍早的 [非 XML 格式檔案結構](#Structure)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [建立格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
   

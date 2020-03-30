@@ -18,10 +18,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254826"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
@@ -93,7 +93,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
  >[!IMPORTANT]
  > 在此案例中，資料會在傳回伺服器時予以解密，因為目的地資料行是不接受加密資料的一般 varchar。 
   
-## <a name="selecting--deterministic-or-randomized-encryption"></a> 選擇決定性加密或隨機加密  
+## <a name="selecting-deterministic-or-randomized-encryption"></a><a name="selecting--deterministic-or-randomized-encryption"></a> 選擇決定性加密或隨機加密  
  Database Engine 絕不會處理儲存於加密資料行中的純文字資料，但仍可根據資料行的加密類型，支援某些加密資料的查詢。 [永遠加密] 支援兩種類型的加密：隨機加密和決定性加密。  
   
 - 確定性加密一律會針對特定的純文字值產生相同的加密值。 使用確定性加密時，您能根據加密資料行進行點查閱、相等聯結、分組和編製索引等作業。 但它也可能讓未獲授權使用者透過檢查加密資料行中的模式，來猜出加密值資訊，尤其當其中有一小組可能的加密值時 (例如 True/False 或北/南/東/西區域)。 確定性加密必須針對字元資料行使用 binary2 排序次序的資料行定序。

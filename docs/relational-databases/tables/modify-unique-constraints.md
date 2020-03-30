@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 61747c9b7e445990bd285061f63c5497b0f51f85
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68811333"
 ---
 # <a name="modify-unique-constraints"></a>修改唯一的條件約束
@@ -40,14 +40,14 @@ ms.locfileid: "68811333"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-a-unique-constraint"></a>若要修改唯一條件約束  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68811333"
   
 5.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
   
-##  <a name="TsqlProcedure"></a> **修改唯一條件約束**  
+##  <a name="to-modify-a-unique-constraint"></a><a name="TsqlProcedure"></a> **修改唯一條件約束**  
   
  若要使用 Transact-SQL 來修改 UNIQUE 條件約束，您必須先刪除現有的 UNIQUE 條件約束，然後使用新的定義來重新建立。 如需相關資訊，請參閱 [Delete Unique Constraints](../../relational-databases/tables/delete-unique-constraints.md) 及 [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md)。  
   

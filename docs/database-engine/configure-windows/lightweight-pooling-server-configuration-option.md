@@ -21,10 +21,10 @@ ms.assetid: 2dc11b61-d065-4126-8e00-acf40390f9fb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5d18b51a3868534089c88dc1c951148711e0d0c4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67998034"
 ---
 # <a name="lightweight-pooling-server-configuration-option"></a>輕量型共用伺服器組態選項

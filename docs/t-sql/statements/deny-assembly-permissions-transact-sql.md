@@ -17,10 +17,10 @@ ms.assetid: be0896b3-f793-44c9-9390-1c6e58f33b2b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a1131a6f7b00f9b8ba4646106de0699a2a9fada8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115011"
 ---
 # <a name="deny-assembly-permissions-transact-sql"></a>DENY 組件權限 (Transact-SQL)

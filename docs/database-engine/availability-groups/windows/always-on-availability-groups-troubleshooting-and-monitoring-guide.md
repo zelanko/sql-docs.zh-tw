@@ -11,10 +11,10 @@ ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fa4b3ae0ef918b0d7706a7f4e47eceb50d380c0b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822041"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>可用性群組的監視及疑難排解
@@ -23,7 +23,7 @@ ms.locfileid: "74822041"
  因為可用性群組是一種整合式的技術，所以您遇到的許多問題可能是資料庫系統中其他問題的徵兆。 某些問題可能是可用性群組內的設定造成，例如某個可用性資料庫正處於暫止狀態。 其他則可能包含 SQL Server 其他方面的問題，例如 SQL Server 設定、資料庫檔案部署，以及與可用性不相關的系統性效能問題。 也有可能是因為 SQL Server 外部的其他問題，例如網路 I/O、TCP/IP、Active Directory 及 Windows Server 容錯移轉叢集 (WSFC) 問題。 通常，在可用性群組、複本或資料庫中顯露出來的問題，需要您對多種技術進行疑難排解才能識別根本原因。  
   
   
-##  <a name="BKMK_SCENARIOS"></a> 疑難排解案例  
+##  <a name="troubleshooting-scenarios"></a><a name="BKMK_SCENARIOS"></a> 疑難排解案例  
  下表包含可用性群組的常見疑難排解案例的連結。 這些案例依案例類型分類，例如設定、用戶端連接性、容錯移轉及效能。  
   
 |狀況|案例類型|描述|  
@@ -37,7 +37,7 @@ ms.locfileid: "74822041"
 |[疑難排解：對主要複本的變更未反映在次要複本上](troubleshoot-primary-changes-not-reflected-on-secondary.md)|效能|用戶端應用程式在主要複本上成功完成更新，但是查詢次要複本卻顯示未反映變更。|  
 |[疑難排解：Always On 可用性群組的高 HADR_SYNC_COMMIT 等候類型](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/) \(英文\)|效能|如果 HADR_SYNC_COMMIT 超乎尋常地長，表示資料移動程序或次要複本記錄強化可能有效能問題。|  
 
-##  <a name="BKMK_TOOLS"></a> 對疑難排解有助益的工具  
+##  <a name="useful-tools-for-troubleshooting"></a><a name="BKMK_TOOLS"></a> 對疑難排解有助益的工具  
  設定或執行可用性群組時，不同的工具可協助您診斷不同類型的問題。 下表提供與工具相關的有用資訊連結。  
   
 |工具|描述|  
@@ -53,7 +53,7 @@ ms.locfileid: "74822041"
 |Always On 效能計數器|監視可用性群組活動，會反映在 系統監視器中，對於效能微調很有用。 如需詳細資訊，請參閱 [SQL Server、可用性複本](~/relational-databases/performance-monitor/sql-server-availability-replica.md)和 [SQL Server、資料庫複本](~/relational-databases/performance-monitor/sql-server-database-replica.md)。|  
 |[Always On 信號緩衝區](always-on-ring-buffers.md)|記錄 SQL Server 系統中針對內部診斷的警示，可用來對與可用性群組相關的問題進行偵錯。|  
   
-##  <a name="BKMK_MONITOR"></a> 監視可用性群組  
+##  <a name="monitoring-availability-groups"></a><a name="BKMK_MONITOR"></a> 監視可用性群組  
  對可用性群組進行疑難排解的理想時機是在發生問題而必須進行容錯移轉 (無論自動或手動) 之前。 這可藉由監視可用性群組的效能度計量，以及當可用性複本是在您的服務等級協定 (SLA) 範圍外執行時傳送警示來達成。 例如，如果同步的次要複本有效能問題而導致估計的容錯移轉時間增加，您不需要等到自動容錯移轉發生，並發現容錯移轉時間超過復原時間目標。  
   
  因為可用性群組是高可用性和災害復原方案，所以最重要要監視的效能計量是估計的容錯移轉時間 (這會影響您的復原時間目標 (RTO))，以及在災害中的潛在資料遺失 (這會影響您的復原點目標 (RPO))。 您可以隨時從 SQL Server 公開的資料收集這些計量，讓您可以在系統發生實際的失敗事件之前，收到高可用性災害復原 (HADR) 功能問題的警示。 因此，請務必讓自己熟悉可用性群組的資料同步處理程序，並據此收集計量。  

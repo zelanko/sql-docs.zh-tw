@@ -14,10 +14,10 @@ ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 29e4b7af3c9799f5b0c396c8b66aa4f7caa5804f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297472"
 ---
 # <a name="month-ssis-expression"></a>MONTH (SSIS 運算式)

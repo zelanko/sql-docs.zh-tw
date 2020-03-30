@@ -22,10 +22,10 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 75258eabcc1874ca8cda731cc473847b7316ff28
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296192"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件處理常式
@@ -53,7 +53,7 @@ ms.locfileid: "71296192"
   
  ![事件處理常式流程](../integration-services/media/mw-dts-eventhandlers.gif "事件處理常式流程")  
   
- 事件處理常式是事件處理常式集合的成員，所有容器都包含此集合。 如果使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師建立封裝，則您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師之 [封裝總管]  索引標籤上的 [事件處理常式]  資料夾中，查看事件處理常式集合的成員。  
+ 事件處理常式是事件處理常式集合的成員，所有容器都包含此集合。 如果使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師建立封裝，則您可以在  **設計師之 [封裝總管]** **索引標籤上的 [事件處理常式]** [!INCLUDE[ssIS](../includes/ssis-md.md)] 資料夾中，查看事件處理常式集合的成員。  
   
  您可以利用下列方式設定事件處理常式容器：  
   
@@ -95,9 +95,9 @@ ms.locfileid: "71296192"
   
  事件處理常式與封裝相似。 事件處理常式與封裝相似，可提供變數的範圍，並包括控制流程和選擇性的資料流程。 您可以為封裝、「Foreach 迴圈」容器、「For 迴圈」容器、「時序」容器及所有工作建立事件處理常式。  
   
- 您可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)]設計師中 [事件處理常式]  索引標籤的設計介面，來建立事件處理常式。  
+ 您可以使用 **設計師中 [事件處理常式]** [!INCLUDE[ssIS](../includes/ssis-md.md)] 索引標籤的設計介面，來建立事件處理常式。  
   
- 當 [事件處理常式]  索引標籤為使用中時，[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中 [工具箱] 的 [控制流程項目]  和 [維護計畫工作]  節點，會包含用於在事件處理常式中建立控制流程的工作及容器。 [資料流程來源]  、[轉換]  及 [資料流程目的地]  節點包含用於在事件處理常式中建立資料流程的資料來源、轉換及目的地。 如需詳細資訊，請參閱[控制流程](../integration-services/control-flow/control-flow.md)和[資料流程](../integration-services/data-flow/data-flow.md)。  
+ 當 [事件處理常式]  索引標籤為使用中時， **設計師中 [工具箱] 的 [控制流程項目]** **和 [維護計畫工作]** [!INCLUDE[ssIS](../includes/ssis-md.md)] 節點，會包含用於在事件處理常式中建立控制流程的工作及容器。 [資料流程來源]  、[轉換]  及 [資料流程目的地]  節點包含用於在事件處理常式中建立資料流程的資料來源、轉換及目的地。 如需詳細資訊，請參閱[控制流程](../integration-services/control-flow/control-flow.md)和[資料流程](../integration-services/data-flow/data-flow.md)。  
   
  [事件處理常式]  索引標籤還包含 [連線管理員]  區域，在此區域中，您可以建立並修改事件處理常式用於連接到伺服器和資料來源的連線管理員。 如需詳細資訊，請參閱[建立連線管理員](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "71296192"
 9. 在 [檔案]  功能表上，按一下 [儲存選取項目]  ，以儲存封裝。  
 
 ## <a name="set-the-properties-of-an-event-handler"></a>設定事件處理常式的屬性  
- 您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性]  視窗中，或以程式設計方式設定屬性。  
+ 您可以在  **的 [屬性]** [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 視窗中，或以程式設計方式設定屬性。  
   
  如需如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中設定這些屬性的相關資訊，請參閱 [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   

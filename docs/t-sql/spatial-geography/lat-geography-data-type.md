@@ -18,10 +18,10 @@ ms.assetid: 051d66bc-04de-4c58-861c-760dc5b859b5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7da6aca6ccc5180d379ff853267d2de9f682cfb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68040087"
 ---
 # <a name="lat-geography-data-type"></a>Lat (geography 資料類型)

@@ -13,10 +13,10 @@ ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b9c25ae3771a8ca7087f4668b717643fbe4b2648
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298801"
 ---
 # <a name="edit-tables"></a>編輯資料表

@@ -11,10 +11,10 @@ ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1506c13655187ad29d27f96f5fa1b73d01f67620
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70846818"
 ---
 # <a name="save-trace-results-to-a-file"></a>將追蹤結果儲存至檔案

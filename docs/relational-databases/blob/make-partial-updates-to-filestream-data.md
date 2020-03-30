@@ -14,10 +14,10 @@ ms.assetid: d6f7661e-6c14-4d31-9541-4520ca0f82b2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fbc9f9d7cba88021c2a3d4939ea21ae91b69ee97
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68125155"
 ---
 # <a name="make-partial-updates-to-filestream-data"></a>對 FILESTREAM 資料進行部分更新

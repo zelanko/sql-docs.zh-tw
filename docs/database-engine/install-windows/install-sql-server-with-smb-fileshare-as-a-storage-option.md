@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0b1d78acdaee97c38536969481c79fc3a94d6c9e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67990934"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>安裝 SQL Server 與 SMB 檔案共用儲存體
@@ -80,7 +80,7 @@ ms.locfileid: "67990934"
   
      如需在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用各種命令列參數選項的詳細資訊，請參閱 [從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
   
-## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>作業系統考量 (SMB 通訊協定與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+## <a name="operating-system-considerations-smb-protocol-vs-ssnoversion"></a>作業系統考量 (SMB 通訊協定與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  不同的 Windows 作業系統有不同的 SMB 通訊協定版本，而且 SMB 通訊協定版本對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而言是透明的。 您可以找到不同 SMB 通訊協定版本相對於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的優點。  
   
 |作業系統|SMB2 通訊協定版本|對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  

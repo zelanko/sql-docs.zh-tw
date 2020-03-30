@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7f31e3894448e5d6a044af75c7e86b704b993aa6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71682014"
 ---
 # <a name="float-and-real-transact-sql"></a>float 和 real (Transact-SQL)
@@ -48,7 +48,7 @@ ms.locfileid: "71682014"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將 *n* 當做兩個可能值的其中一個來處理。 如果 **1**<=n<=**24**，則將 *n* 當作 **24** 來處理。 如果 **25**<=n<=**53**，則將 *n* 當作 **53** 來處理。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[ **(n)** ] 資料類型從 **1** 到 **53** 的所有 *n* 值都符合 ISO 標準。 **double precision** 的同義字是 **float(53)** 。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[ **(n)** ] 資料類型從 *1* 到 **53** 的所有 **n** 值都符合 ISO 標準。 **double precision** 的同義字是 **float(53)** 。
   
 ## <a name="remarks"></a>備註  
   

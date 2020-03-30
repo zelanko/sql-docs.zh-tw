@@ -14,10 +14,10 @@ ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9053a5ab4ac64bea8104ce7d9079bf891ffa887a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296763"
 ---
 # <a name="cataloggrant_permission-ssisdb-database"></a>catalog.grant_permission (SSISDB 資料庫)

@@ -15,10 +15,10 @@ ms.assetid: e49a644a-dbf2-46c3-98f5-4b3ec197e2ad
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8a0b9e7d163de73a2bb08d1095a0bb0c600bb0fe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68066526"
 ---
 # <a name="collectionaggregate-geography-data-type"></a>CollectionAggregate (geometry 資料類型)

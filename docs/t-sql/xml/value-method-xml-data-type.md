@@ -15,10 +15,10 @@ ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9224e9050ecf01255151e5ec8e11ecaf282d7387
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68051223"
 ---
 # <a name="value-method-xml-data-type"></a>value() 方法 (xml 資料類型)

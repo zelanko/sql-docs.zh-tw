@@ -49,7 +49,7 @@ ms.locfileid: "74165661"
 
 ### <a name="start-the-sql-server-import-and-export-wizard-from-the-start-menu"></a>從開始功能表中啟動 SQL Server 匯入和匯出精靈
 
-1. 在 [開始] 功能表上，找出並展開 [Microsoft SQL Server 20xx]。
+1. 在 [開始]  功能表上，找出並展開 [Microsoft SQL Server 20xx]  。
 2. 按一下下列其中一個選項。
     - **SQL Server 20xx 匯入和匯出資料 (64 位元)**
     - **SQL Server 20xx 匯入和匯出資料 (32 位元)**
@@ -80,11 +80,11 @@ ms.locfileid: "74165661"
 
 1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。
 
-2. 展開 **[資料庫]**。
+2. 展開 **[資料庫]** 。
 
 3. 以滑鼠右鍵按一下資料庫。
 
-4. 指向 [工作] 。
+4. 指向 [工作]  。
 
 5. 按一下下列其中一個選項。
 
@@ -102,13 +102,13 @@ ms.locfileid: "74165661"
 
  在具有 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 Visual Studio 中開啟 Integration Services 專案，然後執行下列其中一個動作。
 
-- 在 [專案]  功能表上，按一下 [SSIS 匯入和匯出精靈] 。
+- 在 [專案]  功能表上，按一下 [SSIS 匯入和匯出精靈]  。
 
    ![啟動精靈 (專案)](../../integration-services/import-export-data/media/start-wizard-project.png)
 
    \- 或 -
 
-- 在方案總管中，以滑鼠右鍵按一下 [SSIS 封裝]  資料夾，然後按一下 [SSIS 匯入和匯出精靈] 。
+- 在方案總管中，以滑鼠右鍵按一下 [SSIS 封裝]  資料夾，然後按一下 [SSIS 匯入和匯出精靈]  。
 
     ![啟動精靈 (封裝)](../../integration-services/import-export-data/media/start-wizard-packages.png)
 
@@ -125,7 +125,7 @@ ms.locfileid: "74165661"
 
 ## <a name="whats-next"></a>下一步
 
-當您啟動精靈時，第一頁是 [歡迎使用 SQL Server 匯入和匯出精靈] 。 您不需要在此頁面上採取任何動作。 如需詳細資訊，請參閱 [歡迎使用 SQL Server 匯入和匯出精靈](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)。  
+當您啟動精靈時，第一頁是 [歡迎使用 SQL Server 匯入和匯出精靈]  。 您不需要在此頁面上採取任何動作。 如需詳細資訊，請參閱 [歡迎使用 SQL Server 匯入和匯出精靈](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)。  
   
 ## <a name="related-tasks-and-content"></a>相關的工作及內容
 

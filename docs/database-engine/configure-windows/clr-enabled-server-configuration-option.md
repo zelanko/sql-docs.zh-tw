@@ -14,10 +14,10 @@ ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 71392e537cb034976b3c47d819897356e3bb58cb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71682089"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>CLR 已啟用伺服器組態選項

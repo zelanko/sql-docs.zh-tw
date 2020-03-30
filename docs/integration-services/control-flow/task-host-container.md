@@ -16,10 +16,10 @@ ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e6286bb35855d0bf775925c93003ae59996ab447
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293888"
 ---
 # <a name="task-host-container"></a>工作主機容器

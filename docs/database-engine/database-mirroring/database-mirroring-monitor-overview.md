@@ -15,10 +15,10 @@ ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 07ad2379f82552a3db0ceee30305f7fdc38003fe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006411"
 ---
 # <a name="database-mirroring-monitor-overview"></a>資料庫鏡像監視器概觀
@@ -51,7 +51,7 @@ ms.locfileid: "68006411"
  *<Database_name>*  
  已向「資料庫鏡像監視器」註冊的鏡像資料庫名稱。  
   
- \<狀態>   
+ *狀態>\<*  
  可能的狀態及其相關聯的圖示如下所示：  
   
 |圖示|狀態|描述|  

@@ -13,10 +13,10 @@ ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6838ae985c16f4188ed43e3442b4f86c4a3557b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298681"
 ---
 # <a name="manage-a-cdc-service"></a>管理 CDC 服務

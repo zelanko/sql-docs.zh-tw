@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: fab545b34f257563466ec2f64911cdfaceca9456
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67934850"
 ---
 # <a name="upgrade-data-quality-services"></a>升級 Data Quality Services
@@ -28,13 +28,13 @@ ms.locfileid: "67934850"
 > -   您可以使用最新或舊版的 Data Quality Client 連線至 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server，或連線至 Integration Services 的 [DQS 清理轉換](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)，執行您的資料品質工作。  
 > -   升級 Data Quality Services 和 Master Data Services 之後，所有適用於 Excel 的舊版 Master Data Services 增益集都無法再繼續運作。 您可以從 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 這裡 [下載](https://go.microsoft.com/fwlink/?LinkID=506665)版適用於 Exel 的 Master Data Services 增益集。  
   
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   您必須以 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 電腦上 Administrator 群組成員的身分登入。  
   
 -   您的 Windows 使用者帳戶必須是安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 之 SQL Server 執行個體上系統管理員 (sysadmin) 固定伺服器角色的成員。  
   
-##  <a name="Upgrade"></a> 升級 DQS  
+##  <a name="upgrading-dqs"></a><a name="Upgrade"></a> 升級 DQS  
  升級 DQS：  
   
 1.  在開始升級程序之前，請先備份 DQS 資料庫。 如需有關備份 DQS 資料庫的詳細資訊，請參閱 [備份及還原 DQS 資料庫](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)。  
@@ -77,7 +77,7 @@ ms.locfileid: "67934850"
   
     5.  在成功升級 DQS 資料庫結構描述之後，將會顯示完成訊息。  
   
-##  <a name="Verify"></a> 確認 DQS 資料庫結構描述升級  
+##  <a name="verifying-the-dqs-databases-schema-upgrade"></a><a name="Verify"></a> 確認 DQS 資料庫結構描述升級  
  若要確認 DQS 資料庫結構描述升級成功，您可以查詢中每個資料庫中的 A_DB_VERSION 資料表，以檢查 DQS_MAIN 和 DQS_PROJECTS 資料庫中的目前版本。 若要這樣做：  
   
 1.  啟動 SQL Server Management Studio，並連接到包含已升級之 DQS 資料庫結構描述的 SQL Server 執行個體。  

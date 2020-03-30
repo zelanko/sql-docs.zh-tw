@@ -20,10 +20,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 05a5e9c01e46a83e0ba6a2bc206fd6f10328e9c6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68093383"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>選擇建立全文檢索索引時的語言
@@ -35,7 +35,7 @@ ms.locfileid: "68093383"
 > [!NOTE]  
 >  若要針對全文檢索索引的資料行指定資料行層級語言，請在指定資料行時，使用 LANGUAGE *language_term* 子句。 如需詳細資訊，請參閱 [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md) 和 [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)。  
   
-##  <a name="langsupp"></a> 全文檢索搜尋中的語言支援  
+##  <a name="language-support-in-full-text-search"></a><a name="langsupp"></a> 全文檢索搜尋中的語言支援  
  本節提供斷詞工具與字幹分析器的簡介，並且討論了全文檢索搜尋如何使用資料行層級語言的 LCID。  
   
 ### <a name="introduction-to-word-breakers-and-stemmers"></a>斷詞工具與字幹分析器的簡介  
@@ -74,7 +74,7 @@ ms.locfileid: "68093383"
 >  系統會針對適用於全文檢索索引的所有資料類型 (例如 **char** 或 **nchar**) 使用 LCID。 如果您將 **char**、 **varchar**或 **text** 類型資料行的排序次序設定為與 LCID 所識別之語言不同的語言設定，在全文檢索索引和查詢這些資料行期間，系統仍然會使用 LCID。  
   
   
-##  <a name="breaking"></a> 斷詞  
+##  <a name="word-breaking"></a><a name="breaking"></a> 斷詞  
  文字分隔會針對文字分界 (語言特有) 將索引的文字 Token 化。 因此，不同語言之間的斷詞行為便有所差異。 如果您使用某種語言 x 來編制一些語言的索引 {x、y 和 z}，某些行為可能會產生非預期的結果。 例如，在某種語言中，破折號 (-) 或逗號 (,) 可能是棄而不用的斷詞元素，但在另一種語言中則不是。 此外，由於給定的字詞可能會在不同的語言中以不同方式進行詞幹分析，因此有時可能也會發生非預期的詞幹分析行為。 例如，在英文中，文字分界通常是空白字元或某種形式的標點符號。 在其他語言中，例如德文，字詞或字元可能會結合在一起。 因此，您所選擇的資料行層級語言應該代表您預期會儲存在該資料行之資料列中的語言。  
   
 ### <a name="western-languages"></a>西方語言  
@@ -99,11 +99,11 @@ ms.locfileid: "68093383"
      當您的內容是純文字時，您可以將其轉換成 **xml** 資料類型，並加入語言標記，以便表示對應至每份特定文件或文件區段的語言。 不過，若要讓此解決方法有用，您必須在建立全文檢索索引之前，了解所使用的語言。  
   
   
-##  <a name="stemming"></a> 詞幹分析  
+##  <a name="stemming"></a><a name="stemming"></a> 詞幹分析  
  選擇資料行層級語言時的其他考量是詞幹分析。 在全文檢索查詢中，「詞幹分析」  是指搜尋某特定語言之所有字根 (字形變化) 的過程。 當您使用一般斷詞工具來處理許多語言時，詞幹分析程序只會針對指定給資料行的語言運作，而不會針對資料行中的其他語言運作。 例如，德文字幹分析器不會針對英文或西班牙文 (等語言) 運作。 這可能會影響重新叫用，端視您在查詢時選擇的語言而定。  
   
   
-##  <a name="type"></a> 資料行類型對全文檢索搜尋的影響  
+##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> 資料行類型對全文檢索搜尋的影響  
  選擇語言時的另一個考量與呈現資料的方式有關。 對於儲存在 **varbinary(max)** 資料行以外的資料而言，系統不會執行特殊篩選。 相反地，文字可以其原始格式傳送，而不會受限於文字分隔元件。  
   
  此外，斷詞工具主要設計成處理一般撰寫內容。 所以，如果您的文字上有任何類型的標記 (如 HTML)，則在編製索引和搜尋語言時可能會不夠精確。 對於這種情況您有兩種選擇，一般偏好的方法是將文字資料儲存在 **varbinary(max)** 資料行中，然後指示其文件類型以進行篩選。 如果不使用這個選項，您可以考慮使用中性斷詞工具，而且若可行的話，請將標記資料 (例如 HTML 中的 'br') 加入至非搜尋字清單。  
@@ -112,7 +112,7 @@ ms.locfileid: "68093383"
 >  當您指定中性語言時，以語言為基礎的字根檢索功能將不會發生作用。  
   
   
-##  <a name="nondef"></a> 在全文檢索查詢中指定非預設資料行層級語言  
+##  <a name="specifying-a-non-default-column-level-language-in-a-full-text-query"></a><a name="nondef"></a> 在全文檢索查詢中指定非預設資料行層級語言  
  依預設，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，全文檢索搜尋會使用指定給包含在全文檢索子句中之每個資料行的語言來剖析查詢字詞。 若要覆寫此行為，請在查詢時指定非預設語言。 若為已安裝資源的支援語言，您就可以使用 *CONTAINS* 、 [CONTAINSTABLE](../../t-sql/queries/contains-transact-sql.md)、 [FREETEXT](../../relational-databases/system-functions/containstable-transact-sql.md)或 [FREETEXTTABLE](../../t-sql/queries/freetext-transact-sql.md)查詢的 LANGUAGE [language_term](../../relational-databases/system-functions/freetexttable-transact-sql.md) 子句來指定用於查詢字詞之斷詞、詞幹分析、同義字和停用字詞處理的語言。  
   
   

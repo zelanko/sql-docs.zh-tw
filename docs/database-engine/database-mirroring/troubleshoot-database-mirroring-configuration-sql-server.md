@@ -17,10 +17,10 @@ ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 17eccc8ce90743e49ced2db863bc85e9d297a1a5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822515"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>疑難排解資料庫鏡像組態 (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "74822515"
 |[使用 Transact-SQL 啟動鏡像](#StartDbm)|描述 ALTER DATABASE *database_name* SET PARTNER **='** _partner_server_ **'** 陳述式的必要順序。|  
 |[跨資料庫交易](#CrossDbTxns)|自動容錯移轉可能導致自動以及可能不正確地解決有疑問的交易。 因此，資料庫鏡像不支援跨資料庫交易。|  
   
-##  <a name="Accounts"></a> 帳戶  
+##  <a name="accounts"></a><a name="Accounts"></a> 帳戶  
  必須正確設定用來執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的帳戶。  
   
 1.  帳戶有正確的權限嗎？  
@@ -53,7 +53,7 @@ ms.locfileid: "74822515"
   
 2.  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用本機系統帳戶以服務的方式執行，您必須使用憑證進行驗證。 如需詳細資訊，請參閱[使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
   
-##  <a name="Endpoints"></a> Endpoints  
+##  <a name="endpoints"></a><a name="Endpoints"></a> Endpoints  
  必須正確設定端點。  
   
 1.  確定每個伺服器執行個體 (主體伺服器、鏡像伺服器和任何見證) 都有資料庫鏡像端點。 如需詳細資訊，請參閱 [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) 以及[建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) 或[使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) (根據驗證格式而定)。  
@@ -110,13 +110,13 @@ ms.locfileid: "74822515"
   
     ```  
   
-##  <a name="SystemAddress"></a> 系統位址  
+##  <a name="system-address"></a><a name="SystemAddress"></a> 系統位址  
  您可以使用能夠明確識別系統的任何名稱，來當做資料庫鏡像組態中伺服器執行個體的系統名稱。 伺服器位址可以是系統名稱 (如果系統位於同一個網域內)、完整網域名稱或 IP 位址 (最好是靜態 IP 位址)。 使用完整網域名稱保證可以運作。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   
-##  <a name="NetworkAccess"></a> Network Access  
+##  <a name="network-access"></a><a name="NetworkAccess"></a> Network Access  
  每個伺服器執行個體都必須能夠透過 TCP 來存取其他伺服器執行個體的通訊埠。 如果伺服器執行個體位在互不信任的不同網域 (不受信任的網域) 中，這點尤其重要。 因為這會限制伺服器執行個體之間的許多通訊。  
   
-##  <a name="MirrorDbPrep"></a> Mirror Database Preparation  
+##  <a name="mirror-database-preparation"></a><a name="MirrorDbPrep"></a> Mirror Database Preparation  
  不論您是第一次啟動鏡像或在移除鏡像後再次啟動鏡像，請確認已備妥鏡像資料庫，可進行鏡像作業。  
   
  在鏡像伺服器上建立鏡像資料庫時，請確定您使用 WITH NORECOVERY 指定了相同的資料庫名稱來還原主體資料庫的備份。 另外，您還必須使用 WITH NORECOVERY 套用製作該備份之後建立的所有記錄備份。  
@@ -130,7 +130,7 @@ ms.locfileid: "74822515"
   
  如需詳細資訊，請參閱 [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
-##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
+##  <a name="failed-create-file-operation"></a><a name="FailedCreateFileOp"></a> Failed Create-File Operation  
  若要加入檔案但又不影響鏡像工作階段，則此檔案的路徑必須同時存在兩個伺服器上。 因此，如果您在建立鏡像資料庫時移動資料庫檔案，之後在鏡像資料庫上加入檔案的作業可能會失敗，而且導致鏡像暫停。  
   
  若要修正這個問題：  
@@ -143,7 +143,7 @@ ms.locfileid: "74822515"
   
  如需詳細資訊，請參閱[移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)、[準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)、[使用 Windows 驗證建立資料庫鏡像工作階段 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)、[使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) 或[使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
   
-##  <a name="StartDbm"></a> 使用 Transact-SQL 啟動鏡像  
+##  <a name="starting-mirroring-by-using-transact-sql"></a><a name="StartDbm"></a> 使用 Transact-SQL 啟動鏡像  
  ALTER DATABASE *database_name* SET PARTNER **='** _partner_server_ **'** 陳述式發出的順序非常重要。  
   
 1.  第一個陳述式必須在鏡像伺服器上執行。 發出這個陳述式時，鏡像伺服器並不會嘗試聯繫任何其他伺服器執行個體。 鏡像伺服器卻會指示其資料庫等到主體伺服器聯繫上鏡像伺服器為止。  
@@ -155,7 +155,7 @@ ms.locfileid: "74822515"
 > [!NOTE]  
 >  如需使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 啟動鏡像的相關資訊，請參閱[使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
   
-##  <a name="CrossDbTxns"></a> 跨資料庫交易  
+##  <a name="cross-database-transactions"></a><a name="CrossDbTxns"></a> 跨資料庫交易  
  當資料庫正在具有自動容錯移轉的高安全性模式下進行鏡像時，自動容錯移轉會造成自動解析未確定的交易，但解析可能不正確。 如果在認可跨資料庫交易時，其中一個資料庫進行了自動容錯移轉，則資料庫之間可能會發生邏輯不一致的情況。  
   
  可能受到自動容錯移轉影響的跨資料庫交易類型包括：  

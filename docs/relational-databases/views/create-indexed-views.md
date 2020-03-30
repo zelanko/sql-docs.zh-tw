@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75325510"
 ---
 # <a name="create-indexed-views"></a>建立索引檢視表
@@ -31,7 +31,7 @@ ms.locfileid: "75325510"
 
 此文章會說明如何在檢視上建立索引。 對檢視建立的第一個索引必須是唯一的叢集索引。 建好唯一的叢集索引後，才可以建立其他非叢集索引。 為檢視表建立唯一的叢集索引，可以提升查詢效能，因為檢視表儲存在資料庫中的方式與包含叢集索引之資料表的儲存方式一樣。 查詢最佳化工具可以利用索引檢視表來加快查詢執行的速度。 不必在查詢中參考此檢視表，最佳化工具仍會考慮以該檢視表做為替代方式。
 
-## <a name="BeforeYouBegin"></a> 開始之前
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前
 
 以下是建立索引檢視表所需要的步驟，這些步驟對於能否順利完成索引檢視表的實作是很重要的：
 
@@ -47,7 +47,7 @@ ms.locfileid: "75325510"
 >
 > <sup>1</sup> 例如 UPDATE、DELETE 或 INSERT 作業。
 
-### <a name="Restrictions"></a> 需要索引檢視表的 SET 選項
+### <a name="required-set-options-for-indexed-views"></a><a name="Restrictions"></a> 需要索引檢視表的 SET 選項
 
 如果在查詢執行時有不同的使用中 SET 選項，則評估相同的運算式可能會在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中產生不同的結果。 例如，將 SET 選項 `CONCAT_NULL_YIELDS_NULL` 設為 ON 之後，運算式 `'abc' + NULL` 會傳回 `NULL` 值。 不過，將 `CONCAT_NULL_YIELDS_NULL` 設為 OFF 之後，相同的運算式則會產生 `'abc'`。
 
@@ -131,13 +131,13 @@ ms.locfileid: "75325510"
 > [!IMPORTANT]
 > 時態查詢 (使用 `FOR SYSTEM_TIME` 子句的查詢) 不支援索引檢視表。
 
-### <a name="Recommendations"></a> 建議
+### <a name="recommendations"></a><a name="Recommendations"></a> 建議
 
 當您在索引檢視中參考 **datetime** 和 **smalldatetime** 字串常值時，我們建議您使用決定性的日期格式樣式，將常值明確轉換成您想要的日期類型。 如需具有決定性之日期格式樣式的清單，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。 如需決定性與非決定性運算式的詳細資訊，請參閱此頁面中的[考量](#nondeterministic)一節。
 
 在大量索引檢視表或較少但非常複雜的索引檢視表所參考的資料表上執行 DML (例如 `UPDATE`、`DELETE` 或 `INSERT`) 時，這些索引檢視表必須在 DML 執行期間一併更新。 如此一來，DML 查詢效能可能會降低顯著，在某些情況下，甚至無法產生查詢計畫。 在這種情況下，請在生產環境使用之前測試 DML 查詢、分析查詢計畫並微調/簡化 DML 陳述式。
 
-### <a name="Considerations"></a> 考量
+### <a name="considerations"></a><a name="Considerations"></a> 考量
 
 索引檢視表中資料行的 **large_value_types_out_of_row** 選項設定是繼承基底資料表中對應的資料行設定。 此值可透過 [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)設定。 由運算式形成的資料行其預設值為 0。 這表示大數值類型是以資料列的方式儲存。
 
@@ -151,13 +151,13 @@ ms.locfileid: "75325510"
 
 <a name="nondeterministic"></a> 牽涉到將字元字串隱含轉換成 **datetime** 或 **smalldatetime** 的運算式被視為非決定性的。 如需詳細資訊，請參閱[將常值日期字串轉換成 DATE 值的非決定性轉換](../../t-sql/data-types/nondeterministic-convert-date-literals.md)。
 
-### <a name="Security"></a> Security
+### <a name="security"></a><a name="Security"></a> Security
 
-#### <a name="Permissions"></a> 權限
+#### <a name="permissions"></a><a name="Permissions"></a> 權限
 
 至少必須具備資料庫的 **CREATE VIEW** 權限，以及要在其中建立檢視表之結構描述的 **ALTER** 權限。
 
-## <a name="TsqlProcedure"></a> 使用 Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL
 
 ### <a name="to-create-an-indexed-view"></a>建立索引檢視表
 

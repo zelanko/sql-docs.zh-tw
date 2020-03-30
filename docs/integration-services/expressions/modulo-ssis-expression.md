@@ -15,10 +15,10 @@ ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c6b663a99e8e0e5dd7d9d91a81fe39fecef6802b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71288802"
 ---
 # <a name="modulo-ssis-expression"></a>(模數) (SSIS 運算式)

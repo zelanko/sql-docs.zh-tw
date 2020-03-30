@@ -17,10 +17,10 @@ ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 92e485372bca104ae7c34405f711ced3a6a60a44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75242581"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>完整資料庫還原 (簡單復原模式)
@@ -42,7 +42,7 @@ ms.locfileid: "75242581"
 > [!NOTE]  
 >  如需舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之備份支援的相關資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)的＜相容性支援＞一節。  
   
-##  <a name="Overview"></a> 簡單復原模式下的資料庫備份概觀  
+##  <a name="overview-of-database-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> 簡單復原模式下的資料庫備份概觀  
  在簡單復原模式下進行完整資料庫還原只需要一個或兩個 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式，視是否想要還原差異資料庫備份而定。 如果您只使用完整資料庫備份，則只需要還原最近的備份，如下圖所示。  
   
  ![只還原完整資料庫備份](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "只還原完整資料庫備份")  
@@ -54,7 +54,7 @@ ms.locfileid: "75242581"
 > [!NOTE]  
 >  若您想將資料庫備份還原至不同的伺服器執行個體，請參閱 [使用備份與還原複製資料庫](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  
   
-###  <a name="TsqlSyntax"></a> 基本 Transact-SQL RESTORE 語法  
+###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> 基本 Transact-SQL RESTORE 語法  
  用於還原完整資料庫備份的基本 [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 語法為：  
   
  RESTORE DATABASE *database_name* FROM *backup_device* [ WITH NORECOVERY ]  
@@ -66,7 +66,7 @@ ms.locfileid: "75242581"
   
  RESTORE DATABASE *database_name* FROM *backup_device* WITH RECOVERY  
   
-###  <a name="Example"></a> 範例 &#40;Transact-SQL&#41;  
+###  <a name="example-transact-sql"></a><a name="Example"></a> 範例 &#40;Transact-SQL&#41;  
  下列範例首先顯示如何使用 [BACKUP](../../t-sql/statements/backup-transact-sql.md) 陳述式來建立 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的完整資料庫備份及差異資料庫備份。 此範例接著依序還原這些備份。 資料庫會還原到差異資料庫備份完成時的狀態。  
   
  這個範例顯示在完整資料庫還原實例中，還原順序的一些關鍵選項。 *「還原順序」* (Restore sequence) 包含一個或多個還原作業，會在一個或多個還原階段中移動資料。 會省略與這個檔案還原無關的語法和詳細資料。 為了清楚起見，建議您在復原資料庫時明確指定 RECOVERY 選項，即使它是預設的。  
@@ -100,7 +100,7 @@ FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak'
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **還原完整資料庫備份**  
   
 -   [在簡單復原模式下還原資料庫備份 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  

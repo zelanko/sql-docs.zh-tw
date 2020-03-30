@@ -13,10 +13,10 @@ ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae05c1015fe885c7488af0b0c9c7e340dc25d056
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294744"
 ---
 # <a name="edit-the-table-properties"></a>編輯資料表屬性
