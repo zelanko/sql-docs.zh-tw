@@ -13,10 +13,10 @@ author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: fc73cec066671c70699b4baa1dc75d249b1860c3
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77544923"
 ---
 # <a name="using-xa-transactions"></a>使用 XA 交易

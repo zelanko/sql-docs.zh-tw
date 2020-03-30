@@ -21,35 +21,35 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5a98049201636bf521ae7162bd4ac0de71d74725
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821941"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>使用容錯移轉可用性群組精靈 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。 可用性群組會在可用性複本層級容錯移轉。 如果您容錯移轉至處於 SYNCHRONIZED 狀態的次要複本，此精靈就會執行規劃的手動容錯移轉 (不會遺失資料)。 如果您容錯移轉至處於 UNSYNCHRONIZED 或 NOT SYNCHRONIZING 狀態的次要複本，此精靈就會執行強制手動容錯移轉，也稱為「強制容錯移轉」  (可能會遺失資料)。 這兩種手動容錯移轉形式都會將您所連接的次要複本轉換成主要角色。 規劃的手動容錯移轉目前會將先前的主要複本會轉換成次要角色。 強制容錯移轉之後，當先前的主要複本上線時，它就會轉換成次要角色。  
 
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
  第一次進行規劃的手動容錯移轉之前，請參閱 [執行可用性群組的已規劃手動容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。  
   
  第一次進行強制容錯移轉之前，請先參閱 [執行可用性群組的強制手動容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   目標次要複本接受命令之後，容錯移轉命令就會傳回。 不過，在可用性群組完成容錯移轉之後，會以非同步方式復原資料庫。  
     
-###  <a name="Prerequisites"></a> 使用容錯移轉可用性群組精靈的必要條件  
+###  <a name="prerequisites-for-using-the-failover-availability-group-wizard"></a><a name="Prerequisites"></a> 使用容錯移轉可用性群組精靈的必要條件  
   
 -   您必須連接到裝載目前可用之可用性複本的伺服器執行個體。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要使用容錯移轉可用性群組精靈**  
   
 1.  在 [物件總管] 中，連接到裝載需要容錯移轉之可用性群組次要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
@@ -93,7 +93,7 @@ ms.locfileid: "74821941"
   
  此精靈的其他頁面都與一或多個其他 AlwaysOn 可用性群組精靈共用說明，而且記載於個別的 F1 說明主題中。  
   
-###  <a name="SelectNewPrimaryReplica"></a> Select New Primary Replica Page  
+###  <a name="select-new-primary-replica-page"></a><a name="SelectNewPrimaryReplica"></a> Select New Primary Replica Page  
  本節描述的是 **[選取新的主要複本]** 頁面的選項。 您可以使用此頁面來選取可用性群組將容錯移轉的目標次要複本 (容錯移轉目標)。 這個複本將成為新的主要複本。  
   
 #### <a name="page-options"></a>頁面選項  
@@ -159,7 +159,7 @@ ms.locfileid: "74821941"
  **取消**  
  按一下可取消精靈。 在 **[選取新的主要複本]** 頁面上，取消精靈會導致精靈結束，而不執行任何動作。  
   
-###  <a name="ConfirmPotentialDataLoss"></a> Confirm Potential Data Loss Page  
+###  <a name="confirm-potential-data-loss-page"></a><a name="ConfirmPotentialDataLoss"></a> Confirm Potential Data Loss Page  
  本節描述的是 **[確認可能遺失資料]** 頁面的選項 (只有當您正在執行強制容錯移轉時，才會顯示此頁面)。 本主題僅供 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]使用。 您可以使用此頁面來指出是否願意承擔可能遺失資料的風險，以便強制可用性群組容錯移轉。  
   
 #### <a name="confirm-potential-data-loss-options"></a>確認可能遺失資料選項  
@@ -171,7 +171,7 @@ ms.locfileid: "74821941"
  **取消**  
  按一下可取消精靈。 在 **[確認可能遺失資料]** 頁面上，取消精靈會導致精靈結束，而不執行任何動作。  
   
-###  <a name="ConnectToReplica"></a> Connect to Replica Page  
+###  <a name="connect-to-replica-page"></a><a name="ConnectToReplica"></a> Connect to Replica Page  
  本節描述的是 **之** [連接到複本] [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]頁面的選項。 只有當您沒有連接到目標次要複本時，才會顯示此頁面。 您可以使用此頁面來連接到已選取成為新主要複本的次要複本。  
   
 #### <a name="page-options"></a>頁面選項  

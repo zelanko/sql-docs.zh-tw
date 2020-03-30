@@ -35,10 +35,10 @@ ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 282e75c071ce220c5b7301b5c4b27fff2cf4b053
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76929106"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>管理在另一部伺服器上提供資料庫時所需的中繼資料
@@ -59,7 +59,7 @@ ms.locfileid: "76929106"
   
  當您將應用程式的資料庫移至其他伺服器執行個體時，您必須在目的地伺服器執行個體上重新建立 **master** 和 **msdb** 中相依實體及物件的所有中繼資料。 例如，如果資料庫應用程式使用伺服器層級觸發程序，僅在新系統上附加或還原資料庫是不夠的。 除非您以手動方式為 **master** 資料庫中的那些觸發程序重新建立中繼資料，否則資料庫無法如預期一般運作。  
   
-##  <a name="information_entities_and_objects"></a> 儲存在使用者資料庫外部的資訊、實體和物件  
+##  <a name="information-entities-and-objects-that-are-stored-outside-of-user-databases"></a><a name="information_entities_and_objects"></a> 儲存在使用者資料庫外部的資訊、實體和物件  
  本文其餘的篇幅將摘要說明在其他伺服器執行個體上提供資料庫時，可能對該資料庫造成影響的潛在問題。 您可能需要重新建立下列清單列出的其中一個或多個資訊、實體或物件類型。 若要查看摘要，請按一下各項目的連結。  
   
 -   [伺服器組態設定](#server_configuration_settings)  
@@ -96,13 +96,13 @@ ms.locfileid: "76929106"
   
 -   [觸發程序 (伺服器層級)](#triggers)  
   
-##  <a name="server_configuration_settings"></a> Server Configuration Settings  
+##  <a name="server-configuration-settings"></a><a name="server_configuration_settings"></a> Server Configuration Settings  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本會選擇性地安裝並啟動主要服務與功能。 這可有助於減少系統易受攻擊的介面區。 在新安裝的預設組態中，許多功能都不會啟用。 如果資料庫仰賴預設關閉的任何服務或功能，您就必須在目的地伺服器執行個體上啟用這項服務或功能。  
   
  如需設定和啟用或停用服務或功能的詳細資訊，請參閱[伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
   
-##  <a name="credentials"></a> 認證  
+##  <a name="credentials"></a><a name="credentials"></a> 認證  
  認證是包含驗證資訊的記錄，該項資訊是連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]外部資源時所需的資訊。 大部分認證由 Windows 登入和密碼組成。  
   
  如需此功能的詳細資訊，請參閱[認證 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)。  
@@ -110,7 +110,7 @@ ms.locfileid: "76929106"
 > **注意：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶使用認證。 若要了解 Proxy 帳戶的認證識別碼，請使用 [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) 系統資料表。  
   
   
-##  <a name="cross_database_queries"></a> Cross-Database Queries  
+##  <a name="cross-database-queries"></a><a name="cross_database_queries"></a> Cross-Database Queries  
  DB_CHAINING 和 TRUSTWORTHY 資料庫選項預設是 OFF。 如果原始資料庫的其中一個選項設定為 ON，您就必須在目的地伺服器執行個體的資料庫上啟用該選項。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
  附加與卸離作業會停用資料庫的跨資料庫擁有權鏈結。 如需如何啟用鏈結的相關資訊，請參閱 [跨資料庫擁有權鏈結伺服器組態選項](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。  
@@ -118,14 +118,14 @@ ms.locfileid: "76929106"
  如需詳細資訊，另請參閱[設定鏡像資料庫可使用 Trustworthy 屬性 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)。  
   
   
-##  <a name="database_ownership"></a> Database Ownership  
+##  <a name="database-ownership"></a><a name="database_ownership"></a> Database Ownership  
  當資料庫在另一部電腦上還原時，起始還原作業的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 Windows 使用者會自動變成新資料庫的擁有者。 還原資料庫時，系統管理員或新的資料庫擁有者可以變更資料庫擁有權。  
   
-##  <a name="distributed_queries_and_linked_servers"></a> 分散式查詢和連結的伺服器  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a> 分散式查詢和連結的伺服器  
  OLE DB 應用程式支援分散式查詢和連結的伺服器。 分散式查詢會從相同或不同電腦上的多重異質資料來源存取資料。 連結伺服器的組態可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對遠端伺服器上的 OLE DB 資料來源執行命令。 如需這些功能的詳細資訊，請參閱[連結的伺服器 &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)。  
   
   
-##  <a name="encrypted_data"></a> Encrypted Data  
+##  <a name="encrypted-data"></a><a name="encrypted_data"></a> Encrypted Data  
  如果您在另一個伺服器執行個體上提供的可用資料庫包含加密的資料，而且資料庫主要金鑰受到原始伺服器的服務主要金鑰保護時，可能就必須重新建立服務主要金鑰加密。 *「資料庫主要金鑰」* 是一個用來保護加密資料庫中憑證私密金鑰和非對稱金鑰的對稱金鑰。 建立資料庫主要金鑰時，會利用三重 DES 演算法和使用者提供的密碼來加密資料主要金鑰。  
   
  若要在伺服器執行個體上啟用資料庫主要金鑰的自動解密，就要使用服務主要金鑰來加密此金鑰的副本。 這個加密的副本會同時存放在資料庫和 **master**中。 通常，每當主要金鑰變更時，儲存在 **master** 中的副本便會以無訊息模式更新。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會先嘗試使用執行個體的服務主要金鑰來解密資料庫主要金鑰。 如果該解密失敗， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會從認證存放區中搜尋主要金鑰認證，這些主要金鑰認證具有與它需要其主要金鑰之資料庫相同的家族 GUID。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試利用每個相符的認證來將資料庫主要金鑰解密，直到解密成功或沒有其他認證為止。 未以服務主要金鑰加密的主要金鑰必須使用 OPEN MASTER KEY 陳述式和密碼來開啟。  
@@ -143,11 +143,11 @@ ms.locfileid: "76929106"
 -   [在兩部伺服器上建立相同的對稱金鑰](../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   
-##  <a name="user_defined_error_messages"></a> User-defined Error Messages  
+##  <a name="user-defined-error-messages"></a><a name="user_defined_error_messages"></a> User-defined Error Messages  
  使用者定義錯誤訊息位於 [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) 目錄檢視中。 此目錄檢視會存放在 **master**內。 如果資料庫應用程式仰賴使用者定義錯誤訊息，而且此資料庫可在另一個伺服器執行個體上使用時，請使用 [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) ，在目的地伺服器執行個體上加入這些使用者定義訊息。  
 
   
-##  <a name="event_notif_and_wmi_events"></a> 事件通知和 Windows Management Instrumentation (WMI) 事件 （伺服器層級）  
+##  <a name="event-notifications-and-windows-management-instrumentation-wmi-events-at-server-level"></a><a name="event_notif_and_wmi_events"></a> 事件通知和 Windows Management Instrumentation (WMI) 事件 （伺服器層級）  
   
 ### <a name="server-level-event-notifications"></a>伺服器層級事件通知  
  伺服器層級事件通知會存放在 **msdb**中。 因此，如果資料庫應用程式依賴伺服器層級事件通知，就必須在目的地伺服器執行個體上重新建立該事件通知。 若要檢視伺服器執行個體上的事件通知，請使用 [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) 目錄檢視。 如需詳細資訊，請參閱 [Event Notifications](../../relational-databases/service-broker/event-notifications.md)。  
@@ -175,7 +175,7 @@ ms.locfileid: "76929106"
 -   如果起始端服務在鏡像資料庫中，則目標服務必須有回到起始端的鏡像路由，才能傳送收條與回應。 不過，起始端可以有指向目標的一般路由。  
   
   
-##  <a name="extended_stored_procedures"></a> Extended Stored Procedures  
+##  <a name="extended-stored-procedures"></a><a name="extended_stored_procedures"></a> Extended Stored Procedures  
   
 > **重要！** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [CLR 整合](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) 。  
   
@@ -189,7 +189,7 @@ ms.locfileid: "76929106"
  如需詳細資訊，請參閱 [GRANT 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)、[DENY 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md) 和 [REVOKE 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)。  
   
   
-##  <a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
+##  <a name="full-text-engine-for-sql-server-properties"></a><a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
  全文檢索引擎的屬性是由 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)所設定。 請確定目的地伺服器執行個體具有這些屬性的必要設定。 如需這些屬性的詳細資訊，請參閱 [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)。  
   
  此外，如果 [斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) 元件或 [全文檢索搜尋篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md) 元件在原始和目的地伺服器執行個體上具有不同的版本，全文檢索索引和查詢就可能會有不同的行為方式。 而且， [同義字](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) 會存放在執行個體專用的檔案中。 您必須將這些檔案的副本傳送至目的地伺服器執行個體上的對等位置，或在新執行個體上重新建立這些檔案。  
@@ -203,7 +203,7 @@ ms.locfileid: "76929106"
 -   [資料庫鏡像和全文檢索目錄 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
 
   
-##  <a name="jobs"></a> 作業  
+##  <a name="jobs"></a><a name="jobs"></a> 作業  
  如果資料庫仰賴 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，您就必須在目的地伺服器執行個體上重新建立這些作業。 作業會仰賴所屬的環境。 如果您打算在目的地伺服器執行個體上重新建立現有的作業，可能必須修改目的地伺服器執行個體，以便符合該作業在原始伺服器執行個體上的環境。 下列環境因素相當重要：  
   
 -   作業使用的登入  
@@ -255,7 +255,7 @@ ms.locfileid: "76929106"
  我們建議您先編寫簡單作業的指令碼、在其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務上重新建立作業，然後執行該作業，看看是否如預期方式運作。 這項做法可讓您識別不相容性並嘗試加以解決。 如果以指令碼編寫的作業無法如預期方式在新環境中運作，建議您建立可在該環境下正確運作的對等作業。  
   
 
-##  <a name="logins"></a> 登入  
+##  <a name="logins"></a><a name="logins"></a> 登入  
  登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體需要有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 此登入是用於驗證處理序，可確認主體是否能連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。 在伺服器執行個體上未定義或定義不正確之對應 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的資料庫使用者無法登入此執行個體。 這類使用者就是伺服器執行個體上的資料庫 *「被遺棄使用者」* (Orphaned User)。 當資料庫還原、附加或複製到不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體後，資料庫使用者就可能會成為被遺棄使用者。  
   
  若要在原始資料庫副本中產生部分或所有物件的指令碼，您可以使用「產生指令碼精靈」，然後在 **[選擇指令碼選項]** 對話方塊中，將 **[編寫登入的指令碼]** 選項設定為 **[True]** 。  
@@ -263,7 +263,7 @@ ms.locfileid: "76929106"
 > **注意：** 如需如何設定鏡像資料庫登入的資訊，請參閱[設定資料庫鏡像或 AlwaysOn 可用性群組的登入帳戶 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 和[角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
   
   
-##  <a name="permissions"></a> 權限  
+##  <a name="permissions"></a><a name="permissions"></a> 權限  
  當您在其他伺服器執行個體上提供資料庫時，可能會影響下列類型的權限。  
   
 -   系統物件的 GRANT、REVOKE 或 DENY 權限  
@@ -312,21 +312,21 @@ ms.locfileid: "76929106"
 TRUSTWORHTY 資料庫屬性是用來指定 SQL Server 執行個體是否信任資料庫及其中的內容。 附加資料庫時，根據預設且為了安全起見，此選項會設定為 OFF，即使此選項在原始伺服器上設定為 ON 也一樣。 如需這個屬性的詳細資訊，請參閱 [TRUSTWORTHY 資料庫屬性](../security/trustworthy-database-property.md)；如需開啟這個選項的資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
 
 
-##  <a name="replication_settings"></a> Replication Settings  
+##  <a name="replication-settings"></a><a name="replication_settings"></a> Replication Settings  
  如果您將複寫資料庫的備份還原到另一個伺服器或資料庫，將無法保留複寫設定。 在此情況下，您必須在還原備份之後，重新建立所有發行集和訂閱。 若要讓此程序更簡單，請針對目前的複寫設定和啟用及停用複寫，建立指令碼。 若要協助重新建立複寫設定，請複製這些指令碼並變更伺服器名稱參考，以便針對目的地伺服器執行個體運作。  
   
  如需詳細資訊，請參閱[備份及還原複寫的資料庫](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)、[資料庫鏡像和複寫 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md) 和[記錄傳送和複寫 &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)。  
   
   
-##  <a name="sb_applications"></a> Service Broker Applications  
+##  <a name="service-broker-applications"></a><a name="sb_applications"></a> Service Broker Applications  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 應用程式的許多部分都會隨資料庫移動。 不過，此應用程式的某些部分則必須在新位置中重新建立或重新設定。  根據預設且為了安全起見，從其他伺服器附加資料庫時，*is_broker_enabled* 和 *is_honoor_broker_priority_on* 的選項都會設定為 OFF。 如需如何將這些選項設定為 ON 的資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
   
   
-##  <a name="startup_procedures"></a> Startup Procedures  
+##  <a name="startup-procedures"></a><a name="startup_procedures"></a> Startup Procedures  
  啟動程序是指標示為自動執行而且每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時都會執行的預存程序。 如果資料庫仰賴任何啟動程序，您就必須在目的地伺服器執行個體上定義這些程序，並將它們設定為啟動時自動執行。  
 
   
-##  <a name="triggers"></a> Triggers (at Server Level)  
+##  <a name="triggers-at-server-level"></a><a name="triggers"></a> Triggers (at Server Level)  
  DDL 觸發程序會引發預存程序，以便回應各種資料定義語言 (DDL) 事件。 這些事件主要對應至以 CREATE、ALTER 和 DROP 關鍵字開頭的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 執行類似 DDL 作業的某些系統預存程序也可能引發 DDL 觸發程序。  
   
  如需有關這項功能的詳細資訊，請參閱＜ [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md)＞。  

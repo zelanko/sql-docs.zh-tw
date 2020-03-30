@@ -22,10 +22,10 @@ ms.assetid: 75409024-f150-4326-af16-9d60e900df18
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 21cb290cb91ca74227db7a3cd16501ddd882ae48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75255792"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE 伺服器主體權限 (Transact-SQL)

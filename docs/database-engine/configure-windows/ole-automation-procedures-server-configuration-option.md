@@ -13,10 +13,10 @@ ms.assetid: e8982e05-4984-4406-9760-285e8c028ddf
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cb13d9b50c78ff3d067d97b2d5dd1b763e024608
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67997958"
 ---
 # <a name="ole-automation-procedures-server-configuration-option"></a>OLE Automation 程序伺服器組態選項

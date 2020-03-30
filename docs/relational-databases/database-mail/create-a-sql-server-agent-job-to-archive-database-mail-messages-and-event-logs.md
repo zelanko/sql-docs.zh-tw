@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 926822356c6e7f9f4d775ca0710ee2f815c0e7f5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74094499"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>建立 SQL Server Agent 作業以封存 Database Mail 訊息及事件記錄檔
@@ -30,20 +30,20 @@ ms.locfileid: "74094499"
   
 -   **使用以下方式封存 Database Mail 訊息和記錄：** [SQL Server Agent](#Process_Overview)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  要儲存封存資料的新資料表可能位在特殊的封存資料庫中。 資料列也可以匯出至文字檔。  
    
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
  在實際執行環境中，您可能會想要加入其他錯誤檢查，並在作業失敗時傳送電子郵件訊息給操作員。  
   
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能執行此主題中所描述的預存程序。  
   
   
-###  <a name="Process_Overview"></a> 處理序的概觀  
+###  <a name="overview-of-the-process"></a><a name="Process_Overview"></a> 處理序的概觀  
   
 -   第一個程序會建立一個名稱為「封存 Database Mail」的作業，此作業包含下列步驟。  
   

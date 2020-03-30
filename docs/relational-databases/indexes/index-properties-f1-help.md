@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68476294"
 ---
 # <a name="index-properties-f1-help"></a>索引屬性 F1 說明
@@ -43,7 +43,7 @@ ms.locfileid: "68476294"
   
  [索引屬性篩選頁面](#Filter)  
   
-##  <a name="General"></a> 索引屬性一般頁面  
+##  <a name="index-properties-general-page"></a><a name="General"></a> 索引屬性一般頁面  
  使用 [一般] 頁面可檢視或修改所選取資料表或檢視的索引屬性。 每一個頁面的選項可能會因為選取的索引類型而不同。  
   
  **資料表名稱**  
@@ -55,7 +55,7 @@ ms.locfileid: "68476294"
  顯示索引的名稱。 這個檔案對現有的索引而言是唯讀的。 建立新的索引時，請輸入索引的名稱。  
   
  **索引類型**  
- 表示索引的類型。 如果是新的索引，則表示開啟此對話方塊時所選取的索引類型。 索引可以是：[叢集]  、[非叢集]  、[主要 XML]  、[次要 XML]  、[空間]  、[叢集資料行存放區]  或 [非叢集資料行存放區]  。  
+ 表示索引的類型。 如果是新的索引，則表示開啟此對話方塊時所選取的索引類型。 索引可以是： **[叢集]** 、 **[非叢集]** 、 **[主要 XML]** 、 **[次要 XML]** 、 **[空間]** 、 **[叢集資料行存放區]** 或 **[非叢集資料行存放區]** 。  
   
  **注意** ：每個資料表只允許有一個叢集索引。 每個資料表只允許有一個 xVelocity 記憶體最佳化的資料行存放區索引。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "68476294"
  顯示參與索引鍵的資料行是否允許在資料表或檢視資料行中儲存 NULL 值。  
   
  **加入**  
- 將資料行加入索引鍵。 請從您按一下 [新增]  時所出現的 [從 \<資料表名稱> 選取資料行]   對話方塊中，選取資料表資料行。 如果是空間索引，在您選取一個資料行之後，此按鈕會呈暗灰色。  
+ 將資料行加入索引鍵。 請從您按一下 [新增]  時所出現的 [從 *資料表名稱> 選取資料行]\<*  對話方塊中，選取資料表資料行。 如果是空間索引，在您選取一個資料行之後，此按鈕會呈暗灰色。  
   
  **移除**  
  從索引鍵中的參與裡移除選取的資料行。  
@@ -113,7 +113,7 @@ ms.locfileid: "68476294"
  **包含的資料行**  
  在非叢集索引中包含非索引鍵資料行。 此選項可藉由在非叢集索引的分葉層級中加入資料行當做非索引鍵資料行，以略過索引鍵大小總計的目前索引限制，以及參與索引鍵的最大資料行數目。 如需詳細資訊，請參閱 [建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)  
   
-##  <a name="Columns"></a> 選取 (索引) 資料行對話方塊  
+##  <a name="select-index-columns-dialog-box"></a><a name="Columns"></a> 選取 (索引) 資料行對話方塊  
  建立或修改索引時，請使用此頁面來將資料行加入 **[索引屬性一般]** 頁面。  
   
  **核取方塊**  
@@ -134,7 +134,7 @@ ms.locfileid: "68476294"
  **允許 Null**  
  如果資料表定義對於資料行允許 Null 值，就會顯示 **[是]** 。 如果資料表定義對於資料行不允許 Null 值，就會顯示 **[否]** 。  
 
-##  <a name="Options"></a> 選項頁面選項
+##  <a name="options-page-options"></a><a name="Options"></a> 選項頁面選項
  使用此頁面來檢視或修改各種索引選項。
 
 ### <a name="general-options"></a>一般選項
@@ -203,7 +203,7 @@ False 或未指定 fillfactor<br>
 中繼層級頁面會幾乎填滿整個容量，但會考量中繼頁面上的索引鍵集，而保留至少可供索引所能擁有之大小上限的一個資料列使用的足夠空間。
 
 
-##  <a name="Storage"></a> 儲存頁面選項  
+##  <a name="storage-page-options"></a><a name="Storage"></a> 儲存頁面選項  
  使用此頁面來檢視或修改選取之索引的檔案群組或資料分割結構描述屬性。 僅顯示與索引類型相關的選項。  
   
  **檔案群組**  
@@ -234,7 +234,7 @@ False 或未指定 fillfactor<br>
 > [!NOTE]  
 >  如果資料表資料行是計算資料行， **[資料行資料類型]** 就會顯示「計算資料行」。  
   
-##  <a name="Spatial"></a> 空間頁面索引選項  
+##  <a name="spatial-page-index-options"></a><a name="Spatial"></a> 空間頁面索引選項  
  使用 **[空間]** 頁面可檢視或指定空間屬性的值。 如需詳細資訊，請參閱[空間資料 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)。  
   
 ### <a name="bounding-box"></a>週框方塊  
@@ -292,7 +292,7 @@ False 或未指定 fillfactor<br>
  **層級 4**  
  第四層方格的密度。  
   
-##  <a name="Filter"></a> 篩選頁面  
+##  <a name="filter-page"></a><a name="Filter"></a> 篩選頁面  
  使用此頁可輸入篩選索引的篩選述詞。 如需詳細資訊，請參閱 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。  
   
  **篩選運算式**  

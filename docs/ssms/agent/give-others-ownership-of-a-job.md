@@ -17,10 +17,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0e87d9d46392674a8df15b6409c81a9568d9b8ca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242371"
 ---
 # <a name="give-others-ownership-of-a-job"></a>將作業擁有權授與其他人
@@ -41,25 +41,25 @@ ms.locfileid: "75242371"
   
     [SQL Server 管理物件](#SMOProc2)  
   
-## <a name="BeforeYouBegin"></a>開始之前  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>開始之前  
   
-### <a name="Restrictions"></a>限制事項  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>限制事項  
 若要建立作業，使用者必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色或 **系統管理員 (sysadmin)** 固定伺服器角色的成員。 只有作業擁有者或隸屬 **sysadmin** 角色的成員可以編輯作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
 您必須是系統管理員，才能夠變更作業的擁有者。  
   
 將作業指派給另一個登入並不保證新的擁有者具有充分之使用權限能夠成功執行作業。  
   
-### <a name="Security"></a>安全性  
+### <a name="security"></a><a name="Security"></a>安全性  
 基於安全考量，只有作業擁有者或隸屬 **sysadmin** 角色的成員可以變更作業的定義。 只有 **sysadmin** (系統管理員) 固定伺服器角色的成員可以將作業擁有權指定給其他使用者，而且無論作業擁有者是誰，都可以執行任何作業。  
   
 > [!NOTE]  
 > 如果將作業擁有權變更給非 **系統管理員 (sysadmin)** 固定伺服器角色成員的使用者，而且作業正在執行要求 Proxy 帳戶的作業步驟 (例如， [!INCLUDE[ssIS](../../includes/ssis_md.md)] 套件執行)，請確定使用者擁有該 Proxy 帳戶的存取權，否則作業將會失敗。  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="permissions"></a><a name="Permissions"></a>Permissions  
 如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
-## <a name="SSMSProc2"></a>使用 SQL Server Management Studio  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProc2"></a>使用 SQL Server Management Studio  
 **若要賦予作業擁有權給其他人**  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
@@ -70,7 +70,7 @@ ms.locfileid: "75242371"
   
     將作業指派給另一個登入並不保證新的擁有者具有充分之使用權限能夠成功執行作業。  
   
-## <a name="TsqlProc2"></a>使用 Transact-SQL  
+## <a name="using-transact-sql"></a><a name="TsqlProc2"></a>使用 Transact-SQL  
 **若要賦予作業擁有權給其他人**  
   
 1.  在 [物件總管] 中，連接到 Database Engine 的執行個體，然後展開該執行個體。  
@@ -90,7 +90,7 @@ ms.locfileid: "75242371"
     GO  
     ```  
   
-## <a name="SMOProc2"></a>使用 SQL Server 管理物件  
+## <a name="using-sql-server-management-objects"></a><a name="SMOProc2"></a>使用 SQL Server 管理物件  
 **若要賦予作業擁有權給其他人**  
   
 1.  使用所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell，呼叫 **Job** 類別。 如需範例程式碼，請參閱 [使用 SQL Server Agent 排程自動管理工作](../../relational-databases/server-management-objects-smo/tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md)。  

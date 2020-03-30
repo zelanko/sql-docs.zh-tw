@@ -11,10 +11,10 @@ ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 595af36a5eb19ff6fd019df8a2b9203537350c5a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298903"
 ---
 # <a name="cdc-instance-deployment-script"></a>CDC 執行個體部署指令碼

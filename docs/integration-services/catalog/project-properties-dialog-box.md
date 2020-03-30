@@ -14,10 +14,10 @@ ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9aee0d7233b5f163a5f9c39f9053b9f0842aa7e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298949"
 ---
 # <a name="project-properties-dialog-box"></a>專案屬性對話方塊
@@ -37,7 +37,7 @@ ms.locfileid: "71298949"
   
 -   [設定 [權限] 頁面上的選項](#permissions)  
   
-##  <a name="open_dialog"></a> 開啟 [專案屬性] 對話方塊  
+##  <a name="open-the-project-properties-dialog-box"></a><a name="open_dialog"></a> 開啟 [專案屬性] 對話方塊  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "71298949"
   
 5.  以滑鼠右鍵按一下專案，然後再按一下 [屬性]  。  
   
-##  <a name="general"></a> 設定 [一般] 頁面上的選項  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> 設定 [一般] 頁面上的選項  
  使用 [一般] 頁面檢視專案屬性。  
   
  **名稱**  
@@ -69,7 +69,7 @@ ms.locfileid: "71298949"
  **部署日期**  
  列出部署或重新部署專案的日期和時間。  
   
-##  <a name="permissions"></a> 設定 [權限] 頁面上的選項  
+##  <a name="set-the-options-on-the-permissions-page"></a><a name="permissions"></a> 設定 [權限] 頁面上的選項  
  使用 **[權限]** 頁面檢視並設定專案的明確權限。  
   
  瀏覽  

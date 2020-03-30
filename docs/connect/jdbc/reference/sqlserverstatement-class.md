@@ -11,10 +11,10 @@ ms.assetid: ec24963c-8b51-4838-91e9-1fbfa2347451
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 89547655fd734ca9e6e340d94832dea5816f2733
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970373"
 ---
 # <a name="sqlserverstatement-class"></a>SQLServerStatement 類別

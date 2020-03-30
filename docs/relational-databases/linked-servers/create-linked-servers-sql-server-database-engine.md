@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ddcead69006fdee32598590192e777984ea3fcd7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76761890"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>建立連結的伺服器 (SQL Server Database Engine)
@@ -29,24 +29,24 @@ ms.locfileid: "76761890"
 
   此主題說明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，建立連結的伺服器以及存取來自其他 [!INCLUDE[tsql](../../includes/tsql-md.md)]的資料。 透過建立連結的伺服器，您可以處理多個來源的資料。 連結的伺服器不必是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的另一個執行個體，但那是常見狀況。  
   
-##  <a name="Background"></a> 背景  
+##  <a name="background"></a><a name="Background"></a> 背景  
  連結的伺服器可讓您對 OLE DB 資料來源存取分散式異質性查詢。 建立連結的伺服器之後，即可對這部伺服器執行分散式查詢，而且查詢可以加入來自多個資料來源的資料表。 如果連結的伺服器定義為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體，就可以執行遠端預存程序。  
   
  連結之伺服器的功能以及所需的引數可能會大大地改變。 本主題中的範例會提供一般範例，但不會描述所有選項。 如需詳細資訊，請參閱 [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)的資料。  
   
-##  <a name="Security"></a> Security  
+##  <a name="security"></a><a name="Security"></a> Security  
   
 ### <a name="permissions"></a>權限  
  使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時，需要伺服器的 **ALTER ANY LINKED SERVER** 權限或 **setupadmin** 固定伺服器角色的成員資格。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 時，需要 **CONTROL SERVER** 權限或 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
-##  <a name="Procedures"></a> 如何建立連結的伺服器  
+##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> 如何建立連結的伺服器  
  您可以使用下列任一項：  
   
 -   [Transact-SQL](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>若要使用 SQL Server Management Studio 建立與另一個 SQL Server 執行個體的連結伺服器  
   
@@ -197,7 +197,7 @@ ms.locfileid: "76761890"
      **支援 'Like' 運算子**  
      表示該提供者支援使用 LIKE 關鍵字的查詢。  
   
-###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  若要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建立連結的伺服器，請使用 [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)[CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md) 和 [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md) 陳述式。  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>若要使用 Transact-SQL 建立與另一個 SQL Server 執行個體的連結伺服器  
@@ -225,7 +225,7 @@ ms.locfileid: "76761890"
   
     ```  
   
-##  <a name="FollowUp"></a> 後續操作：建立連結的伺服器之後所採取步驟  
+##  <a name="follow-up-steps-to-take-after-you-create-a-linked-server"></a><a name="FollowUp"></a> 待處理：建立連結的伺服器之後所採取的步驟  
   
 #### <a name="to-test-the-linked-server"></a>若要測試連結的伺服器  
   

@@ -11,10 +11,10 @@ ms.author: jroth
 author: rothja
 manager: v-mabarw
 ms.openlocfilehash: 17bd2297a81ed8c4b9e62f80a8bffd7a4c87af34
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286362"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>搭配 PHP Drivers for SQL Server 使用 Always Encrypted

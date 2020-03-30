@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7d18661fadb12167fd0a443758cced1188401750
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727341"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>與 R 搭配使用的 SQL Server 設定
@@ -196,7 +196,7 @@ SQL Server 的優點之一，就是能夠平行處理大量的資料列。 沒�
 
 ### <a name="concurrent-scoring-using-resource-groups"></a>使用資源群組進行並行評分
 
-若要相應增加評分問題，最佳做法是採用 map-reduce 方法，讓數百萬個項目分割成多個批次。 然後，再並行執行多個評分作業。 在此架構中，批次會在不同的 CPU 集合上進行處理，然後再收集結果並寫回到資料庫。
+若要擴大評分問題，最佳做法是採用 map-reduce 方法，讓數百萬個項目分割成多個批次。 然後，再並行執行多個評分作業。 在此架構中，批次會在不同的 CPU 集合上進行處理，然後再收集結果並寫回到資料庫。
 
 這是履歷表比對案例中所用的方法；不過，若要實作此方法，SQL Server 中就不能缺少資源治理功能。 藉由為外部指令碼作業設定工作負載群組，您可以將 R 評分作業路由傳送至不同的處理器群組，以實現更快的輸送量。
 

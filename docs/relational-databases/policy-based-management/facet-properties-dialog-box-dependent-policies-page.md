@@ -14,10 +14,10 @@ ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 35fbe42c60a6e3455f53aab1a09624f9eff45c4d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557983"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>Facet 屬性對話方塊、相依原則頁面

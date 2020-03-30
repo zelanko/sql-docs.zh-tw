@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2d4bb708142d4471381a1579baa943d11357823
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68113279"
 ---
 # <a name="subqueries-sql-server"></a>子查詢 (SQL Server)
@@ -39,7 +39,7 @@ FROM Sales.SalesOrderHeader AS Ord;
 GO
 ```
 
-## <a name="fundamentals"></a> 子查詢基本概念
+## <a name="subquery-fundamentals"></a><a name="fundamentals"></a> 子查詢基本概念
 子查詢也稱為內部查詢或內部選取，而包含子查詢的陳述式又稱為外部查詢或外部選取。   
 
 許多包含子查詢的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式也可以構成聯結。 其他的問題也只能以子查詢提出。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中，包含子查詢的陳述式與語意上相等版本之間的效能，通常沒有差異。 然而，在某些必須檢查存在性的情況下，聯結將可產生更好的效能。 否則，必須針對外部查詢的每個結果來處理巢狀查詢，以確保能消除重複性。 在這樣的情況下，聯結方法將會產生更好的結果。 下列範例顯示可傳回相同結果集的子查詢 `SELECT` 及聯結 `SELECT`：
@@ -92,7 +92,7 @@ GO
 -   以未修改的比較運算子提出，並且必須傳回單一數值。
 -   為 `EXISTS` 所提出之存在測試的子查詢。
 
-## <a name="rules"></a> 子查詢規則
+## <a name="subquery-rules"></a><a name="rules"></a> 子查詢規則
 子查詢具有下列限制： 
 -   以比較運算子所提出之子查詢選取清單，只能包含一個運算式或資料行名稱 (除了分別運作於 `EXISTS` 或清單上的 `IN` 與 `SELECT *`)。   
 -   若外部查詢的 `WHERE` 子句包含資料行名稱，它必須與子查詢選取清單中的資料行具有聯結相容性。   
@@ -104,7 +104,7 @@ GO
 -   不能更新以子查詢建立的檢視。   
 -   `EXISTS` 所導入之子查詢的選取清單，依慣例會有星號 (\*)，而非單一資料行名稱。 `EXISTS` 所導入之子查詢的規則和適用於標準選取清單的規則一樣，因為由 `EXISTS` 所導入的子查詢會建立存在測試並傳回 TRUE 或 FALSE，而不是傳回資料。   
 
-## <a name="qualifying"></a> 在子查詢中識別資料行名稱
+## <a name="qualifying-column-names-in-subqueries"></a><a name="qualifying"></a> 在子查詢中識別資料行名稱
 在以下的範例中，外部查詢之 *子句的*BusinessEntityID`WHERE` 資料行會由外部查詢 `FROM` 子句中的資料表名稱 (*Sales.Store*) 進行隱含限定。 在子查詢的選取清單中針對 *CustomerID* 的參考會被子查詢 `FROM` 子句限定，也就是被 *Sales.Customer* 資料表所限定。
 
 ```sql
@@ -140,7 +140,7 @@ GO
 > [!IMPORTANT]
 > 如果資料行被不存在於由子查詢的 `FROM` 子句所參考之資料表中的子查詢所參考，但存在於由外部查詢之 `FROM` 子句所參考的資料表中，則查詢會在沒有錯誤之下執行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會以外部查詢中的資料表名稱，對子查詢中的資料行進行隱含限定。   
 
-## <a name="nesting"></a> 多重巢狀層級
+## <a name="multiple-levels-of-nesting"></a><a name="nesting"></a> 多重巢狀層級
 子查詢本身可包含一或多個子查詢。 可以將任意個數的子查詢套疊 (Nested) 於陳述式中。   
 
 下列查詢會找出兼具銷售人員身分的員工名稱。   
@@ -202,7 +202,7 @@ ON e.BusinessEntityID = s.BusinessEntityID;
 GO
 ```
 
-## <a name="correlated"></a> 相互關聯的子查詢
+## <a name="correlated-subqueries"></a><a name="correlated"></a> 相互關聯的子查詢
 許多查詢都可藉由單次執行子查詢，並將所產生的值替換至外部查詢的 `WHERE` 子句來進行評估。 在包含相互關聯子查詢的查詢中 (也就是重複的子查詢)，子查詢值將取決於外部查詢。 這代表子查詢將重複執行，每個可能會被外部查詢所選取的資料列都執行一次。
 這個查詢會針對在 *SalesPerson* 資料表中獎金為 5000，且員工識別碼在 *Employee* 和 *SalesPerson* 資料表中都相符的每個員工，擷取一份他們的名字和姓氏。
 
@@ -259,7 +259,7 @@ GO
 
 藉由將外部查詢中之資料表的資料行參考為資料表值函式的引數，相互關聯的子查詢也可以將資料表值函式包含在 `FROM` 子句中。 在上述情形中，針對外部查詢的每個資料列，會根據子查詢估算資料表值函式。    
   
-## <a name="types"></a> 子查詢類型
+## <a name="subquery-types"></a><a name="types"></a> 子查詢類型
 您可以在許多地方使用子查詢： 
 -   搭配別名使用。 如需詳細資訊，請參閱[使用別名的子查詢](#aliases)。
 -   搭配 `IN` 或 `NOT IN`。 如需詳細資訊，請參閱[使用 IN 的子查詢](#in)和[使用 NOT IN 的子查詢](#notin)。
@@ -269,7 +269,7 @@ GO
 -   搭配 `EXISTS` 或 `NOT EXISTS`。 如需詳細資訊，請參閱[使用 EXISTS 的子查詢](#exists)和[使用 NOT EXISTS 的子查詢](#notexists)。
 -   取代運算式。 如需詳細資訊，請參閱[用來取代運算式的子查詢](#expression)。
 
-### <a name="aliases"></a> 使用別名的子查詢
+### <a name="subqueries-with-aliases"></a><a name="aliases"></a> 使用別名的子查詢
 若陳述式中的子查詢與外部查詢都參考到相同的資料表，這些陳述式將可敘述成自我聯結 (將資料表聯結至本身)。 例如，您可以使用子查詢從特定狀態尋找員工的地址。   
 
 ```sql
@@ -326,7 +326,7 @@ GO
 
 明確別名可清楚表示參考到子查詢中的 *Person.Address* 與外部查詢中參考的意義並不相同。   
 
-### <a name="in"></a> 使用 IN 的子查詢
+### <a name="subqueries-with-in"></a><a name="in"></a> 使用 IN 的子查詢
 以 `IN` (或 `NOT IN`) 導入的子查詢結果，為零個或多個值的清單。 當子查詢傳回結果之後，外部查詢將會使用這些傳回結果。    
 下列查詢會找到 Adventure Works Cycles 所製造之所有滾輪產品的名稱。     
 
@@ -468,7 +468,7 @@ GO
 
 聯結總是表示為子查詢。 子查詢通常 (但並非一定) 表示為聯結。 這是因為聯結是對稱的：您可以用任一種順序來聯結 A 與 B，最後答案都是一樣的。 若是包含子查詢，則得到的答案不一定相同。    
 
-### <a name="notin"></a> 使用 NOT IN 的子查詢
+### <a name="subqueries-with-not-in"></a><a name="notin"></a> 使用 NOT IN 的子查詢
 NOT IN 關鍵字所提出的子查詢也會傳回零或多個數值的清單。   
 下列查詢會尋找不是已完工自行車的產品名稱。   
 
@@ -488,7 +488,7 @@ GO
 
 此陳述式不能轉換成聯結。 類似的不相等聯結則具有不同的意義：它會在其他不屬於已完工自行車的部份子類別中，尋找產品名稱。      
 
-### <a name="upsert"></a> UPDATE、DELETE 與 INSERT 陳述式中的子查詢
+### <a name="subqueries-in-update-delete-and-insert-statements"></a><a name="upsert"></a> UPDATE、DELETE 與 INSERT 陳述式中的子查詢
 子查詢可以巢狀於 `UPDATE`、`DELETE`、`INSERT` 和 `SELECT` 資料操作 (DML) 陳述式中。    
 
 下列範例將 *Production.Product*資料表中 *ListPrice* 資料行的值加倍。 `WHERE` 子句中的子查詢會參考 *Purchasing.ProductVendor* 資料表，以將在 *Product* 資料表中更新的資料列限制為由 *BusinessEntity* 1540 所供應的資料列。
@@ -518,7 +518,7 @@ INNER JOIN Purchasing.ProductVendor AS pv
 GO   
 ```
 
-### <a name="comparison"></a> 使用比較運算子的子查詢
+### <a name="subqueries-with-comparison-operators"></a><a name="comparison"></a> 使用比較運算子的子查詢
 可以使用其中一個比較運算子 (=、< >、>、> =、<、! >、! < 或 < =)。   
 
 以未修改的比較運算子 (後面未跟著 `ANY` 或 `ALL` 的比較運算子) 導入的子查詢必須傳回單一值，而不是值清單，就像 `IN` 導入的子查詢一樣。 若這類的子查詢傳回一個以上的值，SQL Server 將會顯示錯誤訊息。    
@@ -569,7 +569,7 @@ WHERE ListPrice >
 GO
 ```
 
-### <a name="comparison_modified"></a> ANY、SOME 或 ALL 修改的比較運算子
+### <a name="comparison-operators-modified-by-any-some-or-all"></a><a name="comparison_modified"></a> ANY、SOME 或 ALL 修改的比較運算子
 提出子查詢的比較運算子可由關鍵字 ALL 或 ANY 來修改。 SOME 為 `ANY` 的 ISO 標準對等項目。     
 
 由已修改的比較運算子導入的子查詢會傳回零個或多個值的清單，並可包含 `GROUP BY` 或 `HAVING` 子句。 這些子查詢可使用 `EXISTS` 來重新敘述。     
@@ -667,7 +667,7 @@ GO
 
 您可以使用 `<>ALL` 運算子來取得相同的結果，因為它相當於 `NOT IN`。   
 
-### <a name="exists"></a> 使用 EXISTS 的子查詢
+### <a name="subqueries-with-exists"></a><a name="exists"></a> 使用 EXISTS 的子查詢
 當子查詢是以關鍵字 `EXISTS` 導入時，它可作為存在測試的子查詢函式。 外部查詢的 `WHERE` 子句會測試子查詢所傳回的資料列是否存在。 子查詢並未實際地產生任何資料；而是傳回 TRUE 或 FALSE 值。   
 
 以 EXISTS 所導入的子查詢具有下列語法：   
@@ -735,7 +735,7 @@ WHERE ProductSubcategoryID IN
 GO
 ```   
 
-### <a name="notexists"></a> 使用 NOT EXISTS 的子查詢
+### <a name="subqueries-with-not-exists"></a><a name="notexists"></a> 使用 NOT EXISTS 的子查詢
 `NOT EXISTS` 的運作方式和 `EXISTS` 類似，不同的是使用它的 `WHERE` 子句會在子查詢沒有傳回資料列的情況下成立。    
 
 例如，若要尋找不在 Wheels 子類別目錄中的產品名稱：   
@@ -754,7 +754,7 @@ WHERE NOT EXISTS
 GO
 ```   
 
-### <a name="expression"></a> 用來取代運算式的子查詢
+### <a name="subqueries-used-in-place-of-an-expression"></a><a name="expression"></a> 用來取代運算式的子查詢
 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中，於 `SELECT`、`UPDATE`、`INSERT` 與 `DELETE` 陳述式中任何可以使用運算式的位置，均可替換成子查詢 (`ORDER BY` 清單除外)。    
 
 以下範例說明了您如何使用此增強功能。 此查詢會尋找所有的登山腳踏車的產品、其平均價格，以及每個登山腳踏車與平均價格之間的價差。    

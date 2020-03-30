@@ -20,10 +20,10 @@ ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ba12a2dc53b845d52d2a3dcac574bed08865c12
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322145"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>為合併發行項實作商務邏輯處理常式
@@ -52,7 +52,7 @@ ms.locfileid: "75322145"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="ReplProg"></a> 使用複寫程式設計  
+##  <a name="using-replication-programming"></a><a name="ReplProg"></a> 使用複寫程式設計  
   
 #### <a name="to-create-and-deploy-a-business-logic-handler"></a>建立及部署商務邏輯處理常式  
   
@@ -114,7 +114,7 @@ ms.locfileid: "75322145"
   
 1.  執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，為 **\@property** 指定 **\@publication**、  article **以及 \@article_resolver** 值，並將 **\@value** 指定為步驟 1 中商務邏輯處理常式的易記名稱。  
   
-###  <a name="TsqlExample"></a> 範例 (複寫程式設計)  
+###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a> 範例 (複寫程式設計)  
  這個範例會示範建立稽核記錄的商務邏輯處理常式。  
   
  [!code-cs[HowTo#rmo_BusinessLogicCode](../../relational-databases/replication/codesnippet/csharp/rmohowto/businesslogic.cs#rmo_businesslogiccode)]  
@@ -125,7 +125,7 @@ ms.locfileid: "75322145"
   
  [!code-sql[HowTo#sp_RegisterBLH_10](../../relational-databases/replication/codesnippet/tsql/implement-a-business-log_3.sql)]  
   
-##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
   
 #### <a name="to-create-a-business-logic-handler"></a>建立商務邏輯處理常式  
   
@@ -220,7 +220,7 @@ ms.locfileid: "75322145"
   
 6.  將 <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>設定為商務邏輯處理常式的易記名稱。 這是當註冊商務邏輯處理常式時，所指定之 <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> 屬性的值。  
   
-###  <a name="PShellExample"></a> 範例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 範例 (RMO)  
  這個範例是一個商務邏輯處理常式，它會記錄有關在訂閱者上插入、更新和刪除的資訊。  
   
  [!code-cs[HowTo#rmo_BusinessLogicCode](../../relational-databases/replication/codesnippet/csharp/rmohowto/businesslogic.cs#rmo_businesslogiccode)]  

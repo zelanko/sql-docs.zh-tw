@@ -16,10 +16,10 @@ ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d90d3339c34cd79111f498a4d854e19f9776209
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822552"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>摘要頁面 (AlwaysOn 可用性群組精靈)
@@ -29,7 +29,7 @@ ms.locfileid: "74822552"
   
   本說明主題描述 **[摘要]** 頁面的選項。 本主題適用於 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 請使用此頁面上的方格來檢閱您為新可用性群組所做的選擇。 若要進行一個或多個變更，請按 **[上一步]** 返回相關頁面。 完成變更之後，請按 **[下一步]** 返回 **[摘要]** 頁面。 一旦您滿意所做的選擇之後，請按一下 **[完成]** 。  
   
-##  <a name="PageOptions"></a> 摘要頁面選項  
+##  <a name="summary-page-options"></a><a name="PageOptions"></a> 摘要頁面選項  
  **指令碼**  
  按一下可針對摘要方格中所列的動作產生 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼。 系統將提示您指定指令碼的目的地。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74822552"
   
  ![與 [回到頁首] 連結搭配使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示") [&#91;Top&#93;](#Top)  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

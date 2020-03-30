@@ -19,10 +19,10 @@ ms.assetid: 37246adb-814d-4113-9983-4d336de8182c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c617d4303593588b6e86a5b9b7662a5ec690c577
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67948070"
 ---
 # <a name="asbinaryzm-geography-data-type"></a>AsBinaryZM (geography 資料類型)

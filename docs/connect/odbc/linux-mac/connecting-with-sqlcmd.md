@@ -13,10 +13,10 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c73ee7914d0d9ac560d57a204458e5cd4ba57a0d
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76971440"
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 連接

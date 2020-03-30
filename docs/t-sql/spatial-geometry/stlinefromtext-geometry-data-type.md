@@ -18,10 +18,10 @@ ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a0a912e4ab228617537e9c28e9a5cecc4a0278fe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72278136"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText (geometry 資料類型)

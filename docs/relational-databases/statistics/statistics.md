@@ -24,23 +24,23 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 371ef48f968bbc6cfd6a99d225dd8edf81cff6ca
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286732"
 ---
 # <a name="statistics"></a>統計資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   查詢最佳化工具會使用統計資料來建立可改善查詢效能的查詢計劃。 對於大部分查詢而言，查詢最佳化工具已經產生高品質查詢計劃的必要統計資料。不過，在少數情況下，您必須建立其他統計資料或修改查詢設計，以便獲得最佳結果。 本主題將討論有效使用查詢最佳化統計資料的概念和指導方針。  
   
-##  <a name="DefinitionQOStatistics"></a> 元件和概念  
+##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> 元件和概念  
 ### <a name="statistics"></a>統計資料  
  查詢最佳化的統計資料是指包含資料表或索引檢視表之一或多個資料行中值分佈相關統計資料的二進位大型物件 (BLOB)。 查詢最佳化工具會使用這些統計資料來估計查詢結果中的*基數*或資料列數目。 這些*基數估計值*可讓查詢最佳化工具建立高品質的查詢計劃。 例如，根據您的述詞而定，查詢最佳化工具可使用基數估計值來選擇索引搜尋運算子，而非需要更大量資源的索引掃描運算子 (如果這樣做會改善查詢效能)。  
   
  每個統計資料物件都是針對一或多個資料表資料行的清單所建立，其中包含「長條圖」  以顯示第一個資料行中的值分佈狀態。 多個資料行的統計資料物件也會儲存這些資料行之間值相互關聯的相關統計資料。 這些相互關聯統計資料 (或稱「密度」  ) 衍生自資料行值之相異資料列的數目。 
 
-#### <a name="histogram"></a> 長條圖  
+#### <a name="histogram"></a><a name="histogram"></a> 長條圖  
 「長條圖」  可測量資料集中每一個相異值的發生頻率。 查詢最佳化工具會計算有關統計資料物件之第一個索引鍵資料行中資料行值的長條圖，以統計方式取樣資料列或執行資料表或檢視表中所有資料列的完整掃描來選取資料行值。 如果長條圖是從一組取樣的資料列所建立，資料列數和相異值數的儲存總計會是預估值，而且不需要為整數。
 
 > [!NOTE]
@@ -50,7 +50,7 @@ ms.locfileid: "79286732"
 
 更詳細來說，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會以下列三個步驟，從已排序的資料行值集合來建立「長條圖」  ：
 
-- **長條圖初始化**：第一個步驟會從已排序的集合開頭處理一連串值，並收集最多 200 個 *range_high_key*、*equal_rows*、*range_rows* 和 *distinct_range_rows* 的值 (在此步驟中，*range_rows* 和 *distinct_range_rows* 一律為零)。 當所有的輸入都已用完，或已找到 200 個值時，就會結束第一個步驟。 
+- **長條圖初始化**：第一個步驟會從已排序的集合開頭處理一連串的值，並收集最多 200 個 *range_high_key*、*equal_rows*、*range_rows* 和 *distinct_range_rows* 的值 (在此步驟中，*range_rows* 和 *distinct_range_rows* 一定是零)。 當所有的輸入都已用完，或已找到 200 個值時，就會結束第一個步驟。 
 - **使用貯體合併掃描**：第二個步驟會依順序處理統計資料索引鍵之前置資料行的每一個額外值；每個後續的值可以新增到最後一個範圍，或在結束時建立新的範圍 (由於輸入的值會排序，因此這是可行的)。 建立新的範圍時，會將現有的一組相鄰範圍摺疊成單一範圍。 系統會選取這一組範圍，以將資訊遺失的機率降至最低。 此方法會使用「最大差異」  演算法，讓長條圖中的步驟數減至最少，同時讓界限值之間的差異最大化。 在這整個步驟期間，範圍摺疊之後的步驟數目仍然為 200。
 - **長條圖彙總**：第三個步驟可能會摺疊更多範圍 (如果不會遺失大量資訊的話)。 長條圖步驟的數目可以少於相異值數目，即使包含了少於 200 個界限點的資料行也是如此。 因此，即使資料行具有超過 200 個唯一值，長條圖仍可能只需 200 個以下的步驟。 若資料行都是由唯一值組成，則合併的長條圖將只有最少的三個步驟。
 
@@ -68,7 +68,7 @@ ms.locfileid: "79286732"
   
 -   虛線代表用來預估範圍內相異值總數的取樣值 (*distinct_range_rows*) 以及範圍內的值總數 (*range_rows*)。 查詢最佳化工具會使用 *range_rows* 和 *distinct_range_rows* 來計算 *average_range_rows*，而且不會儲存取樣值。   
   
-#### <a name="density"></a>密度向量  
+#### <a name="density-vector"></a><a name="density"></a>密度向量  
 **密度**是給定資料行或組合資料行中的重複項目數量資訊，其計算方式為 1/(相異值數目)。 查詢最佳化工具會使用密度來增強查詢的基數預估，這些查詢會從相同的資料表或索引檢視表傳回多個資料行。 當密度降低時，值的選擇性會增加。 例如，在表示車種的資料表中，許多車種的製造商都是相同的，但每輛車都有一個唯一的汽車識別號碼。 由於 VIN 的密度比製造商低，因此 VIN 的索引會比製造商的索引更具選擇性。 
 
 > [!NOTE]
@@ -88,7 +88,7 @@ ms.locfileid: "79286732"
 ### <a name="statistics-options"></a>統計資料選項  
  您可以設定三個選項來影響何時及如何建立和更新統計資料。 這些選項只會在資料庫層級設定。  
   
-#### <a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS 選項  
+#### <a name="auto_create_statistics-option"></a><a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS 選項  
  開啟自動建立統計資料選項 [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) 時，查詢最佳化工具就會視需要針對查詢述詞中的個別資料行來建立統計資料，以便改善查詢計劃的基數估計值。 這些單一資料行統計資料是針對在現有統計資料物件中尚未具有[長條圖](#histogram)的資料行建立的。 AUTO_CREATE_STATISTICS 選項不會判斷系統是否針對索引建立了統計資料。 這個選項也不會產生篩選的統計資料。 它會嚴格套用至完整資料表的單一資料行統計資料。  
   
  當查詢最佳化工具因使用 AUTO_CREATE_STATISTICS 選項而產生統計資料時，統計資料名稱就會以 `_WA` 作為開頭。 您可以使用下列查詢來判斷查詢最佳化工具是否已經針對查詢述詞資料行建立統計資料。  
@@ -107,14 +107,14 @@ ORDER BY s.name;
 #### <a name="auto_update_statistics-option"></a>AUTO_UPDATE_STATISTICS 選項  
  開啟自動更新統計資料選項 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) 時，查詢最佳化工具會判斷統計資料何時過期，然後在查詢使用統計資料時加以更新。 當插入、更新、刪除或合併作業變更資料表或索引檢視表中的資料分佈之後，統計資料就會變成過期。 查詢最佳化工具會計算自從上次更新統計資料以來資料修改的次數，並將修改次數與某個臨界值比較，藉以判斷統計資料是否可能已經過期。 此臨界值是以資料表或索引檢視表中的資料列數目為基礎。  
   
-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (截至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 會使用變更資料列的百分比作為臨界值。 與資料表中的資料列數無關。 臨界值是：
+* [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (截至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 會使用變更資料列的百分比作為臨界值。 與資料表中的資料列數無關。 臨界值是：
     * 若資料表基數在評估統計資料時為 500 或更小的數值，將會在每 500 次修改之後更新。
     * 若資料表基數在評估統計資料時為超過 500 的數值，將會在每 500 + 20% 的修改次數之後更新。
 
 * 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始並 在[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 之下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用降低、動態的統計資料更新臨界值。此臨界值會根據資料表中的資料列數目來做出調整。 這是以 1000 乘以目前資料表基數的平方根來計算。 例如，如果您的資料表包含 2 百萬個資料列，則計算結果是 sqrt (1000 * 2000000) = 44721.359。 透過這項變更，大型資料表上的統計資料會經常更新。 不過，如果資料庫的相容性層級低於 130，便會套用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 臨界值。 ?
 
 > [!IMPORTANT]
-> 從 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，或是在[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)低於 130 的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，使用[追蹤旗標 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會使用降低的動態統計資料更新閾值。此閾值會根據資料表中的資料列數目來進行調整。
+> 從 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，或是在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]資料庫相容性層級[低於 130 的 ](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 中，使用[追蹤旗標 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會使用降低的動態統計資料更新閾值。此閾值會根據資料表中的資料列數目來進行調整。
   
 在編譯查詢及執行快取查詢計劃之前，查詢最佳化工具會檢查是否有過期的統計資料。 在編譯查詢之前，查詢最佳化工具會使用查詢述詞中的資料行、資料表和索引檢視表來判斷哪些統計資料可能已過期。 在執行快取查詢計劃之前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會確認查詢計劃是否參考最新的統計資料。  
   
@@ -155,13 +155,13 @@ AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料物
   
 **適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。 
   
-## <a name="CreateStatistics"></a> 何時建立統計資料  
+## <a name="when-to-create-statistics"></a><a name="CreateStatistics"></a> 何時建立統計資料  
  查詢最佳化工具已經用下列方式建立統計資料：  
   
 1.  建立索引時，查詢最佳化工具就會針對資料表或檢視表的索引建立統計資料。 這些統計資料是針對索引的索引鍵資料行所建立的。 如果索引是篩選的索引，查詢最佳化工具就會在針對篩選索引所指定的相同資料列子集上建立篩選的統計資料。 如需篩選索引的詳細資訊，請參閱[建立篩選的索引](../../relational-databases/indexes/create-filtered-indexes.md)和 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)。  
 
     > [!NOTE]
-    > 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始，並不會在建立或重建資料分割索引後，掃描資料表中的所有資料列來建立統計資料。 反之，查詢最佳化工具會使用預設的取樣演算法來產生統計資料。 升級具有分割區索引的資料庫之後，可能會注意到這些索引之長條圖資料的差異。 此行為變更可能不會影響查詢效能。 若要在掃描資料表中所有資料列時取得分割區索引的統計資料，使用子句 `FULLSCAN` 時請使用 `CREATE STATISTICS` 或 `UPDATE STATISTICS`。 
+    > 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始，並不會在建立或重建資料分割索引後，掃描資料表中的所有資料列來建立統計資料。 反之，查詢最佳化工具會使用預設的取樣演算法來產生統計資料。 升級具有分割區索引的資料庫之後，可能會注意到這些索引之長條圖資料的差異。 此行為變更可能不會影響查詢效能。 若要在掃描資料表中所有資料列時取得分割區索引的統計資料，使用子句 `CREATE STATISTICS` 時請使用 `UPDATE STATISTICS` 或 `FULLSCAN`。 
   
 2.  開啟 [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) 時，查詢最佳化工具會針對查詢述詞中的單一資料行建立統計資料。  
 
@@ -202,7 +202,7 @@ GO
 ### <a name="query-selects-from-a-subset-of-data"></a>查詢會從資料子集中選取  
 當查詢最佳化工具針對單一資料行和索引建立統計資料時，它就會針對所有資料列中的值建立統計資料。 當查詢從資料列的子集中選取，而且該資料列子集具有唯一的資料分佈時，篩選的統計資料就可以改善查詢計劃。 您可以使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 陳述式搭配 [WHERE](../../t-sql/queries/where-transact-sql.md) 子句來定義篩選述詞運算式，藉此建立篩選統計資料。  
   
-例如，在使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 時，`Production.Product` 資料表中的每個產品都屬於 `Production.ProductCategory` 資料表的四個類別目錄之一：Bikes、Components、Clothing 及 Accessories。 其中每個類別目錄都具有不同的重量資料分佈：腳踏車 (Bikes) 的重量範圍是從 13.77 到 30.0、元件 (Components) 的重量範圍是從 2.12 到 1050.00 且有些是 NULL 值、衣服 (Clothing) 的重量全部為 NULL，配件 (Accessories) 的重量也是 NULL。  
+例如，在使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 時，`Production.Product` 資料表中的每個產品都屬於 `Production.ProductCategory` 資料表的其中一個類別目錄：Bikes、Components、Clothing 及 Accessories。 其中每個類別目錄都具有不同的重量資料分佈：腳踏車 (Bikes) 的重量範圍是從 13.77 到 30.0、元件 (Components) 的重量範圍是從 2.12 到 1050.00 且有些是 NULL 值、衣服 (Clothing) 的重量全部為 NULL，配件 (Accessories) 的重量也是 NULL。  
   
 以 Bikes 為例，相較於在 Weight 資料行上具有完整資料表統計資料或不存在統計資料而言，針對所有腳踏車重量的篩選統計資料將能為查詢最佳化工具提供更精確的統計資料，而且可以改善查詢計劃品質。 雖然腳踏車重量資料行適合做為篩選的統計資料，但是不一定適合做為篩選的索引 (如果重量查閱的數目相當小的話)。 篩選索引為查閱所提供的效能提升程度可能不會超過將篩選索引加入至資料庫的額外維護和儲存成本。  
   
@@ -225,7 +225,7 @@ GO
 ### <a name="query-identifies-missing-statistics"></a>查詢會識別遺失的統計資料  
 如果有錯誤或其他事件讓查詢最佳化工具無法建立統計資料，查詢最佳化工具會在不使用統計資料的情況下建立查詢計劃。 查詢最佳化工具會將統計資料標示為遺失，並且嘗試在下一次執行查詢時重新產生統計資料。  
   
-當查詢的執行計畫是利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]以圖形顯示時，遺失的統計資料就會表示成警告 (資料表名稱為紅色)。 此外，使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來監視 **Missing Column Statistics** 事件類別會指出統計資料遺失的時間。 如需詳細資訊，請參閱[錯誤和警告事件類別目錄 &#40;Database Engine&#41;](../../relational-databases/event-classes/errors-and-warnings-event-category-database-engine.md)。  
+當查詢的執行計畫是利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]以圖形顯示時，遺失的統計資料就會表示成警告 (資料表名稱為紅色)。 此外，使用 **來監視**Missing Column Statistics[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 事件類別會指出統計資料遺失的時間。 如需詳細資訊，請參閱[錯誤和警告事件類別目錄 &#40;Database Engine&#41;](../../relational-databases/event-classes/errors-and-warnings-event-category-database-engine.md)。  
   
  如果統計資料已遺失，請執行下列步驟：  
   
@@ -242,7 +242,7 @@ GO
   
  因為暫時統計資料會儲存在 **tempdb**中，所以重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務會導致所有暫時統計資料消失。  
     
-## <a name="UpdateStatistics"></a> 何時更新統計資料  
+## <a name="when-to-update-statistics"></a><a name="UpdateStatistics"></a> 何時更新統計資料  
  查詢最佳化工具會判斷統計資料可能過期的時間，然後在查詢計劃需要它們時進行更新。 在某些情況下，您可以讓統計資料的更新頻率高於 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) 開啟時的更新頻率，藉以改善查詢計劃，因而改善查詢效能。 您可以使用 UPDATE STATISTICS 陳述式或 sp_updatestats 預存程序來更新統計資料。  
   
  更新統計資料可確保查詢使用最新的統計資料進行編譯。 不過，更新統計資料會導致查詢重新編譯。 我們建議您不要太頻繁地更新統計資料，因為改善查詢計劃與重新編譯查詢所花費的時間之間具有效能權衡取捨。 特定的權衡取捨完全取決於您的應用程式。  
@@ -277,7 +277,7 @@ GO
 
 利用[自適性索引重組](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)等解決方案，為一或多個資料庫自動管理索引重組以及統計資料更新。 這項程序會根據索引分散程度與其他參數，自動選擇要進行重建或是重新組織索引，並以線性閾值更新統計資料。
   
-##  <a name="DesignStatistics"></a> 有效使用統計資料的查詢  
+##  <a name="queries-that-use-statistics-effectively"></a><a name="DesignStatistics"></a> 有效使用統計資料的查詢  
  某些查詢實作 (例如查詢述詞中的區域變數和複雜運算式) 可能會導致次佳的查詢計劃。 不過，遵循查詢設計指導方針來有效使用統計資料有助於避免這種情況發生。 如需查詢述詞的詳細資訊，請參閱[搜尋條件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)。  
   
  您可以套用有效使用統計資料的查詢設計指導方針來改善查詢述詞中使用之運算式、變數和函數的「基數估計值」  ，藉以改善查詢計劃。 當查詢最佳化工具不知道運算式、變數或函式的值時，它就不知道要在長條圖中查閱哪個值，因此無法從長條圖中擷取最佳的基數估計值。 此時，查詢最佳化工具會改為以長條圖中所有取樣資料列之每個相異值的平均資料列數目做為基數估計值的基礎。 這樣會導致次佳的基數估計值，而且可能會損及查詢效能。 如需長條圖的詳細資訊，請參閱本頁面中的[長條圖](#histogram)一節，或是 [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)。
@@ -351,7 +351,7 @@ GO
 ### <a name="improving-cardinality-estimates-with-query-hints"></a>使用查詢提示來改善基數估計值  
  若要改善區域變數的基數估計值，您可以使用 `OPTIMIZE FOR <value>` 或 `OPTIMIZE FOR UNKNOWN` 查詢提示搭配 RECOMPILE。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
- 對於某些應用程式而言，每次執行查詢都重新編譯查詢可能會花費太多時間。 即使您沒有使用 `RECOMPILE` 選項，`OPTIMIZE FOR` 查詢提示仍然有所幫助。 例如，您可以將 `OPTIMIZE FOR` 選項加入至預存程序 Sales.GetRecentSales，以便指定特定日期。 下列範例會將 `OPTIMIZE FOR` 選項加入至 Sales.GetRecentSales 程序。  
+ 對於某些應用程式而言，每次執行查詢都重新編譯查詢可能會花費太多時間。 即使您沒有使用 `OPTIMIZE FOR` 選項，`RECOMPILE` 查詢提示仍然有所幫助。 例如，您可以將 `OPTIMIZE FOR` 選項加入至預存程序 Sales.GetRecentSales，以便指定特定日期。 下列範例會將 `OPTIMIZE FOR` 選項加入至 Sales.GetRecentSales 程序。  
   
 ```sql  
 USE AdventureWorks2012;  

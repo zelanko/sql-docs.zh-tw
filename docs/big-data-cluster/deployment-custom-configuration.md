@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285852"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>設定叢集資源和服務的部署設定
@@ -179,7 +179,7 @@ ms.locfileid: "79285852"
    azdata bdc config init --source aks-dev-test --target custom-bdc
    ```
 
-## <a id="docker"></a> 變更預設的 Docker 登錄、存放庫和映像標籤
+## <a name="change-default-docker-registry-repository-and-images-tag"></a><a id="docker"></a> 變更預設的 Docker 登錄、存放庫和映像標籤
 
 內建設定檔 (特別是 control.json) 包含 `docker` 區段，其中已預先填入容器登錄、存放庫和映像標籤。 根據預設，巨量資料叢集所需的映像會位於 Microsoft 容器登錄 (`mcr.microsoft.com`) 的 `mssql/bdc` 存放庫中：
 
@@ -216,7 +216,7 @@ azdata bdc config replace -c custom-bdc/control.json -j "$.spec.docker.imageTag=
 > [!TIP]
 > 巨量資料叢集部署必須能夠存取容器登錄和存放庫以從中提取容器映像。 如果您的環境無法存取預設 Microsoft 容器登錄，您可以執行離線安裝，先將所需的映像放入私人 Docker 存放庫。 如需離線安裝的詳細資訊，請參閱[執行 SQL Server 巨量資料叢集的離線部署](deploy-offline.md)。 請注意，您必須先設定 `DOCKER_USERNAME` 與 `DOCKER_PASSWORD` [環境變數](deployment-guidance.md#env)，然後發行部署，以確保部署工作流程能夠存取您的私人存放庫以從中提取映像。
 
-## <a id="clustername"></a> 變更叢集名稱
+## <a name="change-cluster-name"></a><a id="clustername"></a> 變更叢集名稱
 
 叢集名稱同時是巨量資料叢集及將會在部署時建立的 Kubernetes 命名空間的名稱。 這會在 `bdc.json` 部署設定檔的下列部分中指定：
 
@@ -236,7 +236,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "metad
 > [!IMPORTANT]
 > 您巨量資料叢集的名稱只能由小寫的英數字元組成，不能有空格。 叢集的所有 Kubernetes 成品 (容器、Pod、具狀態集合、服務) 將會在具有和所指定叢集名稱相同名稱的命名空間中建立。
 
-## <a id="ports"></a> 更新端點連接埠
+## <a name="update-endpoint-ports"></a><a id="ports"></a> 更新端點連接埠
 
 端點會在 `control.json` 中針對控制器定義，並在 `bdc.json` 的對應區段中針對閘道和 SQL Server 主要執行個體定義。 `control.json` 設定檔的下列部分會顯示控制器端點定義：
 
@@ -263,7 +263,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "metad
 azdata bdc config replace --config-file custom-bdc/control.json --json-values "$.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
-## <a id="replicas"></a> 設定規模
+## <a name="configure-scale"></a><a id="replicas"></a> 設定規模
 
 每個資源 (例如存放集區) 的設定都是在 `bdc.json` 設定檔中定義。 例如，`bdc.json` 的下列部分會顯示 `storage-0` 資源定義：
 
@@ -305,7 +305,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spe
 > [!NOTE]
 > 針對計算和資料集區所驗證的執行個體數目上限都是 `8`。 部署時不會強制執行此限制，但不建議您在生產環境部署中設定較高的規模。
 
-## <a id="storage"></a> 設定儲存體
+## <a name="configure-storage"></a><a id="storage"></a> 設定儲存體
 
 您也可以變更用於每個集區的儲存體類別和特性。 下列範例會將自訂儲存類別指派給存放和資料集區，並將儲存資料的持續性磁碟區宣告大小更新為 500 GB (HDFS/存放集區) 和 100 GB (資料集區)。 
 
@@ -369,7 +369,7 @@ azdata bdc config patch --config-file custom-bdc/bdc.json --patch ./patch.json
 > [!NOTE]
 > 以 `kubeadm-dev-test` 為基礎之設定檔沒有針對每個集區的儲存體定義，但您可以視需要使用上述程序來新增定義。
 
-## <a id="sparkstorage"></a> 設定不搭配 Spark 的存放集區
+## <a name="configure-storage-pool-without-spark"></a><a id="sparkstorage"></a> 設定不搭配 Spark 的存放集區
 
 您也可以設定存放集區以在不搭配 Spark 的情況下執行，並建立個別的 Spark 集區。 此設定可讓您在獨立於儲存體的情況下調整 Spark 計算能力。 若要了解如何設定 Spark 集區，請參閱本文中的[＜建立 Spark 集區＞](#sparkpool)一節。
 
@@ -382,7 +382,7 @@ azdata bdc config patch --config-file custom-bdc/bdc.json --patch ./patch.json
 azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spec.resources.storage-0.spec.settings.spark.includeSpark=false"
 ```
 
-## <a id="sparkpool"></a> 建立 Spark 集區
+## <a name="create-a-spark-pool"></a><a id="sparkpool"></a> 建立 Spark 集區
 
 您可以建立 Spark 集區來搭配或取代存放集區中執行的 Spark 執行個體。 下列範例示範如何藉由修補 `bdc.json` 設定檔來建立具有兩個執行個體的 Spark 集區。 
 
@@ -425,7 +425,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spe
 azdata bdc config patch -c custom-bdc/bdc.json -p spark-pool-patch.json
 ```
 
-## <a id="podplacement"></a> 使用 Kubernetes 標籤設定 Pod 位置
+## <a name="configure-pod-placement-using-kubernetes-labels"></a><a id="podplacement"></a> 使用 Kubernetes 標籤設定 Pod 位置
 
 您可以在具有特定資源以容納各種不同工作負載需求的 Kubernetes 節點上控制 Pod 位置。 使用 Kubernetes 標籤，您可以自訂 Kubernetes 叢集中用於部署巨量資料叢集資源的節點，但也可以限制用於特定資源的節點。
 例如，您可能會想確保存放集區資源 Pod 會置於具有較多儲存空間的節點上，而 SQL Server 主要執行個體則置於具有較高 CPU 和記憶體資源的節點上。 在此情況下，您必須先建置具有不同硬體類型的異質 Kubernetes 叢集，然後相對應地[指派節點標籤](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) \(英文\)。 在部署巨量資料叢集時，您可以在 `control.json` 檔案中使用 `clusterLabel` 屬性，在叢集層級指定相同標籤來指出用於巨量資料叢集的節點。 然後針對集區層級放置使用不同的標籤。 您可以使用 `nodeLabel` 屬性，在巨量資料叢集部署設定檔中指定這些標籤。 Kubernetes 會在符合指定標籤的節點上指派 Pod。 必須新增至 Kubernetes 叢集中節點的特定標籤索引鍵為 `mssql-cluster` (指出用於巨量資料叢集的節點) 和 `mssql-resource` (指出針對各項資源放置 Pod 的特定節點)。 這些標籤值可以是您選擇的任意字串。
@@ -467,7 +467,7 @@ azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.gateway.spec.n
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.appproxy.spec.nodeLabel=bdc-shared"
 ```
 
-## <a id="jsonpatch"></a> 使用 JSON 修補檔的其他自訂
+## <a name="other-customizations-using-json-patch-files"></a><a id="jsonpatch"></a> 使用 JSON 修補檔的其他自訂
 
 JSON 修補檔會同時設定多個設定。 如需 JSON 修補的詳細資訊，請參閱 [Python 中的 JSON 修補](https://github.com/stefankoegl/python-json-patch) \(英文\) 及 [JSONPath 線上評估工具](https://jsonpath.com/) \(英文\)。
 

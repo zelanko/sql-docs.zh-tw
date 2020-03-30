@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
 ms.openlocfilehash: 416c22aa04e289e7959e41924344666e4329ecf1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957002"
 ---
-# <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>啟用或停用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的使用方式資料收集
+# <a name="enable-or-disable-usage-data-collection-for-name-sos"></a>啟用或停用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的使用方式資料收集
 
 ## <a name="how-to-disable-telemetry-reporting"></a>如何停用遙測報告
 

@@ -16,10 +16,10 @@ ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8d98eefac2e015aa1648f1afaa56a5676805cf10
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245254"
 ---
 # <a name="example-offline-restore-of-primary-and-1-other-filegroup-full-recovery-model"></a>範例：離線還原主要檔案群組與 1 個其他檔案群組 (完整復原模式)

@@ -34,10 +34,10 @@ delete_environment [ @folder_name = ] folder_name , [ @environment_name = ] envi
   
 ## <a name="arguments"></a>引數  
  [ @folder_name = ] *folder_name*  
- 包含環境之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
+ 包含環境之資料夾的名稱。 *folder_name* 是 **nvarchar(128)** 。  
   
  [ @environment_name = ] *environment_name*  
- 要刪除之環境的名稱。 *environment_name* 是 **nvarchar(128)**。  
+ 要刪除之環境的名稱。 *environment_name* 是 **nvarchar(128)** 。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

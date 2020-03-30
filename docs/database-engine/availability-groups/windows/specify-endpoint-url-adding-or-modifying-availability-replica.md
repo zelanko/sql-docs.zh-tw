@@ -16,10 +16,10 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 28954a81cac3a5adacd037dbccb2e7584e060e79
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251279"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>指定端點 URL - 新增或修改可用性複本
@@ -30,7 +30,7 @@ ms.locfileid: "75251279"
 >  「端點 URL」一詞是資料庫鏡像使用者介面和文件集所用「伺服器網路位址」一詞的同義詞。  
   
   
-##  <a name="SyntaxOfURL"></a> 端點 URL 的語法  
+##  <a name="syntax-for-an-endpoint-url"></a><a name="SyntaxOfURL"></a> 端點 URL 的語法  
  端點 URL 的語法採用以下格式：  
   
  TCP<strong>://</strong> *\<系統位址>* <strong>:</strong> *\<通訊埠>*  
@@ -91,7 +91,7 @@ ms.locfileid: "75251279"
   
  `TCP://[2001:4898:23:1002:20f:1fff:feff:b3a3]:7022`  
   
-##  <a name="Finding_FQDN"></a> 尋找系統的完整網域名稱  
+##  <a name="finding-the-fully-qualified-domain-name-of-a-system"></a><a name="Finding_FQDN"></a> 尋找系統的完整網域名稱  
  若要尋找系統的完整網域名稱，請在該系統的 Windows 命令提示字元下，輸入：  
   
  **IPCONFIG /ALL**  
@@ -113,7 +113,7 @@ ms.locfileid: "75251279"
 > [!NOTE]  
 >  如果您需要有關完整網域名稱的詳細資訊，請洽詢您的系統管理員。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要設定資料庫鏡像端點**  
   
 -   [針對 AlwaysOn 可用性群組建立資料庫鏡像端點 &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
@@ -142,7 +142,7 @@ ms.locfileid: "75251279"
   
 -   [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

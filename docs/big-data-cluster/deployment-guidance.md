@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 9e2204000400c06ea0fd884dbf4db6c08085d495
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286062"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -35,14 +35,14 @@ SQL Server 巨量資料叢集會部署為 Kubernetes 叢集上的 Docker 容器�
 - Azure Data Studio
 - 適用於 Azure Data Studio 的[資料虛擬化延伸模組](../azure-data-studio/data-virtualization-extension.md)
 
-## <a id="prereqs"></a> Kubernetes 先決條件
+## <a name="kubernetes-prerequisites"></a><a id="prereqs"></a> Kubernetes 先決條件
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 針對伺服器和用戶端 (kubectl) 至少需要 v1.13 的 Kubernetes 版本。
 
 > [!NOTE]
 > 請注意，用戶端和伺服器 Kubernetes 版本應該在 +1 或 -1 次要版本內。 如需詳細資訊，請參閱 [Kubernetes 版本資訊和版本誤差 SKU 原則](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew) \(英文\)。
 
-### <a id="kubernetes"></a> Kubernetes 叢集設定
+### <a name="kubernetes-cluster-setup"></a><a id="kubernetes"></a> Kubernetes 叢集設定
 
 如果您已經有滿足上述先決條件的 Kubernetes 叢集，則可直接跳到[部署步驟](#deploy)。 本節假設您對 Kubernetes 概念有基本瞭解。  如需 Kubernetes 的詳細資訊，請參閱 [Kubernetes 文件](https://kubernetes.io/docs/home) \(英文\)。
 
@@ -75,13 +75,13 @@ kubectl config view
 
 若您在 AKS 中進行部署，則不需要任何儲存體設定。 AKS 提供具備動態佈建的內建儲存類別。 您可以在部署設定檔中自訂儲存類別 (`default` 或 `managed-premium`)。 內建設定檔會使用 `default` 儲存類別。 若正在以使用 `kubeadm` 所部署的 Kubernetes 叢集上進行部署，則您將需要確定針對所需規模的叢集具備了足夠儲存體，且該儲存體已經設定且可供使用。 若要自訂儲存體的使用方式，建議在繼續前先執行此操作。 請參閱[在 Kubernetes 上使用 SQL Server 巨量資料叢集的資料持續性](concept-data-persistence.md)。
 
-## <a id="deploy"></a> 部署概觀
+## <a name="deployment-overview"></a><a id="deploy"></a> 部署概觀
 
 大部分的巨量資料叢集設定都定義於 JSON 部署組態檔中。 您可以針對 AKS 和透過 `kubeadm` 所建立的 Kubernetes 叢集使用預設部署設定檔，或自訂自己的部署設定檔以在設定期間使用。 基於安全因素，驗證設定會透過環境變數來傳遞。
 
 下列各節會提供更多有關如何設定巨量資料叢集部署的詳細資訊，以及一般自訂的範例。 此外，您一律可以使用 VS Code 之類的編輯器來編輯自訂部署組態檔。
 
-## <a id="configfile"></a> 預設組態
+## <a name="default-configurations"></a><a id="configfile"></a> 預設組態
 
 巨量資料叢集部署選項均定義於 JSON 組態檔中。 您可以從 `azdata` 中可用的內建部署設定檔開始自訂叢集部署。 
 
@@ -125,7 +125,7 @@ azdata bdc create --accept-eula=yes
 > [!IMPORTANT]
 > 巨量資料叢集的預設名稱為 `mssql-cluster`。 若要執行任何 `kubectl` 命令，以使用 `-n` 參數來指定 Kubernetes 命名空間，請務必了解這一點。
 
-## <a id="customconfig"></a> 自訂組態
+## <a name="custom-configurations"></a><a id="customconfig"></a> 自訂組態
 
 您也可以自訂部署來容納正在規劃執行的工作負載。 請注意，您無法在巨量資料叢集服務部署後變更規模 (複本數目) 或儲存體設定，因此請務必謹慎規劃您的部署設定，以避免發生容量問題。 若要自訂部署，請遵循下列步驟：
 
@@ -165,7 +165,7 @@ azdata bdc create --accept-eula=yes
 
 > 如需部署組態檔結構的詳細資訊，請參閱[部署組態檔參考](reference-deployment-config.md)。 如需更多組態範例，請參閱[設定巨量資料叢集的部署設定](deployment-custom-configuration.md)。
 
-## <a id="env"></a> 環境變數
+## <a name="environment-variables"></a><a id="env"></a> 環境變數
 
 下列環境變數用於不會儲存於部署組態檔中的安全性設定。 請注意，您可以在組態檔中設定認證以外的 Docker 設定。
 
@@ -208,11 +208,11 @@ azdata bdc create --config-profile custom --accept-eula yes
 - 如果密碼包含任何特殊字元，請務必以雙引號括住密碼。 您可以將 `AZDATA_PASSWORD` 設定為您喜歡的任何內容，但請確定密碼夠複雜，且不要使用 `!`、`&` 或 `'` 字元。 請注意，雙引號分隔符號僅適用於 Bash 命令。
 - `AZDATA_USERNAME` 登入是在設定期間所建立 SQL Server 主要執行個體上的系統管理員。 建立您的 SQL Server 容器之後，在容器中執行 `echo $AZDATA_PASSWORD`，即可探索您指定的 `AZDATA_PASSWORD` 環境變數。 基於安全性考量，最佳做法是變更密碼。
 
-## <a id="unattended"></a> 自動安裝
+## <a name="unattended-install"></a><a id="unattended"></a> 自動安裝
 
 針對自動部署，您必須設定所有必要的環境變數、使用組態檔，並使用 `--accept-eula yes` 參數來呼叫 `azdata bdc create` 命令。 上一節的範例會示範自動安裝的語法。
 
-## <a id="monitor"></a> 監視部署
+## <a name="monitor-the-deployment"></a><a id="monitor"></a> 監視部署
 
 在叢集啟動程序期間，用戶端命令視窗會傳回部署狀態。 在部署程序中，您應該會看到一系列訊息，表示其正在等候控制器 Pod：
 
@@ -239,7 +239,7 @@ Cluster deployed successfully.
 > [!TIP]
 > 除非是透過自訂組態來修改，否則所部署巨量資料叢集的預設名稱會是 `mssql-cluster`。
 
-## <a id="endpoints"></a> 取出端點
+## <a name="retrieve-endpoints"></a><a id="endpoints"></a> 取出端點
 
 成功完成部署指令碼之後，您可以使用下列步驟來取得巨量資料叢集的外部端點位址。
 
@@ -293,7 +293,7 @@ Cluster deployed successfully.
 kubectl get svc -n <your-big-data-cluster-name>
 ```
 
-## <a id="status"></a> 確認叢集狀態
+## <a name="verify-the-cluster-status"></a><a id="status"></a> 確認叢集狀態
 
 部署之後，您可以使用 [azdata bdc status show](reference-azdata-bdc-status.md) 命令來檢查叢集的狀態。
 
@@ -423,7 +423,7 @@ Sql: ready                                                                      
 
 除了使用 `azdata`，您也可以使用 Azure Data Studio 來尋找端點和狀態資訊。 如需使用 `azdata` 和 Azure Data Studio 來檢視叢集狀態的詳細資訊，請參閱[如何檢視巨量資料叢集的狀態](view-cluster-status.md)。
 
-## <a id="connect"></a> 連線到叢集
+## <a name="connect-to-the-cluster"></a><a id="connect"></a> 連線到叢集
 
 如需如何連線到巨量資料叢集的詳細資訊，請參閱[使用 Azure Data Studio 連線到 SQL Server 巨量資料叢集](connect-to-big-data-cluster.md)。
 

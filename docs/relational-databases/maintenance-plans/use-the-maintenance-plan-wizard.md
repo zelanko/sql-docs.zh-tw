@@ -35,10 +35,10 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287562"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>使用維護計畫精靈
@@ -46,7 +46,7 @@ ms.locfileid: "79287562"
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的維護計畫精靈，建立單一或多部伺服器的維護計畫。 [維護計畫精靈] 會建立可讓 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 定期執行的維護計畫。 這樣可讓您依指定間隔執行各種資料庫管理工作，包括備份、資料庫完整性檢查，或資料庫統計資料更新。  
     
  
-##  <a name="Restrictions"></a> 限制事項  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   若要建立多伺服器維護計畫，您必須設定多伺服器環境，其中包含一個主要伺服器以及一或多個目標伺服器。 您必須在主要伺服器上建立和維護多伺服器維護計畫。 您可以檢視目標伺服器上的計畫。   
 
@@ -54,14 +54,14 @@ ms.locfileid: "79287562"
 
 若要在執行維護計畫、資料收集組和其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝時預防此權限提高，請將執行封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業設為使用有限權限的 Proxy 帳戶，或是只將 **系統管理員** 成員加入 **db_ssisadmin** 和 **dc_admin** 角色。  
 
-##  <a name="Prerequisite"></a> 必要條件 
+##  <a name="prerequisites"></a><a name="Prerequisite"></a> 必要條件 
 您必須啟用 [Agent XPs 伺服器組態選項](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)。
   
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
  若要建立或管理維護計畫，您必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員。 只有在使用者是 **sysadmin** 固定伺服器角色的成員時，[物件總管] 才會顯示 **[維護計畫]** 節點。  
   
-##  <a name="SSMSProcedure"></a> 使用維護計畫精靈  
+##  <a name="use-the-maintenance-plan-wizard"></a><a name="SSMSProcedure"></a> 使用維護計畫精靈  
   
 **啟動精靈** 
 

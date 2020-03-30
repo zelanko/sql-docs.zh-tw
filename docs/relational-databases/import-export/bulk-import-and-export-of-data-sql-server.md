@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 462df4c5acf09d5de57a237c8fd68e5a394fb0dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71680813"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>資料的大量匯入及匯出 (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "71680813"
 - *「大量匯出」* 代表將資料從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表複製到資料檔。
 - *「大量匯入」* 代表從資料檔載入資料至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 例如，您可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 應用程式中將資料匯出至資料檔，然後將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。
 
-## <a name="MethodsForBuliIE"></a> 大量匯入和匯出資料的方法
+## <a name="methods-for-bulk-importing-and-exporting-data"></a><a name="MethodsForBuliIE"></a> 大量匯入和匯出資料的方法
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表大量匯出資料，以及將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或未分割的檢視。 有下列基本方法可用。
 
@@ -58,7 +58,7 @@ ms.locfileid: "71680813"
 > [!NOTE]
 > Azure SQL DW 只支援使用 bcp 公用程式來匯入和匯出分隔的檔案。
 
-## <a name="FFs"></a> 格式檔案
+## <a name="format-files"></a><a name="FFs"></a> 格式檔案
 
 [bcp](../../tools/bcp-utility.md) 公用程式、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 全都支援使用特殊的「格式檔案」  ，將每一個欄位的格式資訊儲存在資料檔案中。 格式檔案也可以包含對應的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的相關資訊。 對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體大量匯出與大量匯入資料時，格式檔案可以提供所需的所有格式資訊。
 

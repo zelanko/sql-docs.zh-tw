@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 97bdfbe485c129e7040235db7fffe296bb16897a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67928902"
 ---
 # <a name="set-lock_timeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
@@ -65,7 +65,7 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A：將鎖定逾時設定為 1800 毫秒  
+### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A. 將鎖定逾時設定為 1800 毫秒  
  下列範例將鎖定逾時期限設為 `1800` 毫秒。  
   
 ```sql  
@@ -73,7 +73,7 @@ SET LOCK_TIMEOUT 1800;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>B. 將鎖定逾時設定為永久等待，直到釋放鎖定。  
  下列範例會將鎖定逾時設定為永久等待，且永不過期。 這是在每個連線一開始就已設定的預設行為。  

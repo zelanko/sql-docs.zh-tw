@@ -23,10 +23,10 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7030f40419850454e90978168e72846331b5e865
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288042"
 ---
 # <a name="upgrade-a-data-tier-application"></a>升級資料層應用程式
@@ -37,10 +37,10 @@ ms.locfileid: "79288042"
   
 -   **若要升級 DAC，請使用下列方式：** [升級資料層應用程式精靈](#UsingDACUpgradeWizard)、[PowerShell](#UpgradeDACPowerShell)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
  DAC 升級是一種就地升級程序，可改變現有資料庫的結構描述，以符合新版 DAC 中所定義的結構描述。 在 DAC 封裝檔案中，會套用新版 DAC。 如需建立 DAC 封裝的詳細資訊，請參閱 [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)。  
   
-###  <a name="ChoseDACUpgOptions"></a> 選擇 DAC 升級選項  
+###  <a name="choosing-dac-upgrade-options"></a><a name="ChoseDACUpgOptions"></a> 選擇 DAC 升級選項  
  就地升級有四個升級選項：  
   
 -   **忽略資料遺失** - 如果為 **True**，即使某些作業導致資料遺失，升級還是會繼續。 如果為 **False**，這些作業將會結束升級。 例如，如果目前資料庫中的資料表不在新 DAC 的結構描述中，則會在指定 **True** 時卸除資料表。 預設值為 **True**。  
@@ -51,10 +51,10 @@ ms.locfileid: "79288042"
   
 -   **略過原則驗證** - 如果為 **True**，則不會評估 DAC 伺服器選取原則。 如果為 **False**，則會評估原則，而如果發生驗證錯誤，則會結束升級。 預設值為 **False**。  
   
-###  <a name="LimitationsRestrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制事項  
  DAC 升級只能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本中執行。  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  您必須在開始升級之前，進行完整資料庫備份。 如果升級時發生錯誤而無法回復其所有變更，您可能需要還原備份。  
   
  開始升級之前，有幾個您在驗證 DAC 封裝以及升級動作時應該採取的動作。 如需有關如何執行這些檢查的詳細資訊，請參閱＜ [Validate a DAC Package](../../relational-databases/data-tier-applications/validate-a-dac-package.md)＞。  
@@ -69,13 +69,13 @@ ms.locfileid: "79288042"
   
  確定交易記錄空間足以記錄所有修改。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  為了提高安全性，SQL Server 驗證登入會儲存在 DAC 封裝中，而且沒有密碼。 當您部署或升級此封裝時，此登入會建立為停用的登入，而且會產生密碼。 若要啟用登入，請使用具有 ALTER ANY LOGIN 權限的登入進行登入，並使用 ALTER LOGIN 來啟用登入，然後指派可以傳達給使用者的新密碼。 Windows 驗證登入不需要這項處理，因為這類登入的密碼不是由 SQL Server 所管理。  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  DAC 只能由 **sysadmin** 或 **serveradmin** 固定伺服器角色的成員，或是具有 **dbcreator** 固定伺服器角色及擁有 ALTER ANY LOGIN 權限的登入進行升級。 登入必須是現有資料庫的擁有者。 內建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶 (名稱為 **sa** ) 也可以升級 DAC。  
   
-##  <a name="UsingDACUpgradeWizard"></a> 使用升級資料層應用程式精靈  
+##  <a name="using-the-upgrade-data-tier-application-wizard"></a><a name="UsingDACUpgradeWizard"></a> 使用升級資料層應用程式精靈  
  **使用精靈升級 DAC**  
   
 1.  在 **[物件總管]** 中，展開含有要升級 DAC 之執行個體的節點。  
@@ -100,7 +100,7 @@ ms.locfileid: "79288042"
   
     7.  [升級 DAC 頁面](#Upgrade)  
   
-##  <a name="Introduction"></a> 簡介頁面  
+##  <a name="introduction-page"></a><a name="Introduction"></a> 簡介頁面  
  此頁面描述升級資料層應用程式的步驟。  
   
  **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示此頁面。  
@@ -109,7 +109,7 @@ ms.locfileid: "79288042"
   
  **取消** - 結束精靈，而不升級 DAC。  
   
-##  <a name="Select_dac_package"></a> 選取封裝頁面  
+##  <a name="select-package-page"></a><a name="Select_dac_package"></a> 選取封裝頁面  
  使用此頁面來指定包含新版資料層應用程式的 DAC 封裝。 此頁面會在兩種狀態之間轉換。  
   
 ### <a name="select-the-dac-package"></a>選取 DAC 封裝  
@@ -140,7 +140,7 @@ ms.locfileid: "79288042"
   
  **取消** - 結束精靈，不部署 DAC。  
   
-##  <a name="Review_policy"></a> 檢閱原則頁面  
+##  <a name="review-policy-page"></a><a name="Review_policy"></a> 檢閱原則頁面  
  使用此頁面來檢閱評估 DAC 伺服器選取原則的結果 (如果 DAC 有原則的話)。 DAC 伺服器選取原則為選擇性，而且當它在 Microsoft Visual Studio 中撰寫時會指派給 DAC。 此原則會使用伺服器選取原則 Facet 來指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體主控 DAC 所應該符合的條件。  
   
  **原則條件的評估結果** - 唯讀報表，顯示 DAC 伺服器選取原則中的條件評估是否成功。 評估每個條件的結果會在個別行上報告。  
@@ -153,7 +153,7 @@ ms.locfileid: "79288042"
   
  **取消** - 結束精靈，而不升級 DAC。  
   
-##  <a name="Detect_change"></a> 偵測變更頁面  
+##  <a name="detect-change-page"></a><a name="Detect_change"></a> 偵測變更頁面  
  您可以使用此頁面報告此精靈檢查資料庫變更的結果，此結果會讓它的結構描述與 **msdb**中 DAC 中繼資料內儲存的結構描述定義不同。 例如，如果一開始部署 DAC 之後，已經使用 CREATE、ALTER 或 DROP 陳述式來從資料庫中加入、變更或移除物件。 此頁面會先顯示進度列，然後報告分析的結果。  
   
  **正在偵測變更。這可能需要幾分鐘時間** - 當精靈檢查目前的資料庫結構描述與 DAC 定義中的物件之間是否有差異時，將會顯示一個進度列。  
@@ -187,7 +187,7 @@ ms.locfileid: "79288042"
   
  **取消** - 結束精靈，不部署 DAC。  
   
-##  <a name="ReviewUpgPlan"></a> 檢閱升級計畫頁面  
+##  <a name="review-the-upgrade-plan-page"></a><a name="ReviewUpgPlan"></a> 檢閱升級計畫頁面  
  您可以使用此頁面檢閱升級程序所採取的動作。 只有當您確定升級不會產生問題時，才應該繼續進行。  
   
  **將使用以下動作升級 DAC。** - 檢閱顯示的資訊，以確保採取的動作將會是正確的。 [動作]  欄會顯示針對升級所執行的動作，例如 Transact-SQL 陳述式。 如果相關聯的動作可能會刪除資料， **[資料遺失]** 欄就會包含警告。  
@@ -208,7 +208,7 @@ ms.locfileid: "79288042"
   
  **取消** - 結束精靈，不部署 DAC。  
   
-##  <a name="Summary"></a> 摘要頁面  
+##  <a name="summary-page"></a><a name="Summary"></a> 摘要頁面  
  您可以使用此頁面針對精靈在升級 DAC 時所採取動作進行最終檢閱。  
   
  **將使用以下設定升級您的 DAC** - 檢閱顯示的資訊，以確保採取的動作將會是正確的。 此視窗會顯示您選取要進行升級的 DAC，以及包含新版 DAC 的 DAC 封裝。 此視窗也會顯示目前的資料庫版本是否與目前的 DAC 定義相同，或資料庫是否已經變更。  
@@ -219,7 +219,7 @@ ms.locfileid: "79288042"
   
  **取消** - 結束精靈，不部署 DAC。  
   
-##  <a name="Upgrade"></a> 升級 DAC 頁面  
+##  <a name="upgrade-dac-page"></a><a name="Upgrade"></a> 升級 DAC 頁面  
  此頁面會報告升級作業成功或失敗。  
   
  **正在升級 DAC** - 報告為了升級 DAC 所採取的每個動作成功或失敗。 檢閱資訊以判斷每個動作成功或失敗。 發生錯誤的所有動作在 **[結果]** 資料行中都會有一個連結。 選取連結來檢視該動作的錯誤報告。  
@@ -228,7 +228,7 @@ ms.locfileid: "79288042"
   
  **完成** - 結束精靈。  
   
-##  <a name="UpgradeDACPowerShell"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="UpgradeDACPowerShell"></a> 使用 PowerShell  
  **在 PowerShell 指令碼中使用 IncrementalUpgrade() 方法升級 DAC**  
   
 1.  建立 SMO Server 物件，並將它設為包含要升級之 DAC 的執行個體。  

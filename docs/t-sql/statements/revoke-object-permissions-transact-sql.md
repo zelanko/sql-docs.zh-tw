@@ -18,10 +18,10 @@ ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0e374b0042ec4b46b8c64e71b86d45d1f4cd3062
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68140896"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE 物件權限 (Transact-SQL)

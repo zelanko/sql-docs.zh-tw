@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
 ms.openlocfilehash: 5f302c774ccb4c3f98722e4b416968a813f951bd
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198425"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>設定用於安裝和升級 Linux 上 SQL Server 的存放庫
@@ -34,7 +34,7 @@ ms.locfileid: "79198425"
 > [!TIP]
 > SQL Server 2019 現已可供使用！ 若要試用，請使用本文來設定新的 **mssql-server-2019** 存放庫。 然後利用[安裝指南](sql-server-linux-setup.md)中的指示進行安裝。
 
-## <a id="repositories"></a> 存放庫
+## <a name="repositories"></a><a id="repositories"></a> 存放庫
 
 當您在 Linux 上安裝 SQL Server 時，您必須設定 Microsoft 存放庫。 此存放庫可用來取得資料庫引擎套件、**mssql-server** 及相關的 SQL Server 套件。 目前有五個主要存放庫：
 
@@ -46,7 +46,7 @@ ms.locfileid: "79198425"
 | **2017** | **mssql-server-2017** | SQL Server 2017 累積更新 (CU) 存放庫。 |
 | **2017 GDR** | **mssql-server-2017-gdr** | 僅限重大更新的 SQL Server 2017 GDR 存放庫。 |
 
-## <a id="cuversusgdr"></a> 累積更新與 GDR 的比較
+## <a name="cumulative-update-versus-gdr"></a><a id="cuversusgdr"></a> 累積更新與 GDR 的比較
 
 請務必注意，每個發行版本都有兩種主要的存放庫類型：
 

@@ -11,10 +11,10 @@ ms.assetid: 39d0c98d-75af-4dd1-b908-30d31af56f2a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 81d31225838ec029a020af2df25753b26acd2fb1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251255"
 ---
 # <a name="sql-server-error-log-always-on-availability-groups"></a>SQL Server 錯誤記錄檔 (Always On 可用性群組)

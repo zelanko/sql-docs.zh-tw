@@ -11,10 +11,10 @@ ms.assetid: 95fc7b07-2498-4a7e-8f7f-ee0d86b598b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4c456336170cd7d4ad7cf37a0eebc52637f0a070
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970229"
 ---
 # <a name="sqlserverxadatasource-class"></a>SQLServerXADataSource 類別

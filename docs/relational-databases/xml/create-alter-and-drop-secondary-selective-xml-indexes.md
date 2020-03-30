@@ -11,17 +11,17 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ee462efca08173d6571fe5a3b3971b8f0460988a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258368"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>建立、修改和卸除次要選擇性 XML 索引
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   描述如何建立新的次要選擇性 XML 索引，或是修改或卸除現有的次要選擇性 XML 索引。  
   
-##  <a name="create"></a> 建立次要選擇性 XML 索引  
+##  <a name="creating-a-secondary-selective-xml-index"></a><a name="create"></a> 建立次要選擇性 XML 索引  
   
 ### <a name="how-to-create-a-secondary-selective-xml-index"></a>如何：建立次要選擇性 XML 索引  
  **使用 Transact-SQL 建立次要選擇性 XML 索引**  
@@ -42,7 +42,7 @@ FOR
 ```  
   
   
-##  <a name="alter"></a> 修改次要選擇性 XML 索引  
+##  <a name="altering-a-secondary-selective-xml-index"></a><a name="alter"></a> 修改次要選擇性 XML 索引  
  次要選擇性 XML 索引不支援 ALTER 陳述式。 若要變更次要選擇性 XML 索引，請卸除現有的索引並重新建立。  
   
 ### <a name="how-to-alter-a-secondary-selective-xml-index"></a>如何：修改次要選擇性 XML 索引  
@@ -68,7 +68,7 @@ FOR
 ```  
   
   
-##  <a name="drop"></a> 卸除次要選擇性 XML 索引  
+##  <a name="dropping-a-secondary-selective-xml-index"></a><a name="drop"></a> 卸除次要選擇性 XML 索引  
   
 ### <a name="how-to-drop-a-secondary-selective-xml-index"></a>如何：卸除次要選擇性 XML 索引  
  **使用 Transact-SQL 卸除次要選擇性 XML 索引**  

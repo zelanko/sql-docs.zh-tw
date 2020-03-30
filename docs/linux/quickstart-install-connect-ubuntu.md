@@ -10,10 +10,10 @@ ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: 69f1ac170d70c10d9a7061b3fc18f6c8a62db704
-ms.sourcegitcommit: efb2bb07700f645b3fbfcb400a0666de01388305
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79319848"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入門：在 Ubuntu 上安裝 SQL Server 並建立資料庫
@@ -73,7 +73,7 @@ Ubuntu 18.04 機器必須**至少有 2 GB** 的記憶體。
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="install"></a>安裝 SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>安裝 SQL Server
 
 若要在 Ubuntu 上設定 SQL Server，請從終端執行下列命令，安裝 **mssql-server** 套件。
 
@@ -130,7 +130,7 @@ Ubuntu 18.04 機器必須**至少有 2 GB** 的記憶體。
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="install"></a>安裝 SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>安裝 SQL Server
 
 若要在 Ubuntu 上設定 SQL Server，請從終端執行下列命令，安裝 **mssql-server** 套件。
 
@@ -174,7 +174,7 @@ Ubuntu 18.04 機器必須**至少有 2 GB** 的記憶體。
 
 ::: moniker-end
 
-## <a id="tools"></a>安裝 SQL Server 命令列工具
+## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>安裝 SQL Server 命令列工具
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

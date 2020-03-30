@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 00fd02afb8cfd140124a9f476aa4ae0bfb4e1514
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095320"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和監視異動資料擷取 (SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "74095320"
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   此主題描述如何管理及監視異動資料擷取。  
   
-## <a name="Capture"></a> 擷取作業
+## <a name="capture-job"></a><a name="Capture"></a> 擷取作業
 
 擷取作業是透過執行無參數的預存程序 `sp_MScdc_capture_job` 起始的。 這個預存程序一開始會從 msdb.dbo.cdc_jobs 中擷取擷取作業之 `maxtrans`、`maxscans`、`continuous` 和 `pollinginterval` 的設定值。 然後，這些設定值會當做參數傳遞給 `sp_cdc_scan` 預存程序。 這個預存程序是用來叫用 `sp_replcmds`，以便執行記錄檔掃描。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "74095320"
 
 您可以針對擷取作業套用其他邏輯，以便決定新的掃描是否會立即開始，或者在啟動新的掃描之前是否加上休眠，而非仰賴固定的輪詢間隔。 這項選擇可能僅僅依據當天時間，或許在尖峰活動時段強制執行非常長的休眠，甚至在當天結束時移至輪詢間隔 0 (如果完成日間處理和準備夜間執行很重要的話)。 您也可以監視擷取處理序進度，以便判斷午夜之前認可之所有交易已經掃描並儲放在變更資料表中的時間。 這會讓擷取作業結束，以便依據排程的每日重新啟動時間重新啟動。 透過將呼叫 `sp_cdc_scan` 的傳遞作業步驟取代成 `sp_cdc_scan` 之使用者撰寫包裝函式的呼叫，您只要進行少數額外步驟就可以取得高度自訂的行為。  
 
-## <a name="Cleanup"></a> 清除作業
+## <a name="cleanup-job"></a><a name="Cleanup"></a> 清除作業
 
 本節提供有關異動資料擷取清除作業如何運作的資訊。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "74095320"
 
 異動資料擷取會使用保留性清除策略來管理變更資料表大小。 此清除機制包含啟用第一個資料庫資料表時建立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業。 單一清除作業會處理所有資料庫變更資料表的清除，並且將相同的保留值套用至所有定義的擷取執行個體。
   
-清除作業是透過執行無參數的預存程序 `sp_MScdc_cleanup_job` 起始的。 這個預存程序一開始會從 `msdb.dbo.cdc_jobs` 中擷取清除作業的設定保留和臨界值。 此保留值會用來計算變更資料表的新下限標準。 從 `cdc.lsn_time_mapping` 資料表的最大 `tran_end_time` 值中減去所指定分鐘數，以便取得表示成日期時間值的新下限標準。 然後，使用 CDC.lsn_time_mapping 資料表來將這個日期時間值轉換成對應的 `lsn` 值。 如果資料表中的多個項目共用相同的認可時間，就會選擇對應至具有最小 `lsn` 之項目的 `lsn` 成為新的下限標準。 這個 `lsn` 值會傳遞給 `sp_cdc_cleanup_change_tables`，以便從資料庫變更資料表中移除變更資料表項目。  
+清除作業是透過執行無參數的預存程序 `sp_MScdc_cleanup_job` 起始的。 這個預存程序一開始會從 `msdb.dbo.cdc_jobs` 中擷取清除作業的設定保留和臨界值。 此保留值會用來計算變更資料表的新下限標準。 從 `tran_end_time` 資料表的最大 `cdc.lsn_time_mapping` 值中減去所指定分鐘數，以便取得表示成日期時間值的新下限標準。 然後，使用 CDC.lsn_time_mapping 資料表來將這個日期時間值轉換成對應的 `lsn` 值。 如果資料表中的多個項目共用相同的認可時間，就會選擇對應至具有最小 `lsn` 之項目的 `lsn` 成為新的下限標準。 這個 `lsn` 值會傳遞給 `sp_cdc_cleanup_change_tables`，以便從資料庫變更資料表中移除變更資料表項目。  
   
 > [!NOTE]  
 > 使用最近交易之認可時間當做計算新下限標準之基礎的優點在於，它會在指定的時間內讓變更保留在變更資料表中。 即使擷取處理序正在後方執行，也會發生這種情況。 具有相同認可時間當做目前下限標準的所有項目會透過選擇具有實際下限標準之共用認可時間的最小 `lsn`，繼續在變更資料表內部表示。  
@@ -90,7 +90,7 @@ ms.locfileid: "74095320"
 
  對於清除作業而言，自訂的可能性在於用來決定哪些變更資料表項目要捨棄的策略。 在傳遞的清除作業中，唯一支援的策略是以時間為基礎的策略。 在該情況下，新下限標準的計算方式是從上次處理之交易的認可時間中減去允許的保留週期。 由於基礎清除程序是以 `lsn` 而非時間為基礎，所以您可以使用任何數目之策略來決定要保留在變更資料表中的最小 `lsn`。 其中只有某些策略是嚴格地以時間為基礎。 例如，如果需要存取變更資料表的下游處理序無法執行，用戶端的相關知識就可用來提供保全。 此外，雖然預設策略會套用相同 `lsn` 來清除所有資料庫的變更資料表，但是您也可以呼叫基礎清除程序，以便在擷取執行個體層級進行清除。  
 
-## <a name="Monitor"></a> 監視異動資料擷取程序
+## <a name="monitor-the-change-data-capture-process"></a><a name="Monitor"></a> 監視異動資料擷取程序
 
 監視異動資料擷取程序可讓您判斷變更是否正確地並且以合理的延遲寫入變更資料表。 監視也可以協助您識別可能發生的任何錯誤。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含兩個動態管理檢視，可協助您監視異動資料擷取： [sys.dm_cdc_log_scan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) 和 [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)。  
   
@@ -176,7 +176,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
   
 4. 在步驟 1 中設定的資料倉儲內，找出資料表 custom_snapshots.cdc_log_scan_data。 這份資料表會提供記錄檔掃描工作階段之資料的歷程記錄快照集。 這份資料表可用於分析經過一段時間的延遲、輸送量和其他效能量值。  
 
-## <a name="ScriptUpgrade"></a>指令碼升級模式
+## <a name="script-upgrade-mode"></a><a name="ScriptUpgrade"></a>指令碼升級模式
 
 當您將累積更新或 Service Pack 套用到執行個體時，在重新啟動時執行個體可以進入指令碼升級模式。 在此模式中，SQL Server 可能會執行步驟來分析和升級內部 CDC 資料表，這可能會導致重新建立像是擷取資料表上的索引等物件。 根據所涉及的資料量，此步驟中可能需要一些時間，或對已啟用 CDC 的資料庫造成大量交易記錄使用量。
 

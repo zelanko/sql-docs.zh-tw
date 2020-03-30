@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: cac6ecd59b270feecea3590c33c9dc8c41f1edcc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73638032"
 ---
 # <a name="install-and-configure-semantic-search"></a>安裝及設定語意搜尋
@@ -25,7 +25,7 @@ ms.locfileid: "73638032"
   
 ## <a name="install-semantic-search"></a>安裝語意搜尋  
   
-###  <a name="HowToCheckInstalled"></a> 檢查是否已安裝語意搜尋  
+###  <a name="check-whether-semantic-search-is-installed"></a><a name="HowToCheckInstalled"></a> 檢查是否已安裝語意搜尋  
  查詢 [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md) 中繼資料函數的 **IsFullTextInstalled** 屬性。  
   
  傳回值 1 表示已安裝全文檢索搜尋和語意搜尋；傳回值 0 表示未安裝這兩個搜尋。  
@@ -35,7 +35,7 @@ SELECT SERVERPROPERTY('IsFullTextInstalled');
 GO  
 ```  
   
-###  <a name="BasicsSemanticSearch"></a> 安裝語意搜尋  
+###  <a name="install-semantic-search"></a><a name="BasicsSemanticSearch"></a> 安裝語意搜尋  
  若要安裝語意搜尋，請在安裝 SQL Server 期間選取 [要安裝的功能]  頁面上的 [搜尋的全文檢索和語意擷取]  。  
   
  統計語意搜尋相依於全文檢索搜尋。 這兩個選擇性功能會同時安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -43,7 +43,7 @@ GO
 ## <a name="install-the-semantic-language-statistics-database"></a>安裝語意語言統計資料庫  
  語意搜尋的其他外部相依性稱為語意語言統計資料庫。 此資料庫包含語意搜尋所需的語意語言模型。 單一語意語言統計資料庫會包含支援語意索引之所有語言的語言模型。  
   
-###  <a name="HowToCheckDatabase"></a> 檢查是否已安裝語意語言統計資料庫  
+###  <a name="check-whether-the-semantic-language-statistics-database-is-installed"></a><a name="HowToCheckDatabase"></a> 檢查是否已安裝語意語言統計資料庫  
  查詢目錄檢視 [sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
   
  如果已安裝並註冊該執行個體的語意語言統計資料庫，則查詢結果會包含有關資料庫的一列資訊。  
@@ -53,7 +53,7 @@ SELECT * FROM sys.fulltext_semantic_language_statistics_database;
 GO  
 ```  
   
-###  <a name="HowToInstallModel"></a> 安裝、附加及註冊語意語言統計資料庫  
+###  <a name="install-attach-and-register-the-semantic-language-statistics-database"></a><a name="HowToInstallModel"></a> 安裝、附加及註冊語意語言統計資料庫  
  語意語言統計資料庫不是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式所安裝。 若要將語意語言統計資料庫設定為語意索引的必要元件，請執行下列事項：  
   
  **1.安裝語意語言統計資料庫。**  
@@ -100,7 +100,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsd
 GO  
 ```  
 
-##  <a name="reqinstall"></a> 語意語言統計資料庫的要求和限制  
+##  <a name="requirements-and-restrictions-for-the-semantic-language-statistics-database"></a><a name="reqinstall"></a> 語意語言統計資料庫的要求和限制  
   
 -   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上，您只能附加並註冊一個語意語言統計資料庫。  
   
@@ -112,7 +112,7 @@ GO
   
 -   您可以卸離或卸除語意語言統計資料庫。 如果任何使用中索引作業具有資料庫的讀取鎖定，則卸離或卸除作業將會失敗或逾時。這與現有的行為一致。 移除資料庫之後，語意索引作業將會失敗。  
  
-##  <a name="HowToUnregister"></a> 移除語意語言統計資料庫  
+##  <a name="remove-the-semantic-language-statistics-database"></a><a name="HowToUnregister"></a> 移除語意語言統計資料庫  
 
 ###  <a name="unregister-detach-and-remove-the-semantic-language-statistics-database"></a>取消註冊、卸離及移除語意語言統計資料庫 
 
@@ -143,7 +143,7 @@ GO
   
 ## <a name="install-optional-support-for-newer-document-types"></a>安裝選擇性的新版文件類型支援  
   
-###  <a name="office"></a> 安裝 Microsoft Office 和其他 Microsoft 文件類型的最新篩選  
+###  <a name="install-the-latest-filters-for-microsoft-office-and-other-microsoft-document-types"></a><a name="office"></a> 安裝 Microsoft Office 和其他 Microsoft 文件類型的最新篩選  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會安裝最新的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 斷詞工具和字幹，但是不會安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 文件和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 文件類型的最新篩選。 這些篩選是針對以最新版 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 應用程式建立的文件編製索引時所必要。 若要下載最新的篩選，請參閱 [Microsoft Office 2010 篩選套件](https://www.microsoft.com/download/details.aspx?id=17062)。 (這裡不會是 Office 2013 或 Office 2016 的 Filter Pack 版本)。
   
   

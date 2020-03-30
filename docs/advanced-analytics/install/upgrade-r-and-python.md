@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69634554"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升級 SQL Server 執行個體中的機器學習 (R 和 Python) 元件
@@ -106,7 +106,7 @@ Anaconda 4.2 (Python 3.5)  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
 
 就使用者經驗而言，技術及其使用方式不變。 唯一的差別在於是否有較新版本的套件，以及可能原本無法透過 SQL Server 取得的其他套件。
 
-## <a name="bkmk_BindWizard"></a>使用安裝程式繫結至 MLS
+## <a name="bind-to-mls-using-setup"></a><a name="bkmk_BindWizard"></a>使用安裝程式繫結至 MLS
 
 Microsoft Machine Learning 安裝程式會偵測現有的功能和 SQL Server 版本，並叫用名為 SqlBindR.exe 的公用程式來變更繫結。 就內部而言，SqlBindR 會鏈結至安裝程式並間接使用。 之後，您可以直接從命令列呼叫 SqlBindR，以執行特定的選項。
 
@@ -210,7 +210,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 1. 執行 ServerSetup.exe 並遵循螢幕上的提示來完成安裝。
 
-## <a name="bkmk_BindCmd"></a>命令列作業
+## <a name="command-line-operations"></a><a name="bkmk_BindCmd"></a>命令列作業
 
 執行 Microsoft Machine Learning Server 之後，就可以使用稱為 SqlBindR.exe 的命令列公用程式，供您用於進一步的繫結作業。 例如，如果您決定解除繫結，則可以重新執行安裝程式或使用命令列公用程式。 此外，您可以使用此工具來檢查執行個體相容性和可用性。
 
@@ -229,7 +229,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 4. 當升級完成後，請重新啟動與任何已修改的執行個體相關的啟動控制板服務。
 
-## <a name="bkmk_Unbind"></a>還原或解除繫結執行個體
+## <a name="revert-or-unbind-an-instance"></a><a name="bkmk_Unbind"></a>還原或解除繫結執行個體
 
 您可以將繫結的執行個體還原到 R 和 Python 元件的初始安裝 (由 SQL Server 安裝程式建立)。 還原回 SQL Server 服務的過程分為三個部分。
 
@@ -243,7 +243,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 您有兩個復原繫結的選項：重新執行安裝程式，或使用 SqlBindR 命令列公用程式。
 
-#### <a name="bkmk_wizunbind"></a> 使用安裝程式解除繫結
+#### <a name="unbind-using-setup"></a><a name="bkmk_wizunbind"></a> 使用安裝程式解除繫結
 
 1. 找出 Machine Learning Server 的安裝程式。 如果您已移除安裝程式，則可能需要再次下載，或從另一部電腦複製它。
 2. 請務必在具有要解除繫結之執行個體的電腦上執行安裝程式。
@@ -252,7 +252,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 4. 接受授權合約。 即使在安裝時，您也必須表示您接受授權條款。
 5. 按一下 [完成]  。 該程序需要一段時間。
 
-#### <a name="bkmk_cmdunbind"></a> 使用命令列解除繫結
+#### <a name="unbind-using-the-command-line"></a><a name="bkmk_cmdunbind"></a> 使用命令列解除繫結
 
 1. 開啟命令提示字元並瀏覽至包含 **sqlbindr.exe** 的資料夾，如上一節所述。
 

@@ -11,10 +11,10 @@ ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: b1a0df1686543cfe69a998149ede45ea2f845894
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251863"
 ---
 # <a name="projects-sql-server-management-studio"></a>專案 (SQL Server Management Studio)

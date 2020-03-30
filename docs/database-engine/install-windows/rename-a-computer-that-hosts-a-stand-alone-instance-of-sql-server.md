@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 297452f0367bbd1a757c3ea29124d7ccf91c4409
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258579"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>重新命名主控 SQL Server 獨立執行個體的電腦
@@ -50,7 +50,7 @@ ms.locfileid: "75258579"
   
  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後，您可以使用新的電腦名稱連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 為了確定 @@SERVERNAME 傳回已更新的本機伺服器執行個體名稱，您應該手動執行下列適用於您狀況的程序。 您所使用的程序需視正在更新的電腦是主控 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預設執行個體還是具名執行個體而定。  
   
-## <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>重新命名裝載 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的電腦  
+## <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-ssnoversion"></a>重新命名裝載 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的電腦  
   
 -   若為主控 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預設執行個體的重新命名電腦，請執行下列程序：  
   

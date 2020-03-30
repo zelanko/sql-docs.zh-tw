@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288452"
 ---
 # <a name="query-store-usage-scenarios"></a>查詢存放區使用案例
@@ -110,7 +110,7 @@ ms.locfileid: "79288452"
   
 根據分析，您很可能會保留索引，因為查詢效能已改善。  
   
-## <a name="CEUpgrade"></a>在升級到新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 期間保持效能穩定性  
+## <a name="keep-performance-stability-during-the-upgrade-to-newer-ssnoversion"></a><a name="CEUpgrade"></a>在升級到新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 期間保持效能穩定性  
 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]之前，使用者在升級到最新平台版本期間，會暴露在效能衰退的風險中。 原因在於，最新版的查詢最佳化工具會在安裝新的位元之後立即變成使用中狀態。  
   
 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始，所有的查詢最佳化工具變更都會繫結至最新的[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)；因此，計劃不會在升級時立即變更，而是在使用者將 `COMPATIBILITY_LEVEL` 變更為最新版本時變更。 此功能會結合查詢存放區，可讓您在升級過程中對查詢效能擁有絕佳層級的控制。 下圖顯示建議的升級工作流程：  

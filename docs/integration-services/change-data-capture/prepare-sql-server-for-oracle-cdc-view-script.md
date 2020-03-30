@@ -11,10 +11,10 @@ ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 77f3575375ec991119462a5933e85df13de80795
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298682"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>為 Oracle CDC 檢視指令碼準備 SQL Server

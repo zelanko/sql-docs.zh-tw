@@ -11,10 +11,10 @@ ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
 ms.openlocfilehash: fca498fbc7f79dcfc8852799ade6e230952ea082
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75250948"
 ---
 # <a name="example-demonstrating-use-of-azure-key-vault-provider-with-always-encrypted"></a>示範如何搭配 Always Encrypted 使用 Azure Key Vault 提供者的範例

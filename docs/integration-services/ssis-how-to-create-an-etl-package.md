@@ -18,10 +18,10 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9a36d403867699a02adfec0d04c9db4efa803514
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71281885"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS 如何建立 ETL 封裝
@@ -48,7 +48,7 @@ ms.locfileid: "71281885"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 若要安裝 SQL Server 和 SSIS，請參閱[安裝 Integration Services](install-windows/install-integration-services.md)。
 
--   **AdventureWorksDW2012 範例資料庫**。 若要下載 **AdventureWorksDW2012** 資料庫，請從 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)下載 `AdventureWorksDW2012.bak`，並還原備份。  
+-   **AdventureWorksDW2012 範例資料庫**。 若要下載 **AdventureWorksDW2012** 資料庫，請從 `AdventureWorksDW2012.bak`AdventureWorks 範例資料庫[下載 ](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)，並還原備份。  
 
 -   **範例資料**檔案。 範例資料隨附在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 課程封裝中。 若要將範例資料與課程套件下載為 ZIP 檔案，請參閱 [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827) (SQL Server Integration Services 教學課程檔案)。
 
@@ -56,19 +56,19 @@ ms.locfileid: "71281885"
     - 範例套件會假設資料檔案位於資料夾 `C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Creating a Simple ETL Package`。 如果您將下載解壓縮到其他位置，則您可能需要更新範例套件中多個位置的檔案路徑。
 
 ## <a name="lessons-in-this-tutorial"></a>本教學課程中的課程  
-[第 1 課：使用 SSIS 來建立專案和基本套件](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  
+[第 1 課：使用 SSIS 建立專案和基本套件](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  
 在這一課，您會建立一個簡單的 ETL 套件。此套件會從單一的一般檔案擷取資料、使用查閱轉換來轉換資料，以及最後將結果載入事實資料表目的地。  
   
 [第 2 課：使用 SSIS 加入迴圈](../integration-services/lesson-2-adding-looping-with-ssis.md)  
 在這一課，您會擴充在第 1 課建立的套件，以利用新的迴圈功能，將多個一般檔案擷取到單一資料流程處理序中。  
   
-[第 3 課：使用 SSIS 來新增記錄功能](../integration-services/lesson-3-add-logging-with-ssis.md)  
+[第 3 課︰使用 SSIS 加入記錄](../integration-services/lesson-3-add-logging-with-ssis.md)  
 在這一課，您會擴充在第 2 課建立的套件，以利用新的記錄功能。  
   
-[第 4 課：使用 SSIS 來新增錯誤流程重新導向](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+[第 4 課：使用 SSIS 加入錯誤流程重新導向](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
 在這一課，您會擴充在第 3 課建立的套件，以利用新的錯誤輸出設定。  
   
-[第 5 課：新增套件部署模型的 SSIS 套件設定](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+[第 5 課：加入套件部署模型的 SSIS 套件組態](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
 在這一課，您會擴充在第 4 課建立的套件，以利用新的套件設定選項。  
   
 [第 6 課：在 SSIS 中搭配專案部署模型使用參數](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

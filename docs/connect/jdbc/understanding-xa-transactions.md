@@ -11,10 +11,10 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e249bb515ca0a8b579e923e7d289fccd80ce6ef
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286512"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 交易
@@ -116,7 +116,7 @@ ms.locfileid: "79286512"
   
 3. 依照下一節的程式碼範例所示，設定記錄功能。 在輸出記錄檔案中搜尋 "Server XA DLL version:..." 片語。  
 
-### <a name="BKMK_ServerSide"></a> 針對已取消準備之交易的自動回復設定伺服器端逾時設定  
+### <a name="configuring-server-side-timeout-settings-for-automatic-rollback-of-unprepared-transactions"></a><a name="BKMK_ServerSide"></a> 針對已取消準備之交易的自動回復設定伺服器端逾時設定  
 
 > [!WARNING]  
 > 此伺服器端選項是 Microsoft JDBC Driver 4.2 (或更高版本) for SQL Server 的新功能。 若要取得更新過的表現方式，請務必更新伺服器上的 sqljdbc_xa.dll。 如需設定用戶端逾時值的詳細資訊，請參閱 [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)。  

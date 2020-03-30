@@ -18,10 +18,10 @@ ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b12ad1dcc054f7c59f52b3aee23d5d6368f1459b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67948250"
 ---
 # <a name="table-value-constructor-transact-sql"></a>資料表值建構函式 (Transact-SQL)

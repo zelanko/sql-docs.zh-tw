@@ -13,10 +13,10 @@ ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 792cb1bcef1097c3eddaa325519b43a229bcccb4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74190796"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>將一般檔案匯入 SQL 精靈
@@ -37,7 +37,7 @@ PROSE 會分析輸入檔中的資料模式，來推斷資料行名稱、類型�
 ## <a name="prerequisites"></a>Prerequisites
 只有 SQL Server Management Studio (SSMS) v17.3 或更新版本才提供此功能。 請確認目前使用的是最新版本。 您可以於[此處](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)找到最新版本。
  
-## <a id="started"></a>使用者入門
+## <a name="getting-started"></a><a id="started"></a>使用者入門
 若要存取 [匯入一般檔案精靈]，請遵循這些步驟進行：
 
 1. 開啟 [SQL Server Management Studio]  。

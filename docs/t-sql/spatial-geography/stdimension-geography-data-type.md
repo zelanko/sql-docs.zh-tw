@@ -18,10 +18,10 @@ ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ac39de3b0fe0d85aa65ef59661a512988acd4a36
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68042336"
 ---
 # <a name="stdimension-geography-data-type"></a>STDimension (geography 資料類型)

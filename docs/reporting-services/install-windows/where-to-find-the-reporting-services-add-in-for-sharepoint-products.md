@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ba6987367e72ed544df13216b31aebe85af500e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866281"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置
@@ -26,7 +26,7 @@ ms.locfileid: "74866281"
 > [!IMPORTANT]  
 >  如需支援的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集、報表伺服器與 SharePoint 組合清單，請參閱[支援的 SharePoint 和 Reporting Services 伺服器與增益集的組合 &#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)。  
   
-##  適用於 SharePoint 產品的 <a name="bkmk_sql16"> </a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Reporting Services 增益集  
+##  <a name="sssql15-reporting-services-add-in-for-sharepoint-products"></a>適用於 SharePoint 產品的 <a name="bkmk_sql16"> </a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Reporting Services 增益集  
  若要下載並安裝此增益集，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心：  
   
 -   [適用於 Microsoft SharePoint 的 Microsoft® SQL Server 2016 Reporting Services 增益集](https://www.microsoft.com/download/details.aspx?id=52682)  
@@ -37,7 +37,7 @@ ms.locfileid: "74866281"
   
 -   如果是從命令提示字元進行安裝，請使用 **RS_SHPWFE** 選項來安裝此增益集。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 命令提示字元安裝的詳細資訊，請參閱 [在命令提示字元安裝 Reporting Services](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md)。  
   
-##  適用於 SharePoint 產品的 <a name="bkmk_sql14"> </a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services 增益集  
+##  <a name="sssql14-reporting-services-add-in-for-sharepoint-products"></a>適用於 SharePoint 產品的 <a name="bkmk_sql14"> </a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services 增益集  
  若要下載並安裝此增益集，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心：  
   
 -   [適用於 Microsoft SharePoint 的 Microsoft® SQL Server 2014 Reporting Services 增益集](https://www.microsoft.com/download/details.aspx?id=42294)  
@@ -48,7 +48,7 @@ ms.locfileid: "74866281"
   
 -   如果是從命令提示字元進行安裝，請使用 **RS_SHPWFE** 選項來安裝此增益集。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 命令提示字元安裝的詳細資訊，請參閱 [在命令提示字元安裝 Reporting Services](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md)。  
   
-##  適用於 SharePoint 產品的 <a name="bkmk_sql11sp1"> </a> [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Reporting Services 增益集  
+##  <a name="sssql11sp1-reporting-services-add-in-for-sharepoint-products"></a>適用於 SharePoint 產品的 <a name="bkmk_sql11sp1"> </a> [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Reporting Services 增益集  
  [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 版本的增益集和報表伺服器加入了 SharePoint Server 2013 的支援。  
   
  若要下載並安裝此增益集，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心：  
@@ -57,7 +57,7 @@ ms.locfileid: "74866281"
   
 -   **SP1：** [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=35575) (https://www.microsoft.com/download/details.aspx?id=35575) 。  
 
-##  適用於 SharePoint 2010 產品的 <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services 增益集
+##  <a name="sssql11-reporting-services-add-in-for-sharepoint-2010-products"></a>適用於 SharePoint 2010 產品的 <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services 增益集
 
 在 SQL Server 2016 版本中，增益集可以在 [SQL Server 安裝精靈] 的 [特徵選取] 頁面中一併安裝。 如果您要分別下載和安裝增益集，可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心的 [適用於 Microsoft® SharePoint® 技術 2010 的 Microsoft® SQL Server® 2012 Reporting Services 增益集](https://go.microsoft.com/fwlink/?LinkID=207242) 頁面線上取得這個檔案的最新版本。
 

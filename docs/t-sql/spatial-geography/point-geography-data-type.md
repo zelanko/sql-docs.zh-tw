@@ -45,12 +45,12 @@ Point ( Lat, Long, SRID )
  這是 **float** 運算式，代表所要產生之 **Point** 的 Y 座標。 如需有關有效緯度和經度值的詳細資訊，請參閱 [Point](../../relational-databases/spatial/point.md)。  
   
  *SRID*  
- 這是 **int** 運算式，代表要傳回之[地理](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids)執行個體的**空間參考識別碼**。  
+ 這是 **int** 運算式，代表要傳回之**地理**執行個體的[空間參考識別碼](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids)。  
   
 ## <a name="return-types"></a>傳回型別  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
- CLR 傳回類型：**SqlGeography**  
+ CLR 傳回型別：**SqlGeography**  
   
 > [!NOTE]  
 >  引數的點 (geography 資料類型) 的方法有相較於 WKT 為反轉的座標。  

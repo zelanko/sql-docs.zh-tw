@@ -60,10 +60,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288302"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
@@ -1054,7 +1054,7 @@ ALTER TABLE 權限可套用至涉及 ALTER TABLE SWITCH 陳述式的兩種資料
 
 加入會更新資料表之資料列的資料行時，需要該資料表的 **UPDATE** 權限。 例如，當資料表非空白時，新增具有預設值的 **NOT NULL** 資料行或新增識別欄位。
 
-## <a name="Example_Top"></a> 範例
+## <a name="examples"></a><a name="Example_Top"></a> 範例
 
 |類別|代表性語法元素|
 |--------------|------------------------------|
@@ -1065,7 +1065,7 @@ ALTER TABLE 權限可套用至涉及 ALTER TABLE SWITCH 陳述式的兩種資料
 |[停用和啟用條件約束與觸發程序](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|
 | &nbsp; | &nbsp; |
 
-### <a name="add"></a>加入資料行和條件約束
+### <a name="adding-columns-and-constraints"></a><a name="add"></a>加入資料行和條件約束
 
 本節中的範例示範如何將資料行和條件約束加入至資料表。
 
@@ -1295,7 +1295,7 @@ ALTER TABLE Customers ADD
     ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') ;
 ```
 
-### <a name="Drop"></a>卸除資料行和條件約束
+### <a name="dropping-columns-and-constraints"></a><a name="Drop"></a>卸除資料行和條件約束
 
 本節中的範例示範如何卸除資料行和條件約束。
 
@@ -1380,7 +1380,7 @@ DROP TABLE Person.ContactBackup ;
 
 ![與 [回到頁首] 連結搭配使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示") [範例](#Example_Top)
 
-### <a name="alter_column"></a> 修改資料行定義
+### <a name="altering-a-column-definition"></a><a name="alter_column"></a> 修改資料行定義
 
 #### <a name="a-changing-the-data-type-of-a-column"></a>A. 變更資料行的資料類型
 
@@ -1474,7 +1474,7 @@ ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCR
 GO
 ```
 
-### <a name="alter_table"></a> 修改資料表定義
+### <a name="altering-a-table-definition"></a><a name="alter_table"></a> 修改資料表定義
 
 本節中的範例示範如何修改資料表的定義。
 
@@ -1592,7 +1592,7 @@ ALTER TABLE Person.Person
 DISABLE CHANGE_TRACKING;
 ```
 
-### <a name="disable_enable"></a>停用和啟用條件約束與觸發程序
+### <a name="disabling-and-enabling-constraints-and-triggers"></a><a name="disable_enable"></a>停用和啟用條件約束與觸發程序
 
 #### <a name="a-disabling-and-re-enabling-a-constraint"></a>A. 停用及重新啟用條件約束
 
@@ -1659,7 +1659,7 @@ INSERT INTO dbo.trig_example VALUES (3,'Mary Booth',100001) ;
 GO
 ```
 
-### <a name="online"></a>線上作業
+### <a name="online-operations"></a><a name="online"></a>線上作業
 
 #### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>A. 使用低優先順序等候選項的線上索引重建
 
@@ -1697,7 +1697,7 @@ DROP TABLE dbo.doc_exy ;
 GO
 ```
 
-### <a name="system_versioning"></a> 版本設定
+### <a name="system-versioning"></a><a name="system_versioning"></a> 版本設定
 
 下列四個範例將協助您熟悉使用系統版本設定的語法。 如需其他協助，請參閱[開始使用系統建立版本的時態表](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)。
 

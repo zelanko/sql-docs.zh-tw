@@ -13,24 +13,24 @@ ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908779"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>使用檔案輸入輸出 API 存取 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   描述檔案系統 I/O 如何在 FileTable 上運作。  
   
-##  <a name="accessing"></a> 開始使用 FileTable 檔案的 I/O API  
+##  <a name="get-started-using-file-io-apis-with-filetables"></a><a name="accessing"></a> 開始使用 FileTable 檔案的 I/O API  
  FileTable 的主要用法是透過 Windows 檔案系統和檔案 I/O API。 FileTable 支援透過一系列可用檔案 I/O API 的非交易式存取。  
   
 1.  檔案 I/O API 存取通常一開始會先取得檔案或目錄的邏輯 UNC 路徑。 應用程式可以搭配 [!INCLUDE[tsql](../../includes/tsql-md.md)]GetFileNamespacePath &#40;Transact-SQL&#41;[ 函數使用 ](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 陳述式，以取得檔案或目錄的邏輯路徑。 如需詳細資訊，請參閱 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)。  
   
 2.  然後應用程式會使用此邏輯路徑以取得檔案或目錄控制代碼，並對物件進行操作。 該路徑可傳遞至任何支援的檔案系統 API 函數，例如 CreateFile() 或 CreateDirectory()，以建立或開啟檔案並取得控制代碼。 控制代碼隨後便可用於以資料流形式處理資料、列舉或組織目錄、取得或設定檔案屬性、刪除檔案或目錄等。  
 
-##  <a name="create"></a> 在 FileTable 中建立檔案和目錄  
+##  <a name="creating-files-and-directories-in-a-filetable"></a><a name="create"></a> 在 FileTable 中建立檔案和目錄  
  透過呼叫檔案 I/O API (例如 CreateFile 或 CreateDirectory) 在 FileTable 中建立檔案或目錄。  
   
 -   支援所有建立配置旗標、共用模式及存取模式。 其中包括檔案建立、刪除及就地修改。 另外也支援檔案命名空間更新，例如目錄建立/刪除、重新命名和移動作業。  
@@ -43,10 +43,10 @@ ms.locfileid: "72908779"
   
 -   當多個並行的檔案 I/O 作業或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業在階層中影響同一個檔案或目錄時，會強制執行共用存取及並行存取。  
   
-##  <a name="read"></a> 讀取 FileTable 中的檔案和目錄  
+##  <a name="reading-files-and-directories-in-a-filetable"></a><a name="read"></a> 讀取 FileTable 中的檔案和目錄  
  若為所有資料流及屬性資料的檔案 I/O 存取作業， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會強制執行讀取認可隔離語意。  
   
-##  <a name="write"></a> 寫入及更新 FileTable 中的檔案和目錄  
+##  <a name="writing-and-updating-files-and-directories-in-a-filetable"></a><a name="write"></a> 寫入及更新 FileTable 中的檔案和目錄  
   
 -   所有 FileTable 上的檔案 I/O 寫入或更新作業都是非交易式的。 也就是說，不會有任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易繫結至這些作業，而且不會提供任何 ACID 保證。  
   
@@ -54,14 +54,14 @@ ms.locfileid: "72908779"
   
 -   透過檔案 I/O API 進行的 FILESTREAM 資料或屬性更新都將更新 FileTable 中對應的 **file_stream** 及對應的檔案屬性資料行。  
   
-##  <a name="delete"></a> 刪除 FileTable 中的檔案和目錄  
+##  <a name="deleting-files-and-directories-in-a-filetable"></a><a name="delete"></a> 刪除 FileTable 中的檔案和目錄  
  當您刪除檔案或目錄時會強制執行所有 Windows 檔案 I/O API 語意。  
   
 -   如果目錄中包含任何檔案或子目錄，將無法刪除目錄。  
   
 -   刪除檔案或目錄將會從 FileTable 中移除對應的資料列。 這相當於透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業刪除該資料列。  
   
-##  <a name="supported"></a> 支援的檔案系統作業  
+##  <a name="supported-file-system-operations"></a><a name="supported"></a> 支援的檔案系統作業  
  FileTable 支援與下列檔案系統作業相關的檔案系統 API：  
   
 -   目錄管理  
@@ -76,15 +76,15 @@ ms.locfileid: "72908779"
   
 -   交易式 NTFS  
   
-##  <a name="considerations"></a> FileTable 之檔案 I/O 存取的其他考量  
+##  <a name="additional-considerations-for-file-io-access-to-filetables"></a><a name="considerations"></a> FileTable 之檔案 I/O 存取的其他考量  
   
-###  <a name="vnn"></a> 使用虛擬網路名稱 (VNN) 搭配 AlwaysOn 可用性群組  
+###  <a name="using-virtual-network-names-vnns-with-always-on-availability-groups"></a><a name="vnn"></a> 使用虛擬網路名稱 (VNN) 搭配 AlwaysOn 可用性群組  
  當包含 FILESTREAM 或 FileTable 資料的資料庫屬於 AlwaysOn 可用性群組時，透過檔案系統 API 對 FILESTREAM 或 FileTable 資料進行的所有存取都應該使用 VNN 而非電腦名稱。 如需詳細資訊，請參閱 [FILESTREAM 和 FileTable 與 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)。  
   
-###  <a name="partial"></a> 部分更新  
+###  <a name="partial-updates"></a><a name="partial"></a> 部分更新  
  使用 [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 函數在 FileTable 中取得的 FILESTREAM 資料可寫入控制代碼，可用於執行 FILESTREAM 內容的就地、部分更新。 此行為與交易 FILESTREAM 存取不同，它是透過呼叫 **OpenSQLFILESTREAM()** 及傳遞明確交易內容所取得的控制代碼來進行。  
   
-###  <a name="trans"></a> 交易式語意  
+###  <a name="transactional-semantics"></a><a name="trans"></a> 交易式語意  
  當您使用檔案 I/O API 於 FileTable 中存取檔案時，這些作業不會與任何使用者交易有關聯，並且具有下列其他特性：  
   
 -   FileTable 中 FILESTREAM 資料的非交易式存取與任何交易無關，因此不會有任何特定的隔離語意。 但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會使用內部交易，針對 FileTable 資料強制執行鎖定或並行語意。 此類型的任何內部交易都已完成讀取認可隔離。  
@@ -95,13 +95,13 @@ ms.locfileid: "72908779"
   
  但是，FileTable 中的 FILESTREAM 資料行也可以透過呼叫 **OpenSqlFileStream()** ，與交易式 FILESTREAM 存取一同進行存取。 這種存取可以完全為交易式，而且會接受目前一致支援的所有交易式層級。  
   
-###  <a name="concurrency"></a> 並行存取控制  
+###  <a name="concurrency-control"></a><a name="concurrency"></a> 並行存取控制  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在檔案系統應用程式之間以及檔案系統應用程式和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 應用程式之間強制執行 FileTable 存取的並行存取控制。 達成此並行存取控制的方式是針對 FileTable 資料列採取適當的鎖定。  
   
-###  <a name="triggers"></a> 觸發程序  
+###  <a name="triggers"></a><a name="triggers"></a> 觸發程序  
  透過檔案系統建立、修改、或刪除檔案或目錄或其屬性，將會導致 FileTable 中對應的插入、更新或刪除作業。 任何關聯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML 觸發程序都會當做這些作業的一部分引發。  
   
-##  <a name="funclist"></a> FileTable 中支援的檔案系統功能  
+##  <a name="file-system-functionality-supported-in-filetables"></a><a name="funclist"></a> FileTable 中支援的檔案系統功能  
   
 |功能|支援|註解|  
 |----------------|---------------|--------------|  

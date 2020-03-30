@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f74883ab152ca1552d1193f204fc0af3a72cdb8f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287225"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>檢視及修改複寫安全性設定
@@ -46,20 +46,20 @@ ms.locfileid: "76287225"
   
 -   **後續操作：** [修改複寫安全性設定之後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   您所使用的預存程序，將取決於代理程式的類型和伺服器連接的類型而定。  
   
 -   您所使用的 RMO 類別和屬性，將取決於代理程式的類型和伺服器連接的類型而定。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  基於安全性理由，密碼的實際值在複寫預存程序所傳回的結果集中會有遮罩。  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  檢視並修改下列對話方塊中的安全性設定：  
   
 1.  **[更新複寫密碼]** 對話方塊，可從 **的** [複寫] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]資料夾開啟。 如果變更複寫拓撲中伺服器上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 帳戶或 Windows 帳戶的密碼，請使用此對話方塊，而非更新使用該帳戶之每個代理程式的密碼。 如果多個伺服器上的代理程式使用同一個帳戶，則必須連接到每個伺服器並變更密碼。 密碼在複寫使用密碼的所有位置更新。 而並不會在其他位置更新，例如連結的伺服器。  
@@ -243,7 +243,7 @@ ms.locfileid: "76287225"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 > [!IMPORTANT]  
 >  在下列所有的程序中，會在可能的情況下，於執行階段提示使用者輸入安全性認證。 如果您將認證儲存在指令碼檔案中，必須保護該檔案免於未經授權的存取。  
@@ -414,7 +414,7 @@ ms.locfileid: "76287225"
   
 2.  在使用此遠端散發者的每一個發行者上，執行 [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)，並針對 `@password` 指定步驟 1 的密碼。  
   
-##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
   
 > [!IMPORTANT]  
 >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
@@ -561,14 +561,14 @@ ms.locfileid: "76287225"
   
     -   *PublisherSecurity* - A <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext> 物件，可在連接到發行者和連接的登入認證時，指定立即更新訂閱者所使用之安全性模式的類型。  
   
-###  <a name="PShellExample"></a> 範例 (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> 範例 (RMO)  
  這個範例會檢查提供的登入值，並針對提供的 Windows 登入或 SQL Server 登入 (在伺服器上由複寫儲存) 變更其所有密碼。  
   
  [!code-cs[HowTo#rmo_ChangeServerPasswords](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changeserverpasswords)]  
   
  [!code-vb[HowTo#rmo_vb_ChangeServerPasswords](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changeserverpasswords)]  
   
-##  <a name="FollowUp"></a> 後續操作：修改複寫安全性設定之後  
+##  <a name="follow-up-after-you-modify-replication-security-settings"></a><a name="FollowUp"></a> 後續操作：修改複寫安全性設定之後  
  變更代理程式的登入或密碼之後，您必須先停止並重新啟動代理程式，變更才會生效。  
   
 ## <a name="see-also"></a>另請參閱  

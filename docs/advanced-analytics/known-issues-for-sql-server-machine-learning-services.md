@@ -8,10 +8,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: da725efe691aae60bf9776bbe73f80227067d2e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74200391"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的已知問題
@@ -125,7 +125,7 @@ SQL Server 2016 要求用戶端上的 R 程式庫必須完全符合伺服器上�
 
 **適用範圍：** 搭配 Python 的 SQL Server 2017
 
-### <a name="bkmk_sqlbindr"></a> 當您使用 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 以從用戶端連線到舊版 SQL Server R Services 時，會出現版本不相容的警告
+### <a name="warning-of-incompatible-version-when-you-connect-to-an-older-version-of-sql-server-r-services-from-a-client-by-using-sssqlv14_md"></a><a name="bkmk_sqlbindr"></a> 當您使用 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 以從用戶端連線到舊版 SQL Server R Services 時，會出現版本不相容的警告
 
 當您在 SQL Server 2016 計算內容中執行 R 程式碼時，可能看到下列錯誤：
 

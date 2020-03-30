@@ -47,10 +47,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9ae139dda1837a6d8698809f984060f0b341b758
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287922"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
@@ -331,7 +331,7 @@ DELAYED_DURABILITY = { OFF | ON }
   
  如需詳細資訊，請參閱[控制交易持久性](../../relational-databases/logs/control-transaction-durability.md)。  
 
-## <a name="Simple"></a> 簡單範例
+## <a name="simple-examples"></a><a name="Simple"></a> 簡單範例
 
 為了協助您開始使用，以下是兩個簡單的範例：  
 `SELECT DB_NAME() AS ThisDB;` 會傳回目前資料庫的名稱。  
@@ -464,7 +464,7 @@ GO
   
  如果是 CLR 預存程序，需要 EXTERNAL NAME 子句中所參考組件的擁有權，或該組件的 **REFERENCES** 權限。  
   
-##  <a name="mot"></a> CREATE PROCEDURE 和經記憶體最佳化的資料表  
+##  <a name="create-procedure-and-memory-optimized-tables"></a><a name="mot"></a> CREATE PROCEDURE 和經記憶體最佳化的資料表  
  從傳統和原生編譯的預存程序存取經記憶體最佳化資料表，都可以達到最高效率。 在大部分情況下，原生程序是更有效率的方式。
 如需詳細資訊，請參閱[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
   
@@ -487,7 +487,7 @@ GO
   
  如需原生編譯預存程序的可程式性、支援的查詢介面區及運算子的說明，請參閱[原生編譯的 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。  
   
-## <a name="Examples"></a> 範例  
+## <a name="examples"></a><a name="Examples"></a> 範例  
   
 |類別|代表性語法元素|  
 |--------------|------------------------------|  
@@ -499,7 +499,7 @@ GO
 |[強制程序重新編譯](#Recompile)|WITH RECOMPILE|  
 |[設定安全性內容](#Security)|EXECUTE AS|  
   
-###  <a name="BasicSyntax"></a> 基本語法  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> 基本語法  
  本節的範例使用所需的最少語法示範 CREATE PROCEDURE 陳述式的基本功能。  
   
 #### <a name="a-creating-a-simple-transact-sql-procedure"></a>A. 建立簡單的 Transact-SQL 程序  
@@ -558,7 +558,7 @@ AS EXTERNAL NAME HandlingLOBUsingCLR.LargeObjectBinary.GetPhotoFromDB;
 GO  
 ```  
   
-###  <a name="Parameters"></a> 傳遞參數  
+###  <a name="passing-parameters"></a><a name="Parameters"></a> 傳遞參數  
  本節的範例會示範如何使用輸入和輸出參數，在預存程序之間來回傳遞值。  
   
 #### <a name="d-creating-a-procedure-with-input-parameters"></a>D. 使用輸入參數建立程序  
@@ -766,7 +766,7 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-###  <a name="Modify"></a> 使用預存程序修改資料  
+###  <a name="modifying-data-by-using-a-stored-procedure"></a><a name="Modify"></a> 使用預存程序修改資料  
  本節範例將示範如何在程序的定義中包含資料操作語言 (DML) 陳述式，藉以在資料表或檢視表中插入或修改資料。  
   
 #### <a name="i-using-update-in-a-stored-procedure"></a>I. 在預存程序中使用 UPDATE  
@@ -790,7 +790,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-###  <a name="Error"></a> 錯誤處理  
+###  <a name="error-handling"></a><a name="Error"></a> 錯誤處理  
  本節範例將示範如何處理在執行預存程序時可能會發生的錯誤。  
   
 #### <a name="j-using-trycatch"></a>J. 使用 TRY...CATCH  
@@ -865,7 +865,7 @@ EXEC Production.uspDeleteWorkOrder 15;
 DROP PROCEDURE Production.uspDeleteWorkOrder;  
 ```  
   
-###  <a name="Encrypt"></a> 模糊化程序定義  
+###  <a name="obfuscating-the-procedure-definition"></a><a name="Encrypt"></a> 模糊化程序定義  
  本節範例將示範如何模糊化預存程序的定義。  
   
 #### <a name="k-using-the-with-encryption-option"></a>K. 使用 WITH ENCRYPTION 選項  
@@ -911,7 +911,7 @@ WHERE object_id = OBJECT_ID('HumanResources.uspEncryptThis');
  NULL  
  ```  
   
-###  <a name="Recompile"></a> 強制程序重新編譯  
+###  <a name="forcing-the-procedure-to-recompile"></a><a name="Recompile"></a> 強制程序重新編譯  
  本節範例將會使用 WITH RECOMPILE 子句強制程序在每次執行時重新編譯。  
   
 #### <a name="l-using-the-with-recompile-option"></a>L. 使用 WITH RECOMPILE 選項  
@@ -934,7 +934,7 @@ AS
     WHERE v.Name LIKE @Name;  
 ```  
   
-###  <a name="Security"></a> 設定安全性內容  
+###  <a name="setting-the-security-context"></a><a name="Security"></a> 設定安全性內容  
  本節範例將使用 EXECUTE AS 子句設定用以執行預存程序的安全性內容。  
   
 #### <a name="m-using-the-execute-as-clause"></a>M. 使用 EXECUTE AS 子句  

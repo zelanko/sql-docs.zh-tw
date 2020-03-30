@@ -16,10 +16,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903830"
 ---
 # <a name="get-started-with-full-text-search"></a>全文檢索搜尋使用者入門
@@ -77,7 +77,7 @@ ms.locfileid: "72903830"
 
     如需詳細資訊，請參閱[建立及管理全文檢索索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)。
 
-##  <a name="options"></a> 選擇全文檢索索引的選項 
+##  <a name="choose-options-for-a-full-text-index"></a><a name="options"></a> 選擇全文檢索索引的選項 
   
 ### <a name="choose-a-language"></a>選擇語言  
  如需選擇資料行語言的資訊，請參閱 [選擇建立全文檢索索引時的語言](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)。  

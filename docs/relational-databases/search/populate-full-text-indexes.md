@@ -25,17 +25,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 52fc7d3d43c1f0adcf7ab94d78cf301254a9a18d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72903873"
 ---
 # <a name="populate-full-text-indexes"></a>擴展全文檢索索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   建立和維護全文檢索索引包括使用稱為「母體擴展」  (Population) (也稱為「搜耙」  (Crawl)) 的處理序來擴展索引。  
   
-##  <a name="types"></a> Types of population  
+##  <a name="types-of-population"></a><a name="types"></a> Types of population  
 全文檢索索引支援下列類型的母體擴展：
 -   **完整**母體擴展
 -   以**變更追蹤**為基礎的自動或手動母體擴展
@@ -171,7 +171,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  若要執行累加母體擴展，請使用 `START INCREMENTAL POPULATION` 子句來執行 `ALTER FULLTEXT INDEX` 陳述式。  
   
-###  <a name="create"></a> 建立或變更累加母體擴展的排程   
+###  <a name="create-or-change-a-schedule-for-incremental-population"></a><a name="create"></a> 建立或變更累加母體擴展的排程   
   
 1.  在 Management Studio 中，於 [物件總管] 中展開伺服器。  
   
@@ -208,7 +208,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 
-##  <a name="crawl"></a> 為全文檢索母體擴展 (搜耙) 中的錯誤疑難排解  
+##  <a name="troubleshoot-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a> 為全文檢索母體擴展 (搜耙) 中的錯誤疑難排解  
 搜耙發生錯誤時，「全文檢索搜尋」搜耙記錄功能會建立並維護搜耙記錄檔，此記錄檔是一個純文字檔。 每個搜耙記錄檔都對應至特定的全文檢索目錄。 所指定執行個體 (在此範例中為預設執行個體) 的編目記錄檔預設位於 `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG` 資料夾中。
  
 搜耙記錄檔會遵循下列命名結構：  

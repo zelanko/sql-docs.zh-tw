@@ -10,10 +10,10 @@ ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 25c62e0cd615748a764937d6dc2b8e4c952e59a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244310"
 ---
 # <a name="lesson-3-define-a-dataset-for-the-table-report---sql-server-reporting-services"></a>第 3 課：定義資料表報表的資料集 - SQL Server Reporting Services

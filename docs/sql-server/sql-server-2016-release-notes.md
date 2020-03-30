@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286332"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 版本資訊
@@ -28,7 +28,7 @@ ms.locfileid: "79286332"
 - [![Azure 虛擬機器小型](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016) 擁有 Azure 帳戶嗎？  接著前往 **[這裡](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)** 來啟動已安裝 SQL Server 2016 SP1 的虛擬機器。
 - [![下載 SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) 如要取得最新版的 SQL Server Management Studio，請參閱 **[下載 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)** 。
 
-## <a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
+## <a name="sql-server-2016-service-pack-2-sp2"></a><a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
 
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2 包含 2016 SP1 之後發行的所有累計更新，截至並且包含 CU8。
 
@@ -87,7 +87,7 @@ SQL Server 2016 SP2 中已包含支援能力和診斷相關的改善。
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 
-## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
+## <a name="sql-server-2016-service-pack-1-sp1"></a><a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 包含截至 SQL Server 2016 RTM CU3 的所有累計更新，包括安全性更新 MS16-136。 它包含 SQL Server 2016 累積更新提供的解決方案彙總，截至並且包含最新的累積更新 - CU3 和 2016 年 11 月 8 日發行的安全性更新 MS16-136。
 
 SQL Server SP1 Standard、Web、Express 和 Local DB 版本提供下列功能 (除非另有附註)：
@@ -135,13 +135,13 @@ SQL Server 2016 SP1 安裝可能需要在安裝後重新開機。 最佳做法�
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 
-##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
+##  <a name="sql-server-2016-release---general-availability-ga"></a><a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Database Engine (GA)](#bkmk_ga_instalpatch)
 -   [Stretch Database (GA)](#bkmk_ga_stretch)
 -   [查詢存放區 (GA)](#bkmk_ga_query_store)
 -   [產品文件 (GA)](#bkmk_ga_docs)
 
-### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> 安裝修補程式需求 (GA)
+### <a name="repl_icon_warn--install-patch-requirement-ga"></a>![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> 安裝修補程式需求 (GA)
 **問題和對客戶的影響：** Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL Server 2016 必須安裝這些二進位檔。 已提供修正此問題的更新。 如果不安裝 VC Runtime 二進位檔的這項更新，SQL Server 2016 就可能在特定情況下遇到穩定性問題。 安裝 SQL Server 2016 之前，請先檢查電腦是否需要 [KB 3164398](https://support.microsoft.com/kb/3164398)中所述的填補。 修補程式也包含在 [SQL Server 2016 RTM 的累計更新套件 1 (CU1)](https://www.microsoft.com/download/details.aspx?id=53338)。
 
 **解決方案：** 使用下列其中一個解決方案：
@@ -167,7 +167,7 @@ SQL Server 2016 SP1 安裝可能需要在安裝後重新開機。 最佳做法�
     - **下載中心：** 最後，Microsoft 下載中心會提供更新。 您可以下載更新的軟體，將它安裝在有 SQL Server 2016 的伺服器上。
 
 
-### <a name="bkmk_ga_stretch"></a>Stretch Database
+### <a name="stretch-database"></a><a name="bkmk_ga_stretch"></a>Stretch Database
 
 #### <a name="problem-with-a-specific-character-in-a-database-or-table-name"></a>資料庫或資料表名稱中的特定字元問題
 
@@ -181,7 +181,7 @@ SQL Server 2016 SP1 安裝可能需要在安裝後重新開機。 最佳做法�
 
 **因應措施：** 卸除使用 INCLUDE 關鍵字的索引，啟用資料表的 Stretch Database，然後重新建立索引。 如果這樣做，請務必依照貴組織的維護作法和原則，以確保對受影響資料表的使用者造成最小的影響或不受影響。
 
-### <a name="bkmk_ga_query_store"></a>Query Store
+### <a name="query-store"></a><a name="bkmk_ga_query_store"></a>Query Store
 
 #### <a name="problem-with-automatic-data-cleanup-on-editions-other-than-enterprise-and-developer"></a>Enterprise 和 Developer 以外版本的自動資料清除問題
 
@@ -205,7 +205,7 @@ SQL Server 2016 SP1 安裝可能需要在安裝後重新開機。 最佳做法�
 - `sp_query_store_remove_query`
 
 
-###  <a name="bkmk_ga_docs"></a> 產品文件 (GA)
+###  <a name="product-documentation-ga"></a><a name="bkmk_ga_docs"></a> 產品文件 (GA)
  **問題和對客戶的影響：** SQL Server 2016 文件的可下載版本尚未提供。 當您嘗試使用 Help Library 管理員 **從線上安裝內容**時，您會看到 SQL Server 2012 及 SQL Server 2014 文件，但沒有 SQL Server 2016 文件的選項。
 
  **因應措施：** 使用下列其中一項因應措施：

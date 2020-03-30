@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287942"
 ---
 # <a name="memory-management-architecture-guide"></a>記憶體管理架構指南
@@ -124,7 +124,7 @@ ms.locfileid: "79287942"
 |執行緒堆疊記憶體|是|是|
 |Windows 直接配置|是|是|
 
-## <a name="dynamic-memory-management"></a> 動態記憶體管理
+## <a name="dynamic-memory-management"></a><a name="dynamic-memory-management"></a> 動態記憶體管理
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的預設記憶體管理行為是以不造成系統發生記憶體短缺為前提，盡可能取得所需的記憶體。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會使用 Microsoft Windows 的「記憶體通知 API」來達成此目的。
 
 當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 動態使用記憶體時，它會定期查詢系統以判定可用的記憶體量。 維持這個可用記憶體數量可避免作業系統 (OS) 進行分頁。 如果可用記憶體少於這個數量， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會將記憶體釋出給 OS。 如果可用記憶體多於這個數量， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可能會配置更多記憶體。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 只有當工作負載需要更多的記憶體時，它才會增加記憶體。休息中的伺服器不會增加其虛擬位址空間的大小。  
@@ -203,7 +203,7 @@ FROM sys.dm_os_process_memory;
 >    
 > 如需使用此設定的建議，請參閱[設定 min memory per query 伺服器設定選項](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations)。
 
-### <a name="memory-grant-considerations"></a>記憶體授與考量
+### <a name="memory-grant-considerations"></a><a name="memory-grant-considerations"></a>記憶體授與考量
 針對**資料列模式執行**，在任何情況下，都不得超過初始記憶體授與。 如果需要比初始授與更多的記憶體才能執行**雜湊**或**排序**作業，則這些作業會溢出至磁碟。 溢出的雜湊作業受到 TempDB 中之工作檔案的支援，而溢出的排序作業則受到[工作資料表](../relational-databases/query-processing-architecture-guide.md#worktables)的支援。   
 
 排序作業期間發生的溢出稱為[排序警告](../relational-databases/event-classes/sort-warnings-event-class.md)。 排序警告會指出不符合記憶體的排序作業。 不包括關於索引建立的排序作業，只包括在查詢中 (例如在 `SELECT` 陳述式中所用之 `ORDER BY` 子句) 的排序作業。

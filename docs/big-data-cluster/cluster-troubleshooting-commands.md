@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70153636"
 ---
-# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>監視 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]及針對其進行疑難排解
+# <a name="monitoring-and-troubleshoot-big-data-clusters-2019"></a>監視 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]及針對其進行疑難排解
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -98,7 +98,7 @@ kubectl describe pod  master-0 -n mssql-cluster
 kubectl logs master-0 --all-containers=true -n mssql-cluster > master-0-pod-logs.txt
 ```
 
-## <a id="services"></a> 取得服務的狀態
+## <a name="get-status-of-services"></a><a id="services"></a> 取得服務的狀態
 
 執行下列命令，以取得巨量資料叢集服務的詳細資料。 這些詳細資料包含其類型，以及與個別服務和連接埠相關聯的 IP。 請注意，SQL Server 巨量資料叢集服務會根據部署設定檔中指定的叢集名稱，於叢集啟動程式期間建立的新命名空間中建立。
 
@@ -138,7 +138,7 @@ kubectl describe service <service_name> -n <namespace_name>
 kubectl describe service master-svc-external -n mssql-cluster
 ```
 
-## <a id="copy"></a> 複製檔案
+## <a name="copy-files"></a><a id="copy"></a> 複製檔案
 
 如果您需要將檔案從容器複製到本機電腦，請使用 `kubectl cp` 命令搭配下列語法：
 
@@ -152,7 +152,7 @@ kubectl cp <pod_name>:<source_file_path> -c <container_name> -n <namespace_name>
 kubectl cp <source_local_file_path> <pod_name>:<target_container_path> -c <container_name>  -n <namespace_name>
 ```
 
-### <a id="copyfrom"></a> 從容器複製檔案
+### <a name="copy-files-from-a-container"></a><a id="copyfrom"></a> 從容器複製檔案
 
 下列範例會將 SQL Server 記錄檔從容器複製到本機電腦上的 `~/temp/sqlserverlogs` 路徑 (在此範例中，本機電腦是 Linux 用戶端)：
 
@@ -160,7 +160,7 @@ kubectl cp <source_local_file_path> <pod_name>:<target_container_path> -c <conta
 kubectl cp master-0:/var/opt/mssql/log -c mssql-server -n mssql-cluster ~/tmp/sqlserverlogs
 ```
 
-### <a id="copyinto"></a> 將檔案複製到容器
+### <a name="copy-files-into-container"></a><a id="copyinto"></a> 將檔案複製到容器
 
 下列範例會將 **AdventureWorks2016CTP3.bak** 檔案從本機電腦複製到 `master-0` Pod 中的 SQL Server 主要執行個體容器 (`mssql-server`)。 檔案會複製到容器中的 `/tmp` 目錄。 
 
@@ -168,7 +168,7 @@ kubectl cp master-0:/var/opt/mssql/log -c mssql-server -n mssql-cluster ~/tmp/sq
 kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n mssql-cluster
 ```
 
-## <a id="forcedelete"></a> 強制刪除 Pod
+## <a name="force-delete-a-pod"></a><a id="forcedelete"></a> 強制刪除 Pod
  
 不建議您強制刪除 Pod。 但是，若要測試可用性、復原或資料持續性，您可以使用 `kubectl delete pods` 命令刪除 Pod 以模擬 Pod 失敗。
 
@@ -182,7 +182,7 @@ kubectl delete pods <pod_name> -n <namespace_name> --grace-period=0 --force
 kubectl delete pods storage-0-0 -n mssql-cluster --grace-period=0 --force
 ```
 
-## <a id="getip"></a> 取得 Pod IP
+## <a name="get-pod-ip"></a><a id="getip"></a> 取得 Pod IP
  
 基於疑難排解目的，您可能需要取得 Pod 目前執行所在節點的 IP。 若要取得 IP 位址，請使用 `kubectl get pods` 命令搭配下列語法：
 

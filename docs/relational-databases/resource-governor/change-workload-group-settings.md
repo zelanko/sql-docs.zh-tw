@@ -13,10 +13,10 @@ ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 5389413091f57a5a0dfdad887edad675ee68ff64
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68136925"
 ---
 # <a name="change-workload-group-settings"></a>變更工作負載群組設定
@@ -29,7 +29,7 @@ ms.locfileid: "68136925"
   
 ## <a name="before-you-begin"></a>開始之前  
   
-###  <a name="LimitationsRestrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制事項  
  您可以變更預設工作負載群組和使用者定義工作負載群組的設定。  
   
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
@@ -38,10 +38,10 @@ ms.locfileid: "68136925"
   
  允許索引建立使用比一開始授與之記憶體更多的記憶體工作空間來改善效能。 資源管理員支援這種特殊的處理，不過，初始授與和任何額外的記憶體授與都受到工作負載群組和資源集區設定的限制。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="permissions"></a><a name="Permissions"></a> 權限  
  變更工作負載群組設定需要 CONTROL SERVER 權限。  
   
-##  <a name="ChgWGProp"></a> 使用 SQL Server Management Studio 變更工作負載群組設定  
+##  <a name="change-workload-group-settings-using-sql-server-management-studio"></a><a name="ChgWGProp"></a> 使用 SQL Server Management Studio 變更工作負載群組設定  
  **若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  在 [物件總管] 中，遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 資料夾，此資料夾包含要修改的工作負載群組。  
@@ -54,7 +54,7 @@ ms.locfileid: "68136925"
   
 5.  若要儲存變更，請按一下 **[確定]** 。  
   
-##  <a name="ChgWGTSQL"></a> 使用 Transact-SQL 變更工作負載群組設定  
+##  <a name="change-workload-group-settings-using-transact-sql"></a><a name="ChgWGTSQL"></a> 使用 Transact-SQL 變更工作負載群組設定  
  **若要使用 Transact-SQL 來變更工作負載群組設定**  
   
 1.  執行 ALTER WORKLOAD GROUP 陳述式，指定要變更的屬性值。  

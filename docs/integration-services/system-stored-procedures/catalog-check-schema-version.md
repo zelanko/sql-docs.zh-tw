@@ -11,10 +11,10 @@ ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7d7ec8899e880220dc2011014501a883fafa4470
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295617"
 ---
 # <a name="catalogcheck_schema_version"></a>catalog.check_schema_version 

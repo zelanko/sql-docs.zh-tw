@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558523"
 ---
 # <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>操作 SQL Server 的 RHEL 容錯移轉叢集執行個體 (FCI)
@@ -39,7 +39,7 @@ ms.locfileid: "75558523"
 
 如需叢集設定、資源代理程式選項和管理的詳細資訊，請造訪 [RHEL 參考文件](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html) \(英文\)。
 
-## <a name = "failManual"></a>手動容錯移轉叢集
+## <a name="failover-cluster-manually"></a><a name = "failManual"></a>手動容錯移轉叢集
 
 `resource move` 命令會建立限制式，強制在目標節點上啟動資源。  執行 `move` 命令之後，執行資源 `clear` 將會移除限制式，因此可以再次移動資源，或讓資源自動容錯移轉。 
 

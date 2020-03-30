@@ -18,10 +18,10 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 48736a721cad475c6956e1715a3912481bc83c40
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012924"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>將伺服器設定為在特定 TCP 連接埠上接聽
@@ -40,7 +40,7 @@ ms.locfileid: "68012924"
 >  資料庫引擎會在重新啟動之後開始接聽新的通訊埠。 不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務會監視登錄，並在組態變更時回報新的通訊埠編號，即使資料庫引擎可能不會用到亦然。 重新啟動資料庫引擎可確保一致性並避免連接失敗。  
   
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
   
 #### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>若要為 SQL Server Database Engine 指派 TCP/IP 通訊埠編號  
   

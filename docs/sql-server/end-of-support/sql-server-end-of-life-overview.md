@@ -10,10 +10,10 @@ ms.author: mathoma
 ms.reviewer: pmasl
 monikerRange: =sql-server-previousversions||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: a774b93d60a2a44e419b362ae2efe2309bf9b2ab
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75776458"
 ---
 # <a name="sql-server-end-of-support-options"></a>SQL Server 終止支援選項 
@@ -167,7 +167,7 @@ ms.locfileid: "75776458"
 - **彈性**：單一資料庫特別適合針對雲端設計的應用程式使用，因為對於此類應用程式來說，開發人員的生產力和解決方案上市時間快慢至關重要，或是需要外部存取。  
 - **常用功能**：提供最常使用的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 功能，但沒有像 Azure SQL Database 受控執行個體那麼多。  
 - **快速部署**：您可以快速部署單一資料庫。 
-- **延展性**：您可以視業務需求快速輕鬆地相應增加和減少，因此提供額外的節省成本效益。 
+- **延展性**：您可以視業務需求快速輕鬆地擴大和縮小，因此提供額外的節省成本效益。 
 - **可用性**：服務成本包含儲存體和高可用性，並保證正常運作時間達 99.995%。  
 - **自動化**：修補和備份會自動進行，因此為您省下寶貴的維護時間。  
 - **Intelligent Insights**：利用內建的智慧分析，取得您資料庫效能的見解。  
@@ -206,7 +206,7 @@ ms.locfileid: "75776458"
 - **成本**：您可以藉由卸載軟體和硬體維護來節省成本。  
 - **隨即轉移**：您可以在最少或沒有資料庫變更的情況下，將整個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部部署執行個體隨即轉移到受控執行個體 (包括所有資料庫)。 
 - **功能**：受控執行個體的功能集與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的內部部署執行個體密切符合，例如跨資料庫查詢、異動複寫發佈和散發、SQL 作業排程，以及 CLR 支援。 
-- **延展性**：受控執行個體中的所有資料庫會共用資源，且可以隨時相應增加和減少，而不會出現停機。   
+- **延展性**：受控執行個體中的所有資料庫會共用資源，且可以隨時擴大和縮小，而不會出現停機。   
 - **自動化**：修補和備份會自動進行，因此為您省下寶貴的維護時間。  
 - **可用性**：服務成本包含儲存體和高可用性，並保證正常運作時間達 99.99%。  
 - **Intelligent Insights**：利用內建的智慧分析，取得您資料庫效能的見解。  
@@ -257,7 +257,7 @@ Azure Cosmos DB 具有下列優點：
 
 Azure 表格儲存體具有下列優點：
 - 您無須將資料下線，就能持續改進您的應用程式與資料表結構描述。
-- 您無須分區化您的資料集，就能相應增加規模。
+- 您無須分區化您的資料集，就能擴大規模。
 - 異地備援支援可將您的資料複寫到多個區域。
 
 ## <a name="lifecycle-dates"></a>生命週期日期

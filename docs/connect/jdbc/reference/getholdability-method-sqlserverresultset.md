@@ -11,10 +11,10 @@ ms.assetid: 4508d90f-c3c4-4eac-8001-fb0b93b66734
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 57bf0cfc206319bf6afcb09435e8787499266c0c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982921"
 ---
 # <a name="getholdability-method-sqlserverresultset"></a>getHoldability 方法 (SQLServerResultSet)

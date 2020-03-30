@@ -26,10 +26,10 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68127121"
 ---
 # <a name="use-the-copy-database-wizard"></a>使用複製資料庫精靈
@@ -49,7 +49,7 @@ ms.locfileid: "68127121"
 -   排程何時要移動或複製資料庫。  
   
 
-##  <a name="Restrictions"></a> 限制事項  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   Express 版本不提供複製資料庫精靈。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68127121"
 > **重要！！** **卸離與附加**方法會使來源和目的地資料庫擁有權，成為設定為執行 [複製資料庫精靈]  的登入。  若要變更資料庫的擁有權，請參閱 [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md) 。
   
   
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
 -   確定目的地伺服器上已啟動 SQL Server Agent。  
 
 -   確定可從目的地伺服器連接到來源伺服器上的資料和記錄檔目錄。
@@ -90,7 +90,7 @@ ms.locfileid: "68127121"
 
 > **重要！！** 根據 **卸離與附加** 方法，若未使用 Integration Services Proxy 帳戶，複製或移動程序將會失敗。  在某些情況下，來源資料庫將無法重新附加至來源伺服器，並將從資料和記錄檔中移除所有 NTFS 安全性權限。  如果發生此情況，請巡覽至您的檔案、重新套用相關的權限，再將資料庫重新附加至您的 SQL Server 執行個體。
   
-##  <a name="Recommendations"></a> 建議  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   為了確保升級的資料庫能有最佳效能，請針對升級的資料庫執行 [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) (更新統計資料)。  
   
@@ -98,10 +98,10 @@ ms.locfileid: "68127121"
   
 
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="permissions"></a><a name="Permissions"></a> 權限  
  您必須在來源伺服器與目的地伺服器上成為 **系統管理員 (sysadmin)** 固定伺服器角色的成員。  
   
-##  <a name="Overview"></a> [複製資料庫精靈] 頁面 
+##  <a name="the-copy-database-wizard-pages"></a><a name="Overview"></a> [複製資料庫精靈] 頁面 
 從 SQL Server Management Studio 的物件總管  啟動 [複製資料庫精靈]  ，然後展開 [資料庫]  。  以滑鼠右鍵按一下資料庫，指向 [工作]  ，然後按一下 [複製資料庫]  。  如果出現 [歡迎使用複製資料庫精靈]  開頭顯示頁面，請按一下 [下一步]  。
 
 
@@ -295,7 +295,7 @@ ms.locfileid: "68127121"
 -    **訊息**  
 提供每個步驟所傳回的任何訊息。
 
-##  <a name="Examples"></a> 範例
+##  <a name="examples"></a><a name="Examples"></a> 範例
 ### <a name="common-steps"></a>**通用步驟** 
 不論您選擇的是 [移動]  或 [複製]  、[卸離與附加]  或 [SMO]  ，下列五個步驟都會相同。  為求簡潔，這些步驟只會在此列出一次，所有範例將從 **步驟 6**開始進行。
 
@@ -384,12 +384,12 @@ ms.locfileid: "68127121"
 14. 手動啟動新建立的 SQL Server Agent 作業 `SalesCopy weekly refresh`。  檢閱作業記錄，並確保執行個體上現在有 `SalesCopy` 。
 
   
-##  <a name="FollowUp"></a> 後續操作：升級資料庫之後  
+##  <a name="follow-up-after-upgrading-a-database"></a><a name="FollowUp"></a> 後續操作：升級資料庫之後  
  在您使用複製資料庫精靈，將資料庫從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，資料庫就會變成立即可用並自動進行升級。 如果資料庫具有全文檢索索引，升級程序就會根據 [全文檢索目錄升級選項]  伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 [匯入]  或 [重建]  ，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入]  時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 如需有關檢視或變更 **全文檢索目錄升級選項** 屬性設定的詳細資訊，請參閱＜ [管理及監視伺服器執行個體的全文檢索搜尋](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)＞。  
   
  如果使用者資料庫的相容性層級在升級前為 100 或更高層級，則在升級後仍會保持相同。 如果已升級資料庫中的相容性層級為 90，則相容性層級會設定為 100 (這是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]所支援的最低相容性層級)。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
  
- ## <a name="Post"></a> 複製或移動後的考量
+ ## <a name="post-copy-or-move-considerations"></a><a name="Post"></a> 複製或移動後的考量
  請考慮是否要在 **複製** 或 **移動**後執行下列步驟：
 -    使用卸離與附加方法時，變更資料庫的擁有權。
 -    **移動**後，卸除來源伺服器上的伺服器物件。

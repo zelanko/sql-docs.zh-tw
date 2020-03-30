@@ -11,10 +11,10 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ebe6152ea59de28c9df7f3bb3abfa149900c826f
-ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77146298"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>設定 Always On 分散式可用性群組  
@@ -217,14 +217,14 @@ ALTER AVAILABILITY GROUP [distributedag]
 GO  
 ```  
 
-## <a name="failover"></a> 聯結第二個可用性群組次要複本上的資料庫
+## <a name="join-the-database-on-the-secondary-of-the-second-availability-group"></a><a name="failover"></a> 聯結第二個可用性群組次要複本上的資料庫
 在第二個可用性群組的次要複本上的資料庫處於還原中狀態後，您必須手動將它聯結至可用性群組。
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
 ```
   
-## <a name="failover"></a> 容錯移轉至次要可用性群組  
+## <a name="fail-over-to-a-secondary-availability-group"></a><a name="failover"></a> 容錯移轉至次要可用性群組  
 
 目前僅支援手動容錯移轉。 若要手動容錯移轉分散式可用性群組：
 

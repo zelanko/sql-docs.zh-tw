@@ -11,10 +11,10 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2a16cd38eef12584f8d876e610bfda5d602c3076
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71283018"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>第 6-4 課：部署第 6 課套件

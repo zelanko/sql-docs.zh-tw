@@ -12,10 +12,10 @@ ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69a12437e3b1e611cf9e48d60c9fd77cd02f63bc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971872"
 ---
 # <a name="sqlservercallablestatement-members"></a>SQLServerCallableStatement 成員
@@ -70,7 +70,7 @@ ms.locfileid: "67971872"
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservercallablestatement.md)|擷取指定之參數的值來當做 java.io.Reader 物件。|  
 |[getClob](../../../connect/jdbc/reference/getclob-method-sqlservercallablestatement.md)|使用 Java 程式設計語言，擷取指定 JDBC Blob 參數的值來作為 Clob 物件。|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)|使用 Java 程式語言，擷取指定之參數的值來當做 java.sql.Date 物件。|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|擷取指定之資料行的值作為 [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 物件。|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|擷取指定資料行的值作為 [DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)物件。|  
 |[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)|使用 Java 程式設計語言，擷取指定參數的值來作為 **double**。|  
 |[getFloat](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)|使用 Java 程式設計語言，擷取所指定參數的值來作為 **float**。|  
 |[getInt](../../../connect/jdbc/reference/getint-method-sqlservercallablestatement.md)|使用 Java 程式設計語言，擷取指定參數的值來作為 **int**。|  
@@ -110,7 +110,7 @@ ms.locfileid: "67971872"
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlservercallablestatement.md)|(繼承自 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md))。將指定的參數設定為指定的物件。|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。將 SQL 資料指標名稱設定為給定的字串，此字串將由後續 execute 方法使用。|  
 |[setDate](../../../connect/jdbc/reference/setdate-method-sqlservercallablestatement.md)|將指定的參數設定為給定的日期值。|  
-|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)|將指定的資料行值設定為 [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 值。|  
+|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)|將指定的資料行值設定為 [DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)值。|  
 |[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlservercallablestatement.md)|將指定的參數設定為所指定 **double** 值。|  
 |[setEscapeProcessing](../../../connect/jdbc/reference/setescapeprocessing-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。設定逸出處理模式。|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。提供 JDBC Driver 提示，當做處理結果集資料列時應遵循的方向。|  

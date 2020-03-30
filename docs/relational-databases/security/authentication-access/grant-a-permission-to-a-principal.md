@@ -14,10 +14,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e7dc2bff70e98420161d823207222c6c9205940
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68043258"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>為主體授與權限
@@ -38,21 +38,21 @@ ms.locfileid: "68043258"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  請考慮下列更輕鬆管理權限的最佳做法。  
   
 -   將權限授與角色，而非個別登入或使用者。 當某位人員被另一位人員取代時，請從角色中移除離開的人員，並將新的人員加入至角色。 此時，許多可能與該角色相關聯的權限就會自動提供給新的人員使用。 如果組織中的許多人員需要相同的權限，只要將每位人員加入至角色，就會授與他們相同的權限。  
   
 -   設定要由結構描述擁有的類似安全性實體 (資料表、檢視表和程序)，然後授與結構描述的權限。 例如，薪資結構描述可能會擁有許多資料表、檢視表和預存程序。 只要授與此結構描述的存取權，就可以同時授與執行薪資功能的所有必要權限。 如需有關哪些安全性實體可以被授與權限的詳細資訊，請參閱＜ [Securables](../../../relational-databases/security/securables.md)＞。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  同意授權者 (或是指定了 AS 選項的主體) 必須具有指定了 GRANT OPTION 的權限本身，或是具有隱含目前正在授與權限的更高權限。 **系統管理員 (sysadmin)** 固定伺服器角色的成員也能夠授與任何權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-grant-permission-to-a-principal"></a>若要為主體授與權限  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68043258"
   
 6.  完成後，請按一下 **[確定]** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-grant-permission-to-a-principal"></a>若要為主體授與權限  
   

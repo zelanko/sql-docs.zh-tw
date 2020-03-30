@@ -17,10 +17,10 @@ ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d9ab1fa97653513d18c43b916ca5bfbc2105e8e7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557870"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>建立伺服器稽核和資料庫稽核規格
@@ -43,24 +43,24 @@ ms.locfileid: "75557870"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  資料庫稽核規格是位於給定資料庫內的非安全性實體物件。 當建立資料庫稽核規格之後，它就會處於停用狀態。  
   
  當您在使用者資料庫中建立或修改資料庫稽核規格時，請勿在伺服器範圍的物件 (如系統檢視) 上包含稽核動作。 如果包含了伺服器範圍的物件，將會建立稽核。 但是，將不會包含伺服器範圍的物件，而且不會傳回任何錯誤。 若要稽核伺服器範圍的物件，請在 master 資料庫中使用資料庫稽核規格。  
   
  資料庫稽核規格位於其建立所在的資料庫，但是 **tempdb** 系統資料庫除外。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
   
 -   具有 ALTER ANY DATABASE AUDIT 權限的使用者可以建立資料庫稽核規格，並將其繫結至任何稽核。  
   
 -   在建立資料庫稽核規格之後，具有 CONTROL SERVER 或 ALTER ANY DATABASE AUDIT 權限的主體，或是系統管理員帳戶將可以檢視此規格。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-server-audit"></a>若要建立伺服器稽核  
   
@@ -106,7 +106,7 @@ ms.locfileid: "75557870"
   
 4.  當您完成選取選項之後，按一下 **[確定]** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>若要建立伺服器稽核  
   

@@ -19,10 +19,10 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 726955115dc956f2ad16e39775610deb16c445a1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134681"
 ---
 # <a name="register-a-database-as-a-dac"></a>將資料庫註冊為 DAC
@@ -36,15 +36,15 @@ ms.locfileid: "68134681"
 ## <a name="before-you-begin"></a>開始之前  
  註冊程序會建立 DAC 定義，以定義資料庫中的物件。 DAC 定義和資料庫的組合會形成 DAC 執行個體。 如果將資料庫註冊為 Database Engine 執行個體上的 DAC，下次從執行個體將公用程式收集組傳送到公用程式控制點時，註冊的 DAC 將會合併到 SQL Server 公用程式中。 然後 DAC 會出現在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [公用程式總管]  的 [部署的資料層應用程式]  節點中，並在 [部署的資料層應用程式]  詳細資料頁面中報告。  
   
-###  <a name="LimitationsRestrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制事項  
  DAC 註冊只能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本的資料庫上執行。 如果已經針對資料庫註冊 DAC，將無法執行 DAC 註冊。 例如，如果資料庫是藉由部署 DAC 所建立，您將無法執行 [註冊資料層應用程式精靈]  。  
   
  如果 DAC 或包含的使用者中不支援資料庫中的物件，則無法註冊 DAC。 如需有關 DAC 中支援之物件類型的詳細資訊，請參閱＜ [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)＞。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="permissions"></a><a name="Permissions"></a> 權限  
  在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體中註冊 DAC 至少需要 ALTER ANY LOGIN 和資料庫範圍 VIEW DEFINITION 權限、 **sys.sql_expression_dependencies**的 SELECT 權限，以及 **dbcreator** 固定伺服器角色的成員資格。 **系統管理員** 固定伺服器角色的成員或是內建 SQL Server 系統管理員帳戶 **sa** 也可以註冊 DAC。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中註冊不包含登入的 DAC，需要 **dbmanager** 或 **serveradmin** 角色的成員資格。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中註冊包含登入的 DAC，需要 **loginmanager** 或 **serveradmin** 角色的成員資格。  
   
-##  <a name="UsingRegisterDACWizard"></a> 使用註冊資料層應用程式精靈  
+##  <a name="using-the-register-data-tier-application-wizard"></a><a name="UsingRegisterDACWizard"></a> 使用註冊資料層應用程式精靈  
  **使用精靈註冊 DAC**  
   
 1.  在 **[物件總管]** 中，展開含有要註冊為 DAC 的資料庫之執行個體的節點。  
@@ -63,7 +63,7 @@ ms.locfileid: "68134681"
   
     4.  [註冊 DAC 頁面](#Register)  
   
-##  <a name="Introduction"></a> 簡介頁面  
+##  <a name="introduction-page"></a><a name="Introduction"></a> 簡介頁面  
  此頁面描述註冊資料層應用程式的步驟。  
   
  **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示此頁面。  
@@ -74,7 +74,7 @@ ms.locfileid: "68134681"
   
  [使用註冊資料層應用程式精靈](#UsingRegisterDACWizard)  
   
-##  <a name="Set_properties"></a> 設定屬性頁面  
+##  <a name="set-properties-page"></a><a name="Set_properties"></a> 設定屬性頁面  
  使用此頁面來指定 DAC 層級屬性，例如應用程式名稱和版本。  
   
  **應用程式名稱** - 字串，用來識別 DAC 定義的名稱，此欄位已經填入資料庫名稱。  
@@ -91,7 +91,7 @@ ms.locfileid: "68134681"
   
  [使用註冊資料層應用程式精靈](#UsingRegisterDACWizard)  
   
-##  <a name="Summary"></a> 驗證與摘要頁面  
+##  <a name="validation-and-summary-page"></a><a name="Summary"></a> 驗證與摘要頁面  
  使用此頁面來檢閱註冊 DAC 時，精靈將會採取的動作。 當精靈驗證可以從資料庫中的物件建立 DAC 時，此頁面會在三種狀態之間轉換。  
   
  [使用註冊資料層應用程式精靈](#UsingRegisterDACWizard)  
@@ -131,7 +131,7 @@ ms.locfileid: "68134681"
   
  [使用註冊資料層應用程式精靈](#UsingRegisterDACWizard)  
   
-##  <a name="Register"></a> 註冊 DAC 頁面  
+##  <a name="register-dac-page"></a><a name="Register"></a> 註冊 DAC 頁面  
  此頁面會報告註冊作業成功或失敗。  
   
  **註冊 DAC** - 報告為了註冊 DAC 所採取的每個動作成功或失敗。 檢閱資訊以判斷每個動作成功或失敗。 發生錯誤的所有動作在 **[結果]** 資料行中都會有一個連結。 選取連結來檢視該動作的錯誤報告。  
@@ -142,7 +142,7 @@ ms.locfileid: "68134681"
   
  [使用註冊資料層應用程式精靈](#UsingRegisterDACWizard)  
   
-##  <a name="RegisterDACPowerShell"></a> 使用 PowerShell 註冊 DAC  
+##  <a name="register-a-dac-using-powershell"></a><a name="RegisterDACPowerShell"></a> 使用 PowerShell 註冊 DAC  
  **若要在 PowerShell 指令碼中使用 Register() 方法，將資料庫註冊為 DAC**  
   
 1.  建立 SMO Server 物件，並將它設定為包含要註冊為 DAC 之資料庫的執行個體。  

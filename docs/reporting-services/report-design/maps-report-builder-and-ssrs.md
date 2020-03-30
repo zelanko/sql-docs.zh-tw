@@ -16,10 +16,10 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b59d2545358c2536bcbd0dc6d4e5e211e0c76caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082615"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>地圖 (報表產生器及 SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "77082615"
 > [!NOTE]  
 >  您可以將地圖當做報表組件，與報表分開儲存。 深入了解 [報表組件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
-##  <a name="Process"></a> 將地圖加入至報表  
+##  <a name="adding-a-map-to-your-report"></a><a name="Process"></a> 將地圖加入至報表  
  若要將地圖加入至報表，以下為要遵循的一般步驟清單：  
   
 -   決定您要顯示的分析資料以及您需要的空間資料類型。 例如，若要在泡泡地圖上顯示商店的相對年度銷售額，您需要用於分析資料的商店名稱和商店銷售額，以及用於空間資料的商店名稱和商店位置做為緯度和經度。  
@@ -49,7 +49,7 @@ ms.locfileid: "77082615"
   
  如需詳細資訊，請參閱 [規劃地圖報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)。  
   
-##  <a name="AddingData"></a> 將資料加入至地圖  
+##  <a name="adding-data-to-a-map"></a><a name="AddingData"></a> 將資料加入至地圖  
  地圖使用兩種類型的資料：空間資料與分析資料。 空間資料定義地圖的外觀，而分析資料則提供與地圖相關的值。 例如，空間資料會定義某個區域中的城市位置，而分析資料會提供每個城市的人口數。  
   
  地圖必須擁有空間資料，分析資料則是選擇性的。 例如，您可以加入只顯示某個城市中之商店位置的地圖。  
@@ -136,12 +136,12 @@ ms.locfileid: "77082615"
   
  在此範例中，光是城市名稱還不足以唯一識別人口數。 例如，在美國有很多稱為奧爾班尼的城市。 若要為特定城市命名，除了城市名稱之外，您還必須指定區域。  
   
-##  <a name="Viewport"></a> 了解地圖檢視區  
+##  <a name="understanding-the-map-viewport"></a><a name="Viewport"></a> 了解地圖檢視區  
  指定報表的地圖資料之後，您可以指定地圖 *「檢視區」* (Viewport) 來限制地圖檢視區。 根據預設，檢視區與整個地圖的區域相同。 若要裁剪地圖，您可以指定定義您要包含在報表中之區域的中心、縮放層級，以及最大和最小座標。 若要改善地圖在報表中的顯示，您可以將圖例、距離標尺和色階移到檢視區外部。 下圖顯示檢視區：  
   
  ![rs_MapViewport](../../reporting-services/report-design/media/rs-mapviewport.gif "rs_MapViewport")  
   
-##  <a name="TileLayer"></a> 加入 Bing 地圖底圖圖層  
+##  <a name="adding-a-bing-map-tiles-layer"></a><a name="TileLayer"></a> 加入 Bing 地圖底圖圖層  
  您可以加入 Bing 地圖底圖的圖層，這個圖層會為檢視區定義的目前地圖檢視提供地理背景。 若要加入圖格圖層，您必須指定 **[地理]** 座標系統以及 **[Mercator]** 投射類型。 系統會從 Bing Map Web 服務自動擷取符合您選取之檢視區置中和縮放層級的影像分割。  
   
  您可以指定下列選項來自訂圖層：  
@@ -162,7 +162,7 @@ ms.locfileid: "77082615"
   
  如需有關圖格的詳細資訊，請參閱 [Bing Maps 圖格系統](https://go.microsoft.com/fwlink/?linkid=147315)。 如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](https://go.microsoft.com/fwlink/?LinkId=151371)。  
   
-##  <a name="MapLayers"></a> 了解地圖圖層與地圖元素  
+##  <a name="understanding-map-layers-and-map-elements"></a><a name="MapLayers"></a> 了解地圖圖層與地圖元素  
  一個地圖可以擁有多個圖層。 圖層有三種類型。 每個圖層都會顯示一種空間資料類型：  
   
 -   **多邊形圖層：** 顯示區域的外框或針對每個多邊形自動計算之多邊形中心點的標記。  
@@ -208,7 +208,7 @@ ms.locfileid: "77082615"
   
  如需詳細資訊，請參閱[互動式排序、文件引導模式及連結 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)。  
   
-##  <a name="Legends"></a> 了解地圖圖例、色階與距離標尺  
+##  <a name="understanding-map-legends-color-scale-and-distance-scale"></a><a name="Legends"></a> 了解地圖圖例、色階與距離標尺  
  您可以將各種圖例加入至報表中以協助使用者解譯地圖。 地圖可以包含下列項目：  
   
 -   **圖例：** 您可以建立多個圖例。 系統會根據您為每個圖層上之地圖元素所指定的規則，自動產生圖例中所列出的項目。 針對每個規則，您可以指定用來顯示其相關項目的圖例。 以此種方式，您可以將多個圖層中的項目指派給相同的圖例或不同的圖例。  
@@ -219,14 +219,14 @@ ms.locfileid: "77082615"
   
  您可以將圖例、色階與距離標尺放在檢視區內部或外部的離散位置。 如需詳細資訊，請參閱 [變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
   
-##  <a name="Troubleshooting"></a> 地圖疑難排解  
+##  <a name="troubleshooting-maps"></a><a name="Troubleshooting"></a> 地圖疑難排解  
  地圖報表會使用來自各種資料來源的空間資料與分析資料。 每個地圖圖層都可以使用不同的資料來源。 根據圖層屬性、規則、地圖元素屬性，每個圖層的顯示屬性都會遵循特定的程序。  
   
  檢視地圖報表時，如果看不到您所要的結果，根本原因可能來自各種問題。 為了協助您區隔以及了解每一個問題，一次使用一個圖層會有協助。 使用 [地圖] 窗格選取圖層並輕鬆切換其可見性。  
   
  如需地圖報表問題的詳細資訊，請參閱[針對報表進行疑難排解：地圖報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
-##  <a name="HowTo"></a> 如何主題  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 如何主題  
  本節列出的程序可以為您逐步示範，如何在報表中使用地圖和地圖圖層。  
   
 -   [加入、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
@@ -235,7 +235,7 @@ ms.locfileid: "77082615"
   
 -   [將自訂位置加入至地圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
-##  <a name="Section"></a> 本節內容  
+##  <a name="in-this-section"></a><a name="Section"></a> 本節內容  
  [規劃地圖報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)  
   
  [地圖精靈與地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

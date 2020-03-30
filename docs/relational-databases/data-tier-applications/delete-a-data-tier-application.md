@@ -19,10 +19,10 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 07a4d09e55999c9e6f85e059f576c1460baf750a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71823555"
 ---
 # <a name="delete-a-data-tier-application"></a>刪除資料層應用程式
@@ -42,7 +42,7 @@ ms.locfileid: "71823555"
 |卸離資料庫|相關聯的資料庫會遭到卸離。 Database Engine 執行個體無法參考資料庫，但是資料和記錄檔保持不變。|  
 |刪除資料庫|相關聯的資料庫會遭到卸除。 資料和記錄檔會遭到刪除。|  
   
-###  <a name="LimitationsRestrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制事項  
  在刪除 DAC 之後還原 DAC 定義中繼資料或資料庫沒有任何自動化的機制。 您手動重建 DAC 執行個體的方式取決於刪除選項。  
   
 |選項|如何重建 DAC 執行個體|  
@@ -54,10 +54,10 @@ ms.locfileid: "71823555"
 > [!WARNING]  
 >  從已還原或重新附加的資料庫註冊 DAC 來重建 DAC 執行個體時，將無法重新建立原始 DAC 的某些部分，例如伺服器選取原則。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="permissions"></a><a name="Permissions"></a> 權限  
  DAC 只能由系統管理員 ( **sysadmin** ) 或伺服器管理員 ( **serveradmin** ) 固定伺服器角色的成員或資料庫擁有者刪除。 名為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **的內建** 系統管理員帳戶也可以啟動精靈。  
   
-##  <a name="UsingDeleteDACWizard"></a> 使用刪除資料層應用程式精靈  
+##  <a name="using-the-delete-data-tier-application-wizard"></a><a name="UsingDeleteDACWizard"></a> 使用刪除資料層應用程式精靈  
  **使用精靈刪除 DAC**  
   
 1.  在 **[物件總管]** 中，展開含有要刪除的 DAC 之執行個體的節點。  
@@ -78,7 +78,7 @@ ms.locfileid: "71823555"
   
     4.  [刪除資料層應用程式](#Delete_datatier_application)  
   
-##  <a name="Introduction"></a> 簡介頁面  
+##  <a name="introduction-page"></a><a name="Introduction"></a> 簡介頁面  
  此頁面描述刪除資料層應用程式的步驟。  
   
  **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示此頁面。  
@@ -89,7 +89,7 @@ ms.locfileid: "71823555"
   
  [使用刪除資料層應用程式精靈](#UsingDeleteDACWizard)  
   
-##  <a name="Choose_method"></a> 選擇方法頁面  
+##  <a name="choose-method-page"></a><a name="Choose_method"></a> 選擇方法頁面  
  使用此頁面來指定用於處理與要刪除的 DAC 相關聯之資料庫的選項。  
   
  **刪除註冊** - 移除定義資料層應用程式的中繼資料，但讓相關聯的資料庫保持不變。  
@@ -110,7 +110,7 @@ ms.locfileid: "71823555"
   
  [使用刪除資料層應用程式精靈](#UsingDeleteDACWizard)  
   
-##  <a name="Summary"></a> 摘要頁面  
+##  <a name="summary-page"></a><a name="Summary"></a> 摘要頁面  
  使用此頁面來檢閱刪除 DAC 執行個體時，精靈將會採取的動作。  
   
  **檢閱選項摘要** - 檢閱顯示在方塊中的 DAC、資料庫與刪除方法。 如果資訊正確，選取 **[下一步]** 或 **[完成]** 來刪除 DAC。 如果 DAC 和資料庫資訊不正確，選取 **[取消]** ，然後選取正確的 DAC。 如果刪除方法不正確，選取 **[上一步]** ，返回 **[選擇方法]** 頁面，然後選取其他方法。  
@@ -123,7 +123,7 @@ ms.locfileid: "71823555"
   
  [使用刪除資料層應用程式精靈](#UsingDeleteDACWizard)  
   
-##  <a name="Delete_datatier_application"></a> 刪除資料層應用程式頁面  
+##  <a name="delete-data-tier-application-page"></a><a name="Delete_datatier_application"></a> 刪除資料層應用程式頁面  
  此頁面會報告刪除作業成功或失敗。  
   
  **刪除 DAC** - 報告為刪除 DAC 執行個體所採取的每個動作成功或失敗。 檢閱資訊以判斷每個動作成功或失敗。 發生錯誤的所有動作在 **[結果]** 資料行中都會有一個連結。 選取連結來檢視該動作的錯誤報告。  
@@ -134,7 +134,7 @@ ms.locfileid: "71823555"
   
  [使用刪除資料層應用程式精靈](#UsingDeleteDACWizard)  
   
-##  <a name="DeleteDACPowerShell"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="DeleteDACPowerShell"></a> 使用 PowerShell  
 
 1. 建立 SMO Server 物件，並將它設定為包含要刪除之 DAC 的執行個體。  
   

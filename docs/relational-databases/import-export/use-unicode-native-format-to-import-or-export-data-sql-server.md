@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 473f9c37560ee4a63a296d2023a63ccc67aae779
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68091459"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>使用 Unicode 原生格式匯入或匯出資料 (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "68091459"
 |[範例](#examples)<br />&emsp;&#9679;&emsp;[使用 BCP 與 Unicode 原生格式匯出資料](#bcp_widenative_export)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 BCP 與 Unicode 原生格式匯入資料](#bcp_widenative_import)<br />&emsp;&#9679;&emsp;[使用 BCP 與 Unicode 原生格式匯入非 XML 格式檔案的資料](#bcp_widenative_import_fmt)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 BULK INSERT 與 Unicode 原生格式](#bulk_widenative)<br />&emsp;&#9679;&emsp;[對非 XML 格式檔案使用 BULK INSERT 與 Unicode 原生格式](#bulk_widenative_fmt)<br />&emsp;&#9679;&emsp;[對非 XML 格式檔案使用 OPENROWSET 與 Unicode 原生格式](#openrowset_widenative_fmt)|
 |[相關工作](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
   
-## Unicode 原生格式的命令選項<a name="command_options"></a>  
+## <a name="command-options-for-unicode-native-format"></a>Unicode 原生格式的命令選項<a name="command_options"></a>  
 您可以將 Unicode 原生格式資料匯入資料表，方法是使用 [bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)。對於 [bcp](../../tools/bcp-utility.md) 命令或 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 陳述式，您可以在陳述式中指定資料格式。  對於 [INSERT...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 陳述式，您必須在格式檔案中指定資料格式。  
   
 下列命令選項支援 Unicode 原生格式：  
@@ -50,10 +50,10 @@ ms.locfileid: "68091459"
 > [!NOTE]
 >  或者，您可以在格式檔案中按照每個欄位指定格式。 如需詳細資訊，請參閱 [匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)＞。
   
-## 範例測試條件<a name="etc"></a>  
+## <a name="example-test-conditions"></a>範例測試條件<a name="etc"></a>  
 本主題中的範例採用下列定義的資料表、資料檔案與格式檔案。
 
-### **範例資料表**<a name="sample_table"></a>
+### <a name="sample-table"></a>**範例資料表**<a name="sample_table"></a>
 下列指令碼會建立測試資料庫、名為 `myWidenative` 的資料表，以及在資料表中填入一些初始值。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 CREATE DATABASE TestDatabase;
@@ -79,7 +79,7 @@ VALUES
 SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
-### **範例非 XML 格式檔案**<a name="nonxml_format_file"></a>
+### <a name="sample-non-xml-format-file"></a>**範例非 XML 格式檔案**<a name="nonxml_format_file"></a>
 SQL Server 支援兩種類型的格式檔案：非 XML 格式和 XML 格式。  非 XML 格式是舊版 SQL Server 所支援的原始格式。  如需詳細資訊，請參閱 [非 XML 格式檔案 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。  下列命令將使用 [bcp 公用程式](../../tools/bcp-utility.md) ，根據 `myWidenative.fmt`的結構描述產生非 XML 格式檔案 `myWidenative`。  使用 [bcp](../../tools/bcp-utility.md) 命令建立格式檔案時，請指定 **format** 引數並使用 **nul** 取代資料檔案路徑。  format 選項也需要 **-f** 選項。  此外，以此範例為例，限定詞 **c** 會用於指定字元資料， **T** 會用於指定使用整合式安全性的信任連線。  請在命令提示字元之下，輸入下列命令：
 
 ```
@@ -95,10 +95,10 @@ Notepad D:\BCP\myWidenative.fmt
 > `SQLState = S1000, NativeError = 0`  
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
-## 範例<a name="examples"></a>
+## <a name="examples"></a>範例<a name="examples"></a>
 下列範例使用以上所建立的資料庫、資料檔案與格式檔案。
 
-### **使用 bcp 與 Unicode 原生格式匯出資料**<a name="bcp_widenative_export"></a>
+### <a name="using-bcp-and-unicode-native-format-to-export-data"></a>**使用 bcp 與 Unicode 原生格式匯出資料**<a name="bcp_widenative_export"></a>
 **-N** 參數與 **OUT** 命令。  注意︰後續所有範例皆會使用此範例中所建立的資料檔案。  請在命令提示字元之下，輸入下列命令：
 ```
 bcp TestDatabase.dbo.myWidenative OUT D:\BCP\myWidenative.bcp -T -N
@@ -107,7 +107,7 @@ REM Review results
 NOTEPAD D:\BCP\myWidenative.bcp
 ```
 
-### **不使用格式檔案而使用 bcp 與原生格式匯入資料**<a name="bcp_widenative_import"></a>
+### <a name="using-bcp-and-unicode-native-format-to-import-data-without-a-format-file"></a>**不使用格式檔案而使用 bcp 與原生格式匯入資料**<a name="bcp_widenative_import"></a>
 **-N** 參數與 **IN** 命令。  請在命令提示字元之下，輸入下列命令：
 ```
 REM Truncate table (for testing)
@@ -119,7 +119,7 @@ bcp TestDatabase.dbo.myWidenative IN D:\BCP\myWidenative.bcp -T -N
 REM Review results is SSMS
 ```
 
-### **使用 bcp 與原生格式匯入非 XML 格式檔案的資料**<a name="bcp_widenative_import_fmt"></a>
+### <a name="using-bcp-and-unicode-native-format-to-import-data-with-a-non-xml-format-file"></a>**使用 bcp 與原生格式匯入非 XML 格式檔案的資料**<a name="bcp_widenative_import_fmt"></a>
 **-N** 與 **-f** 參數與 **IN** 命令。  請在命令提示字元之下，輸入下列命令：
 ```
 REM Truncate table (for testing)
@@ -131,7 +131,7 @@ bcp TestDatabase.dbo.myWidenative IN D:\BCP\myWidenative.bcp -f D:\BCP\myWidenat
 REM Review results is SSMS
 ```
 
-### **不使用格式檔案而使用 BULK INSERT 與原生格式**<a name="bulk_widenative"></a>
+### <a name="using-bulk-insert-and-unicode-native-format-without-a-format-file"></a>**不使用格式檔案而使用 BULK INSERT 與原生格式**<a name="bulk_widenative"></a>
 **DATAFILETYPE** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative; -- for testing
@@ -145,7 +145,7 @@ BULK INSERT TestDatabase.dbo.myWidenative
 SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
-### **對非 XML 格式檔案使用 BULK INSERT 與原生格式**<a name="bulk_widenative_fmt"></a>
+### <a name="using-bulk-insert-and-unicode-native-format-with-a-non-xml-format-file"></a>**對非 XML 格式檔案使用 BULK INSERT 與原生格式**<a name="bulk_widenative_fmt"></a>
 **FORMATFILE** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative; -- for testing
@@ -159,7 +159,7 @@ BULK INSERT TestDatabase.dbo.myWidenative
 SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
-### **對非 XML 格式檔案使用 OPENROWSET 與原生格式**<a name="openrowset_widenative_fmt"></a>
+### <a name="using-openrowset-and-unicode-native-format-with-a-non-xml-format-file"></a>**對非 XML 格式檔案使用 OPENROWSET 與原生格式**<a name="openrowset_widenative_fmt"></a>
 **FORMATFILE** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative;  -- for testing
@@ -174,7 +174,7 @@ INSERT INTO TestDatabase.dbo.myWidenative
 SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
-## 相關工作<a name="RelatedTasks"></a>
+## <a name="related-tasks"></a>相關工作<a name="RelatedTasks"></a>
 若要使用大量匯入或大量匯出的資料格式  
 -   [從舊版 SQL Server 匯入原生與字元格式資料](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   

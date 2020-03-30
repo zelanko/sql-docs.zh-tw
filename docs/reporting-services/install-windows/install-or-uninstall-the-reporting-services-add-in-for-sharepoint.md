@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 1f401a51defd84d9ed6a3160c4961b3087847b2d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286242"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>安裝或解除安裝適用於 SharePoint 的 Reporting Services 增益集 (SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "79286242"
 > [!NOTE]
 > SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
   
-##  <a name="bkmk_prereq"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 必要條件  
  安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集是整合報表伺服器與 SharePoint 產品之執行個體的數個必要步驟之一。 如需安裝及設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的詳細資訊，請參閱[以 SharePoint 模式安裝第一部報表伺服器](install-the-first-report-server-in-sharepoint-mode.md)。  
   
 -   若要整合 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 與具備多重 Web 前端應用程式的 SharePoint 伺服器陣列，請在具有 Web 伺服器前端的伺服器陣列中之每部電腦上安裝增益集。 請只針對將用來存取報表伺服器內容的 Web 前端進行這項處理。  
@@ -37,7 +37,7 @@ ms.locfileid: "79286242"
   
 -   您必須是網站集合管理員，才能啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 整合功能。   
   
-##  <a name="bkmk_whatinstalled"></a> 增益集的安裝內容  
+##  <a name="what-does-the-add-in-install"></a><a name="bkmk_whatinstalled"></a> 增益集的安裝內容  
  增益集的安裝程序是由兩個階段組成，這兩個階段都會在完成標準安裝時自動完成：  
   
 -   第一階段是安裝檔案至適當的資料夾。 該資料夾是 SharePoint 部署的標準。 rsCustomAction.exe 是所安裝的檔案之一。  
@@ -50,7 +50,7 @@ ms.locfileid: "79286242"
 > [!NOTE]  
 >  在 SharePoint 產品之前安裝此增益集的好處是，當新的伺服器加入到伺服器陣列時，SharePoint 伺服器陣列將會設定和啟動 Reporting Services 增益集。  
   
-##  <a name="bkmk_3ways_to_install"></a> 安裝方法概觀  
+##  <a name="overview-of-the-installation-methods"></a><a name="bkmk_3ways_to_install"></a> 安裝方法概觀  
  您可以使用下列兩種方法的其中一種，安裝適用於 SharePoint 產品的 SQL Server 2016 Reporting Services 增益集：  
   
 -   **安裝精靈：** ![注意](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意") 在 SQL Server 2016 中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈可以安裝此增益集。 在精靈的 [功能選擇]  頁面上，選擇 [適用於 SharePoint 產品的 Reporting Services 增益集]  。  
@@ -60,7 +60,7 @@ ms.locfileid: "79286242"
     > [!NOTE]  
     >  如果您使用 **/q** 參數進行無訊息命令列安裝，將不會顯示使用者授權合約。 不論安裝方式為何，使用此軟體皆受到授權合約的限制，同時您有責任遵從授權合約的規定。  
   
-##  <a name="bkmk_install_rssharepoint"></a> 使用安裝檔 rsSharePoint.msi 安裝增益集  
+##  <a name="install-the-add-in-using-the-installation-file-rssharepointmsi"></a><a name="bkmk_install_rssharepoint"></a> 使用安裝檔 rsSharePoint.msi 安裝增益集  
  此章節與直接安裝 rssharepoint.msi 相關，可以執行 .msi 安裝精靈或命令列安裝。 如果您使用 SQL Server 安裝精靈安裝增益集，則不需遵循下列步驟。  
   
  您可以執行下列命令以看到完整的命令列參數清單：  
@@ -81,7 +81,7 @@ Rssharepoint.msi /?
   
 3.  在 SharePoint 管理中心設定報表伺服器設定與功能啟用。 。 如需安裝及設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的詳細資訊，請參閱[以 SharePoint 模式安裝第一部報表伺服器](install-the-first-report-server-in-sharepoint-mode.md)。  
   
-###  <a name="bkmk_files_only_installation"></a> 僅限檔案安裝  
+###  <a name="files-only-installation"></a><a name="bkmk_files_only_installation"></a> 僅限檔案安裝  
  若要安裝檔案但略過自訂動作階段，請從命令列執行 .msi 並加上 SKIPCA 選項：  
   
 1.  **以系統管理員權限**開啟命令提示字元。  
@@ -131,7 +131,7 @@ Rssharepoint.msi /?
     Msiexec.exe /i rsSharePoint.msi /q  
     ```  
   
-##  <a name="bkmk_remove_addin"></a> 如何移除 Reporting Services 增益集  
+##  <a name="how-to-remove-the-reporting-services-add-in"></a><a name="bkmk_remove_addin"></a> 如何移除 Reporting Services 增益集  
  您可以從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows [控制台] 或命令列，解除安裝適用於 SharePoint 產品的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 增益集。  
   
 1.  使用 [控制台] 將會完整解除安裝目前電腦上的檔案， **並且** 從 SharePoint 伺服器陣列中移除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 物件和功能。 移除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 物件和功能時，您就無法再檢閱和更新報表。  
@@ -201,7 +201,7 @@ Rssharepoint.msi /?
   
  上述步驟假設您已安裝 .msi 且 SkipCA=1，同時可以使用 rscusstomaction.exe。 如需詳細資訊，請參閱説明僅限檔案安裝一節。  
   
-##  <a name="bkmk_repair"></a> 如何從命令列修復 rsSharePoint.msi  
+##  <a name="how-to-repair-rssharepointmsi-from-the-command-line"></a><a name="bkmk_repair"></a> 如何從命令列修復 rsSharePoint.msi  
  若要使用命令列修復或解除安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集，請完成下列步驟：  
   
 1.  **以系統管理員權限**開啟命令提示字元。  
@@ -212,7 +212,7 @@ Rssharepoint.msi /?
     msiexec.exe /f rssharepoint.msi  
     ```  
   
-##  <a name="bkmk_logfiles"></a> 設定記錄檔  
+##  <a name="setup-log-files"></a><a name="bkmk_logfiles"></a> 設定記錄檔  
  執行安裝程式時，會為已安裝 **增益集的使用者，將資訊記錄到** %temp% [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料夾中的記錄檔。 例如 **c:\Users\\<使用者名稱\>\AppData\Local\Temp**。檔案名稱是 **RS_SP_\<編號>.log**，例如 **RS_SP_0.log**。 該記錄檔中的每項錯誤，都會以 "SSRSCustomActionError" 字串開頭。  
   
 > [!NOTE]  
@@ -246,7 +246,7 @@ Rssharepoint.msi /?
   
      第 1 課：建立 Windows Azure 儲存體物件`2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`。  
   
-##  <a name="bkmk_upgrade"></a> 升級  
+##  <a name="upgrade"></a><a name="bkmk_upgrade"></a> 升級  
  如果您已擁有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集的現有安裝，則可以升級至目前版本。 增益集的安裝程式會偵測現有的版本，並提示您確認升級作業。 這些訊息類似於下列文字：  
   
  **在您的系統上已偵測到較低版本的此產品。請問您想要升級現有的安裝嗎？**  
@@ -255,7 +255,7 @@ Rssharepoint.msi /?
   
  請注意， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集無法感知執行個體。 在電腦上只能安裝一個增益集執行個體。 目前版本無法與相異版本並存。  
   
-##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
+##  <a name="rscustomactionexe"></a><a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
  下表摘要列出 rscustomaction.exe 參數：  
   
 |Switch|描述|  

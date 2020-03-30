@@ -21,10 +21,10 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298308"
 ---
 # <a name="execute-sql-task"></a>執行 SQL 工作
@@ -272,7 +272,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
 -   [取得傳回碼的值](#Return_codes)    
   
-###  <a name="Parameter_names_and_markers"></a> 參數名稱和標記  
+###  <a name="parameter-names-and-markers"></a><a name="Parameter_names_and_markers"></a> 參數名稱和標記  
  依據執行 SQL 工作使用的連接類型，SQL 命令的語法會使用不同的參數標記。 例如，[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員類型要求 SQL 命令使用格式為 **\@varParameter** 的參數標記，而 OLE DB 連接類型則需要使用問號 (?) 參數標記。  
   
  在變數與參數的對應中，可以用來當做參數名稱的名稱也會隨著連線管理員的類型而異。 例如，[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員類型使用具有 \@ 前置詞的使用者定義名稱，而 OLE DB 連線管理員類型則要求您使用以 0 為基底的序數數值作為參數名稱。  
@@ -307,7 +307,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
  您在使用 OLE DB 連接管理員時無法使用參數化的子查詢，因為執行 SQL 工作無法透過 OLE DB 提供者衍生參數資訊。 不過，您可以使用運算式，將參數值串連到查詢字串，並設定工作的 SqlStatementSource 屬性。  
   
-###  <a name="Date_and_time_data_types"></a> 搭配日期和時間資料類型使用參數  
+###  <a name="use-parameters-with-date-and-time-data-types"></a><a name="Date_and_time_data_types"></a> 搭配日期和時間資料類型使用參數  
   
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>搭配 ADO.NET 和 ADO 連線管理員使用日期和時間參數  
  讀取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型的資料，即 **time** 和 **datetimeoffset**時，使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 或 ADO 連線管理員的「執行 SQL」工作有下列額外需求：  
@@ -356,7 +356,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
  如果資料沒有以適當的輸入或輸出參數儲存，則封裝會失敗。  
   
-###  <a name="WHERE_clauses"></a> 在 WHERE 子句中使用參數  
+###  <a name="use-parameters-in-where-clauses"></a><a name="WHERE_clauses"></a> 在 WHERE 子句中使用參數  
  SELECT、INSERT、UPDATE 和 DELETE 命令經常包含 WHERE 子句，以指定篩選條件，用以定義來源資料表中每個資料列必須符合才能做為 SQL 命令的條件。 參數會在 WHERE 子句中提供篩選值。  
   
  您可以使用參數標記，動態提供參數值。 SQL 陳述式中可以使用的參數標記和參數名稱的規則，需視「執行 SQL」所使用的連接管理員類型而定。  
@@ -377,7 +377,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
 -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接類型使用參數名稱 \@parmMinProductID 和 \@parmMaxProductID。  
   
-###  <a name="Stored_procedures"></a> 搭配預存程序使用參數  
+###  <a name="use-parameters-with-stored-procedures"></a><a name="Stored_procedures"></a> 搭配預存程序使用參數  
  執行預存程序的 SQL 命令亦可使用參數對應。 如何使用參數標記和參數名稱的規則，需視「執行 SQL」所使用的連接管理員類型而定，這一點與參數化查詢的規則相同。  
   
  下表依照連接管理員類型列出 EXEC 命令的範例。 這些範例會執行 **中的** uspGetBillOfMaterials [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]預存程序。 預存程序會使用 `@StartProductID` 和 `@CheckDate` **輸入**參數。  
@@ -464,7 +464,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
 14. 按一下 [確定]  。  
 
-##  <a name="Return_codes"></a> 取得傳回碼的值  
+##  <a name="get-the-values-of-return-codes"></a><a name="Return_codes"></a> 取得傳回碼的值  
  預存程序可以傳回稱為傳回碼的整數值，以指出程序的執行狀態。 若要在「執行 SQL」工作中實作傳回碼，請使用 **ReturnValue** 類型的參數。  
   
  下表依據連接類型列出實作傳回碼的部分 EXEC 命令範例。 所有的範例都使用 **Input** 參數。 在所有參數類型 (**Input**、**Output** 和 **ReturnValue**) 中，如何使用參數標記和參數名稱的規則都相同。  
@@ -493,7 +493,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
 -   [以結果集填入變數](#Populate_variable_with_result_set)  
   
-###  <a name="Result_set_type"></a> 指定結果集類型  
+###  <a name="specify-a-result-set-type"></a><a name="Result_set_type"></a> 指定結果集類型  
  執行 SQL 工作支援下列類型的結果集︰  
   
 -   **無** ：結果集是在查詢未傳回任何結果時使用。 例如，此結果集用於加入、變更和刪除資料表中記錄的查詢。  
@@ -506,7 +506,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
  如果執行 SQL 工作使用 **[完整結果集]** 結果集，且查詢傳回多個資料列集，則工作只會傳回第一個資料列集。 如果此資料列集產生錯誤，則工作會報告該錯誤。 如果其他資料列集產生錯誤，則工作不會報告它們。  
   
-###  <a name="Populate_variable_with_result_set"></a> 以結果集填入變數  
+###  <a name="populate-a-variable-with-a-result-set"></a><a name="Populate_variable_with_result_set"></a> 以結果集填入變數  
  如果查詢傳回的結果集類型為單一資料列、資料列集或 XML，則您可將結果集繫結至使用者自訂的變數。  
   
  如果結果集類型為 **Single row**，則可以藉由使用資料行名稱做為結果集名稱將傳回結果中的資料行繫結至變數，或者可以使用資料行清單中資料行的序數位置做為結果集名稱。 例如，查詢 `SELECT Color FROM Production.Product WHERE ProductID = ?` 的結果集名稱可以為 **Color** 或 **0**。 如果查詢傳回多個資料行，並且您要存取所有資料行中的值，則您必須將每個資料行繫結至不同的變數。 如果您透過使用數字做為結果集名稱將資料行對應至變數，則該數字會反映資料行在查詢的資料行清單中所顯示的順序。 例如，在查詢 `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`中，您將 0 用於 **Color** 資料行，將 1 用於 **ListPrice** 資料行。 使用資料行名稱做為結果集名稱的功能取決於將該工作設定為使用的提供者。 並非所有的提供者可以使用資料行名稱做為結果集名稱。  

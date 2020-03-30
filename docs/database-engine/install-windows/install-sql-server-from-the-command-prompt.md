@@ -85,10 +85,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ebf82ec10f01b52b606a1250266884bbcd0a4497
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288612"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>從命令提示字元安裝 SQL Server
@@ -145,7 +145,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 > [!NOTE]
 > 如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。 若為容錯移轉叢集安裝，您必須是本機系統管理員，而且在所有容錯移轉叢集節點上擁有權限，能夠登入成為服務以及做為作業系統的一部分。  
   
-##  <a name="ProperUse"></a> 安裝程式參數的正確用法  
+##  <a name="proper-use-of-setup-parameters"></a><a name="ProperUse"></a> 安裝程式參數的正確用法  
 您可以使用下列指導方針來開發具有正確語法的安裝命令：  
   
 -   /PARAMETER (範例：`/INDICATEPROGRESS`)
@@ -168,7 +168,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 針對 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件所列出的參數是該元件專用的。 SQL Server Agent 和 SQL Server Browser 參數適用於安裝 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]時。  
 
 
-##  <a name="Install"></a> 安裝參數  
+##  <a name="installation-parameters"></a><a name="Install"></a> 安裝參數  
  您可以使用下表中參數來開發安裝的命令列指令碼。  
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
@@ -271,7 +271,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSVCINSTANTFILEINIT="True" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-##  <a name="SysPrep"></a> SysPrep 參數  
+##  <a name="sysprep-parameters"></a><a name="SysPrep"></a> SysPrep 參數  
  如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 的詳細資訊，請參閱  
   
  [使用 SysPrep 安裝 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../database-engine/install-windows/install-sql-server-using-sysprep.md)。 
@@ -374,7 +374,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-##  <a name="Upgrade"></a> 升級參數  
+##  <a name="upgrade-parameters"></a><a name="Upgrade"></a> 升級參數  
  您可以使用下表中的參數來開發升級的命令列指令碼。 
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
@@ -412,7 +412,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER /RSUPGRADEDATABASEACCOUNT="<Provide a SQL Server logon account that can connect to the report server during upgrade>" /RSUPGRADEPASSWORD="<Provide a password for the report server upgrade account>" /ISSVCAccount="NT Authority\Network Service" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-##  <a name="Repair"></a> 修復參數  
+##  <a name="repair-parameters"></a><a name="Repair"></a> 修復參數  
  您可以使用下表中的參數來開發修復的命令列指令碼。 
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
@@ -436,7 +436,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>  
 ```  
   
-##  <a name="Rebuild"></a> 重建系統資料庫參數  
+##  <a name="rebuild-system-database-parameters"></a><a name="Rebuild"></a> 重建系統資料庫參數  
  您可以使用下表中的參數開發命令列指令碼，以重建 master、model、msdb 與 tempdb 系統資料庫。 如需詳細資訊，請參閱 [重建系統資料庫](../../relational-databases/databases/rebuild-system-databases.md)。 
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
@@ -455,7 +455,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **選擇性**|指定 tempdb 記錄檔的初始大小 (MB)。 安裝程式允許的大小上限為 1024。 預設值：<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 4 個<br /><br /> 所有其他版本為 8 個<br /><br /> 允許的範圍：最小值 = 預設值 (4 或 8)，最大值 = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引進。 指定每個 tempdb 記錄檔的初始大小。<br/><br/>預設值 = [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 為 4 MB，所有其他版本為 8 MB。<br/><br/>最小值= (4 MB 或 8 MB)。<br/><br/>最大值 = 1024 MB ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 為 262,144 MB)。|  
   
-##  <a name="Uninstall"></a> 解除安裝參數  
+##  <a name="uninstall-parameters"></a><a name="Uninstall"></a> 解除安裝參數  
  您可以使用下表中的參數來開發解除安裝的命令列指令碼。 
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
@@ -478,7 +478,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
   
  若要移除具名執行個體，請在本文先前提到的範例中指定執行個體的名稱，而非 "MSSQLSERVER"。 
   
-##  <a name="ClusterInstall"></a> 容錯移轉叢集參數  
+##  <a name="failover-cluster-parameters"></a><a name="ClusterInstall"></a> 容錯移轉叢集參數  
  安裝 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集執行個體之前，請先檢閱下列文章：  
   
 -   [安裝 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的硬體和軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
@@ -743,7 +743,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEDATABASEACCOUNT<br /><br /> **選擇性**|只有在升級 2008 R2 或更早版本的 SharePoint 模式報表伺服器時，才會使用此屬性。 針對使用舊版 SharePoint 模式架構 (此架構已在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中變更) 的報表伺服器，會執行其他升級作業。 如果此選項未隨附於命令列安裝，則會使用舊報表伺服器執行個體的預設服務帳戶。 如果使用這個屬性，請使用 **/RSUPGRADEPASSWORD** 屬性提供此帳戶的密碼。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEPASSWORD<br /><br /> **選擇性**|現有報表伺服器服務帳戶的密碼。|  
   
-####  <a name="AddNode"></a> 加入節點參數  
+####  <a name="add-node-parameters"></a><a name="AddNode"></a> 加入節點參數  
  您可以使用下表中的參數來開發 AddNode 的命令列指令碼。 
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
@@ -810,7 +810,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICATEPROGRESS] /CONFIRMIPDEPENDENCYCHANGE=0  
 ```  
   
-##  <a name="Accounts"></a> 服務帳戶參數  
+##  <a name="service-account-parameters"></a><a name="Accounts"></a> 服務帳戶參數  
  您可以使用內建帳戶、本機帳戶或網域帳戶來設定 SQL Server 服務。 
   
 > [!NOTE] 
@@ -830,7 +830,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   > 已從 SQL Server 2017 移除 Reporting Services 功能。 SQL Server Reporting Services 的帳戶參數僅適用於 SQL Server 2017 之前版本。 
 
 
-##  <a name="Feature"></a> 功能參數  
+##  <a name="feature-parameters"></a><a name="Feature"></a> 功能參數  
  若要安裝特定功能，請使用 /FEATURES 參數，然後指定下表中的父功能或功能值。 如需 SQL Server 版本支援的功能清單，請參閱 [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 
   
 |父功能參數|功能參數|描述|  
@@ -881,7 +881,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=BOL|安裝《SQL Server 線上叢書》元件，以檢視並管理說明內容。|  
 |/FEATURES=SQLEngine,PolyBase|安裝 PolyBase 引擎。|  
   
-##  <a name="RoleParameters"></a> 角色參數  
+##  <a name="role-parameters"></a><a name="RoleParameters"></a> 角色參數  
  安裝程式角色或 /Role 參數是用來安裝預先設定的功能選項。 SSAS 角色會在現有 SharePoint 伺服器陣列或未設定的新伺服器陣列中安裝 SSAS 執行個體。 為支援每個狀況，提供兩個安裝程式角色。 您一次只能選擇一個要安裝的安裝程式角色。 如果您選擇安裝程式角色，安裝程式會安裝屬於該角色的功能與元件。 您無法改變為該角色所指定的功能與元件。 如需有關如何使用功能角色參數的詳細資訊，請參閱 [從命令提示字元安裝 Power Pivot](https://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)。 
   
  AllFeatures_WithDefaults 角色是 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 版本的預設行為，而且會減少向使用者顯示的對話方塊數目。 安裝非 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的 SQL Server 版本時，可以從命令列指定該角色。 
@@ -892,7 +892,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |SPI_AS_NewFarm|在全新且未設定的 Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 伺服陣列或獨立伺服器上，將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 安裝為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 具名執行個體。 SQL Server 安裝程式將會在功能角色安裝期間設定伺服陣列。|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 計算引擎已針對記憶體內部資料儲存和處理進行預先設定。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案套件<br /><br /> SQL Server 線上叢書<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> 組態工具<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |AllFeatures_WithDefaults|安裝適用於目前版本的所有功能。<br /><br /> 將目前的使用者新增至 SQL Server **系統管理員** 固定伺服器角色。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更新版本上，以及當作業系統不是網域控制站時， [!INCLUDE[ssDE](../../includes/ssde-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設會使用 NTAUTHORITY\NETWORK SERVICE 帳戶，而 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 預設會使用 NTAUTHORITY\NETWORK SERVICE 帳戶。<br /><br /> 在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]版本中，預設會啟用這個角色。 針對其他所有版本，則不會啟用此角色，但是可以透過 UI 或使用命令列參數指定。|對於 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的版本，請僅安裝適用於此版本的功能。 對於其他版本，則安裝所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。<br /><br /> **AllFeatures_WithDefaults** 參數可以結合會覆寫 **AllFeatures_WithDefaults** 參數設定的其他參數。 例如，使用 **AllFeatures_WithDefaults** 參數與 **/Features=RS** 參數會覆寫安裝所有功能的命令，而僅安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，但接受 **AllFeatures_WithDefaults** 參數則會使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的預設服務帳戶。<br /><br /> 使用 **AllFeatures_WithDefaults** 參數與 **/ADDCURRENTUSERASSQLADMIN=FALSE** 時，不會以目前的使用者自動擴展提供對話方塊。 新增 **/AGTSVCACCOUNT** 和 **/AGTSVCPASSWORD** 來指定 SQL Server Agent 的服務帳戶與密碼。|  
   
-##  <a name="RollOwnership"></a> 使用 /FAILOVERCLUSTERROLLOWNERSHIP 參數來控制容錯移轉行為  
+##  <a name="controlling-failover-behavior-using-the-failoverclusterrollownership-parameter"></a><a name="RollOwnership"></a> 使用 /FAILOVERCLUSTERROLLOWNERSHIP 參數來控制容錯移轉行為  
 若要將 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，您必須在容錯移轉叢集節點上執行安裝程式 (從被動節點開始，一次一個)。 安裝程式會根據容錯移轉叢集執行個體中的節點總數以及已經升級的節點數目，判斷容錯移轉至升級節點的時機。 如果半數以上的節點都已經升級，安裝程式預設會讓系統容錯移轉至升級的節點。 
  
 若要在升級程序期間控制叢集節點的容錯移轉行為，請在命令提示字元中執行升級作業，然後在升級作業讓節點離線之前，使用 /FAILOVERCLUSTERROLLOWNERSHIP 參數來控制容錯移轉行為。 這個參數的用法如下所示：  
@@ -903,7 +903,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 -   /FAILOVERCLUSTERROLLOWNERSHIP=2 是預設設定。 如果沒有指定這個參數，就會使用此設定。 這項設定表示 SQL Server 安裝程式將會視需要管理叢集擁有權 (移動群組)。 
   
-##  <a name="InstanceID"></a> 執行個體識別碼或 InstanceID 組態  
+##  <a name="instance-id-or-instanceid-configuration"></a><a name="InstanceID"></a> 執行個體識別碼或 InstanceID 組態  
  執行個體識別碼或 /InstanceID 參數是用來指定您可以安裝執行個體元件的位置以及執行個體的登錄路徑。 INSTANCEID 的值是字串而且應該為唯一。 
   
 -   SQL 執行個體識別碼：`MSSQLxx.<INSTANCEID>`  

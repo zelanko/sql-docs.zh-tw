@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 9a665f51aa6fd6bc9b87ac354a26856049004d7e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401580"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>大量匯入與匯出 XML 文件的範例 (SQL Server)
@@ -61,7 +61,7 @@ ms.locfileid: "74401580"
   
 -  [E.大量匯出 XML 資料](#bulk_export_xml_data)  
   
-## <a name="binary_byte_stream"></a>以二進位位元組資料流大量匯入 XML 資料  
+## <a name="bulk-importing-xml-data-as-a-binary-byte-stream"></a><a name="binary_byte_stream"></a>以二進位位元組資料流大量匯入 XML 資料  
  從包含您要套用的編碼宣告之檔案大量匯入 XML 資料時，請在 OPENROWSET(BULK…) 子句中指定 SINGLE_BLOB 選項。 SINGLE_BLOB 選項可確保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 XML 剖析器，會根據 XML 宣告中指定的編碼配置來匯入資料。  
   
 #### <a name="sample-table"></a>範例資料表  
@@ -108,7 +108,7 @@ SELECT * FROM OPENROWSET(
   
  [[頁首]](#top)  
   
-##  <a name="existing_row"></a> 在現有資料列中大量匯入 XML 資料  
+##  <a name="bulk-importing-xml-data-in-an-existing-row"></a><a name="existing_row"></a> 在現有資料列中大量匯入 XML 資料  
  這個範例使用 `OPENROWSET` 大量資料列集提供者，將 XML 執行個體加入範例資料表 `T`中的現有資料列。  
   
 > [!NOTE]  
@@ -143,7 +143,7 @@ GO
   
  [[頁首]](#top)  
   
-## <a name="file_contains_dtd"></a> 從包含 DTD 的檔案大量匯入 XML 資料  
+## <a name="bulk-importing-xml-data-from-a-file-that-contains-a-dtd"></a><a name="file_contains_dtd"></a> 從包含 DTD 的檔案大量匯入 XML 資料  
   
 > [!IMPORTANT]  
 >  如果您的 XML 環境不需要文件類型定義 (DTD)，我們建議您不要啟用這項支援。 開啟 DTD 支援會增加您伺服器受攻擊的介面區，以及將它暴露於阻絕服務攻擊的危險。 如果您必須啟用 DTD 支援，可以藉由只處理信任的 XML 文件來減輕此安全性風險。  
@@ -189,7 +189,7 @@ INSERT T1
   
  [[頁首]](#top)  
   
-## <a name="field_terminator_in_format_file"></a> 使用格式檔案明確指定欄位結束字元  
+## <a name="specifying-the-field-terminator-explicitly-using-a-format-file"></a><a name="field_terminator_in_format_file"></a> 使用格式檔案明確指定欄位結束字元  
  下列範例顯示如何大量匯入下列 XML 文件 `Xmltable.dat`。  
   
 #### <a name="sample-data-file"></a>範例資料檔  
@@ -252,7 +252,7 @@ GO
   
  [[頁首]](#top)  
   
-## <a name="bulk_export_xml_data"></a> 大量匯出 XML 資料  
+## <a name="bulk-exporting-xml-data"></a><a name="bulk_export_xml_data"></a> 大量匯出 XML 資料  
  下列範例使用 [bcp](../../tools/bcp-utility.md) 從前面範例所建立的資料表 (使用相同的 XML 格式檔案) 大量匯入 XML 資料。 在下列 `bcp` 命令中， `<server_name>` 和 `<instance_name>` 代表必須以適當值取代的預留位置：  
   
 ```cmd

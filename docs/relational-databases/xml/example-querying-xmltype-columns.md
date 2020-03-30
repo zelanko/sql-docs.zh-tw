@@ -13,10 +13,10 @@ ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa648babb6c6ba6ae9578921833d2c2201fb4c95
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006820"
 ---
 # <a name="example-querying-xmltype-columns"></a>範例：查詢 XMLType 資料行

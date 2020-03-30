@@ -18,10 +18,10 @@ ms.assetid: 6b04f5a7-2e69-4d34-901e-b61ba6ca9c14
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 4561b52049da9c051b7e8eda3835545f600c0e70
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68120781"
 ---
 # <a name="stsrid-geography-data-type"></a>STSrid (geography 資料類型)

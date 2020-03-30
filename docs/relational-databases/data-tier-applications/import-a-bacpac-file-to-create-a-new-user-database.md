@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 12226869eb78e53c072826ad0dc8e280104108e3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74094568"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>匯入 BACPAC 檔案以建立新的使用者資料庫
@@ -84,7 +84,7 @@ ms.locfileid: "74094568"
   
     -   [結果頁面](#Results)  
   
-###  <a name="Introduction"></a> 簡介頁面  
+###  <a name="introduction-page"></a><a name="Introduction"></a> 簡介頁面  
  此頁面描述的是資料層應用程式匯入精靈的步驟。  
   
  **選項**  
@@ -95,7 +95,7 @@ ms.locfileid: "74094568"
   
 -   **取消** - 取消作業並關閉精靈。  
   
-###  <a name="Import_settings"></a> 匯入設定頁面  
+###  <a name="import-settings-page"></a><a name="Import_settings"></a> 匯入設定頁面  
  您可以使用此頁面來指定要匯入之 .bacpac 檔案的位置。  
   
 -   **從本機磁碟匯入** - 按一下 [瀏覽...]  巡覽本機電腦，或在提供的空間中指定路徑。 路徑名稱必須包含檔案名稱和 .bacpac 副檔名。  
@@ -106,7 +106,7 @@ ms.locfileid: "74094568"
   
      若要繼續進行，請指定要匯入的 .bacpac 檔案，然後按一下 **[開啟]** 。  
   
-###  <a name="Database_settings"></a> 資料庫設定頁面  
+###  <a name="database-settings-page"></a><a name="Database_settings"></a> 資料庫設定頁面  
  您可以使用此頁面指定要建立之資料庫的詳細資料。  
   
  **若為 SQL Server 的本機執行個體：**  
@@ -129,15 +129,15 @@ ms.locfileid: "74094568"
   
  若要繼續進行，請按 **[下一步]** 。  
   
-###  <a name="Summary"></a> 摘要頁面  
+###  <a name="summary-page"></a><a name="Summary"></a> 摘要頁面  
  您可以使用此頁面來檢閱作業的指定來源和目標設定。 若要使用指定的設定來完成匯入作業，請按一下 **[完成]** 。 若要取消匯入作業並結束精靈，請按一下 **[取消]** 。  
   
-###  <a name="Progress"></a> 進度頁面  
+###  <a name="progress-page"></a><a name="Progress"></a> 進度頁面  
  此頁面會顯示進度列，指出作業的狀態。 若要檢視詳細狀態，請按一下 **[檢視詳細資料]** 選項。  
   
  若要繼續進行，請按 **[下一步]** 。  
   
-###  <a name="Results"></a> 結果頁面  
+###  <a name="results-page"></a><a name="Results"></a> 結果頁面  
  此頁面會報告匯入和建立資料庫作業成功或失敗，並顯示每個動作成功或失敗。 發生錯誤的所有動作在 **[結果]** 資料行中都會有一個連結。 按一下連結，即可檢視該動作的錯誤報告。  
   
  按一下 [關閉]  即可關閉精靈。  

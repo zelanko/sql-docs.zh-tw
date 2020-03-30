@@ -18,10 +18,10 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6a95082cd732b644105c14c4ba598f859f48456e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014701"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>監視可用性群組 (Transact-SQL)
@@ -32,10 +32,10 @@ ms.locfileid: "68014701"
 >  許多這些檢視可在單一查詢中聯結，透過檢視識別碼資料行從多個檢視傳回資訊。  
   
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 目錄檢視需要伺服器執行個體的 VIEW ANY DEFINITION 權限。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 動態管理檢視需要伺服器的 VIEW SERVER STATE 權限。  
   
-##  <a name="AoAgFeatureOnSI"></a> 監視伺服器執行個體上的 AlwaysOn 可用性群組功能  
+##  <a name="monitoring-the-always-on-availability-groups-feature-on-a-server-instance"></a><a name="AoAgFeatureOnSI"></a> 監視伺服器執行個體上的 AlwaysOn 可用性群組功能  
  若要監視伺服器執行個體上的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能，請使用下列內建函數：  
   
  [SERVERPROPERTY](../../../t-sql/functions/serverproperty-transact-sql.md) 函數  
@@ -43,7 +43,7 @@ ms.locfileid: "68014701"
   
  **資料行名稱：** IsHadrEnabled、HadrManagerStatus  
   
-##  <a name="WSFC"></a> 監視 WSFC 叢集中的可用性群組  
+##  <a name="monitoring-availability-groups-on-the-wsfc-cluster"></a><a name="WSFC"></a> 監視 WSFC 叢集中的可用性群組  
  若要監視裝載已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]之本機伺服器執行個體的 Windows Server 容錯移轉叢集 (WSFC) 叢集，請使用下列檢視：  
   
  [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)  
@@ -82,7 +82,7 @@ ms.locfileid: "68014701"
   
  如需 WSFC 叢集和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的相關資訊，請參閱 [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) 和[容錯移轉叢集和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)。  
   
-##  <a name="AvGroups"></a> 監視可用性群組  
+##  <a name="monitoring-availability-groups"></a><a name="AvGroups"></a> 監視可用性群組  
  若要監視伺服器執行個體裝載其可用性複本的可用性群組，請使用下列檢視：  
   
  [sys.availability_groups](../../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)  
@@ -100,7 +100,7 @@ ms.locfileid: "68014701"
   
  **資料行名稱：** group_id、primary_replica、primary_recovery_health、primary_recovery_health_desc、secondary_recovery_health、secondary_recovery_health_desc、synchronization_health、synchronization_health_desc  
   
-##  <a name="AvReplicas"></a> sys.dm_hadr_availability_replica_cluster_states  
+##  <a name="monitoring-availability-replicas"></a><a name="AvReplicas"></a> sys.dm_hadr_availability_replica_cluster_states  
  若要監視可用性複本，請使用下列檢視和系統函數：  
   
  [sys.availability_replicas](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)  
@@ -134,7 +134,7 @@ ms.locfileid: "68014701"
 > [!NOTE]  
 >  如需可用性複本效能計數器 ( **SQLServer:Availability Replica**  效能物件) 的相關資訊，請參閱 [SQL Server、可用性複本](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)。  
   
-##  <a name="AvDbs"></a> sys.dm_hadr_database_replica_cluster_states  
+##  <a name="monitoring-availability-databases"></a><a name="AvDbs"></a> sys.dm_hadr_database_replica_cluster_states  
  若要監視可用性資料庫，請使用下列檢視：  
   
  [監視可用性資料庫](../../../relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql.md)  
@@ -171,7 +171,7 @@ ms.locfileid: "68014701"
 > [!NOTE]  
 >  如需可用性資料庫 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 效能計數器 ( **SQLServer:Database Replica** 效能物件) 的相關資訊，請參閱 [SQL Server、資料庫複本](../../../relational-databases/performance-monitor/sql-server-database-replica.md)。 此外，若要監視可用性資料庫上的交易記錄活動，請使用 **SQLServer:Databases** 效能物件的下列計數器：**Log Flush Write Time (ms)** 、**Log Flushes/sec**、**Log Pool Cache Misses/sec**、**Log Pool Disk Reads/sec** 和 **Log Pool Requests/sec**。如需詳細資訊，請參閱 [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)。  
   
-##  <a name="AGlisteners"></a> 監視可用性群組接聽程式  
+##  <a name="monitoring-availability-group-listeners"></a><a name="AGlisteners"></a> 監視可用性群組接聽程式  
  若要監視 WSFC 叢集子網路上的可用性群組接聽程式，請使用下列檢視：  
   
  [sys.availability_group_listener_ip_addresses](../../../relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql.md)  
@@ -193,7 +193,7 @@ ms.locfileid: "68014701"
   
  如需可用性群組接聽程式的相關資訊，請參閱[可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **AlwaysOn 可用性群組監視工作：**  
   
 -   [使用物件總管詳細資料監視可用性群組 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)  

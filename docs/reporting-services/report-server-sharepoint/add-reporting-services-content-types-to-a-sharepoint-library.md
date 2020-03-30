@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d50d7e273be27f6b03d98db40c2da1dc70b23306
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68887742"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>將 Reporting Services 內容類型新增至 SharePoint 文件庫
@@ -54,7 +54,7 @@ ms.locfileid: "68887742"
   
 -   [啟用多個 BI 網站的內容類型與內容管理](#bkmk_enable_multiple_sites)  
   
-##  <a name="bkmk_enable_all"></a> 在現有 BI 中心的所有文件庫中啟用內容類型  
+##  <a name="enable-content-types-in-all-document-libraries-in-an-existing-bi-center"></a><a name="bkmk_enable_all"></a> 在現有 BI 中心的所有文件庫中啟用內容類型  
   
 1.  若要在現有 **商業智慧中心** 網站的所有文件庫中啟用內容類型與內容管理，您可以切換 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 整合功能。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68887742"
   
      ![](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
   
-##  <a name="bkmk_enable_content_management"></a> 啟用單一文件庫的內容類型管理 (SharePoint 2013)  
+##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2013"></a><a name="bkmk_enable_content_management"></a> 啟用單一文件庫的內容類型管理 (SharePoint 2013)  
   
 1.  開啟要啟用多個內容類型的文件庫。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68887742"
   
 6.  按一下 [確定]  。  
   
-##  <a name="bkmk_add_single"></a> 加入 Reporting Services 內容類型 (SharePoint 2013)  
+##  <a name="to-add-reporting-services-content-types-sharepoint-2013"></a><a name="bkmk_add_single"></a> 加入 Reporting Services 內容類型 (SharePoint 2013)  
   
 1.  開啟要加入 Reporting Services 內容類型的程式庫。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "68887742"
   
     -   所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 內容類型已經加入至文件庫。 如果所有內容類型是文件庫的一部分，則該群組已從 **[新增內容類型]** 頁面中移除。 如果您刪除一個或多個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 內容類型，就會在 **[新增內容類型]** 頁面上看到群組 **[SQL Server Reporting Services 內容類型]** 。  
   
-##  <a name="bkmk_enable_content_management_2010"></a> 啟用單一文件庫的內容類型管理 (SharePoint 2010)  
+##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2010"></a><a name="bkmk_enable_content_management_2010"></a> 啟用單一文件庫的內容類型管理 (SharePoint 2010)  
   
 1.  開啟要啟用多個內容類型的文件庫。 您應會在文件庫功能表列上看見下列功能表：[新增]  、[上傳]  、[動作]  及 [設定]  。 如果您看不到 **[設定]** ，表示您沒有加入內容類型的權限。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "68887742"
   
 6.  按一下 [確定]  。  
   
-##  <a name="bkmk_add_single_2010"></a> 若要加入報表伺服器內容類型 (SharePoint 2010)  
+##  <a name="to-add-report-server-content-types-sharepoint-2010"></a><a name="bkmk_add_single_2010"></a> 若要加入報表伺服器內容類型 (SharePoint 2010)  
   
 1.  開啟要加入 Reporting Services 內容類型的程式庫。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "68887742"
   
 8.  當您完成新增內容類型後，按一下 **[確定]** 。  
   
-##  <a name="bkmk_enable_multiple_sites"></a> 啟用多個 BI 網站的內容類型與內容管理  
+##  <a name="to-enable-content-types-and-content-management-for-multiple-bi-sites"></a><a name="bkmk_enable_multiple_sites"></a> 啟用多個 BI 網站的內容類型與內容管理  
   
 1.  對於 SQL Server Reporting Services 2008 及 2008 R2 報表伺服器，您可以啟用多個商業智慧中心網站的內容類型與內容管理：  
   

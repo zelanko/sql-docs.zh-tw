@@ -11,13 +11,13 @@ ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
 ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71127245"
 ---
-# <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>快速入門：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連線及查詢 PostgreSQL
+# <a name="quickstart-connect-and-query-postgresql-using-name-sos"></a>快速入門：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連線及查詢 PostgreSQL
 本快速入門說明如何使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連線到 PostgreSQL，然後使用 SQL 陳述式建立並查詢資料庫 *tutorialdb*。
 
 ## <a name="prerequisites"></a>Prerequisites

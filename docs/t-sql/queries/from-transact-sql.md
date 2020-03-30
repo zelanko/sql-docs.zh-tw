@@ -34,12 +34,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bcf4dc79c1b241d4a9f48a3d211c13871e32b711
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 76f407aa887c05ba1cd7f52dbb0a3513ce3bc5e8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287452"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216917"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 子句與 JOIN、APPLY、PIVOT (Transact-SQL)
 
@@ -69,7 +69,7 @@ SELECT 陳述式通常必須使用 FROM 子句。 例外狀況如下：未列出
 [ FROM { <table_source> } [ ,...n ] ]   
 <table_source> ::=   
 {  
-    table_or_view_name [ [ AS ] table_alias ]   
+    table_or_view_name [ FOR SYSTEM_TIME <system_time> ] [ AS ] table_alias ]   
         [ <tablesample_clause> ]   
         [ WITH ( < table_hint > [ [ , ]...n ] ) ]   
     | rowset_function [ [ AS ] table_alias ]   
@@ -82,8 +82,7 @@ SELECT 陳述式通常必須使用 FROM 子句。 例外狀況如下：未列出
     | <unpivoted_table>  
     | @variable [ [ AS ] table_alias ]  
     | @variable.function_call ( expression [ ,...n ] )   
-        [ [ AS ] table_alias ] [ (column_alias [ ,...n ] ) ]  
-    | FOR SYSTEM_TIME <system_time>   
+        [ [ AS ] table_alias ] [ (column_alias [ ,...n ] ) ]     
 }  
 <tablesample_clause> ::=  
     TABLESAMPLE [SYSTEM] ( sample_number [ PERCENT | ROWS ] )   

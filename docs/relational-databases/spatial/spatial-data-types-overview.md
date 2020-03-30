@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048517"
 ---
 # <a name="spatial-data-types-overview"></a>空間資料類型概觀
@@ -28,7 +28,7 @@ ms.locfileid: "68048517"
 空間資料有兩種類型： **geometry** 資料類型支援平面或 Euclidean (扁平表面) 資料。 **geometry** 資料類型同時符合開放式地理空間協會 (Open Geospatial Consortium, OGC) 的 SQL 簡單特徵規格 1.1.0 版，而且符合 SQL MM (ISO 標準)。
 此外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也支援 **geography** 資料類型，它會儲存橢圓體 (圓形表面) 資料，例如 GPS 經緯度座標。
 
-##  <a name="objects"></a> 空間資料物件  
+##  <a name="spatial-data-objects"></a><a name="objects"></a> 空間資料物件  
 **geometry** 和 **geography** 資料類型支援十六種空間資料物件或執行個體類型。 但是，其中只有十一種執行個體類型「可具現化」  ；因此，您可以在資料庫中建立及處理這些執行個體 (或加以具現化)。 這些執行個體會從父資料類型衍生某些屬性，這些資料類型會將其區分為 **Points**、 **LineStrings, CircularStrings**、 **CompoundCurves**、 **Polygons**、 **CurvePolygons** ，或是 **geometry** 中的多個 **geography** 或 **GeometryCollection**執行個體。 **Geography** 類型具有一種額外的執行個體類型： **FullGlobe**。  
 
 下圖說明 **geometry** 和 **geometry** 資料類型所根據的 **geography** 階層。 可具現化的 **geometry** 和 **geography** 類型是以藍色標示。  
@@ -53,7 +53,7 @@ geometry 和 geography 類型的子類型可區分為簡單與集合類型。  �
 -   [MultiPolygon](../../relational-databases/spatial/multipolygon.md)  
 -   [GeometryCollection](../../relational-databases/spatial/geometrycollection.md)  
 
-##  <a name="differences"></a> Geometry 和 geography 資料類型之間的差異  
+##  <a name="differences-between-the-geometry-and-geography-data-types"></a><a name="differences"></a> Geometry 和 geography 資料類型之間的差異  
 這兩種類型的空間資料通常會有非常類似的行為，但是儲存及操作資料的方式會有一些重要的差異。  
 
 ### <a name="how-connecting-edges-are-defined"></a>連接邊緣的定義方式  
@@ -86,7 +86,7 @@ OGC 的 SQL 簡單特徵規格會討論外部環形和內部環形，但是這�
 -   [OGC 規格，簡單特徵存取第一部 - 常見架構](https://go.microsoft.com/fwlink/?LinkId=93627)  
 -   [OGC 規格，簡單特徵存取第二部 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93628) \(英文\)  
 
-##  <a name="circular"></a> 圓弧線段  
+##  <a name="circular-arc-segments"></a><a name="circular"></a> 圓弧線段  
 三種可具現化的類型可以採用圓弧線段：**CircularString**、**CompoundCurve** 和 **CurvePolygon**。  圓弧線段是由二維平面中的三個點定義，而且第三個點不得與第一個點相同。  
 
 圖 A 和 B 顯示一般圓弧線段。 請注意，這三個點如何分別位於圓形的圓周上。  

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2bc231a064862c5e2a16f60d85a5166fd4765566
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727586"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>從命令列安裝 SQL Server 機器學習 R 和 Python 元件
@@ -89,7 +89,7 @@ FEATURES 引數是必要的，如同授權條款合約。
 | /MPYCACHEDIRECTORY | 保留供未來使用。 請使用 %TEMP% 來儲存 Python 元件 CAB 檔案，以在沒有網際網路連線的電腦上進行安裝。 |
 ::: moniker-end
 
-## <a name="indb"></a> 資料庫內執行個體安裝
+## <a name="in-database-instance-installations"></a><a name="indb"></a> 資料庫內執行個體安裝
 
 資料庫內分析適用於資料庫引擎執行個體，這是將 **AdvancedAnalytics** 功能新增至安裝時的必要項目。 您可以使用進階分析安裝資料庫引擎執行個體，或[將其新增至現有執行個體](#add-existing)。 
 
@@ -138,7 +138,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 ```
 ::: moniker-end
 
-## <a name="post-install"></a> 安裝後設定 (必要)
+## <a name="post-install-configuration-required"></a><a name="post-install"></a> 安裝後設定 (必要)
 
 僅適用於資料庫內安裝。
 
@@ -159,7 +159,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 1. SQL Server R 服務：您必須先啟用外部指令碼，才能使用此功能。 遵循[安裝 SQL Server R Services (資料庫內)](sql-r-services-windows-install.md) 中的指示作為下一個步驟。 
 ::: moniker-end
 
-## <a name="add-existing"></a> 將進階分析新增至現有的資料庫引擎執行個體
+## <a name="add-advanced-analytics-to-an-existing-database-engine-instance"></a><a name="add-existing"></a> 將進階分析新增至現有的資料庫引擎執行個體
 
 將資料庫內的進階分析新增至現有資料庫引擎執行個體時，請提供執行個體名稱。 例如，如果您先前安裝了 SQL Server 2017 或更新版本的資料庫引擎和 Python，則可以使用此命令來新增 R。
 
@@ -168,7 +168,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTROPENLICENSETERMS
 ```
 
-## <a name="silent"></a> 無訊息安裝
+## <a name="silent-install"></a><a name="silent"></a> 無訊息安裝
 
 無訊息安裝會隱藏 .cab 檔案位置的檢查。 基於此原因，您必須指定要解壓縮 .cab 檔案的位置。 針對 Python，CAB 檔案必須位於 %TEMP*。 針對 R，您可以使用此項目的暫存目錄來設定資料夾路徑。
  
@@ -179,7 +179,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 /MRCACHEDIRECTORY=%temp% 
 ```
 
-## <a name="shared-feature"></a> 獨立伺服器安裝
+## <a name="standalone-server-installations"></a><a name="shared-feature"></a> 獨立伺服器安裝
 
 獨立伺服器是指未繫結至資料庫引擎執行個體的「共用功能」。 下列範例顯示獨立伺服器安裝的有效語法。
 

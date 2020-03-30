@@ -20,10 +20,10 @@ ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dd8ad58e96956e1ab0f7b542bab4168272b3f968
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68141287"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
@@ -69,7 +69,7 @@ HOLDLOCK
 READTEXT 權限預設為授與有指定資料表之 SELECT 權限的使用者。 當傳送 SELECT 權限時，可以傳送權限。  
   
 ## <a name="examples"></a>範例  
-下列範例會讀取 `pub_info` 資料表中 `pr_info` 資料行的第 2 到第 26 個字元。  
+下列範例會讀取 `pr_info` 資料表中 `pub_info` 資料行的第 2 到第 26 個字元。  
   
 > [!NOTE]  
 >  若要執行這個範例，您必須安裝 **pubs** 範例資料庫。  

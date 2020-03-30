@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9bf5e128b054bbea218c6b791666f5698c24c37d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557679"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心
@@ -35,7 +35,7 @@ ms.locfileid: "75557679"
   
  ![security-center-legend](../performance/media/security-center-legend.PNG "security-center-legend")  
   
-##  <a name="Who"></a> 驗證：您的身分  
+##  <a name="authentication-who-are-you"></a><a name="Who"></a> 驗證：您的身分  
   
 |||  
 |-|-|  
@@ -43,7 +43,7 @@ ms.locfileid: "75557679"
 |**驗證位置？**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 於 master 資料庫︰登入和 DB 使用者<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 於 User 資料庫︰已包含的 DB 使用者|在 master 資料庫進行驗證 (登入和資料庫使用者)<br /><br /> [建立 SQL Server 登入](../../relational-databases/security/authentication-access/create-a-login.md)<br /><br /> [管理資料庫和 Azure SQL Database 中的登入](https://msdn.microsoft.com/library/ee336235.aspx)<br /><br /> [建立資料庫使用者](../../relational-databases/security/authentication-access/create-a-database-user.md)<br /><br /> <br /><br /> 在使用者資料庫進行驗證<br /><br /> [自主資料庫使用者 - 讓資料庫具有可攜性](../../relational-databases/security/contained-database-users-making-your-database-portable.md)|  
 |**使用其他身分識別**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 認證<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") 以另一個登入的方式執行<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 以另一個資料庫使用者的身分執行|[認證 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)<br /><br /> [以另一個登入的方式執行](../../t-sql/statements/execute-as-transact-sql.md)<br /><br /> [以另一個資料庫使用者的身分執行](../../t-sql/statements/execute-as-transact-sql.md)|  
   
-##  <a name="What"></a> 授權：您可以執行的作業  
+##  <a name="authorization-what-can-you-do"></a><a name="What"></a> 授權：您可以執行的作業  
   
 |||  
 |-|-|  
@@ -51,7 +51,7 @@ ms.locfileid: "75557679"
 |**安全性角色**<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") 伺服器層級角色<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 資料庫層級角色|[伺服器層級角色](../../relational-databases/security/authentication-access/server-level-roles.md)<br /><br /> [資料庫層級角色](../../relational-databases/security/authentication-access/database-level-roles.md)|  
 |**限制對選取的資料元素的資料存取**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 以檢視/程序限制資料存取<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 資料列層級安全性<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 動態資料遮罩<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 簽署物件|限制資料存取使用 [檢視](../../relational-databases/views/views.md) 和 [程序](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)<br /><br /> [資料列層級安全性 (SQL Server)](../../relational-databases/security/row-level-security.md)<br /><br /> [資料列層級安全性 (Azure SQL Database)](https://msdn.microsoft.com/library/azure/dn765131.aspx)<br /><br /> [動態資料遮罩 (SQL Server)](../../relational-databases/security/dynamic-data-masking.md)<br /><br /> [動態資料遮罩 (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)<br /><br /> [簽署物件](../../t-sql/statements/add-signature-transact-sql.md)|  
   
-##  <a name="Encrypt"></a> 加密：儲存機密資料  
+##  <a name="encryption-storing-secret-data"></a><a name="Encrypt"></a> 加密：儲存機密資料  
   
 |||  
 |-|-|  
@@ -59,14 +59,14 @@ ms.locfileid: "75557679"
 |**加密的來源**<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") 可延伸金鑰管理模組<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") 儲存在 Azure Key Vault 的金鑰<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 永遠加密|[可延伸金鑰管理模組](../../relational-databases/security/encryption/extensible-key-management-ekm.md)<br /><br /> [儲存在 Azure 金鑰保存庫的金鑰](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)<br /><br /> [一律加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md)|  
 |**資料行、資料和金鑰加密**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 使用憑證加密<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 使用對稱金鑰加密<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 使用非對稱金鑰加密<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 使用複雜密碼加密|[加密憑證](../../t-sql/functions/encryptbycert-transact-sql.md)<br /><br /> [用非對稱金鑰來加密](../../t-sql/functions/encryptbyasymkey-transact-sql.md)<br /><br /> [用對稱金鑰來加密](../../t-sql/functions/encryptbykey-transact-sql.md)<br /><br /> [用複雜密碼來加密](../../t-sql/functions/encryptbypassphrase-transact-sql.md)<br /><br /> [加密資料行](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
-##  <a name="Connect"></a> 連線安全性：限制及保護  
+##  <a name="connection-security-restricting-and-securing"></a><a name="Connect"></a> 連線安全性：限制及保護  
   
 |||  
 |-|-|  
 |**防火牆保護**<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Windows 防火牆設定<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Azure 服務的防火牆設定<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") 資料庫防火牆設定|[設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)<br /><br /> [Azure SQL Database 防火牆設定](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)<br /><br /> [Azure 服務的防火牆設定](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)|  
 |**在傳輸過程中的資料加密**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 強制的 SSL 連線<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") 選用的 SSL 連線|[資料庫引擎的安全通訊端層](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)<br /><br /> [SQL Database 的安全通訊端層](https://msdn.microsoft.com/library/azure/ff394108.aspx)<br /><br /> [Microsoft SQL Server 的 TLS 1.2 支援](https://support.microsoft.com/kb/3135244)|  
   
-##  <a name="Audit"></a> 稽核：錄製存取權  
+##  <a name="auditing-recording-access"></a><a name="Audit"></a> 稽核：錄製存取權  
   
 |||  
 |-|-|  
@@ -74,7 +74,7 @@ ms.locfileid: "75557679"
 |**自訂稽核**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 觸發程序|實作自訂的稽核︰建立 [DDL 觸發程序](../../relational-databases/triggers/ddl-triggers.md) 和 [DML 觸發程序](../../relational-databases/triggers/dml-triggers.md)|  
 |**遵循**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 合規性|SQL Server:<br />                        [Common Criteria](https://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> SQL Database：<br />                        [Microsoft Azure 信任中心：功能符合規範的狀況](https://azure.microsoft.com/support/trust-center/services/)|  
   
-##  <a name="SQLInjection"></a> SQL 資料隱碼  
+##  <a name="sql-injection"></a><a name="SQLInjection"></a> SQL 資料隱碼  
  SQL 插入式攻擊是指將惡意程式碼插入字串中，然後將這些字串傳遞至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 進行剖析和執行。 應該檢閱建構 SQL 陳述式之任何程序的資料隱碼弱點，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會執行所接收之所有語法有效的查詢。 所有的資料庫系統都有遭到 SQL 插入式攻擊的風險，且查詢 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的應用程式會導入許多漏洞。 您可以透過預存程序和參數化命令、避免動態 SQL 以及限制所有使用者的權限來防堵 SQL 插入式攻擊。  如需詳細資訊，請參閱 [SQL 插入](../../relational-databases/security/sql-injection.md)。  
   
  應用程式設計人員的其他連結︰  

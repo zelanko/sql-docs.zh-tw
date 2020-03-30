@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 52285164928e1a4811abc17e931a1af1921c6d07
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76831415"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>教學課程：將範例資料載入 SQL Server 巨量資料叢集
@@ -34,11 +34,11 @@ ms.locfileid: "76831415"
    - **sqlcmd**
    - **curl**
  
-## <a id="sampledata"></a> 載入範例資料
+## <a name="load-sample-data"></a><a id="sampledata"></a> 載入範例資料
 
 下列步驟會使用啟動程序指令碼來下載 SQL Server 資料庫備份，並將資料載入您的巨量資料叢集中。 為了方便，這些步驟已細分為 [Windows](#windows) 和 [Linux](#linux) 章節。 如果您想要使用基本使用者名稱/密碼作為驗證機制，請在執行指令碼之前，先設定 AZDATA_USERNAME 與 AZDATA_PASSWORD 環境變數。 否則，指令碼將使用整合式驗證來連線到 SQL Server 主要執行個體與 Knox 閘道。 此外，也應該為端點指定 DNS 名稱以使用整合式驗證。
 
-## <a id="windows"></a> Windows
+## <a name="windows"></a><a id="windows"></a> Windows
 
 下列步驟描述如何使用 Windows 用戶端將範例資料載入您的巨量資料叢集。
 
@@ -76,7 +76,7 @@ ms.locfileid: "76831415"
    .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
-## <a id="linux"></a> Linux
+## <a name="linux"></a><a id="linux"></a> Linux
 
 下列步驟描述如何使用 Linux 用戶端將範例資料載入您的巨量資料叢集。
 

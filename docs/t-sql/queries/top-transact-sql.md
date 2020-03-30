@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67948242"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
@@ -161,7 +161,7 @@ GO
 |[包括相同值](#tie)|WITH TIES|  
 |[限制受 DELETE、INSERT 或 UPDATE 影響的資料列](#DML)|DELETE • INSERT • UPDATE|  
   
-###  <a name="BasicSyntax"></a> 基本語法  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> 基本語法  
 本節的範例會使用所需的最少語法來示範 ORDER BY 子句的基本功能。  
   
 #### <a name="a-using-top-with-a-constant-value"></a>A. 搭配常數值使用 TOP  
@@ -206,7 +206,7 @@ ORDER BY HireDate DESC;
 GO    
 ```  
   
-###  <a name="tie"></a> 包括相同值  
+###  <a name="including-tie-values"></a><a name="tie"></a> 包括相同值  
   
 #### <a name="a-using-with-ties-to-include-rows-that-match-the-values-in-the-last-row"></a>A. 使用 WITH TIES 包含符合最後一個資料列中之值的資料列  
 下列範例會取得所有員工中薪資最高的 `10`%，並依照薪資的遞減順序傳回。 指定 `WITH TIES` 可確保任何薪資是所傳回之最低薪資 (最後一個資料列) 的員工也會包含在結果集中，即使這樣會超出員工的 `10`%，也是如此。  
@@ -225,7 +225,7 @@ ORDER BY Rate DESC;
 GO    
 ```  
   
-###  <a name="DML"></a> 限制受 DELETE、INSERT 或 UPDATE 影響的資料列  
+###  <a name="limiting-the-rows-affected-by-delete-insert-or-update"></a><a name="DML"></a> 限制受 DELETE、INSERT 或 UPDATE 影響的資料列  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. 使用 TOP 限制刪除的資料列數目  
 當您搭配 DELETE 使用 TOP (*n*) 子句時，會以未定義的方式選取 *n* 個資料列來執行刪除作業。 也就是說，DELETE 陳述式會選擇符合 WHERE 子句中所定義準則的任意 (*n*) 數目資料列。 下列範例會從 `PurchaseOrderDetail` 資料表刪除到期日早於 2002 年 7 月 1 日的 `20` 個資料列。  
@@ -315,7 +315,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 下列範例會傳回符合查詢準則的前 31 個資料列。 **ORDER BY** 子句可確保 31 個傳回的資料列是根據 `LastName` 資料行字母順序的前 31 個資料列。  
   
 使用 **TOP**，而不需要指定繫結。  

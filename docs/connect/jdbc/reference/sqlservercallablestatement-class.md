@@ -11,10 +11,10 @@ ms.assetid: 30710a63-c05d-47d9-9cf9-c087a1c76373
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f47c034a720be5409d83868a7a61dd229ab70e24
-ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77600134"
 ---
 # <a name="sqlservercallablestatement-class"></a>SQLServerCallableStatement 類別

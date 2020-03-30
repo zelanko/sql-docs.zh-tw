@@ -11,10 +11,10 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165520"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>快速入門：SQL 備份及還原至 Azure Blob 儲存體服務
@@ -122,7 +122,7 @@ GO
 ## <a name="back-up-database"></a>備份資料庫
 在此步驟中，使用 SQL Server Management Studio 內的 GUI 或 Transact-SQL (T-SQL) 將資料庫 `SQLTestDB` 備份到您的 Azure Blob 儲存體帳戶。 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. 若 [備份資料庫]  精靈尚未開啟，請展開 [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 之 [物件總管]  內的 [資料庫]  節點。
 1. 以滑鼠右鍵按一下新的 `SQLTestDB` 資料庫，將滑鼠游標移到 [工作]  上方並選取 [備份]  以啟動 [備份資料庫]  精靈。 
@@ -141,7 +141,7 @@ GO
    > 您可以透過選取 [備份資料庫]  精靈頂端的 [指令碼]  來建立此命令背後的 Transact-SQL：![指令碼命令](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 使用 Transact-SQL 透過執行下列命令以備份您的資料庫： 
 
@@ -160,12 +160,12 @@ GO
 ## <a name="delete-database"></a>刪除資料庫
 在此步驟中，請先刪除資料庫，然後再執行還原。 此步驟僅適用於此教學課程的目的，在一般資料庫管理程序中不太可能使用。 您可以跳過此步驟，但是在受控執行個體上進行還原時，您將需要變更資料庫的名稱，或執行還原命令 `WITH REPLACE`，以便在內部部署環境中成功還原資料庫。 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. 展開 [物件總管]  中的 [資料庫]  節點、以滑鼠右鍵按一下 []`SQLTestDB` 資料庫，然後選取刪除以啟動 [刪除物件]  精靈。 
 1. 在受控執行個體上，選取 [確定]  以刪除資料庫。 在內部部署環境中，選取 [關閉現有的連接]  旁的核取方塊並選取 [確定]  以刪除資料庫。 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 執行下列 Transact-SQL 命令以刪除資料庫：
 
@@ -192,7 +192,7 @@ GO
 ## <a name="restore-database"></a>對話方塊的 
 在此步驟中，使用 SQL Server Management Studio 中的 GUI 或使用 Transact-SQL 來還原資料庫。 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. 以滑鼠右鍵按一下 SQL Server Management Studio 內 [物件總管]  中的 [資料庫]  節點，然後選取 [還原資料庫]  。 
 1. 選取 [裝置]  ，然後選取省略符號 (...) 以選擇裝置。 
@@ -216,7 +216,7 @@ GO
 1. 選取 [確定]  以關閉 [選取備份裝置]  對話方塊。 
 1. 選取 [確定]  以還原您的資料庫。 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 若要從 Azure Blob 儲存體還原您的內部部署資料庫，請修改下列 Transact-SQL 以使用您自己的儲存體帳戶，然後在新查詢視窗內執行它。 
 

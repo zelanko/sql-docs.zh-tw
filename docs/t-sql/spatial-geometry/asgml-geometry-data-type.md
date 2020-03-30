@@ -20,10 +20,10 @@ ms.assetid: f6c2e130-05f3-4ef3-921b-d78b51437d48
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 11fe7041212c668855c86664362d555696f36bbf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68017576"
 ---
 # <a name="asgml-geometry-data-type"></a>AsGml (geometry 資料類型)

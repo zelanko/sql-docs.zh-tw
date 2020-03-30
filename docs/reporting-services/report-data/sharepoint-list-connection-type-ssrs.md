@@ -9,10 +9,10 @@ ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4822b70912e847a2cc03a951468171d76ae63597
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081395"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 清單連接類型 (SSRS)
@@ -23,14 +23,14 @@ ms.locfileid: "77081395"
 
 您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱 [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
 
-##  <a name="Connection"></a> 連接字串  
+##  <a name="connection-string"></a><a name="Connection"></a> 連接字串  
  SharePoint 清單的連接字串是 SharePoint 網站或子網站的 URL，例如 `https://MySharePointWeb/MySharePointSite` 或 `https://MySharePointWeb/MySharePointSite/Subsite`。  
   
  查詢設計工具會自動顯示您有足夠權限存取的 SharePoint 清單。  
   
  如需詳細的連接字串範例，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
-##  <a name="Credentials"></a> 認證  
+##  <a name="credentials"></a><a name="Credentials"></a> 認證  
  需要有認證才能夠執行報表、於本機預覽報表並且從報表伺服器預覽報表。 發行報表之後，您可能需要變更資料來源的認證，如此當報表在報表伺服器上執行時，擷取資料的權限就會是有效的。 可搭配這個資料延伸模組使用的認證類型，取決於您使用做為資料來源之 SharePoint 清單的 SharePoint 技術設定。  
   
  下表概述當連接到本機伺服器陣列的 SharePoint 清單和遠端 SharePoint 清單時，SharePoint 清單延伸模組的認證擷取行為。  
@@ -73,7 +73,7 @@ ms.locfileid: "77081395"
   
  如需詳細資訊，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)、[指定適用於報表資料來源的認證及連接資訊](specify-credential-and-connection-information-for-report-data-sources.md)，以及 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
-##  <a name="Query"></a> 查詢  
+##  <a name="queries"></a><a name="Query"></a> 查詢  
  若要設計查詢，根據資料來源建立新資料集，然後開啟相關聯的查詢設計工具。 如需詳細資訊，請參閱 [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)。  
   
  SharePoint 清單圖形化查詢設計工具會顯示四個窗格：  
@@ -151,10 +151,10 @@ ms.locfileid: "77081395"
   
  在查詢結果中，會傳回 Tasks 清單的所有欄位。  
   
-##  <a name="Parameters"></a> 參數  
+##  <a name="parameters"></a><a name="Parameters"></a> 參數  
  此資料延伸模組不支援參數。  
   
-##  <a name="HowTo"></a> 如何主題  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 如何主題  
  本節包含使用資料連接、資料來源與資料集的逐步指示。  
   
  [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -163,7 +163,7 @@ ms.locfileid: "77081395"
   
  [將篩選加入資料集中 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
-##  <a name="Related"></a> 相關章節  
+##  <a name="related-sections"></a><a name="Related"></a> 相關章節  
  本文件集的這些章節會提供報表資料的深入概念性資訊，以及如何定義、自訂和使用與報表資料相關組件的程序資訊。  
   
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

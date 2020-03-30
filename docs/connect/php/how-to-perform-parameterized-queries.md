@@ -14,10 +14,10 @@ ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e406d64bd8c56b467c9b331eb4aef132dc0cc67
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993498"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>如何：執行參數化查詢

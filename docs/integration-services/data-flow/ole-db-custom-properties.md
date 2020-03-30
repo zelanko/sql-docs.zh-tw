@@ -11,10 +11,10 @@ ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 039b36c2092d9e08e81802e441f42587be66445c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298155"
 ---
 # <a name="ole-db-custom-properties"></a>OLE DB 自訂屬性

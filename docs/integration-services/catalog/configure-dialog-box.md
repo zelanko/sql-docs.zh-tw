@@ -15,10 +15,10 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63d4507a2ad81a1167444acca111865460662904
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299004"
 ---
 # <a name="configure-dialog-box"></a>設定對話方塊
@@ -36,7 +36,7 @@ ms.locfileid: "71299004"
   
 -   [在參考頁面上設定選項](#references)  
   
-##  <a name="open_dialog"></a> 開啟設定對話方塊  
+##  <a name="open-the-configure-dialog-box"></a><a name="open_dialog"></a> 開啟設定對話方塊  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71299004"
   
 5.  以滑鼠右鍵按一下封裝或專案，然後按一下 [設定]  。  
   
-##  <a name="parameter"></a> 在參數頁面上設定選項  
+##  <a name="set-the-options-on-the-parameters-page"></a><a name="parameter"></a> 在參數頁面上設定選項  
  使用 **[參數]** 頁面檢視參數名稱和值，並修改這些值。  
   
  選取 [參數]  和 [連線管理員]  索引標籤的 [範圍]  下拉式清單中所顯示之參數的範圍。  
@@ -80,7 +80,7 @@ ms.locfileid: "71299004"
  **ReplTest1**  
  列出指派給連接管理員屬性的值。 按一下省略符號按鈕，在 **[設定參數值]** 對話方塊中變更此值。 您可以輸入常值、對應包含您要使用之值的環境變數，或使用封裝中的預設值。  
   
-##  <a name="references"></a> 在參考頁面上設定選項  
+##  <a name="set-the-options-on-the-references-page"></a><a name="references"></a> 在參考頁面上設定選項  
  使用 **[參考]** 頁面加入及移除環境的參考，並存取環境屬性。  
   
  環境會針對已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器之專案中所包含的套件，指定執行值。  

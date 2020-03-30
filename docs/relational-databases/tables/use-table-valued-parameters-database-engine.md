@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72796636"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>使用資料表值參數 (Database Engine)
@@ -43,7 +43,7 @@ ms.locfileid: "72796636"
 
 [範例](#Example)
 
-## <a name="Benefits"></a> 優點
+## <a name="benefits"></a><a name="Benefits"></a> 優點
 
 資料表值參數的範圍為預存程序、函數或動態 [!INCLUDE[tsql](../../includes/tsql-md.md)] 文字，與其他參數一模一樣。 同樣地，資料表類型之變數的範圍與使用 DECLARE 陳述式建立的其他任何區域變數一樣。 您可以在動態 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式內宣告資料表值變數，並將這些變數當做資料表值參數傳遞給預存程序和函數。
 
@@ -58,10 +58,10 @@ ms.locfileid: "72796636"
 - 可讓用戶端指定排序次序和唯一索引鍵。
 - 在預存程序中使用時，會像暫存資料表一樣被快取。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始，也會為參數化查詢快取資料表值參數。
 
-## <a name="Permissions"></a> 權限
+## <a name="permissions"></a><a name="Permissions"></a> 權限
 若要建立使用者定義資料表類型的執行個體，或使用資料表值參數呼叫預存程序，則使用者必須在該類型上擁有 EXECUTE 權限，或結構描述或資料庫必須包含類型。
 
-## <a name="Restrictions"></a> 限制
+## <a name="restrictions"></a><a name="Restrictions"></a> 限制
 
 資料表值參數有下列限制：
 
@@ -69,7 +69,7 @@ ms.locfileid: "72796636"
 - 資料表值參數必須當做輸入 READONLY 參數傳遞給 [!INCLUDE[tsql](../../includes/tsql-md.md)] 常式。 您不能在常式主體內針對資料表值參數執行 DML 作業，例如 UPDATE、DELETE 或 INSERT。
 - 您不能使用資料表值參數當做 SELECT INTO 或 INSERT EXEC 陳述式的目標。 資料表值參數可以在 SELECT INTO 的 FROM 子句中或是 INSERT EXEC 字串或預存程序內。
 
-## <a name="BulkInsert"></a> 資料表值參數與BULK INSERT 作業的比較
+## <a name="table-valued-parameters-vs-bulk-insert-operations"></a><a name="BulkInsert"></a> 資料表值參數與BULK INSERT 作業的比較
 
 使用資料表值參數可以和使用以集合為基礎之變數的其他方式相比較；但是，對於大型資料集而言，使用資料表值參數通常可以更快速。 與大量作業 (其啟動成本高於資料表值參數) 相較之下，當插入 1000 個以下的資料列時，資料表值參數會有很不錯的執行效能。
 
@@ -77,7 +77,7 @@ ms.locfileid: "72796636"
 
 資料表值參數的執行效能等於或優於同等的參數陣列實作。
 
-## <a name="Example"></a> 範例
+## <a name="example"></a><a name="Example"></a> 範例
 
 下列範例會使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 並示範如何在 AdventureWorks 資料庫中建立資料表值參數類型、宣告變數來參考它、填入參數清單，然後將值傳遞給預存程序。
 

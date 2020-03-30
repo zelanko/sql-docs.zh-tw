@@ -16,10 +16,10 @@ ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f68227bb3f88996ee8a4f5ea60c9cdd88f4f765a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095407"
 ---
 # <a name="work-with-change-data-sql-server"></a>使用變更資料 (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "74095407"
   
  我們提供了許多函數，可協助您判斷查詢 TVF 時所使用的適當 LSN 值。 [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) 函數會傳回與擷取執行個體有效性間隔相關聯的最小 LSN。 有效性間隔就是擷取執行個體目前可以使用變更資料的時間間隔。 [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) 函數會傳回有效性間隔中的最大 LSN。 [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) 和 [sys.fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) 函數可用來協助您將 LSN 值放置在傳統時間表上。 由於異動資料擷取會使用封閉的查詢間隔，因此有時候必須在序列中產生下一個 LSN 值，以便確保連續的查詢視窗中不會有重複的變更。 當您需要針對 LSN 值進行累加式調整時， [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) 和 [sys.fn_cdc_decrement_lsn](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md) 函數就很有用。  
   
-##  <a name="LSN"></a> 驗證 LSN 界限  
+##  <a name="validating-lsn-boundaries"></a><a name="LSN"></a> 驗證 LSN 界限  
  我們建議您先驗證即將用於 TVF 查詢中的 LSN 界限，然後再加以使用。 Null 端點或位於擷取執行個體有效性間隔外部的端點將會強制異動資料擷取 TVF 傳回錯誤。  
   
  例如，當用來定義查詢間隔的參數無效或超出範圍，或者資料列篩選選項無效時，系統就會針對所有變更的查詢傳回下列錯誤。  
@@ -63,7 +63,7 @@ ms.locfileid: "74095407"
 > [!NOTE]  
 >  若要在 SQL Server Management Studio 中找出異動資料擷取範本，請在 [檢視]  功能表上，按一下 [範本總管]  、展開 [SQL Server 範本]  ，然後展開 [異動資料擷取]  資料夾。  
   
-##  <a name="Functions"></a> 查詢函數  
+##  <a name="query-functions"></a><a name="Functions"></a> 查詢函數  
  系統會根據所追蹤之來源資料表的特性以及其擷取執行個體的設定方式，產生一個或兩個 TVF 以便查詢變更資料。  
   
 -   [cdc.fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) 函數會傳回在指定的間隔中發生的所有變更。 系統一定會產生這個函數。 傳回的項目一律會經過排序 (先依據變更的交易認可 LSN，然後再依據變更在交易內部排列順序的值)。 根據選擇的資料列篩選選項，系統會在更新時傳回最後一個資料列 (資料列篩選選項 "all") 或在更新時傳回全新和舊的值 (資料列篩選選項 "all update old")。  
@@ -77,7 +77,7 @@ ms.locfileid: "74095407"
   
  從查詢函數傳回的更新遮罩是一種精簡型的表示法，它會識別在變更資料之資料列中變更的所有資料行。 一般而言，只有擷取資料行的小型子集需要這個資訊。 但是，如果使用這些函數，將有助於以應用程式更可直接應用的形式，從遮罩擷取資訊。 [sys.fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) 函數會針對給定的擷取執行個體，傳回具名資料行的序數位置，而 [sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) 函數則會根據傳入函數呼叫中的序數，傳回提供之遮罩中的同位位元。 同時，這兩個函數可以針對變更資料的要求，有效率地擷取並傳回更新遮罩的資訊。 如需如何使用這些函數的示範，請參閱「使用 All With Mask 來列舉淨變更」範本。  
   
-##  <a name="Scenarios"></a> 查詢函數狀況  
+##  <a name="query-function-scenarios"></a><a name="Scenarios"></a> 查詢函數狀況  
  下列各節將描述使用 cdc.fn_cdc_get_all_changes_<capture_instance> 和 cdc.fn_cdc_get_net_changes_<capture_instance> 查詢函數來查詢異動資料擷取資料的一般狀況。  
   
 ### <a name="querying-for-all-changes-within-the-capture-instance-validity-interval"></a>在擷取執行個體有效性間隔內查詢所有變更  

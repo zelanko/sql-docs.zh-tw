@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d16b152bed2a0ed774ea443ada13201e4416f173
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055929"
 ---
 # <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>在使用 bcp 時指定相容性資料格式 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "74055929"
 >  如不熟悉資料匯入或匯出的資料格式，請參閱 [大量匯入或大量匯出的資料格式 &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)。  
   
   
-##  <a name="bcpDataFormatAttr"></a> bcp 資料格式屬性  
+##  <a name="bcp-data-format-attributes"></a><a name="bcpDataFormatAttr"></a> bcp 資料格式屬性  
  **bcp** 命令可讓您根據下列資料格式屬性，指定資料檔中每個欄位的結構：  
   
 -   檔案儲存類型  
@@ -52,7 +52,7 @@ ms.locfileid: "74055929"
      針對字元資料欄位，選擇性的結束字元讓您可以標示資料檔中每個欄位的結尾 (使用「欄位結束字元」  )，以及每個資料列的結尾 (使用「資料列結束字元」  )。 結束字元可讓讀取資料檔的程式知道某個欄位或資料列在何處結束，另一個在何處開始。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
   
   
-##  <a name="FieldSpecificPrompts"></a> 欄位專用提示字元的概觀  
+##  <a name="overview-of-the-field-specific-prompts"></a><a name="FieldSpecificPrompts"></a> 欄位專用提示字元的概觀  
  如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但不包含格式檔案參數 ( **-f**) 或資料格式參數 ( **-n**、 **-c**、 **-w**或 **-N**)，則來源資料表或目標資料表中的每個資料行，會相繼出現每個先前屬性的命令提示字元。 在每個提示字元中， **bcp** 命令是根據資料表資料行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型來提供預設值。 接受所有提示字元的預設值，會和在命令行上指定原生格式 ( **-n**) 產生相同結果。 每個提示都會將預設值顯示於方括號中：[*預設值*]。 按下 ENTER 即可接受顯示的預設值。 若要指定預設以外的值，請在提示字元中輸入新值。  
   
 ### <a name="example"></a>範例  
@@ -87,7 +87,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  相等的提示字元 (視需要而定) 會依序顯示在每個資料表資料行中。  
   
   
-##  <a name="FieldByFieldNonXmlFF"></a> 將逐欄資料儲存至非 XML 格式檔案中  
+##  <a name="storing-field-by-field-data-in-a-non-xml-format-file"></a><a name="FieldByFieldNonXmlFF"></a> 將逐欄資料儲存至非 XML 格式檔案中  
  指定所有的資料表資料行之後， **bcp** 命令會提示您選擇性地產生非 XML 格式檔案，該檔案儲存剛剛提供的逐欄資訊 (請參閱先前範例)。 如果您選擇產生格式檔案，則可以隨時匯出該資料表的資料，或將類結構化資料匯入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 > [!NOTE]  

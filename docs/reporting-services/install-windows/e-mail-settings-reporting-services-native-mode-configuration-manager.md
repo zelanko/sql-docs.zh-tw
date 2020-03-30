@@ -14,10 +14,10 @@ ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74866001"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>電子郵件設定 - Reporting Services 原生模式 (組態管理員)
@@ -48,7 +48,7 @@ ms.locfileid: "74866001"
 > [!NOTE] 
 > 報表伺服器電子郵件設定是以 CDO 為基礎。 如果您想要取得有關特定設定的詳細資料，可以參考 CDO 產品文件集。
 
-## <a name="a-namersconfigmanconfigure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>使用 Reporting Services 管理員設定報表伺服器電子郵件
+## <a name="configure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>使用 Reporting Services 管理員設定報表伺服器電子郵件
 
 1. 啟動 Reporting Services 組態管理員，並連接到報表伺服器執行個體。
 

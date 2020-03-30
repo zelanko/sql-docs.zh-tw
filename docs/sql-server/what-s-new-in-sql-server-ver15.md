@@ -10,10 +10,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 55d59d140d8b833cb4b2ea6b11360043710de60d
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79218048"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
@@ -194,7 +194,7 @@ ms.locfileid: "79218048"
 ## <a name="platform-choice"></a>平台選擇
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 引進的創新為基礎，可讓您在選擇的平台上執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，並提供比以往更多的功能和安全性。
 
-### <a id="sql-server-on-linux"></a>Linux
+### <a name="linux"></a><a id="sql-server-on-linux"></a>Linux
 
 | 新功能或更新 | 詳細資料 |
 |:-----|:-----|
@@ -227,7 +227,7 @@ ms.locfileid: "79218048"
 |伺服器/CAL 授權產品金鑰上的設定警告|如果輸入企業伺服器/CAL 授權產品金鑰，且電腦具有 20 個以上的實體核心，或在啟用超執行緒時有 40 個邏輯核心，則會在安裝期間顯示警告。 使用者仍然可以確認該限制並繼續設定，或輸入可支援作業系統最大處理器數量的授權金鑰。|
 | &nbsp; | &nbsp; |
 
-## <a id="ml"></a> SQL Server 機器學習服務
+## <a name="sql-server-machine-learning-services"></a><a id="ml"></a> SQL Server 機器學習服務
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|

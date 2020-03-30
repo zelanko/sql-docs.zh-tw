@@ -17,10 +17,10 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b43cbcb051a1c6be2d26288a427d7a75e89a7f70
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258886"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>將用戶端連接至資料庫鏡像工作階段 (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "75258886"
   若要連接至資料庫鏡像工作階段，用戶端可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 針對 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫設定之後，這兩個資料存取提供者就會完全支援資料庫鏡像。 如需使用鏡像資料庫之程式設計考量的詳細資訊，請參閱＜ [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)＞。 此外，目前的主體伺服器執行個體必須可以使用，而且必須在此伺服器執行個體上建立用戶端的登入。 如需詳細資訊，請參閱[孤立的使用者疑難排解 &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。 資料庫鏡像工作階段的用戶端連接不會涉及見證伺服器執行個體 (如果此執行個體存在的話)。  
   
   
-##  <a name="InitialConnection"></a> 建立資料庫鏡像工作階段的初始連接  
+##  <a name="making-the-initial-connection-to-a-database-mirroring-session"></a><a name="InitialConnection"></a> 建立資料庫鏡像工作階段的初始連接  
  為了建立鏡像資料庫的初始連接，用戶端必須提供連接字串，以便至少提供伺服器執行個體的名稱。 這個必要的伺服器名稱應該可識別目前的主體伺服器執行個體，而此名稱就稱為 *「初始夥伴名稱」* 。  
   
  此外，如果在第一次連接嘗試期間初始夥伴無法使用，連接字串也可以提供另一個伺服器執行個體的名稱 (應該可識別目前的鏡像伺服器執行個體) 以便使用。 第二個名稱就稱為 *「容錯移轉夥伴名稱」* 。  
@@ -155,7 +155,7 @@ Server=123.34.45.56,4724;
 "Server=250.65.43.21,4734; Failover_Partner=Partner_B; Database=AdventureWorks; Network=dbmssocn"  
 ```  
   
-##  <a name="RetryAlgorithm"></a> 連接重試演算法 (TCP/IP 連接)  
+##  <a name="connection-retry-algorithm-for-tcpip-connections"></a><a name="RetryAlgorithm"></a> 連接重試演算法 (TCP/IP 連接)  
  就 TCP/IP 連接而言，當兩個夥伴名稱都位於快取中時，資料存取提供者就會遵守連接重試演算法。 這在建立工作階段的初始連接以及失去已建立連接之後重新連接的情況都適用。 一旦開啟連接後，完成預先登入和登入步驟就會需要額外時間。  
   
 > [!NOTE]  
@@ -204,7 +204,7 @@ Server=123.34.45.56,4724;
   
  ![重試延遲演算法](../../database-engine/database-mirroring/media/dbm-retry-delay-algorithm.gif "重試延遲演算法")  
   
-##  <a name="Reconnecting"></a> 重新連接至資料庫鏡像工作階段  
+##  <a name="reconnecting-to-a-database-mirroring-session"></a><a name="Reconnecting"></a> 重新連接至資料庫鏡像工作階段  
  如果資料庫鏡像工作階段的已建立連接由於任何原因而失敗 (例如，由於資料庫鏡像容錯移轉)，而且應用程式嘗試重新連接至初始伺服器時，資料存取提供者就可以使用儲存在用戶端快取中的容錯移轉夥伴名稱，嘗試重新連接。 不過，重新連接不會自動進行。 應用程式必須注意這項錯誤。 然後，應用程式必須關閉失敗的連接，並使用相同的連接字串屬性來開啟新連接。 此時，資料存取提供者會將連接重新導向至容錯移轉夥伴。 如果以這個名稱識別的伺服器執行個體目前是主體伺服器，連接嘗試通常會成功。 如果交易已認可或已回復並不明確，應用程式必須檢查交易的狀態，方法就與重新連接至獨立的伺服器執行個體一樣。  
   
  重新連接很類似連接字串提供容錯移轉夥伴名稱的初始連接。 如果第一個連接嘗試失敗，連接嘗試就會在初始夥伴名稱和容錯移轉夥伴名稱之間輪流，直到用戶端連接至主體伺服器或者資料存取提供者逾時為止。  
@@ -225,7 +225,7 @@ Server=123.34.45.56,4724;
   
 ##  <a name="Benefits"></a>   
   
-##  <a name="StalePartnerName"></a> 過時容錯移轉夥伴名稱的影響  
+##  <a name="the-impact-of-a-stale-failover-partner-name"></a><a name="StalePartnerName"></a> 過時容錯移轉夥伴名稱的影響  
  資料庫管理員可隨時變更容錯移轉夥伴。 因此，用戶端提供的容錯移轉夥伴名稱可能會過期或「過時」  。 例如，考慮由另一個伺服器執行個體 Partner_C 取代的容錯移轉夥伴 Partner_B。 若用戶端接著提供 Partner_B 做為容錯移轉夥伴名稱，該名稱就會過時。 當用戶端提供過時的容錯移轉夥伴名稱時，資料存取提供者的行為跟用戶端未提供容錯移轉夥伴名稱時一樣。  
   
  例如，假設用戶端使用同一個連接字串連續進行四次連接嘗試。 在連接字串中，初始夥伴名稱是 Partner_A，而容錯移轉夥伴名稱是 Partner_B：  

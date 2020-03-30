@@ -15,10 +15,10 @@ ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9621d6be1c309930f6104d2193d6127a3167cd7a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72278152"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() 方法 (xml 資料類型)

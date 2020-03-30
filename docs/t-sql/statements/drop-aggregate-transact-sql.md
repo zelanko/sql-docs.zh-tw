@@ -23,10 +23,10 @@ ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 356d08eaeeb470500ccf39c86872806cf2a9be9e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67984315"
 ---
 # <a name="drop-aggregate-transact-sql"></a>DROP AGGREGATE (Transact-SQL)
