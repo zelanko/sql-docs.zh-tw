@@ -12,10 +12,10 @@ ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4767267c1fc88eab6dafe646a0f61e3bd1992de8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71284973"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>歡迎使用 SQL Server 匯入和匯出精靈
@@ -44,7 +44,7 @@ ms.locfileid: "71284973"
 ## <a name="whats-next"></a>下一步  
  歡迎使用頁面之後的下一頁是 [選擇資料來源]  。 在此頁面上，您可以提供資料來源及其連接方式的相關資訊。 如需詳細資訊，請參閱 [選擇資料來源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)。
 
-## <a name="related"></a> 相關的工作及內容  
+## <a name="related-tasks-and-content"></a><a name="related"></a> 相關的工作及內容  
  以下是一些其他基本工作。
 -   **請參閱精靈運作方式的簡單範例**。
 

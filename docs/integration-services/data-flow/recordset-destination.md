@@ -18,10 +18,10 @@ ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fc14bf340407903674014a84a6b48f2ff14522fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298123"
 ---
 # <a name="recordset-destination"></a>資料錄集目的地

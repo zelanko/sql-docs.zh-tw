@@ -16,23 +16,23 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f4f51850fe288f2bbbd6d0e70a123a03f84344ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76284940"
 ---
 # <a name="configure-publishing-and-distribution"></a>設定發行和散發
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中設定發行和散發。
 
-##  <a name="BeforeYouBegin"></a> 開始之前 
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前 
 
-###  <a name="Security"></a> Security 
+###  <a name="security"></a><a name="Security"></a> Security 
 如需詳細資訊，請參閱[檢視及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。
 
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio 
-使用「新增發行集精靈」或「設定散發精靈」來設定散發。 設定散發者之後，請檢視並修改 [散發者屬性 - \<散發者]  對話方塊中的屬性。 如果您想設定「散發者」讓 `db_owner`固定資料庫角色的成員可以建立發行集，或者因為您想設定非「發行者」的遠端「散發者」，則請使用「設定散發精靈」。
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio 
+使用「新增發行集精靈」或「設定散發精靈」來設定散發。 設定散發者之後，請檢視並修改 [散發者屬性 - **散發者]\<** 對話方塊中的屬性。 如果您想設定「散發者」讓 `db_owner`固定資料庫角色的成員可以建立發行集，或者因為您想設定非「發行者」的遠端「散發者」，則請使用「設定散發精靈」。
 
 #### <a name="to-configure-distribution"></a>若要設定散發 
 
@@ -54,7 +54,7 @@ ms.locfileid: "76284940"
 
   - 選擇性地編寫組態設定的指令碼。 如需詳細資訊，請參閱 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)。
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL 
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL 
 您可以使用複寫預存程序來以程式設計的方式設定複寫發行和散發。
 ### <a name="to-configure-publishing-using-a-local-distributor"></a>使用本機散發者設定發行
 1. 請執行 [sp_get_distributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md) 來判斷伺服器是否已經設定為散發者。
@@ -67,7 +67,7 @@ ms.locfileid: "76284940"
 
    若是 SQL Database 受控執行個體上的散發者，請為 `@working_directory` 使用 Azure 儲存體帳戶，並為 `@storage_connection_string` 使用儲存體存取金鑰。 
 
-3. 在發行者上，執行 [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。 針對 `@dbname` 指定發行的資料庫、針對 `@optname` 指定複寫的類型，並針對 `@value` 指定 `true` 的值。
+3. 在發行者上，執行 [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。 針對 `@dbname` 指定發行的資料庫、針對 `@optname` 指定複寫的類型，並針對 `true` 指定 `@value` 的值。
 
 #### <a name="to-configure-publishing-using-a-remote-distributor"></a>使用遠端散發者設定發行 
 
@@ -77,7 +77,7 @@ ms.locfileid: "76284940"
 
    - 如果結果集中 `distribution db installed` 的值是 `0`，請在 master 資料庫的「散發者」上執行 [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)。 針對 `@database` 指定散發資料庫的名稱。 您可以選擇針對 `@max_distretention` 指定最大交易保留期限，並針對 `@history_retention` 指定記錄保留期限。 如果正在建立新的資料庫，請指定所要的資料庫屬性參數。
 
-2. 在散發者上執行 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)，指定將作為 `@working_directory` 預設快照集資料夾使用的 UNC 共用。 如果散發者將在與發行者連線時使用「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」，則也必須針對 `@security_mode` 指定 `0` 的值，並針對 `@login` 和 `@password` 指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入資訊。
+2. 在散發者上執行 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)，指定將作為 `@working_directory` 預設快照集資料夾使用的 UNC 共用。 如果散發者將在與發行者連線時使用「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」，則也必須針對 `0` 指定 `@security_mode` 的值，並針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定 `@login` `@password` 登入資訊。
 
    若是 SQL Database 受控執行個體上的散發者，請為 `@working_directory` 使用 Azure 儲存體帳戶，並為 `@storage_connection_string` 使用儲存體存取金鑰。 
 
@@ -85,12 +85,12 @@ ms.locfileid: "76284940"
 
 4. 在發行者上，執行 [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。 針對 `@dbname` 指定發行的資料庫、針對 `@optname` 指定複寫的類型，並針對 `@value` 指定 true 的值。
 
-###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41; 
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41; 
 下列範例會示範如何以程式設計方式設定發行和散發。 在此範例中，會使用指令碼變數來提供設定為發行者和本機散發者的伺服器名稱。 您可以使用複寫預存程序來以程式設計的方式設定複寫發行和散發。
 
 [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/configure-publishing-and_1.sql)] 
 
-##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO) 
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO) 
 
 #### <a name="to-configure-publishing-and-distribution-on-a-single-server"></a>在單一伺服器上設定發行和散發 
 
@@ -159,7 +159,7 @@ ms.locfileid: "76284940"
 > [!IMPORTANT]
 > 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 Windows .NET Framework 提供的 [密碼編譯服務](https://go.microsoft.com/fwlink/?LinkId=34733) 。
 
-###  <a name="PShellExample"></a> 範例 (RMO) 
+###  <a name="example-rmo"></a><a name="PShellExample"></a> 範例 (RMO) 
 您可以使用 Replication Management Objects (RMO) 以程式設計的方式設定複寫發行和散發。
 
 [!code-cs[HowTo#rmo_AddDistPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_adddistpub)] 

@@ -17,10 +17,10 @@ ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fa19857dc7c0651beeaedfdef8b843fcfc58c62
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296413"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>使用指令碼元件建立同步轉換
@@ -91,7 +91,7 @@ ms.locfileid: "71296413"
   
  如果您在 VSTA 中開啟 [專案總管]  視窗，則可以看到指令碼元件也會產生唯讀的 **BufferWrapper** 和 **ComponentWrapper** 專案項目。 **ScriptMain** 類別繼承自 **ComponentWrapper** 專案項目中的 **UserComponent** 類別。  
   
- 在執行階段，資料流程引擎會叫用 **UserComponent** 類別中的 **ProcessInput** 方法，它會覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 方法。 **ProcessInput** 方法接著會在輸入緩衝區的資料列中執行迴圈，並為每個資料列呼叫一次 **ProcessInputRow** 方法。  
+ 在執行階段，資料流程引擎會叫用 **UserComponent** 類別中的 **ProcessInput** 方法，它會覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 **ProcessInput** 方法接著會在輸入緩衝區的資料列中執行迴圈，並為每個資料列呼叫一次 **ProcessInputRow** 方法。  
   
 ### <a name="writing-your-custom-code"></a>撰寫您的自訂程式碼  
  具有同步輸出的轉換元件是所有資料流程元件中最容易撰寫的。 例如，在本主題稍後所顯示的單一輸出範例是由下列自訂程式碼所組成：  
@@ -157,7 +157,7 @@ else
   
 5.  在 [指令碼]  頁面上，按一下 [編輯指令碼]  ，並輸入以下指令碼。 然後關閉指令碼開發環境以及 [指令碼轉換編輯器]  。  
   
-6.  建立和設定需要 **AddressID** 和 **City** 資料行的目的地元件 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地)，或是在[使用指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件。 然後將轉換的輸出連接到目的地元件。 您可以在 **AdventureWorks** 資料庫中執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，以建立目的地資料表：  
+6.  建立和設定需要 **AddressID** 和 **City** 資料行的目的地元件 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地)，或是在[使用指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件。 然後將轉換的輸出連接到目的地元件。 您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)]AdventureWorks**資料庫中執行下列** 命令，以建立目的地資料表：  
   
     ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -211,7 +211,7 @@ public class ScriptMain:
   
 6.  在 [指令碼]  頁面上，按一下 [編輯指令碼]  ，並輸入以下指令碼。 然後關閉指令碼開發環境以及 [指令碼轉換編輯器]  。  
   
-7.  建立和設定兩個需要 **AddressID** 和 **City** 資料行的目的地元件，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地、一般檔案目的地，或是在[使用指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件。 然後將每個轉換輸出連接到其中一個目的地元件。 您可以在 **AdventureWorks** 資料庫中執行類似下列程式碼 (具有唯一的資料表名稱) 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，以建立目的地資料表：  
+7.  建立和設定兩個需要 **AddressID** 和 **City** 資料行的目的地元件，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地、一般檔案目的地，或是在[使用指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件。 然後將每個轉換輸出連接到其中一個目的地元件。 您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)]AdventureWorks**資料庫中執行類似下列程式碼 (具有唯一的資料表名稱) 的** 命令，以建立目的地資料表：  
   
     ```sql
     CREATE TABLE [Person].[Address2](  

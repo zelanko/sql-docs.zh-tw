@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2bea423a9ea039dbc9f0128c7d6b6f106ee03fe
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198405"
 ---
-# <a name="lesson-1-create-and-query-database-objects"></a>第 1 課：建立及查詢資料庫物件
+# <a name="lesson-1-create-and-query-database-objects"></a>課程 1：建立及查詢資料庫物件
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 這一課會示範如何建立資料庫、在資料庫中建立資料表，然後在資料表中存取和變更資料。 因為這一課是使用 [!INCLUDE[tsql](../includes/tsql-md.md)]的簡介，所以並不會使用或描述這些陳述式所能使用的許多選項。  
@@ -40,8 +40,8 @@ ms.locfileid: "79198405"
 - 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 如果您沒有 SQL Server 執行個體，請建立一個。 請從下列連結選取平台來建立 SQL Server 執行個體。 若您選擇 SQL 驗證，請使用您的 SQL Server 登入認證。
-- **Windows**：[下載 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- **macOS**：[下載 Docker 上的 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
+- **Windows**: [下載 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **macOS**: [下載 Docker 上的 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 ## <a name="create-a-database"></a>建立資料庫
 和許多 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式一樣，[`CREATE DATABASE`](statements/create-database-transact-sql.md) 陳述式也有一個必要參數，亦即資料庫的名稱。` CREATE DATABASE` 另外還有許多選擇性參數，例如要用來放置資料庫檔案的磁碟位置。 當執行 `CREATE DATABASE` 但未指定任何選擇性參數時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 針對這些參數的大部分會使用預設值。
@@ -108,7 +108,7 @@ ms.locfileid: "79198405"
 |75|Tire Bar||Tool for changing tires.|  
 |3000|3 mm Bracket|0.52||  
   
-基本語法如下：INSERT、資料表、資料行清單、VALUES，以及要插入的值清單。 程式行前面的兩個連字號表示該程式行是註解，而編譯器會忽略這行文字。 在本案例中，註解說明所允許的語法變化。  
+基本語法包括：INSERT、資料表、資料行清單、VALUES 以及要插入的值清單。 程式行前面的兩個連字號表示該程式行是註解，而編譯器會忽略這行文字。 在本案例中，註解說明所允許的語法變化。  
   
 ### <a name="insert-data-into-a-table"></a>將資料插入資料表中  
   

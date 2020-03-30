@@ -11,10 +11,10 @@ ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9963f137470c7e252bc00be189c37ac98e6374e4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71284352"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 各版本支援的 Integration Services 功能
@@ -37,7 +37,7 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
     
 > [![從 Evaluation Center 下載](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[從 Evaluation Center 下載 SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
     
-## <a name="ISNew"></a> SQL Server 2017 的新 Integration Services 功能
+## <a name="new-integration-services-features-in-sql-server-2017"></a><a name="ISNew"></a> SQL Server 2017 的新 Integration Services 功能
   
 |功能|Enterprise|標準|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -49,13 +49,13 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
 
 <sup>2</sup> SQL Server 2016 Service Pack 1 也支援這項功能。
 
-## <a name="IEWiz"></a> SQL Server 匯入和匯出精靈
+## <a name="sql-server-import-and-export-wizard"></a><a name="IEWiz"></a> SQL Server 匯入和匯出精靈
 
 |功能|Enterprise|標準|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |SQL Server 匯入和匯出精靈|是|是|是|是|是|  
 
-## <a name="IS"></a> Integration Services  
+## <a name="integration-services"></a><a name="IS"></a> Integration Services  
   
 |功能|Enterprise|標準|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -66,7 +66,7 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
 |Hadoop/HDFS 連接器和工作|是|是||||  
 |基本資料分析工具|是|是|||| 
 
-## <a name="ISAA"></a> Integration Services - 進階來源和目的地  
+## <a name="integration-services---advanced-sources-and-destinations"></a><a name="ISAA"></a> Integration Services - 進階來源和目的地  
   
 |功能|Enterprise|標準|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -77,7 +77,7 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
 |維度處理目的地|是|||||  
 |分割區處理目的地|是|||||  
   
-## <a name="ISAT"></a> Integration Services - 進階工作和轉換  
+## <a name="integration-services---advanced-tasks-and-transformations"></a><a name="ISAT"></a> Integration Services - 進階工作和轉換  
   
 |功能|Enterprise|標準|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  

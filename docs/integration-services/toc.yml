@@ -927,15 +927,15 @@
       href: ../integration-services/packages/sql-server-agent-jobs-for-packages.md
     - name: 使用 SQL Server Agent 在遠端伺服器上設定封裝負載平衡
       href: ../integration-services/packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
-- name: 相應放大
+- name: 擴增
   items:
     - name: 概觀
       href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
     - name: 在單一電腦上開始使用 SSIS Scale Out
       href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
-    - name: 逐步解說：設定 Integration Services 相應放大
+    - name: 逐步解說：設定 Integration Services 擴增
       href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
-    - name: 在相應放大中執行套件
+    - name: 在擴增中執行套件
       href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
     - name: 使用 Scale Out Manager 加入 Scale Out Worker
       href: ../integration-services/scale-out/add-scale-out-worker.md
@@ -1175,7 +1175,7 @@
       href: ../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md
     - name: catalog.revoke_permission
       href: ../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md
-    - name: 設定
+    - name: Set
       items:
         - name: catalog.set_customized_logging_level_description
           href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-description.md

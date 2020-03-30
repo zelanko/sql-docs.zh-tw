@@ -19,10 +19,10 @@ ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 701110865f4cda286c647ef887dba2e29cc5fb42
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68081160"
 ---
 # <a name="filter-geometry-data-type"></a>Filter (geometry 資料類型)

@@ -14,10 +14,10 @@ ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1f42630e101a60c9d3265ab96a5b126551eeaff0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991593"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 可用性群組：互通性 (SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "67991593"
 
 本主題記錄 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中其他 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]功能的互通性。
 
-## <a name="Interop"></a> 與 Always On 可用性群組互通的功能
+## <a name="features-that-interoperate-with-always-on-availability-groups"></a><a name="Interop"></a> 與 Always On 可用性群組互通的功能
 
 下表列出與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 互通的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]功能。 **[詳細資訊]** 資料行中的連結表示有適用於所指功能的互通性考量。
 
@@ -46,20 +46,20 @@ ms.locfileid: "67991593"
 |Service Broker|[使用 AlwaysOn 可用性群組的 Service Broker &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md)|
 |SQL Server Agent|&nbsp;|
 
-## <a name="restrictions"></a> 與 AlwaysOn 可用性群組相互溝通的功能限制
+## <a name="features-that-interoperate-with-always-on-availability-groups-with-restrictions"></a><a name="restrictions"></a> 與 AlwaysOn 可用性群組相互溝通的功能限制
 
 下列可與 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 相互溝通的功能有特定限制。 如需詳細資訊，請參閱連結主題。
 
 - 跨資料庫交易/分散式交易 ([!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 和 Windows Server 2016)。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組和資料庫鏡像的跨資料庫交易和分散式交易 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 - [查詢統計資料系統資料收集器](../../../relational-databases/data-collection/system-data-collection-set-reports.md#Query)無法在具有不可讀取次要項目的環境中可靠地執行。 若要使用查詢統計資料系統資料收集器，請將所有次要可用性群組複本設為允許[讀取存取](configure-read-only-access-on-an-availability-replica-sql-server.md)。 
 
-## <a name="NoInterop"></a> 不與 AlwaysOn 可用性群組互通的功能
+## <a name="features-that-do-not-interoperate-with-always-on-availability-groups"></a><a name="NoInterop"></a> 不與 AlwaysOn 可用性群組互通的功能
 
 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 無法與下列功能互通：
 
 - 資料庫鏡像。 如需詳細資訊，請參閱[資料庫鏡像或 AlwaysOn 可用性群組不支援跨資料庫交易 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。
 
-## <a name="RelatedContent"></a> 相關內容
+## <a name="related-content"></a><a name="RelatedContent"></a> 相關內容
 
 - **部落格：**
 

@@ -36,13 +36,13 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>引數  
  [ @source_folder = ] *source_folder*  
- 在移動之前，環境所在之來源資料夾的名稱。 *source_folder* 是 **nvarchar(128)**。  
+ 在移動之前，環境所在之來源資料夾的名稱。 *source_folder* 是 **nvarchar(128)** 。  
   
  [ @environment_name = ] *environment_name*  
- 要移動之環境的名稱。 *environment_name* 是 **nvarchar(128)**。  
+ 要移動之環境的名稱。 *environment_name* 是 **nvarchar(128)** 。  
   
  [ @destination_folder = ] *destination_folder*  
- 在移動之後，環境所在之目的地資料夾的名稱。 *destination_folder* 是 **nvarchar(128)**。  
+ 在移動之後，環境所在之目的地資料夾的名稱。 *destination_folder* 是 **nvarchar(128)** 。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

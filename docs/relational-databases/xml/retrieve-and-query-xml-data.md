@@ -14,17 +14,17 @@ ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fd1505bbbfc03308cbdbf6a5fc9fba122c4da24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67995263"
 ---
 # <a name="retrieve-and-query-xml-data"></a>擷取及查詢 XML 資料
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   本主題說明查詢 XML 資料必須指定的查詢選項。 也會描述當 XML 執行個體儲存於資料庫中時，未保留的 XML 執行個體部分。  
   
-##  <a name="features"></a> 未保留的 XML 執行個體功能  
+##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> 未保留的 XML 執行個體功能  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會保留 XML 執行個體的內容，但是不會保留在 XML 資料模型中不視為重大之 XML 執行個體的層面。 這表示擷取的 XML 執行個體可能不等於儲存於伺服器上的執行個體，但是將會包含相同的資訊。  
   
 ### <a name="xml-declaration"></a>XML 宣告  
@@ -87,7 +87,7 @@ GO
 ```  
   
   
-##  <a name="query"></a> 設定必要查詢選項  
+##  <a name="setting-required-query-options"></a><a name="query"></a> 設定必要查詢選項  
  使用 **xml** 資料類型方法來查詢 **xml** 類型資料行或變數時，必須依下表所示，設定下列選項。  
   
 |SET 選項|必要值|  

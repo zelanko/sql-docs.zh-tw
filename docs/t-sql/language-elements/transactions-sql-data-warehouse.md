@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68121592"
 ---
 # <a name="transactions-sql-data-warehouse"></a>交易 (SQL 資料倉儲)
@@ -99,7 +99,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="locking-behavior"></a>鎖定行為  
  當多個使用者同時存取資料時，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 會使用鎖定來確保交易的完整性，並維護資料庫的一致性。 隱含交易和明確交易都使用鎖定。 每個交易會對資源要求不同類型的鎖定，例如交易相依的資料表或資料庫。 所有 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 鎖定都是資料表層級或更高層級。 鎖定會阻擋其他交易修改資源，以免造成要求鎖定的交易發生問題。 每個交易會在對鎖定的資源不再具有相依性時釋出鎖定。明確交易則會在交易完成 (無論是認可或復原) 之前維持鎖定。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. 使用明確交易  
   

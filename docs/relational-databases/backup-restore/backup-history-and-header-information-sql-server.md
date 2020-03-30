@@ -34,10 +34,10 @@ ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: f2b04fb3c35f810e37e1646446f7ebdfb8915ee1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75242593"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>備份記錄與標頭資訊 (SQL Server)
@@ -65,7 +65,7 @@ ms.locfileid: "75242593"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="BnRHistoryTables"></a> 備份與還原記錄資料表  
+##  <a name="backup-and-restore-history-tables"></a><a name="BnRHistoryTables"></a> 備份與還原記錄資料表  
  此章節介紹儲存 **msdb** 系統資料庫中的備份及還原中繼資料的歷史記錄資料表。  
   
 |記錄資料表|描述|  
@@ -82,7 +82,7 @@ ms.locfileid: "75242593"
 > [!NOTE]  
 >  執行還原時，會修改備份記錄資料表和還原記錄資料表。  
   
-##  <a name="TsqlStatementsForBackupHistory"></a> 存取備份記錄的 Transact-SQL 陳述式  
+##  <a name="transact-sql-statements-for-accessing-backup-history"></a><a name="TsqlStatementsForBackupHistory"></a> 存取備份記錄的 Transact-SQL 陳述式  
  還原資訊陳述式會與儲存在某些備份記錄資料表中的資訊對應。  
   
 > [!IMPORTANT]  
@@ -94,7 +94,7 @@ ms.locfileid: "75242593"
 |[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|擷取特定備份裝置上，所有備份組的所有備份前置資料。 執行 RESTORE HEADERONLY 的結果是結果集。<br /><br /> 如需詳細資訊，請參閱本主題稍後的「檢視備份標頭資訊」。|  
 |[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|[backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|傳回結果集，其中會包含指定備份裝置上之備份媒體的相關資訊。<br /><br /> 如需詳細資訊，請參閱本主題稍後的「檢視媒體標頭資訊」。|  
   
-##  <a name="ListDbTlogFiles"></a> 資料庫和交易記錄檔  
+##  <a name="database-and-transaction-log-files"></a><a name="ListDbTlogFiles"></a> 資料庫和交易記錄檔  
  在列出備份中的資料庫與交易記錄檔時所顯示的資訊包括：邏輯名稱、實體名稱、檔案類型 (資料庫或記錄)、檔案群組成員資格、檔案大小 (以位元組為單位)、允許的檔案大小上限以及預先定義的檔案成長大小 (以位元組為單位)。 在下列狀況中，這些資訊有助於在還原資料庫備份前判斷資料庫備份中的檔案名稱：  
   
 -   損失了一部磁碟機，內含某資料庫的一或多個檔案。  
@@ -105,7 +105,7 @@ ms.locfileid: "75242593"
   
      列出備份中的檔案能讓您判斷哪些檔案受到影響。 例如，備份包含需要還原到磁碟機 E 的檔案，但是目的地伺服器並沒有磁碟機 E。當您還原這個檔案時，就必須將它重新放置到其他位置，如磁碟機 Z。  
   
-##  <a name="MediaHeader"></a> 媒體標頭資訊  
+##  <a name="media-header-information"></a><a name="MediaHeader"></a> 媒體標頭資訊  
  檢視媒體標頭會顯示關於媒體本身的資訊，而非媒體上備份的資訊。 顯示的媒體標頭資訊包括：媒體名稱、描述、建立媒體標頭的軟體名稱以及寫入媒體標頭的日期。  
   
 > [!NOTE]  
@@ -113,7 +113,7 @@ ms.locfileid: "75242593"
   
  如需詳細資訊，請參閱本主題後面的 [媒體標頭與備份標頭資訊的比較](#CompareMediaHeaderBackupHeader)。  
   
-##  <a name="BackupHeader"></a> 備份標頭資訊  
+##  <a name="backup-header-information"></a><a name="BackupHeader"></a> 備份標頭資訊  
  檢視備份標頭會顯示有關媒體上所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份組的資訊。 顯示的資訊包括使用的備份裝置類型、備份類型 (例如資料庫、交易、檔案或差異資料庫)，以及備份開始與停止的日期/時間資訊。 當您必須決定要還原磁帶上的哪個備份組，或包含在媒體上的備份時，這項資訊會非常有用。  
   
 > [!NOTE]  
@@ -128,7 +128,7 @@ ms.locfileid: "75242593"
   
  若要還原特定的備份組，可指定所要還原的備份組位置編號。 例如，若要還原第二個備份組，請指定 2 當做要還原的備份組。  
   
-##  <a name="CompareMediaHeaderBackupHeader"></a> 媒體標頭與備份標頭資訊的比較  
+##  <a name="comparison-of-media-header-and-backup-header-information"></a><a name="CompareMediaHeaderBackupHeader"></a> 媒體標頭與備份標頭資訊的比較  
  下圖提供的範例顯示檢視備份標頭與媒體標頭資訊之間的差異。 取得媒體標頭時，只需從磁帶的開頭擷取資訊。 取得備份標頭時，則必須掃描整捲磁帶來查看每個備份組的標頭。  
   
  ![包含三個 SQL Server 備份集的媒體集](../../relational-databases/backup-restore/media/bnr-media-label.gif "包含三個 SQL Server 備份集的媒體集")  
@@ -140,10 +140,10 @@ ms.locfileid: "75242593"
   
  如需有關如何檢視備份裝置上所有備份組之備份標頭資訊的詳細資訊，請參閱本主題前面的＜檢視備份標頭資訊＞。  
   
-##  <a name="Verification"></a> 備份驗證  
+##  <a name="backup-verification"></a><a name="Verification"></a> 備份驗證  
  驗證備份不是必要的步驟，但仍是很有用的作法。 驗證備份會檢查備份實際上是否完整無缺，以確定備份中的所有檔案都可以讀取也可以還原，並確定在您需要時可以還原備份。 您必須了解，驗證備份並不會驗證備份上的資料結構。 不過，如果是使用 WITH CHECKSUMS 所建立的備份，則使用 WITH CHECKSUMS 來驗證備份可提供適當的指示，指出備份中資料的可靠性。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **從備份與還原記錄資料表中刪除舊的資料列**  
   
 -   [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  

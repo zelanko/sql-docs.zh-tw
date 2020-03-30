@@ -9,10 +9,10 @@ ms.reviewer: carlrab
 ms.custom: ''
 ms.date: 01/23/2020
 ms.openlocfilehash: 99976a12ae76254da5b50c5467df9d9e42fdbbce
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76920351"
 ---
 # <a name="install-the-sql-server-powershell-module"></a>安裝 SQL Server PowerShell 模組

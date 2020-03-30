@@ -11,10 +11,10 @@ ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
 ms.openlocfilehash: f0e1acd5af76f5b0b075879fc1c5122713caed55
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75002022"
 ---
 # <a name="sql-server-replication-on-linux"></a>Linux 上的 SQL Server 複寫

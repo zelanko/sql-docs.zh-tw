@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 8d4d4812ccdc944411224094f3a9a29115845dc1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73632939"
 ---
 # <a name="compatibility-certification"></a>相容性認證
@@ -57,7 +57,7 @@ ms.locfileid: "73632939"
 
 若要進行新的開發工作，或是現有的應用程式需要使用新功能 (例如[智慧型查詢處理](../../relational-databases/performance/intelligent-query-processing.md)以及某些新的 [!INCLUDE[tsql](../../includes/tsql-md.md)])，請規劃將資料庫相容性層級升級至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的最新層級，並確認您的應用程式適用於該相容性層級。 如需有關升級資料庫相容性層級的詳細資訊，請參閱[升級資料庫相容性層級的最佳做法](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)。
    
-### <a name="queryplan_shape"></a> 為何使用查詢計劃圖形？      
+### <a name="why-query-plan-shape"></a><a name="queryplan_shape"></a> 為何使用查詢計劃圖形？      
 查詢計劃圖形係指組成查詢計劃之各種運算子的視覺表示方式。 這包括搜尋、掃描、聯結和排序等運算子，以及它們之間表示資料流程與必須執行以產生所需結果集之作業順序的連接。 查詢計畫圖形由查詢最佳化工具所決定。
 
 若要在升級期間維持穩定的查詢效能，其中一個基本目標就是確保使用相同的查詢計劃圖形。 達成此目標的做法是，不要在升級後立即變更資料庫相容性層級，即使基礎 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 具有不同的版本也一樣。 如果查詢執行生態系統中沒有任何其他變更 (例如可用資源方面或基礎資料中之資料散發方面的重大變更)，則查詢效能應該維持不變。 
@@ -83,7 +83,7 @@ ms.locfileid: "73632939"
 >
 > 升級相容性層級低於所允許層級的資料庫 (例如 90，這是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中的預設值) 時，會將資料庫設定為允許的最低相容性層級 (100)。
 >
-> 若要判斷目前的相容性層級，請查詢 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 的 **compatibility_level** 資料行。
+> 若要判斷目前的相容性層級，請查詢 **sys.databases** 的 [compatibility_level](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 資料行。
 
 ## <a name="compatibility-levels-and-database-engine-upgrades"></a>相容性層級和資料庫引擎升級
 若要將 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 升級至最新版本，同時維護升級前已存在的資料庫相容性層級及其可支援性狀態，建議使用 [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) 工具 (DMA)，執行資料庫 (可程式性物件，例如預存程序、函數、觸發程序等) 及應用程式 (使用擷取應用程式所傳送動態程式碼的工作負載追蹤) 中應用程式程式碼的靜態功能介面區驗證。 在 DMA 工具輸出中，由於沒有關於遺失或不相容功能的錯誤，因此可防止應用程式在新的目標版本上出現任何功能迴歸的情況。 如需詳細資訊，請參閱 [Data Migration Assistant 的概觀](../../dma/dma-overview.md)。
@@ -98,7 +98,7 @@ ms.locfileid: "73632939"
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] 會在下列情況下提供查詢計畫圖形保護：
 >
 > - 新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (目標) 執行所在的硬體，相當於舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (來源) 執行所在的硬體。
-> - 目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和來源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上使用相同的[受支援資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats)。
+> - 目標 [ 和來源 ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) 上使用相同的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]受支援資料庫相容性層級[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 >
 > 上述情況中所發生的任何查詢計劃圖形迴歸 (相較於來源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 都會予以解決。 如果發生這種情況，請連絡 Microsoft 客戶支援。
   

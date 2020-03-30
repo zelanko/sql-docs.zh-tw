@@ -16,10 +16,10 @@ ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b58af59da33a2a03627d06a2e461da76d359e28b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76911039"
 ---
 # <a name="attach-a-database"></a>附加資料庫
@@ -27,7 +27,7 @@ ms.locfileid: "76911039"
 
 此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中附加資料庫。 您可以使用此功能來複製、移動或升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   資料庫必須先卸離。 嘗試附加未卸離的資料庫會傳回錯誤。 如需詳細資訊，請參閱 [卸離資料庫](../../relational-databases/databases/detach-a-database.md)。  
   
@@ -35,20 +35,20 @@ ms.locfileid: "76911039"
   
 -   在您附加資料庫時，如果 MDF 和 LDF 檔案位於不同的目錄，而且其中一個路徑包括 \\\\?\GlobalRoot，作業將會失敗。  
   
-###  <a name="Recommendations"></a> 附加是否為最佳選擇？  
+###  <a name="is-attach-the-best-choice"></a><a name="Recommendations"></a> 附加是否為最佳選擇？  
 在相同的執行個體中移動資料庫檔案時，建議您使用 `ALTER DATABASE` 規劃的重新配置程序來移動資料庫，而不要使用卸離和附加。 如需詳細資訊，請參閱 [移動使用者資料庫](../../relational-databases/databases/move-user-databases.md)。 
  
 不建議使用卸離和附加進行備份和復原。 這樣不會備份交易記錄檔，且可能會不小心刪除檔案。
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
 檔案存取權限是在數個資料庫作業期間設定，包括卸離或附加資料庫。 如需有關卸離和附加資料庫時所設定之檔案權限的詳細資訊，請參閱《 [線上叢書》中的](https://technet.microsoft.com/library/ms189128.aspx) 保護資料和記錄檔 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (仍然值得閱讀！) 
   
 建議您不要附加或還原來源不明或來源不受信任的資料庫。 這種資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際執行伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。 如需附加資料庫的詳細資訊，以及附加資料庫時，對中繼資料所做變更的相關資訊，請參閱 [資料庫卸離與附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)。  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
 需要 `CREATE DATABASE`、`CREATE ANY DATABASE` 或 `ALTER ANY DATABASE` 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
 
 ### <a name="to-attach-a-database"></a>附加資料庫  
   
@@ -120,7 +120,7 @@ ms.locfileid: "76911039"
      **訊息**  
      顯示空白訊息或 **「找不到檔案」** 超連結。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 ### <a name="to-attach-a-database"></a>若要附加資料庫  
   
@@ -128,7 +128,7 @@ ms.locfileid: "76911039"
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  搭配 `FOR ATTACH` 子句使用 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 陳述式。  
+3.  搭配 [ 子句使用 ](../../t-sql/statements/create-database-sql-server-transact-sql.md)CREATE DATABASE`FOR ATTACH` 陳述式。  
   
      複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會附加 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的檔案，並將資料庫重新命名為 `MyAdventureWorks`。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "76911039"
     > [!NOTE]  
     > 或者，您可以使用 [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) 或 [sp_attach_single_file_db](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md) 預存程序。 但是，Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本將移除這些程序。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 我們建議您改用 `CREATE DATABASE ... FOR ATTACH` 。  
   
-##  <a name="FollowUp"></a> 後續操作：升級 SQL Server 資料庫之後  
+##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> 待處理：升級 SQL Server 資料庫之後  
 當您使用附加方法升級資料庫之後，該資料庫會立即可用並自動升級。 如果資料庫具有全文檢索索引，升級程序就會根據 [全文檢索目錄升級選項]  伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 [匯入]  或 [重建]  ，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入]  時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。  
   
 如果使用者資料庫的相容性層級在升級前為 100 或更高層級，則在升級後仍會保持相同。 如果升級前的相容性層級為 90，則在升級後的資料庫中，相容性層級會設定為 100 (這是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]所支援的最低相容性層級)。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  

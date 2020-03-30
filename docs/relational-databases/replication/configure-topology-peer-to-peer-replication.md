@@ -13,10 +13,10 @@ ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1fcb84fe69c617cacc183910e3446400a172ea6d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67903122"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>設定拓撲 (點對點複寫)
@@ -63,7 +63,7 @@ ms.locfileid: "67903122"
   
 ### <a name="options-for-each-node"></a>每個節點的選項  
  **加入新的對等連接**  
- 在兩個節點之間加入連接。 例如，如果您在節點 A 與節點 B 之間新增連線，複寫就會新增兩個訂閱：第一個訂閱可讓節點 A 收到位於節點 B 的發行集變更，而第二個訂閱可讓節點 B 收到位於節點 A 的發行集變更。  
+ 在兩個節點之間加入連接。 例如，如果您在節點 A 與節點 B 之間加入連接，複寫就會加入兩個訂閱：第一個訂閱可讓節點 A 收到位於節點 B 之發行集的變更，而第二個訂閱可讓節點 B 收到位於節點 A 之發行集的變更。  
   
  **刪除對等節點**  
  從拓撲中移除節點。 例如，如果您移除節點 C，就會一併移除位於該節點的發行集。 此外，系統也會移除節點 A 與節點 C 之間的訂閱，以及節點 B 與節點 C 之間的訂閱。 但是，系統不會刪除位於節點 C 的資料庫，而且不會停用發行和散發功能。  

@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.openlocfilehash: 148b887497cf9411aad72936a201805000c717ec
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558557"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>使用備份與還原將 SQL Server 資料庫從 Windows 移轉至 Linux
@@ -83,7 +83,7 @@ SQL Server 的備份與還原功能是將資料庫從 Windows 上的 SQL Server 
 
 1. 在 Windows 上開啟 Bash 工作階段。
 
-## <a id="scp"></a> 將備份檔案複製到 Linux
+## <a name="copy-the-backup-file-to-linux"></a><a id="scp"></a> 將備份檔案複製到 Linux
 
 1. 在您的 Bash 工作階段中，瀏覽至包含備份檔案的目錄。 例如：
 

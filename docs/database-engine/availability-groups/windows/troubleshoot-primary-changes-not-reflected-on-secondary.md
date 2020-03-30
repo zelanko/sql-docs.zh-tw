@@ -11,10 +11,10 @@ ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 55dc6787960fbb4979bbe0d21f27f0fa43437662
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75243006"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>判斷為什麼來自主要複本的變更不會反映在 Always On 可用性群組次要複本上
@@ -50,7 +50,7 @@ ms.locfileid: "75243006"
 下列各節說明對主要複本的變更，在唯讀查詢時未反映在次要複本上的常見原因。  
 
 
-##  <a name="BKMK_OLDTRANS"></a> 長時間執行的使用中交易  
+##  <a name="long-running-active-transactions"></a><a name="BKMK_OLDTRANS"></a> 長時間執行的使用中交易  
  在主要複本上長時間執行的交易會阻止在次要複本上讀取更新。  
   
 ### <a name="explanation"></a>說明  
@@ -59,7 +59,7 @@ ms.locfileid: "75243006"
 ### <a name="diagnosis-and-resolution"></a>診斷和解決方案  
  在主要複本上，使用 [DBCC OPENTRAN &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-opentran-transact-sql.md) 檢視最舊的使用中交易，並查看交易是否可以復原。 一旦最舊的使用中交易復原，並同步處理至次要複本，在次要複本上的讀取工作負載就可以看到可用性資料庫中，從當時到最舊的使用中交易起始點的更新。  
   
-##  <a name="BKMK_LATENCY"></a> 高度網路延遲或低網路輸送量會造成主要複本上的記錄累積  
+##  <a name="high-network-latency-or-low-network-throughput-causes-log-build-up-on-the-primary-replica"></a><a name="BKMK_LATENCY"></a> 高度網路延遲或低網路輸送量會造成主要複本上的記錄累積  
  高度網路延遲或低輸送量可能會讓記錄以不夠快的速度傳送至次要複本。  
   
 ### <a name="explanation"></a>說明  
@@ -92,7 +92,7 @@ ms.locfileid: "75243006"
   
  若要解決此問題，請嘗試升級您的網路頻寬，或者移除或減少不必要的網路流量。  
   
-##  <a name="BKMK_REDOBLOCK"></a> 另一個報告工作負載封鎖重做執行緒執行  
+##  <a name="another-reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a> 另一個報告工作負載封鎖重做執行緒執行  
  在次要複本上的重做執行緒被長時間執行的唯讀查詢封鎖，因而無法進行資料定義語言 (DDL) 變更。 重做執行緒必須先解除封鎖，才能進一步進行更新供讀取工作負載使用。  
   
 ### <a name="explanation"></a>說明  
@@ -108,7 +108,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  您可以讓報告工作負載完成，完成之後重做執行緒便會解除封鎖。或者，您可以對造成封鎖的工作階段識別碼執行 [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) 命令，以立即將重做執行緒解除封鎖。  
   
-##  <a name="BKMK_REDOBEHIND"></a> 重做執行緒因資源競爭而落後  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_REDOBEHIND"></a> 重做執行緒因資源競爭而落後  
  次要複本上的大型報告工作負載造成次要複本的效能緩慢，且重做執行緒已經落後。  
   
 ### <a name="explanation"></a>說明  

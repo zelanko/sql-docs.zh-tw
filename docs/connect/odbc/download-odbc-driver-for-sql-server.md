@@ -10,10 +10,10 @@ ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0646ac7388edfefcf598556753225a182a4aa13e
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79090390"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>下載 ODBC Driver for SQL Server

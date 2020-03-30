@@ -11,10 +11,10 @@ ms.assetid: 5ecb4bf1-b8d1-47cf-9cb1-7a18acc11ce2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32d538e31ca3f4a0d9b23411ebcb7b282df46b33
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970317"
 ---
 # <a name="sqlserverxaconnection-class"></a>SQLServerXAConnection 類別

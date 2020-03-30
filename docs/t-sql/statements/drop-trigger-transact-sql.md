@@ -104,7 +104,7 @@ ON ALL SERVER
 ## <a name="examples"></a>範例  
   
 ### <a name="a-dropping-a-dml-trigger"></a>A. 卸除 DML 觸發程序  
- 下列範例會卸除 `employee_insupd` 資料庫中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 觸發程序。 (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，您可以使用 DROP TRIGGER IF EXISTS 語法。)  
+ 下列範例會卸除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的 `employee_insupd` 觸發程序。 (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，您可以使用 DROP TRIGGER IF EXISTS 語法。)  
   
 ```  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  

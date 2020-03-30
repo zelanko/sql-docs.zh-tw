@@ -56,10 +56,10 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
 ms.openlocfilehash: 7a4c7733bd346f0631d353af228955dbd8e0b46b
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288832"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
@@ -274,9 +274,9 @@ ROBUST PLAN
 支援下列提示名稱：    
  
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' <a name="use_hint_join_containment"></a>       
-   在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的查詢最佳化工具[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型下，導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用簡易內含項目假設產生查詢計劃，而不使用聯結的預設基底內含項目假設。 這個提示名稱與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 相同。 
+   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或更新版本的查詢最佳化工具[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型下，導致 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 使用簡易內含項目假設產生查詢計劃，而不使用聯結的預設基底內含項目假設。 這個提示名稱與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 相同。 
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
-   導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在評估篩選條件的 AND 述詞以說明相互關聯時，使用最小選擇性來產生計劃。 這個提示名稱在搭配 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更早版本的基數估計模型使用時會與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 相同，而且在將[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 搭配 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的基數估計模型使用時，會有類似效果。
+   導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在評估篩選條件的 AND 述詞以說明相互關聯時，使用最小選擇性來產生計劃。 這個提示名稱在搭配 [ 及更早版本的基數估計模型使用時會與](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)追蹤旗標[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 4137 相同，而且在將[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 搭配 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的基數估計模型使用時，會有類似效果。
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
    停用批次模式自適性聯結。 如需詳細資訊，請參閱[批次模式自適性聯結](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)。     
    **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
@@ -318,15 +318,15 @@ ROBUST PLAN
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'      
    強制查詢最佳化工具使用對應至目前資料庫相容性層級的[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型。 使用這個提示來覆寫[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)的 `LEGACY_CARDINALITY_ESTIMATION = ON` 設定或[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481。
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
-   強制查詢最佳化工具使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及較早版本的[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型。 這個提示名稱與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 或[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)的 `LEGACY_CARDINALITY_ESTIMATION = ON` 設定相同。
+   強制查詢最佳化工具使用 [ 及較早版本的](../../relational-databases/performance/cardinality-estimation-sql-server.md)基數估計[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]模型。 這個提示名稱與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 或[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)的 `LEGACY_CARDINALITY_ESTIMATION = ON` 設定相同。
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
  強制執行查詢層級的查詢最佳化工具行為。 此行為如同查詢是使用資料庫相容性層級 _n_ 所編譯，其中 _n_ 是支援的資料庫相容性層級。 請參閱 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) 以取得目前支援之 _n_ 值的清單。      
    **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10 開始)。    
 
    > [!NOTE]
    > QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 提示不會覆寫預設值或舊版基數估計設定，若它是透過資料庫範圍設定所強制，則為追蹤旗標或另一個查詢提示，例如 QUERYTRACEON。   
-   > 此提示只會影響查詢最佳化工具的行為。 它不會影響可能相依於[資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)的其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，例如特定資料庫功能的可用性。  
-   > 若要深入了解此提示，請參閱 [Developer's Choice:Hinting Query Execution model](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model) (開發人員精選：提示查詢執行模型)。
+   > 此提示只會影響查詢最佳化工具的行為。 它不會影響可能相依於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫相容性層級[的其他 ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 功能，例如特定資料庫功能的可用性。  
+   > 若要深入了解此提示，請參閱[開發人員精選：提示查詢執行模型](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model) \(英文\)。
     
 *  'QUERY_PLAN_PROFILE'      
  為查詢啟用輕量分析。 當包含這個新提示的查詢完成時，便會發出一個新的擴充事件 (query_plan_profile)。 此擴充事件會公開執行統計資料和與 query_post_execution_showplan 擴充事件相似的執行計畫 XML，但僅限包含新提示的查詢。    
@@ -563,7 +563,7 @@ GO
 ```  
   
 ### <a name="k-specifying-semantics-affecting-table-hints"></a>K. 指定影響語意的資料表提示  
-下列範例在查詢中包含兩個資料表提示：影響語意的 NOLOCK，以及不會影響語意的 INDEX。 為了保留查詢的語意，會在計畫指南的 OPTIONS 子句中指定 NOLOCK 提示。 除了 NOLOCK 提示以外，在陳述式編譯和最佳化期間，也會指定 INDEX 和 FORCESEEK 提示，並用它們來取代查詢中不會影響語意的 INDEX 提示。 此範例會使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫。  
+下列範例在查詢中包含兩個資料表提示：影響語意的 NOLOCK 以及不會影響語意的 INDEX。 為了保留查詢的語意，會在計畫指南的 OPTIONS 子句中指定 NOLOCK 提示。 除了 NOLOCK 提示以外，在陳述式編譯和最佳化期間，也會指定 INDEX 和 FORCESEEK 提示，並用它們來取代查詢中不會影響語意的 INDEX 提示。 此範例會使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫。  
   
 ```sql  
 EXEC sp_create_plan_guide   

@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a50c5344f8742a8483d952b8cab3b03d8d666b31
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68057908"
 ---
 # <a name="about-log-shipping-sql-server"></a>關於記錄傳送 (SQL Server)
@@ -50,7 +50,7 @@ ms.locfileid: "68057908"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 優點  
+##  <a name="benefits"></a><a name="Benefits"></a> 優點  
   
 -   為單一主要資料庫以及一個或多個次要資料庫 (每個資料庫都位於單獨的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上) 提供災害復原方案。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68057908"
   
 -   可讓使用者指定在主要伺服器備份主要資料庫的記錄檔之後，延遲多久次要伺服器才必須還原 (套用) 記錄備份。 長時間的延遲可能會有幫助，例如，當您意外變更了主要資料庫上的資料時。 如果您很快就注意到這項意外變更，延遲便可讓您在次要資料庫反映變更之前，從次要資料庫擷取尚未變更的資料。  
   
-##  <a name="TermsAndDefinitions"></a> 詞彙和定義  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 詞彙和定義  
  「主要資料庫」  
  做為實際執行伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68057908"
 > [!TIP]  
 >  對於每個警示，您需要指定警示編號。 此外，請務必設定警示，以便在引發警示時通知操作員。  
   
-##  <a name="ComponentsAndConcepts"></a> 記錄傳送概觀  
+##  <a name="log-shipping-overview"></a><a name="ComponentsAndConcepts"></a> 記錄傳送概觀  
  記錄傳送由三項作業組成：  
   
 1.  在主要伺服器執行個體上備份交易記錄檔。  
@@ -128,7 +128,7 @@ ms.locfileid: "68057908"
   
  ![顯示備份、複製與還原作業的組態](../../database-engine/log-shipping/media/ls-typical-configuration.gif "顯示備份、複製與還原作業的組態")  
   
-##  <a name="Interoperability"></a> 互通性  
+##  <a name="interoperability"></a><a name="Interoperability"></a> 互通性  
  記錄傳送只能與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的下列功能或元件搭配使用：  
   
 -   [從記錄傳送移轉至 AlwaysOn 可用性群組的必要條件 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
@@ -140,7 +140,7 @@ ms.locfileid: "68057908"
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 和資料庫鏡像互斥。 資料庫已設定其中一項功能後，便不能設定另一項功能。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [將記錄傳送升級至 SQL Server 2016 &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

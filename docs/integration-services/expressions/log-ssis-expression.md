@@ -14,10 +14,10 @@ ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a2a44d6e7245108c16442e30a67aaea13aae8293
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297502"
 ---
 # <a name="log-ssis-expression"></a>LOG (SSIS 運算式)

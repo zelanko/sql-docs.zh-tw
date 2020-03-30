@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a3d52368ac0eaeba118d0ba6e7abc88ef5e69db9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68063138"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>記憶體最佳化資料表中的資料表和資料列大小
@@ -42,7 +42,7 @@ ms.locfileid: "68063138"
 ![記憶體最佳化資料表。](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "記憶體最佳化資料表。")  
 由索引和資料列組成之記憶體最佳化的資料表。  
 
-##  <a name="bkmk_TableSize"></a> 計算資料表大小
+##  <a name="computing-table-size"></a><a name="bkmk_TableSize"></a> 計算資料表大小
 資料表的記憶體中大小 (以位元組為單位) 計算如下：  
   
 ```  
@@ -63,7 +63,7 @@ ms.locfileid: "68063138"
 [row size] = [row header size] + [actual row body size]  
 [row header size] = 24 + 8 * [number of indexes]  
 ```  
-##  <a name="bkmk_RowBodySize"></a> 計算資料列主體大小
+##  <a name="computing-row-body-size"></a><a name="bkmk_RowBodySize"></a> 計算資料列主體大小
 
 **資料列結構** 記憶體最佳化資料表中的資料列具有下列元件：  
   
@@ -85,15 +85,15 @@ ms.locfileid: "68063138"
   
 因此，名稱雜湊索引的鏈結如下：  
   
--   第一個貯體：(John, Beijing)；(John, Paris)；(Jane, Prague)  
+-   第一個貯體：(John, Beijing)、(John, Paris)、(Jane, Prague)  
   
 -   第二個貯體：(Susan, Bogota)  
   
 城市索引的鏈結如下：  
   
--   第一個貯體：(John, Beijing)，(Susan, Bogota)  
+-   第一個貯體：(John, Beijing)、(Susan, Bogota)  
   
--   第二個貯體：(John, Paris)，(Jane, Prague)  
+-   第二個貯體：(John, Paris)、(Jane, Prague)  
   
 結束時間戳記 ∞ (無限大) 指出這是資料列的目前有效版本。 自從這個資料列版本寫入後，資料列尚未更新或刪除。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "68063138"
   
 |區段|大小|註解|  
 |-------------|----------|--------------|  
-|淺層類型資料行|SUM([淺層類型的大小])。 個別類型的大小如下所示 (以位元組為單位)：<br /><br /> **Bit**：1<br /><br /> **Tinyint**：1<br /><br /> **Smallint**：2<br /><br /> **Int**：4<br /><br /> **Real**：4<br /><br /> **Smalldatetime**：4<br /><br /> **Smallmoney**：4<br /><br /> **Bigint**：8<br /><br /> **Datetime**：8<br /><br /> **Datetime2**：8<br /><br /> **Float**：8<br /><br /> **Money**：8<br /><br /> **Numeric** (精確度 <=18)：8<br /><br /> **Time**：8<br /><br /> **Numeric** (精確度 >18)：16<br /><br /> **Uniqueidentifier**：16||  
+|淺層類型資料行|SUM([淺層類型的大小])。 個別類型的大小如下所示 (以位元組為單位)：<br /><br /> **Bit**：1<br /><br /> **Tinyint**：1<br /><br /> **Smallint**：2<br /><br /> **Int**：4<br /><br /> **Real**：4<br /><br /> **Smalldatetime**：4<br /><br /> **Smallmoney**：4<br /><br /> **Bigint**：8<br /><br /> **Datetime**：8<br /><br /> **Datetime2**：8<br /><br /> **Float**：8<br /><br /> **Money**：8<br /><br /> **Numeric** (precision <=18)：8<br /><br /> **Time**：8<br /><br /> **Numeric**(precision>18)：16<br /><br /> **Uniqueidentifier**：16||  
 |淺層資料行填補|可能的值包括：<br /><br /> 如果有深層類型資料行且淺層資料行的資料大小總計為奇數，則為 1。<br /><br /> 否則為 0|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
 |深層類型資料行的位移陣列|可能的值包括：<br /><br /> 如果沒有深層類型資料行則為 0<br /><br /> 否則為 2 + 2 * [深層類型資料行數目]|深層類型是指 (var)binary 和 (n)(var)char 類型。|  
 |NULL 陣列|[可為 null 的資料行數目] / 8，無條件進位到完整的位元組。|陣列中每個可為 null 的資料行都有一個位元。 這個位元會無條件進位到完整的位元組。|  
@@ -136,7 +136,7 @@ ms.locfileid: "68063138"
 |可變長度的深層類型資料行「計算的大小」 |SUM([可變長度的深層類型資料行計算的大小]  )<br /><br /> 每個資料行計算的大小如下所示：<br /><br /> i 代表 varchar(i) 和 varbinary(i)<br /><br /> 2 * i 代表 nvarchar(i)|此資料行僅適用於 *計算的資料行主體大小*。<br /><br /> 可變長度的深層類型資料行為 varchar(i)、nvarchar(i) 或 varbinary(i) 類型的資料行。 計算的大小是由資料行的最大長度 (i) 所決定。|  
 |可變長度的深層類型資料行「實際大小」 |SUM([可變長度的深層類型資料行實際大小]  )<br /><br /> 每個資料行的實際大小如下所示：<br /><br /> n (n 是儲存在資料行中的字元數) 代表 varchar(i)。<br /><br /> 2 * n (n 是儲存在資料行中的字元數) 代表 nvarchar(i)。<br /><br /> n (n 是儲存在資料行中的位元組數) 代表 varbinary(i)。|此資料行僅適用於 *實際資料行主體大小*。<br /><br /> 實際大小是由儲存在資料列的資料行中的資料所決定。|   
   
-##  <a name="bkmk_ExampleComputation"></a> 範例：資料表和資料列大小計算  
+##  <a name="example-table-and-row-size-computation"></a><a name="bkmk_ExampleComputation"></a> 範例：資料表和資料列大小計算  
  若是雜湊索引，實際值區計數會無條件進位到最接近的二乘冪。 例如，如果指定的 `bucket_count` 是 100000，則索引的實際貯體計數為 131072。  
   
 假設 Orders 資料表具有下列定義：  
@@ -204,7 +204,7 @@ GO
   
     -   總填補為 24 - 22 = 2 個位元組。  
   
--   沒有固定長度的深層類型資料行 (固定長度的深層類型資料行：0。)。  
+-   沒有固定長度的深層類型資料行 (固定長度的深層類型資料行：0)。  
   
 -   深層類型資料行的實際大小為 2 * 78 = 156。 單一深層類型資料行 `OrderDescription` 具有 `nvarchar` 類型。  
   
@@ -228,7 +228,7 @@ select * from sys.dm_db_xtp_table_memory_stats
 where object_id = object_id('dbo.Orders')  
 ```  
 
-##  <a name="bkmk_OffRowLimitations"></a> Off-row 資料行限制
+##  <a name="off-row-column-limitations"></a><a name="bkmk_OffRowLimitations"></a> Off-row 資料行限制
   以下為在記憶體最佳化資料表中使用 off-row 資料行的某些限制與警告：
   
 -   如果記憶體最佳化資料表中有資料行存放區索引，則所有的資料行都必須調整為 in-row。 

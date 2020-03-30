@@ -17,10 +17,10 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2b3c4937d87d166d87711389be7acd0c4ae0f8ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67938187"
 ---
 # <a name="remote-servers"></a>遠端伺服器
@@ -58,7 +58,7 @@ ms.locfileid: "67938187"
 >  盡可能使用 Windows 驗證。  
   
 ### <a name="remote-server-security-example"></a>遠端伺服器安全性的範例  
- 請考量這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝： **serverSend** 和 **serverReceive**。 **serverReceive** 的設定是將來自 **serverSend** 的內送登入 (稱為 **Sales_Mary**) 對應到 **serverReceive** 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入 (稱為 **Alice**)。 另一個來自 **serverSend** 的內送登入 (稱為 **Joe**)，則會對應到 **serverReceive** 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入 (稱為 **Joe**)  。  
+ 請考量這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝： **serverSend** 和 **serverReceive**。 **serverReceive** 的設定是將來自 **serverSend** 的內送登入 (稱為 **Sales_Mary**) 對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]serverReceive**中的** 驗證登入 (稱為 **Alice**)。 另一個來自 **serverSend** 的內送登入 (稱為 **Joe**)，則會對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]serverReceive**中的** 驗證登入 (稱為 _Joe_)  。  
   
  下列的 Transact-SQL 程式碼範例會將 `serverSend` 設定為對 `serverReceive` 執行 RPC。  
   

@@ -13,10 +13,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c8f60ee25f00c4b9ba4b7959a6447e11a0f549b1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244825"
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>子查詢 (Azure SQL 資料倉儲、平行處理資料倉儲)
@@ -32,7 +32,7 @@ ms.locfileid: "75244825"
   
 -   [範例：SQL 資料倉儲和平行處理資料倉儲](#Examples)  
   
-##  <a name="Basics"></a> 基本概念  
+##  <a name="basics"></a><a name="Basics"></a> 基本概念  
  子查詢  
  子查詢是指在 SELECT、INSERT、UPDATE 或 DELETE 陳述式中，或在另一個子查詢之中為巢狀的。 這也稱為內部查詢或內部選取。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "75244825"
  相互關聯的子查詢  
  參考外部查詢中資料表的子查詢。  
   
-##  <a name="Examples"></a> 範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+##  <a name="examples-sssdw-and-sspdw"></a><a name="Examples"></a> 範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  本節提供 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中所支援子查詢的範例。  
   
 ### <a name="a-top-and-order-by-in-a-subquery"></a>A. 子查詢中的 TOP 和 ORDER BY  

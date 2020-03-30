@@ -11,10 +11,10 @@ ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0f83ecbec76bfb142da55aa659ce3ef1cc95dad1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295892"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>第 5-3 課：修改 Directory 屬性設定值
