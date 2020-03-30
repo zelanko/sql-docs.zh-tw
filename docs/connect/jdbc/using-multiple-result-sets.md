@@ -11,17 +11,17 @@ ms.assetid: ab6a3cfa-073b-44e9-afca-a8675cfe5fd1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 802ade7a34eb5c5174efc35032587f801ef12179
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026268"
 ---
 # <a name="using-multiple-result-sets"></a>使用多個結果集
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-使用會傳回多個結果集的內嵌 SQL 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序時，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會在 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別中提供 [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) 方法，可用於擷取每一組傳回的資料。 此外，執行會傳回多個結果集的陳述式時，您還可以使用 SQLServerStatement 類別的 [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法，因為它會傳回**布林值**值，指出所傳回的值是結果集還是更新計數。
+使用會傳回多個結果集的內嵌 SQL 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序時，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會在 [SQLServerStatement](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) 類別中提供 [getResultSet](../../connect/jdbc/reference/sqlserverstatement-class.md) 方法，可用於擷取每一組傳回的資料。 此外，執行會傳回多個結果集的陳述式時，您還可以使用 SQLServerStatement 類別的 [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法，因為它會傳回**布林值**值，指出所傳回的值是結果集還是更新計數。
 
 如果 execute 方法傳回 **true**，表示執行的陳述式傳回的是一或多個結果集。 呼叫 getResultSet 方法，即可存取第一個結果集。 若要判斷是否有多個結果集可供使用，可呼叫 [getMoreResults](../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md) 方法，如果有多個可用的結果集，則這個方法會傳回值為 **true** 的**布林值**值。 如果有多個結果集可供使用，您可以再次呼叫 getResultSet 方法進行存取，持續進行這個處理序一直到處理完所有結果集為止。 如果 getMoreResults 方法傳回 **false**，表示沒有其他結果集要處理。
 

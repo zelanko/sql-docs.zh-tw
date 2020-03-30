@@ -16,10 +16,10 @@ ms.assetid: 82f8d608-efc1-4af8-a985-ec25d19420aa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bda185834c24c63ec0a6c9209e6dfd779bece858
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67975882"
 ---
 # <a name="registeroutparameter-method-sqlservercallablestatement"></a>registerOutParameter 方法 (SQLServerCallableStatement)

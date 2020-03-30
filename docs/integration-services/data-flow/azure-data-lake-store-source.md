@@ -14,10 +14,10 @@ ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2699b5d76f15ea81875256cddcd63af1b6451f04
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293381"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store 來源

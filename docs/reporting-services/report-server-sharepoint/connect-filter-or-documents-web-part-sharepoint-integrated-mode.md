@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1f513b93852863d7c3c03ac60289d4ba2bdb4b7b
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256709"
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>使用 Reporting Services 報表檢視器網頁組件連線篩選或文件網頁組件
@@ -47,7 +47,7 @@ ms.locfileid: "77256709"
   
 8.  按一下 [新增]  。 網頁組件會新增至區域頂端。  
   
-9. 在包含網頁組件的區段中，按一下網頁組件的 [編輯]  功能表，並依序指向 [連]  和 [Send Filter Values To] \(傳送篩選值至)  ，然後選取 [報表檢視器  - 報表名稱  ]  。  
+9. 在包含網頁組件的區段中，按一下網頁組件的 [編輯]  功能表，並依序指向 [連]  和 [Send Filter Values To] \(傳送篩選值至)  ，然後選取 [報表檢視器 **報表名稱** - ]  。  
   
 10. 簽入變更並儲存頁面。  
   

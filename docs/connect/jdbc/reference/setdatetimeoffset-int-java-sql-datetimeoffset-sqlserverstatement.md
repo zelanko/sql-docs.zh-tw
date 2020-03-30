@@ -11,10 +11,10 @@ ms.assetid: e8b6e380-6b53-489b-be73-73fcb5258269
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 166c9ddbd4b5c11b3c032a5a4ecf43c95f183473
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974538"
 ---
 # <a name="setdatetimeoffsetint-javasqldatetimeoffset-sqlserverstatement"></a>setDateTimeOffset(int, java.sql.DateTimeOffset) (SQLServerStatement)

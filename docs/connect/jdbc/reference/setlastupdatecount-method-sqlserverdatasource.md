@@ -16,10 +16,10 @@ ms.assetid: 5487631a-1107-4169-84ca-b77fd09bea66
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd9776dd60e82067b0d048e2f385b2bc685b79ea
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974114"
 ---
 # <a name="setlastupdatecount-method-sqlserverdatasource"></a>setLastUpdateCount 方法 (SQLServerDataSource)

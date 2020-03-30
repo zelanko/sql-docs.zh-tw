@@ -11,10 +11,10 @@ ms.assetid: b351e999-85bf-498b-915a-f91d89134bce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d9362a41e5a48400c1b63d52b2ff89095d119d6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981406"
 ---
 # <a name="getnstring-method-javalangstring"></a>getNString 方法 (java.lang.String)

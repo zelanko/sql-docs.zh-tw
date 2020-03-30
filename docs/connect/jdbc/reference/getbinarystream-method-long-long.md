@@ -11,10 +11,10 @@ ms.assetid: 30bc8882-04b4-4efd-95e4-7d3a2a8c1d47
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5cc12f9e7ed7a83363766355fa5d340a459a332b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953653"
 ---
 # <a name="getbinarystream-method-long-long"></a>getBinaryStream 方法 (long, long)

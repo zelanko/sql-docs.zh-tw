@@ -16,10 +16,10 @@ ms.assetid: 9f730d45-b54a-4961-950e-f4447f7225e1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 06da29ea9986281bd89225c1e36920fb4de26d82
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953771"
 ---
 # <a name="getblob-method-javalangstring-sqlserverresultset"></a>getBlob 方法 (java.lang.String) (SQLServerResultSet)

@@ -16,10 +16,10 @@ ms.assetid: 295c16b7-1532-40e1-93ef-64462a2c0ab6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 03db1f238aba30ab28d8277afc180fdaf432fd13
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974323"
 ---
 # <a name="setdouble-method-sqlserverpreparedstatement"></a>setDouble 方法 (SQLServerPreparedStatement)
@@ -42,7 +42,7 @@ public final void setDouble(int n,
   
  *x*  
   
- **雙精度浮點數**值。  
+ **double** 值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -11,10 +11,10 @@ ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 66e45137b75eaa22e4945113101d0cc0d91901cd
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896779"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Node.js Driver for SQL Server
@@ -26,9 +26,9 @@ ms.locfileid: "78896779"
 您可以在 Windows、Linux 或 Mac 上使用 Node.js 連線到 SQL Database。  
   
 ## <a name="getting-started"></a>開始使用  
-* [步驟 1：設定 Node.js 開發的開發環境](step-1-configure-development-environment-for-node-js-development.md)  
-* [步驟 2：建立 Node.js 開發的 SQL 資料庫](step-2-create-a-sql-database-for-node-js-development.md)  
-* [步驟 3：使用 Node.js 連線到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-node-js.md)  
+* [步驟 1︰設定 Node.js 開發的開發環境](step-1-configure-development-environment-for-node-js-development.md)  
+* [步驟 2︰建立 Node.js 開發的 SQL 資料庫](step-2-create-a-sql-database-for-node-js-development.md)  
+* [步驟 3︰使用 Node.js 連接到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-node-js.md)  
   
 ## <a name="documentation"></a>文件  
   

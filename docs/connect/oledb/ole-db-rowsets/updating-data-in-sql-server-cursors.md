@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e5ccf4831cf882eedd4b2b95894d44457402bb6e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994156"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>更新 SQL Server 資料指標中的資料
@@ -38,7 +38,7 @@ ms.locfileid: "67994156"
 ## <a name="immediate-and-delayed-update-modes"></a>立即和延遲更新模式  
  在立即更新模式下，**IRowsetChange::SetData** 的每個呼叫會造成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的往返。 如果取用者對單一資料列進行多個變更，利用單一 **SetData** 呼叫提交所有變更會更有效率。  
   
- 在延遲更新模式下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的往返是針對 **IRowsetUpdate::Update** 之 *cRows* 和 *rghRows* 參數中指示的每個資料列進行。  
+ 在延遲更新模式下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的往返是針對 *IRowsetUpdate::Update* 之 *cRows* 和 **rghRows** 參數中指示的每個資料列進行。  
   
  在任一種模式下，當資料列集沒有開啟任何交易物件時，往返代表不同的交易。  
   

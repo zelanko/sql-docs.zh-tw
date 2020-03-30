@@ -13,10 +13,10 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4081e9db30e3607d783de40a71d9d7b2e7599c76
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993699"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>常數 (Microsoft Drivers for PHP for SQL Server)
@@ -71,7 +71,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性可以用來處理具有數值 SQL �
 
 ### <a name="handling-date-and-time-fetches"></a>處理日期和時間擷取
 
-PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) \(英文\) 物件形式擷取日期和時間類型。 如果保留 false，則預設行為是以字串形式傳回它們。 這個屬性可以在連線或陳述式等級使用 [PDO::setAttribute](../../connect/php/pdo-setattribute.md) 或 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) 來設定，但是陳述式屬性將會覆寫對應的連線屬性。 如需詳細資訊，請參閱[如何：使用 PDO_SQLSRV 驅動程式以 PHP DateTime 物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。
+PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要以 [PHP DateTime](http://php.net/manual/en/class.datetime.php) \(英文\) 物件形式擷取日期和時間類型。 如果保留 false，則預設行為是以字串形式傳回它們。 這個屬性可以在連線或陳述式等級使用 [PDO::setAttribute](../../connect/php/pdo-setattribute.md) 或 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) 來設定，但是陳述式屬性將會覆寫對應的連線屬性。 如需詳細資訊，請參閱[操作說明：使用 PDO_SQLSRV 驅動程式以 PHP DateTime 物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV 驅動程式常數  
 下列各節列出 SQLSRV 驅動程式所使用的常數。  
@@ -152,12 +152,12 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要以 [PHP DateTime](http://
 |-------------------|---------------|  
 |SQLSRV_ENC_BINARY|資料會以原始位元組資料流形式從伺服器傳回，而不需執行編碼或轉譯。|  
 |SQLSRV_ENC_CHAR|資料會以如同在系統上設定之 Windows 地區設定的字碼頁中指定的 8 位元字元傳回。 系統會以單一位元組問號 (?) 字元取代任何多位元組字元或未對應到此字碼頁的字元。<br /><br />這是預設編碼。|  
-|"UTF-8"|資料會以 UTF-8 編碼傳回。 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]1.1 版已加入此常數。 如需關於 UTF-8 支援的詳細資訊，請參閱[如何：使用內建的 UTF-8 支援傳送及擷取 UTF-8 資料](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)。|  
+|"UTF-8"|資料會以 UTF-8 編碼傳回。 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]1.1 版已加入此常數。 如需 UTF-8 支援的詳細資訊，請參閱[如何：使用內建的 UTF-8 支援傳送及接收 UTF-8 資料](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)。|  
   
 > [!NOTE]  
 > 當您使用 **SQLSRV_PHPTYPE_STREAM** 或 **SQLSRV_PHPTYPE_STRING** 時，必須要指定編碼。 如果未提供參數，將會傳回錯誤。  
   
-如需這些常數的詳細資訊，請參閱[如何：指定 PHP 資料類型](../../connect/php/how-to-specify-php-data-types.md)、[如何：使用 SQLSRV 驅動程式以資料流形式擷取字元資料](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)。  
+如需這些常數的詳細資訊，請參閱 [如何：指定 PHP 資料類型](../../connect/php/how-to-specify-php-data-types.md)、 [如何：使用 SQLSRV 驅動程式以資料流的形式擷取字元資料](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)。  
   
 ### <a name="sqltype-constants"></a>SQLTYPE 常數  
 下表列出用來說明 SQL Server 資料類型的常數。 某些常數類似於函式，需要採用對應至精確度、小數位數和/或長度的參數。  繫結參數時，應該使用類似函式的常數。 針對類型比較，需要標準 (非類似函式) 常數。 如需 SQL Server 資料類型的資訊，請參閱[資料類型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。 如需有效位數、小數位數和長度的資訊，請參閱[有效位數、小數位數和長度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  

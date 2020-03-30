@@ -9,10 +9,10 @@ ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c6f1d18c8559625c6e58b45b4e9810ed29e0ef28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082293"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>建立文件引導模式 (報表產生器及 SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "77082293"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DocMapRenderExtensions"></a> 文件引導模式及轉譯延伸模組  
+##  <a name="document-maps-and-rendering-extensions"></a><a name="DocMapRenderExtensions"></a> 文件引導模式及轉譯延伸模組  
  文件引導模式旨在供 HTML 轉譯延伸模組使用，例如，在預覽和報表檢視器中。 其他轉譯延伸模組有不同的方式來表達文件引導模式：  
   
 -   PDF 會將文件引導模式轉譯成 [書籤] 窗格。  

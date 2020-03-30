@@ -10,10 +10,10 @@ ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a47a4d6efa06e94f62c572eed562f96ba1f2102a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68045764"
 ---
 # <a name="uninstall-sql-server"></a>解除安裝 SQL Server 

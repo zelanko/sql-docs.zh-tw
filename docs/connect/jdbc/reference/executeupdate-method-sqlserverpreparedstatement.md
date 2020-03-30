@@ -16,10 +16,10 @@ ms.assetid: 677b0907-316e-40f2-a0d9-d4d0872c7f52
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74b4e135c8af30619820941cf438e956cc057e8a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954616"
 ---
 # <a name="executeupdate-method-sqlserverpreparedstatement"></a>executeUpdate 方法 (SQLServerPreparedStatement)

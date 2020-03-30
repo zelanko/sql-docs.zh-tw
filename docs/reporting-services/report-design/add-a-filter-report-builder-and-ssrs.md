@@ -9,10 +9,10 @@ ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0eadf07ed347ce2b77eccab229ef6551a62d63d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080748"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>加入篩選 (報表產生器及 SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "77080748"
   
 1.  在 **[設計]** 檢視中，開啟報表。  
   
-2.  選取設計介面上的資料區，然後以滑鼠右鍵按一下 [\<data region>  Properties (<資料區>屬性)]  。 若為量測計，請選取 **[量測計面板屬性]** 。 [\<data region>  Properties (<資料區>屬性)]  對話方塊隨即開啟。  
+2.  選取設計介面上的資料區，然後以滑鼠右鍵按一下 [_data region>\<_ Properties (<資料區>屬性)]  。 若為量測計，請選取 **[量測計面板屬性]** 。 [_data region>\<_ Properties (<資料區>屬性)]  對話方塊隨即開啟。  
   
     > [!NOTE]  
     >  在 Tablix 資料區上，以滑鼠右鍵按一下邊角資料格或是資料列或資料行控制代碼，然後按一下 [Tablix 屬性]  。  

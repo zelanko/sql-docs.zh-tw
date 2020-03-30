@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73531596"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>如何檢視巨量資料叢集的狀態 
@@ -22,7 +22,7 @@ ms.locfileid: "73531596"
 
 本文描述如何存取服務端點，並檢視 SQL Server 巨量資料叢集元件的狀態。 您可以同時使用 Azure Data Studio 和 **azdata**，本文同時涵蓋這兩種技術。
 
-## <a id="datastudio"></a> 使用 Azure Data Studio
+## <a name="use-azure-data-studio"></a><a id="datastudio"></a> 使用 Azure Data Studio
 
 下載 **Azure Data Studio** 的最新[測試人員組建](https://aka.ms/getazuredatastudio)之後，您可以使用 SQL Server 巨量資料叢集儀表板來檢視服務端點和巨量資料叢集的狀態。 以下部分功能僅先在 Azure Data Studio 的測試人員組建中提供。
 
@@ -55,7 +55,7 @@ ms.locfileid: "73531596"
 
 您可以直接按一下這些連結。 存取下列儀表板時，您必須進行驗證。 針對計量和記錄儀表板，請提供您在部署時使用 **AZDATA_USERNAME** 和 **AZDATA_PASSWORD** 環境變數所設定的控制器系統管理員認證。 Spark 儀表板會使用閘道 (Knox) 認證：可為叢集中與 AD 整合的 AD 身分識別，或 **root** 使用者與 **AZDATA_PASSWORD** (若您的叢集使用基本驗證)。 
 
-### <a id="notebook"></a> 叢集狀態筆記本
+### <a name="cluster-status-notebook"></a><a id="notebook"></a> 叢集狀態筆記本
 
 1. 您也可以藉由啟動 [叢集狀態] 筆記本來檢視巨量資料叢集的叢集狀態。 若要啟動筆記本，請按一下 [叢集狀態]  工作。
 

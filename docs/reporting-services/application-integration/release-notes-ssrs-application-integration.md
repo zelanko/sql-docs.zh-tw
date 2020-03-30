@@ -12,10 +12,10 @@ ms.reviewer: maggies
 author: RhysSchmidtke
 ms.author: rhys
 ms.openlocfilehash: 5ee9bd80519e9dc9d75bb78a98b548b2a60ef247
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76259376"
 ---
 # <a name="release-notes-for-report-viewer-controls-for-webforms-and-winforms-of-ssrs"></a>SSRS WebForms 和 WinForms 的報表檢視器控制項版本資訊

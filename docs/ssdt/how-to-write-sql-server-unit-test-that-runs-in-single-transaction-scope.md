@@ -11,13 +11,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 36bc1ac2a4a20dd0d05d90b8d12ff63b0a7a6b3e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246492"
 ---
-# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>如何：撰寫在單一交易範圍內執行的 SQL Server 單元測試
+# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>HOW TO：撰寫在單一交易範圍內執行的 SQL Server 單元測試
 
 您可以修改單元測試，使其在單一交易範圍中執行。 如果採用這種方法，在測試結束之後，可以復原此測試所進行的任何變更。 下列程序說明其做法：  
   
@@ -27,7 +27,7 @@ ms.locfileid: "75246492"
   
 -   在指定的測試類別中建立所有測試方法的交易。  
   
-**先決條件**  
+**必要條件**  
   
 對於本主題中的部分程序而言，必須在執行單元測試的電腦上執行分散式交易協調器服務。 如需詳細資訊，請參閱本主題結尾的程序。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "75246492"
     > [!NOTE]  
     > 在執行 COMMIT TRANSACTION 陳述式之後，無法復原交易。  
   
-    如需如何搭配預存程序和觸發程序使用 ROLLBACK TRANSACTION 的詳細資訊，請參閱 Microsoft 網站上的此網頁：[ROLLBACK TRANSACTION (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=115927)。  
+    如需如何搭配預存程序和觸發程序使用 ROLLBACK TRANSACTION 的詳細資訊，請參閱 Microsoft 網站上的這個網頁：[ROLLBACK TRANSACTION (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=115927)。  
   
 ## <a name="to-create-a-transaction-for-a-single-test-method"></a>若要建立單一測試方法的交易  
 在此範例中，您是在使用 [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope) 類型時使用環境交易。 根據預設，執行連接和授權連接不會使用環境交易，因為這些連接是在執行方法前即已建立。 SqlConnection 擁有的 [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction) 方法會將作用中的連接與交易產生關聯。 建立環境交易時，會將自己註冊為目前的交易，而您可以透過 [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current) 屬性存取此交易。 在此範例中，在處置環境交易時就會復原交易。 如果想要認可在執行單元測試時進行的任何變更，您必須呼叫 [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete) 方法。  
@@ -156,7 +156,7 @@ ms.locfileid: "75246492"
     ```  
   
 ## <a name="to-start-the-distributed-transaction-coordinator-service"></a>若要啟動分散式交易協調器服務  
-本主題中的部分程序使用 System.Transactions 組件中的型別。 在進行這些程序之前，您必須確定在執行單元測試的電腦上有執行分散式交易協調器服務。 否則測試就會失敗，並出現下列錯誤訊息：「測試方法 *ProjectName* *TestName* *MethodName* 擲回例外狀況：System.Data.SqlClient.SqlException:伺服器 '*ComputerName*' 上的 MSDTC 無法使用」。  
+本主題中的部分程序使用 System.Transactions 組件中的型別。 在進行這些程序之前，您必須確定在執行單元測試的電腦上有執行分散式交易協調器服務。 否則測試就會失敗，並出現下列錯誤訊息：「測試方法 *ProjectName*.*TestName*.*MethodName* 擲回例外狀況: System.Data.SqlClient.SqlException: 伺服器 '*ComputerName*' 上的 MSDTC 無法使用」。  
   
 #### <a name="to-start-the-distributed-transaction-coordinator-service"></a>若要啟動分散式交易協調器服務  
   

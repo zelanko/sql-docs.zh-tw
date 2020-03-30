@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cbd815ee666f4f3a2fd144dd08161bbbf57d0fbe
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75623255"
 ---
 # <a name="stretch-database"></a>Stretch Database
@@ -29,7 +29,7 @@ ms.locfileid: "75623255"
  Stretch Database 提供下列優點：  
   
  **為冷資料提供符合成本效益的可用性**  
- 使用 SQL Server Stretch Database 以動態方式將暖交易資料和冷交易資料從 SQL Server 延展到 Microsoft Azure。 與一般冷資料儲存區不同的是，您的資料會一直在線上而且可供查詢。 您可以提供較長的資料保留時間軸，而不需要為「客戶訂單記錄」之類的大型資料表砸下大筆花費。 受益於低成本的 Azure，而不是調整昂貴的內部部署儲存體。 您可以在 Azure 入口網站選擇定價層並進行設定，以維持對定價及成本的控制。 並可視需要擴大或縮小規模。 如需詳細資料，請瀏覽 [SQL Server Stretch Database 定價](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/) 。  
+ 使用 SQL Server Stretch Database 以動態方式將暖交易資料和冷交易資料從 SQL Server 延展到 Microsoft Azure。 與一般冷資料儲存區不同的是，您的資料會一直在線上而且可供查詢。 您可以提供較長的資料保留時間軸，而不需要為「客戶訂單記錄」之類的大型資料表砸下大筆花費。 受益於低成本的 Azure，而不是調整昂貴的內部部署儲存體。 您可以在 Azure 入口網站選擇定價層並進行設定，以維持對定價及成本的控制。 並可視需要擴大或縮減規模。 如需詳細資料，請瀏覽 [SQL Server Stretch Database 定價](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/) 。  
   
  **不需要變更查詢或應用程式**  
  無論您的 SQL Server 資料位於內部部署或已延展到雲端，都能平順地存取。  您可以設定原則來決定資料的儲存位置，並由 SQL Server 負責在背景處理資料的移動。 整個資料表都會一直在線上，而且可供查詢。 此外，因為資料位置對應用程式而言完全透明，所以 Stretch Database 不會要求對現有查詢或應用程式進行任何變更。  

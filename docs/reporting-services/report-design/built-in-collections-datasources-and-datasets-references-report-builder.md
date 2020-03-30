@@ -9,10 +9,10 @@ ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2f65020a094258e4d6ee4a3906d29d33438b0783
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081464"
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>內建集合 - DataSources 和 DataSets 參考 (報表產生器)
@@ -26,7 +26,7 @@ ms.locfileid: "77081464"
   
 |**變數**|**型別**|**說明**|  
 |------------------|--------------|---------------------|  
-|**DataSourceReference**|**String**|報表伺服器上資料來源定義的完整路徑。 例如，您可以包含報表用來做為報表記錄一部分的所有資料來源的清單。 以下範例將示範名為 AdventureWorks2012 的資料來源完整路徑：<br /><br /> 第 1 課：建立 Windows Azure 儲存體物件`/DataSources/AdventureWorks2012`。|  
+|**DataSourceReference**|**String**|報表伺服器上資料來源定義的完整路徑。 例如，您可以包含報表用來做為報表記錄一部分的所有資料來源的清單。 以下範例將示範名為 AdventureWorks2012 的資料來源完整路徑：<br /><br /> `/DataSources/AdventureWorks2012`第 1 課：建立 Windows Azure 儲存體物件{2}。|  
 |**型別**|**String**|資料來源的資料提供者類型。 例如： `SQL` 。|  
   
 ## <a name="datasets"></a>DataSets  

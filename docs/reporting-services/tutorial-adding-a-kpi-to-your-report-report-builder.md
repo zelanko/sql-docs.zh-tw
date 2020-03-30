@@ -9,10 +9,10 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041777"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教學課程：將 KPI 加入至報表 (報表產生器)
@@ -32,7 +32,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 ## <a name="requirements"></a>需求  
 如需需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="Table"></a>1.從資料表或矩陣精靈建立資料表報表和資料集  
+## <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Table"></a>1.從資料表或矩陣精靈建立資料表報表和資料集  
 在本節中，您會選擇共用資料來源、建立內嵌資料集，並在資料表中顯示資料。  
  
 ### <a name="to-create-a-table-with-an-embedded-dataset"></a>若要建立含內嵌資料集的資料表  
@@ -99,7 +99,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 
 11. 按 [下一步]  。  
   
-## <a name="CompleteWizard"></a>2.在精靈中組織資料並選擇配置  
+## <a name="2-organize-data-and-choose-layout-in-the-wizard"></a><a name="CompleteWizard"></a>2.在精靈中組織資料並選擇配置  
 [資料表或矩陣精靈] 提供用於顯示資料的起始設計。 精靈中的預覽窗格可協助您在完成資料表或矩陣設計之前，先視覺化群組資料的結果。  
   
 ### <a name="to-organize-data-into-groups-and-choose-a-layout"></a>將資料組織成群組，並選擇配置 
@@ -173,7 +173,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
  
 ![report-builder-kpi-format-numbers](../reporting-services/media/report-builder-kpi-format-numbers.png)
 
-## <a name="BackgroundColors"></a>3.使用背景色彩顯示 KPI  
+## <a name="3-use-background-colors-to-display-a-kpi"></a><a name="BackgroundColors"></a>3.使用背景色彩顯示 KPI  
 您可以將背景色彩設定成執行報表時評估的運算式。  
   
 ### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>若要使用背景色彩來顯示 KPI 的目前狀態  
@@ -198,7 +198,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 
 ![report-builder-kpi-colors](../reporting-services/media/report-builder-kpi-colors.png)
   
-## <a name="Gauge"></a>4.使用量測計顯示 KPI  
+## <a name="4-display-a-kpi-by-using-a-gauge"></a><a name="Gauge"></a>4.使用量測計顯示 KPI  
 量測計可說明資料集中的單一值。 這個教學課程使用水平的線性量測計，因為它的形狀一目了然，即使很小並用於資料表資料格內，也很容易閱讀。 如需詳細資訊，請參閱 [量測計 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>若要使用量測計來顯示 KPI 的目前狀態  
@@ -253,7 +253,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 ![report-builder-linear-kpi](../reporting-services/media/report-builder-linear-kpi.png) 
   
-## <a name="Indicator"></a>5.使用指標顯示 KPI  
+## <a name="5-display-a-kpi-by-using-an-indicator"></a><a name="Indicator"></a>5.使用指標顯示 KPI  
 指標是小型的簡單量測計，可一目了然資料值。 由於指標的尺寸小加上簡單明瞭，因此常用於資料表和矩陣。 如需詳細資訊，請參閱[指標 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)。  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>若要使用指標來顯示 KPI 的目前狀態  
@@ -288,7 +288,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 
 ![report-builder-kpi-stoplight](../reporting-services/media/report-builder-kpi-stoplight.png)
   
-## <a name="Title"></a>6.加入報表標題  
+## <a name="6-add-a-report-title"></a><a name="Title"></a>6.加入報表標題  
 報表標題會出現在報表的頂端。 您可以將報表標題放置在報表頁首，如果報表不使用報表頁首，則可以放置在報表主體頂端的文字方塊中。 在本節中，您將使用自動放置在報表主體頂端的文字方塊。  
   
 您可以將不同的字型樣式、大小和色彩套用到文字的片語和個別字元，進一步加強文字。 如需詳細資訊，請參閱[在文字方塊中將文字格式化 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
@@ -303,7 +303,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 4.  按一下 **[執行]** 預覽報表。  
   
-## <a name="Save"></a>7.儲存報表  
+## <a name="7-save-the-report"></a><a name="Save"></a>7.儲存報表  
 將報表儲存至報表伺服器或您的電腦。 如果沒有將報表儲存到報表伺服器，就無法使用數個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能，例如報表組件和子報表。  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>若要將報表儲存在報表伺服器上  

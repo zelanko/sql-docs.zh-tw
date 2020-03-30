@@ -16,10 +16,10 @@ ms.assetid: 5dd39c40-e7cc-4ff9-8491-7e20e25a9d17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9136c379793f4f66fcc4c69b11da9a0ea49d294d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979766"
 ---
 # <a name="getshort-method-sqlserverresultset"></a>getShort 方法 (SQLServerResultSet)

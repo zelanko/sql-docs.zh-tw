@@ -16,10 +16,10 @@ ms.assetid: 3be84d65-af61-4c34-b052-74a5d488eaa9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd67749bc8dcb29617c97a441c9858b3bb8fb6f5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983425"
 ---
 # <a name="getdriverversion-method-sqlserverdatabasemetadata"></a>getDriverVersion 方法 (SQLServerDatabaseMetaData)

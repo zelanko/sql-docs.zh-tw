@@ -12,10 +12,10 @@ ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5723122c76b02900f6906c03efb807e58ebcc6d9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67313972"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>設定報表伺服器 (Reporting Services 原生模式)
@@ -27,7 +27,7 @@ ms.locfileid: "67313972"
   
 -   儲存應用程式資料、報表和其他項目的報表伺服器資料庫。  
   
- 如果您選取下列兩個安裝選項的其中一種，則安裝程式會進行最少的設定：原生模式預設組態或 SharePoint 整合模式預設組態。 如果您在僅限檔案模式中安裝報表伺服器 (這是安裝精靈中的 **[安裝但不設定伺服器]** 選項)，則只會設定服務帳戶。 在安裝程式完成之後，必須設定 Web 服務 URL 和報表伺服器資料庫。  
+ 如果您選取以下兩個安裝選項的其中一種，安裝程式會進行最小的設定：原生模式預設組態或 SharePoint 整合模式預設組態。 如果您在僅限檔案模式中安裝報表伺服器 (這是安裝精靈中的 **[安裝但不設定伺服器]** 選項)，則只會設定服務帳戶。 在安裝程式完成之後，必須設定 Web 服務 URL 和報表伺服器資料庫。  
   
 建議您設定入口網站，如此即可授與使用者對報表伺服器的存取權，以及管理報表伺服器內容。 如果您在 SharePoint 整合模式中部署報表伺服器，請使用 SharePoint 伺服器的 Web 前端來授與存取權。  
   

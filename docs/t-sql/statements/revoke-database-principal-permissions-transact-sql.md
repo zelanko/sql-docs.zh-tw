@@ -21,10 +21,10 @@ ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0353ff7b9e0778a7ef59107f5ba2876e72bbdd69
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75243335"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE 資料庫主體權限 (Transact-SQL)
@@ -64,15 +64,15 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  指定可以撤銷的資料庫主體權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
  USER ::*database_user*  
- 指定撤銷其權限之使用者的類別和名稱。 範圍限定詞 ( **::** ) 是必要項。  
+ 指定撤銷其權限之使用者的類別和名稱。 範圍限定詞 (**::**) 是必要項。  
   
  ROLE ::*database_role*  
- 指定撤銷其權限之角色的類別和名稱。 範圍限定詞 ( **::** ) 是必要項。  
+ 指定撤銷其權限之角色的類別和名稱。 範圍限定詞 (**::**) 是必要項。  
   
  APPLICATION ROLE ::*application_role*  
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
- 指定撤銷其權限之應用程式角色的類別和名稱。 範圍限定詞 ( **::** ) 是必要項。  
+ 指定撤銷其權限之應用程式角色的類別和名稱。 範圍限定詞 (**::**) 是必要項。  
   
  GRANT OPTION  
  指出會撤銷對其他主體授與指定權限的權限。 不會撤銷權限本身。  

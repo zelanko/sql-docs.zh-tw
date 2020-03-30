@@ -15,10 +15,10 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0628f715be90586e851fee55301e8c82032739c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73593922"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
@@ -29,7 +29,7 @@ ms.locfileid: "73593922"
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
-##  <a name="bkmk_sharepointmode"></a> 確認 SharePoint 模式安裝  
+##  <a name="verify-sharepoint-mode-installation"></a><a name="bkmk_sharepointmode"></a> 確認 SharePoint 模式安裝  
   
 ### <a name="to-verify-the-reporting-services-service"></a>確認 Reporting Services 服務  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73593922"
 
 ::: moniker-end
   
-##  <a name="bkmk_nativemode"></a> 驗證原生模式安裝  
+##  <a name="verify-a-native-mode-installation"></a><a name="bkmk_nativemode"></a> 驗證原生模式安裝  
  當您使用預設組態安裝原生模式報表伺服器時，安裝程式會安裝和部署該伺服器。 您可以執行一些簡單的測試，來確認安裝程式是否部署報表伺服器。 您必須是本機管理員才能執行這些步驟。 若要讓其他使用者能夠執行測試，您必須為那些使用者設定報表伺服器存取權。  
   
 ### <a name="to-verify-that-the-report-server-is-installed-and-running"></a>確認報表伺服器已安裝及執行  
@@ -92,7 +92,7 @@ ms.locfileid: "73593922"
   
 4.  執行報表來測試報表伺服器作業。 在此步驟中，您可以根據教學課程建立範例報表。 如需詳細資訊，請參閱[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。  
   
-### <a name="to-verify-that-the-includessrswebportalincludesssrswebportalmd-is-installed-and-running"></a>確認 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 已安裝且正在執行  
+### <a name="to-verify-that-the-ssrswebportal-is-installed-and-running"></a>確認 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 已安裝且正在執行  
   
 1.  開啟瀏覽器，並在位址列輸入入口網站 URL。 此位址是由伺服器名稱和虛擬目錄名稱所組成，此目錄名稱是在安裝期間針對 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 所指定，或是在 Reporting Services 組態工具的 [入口網站 URL] 頁面中指定。 依預設， [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 虛擬目錄為 **Reports**。 您可以使用下列 URL 確認 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 的安裝：  
   

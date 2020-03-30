@@ -11,10 +11,10 @@ ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 328b25b4494ff69368147c9369a0949f3094108f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027726"
 ---
 # <a name="sparse-columns"></a>疏鬆資料行
@@ -23,7 +23,7 @@ ms.locfileid: "69027726"
 
 疏鬆資料行為已最佳化儲存位置來保存 Null 值的一般資料行。 疏鬆資料行會減少 Null 值的空間需求，但要付出擷取非 Null 值的更多成本負擔。 當空間至少節省了百分之 20 到 40 時，請考慮使用疏鬆資料行。
 
-當您連線到 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (或更新版本) 伺服器時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC Driver 3.0 可支援疏鬆資料行。 您可以使用 [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)、[SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) 或 [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) 來判斷哪一個資料行是疏鬆資料行以及哪一個資料行是資料行集資料行。
+當您連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (或更新版本) 伺服器時，[!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] JDBC Driver 3.0 可支援疏鬆資料行。 您可以使用 [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)、[SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) 或 [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) 來判斷哪一個資料行是疏鬆資料行以及哪一個資料行是資料行集資料行。
 
 此範例的程式碼檔案名稱為 SparseColumns.java，並位於下列位置：  
 

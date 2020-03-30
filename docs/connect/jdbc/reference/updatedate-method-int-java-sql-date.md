@@ -16,10 +16,10 @@ ms.assetid: c5fb1292-a5cf-4cdd-8c4a-d1679944a6d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3318bc5ebd8eb6496262cc9992a4e516aeebf9fe
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67999161"
 ---
 # <a name="updatedate-method-int-javasqldate"></a>updateDate 方法 (int, java.sql.Date)

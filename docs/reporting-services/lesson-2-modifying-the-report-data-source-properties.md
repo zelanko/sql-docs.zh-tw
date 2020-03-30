@@ -9,25 +9,25 @@ ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62651707"
 ---
-# <a name="lesson-2-modifying-the-report-data-source-properties"></a>第 2 課：修改報表資料來源屬性
-在此 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教學課程中，您將使用入口網站來選取傳遞給收件者的報表。 您將定義的資料驅動訂閱將散發 **建立基本資料表報表 &#40;SSRS 教學課程&#41;** 教學課程中建立的 [建立基本資料表報表 &amp;#40;SSRS 教學課程&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)報表。  在下面的步驟中，您將修改報表用來取得資料的資料來源連接資訊。 只有使用 **預存認證** 來存取報表資料來源的報表可以透過資料驅動訂閱散發。 自動報表處理需要預存認證。  
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
+在此 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教學課程中，您將使用入口網站來選取傳遞給收件者的報表。 您將定義的資料驅動訂閱將散發 **建立基本資料表報表 &amp;#40;SSRS 教學課程&amp;#41;** 教學課程中建立的 [建立基本資料表報表 &#40;SSRS 教學課程&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)報表。  在下面的步驟中，您將修改報表用來取得資料的資料來源連接資訊。 只有使用 **預存認證** 來存取報表資料來源的報表可以透過資料驅動訂閱散發。 自動報表處理需要預存認證。  
   
 您也會將資料集和報表修改成使用參數來依據 `[Order]` 篩選報表，讓訂閱能夠針對特定訂單和轉譯格式輸出不同的報表執行個體。  
   
-## <a name="bkmk_modify_datasource"></a>修改資料來源以使用預存認證  
+## <a name="to-modify-the-data-source-to-use-stored-credentials"></a><a name="bkmk_modify_datasource"></a>修改資料來源以使用預存認證  
   
 1.  以系統管理員權限瀏覽至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 入口網站，例如以滑鼠右鍵按一下 Internet Explorer 的圖示，然後按一下 [以系統管理員​​身分執行​​]  。  
  
 2.    瀏覽至入口網站 URL。  例如：   
-    第 1 課：建立 Windows Azure 儲存體物件`https://<server name>/reports`。  
+    `https://<server name>/reports`第 1 課：建立 Windows Azure 儲存體物件{2}。  
     `https://localhost/reports`
- **注意：** 「入口網站」  URL 是 "Reports"，而非 "Reportserver" 的報表「伺服器」  URL。  
+ **注意︰** 「入口網站」  URL 是 "Reports"，而非 "Reportserver" 的報表「伺服器」  URL。  
 3.  瀏覽到包含 **Sales Orders** 報表的資料夾，然後在報表的內容功能表中，按一下 **[管理]** 。  
  
  ![ssrs_tutorial_datadriven_manage_report](../reporting-services/media/ssrs-tutorial-datadriven-manage-report.png)
@@ -54,7 +54,7 @@ ms.locfileid: "62651707"
   
 11. 檢視報表以確認報表是以您指定的認證來執行。 。  
   
-## <a name="bkmk_modify_dataset"></a>若要修改 AdventureWorksDataset  
+## <a name="to-modify-the-adventureworksdataset"></a><a name="bkmk_modify_dataset"></a>若要修改 AdventureWorksDataset  
  在下列步驟中，您將修改資料集，以使用參數來根據訂單號碼篩選資料集。
 1.  在下列位置開啟 **銷售訂單** 報表 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62651707"
   
 4.  按一下 [檔案] &gt; [新增] &gt; [專案]   
  在下列步驟中，您會將參數加入報表。  此報表參數會提供資料集參數。 
-## <a name="bkmk_add_reportparameter"></a>若要加入報表參數並重新發行報表  
+## <a name="to-add-a-report-parameter-and-republish-the-report"></a><a name="bkmk_add_reportparameter"></a>若要加入報表參數並重新發行報表  
   
 1.  在 [報表資料]  窗格中，展開 [參數] 資料夾，然後按兩下 **Ordernumber** 參數。  在上一個步驟中，當您將參數加入資料集時，系統會自動建立此參數。 按一下 [新增]  ，然後按一下 [參數...]   
  ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.png) 
@@ -103,15 +103,15 @@ ms.locfileid: "62651707"
     ![ssrs_tutorial_datadriven_reportviewer_parameter](../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.png) 
  
   
-## <a name="bkmk_redeploy"></a>重新部署報表  
+## <a name="re-deploy-the-report"></a><a name="bkmk_redeploy"></a>重新部署報表  
   
-1.  請重新部署報表，讓下一課的訂閱組態能夠運用您在這一課所做的變更。 如需用於資料表教學課程的專案屬性詳細資訊，請參閱下列課程中的＜將報表發佈至報表伺服器 (選擇性)＞一節：[第 6 課：新增群組和總計 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
+1.  請重新部署報表，讓下一課的訂閱組態能夠運用您在這一課所做的變更。 如需用於資料表教學課程的專案屬性詳細資訊，請參閱[第 6 課：新增群組和總計 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md) 的＜將報表發行至報表伺服器 (選擇性)＞一節。  
   
 2.  在工具列上，按一下 **[建置]** ，然後按一下 **[部署教學課程]** 。  
   
 ## <a name="next-steps"></a>後續步驟  
 + 您已順利設定報表來利用預存認證取得資料，此資料可透過參數進行篩選。 
-+ 在下一課，您將使用入口網站的 [資料驅動訂閱] 頁面來設定訂閱。 請參閱[第 3 課：定義資料驅動訂閱](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)。  
++ 在下一課，您將使用入口網站的 [資料驅動訂閱] 頁面來設定訂閱。 請參閱 [第 3 課：定義資料驅動訂閱](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [管理報表資料來源](../reporting-services/report-data/manage-report-data-sources.md)  

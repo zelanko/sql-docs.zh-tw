@@ -16,10 +16,10 @@ ms.assetid: 7bd39d61-7461-443e-a580-753d55ef6903
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2cd126601c0861786ba568d9f1bc4814235b61e1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982451"
 ---
 # <a name="getlong-method-javalangstring-sqlserverresultset"></a>getLong 方法 (java.lang.String) (SQLServerResultSet)

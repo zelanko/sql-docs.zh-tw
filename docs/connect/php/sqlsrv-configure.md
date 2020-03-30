@@ -17,10 +17,10 @@ ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b98533dcc1589e07bc8ae37562bf6734077a78f1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67935809"
 ---
 # <a name="sqlsrv_configure"></a>sqlsrv_configure
@@ -55,7 +55,7 @@ sqlsrv_configure( string $setting, mixed $value )
   
 (2) 如需記錄活動的詳細資訊，請參閱[記錄活動](../../connect/php/logging-activity.md)。  
   
-(3) 如需關於設定錯誤和警告處理的詳細資訊，請參閱[如何：使用 SQLSRV 驅動程式設定錯誤和警告處理](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)。  
+(3) 如需設定錯誤和警告處理的詳細資訊，請參閱[如何：使用 SQLSRV 驅動程式設定錯誤和警告處理](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)

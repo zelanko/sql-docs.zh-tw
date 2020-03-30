@@ -16,10 +16,10 @@ ms.assetid: 8104406b-417d-4ff5-9aca-183ee0f76762
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1e806db63799d57ae935f2288c11b70ff35d20a7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981225"
 ---
 # <a name="getobject-method-javalangstring-javautilmap-sqlserverresultset"></a>getObject 方法 (java.lang.String, java.util.Map) (SQLServerResultSet)

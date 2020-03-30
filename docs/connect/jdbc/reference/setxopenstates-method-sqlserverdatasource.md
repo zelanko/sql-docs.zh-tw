@@ -16,10 +16,10 @@ ms.assetid: 9723591f-e987-426f-b70a-07f5c70dc094
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e63dbb2ef8864c07bf1deb58e99a08ea70fafdf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972059"
 ---
 # <a name="setxopenstates-method-sqlserverdatasource"></a>setXopenStates 方法 (SQLServerDataSource)

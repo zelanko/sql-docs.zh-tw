@@ -16,10 +16,10 @@ ms.assetid: 1a09bbf9-6f8f-4a21-85d2-2182111b5ce7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a002ec9f607804854e0bf390c455e6b492432a42
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973125"
 ---
 # <a name="setref-method-sqlserverpreparedstatement"></a>setRef 方法 (SQLServerPreparedStatement)

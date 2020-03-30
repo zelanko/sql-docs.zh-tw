@@ -16,10 +16,10 @@ ms.assetid: b2710613-78b1-438f-b996-c7ae6f34381a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c53cbcc5abcb9fb08999b1d171645b45097eb34
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977975"
 ---
 # <a name="getxaconnection-method-"></a>getXAConnection 方法 ()
@@ -41,7 +41,7 @@ public javax.sql.XAConnection getXAConnection()
  java.sql.SQLException  
   
 ## <a name="remarks"></a>備註  
- 這個 getXAConnection 方法是由 javax.sql.XADataSource 介面中的 getXAConnection 方法指定。  
+ 這個 getXAConnection 方法是由 javax.sql.XADataSource 介面中的 getXAConnection 方法所指定。  
   
 > [!NOTE]  
 >  這個方法通常是由 XA 連接集區實作所呼叫，而不是由一般的 JDBC 應用程式碼所呼叫。  

@@ -1,5 +1,5 @@
 ---
-title: 步驟 1:設定 Node.js 開發的開發環境 | Microsoft Docs
+title: 步驟 1︰設定 Node.js 開發的開發環境 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bce89cc12c7493522de55adffb69fcbe3307cbdf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68003756"
 ---
-# <a name="step-1--configure-development-environment-for-nodejs-development"></a>步驟 1:設定 Node.js 開發的開發環境
+# <a name="step-1--configure-development-environment-for-nodejs-development"></a>步驟 1︰設定 Node.js 開發的開發環境
 您必須使用必要條件設定您的開發環境，才能使用 Node.js Driver for SQL Server 開發應用程式。  最常見的方法是使用節點套件管理員 (npm) 安裝 Tedious 模組，但是您可以視需要，直接在 [Github](https://github.com/pekim/tedious) 下載 Tedious 模組。  
   
 請注意，Node.js 驅動程式會使用預設在 SQL Server 和 Azure SQL Database 中啟用的 TDS 通訊協定。  不需要進行其他組態設定。  

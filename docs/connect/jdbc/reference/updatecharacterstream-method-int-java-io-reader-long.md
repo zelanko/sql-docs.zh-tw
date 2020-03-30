@@ -11,10 +11,10 @@ ms.assetid: c426b0e3-2f9d-425a-b7da-1d0325e292d1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98e01a552717febaaa5a35612ee3d5cd44baa2c4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67996811"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader-long"></a>updateCharacterStream 方法 (int, java.io.Reader, long)

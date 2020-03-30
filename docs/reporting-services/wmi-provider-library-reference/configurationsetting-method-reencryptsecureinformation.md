@@ -16,10 +16,10 @@ ms.assetid: 8a487497-c207-45b2-8c92-87c58cc68716
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 84265b1a72d93a2d8de8332e0309093a9a506ea0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571434"
 ---
 # <a name="configurationsetting-method---reencryptsecureinformation"></a>ConfigurationSetting 方法 - ReencryptSecureInformation

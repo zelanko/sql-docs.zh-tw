@@ -11,10 +11,10 @@ ms.assetid: 504d7d06-0227-45e1-8b01-899c3e6006e8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 05844a45de654be91375ed2539c6510bd1592d29
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998835"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader"></a>updateNCharacterStream 方法 (java.lang.String, java.io.Reader)

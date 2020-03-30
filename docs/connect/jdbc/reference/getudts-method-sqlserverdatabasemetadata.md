@@ -16,10 +16,10 @@ ms.assetid: c4396453-dcb0-4132-8325-06b3c7896b3b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f51e5345cf7c7b78a0a3a37220927000af7d0fa7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978418"
 ---
 # <a name="getudts-method-sqlserverdatabasemetadata"></a>getUDTs 方法 (SQLServerDatabaseMetaData)

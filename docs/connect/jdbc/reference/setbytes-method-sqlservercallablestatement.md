@@ -16,10 +16,10 @@ ms.assetid: f264f1a6-ee35-4eaf-81d8-ecf99f03b35d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 53a75e8bd85a3601673f51111d87c34eb050a980
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974869"
 ---
 # <a name="setbytes-method-sqlservercallablestatement"></a>setBytes 方法 (SQLServerCallableStatement)

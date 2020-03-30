@@ -11,10 +11,10 @@ ms.assetid: 41d0cca3-8556-4573-bb90-8e9402d9379f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 014f679480caaabd42863d2551cfa4c25bbe94d2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992985"
 ---
 # <a name="pdostatementgetattribute"></a>PDOStatement::getAttribute
@@ -30,7 +30,7 @@ mixed PDOStatement::getAttribute( $attribute );
 ```  
   
 #### <a name="parameters"></a>參數  
-$*attribute*：整數，是 PDO::ATTR_* 或 PDO::SQLSRV_ATTR_\* 常數的其中之一。 支援的屬性是可以使用 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md)、PDO::SQLSRV_ATTR_DIRECT_QUERY (如需詳細資訊，請參閱 [PDO_SQLSRV 驅動程式中的直接陳述式執行和已備妥的陳述式執行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)) PDO::ATTR_CURSOR 和 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE (如需詳細資訊，請參閱[資料指標類型 (PDO_SQLSRV 驅動程式)](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)) 來設定的屬性。  
+$*attribute*：一個整數，是 PDO::ATTR_* 或 PDO::SQLSRV_ATTR_\* 常數的其中一個。 支援的屬性是可以使用 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md)、PDO::SQLSRV_ATTR_DIRECT_QUERY (如需詳細資訊，請參閱 [PDO_SQLSRV 驅動程式中的直接陳述式執行和已備妥的陳述式執行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)) PDO::ATTR_CURSOR 和 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE (如需詳細資訊，請參閱[資料指標類型 (PDO_SQLSRV 驅動程式)](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)) 來設定的屬性。  
   
 ## <a name="return-value"></a>傳回值  
 如果成功，會傳回預先定義的 PDO 屬性或自訂驅動程式屬性的 (混合) 值。 如果失敗，則傳回 Null。  

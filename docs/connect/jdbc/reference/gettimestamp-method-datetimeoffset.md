@@ -11,10 +11,10 @@ ms.assetid: e51dffdb-438b-4e74-a042-c064ae473f4d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f4610ac2be4976fdab75c91b4827e4f9adaf6d8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978886"
 ---
 # <a name="gettimestamp-method-datetimeoffset"></a>getTimestamp 方法 (DateTimeOffset)

@@ -11,10 +11,10 @@ ms.assetid: 3b0a8bbf-9369-4456-9ab8-1434ccacdd7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3915690475e5ce9321af7fc15498c2bde018c640
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977135"
 ---
 # <a name="isvalid-method-sqlserverconnection"></a>isValid 方法 (SQLServerConnection)

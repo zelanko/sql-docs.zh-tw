@@ -16,10 +16,10 @@ ms.assetid: bf04fa73-b9f1-4403-b6a0-e53d0d27c671
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5c1b6732f5cb22126ad9a102322a88df95606be7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955214"
 ---
 # <a name="datadefinitioncausestransactioncommit-method-sqlserverdatabasemetadata"></a>dataDefinitionCausesTransactionCommit 方法 (SQLServerDatabaseMetaData)

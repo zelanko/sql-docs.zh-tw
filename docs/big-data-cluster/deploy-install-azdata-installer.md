@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5b2e87cf96d6237521caeaae55802d2d72769603
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73594332"
 ---
-# <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-with-windows-installer"></a>使用 Windows Installer 來安裝 `azdata` 以管理 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="install-azdata-to-manage-big-data-clusters-2019-with-windows-installer"></a>使用 Windows Installer 來安裝 `azdata` 以管理 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -48,7 +48,7 @@ ms.locfileid: "73594332"
 >[!NOTE]
 >如果您先前的安裝是使用 MSI 完成，則在使用 MSI 安裝程式之前，您將不需要解除安裝任何目前版本。
 
-### <a id="install-azdata-windows"></a>使用 Windows Installer 來進行安裝
+### <a name="install-with-windows-installer"></a><a id="install-azdata-windows"></a>使用 Windows Installer 來進行安裝
 
 使用 Windows Installer 在 Windows 上安裝或更新 `azdata`。
 

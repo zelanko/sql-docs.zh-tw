@@ -16,10 +16,10 @@ ms.assetid: 7c85d021-d466-4732-85f9-53903d297041
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ecff900e23021bf04d2f9c8c10d7e8ab310cd1c7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982087"
 ---
 # <a name="getmaxindexlength-method-sqlserverdatabasemetadata"></a>getMaxIndexLength 方法 (SQLServerDatabaseMetaData)

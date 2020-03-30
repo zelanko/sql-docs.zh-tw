@@ -12,10 +12,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/12/2017
 ms.openlocfilehash: b9fca7d522d21706681ddfa714d45e8d18b3d4c1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75307319"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>建立追蹤與 Windows 效能記錄資料的關聯
@@ -24,7 +24,7 @@ ms.locfileid: "75307319"
 
 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以開啟 Microsoft Windows 效能記錄，選擇要與追蹤相互關連的計數器，而且在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 圖形化使用者介面中，讓選取的效能計數器顯示在追蹤的旁邊。 選取追蹤視窗中的事件後， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的 [系統監視器] 資料窗格中的紅色直條，表示與選取的追蹤事件相互關聯的效能記錄資料。  
   
- 若要使追蹤與效能計數器相互關聯，請開啟包含 [StartTime]  與 [EndTime]  資料行的追蹤檔案或資料表，然後在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [檔案]  功能表上，按一下 [匯入效能資料]  。 接著可以開啟效能記錄，然後選取要與追蹤相互關聯的「系統監視器」物件與計數器。  
+ 若要使追蹤與效能計數器相互關聯，請開啟包含 [StartTime]  與 [EndTime]  資料行的追蹤檔案或資料表，然後在  **[檔案]** [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 功能表上，按一下 [匯入效能資料]  。 接著可以開啟效能記錄，然後選取要與追蹤相互關聯的「系統監視器」物件與計數器。  
   
 ### <a name="to-correlate-a-trace-with-performance-log-data"></a>使追蹤與效能記錄資料產生相互關聯  
   

@@ -11,10 +11,10 @@ ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bc0bc77fda49e715879dceec60d616143952c265
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296841"
 ---
 # <a name="catalogmove_environment-ssisdb-database"></a>catalog.move_environment (SSISDB 資料庫)
@@ -36,13 +36,13 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>引數  
  [ @source_folder = ] *source_folder*  
- 在移動之前，環境所在之來源資料夾的名稱。 *source_folder* 是 **nvarchar(128)** 。  
+ 在移動之前，環境所在之來源資料夾的名稱。 *source_folder* 是 **nvarchar(128)**。  
   
  [ @environment_name = ] *environment_name*  
- 要移動之環境的名稱。 *environment_name* 是 **nvarchar(128)** 。  
+ 要移動之環境的名稱。 *environment_name* 是 **nvarchar(128)**。  
   
  [ @destination_folder = ] *destination_folder*  
- 在移動之後，環境所在之目的地資料夾的名稱。 *destination_folder* 是 **nvarchar(128)** 。  
+ 在移動之後，環境所在之目的地資料夾的名稱。 *destination_folder* 是 **nvarchar(128)**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

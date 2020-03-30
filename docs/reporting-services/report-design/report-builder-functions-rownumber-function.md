@@ -9,10 +9,10 @@ ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7af8523acb3bf531589a04268de1139d8bcefd35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081166"
 ---
 # <a name="report-builder-functions---rownumber-function"></a>報表產生器函式 - RowNumber 函式

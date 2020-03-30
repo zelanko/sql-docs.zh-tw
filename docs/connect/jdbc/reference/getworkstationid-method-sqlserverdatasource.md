@@ -16,10 +16,10 @@ ms.assetid: f6a701de-a8fa-4668-9310-99a8c6e32c88
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98cde4953d60f13d1768b06dbfab9ada6ea8af55
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978054"
 ---
 # <a name="getworkstationid-method-sqlserverdatasource"></a>getWorkstationID 方法 (SQLServerDataSource)

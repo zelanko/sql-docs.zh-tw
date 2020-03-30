@@ -11,13 +11,13 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 333ef282fe4e1f9d7af53cd3569371e88018a03f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251077"
 ---
-# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>如何：將 Visual Studio 2010 自訂測試條件從舊版升級至 SQL Server Data Tools
+# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>HOW TO：將 Visual Studio 2010 自訂測試條件從舊版升級至 SQL Server Data Tools
 
 若要使用在早於 SQL Server Data Tools 的版本中建立的測試單元條件，必須將它升級：  
   
@@ -27,7 +27,7 @@ ms.locfileid: "75251077"
   
 -   [安裝升級的測試條件](#ApplytheNewRegistrationProcess)  
   
-## <a name="UpdateReferences"></a>更新參考  
+## <a name="update-references"></a><a name="UpdateReferences"></a>更新參考  
 若要更新專案參考：  
   
 1.  在 [方案總管]  中按一下 [顯示所有檔案]  (僅限 Visual Basic)。  
@@ -50,7 +50,7 @@ ms.locfileid: "75251077"
   
 8.  按一下 [專案]  功能表上的 [卸載專案]  。  
   
-9. 在 [方案總管]  中，以滑鼠右鍵按一下 [專案]  ，然後選擇 [編輯 `project_name`.csproj]   。  
+9. 在 [方案總管]  中，以滑鼠右鍵按一下 [專案]  ，然後選擇 [編輯 **.csproj]** `project_name`  。  
   
 10. 匯入 `Microsoft.CSharp.targets` 之後，加入下列 Import 陳述式：  
   
@@ -81,7 +81,7 @@ ms.locfileid: "75251077"
   
 您的測試條件現在就會使用 SQL Server 單元測試組件參考。  
   
-## <a name="UpdateClassAttributesandTypeReference"></a>更新類別屬性和型別參考  
+## <a name="update-class-attributes-and-type-references"></a><a name="UpdateClassAttributesandTypeReference"></a>更新類別屬性和型別參考  
 將較舊的單元測試類別屬性取代為新屬性。 SQL Server 單元測試擴充性現在是以 Managed Extensibility Framework (MEF) 為基礎。 您也必須更新一些型別參考。  
   
 ### <a name="update-class-attributes"></a>更新類別屬性  
@@ -128,7 +128,7 @@ SQL Server 單元測試架構中一些型別名稱已經變更。 若要更新�
 |-----------------|-----------------|  
 |`ExecutionResult`|`SqlExecutionResult`|  
   
-## <a name="ApplytheNewRegistrationProcess"></a>安裝升級的測試條件  
+## <a name="install-the-upgraded-test-condition"></a><a name="ApplytheNewRegistrationProcess"></a>安裝升級的測試條件  
 在舊版的資料庫單元測試中，可能需要將測試條件安裝至全域組件快取，或建立包含組件資訊的 XML 檔案。 在 SQL Server 單元測試中，不再需要這個額外程序。 (如需詳細資訊，請參閱[編譯專案及安裝測試條件](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md#xxx)。  
   
 更新參考之後，驗證組件已簽署及編譯。  
