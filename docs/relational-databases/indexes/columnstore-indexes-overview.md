@@ -1,5 +1,5 @@
 ---
-title: 資料行存放區索引：概觀 |Microsoft Docs
+title: 資料行存放區索引：概觀 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/08/2018
 ms.prod: sql
@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70009399"
 ---
-# <a name="columnstore-indexes-overview"></a>資料行存放區索引：概觀
+# <a name="columnstore-indexes-overview"></a>資料行存放區索引；概觀
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 「資料行存放區索引」是儲存和查詢大型資料倉儲事實資料表的標準。 此索引使用以資料行為基礎的資料儲存和查詢處理，相較於傳統的資料列導向儲存，最高可在您的資料倉儲中達到 **10 倍查詢效能**改善。 相較於未壓縮的資料，您最高也可以達到 **10 倍資料壓縮**改善。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，資料行存放區索引可使用作業分析，這是對交易式工作負載執行高效能即時分析的功能。  
@@ -90,7 +90,7 @@ ms.locfileid: "70009399"
 #### <a name="batch-mode-execution"></a>批次模式執行
 批次模式執行是用來同時處理多個資料列的查詢處理方法。 批次模式執行與資料行存放區儲存格式緊密整合，並以其為中心進行最佳化。 批次模式執行有時又稱為*向量式*或*向量化*執行。 資料行存放區索引的查詢使用批次模式執行，通常可改善查詢效能 2 至 4 倍。 如需詳細資訊，請參閱[查詢處理架構指南](../query-processing-architecture-guide.md#execution-modes)。 
   
-##  <a name="benefits"></a> 為什麼應該使用資料行存放區索引？  
+##  <a name="why-should-i-use-a-columnstore-index"></a><a name="benefits"></a> 為什麼應該使用資料行存放區索引？  
 資料行存放區索引可提供非常高度的資料壓縮，通常是 10 倍，因此可大幅降低資料倉儲儲存體成本。 資料行存放區索引在分析時所提供的效能遠比 Btree 索引還高。 資料行存放區索引是資料倉儲和分析工作負載的慣用資料儲存格式。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]開始，您可以使用資料行存放區索引，對您的作業工作負載進行即時分析。  
   
 資料行存放區索引之所以很快的原因︰  
@@ -134,7 +134,7 @@ ms.locfileid: "70009399"
 |[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)||  
   
 ## <a name="related-tasks"></a>相關工作  
-所有關聯式資料表都會使用資料列存放區作為基礎資料格式，除非您將其指定為叢集資料行存放區索引。 除非您指定 `WITH CLUSTERED COLUMNSTORE INDEX` 選項，否則 `CREATE TABLE` 會建立資料列存放區資料表。  
+所有關聯式資料表都會使用資料列存放區作為基礎資料格式，除非您將其指定為叢集資料行存放區索引。 除非您指定 `CREATE TABLE` 選項，否則 `WITH CLUSTERED COLUMNSTORE INDEX` 會建立資料列存放區資料表。  
   
 當您使用 `CREATE TABLE` 陳述式建立資料表時，可以指定 `WITH CLUSTERED COLUMNSTORE INDEX` 選項，將資料表建立為資料行存放區。 如果您已經有一個資料列存放區資料表，並想要將它轉換成資料行存放區，則可以使用 `CREATE COLUMNSTORE INDEX` 陳述式。  
   

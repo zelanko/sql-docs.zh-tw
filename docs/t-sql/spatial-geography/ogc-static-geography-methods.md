@@ -13,10 +13,10 @@ ms.assetid: f5c79546-7f99-46a2-bf92-bd4ac8a50bf8
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 82b550d8e814f225614feb7b758ce37d2292f816
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68042669"
 ---
 # <a name="ogc-static-geography-methods"></a>OGC 靜態地理方法

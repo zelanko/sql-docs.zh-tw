@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 0365bed92a23b3261d3e45232369c32bbdbf521e
-ms.sourcegitcommit: 99ce0c9b28283d292d19637def982e971115dfbc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77125265"
 ---
 # <a name="xml-data-sql-server"></a>XML 資料 (SQL Server)

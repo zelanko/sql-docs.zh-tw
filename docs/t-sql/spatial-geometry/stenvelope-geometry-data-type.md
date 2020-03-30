@@ -18,10 +18,10 @@ ms.assetid: 781d22e9-38df-4c23-836f-6dd0bdef49c5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: de184826e93903629679c273b226cb1e143f850e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68042065"
 ---
 # <a name="stenvelope-geometry-data-type"></a>STEnvelope (geometry 資料類型)

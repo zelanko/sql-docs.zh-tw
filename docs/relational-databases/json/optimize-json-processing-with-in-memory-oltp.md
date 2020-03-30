@@ -11,10 +11,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a2b02d5b987958abc8dd97e48f86e7b44636efad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74096073"
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>使用記憶體內部 OLTP 最佳化 JSON 處理
@@ -46,7 +46,7 @@ SQL Server 和 Azure SQL Database 中提供的功能可讓您完全整合 JSON �
  - 使用記憶體最佳化索引來[編製 JSON 文件中值的索引](#index)。
  - [原生編譯 SQL 查詢](#compile)，以使用 JSON 文件中的值，或將結果格式化為 JSON 文字。
 
-## <a name="validate"></a> 驗證 JSON 資料行
+## <a name="validate-json-columns"></a><a name="validate"></a> 驗證 JSON 資料行
 SQL Server 和 Azure SQL Database 可讓您新增原生編譯 CHECK 條件約束，來驗證字串資料行中所儲存的 JSON 文件內容。 您可以使用原生編譯 JSON CHECK 條件約束，確保記憶體最佳化資料表中所儲存的 JSON 文字格式正確。
 
 下列範例會建立一份含有 JSON 資料行 `Product` 的 `Tags` 資料表。 `Tags` 資料行具有 CHECK 條件約束，使用 `ISJSON` 函式來驗證資料行中的 JSON 文字。
@@ -75,7 +75,7 @@ ALTER TABLE xtp.Product
         CHECK (ISJSON(Data)=1)
 ```
 
-## <a name="computedcol"></a> 使用計算資料行公開 JSON 值
+## <a name="expose-json-values-using-computed-columns"></a><a name="computedcol"></a> 使用計算資料行公開 JSON 值
 計算資料行可讓您公開 JSON 文字中的值，以及存取這些值，而不需要重新擷取 JSON 文字中的值，也不需要重新剖析 JSON 結構。 公開的值是強型別，並且會實際保存於計算資料行中。 使用保存的計算資料行存取 JSON 值，會比直接存取 JSON 文件中的值還要快。
 
 下列範例示範如何公開下列來自 JSON `Data` 資料行的兩個值：
@@ -100,7 +100,7 @@ CREATE TABLE xtp.Product(
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
 
-## <a name="index"></a> 編製 JSON 資料行中值的索引
+## <a name="index-values-in-json-columns"></a><a name="index"></a> 編製 JSON 資料行中值的索引
 SQL Server 和 Azure SQL Database 可讓您使用記憶體最佳化索引來編製 JSON 資料行中值的索引。 必須公開要編製索引的 JSON 值，並使用計算資料行將其設為強型別，如以上範例所述。
 
 您可以使用標準 NONCLUSTERED 和 HASH 索引來編製 JSON 資料行中值的索引。
@@ -131,7 +131,7 @@ ALTER TABLE Product
         WITH (BUCKET_COUNT=20000)
 ```
 
-## <a name="compile"></a> JSON 查詢的原生編譯
+## <a name="native-compilation-of-json-queries"></a><a name="compile"></a> JSON 查詢的原生編譯
 如果您的程序、函式和觸發程序包含使用內建 JSON 函式的查詢，原生編譯可提升這些查詢的效能，並減少執行查詢所需的 CPU 週期數目。
 
 下列範例示範使用下列數個 JSON 函式的原生編譯程序：**JSON_VALUE**、**OPENJSON** 和 **JSON_MODIFY**。

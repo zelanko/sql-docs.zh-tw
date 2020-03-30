@@ -17,10 +17,10 @@ ms.assetid: 46495a2e-81d0-4677-9d72-9db083cd1023
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 328a6e21d32bf5c0eaa029fcb0cf6586533cac19
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74249779"
 ---
 # <a name="mathematical-functions-transact-sql"></a>數學函數 (Transact-SQL)

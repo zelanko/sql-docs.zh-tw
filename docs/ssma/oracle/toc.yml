@@ -128,7 +128,7 @@
       href: project-settings-gui-oracletosql.md
     - name: 類型對應
       href: project-settings-type-mapping-oracletosql.md
-    - name: 遷移
+    - name: 移轉
       href: project-settings-migration-oracletosql.md
 - name: 全域設定
   items:

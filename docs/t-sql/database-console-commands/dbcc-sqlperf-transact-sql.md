@@ -23,10 +23,10 @@ ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 8cb409823bad1370c38b6dc99f04c7e49d58796a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982412"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
@@ -76,7 +76,7 @@ WITH NO_INFOMSGS
 |**所用的記錄空間 (%)**|記錄檔目前使用於儲存交易記錄資訊的百分比。|  
 |**狀態**|記錄檔的狀態。 一律是 0。|  
   
-## <a name="Remarks"></a> 備註  
+## <a name="remarks"></a><a name="Remarks"></a> 備註  
 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，請使用 [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) DMV 取代 `DBCC SQLPERF(LOGSPACE)` 來傳回每個資料庫交易記錄的空間使用量資訊。    
  
 交易記錄會記錄資料庫中所做的每一筆交易。 如需詳細資訊，請參閱[交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) 與 [SQL Server 交易記錄架構與管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)。

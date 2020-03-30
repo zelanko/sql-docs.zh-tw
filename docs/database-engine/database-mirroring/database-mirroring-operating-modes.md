@@ -13,10 +13,10 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6d39c2d0975f7be8a7e5481b9c91266528ae9ee2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006355"
 ---
 # <a name="database-mirroring-operating-modes"></a>資料庫鏡像作業模式
@@ -27,7 +27,7 @@ ms.locfileid: "68006355"
 >  如需資料庫鏡像的簡介，請參閱 [資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
   
-##  <a name="TermsAndDefinitions"></a> 詞彙和定義  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 詞彙和定義  
  本節介紹幾個詞彙，它們是本主題的核心。  
   
  高效能模式  
@@ -68,13 +68,13 @@ ms.locfileid: "68006355"
   
 -   [回應主體的失敗](#WhenPrincipalFails)  
   
-###  <a name="WhenUseHighPerf"></a> 高效能模式的適當使用時機  
+###  <a name="when-is-high-performance-mode-appropriate"></a><a name="WhenUseHighPerf"></a> 高效能模式的適當使用時機  
  在主體伺服器與鏡像伺服器的距離相隔很遠，以及您不希望有小失誤影響主體伺服器的災害復原狀況中，高效能模式會非常實用。  
   
 > [!NOTE]  
 >  記錄傳送可以是資料庫鏡像的補強方式，以及非同步資料庫鏡像的理想替代方式。 如需記錄傳送優點的資訊，請參閱[高可用性解決方案 &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)。 如需一起使用記錄傳送與資料庫鏡像的資訊，請參閱[資料庫鏡像和記錄傳送 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)。  
   
-###  <a name="WitnessImpactOnHighPerf"></a> 見證對高效能模式的影響  
+###  <a name="the-impact-of-a-witness-on-high-performance-mode"></a><a name="WitnessImpactOnHighPerf"></a> 見證對高效能模式的影響  
  如果您使用 Transact-SQL 來設定高效能模式，每當 SAFETY 屬性設為 OFF 時，我們由衷建議您也將 WITNESS 屬性設為 OFF。 見證可與高效能模式並存，但見證沒有什麼好處，只會帶來風險。  
   
  其中一個夥伴效能降低，如果見證與工作階段中斷連接，資料庫會變成無法使用。 這是因為即使高效能模式不需要見證，但若設定了見證，則工作階段需要由兩個以上的伺服器執行個體所組成的仲裁。 如果工作階段失去仲裁，它就無法服務資料庫。  
@@ -88,7 +88,7 @@ ms.locfileid: "68006355"
 > [!NOTE]  
 >  如需仲裁類型的資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
-###  <a name="WhenPrincipalFails"></a> 回應主體的失敗  
+###  <a name="responding-to-failure-of-the-principal"></a><a name="WhenPrincipalFails"></a> 回應主體的失敗  
  當主體失敗時，資料庫擁有者有下列幾項選擇：  
   
 -   在主體能夠再度使用之前，將資料庫保持在無法使用的狀態。  
@@ -108,7 +108,7 @@ ms.locfileid: "68006355"
   
      若執行強制服務，會讓鏡像伺服器擔任主體的角色，並將其資料庫副本提供給用戶端使用。 在強制服務時，凡是尚未由主體傳送到鏡像伺服器的交易記錄檔，都會遺失。 因此，執行強制服務的時機，應限定在可以接受資料遺失所造成的損失以及必須立即可使用資料庫的情況下。 如需強制服務運作方式及其最佳做法的資訊，請參閱[資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。  
   
-##  <a name="Sync"></a> 同步資料庫鏡像 (高安全性模式)  
+##  <a name="synchronous-database-mirroring-high-safety-mode"></a><a name="Sync"></a> 同步資料庫鏡像 (高安全性模式)  
  本節描述同步資料庫鏡像如何運作，包括替代的高安全性模式 (含自動容錯移轉以及不含自動容錯移轉)，並包含有關自動容錯移轉中之見證角色的資訊。  
   
  如果交易安全性設為 FULL，在初始同步化階段之後，資料庫鏡像工作階段就會在高安全性模式下執行而且會以同步方式運作。 本節將詳細說明設定同步作業的資料庫鏡像工作階段。  
@@ -142,14 +142,14 @@ ms.locfileid: "68006355"
   
 -   [具有自動容錯移轉的高安全性模式](#HighSafetyWithAutoFailover)  
   
-###  <a name="HighSafetyWithOutAutoFailover"></a> 不具有自動容錯移轉的高安全性模式  
+###  <a name="high-safety-mode-without-automatic-failover"></a><a name="HighSafetyWithOutAutoFailover"></a> 不具有自動容錯移轉的高安全性模式  
  下圖將顯示不含自動容錯移轉之高安全性模式的組態。 這個組態僅包含兩個夥伴。  
   
  ![在沒有見證情況下通訊的夥伴](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "在沒有見證情況下通訊的夥伴")  
   
  當夥伴已連接而且資料庫已經同步處理後，就會支援手動容錯移轉。 如果鏡像伺服器執行個體效能降低，主體伺服器執行個體不受影響，並且公開執行 (亦即沒有鏡像資料)。 如果遺失主體伺服器，就會暫停鏡像，不過可以將服務強制轉到鏡像伺服器 (可能會遺失資料)。 如需詳細資訊，請參閱 [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)版本都可使用見證伺服器執行個體。  
   
-###  <a name="HighSafetyWithAutoFailover"></a> 具有自動容錯移轉的高安全性模式  
+###  <a name="high-safety-mode-with-automatic-failover"></a><a name="HighSafetyWithAutoFailover"></a> 具有自動容錯移轉的高安全性模式  
  自動容錯移轉可確保某一台伺服器喪失之後，仍能繼續服務資料庫，藉以提供高度的可用性。 自動容錯移轉會要求工作階段包含第三個伺服器執行個體 ( *「見證」* )，而且此執行個體最好是位於第三部電腦上。 下圖將顯示支援自動容錯移轉之高安全性模式工作階段的組態。  
   
  ![工作階段的見證和兩個夥伴](../../database-engine/database-mirroring/media/dbm-high-availability-mode.gif "工作階段的見證和兩個夥伴")  
@@ -177,7 +177,7 @@ ms.locfileid: "68006355"
 > [!NOTE]  
 >  若要讓見證中斷連接維持一段較長的時間，我們建議您從工作階段中移除見證，直到它可用為止。  
   
-##  <a name="TsqlSettingsAndOpModes"></a> Transact-SQL 設定和資料庫鏡像作業模式  
+##  <a name="transact-sql-settings-and-database-mirroring-operating-modes"></a><a name="TsqlSettingsAndOpModes"></a> Transact-SQL 設定和資料庫鏡像作業模式  
  本節描述與 ALTER DATABASE 設定和鏡像資料庫與見證狀態相關的資料庫鏡像工作階段 (如果有的話)。 本節適用於主要或專以 [!INCLUDE[tsql](../../includes/tsql-md.md)] (而非 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) 管理資料庫鏡像的使用者。  
   
 > [!TIP]  
@@ -191,7 +191,7 @@ ms.locfileid: "68006355"
   
 -   [影響失去主體伺服器時之行為的因素](#FactorsOnLossOfPrincipal)  
   
-###  <a name="TxnSafetyAndWitness"></a> 交易安全性和見證狀態影響作業模式的方式  
+###  <a name="how-transaction-safety-and-witness-state-affect-the-operating-mode"></a><a name="TxnSafetyAndWitness"></a> 交易安全性和見證狀態影響作業模式的方式  
  工作階段的作業模式是由交易安全性設定和見證狀態的組合所決定。 資料庫擁有者可隨時變更交易安全性層級，且可加入或移除見證。  
   
  **本節內容：**  
@@ -200,7 +200,7 @@ ms.locfileid: "68006355"
   
 -   [見證狀態](#WitnessState)  
   
-####  <a name="TxnSafety"></a> Transaction Safety  
+####  <a name="transaction-safety"></a><a name="TxnSafety"></a> Transaction Safety  
  交易安全性是鏡像特有的資料庫屬性，用來決定資料庫鏡像工作階段是以同步或非同步方式作業。 有兩個安全性層級：FULL 和 OFF。  
   
 -   SAFETY FULL  
@@ -219,7 +219,7 @@ ms.locfileid: "68006355"
   
  資料庫擁有者可以隨時變更交易安全性層級。  
   
-####  <a name="WitnessState"></a> 見證的狀態  
+####  <a name="the-state-of-the-witness"></a><a name="WitnessState"></a> 見證的狀態  
  如果已設定見證，則需要仲裁，因此見證狀態永遠都很重要。  
   
  如果存在，則見證的狀態會是下列兩種狀態之一：  
@@ -244,7 +244,7 @@ ms.locfileid: "68006355"
   
  **如果在高效能模式中有見證，該見證不會參與工作階段。 不過，若要讓資料庫可供使用，必須至少有兩個伺服器執行個體保持連接。 因此，建議您讓 WITNESS 屬性在高效能模式工作階段中保持設定為 OFF。 如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
-###  <a name="ViewWitness"></a> 檢視安全性設定和見證狀態  
+###  <a name="viewing-the-safety-setting-and-state-of-the-witness"></a><a name="ViewWitness"></a> 檢視安全性設定和見證狀態  
  若要檢視資料庫的安全性設定和見證狀態，請使用 **sys.database_mirroring** 目錄檢視。 相關的資料行如下：  
   
 |因數|資料行|描述|  
@@ -261,7 +261,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
  如需此目錄檢視的詳細資訊，請參閱 [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)。  
   
-###  <a name="FactorsOnLossOfPrincipal"></a> 影響失去主體伺服器時之行為的因素  
+###  <a name="factors-affecting-behavior-on-loss-of-the-principal-server"></a><a name="FactorsOnLossOfPrincipal"></a> 影響失去主體伺服器時之行為的因素  
  下表概述失去主體伺服器時，交易安全性設定、資料庫狀態和見證狀態對於鏡像工作階段行為的聯合影響。  
   
 |交易安全性|鏡像資料庫的鏡像狀態|見證狀態|遺失主體時的行為|  
@@ -271,7 +271,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 |OFF|SUSPENDED 或 DISCONNECTED|NULL (無見證)|服務可強制到鏡像伺服器 (可能會遺失資料)。|  
 |FULL|SYNCHRONIZING 或 SUSPENDED|NULL (無見證)|服務可強制到鏡像伺服器 (可能會遺失資料)。|  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [新增或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   

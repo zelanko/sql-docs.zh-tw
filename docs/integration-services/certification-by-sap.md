@@ -11,10 +11,10 @@ ms.assetid: 44213071-a98e-4bd4-acf5-c9872536269e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 490374eaf6c5e1eefc768235bd4f3571bfd6f7b4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294988"
 ---
 # <a name="certification-by-sap"></a>SAP 認證

@@ -17,10 +17,10 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c6076e4c02ccb4c91c88a22df7cd7c4a50b0f877
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295122"
 ---
 # <a name="debugging-data-flow"></a>偵錯資料流程
@@ -172,7 +172,7 @@ order by source_component_name desc
   
 4.  以滑鼠右鍵按一下要設定其錯誤輸出資料行的元件，並按一下 [顯示進階編輯器]  。  
   
-5.  按一下 [輸入與輸出屬性]  索引標籤，並展開 [\<元件名稱> 錯誤輸出]  ，然後展開 [輸出資料行]  。  
+5.  按一下 [輸入與輸出屬性]  索引標籤，並展開 [**元件名稱> 錯誤輸出]\<** ，然後展開 [輸出資料行]  。  
   
 6.  按一下資料行並更新其屬性。  
   
@@ -183,7 +183,7 @@ order by source_component_name desc
   
 8.  若要儲存已更新的封裝，請按一下 [檔案]  功能表上的 [儲存選取項目]  。  
 
-## <a name="add_viewer"></a> 將資料檢視器加入資料流程
+## <a name="add-a-data-viewer-to-a-data-flow"></a><a name="add_viewer"></a> 將資料檢視器加入資料流程
   本主題描述如何在資料流程中加入和設定資料檢視器。 資料檢視器可以顯示在兩個資料流程元件之間移動的資料。 例如，在資料流程中的轉換修改從資料來源擷取的資料之前，資料檢視器可以先顯示該資料。  
   
  將一個資料流程元件的輸出與另一元件的輸入連接，路徑可連接資料流程中的元件。  
@@ -263,7 +263,7 @@ EXEC [SSISDB].[catalog].remove_data_tap @tap_id
 ```  
   
 ### <a name="listing-all-data-taps"></a>列出所有資料點選  
- 您也可以使用 catalog.execution_data_taps 檢視表，列出所有資料點選。 下列範例會擷取規格執行之執行個體的資料點選 (識別碼：54)。  
+ 您也可以使用 catalog.execution_data_taps 檢視表，列出所有資料點選。 下列範例會擷取規格執行之執行個體 (識別碼：54) 的資料點選。  
   
 ```sql 
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  

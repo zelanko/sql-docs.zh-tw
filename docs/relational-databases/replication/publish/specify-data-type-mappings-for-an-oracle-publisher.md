@@ -16,10 +16,10 @@ ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8449d7c6c766824628c3352897c25303f10e3a29
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75320760"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>指定 Oracle 發行者的資料類型對應
@@ -34,7 +34,7 @@ ms.locfileid: "75320760"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  您可以在 [發行項屬性 - **發行項>]** **對話方塊的 [資料對應]\<** 索引標籤上，指定資料類型對應。 您可以從 [新增發行集精靈] 的 [發行項]  頁面，以及 [發行集屬性 - **發行集>]\<** 對話方塊存取這個對話方塊。 如需使用精靈和存取對話方塊的詳細資訊，請參閱[從 Oracle 資料庫建立發行集](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-a-data-type-mapping"></a>若要指定資料類型對應  
@@ -51,7 +51,7 @@ ms.locfileid: "75320760"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用複寫預存程序以程式設計的方式指定自訂資料類型對應。 您也可以設定在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 與非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫管理系統 (DBMS) 之間對應資料類型時，所使用的預設對應。 如需詳細資訊，請參閱 [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)。  
   
 #### <a name="to-define-custom-data-type-mappings-when-creating-an-article-belonging-to-an-oracle-publication"></a>在建立屬於 Oracle 發行集的發行項時定義自訂資料類型對應  
@@ -82,7 +82,7 @@ ms.locfileid: "75320760"
   
 1.  在任何資料庫的散發者上，執行 [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)。 針對  source_dbms **指定 \@ORACLE** 值，並指定篩選結果集所需的任何其他參數。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  這個範例會變更具有 NUMBER 之 Oracle 資料類型的資料行，好讓它對應到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型 **numeric**(38,38)，而不是預設的資料類型 **float**中指定 Oracle 發行者的資料類型對應。  
   
  [!code-sql[HowTo#sp_changecolumndatatype](../../../relational-databases/replication/codesnippet/tsql/specify-data-type-mappin_1.sql)]  

@@ -12,10 +12,10 @@ ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b1275f5cbb718f34ba1386d6d6313dd662901900
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71284944"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>儲存並執行套件 (SQL Server 匯入和匯出精靈)
@@ -58,12 +58,12 @@ ms.locfileid: "71284944"
 > [!IMPORTANT]
 > 這個選項不會將封裝儲存在 SSIS 目錄資料庫 (SSISDB) 中。  
 
- 您可以在下一個頁面 [儲存 SSIS 封裝]  上，選取目標伺服器並提供認證以連接到伺服器。 如需詳細資訊，請參閱 [儲存 SSIS 封裝](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)。  
+ 您可以在下一個頁面 [儲存 SSIS 封裝]  上，選取目標伺服器並提供認證以連接到伺服器。 如需詳細資訊，請參閱[儲存 SSIS 封裝](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)。  
   
  **檔案系統**  
  選取此選項，即可將套件儲存為副檔名為 **.dtsx** 的檔案。  
   
- 您可以在下一個頁面 [儲存 SSIS 封裝]  上，選取封裝的目標資料夾和檔案名稱。 如需詳細資訊，請參閱 [儲存 SSIS 封裝](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)。  
+ 您可以在下一個頁面 [儲存 SSIS 封裝]  上，選取封裝的目標資料夾和檔案名稱。 如需詳細資訊，請參閱[儲存 SSIS 封裝](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)。  
  
  ## <a name="specify-the-package-protection-level"></a>指定套件保護等級
  **套件保護層級**  
@@ -85,7 +85,7 @@ ms.locfileid: "71284944"
   
 -   在目前的頁面上，您可以選擇要將封裝儲存在 SQL Server 中或另存為檔案。 您還可以為儲存的封裝選擇安全性設定。  
   
--   接下來，在 [儲存 SSIS 封裝]  頁面上，您可以提供封裝的名稱及儲存位置的詳細資訊。 如需詳細資訊，請參閱 [儲存 SSIS 封裝](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)。  
+-   接下來，在 [儲存 SSIS 封裝]  頁面上，您可以提供封裝的名稱及儲存位置的詳細資訊。 如需詳細資訊，請參閱[儲存 SSIS 封裝](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)。  
   
  只有在您選取此頁面上的 [儲存 SSIS 封裝]  選項時，才能使用這些選項。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "71284944"
   
 -   如果您選取了立即執行封裝但不儲存的選項，下一個頁面會是 [完成精靈]  。 在此頁面上，您可以檢閱在精靈中的選擇，然後開始複製作業。 如需詳細資訊，請參閱 [完成精靈](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md)。  
   
--   如果您選取了儲存封裝的選項，下一個頁面會是 [儲存 SSIS 封裝]  。 在此頁面上，您可以指定儲存封裝的其他選項 (然後，在儲存封裝之後，下一個頁面是 [完成精靈]  )。如需詳細資訊，請參閱[儲存 SSIS 封裝](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)。  
+-   如果您選取了儲存封裝的選項，下一個頁面會是 [儲存 SSIS 封裝]  。 在此頁面上，您可以指定儲存封裝的其他選項 (然後，在儲存封裝之後，下一個頁面是 [完成精靈]  )。如需詳細資訊，請參閱 [儲存 SSIS 封裝](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [儲存套件](../../integration-services/save-packages.md)  

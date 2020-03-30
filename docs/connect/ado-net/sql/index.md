@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: e953d15c46459e0bd076cc85e9bc7bc65cae9d7c
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: 700c07312d1ffc034e7a684cbf4265afc7c84993
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/27/2020
 ms.locfileid: "78896718"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server 和 ADO.NET

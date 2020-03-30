@@ -19,10 +19,10 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 973e5e1449205d5e72abfa03068db3c8c3e98f87
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296156"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 變數
@@ -56,7 +56,7 @@ ms.locfileid: "71296156"
   
  您可以為下列所有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 容器類型建立使用者自訂變數：封裝、Foreach 迴圈容器、For 迴圈容器、時序容器、工作和事件處理常式。 使用者自訂變數是容器 Variables 集合的成員。  
   
- 如果您使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師建立封裝，則可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師之封裝總管  索引標籤上的 [變數]  資料夾中，查看 Variables 集合的成員。 資料夾會列出使用者自訂變數和系統變數。  
+ 如果您使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師建立封裝，則可以在  **設計師之封裝總管** **索引標籤上的 [變數]** [!INCLUDE[ssIS](../includes/ssis-md.md)] 資料夾中，查看 Variables 集合的成員。 資料夾會列出使用者自訂變數和系統變數。  
   
  您可以利用下列方式設定使用者自訂變數：  
   

@@ -17,12 +17,12 @@ ms.assetid: 319d59f4-fa82-47ca-869b-3a9cd52900b0
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 10c1b29b1e5a8d4c7d91c428fd404b19cb77dd80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1dac766755da151913aa8b1a625710ff0be01596
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67898109"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80271434"
 ---
 # <a name="drop-database-scoped-credential-transact-sql"></a>DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -54,7 +54,7 @@ DROP DATABASE SCOPED CREDENTIAL credential_name
  下列範例移除稱為 `SalesAccess` 的資料庫範圍認證。  
   
 ```sql  
-DROP DATABASE SCOPED CREDENTIAL AppCred;  
+DROP DATABASE SCOPED CREDENTIAL SalesAccess;  
 GO  
 ```  
   

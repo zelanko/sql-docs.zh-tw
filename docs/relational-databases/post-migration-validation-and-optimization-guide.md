@@ -13,10 +13,10 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909154"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移轉後驗證和最佳化指南
@@ -29,7 +29,7 @@ ms.locfileid: "72909154"
 
 以下是一些移轉至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 平台後常發生的效能案例以及解決方法。 這些包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 移轉至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的特定案例 (舊版移轉至新版)，以及外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 移轉至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
-## <a name="CEUpgrade"></a>因為 CE 版本變更造成的查詢衰退
+## <a name="query-regressions-due-to-change-in-ce-version"></a><a name="CEUpgrade"></a>因為 CE 版本變更造成的查詢衰退
 
 **適用於：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 移轉至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
@@ -47,9 +47,9 @@ ms.locfileid: "72909154"
 
 如需本主題的詳細資訊，請參閱[在升級到新版 SQL Server 期間保持效能穩定](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)。
 
-## <a name="ParameterSniffing"></a> 參數探查的敏感度
+## <a name="sensitivity-to-parameter-sniffing"></a><a name="ParameterSniffing"></a> 參數探查的敏感度
 
-**適用範圍：** 外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉。
+**適用於：** 外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉。
 
 > [!NOTE]
 > 若為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉，如果此問題存在於來源 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，依現況移轉至較新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法解決這種情況。 
@@ -68,9 +68,9 @@ ms.locfileid: "72909154"
 > [!TIP] 
 > 運用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 計劃分析功能來快速確認這是否是問題。 詳細資訊可從[這裡](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/)取得。
 
-## <a name="MissingIndexes"></a> 遺漏索引
+## <a name="missing-indexes"></a><a name="MissingIndexes"></a> 遺漏索引
 
-**適用範圍：** 外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉。
+**適用於：** 外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉。
 
 索引不正確或遺漏會造成額外的 I/O，而導致額外的記憶體和 CPU 浪費。 這可能是因為工作負載設定檔已變更，例如使用不同的述詞，而使現有索引設計失效。 索引策略不佳或工作負載設定檔變更的辨識項包括：
 -   尋找重複、多餘、很少使用和完全未使用的索引。
@@ -86,9 +86,9 @@ ms.locfileid: "72909154"
 > [!TIP] 
 > 這類既有指令碼的範例包括 [索引建立](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Creation)和[索引資訊](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Information)。 
 
-## <a name="InabilityPredicates"></a>無法使用述詞來篩選資料
+## <a name="inability-to-use-predicates-to-filter-data"></a><a name="InabilityPredicates"></a>無法使用述詞來篩選資料
 
-**適用範圍：** 外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉。
+**適用於：** 外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉。
 
 > [!NOTE]
 > 若為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉，如果此問題存在於來源 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，依現況移轉至較新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法解決這種情況。
@@ -115,9 +115,9 @@ ms.locfileid: "72909154"
 > [!NOTE] 
 > 上述所有作業皆可以程式設計方式完成。
 
-## <a name="TableValuedFunctions"></a>　使用資料表值函數 (多重陳述式與內嵌)
+## <a name="use-of-table-valued-functions-multi-statement-vs-inline"></a><a name="TableValuedFunctions"></a>　使用資料表值函數 (多重陳述式與內嵌)
 
-**適用範圍：** 外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉。
+**適用於：** 外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉。
 
 > [!NOTE]
 > 若為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉，如果此問題存在於來源 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，依現況移轉至較新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法解決這種情況。
@@ -162,7 +162,7 @@ ms.locfileid: "72909154"
 
 2.  如果更加複雜，請考慮使用記憶體最佳化資料表或暫存資料表所儲存的中繼結果。
 
-##  <a name="Additional_Reading"></a> 其他閱讀資料
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 其他閱讀資料
 
  [使用查詢存放區的最佳作法](../relational-databases/performance/best-practice-with-the-query-store.md)  
 [記憶體最佳化資料表](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

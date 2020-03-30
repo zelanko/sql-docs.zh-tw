@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 770ef448094e764bcc1ca970354941c0d1d03d4c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68072278"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
@@ -122,7 +122,7 @@ CURSOR
 指定 SET 陳述式包含資料指標的宣告。  
   
 SCROLL  
-指定資料指標支援所有擷取選項：FIRST、LAST、NEXT、PRIOR、RELATIVE 和 ABSOLUTE。 當您也指定了 FAST_FORWARD 時，便不能指定 SCROLL。  
+指定資料指標支援所有提取選項：FIRST、LAST、NEXT、PRIOR、RELATIVE 和 ABSOLUTE。 當您也指定了 FAST_FORWARD 時，便不能指定 SCROLL。  
   
 FORWARD_ONLY  
 指定資料指標只支援 FETCH NEXT 選項。 您只能依單一方向，從第一個到最後一個資料列擷取資料指標。 當您指定不含 STATIC、KEYSET 或 DYNAMIC 關鍵字的 FORWARD_ONLY 時，會將資料指標實作成 DYNAMIC。 如果您沒有指定 FORWARD_ONLY 或 SCROLL，除非指定了 STATIC、KEYSET 或 DYNAMIC 關鍵字，否則，預設值是 FORWARD_ONLY。 如果是 STATIC、KEYSET 和 DYNAMIC 資料指標，預設值便是 SCROLL。  
@@ -306,7 +306,7 @@ DECLARE @p Point = CONVERT(Point, '')
 SET @p.SetXY(22, 23);  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-printing-the-value-of-a-variable-initialized-by-using-set"></a>J. 列印利用 SET 來初始化的變數值  
 下列範例會建立 `@myvar` 變數，將字串值放入這個變數中，再列印 `@myvar` 變數的值。  

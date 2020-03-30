@@ -20,10 +20,10 @@ ms.assetid: 67795c64-d8d3-48dc-93ef-3c8a9274deb6
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 4264aabaca1fe1b13427fc11cf3cd1b7ccc59e99
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68066616"
 ---
 #  <a name="asgml---geography-data-type"></a>AsGml - geography 資料型別

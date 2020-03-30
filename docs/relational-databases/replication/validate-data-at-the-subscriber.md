@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710759"
 ---
 # <a name="validate-replicated-data"></a>驗證複寫的資料
@@ -259,7 +259,7 @@ ms.locfileid: "71710759"
   
      如需相關資訊，請參閱 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) 或 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
   
-##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
  複寫能讓您以程式設計的方式，使用 Replication Management Objects (RMO) 驗證「訂閱者」和「發行者」兩端的資料相符。 您使用的物件依照複寫拓撲的類型而定。 異動複寫需要驗證發行集的所有訂閱。  
   
 > [!NOTE]  
@@ -309,7 +309,7 @@ ms.locfileid: "71710759"
   
 5.  為訂閱執行「合併代理程式」以啟動驗證，或等候下一個排程的代理程式執行。 如需相關資訊，請參閱 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) 以及 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)。 驗證作業的結果會寫入至代理程式記錄，您可使用「複寫監視器」來加以檢視。 如需詳細資訊，請參閱 [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)。  
   
-###  <a name="RMOExample"></a> 範例 (RMO)  
+###  <a name="example-rmo"></a><a name="RMOExample"></a> 範例 (RMO)  
  此範例會標示交易式發行集的所有訂閱，以進行列數驗證。  
   
  [!code-cs[HowTo#rmo_ValidateTranPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_validatetranpub)]  

@@ -17,10 +17,10 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0248af282581019ebedc28656852ec5c78fd00b5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257513"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>註冊 Kerberos 連接的服務主體名稱
@@ -43,7 +43,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 是一種診斷工具，可幫助排除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發生的 Kerberos 相關連接問題。 如需詳細資訊，請參閱 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。  
   
-##  <a name="Role"></a> SPN 在驗證中的角色  
+##  <a name="the-role-of-the-spn-in-authentication"></a><a name="Role"></a> SPN 在驗證中的角色  
  當應用程式開啟連接並使用 Windows 驗證時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 會傳遞 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦名稱、執行個體名稱，並選擇性地傳遞 SPN。 如果連接傳遞 SPN，則會在不進行任何變更的情況下使用該 SPN。  
   
  如果連接未通過 SPN，則會根據使用的通訊協定、伺服器名稱和執行個體名稱建構預設的 SPN。  
@@ -57,7 +57,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  Windows 驗證是 SQL Server 驗證使用者的慣用方法。 使用 Windows 驗證的用戶端是透過 NTLM 或 Kerberos 進行驗證。 在 Active Directory 環境中，永遠會先嘗試 Kerberos 驗證。 使用具名管道的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 使用者無法使用 Kerberos 驗證。  
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
  當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務啟動時，它會嘗試註冊服務主體名稱 (SPN)。 如果啟動 SQL Server 的帳戶無權在 Active Directory 網域服務中註冊 SPN，這個呼叫就會失敗，而且在應用程式事件記錄檔與 SQL Server 錯誤記錄檔中會記錄警告訊息。 若要註冊 SPN， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 必須在內建帳戶下執行，例如 Local System (不建議) 或 NETWORK SERVICE，或是在具有註冊 SPN 之權限的帳戶下執行 (例如網域管理員帳戶)。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在  [!INCLUDE[win7](../../includes/win7-md.md)] 或  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 作業系統上執行時，您可以使用虛擬帳戶或受管理的服務帳戶 (MSA) 執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 虛擬帳戶和 MSA 都可以註冊 SPN。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並未在這些帳戶的其中一個之下執行，SPN 就不會在啟動時註冊，而且網域管理員必須手動註冊 SPN。  
   
 > [!NOTE]  
@@ -65,7 +65,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  [How to Implement Kerberos Constrained Delegation with SQL Server 2008](https://technet.microsoft.com/library/ee191523.aspx)(如何使用 SQL Server 2008 實作 Kerberos 受限委派) 提供額外資訊  
   
-##  <a name="Formats"></a> SPN 格式  
+##  <a name="spn-formats"></a><a name="Formats"></a> SPN 格式  
  從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]開始，SPN 格式就有了變動，以便能夠在 TCP/IP、具名管道和共用記憶體上支援 Kerberos 驗證。 具名和預設執行個體支援的 SPN 格式如下所示。  
   
 **具名執行個體**  
@@ -102,14 +102,14 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > [!NOTE]  
 > 在 TCP/IP 連接的情況下，由於 TCP 通訊埠包含於 SPN 中，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須啟用 TCP 通訊協定，使用者才能使用 Kerberos 驗證進行連接。 
 
-##  <a name="Auto"></a> 自動 SPN 註冊  
+##  <a name="automatic-spn-registration"></a><a name="Auto"></a> 自動 SPN 註冊  
  當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體啟動時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試註冊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的 SPN。 當此執行個體停止時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試取消註冊 SPN。 如果是 TCP/IP 連接，SPN 會以 MSSQLSvc/*FQDN>\<* :*tcpport>\<* 格式註冊。具名執行個體和預設執行個體都會註冊為 MSSQLSvc  (根據 *tcpport>\<* 值來區分執行個體)。  
   
  如果是支援 Kerberos 的其他連接，SPN 會針對具名執行個體來以 MSSQLSvc/*FQDN>\<* /*執行個體名稱>\<* 格式註冊。 用來註冊預設執行個體的格式為 MSSQLSvc/*FQDN>\<* 。  
   
  如果服務帳戶缺少這些動作所需的權限，可能需要手動介入才能註冊或取消註冊 SPN。  
   
-##  <a name="Manual"></a> 手動 SPN 註冊  
+##  <a name="manual-spn-registration"></a><a name="Manual"></a> 手動 SPN 註冊  
 若要手動註冊 SPN，管理員必須使用 Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 支援工具所隨附的 Setspn.exe 工具。 如需詳細資訊，請參閱 [Windows Server 2003 Service Pack 1 支援工具](https://support.microsoft.com/kb/892777) KB 文件。  
   
 Setspn.exe 是一個命令列工具，可讓您讀取、修改及刪除服務主要名稱 (SPN) 目錄屬性。 此工具也可讓您檢視目前的 SPN、重設此帳戶的預設 SPN，或是加入或刪除補充 SPN。  
@@ -133,7 +133,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com redmond\accountname
 setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname  
 ```  
   
-##  <a name="Client"></a> 用戶端連接  
+##  <a name="client-connections"></a><a name="Client"></a> 用戶端連接  
  用戶端驅動程式內可支援使用者指定的 SPN。 但是，如果未提供 SPN，將會根據用戶端連接的類型來自動產生 SPN。 如果是 TCP 連接，將會針對具名和預設執行個體使用 *MSSQLSvc*/*FQDN*:[*port*] 格式的 SPN。  
   
 如果是具名管道和共用記憶體的連線，將會針對具名執行個體使用 *MSSQLSvc/\<FQDN>:\<執行個體名稱>* 格式的 SPN，並針對預設執行個體使用 *MSSQLSvc/\<FQDN>* 格式的 SPN。  
@@ -154,7 +154,7 @@ FROM sys.dm_exec_connections
 WHERE session_id = @@SPID;  
 ```  
   
-##  <a name="Defaults"></a> 驗證預設值  
+##  <a name="authentication-defaults"></a><a name="Defaults"></a> 驗證預設值  
  下表說明根據 SPN 註冊狀況所使用的驗證預設值。  
   
 |狀況|驗證方法|  
@@ -167,7 +167,7 @@ WHERE session_id = @@SPID;
 > [!NOTE]  
 > 「正確」表示已註冊之 SPN 對應的帳戶就是執行 SQL Server 服務所使用的帳戶。  
   
-##  <a name="Comments"></a> 註解  
+##  <a name="comments"></a><a name="Comments"></a> 註解  
  專用管理員連接 (DAC) 使用以執行個體名稱為基礎的 SPN。 如果該 SPN 註冊成功的話，Kerberos 驗證便可搭配 DAC 使用。 另外，使用者也可將此帳戶名稱指定為 SPN。  
   
  如果 SPN 註冊在啟動期間失敗，則此失敗會記錄在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中，而啟動會繼續進行。  

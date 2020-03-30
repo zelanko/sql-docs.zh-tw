@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 089de803bee02d241e1d7b56578c7e8bf8b15649
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288362"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層式資料 (SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "79288362"
   
  使用 [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) 做為資料類型來建立具有階層式結構的資料表，或描述儲存在另一個位置的階層式資料結構。 使用 [中的](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) hierarchyid 函數 [!INCLUDE[tsql](../includes/tsql-md.md)] 來查詢及管理階層式資料。  
   
-##  <a name="keyprops"></a> hierarchyid 的主要屬性  
+##  <a name="key-properties-of-hierarchyid"></a><a name="keyprops"></a> hierarchyid 的主要屬性  
  **hierarchyid** 資料類型的值代表樹狀目錄階層中的位置。 **hierarchyid** 的值具有下列屬性：  
   
 -   極度壓縮  
@@ -61,7 +61,7 @@ ms.locfileid: "79288362"
      透過使用 [GetDescendant](../t-sql/data-types/getdescendant-database-engine.md) 方法，您就一定能夠在任何指定節點的右側、任何指定節點的左側，或任何兩個同層級之間產生同層級。 在階層中插入或刪除任意的節點數目時，比較屬性會保留下來。 大部分的插入和刪除項目都會保留壓縮度屬性。 不過，兩個節點之間的插入項目則會以稍微少的壓縮表示來產生 hierarchyid 值。  
   
   
-##  <a name="limits"></a> hierarchyid 的限制  
+##  <a name="limitations-of-hierarchyid"></a><a name="limits"></a> hierarchyid 的限制  
  **hierarchyid** 資料類型具有下列限制：  
   
 -   **hierarchyid** 類型的資料行不會自動代表樹狀目錄。 應用程式負責決定是否要產生並指派 **hierarchyid** 值，以便讓資料列之間所需的關聯性反映在值中。 有些應用程式可能有 **hierarchyid** 類型的資料行，表示在另一個資料表中定義之階層的位置。  
@@ -71,7 +71,7 @@ ms.locfileid: "79288362"
 -   由 **hierarchyid** 值代表的階層式關聯性不會像外部索引鍵關聯性般強制執行。 如果 A 擁有子系 B，然後刪除 A 留下 B，讓關聯性變成不存在的記錄，這種階層式關聯性是可能發生而且有時候是恰當的。 如果無法接受這種行為，應用程式必須在刪除父系前，查詢下階。  
   
   
-##  <a name="alternatives"></a> 使用 hierarchyid 替代選項的時機  
+##  <a name="when-to-use-alternatives-to-hierarchyid"></a><a name="alternatives"></a> 使用 hierarchyid 替代選項的時機  
  代表階層式資料的兩個 **hierarchyid** 替代選項為：  
   
 -   父子式  
@@ -148,7 +148,7 @@ GO
 ```  
   
   
-##  <a name="indexing"></a> 階層式資料的索引策略  
+##  <a name="indexing-strategies-for-hierarchical-data"></a><a name="indexing"></a> 階層式資料的索引策略  
  編製階層式資料索引有兩種策略：  
   
 -   **深度優先**  
@@ -163,7 +163,7 @@ GO
   
      在廣度優先的索引中，節點的所有直接子系都會位於相同位置。 因此，廣度優先的索引在回應關於下層子系的查詢 (例如，「尋找直接回報給此經理的所有員工」) 時很有效率。  
   
- 不論是讓深度優先、廣度優先，或是兩者，還是那個要產生叢集索引鍵 (如果有的話)，都取決於上述查詢類型的相對重要性，以及 SELECT 和DML 作業的相對重要性。 如需索引策略的詳細範例，請參閱[教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 課。  
+ 不論是讓深度優先、廣度優先，或是兩者，還是那個要產生叢集索引鍵 (如果有的話)，都取決於上述查詢類型的相對重要性，以及 SELECT 和DML 作業的相對重要性。 如需索引策略的詳細範例，請參閱＜ [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)＞。  
   
   
 ### <a name="creating-indexes"></a>建立索引  
@@ -268,13 +268,13 @@ INSERT SimpleDemo
     VALUES ('/', 'Earth', 'Planet');  
 ```  
   
-##  <a name="tasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="tasks"></a> 相關工作  
   
-###  <a name="migrating"></a> 從父子式移轉到 hierarchyid  
- 大部分的樹狀目錄都是使用 [父子式] 代表。 從 [父子式] 結構遷移到使用 **hierarchyid** 的資料表最簡單的方式，就是使用暫存資料行或暫存資料表來追蹤每個階層層級的節點數。 如需移轉父子式資料表的範例，請參閱[教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 課。  
+###  <a name="migrating-from-parentchild-to-hierarchyid"></a><a name="migrating"></a> 從父子式移轉到 hierarchyid  
+ 大部分的樹狀目錄都是使用 [父子式] 代表。 從 [父子式] 結構遷移到使用 **hierarchyid** 的資料表最簡單的方式，就是使用暫存資料行或暫存資料表來追蹤每個階層層級的節點數。 如需遷移 [父子式] 資料表的範例，請參閱 [教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 課。  
   
   
-###  <a name="BKMK_ManagingTrees"></a> 使用 hierarchyid 管理樹狀結構  
+###  <a name="managing-a-tree-using-hierarchyid"></a><a name="BKMK_ManagingTrees"></a> 使用 hierarchyid 管理樹狀結構  
  雖然 **hierarchyid** 資料行不需要代表樹狀結構，但是應用程式可以輕易地確認這就是樹狀結構。  
   
 -   產生新值時，請執行下列其中之一：  
@@ -379,7 +379,7 @@ EmployeeId LastChild EmployeeName
 ```  
   
   
-###  <a name="BKMK_EnforcingTrees"></a> 強制執行樹狀結構  
+###  <a name="enforcing-a-tree"></a><a name="BKMK_EnforcingTrees"></a> 強制執行樹狀結構  
  以上的範例說明應用程式可以如何確保樹狀結構的維護。 若要透過條件約束強制執行樹狀結構，定義每個節點之父系的計算資料行可以使用傳回主要索引鍵識別碼的外部索引鍵條件約束建立。  
   
 ```sql
@@ -397,7 +397,7 @@ GO
  不信任可以維護階層式樹狀結構的程式碼具有資料表的 DML 直接存取權時，最好使用這個方法強制關聯性。 不過，由於必須針對每個 DML 作業檢查條件約束，這個方法可能會降低效能。  
   
   
-###  <a name="findclr"></a> 透過使用 CLR 尋找上階  
+###  <a name="finding-ancestors-by-using-the-clr"></a><a name="findclr"></a> 透過使用 CLR 尋找上階  
  與階層中兩個節點相關的常見作業就是尋找最低通用上階。 這可以寫入 [!INCLUDE[tsql](../includes/tsql-md.md)] 或 CLR，因為這兩者都可以使用 **hierarchyid** 類型。 因為效能將會更快，因此建議使用 CLR。  
   
  使用下列的 CLR 程式碼，列出上階並尋找最低通用上階：  
@@ -450,7 +450,7 @@ GO
 ```  
   
   
-###  <a name="ancestors"></a> 列出上階  
+###  <a name="listing-ancestors"></a><a name="ancestors"></a> 列出上階  
  建立節點上階清單是一個常見的作業，例如，在組織中顯示位置。 其中一個方法是，利用以上定義的 **HierarchyId_Operations** 類別，使用資料表值函數：  
   
  使用 [!INCLUDE[tsql](../includes/tsql-md.md)]：  
@@ -479,7 +479,7 @@ GO
 ```  
   
   
-###  <a name="lowestcommon"></a> 尋找最低通用上階  
+###  <a name="finding-the-lowest-common-ancestor"></a><a name="lowestcommon"></a> 尋找最低通用上階  
  使用以上定義的 **HierarchyId_Operations** 類別建立下列的 [!INCLUDE[tsql](../includes/tsql-md.md)] 函數，尋找與階層中兩個節點相關的最低通用上階：  
   
 ```sql
@@ -511,7 +511,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
  產生的節點是 /1/1/  
   
   
-###  <a name="BKMK_MovingSubtrees"></a> 移動子樹  
+###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> 移動子樹  
  另一個常見的作業是移動子樹。 以下程序使用 **\@oldMgr** 的樹狀子目錄，並讓它 (包括 **\@oldMgr**) 成為 **\@newMgr** 的樹狀子目錄。  
   
 ```sql
@@ -540,7 +540,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [Hierarchyid 資料類型方法參考](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

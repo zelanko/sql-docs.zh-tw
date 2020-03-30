@@ -21,10 +21,10 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b98f52d7c8e23530c13da6ad44d90090998ac09e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68212747"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>憑證管理 (SQL Server 組態管理員)
@@ -41,11 +41,11 @@ SSL/TLS 憑證普遍用來保護 SQL Server 的存取。 在舊版 SQL Server �
 > [!NOTE]
 > 您可以使用舊版 SQL Server (從 SQL Server 2008 開始) 隨附 SQL Server 組態管理員中的憑證管理。
 
-##  <a name="provision-single-server-cert"></a> 安裝單一 SQL Server 執行個體的憑證  
+##  <a name="to-install-a-certificate-for-a-single-sql-server-instance"></a><a name="provision-single-server-cert"></a> 安裝單一 SQL Server 執行個體的憑證  
   
 1. 在 SQL Server 組態管理員的主控台窗格中，展開 [SQL Server 網路組態]  。  
   
-2. 以滑鼠右鍵按一下 [&lt;執行個體名稱&gt;  的通訊協定]  ，然後選取 [屬性]  。  
+2. 以滑鼠右鍵按一下 [**執行個體名稱** *&lt; 的通訊協定]&gt;* ，然後選取 [屬性]  。  
   
 3. 選擇 [憑證]  索引標籤，然後選取 [匯入]  。  
   
@@ -54,11 +54,11 @@ SSL/TLS 憑證普遍用來保護 SQL Server 的存取。 在舊版 SQL Server �
 5. 選取 [下一步]  驗證憑證。 如果沒有任何錯誤，請選取 [下一步]  將憑證匯入本機執行個體。  
   
  
-##  <a name="provision-failover-cluster-cert"></a> 在容錯移轉叢集組態中安裝憑證  
+##  <a name="to-install-a-certificate-in-a-failover-cluster-configuration"></a><a name="provision-failover-cluster-cert"></a> 在容錯移轉叢集組態中安裝憑證  
   
 1. 在 SQL Server 組態管理員的主控台窗格中，展開 [SQL Server 網路組態]  。
   
-2. 以滑鼠右鍵按一下 [&lt;執行個體名稱&gt;  的通訊協定]  ，然後選擇 [屬性]  。 
+2. 以滑鼠右鍵按一下 [**執行個體名稱** *&lt; 的通訊協定]&gt;* ，然後選擇 [屬性]  。 
 
 3. 選擇 [憑證]  索引標籤，然後選取 [匯入]  。
 
@@ -77,11 +77,11 @@ SSL/TLS 憑證普遍用來保護 SQL Server 的存取。 在舊版 SQL Server �
 > [!NOTE]
 > 在 SQL Server 容錯移轉叢集執行個體的作用中節點上完成這些步驟。 使用者必須具有所有叢集節點的管理員權限。
 
-##  <a name="provision-availability-group-cert"></a> 在可用性群組設定中安裝憑證  
+##  <a name="to-install-a-certificate-in-an-availability-group-configuration"></a><a name="provision-availability-group-cert"></a> 在可用性群組設定中安裝憑證  
   
 1. 在 SQL Server 組態管理員的主控台窗格中，展開 [SQL Server 網路組態]  。
   
-2. 以滑鼠右鍵按一下 [&lt;執行個體名稱&gt;  的通訊協定]  ，然後選取 [屬性]  。  
+2. 以滑鼠右鍵按一下 [**執行個體名稱** *&lt; 的通訊協定]&gt;* ，然後選取 [屬性]  。  
   
 3. 選擇 [憑證]  索引標籤，然後選取 [匯入]  。  
   

@@ -157,7 +157,7 @@ FCI 可用於災害復原。 與一般可用性群組一樣，基礎叢集機制
 ### <a name="log-shipping"></a>記錄傳送
 記錄傳送是提供 SQL Server 資料庫災害復原最古老的方法之一。 記錄傳送通常給合可用性群組和 FCI 使用，提供符合成本效益且更簡單的災害復原，其他選項可能因為環境、系統管理技術或預算而發生困難。 類似記錄傳送的高可用性案例，許多環境會延遲載入交易記錄備份以考量人為錯誤。
 
-## <a name = "Migrations"></a> 移轉與升級
+## <a name="migrations-and-upgrades"></a><a name = "Migrations"></a> 移轉與升級
 
 部署新執行個體或升級舊執行個體時，企業無法容許長時間中斷。 本節將討論如何使用 SQL Server 可用性功能，將計劃的架構變更、伺服器切換、平台變更 (例如 Windows Server 換成 Linux，或反之) 或修補期間的停機時間降到最低。
 
@@ -224,7 +224,7 @@ Linux IaaS 虛擬機器的部署可以使用 Azure 安裝 SQL Server。 與內�
 
 因為記錄傳送只以備份與還原為基礎，所以 Windows Server 的 SQL Server 和 Linux 的 SQL Server 的資料庫、檔案結構等等沒有任何差異。 這表示 Windows Server 的 SQL Server 安裝和 Linux 的 SQL Server 安裝之間，以及 Linux 發行版本之間，可以設定記錄傳送。 其他一切保持不變。 唯一需要注意的是，記錄傳送就和可用性群組一樣，當來源位在較高的 SQL Server 主要版本，而目標位於較低的 SQL Server 版本時，無法運作。 
 
-## <a name = "ReadScaleOut"></a> 讀取級別
+## <a name="read-scale"></a><a name = "ReadScaleOut"></a> 讀取級別
 
 自 SQL Server 2012 引進次要複本後，其就已經能夠用於唯讀查詢。 以可用性群組可以達到的兩種方式：允許直接存取次要複本以及[設定唯讀路由](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) (必須使用接聽程式)。  SQL Server 2016 引進了透過接聽程式使用循環配置資源演算法的負載平衡唯讀狀態連線能力，允許唯讀要求散佈到所有的可讀取複本。 
 

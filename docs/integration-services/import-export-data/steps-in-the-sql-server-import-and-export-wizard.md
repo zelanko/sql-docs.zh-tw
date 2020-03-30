@@ -10,10 +10,10 @@ ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0a6fb370c80af6221812b88d3694a230dc206f7b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296211"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>SQL Server 匯入和匯出精靈中的步驟
@@ -43,7 +43,7 @@ ms.locfileid: "71296211"
 > [!TIP]
 > 在精靈的任何頁面或對話方塊中點選 F1 鍵，以查看目前頁面的文件。
 
-## <a name="related"></a> 相關的工作及內容  
+## <a name="related-tasks-and-content"></a><a name="related"></a> 相關的工作及內容  
 以下是一些其他基本工作。
 -   **請參閱精靈運作方式的簡單範例**。
 

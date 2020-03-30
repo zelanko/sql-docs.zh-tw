@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ce6bea9e9f99cd5db4559c6f4b1d966e809f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68123714"
 ---
 # <a name="create-tables-database-engine"></a>建立資料表 (Database Engine)
@@ -27,7 +27,7 @@ ms.locfileid: "68123714"
   
 
   
-##  <a name="Permissions"></a> 請先檢查您的權限！  
+##  <a name="check-your-permissions-first"></a><a name="Permissions"></a> 請先檢查您的權限！  
 這項工作需要資料庫的 CREATE TABLE 權限以及用以建立資料表結構描述的 ALTER 權限。  
   
  如果將 CREATE TABLE 陳述式中的任何資料行定義成 CLR 使用者定義型別，就需要類型的擁有權或其 REFERENCES 權限。  
@@ -69,7 +69,7 @@ ms.locfileid: "68123714"
   
 11. 若要檢視新的資料表，在 **[物件總管]** ，展開 **[資料表]** 節點並按 **F5** 重新整理物件清單。 新的資料表就會在資料表清單中顯示。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 ## <a name="using-query-editor"></a>使用查詢編輯器  
   

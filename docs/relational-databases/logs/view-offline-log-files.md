@@ -14,10 +14,10 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908562"
 ---
 # <a name="view-offline-log-files"></a>檢視離線記錄檔
@@ -46,7 +46,7 @@ ms.locfileid: "72908562"
   
 -   [SqlErrorLogFile Class](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (此主題會示範如何擷取有關指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄檔的資訊)。  
   
-##  <a name="BeforeYouBegin"></a> 權限  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> 權限  
  若要連接至離線記錄檔，您必須在本機和遠端電腦上具有下列權限：  
   
 -   **Root\Microsoft\SqlServer\ComputerManagement12** WMI 命名空間的讀取權限。 根據預設，每個人都可從啟用帳戶權限取得讀取權限。 如需詳細資訊，請參閱本節後面的＜若要確認 WMI 權限＞程序。  

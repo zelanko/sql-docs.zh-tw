@@ -14,10 +14,10 @@ ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 891e0fa855ec422efbdfd93abe9905f4ee7bffc0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297412"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE (SSIS 運算式)

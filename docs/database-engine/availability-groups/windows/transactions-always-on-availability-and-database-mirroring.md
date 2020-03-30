@@ -17,10 +17,10 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 407e477be98f386adc27fc965b1d099d1dec4dfa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251237"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>交易 - 可用性群組和資料庫鏡像
@@ -51,7 +51,7 @@ SQL Server 2017 支援可用性群組中多個資料庫的分散式交易。 這
   
 資料庫鏡像也不支援跨資料庫交易。  
   
-##  <a name="dtcsupport"></a> SQL Server 2016 SP1 和以前版本：分散式交易支援  
+##  <a name="sql-server-2016-sp1-and-before-support-for-distributed-transactions"></a><a name="dtcsupport"></a> SQL Server 2016 SP1 和以前版本：分散式交易支援  
 當由不同的 SQL Server 執行個體裝載資料庫時，會以可用性群組支援分散式交易。 它也適用於 SQL Server 與另一部符合 DTC 規範的伺服器之間的分散式交易。  
  
 Microsoft Distributed Transaction Coordinator (MSDTC 或 DTC) 是一項 Windows 服務，提供分散式系統的交易基礎結構。 MSDTC 允許用戶端應用程式在一筆交易中包含多個資料來源，接著即可跨此交易包含的所有伺服器認可交易。 例如，您可以使用 MSDTC 協調跨越不同伺服器上多個資料庫的交易。

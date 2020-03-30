@@ -15,10 +15,10 @@ author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287352"
 ---
 # <a name="thread-and-task-architecture-guide"></a>執行緒和工作架構指南
@@ -94,7 +94,7 @@ Microsoft Windows 使用數值優先權系統，從 1 到 31 的範圍來排程�
 ## <a name="best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus"></a>在具備超過 64 顆 CPU 之電腦上執行 SQL Server 的最佳做法
 
 ### <a name="assigning-hardware-threads-with-cpus"></a>使用 CPU 指派硬體執行緒
-請勿使用 affinity mask 和 affinity64 mask 伺服器組態選項，將處理器繫結至特定執行緒。 這些選項僅限於 64 個 CPU。 改為使用 [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) 的 `SET PROCESS AFFINITY` 選項。
+請勿使用 affinity mask 和 affinity64 mask 伺服器組態選項，將處理器繫結至特定執行緒。 這些選項僅限於 64 個 CPU。 改為使用 `SET PROCESS AFFINITY`ALTER SERVER CONFIGURATION[ 的 ](../t-sql/statements/alter-server-configuration-transact-sql.md) 選項。
 
 ### <a name="managing-the-transaction-log-file-size"></a>管理交易記錄檔大小
 請勿仰賴自動成長來增加交易記錄檔的大小。 增加交易記錄必須是序列處理序。 擴充記錄可避免在記錄擴充完成之前繼續進行交易寫入作業。 不過，您可以將檔案大小設定為夠大的值來支援環境中的典型工作負載，藉此為所有記錄檔預先配置空間。
@@ -115,7 +115,7 @@ Microsoft Windows 使用數值優先權系統，從 1 到 31 的範圍來排程�
 > [!IMPORTANT]
 > SQL 追蹤和 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 已被淘汰。 包含 Microsoft SQL Server 追蹤和重新執行物件的 *Microsoft.SqlServer.Management.Trace* 命名空間也會被淘汰。 
 > [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] 
-> 請改用擴充事件。 如需[延伸事件](../relational-databases/extended-events/extended-events.md)的詳細資訊，請參閱[快速入門：SQL Server 中的延伸事件](../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent 分析工具](../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
+> 請改用擴充事件。 如需[擴充事件](../relational-databases/extended-events/extended-events.md)的詳細資訊，請參閱[快速入門︰SQL Server 中的擴充事件](../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent 分析工具](../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
 
 > [!NOTE]
 > 適用於 Analysis Services 工作負載的 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]「未」遭淘汰，而且將會繼續受支援。

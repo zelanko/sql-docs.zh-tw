@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 68cb4e95046ca2fb071ecf2ba7c713cf57646690
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412725"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>示範：記憶體中 OLTP 的效能改善
@@ -32,7 +32,7 @@ ms.locfileid: "74412725"
 ## <a name="code-example"></a>程式碼範例  
  下列小節將描述每個步驟。  
   
-### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>步驟 1a︰使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="step-1a-prerequisite-if-using-ssnoversion"></a>步驟 1a︰使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  此第一個小節中的步驟僅適用於在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中執行時，但不適用於在 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]中執行時。 執行下列動作：  
   
 1.  使用 SQL Server Management Studio (SSMS.exe) 連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 或者，任何與 SSMS.exe 類似的工具也可以。  
@@ -58,7 +58,7 @@ USE imoltp;
 go  
 ```  
   
-### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>步驟 1b︰使用 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
+### <a name="step-1b-prerequisite-if-using-sssdsfull"></a>步驟 1b︰使用 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
  這個小節僅適用於使用 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]時。 執行下列動作：  
   
 1.  決定程式碼範例將使用的現有測試資料庫。  

@@ -18,10 +18,10 @@ ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b6a46805e9dfe86d7560a2786f10a99b66344a97
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254146"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>暫停與繼續資料庫鏡像 (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "75254146"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="EffectOnLogTrunc"></a> 暫停和繼續對記錄截斷的影響  
+##  <a name="how-pausing-and-resuming-affect-log-truncation"></a><a name="EffectOnLogTrunc"></a> 暫停和繼續對記錄截斷的影響  
  一般而言，在資料庫上執行自動檢查點時，交易記錄會在下一個記錄備份之後，截斷至該檢查點。 資料庫鏡像工作階段維持暫停狀態時，因為主體伺服器等著將目前的記錄傳送至鏡像伺服器，所以目前所有的記錄都會維持使用中狀態。 在工作階段繼續，且主體伺服器已將記錄傳送至鏡像伺服器之前，未傳送的記錄都會累積在主體資料庫的交易記錄中。  
   
  繼續工作階段時，主體伺服器會立即開始將累積的記錄傳送至鏡像伺服器。 鏡像伺服器確認已將與最舊自動檢查點對應的記錄放入佇列之後，主體伺服器會將主體資料庫的記錄檔截斷至該檢查點。 鏡像伺服器會在同一筆記錄截斷重做佇列。 每個後續檢查點都重複這個處理序時，則會依據檢查點並按階段截斷記錄檔。  
@@ -51,7 +51,7 @@ ms.locfileid: "75254146"
 > [!NOTE]  
 >  如需檢查點和記錄截斷的詳細資訊，請參閱 [資料庫檢查點 &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)。  
   
-##  <a name="AvoidFullLog"></a> 避免填滿交易記錄  
+##  <a name="avoid-a-full-transaction-log"></a><a name="AvoidFullLog"></a> 避免填滿交易記錄  
  如果記錄已填滿 (因為已達到最大值，或者伺服器執行個體用盡空間)，資料庫就不能再執行其他更新。 若要避免此問題，您有兩個替代方法：  
   
 -   在記錄填滿之前，先繼續資料庫的鏡像工作階段，或增加更多記錄空間。 繼續資料庫的鏡像，主體伺服器才能將累積的使用中記錄傳送至鏡像伺服器，並讓鏡像資料庫處於 SYNCHRONIZING 狀態。 然後，鏡像伺服器才可將記錄強化至磁碟，並開始重做它。  
@@ -60,7 +60,7 @@ ms.locfileid: "75254146"
   
      與暫停工作階段不同的是，移除鏡像會卸除鏡像工作階段的所有相關資訊。 每個夥伴伺服器執行個體，會保留本身的資料庫副本。 如果復原先前的鏡像副本，則可能會與先前的主體副本有所差異，且會落後自工作階段暫停後所經過的時間量。 如需詳細資訊，請參閱 [移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)＞。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要暫停或繼續資料庫鏡像**  
   
 -   [暫停或繼續資料庫鏡像工作階段 &#40;SQL Server&#41;](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)  

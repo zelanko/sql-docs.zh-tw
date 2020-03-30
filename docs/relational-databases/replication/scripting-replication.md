@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 8cda2b7729f205da7908fa481b2e1a5639a095a1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287312"
 ---
 # <a name="scripting-replication"></a>編寫複寫指令碼
@@ -47,7 +47,7 @@ ms.locfileid: "76287312"
 5.  在多個「訂閱者」端執行指令碼以產生需要的提取訂閱。  
   
 ## <a name="script-replication-objects"></a>撰寫複寫物件的指令碼  
- 您可以從複寫精靈或從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [複寫]  資料夾來撰寫複寫物件指令碼。 如果您從精靈編寫指令碼，可以選擇建立物件並編寫其指令碼，也可以選擇只編寫其指令碼。  
+ 您可以從複寫精靈或從   的 [複寫][!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 資料夾來撰寫複寫物件指令碼。 如果您從精靈編寫指令碼，可以選擇建立物件並編寫其指令碼，也可以選擇只編寫其指令碼。  
   
 > [!IMPORTANT]  
 >  所有密碼的指令碼都會編寫為 NULL。 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您將認證儲存在指令碼檔案中，必須保護該檔案免於未經授權的存取。  
@@ -84,7 +84,7 @@ ms.locfileid: "76287312"
   
 3.  以滑鼠右鍵按一下發行集或訂閱，然後按一下 **[產生指令碼]** 。  
   
-4.  指定 [產生 SQL 指令碼 - \<複寫物件>]  對話方塊中的選項。  
+4.  指定 [產生 SQL 指令碼 - **複寫物件>]\<** 對話方塊中的選項。  
   
 5.  按一下 **[編寫指令碼至檔案]** 。  
   

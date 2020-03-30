@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 6988274ce4c8f8bf38d89c156150b37589529dae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68769474"
 ---
 # <a name="subscribers"></a>訂閱者
@@ -55,7 +55,7 @@ ms.locfileid: "68769474"
   
 -   所選發行集的發行者是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本。  
   
- 按一下 [新增訂閱者]  就會顯示具有兩個選項的功能表：[新增 SQL Server 訂閱者]  和 [新增非 SQL Server 訂閱者]  。 按一下 **[加入非 SQL Server 訂閱者]** ，即可加入 Oracle 或 IBM DB2 訂閱者。  
+ 按一下 **[加入訂閱者]** 會顯示包含下列兩個選項的功能表： **[加入 SQL Server 訂閱者]** 和 **[加入非 SQL Server 訂閱者]** 。 按一下 **[加入非 SQL Server 訂閱者]** ，即可加入 Oracle 或 IBM DB2 訂閱者。  
   
  **[加入 SQL Server 訂閱者]**  
  將伺服器加入可以啟用為訂閱者的伺服器清單中。 當一或多個下列條件為 True 時，會顯示此按鈕：  

@@ -13,10 +13,10 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557926"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server 連接器維護和疑難排解
@@ -25,7 +25,7 @@ ms.locfileid: "75557926"
   本主題提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的補充資訊。 如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的詳細資訊，請參閱[使用 Azure 金鑰保存庫進行可延伸金鑰管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)、[使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)和[搭配使用 SQL Server 連接器與 SQL 加密功能](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)。  
   
   
-##  <a name="AppendixA"></a> A. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的維護指示  
+##  <a name="a-maintenance-instructions-for-ssnoversion-connector"></a><a name="AppendixA"></a> A. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的維護指示  
   
 ### <a name="key-rollover"></a>金鑰變換  
   
@@ -94,7 +94,7 @@ ms.locfileid: "75557926"
     GO  
     ```  
   
-### <a name="upgrade-of-includessnoversionincludesssnoversion-mdmd-connector"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的升級  
+### <a name="upgrade-of-ssnoversion-connector"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的升級  
 
 1\.0.0.440 版和較舊版本皆已被取代，而且生產環境也不再支援。 生產環境支援 1.0.1.0 版及更新版本。 請使用下列指示升級至可在 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=45344)上取得的最新版本。
 
@@ -138,7 +138,7 @@ ms.locfileid: "75557926"
   
 8.  驗證更新運作之後，即可刪除舊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器資料夾 (如果您選擇將它重新命名，而不是在步驟 3 中解除安裝)。  
   
-### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>復原 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務主體  
+### <a name="rolling-the-ssnoversion-service-principal"></a>復原 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務主體  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 Azure Active Directory 中所建立的服務主體作為存取金鑰保存庫的認證。  服務主體擁有用戶端識別碼和驗證金鑰。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認證是使用 **VaultName**、 **用戶端識別碼**和 **驗證金鑰**進行設定。  **驗證金鑰** 將於一段時間內有效 (一或兩年)。   在時間間隔到期之前，必須在 Azure AD 中為服務主體產生新的金鑰。  然後必須在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中變更認證。    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 會在目前的工作階段中為認證維持一份快取，因此認證變更時，應該重新啟動 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 。  
   
 ### <a name="key-backup-and-recovery"></a>金鑰備份和復原  
@@ -156,7 +156,7 @@ ms.locfileid: "75557926"
 只要金鑰備份位於相同的地理區域或國家雲端，就可以跨 Azure 區域進行還原：美國、加拿大、日本、澳洲、印度、亞太地區 (APAC)、歐洲巴西、中國、美國政府或德國。  
   
   
-##  <a name="AppendixB"></a> B. 常見問題集  
+##  <a name="b-frequently-asked-questions"></a><a name="AppendixB"></a> B. 常見問題集  
 ### <a name="on-azure-key-vault"></a>在 Azure 金鑰保存庫上  
   
 **金鑰作業如何與 Azure 金鑰保存庫搭配運作？**  
@@ -165,7 +165,7 @@ ms.locfileid: "75557926"
  **什麼是金鑰 URI？**  
  Azure 金鑰保存庫中的每個金鑰都有統一資源識別碼 (URI)，可用來在您的應用程式中參考該金鑰。 使用 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` 的格式來取得目前的版本，並使用 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` 的格式來取得特定版本。  
   
-### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>設定時 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="on-configuring-ssnoversion"></a>設定時 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
 **SQL Server 連接器需要存取哪些端點？** 連接器會與兩個需要設為允許清單的端點通訊。 針對 HTTPS，這些其他服務之輸出通訊所需的唯一連接埠是 443：
 -  login.microsoftonline.com/*:443
@@ -203,7 +203,7 @@ ms.locfileid: "75557926"
 
 若要深入了解 Active Directory，請參閱 [Azure 訂用帳戶如何與 Azure Active Directory 產生關聯](https://azure.microsoft.com/documentation/articles/active-directory-how-subscriptions-associated-directory/)。
   
-##  <a name="AppendixC"></a> C. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的錯誤碼說明  
+##  <a name="c-error-code-explanations-for-ssnoversion-connector"></a><a name="AppendixC"></a> C. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的錯誤碼說明  
  **提供者錯誤碼：**  
   
 錯誤碼  |符號  |描述    

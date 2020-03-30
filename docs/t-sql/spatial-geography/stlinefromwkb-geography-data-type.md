@@ -18,10 +18,10 @@ ms.assetid: 8ac2b772-6673-4ba1-a7ab-3b4b5841560b
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2d24050e9344c3dd351f852e624e6a1453432ebc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67952246"
 ---
 # <a name="stlinefromwkb-geography-data-type"></a>STLineFromWKB (geography 資料類型)

@@ -106,7 +106,7 @@
       href: project-settings-azure-sql-db-mysqltosql.md
     - name: 類型對應
       href: project-settings-type-mapping-mysqltosql.md
-    - name: 遷移
+    - name: 移轉
       href: project-settings-migration-mysqltosql.md
     - name: Synchronization
       href: project-settings-synchronization-mysqltosql.md

@@ -11,13 +11,13 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957052"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中使用深入解析小工具，管理伺服器和資料庫
+# <a name="manage-servers-and-databases-with-insight-widgets-in-name-sos"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中使用深入解析小工具，管理伺服器和資料庫
 
 深入解析小工具會擷取您用來監視伺服器和資料庫的 Transact-SQL (T-SQL) 查詢，並轉換成富有洞察力的視覺效果。
 

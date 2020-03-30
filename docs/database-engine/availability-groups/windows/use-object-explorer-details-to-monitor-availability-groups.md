@@ -16,10 +16,10 @@ ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9d0296e1427d4af206e101513bd54b0d67f7ff46
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68013636"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>使用物件總管詳細資料監視可用性群組
@@ -30,10 +30,10 @@ ms.locfileid: "68013636"
 >  如需使用 [物件總管詳細資料] 窗格的詳細資訊，請參閱 [物件總管詳細資料窗格](../../../ssms/object/object-explorer-details-pane.md)。  
   
   
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  您必須連接到裝載主要複本或次要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (伺服器執行個體)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **監視可用性群組、可用性複本和可用性資料庫**  
   
 1.  在 [檢視] 功能表上，按一下 **[物件總管詳細資料]** 或按 **F7** 鍵。  
@@ -54,13 +54,13 @@ ms.locfileid: "68013636"
   
          若要對多個可用性資料庫執行作業，請選取它們，並以滑鼠右鍵按一下它們，開啟列出可用命令的內容功能表。  
   
-##  <a name="AvGroupsDetails"></a> 可用性群組詳細資料  
+##  <a name="availability-groups-details"></a><a name="AvGroupsDetails"></a> 可用性群組詳細資料  
  **[可用性群組]** 詳細資料畫面顯示下列資料行：  
   
  **名稱**  
  列出所選可用性群組的 [可用性複本]  、[可用性資料庫]  和 [可用性群組接聽程式]  資料夾。  
   
-##  <a name="AvReplicaDetails"></a> 可用性複本詳細資料  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> 可用性複本詳細資料  
  **[可用性複本]** 詳細資料畫面顯示下列資料行：  
   
  **伺服器執行個體**  
@@ -101,7 +101,7 @@ ms.locfileid: "68013636"
 > [!NOTE]  
 >  如需可用性複本效能計數器的相關資訊，請參閱 [SQLServer，可用性複本](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)。  
   
-##  <a name="AvDbDetails"></a> 可用性資料庫詳細資料  
+##  <a name="availability-database-details"></a><a name="AvDbDetails"></a> 可用性資料庫詳細資料  
  **[可用性資料庫]** 詳細資料畫面顯示給定之可用性群組中可用性資料庫的下列屬性：  
   
  **名稱**  

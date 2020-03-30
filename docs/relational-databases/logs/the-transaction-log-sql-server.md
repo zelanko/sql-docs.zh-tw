@@ -15,10 +15,10 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287802"
 ---
 # <a name="the-transaction-log-sql-server"></a>交易記錄 (SQL Server)
@@ -67,7 +67,7 @@ ms.locfileid: "79287802"
 
 在**資料庫鏡像案例**中，主體資料庫的每個更新都會立即在另一個完整的個別資料庫複本 (鏡像資料庫) 中重製。 主體伺服器執行個體會立即傳送每個記錄檔記錄到鏡像伺服器執行個體，而它會將傳入的記錄檔記錄套用至鏡像資料庫，以持續向前復原。 如需詳細資訊，請參閱 [資料庫鏡像](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。
 
-##  <a name="Characteristics"></a>交易記錄特性
+##  <a name="transaction-log-characteristics"></a><a name="Characteristics"></a>交易記錄特性
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 交易記錄的特性： 
 -  交易記錄是實作成資料庫中的個別檔案或一組檔案。 記錄檔快取是與資料頁的緩衝區快取分開管理，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 內產生簡單、快速和健全的程式碼。 如需詳細資訊，請參閱[交易記錄實體架構](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。
 
@@ -79,10 +79,10 @@ ms.locfileid: "79287802"
 
 如需交易記錄架構與內部項目的資訊，請參閱 [SQL Server 交易記錄架構與管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)。
 
-##  <a name="Truncation"></a> 交易記錄截斷  
+##  <a name="transaction-log-truncation"></a><a name="Truncation"></a> 交易記錄截斷  
 記錄截斷會釋出記錄檔中的空間，以供交易記錄重複使用。 您必須定期截斷交易記錄，以防止它填滿所分配的空間。 有數種因素會延遲記錄的截斷，所以監控記錄大小很重要。 某些作業可使用最低限度記錄，以減少其對交易記錄大小的影響。  
  
-記錄截斷會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的邏輯交易記錄中刪除非使用中的[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)，釋出邏輯記錄中的空間以供實體交易記錄重複使用。 如果永遠都不截斷交易記錄，最終將會填滿分配給實體記錄檔的所有磁碟空間。  
+記錄截斷會從 [ 資料庫的邏輯交易記錄中刪除非使用中的](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)虛擬記錄檔 (VLF)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，釋出邏輯記錄中的空間以供實體交易記錄重複使用。 如果永遠都不截斷交易記錄，最終將會填滿分配給實體記錄檔的所有磁碟空間。  
   
 為了避免用盡空間，除非記錄截斷因為某個原因而延遲，否則將在以下事件後自動進行截斷：  
   
@@ -95,13 +95,13 @@ ms.locfileid: "79287802"
 > 記錄截斷並不會讓實體記錄檔變小。 若要減少實體記錄檔的實體大小，則必須壓縮記錄檔。 如需有關壓縮實體記錄檔大小的詳細資訊，請參閱＜ [管理交易記錄檔的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)＞。  
 > 不過，請記住[可能會延遲記錄截斷的因素](#FactorsThatDelayTruncation)。 如果壓縮記錄檔之後再次需要儲存空間，交易記錄檔將再次成長，並且會因此在記錄檔成長作業期間，導入效能額外負荷。
   
-##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
  當記錄檔記錄有一段很長的時間維持在使用中狀態時，交易記錄截斷會延遲，並填滿交易記錄，就像我們在這個長主題前面所提的一樣。  
   
 > [!IMPORTANT]
 > 如需如何對應寫滿交易記錄的相關資訊，請參閱 [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。  
   
- 實際上，記錄截斷可能會因為各種原因而延遲。 查詢 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視的 **log_reuse_wait** 和 **log_reuse_wait_desc** 資料行，了解是否有任何原因導致無法進行記錄截斷。 下表描述這些資料行的值。  
+ 實際上，記錄截斷可能會因為各種原因而延遲。 查詢 **sys.databases** 目錄檢視的 **log_reuse_wait** 和 [log_reuse_wait_desc](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 資料行，了解是否有任何原因導致無法進行記錄截斷。 下表描述這些資料行的值。  
   
 |log_reuse_wait 值|log_reuse_wait_desc 值|描述|  
 |----------------------------|----------------------------------|-----------------|  
@@ -122,7 +122,7 @@ ms.locfileid: "79287802"
 |14|OTHER_TRANSIENT|這個值目前尚未使用。|  
 |16|XTP_CHECKPOINT|必須執行記憶體內部 OLTP 檢查點。針對經記憶體最佳化的資料表，當交易記錄檔自上一個檢查點之後變得大於 1.5 GB (同時包含磁碟型和經記憶體最佳化的資料表) 時，就會執行自動檢查點<br /> 如需詳細資訊，請參閱[經記憶體最佳化的資料表的檢查點作業](../../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md)與 [記憶體內部最佳化資料表的記錄和檢查點處理] (https://blogs.msdn.microsoft.com/sqlcat/2016/05/20/logging-and-checkpoint-process-for-memory-optimized-tables-2/)
   
-##  <a name="MinimallyLogged"></a> 可以進行最低限度記錄的作業  
+##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a> 可以進行最低限度記錄的作業  
 「最低限度記錄」  包含僅記錄復原交易所需的資訊，不支援時間點復原。 這個主題將識別在大量記錄 [復原模式](../backup-restore/recovery-models-sql-server.md) 下 (以及簡單復原模式下，但備份正在執行時除外) 會進行最低限度記錄的作業。  
   
 > [!NOTE]
@@ -133,7 +133,7 @@ ms.locfileid: "79287802"
   
  下列作業 (在完整復原模式下會完整記錄) 在簡單和大量記錄復原模式下會進行最低限度記錄：  
   
--   大量匯入作業 ([bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 及 [INSERT...SELECT](../../t-sql/statements/insert-transact-sql.md))。 如需何時大量匯入至資料表會採用最低限度記錄的詳細資訊，請參閱＜ [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)＞。  
+-   大量匯入作業 ([bcp](../../tools/bcp-utility.md)、 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)及 [INSERT...SELECT](../../t-sql/statements/insert-transact-sql.md))。 如需何時大量匯入至資料表會採用最低限度記錄的詳細資訊，請參閱＜ [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)＞。  
   
 啟用異動複寫時，即使在大量記錄復原模式下也會完整記錄 `BULK INSERT`作業。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "79287802"
   
 啟用異動複寫時，即使在大量記錄復原模式下也會完整記錄 `SELECT INTO`作業。  
   
--   插入或附加新資料時，在 [UPDATE](../../t-sql/queries/update-transact-sql.md) 陳述式中使用 `.WRITE` 子句，對大數值資料類型執行的部分更新。 請注意，更新現有值時不使用最低限度記錄。 如需有關大數值資料類型的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。  
+-   插入或附加新資料時，在 `.WRITE`UPDATE[ 陳述式中使用 ](../../t-sql/queries/update-transact-sql.md) 子句，對大數值資料類型執行的部分更新。 請注意，更新現有值時不使用最低限度記錄。 如需有關大數值資料類型的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。  
   
 -   將新的資料插入或附加至[nUPDATETEXT](../../t-sql/queries/writetext-transact-sql.md) 、 [nUPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 和 **UPDATETEXT**, **nUPDATETEXT**, 、 **UPDATETEXT** 陳述式。 請注意，更新現有值時不使用最低限度記錄。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "79287802"
   
     -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 新堆積重建 (如果適用)。 `DROP INDEX`作業期間的索引頁取消配置**一律**經完整記錄。
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
 **管理交易記錄**  
   
 -   [管理交易記錄檔的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  

@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 86c10915b811578f82e50bd4322439863e610766
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76315618"
 ---
 # <a name="system_user-transact-sql"></a>SYSTEM_USER (Transact-SQL)
@@ -54,7 +54,7 @@ SYSTEM_USER
   
  如果使用者名稱和登入名稱不同，SYSTEM_USER 便會傳回登入名稱。  
   
- 如果目前使用者使用 Windows 驗證登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，SYSTEM_USER 便會傳回 Windows 登入識別名稱，格式如下：*DOMAIN*\\*user_login_name*。 不過，如果目前使用者是利用 SQL Server 驗證登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，SYSTEM_USER 便會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入識別名稱，例如，以 `WillisJo` 登入的使用者，就傳回 `WillisJo`。  
+ 如果目前使用者是使用 Windows 驗證登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，SYSTEM_USER 便會傳回格式為 <網域>  \\<使用者登入名稱>  的 Windows 登入識別名稱。 不過，如果目前使用者是利用 SQL Server 驗證登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，SYSTEM_USER 便會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入識別名稱，例如，以 `WillisJo` 登入的使用者，就傳回 `WillisJo`。  
   
  SYSTEM_USER 會傳回目前執行內容的名稱。 如果 EXECUTE AS 陳述式已用來切換內容，SYSTEM_USER 便會傳回模擬內容的名稱。  
 
@@ -129,9 +129,9 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
 (5 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-system_user-to-return-the-current-system-user-name"></a>C.利用 SYSTEM_USER 傳回目前系統使用者名稱  
+### <a name="c-using-system_user-to-return-the-current-system-user-name"></a>C：使用 SYSTEM_USER 傳回目前系統使用者名稱  
  下列範例會傳回 `SYSTEM_USER` 目前的值。  
   
 ```  

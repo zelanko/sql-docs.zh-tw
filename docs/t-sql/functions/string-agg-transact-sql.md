@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d67efc13e326808b570fc33f054f922e74d5923e
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77478486"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
@@ -45,7 +45,7 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 這是任何類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 在串連期間，運算式會轉換成 `NVARCHAR` 或 `VARCHAR` 類型。 非字串類型會轉換成 `NVARCHAR` 類型。
 
 *separator*  
-這是 `NVARCHAR` 或 `VARCHAR` 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，用來作為串連字串的分隔符號。 這可以是常值或變數。 
+這是 [ 或 ](../../t-sql/language-elements/expressions-transact-sql.md) 類型的`NVARCHAR`運算式`VARCHAR`，用來作為串連字串的分隔符號。 這可以是常值或變數。 
 
 <order_clause>   
 選擇性地使用 `WITHIN GROUP` 子句指定串連結果的順序：
@@ -96,7 +96,7 @@ FROM Person.Person;
 |--- |
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
-在 `name` 資料格中找到的 `NULL` 值不會在結果中傳回。   
+在 `NULL` 資料格中找到的 `name` 值不會在結果中傳回。   
 
 > [!NOTE]  
 > 如果使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器，[以方格顯示結果]  選項將無法實作歸位字元。 請切換至 [以文字顯示結果]  以正確地查看結果集。       
@@ -162,7 +162,7 @@ GROUP BY a.articleId, title;
 |177 |Dogs continue to be more popular than cats |polls,animals|
 
 > [!NOTE]
-> 若 `STRING_AGG` 函式不是 `SELECT` 清單中的唯一項目，則 `GROUP BY` 子句為必要項目。
+> 若 `GROUP BY` 函式不是 `STRING_AGG` 清單中的唯一項目，則 `SELECT` 子句為必要項目。
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 產生每個鄉鎮的電子郵件清單
 
