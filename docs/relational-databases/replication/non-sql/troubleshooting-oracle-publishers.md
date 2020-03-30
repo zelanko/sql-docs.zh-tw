@@ -14,10 +14,10 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c0bb4dfc3a0ac9109b210cfe02fb6a2e743f0ce5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907959"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Oracle 發行者疑難排解
@@ -62,14 +62,14 @@ ms.locfileid: "72907959"
   
 -   使用正確的 Oracle 首頁和路徑。 即使「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」上只安裝一組 Oracle 二進位編碼檔案，也請確定正確設定了與 Oracle 首頁相關的環境變數。 如果變更環境變數值，必須停止並重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，才能使變更生效。  
   
- 如需設定和測試連接的詳細資訊，請參閱[設定 Oracle 發行者](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)中的＜在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者上安裝與設定 Oracle 用戶端網路軟體＞。  
+ 如需設定和測試連接的詳細資訊，請參閱[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]設定 Oracle 發行者[中的＜在 ](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md) 散發者上安裝與設定 Oracle 用戶端網路軟體＞。  
   
 ## <a name="the-oracle-publisher-is-associated-with-another-distributor"></a>Oracle 發行者與另一散發者產生關聯  
  一個「Oracle 發行者」只能與一個「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」相關聯。 如果有另一個「散發者」與該「Oracle 發行者」相關聯，則必須在卸除它之後方可使用另一個「散發者」。 如果沒有先卸除該「散發者」，您將收到下列錯誤訊息之一：  
   
--   「Oracle 伺服器執行個體 '\<Oracle 發行者名稱  >' 之前已經設定使用 '\<SQL Server 散發者名稱  >' 作為其散發者。 若要開始使用 '\<新的 SQL Server 散發者名稱  >' 作為其散發者，您必須移除 Oracle 伺服器執行個體上目前的複寫組態，這會刪除該伺服器執行個體上的所有發行集」。  
+-   「Oracle 伺服器執行個體 '\<Oracle 發行者名稱>' 之前已經設定使用 '\<SQL Server 散發者名稱>' 作為其散發者。 若要開始使用 '\<新的 SQL Server 散發者名稱>' 作為其散發者，您必須移除 Oracle 伺服器執行個體上目前的複寫組態，這會刪除該伺服器執行個體上的所有發行集」。  
   
--   「Oracle 伺服器 '\<Oracle 伺服器名稱  >' 已經在散發者 '\<SQL Server 散發者名稱  >.\<散發資料庫名稱>  ' 上定義為發行者 '\<Oracle 發行者名稱  >'。 請卸除發行者或是卸除公用同義字 '\<同義字名稱>  ' 來重新建立」。  
+-   「Oracle 伺服器 '\<Oracle 伺服器名稱>' 已經在散發者 '\<SQL Server 散發者名稱>.\<散發資料庫名稱>' 上定義為發行者 '*Oracle 發行者名稱\<*>'。 請卸除發行者或是卸除公用同義字 '*同義字名稱>\<*' 來重新建立」。  
   
  在卸除某個「Oracle 散發者」時，Oracle 資料庫中的複寫物件也會自動清除。 但是在某些情況下必須手動清除 Oracle 複寫物件。 若要手動清除複寫建立的 Oracle 複寫物件：  
   
@@ -82,14 +82,14 @@ ms.locfileid: "72907959"
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>發生有關缺少主索引鍵的 SQL Server 錯誤 21663  
  交易式發行集中的發行項必須擁有有效的主索引鍵。 如果它們沒有有效的主索引鍵，您將在嘗試新增發行項時收到下列錯誤訊息：  
   
- 「找不到有效的來源資料表 [\<資料表擁有者  >].[\<資料表名稱  >] 主索引鍵。」  
+ 「找不到有效的來源資料表 [\<資料表擁有者>].[\<資料表名稱>] 主索引鍵。」  
   
  如需主索引鍵需求的詳細資訊，請參閱＜ [Design Considerations and Limitations for Oracle Publishers](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)＞主題中的＜唯一索引和條件約束＞一節。  
   
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>發生有關重複連結伺服器登入的 SQL Server 錯誤 21642  
  在最初設定「Oracle 發行者」時，會為「發行者」與「散發者」之間的連接建立一個連結伺服器項目。 連結伺服器的名稱與 Oracle TNS 服務名稱相同。 如果您嘗試建立相同名稱的連結伺服器，將顯示下列錯誤訊息：  
   
- 「異質性發行者需要已連結伺服器。 已經存在名稱為 '\<連結伺服器名稱>  ' 的連結伺服器。 請移除已連結伺服器或選擇不同的發行者名稱」。  
+ 「異質性發行者需要已連結伺服器。 已經存在名稱為 '*連結伺服器名稱>\<*' 的連結伺服器。 請移除已連結伺服器或選擇不同的發行者名稱」。  
   
  如果您嘗試直接建立連結伺服器，或者您之前已卸除「Oracle 發行者」與「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」之間的關聯性，現在又嘗試重新設定，便可能引發此錯誤。 若在嘗試重新設定「發行者」時收到此錯誤，請使用 [sp_dropserver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md) 卸除連結伺服器。  
   
@@ -102,11 +102,11 @@ ms.locfileid: "72907959"
   
  嘗試在散發者上尋找 SQL\*PLUS。 對於 Oracle 10g 用戶端安裝，此可執行檔的名稱為 sqlplus.exe， 通常安裝於 %ORACLE_HOME%/bin。 若要確認 SQL\*PLUS 的路徑是否顯示在系統路徑中，請檢查系統變數 **Path** 的值：  
   
-1.  以滑鼠右鍵按一下 **[我的電腦]** ，然後再按 **[內容]** 。  
+1.  以滑鼠右鍵按一下 **[我的電腦]**，然後再按 **[內容]**。  
   
-2.  按一下 **[進階]** 索引標籤，然後再按 **[環境變數]** 。  
+2.  按一下 **[進階]** 索引標籤，然後再按 **[環境變數]**。  
   
-3.  在 **[環境變數]** 對話方塊的 **[系統變數]** 清單中，選取 **[Path]** 變數，然後按一下 **[編輯]** 。  
+3.  在 **[環境變數]** 對話方塊的 **[系統變數]** 清單中，選取 **[Path]** 變數，然後按一下 **[編輯]**。  
   
 4.  在 **[編輯系統變數]** 對話方塊中：如果 **[變數值]** 文字方塊中不存在包含 sqlplus.exe 的資料夾路徑，則編輯字串以包含它。  
   
@@ -152,17 +152,17 @@ ms.locfileid: "72907959"
   
  若要檢視和修改登錄設定：  
   
-1.  按一下 **[開始]** ，然後按一下 **[執行]** 。  
+1.  按一下 **[開始]**，然後按一下 **[執行]**。  
   
-2.  在 **[執行]** 對話方塊中，輸入 **regedit**，然後按一下 **[確定]** 。  
+2.  在 **[執行]** 對話方塊中，輸入 **regedit**，然後按一下 **[確定]**。  
   
-3.  巡覽至 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\\<執行個體名稱>  \Providers。  
+3.  巡覽至 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*執行個體名稱>\<* \Providers。  
   
      [Providers] 下應包含一個名為 OraOLEDB.Oracle 的資料夾。 在此資料夾中應是 DWORD 值名稱 **AllowInProcess**，其值為 **1**。  
   
 4.  如果判斷出 **AllowInProcess** 設定為 **0**，請將登錄項目更新為 **1**：  
   
-    1.  以滑鼠右鍵按一下項目，然後再按 **[修改]** 。  
+    1.  以滑鼠右鍵按一下項目，然後再按 **[修改]**。  
   
     2.  在 **[編輯字串]** 對話方塊的 **[值資料]** 欄位中輸入 **[1]** 。  
   
@@ -206,7 +206,7 @@ ms.locfileid: "72907959"
 ## <a name="oracle-error-ora-01555"></a>Oracle 錯誤 ORA-01555  
  下列 Oracle 資料庫錯誤與快照式複寫無關；而與 Oracle 如何建構資料的讀取一致檢視相關：  
   
- 「ORA-01555:快照集太舊」  
+ 「ORA-01555：快照集太舊」  
   
  Oracle 會在發出 SQL 陳述式時，使用稱為回復區段的物件建構資料的讀取一致檢視。 在回復資訊為其他並行的階段作業所覆寫時，可能會發生「快照集太舊」錯誤。 對於 Oracle 9i 之前的版本，建議使用以下方法來減少此錯誤的發生頻率：增加回復區段的大小和 (或) 數目，並將大型交易指派到特定的回復區段。  
   
@@ -236,11 +236,11 @@ ms.locfileid: "72907959"
   
 1.  連接到 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中「Oracle 發行者」的「散發者」，然後展開伺服器節點。  
   
-2.  以滑鼠右鍵按一下 **[複寫]** ，然後按一下 **[散發者屬性]** 。  
+2.  以滑鼠右鍵按一下 **[複寫]**，然後按一下 **[散發者屬性]**。  
   
 3.  在 **[散發者屬性]** 對話方塊的 **[發行者]** 頁面上，清除「Oracle 發行者」的核取方塊。  
   
-4.  按一下 [確定]  。  
+4.  按一下 [確定]。  
   
  **若要卸除 Oracle 發行者 (Transact-SQL)**  
   

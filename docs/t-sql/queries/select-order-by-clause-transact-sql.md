@@ -40,10 +40,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981715"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 子句 (Transact-SQL)
@@ -209,7 +209,7 @@ ORDER BY SchemaName + ''; -- wrong
 |[限制傳回的資料列數目](#Offset)|OFFSET • FETCH|  
 |[搭配 UNION、EXCEPT 和 INTERSECT 使用 ORDER BY](#Union)|UNION|  
   
-###  <a name="BasicSyntax"></a> 基本語法  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> 基本語法  
  本節的範例會使用所需的最少語法來示範 ORDER BY 子句的基本功能。  
   
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. 指定選取清單中所定義的單一資料行  
@@ -260,7 +260,7 @@ ORDER BY DATEPART(year, HireDate);
   
 ```  
   
-###  <a name="SortOrder"></a> 指定遞增和遞減排序次序  
+###  <a name="specifying-ascending-and-descending-sort-order"></a><a name="SortOrder"></a> 指定遞增和遞減排序次序  
   
 #### <a name="a-specifying-a-descending-order"></a>A. 指定遞減順序  
  下列範例會依據數值資料行 `ProductID` 以遞減順序來排序結果集。  
@@ -298,7 +298,7 @@ ORDER BY FirstName ASC, LastName DESC ;
   
 ```  
   
-###  <a name="Collation"></a> 指定定序  
+###  <a name="specifying-a-collation"></a><a name="Collation"></a> 指定定序  
  下列範例示範 ORDER BY 子句中指定定序會如何變更傳回查詢結果的順序。 建立的資料表中包含一個資料行，這個資料行是透過使用不區分大小寫、不區分腔調字的定序來定義。 插入的值有各種不同的大小寫和腔調字。 因為 ORDER BY 子句中未指定定序，所以第一個查詢會在排序值時使用資料行的定序。 在第二個查詢中，ORDER BY 子句中指定區分大小寫、區分腔調字的定序，這變更傳回資料列的順序。  
   
 ```sql
@@ -319,7 +319,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
   
 ```  
   
-###  <a name="Case"></a> 指定條件順序  
+###  <a name="specifying-a-conditional-order"></a><a name="Case"></a> 指定條件順序  
  下列範例在 ORDER BY 子句中使用 CASE 運算式，以根據給定的資料行值，有條件地決定資料列的排序次序。 在第一則範例中，系統會評估 `SalariedFlag` 資料表之 `HumanResources.Employee` 資料行的值。 將 `SalariedFlag` 設定為 1 的員工會以 `BusinessEntityID` 的遞減順序傳回。 將 `SalariedFlag` 設定為 0 的員工會以 `BusinessEntityID` 的遞增順序傳回。 在第二則範例中，結果集會依照資料行 `TerritoryName` 排序 (當資料行 `CountryRegionName` 等於 'United States' 時) 以及依照 `CountryRegionName` 排序 (針對所有其他資料列)。  
   
 ```sql
@@ -340,7 +340,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
   
 ```  
   
-###  <a name="Rank"></a> 在次序函數中使用 ORDER BY  
+###  <a name="using-order-by-in-a-ranking-function"></a><a name="Rank"></a> 在次序函數中使用 ORDER BY  
  下列範例在 ROW_NUMBER、RANK、DENSE_RANK 和 NTILE 次序函數中使用 ORDER BY 子句。  
   
 ```sql
@@ -361,7 +361,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 ```  
   
-###  <a name="Offset"></a> 限制傳回的資料列數目  
+###  <a name="limiting-the-number-of-rows-returned"></a><a name="Offset"></a> 限制傳回的資料列數目  
  下列範例使用 OFFSET 和 FETCH 來限制查詢所傳回的資料列數目。  
   
 **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -489,7 +489,7 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-###  <a name="Union"></a> 搭配 UNION、EXCEPT 和 INTERSECT 使用 ORDER BY  
+###  <a name="using-order-by-with-union-except-and-intersect"></a><a name="Union"></a> 搭配 UNION、EXCEPT 和 INTERSECT 使用 ORDER BY  
  當查詢使用 UNION、EXCEPT 或 INTERSECT 運算子時，ORDER BY 子句必須在陳述式結尾處指定，合併的查詢結果才會排序。 下列範例會傳回紅色或黃色的所有產品，並依據資料行 `ListPrice` 排序此組合清單。  
   
 ```sql
@@ -506,7 +506,7 @@ WHERE Color = 'Yellow'
 ORDER BY ListPrice ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例示範依據數值的 `EmployeeKey` 資料行以遞增順序排序結果集。  
   
 ```sql

@@ -11,10 +11,10 @@ ms.assetid: 1d493dad-9d9c-4f0a-87e2-20a2d4a35f99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cbd113daf80c680da1cdac6ea6135754b461737e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296739"
 ---
 # <a name="catalogset_environment_variable_value-ssisdb-database"></a>catalog.set_environment_variable_value (SSISDB 資料庫)
@@ -37,13 +37,13 @@ catalog.set_environment_variable_value [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>引數  
  [ @folder_name = ] *folder_name*  
- 包含環境之資料夾的名稱。 *folder_name* 是 **nvarchar(128)** 。  
+ 包含環境之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
   
  [ @environment_name = ] *environment_name*  
- 環境的名稱。 *environment_name* 是 **nvarchar(128)** 。  
+ 環境的名稱。 *environment_name* 是 **nvarchar(128)**。  
   
  [ @variable _name = ] *variable _name*  
- 環境變數的名稱。 *variable _name* 是 **nvarchar(128)** 。  
+ 環境變數的名稱。 *variable _name* 是 **nvarchar(128)**。  
   
  [ @value = ] *value*  
  環境變數的值。 *value* 是 **sql_variant**。  

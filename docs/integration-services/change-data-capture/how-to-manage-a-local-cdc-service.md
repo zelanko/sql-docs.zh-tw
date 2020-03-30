@@ -11,10 +11,10 @@ ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 722db3a272c99ba6733551f4fa1a4131971e2416
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298740"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>如何管理本機 CDC 服務
@@ -26,9 +26,9 @@ ms.locfileid: "71298740"
   
 ### <a name="to-manage-a-specific-cdc-service"></a>若要管理特定的 CDC 服務  
   
-1.  從 **[開始]** 功能表，選取 **[Oracle CDC 服務組態]** 。  
+1.  從 **[開始]** 功能表，選取 **[Oracle CDC 服務組態]**。  
   
-2.  從 CDC 服務組態主控台的左窗格中，展開 **[本機 CDC 服務]** 。  
+2.  從 CDC 服務組態主控台的左窗格中，展開 **[本機 CDC 服務]**。  
   
 3.  選取您想要使用的 CDC 服務。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "71298740"
   
          從 CDC 服務組態主控台右側的 **[動作]** 窗格中，按一下 **[刪除]** 刪除此服務。  
   
-         您也可以用滑鼠右鍵按一下您想要刪除的 CDC 服務，然後選取 [刪除]  。  
+         您也可以用滑鼠右鍵按一下您想要刪除的 CDC 服務，然後選取 [刪除]。  
   
          **注意**：如果當您刪除此服務時，它正在執行中，在刪除此服務之前會先將它停止。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "71298740"
   
     -   **編輯 CDC 服務屬性**  
   
-         從 CDC 服務組態主控台右側的 **[動作]** 窗格中，按一下 **[屬性]** 。  
+         從 CDC 服務組態主控台右側的 **[動作]** 窗格中，按一下 **[屬性]**。  
   
-         您也可以用滑鼠右鍵按一下您要編輯屬性的 CDC 服務，然後選取 [屬性]  。  
+         您也可以用滑鼠右鍵按一下您要編輯屬性的 CDC 服務，然後選取 [屬性]。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理 Oracle CDC 服務](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  

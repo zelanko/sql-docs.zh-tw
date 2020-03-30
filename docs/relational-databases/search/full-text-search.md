@@ -13,10 +13,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 81a3e6268b74c6aeb4a3fc7ea7c492133abf372d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72930276"
 ---
 # <a name="full-text-search"></a>全文檢索搜尋
@@ -38,22 +38,22 @@ ms.locfileid: "72930276"
 ## <a name="overview"></a>概觀
 全文檢索索引包括資料表中一或多個以字元為基礎的資料行。 這些資料行可以具有下列任何資料類型：**char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml** 或 **varbinary(max)** 和 **FILESTREAM**。 每個全文檢索索引都會為資料表中的一個或多個資料行建立索引，而且每個資料行都可以使用特定的語言。  
   
- 全文檢索查詢會根據特定語言的規則 (例如英文或日文) 在單字與片語上運作，藉以針對全文檢索索引中的文字資料執行語言搜尋。 全文檢索查詢可以包含簡單的單字和片語，或者單字或片語的多種形式。 全文檢索查詢會傳回至少包含一個符合項目 (也稱為 *「叫用」* (Hit)) 的任何文件。 如果目標文件包含全文檢索查詢中指定的所有詞彙，而且符合其他搜尋條件 (例如相符詞彙之間的距離)，就會出現符合項目。    
+ 全文檢索查詢會根據特定語言的規則 (例如英文或日文) 在單字與片語上運作，藉以針對全文檢索索引中的文字資料執行語言搜尋。 全文檢索查詢可以包含簡單的單字和片語，或者單字或片語的多種形式。 全文檢索查詢會傳回至少包含一個符合項目 (也稱為 *「叫用」*(Hit)) 的任何文件。 如果目標文件包含全文檢索查詢中指定的所有詞彙，而且符合其他搜尋條件 (例如相符詞彙之間的距離)，就會出現符合項目。    
   
-##  <a name="queries"></a> 全文檢索搜尋查詢  
+##  <a name="full-text-search-queries"></a><a name="queries"></a> 全文檢索搜尋查詢  
  將資料行加入至全文檢索索引之後，使用者和應用程式即可針對資料行中的文字執行全文檢索查詢。 這些查詢可以搜尋下列任何項目：  
   
--   一或多個特定的單字或片語 ( *「不可分割的詞彙」* (Simple Term))  
+-   一或多個特定的單字或片語 (*「不可分割的詞彙」*(Simple Term))  
   
--   以指定之文字開頭的單字或片語 ( *「前置詞彙」* (Prefix Term))  
+-   以指定之文字開頭的單字或片語 (*「前置詞彙」*(Prefix Term))  
   
--   特定單字的字形變化 ( *「衍生詞彙」* (Generation Term))  
+-   特定單字的字形變化 (*「衍生詞彙」*(Generation Term))  
   
--   靠近另一個單字或片語的單字或片語 ( *「相近詞彙」* (Proximity Term))  
+-   靠近另一個單字或片語的單字或片語 (*「相近詞彙」*(Proximity Term))  
   
--   特定單字的同義字變化 ( *「同義字」* (Thesaurus))  
+-   特定單字的同義字變化 (*「同義字」*(Thesaurus))  
   
--   使用加權值的單字或片語 ( *「加權詞彙」* (Weighted Term))  
+-   使用加權值的單字或片語 (*「加權詞彙」*(Weighted Term))  
   
  全文檢索查詢不區分大小寫。 例如，搜尋 "Aluminum" 或 "aluminum" 都會傳回相同的結果。  
   
@@ -78,10 +78,10 @@ ms.locfileid: "72930276"
   
  如需詳細資訊，請參閱 [使用全文檢索搜尋查詢](../../relational-databases/search/query-with-full-text-search.md)。  
   
-##  <a name="like"></a> 比較全文檢索搜尋查詢與 LIKE 述詞
+##  <a name="compare-full-text-search-queries-to-the-like-predicate"></a><a name="like"></a> 比較全文檢索搜尋查詢與 LIKE 述詞
  相較於全文檢索搜尋，[LIKE](../../t-sql/language-elements/like-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 述詞只能針對字元模式運作。 您也無法使用 LIKE 述詞來查詢格式化的二進位資料。 此外，針對大量非結構化文字資料執行 LIKE 查詢的速度會比針對相同資料執行對等全文檢索查詢的速度要慢很多。 對於數百萬列的資料，使用 LIKE 查詢時可能要好幾分鐘才能傳回搜尋結果，但是使用全文檢索查詢時可能只要幾秒鐘的時間 (視傳回的資料列數目而定)。  
   
-##  <a name="architecture"></a> 全文檢索搜尋架構
+##  <a name="full-text-search-architecture"></a><a name="architecture"></a> 全文檢索搜尋架構
  全文檢索搜尋架構是由下列處理序所組成：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序 (sqlservr.exe)。  
@@ -94,7 +94,7 @@ ms.locfileid: "72930276"
   
  ![全文檢索搜尋架構](../../relational-databases/search/media/ifts-arch.gif "全文檢索搜尋架構")  
 
-###  <a name="sqlprocess"></a> SQL Server 處理序  
+###  <a name="sql-server-process"></a><a name="sqlprocess"></a> SQL Server 處理序  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序會使用全文檢索搜尋的下列元件：  
   
 -   **使用者資料表。** 這些資料表包含要進行全文檢索索引的資料。  
@@ -116,32 +116,32 @@ ms.locfileid: "72930276"
   
 -   **篩選背景程式管理員。** 篩選背景程式管理員會負責監視全文檢索引擎篩選背景程式主機的狀態。  
   
-###  <a name="fdhostprocess"></a> Filter Daemon Host process  
+###  <a name="filter-daemon-host-process"></a><a name="fdhostprocess"></a> Filter Daemon Host process  
  篩選背景程式主機是全文檢索引擎所啟動的處理序。 它會執行下列全文檢索搜尋元件，而這些元件會負責存取、篩選和斷詞處理資料表的資料，以及斷詞處理和詞幹分析查詢輸入。  
   
  篩選背景程式主機的元件如下所示：  
   
 -   **通訊協定處理常式。** 這個元件會從記憶體中提取資料以便進一步處理，而且會從指定之資料庫中的使用者資料表中存取資料。 其中一項責任就是從建立全文檢索索引的資料行中蒐集資料，並將資料傳遞給篩選背景程式主機，然後此處理序將會視需要套用篩選和斷詞工具。  
   
--   **篩選器。** 某些資料類型需要先篩選，然後才能針對文件中的資料建立全文檢索索引，包括 **varbinary**、 **varbinary(max)** 、 **image**或 **xml** 資料行中的資料。 用於給定文件的篩選會因其文件類型而不同。 例如，Microsoft Word (.doc) 文件、Microsoft Excel (.xls) 文件和 XML (.xml) 文件會使用不同的篩選。 然後，篩選會從文件中擷取文字區塊，並且移除內嵌的格式，並保留文字和文字位置的相關資訊。 其結果就是文字資訊的資料流。 如需詳細資訊，請參閱 [設定及管理搜尋的篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)。  
+-   **篩選器。** 某些資料類型需要先篩選，然後才能針對文件中的資料建立全文檢索索引，包括 **varbinary**、 **varbinary(max)**、 **image**或 **xml** 資料行中的資料。 用於給定文件的篩選會因其文件類型而不同。 例如，Microsoft Word (.doc) 文件、Microsoft Excel (.xls) 文件和 XML (.xml) 文件會使用不同的篩選。 然後，篩選會從文件中擷取文字區塊，並且移除內嵌的格式，並保留文字和文字位置的相關資訊。 其結果就是文字資訊的資料流。 如需詳細資訊，請參閱 [設定及管理搜尋的篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)。  
   
--   **斷詞工具和字幹分析器。** 斷詞工具是一項語言特有的元件，它會根據給定語言的語彙規則來尋找文字分界 ( *「斷詞」* (Word Breaking))。 每個斷詞工具都與語言特有的字幹分析器元件相關聯，而且此元件會進行動詞變化和執行字形擴展。 建立索引時，篩選背景程式主機會使用斷詞工具和字幹分析器，針對來自給定資料表資料行的文字資料執行語言分析。 與全文檢索索引中資料表資料行相關聯的語言會決定哪些斷詞工具和字幹分析器要用於建立該資料行的索引。 如需詳細資訊，請參閱 [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
+-   **斷詞工具和字幹分析器。** 斷詞工具是一項語言特有的元件，它會根據給定語言的語彙規則來尋找文字分界 (*「斷詞」*(Word Breaking))。 每個斷詞工具都與語言特有的字幹分析器元件相關聯，而且此元件會進行動詞變化和執行字形擴展。 建立索引時，篩選背景程式主機會使用斷詞工具和字幹分析器，針對來自給定資料表資料行的文字資料執行語言分析。 與全文檢索索引中資料表資料行相關聯的語言會決定哪些斷詞工具和字幹分析器要用於建立該資料行的索引。 如需詳細資訊，請參閱 [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
-##  <a name="processing"></a> 全文檢索搜尋處理  
+##  <a name="full-text-search-processing"></a><a name="processing"></a> 全文檢索搜尋處理  
  全文檢索搜尋是由全文檢索引擎所提供。 此全文檢索引擎扮演兩個角色：索引支援和查詢支援。  
   
-###  <a name="indexing"></a> 全文檢索索引處理序  
+###  <a name="full-text-indexing-process"></a><a name="indexing"></a> 全文檢索索引處理序  
  全文檢索擴展 (也就是搜耙) 起始時，全文檢索引擎會將大批的資料發送至記憶體中，並通知篩選背景程式主機。 此主機會針對資料進行篩選並斷詞，並且將轉換的資料轉換成反向字詞清單。 然後，全文檢索搜尋會從這些字詞清單中提取轉換的資料、處理資料以便移除停用字詞，並且將批次的字詞清單保存在一或多個反向索引中。  
   
  對 **varbinary(max)** 或 **image** 資料行中儲存的資料編製索引時，實作 **IFilter** 介面的篩選會依據為該資料指定的檔案格式 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 格式) 擷取文字。 在某些情況下，篩選元件必須將 **varbinary(max)** 或 **image** 資料寫出至 filterdata 資料夾，而不是推送至記憶體中。  
   
- 做為處理程序的一部分，收集的文字資料在經由文字分隔的處理之後，會分隔成 Token 或關鍵字。 用於 Token 化的語言是在資料行層級指定，也可由篩選元件在 **varbinary(max)** 、 **image**或 **xml** 資料中識別。  
+ 做為處理程序的一部分，收集的文字資料在經由文字分隔的處理之後，會分隔成 Token 或關鍵字。 用於 Token 化的語言是在資料行層級指定，也可由篩選元件在 **varbinary(max)**、 **image**或 **xml** 資料中識別。  
   
  您可以在停用字詞和 Token 儲存至全文檢索索引或索引片段前，進行額外的處理以移除停用字詞並將 Token 正規化。  
   
  完成母體擴展後會觸發最後的合併程序，將索引片段合併成一個主要的全文檢索索引。 如此可提升查詢的效能，因為只需要查詢一個主索引而不需查詢數個索引片段，而且可使用較佳的計分系統來排定關聯順序。  
   
-###  <a name="querying"></a> 全文檢索查詢處理序  
+###  <a name="full-text-querying-process"></a><a name="querying"></a> 全文檢索查詢處理序  
  查詢處理器會將查詢的全文檢索部分傳遞至全文檢索引擎，以便進行處理。 全文檢索引擎會執行斷詞並選擇性地執行同義字展開、詞幹分析和停用字詞 (非搜尋字) 處理。 然後，查詢的全文檢索部分會以 SQL 運算子的形式表示，主要表示成資料流資料表值函式 (STVF)。 在查詢執行期間，這些 STVF 會存取反向索引來擷取正確的結果。 接著，這些結果會在此時傳回用戶端，或在傳回用戶端之前進一步處理。  
 
 ## <a name="full-text-index-architecture"></a>全文檢索索引架構
@@ -149,9 +149,9 @@ ms.locfileid: "72930276"
   
  從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]開始，全文檢索索引會與 Database Engine 整合在一起，而非位於檔案系統中，如同舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在新的資料庫中，全文檢索目錄現在是不屬於任何檔案群組的虛擬物件。它只是參考一組全文檢索索引的邏輯概念。 不過，請注意，在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫 (含有資料檔案的任何全文檢索目錄) 的升級期間，系統會建立新的檔案群組。如需詳細資訊，請參閱 [升級全文檢索搜尋](../../relational-databases/search/upgrade-full-text-search.md)。  
   
-每個資料表只允許有一個全文檢索索引。 若要對資料表建立全文檢索索引，該資料表必須有單一的非 Null 唯一資料行。 您可以針對 **char**、 **varchar**、 **nchar**、 **nvarchar**、 **text**、 **ntext**、 **image**、 **xml**、 **varbinary**和 **varbinary(max)** 類型的資料行建立全文檢索索引，並且建立全文檢索搜尋的索引。 針對資料類型為 **varbinary**、**varbinary(max)** 、**image** 或 **xml** 的資料行建立全文檢索索引會要求您指定類型資料行。 「類型資料行」  是一個資料表資料行，您可以在每個資料列中儲存文件的副檔名 (.doc、.pdf 與 .xls 等)。  
+每個資料表只允許有一個全文檢索索引。 若要對資料表建立全文檢索索引，該資料表必須有單一的非 Null 唯一資料行。 您可以針對 **char**、 **varchar**、 **nchar**、 **nvarchar**、 **text**、 **ntext**、 **image**、 **xml**、 **varbinary**和 **varbinary(max)** 類型的資料行建立全文檢索索引，並且建立全文檢索搜尋的索引。 針對資料類型為 **varbinary**、**varbinary(max)**、**image** 或 **xml** 的資料行建立全文檢索索引會要求您指定類型資料行。 「類型資料行」是一個資料表資料行，您可以在每個資料列中儲存文件的副檔名 (.doc、.pdf 與 .xls 等)。  
 
-###  <a name="structure"></a> 全文檢索索引結構  
+###  <a name="full-text-index-structure"></a><a name="structure"></a> 全文檢索索引結構  
  若能充分了解全文檢索索引的結構，將有助於了解全文檢索引擎的運作方式。 本主題會使用下列 **之** Document [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 資料表的摘錄當做範例資料表。 這個摘錄只會顯示該資料表中的兩個資料行 ( **DocumentID** 資料行和 **Title** 資料行) 和三個資料列。  
   
  就本例而言，我們會假設已經在 **Title** 資料行中建立了全文檢索索引。  
@@ -195,7 +195,7 @@ ms.locfileid: "72930276"
   
  **Occurrence** 資料行包含整數值。 針對每個 DocId 值，都會有一個對應到該 DocId 內特定關鍵字之相對單字位移的出現次數值清單。 出現次數值有助於決定詞句或相似的相符項目，例如，具有鄰近發生次數值的片語。 它們也有助於計算相關分數。例如，在 DocId 中的關鍵字出現次數可用來計分。   
   
-###  <a name="fragments"></a> 全文檢索索引片段  
+###  <a name="full-text-index-fragments"></a><a name="fragments"></a> 全文檢索索引片段  
  邏輯全文檢索索引通常會在多份內部資料表之間分割。 每份內部資料表會稱為全文檢索索引片段。 其中某些片段可能包含比其他片段更新的資料。 例如，如果使用者更新 DocId 為 3 的下列資料列，而且資料表已進行自動變更追蹤，就會建立新的片段。  
   
 |DocumentID|Title|  
@@ -211,7 +211,7 @@ ms.locfileid: "72930276"
 |Rear|1|3|1|  
 |Reflector|1|3|2|  
   
- 如片段 2 所示，全文檢索查詢必須在內部查詢每個片段並捨棄較舊的項目。 因此，如果全文檢索索引包含過多全文檢索索引片段，可能會導致查詢效能大幅降低。 若要減少片段的數目，請使用 [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 REORGANIZE 選項來重新組織全文檢索目錄。 這個陳述式會執行「主要合併」  ，將片段合併成較大的單一片段，然後從全文檢索索引中移除所有已過時的項目。  
+ 如片段 2 所示，全文檢索查詢必須在內部查詢每個片段並捨棄較舊的項目。 因此，如果全文檢索索引包含過多全文檢索索引片段，可能會導致查詢效能大幅降低。 若要減少片段的數目，請使用 [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 REORGANIZE 選項來重新組織全文檢索目錄。 這個陳述式會執行「主要合併」，將片段合併成較大的單一片段，然後從全文檢索索引中移除所有已過時的項目。  
   
  重新組織之後，範例索引就會包含下列資料列：  
   
@@ -235,21 +235,21 @@ ms.locfileid: "72930276"
 |全文檢索索引|一般 SQL Server 索引|  
 |------------------------|--------------------------------|  
 |每個資料表只允許有一個全文檢索索引。|每個資料表允許有多個一般索引。|  
-|將資料加入至全文檢索索引的作業稱為「母體擴展」  (Population)，可透過排程或特定的要求來要求執行，也可在加入新的資料時自動執行。|當依據的資料有插入、更新或刪除時，會自動更新索引內容。|  
+|將資料加入至全文檢索索引的作業稱為「母體擴展」(Population)，可透過排程或特定的要求來要求執行，也可在加入新的資料時自動執行。|當依據的資料有插入、更新或刪除時，會自動更新索引內容。|  
 |在相同的資料庫中分組為一個或多個全文檢索目錄。|沒有分組。|  
 
-##  <a name="components"></a> 全文檢索搜尋語言元件和語言支援
+##  <a name="full-text-search-linguistic-components-and-language-support"></a><a name="components"></a> 全文檢索搜尋語言元件和語言支援
  全文檢索搜尋幾乎支援 50 種不同的語言，例如英文、西班牙文、中文、日文、阿拉伯文、孟加拉文和印度文。 如需支援之全文檢索語言的完整清單，請參閱 [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。 全文檢索索引所包含的每個資料行都與 Microsoft Windows 地區設定識別碼 (LCID) 相關聯，而這個識別碼就等於全文檢索搜尋所支援的語言。 例如，LCID 1033 等於美式英文，而 LCID 2057 等於英式英文。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 針對每個支援的全文檢索語言提供了一些語言元件，可支援索引和查詢使用該語言所儲存的全文檢索資料。  
   
  語言特有的元件包含下列：  
   
--   **斷詞工具和字幹分析器。** 斷詞工具會根據給定語言的語彙規則來尋找文字分界 ( *「斷詞」* (Word Breaking))。 每個斷詞工具都與針對相同語言進行動詞變化的字幹分析器相關聯。 如需詳細資訊，請參閱 [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
+-   **斷詞工具和字幹分析器。** 斷詞工具會根據給定語言的語彙規則來尋找文字分界 (*「斷詞」*(Word Breaking))。 每個斷詞工具都與針對相同語言進行動詞變化的字幹分析器相關聯。 如需詳細資訊，請參閱 [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
 -   **停用字詞表。** 提供包含基本停用字詞 (也稱為非搜尋字) 集合的系統停用字詞表。 *「停用字詞」* (Stopword) 是指無助於搜尋而且全文檢索查詢會忽略的單字。 以英文地區設定為例，"a"、"and"、"is" 和 "the" 都會被視為停用字詞。 一般而言，您必須設定一個或多個同義字檔案和停用字詞表。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
 -   **同義字檔案。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會針對每個全文檢索語言安裝同義字檔案，以及全域同義字檔案。 已安裝的同義字 (Thesaurus) 檔案基本上是空白的，但是您可以編輯它們，以便定義特定語言或商務狀況的同義字 (Synonym)。 透過開發符合全文檢索資料的同義字，您可以有效地擴大針對該資料進行全文檢索查詢的範圍。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的同義字檔案](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。  
   
--   **篩選 (iFilters)。**  在 **varbinary(max)** 、 **image**或 **xml** 資料類型資料行中索引文件需要執行額外處理的篩選。 此篩選必須是文件類型 (.doc、.pdf、.xls 和 .xml 等等) 特有的。 如需詳細資訊，請參閱 [設定及管理搜尋的篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)。  
+-   **篩選 (iFilters)。**  在 **varbinary(max)**、 **image**或 **xml** 資料類型資料行中索引文件需要執行額外處理的篩選。 此篩選必須是文件類型 (.doc、.pdf、.xls 和 .xml 等等) 特有的。 如需詳細資訊，請參閱 [設定及管理搜尋的篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)。  
   
  斷詞工具 (和字幹分析器) 與篩選會在篩選背景程式主機處理序 (fdhost.exe) 中執行。  
 

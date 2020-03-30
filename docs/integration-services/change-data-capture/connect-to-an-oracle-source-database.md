@@ -13,10 +13,10 @@ ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d49ffcf03fab810eefd190ffea91aa3e5ff38cfe
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298843"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>連接到 Oracle 來源資料庫
@@ -62,12 +62,12 @@ ms.locfileid: "71298843"
 >  如果有任何權限不能授與給 V$xxx，則將該權限授與給 V_S$xxx。  
   
  **測試連接**  
- 按一下 [測試連接]  ，以判斷您是否已經與擁有 Oracle 資料庫的遠端電腦建立連接。 隨即開啟對話方塊，通知您連接是否成功。  
+ 按一下 [測試連接]，以判斷您是否已經與擁有 Oracle 資料庫的遠端電腦建立連接。 隨即開啟對話方塊，通知您連接是否成功。  
   
 > [!IMPORTANT]  
 >  由於已知問題的緣故，如果未以系統管理員的身分執行 CDC 設計工具，則 Oracle 來源資料庫的連接可能會失敗。 如果連接失敗，請使用 **[以系統管理員身分執行]** 選項關閉 CDC 設計工具，然後重新啟動。  
   
- 當您在這個頁面上輸入資訊完畢後，請按 **[下一步]** [Select Oracle Tables and Columns](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)。  
+ 當您在這個頁面上輸入資訊完畢後，請按 **[下一步]**[Select Oracle Tables and Columns](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [如何建立 SQL Server 變更資料庫執行個體](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   

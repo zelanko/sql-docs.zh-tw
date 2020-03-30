@@ -15,21 +15,21 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056206"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>設定及管理全文檢索搜尋的同義字檔案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的全文檢索查詢可以透過使用「同義字」  ，搜尋使用者指定之詞彙的同義字。 每個同義字會針對特定語言定義一組同義字。 透過開發符合全文檢索資料的同義字，您可以有效地擴大針對該資料進行全文檢索查詢的範圍。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的全文檢索查詢可以透過使用「同義字」，搜尋使用者指定之詞彙的同義字。 每個同義字會針對特定語言定義一組同義字。 透過開發符合全文檢索資料的同義字，您可以有效地擴大針對該資料進行全文檢索查詢的範圍。
 
 系統會針對所有 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 查詢以及指定 [ 子句的任何 ](../../t-sql/queries/contains-transact-sql.md)CONTAINS[ 和 ](../../relational-databases/system-functions/containstable-transact-sql.md)CONTAINSTABLE`FORMSOF THESAURUS` 查詢進行同義字比對。
   
 全文檢索搜尋的同義字是一個 XML 文字檔。
   
-##  <a name="tasks"></a> 同義字的內容  
+##  <a name="whats-in-a-thesaurus"></a><a name="tasks"></a> 同義字的內容  
  您必須先以特定語言定義出同義字的對應 (亦即同義字)，然後全文檢索搜尋查詢才能尋找該語言的同義字。 您必須手動設定每個同義字，以便定義下列項目：  
   
 -   展開集  
@@ -44,12 +44,12 @@ ms.locfileid: "74056206"
 
 -   變音符號設定  
   
-     針對給定的同義字，所有搜尋模式都會區分或不區分變音符號，例如波狀符號 ( **~** )、尖重音符號 ( **&acute;** ) 或母音變化 ( **&uml;** ) (亦即，「區分腔調字」  或「不區分腔調字」  )。 例如，假設您在全文檢索查詢中，指定以其他模式取代模式 "caf&eacute;"。 如果同義字不區分腔調字，全文檢索搜尋就會取代模式 "caf&eacute;" 和 "cafe"。 如果同義字區分腔調字，全文檢索搜尋只會取代模式 "caf&eacute;"。 根據預設，同義字不會區分腔調字。  
+     針對給定的同義字，所有搜尋模式都會區分或不區分變音符號，例如波狀符號 (**~**)、尖重音符號 (**&acute;**) 或母音變化 (**&uml;**) (亦即，「區分腔調字」或「不區分腔調字」)。 例如，假設您在全文檢索查詢中，指定以其他模式取代模式 "caf&eacute;"。 如果同義字不區分腔調字，全文檢索搜尋就會取代模式 "caf&eacute;" 和 "cafe"。 如果同義字區分腔調字，全文檢索搜尋只會取代模式 "caf&eacute;"。 根據預設，同義字不會區分腔調字。  
   
-##  <a name="initial_thesaurus_files"></a> 預設的同義字檔案
+##  <a name="default-thesaurus-files"></a><a name="initial_thesaurus_files"></a> 預設的同義字檔案
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一組 XML 同義字檔案 (每個支援的語言都有一個檔案)。 這些檔案基本上都是空的。 它們僅包含所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同義字通用的最上層 XML 結構以及標記為註解的範例同義字。  
   
-##  <a name="location"></a> 同義字檔案的位置  
+##  <a name="location-of-thesaurus-files"></a><a name="location"></a> 同義字檔案的位置  
  同義字檔案的預設位置為：  
   
      <SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\  
@@ -79,12 +79,12 @@ ms.locfileid: "74056206"
   
  通用同義字檔案會對應至 LCID 0 的中性語言。 只有管理員能夠變更這個值。  
 
-##  <a name="how_queries_use_tf"></a> 全文檢索查詢如何使用同義字  
+##  <a name="how-full-text-queries-use-the-thesaurus"></a><a name="how_queries_use_tf"></a> 全文檢索查詢如何使用同義字  
 同義字查詢會同時使用語言特有的同義字和通用同義字。
 1.  首先，查詢會查閱語言特有的檔案並載入此檔案，以便進行處理 (除非已經載入此檔案)。 查詢會展開成包含同義字 (Thesaurus) 檔案中展開集和取代集規則所指定的語言特有同義字 (Synonym)。 
 2.  然後，系統會針對通用同義字重複這些步驟。 不過，如果某個詞彙已經是語言特有同義字檔案中相符項目的一部分，該詞彙就不適用於在通用同義字中比對。  
 
-##  <a name="structure"></a> 同義字檔案的結構  
+##  <a name="structure-of-a-thesaurus-file"></a><a name="structure"></a> 同義字檔案的結構  
  每個同義字檔案都會定義識別碼為 `Microsoft Search Thesaurus` 的 XML 容器，以及包含範例同義字的 `<!--` ... `-->` 註解。 您可在包含子元素範例的 `<thesaurus>` 元素中定義同義字，而這些子元素會定義變音符號設定、展開集和取代集。
 
 典型的空白同義字檔案包含下列 XML 文字：  
@@ -115,7 +115,7 @@ ms.locfileid: "74056206"
 </XML>  
 ```
 
-### <a name="expansion"></a> XML structure of an expansion set  
+### <a name="xml-structure-of-an-expansion-set"></a><a name="expansion"></a> XML structure of an expansion set  
   
  每個展開集都是用 `<expansion>` 元素括住。 在這個元素內，您可以使用 `<sub>` 元素來指定一或多個替代項目。 在展開集中，您可以指定一組彼此是同義字的替代項目。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "74056206"
 </expansion>  
 ```  
   
-### <a name="replacement"></a> XML structure of a replacement set  
+### <a name="xml-structure-of-a-replacement-set"></a><a name="replacement"></a> XML structure of a replacement set  
   
 每個取代集都是用 `<replacement>` 元素括住。 在這個元素內，您可以使用 `<pat>` 元素來指定一或多個模式，並使用 `<sub>` 元素來指定零或多個替代項目 (每個同義字指定一個)。 您也可以指定要用替代集取代的模式。 模式和替代項目都可以包含單字或一串文字。 如果沒有針對某個模式指定替代項目，其作用就是從使用者查詢中移除該模式。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "74056206"
 > [!NOTE]  
 >  此設定只能在檔案中套用一次，而且它會套用至檔案中的所有搜尋模式。 不能針對個別模式指定此設定。  
 
-##  <a name="editing"></a> 編輯同義字檔案  
+##  <a name="edit-a-thesaurus-file"></a><a name="editing"></a> 編輯同義字檔案  
 您可以編輯特定語言的同義字檔案 (XML 檔案)，以設定同義字。 在安裝期間，系統會安裝空白的同義字檔案，其中僅包含 `<xml>` 容器和標記為註解的範例 `<thesaurus` 元素。 若要讓尋找同義字的全文檢索搜尋查詢正常運作，您必須實際建立 `<thesaurus` 元素以定義一組同義字。 您可以定義兩種同義字形式：展開集和取代集。  
 
 ### <a name="edit-a-thesaurus-file"></a>編輯同義字檔案  

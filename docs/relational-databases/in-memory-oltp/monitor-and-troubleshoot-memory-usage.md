@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0ceeaedd10d8c9e38664083365ee943422a2ca91
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907539"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>監視與疑難排解記憶體使用量
@@ -38,14 +38,14 @@ ms.locfileid: "72907539"
   
 -   [進行記憶體問題疑難排解](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_Troubleshooting)  
   
-##  <a name="bkmk_CreateDB"></a> 建立含有記憶體最佳化資料表的範例資料庫  
+##  <a name="create-a-sample-database-with-memory-optimized-tables"></a><a name="bkmk_CreateDB"></a> 建立含有記憶體最佳化資料表的範例資料庫  
  如果您的資料庫已包含記憶體最佳化資料表，則可略過本節。  
   
  下列步驟將建立有三個記憶體最佳化資料表的資料庫，方便您在本主題其餘部分中使用。 在此範例中，我們將資料庫對應至資源集區，以便控制記憶體最佳化資料表可以取用的記憶體。  
   
 1.  啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-2.  按一下 **[新增查詢]** 。  
+2.  按一下 **[新增查詢]**。  
   
 3.  將此程式碼貼入新查詢視窗，並執行每一個區段。  
 
@@ -125,9 +125,9 @@ ms.locfileid: "72907539"
     GO  
     ```  
   
-##  <a name="bkmk_Monitoring"></a> 監視記憶體使用狀況  
+##  <a name="monitoring-memory-usage"></a><a name="bkmk_Monitoring"></a> 監視記憶體使用狀況  
   
-###  <a name="bkmk_UsingSSMS"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+###  <a name="using-ssmanstudiofull"></a><a name="bkmk_UsingSSMS"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 隨附內建的標準報表，可用來監視記憶體中資料表耗用的記憶體。 您可以使用 [物件總管] 存取這些報表。 您也可以使用物件總管監視個別記憶體最佳化資料表耗用的記憶體。  
   
 #### <a name="consumption-at-the-database-level"></a>資料庫層級的耗用量  
@@ -137,7 +137,7 @@ ms.locfileid: "72907539"
   
 2.  在 [物件總管] 中，以滑鼠右鍵按一下要產生報表的資料庫。  
   
-3.  在操作功能表中，依序選取 [報表]   -> [標準報表]   -> [記憶體最佳化物件的記憶體使用量]   
+3.  在操作功能表中，依序選取 [報表] -> [標準報表] -> [記憶體最佳化物件的記憶體使用量]  
   
  ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   
@@ -145,7 +145,7 @@ ms.locfileid: "72907539"
   
  ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
   
-###  <a name="bkmk_UsingDMVs"></a> 使用 DMVs  
+###  <a name="using-dmvs"></a><a name="bkmk_UsingDMVs"></a> 使用 DMVs  
  有許多 DMV 可用來監視記憶體最佳化資料表、索引、系統物件及執行階段結構所耗用的記憶體。  
   
 #### <a name="memory-consumption-by-memory-optimized-tables-and-indexes"></a>記憶體最佳化資料表和索引的記憶體耗用量  
@@ -246,7 +246,7 @@ memory_object_address pages_ in_bytes bytes_used type
   
  如需詳細資訊，請參閱 [sys.dm_os_memory_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。  
   
-#### <a name="memory-consumed-by-includehek_2includeshek-2-mdmd-engine-across-the-instance"></a>[!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎跨執行個體所耗用的記憶體  
+#### <a name="memory-consumed-by-hek_2-engine-across-the-instance"></a>[!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎跨執行個體所耗用的記憶體  
  管理配置給 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎和記憶體最佳化物件之記憶體的方式，與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中其他任何記憶體取用者的管理方式相同。 MEMORYCLERK_XTP 類型的 Clerk 會考量所有配置給 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎的記憶體。 使用下列查詢可找出 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎所使用的所有記憶體。  
   
 ```sql  
@@ -272,10 +272,10 @@ MEMORYCLERK_XTP      Default    64             0
   
  如需詳細資訊，請參閱 [sys.dm_os_memory_clerks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。  
   
-##  <a name="bkmk_MemOptObjects"></a> 管理記憶體最佳化物件耗用的記憶體  
+##  <a name="managing-memory-consumed-by-memory-optimized-objects"></a><a name="bkmk_MemOptObjects"></a> 管理記憶體最佳化物件耗用的記憶體  
  您可以藉由將記憶體最佳化資料表繫結至具名資源集區的方式，控制資料表耗用的總記憶體，如 [將包含記憶體最佳化資料表的資料庫繫結至資源集區](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)主題中所述。  
   
-##  <a name="bkmk_Troubleshooting"></a> 進行記憶體問題疑難排解  
+##  <a name="troubleshooting-memory-issues"></a><a name="bkmk_Troubleshooting"></a> 進行記憶體問題疑難排解  
  對記憶體問題進行疑難排解是包含三個步驟的程序：  
   
 1.  識別資料庫或執行個體中物件所耗用的記憶體數量。 您可以使用可供記憶體最佳化資料表使用的各種不同監視工具，如前文所述。  例如， `sys.dm_db_xtp_table_memory_stats` 或 `sys.dm_os_memory_clerks`這兩種 DMV。  

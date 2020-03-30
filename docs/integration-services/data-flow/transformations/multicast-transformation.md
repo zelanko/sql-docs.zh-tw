@@ -19,10 +19,10 @@ ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fca2fd4670fae2838eb0512c68483024bdb4dee
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297832"
 ---
 # <a name="multicast-transformation"></a>多點傳送轉換
@@ -54,7 +54,7 @@ ms.locfileid: "71297832"
  在左方選取輸出，即可在右方檢視其在資料表中的屬性。  
   
  **屬性**  
- 除了 [名稱]  和 [描述]  以外，所有列出的輸出屬性都是唯讀的。  
+ 除了 [名稱] 和 [描述] 以外，所有列出的輸出屬性都是唯讀的。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流程](../../../integration-services/data-flow/data-flow.md)   

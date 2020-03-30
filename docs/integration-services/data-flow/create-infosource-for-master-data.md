@@ -11,10 +11,10 @@ ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1fb9be98dbbdf2935fe79c6f579be7ab0e357624
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293201"
 ---
 # <a name="create-infosource-for-master-data"></a>[建立主要資料的 InfoSource]
@@ -22,9 +22,9 @@ ms.locfileid: "71293201"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  使用 [建立主要資料的 InfoSource]  對話方塊可以在 SAP Netweaver BW 系統中建立主要資料的新 InfoSource。  
+  使用 [建立主要資料的 InfoSource] 對話方塊可以在 SAP Netweaver BW 系統中建立主要資料的新 InfoSource。  
   
- 您可以從 [SAP BW 目的地編輯器]  的 [連線管理員]  頁面開啟 [建立主要資料的 InfoSource]  對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
+ 您可以從 [SAP BW 目的地編輯器] 的 [連線管理員] 頁面開啟 [建立主要資料的 InfoSource] 對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
   
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW 的文件集是假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  
@@ -33,27 +33,27 @@ ms.locfileid: "71293201"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 目的地的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件。  
   
-2.  在 [資料流程]  索引標籤上，按兩下 SAP BW 目的地。  
+2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 目的地。  
   
 3.  在 **[SAP BW 目的地編輯器]** 中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
-4.  在 [連線管理員]  頁面的 [建立 SAP BW 物件]  群組方塊中，選取 [InfoSource]  ，然後按一下 [建立]  。  
+4.  在 [連線管理員] 頁面的 [建立 SAP BW 物件] 群組方塊中，選取 [InfoSource]，然後按一下 [建立]。  
   
-5.  在 [建立 InfoSource]  對話方塊中，選取 [主要資料]  ，然後按一下 [確定]  。  
+5.  在 [建立 InfoSource] 對話方塊中，選取 [主要資料]，然後按一下 [確定]。  
   
 ## <a name="options"></a>選項。  
  **InfoObject 名稱**  
  輸入新 InfoSource 應該依據的 InfoObject 名稱。  
   
  **查閱**  
- 查閱 InfoObject。 這個選項會開啟 [查閱 InfoObject]  對話方塊，讓您能夠選取 InfoObject。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md)＞。  
+ 查閱 InfoObject。 這個選項會開啟 [查閱 InfoObject] 對話方塊，讓您能夠選取 InfoObject。 如需有關此對話方塊的詳細資訊，請參閱＜ [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md)＞。  
   
- 在您選取 InfoObject 之後，此元件就會將選取之 InfoObject 的名稱填入 [InfoObject 名稱]  文字方塊。  
+ 在您選取 InfoObject 之後，此元件就會將選取之 InfoObject 的名稱填入 [InfoObject 名稱] 文字方塊。  
   
  **新增**  
- 建立新的 InfoObject。 這個選項會開啟 [建立新的 InfoObject]  對話方塊，讓您能夠建立新的 InfoObject。 如需有關此對話方塊的詳細資訊，請參閱＜ [Create New InfoObject](../../integration-services/data-flow/create-new-infoobject.md)＞。  
+ 建立新的 InfoObject。 這個選項會開啟 [建立新的 InfoObject] 對話方塊，讓您能夠建立新的 InfoObject。 如需有關此對話方塊的詳細資訊，請參閱＜ [Create New InfoObject](../../integration-services/data-flow/create-new-infoobject.md)＞。  
   
- 在您建立 InfoObject 之後，此元件就會將新 InfoObject 的名稱填入 [InfoObject 名稱]  文字方塊。  
+ 在您建立 InfoObject 之後，此元件就會將新 InfoObject 的名稱填入 [InfoObject 名稱] 文字方塊。  
   
  **簡短描述**  
  輸入新 InfoSource 的簡短描述。  

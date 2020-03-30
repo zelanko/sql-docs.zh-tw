@@ -12,10 +12,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 2b8909ca44ef6de5f162521234b0bdfa20d5c9ea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056092"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>全文檢索搜尋 DDL、函數、預存程序與檢視
@@ -26,7 +26,7 @@ ms.locfileid: "74056092"
   
  如需支援語意搜尋之資料庫物件的清單，請參閱＜ [Semantic Search DDL, Functions, Stored Procedures, and Views](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md)＞。  
   
-##  <a name="ddl"></a> Transact-SQL 資料定義語言 (DDL) 陳述式  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Transact-SQL 資料定義語言 (DDL) 陳述式  
   
 -   [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "74056092"
   
 -   [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)  
   
-##  <a name="func"></a> 系統述詞和函數  
+##  <a name="system-predicates-and-functions"></a><a name="func"></a> 系統述詞和函數  
   
 -   [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "74056092"
   
 -   [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)  
   
-##  <a name="meta"></a> 系統中繼資料函數  
+##  <a name="system-metadata-functions"></a><a name="meta"></a> 系統中繼資料函數  
   
 -   [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "74056092"
   
 -   [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)  
   
-##  <a name="proc"></a> 系統預存程序  
+##  <a name="system-stored-procedures"></a><a name="proc"></a> 系統預存程序  
   
 -   [sp_fulltext_keymappings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "74056092"
   
 -   [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)  
   
-##  <a name="cat"></a> 系統檢視表 - 目錄檢視  
+##  <a name="system-views---catalog-views"></a><a name="cat"></a> 系統檢視表 - 目錄檢視  
   
 -   [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)  
   
@@ -116,7 +116,7 @@ ms.locfileid: "74056092"
   
 -   [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
-##  <a name="dmv"></a> 系統檢視表 - 動態管理檢視  
+##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a> 系統檢視表 - 動態管理檢視  
   
 -   [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md)  
   

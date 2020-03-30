@@ -11,10 +11,10 @@ ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fc237875d0ba5b4f28838609f6b172c55ffe0e90
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296742"
 ---
 # <a name="catalogset_customized_logging_level_value"></a>catalog.set_customized_logging_level_value 
@@ -38,12 +38,12 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
  [ @level_name = ] *level_name*  
  現有自訂記錄層次的名稱。  
   
- *level_name* 是 **nvarchar(128)** 。  
+ *level_name* 是 **nvarchar(128)**。  
   
  [ @property_name = ] *property_name*  
  要變更之屬性的名稱。 有效值為 **PROFILE** 和 **EVENTS**。  
   
- *property_name* 是 **nvarchar(128)** 。  
+ *property_name* 是 **nvarchar(128)**。  
   
  [ @property_value = ] *property_value*  
  指定自訂記錄層級之指定屬性的新值。  

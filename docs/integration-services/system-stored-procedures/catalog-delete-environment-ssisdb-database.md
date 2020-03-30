@@ -11,10 +11,10 @@ ms.assetid: d44b765f-9523-4e6a-bb17-37846d5e5334
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0539fc5af006a20cf554776c014da66c1120d129
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296858"
 ---
 # <a name="catalogdelete_environment-ssisdb-database"></a>catalog.delete_environment (SSISDB 資料庫)
@@ -34,10 +34,10 @@ delete_environment [ @folder_name = ] folder_name , [ @environment_name = ] envi
   
 ## <a name="arguments"></a>引數  
  [ @folder_name = ] *folder_name*  
- 包含環境之資料夾的名稱。 *folder_name* 是 **nvarchar(128)** 。  
+ 包含環境之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
   
  [ @environment_name = ] *environment_name*  
- 要刪除之環境的名稱。 *environment_name* 是 **nvarchar(128)** 。  
+ 要刪除之環境的名稱。 *environment_name* 是 **nvarchar(128)**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

@@ -11,10 +11,10 @@ ms.assetid: 894b3bdb-aa34-463e-aba4-1b68ad96a0ef
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 466e29e7fe8935cc23c6d15d601e0b176b60d74a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296850"
 ---
 # <a name="catalogdelete_environment_variable-ssisdb-database"></a>catalog.delete_environment_variable (SSISDB 資料庫)
@@ -36,13 +36,13 @@ delete_environment_variable [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>引數  
  [ @folder_name = ] *folder_name*  
- 包含環境之資料夾的名稱。 *folder_name* 是 **nvarchar(128)** 。  
+ 包含環境之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
   
  [ @environment_name = ] *environment_name*  
- 包含變數之環境的名稱。 *environment_name* 是 **nvarchar(128)** 。  
+ 包含變數之環境的名稱。 *environment_name* 是 **nvarchar(128)**。  
   
  [ @variable_name = ] *variable_name*  
- 要刪除之變數的名稱。 *variable_name* 是 **nvarchar(128)** 。  
+ 要刪除之變數的名稱。 *variable_name* 是 **nvarchar(128)**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

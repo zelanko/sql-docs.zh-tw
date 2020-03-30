@@ -5,10 +5,10 @@ ms.topic: include
 ms.date: 11/14/2018
 ms.author: mathoma
 ms.openlocfilehash: 416c2316154d225ea7d10d95e8656633417ae30b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75692583"
 ---
 ### <a name="transactional-replication-matrix"></a>異動複寫矩陣 

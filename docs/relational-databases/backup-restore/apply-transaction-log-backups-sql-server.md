@@ -17,10 +17,10 @@ ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 62d90931cdc1d7748f47edabb31e5f9404b1262d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72916193"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>套用異動記錄備份 (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "72916193"
   
  此主題描述如何在還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的過程中套用交易記錄備份。  
  
-##  <a name="Requirements"></a> 還原交易記錄備份的需求  
+##  <a name="requirements-for-restoring-transaction-log-backups"></a><a name="Requirements"></a> 還原交易記錄備份的需求  
  若要套用交易記錄備份，必須符合下列需求：  
   
 -   **有足夠的記錄備份供還原順序使用：** 您必須備份了足夠的記錄，才能完成還原順序。 您必須先備妥必要的記錄備份，包括所需的 [結尾記錄備份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) ，才開始還原順序。  
@@ -41,7 +41,7 @@ ms.locfileid: "72916193"
     > [!TIP]
     > 最佳做法是還原所有記錄備份 (`RESTORE LOG *database_name* WITH NORECOVERY`)。 然後，在還原最後一個記錄備份後，在另一個作業中復原資料庫 (`RESTORE DATABASE *database_name* WITH RECOVERY`)。  
   
-##  <a name="RecoveryAndTlogs"></a> 復原與交易記錄  
+##  <a name="recovery-and-transaction-logs"></a><a name="RecoveryAndTlogs"></a> 復原與交易記錄  
  當您完成還原作業及復原資料庫後，會執行復原處理序以確保資料庫的完整性。 如需復原流程的詳細資訊，請參閱[還原和復原概觀 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
  
  在完成復原處理序後，資料庫會上線，且不可再將任何交易記錄備份套用到資料庫。 例如，一系列交易記錄備份中包含長時間執行的交易。 該交易的開頭記錄在第一個交易記錄備份，但是交易的結尾記錄在第二個交易記錄備份。 那麼一個交易記錄備份中將沒有認可或回復作業的記錄。 如果在套用第一個交易記錄備份時執行復原作業，則會將長時間執行的交易視為未完成，並且回復在交易的第一個交易記錄備份中記錄的資料修改。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許在此時間點之後套用第二個交易記錄備份。  
@@ -49,7 +49,7 @@ ms.locfileid: "72916193"
 > [!NOTE]
 > 在某些狀況下，您可以在記錄還原期間明確加入檔案。  
   
-##  <a name="PITrestore"></a> 使用記錄備份還原到失敗點  
+##  <a name="use-log-backups-to-restore-to-the-failure-point"></a><a name="PITrestore"></a> 使用記錄備份還原到失敗點  
  假設發生下列事件順序。  
   
 |Time|事件|  
@@ -83,7 +83,7 @@ ms.locfileid: "72916193"
   
 > 在某些情況下，您也可以使用交易記錄，將資料庫還原到特定時間點。 如需詳細資訊，請參閱 [將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
  **套用交易記錄備份**  
   
 -   [還原交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  

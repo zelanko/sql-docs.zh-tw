@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 10/03/2019
 ms.openlocfilehash: 6f0a2ab021873a2a9414bfbcdb7aed63c2d31056
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72166731"
 ---
-# <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>擴充 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的功能
+# <a name="extend-the-functionality-of-name-sos"></a>擴充 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的功能
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中的延伸模組提供一種簡單方式，讓您將更多功能新增至基底 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 安裝。 
 
@@ -26,7 +26,7 @@ ms.locfileid: "72166731"
 
 ## <a name="add-azure-data-studio-extensions"></a>新增 Azure Data Studio 延伸模組
 
-1. 透過選取 [延伸模組] 圖示或透過選取 [檢視]  功能表中的 [延伸模組]  ，以存取可用的延伸模組。
+1. 透過選取 [延伸模組] 圖示或透過選取 [檢視] 功能表中的 [延伸模組]，以存取可用的延伸模組。
 
     ![延伸模組管理員圖示](media/extensions/extension-manager-icon.png)
 
