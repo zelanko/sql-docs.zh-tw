@@ -14,10 +14,10 @@ ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3d732c555ad470ff01d469f44d27a264abb2f891
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557771"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>開啟條件對話方塊，相依原則頁面

@@ -13,10 +13,10 @@ ms.assetid: c841345c-7d03-452f-9379-1c8c464f029c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3e54fc003f2bb61a5e94f521ddb1a0221261610e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291425"
 ---
 # <a name="fixed-and-changing-attribute-options-slowly-changing-dimension-wizard"></a>固定與變更屬性選項 (緩時變維度精靈)

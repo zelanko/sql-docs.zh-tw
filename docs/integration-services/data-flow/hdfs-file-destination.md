@@ -13,10 +13,10 @@ ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eec72a0421576ed4c09d35cd19bb0d842bd08f78
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292368"
 ---
 # <a name="hdfs-file-destination"></a>HDFS 檔案目的地
@@ -58,7 +58,7 @@ JAVA 組建架構 (32/64 位元) 應該符合所要使用的 SSIS 執行階段�
 2. 從命令提示字元中，執行 `sysdm.cpl`。
 3. 在 [進階]  索引標籤上，選取 [環境變數]  。
 4. 在 [系統變數]  區段底下，選取 [新增]  。
-5. 針對 [變數名稱]  輸入 `JAVA_HOME`。
+5. 針對 [變數名稱]`JAVA_HOME`**輸入**。
 6. 選取 [瀏覽目錄]  ，巡覽至解壓縮的資料夾，然後選取 `jre` 子資料夾。
    然後選取 [確定]  ，系統會自動填入 [變數值]  。
 7. 選取 [確定]  以關閉 [新增系統變數]  對話方塊。

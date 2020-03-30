@@ -12,10 +12,10 @@ ms.assetid: 850905b6-35d2-4ed1-ab51-de64daa832b2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b7d8d45273fc9ac79a5dd65cfb168868e76f55cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056466"
 ---
 # <a name="configure-data-collection-parameters-transact-sql"></a>設定資料收集參數 (Transact-SQL)

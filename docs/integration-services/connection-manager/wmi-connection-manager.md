@@ -17,10 +17,10 @@ ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b3f33d0c37ba9c856d9cc0b66674c8ca4221e0d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294361"
 ---
 # <a name="wmi-connection-manager"></a>WMI 連接管理員

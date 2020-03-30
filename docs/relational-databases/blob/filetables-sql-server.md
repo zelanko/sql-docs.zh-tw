@@ -16,10 +16,10 @@ ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8993c5e9ea1334b5bb8a002f1991041886a9f282
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68125177"
 ---
 # <a name="filetables-sql-server"></a>FileTable (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "68125177"
   
  FileTable 功能是根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FILESTREAM 技術所建立。 若要深入了解 FILESTREAM，請參閱 [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)。  
   
-##  <a name="Goals"></a> FileTable 功能的優點  
+##  <a name="benefits-of-the-filetable-feature"></a><a name="Goals"></a> FileTable 功能的優點  
  FileTable 功能的目標包括：  
   
 -   儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫內檔案資料的 Windows API 相容性。 Windows API 相容性包括下列項目：  
@@ -49,7 +49,7 @@ ms.locfileid: "68125177"
  因此，FileTable 會移除一道重大障礙，可讓您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來儲存和管理目前位於檔案伺服器上之檔案的非結構化資料。 企業可以將這項資料從檔案伺服器移入 FileTable，以便運用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所提供的整合式管理和服務。 同時，企業可以針對將這項資料視為檔案系統中之檔案的現有 Windows 應用程式，維持 Windows 應用程式相容性。  
  
   
-##  <a name="Description"></a> 何謂 FileTable  
+##  <a name="what-is-a-filetable"></a><a name="Description"></a> 何謂 FileTable  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對於需要將檔案和目錄儲存在資料庫中、具備 Windows API 相容性和非交易式存取的應用程式而言，提供特殊的 **檔案資料表**(也稱為 **FileTable**)。 FileTable 是包含預先定義結構描述的特殊化使用者資料表，可儲存 FILESTREAM 資料、檔案和目錄階層資訊，以及檔案屬性。  
   
  FileTable 提供了下列功能：  
@@ -86,9 +86,9 @@ ms.locfileid: "68125177"
 
 -   您無法透過 dbmail 傳送電子郵件要求，且無法附加位於 Filestream 目錄的檔案 (也因此無法附加位於 FileTable 的檔案)。 檔案系統篩選驅動程式 RsFx0420 會檢查進入和離開 Filestream 資料夾的傳入 I/O 要求。 若要求並非來自 SQLServer 可執行檔及 Filesteam 程式碼，它們會明確遭到拒絕。
   
-##  <a name="additional"></a> 使用 FileTable 的額外考量  
+##  <a name="additional-considerations-for-using-filetables"></a><a name="additional"></a> 使用 FileTable 的額外考量  
   
-###  <a name="DBA"></a> 管理考量  
+###  <a name="administrative-considerations"></a><a name="DBA"></a> 管理考量  
  **關於 FILESTREAM 和 FileTable**  
   
 -   您可以分別設定 FileTable 與 FILESTREAM。 因此，您可以繼續使用 FILESTREAM 功能，而不需要啟用非交易式存取或建立 FileTable。  
@@ -101,10 +101,10 @@ ms.locfileid: "68125177"
   
 -   您可以在資料庫層級中設定或微調非交易式存取，方法是關閉它，或是啟用唯讀或完整讀取/寫入存取。  
    
-###  <a name="memory"></a> FileTable 不支援記憶體對應檔案  
+###  <a name="filetables-do-not-support-memory-mapped-files"></a><a name="memory"></a> FileTable 不支援記憶體對應檔案  
  FileTable 不支援記憶體對應檔案。 記事本和小畫家是使用記憶體對應檔案的兩個常見的應用程式例子。 不能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在的電腦上使用這些應用程式來開啟儲存在 FileTable 中的檔案。 但是，可以從遠端電腦使用這些應用程式來開啟儲存在 FileTable 中的檔案，因為在這些情況下不使用記憶體對應功能。  
    
-##  <a name="reltasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="reltasks"></a> 相關工作  
  [啟用 FileTable 的必要條件](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
  描述如何啟用建立和使用 FileTable 的必要元件。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "68125177"
  [管理 FileTable](../../relational-databases/blob/manage-filetables.md)  
  描述用於管理 FileTable 的常見管理工作。  
   
-##  <a name="relcontent"></a> 相關內容  
+##  <a name="related-content"></a><a name="relcontent"></a> 相關內容  
  [FileTable 結構描述](../../relational-databases/blob/filetable-schema.md)  
  描述 FileTable 預先定義且固定的結構描述。  
   

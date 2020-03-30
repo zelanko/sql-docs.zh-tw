@@ -17,10 +17,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
 ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70873878"
 ---
 # <a name="edge-constraints"></a>邊緣條件約束
@@ -29,7 +29,7 @@ ms.locfileid: "70873878"
 
 邊緣條件約束可以用來強制執行資料完整性以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 圖形資料庫邊緣資料表中的特定語意。
 
-## <a name="Connection"></a> 邊緣條件約束
+## <a name="edge-constraints"></a><a name="Connection"></a> 邊緣條件約束
 
 在第一版的圖形功能中，邊緣資料表不會強制執行邊緣端點的任何項目。 亦即，圖形資料庫中的邊緣可以將任何節點連線至任何其他節點，不論類型為何。
 

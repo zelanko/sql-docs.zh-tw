@@ -18,10 +18,10 @@ ms.assetid: 48e78948-5b14-41dd-85d1-169bba1c4195
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a076c8356cb7dedec9759e445c9c80499528437b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68140931"
 ---
 # <a name="stnuminteriorring-geometry-data-type"></a>STNumInteriorRing (geometry 資料類型)

@@ -19,10 +19,10 @@ ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6d81c961600eca7dddd1ecd5995dbb488094aafb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294932"
 ---
 # <a name="creating-a-package-programmatically"></a>以程式設計方式建立封裝

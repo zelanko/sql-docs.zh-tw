@@ -18,10 +18,10 @@ ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 512cbeba4e3199b8e94e990a0f1611c5ad549568
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68065867"
 ---
 # <a name="alter-database-encryption-key-transact-sql"></a>ALTER DATABASE ENCRYPTION KEY (Transact-SQL)

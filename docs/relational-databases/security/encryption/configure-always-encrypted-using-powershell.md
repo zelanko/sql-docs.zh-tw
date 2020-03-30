@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73594419"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>使用 PowerShell 設定永遠加密
@@ -35,7 +35,7 @@ SqlServer PowerShell 模組提供 Cmdlet 讓您在 [ 或 ](../../../relational-d
 在未裝載 SQL Server 執行個體的安全電腦上安裝 [SqlServer 模組](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) 。 此模組可以直接從 PowerShell 資源庫進行安裝。  如需更多詳細資料，請參閱[下載](../../../ssms/download-sql-server-ps-module.md)指示。
 
 
-## <a name="importsqlservermodule"></a> 匯入 SqlServer 模組 
+## <a name="importing-the-sqlserver-module"></a><a name="importsqlservermodule"></a> 匯入 SqlServer 模組 
 
 若要載入 SqlServer 模組：
 
@@ -49,7 +49,7 @@ SqlServer PowerShell 模組提供 Cmdlet 讓您在 [ 或 ](../../../relational-d
 Import-Module "SqlServer" 
 ```
 
-## <a name="connectingtodatabase"></a> 連接到資料庫
+## <a name="connecting-to-a-database"></a><a name="connectingtodatabase"></a> 連接到資料庫
 
 某些永遠加密 Cmdlet 會處理資料庫中的資料或中繼資料，因此要求您必須先連接到資料庫。 使用 SqlServer 模組設定永遠加密時，有兩種建議的方法可連接到資料庫： 
 1. 使用 **Get-SqlDatabase** Cmdlet 進行連線。
@@ -117,7 +117,7 @@ Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\you
 - [使用 PowerShell 利用 Always Encrypted 加密、重新加密或解密資料行](configure-column-encryption-using-powershell.md)
 
 
-##  <a name="aecmdletreference"></a> 永遠加密 Cmdlet 參考
+##  <a name="always-encrypted-cmdlet-reference"></a><a name="aecmdletreference"></a> 永遠加密 Cmdlet 參考
 
 下列 PowerShell Cmdlet 可用於永遠加密：
 

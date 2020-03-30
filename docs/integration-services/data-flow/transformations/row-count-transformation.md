@@ -19,10 +19,10 @@ ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4cd1b3a72a91eb3c2a2252eefcec6cf7416cae8f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297871"
 ---
 # <a name="row-count-transformation"></a>資料列計數轉換

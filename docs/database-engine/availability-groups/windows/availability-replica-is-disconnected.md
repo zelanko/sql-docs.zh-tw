@@ -15,10 +15,10 @@ ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c0fc0dbd2df2d0383e7fd63eddc941170d4b0a47
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67988650"
 ---
 # <a name="availability-replica-is-disconnected-within-an-always-on-availability-group"></a>Always On 可用性群組中的可用性複本已中斷連線

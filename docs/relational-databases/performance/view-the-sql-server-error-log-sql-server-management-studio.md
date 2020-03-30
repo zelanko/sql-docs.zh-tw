@@ -17,10 +17,10 @@ ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f6410575af0d05b8d407ba9f52cc116fbe2ac733
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165470"
 ---
 # <a name="view-the-sql-server-error-log-in-sql-server-management-studio-ssms"></a>在 SQL Server Management Studio (SSMS) 中檢視 SQL Server 錯誤記錄檔

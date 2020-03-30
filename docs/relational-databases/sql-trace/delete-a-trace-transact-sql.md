@@ -15,10 +15,10 @@ ms.assetid: a5502814-b281-42dd-b885-5c9368025ae6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3e7338e9068c1b8c58623cf744022a165ce90eda
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71952716"
 ---
 # <a name="delete-a-trace-transact-sql"></a>刪除追蹤 (Transact-SQL)

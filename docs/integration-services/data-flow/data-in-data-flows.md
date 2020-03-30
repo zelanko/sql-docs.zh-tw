@@ -18,10 +18,10 @@ ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac04c9b6a8838ba338407533834a7950dabe055d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293047"
 ---
 # <a name="data-in-data-flows"></a>資料流程中的資料

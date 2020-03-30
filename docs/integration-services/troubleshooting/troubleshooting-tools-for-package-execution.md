@@ -17,10 +17,10 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 660ac899b1cf649bcc431bf10e2f9b18ca12cbc4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73637946"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>封裝執行的疑難排解工具
@@ -42,7 +42,7 @@ ms.locfileid: "73637946"
   
 -   **使用交易協助確保資料的完整性**。 如需詳細資訊，請參閱 [Integration Services 交易](../../integration-services/integration-services-transactions.md)。  
   
--   **使用檢查點從失敗點重新啟動封裝**。 如需詳細資訊，請參閱[使用檢查點來重新啟動封裝](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
+-   **使用檢查點從失敗點重新啟動封裝**。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>使用事件處理常式擷取及處理封裝錯誤  
  您可以使用事件處理常式，回應封裝以及封裝中的物件所引發的許多事件。  

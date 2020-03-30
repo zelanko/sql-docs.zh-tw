@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: eb553ecf259e6733da143428cd6474debd8215f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412694"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估計記憶體最佳化資料表的記憶體需求
@@ -52,7 +52,7 @@ ms.locfileid: "74412694"
   
 - [配置給成長的記憶體](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForGrowth)  
   
-###  <a name="bkmk_ExampleTable"></a> 記憶體最佳化資料表範例  
+###  <a name="example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a> 記憶體最佳化資料表範例  
 
 請考慮下列記憶體最佳化資料表結構描述：
   
@@ -83,7 +83,7 @@ GO
 
 我們將透過此結構描述，來判斷此記憶體最佳化資料所需的最小記憶體。  
   
-###  <a name="bkmk_MemoryForTable"></a> 配置給資料表的記憶體  
+###  <a name="memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a> 配置給資料表的記憶體  
 
 記憶體最佳化資料表資料列包含三個部分：
   
@@ -102,7 +102,7 @@ GO
   
 從上述計算得知，記憶體最佳化資料表的每個資料列大小為 24 + 32 + 200 (或 256) 個位元組。  由於我們有 5 百萬個資料列，因此資料表會耗用 5,000,000 * 256 (或 1,280,000,000) 個位元組，大約是 1.28 GB。  
   
-###  <a name="bkmk_IndexMeemory"></a> 配置給索引的記憶體  
+###  <a name="memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a> 配置給索引的記憶體  
 
 #### <a name="memory-for-each-hash-index"></a>配置給每個雜湊索引的記憶體  
   
@@ -165,7 +165,7 @@ SELECT * FRON t_hk
    WHERE c2 > 5;  
 ```  
   
-###  <a name="bkmk_MemoryForRowVersions"></a> 配置給資料列版本設定的記憶體
+###  <a name="memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a> 配置給資料列版本設定的記憶體
 
 更新或刪除資料列時，記憶體中 OLTP 會使用開放式並行存取來避免鎖定。 這表示當更新資料列時，會建立該資料列的其他版本。 此外，刪除是邏輯的 - 現有資料列會標示為已刪除，但不會立即予以移除。 在可能使用舊版本的所有交易完成執行之前，系統會保留舊的資料列版本 (包括已刪除的資料列) 可用。 
   
@@ -181,13 +181,13 @@ SELECT * FRON t_hk
   
 `memoryForRowVersions = rowVersions * rowSize`  
   
-###  <a name="bkmk_TableVariables"></a> 配置給資料表變數的記憶體
+###  <a name="memory-for-table-variables"></a><a name="bkmk_TableVariables"></a> 配置給資料表變數的記憶體
   
 資料表變數所使用的記憶體只會在資料表變數超出範圍時釋出。 從資料表變數中刪除的資料列 (包括隨更新刪除的資料列) 則不受記憶體回收限制。 在資料表變數離開範圍之前，不會釋出記憶體。  
   
 在大型 SQL 批次中定義的資料表變數 (與程序範圍相反) 會在許多交易中使用，且可能會耗用大量的記憶體。 由於它們不會進行記憶體回收，因此資料表變數中已刪除的資料列可能會耗用大量記憶體並降低效能，因為讀取作業需要掃描已刪除的資料列。  
   
-###  <a name="bkmk_MemoryForGrowth"></a> 配置給成長的記憶體
+###  <a name="memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a> 配置給成長的記憶體
 
 上述計算依資料表的現狀來估計資料表的記憶體需求。 除了此記憶體之外，您還需要估計資料表的成長，並提供足夠的記憶體來容納該成長幅度。  例如，如果您預期會成長 10%，則需要將上述結果乘以 1.1，以取得資料表所需的總記憶體。  
   

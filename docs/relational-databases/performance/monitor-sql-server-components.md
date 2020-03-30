@@ -10,10 +10,10 @@ ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 252162be51d79224ac786ff44ae2620f4f189f81
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68046750"
 ---
 # <a name="monitor-sql-server-components"></a>監視 SQL Server 元件

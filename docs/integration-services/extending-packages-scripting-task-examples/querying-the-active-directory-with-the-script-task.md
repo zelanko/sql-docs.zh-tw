@@ -18,10 +18,10 @@ ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 14fa2d0602f0c358cd400e0734e567e853a6db85
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286822"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>以指令碼工作查詢 Active Directory

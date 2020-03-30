@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909886"
 ---
 # <a name="get-information-about-a-view"></a>取得檢視的資訊
@@ -48,14 +48,14 @@ ms.locfileid: "72909886"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  使用 `sp_helptext` 傳回檢視的定義，需要 **Public** 角色的成員資格。 使用 `sys.sql_expression_dependencies` 尋找檢視的所有相依性，需要資料庫的 VIEW DEFINITION 權限和資料庫之 `sys.sql_expression_dependencies` 的 SELECT 權限。 系統物件定義是公開可見的，就像 SELECT OBJECT_DEFINITION 中傳回的定義一樣。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>透過使用物件總管取得檢視屬性  
   
@@ -177,7 +177,7 @@ ms.locfileid: "72909886"
   
 4.  選取 **[[檢視表名稱] 所相依的物件]** ，以顯示檢視表所參考的物件。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>取得檢視定義和屬性  
   

@@ -14,10 +14,10 @@ ms.assetid: 7d4dbed6-bb94-4908-bc03-2040a9cf63bc
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 06a81eaa83b3420912494b61135790c4e8fabe29
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68039290"
 ---
 # <a name="mssqlserver_3169"></a>MSSQLSERVER_3169

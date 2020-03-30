@@ -20,10 +20,10 @@ ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 458083fda6382c353af78c7d2b438fdc0d39c826
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72173861"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)

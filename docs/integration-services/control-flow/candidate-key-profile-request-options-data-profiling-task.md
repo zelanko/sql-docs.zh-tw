@@ -13,10 +13,10 @@ ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 09b2eafcd061df5c9f407fc08a9eef0002b1bc23
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294282"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>候選索引鍵設定檔要求選項 (資料分析工作)

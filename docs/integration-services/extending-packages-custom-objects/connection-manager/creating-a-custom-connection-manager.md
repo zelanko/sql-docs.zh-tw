@@ -13,10 +13,10 @@ ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e6015aa5f7d9271c71a534fab6126cba9a8dcbf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297278"
 ---
 # <a name="creating-a-custom-connection-manager"></a>建立自訂連接管理員

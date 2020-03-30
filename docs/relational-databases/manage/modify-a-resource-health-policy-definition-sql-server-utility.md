@@ -13,10 +13,10 @@ ms.assetid: 27bec0b6-92e9-448e-8c70-fe36802cf128
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 83d1f152ef414022803d84781a7948d04c4a77b6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115405"
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>修改資源健康情況原則定義 (SQL Server 公用程式)
@@ -25,7 +25,7 @@ ms.locfileid: "68115405"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您可以針對資料層應用程式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]受管理的執行個體設定公用程式資源使用率原則。 您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內針對所有資料層應用程式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體以全域方式定義資源使用率原則，也可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內針對每一個資料層應用程式及每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體個別定義原則。 您也可以實作全域原則，並讓個別的資料層應用程式或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體設定自己的原則定義。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="modify-global-resource-utilization-policies-in-a-sql-server-utility"></a>在 SQL Server 公用程式中修改全域資源使用量原則。  
   

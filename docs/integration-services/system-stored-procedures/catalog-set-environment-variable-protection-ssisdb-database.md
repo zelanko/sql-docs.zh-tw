@@ -11,10 +11,10 @@ ms.assetid: 005b6b2f-a5d9-4ea4-8d4e-beed6ab33c0d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fc67461545e7a1585e5f45eb35c52a5630248391
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295315"
 ---
 # <a name="catalogset_environment_variable_protection-ssisdb-database"></a>catalog.set_environment_variable_protection (SSISDB 資料庫)

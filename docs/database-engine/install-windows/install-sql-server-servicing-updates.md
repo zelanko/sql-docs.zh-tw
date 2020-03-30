@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 7d88350f00b90156cd1e33a4d816ae649cc6910f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67990941"
 ---
 # <a name="install-sql-server-servicing-updates"></a>安裝 SQL Server 服務更新
@@ -29,7 +29,7 @@ ms.locfileid: "67990941"
   
 即時安裝最新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新，確保系統保持在最新狀態而且具有最新的安全性更新。  
   
-## <a name="installing-updates-for-includenoversionincludesssnoversion-mdmd-during-a-new-installation"></a>在進行新安裝期間安裝 [!INCLUDE[noVersion](../../includes/ssNoVersion-md.md)] 的更新。  
+## <a name="installing-updates-for-noversion-during-a-new-installation"></a>在進行新安裝期間安裝 [!INCLUDE[noVersion](../../includes/ssNoVersion-md.md)] 的更新。  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會整合最新產品更新與主要產品安裝，因此主要產品及其適用的更新可同時安裝。 產品更新可以從下列位置搜尋適用的更新：  
   
 - [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update  
@@ -42,7 +42,7 @@ ms.locfileid: "67990941"
   
 安裝程式找到最新版本的可用更新後，會使用目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程序進行下載與整合。 產品更新可能包括累計更新、Service Pack，或 Service Pack 加上累計更新。  
   
-## <a name="installing-updates-for-includessnoversionincludesssnoversion-mdmd-after-it-has-already-been-installed"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 安裝完成之後安裝更新  
+## <a name="installing-updates-for-ssnoversion-after-it-has-already-been-installed"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 安裝完成之後安裝更新  
 在已安裝的 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]執行個體上，建議您套用最新的安全性更新和重大更新，包括一般發行版本 (GDR)、Service Pack (SP) 和累積更新 (CU)。 如需其他資訊，請參閱 [March, 2016 announcement on the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/) (2016 年 3 月的 SQL Server 增量服務模型 (ISM) 公告)。
 
 > [!NOTE]

@@ -16,10 +16,10 @@ ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 89d2da02b841edd85d58798ca4c7c1745332d536
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68093643"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server、資料庫複本

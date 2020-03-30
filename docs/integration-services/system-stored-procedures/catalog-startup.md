@@ -11,10 +11,10 @@ ms.assetid: 271fd405-246a-4852-bfbe-f557241ce6ea
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ecc8678da81b9d4559f36d3cb70a88a7444f87e5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295265"
 ---
 # <a name="catalogstartup"></a>catalog.startup 

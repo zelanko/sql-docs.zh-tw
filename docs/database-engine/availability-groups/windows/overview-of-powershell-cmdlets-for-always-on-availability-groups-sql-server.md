@@ -15,10 +15,10 @@ ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8aac669c8e7b2f43666a43c26a8040c3658c560c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75236090"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>AlwaysOn 可用性群組的 PowerShell Cmdlet 概觀
@@ -32,7 +32,7 @@ ms.locfileid: "75236090"
 > [!NOTE]  
 >  如需《 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 線上叢書》中描述如何使用指令程式來執行 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 工作的主題清單，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)的＜相關工作＞一節。  
   
-##  <a name="ConfiguringServerInstance"></a> Configuring a Server Instance for Always On Availability Groups  
+##  <a name="configuring-a-server-instance-for-always-on-availability-groups"></a><a name="ConfiguringServerInstance"></a> Configuring a Server Instance for Always On Availability Groups  
   
 |指令程式|描述|支援的項目|  
 |-------------|-----------------|------------------|
@@ -42,7 +42,7 @@ ms.locfileid: "75236090"
 |[**Set-SqlHadrEndpoint**](/powershell/module/sqlserver/set-sqlhadrendpoint)|變更現有資料庫鏡像端點的屬性，例如名稱、狀態或驗證屬性。|支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 且缺少資料庫鏡像端點的伺服器執行個體|  
 
   
-##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
+##  <a name="backing-up-and-restoring-databases-and-transaction-logs"></a><a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
   
 |指令程式|描述|支援的項目|  
 |-------------|-----------------|------------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "75236090"
   
  如需使用這些 Cmdlet 來準備次要資料庫的相關資訊，請參閱[針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
   
-##  <a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
+##  <a name="creating-and-managing-an-availability-group"></a><a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
   
 |指令程式|描述|支援的項目|  
 |-------------|-----------------|------------------|  
@@ -63,7 +63,7 @@ ms.locfileid: "75236090"
 |[**Set-SqlAvailabilityGroup**](/powershell/module/sqlserver/set-sqlavailabilitygroup)|設定可用性群組的屬性；讓可用性群組上線/離線。|裝載主要複本的伺服器執行個體|  
 |[**Switch-SqlAvailabilityGroup**](/powershell/module/sqlserver/switch-sqlavailabilitygroup)|起始下列其中一種形式的容錯移轉：<br /><br /> 可用性群組的強制容錯移轉 (可能遺失資料)。<br /><br /> 可用性群組的手動容錯移轉。|裝載目標次要複本的伺服器執行個體|  
   
-##  <a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
+##  <a name="creating-and-managing-an-availability-group-listener"></a><a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
   
 |Cmdlet|描述|支援的項目|  
 |------------|-----------------|------------------|  
@@ -71,7 +71,7 @@ ms.locfileid: "75236090"
 |[**Set-SqlAvailabilityGroupListener**](/powershell/module/sqlserver/set-sqlavailabilitygrouplistener)|修改現有可用性群組接聽程式上的通訊埠設定。|裝載主要複本的伺服器執行個體|  
 |[**Add-SqlAvailabilityGroupListenerStaticIp**](/powershell/module/sqlserver/add-sqlavailabilitygrouplistenerstaticip)|將靜態 IP 位址加入至現有的可用性群組接聽程式組態。 IP 位址可以是包含子網路的 IPv4 位址或 IPv6 位址。|裝載主要複本的伺服器執行個體|  
   
-##  <a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
+##  <a name="creating-and-managing-an-availability-replica"></a><a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
   
 |指令程式|描述|支援的項目|  
 |-------------|-----------------|------------------|  
@@ -80,7 +80,7 @@ ms.locfileid: "75236090"
 |[**Remove-SqlAvailabilityReplica**](/powershell/module/sqlserver/remove-sqlavailabilityreplica)|刪除可用性複本。|裝載主要複本的伺服器執行個體|  
 |[**Set-SqlAvailabilityReplica**](/powershell/module/sqlserver/set-sqlavailabilityreplica)|設定可用性複本的屬性。|裝載主要複本的伺服器執行個體|  
   
-##  <a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
+##  <a name="adding-and-managing-an-availability-database"></a><a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
   
 |指令程式|描述|支援的項目|  
 |-------------|-----------------|------------------|  
@@ -89,7 +89,7 @@ ms.locfileid: "75236090"
 |[**Resume-SqlAvailabilityDatabase**](/powershell/module/sqlserver/resume-sqlavailabilitydatabase)|繼續進行暫停之可用性資料庫的資料移動。|已暫停資料庫的伺服器執行個體。|  
 |[**Suspend-SqlAvailabilityDatabase**](/powershell/module/sqlserver/suspend-sqlavailabilitydatabase)|暫停可用性資料庫的資料移動。|裝載可用性複本的任何伺服器執行個體。|  
   
-##  <a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
+##  <a name="monitoring-availability-group-health"></a><a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
  下列 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式可讓您監視可用性群組及其複本和資料庫的健全狀況。  
   
 > [!IMPORTANT]  

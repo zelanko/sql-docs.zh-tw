@@ -22,10 +22,10 @@ ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c51d65dabef5efa4de7ecb4c62b633e62ed0b082
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297883"
 ---
 # <a name="percentage-sampling-transformation"></a>百分比取樣轉換

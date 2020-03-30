@@ -14,17 +14,17 @@ ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ef64d09c7f99f5081ebd1cbcdd7418614c3b41f1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908750"
 ---
 # <a name="manage-filetables"></a>管理 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   描述用於管理 FileTable 的常見管理工作。  
   
-##  <a name="HowToEnumerate"></a> 如何：取得 FileTable 和相關物件的清單  
+##  <a name="how-to-get-a-list-of-filetables-and-related-objects"></a><a name="HowToEnumerate"></a> 如何：取得 FileTable 和相關物件的清單  
  若要取得 FileTable 的清單，請查詢下列其中一個目錄檢視：  
   
 -   [sys.filetables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetables-transact-sql.md)  
@@ -47,7 +47,7 @@ FROM sys.filetable_system_defined_objects;
 GO  
 ```  
   
-##  <a name="BasicsDisabling"></a> 停用並重新啟用資料庫層級的非交易式存取  
+##  <a name="disabling-and-re-enabling-non-transactional-access-at-the-database-level"></a><a name="BasicsDisabling"></a> 停用並重新啟用資料庫層級的非交易式存取  
  若要取得特定管理工作所需的獨佔存取，您可能必須暫時停用非交易式存取。  
   
  **ALTER DATABASE 陳述式在變更非交易式存取層級時的行為**  
@@ -79,7 +79,7 @@ GO
   
 -   如果您在執行個體層級停用 FILESTREAM，就不會顯示執行個體上的資料庫層級目錄。  
   
-###  <a name="HowToDisable"></a> 如何：停用並重新啟用資料庫層級的非交易式存取  
+###  <a name="how-to-disable-and-re-enable-non-transactional-access-at-the-database-level"></a><a name="HowToDisable"></a> 如何：停用並重新啟用資料庫層級的非交易式存取  
  如需詳細資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
  **停用完整的非交易式存取**  
@@ -106,7 +106,7 @@ SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );
 GO  
 ```  
   
-###  <a name="visible"></a> 如何：確保資料庫中 FileTable 的可見性  
+###  <a name="how-to-ensure-the-visibility-of-the-filetables-in-a-database"></a><a name="visible"></a> 如何：確保資料庫中 FileTable 的可見性  
  如果下列所有條件都成立，就會顯示資料庫層級目錄和其下的 FileTable 目錄 (如果有的話)：  
   
 1.  在執行個體層級啟用 FILESTREAM。  
@@ -115,7 +115,7 @@ GO
   
 3.  已在資料庫層級指定有效的目錄。  
 
-##  <a name="BasicsEnabling"></a> 停用並重新啟用資料表層級的 FileTable 命名空間  
+##  <a name="disabling-and-re-enabling-the-filetable-namespace-at-the-table-level"></a><a name="BasicsEnabling"></a> 停用並重新啟用資料表層級的 FileTable 命名空間  
  停用 FileTable 命名空間，會停用所有使用 FileTable 所建立的系統定義條件約束和觸發程序。 如果您需要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業來大規模重新組織 FileTable，但不想要產生 FileTable 語意強制執行的成本，這樣做就很有用。 不過，這些作業可能會讓 FileTable 處於不一致的狀態，而且可能會無法重新啟用 FileTable 命名空間。  
   
  停用 FileTable 命名空間會產生下列結果：  
@@ -138,7 +138,7 @@ GO
   
 -   FileTable 目錄及其所含的檔案及目錄會在檔案系統中顯示，而且可用於進行檔案 I/O 存取。  
   
-###  <a name="HowToEnableNS"></a> 如何：停用並重新啟用資料表層級的 FileTable 命名空間  
+###  <a name="how-to-disable-and-re-enable-the-filetable-namespace-at-the-table-level"></a><a name="HowToEnableNS"></a> 如何：停用並重新啟用資料表層級的 FileTable 命名空間  
  您可以使用 **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** 選項來呼叫 ALTER TABLE 陳述式。  
   
  **停用 FileTable 命名空間**  
@@ -155,13 +155,13 @@ ENABLE FILETABLE_NAMESPACE;
 GO  
 ```  
   
-##  <a name="BasicsKilling"></a> 終止與 FileTable 相關聯的開啟檔案控制代碼  
+##  <a name="killing-open-file-handles-associated-with-a-filetable"></a><a name="BasicsKilling"></a> 終止與 FileTable 相關聯的開啟檔案控制代碼  
  儲存在 FileTable 中之檔案的開啟控制代碼可能會防止特定管理工作所需的獨佔存取。 若要啟用緊急工作，您可能必須終止與一個或多個 FileTable 相關聯的開啟檔案控制代碼。  
   
 > [!WARNING]  
 >  終止開啟檔案控制代碼，可能會導致使用者遺失未儲存的資料。 此行為與檔案系統本身的行為一致。  
   
-###  <a name="HowToListOpen"></a> 如何：取得與 FileTable 相關聯的開啟檔案控制代碼清單  
+###  <a name="how-to-get-a-list-of-open-file-handles-associated-with-a-filetable"></a><a name="HowToListOpen"></a> 如何：取得與 FileTable 相關聯的開啟檔案控制代碼清單  
  查詢 [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) 目錄檢視。  
   
 ```sql  
@@ -169,7 +169,7 @@ SELECT * FROM sys.dm_filestream_non_transacted_handles;
 GO  
 ```  
   
-###  <a name="HowToKill"></a> 如何：終止與 FileTable 相關聯的開啟檔案控制代碼  
+###  <a name="how-to-kill-open-file-handles-associated-with-a-filetable"></a><a name="HowToKill"></a> 如何：終止與 FileTable 相關聯的開啟檔案控制代碼  
  使用適當的引數來呼叫預存程序 [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)，可終止資料庫或 FileTable 中的所有開啟檔案控制代碼，或是終止特定控制代碼。  
   
 ```sql  
@@ -188,7 +188,7 @@ EXEC sp_kill_filestream_non_transacted_handles @handle_id = integer_handle_id;
 GO  
 ```  
   
-###  <a name="HowToIdentifyLocks"></a> 如何：識別 FileTable 所持有的鎖定  
+###  <a name="how-to-identify-the-locks-held-by-filetables"></a><a name="HowToIdentifyLocks"></a> 如何：識別 FileTable 所持有的鎖定  
  FileTable 所採用的大部分鎖定都會對應至應用程式所開啟的檔案。  
   
  **識別開啟的檔案和相關聯的鎖定**  
@@ -202,7 +202,7 @@ WHERE fcb_id IN
 GO  
 ```  
   
-##  <a name="BasicsSecurity"></a> FileTable 安全性  
+##  <a name="filetable-security"></a><a name="BasicsSecurity"></a> FileTable 安全性  
  儲存在 FileTable 中的檔案和目錄都僅受 SQL Server 安全性保護。 會針對檔案系統存取和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取，強制執行以資料表和資料行為基礎的安全性。 但是，不支援 Windows 檔案系統安全性 API 和 ACL 設定。  
   
  適用於 FILESTREAM 檔案群組和容器的安全性及存取權限也適用於 FileTable，因為檔案資料會儲存成 FileTable 中的 FILESTREAM 資料行。  
@@ -213,7 +213,7 @@ GO
  **FileTable 安全性和檔案系統存取**  
  檔案系統 API 需要 FileTable 中整個資料列的適當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 權限 (即資料表層級權限)，才能開啟 FileTable 中所儲存之檔案或目錄的控制代碼。 如果使用者沒有 FileTable 中任何資料行的適當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 權限，則會拒絕檔案系統存取。  
   
-##  <a name="OtherBackup"></a> 備份和 FileTable  
+##  <a name="backup-and-filetables"></a><a name="OtherBackup"></a> 備份和 FileTable  
  當您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來備份 FileTable 時，FILESTREAM 資料會與資料庫中的結構化資料一起備份。 如果您不想要將 FILESTREAM 資料與關聯式資料一起備份，您可以使用部分備份來排除 FILESTREAM 檔案群組。  
   
  **FileTable 備份的交易一致性**  
@@ -222,13 +222,13 @@ GO
   
  但是，當啟用完整的非交易式存取時，則 FileTable 包含的更新資料可以比工具或程序從交易記錄讀取的交易還要新 (透過非交易式更新)。 這表示，特定交易的「時間點」還原作業可能會包含比該交易還新的 FILESTREAM 資料。 當 FileTable 上允許非交易式更新時，這會是預期的行為。  
   
-##  <a name="Monitor"></a> SQL Server Profiler 和 FileTable  
+##  <a name="sql-server-profiler-and-filetables"></a><a name="Monitor"></a> SQL Server Profiler 和 FileTable  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler 可以在儲存於 FileTable 之檔案的追蹤輸出中，擷取「Windows 檔案開啟」和「檔案關閉」作業。  
   
-##  <a name="OtherAuditing"></a> 稽核和 FileTable  
+##  <a name="auditing-and-filetables"></a><a name="OtherAuditing"></a> 稽核和 FileTable  
  您可以稽核 FileTable，就像其他任何資料表一樣。 但是，不會根據作業來設定 Win32 存取模式。 檔案系統中的單一動作會轉譯成多個 Transact-SQL DML 作業。 例如，在 Microsoft Word 中開啟檔案會轉譯成多個開啟/關閉/建立/重新命名/刪除作業及對應的 Transact-SQL DML 活動。 這會產生詳細稽核記錄，這種記錄很難將檔案系統動作與對應 Transact-SQL DML 稽核記錄之間的記錄產生關聯。  
   
-##  <a name="OtherDBCC"></a> DBCC 和 FileTable  
+##  <a name="dbcc-and-filetables"></a><a name="OtherDBCC"></a> DBCC 和 FileTable  
  您可以使用 DBCC CHECKCONSTRAINTS 來驗證 FileTable 上的條件約束，包括系統定義的條件約束。  
   
 ## <a name="see-also"></a>另請參閱  

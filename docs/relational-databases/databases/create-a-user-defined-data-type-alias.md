@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c83006aab69b7d72a2c3006dab48811eeda8495
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909114"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>建立使用者定義資料類型別名
@@ -41,18 +41,18 @@ ms.locfileid: "72909114"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   使用者定義資料類型別名的名稱必須符合識別碼的規則。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要目前資料庫的 CREATE TYPE 權限，以及 *schema_name*的 ALTER 權限。 如果未指定 *schema_name* ，則套用用來判斷目前使用者之結構描述的預設名稱解析規則。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-user-defined-data-type"></a>若要建立使用者自訂的資料類型  
   
@@ -110,7 +110,7 @@ ms.locfileid: "72909114"
   
 7.  若您要將預設值或規則繫結至新的資料類型別名，請在 **[繫結]** 區域中，完成 **[預設值]** 或 **[規則]** 方塊。 您不能在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中建立預設值和規則。 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 [範本總管] 中有可供建立預設值和規則的範例程式碼。  
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-user-defined-data-type-alias"></a>若要建立使用者定義資料類型別名  
   

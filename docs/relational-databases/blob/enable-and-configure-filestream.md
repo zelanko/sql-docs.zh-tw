@@ -12,10 +12,10 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908764"
 ---
 # <a name="enable-and-configure-filestream"></a>啟用及設定 FILESTREAM
@@ -23,7 +23,7 @@ ms.locfileid: "72908764"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   在您開始使用 FILESTREAM 之前，必須先在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體上啟用 FILESTREAM。 此主題描述如何使用 SQL Server 組態管理員來啟用 FILESTREAM。  
   
-##  <a name="enabling"></a> 啟用 FILESTREAM  
+##  <a name="enabling-filestream"></a><a name="enabling"></a> 啟用 FILESTREAM  
   
 #### <a name="to-enable-and-change-filestream-settings"></a>若要啟用和變更 FILESTREAM 設定  
   
@@ -58,9 +58,9 @@ ms.locfileid: "72908764"
   
 13. 重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
 
-##  <a name="best"></a> 最佳做法  
+##  <a name="best-practices"></a><a name="best"></a> 最佳做法  
   
-###  <a name="config"></a> 實體組態和維護  
+###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a> 實體組態和維護  
  當您設定 FILESTREAM 儲存體磁碟區時，請考慮下列指導方針：  
   
 -   在 FILESTREAM 電腦系統上關閉簡短檔案名稱。 簡短檔案名稱會花費更長的時間來建立。 若要停用簡短檔案名稱，請使用 Windows **fsutil** 公用程式。  
@@ -84,7 +84,7 @@ ms.locfileid: "72908764"
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
   
-###  <a name="database"></a> 實體資料庫設計  
+###  <a name="physical-database-design"></a><a name="database"></a> 實體資料庫設計  
  當您設計 FILESTREAM 資料庫時，請考慮下列指導方針：  
   
 -   FILESTREAM 資料行必須附帶對應的 **uniqueidentifier**ROWGUID 資料行。 這些種類的資料表也必須附帶唯一的索引。 一般而言，這個索引不是叢集索引。 如果資料庫商務邏輯需要叢集索引，您就必須確定儲存在索引中的值不是隨機的。 隨機值將會導致每次在資料表中加入或移除資料列時，重新排列索引。  

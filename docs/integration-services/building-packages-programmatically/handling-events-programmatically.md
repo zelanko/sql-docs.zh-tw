@@ -25,10 +25,10 @@ ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 56dc5d83a23bfbf175c203edbdeb27d30760557b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299023"
 ---
 # <a name="handling-events-programmatically"></a>以程式設計方式處理事件

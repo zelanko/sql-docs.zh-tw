@@ -13,10 +13,10 @@ ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cbaf50dc98962e1053477b0535054917c3719f19
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294236"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>資料行長度散發設定檔要求選項 (資料分析工作)

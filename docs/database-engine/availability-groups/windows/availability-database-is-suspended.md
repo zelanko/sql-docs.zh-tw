@@ -15,10 +15,10 @@ ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7a0a6d1fa10576eab5e515031e8233af95c2d76
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67934917"
 ---
 # <a name="availability-database-is-suspended-for-an-availability-group"></a>可用性群組的可用性資料庫已暫停

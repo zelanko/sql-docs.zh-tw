@@ -11,10 +11,10 @@ ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5b2e9ebcf8464b17712d36fc43c86b7785de9ae7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292999"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 目的地自訂屬性

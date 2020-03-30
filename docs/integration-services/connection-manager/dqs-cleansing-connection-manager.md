@@ -11,10 +11,10 @@ ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 204fe65afa6684a3090c226d2fc5a028aa5f4079
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294443"
 ---
 # <a name="dqs-cleansing-connection-manager"></a>DQS 清理連接管理員

@@ -11,10 +11,10 @@ ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a8e85c35552a8bcbf4190bd3ce36b4a65be96789
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295297"
 ---
 # <a name="catalogset_execution_property_override_value"></a>catalog.set_execution_property_override_value 

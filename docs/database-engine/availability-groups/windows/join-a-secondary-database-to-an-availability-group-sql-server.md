@@ -19,10 +19,10 @@ ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cf57aa52ce1ca216a8cd88ba310dcee5310b6a7b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68019695"
 ---
 # <a name="join-a-secondary-database-to-an-always-on-availability-group"></a>將次要資料庫聯結至 Always On 可用性群組
@@ -32,7 +32,7 @@ ms.locfileid: "68019695"
 > [!NOTE]  
 >  如需有關次要資料庫加入群組之後會發生什麼事的詳細資訊，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)中的 PowerShell，將次要資料庫聯結至 AlwaysOn 可用性群組。  
    
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   您必須連接到裝載次要複本的伺服器執行個體。  
   
@@ -40,10 +40,10 @@ ms.locfileid: "68019695"
   
 -   最近必須已經準備次要資料庫。 如需詳細資訊，請參閱 [針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)中的 PowerShell，將次要資料庫聯結至 AlwaysOn 可用性群組。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要將次要資料庫聯結至可用性群組**  
   
 1.  在 [物件總管] 中，連接到裝載次要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
@@ -56,7 +56,7 @@ ms.locfileid: "68019695"
   
 5.  這會開啟 **[將資料庫加入至可用性群組]** 對話方塊。 請確認顯示在標題列上的可用性群組名稱，以及顯示在方格中的資料庫名稱，然後按一下 **[確定]** 或按一下 **[取消]** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要將次要資料庫聯結至可用性群組**  
   
 1.  連接到裝載次要複本的伺服器執行個體。  
@@ -76,7 +76,7 @@ ms.locfileid: "68019695"
     > [!NOTE]  
     >  若要查看內容中使用的這個 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式，請參閱 [建立可用性群組和 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)。  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要將次要資料庫聯結至可用性群組**  
   
 1.  將目錄切換到 (**cd**) 裝載次要複本的伺服器執行個體。  
@@ -98,7 +98,7 @@ ms.locfileid: "68019695"
   
 -   [SQL Server PowerShell 提供者](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   

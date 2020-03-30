@@ -14,10 +14,10 @@ ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a0392ff8153a5125dadc20eefa96a6a9dfc521f6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68033215"
 ---
 # <a name="merge-replication"></a>合併式複寫

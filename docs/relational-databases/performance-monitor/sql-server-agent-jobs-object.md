@@ -14,10 +14,10 @@ ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 63c2638f6b6f58d3c3cafd8e8dd601a5a467b210
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67987339"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server 代理程式、作業物件

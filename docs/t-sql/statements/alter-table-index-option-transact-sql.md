@@ -15,10 +15,10 @@ ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e70998bed1ed0f2681009622cfb086baa79dcf02
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982009"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
@@ -219,11 +219,11 @@ ON PARTITIONS **(** { \<> | \<範圍> } [ **,** ...*n* ] **)** **適用於**：[
   
 可以使用以下方式來指定 \<partition_number_expression>：  
   
--   提供分割區的編號，例如：ON PARTITIONS (2)。  
+-   提供資料分割的編號，例如：ON PARTITIONS (2)。  
 -   為數個個別分割區提供以逗號分隔的分割區編號，例如：ON PARTITIONS (1, 5)。  
 -   同時提供範圍和個別分割區，例如：ON PARTITIONS (2, 4, 6 TO 8)。  
   
-\<範圍> 可以指定為以 TO 一字分隔的分割區編號，例如：ON PARTITIONS (6 TO 8)。  
+\<range> 可以指定為以 TO 一字分隔的資料分割編號，例如：ON PARTITIONS (6 TO 8)。  
   
  若要為不同的分割區設定不同類型的資料壓縮，請指定 DATA_COMPRESSION 選項一次以上，例如：  
   

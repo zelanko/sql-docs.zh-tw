@@ -14,10 +14,10 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0692421ca7e63b419c99ecc835516af4cbd5af0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095772"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>設定 SQL Server Agent Mail 使用 Database Mail
@@ -34,12 +34,12 @@ ms.locfileid: "74095772"
   
 -   [後續工作](#Follow_Up)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
   > [!NOTE]
   > 受控執行個體上的 SQL Agent 一律設定為使用 Database Mail，因此本內容不適用於受控執行個體。 在受控執行個體中，您需要有一個稱為 **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** 的設定檔，才能將 SQL Agent 與 Database Mail 繫結。 
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   [啟用 Database Mail](../../relational-databases/database-mail/configure-database-mail.md)。  
   
@@ -49,12 +49,12 @@ ms.locfileid: "74095772"
   
 -   將設定檔設為 **msdb** 資料庫的預設設定檔。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  建立設定檔帳戶以及執行預存程序的使用者，應該是系統管理員 (sysadmin) 固定伺服器角色的成員。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **設定 SQL Server Agent 使用 Database Mail**  
   
 -   在 [物件總管] 中，展開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
@@ -71,7 +71,7 @@ ms.locfileid: "74095772"
   
 -   重新啟動 SQL Server Agent。  
   
-##  <a name="Follow_Up"></a> 後續工作  
+##  <a name="follow-up-tasks"></a><a name="Follow_Up"></a> 後續工作  
  需要進行下列工作，才能完成將 Agent 設定為傳送警示和通知的作業。  
   
 -   [警示](../../ssms/agent/alerts.md)  

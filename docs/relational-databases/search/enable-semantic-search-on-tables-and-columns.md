@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 849cd64d336cf9289e04cd770eb51175c5cbebbc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082903"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>在資料表和資料行上啟用語意搜尋
@@ -25,9 +25,9 @@ ms.locfileid: "68082903"
   
  統計語意搜尋會使用全文檢索搜尋所建立的索引，並且建立其他索引。 由於全文檢索搜尋存在這種相依性，因此您可以在定義新的全文檢索索引或改變現有的全文檢索索引時，建立新的語意索引。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 [全文檢索索引精靈] 和其他對話方塊來建立新的語意索引 (如本主題所述)。  
   
-##  <a name="BasicEnabling"></a> 建立語意索引  
+##  <a name="create-a-semantic-index"></a><a name="BasicEnabling"></a> 建立語意索引  
   
-###  <a name="reqenable"></a> 建立語意索引的需求和限制  
+###  <a name="requirements-and-restrictions-for-creating-a-semantic-index"></a><a name="reqenable"></a> 建立語意索引的需求和限制  
   
 -   您可以針對支援全文檢索索引的任何資料庫物件建立索引，包括資料表和索引檢視表。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68082903"
   
 -   如果您針對語言模型無法使用的資料行指定了語言，索引的建立作業就會失敗並且傳回錯誤訊息。  
   
-##  <a name="HowToEnableCreate"></a> 在沒有全文檢索索引時建立語意索引  
+##  <a name="create-a-semantic-index-when-there-is-no-full-text-index"></a><a name="HowToEnableCreate"></a> 在沒有全文檢索索引時建立語意索引  
  當您使用 **CREATE FULLTEXT INDEX** 陳述式來建立新的全文檢索索引時，可以透過指定 **STATISTICAL_SEMANTICS** 關鍵字當作資料行定義的一部分，在資料行層級中啟用語意索引。 此外，當您使用 [全文檢索索引精靈] 來建立新的全文檢索索引時，也可以啟用語意索引。  
   
  ### <a name="create-a-new-semantic-index-by-using-transact-sql"></a>使用 Transact-SQL 建立新的語意索引  
@@ -117,7 +117,7 @@ GO
 ### <a name="create-a-new-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 建立新的語意索引  
  您可以針對想要建立語意索引的每個資料行執行 [全文檢索索引精靈]，並在 [選取資料表資料行]  頁面上啟用 [統計語意]  。 如需詳細資訊，包含如何啟動 [全文檢索索引精靈] 的相關資訊，請參閱 [使用全文檢索索引精靈](../../relational-databases/search/use-the-full-text-indexing-wizard.md)。  
   
-##  <a name="HowToEnableAlter"></a> 在具有現有全文檢索索引時建立語意索引  
+##  <a name="create-a-semantic-index-when-there-is-an-existing-full-text-index"></a><a name="HowToEnableAlter"></a> 在具有現有全文檢索索引時建立語意索引  
  當您使用 **ALTER FULLTEXT INDEX** 陳述式來改變現有的全文檢索索引時，可以加入語意索引。 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的各種對話方塊來加入語意索引。  
   
 ### <a name="add-a-semantic-index-by-using-transact-sql"></a>使用 Transact-SQL 加入語意索引  
@@ -148,13 +148,13 @@ GO
 
 ## <a name="alter-a-semantic-index"></a>改變語意索引
   
-###  <a name="addreq"></a> 改變現有索引的需求和限制  
+###  <a name="requirements-and-restrictions-for-altering-an-existing-index"></a><a name="addreq"></a> 改變現有索引的需求和限制  
   
 -   當現有索引的母體擴展正在進行時，您無法改變該索引。 如需監視索引母體擴展之進度的詳細資訊，請參閱 [管理及監視語意搜尋](../../relational-databases/search/manage-and-monitor-semantic-search.md)。  
   
 -   您無法在 **ALTER FULLTEXT INDEX** 陳述式的單一呼叫中，將索引加入至資料行，以及改變或卸除相同資料行的索引。  
   
-##  <a name="dropping"></a> 卸除語意索引  
+##  <a name="drop-a-semantic-index"></a><a name="dropping"></a> 卸除語意索引  
 當您使用 **ALTER FULLTEXT INDEX** 陳述式來改變現有的全文檢索索引時，可以卸除語意索引。 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的各種對話方塊來卸除語意索引。  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>使用 Transact-SQL 卸除語意索引  
@@ -185,7 +185,7 @@ GO
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 卸除語意索引  
  您可以在 [全文檢索索引屬性]  對話方塊的 [全文檢索索引資料行]  頁面上變更已啟用語意和全文檢索索引的資料行。 如需詳細資訊，請參閱 [管理全文檢索索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
   
-###  <a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
+###  <a name="requirements-and-restrictions-for-dropping-a-semantic-index"></a><a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
   
 -   您無法從資料行中卸除全文檢索索引，而保留語意索引。 語意索引相依於全文檢索索引的文件相似度結果。  
   
@@ -242,7 +242,7 @@ GO
   
 ## <a name="determine-what-can-be-indexed-for-semantic-search"></a>判斷可建立索引供語意搜尋使用的項目  
   
-###  <a name="HowToCheckLanguages"></a> 檢查語意搜尋所支援的語言  
+###  <a name="check-which-languages-are-supported-for-semantic-search"></a><a name="HowToCheckLanguages"></a> 檢查語意搜尋所支援的語言  
   
 > [!IMPORTANT]  
 >  支援語意索引的語言比支援全文檢索索引的語言要少。 因此，可能會有可建立索引供全文檢索搜尋，但無法用於語意搜尋的資料行。  
@@ -269,15 +269,15 @@ GO
 |葡萄牙文 (葡萄牙)|2070|  
 |西班牙文|3082|  
   
-###  <a name="doctypes"></a> 決定可以進行索引的文件類型  
+###  <a name="determine-which-document-types-can-be-indexed"></a><a name="doctypes"></a> 決定可以進行索引的文件類型  
  查詢目錄檢視 [sys.fulltext_document_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md)。  
   
  如果您想要索引的文件類型不在支援的類型清單中，則可能必須尋找、下載並安裝其他篩選。 如需詳細資訊，請參閱 [檢視或變更已註冊的篩選與斷詞工具](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)。  
   
-##  <a name="BestPracticeFilegroup"></a> 最佳做法： 請考慮建立個別的檔案群組，全文檢索和語意索引  
+##  <a name="best-practice-consider-creating-a-separate-filegroup-for-the-full-text-and-semantic-indexes"></a><a name="BestPracticeFilegroup"></a> 最佳做法： 請考慮建立個別的檔案群組，全文檢索和語意索引  
  如果您有磁碟空間配置的顧慮，請考慮針對全文檢索和語意索引建立個別的檔案群組。 語意索引與全文檢索索引會建立在相同的檔案群組中。 完整擴展的語意索引可能會包含大量資料。  
  
-##  <a name="IssueNoResults"></a> 問題：針對特定資料行進行搜尋時未傳回結果  
+##  <a name="issue-searching-on-specific-column-returns-no-results"></a><a name="IssueNoResults"></a> 問題：針對特定資料行進行搜尋時未傳回結果  
  **您是否針對 Unicode 語言指定了非 Unicode LCID？**  
  您可以針對 LCID 代表只有 Unicode 字詞之語言 (例如俄文 LCID 1049) 的非 Unicode 資料行類型啟用語意索引。 在此情況下，這個資料行的語意索引永遠不會傳回任何結果。  
   

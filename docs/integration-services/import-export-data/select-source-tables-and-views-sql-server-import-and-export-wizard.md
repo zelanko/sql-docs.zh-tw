@@ -12,10 +12,10 @@ ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3d3019419538c05efc28ceabc5324d373500f65c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285139"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>選取來源資料表和檢視 (SQL Server 匯入和匯出精靈)

@@ -11,10 +11,10 @@ ms.assetid: 7014c0e3-65dc-4a46-842e-4decf3737748
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6b2aa0ce2b9fe4d61d9a2fc2f81b2a41e23ab488
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295215"
 ---
 # <a name="catalogenvironments-ssisdb-database"></a>catalog.environments (SSISDB 資料庫)

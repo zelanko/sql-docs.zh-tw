@@ -13,10 +13,10 @@ ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6674cb5f457b634682da90a2b7a2dff27a171da7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908083"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -33,7 +33,7 @@ ms.locfileid: "72908083"
   
 -   [將使用者移轉至自主資料庫使用者](#users)  
   
-##  <a name="prepare"></a> 準備移轉資料庫  
+##  <a name="preparing-to-migrate-a-database"></a><a name="prepare"></a> 準備移轉資料庫  
  當您考慮將資料庫移轉至部分自主資料庫模型時，請檢閱下列項目。  
   
 -   您應該了解部分自主資料庫模型。 如需相關資訊，請參閱 [自主資料庫](../../relational-databases/databases/contained-databases.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "72908083"
   
 -   請監視 **database_uncontained_usage** XEvent 來查看使用非內含性功能的時間。  
   
-##  <a name="enable"></a> 啟用自主資料庫  
+##  <a name="enable-contained-databases"></a><a name="enable"></a> 啟用自主資料庫  
  您必須先在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體上啟用自主資料庫，然後才能建立自主資料庫。  
   
 ### <a name="enabling-contained-databases-using-transact-sql"></a>使用 Transact-SQL 來啟用自主資料庫  
@@ -70,7 +70,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="convert"></a> 將資料庫轉換成部分自主資料庫  
+##  <a name="converting-a-database-to-partially-contained"></a><a name="convert"></a> 將資料庫轉換成部分自主資料庫  
  您可以透過變更 [內含項目]  選項，將資料庫轉換成自主資料庫。  
   
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>使用 Transact-SQL，將資料庫轉換成部分自主資料庫  
@@ -92,7 +92,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="users"></a> 將使用者移轉至自主資料庫使用者  
+##  <a name="migrating-users-to-contained-database-users"></a><a name="users"></a> 將使用者移轉至自主資料庫使用者  
  下列範例會將以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入為基礎的所有使用者移轉至具有密碼之自主資料庫使用者。 此範例會排除未啟用的登入。 您必須在自主資料庫中執行此範例。  
   
 ```sql  

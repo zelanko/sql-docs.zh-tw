@@ -14,17 +14,17 @@ ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 156ca6b7c04b8362a15a07f7db7f7aa43b2389a5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68085850"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>SQL Server 複寫中的重大變更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主題描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫中的重大變更。 這些變更可能會中斷以舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]為根據的應用程式、指令碼或功能。 當您升級時可能會遇到這些問題。  
   
-## <a name="breaking-changes-made-in-includesssql15includessssql15-mdmd"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+## <a name="breaking-changes-made-in-sssql15"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 不支援往或來自 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssEW](../../includes/ssew-md.md)]的複寫。  
   
 ## <a name="see-also"></a>另請參閱  

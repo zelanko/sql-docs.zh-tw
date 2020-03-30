@@ -18,10 +18,10 @@ ms.assetid: 82bbfa2c-a61b-4f41-9bf8-6f720f363bae
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f1e7824f864d7d764529fb6860496316bf00537d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68120767"
 ---
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference (geography 資料類型)

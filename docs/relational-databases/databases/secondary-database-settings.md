@@ -13,10 +13,10 @@ ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 82a8df3e80a851de5fb09cda3e28620f163a3de7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68127215"
 ---
 # <a name="secondary-database-settings"></a>次要資料庫設定

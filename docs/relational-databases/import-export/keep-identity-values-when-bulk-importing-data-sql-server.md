@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: a5993a5ba452e3d46709462e75a316dba02f7540
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055965"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>大量匯入資料時保留識別值 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "74055965"
 |---|
 |[保留識別值](#keep_identity)<br />[範例測試條件](#etc)<br />&emsp;&#9679;&emsp;[範例資料表](#sample_table)<br />&emsp;&#9679;&emsp;[範例資料檔案](#sample_data_file)<br />&emsp;&#9679;&emsp;[範例非 XML 格式檔案](#nonxml_format_file)<br />[範例](#examples)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 bcp 並保留識別值](#bcp_identity)<br />&emsp;&#9679;&emsp;[透過非 XML 格式檔案使用 bcp 並保留識別值](#bcp_identity_fmt)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 bcp 與產生的識別值](#bcp_default)<br />&emsp;&#9679;&emsp;[透過非 XML 格式檔案使用 bcp 與產生的識別值](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 BULK INSERT 並保留識別值](#bulk_identity)<br />&emsp;&#9679;&emsp;[透過非 XML 格式檔案使用 BULK INSERT 並保留識別值](#bulk_identity_fmt)<br />&emsp;&#9679;&emsp;[不使用格式檔案而使用 BULK INSERT 與產生的識別值](#bulk_default)<br />&emsp;&#9679;&emsp;[透過非 XML 格式檔案使用 BULK INSERT 與產生的識別值](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[透過非 XML 格式檔案使用 OPENROWSET 並保留識別值](#openrowset_identity_fmt)<br />&emsp;&#9679;&emsp;[透過非 XML 格式檔案使用 OPENROWSET 與產生的識別值](#openrowset_default_fmt)<br /><p>                                                                                                                                                                                                                  </p>|
 
-## 保留識別值 <a name="keep_identity"></a>  
+## <a name="keep-identity-values"></a>保留識別值 <a name="keep_identity"></a>  
 若要在將資料列大量匯入資料表時，不讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定識別值，請使用適當的 keep-identity 命令限定詞。  當您指定 keep-identity 限定詞時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用資料檔案中的識別值。  這些限定詞如下：
 
 |Command|Keep-identity 限定詞|限定詞類型|  
@@ -46,10 +46,10 @@ ms.locfileid: "74055965"
 > [!NOTE]
 >  若要建立可用於多個資料表中或可在不參考任何資料表的情況下從應用程式進行呼叫的自動遞增數字，請參閱 [序號](../../relational-databases/sequence-numbers/sequence-numbers.md)。
  
-## 範例測試條件<a name="etc"></a>  
+## <a name="example-test-conditions"></a>範例測試條件<a name="etc"></a>  
 本主題中的範例以下面定義的資料表、資料檔案和格式檔案為基礎。
 
-### **範例資料表**<a name="sample_table"></a>
+### <a name="sample-table"></a>**範例資料表**<a name="sample_table"></a>
 下列指令碼會建立測試資料庫和名為 `myIdentity`的資料表。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 CREATE DATABASE TestDatabase;
@@ -64,7 +64,7 @@ CREATE TABLE dbo.myIdentity (
    );
 ```
  
-### **範例資料檔案**<a name="sample_data_file"></a>
+### <a name="sample-data-file"></a>**範例資料檔案**<a name="sample_data_file"></a>
 使用記事本建立空白檔案 `D:\BCP\myIdentity.bcp` ，並插入下方資料。  
 ```
 3,Anthony,Grosse,1980-02-23
@@ -102,7 +102,7 @@ Get-Content -Path $bcpFile;
 Invoke-Item $bcpFile;
 ```
 
-### **範例非 XML 格式檔案**<a name="nonxml_format_file"></a>
+### <a name="sample-non-xml-format-file"></a>**範例非 XML 格式檔案**<a name="nonxml_format_file"></a>
 SQL Server 支援兩種類型的格式檔案：非 XML 格式和 XML 格式。  非 XML 格式是舊版 SQL Server 所支援的原始格式。  如需詳細資訊，請參閱 [非 XML 格式檔案 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。  下列命令將使用 [bcp 公用程式](../../tools/bcp-utility.md) ，根據 `myIdentity.fmt`的結構描述產生非 XML 格式檔案 `myIdentity`。  使用 [bcp](../../tools/bcp-utility.md) 命令建立格式檔案時，請指定 **format** 引數並使用 **nul** 取代資料檔案路徑。  format 選項也需要 **-f** 選項。  在這個範例中，另外還會使用限定詞 **c** 來指定字元資料，使用 **t,** 來指定逗號作為 [欄位結束字元](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)，並使用 **T** 來指定使用整合式安全性的信任連接。  請在命令提示字元之下，輸入下列命令：
   
 ```
@@ -118,10 +118,10 @@ Notepad D:\BCP\myIdentity.fmt
 > `SQLState = S1000, NativeError = 0`  
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
-## 範例<a name="examples"></a>
+## <a name="examples"></a>範例<a name="examples"></a>
 下列範例會使用上面建立的資料庫、資料檔案和格式檔案。
   
-### **不使用格式檔案而使用 [bcp](../../tools/bcp-utility.md) 並保留識別值**<a name="bcp_identity"></a>
+### <a name="using-bcp-and-keeping-identity-values-without-a-format-file"></a>**不使用格式檔案而使用 [bcp](../../tools/bcp-utility.md) 並保留識別值**<a name="bcp_identity"></a>
 **-E** 參數。  請在命令提示字元之下，輸入下列命令：
 ```
 REM Truncate table (for testing)
@@ -134,7 +134,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
 
-### **Using [bcp](../../tools/bcp-utility.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_identity_fmt"></a>
+### <a name="using-bcp-and-keeping-identity-values-with-a-non-xml-format-file"></a>**Using [bcp](../../tools/bcp-utility.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_identity_fmt"></a>
 **-E** 與 **-f** 參數。  請在命令提示字元之下，輸入下列命令：
 ```
 REM Truncate table (for testing)
@@ -147,7 +147,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
  
-### **不使用格式檔案而使用 [bcp](../../tools/bcp-utility.md) 與產生的預設值**<a name="bcp_default"></a>
+### <a name="using-bcp-and-generated-identity-values-without-a-format-file"></a>**不使用格式檔案而使用 [bcp](../../tools/bcp-utility.md) 與產生的預設值**<a name="bcp_default"></a>
 使用預設值。  請在命令提示字元之下，輸入下列命令：
 ```
 REM Truncate table (for testing)
@@ -160,7 +160,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
   
-### **Using [bcp](../../tools/bcp-utility.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_default_fmt"></a>
+### <a name="using-bcp-and-generated-identity-values-with-a-non-xml-format-file"></a>**Using [bcp](../../tools/bcp-utility.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_default_fmt"></a>
 使用預設值與 **-f** 參數。  請在命令提示字元之下，輸入下列命令：
 ```
 REM Truncate table (for testing)
@@ -173,7 +173,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
   
-### **不使用格式檔案而使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 並保留識別值**<a name="bulk_identity"></a>
+### <a name="using-bulk-insert-and-keeping-identity-values-without-a-format-file"></a>**不使用格式檔案而使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 並保留識別值**<a name="bulk_identity"></a>
 **KEEPIDENTITY** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 USE TestDatabase;
@@ -192,7 +192,7 @@ BULK INSERT dbo.myIdentity
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
-### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_identity_fmt"></a>
+### <a name="using-bulk-insert-and-keeping-identity-values-with-a-non-xml-format-file"></a>**Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_identity_fmt"></a>
 **KEEPIDENTITY** 和 **FORMATFILE** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 USE TestDatabase;
@@ -210,7 +210,7 @@ BULK INSERT dbo.myIdentity
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
-### **不使用格式檔案而使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 與產生的識別值**<a name="bulk_default"></a>
+### <a name="using-bulk-insert-and-generated-identity-values-without-a-format-file"></a>**不使用格式檔案而使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 與產生的識別值**<a name="bulk_default"></a>
 使用預設值。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 USE TestDatabase;
@@ -228,7 +228,7 @@ BULK INSERT dbo.myIdentity
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
-### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_default_fmt"></a>
+### <a name="using-bulk-insert-and-generated-identity-values-with-a-non-xml-format-file"></a>**Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_default_fmt"></a>
 使用預設值和 **FORMATFILE** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 USE TestDatabase;
@@ -245,7 +245,7 @@ BULK INSERT dbo.myIdentity
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
-### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset_identity_fmt"></a>
+### <a name="using-openrowsetbulk-and-keeping-identity-values-with-a-non-xml-format-file"></a>**Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset_identity_fmt"></a>
 **KEEPIDENTITY** 資料表提示和 **FORMATFILE** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 USE TestDatabase;
@@ -265,7 +265,7 @@ WITH (KEEPIDENTITY)
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
  
-### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset_default_fmt"></a>
+### <a name="using-openrowsetbulk-and-generated-identity-values-with-a-non-xml-format-file"></a>**Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset_default_fmt"></a>
 使用預設值和 **FORMATFILE** 引數。  請在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中執行下列 Transact-SQL：
 ```sql
 USE TestDatabase;
@@ -284,7 +284,7 @@ INSERT INTO dbo.myIdentity
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [大量匯入期間保留 Null 或使用預設值 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   

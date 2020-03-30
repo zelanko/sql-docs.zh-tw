@@ -16,10 +16,10 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 82ff8e58891d07ccbecfef119c05c0cef1bbb06e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095263"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>啟用和停用異動資料擷取 (SQL Server)

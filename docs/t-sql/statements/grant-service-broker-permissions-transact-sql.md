@@ -21,10 +21,10 @@ ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 33a8623c3e098589015a00185c8ab2a895b1410b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68050757"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT Service Broker 權限 (Transact-SQL)

@@ -11,10 +11,10 @@ ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d964639bbcf7679c71191d4b3a8e2a455a4635e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298558"
 ---
 # <a name="use-the-new-instance-wizard"></a>使用新增執行個體精靈

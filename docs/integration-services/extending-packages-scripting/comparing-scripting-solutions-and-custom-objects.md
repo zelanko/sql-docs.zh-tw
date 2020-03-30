@@ -18,10 +18,10 @@ ms.assetid: c0aea822-a21e-44e1-a3d3-8777bd0a1c34
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 492f5e288faaedda21dc529fdfeeda6006d78b12
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286451"
 ---
 # <a name="comparing-scripting-solutions-and-custom-objects"></a>比較指令碼方案和自訂物件

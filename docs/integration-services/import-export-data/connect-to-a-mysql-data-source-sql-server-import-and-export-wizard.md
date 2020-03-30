@@ -10,10 +10,10 @@ ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9fc1128ff50a6b5f6fbb459dca23f518cbcd4f26
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285687"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>連線至 MySQL 資料來源 (SQL Server 匯入和匯出精靈)

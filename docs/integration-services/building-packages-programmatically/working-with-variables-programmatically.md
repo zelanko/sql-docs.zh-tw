@@ -23,10 +23,10 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f69f0553eecb8ebe13dc23f50982ac09ef63e5a0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299073"
 ---
 # <a name="working-with-variables-programmatically"></a>以程式設計方式使用變數

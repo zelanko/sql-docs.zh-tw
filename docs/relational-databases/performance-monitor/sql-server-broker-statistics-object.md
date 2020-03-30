@@ -14,10 +14,10 @@ ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 77a6174931924c30b8d482c0bd5d3f4a358f4a10
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67987019"
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server 的 Broker Statistics 物件

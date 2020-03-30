@@ -22,10 +22,10 @@ ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2fa898451638503b2f91c97026158e7331a25e90
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012807"
 ---
 # <a name="configure-client-protocols"></a>設定用戶端通訊協定
@@ -38,9 +38,9 @@ ms.locfileid: "68012807"
   
 -   有些用戶端應用程式 (如 sqlcmd.exe) 可以指定通訊協定做為連接字串的一部分。 如需詳細資訊，請參閱[使用 sqlcmd 連接至 Database Engine](../../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
   
-###  <a name="EnableDisable"></a> 啟用或停用用戶端通訊協定  
+###  <a name="to-enable-or-disable-a-client-protocol"></a><a name="EnableDisable"></a> 啟用或停用用戶端通訊協定  
   
 1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]  ，並以滑鼠右鍵按一下 [用戶端通訊協定]  ，然後按一下 [屬性]  。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68012807"
   
 3.  在 **[啟用的通訊協定]** 方塊中按一下某通訊協定，再按一下 **[停用]** ，即可停用通訊協定。  
   
-###  <a name="ChangeDefault"></a> 變更用戶端電腦的預設通訊協定或通訊協定順序  
+###  <a name="to-change-the-default-protocol-or-the-protocol-order-for-client-computers"></a><a name="ChangeDefault"></a> 變更用戶端電腦的預設通訊協定或通訊協定順序  
   
 1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]  ，並以滑鼠右鍵按一下 [用戶端通訊協定]  ，然後按一下 [屬性]  。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68012807"
     > [!IMPORTANT]  
     >  「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」會為伺服器別名組態與預設用戶端網路程式庫建立登錄項目。 然而，應用程式並不會安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端網路程式庫或網路通訊協定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端網路程式庫是在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時安裝；網路通訊協定是在安裝 Microsoft Windows 時安裝 (或透過 [控制台]  中的 [網路]  安裝)。 某些特定網路通訊協定可能不會隨 Windows 安裝。 如需有關安裝這些網路通訊協定的詳細資訊，請參閱供應商說明文件。  
   
-###  <a name="Configure"></a> 設定用戶端使用 TCP/IP  
+###  <a name="to-configure-a-client-to-use-tcpip"></a><a name="Configure"></a> 設定用戶端使用 TCP/IP  
   
 1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中，展開 [SQL Server Native Client Configuration (SQL Server Native Client 組態)]  ，並以滑鼠右鍵按一下 [用戶端通訊協定]  ，然後按一下 [屬性]  。  
   

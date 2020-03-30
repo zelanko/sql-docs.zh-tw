@@ -13,10 +13,10 @@ ms.assetid: 260c1617-eecc-4007-a84d-3c5778ce46b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1ba543153e90059312223b2477e9cebd63fbaf79
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294721"
 ---
 # <a name="generate-mirror-tables-and-cdc-capture-instances"></a>產生鏡像資料表和 CDC 擷取執行個體

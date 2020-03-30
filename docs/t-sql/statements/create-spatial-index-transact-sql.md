@@ -23,10 +23,10 @@ ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2bc1c2c7951efceca6d50a30098284f2bc3ef132
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982585"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)

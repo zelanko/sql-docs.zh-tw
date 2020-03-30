@@ -14,10 +14,10 @@ ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: e4f5817fe575422dddeedd525b077dbf643a29b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908875"
 ---
 # <a name="online-restore-sql-server"></a>線上還原 (SQL Server)
@@ -63,7 +63,7 @@ ms.locfileid: "72908875"
     > [!NOTE]  
     >  此外，您也可以在還原順序之前手動使檔案離線。 如需詳細資訊，請參閱本主題稍後的「使資料庫或檔案離線」。  
   
-##  <a name="taking_db_or_file_offline"></a> 使資料庫或檔案離線  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a> 使資料庫或檔案離線  
  如果您不想要使用線上還原，則可以使用下列其中一個方法先讓資料庫離線，再來啟動還原順序：  
   
 -   在任何復原模式下，您可以使用下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式，讓資料庫離線：  
@@ -95,7 +95,7 @@ ms.locfileid: "72908875"
   
 -   [範例：線上還原唯讀檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [還原檔案和檔案群組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   

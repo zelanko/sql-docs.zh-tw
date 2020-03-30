@@ -28,10 +28,10 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67912609"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
@@ -73,7 +73,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  指定 *boundary_value* 所提供的數目值，但不可超過 14,999。 所建立的資料分割數目等於 *n* + 1。 這些值不必依照順序列出。 如果值沒有排序，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將它們排序、建立函數，以及傳回未依序提供值的警告。 如果 *n* 包括任何重複的值，「資料庫引擎」會傳回錯誤。  
   
  **LEFT** | RIGHT  
- 指定當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是按遞增順序由左至右來排序間隔值時，*boundary_value* [ **,** _...n_ ] 屬於每個界限值間隔的哪一側 (左或右)。 若未指定，LEFT 便是預設值。  
+ 指定當  *是按遞增順序由左至右來排序間隔值時，* boundary_value **[** ,  ...n[!INCLUDE[ssDE](../../includes/ssde-md.md)] ] 屬於每個界限值間隔的哪一側 (左或右)。 若未指定，LEFT 便是預設值。  
   
 ## <a name="remarks"></a>備註  
  資料分割函數的範圍只限於建立它的資料庫。 在這個資料庫內，資料分割函數是在不同於其他函數的個別命名空間中。  
@@ -89,7 +89,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
   
 -   對於建立資料分割函數之資料庫伺服器的 CONTROL SERVER 或 ALTER ANY DATABASE 權限。  
   
-##  <a name="BKMK_examples"></a> 範例  
+##  <a name="examples"></a><a name="BKMK_examples"></a> 範例  
   
 ### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>A. 建立 int 資料行的 RANGE LEFT 資料分割函數  
  下列資料分割函數會將資料表或索引分割成四份資料分割。  

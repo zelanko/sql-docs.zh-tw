@@ -22,10 +22,10 @@ ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8f09e1b7bb54e6f694469e406dbf80232569105f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71287007"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>新增自訂工作中的偵錯支援

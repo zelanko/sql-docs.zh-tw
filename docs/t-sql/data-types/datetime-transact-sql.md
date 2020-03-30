@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6567861c2150362e0d5b5cf386512daec6d758f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68113718"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
@@ -93,7 +93,7 @@ ms.locfileid: "68113718"
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI 和 ISO 8601 標準  
 **datetime** 不符合 ANSI 或 ISO 8601 標準。
   
-##  <a name="_datetime"></a> 轉換日期和時間資料  
+##  <a name="converting-date-and-time-data"></a><a name="_datetime"></a> 轉換日期和時間資料  
 當您轉換成日期與時間資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕所有無法辨識為日期或時間的值。 如需搭配日期和時間資料使用 CAST 及 CONVERT 函數的詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。
   
 ### <a name="converting-other-date-and-time-types-to-the-datetime-data-type"></a>將其他日期與時間類型轉換成 datetime 資料類型 

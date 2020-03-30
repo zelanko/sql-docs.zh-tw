@@ -11,10 +11,10 @@ ms.assetid: 744e9357-94a9-4202-abe8-1d3d202697e9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b47e4f57101e05eb70dbdb464d6a4b36498dd3f7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293245"
 ---
 # <a name="cdc-source-custom-properties"></a>CDC 來源自訂屬性

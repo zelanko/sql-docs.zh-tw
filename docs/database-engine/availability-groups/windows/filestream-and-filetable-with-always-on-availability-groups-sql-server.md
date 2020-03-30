@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 6398c949f5cccbd6c437eaddba04ab5bb32aae12
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68008416"
 ---
 # <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>搭配 Always On 可用性群組使用 FILESTREAM 和 FileTable
@@ -32,11 +32,11 @@ ms.locfileid: "68008416"
   
  僅部分支援 FileTable 功能。 在容錯移轉之後，主要複本上的 FileTable 資料可供存取，但卻無法存取位在可讀取之次要複本上的 FileTable 資料。  
   
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   將使用 FILESTREAM (包含或不含 FileTable) 的資料庫加入至可用性群組之前，請確定裝載可用性群組之可用性複本的每個伺服器執行個體都啟用了 FILESTREAM。 如需詳細資訊，請參閱 [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)。  
   
-##  <a name="vnn"></a> 使用虛擬網路名稱 (VNN) 進行 FILESTREAM 和 FileTable 存取  
+##  <a name="using-virtual-network-names-vnns-for-filestream-and-filetable-access"></a><a name="vnn"></a> 使用虛擬網路名稱 (VNN) 進行 FILESTREAM 和 FileTable 存取  
  當您在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體上啟用 FILESTREAM 時，系統就會建立執行個體層級共用，讓您存取 FILESTREAM 資料。 您可以依照下列格式使用電腦名稱來存取這個共用：  
   
  `\\<computer_name>\<filestream_share_name>`  
@@ -69,13 +69,13 @@ ms.locfileid: "68008416"
   
  當資料庫不屬於可用性群組的一部分時，如果您的應用程式嘗試使用 VNN 範圍的路徑來存取共用，則要求可能會成功。 在此情況中，虛擬網路名稱會解析成電腦名稱。 不過，強烈建議您不要使用這種方式，因為如果可用性群組已卸除，VNN 範圍的路徑將會停止運作。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [啟用及設定 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
 -   [啟用 FileTable 的必要條件](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

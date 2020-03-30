@@ -13,10 +13,10 @@ ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9b307c932925331fc28473186f120b2d05cc09c5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708418"
 ---
 # <a name="create-an-always-on-availability-group-using-powershell"></a>使用 PowerShell 建立 Always On 可用性群組
@@ -30,14 +30,14 @@ ms.locfileid: "71708418"
 > 若不使用 PowerShell 指令程式，您可以使用 [建立可用性群組精靈] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。 如需詳細資訊，請參閱 [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md) 或 [建立可用性群組 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)中的 PowerShell，透過 PowerShell Cmdlet 建立及設定 AlwaysOn 可用性群組。  
 
 ## <a name="before-you-begin"></a>開始之前
-### <a name="PrerequisitesRestrictions"></a> 必要條件、限制及建議  
+### <a name="prerequisites-restrictions-and-recommendations"></a><a name="PrerequisitesRestrictions"></a> 必要條件、限制及建議  
 
 - 建立可用性群組之前，請確認 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主機執行個體分別位於 Windows Server 容錯移轉叢集 (WSFC) 容錯移轉叢集的不同 WSFC 節點上。 此外，請確認您的伺服器執行個體符合其他伺服器執行個體必要條件和所有其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 需求，而且您了解建議事項。 如需詳細資訊，強烈建議您閱讀 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
 
-### <a name="Permissions"></a> 權限  
+### <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
 
-## <a name="PowerShellProcedure"></a> 使用 PowerShell 建立和設定可用性群組  
+## <a name="using-powershell-to-create-and-configure-an-availability-group"></a><a name="PowerShellProcedure"></a> 使用 PowerShell 建立和設定可用性群組  
  
 下表列出與設定可用性群組有關的基本工作，並指出 PowerShell 指令程式支援哪些工作。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 工作必須依照其出現在表格中的順序來執行。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "71708418"
 > [!NOTE]  
 > 如果伺服器執行個體的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶在不同的網域使用者帳戶下執行，請在每一個伺服器執行個體上建立其他伺服器執行個體的登入，並將此登入 CONNECT 權限授與本機資料庫鏡像端點。  
 
-### <a name="ExampleConfigureGroup"></a> 範例
+### <a name="example"></a><a name="ExampleConfigureGroup"></a> 範例
 下列 PowerShell 範例會建立及設定一個名為 `<myAvailabilityGroup>` 的簡單可用性群組，其包含兩個可用性複本和一個可用性資料庫。 範例：  
 
 1. 備份 `<myDatabase>` 及其交易記錄。  
@@ -157,7 +157,7 @@ Join-SqlAvailabilityGroup -Path "SQLSERVER:\SQL\SecondaryComputer\Instance" -Nam
 Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\AvailabilityGroups\<myAvailabilityGroup>" -Database "<myDatabase>"  
 ```  
   
-## <a name="RelatedTasks"></a> 相關工作  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **設定 AlwaysOn 可用性群組的伺服器執行個體**  
   
 - [啟用和停用 AlwaysOn 可用性群組 &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)  
@@ -208,7 +208,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 - [疑難排解失敗的加入檔案作業 &#40;AlwaysOn 可用性群組&#41;](~/database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-## <a name="RelatedContent"></a> 相關內容  
+## <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 - **部落格：**  
   

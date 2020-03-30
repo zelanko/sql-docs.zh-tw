@@ -13,10 +13,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: fd69090db106894bd686ee74a801afeff2d79649
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056116"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>語意搜尋 DDL、函數、預存程序及檢視
@@ -25,14 +25,14 @@ ms.locfileid: "74056116"
   
  如需支援全文檢索搜尋之陳述式和資料庫物件的清單，請參閱 [全文檢索搜尋 DDL、函數、預存程序與檢視](../../relational-databases/search/full-text-search-ddl-functions-stored-procedures-and-views.md)。  
   
-##  <a name="ddl"></a> 資料定義語言 (DDL) 陳述式  
+##  <a name="data-definition-language-ddl-statements"></a><a name="ddl"></a> 資料定義語言 (DDL) 陳述式  
   
 |Object|相關資訊|  
 |------------|----------------------|  
 |[ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)|[在資料表和資料行上啟用語意搜尋](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
 |[CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)|[在資料表和資料行上啟用語意搜尋](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
   
-##  <a name="func"></a> 系統函數  
+##  <a name="system-functions"></a><a name="func"></a> 系統函數  
   
 |Object|相關資訊|  
 |------------|----------------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "74056116"
 |[semanticsimilaritydetailstable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md)|[使用語意搜尋尋找相似及相關的文件](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)|  
 |[semanticsimilaritytable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md)|[使用語意搜尋尋找相似及相關的文件](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)|  
   
-##  <a name="meta"></a> 系統中繼資料函數  
+##  <a name="system-metadata-functions"></a><a name="meta"></a> 系統中繼資料函數  
   
 |Object|相關資訊|  
 |------------|----------------------|  
@@ -51,14 +51,14 @@ ms.locfileid: "74056116"
 |[OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)|[在資料表和資料行上啟用語意搜尋](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
 |[SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)|[安裝及設定語意搜尋](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="sproc"></a> 系統預存程序  
+##  <a name="system-stored-procedures"></a><a name="sproc"></a> 系統預存程序  
   
 |Object|相關資訊|  
 |------------|----------------------|  
 |[sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md)|[安裝及設定語意搜尋](../../relational-databases/search/install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md)|[安裝及設定語意搜尋](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="cv"></a> 目錄檢視  
+##  <a name="catalog-views"></a><a name="cv"></a> 目錄檢視  
   
 |Object|相關資訊|  
 |------------|----------------------|  
@@ -66,7 +66,7 @@ ms.locfileid: "74056116"
 |[sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)|[安裝及設定語意搜尋](../../relational-databases/search/install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)|[安裝及設定語意搜尋](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="dmv"></a> 動態管理檢視  
+##  <a name="dynamic-management-views"></a><a name="dmv"></a> 動態管理檢視  
   
 |Object|相關資訊|  
 |------------|----------------------|  

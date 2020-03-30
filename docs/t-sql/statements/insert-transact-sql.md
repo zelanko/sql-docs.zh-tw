@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73982219"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
@@ -411,7 +411,7 @@ OUTPUT 子句
   
  若要搭配使用 OPENROWSET 函式與 BULK 選項來執行 INSERT，您必須是 **sysadmin** 固定伺服器角色或 **bulkadmin** 固定伺服器角色的成員。  
   
-##  <a name="InsertExamples"></a> 範例  
+##  <a name="examples"></a><a name="InsertExamples"></a> 範例  
   
 |類別|代表性語法元素|  
 |--------------|------------------------------|  
@@ -424,7 +424,7 @@ OUTPUT 子句
 |[使用提示來覆寫查詢最佳化工具的預設行為](#TableHints)|資料表提示|  
 |[擷取 INSERT 陳述式的結果](#CaptureResults)|OUTPUT 子句|  
   
-###  <a name="BasicSyntax"></a> 基本語法  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> 基本語法  
  本節的範例會使用所需的最少語法來示範 INSERT 陳述式的基本功能。  
   
 #### <a name="a-inserting-a-single-row-of-data"></a>A. 插入單一資料列  
@@ -453,7 +453,7 @@ INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,
 VALUES (N'Square Yards', N'Y2', GETDATE());  
 ```  
   
-###  <a name="ColumnValues"></a> 處理資料行值  
+###  <a name="handling-column-values"></a><a name="ColumnValues"></a> 處理資料行值  
  本節中的範例會示範將值插入至資料行的方法，這些資料行定義了 IDENTITY 屬性、DEFAULT 值、**uniqueidentifier** 資料類型，或使用者定義類型的資料行。  
   
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D. 將資料插入包含有預設值之資料行的資料表  
@@ -529,7 +529,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
 ```  
   
-###  <a name="OtherTables"></a> 從其他資料表插入資料  
+###  <a name="inserting-data-from-other-tables"></a><a name="OtherTables"></a> 從其他資料表插入資料  
  本節的範例示範將一個資料表的資料列插入另一個資料表的方法。  
   
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>H. 使用 SELECT 和 EXECUTE 選項插入其他資料表的資料  
@@ -666,7 +666,7 @@ INSERT INTO dbo.EmployeeSales
     ORDER BY sp.SalesYTD DESC;  
 ```  
   
-###  <a name="TargetObjects"></a> 指定標準資料表以外的目標物件  
+###  <a name="specifying-target-objects-other-than-standard-tables"></a><a name="TargetObjects"></a> 指定標準資料表以外的目標物件  
  本節的範例示範如何指定檢視表或資料表變數來插入資料列。  
   
 #### <a name="k-inserting-data-by-specifying-a-view"></a>K. 指定檢視表以插入資料  
@@ -712,7 +712,7 @@ SELECT * FROM @MyTableVar;
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> 將資料列插入至遠端資料表  
+###  <a name="inserting-rows-into-a-remote-table"></a><a name="RemoteTables"></a> 將資料列插入至遠端資料表  
  本節中的範例會示範如何使用[連結的伺服器](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)或[資料列集函式](../../t-sql/functions/rowset-functions-transact-sql.md)來參考遠端資料表，以將資料列插入至遠端資料表。  
   
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. 使用連結的伺服器將資料插入遠端資料表  
@@ -804,7 +804,7 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
   
-###  <a name="BulkLoad"></a> 大量載入資料表或資料檔案中的資料  
+###  <a name="bulk-loading-data-from-tables-or-data-files"></a><a name="BulkLoad"></a> 大量載入資料表或資料檔案中的資料  
  本節的範例示範利用 INSERT 陳述式將資料大量載入資料表中的兩個方法。  
   
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q. 在記錄最少的情況下將資料插入堆積中  
@@ -864,7 +864,7 @@ FROM OPENROWSET (
     ROWS_PER_BATCH = 15000)AS b ;  
 ```  
   
-###  <a name="TableHints"></a> 使用提示來覆寫查詢最佳化工具的預設行為  
+###  <a name="overriding-the-default-behavior-of-the-query-optimizer-by-using-hints"></a><a name="TableHints"></a> 使用提示來覆寫查詢最佳化工具的預設行為  
  本節中的範例示範如何使用[資料表提示](../../t-sql/queries/hints-transact-sql-table.md)，在處理 INSERT 陳述式時暫時覆寫查詢最佳化工具的預設行為。  
   
 > [!CAUTION]  
@@ -881,7 +881,7 @@ INSERT INTO Production.Location WITH (XLOCK)
 VALUES ( N'Final Inventory', 15.00, 80.00);  
 ```  
   
-###  <a name="CaptureResults"></a> 擷取 INSERT 陳述式的結果  
+###  <a name="capturing-the-results-of-the-insert-statement"></a><a name="CaptureResults"></a> 擷取 INSERT 陳述式的結果  
  本節中的範例示範如何使用 [OUTPUT 子句](../../t-sql/queries/output-clause-transact-sql.md)傳回 INSERT 陳述式所影響之每個資料列的資訊，或是以該資料列為基礎的運算式。 這些結果可以傳回給負責處理的應用程式，以便用在確認訊息、封存或其他這類應用程式需求等用途上。  
   
 #### <a name="t-using-output-with-an-insert-statement"></a>T. 搭配 INSERT 陳述式使用 OUTPUT  

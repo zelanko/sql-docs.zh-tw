@@ -13,10 +13,10 @@ ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a4df2ce8bc53694c74142f843c4656e254e748d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298984"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>將變更套用到目的地

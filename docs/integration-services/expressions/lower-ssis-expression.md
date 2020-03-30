@@ -16,10 +16,10 @@ ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a61d3a72990914599efa807e388e94f96b0f9754
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297482"
 ---
 # <a name="lower-ssis-expression"></a>LOWER (SSIS 運算式)

@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67946990"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基數估計 (SQL Server)
@@ -59,8 +59,8 @@ ms.locfileid: "67946990"
 
 在組建 1998 中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 隨附提供 CE 的一項重大更新，其相容性層級為 70。 這個版本的 CE 模型會根據四個基本假設設定：
 
--  **獨立性：** 在不同資料行散發的資料會假設為各自獨立，除非提供可用的相互關聯資訊。
--  **一致性：** 相異值會平均分佈，使其全都具有相同頻率。 更明確地說，在每個[長條圖](../../relational-databases/statistics/statistics.md#histogram)步驟中，相異值會平均分布且各值都具有相同頻率。 
+-  **獨立性：** 在不同資料行散發的資料會假設為各自獨立，除非相互關聯資訊可取的且可用。
+-  **一致性：** 相異值會平均分布，使其全都具有相同頻率。 更明確地說，在每個[長條圖](../../relational-databases/statistics/statistics.md#histogram)步驟中，相異值會平均分布且各值都具有相同頻率。 
 -  **內含項目 (簡單)：** 使用者查詢存在的資料。 舉例來說，就兩個資料表間的相等聯結而言，會在聯結長條圖以預估聯結選擇性前，將各輸入長條圖中的述詞選擇性<sup>1</sup> 納入考量。 
 -  **包含詞/句：** 對於 `Column = Constant` 的篩選述詞而言，會假設相關聯資料行的常數實際存在。 若對應的長條圖步驟為非空白，則其中一個步驟的相異值會假設為符合來自述詞的值。
 
@@ -68,10 +68,10 @@ ms.locfileid: "67946990"
 
 後續更新從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始，表示相容性層級為 120 及以上。 層級 120 及以上的 CE 更新併入已更新假設和演算法，適用於新式資料倉儲和 OLTP 工作負載。 根據 CE 70 假設，下列模型假設已從 CE 120 起變更：
 
--  **獨立性**變成**相互關聯**：不同資料行值的結合不需要獨立。 這可能會更類似實際資料查詢。
--  **簡單內含項目**變成**基本內含項目**：使用者可查詢不存在的資料。 舉例來說，就兩個資料表間的相等聯結而言，我們會使用基底資料表長條圖來預估聯結選擇性，然後將述詞選擇性納入考量。
+-  **獨立性**變更為**相互關聯：** 不同資料行值的結合不需要獨立。 這可能會更類似實際資料查詢。
+-  **簡單內含項**變更為**基本內含項：** 使用者可查詢不存在的資料。 舉例來說，就兩個資料表間的相等聯結而言，我們會使用基底資料表長條圖來預估聯結選擇性，然後將述詞選擇性納入考量。
   
-**相容性層級：** 您可為 [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，來確認資料庫處於特定層級。  
+**相容性層級：** 您可為 [!INCLUDE[tsql](../../includes/tsql-md.md)]COMPATIBILITY_LEVEL[ 使用以下 ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)程式碼，來確認資料庫處於特定層級。  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
@@ -111,7 +111,7 @@ WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
-**查詢存放區：** 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，提供查詢存放區工具，方便您檢查查詢的效能。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，啟用查詢存放區的情況下，**物件總管**中的資料庫節點下會顯示**查詢存放區**節點。  
+**查詢存放區**︰從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，提供查詢存放區工具，方便您檢查查詢的效能。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，啟用查詢存放區的情況下，**物件總管**中的資料庫節點下會顯示**查詢存放區**節點。  
   
 ```sql  
 ALTER DATABASE <yourDatabase>  
@@ -256,7 +256,7 @@ GO
   
 ### <a name="example-a-ce-understands-maximum-value-might-be-higher-than-when-statistics-were-last-gathered"></a>範例 A：CE 認為最大值可能比上次收集統計資料時還要高  
   
-假設統計資料是在 `OrderAddedDate` 上限為 `2016-04-30`時，於 `2016-04-30`為 `OrderTable` 收集的狀況。 CE 120 (和更新版本) 會認知具有「遞增」  資料之 `OrderTable` 中的資料行，可能會具有大於統計資料所記錄之最大值的值。 此認知會改善 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式的查詢計劃，如下所示。  
+假設統計資料是在 `OrderTable` 上限為 `2016-04-30`時，於 `OrderAddedDate`為 `2016-04-30` 收集的狀況。 CE 120 (和更新版本) 會認知具有「遞增」`OrderTable`*資料之*  中的資料行，可能會具有大於統計資料所記錄之最大值的值。 此認知會改善 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式的查詢計劃，如下所示。  
   
 ```sql  
 SELECT CustomerId, OrderAddedDate  

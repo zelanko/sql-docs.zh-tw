@@ -11,10 +11,10 @@ ms.assetid: 26616eb8-9e80-434d-b22a-ece1b00f449d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 07454f4b273e6a0fab698574bb5d66cdd8adc7af
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71287236"
 ---
 # <a name="extending-packages-with-custom-objects"></a>使用自訂物件擴充封裝

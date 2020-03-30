@@ -24,10 +24,10 @@ ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bda11bd7e4a3cdb90dde0cba5992c91f6fffd7f9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296905"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>連接至指令碼工作中的資料來源

@@ -14,10 +14,10 @@ ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bfb94694f52ad27067dcff4f230a323143b07681
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297253"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>開發自訂連接管理員的使用者介面

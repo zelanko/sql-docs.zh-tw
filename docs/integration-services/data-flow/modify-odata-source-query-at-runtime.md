@@ -11,10 +11,10 @@ ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa8a5454fb85c4a6bcfe53088549107f09b9772f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298204"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>在執行階段提供 OData 來源查詢

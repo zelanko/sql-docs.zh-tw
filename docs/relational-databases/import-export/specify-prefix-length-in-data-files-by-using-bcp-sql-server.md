@@ -17,10 +17,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 689206ce4462b4befeded788fc6e679af6215a59
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056374"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>使用 bcp 指定資料檔中的前置長度 (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "74056374"
 > [!IMPORTANT]  
 >  在使用原生格式時，請使用長度前置詞，而不是欄位的結束字元。 原生格式資料可能會和結束字元有衝突，因為原生格式的資料檔是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部二進位資料格式儲存。  
   
-##  <a name="PrefixLengthsExport"></a> 大量匯出的前置長度  
+##  <a name="prefix-lengths-for-bulk-export"></a><a name="PrefixLengthsExport"></a> 大量匯出的前置長度  
   
 > [!NOTE]  
 >  您匯出欄位時，前置長度提示所提供的預設值，表示欄位最有效率的前置長度。  
@@ -86,7 +86,7 @@ ms.locfileid: "74056374"
   
  \***的未來版本將會移除**ntext **、** text **及** image [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 **nvarchar(max)** 、 **varchar(max)** 和 **varbinary(max)** 。  
   
-##  <a name="PrefixLengthsImport"></a> 大量匯入的前置長度  
+##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> 大量匯入的前置長度  
  大量匯入資料時，前置長度就是原先建立資料檔時即指定的值。 如果資料檔案不是由 **bcp** 命令所建立，則長度前置字元可能不存在。 在此狀況下，可指定 0 做為前置長度。  
   
 > [!NOTE]  

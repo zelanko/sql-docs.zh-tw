@@ -17,10 +17,10 @@ ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 28a8de0654fe6e083b52e83d85653a0d9856d351
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68072198"
 ---
 # <a name="transaction-isolation-levels"></a>交易隔離等級

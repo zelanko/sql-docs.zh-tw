@@ -29,10 +29,10 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e8cec010923591d3fc05ef2920578bdebc4f9f5c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297940"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊群組轉換

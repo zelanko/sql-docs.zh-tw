@@ -20,10 +20,10 @@ ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ff96377eac69c1596e0d2e2661714f82dd2cae9a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73983017"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)

@@ -13,10 +13,10 @@ ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f933683e11229500ceea29c3a10180a13c154baf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294627"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>執行多個資料表的累加式載入

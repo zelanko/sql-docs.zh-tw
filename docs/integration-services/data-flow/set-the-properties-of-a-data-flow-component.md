@@ -13,10 +13,10 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 10b397e4fdabefe333854fe04ab37c4bdd92cf38
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291838"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>設定資料流程元件的屬性
@@ -122,7 +122,7 @@ ms.locfileid: "71291838"
 -   [輸出資料行](#outputcolumns)  
   
  
-###  <a name="components"></a> 元件屬性  
+###  <a name="component-properties"></a><a name="components"></a> 元件屬性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中，資料流程中的元件會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 介面。  
   
  下表將描述資料流程中的元件屬性。 某些屬性具有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
@@ -142,7 +142,7 @@ ms.locfileid: "71291838"
 |ValidateExternalMetadata|Boolean|指示是否會驗證外部資料行的中繼資料。 這個屬性的預設值為 **True**。|  
 |版本|整數|元件的版本。|  
   
-###  <a name="inputs"></a> 輸入屬性  
+###  <a name="input-properties"></a><a name="inputs"></a> 輸入屬性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中，轉換和目的地都有輸入。 資料流程中元件的輸入會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> 介面。  
   
  下表將描述資料流程中元件輸入的屬性。 某些屬性具有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
@@ -162,7 +162,7 @@ ms.locfileid: "71291838"
   
  目的地和某些轉換不支援錯誤輸出，而且這些元件的 ErrorRowDisposition 和 TruncationRowDisposition 屬性是唯讀的。  
   
-###  <a name="inputcolumns"></a> 輸入資料行屬性  
+###  <a name="input-column-properties"></a><a name="inputcolumns"></a> 輸入資料行屬性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中，輸入包含輸入資料行的集合。 資料流程中元件的輸入資料行會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100> 介面。  
   
  下表將描述資料流程中元件輸入資料行的屬性。 某些屬性具有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
@@ -186,7 +186,7 @@ ms.locfileid: "71291838"
   
  輸入資料行也具有資料類型屬性 (如「資料類型屬性」底下所述)。  
   
-###  <a name="outputs"></a> 輸出屬性  
+###  <a name="output-properties"></a><a name="outputs"></a> 輸出屬性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中，來源和轉換都有輸出。 資料流程中元件的輸出會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 介面。  
   
  下表將描述資料流程中元件輸出的屬性。 某些屬性具有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
@@ -207,7 +207,7 @@ ms.locfileid: "71291838"
 |SynchronousInputID|整數|與輸出同步之輸入的識別碼。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 這些值包括 [失敗元件]  、[忽略失敗]  和 [重新導向資料列]  。|  
   
-###  <a name="outputcolumns"></a> 輸出資料行屬性  
+###  <a name="output-column-properties"></a><a name="outputcolumns"></a> 輸出資料行屬性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中，輸出包含輸出資料行的集合。 資料流程中元件的輸出資料行會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100> 介面。  
   
  下表將描述資料流程中元件輸出資料行的屬性。 某些屬性具有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  

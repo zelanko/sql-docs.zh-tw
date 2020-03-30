@@ -17,10 +17,10 @@ ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b934ea191a0dc4f9f276b4e483f5f5671bd0cc3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297992"
 ---
 # <a name="cache-transform"></a>快取轉換

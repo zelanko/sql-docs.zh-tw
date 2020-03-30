@@ -18,10 +18,10 @@ ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 6f0e5927216d6bc0ff1acbb2146d7f23c31012ba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68066556"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (geography 資料類型)

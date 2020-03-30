@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68019506"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux 上的 SQL Server 安全性功能逐步解說

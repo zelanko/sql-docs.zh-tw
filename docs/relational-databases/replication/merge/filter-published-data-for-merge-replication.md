@@ -14,10 +14,10 @@ ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1e0d157b6a4f7f08d068dc8da75c42f4ad924044
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68033266"
 ---
 # <a name="filter-published-data-for-merge-replication"></a>篩選合併式複寫之發行的資料

@@ -11,10 +11,10 @@ ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 086b4503289c01f8b0022633361e7ce72dff73e1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295245"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (SSISDB 資料庫)

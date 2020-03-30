@@ -11,10 +11,10 @@ ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 26803904c22953b919c568b2798ecf02ad6a94a7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71283759"
 ---
 # <a name="lesson-1-2---creating-the-deployment-project"></a>課程 1-2 - 建立部署專案

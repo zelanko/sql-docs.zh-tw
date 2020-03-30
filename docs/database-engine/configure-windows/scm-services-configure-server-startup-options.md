@@ -20,33 +20,33 @@ ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c5e81ec7dcb3f86b5200ee2de3a65a9b56823b1a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68024676"
 ---
 # <a name="scm-services---configure-server-startup-options"></a>SCM 服務 - 設定伺服器啟動選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主題描述如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration Manager，設定每次 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中啟動時要使用的啟動選項。 如需啟動選項的清單，請參閱 [Database Engine 服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
 ### <a name="limitations-and-restrictions"></a>限制事項  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員會將啟動參數寫入登錄中。 下次啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)]時，這些參數就會生效。  
   
  在叢集中，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上線時在使用中伺服器上進行變更；當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 重新啟動時，這些變更就會生效。 下次容錯移轉時則會在另一個節點上進行啟動選項的登錄更新。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  設定伺服器啟動選項僅限於能夠在登錄中變更相關項目的使用者， 包括下列使用者。  
   
 -   本機 Administrators 群組的成員。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的網域帳戶 (如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 設定為使用網域帳戶來執行的話)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
   
 #### <a name="to-configure-startup-options"></a>若要設定啟動選項  
   

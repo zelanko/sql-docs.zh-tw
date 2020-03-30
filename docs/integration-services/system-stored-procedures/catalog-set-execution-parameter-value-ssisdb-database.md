@@ -11,10 +11,10 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f75065f38d47964ab3bbc07f22bb809061fb22d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295305"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB 資料庫)
