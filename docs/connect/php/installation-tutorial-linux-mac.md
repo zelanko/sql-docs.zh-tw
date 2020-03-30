@@ -10,10 +10,10 @@ author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
 ms.openlocfilehash: 913b6d95a7bb9a690f0a8cdd7d8c88b29782f876
-ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79058572"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的 Linux 和 macOS 安裝教學課程
@@ -358,7 +358,7 @@ sudo rc-service apache2 restart
 ```
 
 > [!NOTE]
-> 若要安裝 PHP 7.2 或 7.3，請在下列命令中分別使用 php@7.2 或 php@7.3 來取代 php@7.4。
+> 若要安裝 PHP 7.2 或 7.3，請在下列命令中分別使用 php@7.4 或 php@7.2 來取代 php@7.3。
 
 ### <a name="step-1-install-php"></a>步驟 1： 安裝 PHP
 
@@ -406,7 +406,7 @@ sudo apachectl restart
 
 ## <a name="testing-your-installation"></a>測試您的安裝
 
-若要測試此範例指令碼，在系統的文件根目錄中建立名為 testsql.php 的檔案。 這在 Ubuntu、Debian 和 Redhat 上為 `/var/www/html/`、在 SUSE 上為 `/srv/www/htdocs`、在 Alpine 上為 `/var/www/localhost/htdocs`，或是在 macOS 上為 `/usr/local/var/www`。 將下列指令碼複製到其中，適當地取代伺服器、資料庫、使用者名稱和密碼。 在 Alpine 3.11 上，您可能也需要在 `$connectionOptions` 陣列中，將 **CharacterSet** 指定為 'UTF-8'。
+若要測試此範例指令碼，在系統的文件根目錄中建立名為 testsql.php 的檔案。 這在 Ubuntu、Debian 和 Redhat 上為 `/var/www/html/`、在 SUSE 上為 `/srv/www/htdocs`、在 Alpine 上為 `/var/www/localhost/htdocs`，或是在 macOS 上為 `/usr/local/var/www`。 將下列指令碼複製到其中，適當地取代伺服器、資料庫、使用者名稱和密碼。 在 Alpine 3.11 上，您可能也需要在 **陣列中，將**CharacterSet`$connectionOptions` 指定為 'UTF-8'。
 ```
 <?php
 $serverName = "yourServername";

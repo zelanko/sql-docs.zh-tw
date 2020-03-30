@@ -16,10 +16,10 @@ ms.assetid: 379857c3-9de1-4964-8782-32df317cbfbb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36563b76c4207b5924bb32f5c8e99cca575c9d72
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970041"
 ---
 # <a name="sstranstightlycpld-field-sqlserverxaresource"></a>SSTRANSTIGHTLYCPLD 欄位 (SQLServerXAResource)

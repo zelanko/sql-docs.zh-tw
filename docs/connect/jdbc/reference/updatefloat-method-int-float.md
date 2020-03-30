@@ -16,10 +16,10 @@ ms.assetid: c9ddcd7d-1dd4-491a-99ff-6cce7f67a73b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1257ced0c69a461913d9c3a9ae147fffcf72cea
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998953"
 ---
 # <a name="updatefloat-method-int-float"></a>updateFloat 方法 (int, float)
@@ -42,7 +42,7 @@ public void updateFloat(int index,
   
  *x*  
   
- **浮點**值。  
+ **float** 值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

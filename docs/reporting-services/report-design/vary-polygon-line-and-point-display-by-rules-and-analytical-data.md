@@ -19,10 +19,10 @@ ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4c323a03752ea7b9e0c7450dc53446191f3c3315
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578450"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>使用規則與分析資料更改多邊形、線條與點顯示
@@ -41,7 +41,7 @@ ms.locfileid: "65578450"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Rules"></a> 了解規則  
+##  <a name="understanding-rules"></a><a name="Rules"></a> 了解規則  
  您可以設定四種類型的規則，讓報表處理器自動調整圖層上地圖元素的顯示屬性。 這些規則會隨著地圖元素類型而有所不同：多邊形、線條或點。  
   
 -   **多邊形：** 更改多邊形色彩。  
@@ -52,7 +52,7 @@ ms.locfileid: "65578450"
   
 -   **點：** 對於每個點顯示的標記，更改標記色彩、標記大小與標記類型。  
   
-##  <a name="Color"></a> 了解色彩規則  
+##  <a name="understanding-color-rules"></a><a name="Color"></a> 了解色彩規則  
  色彩規則會套用到多邊形、線條，以及代表點或多邊形中心點之標記的填滿色彩。  
   
  色彩規則支援以下四個選項：  
@@ -74,28 +74,28 @@ ms.locfileid: "65578450"
   
  若要在色階中移除您不想要的值，請在每個圖層上清除每個色彩規則的色階選項。  
   
-##  <a name="Width"></a> 了解線條寬度規則  
+##  <a name="understanding-line-width-rules"></a><a name="Width"></a> 了解線條寬度規則  
  寬度規則適用於線條。 寬度規則支援以下兩個選項：  
   
 -   使用預設線條寬度。 您可以指定線條寬度 (以點為單位)。  
   
 -   使用線條寬度將資料視覺化。 您可以設定線條的最小寬度與最大寬度、指定要使用的資料欄位來更改寬度，然後指定要套用到該資料的分佈選項。  
   
-##  <a name="Size"></a> 了解標記大小規則  
+##  <a name="understanding-marker-size-rules"></a><a name="Size"></a> 了解標記大小規則  
  大小規則會套用到代表點或多邊形中心點的標記。 大小規則支援以下兩個選項：  
   
 -   使用預設標記大小。 您可以指定大小 (以點為單位)。  
   
 -   使用大小將資料視覺化。 您可以設定標記的最小大小與最大大小、指定要使用的資料欄位來更改大小，然後指定要套用到該資料的分佈選項。  
   
-##  <a name="Marker"></a> 了解標記類型規則  
+##  <a name="understanding-marker-type-rules"></a><a name="Marker"></a> 了解標記類型規則  
  標記類型規則會套用到代表點或多邊形中心點的標記。 標記類型規則支援以下兩個選項：  
   
 -   使用預設標記類型。 您可以指定下列其中一種可用的標記類型。  
   
 -   使用標記將資料視覺化。 您可以指定一組標記，然後指定您要使用這些標記的順序。 標記類型包括 **Circle**、 **Diamond**、 **Pentagon**、 **PushPin**、 **Rectangle**、 **Star**、 **Triangle**、 **Trapezoid**與 **Wedge**。  
   
-##  <a name="Distribution"></a> 了解分佈選項  
+##  <a name="understanding-distribution-options"></a><a name="Distribution"></a> 了解分佈選項  
  若要建立值的分佈，您可以將資料分割成幾個範圍。 您可以指定分佈類型、子範圍的數目，以及最小與最大範圍值。  
   
  在下列清單中，假設您有三個地圖元素和六個相關的分析值，其範圍為 1 到 9999，而其值分別為 1、10、200、2000、4777、8999。  
@@ -110,7 +110,7 @@ ms.locfileid: "65578450"
   
  規則會使用分佈值來更改地圖元素顯示值。  
   
-##  <a name="Legends"></a> 了解圖例與圖例項目  
+##  <a name="understanding-legends-and-legend-items"></a><a name="Legends"></a> 了解圖例與圖例項目  
  圖例項目是從針對每一個圖層指定的規則自動建立。 規則選項會控制建立的項目數目，以及其中會顯示的圖例。 根據預設，所有規則的所有項目都會加入至第一個圖例。 若要將項目移出第一個圖例，建立所需的額外圖例，然後針對每個規則指定要使用的圖例，來顯示規則所產生的項目。 若要根據規則隱藏項目，請指定一個空圖例名稱。  
   
  若要控制圖例顯示的位置，使用 [圖例屬性] 對話方塊來指定相對於地圖檢視區的位置。 如需詳細資訊，請參閱 [變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  

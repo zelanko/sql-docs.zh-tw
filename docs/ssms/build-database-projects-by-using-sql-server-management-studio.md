@@ -16,10 +16,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.openlocfilehash: 503bf99e9300a155a3521f52f8fecd18d3d65005
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243956"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 建置資料庫專案

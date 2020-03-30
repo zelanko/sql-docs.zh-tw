@@ -1,6 +1,6 @@
 ---
 title: 啟用查詢通知
-description: 討論如何使用查詢通知，包括其啟用及使用需求。
+description: 討論如何使用查詢通知，包括啟用和使用它們的需求。
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: e587639f5323ea76c975e3a8c35d647a7eb3d891
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896976"
 ---
 # <a name="enabling-query-notifications"></a>啟用查詢通知
@@ -78,7 +78,7 @@ CREATE SERVICE ContactChangeNotifications
   
 在部分信任狀況下執行的用戶端程式碼需要 <xref:Microsoft.Data.SqlClient.SqlClientPermission>。  
   
-下列程式碼會建立將 <xref:System.Security.Permissions.PermissionState> 設定為 <xref:System.Security.Permissions.PermissionState.Unrestricted> 的 <xref:Microsoft.Data.SqlClient.SqlClientPermission> 物件。 如果在呼叫堆疊中較高的所有呼叫者都尚未獲授與權限，<xref:System.Security.CodeAccessPermission.Demand%2A> 將會在執行階段強制執行 <xref:System.Security.SecurityException>。  
+下列程式碼會建立將 <xref:Microsoft.Data.SqlClient.SqlClientPermission> 設定為 <xref:System.Security.Permissions.PermissionState> 的 <xref:System.Security.Permissions.PermissionState.Unrestricted> 物件。 如果在呼叫堆疊中較高的所有呼叫者都尚未獲授與權限，<xref:System.Security.CodeAccessPermission.Demand%2A> 將會在執行階段強制執行 <xref:System.Security.SecurityException>。  
   
 [!code-csharp[DataWorks SqlClientPermission_Demand#1](~/../sqlclient/doc/samples/SqlClientPermission_Demand.cs#1)]
   

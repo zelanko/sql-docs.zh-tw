@@ -16,10 +16,10 @@ ms.assetid: 0db06631-5e68-488c-a9f1-6e5052c0759d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 54459377a27406044a9323c36b78417b144661de
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973246"
 ---
 # <a name="setpassword-method-sqlserverdatasource"></a>setPassword 方法 (SQLServerDataSource)

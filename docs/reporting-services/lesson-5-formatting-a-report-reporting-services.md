@@ -9,17 +9,17 @@ ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65105931"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>第 5 課：格式化報表 (Reporting Services)
 
 既然您已經將資料區域和某些欄位加入到銷售訂單報表，您可以格式化日期和貨幣欄位，以及資料行標頭。
 
-## <a name="bkmk_format_date"></a>將日期格式化
+## <a name="format-the-date"></a><a name="bkmk_format_date"></a>將日期格式化
 
 依預設，[Date] 欄位運算式會顯示日期和時間資訊。 您可以格式化該欄位以便只顯示日期。
 
@@ -30,7 +30,7 @@ ms.locfileid: "65105931"
 5. 選取 [確定]  來套用格式。
 6. 預覽報表以查看 `[Date]` 欄位格式的變更，然後變更回設計檢視。
 
-## <a name="bkmk_format_currency"></a>將貨幣格式化
+## <a name="format-the-currency"></a><a name="bkmk_format_currency"></a>將貨幣格式化
 
 LineTotal 欄位運算式會顯示一般數字。 您可以格式化該欄位，將數字顯示為貨幣。
 
@@ -44,7 +44,7 @@ LineTotal 欄位運算式會顯示一般數字。 您可以格式化該欄位，
 5. 選取 [確定]  來套用格式。
 6. 預覽報表以查看 `[LineTotal]` 運算式資料行的變更，然後變更回設計檢視。  
 
-## <a name="bkmk_change_textstyle"></a>變更文字樣式和資料行寬度
+## <a name="change-text-style-and-column-widths"></a><a name="bkmk_change_textstyle"></a>變更文字樣式和資料行寬度
 
 您可以透過將標頭資料列反白顯示，新增其他格式到您的報表，並調整資料行的寬度。
 
@@ -65,7 +65,7 @@ LineTotal 欄位運算式會顯示一般數字。 您可以格式化該欄位，
 
 ## <a name="next-steps"></a>後續步驟
 
-您已經在本課成功格式化資料行標頭和欄位運算式。 下一步，您會將群組和總計加入至報表。 繼續進行[第 6 課：新增群組和總計 &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)。
+您已經在本課成功格式化資料行標頭和欄位運算式。 下一步，您會將群組和總計加入至報表。 請繼續[第 6 課：新增群組和總計 &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)。
 
 ## <a name="see-also"></a>另請參閱
 

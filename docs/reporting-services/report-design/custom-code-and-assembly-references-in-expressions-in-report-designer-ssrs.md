@@ -18,10 +18,10 @@ ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ab5e36ce6e76cf0017e7306802544f1b2764af73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080569"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>報表產生器中運算式的自訂程式碼及組件參考 (SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "77080569"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RB3"></a> 在報表產生器中使用自訂程式碼  
+##  <a name="working-with-custom-code-in-report-builder"></a><a name="RB3"></a> 在報表產生器中使用自訂程式碼  
  在報表產生器中，您可以從報表伺服器開啟包含自訂組件之參考的報表。 例如，您可以編輯在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中使用報表設計師所建立和部署的報表。 自訂組件必須部署至報表伺服器。  
   
  您無法執行下列工作：  
@@ -47,22 +47,22 @@ ms.locfileid: "77080569"
   
 2.  在本機模式中預覽含有自訂組件之參考的報表。  
   
-##  <a name="Common"></a> 包含常用函數的參考  
- **[運算式]** 對話方塊可用來檢視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一般內建函數的分類清單。 當您展開 **[一般函數]** 並按一下類別目錄時， **[項目]** 窗格就會顯示您包含在運算式中的函數清單。 一般函式包含 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> 和 <xref:System.Convert> 命名空間的類別，以及 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 執行階段程式庫函式。 為了方便起見，您可以在 [運算式]  對話方塊中檢視最常用的函式，這些函式會依類別目錄列出：文字、日期和時間、數學、檢查、程式流程、彙總、財務、轉換和其他。 較不常用的函數則不會顯示在清單中，但仍可用於運算式。  
+##  <a name="including-references-to-commonly-used-functions"></a><a name="Common"></a> 包含常用函數的參考  
+ **[運算式]** 對話方塊可用來檢視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一般內建函數的分類清單。 當您展開 **[一般函數]** 並按一下類別目錄時， **[項目]** 窗格就會顯示您包含在運算式中的函數清單。 一般函式包含 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> 和 <xref:System.Convert> 命名空間的類別，以及 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 執行階段程式庫函式。 為了方便起見，您可以在 **[運算式]** 對話方塊中檢視最常用的函數，這些函數會依類別目錄列出：文字、日期和時間、數學、檢閱、程式流程、彙總、財務、轉換和其他。 較不常用的函數則不會顯示在清單中，但仍可用於運算式。  
   
  若要使用內建函數，請在 [項目] 窗格中的函數名稱上按兩下。 函數的描述會顯示在 [描述] 窗格中，函數呼叫的範例則顯示在 [範例] 窗格中。 當您在程式碼窗格中輸入函數名稱，且其後接著左括號 **(** 時，IntelliSense 會協助顯示該函數呼叫的每個有效語法。 例如，若要計算資料表中名為 `Quantity` 欄位的最大值，請將簡單運算式 `=Max(` 加入至 [程式碼] 窗格，然後使用智慧標籤來檢視該函數呼叫的所有有效語法。 若要完成此範例，請輸入 `=Max(Fields!Quantity.Value)`。  
   
  如需每個函數的詳細資訊，請參閱 <xref:System.Math>、 <xref:System.Convert>以及 MSDN 上的 [Visual Basic 執行階段程式庫成員](https://go.microsoft.com/fwlink/?LinkId=198941) 。  
   
-##  <a name="NotCommon"></a> 包含較少使用函數的參考  
+##  <a name="including-references-to-less-commonly-used-functions"></a><a name="NotCommon"></a> 包含較少使用函數的參考  
  若要包含其他較少使用之 CLR 命名空間的參考，您必須使用完整的參考，例如， <xref:System.Text.StringBuilder>。 在這些較少使用函數的 **[運算式]** 對話方塊的程式碼窗格中，不支援 IntelliSense。  
   
  如需詳細資訊，請參閱 MSDN 上的 [Visual Basic 執行階段程式庫成員](https://go.microsoft.com/fwlink/?LinkId=198941) 。  
   
-##  <a name="External"></a> 包含外部組件的參考  
+##  <a name="including-references-to-external-assemblies"></a><a name="External"></a> 包含外部組件的參考  
  若要包含外部組件中類別的參考，您必須為報表處理器識別組件。 請使用 **[報表屬性]** 對話方塊的 **[參考]** 頁面來指定報表中要加入之組件的完整名稱。 您必須在運算式中使用組件中類別的完整名稱。 外部組件中的類別並不會顯示在 **[運算式]** 對話方塊中，您必須提供正確的類別名稱。 完整名稱包含命名空間、類別名稱和成員名稱。  
   
-##  <a name="Embedded"></a> 加入內嵌程式碼  
+##  <a name="including-embedded-code"></a><a name="Embedded"></a> 加入內嵌程式碼  
  若要將內嵌程式碼加入至報表，請使用 **[報表屬性]** 對話方塊的 [程式碼] 索引標籤。 您建立的程式碼區塊可以包含多個方法。 內嵌程式碼中的方法必須用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 來撰寫，且必須以執行個體為基礎。 報表處理器會自動加入 System.Convert 和 System.Math 命名空間的參考。 請使用 **[報表屬性]** 對話方塊的 **[參考]** 頁面來加入其他的組件參考。 如需詳細資訊，請參閱 [將組件參考加入至報表 &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)。  
   
  內嵌程式碼裡的方法，可透過全域定義的 **Code** 成員使用。 您可藉由參考 **Code** 成員與方法名稱，來存取這些方法。 下列範例會呼叫 **ToUSD**方法，這個方法會將 `StandardCost` 欄位的值轉換成美金值：  
@@ -114,7 +114,7 @@ End Function
   
  如需內建物件集合和初始化的詳細資訊，請參閱[內建的全域和使用者參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md) 和[初始化自訂組件物件](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md)。  
   
-##  <a name="Parameters"></a> 加入程式碼中參數的參考  
+##  <a name="including-references-to-parameters-from-code"></a><a name="Parameters"></a> 加入程式碼中參數的參考  
  您可以透過報表定義之程式碼區塊內或您所提供之自訂組件內的自訂程式碼，參考全域參數集合。 此參數集合是唯讀的，而且沒有任何公用 Iterator。 您不能使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **For Each** 建構來逐步執行此集合。 您必須先知道報表定義中所定義的參數名稱，才可以在程式碼中參考它。 但是，您可以逐一查看多重值參數的所有值。  
   
  下表包含從自訂程式碼參考內建 `Parameters` 集合的範例：  
@@ -155,7 +155,7 @@ Public Function ShowParameterValues(ByVal parameter as Parameter)
 End Function  
 ```  
   
-##  <a name="Custom"></a> 加入自訂組件中程式碼的參考  
+##  <a name="including-references-to-code-from-custom-assemblies"></a><a name="Custom"></a> 加入自訂組件中程式碼的參考  
  若要在報表中使用自訂組件，您必須先建立組件，並設定報表設計師可以使用該組件，在報表中加入對該組件的參考，然後在報表中使用運算式來參考該組件內含的方法。 報表部署至報表伺服器時，您也必須將自訂組件部署至報表伺服器。  
   
  如需建立自訂組件，並讓 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]可以使用組件的資訊，請參閱 [將自訂組件與報表搭配使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)。  
@@ -177,14 +177,14 @@ End Function
   
  如需有關存取程式碼的詳細資訊，請參閱＜ [Accessing Custom Assemblies Through Expressions](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md)＞。  
   
-##  <a name="collections"></a> 將內建集合傳給自訂組件  
+##  <a name="passing-built-in-collections-into-custom-assemblies"></a><a name="collections"></a> 將內建集合傳給自訂組件  
  若要將內建集合 (例如 *Globals* 或 *Parameters* 集合) 傳給自訂組件處理，必須將程式碼專案中的組件參考加入定義內建集合的組件，並且存取正確的命名空間。 根據您是針對在報表伺服器上執行的報表 (伺服器報表) 還是以本機方式在 .NET 應用程式中執行的報表 (本機報表) 開發自訂組件，您需要參考的組件會有所不同。 如需詳細資料，請參閱下文。  
   
--   **命名空間：** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
+-   **命名空間** ：Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
   
--   **組件 (本機報表)：** Microsoft.ReportingServices.ProcessingObjectModel.dll  
+-   **組件 (本機報表)** ：Microsoft.ReportingServices.ProcessingObjectModel.dll  
   
--   **組件 (伺服器報表)：** Microsoft.ReportViewer.ProcessingObjectModel.dll  
+-   **組件 (伺服器報表)** ：Microsoft.ReportViewer.ProcessingObjectModel.dll  
   
  由於 *Fields* 和 *ReportItems* 集合的內容可能會在執行階段動態變更，因此您不應將這些不同的呼叫內容保留在自訂組件之中 (例如保留在成員變數中)。 此項建議適用於所有的內建集合。  
   

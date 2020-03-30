@@ -16,10 +16,10 @@ ms.assetid: bffd20a6-1310-44b0-9602-974500481fa6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a188d5d98aca0418a2452f29912f62604f3ffa90
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972167"
 ---
 # <a name="settypemap-method-sqlserverconnection"></a>setTypeMap 方法 (SQLServerConnection)

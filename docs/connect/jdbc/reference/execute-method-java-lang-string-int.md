@@ -16,10 +16,10 @@ ms.assetid: dc73d1c3-e756-43af-b1fc-ac438cbd0965
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e96e0c9c957522db6a766b3491d394b7337d7b6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954986"
 ---
 # <a name="execute-method-javalangstring-int"></a>execute 方法 (java.lang.String, int[])

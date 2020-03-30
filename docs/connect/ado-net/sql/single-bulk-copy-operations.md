@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 1029d9a0121b23963ccfc12582bd9d9cc7fd6cd6
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78896592"
 ---
 # <a name="single-bulk-copy-operations"></a>單一大量複製作業
@@ -26,7 +26,7 @@ ms.locfileid: "78896592"
 執行 SQL Server 大量複製作業最簡單的方式為執行對資料庫的單一作業。 根據預設，大量複製作業會做為隔離作業執行：該複製作業會以非交易的方式進行，且沒有機會復原。  
   
 > [!NOTE]
->  當錯誤發生時，如果您需要復原全部或部分大量複製，您可以使用 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 受管理的交易，或執行現有交易中的大量複製作業。 如果將連線 (以隱含或明確的方式) 登記到 **System.Transactions** 交易中，則 **SqlBulkCopy** 也會使用 <xref:System.Transactions>。  
+>  當錯誤發生時，如果您需要復原全部或部分大量複製，您可以使用 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 受管理的交易，或執行現有交易中的大量複製作業。 如果將連線 (以隱含或明確的方式) 登記到 **System.Transactions** 交易中，則 <xref:System.Transactions>SqlBulkCopy**也會使用**。  
 >   
 >  如需詳細資訊，請參閱[交易和大量複製作業](transaction-bulk-copy-operations.md)。  
   

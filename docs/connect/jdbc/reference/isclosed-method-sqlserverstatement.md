@@ -11,10 +11,10 @@ ms.assetid: e79b5b53-16b0-42a3-be4e-542a77a21e12
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe4d41448fdd65d3cb4a56f873432e747f564ef6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977699"
 ---
 # <a name="isclosed-method-sqlserverstatement"></a>isClosed 方法 (SQLServerStatement)
@@ -30,7 +30,7 @@ public boolean isClosed()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 如果這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件已關閉，則為 **true**；如果仍為開啟，則為 **false**。  
+ 如果這個 **SQLServerStatement** 物件已關閉，則為 [true](../../../connect/jdbc/reference/sqlserverstatement-class.md)；如果仍為開啟，則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

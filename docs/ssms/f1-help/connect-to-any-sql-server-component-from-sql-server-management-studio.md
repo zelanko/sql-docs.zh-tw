@@ -16,10 +16,10 @@ ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: ebc0f4a5ca2be46e607ccd8d18399b7fe0ef6814
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243932"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>從 SQL Server Management Studio 連接到任何 SQL Server 元件
@@ -28,11 +28,11 @@ ms.locfileid: "75243932"
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體。  
   
--   第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。  
   
--   第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。  
   
--   第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]第 1 課：建立 Windows Azure 儲存體物件{2}。  
   
 雖然 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可讓您在沒有先建立資料來源連接的情況下，直接使用查詢，但大部分其他工作都需要連接。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供 [連接到伺服器]  對話方塊，可讓您設定對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的連線屬性。 當 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 啟動時，便會開啟 [連接到伺服器]  對話方塊，提示您連線到伺服器。 [連接到伺服器]  對話方塊會保留上次使用的連線設定。  
   

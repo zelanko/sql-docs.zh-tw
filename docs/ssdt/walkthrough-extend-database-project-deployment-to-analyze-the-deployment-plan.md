@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 5e51dddb7635ba0f50dfdd7566722b170be9f48a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242678"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>逐步解說：擴充資料庫專案部署以分析部署計畫
@@ -41,7 +41,7 @@ ms.locfileid: "75242678"
 > [!NOTE]  
 > 這個逐步解說適用於已經熟悉 SSDT SQL 功能的使用者。 您也應該熟悉基本的 Visual Studio 概念，例如如何建立類別庫及如何使用程式碼編輯器將程式碼加入至類別。  
   
-## <a name="CreateDeploymentContributor"></a>建立部署參與者  
+## <a name="create-a-deployment-contributor"></a><a name="CreateDeploymentContributor"></a>建立部署參與者  
 若要建立部署參與者，您必須執行下列工作：  
   
 -   建立類別庫專案並加入必要參考。  
@@ -554,7 +554,7 @@ ms.locfileid: "75242678"
   
 下一步，您必須安裝組件，以便在建置及部署 SQL 專案時將其載入。  
   
-## <a name="InstallDeploymentContributor"></a>安裝部署參與者  
+## <a name="install-a-deployment-contributor"></a><a name="InstallDeploymentContributor"></a>安裝部署參與者  
 若要安裝部署參與者，您必須將組件和關聯的 .pdb 檔案複製到 Extensions 資料夾。  
   
 #### <a name="to-install-the-mydeploymentcontributor-assembly"></a>若要安裝 MyDeploymentContributor 組件  
@@ -563,7 +563,7 @@ ms.locfileid: "75242678"
   
 -   將 **MyDeploymentContributor.dll** 組件檔案從輸出目錄複製到 %Program Files%\Microsoft SQL Server\110\DAC\Bin\Extensions 目錄。 根據預設，編譯過的 .dll 檔案的路徑是 YourSolutionPath\YourProjectPath\bin\Debug 或 YourSolutionPath\YourProjectPath\bin\Release。  
   
-## <a name="TestDeploymentContributor"></a>測試您的部署參與者  
+## <a name="test-your-deployment-contributor"></a><a name="TestDeploymentContributor"></a>測試您的部署參與者  
 若要測試部署參與者，您必須執行下列工作：  
   
 -   將屬性加入至要部署的 .sqlproj 檔案。  

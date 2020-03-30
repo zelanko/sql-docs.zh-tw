@@ -16,10 +16,10 @@ ms.assetid: db876c2e-dffe-4ef2-8fea-486cf27b0eb3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 90ea4731b4004c908cfcd60f31f51205f893431f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954942"
 ---
 # <a name="execute-method-sqlserverpreparedstatement"></a>execute 方法 (SQLServerPreparedStatement)

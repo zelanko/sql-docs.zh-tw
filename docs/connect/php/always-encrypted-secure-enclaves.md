@@ -11,10 +11,10 @@ ms.author: v-dapugl
 author: david-puglielli
 manager: v-mabarw
 ms.openlocfilehash: 796a77f3be0e1d15609f91ee1c36c2769a541cc5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76941089"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-php-drivers-for-sql-server"></a>搭配 PHP Drivers for SQL Server 使用具有安全記憶體保護區的 Always Encrypted
@@ -46,9 +46,9 @@ ColumnEncryption=VBS-HGS,http://attestationserver.mydomain/Attestation
 
 - 搭配 `ALTER TABLE` 對資料表進行加密時，每次呼叫 `ALTER TABLE` 時只能對單一資料行進行加密，因此需要進行多次呼叫才能將多個資料行加密。
 - 以參數形式傳遞比較閾值來比較 char 和 nchar 類型時，必須在對應的 `SQLSRV_SQLTYPE_*` 中指定資料行寬度，否則將會傳回 `HY104`、`Invalid precision value`錯誤。
-- 針對模式比對，必須使用 `COLLATE` 子句將定序指定為 `Latin1_General_BIN2`。
-- 以參數形式傳遞模式比對字串來比對 char 和 nchar 類型時，傳遞至 `sqlsrv_query` 或 `sqlsrv_prepare` 的 `SQLSRV_SQLTYPE_*` 應該指定要比對的字串長度，而非資料行的大小，因為 char 和 nchar 類型會在字串結尾處填補空格。 例如，針對 char(10) 資料行比對字串 `%abc%` 時，請指定 `SQLSRV_SQLTYPE_CHAR(5)`。 如果您改為指定 `SQLSRV_SQLTYPE_CHAR(10)`，查詢將會比對 `%abc%     ` (具有附加的五個空格)，而資料行中具有少於五個附加空格的任何資料都不會相符 (因此 `abcdef` 將不會符合 `%abc%`，因為其具有四個空格的填補)。 針對 Unicode 字串，請使用 `mb_strlen` 或 `iconv_strlen` 函式來取得字元數目。
-- PDO 介面不允許指定參數的長度。 相反地，請指定 0 的長度，或在 `PDOStatement::bindParam` 中指定 `null`。 如果長度已明確設定為另一個數字，系統會將參數視為輸出參數。
+- 針對模式比對，必須使用 `Latin1_General_BIN2` 子句將定序指定為 `COLLATE`。
+- 以參數形式傳遞模式比對字串來比對 char 和 nchar 類型時，傳遞至 `SQLSRV_SQLTYPE_*` 或 `sqlsrv_query` 的 `sqlsrv_prepare` 應該指定要比對的字串長度，而非資料行的大小，因為 char 和 nchar 類型會在字串結尾處填補空格。 例如，針對 char(10) 資料行比對字串 `%abc%` 時，請指定 `SQLSRV_SQLTYPE_CHAR(5)`。 如果您改為指定 `SQLSRV_SQLTYPE_CHAR(10)`，查詢將會比對 `%abc%     ` (具有附加的五個空格)，而資料行中具有少於五個附加空格的任何資料都不會相符 (因此 `abcdef` 將不會符合 `%abc%`，因為其具有四個空格的填補)。 針對 Unicode 字串，請使用 `mb_strlen` 或 `iconv_strlen` 函式來取得字元數目。
+- PDO 介面不允許指定參數的長度。 相反地，請指定 0 的長度，或在 `null` 中指定 `PDOStatement::bindParam`。 如果長度已明確設定為另一個數字，系統會將參數視為輸出參數。
 - 在 Always Encrypted 中，模式比對無法針對非字串類型運作。
 - 為了清楚起見，已排除錯誤檢查。 
 

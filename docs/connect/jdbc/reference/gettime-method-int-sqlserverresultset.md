@@ -16,10 +16,10 @@ ms.assetid: e18c84f5-7171-4057-8c9e-fe1d43ae9c20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b862aed00a154cac23df4008da649347f94f000a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979117"
 ---
 # <a name="gettime-method-int-sqlserverresultset"></a>getTime 方法 (int) (SQLServerResultSet)
@@ -40,7 +40,7 @@ public java.sql.Time getTime(int columnIndex)
  指出資料行索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- 時間物件。  
+ Time 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -13,10 +13,10 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.openlocfilehash: 2ad58a10987050bcd89e17e2a3dbef4fd39586d1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251938"
 ---
 # <a name="create-a-project"></a>建立專案

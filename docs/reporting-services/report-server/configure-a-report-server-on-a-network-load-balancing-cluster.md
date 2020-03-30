@@ -8,10 +8,10 @@ ms.technology: report-server
 ms.topic: conceptual
 ms.date: 12/11/2019
 ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244395"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在網路負載平衡叢集上設定報表伺服器
@@ -40,7 +40,7 @@ ms.locfileid: "75244395"
 |6|將 **Hostname** 和 **UrlRoot** 設定為使用 NLB 叢集的虛擬伺服器 IP。|本主題中的[如何設定 Hostname 和 UrlRoot](#SpecifyingVirtualServerName) 。|  
 |7|確認伺服器可透過您指定的主機名稱存取。|本主題中的[確認報表伺服器存取](#Verify) 。|  
   
-## <a name="ViewState"></a> 如何設定檢視狀態驗證
+## <a name="how-to-configure-view-state-validation"></a><a name="ViewState"></a> 如何設定檢視狀態驗證
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 若要在 NLB 叢集上執行向外延展部署，您必須設定檢視狀態驗證，好讓使用者可以檢視互動式 HTML 報表。  您必須針對報表伺服器 Web 服務執行這項工作。
@@ -92,7 +92,7 @@ ms.locfileid: "75244395"
 
 ::: moniker-end
 
-## <a name="SpecifyingVirtualServerName"></a> 如何設定 Hostname 和 UrlRoot
+## <a name="how-to-configure-hostname-and-urlroot"></a><a name="SpecifyingVirtualServerName"></a> 如何設定 Hostname 和 UrlRoot
 
  若要在 NLB 叢集上設定報表伺服器向外延展部署，您必須定義單一虛擬伺服器名稱，以便提供伺服器叢集的單一存取點。 然後向您所在環境中的網域名稱伺服器 (DNS) 註冊這個虛擬伺服器名稱。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "75244395"
   
 6. 針對向外延展部署中的每個報表伺服器，在每個 RSReportServer.config 檔案中重複這些步驟。  
   
-## <a name="Verify"></a> 確認報表伺服器存取
+## <a name="verify-report-server-access"></a><a name="Verify"></a> 確認報表伺服器存取
 
  確認您可以透過虛擬伺服器名稱存取向外延展部署 (例如，`https://MyVirtualServerName/reportserver` 和 `https://MyVirtualServerName/reports`)。  
   

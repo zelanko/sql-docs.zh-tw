@@ -16,10 +16,10 @@ ms.assetid: cb1d53c9-27f1-4880-8f1d-c32df0d2fb27
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ce11a1918846d028fd0dd3d9dc10e588dbe3f31
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977959"
 ---
 # <a name="getxaconnection-method-sqlserverxadatasource"></a>getXAConnection 方法 (SQLServerXADataSource)

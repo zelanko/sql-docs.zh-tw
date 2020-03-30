@@ -11,10 +11,10 @@ ms.assetid: 9373de68-fd43-45f2-b9a6-149c96610aeb
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: c884fc97632860bff36a05e3340e6925871ff7e8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75557925"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>指定 SQL Server PowerShell 提供者中的執行個體
@@ -45,14 +45,14 @@ SQLSERVER:\SQL\MyComputer\MyInstance
   
  每一部電腦都只能有一個預設 [!INCLUDE[ssDE](../includes/ssde-md.md)]執行個體。 當您安裝預設執行個體時，未指定它的名稱。 如果您在連接字串中只有指定電腦名稱，您會連接到該電腦上的預設執行個體。 此電腦上的所有其他執行個體都必須是具名執行個體。 您可在安裝期間指定執行個體名稱，而且連接字串必須指定電腦名稱和執行個體名稱。  
   
-###  <a name="LimitationsRestrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制事項  
  您無法使用句號 (.)，在 PowerShell 指令碼中指定本機電腦。 因為句號會被 PowerShell 解譯成命令，所以不支援句號。  
   
  (local) 中的括號字元通常會被 Windows PowerShell 視為命令。 您必須將其編碼或逸出以在路徑中使用，或使用雙引號括住路徑。 如需詳細資訊，請參閱＜編碼及解碼 SQL Server 識別碼＞。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會要求您一定要指定執行個體名稱。 如果是預設執行個體，您必須指定執行個體名稱 DEFAULT。  
   
-##  <a name="Examples"></a> 範例：電腦和執行個體名稱  
+##  <a name="examples-computer-and-instance-names"></a><a name="Examples"></a> 範例：電腦和執行個體名稱  
  此範例使用 localhost 和 DEFAULT 指定本機電腦上的預設執行個體：  
   
 ```  

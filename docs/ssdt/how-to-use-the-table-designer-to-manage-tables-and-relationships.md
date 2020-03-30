@@ -15,10 +15,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 924a48ffe75c043385043f02125c8e07cfe3fbbc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75226831"
 ---
 # <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>如何：使用資料表設計工具管理資料表和關聯性
@@ -57,5 +57,5 @@ ms.locfileid: "75226831"
     請注意，為離線專案建立及編輯資料庫實體的效果與執行連接的資料庫工作完全一樣。  
   
 ## <a name="see-also"></a>另請參閱  
-[操作說明：使用資料表設計工具建立資料庫物件](../ssdt/how-to-create-database-objects-using-table-designer.md)  
+[如何：使用資料表設計工具建立資料庫物件](../ssdt/how-to-create-database-objects-using-table-designer.md)  
   

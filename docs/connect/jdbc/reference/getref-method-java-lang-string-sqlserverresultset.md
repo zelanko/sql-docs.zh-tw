@@ -16,10 +16,10 @@ ms.assetid: 83c60c5d-7a69-498b-be9c-bbdbfafec157
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fbb9a65610730ba23e157aabf81c04c1f4af8eec
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980581"
 ---
 # <a name="getref-method-javalangstring-sqlserverresultset"></a>getRef 方法 (java.lang.String) (SQLServerResultSet)

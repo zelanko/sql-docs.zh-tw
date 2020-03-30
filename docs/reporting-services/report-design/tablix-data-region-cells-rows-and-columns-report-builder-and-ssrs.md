@@ -15,10 +15,10 @@ ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a1630b872e3a445b082c6ceca98d45cf225cdaf7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252402"
 ---
 # <a name="cells-rows--columns-in-a-tablix-data-region-report-builder-and-ssrs"></a>Tablix 資料區資料格、資料列及資料行 (報表產生器) 及 SSRS
@@ -67,7 +67,7 @@ ms.locfileid: "75252402"
 ### <a name="grouping-pane"></a>群組窗格  
  [群組] 窗格會針對目前在設計介面上選取的 Tablix 資料區域，顯示資料列和資料行群組。 下圖顯示此 Tablix 資料區域的 [群組] 窗格。  
   
- ![巢狀資料列和資料行群組的群組窗格](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "巢狀資料列和資料行群組的群組窗格")  
+ ![巢狀資料列和資料行群組的分組窗格](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "巢狀資料列和資料行群組的 [群組] 窗格")  
   
  [資料列群組] 窗格會顯示 Category 父群組和 Subcat 子群組。 [資料行群組] 窗格會顯示 Geography 父群組和 CountryRegion 子群組，同時顯示 Year 群組，為 Geography 群組的相鄰群組。 當您在 [資料列群組] 窗格中選取 Subcat 群組時，群組列會轉到較暗的橙色陰影，而對應的資料列群組成員資料格在設計介面上則會呈選取狀態。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "75252402"
   
  下圖顯示 Tablix 資料區域與巢狀資料列群組，以及詳細資料群組。  
   
- ![設計檢視表，將總計資料列新增至群組和資料表](../../reporting-services/report-design/media/rs-basictablegroupstotalscolordesign.gif "設計檢視表，將總計資料列新增至群組和資料表")  
+ ![設計檢視，將總計資料列新增至群組和資料表](../../reporting-services/report-design/media/rs-basictablegroupstotalscolordesign.gif "設計檢視，將總計資料列新增至群組和資料表")  
   
  若是顯示詳細資料的 Tablix 資料區域，詳細資料群組為最內部的子群組。 加入到詳細資料群組的資料列會針對連結到此 Tablix 資料區域之資料集查詢結果集中的每個資料列重複一次。 下圖顯示轉譯之報表的最後一頁。 在本圖中，您可以看到最後一個詳細資料列以及最後一個訂單的小計資料列。  
   

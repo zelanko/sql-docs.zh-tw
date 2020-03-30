@@ -16,10 +16,10 @@ ms.assetid: 5416aed2-a5b6-4e3b-9750-90db8cda8cec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7ebc4d505cd116e98f5e5c68e66be7b2ea6c0274
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67996914"
 ---
 # <a name="updatebyte-method-javalangstring-byte"></a>updateByte 方法 (java.lang.String, byte)

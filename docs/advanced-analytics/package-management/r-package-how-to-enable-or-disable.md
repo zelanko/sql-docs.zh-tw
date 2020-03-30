@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 250be5c8a4207a43d2e4194c78377bd87880a99c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485233"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>啟用或停用 SQL Server 的遠端套件管理
@@ -31,7 +31,7 @@ SQL Server 的外部套件管理功能預設為停用。 您必須執行個別�
 
 [停用](#bkmk_disable)套件管理功能也需要多個步驟：您必須移除資料庫層級套件與權限 (每個資料庫個別移除)，然後從伺服器移除角色 (每個執行個體個別移除)。
 
-## <a name="bkmk_enable"></a> 啟用套件管理
+## <a name="enable-package-management"></a><a name="bkmk_enable"></a> 啟用套件管理
 
 1. 在 SQL Server 上，開啟提升權限的命令提示字元，並瀏覽至包含公用程式 RegisterRExt.exe 的資料夾。 預設位置為 `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`。
 
@@ -76,7 +76,7 @@ SQL Server 的外部套件管理功能預設為停用。 您必須執行個別�
 
 啟用此功能之後，您就可以使用 RevoScaleR 函式，從遠端 R 用戶端安裝或解除安裝套件。
 
-## <a name="bkmk_disable"></a> 停用套件管理
+## <a name="disable-package-management"></a><a name="bkmk_disable"></a> 停用套件管理
 
 1. 再次從提升權限的命令提示字元執行 RegisterRExt 公用程式，並在資料庫層級停用套件管理：
 

@@ -11,10 +11,10 @@ ms.assetid: 99f0db69-ce1a-49cf-9c24-0b9abfa4e0c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0a2ee49a7df1eca698c4a711527fd5ce7f21eb3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027827"
 ---
 # <a name="programming-guide-for-jdbc-sql-driver"></a>JDBC SQL 驅動程式程式設計指南

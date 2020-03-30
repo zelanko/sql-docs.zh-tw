@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 1d5d832d41f6bd087c6e9b334ebeac03728f97b1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485283"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>使用 RevoScaleR 來安裝 R 套件
@@ -111,7 +111,7 @@ connStr <- "Driver=SQL Server;Server=myserver.financeweb.contoso.com;Database=Fi
 
 ### <a name="get-package-path-on-a-remote-sql-server-compute-context"></a>在遠端 SQL Server 計算內容上取得套件路徑
 
-此範例會取得計算內容 `sqlcc` 上 **RevoScaleR** 套件的路徑。
+此範例會取得計算內容 **上**RevoScaleR`sqlcc` 套件的路徑。
 
 ```R
 sqlPackagePaths <- rxFindPackage(package = "RevoScaleR", computeContext = sqlcc)
@@ -127,7 +127,7 @@ print(sqlPackagePaths)
 
 ### <a name="get-locations-for-multiple-packages"></a>取得多個封裝的位置
 
-下列範例會取得計算內容 `sqlcc` 上 **RevoScaleR** 和 **lattice** 套件的路徑。 若要取得多個套件的相關資訊，請傳遞包含套件名稱的字串向量。
+下列範例會取得計算內容 **上**RevoScaleR**和**lattice`sqlcc` 套件的路徑。 若要取得多個套件的相關資訊，請傳遞包含套件名稱的字串向量。
 
 ```R
 packagePaths <- rxFindPackage(package = c("RevoScaleR", "lattice"), computeContext = sqlcc)

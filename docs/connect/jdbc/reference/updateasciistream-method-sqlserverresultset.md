@@ -16,10 +16,10 @@ ms.assetid: 4959a0a9-ae55-4c4e-80a8-21119aaceb92
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91e006cbf64d28e7cb62c1957b46fc7e1ce7b1aa
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67997210"
 ---
 # <a name="updateasciistream-method-sqlserverresultset"></a>updateAsciiStream 方法 (SQLServerResultSet)

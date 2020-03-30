@@ -11,10 +11,10 @@ ms.assetid: be01ce56-8f13-437b-8de6-246cda5f7830
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cbe655691ed898dfbb8eac5da5bb28d4d6cde686
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981501"
 ---
 # <a name="getnclob-method-javalangstring"></a>getNClob 方法 (java.lang.String)

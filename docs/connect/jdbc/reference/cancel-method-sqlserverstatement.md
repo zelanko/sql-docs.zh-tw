@@ -16,10 +16,10 @@ ms.assetid: 276bd9c1-9329-4fc9-9622-ed673c83a12d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04f3461743801e69248362710197ce2d4c31384f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955786"
 ---
 # <a name="cancel-method-sqlserverstatement"></a>cancel 方法 (SQLServerStatement)

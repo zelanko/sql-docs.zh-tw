@@ -1,5 +1,5 @@
 ---
-title: 步驟 2:建立用於 ADO.NET 開發的 SQL 資料庫 | Microsoft Docs
+title: 步驟 2︰建立供 ADO.NET 開發使用的 SQL 資料庫 | Microsoft Docs
 description: 描述如何建立用於 ADO.NET 開發的 SQL 資料庫。
 ms.custom: ''
 ms.date: 08/15/2019
@@ -12,13 +12,13 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: e3e6a76e1404f8b75fcf54b9f0eda94eb967a281
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78895968"
 ---
-# <a name="step-2-create-a-sql-database-for-adonet-development"></a>步驟 2:建立 ADO.NET 開發的 SQL 資料庫
+# <a name="step-2-create-a-sql-database-for-adonet-development"></a>步驟 2︰建立 ADO.NET 開發的 SQL 資料庫
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
@@ -26,6 +26,6 @@ ms.locfileid: "78895968"
 
 ## <a name="sequential-articles"></a>循序文章
 
-- 上一篇：&nbsp;&nbsp;&nbsp;[步驟 1：設定用於 ADO.NET 開發的開發環境](step-1-configure-development-environment-ado-net-development.md)
+- 上一步：&nbsp;&nbsp;&nbsp;[步驟 1︰設定 ADO.NET 開發的開發環境](step-1-configure-development-environment-ado-net-development.md)
 
-- 下一篇：&nbsp;&nbsp;&nbsp;[步驟 3：使用 ADO.NET 連線到 SQL 的概念證明](step-3-connect-sql-ado-net.md)  
+- 下一步：&nbsp;&nbsp;&nbsp;[步驟 3︰使用 ADO.NET 連線到 SQL 的概念證明](step-3-connect-sql-ado-net.md)  

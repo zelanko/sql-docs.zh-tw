@@ -16,10 +16,10 @@ ms.assetid: 6dc1273c-bb42-414f-8e11-bb4673e7423a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f8e01c04e8d64ea73a9c89783781c54f40f2d517
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971260"
 ---
 # <a name="sqlserverdriver-constructor-"></a>SQLServerDriver 建構函式 ()

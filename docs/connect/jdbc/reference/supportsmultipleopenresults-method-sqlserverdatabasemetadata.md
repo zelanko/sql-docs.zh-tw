@@ -16,16 +16,16 @@ ms.assetid: 9480d280-5e3d-46ae-80e6-1bba3ac5a641
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73eab48ff558a5a93eb64b3a9a908914003b579e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969261"
 ---
 # <a name="supportsmultipleopenresults-method-sqlserverdatabasemetadata"></a>supportsMultipleOpenResults 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取值，此值指出是否可以同時擁有多個從 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 物件傳回的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
+  擷取值，此值指出是否可以同時擁有多個從 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件傳回的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 物件。  
   
 ## <a name="syntax"></a>語法  
   

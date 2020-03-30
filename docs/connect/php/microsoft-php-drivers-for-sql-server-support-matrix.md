@@ -11,10 +11,10 @@ author: David-Engel
 ms.author: genemi
 manager: ''
 ms.openlocfilehash: c542a77c3a7cfbbe9c54786116e3e9e800a3dda0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76917812"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP Drivers for SQL Server 支援對照表
@@ -132,7 +132,7 @@ Microsoft PHP Driver 不提供延長支援與自訂支援選項。
 |macOS El Capitan (64 位元)           |   |   |Y  |Y  |Y  |   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-<sup>1</sup> Alpine Linux 支援針對 5.8 版為實驗性。
+<sup>1</sup> 5.8 版的 Alpine Linux 支援是實驗性的。
 
 ## <a name="see-also"></a>另請參閱
 

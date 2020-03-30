@@ -9,10 +9,10 @@ ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0b90397a154836f41659aba858f55e28502e2741
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77082424"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>規劃地圖報表 (報表產生器及 SSRS)
@@ -21,7 +21,7 @@ ms.locfileid: "77082424"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="MapPurpose"></a> 指定地圖的用途  
+##  <a name="specify-the-purpose-of-the-map"></a><a name="MapPurpose"></a> 指定地圖的用途  
  良好的報表設計會提供可協助使用者採取行動來處理問題的資訊。 若要建立實用、容易理解的地圖顯示，請決定您希望地圖協助回答的問題。 例如，您可以在地圖上視覺化下列類型的資料來識別市場商機：  
   
 -   每個商店的相對銷售額。  
@@ -34,7 +34,7 @@ ms.locfileid: "77082424"
   
  在您識別地圖顯示的用途之後，必須分析您所需的資料。 分析資料來自報表資料集。 位置資料來自您必須指定的空間資料來源。  
   
-##  <a name="Data"></a> 指定空間資料與分析資料  
+##  <a name="specify-the-spatial-and-analytical-data"></a><a name="Data"></a> 指定空間資料與分析資料  
  您必須指定所需的空間資料與分析資料。  
   
  分析資料來自報表資料集、隨附在來自地圖庫之地圖的範例資料，或隨附在 ESRI 形狀檔之空間資料的分析資料。  
@@ -92,7 +92,7 @@ ms.locfileid: "77082424"
   
  當您已經識別空間資料來源、空間資料、分析資料來源、分析資料，以及符合欄位之後，您就可以決定要加入至您報表之地圖的類型。  
   
-##  <a name="MapType"></a> 選擇地圖類型  
+##  <a name="choose-a-map-type"></a><a name="MapType"></a> 選擇地圖類型  
  當您執行「地圖精靈」時，您會將地圖和第一個地圖圖層加入至報表。 此精靈可讓您將下列其中一個類型的地圖加入至報表中：  
   
 -   顯示沒有相關分析資料之位置的基本地圖。  
@@ -118,7 +118,7 @@ ms.locfileid: "77082424"
   
  您可以針對每個圖層分別自訂顯示或資料選項。 如需在執行精靈後自訂地圖的詳細資訊，請參閱 [自訂地圖或地圖圖層的資料和顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)中。  
   
-##  <a name="Legend"></a> 規劃圖例  
+##  <a name="plan-for-legends"></a><a name="Legend"></a> 規劃圖例  
  為協助您的使用者解譯地圖，您可以加入多個地圖圖例、色階，以及距離標尺。 當您設計地圖時，規劃您希望圖例顯示的位置。 您可以指定有關每個圖例的下列資訊：  
   
 -   **圖例位置。** 例如，圖例可以顯示檢視區內部或外部，以及相對於檢視區的 12 個離散位置。  
@@ -135,7 +135,7 @@ ms.locfileid: "77082424"
   
  如需詳細資訊，請參閱[使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md) 和[變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
   
-##  <a name="Embedding"></a> 平衡報表定義大小與報表處理時間  
+##  <a name="balance-report-definition-size-and-report-processing-time"></a><a name="Embedding"></a> 平衡報表定義大小與報表處理時間  
  對於地圖而言，良好的報表設計會要求您平衡控制報表效能與報表定義大小的選項。 以空間資料或 Bing 地圖底圖為基礎的地圖元素可以是靜態的，而且內嵌在報表定義中，或者是動態的，而且在每次處理報表時建立。 您必須評估靜態或動態地圖資料的權衡得失，並找出適合您狀況的平衡點。 請考量下列資訊再做決定：  
   
 -   內嵌的地圖元素可能會大幅增加報表定義的大小，但是會減少檢視報表中之地圖所需的時間。 您的報表伺服器可能有需要處理的大小限制。  

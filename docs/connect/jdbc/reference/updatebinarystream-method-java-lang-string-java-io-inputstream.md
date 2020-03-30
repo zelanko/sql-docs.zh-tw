@@ -11,10 +11,10 @@ ms.assetid: 56883144-26a0-4f45-ad36-4f616369af3e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc247cd3f97aeebeb6f52e1b4f3f36d8d97f6548
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67997156"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream"></a>updateBinaryStream 方法 (java.lang.String, java.io.InputStream)
@@ -43,7 +43,7 @@ public void updateBinaryStream(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 此 updateBinaryStream 方法是由 java.sql.ResultSet 介面中的 updateBinaryStream 方法所指定。  
+ 這個 updateBinaryStream 方法是由 java.sql.ResultSet 介面中的 updateBinaryStream 方法指定。  
   
  使用這個方法來處理 **image**、**text** 和 **ntext** 等 SQL Server 資料類型，可能會影響到效能。  
   

@@ -16,10 +16,10 @@ ms.assetid: 7740d17d-282f-4f1d-91f9-c68a873b069a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba6c81bb3ce7760427388032cf9a8b216ce06d6e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998601"
 ---
 # <a name="updateref-method-javalangstring-javasqlref"></a>updateRef 方法 (java.lang.String, java.sql.Ref)

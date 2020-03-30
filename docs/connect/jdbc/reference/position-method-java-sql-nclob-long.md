@@ -11,16 +11,16 @@ ms.assetid: f2354278-d128-4cf4-a170-22c05fcb763b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ea868190b635a9471bfad424d6fc74572970799b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976358"
 ---
 # <a name="position-method-javasqlnclob-long"></a>position 方法 (java.sql.NClob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取指定 **NClob** 物件 *searchstr* 出現在此 **NClob** 物件中的字元位置。  
+  擷取指定 **NClob** 物件 *searchstr* 出現在此 **NClob** 物件中的位置。  
   
 ## <a name="syntax"></a>語法  
   

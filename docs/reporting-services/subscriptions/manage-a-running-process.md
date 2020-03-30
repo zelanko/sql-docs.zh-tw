@@ -26,10 +26,10 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6eeec8517b9b55e30eb51abc25fefed0b36b2a79
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579008"
 ---
 # <a name="manage-a-running-process"></a>管理執行中的處理序
@@ -64,7 +64,7 @@ ms.locfileid: "65579008"
   
 -   [以程式設計方式管理作業](#bkmk_programmatically)  
   
-##  <a name="bkmk_native"></a> 檢視和取消作業 (原生模式)  
+##  <a name="view-and-cancel-jobs-native-mode"></a><a name="bkmk_native"></a> 檢視和取消作業 (原生模式)  
  您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來檢視或取消在報表伺服器上執行的作業。 您必須重新整理頁面，以便擷取目前正在執行之作業的清單，或從報表伺服器資料庫取得最新的作業狀態。 當您在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中連接至報表伺服器時，可以開啟 [作業] 資料夾來檢視報表伺服器電腦上目前正在處理之報表的清單。 每項作業的狀態資訊都會顯示在 [作業屬性] 頁面中。 您可以透過開啟 [取消報表伺服器作業] 對話方塊，檢視所有作業的狀態資訊。  
   
  您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來檢視或取消在報表伺服器上執行的作業。 您必須重新整理頁面，以便擷取目前正在執行之作業的清單，或從報表伺服器資料庫取得最新的作業狀態。 當您在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中連接至報表伺服器時，可以開啟 [作業] 資料夾來檢視報表伺服器電腦上目前正在處理之報表的清單。 每項作業的狀態資訊都會顯示在 [作業屬性] 頁面中。 您可以透過開啟 [取消報表伺服器作業] 對話方塊，檢視所有作業的狀態資訊。  
@@ -98,7 +98,7 @@ ms.locfileid: "65579008"
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>設定擷取作業狀態的頻率設定  
  執行中的作業會儲存在報表伺服器的暫存資料庫中。 您可以修改 RSReportServer.config 檔案中的組態設定，以控制報表伺服器掃描進行中作業的頻率，和執行中作業的狀態要等候多久才會從新的變更為執行中。 **RunningRequestsDbCycle** 設定會指定報表伺服器掃描執行中處理序的頻率。 依預設，每 60 秒就會記錄狀態資訊。 **RunningRequestsAge** 設定會指定作業從新的轉換為執行中的間隔。  
   
-##  <a name="bkmk_sharepoint"></a> 檢視和取消作業 (SharePoint 模式)  
+##  <a name="view-and-cancel-jobs-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> 檢視和取消作業 (SharePoint 模式)  
  使用 SharePoint 管理中心，為每個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式完成 SharePoint 模式部署中的作業管理。  
   
 #### <a name="to-manage-jobs-in-sharepoint-mode"></a>若要管理 SharePoint 模式下的作業  
@@ -113,7 +113,7 @@ ms.locfileid: "65579008"
   
 5.  或按一下適用於您作業的方塊，然後按一下 **[刪除]** 以取消作業。 刪除作業並不會刪除訂閱。  
   
-##  <a name="bkmk_programmatically"></a> 以程式設計方式管理作業  
+##  <a name="managing-jobs-programmatically"></a><a name="bkmk_programmatically"></a> 以程式設計方式管理作業  
  您可以用程式設計方式或利用指令碼來管理作業。 如需詳細資訊，請參閱 <xref:ReportService2010.ReportingService2010.ListJobs%2A>和 <xref:ReportService2010.ReportingService2010.CancelJob%2A>。  
   
 ## <a name="see-also"></a>另請參閱  

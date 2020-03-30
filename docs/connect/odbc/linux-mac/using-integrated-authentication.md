@@ -13,10 +13,10 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 034df879dc79f920219a43e2faaaf0e3ac4fc17b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68008698"
 ---
 # <a name="using-integrated-authentication"></a>使用整合式驗證
@@ -34,7 +34,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 使用 DSN 連線時，您也可以將 **Trusted_Connection = yes** 新增至 `odbc.ini` 中的 DSN 項目。
   
-`sqlcmd` 的 `-E` 選項和 `bcp` 的 `-T` 選項也可以用來指定整合式驗證；如需詳細資訊，請參閱[使用 **sqlcmd** 進行連線](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)和[使用 **bcp** 進行連線](../../../connect/odbc/linux-mac/connecting-with-bcp.md)。
+`-E` 的 `sqlcmd` 選項和 `-T` 的 `bcp` 選項也可以用來指定整合式驗證；如需詳細資訊，請參閱[使用 **sqlcmd** 進行連線](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)和[使用 **bcp** 進行連線](../../../connect/odbc/linux-mac/connecting-with-bcp.md)。
 
 請確定要連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的用戶端主體已經過 Kerberos KDC 驗證。
   
@@ -87,10 +87,10 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
 在設定整合式驗證之後，認證將會傳遞至連結的伺服器。  
   
 ## <a name="integrated-authentication-and-sqlcmd"></a>整合式驗證和 sqlcmd
-若要使用整合驗證存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請使用 `sqlcmd` 的 `-E` 選項。 請確定執行 `sqlcmd` 的帳戶與預設的 Kerberos 用戶端主體建立關聯。
+若要使用整合驗證存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請使用 `-E` 的 `sqlcmd` 選項。 請確定執行 `sqlcmd` 的帳戶與預設的 Kerberos 用戶端主體建立關聯。
 
 ## <a name="integrated-authentication-and-bcp"></a>整合式驗證和 bcp
-若要使用整合驗證存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請使用 `bcp` 的 `-T` 選項。 請確定執行 `bcp` 的帳戶與預設的 Kerberos 用戶端主體建立關聯。 
+若要使用整合驗證存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請使用 `-T` 的 `bcp` 選項。 請確定執行 `bcp` 的帳戶與預設的 Kerberos 用戶端主體建立關聯。 
   
 `-T` 與 `-U` 或 `-P` 選項搭配使用是錯誤的。
   
@@ -104,7 +104,7 @@ SPN 在連接字串或連線屬性中使用的語法如下：
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>使用 Active Directory 驗證 Linux 或 macOS 電腦
 
-若要設定 Kerberos，請輸入資料到 `krb5.conf` 檔案。 `krb5.conf` 位於 `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf` 中，但是您可以使用語法範例 `/etc/` 參考另一個檔案。 下列為 `krb5.conf` 檔案範例：  
+若要設定 Kerberos，請輸入資料到 `krb5.conf` 檔案。 `krb5.conf` 位於 `/etc/` 中，但是您可以使用語法範例 `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf` 參考另一個檔案。 下列為 `krb5.conf` 檔案範例：  
   
 ```  
 [libdefaults]  

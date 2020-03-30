@@ -9,10 +9,10 @@ ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d506c15c1cc0a9bf2e4d414210b769c02556a32a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081405"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server Parallel Data Warehouse 連接類型 (SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "77081405"
   
  您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱 [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
-##  <a name="Connection"></a> 連接字串  
+##  <a name="connection-string"></a><a name="Connection"></a> 連接字串  
  當您連接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]時，是連接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 應用裝置內的資料庫物件。 您會指定在查詢設計工具中使用的資料庫物件。 如果您未在連接字串中指定資料庫，則會連接到管理員指派給您的預設資料庫。 請洽詢資料庫管理員，以取得用來連接資料來源的連接資訊和認證。 下列連接字串範例會指定 **應用裝置中的範例資料庫**CustomerSales [!INCLUDE[ssDW](../../includes/ssdw-md.md)] ：  
   
 ```  
@@ -39,7 +39,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  如需連接字串範例的詳細資訊，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
-##  <a name="Credentials"></a> 認證  
+##  <a name="credentials"></a><a name="Credentials"></a> 認證  
  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 採用內建的安全性技術來實作及儲存使用者名稱和密碼。 您無法使用 Windows 驗證。 如果您嘗試使用 Windows 驗證連接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] ，就會發生錯誤。  
   
  您必須有足夠的認證才能存取資料庫。 根據查詢而定，您可能還需要其他權限，例如存取資料表和檢視表的足夠權限。 外部資料來源的擁有者必須設定認證，而這些認證必須足以提供您所需資料庫物件的唯讀存取權。  
@@ -53,7 +53,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
  如需詳細資訊，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[指定報表資料來源的認證及連接資訊](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
   
-##  <a name="Query"></a> 查詢  
+##  <a name="queries"></a><a name="Query"></a> 查詢  
  查詢會指定要為報表資料集擷取的資料。  
   
  查詢結果集中的資料行會填入資料集的欄位集合。 如果查詢傳回多個結果集，報表只會處理查詢擷取的第一個結果集。 根據預設，如果您建立新查詢或開啟現有查詢，而查詢可在圖形化查詢設計工具中表示，就可使用關聯式查詢設計工具。 您可以利用下列方式指定查詢：  
@@ -80,7 +80,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  如需 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的詳細資訊，請參閱 [Transact-SQL 參考 &#40;資料庫引擎&#41;](../../t-sql/transact-sql-reference-database-engine.md)。  
   
-###  <a name="QueryText"></a> 使用 Text 查詢類型  
+###  <a name="using-query-type-text"></a><a name="QueryText"></a> 使用 Text 查詢類型  
  在以文字為基礎的查詢設計工具中，您可以輸入 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 命令來定義資料集內的資料。 您用來從 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 擷取資料的查詢，與用來從不是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應用程式中執行之 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 執行個體擷取資料的查詢相同。 例如，下列 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 查詢會選取所有行銷助理員工的名字：  
   
 ```  
@@ -105,7 +105,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
  當您執行查詢時，會自動建立與查詢參數對應的報表參數。 如需詳細資訊，請參閱本主題稍後的 [查詢參數](#Parameters) 。  
   
   
-##  <a name="Parameters"></a> 參數  
+##  <a name="parameters"></a><a name="Parameters"></a> 參數  
  當查詢文字包含具有輸入參數的查詢變數或預存程序時，會自動產生資料集的對應查詢參數和報表的報表參數。 查詢文字的查詢變數不能包含 DECLARE 陳述式。  
   
  例如，下列 SQL 查詢會建立名為 **EmpID**的報表參數：  
@@ -119,13 +119,13 @@ WHERE EmployeeID = (@EmpID)
  根據預設，每個報表參數的資料類型為 Text，並具有自動建立的資料集，以提供可用值的下拉式清單。 建立報表參數後，您可能必須變更預設值。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
   
   
-##  <a name="Remarks"></a> 備註  
+##  <a name="remarks"></a><a name="Remarks"></a> 備註  
   
 ###### <a name="platform-and-version-information"></a>平台和版本資訊  
  如需平台與版本支援的詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
   
-##  <a name="HowTo"></a> 如何主題  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 如何主題  
  本節包含使用資料連接、資料來源與資料集的逐步指示。  
   
  [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
@@ -135,13 +135,13 @@ WHERE EmployeeID = (@EmpID)
  [將篩選加入資料集中 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a> 相關章節  
+##  <a name="related-sections"></a><a name="Related"></a> 相關章節  
  本文件集的這些章節會提供報表資料的深入概念性資訊，以及如何定義、自訂和使用與報表資料相關組件的程序資訊。  
   
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供存取報表資料的概觀。  
   
- [建立資料連接字串 - 報表產生器及 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [建立資料連接字串 - 報表產生器 & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  提供資料連接與資料來源的相關資訊。  
   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

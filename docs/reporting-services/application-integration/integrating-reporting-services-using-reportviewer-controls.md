@@ -14,10 +14,10 @@ ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1ce8530e2f7afb998c14838efb91c93d0b1cae3c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74796859"
 ---
 # <a name="integrate-reporting-services-using-report-viewer-controls"></a>使用報表檢視器控制項整合 Reporting Services

@@ -11,15 +11,15 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 60160fe3f36d61364b8bf4385fa53b744f9a3475
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286592"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>逐步解說：使用自訂測試條件來驗證預存程序的結果
 
-在這個延伸模組功能逐步解說中，您將建立測試條件，並透過建立 SQL Server 單元測試來驗證其功能。 此程序包含建立測試條件的類別庫專案，以及簽署及安裝專案。 若您已經有要更新的測試條件，請參閱[如何：將 Visual Studio 2010 自訂測試條件從舊版升級至 SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)。  
+在這個延伸模組功能逐步解說中，您將建立測試條件，並透過建立 SQL Server 單元測試來驗證其功能。 此程序包含建立測試條件的類別庫專案，以及簽署及安裝專案。 如果您已經擁有想要更新的測試條件，請參閱[如何：將 Visual Studio 2010 自訂測試條件從舊版升級至 SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)。  
   
 本逐步解說將說明下列工作：  
   
@@ -54,7 +54,7 @@ ms.locfileid: "79286592"
   
 2.  在 [簽署]  索引標籤上，選取 [簽署組件]  核取方塊。  
   
-3.  在 [選擇強式名稱金鑰檔]  方塊中，按一下 [\<新增...>]  。  
+3.  在 [選擇強式名稱金鑰檔]  方塊中，按一下 [**新增...>]\<** 。  
   
     [建立強式名稱金鑰]  對話方塊隨即出現。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "79286592"
   
 6.  按一下 [專案]  功能表上的 [卸載專案]  。  
   
-7.  在 [方案總管]  中，以滑鼠右鍵按一下專案，然後選擇 [編輯 <project name>.csproj]  。  
+7.  在 [方案總管]  中，以滑鼠右鍵按一下專案，然後選擇 [編輯 **.csproj]<project name>** 。  
   
 8.  匯入 **Microsoft.CSharp.targets** 之後，新增下列 Import 陳述式：  
   
@@ -121,7 +121,7 @@ ms.locfileid: "79286592"
     public class ResultSetColumnCountCondition : TestCondition  
     ```  
   
-5.  新增 [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx)。 請參閱[如何：為 SQL Server 單元測試設計工具建立測試條件](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)，以取得 UnitTesting.Conditions.ExportTestConditionAttribute 的詳細資訊。  
+5.  新增 [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx)。 如需 UnitTesting.Conditions.ExportTestConditionAttribute 的詳細資訊，請參閱[如何：建立 SQL Server 單元測試設計工具的測試條件](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)。  
   
     ```  
     [ExportTestCondition("ResultSet Column Count", typeof(ResultSetColumnCountCondition))]  
@@ -344,7 +344,7 @@ namespace ColumnCountCondition
   
 接下來，建置專案。  
   
-## <a name="xxx"></a>編譯專案及安裝測試條件  
+## <a name="compiling-the-project-and-installing-your-test-condition"></a><a name="xxx"></a>編譯專案及安裝測試條件  
 在 [建置]  功能表上，按一下 [建置方案]  。  
   
 接下來，將組件資訊複製到 Extensions 目錄。 當 Visual Studio 啟動時，會識別 %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions 目錄和子目錄中的任何延伸模組，並讓這些延伸模組可供使用：  
@@ -375,13 +375,13 @@ namespace ColumnCountCondition
   
 3.  在 [測試名稱]  中，輸入 **SampleUnitTest**。  
   
-4.  在 [加入至測試專案]  ，按一下 [建立新的 Visual C\# 測試專案]  。 然後按一下 [確定]  以顯示 [新增測試專案]  對話方塊。  
+4.  在 [加入至測試專案]  ，按一下 [建立新的 Visual C **測試專案]\#** 。 然後按一下 [確定]  以顯示 [新增測試專案]  對話方塊。  
   
 5.  輸入 **SampleUnitTest** 作為專案名稱。  
   
 6.  按一下 [取消]  即可建立單元測試，而不設定測試專案使用資料庫連線。 您的空白測試會出現在「SQL Server 單元測試設計工具」中。 Visual C\# 原始程式碼檔會加入至測試專案。  
   
-    如需使用資料庫連線建立及設定資料庫單元測試的詳細資訊，請參閱[如何：建立空白 SQL Server 單元測試](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)。  
+    如需建立和設定資料庫單元測試與資料庫連線的詳細資訊，請參閱[如何：建立空白 SQL Server 單元測試](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)。  
   
 7.  按一下 [按一下此處以建立]  以完成建立單元測試。 您會看到新的測試條件顯示在 SQL Server 專案中。  
   
@@ -400,7 +400,7 @@ namespace ColumnCountCondition
   
 5.  在 [屬性]  視窗中，設定 Count、Enabled 和 ResultSet 屬性。  
   
-    如需詳細資訊，請參閱[如何：將測試條件新增至 SQL Server 單元測試](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)。  
+    如需詳細資訊，請參閱[如何：將測試條件加入至 SQL Server 單元測試](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [SQL Server 單元測試的自訂測試條件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  

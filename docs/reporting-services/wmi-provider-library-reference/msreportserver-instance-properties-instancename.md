@@ -16,10 +16,10 @@ ms.assetid: 98ab86fd-ed94-4cda-9c68-047d589bdea6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 966ab7aeaa4d1bb27fdaae8d4f452e6dffc4a269
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65569110"
 ---
 # <a name="msreportserver_instance-properties---instancename"></a>MSReportServer_Instance 屬性 - InstanceName

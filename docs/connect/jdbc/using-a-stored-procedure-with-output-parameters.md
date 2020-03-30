@@ -11,10 +11,10 @@ ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: efafaa709666620e7237f2481c392aba25dfd5f8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026827"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>使用含輸出參數的預存程序
@@ -23,7 +23,7 @@ ms.locfileid: "69026827"
 
 您可以呼叫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序是會傳回一或多個 OUT 參數的預存程序，預存程序會使用這些參數將資料傳回給呼叫端應用程式。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別，您可以使用此類別呼叫這類型的預存程序並處理其傳回的資料。
 
-使用 JDBC 驅動程式呼叫這類型的預存程序時，必須搭配使用 `call` SQL 逸出序列與 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法。 含有 OUT 參數之 `call` 逸出序列的語法如下：
+使用 JDBC 驅動程式呼叫這類型的預存程序時，必須搭配使用 `call` SQL 逸出序列與 [SQLServerConnection](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 類別的 [prepareCall](../../connect/jdbc/reference/sqlserverconnection-class.md) 方法。 含有 OUT 參數之 `call` 逸出序列的語法如下：
 
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 

@@ -16,10 +16,10 @@ ms.assetid: 5314cee7-fef0-47fc-bfb4-284b8700d612
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d91821957a2e33238238ca17af60b88bb15dcab
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955428"
 ---
 # <a name="concur_ss_optimistic_ccval-field-sqlserverresultset"></a>CONCUR_SS_OPTIMISTIC_CCVAL 欄位 (SQLServerResultSet)

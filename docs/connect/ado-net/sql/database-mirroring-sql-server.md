@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: c7ace2feb39bcc3f5f257c0ac2c7360649cfc33c
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78897003"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server 中的資料庫鏡像
@@ -48,7 +48,7 @@ SQL Server 中的資料庫鏡像可讓您將 SQL Server 資料庫的複本或鏡
 >  您必須在資料庫鏡像案例的連接字串中，明確指定初始目錄或資料庫名稱。 如果用戶端在沒有明確指定初始目錄或資料庫的連線上收到容錯移轉資訊，則不會快取該容錯移轉資訊，且應用程式在主體伺服器失敗時不會嘗試容錯移轉。 如果連接字串內含容錯移轉夥伴的值，但是沒有初始目錄或資料庫的值，就會引發 `InvalidArgumentException`。  
   
 ## <a name="retrieving-the-current-server-name"></a>擷取目前的伺服器名稱  
-萬一發生容錯移轉，您可以使用 <xref:Microsoft.Data.SqlClient.SqlConnection> 物件的 <xref:Microsoft.Data.SqlClient.SqlConnection.DataSource%2A> 屬性，擷取目前連線實際連接的伺服器名稱。 假設連接變數參考已開啟的 <xref:Microsoft.Data.SqlClient.SqlConnection>，下列程式碼片段就會擷取使用中伺服器的名稱。  
+萬一發生容錯移轉，您可以使用 <xref:Microsoft.Data.SqlClient.SqlConnection.DataSource%2A> 物件的 <xref:Microsoft.Data.SqlClient.SqlConnection> 屬性，擷取目前連線實際連接的伺服器名稱。 假設連接變數參考已開啟的 <xref:Microsoft.Data.SqlClient.SqlConnection>，下列程式碼片段就會擷取使用中伺服器的名稱。  
   
 當發生容錯移轉事件且連線切換到鏡像伺服器時，**DataSource** 屬性會更新以反映鏡像名稱。  
   

@@ -11,10 +11,10 @@ ms.assetid: 0de4995c-85ec-4d4c-aaef-fbd30edfb20f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8ad3c0bb7ea7700f457cfaa9e7cb08684624dc73
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571541"
 ---
 # <a name="run-a-reporting-services-script-file"></a>執行 Reporting Services 指令碼檔案

@@ -21,10 +21,10 @@ ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6d9f3675a2bbd2af5d33452c0dccbb46d0596d85
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75230193"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>AlwaysOn 容錯移轉叢集執行個體 (SQL Server)
@@ -53,7 +53,7 @@ ms.locfileid: "75230193"
   
 -   [相關主題](#RelatedTopics)  
   
-##  <a name="Benefits"></a> 容錯移轉叢集執行個體的優點  
+##  <a name="benefits-of-a-failover-cluster-instance"></a><a name="Benefits"></a> 容錯移轉叢集執行個體的優點  
  伺服器的硬體故障或軟體失敗時，連接至伺服器的應用程式或用戶端可能會停機。 當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體設定成 FCI (而不是獨立執行個體) 時，該 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的高可用性會受到 FCI 中存在的重複節點保護。 在任何時候，FCI 中僅其中一個節點擁有 WSFC 資源群組。 如果發生失敗 (硬體故障、作業系統失敗、應用程式或服務失敗) 或進行計畫的升級，資源群組擁有權就會移至另一個 WSFC 節點。 此程序對連接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的用戶端或應用程式而言是透明的，而且會將應用程式或用戶端在失敗期間遭遇停機時間的機會降到最低。 下面列出 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體所提供的一些主要優點：  
   
 -   透過備援性在執行個體層級提供保護  
@@ -77,10 +77,10 @@ ms.locfileid: "75230193"
   
 -   在容錯移轉期間節流的資源使用情況  
   
-##  <a name="Recommendations"></a> 建議  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
  在實際執行環境中，我們建議您搭配容錯移轉叢集執行個體的虛擬 IP 位址使用靜態 IP 位址。  我們建議您不要在實際執行環境中使用 DHCP。 在停機時，如果 DHCP IP 租用過期，則需要額外的時間來重新註冊與 DNS 名稱相關聯的新 DHCP IP 位址。  
   
-##  <a name="Overview"></a> 容錯移轉叢集執行個體概觀  
+##  <a name="failover-cluster-instance-overview"></a><a name="Overview"></a> 容錯移轉叢集執行個體概觀  
  FCI 在具有一個或多個 WSFC 節點的 WSFC 資源群組中執行。 當 FCI 啟動時，其中一個節點會取得資源群組擁有權，並使其 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上線。 此節點所擁有的資源包括：  
   
 -   網路名稱  
@@ -125,7 +125,7 @@ ms.locfileid: "75230193"
   
  如需詳細資訊，請參閱＜ [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)＞  
   
-##  <a name="FCIelements"></a> 容錯移轉叢集執行個體的元素  
+##  <a name="elements-of-a-failover-cluster-instance"></a><a name="FCIelements"></a> 容錯移轉叢集執行個體的元素  
  FCI 是由一組實體伺服器 (節點) 所組成，包含相似硬體組態和相同軟體組態，包括作業系統版本和修補程式等級，以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本、修補程式等級、元件和執行個體名稱。 需要相同軟體組態，以確保 FCI 在節點之間容錯移轉時可完整運作。  
   
  WSFC 資源群組  
@@ -143,7 +143,7 @@ ms.locfileid: "75230193"
  虛擬 IP  
  在多重子網路 FCI 的情況下，FCI 中的每個子網路會被指派一個虛擬 IP 位址。 在容錯移轉期間，DNS 伺服器上的 VNN 會更新，以指向各自子網路的虛擬 IP 位址。 在多重子網路容錯移轉後，應用程式和用戶端可以使用相同 VNN 連接到 FCI。  
   
-##  <a name="ConceptsAndTasks"></a> SQL Server 容錯移轉概念和工作  
+##  <a name="sql-server-failover-concepts-and-tasks"></a><a name="ConceptsAndTasks"></a> SQL Server 容錯移轉概念和工作  
   
 |概念和工作|主題|  
 |------------------------|-----------|  
@@ -151,13 +151,13 @@ ms.locfileid: "75230193"
 |描述 FCI 管理和維護的概念。|[容錯移轉叢集執行個體管理及維護](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
 |描述多重子網路組態和概念|[SQL Server 多重子網路叢集 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)|  
   
-##  <a name="RelatedTopics"></a> 相關主題  
+##  <a name="related-topics"></a><a name="RelatedTopics"></a> 相關主題  
   
 |**主題描述**|**主題**|  
 |----------------------------|---------------|  
 |描述如何安裝新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI。|[建立新的 SQL Server 容錯移轉叢集 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |描述如何升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 容錯移轉叢集。|[升級 SQL Server 容錯移轉叢集執行個體](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
-|描述 Windows 容錯移轉叢集概念，並提供 Windows 容錯移轉叢集相關工作的連結|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]:[容錯移轉叢集概觀](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2：[容錯移轉叢集概觀](https://go.microsoft.com/fwlink/?LinkId=177879)|  
+|描述 Windows 容錯移轉叢集概念，並提供 Windows 容錯移轉叢集相關工作的連結|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]： [容錯移轉叢集概觀](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2： [容錯移轉叢集概觀](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |描述 FCI 節點和可用性群組複本之間的概念差異，以及使用 FCI 裝載可用性群組複本的考量。|[容錯移轉叢集和可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   

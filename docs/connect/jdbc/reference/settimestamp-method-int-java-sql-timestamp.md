@@ -16,10 +16,10 @@ ms.assetid: 2f7bb89f-ace7-41cb-b596-5aa8d0dd9e3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8b9d568f5e79ee548c92305378cc7e285c2bb3a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972427"
 ---
 # <a name="settimestamp-method-int-javasqltimestamp"></a>setTimestamp 方法 (int, java.sql.Timestamp)

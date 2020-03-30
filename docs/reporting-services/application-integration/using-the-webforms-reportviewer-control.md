@@ -13,10 +13,10 @@ ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4339aca9735937e8747968b0060ce8eb2a24f486
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198455"
 ---
 # <a name="use-the-webforms-reportviewer-control"></a>使用 WebForms ReportViewer 控制項
@@ -24,7 +24,7 @@ ms.locfileid: "79198455"
   
 ## <a name="to-use-the-reportviewer-control-in-a-web-application"></a>若要在 Web 應用程式中使用 ReportViewer 控制項  
   
-1.  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 建立新的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET 網站。  
+1.  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 或 [!INCLUDE[csprcs](../../includes/csprcs-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建立新的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ASP.NET 網站。  
   
      \- 或 -  
   
@@ -38,7 +38,7 @@ ms.locfileid: "79198455"
   
      名為 reportViewer1 的 **ReportViewer** 控制項會新增至表單。  
   
- 將控制項新增至表單後，[ReportViewer 工作]  智慧標籤將會顯示以提示您選取報表。 如果您希望檢視的報表已部署到報表伺服器，請從 [選擇報表]  下拉式清單，選取 [\<伺服器報表>]  選項。 選取 [\<伺服器報表>]  選項之後，會出現兩個額外屬性：[報表伺服器 URL]  和 [報表路徑]  。 [報表伺服器 URL]  是到報表伺服器的位址，[報表路徑]  則是要轉譯之報表的完整路徑。  
+ 將控制項新增至表單後，[ReportViewer 工作]  智慧標籤將會顯示以提示您選取報表。 如果您希望檢視的報表已部署到報表伺服器，請從 [選擇報表] **\< 下拉式清單，選取 [** 伺服器報表>]  選項。 選取 [**伺服器報表>]\<** 選項之後，會出現兩個額外屬性：[報表伺服器 URL]  和 [報表路徑]  。 [報表伺服器 URL]  是到報表伺服器的位址，[報表路徑]  則是要轉譯之報表的完整路徑。  
   
  如果您要以本機模式檢視報表，請選取 [設計新報表]  選項以啟動報表設計師，或選取已是現有專案一部分的報表。 在您選取報表之後，請務必在 ReportViewer 控制項的 **ReportPath** 屬性中輸入報表 RDLC 檔案的名稱。 這個屬性會出現在 [屬性]  窗格的 **LocalReport** 節點下方。  
   

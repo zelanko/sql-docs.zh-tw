@@ -16,16 +16,16 @@ ms.assetid: 3d4c67c2-a3c8-4a26-a159-89c5d63fda0b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6b8f6239fbc229af009fc9745b0f19ed27e7ee1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979038"
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar"></a>getTime 方法 (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用 Java 程式設計語言以指定的參數名稱，透過指定的 Calendar 物件，擷取指定的參數值作為 java.sql.Time 物件。  
+  使用 Java 程式設計語言以指定的參數名稱，透過指定的 Calender 物件，擷取指定的參數值作為 java.sql.Time 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,10 +42,10 @@ public java.sql.Time getTime(java.lang.String sCol,
   
  *cal*  
   
- 行事曆物件。  
+ Calendar 物件。  
   
 ## <a name="return-value"></a>傳回值  
- 時間物件。  
+ Time 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

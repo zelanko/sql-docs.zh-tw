@@ -14,16 +14,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1cc42a09e455fa42d3f89b05903a22afc945424
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971120"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-streamerror-boolean"></a>SQLServerException 建構函式 (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  當給定 **object**、**string** 物件、**string** 物件、**StreamError** 物件和 **boolean** 時，初始化 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 類別的新執行個體。
+  當給定 [object](../../../connect/jdbc/reference/sqlserverexception-class.md)、**string** 物件、**string** 物件、**StreamError** 物件和 **boolean** 時，初始化 **SQLServerException** 類別的新執行個體。
 
 ## <a name="syntax"></a>語法  
   

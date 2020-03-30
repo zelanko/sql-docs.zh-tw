@@ -1,5 +1,5 @@
 ---
-title: 教學課程：將參數新增至報表 (報表產生器) | Microsoft Docs
+title: 教學課程： 將參數加入至報表 （報表產生器） |Microsoft 文件
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72252134"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教學課程：將參數新增至報表 (報表產生器)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教學課程：將參數加入至報表 (報表產生器)
 在本教學課程中，您可以將參數新增至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表，讓報表讀者可以篩選報表資料中的一或多個值。 
   
 ![report-builder-parameter-tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
@@ -25,12 +25,12 @@ ms.locfileid: "72252134"
 > [!NOTE]  
 > 在本教學課程中，精靈的步驟會合併為一個程序。 如需如何瀏覽至報表伺服器、選擇資料來源以及建立資料集的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
-完成此教學課程的估計時間：25 分鐘。  
+完成本教學課程的估計時間：25 分鐘。  
   
 ## <a name="requirements"></a>需求  
 如需需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="Setup"></a>1.在資料表或矩陣精靈中建立矩陣報表和資料集  
+## <a name="1-create-a-matrix-report-and-dataset-in-the-table-or-matrix-wizard"></a><a name="Setup"></a>1.在資料表或矩陣精靈中建立矩陣報表和資料集  
 建立矩陣報表、資料來源與資料集。  
   
 > [!NOTE]  
@@ -38,7 +38,7 @@ ms.locfileid: "72252134"
   
 ### <a name="to-create-a-new-matrix-report"></a>若要建立新的矩陣報表  
   
-1.  從您的電腦、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 入口網站或 SharePoint 整合模式[啟動報表產生器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  從您的電腦、[ Web 入口網站或 SharePoint 整合模式](../reporting-services/report-builder/start-report-builder.md)啟動報表產生器[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]。  
   
     [新報表或資料集]  對話方塊隨即開啟。  
   
@@ -82,13 +82,13 @@ ms.locfileid: "72252134"
   
 11. 在查詢設計工具工具列上，按一下 [執行]  \( **!** ) 查看資料。   
   
-    結果集包含 11 個資料列，在下列資料行中顯示四家店每個子類別的銷售項目數量：StoreID、Subcategory、Quantity。結果集中沒有商店名稱。 稍後在本教學課程中，您會利用個別資料集查詢對應於商店識別碼的商店名稱。  
+    結果集包含 11 個資料列，這些資料列會顯示四間商店中每個子類別目錄所銷售的項目數量，並包含下列資料行：StoreID、Subcategory、Quantity。商店名稱並不屬於結果集的內容。 稍後在本教學課程中，您會利用個別資料集查詢對應於商店識別碼的商店名稱。  
   
     此查詢並不包含查詢參數。 您稍後將在本教學課程中加入參數。   
   
 12. 按 [下一步]  。  
   
-## <a name="CompleteWizard"></a>2.在精靈中組織資料並選擇配置  
+## <a name="2-organize-data-and-choose-layout-in-the-wizard"></a><a name="CompleteWizard"></a>2.在精靈中組織資料並選擇配置  
 此精靈提供用於顯示資料的起始設計。 精靈中的預覽窗格可協助您在完成資料表或矩陣設計之前，先視覺化群組資料的結果。  
   
 ### <a name="to-organize-data-into-groups"></a>若要將資料組織為群組  
@@ -127,7 +127,7 @@ ms.locfileid: "72252134"
   
 到目前為止，資料行標題會顯示商店識別碼，而非商店名稱。 稍後，您會加入運算式，在包含商店識別碼/商店名稱組的資料集中，查詢商店名稱。  
   
-## <a name="Query"></a>3.加入查詢參數來建立報表參數  
+## <a name="3-add-a-query-parameter-to-create-a-report-parameter"></a><a name="Query"></a>3.加入查詢參數來建立報表參數  
 當您將查詢參數加入至查詢時，報表產生器會自動建立一個單一值報表參數，其中包含名稱、提示與資料類型的預設屬性。  
   
 ### <a name="to-add-a-query-parameter"></a>若要加入查詢參數  
@@ -162,7 +162,7 @@ ms.locfileid: "72252134"
   
 看不到 [參數] 窗格嗎？ 在 [檢視]  功能表上，選取 [參數]  。  
   
-## <a name="ChangeDefaultProperties"></a>4.變更報表參數的預設資料類型和其他屬性  
+## <a name="4-change-default-data-type-and-other-properties-for-a-report-parameter"></a><a name="ChangeDefaultProperties"></a>4.變更報表參數的預設資料類型和其他屬性  
 在您建立報表參數之後，即可調整屬性的預設值。  
   
 ### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>若要變更報表參數的預設資料類型  
@@ -179,13 +179,13 @@ ms.locfileid: "72252134"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  按一下 **[執行]** 預覽報表。 報表檢視器會針對 *\@StoreID* 顯示 [商店識別碼？]  提示。  
+6.  按一下 **[執行]** 預覽報表。 報表檢視器會針對  StoreID *顯示 [商店識別碼？]\@* 提示。  
   
 7.  在報表檢視器工具列上，就在 Store ID 旁，輸入 **200**，然後按一下 **[檢視報表]** 。  
   
 ![SSRB_ParamTutStoreID](../reporting-services/media/ssrb-paramtutstoreid.png)  
   
-## <a name="AddDataset"></a>4a. 加入資料集來提供可用值與顯示名稱  
+## <a name="4a-add-a-dataset-to-provide-available-values-and-display-names"></a><a name="AddDataset"></a>4a. 加入資料集來提供可用值與顯示名稱  
 為了確保您的報表讀取器僅輸入有效的參數值，您可以建立列出多個值的下拉式清單，供使用者選擇。 這些值可以取自資料集或是根據您另外指定的清單。 可用的值必須透過資料集提供，且該資料集具有不含參數參考的查詢。  
   
 ### <a name="to-create-a-dataset-for-valid-values-for-a-parameter"></a>建立資料集以提供有效的參數值  
@@ -215,7 +215,7 @@ ms.locfileid: "72252134"
   
     [報表資料] 窗格會在 **Stores** 資料集節點下顯示 StoreID 和 StoreName 欄位。  
   
-## <a name="AvailableValues"></a>4b. 指定要以清單顯示的可用值 
+## <a name="4b-specify-available-values-to-show-in-a-list"></a><a name="AvailableValues"></a>4b. 指定要以清單顯示的可用值 
 建立資料集來提供可用的值之後，可以變更報表屬性，以指定要用於填入 [報表檢視器] 工具列中有效下拉式清單值的資料集與欄位。  
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>若要從資料集提供可用的參數值  
@@ -246,7 +246,7 @@ ms.locfileid: "72252134"
   
 報表會針對商店識別碼 **200**顯示 Accessories、Camcorders 與 Digital SLR Cameras 售出的數量。  
   
-## <a name="DefaultValues"></a>4c. 指定預設值 
+## <a name="4c-specify-a-default-value"></a><a name="DefaultValues"></a>4c. 指定預設值 
 您可以指定每一個參數的預設值，讓報表能夠自動執行。  
   
 ### <a name="to-specify-a-default-value-from-a-dataset"></a>若要從資料集指定預設值  
@@ -283,7 +283,7 @@ ms.locfileid: "72252134"
   
 針對 *\@StoreID*,，報表檢視器會顯示 "Contoso Catalog Store"，因為這是商店識別碼 **200** 的顯示名稱。 報表會針對商店識別碼 **200**顯示 Accessories、Camcorders 與 Digital SLR Cameras 售出的數量。  
   
-## <a name="NameValue"></a>4d. 查閱名稱/值組  
+## <a name="4d-look-up-a-namevalue-pair"></a><a name="NameValue"></a>4d. 查閱名稱/值組  
 資料集可能同時包含識別碼與對應的名稱欄位。 如果您只有識別碼，那麼可以查詢包含名稱/值組之資料集 (您先前建立) 中的對應名稱。  
   
 ### <a name="to-look-up-a-value-from-a-dataset"></a>若要從資料集查詢值  
@@ -308,13 +308,13 @@ ms.locfileid: "72252134"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    商店的資料行標題包含複雜運算式的顯示文字：**Expr**。  
+    商店資料行標頭包含複雜運算式的顯示文字： **Expr**。  
   
 8.  預覽報表。  
   
 每個資料行頂端的資料行標頭會顯示商店名稱，而非商店識別碼。  
   
-## <a name="Expression"></a>5.在報表中顯示選取的參數值  
+## <a name="5-display-the-selected-parameter-value-in-the-report"></a><a name="Expression"></a>5.在報表中顯示選取的參數值  
 如果報表讀者對報表有任何疑問，這有助於明白先前選擇哪些參數值。 您可以在報表中保留使用者為每一個參數所選取的值。 其中一個方法是在頁尾的文字方塊中顯示參數。  
   
 ### <a name="to-display-the-selected-parameter-value-and-label-on-a-page-footer"></a>若要在頁尾中顯示選取的參數值與標籤  
@@ -335,7 +335,7 @@ ms.locfileid: "72252134"
   
 7.  預覽報表。  
   
-## <a name="Filter"></a>6.在篩選中使用報表參數  
+## <a name="6-use-the-report-parameter-in-a-filter"></a><a name="Filter"></a>6.在篩選中使用報表參數  
 篩選有助於控制在自外部資料來源擷取報表後，要在其中使用哪些資料。 若要讓報表讀者控制他們想要看到的資料，您可以在矩陣的篩選中包含報表參數。  
   
 ### <a name="to-specify-a-parameter-in-a-matrix-filter"></a>若要在矩陣篩選中指定參數  
@@ -364,7 +364,7 @@ ms.locfileid: "72252134"
   
 矩陣會顯示對應於您所選商店的資料。  
   
-## <a name="Multivalued"></a>7.將報表參數變更為可以接受多個值  
+## <a name="7-change-the-report-parameter-to-accept-multiple-values"></a><a name="Multivalued"></a>7.將報表參數變更為可以接受多個值  
 若要將參數由單一值變更為多重值，您必須變更查詢以及所有包含參數參考的所有運算式 (包含篩選)。 多重值參數為值的陣列。 在資料集查詢中，查詢語法必須經過測試，確認值組中包含一個值。 在報表運算式中，運算式語法必須存取值的陣列，而不是單一值。  
   
 ### <a name="to-change-a-parameter-from-single-to-multivalued"></a>將參數由單一值變更為多重值  
@@ -379,7 +379,7 @@ ms.locfileid: "72252134"
   
 5.  在 [報表資料] 窗格中，展開 [資料集]  資料夾，並以滑鼠右鍵按一下 **DataSet1**，然後按一下 [查詢]  。  
   
-6.  在查詢最後一行的 [!INCLUDE[tsql](../includes/tsql-md.md)]**WHERE** 子句中，將**等號** (=) 變更為 **IN**：  
+6.  在查詢最後一行的  WHERE **子句中，將**等號[!INCLUDE[tsql](../includes/tsql-md.md)] (=) 變更為 **IN**：  
   
     ```  
     WHERE StoreID IN (@StoreID)  
@@ -424,7 +424,7 @@ ms.locfileid: "72252134"
     ![report-builder-parameter-multiselect](../reporting-services/media/report-builder-parameter-multiselect.png)
   
  
-## <a name="Boolean"></a>8.加入條件式可見性的布林參數  
+## <a name="8-add-a-boolean-parameter-for-conditional-visibility"></a><a name="Boolean"></a>8.加入條件式可見性的布林參數  
   
 ### <a name="to-add-a-boolean-parameter"></a>新增布林值參數  
   
@@ -468,7 +468,7 @@ ms.locfileid: "72252134"
   
     頁尾中顯示此文字方塊，以顯示您所選取的所有商店名稱。  
   
-## <a name="Title"></a>9.加入報表標題  
+## <a name="9-add-a-report-title"></a><a name="Title"></a>9.加入報表標題  
   
 ### <a name="to-add-a-report-title"></a>若要加入報表標題  
 
@@ -478,7 +478,7 @@ ms.locfileid: "72252134"
   
 2.  輸入「參數化產品銷售」，然後按一下文字方塊外部。  
   
-## <a name="Save"></a>10.儲存報表  
+## <a name="10-save-the-report"></a><a name="Save"></a>10.儲存報表  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>若要將報表儲存在報表伺服器上  
   

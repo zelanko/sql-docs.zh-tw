@@ -16,10 +16,10 @@ ms.assetid: 8c48de91-de55-4f25-a5f1-36a8e8c4629e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: afb317bfcca6ccea14c9a25c98e1c0bfbe29e19f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980496"
 ---
 # <a name="getreference-method-sqlserverconnectionpooldatasource"></a>getReference 方法 (SQLServerConnectionPoolDataSource)
@@ -38,7 +38,7 @@ public javax.naming.Reference getReference()
  Reference 物件。  
   
 ## <a name="remarks"></a>備註  
- 這個 getReference 方法是由 javax.naming.Referenceable 介面中的 getReference 方法指定。 它會覆寫 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 類別的 [getReference](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md) 方法。  
+ 這個 getReference 方法是由 javax.naming.Referenceable 介面中的 getReference 方法指定。 它會覆寫 [SQLServerDataSource](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md) 類別的 [getReference](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 方法。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnectionPoolDataSource 方法](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-methods.md)   

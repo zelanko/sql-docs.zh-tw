@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73843796"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>開始執行啟用資料庫的延展功能精靈
@@ -45,7 +45,7 @@ ms.locfileid: "73843796"
   
 2.  按一下滑鼠右鍵並選取 [工作]  ，然後依序選取 [Stretch]  和 [啟用]  ，來啟動精靈。  
   
-##  <a name="Intro"></a> 簡介  
+##  <a name="introduction"></a><a name="Intro"></a> 簡介  
  檢閱精靈的用途及必要條件。  
  
  以下是重要的必要條件。
@@ -55,7 +55,7 @@ ms.locfileid: "73843796"
   
  ![Stretch Database 精靈的 [簡介] 頁面](../../sql-server/stretch-database/media/stretch-wizard-1.png "Stretch Database 精靈的 [簡介] 頁面")  
   
-##  <a name="Tables"></a> 選取資料表  
+##  <a name="select-tables"></a><a name="Tables"></a> 選取資料表  
  選取想要啟用延伸功能的資料表。  
  
 有大量資料列的資料表會出現在排序清單的頂端。 精靈顯示資料表清單之前，它會針對 Stretch Database 目前不支援的資料類型分析它們。 
@@ -102,7 +102,7 @@ ms.locfileid: "73843796"
   
 -   結束精靈之後，請執行 ALTER TABLE 陳述式來指定篩選函數。 如需必要的步驟，請參閱 [Add a filter function after running the Wizard](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz)(在執行精靈後新增篩選函數)。  
   
-##  <a name="Configure"></a> 設定 Azure  
+##  <a name="configure-azure"></a><a name="Configure"></a> 設定 Azure  
   
 1.  使用 Microsoft 帳戶登入 Microsoft Azure。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "73843796"
   
          ![選取現有的 Azure 伺服器 - Stretch Database 精靈](../../sql-server/stretch-database/media/stretch-wizard-5.png "選取現有的 Azure 伺服器 - Stretch Database 精靈")  
   
-##  <a name="Credentials"></a> 安全認證  
+##  <a name="secure-credentials"></a><a name="Credentials"></a> 安全認證  
  您必須擁有資料庫主要金鑰，才能保護認證安全，Stretch Database 會使用這類認證來連接遠端資料庫。  
   
  如果資料庫主要金鑰已存在，請為其輸入密碼。  
@@ -156,26 +156,26 @@ ms.locfileid: "73843796"
   
  如需資料庫主要金鑰的詳細資訊，請參閱 [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) 和[建立資料庫主要金鑰](../../relational-databases/security/encryption/create-a-database-master-key.md)。 如需精靈所建立之認證的詳細資訊，請參閱 [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。  
   
-##  <a name="Network"></a> 選取 IP 位址  
+##  <a name="select-ip-address"></a><a name="Network"></a> 選取 IP 位址  
  使用子網路 IP 位址範圍 (建議)，或您 SQL Server 的公用 IP 位址，在 Azure 上建立防火牆規則，讓 SQL Server 可與遠端 Azure 伺服器通訊。  
   
  您在此頁面提供的一或多個 IP 位址會告訴 Azure 伺服器，允許 SQL Server 初始的傳入資料、查詢作業通過 Azure 防火牆。 精靈不會在 SQL Server 的防火牆設定中變更任何項目。  
   
  ![ 精靈的 [選取 IP 位址] 頁面](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 精靈的 [選取 IP 位址] 頁面")  
   
-##  <a name="Summary"></a> 摘要  
+##  <a name="summary"></a><a name="Summary"></a> 摘要  
  檢閱您輸入的值、在精靈中選取的選項，以及在 Azure 上估計的成本。 然後選取 [完成]  以啟用 Stretch。  
   
  ![Stretch Database 精靈的 [摘要] 頁面](../../sql-server/stretch-database/media/stretch-wizard-8.png "Stretch Database 精靈的 [摘要] 頁面")  
   
-##  <a name="Results"></a> 結果  
+##  <a name="results"></a><a name="Results"></a> 結果  
  檢閱結果。  
   
  若要監視資料移轉的狀態，請參閱[監視和疑難排解資料移轉 &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)。  
   
  ![Stretch Database 精靈的 [結果] 頁面](../../sql-server/stretch-database/media/stretch-wizard-9.PNG "Stretch Database 精靈的 [結果] 頁面")  
   
-##  <a name="KnownIssues"></a> 疑難排解精靈  
+##  <a name="troubleshooting-the-wizard"></a><a name="KnownIssues"></a> 疑難排解精靈  
  **Stretch Database 精靈失敗。**  
  如果尚未在伺服器層級啟用 Stretch Database，而您在執行精靈來啟用它時未具備系統管理員權限，則精靈會失敗。 請要求系統管理員，在本機伺服器執行個體上啟用 Stretch Database，然後再次執行精靈。 如需詳細資訊，請參閱＜ [必要條件：在伺服器上啟用 Stretch Database 的權限](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)＞。  
   

@@ -17,10 +17,10 @@ ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 6752ecd92795ff2ca6de17f8b3de671e6895482d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252913"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>將現有專案加入方案中

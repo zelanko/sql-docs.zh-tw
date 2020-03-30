@@ -11,10 +11,10 @@ ms.assetid: 630a93b0-6e3c-4255-a007-1097ce0ee243
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3d70c72b860044a7e61b4a6dc5474c465fb60e89
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955390"
 ---
 # <a name="createblob-method-sqlserverconnection"></a>createBlob 方法 (SQLServerConnection)

@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 4e55f9ba41036a5bd0ee806b8b45ee1fde8dc49f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76542123"
 ---
 # <a name="install-packages-with-python-tools-on-sql-server"></a>在 SQL Server 上使用 Python 工具來安裝套件
@@ -58,7 +58,7 @@ ms.locfileid: "76542123"
 
 如果您要在無法存取網際網路的伺服器上安裝 Python 套件，您必須從能夠存取網際網路的電腦下載 WHL 檔案，然後將該檔案複製到伺服器。
 
-例如，在連線到網際網路的電腦上，您可以從 [https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl) 網站下載 `cntk-2.1-cp35-cp35m-win_amd64.whl` 檔案，然後將該檔案複製到 SQL Server 電腦上的本機資料夾。
+例如，在連線到網際網路的電腦上，您可以從 `cntk-2.1-cp35-cp35m-win_amd64.whl`[https://cntk.ai/PythonWheel/CPU-Only 網站下載 ](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl) 檔案，然後將該檔案複製到 SQL Server 電腦上的本機資料夾。
 
 > [!IMPORTANT]
 > 請確定您取得的是套件的 Windows 版本。 如果檔案的結尾是 .gz，則它可能不是正確的版本。
@@ -80,10 +80,10 @@ cd "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES"
 
 ### <a name="install-the-package-using-pip"></a>使用 pip 來安裝套件
 
-使用 **pip** 安裝程式來安裝新的套件。 您可以在 `PYTHON_SERVICES` 資料夾的 `Scripts` 子資料夾中找到 `pip.exe`。 SQL Server 安裝程式不會將 `Scripts` 子資料夾新增至系統路徑，因此您必須指定完整路徑，或者您也可以將 Scripts 資料夾新增至 Windows 中的 PATH 變數。
+使用 **pip** 安裝程式來安裝新的套件。 您可以在 `pip.exe` 資料夾的 `Scripts` 子資料夾中找到 `PYTHON_SERVICES`。 SQL Server 安裝程式不會將 `Scripts` 子資料夾新增至系統路徑，因此您必須指定完整路徑，或者您也可以將 Scripts 資料夾新增至 Windows 中的 PATH 變數。
 
 > [!NOTE]
-> 如果您使用的是 Visual Studio 2017 或含有 Python 延伸模組的 Visual Studio 2015，您可以從 [Python 環境]  視窗中執行 `pip install`。 按一下 [套件]  ，然後在文字方塊中提供要安裝之套件的名稱或位置。 您不需要輸入 `pip install`；系統會自動為您填入。
+> 如果您使用的是 Visual Studio 2017 或含有 Python 延伸模組的 Visual Studio 2015，您可以從 [Python 環境]`pip install`**視窗中執行**。 按一下 [套件]  ，然後在文字方塊中提供要安裝之套件的名稱或位置。 您不需要輸入 `pip install`；系統會自動為您填入。
 
 + 如果電腦能夠存取網際網路，請提供套件的名稱：
 

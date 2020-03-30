@@ -16,10 +16,10 @@ ms.assetid: 0c90a7a7-5a59-4858-bb26-3e725d8611d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7b13eb0333a943444a45c578c2d10a5a7394b5d7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955119"
 ---
 # <a name="doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata"></a>doesMaxRowSizeIncludeBlobs 方法 (SQLServerDatabaseMetaData)

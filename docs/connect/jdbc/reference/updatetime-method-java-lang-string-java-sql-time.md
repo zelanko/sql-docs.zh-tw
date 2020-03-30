@@ -16,10 +16,10 @@ ms.assetid: fbbcef68-b903-4cfd-911c-a7e239d17c74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d0c97f49c4d865b5f0aa99b602e5524a0a97b1e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998183"
 ---
 # <a name="updatetime-method-javalangstring-javasqltime"></a>updateTime 方法 (java.lang.String, java.sql.Time)

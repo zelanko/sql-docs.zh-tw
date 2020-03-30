@@ -14,10 +14,10 @@ ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 1d55f1115db836d3fddab4e18e63499c43e5993f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245719"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>選項對話方塊 F1 說明

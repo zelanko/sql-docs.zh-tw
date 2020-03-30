@@ -11,10 +11,10 @@ ms.assetid: 4161abec-c12b-444e-9de5-f1dac7b3e0e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 78a7486d17d103bec3c8b1ef29d533da2f164c29
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936073"
 ---
 # <a name="pdostatementerrorcode"></a>PDOStatement::errorCode

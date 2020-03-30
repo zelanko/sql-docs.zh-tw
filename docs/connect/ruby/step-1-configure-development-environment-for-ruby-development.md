@@ -1,5 +1,5 @@
 ---
-title: 步驟 1:設定 Ruby 開發的開發環境 | Microsoft Docs
+title: 步驟 1︰設定 Ruby 開發的開發環境 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38af92d3cb0354bc4b75131a349f6a1c26e90490
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992466"
 ---
-# <a name="step-1-configure-development-environment-for-ruby-development"></a>步驟 1:設定 Ruby 開發的開發環境
+# <a name="step-1-configure-development-environment-for-ruby-development"></a>步驟 1︰設定 Ruby 開發的開發環境
 您必須搭配必要條件設定您的開發環境，才能使用 Ruby Driver for SQL Server 開發應用程式。    
   
 請注意，Ruby 驅動程式會使用預設在 SQL Server 和 Azure SQL Database 中啟用的 TDS 通訊協定。  不需要進行其他組態設定。  

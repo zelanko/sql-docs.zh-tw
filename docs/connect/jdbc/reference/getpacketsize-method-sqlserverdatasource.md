@@ -16,10 +16,10 @@ ms.assetid: b2e9f01a-2e51-47e5-90bf-43c62d1be74d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b8f2cf03eb2eeaa3bb742a1f0d665c360e0d5f74
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981044"
 ---
 # <a name="getpacketsize-method-sqlserverdatasource"></a>getPacketSize 方法 (SQLServerDataSource)

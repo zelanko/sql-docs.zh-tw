@@ -16,10 +16,10 @@ ms.assetid: 142830a8-8d4e-48ca-911d-85bf195ca4fe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e1377e29329f43b9ea982f168e394537295ec889
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955968"
 ---
 # <a name="addconnectioneventlistener-method-sqlserverpooledconnection"></a>addConnectionEventListener 方法 (SQLServerPooledConnection)

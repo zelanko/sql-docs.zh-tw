@@ -11,10 +11,10 @@ ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ec984cbb220bffecfae5a929ddad103780450285
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081056"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>報表設計師中的報表組件 (SSRS)
@@ -23,9 +23,9 @@ ms.locfileid: "77081056"
   
  一般來說，報表組件在報表設計師和報表產生器中的運作方式都相同。 若要了解基本功能，請參閱[報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
- 報表組件在報表設計師中運作的方式有基本的差異。 主要差異在於工作流程。 報表產生器允許共同作業撰寫：我建立並發佈報表組件。 您可以重複使用、修改，並重新發行。 在報表設計師中，發佈作業為單向：我可以從報表設計師發佈報表組件，而您可以重複使用它。 但是，我無法在報表設計師的報表中重複使用現有的報表組件。 本主題會先快速介紹報表組件的概觀，然後再詳細說明這些差異。  
+ 報表組件在報表設計師中運作的方式有基本的差異。 主要差異在於工作流程。 報表產生器可進行共同作業式撰寫：我建立報表組件並加以發行。 您可以重複使用、修改，並重新發行。 在報表設計師中，發行作業是單向的：我可以從報表設計師發行報表組件，而且您可以重複使用它。 但是，我無法在報表設計師的報表中重複使用現有的報表組件。 本主題會先快速介紹報表組件的概觀，然後再詳細說明這些差異。  
   
-##  <a name="ComponentWorkflow"></a> 報表組件發行的生命週期  
+##  <a name="life-cycle-of-report-part-publishing"></a><a name="ComponentWorkflow"></a> 報表組件發行的生命週期  
  ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  在報表設計師中，某甲建立專案，其中包含的報表具有以內嵌資料集為依據的圖表。  
@@ -42,7 +42,7 @@ ms.locfileid: "77081056"
   
 6.  在報表產生器中，某乙接受來自伺服器的已更新圖表。 這會覆寫某乙在自己報表中對圖表所做的變更。  
   
-##  <a name="PublishingComponents"></a> 發行報表組件  
+##  <a name="publishing-report-parts"></a><a name="PublishingComponents"></a> 發行報表組件  
  當您發行報表組件時，報表設計師會為它指派唯一的識別碼。 此後，它就維持該識別碼，無論您做什麼變都一樣。 識別碼會連結您報表中的原始報表項目至報表組件。 當其他報表作者在報表產生器中重複使用此報表組件時，該識別碼也將他們的報表連結到該報表組件。  
   
  以下是您可以發行為報表組件的報表項目：  
@@ -76,12 +76,12 @@ ms.locfileid: "77081056"
  部署報表時，報表組件會發行至 SharePoint 網站或報表伺服器，讓其他人也可以重複使用。 若要發行報表組件，必須具有報表伺服器的連線，並在部署報表時具有該伺服器上足夠的權限。  
   
   
-##  <a name="SearchReuseComponents"></a> 重複使用報表組件  
+##  <a name="reusing-report-parts"></a><a name="SearchReuseComponents"></a> 重複使用報表組件  
  跟報表產生器不同的是：您無法在建立報表組件之專案外的任何專案中，搜尋並重複使用該報表組件。  
   
  在報表產生器中工作的報表作者可以在他們建立的報表中，搜尋並重複使用您所發行的報表組件。  
   
-##  <a name="RepublishingComponents"></a> 重新發行報表組件  
+##  <a name="republishing-report-parts"></a><a name="RepublishingComponents"></a> 重新發行報表組件  
  在報表設計師中，您必須從建立組件的報表之中，更新現有的報表組件。 在報表產生器中，報表作者可以重複使用報表組件，並將其發行為新的報表組作，而不會取代您所發行的報表組件。 如果有足夠的權限，他們也可以更新您所發行的報表組件。 任何人只要在網站或伺服器上具有足夠的資料夾權限，都可以更新儲存於該處的報表組件。 最後的更新會覆寫先前的更新。  
   
  您可以修改，然後將報表組件重新發行到網站或伺服器。 報表產生器報表作者如果已經將該報表組件加入報表中，下次開啟該報表時就會接到變更的通知。 他們可以選擇接受您所做的變更與否。  

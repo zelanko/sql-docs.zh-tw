@@ -11,10 +11,10 @@ ms.assetid: d9883c25-5c43-4633-874e-4b490e4bccad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ef0203c8ece600de52a5ba4734249b269f21777
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955020"
 ---
 # <a name="equals-method-datetimeoffset"></a>equals 方法 (DateTimeOffset)

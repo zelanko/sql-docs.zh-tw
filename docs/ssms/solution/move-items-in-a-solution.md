@@ -15,10 +15,10 @@ ms.assetid: b40a24eb-f528-4e70-b26e-5eaf6e0ed1ed
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 256e2ff3dc5b1cde4dd2e5dc5e065f01b073eb33
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251843"
 ---
 # <a name="move-items-in-a-solution"></a>移動方案中的項目

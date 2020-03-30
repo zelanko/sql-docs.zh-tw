@@ -22,10 +22,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 29aaab523b3a754c65b1b7a0312ceb5ea122f2d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68419314"
 ---
 # <a name="working-with-query-notifications"></a>使用查詢通知
@@ -104,7 +104,7 @@ RECEIVE * FROM MyQueue
 
 如果佇列是空的，這個陳述式會立即傳回空的結果集。 否則會傳回所有佇列通知。
 
-如果 `SSPROP_QP_NOTIFICATION_MSGTEXT` 和 `SSPROP_QP_NOTIFICATION_OPTIONS` 為非 Null 且非空白，則會將包含以上定義的三個屬性的查詢通知 TDS 標頭傳送至伺服器。 每次執行命令時，就會發生這種情況。 如果其中一個屬性為 Null (或空白)，則不會傳送標頭並引發 `DB_E_ERRORSOCCURRED` (如果屬性同時標示為選擇性，則會引發 `DB_S_ERRORSOCCURRED`)。 接著，狀態值會設為 `DBPROPSTATUS_BADVALUE`。 在執行和準備時會進行驗證。 同樣地，當針對 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本連線設定查詢通知屬性時，會引發 `DB_S_ERRORSOCCURED`。 此案例中的狀態值為 `DBPROPSTATUS_NOTSUPPORTED`。
+如果 `SSPROP_QP_NOTIFICATION_MSGTEXT` 和 `SSPROP_QP_NOTIFICATION_OPTIONS` 為非 Null 且非空白，則會將包含以上定義的三個屬性的查詢通知 TDS 標頭傳送至伺服器。 每次執行命令時，就會發生這種情況。 如果其中一個屬性為 Null (或空白)，則不會傳送標頭並引發 `DB_E_ERRORSOCCURRED` (如果屬性同時標示為選擇性，則會引發 `DB_S_ERRORSOCCURRED`)。 接著，狀態值會設為 `DBPROPSTATUS_BADVALUE`。 在執行和準備時會進行驗證。 同樣地，當針對 `DB_S_ERRORSOCCURED` 之前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本連線設定查詢通知屬性時，會引發 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 此案例中的狀態值為 `DBPROPSTATUS_NOTSUPPORTED`。
 
 初始化訂閱並不保證後續的訊息能成功傳遞。 此外，系統也不會檢查所指定服務名稱的有效性。
 

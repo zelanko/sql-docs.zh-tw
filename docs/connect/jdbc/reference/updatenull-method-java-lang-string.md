@@ -16,10 +16,10 @@ ms.assetid: fb3e5cde-30e1-4c95-adf0-d5b6c1f0da95
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98ae88f84e31f6120767520046d442f998024732
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998508"
 ---
 # <a name="updatenull-method-javalangstring"></a>updateNull 方法 (java.lang.String)

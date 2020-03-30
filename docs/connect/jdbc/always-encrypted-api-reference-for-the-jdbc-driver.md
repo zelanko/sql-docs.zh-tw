@@ -11,10 +11,10 @@ ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7b5e17a6b7a98101eac8e3ddbb29a8438bc10075
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75681699"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>JDBC 驅動程式的 Always Encrypted API 參考
@@ -156,7 +156,7 @@ ms.locfileid: "75681699"
 
 |名稱|描述|  
 |----------|-----------------|  
-|DATETIME、SMALLDATETIME、MONEY、SMALLMONEY、GUID|在使用 `setObject()/updateObject()` API 方法將參數值傳送到**加密的** datetime, smalldatetime, money, smallmoney, uniqueidentifier 資料行時，使用這些類型作為目標 SQL 類型。|  
+|DATETIME、SMALLDATETIME、MONEY、SMALLMONEY、GUID|在使用  **API 方法將參數值傳送到**加密的`setObject()/updateObject()` datetime, smalldatetime, money, smallmoney, uniqueidentifier 資料行時，使用這些類型作為目標 SQL 類型。|  
   
   
  **SQLServerStatementColumnEncryptionSetting 列舉**  

@@ -14,10 +14,10 @@ ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 01d2738b6a095646d1585857fdee7760079672c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75252211"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio 中的使用者協助
@@ -45,7 +45,7 @@ ms.locfileid: "75252211"
   
     將使用者主題書籤儲存起來，以便日後方便存取。  
   
-[如何使用輔助說明] ([!INCLUDE[msCoName](../includes/msconame_md.md)] [文件總管] 說明) 會將使用者連結到說明檢視器的相關文件，但主題是在《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》以外的集合中。 如需有關說明檢視器的資訊，請參閱《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》之 [說明] 功能表中的 [如何使用輔助說明]  。  
+[如何使用輔助說明] ([!INCLUDE[msCoName](../includes/msconame_md.md)] [文件總管] 說明) 會將使用者連結到說明檢視器的相關文件，但主題是在《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》以外的集合中。 如需有關說明檢視器的資訊，請參閱《 **線上叢書》之 [說明] 功能表中的 [如何使用輔助說明]** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online 和 SQL Server 社群  
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的說明也提供了若干方式，供使用者連絡 Web 中的 MSDN Online 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]焦點社群，以取得相關資訊。 您可以：  
@@ -91,7 +91,7 @@ ms.locfileid: "75252211"
 您也可以將線上叢書開啟成為 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]內的文件視窗。 當螢幕空間有限，且您想要利用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 及其功能來隱藏視窗時，這個方式是您最佳的選擇。  
   
 > [!NOTE]  
-> 如果線上叢書要完全在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 之外獨立運作，請從 [開始]  功能表中開啟《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》，它不會反應您在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境中的動作，當您結束 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 時，也不會關閉它。  
+> 如果線上叢書要完全在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 之外獨立運作，請從 [開始][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **功能表中開啟《** 線上叢書》，它不會反應您在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境中的動作，當您結束 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 時，也不會關閉它。  
   
 #### <a name="to-configure-help-and-sql-server-books-online-to-launch-inside-the-management-studio-window"></a>設定在 [Management Studio] 視窗內啟動 [說明] 和《SQL Server 線上叢書》  
   

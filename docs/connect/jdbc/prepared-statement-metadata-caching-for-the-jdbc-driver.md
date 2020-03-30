@@ -11,10 +11,10 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97224f53bb716abe3b79dd00df12d0eed4a63cec
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027845"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>JDBC 驅動程式的備妥陳述式中繼資料快取
@@ -43,8 +43,8 @@ ms.locfileid: "69027845"
 |void closeUnreferencedPreparedStatementHandles()|強制執行任何未完成捨棄備妥陳述式的未準備要求。|
 |boolean getEnablePrepareOnFirstPreparedStatementCall()|傳回特定連線執行個體的行為。 如果為 false，則第一次執行將會呼叫 sp_executesql 而不是備妥陳述式，一旦第二次執行時，就會呼叫 sp_prepexec 並實際設定備妥陳述式控制代碼。 下列執行會呼叫 sp_execute。 如果該陳述式僅執行一次，則無需在備妥陳述式結束時使用 sp_unprepare。 您可以藉由呼叫 setDefaultEnablePrepareOnFirstPreparedStatementCall() 來變更這個選項的預設值。|
 |void setEnablePrepareOnFirstPreparedStatementCall(boolean value)|指定特定連線執行個體的行為。 如果值為 false，則第一次執行將會呼叫 sp_executesql 而不是備妥陳述式，一旦第二次執行時，就會呼叫 sp_prepexec 並實際設定備妥陳述式控制代碼。 下列執行會呼叫 sp_execute。 如果該陳述式僅執行一次，則無需在備妥陳述式結束時使用 sp_unprepare。|
-|int getServerPreparedStatementDiscardThreshold()|傳回特定連線執行個體的行為。 此設定可控制在執行清理伺服器上未完成控制代碼的呼叫之前，每個連線可以有多少個未完成的備妥陳述式捨棄動作 (sp_unprepare) 尚未完成。 如果設定為 <= 1，就會在備妥陳述式一結束時，立即執行取消準備動作。 如果將其設定為 {@literal >} 1，則會將這些呼叫批次處理在一起，以避免太常呼叫 sp_unprepare 所造成的額外負荷。 您可以藉由呼叫 getDefaultServerPreparedStatementDiscardThreshold() 來變更這個選項的預設值。|
-|void setServerPreparedStatementDiscardThreshold(int value)|指定特定連線執行個體的行為。 此設定可控制在執行清理伺服器上未完成控制代碼的呼叫之前，每個連線可以有多少個未完成的備妥陳述式捨棄動作 (sp_unprepare) 尚未完成。 如果設定為 <= 1，就會在備妥陳述式一結束時，立即執行取消準備動作。 如果將其設定為 > 1，則會將這些呼叫批次處理在一起，以避免太常呼叫 sp_unprepare 所造成的額外負荷。|
+|int getServerPreparedStatementDiscardThreshold()|傳回特定連線執行個體的行為。 此設定可控制在執行清理伺服器上未完成控制代碼的呼叫之前，每個連線可以有多少未處理的未處理備妥陳述式捨棄動作 (sp_unprepare)。 如果設定為 <= 1，就會在備妥陳述式一結束時，立即執行取消準備動作。 如果將其設定為 {@literal >} 1，則會將這些呼叫批次處理在一起，以避免太常呼叫 sp_unprepare 所造成的額外負荷。 您可以藉由呼叫 getDefaultServerPreparedStatementDiscardThreshold() 來變更這個選項的預設值。|
+|void setServerPreparedStatementDiscardThreshold(int value)|指定特定連線執行個體的行為。 此設定可控制在執行清理伺服器上未完成控制代碼的呼叫之前，每個連線可以有多少未處理的未處理備妥陳述式捨棄動作 (sp_unprepare)。 如果設定為 <= 1，就會在備妥陳述式一結束時，立即執行取消準備動作。 如果將其設定為 > 1，則會將這些呼叫批次處理在一起，以避免太常呼叫 sp_unprepare 所造成的額外負荷。|
 
  **SQLServerDataSource**
  
@@ -52,8 +52,8 @@ ms.locfileid: "69027845"
 |-----------|-----------------|  
 |void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOnFirstPreparedStatementCall)|如果此設定為 false，則第一次執行備妥陳述式會呼叫 sp_executesql 而不是備妥陳述式，一旦第二次執行時，就會呼叫 sp_prepexec 並實際設定備妥陳述式控制代碼。 下列執行會呼叫 sp_execute。 如果該陳述式僅執行一次，則無需在備妥陳述式結束時使用 sp_unprepare。|
 |boolean getEnablePrepareOnFirstPreparedStatementCall()|如果此設定傳回 false，則第一次執行備妥陳述式會呼叫 sp_executesql 而不是備妥陳述式，一旦第二次執行時，就會呼叫 sp_prepexec 並實際設定備妥陳述式控制代碼。 下列執行會呼叫 sp_execute。 如果該陳述式僅執行一次，則無需在備妥陳述式結束時使用 sp_unprepare。|
-|void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|此設定可控制在執行清理伺服器上未完成控制代碼的呼叫之前，每個連線可以有多少個未完成的備妥陳述式捨棄動作 (sp_unprepare) 尚未完成。 如果設定為 <= 1，就會在備妥陳述式一結束時，立即執行取消準備動作。 如果將其設定為 {@literal >} 1，則會將這些呼叫批次處理在一起，以避免太常呼叫 sp_unprepare 所造成的額外負荷|
-|int getServerPreparedStatementDiscardThreshold()|此設定可控制在執行清理伺服器上未完成控制代碼的呼叫之前，每個連線可以有多少個未完成的備妥陳述式捨棄動作 (sp_unprepare) 尚未完成。 如果設定為 <= 1，就會在備妥陳述式一結束時，立即執行取消準備動作。 如果將其設定為 {@literal >} 1，則會將這些呼叫批次處理在一起，以避免太常呼叫 sp_unprepare 所造成的額外負荷。|
+|void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|此設定可控制在執行清理伺服器上未完成控制代碼的呼叫之前，每個連線可以有多少未處理的未處理備妥陳述式捨棄動作 (sp_unprepare)。 如果設定為 <= 1，就會在備妥陳述式一結束時，立即執行取消準備動作。 如果將其設定為 {@literal >} 1，則會將這些呼叫批次處理在一起，以避免太常呼叫 sp_unprepare 所造成的額外負荷|
+|int getServerPreparedStatementDiscardThreshold()|此設定可控制在執行清理伺服器上未完成控制代碼的呼叫之前，每個連線可以有多少未處理的未處理備妥陳述式捨棄動作 (sp_unprepare)。 如果設定為 <= 1，就會在備妥陳述式一結束時，立即執行取消準備動作。 如果將其設定為 {@literal >} 1，則會將這些呼叫批次處理在一起，以避免太常呼叫 sp_unprepare 所造成的額外負荷。|
 
 ## <a name="prepared-statement-metatada-caching"></a>備妥陳述式中繼資料快取
 從 6.3.0-preview 版開始，Microsoft JDBC Driver for SQL Server 支援備妥陳述式快取。 在 v 6.3.0-preview 之前，如果有人執行已經備妥並儲存在快取中的查詢，則再次呼叫相同的查詢並不會導致準備該查詢。 現在，驅動程式會查閱快取中的查詢，並尋找控制代碼，然後使用 sp_execute 加以執行。

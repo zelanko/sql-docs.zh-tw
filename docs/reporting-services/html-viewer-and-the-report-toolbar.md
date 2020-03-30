@@ -12,10 +12,10 @@ ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 948abaaae630de34f4340370fd2f6f0f4e0a1d34
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65503069"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 檢視器和報表工具列
@@ -37,7 +37,7 @@ ms.locfileid: "65503069"
 |使用這個圖示或控制項||至|  
 |------------------------------|-|--------|  
 |![頁面導覽控制項](../reporting-services/media/htmlviewer-pagenav.gif "頁面導覽控制項")|**頁面導覽控制項**|開啟報表的第一頁或最後一頁、逐頁捲動報表和開啟報表中的特定頁面。 若要檢視特定頁面，請輸入頁碼然後按 ENTER。|  
-|![頁面顯示控制項](../reporting-services/media/htmlviewer-pagesize.gif "頁面顯示控制項")|**頁面顯示控制項**|放大或縮小報表頁面的尺寸。 除了百分比架構的變更之外，您還可以選取 [頁寬]  使其符合瀏覽器視窗中報表頁面的水平長度，或選取 [整頁]  使其符合瀏覽器視窗中報表的垂直長度。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 和更新的版本可以支援 [顯示比例]  選項。|  
+|![頁面顯示控制項](../reporting-services/media/htmlviewer-pagesize.gif "頁面顯示控制項")|**頁面顯示控制項**|放大或縮小報表頁面的尺寸。 除了百分比架構的變更之外，您還可以選取 [頁寬]  使其符合瀏覽器視窗中報表頁面的水平長度，或選取 [整頁]  使其符合瀏覽器視窗中報表的垂直長度。 **Internet Explorer 5.5 和更新的版本可以支援 [顯示比例]** [!INCLUDE[msCoName](../includes/msconame-md.md)] 選項。|  
 |![搜尋欄位](../reporting-services/media/htmlviewer-search.gif "搜尋欄位")|**搜尋欄位**|輸入想要尋找的單字或片語 (最大長度為 256 個字元)，即可搜尋報表中的內容。 搜尋不區分大小寫，從目前所選取的頁面或區段開始。 只有可見的內容會包含在搜尋作業中。 若要搜尋相同值的下一個出現位置，請按 **[下一個]** 。|  
 |![匯出格式](../reporting-services/media/htmlviewer-export.GIF "匯出格式")|**匯出格式**|開啟新的瀏覽器視窗，並以選取的格式來轉譯報表。 可用的格式會由報表伺服器上安裝的轉譯延伸模組決定。 建議使用 TIFF 來列印。 按一下 [匯出]  就能夠以所選取格式檢視報表。|  
 |![文件引導模式圖示](../reporting-services/media/htmlviewer-docmap.GIF "文件引導模式圖示")|**文件引導模式圖示**|在含有文件引導模式的報表中，顯示或隱藏文件引導模式。 文件引導模式是一種報表瀏覽控制項，類似於網站的導覽窗格。 按一下文件引導模式中的項目，即可導覽至特定群組、頁面或子報表。|  

@@ -16,10 +16,10 @@ ms.assetid: cd39ed03-b3e8-443d-9c7a-e8cf2581e581
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f303d05d7ff38f7f410868103c486e44df84b36b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979801"
 ---
 # <a name="getshort-method-javalangstring"></a>getShort 方法 (java.lang.String)

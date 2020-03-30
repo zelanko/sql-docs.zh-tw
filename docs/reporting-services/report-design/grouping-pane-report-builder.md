@@ -13,10 +13,10 @@ ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: aad20a916864bb8ed0d281af768989a0a7d9e85a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65572194"
 ---
 # <a name="grouping-pane-report-builder"></a>群組窗格 (報表產生器)
@@ -36,11 +36,11 @@ ms.locfileid: "65572194"
 ## <a name="default-mode"></a>預設模式  
  在預設模式下，[資料列群組] 窗格和 [資料行群組] 窗格會顯示所有父群組、子群組和相鄰群組的階層式檢視。 子群組會以縮排顯示在其父群組下。 相鄰群組會與其同層級群組顯示在相同的縮排層級上。 下圖顯示 Tablix 資料區與巢狀資料列群組，以及巢狀資料行和相鄰資料行群組。  
   
- ![Tablix，巢狀和相鄰的資料列及資料行群組](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix，巢狀和相鄰的資料列及資料行群組")  
+ ![Tablix、巢狀和相鄰的資料列及資料行群組](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tablix、巢狀和相鄰的資料列及資料行群組")  
   
  [群組] 窗格會顯示對應的資料列和資料行群組。 在下圖中，以子類別目錄為基礎的群組已在 [資料列群組] 窗格中選取，而 [Subcat] 群組資料格則已在 Tablix 資料區中選取：  
   
- ![巢狀資料列和資料行群組的 [群組] 窗格](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "巢狀資料列和資料行群組的 [群組] 窗格")  
+ ![巢狀資料列和資料行群組的分組窗格](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "巢狀資料列和資料行群組的 [群組] 窗格")  
   
  在 [資料列群組] 窗格中，以子類別目錄為基礎之群組是以類別目錄為基礎之群組的子系。 在 [資料行群組] 窗格中，國家/地區群組是地理位置群組的子系。 年份群組和國家/地區群組則是相鄰的群組。  
   

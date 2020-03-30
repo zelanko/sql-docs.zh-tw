@@ -16,10 +16,10 @@ ms.assetid: d0b29b48-9663-4de4-9fc2-82bc30e44aed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0a85bbb7b5e7e14a7af8acb927a8f1abe9e681cb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953837"
 ---
 # <a name="getbigdecimal-method-javalangstring"></a>getBigDecimal 方法 (java.lang.String)
@@ -46,7 +46,7 @@ public java.math.BigDecimal getBigDecimal(java.lang.String sCol)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 此 getBigDecimal 方法是由 java.sql.CallableStatement 介面中的 getBigDecimal 方法所指定。  
+ 這個 getBigDecimal 方法是由 java.sql.CallableStatement 介面中的 getBigDecimal 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [getBigDecimal 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   

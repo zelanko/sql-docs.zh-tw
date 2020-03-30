@@ -11,10 +11,10 @@ ms.assetid: df957b79-536f-4db7-b6ac-3d59343559fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 282201b7ff3f5b2ebfe4d8a1224d4d1b39285c53
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970089"
 ---
 # <a name="sqlserverxaresource-class"></a>SQLServerXAResource 類別

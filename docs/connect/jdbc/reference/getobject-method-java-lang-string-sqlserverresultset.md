@@ -16,10 +16,10 @@ ms.assetid: 59a975e8-bea8-42fe-8f34-5f18f2bbd415
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8967eef523332cdb25aa68ee8039373d7b8d209e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981163"
 ---
 # <a name="getobject-method-javalangstring-sqlserverresultset"></a>getObject 方法 (java.lang.String) (SQLServerResultSet)

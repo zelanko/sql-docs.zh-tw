@@ -16,10 +16,10 @@ ms.assetid: 95924a8b-a43c-4133-aff6-1d712e60e234
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c19e8cd92f7ee7aafcf6dd23e9c179f2557e628f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955993"
 ---
 # <a name="addbatch-method-sqlserverstatement"></a>addBatch 方法 (SQLServerStatement)

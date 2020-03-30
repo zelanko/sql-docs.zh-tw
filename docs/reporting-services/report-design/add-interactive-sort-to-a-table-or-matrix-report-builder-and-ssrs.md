@@ -12,10 +12,10 @@ ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ddc1796b4b3638d91c94acafbce1377128dfe1cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081624"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>將互動式排序加入至資料表或矩陣 (報表產生器及 SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "77081624"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="BackToTop"></a> 本文內容  
+##  <a name="in-this-article"></a><a name="BackToTop"></a> 本文內容  
  [不使用群組排序資料表的詳細資料列](#SortingDetailRows)  
   
  [排序資料表或矩陣的最上層父資料列群組](#SortingTopLevelParent)  
@@ -39,7 +39,7 @@ ms.locfileid: "77081624"
   
  [同步處理多個資料區的排序次序](#SynchronizingSortOrder)  
   
-##  <a name="SortingDetailRows"></a> 不使用群組排序資料表的詳細資料列  
+##  <a name="sorting-detail-rows-for-a-table-with-no-groups"></a><a name="SortingDetailRows"></a> 不使用群組排序資料表的詳細資料列  
  將互動式排序按鈕加入到資料行標頭，讓使用者按一下資料行標頭，並依該資料行中顯示的值，排序資料表中的詳細資料列。  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-the-table-by-value"></a>若要將互動式排序按鈕加入到資料行標頭以便依值排序資料表  
@@ -62,7 +62,7 @@ ms.locfileid: "77081624"
   
  ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示") [[回到頁首]](#BackToTop)  
   
-##  <a name="SortingTopLevelParent"></a> 排序資料表或矩陣的最上層父資料列群組  
+##  <a name="sorting-a-top-level-parent-row-group-for-a-table-or-matrix"></a><a name="SortingTopLevelParent"></a> 排序資料表或矩陣的最上層父資料列群組  
  將互動式排序按鈕加入到資料行標頭，讓使用者按一下資料行標頭，並依該資料行中顯示的值，排序資料表或矩陣中的父群組資料列。 子群組的順序會維持不變。  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-groups"></a>若要將互動式排序按鈕加入到資料行標頭以便排序群組  
@@ -86,7 +86,7 @@ ms.locfileid: "77081624"
   
  ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示") [[回到頁首]](#BackToTop)  
   
-##  <a name="SortingChildGroups"></a> 排序群組的子群組或詳細資料列  
+##  <a name="sorting-child-groups-or-detail-rows-for-a-group"></a><a name="SortingChildGroups"></a> 排序群組的子群組或詳細資料列  
  將互動式排序按鈕加入到群組標題資料列，讓使用者從父群組排序子群組的值，或針對最內部的子群組排序詳細資料列。  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-text-box-in-a-group-row-header-to-sort-child-groups-or-detail-rows"></a>若要將互動式排序按鈕加入到群組資料列標頭中的文字方塊以便排序子群組或詳細資料列  
@@ -109,7 +109,7 @@ ms.locfileid: "77081624"
   
  ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示") [[回到頁首]](#BackToTop)  
   
-##  <a name="SortingMultipleRowGroups"></a> 根據複雜的群組運算式排序資料列  
+##  <a name="sorting-rows-based-on-a-complex-group-expression"></a><a name="SortingMultipleRowGroups"></a> 根據複雜的群組運算式排序資料列  
  將互動式排序按鈕加入到資料行標頭，讓使用者按一下資料行標頭，並排序合併的父群組和子群組。 為達到此效果，您必須將群組運算式變更為兩個群組的複合。 例如，假設矩陣會針對同時依色彩和大小分組的項目，顯示商店的存貨總數。 若要根據色彩和大小的組合 (而不是個別針對色彩群組和大小群組) 排序資料列，您可以根據色彩和大小的組合定義群組。 如需定義群組運算式的詳細資訊，請參閱[群組運算式範例 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)。  
   
  在下列程序中，這些條件會指定 Tablix 資料區域。 如需詳細資訊，請參閱 [Tablix 資料區的區域 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)。  
@@ -166,7 +166,7 @@ ms.locfileid: "77081624"
   
  ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示") [[回到頁首]](#BackToTop)  
   
-##  <a name="SynchronizingSortOrder"></a> 同步處理多個資料區的排序次序  
+##  <a name="synchronizing-sort-order-for-multiple-data-regions"></a><a name="SynchronizingSortOrder"></a> 同步處理多個資料區的排序次序  
  加入互動式排序按鈕，讓使用者按一下其中一個排序按鈕，然後排序多個資料區。 當您建立互動式排序按鈕時，可以指定是否要根據相同的報表資料集，同步處理多個資料區域的排序。 例如，報表可能包含一個矩陣以及一個以圖形方式顯示資料的圖表。 當使用者在矩陣中變更資料列的排序次序時，此圖表會自動顯示相同的排序次序。  
   
  若要同步處理排序次序，您必須針對要排序的資料區域或群組使用相同的排序運算式，並將排序的範圍定義為兩個資料區域的互斥上階。 互斥上階可以是連結兩個資料區域的資料集，也可以是兩個資料區域所出現的包含資料區域。 例如，假設某個報表包含顯示相同資料集之資料，而且包含在清單中的矩陣和圖表。 若要同步處理排序動作，您必須針對矩陣中的資料行指定互動式排序，並將範圍設定為清單。 當使用者排序矩陣時，圖表也會進行排序。  

@@ -10,25 +10,25 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: ac50d0c20f76e78aaa5016f62cefb8c7cc7f075a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75728579"
 ---
 # <a name="install-azdata-with-apt"></a>使用 apt 安裝 `azdata`
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文說明如何在 Linux 上安裝適用於 SQL Server 2019 巨量資料叢集的 `azdata`。 您必須先使用 `pip` 安裝 `azdata`，才能開始使用這些套件管理員。
+本文說明如何在 Linux 上安裝適用於 SQL Server 2019 巨量資料叢集的 `azdata`。 您必須先使用 `azdata` 安裝 `pip`，才能開始使用這些套件管理員。
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
 
-## <a id="linux"></a>安裝適用於 Linux 的 `azdata`
+## <a name="install-azdata-for-linux"></a><a id="linux"></a>安裝適用於 Linux 的 `azdata`
 
 `azdata` 安裝套件可用於具有 `apt` 的 Ubuntu。
 
-### <a id="azdata-apt"></a>使用 apt (Ubuntu) 安裝 `azdata`
+### <a name="install-azdata-with-apt-ubuntu"></a><a id="azdata-apt"></a>使用 apt (Ubuntu) 安裝 `azdata`
 
 >[!NOTE]
 >`azdata` 套件不會使用系統 Python，而會安裝自己的 Python 解譯器。

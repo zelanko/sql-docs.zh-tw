@@ -11,10 +11,10 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: “”
 ms.openlocfilehash: fbe44c84b2a1974981dff5173015ecf0fc5e74b5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75256989"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>SQL Server Data Tools 的必要權限
@@ -35,7 +35,7 @@ ms.locfileid: "75256989"
   
 -   [SQL Server 通用語言執行平台 (SQL CLR) 專案方面的權限](#SQLCLRPermissions)  
   
-## <a name="DatabaseCreationAndDeploymentPermissions"></a>建立或部署資料庫時的權限  
+## <a name="permissions-to-create-or-deploy-a-database"></a><a name="DatabaseCreationAndDeploymentPermissions"></a>建立或部署資料庫時的權限  
 您必須具備下列權限，才能建立或部署資料庫。  
   
 |||  
@@ -51,10 +51,10 @@ ms.locfileid: "75256989"
   
 如需詳細資訊，請參閱《SQL Server 線上叢書》。  
   
-## <a name="DatabaseRefactoringPermissions"></a>重構資料庫時的權限  
+## <a name="permissions-to-refactor-a-database"></a><a name="DatabaseRefactoringPermissions"></a>重構資料庫時的權限  
 「資料庫重構」  僅發生在資料庫專案內。 您必須具備使用資料庫專案方面的權限。 對於目標資料庫，只有當您將變更部署至其中時才需要相關權限。  
   
-## <a name="DatabaseUnitTestingPermissions"></a>對 SQL Server 資料庫執行單元測試時的權限  
+## <a name="permissions-to-perform-unit-testing-on-a-sql-server-database"></a><a name="DatabaseUnitTestingPermissions"></a>對 SQL Server 資料庫執行單元測試時的權限  
 您必須具備下列權限，才能對資料庫執行單元測試。  
   
 |||  
@@ -66,10 +66,10 @@ ms.locfileid: "75256989"
 |在執行測試之前部署資料庫變更|您必須使用有權限的內容資料庫連接。 如需詳細資訊，請參閱[如何：設定 SQL Server 單元測試執行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)。|  
 |在執行測試之前產生資料|您必須使用有權限的內容資料庫連接。 如需詳細資訊，請參閱[如何：設定 SQL Server 單元測試執行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)。|  
   
-## <a name="DataGenerationPermissions"></a>產生資料時的權限  
+## <a name="permissions-to-generate-data"></a><a name="DataGenerationPermissions"></a>產生資料時的權限  
 您必須對目標資料庫中的物件具備 **INSERT** 和 **SELECT** 權限，才能使用資料產生器產生測試資料。 如果您在產生資料之前清除資料，則也必須對目標資料庫中的物件具備 **DELETE** 權限。 如果要重設資料表的 [識別]  欄位，您必須擁有該資料表或者是 db_owner 或 db_ddladmin 角色的成員。  
   
-## <a name="SchemaAndDataComparePermissions"></a>比較結構描述和資料時的權限  
+## <a name="permissions-to-compare-schemas-and-data"></a><a name="SchemaAndDataComparePermissions"></a>比較結構描述和資料時的權限  
 您必須具備下列權限，才能比較結構描述或資料。  
   
 |||  
@@ -82,10 +82,10 @@ ms.locfileid: "75256989"
   
 如需詳細資訊，請參閱《SQL Server 線上叢書》。  
   
-## <a name="Transact-SQLEditorPermissions"></a>執行 Transact\-SQL 編輯器時的權限  
+## <a name="permissions-to-run-the-transact-sql-editor"></a><a name="Transact-SQLEditorPermissions"></a>執行 Transact\-SQL 編輯器時的權限  
 您能夠在 Transact\-SQL 編輯器內執行的作業取決於對目標資料庫的執行內容而定。  
   
-## <a name="SQLCLRPermissions"></a>SQL Server 通用語言執行平台專案方面的權限  
+## <a name="permissions-for-sql-server-common-language-run-time-projects"></a><a name="SQLCLRPermissions"></a>SQL Server 通用語言執行平台專案方面的權限  
 下表列出部署或偵錯 CLR 專案時所需的權限：  
   
 |動作|必要權限|  

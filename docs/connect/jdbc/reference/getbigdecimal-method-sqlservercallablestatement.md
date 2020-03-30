@@ -16,10 +16,10 @@ ms.assetid: bc81b9a3-96ae-4c9c-b6c4-abd7b83175e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ce96850f9fb39ca2484dd003e4a861813e53766d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953829"
 ---
 # <a name="getbigdecimal-method-sqlservercallablestatement"></a>getBigDecimal 方法 (SQLServerCallableStatement)

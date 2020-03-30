@@ -26,10 +26,10 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: acd4bd2641296301449138322e0b4d4e15f7ffb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77080646"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>加入、變更或刪除地圖或地圖圖層 (報表產生器及 SSRS)
@@ -59,19 +59,19 @@ ms.locfileid: "77080646"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddLayer"></a> 從地圖圖層精靈加入圖層  
+##  <a name="to-add-a-layer-from-the-map-layer-wizard"></a><a name="AddLayer"></a> 從地圖圖層精靈加入圖層  
   
 -   從功能區中，按一下 [插入]  功能表上的 [地圖]  ，然後按一下 [地圖精靈]  。 此精靈可讓您將圖層加入至現有的地圖。 地圖精靈與地圖圖層精靈的大部分精靈頁面都相同。  
   
      如需詳細資訊，請參閱 [地圖精靈與地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   
-##  <a name="ChangeLayer"></a> 使用地圖圖層精靈來變更圖層的選項  
+##  <a name="to-change-options-for-a-layer-by-using-the-map-layer-wizard"></a><a name="ChangeLayer"></a> 使用地圖圖層精靈來變更圖層的選項  
   
 -   執行地圖圖層精靈。 這個精靈可讓您變更您使用地圖圖層精靈所建立的圖層選項。 在 [地圖] 窗格中，以滑鼠右鍵按一下圖層，然後在工具列上按一下圖層精靈按鈕 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
   
      如需詳細資訊，請參閱 [地圖精靈與地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   
-##  <a name="AddVectorLayer"></a> 從 [圖層] 窗格工具列加入點、線條或多邊形圖層  
+##  <a name="to-add-a-point-line-or-polygon-layer-from-the-map-pane-toolbar"></a><a name="AddVectorLayer"></a> 從 [圖層] 窗格工具列加入點、線條或多邊形圖層  
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "77080646"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="FilterAnalyticalData"></a> 篩選圖層的分析資料  
+##  <a name="to-filter-analytical-data-for-the-layer"></a><a name="FilterAnalyticalData"></a> 篩選圖層的分析資料  
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "77080646"
   
 4.  定義篩選方程式，以限制用於地圖顯示的分析資料。 如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
-##  <a name="PointProperties"></a> 控制點圖層或多邊形中心點的點屬性  
+##  <a name="to-control-point-properties-for-a-point-layer-or-for-polygon-center-points"></a><a name="PointProperties"></a> 控制點圖層或多邊形中心點的點屬性  
   
 1.  選取 [地圖點屬性]  對話方塊上的 [一般]  來變更下列地圖元素的標籤、工具提示和標記類型選項：  
   
@@ -118,7 +118,7 @@ ms.locfileid: "77080646"
   
     -   在多邊形圖層上，所有動態或內嵌之多邊形的中心點。 中心點的色彩規則、大小規則與標記類型規則會覆寫這些選項。 若要覆寫特定中心點的選項，請使用 [地圖內嵌點屬性對話方塊、標記](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) 頁面。  
   
-##  <a name="Embedded"></a> 將內嵌資料指定為空間資料的來源  
+##  <a name="to-specify-embedded-data-as-a-source-of-spatial-data"></a><a name="Embedded"></a> 將內嵌資料指定為空間資料的來源  
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "77080646"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ESRI"></a> 將 ESRI 形狀檔指定為空間資料的來源  
+##  <a name="to-specify-an-esri-shapefile-as-a-source-of-spatial-data"></a><a name="ESRI"></a> 將 ESRI 形狀檔指定為空間資料的來源  
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "77080646"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="DatasetField"></a> 將報表資料集欄位指定為空間資料的來源  
+##  <a name="to-specify-a-report-dataset-field-as-a-source-of-spatial-data"></a><a name="DatasetField"></a> 將報表資料集欄位指定為空間資料的來源  
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "77080646"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TileLayer"></a> 若要加入圖格圖層  
+##  <a name="to-add-a-tile-layer"></a><a name="TileLayer"></a> 若要加入圖格圖層  
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "77080646"
     > [!NOTE]  
     >  當您在「地圖精靈」或「地圖圖層精靈」中加入多邊形、線條或點圖層時，也可以加入影像分割圖層。 在 [選擇空間資料及地圖檢視選項]  頁面上，選取 [Add a Bing Maps background for this map view (加入此地圖檢視的 Bing Maps 背景)]  選項。  
   
-##  <a name="DrawingOrder"></a> 變更圖層的繪圖順序  
+##  <a name="to-change-the-drawing-order-of-a-layer"></a><a name="DrawingOrder"></a> 變更圖層的繪圖順序  
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
   
@@ -188,7 +188,7 @@ ms.locfileid: "77080646"
   
 3.  在 [圖層] 窗格工具列上，按一下向上鍵或向下鍵來變更每個圖層的繪圖順序。  
   
-##  <a name="Transparency"></a> 變更多邊形、線條或點圖層的透明度  
+##  <a name="to-change-the-transparency-of-a-polygon-line-or-point-layer"></a><a name="Transparency"></a> 變更多邊形、線條或點圖層的透明度  
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
   
@@ -200,7 +200,7 @@ ms.locfileid: "77080646"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TileTransparency"></a> 變更圖格圖層的透明度  
+##  <a name="to-change-the-transparency-of-a-tile-layer"></a><a name="TileTransparency"></a> 變更圖格圖層的透明度  
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
   
@@ -212,7 +212,7 @@ ms.locfileid: "77080646"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Secure"></a> 為圖格圖層指定安全連接  
+##  <a name="to-specify-a-secure-connection-for-a-tile-layer"></a><a name="Secure"></a> 為圖格圖層指定安全連接  
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "77080646"
   
  Bing Maps Web 服務的連接將會使用 HTTP SSL (安全通訊端層) 服務來擷取這個圖層的 Bing 地圖底圖。  
   
-##  <a name="Language"></a> 為圖格標籤指定語言  
+##  <a name="to-specify-the-language-for-tile-labels"></a><a name="Language"></a> 為圖格標籤指定語言  
   
 1.  根據預設，如果是顯示標籤的圖格樣式，語言是由報表產生器的預設地區設定所決定。 您可以透過以下方式來自訂圖格標籤的語言設定。  
   
@@ -232,7 +232,7 @@ ms.locfileid: "77080646"
   
      設定圖格標籤語言的優先順序如下：報表屬性 Language、報表產生器的預設地區設定，以及地圖屬性 TileLanguage。  
   
-##  <a name="ConditionalHide"></a> 根據檢視區縮放層級，有條件地隱藏圖層  
+##  <a name="to-conditionally-hide-a-layer-based-on-viewport-zoom-level"></a><a name="ConditionalHide"></a> 根據檢視區縮放層級，有條件地隱藏圖層  
   
 1.  設定 [可見性]  選項來控制地圖圖層的顯示。  
   

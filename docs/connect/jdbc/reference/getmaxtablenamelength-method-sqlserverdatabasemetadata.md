@@ -16,10 +16,10 @@ ms.assetid: 5c51218f-c6e8-49f4-ad09-292e849ca43a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aebb22867f2efb3b31d235f1df9ae73c85bab5e8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67981965"
 ---
 # <a name="getmaxtablenamelength-method-sqlserverdatabasemetadata"></a>getMaxTableNameLength 方法 (SQLServerDatabaseMetaData)

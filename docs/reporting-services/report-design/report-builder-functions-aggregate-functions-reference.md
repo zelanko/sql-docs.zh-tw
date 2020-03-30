@@ -9,10 +9,10 @@ ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081325"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>報表產生器函式 - 彙總函式參考
@@ -47,7 +47,7 @@ ms.locfileid: "77081325"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CalculatingAggregates"></a> 內建彙總函式  
+##  <a name="built-in-aggregate-functions"></a><a name="CalculatingAggregates"></a> 內建彙總函式  
  下列內建函數會針對預設範圍或具名範圍，計算非 Null 數值資料集的摘要值。  
   
 |**Function**|**說明**|  
@@ -66,7 +66,7 @@ ms.locfileid: "77081325"
   
  ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")[回到頁首]  
   
-##  <a name="Restrictions"></a> 內建欄位、集合和彙總函式的限制  
+##  <a name="restrictions-on-built-in-fields-collections-and-aggregate-functions"></a><a name="Restrictions"></a> 內建欄位、集合和彙總函式的限制  
  下表摘要列出您可以加入運算式之報表位置的限制，該運算式包含全域內建集合的參考。  
   
 |報表中的位置|欄位|參數|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|變數|RenderFormat|  
@@ -103,7 +103,7 @@ ms.locfileid: "77081325"
   
  ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")[回到頁首]  
   
-##  <a name="NestedRestrictions"></a> 巢狀彙總的限制  
+##  <a name="restrictions-on-nested-aggregates"></a><a name="NestedRestrictions"></a> 巢狀彙總的限制  
  下表摘要列出彙總函式可以將其他彙總函式指定為巢狀彙總的限制。  
   
 |Context|RunningValue|RowNumber|First<br /><br /> Last|Previous|Sum 和其他 Presort 函數|ReportItem 彙總|查閱函數|彙總函式|  
@@ -120,7 +120,7 @@ ms.locfileid: "77081325"
   
  ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")[回到頁首]  
   
-##  <a name="CalculatingRunningValues"></a> 計算執行值  
+##  <a name="calculating-running-values"></a><a name="CalculatingRunningValues"></a> 計算執行值  
  下列的內建函數會計算資料集的執行值。 **RowNumber** 與 **RunningValue** 類似，會傳回累加包含範圍內每個資料列的計數執行值。 這些函數的範圍參數必須指定包含範圍，這個範圍控制何時重新開始計數。  
   
 |**Function**|**說明**|  
@@ -130,7 +130,7 @@ ms.locfileid: "77081325"
   
  ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")[回到頁首]  
   
-##  <a name="RetrievingRowCounts"></a> 擷取資料列計數  
+##  <a name="retrieving-row-counts"></a><a name="RetrievingRowCounts"></a> 擷取資料列計數  
  下列的內建函數會計算給定範圍中的資料列數。 這個函數可用來計算所有資料列的數目，包括具有 Null 值的資料列。  
   
 |**Function**|**說明**|  
@@ -139,7 +139,7 @@ ms.locfileid: "77081325"
   
  ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")[回到頁首]  
   
-##  <a name="LookupFunctions"></a> 從其他資料集查詢值  
+##  <a name="looking-up-values-from-another-dataset"></a><a name="LookupFunctions"></a> 從其他資料集查詢值  
  下列查閱函數會從指定的資料集擷取值。  
   
 |**Function**|**說明**|  
@@ -150,7 +150,7 @@ ms.locfileid: "77081325"
   
  ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")[回到頁首]  
   
-##  <a name="RetrievingPostsortValues"></a> 擷取與排序相依的值  
+##  <a name="retrieving-sort-dependent-values"></a><a name="RetrievingPostsortValues"></a> 擷取與排序相依的值  
  下列的內建函數會傳回給定範圍內的第一個、最後一個或上一個值。 這些函數會視資料值的排序次序而定。 舉例而言，這些函數可用來尋找頁面上的第一個和最後一個值，以建立字典樣式的頁首。 **Previous** 可用來比較特定範圍內一個資料列的值與上一個資料列的值，以在資料表中找出年的成長百分比。  
   
 |**Function**|**說明**|  
@@ -161,7 +161,7 @@ ms.locfileid: "77081325"
   
  ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")[回到頁首]  
   
-##  <a name="RetrievingServerAggregates"></a> 擷取伺服器彙總  
+##  <a name="retrieving-server-aggregates"></a><a name="RetrievingServerAggregates"></a> 擷取伺服器彙總  
  下列的內建函數將從資料提供者擷取自訂彙總。 例如，您可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源類型擷取在資料來源伺服器上計算的彙總，以用於群組頁首。  
   
 |**Function**|**說明**|  
@@ -170,7 +170,7 @@ ms.locfileid: "77081325"
   
  ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")[回到頁首]  
   
-##  <a name="TestingforScope"></a> 測試範圍  
+##  <a name="testing-for-scope"></a><a name="TestingforScope"></a> 測試範圍  
  下列的內建函數會測試報表項目目前的內容，查看是否為特定範圍的成員。  
   
 |函式|描述|  
@@ -179,7 +179,7 @@ ms.locfileid: "77081325"
   
  ![搭配 [回到頁首] 連結使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示")[回到頁首]  
   
-##  <a name="RetrievingRecursiveLevel"></a> 擷取遞迴層級  
+##  <a name="retrieving-recursive-level"></a><a name="RetrievingRecursiveLevel"></a> 擷取遞迴層級  
  下列的內建函數會在系統處理遞迴階層時，擷取目前的層級。 在文字方塊中以 **Padding** 屬性使用此函數的結果，即可控制遞迴群組視覺階層的縮排層級。 如需詳細資訊，請參閱[建立遞迴階層群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
   
 |函式|描述|  

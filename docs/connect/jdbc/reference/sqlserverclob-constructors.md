@@ -12,10 +12,10 @@ ms.assetid: 287d261a-0527-4890-b0d9-49d5645b41ae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5b05e14d8b14bf568cf7d1d1060dbc8e2aea3fb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971794"
 ---
 # <a name="sqlserverclob-constructors"></a>SQLServerClob 建構函式

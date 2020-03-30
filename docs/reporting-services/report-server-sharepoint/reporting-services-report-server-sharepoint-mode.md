@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: af25232f5a1603f25814309270813188c05a89fc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68262346"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 報表伺服器 (SharePoint 模式)
@@ -64,9 +64,9 @@ ms.locfileid: "68262346"
 
  SQL Server 2008 R2 版本導入了全新的 *「本機模式」* (Local Mode)，可用於從已安裝適用於 SharePoint 2010 產品之 Microsoft SQL Server 2008 R2 或更新版的 Reporting Services 增益集的 SharePoint 2010 伺服器檢視報表。  
   
--   「本機模式」  ：本機模式可讓您從 SharePoint 文件庫將報表轉譯到本機，不需要與 Reporting Services 報表伺服器整合。 需要 SharePoint 產品的 Reporting Services 增益集，但不需要 Reporting Services 報表伺服器。 增益集可以利用幾種不同的方式安裝，包括 SharePoint 2010 產品準備工具。 如需本機模式的詳細資訊，請參閱[比較報表檢視器中的本機模式與連線模式報表 &#40;SharePoint 模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md) 和[尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+-   *「本機模式」* ：本機模式可讓您從 SharePoint 文件庫本機轉譯報表，而不需要與 Reporting Services 報表伺服器整合。 需要 SharePoint 產品的 Reporting Services 增益集，但不需要 Reporting Services 報表伺服器。 增益集可以利用幾種不同的方式安裝，包括 SharePoint 2010 產品準備工具。 如需本機模式的詳細資訊，請參閱[比較報表檢視器中的本機模式與連線模式報表 &#40;SharePoint 模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md) 和[尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
--   「連線模式」  ：支援連線模式的方式是使用 SharePoint 管理中心，將 Reporting Services 報表伺服器整合至 SharePoint 伺服陣列中。 與報表伺服器整合可啟用完整的端對端報告，並提供 SharePoint 2010 共同作業功能以及報表伺服器的伺服器架構功能，包括：訂用帳戶、快照集和伺服器架構處理。  
+-   「連線模式」  ：連線模式的支援方式是使用 SharePoint 管理中心，將 Reporting Services 報表伺服器整合至 SharePoint 伺服陣列中。 與報表伺服器整合會啟用完整的端對端報表，並提供 SharePoint 2010 的共同作業功能以及報表伺服器的伺服器架構功能，包括：訂閱、快照集和伺服器架構處理。  
   
 ## <a name="unsupported-sharepoint-features"></a>不支援的 SharePoint 功能
 

@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7e41a75e543c325dce4353a512a8396887fe853c
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79090597"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 使用公用程式
@@ -40,9 +40,9 @@ ms.locfileid: "79090597"
   
 ## <a name="typically-used-sqlcmd-options"></a>一般使用的 sqlcmd 選項  
   
--   伺服器選項 ( **-S**) 可識別 **sqlcmd** 連接的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
+-   伺服器選項 ( **-S**) 可識別 [!INCLUDE[msCoName](../../includes/msconame-md.md)]sqlcmd[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接的   執行個體。  
   
--   驗證選項 ( **-E**、 **-U** 和 **-P**) 指定供 **sqlcmd** 用來連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的認證。 **注意：** **-E** 選項是預設，不需要予以指定。  
+-   驗證選項 ( **-E**、 **-U** 和 **-P**) 指定供 **sqlcmd** 用來連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的認證。 **注意：** **-E** 選項是預設值，不需要予以指定。  
   
 -   輸入選項 ( **-Q**、 **-q** 和 **-i**) 識別 **sqlcmd** 的輸入位置。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "79090597"
     sqlcmd -S <ComputerName>  
     ```  
   
-    > **注意：** 上述範例未指定 **-E**，因為它是預設值，而且 **sqlcmd** 會使用 Windows 驗證連接到預設的執行個體。  
+    > **注意：** 上述範例未指定 **-E** ，因為它是預設值，而且 **sqlcmd** 會使用 Windows 驗證連接到預設的執行個體。  
   
 -   使用 Windows 驗證連接到具名執行個體，以互動方式執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   

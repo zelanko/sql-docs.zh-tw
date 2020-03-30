@@ -16,10 +16,10 @@ ms.assetid: 04eebd6a-016f-4462-82f5-ab34b945eec4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b9f645a3a7be53390455b8c3a664b194df6cafd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955813"
 ---
 # <a name="beforefirst-method-sqlserverresultset"></a>beforeFirst 方法 (SQLServerResultSet)

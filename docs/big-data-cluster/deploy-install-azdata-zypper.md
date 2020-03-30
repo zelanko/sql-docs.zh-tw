@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: a02b4f0707d98d8acc9e65a2a27cee8d886c1ae7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75728569"
 ---
 # <a name="install-azdata-with-zypper"></a>使用 zypper 安裝 `azdata`
@@ -62,7 +62,7 @@ ms.locfileid: "75728569"
 
 ## <a name="update"></a>更新
 
-使用 `zypper update` 命令更新 `azdata-cli`。
+使用 `azdata-cli` 命令更新 `zypper update`。
 
    ```bash
    sudo zypper refresh

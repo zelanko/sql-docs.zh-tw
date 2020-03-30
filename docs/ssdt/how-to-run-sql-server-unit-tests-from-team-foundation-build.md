@@ -11,19 +11,19 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75244285"
 ---
-# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>如何：從 Team Foundation Build 執行 SQL Server 單元測試
+# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>HOW TO：從 Team Foundation Build 執行 SQL Server 單元測試
 
 您可以使用 Team Foundation Build，在執行組建驗證測試 (BVT) 時執行 SQL Server 單元測試。 您可以設定單元測試以部署資料庫、產生測試資料，然後執行選取的測試。 如果您不熟悉 Team Foundation Build，就應該先檢閱下列資訊，然後再依照本主題的程序進行：  
   
 -   [建立和定義 SQL Server 單元測試](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [操作說明：在建置應用程式之後設定和執行已排定的測試](https://msdn.microsoft.com/library/ms182465(VS.100).aspx) \(機器翻譯\)  
+-   [如何：在建置應用程式之後設定和執行已排程的測試](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
   
 -   [建立基本組建定義](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "75244285"
   
 若要解決這些問題，您必須在 app.config 中指定覆寫區段，以便使用 Team Foundation Build 環境專用的組態檔來覆寫 app.config。 如需詳細資訊，請參閱本主題後面的[修改測試專案](#ModifyTestProject)。  
   
-## <a name="ConfigureX64"></a>設定測試設定以在 x64 組建代理程式上執行 SQL Server 單元測試  
+## <a name="configure-test-settings-to-run-sql-server-unit-tests-on-an-x64-build-agent"></a><a name="ConfigureX64"></a>設定測試設定以在 x64 組建代理程式上執行 SQL Server 單元測試  
 針對 x64 組建代理程式執行單元測試之前，您必須先進行測試設定以變更主機處理序平台。  
   
 #### <a name="to-specify-the-host-process-platform"></a>若要指定主機處理序平台  
@@ -84,7 +84,7 @@ ms.locfileid: "75244285"
   
 5.  按一下 [套用]  。  
   
-## <a name="CreateATestList"></a>將測試指派給測試分類 (選擇性)  
+## <a name="assign-tests-to-a-test-category-optional"></a><a name="CreateATestList"></a>將測試指派給測試分類 (選擇性)  
 一般而言，當您建立組建定義以執行單元測試時，可以指定一個或多個測試分類。 指定之分類中的所有測試都會在組建執行時執行。  
   
 #### <a name="to-assign-tests-to-a-test-category"></a>若要將測試指派給測試分類  
@@ -101,7 +101,7 @@ ms.locfileid: "75244285"
   
     新的測試分類將會指派給您的測試，而且將透過屬性提供給其他測試。  
   
-## <a name="ModifyTestProject"></a>修改測試專案  
+## <a name="modify-the-test-project"></a><a name="ModifyTestProject"></a>修改測試專案  
 根據預設，Team Foundation Build 會在建置單元測試專案時，根據專案的 app.config 檔案建立組態檔。 資料庫專案的路徑在 app.config 檔案中是儲存為相對路徑。 可在 Visual Studio 中運作的相對路徑將無法運作，因為 Team Foundation Build 會將建置的檔案放入相對於單元測試執行位置的不同位置。 此外，您的 app.config 檔案包含指定要測試之資料庫的連接字串。 如果單元測試必須連接的資料庫與建立測試專案時使用的資料庫不同，您也需要針對 Team Foundation Build 建立個別的 app.config 檔案。 藉由進行下一項程序的修改，您可以設定測試專案和組建伺服器，讓 Team Foundation Build 使用不同的組態。  
   
 > [!IMPORTANT]  
@@ -205,7 +205,7 @@ ms.locfileid: "75244285"
   
     接下來，您必須將方案簽入至版本控制。  
   
-## <a name="CheckInTheTestList"></a>簽入方案  
+## <a name="check-in-the-solution"></a><a name="CheckInTheTestList"></a>簽入方案  
 在這個程序中，您會簽入方案的所有檔案。 這些檔案包括方案的測試中繼資料檔案，其中包含您的測試分類關聯和測試。 每當您加入、刪除、重新組織或變更測試的內容時，您的測試中繼資料檔案就會自動更新以反映這些變更。  
   
 > [!NOTE]  
@@ -234,7 +234,7 @@ ms.locfileid: "75244285"
   
     您的測試可用於 Team Foundation Build。 您現在可以建立包含想要執行之測試的組建定義。  
   
-## <a name="CreateBuildDef"></a>建立組建定義  
+## <a name="create-a-build-definition"></a><a name="CreateBuildDef"></a>建立組建定義  
   
 #### <a name="to-create-a-build-definition"></a>若要建立組建定義  
   
@@ -246,7 +246,7 @@ ms.locfileid: "75244285"
   
 3.  在巡覽列中，按一下 [組建預設值]  。  
   
-4.  在 [將組建輸出複製到下列置放資料夾 (UNC 路徑，例如 \\\server\share)]  中，指定要包含組建輸出的資料夾。  
+4.  在 [將組建輸出複製到下列置放資料夾 (UNC 路徑，例如 **\server\share)]\\** 中，指定要包含組建輸出的資料夾。  
   
     您可以指定本機電腦上的共用資料夾或是組建處理序將擁有權限的任何網路位置。  
   
@@ -264,17 +264,17 @@ ms.locfileid: "75244285"
   
 10. 在 [基本]  群組的 [自動化測試]  中，指定您要執行的測試。 根據預設，系統將會執行解決方案中名為 \*test\*.dll 之檔案所包含的測試。  
   
-11. 在 [檔案]  功能表上，按一下 [儲存 *ProjectName*]  。  
+11. 在 [檔案]  功能表上，按一下 [儲存 **ProjectName**]  。  
   
     您已建立組建定義。 接下來，您必須修改測試專案。  
   
-## <a name="RunBuild"></a>執行新的組建定義  
+## <a name="run-the-new-build-definition"></a><a name="RunBuild"></a>執行新的組建定義  
   
 #### <a name="to-run-the-new-build-type"></a>若要執行新的組建類型  
   
 1.  在 [Team 總管] 中，展開 Team 專案節點、展開 [組建] 節點、以滑鼠右鍵按一下您想要執行的組建定義，然後按一下 [佇列新組建]。  
   
-    [佇列組建 {_TeamProjectName_}]   對話方塊隨即出現，並列出所有現有的組建類型。  
+    [佇列組建 {**TeamProjectName**}]   對話方塊隨即出現，並列出所有現有的組建類型。  
   
 2.  必要時，請在 [組建定義]  中按一下您的新組建定義。  
   

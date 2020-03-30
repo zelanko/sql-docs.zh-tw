@@ -11,10 +11,10 @@ ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028888"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 行動報表：完整逐步解說
@@ -63,7 +63,7 @@ ms.locfileid: "69028888"
   
 深入了解 [Reporting Services 中的共用資料來源](../report-data/create-modify-and-delete-shared-data-sources-ssrs.md)。  
    
-## <a name="shared-dataset">建立共用資料集</a>  
+## <a name=""></a><a name="shared-dataset">建立共用資料集</a>  
   
 使用現有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 用戶端工具 (例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中的「報表設計師」) 建立共用資料集。  本逐步解說使用 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安裝報表產生器](../install-windows/install-report-builder.md)，或從您的入口網站啟動報表產生器。 您將建立三個資料集，分別針對：KPI 值、KPI 趨勢，以及 Reporting Services 行動報表 (含有更多欄位)。     
   
@@ -93,7 +93,7 @@ ms.locfileid: "69028888"
    
 現在您可以使用該資料集做為您的 KPI 和行動報表的基礎。  您可以針對相同的資料來源建立多個資料集。 而且您可以針對這些共用資料集建立多個 KPI 和行動報表。   
   
-## <a name="create-KPI">建立 KPI</a>  
+## <a name=""></a><a name="create-KPI">建立 KPI</a>  
 您可以直接在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站中建立 KPI。    
   
 1. 在入口網站右上角，按一下 [新增]   > [新增 KPI]  。   
@@ -133,7 +133,7 @@ ms.locfileid: "69028888"
    
     ![PBI_SSMRP_NewKPI](../../reporting-services/mobile-reports/media/pbi-ssmrp-newkpi.png)  
     
-## <a name="create-mobile-report">建立 Reporting Services 行動報表</a>  
+## <a name=""></a><a name="create-mobile-report">建立 Reporting Services 行動報表</a>  
    
 若要建立 Reporting Services 行動報表， [請安裝 SQL Server 行動報表發行工具](https://go.microsoft.com/fwlink/?LinkId=717766)，或從 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 入口網站啟動它。 
 

@@ -13,10 +13,10 @@ ms.assetid: 73f4db18-6b4e-4b72-9dce-449bd5de8eab
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: f7c9339e5e374850bda986eedc28ace32b5630d1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75247182"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>SQL Server Management Studio 環境

@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2ec6a87467f2ec69164827e0a1ce76ad95180377
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77256803"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site---reporting-services"></a>SharePoint 網站上的報表檢視器網頁組件 - Reporting Services
@@ -26,7 +26,7 @@ ms.locfileid: "77256803"
 
 報表檢視器網頁組件以前是適用於 SharePoint 產品的 Reporting Services 增益集的一部分。 網頁組件以前專門針對 SharePoint 整合模式中的報表伺服器。 SQL Server 2016 之後已取代 SharePoint 整合模式。
 
-從 SQL Server 2017 開始，只有一種 Reporting Services 安裝模式：**原生模式**。 您可以使用 *rs:Embed=true* URL 參數，內嵌所有使用網頁檢視器網頁組件的報表類型。 將報表內嵌到 SharePoint 頁面是客戶要求的整合內容，而更新的報表檢視器網頁能針對分頁報表啟用案例。
+從 SQL Server 2017 開始，只有一種 Reporting services 安裝模式：**原生模式**。 您可以使用 *rs:Embed=true* URL 參數，內嵌所有使用網頁檢視器網頁組件的報表類型。 將報表內嵌到 SharePoint 頁面是客戶要求的整合內容，而更新的報表檢視器網頁能針對分頁報表啟用案例。
 
 當網頁檢視器網頁組件足以將分頁報表內嵌到 SharePoint 頁面時，更新的報表檢視器網頁組件就可以提供其他功能。
 

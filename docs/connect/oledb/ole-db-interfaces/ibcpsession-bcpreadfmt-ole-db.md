@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 97274315275f11e77c458827740f44906a524ed9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015506"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
@@ -44,7 +44,7 @@ HRESULT BCPReadFmt(
   
  若要儲存格式檔案，請呼叫 [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) 方法。 **BCPReadFmt** 方法的呼叫可以參考已儲存的格式。 另外，大量複製公用程式 (**bcp**) 可以將使用者定義的資料格式儲存在由 **BCPReadFmt** 方法參考的檔案中。  
   
- [IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) 之 *eOption* 參數的 **BCP_OPTION_DELAYREADFMT** 值會修改 IBCPSession::BCPReadFmt 的行為。  
+ **IBCPSession::BCPControl** 之 *eOption* 參數的 [BCP_OPTION_DELAYREADFMT](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) 值會修改 IBCPSession::BCPReadFmt 的行為。  
   
 ## <a name="arguments"></a>引數  
  *pwszFormatFile*[in]  

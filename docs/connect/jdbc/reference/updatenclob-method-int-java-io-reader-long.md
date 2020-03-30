@@ -11,10 +11,10 @@ ms.assetid: 2bdbb539-0cb9-4047-98e3-7d6906af68f8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93b6fca31afd24a8992e442096117d9479b52b48
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998651"
 ---
 # <a name="updatenclob-method-int-javaioreader-long"></a>updateNClob 方法 (int, java.io.Reader, long)
@@ -50,7 +50,7 @@ public void updateNClob(int columnIndex,
 ## <a name="remarks"></a>備註  
  這個 updateNClob 方法是由 java.sql.ResultSet 介面中的 updateNClob 方法指定。  
   
- 只有 **nvarchar(max)** 、**ntext** 和 **xml** 資料行才支援這個方法。 對任何其他資料類型使用這個方法，將擲回例外狀況。  
+ 只有在 **nvarchar(max)** 、**ntext** 和 **xml** 資料行上才支援這個方法。 對任何其他資料類型使用這個方法，將擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱  
  [updateNClob 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

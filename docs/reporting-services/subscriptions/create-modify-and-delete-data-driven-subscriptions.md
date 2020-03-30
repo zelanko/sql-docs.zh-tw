@@ -14,10 +14,10 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b385e04cf2efa103dba4a66d4e794a7984814fb4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140272"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>建立、修改和刪除資料驅動訂閱
@@ -35,14 +35,14 @@ ms.locfileid: "67140272"
   
 -   [執行訂閱](#bkmk_run_subscription)  
   
-##  <a name="bkmk_manage_and_delete"></a> 管理和刪除資料驅動訂閱  
+##  <a name="managing-and-deleting-a-data-driven-subscription"></a><a name="bkmk_manage_and_delete"></a> 管理和刪除資料驅動訂閱  
  您無法透過入口網站停止或刪除正在進行中的資料驅動訂閱。 因此，建議您使用共用排程來觸發資料驅動訂閱。 這樣一來，如果您想要暫時防止訂閱處理，就可以暫停觸發訂閱的排程。 如需詳細資訊，請參閱 [建立和管理原生模式報表伺服器的訂閱](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
   
  若要刪除資料驅動訂閱，請選取 [訂閱]  頁面上報表旁的核取方塊，然後選取 [刪除]  。  
   
  如需如何取消資料驅動訂閱的指示，請參閱 [管理執行中的處理序](../../reporting-services/subscriptions/manage-a-running-process.md)。  
   
-##  <a name="bkmk_create_and_modify"></a> 建立和修改資料驅動訂閱  
+##  <a name="creating-and-modifying-a-data-driven-subscription"></a><a name="bkmk_create_and_modify"></a> 建立和修改資料驅動訂閱  
  若要建立資料驅動訂閱，請選取使用預存認證或無認證的報表。 當您建立資料驅動訂閱時，請考慮使用 [描述] 欄位的命名慣例，如此就能輕鬆區分標準訂閱與資料驅動訂閱。  
   
 ### <a name="to-create-a-data-driven-subscription-native-mode"></a>若要建立資料驅動訂閱 (原生模式)  
@@ -88,14 +88,14 @@ ms.locfileid: "67140272"
   
 -   **使用者需求**。 此訂閱的作者必須具有「管理報表」和「管理所有訂閱」的權限。 如需項目層級工作權限的詳細資訊，請參閱 [工作和權限](../../reporting-services/security/tasks-and-permissions.md)。 此作者也必須具有適當的認證，才能存取包含訂閱者資料的外部資料來源。  
   
-##  <a name="bkmk_define_query"></a> 定義查詢來擷取訂閱資訊  
+##  <a name="defining-a-query-that-retrieves-subscription-information"></a><a name="bkmk_define_query"></a> 定義查詢來擷取訂閱資訊  
  資料驅動訂閱必須指定查詢或命令來擷取訂閱者資料， 查詢應該針對每一個訂閱者產生一個資料列。 如果您是使用電子郵件傳遞延伸模組，則查詢應傳回每一個訂閱者的有效電子郵件別名。 傳遞的數目會依據查詢所傳回的資料列數目而定。 如果資料列集包括 10,000 個資料列，則訂閱會傳遞 10,000 個報表。  
   
  如果執行查詢很花時間，您可以增加逾時值以容納更多的處理。  
   
  針對此步驟，您必須在繼續之前先驗證查詢。 驗證並不會處理查詢，但會傳回在資料列集內的所有資料行清單，讓您可以在後續選取範圍中參考資料行。 如果查詢未通過驗證，您就無法繼續。 如果查詢語法不正確或資料來源的連接無效，查詢就無法通過驗證。 使用 **[上一步]** 按鈕，以更正資料來源。  
   
-##  <a name="bkmk_run_subscription"></a> 執行訂閱  
+##  <a name="running-the-subscription"></a><a name="bkmk_run_subscription"></a> 執行訂閱  
  您必須指定處理訂閱的條件。 您可以指定排程，或觸發訂閱，讓更新與報表執行快照集一致。 資料驅動訂閱的處理和標準訂閱的處理相同。  
   
 ## <a name="see-also"></a>另請參閱  

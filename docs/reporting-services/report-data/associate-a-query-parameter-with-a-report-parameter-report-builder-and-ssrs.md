@@ -12,10 +12,10 @@ ms.assetid: 6d297e1a-ff71-472a-addc-349e863092b5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0e9752c14ef2ba03cdb95ad8fe4430c4d4fa23db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081433"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>將查詢參數與報表參數產生關聯 (報表產生器及 SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "77081433"
   
     -   在 [參數值]  中，鍵入或選取會評估為要傳遞到查詢參數之值的運算式。 這通常是報表參數的名稱。  
   
-        > **注意：** 並非只有報表參數才能做為查詢參數的值。 您可以使用任何會評估為值的運算式，以做為參數值。  
+        > **注意：** 並非只有報表參數才能作為查詢參數的值。 您可以使用任何會評估為值的運算式，以做為參數值。  
   
 3.  重複步驟 2 可以加入其他查詢參數。  
   

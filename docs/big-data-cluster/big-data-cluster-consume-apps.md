@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 305080d5c3b0a1c517d757c1f6f2bd07fefb216c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75721403"
 ---
 # <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>使用 RESTful Web 服務取用部署在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上的應用程式
@@ -115,7 +115,7 @@ azdata app describe --name add-app --version v1
 ## <a name="execute-the-app-using-the-restful-web-service"></a>使用 RESTful Web 服務執行應用程式
 
 > [!NOTE]
-> 如有需要，您可以在瀏覽器中開啟執行 `azdata app describe --name [appname] --version [version]` 時所傳回的 `swagger` URL，它應該類似於 `https://[IP]:[PORT]/app/[appname]/[version]/swagger.json`。 您必須使用您用於 `azdata login` 的相同認證來登入。 您可以貼入 [Swagger 編輯器](https://editor.swagger.io)的 `swagger.json` 內容。 您將會看到 Web 服務公開 `run` 方法。 另請注意顯示在頂端的基底 URL。
+> 如有需要，您可以在瀏覽器中開啟執行 `swagger` 時所傳回的 `azdata app describe --name [appname] --version [version]` URL，它應該類似於 `https://[IP]:[PORT]/app/[appname]/[version]/swagger.json`。 您必須使用您用於 `azdata login` 的相同認證來登入。 您可以貼入 `swagger.json`Swagger 編輯器[的 ](https://editor.swagger.io) 內容。 您將會看到 Web 服務公開 `run` 方法。 另請注意顯示在頂端的基底 URL。
 
 您可以使用您最愛的工具來呼叫 `run` 方法 (`https://[IP]:30778/api/app/[appname]/[version]/run`)，並在 POST 要求主體中，以 json 格式傳入參數。 在此範例中，我們將會使用 [Postman](https://www.getpostman.com/) \(英文\)。 進行呼叫之前，您必須先將 `Authorization` 設定為 `Bearer Token`，並貼入您先前擷取的權杖。 這會在您的要求上設定標頭。 請參閱下面的螢幕擷取畫面。
 

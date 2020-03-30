@@ -16,10 +16,10 @@ ms.assetid: 7def226c-b211-459e-8c1a-08592d75d4a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee4ab641ede4d4ec614a306f9c0e08c9f16aa5ee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974938"
 ---
 # <a name="setbytes-method-long-byte-int-int"></a>setBytes 方法 (long, byte, int, int)

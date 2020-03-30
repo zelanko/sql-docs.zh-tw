@@ -11,10 +11,10 @@ ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8fe6969d51834d0798a530b9cc9926af1b27fec2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028232"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>設定 java.sql.Time 值如何傳送給伺服器
@@ -38,9 +38,9 @@ ms.locfileid: "69028232"
   
  您可以設定 java.sql.Time 值如何使用 **sendTimeAsDatetime** 連線屬性來傳送。 如需詳細資訊，請參閱[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
- 您可以使用程式設計方式，透過 [SQLServerDataSource.setSendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) 修改 **sendTimeAsDatetime** 連線屬性的值。  
+ 您可以使用程式設計方式，透過 **SQLServerDataSource.setSendTimeAsDatetime** 修改 [sendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) 連線屬性的值。  
   
- [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] 之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本不支援 **time** 資料類型，因此使用 java.sql.Time 的應用程式通常會將 java.sql.Time 值儲存為 **datetime** 或 **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] 版本不支援 **time** 資料類型，因此使用 java.sql.Time 的應用程式通常會將 java.sql.Time 值儲存為 **datetime** 或 **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。  
   
  如果您要在處理 java.sql.Time 值時使用 **datetime** 和 **smalldatetime**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，您應該將 **sendTimeAsDatetime** 連接屬性設為 **true**。 如果您要在處理 java.sql.Time 值時使用 **time** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，您應該將 **sendTimeAsDatetime** 連接屬性設為 **false**。  
   

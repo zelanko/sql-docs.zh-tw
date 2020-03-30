@@ -9,10 +9,10 @@ ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b727fcffec668fbe854222eeabab6263b82e81cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081991"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>在報表中捲動時將標頭保持可見 (報表產生器及 SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "77081991"
   
  如何控制資料列和資料行取決於您擁有資料表還是矩陣。 如果您有資料表，請設定靜態成員 (資料列和資料行標題) 來維持可見度。 如果您有矩陣，請設定資料列和資料行群組標頭來維持可見度。  
   
- 如果您將報表匯出到 Excel，標頭將不會自動凍結。 您可以在 Excel 中凍結窗格。 如需詳細資訊，請參閱[匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)的**頁首和頁尾**一節。  
+ 如果您將報表匯出到 Excel，標頭將不會自動凍結。 您可以在 Excel 中凍結窗格。 如需詳細資訊，請參閱**匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;** 的[頁首和頁尾](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)一節。  
   
 > [!NOTE]  
 >  即使資料表包含資料列和資料行群組，您還是無法在捲動時維持這些群組標頭的可見度  

@@ -16,10 +16,10 @@ ms.assetid: e609b336-d40e-4d89-9130-6db7e6853541
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61a6eeb405018c2b9eebc01039b0b49a14e6d910
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953589"
 ---
 # <a name="getblob-method-sqlservercallablestatement"></a>getBlob 方法 (SQLServerCallableStatement)

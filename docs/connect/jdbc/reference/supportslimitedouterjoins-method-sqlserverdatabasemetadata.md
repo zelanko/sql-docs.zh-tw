@@ -16,10 +16,10 @@ ms.assetid: 06225a1a-a58d-4bff-b2ef-be303f051644
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8e1b235a8c779c652a8678802bbb91a1de83f38
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969309"
 ---
 # <a name="supportslimitedouterjoins-method-sqlserverdatabasemetadata"></a>supportsLimitedOuterJoins 方法 (SQLServerDatabaseMetaData)

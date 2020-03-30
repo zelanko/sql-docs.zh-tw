@@ -15,10 +15,10 @@ ms.assetid: f95f084e-9f3d-4d15-90b4-1094ab2eda51
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 0967c82b537bb733bce8933f379320ceb37511d8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75251944"
 ---
 # <a name="copy-items-in-a-solution"></a>複製方案中的項目

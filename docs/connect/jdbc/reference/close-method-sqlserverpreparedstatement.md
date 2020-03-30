@@ -16,10 +16,10 @@ ms.assetid: 36db9ff7-5819-4827-9803-4a81c99069b3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d8a81004e846986e7352eabb880404ae3cc8c51
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955596"
 ---
 # <a name="close-method-sqlserverpreparedstatement"></a>close 方法 (SQLServerPreparedStatement)

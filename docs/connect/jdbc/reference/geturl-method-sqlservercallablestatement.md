@@ -16,10 +16,10 @@ ms.assetid: 700f54ab-58c1-4e5f-a188-818366a119c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec8a1fc56fe5762093f78ce95453cc44d2f136f0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978284"
 ---
 # <a name="geturl-method-sqlservercallablestatement"></a>getURL 方法 (SQLServerCallableStatement)

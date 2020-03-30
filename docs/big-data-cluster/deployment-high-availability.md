@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286042"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>部署高可用性 SQL Server 巨量資料叢集
@@ -76,7 +76,7 @@ ms.locfileid: "79286042"
 }
 ```
 
-下列步驟會逐步示範如何從 `aks-dev-test-ha` 設定檔開始自訂您的巨量資料叢集部署設定。 若要在 `kubeadm` 叢集上進行部署，請套用類似步驟，但確定在 `endpoints` 區段中使用 `NodePort` 作為 `serviceType`。
+下列步驟會逐步示範如何從 `aks-dev-test-ha` 設定檔開始自訂您的巨量資料叢集部署設定。 若要在 `kubeadm` 叢集上進行部署，請套用類似步驟，但確定在 `NodePort` 區段中使用 `serviceType` 作為 `endpoints`。
 
 1. 複製您的目標設定檔
 
@@ -127,12 +127,12 @@ Description                                    Endpoint            Name         
 SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-master-readonly  tds
 ```
 
-## <a id="instance-connect"></a> 連接到 SQL Server 執行個體
+## <a name="connect-to-sql-server-instance"></a><a id="instance-connect"></a> 連接到 SQL Server 執行個體
 
 針對設定伺服器層級設定或手動將資料庫新增至可用性群組等特定作業，您必須連接到 SQL Server 執行個體。 在 SQL Server 2019 CU2 版本之前，`sp_configure`、`RESTORE DATABASE` 或任何可用性群組 DDL 等作業都需要這種連線類型。 根據預設，巨量資料叢集不會包含啟用執行個體連接的端點，您必須手動公開此端點。 
 
 > [!IMPORTANT]
-> 針對 SQL Server 執行個體連接所公開的端點只支援 SQL 驗證，即使在已啟用 Active Directory 的叢集中也一樣。 根據預設，在巨量資料叢集部署期間，會停用 `sa` 登入，並根據部署時為 `AZDATA_USERNAME` 和 `AZDATA_PASSWORD` 環境變數所提供值佈建新的 `sysadmin` 登入。
+> 針對 SQL Server 執行個體連接所公開的端點只支援 SQL 驗證，即使在已啟用 Active Directory 的叢集中也一樣。 根據預設，在巨量資料叢集部署期間，會停用 `sa` 登入，並根據部署時為 `sysadmin` 和 `AZDATA_USERNAME` 環境變數所提供值佈建新的 `AZDATA_PASSWORD` 登入。
 
 下列範例示範如何公開此端點，然後將使用還原工作流程建立的資料庫新增至可用性群組。 當您想要使用 `sp_configure` 變更伺服器設定時，也適用設定 SQL Server 主要執行個體連接的類似指示。
 

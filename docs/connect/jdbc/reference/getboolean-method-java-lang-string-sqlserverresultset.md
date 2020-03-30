@@ -16,10 +16,10 @@ ms.assetid: ba98a27b-722d-4904-ac65-0f082fde1fe6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9bdf91105e9e7db82f51b5ba9885506e2edd8cd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67953532"
 ---
 # <a name="getboolean-method-javalangstring-sqlserverresultset"></a>getBoolean 方法 (java.lang.String) (SQLServerResultSet)

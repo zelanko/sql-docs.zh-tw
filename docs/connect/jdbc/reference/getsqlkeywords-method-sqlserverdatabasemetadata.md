@@ -16,10 +16,10 @@ ms.assetid: a2a0dfbb-11ec-429f-aea6-8f44148ebb8e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 79995b672219c456284809ee16593fbe800a9638
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979746"
 ---
 # <a name="getsqlkeywords-method-sqlserverdatabasemetadata"></a>getSQLKeywords 方法 (SQLServerDatabaseMetaData)

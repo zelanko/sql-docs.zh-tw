@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 5d7c610f887de137c44f97ca8809e70c548a51db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485313"
 ---
 # <a name="install-packages-with-r-tools"></a>使用 R 工具來安裝套件
@@ -75,7 +75,7 @@ ms.locfileid: "74485313"
 
 如果您有多個並行的 SQL Server 執行個體，請針對您要使用套件的每個執行個體個別執行安裝作業。 因為套件無法跨執行個體共用。
 
-## <a name = "bkmk_offlineInstall"></a> 離線安裝 (無網際網路存取)
+## <a name="offline-installation-no-internet-access"></a><a name = "bkmk_offlineInstall"></a> 離線安裝 (無網際網路存取)
 
 裝載生產資料庫的伺服器通常不會有網際網路連線。 若要在該環境中安裝 R 套件，您可以先下載並準備套件與相依性 (壓縮檔案形式)，然後將檔案複製到伺服器上的資料夾。 檔案備妥之後，即可離線安裝套件。
 

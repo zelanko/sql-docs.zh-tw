@@ -11,10 +11,10 @@ ms.assetid: be74188a-77cd-4d19-b16e-77278373c979
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5bd53aedf65bd1e7935c7e51eb90fb78d65d2bed
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936037"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
@@ -30,9 +30,9 @@ array PDOStatement::fetchAll([ $fetch_style[, $column_index ][, ctor_args]] );
 ```  
   
 #### <a name="parameters"></a>參數  
-$*fetch_style*：指定資料列資料格式的 (整數) 符號。 如需值清單，請參閱 [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) 。 也允許 PDO::FETCH_COLUMN。 PDO::FETCH_BOTH 是預設值。  
+$*fetch_style*：(整數) 符號，用於指定資料列資料的格式。 如需值清單，請參閱 [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) 。 也允許 PDO::FETCH_COLUMN。 PDO::FETCH_BOTH 是預設值。  
   
-$*column_index*：代表當 $*fetch_style* 為 PDO::FETCH_COLUMN 時所要傳回之資料行的整數值。 0 是預設值。  
+$*column_index*：整數值，代表 $*fetch_style* 為 PDO::FETCH_COLUMN 時所要傳回的資料行。 0 是預設值。  
   
 $*ctor_args*：當 $*fetch_style* 為 PDO::FETCH_CLASS 或 PDO::FETCH_OBJ 時，類別建構函式的參數陣列。  
   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 954302809c01769f6d3869e7762917e91cfd8f98
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68892226"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>效能計數器 MSRS 2011 SharePoint 模式效能物件
@@ -41,7 +41,7 @@ ms.locfileid: "68892226"
   
 -   [使用 PowerShell 指令程式傳回清單](#bkmk_powershell)  
   
-##  <a name="bkmk_webservice"></a> MSRS 2011 Web 服務 SharePoint 模式效能計數器  
+##  <a name="msrs-2011-web-service-sharepoint-mode-performance-counters"></a><a name="bkmk_webservice"></a> MSRS 2011 Web 服務 SharePoint 模式效能計數器  
  **MSRS 2011 Web 服務 SharePoint 模式** 效能物件會監視報表伺服器效能。 此效能物件包含一組計數器集合，用來追蹤通常透過互動式報表檢視作業所起始的報表伺服器處理。 當您設定此計數器時，可以將此計數器套用至 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的所有執行個體，也可以選取特定的執行個體 每當 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，便會重設這些計數器。  
   
  下表將列出 **MSRS 2011 Web 服務 SharePoint 模式** 效能物件所包含的計數器。  
@@ -71,7 +71,7 @@ ms.locfileid: "68892226"
 |**Total Reports Executed**|啟動服務之後，成功執行的報表總數。 每當 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，此計數器就會重設。|  
 |**要求總數**|服務啟動之後，對報表伺服器進行之所有要求的總數。 每當 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，此計數器就會重設。|  
   
-##  <a name="bkmk_windowsservice"></a> MSRS 2011 Windows 服務 SharePoint 模式效能計數器  
+##  <a name="msrs-2011-windows-service-sharepoint-mode-performance-counters"></a><a name="bkmk_windowsservice"></a> MSRS 2011 Windows 服務 SharePoint 模式效能計數器  
  **MSRS 2011 Windows 服務 SharePoint 模式** 效能物件可用來監視報表伺服器 Windows 服務。 此效能物件包含一組計數器集合，用來追蹤透過已排程的作業所起始的報表處理。 排程的作業可能包括訂閱與傳遞、報表執行快照集和報表記錄。 當您設定此計數器時，可以將此計數器套用至 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的所有執行個體，也可以選取特定的執行個體  
   
  下表將列出 **MSRS 2011 Windows 服務 SharePoint 模式** 效能物件所包含的計數器。  
@@ -118,7 +118,7 @@ ms.locfileid: "68892226"
 |**要求總數**|啟動服務之後，成功執行的報表總數。 當應用程式定義域回收時，這個計數器會重設。|  
 |**Total Snapshot Updates**|報表執行快照集更新總數。|  
   
-##  <a name="bkmk_powershell"></a> 使用 PowerShell 指令程式傳回清單  
+##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a> 使用 PowerShell 指令程式傳回清單  
  ![PowerShell 相關內容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容")下列 Windows PowerShell 指令碼會傳回 CounterSetName 開頭為 "msr" 的計數器集合  
   
 ```  

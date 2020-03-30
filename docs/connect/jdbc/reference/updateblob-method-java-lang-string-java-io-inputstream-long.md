@@ -11,10 +11,10 @@ ms.assetid: 40f75549-5d5a-4de3-a271-4b8f0dd7b124
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5a75910ee54db4e764d63755e3d7c8c174c16a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67997103"
 ---
 # <a name="updateblob-method-javalangstring-javaioinputstream-long"></a>updateBlob 方法 (java.lang.String, java.io.InputStream, long)

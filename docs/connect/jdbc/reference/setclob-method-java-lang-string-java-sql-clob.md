@@ -11,10 +11,10 @@ ms.assetid: 256b5f55-7a6d-44fb-9a09-19fa39f19c35
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b76a8cbf6e0946c90dbf6033d5276f475f3123ca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974891"
 ---
 # <a name="setclob-method-javalangstring-javasqlclob"></a>setClob 方法 (java.lang.String, java.sql.Clob)

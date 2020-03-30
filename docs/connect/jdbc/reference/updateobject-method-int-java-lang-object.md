@@ -16,10 +16,10 @@ ms.assetid: 4993dfe1-2232-4b3c-b931-dfdb35dd225a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 796a31238a8340b5604797bbb8e38e7ebd1b4237
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67998731"
 ---
 # <a name="updateobject-method-int-javalangobject"></a>updateObject 方法 (int, java.lang.Object)

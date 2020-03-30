@@ -11,10 +11,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: d11446e3ef8fade0c4cfe6ec885c40754861fc26
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75257033"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>為 SQL Server 編寫自訂靜態程式碼分析規則組件的逐步解說
@@ -33,7 +33,7 @@ ms.locfileid: "75257033"
   
 5. 驗證新的程式碼分析規則是否就定位。  
   
-**先決條件**
+**必要條件**
   
 您需要下列元件才能完成這個逐步解說：  
   
@@ -257,7 +257,7 @@ ms.locfileid: "75257033"
     |AvoidWaitForDelay_ProblemDescription|已在 {0} 找到 WAITFOR DELAY 陳述式。|  
     |AvoidWaitForDelay_RuleName|避免在預存程序、函數和觸發程序中使用 WaitFor Delay 陳述式。|  
     |CategorySamples|SamplesCategory|  
-    |CannotCreateResourceManager|無法從 {1} 建立 {0} 的 ResourceManager。|  
+    |CannotCreateResourceManager|無法從 {0} 建立 {1} 的 ResourceManager。|  
   
 7. 按一下 [檔案]  功能表上的 [儲存 RuleResources.resx]  。  
   
@@ -544,7 +544,7 @@ ms.locfileid: "75257033"
   
 3. 按一下 [程式碼分析]  。 您應該看到名稱為 RuleSamples.CategorySamples 的新分類。  
   
-4. 展開 RuleSamples.CategorySamples。 您應該會看到 SR1004：避免在預存程序、觸發程序和函式中使用 WAITFOR DELAY 陳述式。  
+4. 展開 RuleSamples.CategorySamples。 您應該看到 SR1004：避免在預存程序、觸發程序和函數中使用 WAITFOR DELAY 陳述式。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -16,10 +16,10 @@ ms.assetid: 88bd8623-889d-4b5d-99ff-c85b32f3ff5c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98880980d11775b3c906b6e51a2d9deef50316bf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972025"
 ---
 # <a name="sqlserverblob-class"></a>SQLServerBlob 類別

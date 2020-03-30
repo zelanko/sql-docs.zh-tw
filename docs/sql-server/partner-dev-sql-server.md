@@ -10,10 +10,10 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 ms.openlocfilehash: 769c421c087de366ec262c3e5b8744ffb78f3ba6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75656751"
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 開發夥伴

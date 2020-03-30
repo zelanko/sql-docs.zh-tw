@@ -16,10 +16,10 @@ ms.assetid: 860f86db-d840-401a-a5c2-cd22e8cc1e4e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8af0ef075e40444daec1b6e141294d85a74fe3ec
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67975247"
 ---
 # <a name="setbigdecimal-method-sqlserverpreparedstatement"></a>setBigDecimal 方法 (SQLServerPreparedStatement)

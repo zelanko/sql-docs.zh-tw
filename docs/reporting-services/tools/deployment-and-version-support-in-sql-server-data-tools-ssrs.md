@@ -9,10 +9,10 @@ ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571500"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的部署和版本支援 (SSDT) | Microsoft Docs
@@ -26,7 +26,7 @@ ms.locfileid: "65571500"
   
 -   將報表部署到報表伺服器。  
   
-##  <a name="bkmk_ConfigurationandDeploymentProperties"></a> 組態和部署屬性  
+##  <a name="configuration-and-deployment-properties"></a><a name="bkmk_ConfigurationandDeploymentProperties"></a> 組態和部署屬性  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 支援專案組態。 專案組態是由一組屬性所組成，這些屬性可指定建立專案的位置和行為，做為預覽或部署報表的步驟。 若要了解有關專案組態的詳細資訊，請參閱 Visual Studio 文件集。  
   
  使用專案組態可控制升級至與目標伺服器相容之結構描述版本的報表定義。 由專案組態所控制的屬性包括目標報表伺服器、建立期間用來暫時儲存用於預覽和部署之報表定義的資料夾，以及錯誤等級。  
@@ -43,11 +43,11 @@ ms.locfileid: "65571500"
   
 -   TargetServerVersion 是部署屬性，可以識別 TargetServerURL 屬性中所指定目標報表伺服器上安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預期版本。  
   
- 當您在 [專案屬性]  對話方塊中指定舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 時，系統不會自動將報表還原為舊版。 因此，報表伺服器專案可以包含來自兩個不同版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的報表。 部署報表伺服器專案時，專案中的所有報表會轉換為 TargetServerVersion 中指定的版本。  
+ 當您在 [專案屬性][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 對話方塊中指定舊版   時，系統不會自動將報表還原為舊版。 因此，報表伺服器專案可以包含來自兩個不同版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的報表。 部署報表伺服器專案時，專案中的所有報表會轉換為 TargetServerVersion 中指定的版本。  
   
  您可以在專案中加入一個以上的專案組態。而每一個專案組態都用於不同的狀況，例如，部署到不同版本的報表伺服器。 如需詳細資訊，請參閱[設定部署屬性 &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md) 和[專案屬性頁對話方塊](../../reporting-services/tools/project-property-pages-dialog-box.md)。  
   
-##  <a name="bkmk_SupportedVersions"></a> 支援的版本  
+##  <a name="supported-versions"></a><a name="bkmk_SupportedVersions"></a> 支援的版本  
   
 > [!NOTE]  
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] (報表伺服器專案的 32 位元開發環境) 不是設計成要在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 架構電腦上執行，而且未安裝在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 架構伺服器上。 不過， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 仍支援 x64 架構的電腦。  

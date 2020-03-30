@@ -9,10 +9,10 @@ ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 23a1561104273203a01c99a08e86ed301e55bbf3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578780"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>鑽研、向下鑽研、子報表和巢狀資料區
@@ -33,7 +33,7 @@ ms.locfileid: "65578780"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="SummaryCharacteristics"></a> 特性摘要  
+##  <a name="summary-of-characteristics"></a><a name="SummaryCharacteristics"></a> 特性摘要  
  下表簡要地敘述這些不同特性。 稍後會在此主題另一節說明細節。 比較內容不含向下鑽研，因為您可以將它的顯示和隱藏動作套用到任何報表項目。  
   
 |特徵|子報表|鑽研|「巢狀」|  
@@ -48,36 +48,36 @@ ms.locfileid: "65578780"
 |顯示|在主報表|在不同報表|在主報表|  
   
   
-##  <a name="Details"></a> 特性詳細說明  
+##  <a name="details-of-characteristics"></a><a name="Details"></a> 特性詳細說明  
   
-###  <a name="Datasets"></a> 使用的資料集  
+###  <a name="datasets-they-use"></a><a name="Datasets"></a> 使用的資料集  
  子報表和鑽研報表可以使用主報表的相同資料集，也可以使用不同的資料集。 巢狀資料區域使用相同的資料集。  
   
-###  <a name="RetrieveData"></a> 擷取資料  
+###  <a name="retrieving-data"></a><a name="RetrieveData"></a> 擷取資料  
  子報表和巢狀資料區域與主報表同時擷取資料。 鑽研報表則否。 鑽研報表會在使用者按一下連結時擷取資料。 如果必須同時擷取主報表和從屬報表的資料，這就值得注意。  
   
-###  <a name="ProcessRender"></a> 處理與轉譯  
+###  <a name="processing-and-rendering"></a><a name="ProcessRender"></a> 處理與轉譯  
  子報表會當做主報表的一部分來處理。 例如，如果顯示訂單詳細資訊的子報表加入到詳細資料列的資料表資料格中，則資料表的每一個資料列會處理子報表一次，並將子報表當做主報表的一部分來轉譯。 只有當使用者按一下摘要主報表內的鑽研連結時，才會處理及轉譯鑽研報表。  
   
-###  <a name="Performance"></a> 效能  
+###  <a name="performance"></a><a name="Performance"></a> 效能  
  在決定使用哪一項時，可以考慮使用資料區域代替子報表，尤其是如果子報表並非由多個報表使用。 這是因為報表伺服器會將子報表的每一個執行個體，都視為獨立的報表來處理，所以可能會影響效能。 資料區與子報表的功能和彈性相同，但效能更佳。 鑽研報表的效能也比子報表好，因為這種報表不會與主報表同時擷取所有資料。  
   
-###  <a name="Parameters"></a> 使用參數  
+###  <a name="use-of-parameters"></a><a name="Parameters"></a> 使用參數  
  鑽研報表和子報表通常具有指定要顯示什麼報表資料的報表參數。 例如，當您在主報表中按一下銷售訂單號碼時，鑽研報表隨即開啟 (接受銷售訂單號碼當做參數)，然後顯示該銷售訂單的所有資料。 在主報表中建立連結時，會指定要當做參數而傳遞至鑽研報表的值。  
   
  若要建立鑽研報表或子報表，您必須先設計目標鑽研報表或子報表，然後再建立鑽研動作或將參考加入至主報表。  
   
-###  <a name="Reusability"></a> 重複使用性  
+###  <a name="reusability"></a><a name="Reusability"></a> 重複使用性  
  子報表和鑽研報表是獨立的報表， 因此可以用於多份報表或顯示為獨立報表。 巢狀資料區域不可重複使用。 您無法將它們儲存成報表組件，因為它們是內嵌在資料區域裡。 您可以將包含它們的資料區域儲存成報表組件，但巢狀資料區域本身則不行。  
   
-###  <a name="Location"></a> 位置  
+###  <a name="location"></a><a name="Location"></a> 位置  
  子報表和鑽研報表都是獨立報表，因此儲存在主報表外部。 子報表可以位於相同或不同的報表伺服器上，但鑽研報表必須位於相同的報表伺服器上。 巢狀資料區域屬於主報表的一部分。  
   
-###  <a name="Display"></a> 顯示器  
+###  <a name="display"></a><a name="Display"></a> 顯示器  
  子報表和巢狀資料區域會顯示在主報表中。 鑽研報表則會另外獨立顯示。  
   
   
-##  <a name="InThisSection"></a> 本節內容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 本節內容  
  [鑽研報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
  說明使用者按一下主報表中的連結時開啟的報表。  
   

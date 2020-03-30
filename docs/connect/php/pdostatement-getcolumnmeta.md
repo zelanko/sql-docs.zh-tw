@@ -11,10 +11,10 @@ ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cb7e9e37d568659a71917df66016f2333ed4be46
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76918804"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
@@ -30,7 +30,7 @@ array PDOStatement::getColumnMeta ( $column );
 ```  
   
 #### <a name="parameters"></a>參數  
-*$conn*：(整數) 您要擷取其中繼資料之資料行的以零為基底號碼。  
+*$conn*：(整數) 您要擷取其中繼資料的資料行號碼 (以零起始)。  
   
 ## <a name="return-value"></a>傳回值  
 包含資料行中繼資料的關聯陣列 (索引鍵和值)。 如需陣列中欄位的描述，請參閱＜備註＞一節。  
@@ -71,7 +71,7 @@ print $metadata['name'];
   
 ## <a name="sensitivity-data-classification-metadata"></a>敏感性資料分類中繼資料
 
-從 5.8.0 版開始，新的陳述式屬性 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` 可供使用者透過使用 `PDOStatement::getColumnMeta` (其需要 Microsoft ODBC Driver 17.4.2 或更新版本) 來存取 Microsoft SQL Server 2019 中的[敏感性資料分類中繼資料](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)。
+從 5.8.0 版開始，新的陳述式屬性 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` 可供使用者透過使用 [ (其需要 Microsoft ODBC Driver 17.4.2 或更新版本) 來存取 Microsoft SQL Server 2019 中的](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)敏感性資料分類中繼資料`PDOStatement::getColumnMeta`。
 
 請注意，`PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` 屬性預設為 `false`，但當設定為 `true` 時，先前所提到的陣列欄位 `flags` 將會填入敏感性資料分類中繼資料 (如果其存在的話)。 
 
@@ -93,7 +93,7 @@ ADD SENSITIVITY CLASSIFICATION TO [Patients].SSN WITH (LABEL = 'Highly Confident
 ADD SENSITIVITY CLASSIFICATION TO [Patients].BirthDate WITH (LABEL = 'Confidential Personal Data', INFORMATION_TYPE = 'Birthdays')
 ```
 
-若要存取中繼資料，請在將 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` 設定為 true 之後使用 `PDOStatement::getColumnMeta`，如下列程式碼片段中所示：
+若要存取中繼資料，請在將 `PDOStatement::getColumnMeta` 設定為 true 之後使用 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION`，如下列程式碼片段中所示：
 
 ```
 $options = array(PDO::SQLSRV_ATTR_DATA_CLASSIFICATION => true);

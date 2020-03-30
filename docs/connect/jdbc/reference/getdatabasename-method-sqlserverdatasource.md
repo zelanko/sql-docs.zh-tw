@@ -16,10 +16,10 @@ ms.assetid: cffa1602-c045-4e61-abb6-442ade28dbf6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 77627c6c41a97812b48dc7a308d8ec9f6f2d4657
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67984115"
 ---
 # <a name="getdatabasename-method-sqlserverdatasource"></a>getDatabaseName 方法 (SQLServerDataSource)

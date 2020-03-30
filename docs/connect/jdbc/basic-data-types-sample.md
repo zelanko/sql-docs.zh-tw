@@ -11,10 +11,10 @@ ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9374c76a76aa12f60fc3fa5f911916f39000d8b4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028465"
 ---
 # <a name="basic-data-types-sample"></a>基本資料類型範例
@@ -40,7 +40,7 @@ ms.locfileid: "69028465"
 
 ## <a name="example"></a>範例
 
-在下列範例中，範例程式碼會建立 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 資料庫的連線，然後從 DataTypesTable 測試資料表中擷取單一資料列。 接著呼叫自訂 displayRow 方法，使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的各種 get\<類型> 方法顯示結果集中的所有資料。
+在下列範例中，範例程式碼會建立 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 資料庫的連線，然後從 DataTypesTable 測試資料表中擷取單一資料列。 接著呼叫自訂 displayRow 方法，使用 \<SQLServerResultSet[ 類別的各種 get](../../connect/jdbc/reference/sqlserverresultset-class.md)類型> 方法顯示結果集中的所有資料。
 
 接下來，範例會使用 SQLServerResultSet 類別的各種 update\<類型> 方法更新結果集中的資料，然後呼叫 [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 方法，將該資料存回資料庫。
 

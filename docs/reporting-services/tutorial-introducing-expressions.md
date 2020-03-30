@@ -9,10 +9,10 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63295770"
 ---
 # <a name="tutorial-introducing-expressions"></a>教學課程：運算式簡介
@@ -31,7 +31,7 @@ ms.locfileid: "63295770"
 ## <a name="requirements"></a>需求  
 如需需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
-## <a name="Setup"></a>1.從資料表或矩陣精靈建立資料表報表和資料集  
+## <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1.從資料表或矩陣精靈建立資料表報表和資料集  
 在本節中，您會建立資料表報表、資料來源與資料集。 當您配置資料表時，只會包含少數欄位。 在完成精靈之後，您將手動加入資料行。 這個精靈可讓您輕鬆配置資料表。  
   
 > [!NOTE]  
@@ -122,7 +122,7 @@ ms.locfileid: "63295770"
   
 17. 按一下 [完成]  。  
   
-## <a name="UpdateNames"></a>2.更新資料來源和資料集的預設名稱  
+## <a name="2-update-default-names-of-the-data-source-and-dataset"></a><a name="UpdateNames"></a>2.更新資料來源和資料集的預設名稱  
   
 ### <a name="to-update-the-default-name-of-the-data-source"></a>若要更新資料來源的預設名稱  
   
@@ -146,7 +146,7 @@ ms.locfileid: "63295770"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Concatenate"></a>3.顯示名字、縮寫和姓氏  
+## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3.顯示名字、縮寫和姓氏  
 在本節中，您在運算式中使用 **Left** 函數和 **Concatenate** ( **&** ) 運算子，以將結果評估為包括縮寫和姓氏的名稱。 您可以逐步建立運算式，或是在程序中先略過，再從教學課程將運算式複製/貼上至 [運算式]  對話方塊中。   
   
 1.  以滑鼠右鍵按一下 **StateProvince** 資料行，指向 [插入資料行]  ，然後按一下 [左方]  。  
@@ -191,7 +191,7 @@ ms.locfileid: "63295770"
   
 12. 按一下 **[執行]** 預覽報表。  
 
-## <a name="DateFormat"></a>(選擇性) 格式化日期和貨幣資料行和標頭資料列  
+## <a name="optional-format-the-date-and-currency-columns-and-header-row"></a><a name="DateFormat"></a>(選擇性) 格式化日期和貨幣資料行和標頭資料列  
 在本節中，您格式化 [上次購買]  資料行 (其中包含日期) 和 [YTDPurchase] 資料行 (其中包含貨幣)。 您也會格式化標頭資料列。  
   
 ### <a name="to-format-the-date-column"></a>格式化日期資料行  
@@ -227,7 +227,7 @@ ms.locfileid: "63295770"
 ![report-builder-expression-tutorial-preview-formatted](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
 
   
-## <a name="Gender"></a>4.使用色彩顯示性別  
+## <a name="4-use-color-to-display-gender"></a><a name="Gender"></a>4.使用色彩顯示性別  
 在本節中，您會新增色彩來顯示人員的性別。 您會新增資料行來顯示色彩，然後依據 [Gender] 欄位中的值決定出現在資料行中的色彩。  
   
 在使報表成為帶狀報表時，若要保留已在該資料表儲存格中套用的色彩，請新增一個矩形，然後新增矩形的背景色彩。  
@@ -309,7 +309,7 @@ ms.locfileid: "63295770"
 
     ![report-builder-expression-tutorial-preview-formatted-m-f-column](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
-## <a name="Lookup"></a>5.查閱 CountryRegion 名稱  
+## <a name="5-look-up-the-countryregion-name"></a><a name="Lookup"></a>5.查閱 CountryRegion 名稱  
 在本節中，您會建立 CountryRegion 資料集並使用 **Lookup** 函數顯示國家/地區的名稱，而不是國家/地區的識別碼。  
   
 ### <a name="to-create-the-countryregion-dataset"></a>若要建立 CountryRegion 資料集  
@@ -379,7 +379,7 @@ ms.locfileid: "63295770"
   
 11. 按一下 **[執行]** 預覽報表。  
   
-## <a name="Count"></a>6.計算自上次購買後的日數  
+## <a name="6-count-days-since-last-purchase"></a><a name="Count"></a>6.計算自上次購買後的日數  
 在本節中，您會新增資料行，然後使用 **Now** 函數或 `ExecutionTime` 內建全域變數，計算客戶自上次購買後至今的天數。  
   
 ### <a name="to-add-the-days-ago-column"></a>若要加入 [天前] 資料行  
@@ -419,7 +419,7 @@ ms.locfileid: "63295770"
 
 11. 按一下 **[執行]** 預覽報表。  
   
-## <a name="Indicator"></a>7.使用指標顯示銷售比較  
+## <a name="7-use-an-indicator-to-show-sales-comparison"></a><a name="Indicator"></a>7.使用指標顯示銷售比較  
 在本節中，您會新增資料行，並使用指標顯示某人今年到目前 (YTD) 的購買為高於或低於平均 YTD 購買。 **Round** 函數會移除值的小數。  
   
 設定指標和其狀態需要許多步驟。 您可以視需要跳過「設定指標」程序，並從本教學課程將完成的運算式複製/貼上至 [運算式]  對話方塊中。  
@@ -514,7 +514,7 @@ ms.locfileid: "63295770"
 
     ![report-builder-expression-tutorial-preview-indicator](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
   
-## <a name="GreenBar"></a>8.製作帶狀報表  
+## <a name="8-make-a-banded-report"></a><a name="GreenBar"></a>8.製作帶狀報表  
 建立參數，讓報表讀者可以指定套用至報表中交替資料列的色彩，使其變成帶狀報表。  
   
 ### <a name="to-add-a-parameter"></a>若要加入參數  
@@ -611,7 +611,7 @@ ms.locfileid: "63295770"
     
     ![report-builder-expression-tutorial-preview-banded](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
   
-## <a name="Title"></a>(選擇性) 加入報表標題  
+## <a name="optional-add-a-report-title"></a><a name="Title"></a>(選擇性) 加入報表標題  
 加入報表的標題。  
   
 ### <a name="to-add-a-report-title"></a>若要加入報表標題  
@@ -630,7 +630,7 @@ ms.locfileid: "63295770"
   
 3.  選取報表中非白色區間的色彩，然後按一下 [檢視報表]  。  
   
-## <a name="Save"></a>(選擇性) 儲存報表  
+## <a name="optional-save-the-report"></a><a name="Save"></a>(選擇性) 儲存報表  
 您可以將報表儲存至報表伺服器、SharePoint 文件庫或您的電腦上。 如需詳細資訊，請參閱[儲存報表 &#40;報表產生器&#41;](../reporting-services/report-builder/saving-reports-report-builder.md)。  
   
 在本教學課程中，您會將報表儲存至報表伺服器。 如果您沒有報表伺服器的存取權，請將報表儲存在您的電腦上。  

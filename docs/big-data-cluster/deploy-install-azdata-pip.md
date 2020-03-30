@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5360e7aa9718fef0d17bf73b9064c2d1a61a4577
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75726945"
 ---
-# <a name="install-azdata-with-pip"></a>使用 `pip` 安裝 `azdata`
+# <a name="install-azdata-with-pip"></a>使用 `azdata` 安裝 `pip`
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文描述如何使用 `pip` 在 Windows 或 Linux 上 安裝 `azdata`。
+本文描述如何使用 `azdata` 在 Windows 或 Linux 上 安裝 `pip`。
 
 對於 Windows 與 Linux (Ubuntu 發行版本)，使用[套件管理員](./deploy-install-azdata-installer.md)安裝比較容易。
 
-## <a id="prerequisites"></a> 必要條件
+## <a name="prerequisites"></a><a id="prerequisites"></a> 必要條件
 
 `azdata` 是以 Python 撰寫的命令列公用程式，可讓叢集系統管理員透過 REST API 啟動及管理巨量資料叢集。 所需的最低 Python 版本為 3.5。 您也必須擁有 `pip`，才能下載及安裝 `azdata` 工具。 下列說明提供適用於 Windows 和 Ubuntu 的範例。 如需在其他平台上安裝 Python，請參閱 [Python 文件](https://wiki.python.org/moin/BeginnersGuide/Download)。
 此外也請安裝及更新最新版的 `requests` Python 套件：
@@ -36,7 +36,7 @@ pip3 install -U requests
 > [!IMPORTANT]
 > 若要安裝較新版的巨量資料叢集，必須在升級 `azdata` 及安裝新版之前，先備份您的資料，並刪除舊叢集。 如需詳細資訊，請參閱[升級為新版本](deployment-upgrade.md)。
 
-## <a id="windows"></a> Windows `azdata` 安裝
+## <a name="windows-azdata-installation"></a><a id="windows"></a> Windows `azdata` 安裝
 
 1. 在 Windows 用戶端上，從 [https://www.python.org/downloads/](https://www.python.org/downloads/) 下載所需的 Python 套件。 針對 Python 3.5.3 和更新版本，在您安裝 Python 時也會一併安裝 pip3。 
 
@@ -63,7 +63,7 @@ pip3 install -U requests
    pip3 install -r https://aka.ms/azdata
    ```
 
-## <a id="linux"></a> Linux `azdata` 安裝
+## <a name="linux-azdata-installation"></a><a id="linux"></a> Linux `azdata` 安裝
 
 在 Linux 上，您必須安裝 Python 3.5，然後升級 pip。 下列範例顯示適用於 Ubuntu 的命令。 針對其他 Linux 平台，請參閱 [Python 文件](https://wiki.python.org/moin/BeginnersGuide/Download)。
 
@@ -105,7 +105,7 @@ pip3 install -U requests
    > [!NOTE]
    > `--user` 參數會將 `azdata` 安裝至 Python 使用者安裝目錄。 在 Linux 上通常是 `~/.local/bin`。 請將此目錄新增至您的路徑，或巡覽至使用者安裝目錄，然後從該處執行 `./azdata`。
 
-## <a id="macOSX"></a> 在 macOS 或 OS X 上安裝 `azdata`
+## <a name="install-azdata-on-macos-or-os-x"></a><a id="macOSX"></a> 在 macOS 或 OS X 上安裝 `azdata`
 
 若要在 macOS 或 OS X 上安裝 `azdata`，請完成下列步驟。 在每個步驟中，於在 [終端機] 中執行範例。
 

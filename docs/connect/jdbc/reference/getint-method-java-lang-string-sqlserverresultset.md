@@ -16,10 +16,10 @@ ms.assetid: 76b7054d-46dd-4d87-93a4-a7ea2ae9b7fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 31acd78f47af77ea034e653a0857aac182804d4d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982737"
 ---
 # <a name="getint-method-javalangstring-sqlserverresultset"></a>getInt 方法 (java.lang.String) (SQLServerResultSet)

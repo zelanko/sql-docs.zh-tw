@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: db08d84dd1619d8c9e2e4d8e796abdd0c9d202fc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73844594"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
@@ -41,7 +41,7 @@ ms.locfileid: "73844594"
   
 -   擁有建立新的 Azure 伺服器或選取現有的 Azure 伺服器所需的連線和登入資訊。  
   
-##  <a name="EnableTSQLServer"></a> 必要條件：在伺服器上啟用 Stretch Database  
+##  <a name="prerequisite-enable-stretch-database-on-the-server"></a><a name="EnableTSQLServer"></a> 必要條件：在伺服器上啟用 Stretch Database  
  在您於資料庫或資料表上啟用 Stretch Database 前，您必須在本機伺服器上啟用它。 這項作業需要 sysadmin 或 serveradmin 權限。  
   
 -   如果您已經有必要的系統管理權限，則 [啟用資料庫的延展功能精靈]  會設定伺服器以使用「延展」。  
@@ -60,10 +60,10 @@ GO
   
  如需詳細資訊，請參閱[設定遠端資料封存伺服器組態選項](../../database-engine/configure-windows/configure-the-remote-data-archive-server-configuration-option.md)和 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
   
-##  <a name="Wizard"></a> 使用精靈在資料庫上啟用 Stretch Database  
+##  <a name="use-the-wizard-to-enable-stretch-database-on-a-database"></a><a name="Wizard"></a> 使用精靈在資料庫上啟用 Stretch Database  
  如需 [啟用資料庫的延展功能精靈] 的相關資訊，包括您必須輸入的資訊及必須決定的選擇，請參閱 [開始執行啟用資料庫的延展功能精靈](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)。  
   
-##  <a name="EnableTSQLDatabase"></a> 使用 Transact-SQL 在資料庫上啟用 Stretch Database  
+##  <a name="use-transact-sql-to-enable-stretch-database-on-a-database"></a><a name="EnableTSQLDatabase"></a> 使用 Transact-SQL 在資料庫上啟用 Stretch Database  
  在您於個別資料表上啟用 Stretch Database 前，您必須在資料庫上啟用它。  
   
  在資料庫或資料表上啟用 Stretch Database 需要 db_owner 權限。 在資料庫或資料表上啟用 Stretch Database 也需要 CONTROL DATABASE 權限。  

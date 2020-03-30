@@ -11,10 +11,10 @@ ms.assetid: 53f3291f-d43a-476b-a656-d86168dacf6c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c35cad678ce4f9b6008b656302d4767bad9b1244
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977067"
 ---
 # <a name="iswrapperfor-method-sqlserverstatement"></a>isWrapperFor 方法 (SQLServerStatement)
@@ -32,7 +32,7 @@ public boolean isWrapperFor(Class iface)
 #### <a name="parameters"></a>參數  
  *iface*  
   
- 定義介面的 **class**。  
+ 定義介面的**類別**。  
   
 ## <a name="return-value"></a>傳回值  
  如果這個物件會實作介面或是會包裝實作此介面的物件，則為 **true**； 否則為 **false**。  

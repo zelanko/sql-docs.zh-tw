@@ -11,17 +11,17 @@ ms.assetid: 6c986144-3854-4352-8331-e79eccbefc28
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 260666488a21b02c0c318d3277b72fc576b0ab08
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027826"
 ---
 # <a name="reading-large-data-sample"></a>讀取大型資料範例
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何使用 [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) 方法，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中擷取大型單一資料行值。
+此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]getCharacterStream[ 方法，從 ](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) 資料庫中擷取大型單一資料行值。
 
 此範例的程式碼檔案名稱為 ReadLargeData.java，可在下列位置找到：
 
@@ -40,7 +40,7 @@ ms.locfileid: "69027826"
 
 在下列範例中，範例程式碼會建立與 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 資料庫的連線。 接著，範例程式碼會建立範例資料，並使用參數化查詢更新 Production.Document 資料表。
 
-此外，範例程式碼示範如何使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別的 [getResponseBuffering](../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) 方法來取得自適性緩衝模式。 請注意，從 JDBC Driver 2.0 版開始，responseBuffering 連接屬性預設設定為 "adaptive"。
+此外，範例程式碼示範如何使用 [SQLServerStatement](../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) 類別的 [getResponseBuffering](../../connect/jdbc/reference/sqlserverstatement-class.md) 方法來取得自適性緩衝模式。 請注意，從 JDBC Driver 2.0 版開始，responseBuffering 連接屬性預設設定為 "adaptive"。
 
 然後，搭配 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 物件使用 SQL 陳述式時，範例程式碼會執行 SQL 陳述式，並且將所傳回的資料放入 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中。
 

@@ -9,10 +9,10 @@ ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ff5931ea437a2b91bf2232472fbf5780153f38cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081284"
 ---
 # <a name="report-builder-functions---countdistinct-function"></a>報表產生器函式 - CountDistinct 函式

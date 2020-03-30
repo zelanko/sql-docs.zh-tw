@@ -16,10 +16,10 @@ ms.assetid: cde41743-1a5d-4930-91b3-4e5fccc1bc36
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 484e643a34c8ff2015c98c59c0198e53519714be
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982538"
 ---
 # <a name="getlogwriter-method-sqlserverdatasource"></a>getLogWriter 方法 (SQLServerDataSource)

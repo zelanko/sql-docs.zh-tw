@@ -9,16 +9,16 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: a5194f251b7ea47e0d9485446b8957e96037ded0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68714965"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>為 SQLRUserGroup 建立登入
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-當指令碼中的[回送連線](../../advanced-analytics/concepts/security.md#implied-authentication)指定*信任連線*，而且用來執行包含程式碼之物件的身分識別是 Windows 使用者帳戶時，為 [SQLRUserGroup](../concepts/security.md#sqlrusergroup) 建立 [SQL Server 中的登入](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)。
+當指令碼中的[回送連線](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)指定[信任連線](../concepts/security.md#sqlrusergroup)，而且用來執行包含程式碼之物件的身分識別是 Windows 使用者帳戶時，為 [SQLRUserGroup](../../advanced-analytics/concepts/security.md#implied-authentication) 建立 *SQL Server 中的登入*。
 
 信任連線是在連接字串中有 `Trusted_Connection=True` 的連線。 當 SQL Server 收到指定信任連線的要求時，它會檢查目前 Windows 使用者的身分識別是否有登入。 對於以背景工作帳戶執行的外部處理序 (例如來自 **SQLRUserGroup** 的 MSSQLSERVER01)，要求會失敗，因為這些帳戶預設沒有登入。
 

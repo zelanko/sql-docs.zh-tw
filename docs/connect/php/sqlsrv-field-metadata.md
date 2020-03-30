@@ -17,10 +17,10 @@ ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ef4bd58d352216cd4c64fe6c18a9ffd6dd3b13a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76939568"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
@@ -128,7 +128,7 @@ sqlsrv_close($conn);
 
 ## <a name="sensitivity-data-classification-metadata"></a>敏感性資料分類中繼資料
 
-5\.8.0 版中引進新選項 `DataClassification`，可讓使用者使用 `sqlsrv_field_metadata` 存取 Microsoft SQL Server 2019 中的[敏感性資料分類中繼資料](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)，需要 Microsoft ODBC Driver 17.4.2 或更新版本。
+5\.8.0 版中引進新選項 `DataClassification`，可讓使用者使用 [ 存取 Microsoft SQL Server 2019 中的](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)敏感性資料分類中繼資料`sqlsrv_field_metadata`，需要 Microsoft ODBC Driver 17.4.2 或更新版本。
 
 根據預設，選項 `DataClassification` 是 `false`，但當設定為 `true` 時，`sqlsrv_field_metadata` 所傳回的陣列將會填入敏感性資料分類中繼資料 (如果存在)。 
 
@@ -143,7 +143,7 @@ CREATE TABLE Patients
       [BirthDate] date)
 ```
 
-我們可以將 SSN 和 BirthDate 資料行分類，如下所示：
+我們可以將 SSN 和 BirthDate 資料行以下列方式分類：
 
 ```
 ADD SENSITIVITY CLASSIFICATION TO [Patients].SSN WITH (LABEL = 'Highly Confidential - secure privacy', INFORMATION_TYPE = 'Credentials')

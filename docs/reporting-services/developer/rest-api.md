@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
 ms.openlocfilehash: 90ccb4084f9dc2a2a2cd1da4f51281df147524c6
-ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78937673"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>使用 Reporting Services 的 REST API 進行開發
@@ -30,12 +30,12 @@ REST API 可透過程式設計方式存取 SQL Server 2017 Reporting Services �
 
 REST API 要求/回應配對可分成五個元件：
 
-* 由 `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}` 所組成的**要求 URI**。 雖然要求 URI 包含在要求訊息標頭中，但由於大多數語言或架構要求您將它與要求訊息分開傳遞，因此我們會另外呼叫它。
+* 由  **所組成的**要求 URI`{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`。 雖然要求 URI 包含在要求訊息標頭中，但由於大多數語言或架構要求您將它與要求訊息分開傳遞，因此我們會另外呼叫它。
 
     * URI 配置：表示用來傳輸要求的通訊協定。 例如，`http` 或 `https`。
     * URI 主機：指定裝載 REST 服務端點之伺服器的網域名稱或 IP 位址，例如 `myserver.contoso.com`。
     * 資源路徑：指定資源或資源集合，其中可能包含服務用來判斷這些資源選取的多個區段。 例如：`CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` 可用來取得 CatalogItem 的指定屬性。
-    * 查詢字串 (選擇性)：提供其他簡單參數，例如 API 版本或資源選取準則。
+    * 查詢字串 (選用)：提供其他簡單參數，例如 API 版本或資源選取準則。
 
 * HTTP 要求訊息標頭欄位：
 

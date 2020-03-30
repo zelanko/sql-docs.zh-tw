@@ -7,10 +7,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/06/2018
 ms.openlocfilehash: 5db33f22ffd5143d88c5654c753f1b08811c0c8a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68262896"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>移轉 Reporting Services 安裝 (原生模式)
@@ -50,7 +50,7 @@ ms.locfileid: "68262896"
   
 * 您遇到封鎖升級的問題。
 
-## <a name="bkmk_nativemode_migration_overview"></a> 原生模式移轉概觀
+## <a name="native-mode-migration-overview"></a><a name="bkmk_nativemode_migration_overview"></a> 原生模式移轉概觀
 
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的移轉程序包括手動和自動步驟。 下列工做為報表伺服器的部分移轉作業：  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68262896"
   
 * [建立報表伺服器資料庫](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
   
-## <a name="bkmk_fixed_database_name"></a> 固定資料庫名稱
+## <a name="fixed-database-name"></a><a name="bkmk_fixed_database_name"></a> 固定資料庫名稱
 
  您無法重新命名報表伺服器資料庫。 資料庫的識別會在建立資料庫時，記錄於報表伺服器預存程序中。 重新命名報表伺服器的主要或暫存資料庫將會在程序執行時造成錯誤發生，使得報表伺服器安裝失效。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68262896"
   
 * 如果您只有少量的項目，就可以從報表設計師、模型設計師和報表產生器來將報表和共用資料來源重新發行到新的報表伺服器。 請重新建立角色指派、訂閱、共用排程、報表快照集排程、您在報表或其他項目上設定的自訂屬性、模型項目安全性，以及您在報表伺服器上設定的屬性。 如果您執行這些動作，請作好遺失報表記錄和報表執行記錄資料的準備。
   
-## <a name="bkmk_before_you_start"></a> 開始之前
+## <a name="before-you-start"></a><a name="bkmk_before_you_start"></a> 開始之前
 
  即使您正在移轉而非升級安裝，請考慮在現有的安裝上執行 Upgrade Advisor，以便協助您識別可能會影響移轉的任何問題。 如果您正在移轉尚未安裝或設定的報表伺服器，這個步驟便特別有用。 透過執行升級建議程式，您可以找出新 SQL Server 安裝可能不支援的自訂設定。  
   
@@ -111,13 +111,13 @@ ms.locfileid: "68262896"
   
 * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援用戶端安全通訊端層 (SSL) 憑證。 如果您使用用戶端 SSL 憑證，則必須在移轉之前重新設計報表方案。  
   
-* 如果您使用 Windows 整合式驗證以外的驗證類型，則必須在 **RSReportServer.config** 檔案中，以受支援的驗證類型更新 `<AuthenticationTypes>` 項目。 受支援的驗證類型為 NTLM、Kerberos、Negotiate 和 Basic。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援匿名、.NET Passport 和摘要式驗證。  
+* 如果您使用 Windows 整合式驗證以外的驗證類型，則必須在 `<AuthenticationTypes>`RSReportServer.config**檔案中，以受支援的驗證類型更新** 項目。 受支援的驗證類型為 NTLM、Kerberos、Negotiate 和 Basic。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援匿名、.NET Passport 和摘要式驗證。  
   
 * 如果您在報表環境中使用自訂的階層式樣式表，則這些樣式表無法移轉。 請以手動方式移動它們以進行移轉。
   
 如需 SQL Server Reporting Services 中變更的詳細資訊，請參閱升級建議程式文件和 [Reporting Services 的新功能](../../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。  
 
-## <a name="bkmk_backup"></a> 備份檔案和資料
+## <a name="backup-files-and-data"></a><a name="bkmk_backup"></a> 備份檔案和資料
 
  安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的新執行個體之前，請務必備份目前安裝中的所有檔案。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "68262896"
   
     7. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 的 Machine.config (如果您針對報表伺服器作業修改過它的話)。  
 
-## <a name="bkmk_install_ssrs"></a> 安裝 SQL Server Reporting Services
+## <a name="install-sql-server-reporting-services"></a><a name="bkmk_install_ssrs"></a> 安裝 SQL Server Reporting Services
 
  在僅限檔案模式下，安裝新的報表伺服器執行個體，如此您就可以將它設定為使用非預設值。 針對命令列安裝，請使用 **FilesOnly** 引數。 在 [安裝精靈] 中，選取 [安裝但不設定]  選項。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "68262896"
   
 * [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
 
-## <a name="bkmk_move_database"></a> 移動報表伺服器資料庫
+## <a name="move-the-report-server-database"></a><a name="bkmk_move_database"></a> 移動報表伺服器資料庫
 
  報表伺服器資料庫包含已發行的報表、模型、共用資料來源、排程、資源、訂閱，以及資料夾。 此外，它也包含系統和項目屬性，以及存取報表伺服器內容的權限。  
   
@@ -191,7 +191,7 @@ ms.locfileid: "68262896"
   
  請記住，報表伺服器資料庫和暫存資料庫彼此相依，而且必須一起移動。 請勿複製資料庫；複製並不會將所有的安全性設定傳送到新的安裝。 請勿針對排程的報表伺服器作業移動 SQL Server Agent 作業。 報表伺服器會自動重新建立這些作業。  
 
-## <a name="bkmk_move_custom"></a> 移動自訂組件或延伸模組
+## <a name="move-custom-assemblies-or-extensions"></a><a name="bkmk_move_custom"></a> 移動自訂組件或延伸模組
 
  如果安裝包含自訂報表項目、組件或延伸模組，您就必須重新部署自訂元件。 如果您不要使用自訂元件，請跳至 [設定報表伺服器](#bkmk_configure_reportserver)。  
   
@@ -215,7 +215,7 @@ ms.locfileid: "68262896"
   
     1. [部署自訂組件](../../reporting-services/custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2. [操作說明：部署自訂報表項目](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2. [如何：部署自訂報表項目](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3. [部署資料處理延伸模組](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)  
   
@@ -225,7 +225,7 @@ ms.locfileid: "68262896"
   
     6. [實作安全性延伸模組](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
 
-## <a name="bkmk_configure_reportserver"></a> 設定報表伺服器
+## <a name="configure-the-report-server"></a><a name="bkmk_configure_reportserver"></a> 設定報表伺服器
 
  設定報表伺服器 Web 服務和入口網站的 URL，然後設定報表伺服器資料庫的連線。  
   
@@ -252,7 +252,7 @@ ms.locfileid: "68262896"
   
 6. 如果您想要在本機管理您的原生模式報表伺服器，則必須設定作業系統，允許透過入口網站進行本機管理。 如需詳細資訊，請參閱 [設定原生模式報表伺服器進行本機管理](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
 
-## <a name="bkmk_copy_custom_config"></a> 將自訂組態設定複製到 RSReportServer.config 檔案
+## <a name="copy-custom-configuration-settings-to-rsreportserverconfig-file"></a><a name="bkmk_copy_custom_config"></a> 將自訂組態設定複製到 RSReportServer.config 檔案
 
 如果您在先前安裝中修改了 RSReportServer.config 檔案或 RSWebApplication.config 檔案，就應該在新的 RSReportServer.config 檔案中進行相同的修改。 下列清單將摘要列出一些您可能會修改先前組態檔的原因，並且提供有關如何在 SQL Server 2016 中設定相同設定的其他資訊連結。  
   
@@ -261,17 +261,17 @@ ms.locfileid: "68262896"
 |含有自訂設定的報表伺服器電子郵件傳遞|[電子郵件設定 * Reporting Services 原生模式](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。|  
 |裝置資訊設定|[在 RSReportServer.Config 中自訂轉譯延伸模組參數](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)|
 
-## <a name="bkmk_windowsservice_group"></a> Windows 服務群組和安全性 ACL
+## <a name="windows-service-group-and-security-acls"></a><a name="bkmk_windowsservice_group"></a> Windows 服務群組和安全性 ACL
 
  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 中有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 服務群組這個服務群組，會用來為跟著 QL Server Reporting Services 安裝的所有登錄機碼、檔案和資料夾建立安全性 ACL。 這個 Windows 群組名稱會以格式 SQLServerReportServerUser$\<computer_name  >$\<instance_name  > 顯示。  
 
-## <a name="bkmk_verify"></a> 驗證您的部署
+## <a name="verify-your-deployment"></a><a name="bkmk_verify"></a> 驗證您的部署
 
 1. 開啟瀏覽器並輸入 URL 位址，以測試報表伺服器和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 虛擬目錄。 如需詳細資訊，請參閱 [驗證 Reporting Services 安裝](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)。  
   
 2. 測試報表，並確認其包含您預期的資料。 檢閱資料來源資訊，查看是否仍然有指定資料來源連接資訊。 雖然報表伺服器會在處理和轉譯報表時使用報表物件模型，但不會以新的報表定義語言元素取代 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。 若要深入了解現有報表如何在新版報表伺服器上執行，請參閱[升級報表](../../reporting-services/install-windows/upgrade-reports.md)。  
 
-## <a name="bkmk_remove_unused"></a> 移除未使用的程式和檔案
+## <a name="remove-unused-programs-and-files"></a><a name="bkmk_remove_unused"></a> 移除未使用的程式和檔案
 
 一旦將報表伺服器成功移轉至新執行個體，您就可以執行下列步驟，以移除不再需要的程式和檔案。  
   

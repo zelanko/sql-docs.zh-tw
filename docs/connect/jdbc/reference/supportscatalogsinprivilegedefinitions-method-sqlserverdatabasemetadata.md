@@ -16,10 +16,10 @@ ms.assetid: cc18f99e-c19f-4bd0-96ae-b9a6a0de1926
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16a57ee05bbe67d4fe8a88f61d969f79734521cd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969698"
 ---
 # <a name="supportscatalogsinprivilegedefinitions-method-sqlserverdatabasemetadata"></a>supportsCatalogsInPrivilegeDefinitions 方法 (SQLServerDatabaseMetaData)

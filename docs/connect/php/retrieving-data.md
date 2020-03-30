@@ -11,10 +11,10 @@ ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2dd99b2195cb4f44725ff813bc79c70ec5ffc44b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67935896"
 ---
 # <a name="retrieving-data"></a>擷取資料
@@ -74,13 +74,13 @@ ms.locfileid: "67935896"
 |[以資料流的形式擷取資料](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|概略說明如何從伺服器串流處理資料，並提供特定使用案例的連結。|  
 |[使用方向參數](../../connect/php/using-directional-parameters.md)|說明如何在呼叫預存程序時使用參數方向。|  
 |[指定資料指標類型及選取資料列](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|示範如何建立您可以用任何順序存取資料列的結果集。|  
-|[操作說明：使用 SQLSRV 驅動程式以字串形式擷取日期和時間類型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|說明如何使用 SQLSRV 驅動程式以字串形式擷取日期和時間類型。|  
-|[操作說明：使用 PDO_SQLSRV 驅動程式以 PHP 日期時間物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|說明如何使用 SQLSRV 驅動程式以物件形式擷取日期和時間類型。|  
+|[如何：使用 SQLSRV 驅動程式以字串形式擷取日期和時間類型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|說明如何使用 SQLSRV 驅動程式以字串形式擷取日期和時間類型。|  
+|[如何：使用 PDO_SQLSRV 驅動程式以 PHP 日期時間物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|說明如何使用 SQLSRV 驅動程式以物件形式擷取日期和時間類型。|  
 |[使用 SQLSRV 驅動程式格式化小數字串](../../connect/php/formatting-decimals-sqlsrv-driver.md)|示範如何使用 SQLSRV 驅動程式來格式化 decimal 或 money 值。|  
 |[使用 PDO_SQLSRV 驅動程式格式化小數字串](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|示範如何使用 PDO_SQLSRV 驅動程式來格式化 decimal 或 money 值。|  
   
 ## <a name="related-sections"></a>相關章節  
-[操作說明：指定 PHP 資料類型](../../connect/php/how-to-specify-php-data-types.md)  
+[如何：指定 PHP 資料類型](../../connect/php/how-to-specify-php-data-types.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [Microsoft Drivers for PHP for SQL Server 的程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)

@@ -11,10 +11,10 @@ ms.assetid: 66b042c6-479f-4a89-92c8-8c5dce67643f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f10888f25413a7e8637498466e80a0864a7de95c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993582"
 ---
 # <a name="getting-started-with-the-microsoft-drivers-for-php-for-sql-server"></a>開始使用 Microsoft Drivers for PHP for SQL Server

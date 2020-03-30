@@ -44,10 +44,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 401e9a36e6ab93a9701508bc4b587a55b81642e1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75253896"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>[產生和發佈指令碼]
@@ -61,17 +61,17 @@ ms.locfileid: "75253896"
 ## <a name="before-you-begin"></a>開始之前  
  來源和目標資料庫可以位於執行 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或更新版本的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 執行個體上。  
   
-###  <a name="PubHostSvc"></a> 發行至主控的服務  
+###  <a name="publishing-to-a-hosted-service"></a><a name="PubHostSvc"></a> 發行至主控的服務  
  除了建立指令碼以外， **[產生和發佈指令碼精靈]** 還可以用來將資料庫發佈至特定類型的主控 SQL Server Web 服務。 SQL Server Hosting Toolkit 會提供資料庫發行服務當做 CodePlex 上的共用原始檔專案。 Web 主控提供者可以使用資料庫發行服務專案來建置一組 Web 服務，讓他們的客戶輕鬆地將資料庫部署到 Web 服務。 如需有關下載 SQL Server Hosting Toolkit 的詳細資訊，請參閱 [SQL Server 資料庫發行服務](https://go.microsoft.com/fwlink/?LinkId=142025)。  
   
  若要將資料庫發佈至 Web 主控服務，請選取精靈之 **[設定指令碼編寫選項]** 頁面上的 **[發佈到 Web 服務]** 選項。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="permissions"></a><a name="Permissions"></a> 權限  
  發行資料庫的最低權限是來源資料庫上 db_ddladmin 固定資料庫角色中的成員資格。 將資料庫指令碼發行至位於主控提供者之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的最低權限是目標資料庫上 db_ddladmin 固定資料庫角色中的成員資格。  
   
  此外，使用者也必須提供使用者名稱和密碼來存取主控提供者帳戶，以便使用此精靈發行。 您必須先在主控提供者處建立目標資料庫，然後再發行來源資料庫。 發行會覆寫現有資料庫中的物件。  
   
-##  <a name="GenPubScriptWiz"></a> 使用產生和發佈指令碼精靈  
+##  <a name="using-the-generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> 使用產生和發佈指令碼精靈  
  **產生和發佈指令碼**  
   
 1.  在 **[物件總管]** 中，展開含有要編寫指令碼之資料庫的執行個體的節點。  
@@ -92,14 +92,14 @@ ms.locfileid: "75253896"
     -   [摘要頁面](#Summary)   
     -   [儲存或發佈指令碼頁面](#SavePubScripts)  
   
-###  <a name="Introduction"></a> 簡介頁面  
+###  <a name="introduction-page"></a><a name="Introduction"></a> 簡介頁面  
  此頁面描述用於產生或發佈指令碼的步驟。  
   
  [不要再顯示此頁面]  - 下次啟動 [產生和發佈指令碼精靈]  時會略過此頁面。  
   
   ![簡介頁面](media/generate-and-publish-scripts-wizard/intro.png)
   
-###  <a name="ChooseObjects"></a> 選擇物件頁面  
+###  <a name="choose-objects-page"></a><a name="ChooseObjects"></a> 選擇物件頁面  
  您可以使用這個頁面來選擇哪些物件要包含在此精靈所產生的指令碼中。 在下列精靈頁面中，您可以選擇將這些指令碼儲存至所選擇的位置，或使用這些指令碼，將資料庫物件和資料發行至已安裝 [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025)的遠端 Web 主控提供者。  
   
  **編寫整個資料庫選項** ：按一下即可針對資料庫中的所有物件產生指令碼，並且包含資料庫本身的指令碼。 
@@ -116,7 +116,7 @@ ms.locfileid: "75253896"
 
    ![撰寫特定的指令碼](media/generate-and-publish-scripts-wizard/scriptspecificobjects.png)
   
-###  <a name="SetScriptOpt"></a> 設定指令碼編寫選項頁面  
+###  <a name="set-scripting-options-page"></a><a name="SetScriptOpt"></a> 設定指令碼編寫選項頁面  
  您可以使用這個頁面來指定要讓精靈將指令碼儲存至所選擇的位置，還是使用這些指令碼，將資料庫物件發行至遠端 Web 主控提供者。 若要發行，您必須能夠存取使用資料庫發行服務 Web 服務所安裝的 Web 服務。  
   
  **選項** ：如果您想要讓精靈將指令碼儲存至所選擇的位置，請選取 **[將指令碼儲存至特定位置]** 。 您之後可以針對 Database Engine 執行個體或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]執行指令碼。 如果您想要讓精靈將資料庫物件發行至遠端 Web 主控提供者，請選取 **[發佈到 Web 服務]** 。  
@@ -141,7 +141,7 @@ ms.locfileid: "75253896"
   
 -   **目標資料庫** ：選取您想要在其中發佈所選取物件的目標資料庫。 您必須先選取提供者，然後再選取目標資料庫。  
   
-###  <a name="AdvScriptOpt"></a> 進階編寫指令碼選項頁面  
+###  <a name="advanced-scripting-options-page"></a><a name="AdvScriptOpt"></a> 進階編寫指令碼選項頁面  
  您可以使用這個頁面來指定要如何讓此精靈產生指令碼。 這個頁面提供了許多不同的選項。 如果 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] [Database Engine 類型] **中指定的 SQL Server 或**版本不支援選項，選項會呈現灰色。  
 
 ![進階選項](media/generate-and-publish-scripts-wizard/advanced.png)
@@ -214,7 +214,7 @@ ms.locfileid: "75253896"
   
 -   **編寫唯一索引鍵的指令碼** ：編寫在資料表上建立唯一索引鍵的指令碼。 唯一索引鍵可防止輸入重複的資料。 預設值為 **True**。 如需詳細資訊，請參閱 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)。  
   
-###  <a name="MgProviders"></a> 管理提供者頁面  
+###  <a name="manage-providers-page"></a><a name="MgProviders"></a> 管理提供者頁面  
  您可以使用此對話方塊來檢視、加入、編輯、刪除或測試主控提供者的連接。 主控提供者會針對使用 CodePlex 上 SQL Server Hosting Toolkit 中的資料庫發行服務專案所建立的 Web 服務來指定連接資訊。  
   
  **設定的提供者** - 列出每個已儲存之主控提供者的名稱和 **[Web]** 服務位址。  
@@ -231,7 +231,7 @@ ms.locfileid: "75253896"
   
  **取消** ：恢復所有您在 **[主控提供者]** 對話方塊中所進行的變更。  
   
-###  <a name="AdvPubOpts"></a> 進階發佈選項頁面  
+###  <a name="advanced-publishing-options-page"></a><a name="AdvPubOpts"></a> 進階發佈選項頁面  
  您可以使用這個頁面來指定要如何讓此精靈發佈資料庫。 這個頁面提供了許多不同的選項。 如果 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] [Database Engine 類型] **中指定的 SQL Server 或**版本不支援選項，選項會呈現灰色。  
 
   ![進階發佈](media/generate-and-publish-scripts-wizard/advancedpublish.png)
@@ -288,7 +288,7 @@ ms.locfileid: "75253896"
   
 9. [Publish data compression options (發佈資料壓縮選項)]  - 如果來源資料庫或來源資料庫中的資料表已設定資料壓縮選項，則會在發佈程序中包含資料壓縮選項。 預設值為 **True**。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
   
-###  <a name="ProvConfig"></a> 提供者組態頁面  
+###  <a name="provider-configuration-page"></a><a name="ProvConfig"></a> 提供者組態頁面  
  使用此對話方塊可以檢視或修改主控提供者設定。 您可以使用此對話方塊來執行下列動作：  
   
 -   檢視、加入或編輯主控提供者的連接資訊。  
@@ -321,12 +321,12 @@ ms.locfileid: "75253896"
   
  **取消** ：恢復所有您在此對話方塊中進行的變更，並返回精靈。  
   
-###  <a name="Summary"></a> 摘要頁面  
+###  <a name="summary-page"></a><a name="Summary"></a> 摘要頁面  
  這個頁面會摘要列出您在此精靈中所選取的選項。 若要變更選項，請按 **[上一步]** 。 若要開始產生即將儲存或發行的指令碼，請按 **[下一步]** 。  
   
  **檢閱您的選取項目** ：針對精靈的每一個頁面，顯示您所選取的項目。 請展開節點以查看對應頁面的選取選項。  
   
-###  <a name="SavePubScripts"></a> 儲存或發佈指令碼頁面  
+###  <a name="save-or-publish-scripts-page"></a><a name="SavePubScripts"></a> 儲存或發佈指令碼頁面  
  您可以使用這個頁面來監視此精靈執行的進度。  
   
  **詳細資料** ：若要查看此精靈的進度，請檢視 **[動作]** 欄。 產生指令碼之後，此精靈會根據您的選項，將指令碼儲存至檔案，或使用它們來發行至 Web 服務。 當每個步驟都已完成之後，若要查看對應步驟的結果，請按一下 **[結果]** 欄中的值。  

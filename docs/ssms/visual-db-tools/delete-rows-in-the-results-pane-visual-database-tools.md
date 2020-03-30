@@ -20,10 +20,10 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 ms.openlocfilehash: 227c2b460eac208827e188f35b4cc8630542c77c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75247541"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>刪除結果窗格中的資料列 (Visual Database Tools)
@@ -36,7 +36,7 @@ ms.locfileid: "75247541"
   
 2.  按下 DELETE 鍵。  
   
-3.  在詢問確認的訊息方塊中，按一下 [是]。  
+3.  在詢問確認的訊息方塊中，按一下 [是]  。  
   
 > [!CAUTION]  
 > 用這種方式刪除的資料列，會永久自資料庫移除，無法重新叫用。  

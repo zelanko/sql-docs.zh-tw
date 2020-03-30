@@ -11,10 +11,10 @@ ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 123e847e01c07ab04bf5be97593af838abfdc4bd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "71713282"
 ---
 # <a name="configuring-the-client-for-encryption"></a>為用戶端設定加密
@@ -48,7 +48,7 @@ java -Djavax.net.ssl.trustStore=C:\MyCertificates\storeName
 java -Djavax.net.ssl.trustStorePassword=storePassword  
 ```  
   
- 在這個情況下，在此 JVM 上執行的任何應用程式都會使用這些設定做為預設值。 若要覆寫應用程式中的預設值，您應該在連接字串或 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 類別的適當 setter 方法中，設定 **trustStore** 和 **trustStorePassword** 連接屬性。  
+ 在這個情況下，在此 JVM 上執行的任何應用程式都會使用這些設定做為預設值。 若要覆寫應用程式中的預設值，您應該在連接字串或 **SQLServerDataSource** 類別的適當 setter 方法中，設定 **trustStore** 和 [trustStorePassword](../../connect/jdbc/reference/sqlserverdatasource-class.md) 連接屬性。  
   
  此外，您可以設定與管理預設的信任存放區檔案，例如 "\<java-home>/lib/security/jssecacerts" 和 "\<java-home>/lib/security/cacerts"。 若要這樣做，請使用與 JRE (Java Runtime Environment) 一起安裝的 JAVA "keytool" 公用程式。 如需有關 "keytool" 公用程式的詳細資訊，請參閱 Sun Microsystems 網站上的 keytool 文件。  
   
@@ -65,7 +65,7 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
   
  此範例使用名稱為 "caCert.cer" 的檔案當做憑證檔案。 您必須從伺服器取得此憑證檔案。 下列步驟說明如何將伺服器憑證匯出到檔案：  
   
-1.  按一下 [開始]、[執行]，然後輸入 MMC  (MMC 是 Microsoft Management Console 的縮寫字)。  
+1.  按一下 [開始]、[執行]，然後輸入 MMC (MMC 是 Microsoft Management Console 的縮寫字)。  
   
 2.  在 MMC 中，開啟 [憑證]。  
   

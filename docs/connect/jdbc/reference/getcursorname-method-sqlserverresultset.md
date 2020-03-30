@@ -16,10 +16,10 @@ ms.assetid: e5b3af67-423a-4551-a4c6-a4bc076bd504
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a4f57b300cb402f422b92330bfe33f1e3c61cf4f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67984184"
 ---
 # <a name="getcursorname-method-sqlserverresultset"></a>getCursorName 方法 (SQLServerResultSet)

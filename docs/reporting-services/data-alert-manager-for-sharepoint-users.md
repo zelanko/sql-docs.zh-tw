@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0c0e6085ec4e922619c4f2595c63751e82c5a50a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571483"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint 使用者的資料警示管理員
@@ -41,7 +41,7 @@ ms.locfileid: "65571483"
 > [!NOTE]  
 >  系統管理員必須先將權限授與您，您才能使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 警示功能。 如需所需權限的資訊，請參閱 [Reporting Services 資料警示](../reporting-services/reporting-services-data-alerts.md)。  
   
-##  <a name="ViewingAlerts"></a> 檢視資料警示資訊  
+##  <a name="view-data-alert-information"></a><a name="ViewingAlerts"></a> 檢視資料警示資訊  
  您可以檢視您在 [資料警示設計工具] 中建立之資料警示的清單。 若要開啟 [資料警示管理員]，請在發行至 SharePoint 文件庫的報表上按一下滑鼠右鍵。 下圖顯示報表右鍵功能表上的 [管理資料警示]  選項。  
   
  ![從報表操作功能表開啟警示管理員](../reporting-services/media/rs-openalertmanager.gif "從報表操作功能表開啟警示管理員")  
@@ -57,24 +57,24 @@ ms.locfileid: "65571483"
 |TopPromotion|PromotionTracking|Lauren Johnson|0||5/23/2011|已建立警示。|  
   
   
-##  <a name="DeleteAlerts"></a> 刪除資料警示  
+##  <a name="delete-data-alerts"></a><a name="DeleteAlerts"></a> 刪除資料警示  
  您可從 [資料警示管理員] 中刪除警示定義。 身為資訊工作者，您可以刪除自己建立的警示定義。 您無法刪除其他人建立的警示定義。 如需詳細資訊，請參閱 [在資料警示管理員中管理我的資料警示](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)。  
   
  當您刪除警示定義時，會將它永久刪除。 如果您只想要暫停警示訊息，則應變更警示定義中的循環模式或是開始或停止日期。 如需詳細資訊，請參閱 [在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
   
   
-##  <a name="EditAlerts"></a> 編輯資料警示  
+##  <a name="edit-data-alerts"></a><a name="EditAlerts"></a> 編輯資料警示  
  身為資訊工作者，您可以從 [資料警示管理員] 中開啟警示定義進行編輯。 您可以編輯自己建立的警示定義，但無法編輯其他人建立的警示定義。 您以滑鼠右鍵按一下警示定義，然後按一下 [編輯]  ，[資料警示設計工具] 就會開啟，並且顯示警示定義。 如需詳細資訊，請參閱 [資料警示設計工具](../reporting-services/data-alert-designer.md) 和 [在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
   
   
-##  <a name="RunAlerts"></a> 執行資料警示  
+##  <a name="run-data-alerts"></a><a name="RunAlerts"></a> 執行資料警示  
  [資料警示管理員] 包含上一次警示服務處理資料警示定義的時間，以及已傳送資料警示訊息的次數等相關資訊。 您可能想要立即執行並傳送警示訊息，而不是等到排程指定的時間。 當您從 [資料警示管理員] 執行警示時，會覆寫警示排程，並且在一到五分鐘內開始處理警示定義，這段時間取決於執行報表所需的時間，以及在您選擇執行警示當時報表伺服器的忙碌程度。 不過，如果您指定僅在結果變更時傳送訊息，但結果並未變更，則不會建立或傳送任何訊息。 如需詳細資訊，請參閱 [在資料警示管理員中管理我的資料警示](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)。  
   
 > [!NOTE]  
 >  您按一下 [執行]  選項之後，需要幾秒鐘時間更新 [狀態]  資料行的值，才會表示警示正在處理。 如果您多次按一下 [執行]  選項，則會多次處理警示。 這樣將會不當耗用報表伺服器的資源，並且可能影響報表伺服器的效能。 若要查看有關警示的更新資訊，請按一下網頁瀏覽器的 [重新整理] 按鈕，查看有關警示的狀態更新以及其他資訊。  
   
   
-##  <a name="HowTo"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="HowTo"></a> 相關工作  
  本節列出如何管理和編輯警示定義的程序。  
   
 -   [在資料警示管理員中管理我的資料警示](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
