@@ -15,10 +15,10 @@ ms.assetid: 6e080919-4b64-46cd-8dd2-254a9c232e53
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 91bcf58df4f8dd9651f077c200d69eea2c1f7660
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68101048"
 ---
 # <a name="parse-geometry-data-type"></a>Parse (geometry 資料類型)

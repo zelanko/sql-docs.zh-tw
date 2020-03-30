@@ -17,10 +17,10 @@ ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f52dd565f634061468a0eee4fbfbb2855da99c0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082217"
 ---
 # <a name="revoke-full-text-permissions-transact-sql"></a>REVOKE 全文檢索權限 (Transact-SQL)

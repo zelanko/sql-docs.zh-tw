@@ -23,10 +23,10 @@ ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 485ef972b86795a2127dba5fc3e86bdf98354c7c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68117073"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
@@ -180,7 +180,7 @@ GO
 ```  
   
 ### <a name="c-creating-a-symmetric-key-using-an-extensible-key-management-ekm-device"></a>C. 使用可延伸金鑰管理 (EKM) 裝置建立對稱金鑰  
- 下列範例會使用稱為 `MySymKey` 的提供者與 `MyEKMProvider` 的金鑰名稱，建立稱為 `KeyForSensitiveData` 的對稱金鑰。 它會將授權指派給 `User1`，並假設系統管理員已經在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，註冊稱為 `MyEKMProvider` 的提供者。  
+ 下列範例會使用稱為 `MySymKey` 的提供者與 `MyEKMProvider` 的金鑰名稱，建立稱為 `KeyForSensitiveData` 的對稱金鑰。 它會將授權指派給 `User1`，並假設系統管理員已經在 `MyEKMProvider` 中，註冊稱為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的提供者。  
   
 ```  
 CREATE SYMMETRIC KEY MySymKey  

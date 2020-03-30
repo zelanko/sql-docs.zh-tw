@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70929691"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>記憶體最佳化資料表上的索引
@@ -230,7 +230,7 @@ WHERE col1 = 'dn';
 
 利用[自適性索引重組](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)等解決方案，為一或多個資料庫自動管理索引重組以及統計資料更新。 這項程序會根據索引分散程度與其他參數，自動選擇要進行重建或是重新組織索引，並以線性閾值更新統計資料。
 
-## <a name="Additional_Reading"></a> 另請參閱   
+## <a name="see-also"></a><a name="Additional_Reading"></a> 另請參閱   
  [SQL Server 索引設計指南](../../relational-databases/sql-server-index-design-guide.md)   
  [記憶體最佳化資料表的雜湊索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [記憶體最佳化資料表的非叢集索引](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)    

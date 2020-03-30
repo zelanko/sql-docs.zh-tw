@@ -14,10 +14,10 @@ ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0aecc0f5bb867699bef16ff9f2947fe99a2cf1ec
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006469"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>資料庫鏡像和記錄傳送 (SQL Server)
@@ -103,7 +103,7 @@ ms.locfileid: "68006469"
   
      您必須使用與步驟 4 中相同的備份共用。  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [交易記錄傳送]  介面，在每個記錄傳送設定中只支援一個主要資料庫。 因此，您必須使用預存程序，將新的主體資料庫設定為主要資料庫。  
+     **中的 [交易記錄傳送]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 介面，在每個記錄傳送設定中只支援一個主要資料庫。 因此，您必須使用預存程序，將新的主體資料庫設定為主要資料庫。  
   
 7.  執行另一個手動容錯移轉作業，在錯誤後回復至原始主體資料庫。  
   

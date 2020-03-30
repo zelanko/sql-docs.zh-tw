@@ -19,10 +19,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1876c16455876931d6a5c1d091d9d4c0dc860fcc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68103417"
 ---
 # <a name="create-statistics"></a>建立統計資料
@@ -43,9 +43,9 @@ ms.locfileid: "68103417"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   使用 CREATE STATISTICS 陳述式來建立統計資料之前，請確認 AUTO_CREATE_STATISTICS 選項是在資料庫層級設定。 這將確保查詢最佳化工具能夠繼續例行地針對查詢述詞資料行建立單一資料行統計資料。  
   
@@ -53,12 +53,12 @@ ms.locfileid: "68103417"
   
 -   您不能卸除、重新命名或變更在篩選統計資料述詞中定義的資料表資料行定義。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  使用者必須是資料表或索引檢視表擁有者，或是下列其中一個角色的成員： **系統管理員** 固定伺服器角色、 **db_owner** 固定資料庫角色或 **db_ddladmin** 固定資料庫角色。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-statistics"></a>若要建立統計資料  
   
@@ -142,7 +142,7 @@ ms.locfileid: "68103417"
   
 7.  在 [**table**name _資料表上新統計資料]\__ 對話方塊中，按一下 [確定]  。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-statistics"></a>若要建立統計資料  
   

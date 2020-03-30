@@ -11,20 +11,20 @@ ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d85df8c4d07a61c75dcb42eadbc9c7cdae4faad6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257969"
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>停用 SQL Server Managed Backup to Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主題說明如何在資料庫和執行個體層級停用或暫停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。  
   
-##  <a name="DatabaseDisable"></a> 停用資料庫的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+##  <a name="disable-ss_smartbackup-for-a-database"></a><a name="DatabaseDisable"></a> 停用資料庫的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
  您可以使用系統預存程序 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]managed_backup.sp_backup_config_basic (Transact-SQL)[ 來停用 ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) 設定。 *\@enable_backup* 參數用於啟用和停用特定資料庫的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 設定，其中的 1 會啟用而 0 會停用組態設定。  
   
-#### <a name="to-disable-includess_smartbackupincludesss-smartbackup-mdmd-for-a-specific-database"></a>停用特定資料庫的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：  
+#### <a name="to-disable-ss_smartbackup-for-a-specific-database"></a>停用特定資料庫的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -42,10 +42,10 @@ GO
 > [!NOTE]
 > 您可能也需要設定 `@container_url` 參數 (視您的設定而定)。
   
-##  <a name="DatabaseAllDisable"></a> 停用執行個體上所有資料庫的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+##  <a name="disable-ss_smartbackup-for-all-the-databases-on-the-instance"></a><a name="DatabaseAllDisable"></a> 停用執行個體上所有資料庫的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
  從近期在執行個體上啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的所有資料庫中，若您要停用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 組態設定，可使用下列程序。  組態設定 (例如儲存體 URL、保留項目和 SQL 認證) 都會保留在中繼資料中，如果稍後啟用資料庫的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 即可使用。 如果您只是想暫停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 服務，可使用主切換，本主題的以下章節會加以解釋。  
   
-#### <a name="to-disable-includess_smartbackupincludesss-smartbackup-mdmd-for-all-the-databases"></a>停用所有資料庫的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：  
+#### <a name="to-disable-ss_smartbackup-for-all-the-databases"></a>停用所有資料庫的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -109,10 +109,10 @@ SELECT * FROM managed_backup.fn_backup_db_config (NULL);
 GO  
 ```  
   
-##  <a name="InstanceDisable"></a> 停用執行個體的預設 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 設定  
+##  <a name="disable-default-ss_smartbackup-settings-for-the-instance"></a><a name="InstanceDisable"></a> 停用執行個體的預設 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 設定  
  執行個體層級的預設設定會套用到建立在該執行個體上的所有新資料庫。  如果您不再需要或要求預設設定，則可以使用 **managed_backup.sp_backup_config_basic** 系統預存程序，將 *\@database_name* 參數設為 NULL 來停用此設定。 停用不會移除其他組態設定，像是儲存體 URL、保留設定或 SQL 認證名稱。 如果稍後啟用執行個體的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ，將會使用這些設定。  
   
-#### <a name="to-disable-includess_smartbackupincludesss-smartbackup-mdmd-default-configuration-settings"></a>停用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 預設組態設定：  
+#### <a name="to-disable-ss_smartbackup-default-configuration-settings"></a>停用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 預設組態設定：  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -126,10 +126,10 @@ GO
     GO
     ```  
   
-##  <a name="InstancePause"></a> 在執行個體層級暫停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+##  <a name="pause-ss_smartbackup-at-the-instance-level"></a><a name="InstancePause"></a> 在執行個體層級暫停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
  有些時候，您可能會需要暫停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 服務一段時間。  **managed_backup.sp_backup_master_switch** 系統預存程序可讓您在執行個體層級停用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 服務。  使用同一個預存程序繼續執行 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 \@state 參數可用來定義是否應該關閉或開啟 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
   
-#### <a name="to-pause-includess_smartbackupincludesss-smartbackup-mdmd-services-using-transact-sql"></a>使用 Transact-SQL 暫停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 服務：  
+#### <a name="to-pause-ss_smartbackup-services-using-transact-sql"></a>使用 Transact-SQL 暫停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 服務：  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -144,7 +144,7 @@ EXEC managed_backup.sp_backup_master_switch @new_state=0;
 Go
 ```  
   
-#### <a name="to-resume-includess_smartbackupincludesss-smartbackup-mdmd-using-transact-sql"></a>使用 Transact-SQL 繼續進行 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+#### <a name="to-resume-ss_smartbackup-using-transact-sql"></a>使用 Transact-SQL 繼續進行 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   

@@ -22,10 +22,10 @@ ms.assetid: 1379afba-6480-454b-9c65-5e64cb4f3415
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: b7b8bf219c62734398d387e63f86d8a2d9a11662
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "69553266"
 ---
 # <a name="dbcc-traceoff-transact-sql"></a>DBCC TRACEOFF (Transact-SQL)

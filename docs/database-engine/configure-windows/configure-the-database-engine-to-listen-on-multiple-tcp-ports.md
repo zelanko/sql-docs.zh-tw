@@ -19,10 +19,10 @@ ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3055750ac7f52c4dfaaae3cef94021d9d024a50a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012725"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>設定 Database Engine 接聽多個 TCP 通訊埠

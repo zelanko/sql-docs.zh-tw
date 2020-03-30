@@ -13,10 +13,10 @@ ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2c53998ea56c02e43a62573b31767c1beea78a8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821949"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>使用新增可用性群組對話方塊 (SQL Server Management Studio)
@@ -30,7 +30,7 @@ ms.locfileid: "74821949"
 >  如需建立可用性群組之其他方法的相關資訊，請參閱本主題稍後的 [相關工作](#RelatedTasks)。  
   
   
-##  <a name="PrerequisitesRestrictions"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="PrerequisitesRestrictions"></a> 必要條件  
   
 -   建立可用性群組之前，請確認裝載可用性複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體位於相同 Windows Server 容錯移轉叢集 (WSFC) 容錯移轉叢集的不同 WSFC 節點上。 也請確認每個伺服器執行個體都已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 且符合所有其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 必要條件。 如需詳細資訊，強烈建議您閱讀 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "74821949"
   
 -   若要使用 **[新增可用性群組]** 對話方塊，您需要知道將要裝載可用性複本的伺服器執行個體名稱。 您也需要知道要加入至新可用性群組的任何資料庫名稱，而且需要確定這些資料庫符合 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。 如果您輸入無效值，新的可用性群組將無法運作。  
   
-## <a name="Limitations"></a> 限制  
+## <a name="limitations"></a><a name="Limitations"></a> 限制  
  **[新增可用性群組]** 對話方塊不會：  
   
 -   建立可用性群組接聽程式。    
@@ -47,10 +47,10 @@ ms.locfileid: "74821949"
   
  如需有關這些組態工作的詳細資訊，請參閱本主題稍後的＜ [待處理：建立可用性群組之後](#FollowUp)＞。  
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用新增可用性群組對話方塊 (SQL Server Management Studio)  
+##  <a name="using-the-new-availability-group-dialog-box-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用新增可用性群組對話方塊 (SQL Server Management Studio)  
  **建立可用性群組**  
   
 1.  在 [物件總管] 中，連接到裝載主要複本的伺服器執行個體，然後按一下伺服器名稱。  
@@ -76,7 +76,7 @@ ms.locfileid: "74821949"
   
      若要結束對話方塊而不建立可用性群組，請按一下 **[取消]** 。  
   
-##  <a name="FollowUp"></a> 待處理：使用新增可用性群組對話方塊建立可用性群組之後  
+##  <a name="follow-up-after-using-the-new-availability-group-dialog-box-to-create-an-availability-group"></a><a name="FollowUp"></a> 待處理：使用新增可用性群組對話方塊建立可用性群組之後  
   
 -   接著您需要連接到裝載此可用性群組之次要複本的每個伺服器執行個體，並完成下列步驟：  
   
@@ -88,7 +88,7 @@ ms.locfileid: "74821949"
   
 -   建議您為新可用性群組建立可用性群組接聽程式。 這需要您連接到裝載目前主要複本的伺服器執行個體。 如需詳細資訊，請參閱 [建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要設定可用性群組和複本屬性**  
   
 -   [變更可用性複本的可用性模式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -147,7 +147,7 @@ ms.locfileid: "74821949"
   
 -   [疑難排解失敗的加入檔案作業 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

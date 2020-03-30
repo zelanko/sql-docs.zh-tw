@@ -17,17 +17,17 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 09fb423dc4d3685b22c67b2a86a74443633ba74a
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78370541"
 ---
 # <a name="user-defined-functions"></a>使用者定義的函式
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者定義函數與程式語言函數類似，是可接受參數、執行動作 (如複雜計算) 以及傳回該動作所得值的常式。 傳回值可以是單一純量值或結果集。  
    
-##  <a name="Benefits"></a> 使用者定義的函式  
+##  <a name="user-defined-functions"></a><a name="Benefits"></a> 使用者定義的函式  
 為何要使用使用者定義函式 (UDF)？ 
   
 -   可進行模組化的程式撰寫。  
@@ -47,7 +47,7 @@ ms.locfileid: "78370541"
 > [!IMPORTANT]
 > 查詢中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] UDF 只能在單一執行緒上執行 (序列執行計劃)。 因此使用 UDF 會禁止平行查詢處理。 如需平行查詢處理的詳細資訊，請參閱[查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)。
   
-##  <a name="FunctionTypes"></a> 函式類型  
+##  <a name="types-of-functions"></a><a name="FunctionTypes"></a> 函式類型  
 **純量函式**  
  使用者定義純量函數會傳回在 RETURNS 子句中所定義之類型的單一資料值。 針對內嵌純量函式，傳回的純量值是單一陳述式的結果。 針對多重陳述式純量函式，函式主體可包含一系列傳回單一值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 傳回類型可以是 **text**、 **ntext**、 **image**、 **cursor**和 **timestamp**以外的任何資料類型。 
  **[範例。](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
@@ -58,7 +58,7 @@ ms.locfileid: "78370541"
 **系統函式**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供許多可用以執行各種作業的系統函數。 這些函數不能修改。 如需詳細資訊，請參閱[內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)、[系統預存函式 &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-category-transact-sql.md)，和[動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
-##  <a name="Guidelines"></a> 指導方針  
+##  <a name="guidelines"></a><a name="Guidelines"></a> 指導方針  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 造成陳述式取消並且以模組中下一個陳述式繼續 (例如觸發程序或預存程序) 的錯誤會在函式內部以不同方式處理。 在函數中，這樣的錯誤會造成函數停止執行。 進而導致叫用該函數的陳述式取消。  
   
  `BEGIN...END` 區塊中的陳述式不能有任何副作用。 函數副作用是在函數的範圍外對資源狀態所做的任何永久變更，例如修改資料庫資料表。 在函數中陳述式只能變更函數的區域性物件，例如本機資料指標或變數。 在函數中不得執行的動作包括修改資料庫資料表、對函數的非本機資料指標進行運算、傳送電子郵件、試圖修改目錄，以及產生傳回給使用者的結果集。  
@@ -71,7 +71,7 @@ ms.locfileid: "78370541"
 > [!IMPORTANT]   
 > 如需使用者定義函式的詳細資訊和效能考量事項，請參閱[建立使用者定義函式 &#40;資料庫引擎&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)。 
   
-##  <a name="ValidStatements"></a> 函式中有效的陳述式  
+##  <a name="valid-statements-in-a-function"></a><a name="ValidStatements"></a> 函式中有效的陳述式  
 函數中有效的陳述式類型包括：  
   
 -   `DECLARE` 陳述式，可用來定義對函式而言為區域的資料變數與資料指標。  
@@ -112,10 +112,10 @@ ms.locfileid: "78370541"
   
  如需決定性與非決定性內建系統函數的清單，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
-##  <a name="SchemaBound"></a> 結構描述繫結的函式  
+##  <a name="schema-bound-functions"></a><a name="SchemaBound"></a> 結構描述繫結的函式  
  `CREATE FUNCTION` 支援 `SCHEMABINDING` 子句，它可將函式與其參考的任何物件結構描述繫結在一起，例如資料表、檢視及其他使用者定義函式。 嘗試更改或卸除任何被結構描述繫結函數所參考的物件將會失敗。  
   
- 必須滿足以下條件，您才可以在 [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) 中指定 `SCHEMABINDING`：  
+ 必須滿足以下條件，您才可以在 `SCHEMABINDING`CREATE FUNCTION[ 中指定 ](../../t-sql/statements/create-function-transact-sql.md)：  
   
 -   函數所參考的所有檢視及使用者自訂函數，都必須是結構描述繫結的。  
   
@@ -125,10 +125,10 @@ ms.locfileid: "78370541"
   
  您可以使用 `ALTER FUNCTION` 來移除結構描述繫結。 `ALTER FUNCTION` 陳述式應在不指定 `WITH SCHEMABINDING` 的情況下重新定義函式。  
   
-##  <a name="Parameters"></a> 指定參數  
+##  <a name="specifying-parameters"></a><a name="Parameters"></a> 指定參數  
  使用者自訂函數會使用零或多個輸入參數，並會傳回純量值或資料表。 每一函數最多可以有 1024 個輸入參數。 若函數的參數有預設值，在呼叫函數以取得預設值時必須指定 DEFAULT 關鍵字。 此一行為不同於使用者自訂預存程序中有預設值的參數，在這些預存程序中省略參數亦意謂著省略預設值。 使用者自訂函數不支援輸出參數。  
   
-##  <a name="Tasks"></a> 更多範例！  
+##  <a name="more-examples"></a><a name="Tasks"></a> 更多範例！  
   
 |||  
 |-|-|  

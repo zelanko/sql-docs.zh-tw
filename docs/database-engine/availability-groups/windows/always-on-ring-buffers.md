@@ -11,10 +11,10 @@ ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c52e0bcb34c93bb3c973caae53d3983db3660e24
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822109"
 ---
 # <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>使用環形緩衝區取得 Always On 可用性群組的健全狀況資訊
@@ -62,7 +62,7 @@ ORDER BY record.value('(./Record/@time)[1]','bigint') DESC
 GO  
 ```  
   
-##  <a name="BKMK_RingBufferTypes"></a> 可用性群組信號緩衝區類型  
+##  <a name="availability-groups-ring-buffer-types"></a><a name="BKMK_RingBufferTypes"></a> 可用性群組信號緩衝區類型  
  sys.dm_os_ring_buffers 中有四個可用性群組信號緩衝區。 下表描述信號緩衝區類型和每個信號緩衝區類型的 Record 資料行內容的範例。  
   
  **RING_BUFFER_HADRDBMGR_API**  

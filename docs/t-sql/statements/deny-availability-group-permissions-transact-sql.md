@@ -20,10 +20,10 @@ ms.assetid: bda60b36-a0b9-4c20-80c1-6a5cb1d638a5
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dc29fadcbe0fe3a3f2eca8616b89e9ec3e45a7a9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258316"
 ---
 # <a name="deny-availability-group-permissions-transact-sql"></a>拒絕可用性群組權限 (Transact-SQL)

@@ -13,10 +13,10 @@ ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 592fa533d6c6d6c518f1dcaaa3e70da2808b93b9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67947029"
 ---
 # <a name="database-properties-query-store-page"></a>資料庫屬性 (查詢存放區頁面)

@@ -21,10 +21,10 @@ ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 86afd9bb2036edb77934f6ae622fafe93bd2d5a4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68111327"
 ---
 # <a name="scope_identity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)

@@ -13,10 +13,10 @@ ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68068496"
 ---
 # <a name="device-contents-sql-server"></a>裝置內容 (SQL Server)

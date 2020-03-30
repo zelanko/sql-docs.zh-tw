@@ -14,10 +14,10 @@ ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e16286e558d860a346ba8fff366009f064e65f91
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68011966"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XP 伺服器組態選項

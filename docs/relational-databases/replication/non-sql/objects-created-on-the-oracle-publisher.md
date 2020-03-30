@@ -13,10 +13,10 @@ ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b0bc02a31bcfd4cd4baef19a89b6f658195a24f5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940310"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>在 Oracle 發行者端建立的物件

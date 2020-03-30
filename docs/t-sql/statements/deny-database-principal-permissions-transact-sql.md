@@ -29,10 +29,10 @@ ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a3e9cb1d12dd65b813ae7cc6139a1d48925ab05f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244575"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY 資料庫主體權限 (Transact-SQL)

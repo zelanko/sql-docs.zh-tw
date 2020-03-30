@@ -18,10 +18,10 @@ ms.assetid: 443ae2ea-739b-41ef-96cc-ac5dfd65e10b
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e23b5332ca419637749ce029a5698257a6fb835d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68101208"
 ---
 # <a name="m-geometry-data-type"></a>M (geometry 資料類型)

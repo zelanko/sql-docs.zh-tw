@@ -14,10 +14,10 @@ ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 753c7c08164de1583dd8de1aa1720fcad6a98dff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68093633"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server Agent、JobSteps 物件

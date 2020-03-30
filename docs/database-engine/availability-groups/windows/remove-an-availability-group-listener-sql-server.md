@@ -15,10 +15,10 @@ ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e298dd5dbdea6ee3895a35f3485c8df69574ba8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822658"
 ---
 # <a name="remove-an-availability-group-listener-sql-server"></a>移除可用性群組接聽程式 (SQL Server)
@@ -26,18 +26,18 @@ ms.locfileid: "74822658"
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]PowerShell，從 AlwaysOn 可用性群組中移除可用性群組接聽程式。  
   
   
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   您必須連接到裝載主要複本的伺服器執行個體。  
   
-##  <a name="Recommendations"></a> 建議  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
  刪除可用性群組接聽程式之前，我們建議您先確定沒有應用程式正在使用接聽程式。  
  
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要移除可用性群組接聽程式**  
   
 1.  在 [物件總管] 中，連接到裝載主要複本的伺服器執行個體，然後按一下伺服器名稱以展開伺服器樹狀目錄。  
@@ -50,14 +50,14 @@ ms.locfileid: "74822658"
   
 5.  這樣就會開啟 **[從可用性群組移除接聽程式]** 對話方塊。 如需詳細資訊，請參閱本主題稍後的＜ [從可用性群組移除接聽程式](#AgListenerPropertiesDialog)＞。  
   
-###  <a name="AgListenerPropertiesDialog"></a> 從可用性群組移除接聽程式 (對話方塊)  
+###  <a name="remove-listener-from-availability-group-dialog-box"></a><a name="AgListenerPropertiesDialog"></a> 從可用性群組移除接聽程式 (對話方塊)  
  **名稱**  
  要移除的接聽程式名稱。  
   
  **結果**  
  顯示連結 ( **[成功]** 或 **[錯誤]** )，而且按一下即可取得詳細資訊。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要移除可用性群組接聽程式**  
   
 1.  連接到裝載主要複本的伺服器執行個體。  
@@ -74,7 +74,7 @@ ms.locfileid: "74822658"
     ALTER AVAILABILITY GROUP AccountsAG REMOVE LISTENER 'AccountsAG_Listener';  
     ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要移除可用性群組接聽程式**  
   
 1.  將預設值 (**cd**) 設定為裝載主要複本的伺服器執行個體。  
@@ -89,7 +89,7 @@ ms.locfileid: "74822658"
     > [!NOTE]  
     >  若要檢視 Cmdlet 的語法，請在 **PowerShell 環境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cmdlet。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   

@@ -20,10 +20,10 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 261f22847c8b397d57ff5f732ea4d97091895daa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67939206"
 ---
 # <a name="enhance-merge-replication-performance"></a>增強合併式複寫效能
@@ -141,7 +141,7 @@ ms.locfileid: "67939206"
   
 -   偶爾重新索引合併式複寫系統資料表。  
   
-     進行合併式複寫的維護時，請偶爾檢查與合併式複寫相關的系統資料表成長情況：**MSmerge_contents**、**MSmerge_genhistory**、**MSmerge_tombstone**、**MSmerge_current_partition_mappings** 及 **MSmerge_past_partition_mappings**。 定期重新整理資料表的索引。 如需詳細資訊，請參閱 [重新組織與重建索引](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
+     做為合併式複寫維護的一部份，請不時檢查與合併式複寫相關聯的系統資料表成長： **MSmerge_contents**、 **MSmerge_genhistory**、 **MSmerge_tombstone**、 **MSmerge_current_partition_mappings**和 **MSmerge_past_partition_mappings**。 定期重新整理資料表的索引。 如需詳細資訊，請參閱 [重新組織與重建索引](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
   
 -   使用複寫監視器內的 **[同步處理記錄]** 索引標籤監視同步處理效能。  
   

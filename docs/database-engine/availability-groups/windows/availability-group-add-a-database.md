@@ -15,10 +15,10 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 64f427de0a2b2735671a885ca550c76386ce0177
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991499"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group"></a>將資料庫新增至 Always On 可用性群組
@@ -34,10 +34,10 @@ ms.locfileid: "67991499"
 -   資料庫必須位於裝載主要複本的伺服器執行個體上，且符合可用性資料庫的必要條件和限制。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
  
-##  <a name="Permissions"></a> 權限  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="use-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
 
   
 1.  在 [物件總管] 中，連接到裝載主要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
@@ -58,7 +58,7 @@ ms.locfileid: "67991499"
   
          使用 **[可用性群組屬性]** 對話方塊將資料庫加入至可用性群組之後，您需要在裝載次要複本的每個伺服器執行個體上設定對應的次要資料庫。 如需詳細資訊，請參閱 [於 AlwaysOn 次要資料庫啟動資料移動 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="use-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
 
   
 1.  連接到裝載主要複本的伺服器執行個體。    
@@ -79,7 +79,7 @@ ms.locfileid: "67991499"
   
 3.  將資料庫加入至可用性群組之後，您需要在裝載次要複本的每個伺服器執行個體上設定對應的次要資料庫。 如需詳細資訊，請參閱 [於 AlwaysOn 次要資料庫啟動資料移動 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="use-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
 
   
 1.  變更目錄 (**cd**) 為裝載主要複本的伺服器執行個體。  
@@ -106,7 +106,7 @@ ms.locfileid: "67991499"
   
  如需完整範例，請參閱下面的 [範例 (PowerShell)](#PSExample)。  
   
-###  <a name="PSExample"></a> 範例 (PowerShell)  
+###  <a name="example-powershell"></a><a name="PSExample"></a> 範例 (PowerShell)  
  下列範例示範此完整程序：根據裝載可用性群組之主要複本的伺服器執行個體上的資料庫準備次要資料庫、將資料庫加入至可用性群組 (做為主要資料庫)，然後將次要資料庫聯結至可用性群組。 首先，此範例會備份資料庫及其交易記錄。 然後，此範例會將資料庫和記錄備份還原至裝載次要複本的伺服器執行個體。  
   
  此範例會呼叫 **Add-SqlAvailabilityDatabase** 兩次：第一次是針對主要複本呼叫，以便將資料庫加入可用性群組中，然後再針對次要複本呼叫，以便將該複本的次要資料庫聯結至可用性群組。 如果您有多個次要複本，請還原並聯結每個次要複本的次要資料庫。  

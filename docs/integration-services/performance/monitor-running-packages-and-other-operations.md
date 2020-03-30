@@ -14,10 +14,10 @@ ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287842"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>監視執行封裝和其他作業
@@ -55,12 +55,12 @@ ms.locfileid: "79287842"
   
  有九種不同的狀態類型可用來指示作業的狀態。 如需狀態類型的完整清單，請參閱 [catalog.operations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 檢視。  
 
-## <a name="active_ops"></a> 作用中的作業對話方塊
+## <a name="active-operations-dialog-box"></a><a name="active_ops"></a> 作用中的作業對話方塊
   使用 **[作用中的作業]** 對話方塊檢視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上目前執行中之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 作業 (例如，部署、驗證及封裝執行) 的狀態。 此資料儲存在 SSISDB 目錄中。  
   
  如需相關 [!INCLUDE[tsql](../../includes/tsql-md.md)] 檢視的詳細資訊，請參閱 [catalog.operations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)、[catalog.validations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-validations-ssisdb-database.md) 和 [catalog.executions &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md)  
   
-###  <a name="open_dialog"></a> 開啟 [作用中的作業] 對話方塊  
+###  <a name="open-the-active-operations-dialog-box"></a><a name="open_dialog"></a> 開啟 [作用中的作業] 對話方塊  
   
 1.  開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
@@ -127,7 +127,7 @@ ms.locfileid: "79287842"
  透過 Managed API 來以設計程式方式存取  
  請參閱 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間和其類別。  
 
-## <a name="reports"></a> Reports for the Integration Services Server
+## <a name="reports-for-the-integration-services-server"></a><a name="reports"></a> Reports for the Integration Services Server
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的目前版本中， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供標準報表，協助您監視已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。 這些報表可協助您檢視封裝狀態及記錄，如有必要，也可協助您識別封裝執行失敗的原因。  
   
  在每個報表頁面上方，上一步圖示可前往檢視的上一頁，重新整理圖示會重新整理頁面上顯示的資訊，而列印圖示可讓您列印目前頁面。  
@@ -179,7 +179,7 @@ ms.locfileid: "79287842"
  [所有驗證]  報表會顯示伺服器上已執行之所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 驗證的摘要。 此摘要會顯示每個驗證的資訊，例如狀態、開始時間和結束時間。 每個摘要項目都包含一個指向驗證期間產生之訊息的連結。 就如同 Integration Services 儀表板一樣，您可以將篩選套用至資料表，以縮小顯示的資訊範圍。  
   
 ### <a name="custom-reports"></a>自訂報表  
- 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，將自訂報表 (.rdl 檔案) 加入 [Integration Services 目錄]  節點底下的 [SSISDB]  目錄節點。 加入報表之前，請確認您正在使用三部分命名慣例來完整限定您所參考的物件，例如來源資料表。 否則， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 將會顯示錯誤。 此命名慣例是 \<資料庫>.\<擁有者>.\<物件>。 SSISDB.internal.executions 就是範例。  
+ 您可以在  **中，將自訂報表 (.rdl 檔案) 加入 [Integration Services 目錄]** **節點底下的 [SSISDB]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 目錄節點。 加入報表之前，請確認您正在使用三部分命名慣例來完整限定您所參考的物件，例如來源資料表。 否則， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 將會顯示錯誤。 此命名慣例是 \<資料庫>.\<擁有者>.\<物件>。 SSISDB.internal.executions 就是範例。  
   
 > [!NOTE]  
 >  當您將自訂報表加入 [資料庫]  節點底下的 [SSISDB]  節點時，不需要使用 SSISDB 前置詞。  

@@ -15,10 +15,10 @@ ms.assetid: 4e19f582-ef8f-40f7-8ad1-4f08591cdd1a
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 4a6684022b1231c1de2ee4ff21f933dacb63ecee
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67930186"
 ---
 # <a name="static-aggregate-geometry-methods"></a>靜態彙總幾何方法

@@ -13,10 +13,10 @@ ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7b9ba71d5f7791b442989a5194c9cc6aede98677
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68099599"
 ---
 # <a name="database-properties-general-page"></a>資料庫屬性 (一般頁面)

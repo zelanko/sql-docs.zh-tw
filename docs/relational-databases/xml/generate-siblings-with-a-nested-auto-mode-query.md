@@ -14,10 +14,10 @@ ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e278a3ab3f81e1a858830868b310c678f603e0ea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67986590"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>使用巢狀 AUTO 模式查詢產生同層級

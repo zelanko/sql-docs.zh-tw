@@ -16,10 +16,10 @@ ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 25424e7e41a2d1fdf1efb88f01c53f24902e7072
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68030720"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures

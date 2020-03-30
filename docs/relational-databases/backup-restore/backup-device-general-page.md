@@ -13,10 +13,10 @@ ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0d37918c0ca2be62c2e620faa8034548df2b4592
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940829"
 ---
 # <a name="backup-device-general-page"></a>備份裝置 (一般頁面)
@@ -58,7 +58,7 @@ ms.locfileid: "67940829"
   
  將媒體集中的第一個備份寫入邏輯備份裝置時，會初始化對應於邏輯備份裝置的實體備份裝置。 如果實體備份裝置是目前尚不存在的檔案，在初始化時便會建立該檔案。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [定義磁碟檔案的邏輯備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   

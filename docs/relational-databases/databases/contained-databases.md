@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e42d7dbfe00ff957511d9853e39febd29b7aab66
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68137334"
 ---
 # <a name="contained-databases"></a>自主資料庫
@@ -38,7 +38,7 @@ ms.locfileid: "68137334"
   
  部分自主資料庫的某些功能，例如將中繼資料儲存在資料庫中，適用於所有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫。 部分自主資料庫的某些優點，例如資料庫層級驗證和目錄定序，必須先啟用才可供使用。 部分內含項目是透過使用 **CREATE DATABASE** 和 **ALTER DATABASE** 陳述式或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來啟用。 如需有關如何啟用部分資料庫內含項目的詳細資訊，請參閱＜ [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)＞。  
   
-##  <a name="Concepts"></a> 部分自主資料庫概念  
+##  <a name="partially-contained-database-concepts"></a><a name="Concepts"></a> 部分自主資料庫概念  
  完全自主資料庫包含了定義資料庫所需的所有設定和中繼資料，而且對於已安裝資料庫的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體沒有組態相依性。 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，分隔資料庫與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體既耗時又需要資料庫與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之間關聯性的詳細知識。 部分自主資料庫讓分隔 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中的資料庫與其他資料庫變得更容易。  
   
  自主資料庫會將功能視為與內含項目相關。 只仰賴位於資料庫內部之功能的任何使用者定義實體會被視為完全自主。 仰賴位於資料庫外部之功能的任何使用者定義實體會被視為非內含性 (如需詳細資訊，請參閱本主題稍後的 [內含項目](#containment) 一節)。  
@@ -83,7 +83,7 @@ ms.locfileid: "68137334"
   
  *「管理模型」* (Management Model) 位於資料庫界限外部，它與執行個體層級功能和管理有關。 位於資料庫界限外部的實體範例包括 **sys.endpoints**等系統資料表、對應至登入的使用者，以及另一個資料庫中由三部分名稱所參考的使用者資料表。  
   
-##  <a name="containment"></a> 內含項目  
+##  <a name="containment"></a><a name="containment"></a> 內含項目  
  完全位於資料庫內部的使用者實體會被視為 *「自主」* (Contained)。 位於資料庫外部或仰賴與資料庫外部之功能互動的任何實體會被視為 *「非內含性」* (Uncontained)。  
   
  一般而言，使用者實體可分為下列內含項目類別：  
@@ -92,7 +92,7 @@ ms.locfileid: "68137334"
   
 -   非內含性使用者實體 (跨越資料庫界限的實體)，例如 sys.server_principals 或伺服器主體 (登入) 本身。 任何使用這些實體的程式碼或任何參考這些實體的功能為非內含性。  
   
-###  <a name="partial"></a> Partially Contained Database  
+###  <a name="partially-contained-database"></a><a name="partial"></a> Partially Contained Database  
  自主資料庫功能目前只能在部分包含的狀態下使用。 部分自主資料庫就是允許使用未自主功能的自主資料庫。  
   
  您可以使用 [sys.dm_db_uncontained_entities](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) 和 [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 檢視以傳回有關非內含性物件或功能的資訊。 透過判斷資料庫元素的自主狀態，您就可以找出必須取代或改變哪些物件或功能，以升級內含項目。  
@@ -102,7 +102,7 @@ ms.locfileid: "68137334"
   
  部分自主資料庫行為與非自主資料庫行為最明確的差異在於定序。 如需有關定序問題的詳細資訊，請參閱＜ [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)＞。  
   
-##  <a name="benefits"></a> 使用部分自主資料庫的優點  
+##  <a name="benefits-of-using-partially-contained-databases"></a><a name="benefits"></a> 使用部分自主資料庫的優點  
  您可以使用部分自主資料庫來解決一些與非自主資料庫相關聯的問題和複雜性。  
   
 ### <a name="database-movement"></a>資料庫移動  
@@ -124,7 +124,7 @@ ms.locfileid: "68137334"
 ### <a name="database-administration"></a>資料庫管理  
  在資料庫而不是在 master 資料庫中維護資料庫設定，讓每個資料庫擁有者對其資料庫有較多的控制，而不需要將 **系統管理員 (sysadmin)** 權限授與資料庫擁有者。  
   
-##  <a name="Limitations"></a> 限制  
+##  <a name="limitations"></a><a name="Limitations"></a> 限制  
  部分自主資料庫不允許下列功能。  
   
 -   部分自主資料庫無法使用複寫、異動資料擷取，或變更追蹤。  
@@ -140,7 +140,7 @@ ms.locfileid: "68137334"
 > [!WARNING]  
 >  目前允許暫存預存程序。 由於暫存預存程序違反內含項目，因此預計未來自主資料庫版本中不會支援這些預存程序。  
   
-##  <a name="Identifying"></a> 識別資料庫內含項目  
+##  <a name="identifying-database-containment"></a><a name="Identifying"></a> 識別資料庫內含項目  
  有兩項工具可協助識別資料庫的內含項目狀態。 [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) 是顯示資料庫中所有可能非內含性實體的檢視。 在執行階段中識別任何實際非內含性實體時，就會發生 database_uncontained_usage 事件。  
   
 ### <a name="sysdm_db_uncontained_entities"></a>sys.dm_db_uncontained_entities  

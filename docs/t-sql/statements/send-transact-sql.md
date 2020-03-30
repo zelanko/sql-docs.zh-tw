@@ -25,10 +25,10 @@ ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9a6c6993252ccad0335b177c31c9d20b40f520a5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70211424"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)

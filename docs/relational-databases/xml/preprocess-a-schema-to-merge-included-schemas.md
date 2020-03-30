@@ -20,10 +20,10 @@ ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58773dbce29589d66403c6584b5360c0dc8026d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67995323"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>前置處理結構描述以合併包含的結構描述

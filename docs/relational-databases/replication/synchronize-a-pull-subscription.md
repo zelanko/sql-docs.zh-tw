@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 79f24f3115f61b088fce684d0b7ada0bc1d39697
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287036"
 ---
 # <a name="synchronize-a-pull-subscription"></a>同步處理提取訂閱
@@ -36,7 +36,7 @@ ms.locfileid: "76287036"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  訂閱是由散發代理程式 (適用於快照式與異動複寫) 或合併代理程式 (適用於合併式複寫) 同步處理。 代理程式可以繼續執行、視需要執行，或是依照排程執行。 如需指定同步處理排程的詳細資訊，請參閱[指定同步處理排程](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
  從 **中的** [本機訂閱] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]資料夾視需要同步處理訂閱。  
@@ -53,7 +53,7 @@ ms.locfileid: "76287036"
   
 5.  按一下 [關閉]  。  
   
-##  <a name="ReplProg"></a> Replication Agents  
+##  <a name="replication-agents"></a><a name="ReplProg"></a> Replication Agents  
  提取訂閱可透過程式設計方式加以同步處理，以及視需要從命令提示字元叫用適當的複寫代理程式可執行檔加以同步處理。 叫用的複寫代理程式可執行檔取決於提取訂閱所屬的發行集類型。 如需詳細資訊，請參閱 [Replication Agents](../../relational-databases/replication/agents/replication-agents-overview.md)。  
   
 > [!NOTE]  
@@ -143,7 +143,7 @@ ms.locfileid: "76287036"
   
     -   **-SubscriberSecurityMode** = **0**  
   
-###  <a name="TsqlExample"></a> 範例 (複寫代理程式)  
+###  <a name="examples-replication-agents"></a><a name="TsqlExample"></a> 範例 (複寫代理程式)  
  下列範例會啟動散發代理程式，以同步處理提取訂閱。 所有的連接都是使用「Windows 驗證」所建立。  
   
 ```  
@@ -181,7 +181,7 @@ SET Publication=AdvWorksSalesOrdersMerge
 -Validate 3  -ParallelUploadDownload 1 ;  
 ```  
   
-##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
  您可以使用 Replication Management Objects (RMO) 和對複寫代理程式功能的 Managed 程式碼存取，以程式設計的方式同步處理提取訂閱。 用於同步處理提取訂閱的類別依該訂閱所屬的發行集類型而定。  
   
 > [!NOTE]
@@ -241,7 +241,7 @@ SET Publication=AdvWorksSalesOrdersMerge
         > [!NOTE]  
         >  如果您在建立提取訂閱時為 **false** for <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 值 (預設值)，則還需要指定 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>複寫代理程式 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>複寫代理程式 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>複寫代理程式 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>複寫代理程式 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>複寫代理程式 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>，以及 (選擇性) <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>複寫代理程式 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>複寫代理程式 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>和 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> ，這是因為在 [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)＞。  
   
-###  <a name="PShellExample"></a> 範例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 範例 (RMO)  
  此範例同步處理交易式發行集的提取訂閱，其中代理程式會使用代理程式作業非同步啟動。  
   
 ```csharp  

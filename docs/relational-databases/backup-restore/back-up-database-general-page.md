@@ -13,10 +13,10 @@ ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e3bbac9bbdc12e5f2c1a0fb318a91860e44131d0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940928"
 ---
 # <a name="back-up-database-general-page"></a>備份資料庫 (一般頁面)
@@ -26,7 +26,7 @@ ms.locfileid: "67940928"
  如需基本備份概念的詳細資訊，請參閱[備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您可以按一下 [指令碼]  按鈕，然後選取指令碼目的地來產生對應的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 指令碼。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您可以按一下 [指令碼][!INCLUDE[tsql](../../includes/tsql-md.md)][ 按鈕，然後選取指令碼目的地來產生對應的 ](../../t-sql/statements/backup-transact-sql.md) **BACKUP** 指令碼。  
   
  **若要使用 SQL Server Management Studio 建立備份**  
   
@@ -89,7 +89,7 @@ ms.locfileid: "67940928"
 |||  
 |-|-|  
 |**磁碟**|備份至磁碟。 這可能是針對資料庫所建立的系統檔案，或以磁碟為基礎的邏輯備份裝置。 目前選取的磁碟會出現在 **[備份至]** 清單中。 您最多可以為備份作業選取 64 個磁碟裝置。|  
-|**磁帶**|備份至磁帶。 這可能是針對資料庫所建立的本機磁帶機，或以磁帶為基礎的邏輯備份裝置。 目前選取的磁帶會出現在 **[備份至]** 清單中。 最大數目是 64。 如果伺服器上沒有附加磁帶裝置，則會停用此選項。 您選取的磁帶會列在 **[備份至]** 清單中。<br /><br /> 注意:未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
+|**磁帶**|備份至磁帶。 這可能是針對資料庫所建立的本機磁帶機，或以磁帶為基礎的邏輯備份裝置。 目前選取的磁帶會出現在 **[備份至]** 清單中。 最大數目是 64。 如果伺服器上沒有附加磁帶裝置，則會停用此選項。 您選取的磁帶會列在 **[備份至]** 清單中。<br /><br /> 注意：未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
 |**URL**|備份至 Microsoft Azure Blob 儲存體。|  
   
  所顯示的下一組選項取決於選取的目的地類型。 如果選取 [磁碟] 或 [磁帶]，則會顯示下列選項。  

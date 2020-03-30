@@ -18,10 +18,10 @@ ms.assetid: 4dc5a004-7a53-4cce-81dd-9f5e1dd0db78
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5663bc7a7236a49b6b97c41ed5c96e53f337c186
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67930176"
 ---
 # <a name="stcentroid-geometry-data-type"></a>STCentroid (geometry 資料類型)

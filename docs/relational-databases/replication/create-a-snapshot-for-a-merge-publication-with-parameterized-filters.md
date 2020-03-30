@@ -16,10 +16,10 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 88c43b8d37861e52b5bda5afc0a38753f2b70d6e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321819"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>使用參數化篩選建立合併式發行集的快照集
@@ -52,13 +52,13 @@ ms.locfileid: "75321819"
  「快照集代理程式」會為每個資料分割建立快照集。 對於預先產生的快照集和「訂閱者」所需的快照集，代理程式會在建立發行集的快照集代理程式作業 (此作業由「新增發行集精靈」或 **sp_addpublication_snapshot**建立) 時指定的認證下執行並進行連接。 若要變更認證，請使用 **sp_changedynamicsnapshot_job**。 如需詳細資訊，請參閱 [sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md)。  
 
   
-##  <a name="Recommendations"></a> 建議  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   在使用參數化篩選產生合併式發行集的快照集時，您必須先產生一個標準 (結構描述) 快照集，其中包含所有發行的資料以及訂閱的訂閱者中繼資料。 如需詳細資訊，請參閱 [建立和套用初始快照集](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。 在您建立結構描述快照集之後，您可以產生包含發行資料之訂閱者特有資料分割的快照集。  
   
 -   如果發行集內的一或多個發行項的篩選產生對每個訂閱而言是唯一的非重疊資料分割，則只要合併代理程式一執行，就會清除中繼資料。 這表示分割快照集會更快過期。 使用這個選項時，您應該考慮允許訂閱者初始化快照集的產生與傳遞。 
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  您可以在 [發行集屬性 - **發行集>]** **對話方塊的 [資料分割]\<** 頁面上，產生資料分割的快照集。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。 您可以讓訂閱者初始化快照集產生和傳遞，並且/或者產生快照集。  
   
  產生一個或多個資料分割的快照集之前，必須：  
@@ -103,7 +103,7 @@ ms.locfileid: "75321819"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用預存程序和快照集代理程式進行以下作業：  
   
 -   允許訂閱者在首次執行同步處理時，要求快照集產生和應用程式。  
@@ -200,7 +200,7 @@ ms.locfileid: "75321819"
 > [!NOTE]  
 >  如需複寫代理程式之程式設計的詳細資訊，請參閱[複寫代理程式可執行檔概念](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  這個範例會使用參數化篩選來建立合併式發行集，其中的訂閱者會起始快照集的產生程序。 **\@job_login** 和 **\@job_password** 的值會使用指令碼變數來傳遞。  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../relational-databases/replication/codesnippet/tsql/create-a-snapshot-for-a-_1.sql)]  
@@ -272,7 +272,7 @@ PAUSE
   
 ```  
   
-##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
  您可以透過以下方式，以程式設計的方式使用 Replication Management Objects (RMO) 來產生分割快照集。  
   
 -   允許訂閱者在首次執行同步處理時，要求快照集產生和應用程式。  
@@ -401,7 +401,7 @@ PAUSE
   
 8.  對每一個訂閱者重複步驟 4-7。  
   
-###  <a name="PShellExample"></a> 範例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 範例 (RMO)  
  此範例會建立允許訂閱者要求產生快照集的合併式發行集。  
   
  [!code-cs[HowTo#rmo_CreateMergePub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createmergepub)]  

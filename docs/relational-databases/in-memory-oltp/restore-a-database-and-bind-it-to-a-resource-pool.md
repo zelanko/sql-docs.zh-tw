@@ -11,10 +11,10 @@ ms.assetid: 0d20a569-8a27-409c-bcab-0effefb48013
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 4b19476f08398e6b704ee56125f3290d39c59954
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68111807"
 ---
 # <a name="restore-a-database-and-bind-it-to-a-resource-pool"></a>還原資料庫並將其繫結至資源集區
@@ -34,7 +34,7 @@ ms.locfileid: "68111807"
   
 5.  [監視資源集區效能](../../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md#bkmk_Monitor)  
   
-###  <a name="bkmk_NORECOVERY"></a> 使用 NORECOVERY 還原  
+###  <a name="restore-with-norecovery"></a><a name="bkmk_NORECOVERY"></a> 使用 NORECOVERY 還原  
  當您還原資料庫時，NORECOVERY 會建立資料庫並還原磁碟映像，但不會耗用任何記憶體。  
   
 ```sql  
@@ -43,7 +43,7 @@ RESTORE DATABASE IMOLTP_DB
    WITH NORECOVERY  
 ```  
   
-###  <a name="bkmk_createPool"></a> 建立資源集區  
+###  <a name="create-the-resource-pool"></a><a name="bkmk_createPool"></a> 建立資源集區  
  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 會建立名為 Pool_IMOLTP 的資源集區，而且有 50% 的記憶體可供它使用。  建立集區之後，資源管理員會重新設定為包含 Pool_IMOLTP。  
   
 ```sql  
@@ -52,7 +52,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-###  <a name="bkmk_bind"></a> 繫結資料庫和資源集區  
+###  <a name="bind-the-database-and-resource-pool"></a><a name="bkmk_bind"></a> 繫結資料庫和資源集區  
  您可以使用系統函數 `sp_xtp_bind_db_resource_pool` ，將資料庫繫結至資源集區。 此函數會採用兩個參數：資料庫名稱，後面接著資源集區名稱。  
   
  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 會定義 IMOLTP_DB 資料庫與 Pool_IMOLTP 資源集區的繫結。 在您完成下一個步驟之前，此繫結不會生效。  
@@ -62,7 +62,7 @@ EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'
 GO  
 ```  
   
-###  <a name="bkmk_RECOVERY"></a> 使用 RECOVERY 還原  
+###  <a name="restore-with-recovery"></a><a name="bkmk_RECOVERY"></a> 使用 RECOVERY 還原  
  當您使用 RECOVERY 來還原資料庫時，資料庫就會重新上線並且還原所有資料。  
   
 ```sql  
@@ -70,7 +70,7 @@ RESTORE DATABASE IMOLTP_DB
    WITH RECOVERY  
 ```  
   
-###  <a name="bkmk_Monitor"></a> 監視資源集區效能  
+###  <a name="monitor-the-resource-pool-performance"></a><a name="bkmk_Monitor"></a> 監視資源集區效能  
  一旦將資料庫繫結至具名資源集區並使用復原功能還原之後，請監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Resource Pool Stats 物件。 如需詳細資訊，請參閱＜ [SQL Server、Resource Pool Stats 物件](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 20580d1c746a678771ff3be0e67bab72e2b72be8
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77179269"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
@@ -48,10 +48,10 @@ STRING_SPLIT ( string , separator )
 ## <a name="arguments"></a>引數
 
  *string*  
- 這是任何字元類型 (例如 **nvarchar**、**varchar**、**nchar** 或 **char**) 的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 這是任何字元類型 (例如 [nvarchar](../../t-sql/language-elements/expressions-transact-sql.md)、**varchar**、**nchar** 或 **char**) 的**運算式**。  
   
  *separator*  
- 這是任何字元類型 (例如 **nvarchar(1)** 、**varchar(1)** 、**nchar(1)** 或 **char(1)** ) 的單一字元[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，可作為串連子字串的分隔符號。  
+ 這是任何字元類型 (例如 [nvarchar(1)](../../t-sql/language-elements/expressions-transact-sql.md)、**varchar(1)** 、**nchar(1)** 或 **char(1)** ) 的單一字元**運算式**，可作為串連子字串的分隔符號。  
   
 ## <a name="return-types"></a>傳回型別  
 

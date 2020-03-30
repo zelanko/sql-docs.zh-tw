@@ -18,10 +18,10 @@ ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 92dd195322e03f8b3eb776269cd6a8636fffd150
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68059741"
 ---
 # <a name="logical-functions---iif-transact-sql"></a>邏輯函式 - IIF (Transact-SQL)

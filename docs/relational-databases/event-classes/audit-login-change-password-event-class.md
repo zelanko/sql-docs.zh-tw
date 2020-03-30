@@ -13,15 +13,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 434c98eebc7c4651e194f698c7d748f858b55b50
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67897592"
 ---
 # <a name="audit-login-change-password-event-class"></a>Audit Login Change Password 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  每次使用者變更其 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入密碼時，就會發生 **Audit Login Change Password** 事件類別。  
+  每次使用者變更其   登入密碼時，就會發生 [!INCLUDE[msCoName](../../includes/msconame-md.md)]Audit Login Change Password[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件類別。  
   
 ## <a name="audit-login-change-password-event-class-data-columns"></a>Audit Login Change Password 事件類別資料行  
   

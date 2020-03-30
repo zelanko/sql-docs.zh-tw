@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 01/15/2020
 ms.openlocfilehash: 7cf4f98a4cb8d191cebd9b361fd63217b9cd2228
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75956491"
 ---
 # <a name="what-is-azure-data-studio"></a>什麼是 Azure Data Studio？

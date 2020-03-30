@@ -14,10 +14,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8f3b5cc1721483534307acf797a58e4dc70b5c81
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048730"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>建立、建構及查詢幾何執行個體
@@ -36,9 +36,9 @@ ms.locfileid: "68048730"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援以下列結構描述定義之現有 GML 3.1 標準的子集：[https://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](https://go.microsoft.com/fwlink/?LinkId=230959)。  
   
-##  <a name="creating"></a> 建立或建構新的 geometry 執行個體  
+##  <a name="creating-or-constructing-a-new-geometry-instance"></a><a name="creating"></a> 建立或建構新的 geometry 執行個體  
   
-###  <a name="existing"></a> 從現有的執行個體建立新的 geometry 執行個體  
+###  <a name="creating-a-new-geometry-instance-from-an-existing-instance"></a><a name="existing"></a> 從現有的執行個體建立新的 geometry 執行個體  
  **geometry** 資料類型提供許多內建方法，您可以使用這些方法來根據現有執行個體建立新的 **geometry** 執行個體。  
   
  **在幾何周圍建立緩衝區**  
@@ -68,7 +68,7 @@ ms.locfileid: "68048730"
  [STPointOnSurface &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)  
   
   
-###  <a name="wkt"></a> 從已知的文字輸入建構 geometry 執行個體  
+###  <a name="constructing-a-geometry-instance-from-well-known-text-input"></a><a name="wkt"></a> 從已知的文字輸入建構 geometry 執行個體  
  **geometry** 資料類型提供數種內建方法，可從開放式地理空間協會 (Open Geospatial Consortium，OGC) 的 WKT 表示法產生幾何。 WKT 標準是一種文字字串，可允許使用文字格式交換幾何資料。  
   
  **從 WKT 輸入建構任何類型的 geometry 執行個體**  
@@ -98,7 +98,7 @@ ms.locfileid: "68048730"
  [STGeomCollFromText &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stgeomcollfromtext-geometry-data-type.md)  
   
   
-###  <a name="wkb"></a> 從已知的二進位輸入建構 geometry 執行個體  
+###  <a name="constructing-a-geometry-instance-from-well-known-binary-input"></a><a name="wkb"></a> 從已知的二進位輸入建構 geometry 執行個體  
  WKB 是 OGC 指定的一種二進位格式，可允許在用戶端應用程式與 SQL 資料庫之間交換 **geometry** 資料。 下列函數可接受 WKB 輸入來建構幾何：  
   
  **從 WKB 輸入建構任何類型的 geometry 執行個體**  
@@ -126,14 +126,14 @@ ms.locfileid: "68048730"
  [STGeomCollFromWKB &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stgeomcollfromwkb-geometry-data-type.md)  
   
   
-###  <a name="gml"></a> 從 GML 文字輸入建構 geometry 執行個體  
+###  <a name="constructing-a-geometry-instance-from-gml-text-input"></a><a name="gml"></a> 從 GML 文字輸入建構 geometry 執行個體  
  **geometry** 資料類型提供了一個方法從 GML 產生 **geometry** 執行個體，GML 是幾何物件的 XML 表示法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可支援 GML 的子集。  
   
  **從 GML 輸入建構任何類型的 geometry 執行個體**  
  [GeomFromGml &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/geomfromgml-geometry-data-type.md)  
   
   
-##  <a name="returning"></a> 從 geometry 執行個體傳回已知的文字和已知的二進位  
+##  <a name="returning-well-known-text-and-well-known-binary-from-a-geometry-instance"></a><a name="returning"></a> 從 geometry 執行個體傳回已知的文字和已知的二進位  
  您可以使用下列方法傳回 WKT 或 WKB 格式的 **geometry** 執行個體：  
   
  **傳回 WKT 表示法的 geometry 執行個體**  
@@ -151,10 +151,10 @@ ms.locfileid: "68048730"
  [AsGml &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/asgml-geometry-data-type.md)  
   
   
-##  <a name="querying"></a> 查詢 geometry 執行個體的屬性和行為  
+##  <a name="querying-the-properties-and-behaviors-of-geometry-instances"></a><a name="querying"></a> 查詢 geometry 執行個體的屬性和行為  
  所有 **geometry** 執行個體都有許多屬性，這些屬性可透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的方法來加以擷取。 下列主題定義幾何類型的屬性和行為以及用來查詢每一個類型的方法。  
   
-###  <a name="valid"></a> 有效性、執行個體類型和 GeometryCollection 資訊  
+###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> 有效性、執行個體類型和 GeometryCollection 資訊  
  一旦建構了 **geometry** 執行個體之後，您就可以使用下列方法來判斷它的格式是否正確、傳回執行個體類型，或者如果它是集合執行個體，就會傳回特定的 **geometry** 執行個體。  
   
  **傳回 geometry 類型的執行個體**  
@@ -176,7 +176,7 @@ ms.locfileid: "68048730"
  [STGeometryN &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stgeometryn-geometry-data-type.md)STGeometryN (geometry 資料類型)  
   
   
-###  <a name="number"></a> 點數  
+###  <a name="number-of-points"></a><a name="number"></a> 點數  
  所有非空白的 **geometry** 執行個體都是由 *「點」* (point) 所組成。 這些點代表幾何繪製所在平面的 X 和 Y 座標。 **geometry** 提供許多內建方法來查詢執行個體的點。  
   
  **傳回組成執行個體的點數**  
@@ -204,7 +204,7 @@ ms.locfileid: "68048730"
  [STCentroid](../../t-sql/spatial-geometry/stcentroid-geometry-data-type.md)  
   
   
-###  <a name="dimension"></a> 維度  
+###  <a name="dimension"></a><a name="dimension"></a> 維度  
  非空的 **geometry** 執行個體可以是 0 維度、1 維度或 2 維度。 **Point**和 **MultiPoint** 等零維 **幾何**沒有長度或區域。 **LineString、CircularString、CompoundCurve**和 **MultiLineString**等一維物件有長度。 **Polygon**、 **CurvePolygon**和 **MultiPolygon**等二維執行個體有區域和長度。 空的執行個體會報告 -1 的維度，而 **GeometryCollection** 則會報告與其內容類型相依的區域。  
   
  **傳回執行個體的維度**  
@@ -217,14 +217,14 @@ ms.locfileid: "68048730"
  [STArea](../../t-sql/spatial-geometry/starea-geometry-data-type.md)  
   
   
-###  <a name="empty"></a> Empty  
+###  <a name="empty"></a><a name="empty"></a> Empty  
  「空的」  **geometry** 執行個體沒有任何點。 空的 **LineString, CircularString**、 **CompoundCurve**和 **MultiLineString** 執行個體的長度是零。 空的 **Polygon**、 **CurvePolygon**和 **MultiPolygon** 執行個體的區域是 0。  
   
  **判斷執行個體是否為空的**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md)。  
   
   
-###  <a name="simple"></a> Simple  
+###  <a name="simple"></a><a name="simple"></a> Simple  
  如果要讓執行個體的 **geometry** 為 *「簡單」* (simple)，它必須符合以下兩個需求：  
   
 -   此例項的每一個圖形都不能自己相交 (除了在它的端點上以外)。  
@@ -238,7 +238,7 @@ ms.locfileid: "68048730"
  [STIsSimple](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md)。  
   
   
-###  <a name="boundary"></a> 界限、內部和外部  
+###  <a name="boundary-interior-and-exterior"></a><a name="boundary"></a> 界限、內部和外部  
  *geometry* 執行個體的 **「內部」** (Interior) 是此執行個體所佔據的空間，而 *「外部」* (Exterior) 則是未佔據它的空間。  
   
  *「界限」* (Boundary) 是由 OGC 定義如下：  
@@ -264,13 +264,13 @@ SELECT @g.STBoundary().ToString();
  **傳回執行個體的界限**  
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
    
-###  <a name="envelope"></a> 範圍  
+###  <a name="envelope"></a><a name="envelope"></a> 範圍  
  *geometry* 執行個體的 **「範圍」** (Envelope) (也稱為 *「週框方塊」* (Bounding Box)) 是執行個體的最小和最大座標 (X,Y) 組成的座標軸對齊矩形。  
   
  **傳回執行個體的範圍**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
-###  <a name="closure"></a> 封閉性  
+###  <a name="closure"></a><a name="closure"></a> 封閉性  
  「封閉式」  **geometry** 執行個體是起始點與結束點相同的圖形。 **Polygon** 執行個體視為封閉式。 **Point** 執行個體視為非封閉式。  
   
  環形是簡單、封閉的 **LineString** 執行個體。  
@@ -291,7 +291,7 @@ SELECT @g.STBoundary().ToString();
  [STInteriorRingN](../../t-sql/spatial-geometry/stinteriorringn-geometry-data-type.md)  
   
   
-###  <a name="srid"></a> 空間參考識別碼 (SRID)  
+###  <a name="spatial-reference-id-srid"></a><a name="srid"></a> 空間參考識別碼 (SRID)  
  空間參考識別碼 (SRID) 是用來指定代表 **geometry** 執行個體之座標系統的識別碼。 具有不同 SRID 的兩個執行個體無法進行比較。  
   
  **設定或傳回執行個體的 SRID**  
@@ -300,7 +300,7 @@ SELECT @g.STBoundary().ToString();
 > [!NOTE]
 > 這個屬性可以修改。  
   
-##  <a name="rel"></a> 判斷 geometry 執行個體之間的關聯性  
+##  <a name="determining-relationships-between-geometry-instances"></a><a name="rel"></a> 判斷 geometry 執行個體之間的關聯性  
  **geometry** 資料類型提供許多內建方法，您可以使用這些方法來判斷兩個 **geometry** 執行個體之間的關聯性。  
   
  **判斷兩個執行個體是否組成相同的點集合**  
@@ -336,10 +336,10 @@ SELECT @g.STBoundary().ToString();
  **判斷兩個 geometry 內點與點之間的最短距離**  
  [STDistance](../../t-sql/spatial-geometry/stdistance-geometry-data-type.md)  
   
-##  <a name="defaultsrid"></a> geometry 執行個體預設為零 SRID  
+##  <a name="geometry-instances-default-to-zero-srid"></a><a name="defaultsrid"></a> geometry 執行個體預設為零 SRID  
  **中** geometry [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的預設 SRID 是 0。 有了 **geometry** 空間資料，執行計算時並不需要空間執行個體的特定 SRID；因此，執行個體可位於未定義的平面空間內。 若要在 **geometry** 資料類型方法的計算中指示未定義的平面空間， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會使用 SRID 0。  
   
-##  <a name="examples"></a> 範例  
+##  <a name="examples"></a><a name="examples"></a> 範例  
 下列兩個範例示範如何加入及查詢幾何資料。  
   
 ### <a name="example-a"></a>範例 A。

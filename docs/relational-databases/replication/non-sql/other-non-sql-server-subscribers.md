@@ -13,15 +13,15 @@ ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: dce8d383ca01fd205645a18f7aa181d12cff4675
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68110959"
 ---
 # <a name="other-non-sql-server-subscribers"></a>其他非 SQL Server 訂閱者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  如需 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 支援的非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者清單，請參閱[非 SQL Server 訂閱者](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。 本主題包含 ODBC 驅動程式和 OLE DB 提供者需求的資訊。  
+  如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援的非 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 訂閱者清單，請參閱[非 SQL Server 訂閱者](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。 本主題包含 ODBC 驅動程式和 OLE DB 提供者需求的資訊。  
   
 ## <a name="odbc-driver-requirements"></a>ODBC 驅動程式需求  
  ODBC 驅動程式：  

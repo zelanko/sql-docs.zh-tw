@@ -15,10 +15,10 @@ ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 9115535ecc2569e035f4831589e53191e2634f61
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74957393"
 ---
 # <a name="extensible-key-management-ekm"></a>可延伸金鑰管理 (EKM)

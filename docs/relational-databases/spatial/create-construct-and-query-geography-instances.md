@@ -15,10 +15,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b942e32e78a0a66e2d650ad36202bdf0effebc05
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048756"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>建立、建構並查詢地理位置執行個體
@@ -27,9 +27,9 @@ ms.locfileid: "68048756"
   
  **geography** 類型已預先定義，而且可在每一個資料庫中使用。 您可以建立 **geography** 類型的資料表資料行，並使用與其他系統提供之類型相同的方式來操作 **geography** 資料。  
   
-##  <a name="creating"></a> 建立或建構新的地理位置執行個體  
+##  <a name="creating-or-constructing-a-new-geography-instance"></a><a name="creating"></a> 建立或建構新的地理位置執行個體  
   
-###  <a name="existing"></a> 從現有的執行個體建立新的地理位置執行個體  
+###  <a name="creating-a-new-geography-instance-from-an-existing-instance"></a><a name="existing"></a> 從現有的執行個體建立新的地理位置執行個體  
  **geography** 資料類型提供許多內建方法，您可以使用這些方法來根據現有執行個體建立新的 **geography** 執行個體。  
   
  **在地理位置周圍建立緩衝區**  
@@ -47,7 +47,7 @@ ms.locfileid: "68048756"
  **從兩個地理位置不重疊的點建立地理位置**  
  [STDifference &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stdifference-geography-data-type.md)  
   
-###  <a name="wkt"></a> 從已知的文字輸入建構地理位置執行個體  
+###  <a name="constructing-a-geography-instance-from-well-known-text-input"></a><a name="wkt"></a> 從已知的文字輸入建構地理位置執行個體  
  **geography** 資料類型提供數種內建方法，可從開放式地理空間協會 (Open Geospatial Consortium，OGC) 的 WKT 表示法產生地理位置。 WKT 標準是一種文字字串，可允許使用文字格式交換地理位置資料。  
   
  **從 WKT 輸入建構任何類型的地理位置執行個體**  
@@ -76,7 +76,7 @@ ms.locfileid: "68048756"
  **從 WKT 輸入建構地理位置 GeometryCollection 執行個體**  
  [STGeomCollFromText &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stgeomcollfromtext-geography-data-type.md)  
   
-###  <a name="wkb"></a> 從已知的二進位輸入建構地理位置執行個體  
+###  <a name="constructing-a-geography-instance-from-well-known-binary-input"></a><a name="wkb"></a> 從已知的二進位輸入建構地理位置執行個體  
  WKB 是 OGC 指定的一種二進位格式，可允許在用戶端應用程式與 SQL 資料庫之間交換 **Geography** 資料。 下列函數可接受 WKB 輸入來建構地理位置執行個體：  
   
  **從 WKB 輸入建構任何類型的地理位置執行個體**  
@@ -103,15 +103,15 @@ ms.locfileid: "68048756"
  **從 WKB 輸入建構地理位置 GeometryCollection 執行個體**  
  [STGeomCollFromWKB &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type.md)STGeomCollFromWKB (geography 資料類型)  
   
-###  <a name="gml"></a> 從 GML 文字輸入建構地理位置執行個體  
+###  <a name="constructing-a-geography-instance-from-gml-text-input"></a><a name="gml"></a> 從 GML 文字輸入建構地理位置執行個體  
  **geography** 資料類型提供一種方法，從 GML 產生 **geography** 執行個體，而 GML 是 **geography** 執行個體的 XML 表示法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可支援 GML 的子集。  
   
- 如需地理標記語言的詳細資訊，請參閱 OGC 規格：[OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629) (OGC 規格，地理標記語言)。  
+ 如需地理標記語言的詳細資訊，請參閱 OGC 規格： [OGC 規格、地理標記語言](https://go.microsoft.com/fwlink/?LinkId=93629)。  
   
  **從 GML 輸入建構任何類型的地理位置執行個體**  
  [GeomFromGML &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/geomfromgml-geography-data-type.md)  
   
-##  <a name="returning"></a> 從地理位置執行個體傳回已知的文字和已知的二進位  
+##  <a name="returning-well-known-text-and-well-known-binary-from-a-geography-instance"></a><a name="returning"></a> 從地理位置執行個體傳回已知的文字和已知的二進位  
  您可以使用下列方法傳回 WKT 或 WKB 格式的 **geography** 執行個體：  
   
  **傳回 WKT 表示法的地理位置執行個體**  
@@ -128,10 +128,10 @@ ms.locfileid: "68048756"
  **傳回地理位置執行個體的 GML 表示法**  
  [AsGml &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/asgml-geography-data-type.md)  
   
-##  <a name="query"></a> 查詢地理位置執行個體的屬性和行為  
+##  <a name="querying-the-properties-and-behaviors-of-geography-instances"></a><a name="query"></a> 查詢地理位置執行個體的屬性和行為  
  所有 **geography** 執行個體都有許多屬性，這些屬性可透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的方法來加以擷取。 下列主題定義地理位置類型的屬性和行為以及用來查詢每一個類型的方法。  
   
-###  <a name="valid"></a> 有效性、執行個體類型和 GeometryCollection 資訊  
+###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> 有效性、執行個體類型和 GeometryCollection 資訊  
  一旦建構了 **geography** 執行個體之後，您就可以使用下列方法來判斷它的格式是否正確、傳回執行個體類型，或者如果它是 **GeometryCollection** 執行個體，就會傳回特定的 **geography** 執行個體。  
   
  **傳回 geography 類型的執行個體**  
@@ -146,7 +146,7 @@ ms.locfileid: "68048756"
  **傳回 GeometryCollection 執行個體中的特定地理位置**  
  [STGeometryN &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stgeometryn-geography-data-type.md)STGeometryN (geography 資料類型)  
   
-###  <a name="number"></a> 點數  
+###  <a name="number-of-points"></a><a name="number"></a> 點數  
  所有非空白的 **geography** 執行個體都是由 *「點」* (Point) 所組成。 這些點代表 **geography** 執行個體繪製所在之地球的經緯度座標。 **geography** 資料類型提供了許多內建方法來查詢執行個體的點。  
   
  **傳回組成執行個體的點數**  
@@ -161,7 +161,7 @@ ms.locfileid: "68048756"
  **傳回執行個體的終點**  
  [STEndpoint &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
-###  <a name="dimension"></a> 維度  
+###  <a name="dimension"></a><a name="dimension"></a> 維度  
  非空的 **geography** 執行個體可以是 0 維度、1 維度或 2 維度。 **Point** 和 **MultiPoint** 等零維 **geography**沒有長度或區域。 **LineString、CircularString**、 **CompoundCurve**和 **MultiLineString**這類一維物件都有長度。 **Polygon、CurvePolygon**和 **MultiPolygon**這類二維執行個體都有區域和長度。 空的執行個體會報告 -1 的維度，而 **GeometryCollection** 則會報告其內容的最大維度。  
   
  **傳回執行個體的維度**  
@@ -173,13 +173,13 @@ ms.locfileid: "68048756"
  **傳回執行個體的區域**  
  [STArea &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
-###  <a name="empty"></a> Empty  
+###  <a name="empty"></a><a name="empty"></a> Empty  
  「空的」  **geography** 執行個體沒有任何點。 空的 **LineString、CircularString**、 **CompoundCurve**和 **MultiLineString** 執行個體的長度是 0。 空的 **Polygon、CurvePolygon** 和 **MultiPolygon** 執行個體的區域是 0。  
   
  **判斷執行個體是否為空的**  
  [STIsEmpty &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
-###  <a name="closure"></a> 封閉性  
+###  <a name="closure"></a><a name="closure"></a> 封閉性  
  「封閉式」  **geography** 執行個體是起始點與結束點相同的圖形。 **Polygon** 執行個體視為封閉式。 **Point** 執行個體視為非封閉式。  
   
  環形是簡單、封閉的 **LineString** 執行個體。  
@@ -193,7 +193,7 @@ ms.locfileid: "68048756"
  **傳回 geography 執行個體的指定環形**  
  [RingN &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/ringn-geography-data-type.md)  
   
-###  <a name="srid"></a> 空間參考識別碼 (SRID)  
+###  <a name="spatial-reference-id-srid"></a><a name="srid"></a> 空間參考識別碼 (SRID)  
  空間參考識別碼 (SRID) 是用來指定代表 **geography** 執行個體之橢圓體座標系統的識別碼。 具有不同 SRID 的兩個 **geography** 執行個體無法進行比較。  
   
  **設定或傳回執行個體的 SRID**  
@@ -201,7 +201,7 @@ ms.locfileid: "68048756"
   
  這個屬性可以修改。  
   
-##  <a name="rel"></a> 判斷地理位置執行個體之間的關聯性  
+##  <a name="determining-relationships-between-geography-instances"></a><a name="rel"></a> 判斷地理位置執行個體之間的關聯性  
  **geography** 資料類型提供許多內建方法，您可以使用這些方法來判斷兩個 **geography** 執行個體之間的關聯性。  
   
  **判斷兩個執行個體是否組成相同的點集合**  
@@ -225,12 +225,12 @@ ms.locfileid: "68048756"
  **導出一個地理位置執行個體與另一個執行個體相較之下的對稱差異或唯一的點**  
  [STSymDifference &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stsymdifference-geography-data-type.md)  
   
-##  <a name="supportedsrid"></a> 地理位置執行個體必須使用支援的 SRID  
+##  <a name="geography-instances-must-use-supported-srid"></a><a name="supportedsrid"></a> 地理位置執行個體必須使用支援的 SRID  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援以 EPSG 標準為根據的 SRID。 當執行計算或是搭配地理位置空間資料使用方法時，必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援之 **geography** 執行個體的 SRID。 SRID 必須符合 **sys.spatial_reference_systems** 目錄檢視中所顯示的其中一個 SRID。 如同之前所述，當您使用 **geography** 資料類型在您的空間資料上執行計算時，您的結果將會依據建立資料時使用哪一個橢圓體而定，因為每一個橢圓體都會指派一個特定的空間參考識別碼 (SRID)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 **geography** 執行個體上使用方法時，會使用預設 SRID 4326，此 SRID 會對應到 WGS 84 空間參考系統。 如果您使用 WGS 84 (或 SRID 4326) 以外之空間參考系統內的資料，您需要為您的地理位置空間資料決定特定的 SRID。  
   
-##  <a name="examples"></a> 範例  
+##  <a name="examples"></a><a name="examples"></a> 範例  
 下列範例示範如何加入及查詢地理位置資料。  
   
 ### <a name="example-a"></a>範例 A。 

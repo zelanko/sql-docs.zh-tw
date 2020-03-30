@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68107139"
 ---
 # <a name="disable-indexes-and-constraints"></a>停用索引和條件約束
@@ -50,9 +50,9 @@ ms.locfileid: "68107139"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   索引停用時，不會進行維護。  
   
@@ -88,12 +88,12 @@ ms.locfileid: "68107139"
   
 -   建立新的叢集索引可啟用先前停用的非叢集索引。 如需詳細資訊，請參閱 [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  若要執行 ALTER INDEX，至少需要資料表或檢視表的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-disable-an-index"></a>若要停用索引  
   
@@ -162,7 +162,7 @@ ms.locfileid: "68107139"
   
 -   按一下超連結即可顯示含有完整錯誤的對話方塊。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-disable-an-index"></a>若要停用索引  
   

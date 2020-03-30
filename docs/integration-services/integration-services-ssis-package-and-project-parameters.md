@@ -14,10 +14,10 @@ ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5c773ae8db0b9942e23e40fb5f72b989b97ccfcc
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903855"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 套件和專案參數
@@ -58,7 +58,7 @@ ms.locfileid: "77903855"
   
  您可以使用單一參數，將值指派給多個封裝屬性。 但是，您只能從單一參數，將值指派給單一封裝屬性。  
   
-###  <a name="executions"></a> 執行和參數值  
+###  <a name="executions-and-parameter-values"></a><a name="executions"></a> 執行和參數值  
  *「執行」* (Execution) 是一個物件，代表封裝執行的單一執行個體。 當您建立執行時，可以指定執行封裝的所有必要詳細資料，例如執行參數值。 您也可以修改現有執行的參數值。  
   
  當您明確設定執行參數值時，此值只適用於執行的該特定執行個體。 系統會使用執行值，而非伺服器值或設計值。 如果您沒有明確設定執行值，而且已經指定伺服器值，則會使用伺服器值。  
@@ -106,7 +106,7 @@ ms.locfileid: "77903855"
 ## <a name="create-parameters"></a>建立參數
 您可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 來建立專案參數和封裝參數。 下列程序會提供建立封裝/專案參數的逐步指示。  
   
-> **注意：** 如果要將使用舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 建立的專案轉換為專案部署模型，可以使用 **[Integration Services 專案轉換精靈]** ，根據組態建立參數。 如需詳細資訊，請參閱[部署 Integration Services (SSIS) 專案和套件](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+> **注意**：如果要將使用舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 建立的專案轉換為專案部署模型，可以使用 [Integration Services 專案轉換精靈]  ，根據組態建立參數。 如需詳細資訊，請參閱[部署 Integration Services (SSIS) 專案和套件](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
 ### <a name="create-package-parameters"></a>建立套件參數  
   
@@ -129,13 +129,13 @@ ms.locfileid: "77903855"
     |必要|必須先指定一個值 (非設計預設值)，封裝才能執行。|  
     |描述|為方便維護，使用參數的描述。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，於 Visual Studio 的 [屬性] 視窗中設定參數描述 (已在適用的參數視窗中選取參數)。|  
   
-    > **注意：** 當您將專案部署至目錄時，會再多幾個屬性與專案相關聯。 若要查看目錄中所有參數的所有屬性，請使用 [catalog.object_parameters &#40;SSISDB 資料庫&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 檢視。  
+    > **注意**：當您將專案部署至目錄時，會再多幾個屬性與專案相關聯。 若要查看目錄中所有參數的所有屬性，請使用 [catalog.object_parameters &#40;SSISDB 資料庫&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 檢視。  
   
 4.  儲存專案以儲存參數的變更。 參數值會儲存在專案檔案中。  
   
     > **警告！！** 您可以在清單中就地編輯，也可以使用 [屬性]  視窗來修改參數屬性的值。 您可以使用 [刪除] **(X)** 工具列按鈕來刪除參數。 您可以使用最後一個工具列按鈕，為僅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中執行包時使用的參數指定值。  
   
-    > **注意：** 如果您在沒有開啟 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中專案的情況下重新開啟封裝檔案，[參數]  索引標籤將會是空的，而且遭到停用。  
+    > **注意**：如果您在沒有開啟 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中專案的情況下重新開啟套件檔案，[參數]  索引標籤將會是空的，而且遭到停用。  
   
 ### <a name="create-project-parameters"></a>建立專案參數  
   
@@ -209,7 +209,7 @@ ms.locfileid: "77903855"
   
 3.  按一下 **[選取頁面]** 底下的 **[參數]** ，以開啟參數頁面。  
   
-4.  在 **[參數]** 清單選取所需的參數。 注意:[容器]  資料行有助於區分專案參數與封裝參數。  
+4.  在 **[參數]** 清單選取所需的參數。 附註： **[容器]** 資料行有助於區分專案參數與封裝參數。  
   
 5.  在 **[值]** 資料行中，指定所需的伺服器預設參數值。  
 
@@ -217,6 +217,6 @@ ms.locfileid: "77903855"
  若要使用 Transact-SQL 設定伺服器預設值，請使用 [catalog.set_object_parameter_value &#40;SSISDB 資料庫&#41;](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md) 預存程序。 若要檢視目前的伺服器預設值，請查詢 [catalog.object_parameters &#40;SSISDB 資料庫&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 檢視。 若要清除伺服器預設值，請使用 [catalog.clear_object_parameter_value &#40;SSISDB 資料庫&#41;](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md) 預存程序。  
   
 ## <a name="related-content"></a>相關內容  
- mattmasson.com 上的部落格文章：[SSIS 快速提示：必要參數](https://go.microsoft.com/fwlink/?LinkId=239781)。  
+ mattmasson.com 上的部落格文章： [SSIS 快速提示：必要參數](https://go.microsoft.com/fwlink/?LinkId=239781)。  
   
   

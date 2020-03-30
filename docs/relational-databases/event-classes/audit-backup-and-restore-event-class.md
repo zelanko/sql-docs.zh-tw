@@ -12,10 +12,10 @@ ms.assetid: 08b0b5fe-298a-483f-b50a-73919a2513ce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9fb1de6376895c6c35bbbb7ec957837ae166250f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67903548"
 ---
 # <a name="audit-backup-and-restore-event-class"></a>Audit Backup 和 Restore 事件類別

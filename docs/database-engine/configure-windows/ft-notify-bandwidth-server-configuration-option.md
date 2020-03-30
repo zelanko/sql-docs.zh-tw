@@ -17,10 +17,10 @@ ms.assetid: 9ca284c5-f3e0-4a67-a132-fff376ff0ffe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6b0589f5b3622d4271f6307427f49d804b76c4e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67998076"
 ---
 # <a name="ft-notify-bandwidth-server-configuration-option"></a>全文檢索通知頻寬伺服器組態選項

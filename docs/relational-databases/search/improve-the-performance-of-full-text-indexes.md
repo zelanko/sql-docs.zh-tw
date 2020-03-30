@@ -18,17 +18,17 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68021228"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改善全文檢索索引的效能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 本主題描述全文檢索索引和查詢效能降低的一些常見原因。 它也會提供一些建議，以減少這些問題的發生並改善效能。
   
-##  <a name="causes"></a> Common causes of performance issues
+##  <a name="common-causes-of-performance-issues"></a><a name="causes"></a> Common causes of performance issues
 ### <a name="hardware-resource-issues"></a>硬體資源問題
 全文檢索索引與全文檢索查詢的效能受到硬體資源的影響，例如記憶體、磁碟速度、CPU 速度與電腦架構。  
 
@@ -57,7 +57,7 @@ ms.locfileid: "68021228"
   
     主要合併大量資料可能會建立長時間執行的交易，並在檢查點期間延遲截斷交易記錄。 在此情況下，交易記錄可能會在完整復原模式下明顯成長。 最佳作法是確認您的異動記錄包含足夠的空間，可供長時間執行的異動使用，然後在使用完整復原模式的資料庫中，辨識大型全文檢索索引。 如需詳細資訊，請參閱 [管理交易記錄檔的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)。  
   
-##  <a name="tuning"></a> 微調全文檢索索引的效能  
+##  <a name="tune-the-performance-of-full-text-indexes"></a><a name="tuning"></a> 微調全文檢索索引的效能  
 若要將全文檢索索引的效能發揮至極限，請實作下列最佳作法：  
   
 -   請將 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) '**max full-text crawl range**' 設為系統上的 CPU 數目，以使用所有處理器或核心來發揮最大效能。 此組態選項的相關資訊，請參閱 [全文檢索搜耙最大範圍伺服器組態選項](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)。  
@@ -70,7 +70,7 @@ ms.locfileid: "68021228"
 
 -   如果您使用根據時間戳記資料行的累加母體擴展，請在 [時間戳記]  資料行上建置次要索引以改善累加母體擴展的效能。  
   
-##  <a name="full"></a> 為完整母體擴展的效能進行疑難排解  
+##  <a name="troubleshoot-the-performance-of-full-populations"></a><a name="full"></a> 為完整母體擴展的效能進行疑難排解  
 ### <a name="review-the-full-text-crawl-logs"></a>檢閱全文檢索編目記錄檔
  若要協助診斷效能問題，請查看全文檢索編目記錄檔。
  
@@ -99,7 +99,7 @@ ms.locfileid: "68021228"
   
      sqlservr.exe 處理序嘗試擷取緩衝集區的所有可用記憶體，最多至已設定的最大伺服器記憶體。 如果 [最大伺服器記憶體]  配置太大，fdhost.exe 處理序可能會發生記憶體不足以及無法配置共用記憶體的狀況。  
   
-     您可以透過適當設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 緩衝集區的 [最大伺服器記憶體]  來解決此問題。 如需詳細資訊，請參閱本主題稍後的＜估計篩選背景程式主機處理序 (fdhost.exe) 的記憶體需求＞一節。 減少全文檢索索引所使用的批次大小可能也會有所幫助。  
+     您可以透過適當設定  **緩衝集區的 [最大伺服器記憶體]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來解決此問題。 如需詳細資訊，請參閱本主題稍後的＜估計篩選背景程式主機處理序 (fdhost.exe) 的記憶體需求＞一節。 減少全文檢索索引所使用的批次大小可能也會有所幫助。  
 
 -   **記憶體競爭**。 在多重 CPU 電腦上進行全文檢索母體擴展期間，fdhost.exe 或 sqlservr.exe 之間可能會發生競爭緩衝集區記憶體的情況。 所產生的共用記憶體不足會導致批次重試、記憶體壓力以及 fdhost.exe 處理序的傾印。  
 
@@ -150,7 +150,7 @@ ms.locfileid: "68021228"
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>範例：設定最大伺服器記憶體  
+ #### <a name="example-setting-max-server-memory"></a>範例：設定 max server memory  
   
  此範例使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，將 [最大伺服器記憶體]  設為上述範例中計算的 *M* 值，即 `7052`：  
   
@@ -195,7 +195,7 @@ GO
   
          若要減少片段，您可以重新組織或重建叢集索引。 如需詳細資訊，請參閱 [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
   
-##  <a name="filters"></a> 為緩慢編製文件索引進行疑難排解
+##  <a name="troubleshoot-slow-indexing-of-documents"></a><a name="filters"></a> 為緩慢編製文件索引進行疑難排解
 
 > [!NOTE]
 > 本節描述只會影響客戶的問題，而客戶會編製內嵌其他文件類型之文件 (例如 Microsoft Word 文件) 的索引。

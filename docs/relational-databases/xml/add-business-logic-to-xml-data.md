@@ -13,10 +13,10 @@ ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a282e3e9493bb1cfbcc57186a8e1b9f53faf22f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68095465"
 ---
 # <a name="add-business-logic-to-xml-data"></a>將商務邏輯加入至 XML 資料

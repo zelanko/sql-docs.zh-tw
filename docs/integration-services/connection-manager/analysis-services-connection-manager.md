@@ -15,10 +15,10 @@ ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 62e22823d19ab7dff113566927f0d59dfd4a693e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294475"
 ---
 # <a name="analysis-services-connection-manager"></a>Analysis Services 連接管理員

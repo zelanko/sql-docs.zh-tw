@@ -15,10 +15,10 @@ ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3b93c9b438a22cba125bb7487b393371b4ffd8c1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68033446"
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>進階合併式複寫衝突 - 選擇解析程式

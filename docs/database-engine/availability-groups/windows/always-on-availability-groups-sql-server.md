@@ -17,10 +17,10 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6eae33bebd834a79a62bd94c5dbe75f4c431b0ba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014823"
 ---
 # <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Always On 可用性群組：高可用性和災害復原解決方案
@@ -33,7 +33,7 @@ ms.locfileid: "68014823"
  >[!NOTE]
  >AlwaysOn 可用性群組是這個可用性功能的完整正式名稱。 縮寫是 AG，而不是 AOAG 或 AAG。 
   
-##  <a name="Benefits"></a> 優點  
+##  <a name="benefits"></a><a name="Benefits"></a> 優點  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 提供了一組豐富的選項，可改善資料庫可用性並實現改善的資源使用方式。 關鍵元件如下：  
   
 -   最多支援九個可用性複本。 *「可用性複本」* (Availability Replica) 是特定 SQL Server 執行個體所裝載之可用性群組的具現化，其中維護屬於可用性群組之每個可用性資料庫的本機複本。 每個可用性群組都支援一個主要複本和最多八個次要複本。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
@@ -89,7 +89,7 @@ ms.locfileid: "68014823"
   
     -   PowerShell 指令程式。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組的 PowerShell Cmdlet 概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)。  
   
-##  <a name="TermsAndDefinitions"></a> 詞彙和定義  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 詞彙和定義  
  **可用性群組**  
  一組一起容錯移轉之資料庫 (「可用性資料庫」  ) 的容器。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68014823"
 > [!NOTE]  
 >  如需詳細資訊，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
   
-##  <a name="Interoperability"></a> 與其他 Database Engine 功能的互通性和共存性  
+##  <a name="interoperability-and-coexistence-with-other-database-engine-features"></a><a name="Interoperability"></a> 與其他 Database Engine 功能的互通性和共存性  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 可搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的下列功能或元件使用：  
   
 -   [關於異動資料擷取 &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
@@ -149,11 +149,11 @@ ms.locfileid: "68014823"
 > [!WARNING]  
 >  如需使用其他功能搭配 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 之限制事項的資訊，請參閱 [AlwaysOn 可用性群組：互通性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [開始使用 AlwaysOn 可用性群組 &#40;SQL Server &#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   **部落格：**  
   

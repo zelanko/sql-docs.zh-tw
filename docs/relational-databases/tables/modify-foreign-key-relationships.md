@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68139604"
 ---
 # <a name="modify-foreign-key-relationships"></a>修改外部索引鍵關聯性
@@ -43,9 +43,9 @@ ms.locfileid: "68139604"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  新的外部索引鍵資料行必須符合其相關主要索引鍵資料行的資料類型和大小，但是例外如下：  
   
 -   **char** 資料行或 **sysname** 資料行可以與 **varchar** 資料行相關聯。  
@@ -54,12 +54,12 @@ ms.locfileid: "68139604"
   
 -   別名資料類型可以與其基底類型相關聯。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-a-foreign-key"></a>若要修改外部索引鍵  
   
@@ -144,7 +144,7 @@ ms.locfileid: "68139604"
   
 4.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]   。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改外部索引鍵**  
   
  若要使用 Transact-SQL 修改 FOREIGN KEY 條件約束，您必須先刪除現有的 FOREIGN KEY 條件約束，然後使用新的定義來重新建立。 如需相關資訊，請參閱 [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) 及 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。  

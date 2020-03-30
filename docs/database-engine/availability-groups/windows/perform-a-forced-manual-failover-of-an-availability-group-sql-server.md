@@ -16,10 +16,10 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ff0280b7a3a071a87feb029e6e906eaeace8a2d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822534"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>執行 Always On 可用性群組的強制手動容錯移轉 (SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "74822534"
 >  如需強制容錯移轉之必要條件和建議的詳細資訊，以及使用強制容錯移轉從重大錯誤復原的範例案例，請參閱本主題稍後的 [範例案例：使用強制容錯移轉從重大錯誤復原](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy)。  
   
   
-##  <a name="Restrictions"></a> 限制事項  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   唯一無法執行強制容錯移轉的情況，是 Windows Server 容錯移轉叢集 (WSFC) 缺少仲裁時。  
   
@@ -64,13 +64,13 @@ ms.locfileid: "74822534"
     > [!NOTE]  
     >  跨資料庫和分散式交易的支援會因 SQL Server 和作業系統版本而不同。 如需詳細資訊，請參閱[資料庫鏡像或 AlwaysOn 可用性群組不支援跨資料庫交易 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。  
   
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   WSFC 叢集具有仲裁。 如果叢集缺少仲裁，請參閱 [透過強制仲裁執行 WSFC 災害復原 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)中的 PowerShell，在 AlwaysOn 可用性群組上執行強制容錯移轉 (可能會遺失資料)。  
   
 -   您必須能夠連接到裝載複本的伺服器執行個體，而該複本的角色為 SECONDARY 或 RESOLVING 狀態。  
   
-##  <a name="Recommendations"></a> 建議  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   主要複本仍在執行時，不要強制容錯移轉。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "74822534"
   
 -   如果用戶端能夠連接到原始的主要複本，強制容錯移轉會產生核心分裂行為的某些風險。 在您強制容錯移轉之前，強烈建議您防止用戶端存取原始的主要複本。 否則，在強制容錯移轉之後，原始的主要資料庫和目前的主要資料庫可能會各自獨立更新。  
   
-##  <a name="WaysToAvoidDataLoss"></a> 避免在強制仲裁之後遺失資料的可能方式  
+##  <a name="potential-ways-to-avoid-data-loss-after-quorum-is-forced"></a><a name="WaysToAvoidDataLoss"></a> 避免在強制仲裁之後遺失資料的可能方式  
  在某些失敗情況下遺失仲裁之後，您可以避免遺失資料，如下所示：  
   
 -   **如果原始主要複本上線**  
@@ -111,10 +111,10 @@ ms.locfileid: "74822534"
     >  當您強制容錯移轉至次要複本時，遺失的資料量將取決於容錯移轉目標落後於主要複本的距離。 不幸的是，當 WSFC 叢集缺少仲裁或已強制仲裁時，您就無法評估可能遺失的資料量。 不過請注意，一旦 WSFC 叢集重新取得狀況良好的仲裁，您就可以開始追蹤可能的資料遺失。 如需詳細資訊，請參閱 [容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)中的 PowerShell，在 AlwaysOn 可用性群組上執行強制容錯移轉 (可能會遺失資料)。  
   
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要強制容錯移轉 (可能會遺失資料)**  
   
 1.  在 [物件總管] 中，連接到裝載需要容錯移轉之可用性群組中，其角色為 SECONDARY 或 RESOLVING 狀態之複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
@@ -127,7 +127,7 @@ ms.locfileid: "74822534"
   
 5.  強制可用性群組容錯移轉之後，完成必要的後續追蹤步驟。 如需詳細資訊，請參閱本主題前面的＜ [後續：強制容錯移轉後的重要任務](#FollowUp)＞。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要強制容錯移轉 (可能會遺失資料)**  
   
 1.  連線到裝載複本的伺服器執行個體，而在需要容錯移轉的可用性群組中，複本的角色為 SECONDARY 或 RESOLVING 狀態。  
@@ -146,7 +146,7 @@ ms.locfileid: "74822534"
   
 3.  強制可用性群組容錯移轉之後，完成必要的後續追蹤步驟。 如需詳細資訊，請參閱本主題前面的＜ [後續：強制容錯移轉後的重要任務](#FollowUp)＞。  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要強制容錯移轉 (可能會遺失資料)**  
   
 1.  將目錄 (**cd**) 變更為裝載複本的伺服器執行個體，而其角色在需要容錯移轉的可用性群組中具有 SECONDARY 或 RESOLVING 狀態。  
@@ -186,7 +186,7 @@ ms.locfileid: "74822534"
   
 -   [SQL Server PowerShell 提供者](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 後續：強制容錯移轉後的重要任務  
+##  <a name="follow-up-essential-tasks-after-a-forced-failover"></a><a name="FollowUp"></a> 後續：強制容錯移轉後的重要任務  
   
 1.  強制容錯移轉之後，您容錯移轉的目標次要複本會變成新的主要複本。 不過，若要讓該可用性複本可供用戶端存取，您可能需要重新設定 WSFC 仲裁，或調整可用性群組的可用性模式組態，如下所示：  
   
@@ -244,7 +244,7 @@ ms.locfileid: "74822534"
   
     -   [備份交易記錄 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
-##  <a name="ExampleRecoveryFromCatastrophy"></a> 範例案例：使用強制容錯移轉從重大錯誤復原  
+##  <a name="example-scenario-using-a-forced-failover-to-recover-from-a-catastrophic-failure"></a><a name="ExampleRecoveryFromCatastrophy"></a> 範例案例：使用強制容錯移轉從重大錯誤復原  
  如果主要複本失敗且沒有可用的已同步次要複本，則強制可用性群組進行容錯移轉可能會是適當的反應。 強制容錯移轉是否恰當取決於：(1) 您是否預期主要複本離線的時間超過服務等級合約 (SLA) 容忍的範圍，以及 (2) 您是否願意承擔資料可能遺失的風險，而讓主要資料庫盡快恢復可用。 如果您決定可用性群組需要強制容錯移轉，實際的強制容錯移轉只不過是多步驟程序中的一個步驟。  
   
  為了說明使用強制容錯移轉從重大錯誤復原所需的步驟，本主題會介紹一個可能的災害復原案例。 範例案例會考慮原始拓撲是由主控三個同步認可可用性複本 (包括主要複本) 的主要資料中心，以及主控兩個非同步認可次要複本的遠端資料中心所組成的可用性群組。 下圖說明此範例可用性群組的原始拓撲。 可用性群組是由多重子網路 WSFC 叢集所主控，其中三個節點位於主要資料中心 (**節點 01**、 **節點 02**和 **節點 03**)，兩個位於遠端資料中心 (**節點 04** 和 **節點 05**)。  
@@ -263,7 +263,7 @@ ms.locfileid: "74822534"
   
 -   [讓可用性群組恢復其原始拓撲](#ReturnToOrigTopology)  
   
-###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
+###  <a name="responding-to-the-catastrophic-failure-of-the-main-data-center"></a><a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
  下圖說明為了回應主要資料中心的重大錯誤，在遠端資料中心執行的一系列動作。  
   
  ![回應主要資料中心失敗的步驟](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "回應主要資料中心失敗的步驟")  
@@ -276,7 +276,7 @@ ms.locfileid: "74822534"
 |**2.**|DBA 連接到延遲最少的伺服器執行個體，(在 **節點 04**上)，並執行強制手動容錯移轉。 強制容錯移轉會將此次要複本轉換成主要角色，並且暫停其餘次要複本上的次要資料庫 (在 **節點 05**上)。|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (查詢 **end_of_log_lsn** 資料行。 如需詳細資訊，請參閱本主題前面的 [建議](#Recommendations))。|  
 |**3.**|DBA 手動繼續其餘次要複本上的每個次要資料庫。|[繼續可用性資料庫 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)|  
   
-###  <a name="ReturnToOrigTopology"></a> 讓可用性群組恢復其原始拓撲  
+###  <a name="returning-the-availability-group-to-its-original-topology"></a><a name="ReturnToOrigTopology"></a> 讓可用性群組恢復其原始拓撲  
  下圖說明主要資料中心再次上線且 WSFC 節點重新建立與 WSFC 叢集的通訊之後，將可用性群組恢復為原始拓撲的一系列動作。  
   
 > [!IMPORTANT]  
@@ -293,7 +293,7 @@ ms.locfileid: "74822534"
 |**3.**|一旦 **節點 03** (原始主要複本) 上的同步認可次要複本進入 HEALTHY 同步狀態，DBA 就會對該複本執行規劃的手動容錯移轉，使其再次成為主要複本。 **節點 04** 上的複本會恢復為次要複本。|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)<br /><br /> [使用 AlwaysOn 原則檢視可用性群組的健全狀況 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [執行可用性群組的已規劃手動容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
 |**4.**|DBA 連接到新的主要複本，並且：<br /><br /> 1) 將舊的主要複本 (位於遠端中心) 變更回非同步認可模式。<br /><br /> 2) 將主要資料中心中的非同步認可次要複本變更回同步認可模式。|[變更可用性複本的可用性模式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要調整仲裁投票**  
   
 -   [檢視叢集仲裁 NodeWeight 設定](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
@@ -314,7 +314,7 @@ ms.locfileid: "74822534"
   
 -   [疑難排解失敗的加入檔案作業 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   **部落格：**  
   

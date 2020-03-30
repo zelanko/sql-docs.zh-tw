@@ -15,10 +15,10 @@ ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 61e7be7b4e1f61f243d896d5073ae469bebe6940
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75247499"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>加入或取代資料庫鏡像見證 (SQL Server Management Studio)

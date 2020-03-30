@@ -33,28 +33,28 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68134425"
 ---
 # <a name="database-mail-configuration-objects"></a>Database Mail 組態物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Database Mail 包含兩個設定物件：這些資料庫設定物件提供您方法，用來設定 Database Mail 從資料庫應用程式或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 傳送電子郵件時應使用的設定。  
+  Database Mail 包含兩個組態物件：這些資料庫組態物件提供您方法，來設定 Database Mail 從資料庫應用程式或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 傳送電子郵件時應使用的設定。  
   
 -   Database Mail 帳戶  
   
 -   Database Mail 設定檔  
   
   
-##  <a name="VisualElement"></a> Database Mail 組態物件關聯性  
+##  <a name="database-mail-configuration-object-relationship"></a><a name="VisualElement"></a> Database Mail 組態物件關聯性  
  下圖說明顯示兩個設定檔、三個帳戶及三個使用者。 「使用者 1」有「設定檔 1」的存取權，前者使用「帳戶 1」及「帳戶 2」。 「使用者 3」有「設定檔 2」的存取權，而「設定檔 2」使用「帳戶 3」及「帳戶 3」。 「使用者 2」有「設定檔 1」及「設定檔 2」的存取權。  
   
  ![使用者、設定檔與帳戶的關聯性](../../relational-databases/database-mail/media/databasemailprofileaccount.gif "使用者、設定檔與帳戶的關聯性")  
   
   
-##  <a name="DBAccount"></a> Database Mail 帳戶  
+##  <a name="database-mail-account"></a><a name="DBAccount"></a> Database Mail 帳戶  
  Database Mail 帳戶包含 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用來將電子郵件訊息傳送到 SMTP 伺服器的資訊。 每個帳戶包含一個電子郵件伺服器的資訊。  
   
  Database Mail 支援三種與 SMTP 伺服器溝通的驗證方法：  
@@ -94,7 +94,7 @@ ms.locfileid: "68134425"
  「Database Mail 組態精靈」提供一個便捷的方式來建立及管理帳戶。 您也可以使用 **msdb** 中的組態預存程序來建立及管理帳戶。  
   
   
-##  <a name="DBProfile"></a> Database Mail 設定檔  
+##  <a name="database-mail-profile"></a><a name="DBProfile"></a> Database Mail 設定檔  
  Database Mail 設定檔是相關 Database Mail 帳戶的排序集合。 使用 Database Mail 傳送電子郵件的應用程式會指定設定檔，而不是直接使用帳戶。 將個別電子郵件伺服器的資訊與應用程式所使用的物件區隔開來，可以增進彈性及可靠性：設定檔會提供自動容錯移轉功能，所以如果有一部電子郵件伺服器沒有回應，Database Mail 就會自動將郵件傳送至另一部電子郵件伺服器。 資料庫管理員不需要變更應用程式的程式碼或作業步驟，即可加入、移除或重新設定帳戶。  
   
  設定檔也可以協助資料庫管理員控制電子郵件的存取。 必須要有 **DatabaseMailUserRole** 成員資格，才能傳送 Database Mail。 管理員可以利用設定檔所提供的額外彈性來控制傳送郵件的人員及使用的帳戶。  
@@ -110,7 +110,7 @@ ms.locfileid: "68134425"
  如果有多個序號相同的帳戶存在，Database Mail 只會將其中一個帳戶用在給定的電子郵件訊息上。 在這個情況下，Database Mail 並無法保證這個序號會用到哪個帳戶，也無法保證各訊息會用到相同的帳戶。  
   
   
-##  <a name="RelatedTasks"></a> Database Mail 組態工作  
+##  <a name="database-mail-configuration-tasks"></a><a name="RelatedTasks"></a> Database Mail 組態工作  
  下表描述 Database Mail 組態工作。  
   
 |組態工作|主題連結|  
@@ -121,7 +121,7 @@ ms.locfileid: "68134425"
 |描述如何使用範本建立 Database Mail 組態指令碼||  
   
   
-##  <a name="Add_Tasks"></a> 其他資料庫組態工作 (系統預存程序)  
+##  <a name="additional-database-configuration-tasks-system-stored-procedures"></a><a name="Add_Tasks"></a> 其他資料庫組態工作 (系統預存程序)  
  Database Mail 組態預存程序位於 **msdb** 資料庫。  
   
  下表列出用來設定和管理 Database Mail 的預存程序。  
@@ -165,7 +165,7 @@ ms.locfileid: "68134425"
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|停止 Database Mail 外部程式，以及關聯的 SQL Service Broker 佇列。|  
 |[sysmail_help_status_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-status-sp-transact-sql.md)|指示 Database Mail 是否已啟動。|  
   
-##  <a name="RelatedContent"></a> 其他參考  
+##  <a name="additional-references"></a><a name="RelatedContent"></a> 其他參考  
   
 -   [Database Mail 記錄與稽核](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   

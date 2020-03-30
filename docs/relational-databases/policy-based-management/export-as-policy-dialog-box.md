@@ -13,10 +13,10 @@ ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 14333d96ce4a1022979a2998cb808bfa16cd7a0e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68087378"
 ---
 # <a name="export-as-policy-dialog-box"></a>匯出為原則對話方塊

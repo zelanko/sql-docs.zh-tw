@@ -13,10 +13,10 @@ ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7883a99a223af67f536a0991bb0ba48f30211bc6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68071359"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (選擇性 XML 索引)
@@ -109,7 +109,7 @@ identifier
 )  
 ```  
   
-##  <a name="Arguments"></a> 引數  
+##  <a name="arguments"></a><a name="Arguments"></a> 引數  
  *index_name*  
  這是要修改之現有索引的名稱。  
   
@@ -148,7 +148,7 @@ identifier
  需要有資料表或檢視的 ALTER 權限才能執行 ALTER INDEX。  
   
 ## <a name="examples"></a>範例  
- 下列範例顯示 ALTER INDEX 陳述式。 此陳述式會將路徑 `'/a/b/m'` 加入索引的 XQuery 部分，並且從 [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md) 主題的範例中所建立索引的 SQL 部分刪除路徑 `'/a/b/e'`。 要刪除的路徑是以建立時提供的名稱識別。  
+ 下列範例顯示 ALTER INDEX 陳述式。 此陳述式會將路徑 `'/a/b/m'` 加入索引的 XQuery 部分，並且從 `'/a/b/e'`CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;[ 主題的範例中所建立索引的 SQL 部分刪除路徑 ](../../t-sql/statements/create-selective-xml-index-transact-sql.md)。 要刪除的路徑是以建立時提供的名稱識別。  
   
 ```sql  
 ALTER INDEX sxi_index  

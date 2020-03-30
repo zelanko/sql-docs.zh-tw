@@ -22,10 +22,10 @@ ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: befa0085a7fc1a52ae02ba9443617b0593bb14ec
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67910054"
 ---
 # <a name="drop-event-notification-transact-sql"></a>DROP EVENT NOTIFICATION (Transact-SQL)

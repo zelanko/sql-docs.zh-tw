@@ -16,10 +16,10 @@ ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b374955ea4a07cd94de88202fe02ffbb572d0a1c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293644"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中複製封裝

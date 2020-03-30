@@ -37,10 +37,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 25da4c94448a6527e50fe759e6c75cdbad10b007
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79190530"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>SQL Server 中已中止的資料庫引擎功能

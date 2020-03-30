@@ -17,10 +17,10 @@ ms.assetid: 9b88baea-b7c6-4e5d-88f9-93d6a0ff0368
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 50a5b71edd908c3c676f036e7f61197835e49360
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322085"
 ---
 # <a name="clean-up-merge-metadata-replication-transact-sql-programming"></a>清除合併中繼資料 (複寫 Transact-SQL 程式設計)

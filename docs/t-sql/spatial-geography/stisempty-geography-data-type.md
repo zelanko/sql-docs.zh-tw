@@ -18,10 +18,10 @@ ms.assetid: 4cbc66e3-9035-4ecf-8f5a-6301f168c26c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5cd0e37ddf47e80ff524d02688d5764d93717a67
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68042073"
 ---
 # <a name="stisempty-geography-data-type"></a>STIsEmpty (geography 資料類型)

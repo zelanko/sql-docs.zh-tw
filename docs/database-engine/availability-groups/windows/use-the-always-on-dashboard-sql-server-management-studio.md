@@ -16,10 +16,10 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822672"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>使用 Always On 可用性群組儀表板 (SQL Server Management Studio)
@@ -85,7 +85,7 @@ ms.locfileid: "74822672"
 > [!TIP]  
 >  按一下資料行標題可依照可用性群組、主要執行個體、容錯移轉模式或問題的名稱排序可用性群組資訊。  
   
-##  <a name="AvGroupDetails"></a> 可用性群組詳細資料  
+##  <a name="availability-group-details"></a><a name="AvGroupDetails"></a> 可用性群組詳細資料  
  系統會針對您從摘要畫面中選取的可用性群組顯示下列詳細資訊：  
   
  **可用性群組狀態**  
@@ -104,7 +104,7 @@ ms.locfileid: "74822672"
  **叢集狀態**  
  連接之伺服器執行個體與可用性群組為成員節點的叢集名稱和狀態。  
   
-##  <a name="AvReplicaDetails"></a> 可用性複本詳細資料  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> 可用性複本詳細資料  
 
 當連線到主要複本時，[可用性複本詳細資料]  會顯示可用性群組中的所有複本資訊。 當連線到次要複本時，只會顯示連線的複本資訊。  
 

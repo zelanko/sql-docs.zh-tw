@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 3469a162645816a3b90657b0c2a3b81b37e6cade
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054631"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>執行部署於 Azure 中的 SQL Server Integration Services (SSIS) 套件
@@ -42,11 +42,11 @@ ms.locfileid: "68054631"
 > [!NOTE]
 > 使用 `dtexec.exe` 執行套件的功能尚未在部署到 Azure 的套件上進行測試。
 
-## <a name="ssms"></a> 使用 SSMS 執行套件
+## <a name="run-a-package-with-ssms"></a><a name="ssms"></a> 使用 SSMS 執行套件
 
 在 SQL Server Management Studio (SSMS) 中，您可以在部署到 SSIS 目錄資料庫 (SSISDB) 的套件上按一下滑鼠右鍵，然後選取 [執行]  以開啟 [執行套件]  對話方塊。 如需詳細資訊，請參閱[使用 SQL Server Management Studio (SSMS) 執行 SSIS 套件](../ssis-quickstart-run-ssms.md)。
 
-## <a name="sproc"></a> 使用預存程序執行套件
+## <a name="run-a-package-with-stored-procedures"></a><a name="sproc"></a> 使用預存程序執行套件
 
 在您可以連線到 Azure SQL Database 並執行 Transact-SQL 程式碼的任何環境中，您可以藉由呼叫下列預存程序來執行套件：
 
@@ -62,7 +62,7 @@ ms.locfileid: "68054631"
 
 - [使用 Transact-SQL 從 Visual Studio Code 執行 SSIS 套件](../ssis-quickstart-run-tsql-vscode.md)
 
-## <a name="script"></a> 使用指令碼或程式碼執行套件
+## <a name="run-a-package-with-script-or-code"></a><a name="script"></a> 使用指令碼或程式碼執行套件
 
 在您可以呼叫受控 API 的任何開發環境中，您可以藉由呼叫 `Execute` 命名空間中 `Package` 物件的 `Microsoft.SQLServer.Management.IntegrationServices` 方法來執行套件。
 
@@ -72,11 +72,11 @@ ms.locfileid: "68054631"
 
 - [在 .NET 應用程式中使用 C# 程式碼執行 SSIS 套件](../ssis-quickstart-run-dotnet.md)
 
-## <a name="exec_activity"></a> 使用執行 SSIS 套件活動執行套件
+## <a name="run-a-package-with-the-execute-ssis-package-activity"></a><a name="exec_activity"></a> 使用執行 SSIS 套件活動執行套件
 
 如需詳細資訊，請參閱[在 Azure Data Factory 中使用執行 SSIS 套件活動執行 SSIS 套件](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)。
 
-## <a name="sproc_activity"></a> 使用預存程序活動執行套件
+## <a name="run-a-package-with-the-stored-procedure-activity"></a><a name="sproc_activity"></a> 使用預存程序活動執行套件
 
 如需詳細資訊，請參閱[在 Azure Data Factory 中使用預存程序活動執行 SSIS 套件](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)。
 

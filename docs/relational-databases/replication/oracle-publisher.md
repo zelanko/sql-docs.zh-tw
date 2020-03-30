@@ -13,10 +13,10 @@ ms.assetid: 019b7c49-dcca-445d-8969-5982a8ccbc1a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d56e6191276d97cd1286089db6a934d122a60e76
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68100034"
 ---
 # <a name="oracle-publisher"></a>Oracle 發行者

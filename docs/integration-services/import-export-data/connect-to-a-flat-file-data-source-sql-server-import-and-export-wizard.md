@@ -10,10 +10,10 @@ ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bef4e8032ad605382b3312cac11840ed959a7571
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296361"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>連線至一般檔案資料來源 (SQL Server 匯入和匯出精靈)

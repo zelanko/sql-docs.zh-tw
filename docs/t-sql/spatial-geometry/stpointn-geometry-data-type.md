@@ -18,10 +18,10 @@ ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 81808f6387942bd3ba8aa01f4eeaa5bd93b2dcba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68066408"
 ---
 # <a name="stpointn-geometry-data-type"></a>STPointN (geometry 資料類型)

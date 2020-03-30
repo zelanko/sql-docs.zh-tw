@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 1ce8df82856f7a6a495fdd026dec0d46eaba4c89
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287521"
 ---
 # <a name="specify-schema-options-for-sql-server-replication"></a>指定 SQL Server 複寫的結構描述選項
@@ -44,17 +44,17 @@ ms.locfileid: "76287521"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   如果在建立發行集之後變更結構描述選項，則必須產生新的快照。  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   如需結構描述選項的完整清單，請參閱 `@schema_option`sp_addarticle &#40;Transact-SQL&#41;[ 和 ](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)sp_addmergearticle &#40;Transact-SQL&#41;[ 的 ](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 參數。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  在 [發行項屬性 - **發行項>]** **對話方塊的 [屬性]\<** 索引標籤上指定結構描述選項，例如是否將條件約束與觸發程序複製至訂閱者。 [新增發行集精靈] 與 [發行集屬性 - **發行集>]\<** 對話方塊中都有提供此索引標籤。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-schema-options"></a>若要指定結構描述選項  
@@ -76,7 +76,7 @@ ms.locfileid: "76287521"
   
 5.  如果您在 [發行集屬性 - **發行集>]\<** 對話方塊中，請按一下 [確定]  以儲存並關閉對話方塊。  
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  結構描述選項會指定為十六進位值，這個值是一個或多個選項的 [| (Bitwise OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 結果。 如需詳細資訊，請參閱＜ [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) ＞和＜ [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)＞。  
   
 > [!NOTE]  

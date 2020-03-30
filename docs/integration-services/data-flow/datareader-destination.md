@@ -16,10 +16,10 @@ ms.assetid: 56fcc4bf-c901-42c3-a71d-110039293431
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 484464550b08f209bb271a806c496e87417c0d99
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293061"
 ---
 # <a name="datareader-destination"></a>DataReader 目的地

@@ -1,7 +1,7 @@
 ---
 title: 指定資料行的預設值 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/20/2019
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9cf01e13bc1fe278af9d68897a71c99003b37fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1544242905645fed5cb00fda3f7da0a06809326c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74200491"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448487"
 ---
 # <a name="specify-default-values-for-columns"></a>指定資料行的預設值
 
@@ -33,7 +33,7 @@ ms.locfileid: "74200491"
 
 - 如果沒有設定允許 Null 值的選項，資料行將會保留空白，但是使用者必須在提供資料行的值之後，才能儲存資料列。
 
-## <a name="Restrictions"></a> 限制事項
+## <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項
 
 在您開始之前，請留意下列限制和約束：
 
@@ -45,11 +45,11 @@ ms.locfileid: "74200491"
 
 - 若要輸入物件/函數，請輸入物件/函數的名稱，但不要加上引號。
 
-### <a name="Security"></a> 安全性權限
+### <a name="security-permissions"></a><a name="Security"></a> 安全性權限
 
 本文所述的動作需要資料表的 ALTER 權限。
 
-## <a name="SSMSProcedure"></a> 使用 SSMS 來指定預設值
+## <a name="use-ssms-to-specify-a-default"></a><a name="SSMSProcedure"></a> 使用 SSMS 來指定預設值
 
 您可以使用 [物件總管] 來指定資料表資料行的預設值。
 
@@ -66,7 +66,7 @@ ms.locfileid: "74200491"
 
 4. 在 [檔案]  功能表上，按一下 [儲存「資料表名稱」  ]  。
 
-## <a name="TsqlProcedure"></a> 使用 Transact-SQL 來指定預設值
+## <a name="use-transact-sql-to-specify-a-default"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL 來指定預設值
 
 透過使用 SSMS 來提交 T-SQL，有許多不同的方式可用來指定資料行的預設值。
 
@@ -84,7 +84,7 @@ ms.locfileid: "74200491"
    INSERT INTO dbo.doc_exz (column_a) VALUES (7);
    GO
    ALTER TABLE dbo.doc_exz
-     ADD CONSTRAINT col_b_def
+     ADD CONSTRAINT DF_Doc_Exz_Column_B
      DEFAULT 50 FOR column_b;
    GO
    ```
@@ -106,7 +106,7 @@ The following two T-SQL code examples were offered by 'nycdotnet' (Steve) via pu
 ```sql
     CREATE TABLE dbo.doc_exz (
       column_a INT,
-      column_b INT CONSTRAINT DF_doc_exz_column_b DEFAULT 50);
+      column_b INT CONSTRAINT DF_Doc_Exz_Column_B DEFAULT 50);
 ```
 
 如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)。

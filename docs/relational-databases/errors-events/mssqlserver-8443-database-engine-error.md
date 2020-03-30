@@ -12,10 +12,10 @@ ms.assetid: a3541b9c-b1a8-4280-add1-275f08696b62
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 23d53cad26ed52d985fa5c99fe07c9f0dd64e42f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68101508"
 ---
 # <a name="mssqlserver_8443"></a>MSSQLSERVER_8443

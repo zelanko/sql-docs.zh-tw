@@ -18,10 +18,10 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 03e19dd52f7ea996690eaf55bad9cdf9d5eccb6b
-ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78256929"
 ---
 # <a name="live-query-statistics"></a>即時查詢統計資料
@@ -54,7 +54,7 @@ ms.locfileid: "78256929"
   
 ## <a name="to-view-live-query-statistics-for-any-query"></a>檢視任何查詢的即時查詢統計資料 
 
-以滑鼠右鍵按一下 [處理序]  或 [使用中的費時查詢]  資料表中的任一查詢，也可以從 [[活動監視器]](../../relational-databases/performance-monitor/activity-monitor.md)  存取即時執行計劃。  
+以滑鼠右鍵按一下 [處理序] **[ 或 [使用中的費時查詢]](../../relational-databases/performance-monitor/activity-monitor.md)** 資料表中的任一查詢，也可以從 **[活動監視器]**  存取即時執行計劃。  
   
  ![活動監視器中的 [即時查詢統計資料] 按鈕](../../relational-databases/performance/media/livequerystatsactmon.png "活動監視器中的 [即時查詢統計資料] 按鈕")  
   
@@ -62,7 +62,7 @@ ms.locfileid: "78256929"
  必須先啟用統計資料設定檔基礎結構，即時查詢統計資料才可以擷取查詢進度資訊。 視版本而定，額外負荷可能十分可觀。 如需此額外負荷的詳細資訊，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。
   
 ## <a name="permissions"></a>權限  
-填入 [即時查詢統計資料]  結果頁面需要資料庫層級的 `SHOWPLAN` 權限，而執行查詢則需要任何必要權限。
+填入 [即時查詢統計資料]`SHOWPLAN`**結果頁面需要資料庫層級的** 權限，而執行查詢則需要任何必要權限。
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，需要伺服器層級的 `VIEW SERVER STATE` 權限才能查看即時統計資料。  
 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 進階層上，需要資料庫的 `VIEW DATABASE STATE` 權限才能查看即時統計資料。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 標準和基本層上，需要**伺服器管理員**或 **Azure Active Directory 系統管理員**帳戶，才能查看即時統計資料。
   

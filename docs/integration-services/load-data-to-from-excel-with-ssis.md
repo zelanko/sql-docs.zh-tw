@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f624ada102ddc74f1062659a35dd758b5c33ce7a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295852"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 從 Excel 匯入資料，或將資料匯出至 Excel
@@ -43,7 +43,7 @@ ms.locfileid: "71295852"
     -   [匯入](#issues-importing)的問題。
     -   [匯出](#issues-exporting)的問題。
 
-## <a name="tools"></a> 您可以使用的工具
+## <a name="tools-you-can-use"></a><a name="tools"></a> 您可以使用的工具
 
 您可以使用下列其中一種工具，透過 SSIS 從 Excel 匯入資料或將資料匯出至 Excel：
 
@@ -51,7 +51,7 @@ ms.locfileid: "71295852"
 
 -   SSIS 上建置的 [SQL Server 匯入和匯出精靈]  。 如需詳細資訊，請參閱[使用 SQL Server 匯入和匯出精靈來匯入或匯出資料](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)與[連線至 Excel 資料來源 (SQL Server 匯入和匯出精靈)](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)。
 
-## <a name="files-you-need"></a> 取得連線至 Excel 所需的檔案
+## <a name="get-the-files-you-need-to-connect-to-excel"></a><a name="files-you-need"></a> 取得連線至 Excel 所需的檔案
 
 您可能必須下載適用於 Excel 的連線元件 (如果它們尚未安裝的話)，然後才能使用 SSIS 從 Excel 匯入資料，或將資料匯出至 Excel。 預設不會安裝適用於 Excel 的連線元件。
 
@@ -69,7 +69,7 @@ ms.locfileid: "71295852"
 
     如果您無法安裝 2016 可轉散發套件，請改為從這裡安裝 2010 可轉散發套件：[Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255) (Microsoft Access 資料庫引擎 2010 可轉散發套件)。 (沒有任何適用於 Excel 2013 的可轉散發套件。)
 
-## <a name="specify-excel"></a> 指定 Excel 作為資料來源
+## <a name="specify-excel-as-your-data-source"></a><a name="specify-excel"></a> 指定 Excel 作為資料來源
 
 第一個步驟是指出您想要連接至 Excel。
 
@@ -87,7 +87,7 @@ ms.locfileid: "71295852"
 
 如果您在資料來源清單中看不到 Excel，請確定是否執行 32 位元精靈。 Excel 連線元件均通常是 32 位元檔案，在 64 位元精靈中不會顯示。
 
-## <a name="excel-file"></a> Excel 檔案和檔案路徑
+## <a name="excel-file-and-file-path"></a><a name="excel-file"></a> Excel 檔案和檔案路徑
 
 要提供資訊的第一項資訊是 Excel 檔案的路徑和檔案名稱。 提供此資訊的方式是使用 [Excel 連線管理員編輯器]  中的 SSIS 套件，或在 [匯入和匯出精靈] 的 [選擇資料來源]  或 [選擇目的地]  頁面。
 
@@ -102,7 +102,7 @@ ms.locfileid: "71295852"
 > [!IMPORTANT]
 > 您不能連接至受密碼保護的 Excel 檔案。
 
-## <a name="excel-version"></a> Excel 版本
+## <a name="excel-version"></a><a name="excel-version"></a> Excel 版本
 
 要提供的第二項資訊是 Excel 檔案的版本。 提供此資訊的方式是使用 [Excel 連線管理員編輯器]  中的 SSIS 套件，或在 [匯入和匯出精靈] 的 [選擇資料來源]  或 [選擇目的地]  頁面。
 
@@ -110,7 +110,7 @@ ms.locfileid: "71295852"
 
 如果您只安裝了較舊版本的連線元件，可能無法選取清單中的較新 Excel 版本。 **Excel 版本**清單包含 SSIS 支援的所有 Excel 版本。 這份清單中的項目存在並不表示已安裝必要的連線元件。 例如，即使您尚未安裝 2016 連線元件，**Microsoft Excel 2016** 也會出現在清單中。
 
-## <a name="first-row"></a> 第一個資料列具有資料行名稱
+## <a name="first-row-has-column-names"></a><a name="first-row"></a> 第一個資料列具有資料行名稱
 
 如果您從 Excel 匯入資料，下一個步驟就是指出資料的第一個資料列是否包含資料行名稱。 提供此資訊的方式是使用 [Excel 連線管理員編輯器]  中的 SSIS 套件，或在 [匯入和匯出精靈] 的 [選擇資料來源]  頁面上。
 
@@ -120,7 +120,7 @@ ms.locfileid: "71295852"
 
 如果您要從 Excel 匯出資料，且啟用了此選項，則匯出資料的第一列會包含資料行名稱。
 
-## <a name="sheets-ranges"></a> 工作表和範圍
+## <a name="worksheets-and-ranges"></a><a name="sheets-ranges"></a> 工作表和範圍
 
 有三種 Excel 物件可以作為資料的來源或目的地：工作表、您指定位址的資料格具名範圍或未具名範圍。
 
@@ -169,7 +169,7 @@ ms.locfileid: "71295852"
 
 -   預覽範例資料，選取 [預覽]  以確定它如您的預期。
 
-## <a name="issues-types"></a> 資料類型的問題
+## <a name="issues-with-data-types"></a><a name="issues-types"></a> 資料類型的問題
 
 ### <a name="data-types"></a>資料類型
 
@@ -202,7 +202,7 @@ SSIS 不會隱含地轉換資料類型。 因此，您可能必須使用衍生�
 > [!TIP]
 > 如果您使用 [匯入和匯出精靈]，且您的資料需要這其中的某些轉換，精靈會為您設定所需的轉換。 因此，即使是您想要使用 SSIS 套件時，使用 [匯入和匯出精靈] 來建立初始套件可能會很實用。 讓精靈為您建立並設定連線管理員、來源、轉換和目的地。
 
-## <a name="issues-importing"></a> 匯入的問題
+## <a name="issues-with-importing"></a><a name="issues-importing"></a> 匯入的問題
 
 ### <a name="empty-rows"></a>空的資料列
 
@@ -232,7 +232,7 @@ Excel 驅動程式會在指定來源中讀取特定資料列數目 (依預設為
 | Excel 2010 | HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel |
 | | |
 
-## <a name="issues-exporting"></a> 匯出的問題
+## <a name="issues-with-exporting"></a><a name="issues-exporting"></a> 匯出的問題
 
 ### <a name="create-a-new-destination-file"></a>建立新的目的地檔案
 

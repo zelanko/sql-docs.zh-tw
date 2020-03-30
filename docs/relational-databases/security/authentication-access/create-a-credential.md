@@ -15,10 +15,10 @@ ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 675e152dfffa6bfce8decf37dc1716e7149bae83
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68095044"
 ---
 # <a name="create-a-credential"></a>建立認證
@@ -43,20 +43,20 @@ ms.locfileid: "68095044"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   如果提供者沒有任何登入對應認證，系統就會使用對應至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶的認證。  
   
 -   一個登入可以具有多個對應認證，只要這些認證用於不同的提供者即可。 但是，每個登入的每個提供者必須只有一個對應認證。 相同的認證可對應至其他登入。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要 ALTER ANY CREDENTIAL 權限才能建立或修改認證，以及 ALTER ANY LOGIN 權限才能將登入對應至認證。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-credential"></a>若要建立認證  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68095044"
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-credential"></a>若要建立認證  
   

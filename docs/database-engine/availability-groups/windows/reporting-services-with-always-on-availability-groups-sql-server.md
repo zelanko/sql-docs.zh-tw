@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 ms.openlocfilehash: 09a19680d9fff6a8d907dd17f3399ff632cba19b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75243615"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 與 AlwaysOn 可用性群組 (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "75243615"
   
  如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的一般資訊，請參閱 [SQL Server 2012 的 AlwaysOn 常見問題集 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768)。  
 
-##  <a name="bkmk_requirements"></a> 使用 Reporting Services 和 AlwaysOn 可用性群組的需求  
+##  <a name="requirements-for-using-reporting-services-and-always-on-availability-groups"></a><a name="bkmk_requirements"></a> 使用 Reporting Services 和 AlwaysOn 可用性群組的需求  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 Power BI 報表伺服器會使用 .Net Framework 4.0，並支援與資料來源搭配使用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 連接字串屬性。  
   
  使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 搭配  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 及更早版本時，您必須下載並安裝 .Net 3.5 SP1 的 Hotfix。 此 Hotfix 會加入 SQL 用戶端對於 AG 功能的支援，以及連接字串屬性 **ApplicationIntent** 和 **MultiSubnetFailover**的支援。 如果裝載報表伺服器的每部電腦沒有安裝此 Hotfix，則嘗試預覽報表的使用者將會看見類似下面的錯誤訊息，而且該錯誤訊息將寫入報表伺服器追蹤記錄：  
@@ -46,7 +46,7 @@ ms.locfileid: "75243615"
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 功能不支援 **組態檔，例如**RSreportserver.config[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 如果您對其中一個報表伺服器的組態檔進行手動變更，就必須手動更新複本。  
   
-##  <a name="bkmk_reportdatasources"></a> 報表資料來源和可用性群組  
+##  <a name="report-data-sources-and-availability-groups"></a><a name="bkmk_reportdatasources"></a> 報表資料來源和可用性群組  
  以 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 為基礎之 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 資料來源的行為可能會因系統管理員設定 AG 環境的方式而異。  
   
  若要針對報表資料來源使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，您必須將報表資料來源連接字串設定為使用可用性群組的 *「接聽程式 DNS 名稱」* (Listener DNS Name)。 支援的資料來源如下：  
@@ -91,7 +91,7 @@ ms.locfileid: "75243615"
   
  使用唯讀次要複本做為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料來源時，請務必確定資料更新延遲符合報表使用者的需求。  
   
-##  <a name="bkmk_reportdesign"></a> 報表設計和可用性群組  
+##  <a name="report-design-and-availability-groups"></a><a name="bkmk_reportdesign"></a> 報表設計和可用性群組  
  在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 中設計報表或在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中設計報表專案時，使用者可以將報表資料來源連接字串設定為包含 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]所提供的新連接屬性。 新連接屬性的支援主要取決於使用者預覽報表的位置。  
   
 -   **本機預覽：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 會使用 .Net Framework 4.0 並且支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 連接字串屬性。  
@@ -100,7 +100,7 @@ ms.locfileid: "75243615"
   
 > **錯誤訊息：** 「不支援關鍵字 'applicationintent'」  
   
-##  <a name="bkmk_reportserverdatabases"></a> 報表伺服器資料庫和可用性群組  
+##  <a name="report-server-databases-and-availability-groups"></a><a name="bkmk_reportserverdatabases"></a> 報表伺服器資料庫和可用性群組  
  Reporting Services 和 Power BI 報表伺服器針對 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 與報表伺服器資料庫搭配使用提供有限的支援。 您可以在 AG 中將報表伺服器資料庫設定為複本的一部分，但在容錯移轉時， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 不會自動為報表伺服器資料庫使用不同的複本。 不支援搭配報表伺服器資料庫使用 MultiSubnetFailover。  
   
  您必須使用手動操作或自訂自動化指令碼，才能完成容錯移轉和復原。 完成這些動作之前，報表伺服器的某些功能可能會在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 容錯移轉之後無法正確運作。  
@@ -108,7 +108,7 @@ ms.locfileid: "75243615"
 > [!NOTE]  
 >  針對報表伺服器資料庫規劃容錯移轉和災害復原時，建議您一定要備份報表伺服器加密金鑰的複本。  
   
-###  <a name="bkmk_differences_in_server_mode"></a> SharePoint 原生模式之間的差異  
+###  <a name="differences-between-sharepoint-native-mode"></a><a name="bkmk_differences_in_server_mode"></a> SharePoint 原生模式之間的差異  
  本節將摘要說明 SharePoint 模式及原生模式報表伺服器與 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]互動的方式差異。  
   
  SharePoint 報表伺服器會為您所建立的每個 **服務應用程式建立** 3 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 個資料庫。 當您建立服務應用程式時，會在 SharePoint 管理中心內設定 SharePoint 模式報表伺服器資料庫的連接。 資料庫的預設名稱包含關聯到服務應用程式的 GUID。 以下是 SharePoint 模式報表伺服器的範例資料庫名稱：  
@@ -134,7 +134,7 @@ ms.locfileid: "75243615"
 > -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 同步處理程序將會偵測到內容資料庫與報表伺服器資料庫的項目清單之間存在差異。  
 > -   同步處理程序將會刪除或更新內容資料庫中的項目。  
   
-###  <a name="bkmk_prepare_databases"></a> 針對可用性群組準備報表伺服器資料庫  
+###  <a name="prepare-report-server-databases-for-availability-groups"></a><a name="bkmk_prepare_databases"></a> 針對可用性群組準備報表伺服器資料庫  
  下面是準備將報表伺服器資料庫加入至 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的基本步驟：  
   
 -   建立您的可用性群組並且設定 *「接聽程式 DNS 名稱」* (Listener DNS Name)。  
@@ -147,7 +147,7 @@ ms.locfileid: "75243615"
   
 -   將資料庫連接更新為使用接聽程式 DNS 名稱。 若為原生模式報表伺服器，請在 **組態管理員中變更** [報表伺服器資料庫名稱] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。 若為 SharePoint 模式，請為  **服務應用程式變更 [資料庫伺服器名稱]** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。  
   
-###  <a name="bkmk_steps_to_complete_failover"></a> 完成報表伺服器資料庫之災害復原的步驟  
+###  <a name="steps-to-complete-disaster-recovery-of-report-server-databases"></a><a name="bkmk_steps_to_complete_failover"></a> 完成報表伺服器資料庫之災害復原的步驟  
  您必須在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 容錯移轉至次要複本之後完成下列步驟：  
   
 1.  停止裝載 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料庫之主要資料庫引擎所使用的 SQL 代理程式服務執行個體。  
@@ -164,7 +164,7 @@ ms.locfileid: "75243615"
   
 5.  確認報表可以根據新的主要複本執行。  
   
-###  <a name="bkmk_failover_behavior"></a> 進行容錯移轉時的報表伺服器行為  
+###  <a name="report-server-behavior-when-a-failover-occurs"></a><a name="bkmk_failover_behavior"></a> 進行容錯移轉時的報表伺服器行為  
  當報表伺服器資料庫容錯移轉，而且您已經將報表伺服器環境更新為使用新的主要複本時，容錯移轉和復原程序會產生一些作業問題。 這些問題的影響會因下列條件而異：容錯移轉時的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 負載、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 容錯移轉至次要複本所需的時間長度，以及報表伺服器管理員將報表環境更新為使用新主要複本所需的時間長度。  
   
 -   由於重試邏輯以及報表伺服器無法在容錯移轉期間將排程的工作標記為已完成，因此背景處理的執行可能會發生一次以上。  

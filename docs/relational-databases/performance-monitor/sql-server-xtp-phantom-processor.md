@@ -11,10 +11,10 @@ ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f9f7f51b2d0ede3bb49bb152ab08cbb2a7eb2732
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68114025"
 ---
 # <a name="sql-server-xtp-phantom-processor"></a>SQL Server XTP 虛設項目處理器

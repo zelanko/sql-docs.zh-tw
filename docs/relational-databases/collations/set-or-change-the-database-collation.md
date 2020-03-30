@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2221d88e5f564b08f993f68f9be4131588aebe2a
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78866107"
 ---
 # <a name="set-or-change-the-database-collation"></a>設定或變更資料庫定序
@@ -28,7 +28,7 @@ ms.locfileid: "78866107"
 > 在 Azure SQL Database 中，不會明確禁止變更資料庫定序。 不過，變更資料庫定序會要求在資料庫與其他使用者或背景處理序 (例如，正在進行備份的背景) 上的獨佔鎖定可能會持有資料庫鎖定，並防止定序變更。 如果 Azure SQL Database 上的 `ALTER DATABASE COLLATE` 陳述式在背景處理序正在存取資料庫時執行，則會失敗。 如果您遇到鎖定逾時錯誤，則必須重試該陳述式。 
  
 > [!NOTE]
-> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中建立資料庫之後，即無法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 變更定序。 只能透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變更定序。
+> 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中建立資料庫之後，即無法使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 變更定序。 只能透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變更定序。
 
  **本主題內容**  
   
@@ -46,17 +46,17 @@ ms.locfileid: "78866107"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   僅限 Windows Unicode 定序只能搭配 COLLATE 子句使用，以便將定序套用至資料行層級和運算式層級資料的 **nchar**、 **nvarchar**和 **ntext** 資料類型。 這些定序無法搭配 COLLATE 子句使用，以變更資料庫或伺服器執行個體的定序。  
   
 -   如果指定的定序或所參考物件所用的定序使用 Windows 不支援的字碼頁， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會顯示錯誤。  
 
--   在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中建立資料庫之後，即無法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 變更定序。 只能透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變更定序。
+-   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中建立資料庫之後，即無法使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 變更定序。 只能透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變更定序。
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 您可以在 [Windows 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) 和 [SQL Server 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)中找到支援的定序名稱；您也可以使用 [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) 系統函數。  
   
@@ -68,16 +68,16 @@ ms.locfileid: "78866107"
   
 -   **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar**或 **ntext** 系統資料類型，以及以這些系統資料類型為基礎的所有使用者定義資料類型，都會變更為新的預設定序。  
   
-您可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式的 `COLLATE` 子句，變更在使用者資料庫中建立之任何新物件的定序。 此陳述式**不會變更**現有使用者定義資料表中的資料行定序。 您可以使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 的 `COLLATE` 子句進行變更。  
+您可以使用 `COLLATE`ALTER DATABASE[ 陳述式的 ](../../t-sql/statements/alter-database-transact-sql.md) 子句，變更在使用者資料庫中建立之任何新物件的定序。 此陳述式**不會變更**現有使用者定義資料表中的資料行定序。 您可以使用 `COLLATE`ALTER TABLE[ 的 ](../../t-sql/statements/alter-table-transact-sql.md) 子句進行變更。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
- 若要建立新資料庫，需要 **master** 資料庫中的 `CREATE DATABASE` 權限，或需要 `CREATE ANY DATABASE` 或 `ALTER ANY DATABASE` 權限。  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
+ 若要建立新資料庫，需要 `CREATE DATABASE`master**資料庫中的** 權限，或需要 `CREATE ANY DATABASE` 或 `ALTER ANY DATABASE` 權限。  
   
  若要變更現有資料庫的定序，需要資料庫的 `ALTER` 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-set-or-change-the-database-collation"></a>若要設定或變更資料庫定序  
   
@@ -89,7 +89,7 @@ ms.locfileid: "78866107"
   
 3.  完成後，請按一下 **[確定]** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-set-the-database-collation"></a>若要設定資料庫定序  
   

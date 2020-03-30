@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288542"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>使用自動植入將 Always On 可用性群組的次要複本初始化
@@ -46,7 +46,7 @@ ms.locfileid: "79288542"
 
 壓縮可用於自動植入，但預設停用。 開啟壓縮會減少網路頻寬，並可能加速程序，但代價是額外的處理器額外負荷。 若要在自動植入期間使用壓縮，請啟用追蹤旗標 9567，請參閱[微調可用性群組的壓縮](tune-compression-for-availability-group.md)。
 
-## <a name = "disklayout"></a> 磁碟配置
+## <a name="disk-layout"></a><a name = "disklayout"></a> 磁碟配置
 
 在 SQL Server 2016 和舊版中，自動植入所建立資料庫的資料夾必須已經存在，而且和主要複本位在同一路徑下。 
 
@@ -103,13 +103,13 @@ WITH (
  GO
 ```
 
-於 `CREATE AVAILABILITY GROUP` 陳述式執行期間在主要複本上設定 `SEEDING_MODE` 沒有效用，因為主要複本已經包含資料庫的主要讀取/寫入複本。 只有將另一個複本變成主要，而且新增資料庫時，才會套用 `SEEDING_MODE`。 您可於稍後變更植入模式，請參閱[變更複本的植入模式](#change-the-seeding-mode-of-a-replica)。
+於 `SEEDING_MODE` 陳述式執行期間在主要複本上設定 `CREATE AVAILABILITY GROUP` 沒有效用，因為主要複本已經包含資料庫的主要讀取/寫入複本。 只有將另一個複本變成主要，而且新增資料庫時，才會套用 `SEEDING_MODE`。 您可於稍後變更植入模式，請參閱[變更複本的植入模式](#change-the-seeding-mode-of-a-replica)。
 
 在變成次要複本的執行個體上，一旦加入該執行個體，下列訊息就會新增至 SQL Server 記錄檔：
 
->可用性群組 'AGName' 的本機可用性複本並未被授與建立資料庫的權限，但有 `AUTOMATIC` 的 `SEEDING_MODE`。 使用 `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` 命令可建立主要可用性複本植入的資料庫。
+>可用性群組 'AGName' 的本機可用性複本並未被授與建立資料庫的權限，但有 `SEEDING_MODE` 的 `AUTOMATIC`。 使用 `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` 命令可建立主要可用性複本植入的資料庫。
 
-### <a name = "grantCreate"></a> 授與可用性群組在次要複本上建立資料庫的權限
+### <a name="grant-create-database-permission-on-secondary-replica-to-availability-group"></a><a name = "grantCreate"></a> 授與可用性群組在次要複本上建立資料庫的權限
 
 加入之後，授與可用性群組在 SQL Server 次要複本執行個體上建立資料庫的權限。 為使自動植入運作，可用性群組需要有建立資料庫的權限。 
 

@@ -18,10 +18,10 @@ ms.assetid: b3b4e3bb-47bc-4621-99c4-c97aa60cdf8b
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 97c519350024947ed6854554526b65754c6621a2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68120832"
 ---
 # <a name="stpointfromwkb-geography-data-type"></a>STPointFromWKB (geography 資料類型)

@@ -19,10 +19,10 @@ ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68300431"
 ---
 # <a name="database-snapshots-sql-server"></a>資料庫快照集 (SQL Server)
@@ -48,14 +48,14 @@ ms.locfileid: "68300431"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="FeatureOverview"></a> 功能概觀  
+##  <a name="feature-overview"></a><a name="FeatureOverview"></a> 功能概觀  
  資料庫快照集是在資料頁層級上操作的。 在第一次修改來源資料庫的頁面之前，系統就會將原始頁面從來源資料庫複製到快照集。 快照集會儲存原始頁面，保留快照集建立時已存在的資料記錄。 第一次進行修改的每一頁，都會重複相同的處理序。 對於使用者而言，資料庫快照集似乎不會改變，因為資料庫快照集上的讀取作業一定是存取原始資料頁 (不管原始資料頁位於何處)。  
   
  快照集在儲存所複製的原始頁面時，會使用一個或多個 *「疏鬆檔案」* (Sparse file)。 一開始，疏鬆檔案其實是一個空白檔案，沒有包含使用者資料，也尚未配置磁碟空間來存放使用者資料。 隨著來源資料庫中有越來越多頁面更新，檔案大小也跟著成長。 下圖說明兩個相反的更新模式，對於快照集大小的影響。 更新模式 A 所反映的環境，在快照集的生命期限內，只有 30% 的原始頁面有更新。 更新模式 B 所反映的環境，在快照集的生命期限內，有 80% 的原始頁面有更新。  
   
  ![替代的更新模式和快照集大小](../../relational-databases/databases/media/dbview-04.gif "替代的更新模式和快照集大小")  
   
-##  <a name="Benefits"></a> 資料庫快照集的優點  
+##  <a name="benefits-of-database-snapshots"></a><a name="Benefits"></a> 資料庫快照集的優點  
   
 -   快照集可以用於報表用途。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "68300431"
   
      在測試環境中，在每一回測試開始時，對資料庫重複執行測試通訊協定以包含相同資料，是很有幫助的。 在執行第一回之前，應用程式開發人員或測試人員可以在測試資料庫上建立資料庫快照集。 在每一回測試執行之後，可還原資料庫快照集，使資料庫快速回到它先前的狀態。  
   
-##  <a name="TermsAndDefinitions"></a> 詞彙和定義  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 詞彙和定義  
  database snapshot  
  資料庫 (來源資料庫) 在交易上一致的唯讀、靜態檢視。  
   
@@ -106,10 +106,10 @@ ms.locfileid: "68300431"
  疏鬆檔案  
  NTFS 檔案系統提供的檔案，比其他方式需要更少磁碟空間。 疏鬆檔案可用來儲存複製到資料庫快照集的頁面。 初次建立時，疏鬆檔案所佔的磁碟空間很小。 當資料寫入資料庫快照集時，NTFS 也會逐漸將磁碟空間配置到對應的疏鬆檔案。  
   
-##  <a name="LimitationsRequirements"></a> 資料庫快照集的必要條件和限制  
+##  <a name="prerequisites-for-and-limitations-on-database-snapshots"></a><a name="LimitationsRequirements"></a> 資料庫快照集的必要條件和限制  
  **本節內容：**  
   
--   [先決條件](#Prerequisites)  
+-   [必要條件](#Prerequisites)  
   
 -   [對來源資料庫的限制](#LimitsOnSourceDb)  
   
@@ -119,7 +119,7 @@ ms.locfileid: "68300431"
   
 -   [含離線檔案群組的資料庫快照集](#OfflineFGs)  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  可使用任何復原模式的來源資料庫必須符合下列必要條件：  
   
 -   伺服器執行個體必須在支援資料庫快照集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上執行。 如需詳細資訊，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -141,7 +141,7 @@ ms.locfileid: "68300431"
 > [!NOTE]  
 >  所有復原模式都支援資料庫快照集。  
   
-###  <a name="LimitsOnSourceDb"></a> 對來源資料庫的限制  
+###  <a name="limitations-on-the-source-database"></a><a name="LimitsOnSourceDb"></a> 對來源資料庫的限制  
  只要資料庫快照集存在，快照集的來源資料庫就會有下列限制：  
   
 -   資料庫無法卸除、卸離或還原。  
@@ -153,7 +153,7 @@ ms.locfileid: "68300431"
   
 -   無法從來源資料庫或任何快照集卸除檔案。  
   
-###  <a name="LimitsOnDbSS"></a> 資料庫快照集的限制  
+###  <a name="limitations-on-database-snapshots"></a><a name="LimitsOnDbSS"></a> 資料庫快照集的限制  
  下列限制適用於資料庫快照集：  
   
 -   建立及保留資料庫快照集的伺服器執行個體必須與來源資料庫相同。  
@@ -199,7 +199,7 @@ ms.locfileid: "68300431"
   
 -   如果唯讀快照集上的統計資料遺漏或過時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在 tempdb 中建立及維護暫時性統計資料。 如需詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
   
-###  <a name="DiskSpace"></a> 磁碟空間需求  
+###  <a name="disk-space-requirements"></a><a name="DiskSpace"></a> 磁碟空間需求  
  資料庫快照集會耗用磁碟空間。 如果資料庫快照集用光磁碟空間，它會標示為有疑問，因此必須卸除 (不過，來源資料庫不受影響，其上的動作會繼續正常執行)。但是，與資料庫的完整副本相比，快照集的空間利用率仍算是很有效率了。 快照集所需儲存空間，只要足夠儲存那些在存留時間內會有變更的頁面即可。 通常，快照集只會保存一段有限的時間，所以其大小不會是大問題。  
   
  不過，您保存快照集的時間越長，就越有可能用光可用空間。 疏鬆檔案的成長大小上限，就是建立快照集時對應來源資料庫檔案的大小。 若資料庫快照集用盡磁碟空間，則必須刪除 (卸除) 快照集。  
@@ -207,7 +207,7 @@ ms.locfileid: "68300431"
 > [!NOTE]  
 >  除了檔案空間以外，資料庫快照集耗用的資源數量大致上與資料庫相同。  
   
-###  <a name="OfflineFGs"></a> 含離線檔案群組的資料庫快照集  
+###  <a name="database-snapshots-with-offline-filegroups"></a><a name="OfflineFGs"></a> 含離線檔案群組的資料庫快照集  
  當您嘗試執行下列任一動作時，來源資料庫中的離線檔案群組會影響到資料庫快照集：  
   
 -   建立快照集  
@@ -226,7 +226,7 @@ ms.locfileid: "68300431"
   
      若要將來源資料庫還原到資料庫快照集，所有檔案群組都必須在線上，但建立快照集時已離線的檔案群組除外。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [建立資料庫快照集 &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   

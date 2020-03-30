@@ -16,10 +16,10 @@ ms.assetid: 691ac7dd-afc5-4760-932c-2b1dcd9394ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fc25632b2567b191fef3ffa3111a73da9699de9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68001756"
 ---
 # <a name="use-nested-for-xml-queries-in-aspnet"></a>在 ASP.NET 中使用巢狀 FOR XML 查詢

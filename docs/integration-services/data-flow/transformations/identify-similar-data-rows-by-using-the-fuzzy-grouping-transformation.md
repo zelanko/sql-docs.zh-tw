@@ -16,10 +16,10 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a8acc9dfcfc908a0e1c196eb7b9ac2c6af088eaf
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903915"
 ---
 # <a name="identify-similar-data-rows-with-the-fuzzy-grouping-transformation"></a>使用模糊群組轉換來識別相似的資料列

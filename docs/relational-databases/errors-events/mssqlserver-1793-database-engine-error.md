@@ -10,10 +10,10 @@ ms.assetid: 808db1d0-acc1-41d0-9287-8a5455001a02
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f1c1e83836ad9e6312d33e64c48810ec3f10c9d9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68137185"
 ---
 # <a name="mssqlserver_1793"></a>MSSQLSERVER_1793

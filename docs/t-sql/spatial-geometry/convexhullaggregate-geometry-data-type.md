@@ -15,10 +15,10 @@ ms.assetid: ca3d3b55-e02d-4599-8817-a54f5e047db8
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c35ca3cfecd0eca0b08c0a1437cd8b57570126b1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68017509"
 ---
 # <a name="convexhullaggregate-geometry-data-type"></a>ConvexHullAggregate (geometry 資料類型)

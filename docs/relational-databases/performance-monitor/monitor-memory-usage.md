@@ -24,10 +24,10 @@ ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: b7ec7d6142bae4a6a0ad21a7f68413b257764e06
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68091013"
 ---
 # <a name="monitor-memory-usage"></a>監視記憶體使用量

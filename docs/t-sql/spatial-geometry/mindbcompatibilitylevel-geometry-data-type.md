@@ -15,10 +15,10 @@ ms.assetid: c848b974-8ccb-4c5c-a7eb-b019a9538d99
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ddebe254c44d1577b2da5200cec02011c5bca89f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68101197"
 ---
 # <a name="mindbcompatibilitylevel-geometry-data-type"></a>MinDbCompatibilityLevel (geometry 資料類型)

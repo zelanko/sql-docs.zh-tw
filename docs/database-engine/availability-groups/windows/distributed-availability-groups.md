@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5499bb5106deddcd073c52453a477190e3150bb9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76941110"
 ---
 # <a name="distributed-availability-groups"></a>分散式可用性群組
@@ -127,11 +127,11 @@ SQL Server 2017 或更新版本中分散式可用性群組可以混合相同分�
 * 重新命名次要可用性群組上的接聽程式 (而且可能會刪除或重新命名原始主要可用性群組上的舊接聽程式)，或使用原始主要可用性群組中的接聽程式來重新建立它，讓應用程式和使用者可以存取新的組態。
 * 如果無法重新命名或重新建立，請將應用程式和使用者指向第二個可用性群組上的接聽程式。
 
-### <a name="scale-out-readable-replicas-with-distributed-availability-groups"></a>使用分散式可用性群組相應放大可讀取複本
+### <a name="scale-out-readable-replicas-with-distributed-availability-groups"></a>使用分散式可用性群組擴增可讀取複本
 
 單一分散式可用性群組視需要最多可以有 16 個次要複本。 因此，它最多可以有 18 個複本可供讀取，包括不同可用性群組的兩個主要複本。 這個方法表示多個網站可以有各種應用程式報告的接近即時存取權。
 
-分散式可用性群組協助您相應放大唯讀伺服器陣列的程度，高於只使用單一可用性群組。 分散式可用性群組可以使用兩種方式相應放大可讀取複本：
+分散式可用性群組協助您擴增唯讀伺服器陣列的程度，高於只使用單一可用性群組。 分散式可用性群組可以使用兩種方式擴增可讀取複本：
 
 * 您可以在分散式可用性群組中使用第二個可用性群組的主要複本來建立另一個分散式可用性群組，即使資料庫未處於復原狀態也是一樣。
 * 您也可以使用第一個可用性群組的主要複本來建立另一個分散式可用性群組。

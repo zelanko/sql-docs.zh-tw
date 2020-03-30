@@ -29,10 +29,10 @@ ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ae87d5c125ae3eac01013843c9fe2db183b9c1c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68055964"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
@@ -62,7 +62,7 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
 ## <a name="remarks"></a>備註  
  請利用 ALTER XML SCHEMA COLLECTION 來加入新的 XML 結構描述，其命名空間尚未存在於 XML 結構描述集合中，或將新的元件加入至集合的現有命名空間中。  
   
- 下列範例會將新的 \<element> 加入至集合 `MyColl` 的現有命名空間 `https://MySchema/test_xml_schema` 中。  
+ 下列範例會將新的 \<element> 加入至集合 `https://MySchema/test_xml_schema` 的現有命名空間 `MyColl` 中。  
   
 ```  
 -- First create an XML schema collection.  

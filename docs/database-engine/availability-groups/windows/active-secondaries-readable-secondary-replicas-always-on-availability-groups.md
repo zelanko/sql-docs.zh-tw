@@ -18,10 +18,10 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822399"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>將唯讀工作負載卸載至 Always On 可用性群組的次要複本
@@ -36,7 +36,7 @@ ms.locfileid: "74822399"
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 也可將讀取意圖的連接要求重新路由到可讀取的次要複本 ( *「唯讀路由」* (Read-Only Routing))。 如需唯讀路由的相關資訊，請參閱 [使用接聽程式連接到唯讀次要複本 (唯讀路由)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)。  
   
-##  <a name="bkmk_Benefits"></a> 優點  
+##  <a name="benefits"></a><a name="bkmk_Benefits"></a> 優點  
  將唯讀連接導向至可讀取的次要複本，具有下列優點：  
   
 -   從主要複本卸載次要唯讀工作負載，將主要複本的資源保留給關鍵任務工作負載使用。 如果您有關鍵任務的讀取工作負載或不能容忍延遲的工作負載，則應該在主要複本上執行此工作負載。  
@@ -53,7 +53,7 @@ ms.locfileid: "74822399"
   
 -   次要複本上以磁碟為基礎和記憶體最佳化資料表類型，都允許對資料表變數進行 DML 作業。  
   
-##  <a name="bkmk_Prerequisites"></a> 可用性群組的必要條件  
+##  <a name="prerequisites-for-the-availability-group"></a><a name="bkmk_Prerequisites"></a> 可用性群組的必要條件  
   
 -   **可讀取的次要複本 (必要)**  
   
@@ -84,7 +84,7 @@ ms.locfileid: "74822399"
 > [!NOTE]  
 >  如需可用性群組接聽程式的相關資訊，以及唯讀路由的詳細資訊，請參閱 [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。  
   
-##  <a name="bkmk_LimitationsRestrictions"></a> 限制事項  
+##  <a name="limitations-and-restrictions"></a><a name="bkmk_LimitationsRestrictions"></a> 限制事項  
  某些作業未完全受到支援，如下所示：  
   
 -   一旦可讀取的複本啟用讀取之後，它就可以開始接受其次要資料庫的連接。 但是，如果主要複本上有任何使用中交易，在對應的次要資料庫上無法完全使用資料列版本。 設定次要複本時，主要複本上若有使用中交易，則必須認可或回復這些交易。 完成此程序之前，次要資料庫的交易隔離等級對應並不完整，而且查詢會暫時封鎖。  
@@ -109,7 +109,7 @@ ms.locfileid: "74822399"
 > [!NOTE]  
 >  對裝載可讀取之次要複本的伺服器執行個體上查詢 [sys.dm_db_index_physical_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 動態管理檢視時，可能會發生 REDO 封鎖問題。 這是因為此動態管理檢視會取得指定使用者資料表或檢視表的 IS 鎖定，並因此而封鎖了對該使用者資料表或檢視表之 X 鎖定的 REDO 執行緒要求。  
   
-##  <a name="bkmk_Performance"></a> 效能考量  
+##  <a name="performance-considerations"></a><a name="bkmk_Performance"></a> 效能考量  
  本節討論可讀取次要資料庫的數項效能考量。  
   
  **本節內容：**  
@@ -122,17 +122,17 @@ ms.locfileid: "74822399"
   
 -   [唯讀存取資料庫的統計資料](#Read-OnlyStats)  
   
-###  <a name="DataLatency"></a> 資料延遲  
+###  <a name="data-latency"></a><a name="DataLatency"></a> 資料延遲  
  如果您的唯讀工作負載可以容忍某些資料延遲時，實作次要複本的唯讀存取會很有用。 在無法接受資料延遲的狀況下，請考慮針對主要複本執行唯讀工作負載。  
   
  主要複本上會將主要資料庫變更的記錄檔記錄傳送到次要複本。 在每個次要資料庫上，專用的重做執行緒會套用記錄檔記錄。 在讀取存取的次要資料庫上，給定資料變更不會出現在查詢結果，除非包含變更的記錄檔記錄已套用至次要資料庫，而且已經在主要資料庫認可交易。  
   
  這表示，主要複本和次要複本之間會有一些延遲 (通常只有幾秒鐘)。 但在很少見的情況下 (例如網路問題減少輸送量的狀況下)，延遲可能會比較長。 在發生 I/O 瓶頸和資料移動暫停時，會增加延遲。 若要監視暫停的資料移動，您可以使用 [AlwaysOn 儀表板](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) 或 [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) 動態管理檢視。  
   
-####  <a name="bkmk_LatencyWithInMemOLTP"></a> 具有記憶體最佳化資料表之資料庫的資料延遲  
+####  <a name="data-latency-on-databases-with-memory-optimized-tables"></a><a name="bkmk_LatencyWithInMemOLTP"></a> 具有記憶體最佳化資料表之資料庫的資料延遲  
  在 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 中，使用中次要上的資料延遲有其特殊考量 - 請參閱 [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 使用中次要：可讀取的次要複本](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx)。 從 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 開始，沒有記憶體最佳化資料表之資料延遲的特殊考量。 記憶體最佳化資料表的預期資料延遲相當於以磁碟為基礎的資料表的延遲。  
   
-###  <a name="ReadOnlyWorkloadImpact"></a> 唯讀工作負載的影響  
+###  <a name="read-only-workload-impact"></a><a name="ReadOnlyWorkloadImpact"></a> 唯讀工作負載的影響  
  將次要複本設定為唯讀存取時，次要資料庫上的唯讀工作負載會耗用系統資源，例如重做執行緒的 CPU 和 I/O (針對以磁碟為基礎之資料表)，特別是當以磁碟為基礎之資料表的唯讀工作負載高密度使用 I/O 資料時。 存取記憶體最佳化的資料表時，不會造成任何 IO 影響，因為所有資料列都位於記憶體中。  
   
  此外，次要複本上的唯讀工作負載可以封鎖透過記錄檔記錄套用的資料定義語言 (DDL) 變更。  
@@ -146,12 +146,12 @@ ms.locfileid: "74822399"
 > [!NOTE]  
 >  如果重做執行緒遭到次要複本上的查詢封鎖，便會引發 **sqlserver.lock_redo_blocked** XEvent。  
   
-###  <a name="bkmk_Indexing"></a> 索引  
+###  <a name="indexing"></a><a name="bkmk_Indexing"></a> 索引  
  若要將可讀取次要複本上的唯讀工作負載最佳化，您可能會想要在次要資料庫的資料表上建立索引。 因為您無法在次要資料庫上進行結構描述或資料變更，所以請在主要資料庫中建立索引，並允許透過重做處理序將變更傳送到次要資料庫。  
   
  若要監視次要複本的索引使用活動，請查詢 **sys.dm_db_index_usage_stats**動態管理檢視的 **user_seeks**、 **user_scans** 和 [user_lookups](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) 資料行。  
   
-###  <a name="Read-OnlyStats"></a> 唯讀存取資料庫的統計資料  
+###  <a name="statistics-for-read-only-access-databases"></a><a name="Read-OnlyStats"></a> 唯讀存取資料庫的統計資料  
  資料表資料行和索引檢視表的統計資料可用來最佳化查詢計劃。 對於可用性群組而言，在主要資料庫上建立和維護的統計資料會自動保存至次要資料庫，做為交易記錄檔記錄應用的一部分。 然而，次要資料庫上的唯讀工作負載所需的統計資料，可能與主要資料庫上所建立的統計資料不同。 但因次要資料庫受限為唯讀存取，所以無法在次要資料庫上建立統計資料。  
   
  為了解決此問題，次要複本會在 **tempdb**中建立及維護次要資料庫的暫時統計資料。 暫時統計資料名稱會附加後置詞 suffix _readonly_database_statistic，以便區分暫時統計資料與主要資料庫中保存的永久統計資料。  
@@ -172,20 +172,20 @@ ms.locfileid: "74822399"
   
 -   [限制事項](#StatsLimitationsRestrictions)  
   
-####  <a name="StalePermStats"></a> 次要資料庫上過時的永久統計資料  
+####  <a name="stale-permanent-statistics-on-secondary-databases"></a><a name="StalePermStats"></a> 次要資料庫上過時的永久統計資料  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會偵測次要資料庫上的永久統計資料何時過時。 但除了對主要資料庫所做的變更以外，無法對永久統計資料進行變更。 為達到查詢最佳化， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會在次要資料庫上建立以磁碟為基礎之資料表的暫時統計資料，並且使用這些統計資料以取代過時的永久統計資料。  
   
  在主要資料庫上更新永久統計資料時，這些統計資料會自動保存至次要資料庫。 然後 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用更新的永久統計資資料 (比暫時統計資料還要新)。  
   
  如果可用性群組容錯移轉，所有次要複本上的暫時統計資料都會被刪除。  
   
-####  <a name="StatsLimitationsRestrictions"></a> 限制事項  
+####  <a name="limitations-and-restrictions"></a><a name="StatsLimitationsRestrictions"></a> 限制事項  
   
 -   因為暫時統計資料會儲存在 **tempdb**中，所以重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務會導致所有暫時統計資料消失。  
   
 -   後置詞 _readonly_database_statistic 會保留給 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]產生的統計資料使用。 當您在主要資料庫上建立統計資料時，將無法使用這個後置詞。 如需詳細資訊，請參閱[統計資料](../../../relational-databases/statistics/statistics.md)。  
   
-##  <a name="bkmk_AccessInMemTables"></a> 存取次要複本上的記憶體最佳化資料表  
+##  <a name="accessing-memory-optimized-tables-on-a-secondary-replica"></a><a name="bkmk_AccessInMemTables"></a> 存取次要複本上的記憶體最佳化資料表  
  次要複本上可與記憶體最佳化資料表搭配使用的交易隔離層級，與主要複本上相同。 建議將工作階段層級的隔離層級設定成 READ COMMITTED，並將資料庫層級選項 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 設定成 ON。 例如：  
   
 ```sql  
@@ -199,7 +199,7 @@ GO
   
 ```  
   
-##  <a name="bkmk_CapacityPlanning"></a> 容量規劃考量  
+##  <a name="capacity-planning-considerations"></a><a name="bkmk_CapacityPlanning"></a> 容量規劃考量  
   
 -   在以磁碟為基礎之資料表案例中，可讀取的次要複本需要 **tempdb** 的空間主要基於以下兩個原因：  
   
@@ -220,7 +220,7 @@ GO
     |是|否|沒有資料列版本，但有 14 個位元組的負擔|有資料列版本和 14 個位元組的負擔|  
     |是|是|有資料列版本和 14 個位元組的負擔|有資料列版本和 14 個位元組的負擔|  
   
-##  <a name="bkmk_RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="bkmk_RelatedTasks"></a> 相關工作  
   
 -   [設定可用性複本的唯讀存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -234,7 +234,7 @@ GO
   
 -   [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   [SQL Server AlwaysOn 團隊部落格：SQL Server AlwaysOn 官方團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   

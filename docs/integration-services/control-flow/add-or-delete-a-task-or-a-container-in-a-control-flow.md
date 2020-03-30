@@ -16,10 +16,10 @@ ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 76e7db001469b141df5633228927135c6d01af53
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298436"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>在控制流程中加入或刪除工作或容器

@@ -14,10 +14,10 @@ ms.assetid: 28c8fec5-5feb-4c84-8d72-f2bd1ae3b40d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8dbae060ee2fa2714bc7fd624a1f3aafc80959ae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67951988"
 ---
 # <a name="database-mirroring---allow-network-access---windows-authentication"></a>資料庫鏡像 - 允許網路存取 - Windows 驗證

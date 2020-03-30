@@ -9,10 +9,10 @@ ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3891d30ef5bfffb19ca1d4bfcaab290e3903816b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68013672"
 ---
 # <a name="tune-compression-for-availability-group"></a>微調可用性群組的壓縮

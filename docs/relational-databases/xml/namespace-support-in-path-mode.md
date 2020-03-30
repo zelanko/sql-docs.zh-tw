@@ -14,10 +14,10 @@ ms.assetid: 5f128ea2-0ceb-4b23-bce7-c8b3fd615466
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72449f54a5256987b7336c82fb5119235ab302b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68137474"
 ---
 # <a name="namespace-support-in-path-mode"></a>PATH 模式中的命名空間支援

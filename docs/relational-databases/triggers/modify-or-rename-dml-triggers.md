@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebccd45c54a3f5abb745f7c3028e0438c9ed5d2e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68056013"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>修改或重新命名 DML 觸發程序
@@ -41,13 +41,13 @@ ms.locfileid: "68056013"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   當您重新命名觸發程序時，觸發程序必須位於目前資料庫中，而且新名稱必須遵照 [識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   我們建議您不要使用 [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md) 預存程序重新命名觸發程序。 變更物件名稱的任何部分，可能破壞指令碼和預存程序。 重新命名觸發程序並不會變更 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 目錄檢視 definition 資料行中對應的物件名稱。 我們建議您先卸除，再重新建立觸發程序。  
   
@@ -63,12 +63,12 @@ ms.locfileid: "68056013"
   
     -   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  變更 DML 觸發程序需要定義觸發程序的資料表或檢視表的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-a-dml-trigger"></a>若要修改 DML 觸發程序  
   
@@ -86,7 +86,7 @@ ms.locfileid: "68056013"
   
 2.  [重新建立觸發程序](../../relational-databases/triggers/create-dml-triggers.md)，並指定新名稱。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-modify-a-trigger-using-alter-trigger"></a>若要使用 ALTER TRIGGER 修改觸發程序  
   

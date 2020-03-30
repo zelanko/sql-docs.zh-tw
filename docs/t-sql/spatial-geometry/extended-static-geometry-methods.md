@@ -15,10 +15,10 @@ ms.assetid: 04c02af0-5243-4d53-b35a-ddc4113ee8f6
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8b7373754e9f2cd8323e5fdd421a556167380b73
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68081148"
 ---
 # <a name="extended-static-geometry-methods"></a>擴充的靜態幾何方法

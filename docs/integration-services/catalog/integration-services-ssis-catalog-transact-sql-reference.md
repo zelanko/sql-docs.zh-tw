@@ -11,10 +11,10 @@ ms.assetid: 9553cef4-36aa-4088-a9db-eee45a4502df
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a3615703ceada10f627cc2378aab2511c7a8f883
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903830"
 ---
 # <a name="integration-services-ssis-catalog-transact-sql-reference"></a>Integration Services (SSIS) 目錄 Transact-SQL 參考

@@ -16,10 +16,10 @@ ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 50334a6b64319a280d34df9fbd4907aa82e82111
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558303"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>建立新原則或開啟原則對話方塊，一般頁面

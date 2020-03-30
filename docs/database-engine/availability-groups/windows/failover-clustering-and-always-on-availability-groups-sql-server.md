@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 62b5f1d23608ce6337befa1e4888ad2cda543dc9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822249"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "74822249"
 >  如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 概念的資訊，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
   
   
-##  <a name="WSFC"></a> Windows Server 容錯移轉叢集和可用性群組  
+##  <a name="windows-server-failover-clustering-and-availability-groups"></a><a name="WSFC"></a> Windows Server 容錯移轉叢集和可用性群組  
  部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 需要一個 Windows Server 容錯移轉叢集 (WSFC)。 若要啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體必須位於 WSFC 節點上，且 WSFC 和節點必須在線上。 此外，所指定可用性群組之每個可用性複本都必須位在相同 WSFC 的不同節點上。 唯一的例外狀況是在移轉至另一個 WSFC 期間，可用性群組可以暫時跨兩個叢集。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 依賴 Windows Server 容錯移轉叢集 (WSFC) 來監視及管理屬於所指定可用性群組的可用性複本目前角色，並判斷容錯移轉事件對於可用性複本的影響程度。 對於您建立的每個可用性群組，系統會建立一個 WSFC 資源群組。 WSFC 會監視此資源群組，以評估主要複本的健康狀態。  
@@ -49,7 +49,7 @@ ms.locfileid: "74822249"
   
  如需在 WSFC 節點上執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以及 WSFC 仲裁的資訊，請參閱 [SQL Server 的 Windows Server 容錯移轉叢集&#40;WSFC&#41; ](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)。  
   
-##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 和可用性群組  
+##  <a name="ssnoversion-failover-cluster-instances-fcis-and-availability-groups"></a><a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 和可用性群組  
  您可以藉由實作 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 連同 WSFC，在伺服器執行個體層級設定容錯移轉的第二層。 可用性複本可由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 獨立執行個體或 FCI 執行個體所裝載。 只有一個 FCI 夥伴可以裝載給定可用性群組的複本。 在 FCI 上執行可用性複本時，可用性群組的可能擁有者清單只包含使用中 FCI 節點。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 不依賴任何形式的共用儲存體。 不過，如果您使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 來裝載一個或多個可用性複本，依照標準 SQL Server 容錯移轉叢集執行個體安裝，這些 FCI 都需要共用儲存體。  
@@ -97,7 +97,7 @@ ms.locfileid: "74822249"
   
  如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 的詳細資訊，請參閱 [Always On 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
-##  <a name="FCMrestrictions"></a> WSFC 容錯移轉叢集管理員與可用性群組一起使用的限制  
+##  <a name="restrictions-on-using-the-wsfc-failover-cluster-manager-with-availability-groups"></a><a name="FCMrestrictions"></a> WSFC 容錯移轉叢集管理員與可用性群組一起使用的限制  
  不要使用容錯移轉叢集管理員操作可用性群組，例如：  
   
 -   請勿在可用性群組的叢集服務 (資源群組) 中加入或移除資源。  
@@ -109,7 +109,7 @@ ms.locfileid: "74822249"
   >[!WARNING]
   > 使用容錯移轉叢集管理員將裝載可用性群組的「容錯移轉叢集執行個體」  移至「已」  裝載相同可用性群組複本的節點時，可能會導致遺失可用性群組複本，使其無法在目標節點上線。 容錯移轉叢集的單一節點無法裝載相同可用性群組的多個複本。 如需如何發生這種情況以及如何復原的詳細資訊，請參閱部落格：[Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (在可用性群組中意外卸除複本)。 
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   **部落格：**  
   

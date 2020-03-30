@@ -1,5 +1,6 @@
 ---
 title: PolyBase 功能和限制 | Microsoft Docs
+descriptions: This article summarizes PolyBase features available for SQL Server products and services. It lists T-SQL operators supported for pushdown and known limitations.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -9,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd4c7e7bb150a0eafbd855e1703713f3781bdc49
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: b9da1c78f9f312574a0a914f0956357412a35d4e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71710458"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216027"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 功能和限制
 

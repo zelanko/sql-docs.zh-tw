@@ -13,15 +13,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c59785c6ba0fb20949721070008246a3a6bc49e3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67897423"
 ---
 # <a name="audit-schema-object-gdr-event-class"></a>Audit Schema Object GDR 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  每當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的使用者對結構描述物件權限發出 GRANT、REVOKE 或 DENY 時，就會發生 **Audit Schema Object GDR** 事件類別。  
+  每當   中的使用者對結構描述物件權限發出 GRANT、REVOKE 或 DENY 時，就會發生 [!INCLUDE[msCoName](../../includes/msconame-md.md)]Audit Schema Object GDR[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件類別。  
   
 ## <a name="audit-schema-object-gdr-event-class-data-columns"></a>Audit Schema Object GDR 事件類別資料行  
   

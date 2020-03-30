@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 47d4cb0991bde851fbc6c6f3273a673dfdecf919
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082559"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定資料表中的計算資料行
@@ -40,22 +40,22 @@ ms.locfileid: "68082559"
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> 開始之前
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前
 
-### <a name="Limitations"></a> 限制事項
+### <a name="limitations-and-restrictions"></a><a name="Limitations"></a> 限制事項
 
 - 計算資料行不能用來做為 DEFAULT 或 FOREIGN KEY 條件約束定義，也不能搭配 NOT NULL 條件約束定義來使用。 不過，如果計算資料行值是由具決定性的運算式所定義，且索引資料行接受結果的資料類型，計算資料行便可用來做為索引中的索引鍵資料行，也可用在任何 PRIMARY KEY 或 UNIQUE 條件約束中。 例如，如果資料表有整數資料行 a 和 b，您可以建立計算資料行 a + b 的索引，但不能建立計算資料行 a +DATEPART(dd, GETDATE()) 的索引，因為在後續叫用時，值可能會改變。
 - 計算資料行不能是 INSERT 或 UPDATE 陳述式的目標。
 
-### <a name="Security"></a> Security
+### <a name="security"></a><a name="Security"></a> Security
 
-#### <a name="Permissions"></a> 權限
+#### <a name="permissions"></a><a name="Permissions"></a> 權限
 
 需要資料表的 ALTER 權限。
 
-## <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
 
-### <a name="NewColumn"></a> 若要加入新的計算資料行
+### <a name="to-add-a-new-computed-column"></a><a name="NewColumn"></a> 若要加入新的計算資料行
 
 1. 在 **[物件總管]** 中，展開要在其中加入新的計算資料行的資料表。 以滑鼠右鍵按一下 [資料行]  ，然後選取 [新增資料行]  。
 2. 輸入資料行名稱並接受預設資料類型 (**nchar**(10))。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會判斷計算資料行的資料類型，方法是將資料類型優先順序規則套用至公式中指定的運算式。 例如，如果公式參考 **money** 類型的資料行以及 **int**類型的資料行，則計算資料行會是 **money** 類型，因為該資料類型的優先順序較高。 如需詳細資訊，請參閱[資料類型優先順序 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。
@@ -75,7 +75,7 @@ ms.locfileid: "68082559"
 2. 以滑鼠右鍵按一下要指定其計算資料行公式的資料行，然後按一下 [刪除]  。 按一下 [確定]  。
 3. 加入新的資料行，並依照上述程序加入新的計算料行，藉此指定計算資料行公式。
 
-## <a name="TsqlProcedure"></a> 使用 Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL
 
 ### <a name="to-add-a-computed-column-when-creating-a-table"></a>建立資料表時加入計算資料行
 

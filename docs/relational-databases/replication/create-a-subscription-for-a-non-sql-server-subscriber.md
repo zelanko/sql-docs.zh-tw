@@ -16,10 +16,10 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322001"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>為非 SQL Server 訂閱者建立訂閱
@@ -34,7 +34,7 @@ ms.locfileid: "75322001"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  若要為非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者建立訂閱：  
   
 1.  在「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 散發者」上安裝並設定適當的用戶端軟體和 OLE DB 提供者。 如需相關資訊，請參閱 [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md) 及 [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)。  
@@ -143,7 +143,7 @@ ms.locfileid: "75322001"
   
  「快照集代理程式」完成產生快照集後，會顯示一個訊息，例如「[100%] 已產生了 17 個發行項的快照集」。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用複寫預存程序，以程式設計的方式建立非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發送訂閱。  
   
 > [!IMPORTANT]  

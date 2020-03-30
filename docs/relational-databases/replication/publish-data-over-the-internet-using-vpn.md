@@ -15,10 +15,10 @@ ms.assetid: 9ffb6546-9973-4574-aaa0-8fe0017e3601
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9200883cb64877d8b4fc2c35e6f19b28df4715c3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67908017"
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>使用 VPN 透過網際網路發行資料

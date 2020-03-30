@@ -13,10 +13,10 @@ ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f157b2b802142f6f00b7a3e9ffb2596ef80f1773
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298252"
 ---
 # <a name="hadoop-hive-task"></a>Hadoop Hive 工作

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4d763ccf2799ea72a1882a576e4b17ef839e3f1e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68742954"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTORE 陳述式 - LABELONLY (Transact-SQL)
@@ -91,7 +91,7 @@ FROM <backup_device>
 |**SoftwareName**|**nvarchar(128)**|寫入標籤的備份軟體名稱。|  
 |**SoftwareVendorId**|**int**|寫入備份的軟體供應商之唯一供應商識別碼。|  
 |**MediaDate**|**datetime**|標籤的寫入日期和時間。|  
-|**Mirror_Count**|**int**|媒體集中的鏡像數目 (1-4)。<br /><br /> 注意:針對相同媒體集中不同鏡像而寫入的標籤都相同。|  
+|**Mirror_Count**|**int**|媒體集中的鏡像數目 (1-4)。<br /><br /> 注意：針對相同媒體集中不同鏡像而寫入的標籤都相同。|  
 |**IsCompressed**|**bit**|備份是否經過壓縮：<br /><br /> 0 = 未壓縮<br /><br /> 1 = 已壓縮|  
   
 > [!NOTE]  

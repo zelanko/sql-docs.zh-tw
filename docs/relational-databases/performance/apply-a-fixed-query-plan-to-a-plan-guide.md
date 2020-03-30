@@ -10,10 +10,10 @@ ms.assetid: bbf401f9-af7c-48e7-8a43-bf25e8af2fd7
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 8bb64d5a74fbc7b72c543a49fcf658caea6a2ef4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67985067"
 ---
 # <a name="apply-a-fixed-query-plan-to-a-plan-guide"></a>將固定的查詢計畫套用至計畫指南

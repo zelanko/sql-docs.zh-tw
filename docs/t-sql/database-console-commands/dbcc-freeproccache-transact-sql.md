@@ -26,10 +26,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68101899"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
@@ -121,21 +121,21 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 適用於：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
 - 需要 DB_OWNER 固定資料庫角色中的成員資格。  
 
-## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 與 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的一般備註  
+## <a name="general-remarks-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 與 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的一般備註  
 可同時執行多個 DBCC FREEPROCCACHE 命令。
 在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，當傳入的查詢編譯新計畫，而不是重複使用任何先前快取的計畫時，清除計畫快取可能會導致查詢效能暫時降低。 
 
 DBCC FREEPROCCACHE (計算) 只會在於計算節點上執行時，使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新編譯查詢。 它不會使 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 重新編譯在控制節點上產生的平行處理查詢計劃。
 DBCC FREEPROCCACHE 可以在執行期間取消。
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的限制事項  
+## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的限制事項  
 DBCC FREEPROCCACHE 不可以在交易內執行。
 不支援在 EXPLAIN 陳述式中執行 DBCC FREEPROCCACHE。
   
-## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的中繼資料  
+## <a name="metadata-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的中繼資料  
 執行 DBCC FREEPROCCACHE 時，新的資料列會加入至 sys.pdw_exec_requests 系統檢視。
 
-## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>範例：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="examples-ssnoversion"></a>範例：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>A. 從計畫快取清除查詢計劃  
 下列範例會從計畫快取中指定查詢計劃控制代碼，藉以清除查詢計劃。 為確保範例查詢位於計畫快取中，會先執行查詢。 系統會查詢 `sys.dm_exec_cached_plans` 和 `sys.dm_exec_sql_text` 動態管理檢視以傳回查詢的計劃控制代碼。 
@@ -187,7 +187,7 @@ DBCC FREEPROCCACHE ('default');
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>D. DBCC FREEPROCCACHE 基本語法範例  
 下列範例會移除計算節點中所有現有的查詢計劃快取。 雖然內容是設定為 UserDbSales，但系統會移除所有資料庫的計算節點查詢計劃。 WITH NO_INFOMSGS 子句可防止結果中出現資訊訊息。  

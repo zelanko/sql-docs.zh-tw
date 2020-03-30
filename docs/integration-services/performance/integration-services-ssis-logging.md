@@ -30,10 +30,10 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287882"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 記錄
@@ -67,7 +67,7 @@ ms.locfileid: "79287882"
   
 -   「XML 檔案」記錄提供者，它可將記錄檔寫入 XML 檔案中。 此提供者的預設副檔名為 .xml。  
   
- 如果您將記錄提供者加入封裝或以程式設計的方式設定記錄，則可以使用 ProgID 或 ClassID 來識別記錄提供者，以取代使用 [設定 SSIS 記錄]  對話方塊中所顯示之 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 的名稱。  
+ 如果您將記錄提供者加入封裝或以程式設計的方式設定記錄，則可以使用 ProgID 或 ClassID 來識別記錄提供者，以取代使用 [設定 SSIS 記錄][!INCLUDE[ssIS](../../includes/ssis-md.md)] **對話方塊中所顯示之 [** 設計師] 的名稱。  
   
  下表列出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含之記錄提供者的 ProgID 和 ClassID，以及記錄提供者寫入記錄檔的位置。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "79287882"
   
  您還可以建立自訂記錄提供者。 如需詳細資訊，請參閱 [建立自訂記錄提供者](../../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)。  
   
- 封裝中的記錄提供者是此封裝之記錄提供者集合的成員。 使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 建立封裝並實作記錄時，您可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [封裝總管]  索引標籤上，看到 [記錄提供者]  資料夾中集合成員的清單。  
+ 封裝中的記錄提供者是此封裝之記錄提供者集合的成員。 使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 建立封裝並實作記錄時，您可在  **設計師的 [封裝總管]** **索引標籤上，看到 [記錄提供者]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 資料夾中集合成員的清單。  
   
  您可以藉由提供記錄提供者的名稱和描述，並指定記錄提供者使用的連接管理員，來設定記錄提供者。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄提供者會使用 OLE DB 連接管理員。 「文字檔」、「 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]」和「XML 檔案」記錄提供者全都使用「檔案」連線管理員。 Windows 事件記錄檔提供者不使用連接管理員，因為它會直接寫入「Windows 事件記錄檔」中。 如需詳細資訊，請參閱 [OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md) 和 [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "79287882"
 |運算子|啟動封裝之使用者的識別。|  
 |SourceName|發生記錄事件之容器或工作的名稱。|  
 |SourceID|封裝的唯一識別碼；「For 迴圈」、「Foreach 迴圈」或「時序」容器；或者發生記錄事件的工作。|  
-|ExecutionID|封裝執行執行個體的 GUID。<br /><br /> 注意:執行單一套件可能會建立記錄項目，其中包含 ExecutionID 項目的不同值。 例如，當您在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中執行封裝時，驗證階段可能會建立記錄項目，其中包含了對應到 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 ExecutionID 元素。 但是，執行階段可能會建立記錄項目，其中包含了對應到 dtshost.exe 的 ExecutionID 元素。 在另一個範例中，當您執行包含「執行封裝」工作的封裝時，每一個工作都會執行子封裝。 這些子封裝可能會建立記錄項目，其中包含了與父封裝建立之記錄項目不同的 ExecutionID 元素。|  
+|ExecutionID|封裝執行執行個體的 GUID。<br /><br /> 請注意：執行單一封裝可能會建立記錄項目，其中包含不同的 ExecutionID 元素值。 例如，當您在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中執行封裝時，驗證階段可能會建立記錄項目，其中包含了對應到 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 ExecutionID 元素。 但是，執行階段可能會建立記錄項目，其中包含了對應到 dtshost.exe 的 ExecutionID 元素。 在另一個範例中，當您執行包含「執行封裝」工作的封裝時，每一個工作都會執行子封裝。 這些子封裝可能會建立記錄項目，其中包含了與父封裝建立之記錄項目不同的 ExecutionID 元素。|  
 |MessageText|與記錄項目相關聯的訊息。|  
 |DataBytes|記錄項目特定的位元組陣列。 此欄位的意義會因記錄項目的不同而不同。|  
   
@@ -118,7 +118,7 @@ ms.locfileid: "79287882"
 |DataCode|選擇性的整數值，一般會包含 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 列舉的值，指出執行容器或工作的結果：<br /><br /> 0 - 成功<br /><br /> 1 - 失敗<br /><br /> 2 - 已完成<br /><br /> 3 - 已取消|  
   
 #### <a name="log-entries"></a>記錄項目  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援預先定義事件上的記錄項目，並為許多 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件提供自訂記錄項目。 在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中的 [設定 SSIS 記錄]  對話方塊會列出這些事件和自訂記錄項目。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援預先定義事件上的記錄項目，並為許多 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件提供自訂記錄項目。 在 [ **設計師] 中的 [設定 SSIS 記錄]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 對話方塊會列出這些事件和自訂記錄項目。  
   
  下表描述的預先定義事件可在發生執行階段事件時寫入記錄項目。 這些記錄項目會套用至可執行檔、封裝和封裝所包含的工作和容器。 記錄項目的名稱與引發並造成寫入記錄項目之執行階段事件的名稱相同。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "79287882"
 |**OnVariableValueChanged**|在變數的值變更時寫入記錄項目。|  
 |**OnWarning**|發生警告時寫入記錄項目。|  
 |**PipelineComponentTime**|針對每個資料流程元件，寫入每個驗證和執行階段的記錄項目。 記錄項目會指定每個階段的處理時間。|  
-|**Diagnostic**<br /><br /> **DiagnosticEx**|寫入提供診斷資訊的記錄項目。<br /><br /> 例如，您可以在每次呼叫外部資料提供者前後記錄訊息。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。<br /><br /> 當您想要在有錯誤的資料流程資料行中尋找資料行名稱時，請記錄 **DiagnosticEx** 事件。 此事件會將資料流程歷程對應寫入記錄檔。 您接著可以使用錯誤輸出所擷取的資料行識別碼，在此歷程對應中查詢資料行名稱。 如需詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> 請注意， **DiagnosticEx** 事件不會在其 XML 輸出中保留空白，以縮減記錄檔的大小。 若要改善可讀性，可將記錄檔複製到 XML 編輯器 (例如，在 Visual Studio 中)，該編輯器需支援 XML 格式設定和語法反白顯示。<br /><br /> 注意:如果使用 SQL Server 記錄提供者來記錄 **DiagnosticEx** 事件，輸出可能被截斷。 SQL Server 記錄提供者的 [訊息]  欄位類型是 nvarchar(2048)。 若要避免發生截斷，記錄 **DiagnosticEx** 事件時請使用不同的記錄提供者。|  
+|**Diagnostic**<br /><br /> **DiagnosticEx**|寫入提供診斷資訊的記錄項目。<br /><br /> 例如，您可以在每次呼叫外部資料提供者前後記錄訊息。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。<br /><br /> 當您想要在有錯誤的資料流程資料行中尋找資料行名稱時，請記錄 **DiagnosticEx** 事件。 此事件會將資料流程歷程對應寫入記錄檔。 您接著可以使用錯誤輸出所擷取的資料行識別碼，在此歷程對應中查詢資料行名稱。 如需詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> 請注意， **DiagnosticEx** 事件不會在其 XML 輸出中保留空白，以縮減記錄檔的大小。 若要改善可讀性，可將記錄檔複製到 XML 編輯器 (例如，在 Visual Studio 中)，該編輯器需支援 XML 格式設定和語法反白顯示。<br /><br /> 注意︰如果使用 SQL Server 記錄提供者來記錄 **DiagnosticEx** 事件，輸出可能被截斷。 SQL Server 記錄提供者的 [訊息]  欄位類型是 nvarchar(2048)。 若要避免發生截斷，記錄 **DiagnosticEx** 事件時請使用不同的記錄提供者。|  
   
  封裝及許多工作都有可以啟用記錄功能的自訂記錄項目。 例如，[傳送郵件] 工作會提供 **SendMailTaskBegin** 自訂記錄項目，其會在 [傳送郵件] 工作開始執行時，但在工作傳送電子郵件訊息之前，記錄資訊。 如需詳細資訊，請參閱 [自訂訊息以進行記錄](#custom_messages)。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "79287882"
  為了消除這種模糊不清的狀況，您應該更新這個新封裝的名稱和 GUID。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，您可以在 [屬性] 視窗的 **ID** 屬性中重新產生 GUID，並更新 **Name** 屬性的值。 您也可以使用程式設計方式或 **dtutil** 命令提示字元來變更 GUID 和名稱。 如需詳細資訊，請參閱 [設定封裝屬性](../../integration-services/set-package-properties.md) 和 [dtutil 公用程式](../../integration-services/dtutil-utility.md)。  
   
 ### <a name="parent-logging-options"></a>父記錄選項  
- 通常，工作和「For 迴圈」、「Foreach 迴圈」和「時序」容器的記錄選項符合封裝或父容器的選項。 在該情況下，可以設定它們從其父容器繼承記錄選項。 例如，在包含「執行 SQL」工作的「For 迴圈」容器中，「執行 SQL」工作可以使用在「For 迴圈」容器上設定的記錄選項。 若要使用父記錄選項，可將容器的 LoggingMode 屬性設為 **UseParentSetting**。 可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [屬性]  視窗中，或透過 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 的 [設定 SSIS 記錄]  對話方塊設定此屬性。  
+ 通常，工作和「For 迴圈」、「Foreach 迴圈」和「時序」容器的記錄選項符合封裝或父容器的選項。 在該情況下，可以設定它們從其父容器繼承記錄選項。 例如，在包含「執行 SQL」工作的「For 迴圈」容器中，「執行 SQL」工作可以使用在「For 迴圈」容器上設定的記錄選項。 若要使用父記錄選項，可將容器的 LoggingMode 屬性設為 **UseParentSetting**。 可以在  **的 [屬性]** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 視窗中，或透過 [ **設計師] 的 [設定 SSIS 記錄]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 對話方塊設定此屬性。  
   
 ### <a name="logging-templates"></a>記錄範本  
  在 [設定 SSIS 記錄]  對話方塊中，還可以將常用的記錄組態建立和儲存為範本，然後在多個封裝中使用這些範本。 這使得跨多個封裝套用一致的記錄策略，以及修改封裝的記錄設定變得很容易，只要更新後再套用範本即可。 範本以 XML 檔案儲存。  
@@ -156,7 +156,7 @@ ms.locfileid: "79287882"
   
 1.  啟用封裝及其工作的記錄功能。 記錄可以發生在封裝、容器和工作層級上。 您可以為封裝、容器和工作指定不同的記錄檔。  
   
-2.  選取記錄提供者，並為封裝加入記錄。 記錄檔僅可以在封裝層級建立，且工作或容器必須使用為封裝建立的記錄檔之一。 每個記錄檔都與下列記錄提供者之一相關聯：文字檔、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Windows 記錄檔或 XML 檔案。 如需詳細資訊，請參閱 [在 SQL Server Data Tools 中啟用封裝記錄功能](#ssdt)。  
+2.  選取記錄提供者，並為封裝加入記錄。 記錄檔僅可以在封裝層級建立，且工作或容器必須使用為封裝建立的記錄檔之一。 每個記錄檔都與下列記錄提供者之一相關聯：文字檔、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Windows 記錄檔或 XML 檔案。 如需詳細資訊，請參閱 [在 SQL Server Data Tools 中啟用封裝記錄功能](#ssdt)。  
   
 3.  選取事件，以及要在記錄檔中擷取之每個事件的記錄結構描述資訊。 如需詳細資訊，請參閱 [使用已儲存的組態檔來設定記錄](#saved_config)。  
   
@@ -214,7 +214,7 @@ ms.locfileid: "79287882"
   
 -   名為 "Sum Quantity and LineItemTotalCost" 的「彙總」轉換花費了結合的 220 毫秒 (141 毫秒在 PrimeOutput 而 79 毫秒在 ProcessInput) 來執行計算以及將資料傳遞給下一個轉換。  
 
-## <a name="ssdt"></a> 在 SQL Server Data Tools 中啟用封裝記錄功能
+## <a name="enable-package-logging-in-sql-server-data-tools"></a><a name="ssdt"></a> 在 SQL Server Data Tools 中啟用封裝記錄功能
   本程序描述如何將記錄檔加入封裝、設定封裝層級的記錄，以及將記錄組態儲存至 XML 檔案。 您可以僅在封裝層級加入記錄檔，但封裝無需執行記錄即可啟用封裝所包含之容器中的記錄。  
   
 > [!IMPORTANT]  
@@ -230,7 +230,7 @@ ms.locfileid: "79287882"
   
 3.  在 [提供者類型]  清單中選取記錄提供者，然後按一下 [加入]  。  
   
-4.  在 [設定]  資料行中，選取連線管理員，或按一下 [\<新增連線>]  ，為記錄提供者建立適當類型的新連線管理員。 因所選提供者的不同，使用下列連接管理員之一：  
+4.  在 [設定]  資料行中，選取連線管理員，或按一下 [**新增連線>]\<** ，為記錄提供者建立適當類型的新連線管理員。 因所選提供者的不同，使用下列連接管理員之一：  
   
     -   若為「文字」檔案，請使用「檔案」連接管理員。 如需詳細資訊，請參閱 [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -262,7 +262,7 @@ ms.locfileid: "79287882"
   
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
 
-## <a name="configure_logs"></a> 設定 SSIS 記錄對話方塊
+## <a name="configure-ssis-logs-dialog-box"></a><a name="configure_logs"></a> 設定 SSIS 記錄對話方塊
   使用 **[設定 SSIS 記錄]** 對話方塊定義封裝的記錄選項。  
   
  **您想要做什麼事？**  
@@ -275,12 +275,12 @@ ms.locfileid: "79287882"
   
 4.  [設定 [詳細資料] 索引標籤上的選項](#detail)  
   
-###  <a name="open_dialog"></a> 開啟 [設定 SSIS 記錄] 對話方塊。  
+###  <a name="open-the-configure-ssis-logs-dialog-box"></a><a name="open_dialog"></a> 開啟 [設定 SSIS 記錄] 對話方塊。  
  **開啟 [設定 SSIS 記錄] 對話方塊**  
   
 -   在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中，按一下 **[SSIS]** 功能表上的 **[記錄]** 。  
   
-###  <a name="container"></a> 設定 [容器] 窗格中的選項  
+###  <a name="configure-the-options-in-the-containers-pane"></a><a name="container"></a> 設定 [容器] 窗格中的選項  
  使用 **[設定 SSIS 記錄]** 對話方塊的 **[容器]** 窗格，即可啟用封裝及其容器以進行記錄。  
   
 #### <a name="options"></a>選項。  
@@ -295,7 +295,7 @@ ms.locfileid: "79287882"
   
  如果容器呈暗灰色，而您要在容器上設定記錄選項，請按兩下其核取方塊。 第一次點選時會清除核取方塊，而第二次點選則會選取核取方塊，讓您可以選擇要使用的記錄提供者和選取要記錄的資訊。  
   
-###  <a name="provider"></a> 設定 [提供者與記錄] 索引標籤上的選項  
+###  <a name="configure-the-options-on-the-providers-and-logs-tab"></a><a name="provider"></a> 設定 [提供者與記錄] 索引標籤上的選項  
  使用 [設定 SSIS 記錄]  對話方塊的 [提供者與記錄]  索引標籤，即可建立和設定用於擷取執行階段事件的記錄。  
   
 #### <a name="options"></a>選項。  
@@ -311,15 +311,15 @@ ms.locfileid: "79287882"
  **說明**  
  描述欄位是可編輯的。 按一下，然後修改記錄的預設描述。  
   
- **Configuration**  
+ **組態**  
  在清單中選取現有連線管理員，或按一下 [\<新增連線...>]  ，即可建立新的連線管理員。 視記錄提供者的類型而定，您可以設定 OLE DB 連接管理員或檔案連接管理員。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔的記錄提供者不需要有連接。  
   
- 相關主題：[OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)、[File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
+ 相關主題： [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) 、 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
  **刪除**  
  選取記錄提供者，然後按一下 [刪除]  。  
   
-###  <a name="detail"></a> 設定 [詳細資料] 索引標籤上的選項  
+###  <a name="configure-the-options-on-the-details-tab"></a><a name="detail"></a> 設定 [詳細資料] 索引標籤上的選項  
  使用 **[設定 SSIS 記錄]** 對話方塊的 **[詳細資料]** 索引標籤，即可指定要啟用記錄的事件以及要記錄的資訊詳細資料。 您選取的資訊適用於封裝中的所有記錄提供者。 例如，您無法寫入部份資訊到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，而寫入不同資訊到文字檔。  
   
 #### <a name="options"></a>選項。  
@@ -351,7 +351,7 @@ ms.locfileid: "79287882"
  **儲存**  
  將組態詳細資料儲存為 XML 檔案的範本。  
 
-## <a name="saved_config"></a> 使用已儲存的組態檔來設定記錄
+## <a name="configure-logging-by-using-a-saved-configuration-file"></a><a name="saved_config"></a> 使用已儲存的組態檔來設定記錄
   此程序描述如何透過載入先前儲存的記錄組態檔，為封裝中的新容器設定記錄。  
   
  依預設，封裝中的所有容器都使用與其父容器相同的記錄組態。 例如，「Foreach 迴圈」中的工作會使用與「Foreach 迴圈」相同的記錄組態。  
@@ -382,7 +382,7 @@ ms.locfileid: "79287882"
   
 9. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
 
-## <a name="server_logging"></a> 在 SSIS 伺服器上啟用封裝執行的記錄功能
+## <a name="enable-logging-for-package-execution-on-the-ssis-server"></a><a name="server_logging"></a> 在 SSIS 伺服器上啟用封裝執行的記錄功能
   本主題描述如何在執行已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝時，設定或變更封裝的記錄層級。 執行封裝時設定的記錄層級會覆寫您在設計期間於 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中設定的封裝記錄。 如需詳細資訊，請參閱 [在 SQL Server Data Tools 中啟用封裝記錄功能](#ssdt) 。  
   
  在 SQL Server 的 [伺服器屬性]  中，您可以在 [伺服器記錄層級]  屬性下方，選取預設的全伺服器記錄層級。 您可以挑選本主題所說明的其中一個內建記錄層級，或者可挑選現有的自訂記錄層級。 選取的記錄層級預設會套用到所有部署到 SSIS 目錄的封裝。 它預設也會套用到執行 SSIS 封裝的 SQL 代理程式工作步驟。  
@@ -438,7 +438,7 @@ ms.locfileid: "79287882"
   
 -   只有 ssis_admin 或 sysadmin 角色的使用者，才可以建立、 更新或刪除自訂的記錄層級。  
 
-## <a name="custom_messages"></a> 自訂訊息以進行記錄
+## <a name="custom-messages-for-logging"></a><a name="custom_messages"></a> 自訂訊息以進行記錄
 SQL Server Integration Services 提供一組豐富的自訂事件，為套件和許多工作寫入記錄項目。 您可以使用這些項目，透過記錄預先定義事件或使用者自訂訊息，來儲存關於執行進度、結果和問題的詳細資訊，以供稍後分析。 比方說，您可以記錄大量插入開始和結束的時間，以便識別封裝執行時的效能問題。  
   
  自訂記錄項目是一組與可用於封裝以及所有容器和工作的標準記錄事件不同的項目。 自訂記錄項目可以用來擷取與封裝中特定工作相關的有用資訊。 例如，「執行 SQL」工作記錄的其中一個自訂記錄項目會在記錄檔中記錄該工作所執行的 SQL 陳述式。  
@@ -491,7 +491,7 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
   
 ### <a name="log-entries"></a>記錄項目  
   
-####  <a name="Package"></a> 封裝  
+####  <a name="package"></a><a name="Package"></a> 封裝  
  下表列出封裝的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -500,7 +500,7 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
 |**PackageEnd**|指出封裝已經完成。 此記錄項目會自動寫入記錄檔中。 您無法排除它。|  
 |**Diagnostic**|提供影響封裝執行之系統組態的相關資訊，例如可以同時執行的可執行檔數目。<br /><br /> **Diagnostic** 記錄項目也包括呼叫外部資料提供者之前和之後的項目。|  
   
-####  <a name="BulkInsert"></a> 大量插入工作  
+####  <a name="bulk-insert-task"></a><a name="BulkInsert"></a> 大量插入工作  
  下表列出「大量插入」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -509,7 +509,7 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
 |**DTSBulkInsertTaskEnd**|指出大量插入已經完成。|  
 |**DTSBulkInsertTaskInfos**|提供有關工作的描述性資訊。|  
   
-####  <a name="DataFlow"></a> 資料流程工作  
+####  <a name="data-flow-task"></a><a name="DataFlow"></a> 資料流程工作  
  下表列出「資料流程」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -525,17 +525,17 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
 |**PipelineExecutionTrees**|報告資料流程中的配置執行樹狀目錄。 資料流程引擎的排程器使用這些樹狀目錄來建立資料流程的執行計畫。|  
 |**PipelineInitialization**|提供有關工作的初始化資訊。 這項資訊包括作為 BLOB 資料暫存儲存位置使用的目錄、預設緩衝區大小，以及緩衝區中的資料列數目。 根據資料流程工作的組態而定，可能會寫入多個記錄項目。|  
   
-####  <a name="ExecuteDTS200"></a> 執行 DTS 2000 工作  
+####  <a name="execute-dts-2000-task"></a><a name="ExecuteDTS200"></a> 執行 DTS 2000 工作  
  下表列出「執行 DTS 2000」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
 |---------------|-----------------|  
 |**ExecuteDTS80PackageTaskBegin**|指出工作已經開始執行 DTS 2000 封裝。|  
-|**ExecuteDTS80PackageTaskEnd**|指出工作已經完成。<br /><br /> 注意:DTS 2000 套件可能會在工作結束後繼續執行。|  
+|**ExecuteDTS80PackageTaskEnd**|指出工作已經完成。<br /><br /> 注意：DTS 2000 封裝可能會在工作結束之後繼續執行。|  
 |**ExecuteDTS80PackageTaskTaskInfo**|提供有關工作的描述性資訊。|  
 |**ExecuteDTS80PackageTaskTaskResult**|報告工作執行之 DTS 2000 封裝的執行結果。|  
   
-####  <a name="ExecuteProcess"></a> 執行處理工作  
+####  <a name="execute-process-task"></a><a name="ExecuteProcess"></a> 執行處理工作  
  下表列出「執行處理」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -543,21 +543,21 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
 |**ExecuteProcessExecutingProcess**|提供工作設定執行之可執行檔的執行處理相關資訊。<br /><br /> 將會寫入兩個記錄項目。 其中一個包含工作執行之可執行檔的名稱和位置相關資訊，另一個項目則記錄可執行檔的結束。|  
 |**ExecuteProcessVariableRouting**|提供有關哪些變數會傳到可執行檔之輸入和輸出的相關資訊。 將會寫入 stdin (輸入)、stdout (輸出) 和 stderr (錯誤輸出) 的記錄項目。|  
   
-####  <a name="ExecuteSQL"></a> 執行 SQL 工作  
+####  <a name="execute-sql-task"></a><a name="ExecuteSQL"></a> 執行 SQL 工作  
  下表描述「執行 SQL」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|提供 SQL 陳述式執行階段的相關資訊。 寫入記錄項目的時機包括在工作取得資料庫連接時、在工作開始準備 SQL 陳述式時，以及在 SQL 陳述式執行完成之後。 準備階段的記錄項目包含工作所使用的 SQL 陳述式。|  
   
-####  <a name="FileSystem"></a> 檔案系統工作  
+####  <a name="file-system-task"></a><a name="FileSystem"></a> 檔案系統工作  
  下表描述「檔案系統」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
 |---------------|-----------------|  
 |**FileSystemOperation**|報告工作執行的作業。 記錄項目會在檔案系統作業開始時寫入，項目中包含有關來源和目的地的資訊。|  
   
-####  <a name="FTP"></a> FTP 工作  
+####  <a name="ftp-task"></a><a name="FTP"></a> FTP 工作  
  下表列出 FTP 工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -565,7 +565,7 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
 |**FTPConnectingToServer**|指出工作已經起始與 FTP 伺服器的連接。|  
 |**FTPOperation**|報告工作執行之 FTP 作業的開始及其類型。|  
   
-####  <a name="MessageQueue"></a> 訊息佇列工作  
+####  <a name="message-queue-task"></a><a name="MessageQueue"></a> 訊息佇列工作  
  下表列出「訊息佇列」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -579,14 +579,14 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
 |**MSMQTaskInfo**|提供有關工作的描述性資訊。|  
 |**MSMQTaskTimeOut**|指出工作已經逾時。|  
   
-####  <a name="Script"></a> 指令碼工作  
+####  <a name="script-task"></a><a name="Script"></a> 指令碼工作  
  下表描述「指令碼」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
 |---------------|-----------------|  
 |**ScriptTaskLogEntry**|報告在指令碼內實作記錄的結果。 每次呼叫 **Log** 物件的 **Dts** 方法時，都會寫入記錄項目。 項目會在程式碼執行時寫入。 如需詳細資訊，請參閱 [Logging in the Script Task](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)。|  
   
-####  <a name="SendMail"></a> 傳送郵件工作  
+####  <a name="send-mail-task"></a><a name="SendMail"></a> 傳送郵件工作  
  下表列出「傳送郵件」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -595,7 +595,7 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
 |**SendMailTaskEnd**|指出工作已經完成傳送電子郵件訊息。|  
 |**SendMailTaskInfo**|提供有關工作的描述性資訊。|  
   
-####  <a name="TransferDatabase"></a> 傳送資料庫工作  
+####  <a name="transfer-database-task"></a><a name="TransferDatabase"></a> 傳送資料庫工作  
  下表列出「傳送資料庫」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -603,7 +603,7 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
 |**SourceDB**|指定工作所複製的資料庫。|  
 |**SourceSQLServer**|指定從中複製資料庫的電腦。|  
   
-####  <a name="TransferErrorMessages"></a> 傳送錯誤訊息工作  
+####  <a name="transfer-error-messages-task"></a><a name="TransferErrorMessages"></a> 傳送錯誤訊息工作  
  下表列出「傳送錯誤訊息」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -611,7 +611,7 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
 |**TransferErrorMessagesTaskFinishedTransferringObjects**|指出工作已經完成傳送錯誤訊息。|  
 |**TransferErrorMessagesTaskStartTransferringObjects**|指出工作已經開始傳送錯誤訊息。|  
   
-####  <a name="TransferJobs"></a> 傳送作業工作  
+####  <a name="transfer-jobs-task"></a><a name="TransferJobs"></a> 傳送作業工作  
  下表列出「傳送作業」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -619,7 +619,7 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
 |**TransferJobsTaskFinishedTransferringObjects**|指出工作已經完成傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。|  
 |**TransferJobsTaskStartTransferringObjects**|指出工作已經開始傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。|  
   
-####  <a name="TransferLogins"></a> 傳送登入工作  
+####  <a name="transfer-logins-task"></a><a name="TransferLogins"></a> 傳送登入工作  
  下表列出「傳送登入」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -627,7 +627,7 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
 |**TransferLoginsTaskFinishedTransferringObjects**|指出工作已經完成傳送登入。|  
 |**TransferLoginsTaskStartTransferringObjects**|指出工作已經開始傳送登入。|  
   
-####  <a name="TransferMasterStoredProcedures"></a> 傳送主要預存程序工作  
+####  <a name="transfer-master-stored-procedures-task"></a><a name="TransferMasterStoredProcedures"></a> 傳送主要預存程序工作  
  下表列出「傳送主要預存程序」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -635,7 +635,7 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
 |**TransferStoredProceduresTaskFinishedTransferringObjects**|指出工作已經完成傳送儲存在 **master** 資料庫中的使用者定義預存程序。|  
 |**TransferStoredProceduresTaskStartTransferringObjects**|指出工作已經開始傳送儲存在 **master** 資料庫中的使用者定義預存程序。|  
   
-####  <a name="TransferSQLServerObjects"></a> 傳送 SQL Server 物件工作  
+####  <a name="transfer-sql-server-objects-task"></a><a name="TransferSQLServerObjects"></a> 傳送 SQL Server 物件工作  
  下表列出「傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -643,7 +643,7 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
 |**TransferSqlServerObjectsTaskFinishedTransferringObjects**|指出工作已經完成傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫物件。|  
 |**TransferSqlServerObjectsTaskStartTransferringObjects**|指出工作已經開始傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫物件。|  
   
-####  <a name="WebServices"></a> Web 服務工作  
+####  <a name="web-services-task"></a><a name="WebServices"></a> Web 服務工作  
  下表列出您可以為「Web 服務」工作啟用的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -652,7 +652,7 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
 |**WSTaskEnd**|工作已經完成 Web 服務方法。|  
 |**WSTaskInfo**|關於工作的描述性資訊。|  
   
-####  <a name="WMIDataReader"></a> WMI 資料讀取器工作  
+####  <a name="wmi-data-reader-task"></a><a name="WMIDataReader"></a> WMI 資料讀取器工作  
  下表列出「WMI 資料讀取器」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -660,7 +660,7 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
 |**WMIDataReaderGettingWMIData**|指出工作已經開始讀取 WMI 資料。|  
 |**WMIDataReaderOperation**|報告工作已執行的 WQL 查詢。|  
   
-####  <a name="WMIEventWatcher"></a> WMI 事件監看員工作  
+####  <a name="wmi-event-watcher-task"></a><a name="WMIEventWatcher"></a> WMI 事件監看員工作  
  下表列出「WMI 事件監看員」工作的自訂記錄項目。  
   
 |記錄項目|描述|  
@@ -669,7 +669,7 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
 |**WMIEventWatcherTimedout**|指出工作已經逾時。|  
 |**WMIEventWatcherWatchingForWMIEvents**|指出工作已經開始執行 WQL 查詢。 項目包含查詢。|  
   
-####  <a name="XML"></a> XML 工作  
+####  <a name="xml-task"></a><a name="XML"></a> XML 工作  
  下表描述 XML 工作的自訂記錄項目。  
   
 |記錄項目|描述|  

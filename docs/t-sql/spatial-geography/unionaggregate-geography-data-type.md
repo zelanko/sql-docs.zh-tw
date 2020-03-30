@@ -18,10 +18,10 @@ ms.assetid: 1a3aeef1-5b0e-4ae8-aeb7-c4aab22f42ab
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 17c5ec83217c072ada5d112bab1dd4f0105e0971
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68120665"
 ---
 # <a name="unionaggregate-geography-data-type"></a>UnionAggregate (geography 資料類型)

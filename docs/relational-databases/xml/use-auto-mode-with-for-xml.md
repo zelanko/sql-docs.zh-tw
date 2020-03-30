@@ -16,10 +16,10 @@ ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5331a474d24d2204ca81e37427fc2615ecede622
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68078005"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>搭配 FOR XML 使用 AUTO 模式

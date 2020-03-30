@@ -24,10 +24,10 @@ ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 346044530087c40c468abe9d304231ce06220845
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67984430"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY Service Broker 權限 (Transact-SQL)

@@ -15,10 +15,10 @@ ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: dcff763612b51918eb13336379c01f1c1ac9e108
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822087"
 ---
 # <a name="driver-and-client-connectivity-support-for-availability-groups"></a>可用性群組的驅動程式和用戶端連線支援
@@ -27,7 +27,7 @@ ms.locfileid: "74822087"
   本主題描述 Always On 可用性群組的用戶端連線考量，包括用戶端設定和設定的必要條件、限制和建議。  
   
  
-##  <a name="ClientConnSupport"></a> 用戶端連接性支援  
+##  <a name="client-connectivity-support"></a><a name="ClientConnSupport"></a> 用戶端連接性支援  
  底下章節提供有關 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支援用戶端連接性的資訊。  
   
  **驅動程式支援**  
@@ -52,7 +52,7 @@ ms.locfileid: "74822087"
 > [!IMPORTANT]  
 >  若要連接到可用性群組接聽程式，用戶端必須使用 TCP 連接字串。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [建立及設定可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   

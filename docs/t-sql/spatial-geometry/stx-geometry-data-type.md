@@ -18,10 +18,10 @@ ms.assetid: 2aef77e8-0460-43f9-bad6-2aae6d8c36f9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8a6b8896dadf8abc17d2fb3b3836d53815b7d3f8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68066163"
 ---
 # <a name="stx-geometry-data-type"></a>STX (geometry 資料類型)

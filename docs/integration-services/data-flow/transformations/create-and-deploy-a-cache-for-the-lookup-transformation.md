@@ -15,10 +15,10 @@ ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e53569a8680ec3a6414aeeaa83e9322e77568ecf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297978"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>針對查閱轉換來建立及部署快取

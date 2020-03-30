@@ -17,10 +17,10 @@ ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fc7a59b36d7fce90315833baf8461a1860be2a64
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68140912"
 ---
 # <a name="revoke-certificate-permissions-transact-sql"></a>REVOKE 憑證權限 (Transact-SQL)

@@ -19,12 +19,12 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f088c526666dcd81d269bc68479914202969a2e0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 55acdb31113dde48aeda980e3823f194f66d15c0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67934042"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80243418"
 ---
 # <a name="execute-a-stored-procedure"></a>執行預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,9 +49,9 @@ ms.locfileid: "67934042"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   比對系統程序名稱時，會使用呼叫資料庫定序。 因此，您務必在程序呼叫中使用大小寫完全相符的系統程序名稱。 例如，如果此程式碼是在有區分大小寫定序的資料庫內容中執行，就會失敗：  
   
@@ -63,7 +63,7 @@ ms.locfileid: "67934042"
   
 -   如果使用者定義程序與系統程序的名稱相同，則使用者定義程序可能永遠不會執行。  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   執行系統預存程序  
   
@@ -121,13 +121,13 @@ ms.locfileid: "67934042"
   
     2.  停止某個程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時執行。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  如需詳細資訊，請參閱 [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md) 和 [EXECUTE AS 子句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  如需詳細資訊，請參閱 [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)中的預存程序。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-execute-a-stored-procedure"></a>若要執行預存程序  
   
@@ -156,7 +156,7 @@ ms.locfileid: "67934042"
   
 5.  若要執行預存程序，請按一下 **[確定]** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-execute-a-stored-procedure"></a>若要執行預存程序  
   
@@ -185,7 +185,7 @@ GO
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
-    , @OptionName = ] 'startup'   
+    , @OptionName = 'startup'   
     , @OptionValue = 'on';  
 ```  
   
@@ -204,7 +204,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
     , @OptionValue = 'off';  
 ```  
   
-###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
   
 ## <a name="see-also"></a>另請參閱  
  [指定參數](../../relational-databases/stored-procedures/specify-parameters.md)   

@@ -16,10 +16,10 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4c4924ee6dd1c053119f7ceaf97cd1dbd4d7e95f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294220"
 ---
 # <a name="data-profile-viewer"></a>資料設定檔檢視器

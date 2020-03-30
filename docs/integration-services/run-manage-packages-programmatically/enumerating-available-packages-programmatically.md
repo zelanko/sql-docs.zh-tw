@@ -15,10 +15,10 @@ ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 80bf829afcbc93e397e8ea797f22905b3b55c0cd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295762"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>以程式設計方式列舉可用的封裝
@@ -28,7 +28,7 @@ ms.locfileid: "71295762"
 
   <a name="top"></a> 當您以程式設計方式使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件時，可能會需要判別個別的套件或資料夾是否存在，或是列舉可供載入與執行的預存套件。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別，提供各種方法以滿足這些需求。    
     
-##  <a name="exists"></a> 判斷套件或資料夾是否存在    
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> 判斷套件或資料夾是否存在    
  若要以程式設計方式判斷儲存的封裝是否存在，請在嘗試載入和執行封裝之前，呼叫下列其中一個方法：    
     
 |儲存位置|要呼叫的方法|    
@@ -45,7 +45,7 @@ ms.locfileid: "71295762"
     
  [回到頁首](#top)    
     
-##  <a name="listing"></a> 列舉可用的套件    
+##  <a name="enumerating-available-packages"></a><a name="listing"></a> 列舉可用的套件    
  若要以程式設計方式取得儲存的封裝清單，請呼叫下列其中一個方法：    
     
 |儲存位置|要呼叫的方法|    
@@ -55,7 +55,7 @@ ms.locfileid: "71295762"
     
  下列範例是可示範這些方法之使用的主控台應用程式。    
     
-###  <a name="listing_store"></a> 範例 (SSIS 套件存放區)    
+###  <a name="example-ssis-package-store"></a><a name="listing_store"></a> 範例 (SSIS 套件存放區)    
  使用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A> 方法來列出 SSIS 封裝存放區內儲存的封裝。 由 SSIS 封裝存放區所管理的預設儲存位置是檔案系統和 MSDB。 您可以在這些位置建立其他邏輯資料夾。    
     
 ```vb    
@@ -161,7 +161,7 @@ namespace EnumeratePackagesSSIS_CS
     
  [回到頁首](#top)    
     
-###  <a name="listing_sql"></a> 範例 (SQL Server)    
+###  <a name="example-sql-server"></a><a name="listing_sql"></a> 範例 (SQL Server)    
  使用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> 方法來列出儲存於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行個體中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封裝。    
     
 ```vb    

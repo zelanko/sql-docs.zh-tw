@@ -13,10 +13,10 @@ ms.assetid: 3333ab5b-2518-4753-a0a8-57df5e5af74f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 71e52cf9d65eb21df0553f5601bd4aefb3727175
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68021514"
 ---
 # <a name="symmetric-keys-on-user-databases"></a>使用者資料庫上的對稱金鑰

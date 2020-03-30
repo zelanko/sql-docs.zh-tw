@@ -25,10 +25,10 @@ ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 90eb59652bf64e6e3be4edaa3cce2f0bf3c02df7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67897993"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME (Transact-SQL)

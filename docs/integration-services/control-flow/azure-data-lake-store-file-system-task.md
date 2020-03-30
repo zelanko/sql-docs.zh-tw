@@ -13,10 +13,10 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 ms.openlocfilehash: cab5a97beb9f1bfe4d47844e2d0acdb49b28b924
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67947342"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store 檔案系統工作

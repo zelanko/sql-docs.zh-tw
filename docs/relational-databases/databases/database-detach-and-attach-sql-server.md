@@ -28,10 +28,10 @@ ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b6ee22299c854193d15e5fe4d1e2daabf7250bb
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287872"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>資料庫卸離與附加 (SQL Server)
@@ -39,14 +39,14 @@ ms.locfileid: "79287872"
 您可以將資料庫的資料和交易記錄檔卸離，然後再重新附加至相同或不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 若要將資料庫變更至同一台電腦上的不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，或要移動資料庫，卸離和附加資料庫相當有用。  
   
   
-##  <a name="Security"></a> Security  
+##  <a name="security"></a><a name="Security"></a> Security  
 檔案存取權限是在數個資料庫作業期間設定，包括卸離或附加資料庫。  
   
 > [!IMPORTANT]  
 > 建議您不要附加或還原來源不明或來源不受信任的資料庫。 這種資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。   
 > 使用來源不明或來源不受信任的資料庫之前，請先在非實際執行伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。  
   
-##  <a name="DetachDb"></a> 卸離資料庫  
+##  <a name="detaching-a-database"></a><a name="DetachDb"></a> 卸離資料庫  
 卸離資料庫時會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體移除該資料庫，但會保留資料庫中的資料檔和交易記錄檔。 您可使用這些檔案將資料庫附加到任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體，包括已卸離該資料庫的伺服器。  
   
 如果下列任一情況為真，則您不能卸離資料庫：  
@@ -83,7 +83,7 @@ ms.locfileid: "79287872"
   
 3.  再次卸離資料庫。  
   
-##  <a name="AttachDb"></a> 附加資料庫  
+##  <a name="attaching-a-database"></a><a name="AttachDb"></a> 附加資料庫  
 您可以附加複製的或卸離的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 當您將包含全文檢索目錄檔案的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫附加至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 伺服器執行個體時，系統就會從先前的位置附加這些目錄檔案以及其他資料庫檔案，此行為與 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的行為相同。 如需詳細資訊，請參閱 [升級全文檢索搜尋](../../relational-databases/search/upgrade-full-text-search.md)。  
   
 當您附加資料庫時，所有的資料檔 (MDF 和 NDF 檔案) 都必須可供使用。 如果資料檔案的路徑與資料庫第一次建立或最後一次附加時的路徑不同，您必須指定檔案的目前路徑。  
@@ -101,7 +101,7 @@ ms.locfileid: "79287872"
   
 -   如果附加的主要資料檔是唯讀的，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會假設該資料庫也是唯讀的。 如果是讀寫資料庫，在資料庫主要檔案所指定的位置一定會有一或多個記錄檔。 由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法更新儲存在主要檔案中的記錄檔位置，所以無法建立新記錄檔。  
  
-###  <a name="Metadata"></a> 附加資料庫時的中繼資料變更  
+###  <a name="metadata-changes-on-attaching-a-database"></a><a name="Metadata"></a> 附加資料庫時的中繼資料變更  
 卸離後再重新附加唯讀資料庫時，會遺失目前差異基底的備份資訊。 *「差異基底」* (Differential Base) 是資料庫或資料庫之檔案或檔案群組子集中所有資料的最新完整備份。 如果沒有基底備份資訊， **master** 資料庫就會變成無法與唯讀資料庫同步處理，而之後所採用的差異備份可能會提供非預期的結果。 因此，如果搭配唯讀資料庫使用差異備份，重新附加資料庫後，應該利用完整備份來建立新的差異基底。 如需差異備份的相關資訊，請參閱[差異備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
   
 附加時會啟動資料庫。 一般來說，附加資料庫時，會將資料庫設定為先前卸離或複製時的相同狀態。 不過，附加與卸離作業會停用資料庫的跨資料庫擁有權鏈結。 如需如何啟用鏈結的相關資訊，請參閱 [跨資料庫擁有權鏈結伺服器組態選項](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。 
@@ -112,14 +112,14 @@ ms.locfileid: "79287872"
 ### <a name="backup-and-restore-and-attach"></a>備份和還原與附加  
 就像任何完全或部分離線的資料庫一樣，內含還原中檔案的資料庫是無法附加的。 如果停止還原順序，則可以附加資料庫。 然後，還是可以重新啟動還原順序。  
   
-###  <a name="OtherServerInstance"></a> 將資料庫附加至另一個伺服器執行個體  
+###  <a name="attaching-a-database-to-another-server-instance"></a><a name="OtherServerInstance"></a> 將資料庫附加至另一個伺服器執行個體  
   
 > [!IMPORTANT]  
 > 由較新版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所建立的資料庫無法附加在舊版本中。 這可防止實際使用的資料庫搭配舊版的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]。 不過，這與中繼資料狀態相關，不會影響[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。   
   
 將資料庫附加至另一個伺服器執行個體時，為了提供一致的經驗給使用者和應用程式，您可能會需要在其他伺服器執行個體上為資料庫重新建立部分或所有中繼資料，例如登入和作業。 如需詳細資訊，請參閱[管理在另一個伺服器執行個體上提供資料庫時所需的中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
 **若要卸離資料庫**  
   
 -   [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  

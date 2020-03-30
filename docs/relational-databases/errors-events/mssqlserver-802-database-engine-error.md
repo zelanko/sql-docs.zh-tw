@@ -12,10 +12,10 @@ ms.assetid: 5892ed24-4dcb-4bf9-a8a4-a7ca898832d5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f880cd41cdde662913099e06ef93eacc17d94265
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68007042"
 ---
 # <a name="mssqlserver_802---database-engine-error"></a>MSSQLSERVER_802 - Database Engine 錯誤

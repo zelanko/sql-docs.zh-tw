@@ -18,10 +18,10 @@ ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ac8532f2cc5d8e2f50c0408ce983a61626748fb1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68066544"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (geography 資料類型)
@@ -59,10 +59,10 @@ _relative_
 ## <a name="return-types"></a>傳回型別  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**geography**  
   
-CLR 傳回型別：**SqlGeography**  
+CLR 傳回類型：**SqlGeography**  
   
 ## <a name="remarks"></a>備註  
-如果 _distance_ 不是數字 (NAN)，或如果 _distance_ 是正或負的無限值，則這個方法會擲回 **ArgumentException**。  如果 _tolerance_ 是零 (0) 而不是數字 (NaN) 或正的或負的無限值，則這個方法也會擲回 **ArgumentException**。  
+如果 **distance** 不是數字 (NAN)，或如果 _distance_ 是正或負的無限值，則這個方法會擲回 _ArgumentException_。  如果 **tolerance** 是零 (0) 而不是數字 (NaN) 或正的或負的無限值，則這個方法也會擲回 _ArgumentException_。  
   
 在某些情況下，`STBuffer()` 會傳回 **FullGlobe** 執行個體，例如，當緩衝距離大於兩極至赤道距離時，`STBuffer()` 會在兩極傳回 **FullGlobe** 執行個體。  
   

@@ -18,10 +18,10 @@ ms.assetid: 3fefdf7b-f931-404c-821c-82c0375eaf51
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a2b65decea6d737801ef1b0b37e44b0c8ae028af
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68101009"
 ---
 # <a name="spatial-types---geometry-transact-sql"></a>空間類型 - geometry (Transact-SQL)

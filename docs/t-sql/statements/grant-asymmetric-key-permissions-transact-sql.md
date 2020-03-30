@@ -18,10 +18,10 @@ ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f128cbf86d30cabe0aa00ce7033b7cd5b04c93e3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68065597"
 ---
 # <a name="grant-asymmetric-key-permissions-transact-sql"></a>GRANT 非對稱金鑰權限 (Transact-SQL)

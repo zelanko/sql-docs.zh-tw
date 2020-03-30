@@ -11,10 +11,10 @@ ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 68efb09a2b6d2a3ace441107ed9160fede154c8a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68085437"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>比較用於儲存 Blob 的選項 (SQL Server)
@@ -23,7 +23,7 @@ ms.locfileid: "68085437"
 
 討論和比較 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中儲存檔案和文件的可用選項。
 
-## <a name="Expectations"></a> 在資料庫中儲存檔案 - 優點和期望
+## <a name="storing-files-in-the-database---benefits-and-expectations"></a><a name="Expectations"></a> 在資料庫中儲存檔案 - 優點和期望
 
 大部分企業資料的本質都是非結構化，而且通常會在檔案系統中儲存成檔案和文件。 其中大多數資料是由透過 Windows API 存取檔案的應用程式所產生、管理和取用。 企業通常會將這項資料保存在檔案系統中，而將檔案的相關中繼資料儲存在關聯式資料庫中。
 
@@ -40,15 +40,15 @@ ms.locfileid: "68085437"
 
 多年前，SQL Server 並未提供任何一種可在關聯式資料庫中儲存非結構化資料的方式。 但現在，確實有方法可以儲存非結構化資料了。
 
-## <a name="Filestream"></a> FILESTREAM
+## <a name="filestream"></a><a name="Filestream"></a> FILESTREAM
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已經有 FILESTREAM 功能。 FILESTREAM 功能為在檔案系統上儲存成檔案的非結構化資料，提供有效率的儲存、管理及資料流處理。 不過，FILESTREAM 解決方案需要自訂程式設計，因此無法滿足上述完整 Windows 應用程式相容性的需求。
 
-## <a name="FileTables"></a> FileTable
+## <a name="filetables"></a><a name="FileTables"></a> FileTable
 
 FileTable 功能建基於現有的 FILESTREAM 功能。 FileTable 功能可讓企業客戶在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中儲存非結構化檔案資料，以及目錄階層。 這項功能解決了檔案型資料的非交易式存取及 Windows 應用程式相容性問題。
 
-## <a name="CompareFileTable"></a> 比較 FILESTREAM 與 FileTable
+## <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a> 比較 FILESTREAM 與 FileTable
 
 |功能|檔案伺服器和資料庫解決方案|FILESTREAM 解決方案|FileTable 解決方案|
 |:------|:--------------------------------|:------------------|:-----------------|
@@ -60,11 +60,11 @@ FileTable 功能建基於現有的 FILESTREAM 功能。 FileTable 功能可讓�
 |**Windows 應用程式相容性**|是|否|**是**|
 |**檔案屬性的關聯式存取**|否|否|**是**|
 
-## <a name="CompareRBS"></a> 比較 FILESTREAM 與遠端 BLOB 存放區 (RBS)
+## <a name="comparing-filestream-and-remote-blob-store-rbs"></a><a name="CompareRBS"></a> 比較 FILESTREAM 與遠端 BLOB 存放區 (RBS)
 
 儲存非結構化資料的另一個選項是遠端 BLOB 存放區 (RBS)。 如需詳細資訊，請參閱[遠端 BLOB 存放區 (RBS) (SQL Server)](remote-blob-store-rbs-sql-server.md)。
 
-## <a name="more"></a> 其他資訊
+## <a name="more-information"></a><a name="more"></a> 其他資訊
 
 [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)  

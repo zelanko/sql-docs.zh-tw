@@ -11,10 +11,10 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba2574b4468742414d60c1f4e7db4a93380fba0e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75251129"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原
@@ -35,7 +35,7 @@ ms.locfileid: "75251129"
   
 -   **由 SQL Server 管理 Microsoft Azure 的備份：** 設定由 SQL Server 管理單一資料庫或多個資料庫的備份策略及排程備份，或在執行個體層級設定預設值。 此功能又稱為 **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** 。 如需詳細資訊，請參閱 [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。 SQL Server 2014 或更新版本皆提供此功能。  
   
-## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>使用 Microsoft Azure Blob 服務進行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份的優點  
+## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-ssnoversion-backups"></a>使用 Microsoft Azure Blob 服務進行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份的優點  
   
 -   彈性、可靠且沒有限制的異地儲存體：將您的備份儲存在 Microsoft Azure Blob 服務上是一種方便、彈性且容易存取的異地選項。 針對您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份建立異地儲存體就像修改現有的指令碼/作業一樣簡單。 異地儲存體通常應該遠離實際執行資料庫位置，防止單一災害同時影響異地和實際執行資料庫位置。 透過選擇異地備援 Blob 儲存體，您就可以在發生可能影響整個地區的災害時，獲得一層額外的保護。 此外，您可以隨時隨地取得備份，輕鬆地針對還原作業進行存取。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "75251129"
   
 -   成本效益：只有使用的服務才要付費。 成為符合成本效益的異地與備份封存選項。 如需詳細資訊和連結，請參閱 [Microsoft Azure 計費考量](#Billing) 一節。  
   
-##  <a name="Billing"></a> Microsoft Azure 計費考量：  
+##  <a name="microsoft-azure-billing-considerations"></a><a name="Billing"></a> Microsoft Azure 計費考量：  
  了解 Microsoft Azure 儲存體成本可讓您預測在 Microsoft Azure 中建立和儲存備份的成本。  
   
  [Microsoft Azure 定價計算機](https://go.microsoft.com/fwlink/?LinkId=277060) 可以協助您預估成本。  

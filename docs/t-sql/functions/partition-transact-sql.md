@@ -19,10 +19,10 @@ ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3aa388dd079de10f18abbb39d240f3d57d1e2efd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67914379"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)

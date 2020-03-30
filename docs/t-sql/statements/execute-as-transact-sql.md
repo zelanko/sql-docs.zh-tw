@@ -25,10 +25,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287835"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
@@ -109,7 +109,7 @@ ms.locfileid: "76287835"
   
 您可以藉由跨多個主體多次呼叫 EXECUTE AS 陳述式來建立執行內容堆疊。 REVERT 陳述式被呼叫時，會將內容切換到內容堆疊中上一層級的登入或使用者。 如需這個行為的示範，請參閱[範例 A](#_exampleA)。  
   
-##  <a name="_user"></a> 指定使用者或登入名稱  
+##  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a> 指定使用者或登入名稱  
  在 EXECUTE AS \<context_specification> 中指定的使用者或登入名稱，必須以主體形式分別存在於 **sys.database_principals** 或 **sys.server_principals** 中，否則 EXECUTE AS 陳述式就會失敗。 此外，還必須授與主體的 IMPERSONATE 權限。 除非呼叫者是資料庫擁有者，或是 **sysadmin** 固定伺服器角色的成員，否則主體必須存在，即使當使用者透過 Windows 群組成員資格在存取資料庫或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體時也一樣。 例如，假設有下列情況： 
   
 -   **CompanyDomain\SQLUsers** 群組有權存取 **Sales** 資料庫。  
@@ -141,7 +141,7 @@ ms.locfileid: "76287835"
   
 ## <a name="examples"></a>範例  
   
-###  <a name="_exampleA"></a> A. 使用 EXECUTE AS 及 REVERT 切換內容  
+###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> A. 使用 EXECUTE AS 及 REVERT 切換內容  
  下列範例會利用多個主體來建立一個內容執行堆疊。 然後再用 `REVERT` 陳述式，將執行內容重設為前一個呼叫者。 `REVERT` 陳述式在上移堆疊時會執行多次，直到執行內容設為原始呼叫者為止。  
   
 ```  

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b20a628a24e36da854dd567c8f72c89c7169e361
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68084097"
 ---
 # <a name="control-transaction-durability"></a>控制交易持久性
@@ -90,7 +90,7 @@ ms.locfileid: "68084097"
     
 ## <a name="how-to-control-transaction-durability"></a>如何控制交易持久性    
     
-###  <a name="bkmk_DbControl"></a> 資料庫層級控制    
+###  <a name="database-level-control"></a><a name="bkmk_DbControl"></a> 資料庫層級控制    
  身為 DBA 的您，可以控制使用者是否能使用下列陳述式，在資料庫上使用延遲的交易持久性。 您必須使用 ALTER DATABASE 來設定延遲的持久性設定。    
     
 ```sql    
@@ -106,7 +106,7 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  **強制**    
  使用這項設定時，在資料庫上認可的每筆交易都是延遲的持久。 不論交易是否有指定完全持久 (DELAYED_DURABILITY = OFF) ，交易都是延遲的持久。 當延遲的交易持久性適用於資料庫，而且您不想要變更任何應用程式程式碼時，這項設定就很有用。    
     
-###  <a name="CompiledProcControl"></a> ATOMIC 區塊等級控制 - 原生編譯的預存程序    
+###  <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a><a name="CompiledProcControl"></a> ATOMIC 區塊等級控制 - 原生編譯的預存程序    
  下列程式碼會進入不可部分完成的區塊內部。    
     
 ```sql    
@@ -141,7 +141,7 @@ END
 |**DELAYED_DURABILITY = OFF**|不可部分完成的區塊會啟動新的完全持久交易。|不可部分完成的區塊會在現有的交易中建立儲存點，然後開始新的交易。|    
 |**DELAYED_DURABILITY = ON**|不可部分完成的區塊會啟動新的延遲持久交易。|不可部分完成的區塊會在現有的交易中建立儲存點，然後開始新的交易。|    
     
-###  <a name="bkmk_T-SQLControl"></a> COMMIT 層級控制 -[!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="commit-level-control--tsql"></a><a name="bkmk_T-SQLControl"></a> COMMIT 層級控制 -[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  COMMIT 語法已擴充，因此您可以強制延遲的交易持久性。 如果資料庫層級的 DELAYED_DURABILITY 是 DISABLED 或 FORCED (請參閱上述說明)，就會忽略這個 COMMIT 選項。    
     
 ```sql    
@@ -172,7 +172,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
     
 -   執行系統預存程序 `sp_flush_log`。 這個程序會強制將所有先前認可之延遲持久交易的記錄檔記錄排清至磁碟。 如需詳細資訊，請參閱 [sys.sp_flush_log &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql.md)。    
     
-##  <a name="bkmk_OtherSQLFeatures"></a> 延遲持久性和其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能    
+##  <a name="delayed-durability-and-other-ssnoversion-features"></a><a name="bkmk_OtherSQLFeatures"></a> 延遲持久性和其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能    
  **變更追蹤和異動資料擷取**    
  所有具有變更追蹤的交易都是完全持久。 如果某筆交易會對啟用變更追蹤的資料表進行任何寫入作業，它就具有變更追蹤屬性。 不支援使用異動資料擷取 (CDC) 之資料庫的延遲持久性。    
     
@@ -197,13 +197,13 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **記錄備份**    
  只有已經變成持久的交易才會包含在備份中。    
     
-##  <a name="bkmk_DataLoss"></a> 我何時會遺失資料？    
+##  <a name="when-can-i-lose-data"></a><a name="bkmk_DataLoss"></a> 我何時會遺失資料？    
  如果您在任何資料表上實作延遲持久性，您應該了解特定環境會導致資料遺失。 如果您無法容忍任何資料遺失，就不應該在資料表中使用延遲持久性。    
     
 ### <a name="catastrophic-events"></a>重大事件    
  發生重大事件 (例如伺服器當機) 時，您將遺失所有尚未儲存到磁碟的已認可交易資料。 每當針對資料表中的任何資料表 (持久性記憶體最佳化或以磁碟為基礎的資料表) 執行完全持久交易，或呼叫 `sp_flush_log` 時，即會將延遲的持久交易儲存到磁碟。 如果您正在使用延遲的持久交易，您可以在資料庫中建立小型資料表，以便定期更新或定期呼叫 `sp_flush_log` 來儲存所有尚未認可完畢的交易。 交易記錄也會在它已滿時排清，但這很難預期且無法控制。    
     
-### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關機並重新啟動    
+### <a name="ssnoversion-shutdown-and-restart"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關機並重新啟動    
  針對延遲的持久性， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的意外關機與預期的關機/重新啟動之間並無差異。 就像重大事件一樣，您應該針對資料遺失進行規劃。 在規劃好的關機/重新啟動中，部分尚未寫入磁碟的交易可能會先儲存到磁碟，但您不應該規劃相關事項。 對於類似關機/重新啟動的規劃 (不論是規劃或未規劃的) 都會像重大事件一樣遺失資料。    
     
 ## <a name="see-also"></a>另請參閱    

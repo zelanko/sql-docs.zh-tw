@@ -17,10 +17,10 @@ ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1fbb4df1ef746c885bb2bec9d4fe815bef8a693d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252756"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>指定伺服器網路位址 (資料庫鏡像)
@@ -30,7 +30,7 @@ ms.locfileid: "75252756"
  伺服器執行個體上必須有資料庫鏡像端點，您才能在伺服器網路位址中指定通訊埠。 如需詳細資訊，請參閱[建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
   
   
-##  <a name="Syntax"></a> 伺服器網路位址的語法  
+##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a> 伺服器網路位址的語法  
  伺服器網路位址的語法採用下列格式：  
   
  TCP<strong>://</strong> *\<系統位址>* <strong>:</strong> *\<通訊埠>*  
@@ -121,7 +121,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `MYSERVER.mydomain.Adventure-Works.com`  
   
-##  <a name="Examples"></a> 範例  
+##  <a name="examples"></a><a name="Examples"></a> 範例  
  下列範例會顯示另一個網域中名為 `REMOTESYSTEM3` 之電腦系統上伺服器執行個體的伺服器網路位址。 網域資訊為 `NORTHWEST.ADVENTURE-WORKS.COM`，而且資料庫鏡像端點的通訊埠為 `7025`。 如果有這些範例元件，伺服器網路位址就是：  
   
  `TCP://REMOTESYSTEM3.NORTHWEST.ADVENTURE-WORKS.COM:7025`  
@@ -130,7 +130,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `TCP://DBSERVER1:7022`  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   

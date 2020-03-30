@@ -18,10 +18,10 @@ ms.assetid: bbed028c-9cd6-4236-b5e5-8e914a21f2e4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: afa95f660c04bf38bf12cee66b1053b935cc5113
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68042245"
 ---
 # <a name="stgeomcollfromwkb-geography-data-type"></a>STGeomCollFromWKB (geography 資料類型)

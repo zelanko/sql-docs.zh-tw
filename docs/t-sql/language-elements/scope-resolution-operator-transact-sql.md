@@ -13,10 +13,10 @@ ms.assetid: 764d8f91-957b-4037-997b-a9b6b533c504
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ff16ec709e8ed3cf7e0d6a4b129641d1e553a11a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68072289"
 ---
 # <a name="-scope-resolution-transact-sql"></a>:: (範圍解析) (Transact-SQL)

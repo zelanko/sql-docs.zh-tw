@@ -19,10 +19,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 262830dfa4bf32dfb49638b3f0d730ea8aeadde5
-ms.sourcegitcommit: a195cfddedf57044a3d7878a9ee220124e54bb96
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77037004"
 ---
 # <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)

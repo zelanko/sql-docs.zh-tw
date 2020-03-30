@@ -18,10 +18,10 @@ ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 6f81b5ba7ba6de057dd82090775013db55e4275b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68066496"
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (geography 資料類型)

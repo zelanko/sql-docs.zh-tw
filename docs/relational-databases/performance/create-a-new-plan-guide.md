@@ -15,10 +15,10 @@ ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 5f37f0189df126054626fdd4820368911b1fa5cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67946961"
 ---
 # <a name="create-a-new-plan-guide"></a>建立新的計畫指南
@@ -27,7 +27,7 @@ ms.locfileid: "67946961"
 
 計劃指南會將固定查詢計劃及/或查詢提示套用至查詢。
   
-##  <a name="Restrictions"></a> 限制事項  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
 -   sp_create_plan_guide 的引數必須依照顯示順序提供。 當您提供 **sp_create_plan_guide**的參數值時，必須明確指定所有的參數名稱，或是完全不指定。 例如，若指定了 **@name =** ，您也必須指定 **@stmt =** 、 **@type =** 等等。 同樣地，如果省略 **@name =** ，而只提供參數值，您也必須省略其餘參數名稱，只提供它們的值。 引數名稱僅供描述用途，以協助您了解語法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會驗證指定的參數名稱是否與使用該名稱之位置中的參數名稱相符。  
   
 -   您可以針對相同的查詢和批次或模組，建立一個以上的 OBJECT 或 SQL 計畫指南。 但是，在任何指定的時間內，只能啟用一個計畫指南。  
@@ -36,10 +36,10 @@ ms.locfileid: "67946961"
   
 -   試圖卸除或修改計畫指南所參考的函數、預存程序或 DML 觸發程序，不論是已啟用或已停用，都會造成錯誤。 嘗試卸除定義了觸發程序且被計畫指南參考的資料表也會造成錯誤。  
 
-##  <a name="Permissions"></a> 權限  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
  若要建立類型為 OBJECT 的計劃指南，您需要所參考物件的 ALTER 權限。 若要建立類型為 SQL 或 TEMPLATE 的計劃指南，您需要目前資料庫的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SSMS 建立計劃指南  
+##  <a name="create-a-plan-guide-using-ssms"></a><a name="SSMSProcedure"></a> 使用 SSMS 建立計劃指南  
 1.  按一下加號，展開您要在其中建立計畫指南的資料庫，然後按一下加號展開 **[可程式性]** 資料夾。  
   
 2.  以滑鼠右鍵按一下 [計畫指南]  資料夾，然後選取 [新增計畫指南…]  。![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
@@ -70,7 +70,7 @@ ms.locfileid: "67946961"
 
 ![plan_guide](../../relational-databases/performance/media/plan-guide.png)  
 
-##  <a name="TsqlProcedure"></a> 使用 T-SQL 建立計劃指南  
+##  <a name="create-a-plan-guide-using-t-sql"></a><a name="TsqlProcedure"></a> 使用 T-SQL 建立計劃指南  
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]** 。  

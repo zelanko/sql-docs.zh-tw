@@ -19,10 +19,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68132281"
 ---
 # <a name="limit-search-results-with-rank"></a>限制 RANK 的搜索結果
@@ -36,7 +36,7 @@ ms.locfileid: "68132281"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將依照等級來排序相符項目，並且最多只傳回指定的資料列數。 此選項可能大幅地增加效能。 例如，通常從一百萬個資料列中傳回 100,000 列的查詢，如果只要求前 100 個資料列的話，就會處理得更為快速。  
   
-##  <a name="examples"></a> 使用 RANK 限制搜尋結果的範例  
+##  <a name="examples-of-using-rank-to-limit-search-results"></a><a name="examples"></a> 使用 RANK 限制搜尋結果的範例  
   
 ### <a name="example-a-searching-for-only-the-top-three-matches"></a>範例 A：只搜尋前三個相符項目  
  下列範例會使用 CONTAINSTABLE，以便只傳回前三個相符項目。  
@@ -91,7 +91,7 @@ GO
 ```  
   
   
-##  <a name="how"></a> 搜尋查詢結果如何排序次序  
+##  <a name="how-search-query-results-are-ranked"></a><a name="how"></a> 搜尋查詢結果如何排序次序  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的全文檢索搜尋可以產生選擇性分數 (或次序值)，表示全文檢索查詢傳回之資料的相關性。 這個等級值是針對每個資料列計算的，而且可當做排序準則使用，以便依據相關性排序給定查詢的結果集。 等級值僅表示結果集中資料列相關性的相對順序。 實際的值並不重要，而且每次執行查詢後該值通常會不一樣。 次序值不會在查詢之間保存任何重要性。  
   
 ### <a name="statistics-for-ranking"></a>排序的統計資料  

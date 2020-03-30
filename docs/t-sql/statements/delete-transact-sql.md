@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75548280"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
@@ -226,7 +226,7 @@ DELETE
 |[從遠端資料表刪除資料列](#RemoteTables)|連結的伺服器 • OPENQUERY 資料列集函數 • OPENDATASOURCE 資料列集函數|  
 |[擷取 DELETE 陳述式的結果](#CaptureResults)|OUTPUT 子句|  
   
-###  <a name="BasicSyntax"></a> 基本語法  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> 基本語法  
  本節的範例會使用最少的所需語法來示範 DELETE 陳述式的基本功能。  
   
 #### <a name="a-using-delete-with-no-where-clause"></a>A. 使用不含 WHERE 子句的 DELETE  
@@ -237,7 +237,7 @@ DELETE FROM Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-###  <a name="LimitRows"></a> 限制刪除的資料列  
+###  <a name="limiting-the-rows-deleted"></a><a name="LimitRows"></a> 限制刪除的資料列  
  本節中的範例會顯示如何限制將會遭到刪除的資料列數目。  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. 使用 WHERE 子句刪除一組資料列  
@@ -259,7 +259,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. 使用資料指標來判斷要刪除的資料列  
- 以下範例會使用名為 `complex_cursor` 的資料指標，從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `EmployeePayHistory` 資料表中刪除單一資料列。 刪除作業只會影響目前從資料指標中提取的單一資料列。  
+ 以下範例會使用名為 `EmployeePayHistory` 的資料指標，從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `complex_cursor` 資料表中刪除單一資料列。 刪除作業只會影響目前從資料指標中提取的單一資料列。  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  
@@ -335,7 +335,7 @@ WHERE PurchaseOrderDetailID IN
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> 從遠端資料表刪除資料列  
+###  <a name="deleting-rows-from-a-remote-table"></a><a name="RemoteTables"></a> 從遠端資料表刪除資料列  
  本節的範例會顯示如何使用 [連結的伺服器](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)或[資料列集函式](../../t-sql/functions/rowset-functions-transact-sql.md)來參考遠端資料表，以便刪除遠端資料表的資料列。 遠端資料表存在於 SQL Server 的不同伺服器或執行個體上。  
   
 **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
@@ -386,7 +386,7 @@ DELETE FROM OPENDATASOURCE('SQLNCLI',
 WHERE DepartmentID = 17;'  
 ```  
   
-###  <a name="CaptureResults"></a> 擷取 DELETE 陳述式的結果  
+###  <a name="capturing-the-results-of-the-delete-statement"></a><a name="CaptureResults"></a> 擷取 DELETE 陳述式的結果  
   
 #### <a name="i-using-delete-with-the-output-clause"></a>I. 搭配 OUTPUT 子句使用 DELETE  
  以下範例示範如何將 `DELETE` 陳述式的結果儲存到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的資料表變數。  

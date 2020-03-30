@@ -13,12 +13,12 @@ ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c8e1609b60013a3adabd04e0b3ce8e08e825d5e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: bb8730a00c09b57fdabf3465b290cd2df63b1bc4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74957469"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79510029"
 ---
 # <a name="create-a-database-master-key"></a>建立資料庫主要金鑰
 
@@ -42,7 +42,7 @@ ms.locfileid: "74957469"
 
    ```sql
      -- Creates the master key.
-     -- The key is encrypted using the password "23987hxJ#KL95234nl0zBe."  
+     -- The key is encrypted using the password "23987hxJ#KL95234nl0zBe".  
      CREATE MASTER KEY ENCRYPTION BY PASSWORD = '23987hxJ#KL95234nl0zBe';  
 
    ```

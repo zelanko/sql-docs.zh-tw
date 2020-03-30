@@ -23,10 +23,10 @@ ms.assetid: 3c26770c-41ae-4e34-8c82-7bef920ffbca
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f7bb537df511483b05647d36dba2a0323e44b199
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68024257"
 ---
 # <a name="x40x40io_busy-transact-sql"></a>&#x40;&#x40;IO_BUSY (Transact-SQL)

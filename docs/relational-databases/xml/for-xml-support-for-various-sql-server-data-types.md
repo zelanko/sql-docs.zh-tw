@@ -14,10 +14,10 @@ ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e420937a61f55905d4d373a7a4f52f585b5c0e2e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67943245"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>各個 SQL Server 資料類型的 FOR XML 支援

@@ -16,10 +16,10 @@ ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 491016d02dfdb890914633333e19a3138c01779d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68041349"
 ---
 # <a name="transaction-log-backups-sql-server"></a>交易記錄備份 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "68041349"
  
 一般而言，資料庫管理員有時會建立完整資料庫備份，例如每週一次；並且會選擇性地於較短的間隔建立一系列差異資料庫備份，例如每日一次。 除了資料庫備份之外，資料庫管理員會為交易記錄採取高頻率備份。 每種備份類型的最佳間隔取決於幾項因素，如資料的重要性、資料庫大小及伺服器負載。 如需實作良好策略的詳細資訊，請參閱本主題中的[建議](#Recommendations)。 
    
-##  <a name="LogBackupSequence"></a> 記錄備份順序的運作方式  
+##  <a name="how-a-sequence-of-log-backups-works"></a><a name="LogBackupSequence"></a> 記錄備份順序的運作方式  
  交易記錄備份 *「記錄檔鏈結」* (Log chain) 的順序與資料備份無關。 例如，假設發生以下一連串事件：  
   
 |Time|事件|  
@@ -45,7 +45,7 @@ ms.locfileid: "68041349"
   
  在晚上 8:00 建立的交易記錄備份包含從下午 4:00 到晚上 8:00 的交易記錄，其跨越在下午 6:00 建立完整資料庫備份的時間。這一連串的交易記錄備份會從上午 8:00 時建立的初始完整資料庫備份開始，一直持續到晚上 8:00 時建立的最後一個交易記錄備份。 如需有關如何套用這些記錄備份的資訊，請參閱 [套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)中的範例。  
   
-##  <a name="Recommendations"></a> 建議  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   如果異動記錄損毀，則最近一次有效備份之後所執行的工作都會遺失。 因此，我們強烈建議您將記錄檔存放於容錯的儲存體中。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68041349"
 > 若要限制您需要還原的記錄備份數目，定期備份資料是基本作業。 例如，您可能會排程每週的完整資料庫備份和每日的差異資料庫備份。  
 > 同樣地，實作復原策略，以及特別是完整和差異資料庫備份頻率時，考慮使用必要的 [RTO](https://wikipedia.org/wiki/Recovery_time_objective) 和 [RPO](https://wikipedia.org/wiki/Recovery_point_objective)。
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要建立交易記錄備份**  
   
 -   [備份交易記錄 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  

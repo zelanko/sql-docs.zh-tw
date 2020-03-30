@@ -14,10 +14,10 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 615659a84dcf318adb598451626f5282fa8e3d36
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014809"
 ---
 # <a name="add-a-secondary-replica-to-an-always-on-availability-group"></a>將次要複本新增至 Always On 可用性群組
@@ -25,20 +25,20 @@ ms.locfileid: "68014809"
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，將次要複本加入現有的 AlwaysOn 可用性群組中。  
 
   
-##  <a name="PrerequisitesRestrictions"></a> 必要條件和限制  
+##  <a name="prerequisites-and-restrictions"></a><a name="PrerequisitesRestrictions"></a> 必要條件和限制  
   
 -   您必須連接到裝載主要複本的伺服器執行個體。  
   
  如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
 
-##  <a name="Security"></a> Security  
+##  <a name="security"></a><a name="Security"></a> Security  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
 
 [!INCLUDE[Freshness](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **加入複本**  
   
 1.  在 [物件總管] 中，連接到裝載主要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
@@ -57,7 +57,7 @@ ms.locfileid: "68014809"
   
          若要加入其他複本，請重複上述步驟。 當您指定好複本時，按一下 **[確定]** 以完成該作業。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **加入複本**  
   
 1.  連接到裝載主要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  
@@ -75,7 +75,7 @@ ms.locfileid: "68014809"
              );  
     ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **加入複本**  
   
 1.  變更目錄 (**cd**) 為裝載主要複本的伺服器執行個體。  
@@ -106,7 +106,7 @@ ms.locfileid: "68014809"
   
 -   [SQL Server PowerShell 提供者](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 待處理：加入次要複本之後  
+##  <a name="follow-up-after-adding-a-secondary-replica"></a><a name="FollowUp"></a> 待處理：加入次要複本之後  
  若要將複本加入至現有的可用性群組，您必須執行下列步驟：  
   
 1.  連接到將要裝載新次要複本的伺服器執行個體。  
@@ -117,7 +117,7 @@ ms.locfileid: "68014809"
   
 4.  將每一個新的次要資料庫聯結至可用性群組。 如需詳細資訊，請參閱 [將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **管理可用性複本**  
   
 -   [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  

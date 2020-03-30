@@ -24,10 +24,10 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 53ca4d2631e41e0a815dbf240fc0a7006ec8ce8b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252855"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>啟用資料庫引擎的加密連接

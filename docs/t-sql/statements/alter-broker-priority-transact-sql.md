@@ -21,10 +21,10 @@ ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 06ab8c327709fa6bfb504217bdd083aaed98f870
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68066004"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)

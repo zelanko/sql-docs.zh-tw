@@ -20,10 +20,10 @@ ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 03455038964c06c5a101c7259e65dfecff5b4404
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67996553"
 ---
 # <a name="mirroring-states-sql-server"></a>鏡像狀態 (SQL Server)

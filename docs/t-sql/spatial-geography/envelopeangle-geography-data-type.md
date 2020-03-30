@@ -18,10 +18,10 @@ ms.assetid: 14a7ba15-168c-4b08-ba3d-951d73092ac7
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e3289956dd79c852eef6534ad1f72623ad4dcaa6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68066457"
 ---
 # <a name="envelopeangle-geography-data-type"></a>EnvelopeAngle (geography 資料類型)

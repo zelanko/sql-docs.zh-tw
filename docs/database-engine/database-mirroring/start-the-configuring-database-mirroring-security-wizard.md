@@ -15,10 +15,10 @@ ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: dff35ab1603e3fa1d620914d8ac4afbe669a2be5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252740"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard"></a>啟動設定資料庫鏡像安全性精靈

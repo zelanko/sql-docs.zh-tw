@@ -15,10 +15,10 @@ ms.assetid: 15540837-c4bf-4d18-b380-13ae31f3226f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8e1600c9cf6ea4dbd540137ac53b9d34b65ea125
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68101265"
 ---
 # <a name="hasm-geometry-datatype"></a>HasM (geometry 資料類型)

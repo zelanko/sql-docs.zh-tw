@@ -20,10 +20,10 @@ ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9dacd09604661f9880533fcdcafd2fb7ab9ab12
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67914588"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)

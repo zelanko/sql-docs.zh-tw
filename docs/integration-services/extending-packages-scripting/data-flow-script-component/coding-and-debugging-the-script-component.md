@@ -22,10 +22,10 @@ ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c4b3337be486123545a187337949da1c160343ad
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286549"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>指令碼元件的程式碼撰寫和偵錯
@@ -65,7 +65,7 @@ ms.locfileid: "71286549"
   
     -   **Variables** 集合類別，這個類別包含 [指令碼轉換編輯器]  的 [指令碼]  頁面上在 **ReadOnlyVariable** 和 **ReadWriteVariables** 屬性中所輸入變數的參考。  
   
--   **BufferWrapper** 專案項目所包含的類別，會針對 [指令碼轉換編輯器]  的 [輸入及輸出]  頁面上所設定的每個輸入和輸出，從 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 進行繼承。 這其中每個類別所包含的類型存取子屬性，都與設定的輸入和輸出資料行以及包含這些資料行的資料流緩衝區相對應。  
+-   **BufferWrapper** 專案項目所包含的類別，會針對 [指令碼轉換編輯器]<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> **的 [輸入及輸出]** **頁面上所設定的每個輸入和輸出，從** 進行繼承。 這其中每個類別所包含的類型存取子屬性，都與設定的輸入和輸出資料行以及包含這些資料行的資料流緩衝區相對應。  
   
  如需如何使用這些物件、方法和屬性的資訊，請參閱[了解指令碼元件物件模型](../../../integration-services/extending-packages-scripting/data-flow-script-component/understanding-the-script-component-object-model.md)。 如需如何在特定的指令碼元件類型中使用這些類別的方法和屬性的資訊，請參閱[其他指令碼元件範例](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)。 範例主題也包含完整的程式碼範例。  
   
@@ -174,8 +174,8 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|  
 |變數|使用 **ComponentWrapper** 專案項目的 **Variables** 集合類別中的具名和類型存取子屬性，這些屬性是透過 **ScriptMain** 類別的 **Variables** 屬性進行公開。<br /><br /> **PreExecute** 方法只能存取唯讀變數。 **PostExecute** 方法可以存取唯讀和讀/寫變數。|  
 |連接|使用 **ComponentWrapper** 專案項目的 **Connections** 集合類別中的具名和類型存取子屬性，這些屬性是透過 **ScriptMain** 類別的 **Connections** 屬性進行公開。|  
-|事件|使用 **ScriptMain** 類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 屬性以及 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 介面的 **Fire\<X>** 方法來引發事件。|  
-|記錄|使用 **ScriptMain** 類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 方法來執行記錄。|  
+|事件|使用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>ScriptMain**類別的** 屬性以及  **介面的 \<Fire**X><xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法來引發事件。|  
+|記錄|使用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A>ScriptMain**類別的** 方法來執行記錄。|  
   
 ## <a name="debugging-the-script-component"></a>偵錯指令碼元件  
  若要偵錯指令碼元件中的程式碼，請在程式碼中設定至少一個中斷點，然後關閉 VSTA IDE，以便在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中執行封裝。 當封裝執行進入指令碼元件時，VSTA IDE 會在唯讀模式下重新開啟並顯示您的程式碼。 在執行到達中斷點之後，您可以檢查變數值並逐步完成其餘的程式碼。  
@@ -190,7 +190,7 @@ public class ScriptMain : UserComponent
   
 -   使用 **System.Windows.Forms** 命名空間中的 **MessageBox.Show** 方法中斷執行，並顯示強制回應訊息。 (請在完成偵錯程序之後移除此程式碼)。  
   
--   引發資訊訊息、警告和錯誤的事件。 FireInformation、FireWarning 和 FireError 方法會在 Visual Studio [輸出]  視窗中顯示事件描述。 不過，FireProgress 方法、Console.Write 方法和 Console.WriteLine 方法不會在 [輸出]  視窗中顯示任何資訊。 FireProgress 事件的訊息會顯示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師的 [進度]  索引標籤上。 如需詳細資訊，請參閱[在指令碼元件中引發事件](../../../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md)。  
+-   引發資訊訊息、警告和錯誤的事件。 FireInformation、FireWarning 和 FireError 方法會在 Visual Studio [輸出]  視窗中顯示事件描述。 不過，FireProgress 方法、Console.Write 方法和 Console.WriteLine 方法不會在 [輸出]  視窗中顯示任何資訊。 FireProgress 事件的訊息會顯示在  **設計師的 [進度]** [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 索引標籤上。 如需詳細資訊，請參閱[在指令碼元件中引發事件](../../../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md)。  
   
 -   將事件或使用者定義的訊息記錄到啟用的記錄提供者。 如需詳細資訊，請參閱[在指令碼元件中記錄](../../../integration-services/extending-packages-scripting/data-flow-script-component/logging-in-the-script-component.md)。  
   

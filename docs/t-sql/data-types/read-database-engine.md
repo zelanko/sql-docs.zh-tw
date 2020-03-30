@@ -18,10 +18,10 @@ ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9fb69a5c4e9d303ab0e3a7a3e2edeeeeed228391
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68000609"
 ---
 # <a name="read-database-engine"></a>Read (Database Engine)

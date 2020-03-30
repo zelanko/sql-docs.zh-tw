@@ -14,10 +14,10 @@ ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8845f69e619c8cd2cc7a194b6f03a4dec5f592c1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822617"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker 與 AlwaysOn 可用性群組 (SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "74822617"
   本主題包含將 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Service Broker 設定為使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的相關資訊。  
   
   
-##  <a name="ReceiveRemoteMessages"></a> 讓可用性群組中之服務接收遠端訊息的需求  
+##  <a name="requirements-for-a-service-in-an-availability-group-to-receive-remote-messages"></a><a name="ReceiveRemoteMessages"></a> 讓可用性群組中之服務接收遠端訊息的需求  
   
 1.  **確定可用性群組擁有接聽程式。**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "74822617"
   
      如需建立路由的相關資訊，請參閱 [Service Broker 路由範例](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (在 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 版本的《線上叢書》中) 和 [CREATE ROUTE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-route-transact-sql.md)的相關資訊。  
   
-##  <a name="SendRemoteMessages"></a> 將訊息傳送至可用性群組中之遠端服務的需求  
+##  <a name="requirements-for-sending-messages-to-a-remote-service-in-an-availability-group"></a><a name="SendRemoteMessages"></a> 將訊息傳送至可用性群組中之遠端服務的需求  
   
 1.  **建立目標服務的路由。**  
   
@@ -99,7 +99,7 @@ ms.locfileid: "74822617"
   
 2.  **確定 msdb 包含 AutoCreatedLocal 路由或特定服務的路由。** (如需詳細資訊，請參閱本主題稍早的 [讓可用性群組中之服務接收遠端訊息的需求](#ReceiveRemoteMessages)。)  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)  
   

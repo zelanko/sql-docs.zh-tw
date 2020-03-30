@@ -15,10 +15,10 @@ ms.assetid: 40c72091-8f03-4037-8b55-5e95309fe145
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ae494ae5b12cf99e836869f65c055803dd9666e6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68025266"
 ---
 # <a name="removing-database-mirroring-sql-server"></a>移除資料庫鏡像 (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "68025266"
 > [!NOTE]  
 >  若要在停止工作階段之後繼續鏡像，您就必須建立新的資料庫鏡像工作階段。 若要在停止鏡像之後建立記錄備份，您必須在重新啟動鏡像之前將它套用到鏡像資料庫。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要移除資料庫鏡像**  
   
 -   [移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  

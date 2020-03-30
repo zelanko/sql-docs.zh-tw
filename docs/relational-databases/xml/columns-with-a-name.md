@@ -13,10 +13,10 @@ ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 855f7c079d592c095ce3754cd5c6fc799139324e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68113047"
 ---
 # <a name="columns-with-a-name"></a>有名稱的資料行

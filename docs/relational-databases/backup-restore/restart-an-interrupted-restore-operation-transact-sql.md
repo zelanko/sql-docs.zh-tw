@@ -18,10 +18,10 @@ ms.assetid: 6413a07d-fd90-448d-8f29-12c5a1972618
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 49b2cd932ea40e2f45010785edcd033b8530d6bd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244356"
 ---
 # <a name="restart-an-interrupted-restore-operation-transact-sql"></a>重新啟動中斷的還原作業 (Transact-SQL)

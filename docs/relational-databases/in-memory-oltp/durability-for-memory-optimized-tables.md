@@ -11,10 +11,10 @@ ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ca651634947e730df4ae4dda70999c7839521659
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67942800"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>記憶體最佳化資料表的持久性
@@ -49,7 +49,7 @@ ms.locfileid: "67942800"
  當資料列遭到刪除時，並不會從資料檔案移除該資料列，而是該資料列的參考將附加到與該資料列插入當時的交易範圍相關聯的差異檔案。 由於要刪除的資料列已存在於資料檔案中，差異檔案只會儲存參考資訊 `{inserting_tx_id, row_id, deleting_tx_id }` ，且將遵照原始刪除或更新作業的交易記錄順序。  
   
 
- 大小：若為記憶體大於 16 GB 的電腦，每個差異檔案的大小約為 16 MB；若為記憶體小於或等於 16 GB 的電腦，每個差異檔案的大小約為 1 MB。 如果儲存子系統速度認定夠快，從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SQL Server 開始就可以使用大型的檢查點模式。 在大型的檢查點模式中，差異檔案的大小為 128MB。  
+ 大小：若為記憶體大於 16GB 的電腦，每個差異檔案的大小約為 16MB；若為記憶體小於或等於 16GB 的電腦，每個差異檔案的大小約為 1MB。 如果儲存子系統速度認定夠快，從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SQL Server 開始就可以使用大型的檢查點模式。 在大型的檢查點模式中，差異檔案的大小為 128MB。  
  
 ## <a name="populating-data-and-delta-files"></a>擴展資料檔案和差異檔案  
  資料檔案和差異檔案會根據記憶體最佳化資料表認可交易所產生的交易記錄填寫，再將已插入及刪除的資料列相關資訊附加到適當的資料檔案和差異檔案。 不同於在檢查點完成時以隨機 I/O 方式排清資料/索引頁的磁碟資料表，記憶體最佳化資料表的保存是連續的背景作業。 如此將會存取多個差異檔案，因為交易可以刪除或更新任何先前交易所插入的任何資料列。 刪除資訊一律會附加到差異檔案的結尾。 例如，認可時間戳記為 600 的交易會插入一個新的資料列，並且刪除認可時間戳記為 150、250 和 450 的交易所插入的資料列，如下圖所示。 所有 4 個檔案 I/O 作業 (三個用於已刪除的資料列，一個用於新插入的資料列) 都是對應的差異檔案和資料檔案的附加專用作業。  
@@ -86,7 +86,7 @@ ms.locfileid: "67942800"
   
  背景執行緒會使用合併原則評估所有已關閉的 CFP，然後起始一項或多項對合格 CFP 的合併要求。 這些合併要求將由離線檢查點執行緒來處理。 系統會定期評估合併原則，以及在檢查點關閉時進行評估。  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-merge-policy"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 合併原則  
+### <a name="ssnoversion-merge-policy"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 合併原則  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實作以下合併原則：  
   
 -   在考量到已刪除的資料列之後，如果可以合併兩個或多個連續的 CFP，使其產生的資料列數能夠納入 1 個目標大小的 CFP，就會排程進行合併。 資料檔案和差異檔案的目標大小與原始大小相對應，如上所述。  

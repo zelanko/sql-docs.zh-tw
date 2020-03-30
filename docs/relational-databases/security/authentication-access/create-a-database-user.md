@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981933"
 ---
 # <a name="create-a-database-user"></a>建立資料庫使用者
@@ -38,7 +38,7 @@ ms.locfileid: "73981933"
   
  您可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]來建立資料庫使用者。  
   
-##  <a name="Understanding"></a> 了解使用者的類型  
+##  <a name="understanding-the-types-of-users"></a><a name="Understanding"></a> 了解使用者的類型  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 會顯示 6 個選項。 下圖在綠色方塊中顯示 6 個選項，並指出它們代表的意義。  
   
  ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
@@ -56,17 +56,17 @@ ms.locfileid: "73981933"
   
 > **提示！** 對組織內部的人員來說，Windows 驗證是比較好的選擇，因為他們不需要記住額外的密碼，以及因為 Windows 驗證可提供額外的安全性功能，例如 Kerberos。  
   
-##  <a name="Restrictions"></a> 背景  
+##  <a name="background"></a><a name="Restrictions"></a> 背景  
  使用者是資料庫層級的安全性主體。 登入必須對應到資料庫使用者，才能連接到資料庫。 登入可以做為不同的使用者對應到不同的資料庫，但在每一個資料庫中只能對應為一位使用者。 在部分自主資料庫中，可以建立沒有登入的使用者。 如需自主資料庫使用者的詳細資訊，請參閱 [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)。 如果資料庫中啟用 guest 使用者，則未對應到資料庫使用者的登入就可以用 guest 使用者的身分進入資料庫。  
   
 > **重要！** guest 使用者通常為停用狀態。 除非必要，否則不要啟用 guest 使用者。  
   
  使用者做為安全性主體時，可以將權限授與使用者。 使用者的範圍為資料庫。 若要連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體上的特定資料庫，則登入必須對應到資料庫使用者。 資料庫內的權限是對資料庫使用者授與或拒絕，而不是登入。  
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料庫的 **ALTER ANY USER** 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SSMS 建立使用者  
+##  <a name="create-a-user-with-ssms"></a><a name="SSMSProcedure"></a> 使用 SSMS 建立使用者  
   
  
 1.  在 [物件總管] 中，展開 **[資料庫]** 資料夾。  
@@ -140,7 +140,7 @@ ms.locfileid: "73981933"
      **刪除**  
      移除選取的擴充屬性。  
   
-##  <a name="TsqlProcedure"></a> 使用 T-SQL 建立使用者  
+##  <a name="create-a-user-using-t-sql"></a><a name="TsqlProcedure"></a> 使用 T-SQL 建立使用者  
     
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   

@@ -11,10 +11,10 @@ ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1556a98ad812c32c514b8e55ab1ece3e6d7a40e4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293256"
 ---
 # <a name="create-infosource"></a>建立 InfoSource

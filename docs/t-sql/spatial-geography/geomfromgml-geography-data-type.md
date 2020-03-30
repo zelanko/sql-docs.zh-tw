@@ -19,10 +19,10 @@ ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: bc8173d8be0c5f5c3194667935e3cc7af4f1cca9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67930735"
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (geography 資料類型)

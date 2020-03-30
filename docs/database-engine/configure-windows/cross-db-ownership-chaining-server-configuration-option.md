@@ -15,10 +15,10 @@ ms.assetid: 7b2d49f2-b91c-4aee-a52b-6cc49bed03af
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9d3ee24f8bf3d698314b5eb32a166ef7080622b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012038"
 ---
 # <a name="cross-db-ownership-chaining-server-configuration-option"></a>跨資料庫擁有權鏈結伺服器組態選項
@@ -34,7 +34,7 @@ ms.locfileid: "68012038"
   
 -   您可以使用 ALTER DATABASE 陳述式的 SET 子句，來設定個別資料庫的跨資料庫擁有權鏈結。 若您要建立新的資料庫，您可以使用 CREATE DATABASE 陳述式，來為新的資料庫設定跨資料庫擁有權鏈結選項。  
   
-     除非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所裝載的資料庫都必須參與跨資料庫擁有權鏈結，而且您了解此設定的安全性含意，否則不建議將 [跨資料庫擁有權鏈結]  設定為 1。  
+     除非  **執行個體所裝載的資料庫都必須參與跨資料庫擁有權鏈結，而且您了解此設定的安全性含意，否則不建議將 [跨資料庫擁有權鏈結]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為 1。  
 
 若要判斷跨資料庫擁有權鏈結的目前狀態，請執行下列查詢：  
 ```sql

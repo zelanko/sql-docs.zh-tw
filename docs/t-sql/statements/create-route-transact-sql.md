@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: b70035a1fc54d4b59978a3256b2ed3040ba4e8f9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006510"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
@@ -61,7 +61,7 @@ WITH
  這是要建立的路由名稱。 新路由會建立在目前的資料庫中，擁有者是 AUTHORIZATION 子句所指定的主體。 您不可指定伺服器、資料庫和結構描述名稱。 *route_name* 必須是有效的 **sysname**。  
   
  AUTHORIZATION *owner_name*  
- 將路由的擁有者設為指定的資料庫使用者或角色。 當目前使用者是 **db_owner** 固定資料庫角色的成員或 **sysadmin** 固定伺服器角色的成員時，*owner_name* 可以是任何有效使用者或角色的名稱。 否則，*owner_name* 必須是目前使用者的名稱、目前使用者有其 IMPERSONATE 權限的使用者名稱，或目前使用者所屬的角色名稱。 當略過這個子句時，路由會屬於目前的使用者。  
+ 將路由的擁有者設為指定的資料庫使用者或角色。 當目前使用者是 *db_owner* 固定資料庫角色的成員或 **sysadmin** 固定伺服器角色的成員時，**owner_name** 可以是任何有效使用者或角色的名稱。 否則，*owner_name* 必須是目前使用者的名稱、目前使用者有其 IMPERSONATE 權限的使用者名稱，或目前使用者所屬的角色名稱。 當略過這個子句時，路由會屬於目前的使用者。  
   
  WITH  
  導入定義所建立之路由的子句。  
@@ -90,7 +90,7 @@ WHERE database_id = DB_ID()
   
  **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** _port\_number_  
   
- 指定的 *port_number* 必須符合在指定電腦的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 端點的連接埠號碼。 這可以在選取的資料庫中執行下列查詢來取得：  
+ 指定的 *port_number* 必須符合在指定電腦的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 執行個體之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 端點的連接埠號碼。 這可以在選取的資料庫中執行下列查詢來取得：  
   
 ```  
 SELECT tcpe.port  
@@ -102,16 +102,16 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  當服務在鏡像資料庫中，您也必須指定主控鏡像資料庫之其他執行個體的 MIRROR_ADDRESS。 否則，這個路由不會進行容錯移轉，將工作交給鏡像。  
   
- 當路由在 *next_hop_address* 中指定 **'LOCAL'** 時，訊息會傳遞給在目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內的服務。  
+ 當路由在 **next_hop_address** 中指定 *'LOCAL'* 時，訊息會傳遞給在目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內的服務。  
   
- 當路由在 *next_hop_address* 中指定 **'TRANSPORT'** 時，會根據服務名稱中的網路位址來決定網路位址。 指定 **'TRANSPORT'** 的路由不能指定服務名稱或 Broker 執行個體。  
+ 當路由在 **next_hop_address** 中指定 *'TRANSPORT'* 時，會根據服務名稱中的網路位址來決定網路位址。 指定 **'TRANSPORT'** 的路由不能指定服務名稱或 Broker 執行個體。  
   
  MIRROR_ADDRESS **='** _next\_hop\_mirror\_address_ **'**  
  指定有一個鏡像資料庫在 *next_hop_address* 之鏡像資料庫的網路位址。 *next_hop_mirror_address* 以下列格式指定 TCP/IP 位址：  
   
  **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
- 指定的 *port_number* 必須符合在指定電腦的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 端點的連接埠號碼。 這可以在選取的資料庫中執行下列查詢來取得：  
+ 指定的 *port_number* 必須符合在指定電腦的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 執行個體之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 端點的連接埠號碼。 這可以在選取的資料庫中執行下列查詢來取得：  
   
 ```  
 SELECT tcpe.port  
@@ -121,14 +121,14 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- 當指定 MIRROR_ADDRESS 時，路由必須指定 SERVICE_NAME 子句和 BROKER_INSTANCE 子句。 在 *next_hop_address* 中指定 **'LOCAL'** 或 **'TRANSPORT'** 的路由可能不會指定鏡像位址。  
+ 當指定 MIRROR_ADDRESS 時，路由必須指定 SERVICE_NAME 子句和 BROKER_INSTANCE 子句。 在 **next_hop_address** 中指定 **'LOCAL'** 或 *'TRANSPORT'* 的路由可能不會指定鏡像位址。  
   
 ## <a name="remarks"></a>備註  
  儲存路由的路由表是能夠利用 **sys.routes** 目錄檢視來讀取的中繼資料表。 您只能利用 CREATE ROUTE、ALTER ROUTE 和 DROP ROUTE 陳述式來更新這個目錄檢視。  
   
- 依預設，每個使用者資料庫中的路由表都包含一個路由。 這個路由的名稱是 **AutoCreatedLocal**。 這個路由在 *next_hop_address* 中指定 **'LOCAL'** ，且會比對任何服務名稱和 Broker 執行個體識別碼。  
+ 依預設，每個使用者資料庫中的路由表都包含一個路由。 這個路由的名稱是 **AutoCreatedLocal**。 這個路由在 **next_hop_address** 中指定 *'LOCAL'* ，且會比對任何服務名稱和 Broker 執行個體識別碼。  
   
- 當路由在 *next_hop_address* 中指定 **'TRANSPORT'** 時，會根據服務名稱來決定網路位址。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以順利處理開頭是網路位址且格式對 *next_hop_address* 有效的服務名稱。  
+ 當路由在 **next_hop_address** 中指定 *'TRANSPORT'* 時，會根據服務名稱來決定網路位址。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以順利處理開頭是網路位址且格式對 *next_hop_address* 有效的服務名稱。  
   
  路由表可以包含指定相同服務、網路位址和 Broker 執行個體識別碼之任意數目的路由。 在這個情況下，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會利用在交談所指定的資訊和路由表所指定的資訊之間，設計用來尋找完全相符項目的程序，來選擇路由。  
   

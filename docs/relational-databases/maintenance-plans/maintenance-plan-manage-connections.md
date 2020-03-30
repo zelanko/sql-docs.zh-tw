@@ -13,10 +13,10 @@ ms.assetid: 95ad9375-6584-423e-b9de-0e86782f8017
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a388792d24ce033dce0ffb4c6f0120a6ea341ae0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115956"
 ---
 # <a name="maintenance-plan-manage-connections"></a>維護計畫 (管理連接)

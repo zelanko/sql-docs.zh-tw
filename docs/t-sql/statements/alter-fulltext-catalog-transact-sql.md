@@ -23,10 +23,10 @@ ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5f6888525a9b213806267d253fca9c8f2c391766
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68065587"
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG (Transact-SQL)
@@ -57,7 +57,7 @@ ALTER FULLTEXT CATALOG catalog_name
  WITH ACCENT_SENSITIVITY = {ON|OFF}  
  指定全文檢索索引和查詢要改變的目錄是否區分腔調字。  
   
- 若要判斷全文檢索目錄目前的區分重音字屬性設定，請針對 *catalog_name*，搭配 **accentsensitivity** 屬性值來使用 FULLTEXTCATALOGPROPERTY 函數。 如果函數傳回 '1'，全文檢索目錄就會區分腔調字；如果函數傳回 '0'，目錄就不會區分腔調字。  
+ 若要判斷全文檢索目錄目前的區分重音字屬性設定，請針對 **catalog_name**，搭配 *accentsensitivity* 屬性值來使用 FULLTEXTCATALOGPROPERTY 函數。 如果函數傳回 '1'，全文檢索目錄就會區分腔調字；如果函數傳回 '0'，目錄就不會區分腔調字。  
   
  目錄和資料庫區分腔調字的預設值相同。  
   

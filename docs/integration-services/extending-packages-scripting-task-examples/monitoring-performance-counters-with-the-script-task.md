@@ -20,10 +20,10 @@ ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ed4bca496d48e5fe268c1a425223fe03c8fcc6e7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297032"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>以指令碼工作監視效能計數器
@@ -31,11 +31,11 @@ ms.locfileid: "71297032"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  系統管理員可能需要監視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝在大量資料執行複雜轉換時的效能。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的 **System.Diagnostics** 命名空間提供可讓您使用現有效能計數器或建立自訂效能計數器的類別。  
+  系統管理員可能需要監視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝在大量資料執行複雜轉換時的效能。   的 [!INCLUDE[msCoName](../../includes/msconame-md.md)]System.Diagnostics[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空間提供可讓您使用現有效能計數器或建立自訂效能計數器的類別。  
   
  效能計數器會儲存應用程式效能資訊，可用以分析某段時間的軟體效能。 透過使用 [效能監視器]  工具，就可以在本機或是遠端監視效能計數器。 您可以將效能計數器值儲存在變數中，以供之後在封裝中的控制流程分支使用。  
   
- 若不使用效能計數器，您也可以透過 **Dts** 物件的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> 屬性，引發 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> 事件。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> 事件會將增加的進度與百分比完成資訊傳回 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行階段。  
+ 若不使用效能計數器，您也可以透過 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A>Dts<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> 物件的 **屬性，引發** 事件。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> 事件會將增加的進度與百分比完成資訊傳回 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行階段。  
   
 > [!NOTE]  
 >  如果您想要建立可更輕鬆地在多個封裝之間重複使用的工作，請考慮使用此指令碼工作範例中的程式碼做為自訂工作的起點。 如需詳細資訊，請參閱 [開發自訂工作](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  

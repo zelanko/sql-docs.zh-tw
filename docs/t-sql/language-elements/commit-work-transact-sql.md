@@ -23,10 +23,10 @@ ms.assetid: 4de76f33-399e-4912-a617-6eb6c560a058
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 00a313c6edfc9f8088d8cb19f62b51144fcc159b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68140247"
 ---
 # <a name="commit-work-transact-sql"></a>COMMIT WORK (Transact-SQL)

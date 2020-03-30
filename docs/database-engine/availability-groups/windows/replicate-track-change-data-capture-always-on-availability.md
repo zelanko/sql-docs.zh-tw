@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e2a794a7e5bdafe4e07b5e7deb9a1007e4a7e73
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5f1920374f62f98eed81323eca05ce1e45e66fc6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75235385"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79433755"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>複寫、變更追蹤和異動資料擷取 - AlwaysOn 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]支援複寫、異動資料擷取 (CDC) 和變更追蹤 (CT)。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 有助於提供高可用性以及其他資料庫復原功能。  
   
-##  <a name="Overview"></a> 可用性群組的複寫概觀  
+##  <a name="overview-of-replication-with-availability-groups"></a><a name="Overview"></a> 可用性群組的複寫概觀  
   
-###  <a name="PublisherRedirect"></a> 發行者重新導向  
+###  <a name="publisher-redirection"></a><a name="PublisherRedirect"></a> 發行者重新導向  
  當發行的資料庫能夠感知 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]時，提供發行資料庫之代理程式存取權的散發者就會使用 redirected_publishers 項目來設定。 這些項目會重新導向原本設定的發行者/資料庫配對，並利用可用性群組接聽程式名稱來連接到發行者和發行資料庫。 透過可用性群組接聽程式名稱所建立的連接將會在容錯移轉時失敗。 在容錯移轉之後，當複寫代理程式重新啟動時，連接將自動重新導向至新的主要複本。  
   
  在可用性群組中，次要資料庫不能是發行者。 只有在異動複寫與 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]結合時，才支援重新發行。  
@@ -39,7 +39,7 @@ ms.locfileid: "75235385"
 > [!NOTE]  
 >  在容錯移轉到次要複本之後，複寫監視器就無法調整 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行執行個體的名稱，而且會繼續在原始主要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體名稱之下顯示複寫資訊。 在容錯移轉之後，便無法使用複寫監視器輸入追蹤 Token，但是可以在複寫監視器中看到在新的發行者端使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]輸入的追蹤 Token。  
   
-###  <a name="Changes"></a> 支援可用性群組的複寫代理程式一般變更  
+###  <a name="general-changes-to-replication-agents-to-support-availability-groups"></a><a name="Changes"></a> 支援可用性群組的複寫代理程式一般變更  
  三個複寫代理程式已修改成支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 記錄讀取器、快照集和合併代理程式已修改成查詢重新導向發行者的散發資料庫，並且使用傳回的可用性群組接聽程式名稱來連接到資料庫發行者 (如果已宣告重新導向發行者的話)。  
   
  根據預設，當代理程式查詢散發者以判斷原始發行者是否已重新導向時，會驗證重新導向目前目標的適用性，然後才將重新導向的主機傳回至代理程式。 這是建議的行為。 不過，如果代理程式啟動太頻繁，與驗證預存程序相關的負擔成本可能太高。 新命令列參數 *BBypassPublisherValidation* 已加入至記錄讀取器、快照集和合併代理程式。 使用此參數時，重新導向的主機會立即傳回至代理程式，而略過驗證預存程序的執行。  
@@ -59,7 +59,7 @@ ms.locfileid: "75235385"
   
      追蹤旗標 1448 可讓複寫記錄讀取器向前移動，即使非同步次要複本尚未認可收到變更也一樣。 即使這個追蹤旗標已啟用，記錄讀取器也一律會等候同步次要複本。 記錄讀取器不會超過同步次要複本的最小認可。 這個追蹤旗標會套用至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體，而不只套用至可用性群組、可用性資料庫或記錄讀取器執行個體。 這個追蹤旗標會立即生效，不必重新啟動。 您可以事先或在非同步次要複本失敗時啟動它。  
   
-###  <a name="StoredProcs"></a> 支援可用性群組的預存程序  
+###  <a name="stored-procedures-supporting-availability-groups"></a><a name="StoredProcs"></a> 支援可用性群組的預存程序  
   
 -   **sp_redirect_publisher**  
   
@@ -81,7 +81,7 @@ ms.locfileid: "75235385"
   
      此預存程序一律以手動方式執行。 呼叫端必須是散發者端的系統管理員 ( **sysadmin** )、散發資料庫的 **dbowner** 或是發行者資料庫中發行集之 **發行集存取清單** 的成員。 此外，對於所有可用性複本主機而言，呼叫端的登入必須是有效的登入，而且擁有與發行者資料庫相關聯之可用性資料庫的選取權限。  
   
-###  <a name="CDC"></a> 異動資料擷取  
+###  <a name="change-data-capture"></a><a name="CDC"></a> 異動資料擷取  
  啟用異動資料擷取 (CDC) 的資料庫能夠運用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，以便確保資料庫在發生失敗時維持可用狀態，而且資料庫資料表的變更會繼續受到監視並且儲放在 CDC 變更資料表中。 設定 CDC 和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的順序並不重要。 啟用 CDC 的資料庫可以加入 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]中，而且可以啟用本身為 AlwaysOn 可用性群組成員之資料庫的 CDC。 不過，在這兩種情況下，CDC 組態一律在目前或預期的主要複本上執行。 CDC 會使用記錄讀取器代理程式，而且其限制與本主題稍早的＜ **記錄讀取器代理程式修改** ＞一節中所述的限制相同。  
   
 -   **在有異動資料擷取但沒有複寫的情況下，收集變更**  
@@ -123,7 +123,7 @@ ms.locfileid: "75235385"
   
     -   一個確保連接要求會導向至唯讀的次要複本。  
   
-     如果用來找出唯讀的次要複本，還必須為可用性群組定義唯讀的路由清單。 如需可讀取次要複本之路由存取的詳細資訊，請參閱本節稍後的 [若要將可用性複本設定為唯讀路由](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConfigureARsForROR)。  
+     如果用來找出唯讀的次要複本，還必須為可用性群組定義唯讀的路由清單。 如需可讀取次要複本之路由存取的詳細資訊，請參閱本節稍後的 [若要將可用性複本設定為唯讀路由](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)。  
   
     > [!NOTE]  
     >  建立可用性群組接聽程式名稱以及用戶端應用程式用它來存取可用性群組資料庫複本時，都會發生一些相關聯的傳播延遲。  
@@ -177,7 +177,7 @@ ms.locfileid: "75235385"
     - 重新啟動每個次要複本執行個體上的 SQL Server 服務
     - 或者從可用性群組的所有次要複本執行個體中移除資料庫，並使用自動或手動植入，將它新增至可用性群組複本執行個體。
   
-###  <a name="CT"></a> 變更追蹤  
+###  <a name="change-tracking"></a><a name="CT"></a> 變更追蹤  
  啟用變更追蹤 (CT) 的資料庫可以屬於 AlwaysOn 可用性群組的一部分。 不需要任何其他設定。 使用 CDC 資料表值函式 (TVF) 存取變更資料表資料的變更追蹤用戶端應用程式，需要在容錯移轉後找出主要複本的功能。 如果用戶端應用程式透過可用性群組接聽程式名稱進行連接，連接要求一律會適當導向至目前的主要複本。  
   
 > [!NOTE]  
@@ -187,7 +187,7 @@ ms.locfileid: "75235385"
 >   
 >  次要複本的成員資料庫 (即次要資料庫) 不支援變更追蹤。 請在主要複本的資料庫上執行變更追蹤查詢。  
   
-##  <a name="Prereqs"></a> 使用複寫的必要條件、限制和考量  
+##  <a name="prerequisites-restrictions-and-considerations-for-using-replication"></a><a name="Prereqs"></a> 使用複寫的必要條件、限制和考量  
  本節描述使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]來部署複寫的考量，包括必要條件、限制和建議。  
   
 ### <a name="prerequisites"></a>Prerequisites  
@@ -223,7 +223,7 @@ ms.locfileid: "75235385"
   
 -   存在於資料庫之外的中繼資料和物件不會傳播到次要複本，包括登入、作業、連結的伺服器。 如果您需要在容錯移轉後使用新主要資料庫上的中繼資料和物件，則必須手動加以複製。 如需詳細資訊，請參閱 [管理可用性群組之資料庫的登入及工作 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md)(Failover) 的程序中通常可以互換。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **複寫**  
   
 -   [設定 AlwaysOn 可用性群組的複寫 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  

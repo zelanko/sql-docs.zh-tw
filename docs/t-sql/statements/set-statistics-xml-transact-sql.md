@@ -22,10 +22,10 @@ ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 015ba90a6f2cad79483e52d5caa23ad06784c055
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68004724"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)

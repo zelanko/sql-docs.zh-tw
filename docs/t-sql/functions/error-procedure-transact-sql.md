@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 75e3664517ac0ce66f2a56499286303df81513ab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68094685"
 ---
 # <a name="error_procedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
@@ -59,7 +59,7 @@ ERROR_PROCEDURE ( )
   
 不論執行多少次，或在 `ERROR_PROCEDURE` 區塊範圍內的哪個位置執行，`CATCH` 都會傳回預存程序或觸發程序的名稱。 這有別於 @@ERROR 之類的函式，它們只會在緊接於發生錯誤的陳述式之後的陳述式中，傳回錯誤號碼。  
    
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
 ### <a name="a-using-error_procedure-in-a-catch-block"></a>A. 在 CATCH 區塊中使用 ERROR_PROCEDURE  
 此範例會顯示產生除以零之錯誤的預存程序。 `ERROR_PROCEDURE` 會傳回發生錯誤之預存程序的名稱。  

@@ -14,10 +14,10 @@ ms.assetid: 5f423b9f-a6c4-41a7-9d8d-8f4926ce1fb4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9284388a56014084b2478d6d805ff3fc917459d1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558108"
 ---
 # <a name="view-policy-based-management-facets-on-a-sql-server-object"></a>檢視 SQL Server 物件的原則式管理 Facet
@@ -34,14 +34,14 @@ ms.locfileid: "75558108"
   
      [Transact-SQL](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要 msdb 資料庫中 PolicyAdministratorRole 角色的成員資格。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-all-of-the-facets-in-an-object"></a>若要檢視物件中的所有 Facet  
   

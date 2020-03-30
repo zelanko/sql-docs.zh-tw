@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 6fee83f5560891e6160c3e885ca0a0ed4e5e8058
-ms.sourcegitcommit: fc99fdd586eabc2d60f33056123398f263d5913d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78946726"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>啟動、停止、暫停、繼續、重新啟動 SQL Server 服務
@@ -121,7 +121,7 @@ Windows 服務，其會接聽傳入要求以找出 SQL Server 資源，並提供
 |SQL Server 2014|C:\Windows\SysWOW64\SQLServerManager12.msc|
 |SQL Server 2012|C:\Windows\SysWOW64\SQLServerManager11.msc|
 
-#### <a name="configmande"></a> 啟動、停止、暫停、繼續或重新啟動 SQL Server 資料庫引擎的執行個體
+#### <a name="to-start-stop-pause-resume-or-restart-an-instance-of-the-sql-server-database-engine"></a><a name="configmande"></a> 啟動、停止、暫停、繼續或重新啟動 SQL Server 資料庫引擎的執行個體
 
 1. 使用上述指示啟動 SQL Server 組態管理員。
 
@@ -131,7 +131,7 @@ Windows 服務，其會接聽傳入要求以找出 SQL Server 資源，並提供
 
 4. 在結果窗格中，以滑鼠右鍵按一下 [SQL Server (MSSQLServer)]  或具名執行個體，然後按一下 [啟動]  、[停止]  、[暫停]  、[繼續]  或 [重新啟動]  。
 
-5. 按一下 [確定]  來關閉 SQL Server 組態管理員。
+5. 按一下 [確定]  以關閉 SQL Server 組態管理員。
 
 > [!NOTE]
 > 若要使用啟動選項啟動 SQL Server 資料庫引擎的執行個體，請參閱[設定伺服器啟動選項 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)。  
@@ -153,7 +153,7 @@ Windows 服務，其會接聽傳入要求以找出 SQL Server 資源，並提供
 
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
-### <a name="ssmsde"></a> 啟動、停止、暫停、繼續或重新啟動 SQL Server 資料庫引擎的執行個體
+### <a name="to-start-stop-pause-resume-or-restart-an-instance-of-the-sql-server-database-engine"></a><a name="ssmsde"></a> 啟動、停止、暫停、繼續或重新啟動 SQL Server 資料庫引擎的執行個體
 
 1. 在 [物件總管] 中，連線至資料庫引擎的執行個體，並以滑鼠右鍵按一下所要啟動的資料庫引擎執行個體，然後按一下 [啟動]  、[停止]  、[暫停]  、[繼續]  或 [重新啟動]  。
 
@@ -171,11 +171,11 @@ Windows 服務，其會接聽傳入要求以找出 SQL Server 資源，並提供
 
 3. 當系統提示是否要採取行動時，請按一下 [是]  。
 
-## <a name="CommandPrompt"></a> 從命令提示字元視窗使用 net 命令
+## <a name="command-prompt-window-using-net-commands"></a><a name="CommandPrompt"></a> 從命令提示字元視窗使用 net 命令
 
 您可使用 Microsoft Windows **net** 命令來啟動、停止或暫停 Microsoft SQL Server 服務。
 
-### <a name="dbDefault"></a> 啟動資料庫引擎的預設執行個體
+### <a name="to-start-the-default-instance-of-the-database-engine"></a><a name="dbDefault"></a> 啟動資料庫引擎的預設執行個體
 
 - 從命令提示字元，輸入下列其中一個命令：  
   
@@ -185,9 +185,9 @@ Windows 服務，其會接聽傳入要求以找出 SQL Server 資源，並提供
 
     **net start MSSQLSERVER**
 
-### <a name="dbNamed"></a> 啟動資料庫引擎的具名執行個體
+### <a name="to-start-a-named-instance-of-the-database-engine"></a><a name="dbNamed"></a> 啟動資料庫引擎的具名執行個體
 
-- 從命令提示字元，輸入下列其中一個命令。 以您要管理之執行個體的名稱取代 \<執行個體名稱>  。  
+- 從命令提示字元，輸入下列其中一個命令。 以您要管理之執行個體的名稱取代 *執行個體名稱>\<* 。  
   
     **net start "SQL Server (** *instancename* **)"**
   
@@ -195,7 +195,7 @@ Windows 服務，其會接聽傳入要求以找出 SQL Server 資源，並提供
   
     **net start MSSQL$** *instancename*  
   
-### <a name="dbStartup"></a> 使用啟動選項來啟動資料庫引擎  
+### <a name="to-start-the-database-engine-with-startup-options"></a><a name="dbStartup"></a> 使用啟動選項來啟動資料庫引擎  
 
 - 將啟動選項加入 **net start "SQL Server (MSSQLSERVER)"** 陳述式結尾，並間隔一個空格。 使用 **net start**啟動時，啟動選項會使用斜線 (/)，而非連字號 (-)。  
   
@@ -208,7 +208,7 @@ Windows 服務，其會接聽傳入要求以找出 SQL Server 資源，並提供
   > [!NOTE]
   >  如需啟動選項的詳細資訊，請參閱 [Database Engine 服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   
-###  <a name="agDefault"></a> 在 SQL Server 預設執行個體上啟動 SQL Server Agent
+###  <a name="to-start-the-sql-server-agent-on-the-default-instance-of-sql-server"></a><a name="agDefault"></a> 在 SQL Server 預設執行個體上啟動 SQL Server Agent
   
 - 從命令提示字元，輸入下列其中一個命令：  
   
@@ -218,7 +218,7 @@ Windows 服務，其會接聽傳入要求以找出 SQL Server 資源，並提供
   
     **net start SQLSERVERAGENT**
   
-###  <a name="agNamed"></a> 在 SQL Server 具名執行個體上啟動 SQL Server Agent  
+###  <a name="to-start-the-sql-server-agent-on-a-named-instance-of-sql-server"></a><a name="agNamed"></a> 在 SQL Server 具名執行個體上啟動 SQL Server Agent  
   
 - 從命令提示字元，輸入下列其中一個命令。 以您要管理之執行個體的名稱取代 *執行個體名稱* 。  
   
@@ -230,7 +230,7 @@ Windows 服務，其會接聽傳入要求以找出 SQL Server 資源，並提供
   
  如需如何以詳細資訊模式執行 SQL Server Agent 來進行疑難排解的資訊，請參閱 [sqlagent90 應用程式](../../tools/sqlagent90-application.md)。  
 
-### <a name="Browser"></a> 啟動 SQL Server Browser  
+### <a name="to-start-the-sql-server-browser"></a><a name="Browser"></a> 啟動 SQL Server Browser  
 
 - 從命令提示字元，輸入下列其中一個命令：  
   
@@ -240,7 +240,7 @@ Windows 服務，其會接聽傳入要求以找出 SQL Server 資源，並提供
   
     **net start SQLBrowser**
   
-### <a name="pauseStop"></a> 若要從命令提示字元視窗暫停或停止服務  
+### <a name="to-pause-or-stop-services-from-the-command-prompt-window"></a><a name="pauseStop"></a> 若要從命令提示字元視窗暫停或停止服務  
 
 - 若要暫停或停止服務，請使用下列方式來修改命令。  
 
@@ -248,7 +248,7 @@ Windows 服務，其會接聽傳入要求以找出 SQL Server 資源，並提供
 
 - 若要停止服務，請以 **net stop** 取代 **net start**。  
 
-## <a name="TsqlProcedure"></a> Transact-SQL
+## <a name="transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL
 
 您可使用 **SHUTDOWN** 陳述式來停止資料庫引擎。  
 
@@ -268,7 +268,7 @@ Windows 服務，其會接聽傳入要求以找出 SQL Server 資源，並提供
 
 如需 **SHUTDOWN** 陳述式的詳細資訊，請參閱 [SHUTDOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/shutdown-transact-sql.md)。  
 
-## <a name="PowerShellProcedure"></a> PowerShell
+## <a name="powershell"></a><a name="PowerShellProcedure"></a> PowerShell
 
 ### <a name="to-start-and-stop-database-engine-services"></a>啟動和停止資料庫引擎服務
 

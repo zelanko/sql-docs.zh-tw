@@ -14,10 +14,10 @@ ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a4d89c6302b55e0182e5f14f8cfab463d5aafeed
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71284712"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>使用 SSIS 封裝升級精靈來升級 Integration Services 封裝

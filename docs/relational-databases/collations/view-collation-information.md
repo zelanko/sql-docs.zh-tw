@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bedae7661398ed4281f2da460ad7ce16b5dd82de
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68841621"
 ---
 # <a name="view-collation-information"></a>檢視定序資訊
@@ -24,14 +24,14 @@ ms.locfileid: "68841621"
     
 <a name="Top"></a> 您可以使用 [物件總管] 功能表選項或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視伺服器、資料庫或資料行的定序。  
   
-##  <a name="Procedures"></a> 如何檢視定序設定  
+##  <a name="how-to-view-a-collation-setting"></a><a name="Procedures"></a> 如何檢視定序設定  
  您可以使用下列其中一項：  
   
 -   [Transact-SQL](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **在 [物件總管] 中檢視伺服器 (SQL Server 執行個體) 的定序設定**  
   
 1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
@@ -54,7 +54,7 @@ ms.locfileid: "68841621"
   
 4.  在資料行上按一下滑鼠右鍵，然後選取 [屬性]  。 如果定序屬性為空白，則資料行不是字元資料類型。  
   
-###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **檢視伺服器的定序設定**  
   
 1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後在工具列上按一下 **[新增查詢]** 。  

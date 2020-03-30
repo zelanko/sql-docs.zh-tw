@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.openlocfilehash: 3d458e7696719c383b03a5cc3f259de08e4b8c37
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68262785"
 ---
 # <a name="upgrade-integration-services-packages"></a>升級 Integration Services 封裝

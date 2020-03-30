@@ -13,10 +13,10 @@ ms.assetid: 2d94adfd-3ba1-493a-b29a-b436f9d583df
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 79a2ff6f86c5d1fb7e109c0d8b6ba4b35d504c10
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68009340"
 ---
 # <a name="verify-max-worker-threads-setting"></a>確認最大工作者執行緒設定

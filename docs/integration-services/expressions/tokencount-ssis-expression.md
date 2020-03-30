@@ -11,10 +11,10 @@ ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0fd9c3a09bf5e901591b2837fcd163534db5f52c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71288145"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (SSIS 運算式)

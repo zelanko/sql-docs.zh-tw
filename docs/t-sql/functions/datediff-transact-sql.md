@@ -32,10 +32,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7d6ab92ef6c9f10aea46d375633ae539122299e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68731124"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "68731124"
 
 此函式會傳回跨越指定 *startdate* 和 *enddate* 之指定 datepart 界限的計數 (作為帶正負號的整數值)。
   
-如需處理 *startdate* 與 *enddate* 值之間較大差異的函式，請參閱 [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md)。 如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函式的概觀，請參閱[日期和時間資料類型與函式 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
+如需處理 [startdate](../../t-sql/functions/datediff-big-transact-sql.md) 與 *enddate* 值之間較大差異的函式，請參閱 *DATEDIFF_BIG &#40;Transact-SQL&#41;* 。 如需所有 [ 日期和時間資料類型與函式的概觀，請參閱](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)日期和時間資料類型與函式 &#40;Transact-SQL&#41;[!INCLUDE[tsql](../../includes/tsql-md.md)]。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -102,7 +102,7 @@ _Datepart_ 值不能在變數中指定，也不能是以引號括住的字串 (�
   
 ## <a name="return-value"></a>傳回值  
 
-*startdate* 和 *enddate* 之間的 **int** 差異，以 *datepart* 所設定的界限表示。
+**startdate** 和 *enddate* 之間的 *int* 差異，以 *datepart* 所設定的界限表示。
   
 例如，`SELECT DATEDIFF(day, '2036-03-01', '2036-02-28');` 會傳回-2，提示 2036 必須是閏年。 這種情況表示如果我們從 _startdate_ '2036-03-01' 開始，然後計數 -2 天，則 _enddate_ 會是 '2036-02-28'。
   
@@ -139,13 +139,13 @@ SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 如果 *startdate* 和 *enddate* 具有不同年份值，但具有相同日曆週值，則 `DATEDIFF` 會針對 *datepart* **week** 傳回 0。
 
 ## <a name="remarks"></a>備註  
-您可以在 `SELECT <list>`、`WHERE`、`HAVING`、`GROUP BY` 和 `ORDER BY` 子句中使用 `DATEDIFF`。
+您可以在 `DATEDIFF`、`SELECT <list>`、`WHERE`、`HAVING` 和 `GROUP BY` 子句中使用 `ORDER BY`。
   
 `DATEDIFF` 會以隱含的方式，將字串常值轉換為 **datetime2** 類型。 這表示，將日期當作字串傳遞時，`DATEDIFF` 不支援 YDM 格式。 您必須明確地將字串轉換為 **datetime** 或 **smalldatetime** 類型，才能使用 YDM 格式。
   
 指定 `SET DATEFIRST` 對 `DATEDIFF` 沒有任何作用。 `DATEDIFF` 一律會使用星期天當作一週的第一天，以確保此函式以具決定性的方式運作。
 
-如果 *enddate* 與 *startdate* 的差距傳回超出 **int** 範圍的值，則 `DATEDIFF` 可使用 **minute** 或更高的精確度進行溢位。
+如果 `DATEDIFF`enddate**與**startdate*的差距傳回超出*int*範圍的值，則* 可使用 **minute** 或更高的精確度進行溢位。
   
 ## <a name="examples"></a>範例  
 這些範例會使用不同的運算式類型，當作 *startdate* 和 *enddate* 參數的引數。
@@ -322,7 +322,7 @@ SELECT @result
 118 years, 11 months, 11 days, 7 hours, 8 minutes and 1.123 seconds
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 這些範例會使用不同的運算式類型，當作 *startdate* 和 *enddate* 參數的引數。
   
 ### <a name="j-specifying-columns-for-startdate-and-enddate"></a>J. 指定 startdate 和 enddate 的資料行  

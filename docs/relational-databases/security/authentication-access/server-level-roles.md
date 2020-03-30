@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239e2d3f2475738044e4c3644f734fdbb6a0eafb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68116786"
 ---
 # <a name="server-level-roles"></a>伺服器層級角色
@@ -50,9 +50,9 @@ ms.locfileid: "68116786"
 |------------------------------|-----------------|  
 |**sysadmin**|**sysadmin** 固定伺服器角色的成員可以執行伺服器中的所有活動。|  
 |**serveradmin**|**serveradmin** 固定伺服器角色的成員可以變更全伺服器組態選項及關閉伺服器。|  
-|**securityadmin**|**securityadmin** 固定伺服器角色的成員可以管理登入及其屬性。 他們可以 `GRANT` (授與)、`DENY` (拒絕) 和 `REVOKE` (撤銷) 伺服器層級權限。 如果他們擁有資料庫的存取權，也可以 `GRANT`、`DENY` 和 `REVOKE` 資料庫層級權限。 此外，他們可以重設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入的密碼。<br /><br /> **重要：** 授與 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 之存取權和設定使用者權限的能力可讓安全性管理員指派大部分伺服器權限。 您應該將 **securityadmin** 角色視為相當於 **系統管理員** 角色。|  
+|**securityadmin**|**securityadmin** 固定伺服器角色的成員可以管理登入及其屬性。 他們可以 `GRANT` (授與)、`DENY` (拒絕) 和 `REVOKE` (撤銷) 伺服器層級權限。 如果他們擁有資料庫的存取權，也可以 `GRANT`、`DENY` 和 `REVOKE` 資料庫層級權限。 此外，他們可以重設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入的密碼。<br /><br /> **重要事項：** 授與 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 之存取權和設定使用者權限的能力，可讓安全性管理員指派大部分的伺服器權限。 您應該將 **securityadmin** 角色視為相當於 **系統管理員** 角色。|  
 |**processadmin**|**processadmin** 固定伺服器角色的成員可以結束在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體中執行的處理序。|  
-|**setupadmin**|**setupadmin** 固定伺服器角色的成員可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式加入和移除連結的伺服器 (使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 時需要 **sysadmin** 成員資格)。|  
+|**setupadmin**|**setupadmin** 固定伺服器角色的成員可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式加入和移除連結的伺服器 (使用 **時需要**sysadmin[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 成員資格)。|  
 |**bulkadmin**|**bulkadmin** 固定伺服器角色的成員可以執行 `BULK INSERT` 陳述式。|  
 |**diskadmin**|**diskadmin** 固定伺服器角色是用來管理磁碟檔案。|  
 |**dbcreator**|**dbcreator** 固定伺服器角色的成員可以建立、改變、卸除及還原任何資料庫。|  
@@ -63,7 +63,7 @@ ms.locfileid: "68116786"
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
->  **CONTROL SERVER** 權限與 **系統管理員** 固定伺服器角色類似但不完全相同。 權限不代表角色成員資格，角色成員資格也不會授與權限。 (例如， **CONTROL SERVER** 不代表**系統管理員**固定伺服器角色的成員資格)。不過，角色與相等權限之間有時候可以互相模擬。 大部分 **DBCC** 命令與許多系統程序都需要**系統管理員**固定伺服器角色的成員資格。 如需需要 **系統管理員** 成員資格的 171 個系統預存程序清單，請參閱 Andreas Wolter 的下列部落格文章： [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/)。  
+>  **CONTROL SERVER** 權限與 **系統管理員** 固定伺服器角色類似但不完全相同。 權限不代表角色成員資格，角色成員資格也不會授與權限。 (例如， **CONTROL SERVER** 不代表 **系統管理員** 固定伺服器角色的成員資格)。不過，角色與相等權限之間有時候可以互相模擬。 大部分 **DBCC** 命令與許多系統程序都需要**系統管理員**固定伺服器角色的成員資格。 如需需要 **系統管理員** 成員資格的 171 個系統預存程序清單，請參閱 Andreas Wolter 的下列部落格文章： [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/)。  
   
 ## <a name="server-level-permissions"></a>伺服器層級權限  
  只有伺服器層級權限可加入至使用者定義伺服器角色。 若要列出伺服器層級權限，請執行以下陳述式。 伺服器層級權限為：  

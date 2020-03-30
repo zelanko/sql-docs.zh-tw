@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: d7fc5a14a9da000b69db804a5439fb62985f59b8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558533"
 ---
 # <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>設定 Linux 上 SQL Server 的使用狀況與診斷資料收集

@@ -15,10 +15,10 @@ ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6b6f11ac0a41b52f6b8e197b21279a22df46703d
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903749"
 ---
 # <a name="aggregate-values-in-a-dataset-with-the-aggregate-transformation"></a>使用彙總轉換來彙總資料集中的值

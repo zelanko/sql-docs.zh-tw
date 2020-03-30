@@ -18,10 +18,10 @@ ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: craigg-msft
 ms.author: craigg
 ms.openlocfilehash: f072ed3e73b7dacd10254c04aaa34e5466b582b8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68262217"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration"></a>啟用通用條件合規性伺服器設定

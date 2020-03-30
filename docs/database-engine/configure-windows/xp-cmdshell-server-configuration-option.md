@@ -15,10 +15,10 @@ ms.assetid: c147c9e1-b81d-49c8-b800-3019f4d86a13
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 40efe03850259a3b900375e3a47c12d80a448b39
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68040070"
 ---
 # <a name="xp_cmdshell-server-configuration-option"></a>xp_cmdshell 伺服器組態選項

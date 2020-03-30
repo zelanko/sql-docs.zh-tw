@@ -27,10 +27,10 @@ ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: cc9716cbd1e27c6589b964c3c3d6208105f4863c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68101953"
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)

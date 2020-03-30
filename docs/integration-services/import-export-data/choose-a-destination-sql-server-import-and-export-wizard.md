@@ -12,10 +12,10 @@ ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 86b2cf26c7af957579c5368ed70262e43db005f1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285871"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>選擇目的地 (SQL Server 匯入和匯出精靈)

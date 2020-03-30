@@ -20,10 +20,10 @@ ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 073095217dc08f2f11605f8b0e7b5da11035e34a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68113352"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>伺服器效能與活動監視
@@ -46,7 +46,7 @@ ms.locfileid: "68113352"
  
  -   [擴充事件](../../relational-databases/extended-events/extended-events.md)
  
- -   [快速入門：SQL Server 中的延伸事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+ -   [Quick Start: Extended events in SQL Server (快速入門：SQL Server 中的擴充事件)](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
  
  -   [在物件總管中管理事件工作階段](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)
  
@@ -70,7 +70,7 @@ ms.locfileid: "68113352"
 > 下列各節描述使用 SQL 追蹤和 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的方法。  
 > SQL 追蹤和 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 已被淘汰。 包含 Microsoft SQL Server 追蹤和重新執行物件的 *Microsoft.SqlServer.Management.Trace* 命名空間也會被淘汰。   
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-> 請改用擴充事件。 如需[延伸事件](../../relational-databases/extended-events/extended-events.md)的詳細資訊，請參閱[快速入門：SQL Server 中的延伸事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent 分析工具](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
+> 請改用擴充事件。 如需[擴充事件](../../relational-databases/extended-events/extended-events.md)的詳細資訊，請參閱[快速入門︰SQL Server 中的擴充事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent 分析工具](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
 
 > [!NOTE] 
 > 適用於 Analysis Services 工作負載的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]「未」遭淘汰，而且將會繼續受支援。

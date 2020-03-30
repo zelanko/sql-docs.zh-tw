@@ -13,10 +13,10 @@ ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 33d2f34f9f2ea63f23c570c0b4ada95906649215
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68091530"
 ---
 # <a name="move-a-filestream-enabled-database"></a>移動啟用 FILESTREAM 功能的資料庫

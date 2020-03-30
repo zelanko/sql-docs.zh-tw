@@ -11,10 +11,10 @@ ms.assetid: b9b90b8d-241f-4b74-ac14-de7b10ea1821
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 08811675cce441406534da3c31e2d01f314a2c20
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115425"
 ---
 # <a name="connect-to-a-sql-server-utility"></a>連接至 SQL Server 公用程式

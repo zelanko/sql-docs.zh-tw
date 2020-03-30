@@ -11,10 +11,10 @@ ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8f7474200fa8156ab0663540611803276375ad6b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71281186"
 ---
 # <a name="catalogcreate_environment_variable-ssisdb-database"></a>catalog.create_environment_variable (SSISDB 資料庫)

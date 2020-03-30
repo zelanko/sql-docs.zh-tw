@@ -12,10 +12,10 @@ ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 095852eb02ba78c261b19a0a96fb639075ee5eab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285120"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>提供來源查詢 (SQL Server 匯入和匯出精靈)
@@ -59,7 +59,7 @@ WHERE CommissionPct > 0.015
  **瀏覽**  
  使用 [開啟]  對話方塊，選取包含 SQL 查詢文字的已儲存檔案。 選取檔案就會將該檔案的文字複製到 [SQL 陳述式]  文字方塊中。  
  
-## <a name="excelQueries"></a> 提供 Excel 的來源查詢
+## <a name="provide-a-source-query-for-excel"></a><a name="excelQueries"></a> 提供 Excel 的來源查詢
 
 > [!IMPORTANT]
 > 如需連接至 Excel 檔案，以及將資料從 Excel 檔案載入或載入至 Excel 檔案的限制與已知問題的詳細資訊，請參閱[使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../load-data-to-from-excel-with-ssis.md)。
@@ -88,6 +88,6 @@ WHERE CommissionPct > 0.015
   
 -   下一個頁面上的大部分目的地為 [選取來源資料表和檢視]  。 在此頁面上，您檢閱所提供的查詢，並選擇性地選擇資料行以複製和預覽範例資料。 如需詳細資訊，請參閱 [選取來源資料表和檢視表](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)。  
   
--   如果您的目的地為一般檔案，則下一個頁面為 [設定一般檔案目的地]  。 在此頁面上，您可以指定目的地一般檔案的格式化選項。 (在您設定一般檔案之後，下一個頁面是 [選取來源資料表和檢視表]  )。如需詳細資訊，請參閱[設定一般檔案目的地](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)。  
+-   如果您的目的地為一般檔案，則下一個頁面為 [設定一般檔案目的地]  。 在此頁面上，您可以指定目的地一般檔案的格式化選項。 (在您設定一般檔案之後，下一個頁面是 [選取來源資料表和檢視表]  )。如需詳細資訊，請參閱 [設定一般檔案目的地](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)。  
 
 

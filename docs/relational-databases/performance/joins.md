@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287472"
 ---
 # <a name="joins-sql-server"></a>聯結 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "79287472"
 -   雜湊聯結   
 -   自適性聯結 (開頭為 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
 
-## <a name="fundamentals"></a> 聯結基本概念
+## <a name="join-fundamentals"></a><a name="fundamentals"></a> 聯結基本概念
 透過使用聯結，您可以根據資料表之間的邏輯關聯性從二或多個資料表中擷取資料。 聯結指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何使用一個資料表的資料，以選取另一個資料表的資料列。    
 
 聯結條件定義兩個資料表在查詢中相關的方式：    
@@ -108,7 +108,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 > 例如，`SELECT * FROM t1 JOIN t2 ON SUBSTRING(t1.textcolumn, 1, 20) = SUBSTRING(t2.textcolumn, 1, 20)` 會對資料表 t1 和 t2 中每個 text 資料行的前 20 個字元執行兩個資料表的內部聯結。   
 > 此外，另一個比較兩個資料表之 ntext 或 text 資料行的可能方式，就是使用 `WHERE` 子句來比較資料行的長度，例如：`WHERE DATALENGTH(p1.pr_info) = DATALENGTH(p2.pr_info)`
 
-## <a name="nested_loops"></a> 認識巢狀迴圈聯結
+## <a name="understanding-nested-loops-joins"></a><a name="nested_loops"></a> 認識巢狀迴圈聯結
 如果一個聯結輸入相當小 (少於 10 個資料列)，但另一個聯結輸入相當大而且在聯結資料行建有索引的話，索引巢狀迴圈是最快速的聯結作業，因為它們需要的 I/O 最少，需要的比較也最少。 
 
 巢狀迴圈聯結 (也稱為「巢狀反覆運算」  ) 會使用一個聯結輸入作為外部輸入資料表 (在圖形化執行計劃中顯示為上方輸入)，另一個聯結作為內部 (下方) 輸入資料表。 外部迴圈會逐列消耗外部輸入資料表。 內部迴圈 (針對外部每一列各執行一次) 會在內部輸入資料表中搜尋符合的資料列。   
@@ -119,7 +119,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 
 當巢狀迴圈聯結運算子的 OPTIMIZED 屬性設定為 **True** 時，代表會在內部資料表過大時使用巢狀迴圈聯結 (或稱批次排序) 來將 I/O 最小化，而不論資料表平行與否。 因為排序本身是隱藏作業，所以在分析執行計劃時，此最佳化在指定計劃內可能不會很明顯。 但如果仔細在計劃 XML 中尋找屬性 OPTIMIZED 的話，能看出來巢狀迴圈聯結可能在嘗試重新排序輸入資料列來改善 I/O 效能。
 
-## <a name="merge"></a> 認識合併聯結
+## <a name="understanding-merge-joins"></a><a name="merge"></a> 認識合併聯結
 如果兩個聯結輸入都不小，而且依聯結資料行排序 (例如，是由掃描排序的索引所取得) 的話，合併聯結就是最快速的聯結作業。 如果兩個聯結輸入都相當大，而且兩個輸入的大小類似，先行排序再進行的合併聯結所提供的效能大致類似雜湊聯結。 然而，如果兩個輸入的大小差異極大的話，雜湊聯結作業多半快得多。       
 
 合併聯結需要在合併資料行上將兩項輸入都加以排序，這是由聯結述詞的相等 (ON) 子句來定義的。 查詢最佳化工具通常會掃描索引 (如果適當的資料行集合建有索引的話)，或在合併聯結下放置排序運算子。 在極少的情況下，可以有多個相等子句，但只會從部份可用的相等子句中取得合併資料行。    
@@ -132,7 +132,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 
 合併聯結本身非常快，但如果需要排序作業的話，有時候代價會很高。 但如果資料量很大，而且可以從現有的 B-tree 索引取得已排序的預期資料，那麼合併聯結往往是可用的最快速聯結演算法。    
 
-## <a name="hash"></a> 認識雜湊聯結
+## <a name="understanding-hash-joins"></a><a name="hash"></a> 認識雜湊聯結
 雜湊聯結可以有效率地處理大型、未排序、無索引的輸入。 它們在做為複雜查詢的中繼結果方面很有用，因為：
 -   中繼結果沒有索引 (除非明確地儲存到磁碟，然後建立索引)，而且通常產生時也不會做適當的排序供查詢計畫的下一個作業使用。
 -   查詢最佳化工具只估計中繼結果的大小。 因為複雜查詢的估計值可能非常不準確，所以處理中繼結果的演算法不僅必須要有效率，而且萬一中繼結果顯著大於預期時，它的效能還不得惡化得太明顯。   
@@ -145,13 +145,13 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 
 下列章節描述不同類型的雜湊聯結：In-Memory 雜湊聯結、寬限雜湊聯結和遞迴雜湊聯結。    
 
-### <a name="inmem_hash"></a> In-Memory 雜湊聯結
+### <a name="in-memory-hash-join"></a><a name="inmem_hash"></a> In-Memory 雜湊聯結
 雜湊聯結會先掃描或計算整個建置輸入，然後在記憶體中建立雜湊表。 根據以雜湊鍵計算所得的雜湊值，將每一列插入雜湊桶中。 如果整個建置輸入小於可用記憶體，就可以將所有資料列都插入雜湊表。 這個組建階段後跟著探查階段。 這時候會以逐列方式掃描或計算整個探查輸入，針對每個探查列計算雜湊鍵值、掃描對應的雜湊桶，並產生符合項目。    
 
-### <a name="grace_hash"></a> 寬限雜湊聯結
+### <a name="grace-hash-join"></a><a name="grace_hash"></a> 寬限雜湊聯結
 如果記憶體放不下建置輸入，就會以幾個步驟進行雜湊聯結。 這就是所謂的寬限雜湊聯結。 每個步驟分別有組建階段與探查階段。 最開始，會消耗整個組建與探查輸入，並分割 (對雜湊鍵使用雜湊函數) 成多個檔案。 對雜湊鍵使用雜湊函數會保證任何兩個聯結資料錄一定在同一對檔案中。 因此，本來是聯結兩個大型輸入的工作，變成是做好幾個相同的工作，但每個工作都變得比較小。 然後再對每對分割檔案套用雜湊聯結。    
 
-### <a name="recursive_hash"></a> 遞迴雜湊聯結
+### <a name="recursive-hash-join"></a><a name="recursive_hash"></a> 遞迴雜湊聯結
 如果建置輸入太大，使得標準外部聯結排序的輸入需要多個合併層級，就需要多個分割步驟與多個分割層級。 如果只有一些分割很大，就僅對這部分使用額外的分割步驟。 為了使所有分割步驟都盡可能達到最快的速度，所以使用大型的非同步 I/O 作業，使單一執行緒可以讓多部磁碟機保持忙碌。    
 
 > [!NOTE]
@@ -164,7 +164,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 > [!NOTE]
 > 角色反轉的發生與任何查詢提示或結構無關。 角色反轉不會顯示在查詢計畫中；當它發生時，使用者就會看到。
 
-### <a name="hash_bailout"></a> 雜湊釋出
+### <a name="hash-bailout"></a><a name="hash_bailout"></a> 雜湊釋出
 雜湊釋出一詞有時候是用來描述寬限雜湊聯結或遞迴雜湊聯結。    
 
 > [!NOTE]
@@ -172,7 +172,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 
 如需有關雜湊釋出的詳細資訊，請參閱[雜湊警告事件類別](../../relational-databases/event-classes/hash-warning-event-class.md)。    
 
-## <a name="adaptive"></a> 了解自適性聯結
+## <a name="understanding-adaptive-joins"></a><a name="adaptive"></a> 了解自適性聯結
 [批次模式](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)自適性聯結可讓選擇的[雜湊聯結](#hash)或[巢狀迴圈](#nested_loops)聯結方法，延後到已掃描的第一個輸入**之後**。 自適性聯結運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。 因此，查詢計劃可在執行期間動態切換至較佳的聯結策略，而不需經過重新編譯。 
 
 > [!TIP]
@@ -291,7 +291,7 @@ OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS'));
 > [!NOTE]
 > USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標設定。 
 
-## <a name="nulls_joins"></a> Null 值與聯結
+## <a name="null-values-and-joins"></a><a name="nulls_joins"></a> Null 值與聯結
 當資料表的資料行中有 Null 值時，Null 值彼此並不相符。 若所要聯結之其中一個資料表的資料行中出現 Null 值，將只能藉由使用外部聯結來傳回該值 (除非 `WHERE` 子句會排除 Null 值)。     
 
 以下列出兩個資料表，而每個資料表都有 NULL 值出現在參與於聯結的資料行中：     

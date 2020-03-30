@@ -12,10 +12,10 @@ ms.assetid: a455e809-1883-4c7d-b3e3-835ee5bfe258
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c9e763c2873c018ca53a0c36db2b5c72b3b5d22b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68123072"
 ---
 # <a name="mssqlserver_4846"></a>MSSQLSERVER_4846

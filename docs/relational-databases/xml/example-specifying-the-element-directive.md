@@ -13,10 +13,10 @@ ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5e0760c0d1ee59725e074f55d3730f574a5fac3a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006732"
 ---
 # <a name="example-specifying-the-element-directive"></a>範例：指定 ELEMENT 指示詞

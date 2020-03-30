@@ -13,10 +13,10 @@ ms.assetid: 9a276caa-ea38-473d-92bc-26302bfcf660
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4d600a5bf3e5667fdd3bd247e2e479a6c870ff21
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68021708"
 ---
 # <a name="server-public-permissions"></a>伺服器 public 權限

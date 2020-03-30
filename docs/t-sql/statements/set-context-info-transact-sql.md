@@ -20,10 +20,10 @@ ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0f75a2c8fcbef8109c48e352a9c3987a2a5a7cc2
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78866616"
 ---
 # <a name="set-context_info-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)

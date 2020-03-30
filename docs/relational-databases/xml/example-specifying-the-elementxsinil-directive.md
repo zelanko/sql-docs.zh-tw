@@ -13,10 +13,10 @@ ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 485a0a9061a1cef6bdde4fee84b95614ea220005
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006713"
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>範例：指定 ELEMENTXSINIL 指示詞

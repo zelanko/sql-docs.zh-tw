@@ -23,10 +23,10 @@ ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 18f91c30715dbf44058a204bd17f9ab1e6e393c6
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77255982"
 ---
 # <a name="hints-transact-sql---join"></a>提示 (Transact-SQL) - Join

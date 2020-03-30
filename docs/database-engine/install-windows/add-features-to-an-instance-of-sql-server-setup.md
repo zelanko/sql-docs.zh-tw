@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0b7cdfe016a1010bef5322c3d39b7ee436437aa5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68051199"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>將功能新增至 SQL Server 的執行個體 (安裝程式)
@@ -40,7 +40,7 @@ ms.locfileid: "68051199"
   
 ## <a name="procedures"></a>程序  
   
-#### <a name="to-add-features-to-an-instance-of-includesscurrentincludessscurrent-mdmd"></a>若要從命令提示字元，將功能加入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-add-features-to-an-instance-of-sscurrent"></a>若要從命令提示字元，將功能加入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體。 在根資料夾中，按兩下 setup.exe。 若要從網路共用進行安裝，請導覽至共用上的根資料夾，然後按兩下 setup.exe。 如果出現 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式] 對話方塊，請[!INCLUDE[clickOK](../../includes/clickok-md.md)] 安裝必要條件，然後按一下 [取消]  以結束 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝。  
   

@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b854e6c7db8bb042ced1c883e17fb4ac6d484fe7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74947090"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>使用 Transact-SQL 從 SSMS 部署 SSIS 專案

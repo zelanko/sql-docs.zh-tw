@@ -18,10 +18,10 @@ ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d026e01ee6675d0af462492469913d280124cc31
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68000364"
 ---
 # <a name="write-database-engine"></a>Write (Database Engine)

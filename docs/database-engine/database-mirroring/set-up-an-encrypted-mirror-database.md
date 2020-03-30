@@ -17,10 +17,10 @@ ms.assetid: 7329a575-be29-46e0-abc6-1344db37920c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e96342ca114ae06d2c1d75954ccd32a674f900a4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68025236"
 ---
 # <a name="set-up-an-encrypted-mirror-database"></a>設定加密鏡像資料庫

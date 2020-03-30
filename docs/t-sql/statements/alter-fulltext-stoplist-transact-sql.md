@@ -22,10 +22,10 @@ ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 692f62c6a5b9d6268a27de350a860c0cb58c74bc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68067547"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
@@ -65,7 +65,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
 |[格式]|描述|  
 |------------|-----------------|  
-|String|*language_term* 會對應到 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 相容性檢視中的 **alias** 資料行值。 字串必須以單引號括住，如 **'***language_term***'** 。|  
+|String|*language_term* 會對應到 **sys.syslanguages (Transact-SQL)** 相容性檢視中的 [alias](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 資料行值。 字串必須以單引號括住，如 **'***language_term***'** 。|  
 |整數|*language_term* 是語言的 LCID。|  
 |十六進位|*language_term* 是 0x 後接 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。 如果這個值是雙位元組字集 (DBCS) 格式，SQL Server 會將它轉換成 Unicode。|  
   

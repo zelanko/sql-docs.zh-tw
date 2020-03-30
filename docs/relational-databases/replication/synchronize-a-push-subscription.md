@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 4a6e56932ab54bc489000c98a29150df984f5991
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72907872"
 ---
 # <a name="synchronize-a-push-subscription"></a>同步處理發送訂閱
@@ -28,10 +28,10 @@ ms.locfileid: "72907872"
   
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
 
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  訂閱是由散發代理程式 (適用於快照式與異動複寫) 或合併代理程式 (適用於合併式複寫) 同步處理。 代理程式可以繼續執行、視需要執行，或是依照排程執行。 如需指定同步處理排程的詳細資訊，請參閱[指定同步處理排程](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
- 需要時從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [本機發行集]  和 [本機訂閱]  資料夾，以及複寫監視器中的 [所有訂閱]  索引標籤同步處理訂閱。 Oracle 發行集的訂閱無法在需要時從「訂閱者」同步處理。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+ 需要時從   中的 [本機發行集]  和 [本機訂閱][!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 資料夾，以及複寫監視器中的 [所有訂閱]  索引標籤同步處理訂閱。 Oracle 發行集的訂閱無法在需要時從「訂閱者」同步處理。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-publisher"></a>需要時在 Management Studio 上同步處理發送訂閱 (發行者端)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "72907872"
   
 4.  以滑鼠右鍵按一下您要同步處理的訂閱，然後按一下 **[檢視同步處理的狀態]** 。  
   
-5.  在 [檢視同步處理的狀態 - \<訂閱者>:\<訂閱資料庫>]  對話方塊中，按一下 [啟動]  。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
+5.  在 [檢視同步處理的狀態 - **訂閱者>:\<訂閱資料庫>]\<** 對話方塊中，按一下 [啟動]  。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
   
 6.  按一下 [關閉]  。  
 
@@ -57,7 +57,7 @@ ms.locfileid: "72907872"
   
 4.  接著會顯示有關建立連接到「散發者」的訊息。 按一下 [確定]  。  
   
-5.  在 [檢視同步處理的狀態 - \<訂閱者>:\<訂閱資料庫>]  對話方塊中，按一下 [啟動]  。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
+5.  在 [檢視同步處理的狀態 - **訂閱者>:\<訂閱資料庫>]\<** 對話方塊中，按一下 [啟動]  。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
   
 6.  按一下 [關閉]  。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "72907872"
   
 4.  若要檢視同步處理的進度，以滑鼠右鍵按一下該訂閱，再按一下 **[檢視詳細資料]** 。  
   
-##  <a name="ReplProg"></a> 使用複寫代理程式  
+##  <a name="using-replication-agents"></a><a name="ReplProg"></a> 使用複寫代理程式  
  發送訂閱可透過程式設計方式加以同步處理，以及視需要從命令提示字元叫用適當的複寫代理程式可執行檔加以同步處理。 叫用的複寫代理程式可執行檔取決於發送訂閱所屬的發行集類型。  
   
 #### <a name="to-start-the-distribution-agent-to-synchronize-a-push-subscription-to-a-transactional-publication"></a>啟動散發代理程式，以同步處理交易式發行集的發送訂閱  
@@ -154,7 +154,7 @@ ms.locfileid: "72907872"
         > [!IMPORTANT]  
         >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-###  <a name="TsqlExample"></a> 範例 (複寫代理程式)  
+###  <a name="examples-replication-agents"></a><a name="TsqlExample"></a> 範例 (複寫代理程式)  
  下列範例會啟動散發代理程式，以同步處理發送訂閱。  
   
 ```  
@@ -196,7 +196,7 @@ REM -- The following command must be supplied without line breaks.
   
 ```  
   
-##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
  您可以使用 Replication Management Objects (RMO) 和對複寫代理程式功能的 Managed 程式碼存取，以程式設計的方式同步處理發送訂閱。 用於同步處理發送訂閱的類別依該訂閱所屬的發行集類型而定。  
   
 > [!NOTE]
@@ -250,7 +250,7 @@ REM -- The following command must be supplied without line breaks.
   
     -   從 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> 屬性取得 <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizationAgent%2A> 類別的執行個體，並呼叫 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> 方法。 此方法會同步啟動「合併代理程式」，而控制項仍會停留於正在執行的代理程式作業。 在同步執行期間，您可以在代理程式執行時處理 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> 事件。  
   
-###  <a name="PShellExample"></a> 範例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 範例 (RMO)  
  此範例同步處理交易式發行集的發送訂閱，其中代理程式會使用代理程式作業非同步啟動。  
   
  [!code-cs[HowTo#rmo_SyncTranPushSub_WithJob](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_synctranpushsub_withjob)]  

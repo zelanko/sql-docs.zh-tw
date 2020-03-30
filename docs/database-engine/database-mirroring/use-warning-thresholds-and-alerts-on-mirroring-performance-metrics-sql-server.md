@@ -19,10 +19,10 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ad44ae43a33a132fc2b5170a8ff4d3e6b3572ded
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74820899"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用鏡像效能標準的警告臨界值與警示 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "74820899"
  建立鏡像資料庫的監視作業後，系統管理員就可以設定許多項關鍵效能標準的警告臨界值。 此外，管理員還可以設定這些和其他資料庫鏡像事件的警示。  
   
   
-##  <a name="PerfMetricsAndWarningThresholds"></a> 效能標準和警告臨界值  
+##  <a name="performance-metrics-and-warning-thresholds"></a><a name="PerfMetricsAndWarningThresholds"></a> 效能標準和警告臨界值  
  下表將列出可設定警告的效能標準、描述對應的警告臨界值，並列出對應的 [資料庫鏡像監視器] 標籤。  
   
 |效能標準|警告臨界值|資料庫鏡像監視器標籤|  
@@ -44,7 +44,7 @@ ms.locfileid: "74820899"
   
  系統管理員可以針對其中一項效能標準，在鏡像資料庫上指定臨界值。 如需詳細資訊，請參閱本主題後面的 [設定和管理警告臨界值](#SetUpManageWarningThresholds)。  
   
-##  <a name="SetUpManageWarningThresholds"></a> 設定和管理警告臨界值  
+##  <a name="setting-up-and-managing-warning-thresholds"></a><a name="SetUpManageWarningThresholds"></a> 設定和管理警告臨界值  
  系統管理員可以設定關鍵鏡像效能標準的一或多個警告臨界值。 我們建議您在兩個夥伴上設定指定警告的臨界值，以便確保資料庫在容錯移轉時，警告仍會保持不變。 每個夥伴上的適當臨界值會根據該夥伴系統的效能功能而定。  
   
  您可以使用下列任何一項方式來設定並管理警告臨界值：  
@@ -80,7 +80,7 @@ ms.locfileid: "74820899"
 >   
 >  。  
   
-##  <a name="UseAlerts"></a> 針對鏡像資料庫使用警示  
+##  <a name="using-alerts-for-a-mirrored-database"></a><a name="UseAlerts"></a> 針對鏡像資料庫使用警示  
  監視鏡像資料庫最重要的部分就是設定重大資料庫鏡像事件的警示。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生下列資料庫鏡像事件類型：  
   
 -   效能臨界值事件  
@@ -101,7 +101,7 @@ ms.locfileid: "74820899"
 > [!IMPORTANT]  
 >  我們強烈建議您針對所有鏡像工作階段，將資料庫設定為傳送任何狀態變更事件的警示。 除非狀態變更預期為手動組態變更的結果，否則就表示發生了可能會危害資料的事件。 若要有效保護資料，請識別並修正非預期狀態變更的原因。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **若要使用 SQL Server Management Studio 建立警示**  
   
 -   [使用錯誤號碼建立警示](../../ssms/agent/create-an-alert-using-an-error-number.md)  

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: ee2425a5b2ff846e37dfe6acb06d8b26b54fd7da
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287621"
 ---
 # <a name="manage-identity-columns"></a>管理識別欄位
@@ -40,15 +40,15 @@ ms.locfileid: "76287621"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   在一個以上發行集中發行資料表時，您必須針對兩個發行集指定相同的識別範圍管理選項。 如需詳細資訊，請參閱[發行資料和資料庫物件](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)中的＜在多個發行集中發行資料表＞。  
   
 -   若要建立可用於多個資料表中或可在不參考任何資料表的情況下從應用程式進行呼叫的自動遞增數字，請參閱 [序號](../../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  在 [新增發行集精靈] 的 [發行項屬性 - **發行項>]** **對話方塊的 [屬性]\<** 索引標籤上，指定識別欄位管理選項。 如需使用此精靈的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)。 在「新增發行集精靈」中：  
   
 -   如果在 **[發行集類型]** 頁面中選取 **[合併式發行集]** 或 **[具更新訂閱的交易式發行集]** ，請選取自動或手動識別範圍管理 (依預設為自動，建議使用)。 發行資料表後，將無法修改其屬性，但是可以修改其他相關屬性。  
@@ -92,7 +92,7 @@ ms.locfileid: "76287621"
   
 5.  在 [發行集屬性 - **發行集>]** **對話方塊上，按一下 [確定]\<** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以在建立發行項時，使用複寫預存程序來指定識別範圍管理選項。  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>在針對交易式發行集定義發行項時，啟用自動識別範圍管理  

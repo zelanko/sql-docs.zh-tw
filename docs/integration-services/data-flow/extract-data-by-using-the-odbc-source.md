@@ -11,10 +11,10 @@ ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: efc8ce0a541a508f88e7b1122b561008e25f4d51
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292663"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>使用 ODBC 來源來擷取資料

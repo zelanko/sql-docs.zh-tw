@@ -12,10 +12,10 @@ ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4900f90f4044b32aea673106ad0a7a2a14a8f5cb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296290"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>建立資料庫 (SQL Server 匯入和匯出精靈)
@@ -28,7 +28,7 @@ ms.locfileid: "71296290"
 精靈中的 [建立資料庫]  對話方塊只提供基本選項，可用來建立新的 SQL Server 資料庫。 若要查看及設定新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的所有選項，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立資料庫，或在精靈建立資料庫之後進行設定。 
 
 > [!NOTE]
-> 如果您想要尋找 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE DATABASE 陳述式的相關資訊，而不是 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 之 [建立資料庫]  對話方塊的相關資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+> 如果您想要尋找 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE DATABASE 陳述式的相關資訊，而不是 [ **匯入和匯出精靈] 之 [建立資料庫]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對話方塊的相關資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
 
 ## <a name="screen-shot-of-the-create-database-page"></a>[建立資料庫] 頁面的螢幕擷取畫面  
 下列螢幕擷取畫面顯示精靈的 [建立資料庫]  對話方塊。  

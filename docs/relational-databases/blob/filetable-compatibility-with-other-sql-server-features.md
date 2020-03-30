@@ -14,17 +14,17 @@ ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d199ba6ad64f3b259d7b94ac6180d12e83a311e1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75252706"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable 與其他 SQL Server 功能的相容性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   描述 FileTable 如何搭配其他的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能一起運作。  
   
-##  <a name="alwayson"></a> AlwaysOn 可用性群組和 FileTable  
+##  <a name="alwayson-availability-groups-and-filetables"></a><a name="alwayson"></a> AlwaysOn 可用性群組和 FileTable  
  當包含 FILESTREAM 或 FileTable 資料的資料庫屬於 AlwaysOn 可用性群組時：  
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]僅部分支援 FileTable 功能。 在容錯移轉之後，主要複本上的 FileTable 資料可供存取，但卻無法存取位在可讀取之次要複本上的 FileTable 資料。  
@@ -35,26 +35,26 @@ ms.locfileid: "75252706"
   
 -   透過檔案系統 API 對 FILESTREAM 或 FileTable 資料進行的所有存取都應該使用 VNN 而非電腦名稱。 如需詳細資訊，請參閱 [FILESTREAM 和 FileTable 與 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)。  
   
-##  <a name="OtherPartitioning"></a> 資料分割和 FileTable  
+##  <a name="partitioning-and-filetables"></a><a name="OtherPartitioning"></a> 資料分割和 FileTable  
  FileTable 不支援資料分割。 有了多重 FILESTREAM 檔案群組的支援，在大多數情況下可以處理單純的向上擴充問題，而不必訴諸於資料分割 (不同於 SQL 2008 FILESTREAM)。  
   
-##  <a name="OtherRepl"></a> 複寫和 FileTable  
+##  <a name="replication-and-filetables"></a><a name="OtherRepl"></a> 複寫和 FileTable  
  FileTable 不支援複寫和相關功能 (包括異動複寫、合併式複寫、異動資料擷取和變更追蹤)。  
   
-##  <a name="OtherIsolation"></a> 交易語意和 FileTable  
+##  <a name="transaction-semantics-and-filetables"></a><a name="OtherIsolation"></a> 交易語意和 FileTable  
  **Windows 應用程式**  
  Windows 應用程式不了解資料庫交易，所以 Windows 寫入作業不會提供資料庫交易的 ACID 屬性。 因此，交易式回復和復原無法利用 Windows 更新作業來進行。  
   
  **Transact-SQL 應用程式**  
  對於在 FileTable 的 FILESTREAM (file_stream) 資料行中工作的 TSQL 應用程式而言，隔離語意與一般使用者資料表內的 FILESTREAM 資料類型相同。  
   
-##  <a name="OtherQueryNot"></a> 查詢通知和 FileTable  
+##  <a name="query-notifications-and-filetables"></a><a name="OtherQueryNot"></a> 查詢通知和 FileTable  
  此查詢不得在 WHERE 子句或是查詢的任何其他部分中，包含 FileTable 中 FILESTREAM 資料行的參考。  
   
-##  <a name="OtherSelectInto"></a> SELECT INTO 和 FileTable  
+##  <a name="select-into-and-filetables"></a><a name="OtherSelectInto"></a> SELECT INTO 和 FileTable  
  FileTable 中的 SELECT INTO 陳述式將不會傳播目的地資料表上所建立的 FileTable 語意 (就像一般資料表中的 FILESTREAM 資料行一樣)。 所有目的地資料表資料行的行為就像一般資料行一樣。 這些資料行不會有任何關聯的 FileTable 語意。  
   
-##  <a name="OtherTriggers"></a> 觸發程序和 FileTable  
+##  <a name="triggers-and-filetables"></a><a name="OtherTriggers"></a> 觸發程序和 FileTable  
  **DDL (資料定義語言) 觸發程序**  
  包含 FileTable 的 DDL 觸發程序並無特殊考量。 一般 DDL 觸發程序將針對 Create/Alter DATABASE 作業以及 FileTable 的 CREATE/ALTER TABLE 作業引發。 觸發程序可以透過呼叫 EVENTDATA() 函數，擷取實際事件資料，該資料包括 DDL 命令文字和其他資訊。 現有 Eventdata 結構描述沒有任何新的事件或變更。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "75252706"
   
 -   不正常終止 Win32 控制代碼 (例如管理員明確終止 Win32 控制代碼或是資料庫損毀) 將不會在復原作業期間執行使用者觸發程序，即使不正常終止的 Win32 應用程式可能已經變更 FILESTREAM 內容也是一樣。  
   
-##  <a name="OtherViews"></a> 檢視表和 FileTable  
+##  <a name="views-and-filetables"></a><a name="OtherViews"></a> 檢視表和 FileTable  
  **檢視**  
  可以在 FileTable 上建立檢視表，就像在任何其他資料表上建立一樣。 但是，在 FileTable 上建立的檢視表要考量以下事項：  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75252706"
  **索引檢視表**  
  目前的索引檢視表不得包含 FILESTREAM 資料行，或是相依於 FILESTREAM 資料行的計算資料行/保存的計算資料行。 當 FileTable 上定義檢視表時，這個行為依然不會變更。  
   
-##  <a name="OtherSnapshots"></a> 快照集隔離和 FileTable  
+##  <a name="snapshot-isolation-and-filetables"></a><a name="OtherSnapshots"></a> 快照集隔離和 FileTable  
  Read Committed 快照集隔離 (RCSI) 和快照集隔離 (SI) 會依賴擁有資料快照集可供讀取者使用的能力，即使資料上發生更新作業也是一樣。 但是，FileTables 允許對 Filestream 資料的非交易式寫入存取。 因此，以下限制適用於在包含 FileTable 的資料庫中使用這些功能：  
   
 -   可以更改包含 FileTable 的資料庫來啟用 RCSI/SI。  
@@ -112,10 +112,10 @@ ms.locfileid: "75252706"
   
     -   全文檢索索引一定會成功，不論資料庫選項為何 (READ_COMMITTED_SNAPSHOT 或 ALLOW_SNAPSHOT_ISOLATION)。  
   
-##  <a name="readsec"></a> 可讀取次要資料庫  
+##  <a name="readable-secondary-databases"></a><a name="readsec"></a> 可讀取次要資料庫  
  快照集的相同考量，如上節＜ [快照集隔離和 FileTable](#OtherSnapshots)＞所述，也適用於可讀取次要資料庫。  
   
-##  <a name="CDB"></a> 自主資料庫和 FileTable  
+##  <a name="contained-databases-and-filetables"></a><a name="CDB"></a> 自主資料庫和 FileTable  
  FileTable 功能相依的 FILESTREAM 功能必須先在資料庫外部進行一些設定。 因此，使用 FILESTREAM 或 FileTable 的資料庫並非完全自主。  
   
  若要使用自主資料庫的特定功能 (例如包含的使用者)，可以將資料庫內含項目設定為 PARTIAL。 但在此情況下，必須注意某些資料庫設定不會包含在資料庫中，因此不會隨資料庫移動自動移動。  

@@ -18,10 +18,10 @@ ms.assetid: 38673010-ab77-4ebb-9c4d-b26b79e3b7ea
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9c613a95ea3bee42d51ac1805ff65281fa96ec33
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68101193"
 ---
 # <a name="makevalid-geometry-data-type"></a>MakeValid (geometry 資料類型)

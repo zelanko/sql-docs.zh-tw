@@ -14,10 +14,10 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 73cd348f9cb1f22eca30c28cee97ce8e81a20b16
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014512"
 ---
 # <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>將記錄傳送轉換成 Always On 可用性群組的必要條件
@@ -29,7 +29,7 @@ ms.locfileid: "68014512"
 >  您可以將可用性群組中的任何主要或次要資料庫 (可能是可讀取) 設定為記錄傳送主要資料庫。  
   
   
-##  <a name="AGPrereqsRealAddress"></a> 可用性群組必要條件  
+##  <a name="availability-group-prerequisites"></a><a name="AGPrereqsRealAddress"></a> 可用性群組必要條件  
  若要允許備份作業在可用性群組的主要複本上執行，請使用下列 AlwaysOn 可用性群組備份設定：  
   
 |屬性|設定|  
@@ -43,7 +43,7 @@ ms.locfileid: "68014512"
   
  [設定可用性複本的備份 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="LogShipPrereqs"></a> 記錄傳送必要條件  
+##  <a name="log-shipping-prerequisites"></a><a name="LogShipPrereqs"></a> 記錄傳送必要條件  
   
 -   記錄傳送主要資料庫必須位於主控可用性群組之初始/目前主要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68014512"
   
  [Converting a log shipping configuration to Availability Group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/) (將記錄傳送設定轉換成可用性群組) (SQL Server 部落格)  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **記錄傳送**  
   
 -   [將記錄傳送升級至 SQL Server 2016 &#40;Transact-SQL&#41;](../../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
@@ -82,7 +82,7 @@ ms.locfileid: "68014512"
   
 -   [設定可用性複本的備份 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   **部落格：**  
   

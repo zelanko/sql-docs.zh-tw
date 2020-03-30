@@ -20,10 +20,10 @@ ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d70bf0d8e99d24ee0d7ea9e046090ba4ed32453
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67939617"
 ---
 # <a name="full-file-backups-sql-server"></a>完整檔案備份 (SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "67939617"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 檔案備份的優點  
+##  <a name="benefits-of-file-backups"></a><a name="Benefits"></a> 檔案備份的優點  
  檔案備份提供下列優於資料庫備份的優點：  
   
 -   使用檔案備份可以增加復原的速度，因為這樣可以讓您只還原受損的檔案，而不需要還原資料庫的其餘部分。  
@@ -58,13 +58,13 @@ ms.locfileid: "67939617"
   
 -   比起完整資料庫備份，檔案備份在排程與媒體處理上彈性更大，因為對於大型資料庫，完整資料庫備份會變得難以管理。 對於含有各種更新特性資料的大型資料庫來說，檔案或檔案群組備份的增強彈性也很有用處。  
   
-##  <a name="Disadvantages"></a> 檔案備份的缺點  
+##  <a name="disadvantages-of-file-backups"></a><a name="Disadvantages"></a> 檔案備份的缺點  
   
 -   相較於完整資料庫備份，檔案備份的主要缺點在於增加管理上的複雜性。 維護和持續追蹤完整的備份組是相當耗時的工作，其耗費成本甚至可能會超過完整資料庫備份的空間需求。  
   
 -   如果損毀的檔案沒有備份，媒體故障將可能造成整個資料庫無法復原。 因此，必須維護一組完整的檔案備份，而在完整/大量記錄復原模式下，則還要備份一個或多個記錄備份，至少涵蓋第一次完整檔案備份和最後一次完整檔案備份之間的間隔。  
   
-##  <a name="Overview"></a> 檔案備份概觀  
+##  <a name="overview-of-file-backups"></a><a name="Overview"></a> 檔案備份概觀  
  完整檔案備份會備份一個或多個檔案或檔案群組中的所有資料。 根據預設，檔案備份會包含足以將檔案向前復原到備份作業結束的記錄檔記錄。  
   
  對於每一個復原模式來說，備份唯讀檔案或檔案群組都是相同的。 在完整復原模式下，一組完整的完整檔案備份連同足以涵蓋所有檔案備份的記錄備份，就相當於一個完整資料庫備份。  
@@ -87,7 +87,7 @@ ms.locfileid: "67939617"
 > [!NOTE]  
 >  在完整復原模式下，還原讀取/寫入檔案備份時必須向前復原交易記錄，以確保檔案與資料庫其餘部分的一致性。 為了避免向前復原過多的交易記錄備份，請考慮使用差異檔案備份。 如需詳細資訊，請參閱 [差異備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **建立檔案或檔案群組備份**  
   
 -   [備份檔案和檔案群組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  

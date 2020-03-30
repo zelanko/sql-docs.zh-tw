@@ -21,10 +21,10 @@ ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d8f9264a456464b40cfce4382cb7d70cbb7ce4cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295759"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>以程式設計的方式載入和執行本機封裝

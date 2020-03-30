@@ -13,17 +13,17 @@ ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c86ab8b3f29699e807c61b571832c106ab235710
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68018887"
 ---
 # <a name="access-filetables-with-transact-sql"></a>利用 Transact-SQL 存取 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   描述 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料操作語言 (DML) 命令如何與 FileTable 搭配使用。  
   
-##  <a name="BasicsInsert"></a> FileTable 上的 INSERT 作業  
+##  <a name="insert-operations-on-filetables"></a><a name="BasicsInsert"></a> FileTable 上的 INSERT 作業  
  下列考量適用於 FileTable 上的 **INSERT** 作業：  
   
 -   所有檔案屬性資料行都有 NOT NULL 條件約束。 若未明確設定值，則會提供適當的預設值。  
@@ -32,7 +32,7 @@ ms.locfileid: "68018887"
   
 -   提供 **GetPathLocator &#40;Transact-SQL&#41;** 函數的檔案系統路徑，應用程式就可以取得檔案或目錄的 [path_locator](../../relational-databases/system-functions/getpathlocator-transact-sql.md)。  
   
-##  <a name="BasicsUpdate"></a> FileTable 上的 UPDATE 作業  
+##  <a name="update-operations-on-filetables"></a><a name="BasicsUpdate"></a> FileTable 上的 UPDATE 作業  
  下列考量適用於 FileTable 上的 **UPDATE** 作業：  
   
 -   允許更新任何使用者定義的資料。  
@@ -41,14 +41,14 @@ ms.locfileid: "68018887"
   
 -   您可以更新 **file_stream** 資料行中的 FILESTREAM 資料，而不影響任何其他資料行 (包括時間戳記)。  
   
-##  <a name="BasicsDelete"></a> FileTable 上的 DELETE 作業  
+##  <a name="delete-operations-on-filetables"></a><a name="BasicsDelete"></a> FileTable 上的 DELETE 作業  
  下列考量適用於 FileTable 上的 **DELETE** 作業：  
   
 -   刪除資料列也會從檔案系統中移除對應的檔案或目錄。  
   
 -   若資料列對應至包含其他檔案或目錄的目錄，則無法刪除資料列。  
   
-##  <a name="BasicsConstraints"></a> 針對 FileTable 上 DML 作業強制執行的條件約束  
+##  <a name="constraints-that-are-enforced-for-dml-operations-on-filetables"></a><a name="BasicsConstraints"></a> 針對 FileTable 上 DML 作業強制執行的條件約束  
  系統定義的條件約束可確保 DML 動作不會危害檔案命名空間階層的完整性。 強制執行的條件約束包括：  
   
 -   當您設定或變更檔案或目錄的 **名稱** 時：  

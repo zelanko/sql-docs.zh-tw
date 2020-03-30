@@ -11,10 +11,10 @@ ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95f2fc808723fa3a69222ead3f362007585231f1
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288232"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>使用 Oracle CDC 服務
@@ -36,7 +36,7 @@ ms.locfileid: "79288232"
   
      本章節描述可用於設定 Oracle CDC 服務的命令列命令。  
   
-##  <a name="BKMK_MSXDBCDC"></a> MSXDBCDC 資料庫  
+##  <a name="the-msxdbcdc-database"></a><a name="BKMK_MSXDBCDC"></a> MSXDBCDC 資料庫  
  MSXDBCDC (Microsoft 外部資料庫 CDC) 資料庫是一種特殊的資料庫，當搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體使用 Oracle CDC 服務時便需要它。  
   
  這個資料庫的名稱不得變更。 如果名為 MSXDBCDC 的資料庫存在於主機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上而且包含 Oracle CDC 服務所定義之資料表以外的資料表，則不得使用主機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
@@ -67,7 +67,7 @@ ms.locfileid: "79288232"
   
 -   [dbo.xdbcdc_services](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_dboxdbcdc_services)  
   
-###  <a name="BKMK_dboxdbcdc_trace"></a> dbo.xdbcdc_trace  
+###  <a name="dboxdbcdc_trace"></a><a name="BKMK_dboxdbcdc_trace"></a> dbo.xdbcdc_trace  
  此資料表會儲存 Oracle CDC 服務的追蹤資訊。 儲存在這個資料表中的資訊包括顯著的狀態變更及追蹤記錄。  
   
  Oracle CDC 服務會將錯誤記錄和某些資訊記錄寫入 Windows 事件記錄檔和追蹤資料表中。 在某些情況下可能無法存取追蹤資料表，此時可從事件記錄檔存取錯誤資訊。  
@@ -88,7 +88,7 @@ ms.locfileid: "79288232"
   
  Oracle CDC 執行個體將會根據變更資料表保留原則來刪除舊的追蹤資料表資料列。  
   
-###  <a name="BKMK_dboxdbcdc_databases"></a> dbo.xdbcdc_databases  
+###  <a name="dboxdbcdc_databases"></a><a name="BKMK_dboxdbcdc_databases"></a> dbo.xdbcdc_databases  
  此資料表會包含目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中 Oracle CDC 資料庫的 CDC 服務名稱。 每個資料庫都會對應到 Oracle CDC 執行個體。 Oracle CDC 服務會使用此資料表來判斷哪些執行個體要啟動或停止，以及哪些執行個體要重新設定。  
   
  下表描述 **dbo.xdbcdc_databases** 資料表中包含的項目。  
@@ -100,7 +100,7 @@ ms.locfileid: "79288232"
 |cdc_service_name|這個項目會判斷哪一個 Oracle CDC 服務處理選取的 Oracle 資料庫。|  
 |已啟用|指出 Oracle CDC 執行個體為使用中 (1) 還是停用 (0) 狀態。 當 Oracle CDC 服務啟動時，只會啟動標示為啟用 (1) 的執行個體。<br /><br /> **注意**：發生無法重試的錯誤時，Oracle CDC 執行個體可能會停用。 在此情況下，必須在解決錯誤之後手動重新啟動執行個體。|  
   
-###  <a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
+###  <a name="dboxdbcdc_services"></a><a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  此資料表列出與主機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體相關聯的 CDC 服務。 CDC 設計工具主控台會使用此資料表來判斷針對本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體設定的 CDC 服務清單。 CDC 服務也會使用此資料表來確保只有一個執行中的 Windows 服務會處理給定的 Oracle CDC 服務名稱。  
   
  以下描述 **dbo.xdbcdc_databases** 資料表中包含的擷取狀態項目。  
@@ -128,7 +128,7 @@ ms.locfileid: "79288232"
   
 -   [dbo.xdbcdc_stop(dbname)](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_dboxdbcdc_stop)  
   
-###  <a name="BKMK_dboxcbcdc_reset_db"></a> dbo.xcbcdc_reset_db(資料庫名稱)  
+###  <a name="dboxcbcdc_reset_dbdatabase-name"></a><a name="BKMK_dboxcbcdc_reset_db"></a> dbo.xcbcdc_reset_db(資料庫名稱)  
  此程序會清除 Oracle CDC 執行個體的資料。 其用途如下：  
   
 -   為了重新開始資料擷取並忽略之前的資料，例如在來源資料庫復原之後，或是在某些 Oracle 交易記錄無法使用而停止活動之後。  
@@ -149,7 +149,7 @@ ms.locfileid: "79288232"
   
  如需 CDC 資料表的詳細資訊，請參閱 CDC 設計工具主控台中說明系統內的 *CDC 資料庫* 。  
   
-###  <a name="BKMK_dboxdbcdc_disable_db"></a> dbo.xdbcdc_disable_db(dbname)  
+###  <a name="dboxdbcdc_disable_dbdbname"></a><a name="BKMK_dboxdbcdc_disable_db"></a> dbo.xdbcdc_disable_db(dbname)  
  **dbo.xcbcdc_disable_db** 程序會執行以下工作：  
   
 -   移除選定 CDC 資料庫中 MSXDBCDC.xdbcdc_databases 資料表的項目。  
@@ -158,29 +158,29 @@ ms.locfileid: "79288232"
   
  如需有關 CDC 資料表的詳細資訊，請參閱 CDC 設計工具主控台中說明系統內的＜CDC 資料庫＞。  
   
-###  <a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service(svcname,sqlusr)  
+###  <a name="dboxcbcdc_add_servicesvcnamesqlusr"></a><a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service(svcname,sqlusr)  
  **dbo.xcbcdc_add_service** 程序會將項目加入至 **MSXDBCDC.xdbcdc_services** 資料表，並針對 **MSXDBCDC.xdbcdc_services** 資料表中的服務名稱將 1 的遞增值加入 ref_count 資料行。 當 **ref_count** 為 0 時，它會刪除資料列。  
   
  若要使用 **dbo.xcbcdc_add_service\<服務名稱, 使用者名稱>** 程序，使用者必須是所指名之 CDC 執行個體資料庫的 **db_owner** 資料庫角色成員，或是**系統管理員**或 **serveradmin** 固定伺服器角色的成員。  
   
-###  <a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
+###  <a name="dboxdbcdc_startdbname"></a><a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
  **dbo.xdbcdc_start** 程序會傳送啟動要求給 CDC 服務，此服務會處理選取的 CDC 執行個體來開始變更處理。  
   
  若要使用 **dbo.xcdcdc_start** 程序，使用者必須是 CDC 資料庫的 **db_owner** 資料庫角色成員，或是 **執行個體之** sysadmin **或** serveradmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 角色的成員。  
   
-###  <a name="BKMK_dboxdbcdc_stop"></a> dbo.xdbcdc_stop(dbname)  
+###  <a name="dboxdbcdc_stopdbname"></a><a name="BKMK_dboxdbcdc_stop"></a> dbo.xdbcdc_stop(dbname)  
  **dbo.xdbcdc_stop** 程序會傳送停止要求給 CDC 服務，此服務會處理選取的 CDC 執行個體來停止變更處理。  
   
  若要使用 **dbo.xcdcdc_stop** 程序，使用者必須是 CDC 資料庫的 **db_owner** 資料庫角色成員，或是 **執行個體之** sysadmin **或** serveradmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 角色的成員。  
   
-##  <a name="BKMK_CDCdatabase"></a> CDC 資料庫  
+##  <a name="the-cdc-databases"></a><a name="BKMK_CDCdatabase"></a> CDC 資料庫  
  CDC 服務中使用的每一個 Oracle CDC 執行個體都與稱為 CDC 資料庫的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關聯。 這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫會在與 Oracle CDC 服務相關聯的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中主控。  
   
  CDC 資料庫包含特殊的 cdc 結構描述。 Oracle CDC 服務會搭配前置詞為 **xdbcdc_** 的資料表名稱使用這個結構描述。 此結構描述的用途是為了安全性和一致性。  
   
  Oracle CDC 執行個體和 CDC 資料庫都是使用 Oracle CDC 設計工具主控台所建立。 如需有關 CDC 資料庫的詳細資訊，請參閱 Oracle CDC 設計工具主控台安裝所隨附的文件集。  
   
-##  <a name="BKMK_CommandConfigCDC"></a> 使用命令列來設定 CDC 服務  
+##  <a name="using-the-command-line-to-configure-the-cdc-service"></a><a name="BKMK_CommandConfigCDC"></a> 使用命令列來設定 CDC 服務  
  您可以從命令列操作 Oracle CDC 服務程式 (xdbcdcsvc.exe)。 CDC 服務程式是原生 32 位元/64 位元的 Windows 可執行檔。  
   
  **另請參閱**  
@@ -196,7 +196,7 @@ ms.locfileid: "79288232"
   
 -   [刪除](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_delete)  
   
-###  <a name="BKMK_config"></a> Config  
+###  <a name="config"></a><a name="BKMK_config"></a> Config  
  使用 `Config` 可從指令碼更新 Oracle CDC 服務組態。 此命令只能用於更新 CDC 服務組態的特定部分 (例如，只有連接字串，而不知道非對稱金鑰密碼)。 此命令必須由電腦管理員執行。 以下是 `Config` 命令的範例。  
   
 ```  
@@ -223,7 +223,7 @@ ms.locfileid: "79288232"
   
  **注意**：必須用雙引號 (") 括住任何包含空格或雙引號的參數。 內嵌雙引號必須成對 (例如，若要使用 **"A#B" D** 當作密碼，請輸入 **""A#B"" D"** )。  
   
-###  <a name="BKMK_create"></a> 建立  
+###  <a name="create"></a><a name="BKMK_create"></a> 建立  
  使用 `Create` 可從指令碼建立 Oracle CDC 服務。 此命令必須由電腦管理員執行。 以下是 `Create` 命令的範例：  
   
 ```  
@@ -249,7 +249,7 @@ ms.locfileid: "79288232"
   
  **注意**：必須用雙引號 (") 括住任何包含空格或雙引號的參數。 內嵌雙引號必須成對 (例如，若要使用 **"A#B" D** 當作密碼，請輸入 **""A#B"" D"** )。  
   
-###  <a name="BKMK_delete"></a> Delete  
+###  <a name="delete"></a><a name="BKMK_delete"></a> Delete  
  使用 `Delete` 可從指令碼完全刪除 Oracle CDC 服務。 此命令必須由電腦管理員執行。 以下是 `Delete` 命令的範例。  
   
 ```  

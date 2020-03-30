@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 400b028696666b188760f61c2490a218bc8bd2be
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68017665"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>唯一條件約束與檢查條件約束
@@ -34,7 +34,7 @@ ms.locfileid: "68017665"
   
  [相關工作](#Tasks)  
   
-##  <a name="Unique"></a> UNIQUE 條件約束  
+##  <a name="unique-constraints"></a><a name="Unique"></a> UNIQUE 條件約束  
  條件約束是 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 為您強制執行的規則。 例如，您可以使用 UNIQUE 條件約束，確定在未參與主索引鍵的特定資料行中沒有重複值。 雖然 UNIQUE 條件約束和 PRIMARY KEY 條件約束兩者都強制唯一性，但是當您想要強制非主索引鍵之資料行 (或資料行組合) 的唯一性時，請使用 UNIQUE 條件約束而不要使用 PRIMARY KEY 條件約束。  
   
  UNIQUE 條件約束允許 NULL 值，這與 PRIMARY KEY 條件約束不同。 但是，就像參與 UNIQUE 條件約束的任何值，一個資料行只能有一個 Null 值。 UNIQUE 條件約束也可被 FOREIGN KEY 條件約束所參考。  
@@ -43,7 +43,7 @@ ms.locfileid: "68017665"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將自動建立 UNIQUE 索引，以強制執行 UNIQUE 條件約束的唯一性要求。 因此，如果嘗試插入重複的資料列， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會傳回錯誤訊息，告訴您違反了 UNIQUE 條件約束，並且不會將資料列加入資料表內。 除非明確設定叢集索引，否則預設會建立一個非叢集索引來執行 UNIQUE 條件約束。  
   
-##  <a name="Check"></a> CHECK 條件約束  
+##  <a name="check-constraints"></a><a name="Check"></a> CHECK 條件約束  
  CHECK 條件約束限制一個或多個資料行接受的值，藉此強制值域完整性。 您可使用能根據邏輯運算子傳回 TRUE 或 FALSE 的任何邏輯 (布林) 運算式來建立 CHECK 條件約束。 例如，可以藉由建立只允許範圍從 $15,000 到 $100,000 之資料的 CHECK 條件約束，以限制 **salary** 資料行的值範圍。 這可防止輸入的薪水超過一般的薪水範圍。 邏輯運算式可以是： `salary >= 15000 AND salary <= 100000`。  
   
  您可以將多個 CHECK 條件約束套用到單一資料行。 您也可以在資料表層級建立單一 CHECK 條件約束，將它套用到多個資料行。 例如，多重資料行的 CHECK 條件約束可用來確認 **country_region** 資料行值為 **USA** 的任何資料列，其 **state** 資料行內也會有兩個字元的值。 這允許可在某一個位置上檢查多個條件。  
@@ -87,7 +87,7 @@ DELETE CheckTbl WHERE col1 = 10;
   
  即使 `DELETE` 條件約束會指定資料表 `CHECK` 至少必須具有 `CheckTbl` 個資料列， `1` 陳述式也會執行成功。  
   
-##  <a name="Tasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="Tasks"></a> 相關工作  
   
 > [!NOTE]  
 >  如果資料表是要發佈以進行複寫，則必須使用 Transact-SQL 陳述式 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 或 SQL Server 管理物件 (SMO) 變更結構描述。 使用 [資料表設計工具] 或 [資料庫圖表設計工具] 變更結構描述時，會嘗試卸除並重新建立資料表。 您無法卸除已發行的物件，因此結構描述變更將會失敗。  

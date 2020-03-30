@@ -14,10 +14,10 @@ ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: c27ed8ea6fbd2e4b89d27cb7772f533150cf0e5c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68099376"
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>儲存 Deadlock Graph (SQL Server Profiler)

@@ -23,10 +23,10 @@ ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c2a02ae5bc9572265cc33392a02c596cfcfec0ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68072013"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)

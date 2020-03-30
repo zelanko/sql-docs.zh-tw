@@ -14,10 +14,10 @@ ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ca7ea792717e7a8069ee54724543b0d5d78f2322
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71289549"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= (小於或等於) (SSIS 運算式)

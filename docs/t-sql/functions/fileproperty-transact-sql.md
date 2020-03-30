@@ -23,10 +23,10 @@ ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 79be8af32c13b9e910b94b40bd3c1bf9b2c0e2c5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68071402"
 ---
 # <a name="fileproperty-transact-sql"></a>FILEPROPERTY (Transact-SQL)

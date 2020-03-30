@@ -13,10 +13,10 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 019c62424398b05dfaa6efe2f91ab4c08b333cd2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74901919"
 ---
 # <a name="set-or-change-the-server-collation"></a>設定或變更伺服器定序

@@ -13,10 +13,10 @@ ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6d4b315a5cde27bb8dd3bce3d3642f17bbd13867
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292089"
 ---
 # <a name="sap-bw-destination-editor-advanced-page"></a>SAP BW 目的地編輯器 (進階頁面)

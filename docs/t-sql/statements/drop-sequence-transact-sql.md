@@ -19,10 +19,10 @@ ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 740c8bff60f56b94304b789e901ec3b1d945fd17
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68077718"
 ---
 # <a name="drop-sequence-transact-sql"></a>DROP SEQUENCE (Transact-SQL)

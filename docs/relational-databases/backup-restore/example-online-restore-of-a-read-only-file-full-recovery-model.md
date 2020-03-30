@@ -15,10 +15,10 @@ ms.assetid: 7ea2d2af-086f-48dc-9636-38dc194c7090
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 545a3cfe319732ca7cb0f9d5a51b1e172072e636
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75227971"
 ---
 # <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>範例：線上還原唯讀檔案 (完整復原模式)

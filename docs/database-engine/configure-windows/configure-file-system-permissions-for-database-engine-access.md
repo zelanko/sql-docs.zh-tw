@@ -15,10 +15,10 @@ ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a42a4a17a1eee9222318e2b508b28d190361d85e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012785"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>設定 Database Engine 對檔案系統的存取權限
@@ -38,7 +38,7 @@ ms.locfileid: "68012785"
 4.  在 [輸入要選取的物件名稱]  方塊中，輸入線上叢書主題[**設定 Windows 服務帳戶與權限**](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)所列個別服務 SID 的名稱 ([!INCLUDE[ssDE](../../includes/ssde-md.md)] 的個別服務 SID 名稱是使用 **NT SERVICE\MSSQLSERVER** 代表預設執行個體，使用 **NT SERVICE\MSSQL$InstanceName** 代表具名執行個體)。  
   
 5.  按一下 [檢查名稱]  ，驗證輸入項 (如果驗證失敗，可能是找不到名稱的緣故)。 當您按一下[確定]  時，[找到多個相符名稱]  對話方塊隨即出現。 這時，請選取個別服務 SID 名稱 (即 [MSSQLSERVER]  或 [NT SERVICE\MSSQL$InstanceName]  )，然後按一下 [確定]  。  再按一次 [確定]  返回 [權限]  對話方塊。   
-6.  在 [群組或使用者名稱]  方塊中，選取個別服務 SID 名稱，然後在 [\<名稱> 權限]  方塊中，針對 [完全控制]  選取 [允許]  核取方塊。  
+6.  在 [群組或使用者名稱]  方塊中，選取個別服務 SID 名稱，然後在 [**名稱> 權限]** \< 方塊中，針對 [完全控制]  選取 [允許]  核取方塊。  
   
 7. 按一下 [套用]  ，再按兩次 [確定]  退出。  
   
