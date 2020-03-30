@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257662"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>建立及管理全文檢索索引
@@ -27,7 +27,7 @@ ms.locfileid: "75257662"
 ## <a name="prerequisite---create-a-full-text-catalog"></a>先決條件 - 建立全文檢索目錄
 您需要有全文檢索目錄，才能建立全文檢索索引。 目錄是一或多個全文檢索索引的虛擬容器。 如需詳細資訊，請參閱[建立及管理全文檢索目錄](../../relational-databases/search/create-and-manage-full-text-catalogs.md)。
   
-##  <a name="tasks"></a> 建立、改變或卸除全文檢索索引  
+##  <a name="create-alter-or-drop-a-full-text-index"></a><a name="tasks"></a> 建立、改變或卸除全文檢索索引  
 ### <a name="create-a-full-text-index"></a>建立全文檢索索引  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)  
@@ -48,7 +48,7 @@ ms.locfileid: "75257662"
 
 如需詳細資訊，請參閱[擴展全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。
 
-##  <a name="view"></a> 檢視全文檢索索引的屬性
+##  <a name="view-the-properties-of-a-full-text-index"></a><a name="view"></a> 檢視全文檢索索引的屬性
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>使用 Transact-SQL 檢視全文檢索索引的屬性
 
 |目錄或動態管理檢視|描述|  
@@ -80,7 +80,7 @@ ms.locfileid: "75257662"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 儲存任何變更並結束 [全文檢索索引屬性]  對話方塊。  
   
-##  <a name="props"></a> 檢視索引資料表和資料行的屬性  
+##  <a name="view-the-properties-of-indexed-tables-and-columns"></a><a name="props"></a> 檢視索引資料表和資料行的屬性  
  您可以使用許多 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數 (例如 OBJECTPROPERTYEX) 以取得各種全文檢索索引屬性的值。 此資訊適用於管理和疑難排解全文檢索搜尋。  
   
  下表列出索引資料表和資料行的相關全文檢索屬性及其相關的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數。  
@@ -102,7 +102,7 @@ ms.locfileid: "75257662"
 |**TableFulltextPopulateStatus**|全文檢索資料表的母體擴展狀態。|OBJECTPROPERTYEX|  
 |**TableHasActiveFulltextIndex**|資料表是否擁有使用中全文檢索索引。|OBJECTPROPERTYEX|  
   
-##  <a name="key"></a> 取得全文檢索索引鍵資料行的資訊  
+##  <a name="get-info-about-the-full-text-key-column"></a><a name="key"></a> 取得全文檢索索引鍵資料行的資訊  
  一般而言，CONTAINSTABLE 或 FREETEXTTABLE 資料列集值函數的結果必須與基底資料表聯結。 在這種情況下，您必須知道唯一索引鍵資料行名稱。 您可以查詢給定的唯一索引是否當做全文檢索索引鍵使用，而且可以取得全文檢索索引鍵資料行的識別碼。  
   
 ### <a name="determine-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>判斷給定的唯一索引是否當做全文檢索索引鍵資料行使用  
@@ -183,7 +183,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
  如需編製索引和查詢 **xml** 資料行的詳細資訊，請參閱[使用 XML 資料行進行全文檢索搜尋](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)。  
   
-##  <a name="disable"></a> 停用或重新啟用資料表的全文檢索索引   
+##  <a name="disable-or-re-enable-full-text-indexing-for-a-table"></a><a name="disable"></a> 停用或重新啟用資料表的全文檢索索引   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，所有使用者建立的資料庫預設都會啟用全文檢索。 此外，個別資料表也會在建立全文檢索索引並將資料行加入索引中後，立即自動啟用全文檢索索引。 從全文檢索索引中卸除最後一個資料行之後，資料表便會自動停用全文檢索索引。  
   
  在具有全文檢索索引的資料表上，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來手動為資料表停用或重新啟用全文檢索索引。  
@@ -194,7 +194,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
 3.  選取 [全文檢索索引]  ，然後按一下 [停用全文檢索索引]  或 [啟用全文檢索索引]  。  
   
-##  <a name="remove"></a> 移除資料表的全文檢索索引  
+##  <a name="remove-a-full-text-index-from-a-table"></a><a name="remove"></a> 移除資料表的全文檢索索引  
   
 1.  在 [物件總管] 中，以滑鼠右鍵按一下含有您要移除其全文檢索索引的資料表。  
   

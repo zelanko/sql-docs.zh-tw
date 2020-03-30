@@ -21,10 +21,10 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0bc268c2baea6e0e661fac123df9fe19ec60252c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287642"
 ---
 # <a name="security-overview-integration-services"></a>安全性概觀 (Integration Services)
@@ -106,7 +106,7 @@ ms.locfileid: "79287642"
   
  如需詳細資訊，請參閱 [授予 Integration Services 服務的權限](#service)。  
 
-## <a name="files"></a> Access to Files Used by Packages
+## <a name="access-to-files-used-by-packages"></a><a name="files"></a> Access to Files Used by Packages
   封裝保護等級不會保護儲存於封裝之外的檔案。 這些檔案包括下列各項：  
   
 -   組態檔  
@@ -128,7 +128,7 @@ ms.locfileid: "79287642"
 ### <a name="log-files"></a>記錄檔  
  寫入檔案系統的記錄項目也應使用存取控制清單 (ACL) 保護其安全。 記錄項目還可以儲存於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中，由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性進行保護。 記錄項目可能包含機密資訊，例如，如果封裝包含建構參考電話號碼之 SQL 陳述式的「執行 SQL」工作，SQL 陳述式的記錄項目便會包含電話號碼。 SQL 陳述式可能還顯示有關資料庫中資料表與資料行名稱的私用資訊。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
 
-## <a name="service"></a> 授予 Integration Services 服務的權限
+## <a name="access-to-the-integration-services-service"></a><a name="service"></a> 授予 Integration Services 服務的權限
   封裝保護等級可限制已獲允許編輯和執行封裝的人員。 您需要額外的保護措施來限制有誰能夠檢視目前在伺服器上執行的封裝清單，以及有誰能夠停止目前在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中執行的封裝。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務列出正在執行封裝。 Windows Administrators 群組的成員可以檢視和停止所有目前正在執行封裝。 非 Administrators 群組成員的使用者只能檢視和停止他們所啟動的封裝。  

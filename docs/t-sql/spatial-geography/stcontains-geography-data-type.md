@@ -15,10 +15,10 @@ ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c5947d1793b39a0bf6aba9729b9f4b1ca7305fab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68042460"
 ---
 # <a name="stcontains--geography-data-type"></a>STContains (geography 資料類型)
