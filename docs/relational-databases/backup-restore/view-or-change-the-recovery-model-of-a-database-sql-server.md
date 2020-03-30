@@ -19,10 +19,10 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75254047"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>檢視或變更資料庫的復原模式 (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "75254047"
   如需更深入的解釋，請參閱[復原模式](recovery-models-sql-server.md)。
   
   
-##  <a name="BeforeYouBegin"></a>開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>開始之前  
   
 
 -   從[完整復原模式或大量記錄復原模式](back-up-a-transaction-log-sql-server.md)切換**之前**，請先[備份交易記錄](recovery-models-sql-server.md)。  
@@ -50,10 +50,10 @@ ms.locfileid: "75254047"
   
 **注意！** 如果您在大量作業期間切換到完整復原模式，大量作業記錄將從最小記錄變成完整記錄，反之亦然。  
   
-###  <a name="Security"></a>必要權限  
+###  <a name="required-permissions"></a><a name="Security"></a>必要權限  
    需要資料庫的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-recovery-model"></a>檢視或變更復原模式  
   
@@ -71,7 +71,7 @@ ms.locfileid: "75254047"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-the-recovery-model"></a>檢視復原模式  
   
@@ -102,7 +102,7 @@ USE [master] ;
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> 建議：變更復原模式之後  
+##  <a name="recommendations-after-you-change-the-recovery-model"></a><a name="FollowUp"></a> 建議：變更復原模式之後  
   
 -   **在完整模式與大量記錄復原模式之間切換之後**  
   
@@ -128,7 +128,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
     -   確定已排程定期資料庫備份。 備份資料庫是必要的動作，才能保護資料及截斷交易記錄中非使用中的部分。  
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
   
 -   [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
@@ -138,7 +138,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
 -   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
   
 -   [資料庫維護計畫](../maintenance-plans/maintenance-plans.md) (在《 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 線上叢書》中)  
   

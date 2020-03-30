@@ -15,17 +15,17 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68084024"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理交易記錄檔的大小
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 本主題涵蓋如何監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易記錄大小、壓縮交易記錄、加入或加大交易記錄檔、最佳化 **tempdb** 交易記錄成長率，以及控制交易記錄檔的成長。  
 
-##  <a name="MonitorSpaceUse"></a>監視記錄空間的使用  
+##  <a name="monitor-log-space-use"></a><a name="MonitorSpaceUse"></a>監視記錄空間的使用  
 使用 [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) 來監視記錄空間的使用。 這個 DMV 會傳回目前使用之記錄空間量的相關資訊，並指出交易記錄需要截斷的時機。 
 
 如需目前的記錄檔大小、大小上限及檔案的自動成長選項等詳細資訊，您也可以在 **sys.database_files** 中使用該記錄檔的 **size**、**max_size** 和 [growth](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 資料行。  
@@ -33,7 +33,7 @@ ms.locfileid: "68084024"
 > [!IMPORTANT]
 > 請避免讓記錄磁碟多載。 請確定記錄檔儲存體可以承受交易式負載的 [IOPS](https://wikipedia.org/wiki/IOPS) 和低延遲需求。 
   
-##  <a name="ShrinkSize"></a> 壓縮記錄檔大小  
+##  <a name="shrink-log-file-size"></a><a name="ShrinkSize"></a> 壓縮記錄檔大小  
  若要減少實體記錄檔的實體大小，則必須壓縮記錄檔。 如果您知道交易記錄檔包含未使用的空間，則這十分有用。 只有當資料庫已上線，而且至少有一個[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 可用時，您才能壓縮記錄檔。 在某些情況下，壓縮記錄可能要等到下一個記錄截斷之後才能進行。  
   
 > [!NOTE]
@@ -60,7 +60,7 @@ ms.locfileid: "68084024"
   
 -   [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) (請參閱一或多個記錄檔的 **size**、**max_size** 和 **growth** 資料行。)  
   
-##  <a name="AddOrEnlarge"></a> 加入或加大記錄檔  
+##  <a name="add-or-enlarge-a-log-file"></a><a name="AddOrEnlarge"></a> 加入或加大記錄檔  
 您可以加大現有的記錄檔 (如果磁碟空間允許的話)，或是將記錄檔加入資料庫 (通常是在不同的磁碟上)，來取得空間。 除非記錄檔空間不足，且保存記錄檔的磁碟區上磁碟空間也不足，否則一個交易記錄檔便已足夠。   
   
 -   若要對資料庫新增一個記錄檔，請使用 `ADD LOG FILE` 陳述式的 `ALTER DATABASE` 子句。 新增記錄檔可讓記錄檔增大。  
@@ -68,12 +68,12 @@ ms.locfileid: "68084024"
 
 如需詳細資訊，請參閱本主題中的[建議](#Recommendations)。
     
-##  <a name="tempdbOptimize"></a> 最佳化 tempdb 交易記錄的大小  
+##  <a name="optimize-tempdb-transaction-log-size"></a><a name="tempdbOptimize"></a> 最佳化 tempdb 交易記錄的大小  
  重新啟動伺服器執行個體時，就會將 **tempdb** 資料庫的交易記錄大小重新調整為自動成長之前的原始大小。 這樣會降低 **tempdb** 交易記錄的效能。 
  
  您可以在啟動或重新啟動伺服器執行個體後，增加 **tempdb** 交易記錄的大小，藉以避免這項負擔。 如需詳細資訊，請參閱 [tempdb Database](../../relational-databases/databases/tempdb-database.md)。  
   
-##  <a name="ControlGrowth"></a> 控制交易記錄檔的成長  
+##  <a name="control-transaction-log-file-growth"></a><a name="ControlGrowth"></a> 控制交易記錄檔的成長  
  請使用 [ALTER DATABASE &#40;Transact-SQL&#41; 檔案及檔案群組選項](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)陳述式來管理交易記錄檔的成長。 請注意：  
   
 -   若要變更目前的檔案大小 (單位為 KB、MB、GB 和 TB)，請使用 `SIZE` 選項。  
@@ -82,7 +82,7 @@ ms.locfileid: "68084024"
 
 如需詳細資訊，請參閱本主題中的[建議](#Recommendations)。
 
-## <a name="Recommendations"></a> 建議
+## <a name="recommendations"></a><a name="Recommendations"></a> 建議
 以下是關於使用交易記錄檔時的一般建議：
 
 -   交易記錄檔的自動成長 (autogrow) 增量，如 `FILEGROWTH` 選項所設定，必須要夠大才能保持領先工作負載交易的需求。 記錄檔的檔案成長量應夠大，才不用經常進行擴充。 若要適當設定交易記錄檔的大小，有一項良好的指標就是監視下列期間所佔用的記錄檔數量：
