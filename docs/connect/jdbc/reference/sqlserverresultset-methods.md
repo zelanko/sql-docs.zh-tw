@@ -11,10 +11,10 @@ ms.assetid: 9a1f4d07-ada9-43c7-9281-1f059554c4d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c0c0ee81adc6b278cbd20bfa51658c702008203e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970543"
 ---
 # <a name="sqlserverresultset-methods"></a>SQLServerResultSet 方法

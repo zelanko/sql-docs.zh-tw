@@ -16,10 +16,10 @@ ms.assetid: fece19e9-3bf8-4299-9188-ac3df5ce9c19
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: edfc9491f7652674293ef0a54a058e601608aff5
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982035"
 ---
 # <a name="getmaxschemanamelength-method-sqlserverdatabasemetadata"></a>getMaxSchemaNameLength 方法 (SQLServerDatabaseMetaData)

@@ -11,10 +11,10 @@ ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ec3ad142e3dc5e2945afebeb2c9a6c97350672c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "71713303"
 ---
 # <a name="understanding-encryption-support"></a>了解加密支援
@@ -38,7 +38,7 @@ ms.locfileid: "71713303"
   
 - **空白**：「屬性不存在於連接字串中」  
   
-- **value**：「屬性存在於連接字串中，而且其值有效」  
+- **值**：「屬性存在於連接字串中，而且其值有效」  
   
 - **任意**：「屬性是否存在於連接字串中，或者其值是否有效都不重要」  
   

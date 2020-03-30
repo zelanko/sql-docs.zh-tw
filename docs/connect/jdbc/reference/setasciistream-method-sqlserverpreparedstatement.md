@@ -11,10 +11,10 @@ ms.assetid: 91df14fb-ff92-457f-ad51-50da7a254630
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b26eee3bcb7a182cd6ce3d71a013fc44d61c3137
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67975359"
 ---
 # <a name="setasciistream-method-sqlserverpreparedstatement"></a>setAsciiStream 方法 (SQLServerPreparedStatement)

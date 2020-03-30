@@ -12,16 +12,16 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67945db1fd131b27b37a7e34853987c38fad8d84
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140375"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>開啟或關閉 Reporting Services 功能
   您可以關閉鎖定策略中未使用的報表伺服器功能，以減少實際執行報表伺服器的攻擊面。 在大多數情況下，您會想要同時執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能，以便能夠使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中所提供的所有功能。 不過，根據部署模型而定，您可以停用不需要的功能。 例如，如果所有報表處理都設定為排程的作業，您就可以只啟用背景處理。 同樣地，如果只想要視需要執行的互動式報表，可以只執行報表伺服器 Web 服務。  
   
- 本文中的程序將示範如何關閉原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 您可以透過不同的方式來設定功能，例如直接編輯 `RsReportServer.config` 檔案，或是在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，使用以原則為基礎之管理的 [Reporting Services 的介面區設定]  Facet。 使用下列連結即可找到說明如何開啟或關閉功能的程序：  
+ 本文中的程序將示範如何關閉原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 您可以透過不同的方式來設定功能，例如直接編輯 `RsReportServer.config` 檔案，或是在  **中，使用以原則為基礎之管理的 [Reporting Services 的介面區設定]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Facet。 使用下列連結即可找到說明如何開啟或關閉功能的程序：  
   
 -   [報表伺服器 Web 服務](#RSWebSvc)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "67140375"
   
 -   [報表資料來源的 Windows 整合式安全性](#WinIntSec)  
   
-##  <a name="RSWebSvc"></a> 報表伺服器 Web 服務  
+##  <a name="report-server-web-service"></a><a name="RSWebSvc"></a> 報表伺服器 Web 服務  
   
 ### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>透過編輯組態來開啟或關閉報表伺服器 Web 服務  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67140375"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Sched"></a> 排程的事件和傳遞  
+##  <a name="scheduled-events-and-delivery"></a><a name="Sched"></a> 排程的事件和傳遞  
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>透過編輯組態來開啟或關閉排程的事件和傳遞  
   
@@ -94,11 +94,11 @@ ms.locfileid: "67140375"
 > [!NOTE]  
 >  您不能完全關閉背景處理，因為它提供了伺服器作業所需的資料庫維護功能。  
   
-##  <a name="WebPortal"></a> 入口網站
+##  <a name="web-portal"></a><a name="WebPortal"></a> 入口網站
   
 從 SQL Server 2016 Reporting Services 累計更新 2 開始，入口網站一律會啟用。
   
-##  <a name="WinIntSec"></a> Windows 整合式安全性  
+##  <a name="windows-integrated-security"></a><a name="WinIntSec"></a> Windows 整合式安全性  
   
 ### <a name="to-turn-on-or-off-windows-integrated-security-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 來開啟或關閉 Windows 整合式安全性  
   

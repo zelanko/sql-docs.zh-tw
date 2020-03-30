@@ -11,17 +11,17 @@ ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 267605b6a89f323570cfacfc66517b028ef716a2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69025468"
 ---
 # <a name="working-with-a-connection"></a>使用連線
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-下列各節將提供使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別來連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫之不同方法的範例。
+下列各節將提供使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別來連線到 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 資料庫之不同方法的範例。
 
 > [!NOTE]  
 > 如果您使用 JDBC 驅動程式連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時發生問題，請參閱[連線能力疑難排解](../../connect/jdbc/troubleshooting-connectivity.md)，以取得如何更正此問題的建議。
@@ -43,7 +43,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 
 ## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>使用 SQLServerDriver 類別建立連線
 
-如果您必須在 DriverManager 的驅動程式清單中指定特定的驅動程式，您可使用 [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md) 類別的 [connect](../../connect/jdbc/reference/connect-method-sqlserverdriver.md) 方法建立資料庫連線，如下所示：
+如果您必須在 DriverManager 的驅動程式清單中指定特定的驅動程式，您可使用 [SQLServerDriver](../../connect/jdbc/reference/connect-method-sqlserverdriver.md) 類別的 [connect](../../connect/jdbc/reference/sqlserverdriver-class.md) 方法建立資料庫連線，如下所示：
 
 ```java
 Driver d = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();  

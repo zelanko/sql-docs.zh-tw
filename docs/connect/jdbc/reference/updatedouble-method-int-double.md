@@ -16,10 +16,10 @@ ms.assetid: 90c47643-e27e-425d-85a0-63866f858367
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 343a39fbe3f7f98717beb7044b6faab802eaac51
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67999026"
 ---
 # <a name="updatedouble-method-int-double"></a>updateDouble 方法 (int, double)

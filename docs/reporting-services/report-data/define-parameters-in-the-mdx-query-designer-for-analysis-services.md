@@ -15,10 +15,10 @@ ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02b9884d4f1f9d7928db80091c68678dbc55fa10
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573658"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>在 Analysis Services 的 MDX 查詢設計工具中定義參數
@@ -57,9 +57,9 @@ ms.locfileid: "65573658"
   
 2.  在工具列上按一下 **[設計]** ，切換至 [查詢] 模式。  
   
-3.  在 MDX 查詢設計工具的工具列上，按一下 [查詢參數]  (![[查詢參數] 對話方塊圖示](../../reporting-services/report-data/media/iconqueryparameter.gif "[查詢參數] 對話方塊圖示"))。 [查詢參數] 對話方塊隨即開啟。  
+3.  在 MDX 查詢設計工具的工具列上，按一下 [查詢參數]  (![[查詢參數] 對話方塊圖示](../../reporting-services/report-data/media/iconqueryparameter.gif "查詢參數對話方塊圖示"))。 [查詢參數] 對話方塊隨即開啟。  
   
-4.  在 [參數]  資料行中，按一下 [\<輸入參數>]  ，然後鍵入參數名稱。  
+4.  在 [參數]  資料行中，按一下 [**輸入參數>]\<** ，然後鍵入參數名稱。  
   
 5.  在 [維度]  資料行中，從下拉式清單選擇一個值。  
   

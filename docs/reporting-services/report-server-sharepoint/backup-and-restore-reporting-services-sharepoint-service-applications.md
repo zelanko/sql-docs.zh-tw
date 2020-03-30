@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 93f3eb7db9c00f98d1d4270e9febc105eb6ef6b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574350"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>備份與還原 Reporting Services SharePoint 服務應用程式
@@ -77,7 +77,7 @@ ms.locfileid: "65574350"
   
 ### <a name="verify-execution-account-and-database-authentication"></a>驗證執行帳戶和資料庫驗證
 
- **執行帳戶：** 若要確認您的服務應用程式是否使用執行帳戶：  
+ **執行帳戶** ：若要驗證您的服務應用程式是否使用執行帳戶：  
   
 1.  在 [SharePoint 管理中心] 的 [應用程式管理]  群組中，選取 [管理服務應用程式]  。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "65574350"
   
 4.  如果設定了執行帳戶，則在還原服務應用程式備份時需要知道認證。 如果不知道正確的認證，請不要進行備份和還原程序。  
   
- **資料庫驗證：** 若要確認您的服務應用程式是否使用 Windows 驗證進行資料庫驗證：  
+ **資料庫驗證** ：若要確認您的服務應用程式是否使用 Windows 驗證進行資料庫驗證：  
   
 1.  在 [SharePoint 管理中心] 的 [應用程式管理]  群組中，選取 [管理服務應用程式]  。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "65574350"
 
 ### <a name="configure-the-execution-account-and-database-authentication"></a>設定執行帳戶和資料庫驗證
 
- **執行帳戶：** 如果您的服務應用程式使用執行帳戶，請完成下列步驟設定該帳戶：  
+ **執行帳戶** ：如果您的服務應用程式使用執行帳戶，請完成下列步驟設定該帳戶：  
   
 1.  在 [SharePoint 管理中心] 的 [應用程式管理]  群組中，選取 [管理服務應用程式]  。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "65574350"
   
 5.  選取 [確定]  。  
   
- **資料庫驗證：** 如果您的服務應用程式使用 Windows 驗證進行資料庫驗證，請完成下列步驟：  
+ **資料庫驗證** ：如果您的服務應用程式使用 Windows 驗證進行資料庫驗證，請完成下列步驟：  
   
 1.  在 [SharePoint 管理中心] 的 [應用程式管理]  群組中，選取 [管理服務應用程式]  。  
   

@@ -16,10 +16,10 @@ ms.assetid: 25dabdc9-c60f-485a-87eb-306067964765
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ca49c8e50527ab7cafce9c93c314a0e363b45402
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67972579"
 ---
 # <a name="setstring-method-sqlserverpreparedstatement"></a>setString 方法 (SQLServerPreparedStatement)

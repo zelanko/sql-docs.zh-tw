@@ -11,10 +11,10 @@ ms.assetid: 7fb68784-d60f-47cc-9e80-568e1bc5678c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5000ef62e79cb6693c3e975eb21479e5eebe78ae
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977501"
 ---
 # <a name="isqlserverconnection-fields"></a>ISQLServerConnection 欄位
