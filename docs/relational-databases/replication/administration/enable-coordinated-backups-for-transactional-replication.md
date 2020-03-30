@@ -20,10 +20,10 @@ ms.assetid: 73a914ba-8b2d-4f4d-ac1b-db9bac676a30
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 96fa2e96021f0390fcc1cf15eb3aba2fd6b55e42
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75322047"
 ---
 # <a name="enable-coordinated-backups-for-transactional-replication"></a>為異動複寫啟用協調備份

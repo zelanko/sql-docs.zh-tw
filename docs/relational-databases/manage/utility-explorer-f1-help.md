@@ -20,10 +20,10 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68024492"
 ---
 # <a name="utility-explorer-f1-help"></a>公用程式總管 F1 說明
@@ -307,7 +307,7 @@ ms.locfileid: "68024492"
   
 -   SQL Server 版本：  
   
--   叢集：(True 或 False)  
+-   叢集化：(True 或 False)  
   
 -   備份目錄：  
   
@@ -404,7 +404,7 @@ ms.locfileid: "68024492"
   
 -   SQL Server 版本：  
   
--   叢集：(True 或 False)  
+-   叢集化：(True 或 False)  
   
 -   備份目錄：  
   
@@ -490,7 +490,7 @@ ms.locfileid: "68024492"
   
 -   收集組上傳頻率：每隔 15 分鐘。  
   
- UMDW 目錄是可以設定的：\<系統磁碟機>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP 名稱>\MSSQL\Data\\，其中 \<系統磁碟機> 通常是 C:\ 磁碟機。 記錄檔 UMDW_\<GUID>_LOG 位於相同的目錄中。  
+ UMDW 目錄是可以設定的：\<系統磁碟機>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\，其中 \<系統磁碟機> 通常是 C:\ 磁碟機。 記錄檔 UMDW_\<GUID>_LOG 位於相同的目錄中。  
   
 > **注意：** 可以使用卸離/附加或 ALTER DATABASE 來變更 UMDW (sysutility_mdw) 檔案的位置。 我們建議使用 ALTER DATABASE。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
   

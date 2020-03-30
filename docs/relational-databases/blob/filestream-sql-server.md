@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: c56f702b6946662657f35fd7e0c8e6b9bc791c36
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287282"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
@@ -75,7 +75,7 @@ FILESTREAM 資料必須儲存在 FILESTREAM 檔案群組中。 FILESTREAM 檔案
 > [!NOTE]
 > SQL 登入不會使用 FILESTREAM 容器。 只有 NTFS 或 ReFS 驗證會使用 FILESTREAM 容器。
 
-## <a name="dual"></a> 使用 Transact-SQL 和檔案系統資料流存取來存取 BLOB 資料
+## <a name="accessing-blob-data-with-transact-sql-and-file-system-streaming-access"></a><a name="dual"></a> 使用 Transact-SQL 和檔案系統資料流存取來存取 BLOB 資料
 
 在您將資料儲存在 FILESTREAM 資料行中以後，可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 交易或 Win32 API 來存取檔案。  
   

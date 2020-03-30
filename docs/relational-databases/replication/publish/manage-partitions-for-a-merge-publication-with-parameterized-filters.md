@@ -16,10 +16,10 @@ ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9f375d81d77fb943f6cfe1b911ab8bcc9f385533
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321220"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>使用參數化篩選管理合併式發行集的資料分割
@@ -40,15 +40,15 @@ ms.locfileid: "75321220"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   如果您為複寫拓撲編寫指令碼 (建議您如此做)，則發行集指令碼將包含呼叫建立資料分割的預存程序。 指令碼提供所建立資料分割的參考，並提供必要時重新建立一或多個資料分割的方式。 如需詳細資訊，請參閱 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)。  
   
 -   當發行集擁有會產生具有非重疊資料分割之訂閱的參數化篩選時，以及遺失了特定訂閱而需要重新建立時，您必須執行下列作業：移除先前訂閱的資料分割、重新建立訂閱，然後重新建立資料分割。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。 複寫會在發行集建立指令碼產生時，針對現有的「訂閱者」資料分割產生建立指令碼。 如需詳細資訊，請參閱 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  您可以在 [發行集屬性 - **發行集>]** **對話方塊的 [資料分割]\<** 頁面上，管理資料分割。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。 您可以在此頁面中：建立和刪除資料分割；允許「訂閱者」初始化快照集產生和傳遞；為一個或多個資料分割產生快照集；清除快照集。  
   
 #### <a name="to-create-a-partition"></a>若要建立資料分割  
@@ -89,7 +89,7 @@ ms.locfileid: "75321220"
   
 2.  按一下 **[清除現有快照集]** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  若要使用參數化篩選以更好的方式管理發行集，可以使用複寫預存程序，以程式設計的方式列舉現有的資料分割。 您也可以建立及刪除現有的資料分割。 您可取得下列有關現有資料分割的資訊：  
   
 -   資料分割的篩選方式 (使用 [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) 或 [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md))。  
@@ -124,7 +124,7 @@ ms.locfileid: "75321220"
   
      這也會移除資料分割的快照集作業和快照集檔案。  
   
-##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
  若要使用參數化篩選以更好的方式管理發行集，可以使用 Replication Management Objects (RMO)，以程式設計的方式建立新的「訂閱者」資料分割、列舉現有的「訂閱者」資料分割，以及刪除「訂閱者」資料分割。 如需有關如何建立「訂閱者」資料分割的詳細資訊，請參閱＜ [使用參數化篩選建立合併式發行集的快照集](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)＞。 您可取得下列有關現有資料分割的資訊：  
   
 -   資料分割所根據的值和篩選函數。  

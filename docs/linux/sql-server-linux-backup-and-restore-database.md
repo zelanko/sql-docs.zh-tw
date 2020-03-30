@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.openlocfilehash: 88ef620a24bc2ce623ea6fb072871dadeffbcf6d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68823109"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>在 Linux 上備份與還原 SQL Server 資料庫

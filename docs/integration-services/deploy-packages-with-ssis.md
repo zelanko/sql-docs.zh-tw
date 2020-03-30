@@ -21,10 +21,10 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b873c611c0e997c5033c2efed341f93e0ec5aa5e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71290732"
 ---
 # <a name="deploy-packages-with-ssis"></a>使用 SSIS 部署封裝
@@ -46,13 +46,13 @@ ms.locfileid: "71290732"
     
 這個教學課程的目標是，模擬在實際部署時可能遇到的各種問題的複雜性。 但是，如果您無法將封裝部署到其他電腦上，仍然可以進行這個教學課程，只要將封裝安裝在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]本機執行個體上的 msdb 資料庫中，然後從本機執行個體上的 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 執行封裝就可以了。    
 
-**完成本教學課程的估計時間：** 2 小時
+**完成這個教學課程的估計時間：** 2 小時
 
 ## <a name="what-you-learn"></a>學習內容    
 若要熟悉 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所提供的新工具、控制項和功能，最好的方法就是使用它們。 這個教學課程會逐步解說各個步驟，教您建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，然後將封裝和其他必要檔案加入至專案中。 當專案完成之後，您還要建立部署配套、將部署配套複製到目的地電腦，然後將封裝安裝到目的地電腦上。    
     
 ## <a name="prerequisites"></a>Prerequisites    
-本教學課程的主要對象是已經熟悉基本檔案系統作業，但對於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所提供新功能較為陌生的使用者。 為進一步了解在這個教學課程中所要用到的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 基本概念，若能先完成下列 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教學課程，將會很有幫助：[SSIS 如何建立 ETL 套件](../integration-services/ssis-how-to-create-an-etl-package.md)。    
+本教學課程的主要對象是已經熟悉基本檔案系統作業，但對於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所提供新功能較為陌生的使用者。 為了進一步了解在這個教學課程中所要用到的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 基本概念，若能先完成下列 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教學課程，將會很有幫助： [SSIS 如何建立 ETL 封裝](../integration-services/ssis-how-to-create-an-etl-package.md)。    
     
 ### <a name="on-the-source-computer"></a>在來源電腦上
 
@@ -62,7 +62,7 @@ ms.locfileid: "71290732"
 
 - 範例資料、完成的套件、組態和讀我檔案。 若要將範例資料與課程套件下載為 ZIP 檔案，請參閱 [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827) (SQL Server Integration Services 教學課程檔案)。 ZIP 檔案中的檔案大部分都是唯讀，以避免不小心變更。 若要將輸出寫入至檔案或變更它，您可能必須關閉檔案屬性中的唯讀屬性。
 
--   **AdventureWorks2014** 範例資料庫。 若要下載 **AdventureWorks2014** 資料庫，請從 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)下載 `AdventureWorks2014.bak`，並還原備份。  
+-   **AdventureWorks2014** 範例資料庫。 若要下載 **AdventureWorks2014** 資料庫，請從 `AdventureWorks2014.bak`AdventureWorks 範例資料庫[下載 ](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)，並還原備份。  
 
 -   您必須具有在 AdventureWorks 資料庫中建立和卸除資料表的權限。
     
@@ -76,7 +76,7 @@ ms.locfileid: "71290732"
 
 - 範例資料、完成的套件、組態和讀我檔案。 若要將範例資料與課程套件下載為 ZIP 檔案，請參閱 [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827) (SQL Server Integration Services 教學課程檔案)。 ZIP 檔案中的檔案大部分都是唯讀，以避免不小心變更。 若要將輸出寫入至檔案或變更它，您可能必須關閉檔案屬性中的唯讀屬性。
 
--   **AdventureWorks2014** 範例資料庫。 若要下載 **AdventureWorks2014** 資料庫，請從 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)下載 `AdventureWorks2014.bak`，並還原備份。  
+-   **AdventureWorks2014** 範例資料庫。 若要下載 **AdventureWorks2014** 資料庫，請從 `AdventureWorks2014.bak`AdventureWorks 範例資料庫[下載 ](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)，並還原備份。  
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。    
     
@@ -84,7 +84,7 @@ ms.locfileid: "71290732"
     
 -   您必須具有在 AdventureWorks 資料庫中建立和卸除資料表的權限，以及在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中執行 SSIS 套件的權限。    
     
--   您必須具有 `msdb` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系統資料庫中 `sysssispackages` 資料表的讀取和寫入權限。    
+-   您必須具有 `sysssispackages` `msdb` 系統資料庫中 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表的讀取和寫入權限。    
     
 如果您計畫將封裝部署到建立部署配套時所使用的同一部電腦，則該部電腦必須同時符合來源電腦和目的地電腦的需求。    
         

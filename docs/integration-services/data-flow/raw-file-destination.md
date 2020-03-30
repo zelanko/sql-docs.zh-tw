@@ -21,10 +21,10 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4919a5df6c7036cce13a2d0218af1727f3ec9d0b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292183"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
@@ -149,13 +149,13 @@ ms.locfileid: "71292183"
   
 -   [設定資料行索引標籤上的選項](#mapping)  
   
-###  <a name="open"></a> 開啟原始檔案目的地編輯器  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> 開啟原始檔案目的地編輯器  
   
 1.  將「原始檔案」目的地加入至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]封裝。  
   
 2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]** 。  
   
-###  <a name="connection"></a> 設定連接管理員索引標籤上的選項  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 設定連接管理員索引標籤上的選項  
  **存取模式**  
  選取指定檔案名稱的方式。 選取 **[檔案名稱]** 直接輸入檔案名稱和路徑，或是選取 **[來自變數的檔案名稱]** 指定包含檔案名稱的變數。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "71292183"
   
  當您按一下 **[產生初始原始檔案]** 時，隨即顯示訊息方塊。 按一下 **[確定]** ，繼續建立檔案。 按一下 **[取消]** ，在 **[資料行]** 頁面上選取不同的資料行清單。  
   
-###  <a name="mapping"></a> 設定資料行索引標籤上的選項  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> 設定資料行索引標籤上的選項  
  **可用的輸入資料行**  
  選取要寫入至原始檔案的一個或多個輸入資料行。  
   
@@ -191,13 +191,13 @@ ms.locfileid: "71292183"
   
 -   [設定資料行索引標籤上的選項](#mapping)  
   
-###  <a name="open"></a> 開啟原始檔案目的地編輯器  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> 開啟原始檔案目的地編輯器  
   
 1.  將「原始檔案」目的地加入至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]封裝。  
   
 2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]** 。  
   
-###  <a name="connection"></a> 設定連接管理員索引標籤上的選項  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 設定連接管理員索引標籤上的選項  
  **存取模式**  
  選取指定檔案名稱的方式。 選取 **[檔案名稱]** 直接輸入檔案名稱和路徑，或是選取 **[來自變數的檔案名稱]** 指定包含檔案名稱的變數。  
   
@@ -212,7 +212,7 @@ ms.locfileid: "71292183"
   
  當您按一下該按鈕時，資料行的清單便會出現。 您可以按一下 [取消]，然後修改資料行，或按一下 [確定]，以繼續建立該檔案。  
   
-###  <a name="mapping"></a> 設定資料行索引標籤上的選項  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> 設定資料行索引標籤上的選項  
  **可用的輸入資料行**  
  選取要寫入至原始檔案的一個或多個輸入資料行。  
   

@@ -20,10 +20,10 @@ ms.assetid: 08ac8aa0-aff7-4b22-87e0-1a1d55dcbc04
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 437859afd1f21cba5c47f93c86173d71e3ae89d9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68027646"
 ---
 # <a name="astextzm-geometry-data-type"></a>AsTextZM (geometry 資料類型)
