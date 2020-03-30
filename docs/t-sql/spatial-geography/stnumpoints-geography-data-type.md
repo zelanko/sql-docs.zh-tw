@@ -18,10 +18,10 @@ ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 320118e7844dfe40e45be9a893ad7bf45faff8bc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68120895"
 ---
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints (geography 資料類型)

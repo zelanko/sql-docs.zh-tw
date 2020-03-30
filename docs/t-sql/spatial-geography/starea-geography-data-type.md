@@ -18,10 +18,10 @@ ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 817a6325b956f5fc4214597b0b8bc46f6aff49f3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68042516"
 ---
 # <a name="starea-geography-data-type"></a>STArea (geography 資料類型)

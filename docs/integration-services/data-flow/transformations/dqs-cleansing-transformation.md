@@ -17,10 +17,10 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1c3ccadbe443ca555e5386ea3d3434405ae97461
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291473"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 清理轉換
@@ -74,13 +74,13 @@ ms.locfileid: "71291473"
   
 -   [設定 DQS 清理連接管理員對話方塊中的選項](#manager)  
   
-###  <a name="open"></a> 開啟 DQS 清理轉換編輯器  
+###  <a name="open-the-dqs-cleansing-transformation-editor"></a><a name="open"></a> 開啟 DQS 清理轉換編輯器  
   
 1.  在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中，將 DQS 清理轉換加入至 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]封裝。  
   
 2.  以滑鼠右鍵按一下此元件，然後按一下 **[編輯]** 。  
   
-###  <a name="connection"></a> 設定連接管理員索引標籤上的選項  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> 設定連接管理員索引標籤上的選項  
  **資料品質連接管理員**  
  從清單中選取現有的 DQS 連線管理員，或按一下 [新增]  建立新的連線。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "71291473"
   
 -   **[重新導向資料列]** ，指出輸入資料未插入 Data Quality Services 資料庫，並會重新導向至錯誤輸出。  
   
-###  <a name="mapping"></a> 設定對應索引標籤上的選項  
+###  <a name="set-options-on-the-mapping-tab"></a><a name="mapping"></a> 設定對應索引標籤上的選項  
  如需有關如何將資料行對應至複合定義域的詳細資訊，請參閱＜ [Map Columns to Composite Domains](../../../integration-services/data-flow/transformations/map-columns-to-composite-domains.md)＞。  
   
  **可用的輸入資料行**  
@@ -134,7 +134,7 @@ ms.locfileid: "71291473"
  **狀態別名**  
  列出包含更正資料之狀態資訊的資料行。 按一下欄位以修改資料行名稱。  
   
-###  <a name="advanced"></a> 設定進階索引標籤上的選項  
+###  <a name="set-options-on-the-advanced-tab"></a><a name="advanced"></a> 設定進階索引標籤上的選項  
  **標準化輸出**  
  指出是否要根據針對定義域所定義的輸出格式，以標準化格式輸出資料。 如需標準化格式的詳細資訊，請參閱 [資料清理](../../../data-quality-services/data-cleansing.md)。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "71291473"
  **附加的資料結構描述**  
  指出是否要輸出資料結構描述。 如需詳細資訊，請參閱 [將定義域或複合定義域附加至參考資料](../../../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)。  
   
-###  <a name="manager"></a> 設定 DQS 清理連接管理員對話方塊中的選項  
+###  <a name="set-the-options-in-the-dqs-cleansing-connection-manager-dialog-box"></a><a name="manager"></a> 設定 DQS 清理連接管理員對話方塊中的選項  
  **伺服器名稱**  
  選取或輸入您想要連接之 DQS 伺服器的名稱。 如需有關伺服器的詳細資訊，請參閱＜ [DQS Administration](../../../data-quality-services/dqs-administration.md)＞。  
   

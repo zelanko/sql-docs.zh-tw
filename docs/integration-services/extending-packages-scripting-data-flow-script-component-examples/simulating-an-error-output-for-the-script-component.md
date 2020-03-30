@@ -16,10 +16,10 @@ ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 318a7302d87e029f45d6e9202f587473210e0976
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296460"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>模擬指令碼元件的錯誤輸出

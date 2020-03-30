@@ -30,16 +30,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68344603"
 ---
 # <a name="principals-database-engine"></a>主體 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  「主體」  是可要求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源的實體。 主體就像其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授權模型的元件一樣，可以階層方式安排。 主體的影響範圍，取決於主體定義的範圍：Windows、伺服器、資料庫；以及主體是否為不可分割或集合。 「Windows 登入」是不可分割主體的一個範例，而「Windows 群組」則是主體為集合的範例。 每個主體都有一個安全性識別碼 (SID)。 本主題適用於所有版本的 SQL Server，但 SQL Database 或 SQL 資料倉儲中的伺服器層級主體有一些限制。 
+  「主體」  是可要求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源的實體。 主體就像其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授權模型的元件一樣，可以階層方式安排。 主體的影響範圍視主體的定義範圍 (Windows、伺服器、資料庫)，以及主體是否可分割或者是一個集合而定。 「Windows 登入」是不可分割主體的一個範例，而「Windows 群組」則是主體為集合的範例。 每個主體都有一個安全性識別碼 (SID)。 本主題適用於所有版本的 SQL Server，但 SQL Database 或 SQL 資料倉儲中的伺服器層級主體有一些限制。 
   
 ## <a name="sql-server-level-principals"></a>SQL Server 層級主體  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68344603"
  這些主體帳戶沒有系統管理員可以變更的密碼，因為它們是以發行到 Microsoft 的憑證為基礎。
   
 ## <a name="the-guest-user"></a>guest 使用者  
- 每個資料庫都包括 `guest`不同的一項行為變更。 具有資料庫存取權但在資料庫中沒有使用者帳戶的使用者，將繼承授與 `guest` 使用者的權限。 無法卸除 `guest` 使用者，但可透過撤銷其 CONNECT 權限予以停用。 在任何資料庫 (不含 `master` 或 `tempdb`) 內執行 `REVOKE CONNECT FROM GUEST;`，即可撤銷 CONNECT 權限。  
+ 每個資料庫都包括 `guest`不同的一項行為變更。 具有資料庫存取權但在資料庫中沒有使用者帳戶的使用者，將繼承授與 `guest` 使用者的權限。 無法卸除 `guest` 使用者，但可透過撤銷其 CONNECT 權限予以停用。 在任何資料庫 (不含 `REVOKE CONNECT FROM GUEST;` 或 `master`) 內執行 `tempdb`，即可撤銷 CONNECT 權限。  
   
   
 ## <a name="related-tasks"></a>相關工作  

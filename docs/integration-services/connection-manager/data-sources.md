@@ -13,10 +13,10 @@ ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 29c4fe9779b30066a188b9270e920ffd6339421b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298619"
 ---
 # <a name="data-sources"></a>資料來源
@@ -28,7 +28,7 @@ ms.locfileid: "71298619"
   
  資料來源物件是連接的參考，且至少包含連接字串和資料來源識別碼。 它也可以包含描述、名稱、使用者名稱和密碼等其他中繼資料。  
   
-> **注意：** 您只能將資料來源加入到設定為使用封裝部署模型的專案。 若專案設定為使用專案部署模型，您就可以使用在專案層級建立的連接管理員來共用連接，取代使用資料來源的方式。  
+> **注意：** 您只能將資料來源加入到設定為使用套件部署模型的專案。 若專案設定為使用專案部署模型，您就可以使用在專案層級建立的連接管理員來共用連接，取代使用資料來源的方式。  
 >   
 >  如需有關部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)＞。 如需將專案轉換為專案部署模型的詳細資訊，請參閱 [將專案部署至 Integration Services 伺服器](https://msdn.microsoft.com/library/hh231102.aspx)。  
   

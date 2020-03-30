@@ -13,10 +13,10 @@ ms.assetid: 686b9a4a-ea61-4263-9ab8-f444a3077679
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6d0491eb44eb2880927aef006ccc705230ab1940
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68021654"
 ---
 # <a name="set-the-page_verify-database-option-to-checksum"></a>將 PAGE_VERIFY 資料庫選項設定為 CHECKSUM

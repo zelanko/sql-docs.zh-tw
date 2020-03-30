@@ -11,10 +11,10 @@ ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8347b0b1860041c6bd2a9241e015e2bfd71e5135
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298151"
 ---
 # <a name="raw-file-custom-properties"></a>原始檔案自訂屬性

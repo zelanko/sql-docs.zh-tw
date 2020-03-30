@@ -11,10 +11,10 @@ ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4ff4114aef15313606ac6cf03c7f7d56d407dcf3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295411"
 ---
 # <a name="catalogget_project-ssisdb-database"></a>catalog.get_project (SSISDB 資料庫)

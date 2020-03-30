@@ -14,10 +14,10 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e957d0ae199375ffe13a756cc1a8b0872aa962e3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68661436"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>資料庫鏡像和複寫 (SQL Server)

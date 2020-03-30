@@ -14,10 +14,10 @@ ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7a65b7559770b6de0d1ebd928815458c02acfd41
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299045"
 ---
 # <a name="saving-a-package-programmatically"></a>以程式設計方式儲存封裝
@@ -27,7 +27,7 @@ ms.locfileid: "71299045"
 
   在以程式設計方式建立新封裝或是修改現有封裝之後，通常會想要儲存變更。  
   
- 本主題中用來儲存套件的所有方法，都需要 **Microsoft.SqlServer.ManagedDTS** 組件的參考。 在新專案中新增參考之後，請使用 **using** 或 **Imports** 陳述式匯入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空間。  
+ 本主題中用來儲存套件的所有方法，都需要 **Microsoft.SqlServer.ManagedDTS** 組件的參考。 在新專案中新增參考之後，請使用 <xref:Microsoft.SqlServer.Dts.Runtime>using**或**Imports**陳述式匯入** 命名空間。  
   
 ## <a name="saving-a-package-programmatically"></a>以程式設計方式儲存封裝  
  若要以程式設計方式儲存套件，請呼叫 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Application> 類別的下列其中一種方法：  

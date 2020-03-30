@@ -18,10 +18,10 @@ ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: d7e56c5ceb23d2c42a973c7f8d56edbce5046a86
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908965"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>完整的資料庫還原 (完整復原模式)
@@ -41,7 +41,7 @@ ms.locfileid: "72908965"
 
 如需舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之備份支援的相關資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)的＜相容性支援＞一節。
   
-##  <a name="PointOfFailure"></a> 將資料庫還原到失敗點  
+##  <a name="restoring-a-database-to-the-point-of-failure"></a><a name="PointOfFailure"></a> 將資料庫還原到失敗點  
 
  一般而言，將資料庫復原至失敗點的作業，包含下列基本步驟：  
   
@@ -69,7 +69,7 @@ ms.locfileid: "72908965"
 > [!NOTE]  
 >  當您將資料庫備份還原至不同的伺服器執行個體時，請參閱 [使用備份與還原複製資料庫](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  
   
-###  <a name="TsqlSyntax"></a> 基本 Transact-SQL RESTORE 語法  
+###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> 基本 Transact-SQL RESTORE 語法  
  上圖中還原順序的基本 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 語法如下：  
   
 1.  RESTORE DATABASE *&lt;database&gt;* FROM *full database backup* WITH NORECOVERY;  
@@ -82,7 +82,7 @@ ms.locfileid: "72908965"
   
 4.  RESTORE DATABASE *&lt;database&gt;* WITH RECOVERY;  
   
-###  <a name="ExampleToPoFTsql"></a> 範例：復原到失敗點 (Transact-SQL)  
+###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a> 範例：復原到失敗點 (Transact-SQL)  
  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 範例顯示將資料庫還原到失敗點之還原順序中的基本選項。 此範例會建立資料庫的結尾記錄備份。 接下來，此範例會還原完整的資料庫備份和記錄備份，然後還原結尾記錄備份。 此範例會在一個不同的最後步驟中復原資料庫。  
   
 > [!NOTE]  
@@ -118,7 +118,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 GO  
 ```  
   
-##  <a name="PointWithinBackup"></a> 將資料庫還原到記錄備份內的時間點  
+##  <a name="restoring-a-database-to-a-point-within-a-log-backup"></a><a name="PointWithinBackup"></a> 將資料庫還原到記錄備份內的時間點  
  在完整復原模式下，完整資料庫還原通常可以復原到某個時間點、標示的交易或記錄備份內的 LSN。 然而，在大量記錄復原模式下，如果記錄備份包含大量記錄的變更，則無法進行時間點復原。  
   
 ### <a name="sample-point-in-time-restore-scenarios"></a>範例時間點還原案例  
@@ -145,7 +145,7 @@ GO
 > [!NOTE]  
 >  如需特定時間點還原的範例，請參閱 [將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)的＜相容性支援＞一節。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **還原完整資料庫備份**  
   
 -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  

@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 3cc48298aadc027509adb9d0abf5f5057e0c4fef
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055974"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>格式化匯入和匯出資料的檔案 (SQL Server)
@@ -29,12 +29,12 @@ ms.locfileid: "74055974"
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援兩種類型的格式檔案：XML 格式檔案和非 XML 格式檔案。 非 XML 格式檔案和 XML 格式檔案都會將每個欄位的描述包含在資料檔中，而且 XML 格式檔案也包含對應資料表資料行的描述。 一般而言，XML 和非 XML 格式檔案可以互換使用， 但是，仍建議您在新的格式檔案中使用 XML 語法，因為 XML 比非 XML 格式檔案多了一些優點。 如需詳細資訊，請參閱 [XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)。
 
-## <a name="Benefits"></a> 格式檔案的優點
+## <a name="benefits-of-format-files"></a><a name="Benefits"></a> 格式檔案的優點
 
 - 提供可用來寫入資料檔的彈性系統，幾乎不需要進行編輯，即可符合其他資料格式或從其他軟體中讀取資料檔。
 - 可讓您大量匯入資料，而不需要加入或刪除不需要的資料，或是重新排列資料檔中的現有資料。 當資料檔欄位與資料表資料行不相符時，格式檔案就會特別有用。
 
-## <a name="ExamplesOfFFs"></a> 格式檔案的範例
+## <a name="examples-of-format-files"></a><a name="ExamplesOfFFs"></a> 格式檔案的範例
 
 下列範例顯示非 XML 格式檔案及 XML 格式檔案的配置。 這些格式檔案會對應到 `HumanResources.myTeam` 範例資料庫中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表。 這個資料表包含四個資料行： `EmployeeID`、 `Name`、 `Title`和 `ModifiedDate`。
 
@@ -87,7 +87,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 
 如需詳細資訊，請參閱 [XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)。 
 
-## <a name="WhenFFrequired"></a> 何時需要格式檔案？
+## <a name="when-is-a-format-file-required"></a><a name="WhenFFrequired"></a> 何時需要格式檔案？
 
 - INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式永遠需要格式檔案。
 - 至於 **bcp** 或 BULK INSERT，在簡單的情況下，可以選擇是否使用格式檔案，但很少會需要。 不過，在複雜的大量匯入情況下，就經常需要格式檔案。
@@ -107,7 +107,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 > [!NOTE]
 > 在沒有格式檔案的情況下，如果 **bcp** 命令指定資料格式參數 ( **-n**、 **-c**、 **-w**或 **-N**)，或 BULK INSERT 作業指定 DATAFILETYPE 選項，則會採用指定的資料格式來做為解譯資料檔欄位的預設方法。
 
-## <a name="RelatedTasks"></a> 相關工作
+## <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作
 
 - [建立格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)
 - [使用格式檔案大量匯入資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)

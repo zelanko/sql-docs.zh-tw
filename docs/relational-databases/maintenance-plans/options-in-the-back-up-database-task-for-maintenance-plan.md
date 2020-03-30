@@ -16,10 +16,10 @@ ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 60183a9777098728ee258274a19aca4d65885b87
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115831"
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>維護計畫之備份資料庫工作中的選項
@@ -38,7 +38,7 @@ ms.locfileid: "68115831"
  建立新的伺服器連接，以便執行此工作時使用。 下面會描述 **[新增連接]** 對話方塊。  
   
  **資料庫**  
- 指定受此工作影響的資料庫。 選取後，下拉式清單就會提供下列選項：[所有資料庫]  、[所有系統資料庫]  、[所有使用者資料庫]  和 [這些特定資料庫]  。  
+ 指定受此工作影響的資料庫。 選取之後，下拉式清單就會提供下列選項： **All databases**、 **All system databases**、 **All user databases**、 **These specific databases**。  
   
  **所有資料庫**  
  產生維護計畫，以便針對所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫執行維護工作。  
@@ -126,7 +126,7 @@ ms.locfileid: "68115831"
  使用 Windows 驗證連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。  
   
  **使用特定的使用者名稱和密碼**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。 無法使用此選項。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連線到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 無法使用此選項。  
   
  **使用者名稱**  
  提供驗證時要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 無法使用此選項。  

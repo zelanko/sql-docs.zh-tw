@@ -13,10 +13,10 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 232ecd6278070d928db7485e93e8498adfc70a9b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76941133"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>將記錄傳送升級至 SQL Server 2016 (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "76941133"
   
  **本主題內容：**  
   
--   [先決條件](#Prerequisites)  
+-   [必要條件](#Prerequisites)  
   
 -   [在升級之前保護資料](#ProtectData)  
   
@@ -38,18 +38,18 @@ ms.locfileid: "76941133"
   
 -   [升級主要執行個體](#UpgradePrimary)  
   
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  在開始之前，請檢閱以下重要資訊：  
   
--   [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：確認您可從您的 Windows 作業系統版本與 SQL Server 版本升級至 SQL Server 2016。 例如，您無法直接從 SQL Server 2005 執行個體升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+-   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)︰確認您可從您的 Windows 作業系統版本與 SQL Server 版本升級至 SQL Server 2016。 例如，您無法直接從 SQL Server 2005 執行個體升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
--   [選擇資料庫引擎升級方法](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)：根據您檢閱的支援版本與版本升級，選取適當的升級方法和步驟，此外亦根據作業環境中安裝的其他元件，依正確順序升級元件。  
+-   [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)︰根據您檢閱的支援版本與版本升級，選取適當的升級方法和步驟，此外亦根據作業環境中安裝的其他元件，依正確順序升級元件。  
   
--   [計劃和測試資料庫引擎升級計畫](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)：檢閱版本資訊與已知的升級問題、升級前檢查清單，並開發和測試升級計畫。  
+-   [計劃和測試資料庫引擎升級計劃](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)︰檢閱版本資訊與已知的升級問題、升級前檢查清單，並開發和測試升級計畫。  
   
--   [安裝 SQL Server 2016 的硬體和軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：檢閱安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的軟體需求。 如果需要其他軟體，請先將其安裝在每個節點上，然後開始升級程序，以將任何停機時間降到最低。  
+-   [安裝 SQL Server 2016 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：檢閱安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的軟體需求。 如果需要其他軟體，請先將其安裝在每個節點上，然後開始升級程序，以將任何停機時間降到最低。  
   
-##  <a name="ProtectData"></a> 在升級之前保護資料  
+##  <a name="protect-your-data-before-the-upgrade"></a><a name="ProtectData"></a> 在升級之前保護資料  
  我們建議的最佳做法是在升級記錄傳送之前先保護資料。  
   
  **保護資料**  
@@ -63,12 +63,12 @@ ms.locfileid: "76941133"
 > [!IMPORTANT]  
 >  請確定主要伺服器上有足夠的空間，可針對預計進行次要伺服器升級的時間保存記錄備份複本。  如果您容錯移轉到次要伺服器，則這個相同考量也適用於次要伺服器 (新的主要伺服器)。  
   
-##  <a name="UpgradeMonitor"></a> 升級 (選用) 監視伺服器執行個體  
+##  <a name="upgrading-the-optional-monitor-server-instance"></a><a name="UpgradeMonitor"></a> 升級 (選用) 監視伺服器執行個體  
  可以隨時升級監視伺服器執行個體 (如果有的話)。 不過，當您升級主要和次要伺服器時，不需要升級選用的監視伺服器。  
   
  在升級監視伺服器時，記錄傳送組態會持續有效，但是監視器上的資料表中不會記錄它的狀態。 當升級監視伺服器時，將不會觸發任何已經設定的警示。 在升級之後，您可以執行 [sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md) 系統預存程序來更新監視資料表內的資訊。   如需監視伺服器的詳細資訊，請參閱[關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
-##  <a name="UpgradeSecondaries"></a> 升級次要伺服器執行個體  
+##  <a name="upgrading-the-secondary-server-instances"></a><a name="UpgradeSecondaries"></a> 升級次要伺服器執行個體  
  升級程序包括先將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的次要伺服器執行個體升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，然後再升級主要伺服器執行個體。 一律先升級次要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 記錄傳送會在整個升級過程中繼續，因為升級的次要伺服器執行個體會繼續從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主要伺服器執行個體還原記錄備份。 如果在升級次要伺服器執行個體之前先升級主要伺服器執行個體，則記錄傳送將會失敗，因為在更新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上所建立的備份將無法在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上還原。 您可以同時或循序升級次要執行個體，但必須在升級主要執行個體之前先升級所有次要執行個體，以避免記錄傳送失敗。  
   
  升級次要伺服器執行個體時，記錄傳送複製和還原作業不會執行。 這表示未還原的交易記錄備份將累積在主要伺服器上，而您必須擁有足夠的空間來容納這些未還原的備份。 累積的數量取決於主要伺服器執行個體上排定的備份頻率，以及您升級次要執行個體的順序。 此外，如果已經設定了個別的監視伺服器，則可能會引發警示，指出還原執行的時間長度尚未超過設定的間隔。  
@@ -81,7 +81,7 @@ ms.locfileid: "76941133"
 > [!IMPORTANT]  
 >  需要升級的資料庫不支援 RESTORE WITH STANDBY 選項。 如果已升級的次要資料庫已經使用 RESTORE WITH STANDBY 加以設定，升級之後無法再還原交易記錄。 若要繼續進行該次要資料庫上的記錄傳送，您需要在該部待命伺服器上再次設定記錄傳送。 如需 STANDBY 選項的詳細資訊，請參閱[還原交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)。  
   
-##  <a name="UpgradePrimary"></a> 升級主要伺服器執行個體  
+##  <a name="upgrading-the-primary-server-instance"></a><a name="UpgradePrimary"></a> 升級主要伺服器執行個體  
  由於記錄傳送主要是一個災害復原解決方案，因此，最簡單且最常見的案例就是就地升級主要執行個體，而且在此升級期間，資料庫將完全無法使用。 升級伺服器之後，資料庫就會自動回到線上，以便進行升級。 在升級資料庫之後，記錄傳送作業就會繼續。  
   
 > [!NOTE]  

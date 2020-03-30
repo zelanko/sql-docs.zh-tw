@@ -11,10 +11,10 @@ ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c025eac60079e601d755439573b35257038d9275
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297359"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (SSIS 運算式)

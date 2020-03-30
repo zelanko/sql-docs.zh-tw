@@ -20,10 +20,10 @@ ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2bb7f9186ba44c094a54c4e44e7d54b29bc30ed0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908832"
 ---
 # <a name="restore-pages-sql-server"></a>還原頁面 (SQL Server)
@@ -49,14 +49,14 @@ ms.locfileid: "72908832"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="WhenUseful"></a> 頁面還原何時有用？  
+###  <a name="when-is-a-page-restore-useful"></a><a name="WhenUseful"></a> 頁面還原何時有用？  
  頁面還原主要是用來修復隔離的損毀頁面。 還原和復原少數個別頁面可能比檔案還原更快，可以減少還原作業期間離線的資料量。 不過，如果不只是要還原一個檔案中的幾個頁面，則還原整個檔案，通常更有效率。 例如，如果在裝置上有很多頁面指出有暫止的裝置失敗，請考慮還原檔案，可能要還原至另一個位置，然後修復該裝置。  
   
  此外，並非所有頁面錯誤都需要還原。 快取資料 (如次要索引) 可能會發生問題，只要重新計算資料就可解決這個問題。 例如，如果資料庫管理員卸除並重建次要索引，則儘管已修正損毀資料，也不會在 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 資料表中指明為已修正。  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   頁面還原適用於使用完整或大量記錄復原模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 分頁還原只支援讀取/寫入檔案群組。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "72908832"
   
          執行分頁還原的最佳作法是將資料庫設定為完整復原模式，並嘗試記錄備份。 如果記錄備份有效，您就可以進行分頁還原。 如果記錄備份失敗，您會失去自從前次記錄備份之後的工作，或必須試著執行 DBCC，且必須搭配 REPAIR_ALLOW_DATA_LOSS 選項來執行。  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   頁面還原案例：  
   
@@ -99,14 +99,14 @@ ms.locfileid: "72908832"
   
      當您還原後續的記錄備份時，這些備份只會套用到至少包含一個正在復原之頁面的資料庫檔案。 必須套用未中斷的記錄備份鏈結至最後一個完整或差異還原，將包含該頁面的檔案群組向前帶到目前的記錄檔。 在檔案還原中，向前復原集會以單一記錄重做行程向前進行。 頁面還原若要成功，還原的頁面必須復原到與資料庫一致的狀態。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  如果還原的資料庫不存在，使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。 如果資料庫存在，RESTORE 權限預設為 **系統管理員 (sysadmin)** 和 **資料庫建立者 (dbcreator)** 固定伺服器角色的成員以及資料庫的擁有者 (**dbo**) (對 FROM DATABASE_SNAPSHOT 選項而言，資料庫一律存在)。  
   
  RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此；因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 開始， 就會支援頁面還原。  
   
 #### <a name="to-restore-pages"></a>若要還原頁面  
@@ -165,7 +165,7 @@ ms.locfileid: "72908832"
   
 7.   若要還原頁面方格中所列的頁面，請按一下 [確定]。  
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  {1}若要在 RESTORE DATABASE 陳述式中指定頁面，您需要包含該頁面之檔案的檔案識別碼和頁面的頁面識別碼。{2} {1}所需語法如下：{2}  
   
  `RESTORE DATABASE <database_name>`  
@@ -203,7 +203,7 @@ ms.locfileid: "72908832"
     > [!NOTE]  
     >  這個順序與檔案還原順序類似。 事實上，分頁還原和檔案還原都可以做為相同順序的一部分來執行。  
   
-###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  下列範例會以 `B` 還原檔案 `NORECOVERY`的四個損毀頁面。 接著，兩個記錄備份會套用 `NORECOVERY`，後面接著以 `RECOVERY`還原的結尾記錄備份。 這個範例會執行線上還原。 在範例中，檔案 `B` 的檔案識別碼是 `1`，而損毀頁面的頁面識別碼是 `57`、 `202`、 `916`和 `1016`。  
   
 ```sql  

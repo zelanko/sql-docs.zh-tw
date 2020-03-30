@@ -13,10 +13,10 @@ ms.assetid: 85373b2e-d9fe-42ef-9653-6e22fe5ecab0
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 40a651dc1fd89488d536b8e3c6d8959004424866
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67940412"
 ---
 # <a name="detect-failed-input-and-output-requests"></a>偵測失敗的輸入和輸出要求

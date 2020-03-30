@@ -26,10 +26,10 @@ ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ead8278841f3eafa97f31b91480cb8464ce77dd4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68071487"
 ---
 # <a name="file_name-transact-sql"></a>FILE_NAME (Transact-SQL)

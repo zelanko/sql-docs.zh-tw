@@ -15,10 +15,10 @@ ms.assetid: 86ed91a1-a07c-46f2-a913-67317ef2255e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3b765f663e190f5f36621f0f73655824467a3998
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67903084"
 ---
 # <a name="connect-to-server-oracle-login"></a>連接到伺服器 (Oracle)，登入

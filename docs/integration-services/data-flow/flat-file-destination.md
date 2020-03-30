@@ -20,10 +20,10 @@ ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c837241abfaebe3776a21e03a9c2cbf4c4f5ee9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292536"
 ---
 # <a name="flat-file-destination"></a>一般檔案目的地

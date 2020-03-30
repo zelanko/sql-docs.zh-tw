@@ -20,19 +20,19 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 62d63c65ce1fae63fa9453a0dc37ddc134a87012
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287992"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>建立使用者定義函數 (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立使用者定義函數 (UDF)。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   使用者定義函數不能用來執行修改資料庫狀態的動作。  
   
@@ -66,12 +66,12 @@ ms.locfileid: "79287992"
   
     -   `SEND`  
   
-###  <a name="Security"></a> 權限 
+###  <a name="permissions"></a><a name="Security"></a> 權限 
 
 需要資料庫中的 `CREATE FUNCTION` 權限，以及建立此函式所在結構描述上的 `ALTER` 權限。 如果此函式指定使用者定義型別，則需要該型別的 `EXECUTE` 權限。  
   
-##  <a name="Scalar"></a> 純量函數  
- 下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中建立多重陳述式**純量函式 (純量 UDF)** 。 這個函數使用了一個輸入值 `ProductID`，並傳回單一資料值，也就是指定產品的彙總存貨量。  
+##  <a name="scalar-functions"></a><a name="Scalar"></a> 純量函數  
+ 下列範例會在  **資料庫中建立多重陳述式**純量函式 (純量 UDF)[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。 這個函數使用了一個輸入值 `ProductID`，並傳回單一資料值，也就是指定產品的彙總存貨量。  
   
 ```sql  
 IF OBJECT_ID (N'dbo.ufnGetInventoryStock', N'FN') IS NOT NULL  
@@ -104,8 +104,8 @@ WHERE ProductModelID BETWEEN 75 and 80;
 > [!NOTE]  
 > 如需純量函式的詳細資訊和範例，請參閱 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)。 
 
-##  <a name="TVF"></a> 資料表值函式  
-下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中建立**內嵌資料表值函式 (TVF)** 。 這個函數使用了一個輸入參數，也就是客戶 (商店) 識別碼，並傳回 `ProductID`和 `Name`資料行，以及從年初至今將每項產品銷售給商店的彙總銷售額 `YTD Total` 。  
+##  <a name="table-valued-functions"></a><a name="TVF"></a> 資料表值函式  
+下列範例會在  **資料庫中建立**內嵌資料表值函式 (TVF)[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。 這個函數使用了一個輸入參數，也就是客戶 (商店) 識別碼，並傳回 `ProductID`和 `Name`資料行，以及從年初至今將每項產品銷售給商店的彙總銷售額 `YTD Total` 。  
   
 ```sql  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
@@ -132,7 +132,7 @@ RETURN
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
-下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中建立**多重陳述式資料表值函式 (MSTVF)** 。 這個函數使用單一輸入參數 `EmployeeID` ，並傳回一份清單，列出這位指定員工的所有直接或間接下屬。 然後叫用此函數並指定員工識別碼 109。  
+下列範例會在  **資料庫中建立**多重陳述式資料表值函式 (MSTVF)[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。 這個函數使用單一輸入參數 `EmployeeID` ，並傳回一份清單，列出這位指定員工的所有直接或間接下屬。 然後叫用此函數並指定員工識別碼 109。  
   
 ```sql  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  

@@ -11,10 +11,10 @@ ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: aa9d269333e5c39f12b82d739575652efdd6c2c4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822076"
 ---
 # <a name="sql-server-resource-dll-health-diagnostic-logs-for-availability-groups"></a>可用性群組的 SQL Server 資源 DLL 健全狀況診斷記錄

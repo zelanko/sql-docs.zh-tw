@@ -22,10 +22,10 @@ ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ad8f9e49ea1dd22184384b337d036991d9dc7f9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68044112"
 ---
 # <a name="drop-partition-function-transact-sql"></a>DROP PARTITION FUNCTION (Transact-SQL)

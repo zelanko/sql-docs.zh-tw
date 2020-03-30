@@ -20,10 +20,10 @@ ms.assetid: edd92f08-76fb-4fd7-a4b6-8520d6a81df1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a26896076c0c9ee12eae61a3e324090379b10df2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68122131"
 ---
 # <a name="logical-operators-transact-sql"></a>邏輯運算子 (Transact-SQL)

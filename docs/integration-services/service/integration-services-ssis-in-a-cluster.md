@@ -11,10 +11,10 @@ ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9203423267f68137e11203be60ffa4d0e0c3e41
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296900"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>叢集中的 Integration Services (SSIS)
@@ -35,7 +35,7 @@ ms.locfileid: "71296900"
   
 -   **當容錯移轉發生時，執行中的套件不會重新啟動。**
     
-    您可以藉由從檢查點重新啟動封裝而從封裝失敗復原。 如果不將服務設定為叢集資源，就可以從檢查點重新啟動。 如需詳細資訊，請參閱[使用檢查點來重新啟動封裝](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
+    您可以藉由從檢查點重新啟動封裝而從封裝失敗復原。 如果不將服務設定為叢集資源，就可以從檢查點重新啟動。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
 -   當您在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的不同資源群組中設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務時，無法從用戶端電腦使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來管理儲存在 msdb 資料庫中的封裝。 在這種雙躍點的狀況中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務無法委派認證。  
   

@@ -22,10 +22,10 @@ ms.assetid: ddbc530c-f44d-4551-9ca3-3430258eb6c0
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e0b4708c30f1fdbcc6246ffc6e24e95cadb58cd2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68141323"
 ---
 # <a name="predicates"></a>述詞

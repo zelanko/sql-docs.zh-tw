@@ -23,10 +23,10 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a40336899e804ee634cf586078ec7c219f31c486
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297874"
 ---
 # <a name="script-component"></a>指令碼元件
@@ -133,7 +133,7 @@ ms.locfileid: "71297874"
  輸入連接的唯一和描述性名稱。  
   
  **連線管理員**  
- 從可用的連線管理員清單中選取，或選取 [\<新增連線>]  以開啟 [新增 SSIS 連線管理員]  對話方塊。  
+ 從可用的連線管理員清單中選取，或選取 [**新增連線>]\<** 以開啟 [新增 SSIS 連線管理員]  對話方塊。  
   
  **說明**  
  輸入連接的描述。  
@@ -211,8 +211,8 @@ ms.locfileid: "71297874"
 |**LocaleID**|指定地區設定以提供排序和日期和時間轉換的特定區域資訊。|  
 |**名稱**|輸入元件的描述性名稱。|  
 |**ValidateExternalMetadata**|指出指令碼轉換在設計階段是否對外部資料來源驗證資料行中繼資料。 **false** 的值將會延遲到執行時間才驗證。|  
-|**ReadOnlyVariables**|輸入以逗號分隔的變數清單，以供指令碼轉換進行唯讀存取。<br /><br /> 注意:變數名稱會區分大小寫。|  
-|**ReadWriteVariables**|輸入以逗號分隔的變數清單，以供指令碼轉換進行可讀寫存取。<br /><br /> 注意:變數名稱會區分大小寫。|  
+|**ReadOnlyVariables**|輸入以逗號分隔的變數清單，以供指令碼轉換進行唯讀存取。<br /><br /> 注意：變數名稱會區分大小寫。|  
+|**ReadWriteVariables**|輸入以逗號分隔的變數清單，以供指令碼轉換進行可讀寫存取。<br /><br /> 注意：變數名稱會區分大小寫。|  
 |**ScriptLanguage**|選取指令碼元件所要使用的指令碼語言。<br /><br /> 若要為指令碼元件和指令碼工作設定預設指令碼語言，請使用 **[選項]** 對話方塊上 **[一般]** 頁面上的 **[指令碼語言]** 選項。|  
 |**UserComponentTypeName**|指定支援 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> ScriptComponentHost **類別和** Microsoft.SqlServer.TxScript [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組件。|  
   

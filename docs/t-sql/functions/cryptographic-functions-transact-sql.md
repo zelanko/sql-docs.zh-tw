@@ -20,10 +20,10 @@ ms.assetid: 0be5626b-5a25-4d8c-9f44-7abbfccf816c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3bc543e40f4f5189a1d813d21b66af6b26b51d52
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68026440"
 ---
 # <a name="cryptographic-functions-transact-sql"></a>密碼編譯函式 (Transact-SQL)

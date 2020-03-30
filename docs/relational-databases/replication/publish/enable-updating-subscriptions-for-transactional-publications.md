@@ -16,10 +16,10 @@ ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8afde3ebd4082df0c1fc0065b2aa058095905ead
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321247"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>啟用交易式發行集的可更新訂閱
@@ -29,12 +29,12 @@ ms.locfileid: "75321247"
 > **注意！！** [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
 
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  在「新增發行集精靈」的 **[發行集類型]** 頁面上，為交易式發行集啟用更新訂閱。  
   
  若要使用更新訂閱，您還必須在「新增訂閱精靈」中設定選項。  
@@ -47,7 +47,7 @@ ms.locfileid: "75321247"
 
     > **注意：** 即使您僅使用立即更新訂閱，也會設定「佇列讀取器代理程式」。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  當您以程式設計方式使用複寫預存程序來建立交易式發行集時，可以啟用立即訂閱或佇列更新訂閱。  
   
 #### <a name="to-create-a-publication-that-supports-immediate-updating-subscriptions"></a>建立可支援立即更新訂閱的發行集  
@@ -98,7 +98,7 @@ ms.locfileid: "75321247"
   
 1.  在發行集資料庫的發行者端，執行 [sp_changepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 為  property **指定 \@conflict_policy** 的值，並為  value**指定**pub wins **、** sub reinit **或 \@sub wins** 所需的衝突原則模式。  
   
-###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  此範例會建立一個發行集，它同時支援立即訂閱和佇列更新提取訂閱。  
   
  [!code-sql[HowTo#sp_createtranupdatingpub](../../../relational-databases/replication/codesnippet/tsql/enable-updating-subscrip_1.sql)]  

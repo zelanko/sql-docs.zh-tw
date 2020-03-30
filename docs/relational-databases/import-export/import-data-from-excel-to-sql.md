@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75245274"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>將 Excel 中的資料匯入到 SQL Server 或 Azure SQL Database
@@ -45,7 +45,7 @@ ms.locfileid: "75245274"
 
 如果您未安裝 SQL Server，或您有 SQL Server 但未安裝 SQL Server Management Studio，請參閱 [下載 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
 
-## <a name="wiz"></a> SQL Server 匯入和匯出精靈
+## <a name="sql-server-import-and-export-wizard"></a><a name="wiz"></a> SQL Server 匯入和匯出精靈
 
 逐步執行 [SQL Server 匯入和匯出精靈] 的頁面，以從 Excel 檔案直接匯入資料。 您也可以將設定儲存為 SQL Server Integration Services (SSIS) 套件，以便日後自訂及重複使用。
 
@@ -67,7 +67,7 @@ ms.locfileid: "75245274"
 
 若要了解啟動「匯入和匯出精靈」的其他方式，請參閱[啟動 SQL Server 匯入和匯出精靈](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)。
 
-## <a name="ssis"></a> SQL Server Integration Services (SSIS)
+## <a name="sql-server-integration-services-ssis"></a><a name="ssis"></a> SQL Server Integration Services (SSIS)
 
 如果您熟悉 SSIS 且不想執行 SQL Server 匯入和匯出精靈，請建立在資料流程中使用 Excel 來源和 SQL Server 目的地的 SSIS 套件。
 
@@ -80,7 +80,7 @@ ms.locfileid: "75245274"
 
 ![資料流程中的元件](media/excel-to-sql-data-flow.png)
 
-## <a name="openrowset"></a> OPENROWSET 和連結的伺服器
+## <a name="openrowset-and-linked-servers"></a><a name="openrowset"></a> OPENROWSET 和連結的伺服器
 
 > [!IMPORTANT]
 > 在 Azure SQL Database 中，您無法直接從 Excel 匯入。 您必須先將資料匯出成文字 (CSV) 檔案。 如需範例，請參閱[範例](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。
@@ -183,7 +183,7 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 - [如何搭配使用 Excel 以及 SQL Server 連結伺服器和分散式查詢](https://support.microsoft.com/help/306397/how-to-use-excel-with-sql-server-linked-servers-and-distributed-queries)
 - [如何將 Excel 中的資料匯入到 SQL Server](https://support.microsoft.com/help/321686/how-to-import-data-from-excel-to-sql-server)
 
-## <a name="prereq"></a> 必要條件：將 Excel 資料儲存為文字
+## <a name="prerequisite---save-excel-data-as-text"></a><a name="prereq"></a> 必要條件：將 Excel 資料儲存為文字
 
 若要使用此頁面所描述的剩餘方法 (BULK INSERT 陳述式、BCP 工具或 Azure Data Factory)，您必須先將 Excel 資料匯出為文字檔。
 
@@ -194,7 +194,7 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 > [!TIP]
 > 若要取得資料匯入工具的最佳結果，請儲存僅包含資料行標題和包含資料之資料列的工作表。 如果儲存的資料包含頁面標題、空白行、註解和其他內容，您稍後在匯入資料時可能會看到非預期的結果。
 
-## <a name="import-wiz"></a> 匯入一般檔案精靈
+## <a name="the-import-flat-file-wizard"></a><a name="import-wiz"></a> 匯入一般檔案精靈
 
 逐步設定「匯入一檔案精靈」的每個頁面，匯入儲存為文字檔的資料。
 
@@ -202,7 +202,7 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 
 如需「匯入一般檔案精靈」的詳細資訊，請參閱[將一般檔案匯入 SQL 精靈](import-flat-file-wizard.md)。
 
-## <a name="bulk-insert"></a> BULK INSERT 命令
+## <a name="bulk-insert-command"></a><a name="bulk-insert"></a> BULK INSERT 命令
 
 `BULK INSERT` 是您可從 SQL Server Management Studio 執行的 Transact-SQL 命令。 下列範例會將來自 `Data.csv` 逗號分隔檔案的資料載入至現有資料庫資料表。
 
@@ -224,7 +224,7 @@ GO
 - [使用 BULK INSERT 或 OPENROWSET(BULK...) 匯入大量資料](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)
 
-## <a name="bcp"></a> BCP 工具
+## <a name="bcp-tool"></a><a name="bcp"></a> BCP 工具
 
 BCP 是您從命令提示字元執行的程式。 下列範例會將來自 `Data.csv` 逗號分隔檔案的資料載入至現有 `Data_bcp` 資料庫資料表。
 
@@ -243,7 +243,7 @@ bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,
 - [bcp 公用程式](../../tools/bcp-utility.md)
 - [準備大量匯出或匯入的資料](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
 
-## <a name="adf-wiz"></a> 複製精靈 (Azure Data Factory)
+## <a name="copy-wizard-azure-data-factory"></a><a name="adf-wiz"></a> 複製精靈 (Azure Data Factory)
 
 逐步設定「Azure Data Factory 複製精靈」的每個頁面，匯入儲存為文字檔的資料。
 
@@ -254,7 +254,7 @@ bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,
 - [Data Factory 複製精靈](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
 - [教學課程：使用 Data Factory 複製精靈建立具有複製活動的管線](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)。
 
-## <a name="adf"></a> Azure Data Factory
+## <a name="azure-data-factory"></a><a name="adf"></a> Azure Data Factory
 
 如果您熟悉 Azure Data Factory，且不想執行 [複製精靈]，請建立具有 [複製] 活動的管線，以從文字檔複製至 SQL Server 或 Azure SQL Database。
 

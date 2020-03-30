@@ -23,10 +23,10 @@ ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 21bc28f99768c7b31d6ba5b18170140a23400853
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71287771"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>開發資料流程元件的使用者介面
@@ -91,7 +91,7 @@ End Class
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 方法的傳回值會決定對元件所做的變更是會保存下來還是捨棄。 當這個方法傳回 **false** 時，所有的變更都會被捨棄；**true** 會保存對此元件所做的變更，並將此套件標示為需要儲存。  
   
 ### <a name="using-the-services-of-the-ssis-designer"></a>使用 SSIS 設計師的服務  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 方法的 **IServiceProvider** 參數會提供對下列 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計工作服務的存取權：  
+ **方法的**IServiceProvider<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 參數會提供對下列 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計工作服務的存取權：  
   
 |服務|描述|  
 |-------------|-----------------|  

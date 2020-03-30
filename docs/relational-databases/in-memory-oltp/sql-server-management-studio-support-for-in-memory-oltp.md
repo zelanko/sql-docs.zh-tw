@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e9bd4cb0c2fff4259814f6e33a65777023a801fd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412525"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio 對記憶體中 OLTP 的支援
@@ -86,7 +86,7 @@ ms.locfileid: "74412525"
   
     -   在 [物件總管]  中，以滑鼠右鍵按一下資料庫，按一下 [屬性]  ，然後按一下 [一般]  頁面。 [配置給記憶體最佳化物件的記憶體]  屬性的值表示配置給資料庫中記憶體最佳化物件的記憶體。 [由記憶體最佳化物件所使用的記憶體]  屬性的值表示資料庫中記憶體最佳化物件所用的記憶體。  
   
-## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>下列項目所支援的功能： [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="supported-features-in-ssmanstudiofull"></a>下列項目所支援的功能： [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支援具有最佳化資料的檔案群組、記憶體最佳化的資料表、索引與原生編譯的預存程序之資料庫的 Database Engine 所支援的功能和作業。  
   
  下列 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 功能已針對資料庫、資料表、預存程序、使用者定義資料表類型或索引物件更新或擴充，可支援 In-Memory OLTP。  
@@ -152,7 +152,7 @@ ms.locfileid: "74412525"
   
 -   範本總管  
   
-## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>不為下列項目所支援的功能： [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="unsupported-features-in-ssmanstudiofull"></a>不為下列項目所支援的功能： [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  對於記憶體中 OLTP 物件， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不支援 Database Engine 所不支援的功能和作業。  
   
  如需有關不支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能的詳細資訊，請參閱 [記憶體內部 OLTP 不支援的 SQL Server 功能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)。  

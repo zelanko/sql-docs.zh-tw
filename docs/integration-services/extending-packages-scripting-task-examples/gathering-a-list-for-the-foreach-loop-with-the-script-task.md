@@ -16,10 +16,10 @@ ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0001806e1a8f0cba9a879297b4dab49367dd84a8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297017"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>以指令碼工作蒐集 ForEach 迴圈的清單

@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 293976660f66f60803e64c492ef868fd38e7c9dd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981779"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
@@ -60,7 +60,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
  當呼叫 SUSER_SNAME 時，如果未設定引數，它會傳回目前安全性內容的名稱。 當利用 EXECUTE AS，在已切換內容的批次內，在未設定引數的情況下呼叫 SUSER_SNAME 時，它會傳回模擬內容的名稱。 當從模擬內容呼叫時，ORIGINAL_LOGIN 會傳回原始內容的名稱。  
   
-## <a name="includesssdsfullincludessssdsfull-mdmd-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]備註  
+## <a name="sssdsfull-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]備註  
  SUSER_NAME 一律會傳回目前安全性內容的登入名稱。  
   
  SUSER_SNAME 陳述式不支援透過 EXECUTE AS 使用模擬的安全性內容來執行。  
@@ -127,7 +127,7 @@ WanidaBenShoof
 sa
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-suser_sname"></a>E. 使用 SUSER_SNAME  
  下列範例會傳回安全性識別碼值為 `0x01` 的登入名稱。  

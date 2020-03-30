@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2014||=sqlallproducts-allversions'
 ms.openlocfilehash: 140953484006d33e7814c19b9eb5bd6abcd29009
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822462"
 ---
 # <a name="always-on-availability-group-system-object-reference"></a>AlwaysOn 可用性群組系統物件參考

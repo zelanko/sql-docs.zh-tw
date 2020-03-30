@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98ab53220b995c0c94aa2eb25d509bd67f7090b5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908033"
 ---
 # <a name="create-nonclustered-indexes"></a>建立非叢集索引
@@ -29,9 +29,9 @@ ms.locfileid: "72908033"
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立非叢集索引。 非叢集索引是與資料表中所儲存之資料不同的索引結構，可重新排序一個或多個選取的資料行。 非叢集索引經常可協助您以比搜尋基礎資料表更快的速度找到資料；查詢的結果有時會完全來自非叢集索引中的資料，或是非叢集索引可能會將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 指向基礎資料表中的資料列。 一般而言，建立非叢集索引是為了改善叢集索引未涵蓋但經常使用之查詢的效能，或尋找沒有叢集索引之資料表中的資料列 (稱為堆積)。 您可以在資料表或索引檢視表上建立多個非叢集索引。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Implementations"></a> 一般實作  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> 一般實作  
  非叢集索引的實作方法如下：  
   
 -   **UNIQUE 條件約束**  
@@ -46,12 +46,12 @@ ms.locfileid: "72908033"
   
      在檢視上建立唯一的叢集索引後，就可以建立非叢集索引。 如需詳細資訊，請參閱 [建立索引檢視表](../../relational-databases/views/create-indexed-views.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-nonclustered-index-by-using-the-table-designer"></a>若要使用資料表設計工具建立非叢集索引  
   
@@ -93,7 +93,7 @@ ms.locfileid: "72908033"
   
 9. 在 **[新增索引]** 對話方塊中，按一下 **[確定]** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-nonclustered-index-on-a-table"></a>若要在資料表上建立非叢集索引  
   

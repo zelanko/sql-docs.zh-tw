@@ -22,10 +22,10 @@ ms.assetid: 8f49c62a-8da5-4afd-a5eb-4df8ef8be755
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 272af8e89dfdf313e24017edd615401bc2a35362
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68097460"
 ---
 # <a name="x40x40idle-transact-sql"></a>&#x40;&#x40;IDLE (Transact-SQL)

@@ -14,10 +14,10 @@ ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fc83e4d8e39c5521fd897ceeec07755f62b5765d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294321"
 ---
 # <a name="azure-blob-download-task"></a>Azure Blob 下載工作

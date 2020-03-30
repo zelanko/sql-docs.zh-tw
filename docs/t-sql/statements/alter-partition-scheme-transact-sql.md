@@ -22,10 +22,10 @@ ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 593c2d8bf9cff3e10aaafc339aa82ef16c4bc09f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68071245"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)

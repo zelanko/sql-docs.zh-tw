@@ -15,10 +15,10 @@ ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a507bd5425686e7a33a8bbf49e6c8669effed031
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68084090"
 ---
 # <a name="log-file-viewer-f1-help"></a>記錄檔檢視器 F1 說明
