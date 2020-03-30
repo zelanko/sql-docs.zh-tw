@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f9e0f46e098ec0944577738332a38e08384a2579
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68121767"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>設定運算子 - EXCEPT 和 INTERSECT (Transact-SQL)
@@ -148,7 +148,7 @@ FROM Production.Product ;
 --Result: 0 Rows (work orders without products)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 下列範例示範如何使用 `INTERSECT` 及 `EXCEPT` 運算子。 第一個查詢會傳回 `FactInternetSales` 資料表的所有值，以便與 `INTERSECT` 和 `EXCEPT` 的結果進行比較。  
   
 ```  

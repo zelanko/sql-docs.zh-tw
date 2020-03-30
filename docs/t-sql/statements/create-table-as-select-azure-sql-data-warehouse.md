@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 22f296db7717e81068ac52d6c3df547a0ba0d085
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73660786"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL 資料倉儲)
@@ -124,7 +124,7 @@ CTAS 陳述式需要一個散發選項，而且沒有預設值。 這和 CREATE 
 <a name="permissions-bk"></a>  
   
 ## <a name="permissions"></a>權限  
-CTAS 需要 *select_criteria* 中所參考任何物件的 `SELECT` 權限。
+CTAS 需要 `SELECT`select_criteria*中所參考任何物件的* 權限。
 
 如需資料表的建立權限，請參閱 CREATE TABLE 中的[權限](https://msdn.microsoft.com/library/mt203953/#Permissions)。 
   
@@ -167,7 +167,7 @@ Azure SQL 資料倉儲目前尚不支援自動建立或自動更新統計資料�
 <a name="ctas-copy-table-bk"></a>
 
 ### <a name="a-use-ctas-to-copy-a-table"></a>A. 使用 CTAS 複製資料表 
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲
+適用於：Azure SQL 資料倉儲和平行處理資料倉儲
 
 或許 `CTAS` 最常見的用途之一就是建立資料表複本，以便您變更 DDL。 例如，您最初是將資料表建立為 `ROUND_ROBIN`，而現在想要將它變更為散發到資料行上的資料表，就可以使用 `CTAS` 來變更散發資料行。 `CTAS` 也可以用來變更資料分割、索引或資料行的類型。
 
@@ -239,7 +239,7 @@ DROP TABLE FactInternetSales_old;
 <a name="ctas-change-column-attributes-bk"></a>
 
 ### <a name="b-use-ctas-to-change-column-attributes"></a>B. 使用 CTAS 來變更資料行屬性 
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲
+適用於：Azure SQL 資料倉儲和平行處理資料倉儲
 
 這個範例會使用 CTAS 來為 DimCustomer2 資料表的數個資料行變更資料類型、可 Null 性和定序。  
   
@@ -300,7 +300,7 @@ DROP TABLE DimCustomer2_old;
 <a name="ctas-change-distribution-method-bk"></a>
 
 ### <a name="c-use-ctas-to-change-the-distribution-method-for-a-table"></a>C. 使用 CTAS 來變更資料表的散發方法
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲
+適用於：Azure SQL 資料倉儲和平行處理資料倉儲
 
 這個簡易範例會示範如何變更資料表的散發方法。 為了示範整個操作流程，它會將雜湊散發資料表變更為循環配置資源資料表，然後再將循環配置資源資料表變更回雜湊散發資料表。 最後的資料表將與原始資料表相符。 
 
@@ -351,7 +351,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 <a name="ctas-change-to-replicated-bk"></a>
 
 ### <a name="d-use-ctas-to-convert-a-table-to-a-replicated-table"></a>D. 使用 CTAS 將資料表轉換成複寫資料表  
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲 
+適用於：Azure SQL 資料倉儲和平行處理資料倉儲 
 
 此範例適用於將循環配置資源資料表或雜湊散發資料表轉換為複寫資料表。 這個特殊範例會針對之前的散發類型變更方法，做更進一步的應用。  因為 DimSalesTerritory 是一個維度，而且可能是小型的資料表，因此可以選擇將資料表重新建立為複寫資料表，這樣在聯結至其他資料表時，就能避免移動資料。 
 
@@ -375,7 +375,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
 ### <a name="e-use-ctas-to-create-a-table-with-fewer-columns"></a>E. 使用 CTAS 來建立資料行較少的資料表
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲 
+適用於：Azure SQL 資料倉儲和平行處理資料倉儲 
 
 下列範例會建立名為 `myTable (c, ln)` 的循環配置資源散發資料表。 新的資料表只有兩個資料行。 它會使用 SELECT 陳述式中的資料行別名來作為資料行的名稱。  
   
@@ -398,7 +398,7 @@ AS SELECT CustomerKey AS c, LastName AS ln
 <a name="ctas-query-hint-bk"></a>
 
 ### <a name="f-use-a-query-hint-with-create-table-as-select-ctas"></a>F. 查詢提示與 CREATE TABLE AS SELECT (CTAS) 搭配使用  
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲
+適用於：Azure SQL 資料倉儲和平行處理資料倉儲
   
 此查詢示會示範查詢聯結提示與 CTAS 陳述式搭配使用的基本語法。 提交查詢後，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 會在為每一個散發產生查詢計劃時，套用雜湊聯結策略。 如需有關雜湊聯結查詢提示的詳細資訊，請參閱 [OPTION 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)。  
   
@@ -421,7 +421,7 @@ OPTION ( HASH JOIN );
 <a name="ctas-azure-blob-storage-bk"></a>
 
 ### <a name="g-use-ctas-to-import-data-from-azure-blob-storage"></a>G. 使用 CTAS 來從 Azure Blob 儲存體匯入資料  
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲  
+適用於：Azure SQL 資料倉儲和平行處理資料倉儲  
 
 若要從外部資料表匯入資料，只要使用 CREATE TABLE AS SELECT 來從外部資料表進行選取即可。 從外部資料表選取資料來匯入 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 時所用的語法，與從一般資料表中選取資料時所使用語法相同。  
   
@@ -503,7 +503,7 @@ AS SELECT * FROM ClickStreamExt
 <a name="ctas-replace-select-into-bk"></a>
 
 ### <a name="i-use-ctas-instead-of-selectinto"></a>I. 使用 CTAS 而不使用 SELECT..INTO  
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲
+適用於：Azure SQL 資料倉儲和平行處理資料倉儲
 
 SQL Server 程式碼通常會使用 SELECT...INTO 來將 SELECT 陳述式的結果填入資料表。 這是一個 SQL Server SELECT..INTO 陳述式的範例。
 
@@ -529,8 +529,8 @@ FROM    [dbo].[FactInternetSales]
 
 <a name="ctas-replace-implicit-joins-bk"></a>
 
-### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. 使用 CTAS 和隱含聯結來取代 `UPDATE` 陳述式 `FROM` 子句中的 ANSI 聯結  
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲  
+### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. 使用 CTAS 和隱含聯結來取代 `FROM` 陳述式 `UPDATE` 子句中的 ANSI 聯結  
+適用於：Azure SQL 資料倉儲和平行處理資料倉儲  
 
 假設您有一個複雜更新，其中使用 ANSI 聯結語法將兩個以上的資料表聯結起來，以執行 UPDATE 或 DELETE。
 
@@ -574,7 +574,7 @@ AND [acs].[CalendarYear]                = [fis].[CalendarYear]
 ;
 ```
 
-因為 SQL 資料倉儲不支援 `UPDATE` 陳述式 `FROM` 子句中的 ANSI 聯結，因此您必須微幅修改這個 SQL Server 程式碼，否則無法使用。
+因為 SQL 資料倉儲不支援 `FROM` 陳述式 `UPDATE` 子句中的 ANSI 聯結，因此您必須微幅修改這個 SQL Server 程式碼，否則無法使用。
 
 您可以使用 `CTAS` 和隱含聯結的組合來取代此程式碼：
 
@@ -613,9 +613,9 @@ DROP TABLE CTAS_acs
 <a name="ctas-replace-ansi-joins-bk"></a>
 
 ### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>K. 使用 CTAS 來指定要保留的資料，而不是在 DELETE 陳述式的 FROM 子句中使用 ANSI 聯結  
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲  
+適用於：Azure SQL 資料倉儲和平行處理資料倉儲  
 
-有時候，刪除資料的最佳方法是使用 `CTAS`。 您不用刪除資料，只要選取想要保留的資料即可。 對於使用 ANSI 聯結語法的 `DELETE` 陳述式更是如此，因為 SQL 資料倉儲不支援 `DELETE` 陳述式 `FROM` 子句的 ANSI 聯結。
+有時候，刪除資料的最佳方法是使用 `CTAS`。 您不用刪除資料，只要選取想要保留的資料即可。 對於使用 ANSI 聯結語法的 `DELETE` 陳述式更是如此，因為 SQL 資料倉儲不支援 `FROM` 陳述式 `DELETE` 子句的 ANSI 聯結。
 
 以下是已轉換的 DELETE 陳述式範例：
 
@@ -641,7 +641,7 @@ RENAME OBJECT dbo.DimProduct_upsert TO DimProduct;
 <a name="ctas-simplify-merge-bk"></a>
 
 ### <a name="l-use-ctas-to-simplify-merge-statements"></a>L. 使用 CTAS 來簡化合併陳述式  
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲  
+適用於：Azure SQL 資料倉儲和平行處理資料倉儲  
 
 使用 `CTAS` 可以取代至少部分取代合併陳述式。 您可以將 `INSERT` 和 `UPDATE` 合併成一個陳述式。 任何刪除的記錄都應該在第二個陳述式中關閉。
 
@@ -680,7 +680,7 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 <a name="ctas-data-type-and-nullability-bk"></a>
 
 ### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. 明確陳述資料類型和輸出可為 null  
-適用於：Azure SQL 資料倉儲與平行處理資料倉儲  
+適用於：Azure SQL 資料倉儲和平行處理資料倉儲  
 
 將 SQL Server 程式碼移轉至 SQL 資料倉儲時，您可能碰到這種類型的程式碼模式：
 
@@ -736,7 +736,7 @@ from ctas_r
 
 之所以會在這兩個結果之間看到差異，原因與隱含類型轉換有關。 在第一個範例中，資料表定義了資料行。 插入資料列時，就會發生隱含類型轉換。 在第二個範例中，沒有任何隱含類型轉換，因為運算式會定義資料行的資料類型。 另請注意，第二個範例中的資料行已定義成一個可為 Null 的資料行，而在第一個範例中並未這樣定義。 在第一個範例中建立資料表時，會明確定義料資料行的可 Null 性。 在第二個範例中，則交給運算式決定。根據預設，這樣會產生一個 NULL 定義。  
 
-若要解決這些問題，您必須在 `CTAS` 陳述式的 `SELECT` 部分，明確設定型別轉換和可 Null 性。 您無法在 CREATE TABLE 部分中設定這些屬性。
+若要解決這些問題，您必須在 `SELECT` 陳述式的 `CTAS` 部分，明確設定型別轉換和可 Null 性。 您無法在 CREATE TABLE 部分中設定這些屬性。
 
 下列範例會示範如何修正程式碼：
 

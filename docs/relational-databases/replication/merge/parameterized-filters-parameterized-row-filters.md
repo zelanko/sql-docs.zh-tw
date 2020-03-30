@@ -21,10 +21,10 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3dee5b4c6522afd93591d1e8aa0c94052d41d9bd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71711061"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>參數化篩選 - 參數化資料列篩選

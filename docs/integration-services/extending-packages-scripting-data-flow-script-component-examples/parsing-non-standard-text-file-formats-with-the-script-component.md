@@ -16,10 +16,10 @@ ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 733c3a909629514b55042d21f02cfca563d3c531
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297068"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>使用指令碼元件剖析非標準文字檔案格式
@@ -36,7 +36,7 @@ ms.locfileid: "71297068"
 > [!NOTE]  
 >  如果您要建立可以更輕鬆地在多個資料流程工作與多個封裝之間重複使用的元件，請考慮使用這個指令碼元件範例中的程式碼，做為自訂資料流程元件的起點。 如需詳細資訊，請參閱 [開發自訂資料流程元件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
   
-##  <a name="example1"></a> 範例 1：剖析以資料列分隔的記錄  
+##  <a name="example-1-parsing-row-delimited-records"></a><a name="example1"></a> 範例 1：剖析以資料列分隔的記錄  
  這則範例將示範如何取得每個資料行都以個別行顯示的文字檔案，並且使用指令碼元件，將它剖析成目的地資料表。  
   
  如需如何設定指令碼元件以用作資料流程中轉換的詳細資訊，請參閱[使用指令碼元件建立同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[使用指令碼元件建立非同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
@@ -191,7 +191,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a> 範例 2：分割父記錄和子記錄  
+##  <a name="example-2-splitting-parent-and-child-records"></a><a name="example2"></a> 範例 2：分割父記錄和子記錄  
  這則範例將示範如何取得文字檔案 (分隔符號資料列位於父記錄資料列前面，而且後面接著不定數目的子記錄資料列)，並且使用指令碼元件，將它剖析成適當正規化的父和子目的地資料表。 您可以針對每筆父記錄和子記錄使用多個資料列或資料行的來源檔案輕鬆地調整這則簡單範例，只要存在可識別每筆記錄之開頭和結尾的方式即可。  
   
 > [!CAUTION]  

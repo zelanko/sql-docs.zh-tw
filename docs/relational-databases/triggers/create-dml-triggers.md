@@ -20,32 +20,32 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed3026ae450e50bcb2d9debf93c4b90eab3afad0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72905539"
 ---
 # <a name="create-dml-triggers"></a>建立 DML 觸發程序
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   此主題描述如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 以及使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE TRIGGER 陳述式來建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML 觸發程序。  
   
-##  <a name="Top"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="Top"></a> 開始之前  
   
 ### <a name="limitations-and-restrictions"></a>限制事項  
  如需與建立 DML 觸發程序相關之限制事項的清單，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要建立觸發程序之資料表或檢視的 ALTER 權限。  
   
-##  <a name="Procedures"></a> 如何建立 DML 觸發程序  
+##  <a name="how-to-create-a-dml-trigger"></a><a name="Procedures"></a> 如何建立 DML 觸發程序  
  您可以使用下列其中一項：  
   
 -   [Transact-SQL](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "72905539"
 
  [開始之前](#Top)  
   
-###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   

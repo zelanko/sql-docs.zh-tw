@@ -14,10 +14,10 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 906809946b22012e6a8831017fb57769fc6063b8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298974"
 ---
 # <a name="package-properties-dialog-box"></a>封裝屬性對話方塊
@@ -35,7 +35,7 @@ ms.locfileid: "71298974"
   
 -   [設定選項](#options)  
   
-##  <a name="open_dialog"></a> 開啟 [封裝屬性] 對話方塊  
+##  <a name="open-the-package-properties-dialog-box"></a><a name="open_dialog"></a> 開啟 [封裝屬性] 對話方塊  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71298974"
   
 5.  以滑鼠右鍵按一下封裝，然後選取 [屬性]  。  
   
-##  <a name="options"></a> 設定選項  
+##  <a name="configure-the-options"></a><a name="options"></a> 設定選項  
  使用 [一般]  頁面，即可檢視所選封裝的屬性。  
   
  [一般]  頁面上的所有屬性都是唯讀的。  

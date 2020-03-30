@@ -13,10 +13,10 @@ ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4dff74cd1e21ba743fa425bb632c736ee1cce158
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295011"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>以程式設計方式使用連接管理員

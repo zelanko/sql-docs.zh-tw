@@ -15,10 +15,10 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 965b6957f9428a2c1d12b307db0a0f2b77ea16e8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708729"
 ---
 # <a name="back-up-a-transaction-log"></a>備份交易記錄
@@ -26,17 +26,17 @@ ms.locfileid: "71708729"
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中備份交易記錄。  
 
 ## <a name="before-you-begin"></a>開始之前
-### <a name="Restrictions"></a> 限制事項  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 在明確或`BACKUP`隱含[的交易中，並不允許使用 ](../../t-sql/statements/set-implicit-transactions-transact-sql.md) 陳述式。 明確交易是明確定義交易的啟動與結束的一種交易。
 
-### <a name="Recommendations"></a> 建議  
+### <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 - 如果資料庫使用完整復原模式或大量記錄[復原模式](recovery-models-sql-server.md)，您必須定期備份交易記錄，使其足以保護您的資料，並避免[交易記錄填滿](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。 這會截斷記錄並支援將資料庫還原到特定時間點。 
   
 - 根據預設，每項成功的備份作業都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔與系統事件記錄檔中，加入一個項目。 如果您經常備份記錄檔，這些成功訊息可能會快速累積，因而產生龐大的錯誤記錄檔，讓您難以尋找其他訊息。 在這類情況下，如果沒有任何指令碼相依於這些記錄項目，您就可以使用追蹤旗標 3226 來隱藏這些記錄項目，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
   
-### <a name="Permissions"></a> 權限
+### <a name="permissions"></a><a name="Permissions"></a> 權限
 
 需要的 `BACKUP DATABASE` 和 `BACKUP LOG` 權限預設為授與給 **系統管理員**固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。 請檢查權限是否正確，再開始進行。
   
@@ -150,7 +150,7 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell
 
 設定並使用 [SQL Server PowerShell 提供者](../../relational-databases/scripting/sql-server-powershell-provider.md)。 使用 **Backup-SqlDatabase** Cmdlet，並指定 **Log** 作為 **-BackupAction** 參數的值。  
   
@@ -160,7 +160,7 @@ GO
 Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -BackupAction Log  
 ```
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
   
 - [還原交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

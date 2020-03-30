@@ -45,7 +45,7 @@ PERCENTILE_CONT ( numeric_literal )
  *numeric_literal*  
  要運算的百分位數。 值範圍必須介於 0.0 到 1.0 之間。  
   
- WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ]**)**  
+ WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ] **)**  
  指定要用以排序及計算百分位數的數值清單。 只允許一個 *order_by_expression*。 此運算式求得的解必須是精確數值類型或近似數值類型，不允許其他資料類型。 精確數值類型為 **int**、**bigint**、**smallint**、**tinyint**、**numeric**、**bit**、**decimal**、**smallmoney** 和 **money**。 近似數值類型為 **float** 和 **real**。 預設排序順序為遞增。  
   
  OVER **(** \<partition_by_clause> **)**  

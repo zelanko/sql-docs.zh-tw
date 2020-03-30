@@ -21,10 +21,10 @@ ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 767ccc61139886a1e81bbeb390b89676267b0d79
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68059898"
 ---
 # <a name="x40x40lock_timeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)

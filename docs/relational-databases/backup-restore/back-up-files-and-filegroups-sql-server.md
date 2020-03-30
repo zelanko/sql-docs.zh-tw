@@ -17,10 +17,10 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71708689"
 ---
 # <a name="back-up-files-and-filegroups"></a>備份檔案與檔案群組
@@ -29,9 +29,9 @@ ms.locfileid: "71708689"
   
 如需詳細資訊，請參閱 [完整檔案備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 和 [差異備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
 
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 - 在明確或隱含的交易中，並不允許使用 BACKUP 陳述式。  
   
@@ -39,11 +39,11 @@ ms.locfileid: "71708689"
   
 如需基本備份概念的詳細資訊，請參閱 [備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
   
-###  <a name="Recommendations"></a> 建議
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議
   
 根據預設，每項成功的備份作業都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔與系統事件記錄檔中，加入一個項目。 如果您經常備份記錄檔，這些成功訊息可能會快速累積，因而產生龐大的錯誤記錄檔，讓您難以尋找其他訊息。 在這類情況下，如果沒有任何指令碼相依於這些記錄項目，您就可以使用追蹤旗標 3226 來隱藏這些記錄項目，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
 
-###  <a name="Permissions"></a> 權限
+###  <a name="permissions"></a><a name="Permissions"></a> 權限
 
 `BACKUP DATABASE` 和 `BACKUP LOG` 權限預設為 **系統管理員**固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "71708689"
 
 如需詳細資訊，請參閱 [備份交易記錄 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)資料庫還原至新位置，並選擇性地重新命名資料庫。  
   
-###  <a name="TsqlExample"></a> 範例
+###  <a name="examples"></a><a name="TsqlExample"></a> 範例
 下列範例會備份 `Sales` 資料庫次要檔案群組的一或多個檔案。 這個資料庫使用完整復原模式，而且包含下列次要檔案群組：  
   
 - 名為 `SalesGroup1` 的檔案群組，其中含有檔案 `SGrp1Fi1` 和 `SGrp1Fi2`。  
@@ -199,7 +199,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-## <a name="PowerShellProcedure"></a> 使用 PowerShell
+## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell
 
 設定並使用 [SQL Server PowerShell 提供者](../../relational-databases/scripting/sql-server-powershell-provider.md)。
   

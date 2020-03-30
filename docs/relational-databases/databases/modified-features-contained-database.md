@@ -13,10 +13,10 @@ ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3c85d6e423c63337be4d2eaf2f96c420a4f6ad33
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68067346"
 ---
 # <a name="modified-features-contained-database"></a>修改的功能 (自主資料庫)

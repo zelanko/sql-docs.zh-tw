@@ -16,10 +16,10 @@ ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c3e144b1e866bd4bce8b7f8709c11f5b125b1f84
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291434"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>使用合併聯結轉換來擴充資料集

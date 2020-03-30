@@ -15,10 +15,10 @@ ms.assetid: 77938da0-2afd-4455-8826-f4a6a9440cb3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 92b80f727ce87606b0c1c58954b0743734880422
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68021264"
 ---
 # <a name="queue-reader-agent-security"></a>佇列讀取器代理程式安全性

@@ -28,10 +28,10 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296873"
 ---
 # <a name="package-management-ssis-service"></a>封裝管理 (SSIS 服務)
@@ -58,7 +58,7 @@ ms.locfileid: "71296873"
   
  **[Running Packages]** 資料夾不包含子資料夾，且不可延伸。  
   
- 依預設，[Stored Packages]  資料夾包含兩個資料夾：[File System]  和 [MSDB]  。 **[檔案系統]** 資料夾會列出儲存至檔案系統的封裝。 這些檔案的位置是在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的組態檔中指定的。 預設資料夾為 [封裝] 資料夾，位於 %Program Files%\Microsoft SQL Server\100\DTS。 **MSDB** 資料夾會列出已儲存至伺服器上 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb 資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封裝。 sysssispackages 資料表包含 msdb 中所儲存的封裝。  
+ 依預設， **[Stored Packages]** 資料夾包含兩個資料夾： **[File System]** 和 **[MSDB]** 。 **[檔案系統]** 資料夾會列出儲存至檔案系統的封裝。 這些檔案的位置是在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的組態檔中指定的。 預設資料夾為 [封裝] 資料夾，位於 %Program Files%\Microsoft SQL Server\100\DTS。 **MSDB** 資料夾會列出已儲存至伺服器上 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb 資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封裝。 sysssispackages 資料表包含 msdb 中所儲存的封裝。  
   
  若要檢視封裝存放區中的封裝清單，您必須開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 並連接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。  
   
@@ -124,13 +124,13 @@ ms.locfileid: "71296873"
   
 ### <a name="to-import-a-package-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 來匯入封裝  
   
-1.  按一下 [開始]  、指向 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  ，然後按一下 [SQL Server Management Studio]  。  
+1.  按一下 [開始]  、指向 Microsoft  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然後按一下 [SQL Server Management Studio]  。  
   
 2.  在 [連接到伺服器]  對話方塊上，設定下列選項：  
   
     -   在 [伺服器類型]  方塊中，選取 [Integration Services]  。  
   
-    -   在 [伺服器名稱]  方塊中提供伺服器名稱，或按一下 [\<瀏覽其他...>]  ，並尋找要使用的伺服器。  
+    -   在 [伺服器名稱]  方塊中提供伺服器名稱，或按一下 [**瀏覽其他...>]\<** ，並尋找要使用的伺服器。  
   
 3.  如果物件總管尚未開啟，請在 [檢視]  功能表上，按一下物件總管  。  
   
@@ -160,13 +160,13 @@ ms.locfileid: "71296873"
   
 ### <a name="to-export-a-package-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 來匯出封裝  
   
-1.  按一下 [開始]  、指向 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  ，然後按一下 [SQL Server Management Studio]  。  
+1.  按一下 [開始]  、指向 Microsoft  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然後按一下 [SQL Server Management Studio]  。  
   
 2.  在 [連接到伺服器]  對話方塊上，設定下列選項：  
   
     -   在 [伺服器類型]  方塊中，選取 [Integration Services]  。  
   
-    -   在 [伺服器名稱]  方塊中提供伺服器名稱，或按一下 [\<瀏覽其他...>]  ，並尋找要使用的伺服器。  
+    -   在 [伺服器名稱]  方塊中提供伺服器名稱，或按一下 [**瀏覽其他...>]\<** ，並尋找要使用的伺服器。  
   
 3.  如果物件總管尚未開啟，請在 [檢視]  功能表上，按一下物件總管  。  
   

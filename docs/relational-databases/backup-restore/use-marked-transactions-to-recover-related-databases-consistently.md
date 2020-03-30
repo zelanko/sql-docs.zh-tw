@@ -21,10 +21,10 @@ ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bc572ac7e1272274996b13dfb0886427cebc128e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75247441"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>使用標示的交易以一致的方式復原相關資料庫

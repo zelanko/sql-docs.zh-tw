@@ -11,10 +11,10 @@ ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 532513a6d8c62cb1f1f36e6dc2c8b83a7c96089b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295392"
 ---
 # <a name="catalogrename_environment-ssisdb-database"></a>catalog.rename_environment (SSISDB 資料庫)

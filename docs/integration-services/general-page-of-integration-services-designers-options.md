@@ -13,10 +13,10 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3651359a836f78c7f962ae571c89d8efc23f574b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286300"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Integration Services 設計師選項的 [一般]頁面

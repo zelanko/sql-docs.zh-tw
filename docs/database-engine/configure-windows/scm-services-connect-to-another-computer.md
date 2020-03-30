@@ -13,10 +13,10 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 03f409e11e037fcc406940d5a97e9934a77b96b4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74249762"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM 服務 - 連接至另一台電腦

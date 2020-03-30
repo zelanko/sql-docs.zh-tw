@@ -17,10 +17,10 @@ ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2e06b51b8c6c63d67645b493bdf4ca5bac3ab985
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75257996"
 ---
 # <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>定義磁帶機的邏輯備份裝置 (SQL Server)
@@ -44,22 +44,22 @@ ms.locfileid: "75257996"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   磁帶機必須受到 Microsoft Windows 作業系統支援。  
   
 -   磁帶裝置必須在實體上連接至執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的電腦。 不支援備份至遠端磁帶裝置。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要 **diskadmin** 固定伺服器角色的成員資格。  
   
  需要寫入磁碟的權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-define-a-logical-backup-device-for-a-tape-drive"></a>定義磁帶機的邏輯備份裝置  
   
@@ -77,7 +77,7 @@ ms.locfileid: "75257996"
 
  若要備份至這個新裝置，請將它加入 [備份資料庫]  \([一般]  ) 對話方塊中的 [備份至:]  欄位。 如需詳細資訊，請參閱 [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)中建立差異資料庫備份。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-define-a-logical-backup-device-for-a-tape-drive"></a>定義磁帶機的邏輯備份裝置  
   

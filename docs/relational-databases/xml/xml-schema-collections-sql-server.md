@@ -22,10 +22,10 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a334b4a02126023b94e5623b45050b067b48ce6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68096823"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 結構描述集合 (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "68096823"
   
  您也可以使用 XML 結構描述集合來輸入 XML 變數、參數及資料行。  
   
-##  <a name="ddl"></a> 管理結構描述集合的 DDL  
+##  <a name="ddl-for-managing-schema-collections"></a><a name="ddl"></a> 管理結構描述集合的 DDL  
  您可以在資料庫中建立 XML 結構描述集合，然後將它們與 **xml** 類型的變數和資料行產生關聯。 為了管理資料庫中的結構描述集合， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了下列 DDL 陳述式：  
   
 -   [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 將結構描述元件匯入資料庫中。  
@@ -61,7 +61,7 @@ ms.locfileid: "68096823"
   
  若要卸除結構描述集合，請使用 DROP XML SCHEMA COLLECTION 陳述式。 這會卸除集合中包含的所有結構描述，並移除集合物件。 請注意，必須符合 [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md) 中描述的條件，才能卸除結構描述集合。  
   
-##  <a name="components"></a> 了解結構描述元件  
+##  <a name="understanding-schema-components"></a><a name="components"></a> 了解結構描述元件  
  當您使用 CREATE XML SCHEMA COLLECTION 陳述式時，會將各種結構描述元件匯入資料庫中。 結構描述元件包括結構描述元素、屬性和類型定義。 當您使用 DROP XML SCHEMA COLLECTION 陳述式時，整個集合都會移除。  
   
  CREATE XML SCHEMA COLLECTION 會將結構描述元件儲存到各種系統資料表中。  
@@ -131,7 +131,7 @@ ms.locfileid: "68096823"
 |**targetNamespace**|隸屬於目標命名空間之元件的詳細資訊會儲存在中繼資料內。|  
 | &nbsp; | &nbsp; |
   
-##  <a name="perms"></a> XML 結構描述集合上的權限  
+##  <a name="permissions-on-an-xml-schema-collection"></a><a name="perms"></a> XML 結構描述集合上的權限  
  您必須有必要權限，才能執行下列作業：  
   
 -   建立/載入 XML 結構描述集合  
@@ -160,7 +160,7 @@ ms.locfileid: "68096823"
   
      此主題討論如何拒絕建立 XML 結構描述集合的權限，以及拒絕 XML 結構描述集合物件的權限。  
   
-##  <a name="info"></a> 取得有關 XML 結構描述和結構描述集合的資訊  
+##  <a name="getting-information-about-xml-schemas-and-schema-collections"></a><a name="info"></a> 取得有關 XML 結構描述和結構描述集合的資訊  
  XML 結構描述集合會列舉在目錄檢視 sys.xml_schema_collections 中。 XML 結構描述集合 "sys" 是由系統定義的。 其包含預先定義的命名空間，您不需要明確地將其載入，即可用在所有使用者自訂的 XML 結構描述集合中。 此清單包含 xml、xs、xsi、fn 及 xdt 的命名空間。 另外二個目錄檢視為 sys.xml_schema_namespaces：列舉出每個 XML 結構描述集合中的所有命名空間；以及 sys.xml_components：列舉出每個 XML 結構描述中的所有 XML 結構描述元件。  
   
  內建函式 **XML_SCHEMA_NAMESPACE** (*schemaName、XmlSchemacollectionName、namespace-uri*) 會產生 **xml** 資料類型執行個體。 此執行個體包含 XML 結構描述集合中所包含之結構描述的 XML 結構描述片段 (預先定義的 XML 結構描述除外)。  

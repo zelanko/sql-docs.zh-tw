@@ -13,10 +13,10 @@ ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 293df346a7eac72f23fa3b3bdd7bbe7994fdc54c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68892890"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services 與 AlwaysOn 可用性群組
@@ -27,14 +27,14 @@ ms.locfileid: "68892890"
   
  處理及查詢是唯讀工作負載。 您可以將這些工作負載卸載至可讀取的次要複本，以提升效能。 這個案例不需要進行其他組態設定。 使用本主題中的檢查清單，以確保您遵循所有步驟。  
   
-##  <a name="bkmk_prereq"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 必要條件  
  您必須擁有所有複本的 SQL Server 登入。 您必須是 **系統管理員** ，才能設定可用性群組、接聽程式及資料庫，但是使用者只需要 **db_datareader** 權限，即可從 Analysis Services 用戶端存取資料庫。  
   
  使用支援表格式資料流 (TDS) 通訊協定 7.4 版或更新版本的資料提供者，例如 SQL Server Native Client 11.0 或 .NET Framework 4.02 的 Data Provider for SQL Server。  
   
  **(適用於唯讀工作負載)** 。 您必須設定唯讀連接的次要複本角色，可用性群組必須具有路由清單，且 Analysis Services 資料來源中的連接必須指定可用性群組接聽程式。 本主題將提供指示。  
   
-##  <a name="bkmk_UseSecondary"></a> 檢查清單：僅針對唯讀作業使用次要複本  
+##  <a name="checklist-use-a-secondary-replica-for-read-only-operations"></a><a name="bkmk_UseSecondary"></a> 檢查清單：僅針對唯讀作業使用次要複本  
  除非 Analysis Services 解決方案包含回寫，否則您可以設定資料來源連接使用可讀取的次要複本。 如果具有快速網路連接，次要複本的資料延遲會很低，因此提供與主要複本幾乎相同的資料。 透過使用次要複本進行 Analysis Services 作業，您可以降低主要複本的讀寫競爭，並更善用可用性群組中的次要複本。  
   
  預設允許與主要複本之間的讀寫和讀取意圖的存取，但是不允許連接次要複本。 次要複本的唯讀用戶端連接需要進行其他組態設定。 這些組態設定需要設定次要複本的屬性，以及執行定義唯讀路由清單的 T-SQL 指令碼。 使用下列程序，以確保您已經執行這兩個步驟。  
@@ -119,7 +119,7 @@ ms.locfileid: "68892890"
   
      下一步，建立 Analysis Services 模型中的資料來源，這個資料來源會使用您剛才設定之群組中的資料庫。  
   
-##  <a name="bkmk_ssasAODB"></a> 建立使用 AlwaysOn 可用性資料庫的 Analysis Services 資料來源  
+##  <a name="create-an-analysis-services-data-source-using-an-always-on-availability-database"></a><a name="bkmk_ssasAODB"></a> 建立使用 AlwaysOn 可用性資料庫的 Analysis Services 資料來源  
  本節說明如何建立連接至可用性群組中某個資料庫的 Analysis Services 資料來源。 您可以使用這些說明，設定主要複本 (預設) 或您根據上一節步驟所設定之可讀取次要複本的連接。 AlwaysOn 組態設定及在用戶端設定的連線屬性，決定使用主要或次要複本。  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 的 Analysis Services 多維度和資料採礦模型專案中，以滑鼠右鍵按一下 [資料來源]  ，然後選取 [新增資料來源]  。 按一下 **[新增]** 建立新的資料來源。  
@@ -150,7 +150,7 @@ ms.locfileid: "68892890"
   
  現在您已經定義資料來源。 您可以接著繼續建立模型，請從資料來源檢視開始，或在表格式模型中建立關聯性。 如果您必須從可用性資料庫擷取資料 (例如在您準備處理或部署解決方案時)，您可以測試組態，確認可從次要複本存取資料。  
   
-##  <a name="bkmk_test"></a> 測試組態  
+##  <a name="test-the-configuration"></a><a name="bkmk_test"></a> 測試組態  
  在您設定次要複本並在 Analysis Services 中建立資料來源連接之後，即可確認處理及查詢命令是否已重新導向至次要複本。 您也可以執行規劃的手動容錯移轉，以確認這個案例的復原計劃。  
   
 #### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>步驟 1：確認資料來源連接已重新導向至次要複本  
@@ -200,7 +200,7 @@ ms.locfileid: "68892890"
   
 9. 重複 Analysis Services 解決方案中的處理或查詢命令，然後在 SQL Server Profiler 中並排檢視追蹤。 您應該會看到執行處理的其他執行個體現在成為新的次要複本。  
   
-##  <a name="bkmk_whathappens"></a> 容錯移轉之後會發生什麼情況  
+##  <a name="what-happens-after-a-failover-occurs"></a><a name="bkmk_whathappens"></a> 容錯移轉之後會發生什麼情況  
  在容錯移轉期間，次要複本會轉換到主要角色，而先前的主要複本會轉換到次要角色。 所有用戶端連線會終止，可用性群組接聽程式的擁有權會隨主要複本角色移至新的 SQL Server 執行個體，且接聽程式端點會繫結到新執行個體的虛擬 IP 位址和 TCP 連接埠。 如需詳細資訊，請參閱本主題稍後的 [關於可用性複本的用戶端連接存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md))。  
   
  如果在處理期間發生容錯移轉，Analysis Services 的記錄檔或輸出視窗中會發生下列錯誤：「OLE DB 錯誤: OLE DB 或 ODBC 錯誤: 通訊連結失敗; 08S01; TPC 提供者: 遠端主機已強制關閉一個現有連線。 ; 08S01。」  
@@ -209,7 +209,7 @@ ms.locfileid: "68892890"
   
  持續性錯誤的主要原因可能是組態問題。 您可以嘗試重新執行 T-SQL 指令碼，解決次要複本上的路由清單、唯讀路由 URL 及讀取意圖的問題。 您也應該確認主要複本允許所有連接。  
   
-##  <a name="bkmk_writeback"></a> 使用 AlwaysOn 可用性資料庫時回寫  
+##  <a name="writeback-when-using-an-always-on-availability-database"></a><a name="bkmk_writeback"></a> 使用 AlwaysOn 可用性資料庫時回寫  
  回寫是 Analysis Services 功能，支援 Excel 的假設分析。 這項功能也常用於自訂應用程式中的預算和預測工作。  
   
  回寫支援需要 READWRITE 用戶端連接。 在 Excel 中，如果您嘗試在唯讀連線上回寫，會發生下列錯誤：「無法從外部資料來源擷取資料。」 「無法從外部資料來源擷取資料。」  

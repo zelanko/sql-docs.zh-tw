@@ -8,10 +8,10 @@ ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
 ms.openlocfilehash: 6b00c445f75c4cdc36e34d471b01d4fa56f81f9e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70963565"
 ---
 每個可用性群組只有一個主要複本。 主要複本允許讀取和寫入。 若要變更作為主要的複本，您可以進行容錯移轉。 在高可用性的可用性群組中，叢集管理員會自動化容錯移轉程序。 在叢集類型為 NONE 的可用性群組中，容錯移轉程序是手動的。 

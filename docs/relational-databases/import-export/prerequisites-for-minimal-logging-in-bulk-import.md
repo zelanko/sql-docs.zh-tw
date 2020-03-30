@@ -17,10 +17,10 @@ ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 99572edbc477999a1ccc8f6c1fff89b5e04521d6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70910839"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>大量匯入中最低限度記錄的先決條件
@@ -62,7 +62,7 @@ ms.locfileid: "70910839"
 > [!NOTE]  
 >  啟用異動複寫時，即使在大量記錄復原模式下也會完整記錄 BULK INSERT 作業。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [檢視或變更資料庫的復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   

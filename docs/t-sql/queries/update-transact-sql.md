@@ -39,10 +39,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d4c6c89602f55eb72c01d32a2541bcf4c775b9a9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78176688"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
@@ -327,9 +327,9 @@ GO
  如果 UPDATE 陳述式在更新叢集索引鍵及一個或多個 **text**、**ntext** 或 **image** 資料行時，可以變更多個資料列，則會以完整取代值的方式來執行這些資料列的部分更新。  
   
 > [!IMPORTANT]
->  未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本將會移除 **ntext**、**text** 和 **image** 資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。  
+>  未來的  版本將會移除 **ntext**、**text** 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)]image[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。  
   
-### <a name="updating-lobs"></a> 更新大數值資料類型  
+### <a name="updating-large-value-data-types"></a><a name="updating-lobs"></a> 更新大數值資料類型  
  使用 **.** WRITE **(** _expression_ **,** @_Offset_ **,** @_Length_ **)** 子句可執行 **varchar(max)** 、**nvarchar(max)** 和 **varbinary(max)** 資料類型的部分或完整更新。 
  
  例如，部分更新 **varchar(max)** 資料行可能只刪除或修改資料行的前 200 個位元組 (如果使用 ASCII 字元為 200 個字元)，完整更新則會刪除或修改資料行中的所有資料。 如果資料庫復原模式設為大量記錄或簡單模式，則插入或附加新資料的 **.WRITE** 更新就會採用最低限度記錄。 當更新現有的值時，不會使用最低限度記錄。 如需詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
@@ -340,7 +340,7 @@ GO
   
 您不能使用 **.WRITE** 子句來更新 NULL 資料行，或將 *column_name* 的值設成 NULL。  
   
-**Varbinary** 和 **Varchar** 資料類型的 @*Offset* 和 @*Length* 是以位元組來指定，**Nvarchar** 資料類型則是以位元組來指定。 如需字串資料類型長度的詳細資訊，請參閱 [Char 和 Varchar (Transact-SQL)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 和 [Nchar 和 Nvarchar (Transact-sql)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)。
+@Varbinary*和*Varchar*資料類型的***Offset** 和 @**Length** 是以位元組來指定，**Nvarchar** 資料類型則是以位元組來指定。 如需字串資料類型長度的詳細資訊，請參閱 [Char 和 Varchar (Transact-SQL)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 和 [Nchar 和 Nvarchar (Transact-sql)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)。
   
 若要有最佳效能，建議您以 8040 個位元組倍數的片段大小來插入或更新資料。  
   
@@ -466,11 +466,11 @@ ID     Value
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>權限  
- 需要目標資料表的 `UPDATE` 權限。 如果 UPDATE 陳述式包含 WHERE 子句，或 SET 子句中的 *expression* 使用資料表中的資料行，則需要所更新之資料表的 `SELECT` 權限。  
+ 需要目標資料表的 `UPDATE` 權限。 如果 UPDATE 陳述式包含 WHERE 子句，或 SET 子句中的 `SELECT`expression*使用資料表中的資料行，則需要所更新之資料表的* 權限。  
   
  UPDATE 權限預設為 `sysadmin` 固定伺服器角色、`db_owner` 和 `db_datawriter` 固定資料庫角色的成員，以及資料表擁有者。 `sysadmin`、`db_owner` 和 `db_securityadmin` 角色的成員及資料表擁有者可將權限移轉給其他使用者。  
   
-##  <a name="UpdateExamples"></a> 範例  
+##  <a name="examples"></a><a name="UpdateExamples"></a> 範例  
   
 |類別|代表性語法元素|  
 |--------------|------------------------------|  
@@ -486,7 +486,7 @@ ID     Value
 |[擷取 UPDATE 陳述式的結果](#CaptureResults)|OUTPUT 子句|  
 |[在其他陳述式中使用 UPDATE](#Other)|預存程序 • TRY...CATCH|  
   
-###  <a name="BasicSyntax"></a> 基本語法  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> 基本語法  
  本節的範例會使用所需的最少語法來示範 UPDATE 陳述式的基本功能。  
   
 #### <a name="a-using-a-simple-update-statement"></a>A. 使用簡單的 UPDATE 陳述式  
@@ -510,7 +510,7 @@ SET Bonus = 6000, CommissionPct = .10, SalesQuota = NULL;
 GO  
 ```  
   
-###  <a name="LimitingValues"></a> 限制更新的資料列  
+###  <a name="limiting-the-rows-that-are-updated"></a><a name="LimitingValues"></a> 限制更新的資料列  
  本節的範例將示範可讓您用來限制 UPDATE 陳述式所影響之資料列數目的方式。  
   
 #### <a name="c-using-the-where-clause"></a>C. 使用 WHERE 子句  
@@ -598,7 +598,7 @@ DEALLOCATE complex_cursor;
 GO  
 ```  
   
-###  <a name="ColumnValues"></a> 設定資料行值  
+###  <a name="setting-column-values"></a><a name="ColumnValues"></a> 設定資料行值  
  本節的範例會示範如何使用計算值、子查詢和 DEFAULT 值來更新資料行。  
   
 #### <a name="g-specifying-a-computed-value"></a>G. 指定計算值  
@@ -664,7 +664,7 @@ SET CostRate = DEFAULT
 WHERE CostRate > 20.00;  
 ```  
   
-###  <a name="TargetObjects"></a> 指定標準資料表以外的目標物件  
+###  <a name="specifying-target-objects-other-than-standard-tables"></a><a name="TargetObjects"></a> 指定標準資料表以外的目標物件  
  本節的範例會示範如何透過指定檢視表、資料表別名或資料表變數，更新資料列。  
   
 #### <a name="k-specifying-a-view-as-the-target-object"></a>K. 將檢視表指定為目標物件  
@@ -721,7 +721,7 @@ ORDER BY EmpID;
 GO  
 ```  
   
-###  <a name="OtherTables"></a> 根據其他資料表的資料更新資料  
+###  <a name="updating-data-based-on-data-from-other-tables"></a><a name="OtherTables"></a> 根據其他資料表的資料更新資料  
  本節的範例會示範根據某個資料表之資訊更新另一個資料表之資料列的方法。  
   
 #### <a name="n-using-the-update-statement-with-information-from-another-table"></a>N. 使用 UPDATE 陳述式搭配另一份資料表的資訊  
@@ -760,7 +760,7 @@ SET SalesYTD = SalesYTD +
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> 更新遠端資料表中的資料列  
+###  <a name="updating-rows-in-a-remote-table"></a><a name="RemoteTables"></a> 更新遠端資料表中的資料列  
  本節的範例將示範如何使用[連結的伺服器](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)或[資料列集函數](../../t-sql/functions/rowset-functions-transact-sql.md)來參考遠端資料表，藉以更新遠端目標資料表中的資料列。  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O. 使用連結的伺服器來更新遠端資料表中的資料  
@@ -804,11 +804,11 @@ UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=
 SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;  
 ```
 
-###  <a name="LOBValues"></a> 更新大型物件資料類型  
+###  <a name="updating-large-object-data-types"></a><a name="LOBValues"></a> 更新大型物件資料類型  
  本節的範例將示範更新以大型物件 (LOB) 資料類型定義之資料行值的方法。  
   
 #### <a name="r-using-update-with-write-to-modify-data-in-an-nvarcharmax-column"></a>R. 使用 UPDATE 搭配 .WRITE 來修改 nvarchar(max) 資料行中的資料  
- 下列範例會利用 .WRITE 子句來更新 `Production.Document` 資料表之 **nvarchar(max)** 資料行 `DocumentSummary` 中的部分值。 `components` 一字會藉由指定取代文字、現有資料中要取代之字的起始位置 (位移)，以及要取代的字元數 (長度) 來取代為 `features` 一字。 另外，這個範例也利用 OUTPUT 子句，將 `DocumentSummary` 資料行的前置和後置資料影像傳回給 `@MyTableVar` 資料表變數。  
+ 下列範例會利用 .WRITE 子句來更新 `DocumentSummary` 資料表之 **nvarchar(max)** 資料行 `Production.Document` 中的部分值。 `components` 一字會藉由指定取代文字、現有資料中要取代之字的起始位置 (位移)，以及要取代的字元數 (長度) 來取代為 `features` 一字。 另外，這個範例也利用 OUTPUT 子句，將 `DocumentSummary` 資料行的前置和後置資料影像傳回給 `@MyTableVar` 資料表變數。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -907,7 +907,7 @@ SET [Chart] = CAST('Xray 1' as varbinary(max))
 WHERE [SerialNumber] = 2;  
 ```  
   
-###  <a name="UDTs"></a> 更新使用者定義型別  
+###  <a name="updating-user-defined-types"></a><a name="UDTs"></a> 更新使用者定義型別  
  下列範例會修改 CLR 使用者定義型別 (UDT) 資料行中的值。 我們將示範三種方法。 如需有關使用者定義資料行的詳細資訊，請參閱 [CLR 使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。  
   
 #### <a name="v-using-a-system-data-type"></a>V. 使用系統資料類型  
@@ -937,7 +937,7 @@ SET Location.X = 23.5
 WHERE Name = 'Anchorage';  
 ```  
   
-###  <a name="TableHints"></a> 使用提示來覆寫查詢最佳化工具的預設行為  
+###  <a name="overriding-the-default-behavior-of-the-query-optimizer-by-using-hints"></a><a name="TableHints"></a> 使用提示來覆寫查詢最佳化工具的預設行為  
  本節的範例將示範如何使用資料表和查詢提示，在處理 UPDATE 陳述式時暫時覆寫查詢最佳化工具的預設行為。  
   
 > [!CAUTION]  
@@ -975,7 +975,7 @@ GO
 EXEC Production.uspProductUpdate 'BK-%';  
 ```  
   
-###  <a name="CaptureResults"></a> 擷取 UPDATE 陳述式的結果  
+###  <a name="capturing-the-results-of-the-update-statement"></a><a name="CaptureResults"></a> 擷取 UPDATE 陳述式的結果  
  本節的範例示範如何使用 [OUTPUT 子句](../../t-sql/queries/output-clause-transact-sql.md)傳回 UPDATE 陳述式所影響之每個資料列的資訊，或是以該資料列為根據的運算式。 這些結果可以傳回給負責處理的應用程式，以便用在確認訊息、封存或其他這類應用程式需求等用途上。  
   
 #### <a name="aa-using-update-with-the-output-clause"></a>AA. 使用 UPDATE 搭配 OUTPUT 子句  
@@ -1009,11 +1009,11 @@ FROM HumanResources.Employee;
 GO  
 ```  
   
-###  <a name="Other"></a> 在其他陳述式中使用 UPDATE  
+###  <a name="using-update-in-other-statements"></a><a name="Other"></a> 在其他陳述式中使用 UPDATE  
  本節的範例將示範如何在其他陳述式中使用 UPDATE。  
   
 #### <a name="ab-using-update-in-a-stored-procedure"></a>AB. 在預存程序中使用 UPDATE  
- 下列範例會在預存程序中使用 UPDATE 陳述式。 此程序會採用一個輸入參數 `@NewHours` 和一個輸出參數 `@RowCount`。 UPDATE 陳述式內會使用 `@NewHours` 參數值，以更新資料表 `HumanResources.Employee` 中的資料行 `VacationHours`。 `@RowCount` 輸出參數是用來將受影響的資料列數目傳回給區域變數。 SET 子句中會使用 CASE 運算式，以條件方式判斷針對 `VacationHours` 所設定的值。 按照時數支付薪資給員工時 (`SalariedFlag` = 0)，`VacationHours` 會設定為目前的時數加上 `@NewHours` 中指定的值，否則 `VacationHours` 會設定為 `@NewHours` 中指定的值。  
+ 下列範例會在預存程序中使用 UPDATE 陳述式。 此程序會採用一個輸入參數 `@NewHours` 和一個輸出參數 `@RowCount`。 UPDATE 陳述式內會使用 `@NewHours` 參數值，以更新資料表 `VacationHours` 中的資料行 `HumanResources.Employee`。 `@RowCount` 輸出參數是用來將受影響的資料列數目傳回給區域變數。 SET 子句中會使用 CASE 運算式，以條件方式判斷針對 `VacationHours` 所設定的值。 按照時數支付薪資給員工時 (`SalariedFlag` = 0)，`VacationHours` 會設定為目前的時數加上 `@NewHours` 中指定的值，否則 `VacationHours` 會設定為 `@NewHours` 中指定的值。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -1072,7 +1072,7 @@ GO
 ### <a name="ad-using-a-simple-update-statement"></a>AD. 使用簡單的 UPDATE 陳述式  
  下列範例顯示當沒有用 WHERE 子句來指定要更新的資料列時，會如何影響所有資料列。  
   
- 此範例更新 `DimEmployee` 資料表中所有資料列之 `EndDate` 和 `CurrentFlag` 資料行的值。  
+ 此範例更新 `EndDate` 資料表中所有資料列之 `CurrentFlag` 和 `DimEmployee` 資料行的值。  
   
 ```sql  
 -- Uses AdventureWorks  

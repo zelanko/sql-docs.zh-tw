@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 391c4f3013754e4b641241bacb025c63a68cb68e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72906673"
 ---
 # <a name="modify-user-defined-functions"></a>修改使用者定義函數
@@ -36,9 +36,9 @@ ms.locfileid: "72906673"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
  ALTER FUNCTION 不能用於執行以下任何動作：  
   
 -   將純量值函式變更為資料表值函式，反之亦然。  
@@ -47,12 +47,12 @@ ms.locfileid: "72906673"
   
 -   將 Transact-SQL 函數變更為 CLR 函數，反之亦然。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要函數或結構描述的 ALTER 權限。 如果此函數指定使用者定義型別，則需要該型別的 EXECUTE 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-a-user-defined-function"></a>若要修改使用者定義函數  
   
@@ -74,7 +74,7 @@ ms.locfileid: "72906673"
   
 6.  在 [檔案]  功能表上，按一下 [儲存 **function_name**]  。  
 
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-modify-a-user-defined-function"></a>若要修改使用者定義函數  
   

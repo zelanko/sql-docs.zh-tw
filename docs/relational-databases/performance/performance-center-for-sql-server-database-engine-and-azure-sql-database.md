@@ -20,10 +20,10 @@ ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: c58546e4b87e0d52175124263e53b54a912689d1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74164940"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server Database Engine 和 Azure SQL Database 的效能中心

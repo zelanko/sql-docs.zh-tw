@@ -16,10 +16,10 @@ ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e81ef89165b3af5af0f8c48ca0338086c5c934a9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67929530"
 ---
 # <a name="compound-operators-transact-sql"></a>複合運算子 (Transact-SQL)

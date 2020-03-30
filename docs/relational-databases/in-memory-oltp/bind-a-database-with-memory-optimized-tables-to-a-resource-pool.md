@@ -11,10 +11,10 @@ ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8bc12c4ef792fe1df3d9855df72e025a2dafa6ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412758"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>將包含記憶體最佳化資料表的資料庫繫結至資源集區
@@ -50,10 +50,10 @@ ms.locfileid: "74412758"
   
 -   [可用於記憶體最佳化資料表和索引的記憶體百分比](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)  
   
-##  <a name="bkmk_CreatePool"></a> 建立資料庫和資源集區  
+##  <a name="create-the-database-and-resource-pool"></a><a name="bkmk_CreatePool"></a> 建立資料庫和資源集區  
  您可以按照任何順序建立資料庫和資源集區。 重點在於這兩者必須事先存在，才能將資料庫繫結至資源集區。  
   
-###  <a name="bkmk_CreateDatabase"></a> 建立資料庫  
+###  <a name="create-the-database"></a><a name="bkmk_CreateDatabase"></a> 建立資料庫  
  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 會建立名為 IMOLTP_DB 的資料庫，其中將包含一個或多個記憶體最佳化資料表。 執行此命令之前，路徑 \<磁碟機和路徑> 必須存在。  
   
 ```sql  
@@ -64,7 +64,7 @@ ALTER DATABASE IMOLTP_DB ADD FILE( NAME = 'IMOLTP_DB_fg' , FILENAME = 'c:\data\I
 GO  
 ```  
   
-###  <a name="bkmk_DeterminePercent"></a> 決定 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的最小值  
+###  <a name="determine-the-minimum-value-for-min_memory_percent-and-max_memory_percent"></a><a name="bkmk_DeterminePercent"></a> 決定 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的最小值  
  判斷出記憶體最佳化資料表的記憶體需求之後，您必須決定所需數量佔可用記憶體的百分比，並將記憶體百分比設定為該值或更高。  
   
  **範例：**    
@@ -83,7 +83,7 @@ GO
   
  換言之，您至少需要 62.5% 的可用記憶體，才會符合記憶體最佳化資料表和索引的 16 GB 需求。  由於 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值必須是整數，您就要將兩者設定為至少佔 63%。  
   
-###  <a name="bkmk_CreateResourcePool"></a> 建立資源集區和設定記憶體  
+###  <a name="create-a-resource-pool-and-configure-memory"></a><a name="bkmk_CreateResourcePool"></a> 建立資源集區和設定記憶體  
  設定記憶體最佳化資料表的記憶體時，應該依據 MIN_MEMORY_PERCENT 規劃容量，而不是依據 MAX_MEMORY_PERCENT。  如需有關 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的詳細資訊，請參閱 [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)。 這樣可以為記憶體最佳化資料提供更可預測的記憶體可用性，因為 MIN_MEMORY_PERCENT 會對其他資源集區造成記憶體壓力，以確保記憶體可被接受。 若要確保記憶體可用，並幫助避免記憶體不足狀況，MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值應相同。 如需以認可記憶體數量為基礎，可用於記憶體最佳化資料表的記憶體百分比，請參閱以下的 [可用記憶體最佳化資料表和索引的記憶體百分比](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) 。  
   
  如需有關在 VM 環境下作業的詳細資訊，請參閱 [最佳做法：在 VM 環境使用記憶體內部 OLTP](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 。  
@@ -102,7 +102,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-##  <a name="bkmk_DefineBinding"></a> 將資料庫繫結至集區  
+##  <a name="bind-the-database-to-the-pool"></a><a name="bkmk_DefineBinding"></a> 將資料庫繫結至集區  
  您可以使用系統函數 `sp_xtp_bind_db_resource_pool` ，將資料庫繫結至資源集區。 此函數會採用兩個參數：資料庫名稱和資源集區名稱。  
   
  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 會定義 IMOLTP_DB 資料庫與 Pool_IMOLTP 資源集區的繫結。 在您讓資料庫重新上線之前，此繫結不會生效。  
@@ -114,7 +114,7 @@ GO
   
  系統函數 sp_xtp_bind_db_resourece_pool 會採用兩個字串參數：database_name 和 pool_name。  
   
-##  <a name="bkmk_ConfirmBinding"></a> 確認繫結  
+##  <a name="confirm-the-binding"></a><a name="bkmk_ConfirmBinding"></a> 確認繫結  
  確認繫結，並記下 IMOLTP_DB 的資源集區識別碼。 它不應該是 NULL。  
   
 ```sql  
@@ -123,7 +123,7 @@ FROM sys.databases d
 GO  
 ```  
   
-##  <a name="bkmk_MakeBindingEffective"></a> 使繫結生效  
+##  <a name="make-the-binding-effective"></a><a name="bkmk_MakeBindingEffective"></a> 使繫結生效  
  將資料庫繫結至資源集區之後，您必須讓資料庫離線再恢復上線，以使繫結生效。 如果您的資料庫先前已繫結至不同的集區，這樣做便會從先前的資源集區移除已配置的記憶體，而且記憶體最佳化資料表和索引的記憶體配置現在將由最近剛與資料庫繫結的新資源集區提供。  
   
 ```sql  
@@ -141,7 +141,7 @@ GO
   
  此時，資料庫已繫結至資源集區。  
   
-##  <a name="bkmk_ChangeAllocation"></a> 變更現有集區上的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT  
+##  <a name="change-min_memory_percent-and-max_memory_percent-on-an-existing-pool"></a><a name="bkmk_ChangeAllocation"></a> 變更現有集區上的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT  
  如果您為伺服器另外再加入記憶體，或是您的記憶體最佳化資料表所需的記憶體數量已變更，可能就必須更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 下列步驟將為您示範如何更改資源集區的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 值。 請參閱下一節提供的指引，以得知 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 應該使用哪些值。  如需詳細資訊，請參閱 [最佳做法：在 VM 環境使用記憶體內部 OLTP](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 主題。  
   
 1.  使用 `ALTER RESOURCE POOL` 變更 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。  
@@ -162,7 +162,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE
 GO  
 ```  
   
-##  <a name="bkmk_PercentAvailable"></a> 可用於記憶體最佳化資料表和索引的記憶體百分比  
+##  <a name="percent-of-memory-available-for-memory-optimized-tables-and-indexes"></a><a name="bkmk_PercentAvailable"></a> 可用於記憶體最佳化資料表和索引的記憶體百分比  
  如果您將具有記憶體最佳化資料表的資料庫和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作負載對應至相同的資源集區，資源管理員就會設定 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 使用的內部臨界值，避免集區的使用者在集區使用量上發生衝突。 一般而言， [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 使用的臨界值大約是 80% 的集區。 下表顯示各種記憶體大小的實際臨界值。  
   
  您為 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資料庫建立專用資源集區時，在考量資料列版本和資料成長之後，需要估計記憶體中資料表所需的實體記憶體數量。 估計需要的記憶體之後，請建立資源集區，且其中有一定比例的認可目標記憶體可用於 SQL 執行個體，如 DMV `sys.dm_os_sys_info` 中的 'committed_target_kb' 資料行所反映 (請參閱 [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md))。 例如，您可以建立資源集區 P1，其中有 40% 的總記憶體可供執行個體使用。 在此 40% 之中， [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎會取用較小的百分比來儲存 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資料。  這樣做可確保 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 不會耗用此集區中的所有記憶體。  這個較小的百分比值取決於目標認可的記憶體。 下表描述在 OOM 錯誤引發之前，資源集區 (具名或預設) 中可供 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資料庫使用的記憶體。  

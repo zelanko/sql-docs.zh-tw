@@ -11,10 +11,10 @@ ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6587c8c0e56e824b1a2ae73c5067949f3c4a223a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296073"
 ---
 # <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>第 1 課：準備建立部署配套

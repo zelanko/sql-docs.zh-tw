@@ -22,10 +22,10 @@ ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 21b49eb9638b4651ff52c6515f6e5f62177fc504
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73843435"
 ---
 # <a name="app_name-transact-sql"></a>APP_NAME (Transact-SQL)

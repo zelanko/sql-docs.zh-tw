@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b738bd06abe616adc846727dd5721b7204e340c8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67999441"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主要與外部索引鍵條件約束
@@ -36,7 +36,7 @@ ms.locfileid: "67999441"
   
  [相關工作](../../relational-databases/tables/primary-and-foreign-key-constraints.md#Tasks)  
   
-##  <a name="PKeys"></a> 主索引鍵條件約束  
+##  <a name="primary-key-constraints"></a><a name="PKeys"></a> 主索引鍵條件約束  
  資料表中通常會有一個或多個資料行包含可唯一識別資料表中每個資料列的值。 此資料行稱為資料表的主索引鍵 (PK)，強制資料表具有實體完整性。 主索引鍵條件約束保證唯一的資料，因此通常是定義在識別欄位上。  
   
  當您為資料表指定主索引鍵條件約束時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會自動為主索引鍵資料行建立唯一的索引，以強制資料的唯一性。 當主索引鍵用於查詢時，此索引也可讓您快速地存取資料。 若主索引鍵條件約束定義於多個資料行，則某個資料行內的值可能會重複，但主索引鍵條件約束定義中所有資料行的每個值組合都必須是唯一的。  
@@ -57,7 +57,7 @@ ms.locfileid: "67999441"
   
 -   如果在 CLR 使用者定義的類型資料行上定義主索引鍵，類型的實作必須支援二進位排序。  
   
-##  <a name="FKeys"></a> Foreign Key Constraints  
+##  <a name="foreign-key-constraints"></a><a name="FKeys"></a> Foreign Key Constraints  
  外部索引鍵 (FK) 是可用來建立與強制兩資料表的資料之間連結的一個資料行或資料行組合，以控制外部索引鍵資料表中可儲存的資料。 在外部索引鍵參考中，當存放一個資料表的主索引鍵值的資料行被另一個資料表的資料行參考時，兩資料表之間會建立連結。 此資料行會成為第二個資料表的外部索引鍵。  
   
  例如， **Sales.SalesOrderHeader** 資料表具有與 **Sales.SalesPerson** 資料表的外部索引鍵連結，因為銷售訂單與銷售人員之間存在邏輯關聯性。 **SalesOrderHeader** 資料表中的 **SalesPersonID** 資料行符合 **SalesPerson** 資料表的主索引鍵資料行。 **SalesOrderHeader** 資料表中的 **SalesPersonID** 資料行是 **SalesPerson** 資料表的外部索引鍵。 透過建立這個外部索引鍵關聯性，如果 **SalesPersonID** 的值尚未存在於 **SalesPerson** 資料表中，就不能將其插入至 **SalesOrderHeader** 資料表。  
@@ -118,7 +118,7 @@ ms.locfileid: "67999441"
   
 -   具有 INSTEAD OF 觸發程序的資料表不能也具有指定串聯動作的 REFERENCES 子句。 不過，串聯式動作所處理之資料表上的 AFTER 觸發程序，可在另一個資料表或檢視表上執行 INSERT、UPDATE 或 DELETE 陳述式，以引發該物件所定義的 INSTEAD OF 觸發程序。  
   
-##  <a name="Tasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="Tasks"></a> 相關工作  
  下表列出與主索引鍵和外部索引鍵條件約束相關聯的一般工作。  
   
 |Task|主題|  

@@ -11,10 +11,10 @@ ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a9c07061634c39d6a5d1b7a2a0b698b27d90c68c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294531"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC 設計工具主控台簡介

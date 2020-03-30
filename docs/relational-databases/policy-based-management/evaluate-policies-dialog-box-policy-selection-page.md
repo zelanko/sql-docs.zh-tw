@@ -14,10 +14,10 @@ ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 84e9e7577f74aa3ea43d99bc6b3c12cd5637c9ec
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558213"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>評估原則對話方塊，原則選取頁面

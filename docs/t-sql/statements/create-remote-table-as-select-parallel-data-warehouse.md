@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401698"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (平行處理資料倉儲)
@@ -132,7 +132,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
  連線設定可讓您在連線到 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，使用 SSL 來保護使用者名稱和密碼資料，但實際資料則會以未加密的純文字形式傳送。 當發生這種情況時，惡意使用者可能會攔截 CREATE REMOTE TABLE 陳述式文字，其中包含用來登入 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者名稱和密碼。 為了避免這個風險，請在對 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的連線上使用資料加密。  
   
-##  <a name="Examples"></a> 範例  
+##  <a name="examples"></a><a name="Examples"></a> 範例  
   
 ### <a name="a-creating-a-remote-table"></a>A. 建立遠端資料表  
  此範例會在資料庫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和結構描述 `MyOrdersTable` 上建立一個名為 `OrderReporting` 的 `Orders` SMP 遠端資料表。 `OrderReporting` 資料庫位於名為 `SQLA` 並在預設連接埠 1433 上進行接聽的伺服器上。 對該伺服器的連線會使用使用者 `David` 的認證，其密碼為 `e4n8@3`。  

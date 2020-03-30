@@ -13,10 +13,10 @@ ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8b6a17bf6732221787bda5e34d42b01046b3f828
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055583"
 ---
 # <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>將收集項加入收集組 (Transact-SQL)

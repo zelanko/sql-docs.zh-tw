@@ -11,10 +11,10 @@ ms.assetid: 2e0f6d3f-0536-46d9-8630-835e199515bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 13a86cc2d5cdd02ded0cece1e08ed8d95f802ed4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298763"
 ---
 # <a name="high-availability-support"></a>高可用性支援

@@ -16,10 +16,10 @@ ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bb4a661110d91f73f45152b84dcfb63f8763d018
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75235451"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>結果頁面 (Always On 可用性群組精靈)
@@ -27,7 +27,7 @@ ms.locfileid: "75235451"
 
   本說明主題描述 **[結果]** 頁面的選項。 本主題適用於 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用此頁面可以檢視精靈的結果。  
   
-##  <a name="PageOptions"></a> 結果頁面選項  
+##  <a name="results-page-options"></a><a name="PageOptions"></a> 結果頁面選項  
  **[摘要]** 方格包含下列資料行：  
   
  **名稱**  
@@ -41,7 +41,7 @@ ms.locfileid: "75235451"
 |**錯誤**|表示驗證步驟失敗。 按一下連結可檢視錯誤訊息。|  
 |「成功」 |表示驗證步驟已順利完成。|  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

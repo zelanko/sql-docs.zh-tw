@@ -21,10 +21,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 224b7023df4187702c14b41f17caad7c0b53b911
-ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "78256858"
 ---
 # <a name="display-the-estimated-execution-plan"></a>顯示估計的執行計畫

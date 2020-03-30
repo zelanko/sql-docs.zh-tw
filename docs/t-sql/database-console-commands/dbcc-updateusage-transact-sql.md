@@ -34,10 +34,10 @@ ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7d983f2e7e370ec9fe385e6d46602c4703ca6d1e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68040459"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)

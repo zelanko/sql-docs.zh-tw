@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 6dc18d925e014ccd17303e4e3d2698ad72b3758d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287538"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>設定訂閱的逾期期限
@@ -39,9 +39,9 @@ ms.locfileid: "76287538"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   訂閱過期期間也稱為 *「發行集保留期限」* 。 清除合併式複寫的中繼資料取決於此設定：  
   
@@ -51,7 +51,7 @@ ms.locfileid: "76287538"
   
     -   您可以將訂閱指定為永不過期，不過強烈建議您不要使用此值，因為如此便無法清除中繼資料了。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  您可以在 [發行集屬性 - **發行集>]** **對話方塊的 [一般]\<** 頁面上，設定訂閱的逾期期限。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>若要設定訂閱的過期期間  
@@ -60,7 +60,7 @@ ms.locfileid: "76287538"
   
 2.  如果應過期，則指定過期期間。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用複寫預存程序，在建立發行集時設定這個值，或是在稍後修改這個值。  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>設定快照式或交易式發行集之訂閱的逾期期限  

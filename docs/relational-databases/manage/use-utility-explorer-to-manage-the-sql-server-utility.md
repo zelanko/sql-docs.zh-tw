@@ -11,10 +11,10 @@ ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d904d16bb54236ee61dd463ca3c7bf829a46c3e3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115315"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>使用公用程式總管來管理 SQL Server 公用程式

@@ -17,10 +17,10 @@ ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 03911ae4b3addb7a3626b6c9bd0a2c195b719cef
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75321560"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>定義和修改合併發行項之間的聯結篩選
@@ -41,19 +41,19 @@ ms.locfileid: "75321560"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   若要建立聯結篩選，發行集至少必須包含兩個相關的資料表。 聯結篩選會擴充資料列篩選；因此您必須先定義一個資料表上的資料列篩選，然後才可利用聯結在另一個資料表上擴充篩選。 定義好一個聯結篩選後，如果發行集包含其他相關資料表，您可以用另一個聯結篩選擴充這個聯結篩選。  
   
 -   如果您在初始化發行集的訂閱後，新增、修改或刪除聯結篩選，則必須在進行變更後產生新的快照集並重新初始化所有訂閱。 如需屬性變更需求的詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
-###  <a name="Recommendations"></a> 建議  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   可以為一組資料表手動建立聯結篩選，或者根據資料表中定義的外部索引鍵與主索引鍵之間的關聯性自動產生篩選。 如需自動產生一組聯結篩選的詳細資訊，請參閱[在合併發行項之間自動產生一組聯結篩選 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  您可以在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - **發行集>]** **對話方塊的 [篩選資料列]\<** 頁面上，定義、修改及刪除聯結篩選。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-define-a-join-filter"></a>若要定義聯結篩選  
@@ -103,7 +103,7 @@ ms.locfileid: "75321560"
   
 1.  在 [新增發行集精靈] 的 [篩選資料表的資料列]  頁面上，或是在 [發行集屬性 - **發行集>]** **的 [篩選資料列]\<** 頁面上，從 [已篩選的資料表]  窗格中選取一個篩選，然後按一下 [刪除]  。 如果您刪除的聯結篩選本身已由其他聯結擴充，也會一併刪除這些聯結。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  這些程序顯示父發行項上的參數化篩選，其中包含此發行項與相關子發行項之間的聯結篩選。 您可以使用複寫預存程序來以程式設計的方式定義及修改聯結篩選。  
   
 #### <a name="to-define-a-join-filter-to-extend-an-article-filter-to-related-articles-in-a-merge-publication"></a>定義聯結篩選，將發行項擴充到合併式發行集中的相關發行項  
@@ -127,7 +127,7 @@ ms.locfileid: "75321560"
     > [!CAUTION]  
     >  只有當保證唯一性的父發行項基礎資料表中聯結資料行上有條件約束時，才能將 `@join_unique_key` 設為 **1**。 如果將 `@join_unique_key` 錯誤地設定為 **1**，可能會發生資料無法聚合。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 範例 (Transact-SQL)  
  這個範例會針對合併式發行集定義發行項，其中會針對 `SalesOrderDetail` 資料表篩選 `SalesOrderHeader` 資料表發行項 (前者資料表本身會使用靜態資料列篩選來進行篩選)。 如需詳細資訊，請參閱 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_1.sql)]  

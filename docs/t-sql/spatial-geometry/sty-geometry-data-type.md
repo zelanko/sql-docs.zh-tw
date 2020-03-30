@@ -18,10 +18,10 @@ ms.assetid: f72e0eaa-7d1d-4052-88fd-a172d8cb0d71
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 05f4ddd6366fbb09b4c5f0c9dd186f415fdc16ea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68066138"
 ---
 # <a name="sty-geometry-data-type"></a>STY (geometry 資料類型)

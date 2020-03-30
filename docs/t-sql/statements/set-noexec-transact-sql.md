@@ -23,10 +23,10 @@ ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7c74a19dc498e3551b1e8bdc2018c10392e803f6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68034937"
 ---
 # <a name="set-noexec-transact-sql"></a>SET NOEXEC (Transact-SQL)

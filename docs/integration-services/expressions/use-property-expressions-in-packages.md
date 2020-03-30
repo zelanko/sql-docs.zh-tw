@@ -20,10 +20,10 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: be976ec58ae275f37262f136a2896ffb6a9c7677
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71287877"
 ---
 # <a name="use-property-expressions-in-packages"></a>在封裝中使用屬性運算式
@@ -129,7 +129,7 @@ ms.locfileid: "71287877"
   
  如果封裝名稱為 EmailRowCountPP，於 2005 年 3 月 4 日執行且執行持續時間為 9 秒，則運算式會評估為下列字串。  
   
- PExpression-->Package:(EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds。  
+ PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds。  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>電子郵件訊息之訊息的屬性運算式  
  下列屬性運算式可用以設定傳送郵件工作的 MessageSource 屬性。 該運算式會使用字串常值、使用者定義變數和串連 (+) 運算子的組合。 使用者定義變數的名稱是 `nasdaqrawrows`、 `nyserawrows`與 `amexrawrows`。 字串 "\n" 表示換行字元。  
@@ -140,11 +140,11 @@ ms.locfileid: "71287877"
   
  處理的資料列：  
   
- NASDAQ:7058  
+ NASDAQ: 7058  
   
- NYSE:3528  
+ NYSE: 3528  
   
- AMEX:1102  
+ AMEX: 1102  
   
 ### <a name="property-expression-for-the-executable-property-of-an-execute-process-task"></a>執行處理工作之 Executable 屬性的屬性運算式  
  下列屬性運算式可用以設定「執行處理」工作的 Executable 屬性。 該運算式會使用字串常值、運算子和函數的組合。 該運算式會使用 DATEPART 和 GETDATE 函數，以及條件運算子。  
@@ -159,7 +159,7 @@ ms.locfileid: "71287877"
  `@[User::myfilenamefull]`  
   
 > [!NOTE]  
->  連接管理員的屬性運算式只可使用 [屬性] 視窗進行存取。 若要檢視連線管理員的屬性，您必須在 [屬性] 視窗開啟時，在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 的 [連線管理員]  區域中選取連線管理員，或以滑鼠右鍵按一下連線管理員並選取 [屬性]  。  
+>  連接管理員的屬性運算式只可使用 [屬性] 視窗進行存取。 若要檢視連線管理員的屬性，您必須在 [屬性] 視窗開啟時，在 [ **設計師] 的 [連線管理員]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 區域中選取連線管理員，或以滑鼠右鍵按一下連線管理員並選取 [屬性]  。  
   
 ### <a name="property-expression-for-the-configstring-property-of-a-text-file-log-provider"></a>文字檔記錄提供者之 ConfigString 屬性的屬性運算式  
  下列屬性運算式可用以設定文字檔記錄提供者的 ConfigString 屬性。 該運算式會使用 `varConfigString`單一使用者定義變數，該變數包含要使用之檔案連線管理員的名稱。 檔案連接管理員會指定要在其中寫入記錄項目之文字檔的路徑。  
@@ -167,7 +167,7 @@ ms.locfileid: "71287877"
  `@[User::varConfigString]`  
   
 > [!NOTE]  
->  記錄提供者的屬性運算式只可使用 [屬性] 視窗進行存取。 若要檢視記錄提供者的屬性，您必須在 [屬性] 視窗開啟時，在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 的封裝總管  索引標籤上選取記錄提供者，或以滑鼠右鍵按一下封裝總管中的記錄提供者，並按一下 [屬性]  。  
+>  記錄提供者的屬性運算式只可使用 [屬性] 視窗進行存取。 若要檢視記錄提供者的屬性，您必須在 [屬性] 視窗開啟時，在 [ **設計師] 的封裝總管**[!INCLUDE[ssIS](../../includes/ssis-md.md)]索引標籤上選取記錄提供者，或以滑鼠右鍵按一下封裝總管中的記錄提供者，並按一下 [屬性]  。  
   
 ## <a name="external-resources"></a>外部資源  
   

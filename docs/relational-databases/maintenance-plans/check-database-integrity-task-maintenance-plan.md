@@ -16,10 +16,10 @@ ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 68bdea5d7c63f8d4781dadd8250a14f258c0866f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68083922"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>檢查資料庫完整性工作 (維護計畫)
@@ -88,7 +88,7 @@ ms.locfileid: "68083922"
  使用 Windows 驗證連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。  
   
  **使用特定的使用者名稱和密碼**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。 無法使用此選項。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連線到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 無法使用此選項。  
   
  **使用者名稱**  
  提供驗證時要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 無法使用此選項。  

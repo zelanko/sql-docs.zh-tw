@@ -18,10 +18,10 @@ ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 34f63ee6609c93dd9435930bfe347a0fa610ce33
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68120764"
 ---
 # <a name="stunion-geography-data-type"></a>STUnion (geography 資料類型)

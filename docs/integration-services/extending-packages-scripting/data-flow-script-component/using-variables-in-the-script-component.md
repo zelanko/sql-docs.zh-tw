@@ -13,10 +13,10 @@ ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 990797242acb57f36530315c416011325cce6358
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286421"
 ---
 # <a name="using-variables-in-the-script-component"></a>在指令碼元件中使用變數

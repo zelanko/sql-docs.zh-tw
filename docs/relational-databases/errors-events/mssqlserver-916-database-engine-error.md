@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 73eb6581-99fe-49a5-9b42-e239d7ffe27f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f93fb181547e10ef2bca3154e44515e3959683b2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8dc9f9575f9e385d177d7b37f3753facfb905d23
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68037573"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80271464"
 ---
 # <a name="mssqlserver_916"></a>MSSQLSERVER_916
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,22 +47,27 @@ ms.locfileid: "68037573"
 您可以透過下列其中一種方式連接資料庫：  
   
 -   將具名資料庫的存取權授與特定的登入。 下列範例會將 `Adventure-Works\Larry` 資料庫的存取權授與 `msdb` 登入。  
-  
-    USE msdb ;  
-  
-    GO  
-  
-    GRANT CONNECT TO [Adventure-Works\Larry] ;  
+
+    ```sql
+    USE msdb ;
+    
+    GO
+    
+    GRANT CONNECT TO [Adventure-Works\Larry] ;
+    ```
   
 -   將錯誤訊息中指定之資料庫的 CONNECT 權限授與 guest 使用者。 下列範例會將 `CONNECT` 資料庫的 `msdb` 權限授與 `guest` 使用者。  
-  
-    USE msdb ;  
-  
-    GO  
-  
-    GRANT CONNECT TO guest ;  
+
+    ```sql
+    USE msdb ;
+    
+    GO
+    
+    GRANT CONNECT TO guest ;
+    ```
   
 -   啟用已經驗證使用者之資料庫的 TRUSTWORTHY 屬性。  
-  
-    `ALTER DATABASE AdventureWorks SET TRUSTWORTHY ON;`  
-  
+
+    ```sql
+    ALTER DATABASE AdventureWorks SET TRUSTWORTHY ON;
+    ```

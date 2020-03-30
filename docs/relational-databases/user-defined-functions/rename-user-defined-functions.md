@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 274c79dabe90098094423b2994edb93603e649e1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68123566"
 ---
 # <a name="rename-user-defined-functions"></a>重新命名使用者定義函數
@@ -36,9 +36,9 @@ ms.locfileid: "68123566"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   函數名稱必須符合 [識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
@@ -46,12 +46,12 @@ ms.locfileid: "68123566"
   
 -   變更使用者定義函數的名稱或定義後，若未更新物件來反映對此函數所做的變更，則可能導致依存物件執行失敗。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  若要卸除函數，需要函數所屬結構描述的 ALTER 權限，或函數的 CONTROL 權限。 若要重新建立函數，需要資料庫的 CREATE FUNCTION 權限，以及此函數建立所在之結構描述的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-rename-user-defined-functions"></a>若要重新命名使用者定義函數  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68123566"
   
 5.  輸入函式的新名稱。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要重新命名使用者定義函數**  
   
  您無法使用 Transact-SQL 陳述式來執行這項工作。 若要使用 Transact-SQL 來重新命名使用者定義函數，您必須先刪除現有的函數，然後使用新的名稱來重新建立函數。 確定使用函式舊名稱的所有程式碼和應用程式現在都使用新名稱。  

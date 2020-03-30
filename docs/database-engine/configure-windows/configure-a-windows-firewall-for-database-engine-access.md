@@ -15,10 +15,10 @@ ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d3ec56a8e4961985a6c809983f671edf0234491d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68012891"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>設定用於 Database Engine 存取的 Windows 防火牆
@@ -55,10 +55,10 @@ ms.locfileid: "68012891"
   
 ## <a name="before-you-begin"></a>開始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  在防火牆中開啟通訊埠可能會讓您的伺服器面臨惡意攻擊的威脅。 請先確定您已了解防火牆系統，然後再開啟通訊埠。 如需相關資訊，請參閱 [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
  適用於 Windows Vista、Windows 7 和 Windows Server 2008  
   
  下列程序使用「具有進階安全性的 Windows 防火牆」Microsoft Management Console (MMC) 嵌入式管理單元設定 Windows 防火牆。 「具有進階安全性的 Windows 防火牆」只會設定目前的設定檔。 如需 [具有進階安全性的 Windows 防火牆] 的詳細資訊，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  

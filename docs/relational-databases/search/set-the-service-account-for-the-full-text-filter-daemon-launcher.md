@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: eed8020872b3d2a3babc0581054bef0dbed64a4d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055943"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>設定全文檢索篩選背景程式啟動器的服務帳戶
@@ -31,7 +31,7 @@ SQL Server 全文檢索搜尋使用 SQL 全文檢索篩選背景程式啟動器�
   
 SQL 全文檢索篩選背景程式啟動器服務是與特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體相關聯的執行個體感知服務。 SQL 全文檢索篩選背景程式啟動器服務會將服務帳戶資訊傳播給所啟動的每個篩選背景程式主機處理序。  
 
-##  <a name="setting"></a> 設定服務帳戶  
+##  <a name="set-the-service-account"></a><a name="setting"></a> 設定服務帳戶  
   
 1.  在 [開始]  功能表上，指向 [所有程式]  ，展開 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，然後按一下 [SQL Server 2016 組態管理員]  。  
   
@@ -43,7 +43,7 @@ SQL 全文檢索篩選背景程式啟動器服務是與特定 [!INCLUDE[ssNoVers
   
 ![SQL 全文檢索篩選背景程式啟動器處理序屬性](../../relational-databases/search/media/sql-full-text-filter-daemon-launch-process-properties.png)
   
-##  <a name="error"></a> 針對 SQL 全文檢索篩選背景程式啟動器服務未啟動進行疑難排解  
+##  <a name="troubleshoot-the-sql-full-text-filter-daemon-launcher-service-if-it-doesnt-start"></a><a name="error"></a> 針對 SQL 全文檢索篩選背景程式啟動器服務未啟動進行疑難排解  
  若未啟動 SQL 全文檢索篩選背景程式啟動器服務，請檢閱下列可能的原因：  
   
 ### <a name="permissions-issues"></a>權限問題

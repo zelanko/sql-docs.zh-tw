@@ -18,10 +18,10 @@ ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 0713ba46d6d99a8ed325d37d11396b46618f92ab
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68101763"
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce (geography 資料類型)

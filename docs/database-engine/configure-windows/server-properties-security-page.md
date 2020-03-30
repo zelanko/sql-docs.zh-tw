@@ -13,10 +13,10 @@ ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 11a8e63d75f4194727344009dfac6f2fed77edaa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68031434"
 ---
 # <a name="server-properties---security-page"></a>伺服器屬性 - 安全性頁面

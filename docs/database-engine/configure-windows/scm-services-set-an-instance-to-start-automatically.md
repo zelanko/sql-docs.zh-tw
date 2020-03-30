@@ -15,17 +15,17 @@ ms.assetid: aa2b6bde-e76d-4fea-a560-54a63745d9b1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fa56e918238d3f6b5309e923f899ce00b2ab5749
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70212414"
 ---
 # <a name="scm-services---set-an-instance-to-start-automatically"></a>SCM 服務 - 將執行個體設定為自動啟動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主題描述如何使用 SQL Server 組態管理員，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中設定 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體自動啟動。 在安裝期間， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通常會設定為自動啟動。 如果沒有這樣執行，您隨時都可以變更該設定。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
   
 #### <a name="to-set-an-instance-of-sql-server-to-start-automatically"></a>將 SQL Server 執行個體設定為自動啟動  
   

@@ -24,10 +24,10 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7a09cef6ce1e90fe9fce7b7bd4b025598a387c1f
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79112277"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 連接
@@ -125,14 +125,14 @@ ms.locfileid: "79112277"
   
  若要在您建立新的封裝時自動建立及設定連線管理員，您可以使用 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈]。 精靈也可以幫助您建立及設定使用連線管理員的來源和目的地。 如需詳細資訊，請參閱 [在 SQL Server 資料工具中建立封裝](../../integration-services/create-packages-in-sql-server-data-tools.md)。  
   
- 若要手動建立新的連線管理員，並將其加入至現有的封裝，請使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師之 [控制流程]  、[資料流程]  和 [事件處理常式]  索引標籤上所出現的 [連線管理員]  區域。 從 [連線管理員]  區域，您可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師所提供的對話方塊，來選擇要建立的連線管理員類型，然後再設定連線管理員的屬性。 如需詳細資訊，請參閱本主題稍後的「使用連線管理員區域」一節。  
+ 若要手動建立新的連線管理員，並將其加入至現有的封裝，請使用  **設計師之 [控制流程]** **、[資料流程]** **和 [事件處理常式]** **索引標籤上所出現的 [連線管理員]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 區域。 從 [連線管理員]  區域，您可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師所提供的對話方塊，來選擇要建立的連線管理員類型，然後再設定連線管理員的屬性。 如需詳細資訊，請參閱本主題稍後的「使用連線管理員區域」一節。  
   
  將連接管理員加入封裝之後，您就可以在工作、「Foreach 迴圈」容器、來源、轉換和目的地中使用它。 如需詳細資訊，請參閱 [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)、[Foreach 迴圈容器](../../integration-services/control-flow/foreach-loop-container.md)和[資料流程](../../integration-services/data-flow/data-flow.md)。  
   
 ### <a name="using-the-connection-managers-area"></a>使用連接管理員區域  
- 當 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [控制流程]  、[資料流程]  或 [事件處理常式]  索引標籤處於作用中時，您可以建立連線管理員。  
+ 當  **設計師的 [控制流程]** **、[資料流程]** **或 [事件處理常式]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 索引標籤處於作用中時，您可以建立連線管理員。  
   
- 下圖顯示 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師之 [控制流程]  索引標籤上的 [連線管理員]  區域。  
+ 下圖顯示  **設計師之 [控制流程]** **索引標籤上的 [連線管理員]** [!INCLUDE[ssIS](../../includes/ssis-md.md)] 區域。  
   
  ![具有套件的控制流程設計師螢幕擷取畫面](../../integration-services/connection-manager/media/samplecontrolflow.gif "具有套件的控制流程設計師螢幕擷取畫面")    
   
@@ -144,13 +144,13 @@ ms.locfileid: "79112277"
   兩個版本的提供者具有相同的識別碼。 若要指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行階段是否使用可用的 64 位元版本提供者，請設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案的 Run64BitRuntime 屬性。 如果 Run64BitRuntime 屬性設定為 **true**，執行階段會尋找並使用 64 位元提供者；如果 Run64BitRuntime 是 **false**，執行階段便會尋找並使用 32 位元提供者。 如需可在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案上設定之屬性的詳細資訊，請參閱 [Integration Services (SSIS) 和 Studio 環境](https://msdn.microsoft.com/library/ms140028.aspx)。   
 
 ## <a name="add-a-connection-manager"></a>新增連線管理員
-###  <a name="wizard"></a> 在建立套件時新增連線管理員  
+###  <a name="add-a-connection-manager-when-you-create-a-package"></a><a name="wizard"></a> 在建立套件時新增連線管理員  
   
 -   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈  
   
      除了建立及設定連接管理員之外，此精靈也會協助您建立及設定使用此連接管理員的來源和目的地。 如需詳細資訊，請參閱 [在 SQL Server 資料工具中建立封裝](../../integration-services/create-packages-in-sql-server-data-tools.md)。  
   
-###  <a name="package"></a> 將連線管理員新增至現有的套件  
+###  <a name="add-a-connection-manager-to-an-existing-package"></a><a name="package"></a> 將連線管理員新增至現有的套件  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "79112277"
   
 6.  若要儲存更新的封裝，請按一下 [檔案]  功能表上的 [儲存選取項目]  。  
   
-###  <a name="project"></a> 在專案層級新增連線管理員  
+###  <a name="add-a-connection-manager-at-the-project-level"></a><a name="project"></a> 在專案層級新增連線管理員  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -243,14 +243,14 @@ ms.locfileid: "79112277"
  **加入**  
  使用每個連接類型的編輯器，來指定連接屬性。  
    
-##  <a name="parameter"></a> 建立連線管理員屬性的參數  
+##  <a name="create-a-parameter-for-a-connection-manager-property"></a><a name="parameter"></a> 建立連線管理員屬性的參數  
   
 1.  在 [連線管理員]  區域中，以滑鼠右鍵按一下您要建立其參數的連線管理員，然後按一下 [參數化]  。  
   
 2.  在 [參數化]  對話方塊中設定參數設定。 如需詳細資訊，請參閱[參數化對話方塊](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)。  
 
 ## <a name="delete-a-connection-manager"></a>刪除連線管理員 
-###  <a name="DeletePackageLevel"></a> 從套件中刪除連線管理員  
+###  <a name="delete-a-connection-manager-from-a-package"></a><a name="DeletePackageLevel"></a> 從套件中刪除連線管理員  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -270,7 +270,7 @@ ms.locfileid: "79112277"
   
 5.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-###  <a name="DeleteProjectLevel"></a> 刪除共用的連線管理員 (專案層級的連線管理員)  
+###  <a name="delete-a-shared-connection-manager-project-level-connection-manager"></a><a name="DeleteProjectLevel"></a> 刪除共用的連線管理員 (專案層級的連線管理員)  
   
 1.  若要刪除專案層級的連線管理員，以滑鼠右鍵按一下方案總管  視窗之 [連線管理員]  節點底下的連線管理員，然後按一下 [刪除]  。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 會顯示下列警告訊息：  
   

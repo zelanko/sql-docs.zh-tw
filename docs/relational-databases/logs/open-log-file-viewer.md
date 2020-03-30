@@ -13,10 +13,10 @@ ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9e76c7eb85306f63e9be230c76159efbab25444a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68083978"
 ---
 # <a name="open-log-file-viewer"></a>開啟記錄檔檢視器
@@ -41,7 +41,7 @@ ms.locfileid: "68083978"
   
  您可以用許多方式來開啟記錄檔檢視器，端視想要檢視的資訊而定。  
   
-##  <a name="BeforeYouBegin"></a> 權限  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> 權限  
  若要存取線上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的記錄檔，需要 securityadmin 固定伺服器角色的成員資格。  
   
  若要存取離線 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的記錄檔，您必須具有 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空間以及儲存記錄檔之資料夾的讀取權限。 如需詳細資訊，請參閱 [檢視離線記錄檔](../../relational-databases/logs/view-offline-log-files.md)主題中的＜安全性＞一節。  

@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 3b950557c3c5c22968cffa4be0b4565ddedb293c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056523"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼
@@ -37,7 +37,7 @@ ms.locfileid: "74056523"
   
  本主題描述尋找可用屬性相關資訊的常用方法，尤其是有關 Microsoft 所定義的屬性。 如需有關協力廠商已定義屬性的詳細資訊，請參閱協力廠商文件集或連絡該廠商。  
   
-##  <a name="wellknown"></a> 尋找廣泛使用之已知 Microsoft 屬性的詳細資訊  
+##  <a name="finding-information-about-widely-used-well-known-microsoft-properties"></a><a name="wellknown"></a> 尋找廣泛使用之已知 Microsoft 屬性的詳細資訊  
  Microsoft 定義了數百個文件屬性可用於許多內容，但是每一種檔案格式只會使用其中一小部分可用屬性。 常用的 Windows 屬性包括少數泛型屬性。 下表將顯示已知泛型屬性的部分範例。 下表顯示了已知名稱、Windows 正式名稱 (根據 Microsoft 發行的屬性描述)、屬性集 GUID、屬性整數識別碼和簡短說明。  
   
 |已知名稱|Windows 正式名稱|屬性集 GUID|整數識別碼|描述|  
@@ -57,7 +57,7 @@ ms.locfileid: "74056523"
   
 -   軟體廠商定義的自訂、應用程式專用屬性。  
   
-##  <a name="filtdump"></a> 使用 FILTDUMP.EXE 尋找可用屬性的詳細資訊  
+##  <a name="finding-information-about-available-properties-by-using-filtdumpexe"></a><a name="filtdump"></a> 使用 FILTDUMP.EXE 尋找可用屬性的詳細資訊  
  若要了解已安裝之 IFilter 所找到和擷取的屬性，您可以安裝並執行 **filtdump.exe** 公用程式 (屬於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK 的一部分)。  
   
  您可以從命令提示字元執行 **filtdump.exe** ，並提供單一引數。 此引數是個別檔案的名稱，而該檔案具有已安裝 IFilter 的檔案類型。 此公用程式顯示文件中 IFilter 所找到之所有屬性的清單，還包含其屬性集 GUID、整數識別碼和其他資訊。  
@@ -68,7 +68,7 @@ ms.locfileid: "74056523"
   
 -   針對 32 位版本，請查看 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin`。  
   
-##  <a name="propdesc"></a> 從 Windows 屬性描述尋找搜尋屬性的值  
+##  <a name="finding-values-for-a-search-property-from-a-windows-property-description"></a><a name="propdesc"></a> 從 Windows 屬性描述尋找搜尋屬性的值  
  若為已知的 Windows 搜尋屬性 (Property)，您可以從屬性 (Property) 描述 ( **propertyDescription** ) 的 **formatID** 和**propID**屬性 (Attribute) 取得您需要的這項資訊。  
   
  下列範例將顯示一般 Microsoft 屬性描述的相關部分 (以 `System.Author` 屬性為例)。 `formatID` 屬性 (Attribute) 會指定屬性 (Property) 集 GUID `F29F85E0-4FF9-1068-AB91-08002B27B3D9`，而 `propID` 屬性 (Attribute) 會指定屬性 (Property) 整數識別碼 `4.` 。請注意， `name` 屬性 (Attribute) 會指定 Windows 正式屬性 (Property) 名稱 `System.Author` (這個範例省略了屬性描述中不相關的部分)。  
@@ -87,7 +87,7 @@ propID = 4
   
  如需 Windows 屬性的完整清單，請參閱同樣在 Windows Search 文件集中的 [Windows Properties](https://go.microsoft.com/fwlink/?LinkId=215013)Windows 屬性)。  
   
-##  <a name="examples"></a> 將屬性加入至搜尋屬性清單  
+##  <a name="adding-a-property-to-a-search-property-list"></a><a name="examples"></a> 將屬性加入至搜尋屬性清單  
  下列範例示範如何將屬性加入至搜尋屬性清單。 此範例會使用 [ALTER SEARCH PROPERTY LIST](../../t-sql/statements/alter-search-property-list-transact-sql.md) 陳述式將 `System.Author` 屬性加入名為 `PropertyList1`的搜尋屬性清單，並且為屬性提供使用者易記名稱 `Author`。  
   
 ```  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50a7df8f2c9479c957158e96f597655c72ac7b2c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909720"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>授與預存程序的權限
@@ -37,18 +37,18 @@ ms.locfileid: "72909720"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   您無法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 授與系統程序或系統函數的權限。 請改用 [GRANT 物件權限](../../t-sql/statements/grant-object-permissions-transact-sql.md) 。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  同意授權者 (或是指定了 AS 選項的主體) 必須具有指定了 GRANT OPTION 的權限本身，或是具有隱含目前正在授與權限的更高權限。 需要程序所屬結構描述的 ALTER 權限，或程序的 CONTROL 權限。 如需詳細資訊，請參閱 [GRANT 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)中授與預存程序的權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-grant-permissions-on-a-stored-procedure"></a>若要授與預存程序的權限  
   
@@ -70,7 +70,7 @@ ms.locfileid: "72909720"
 
  選取 **[授與]** 表示要將指定的權限提供給被授與者。 選取 **[可授與]** 則表示授與者也能夠將指定的權限授與給其他主體。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-grant-permissions-on-a-stored-procedure"></a>若要授與預存程序的權限  
   

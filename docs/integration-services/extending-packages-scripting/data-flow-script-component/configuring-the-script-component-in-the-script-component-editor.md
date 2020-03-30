@@ -18,10 +18,10 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 98333f81a1e7c50434936c2df958da21366c6e9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296983"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>在指令碼元件編輯器中設定指令碼元件
@@ -53,7 +53,7 @@ ms.locfileid: "71296983"
 ### <a name="inputs-columns-page-of-the-script-transformation-editor"></a>指令碼轉換編輯器的輸入資料行頁面  
  會為轉換和目的地，但不會為來源顯示 [指令碼轉換編輯器]  的 [輸入資料行]  頁面。 在本頁，您選取要提供給自訂指令碼使用的輸入資料行，並指定這些資料行的唯讀或讀寫存取權限。  
   
- 在將會根據此中繼資料產生的程式碼專案中，BufferWrapper 專案項目包含每個輸入的類別，而且這個類別包含每個選取的輸入資料行之具類型的存取子屬性。 例如，如果您從名為 **CustomerInput** 的輸入中選取整數 **CustomerID** 資料行與字串 **CustomerName** 資料行，BufferWrapper 專案項目將包含從 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 衍生的 **CustomerInput** 類別，而且 **CustomerInput** 類別將公開名為 **CustomerID** 的整數屬性，以及名為 **CustomerName** 的字串屬性。 這個慣例使得撰寫具有類型檢查的程式碼變得可能，如下所示：  
+ 在將會根據此中繼資料產生的程式碼專案中，BufferWrapper 專案項目包含每個輸入的類別，而且這個類別包含每個選取的輸入資料行之具類型的存取子屬性。 例如，如果您從名為 **CustomerInput** 的輸入中選取整數 **CustomerID** 資料行與字串 **CustomerName** 資料行，BufferWrapper 專案項目將包含從 **衍生的**CustomerInput<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 類別，而且 **CustomerInput** 類別將公開名為 **CustomerID** 的整數屬性，以及名為 **CustomerName** 的字串屬性。 這個慣例使得撰寫具有類型檢查的程式碼變得可能，如下所示：  
   
 ```vb  
 Dim currentCustomerID as Integer = CustomerInput.CustomerID  
@@ -71,7 +71,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
   
 -   當做為目的地使用時，指令碼元件支援一個輸入並且沒有輸出。  
   
- 在將會根據此中繼資料產生的程式碼專案中，BufferWrapper 專案項目包含每個輸入與輸出的類別。 例如，如果您建立名為 **CustomerOutput** 的輸出，BufferWrapper 專案項目將包含從 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 衍生的 **CustomerOutput** 類別，而且 **CustomerOutput** 類別將包含每個建立的輸出資料行之具類型的存取子屬性。  
+ 在將會根據此中繼資料產生的程式碼專案中，BufferWrapper 專案項目包含每個輸入與輸出的類別。 例如，如果您建立名為 **CustomerOutput** 的輸出，BufferWrapper 專案項目將包含從 **衍生的**CustomerOutput<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 類別，而且 **CustomerOutput** 類別將包含每個建立的輸出資料行之具類型的存取子屬性。  
   
  您只能在 [輸入及輸出]  頁面上設定輸出資料行。 您可以在 [輸入資料行]  頁面上，選取轉換和目的地的輸入資料行。 在 BufferWrapper 專案項目中為您建立的具類型之存取子屬性對於輸出資料行而言將是唯寫的。 輸入資料行的存取子屬性將是唯讀或是讀取/寫入，端視您為 [輸入資料行]  頁面上的每個資料行所選取的使用類型而定。  
   
@@ -121,7 +121,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>指令碼轉換編輯器的連接管理員頁面  
  在 [指令碼轉換編輯器]  的 [連線管理員]  頁面上，您可以新增和移除要在自訂指令碼中使用的連線管理員。 一般而言，您需要在建立來源或是目的地元件時，參考連接管理員。  
   
- 在將會根據此中繼資料產生的程式碼專案中，**ComponentWrapper** 專案項目包含 **Connections** 集合類別，這個類別對於每個選取的連線管理員，都有具類型的存取子屬性。 每個具類型的存取子屬性都有做為連接管理員的相同名稱，並且會傳回連接管理員參考做為 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> 的執行個體。 例如，如果您已在編輯器的 [連線管理員]  頁面中新增名為 `MyADONETConnection` 的連線管理員，就可以使用下列程式碼，取得指令碼中連線管理員的參考：  
+ 在將會根據此中繼資料產生的程式碼專案中，**ComponentWrapper** 專案項目包含 **Connections** 集合類別，這個類別對於每個選取的連線管理員，都有具類型的存取子屬性。 每個具類型的存取子屬性都有做為連接管理員的相同名稱，並且會傳回連接管理員參考做為 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> 的執行個體。 例如，如果您已在編輯器的 [連線管理員]`MyADONETConnection`**頁面中新增名為** 的連線管理員，就可以使用下列程式碼，取得指令碼中連線管理員的參考：  
   
 ```vb  
 Dim myADONETConnectionManager As IDTSConnectionManager100 = _  

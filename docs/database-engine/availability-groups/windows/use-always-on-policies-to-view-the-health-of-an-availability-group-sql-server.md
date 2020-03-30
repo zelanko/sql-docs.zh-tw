@@ -13,10 +13,10 @@ ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 13f43e5f66ca7700e9dd4732e9cf45ee1921548d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244738"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>使用 AlwaysOn 原則檢視可用性群組的健全狀況 (SQL Server)
@@ -29,10 +29,10 @@ ms.locfileid: "75244738"
   
   
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要 CONNECT、VIEW SERVER STATE 和 VIEW ANY DEFINITION 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 AlwaysOn 儀表板  
+##  <a name="using-the-always-on-dashboard"></a><a name="SSMSProcedure"></a> 使用 AlwaysOn 儀表板  
  **開啟 AlwaysOn 儀表板**  
   
 1.  在 [物件總管] 中，連接到裝載其中一個可用性複本的伺服器執行個體。 若要檢視可用性群組中所有可用性複本的相關資訊，請用於裝載主要複本的伺服器執行個體。  
@@ -47,7 +47,7 @@ ms.locfileid: "75244738"
   
  如需如何使用 AlwaysOn 儀表板的詳細資訊，請參閱[使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](~/database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)。  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
  **Use Always On policies to view the health of an availability group**  
   
 1.  將目錄切換到 (**cd**) 裝載其中一個可用性複本的伺服器執行個體。 若要檢視可用性群組中所有可用性複本的相關資訊，請用於裝載主要複本的伺服器執行個體。  
@@ -112,7 +112,7 @@ ms.locfileid: "75244738"
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
-##  <a name="RelatedContent"></a> 相關內容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相關內容  
  **SQL Server AlwaysOn 團隊部落格 - 使用 PowerShell 監視 AlwaysOn 健全狀況：**  
   
 -   [第 1 部：基本指令程式概觀](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/)  

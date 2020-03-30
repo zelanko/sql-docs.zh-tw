@@ -37,13 +37,13 @@ catalog.set_environment_variable_value [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>引數  
  [ @folder_name = ] *folder_name*  
- 包含環境之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
+ 包含環境之資料夾的名稱。 *folder_name* 是 **nvarchar(128)** 。  
   
  [ @environment_name = ] *environment_name*  
- 環境的名稱。 *environment_name* 是 **nvarchar(128)**。  
+ 環境的名稱。 *environment_name* 是 **nvarchar(128)** 。  
   
  [ @variable _name = ] *variable _name*  
- 環境變數的名稱。 *variable _name* 是 **nvarchar(128)**。  
+ 環境變數的名稱。 *variable _name* 是 **nvarchar(128)** 。  
   
  [ @value = ] *value*  
  環境變數的值。 *value* 是 **sql_variant**。  

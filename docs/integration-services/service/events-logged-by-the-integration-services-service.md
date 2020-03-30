@@ -15,10 +15,10 @@ ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8b2f033557c566050dffbd82bc64df84feabb7b6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296923"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services 服務所記錄的事件
@@ -61,7 +61,7 @@ ms.locfileid: "71296923"
 ## <a name="view-events"></a>檢視事件
   目前有兩個工具可讓您用來檢視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的事件：  
   
--   **中的** [記錄檔檢視器] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]對話方塊。 **[記錄檔檢視器]** 對話方塊包括匯出、篩選和搜尋記錄檔的選項。 如需 [記錄檔檢視器][**中選項的詳細資訊，請參閱**記錄檔檢視器 F1 說明](../../relational-databases/logs/log-file-viewer-f1-help.md)。  
+-   **中的** [記錄檔檢視器] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]對話方塊。 **[記錄檔檢視器]** 對話方塊包括匯出、篩選和搜尋記錄檔的選項。 如需 [記錄檔檢視器]  中選項的詳細資訊，請參閱[記錄檔檢視器 F1 說明](../../relational-databases/logs/log-file-viewer-f1-help.md)。  
   
 -   Windows 事件檢視器。  
   

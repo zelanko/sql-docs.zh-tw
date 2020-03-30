@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: a3c8b1fbe01bf97eeba11d57ae2d7ee9095c3964
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056337"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>使用格式檔案將資料表資料行對應至資料檔欄位 (SQL Server)
@@ -30,12 +30,12 @@ ms.locfileid: "74056337"
 |[範例測試條件](#etc)<br />&emsp;&#9679;&emsp;[範例資料表](#sample_table)<br />&emsp;&#9679;&emsp;[範例資料檔案](#sample_data_file)<br />[建立格式檔案](#create_format_file)<br />&emsp;&#9679;&emsp;[建立非 XML 格式檔案](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[修改非 XML 格式檔案](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[建立 XML 格式檔案](#xml_format_file)<br />&emsp;&#9679;&emsp;[修改 XML 格式檔案](#modify_xml_format_file)<br />[使用格式檔案匯入資料，將資料表資料行對應至資料檔案欄位](#import_data)<br />&emsp;&#9679;&emsp;[使用 BCP 和非 XML 格式檔案](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[使用 BCP 和 XML 格式檔案](#bcp_xml)<br />&emsp;&#9679;&emsp;[使用 BULK INSERT 和非 XML 格式檔案](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[使用 BULK INSERT 和 XML 格式檔案](#bulk_xml)<br />&emsp;&#9679;&emsp;[使用 OPENROWSET(BULK...) 和非 XML 格式檔案](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[使用 OPENROWSET(BULK...) 和 XML 格式檔案](#openrowset_xml)|
 
 > [!NOTE]  
->  您可以透過下列項目，使用非 XML 或 XML 格式檔案，將資料檔案大量匯入至資料表：[bcp 公用程式](../../tools/bcp-utility.md)命令、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 陳述式或 INSERT ...SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 陳述式。 如需詳細資訊，請參閱[使用格式檔案大量匯入資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)。  
+>  您可以透過下列項目，使用非 XML 或 XML 格式檔案，將資料檔案大量匯入至資料表： [bcp 公用程式](../../tools/bcp-utility.md) 命令、 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 陳述式或 INSERT ...SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 陳述式。 如需詳細資訊，請參閱[使用格式檔案大量匯入資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)。  
 
-## 範例測試條件<a name="etc"></a>  
+## <a name="example-test-conditions"></a>範例測試條件<a name="etc"></a>  
 本主題中的修改格式檔案範例是以下面定義的資料表和資料檔案為基礎。
 
-### 範例資料表<a name="sample_table"></a>
+### <a name="sample-table"></a>範例資料表<a name="sample_table"></a>
 下列指令碼會建立測試資料庫和名為 `myRemap`的資料表。  在 Microsoft SQL Server Management Studio (SSMS) 中執行下列 Transact-SQL：
 ```sql
 CREATE DATABASE TestDatabase;
@@ -51,7 +51,7 @@ CREATE TABLE myRemap
    );
 ```
 
-### 範例資料檔案<a name="sample_data_file"></a>
+### <a name="sample-data-file"></a>範例資料檔案<a name="sample_data_file"></a>
 下面的資料會依照 `FirstName` 資料表所示，以相反順序顯示 `LastName` 和 `myRemap`。  使用 [記事本] 建立空白檔案 `D:\BCP\myRemap.bcp` ，並插入下列資料：
 ```
 1,Grosse,Anthony,M
@@ -59,7 +59,7 @@ CREATE TABLE myRemap
 3,Rosenhain,Stella,F
 ```
 
-## 建立格式檔案<a name="create_format_file"></a>
+## <a name="creating-the-format-files"></a>建立格式檔案<a name="create_format_file"></a>
 若要從 `myRemap.bcp` 大量匯入資料到 `myRemap` 資料表中，格式檔案必須執行下列工作：
 * 將第一個資料欄位對應到第一個資料行 `PersonID`。
 * 將第二個資料欄位對應到第三個資料行 `LastName`。
@@ -68,12 +68,12 @@ CREATE TABLE myRemap
 
 建立格式檔案的最簡單方法是使用 [bcp 公用程式](../../tools/bcp-utility.md)。  首先，從現有的資料表建立基底格式檔案。  其次，修改基底格式檔案以反映實際的資料檔案。
 
-### 建立非 XML 格式檔案<a name="nonxml_format_file"></a>
+### <a name="creating-a-non-xml-format-file"></a>建立非 XML 格式檔案<a name="nonxml_format_file"></a>
 如需詳細資訊，請參閱 [非 XML 格式檔案 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。 下列命令將使用 [bcp 公用程式](../../tools/bcp-utility.md) ，根據 `myRemap.fmt`的結構描述產生非 XML 格式檔案 `myRemap`。  另外還會使用限定詞 `c` 來指定字元資料，使用 `t,` 來指定逗號作為欄位結束字元，並使用 `T` 來指定使用整合式安全性的信任連接。  請在命令提示字元之下，輸入下列命令：
 ```
 bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 ```
-### 修改非 XML 格式檔案 <a name="modify_nonxml_format_file"></a>
+### <a name="modifying-the-non-xml-format-file"></a>修改非 XML 格式檔案 <a name="modify_nonxml_format_file"></a>
 請參閱 [非 XML 格式檔案的結構](../../relational-databases/import-export/non-xml-format-files-sql-server.md#Structure) 以了解此術語。  在 [記事本] 中開啟 `D:\BCP\myRemap.fmt` 並執行下列修改：
 1.  重新排列格式檔案資料列的順序，讓資料列的順序與 `myRemap.bcp`中的資料順序相同。
 2.  確定主機檔案欄位的順序值是連續的。
@@ -106,12 +106,12 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 * `myRemap.bcp` 中的第三個資料欄位會對應到第二個資料行 `myRemap.. FirstName`
 * `myRemap.bcp` 中的第四個資料欄位會對應到第四個資料行 `myRemap.. Gender`
 
-### 建立 XML 格式檔案 <a name="xml_format_file"></a>  
+### <a name="creating-an-xml-format-file"></a>建立 XML 格式檔案 <a name="xml_format_file"></a>  
 如需詳細資訊，請參閱 [XML 格式檔案 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) 。  下列命令將使用 [bcp 公用程式](../../tools/bcp-utility.md) ，根據 `myRemap.xml`的結構描述建立 XML 格式檔案 `myRemap`。  另外還會使用限定詞 `c` 來指定字元資料，使用 `t,` 來指定逗號作為欄位結束字元，並使用 `T` 來指定使用整合式安全性的信任連接。  必須使用 `x` 限定詞來產生 XML 格式檔案。  請在命令提示字元之下，輸入下列命令：
 ```
 bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 ```
-### 修改 XML 格式檔案 <a name="modify_xml_format_file"></a>
+### <a name="modifying-the-xml-format-file"></a>修改 XML 格式檔案 <a name="modify_xml_format_file"></a>
 請參閱 [XML 格式檔案的結構描述語法](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) 以了解此術語。  在 [記事本] 中開啟 `D:\BCP\myRemap.xml` 並執行下列修改：
 1. 在格式檔案中宣告 \<FIELD> 元素的順序會是這些欄位出現在資料檔案中的順序，因此請將識別碼屬性 2 和 3 的 \<FIELD> 元素順序反轉。
 2. 確定 \<FIELD> 識別碼屬性值是連續的。
@@ -161,22 +161,22 @@ bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 * 對應到 COLUMN 4 的 FIELD 4 會對應到第四個資料表資料行 `myRemap.. Gender`
 
 
-## 使用格式檔案匯入資料，將資料表資料行對應至資料檔案欄位<a name="import_data"></a>
+## <a name="importing-data-with-a-format-file-to-map-table-columns-to-data-file-field"></a>使用格式檔案匯入資料，將資料表資料行對應至資料檔案欄位<a name="import_data"></a>
 下列範例會使用上面建立的資料庫、資料檔案和格式檔案。
 
-### 使用 [bcp](../../tools/bcp-utility.md) 和 [非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bcp_nonxml"></a>
+### <a name="using-bcp-and-non-xml-format-file"></a>使用 [bcp](../../tools/bcp-utility.md) 和 [非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bcp_nonxml"></a>
 請在命令提示字元之下，輸入下列命令：
 ```
 bcp TestDatabase.dbo.myRemap IN D:\BCP\myRemap.bcp -f D:\BCP\myRemap.fmt -T
 ```
 
-### 使用 [bcp](../../tools/bcp-utility.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bcp_xml"></a>
+### <a name="using-bcp-and-xml-format-file"></a>使用 [bcp](../../tools/bcp-utility.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bcp_xml"></a>
 請在命令提示字元之下，輸入下列命令：
 ```
 bcp TestDatabase.dbo.myRemap IN D:\BCP\myRemap.bcp -f D:\BCP\myRemap.xml -T
 ```
 
-### 使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a>
+### <a name="using-bulk-insert-and-non-xml-format-file"></a>使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a>
 在 Microsoft SQL Server Management Studio (SSMS) 中執行下列 Transact-SQL：
 ```sql
 USE TestDatabase;  
@@ -192,7 +192,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myRemap;
 ```
 
-### 使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bulk_xml"></a>
+### <a name="using-bulk-insert-and-xml-format-file"></a>使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bulk_xml"></a>
 在 Microsoft SQL Server Management Studio (SSMS) 中執行下列 Transact-SQL：
 ```sql
 USE TestDatabase;  
@@ -208,7 +208,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myRemap;
 ```
 
-### 使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和 [非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>    
+### <a name="using-openrowsetbulk-and-non-xml-format-file"></a>使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和 [非 XML 格式檔案](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>    
 在 Microsoft SQL Server Management Studio (SSMS) 中執行下列 Transact-SQL：
 ```sql
 USE TestDatabase;
@@ -227,7 +227,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myRemap;
 ```
 
-### 使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="openrowset_xml"></a>
+### <a name="using-openrowsetbulk-and-xml-format-file"></a>使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和 [XML 格式檔案](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="openrowset_xml"></a>
 在 Microsoft SQL Server Management Studio (SSMS) 中執行下列 Transact-SQL：
 ```sql
 USE TestDatabase;  

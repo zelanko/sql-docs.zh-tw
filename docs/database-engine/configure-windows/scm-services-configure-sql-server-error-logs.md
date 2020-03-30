@@ -13,10 +13,10 @@ ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8e746861ef30305a901c388f7574a4a27e2edab4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74127486"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>SCM 服務 - 設定 SQL Server 錯誤記錄檔

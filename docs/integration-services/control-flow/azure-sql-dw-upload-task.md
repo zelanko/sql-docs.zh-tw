@@ -14,10 +14,10 @@ ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
 ms.openlocfilehash: 584bd3a22c24dfccf8fab562202d66ce8689b55b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67947201"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上傳工作

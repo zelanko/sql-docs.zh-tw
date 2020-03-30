@@ -14,21 +14,21 @@ ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 28d7a01ce3c11ce332de7e7af70ff0c57746e840
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71682093"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>隱藏 SQL Server Database Engine 的執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主題描述如何使用 SQL Server 組態管理員，在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中隱藏 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務來列舉電腦上安裝的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。 這可讓用戶端應用程式瀏覽伺服器，並可幫助用戶端區別同一部電腦上的多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。 您可以使用下列程序防止 SQL Server Browser 服務向嘗試利用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [瀏覽] **按鈕尋找執行個體的用戶端電腦公開** 執行個體。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
   
 #### <a name="to-hide-an-instance-of-the-sql-server-database-engine"></a>若要隱藏 SQL Server Database Engine 的執行個體  
   
-1.  在 [SQL Server 組態管理員]  中展開 [SQL Server 網路組態]  ，以滑鼠右鍵按一下 [\<伺服器執行個體> 的通訊協定]   ，然後選取 [屬性]  。  
+1.  在 [SQL Server 組態管理員]  中展開 [SQL Server 網路組態]  ，以滑鼠右鍵按一下 [**伺服器執行個體> 的通訊協定]** *\<* ，然後選取 [屬性]  。  
   
 2.  在 **[旗標]** 索引標籤的 **[HideInstance]** 方塊中，選取 **[是]** ，然後按一下 **[確定]** 關閉對話方塊。 此變更在新連接時會立即生效。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "71682093"
  
  如需詳細資訊，請參閱[建立或刪除用戶端使用的伺服器別名 &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)。  
   
- 如果隱藏了叢集具名執行個體，而當 **LastConnect** 登錄機碼 (**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI11.0\LastConnect**) 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前接聽的連接埠有不同的連接埠時，叢集服務可能無法連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果叢集服務將無法連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可能會看到類似如下的錯誤：  
+ 如果隱藏了叢集具名執行個體，而當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]LastConnect **登錄機碼 (** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI11.0\LastConnect **) 與**  目前接聽的連接埠有不同的連接埠時，叢集服務可能無法連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果叢集服務將無法連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可能會看到類似如下的錯誤：  
 **事件識別碼：1001：事件名稱：容錯移轉叢集資源鎖死。**  
   
 ## <a name="see-also"></a>另請參閱  

@@ -24,7 +24,7 @@ ms.locfileid: "71294584"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  使用 [指令碼] 索引標籤可在設定補充記錄的 Oracle 來源資料庫上執行或重新執行指令碼。  
+  使用 [指令碼]  索引標籤可在設定補充記錄的 Oracle 來源資料庫上執行或重新執行指令碼。  
   
  在您執行指令碼之前，請選取下列其中一項：  
   

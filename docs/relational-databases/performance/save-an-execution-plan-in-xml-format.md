@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8feec11884ae31e34cbc5497bf818991e59b39dd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909789"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>以 XML 格式儲存執行計畫
@@ -68,7 +68,7 @@ ms.locfileid: "72909789"
   
 4.  在 [結果]  窗格中，以滑鼠右鍵按一下包含查詢計劃的 [Microsoft SQL Server XML 執行程序表]  ，然後按一下 [儲存結果]  。  
   
-5.  在 [儲存 \<方格或文字> 結果]   對話方塊的 [存檔類型]  方塊中，按一下 [所有檔案 (\*.\*)]  。  
+5.  在 [儲存 **方格或文字> 結果]** \<  對話方塊的 [存檔類型]  方塊中，按一下 [所有檔案 ( **.\*)]\*** 。  
   
 6.  在 [檔案名稱]  方塊中，提供格式為 \<名稱 **>.sqlplan** 的名稱，然後按一下 [儲存]  。  
 
@@ -80,7 +80,7 @@ ms.locfileid: "72909789"
   
      您也可以從 [檔案]  功能表選擇 [另存執行計畫為]  。  
   
-3.  在 [另存新檔]  對話方塊中，請確認將 [檔案類型]  設為 [執行計畫檔案 (\*.sqlplan)]  。  
+3.  在 [另存新檔]  對話方塊中，請確認將 [檔案類型]  設為 [執行計畫檔案 ( **.sqlplan)]\*** 。  
   
 4.  在 [檔案名稱]  方塊中，提供格式為 \<名稱 **>.sqlplan** 的名稱，然後按一下 [儲存]  。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "72909789"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 **「檔案」** 功能表上，選擇 **「開啟」** ，然後按一下 **「檔案」** 。  
   
-2.  在 [開啟檔案]  對話方塊中，將 [檔案類型]  設為 [執行計畫檔案 (\*.sqlplan)]  ，以產生已儲存之 XML 查詢計劃檔案的篩選清單。  
+2.  在 [開啟檔案]  對話方塊中，將 [檔案類型]  設為 [執行計畫檔案 ( **.sqlplan)]\*** ，以產生已儲存之 XML 查詢計劃檔案的篩選清單。  
   
 3.  選取您要檢視的 XML 查詢計劃檔案，然後按一下 [開啟]  。  
   

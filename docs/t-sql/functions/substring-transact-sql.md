@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19c261227f81debb3afec4e9d4b68f6ca7e8d607
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68117672"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
@@ -52,7 +52,7 @@ SUBSTRING ( expression ,start , length )
  這是指定傳回之字元開始的整數或 **bigint** 運算式。 (編號是以 1 為基礎，這表示運算式中的第一個字元為 1)。 如果 *start* 小於 1，傳回的運算式將會從 *expression* 內指定的第一個字元開始。 在此情況下，傳回的字元數會是 *start* + *length* 的總和 -1 或是 0 (以最大值為準)。 如果 *start* 大於值運算式中的字元數，則會傳回長度為零的運算式。  
   
  *length*  
- 這是一個正整數，或是指定將傳回之 *expression* 字元數的 **bigint** 運算式。 如果 *length* 是負數，則會產生錯誤並結束此陳述式。 如果 *start* 和 *length* 的總和大於 *expression* 中的字元數，則會傳回從 *start* 開始的整個值運算式。  
+ 這是一個正整數，或是指定將傳回之 **expression** 字元數的 *bigint* 運算式。 如果 *length* 是負數，則會產生錯誤並結束此陳述式。 如果 *start* 和 *length* 的總和大於 *expression* 中的字元數，則會傳回從 *start* 開始的整個值運算式。  
   
 ## <a name="return-types"></a>傳回型別  
  如果 *expression* 是其中一個支援的字元資料類型，就會傳回字元資料。 如果 *expression* 是支援的 **binary**資料類型之一，就會傳回二進位資料。 傳回的字串與指定運算式的類型相同，但下表所顯示者例外。  
@@ -66,7 +66,7 @@ SUBSTRING ( expression ,start , length )
 ## <a name="remarks"></a>備註  
  *start* 和 *length* 的值必須指定為字元數 (適用於 **ntext** **char**或 **varchar** 資料類型) 和位元組數 (適用於 **text**’**image**、**binary**或 **varbinary** 資料類型)。  
   
- 當 *start* 或 *length* 包含大於 2147483647 的值時，*expression* 必須是 **varchar(max)** 或 **varbinary(max)** 。  
+ 當 *start* 或 **length** 包含大於 2147483647 的值時，**expression** 必須是 *varchar(max)* 或 *varbinary(max)* 。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補充字元 (Surrogate 字組)  
  當使用增補字元 (SC) 定序時，*start* 和 *length* 會將 *expression* 中的每個代理字組算成單一字元。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
@@ -115,7 +115,7 @@ bcd
 > [!NOTE]  
 >  若要執行下列範例，您必須安裝 **pubs** 資料庫。  
   
- 下列範例示範如何從 `pubs` 資料庫之 `pub_info`資料表的各個 **text** 和 **image**資料行傳回前 10 個字元。 **text** 資料會當成 **varchar** 傳回，且 **image** 資料會當成 **varbinary** 傳回。  
+ 下列範例示範如何從 **資料庫之**資料表的各個 **text** 和 `pub_info`image`pubs`資料行傳回前 10 個字元。 **text** 資料會當成 **varchar** 傳回，且 **image** 資料會當成 **varbinary** 傳回。  
   
 ```  
 USE pubs;  
@@ -135,7 +135,7 @@ WHERE pub_id = '1756';
 (1 row(s) affected)
 ```  
   
- 下列範例會顯示 **text** 和 **ntext** 資料的 SUBSTRING 效果。 首先，這個範例會在名稱為 `pubs` 的 `npub_info` 資料庫中，建立一份新的資料表。 其次，這個範例會從 `pr_info` 資料行的前 80 個字元中，建立 `npub_info` 資料表的 `pub_info.pr_info` 資料行，再加入 `ü` 來作為第一個字元。 最後，`INNER JOIN` 會擷取所有簽發者識別碼，以及 **text** 和 **ntext** 發行者資訊資料行的 `SUBSTRING`。  
+ 下列範例會顯示 **text** 和 **ntext** 資料的 SUBSTRING 效果。 首先，這個範例會在名稱為 `pubs` 的 `npub_info` 資料庫中，建立一份新的資料表。 其次，這個範例會從 `pr_info` 資料行的前 80 個字元中，建立 `npub_info` 資料表的 `pub_info.pr_info` 資料行，再加入 `ü` 來作為第一個字元。 最後，`INNER JOIN` 會擷取所有簽發者識別碼，以及 `SUBSTRING`text**和**ntext**發行者資訊資料行的**。  
   
 ```  
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   
@@ -177,7 +177,7 @@ FROM pub_info pr INNER JOIN npub_info npr
 ORDER BY pr.pub_id ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-substring-with-a-character-string"></a>C. 使用 SUBSTRING 與字元字串  
  下列範例會顯示如何只傳回字元字串的一部分。 這個查詢會從 `dbo.DimEmployee` 資料表中，傳回第一個資料行中的姓氏，而第二資料行只有第一個首字母。  

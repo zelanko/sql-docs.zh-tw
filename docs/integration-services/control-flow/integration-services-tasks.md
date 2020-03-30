@@ -27,10 +27,10 @@ ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 45e7828421f6a8d4bca6084c6b9e0d215b432cc9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294082"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 工作

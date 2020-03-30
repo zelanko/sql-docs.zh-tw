@@ -16,10 +16,10 @@ ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5f6b63e0ff79f44b2900fb0f727436ed36401ee2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68127463"
 ---
 # <a name="resource-database"></a>Resource 資料庫

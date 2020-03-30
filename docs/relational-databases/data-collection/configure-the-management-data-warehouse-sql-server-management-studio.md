@@ -23,10 +23,10 @@ ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 54badd0404ee5360aef4a7bc095c236e5b31f79d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056467"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>設定管理資料倉儲 (SQL Server Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "74056467"
 > [!NOTE]  
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 設定成使用其中一個系統服務帳戶 (本機系統、網路服務或本機服務) 來執行，而且管理資料倉儲是從資料收集器的另一個執行個體建立，您就必須設定收集組使用 Proxy 將資料上傳到管理資料倉儲。  
   
-### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>在一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-ssnoversion"></a>在一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 正在執行中。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "74056467"
   
 6.  重複步驟 5，直到使用資料收集器的所有資料庫執行個體都設定為可將資料上傳到共用管理資料倉儲為止。  
 
-####  <a name="Wizard"></a> 設定管理資料倉儲精靈  
+####  <a name="configure-management-data-warehouse-wizard"></a><a name="Wizard"></a> 設定管理資料倉儲精靈  
  **歡迎頁面**  
   
  此歡迎頁面是「設定資料收集精靈」的起始頁面。 可以選擇是否顯示此頁面。  
@@ -93,7 +93,7 @@ ms.locfileid: "74056467"
   
  為登入選取 **[對應]** 核取方塊來指定此登入。  
   
- **資料庫角色成員資格對象：** \<資料倉儲名稱>   
+ **資料庫角色成員資格對象：** *資料倉儲名稱>\<*  
  選取此登入所對應的管理資料倉儲角色，其方式是按一下下列一或多個選項旁邊的核取方塊：  
   
 -   **mdw_admin**  

@@ -18,10 +18,10 @@ ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e1573167bfe50e5dcb63734a90c7b9b5bd00e40a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297963"
 ---
 # <a name="data-conversion-transformation"></a>資料轉換

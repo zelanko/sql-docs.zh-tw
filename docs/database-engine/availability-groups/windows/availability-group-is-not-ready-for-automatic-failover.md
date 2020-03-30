@@ -15,10 +15,10 @@ ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 78f61b21ae2399a3aa5d0b5432a4047c3f4fd4b6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991494"
 ---
 # <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>Always On 可用性群組尚未準備進行自動容錯移轉

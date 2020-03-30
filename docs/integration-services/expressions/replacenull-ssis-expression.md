@@ -11,10 +11,10 @@ ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 335ccdfb3857ba7d32147424a46f76bc0ccdbe17
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71288426"
 ---
 # <a name="replacenull-ssis-expression"></a>REPLACENULL (SSIS 運算式)

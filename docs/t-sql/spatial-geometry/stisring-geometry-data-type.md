@@ -18,10 +18,10 @@ ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a9aa9b1b8e97f78887710309019e80ff4276c732
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68030880"
 ---
 # <a name="stisring-geometry-data-type"></a>STIsRing (geometry 資料類型)

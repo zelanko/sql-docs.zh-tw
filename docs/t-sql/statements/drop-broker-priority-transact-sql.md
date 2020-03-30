@@ -18,10 +18,10 @@ ms.assetid: 09ee6c5b-af94-4a4b-a0e2-f9eac50e43aa
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: cb80bf30529c8948b164735b21eaf3025c386a40
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67898289"
 ---
 # <a name="drop-broker-priority-transact-sql"></a>DROP BROKER PRIORITY (Transact-SQL)

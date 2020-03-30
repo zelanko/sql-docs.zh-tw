@@ -13,10 +13,10 @@ ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4c19a71b12b16ddd408e7cdd356debc5ec87de43
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68096986"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>&lt;xsd:simpleType&gt; 宣告的值

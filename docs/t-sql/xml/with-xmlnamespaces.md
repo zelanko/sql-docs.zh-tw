@@ -21,10 +21,10 @@ ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 12af8c813fd61b4f4c9040d72e19173ef810e80f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76909788"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES

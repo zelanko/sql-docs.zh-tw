@@ -13,10 +13,10 @@ ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6ce115a0df8ca77b37a78234247174ca9f2dd006
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68041476"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>還原 master 資料庫 (Transact-SQL)

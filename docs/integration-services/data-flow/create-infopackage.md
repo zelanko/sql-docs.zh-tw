@@ -22,9 +22,9 @@ ms.locfileid: "71293206"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  使用 [建立 InfoPackage] 對話方塊可以在 SAP Netweaver BW 系統中建立新的 InfoPackage。  
+  使用 [建立 InfoPackage]  對話方塊可以在 SAP Netweaver BW 系統中建立新的 InfoPackage。  
   
- 您可以從 [SAP BW 目的地編輯器] 的 [連線管理員] 頁面開啟 [建立 InfoPackage] 對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
+ 您可以從 [SAP BW 目的地編輯器]  的 [連線管理員]  頁面開啟 [建立 InfoPackage]  對話方塊。 若要深入了解 SAP BW 目的地，請參閱 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
   
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW 的文件集是假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  
@@ -33,11 +33,11 @@ ms.locfileid: "71293206"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 目的地的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件。  
   
-2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 目的地。  
+2.  在 [資料流程]  索引標籤上，按兩下 SAP BW 目的地。  
   
 3.  在 **[SAP BW 目的地編輯器]** 中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
-4.  在 [連線管理員] 頁面的 [建立 SAP BW 物件] 群組方塊中，選取 [InfoPackage]，然後按一下 [建立]。  
+4.  在 [連線管理員]  頁面的 [建立 SAP BW 物件]  群組方塊中，選取 [InfoPackage]  ，然後按一下 [建立]  。  
   
 ## <a name="options"></a>選項。  
  **InfoSource**  

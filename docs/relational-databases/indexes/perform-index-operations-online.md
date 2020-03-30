@@ -16,10 +16,10 @@ ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d765e8f603233b78b96cbcfe8189a89da1c8cd98
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74165605"
 ---
 # <a name="perform-index-operations-online"></a>線上執行索引作業
@@ -44,9 +44,9 @@ ms.locfileid: "74165605"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   建議您針對全年無休的商務環境執行線上索引作業，在索引作業期間，這類環境的並行使用者活動需求相當重要。  
   
@@ -62,12 +62,12 @@ ms.locfileid: "74165605"
   
 -   如需更多有關線上建立、重建或卸除索引的限制，請參閱 [線上索引作業的指導方針](../../relational-databases/indexes/guidelines-for-online-index-operations.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-rebuild-an-index-online"></a>若要線上重建索引  
   
@@ -91,7 +91,7 @@ ms.locfileid: "74165605"
   
 10. 在 **[重建索引]** 對話方塊中，確認 **[要重建的索引]** 方格中有正確索引，然後按一下 **[確定]** 。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 ### <a name="to-create-rebuild-or-drop-an-index-online"></a>若要線上建立、重建或卸除索引  
   

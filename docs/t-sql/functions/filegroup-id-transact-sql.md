@@ -22,10 +22,10 @@ ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9902a85fbede75926bfbcb3dd48e19f622c19ea3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68071486"
 ---
 # <a name="filegroup_id-transact-sql"></a>FILEGROUP_ID (Transact-SQL)

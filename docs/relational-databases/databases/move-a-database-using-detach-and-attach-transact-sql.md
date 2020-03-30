@@ -18,10 +18,10 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 517814aa9878206fa46c4ce8ea775cda18265ede
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095257"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>使用中斷連結與連結來移動資料庫 (Transact-SQL)

@@ -11,10 +11,10 @@ ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b380b56611e72bfd6b0c249792843a6a684813b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71283322"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>課程 3-2 - 執行套件安裝精靈

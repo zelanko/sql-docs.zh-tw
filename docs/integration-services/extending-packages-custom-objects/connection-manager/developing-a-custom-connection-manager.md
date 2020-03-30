@@ -19,10 +19,10 @@ ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7e8810b9f6aa5b167ff45607821d304af81123c2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71287745"
 ---
 # <a name="developing-a-custom-connection-manager"></a>開發自訂連接管理員

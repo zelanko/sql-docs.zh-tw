@@ -13,10 +13,10 @@ ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 27eade7d5b0095d18b2c0dcbfa4dac06408649f1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296938"
 ---
 # <a name="raising-events-in-the-script-component"></a>在指令碼元件中引發事件

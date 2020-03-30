@@ -16,10 +16,10 @@ ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1844f4088c026dda5636cd31a7f90b5effe4bfbc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298250"
 ---
 # <a name="history-cleanup-task"></a>記錄清除工作

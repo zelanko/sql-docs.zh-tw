@@ -14,10 +14,10 @@ ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c16d813af595e3698379026e219440ba0007db12
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558133"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>建立新條件或開啟條件對話方塊，一般頁面

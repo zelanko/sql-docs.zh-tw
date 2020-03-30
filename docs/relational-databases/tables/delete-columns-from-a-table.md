@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0db1834114a8bb2ea21d9fb566f2201dd933803c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68088460"
 ---
 # <a name="delete-columns-from-a-table"></a>從資料表中刪除資料行
@@ -46,21 +46,21 @@ ms.locfileid: "68088460"
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> 開始之前
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前
 
-### <a name="Restrictions"></a> 限制事項
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項
 
 您無法刪除具有 CHECK 條件約束的資料行。 您必須先刪除條件約束。
 
 除非使用資料表設計工具，否則您無法刪除具有 PRIMARY KEY 或 FOREIGN KEY 條件約束或其他相依性的資料行。 使用 [物件總管] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]時，您必須先移除資料行的所有相依性。
 
-### <a name="Security"></a> Security
+### <a name="security"></a><a name="Security"></a> Security
 
-#### <a name="Permissions"></a> 權限
+#### <a name="permissions"></a><a name="Permissions"></a> 權限
 
 需要資料表的 ALTER 權限。
 
-## <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
 
 ### <a name="to-delete-columns-by-using-object-explorer"></a>若要使用物件總管來刪除資料行
 
@@ -77,7 +77,7 @@ ms.locfileid: "68088460"
 2. 以滑鼠右鍵按一下您想要刪除的資料行，然後從捷徑功能表中選擇 [刪除資料行]  。
 3. 如果資料行參與關聯性 (FOREIGN KEY 或 PRIMARY KEY)，則會有訊息提示您確認是否要刪除選取的資料行及其關聯性。 選擇 [是]  。
 
-## <a name="TsqlProcedure"></a> 使用 Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL
 
 ### <a name="to-delete-columns"></a>若要刪除資料行
 

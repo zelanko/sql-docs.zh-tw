@@ -20,10 +20,10 @@ ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: c4ca01f461d3013482ceca066a6ce141adf0aaae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908924"
 ---
 # <a name="file-restores-full-recovery-model"></a>檔案還原 (完整復原模式)
@@ -55,7 +55,7 @@ ms.locfileid: "72908924"
     >  若您要讓資料庫離線以進行檔案還原，請在啟動還原順序之前，執行下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 陳述式：ALTER DATABASE *database_name* SET OFFLINE。  
   
   
-##  <a name="Overview"></a> 從檔案備份還原損壞的檔案  
+##  <a name="restoring-damaged-files-from-file-backups"></a><a name="Overview"></a> 從檔案備份還原損壞的檔案  
   
 1.  在還原一個或多個損壞的檔案之前，請嘗試建立 [結尾記錄備份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
   
@@ -121,7 +121,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [範例：離線還原主要檔案群組與另一個檔案群組 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
  **還原檔案和檔案群組**  
   
 -   [將檔案還原到新位置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)  

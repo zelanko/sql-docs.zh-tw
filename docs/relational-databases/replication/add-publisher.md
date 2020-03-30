@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: d84df39c307177dc2e7fcbab9c9cdf177b580a73
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76286889"
 ---
 # <a name="add-publisher"></a>加入發行者
@@ -36,7 +36,7 @@ ms.locfileid: "76286889"
   
 -   **加入 Oracle 發行者...**  
   
-     使用 [連線到伺服器]  對話方塊，連線到與 Oracle 發行者建立關聯的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 散發者。  
+     使用 [連線到伺服器][!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對話方塊，連線到與 Oracle 發行者建立關聯的   散發者。  
   
 -   **指定散發者，並加入其發行者...**  
   

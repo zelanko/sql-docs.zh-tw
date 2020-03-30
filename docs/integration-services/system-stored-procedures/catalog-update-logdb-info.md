@@ -11,10 +11,10 @@ author: haoqian
 ms.author: haoqian
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4a1717afb32a5763c6fc73a86151b041069b467c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68038597"
 ---
 # <a name="catalogupdate_logdb_info-ssisdb-database"></a>catalog.update_logdb_info (SSISDB 資料庫)

@@ -13,10 +13,10 @@ ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2f94519318090c85a4885e429c85b314fe92245f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298378"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>資料行 Null 比例設定檔要求選項 (資料分析工作)

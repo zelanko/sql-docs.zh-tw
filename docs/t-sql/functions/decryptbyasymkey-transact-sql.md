@@ -20,10 +20,10 @@ ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c187caf0dc0027d6d7fa86cbd1bee09e76f0228d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68118956"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY (Transact-SQL)

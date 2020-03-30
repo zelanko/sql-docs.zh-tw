@@ -24,10 +24,10 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bed89f0cade880f41122e921fbda146ae2abc28d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296972"
 ---
 # <a name="working-with-images-with-the-script-task"></a>以指令碼工作處理影像
@@ -44,7 +44,7 @@ ms.locfileid: "71296972"
 > [!NOTE]  
 >  如果您想要建立可更輕鬆地在多個封裝之間重複使用的工作，請考慮使用此指令碼工作範例中的程式碼做為自訂工作的起點。 如需詳細資訊，請參閱 [開發自訂工作](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-##  <a name="example1"></a> 範例 1 描述：將影像轉換為 JPEG 格式  
+##  <a name="example-1-description-convert-images-to-jpeg-format"></a><a name="example1"></a> 範例 1 描述：將影像轉換為 JPEG 格式  
  下列範例會開啟變數指定的影像檔，並使用編碼器將它儲存為壓縮的 JPEG 檔案。 擷取編碼器資訊的程式碼是封裝在私用函數中。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>若要將指令碼工作範例設定成與單一影像檔搭配使用  
@@ -153,7 +153,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a> 範例 2 描述：建立和儲存縮圖影像  
+##  <a name="example-2-description-create-and-save-thumbnail-images"></a><a name="example2"></a> 範例 2 描述：建立和儲存縮圖影像  
  下列範例會開啟變數所指定的影像檔、建立影像的縮圖，同時維護固定的外觀比例，並以修改的檔案名稱儲存縮圖。 計算縮圖的高度與寬度並維持其固定外觀比例的程式碼，是封裝在私用副程式中。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>若要將指令碼工作範例設定成與單一影像檔搭配使用  

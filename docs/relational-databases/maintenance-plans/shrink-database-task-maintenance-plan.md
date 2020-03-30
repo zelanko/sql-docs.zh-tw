@@ -17,10 +17,10 @@ ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bbba27f582b65fdcc99ed8fda4d892b9a92eebb6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68115562"
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>壓縮資料庫工作 (維護計畫)
@@ -89,10 +89,10 @@ ms.locfileid: "68115562"
  指定如何對伺服器進行驗證。  
   
  **使用 Windows NT 整合式安全性**  
- 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 驗證連線到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的執行個體。  
   
  **使用特定的使用者名稱和密碼**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。 無法使用此選項。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連線到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 無法使用此選項。  
   
  **使用者名稱**  
  提供驗證時要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 無法使用此選項。  

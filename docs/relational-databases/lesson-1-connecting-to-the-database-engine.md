@@ -11,10 +11,10 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73033001"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連接到 Database Engine
@@ -27,7 +27,7 @@ ms.locfileid: "73033001"
 - [連接 Management Studio](#connect)  
 - [授權其他連接](#additional) 
 
-## <a name="tools">使用者入門的工具</a> 
+## <a name=""></a><a name="tools">使用者入門的工具</a> 
 - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 出貨時已附帶各種工具。 這個主題描述您需要的優先工具，並幫助您選取作業的正確工具。 所有工具都可以從 [開始]  功能表存取。 根據預設，有些工具 (像是 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]) 並不會安裝。 您必須在安裝期間選取工具作為用戶端元件的一部分。 如需下面所述工具的完整描述，請在《 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》中搜尋相關內容。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 只包含工具的子集。  
 
 ### <a name="basic-tools"></a>基本工具
@@ -46,7 +46,7 @@ ms.locfileid: "73033001"
 - 在目前的 Windows 版本上，於 [開始]  頁面上輸入**組態管理員**，然後按一下 [SQL Server **版本*組態管理員]*** 。   
 - 使用舊版 Windows 時，請在 [開始]  功能表上依序指向 [所有程式]  、[[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]] 和 [組態工具]  ，然後按一下 [SQL Server 組態管理員]  。  
 
-## <a name="connect"></a>連接 Management Studio  
+## <a name="connecting-with-management-studio"></a><a name="connect"></a>連接 Management Studio  
 - 如果您知道執行個體的名稱，而且是以電腦上本機系統管理員群組的成員身分來連接，則要從相同電腦上所執行的工具連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 很容易。 下列程序必須執行在主控 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的相同電腦上。  
 
 > [!NOTE]  
@@ -85,7 +85,7 @@ ms.locfileid: "73033001"
 > [!NOTE]
 > 本教學課程假設您不熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 而且沒有特殊連接問題。 這應該適用於大部分的人，並且保持本教學課程的簡單性。 如需詳細疑難排解步驟，請參閱 [針對 SQL Server Database Engine 的連接進行疑難排解](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)。 
 
-## <a name="additional"></a>授權其他連接  
+## <a name="authorizing-additional-connections"></a><a name="additional"></a>授權其他連接  
 既然您以管理員身分連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，您的首要工作之一就是授權其他使用者連接。 您可以建立登入，並授權該登入以使用者身分存取資料庫，來達成此目的。 登入可以是使用 Windows 認證的 Windows 驗證登入，或是 SQL Server 驗證登入，這種登入會將驗證資訊儲存在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，而且與 Windows 認證無關。 可能的話，請盡量使用 Windows 驗證。
 
 > [!TIP]

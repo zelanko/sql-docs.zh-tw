@@ -17,10 +17,10 @@ ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b05b7ffa40bb5b44c9dd3a5fa0d320cfadba0a43
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294056"
 ---
 # <a name="integration-services-containers"></a>整合服務容器
@@ -65,7 +65,7 @@ ms.locfileid: "71294056"
 |**ForcedExecutionValueType**|**ForcedExecutionValue**的資料類型。 此屬性的預設值為 **Int32**。|  
 |**ForceExecutionResult**|指定執行封裝或容器之強制結果的值。 可能的值為 **None**、 **Success**、 **Failure**和 **Completion**。 這個屬性的預設值為 **None**。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>。|  
 |**ForceExecutionValue**|布林值，指定是否應該強制執行容器的選擇性執行值以包含特定值。 此屬性的預設值為 **False**。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>。|  
-|**識別碼**|在建立封裝時所指派的容器 GUID。 這個屬性是唯讀的。<br /><br /> 第 1 課：建立 Windows Azure 儲存體物件<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>。|  
+|**識別碼**|在建立封裝時所指派的容器 GUID。 這個屬性是唯讀的。<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>第 1 課：建立 Windows Azure 儲存體物件{2}。|  
 |**IsolationLevel**|容器交易的隔離等級。 可能的值為 **Unspecified**、 **Chaos**、 **ReadUncommitted**、 **ReadCommitted**、 **RepeatableRead**、 **Serializable**和 **Snapshot**。 此屬性的預設值為 **Serializable**。 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>。|  
 |**LocaleID**|Microsoft Win32 地區設定。 此屬性的預設值為本機電腦作業系統的地區設定。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>。|  
 |**LoggingMode**|指定容器記錄行為的值。 這些值為 **Disabled**、 **Enabled**和 **UseParentSetting**。 此屬性的預設值為 **UseParentSetting**。 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>。|  

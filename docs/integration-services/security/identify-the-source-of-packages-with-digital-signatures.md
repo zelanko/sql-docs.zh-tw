@@ -19,10 +19,10 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fd8b17acb904ae0d33b06e85531e531792f1d60e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295698"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用數位簽章來識別封裝的來源
@@ -47,7 +47,7 @@ ms.locfileid: "71295698"
   
 > **注意：** 選擇性的 **BlockedSignatureStates** 登錄值所指定的設定，可以比 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中所設定或 **dtexec** 命令列上所設定的數位簽章選項更具限制性。 在此情況下，更具限制性的登錄設定會覆寫其他設定。  
 
-## <a name="registry"></a> 透過設定登錄值實作簽署原則
+## <a name="implement-a-signing-policy-by-setting-a-registry-value"></a><a name="registry"></a> 透過設定登錄值實作簽署原則
   您可以使用選擇性登錄值來管理載入已簽署或未簽署之封裝的組織原則。 如果您使用這個登錄值，就必須在即將執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝而且想要強制執行此原則的每部電腦上建立這個登錄值。 設定此登錄值之後， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 就會檢查或確認簽章，然後再載入封裝。  
   
  本主題中的這個程序描述如何將選擇性 **BlockedSignatureStates** DWORD 值加入至 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS 登錄機碼。 **BlockedSignatureStates** 中的資料值會決定在封裝具有不受信任的簽章、具有無效的簽章或未簽署時，是否應該封鎖它。 關於用來簽署封裝的簽章狀態， **BlockedSignatureStates** 登錄值會使用下列定義：  
@@ -92,7 +92,7 @@ ms.locfileid: "71295698"
   
 9. 在 **[檔案]** 功能表上按一下 **[結束]** 。    
 
-## <a name="cert"></a> 使用數位憑證來簽署封裝
+## <a name="sign-a-package-by-using-a-digital-certificate"></a><a name="cert"></a> 使用數位憑證來簽署封裝
   此主題描述如何使用數位憑證來簽署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 您可以使用數位簽章搭配其他設定，防止無效的封裝載入並執行。  
   
  簽署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝之前，您必須執行下列工作：  
@@ -137,7 +137,7 @@ ms.locfileid: "71295698"
   
      雖然封裝已經簽署，但是您現在必須設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，以便檢查或確認數位簽章，然後再載入封裝。  
 
-## <a name="signing_dialog"></a> 數位簽章對話方塊 UI 參考
+## <a name="digital-signing-dialog-box-ui-reference"></a><a name="signing_dialog"></a> 數位簽章對話方塊 UI 參考
   使用 **[數位簽章]** 對話方塊，即可使用數位簽章來簽署封裝，或是移除簽章。 在 **中，可從** [SSIS] **功能表的** [數位簽章] **選項來使用** [數位簽章] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]對話方塊。  
   
  如需詳細資訊，請參閱 [使用數位憑證來簽署封裝](#cert)。  

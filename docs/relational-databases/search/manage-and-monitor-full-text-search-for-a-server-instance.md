@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 72b34355a11e87540bc8a298d0144988cdbeb17c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056177"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理及監視伺服器執行個體的全文檢索搜尋
@@ -31,7 +31,7 @@ ms.locfileid: "74056177"
   
 -   設定全文檢索搜尋的使用者資料庫。 這項作業包括針對資料庫建立一個或多個全文檢索目錄，以及針對您想要執行全文檢索查詢的每個資料表或索引檢視表定義全文檢索索引。  
   
-##  <a name="props"></a> 檢視或變更全文檢索搜尋的伺服器屬性  
+##  <a name="viewing-or-changing-server-properties-for-full-text-search"></a><a name="props"></a> 檢視或變更全文檢索搜尋的伺服器屬性  
  您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中檢視 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行個體的全文檢索屬性。  
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>檢視與變更全文檢索搜尋的伺服器屬性  
@@ -69,7 +69,7 @@ ms.locfileid: "74056177"
         > [!NOTE]  
         >  也可以使用 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option** 動作來設定全文檢索升級選項。  
   
-##  <a name="metadata"></a> 檢視其他全文檢索伺服器屬性  
+##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> 檢視其他全文檢索伺服器屬性  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數可用來取得全文檢索搜尋之各種伺服器層級屬性的值。 這項資訊可用於管理和疑難排解全文檢索搜尋。  
   
  下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 伺服器執行個體的全文檢索屬性及其相關的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數。  
@@ -81,7 +81,7 @@ ms.locfileid: "74056177"
 |**LoadOSResources**|作業系統斷詞工具和篩選是否已註冊並搭配這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體使用。|FULLTEXTSERVICEPROPERTY|  
 |**VerifySignature**|指定全文檢索引擎是否只載入已簽署的二進位檔。|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a> 監視全文檢索搜尋活動  
+##  <a name="monitoring-full-text-search-activity"></a><a name="monitor"></a> 監視全文檢索搜尋活動  
  在伺服器執行個體上監視全文檢索搜尋活動時，許多動態管理檢視與函數相當有用。  
   
  **若要檢視有關包含進行中母體擴展活動之全文檢索目錄的資訊**  

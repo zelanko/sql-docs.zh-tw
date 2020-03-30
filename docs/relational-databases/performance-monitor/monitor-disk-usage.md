@@ -24,10 +24,10 @@ ms.assetid: 1525449c-ea7d-4222-b294-1ba1fe99c9ac
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 60168c1622ebe7660bb10d421b9d35a6d41523f0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68091020"
 ---
 # <a name="monitor-disk-usage"></a>監視磁碟使用量

@@ -11,10 +11,10 @@ ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a11a67f64a40aa5fe08d375a9f11fa186c568b1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298611"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC 服務

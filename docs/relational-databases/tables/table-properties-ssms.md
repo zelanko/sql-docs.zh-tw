@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c0dea1eff86506021907b184c80b3f28f74ab5a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72905945"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
@@ -39,7 +39,7 @@ ms.locfileid: "72905945"
   
 4.  [儲存體頁面](#Storage)  
 
-##  <a name="GeneralPage"></a> 一般頁面  
+##  <a name="general-page"></a><a name="GeneralPage"></a> 一般頁面  
  **Database**  
  包含此資料表之資料庫的名稱。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "72905945"
  **資料表有複寫**  
  指出何時使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫，將資料表複寫到另一個資料庫。 可能的值為 **True** 或 **False**。  
   
-##  <a name="ChangeTracking"></a> 變更追蹤頁面  
+##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a> 變更追蹤頁面  
  **變更追蹤**  
  指出資料表是否啟用變更追蹤。 預設值為 **[False]** 。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "72905945"
   
  如需變更追蹤的詳細資訊，請參閱[關於變更追蹤 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)。  
   
-##  <a name="FileTable"></a> FileTable 頁面  
+##  <a name="filetable-page"></a><a name="FileTable"></a> FileTable 頁面  
  顯示與 FileTable 相關之資料表的屬性。 如需詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。  
   
  **FileTable 名稱資料行定序**  
@@ -110,7 +110,7 @@ ms.locfileid: "72905945"
  **已啟用 FileTable 命名空間**  
  當為 **True**時，這個值表示資料表為 FileTable。 如果您將這個值變更為 **False**，您會將 FileTable 變更為一般使用者資料表。 如果您之後想要將資料表變更回 FileTable，此資料表必須先通過 FileTable 一致性檢查才會轉換成功。  
   
-##  <a name="Storage"></a> 儲存體頁面  
+##  <a name="storage-page"></a><a name="Storage"></a> 儲存體頁面  
  顯示選取之資料表的儲存體相關屬性。  
   
 ### <a name="compression"></a>壓縮  

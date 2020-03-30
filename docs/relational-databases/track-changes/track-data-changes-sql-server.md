@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 94f5ccf6d7983a25bb8cafe084dbca103f966255
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095422"
 ---
 # <a name="track-data-changes-sql-server"></a>追蹤資料變更 (SQL Server)
@@ -62,7 +62,7 @@ ms.locfileid: "74095422"
 |資料行是否已變更|是|是|  
 |DML 類型|是|是|  
   
-##  <a name="Capture"></a> 異動資料擷取  
+##  <a name="change-data-capture"></a><a name="Capture"></a> 異動資料擷取  
  異動資料擷取會透過擷取進行 DML 變更的事實以及變更的實際資料，提供使用者資料表的歷程記錄變更資訊。 這些變更是使用讀取交易記錄而且對系統影響很小的非同步處理序擷取的。  
   
  如下圖所示，對使用者資料表所做的變更會擷取在對應的變更資料表中。 這些變更資料表會提供一段時間內變更的歷程記錄檢視。 [ 所提供的](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)異動資料擷取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]函數可讓您方便且有系統地取用異動資料。  
@@ -137,7 +137,7 @@ ms.locfileid: "74095422"
   
  您可以使用 [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) ，從還原或附加的資料庫中移除變更資料擷取。  
   
-##  <a name="Tracking"></a> 變更追蹤  
+##  <a name="change-tracking"></a><a name="Tracking"></a> 變更追蹤  
  變更追蹤會擷取資料表中資料列變更的事實，但是不會擷取變更的資料。 這項功能可讓應用程式使用直接從使用者資料表中取得的最新資料列資料，判斷已經變更的資料列。 因此，與異動資料擷取相較之下，變更追蹤在它可回答的歷程記錄問題方面具有較多限制。 不過，對於不需要歷程記錄資訊的應用程式而言，由於不會擷取變更的資料，因此儲存負擔會非常低。 這項功能會使用同步追蹤機制來追蹤變更。 其設計目的是要對 DML 作業產生最低負擔。  
   
  下圖將顯示使用變更追蹤所獲益的同步處理狀況。 在此案例中，應用程式需要下列資訊：自從資料表上次同步處理以來已經變更的所有資料表資料列，以及只有目前的資料列資料。 由於使用了同步機制來追蹤變更，因此應用程式可以執行雙向同步處理，而且能夠可靠地偵測出可能已經發生的任何衝突。  

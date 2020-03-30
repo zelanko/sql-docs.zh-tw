@@ -17,10 +17,10 @@ ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0d9d3a6f0860a8c0aff0a24b1acd6018163d5686
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75548408"
 ---
 # <a name="oracle-publishing-overview"></a>Oracle Publishing Overview  

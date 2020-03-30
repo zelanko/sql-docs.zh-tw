@@ -16,10 +16,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 5c94d2d60bf851742aca68d5b7bc25ea4d8afd9c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72289328"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>分析實際執行計劃

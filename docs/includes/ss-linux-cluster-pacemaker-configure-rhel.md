@@ -53,7 +53,7 @@
    ```
    
    >[!NOTE]
-   >如果您先前已在相同節點上設定叢集，執行 `pcs cluster setup` 時需要使用 `--force` 選項。 這個選項相當於執行 `pcs cluster destroy`。 若要重新啟用 Pacemaker，請執行 `sudo systemctl enable pacemaker`。
+   >如果您先前已在相同節點上設定叢集，執行 `--force` 時需要使用 `pcs cluster setup` 選項。 這個選項相當於執行 `pcs cluster destroy`。 若要重新啟用 Pacemaker，請執行 `sudo systemctl enable pacemaker`。
 
 1. 安裝 SQL Server 的 SQL Server 資源代理程式。 在所有節點上執行下列命令。 
 

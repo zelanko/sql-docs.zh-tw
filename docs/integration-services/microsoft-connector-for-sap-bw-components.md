@@ -11,10 +11,10 @@ ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ba6298d5ead650b5e6f6bc3cb68d0c5926624741
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295863"
 ---
 # <a name="microsoft-connector-for-sap-bw-components"></a>Microsoft Connector for SAP BW 元件

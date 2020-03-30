@@ -15,10 +15,10 @@ ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ae39654a19c73c71c602801b3aa5f594f7d0828
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72908162"
 ---
 # <a name="specify-merge-replication-properties"></a>指定合併式複寫屬性
@@ -76,7 +76,7 @@ ms.locfileid: "72908162"
  Microsoft SQL Server 複寫提供一個互動解析程式，可讓您在於 Windows Synchronization Manager 中視需要進行同步處理的期間，手動解決衝突。 在啟用互動式解決方案之後，在同步處理期間會使用「互動解決器」以互動方式解決衝突。 互動解析程式會透過 Microsoft Windows Synchronization Manager 可供使用。 如需詳細資訊，請參閱[使用 Windows Synchronization Manager 同步處理訂閱 &#40;Windows Synchronization Manager&#41;](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md)。  
   
   
-### <a name="Recommendations"></a> 建議  
+### <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 -   如果是在 Windows Synchronization Manager 之外執行同步處理 (如 SQL Server Management Studio 或複寫監視器中已排程的同步處理或視需要同步處理)，則不需要使用者的介入，就會使用針對發行項指定的預設衝突解決方式來自動解決衝突。 如需詳細資訊，請參閱 [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)。  
   

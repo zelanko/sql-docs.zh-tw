@@ -16,27 +16,27 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2346c770c5fec742d7c5805f028bd87bebaf71b1
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287202"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>執行 Always On 可用性群組的已規劃手動容錯移轉 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，在不遺失資料的情況下針對 AlwaysOn 可用性群組執行手動容錯移轉 ( *「已規劃的手動容錯移轉」* (Planned Manual Failover))。 可用性群組會在可用性複本層級容錯移轉。 規劃的手動容錯移轉和任何一個 AlwaysOn 可用性群組容錯移轉一樣，會將次要複本轉為主要角色。 同時，容錯移轉也會將先前的主要複本轉成次要角色。  
+本主題描述如何使用 *、* 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的 PowerShell，在不遺失資料的情況下針對 AlwaysOn 可用性群組執行手動容錯移轉 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]「已規劃的手動容錯移轉」[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](Planned Manual Failover))。 可用性群組會在可用性複本層級容錯移轉。 規劃的手動容錯移轉和任何一個 AlwaysOn 可用性群組容錯移轉一樣，會將次要複本轉為主要角色。 同時，容錯移轉也會將先前的主要複本轉成次要角色。  
   
 只有在主要複本和目標次要複本正在以同步認可模式執行且目前已同步時，才會支援規劃的手動容錯移轉。 規劃的手動容錯移轉會保留聯結至目標次要複本上可用性群組的次要資料庫中的所有資料。 之前的主要複本轉成次要角色之後，其資料庫會變成次要資料庫。 接著，這些資料庫會開始與新的主要資料庫同步。 在將它們全部轉換成 SYNCHRONIZED 狀態之後，新的次要複本就會變成有資格當做未來已規劃之手動容錯移轉的目標。  
   
 > [!NOTE]  
 >  如果次要和主要複本都設定成自動容錯移轉模式，在次要複本同步完畢之後，其也可作為自動容錯移轉的目標。 如需詳細資訊，請參閱[可用性模式 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。  
    
-##  <a name="BeforeYouBegin"></a>開始之前 
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>開始之前 
 
 >[!IMPORTANT]
 >若要在不使用叢集管理員的情況下容錯移轉讀取級別可用性群組，須遵循特定程序。 當可用性群組的 CLUSTER_TYPE = NONE 時，請遵循[容錯移轉讀取級別可用性群組上的主要複本](#fail-over-the-primary-replica-on-a-read-scale-availability-group)下的程序。
 
-###  <a name="Restrictions"></a> 限制事項 
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項 
   
 - 目標次要複本接受命令之後，容錯移轉命令就會傳回。 不過，在可用性群組完成容錯移轉之後，會以非同步方式復原資料庫。 
 - 容錯移轉時，可能不會保留可用性群組內跨資料庫的一致性。 
@@ -44,21 +44,21 @@ ms.locfileid: "79287202"
     > [!NOTE] 
     >  跨資料庫和分散式交易的支援會因 SQL Server 和作業系統版本而不同。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組和資料庫鏡像的跨資料庫交易和分散式交易 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。 
   
-###  <a name="Prerequisites"></a> 必要條件和限制 
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> 必要條件和限制 
   
 -   目標次要複本和主要複本都必須在同步認可可用性模式下執行。 
 -   目標次要複本目前必須與主要複本同步。 該次要複本上的所有次要資料庫皆必須聯結至可用性群組。 其也必須與其對應的主要資料庫同步 (亦即，本機次要資料庫必須為 SYNCHRONIZED)。 
   
     > [!TIP] 
-    >  若要判斷次要複本的容錯移轉整備，請查詢 [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 動態管理檢視中的 **is_failover_ready** 資料行。 或者，您可以查看 [AlwaysOn 群組儀表板](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)的**容錯移轉整備**資料行。 
+    >  若要判斷次要複本的容錯移轉整備，請查詢 **sys.dm_hadr_database_replica_cluster_states** 動態管理檢視中的 [is_failover_ready](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 資料行。 或者，您可以查看 **AlwaysOn 群組儀表板**的[容錯移轉整備](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)資料行。 
 -   只有在目標次要複本上才支援這個工作。 您必須連接到裝載目標次要複本的伺服器執行個體。 
   
-###  <a name="Security"></a> Security 
+###  <a name="security"></a><a name="Security"></a> Security 
   
-####  <a name="Permissions"></a> 權限 
+####  <a name="permissions"></a><a name="Permissions"></a> 權限 
  可用性群組需要 ALTER AVAILABILITY GROUP 權限。 同時也需要 CONTROL AVAILABILITY GROUP、ALTER ANY AVAILABILITY GROUP 或 CONTROL SERVER 權限。 
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio 
+##  <a name="use-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio 
  若要手動容錯移轉可用性群組： 
   
 1. 在物件總管中，連線至裝載需要容錯移轉之可用性群組次要複本的伺服器執行個體。 展開伺服器樹狀目錄。 
@@ -69,7 +69,7 @@ ms.locfileid: "79287202"
   
 4. 容錯移轉可用性群組精靈隨即啟動。 如需詳細資訊，請參閱[使用容錯移轉可用性群組精靈 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)。 
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL 
+##  <a name="use-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL 
  若要手動容錯移轉可用性群組： 
   
 1. 連接到裝載目標次要複本的伺服器執行個體。 
@@ -86,7 +86,7 @@ ms.locfileid: "79287202"
     ALTER AVAILABILITY GROUP MyAg FAILOVER;  
     ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell 
+##  <a name="use-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell 
  若要手動容錯移轉可用性群組： 
   
 1. 將目錄 (**cd**) 變更為裝載目標次要複本的伺服器執行個體。 
@@ -107,7 +107,7 @@ ms.locfileid: "79287202"
     -   [SQL Server PowerShell 提供者](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
     -   [取得 SQL Server PowerShell 的說明](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
 
-##  <a name="FollowUp"></a> 後續操作：手動容錯移轉可用性群組之後 
+##  <a name="follow-up-after-you-manually-fail-over-an-availability-group"></a><a name="FollowUp"></a> 後續操作：手動容錯移轉可用性群組之後 
  如果您在可用性群組的 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 外部容錯移轉，請調整 Windows Server 容錯移轉叢集節點的仲裁投票，以反映您新的可用性群組設定。 如需詳細資訊，請參閱 [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md). 
 
 <a name = "ReadScaleOutOnly"><a/>

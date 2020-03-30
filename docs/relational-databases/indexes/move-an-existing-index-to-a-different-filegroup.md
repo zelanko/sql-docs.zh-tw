@@ -17,10 +17,10 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a2eaffb39868737c955224b3ccd3ba39366d6f92
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72906376"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>將現有的索引移至不同的檔案群組
@@ -42,20 +42,20 @@ ms.locfileid: "72906376"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
 -   如果資料表含有叢集索引，則將叢集索引移到新的檔案群組也會使資料表移到該檔案群組中。  
   
 -   您無法使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]移動使用 UNIQUE 或 PRIMARY KEY 條件約束建立的索引。 若要移動這些索引，請使用 [中的](../../t-sql/statements/create-index-transact-sql.md) CREATE INDEX [!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式搭配 (DROP_EXISTING=ON) 選項。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="permissions"></a><a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>若要使用資料表設計工具將現有的索引移至不同的檔案群組  
   
@@ -75,7 +75,7 @@ ms.locfileid: "72906376"
   
 8.  按一下 [關閉]  。  
   
-9. 在 [檔案]  功能表上，選取 [儲存 _table_name_]  。  
+9. 在 [檔案]  功能表上，選取 [儲存 **table_name**]  。  
 
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>若要在物件總管中將現有的索引移到不同的檔案群組  
   
@@ -101,7 +101,7 @@ ms.locfileid: "72906376"
   
 8.  按一下 [確定]  。  
   
- 下列資訊可從 [索引屬性 - _index_name_]  對話方塊的 [儲存體]  頁面取得：  
+ 下列資訊可從 [索引屬性 - **index_name**]  對話方塊的 [儲存體]  頁面取得：  
   
  **檔案群組**  
  在指定的檔案群組中儲存索引。 清單僅顯示標準 (資料列) 檔案群組。 預設清單選取項目為資料庫的 PRIMARY 檔案群組。  
@@ -143,7 +143,7 @@ ms.locfileid: "72906376"
 > [!NOTE]  
 >  如果指定的數值大於可用的 CPU 數目，就會使用可用 CPU 的實際數目。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>若要將現有的索引移至不同的檔案群組  
   

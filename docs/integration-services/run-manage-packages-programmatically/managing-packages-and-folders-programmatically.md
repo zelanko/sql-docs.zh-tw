@@ -15,10 +15,10 @@ ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a14ae64026443324f7a5dc3f47dcea15f9907f5f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295725"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>以程式設計方式管理封裝與資料夾
@@ -28,7 +28,7 @@ ms.locfileid: "71295725"
 
 <a name="top"></a> 當您以程式設計方式使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件時，您可能想要判斷個別的套件或資料夾是否存在，或是管理儲存套件的資料夾。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別，提供各種方法以滿足這些需求。    
     
-##  <a name="exists"></a> 判斷套件或資料夾是否存在    
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> 判斷套件或資料夾是否存在    
  若要以程式設計方式判斷儲存的封裝是否存在，請在嘗試載入和執行封裝之前，呼叫下列其中一個方法：    
     
 |儲存位置|要呼叫的方法|    
@@ -45,10 +45,10 @@ ms.locfileid: "71295725"
     
  [回到頁首](#top)    
     
-##  <a name="managing"></a> 管理套件與資料夾    
+##  <a name="managing-packages-and-folders"></a><a name="managing"></a> 管理套件與資料夾    
  <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別，提供管理封裝及儲存封裝之資料夾的其他方法。    
     
-###  <a name="managing_rempkg"></a> 移除套件    
+###  <a name="removing-a-package"></a><a name="managing_rempkg"></a> 移除套件    
  若要以程式設計方式移除儲存的封裝，請呼叫下列其中一個方法：    
     
 |儲存位置|要呼叫的方法|    
@@ -58,7 +58,7 @@ ms.locfileid: "71295725"
     
  [回到頁首](#top)    
     
-###  <a name="managing_create"></a> 建立資料夾    
+###  <a name="creating-a-folder"></a><a name="managing_create"></a> 建立資料夾    
  若要以程式設計方式建立儲存資料夾，請呼叫下列其中一個方法：    
     
 |儲存位置|要呼叫的方法|    
@@ -68,7 +68,7 @@ ms.locfileid: "71295725"
     
  [回到頁首](#top)    
     
-###  <a name="managing_remfldr"></a> 移除資料夾    
+###  <a name="removing-a-folder"></a><a name="managing_remfldr"></a> 移除資料夾    
  若要以程式設計方式移除儲存資料夾，請呼叫下列其中一個方法：    
     
 |儲存位置|要呼叫的方法|    
@@ -78,7 +78,7 @@ ms.locfileid: "71295725"
     
  [回到頁首](#top)    
     
-###  <a name="managing_rename"></a> 重新命名資料夾    
+###  <a name="renaming-a-folder"></a><a name="managing_rename"></a> 重新命名資料夾    
  若要以程式設計方式重新命名儲存資料夾，請呼叫下列其中一個方法：    
     
 |儲存位置|要呼叫的方法|    

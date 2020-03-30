@@ -18,10 +18,10 @@ ms.assetid: e5fe54dc-0007-4631-8dde-7ae4d4c41f6e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d5fe71b55325297a4267901e380831c4df889629
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68120843"
 ---
 # <a name="stpointfromtext-geography-data-type"></a>STPointFromText (geography 資料類型)

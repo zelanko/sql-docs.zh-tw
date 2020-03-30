@@ -19,10 +19,10 @@ ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3edebc2c1a7182e71ec093508adc5755afb22758
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67914936"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)

@@ -15,10 +15,10 @@ ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67901124"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 發行者的資料類型對應

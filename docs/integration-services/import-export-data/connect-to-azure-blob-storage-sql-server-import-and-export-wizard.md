@@ -10,10 +10,10 @@ ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 17330bafe2655f0569f0828706d5e29ed2af3812
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285356"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>連接到 Azure Blob 儲存體 (SQL Server 匯入和匯出精靈)

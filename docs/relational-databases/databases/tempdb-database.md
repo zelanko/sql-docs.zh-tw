@@ -18,10 +18,10 @@ ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288492"
 ---
 # <a name="tempdb-database"></a>TempDB 資料庫
@@ -168,7 +168,7 @@ TempDB 資料庫的大小和實體位置會影響系統效能。 例如，如果
 
 您可將檔案大小設定為夠大的值來容納環境中的典型工作負載，藉此為所有 TempDB 檔案預先配置空間。 預先配置可防止 TempDB 擴充過於頻繁而影響效能。 TempDB 資料庫應該設為自動成長，但這應該用來增加非計劃中例外狀況的磁碟空間。
 
-由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的比例填入演算法較偏好可用空間多的檔案配置，因此每個[檔案群組](../../relational-databases/databases/database-files-and-filegroups.md#filegroups)內的資料檔應該大小相同。 將 TempDB 分割成相同大小的多個資料檔案時，可讓使用 TempDB 的作業具有較高的平行效率。
+由於 [ 使用的比例填入演算法較偏好可用空間多的檔案配置，因此每個](../../relational-databases/databases/database-files-and-filegroups.md#filegroups)檔案群組[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]內的資料檔應該大小相同。 將 TempDB 分割成相同大小的多個資料檔案時，可讓使用 TempDB 的作業具有較高的平行效率。
 
 將檔案成長增量設成合理的大小，可避免 TempDB 資料庫檔案每次成長量的值太小。 如果檔案的成長比寫入 TempDB 的資料量少太多，那麼 TempDB 可能必須經常擴大並影響效能。
 
@@ -264,7 +264,7 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```
 
-若伺服器在啟用經記憶體最佳化的 TempDB 中繼資料後因為任何原因而無法啟動，您可以使用 **-f** 啟動選項，以[最小組態](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)啟動 SQL Server 來略過功能。 這可以讓您停用功能，然後以一般模式重新啟動 SQL Server。
+若伺服器在啟用經記憶體最佳化的 TempDB 中繼資料後因為任何原因而無法啟動，您可以使用 [-f](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) 啟動選項，以**最小組態**啟動 SQL Server 來略過功能。 這可以讓您停用功能，然後以一般模式重新啟動 SQL Server。
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server 中的 TempDB 容量規劃
 在決定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生產環境中的 TempDB 適當大小時，您需要考量許多因素。 如本文先前所述，這些因素包括現有的工作負載和使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 我們建議您在 SQL Server 測試環境中執行下列工作來分析現有的工作負載：

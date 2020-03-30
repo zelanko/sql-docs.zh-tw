@@ -11,10 +11,10 @@ ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 518835df5ae78a39360cad1a6aab1db35be675ec
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292306"
 ---
 # <a name="look-up-rfc-destination"></a>查閱 RFC 目的地

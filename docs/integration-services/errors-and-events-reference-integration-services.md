@@ -16,10 +16,10 @@ ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 64e805e5dd9b334afe252e2c1d43685e9c92b95f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71290615"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>錯誤和事件參考 (Integration Services)

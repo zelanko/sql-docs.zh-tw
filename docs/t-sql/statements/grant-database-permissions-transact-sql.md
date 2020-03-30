@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7a73c0554c878aea4fa89ffb7170547d55271f15
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288192"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT 資料庫權限 (Transact-SQL)
@@ -61,7 +61,7 @@ permission | ALL [ PRIVILEGES ]
 
 *permission* 指定可以授與的資料庫權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。
 
-ALL 這個選項不會授與所有可能的權限。 授與 ALL 等同於授與下列權限：BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE 和 CREATE VIEW。
+ALL 這個選項不會授與所有可能的權限。 授與 ALL 相當於授與下列權限：BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE 和 CREATE VIEW。
 
 PRIVILEGES 為符合 ISO 而包含這個項目。 不會變更 ALL 的行為。
 
@@ -103,7 +103,7 @@ AS \<database_principal> 指定主體，以讓執行這項查詢的主體可從�
 ## <a name="remarks"></a>備註
 
 > [!IMPORTANT]
-> 在某些情況下，ALTER 與 REFERENCE 權限的結合可允許被授與者檢視資料或執行未經授權的函數。 例如：擁有資料表 ALTER 權限和函式 REFERENCE 權限的使用者，可以透過函式建立並執行計算資料行。 在此情況下，使用者也必須擁有計算資料行的 SELECT 權限。
+> 在某些情況下，ALTER 與 REFERENCE 權限的結合可允許被授與者檢視資料或執行未經授權的函數。 例如：擁有資料表的 ALTER 權限和函數的 REFERENCE 權限之使用者，可以透過函數來建立計算資料行並執行它。 在此情況下，使用者也必須擁有計算資料行的 SELECT 權限。
 
 資料庫是由伺服器所包含的安全性實體，而該伺服器是其權限階層中的父系。 下表所列的是可以授與之最特定和最有限的資料庫權限，並列出利用隱含方式來併入這些權限的較通用權限。
 
@@ -214,7 +214,7 @@ CONTROL SERVER 權限的被授與者 (例如系統管理員 (sysadmin) 固定伺
 
 ### <a name="a-granting-permission-to-create-tables"></a>A. 授與建立資料表的權限
 
-下列範例會將 `AdventureWorks` 資料庫的 `CREATE TABLE` 權限授與使用者 `MelanieK`。
+下列範例會將 `CREATE TABLE` 資料庫的 `AdventureWorks` 權限授與使用者 `MelanieK`。
 
 ```sql
 USE AdventureWorks;
@@ -246,7 +246,7 @@ GO
 
 ### <a name="d-granting-control-permission-to-a-database-user"></a>D. 將 CONTROL 權限授與資料庫使用者
 
- 下列範例會將 `AdventureWorks2012` 資料庫的 `CONTROL` 權限授與資料庫使用者 `Sarah`。 使用者必須存在於資料庫，且內容必須設定為資料庫。
+ 下列範例會將 `CONTROL` 資料庫的 `AdventureWorks2012` 權限授與資料庫使用者 `Sarah`。 使用者必須存在於資料庫，且內容必須設定為資料庫。
 
 ```sql
 USE AdventureWorks2012;

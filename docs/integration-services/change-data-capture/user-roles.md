@@ -11,10 +11,10 @@ ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 194eb7232aaf0ffd1f323d6291c0efb06f88a397
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298585"
 ---
 # <a name="user-roles"></a>使用者角色

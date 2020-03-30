@@ -12,10 +12,10 @@ ms.date: 09/12/2019
 ms.author: mibar
 author: barmichal
 ms.openlocfilehash: 077a9a6be533ec05f9c062100d04bf02562f6066
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75548402"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 資料探索與分類
@@ -29,14 +29,14 @@ ms.locfileid: "75548402"
 > [!NOTE]
 > 資料探索與分類由 **SQL Server 2012 和更新版本所支援，且可搭配 [SSMS 17.5](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 或更新版本使用**。 針對 Azure SQL Database，請參閱 [Azure SQL Database 的資料探索與分類](/azure/sql-database/sql-database-data-discovery-and-classification/)。
 
-## <a id="subheading-1"></a>概觀
+## <a name="overview"></a><a id="subheading-1"></a>概觀
 資料探索與分類引進一組進階服務，形成目標為保護資料的新 SQL Information Protection 範例，而不只是資料庫：
 
 * **探索與建議** - 分類引擎會掃描您的資料庫，並識別包含潛在敏感性資料的資料行。 它接著可讓您輕鬆地檢閱並套用適當的分類建議，以及手動分類資料行。
 * **標記** - 在資料行上可以持續標示敏感度分類標籤。
 * **可見性** - 資料庫分類狀態可以在詳細報表中進行檢視，而詳細報表可以進行列印/匯出，以用於合規性和稽核用途，以及其他需要。
 
-## <a id="subheading-2"></a>探索、分類和標示敏感資料行
+## <a name="discovering-classifying--labeling-sensitive-columns"></a><a id="subheading-2"></a>探索、分類和標示敏感資料行
 下節所描述的步驟是有關探索、分類和標示包含您資料庫中敏感性資料的資料行，以及檢視資料庫的目前分類狀態，並匯出報表。
 
 分類包含兩個中繼資料屬性：
@@ -91,7 +91,7 @@ ms.locfileid: "75548402"
 
     ![瀏覽窗格][10]
 
-## <a id="subheading-3"></a>搭配 SSMS 管理資訊保護原則
+## <a name="manage-information-protection-policy-with-ssms"></a><a id="subheading-3"></a>搭配 SSMS 管理資訊保護原則
 
 您可以使用 [SSMS 18.4](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 或更新版本來管理資訊保護原則：
 
@@ -111,7 +111,7 @@ ms.locfileid: "75548402"
 > 資訊保護原則檔案不會儲存在 SQL Server 中。
 > SSMS 會使用預設資訊保護原則。 如果自訂的資訊保護原則失敗，SSMS 便無法使用預設原則。 資料分類失敗。 若要解決此問題，請按一下 [重設資訊保護原則]  以使用預設原則，然後重新啟用資料分類。
 
-## <a id="subheading-4"></a>存取分類中繼資料
+## <a name="accessing-the-classification-metadata"></a><a id="subheading-4"></a>存取分類中繼資料
 
 SQL Server 2019 引進 [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md) 系統目錄檢視。 此檢視會傳回資訊類型和敏感度標籤。 
 
@@ -183,15 +183,15 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
-## <a id="subheading-5"></a>管理分類
+## <a name="manage-classifications"></a><a id="subheading-5"></a>管理分類
 
-# <a name="t-sqltabt-sql"></a>[T-SQL](#tab/t-sql)
+# <a name="t-sql"></a>[T-SQL](#tab/t-sql)
 您可以使用 T-SQL 新增/移除資料行分類，以及擷取整個資料庫的所有分類。
 
 - 新增/更新一或多個資料行的分類：[ADD SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)
 - 從一或多個資料行移除分類：[DROP SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql)
 
-# <a name="powershell-cmdlettabsql-powelshell"></a>[PowerShell Cmdlet](#tab/sql-powelshell)
+# <a name="powershell-cmdlet"></a>[PowerShell Cmdlet](#tab/sql-powelshell)
 您可以使用 PowerShell Cmdlet 來新增/移除資料行分類，以及擷取所有分類並取得整個資料庫的建議。
 
 - [Get-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps) \(英文\)
@@ -201,7 +201,7 @@ FROM
 
 ---
 
-## <a id="subheading-6"></a>後續步驟
+## <a name="next-steps"></a><a id="subheading-6"></a>後續步驟
 
 針對 Azure SQL Database，請參閱 [Azure SQL Database 的資料探索與分類](https://go.microsoft.com/fwlink/?linkid=866265)。
 

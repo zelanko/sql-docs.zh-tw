@@ -14,10 +14,10 @@ ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa9599ae0a4c3a38a409131b3f9f344bd478e15b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294305"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight 建立叢集工作

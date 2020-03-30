@@ -22,10 +22,10 @@ ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a5b722f37fb6a5e30a50307a5d7828868ecd1fba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68072266"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)

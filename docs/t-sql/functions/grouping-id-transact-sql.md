@@ -19,10 +19,10 @@ ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 13680aea1d34b83d76647d39d0f40b84609b2e8c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67910649"
 ---
 # <a name="grouping_id-transact-sql"></a>GROUPING_ID (Transact-SQL)

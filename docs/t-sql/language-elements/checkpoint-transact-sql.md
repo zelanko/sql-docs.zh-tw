@@ -27,10 +27,10 @@ ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
 ms.openlocfilehash: d662eb333ae932370c09847319cb69a5deb4773e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67950331"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
@@ -59,7 +59,7 @@ CHECKPOINT [ checkpoint_duration ]
   
  使用 *checkpoint_duration* 對效能的影響會隨著中途分頁數、系統上的活動，以及所指定的實際持續時間而不同。 例如，如果檢查點通常會在 120 秒內完成，將 *checkpoint_duration* 指定為 45 秒會造成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用於檢查點的資源比預設指派的還多。 相反地，將 *checkpoint_duration* 指定為 180 秒則會造成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派的資源比預設指派的還少。 一般而言，縮短 *checkpoint_duration* 將增加檢查點所佔用的資源；而加長 *checkpoint_duration* 則會減少檢查點所佔用的資源。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一律會盡其所能地完成檢查點，並會在檢查點完成時，立即傳回 CHECKPOINT 陳述式。 因此，在某些情況下，檢查點作業的完成會比指定的持續時間快，執行時間也有可能超出指定的持續時間。  
   
-##  <a name="Security"></a> Security  
+##  <a name="security"></a><a name="Security"></a> Security  
   
 ### <a name="permissions"></a>權限  
  CHECKPOINT 權限預設會授與 **sysadmin** 固定伺服器角色及 **db_owner** 與 **db_backupoperator** 固定資料庫角色的成員，且無法轉讓。  

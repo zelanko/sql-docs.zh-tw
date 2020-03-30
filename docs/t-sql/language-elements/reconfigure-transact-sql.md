@@ -23,10 +23,10 @@ ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6ee52f585af8930afcba301a5aba12df4eb47173
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68072384"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)

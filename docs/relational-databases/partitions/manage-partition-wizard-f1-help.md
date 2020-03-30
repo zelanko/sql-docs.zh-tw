@@ -24,10 +24,10 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: dc76237530ba47a513aba164260061ec6b20e7c3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68892414"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>管理資料分割精靈 F1 說明
@@ -44,7 +44,7 @@ ms.locfileid: "68892414"
   
  本節提供使用 [管理資料分割精靈]  來管理、修改和實作資料分割的必要資訊。  
   
-##  <a name="Top"></a> 本節內容  
+##  <a name="in-this-section"></a><a name="Top"></a> 本節內容  
  下列章節提供有關 [管理資料分割精靈]  頁面的說明。  
   
  [管理資料分割精靈 (選取資料分割動作頁面)](#SelectPartitionAction)  
@@ -63,7 +63,7 @@ ms.locfileid: "68892414"
   
  [管理資料分割精靈 (進度頁面)](#Progress)  
   
-##  <a name="SelectPartitionAction"></a> 選取資料分割動作頁面  
+##  <a name="select-partition-action-page"></a><a name="SelectPartitionAction"></a> 選取資料分割動作頁面  
  使用 [選取資料分割動作]  頁面，即可選擇您想要針對資料分割執行的動作。  
   
 ### <a name="create-a-staging-table"></a>建立臨時資料表  
@@ -91,7 +91,7 @@ ms.locfileid: "68892414"
   
  ![與 [回到頁首] 連結搭配使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示") [本節內容](#Top)  
   
-##  <a name="SwitchIn"></a> 選取資料分割切換移入選項頁面  
+##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> 選取資料分割切換移入選項頁面  
  使用 [選取資料分割切換移入選項]  頁面，選取您想要切換移入資料分割資料表的暫存資料表。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
@@ -106,7 +106,7 @@ ms.locfileid: "68892414"
   
  ![與 [回到頁首] 連結搭配使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示") [本節內容](#Top)  
   
-##  <a name="SwitchOut"></a> 選取資料分割切換移出選項頁面  
+##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> 選取資料分割切換移出選項頁面  
  使用 [選取資料分割切換移出選項]  頁面，選取資料分割和暫存資料表來保存您想要切換移出資料分割資料表的分割資料。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
@@ -124,7 +124,7 @@ ms.locfileid: "68892414"
   
  ![與 [回到頁首] 連結搭配使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示") [本節內容](#Top)  
   
-##  <a name="StagingTableOptions"></a> 選取暫存資料表選項頁面  
+##  <a name="select-the-staging-table-options-page"></a><a name="StagingTableOptions"></a> 選取暫存資料表選項頁面  
  使用 [選取暫存資料表選項]  頁面，即可建立您想要用來切換分割資料的暫存資料表。  
   
  臨時資料表必須與來源資料表所在的選取資料分割位於相同的檔案群組中。 臨時資料表必須鏡像來源資料表和目的地資料表的設計。  
@@ -146,7 +146,7 @@ ms.locfileid: "68892414"
   
  ![與 [回到頁首] 連結搭配使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示") [本節內容](#Top)  
   
-##  <a name="OutputOption"></a> 選取輸出選項頁面  
+##  <a name="select-output-option-page"></a><a name="OutputOption"></a> 選取輸出選項頁面  
  使用 [選取輸出選項]  頁面，指定要如何完成資料分割修改。  
   
 ### <a name="create-script"></a>建立指令碼  
@@ -173,7 +173,7 @@ ms.locfileid: "68892414"
   
  ![與 [回到頁首] 連結搭配使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示") [本節內容](#Top)  
   
-##  <a name="NewJob"></a> 新增作業排程頁面  
+##  <a name="new-job-schedule-page"></a><a name="NewJob"></a> 新增作業排程頁面  
  使用 [新增作業排程]  頁面，即可檢視和變更排程的屬性。  
   
 ### <a name="options"></a>選項。  
@@ -256,7 +256,7 @@ ms.locfileid: "68892414"
   
  ![與 [回到頁首] 連結搭配使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示") [本節內容](#Top)  
   
-##  <a name="Summary"></a> 摘要頁面  
+##  <a name="summary-page"></a><a name="Summary"></a> 摘要頁面  
  使用 [摘要]  頁面，即可檢閱您在先前頁面中選取的選項。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
@@ -265,7 +265,7 @@ ms.locfileid: "68892414"
   
  ![與 [回到頁首] 連結搭配使用的箭頭圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "與 [回到頁首] 連結搭配使用的箭頭圖示") [本節內容](#Top)  
   
-##  <a name="Progress"></a> 進度頁面  
+##  <a name="progress-page"></a><a name="Progress"></a> 進度頁面  
  使用 [進度]  頁面，即可監視有關 [管理資料分割精靈]  動作的狀態資訊。 根據您在精靈中選取的選項，[進度]  頁面可能會包含一或多個動作。 頂端的方塊會顯示精靈的整體狀態以及精靈已接收的狀態、錯誤和警告訊息數。  
   
 ### <a name="options"></a>選項。  

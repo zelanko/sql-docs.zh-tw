@@ -12,10 +12,10 @@ ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bc7255cdcb9758f2bdd55b043e70669affadabd8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285223"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>建立資料表的 SQL 陳述式 (SQL Server 匯入和匯出精靈)
@@ -26,7 +26,7 @@ ms.locfileid: "71285223"
 如果您選取 [建立目的地資料表]  ，然後在 [資料行對應]  對話方塊中選取 [編輯 SQL]  ，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [建立資料表的 SQL 陳述式]  對話方塊。 在此頁面上，您可以檢閱並選擇性地自訂 **CREATE TABLE** 命令，精靈將會執行此命令來建立新的目的地資料表。
   
 > [!NOTE]
-> 如果您想要尋找 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE 陳述式的相關資訊，而不是 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 之 [建立資料表的 SQL 陳述式]  對話方塊的相關資訊，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。 
+> 如果您想要尋找 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE 陳述式的相關資訊，而不是 [ **匯入和匯出精靈] 之 [建立資料表的 SQL 陳述式]** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對話方塊的相關資訊，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。 
   
 ## <a name="screen-shot-of-the-create-table-sql-statement-page"></a>[建立資料表的 SQL 陳述式] 頁面的螢幕擷取畫面  
  下列螢幕擷取畫面顯示精靈的 [建立資料表的 SQL 陳述式]  對話方塊。

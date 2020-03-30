@@ -15,10 +15,10 @@ ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8eb8570d260b1e30d3c0ecafa0f3bfd15065983
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72278168"
 ---
 # <a name="query-method-xml-data-type"></a>query() 方法 (xml 資料類型)

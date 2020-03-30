@@ -18,10 +18,10 @@ ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a8772e2e1ecb001b26db02750ae134f545180113
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71314559"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)

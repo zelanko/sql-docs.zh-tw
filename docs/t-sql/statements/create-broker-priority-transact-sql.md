@@ -26,10 +26,10 @@ ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73064677"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
@@ -60,7 +60,7 @@ FOR CONVERSATION
  指定此交談優先權的名稱。 此名稱在目前資料庫中必須是唯一的，且必須符合[!INCLUDE[ssDE](../../includes/ssde-md.md)] [識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
  SET  
- 指定用來判斷交談優先權是否套用到交談的準則。 如果有指定，SET 必須至少包含一個準則：CONTRACT_NAME、LOCAL_SERVICE_NAME、REMOTE_SERVICE_NAME 或 PRIORITY_LEVEL。 如果未指定 SET，所有的三個準則都會設定預設值。  
+ 指定用來判斷交談優先權是否套用到交談的準則。 如果有指定，SET 至少必須包含一個準則：CONTRACT_NAME、LOCAL_SERVICE_NAME、REMOTE_SERVICE_NAME 或 PRIORITY_LEVEL。 如果未指定 SET，所有的三個準則都會設定預設值。  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
  指定合約名稱，以用來做為判斷交談優先權是否要套用到交談的準則。 *ContractName* 是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 識別碼，而且必須指定目前資料庫中的合約名稱。  
@@ -218,7 +218,7 @@ CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/BasePriority]
 ```  
   
 ### <a name="d-creating-three-priority-levels-for-a-target-service-by-using-services"></a>D. 使用服務來為目標服務建立三個優先權等級  
- 支援提供三個效能層級的系統：金 (高)、銀 (中) 和銅 (低)。 這是一個合約，但是每一個等級都有不同的起始端服務。 所有的起始端服務都會與中央目標服務通訊。  
+ 支援提供三個效能層級的系統：金卡 (高)、銀卡 (中) 和青銅卡 (低)。 這是一個合約，但是每一個等級都有不同的起始端服務。 所有的起始端服務都會與中央目標服務通訊。  
   
 ```sql  
 CREATE BROKER PRIORITY GoldInitToTargetPriority  
@@ -260,7 +260,7 @@ CREATE BROKER PRIORITY BronzeTargetToInitPriority
 ```  
   
 ### <a name="e-creating-three-priority-levels-for-multiple-services-using-contracts"></a>E. 使用合約來為多個服務建立三個優先權等級  
- 支援提供三個效能層級的系統：金 (高)、銀 (中) 和銅 (低)。 每一個等級都有不同的合約。 這些優先權會套用到由使用合約的交談所參考的任何服務。  
+ 支援提供三個效能層級的系統：金卡 (高)、銀卡 (中) 和青銅卡 (低)。 每一個等級都有不同的合約。 這些優先權會套用到由使用合約的交談所參考的任何服務。  
   
 ```sql  
 CREATE BROKER PRIORITY GoldPriority  

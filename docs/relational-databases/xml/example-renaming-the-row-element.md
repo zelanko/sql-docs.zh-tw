@@ -13,10 +13,10 @@ ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 275b1c6c138b11fa6330dc61fbfbfd2014a229c5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006806"
 ---
 # <a name="example-renaming-the-ltrowgt-element"></a>範例：重新命名 &lt;資料列&gt; 項目

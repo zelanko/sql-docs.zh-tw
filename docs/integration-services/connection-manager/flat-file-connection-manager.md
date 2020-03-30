@@ -23,10 +23,10 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f865a560cb530060cf8f2f0a2f0a6208fcc924ed
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298598"
 ---
 # <a name="flat-file-connection-manager"></a>一般檔案連接管理員
@@ -255,7 +255,7 @@ ms.locfileid: "71298598"
 |**ColumnType**|代表資料行是否為分隔的、固定寬度或不齊右。 這個屬性是唯讀的。 不齊右檔案就是除了最後一個資料行之外，其他所有資料行都有固定寬度的檔案。 它是以資料列分隔符號分隔。|  
 |**OutputColumnWidth**|指定儲存為位元組計數的值；針對 Unicode 檔案，此值將對應至字元計數。 在資料流程工作中，這個值將用來替一般檔案來源設定輸出資料行寬度。 在物件模型中，這個屬性的名稱為 MaximumWidth。|  
 |**DataType**|從可用的資料類型清單中選取。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。|  
-|**TextQualified**|指出文字資料是否會由文字限定詞字元 (例如引號字元) 括住。<br /><br /> True：一般檔案中文字資料是限定的。 False：一般檔案中的文字資料是「非」限定的。|  
+|**TextQualified**|指出文字資料是否會由文字限定詞字元 (例如引號字元) 括住。<br /><br /> True：一般檔案中的文字資料是限定的。 False：一般檔案中的文字資料是非限定的。|  
 |**名稱**|提供描述性資料行名稱。 如果未輸入名稱， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會自動以 Column 0、Column 1 等等的格式建立名稱。|  
 |**DataScale**|指定數值資料的小數位數。 小數位數是指小數位數的數目。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。|  
 |**ColumnDelimiter**|從可用的資料行分隔符號清單中選取。 請選擇不太可能會在文字中出現的分隔符號。 固定寬度資料行將忽略這個值。<br /><br /> **{CR}{LF}** ： 資料行是以歸位字元和換行字元的組合分隔。<br /><br /> **{CR}** ： 資料行是以歸位字元分隔。<br /><br /> **{LF}** ： 資料行是以換行字元分隔。<br /><br /> **分號 {;}** ： 資料行是以分號分隔。<br /><br /> **冒號 {:}** ： 資料行是以冒號分隔。<br /><br /> **逗號 {,}** . 資料行是以逗號分隔。<br /><br /> **定位字元 {t}** ： 資料行是以定位字元分隔。<br /><br /> **分隔號 {&#124;}** ： 資料行是以分隔號分隔。|  

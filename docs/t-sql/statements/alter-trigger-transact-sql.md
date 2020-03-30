@@ -22,10 +22,10 @@ ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5e8523831fd181c17bd8fcff1698d85f46c824e2
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73983321"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
@@ -199,7 +199,7 @@ AS { sql_statement
  這是在執行之後會引發 DDL 觸發程序的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言事件名稱。 有效的 DDL 觸發程序事件會列在 [DDL 事件](../../relational-databases/triggers/ddl-events.md)中。  
   
  *event_group*  
- 這是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言事件之預設定義群組的名稱。 在執行屬於 *event_group* 的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言事件之後，便會引發 DDL 觸發程序。 有效的 DDL 觸發程序事件群組會列在 [DDL 事件群組](../../relational-databases/triggers/ddl-event-groups.md)中。 在完成執行 ALTER TRIGGER 之後，您也可以將其所涵蓋的事件類型新增至 sys.trigger_events 目錄檢視，以將 *event_group* 作為巨集。  
+ 這是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言事件之預設定義群組的名稱。 在執行屬於 [!INCLUDE[tsql](../../includes/tsql-md.md)]event_group*的任何* 語言事件之後，便會引發 DDL 觸發程序。 有效的 DDL 觸發程序事件群組會列在 [DDL 事件群組](../../relational-databases/triggers/ddl-event-groups.md)中。 在完成執行 ALTER TRIGGER 之後，您也可以將其所涵蓋的事件類型新增至 sys.trigger_events 目錄檢視，以將 *event_group* 作為巨集。  
   
  NOT FOR REPLICATION  
  **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  

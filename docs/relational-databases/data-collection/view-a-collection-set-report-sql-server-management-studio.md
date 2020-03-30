@@ -15,10 +15,10 @@ ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: dd303efebcf988d07d068f5518dd340b9ae74fbc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055560"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>檢視收集組報表 (SQL Server Management Studio)

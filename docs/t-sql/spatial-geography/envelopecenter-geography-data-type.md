@@ -18,10 +18,10 @@ ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: da1c2fd6f1e6732f28f79196b433b8e46a595a85
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68066431"
 ---
 # <a name="envelopecenter-geography-data-type"></a>EnvelopeCenter (geography 資料類型)

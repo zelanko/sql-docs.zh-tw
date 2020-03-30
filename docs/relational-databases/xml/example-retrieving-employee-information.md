@@ -13,10 +13,10 @@ ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3e123a5195d9eb6a5dd489c635cdd687b42f720
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006774"
 ---
 # <a name="example-retrieving-employee-information"></a>範例：擷取員工資訊

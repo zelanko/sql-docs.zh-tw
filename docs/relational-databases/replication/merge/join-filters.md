@@ -16,10 +16,10 @@ ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 712665d24946c2826e4ab6c5e53bb853b07642b4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68033240"
 ---
 # <a name="join-filters"></a>聯結篩選

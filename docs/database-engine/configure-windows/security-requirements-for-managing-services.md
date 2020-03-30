@@ -19,10 +19,10 @@ ms.assetid: 1874a317-ddb2-425d-98d9-b53e1be6fc6a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ede737abf7d158e4d8dee66885ced018f03a375e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68025633"
 ---
 # <a name="security-requirements-for-managing-services"></a>管理服務的安全性需求

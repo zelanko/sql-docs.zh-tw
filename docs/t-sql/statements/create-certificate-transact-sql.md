@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d0f1a4e939a6e61881359f1e13a3bbe84cc8e9f9
-ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77074436"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
@@ -139,7 +139,7 @@ CREATE CERTIFICATE certificate_name
 > 自主資料庫或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 無法使用這個選項。  
   
  BINARY = *private_key_bits*  
- **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 起) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定為二進位常數的私密金鑰位元。 這些位元可以是加密形式。 如果加密的話，使用者必須提供解密密碼。 不會針對這個密碼執行密碼原則檢查。 私密金鑰位元應該採用 PVK 檔案格式。  
   
@@ -164,7 +164,7 @@ CREATE CERTIFICATE certificate_name
 ## <a name="remarks"></a>備註  
  憑證是遵照 X.509 標準及支援 X.509 V1 欄位的資料庫層級安全性實體。 `CREATE CERTIFICATE` 可以從檔案、二進位常數或組件載入憑證。 這個陳述式也可以產生金鑰組及建立自簽憑證。  
   
- 私密金鑰必須為 \<= 2500 位元組的加密格式。 截至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 止，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的私密金鑰長度為 1024 個位元；從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始則為 2048 位元。 從外部來源匯入的私密金鑰，其最小長度為 384 個位元，其最大長度為 4,096 個位元。 匯入的私密金鑰，其長度必須為 64 個位元的整數倍。 用於 TDE 的憑證限制在 3456 位元的私密金鑰大小。  
+ 私密金鑰必須為 \<= 2500 位元組的加密格式。 截至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 止，[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 產生的私密金鑰長度為 1024 個位元；從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始則為 2048 位元。 從外部來源匯入的私密金鑰，其最小長度為 384 個位元，其最大長度為 4,096 個位元。 匯入的私密金鑰，其長度必須為 64 個位元的整數倍。 用於 TDE 的憑證限制在 3456 位元的私密金鑰大小。  
   
  系統會儲存憑證的完整「序號」，但只有前 16 個位元組會出現在 sys.certificates 目錄檢視中。  
   

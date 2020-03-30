@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 1f6bb69e4d1a18cf2f3e596a4bbbd179e8c4f373
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74056013"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>大量匯入或大量匯出的資料格式 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "74056013"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="ComponentsAndConcepts"></a> 大量匯入或匯出的資料格式  
+##  <a name="data-formats-for-bulk-import-or-export"></a><a name="ComponentsAndConcepts"></a> 大量匯入或匯出的資料格式  
  下表根據資料的呈現方式和作業的來源或目標，指出一般適合使用的資料格式。  
   
 |作業|原生|Unicode 原生|字元|Unicode 字元|  
@@ -46,7 +46,7 @@ ms.locfileid: "74056013"
   
  \* 這是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bcp **時，從**大量匯出資料最快的方法。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [使用原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
   

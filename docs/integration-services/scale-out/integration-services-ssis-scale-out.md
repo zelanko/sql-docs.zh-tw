@@ -12,10 +12,10 @@ ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4b4a5b5f27f959f3a04bb3cf5468d198d3ef5267
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295658"
 ---
 # <a name="integration-services-ssis-scale-out"></a>Integration Services (SSIS) 擴增
@@ -49,4 +49,4 @@ SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 
 ## <a name="next-steps"></a>後續步驟
 -   [在單一電腦上開始使用 Integration Services (SSIS) Scale Out](get-started-with-ssis-scale-out-onebox.md)
 
--   [逐步解說：設定 Integration Services 相應放大](walkthrough-set-up-integration-services-scale-out.md)
+-   [逐步解說：設定 Integration Services 擴增](walkthrough-set-up-integration-services-scale-out.md)

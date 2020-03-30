@@ -11,10 +11,10 @@ ms.date: 08/20/2018
 ms.author: chugu
 author: chugugrace
 ms.openlocfilehash: 8d78ab5befe5f95c07b6cb539d2629fdd9d003ae
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75924980"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料載入 SQL Server 或 Azure SQL Database
