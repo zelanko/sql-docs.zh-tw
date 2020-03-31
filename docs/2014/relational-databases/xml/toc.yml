@@ -98,11 +98,11 @@
       href: example-retrieving-product-model-information-as-xml.md
     - name: 範例：使用 ELEMENTS 指示詞指定 XSINIL
       href: example-specifying-xsinil-with-the-elements-directive.md
-    - name: 範例：使用 XMLDATA 和 XMLSCHEMA 選項要求結構描述當做結果
+    - name: 範例：使用 XMLDATA 和 XMLSCHEMA 選項來要求結構描述作為結果
       href: example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
     - name: 範例：擷取二進位資料
       href: example-retrieving-binary-data.md
-    - name: 範例：重新命名 <row> 項目
+    - name: 範例：為 <row> 元素重新命名
       href: example-renaming-the-row-element.md
     - name: 範例：為 FOR XML 產生的 XML 指定根元素
       href: example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md

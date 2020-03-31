@@ -7,10 +7,10 @@ metadata:
   description: 了解如何使用 Azure SQL Services 來完美管理內部部署與雲端中的資料庫需求。
   ms.topic: hub-page
   ms.openlocfilehash: 42bba30813744d9dfeb20e1042ba3a57f1ee99c6
-  ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+  ms.sourcegitcommit: 700c07312d1ffc034e7a684cbf4265afc7c84993
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/31/2020
+  ms.lasthandoff: 03/27/2020
   ms.locfileid: "76831647"
 highlightedContent:
   items:

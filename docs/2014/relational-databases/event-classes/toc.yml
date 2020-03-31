@@ -351,25 +351,25 @@
       href: dtctransaction-event-class.md
     - name: SQLTransaction 事件類別
       href: sqltransaction-event-class.md
-    - name: 'TM: Begin Tran Completed 事件類別'
+    - name: TM：Begin Tran Completed 事件類別
       href: tm-begin-tran-completed-event-class.md
-    - name: 'TM: Begin Tran Starting 事件類別'
+    - name: TM：Begin Tran Starting 事件類別
       href: tm-begin-tran-starting-event-class.md
-    - name: 'TM: Commit Tran Completed 事件類別'
+    - name: TM：Commit Tran Completed 事件類別
       href: tm-commit-tran-completed-event-class.md
-    - name: 'TM: Commit Tran Starting 事件類別'
+    - name: TM：Commit Tran Starting 事件類別
       href: tm-commit-tran-starting-event-class.md
-    - name: 'TM: Promote Tran Completed 事件類別'
+    - name: TM：Promote Tran Completed 事件類別
       href: tm-promote-tran-completed-event-class.md
-    - name: 'TM: Promote Tran Starting 事件類別'
+    - name: TM：Promote Tran Starting 事件類別
       href: tm-promote-tran-starting-event-class.md
-    - name: 'TM: Rollback Tran Completed 事件類別'
+    - name: TM：Rollback Tran Completed 事件類別
       href: tm-rollback-tran-completed-event-class.md
-    - name: 'TM: Rollback Tran Starting 事件類別'
+    - name: TM：Rollback Tran Starting 事件類別
       href: tm-rollback-tran-starting-event-class.md
-    - name: 'TM: Save Tran Completed 事件類別'
+    - name: TM：Save Tran Completed 事件類別
       href: tm-save-tran-completed-event-class.md
-    - name: 'TM: Save Tran Starting 事件類別'
+    - name: TM：Save Tran Starting 事件類別
       href: tm-save-tran-starting-event-class.md
     - name: TransactionLog 事件類別
       href: transactionlog-event-class.md

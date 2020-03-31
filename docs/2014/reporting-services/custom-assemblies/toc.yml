@@ -13,5 +13,5 @@
       href: accessing-custom-assemblies-through-expressions.md
     - name: 初始化自訂組件物件
       href: initializing-custom-assembly-objects.md
-    - name: 如何：偵錯自訂組件
+    - name: 如何：針對自訂組件進行偵錯
       href: how-to-debug-custom-assemblies.md
