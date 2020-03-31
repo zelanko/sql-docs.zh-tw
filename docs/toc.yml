@@ -707,7 +707,7 @@
                   href: database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md
                 - name: 檢視接聽程式屬性
                   href: database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md
-            - name: 作業
+            - name: 操作
               items:
                 - name: 新增資料庫
                   items:
@@ -751,6 +751,8 @@
                   href: database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md
                 - name: 以原則檢視健全狀況
                   href: database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
+                - name: 連線到接聽程式
+                  href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
         - name: 概念
           items:
             - name: 組態
@@ -789,12 +791,12 @@
                   href: database-engine/availability-groups/windows/possible-failures-during-sessions-between-availability-replicas-sql-server.md
             - name: 連線能力
               items:
-                - name: 用戶端連線
+                - name: 接聽程式
+                  href: database-engine/availability-groups/windows/availability-group-listener-overview.md
+                - name: 用戶端連線類型
                   href: database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md
-                - name: 用戶端連線性
+                - name: 驅動程式與用戶端支援
                   href: database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md
-                - name: 接聽程式、用戶端與容錯移轉
-                  href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
             - name: 互通性
               items:
                 - name: 複寫、CT 與 CDC
@@ -4196,7 +4198,7 @@
           items:
             - name: SQL Server 2019
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
-            - name: SQL Server 2017 和先前的版本
+            - name: SQL Server 2016 & 2017
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
         - name: 安全性考量
           href: sql-server/install/security-considerations-for-a-sql-server-installation.md
@@ -6166,15 +6168,6 @@
                       href: relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md
         - name: 交易記錄管理
           items:
-            - name: 記錄檔檢視器
-              href: relational-databases/logs/log-file-viewer.md
-              items:
-                - name: 開啟
-                  href: relational-databases/logs/open-log-file-viewer.md
-                - name: 離線檢視
-                  href: relational-databases/logs/view-offline-log-files.md
-                - name: F1 說明
-                  href: relational-databases/logs/log-file-viewer-f1-help.md
             - name: 交易記錄
               href: relational-databases/logs/the-transaction-log-sql-server.md
               items:
@@ -8401,6 +8394,15 @@
               href: ssms/ssms-utility.md
             - name: SSMS 鍵盤快速鍵
               href: ssms/sql-server-management-studio-keyboard-shortcuts.md
+            - name: 記錄檔檢視器
+              href: relational-databases/logs/log-file-viewer.md
+              items:
+                - name: F1 說明
+                  href: relational-databases/logs/log-file-viewer-f1-help.md
+                - name: 開啟
+                  href: relational-databases/logs/open-log-file-viewer.md
+                - name: 離線檢視
+                  href: relational-databases/logs/view-offline-log-files.md
             - name: SQL Server Agent
               items:
                 - name: SQL Server Agent
@@ -9842,7 +9844,7 @@
             - name: 安裝 SQL Server 機器學習服務
               href: linux/sql-server-linux-setup-machine-learning.md
             - name: 在 Docker 上安裝 SQL Server 機器學習服務
-              href: linux/sql-server-setup-machine-learning-docker.md
+              href: linux/sql-server-linux-setup-machine-learning-docker.md
             - name: 安裝 SQL Server 語言延伸模組
               href: linux/sql-server-linux-setup-language-extensions.md
             - name: 設定存放庫
@@ -17068,5 +17070,3 @@
               href: xquery/string-search-in-xquery.md
             - name: 處理 XQuery 中的命名空間
               href: xquery/handling-namespaces-in-xquery.md
-- name: 知識庫支援
-  href: kb-support/toc.yml

@@ -15,18 +15,16 @@
       href: ../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md
 - name: 安裝
   items:
-    - name: SQL Server 2019 的個別變更
-      href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
     - name: 在 Windows 上安裝 ML 服務
       href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
     - name: 在 Linux 上安裝 ML 服務
       href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
+    - name: 在 Docker 上安裝 ML 服務
+      href: ../linux/sql-server-linux-setup-machine-learning-docker.md?toc=/sql/advanced-analytics/toc.json
+    - name: SQL Server 2019 的個別變更
+      href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
     - name: 安裝 R 服務
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
-    - name: 安裝獨立伺服器
-      href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
-    - name: 安裝已訓練的模型
-      href: ../advanced-analytics/install/sql-pretrained-models-install.md
     - name: 離線安裝 (無網際網路)
       items:
         - name: 在沒有網際網路存取的情況下安裝
@@ -35,6 +33,8 @@
           href: ../advanced-analytics/install/sql-ml-cab-downloads.md
     - name: 命令提示字元設定
       href: ../advanced-analytics/install/sql-ml-component-commandline-install.md
+    - name: 安裝已訓練的模型
+      href: ../advanced-analytics/install/sql-pretrained-models-install.md
     - name: 升級 Python 與 R
       href: ../advanced-analytics/install/upgrade-r-and-python.md
     - name: Azure Data Studio 筆記本
@@ -45,6 +45,8 @@
       href: ../advanced-analytics/r/set-up-a-data-science-client.md
     - name: 在 Azure VM 安裝
       href: ../advanced-analytics/install/sql-machine-learning-azure-virtual-machine.md
+    - name: 安裝獨立伺服器
+      href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
 - name: 快速入門
   items:
     - name: Python
