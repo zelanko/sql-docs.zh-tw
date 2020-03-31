@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 987217c1afe07b5e917f415b9a5bc0d784ab7c6d
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903767"
 ---
 # <a name="troubleshoot-scale-out"></a>針對 Scale Out 進行疑難排解
@@ -157,7 +157,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>徵狀
 
- 「System.ServiceModel.CommunicationException:對 https://[機器名稱]:[連接埠]/ClusterManagement/ 發出 HTTP 要求時發生錯誤。這可能是因為在 HTTPS 的情況下，伺服器憑證未使用 HTTP.SYS 正確設定。也可能是因為用戶端與伺服器之間的安全性繫結不相符所造成。」
+*「System.ServiceModel.CommunicationException:對 https://[機器名稱]:[連接埠]/ClusterManagement/ 發出 HTTP 要求時發生錯誤。這可能是因為在 HTTPS 的情況下，伺服器憑證未使用 HTTP.SYS 正確設定。也可能是因為用戶端與伺服器之間的安全性繫結不相符所造成。」
 
 ### <a name="solution"></a>解決方法
 1.  執行下列命令，檢查主要節點上 Scale Out Master 憑證是否正確地繫結至主要端點中的連接埠：

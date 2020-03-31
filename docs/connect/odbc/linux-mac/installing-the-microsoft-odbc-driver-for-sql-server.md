@@ -12,10 +12,10 @@ author: rothja
 ms.author: v-jizho2
 manager: jroth
 ms.openlocfilehash: 934bd563af82c5fb8ca1d08ae7dc1b17160e3284
-ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79058832"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-linux"></a>安裝 Microsoft ODBC Driver for SQL Server (Linux)
@@ -24,7 +24,7 @@ ms.locfileid: "79058832"
 
 本文提供從 Bash Shell 安裝 ODBC 驅動程式的命令。 如果想要直接下載套件，請參閱[下載 ODBC Driver for SQL Server](../download-odbc-driver-for-sql-server.md)。
 
-## <a id="17"></a> Microsoft ODBC 17
+## <a name="microsoft-odbc-17"></a><a id="17"></a> Microsoft ODBC 17
 
 下列各節說明如何從不同 Linux 發行版本的 Bash Shell 安裝 Microsoft ODBC Driver 17。
 
@@ -37,7 +37,7 @@ ms.locfileid: "79058832"
 > [!IMPORTANT]
 > 如果您已安裝短暫提供的第 17 版 `msodbcsql` 套件，您應該先移除它，再安裝 `msodbcsql17` 套件。 如此可避免衝突。 `msodbcsql17` 套件可以和 `msodbcsql` 第 13 版套件並存安裝。
 
-### <a id="alpine17"></a> Alpine Linux
+### <a name="alpine-linux"></a><a id="alpine17"></a> Alpine Linux
 
 ```bash
 #Download the desired package(s)
@@ -62,7 +62,7 @@ sudo apk add --allow-untrusted mssql-tools_17.5.2.1-1_amd64.apk
 > [!NOTE]
 > Alpine 支援需要驅動程式 17.5 版或更新版本。
 
-### <a id="debian17"></a> Debian
+### <a name="debian"></a><a id="debian17"></a> Debian
 
 ```bash
 sudo su
@@ -97,7 +97,7 @@ sudo apt-get install libgssapi-krb5-2
 > [!NOTE]
 > 您可以改為設定 debconf 變數 'msodbcsql/ACCEPT_EULA' 來替代設定環境變數 'ACCEPT_EULA'：`echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections`
 
-### <a id="redhat17"></a> Red Hat Enterprise Server 與 Oracle Linux
+### <a name="red-hat-enterprise-server-and-oracle-linux"></a><a id="redhat17"></a> Red Hat Enterprise Server 與 Oracle Linux
 
 ```bash
 sudo su
@@ -126,7 +126,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### <a id="suse17"></a> SUSE Linux Enterprise Server
+### <a name="suse-linux-enterprise-server"></a><a id="suse17"></a> SUSE Linux Enterprise Server
 
 ```bash
 sudo su
@@ -157,7 +157,7 @@ source ~/.bashrc
 sudo zypper install unixODBC-devel
 ```
 
-### <a id="ubuntu17"></a> Ubuntu
+### <a name="ubuntu"></a><a id="ubuntu17"></a> Ubuntu
 
 ```bash
 sudo su
@@ -202,7 +202,7 @@ sudo apt-get install unixodbc-dev
 - [Microsoft ODBC Driver 13 for SQL Server](#13)
 - [Microsoft ODBC Driver 11 for SQL Server](#11)
 
-## <a id="13.1"></a> ODBC 13.1
+## <a name="odbc-131"></a><a id="13.1"></a> ODBC 13.1
 
 下列各節說明如何從不同 Linux 發行版本的 Bash Shell 安裝 Microsoft ODBC Driver 13.1。
 
@@ -344,7 +344,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-## <a id="13"></a> ODBC 13
+## <a name="odbc-13"></a><a id="13"></a> ODBC 13
 
 下列各節說明如何從不同 Linux 發行版本的 Bash Shell 安裝 Microsoft ODBC Driver 13。
 
@@ -468,7 +468,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
 ```
 
-## <a id="11"></a> ODBC 11
+## <a name="odbc-11"></a><a id="11"></a> ODBC 11
 
 下列各節說明如何在 Linux 上安裝 Microsoft ODBC Driver 11。 您必須先安裝 unixODBC 驅動程式管理員，才能使用驅動程式。 如需詳細資訊，請參閱[安裝驅動程式管理員](../../../connect/odbc/linux-mac/installing-the-driver-manager.md)。
 
@@ -529,7 +529,7 @@ Linux 上的 ODBC 驅動程式包含下列元件：
 
 ## <a name="troubleshooting"></a>疑難排解
 
-如果無法使用 ODBC 驅動程式建立與 SQL Server 的連線，請參閱已知問題一文中的[＜針對連線問題進行疑難排解＞](known-issues-in-this-version-of-the-driver.md#connectivity)。
+如果無法使用 ODBC 驅動程式建立與 SQL Server 的連線，請參閱已知問題一文中的[針對連線問題進行疑難排解](known-issues-in-this-version-of-the-driver.md#connectivity)。
 
 ## <a name="next-steps"></a>後續步驟
 

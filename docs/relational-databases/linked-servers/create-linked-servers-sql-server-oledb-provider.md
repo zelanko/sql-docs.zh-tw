@@ -11,10 +11,10 @@ ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74095997"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Microsoft SQL Server 分散式查詢：OLE DB 連接
@@ -610,7 +610,7 @@ SQL Server 使用 `IOpenRowset::OpenRowset` 在基底資料表上開啟資料列
 
 Microsoft SQL Server 提供最強大的工具組，可從異質性資料來源存取資料。 藉由了解 SQL Server 所公開的 OLE-DB 介面，開發人員就可以在分散式查詢中進行高度的控制和複雜度。
 
-## <a name="appendixa"></a> SQL Server 使用的 OLE DB 介面
+## <a name="ole-db-interfaces-consumed-by-sql-server"></a><a name="appendixa"></a> SQL Server 使用的 OLE DB 介面
 
 下表列出 SQL Server 使用的所有 OLE DB 介面。 [必要] 欄指出介面是 SQL Server 所需最低 OLE DB 功能的一部分或其為選擇性。 如果指定的介面未標示為必要，則 SQL Server 仍然可以存取提供者，但無法對提供者執行某些特定的 SQL Server 功能或最佳化。
 
@@ -654,7 +654,7 @@ Microsoft SQL Server 提供最強大的工具組，可從異質性資料來源�
 >[!NOTE]
 >`Index` 物件、`Command` 物件和 `Error` 物件非為必要。 不過，如果受到支援，則列出的介面會在 [必要] 欄中指定為必要。
 
-## <a name="appendixb"></a>用於產生遠端查詢的 SQL 子集
+## <a name="sql-subset-used-for-generating-remote-queries"></a><a name="appendixb"></a>用於產生遠端查詢的 SQL 子集
 
 SQL Server 查詢處理器針對 SQL 命令提供者產生的 SQL 子集，取決於提供者依照 `DBPROP_SQLSUPPORT` 屬性指定支援的語法層級。
 
@@ -794,7 +794,7 @@ digit ::= 0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9
 
 period ::= . 
 
-## <a name="appendixc"></a>SQL Server 特定屬性
+## <a name="sql-server-specific-properties"></a><a name="appendixc"></a>SQL Server 特定屬性
 
 ```
 enum SQLPROPERTIES

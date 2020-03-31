@@ -18,10 +18,10 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a79b8399a6b435d4ed8b391b040e4800f1f50405
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286682"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>設定 Always On 可用性群組的唯讀路由
@@ -34,7 +34,7 @@ ms.locfileid: "79286682"
 >  如需如何設定可讀取之次要複本的相關資訊，請參閱 [設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
 
   
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
   
 -   可用性群組必須擁有可用性群組接聽程式。 如需詳細資訊，請參閱 [建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "79286682"
 
 -   如果使用 SQL 登入，請確定已正確地設定帳戶。 如需詳細資訊，請參閱[管理可用性群組之資料庫的登入及工作 (SQL Server)](logins-and-jobs-for-availability-group-databases.md)。
   
-##  <a name="RORReplicaProperties"></a> 您必須設定哪些複本屬性，才能支援唯讀路由？  
+##  <a name="what-replica-properties-do-you-need-to-configure-to-support-read-only-routing"></a><a name="RORReplicaProperties"></a> 您必須設定哪些複本屬性，才能支援唯讀路由？  
   
 -   每一個要支援唯讀路由之可讀取的次要複本，皆必須指定 *「唯讀路由 URL」* (Read-Only Routing URL)。 只有在本機複本以次要角色執行時，此 URL 才會生效。 如有必要，您必須各自指定每個複本的唯讀路由 URL。 每個唯讀路由 URL 可用於將讀取意圖的連接要求路由至特定可讀取的次要複本。 一般而言，每個可讀取的次要複本都有一個指派的唯讀路由 URL。  
   
@@ -58,14 +58,14 @@ ms.locfileid: "79286682"
 > [!NOTE]  
 >  如需可用性群組接聽程式的相關資訊，以及唯讀路由的詳細資訊，請參閱 [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。  
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="permissions"></a><a name="Permissions"></a> 權限  
   
 |Task|權限|  
 |----------|-----------------|  
 |若要在建立可用性群組時設定複本|需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
 |若要修改可用性複本|需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 ### <a name="configure-a-read-only-routing-list"></a>設定唯讀路由清單  
  您可以遵循下列步驟使用 TRANSACT-SQL 來設定唯讀路由。 如需程式碼範例，請參閱本節稍後的 [範例 (Transact-SQL)](#TsqlExample)。  
@@ -103,7 +103,7 @@ ms.locfileid: "79286682"
         > [!NOTE]  
         >  您必須先設定唯讀路由 URL，然後再設定唯讀路由清單。  
   
-###  <a name="loadbalancing"></a> 設定唯讀複本之間的負載平衡  
+###  <a name="configure-load-balancing-across-read-only-replicas"></a><a name="loadbalancing"></a> 設定唯讀複本之間的負載平衡  
  從 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]開始，您可以在一組唯讀複本中設定負載平衡。 以往，唯讀路由一律會將流量導向路由清單中第一個可用的複本。 若要利用這項功能，使用單層巢狀括弧括住 **CREATE AVAILABILITY GROUP** 或 **ALTER AVAILABILITY GROUP** 命令中的 **READ_ONLY_ROUTING_LIST** 伺服器執行個體。  
   
  例如，下列路由清單會跨 `Server1` 和 `Server2`這兩個唯讀複本，進行讀取意圖連接要求的負載平衡。 括住這些伺服器的巢狀括弧可識別負載平衡集。 如果該負載平衡集中都沒有可用的複本，它將繼續嘗試循序連接到唯讀路由清單中的其他複本 `Server3` 和 `Server4`。  
@@ -120,7 +120,7 @@ READ_ONLY_ROUTING_LIST = (('Server1','Server2'), ('Server3', 'Server4', 'Server5
   
  僅支援單層巢狀括弧。  
   
-###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  下列範例會將現有可用性群組 `AG1` 的兩個可用性複本修改成支援唯讀路由 (如果其中一個複本目前擁有主要角色的話)。 為了識別裝載可用性複本的伺服器執行個體，此範例會指定執行個體名稱：`COMPUTER01` 和 `COMPUTER02`。  
   
 ```  
@@ -155,7 +155,7 @@ GO
   
 ```  
   
-##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
   
 ### <a name="configure-a-read-only-routing-list"></a>設定唯讀路由清單  
  您可以依照下列步驟使用 PowerShell 來設定唯讀路由。 如需程式碼範例，請參閱本節稍後的 [範例 (PowerShell)](#PSExample)。  
@@ -184,7 +184,7 @@ GO
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
-###  <a name="PSExample"></a> 範例 (PowerShell)  
+###  <a name="example-powershell"></a><a name="PSExample"></a> 範例 (PowerShell)  
  下列範例會將可用性群組中的主要複本和一個次要複本設定為唯讀路由。 首先，此範例會將唯讀路由 URL 指派給每個複本。 然後，它會設定主要複本的唯讀路由清單。 在連接字串中設定 "ReadOnly" 屬性的連接將會重新導向至次要複本。 如果這個次要複本無法讀取 (由 **ConnectionModeInSecondaryRole** 設定決定)，連接將會導向回到主要複本。  
   
 ```  
@@ -197,13 +197,13 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingConnectionUrl "TCP://SecondaryServer.
 Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer" -InputObject $primaryReplica  
 ```  
   
-##  <a name="FollowUp"></a> 後續操作：設定唯讀路由之後  
+##  <a name="follow-up-after-configuring-read-only-routing"></a><a name="FollowUp"></a> 後續操作：設定唯讀路由之後  
  一旦目前的主要複本和可讀取的次要複本都設定為支援兩種角色的唯讀路由之後，可讀取的次要複本就可以從經由可用性群組接聽程式連接的用戶端接收讀取意圖連接要求。  
   
 > [!TIP]  
 >  當您使用 [bcp 公用程式](../../../tools/bcp-utility.md) 或 [sqlcmd 公用程式](../../../tools/sqlcmd-utility.md)時，您可以藉由指定 **-K ReadOnly** 參數，為啟用唯讀存取的任何次要複本指定唯讀存取。  
   
-###  <a name="ConnStringReqsRecs"></a> 用戶端連接字串的需求和建議  
+###  <a name="requirements-and-recommendations-for-client-connection-strings"></a><a name="ConnStringReqsRecs"></a> 用戶端連接字串的需求和建議  
  若要讓用戶端應用程式使用唯讀路由，其連接字串必須滿足下列需求：  
   
 -   使用 TCP 通訊協定。  
@@ -227,7 +227,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
 ### <a name="if-read-only-routing-is-not-working-correctly"></a>如果唯讀路由未正確運作  
  如需針對唯讀路由組態進行疑難排解的相關資訊，請參閱 [唯讀路由未正確運作](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md#ROR)。  
   
-##  <a name="RelatedTasks"></a> 後續步驟 
+##  <a name="next-steps"></a><a name="RelatedTasks"></a> 後續步驟 
 **若要檢視唯讀路由組態**  
   
 -   [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)  

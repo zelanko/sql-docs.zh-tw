@@ -11,10 +11,10 @@ ms.author: broneill
 ms.reviewer: alayu; sstein
 ms.date: 06/20/2018
 ms.openlocfilehash: 743e030b157590f1f33e961059c6bc9d710e7e0a
-ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79058772"
 ---
 # <a name="download-and-install-sqlpackage"></a>下載並安裝 sqlpackage
@@ -30,7 +30,7 @@ sqlpackage 在 Windows、macOS 和 Linux 上執行。
 |Linux .NET Core |[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2113331)|2019 年 12 月 13 日| 18.4.1|15.0.4630.1|
 |Windows .NET Core |[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2113704)|2019 年 12 月 13 日| 18.4.1|15.0.4630.1|
 
-如需最新版本的詳細資訊，請參閱[版本資訊](release-notes-sqlpackage.md)。 若要下載其他語言，請參閱[＜可用的語言＞](#available-languages)一節。
+如需最新版本的詳細資訊，請參閱[版本資訊](release-notes-sqlpackage.md)。 若要下載其他語言，請參閱[可用的語言](#available-languages)一節。
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

@@ -11,10 +11,10 @@ author: rothja
 ms.author: v-jizho2
 manager: jroth
 ms.openlocfilehash: 7ad2b810092fae850a667a1611880f4b03b6a9a8
-ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79078951"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-macos"></a>安裝 Microsoft ODBC Driver for SQL Server (macOS)
@@ -41,7 +41,7 @@ HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql17 mssql-tools
 
 下列各節提供在 macOS 上安裝舊版 Microsoft ODBC 驅動程式的指示。
 
-## <a id="13.1"></a> ODBC 13.1
+## <a name="odbc-131"></a><a id="13.1"></a> ODBC 13.1
 
 使用下列命令，在 OS X 10.11 (El Capitan) 與 macOS 10.12 (Sierra) 上安裝 Microsoft ODBC driver 13.1 for SQL Server：
 
@@ -70,7 +70,7 @@ macOS 上的 ODBC 驅動程式包含下列元件：
 
 ## <a name="troubleshooting"></a>疑難排解
 
-如果無法使用 ODBC 驅動程式建立與 SQL Server 的連線，請參閱已知問題一文中的[＜針對連線問題進行疑難排解＞](known-issues-in-this-version-of-the-driver.md#connectivity)。
+如果無法使用 ODBC 驅動程式建立與 SQL Server 的連線，請參閱已知問題一文中的 [針對連線問題進行疑難排解](known-issues-in-this-version-of-the-driver.md#connectivity)。
 
 ## <a name="next-steps"></a>後續步驟
 
