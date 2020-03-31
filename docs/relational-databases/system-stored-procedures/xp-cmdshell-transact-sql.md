@@ -1,7 +1,7 @@
 ---
-title: xp_cmdshell （Transact-sql） |Microsoft Docs
+title: xp_cmdshell（轉算-SQL） |微軟文檔
 ms.custom: ''
-ms.date: 12/01/2019
+ms.date: 03/30/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27fd489c9076be08a814f3ea0c27ad92f1f07fa7
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.openlocfilehash: 2ce32fc31373077418e77d31ce064d60e23f1b24
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77705853"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402696"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ xp_cmdshell { 'command_string' } [ , no_output ]
   
 ## <a name="arguments"></a>引數  
  **'** *command_string* **'**  
- 這是包含要傳送至作業系統之命令的字串。 *command_string*為**Varchar （8000）** 或**Nvarchar （4000）**，沒有預設值。 *command_string*不能包含一組以上的雙引號。 如果*command_string*中所參考的檔案路徑或程式名稱中有任何空格，則需要一對單引號。 如果使用內嵌空格會出錯，請考慮改用 FAT 8.3 檔案名稱作為因應措施。  
+ 這是包含要傳送至作業系統之命令的字串。 *command_string*是**瓦爾查爾（8000）** 或**Nvarchar（4000），** 沒有違約。 *command_string*不能包含一組以上的雙引號。 如果檔路徑或*command_string*引用的程式名稱中存在任何空格，則需要一對引號。 如果使用內嵌空格會出錯，請考慮改用 FAT 8.3 檔案名稱作為因應措施。  
   
  **no_output**  
  這是選擇性參數，用來指定不應將輸出傳回用戶端。  
@@ -56,52 +56,52 @@ EXEC xp_cmdshell 'dir *.exe';
 GO  
 ```  
   
- 資料列會在**Nvarchar （255）** 資料行中傳回。 如果使用 [ **no_output** ] 選項，則只會傳回下列內容：  
+ 行在**Nvarchar（255）** 列中返回。 如果使用**no_output**選項，則僅返回以下內容：  
   
 ```  
 The command(s) completed successfully.  
 ```  
   
 ## <a name="remarks"></a>備註  
- **Xp_cmdshell**衍生的 Windows 進程與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務帳戶具有相同的安全性許可權。  
+ **xp_cmdshell**生成的 Windows 進程具有與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務帳戶相同的安全許可權。  
   
- **xp_cmdshell**會同步操作。 完成 command-shell 命令時，才會將控制權傳回呼叫端。  
+ **xp_cmdshell**同步運行。 完成 command-shell 命令時，才會將控制權傳回呼叫端。  
   
- 使用以原則為基礎的管理或執行**sp_configure**，可以啟用和停用**xp_cmdshell** 。 如需詳細資訊，請參閱[介面區](../../relational-databases/security/surface-area-configuration.md)設定和[Xp_cmdshell 伺服器設定選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
+ xp_cmdshell**可以通過使用**基於策略的管理或執行**sp_configure**啟用和禁用。 有關詳細資訊，請參閱[曲面區域配置](../../relational-databases/security/surface-area-configuration.md)[和xp_cmdshell伺服器配置選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
   
 > [!IMPORTANT]
->  如果**xp_cmdshell**在批次內執行並傳回錯誤，批次將會失敗。 這是行為的變更。 在舊版的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]批次中，會繼續執行。  
+>  如果在批次處理中執行**xp_cmdshell**並返回錯誤，則批次處理將失敗。
   
 ## <a name="xp_cmdshell-proxy-account"></a>xp_cmdshell Proxy 帳戶  
- 當使用者不是**系統管理員（sysadmin** ）固定伺服器角色的成員所呼叫時， **xp_cmdshell**會使用儲存在名為 **# #xp_cmdshell_proxy_account # #** 之認證中的帳戶名稱和密碼來連接到 Windows。 如果此 proxy 認證不存在， **xp_cmdshell**將會失敗。  
+ 當它不是**sysadmin**固定伺服器角色的成員的使用者調用它時 **，xp_cmdshell**使用存儲在名為 **[#xp_cmdshell_proxy_account]** 的憑據中的帳戶名稱和密碼連接到 Windows。 如果此代理憑據不存在 **，xp_cmdshell**將失敗。  
   
- 您可以藉由執行**sp_xp_cmdshell_proxy_account**來建立 proxy 帳號憑證。 作為引數，這個預存程序會取得 Windows 使用者名稱和密碼。 例如，下列命令會針對 Windows 網域使用者 `SHIPPING\KobeR` (這個使用者有 Windows 密碼 `sdfh%dkc93vcMt0`) 來建立 Proxy 認證。  
+ 代理帳戶憑據可以通過執行**sp_xp_cmdshell_proxy_account**創建。 作為引數，這個預存程序會取得 Windows 使用者名稱和密碼。 例如，下列命令會針對 Windows 網域使用者 `SHIPPING\KobeR` (這個使用者有 Windows 密碼 `sdfh%dkc93vcMt0`) 來建立 Proxy 認證。  
   
 ```  
 EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';  
 ```  
   
- 如需詳細資訊，請參閱[sp_xp_cmdshell_proxy_account &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)。  
+ 有關詳細資訊，請參閱[sp_xp_cmdshell_proxy_account&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)。  
   
 ## <a name="permissions"></a>權限  
- 由於惡意使用者有時會嘗試使用**xp_cmdshell**提升其許可權，因此**xp_cmdshell**預設為停用。 使用**sp_configure**或以**原則為基礎的管理**來啟用它。 如需詳細資訊，請參閱 [xp_cmdshell 伺服器組態選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
+ 由於惡意使用者有時嘗試使用**xp_cmdshell**來提升其特權，因此預設情況下將禁用**xp_cmdshell。** 使用**sp_configure**或**基於策略的管理**啟用它。 如需詳細資訊，請參閱 [xp_cmdshell 伺服器組態選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
   
- 第一次啟用時， **xp_cmdshell**需要 CONTROL SERVER 許可權才能執行，而由**xp_cmdshell**所建立的 Windows 進程與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務帳戶具有相同的安全性內容。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務帳戶的許可權通常會比**xp_cmdshell**所建立的進程所執行的工作所需的更多。 為了加強安全性， **xp_cmdshell**的存取權應該限制為具有高許可權的使用者。  
+ 首次啟用時 **，xp_cmdshell**需要執行控制伺服器許可權，**並且xp_cmdshell**創建的 Windows 進程具有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與服務帳戶相同的安全上下文。 服務[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]帳戶通常具有比**xp_cmdshell**創建的進程執行的工作所需的許可權更多。 為了提高安全性，應限制對**xp_cmdshell**的訪問僅限於高特權使用者。  
   
- 若要讓非系統管理員使用**xp_cmdshell**，並允許[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以較低許可權的帳戶的安全性權杖來建立子進程，請遵循下列步驟：  
+ 要允許非管理員使用**xp_cmdshell**，並允許[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用許可權較低的帳戶的安全權杖創建子進程，請按照以下步驟操作：  
   
 1.  使用您的處理序所需的最低權限，建立及自訂 Windows 本機使用者帳戶或是網域帳戶。  
   
-2.  使用**sp_xp_cmdshell_proxy_account**系統程式，將**xp_cmdshell**設定為使用最低許可權帳戶。  
+2.  使用**sp_xp_cmdshell_proxy_account**系統過程配置**xp_cmdshell**以使用該最低許可權的帳戶。  
   
     > [!NOTE]  
-    >  您也可以在物件總管中，以[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]滑鼠**按右鍵伺服器**名稱上的 [內容]，然後查看 [**伺服器 proxy 帳戶**] 區段的 [**安全性**] 索引標籤，以設定此 proxy 帳戶。  
+    >  您還可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**右鍵**按一下物件資源管理器中的伺服器名稱的屬性，以及查看**伺服器代理帳戶****部分的安全選項卡**來配置此代理帳戶。  
   
-3.  在[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，使用 master 資料庫執行`GRANT exec ON xp_cmdshell TO N'<some_user>';`語句，讓特定的非**系統管理員**使用者能夠執行**xp_cmdshell**。 指定的使用者必須存在於 master 資料庫中。  
+3.  在[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中使用主資料庫執行`GRANT exec ON xp_cmdshell TO N'<some_user>';`語句，使特定的非**系統管理員**使用者能夠執行**xp_cmdshell**。 指定的使用者必須存在於主資料庫中。  
   
- 現在，非系統管理員可以使用**xp_cmdshell**啟動作業系統進程，而這些進程會以您已設定的 proxy 帳戶許可權執行。 具有 CONTROL SERVER 許可權的使用者（**系統管理員（sysadmin** ）固定伺服器角色的成員）將會繼續收到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xp_cmdshell**所啟動之子進程的服務帳戶許可權。  
+ 現在，非管理員可以使用**xp_cmdshell**啟動作業系統進程，這些進程使用您配置的代理帳戶的許可權運行。 具有 CONTROL SERVER 許可權的使用者 **（sysadmin**固定伺服器角色的成員）將繼續接收**xp_cmdshell**啟動[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的子進程的服務帳戶的許可權。  
   
- 若要判斷啟動作業系統進程時**xp_cmdshell**所使用的 Windows 帳戶，請執行下列語句：  
+ 要確定**xp_cmdshell**在啟動作業系統進程時使用的 Windows 帳戶，請執行以下語句：  
   
 ```  
 xp_cmdshell 'whoami.exe'  
@@ -139,7 +139,7 @@ GO
 ```  
   
 ### <a name="c-using-return-status"></a>C. 使用傳回狀態  
- 在下列範例中， `xp_cmdshell`擴充預存程式也會建議傳回狀態。 傳回碼值儲存在變數 `@result` 中。  
+ 在下面的示例中，擴展的`xp_cmdshell`預存程序還建議返回狀態。 傳回碼值儲存在變數 `@result` 中。  
   
 ```  
 DECLARE @result int;  
@@ -171,9 +171,9 @@ EXEC master..xp_cmdshell @cmd;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact-sql 的一般擴充預存程式&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
- [xp_cmdshell 伺服器設定選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
- [介面區組態](../../relational-databases/security/surface-area-configuration.md)   
- [sp_xp_cmdshell_proxy_account &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
+ [&#40;處理-SQL&#41;的一般擴充預存程序](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [xp_cmdshell伺服器配置選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
+ [表面積配置](../../relational-databases/security/surface-area-configuration.md)   
+ [sp_xp_cmdshell_proxy_account&#40;交易-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
   
   
