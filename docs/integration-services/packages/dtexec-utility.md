@@ -11,10 +11,10 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7f2e417ddefc0094fc6320deafea40251ba77372
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76761852"
 ---
 # <a name="dtexec-utility"></a>dtexec 公用程式
@@ -52,7 +52,7 @@ ms.locfileid: "76761852"
   
 -   [範例](#example)  
   
-##  <a name="server"></a> Integration Services 伺服器及專案檔案  
+##  <a name="integration-services-server-and-project-file"></a><a name="server"></a> Integration Services 伺服器及專案檔案  
  當您使用 **dtexec** 執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上的封裝時，**dtexec** 會呼叫 [catalog.create_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)、[catalog.set_execution_parameter_value &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) 和 [catalog.start_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) 預存程序來建立執行、 設定參數值以及啟動執行。 所有執行記錄都可以從伺服器的相關檢視中查看，或透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的標準報表查看。 如需報表的詳細資訊，請參閱 [Integration Services 伺服器的報表](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。  
   
  以下是執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上的封裝範例。  
@@ -65,7 +65,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  您可以搭配協力廠商排程工具來使用 **dtexec** ，排程部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝。  
   
-##  <a name="bit"></a> 64 位元電腦上的安裝考量  
+##  <a name="installation-considerations-on-64-bit-computers"></a><a name="bit"></a> 64 位元電腦上的安裝考量  
  在 64 位元電腦上， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會安裝 64 位元版本的 **dtexec** 公用程式 (dtexec.exe)。 若您必須用 32 位元模式執行特定封裝，則須安裝 32 位元版本的 **dtexec** 公用程式。 若要安裝 32 位元版本的 **dtexec** 公用程式，則必須在安裝期間選取用戶端工具或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 。  
   
  根據預設，同時安裝了 64 位元和 32 位元版之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 命令提示字元公用程式的 64 位元電腦將會在命令提示字元上執行 32 位元版本。 執行 32 位元版本是因為 32 位元版本的目錄路徑在 PATH 環境變數中會出現在 64 位元版本的目錄路徑前面 (一般來說，32 位元的目錄路徑是 \<磁碟機>  :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn，而 64 位元的目錄路徑是 \<磁碟機>  :\Program Files\Microsoft SQL Server\110\DTS\Binn)。  
@@ -80,12 +80,12 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
 -   在 PATH 環境變數中將 64 位元路徑 (\<磁碟機>  :\Program Files\Microsoft SQL Server\110\DTS\Binn) 置於 32 位元路徑 (\<磁碟機>  :\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) 之前，可以永久變更該變數中的路徑順序。  
   
-##  <a name="side"></a> 擁有並存安裝之電腦的考量  
+##  <a name="considerations-on-computers-with-side-by-side-installations"></a><a name="side"></a> 擁有並存安裝之電腦的考量  
  如果 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 安裝在已安裝 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 的電腦上，則會安裝多個版本的 **dtexec** 公用程式。  
   
  為確保您執行正確的公用程式版本，請在命令提示字元中輸入完整路徑 (\<磁碟機>  :\Program Files\Microsoft SQL Server\\<版本\>\DTS\Binn) 來執行公用程式。  
   
-##  <a name="phases"></a> 執行階段  
+##  <a name="phases-of-execution"></a><a name="phases"></a> 執行階段  
  這個公用程式有四個執行階段。 執行階段如下所示：  
   
 1.  命令來源階段：命令提示字元讀取已指定的選項及引數清單。 如果遇到了 **/?** 或 **/HELP** 選項，則會略過所有後續的階段。  
@@ -102,7 +102,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
 4.  驗證及執行階段：執行套件，如有指定 **/VALIDATE** 選項，則只會驗證套件而不會執行套件。  
   
-##  <a name="exit"></a> 傳回的結束碼  
+##  <a name="exit-codes-returned"></a><a name="exit"></a> 傳回的結束碼  
  **從 dtexec 公用程式傳回的結束碼**  
   
  封裝執行期間， **dtexec** 可能會傳回結束碼。 結束碼可用來擴展 ERRORLEVEL 變數，讓您可以在批次檔內的條件陳述式或分支邏輯中測試此變數的值。 下表列出 **dtexec** 公用程式結束時所能設定的值。  
@@ -116,7 +116,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 |5|公用程式無法載入所要求的封裝。 無法載入這個封裝。|  
 |6|公用程式在命令列中發現內部語法錯誤或語意錯誤。|  
   
-##  <a name="syntaxRules"></a> 語法與規則  
+##  <a name="syntax-rules"></a><a name="syntaxRules"></a> 語法與規則  
  **公用程式語法規則**  
   
  所有選項的開頭都必須是斜線 (/) 或減號 (-)。 此處顯示的選項的開頭為斜線 (/)，但可以用減號 (-) 來替代。  
@@ -127,7 +127,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  除了密碼以外，選項和引數都沒有區分大小寫。  
   
-##  <a name="cmdshell"></a> 使用 xp_cmdshell 的 dtexec  
+##  <a name="using-dtexec-from-the-xp_cmdshell"></a><a name="cmdshell"></a> 使用 xp_cmdshell 的 dtexec  
  **使用 xp_cmdshell 的 dtexec**  
   
  您可以從 **xp_cmdshell** 提示處執行 dtexec。 下列範例顯示如何執行名為 UpsertData.dtsx 的封裝，並忽略傳回碼：  
@@ -145,7 +145,7 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
   
 > **重要！！** 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，新安裝的 **xp_cmdshell** 選項預設為停用。 您可以執行 **sp_configure** 系統預存程序以啟用此選項。 如需詳細資訊，請參閱 [xp_cmdshell 伺服器組態選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
 
-##  <a name="bash"></a> 從 Bash 使用 dtexec
+##  <a name="using-dtexec-from-bash"></a><a name="bash"></a> 從 Bash 使用 dtexec
 
 **Bash** 殼層是適用於 Linux 的熱門殼層。 也可用於 Windows。 您可以從 Bash 提示執行 dtexec。 請注意，分號 (`;`) 在 Bash 中是命令分隔符號運算子。 這在使用 `/Conn[ection]`、`/Par[arameter]` 或 '`/Set` 選項將值傳入套件時特別重要，因為這些選項使用分號來分隔所提供項目的名稱與值。 下列範例顯示了如何在使用 Bash 並將值傳入套件時，適當逸出分號及其他項目：
 
@@ -153,13 +153,13 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 dtexec /F MyPackage.dtsx /CONN "MyConnection"\;"\"MyConnectionString\""
 ```
 
-##  <a name="syntax"></a> 語法  
+##  <a name="syntax"></a><a name="syntax"></a> 語法  
   
 ```  
 dtexec /option [value] [/option [value]]...  
 ```  
   
-##  <a name="parameter"></a> 參數  
+##  <a name="parameters"></a><a name="parameter"></a> 參數  
   
 -   **/?** [*option_name*]:(選擇性)。 顯示命令提示字元選項，或顯示指定之 *option_name* 的說明，然後關閉公用程式。  
   
@@ -482,7 +482,7 @@ dtexec /option [value] [/option [value]]...
   
      這個選項只能由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用。 若在命令提示字元處執行 **dtexec** 公用程式，系統將會忽略此選項。  
   
-##  <a name="remark"></a> 備註  
+##  <a name="remarks"></a><a name="remark"></a> 備註  
  命令選項的指定順序可能會影響封裝的執行方式：  
   
 -   依照在命令列中發現選項的順序來處理選項。 在命令列上發現命令檔案時便會加以讀取， 命令檔案中的命令也就會依照發現的順序來處理。  
@@ -491,7 +491,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Set** 與 **/ConfigFile** 選項會依據發現的順序進行處理。  
   
-##  <a name="example"></a> 範例  
+##  <a name="examples"></a><a name="example"></a> 範例  
  下列範例示範如何使用 **dtexec** 命令提示字元公用程式來設定及執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件。  
   
  **[Running Packages]**  
