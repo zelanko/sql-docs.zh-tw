@@ -1,6 +1,6 @@
 ---
 title: sp_rxPredict |微軟文件
-ms.date: 03/30/2020
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - sp_rxPredict procedure
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 752d9655096bc929ea9175577c7705dc58955652
-ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
+monikerRange: '>=sql-server-2016||>= sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 86b9cd8a9327eb8afaf9945ca09629362062011f
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80471847"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517447"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "80471847"
 
 ## <a name="syntax"></a>語法
 
-```syntaxsql
+```
 sp_rxPredict  ( @model, @input )
 ```
 
@@ -64,7 +64,7 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="supported-algorithms"></a>支援的演算法
 
-要建立和訓練模型,請使用[SQL Server 2016 R 服務](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017)[、SQL Server 2016 R 伺服器(獨立)、SQL](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016) [Server 2017 機器學習服務(R 或 Python)](../../advanced-analytics/what-is-sql-server-machine-learning.md?view=sql-server-2017)或[SQL Server 2017 伺服器(獨立)(R 或 Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2017)提供的支援演演演算法之一。
+要建立和訓練模型,請使用[SQL Server 2 電腦學習服務 (R 或 Python)、SQL](https://docs.microsoft.com/sql/advanced-analytics/what-is-sql-server-machine-learning) [Server 2016 R 服務](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services)[、SQL Server 機器學習伺服器(獨立)(R 或 Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone)或[SQL Server 2016 R 伺服器(獨立)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016)提供的 R 或 Python 支援的演演演算法之一。
 
 #### <a name="r-revoscaler-models"></a>R: RevoScaleR 模型
 
@@ -132,7 +132,7 @@ FROM model_table
 WHERE model_name = 'rxLogit trained';
 
 EXEC sp_rxPredict @model = @model,
-  @inputData = N'SELECT * FROM data';
+@inputData = N'SELECT * FROM data';
 ```
 
 除了是有效的 SQL 查詢外*\@,inputData*中的輸入數據還必須包括與存儲模型中的列相容的列。
