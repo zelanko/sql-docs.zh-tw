@@ -1,7 +1,7 @@
 ---
 title: 連接到伺服器 (Database Engine)
 ms.custom: seo-lt-2019
-ms.date: 08/14/2017
+ms.date: 03/27/2020
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c29717713a6b2e41456288f026b46e220be8b229
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9fdaf17118649543fe95ba60c7f6c0148d52d0e5
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261700"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402540"
 ---
 # <a name="connect-to-server-database-engine"></a>連接到伺服器 (Database Engine)
 
@@ -30,7 +30,7 @@ ms.locfileid: "78261700"
 連接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 時，使用此對話方塊來檢視或指定選項。 在大多數的情況下，您可以在 [伺服器名稱]  方塊中輸入資料庫伺服器的電腦名稱，然後按一下 [連接]  來進行連接。 如果您要連線至具名執行個體，請使用電腦名稱，後面依序加上反斜線及執行個體名稱。 例如： `mycomputer\myinstance` 。 如果要連接到 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，請使用電腦名稱並於後面加上 **\sqlexpress**。  
   
 許多因素都可能影響連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的能力。 如需說明，請參閱下列資源：  
-- [教學課程第 1 課：連線至資料庫引擎](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
+- [教學課程第 1 課：連接至資料庫引擎](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
 - [對 SQL Server 資料庫引擎的連線進行疑難排解](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)  
 - [解決 SQL Server 的連線錯誤](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server)   
   
@@ -63,7 +63,10 @@ SSMS 目前的版本提供五種驗證模式，可在連線至 [!INCLUDE[ssDE](.
 > Azure Active Directory 驗證機制使用 Azure Active Directory (Azure AD) 中的身分識別連接至 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。  如果您用來登入 Windows 的認證來自未與 Azure 同盟的網域，或是使用 Azure AD 根據初始或用戶端網域來使用 Azure AD 驗證時，請使用此方法連線至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 如需詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。  
 > 
 > **Active Directory - 整合式**  
-> Azure Active Directory 驗證機制使用 Azure Active Directory (Azure AD) 中的身分識別連接至 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。 如果您使用來自同盟網域的 Azure Active Directory 認證登入 Windows，請使用此方法連線至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 如需詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。  
+> Azure Active Directory 驗證機制使用 Azure Active Directory (Azure AD) 中的身分識別連接至 [!INCLUDE[msCoName](../../includes/msconame_md.md)]  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 如果您用來登入 Windows 的 Azure Active Directory 認證來自同盟網域，或是來自設定為以傳遞驗證和密碼雜湊驗證無縫單一登入的受控網域，請使用此方法連線到 SQL Database、受控執行個體或 Azure Synapse Analytics。 如需詳細資訊，請參閱 [Azure Active Directory 無縫單一登入](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)及[使用 Azure Active Directory 驗證連線到 SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。
+>
+  > [!NOTE]
+  > 以傳遞驗證與密碼雜湊驗證無縫單一登入不支援整合式 Windows 驗證的 [MSAL.NET (Microsoft.Identity.Client)](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki#roadmap)。  
   
 **使用者名稱**  
 要用來連接的 Windows 使用者名稱。 這個選項只有在您選取了使用  **Active Directory 密碼驗證**時，使用此對話方塊來檢視或指定選項。 當您選取 [Windows 驗證]  或 [Active Directory - 整合式]  驗證時，其為唯讀狀態。  
