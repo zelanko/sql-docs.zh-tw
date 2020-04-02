@@ -1,5 +1,5 @@
 ---
-title: sp_addmessage （Transact-sql） |Microsoft Docs
+title: sp_addmessage(轉算-SQL) |微軟文件
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 52d3db15c46af273e2f151e769a6b04be322ce5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d040fa0ccfe9b962f8847db0a841b95a534326fa
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061842"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531038"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  將新的使用者自訂錯誤訊息儲存在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體中。 使用 [ **sp_addmessage** ] 儲存的訊息，可以使用 [ **sys.databases** ] 目錄檢視來查看。  
+  將新的使用者自訂錯誤訊息儲存在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體中。 可以使用**sp_addmessage**存儲的消息可以使用**sys.訊息**目錄視圖進行查看。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,20 +42,20 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ \@msgnum = ] msg_id`這是訊息的識別碼。 *msg_id*是**int** ，預設值是 Null。 使用者自訂錯誤訊息的*msg_id*可以是介於50001和2147483647之間的整數。 *Msg_id*和*語言*的組合必須是唯一的;如果已有指定語言的識別碼，則會傳回錯誤。  
+`[ @msgnum = ] msg_id`是消息的 ID。 *msg_id***為 int,** 預設值為 NULL。 使用者定義的錯誤消息*msg_id*可以是 50,001 和 2,147,483,647 之間的整數。 *msg_id*和*語言*的結合必須是唯一的;如果指定語言的 ID 已存在,則傳回錯誤。  
   
-`[ \@severity = ]severity`這是錯誤的嚴重性層級。 *嚴重性*是**Smallint** ，預設值是 Null。 有效的層級範圍是 1 到 25。 如需有關嚴重性的詳細資訊，請參閱 [Database Engine 錯誤嚴重性](../../relational-databases/errors-events/database-engine-error-severities.md)。  
+`[ @severity = ]severity`是錯誤的嚴重性級別。 *嚴重性*較小 **,** 預設值為 NULL。 有效的層級範圍是 1 到 25。 如需有關嚴重性的詳細資訊，請參閱 [Database Engine 錯誤嚴重性](../../relational-databases/errors-events/database-engine-error-severities.md)。  
   
-`[ \@msgtext = ] 'msg'`這是錯誤訊息的文字。 *msg*是**Nvarchar （255）** ，預設值是 Null。  
+`[ @msgtext = ] 'msg'`是錯誤消息的文本。 *msg*是**nvarchar (255),** 預設值為 NULL。  
   
-`[ \@lang = ] 'language'`這是此訊息的語言。 *language*是**sysname** ，預設值是 Null。 因為多個語言可以安裝在同一部伺服器上，所以*language*會指定要在其中寫入每個訊息的語言。 省略*language*時，語言是會話的預設語言。  
+`[ @lang = ] 'language'`是此消息的語言。 *語言*是預設為 NULL 的**sysname。** 由於可以在同一台伺服器上安裝多種語言,*因此語言*指定每條消息的編寫語言。 省略*語言*時,該語言是會話的默認語言。  
   
-`[ \@with_log = ] { 'TRUE' | 'FALSE' }`這是指訊息發生時是否要寫入 Windows 應用程式記錄檔。 with_log 是**Varchar （5）** ，預設值是 FALSE。 ** \@ ** 如果是 TRUE，錯誤一律會寫入 Windows 應用程式記錄檔中。 如果是 FALSE，錯誤就不一定會寫入 Windows 應用程式記錄檔中，但隨著錯誤的產生方式而不同，也可能會寫入。 只有**系統管理員（sysadmin** ）伺服器角色的成員可以使用此選項。  
+`[ @with_log = ] { 'TRUE' | 'FALSE' }`是消息在發生時是否寫入 Windows 應用程式日誌。 with_log是**varchar(5),** 預設值為 FALSE。 ** \@ ** 如果是 TRUE，錯誤一律會寫入 Windows 應用程式記錄檔中。 如果是 FALSE，錯誤就不一定會寫入 Windows 應用程式記錄檔中，但隨著錯誤的產生方式而不同，也可能會寫入。 只有**系統管理員**伺服器角色的成員才能使用此選項。  
   
 > [!NOTE]  
 >  如果訊息寫入 Windows 應用程式記錄檔中，它也會寫入 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 錯誤記錄檔中。  
   
-`[ \@replace = ] 'replace'`如果指定為字串*replace*，則會以新的郵件內文和嚴重性層級來覆寫現有的錯誤訊息。 *replace*是**Varchar （7）** ，預設值是 Null。 如果*msg_id*已經存在，就必須指定此選項。 如果您取代美式英文訊息，則會取代所有其他語言中具有相同*msg_id*的所有訊息的嚴重性層級。  
+`[ @replace = ] 'replace'`如果指定為字串*替換*,則現有錯誤消息將被新的消息文本和嚴重性級別覆蓋。 *替換*的預設值為 NULL 的**varchar(7)。** 如果msg_id已存在 *,* 則必須指定此選項。 如果替換美國英語消息,則將替換具有相同*msg_id*的所有其他語言的所有郵件的嚴重性級別。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -75,12 +75,12 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  由於語言語法差異，當地語系化訊息中的參數號碼可能與原始訊息中的順序不符。  
   
 ## <a name="permissions"></a>權限  
-需要**系統管理員（sysadmin** ）或**serveradmin**固定伺服器角色中的成員資格。  
+需要**系統管理員**或**伺服器管理員**固定伺服器角色的成員身份。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-defining-a-custom-message"></a>A. 定義自訂訊息  
- 下列範例會將自訂訊息新增至**sys.databases**。  
+ 下面的範例向**sys.消息**添加自訂訊息。  
   
 ```  
 USE master;  
@@ -157,9 +157,9 @@ GO                                       -- parameters.
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_altermessage &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
- [sp_dropmessage &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
+ [&#40;转瞬即发-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
+ [sp_altermessage&#40;交易-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
