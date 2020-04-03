@@ -1,5 +1,6 @@
 ---
 title: 將共用資料來源發行至 SharePoint 文件庫 | Microsoft Docs
+description: 了解如何將共用資料來源發佈到以 SharePoint 整合模式執行的報表伺服器。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fd8444cc0bcdfe29268504cf2441c10d67a9ad0d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 50b21145d0e1929b6ef5ba1f6e0f23692d9b4b7c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577523"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510099"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>將共用資料來源發行至 SharePoint 文件庫
   若要將共用資料來源發行到以 SharePoint 整合模式執行的報表伺服器，您必須在報表設計師中設定報表專案屬性。 在專案屬性中，伺服器、報表和共用資料來源的所有參考都必須是完整 URL。  
@@ -28,7 +29,7 @@ ms.locfileid: "65577523"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟現有或新的報表伺服器專案。  
   
-2.  按一下 [專案]  功能表上的 [屬性]  。 _專案>\<_ [屬性頁]  對話方塊隨即開啟。  
+2.  按一下 [專案]  功能表上的 [屬性]  。 \<專案>  [屬性頁]  對話方塊隨即開啟。  
   
 3.  選擇您用來發行至 SharePoint 網站的 [組態]  。  
   

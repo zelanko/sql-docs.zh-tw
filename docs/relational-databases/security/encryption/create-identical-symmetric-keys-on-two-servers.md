@@ -12,12 +12,12 @@ ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a64aac5fa64a7ace7c55f7fb3c7b70b8cf9e44c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 77707d460262864cafa8884281c69fb957945f20
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74957456"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80243388"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>在兩部伺服器上建立相同的對稱金鑰
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ SQL Server 2016 使用 SHA1 雜湊演算法進行加密工作。 從 SQL Server 
 - 確定您的 SQL Server 2017 至少已更新為累積更新 2 (CU2)。
   - 如需重要的詳細資料，請參閱 [SQL Server 2017 的累積更新 2 (CU2)](https://support.microsoft.com/help/4052574) \(機器翻譯\)。
 - 安裝 CU2 之後，在 SQL Server 2017 中開啟追蹤旗標 4631：`DBCC TRACEON(4631, -1);`
-  - 追蹤旗標 4631 是 SQL Sewrver 2017 的新功能。 您必須在全域中將追蹤旗標 4631 設定為 `ON`，然後才能在 SQL Server 2017 中建立主要金鑰、憑證或對稱金鑰。 這樣即可讓這些建立的項目能夠與 SQL Server 2016 及舊版進行相互操作。
+  - 追蹤旗標 4631 是 SQL Server 2017 的新功能。 您必須在全域中將追蹤旗標 4631 設定為 `ON`，然後才能在 SQL Server 2017 中建立主要金鑰、憑證或對稱金鑰。 這樣即可讓這些建立的項目能夠與 SQL Server 2016 及舊版進行相互操作。
 
 如需詳細指引，請參閱：
 

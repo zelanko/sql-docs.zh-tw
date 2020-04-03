@@ -1,5 +1,6 @@
 ---
 title: 自訂報表項目類別庫 | Microsoft Docs
+description: 了解自訂報表項目類別庫，並使用程式碼範例來了解如何使用這些類別。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ed0bd3c53550a21f4a157ee637e7d153d8f2922
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f30b581c67eb161bd0d221b9a4aa341d90ab7148
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194105"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216944"
 ---
 # <a name="custom-report-item-class-libraries"></a>自訂報表項目類別庫
   自訂報表項目使用來自 **Microsoft.ReportDesigner** 命名空間的類別。 用於實作自訂報表項目的類別可以分成兩個主要類別：設計為支援自訂報表項目基礎結構的唯一類別，以及封裝相關報表定義語言 (RDL) 元素之功能的 Managed 包裝函數類別。 如需如何使用這些類別的程式碼範例，請參閱 [SQL Server Reporting Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
@@ -61,7 +62,7 @@ ms.locfileid: "63194105"
 |**OnPaint**|在回應 **Paint** 事件時呼叫。|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- 這是用於識別自訂報表項目類型的屬性。 該名稱必須符合報表設計師設定檔中 \<ReportItem**項目的** **名稱**> 屬性值。  
+ 這是用於識別自訂報表項目類型的屬性。 該名稱必須符合報表設計師設定檔中 **ReportItem** 項目的 \<**名稱**> 屬性值。  
   
 #### <a name="public-methods"></a>公用方法  
   

@@ -1,5 +1,6 @@
 ---
 title: 在行動報表中新增資料格 | Reporting Services | Microsoft Docs
+description: 您可在 SQL Server 行動報表發行工具中以方格顯示資料。 選擇簡易資料格、指示器資料格或圖表資料格。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2658eb0eec1bd99c4e4503e8d8ae8894638e8c23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 403e6b3873b93dace3f124eb5931143e8dd4b322
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63280442"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448316"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>將資料格加入行動報表 | Reporting Services
-有時候，資料本身就是最佳的視覺效果。 深入了解用於顯示  *中資料的三種「資料格」* [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]或資料表：
+有時候，資料本身就是最佳的視覺效果。 深入了解用於顯示 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中資料的三種「資料格」  或資料表：
 * 簡易資料格
 * 指示器資料格
 * 圖表資料格

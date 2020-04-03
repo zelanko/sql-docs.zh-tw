@@ -1,5 +1,6 @@
 ---
 title: 詳細資料屬性 | Microsoft Docs
+description: 了解 Reporting Services SoapException 類別的 Detail 屬性，特別是定義該屬性的 XML 項目。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 087f7f6da8882f181c55a187438d4493ec5b1a9b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 929c597fda9b97c5ffdb24a0aed236f68727a3fd
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62991566"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215617"
 ---
 # <a name="detail-property"></a>詳細資料屬性
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** 類別的 **Detail** 屬性具有下列 XML 結構：  

@@ -1,5 +1,6 @@
 ---
 title: XEvents 概觀 - SQL Server
+description: SQL Server 擴充事件架構可供收集識別效能問題並對其進行疑難排解所需的資料。 該架構為可設定且可調整的。
 ms.date: 07/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 34ebcae99f096d095839cb533fb6efe58b113050
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3dbd6e4beee31e90d0354345bb25e4f0c32fc969
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234603"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434045"
 ---
 # <a name="extended-events-overview"></a>擴充事件概觀
 
@@ -29,7 +30,7 @@ ms.locfileid: "75234603"
 
 您可以在下列位置找到「擴充事件」的詳細資訊：[快速入門：SQL Server 中的延伸事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)。
 
-## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件的優點  
+## <a name="benefits-of-ssnoversion-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件的優點  
 
 「擴充事件」是一種使用小量效能資源的一種輕量型效能監視系統。 擴充事件提供兩個圖形化使用者介面，用以建立、修改、顯示及分析您的工作階段資料。 這些介面的名稱如下：
 

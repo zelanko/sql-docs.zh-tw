@@ -1,5 +1,6 @@
 ---
 title: 更改擴充事件工作階段
+description: 使用 [SQL Server 擴充事件精靈] 更改擴充事件工作階段。 您可進行的變更會視工作階段是使用中或非使用中而定。
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32a57c46cebb17df257f2002c25ab5f1d7107379
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1bb15ced32815913f8de0b20a7ce9bf174cbdc68
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75255775"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434015"
 ---
 # <a name="alter-an-extended-events-session"></a>更改擴充事件工作階段
 

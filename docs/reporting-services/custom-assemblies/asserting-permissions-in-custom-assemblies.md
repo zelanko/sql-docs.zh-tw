@@ -1,5 +1,6 @@
 ---
 title: 自訂組件中的判斷提示權限 | Microsoft Docs
+description: 了解如何判斷提示權限以供實作自訂組件，以安全地呼叫在安全性系統中受保護的資源。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dabfe56423a08c6624adc6da322cf442e5a63b7d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2b3f4600c4c03fe356f5694f0d9a6cd5bc7afb98
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63194331"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217054"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>自訂組件中的判斷提示權限
   根據預設，自訂組譯碼會使用有限的 **Execution** 權限集合執行。 在某些情況下，您可能希望實作自訂組件，以安全地呼叫在安全性系統中受保護的資源 (例如檔案或是登錄)。 若要完成這個動作，您必須執行下列項目：  

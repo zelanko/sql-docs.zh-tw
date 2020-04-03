@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7b1c32e3e569b8c29dd75df1fafb98bb7c0c979f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73983027"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486586"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 陳述式 - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -97,7 +97,7 @@ FROM <backup_device>
 |**BackupDescription**|**nvarchar(255)**|備份組描述|  
 |**BackupType**|**smallint**|備份類型：<br /><br /> **1** = 資料庫<br /><br /> **2** = 交易記錄<br /><br /> **4** = 檔案<br /><br /> **5** = 差異資料庫<br /><br /> **6** = 差異檔案<br /><br /> **7** = 部分<br /><br /> **8** = 差異部分|  
 |**ExpirationDate**|**datetime**|備份組的到期日。|  
-|**Compressed**|**BYTE(1)**|是否利用以軟體為基礎的壓縮來壓縮備份組：<br /><br /> **0** = 否<br /><br /> **1** = 是|  
+|**Compressed**|**BIT(1)**|是否利用以軟體為基礎的壓縮來壓縮備份組：<br /><br /> **0** = 否<br /><br /> **1** = 是|  
 |**位置**|**smallint**|備份組在磁碟區中的位置 (用來搭配 FILE = 選項)。|  
 |**DeviceType**|**tinyint**|備份作業所用裝置的對應號碼。<br /><br /> 磁碟：<br /><br /> **2** = 邏輯<br /><br /> **102** = 實體<br /><br /> 磁帶：<br /><br /> **5** = 邏輯<br /><br /> **105** = 實體<br /><br /> 虛擬裝置：<br /><br /> **7** = 邏輯<br /><br /> **107** = 實體<br /><br /> 邏輯裝置名稱和裝置號碼在 **sys.backup_devices** 中；如需詳細資訊，請參閱 [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)。|  
 |**UserName**|**nvarchar(128)**|執行備份作業的使用者名稱。|  

@@ -15,12 +15,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 30155a37f57391edeee916cd2b6629d63a1dcaaa
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 58773f430fc61a7817d7d3ee7c9e7b597716c438
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288652"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434175"
 ---
 # <a name="sql-server-installation-guide"></a>SQL Server 安裝指南
 
@@ -44,7 +44,9 @@ ms.locfileid: "79288652"
     - [[!INCLUDE[ss2016](../../includes/sssql15-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md)＞。  
     - [[!INCLUDE[ss2014](../../includes/sssql14-md.md)]](https://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
 
-*  **需求**：請檢閱[規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)中的安裝需求、系統組態檢查及安全性考量 
+*  **需求**：請先檢閱 [SQL Server 2016 與 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)、[SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) 或 [Linux 上 SQL Server](../../linux/sql-server-linux-setup.md) 中所列的軟硬體安裝需求，以及[規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)中的系統組態檢查與安全性考量 
+
+
   
 * **範例資料庫與範例程式碼**： 
     * 這些預設不會隨著 SQL Server 安裝程式一起安裝，但可以找到 
@@ -68,8 +70,19 @@ ms.locfileid: "79288652"
 * [Azure Data Studio](https://go.microsoft.com/fwlink/?linkid=2109256)
 
 
+## <a name="considerations"></a>考量
+
+-   如果您透過遠端桌面連線使用 RDC 用戶端本機資源的媒體來啟動安裝程式，則安裝會失敗。 必須在實體或虛擬機器的網路共用或本機從遠端安裝媒體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體可能位於網路共用、對應磁碟機、本機磁碟機，或顯示為虛擬機器的 ISO。  
+  
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會安裝該產品所需的下列軟體元件：  
+  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client    
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援檔案  
+
 ## <a name="sql-server-installation"></a>SQL Server 安裝
- 
+
+
 |發行項|描述|  
 |-----------|-----------------|  
 |[安裝精靈](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|使用從 setup.exe 安裝媒體啟動的安裝精靈 GUI 安裝 SQL Server。 |  
@@ -111,7 +124,7 @@ ms.locfileid: "79288652"
 
 [升級 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/upgrade-sql-server.md)   
 [解除安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../sql-server/install/uninstall-sql-server.md)   
-[Install SQL Server Reporting Services (SSRS)](../../reporting-services/install-windows/install-reporting-services.md)
-[安裝 SQL Server Analysis Services (SSAS)](/analysis-services/instances/install-windows/install-analysis-services)
-[安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 商業智慧功能](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
+[安裝 SQL Server Reporting Services (SSRS)](../../reporting-services/install-windows/install-reporting-services.md)   
+[安裝 SQL Server Analysis Services (SSAS)](/analysis-services/instances/install-windows/install-analysis-services)   
+[安裝[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]商業智慧功能](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
 [高可用性解決方案 &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  

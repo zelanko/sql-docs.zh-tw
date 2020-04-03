@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 34599160e206d89eaee04074ddbaee2bac7c5f89
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.openlocfilehash: a138a8451211436d55da537b9d8a45d26c534e48
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77173564"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215739"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>在 Kubernetes 上使用 SQL Server 巨量資料叢集的資料持續性
 
@@ -33,6 +33,8 @@ SQL Server 巨量資料叢集透過使用[儲存類別](https://kubernetes.io/do
 - 如果您在設定中提供之儲存類別的儲存體佈建程式不支援動態佈建，您必須預先建立永久性磁碟區。 例如，`local-storage` 佈建程式不會啟用動態佈建。 如需如何在使用 `kubeadm` 部署的 Kubernetes 叢集中繼續進行的指引，請參閱此[範例指令碼](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) \(英文\)。
 
 - 當您部署巨量資料叢集時，可以將相同的儲存類別設定為可供叢集中的所有元件使用。 但是，作為實際執行環境部署的最佳做法，各種元件都將需要不同的儲存體設定，以根據大小或輸送量來容納各種不同的工作負載。 您可以針對每個 SQL Server 主要執行個體、資料集與存放集區，覆寫控制器中指定的預設儲存體設定。 此文章提供如何執行此操作的範例。
+
+- 計算存放集區大小需求時，必須考慮用來設定 HDFS 的複寫因子。  複寫因子可在部署時於叢集部署組態檔中進行設定。 開發/測試設定檔 (例如 `aks-dev-test` 或 `kubeadm-dev-test`) 的預設值為 2，至於針對生產環境部署建議的設定檔 (例如 `kubeadm-prod`)，其預設值為 3。 基於最佳做法，建議使用至少為 3 的 HDFS 複寫因子來設定巨量資料叢集生產環境部署。 複寫因子值會影響存放集區中的執行個體數目：基本上，您必須部署至少與複寫因子值一樣多的存放集區執行個體。 此外，必須據此調整儲存體的大小，並將在 HDFS 中複寫資料的次數計為與複寫因子值一樣多次。 您可在[這裡](https://hadoop.apache.org/docs/r3.2.1/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html#Data_Replication)深入了解 HDFS 中的資料複寫。 
 
 - 從 SQL Server 2019 CU1 版本開始，您就無法修改部署後的儲存體組態設定。 此限制不僅可以防止您在部署後修改每個執行個體的永久性磁碟區宣告大小，還可以防止您執行範圍調整作業。 因此，在部署巨量資料叢集之前，請務必先規劃儲存體配置。
 
@@ -101,7 +103,7 @@ azdata bdc config init --source aks-dev-test --target custom
 此程序會建立兩個檔案，`bdc.json` 和 `control.json`，您可以手動編輯它們或透過使用 `azdata bdc config` 命令來加以自訂。 您可以使用 jsonpath 和 jsonpatch 程式庫的組合，以提供編輯組態檔的方式。
 
 
-### <a id="config-samples"></a> 設定儲存類別名稱和/或宣告大小
+### <a name="configure-storage-class-name-andor-claims-size"></a><a id="config-samples"></a> 設定儲存類別名稱和/或宣告大小
 
 根據預設，針對叢集中佈建的每個 Pod 所佈建的永久性磁碟區宣告大小為 10 GB。 在部署叢集之前，您可以更新此值，以容納您在自訂設定檔中執行的工作負載。
 

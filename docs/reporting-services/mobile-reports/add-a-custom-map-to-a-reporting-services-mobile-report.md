@@ -1,5 +1,6 @@
 ---
 title: 將自訂地圖新增至 Reporting Services 行動報表 | Microsoft Docs
+description: 您可將自訂地圖新增至 Reporting Services 行動報表。 本文描述如何將資料載入並連線至自訂地圖。
 ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9410aac6b74fbb515010517a2fe0667f3c197802
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.openlocfilehash: a1c15d5b5155d68f94a1672ca55654485c6b1835
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76971401"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448343"
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>將自訂地圖加入 Reporting Services 行動報表
 自訂地圖需要兩個檔案︰  

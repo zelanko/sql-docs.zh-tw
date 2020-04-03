@@ -10,12 +10,12 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 996d0f90a76760c4c02a7a3d2bbf08f8c7ba6981
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c3de07aaa65e2dac2859aaf5c0be3e63e0f22dcf
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258789"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434125"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>升級為不同的 SQL Server 版本 (安裝程式)
 
@@ -39,7 +39,7 @@ ms.locfileid: "75258789"
   
 ## <a name="procedure"></a>程序  
   
-### <a name="to-upgrade-to-a-different-edition-of-includessnoversionincludesssnoversion-mdmd"></a>若要升級至不同的 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 版本  
+### <a name="to-upgrade-to-a-different-edition-of-ssnoversion"></a>若要升級至不同的 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 版本  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體。 在根資料夾中按兩下 setup.exe，或從 [組態工具] 啟動 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心]。 若要從網路共用進行安裝，請找出共用上的根資料夾，然後按兩下 Setup.exe。  
   
@@ -78,7 +78,15 @@ ms.locfileid: "75258789"
 -   tempdb 和 model 系統資料庫的大小和復原模式在升級之後會維持不變。 您可以視需要重新設定這些設定。 如需詳細資訊，請參閱[系統資料庫的備份與還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。  
   
 -   範本資料庫在升級之後會保留在電腦上。  
-  
+
+> [!NOTE]  
+> 如果 Engine_SqlEngineHealthCheck 規則上的程序失敗，則可使用命令列安裝選項來略過此特定規則，讓升級程序順利完成。 若要略過檢查此規則，請開啟命令提示字元，並變更為包含 SQL Server 安裝程式 (Setup.exe) 的路徑。 然後，鍵入下列命令： 
+
+```console
+setup.exe /q /ACTION=editionupgrade /InstanceName=MSSQLSERVER /PID=<appropriatePid> /SkipRules=Engine_SqlEngineHealthCheck
+```
+
+
 ## <a name="see-also"></a>另請參閱  
  [升級 SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [回溯相容性_已刪除](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  

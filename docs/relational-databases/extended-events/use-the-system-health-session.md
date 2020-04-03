@@ -1,5 +1,6 @@
 ---
 title: 使用 system_health 工作階段
+description: system_health 擴充事件工作階段隨附於 SQL Server。 此工作階段會收集系統資料，以針對資料庫引擎的效能進行疑難排解。
 ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab31461888588ee54f1715f5e98ddb0f3b9aa23b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ffa5587415d9f4bc689a37a5ba49be87eaf14716
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75246135"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487586"
 ---
 # <a name="use-the-system_health-session"></a>使用 system_health 工作階段
 

@@ -1,5 +1,6 @@
 ---
 title: 使用擴充事件監視系統活動
+description: 搭配 Windows 事件追蹤來使用擴充事件，以監視系統活動。 了解 CREATE EVENT SESSION、ALTER EVENT SESSION 和 DROP EVENT SESSION。
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fa450f49fdd4dfb2eb229bbd4280d5dcd0162b6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 0612675365ac8de45c83715192cfb98a69a21d5b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75254796"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434065"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>使用擴充事件監視系統活動
 

@@ -1,5 +1,6 @@
 ---
 title: 匯出至 XML (報表產生器) | Microsoft Docs
+description: 在報表產生器中，XML 轉譯延伸模組會將分頁報表轉譯為 XML 格式。 將 XML 匯入至資料庫、作為訊息使用，或傳送至應用程式。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4ac6d962838191365048b3c41d5a8efd367d8355
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 71e3b5102fa1ff37e7cea22562919b202889ecc3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079314"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342831"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>匯出至 XML (報表產生器及 SSRS)
   XML 轉譯延伸模組會傳回 XML 格式的分頁報表。 報表 XML 的結構描述為報表特有的，且僅包含資料。 XML 轉譯延伸模組不會轉譯配置資訊，也不會維持分頁。 此延伸模組所產生的 XML 可以匯入資料庫中 (當做 XML 資料訊息使用)，或傳送到自訂應用程式。  
@@ -21,7 +22,7 @@ ms.locfileid: "77079314"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItems"></a> 報表項目  
+##  <a name="report-items"></a><a name="ReportItems"></a> 報表項目  
  下表描述報表項目轉譯的方式。  
   
 |Item|轉譯行為|  
@@ -52,7 +53,7 @@ ms.locfileid: "77079314"
 -   **Images, lines, and custom report items** 都會忽略。  
   
   
-##  <a name="DataTypes"></a> 資料型別  
+##  <a name="data-types"></a><a name="DataTypes"></a> 資料型別  
  文字方塊元素或屬性會根據文字方塊所顯示的值，指派 XSD 資料類型。  
   
 |如果所有文字方塊值為|指派的資料類型為|  
@@ -68,7 +69,7 @@ ms.locfileid: "77079314"
 |其他|**xsd:string**|  
   
   
-##  <a name="XMLSpecificRenderingRules"></a> XML 特定的轉譯規則  
+##  <a name="xml-specific-rendering-rules"></a><a name="XMLSpecificRenderingRules"></a> XML 特定的轉譯規則  
  下列幾節描述 XML 轉譯延伸模組如何解譯報表中的項目。  
   
 ### <a name="report-body"></a>報表主體  
@@ -150,15 +151,15 @@ ms.locfileid: "77079314"
  如果 DataElementOutput 屬性值等於「輸出」，重複項目的標頭就會轉譯為詳細資料元素的子系。  
   
   
-##  <a name="CustomFormatsXSLTransformations"></a> 自訂格式和 XSL 轉換  
+##  <a name="custom-formats-and-xsl-transformations"></a><a name="CustomFormatsXSLTransformations"></a> 自訂格式和 XSL 轉換  
  使用 XSL 轉換 (XSLT)，幾乎可以將 XML 轉譯延伸模組所產生的 XML 檔案轉換成任何格式。 此功能可用來產生現有的轉譯延伸模組已不支援的資料格式。 在嘗試建立您自己的轉譯延伸模組之前，請考慮使用 XML 轉譯延伸模組和 XSLT。  
   
   
-##  <a name="DuplicateName"></a> 重複的名稱  
+##  <a name="duplicate-names"></a><a name="DuplicateName"></a> 重複的名稱  
  如果在相同的範圍內有重複的資料元素名稱，轉譯器會顯示一個錯誤訊息。  
   
   
-##  <a name="XSLTTransformations"></a> XSLT 轉換  
+##  <a name="xslt-transformations"></a><a name="XSLTTransformations"></a> XSLT 轉換  
  XML 轉譯器可以將伺服器端的 XSLT 轉換套用到原始 XML 資料。 套用 XSLT 時，轉譯器會輸出轉換的內容，而非輸出 XML 原始資料。 轉換會在伺服器上，而非用戶端上進行。  
   
  系統會在報表定義檔案中，以報表的 DataTransform 屬性或以 XSLT *DeviceInfo* 參數，定義要套用到輸出的 XSLT。 如果設定其中一個值，就會在每次使用 XML 轉換器時進行轉換。 使用訂閱時，必須在 RDL DataTransform 屬性中定義 XSLT。  
@@ -166,7 +167,7 @@ ms.locfileid: "77079314"
  如果有同時透過 DataTransform 定義屬性和裝置資訊設定指定 XSLT 檔案，會先出現在 DataTransform 中指定的 XSLT，接著出現由裝置資訊設定所設定的 XSLT。  
   
   
-###  <a name="DeviceInfo"></a> 裝置資訊設定  
+###  <a name="device-information-settings"></a><a name="DeviceInfo"></a> 裝置資訊設定  
  您可以變更此轉譯器的某些預設值，方法是，變更裝置資訊設定，包括：  
   
 -   套用至 XML 的轉換 (XSLT)。  

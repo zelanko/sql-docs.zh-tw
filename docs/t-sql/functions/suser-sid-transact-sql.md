@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a31be66b07c6d5c463f5220e6359942cd507849b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 43106b52fdfcf166af3601c7ba82ddd03bd3d8b9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73981739"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486561"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,6 +68,11 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
  `Windows NT user or group '%s' not found. Check the name again.`  
   
+## <a name="sssdsfull-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]備註  
+ SUSER_SID 一律會傳回目前安全性內容的登入 SID。 使用 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 取得不同登入的 SID。
+  
+ SUSER_SID 陳述式不支援透過 EXECUTE AS 使用模擬安全性內容執行。  
+
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-suser_sid"></a>A. 使用 SUSER_SID  

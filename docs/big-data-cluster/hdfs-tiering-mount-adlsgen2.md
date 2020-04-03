@@ -9,12 +9,12 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2afc9fce446d277422c564330c5cc7db254f2d00
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 481e0170e14b978f9fa26689a71383d981313a57
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75252010"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215378"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>如何在巨量資料叢集中掛接 ADLS Gen2 以進行 HDFS 階層處理
 
@@ -27,13 +27,13 @@ ms.locfileid: "75252010"
   - **azdata**
   - **kubectl**
 
-## <a id="load"></a> 將資料載入 Azure Data Lake Storage
+## <a name="load-data-into-azure-data-lake-storage"></a><a id="load"></a> 將資料載入 Azure Data Lake Storage
 
 下節描述如何設定 Azure Data Lake Storage Gen2 來測試 HDFS 階層處理。 如果您已經有資料儲存在 Azure Data Lake Storage 中，則可以略過本節並使用您自己的資料。
 
-1. [建立具有 Data Lake Storage Gen2 功能的儲存體帳戶。](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account)
+1. [建立具有 Data Lake Storage Gen2 功能的儲存體帳戶。](/azure/storage/blobs/data-lake-storage-quickstart-create-account)
 
-1. 在此儲存體帳戶中，為您的外部資料[建立 Blob 容器/檔案系統](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal)。
+1. 在此儲存體帳戶中，為資料[建立檔案系統](/azure/storage/blobs/data-lake-storage-explorer)。
 
 1. 將 CSV 或 Parquet 檔案上傳至容器。 這是將會掛接到巨量資料叢集中 HDFS 的外部 HDFS 資料。
 
@@ -46,9 +46,9 @@ ms.locfileid: "75252010"
 1. 前往 [Azure 入口網站](https://portal.azure.com)
 1. 瀏覽至 [Azure Active Directory]。 左側導覽列上應會顯示此服務。
 1. 從右側導覽列中選取 [應用程式註冊]，然後建立新的註冊
-1. 建立 Web 應用程式，然後依照精靈指示作業。 **請記下您此處建立之用程式的稱**。 您必須將此名稱新增至您的 ADLS 帳戶作為授權使用者。 另請記下您選取此應用時，概觀中顯示的應用程式用戶端識別碼。
-1. 建立 Web 應用程式之後，請選取 [憑證及密碼]，以建立**新的用戶端密碼**，然後選取金鑰期間。 **新增**此密碼。
-1.  返回 [應用程式註冊] 頁面，然後按一下頂端的 [端點]。 **記下 OAuth 權杖端點 (v2)** URL
+1. 建立 Web 應用程式並遵循精靈。 **請記下您此處建立之用程式的稱**。 您必須將此名稱新增至您的 ADLS 帳戶作為授權使用者。 另請記下您選取此應用時，概觀中顯示的應用程式用戶端識別碼。
+1. 建立 Web 應用程式之後，請移至 [憑證及密碼] 並建立**新的用戶端密碼**，然後選取金鑰期間。 **新增**此密碼。
+1.     返回 [應用程式註冊] 頁面，然後按一下頂端的 [端點]。 **記下 OAuth 權杖端點 (v2)** URL
 1. 您現在應該已記下 OAuth 的下列項目：
 
     - Web 應用程式的「應用程式用戶端識別碼」
@@ -99,7 +99,7 @@ ms.locfileid: "75252010"
    fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
 
-## <a id="mount"></a> 掛接遠端 HDFS 儲存體
+## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> 掛接遠端 HDFS 儲存體
 
 現在您已設定存取金鑰的 MOUNT_CREDENTIALS 環境變數或使用 OAuth，您即可以開始掛接。 下列步驟會將 Azure Data Lake 中的遠端 HDFS 儲存體，掛接到您巨量資料叢集的本機 HDFS 儲存體。
 
@@ -127,7 +127,7 @@ ms.locfileid: "75252010"
 
 如果已成功掛接，您應該能夠查詢 HDFS 資料，並對其執行 Spark 作業。 掛接會出現在您巨量資料叢集的 HDFS 中，位於 `--mount-path` 所指定的位置。
 
-## <a id="status"></a> 取得掛接的狀態
+## <a name="get-the-status-of-mounts"></a><a id="status"></a> 取得掛接的狀態
 
 若要列出巨量資料叢集中所有掛接的狀態，請使用下列命令：
 
@@ -149,7 +149,7 @@ azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a> 刪除掛接
+## <a name="delete-the-mount"></a><a id="delete"></a> 刪除掛接
 
 若要刪除掛接，請使用 **azdata bdc hdfs mount delete** 命令，並在 HDFS 中指定掛接路徑：
 

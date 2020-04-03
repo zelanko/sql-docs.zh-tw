@@ -1,5 +1,6 @@
 ---
 title: 報表定義語言 | Microsoft Docs
+description: 了解報表定義語言 (RDL) 的相關詳細資料。 您將了解 RDL 是 SQL Server Reporting Services 報表定義的 XML 表示法。
 ms.date: 01/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd2d8f74169c8adcbf2862b9dcf5a442d5691c81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 04c220383ef14fe6bd05b690e5c27ae73b4289a4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078024"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510079"
 ---
 # <a name="report-definition-language-ssrs"></a>報表定義語言 (SSRS)
   報表定義語言 (RDL) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表定義的 XML 表示法。 報表定義包含報表的資料擷取和配置資訊。 RDL 是由符合針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]所建立之 XML 文法的 XML 元素所組成。 您可以加入自訂函數，藉由存取報表定義檔案中的程式碼組件來控制報表項目值、樣式和格式。  
@@ -35,17 +36,17 @@ ms.locfileid: "77078024"
   
 -   可支援其他命名空間和自訂元素的可延伸與開放結構描述。  
   
-##  <a name="bkmk_RDL_Specifications"></a> RDL 規格  
+##  <a name="rdl-specifications"></a><a name="bkmk_RDL_Specifications"></a> RDL 規格  
  若要下載特定結構描述版本的規格，請參閱 [Report Definition Language Specification](https://go.microsoft.com/fwlink/?linkid=116865)(報表定義語言規格)。  
   
-##  <a name="bkmk_RDL_XML_Schema_Definition"></a> RDL XML 結構描述定義  
+##  <a name="rdl-xml-schema-definition"></a><a name="bkmk_RDL_XML_Schema_Definition"></a> RDL XML 結構描述定義  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表定義語言 (RDL) 檔案是藉由使用 XML 結構描述定義 (XSD) 檔案來驗證。 結構描述定義 RDL 元素可在 .rdl 檔案中何處發生的規則。 元素包括其資料類型和基數，也就是所允許的發生數目。 元素可能很簡單或很複雜。 簡單的元素沒有子元素或屬性 (Attribute)， 複雜的元素則具有子元素或屬性。  
   
  例如，此結構描述包含 RDL 元素 **ReportParameters**，這是複雜類型 **ReportParametersType**。 依照慣例，元素的複雜類型是在元素名稱後面加上 **Type**這個字。 **ReportParameters** 元素可由 **報表** 元素 (複雜類型) 所包含，而且可以包含 **ReportParameter** 元素。 **ReportParameterType** 是簡單類型，只能是下列其中一個值：**Boolean**、**DateTime**、**Integer**、**Float** 或 **String**。 如需 XML 結構描述資料類型的詳細資訊，請參閱 [XML Schema Part 2:Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871) (XML 結構描述第 2 部分：資料類型第二版)。  
   
  RDL XSD 是在 ReportDefinition.xsd 檔案中提供的，這個檔案位於產品 CD-ROM 的 Extras 資料夾中， 也會透過下列 URL 提供在報表伺服器：`https://servername/reportserver/reportdefinition.xsd`。  
   
-##  <a name="bkmk_Creating_RDL"></a> 建立 RDL  
+##  <a name="creating-rdl"></a><a name="bkmk_Creating_RDL"></a> 建立 RDL  
  因為 RDL 具有可延伸與開放的特質，所以可以建立各種工具和應用程式來根據其 XML 結構描述產生 RDL。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供用於建立 RDL 檔案的多個工具。 如需詳細資訊，請參閱 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
@@ -54,7 +55,7 @@ ms.locfileid: "77078024"
   
  報表定義檔案的標準副檔名是 .rdl。 您也可以開發用戶端報表定義檔案，其副檔名為 .rdlc。 這兩種副檔名的 MIME 類型為 text/xml。 如需報表的詳細資訊，請參閱 [Reporting Services 報表 &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)。  
   
-##  <a name="bkmk_RDL_Types"></a> RDL 類型  
+##  <a name="rdl-types"></a><a name="bkmk_RDL_Types"></a> RDL 類型  
  下表列出用於 RDL 元素及屬性的類型。  
   
 |類型|描述|  
@@ -73,7 +74,7 @@ ms.locfileid: "77078024"
 |**UnsignedInt**|具有不帶正負號之整數 (uint32) 值的屬性。|  
 |**變數**|具有任何簡單 XML 類型的屬性。|  
   
-##  <a name="bkmk_RDL_Data_Types"></a> RDL 資料類型  
+##  <a name="rdl-data-types"></a><a name="bkmk_RDL_Data_Types"></a> RDL 資料類型  
  DataType 列舉會定義 RDL 中屬性、運算式或參數的資料類型。 下表列出說明 Common Language Runtime (CLR) 資料類型對應到 RDL 資料類型的方式。  
   
 |**CLR 類型**|**對應的資料類型**|  

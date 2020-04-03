@@ -1,5 +1,6 @@
 ---
 title: 報表設計檢視 (報表產生器) | Microsoft Docs
+description: 本文描述 [報表產生器] 視窗中用來新增、選取及組織報表資源，以及變更報表項目屬性的控制項。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ecc2115b106fe61492be388c90cfa2bd27eae9f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ca82e7fa0a302c4156c56c2e5ff66ad0cc49da99
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190037"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290861"
 ---
 # <a name="report-design-view-report-builder"></a>報表設計檢視 (報表產生器)
   [報表產生器] 視窗的設計目的是要協助您輕鬆地組織報表資源和快速地建立所需的編頁報表。 設計介面位於視窗中央，並且具有功能區和窗格。 設計介面是您可以加入和組織報表項目的位置。 本文所說明的窗格可用來加入、選取並組織報表資源，以及變更報表項目屬性。  
@@ -47,13 +48,13 @@ ms.locfileid: "74190037"
   
 8.  目前報表狀態列  
   
-##  <a name="Ribbon"></a> 參數窗格  
+##  <a name="parameters-pane"></a><a name="Ribbon"></a> 參數窗格  
  您可以使用報表參數控制報表資料、將相關的報表連接在一起，以及變更報表呈現方式。 [參數] 窗格提供報表參數的彈性配置。  
   
  請深入閱讀 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
   
-##  <a name="RptDesignSurface"></a> 報表設計介面  
+##  <a name="the-report-design-surface"></a><a name="RptDesignSurface"></a> 報表設計介面  
  報表產生器的設計介面是設計報表時的主要工作區域。 若要在報表中放置資料區域、子報表、文字方塊、影像、矩形和線條等報表項目，可以將這些項目從功能區或報表組件庫加入設計介面中。 您可以從這裡對報表項目加入群組、運算式、參數、篩選、動作、可見性和格式。  
   
  也可以變更下列項目：  
@@ -75,7 +76,7 @@ ms.locfileid: "74190037"
 >  若要顯示尺規，請在 [檢視]  索引標籤上選取 [尺規]  核取方塊。  
   
   
-##  <a name="ReptDataPane"></a> The Report Data Pane  
+##  <a name="the-report-data-pane"></a><a name="ReptDataPane"></a> The Report Data Pane  
  在 [報表資料] 窗格中，您可以定義報表所需的報表資料和報表資源，然後再設計報表配置。 例如，您可以將資料來源、資料集、導出欄位、報表參數和影像加入至 [報表資料] 窗格。  
   
  當您將項目加入至 [報表資料] 窗格之後，只需要將欄位拖曳到設計介面上的報表項目，就可以控制資料要出現在報表中的位置。  
@@ -105,7 +106,7 @@ ms.locfileid: "74190037"
 -   [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
-##  <a name="ReptPartGallery"></a> 報表組件庫  
+##  <a name="the-report-part-gallery"></a><a name="ReptPartGallery"></a> 報表組件庫  
  建立報表最簡單的方式，就是在報表伺服器或整合到 SharePoint 網站的報表伺服器找到現有的報表組件，如資料表和圖表。  
   
  按一下 [插入] 索引標籤上的 [報表組件]  以開啟 [報表組件庫]。 您可以在這裡搜尋報表組件，以加入報表中。 您可以依下列方式篩選報表組件：報表組件的全部或部分名稱、建立者、上次修改報表組件者、上次修改時間、儲存位置，或報表組件的類型。 例如，您可以依其中一個同事，搜尋上星期建立的所有圖表。  
@@ -116,7 +117,7 @@ ms.locfileid: "74190037"
  您可以以縮圖或清單方式檢視搜尋結果，並依名稱、建立和修改日期，以及建立者來排序搜尋結果。 如需詳細資訊，請參閱[報表組件 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
   
-##  <a name="PropertiesPane"></a> 屬性窗格 (報表產生器)  
+##  <a name="the-properties-pane-report-builder"></a><a name="PropertiesPane"></a> 屬性窗格 (報表產生器)  
  報表中的每個項目 (包括資料區域、影像、文字方塊和報表主體本身) 都具有相關聯的屬性。 例如，文字方塊的 BorderColor 屬性會顯示文字方塊框線的色彩值，而報表的 PageSize 屬性會顯示報表的頁面大小。  
   
  這些屬性會顯示在 [屬性] 窗格中。 窗格中的屬性會因您所選取的報表項目而有所不同。  
@@ -142,7 +143,7 @@ ms.locfileid: "74190037"
  [屬性] 窗格的窗格頂端具有三個按鈕：[類別目錄]、[按字母排列] 和 [屬性頁]。 按一下 [類別目錄] 和 [按字母排列] 按鈕，即可在 [屬性] 窗格檢視之間切換。 按一下 [屬性頁]  按鈕，即可開啟選取之報表項目的 [屬性] 對話方塊。  
   
   
-##  <a name="GroupPane"></a> 群組窗格 (報表產生器)  
+##  <a name="the-grouping-pane-report-builder"></a><a name="GroupPane"></a> 群組窗格 (報表產生器)  
  群組的用途在於將報表資料組織為視覺階層以及計算總計。 您可以在設計介面和 [群組] 窗格中檢視資料區域內的資料列和資料行群組。 [群組] 窗格具有兩個窗格：[資料列群組] 和 [資料行群組]。 當您選取某個資料區域時，[群組] 窗格就會將該資料區域內的所有群組顯示成階層式清單：子群組會以縮排方式顯示在其父群組底下。  
   
  ![報表產生器資料列群組](../../reporting-services/report-builder/media/ssrb-rowgroups.png "報表產生器資料列群組")  
@@ -154,7 +155,7 @@ ms.locfileid: "74190037"
  如需詳細資訊，請參閱[群組窗格 &#40;報表產生器&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md) 和[了解群組 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
   
   
-##  <a name="RunMode"></a> 在執行模式中預覽報表  
+##  <a name="previewing-your-report-in-run-mode"></a><a name="RunMode"></a> 在執行模式中預覽報表  
  在報表設計檢視中，您使用的不是實際資料，而是欄位名稱或運算式所指示之資料的表示。 當您想要查看顯示在所設計之報表內容中的實際資料時，可以執行報表來預覽顯示在報表配置中之基礎資料庫的資料。 在設計與執行報表之間切換，可讓您調整其設計並且立即查看結果。 若要預覽報表，請在功能區的 [檢視]  群組中，按一下 [執行]  。  
   
  當您按一下 [執行]  時，報表產生器就會連線至報表資料來源、在電腦上快取資料、結合資料和配置，然後在 HTML 檢視器中轉譯報表。 在您繼續設計報表時，可以視需要不斷執行報表。 當您對報表感到滿意時，就可以將報表儲存至報表伺服器，具有適當權限的其他個人可以在其中檢視您的報表。  

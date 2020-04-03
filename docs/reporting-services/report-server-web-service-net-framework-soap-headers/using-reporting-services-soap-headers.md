@@ -1,5 +1,6 @@
 ---
 title: 使用 Reporting Services SOAP 標頭 | Microsoft Docs
+description: 使用 Reporting Services SOAP 標頭將作業分批為單一交易、管理工作階段狀態，以及根據項目的路徑或識別碼來擷取屬性。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 99a4ac18003defd2a6b3cffdd4bc1d2955c44816
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7f0cb5dc846e8f1f7e292366c7f938366b53de2d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63026016"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216194"
 ---
 # <a name="using-reporting-services-soap-headers"></a>使用 Reporting Services SOAP 標頭
   使用 SOAP 與 Web 服務方法通訊需要遵循標準格式。 這個格式的一部分是編碼於 XML 文件中的資料。 XML 文件是由根 **Envelope** 項目所組成，該項目則是由必要的 **Body** 項目和選擇性的 **Header** 項目組成。 **Body** 項目包含訊息特定的資料。 選擇性的 **Header** 項目可能包含其他與特定訊息沒有直接關聯的資訊。 **Header** 項目的每個子項目都稱為 SOAP 標頭。  

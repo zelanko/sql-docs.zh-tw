@@ -1,7 +1,7 @@
 ---
 title: 使用查詢存放區監視效能 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02658b617400f33b5a648dab43953a041f5c2936
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: bd1dde8b4b98041ed8a9d07c82d52f8d202ed0c9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288462"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448171"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查詢存放區監視效能
 
-[!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢存放區功能為您提供關於查詢計劃選擇及效能的深入資訊。 其可協助您您快速找出由於查詢計劃變更所導致的效能差異，以簡化效能疑難排解作業。 查詢存放區會自動擷取查詢、計劃和執行階段統計資料的歷程記錄，並將其保留供您檢閱。 其會以時段來區分資料、供您查看資料庫使用模式，並了解何時在伺服器上發生查詢計劃變更。 使用 [[ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md)] 選項可設定查詢存放區。
 
@@ -32,7 +32,7 @@ ms.locfileid: "79288462"
 > [!IMPORTANT]
 > 若您只針對 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的 Just-In-Time 負載見解使用查詢存放區，請計畫儘快安裝 [KB 4340759](https://support.microsoft.com/help/4340759) 中的效能延展性修正程式。
 
-## <a name="Enabling"></a> 啟用查詢存放區
+## <a name="enabling-the-query-store"></a><a name="Enabling"></a> 啟用查詢存放區
 
  新的資料庫預設不會啟用查詢存放區。
 
@@ -63,7 +63,7 @@ SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
 > [!IMPORTANT]
 > 如需有關啟用查詢存放區並讓它根據您的工作負載調整的相關資訊，請參閱[使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
 
-## <a name="About"></a> 查詢存放區中的資訊
+## <a name="information-in-the-query-store"></a><a name="About"></a> 查詢存放區中的資訊
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中任何特定查詢的執行計劃通常會在一段時間後，因為統計資料的變更、結構描述變更、建立/刪除索引等數種不同原因而有所演變。儲存快取的查詢計劃之程序快取，只會儲存最新的執行計劃。 計劃也會因為記憶體不足的壓力，而從計劃快取中收回。 因此，因為執行計劃變更所造成的查詢效能低下，可能相形重要，而且可能需要許多時間才可解決。
 
@@ -109,7 +109,7 @@ INNER JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;
 ```
 
-## <a name="Regressed"></a> 使用迴歸查詢功能
+## <a name="use-the-regressed-queries-feature"></a><a name="Regressed"></a> 使用迴歸查詢功能
 
 啟用查詢存放區之後，請重新整理 [物件總管] 窗格中的資料庫部分，以新增查詢存放區  區段。
 
@@ -123,7 +123,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 若要強制執行計劃，請選取查詢與計劃，然後按一下 [強制執行計劃]  。 您只可以強制執行由查詢計劃功能所儲存且仍保留在查詢計劃快取中的計劃。
 
-## <a name="Waiting"></a> 尋找等候查詢
+## <a name="finding-waiting-queries"></a><a name="Waiting"></a> 尋找等候查詢
 
 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 開始，可在查詢存放區中使用每個查詢經過一段時間的等候統計資料。
 
@@ -151,7 +151,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 |每個資料庫的高 PAGEIOLATCH_SH 等候|查詢存放區特定查詢的高緩衝區 IO 等候|在查詢存放區中尋找實體讀取次數高的查詢。 如果它們符合高 IO 等候的查詢，請考慮引入基礎實體索引搜尋，以執行搜尋而不是掃描，進而將查詢的 IO 負擔降至最低。|
 |每個資料庫的高 SOS_SCHEDULER_YIELD 等候|查詢存放區特定查詢的高 CPU 等候|尋找查詢存放區中前幾項最耗 CPU 的查詢。 在它們中間找出高 CPU 趨勢與受影響查詢之高 CPU 等候相互關聯的查詢。 專注於將那些查詢最佳化，可能存在計畫迴歸或缺少索引。|
 
-## <a name="Options"></a> 組態選項
+## <a name="configuration-options"></a><a name="Options"></a> 組態選項
 
 設定查詢存放區參數可使用下列選項。
 
@@ -177,7 +177,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 如需使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式設定選項的詳細資訊，請參閱 [選項管理](#OptionMgmt)。
 
-## <a name="Related"></a> 相關檢視、函數與程序
+## <a name="related-views-functions-and-procedures"></a><a name="Related"></a> 相關檢視、函數與程序
 
 透過 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或使用下列檢視與程序來檢視及管理查詢存放區。
 
@@ -211,9 +211,9 @@ INNER JOIN sys.query_store_query_text AS Txt
 |[sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)|[sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)|
 |sp_query_store_consistency_check &#40;Transct-SQL&#41;||
 
-## <a name="Scenarios"></a> 主要使用方式案例
+## <a name="key-usage-scenarios"></a><a name="Scenarios"></a> 主要使用方式案例
 
-### <a name="OptionMgmt"></a> 選項管理
+### <a name="option-management"></a><a name="OptionMgmt"></a> 選項管理
 
 本節提供管理查詢存放區功能本身的一些指導方針。
 
@@ -303,35 +303,44 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
 
 **刪除臨機操作查詢**
 
-這會刪除只執行一次且超過 24 小時的查詢。
+這會每隔 3 分鐘清除查詢存放區中的臨機操作和內部查詢，讓查詢存放區不會用盡空間，並移除真正需要追蹤的查詢
 
 ```sql
+SET NOCOUNT ON
+-- This purges adhoc and internal queries from the query store every 3 minutes so that the
+-- query store does not run out of space and remove queries we really need to track
+DECLARE @command varchar(1000)
+
+SELECT @command = 'IF ''?'' NOT IN(''master'', ''model'', ''msdb'', ''tempdb'') BEGIN USE ?
+EXEC(''
 DECLARE @id int
 DECLARE adhoc_queries_cursor CURSOR
 FOR
 SELECT q.query_id
 FROM sys.query_store_query_text AS qt
 JOIN sys.query_store_query AS q
-    ON q.query_text_id = qt.query_text_id
+ON q.query_text_id = qt.query_text_id
 JOIN sys.query_store_plan AS p
-    ON p.query_id = q.query_id
+ON p.query_id = q.query_id
 JOIN sys.query_store_runtime_stats AS rs
-    ON rs.plan_id = p.plan_id
-GROUP BY q.query_id
-HAVING SUM(rs.count_executions) < 2
-AND MAX(rs.last_execution_time) < DATEADD (hour, -24, GETUTCDATE())
-ORDER BY q.query_id ;
+ON rs.plan_id = p.plan_id
+WHERE q.is_internal_query = 1 ' -- is it an internal query then we dont care to keep track of it
 
+' OR q.object_id = 0' -- if it does not have a valid object_id then it is an adhoc query and we dont care about keeping track of it
+' GROUP BY q.query_id
+HAVING MAX(rs.last_execution_time) < DATEADD (minute, -5, GETUTCDATE()) ' -- if it has been more than 5 minutes since the adhoc query ran
+' ORDER BY q.query_id ;
 OPEN adhoc_queries_cursor ;
 FETCH NEXT FROM adhoc_queries_cursor INTO @id;
 WHILE @@fetch_status = 0
-    BEGIN
-        PRINT @id
-        EXEC sp_query_store_remove_query @id
-        FETCH NEXT FROM adhoc_queries_cursor INTO @id
-    END
+BEGIN
+EXEC sp_query_store_remove_query @id
+FETCH NEXT FROM adhoc_queries_cursor INTO @id
+END
 CLOSE adhoc_queries_cursor ;
 DEALLOCATE adhoc_queries_cursor;
+'') END' ;
+EXEC sp_MSforeachdb @command
 ```
 
 您可以用不同的邏輯來定義自己的程序，以清除不再需要的資料。
@@ -341,7 +350,7 @@ DEALLOCATE adhoc_queries_cursor;
 - **sp_query_store_reset_exec_stats** 為指定的計畫清除執行階段統計資料。
 - **sp_query_store_remove_plan** 以移除單一計畫。
 
-### <a name="Peformance"></a> 效能稽核及疑難排解
+### <a name="performance-auditing-and-troubleshooting"></a><a name="Peformance"></a> 效能稽核及疑難排解
 
 查詢存放區會保留整個查詢執行過程當中的編譯和執行階段度量歷程記錄，以讓您詢問關於工作負載的問題。
 
@@ -580,7 +589,7 @@ ORDER BY additional_duration_workload DESC
 OPTION (MERGE JOIN);
 ```
 
-### <a name="Stability"></a> 維護查詢效能穩定性
+### <a name="maintaining-query-performance-stability"></a><a name="Stability"></a> 維護查詢效能穩定性
 
 針對執行多次的查詢，您可能會注意到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用不同的計畫，而產生了不同的資源使用率與持續時間。 您可利用查詢存放區，輕鬆偵測查詢效能何時低下，以及判斷在意時段中的最佳計劃。 然後可以對未來的查詢強制執行該最佳計劃。
 
@@ -596,7 +605,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
 使用 **sp_query_store_force_plan** 時，只能強制執行查詢存放區所記錄的計劃，作為該查詢的計劃。 換句話說，可用於查詢的計劃，是已經用於執行該查詢的計劃 (查詢存放區當時在作用中)。
 
-#### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/>強制支援向前快轉及靜態資料指標
+#### <a name="a-namectp23-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/>強制支援向前快轉及靜態資料指標
 
 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和 Azure SQL Database (所有部署模型) 開始，查詢存放區支援強制查詢執行計劃，以進行向前快轉及提供靜態 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 API 資料指標。 強制執行會透過 `sp_query_store_force_plan` 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢存放區報告支援。
 

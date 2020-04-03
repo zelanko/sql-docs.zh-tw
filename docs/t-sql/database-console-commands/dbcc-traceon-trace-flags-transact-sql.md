@@ -1,7 +1,7 @@
 ---
 title: 追蹤旗標 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/11/2020
+ms.date: 03/27/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e19d4af33285f68033dbcead3f7bc275b2e029cb
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 3296dad876dc0f3ce95a29dc1b9f21f38db7b0a5
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288632"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402596"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 
@@ -184,10 +184,11 @@ ms.locfileid: "79288632"
 |**9939**|在參考記憶體最佳化資料表或資料表變數的 DML 作業中，啟用平行計畫和平行掃描記憶體最佳化資料表和資料表變數 (只要它們不是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中 DML 作業的目標)。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4013877) \(機器翻譯\)。<br /><br />**注意：** 如果同時也明確啟用追蹤旗標 4199，則不需要追蹤旗標 9939。<br /><br />**範圍**：全域或工作階段或查詢 (QUERYTRACEON)|   
 |**10204**|在資料行存放區索引重組期間停用合併/重新壓縮。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，當重新組織資料行存放區索引時，新功能會自動將任何小型的壓縮資料列群組合併成較大的壓縮資料列群組，並重新壓縮有大量已刪除資料列的任何資料列群組。<br /><br />**注意：** 追蹤旗標 10204 不適用於在記憶體最佳化資料表上建立的資料行存放區索引。<br /><br />**範圍**：全域或工作階段|   
 |**10316**|在[內部記憶體最佳化暫存時態表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)上建立預設索引和額外的索引。 如果您有特定的查詢模式，而其中包含預設索引未涵蓋的資料行，您可以考慮加入額外的索引。<br /><br />**注意：** 記憶體最佳化資料表的系統建立版本時態表，是專為提供高交易輸送量所設計。 請留意，對負責更新或刪除目前資料表資料列的 DML 作業來說，建立額外的索引可能會造成額外負荷。 使用額外的索引，您的目標應該是在時態性查詢和 DML 額外負荷之間尋求適當的平衡。<br /><br />**範圍**：全域或工作階段|
-|**11023**|針對未在 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 陳述式中明確指定採樣速率的所有後續統計資料更新，停用上次保存的採樣速率。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4039284) \(機器翻譯\)。<br /><br />**範圍**：全域或工作階段|    
-|**11024**|當任何分割區的修改次數超過總[閾值](../../relational-databases/statistics/statistics.md#AutoUpdateStats)時，使自動更新統計資料功能觸發。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4041811) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 和更新版本的組建。<br /><br />**範圍**：全域或工作階段| 
-|**11047**|將 `query wait (s)` 設定的預設逾時或 Resource Governor `REQUEST_MEMORY_GRANT_TIMEOUT_SEC` 設定，套用至資料行存放區索引建置作業。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4480641) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU5、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 和更新版本的組建。<br /><br />**範圍**：全域或工作階段|  
-
+|**11023**|針對未在 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 陳述式中明確指定採樣速率的所有後續統計資料更新，停用上次保存的採樣速率。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4039284) \(機器翻譯\)。<br /><br />**範圍**：只限全域|    
+|**11024**|當任何分割區的修改次數超過總[閾值](../../relational-databases/statistics/statistics.md#AutoUpdateStats)時，使自動更新統計資料功能觸發。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4041811) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 和更新版本的組建。<br /><br />**範圍**：只限全域| 
+|**11047**|將 `query wait (s)` 設定的預設逾時或 Resource Governor `REQUEST_MEMORY_GRANT_TIMEOUT_SEC` 組態，套用至資料行存放區索引建置作業。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4480641) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU5、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 和更新版本的組建。<br /><br />**範圍**：只限全域| 
+|**11064**|藉由將 `SELECT` 和 `INSERT` 陳述式之間的記憶體分佈最佳化，以改善資料行存放區索引的資料載入作業可擴縮性。 如需將資料載入資料行存放區索引的詳細資訊，請參閱[資料行存放區索引 - 資料載入指導](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和更新版本的組建。<br /><br />**範圍**：只限全域| 
+|**11068**|使用針對資料行存放區索引插入作業所設定平行處理原則的最大程度 (MAXDOP) 值。 如需覆寫平行處理原則程度的詳細資訊，請參閱[查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md#overriding-degrees-of-parallelism)。<br /><br />**重要：** 只有在同時啟用追蹤旗標 11064 時，此追蹤旗標才會生效。<br /><br />**重要：** 如果更快速載入資料比維護[資料行存放區區段](../../relational-databases/indexes/columnstore-indexes-overview.md#column-segment)品質更重要時，請使用此追蹤旗標。 例如，將 1,048,577 個資料列載入資料行存放區時，如果插入作業是以平行模式執行，則使用此追蹤旗標可能會產生多個壓縮的資料列群組。 如果沒有此追蹤旗標，則插入作業會產生一個壓縮的資料列群組。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和更新版本的組建。<br /><br />**範圍**：只限全域| 
   
 ## <a name="examples"></a>範例  
  下列範例使用 DBCC TRACEON 在伺服器層級為所有工作階段設定追蹤旗標 3205。  

@@ -1,6 +1,6 @@
 ---
 title: 管理可用性群組容錯移轉 - Linux 上的 SQL Server
-description: ''
+description: 本文描述容錯移轉的類型：自動、規劃的手動容錯移轉，以及強制手動容錯移轉。 自動及規劃的手動容錯移轉會保留所有資料。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 92d9a7518e0a6176199f39dcd69c87ea25c8004d
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.openlocfilehash: 635c567722fd5744aa56a16a6f48e8c4284f8ba8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78280876"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216847"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux 上的 Always On 可用性群組容錯移轉
 
@@ -24,7 +24,7 @@ ms.locfileid: "78280876"
 
 如需容錯移轉的背景資訊，請參閱[容錯移轉與容錯移轉模式](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)。
 
-## <a name="failover"></a>手動容錯移轉
+## <a name="manual-failover"></a><a name="failover"></a>手動容錯移轉
 
 使用叢集管理工具來容錯移轉外部叢集管理員所管理的 AG。 例如，如果解決方案使用 Pacemaker 來管理 Linux 叢集，則請使用 `pcs` 在 RHEL 或 Ubuntu 上執行手動容錯移轉。 在 SLES 中，請使用 `crm`。 
 
@@ -43,7 +43,7 @@ ms.locfileid: "78280876"
 
    其次，[移除位置條件約束](#removeLocConstraint)。
 
-#### <a name="manualMove"></a> 步驟 1： 移動可用性群組資源來手動容錯移轉
+#### <a name="step-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove"></a> 步驟 1： 移動可用性群組資源來手動容錯移轉
 
 若要手動將名為 *ag_cluster* 的 AG 資源容錯移轉至名為 *nodeName2* 的叢集節點，請針對您的發行版本執行適用命令：
 
@@ -62,7 +62,7 @@ ms.locfileid: "78280876"
 >[!IMPORTANT]
 >在您手動為資源進行容錯移轉後，您需要移除自動新增的位置條件約束。
 
-#### <a name="removeLocConstraint"> </a> 步驟 2： 移除位置條件約束
+#### <a name="step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> </a> 步驟 2： 移除位置條件約束
 
 在手動容錯移轉期間，`pcs` 命令 `move` 或 `crm` 命令 `migrate` 會針對要放置在新目標節點上的資源新增位置條件約束。 若要查看新的條件約束，請在手動移動資源後執行下列命令：
 
@@ -107,7 +107,7 @@ ms.locfileid: "78280876"
 - [acemaker - Move Resources Manually](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_move_resources_manually.html) (Pacemaker - 手動移動資源)
  [SLES Administration Guide - Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) (SLES 管理指南 - 資源) 
  
-## <a name="forceFailover"></a> 強制容錯移轉 
+## <a name="force-failover"></a><a name="forceFailover"></a> 強制容錯移轉 
 
 強制容錯移轉主要用於災害復原。 在此情況下，因為主要資料中心已關閉，所以您無法使用叢集管理工具進行容錯移轉。 如果您強制容錯移轉至非同步的次要複本，有些資料可能會遺失。 只有在您必須立即還原 AG 的服務且願意承擔遺失資料的風險時，才強制執行容錯移轉。
 

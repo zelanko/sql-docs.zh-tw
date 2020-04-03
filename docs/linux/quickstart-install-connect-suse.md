@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 811438987106a5eb73a914e5d7bbceb139cd5c37
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: bb7a6689d2cf6638f2d4e2de078e4e4412225595
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75558626"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487606"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>快速入門：在 SUSE Linux Enterprise Server 上安裝 SQL Server 並建立資料庫
 
@@ -31,7 +31,7 @@ ms.locfileid: "75558626"
 在本快速入門中，您會在 SUSE Linux Enterprise Server (SLES) v12 上安裝 SQL Server 2019。 然後與 **sqlcmd** 連線，建立您的第一個資料庫並執行查詢。
 
 > [!IMPORTANT]
-> SUSE Linux Server v12 SP2、SP3 或 SP4 上皆支援 SQL Server 2019。
+> SUSE Linux Server v12 SP2、SP3、SP4 或 SP5 上皆支援 SQL Server 2019。
 
 ::: moniker-end
 
@@ -50,7 +50,7 @@ ms.locfileid: "75558626"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-您的 SLES v12 SP2、SP3 或 SP4 機器必須**至少有 2 GB** 的記憶體。 檔案系統必須是 **XFS** 或 **EXT4**。 不支援其他檔案系統 (例如 **BTRFS**)。
+您的 SLES v12 SP2、SP3、SP4 或 SP5 電腦必須**至少有 2 GB** 的記憶體。 檔案系統必須是 **XFS** 或 **EXT4**。 不支援其他檔案系統 (例如 **BTRFS**)。
 
 ::: moniker-end
 
@@ -66,7 +66,7 @@ ms.locfileid: "75558626"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="install"></a>安裝 SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>安裝 SQL Server
 
 若要在 SLES 上設定 SQL Server，請從終端執行下列命令，安裝 **mssql-server** 套件：
 
@@ -125,7 +125,7 @@ ms.locfileid: "75558626"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="install"></a>安裝 SQL Server
+## <a name="install-sql-server"></a><a id="install"></a>安裝 SQL Server
 
 若要在 SLES 上設定 SQL Server，請從終端執行下列命令，安裝 **mssql-server** 套件：
 
@@ -173,7 +173,7 @@ ms.locfileid: "75558626"
 ::: moniker-end
 
 
-## <a id="tools"></a>安裝 SQL Server 命令列工具
+## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>安裝 SQL Server 命令列工具
 
 若要建立資料庫，您必須與可在 SQL Server 上執行 Transact-SQL 陳述式的工具連線。 下列步驟會安裝 SQL Server 命令列工具：[sqlcmd](../tools/sqlcmd-utility.md) 和 [bcp](../tools/bcp-utility.md)。
 

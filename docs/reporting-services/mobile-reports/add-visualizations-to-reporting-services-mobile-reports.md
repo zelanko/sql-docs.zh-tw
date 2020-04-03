@@ -1,5 +1,6 @@
 ---
 title: 將視覺效果新增至 Reporting Services 行動報表 | Microsoft Docs
+description: 了解可在 Reporting Services 行動報表中使用的三種基本圖表類型：時間、類別和總計，以及其對應的比較圖表。
 ms.date: 09/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3379d5eb53bc255a09e255d4986eb924912e5eb3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63316650"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79447984"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>將視覺效果新增至 Reporting Services 行動報表
 圖表是資料視覺效果中不可或缺的一部分。 了解可在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表中用來涵蓋各種案例的圖表。 
@@ -143,7 +144,7 @@ ms.locfileid: "63316650"
 
      * 在 [數值表示方式]  下，針對磚的大小選取一個數值欄位。
      * 在 [色彩表示方式]  下，針對磚的色彩選取一個數值欄位。 
-     * [選擇性] **自訂中間值**：當視覺效果類型為 HeatMapWithCustomCenterValue 時，您只能使用 **自訂中間值** 。
+     * [選擇性] **自訂中間值**：當視覺效果類型為 HeatMapWithCustomCenterValue 時，您才可以使用 [自訂中間值]  。
      
          中間值會決定方塊的色彩。 計量越符合中間值，顏色就越接近綠色。 反之則接近紅色。
      

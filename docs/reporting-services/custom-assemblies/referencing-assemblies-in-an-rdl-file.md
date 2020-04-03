@@ -1,5 +1,6 @@
 ---
 title: 參考在 RDL 檔案中的組件 | Microsoft Docs
+description: 了解如何參考報表定義語言 (RDL) 檔案中的組件，尤其是在 CodeModules 項目和 Classes 項目中。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 87285bffd5136c4ac2a66ae17755edcecd35f065
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d310ec6895f1e8d027378fca71df36331dfbf5a8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63193978"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217017"
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>參考在 RDL 檔案中的組件
   為了支援報表定義檔案中自訂程式碼組件的用法，在 RDL 規格中加入了兩個報表定義語言 (RDL) 項目：**CodeModules** 項目與 **Classes** 項目。  

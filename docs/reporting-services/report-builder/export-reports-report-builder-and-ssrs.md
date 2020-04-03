@@ -1,5 +1,6 @@
 ---
 title: 匯出報表 (報表產生器) | Microsoft Docs
+description: 您可使用報表產生器、報表設計師或報表伺服器，將 Reporting Services 報表匯出成其他檔案格式，例如 PowerPoint 或 PDF。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-builder
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a213d0decf0b2765dca07faec69135ddd3e44d99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a97450563aa62e7b8179b7c5a0d2bead5f156f1b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078495"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342920"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>匯出報表 (報表產生器及 SSRS)
 
@@ -37,7 +38,7 @@ ms.locfileid: "77078495"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-## <a name="bkmk_export_from_rb"></a> 從報表產生器匯出報表
+## <a name="to-export-a-report-from-report-builder"></a><a name="bkmk_export_from_rb"></a> 從報表產生器匯出報表
 
 1.  執行或預覽報表。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "77078495"
   
      [另存新檔]  對話方塊隨即開啟。 依預設，檔案名稱就是您匯出之報表的名稱。 您可以選擇變更檔案名稱。  
   
-##  <a name="bkmk_export_from_rm"></a> 從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站匯出報表  
+##  <a name="to-export-a-report-from-the-ssrsnoversion-web-portal"></a><a name="bkmk_export_from_rm"></a> 從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站匯出報表  
   
 1.  從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站的 [首頁]  上，巡覽至您要匯出的報表。  
   
@@ -71,7 +72,7 @@ ms.locfileid: "77078495"
   
      使用與您選擇之格式相關聯的應用程式，顯示或儲存報表。 如果您按一下 **[儲存]** ，系統會提示您儲存報表的位置。  
   
-##  <a name="bkmk_export_from_sharepoint"></a> 從 SharePoint 文件庫匯出報表  
+##  <a name="to-export-a-report-from-a-sharepoint-library"></a><a name="bkmk_export_from_sharepoint"></a> 從 SharePoint 文件庫匯出報表  
   
 1.  預覽報表。  
   
@@ -91,7 +92,7 @@ ms.locfileid: "77078495"
   
      **注意** ：如果因為您沒有與此檔案類型相關聯的程式而無法以您所選擇的格式開啟報表，系統將會提示您儲存匯出的報表，或在線上尋找一個程式來開啟該報表。  
   
-##  <a name="RendererTypes"></a> 轉譯延伸模組類型  
+##  <a name="rendering-extension-types"></a><a name="RendererTypes"></a> 轉譯延伸模組類型  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 轉譯延伸模組有三種類型：  
   
 -   **資料轉譯器延伸模組** ：資料轉譯延伸模組會移除報表的所有格式設定和配置資訊，並且只顯示資料。 產生的檔案可用於將原始報表資料匯入到其他檔案類型 (例如，Excel)、其他資料庫、XML 資料訊息，或是自訂應用程式。 資料轉譯器不支援分頁符號。  
@@ -106,8 +107,8 @@ ms.locfileid: "77078495"
   
      支援下列強制分頁轉譯延伸模組：TIFF 和 PDF。  
   
-##  <a name="ExportFormats"></a> 可在檢視報表時匯出的格式  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供轉譯延伸模組，可將報表轉譯成各種不同格式。 您應該針對所選的檔案格式進行報表設計最佳化。  下表列出您可以從使用者介面匯出的格式。  有一些額外格式可以與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱搭配使用，或者，從 URL 存取匯出時也會有一些額外格式。  請參閱本主題中的 [匯出報表的其他方式](#OtherWaysExportingReports)一節。  
+##  <a name="formats-you-can-export-while-viewing-reports"></a><a name="ExportFormats"></a> 可在檢視報表時匯出的格式  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供轉譯延伸模組，可將報表轉譯成各種不同格式。 您應該針對所選的檔案格式進行報表設計最佳化。  下表列出可從使用者介面匯出的格式。  有一些額外格式可以與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱搭配使用，或者，從 URL 存取匯出時也會有一些額外格式。  請參閱本主題中的 [匯出報表的其他方式](#OtherWaysExportingReports)一節。  
   
 |[格式]|轉譯延伸模組類型|描述|  
 |------------|------------------------------|-----------------|  
@@ -121,12 +122,12 @@ ms.locfileid: "77078495"
 |WORDOPENXML|軟分頁|檢閱報表時，在匯出功能表中顯示為 "Word"。 Word 轉譯延伸模組會將報表轉譯成與 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013 相容的 Word 文件 (.docx)。  如需詳細資訊，請參閱[匯出至 Microsoft Word](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)。|  
 |XML|資料|XML 轉譯延伸模組會傳回 XML 格式的報表。 報表 XML 的結構描述為報表特有的，且僅包含資料。 XML 轉譯延伸模組不會轉譯配置資訊，也不會維持分頁。 此延伸模組所產生的 XML 可以匯入資料庫中 (當做 XML 資料訊息使用)，或傳送到自訂應用程式。<br/><br/> 如需詳細資訊，請參閱[匯出至 XML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)。|  
   
-##  <a name="GeneratingDataFeedsFromReport"></a> 從報表產生資料摘要  
+##  <a name="generating-data-feeds-from-a-report"></a><a name="GeneratingDataFeedsFromReport"></a> 從報表產生資料摘要  
  若要從報表產生資料摘要，請在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站中執行報表，然後按一下入口網站工具列上的 **產生資料摘要** 圖示。 系統會提示您選擇要儲存還是開啟檔案。 如果您選擇 **[開啟]** ，Atom 服務文件會在與 .atomsvc 副檔名相關聯的應用程式中開啟。 如果您選擇 **[儲存]** ，文件會儲存為 .atomsvc 檔。 根據預設，檔案的名稱會是報表的名稱。 您可以將名稱變更為更有意義的名稱。  
   
  將 Atom 服務文件儲存到您的電腦上。 之後您可以將文件上傳到報表伺服器或是其他伺服器，以供其他人使用。 如需詳細資訊，請參閱[從多個報表產生資料摘要](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)和[從報表產生資料摘要](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)。  
   
-##  <a name="Troubleshooting"></a> 匯出的報表疑難排解  
+##  <a name="troubleshooting-exported-reports"></a><a name="Troubleshooting"></a> 匯出的報表疑難排解  
  在您將報表匯出成另一種格式後，有時報表看起來會跟原來不一樣，或是未能依照您希望的方式運作。 發生這種情況的原因是，轉譯器可能套用了某些規則和限制。 當您建立報表時，可以考量許多限制來加以對付。 您可能需要在報表中使用稍微不同的配置、小心對齊報表內的項目、將報表頁尾限制為單行文字等等。  
   
  若您的報表包含具有阿拉伯數字的 Unicode 文字，或是包含阿拉伯日期，則當您使用下列格式之一將報表匯出或列印報表時，會無法正確轉譯日期與數字。  
@@ -163,7 +164,7 @@ ms.locfileid: "77078495"
   
  此外，您還可以使用內建的全域 RenderFormat，針對不同的轉譯器依條件套用不同的報表配置。 如需詳細資訊，請參閱[內建的全域和使用者參考](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)
 
-##  <a name="OtherWaysExportingReports"></a> 匯出報表的其他方式  
+##  <a name="other-ways-of-exporting-reports"></a><a name="OtherWaysExportingReports"></a> 匯出報表的其他方式  
  匯出報表是在您於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站或報表產生器中開啟報表時，視需要而執行的工作。 如果您想要使匯出作業自動化 (例如，依重複執行的排程，以特定檔案類型將報表匯出至共用資料夾)，請建立訂閱，將報表傳遞至共用資料夾。 如需詳細資訊，請參閱＜ [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)＞。  
   
  在報告工具中預覽的報表或在瀏覽器應用程式 (例如 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站) 中開啟的報表，一律會先以 HTML 格式轉譯。 您無法指定不同的轉譯延伸模組做為檢視的預設值。 不過，您可以建立訂閱，以您要的轉譯格式產生報表，然後傳遞至電子郵件收件匣或共用資料夾。 如需詳細資訊，請參閱 [建立及管理原生模式報表伺服器的訂閱](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) 和 [建立、修改和刪除資料驅動訂閱](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)。  

@@ -1,5 +1,6 @@
 ---
 title: 從多個報表產生資料摘要 (報表產生器) | Microsoft Docs
+description: Reporting Services Atom 轉譯延伸模組會產生服務文件，其中包含編頁報表中的資料摘要，以及來自其中資料區的摘要。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 35f1f5f80d47aa5a59b77de9c4ebcab168394498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 93eecfd3ffb66be1a1758f3265bf91a5842a4abc
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079173"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342809"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>從多個報表產生資料摘要 (報表產生器及 SSRS)
 
@@ -31,7 +32,7 @@ ms.locfileid: "77079173"
   
  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportDataAsDataFeeds"></a> 當做資料摘要的報表  
+##  <a name="reports-as-data-feeds"></a><a name="ReportDataAsDataFeeds"></a> 當做資料摘要的報表  
  您可以匯出實際報表做為資料摘要，或者您可以建立其主要用途為以資料摘要的形式提供資料給應用程式的報表。 當資料不容易透過用戶端資料提供者存取時，或當您想要隱藏資料來源的複雜度，讓資料的使用更為簡單時，使用報表做為資料摘要提供您另一種將資料提供給應用程式的方式。 使用報表資料作為資料摘要的另一個優點是，您可以使用安全性、排程及報表快照集之類的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能來管理提供資料摘要的報表。  
   
  為充分利用 Atom 轉譯延伸模組，您應該了解如何將報表轉譯為資料摘要。 如果您要使用現有的報表，能夠預測報表所要產生的資料摘要是一項相當實用的功能；如果您要撰寫專門當做資料摘要使用的報表，則可以包含資料並微調報表配置以充分發揮資料摘要實用性，就是非常重要的功能。  
@@ -39,7 +40,7 @@ ms.locfileid: "77079173"
  如需詳細資訊，請參閱[從報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)。  
   
   
-##  <a name="AtomServiceDocument"></a> Atom 服務文件 (.atomsvc 檔)  
+##  <a name="atom-service-document-atomsvc-file"></a><a name="AtomServiceDocument"></a> Atom 服務文件 (.atomsvc 檔)  
  Atom 服務文件會指定一個或多個資料摘要的連接。 連線至少是產生摘要之資料服務的簡單 URL。  
   
  當您使用 Atom 轉譯延伸模組轉譯報表資料時，Atom 服務文件會列出可用於報表的資料摘要。 此文件至少會列出報表中每個資料區的一個資料摘要。 資料表和量測計各自只會產生一個資料摘要，但是矩陣、清單和圖表可能會根據所顯示的資料，產生多個資料摘要。  
@@ -59,7 +60,7 @@ ms.locfileid: "77079173"
  ![RS_Atom_PeerDynamicDataFeeds](../../reporting-services/report-builder/media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
   
-##  <a name="DataFeeds"></a> 資料摘要  
+##  <a name="data-feeds"></a><a name="DataFeeds"></a> 資料摘要  
  資料摘要是一種 XML 檔案，這個檔案擁有一致的表格格式 (不會隨時間而變更) 與變數資料 (每次執行報表時都可能不同)。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 所產生的資料摘要與 ADO.NET Data Services 所產生的資料摘要格式相同。  
   
  一個資料摘要包含兩個區段：標頭和資料。 Atom 規格會定義每個區段中的元素。 標頭包含搭配資料摘要使用之字元編碼結構描述之類的資訊。  
@@ -122,7 +123,7 @@ ms.locfileid: "77079173"
  資料摘要會以副檔名 .atom 儲存。 您可以使用文字或 XML 編輯器 (例如 [記事本] 或 XML 編輯器) 來檢視檔案結構和內容。  
   
   
-##  <a name="FlatteningReportData"></a> 扁平化報表資料  
+##  <a name="flattening-report-data"></a><a name="FlatteningReportData"></a> 扁平化報表資料  
  Atom 轉譯器會提供 XML 格式的報表資料做為扁平化的資料列集。 除了以下幾個例外情況之外，扁平化資料表的規則與 CSV 轉譯器的規則相同：  
   
 -   範圍中的項目已扁平化為詳細資料層次。 與 CSV 轉譯器不同的是，最上層的文字方塊會出現在寫入資料摘要的每個項目中。  
@@ -144,7 +145,7 @@ ms.locfileid: "77079173"
  如需詳細資訊，請參閱 [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
   
-##  <a name="AtomRendering"></a> Atom 轉譯規則  
+##  <a name="atom-rendering-rules"></a><a name="AtomRendering"></a> Atom 轉譯規則  
  轉譯資料摘要時，Atom 轉譯延伸模組會忽略下列資訊：  
   
 -   格式和配置  
@@ -181,7 +182,7 @@ ms.locfileid: "77079173"
 |對應|針對每一個地圖資料區域產生資料摘要。 如果多個地圖圖層使用相同的資料區域，則資料摘要會包含所有地圖圖層。 此資料摘要包含一筆記錄，其中包含地圖圖層之每一個地圖成員的標籤和值。|  
   
   
-##  <a name="DeviceInfo"></a> 裝置資訊設定  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> 裝置資訊設定  
  您可以變更此轉譯器的某些預設設定，包括要使用的編碼結構描述。 如需詳細資訊，請參閱 [ATOM Device Information Settings](../../reporting-services/atom-device-information-settings.md)。  
 
 ## <a name="next-steps"></a>後續步驟

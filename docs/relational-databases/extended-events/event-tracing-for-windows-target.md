@@ -1,5 +1,6 @@
 ---
 title: Windows 事件追蹤目標
+description: 了解如何使用 Windows 事件追蹤 (ETW) 為目標。 ETW 追蹤可搭配擴充事件一起使用，或是當作擴充事件的事件取用者使用。
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8923769d3edb35b328c9b0351fd9700ff9168c6c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: cdff5b987e6ff86a148cdb8d8ad317e9c14a543f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234658"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79433965"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件追蹤目標
 

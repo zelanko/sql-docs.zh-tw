@@ -1,5 +1,6 @@
 ---
 title: 匯出至影像檔 (報表產生器) | Microsoft Docs
+description: 在報表產生器中，影像轉譯延伸模組會將分頁報表轉譯成點陣圖或中繼檔。 預設是可在多個頁面中檢視的 TIFF 檔案。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 020d8ea2-de07-4212-a2bb-2ed0df2c8db8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2393769b4d6ca1676833b4e208e7f09dfcd444df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d5a3bd0cd2dfdba8b34ff6dc97f56fb3eaf53306
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77081376"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342848"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>匯出至影像檔 (報表產生器及 SSRS)
   影像轉譯延伸模組會將分頁報表轉譯成點陣圖或中繼檔。 依預設，影像轉譯延伸模組會產生報表的 TIFF 檔，可在多個頁面中檢視。 當用戶端接收到影像時，可以在影像檢視器中顯示和列印影像。 本主題提供影像轉譯器的特定資訊並描述轉譯延伸模組的例外狀況。  
@@ -23,7 +24,7 @@ ms.locfileid: "77081376"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="SupportedImageFormats"></a> 支援的影像格式  
+##  <a name="supported-image-formats"></a><a name="SupportedImageFormats"></a> 支援的影像格式  
  下表顯示每個影像轉譯器格式的副檔名和 MimeType。  
   
 |**型別**|**副檔名**|**MIMEType**|  
@@ -37,11 +38,11 @@ ms.locfileid: "77081376"
 |EMFPlus|EMF|image/emf|  
   
   
-##  <a name="RenderingMultiplePages"></a> 轉譯多頁  
+##  <a name="rendering-multiple-pages"></a><a name="RenderingMultiplePages"></a> 轉譯多頁  
  TIFF 是在單一檔案中，支援多頁文件的唯一格式。 JPG 或 PNG 之類的其他格式一次輸出一頁，而且需要為每一頁個別呼叫轉譯延伸模組。  
   
   
-##  <a name="Interactivity"></a> 互動性  
+##  <a name="interactivity"></a><a name="Interactivity"></a> 互動性  
  此轉譯器產生的任何影像格式都不支援互動性。 系統不會轉譯下列互動項目：  
   
 -   超連結  
@@ -59,7 +60,7 @@ ms.locfileid: "77081376"
 -   書籤  
   
   
-##  <a name="DeviceInfo"></a> 裝置資訊設定  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> 裝置資訊設定  
  您可以透過變更裝置資訊設定，變更此轉譯器的某些預設設定。 如需詳細資訊，請參閱＜ [Image Device Information Settings](../../reporting-services/image-device-information-settings.md)＞。  
   
   

@@ -1,5 +1,6 @@
 ---
 title: 在物件總管中管理事件工作階段
+description: 您可在 [物件總管] 中執行會影響擴充事件的動作，例如建立、啟動、停止、匯出、匯入、編輯或刪除擴充事件工作階段。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d7019b369999afe8c28660a6a533e61b1d01c29
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 390e8d4c65951f7b2b6c1f17d161a8ddc6d71242
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234525"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434085"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>在物件總管中管理事件工作階段
 
@@ -99,7 +100,7 @@ STATE = STOP
   
 4.  展開 **[範本]** 下拉式方塊。  
   
-5.  按一下 [**檔案來源 …>開啟]\<** ，然後巡覽至您想要匯入的工作階段 (XML 檔案)。  
+5.  按一下 [\<檔案來源 …>開啟]  ，然後巡覽至您想要匯入的工作階段 (XML 檔案)。  
   
  此工作階段會顯示在 **[工作階段]** 節點底下。 根據預設，工作階段不會啟動。  
   
@@ -116,7 +117,7 @@ STATE = STOP
   
 4.  完成事件工作階段的修訂之後，請按一下 **[確定]** 。  
   
-## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+## <a name="script-an-event-session-definition-using-tsql"></a>使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  [新增工作階段精靈] 和 [新增工作階段] 對話方塊都具有指令碼選項，可產生定義「擴充事件」工作階段的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
  您可以用滑鼠右鍵按一下工作階段名稱、選取 [!INCLUDE[tsql](../../includes/tsql-md.md)] [編寫工作階段的指令碼為] **，然後選取**[CREATE 至] **，藉以存取現有「擴充事件」工作階段的**。  

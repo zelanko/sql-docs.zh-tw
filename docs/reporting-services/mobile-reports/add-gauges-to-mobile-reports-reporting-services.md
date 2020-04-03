@@ -1,5 +1,6 @@
 ---
 title: 在行動報表中新增量測計 | Reporting Services | Microsoft Docs
+description: 您可將量測計新增至 Reporting Services 行動報表中。 量測計會顯示本身在資料集中的單一值，或與目標比較的值。
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 90440119ec21cbfe97096b439e61074c7e515e00
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 456c50650afc01fc18465b0d96f3cfeb715ddecb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63280546"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448289"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>在行動報表中加入量測計 | Reporting Services
 量測計是行動報表中使用最廣泛的基本視覺效果。 它們會顯示資料集中的單一值 (只有值或和目標比較的值)。
@@ -42,7 +43,7 @@ ms.locfileid: "63280546"
 
 4. [選用] 若要變更彙總，請選取 [選項]  ，然後選取不同的彙總。
    
-   >**注意**︰當您變更主要值的彙總時，您可能也想要變更比較值的彙總，雖然在某些情況下您可能想要混用彙總方法。  
+   >**注意**：當您變更主要值的彙總時，您可能也會想要變更比較值的彙總，雖然在某些情況下您可能會想要混合使用彙總方法。  
 
 ## <a name="filter-a-gauge"></a>篩選量測計
   
@@ -58,7 +59,7 @@ ms.locfileid: "63280546"
   
 您也可以自訂多項功能和視覺屬性，以及連接量測計元素和資料欄位的資料屬性。 
 
-### <a name="set-value-direction-high-or-low-is-better"></a>設定值方向︰高好或低好。
+### <a name="set-value-direction-high-or-low-is-better"></a>設定值的方向：高或低較佳
 * 選取量測計，然後在 [視覺屬性]  窗格的 [配置]  索引標籤中，將 [值方向]  設為 [數值愈高愈好]  或 [數值愈低愈好]  。 
 
 [數值愈高愈好]  以綠色顯示正值 (表示希望較佳的變更) 或紅色的較低值 (表示不希望較差的變更)。 

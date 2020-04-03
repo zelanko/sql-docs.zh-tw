@@ -1,5 +1,6 @@
 ---
 title: 使用擴充事件尋找持有最多鎖定的物件
+description: 本文說明如何尋找具有最多鎖定的物件。 資料庫管理員可能需要尋找鎖定最多的物件，以改善資料庫效能。
 ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 66a28ef1b0f6dcd683097bcd6b8d38a07fe15204
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: d173a174323beab2323fcba856be89062dc5e774
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75234482"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434025"
 ---
 # <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>尋找持有最多鎖定的物件
 

@@ -1,5 +1,6 @@
 ---
 title: 使用 Reporting Services 行動報表中的模擬資料 | Microsoft Docs
+description: 當將圖庫項目放在設計介面上時，行動報表發行工具會為其產生模擬資料。 使用模擬資料來設計原型。
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15c2ebe8c7084e10e4b7ff1ad556ed465d91c799
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 39640b3ce6e8d3c8760e3c1a1153949426eba80c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62474853"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448364"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>使用 Reporting Services 行動報表中的模擬資料
 當您將圖庫元素放在設計介面上時， [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 會立即產生該元素的模擬資料。 建立行動報表時，這項資料會提供數個實用的用途。   
@@ -38,7 +39,7 @@ ms.locfileid: "62474853"
   
 當所有控制項都繫結至實際資料後，行動報表中不再使用的模擬資料表就會自動移除。 您無法在設計介面上移除仍有元素參考的模擬資料表。  
   
->**注意**︰模擬資料不會加入整體行動報表的使用量中，因為它沒有和行動報表序列化，而是在執行階段動態產生的。  
+>**注意**：模擬資料不會新增到整體行動報表的使用量中，因為它沒有針對行動報表序列化，而是在執行階段動態產生。  
   
 ### <a name="see-also"></a>另請參閱  
 - [使用 SQL Server 行動報表發行工具建立與發行行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  

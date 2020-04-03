@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e90aea4fc05a01f67527e33cac4ba90913405c7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 5c95568167d1a783ed8d605bc64bc60a135046f0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287662"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80380669"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -69,7 +69,7 @@ ms.locfileid: "79287662"
 ```
 -- Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
-    { database_name.schema_name.table_name. | schema_name.table_name | table_name }
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
 [ ; ]
 ```
@@ -956,7 +956,7 @@ Test1Col
 - FOREIGN KEY 條件約束只能參考在相同伺服器之相同資料庫內的資料表。 跨資料庫參考完整性必須利用觸發程序來實作。 如需詳細資訊，請參閱 [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)。
 - FOREIGN KEY 條件約束可以參考相同資料表中的另一個資料行。 這稱為自我參考。
 - 資料行層級 FOREIGN KEY 條件約束的 REFERENCES 子句只能列出一個參考資料行。 這個資料行必須有定義了條件約束的資料行之相同資料類型。
-- 資料表層級 FOREIGN KEY 條件約束的 REFERENCES 子句，必須有與條件約束資料行清單中的資料行一樣多的參考資料行。 每個參考資料行的資料類型，也必須與資料行清單中的對應資料行相同。
+- 資料表層級 FOREIGN KEY 條件約束的 REFERENCES 子句，必須有與條件約束資料行清單中的資料行一樣多的參考資料行。 每個參考資料行的資料類型，也必須與資料行清單中的對應資料行相同。 您必須以在參考資料表上指定 PRIMARY KEY 或 UNIQUE 條件約束資料行時所使用的相同順序來指定參考資料行。
 - 如果外部索引鍵或所參考的索引鍵中有 **timestamp** 型別的資料行，您便不能指定 CASCADE、SET NULL 或 SET DEFAULT。
 - 您可以在相互具有參考關聯性的資料表上，組合 CASCADE、SET NULL、SET DEFAULT 和 NO ACTION。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 發現 NO ACTION，它會停止和回復相關的 CASCADE、SET NULL 和 SET DEFAULT 動作。 當 DELETE 陳述式造成 CASCADE、SET NULL、SET DEFAULT 和 NO ACTION 等動作的組合時，在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 檢查任何 NO ACTION 之前，會先套用 CASCADE、SET NULL 及 SET DEFAULT 等動作。
 - 在資料表所能包含參考其他資料表的 FOREIGN KEY 條件約束數目，及其他資料表所擁有參考特定資料表的 FOREIGN KEY 條件約束數目上， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 並沒有預先定義的限制。

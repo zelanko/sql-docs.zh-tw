@@ -1,5 +1,6 @@
 ---
 title: 在報表伺服器中上傳檔案或報表 | Microsoft Docs
+description: 了解如何將報表和其他檔案新增至報表伺服器，而不需要從用戶端應用程式發行這些項目。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b54290c582dab62b7e0f5b8a1cb7ca4dd2eb642c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6d5d70a2147ea5cb9846ed37ea8963cc8c3f98e3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65573303"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510049"
 ---
 # <a name="upload-a-file-or-report-in-the-report-server"></a>在報表伺服器中上傳檔案或報表
 報表伺服器的 Web 入口網站會提供一項上傳功能，讓您可以將報表和其他檔案新增至報表伺服器，而不需要從用戶端應用程式發行這些項目。 您從檔案系統上傳的檔案會當做項目儲存在報表伺服器上。 您所上傳的檔案類型會決定其儲存方式：  

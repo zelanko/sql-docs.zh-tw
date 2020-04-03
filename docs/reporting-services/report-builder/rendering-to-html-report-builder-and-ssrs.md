@@ -1,5 +1,6 @@
 ---
 title: 轉譯為 HTML (報表產生器) | Microsoft Docs
+description: 在報表產生器中，HTML 轉譯延伸模組會將編頁報表轉譯為 HTML 格式。 它可以產生完整的 HTML 網頁或內嵌在其他頁面中的片段。
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6b8a27924bcceefe54d4a4663e3d55888920dbf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5862081622d9d5c1a42fa8806ae482f02919a7b3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082478"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290876"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>轉譯為 HTML (報表產生器及 SSRS)
   HTML 轉譯延伸模組會轉譯 HTML 格式的分頁報表。 轉譯延伸模組也可產生完整的 HTML 頁面，或內嵌在其他 HTML 頁面中的 HTML 片段。 所有 HTML 均以 UTF-8 編碼產生。  
@@ -27,11 +28,11 @@ ms.locfileid: "77082478"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a> 在 MHTML 中轉譯  
+##  <a name="rendering-in-mhtml"></a><a name="RenderingMHTML"></a> 在 MHTML 中轉譯  
  HTML 轉譯延伸模組也可以在 MHTML (彙總 HTML 文件的 MIME 封裝) 中轉譯報表。 MHTML 擴充了 HTML，可以在 HTML 文件中內嵌編碼的物件，例如影像。 使用 MHTML 轉譯延伸模組時，您可以利用 MIME 結構，將影像、文件或其他二進位檔案等資源內嵌在單一檔案的報表 HTML 中。 MHTML 報表也適合用於內嵌在電子郵件訊息中，因為所有的資源都包含在報表中。 雖然實際上是 HTML 轉譯延伸模組轉譯 MHTML，此功能也可視為 MHTML 轉譯延伸模組。  
   
   
-##  <a name="BrowserSupport"></a> 瀏覽器支援  
+##  <a name="browser-support"></a><a name="BrowserSupport"></a> 瀏覽器支援  
  此轉譯延伸模組支援下列瀏覽器版本：  
   
 -   Internet Explorer 5.5 及更新版本  
@@ -43,7 +44,7 @@ ms.locfileid: "77082478"
  由於跨瀏覽器的考量，轉譯的報表在不同的瀏覽器中可能略有不同。 例如，文字方塊包含稱為 WritingMode 的屬性。 Firefox 中不支援此屬性。  
   
   
-##  <a name="HTMLSpecificRenderingRules"></a> HTML 特定的轉譯規則  
+##  <a name="html-specific-rendering-rules"></a><a name="HTMLSpecificRenderingRules"></a> HTML 特定的轉譯規則  
  下列 HTML 特定規則會在轉譯時套用：  
   
 -   轉譯器會建立一個 HTML 資料表結構，以便在每個 **ReportItems** 集合 (如果有一個以上) 中包含所有項目。  
@@ -61,7 +62,7 @@ ms.locfileid: "77082478"
 -   所有座標和報表項目大小都會轉換為公釐。 包括樣式屬性在內的其他所有大小則會保留其原始單位。 大小和位置的差異小於 .2 公釐時，則會視為 0 公釐。  
   
   
-##  <a name="Interactivity"></a> 互動性  
+##  <a name="interactivity"></a><a name="Interactivity"></a> 互動性  
  HTML 中支援某些互動元素。 下列是特定行為的描述。  
   
 ### <a name="show-and-hide"></a>顯示與隱藏  
@@ -84,10 +85,10 @@ ms.locfileid: "77082478"
   
  其他搜尋和尋找功能是由 ReportViewer Web 表單控制項提供。  
   
-##  <a name="FontsOnClient"></a> 用戶端電腦上的字型
+##  <a name="fonts-on-the-client-computer"></a><a name="FontsOnClient"></a> 用戶端電腦上的字型
  當報表使用自訂字型時，用來檢視報表的電腦 (用戶端電腦) 必須安裝該自訂字型，才能正確顯示報表。 如果用戶端電腦上未安裝此字型，則報表會顯示系統預設字型，而不是自訂的字型。
   
-##  <a name="DeviceInfo"></a> 裝置資訊設定  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> 裝置資訊設定  
  您可以變更此轉譯器的某些預設值，包括要在哪個模式下轉譯，方法是，變更裝置資訊設定。 如需相關資訊，請參閱 [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md)。  
   
   

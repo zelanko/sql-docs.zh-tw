@@ -1,7 +1,7 @@
 ---
 title: 查詢系統建立版本時態表中的資料 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/28/2016
+ms.date: 03/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 415e966e2ecebb9004e64ddedd6b96d87cedee35
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c64fbfa127f3e5992f2e924d7498fc68fec5db13
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74165613"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80402678"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>查詢系統建立版本時態表中的資料
 
@@ -32,7 +32,7 @@ ms.locfileid: "74165613"
 - CONTAINED IN (<start_date_time> , <end_date_time>)
 - ALL
 
-在查詢中，可以針對每個資料表個別指定**FOR SYSTEM_TIME** 。 它可以在通用資料表運算式、資料表值函式和預存程序內使用。
+在查詢中，可以針對每個資料表個別指定**FOR SYSTEM_TIME** 。 它可以在通用資料表運算式、資料表值函式和預存程序內使用。 搭配時態表使用資料表別名時，時態表名稱和別名之間必須包含 **FOR SYSTEM_TIME** 子句 - 請參閱[使用 AS OF 次子句查詢特定時間](#query-for-a-specific-time-using-the-as-of-sub-clause)中的第二個範例。
 
 ## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>使用 AS OF 次子句查詢特定的時間
 

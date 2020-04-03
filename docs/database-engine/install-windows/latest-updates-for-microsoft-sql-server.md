@@ -12,18 +12,22 @@ author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 975ea7d96e50dbdb375580919a5cac5503e831c2
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.openlocfilehash: 6d81ddb24d11e9357819b43338341b818fb35583
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79198269"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79434095"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>適用於 Microsoft SQL Server 的最新更新
 
-在一個位置尋找及管理 SQL Server 產品的更新。 依照 [SQL Server 發行部落格](https://aka.ms/sqlreleases)以接收有關更新的資訊並下載更新。
+在一個位置尋找及管理 SQL Server 產品的更新。 遵循 [SQL Server 發行部落格](https://aka.ms/sqlreleases)以接收更新的資訊並下載更新。
 
-此頁面追蹤所有支援之 SQL Server 版本的最新更新。 如需有關支援哪個版本的詳細資訊，請參閱 [Microsoft 產品生命週期頁面](https://support.microsoft.com/lifecycle/)。
+此頁面追蹤所有支援之 SQL Server 版本的最新更新。 
+
+如需先前更新的資訊，請參閱 [SQL Server 組建部落格](https://sqlserverbuilds.blogspot.com/)。 
+
+如需有關支援哪個版本的詳細資訊，請參閱 [Microsoft 產品生命週期頁面](https://support.microsoft.com/lifecycle/)。 
 
 ## <a name="latest-updates"></a>最新的更新
 
@@ -66,3 +70,5 @@ ms.locfileid: "79198269"
   - [SQL Server 開發人員中心](https://msdn.microsoft.com/sqlserver/default.aspx)
   - [SQL Server TechCenter](https://technet.microsoft.com/sqlserver/default.aspx)
   - [SQL Server 產品資訊中心](https://www.microsoft.com/sqlserver/default.aspx)
+  - [SQL Server 組建部落格](https://sqlserverbuilds.blogspot.com/)
+  - [SQL Server 發行部落格](https://aka.ms/sqlreleases)

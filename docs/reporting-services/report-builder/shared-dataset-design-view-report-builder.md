@@ -1,5 +1,6 @@
 ---
 title: 共用資料集設計檢視 (報表產生器) | Microsoft Docs
+description: 在報表產生器中，使用 [共用資料集設計] 視窗來建立要共用的資料集。 在報表伺服器上發佈共用資料集，以便在多個報表中使用。
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be5689ab2d098fab41bc8e73acb6e945991c4e6f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ece66b7fbe027f8119bb8703df58ca94098ed515
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190029"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290782"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共用資料集設計檢視 (報表產生器)
   在報表中，資料集代表在外部資料來源上執行查詢時所傳回的報表資料。 共用資料集是在報表伺服器上發行，可供多個報表使用。 您可以建立資料集，以與其他人共用。 在 [Shared Dataset Design (共用資料集設計)] 視窗中，您可以選取共用資料來源、指定共用資料集的屬性，以及在查詢設計工具中建立查詢。  
@@ -22,7 +23,7 @@ ms.locfileid: "74190029"
   
  如需使用報表中資料的詳細資訊，請參閱 [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)。  
   
-##  <a name="Ribbon"></a> 功能區  
+##  <a name="the-ribbon"></a><a name="Ribbon"></a> 功能區  
  [功能區] 可協助您快速找到完成工作所需的命令。 命令會分成下列邏輯群組：連線、資料集和查詢設計工具。  
   
 ### <a name="connection"></a>Connection  
@@ -58,7 +59,7 @@ ms.locfileid: "74190029"
  如需詳細資訊，請參閱[從外部資料來源加入資料 &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 中對應於資料來源類型的主題。  
   
   
-##  <a name="DesignSurface"></a> 查詢設計工具介面  
+##  <a name="the-query-designer-surface"></a><a name="DesignSurface"></a> 查詢設計工具介面  
  查詢設計工具可協助您以外部資料來源所需的語法建立查詢。  
   
  某些資料來源類型提供圖形化查詢設計工具，可用來瀏覽外部資料來源上的中繼資料。 您可以用互動方式將名稱從中繼資料窗格拖曳到查詢設計介面，或用互動方式選取要使用的名稱。  
@@ -68,7 +69,7 @@ ms.locfileid: "74190029"
  每種資料來源類型對於在外部資料來源執行的查詢都有特定需求。 如需詳細資訊，請參閱[從外部資料來源加入資料 &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 和 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) 中對應於資料來源類型的主題。  
   
   
-##  <a name="Results"></a> 檢視查詢結果  
+##  <a name="viewing-query-results"></a><a name="Results"></a> 檢視查詢結果  
  在共用資料集設計檢視中，您所建立的查詢會在處理報表時，從資料連接擷取資料。  
   
  請執行查詢以查看資料連接傳回的範例資料，以確認查詢傳回您所要的資料類型。 結果集中的資料行來自於資料連接傳回之資料結構描述的中繼資料。 資料行名稱會變成資料集欄位集合。 您在查詢結果集中看到的資料值是設計階段資料。 將共用資料集儲存成報表伺服器上的共用資料集定義之後，只會儲存查詢文字。 查詢結果集中的資料不會儲存。  
@@ -85,7 +86,7 @@ ms.locfileid: "74190029"
  如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
   
   
-##  <a name="Save"></a> 儲存共用資料集  
+##  <a name="saving-the-shared-dataset"></a><a name="Save"></a> 儲存共用資料集  
  若要儲存建立的查詢，請按一下 **[報表產生器]** 按鈕上的 **[儲存]** 或 **[另存新檔]** 。 瀏覽至報表伺服器上適當的資料夾，然後儲存共用資料集定義。 除非將共用資料集儲存在報表伺服器上，否則其他人將無法使用它。  
   
   

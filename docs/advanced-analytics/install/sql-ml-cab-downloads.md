@@ -3,18 +3,18 @@ title: 下載離線安裝的更新
 description: 下載適用於 SQL Server 機器學習服務的 Python 與 R CAB 檔案。 這些 CAB 檔案包含機器學習服務 (Python 與 R) 功能的更新，當您在無法存取網際網路的伺服器上安裝 SQL Server 時就會使用這些檔案。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/13/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b50e11995cc1f07b848a460ecd096f97d7b7f9b
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 4a4ed0e63c0a4502321a21f04f5b65e878fcca17
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256675"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290738"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>適用於 SQL Server 機器學習服務之累積更新的 CAB 下載
 
@@ -42,7 +42,38 @@ ms.locfileid: "77256675"
 
 您也可以套用累積更新。
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+
+## <a name="sql-server-2019-cabs"></a>SQL Server 2019 CAB
+
+CAB 檔案會以反向時間順序列出。 當您下載 CAB 檔並將它們傳輸到目標電腦時，請將它們放在方便的資料夾中，例如 [下載]  或安裝使用者的 %temp% 資料夾。
+
+|版本 | 元件 | 下載連結 | 解決的問題 |
+|------- | --------- | ------------- | ---------------- |
+|**[SQL Server 2019 CU3](https://support.microsoft.com/help/4538853)** |  |  |  |
+| | Microsoft R Open      | [SRO_3.5.2.293_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118178)  |  |
+| | R 伺服器              | [SRS_9.4.7.717_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118177)  |  |
+| | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |
+| | Python Server         | [SPS_9.4.7.717_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118342)  |  |
+|**[SQL Server 2019 CU2](https://support.microsoft.com/help/4536075)** |  |  |  |
+| | Microsoft R Open      | [SRO_3.5.2.125_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2085686)  |  |
+| | R 伺服器              | [SRS_9.4.7.35_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2113250)   |  |
+| | Microsoft Python Open | [SPO_4.5.12.692_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2113303) |  |
+| | Python Server         | [SPS_9.4.7.35_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2113067)   |  |
+|**[SQL Server 2019 CU1](https://support.microsoft.com/help/4527376)** |  |  |  |
+| | Microsoft R Open      | [SRO_3.5.2.125_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2085686)  |  |
+| | R 伺服器              | [SRS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2085792)   |  |
+| | Microsoft Python Open | [SPO_4.5.12.120_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2085793) |  |
+| | Python Server         | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2085685)   |  |
+|**初始版本** | | | |
+| | Microsoft R Open       | [SRO_3.5.2.125_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085686)  |  |
+| | R 伺服器               | [SRS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085792)|   |  |
+| | Microsoft Python Open  | [SPO_4.5.12.120_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085793) |  |
+| | Python Server          | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085685)   |  |
+
+::: moniker-end
+
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 
 ## <a name="sql-server-2017-cabs"></a>SQL Server 2017 CAB
 
@@ -50,12 +81,12 @@ CAB 檔案會以反向時間順序列出。 當您下載 CAB 檔並將它們傳�
 
 |版本  |元件 | 下載連結  | 解決的問題 | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU19](https://support.microsoft.com/en-us/help/4535007/)** |  |  |  |
+|**[SQL Server 2017 CU19](https://support.microsoft.com/help/4535007/)** |  |  |  |
 | | Microsoft R Open | [SRO_3.3.3.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106367&clcid=1033) | 修正 Bug：`sp_execute_external_script` 執行 R 指令碼會顯示警告訊息 |
 | | R 伺服器| [SRS_9.2.0.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106460&clcid=1033) | 從舊版到現在都沒有變更。 |
 | | Microsoft Python Open | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033) | 從舊版到現在都沒有變更。 |
 | | Python Server | [SPS_9.2.0.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106459&clcid=1033) | 修正 Bug：以 OutputDataSet 格式將 Varbinary 或 binary 資料類型傳回 SQL Server 時，`sp_execute_external_script` 執行 python 指令碼有時會遺失資料。 |
-|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)-[CU17](https://support.microsoft.com/en-us/help/4515579/)-[CU18](https://support.microsoft.com/en-us/help/4527377/)** |  |  |  |
+|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)-[CU17](https://support.microsoft.com/help/4515579/)-[CU18](https://support.microsoft.com/help/4527377/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| 套件內的二進位檔案現在已簽署。 |
 | | R 伺服器      |[SRS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2069739&clcid=1033)| 套件內的二進位檔案現在已簽署。 |
 | | Microsoft Python Open     | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033)| 套件內的二進位檔案現在已簽署。 |

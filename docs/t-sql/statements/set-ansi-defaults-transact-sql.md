@@ -21,12 +21,12 @@ ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02353688efb79b4c2dbb7c4bc3d9ed0d4d5e0a37
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9fa8bd2c029ea65bb03e21543212dd11b65f2242
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67913948"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80345461"
 ---
 # <a name="set-ansi_defaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -44,13 +44,14 @@ SET ANSI_DEFAULTS { ON | OFF }
 ```
 
 ```
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+-- Syntax for Azure Synapse and Parallel Data Warehouse
 
 SET ANSI_DEFAULTS ON
 ```
 
 ## <a name="remarks"></a>備註  
-ANSI_DEFAULTS 是用戶端不會修改的伺服器端設定。 用戶端會管理自己的設定。 依預設，這些設定與伺服器設定相反。 使用者不應該修改伺服器設定。 若要變更用戶端行為，使用者應使用 SQL_COPT_SS_PRESERVE_CURSORS。 如需詳細資訊，請參閱 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)。  
+ANSI_DEFAULTS 是可啟用所有用戶端連線行為的伺服器端設定。 用戶端通常會要求對連線或工作階段初始化進行設定。 使用者不應該修改伺服器設定。   
+若要變更用戶端行為，使用者應使用用戶端特定方法，例如 `SQL_COPT_SS_PRESERVE_CURSORS`。 如需詳細資訊，請參閱 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)。
   
 當啟用 (ON) 時，這個選項會啟用下列 ISO 設定：  
   
@@ -63,9 +64,9 @@ ANSI_DEFAULTS 是用戶端不會修改的伺服器端設定。 用戶端會管�
   
 這些 ISO 標準 SET 選項共同定義了使用者、執行中的觸發程序或預存程序之工作階段持續期間的查詢處理環境。 不過，這些 SET 選項並未包括符合 ISO 標準所需要的所有選項。  
   
-當處理計算資料行索引和索引檢視時，這些預設值其中的四個 (ANSI_NULLS、ANSI_PADDING、ANSI_WARNINGS 和 QUOTED_IDENTIFIER) 必須設為 ON。 這些預設值是在建立和變更計算資料行索引和索引檢視時，必須指派必要值的七個選項之中。 其他 SET 選項有 ARITHABORT (ON)、CONCAT_NULL_YIELDS_NULL (ON) 和 NUMERIC_ROUNDABORT (OFF)。 如需有關含索引檢視表和計算資料行索引之必要 SET 選項設定的詳細資訊，請參閱[SET 陳述式的使用考量](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements)。  
+當處理計算資料行索引和索引檢視表時，這些預設值其中的四個 (`ANSI_NULLS`、`ANSI_PADDING`、`ANSI_WARNINGS` 和 `QUOTED_IDENTIFIER`) 必須設為 ON。 這些預設值是在建立和變更計算資料行索引和索引檢視時，必須指派必要值的七個選項之中。 其他 SET 選項包括 `ARITHABORT` (ON)、`CONCAT_NULL_YIELDS_NULL` (ON) 和 `NUMERIC_ROUNDABORT` (OFF)。 如需有關含索引檢視表和計算資料行索引之必要 SET 選項設定的詳細資訊，請參閱[SET 陳述式的使用考量](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements)。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者在連接時，都會自動將 ANSI_DEFAULTS 設為 ON。 之後，驅動程式和提供者便將 CURSOR_CLOSE_ON_COMMIT 和 IMPLICIT_TRANSACTIONS 設為 OFF。 您可以在連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前，在 ODBC 資料來源中、在 ODBC 連線屬性中，或在於應用程式中設定的 OLE DB 連線屬性中，設定 CURSOR_CLOSE_ON_COMMIT 和 IMPLICIT_TRANSACTIONS 的 OFF 設定。 就來自 DB-Library 應用程式的連線而言，ANSI_DEFAULTS 預設值是 OFF。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者在連接時，都會自動將 ANSI_DEFAULTS 設為 ON。 之後，驅動程式和提供者便將 CURSOR_CLOSE_ON_COMMIT 和 IMPLICIT_TRANSACTIONS 設為 OFF。 您可在 ODBC 資料來源、ODBC 連線屬性或 OLE DB 連線屬性中設定 `CURSOR_CLOSE_ON_COMMIT` 和 `IMPLICIT_TRANSACTIONS` 的 OFF 設定，再連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 就來自 DB-Library 應用程式的連線而言，`ANSI_DEFAULTS` 的預設值是 OFF。  
   
 當發出 SET ANSI_DEFAULTS 時，會在剖析階段設定 QUOTED_IDENTIFIER，而在執行階段則會設定下列選項：  
   

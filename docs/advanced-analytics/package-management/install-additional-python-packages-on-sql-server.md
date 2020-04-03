@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 83635ac9cb5b35aba25ace6947bc1281d468cb65
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 0018d38beb1c576ea80b39d525388118d7b8063c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558318"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79434105"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>使用 sqlmlutils 安裝 Python 套件
 
@@ -75,9 +75,21 @@ ms.locfileid: "77558318"
 
 如果您用來連線到 SQL Server 的用戶端電腦可以存取網際網路，則可以使用 **sqlmlutils** 透過網際網路尋找 **text-tools** 套件和任何相依性，然後從遠端將套件安裝到 SQL Server 執行個體。
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+1. 在用戶端電腦上，開啟 **Python** 或 Python 環境。
+
+1. 使用下列命令來安裝 **text-tools** 套件。 替代自有的 SQL Server 資料庫連線資訊 (如果使用 Windows 驗證，則不需要 `uid` 和 `pwd` 參數)。
+
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+
 1. 在用戶端電腦上，開啟 **Python** 或 Python 環境。
 
 1. 使用下列命令來安裝 **text-tools** 套件。 替換為您自己的 SQL Server 資料庫連線資訊。
+
+::: moniker-end
 
    ```python
    import sqlmlutils
@@ -105,12 +117,22 @@ ms.locfileid: "77558318"
 
 在此範例中，**text-tools** 沒有相依性，因此 `text-tools` 資料夾中只有一個檔案可供您安裝。 相反地，**scikit-plot** 之類的套件有11 個相依性，因此您會在資料夾中找到 12 個檔案 (**scikit-plot** 套件和 11 個相依套件)，而且您將會安裝每個檔案。
 
-請執行下列 Python 指令碼。 以實際檔案路徑和套件名稱，以及您自己的 SQL Server 資料庫連線資訊取代 (如果您未使用 Windows 驗證，請新增 `uid` 和 `pwd` 參數)。 針對資料夾中的每個套件檔案重複 `sqlmlutils.SQLPackageManager` 陳述式。
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+請執行下列 Python 指令碼。 替代實際檔案路徑和套件名稱，以及自有的 SQL Server 資料庫連線資訊 (如果使用 Windows 驗證，則不需要 `uid` 和 `pwd` 參數)。 針對資料夾中的每個套件檔案重複 `sqlmlutils.SQLPackageManager` 陳述式。
+
+::: moniker-end
+
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+請執行下列 Python 指令碼。 替代實際檔案路徑和套件名稱，以及自有的 SQL Server 資料庫連線資訊。 針對資料夾中的每個套件檔案重複 `sqlmlutils.SQLPackageManager` 陳述式。
+
+::: moniker-end
 
 ```python
 import sqlmlutils
-connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
-sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/text_tools-1.0.0-py3-none-any.whl")
+connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="username", pwd="password"))
+sqlmlutils.SQLPackageManager(connection).install("text_tools-1.0.0-py3-none-any.whl")
 ```
 
 ## <a name="use-the-package-in-sql-server"></a>在 SQL Server 中使用套件

@@ -1,5 +1,6 @@
 ---
 title: 在報表產生器中預覽報表 | Microsoft Docs
+description: 當建立 Reporting Services 分頁報表時，您可預覽報表以確認報表如預期般顯示。
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36c1c3172e4d37963340fdbebce85eff9b5086b9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c5af8a22b4cba1fd7d2ad43629b379e351b207b3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580718"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342755"
 ---
 # <a name="previewing-reports-in-report-builder"></a>在報表產生器中預覽報表
   當您建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表時，這對經常預覽報表以確認報表如預期般顯示相當有幫助。 若要預覽報表，按一下 **[執行]** 。 報表隨即在預覽模式下呈現。  

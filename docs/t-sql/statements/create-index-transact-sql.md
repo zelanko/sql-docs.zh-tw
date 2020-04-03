@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/12/2019
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80f3fba621cbfe4f8411f618ca60025685c2da34
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: d3695dcb6f322f2b0509bca2bb98b1c592c13a1f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287252"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448358"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -750,7 +750,7 @@ INSERT INTO t1 VALUES (1, 0);
 
 如需詳細資訊，請參閱 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。
 
-### <a name="resumable-indexes"></a> 可繼續的索引作業
+### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a> 可繼續的索引作業
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 可繼續索引作業適用下列方針：
@@ -820,7 +820,7 @@ INSERT INTO t1 VALUES (1, 0);
 若要評估變更壓縮狀態如何影響資料表、索引或分割區，請使用 [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 預存程序。
 
 ## <a name="permissions"></a>權限
-必須具備資料表或檢視的 `ALTER` 權限。 使用者必須是 `sysadmin` 固定伺服器角色的成員，或是 `db_ddladmin` 和 `db_owner` 固定資料庫角色的成員。
+必須具備資料表或檢視的 `ALTER` 權限。 使用者必須是 `sysadmin` 固定伺服器角色的成員，或 `db_ddladmin` 或 `db_owner` 固定資料庫角色的成員。
 
 ## <a name="limitations-and-restrictions"></a>限制事項
 在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，您無法建立：

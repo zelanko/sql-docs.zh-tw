@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e2024af63b1a033b2dcb5afbde461cff02b9462b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d4cd11ea250637c172a9d8343af934c326089add
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082225"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80380769"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>組態檔中的 URL (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將應用程式設定儲存在 RSReportServer.config 檔案中。 在這個檔案中，URL 和 URL 保留項目都有組態設定。 這些組態設定的用途與修改規則大不相同。 如果您習慣修改組態檔來微調部署，本主題將可幫助您了解每一個 URL 設定的使用方式。  
@@ -36,7 +36,7 @@ ms.locfileid: "77082225"
   
  當您設定用於應用程式存取的 URL 時，**UrlRoot** 便會自動指定於 RSReportServer.config 檔案中。 如果您在組態檔中修改這個值，您必須指定報表伺服器 Web 服務的有效 URL 位址，該服務會連接到包含您要傳遞之報表的報表伺服器資料庫。 您只能為單一報表伺服器執行個體指定一個 **UrlRoot** ；任何給定之報表伺服器執行個體的 RSReportServer.config 檔案中只能有一個 **UrlRoot** 項目存在。 如果您為報表伺服器 Web 服務保留多個 URL，您必須為 **UrlRoot**選擇其中一個可用的值。  
   
- 在大部分情況下，您不需要修改 **UrlRoot**。 但是，如果報表將會透過完整 URL 來存取報表伺服器，而您並未設定 URL 來使用完整網站名稱的主機標頭，就必須手動編輯 RSReportServer.config，以將 **UrlRoot** 設定為用來轉譯報表的完整報表伺服器 URL (例如 https://www.adventure-works.com/mywebapp/reportserver) 。  
+ 在大部分情況下，您不需要修改 **UrlRoot**。 但是，如果報表將會透過完整 URL 來存取報表伺服器，而您並未設定 URL 來使用完整網站名稱的主機標頭，則必須手動編輯 RSReportServer.config，以將 **UrlRoot** 設定為用來轉譯報表的完整報表伺服器 URL (例如 `https://www.adventure-works.com/mywebapp/reportserver`)。  
   
 #### <a name="urls-connecting-the-ssrswebportal-and-web-parts-to-the-report-server-web-service"></a>將 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 和 Web 組件連接到報表伺服器 Web 服務的 URL  
  [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 和 Reporting Services 的 SharePoint 2.0 Web 組件是用來連接報表伺服器的 Web 前端元件。 用來連接後端報表伺服器的 URL 包含以下項目：  

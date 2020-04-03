@@ -1,7 +1,7 @@
 ---
-title: 設定連線屬性 | Microsoft Docs
+title: 設定連線屬性
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 03/13/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 80c4e518f8aed48effded7573a8567600274ab2b
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 4f95be8e0a45f3d2d01e66ae0d38411a5bdd7830
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004580"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79433805"
 ---
 # <a name="setting-the-connection-properties"></a>設定連線屬性
 
@@ -51,14 +51,14 @@ ms.locfileid: "77004580"
 | accessToken<br/><br/>String<br/><br/>null | 使用此屬性可使用存取權杖來連線到 SQL 資料庫。 無法使用連線 URL 設定 **accessToken**。 |
 | applicationIntent<br/><br/>String<br/><br/>讀寫 | 宣告連接到伺服器時的應用程式工作負載類型。 <br/><br/>可能的值為 **ReadOnly** 和 **ReadWrite**。 <br/><br/>如需詳細資訊，請參閱 [JDBC 驅動程式對於高可用性、災害復原的支援](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md) |
 | applicationName<br/><br/>String<br/>[&lt;=128 char]<br/><br/>null | 應用程式名稱，如果未提供名稱，則為 "[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]"。<br/><br/>用以識別各種 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分析與記錄工具中的特定應用程式。 |
-| 驗證 (authentication)<br/><br/>String<br/><br/>NotSpecified | 從 Microsoft JDBC Driver 6.0 for SQL Server 開始，此選擇性屬性會指出要用於連線的 SQL 驗證方法。 可能的值為 **ActiveDirectoryIntegrated**、**ActiveDirectoryPassword**、**ActiveDirectoryMSI**、**SqlPassword** 和預設的 **NotSpecified**。<br/><br/> 搭配整合式 Windows 驗證使用 **ActiveDirectoryIntegrated** 連線到 SQL Database。<br/><br/> 搭配 Azure AD 主體名稱和密碼使用 **ActiveDirectoryPassword** 密碼連線到 SQL Database。<br/><br/> 搭配受控服務識別 (MSI) 驗證使用 **ActiveDirectoryMSI** 從 Azure 資源 (例如 Azure 虛擬機器、App Service 或函數應用程式) 內部連線到 SQL Database。 <br><br>使用 **ActiveDirectoryMSI** 驗證模式時，驅動程式所支援的兩種受控識別類型為： <br> 1._系統指派的受控識別_：預設會使用此類型來取得 **accessToken**。 <br> 2._使用者指派的受控識別_：如果受控服務識別 (MSI) 的用戶端識別碼是以 **msiClientId** 連接屬性指定，則使用此類型來取得 **accessToken**。<br/><br/> 搭配 **userName**/**user** 和 **password** 屬性使用 **SqlPassword** 連線到 SQL Server。<br/><br/> 如果不需要這些驗證方法，請使用 **NotSpecified**。<br/><br/> **重要：** 如果驗證設定為 ActiveDirectoryIntegrated，則必須安裝下列兩個程式庫：**mssql-jdbc_auth-\<版本>-\<架構>.dll** (可在 JDBC 驅動程式套件中取得) 和適用於 SQL Server 的 Azure Active Directory 驗證程式庫 (**ADALSQL.DLL**)，從下載中心可以下載多種語言 (適用於 x86 和 amd64)：[適用於 Microsoft SQL Server 的 Microsoft Active Directory 驗證程式庫](https://www.microsoft.com/download/details.aspx?id=48742)。 JDBC 驅動程式只支援 ADALSQL.DLL 的 **1.0.2028.318 版和更高版本**。<br/><br/> **注意：** 當驗證屬性設定為 **NotSpecified** 以外的任何值時，驅動程式預設會使用安全通訊端層 (SSL) 加密。<br/><br/> 如需如何設定 Azure Active Directory 驗證的資訊，請瀏覽[使用 Azure Active Directory 驗證連線到 SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/) \(部分機器翻譯\)。 |
+| 驗證 (authentication)<br/><br/>String<br/><br/>NotSpecified | 從 Microsoft JDBC Driver 6.0 for SQL Server 開始，此選擇性屬性會指出要用於連線的 SQL 驗證方法。 可能的值為 **ActiveDirectoryIntegrated**、**ActiveDirectoryPassword**、**ActiveDirectoryMSI**、**SqlPassword** 和預設的 **NotSpecified**。<br/><br/> 搭配整合式 Windows 驗證使用 **ActiveDirectoryIntegrated** 連線到 SQL Database。<br/><br/> 搭配 Azure AD 主體名稱和密碼使用 **ActiveDirectoryPassword** 密碼連線到 SQL Database。<br/><br/> 搭配受控服務識別 (MSI) 驗證使用 **ActiveDirectoryMSI** 從 Azure 資源 (例如 Azure 虛擬機器、App Service 或函數應用程式) 內部連線到 SQL Database。 <br><br>使用 **ActiveDirectoryMSI** 驗證模式時，驅動程式所支援的兩種受控識別類型為： <br> 1._系統指派的受控識別_：預設會使用此類型來取得 **accessToken**。 <br> 2._使用者指派的受控識別_：如果受控服務識別 (MSI) 的用戶端識別碼是以 **msiClientId** 連接屬性指定，則使用此類型來取得 **accessToken**。<br/><br/> 搭配 **userName**/**user** 和 **password** 屬性使用 **SqlPassword** 連線到 SQL Server。<br/><br/> 如果不需要這些驗證方法，請使用 **NotSpecified**。<br/><br/> **重要：** 如果驗證設定為 ActiveDirectoryIntegrated，則必須安裝下列兩個程式庫：**mssql-jdbc_auth-\<版本>-\<架構>.dll** (可在 JDBC 驅動程式套件中取得) 和適用於 SQL Server 的 Azure Active Directory 驗證程式庫 (**ADAL.DLL**)。可藉由安裝 [Microsoft ODBC Driver for SQL Server](../odbc/download-odbc-driver-for-sql-server.md) 或 [Microsoft OLE DB Driver for SQL Server](../oledb/download-oledb-driver-for-sql-server.md) 來安裝 ADAL。 JDBC 驅動程式只支援 ADAL.DLL 的 **1.0.2028.318 版和更高版本**。<br/><br/> **注意：** 當驗證屬性設定為 **NotSpecified** 以外的任何值時，驅動程式預設會使用安全通訊端層 (SSL) 加密。<br/><br/> 如需如何設定 Azure Active Directory 驗證的資訊，請瀏覽[使用 Azure Active Directory 驗證連線到 SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/) \(部分機器翻譯\)。 |
 | authenticationScheme<br/><br/>String<br/><br/>NativeAuthentication | 表示您希望應用程式使用的整合式安全性種類。 可能的值為 **JavaKerberos**、**NTLM** 和預設的 **NativeAuthentication**。<br/><br/> 使用 **authenticationScheme=JavaKerberos** 時，您必須在 **serverName** 或 **serverSpn** 屬性中指定完整網域名稱 (FQDN)。 否則，會發生錯誤 (Kerberos 資料庫中找不到伺服器)。<br/><br/> 如需有關使用 **authenticationScheme=JavaKerberos** 的詳細資訊，請參閱[使用 Kerberos 整合式驗證連接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) \(部分機器翻譯\)。 <br/><br/> 使用 **authenticationScheme=NTLM** 時，您必須在 **domain** 或 **domainName** 屬性中指定使用 NTLM 進行驗證的 Windows 網域，也必須在 **user** 或 **userName** 和 **password** 屬性中指定 Windows 認證。 否則，會發生錯誤 (必須指定連接屬性)。  |
 | cancelQueryTimeout<br/><br/>int<br/><br/>-1 | 從 Microsoft JDBC Driver 6.4 for SQL Server 開始，此屬性可用來取消在連線上設定的 **queryTimeout**。 如果 SQL Server 的 TCP 連線以無訊息方式卸載，則查詢執行會停止回應，且不會擲回例外狀況。 當連線上也設定 'queryTimeout' 時，此屬性才適用。 <br/><br/>驅動程式會等候 **cancelQueryTimeout** + **queryTimeout** 的總秒數，然後中斷連線並關閉通道。 <br/><br/>此屬性的預設值為 -1，而行為是無限期地等候。 |
 | columnEncryptionSetting<br/><br/>String<br/>["Enabled" &#124; "Disabled"]<br/><br/>已停用 | 自 Microsoft JDBC Driver 6.0 for SQL Server 起，設為 "Enabled" 會使用 Always Encrypted (AE) 功能。 如有啟用 AE，JDBC 驅動程式會透明加密及解密儲存在 SQL Server 中經過加密之資料庫資料行中的敏感性資料。<br/><br/> 如需 **columnEncryptionSetting** 的詳細資訊，請參閱[搭配 JDBC 驅動程式使用 Always Encrypted](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md) 以取得更多詳細資料。<br/><br/> **注意：** Always Encrypted 可在 SQL Server 2016 或更新版本中取得。 |
 | databaseName,<br/>[資料庫]<br/><br/>String<br/>[&lt;=128 char]<br/><br/>null | 要連接的資料庫名稱。 <br/><br/>如果沒有指定，將連接到預設資料庫。 |
 | domainName,<br/>網域<br/><br/>String<br/>null | 要使用 NTLM 驗證的 Windows 網域。 |
 | disableStatementPooling<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>true | 指出是否應該使用陳述式共用的旗標。 |
-| enablePrepareOnFirst...<br/>PreparedStatementCall<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | _enablePrepareOnFirstPreparedStatementCall_<br/><br/> 設定為 "true"，藉由在備妥陳述式第一次執行時呼叫 <code>sp_prepexec</code>，以啟用備妥陳述式控制帶碼建立。 <br/><br/>設定為 "false" 可將備妥陳述式的第一次執行變更為呼叫 <code>sp_executesql</code>，而不是備妥陳述式，發生第二次執行時，其會呼叫 <code>sp_prepexec</code> 以設定備妥陳述式控制代碼。 |
+| enablePrepareOnFirst...<br/>PreparedStatementCall<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | _enablePrepareOnFirstPreparedStatementCall_<br/><br/> 設定為 "true"，藉由在備妥陳述式第一次執行時呼叫 <code>sp_prepexec</code>，以啟用備妥陳述式控制帶碼建立。 <br/><br/>設定為 "false" 可將備妥陳述式的第一次執行變更為呼叫 <code>sp_executesql</code>，而不是備妥陳述式；發生第二次執行時，其會呼叫 <code>sp_prepexec</code> 以設定備妥陳述式控制代碼。 |
 | enclaveAttestationUrl<br/><br/>String<br/><br/>null | 從 Microsoft JDBC Driver 8.2 for SQL Server 開始，此選擇性屬性會指出要用於 Always Encrypted (具有安全記憶體保護區) 的證明服務端點 URL。<br/><br/>如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../../connect/jdbc/always-encrypted-with-secure-enclaves.md)。 |
 | enclaveAttestationProtocol<br/><br/>String<br/><br/>null | 從 Microsoft JDBC Driver 8.2 for SQL Server 開始，此選擇性屬性會指出要用於 Always Encrypted (具有安全記憶體保護區) 的證明通訊協定。 此欄位目前唯一支援的值為 **HGS**。<br/><br/>如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../../connect/jdbc/always-encrypted-with-secure-enclaves.md)。 |
 | encrypt<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | 如果伺服器有安裝憑證，設定為 "true" 以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將安全通訊端層 (SSL) 加密用於用戶端與伺服器之間傳送的所有資料。 預設值為 "false"。<br/><br/> 根據預設，從 Microsoft JDBC Driver 6.0 for SQL Server 開始，有使用 SSL 加密的新連線設定 'authentication'。 <br/><br/>如需詳細資訊，請參閱 'authentication' 屬性。 |
@@ -111,8 +111,8 @@ ms.locfileid: "77004580"
 > [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會針對連線屬性採用伺服器預設值，但是 ANSI_DEFAULTS 和 IMPLICIT_TRANSACTIONS 除外。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會自動將 ANSI_DEFAULTS 設定為 ON，並將 IMPLICIT_TRANSACTIONS 設定為 OFF。
 
 > [!Important]
-> 如果驗證設定為 ActiveDirectoryPassword，則必須將下列程式庫包含在 Classpath 中：[azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) \(英文\)。 您可以在 [Maven 存放庫](https://mvnrepository.com/artifact/com.microsoft.azure/adal4j) \(英文\) 找到該程式庫。 下載程式庫及其相依性的最簡單方式是使用 Maven： 
-> 1. 首先，在您的系統上安裝 Maven 
+> 如果驗證設定為 ActiveDirectoryPassword，則必須將下列程式庫包含在 Classpath 中：[azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) \(英文\)。 您可以在 [Maven 存放庫](https://mvnrepository.com/artifact/com.microsoft.azure/adal4j) \(英文\) 找到該程式庫。 下載程式庫及其相依性的最簡單方式是使用 Maven：
+> 1. 首先，在您的系統上安裝 Maven
 > 2. 移至驅動程式的 [GitHub 頁面](https://github.com/Microsoft/mssql-jdbc) \(英文\)
 > 3. 下載 pom.xml 檔案
 > 4. 執行下列 Maven 命令，以下載程式庫和其相依性：`mvn dependency:copy-dependencies`

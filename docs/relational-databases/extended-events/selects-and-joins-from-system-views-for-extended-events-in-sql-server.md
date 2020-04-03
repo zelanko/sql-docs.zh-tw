@@ -1,5 +1,6 @@
 ---
 title: 擴充事件系統檢視表中的 SELECT 和 JOIN
+description: SQL Server 和 Azure SQL Database 中有擴充事件的系統檢視表。 了解如何以不同的檢視方塊來表示事件工作階段資訊。
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3bcb7e272c1a5120b65018aab781546ba8d0f2b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3245b4288871e4b92b783aad0f08ca1027b401a0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75242904"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79526753"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 擴充事件系統檢視表中的 SELECT 和 JOIN
 
@@ -348,26 +349,22 @@ ORDER BY
 #### <a name="output"></a>輸出
 
 
-接下來是執行前述 SELECT JOIN UNION 的實際輸出。 輸出參數的名稱和值會對應至清楚顯示在前一個 CREATE EVENT SESSION 陳述式中的內容。
+下表顯示執行前述 SELECT JOIN UNION 的輸出。 輸出參數的名稱和值會對應至清楚顯示在前一個 CREATE EVENT SESSION 陳述式中的內容。
 
-
-```
-Session-Name          Clause-Type            Parameter-Name                  Parameter-Value
-------------          -----------            --------------                  ---------------
-event_session_test3   1_EVENT                Event-Name                      lock_deadlock
-event_session_test3   2_EVENT_SET            collect_database_name           1
-event_session_test3   3_EVENT_ACTION         sqlserver.client_hostname       (Not_Applicable)
-event_session_test3   3_EVENT_ACTION         sqlserver.collect_system_time   (Not_Applicable)
-event_session_test3   3_EVENT_ACTION         sqlserver.event_sequence        (Not_Applicable)
-event_session_test3   4_EVENT_PREDICATES     ([sqlserver].[equal_i_sql_unicode_string]([database_name],N'InMemTest2') AND [package0].[counter]<=(16))   (Not_Applicable)
-event_session_test3   5_TARGET               event_file                      (Not_Applicable)
-event_session_test3   6_TARGET_SET           filename                        C:\Junk\event_session_test3_EF.xel
-event_session_test3   6_TARGET_SET           max_file_size                   20
-event_session_test3   6_TARGET_SET           max_rollover_files              2
-event_session_test3   7_WITH_MAX_MEMORY      max_memory                      4096
-event_session_test3   7_WITH_STARTUP_STATE   startup_state                   1
-```
-
+| Session-Name | Clause-Type | Parameter-Name | Parameter-Value |
+|---|---|---|---|
+|event_session_test3  | 1_EVENT |                Event-Name |                       lock_deadlock |
+|event_session_test3  |  2_EVENT_SET |             collect_database_name |            1 |
+|event_session_test3  |  3_EVENT_ACTION |          sqlserver.client_hostname |       (不適用) |
+|event_session_test3  |  3_EVENT_ACTION |         sqlserver.collect_system_time |   (不適用) |
+|event_session_test3  |  3_EVENT_ACTION |         sqlserver.event_sequence |        (不適用) |
+|event_session_test3  |  4_EVENT_PREDICATES |     (\[sqlserver\].\[equal_i_sql_unicode_string\]\(\[database_name\],N'InMemTest2'\) AND \[package0\].\[counter\]<=\(16\)\) |   (不適用) |
+|event_session_test3  |  5_TARGET |               event_file |                      (不適用) |
+|event_session_test3  |  6_TARGET_SET |           filename  |                       C:\Junk\event_session_test3_EF.xel |
+|event_session_test3  |  6_TARGET_SET |           max_file_size |                   20 |
+|event_session_test3  |  6_TARGET_SET |           max_rollover_files |              2 |
+|event_session_test3  |  7_WITH_MAX_MEMORY |      max_memory |                      4096 |
+|event_session_test3  |  7_WITH_STARTUP_STATE |   startup_state |                   1 |
 
 如此即完成目錄檢視區段。
 
@@ -423,28 +420,23 @@ SELECT  --C.1
 
 以下為封裝清單。
 
-
-```
-/***  (The unique p.guid values are not shown.)
-Package        Package-Description
--------        -------------------
-filestream     Extended events for SQL Server FILESTREAM and FileTable
-package0       Default package. Contains all standard types, maps, compare operators, actions and targets
-qds            Extended events for Query Store
-SecAudit       Security Audit Events
-sqlclr         Extended events for SQL CLR
-sqlos          Extended events for SQL Operating System
-SQLSatellite   Extended events for SQL Satellite
-sqlserver      Extended events for Microsoft SQL Server
-sqlserver      Extended events for Microsoft SQL Server
-sqlserver      Extended events for Microsoft SQL Server
-sqlsni         Extended events for Microsoft SQL Server
-ucs            Extended events for Unified Communications Stack
-XtpCompile     Extended events for the XTP Compile
-XtpEngine      Extended events for the XTP Engine
-XtpRuntime     Extended events for the XTP Runtime
-***/
-```
+| Package        |Package-Description|
+|---|---|
+|檔案資料流|     SQL Server FILESTREAM 和 FileTable 的擴充事件 |
+|package0   |    預設套件。 包含所有標準類型、對應、比較運算子、動作和目標 |
+|qds         |   查詢存放區的擴充事件 |
+|SecAudit     |  安全性稽核事件 |
+|sqlclr        | SQL CLR 的擴充事件 |
+|sqlos         | SQL 作業系統的擴充事件 |
+|SQLSatellite |  SQL Satellite 的擴充事件 |
+|sqlserver   |   Microsoft SQL Server 的擴充事件 |
+|sqlserver  |    Microsoft SQL Server 的擴充事件 |
+|sqlserver  |    Microsoft SQL Server 的擴充事件 |
+|sqlsni     |    Microsoft SQL Server 的擴充事件 |
+|ucs        |    整合通訊堆疊的擴充事件 |
+|XtpCompile |    XTP 編譯的擴充事件 |
+|XtpEngine  |    XTP 引擎的擴充事件 |
+|XtpRuntime |    XTP 執行階段的擴充事件 |
 
 
 *前列縮寫定義︰*
@@ -481,23 +473,16 @@ SELECT  --C.2
 
 以下是每個物件類型的物件計數。 約有 1915 個物件。
 
-
-```
-/***  Actual output, sum is about 1915:
-
-Count-of-Type   object_type
--------------   -----------
-1303            event
-351             map
-84              message
-77              pred_compare
-53              action
-46              pred_source
-28              type
-17              target
-***/
-```
-
+|Count-of-Type |   object_type |
+|---|---|
+|1303|            event |
+|351  |           map |
+|84    |          message |
+|77     |         pred_compare |
+|53     |        動作 |
+|46     |         pred_source |
+|28     |         type |
+|17     |         目標 |
 
 <a name="section_C_3_select_all_available_objects"></a>
 
@@ -537,34 +522,28 @@ SELECT  --C.3
 為了挑起您的興趣，接下來是前述 SELECT 傳回之物件的任意取樣。
 
 
-```
-/***
-Type-of-Item   Package        Item                          Item-Description
-------------   -------        ----                          ----------------
-action         package0       callstack                     Collect the current call stack
-action         package0       debug_break                   Break the process in the default debugger
-action         sqlos          task_time                     Collect current task execution time
-action         sqlserver      sql_text                      Collect SQL text
-event          qds            query_store_aprc_regression   Fired when Query Store detects regression in query plan performance
-event          SQLSatellite   connection_accept             Occurs when a new connection is accepted. This event serves to log all connection attempts.
-event          XtpCompile     cgen                          Occurs at start of C code generation.
-map            qds            aprc_state                    Query Store Automatic Plan Regression Correction state
-message        package0       histogram_event_required      A value is required for the parameter 'filtering_event_name' when source type is 0.
-pred_compare   package0       equal_ansi_string             Equality operator between two ANSI string values
-pred_compare   sqlserver      equal_i_sql_ansi_string       Equality operator between two SQL ANSI string values
-pred_source    sqlos          task_execution_time           Get current task execution time
-pred_source    sqlserver      client_app_name               Get the current client application name
-target         package0       etw_classic_sync_target       Event Tracing for Windows (ETW) Synchronous Target
-target         package0       event_counter                 Use the event_counter target to count the number of occurrences of each event in the event session.
-target         package0       event_file                    Use the event_file target to save the event data to an XEL file, which can be archived and used for later analysis and review. You can merge multiple XEL files to view the combined data from separate event sessions.
-target         package0       histogram                     Use the histogram target to aggregate event data based on a specific event data field or action associated with the event. The histogram allows you to analyze distribution of the event data over the period of the event session.
-target         package0       pair_matching                 Pairing target
-target         package0       ring_buffer                   Asynchronous ring buffer target.
-type           package0       xml                           Well formed XML fragment
-***/
-```
-
-
+|Type-of-Item|   Package|        Item|                          Item-Description|
+|---|---|---|---|
+|動作|         package0  |     callstack                     |收集目前呼叫堆疊|
+|動作 |        package0  |     debug_break                   |中斷預設偵錯工具中的處理序|
+|動作 |       sqlos      |    task_time                     |收集目前工作執行時間|
+|動作 |        sqlserver |     sql_text                     | 收集 SQL 文字|
+|event  |        qds       |     query_store_aprc_regression  | 當查詢存放區偵測到查詢計畫效能低下時引發|
+|event  |        SQLSatellite |  connection_accept            | 接受新連線時會發生。 此事件是用來記錄所有的連線嘗試。|
+|event  |        XtpCompile  |   cgen                          |在開始產生 C 程式碼時發生。|
+|map    |        qds         |   aprc_state                    |查詢存放區自動計畫迴歸修正狀態|
+|message |       package0    |   histogram_event_required      |來源類型為 0 時，參數 'filtering_event_name' 必須有值。|
+|pred_compare |  package0   |    equal_ansi_string             |兩個 ANSI 字串值之間的等號比較運算子|
+|pred_compare |  sqlserver  |    equal_i_sql_ansi_string       |兩個 SQL ANSI 字串值之間的等號比較運算子|
+|pred_source |   sqlos      |    task_execution_time           |取得目前工作的執行時間|
+|pred_source |   sqlserver  |    client_app_name               |取得目前用戶端應用程式名稱|
+|目標 |        package0   |    etw_classic_sync_target       |Windows 事件追蹤 (ETW) 同步目標|
+|目標 |        package0   |    event_counter                 |使用 event_counter 目標可計算事件工作階段中每個事件的發生次數。|
+|目標  |       package0  |     event_file                    |使用 event_file 目標可將事件資料儲存到 XEL 檔案，之後可以封存起來供未來的分析和檢閱使用。 您可合併多個 XEL 檔案，以檢視來自不同事件工作階段的合併資料。|
+|目標  |       package0   |    長條圖                     |使用長條圖目標可根據特定事件資料欄位或事件相關動作來彙總事件資料。 長條圖可供分析整個事件工作階段中事件資料的分佈情形。|
+|目標   |      package0  |     pair_matching                 |配對目標|
+|目標   |      package0  |     ring_buffer                   |非同步通道緩衝區目標|
+|type     |      package0  |     Xml                           |格式正確的 XML 片段|
 
 <a name="section_C_4_data_fields"></a>
 
@@ -611,34 +590,29 @@ SELECT  -- C.4
 
 - 每個資料列都代表 *sqlserver.lock_deadlock* 事件的選用篩選。
 - 下列畫面省略 [資料行描述] *\[\]* 資料行。 其值通常為 NULL。
+- 這是實際的輸出，但省略的 Description 資料行除外 (通常為 NULL)。
+- 這些是 object_type = 'lock_deadlock' 的資料列。
 
+|Package|     事件|           Column-for-Predicate-Data|
+|---|---|---|
+|sqlserver|   lock_deadlock|   associated_object_id|
+|sqlserver|  lock_deadlock |  database_id|
+|sqlserver|  lock_deadlock |  database_name|
+|sqlserver|   lock_deadlock|   deadlock_id|
+|sqlserver|   lock_deadlock|   duration|
+|sqlserver|   lock_deadlock|   lockspace_nest_id|
+|sqlserver|   lock_deadlock|   lockspace_sub_id|
+|sqlserver|   lock_deadlock|   lockspace_workspace_id|
+|sqlserver|   lock_deadlock|   mode|
+|sqlserver|   lock_deadlock|   object_id|
+|sqlserver|   lock_deadlock|   owner_type|
+|sqlserver|   lock_deadlock|   resource_0|
+|sqlserver|   lock_deadlock|  resource_1|
+|sqlserver|   lock_deadlock|   resource_2|
+|sqlserver|   lock_deadlock|   resource_description|
+|sqlserver|   lock_deadlock|   resource_type|
+|sqlserver|   lock_deadlock|   transaction_id|
 
-```
-/***
-Actual output, except for the omitted Description column which is often NULL.
-These rows are where object_type = 'lock_deadlock'.
-
-Package     Event           Column-for-Predicate-Data
--------     -----           -------------------------
-sqlserver   lock_deadlock   associated_object_id
-sqlserver   lock_deadlock   database_id
-sqlserver   lock_deadlock   database_name
-sqlserver   lock_deadlock   deadlock_id
-sqlserver   lock_deadlock   duration
-sqlserver   lock_deadlock   lockspace_nest_id
-sqlserver   lock_deadlock   lockspace_sub_id
-sqlserver   lock_deadlock   lockspace_workspace_id
-sqlserver   lock_deadlock   mode
-sqlserver   lock_deadlock   object_id
-sqlserver   lock_deadlock   owner_type
-sqlserver   lock_deadlock   resource_0
-sqlserver   lock_deadlock   resource_1
-sqlserver   lock_deadlock   resource_2
-sqlserver   lock_deadlock   resource_description
-sqlserver   lock_deadlock   resource_type
-sqlserver   lock_deadlock   transaction_id
-***/
-```
 
 
 

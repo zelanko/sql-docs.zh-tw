@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 報表 | Microsoft Docs
+description: 了解 Reporting Services 報表的詳細資料，包括報表的優點、如何建立分頁報表，以及如何檢視報表。
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4d178d69c68d2466fcec808b0cabdd180368f23a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9eb81b3b3274afa8a53a217ea1139a8a904979ef
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082434"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510059"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 報表 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表是一種 XML 型報表定義，其包含報表資料及報表配置元素。 在用戶端檔案系統上，報表定義的副檔名為 .rdl。 在發行分頁報表之後，其為儲存在報表伺服器或 SharePoint 網站上的報表項目。 分頁報表是由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]提供之伺服器架構報表平台的一部分。 您也可以 [使用 SQL Server 行動報表發行工具建立行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)。  
@@ -45,7 +46,7 @@ ms.locfileid: "77082434"
   
     ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
-##  <a name="bkmk_StagesSummary"></a> 報表處理的階段  
+##  <a name="stages-of-report-processing"></a><a name="bkmk_StagesSummary"></a> 報表處理的階段  
  建立報表時，您會定義一個 XML 格式的報表定義檔案 (.rdl)。 這個檔案包含報表處理器結合報表資料與報表配置所需的所有資訊。 當您檢視報表時，會透過下列階段來處理報表：  
   
 -   **編譯。** 評估報表定義中的運算式，並在報表伺服器內部儲存編譯的中繼格式。  
@@ -155,7 +156,7 @@ ms.locfileid: "77082434"
   
  如需效能的詳細資訊，請參閱[效能、快照集、快取 &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)。  
   
-##  <a name="bkmk_SecureReportsSummary"></a> 確保報表安全性  
+##  <a name="secure-reports"></a><a name="bkmk_SecureReportsSummary"></a> 確保報表安全性  
  若要保護報表的安全：  
   
 身為報表伺服器管理員，識別您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝所用的授權與驗證系統。 依預設， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用 Windows 驗證、整合式安全性及角色指派，以協助控制發行報表的存取權。 如需詳細資訊，請參閱[角色與權限 &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md) 和 [Reporting Services 安全性與保護](../../reporting-services/security/reporting-services-security-and-protection.md)。  

@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 50b9e158fe828271cc4e96c6175895cc858ac962
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8b4503c55545867639a3a437371d6265a85706af
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75254335"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271474"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>建立製成資料表查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,18 +73,18 @@ WHERE country = 'UK'
   
 5.  若要以特定次序複製資料列，請指定排序次序。 如需詳細資訊，請參閱 **排序和群組查詢結果**。  
   
-6.  輸入搜尋條件以指定要複製的資料列。 如需詳細資料，請參閱[指定搜尋準則(../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)。  
+6.  輸入搜尋條件以指定要複製的資料列。 如需詳細資訊，請參閱[指定搜尋準則](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)。  
   
     如果沒有指定搜尋條件，便會將來源資料表的所有資料列複製到目的資料表中。  
   
     > [!NOTE]  
     > 當將要搜尋的資料行加入至 [準則] 窗格時，[查詢和檢視設計師] 也會將它加入至要複製的資料行清單中。 如果想使用某一資料行進行搜尋但不想複製它，請在代表資料表或表格化物件 (Table-Structured Object) 的矩形中，清除資料行名稱旁的核取方塊。  
   
-7.  若要複製摘要資訊，請指定 [群組依據] 選項。 如需詳細資料，請參閱[摘要查詢結果(../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)。  
+7.  若要複製摘要資訊，請指定 [群組依據] 選項。 如需詳細資訊，請參閱[摘要查詢結果](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)。  
   
 執行製成資料表查詢時， [結果窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)不會報告結果。 而是出現訊息指出已經複製了多少資料列。  
   
 ## <a name="see-also"></a>另請參閱  
-[設計查詢與檢視表操作說明主題(../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[設計查詢與檢視表操作說明主題](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [查詢類型(../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

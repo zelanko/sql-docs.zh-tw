@@ -1,5 +1,6 @@
 ---
 title: 快速入門：SQL Server 中的延伸事件
+description: 此快速入門有助使用擴充事件，這是輕量型效能監視系統，可收集資料來監視 SQL Server 中的問題並進行疑難排解。
 ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e4512400d2f05500f2db9a98a72f57ac50bc3a7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f38c8c3097009a755355e5a7b50e55b55faba3cb
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75242915"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487646"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>快速入門：SQL Server 中的延伸事件
 
@@ -555,7 +556,7 @@ SQL Server 中已建立一些擴充事件。 所有事件都已設定為在啟�
 
 [!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
-## <a name="appendix1"></a> 附錄：使用 SELECT 事先確認權限擁有者
+## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a><a name="appendix1"></a> 附錄：使用 SELECT 事先確認權限擁有者
 
 本文中提到的權限包括：
 

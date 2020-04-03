@@ -1,6 +1,6 @@
 ---
 title: Microsoft SQL Databases 的連線程式庫 | Microsoft Docs
-description: 提供模組下載連結，這些模組可讓您從各種用戶端程式設計語言連線到 Microsoft SQL Server 與 Azure SQL Database。
+description: 提供模組下載連結，這些模組可供從各種用戶端程式設計語言連線到 Microsoft SQL Server 與 Azure SQL Database。
 author: RothJa
 ms.prod: sql
 ms.technology: ''
@@ -8,24 +8,24 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/05/2020
 ms.author: JRoth
-ms.openlocfilehash: eb842769490b521b248ed4114953b8d828fa80d3
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 88fbd0e3fd01492b8e7d920eb132196f8a005478
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286402"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79434115"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 資料庫的連線模組
 
 此文章提供連線模組或驅動程式  的下載連結，這些可讓您的用戶端程式用來與 [Microsoft SQL Server](../relational-databases/database-features.md)互動，以及其在雲端的對應項 [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/) 互動。 驅動程式適用於在下列作業系統上執行的各種程式設計語言：
 
 - Linux
-- MacOS
+- macOS
 - Windows
 
 **OOP 與關聯式不相符：**
 
-*關聯式*：以物件導向程式設計 (OOP) 語言撰寫的用戶端程式通常會使用 SQL 驅動程式，這些驅動程式會以比物件導向更關聯式的格式來傳回查詢的資料。 使用 ADO.NET 的 C# 是其中一個範例。 OOP 關聯式格式不相符有時會使 OOP 程式碼更難撰寫及理解。
+*關聯式*：以物件導向程式設計 (OOP) 語言撰寫的用戶端程式通常會使用 SQL 驅動程式，這些驅動程式會以比導向物件更具關聯性的格式來傳回所查詢資料。 使用 ADO.NET 的 C# 是其中一個範例。 OOP 關聯式格式不相符有時會使 OOP 程式碼更難撰寫及理解。
 
 *ORM*：其他驅動程式或架構會以 OOP 格式傳回查詢的資料，進而避免不相符。 這些驅動程式的運作方式是預期類別已定義以符合特定 SQL 資料表的資料行。 接著，驅動程式會執行*物件關聯式對應* (ORM)，以類別執行個體的形式傳回查詢的資料。 適用於 C# 的 Microsoft 的 Entity Framework (EF) 與適用於 Java 的 Hibernate 就是兩個範例。
 
@@ -34,17 +34,6 @@ ms.locfileid: "79286402"
 <a name="anchor-20-drivers-relational-access" />
 
 ## <a name="drivers-for-relational-access"></a>關聯式存取的驅動程式
-
-<!--
-Each given Microsoft Download Center page should be enhanced
-with a link to the next NEWER version page, on the day that the
-original page is no longer the latest because the newer page is being added.
-But this policy is not agreed on or observed,
-putting the links in the following table at risk for being outdated.
-
-PHP driver in Github.com also uses this FWLink:  https://go.microsoft.com/fwlink/?LinkID=518036 ,
-although the FWLink is less precise than is https://github.com/Microsoft/msphpsql/tree/dev#install-unix .
--->
 
 | Language | 下載 SQL 驅動程式 |
 | :------- | :---------------------- |
@@ -76,14 +65,15 @@ although the FWLink is less precise than is https://github.com/Microsoft/msphpsq
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>Build-an-app 網頁
+
 **[https://aka.ms/sqldev](https://aka.ms/sqldev)** 會帶您前往一組「建立應用程式」  網頁。 網頁提供多種程式設計語言、作業系統與 SQL 連線驅動程式組合的相關資訊。 在「建立用程式」網頁提供的資訊包括下列項目：
 
 - 關於針對每種語言 + 作業系統 + 驅動程式的組合，如何開始著手的詳細資料。
-    - 有關安裝最新 SQL 連線驅動程式的指示。
+  - 有關安裝最新 SQL 連線驅動程式的指示。
 - 下列每個項目的程式碼範例：
-    - 物件關聯式程式碼範例。
-    - ORM 程式碼範例。
-    - 資料行存放區索引示範，以提供更快的效能。
+  - 物件關聯式程式碼範例。
+  - ORM 程式碼範例。
+  - 資料行存放區索引示範，以提供更快的效能。
 
 **「建立應用程式」網頁的第一頁：**  
 ![「建立應用程式」網頁的第一頁螢幕擷取畫面](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png)
@@ -94,6 +84,7 @@ although the FWLink is less precise than is https://github.com/Microsoft/msphpsq
 &nbsp;
 
 ## <a name="related-links"></a>相關連結
+
 - [用於使用 Java 與其他語言連線到雲端 Azure SQL Database 的程式碼範例](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)。
 
 <!--

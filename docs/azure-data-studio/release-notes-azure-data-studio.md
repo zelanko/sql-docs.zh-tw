@@ -1,25 +1,40 @@
 ---
 title: 版本資訊
-titleSuffix: Azure Data Studio
 description: Azure Data Studio 版本資訊
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: alayu; sstein
+author: yualan
+ms.author: alayu
+ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 02/19/2020
-ms.openlocfilehash: 3b37609f6db3e9dc8fa0d6622574054686552350
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.date: 03/18/2020
+ms.openlocfilehash: 7a510500d16c29971d1a5263c5138ad1981c9401
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78408856"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215477"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
 **[下載並安裝最新版本！](download.md)**
+
+## <a name="march-2020"></a>2020 年 3 月
+
+2020 年 3 月 18 日 &nbsp; / &nbsp; 版本：1.16.0 
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| :----- | :------ |
+| 已在 SQL Notebooks 中新增圖表支援 | 現於程式碼資料格中執行 SQL 查詢時，使用者可以建立和儲存圖表。 |
+| 已新增建立 Jupyter Book 體驗 | 使用者現在可以使用筆記本建立自己的 Jupyter Book。 |
+| Postgres 延伸模組已新增 AAD 支援 | |
+| 已修正許多協助工具 Bug | [協助工具 Bug 清單](https://github.com/microsoft/azuredatastudio/issues?page=1&q=is%3Aissue+is%3Aclosed+milestone%3A%22S360+-+Accessibility%22+label%3AA11y_AzureDataStudio) |
+| VS Code 合併到 1.42 | 此版本包含前 3 個 VS Code 版本的 VS Code 更新。 若要深入了解，請[閱讀其版本資訊](https://code.visualstudio.com/updates/v1_42)。 |
+| 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22March+2020%22+is%3Aclosed) \(英文\)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="february-hotfix"></a>2 月 (Hotfix)
 
@@ -49,6 +64,7 @@ ms.locfileid: "78408856"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issue"></a>已知問題
+
 - MacOS Catalina 的使用者必須以滑鼠右鍵按一下 Azure Data Studio，然後按一下 [開啟]。
 
 ## <a name="december-2019-hotfix"></a>2019 年 12 月 (Hotfix)
@@ -98,7 +114,7 @@ ms.locfileid: "78408856"
 | 變更 | 詳細資料 |
 | :----- | :------ |
 | 新的 SQL Server 2019 支援 | &bull; &nbsp; 使用 BDC 部署精靈部署 SQL Server 2019 巨量資料叢集 <br/>&bull; &nbsp; 使用控制器儀表板管理叢集健康情況 <br/>&bull; &nbsp; 使用安全性 ACL 對話方塊管理 HDFS 存取控制清單 <br/> &bull; &nbsp; 使用 HDFS 分層對話方塊新增掛接 <br/> &bull; &nbsp; 使用內建的 Jupyter Book (SQL Server 2019 指南) 進行疑難排解 <br/> &bull; &nbsp; SQL vNext 延伸模組重新命名為資料虛擬化延伸模組 <br/> &bull; &nbsp; 外部資料表精靈中新增 Teradata 和 Mongo 的支援|
-| 新增 Notebook 功能 | &bull; &nbsp; 宣佈 Powershell 筆記本 <br/> &bull; &nbsp; 宣佈可摺疊的程式碼資料格 <br/>&bull; &nbsp; Notebooks 中的效能改進 <br/> &bull; &nbsp; 在[這裡](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22) \(英文\) 檢視完整的改進清單 |
+| 新增 Notebook 功能 | &bull; &nbsp; 宣告 Powershell 筆記本 <br/> &bull; &nbsp; 宣佈可摺疊的程式碼資料格 <br/>&bull; &nbsp; Notebooks 中的效能改進 <br/> &bull; &nbsp; 在[這裡](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22) \(英文\) 檢視完整的改進清單 |
 | 推出 Jupyter Book  | Jupyter Books 是整理成目錄的 Notebook 和 Markdown 檔案集合。 |
 | 新增 SQL Server 部署精靈  | 現在支援部署： <br/> &bull; &nbsp; Windows 上的 SQL Server 2019 <br/> &bull; &nbsp; Windows 上的 SQL Server 2017 <br/> &bull; &nbsp; Docker 上的 SQL Server 2019 <br/> &bull; &nbsp; Docker 上的 SQL Server 2017 |
 | 宣佈正式推出「結構描述比較」延伸模組| &bull; &nbsp; SQLCMD 模式 <br/> &bull; &nbsp; 當地語系化支援 <br/> &bull; &nbsp; 協助工具修正 <br/> &bull; &nbsp; 安全性錯誤 (Bug)  |
@@ -144,6 +160,7 @@ ms.locfileid: "78408856"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知問題
+
 - Notebooks
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) 不正確地序列化筆記本的罕見案例
 
@@ -163,6 +180,7 @@ ms.locfileid: "78408856"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知問題
+
 - Notebooks
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) 不正確地序列化筆記本的罕見案例
 
@@ -201,10 +219,9 @@ ms.locfileid: "78408856"
 | 已解決的 Bug 和問題 | 在舊版 Azure Data Studio 中，如果在從 [連線] 對話方塊連線時選取了使用者資料庫，則會將產生的物件總管項目範圍完全限定為該單一資料庫。 從此版本開始，該行為已經變更，因此，伺服器層級屬性也會顯示於物件總管中。 <br/> 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1) \(英文\)。 |
 | &nbsp; | &nbsp; |
 
-
 ## <a name="june-2019"></a>2019 年 6 月
 
-2019 年 6 月 6 日 &nbsp; / &nbsp; 版本：1.8.0 
+2019 年 6 月 6 日 &nbsp; / &nbsp; 版本：1.8.0
 
 &nbsp;
 
@@ -220,6 +237,7 @@ ms.locfileid: "78408856"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知問題
+
 - 適用於 Windows 的資料庫管理工具延伸模組
     - 無法從中斷連線的伺服器節點啟動屬性
     - 無法啟動 Azure 伺服器的屬性
@@ -256,7 +274,7 @@ ms.locfileid: "78408856"
 | :----- | :------ |
 | 已將 [伺服器]  索引標籤重新命名為 [連線]  | |
 | 已移動 Azure 資源總管成為 [連線] 底下的 Azure Viewlet | 使用者現在可以透過 [連線] 檢視中的 Azure Viewlet 來檢視其 Azure SQL 執行個體，並展開以檢視每個伺服器或資料庫底下的物件。|
-| SQL Notebook 改進 | &bull; &nbsp; 已新增工具列上的按鈕，以清除所有資料格的輸出 <br/>&bull; &nbsp; 已新增工具列上的按鈕，以執行所有資料格 <br/>&bull; &nbsp; 已修正 [附加至] 下拉式清單中的連線名稱，而不是伺服器名稱 (如果已設定) <br/>&bull; &nbsp; 修正在使用相對影像路徑時不會呈現 Markdown 中的影像 <br/>&bull; &nbsp; 已藉由新增按兩下自動調整大小資料行大小和改進的滑鼠滾輪支援，來改進筆記本方格中的功能 <br/>&bull; &nbsp; 改進在透過筆記本安裝 Python 時的錯誤處理和 Python 安裝復原 <br/>&bull; &nbsp; 改進在選取筆記本資料格時的「全選」功能 <br/>&bull; &nbsp; 改進筆記本連線，以防止關閉筆記本並影響物件總管連線 <br/>&bull; &nbsp; 已改進筆記本體驗，以在筆記本中斷連線並且需要連線來執行資料格時向使用者顯示訊息<br/>&bull;&nbsp; 已改進在重新啟動 ADS 時，於 ADS 中將未儲存筆記本解除凍結的支援 |
+| SQL Notebook 改進 | &bull; &nbsp; 已新增工具列上的按鈕，以清除所有資料格的輸出 <br/>&bull; &nbsp; 已新增工具列上的按鈕，以執行所有資料格 <br/>&bull; &nbsp; 已修正 [附加至] 下拉式清單中的連線名稱，而不是伺服器名稱 (如果已設定) <br/>&bull; &nbsp; 修正在使用相對影像路徑時不會呈現 Markdown 中的影像 <br/>&bull; &nbsp; 已藉由新增按兩下自動調整大小資料行大小和改進的滑鼠滾輪支援，來改進筆記本方格中的功能 <br/>&bull; &nbsp; 改進在透過筆記本安裝 Python 時的錯誤處理和 Python 安裝復原 <br/>&bull; &nbsp; 選取筆記本資料格時「全選」功能的改善 <br/>&bull; &nbsp; 改進筆記本連線，以防止關閉筆記本並影響物件總管連線 <br/>&bull; &nbsp; 已改進筆記本體驗，以在筆記本中斷連線並且需要連線來執行資料格時向使用者顯示訊息<br/>&bull;&nbsp; 已改進在重新啟動 ADS 時，於 ADS 中將未儲存筆記本解除凍結的支援 |
 | 已解決的 Bug 和問題。 | 請參閱 [GitHub 上的 Bug 和問題](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1) \(英文\)。 |
 | &nbsp; | &nbsp; |
 
@@ -268,7 +286,7 @@ ms.locfileid: "78408856"
 
 | 變更 | 詳細資料 |
 | :----- | :------ |
-| 已修正數個在 1.5.1 中發現的問題。 | 請參閱 [GitHub 上的 3 月 Hotfix 版本](https://github.com/Microsoft/azuredatastudio/milestone/28) \(英文\)。<br/> <br/>&bull; &nbsp; 已修正使用者無法關閉從儀表板的 [開啟筆記本] 工作中開啟之筆記本的問題 <br/>&bull; &nbsp; 已修正筆記本 JSON 在儲存之後有多餘 } 的問題 <br/>&bull; &nbsp; 已修正筆記本方格不會回應佈景主題變更的問題 <br/>&bull; &nbsp; 已修正完整筆記本路徑會顯示於索引標籤標題中的問題。 現在只會顯示檔案名稱。 |
+| 已修正數個在 1.5.1 中發現的問題。 | 請參閱 [GitHub 上的 3 月 Hotfix 版本](https://github.com/Microsoft/azuredatastudio/milestone/28) \(英文\)。<br/> <br/>&bull; &nbsp; 已修正使用者無法關閉從儀表板 [開啟筆記本] 工作中開啟的筆記本問題 <br/>&bull; &nbsp; 已修正筆記本 JSON 在儲存之後有多餘 } 的問題 <br/>&bull; &nbsp; 已修正筆記本方格不會回應佈景主題變更的問題 <br/>&bull; &nbsp; 已修正完整筆記本路徑會顯示於索引標籤標題中的問題。 現在只會顯示檔案名稱。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="march-2019"></a>2019 年 3 月
@@ -300,7 +318,7 @@ ms.locfileid: "78408856"
 - [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458) \(英文\)：如果使用了不正確的版本，Dacpac 解壓縮就會損毀 SqlToolsService <br/>
 **因應措施：** 重新啟動 Azure Data Studio，並確定使用的是正確的版本。
 - [新增筆記本] 和 [開啟筆記本] 圖示均遺失 <br/>
-**因應措施：** 舊版連線類型已被取代。 建議連線到 SQL Server 端點，而您將如預期般取得所有動作 (新增筆記本、Spark 作業)。 
+**因應措施：** 舊版連線類型已被取代。 建議連線到 SQL Server 端點，您就可以如預期般取得所有動作 (新增筆記本、Spark 作業)。 
 
 ## <a name="february-2019"></a>2019 年 2 月
 

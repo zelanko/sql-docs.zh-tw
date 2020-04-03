@@ -1,5 +1,6 @@
 ---
 title: 列印報表 | Microsoft Docs
+description: 您可從入口網站或用來檢視的應用程式，檢視及列印報表。 用戶端電腦會視需求執行列印處理。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4dd9fc438ba1ec30a85119ceef6d5e1503a5ea1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f81be70bf4de9d9f15a3c35d3a3dc4b5c81f2609
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77082489"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290886"
 ---
 # <a name="print-reports---reporting-services-ssrs"></a>列印報表 - Reporting Services (SSRS)
   將報表儲存至報表伺服器之後，您就可以從入口網站或任何用來檢視所匯出報表的應用程式，檢視及列印報表。 儲存報表之前，您可以在預覽報表時將它列印出來。  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 9dfbb1192c160fb032afa6dbb56ee7b24b80bcd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f0c3fe15a46333fad43b72ba3c8040153b9b51a2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75241222"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80386187"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe 的版本資訊
 
@@ -49,6 +49,12 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | ScriptDom |  18.3.1 中引進的 ScriptDom 剖析迴歸誤將 'RENAME' 視為最上層權杖，因而導致剖析失敗。
 | &nbsp; | &nbsp; |
 
+### <a name="known-issues"></a>已知問題 
+
+| 功能 | 詳細資料 |
+| :------ | :------ |
+| 部署 |  18.4.1 中所引進迴歸會導致在外部登入的使用者部署 dacpac 或匯入 bacpac 時， 發生「物件參考未設定成物件的執行個體」錯誤。 因應措施是使用 sqlpackage 18.4，這將在下一版 sqlpackage 中修正。 | 
+| &nbsp; | &nbsp; |
 
 ## <a name="184-sqlpackage"></a>18.4 sqlpackage
 

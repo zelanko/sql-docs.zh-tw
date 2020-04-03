@@ -1,5 +1,6 @@
 ---
 title: 啟動報表產生器 | Microsoft Docs
+description: 報表產生器是獨立的報表撰寫環境。 第一次啟動時，Microsoft 下載中心會提示您下載。
 ms.date: 01/03/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd186252204a82e115387b625503945c50604460
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bdb67ef174ec849233826b65a2d90f08e8e4eb7d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75721383"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290766"
 ---
 # <a name="start-report-builder"></a>啟動報表產生器
 

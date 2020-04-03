@@ -1,5 +1,6 @@
 ---
 title: 批次方法 | Microsoft Docs
+description: 了解如何在 Reporting Services 中使用 SOAP 標頭，以在單一作業中包含多個 Web 服務方法。
 ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bcafb334e32a1b98d10c57d8f31fe321d0b7f182
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dcc18839d2e10a35a35289a5950cab566afea23a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62991481"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215587"
 ---
 # <a name="batching-methods"></a>批次方法
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中使用 SOAP 標頭可讓您在單一作業中包括多個 Web 服務方法。 方法會依呼叫它們的順序在單一資料庫交易的範圍中執行。  

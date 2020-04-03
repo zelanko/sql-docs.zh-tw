@@ -1,5 +1,6 @@
 ---
 title: 匯出至 CSV 檔案 (報表產生器) | Microsoft Docs
+description: 在報表產生器中，CSV 轉譯延伸模組會將分頁報表轉譯為可讀取且與許多應用程式相容的純文字格式。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0b53c40aeb36b2db7586fe135daa05aff17e54e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1104054faef55ca3b3b661ea210c279c9aa55841
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77078373"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342883"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>匯出至 CSV 檔案 (報表產生器及 SSRS)
   逗號分隔值 (CSV) 轉譯延伸模組會將分頁報表從多個應用程式都可輕易讀取與交換的標準化純文字格式報表，轉譯為扁平化表示的資料。  
@@ -27,7 +28,7 @@ ms.locfileid: "77078373"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> CSV 轉譯  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a> CSV 轉譯  
  使用預設值轉譯時，CSV 報表會具有下列特性：  
   
 -   預設的欄位分隔符號字串是逗號 (,)。  
@@ -95,7 +96,7 @@ ms.locfileid: "77078373"
  如需詳細資訊，請參閱 [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
   
-##  <a name="RenderingModes"></a> 轉譯器模式  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> 轉譯器模式  
  CSV 轉譯延伸模組可以在兩種模式下操作：一種會針對 Excel 最佳化，而另一種則會針對需要 CSV 嚴格遵循 RFC 4180 中 CSV 合規性的協力廠商應用程式最佳化。 根據所使用的模式，對等資料區域的處理方式也會不同。  
   
 ### <a name="default-mode"></a>預設模式  
@@ -119,7 +120,7 @@ ms.locfileid: "77078373"
 #### <a name="formatting"></a>格式化  
  這些值沒有格式化。  
   
-##  <a name="Interactivity"></a> 互動性  
+##  <a name="interactivity"></a><a name="Interactivity"></a> 互動性  
  此轉譯器產生的任一種 CSV 格式都不支援互動性。 系統不會轉譯下列互動項目：  
   
 -   超連結  
@@ -137,7 +138,7 @@ ms.locfileid: "77078373"
 -   書籤  
   
   
-##  <a name="DeviceInfo"></a> 裝置資訊設定  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> 裝置資訊設定  
  您可以變更此轉譯器的某些預設值，包括要在哪個模式下進行轉譯、要使用哪些字元當做分隔符號，以及要使用哪些字元當做文字限定詞的預設字串，只要變更裝置資訊設定即可。 如需詳細資訊，請參閱 [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md)。  
   
   

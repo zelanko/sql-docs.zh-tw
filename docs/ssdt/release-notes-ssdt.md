@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 860888bf0f2292a68fa6a4c6a6b92489466a586c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b83ceb3dd5079f82a13e8f1e2aba37fcf5ca5835
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75688782"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271424"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的版本資訊
 
@@ -44,6 +44,39 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1594nbsp-ssdt-for-vs-2017"></a>15.9.4，&nbsp;適用於 VS 2017 的 SSDT
+
+發行日期：  &nbsp;2020 年 3 月 26 日  
+組建編號：  14.0.16214.0  
+適用於 Visual Studio 2017 的 SSDT。 
+
+### <a name="whats-new"></a>新功能
+
+| 新項目 | 詳細資料 |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | 已修正在容器內移動控制流程限制式程式碼行時，VS 可能會損毀的問題。 |
+| Integration Services (SSIS) | 已修正維護計畫工作的 UI 無法列出在工作 UI 外部所建立 ADO.NET 連線管理員的問題。 |
+| Integration Services (SSIS) | 已修正當部署的 SSIS 專案屬於同時正在載入 SSIS 專案的解決方案時，Azure 互動式登入未顯示的問題。 |
+| Integration Services (SSIS) | 已修正當 SQL Server 未安裝時，按一下 MSOLAP 驅動程式屬性按鈕會使 DTS 精靈損毀的問題。 |
+| Integration Services (SSIS) | 已修正 MSOLEDBSQL 驅動程式不支援 DTS 精靈中 AAD 驗證的問題。 |
+| Integration Services (SSIS) | 已修正目標為 SQL Server 2012 時，XML 來源和 ADO.NET 目的地無法正確保存的問題。 |
+| Integration Services (SSIS) | 已修正 Web 服務工作編輯器中 [下載 WSDL] 按鈕可能無法正確顯示的問題。 |
+| Integration Services (SSIS) | 已修正可能無法在查閱轉換編輯器的 [連線管理員] 頁面中選取資料表的問題。 |
+| Integration Services (SSIS) | 已修正快取轉換編輯器的版面配置可能錯誤的問題。 |
+| Integration Services (SSIS) | 已修正套件編輯器中 [連線管理員] 區域可能無法正確顯示的問題。 |
+| Integration Services (SSIS) | 已修正 [轉換為套件部署模型精靈] 中狀態圖示可能無法正確顯示的問題。 |
+| Integration Services (SSIS) | 已將安裝程式變更為不需要從網際網路下載承載的完整安裝程式。 |
+
+### <a name="known-issues"></a>已知問題
+
+| 已知問題 | 詳細資料 |
+| :---------- | :------ |
+| 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 | 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。 |
+| 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援 OData v4。 | &nbsp; |
+| 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援使用 ODBC 連接到 Oracle。 | &nbsp; |
+| Power Query 來源未當地語系化 | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1593nbsp-ssdt-for-vs-2017"></a>15.9.3，&nbsp; 適用於 VS 2017 的 SSDT
 

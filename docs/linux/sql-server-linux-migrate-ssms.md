@@ -1,6 +1,6 @@
 ---
 title: 在 Linux 上匯出和匯入資料庫
-description: ''
+description: 本文說明如何使用 SQL Server Management Studio 和 SqlPackage 在 Linux 的 SQL Server 上匯出和匯入資料庫。
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.openlocfilehash: f99ff799ec91ea455cc37bd994c8555330a8ff0f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8602f17b88400f7b0dbac6b4015dbfaf6f85fd65
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68105556"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216640"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>使用 SSMS 或 Windows 上的 SqlPackage，在 Linux 上匯出和匯入資料庫
 
@@ -62,7 +62,7 @@ ms.locfileid: "68105556"
 
 *.BACPAC 檔案隨即匯入，以在您指定的目標伺服器中建立新資料庫。
 
-## <a id="sqlpackage"></a> SqlPackage 命令列選項
+## <a name="sqlpackage-command-line-option"></a><a id="sqlpackage"></a> SqlPackage 命令列選項
 
 您也可以使用 SQL Server Data Tools (SSDT) 命令列工具 ([SqlPackage](https://msdn.microsoft.com/library/hh550080.aspx)) 來匯出和匯入 BACPAC 檔案。
 

@@ -1,5 +1,6 @@
 ---
 title: 匯出至 Microsoft Excel (報表產生器) | Microsoft Docs
+description: 在報表產生器中，Excel 轉譯延伸模組會將分頁報表轉譯為 Office Open XML 格式，以便與 Microsoft Excel 搭配使用。
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b067dea118592a58b87a9da50ba31d4ee2897cfe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 865caa0938aa89feacbb5e330eb38f292039446c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079584"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342897"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 轉譯延伸模組會將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表轉譯成 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 格式 (.xlsx)。 使用 Excel 轉譯延伸模組，Excel 中的資料行寬度就可以更精確地反映報表中的資料行寬度。  
@@ -29,7 +30,7 @@ ms.locfileid: "77079584"
 >   
 >  若要減輕不小心執行惡意指令碼的風險，請只從信任的來源開啟轉譯的報表。 如需保護報表安全的詳細資訊，請參閱 [保護報表和資源的安全](../../reporting-services/security/secure-reports-and-resources.md)。  
   
-##  <a name="ExcelLimitations"></a> Excel 限制  
+##  <a name="excel-limitations"></a><a name="ExcelLimitations"></a> Excel 限制  
  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 會對匯出的報表加諸限制。 影響最大的限制如下所列：  
   
 -   資料行寬度上限的限制為 255 個字元或 1726.5 點。 轉譯器不會驗證資料行寬度低於限制。  
@@ -178,7 +179,7 @@ ms.locfileid: "77079584"
   
  因為報表會明確設定資料列高度，所以預設資料列高度只會影響匯出至 Excel 時自動調整大小的資料列。  
   
-##  <a name="ReportItemsExcel"></a> Excel 中的報表項目  
+##  <a name="report-items-in-excel"></a><a name="ReportItemsExcel"></a> Excel 中的報表項目  
  矩形、子報表、報表主體以及資料區域都會轉譯為 Excel 資料格的範圍。 文字方塊、影像、圖表、資料橫條、走勢圖、地圖、量測計與指標必須在一個 Excel 資料格內轉譯，而且這個資料格可能會依據報表其餘部分的配置而合併。  
   
  系統會將影像、圖表、走勢圖、資料橫條、地圖、量測計、指標與線條放置在一個 Excel 資料格內，但是會位於資料格方格的頂端。 線條會轉譯為資料格框線。  
@@ -192,7 +193,7 @@ ms.locfileid: "77079584"
   
  如果找不到相符項目，Excel 會針對印表機使用預設的頁面大小。 如果頁面寬度小於頁面高度，則方向會設定為 [縱向]；否則，系統會設定為 [橫向]。  
   
-##  <a name="WorksheetTabNames"></a> 工作表標籤名稱  
+##  <a name="worksheet-tab-names"></a><a name="WorksheetTabNames"></a> 工作表標籤名稱  
  當您將報表匯出到 Excel 時，分頁符號所建立的報表頁面會匯出到不同的工作表。 如果您為此報表提供初始頁面名稱，Excel 活頁簿的每一個工作表預設將會擁有這個名稱。 此名稱會出現在工作表標籤上。但是，因為活頁簿中的每一個工作表都必須有唯一的名稱，所以 1 開頭而且遞增 1 的整數會附加到每一個額外工作表的初始頁面名稱中。 例如，如果初始頁面名稱為 **Sales Report by Fiscal Year**，第二個工作表的名稱會是 **Sales Report by Fiscal Year1**，第三個工作表的名稱會是 **Sales Report by Fiscal Year2**，依此類推。  
   
  如果分頁符號所建立的所有報告頁面都會提供新的頁面名稱，每一個工作表都會有關聯的頁面名稱。 但是，這些頁面名稱可能不是唯一的。 如果頁面名稱不是唯一的，工作表的命名方式會與初始頁面名稱相同。 例如，如果兩個群組的頁面名稱為 **Sales for NW**，則一個工作表標籤的名稱將會是 **Sales for NW**，另一個則為 **Sales for NW1**。  
@@ -201,7 +202,7 @@ ms.locfileid: "77079584"
   
  Reporting Services 會提供可在報表、資料區、群組和矩形上設定的屬性，協助您建立可依照您所要的方式匯出到 Excel 的報表。 如需詳細資訊，請參閱 [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
   
-##  <a name="DocumentProperties"></a> 文件屬性  
+##  <a name="document-properties"></a><a name="DocumentProperties"></a> 文件屬性  
  Excel 轉譯器會將下列中繼資料寫入到 Excel 檔。  
   
 |報表元素屬性|描述|  
@@ -211,7 +212,7 @@ ms.locfileid: "77079584"
 |描述|Report.Description|  
 |LastSaved|執行報表的日期和時間，當做 ISO 日期/時間值。|  
   
-##  <a name="PageHeadersFooters"></a> 頁首和頁尾  
+##  <a name="page-headers-and-footers"></a><a name="PageHeadersFooters"></a> 頁首和頁尾  
  根據裝置資訊的 SimplePageHeaders 設定，可以用兩種方式轉譯頁首：系統可以在每個工作表資料格方格的頂端轉譯頁首，或者在實際的 Excel 工作表頁首區段轉譯。 根據預設，頁首會轉譯到 Excel 工作表的資料格方格。  
   
  不管 SimplePageHeaders 設定的值為何，頁尾永遠會轉譯到實際的 Excel 工作表頁尾區段。  
@@ -227,7 +228,7 @@ ms.locfileid: "77079584"
   
  由於 Excel 的限制，文字方塊是可以在 Excel 頁首/頁尾區段轉譯的唯一報表項目類型。  
   
-##  <a name="Interactivity"></a> 互動性  
+##  <a name="interactivity"></a><a name="Interactivity"></a> 互動性  
  在 Excel 中支援某些互動項目。 下列是特定行為的描述。  
   
 ### <a name="show-and-hide"></a>顯示與隱藏  
@@ -262,7 +263,7 @@ ms.locfileid: "77079584"
 ### <a name="bookmarks"></a>書籤  
  系統會將文字方塊中的書籤連結轉譯為轉譯文字之資料格中的 Excel 超連結。 而影像和圖表的書籤連結則會在轉譯時，轉譯為影像上的 Excel 超連結。 按一下書籤時，會移至轉譯設為書籤之報表項目的 Excel 資料格。  
   
-##  <a name="ConditionalFormat"></a> 在執行階段變更報表  
+##  <a name="changing-reports-at-run-time"></a><a name="ConditionalFormat"></a> 在執行階段變更報表  
  如果報表必須轉譯為多種格式，但您無法建立依希望的方式轉譯成全部所需格式的單一報表配置，則您應可考慮使用內建的全域 RenderFormat 值，在執行階段依條件變更報表外觀。 如此可讓您根據用於獲得每一種格式最佳結果的轉譯器，隱藏或顯示報表項目。 如需詳細資訊，請參閱[內建的全域和使用者參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 15da54550dd314a50d4c3235a77394292d23f1d9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c2350410fe4aa70a9091314034a849a2ed8c4e18
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71296942"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216907"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服務 (SSIS 服務)
 
@@ -85,7 +85,7 @@ ms.locfileid: "71296942"
   
  如果 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務已停止，可以使用 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師、執行封裝公用程式及 **dtexec** 命令提示字元公用程式 (dtexec.exe) 繼續執行封裝。 不過，您無法監視執行中的封裝。  
   
- 根據預設， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會在 NETWORK SERVICE 帳戶內容中執行。  
+ 根據預設， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會在 NETWORK SERVICE 帳戶內容中執行。 建議在 NETWORK SERVICE 帳戶等權限有限的帳戶下，執行 SQL Server Integration Services 服務。 在具有高權限的帳戶下執行 SQL Server Integration Services 服務代表潛在的安全性風險。 
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會寫入 Windows 事件記錄檔。 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中檢視服務事件。 此外，您也可以使用「Windows 事件檢視器」來檢視服務事件。  
   

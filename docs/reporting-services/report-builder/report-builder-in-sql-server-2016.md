@@ -1,5 +1,6 @@
 ---
 title: SQL Server 的報表產生器 | Microsoft Docs
+description: 報表產生器是用於撰寫編頁報表的工具。 若要建立報表，您可指定要擷取的資料、要取得資料的位置，以及資料的顯示方式。
 ms.date: 05/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c10e37d7c1231a3ed4db2d7412ea223cccc6922d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f67cf34bd18dc6a2743822f66acbee1692000bdb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67688518"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290899"
 ---
 # <a name="report-builder-in-sql-server"></a>SQL Server 的報表產生器
 
@@ -30,7 +31,7 @@ ms.locfileid: "67688518"
   
  這份分頁報表提供一個矩陣，內含資料列和資料行群組、走勢圖、指標以及位於邊角資料格的摘要圓形圖，並附有一份地圖，地圖中具有兩組以色彩和圓形大小呈現的地理資料。  
   
-##  <a name="JumpStartReptCreation"></a> 開始建立報表  
+##  <a name="jump-start-report-creation"></a><a name="JumpStartReptCreation"></a> 開始建立報表  
   
 -   **從共用資料集開始**。 共用資料集是以共用資料來源為基礎的查詢，儲存在原生模式或 SharePoint 整合模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器。  
   
@@ -40,7 +41,7 @@ ms.locfileid: "67688518"
   
 -   **使用報表組件啟動您的報表**。 報表組件是個別發行到原生模式或 SharePoint 整合模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器的報表項目。 報表組件可以在其他報表中重複使用。 諸如資料表、矩陣、圖表和影像等報表項目都可以發行為報表組件。  
   
-##  <a name="DesignRept"></a> 設計報表  
+##  <a name="design-your-report"></a><a name="DesignRept"></a> 設計報表  
   
 -   **建立含有資料表、矩陣、圖表和自由形式報表配置的分頁報表。** 針對以資料行為基礎的資料建立資料表報表、針對摘要資料建立矩陣報表 (例如交叉分析或樞紐分析表報表)、針對地理資料建立圖表報表，以及針對其他資料建立自由形式的報表。 報表可以內嵌其他報表和圖表，連同動態網路架構應用程式的清單、圖形和控制項。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "67688518"
   
 -   **內嵌或參考影像與其他資源** ，包括外部內容。  
   
-##  <a name="ManageRpt"></a> 管理報表  
+##  <a name="manage-your-report"></a><a name="ManageRpt"></a> 管理報表  
   
 -   **將報表定義儲存** 至電腦或報表伺服器，以便管理報表以及與其他人共用報表。  
   

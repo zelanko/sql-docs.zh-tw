@@ -11,12 +11,12 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: 1d1e595918b33ae4fcc11cd59bf0964b2e6d919c
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.openlocfilehash: e2aafb77145fbe22a980ef158cfa7c78db6288d2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79112286"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216257"
 ---
 # <a name="hybrid-buffer-pool"></a>混合式緩衝集區
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,9 +96,7 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 在 Windows 上格式化 PMEM 裝置時，請使用 NTFS 可提供的最大配置單位大小 (Windows Server 2019 為 2 MB)，並確定裝置已針對 DAX (直接存取) 格式化。
 
-使用大型分頁記憶體配置模型，此模型可以透過[追蹤旗標 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 來啟用。 追蹤旗標 834 是啟動追蹤旗標。
-
-使用大型分頁記憶體配置模型時，需要使用 Windows 上[記憶體中的鎖定分頁](./enable-the-lock-pages-in-memory-option-windows.md)。
+在 Windows 中，使用[記憶體的鎖定分頁](./enable-the-lock-pages-in-memory-option-windows.md)。
 
 檔案大小應該是 2 MB 的倍數 (模數 2 MB 應該等於零)。
 

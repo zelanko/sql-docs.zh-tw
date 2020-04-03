@@ -1,5 +1,6 @@
 ---
 title: 將裝置資訊設定傳遞至轉譯延伸模組 | Microsoft Docs
+description: 轉譯的參數會傳遞給轉譯的延伸模組。 依 Render 方法，將裝置資訊設定指定為 URL 參數，或在組態檔中指定。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4171fcbc01b7dfd36003bef6c4fa5d90c74600d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9c8dc233904cb94520d9074924c3aabc30be85a7
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128883"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509769"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>將裝置資訊設定傳遞至轉譯延伸模組
   在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中，裝置資訊設定會用於將轉譯參數傳遞給轉譯延伸模組。 Report Server Web 服務中的設定會當做 **DeviceInfo** XML 元素傳遞，並由報表伺服器進行處理。 因為裝置資訊設定具有預設值，所以這些值被視為轉譯程序中的選擇性引數。 不過，您可以使用裝置資訊設定來自訂轉譯，並覆寫伺服器所套用的預設值。  

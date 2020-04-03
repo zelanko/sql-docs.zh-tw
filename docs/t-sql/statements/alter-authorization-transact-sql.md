@@ -26,12 +26,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af69908f78c5f6a0958c87d315c0ba20da25cfb3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 01fc7ed0e32df7c5c3465f85b5358c2c359fc767
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73982875"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215909"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -191,7 +191,7 @@ ALTER AUTHORIZATION ON
 |CERTIFICATE 或 ASYMMETRIC KEY|無法將這些實體的擁有權傳送給角色或群組。|    
 |端點|主體必須是登入。|    
   
-## <a name="AlterDB"></a>資料庫的 ALTER AUTHORIZATION  
+## <a name="alter-authorization-for-databases"></a><a name="AlterDB"></a>資料庫的 ALTER AUTHORIZATION  
 **適用對象**：[!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
 ### <a name="for-sql-server"></a>針對 SQL Server：  
 **新擁有者的需求：**    
@@ -270,7 +270,7 @@ ON d.owner_sid = sl.sid;
   ```    
   
 現在 `mydbogroup` 成員可作為 **db_owner** 角色的成員集中管理資料庫。  
-- 當此群組的成員從 Azure AD 群組移除時，它們會自動喪失此資料庫的 dbo 權限。  
+- 當此群組的成員從 Azure AD 群組移除時，會自動喪失此資料庫的 dbo 權限。  
 - 同樣的，若將新的成員新增至 `mydbogroup` Azure AD 群組，它們也會自動取得此資料庫的 dbo 存取。  
   
 若要檢查特定使用者是否具備有效的 dbo 權限，請讓使用者執行下列陳述式：  

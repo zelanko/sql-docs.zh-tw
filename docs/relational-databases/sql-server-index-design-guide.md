@@ -22,12 +22,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cf6e85cef8d95e2b1bb167d482f36ec540196f6
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 68b29bd0497598909914cb71f9f180ccf57191c0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287312"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486525"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引架構和設計指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "79287312"
 
 如需全文檢索索引的資訊，請參閱[擴展全文檢索索引](../relational-databases/search/populate-full-text-indexes.md)。
   
-##  <a name="Basics"></a> 索引設計基本概念  
+##  <a name="index-design-basics"></a><a name="Basics"></a> 索引設計基本概念  
  思考一下一般的書籍：書的結尾會有索引，可協助您快速找到書籍內的資訊。 索引是排序的關鍵字清單，每個關鍵字旁會有頁碼，指出可以在哪些頁面找到這些關鍵字。 SQL Server 索引也一樣，此索引是值的排序清單，並且每個值都有指向這些值所在的資料[頁面](../relational-databases/pages-and-extents-architecture-guide.md)指標。 索引本身會儲存在頁面上，並在 SQL Server 中組成索引頁。 在一般書籍中，如果您要尋找所有包含 "SQL" 這個字的頁面指標，但索引橫跨多個頁面，您就必須翻頁直到您找到包含關鍵字 "SQL" 的索引頁面。 找到後，您就會遵循指向所有頁面的指標。  如果您在索引的開頭建立一個頁面，包含可在哪裡找到每個字母的字母順序清單，就可以讓過程更有效率。 例如：「A 到 D - 第 121 頁」、「E 到 G - 第 122 頁」等。 這個額外的頁面，可以免除翻閱索引來找出開始位置的步驟。 這類頁面不存在於一般書籍，但存在於 SQL Server 的索引中。 此單一頁面稱為索引的根頁面。 根頁面是 SQL Server 索引所使用的樹狀結構起始頁。 在樹狀結構下，包含實際資料指標的結尾頁面，稱為樹狀結構的「分葉頁面」。 
 
  SQL Server 索引是一種與資料表或檢視相關聯的磁碟上或記憶體內部結構，可加快從該資料表或檢視中擷取資料列的速度。 索引中包含從資料表或檢視中一或多個資料行建出的索引鍵。 針對磁碟上的索引，這些索引鍵儲存在樹狀結構 (B 型樹狀結構) 中，可讓 SQL Server 快速並有效地尋找與索引鍵值相關聯的一或多個資料列。  
@@ -83,7 +83,7 @@ ms.locfileid: "79287312"
 5.  決定最理想的索引儲存位置。 非叢集索引可以作為基礎資料表儲存在相同的檔案群組中，或儲存在不同的檔案群組中。 藉由增加磁碟 I/O 效能，索引的儲存位置可提升查詢效能。 例如，將非叢集索引儲存在不同磁碟機上 (與資料表檔案群組不同的磁碟機) 的檔案群組中，可以同時讀取多部磁碟機，所以可提升效能。  
      此外，叢集和非叢集索引可跨多個檔案群組使用資料分割結構描述。 資料分割使大型資料表或索引的管理更為容易，這是因為您可以快速有效地存取或管理資料的子集，同時維持整體集合的完整性。 如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。 當您考慮使用分割時，請決定是否應該校準索引，也就是說，使用分割資料表相同的方法進行分割，或獨立進行分割。   
 
-##  <a name="General_Design"></a> 一般索引設計指導方針  
+##  <a name="general-index-design-guidelines"></a><a name="General_Design"></a> 一般索引設計指導方針  
  經驗豐富的資料庫管理員可以設計出一組數量適中的索引，但即使是普通複雜的資料庫與工作量，這都是一件非常複雜、費時，且容易出錯的工作。 了解資料庫、查詢和資料行的特性可以協助您設計最佳化的索引。  
   
 ### <a name="database-considerations"></a>資料庫考量  
@@ -153,7 +153,7 @@ ms.locfileid: "79287312"
   
 您也可以自訂索引的初始儲存特性，設定如 FILLFACTOR 的選項來最佳化其效能或維護。 您也可以使用檔案群組或資料分割配置的方式決定索引儲存位置，以最佳化效能。  
   
-###  <a name="Index_placement"></a> 檔案群組或資料分割配置上的索引位置  
+###  <a name="index-placement-on-filegroups-or-partitions-schemes"></a><a name="Index_placement"></a> 檔案群組或資料分割配置上的索引位置  
  在您開發索引設計策略時，您應該考慮在資料庫關聯的檔案群組上之索引位置。 小心地選取檔案群組或資料分割配置將可改善查詢效能。  
   
  依預設，索引會與建立索引的基底資料表儲存在同一個檔案群組中。 非資料分割的叢集索引與基底資料表永遠都在相同的檔案群組中。 然而，您仍可執行下列工作：  
@@ -177,7 +177,7 @@ ms.locfileid: "79287312"
   
 如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。  
   
-###  <a name="Sort_Order"></a> 索引排序順序設計指導方針  
+###  <a name="index-sort-order-design-guidelines"></a><a name="Sort_Order"></a> 索引排序順序設計指導方針  
  定義索引時，您應該考慮要以遞增還是遞減的順序，來儲存索引鍵資料行的資料。 遞增是預設值，且可繼續與舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]相容。 CREATE INDEX、CREATE TABLE 與 ALTER TABLE 陳述式的語法，可在索引及條件約束的個別資料行上支援關鍵字 ASC (遞增) 與 DESC (遞減)。  
   
  指定在索引中將以何種順序儲存索引鍵值，在遇到下列情況時會很有用：參考資料表的查詢具有 ORDER BY 子句，且此子句指定的排序方向與該索引中索引鍵資料行的方向不同。 這種時候，查詢計畫就不需要對索引使用 SORT 運算子；因此可使得查詢更有效率。 例如， [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 採購部門中的採購員必須評估他們向供應商購買的產品品質。 採購員想先找出這些供應商送來的產品中，哪些產品的退貨率較高。 如同下列查詢所示，要擷取符合這項條件的資料，需將 `RejectedQty` 資料表中的 `Purchasing.PurchaseOrderDetail` 資料行依遞減順序 (由大到小) 儲存，而 `ProductID` 資料行則依遞增順序 (由小到大) 儲存。  
@@ -207,7 +207,7 @@ ON Purchasing.PurchaseOrderDetail
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] 往遞增或遞減方向移動的效率一樣高。 定義為 `(RejectedQty DESC, ProductID ASC)` 的索引，仍可用在 ORDER BY 子句中的資料行排序方向與其相反的查詢中。 例如，具有 ORDER BY 子句 `ORDER BY RejectedQty ASC, ProductID DESC` 的查詢就可以使用此索引。  
   
- 排序順序只能針對索引鍵資料行指定。 [sys.index_columns](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) 目錄檢視及 INDEXKEY_PROPERTY 函數可回報索引資料行是按遞增還是遞減的順序排序。  
+ 排序次序只能針對索引中的索引鍵資料行指定。 [sys.index_columns](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) 目錄檢視及 INDEXKEY_PROPERTY 函數可回報索引資料行是按遞增還是遞減的順序排序。  
 
 ## <a name="metadata"></a>中繼資料  
 您可以使用這些中繼資料檢視來查看索引的屬性。 其中一些檢視內含其他架構資訊。
@@ -228,7 +228,7 @@ ON Purchasing.PurchaseOrderDetail
 |[sys.dm_db_xtp_nonclustered_index_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-nonclustered-index-stats-transact-sql.md)|[sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)|
 |[sys.hash_indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
 
-##  <a name="Clustered"></a> 叢集索引設計指導方針  
+##  <a name="clustered-index-design-guidelines"></a><a name="Clustered"></a> 叢集索引設計指導方針  
  叢集索引將資料表中的資料列依其索引鍵值排序與儲存。 因為資料列本身只能以一種順序排序，所以每個資料表只能有一個叢集索引。 除了一些例外之外，每個資料表都應該在資料行上定義叢集索引，以提供下列功能：  
   
 -   可用於經常使用的查詢。  
@@ -302,7 +302,7 @@ ON Purchasing.PurchaseOrderDetail
   
     寬索引鍵是由數個資料行或是數個大型資料行所組成。 所有的非叢集索引都使用叢集索引的索引鍵值做為查閱索引鍵。 任何在相同資料表上所定義的非叢集索引將會非常大，因為非叢集索引項目包含叢集索引鍵，同時也包含在該非叢集索引上所定義的索引鍵資料行。  
   
-##  <a name="Nonclustered"></a> 非叢集索引設計指導方針  
+##  <a name="nonclustered-index-design-guidelines"></a><a name="Nonclustered"></a> 非叢集索引設計指導方針  
  非叢集索引包含了索引鍵值和可指向資料表資料的儲存位置之資料列定位器。 您可以在資料表或索引檢視表上建立多個非叢集索引。 一般而言，應該將非叢集索引設計成可增進常用查詢 (叢集索引未涵蓋的查詢) 的效能。  
   
  如同您使用書中索引的方式一樣，查詢最佳化工具會先搜尋非叢集索引以找出資料值在資料表中的位置，然後再直接從該位置擷取資料，即可搜尋資料值。 這讓非叢集索引成為執行完全符合的查詢之最佳選擇，因為此種索引所包含的項目會描述查詢中所要搜尋的資料值在資料表中的確定位置。 例如，若要針對直屬特定經理的所有員工查詢 `HumanResources. Employee` 資料表，查詢最佳化工具可能使用非叢集索引 `IX_Employee_ManagerID`，而這個索引以 `ManagerID` 做為索引鍵資料行。 查詢最佳化工具可以在索引中快速尋找符合指定之 `ManagerID`的所有項目。 每個索引項目會指向資料表中正確的頁面和資料列，或指向可以找到對應資料的叢集索引。 查詢最佳化工具在索引中找到所有項目之後，即可直接跳至正確的頁面和資料列以擷取資料。  
@@ -371,7 +371,7 @@ ON Purchasing.PurchaseOrderDetail
   
      如果只有很少量的不同值 (例如只有 1 和 0)，則大多數的查詢都不會使用索引，因為資料表掃描通常會更有效率。 如果是這種資料類型，請考慮針對只發生於少量資料列的相異值建立篩選的索引。 例如，如果大多數的值為 0，則查詢最佳化工具可能會將篩選的索引用於包含 1 的資料列。  
   
-####  <a name="Included_Columns"></a> 使用內含資料行擴充非叢集索引  
+####  <a name="use-included-columns-to-extend-nonclustered-indexes"></a><a name="Included_Columns"></a> 使用內含資料行擴充非叢集索引  
  您可以加入非索引鍵資料行至非叢集索引的分葉層級，以擴充非叢集索引的功能。 藉由加入非索引鍵資料行，您可以建立涵蓋更多查詢的非叢集索引。 這是因為非索引鍵之索引資料行有下列好處：  
   
 -   與索引鍵資料行一樣，它們可以是不允許的資料類型。  
@@ -471,7 +471,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  您必須決定，提高查詢效能，與修改資料時對效能的影響和需要額外磁碟空間，兩者熟輕熟重。  
   
-##  <a name="Unique"></a> 唯一索引設計指導方針  
+##  <a name="unique-index-design-guidelines"></a><a name="Unique"></a> 唯一索引設計指導方針  
  唯一索引可保證索引鍵不包含重複值，因此資料表中的每一個資料列在某方面來說是唯一的。 只有當資料具有唯一的特性時，指定唯一索引才有意義。 例如，若要確定 `NationalIDNumber` 資料表中 `HumanResources.Employee` 資料行的值是唯一的，則當主索引鍵是 `EmployeeID`時，請在 `NationalIDNumber` 資料行上建立 UNIQUE 條件約束。 如果使用者試著在該資料行上為不止一位員工輸入相同值，便會顯示錯誤訊息，而且無法輸入重複值。  
   
  利用多重資料行唯一索引，此索引可保證索引鍵的每一個值組合都是唯一的。 例如，若在 `LastName`、 `FirstName`和 `MiddleName` 資料行的組合上建立唯一索引，則該資料表中不得有兩個資料列具有這些資料行的相同值組合。  
@@ -495,7 +495,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 -   唯一非叢集索引可有內含的非索引鍵之索引資料行。 如需詳細資訊，請參閱 [內含資料行的索引](#Included_Columns)。  
   
   
-##  <a name="Filtered"></a> 篩選索引設計指導方針  
+##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> 篩選索引設計指導方針  
  篩選索引是最佳化的非叢集索引，特別適合用來處理會從定義完善之資料子集進行選取的查詢。 篩選索引會使用篩選述詞對資料表中的部分資料列進行索引。 與完整資料表索引相較，設計良好的篩選索引可以提升查詢效能、降低索引維護成本，並降低索引儲存成本。  
   
 **適用於**： [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  
@@ -635,7 +635,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  將資料轉換從比較運算子的左側移至右側可能會變更轉換的意義。 在上述範例中，當 CONVERT 運算子新增至右側時，比較作業會從整數比較變更為 **varbinary** 比較。  
   
-## <a name="columnstore_index"></a> 資料行存放區索引設計指導
+## <a name="columnstore-index-design-guidelines"></a><a name="columnstore_index"></a> 資料行存放區索引設計指導
 
 *columnstore index* 是使用單欄式資料格式 (稱為「資料行存放區」) 來儲存、擷取及管理資料的一項技術。 如需詳細資訊，請參閱[資料行存放區索引概觀](../relational-databases/indexes/columnstore-indexes-overview.md)。 
 
@@ -725,7 +725,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
  
 如需詳細資訊，請參閱[資料行存放區索引 - 設計指導](../relational-databases/indexes/columnstore-indexes-design-guidance.md)。
 
-##  <a name="hash_index"></a> 雜湊索引設計指導 
+##  <a name="hash-index-design-guidelines"></a><a name="hash_index"></a> 雜湊索引設計指導 
 
 所有記憶體最佳化資料表都必須至少有一個索引，因為它是將資料列連線在一起的索引。 在記憶體最佳化資料表上，每個索引也會進行記憶體最佳化。 雜湊索引是記憶體最佳化資料表中可能有的索引類型之一。 如需詳細資訊，請參閱[記憶體最佳化資料表的索引](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)。
 
@@ -759,7 +759,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
 ![hekaton_tables_23d](../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "輸入至雜湊函式的索引鍵，輸出是指向鏈結前端的雜湊值區位址。")  
 
-### <a name="configuring_bucket_count"></a> 設定雜湊索引值區計數
+### <a name="configuring-the-hash-index-bucket-count"></a><a name="configuring_bucket_count"></a> 設定雜湊索引值區計數
 雜湊索引值區計數是在索引建立時間指定，並可使用 `ALTER TABLE...ALTER INDEX REBUILD` 語法來變更。  
   
 在大部分情況下，值區計數理想情況會介於索引鍵中相異值數目的 1 到 2 倍之間。   
@@ -794,7 +794,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 如果使用雜湊索引，且唯一索引鍵的數目是資料列計數的 100 倍 (含) 以上，請考慮加大值區計數，以避免資料列鏈結過長，或者改用[非叢集索引](#inmem_nonclustered_index)。
 
-### <a name="h3-b2-declaration-limitations"></a> 宣告考量  
+### <a name="declaration-considerations"></a><a name="h3-b2-declaration-limitations"></a> 宣告考量  
 雜湊索引只能存在於記憶體最佳化資料表上。 它無法存在於以磁碟為基礎的資料表上。  
   
 雜湊索引可以宣告為︰  
@@ -817,7 +817,7 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
   
 不再需要較舊的版本之後，記憶體回收 (GC) 執行緒會周遊值區及其連結清單來清除舊項目。 如果連結清單鏈結長度很短，GC 執行緒的執行效能更好。 如需詳細資訊，請參閱[記憶體內部 OLTP 記憶體回收](../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md)。 
 
-##  <a name="inmem_nonclustered_index"></a> 記憶體最佳化非叢集索引設計指導 
+##  <a name="memory-optimized-nonclustered-index-design-guidelines"></a><a name="inmem_nonclustered_index"></a> 記憶體最佳化非叢集索引設計指導 
 
 非叢集索引是記憶體最佳化資料表中可能有的索引類型之一。 如需詳細資訊，請參閱[記憶體最佳化資料表的索引](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)。
 
@@ -886,7 +886,7 @@ Bw 型樹狀結構中的索引頁可視需要從儲存單一資料列成長，�
 > [!TIP]
 > 當非叢集索引索引鍵資料行中的某個資料行有許多重複的值時，效能會因為更新、插入及刪除而降低。 在此情況下，改善效能的其中一種方法就是在非叢集索引中加入其他資料行。
 
-##  <a name="Additional_Reading"></a> 其他閱讀資料  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 其他閱讀資料  
 [CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
 [ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
 [CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  

@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6a1f903d0be82d6f5057af68dce80bda1e48238a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e67e7f0d764a35dab94e26a70b7af39dfd23dae2
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 03/30/2020
-ms.locfileid: "78225923"
+ms.locfileid: "80402632"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps 工具 (預覽)
 
@@ -22,11 +22,23 @@ ms.locfileid: "78225923"
 
 如果您沒有 **Azure DevOps** 組織，請先註冊 [Azure Pipelines ](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops)，然後按照[步驟](https://docs.microsoft.com/azure/devops/marketplace/overview?view=azure-devops&tabs=browser#add-an-extension)新增 **SSIS DevOps 工具**延伸模組。
 
-**SSIS DevOps 工具**包括 **SSIS 建置**工作，以及 **SSIS 部署**發行工作。
+**SSIS DevOps 工具**包括 **SSIS 建置**工作、**SSIS 部署**發行工作，以及 **SSIS 目錄組態工作**。
 
-- **SSIS 建置**工作支援在專案部署模型或套件部署模型中建置 dtproj 檔案。
+- **[SSIS 建置](#ssis-build-task)** 工作支援在專案部署模型或套件部署模型中建置 dtproj 檔案。
 
-- **SSIS 部署**工作支援將單一或多個 ispac 檔案部署到內部部署 SSIS 目錄和 Azure-SSIS IR，或將 SSISDeploymentManifest 檔案及其相關聯的檔案部署到內部部署或 Azure 檔案共用。
+- **[SSIS 部署](#ssis-deploy-task)** 工作支援將單一或多個 ispac 檔案部署到內部部署 SSIS 目錄和 Azure-SSIS IR，或將 SSISDeploymentManifest 檔案及其相關聯的檔案部署到內部部署或 Azure 檔案共用。
+
+- **[SSIS 目錄組態](#ssis-catalog-configuration-task)** 工作支援使用 JSON 格式的組態檔來設定 SSIS 目錄資料夾/專案/環境。 這項工作支援下列情節：
+    - 資料夾
+        - 建立資料夾。
+        - 更新資料夾描述。
+    - 隨附此逐步解說的專案
+        - 設定參數的值，支援 literal 值和 referenced 值。
+        - 新增環境參考。
+    - 環境
+        - 建立環境。
+        - 更新環境描述。
+        - 建立或更新環境變數。
 
 ## <a name="ssis-build-task"></a>SSIS 建置工作
 
@@ -64,8 +76,6 @@ cat log.txt
 
 - 在 SSIS 建置工作中不支援 **EncryptSensitiveWithPassword** 和 **EncryptAllWithPassword** 的保護層級。 確定程式碼基底中的所有 SSIS 專案都不是使用這兩個保護層級，否則 SSIS 建置工作會在執行期間停止回應並逾時。
 
-- **ConnectByProxy** 是最近在 SSDT 中新增的屬性。 Microsoft 裝載的代理程式上安裝的 SSDT 未更新，因此請使用自我裝載的代理程式作為因應措施。
-
 ## <a name="ssis-deploy-task"></a>SSIS 部署工作
 
 ![部署工作](media/ssis-deploy-task.png)
@@ -98,7 +108,7 @@ SSIS 部署工作將會建立資料夾與子資料夾 (如果不存在)。
 
 #### <a name="authentication-type"></a>驗證類型
 
-用來存取指定目的地伺服器的驗證類型。 只有當目的地類型為 SSISDB 時，才會顯示此屬性。 一般 SSIS 部署工作支援四種類型：
+用來存取指定目的地伺服器的驗證類型。 只有當目的地類型為 SSISDB 時，才會顯示此屬性。 一般支援下列驗證類型：
 
 - Windows 驗證
 - SQL Server 驗證
@@ -143,7 +153,203 @@ SSIS 部署工作目前不支援下列情節：
 - 將 ispac 部署至 Azure SQL Server 或 Azure SQL 受控執行個體，這只允許多重要素驗證 (MFA)。
 - 將套件部署到 MSDB 或 SSIS 封裝存放區。
 
+## <a name="ssis-catalog-configuration-task"></a>SSIS 目錄組態工作
+
+![目錄組態工作](media/ssis-catalog-configuation-task.png)
+
+### <a name="properties"></a>屬性
+
+#### <a name="configuration-file-source"></a>組態檔來源
+
+SSIS 目錄組態 JSON 檔案的來源。 可以是「檔案路徑」或「內嵌」。
+
+請參閱以下有關如何[定義組態 JSON](#define-configuration-json) 的詳細資料：
+
+- 參閱[範例內嵌組態 JSON](#a-sample-inline-configuration-json)。
+- 查看 [JSON 結構描述](#json-schema)。
+
+#### <a name="configuration-json-file-path"></a>組態 JSON 檔案路徑
+
+SSIS 目錄組態 JSON 檔案的路徑。 只有當選取 [檔案路徑] 作為組態檔來源時，才會顯示此屬性。
+
+若要在組態 JSON 檔案中使用[管線變數](https://docs.microsoft.comazure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch)，則必須在這項工作之前新增[檔案轉換工作](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops)，以將組態值替代為管線變數。 如需詳細資訊，請參閱 [JSON 變數替代](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution) (英文)。
+
+#### <a name="inline-configuration-json"></a>內嵌組態 JSON
+
+SSIS 目錄組態的內嵌 JSON。 只有當選取 [內嵌] 作為組態檔來源時，才會顯示此屬性。 可直接使用管線變數。
+
+#### <a name="roll-back-configuration-when-error-occurs"></a>發生錯誤時復原組態
+
+發生錯誤時是否復原這項工作所做的組態。
+
+#### <a name="target-server"></a>目標伺服器
+
+目標 SQL Server 的名稱。 它可以是內部部署 SQL Server、Azure SQL Database 或 Azure SQL Database 受控執行個體的名稱。
+
+#### <a name="authentication-type"></a>驗證類型
+
+用來存取指定目標伺服器的驗證類型。 一般支援下列驗證類型：
+
+- Windows 驗證
+- SQL Server 驗證
+- Active Directory - 密碼
+- Active Directory - 整合式
+
+但是，是否支援特定驗證類型取決於目的地伺服器類型和代理程式類型。 詳細資料支援矩陣會列在下表中。
+
+| |Microsoft 裝載的代理程式|自我裝載的代理程式|
+|---------|---------|---------|
+|SQL Server 內部部署或 VM |N/A|Windows 驗證|
+|Azure SQL|SQL Server 驗證 <br> Active Directory - 密碼|SQL Server 驗證 <br> Active Directory - 密碼 <br> Active Directory - 整合式|
+
+#### <a name="username"></a>使用者名稱
+
+用來存取目標 SQL Server 的使用者名稱。 只有當驗證類型為 [SQL Server 驗證] 或 [Active Directory - 密碼] 時，才會顯示此屬性。
+
+#### <a name="password"></a>密碼
+
+用來存取目標 SQL Server 的密碼。 只有當驗證類型為 [SQL Server 驗證] 或 [Active Directory - 密碼] 時，才會顯示此屬性。
+
+### <a name="define-configuration-json"></a>定義組態 JSON
+
+組態 JSON 結構描述有三個層級：
+
+- catalog
+- folder
+- 專案和環境
+
+![目錄組態結構描述](media/catalog-configuration-schema.png)
+
+#### <a name="a-sample-inline-configuration-json"></a>範例內嵌組態 JSON
+
+```json
+{
+  "folders": [
+    {
+      "name": "devopsdemo",
+      "description": "devops demo folder",
+      "projects": [
+        {
+          "name": "catalog devops",
+          "parameters": [
+            {
+              "name": "password",
+              "container": "Package.dtsx",
+              "value": "passwd",
+              "valueType": "referenced"
+            },
+            {
+              "name": "serverName",
+              "container": "catalog devops",
+              "value": "localhost",
+              "valueType": "literal"
+            }
+          ],
+          "references": [
+            {
+              "environmentName": "test",
+              "environmentFolder": "devopsdemo"
+            },
+            {
+              "environmentName": "test",
+              "environmentFolder": "."
+            }
+          ]
+        }
+      ],
+      "environments": [
+        {
+          "name": "test",
+          "description": "test",
+          "variables": [
+            {
+              "name": "passwd",
+              "type": "string",
+              "description": "",
+              "value": "$(SSISDBServerAdminPassword)",
+              "sensitive": true
+            },
+            {
+              "name": "serverName",
+              "type": "string",
+              "description": "",
+              "value": "$(TargetServerName)",
+              "sensitive": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+#### <a name="json-schema"></a>JSON 結構描述
+
+##### <a name="catalog-attributes"></a>目錄屬性
+
+|屬性  |描述  |注意  |
+|---------|---------|---------|
+|資料夾  |資料夾物件的陣列。 每個物件都包含目錄資料夾的組態資訊。|如需資料夾物件的結構描述，請參閱＜資料夾屬性＞  。|
+
+##### <a name="folder-attributes"></a>資料夾屬性
+
+|屬性  |描述  |注意  |
+|---------|---------|---------|
+|NAME  |目錄資料夾的名稱。|如果資料夾不存在，則會加以建立。|
+|description|目錄資料夾的描述。|將略過 *null* 值。|
+|projects|專案物件的陣列。 每個物件都包含專案的組態資訊。|如需專案物件的結構描述，請參閱＜專案屬性＞  。|
+|environments|環境物件的陣列。 每個物件都包含環境的組態資訊。|如需環境物件的結構描述，請參閱＜環境屬性＞  。|
+
+##### <a name="project-attributes"></a>專案屬性
+
+|屬性  |描述  |注意  |
+|---------|---------|---------|
+|NAME|專案的名稱。 |如果父資料表中不存在專案，則會略過專案物件。|
+|參數|參數物件的陣列。 每個物件都包含參數的組態資訊。|如需參數物件的結構描述，請參閱＜參數屬性＞  。|
+|參考|參考物件的陣列。 每個物件都代表目標專案的一個環境參考。|如需參考物件的結構描述，請參閱＜參考屬性＞  。|
+
+##### <a name="parameter-attributes"></a>參數屬性
+
+|屬性  |描述  |注意  |
+|---------|---------|---------|
+|NAME|參數的名稱。|參數可以是「專案參數」  或「套件參數」  。 <br> 如果父資料表中不存在參數，則會略過參數。|
+|容器|參數的容器。|<li>如果參數是專案參數，則 *container* 應該是專案名稱。 <li>如果是套件參數，則 *container* 應該是副檔名為 **.dtsx** 的套件名稱。 <li> 如果參數是連線管理員屬性，則名稱的格式應該如下：**CM.\<連線管理員名稱>.\<屬性名稱>** 。|
+|value|參數的值。|<li>當 *valueType* 是 *referenced* 時：此值是 *string* 類型的環境變數參考。 <li> 當 *valueType* 是 *literal* 時：此屬性支援任何有效的 *boolean*、*number* 和 *string* JSON 值。 <br> 系統會將此值轉換成目標參數類型。 如果無法轉換，則會發生錯誤。<li> *null* 值無效。 該工作將略過此參數物件，並發出警告。|
+|valueType|參數值類型。|有效類型包括： <br> *literal*：*value* 屬性代表常值。 <br> *referenced*：*value* 屬性代表環境變數參考。|
+
+##### <a name="reference-attributes"></a>參考屬性
+
+|屬性  |描述  |注意  |
+|---------|---------|---------|
+|environmentFolder|環境的資料夾名稱。|如果資料夾不存在，則會加以建立。 <br> 值可以是 "."，其代表參考環境的專案父資料夾。|
+|environmentName|參考環境的名稱。|如果指定的環境不存在，則會加以建立。|
+
+##### <a name="environment-attributes"></a>環境屬性
+
+|屬性  |描述  |注意  |
+|---------|---------|---------|
+|NAME|環境的名稱。|如果環境不存在，則會加以建立。|
+|description|環境的描述。|將略過 *null* 值。|
+|variables|變數物件的陣列。|每個物件都包含環境變數的組態資訊。如需變數物件的結構描述，請參閱＜變數屬性＞  。|
+
+##### <a name="variable-attributes"></a>變數屬性
+
+|屬性  |描述  |注意  |
+|---------|---------|---------|
+|NAME|環境變數的名稱。|如果環境變數不存在，則會加以建立。|
+|type|環境變數的資料類型。|有效類型包括： <br> *boolean* <br> *byte* <br> *datetime* <br> decimal <br> *double* <br> *int16* <br> *int32* <br> *int64* <br> *sbyte* <br> *single* <br> *string* <br> *uint32* <br> *uint64*|
+|description|環境變數的描述。|將略過 *null* 值。|
+|value|環境變數的值。|此屬性支援任何有效的 boolean、number 和 string JSON 值。<br> 系統會將此值轉換成 **type** 屬性指定的類型。 如果轉換失敗，則會發生錯誤。<br>*null* 值無效。 該工作將略過此環境變數物件，並發出警告。|
+|sensitive|環境變數的值是否具敏感性。|有效輸入包括： <br> *true* <br> *false*|
+
 ## <a name="release-notes"></a>版本資訊
+
+### <a name="version-020-preview"></a>0\.2.0 版預覽
+
+發行日期：2020 年 3 月 31 日
+
+- 新增 SSIS 目錄組態工作。
 
 ### <a name="version-013-preview"></a>0\.1.3 版預覽
 

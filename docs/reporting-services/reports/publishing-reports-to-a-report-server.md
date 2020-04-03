@@ -1,5 +1,6 @@
 ---
 title: 將報表發行至報表伺服器 | Microsoft Docs
+description: 了解如何使用 SQL Server Data Tools (SSDT) 中的部署功能，將報表發佈至報表伺服器。
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2a2628bc5d098c32fc63d4a80bcf4c7b403a82a0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c4891d308c81a82ecb3f371cca8812111467bc37
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "72359410"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510089"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>將報表發行至報表伺服器
   在您設計和測試完報表或報表集之後，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的部署功能，將報表發行至報表伺服器。 您可以發行個別報表，或可包含多個報表和資料來源的報表伺服器專案。 發行報表伺服器專案是發行多份報表最簡單的方式。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用「部署」  一詞，而不是「發行」  一詞。 這兩個詞可以互換。  
@@ -39,7 +40,7 @@ ms.locfileid: "72359410"
 ## <a name="project-configurations"></a>專案組態  
  您的報表環境可能已安裝多部報表伺服器以及不同版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 您可以建立多個組態，然後根據部署狀況，使用不同的組態。 專案組態包括建立報表的屬性，例如，暫時儲存已建立之報表的資料夾，以及如何處理建立問題。 組態也包含您用來指定報表伺服器之位置與版本、報表伺服器上之資料夾的屬性。  
   
- 根據預設， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供三種專案組態： **DebugLocal**、 **Debug**與 **Release**。 預設組態為 DebugLocal。 您通常可以使用 DebugLocal 組態在本機預覽視窗中檢視報表、使用 Debug 組態將報表發行至測試伺服器，以及使用 Release 組態將報表發行至實際伺服器。 在標準工具列上的方案組態下拉式清單中會顯示使用中的組態。 若要使用不同的組態，請從清單中進行選取。  
+ 根據預設，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供三種專案組態：**DebugLocal**、**Debug** 與 **Release**。 預設組態為 DebugLocal。 您通常可以使用 DebugLocal 組態在本機預覽視窗中檢視報表、使用 Debug 組態將報表發行至測試伺服器，以及使用 Release 組態將報表發行至實際伺服器。 在標準工具列上的方案組態下拉式清單中會顯示使用中的組態。 若要使用不同的組態，請從清單中進行選取。  
   
  ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png) 
   
@@ -50,7 +51,7 @@ ms.locfileid: "72359410"
   
 ## <a name="to-publish-all-reports-in-a-project"></a>若要發行專案中的所有報表  
   
-在 [組建]  功能表上，按一下 [部署 **報表專案名稱>]\<** 。 或者，在方案總管中，以滑鼠右鍵按一下報表專案，然後按一下 [部署]  。 您可以在 [輸出] 視窗中，檢視發行程序的狀態。  
+在 [組建]  功能表上，按一下 [部署 \<報表專案名稱>]  。 或者，在方案總管中，以滑鼠右鍵按一下報表專案，然後按一下 [部署]  。 您可以在 [輸出] 視窗中，檢視發行程序的狀態。  
   
 當您部署報表伺服器專案時，也會部署報表專案中的共用資料來源。 所有報表都可以使用相同的報表組態，部署至相同的報表伺服器、伺服器上相同的資料夾等等。 若要將報表發行至不同的伺服器，請逐個報表發行，或僅包含報表伺服器專案中您要發行的報表。 一個方案可以包含多個報表伺服器專案，而且，使用多個專案可能會讓報表部署的管理更為容易，因為您可以使用不同的組態部署不同的專案。 
   

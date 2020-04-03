@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 5f1a134e6792eedca184c74b7973d4cb267b104b
-ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
+ms.openlocfilehash: 0309fab947502e6aece3cd369392a7f5e2d1aa29
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074456"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215958"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -48,41 +48,49 @@ ms.locfileid: "77074456"
 OPENROWSET
 ( { 'provider_name' , { 'datasource' ; 'user_id' ; 'password'
    | 'provider_string' }
-   , {   [ catalog. ] [ schema. ] object
-       | 'query'
-     }
+   , {   <table_or_view> | 'query' }
    | BULK 'data_file' ,
        { FORMATFILE = 'format_file_path' [ <bulk_options> ]
        | SINGLE_BLOB | SINGLE_CLOB | SINGLE_NCLOB }
 } )
 
+<table_or_view> ::= [ catalog. ] [ schema. ] object
+
 <bulk_options> ::=
-   [ , CODEPAGE = { 'ACP' | 'OEM' | 'RAW' | 'code_page' } ]
+
    [ , DATASOURCE = 'data_source_name' ]
+
    [ , ERRORFILE = 'file_name' ]
    [ , ERRORFILE_DATASOURCE = 'data_source_name' ]
+   [ , MAXERRORS = maximum_errors ]
+
    [ , FIRSTROW = first_row ]
    [ , LASTROW = last_row ]
-   [ , MAXERRORS = maximum_errors ]
    [ , ROWS_PER_BATCH = rows_per_batch ]
    [ , ORDER ( { column [ ASC | DESC ] } [ ,...n ] ) [ UNIQUE ] ]
   
    -- bulk_options related to input file format
+   [ , CODEPAGE = { 'ACP' | 'OEM' | 'RAW' | 'code_page' } ]
    [ , FORMAT = 'CSV' ]
    [ , FIELDQUOTE = 'quote_characters']
    [ , FORMATFILE = 'format_file_path' ]
+   [ , FORMATFILE_DATASOURCE = 'data_source_name' ]
 ```
 
 ## <a name="arguments"></a>引數
 
 ### <a name="provider_name"></a>'*provider_name*'
-這是一個字元字串，代表在登錄中指定之 OLE DB 提供者的易記名稱 (或 PROGID)。 *provider_name* 沒有預設值。
+這是一個字元字串，代表在登錄中指定之 OLE DB 提供者的易記名稱 (或 PROGID)。 *provider_name* 沒有預設值。 提供者名稱範例包括 `Microsoft.Jet.OLEDB.4.0`、`SQLNCLI` 或 `MSDASQL`。
 
-'*datasource*' 為一個對應至特定 OLE DB 資料來源的字串常數。 *datasource* 是指要傳遞到提供者的 IDBProperties 介面，將提供者初始化所用的 DBPROP_INIT_DATASOURCE 屬性。 這個字串通常都包含資料庫檔案的名稱、資料庫伺服器的名稱，或是提供者尋找資料庫所用的名稱。
+### <a name="datasource"></a>'*datasource*'
+這是一個對應至特定 OLE DB 資料來源的字串常數。 *datasource* 是指要傳遞到提供者的 IDBProperties 介面，將提供者初始化所用的 DBPROP_INIT_DATASOURCE 屬性。 這個字串通常都包含資料庫檔案的名稱、資料庫伺服器的名稱，或是提供者尋找資料庫所用的名稱。
+資料來源可以是 `Microsoft.Jet.OLEDB.4.0` 提供者的檔案路徑 `C:\SAMPLES\Northwind.mdb'`，或 `SQLNCLI` 提供者的連接字串 `Server=Seattle1;Trusted_Connection=yes;`。
 
-'*user_id*' 為一個字串常數，代表傳遞到所指定 OLE DB 提供者的使用者名稱。 *user_id* 會指定連線的安全性內容，而且會當做 DBPROP_AUTH_USERID 屬性傳入來初始化提供者。 *user_id* 不可以是 Microsoft Windows 登入名稱。
+### <a name="user_id"></a>'*user_id*'
+這是一個字串常數，代表傳遞到指定之 OLE DB 提供者的使用者名稱。 *user_id* 會指定連線的安全性內容，而且會當做 DBPROP_AUTH_USERID 屬性傳入來初始化提供者。 *user_id* 不可以是 Microsoft Windows 登入名稱。
 
-'*password*' 為一個字串常數，代表傳遞到 OLE DB 提供者的使用者密碼。 *password* 在將提供者初始化時，會當做 DBPROP_AUTH_PASSWORD 屬性來傳入。 *password* 不可以是 Microsoft Windows 密碼。
+### <a name="password"></a>'*password*'
+這是一個字串常數，代表傳遞到 OLE DB 提供者的使用者密碼。 *password* 在將提供者初始化時，會當做 DBPROP_AUTH_PASSWORD 屬性來傳入。 *password* 不可以是 Microsoft Windows 密碼。
 
 ```sql
 SELECT a.*
@@ -93,21 +101,29 @@ SELECT a.*
                    Customers) AS a;
 ```
 
-'*provider_string*' 為一個提供者特定的連接字串，會當作 DBPROP_INIT_PROVIDERSTRING 屬性傳入來初始化 OLE DB 提供者。 *provider_string* 通常會封裝將提供者初始化所需的所有連線資訊。 如需由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者辨識的關鍵字清單，請參閱[初始化和授權屬性](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)。
-
-*catalog* 這是所指定物件所在的目錄或資料庫名稱。
-
-*schema* 這是所指定物件的結構描述或物件擁有者名稱。
-
-*object* 這是唯一識別所處理物件的物件名稱。
+### <a name="provider_string"></a>'*provider_string*'
+這是一個提供者特定的連接字串，會當做 DBPROP_INIT_PROVIDERSTRING 屬性傳入來初始化 OLE DB 提供者。 *provider_string* 通常會封裝將提供者初始化所需的所有連線資訊。 如需由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者辨識的關鍵字清單，請參閱[初始化和授權屬性](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)。
 
 ```sql
-SELECT a.*
+SELECT d.*
 FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
-                 AdventureWorks2012.HumanResources.Department) AS a;
+                            Department) AS d;
 ```
 
-'*query*' 這是傳給提供者且由提供者執行的字串常數。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本機執行個體不會處理這項查詢，但會處理提供者傳回的查詢結果，亦即通過查詢。 如果提供者不是透過資料表名稱，而只透過命令語言使用其資料表資料，通過查詢將會很實用。 只要查詢提供者支援 OLE DB Command 物件與其必要介面，遠端伺服器就支援通過查詢。 如需詳細資訊，請參閱 [SQL Server Native Client &#40;OLE DB&#41; 參考](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)。
+### <a name="table_or_view"></a><table_or_view>
+遠端資料表或檢視表，其中包含 `OPENROWSET` 應該讀取的資料。 可以是具有下列元件的三部分名稱物件：
+- *catalog* (選擇性) - 這是所指定物件所在的目錄或資料庫名稱。
+- *schema* (選擇性) - 這是所指定物件的結構描述或物件擁有者名稱。
+- *object* - 這是唯一識別所處理物件的物件名稱。
+
+```sql
+SELECT d.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+                 AdventureWorks2012.HumanResources.Department) AS d;
+```
+
+### <a name="query"></a>'*query*'
+這是傳給提供者，並且由提供者執行的字串常數。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本機執行個體不會處理這項查詢，但會處理提供者傳回的查詢結果，亦即通過查詢。 如果提供者不是透過資料表名稱，而只透過命令語言使用其資料表資料，通過查詢將會很實用。 只要查詢提供者支援 OLE DB Command 物件與其必要介面，遠端伺服器就支援通過查詢。 如需詳細資訊，請參閱 [SQL Server Native Client &#40;OLE DB&#41; 參考](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)。
 
 ```sql
 SELECT a.*
@@ -131,19 +147,96 @@ BULK 選項的引數可讓您全力控制在哪裡開始和結束資料讀取、
 
 如需準備資料進行大量匯入的資訊，請參閱[準備大量匯出或匯入的資料 &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md) 方面的知識。
 
-'*data_file*' 這是要將資料複製到目標資料表的資料檔完整路徑。
+#### <a name="bulk-data_file"></a>BULK '*data_file*'
+這是要將資料複製到目標資料表之資料檔的完整路徑。
+
+```sql
+SELECT * FROM OPENROWSET(
+   BULK 'C:\DATA\inv-2017-01-19.csv',
+   SINGLE_CLOB) AS DATA;
+```
+
 **適用範圍：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，data_file 就可以保留在 Azure Blob 儲存體中。 例如，請參閱[大量存取 Azure Blob 儲存體資料的範例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。
 
 > [!IMPORTANT]
 > Azure SQL Database 只支援從 Azure Blob 儲存體讀取。
 
-\<bulk_options> 會針對 BULK 選項指定一或多個引數。
+#### <a name="bulk-error-handling-options"></a>BULK 錯誤處理選項
 
-CODEPAGE = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' } 指定資料檔中資料的字碼頁。 只有當資料包含字元值大於 127 或小於 32 的 **char** **varchar**或 **text** 資料行時，CODEPAGE 才會相關。
+##### <a name="errorfile"></a>ERRORFILE
+`ERRORFILE` ='*file_name*' 指定用於收集資料列的檔案，其中資料列的格式錯誤且無法轉換成 OLE DB 資料列集。 這些資料列會「依照原狀」，從資料檔複製到這個錯誤檔中。
+
+錯誤檔是在開始執行命令時建立。 如果檔案已經存在，就會引發錯誤。 另外，還會建立一個副檔名為 .ERROR.txt 的控制檔。 這個檔案會參考錯誤檔中的每個資料列，且會提供錯誤診斷。 錯誤更正之後，就能夠載入資料。
+**適用範圍：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
+從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 開始，`error_file_path` 可以位於 Azure Blob 儲存體中。
+
+##### <a name="errorfile_data_source_name"></a>ERRORFILE_DATA_SOURCE_NAME
+**適用範圍：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
+這是具名的外部資料來源，指向錯誤檔案的 Azure Blob 儲存體位置，該檔案將包含在匯入期間發現的錯誤。 必須使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中新增的 `TYPE = BLOB_STORAGE` 選項來建立外部資料來源。 如需詳細資訊，請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
+
+##### <a name="maxerrors"></a>MAXERRORS
+`MAXERRORS` =*maximum_errors* 指定最多出現幾個語法錯誤或不符合的資料列 (如格式檔案所定義) 之後，OPENROWSET 便會擲出例外狀況。 只要尚未到達 MAXERRORS，OPENROWSET 會忽略所有不正確的資料列，也不載入它，並將這個不正確的資料列計為一個錯誤。
+
+*maximum_errors* 的預設值為 10。
+
+> [!NOTE]
+> `MAX_ERRORS` 不適用於 CHECK 限制式，也不能轉換 **money** 和 **bigint** 資料類型。
+
+#### <a name="bulk-data-processing-options"></a>BULK 資料處理選項
+
+##### <a name="firstrow"></a>FIRSTROW
+`FIRSTROW` =*first_row* 指定所要載入第一個資料列的號碼。 預設值是 1。 這表示指定之資料檔中的第一個資料列。 資料列號碼是由計算資料列結束字元所決定。 FIRSTROW 是以 1 為基底。
+
+##### <a name="lastrow"></a>LASTROW
+`LASTROW` =*last_row* 指定所要載入最後一個資料列的號碼。 預設值是 0。 這表示指定的資料檔中的最後一個資料列。
+
+##### <a name="rows_per_batch"></a>ROWS_PER_BATCH
+`ROWS_PER_BATCH` =*rows_per_batch* 指定資料檔案中大約有多少資料列。 這個值應該與實際的資料列數差不多。
+
+`OPENROWSET` 一律將資料檔案當作單一批次加以匯入。 不過，如果您為 *rows_per_batch* 指定 > 0 的值，查詢處理器會使用 *rows_per_batch* 的值當作提示，在查詢計劃中配置資源。
+
+根據預設，ROWS_PER_BATCH 是未知的。 指定 ROWS_PER_BATCH = 0 相當於省略 ROWS_PER_BATCH。
+
+##### <a name="order"></a>ORDER
+`ORDER` ( { *column* [ ASC | DESC ] } [ ,... *n* ] [ UNIQUE ] ) 選擇性提示，指定如何排序資料檔案中的資料。 依預設，大量作業會假設資料檔沒有排序。 如果查詢最佳化工具可以利用指定的順序來產生更有效率的查詢計畫，效能就可能會提升。 指定排序可能很有用處的範例包括以下情況：
+
+- 將資料列插入具有叢集索引的資料表中，其中的資料列集資料會根據叢集索引鍵來排序。
+- 將資料列集與另一個資料表聯結，其中的排序資料行和聯結資料行會相符。
+- 依據排序資料行彙總資料列集資料。
+- 在查詢的 FROM 子句中使用資料列集當做來源資料表，其中的排序資料行和聯結資料行會相符。
+
+##### <a name="unique"></a>UNIQUE
+`UNIQUE` 指定沒有重複項目的資料檔案。
+
+如果資料檔中的實際資料列並未根據指定的順序來排序，或是指定了 UNIQUE 提示而且有重複的索引鍵存在，則會傳回錯誤。
+
+當使用 ORDER 時，需要資料行別名。 資料行別名清單必須參考由 BULK 子句所存取的衍生資料表。 ORDER 子句中所指定的資料行名稱會參考這個資料行別名清單。 無法指定大數值類型 (**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 與 **xml**) 和大型物件 (LOB) 類型 (**text**、**ntext** 和 **image**) 資料行。
+
+##### <a name="single_blob"></a>SINGLE_BLOB
+將 *data_file* 的內容當作 **varbinary(max)** 類型的單一資料列、單一資料行資料列集加以傳回。
 
 > [!IMPORTANT]
-> 在 Linux 上，CODEPAGE 不是支援的選項。
+> 建議您只使用 SINGLE_BLOB 選項匯入 XML 資料，而不要使用 SINGLE_CLOB 和 SINGLE_NCLOB，因為只有 SINGLE_BLOB 支援所有的 Windows 編碼轉換。
+
+##### <a name="single_clob"></a>SINGLE_CLOB
+以 ASCII 格式讀取 *data_file*，並且使用目前資料庫的定序，將內容當做 **varchar(max)** 類型的單一資料列、單一資料行資料列集加以傳回。
+
+##### <a name="single_nclob"></a>SINGLE_NCLOB
+以 UNICODE 格式讀取 *data_file*，並且使用目前資料庫的定序，將內容當做 **varchar(max)** 類型的單一資料列、單一資料行資料列集加以傳回。
+
+```sql
+SELECT *
+   FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_NCLOB) AS Document;
+```
+
+#### <a name="bulk-input-file-format-options"></a>BULK 輸入檔格式選項
+
+##### <a name="codepage"></a>CODEPAGE
+`CODEPAGE` = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' } 指定資料檔案中資料的字碼頁。 只有當資料包含字元值大於 127 或小於 32 的 **char** **varchar**或 **text** 資料行時，CODEPAGE 才會相關。
+
+> [!IMPORTANT]
+> 在 Linux 上，`CODEPAGE` 不是支援的選項。
 
 > [!NOTE]
 > 除非您希望 65001 選項的優先順序高於定序/字碼頁指定值，否則建議您在格式檔案中指定每個資料行的定序名稱。
@@ -155,64 +248,8 @@ CODEPAGE = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' } 指定資料檔中資料的字
 |RAW|不進行字碼頁之間的轉換。 這是最快的選項。|
 |*code_page*|指出在哪一個來源字碼頁，將資料檔中的字元資料加以編碼；例如 850。<br /><br /> **重要**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前的版本不支援字碼頁 65001 (UTF-8 編碼)。|
 
-ERRORFILE ='*file_name*' 指定用來收集格式錯誤且無法轉換成 OLE DB 資料列集之資料列的檔案。 這些資料列會「依照原狀」，從資料檔複製到這個錯誤檔中。
-
-錯誤檔是在開始執行命令時建立。 如果檔案已經存在，就會引發錯誤。 另外，還會建立一個副檔名為 .ERROR.txt 的控制檔。 這個檔案會參考錯誤檔中的每個資料列，且會提供錯誤診斷。 錯誤更正之後，就能夠載入資料。
-**適用範圍：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
-從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 開始，`error_file_path` 可以位於 Azure Blob 儲存體中。
-
-'errorfile_data_source_name' **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
-這是具名的外部資料來源，指向錯誤檔案的 Azure Blob 儲存體位置，該檔案將包含在匯入期間發現的錯誤。 必須使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中新增的 `TYPE = BLOB_STORAGE` 選項來建立外部資料來源。 如需詳細資訊，請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
-
-FIRSTROW =*first_row* 指定所要載入第一個資料列的號碼。 預設值是 1。 這表示指定之資料檔中的第一個資料列。 資料列號碼是由計算資料列結束字元所決定。 FIRSTROW 是以 1 為基底。
-
-LASTROW =*last_row* 指定所要載入最後一個資料列的號碼。 預設值是 0。 這表示指定的資料檔中的最後一個資料列。
-
-MAXERRORS =*maximum_errors* 指定最多出現幾個語法錯誤或不符合的資料列 (如格式檔所定義) 之後，OPENROWSET 便會擲出例外狀況。 只要尚未到達 MAXERRORS，OPENROWSET 會忽略所有不正確的資料列，也不載入它，並將這個不正確的資料列計為一個錯誤。
-
-*maximum_errors* 的預設值為 10。
-
-> [!NOTE]
-> MAX_ERRORS 不適用於 CHECK 限制式，也不能轉換 **money** 和 **bigint** 資料類型。
-
-ROWS_PER_BATCH =*rows_per_batch* 指定資料檔案中大約有多少資料列。 這個值應該與實際的資料列數差不多。
-
-OPENROWSET 一律將資料檔當做單一批次加以匯入。 不過，如果您為 *rows_per_batch* 指定 > 0 的值，查詢處理器會使用 *rows_per_batch* 的值當作提示，在查詢計劃中配置資源。
-
-根據預設，ROWS_PER_BATCH 是未知的。 指定 ROWS_PER_BATCH = 0 相當於省略 ROWS_PER_BATCH。
-
-ORDER ( { *column* [ ASC | DESC ] } [ ,... *n* ] [ UNIQUE ] ) 選擇性提示，指定如何排序資料檔案中的資料。 依預設，大量作業會假設資料檔沒有排序。 如果查詢最佳化工具可以利用指定的順序來產生更有效率的查詢計畫，效能就可能會提升。 指定排序可能很有用處的範例包括以下情況：
-
-- 將資料列插入具有叢集索引的資料表中，其中的資料列集資料會根據叢集索引鍵來排序。
-- 將資料列集與另一個資料表聯結，其中的排序資料行和聯結資料行會相符。
-- 依據排序資料行彙總資料列集資料。
-- 在查詢的 FROM 子句中使用資料列集當做來源資料表，其中的排序資料行和聯結資料行會相符。
-
-UNIQUE 會指定沒有重複項目的資料檔。
-
-如果資料檔中的實際資料列並未根據指定的順序來排序，或是指定了 UNIQUE 提示而且有重複的索引鍵存在，則會傳回錯誤。
-
-當使用 ORDER 時，需要資料行別名。 資料行別名清單必須參考由 BULK 子句所存取的衍生資料表。 ORDER 子句中所指定的資料行名稱會參考這個資料行別名清單。 無法指定大數值類型 (**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 與 **xml**) 和大型物件 (LOB) 類型 (**text**、**ntext** 和 **image**) 資料行。
-
-SINGLE_BLOB 將 *data_file* 的內容當作 **varbinary(max)** 類型的單一資料列、單一資料行資料列集加以傳回。
-
-> [!IMPORTANT]
-> 建議您只使用 SINGLE_BLOB 選項匯入 XML 資料，而不要使用 SINGLE_CLOB 和 SINGLE_NCLOB，因為只有 SINGLE_BLOB 支援所有的 Windows 編碼轉換。
-
-SINGLE_CLOB
-
-以 ASCII 格式讀取 *data_file*，並且使用目前資料庫的定序，將內容當做 **varchar(max)** 類型的單一資料列、單一資料行資料列集加以傳回。
-
-SINGLE_NCLOB 以 UNICODE 格式讀取 *data_file*，且使用目前資料庫的定序，將內容當作 **varchar(max)** 類型的單一資料列、單一資料行資料列集加以傳回。
-
-```sql
-SELECT *
-   FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_NCLOB) AS Document;
-```
-
-### <a name="input-file-format-options"></a>輸入檔案格式選項
-
-FORMAT **=** 'CSV' **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
+##### <a name="format"></a>FORMAT
+`FORMAT` **=** 'CSV' **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 指定符合 [RFC 4180](https://tools.ietf.org/html/rfc4180) 規範的逗點分隔值檔案。
 
 ```sql
@@ -223,7 +260,8 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
     FORMAT='CSV') AS cars;
 ```
 
-FORMATFILE ='*format_file_path*' 指定格式檔案的完整路徑。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援兩種類型的格式檔案：XML 和非 XML。
+##### <a name="formatfile"></a>FORMATFILE
+`FORMATFILE` ='*format_file_path*' 指定格式檔案的完整路徑。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援兩種類型的格式檔案：XML 和非 XML。
 
 您必須使用格式檔，才能定義結果集中的資料行類型。 不過，當指定 SINGLE_CLOB、SINGLE_BLOB 或 SINGLE_NCLOB 時，就不需要格式檔，這是唯一的例外狀況。
 
@@ -232,7 +270,8 @@ FORMATFILE ='*format_file_path*' 指定格式檔案的完整路徑。 [!INCLUDE[
 **適用範圍：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，format_file_path 可位於 Azure Blob 儲存體中。 例如，請參閱[大量存取 Azure Blob 儲存體資料的範例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。
 
-FIELDQUOTE **=** 'field_quote' **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
+##### <a name="fieldquote"></a>FIELDQUOTE
+`FIELDQUOTE` **=** 'field_quote' **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 指定將用來當作 CSV 檔案中引號字元的字元。 如果未指定，則會使用引號字元 (") 當作引號字元，如 [RFC 4180](https://tools.ietf.org/html/rfc4180) 標準中所定義的。
 
 ## <a name="remarks"></a>備註
@@ -289,7 +328,7 @@ OPENROWSET(BULK...) 會假設，如果未指定，則 SQLCHAR、SQLNCHAR 或 SQL
 
 ## <a name="permissions"></a>權限
 
-`OPENROWSET` 權限是由傳遞給 OLE DB 提供者之使用者名稱的權限所決定。 若要使用 `BULK` 選項，需要 `ADMINISTER BULK OPERATIONS` 權限。
+`OPENROWSET` 權限是由傳遞給 OLE DB 提供者之使用者名稱的權限所決定。 若要使用 `BULK` 選項，需要 `ADMINISTER BULK OPERATIONS` 或 `ADMINISTER DATABASE BULK OPERATIONS` 權限。
 
 ## <a name="examples"></a>範例
 

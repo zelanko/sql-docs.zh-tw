@@ -11,12 +11,12 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f2878a93f241235bb725cd40afd169f4c7d31aa
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 52ce47c3402e75ae14fdd9c90abb83481c62e297
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75246465"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80243378"
 ---
 # <a name="add-transact-sql-snippets"></a>新增 Transact-SQL 程式碼片段
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -110,9 +110,8 @@ ms.locfileid: "75246465"
   
 4.  按一下 [匯入]  按鈕。  
   
-5.  導覽至包含 TryCatch.snippet 的資料夾，然後按一下 TryCatch.snippet 檔案，再按一下 **[開啟]** 按鈕。 **[My Code 程式碼片段]** 資料夾中應該不會有 TryCatch 程式碼片段。  
+5.  導覽至包含 TryCatch.snippet 的資料夾，然後按一下 TryCatch.snippet 檔案，再按一下 **[開啟]** 按鈕。 您應該會在 **My Code Snippets** 資料夾看到 TryCatch 程式碼片段。  
   
 ## <a name="see-also"></a>另請參閱  
  [插入範圍陳述式 Transact-SQL 程式碼片段](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
-  
-  
+    

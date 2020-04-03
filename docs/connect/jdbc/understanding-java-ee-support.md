@@ -1,7 +1,7 @@
 ---
 title: 了解 Java EE 支援 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/10/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 53caa00a6fe0430614b74f91ab28ccb5ef4aa742
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.openlocfilehash: 5a60f1d7fb137c18761c630d5c69c3ea4328b5a9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77903715"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271344"
 ---
 # <a name="understanding-java-ee-support"></a>了解 Java EE 支援
 
@@ -39,7 +39,7 @@ ms.locfileid: "77903715"
 
 若是 JDBC Driver 7.4，驅動程式包含於 **mssql-jdbc-7.4.1.jre8.jar**、**mssql-jdbc-7.4.1.jre11.jar** 或 **mssql-jdbc-7.4.1.jre12.jar**。
 
-對於 JDBC Driver 8.2，驅動程式會包含在 **mssql-jdbc-8.2.1.jre8.jar**、**mssql-jdbc-8.2.1.jre11.jar** 或 **mssql-jdbc-8.2.1.jre13.jar** 之中。
+針對 JDBC Driver 8.2，驅動程式會包含在 **mssql-jdbc-8.2.2.jre8.jar**、**mssql-jdbc-8.2.2.jre11.jar** 或 **mssql-jdbc-8.2.2.jre13.jar** 之中。
 
 每當您載入具有 JDBC DriverManager 類別的驅動程式時，以及每當您在任何驅動程式設定中指定驅動程式的類別名稱時，就會使用類別名稱。 例如，在 Java EE 應用程式伺服器中設定資料來源可能需要您輸入驅動程式類別名稱。  
   

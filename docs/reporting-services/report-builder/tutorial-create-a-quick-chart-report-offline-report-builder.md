@@ -1,5 +1,6 @@
 ---
 title: 教學課程：離線建立快速圖表報表 (報表產生器) | Microsoft Docs
+description: 在本教學課程中，您會使用報表產生器在 Reporting Services 編頁報表中建立圓形圖。 然後您會新增百分比並修改圓形圖。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 72e6846ef10bc86c1711958e144601d8bff5caac
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 41e26cbdeaa794ebae01371207d7ff7847619dc2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67037967"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290749"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教學課程：離線建立快速圖表報表 (報表產生器)
 
@@ -30,7 +31,7 @@ ms.locfileid: "67037967"
 ## <a name="prerequisites"></a>Prerequisites  
  不論您使用的是 XML 資料或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，都需要具備報表產生器的存取權。 您可以在原生模式或 SharePoint 整合模式中從 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 報表伺服器啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，或者從 Microsoft 下載中心下載 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 。 如需詳細資訊，請參閱 [安裝報表產生器](../../reporting-services/install-windows/install-report-builder.md)。  
   
-##  <a name="TwoWays"></a> 進行此教學課程的兩種方式  
+##  <a name="two-ways-to-do-this-tutorial"></a><a name="TwoWays"></a> 進行此教學課程的兩種方式  
   
 -   [使用 XML 資料建立圓形圖](#CreatePieChartXML)  
   
@@ -50,7 +51,7 @@ ms.locfileid: "67037967"
   
  [建立含資料之 Transact-SQL 查詢的圓形圖](#CreatePieQueryData)  
   
-##  <a name="CreatePieChartXML"></a> 使用 XML 資料建立圓形圖  
+##  <a name="creating-the-pie-chart-with-xml-data"></a><a name="CreatePieChartXML"></a> 使用 XML 資料建立圓形圖  
   
 1.  從[Web 入口網站，或 SharePoint 整合模式中的報表伺服器，或從您的電腦](../../reporting-services/report-builder/start-report-builder.md) 啟動報表產生器 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。  
   
@@ -137,7 +138,7 @@ ms.locfileid: "67037967"
   
 18. 若要繼續修改您的圓形圖，請移至本文中的 [執行精靈之後](#AfterWizard) 。  
   
-##  <a name="CreatePieQueryData"></a> 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢建立圓形圖  
+##  <a name="creating-the-pie-chart-with-a-tsql-query"></a><a name="CreatePieQueryData"></a> 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢建立圓形圖  
   
 1.  從[Web 入口網站，從 SharePoint 整合模式中的報表伺服器，或從您的電腦](../../reporting-services/report-builder/start-report-builder.md) 啟動報表產生器 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal, 啟動報表產生器 report server in SharePoint integrated mode, or from your computer.  
   
@@ -187,7 +188,7 @@ ms.locfileid: "67037967"
   
 15. 若要查看實際的圓形圖，請在功能區的 [主資料夾]  索引標籤上，按一下 [執行]  。  
  
-##  <a name="AfterWizard"></a> 執行精靈之後  
+##  <a name="after-you-run-the-wizard"></a><a name="AfterWizard"></a> 執行精靈之後  
  既然您已經擁有圓形圖報表，就可以開始處理它。 在 [功能區] 的 [執行]  索引標籤上，按一下 [設計]  ，即可繼續修改。  
   
 ## <a name="make-the-chart-bigger"></a>讓圖表變大  
@@ -219,7 +220,7 @@ ms.locfileid: "67037967"
   
  如需自訂圖表標籤和圖例的詳細資訊，請參閱 [在圓形圖上顯示百分比值 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) 和[變更圖例項目的文字 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)。  
   
-##  <a name="WhatsNext"></a> 下一步  
+##  <a name="whats-next"></a><a name="WhatsNext"></a> 下一步  
  既然您已經在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中建立第一份報表，就可以準備嘗試進行其他教學課程，並且根據自己的資料開始建立報表。 若要執行 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，您需要有權使用「連接字串」  存取資料來源 (例如資料庫)，以將您實際連線至資料來源。 系統管理員會提供這項資訊而且可能會為您設定。  
   
  若要進行其他教學課程，您需要 SQL Server 執行個體的名稱，以及能夠以唯讀方式存取任何資料庫的認證。 系統管理員可能也會為您進行該設定。  

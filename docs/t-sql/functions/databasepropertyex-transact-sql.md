@@ -20,12 +20,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91301fcfb0376e1bd256ac60c59c1c0b65dfbbe4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 9384317f0e58e77a6bb51fe066458dcf956882ed
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75256102"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448303"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 偵測到因為斷電或其他系統失效所造成的不完全 I/O 作業。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：輸入無效<br /><br /> 基底資料類型：**int**| 
 |IsVerifiedClone|資料庫僅為使用 DBCC CLONEDATABASE 之 WITH VERIFY_CLONEDB 選項所建立之使用者資料庫的結構描述和統計資料複本。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/help/3177838)。|**適用於**：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 開始。<br /><br /> <br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：輸入無效<br /><br /> 基底資料類型：**int**| 
 |IsXTPSupported|指出資料庫是否支援記憶體內部 OLTP，即建立及使用經記憶體最佳化的資料表和原生編譯模組。<br /><br /> 特定於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：<br /><br /> IsXTPSupported 是獨立於任何建立記憶體內部 OLTP 物件所必須之 MEMORY_OPTIMIZED_DATA 檔案群組的存在之外。|**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：輸入無效、發生錯誤或不適用<br /><br /> 基底資料類型：**int**|  
-|LastGoodCheckDbTime|最後一個成功 DBCC CHECKDB 在指定的資料庫上執行的日期和時間。<sup>1</sup> 如果 DBCC CHECKDB 尚未在資料庫上執行，則回傳回 1900-01-01 00:00:00.000。|**適用於**：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 開始。<br /><br /> 日期時間值<br /><br /> NULL：輸入無效<br /><br /> 基底資料型別：**datetime**| 
+|LastGoodCheckDbTime|最後一個成功 DBCC CHECKDB 在指定的資料庫上執行的日期和時間。<sup>1</sup> 如果 DBCC CHECKDB 尚未在資料庫上執行，則回傳回 1900-01-01 00:00:00.000。|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (從 SP2 開始)。</br>[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] (從 CU9 開始)。</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] 或更新版本。</br>Azure SQL Database。<br/><br/>日期時間值<br /><br /> NULL：輸入無效<br /><br /> 基底資料型別：**datetime**| 
 |LCID|Windows 的定序地區設定識別碼 (LCID)。|LCID 值 (十進位格式)。<br /><br /> 基底資料類型：**int**|  
 |MaxSizeInBytes|資料庫的大小上限 (以位元組為單位)。|**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL：資料庫未啟動<br /><br /> 基底資料型別：**bigint**|  
 |復原|資料庫復原模式|FULL：完整復原模式<br /><br /> BULK_LOGGED：大量記錄模式<br /><br /> SIMPLE：簡單復原模式<br /><br /> 基底資料型別：**nvarchar(128)**|  

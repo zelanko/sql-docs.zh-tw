@@ -1,5 +1,6 @@
 ---
 title: 存取外部資料：Hadoop - PolyBase
+description: 本文在具有 Hardoop 的 SQL Server 執行個體上使用 PolyBase。 PolyBase 適用於外部資料表的臨機操作查詢及資料匯入/匯出。
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
@@ -9,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 979d0f5d57c7d761e5c9c3f1b302046312396554
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 27fa4b36df7248ceee2a484d57ab77d28ca50247
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79286902"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215863"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>設定 PolyBase 存取 Hadoop 中的外部資料
 
@@ -66,7 +67,7 @@ ms.locfileid: "79286902"
   
    ![在 services.msc 中停止和啟動 PolyBase 服務](../../relational-databases/polybase/media/polybase-stop-start.png "在 services.msc 中停止和啟動 PolyBase 服務")  
   
-## <a id="pushdown"></a> 啟用下推計算  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> 啟用下推計算  
 
 為改善查詢效能，請將計算下推到 Hadoop 叢集︰  
   

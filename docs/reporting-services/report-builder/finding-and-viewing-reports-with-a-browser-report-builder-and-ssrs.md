@@ -1,5 +1,6 @@
 ---
 title: 使用瀏覽器尋找及檢視報表 (報表產生器) | Microsoft Docs
+description: 您可使用直接連線到報表伺服器的網頁瀏覽器來檢視報表。 該報表包含報表工具列，其可供可進行巡覽和搜尋。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dc69666eaecfcacea21291dec13f6356e0f18d13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 489d91bc5f410b6bdce4ef61bd694861bd1c1a7d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77079258"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342820"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>使用瀏覽器尋找及檢視報表 (報表產生器及 SSRS)
   您可以使用任何支援的網頁瀏覽器，透過報表伺服器的直接連接來檢視報表。 每一個報表在報表伺服器上都有一個 URL 位址。 您可以輸入報表的 Web 位址，在任何 Web 應用程式的瀏覽器視窗中開啟該報表。 該報表會以 HTML 格式開啟，而且其中包含報表工具列，讓您可以在報表中瀏覽頁面或搜尋資料值。 您可以在 URL 上設定參數，以隱藏工具列或選取報表的輸出格式。  

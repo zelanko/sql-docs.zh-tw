@@ -1,5 +1,6 @@
 ---
 title: SQL Server 擴充的事件工作階段
+description: SQL Server 擴充事件工作階段是在裝載擴充事件引擎的 SQL Server 處理序中建立。 了解工作階段狀態和工作階段內容。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0352441798ddffc96b057876768f66f0c9d4a10a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: cce8dfb0d96059f577adb4e86e6fc5556d9fd90c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75242905"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487666"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server 擴充的事件工作階段
 

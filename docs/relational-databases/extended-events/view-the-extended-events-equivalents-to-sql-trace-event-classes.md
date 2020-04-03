@@ -1,5 +1,6 @@
 ---
 title: 同等於 SQL 追蹤事件類別的擴充事件
+description: 本文示範如何檢視同等於每一個 SQL 追蹤事件及其關聯資料行的「擴充事件」動作和事件。
 ms.date: 03/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c98eeec91bdc86af8109cd715b5c0fde9d685f44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 33f26f04173761a5b64576665a0dbab887c5c489
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75246116"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487576"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>檢視同等於 SQL 追蹤事件類別的擴充事件項目
 

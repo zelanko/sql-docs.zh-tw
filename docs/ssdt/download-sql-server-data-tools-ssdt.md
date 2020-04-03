@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 6be69f873785f413b4edddf42f303e8eb7d4b14c
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.openlocfilehash: f6a7628d324236a8fbbe7afa5b80c746f95fec13
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77652937"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271484"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>下載適用於 Visual Studio 的 SQL Server Data Tools (SSDT)
 
@@ -79,10 +79,10 @@ ms.locfileid: "77652937"
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017 (獨立安裝程式)
 
-[![下載](../ssdt/media/download.png) 下載 SSDT for Visual Studio 2017 (15.9.3)](https://go.microsoft.com/fwlink/?linkid=2110080)
+[![下載](../ssdt/media/download.png) 下載 SSDT for Visual Studio 2017 (15.9.4)](https://go.microsoft.com/fwlink/?linkid=2124518 )
 
 > [!IMPORTANT]
-> * 如果已安裝「Analysis Services 專案」  與「Reporting Services 專案」  延伸模組，請先解除安裝並關閉所有 VS 執行個體，再安裝 SSDT for Visual Studio 2017 (15.9.3)。
+> * 如果已安裝「Analysis Services 專案」  與「Reporting Services 專案」  延伸模組，請先解除安裝並關閉所有 VS 執行個體，再安裝 SSDT for Visual Studio 2017 (15.9.4)。
 > * 已移除 Power Query Source for SQL Server 2017 的收件匣元件。 我們現在宣告 Power Query Source for SQL Server 2017 與 2019 為 OOB 元件，您可以在[這裡](https://www.microsoft.com/download/details.aspx?id=100619)下載。
 > * 已移除 Microsoft Oracle Connector for SQL Server 2019 的收件匣元件。 我們現在宣告 Microsoft Oracle Connector for SQL Server 2019 為 OOB 元件，您可以在[這裡](https://www.microsoft.com/download/details.aspx?id=58228)下載。
 
@@ -98,17 +98,17 @@ SSDT for Visual Studio 2017 與 Visual Studio 具有相同的[系統需求](http
 
 這版**適用於 VS 2017 的 SSDT** 提供下列語言版本：
 
-* [簡體中文]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x804)
-* [繁體中文]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x404)
-* [英文 (美國)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x409)
-* [法文]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40c)
-* [德文]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x407)
-* [義大利文]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x410)
-* [日文]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x411)
-* [韓文]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x412)
-* [葡萄牙文 (巴西)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x416)
-* [俄文]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x419)
-* [西班牙文]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40a)
+* [簡體中文]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x804)
+* [繁體中文]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x404)
+* [英文 (美國)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x409)
+* [法文]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x40c)
+* [德文]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x407)
+* [義大利文]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x410)
+* [日文]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x411)
+* [韓文]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x412)
+* [葡萄牙文 (巴西)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x416)
+* [俄文]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x419)
+* [西班牙文]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x40a)
 
 ### <a name="considerations-and-limitations"></a>考量與限制
 
@@ -129,8 +129,6 @@ SSDT for Visual Studio 2017 與 Visual Studio 具有相同的[系統需求](http
 3. 在連線時，執行下列命令下載離線安裝所需的全部檔案。 使用 `--layout` 選項是關鍵，這會為離線安裝下載實際檔案。 以實際配置路徑取代 `<filepath>` 來儲存檔案。
    1. 針對特定語言，請傳遞地區設定：`vs_sql.exe --layout c:\<filepath> --lang en-us` (一種語言 ~1 GB)。
    1. 針對所有語言，請省略 `--lang` 引數：`vs_sql.exe --layout c:\<filepath>` (所有語言 ~3.9 GB)。
-
-4. 執行 `SSDT-Setup-ENU.exe /layout c:\<filepath>` 以將 SSDT 承載擷取至與所下載 VS2017 檔案相同的 `<filepath>` 位置。 此動作能確保兩者的所有檔案會合併到單一配置資料夾。
 
 完成前述步驟之後，就可以**離線**執行下列步驟：
 

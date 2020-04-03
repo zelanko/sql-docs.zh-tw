@@ -1,5 +1,6 @@
 ---
 title: 使用 SSMS XEvent 分析工具
+description: XEvent 分析工具會顯示擴充事件的即時檢視器。 了解為何要使用此分析工具、重要功能，以及如何開始檢視擴充事件。
 ms.date: 10/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b500713053e8ea65722a10e2bf93ec566d9fbdd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: fe9f63f1ae9b007da18f1b81ed23cd1c49bbfcbd
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75251411"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487546"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>使用 SSMS XEvent 分析工具
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 XEvent 分析工具是一項 SQL Server Management Studio (SSMS) 功能，其可顯示擴充事件的即時檢視器視窗。 本概觀將說明使用此分析工具的理由、重要功能，並會提供檢視擴充事件的入門指示。
 
 ## <a name="why-would-i-use-the-xevent-profiler"></a>為什麼要使用 XEvent 分析工具？
@@ -33,7 +34,7 @@ XEvent 分析工具不同於 SQL Profiler，其可直接整合到 SSMS，並以 
 ## <a name="prerequisites"></a>Prerequisites
 只有 SQL Server Management Studio (SSMS) v17.3 或更新版本才提供此功能。 請確認目前使用的是最新版本。 您可以於[此處](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)找到最新版本。
 
-## <a id="getting-started"></a>使用者入門
+## <a name="getting-started"></a><a id="getting-started"></a>使用者入門
 若要存取 XEvent 分析工具，請遵循下列步驟進行：
 
 1. 開啟 [SQL Server Management Studio]  。

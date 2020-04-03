@@ -1,5 +1,6 @@
 ---
 title: 尋找報表定義結構描述版本 | Microsoft Docs
+description: 了解如何識別報表定義檔的報表定義語言 (RDL) 結構描述版本。
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b44c417fa6cdf5caf3dcaf61b36a3242284c602a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fd43fb3dba83ab3821b1b670468e7849faac2044
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77080334"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510139"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>尋找報表定義結構描述版本 (SSRS)
 

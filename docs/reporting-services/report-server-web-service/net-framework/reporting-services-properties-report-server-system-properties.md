@@ -1,5 +1,6 @@
 ---
 title: 報表伺服器系統屬性 | Microsoft Docs
+description: 系統屬性是報表伺服器資料庫的全域屬性。 您可以使用 Web 服務方法，來讀取或是修改大部分屬性。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30455d77efff3c9a9e4f48b9cbeccfa983001220
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ecb90d65a011e5bb00c66f5f6ccd32ab4be663ee
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128811"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509630"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Reporting Services 屬性 - 報表伺服器系統屬性
   下列系統屬性名稱會保留。 您無法建立具有相同名稱的使用者定義屬性。 您可以使用 Web 服務方法，來讀取或是修改大部分屬性。  

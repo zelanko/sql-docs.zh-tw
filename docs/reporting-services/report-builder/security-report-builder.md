@@ -1,5 +1,6 @@
 ---
 title: 安全性 (報表產生器) | Microsoft Docs
+description: 報表產生器安全性功能與發行位置、已發行的報表、外部資料來源和以這些來源為基礎的模型，以及互動式功能相關。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e8b89f31330fa09d5dbe1f70fd10b2c473d26c0d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1d2c4c195b0d21d2090e13eff578cc533871da4d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190101"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290830"
 ---
 # <a name="security-report-builder"></a>安全性 (報表產生器)
   報表產生器是一種報表撰寫用戶端應用程式，其專為搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器使用而設計。 該報表伺服器可以設定為以獨立伺服器的原生模式運作，或者以 SharePoint 整合模式運作以支援 SharePoint 網站上的報表。  
@@ -34,7 +35,7 @@ ms.locfileid: "74190101"
   
  請檢閱本主題中的資訊，協助您更深入了解如何使用安全性功能，進一步協助管理及維護報表與報表相關項目的安全性。  
   
-##  <a name="ReportServers"></a> 了解報表伺服器的安全性  
+##  <a name="understanding-security-for-report-servers"></a><a name="ReportServers"></a> 了解報表伺服器的安全性  
  發行報表與檢視報表是需要有適當權限才能進行的作業。 報表伺服器管理員會授與使用權限，確保只有獲得授權的使用者才可以在下列其中一種報表伺服器上發行並檢視報表：  
   
 -   以原生模式設定的報表伺服器  
@@ -54,7 +55,7 @@ ms.locfileid: "74190101"
      如果您無法連接或瀏覽到 SharePoint 網站或子站台，請連絡 SharePoint 網站管理員。  
   
   
-##  <a name="Reports"></a> 了解已發行報表與報表相關項目的安全性  
+##  <a name="understanding-security-for-published-reports-and-report-related-items"></a><a name="Reports"></a> 了解已發行報表與報表相關項目的安全性  
  報表與報表相關項目的安全性是由報表伺服器管理員所管理。 報表相關的項目包括內嵌與共用的資料來源，包括了認證、共用的資料集、參數、報表組件與模型。  
   
  在報表伺服器或 SharePoint 網站上，報表與報表相關項目及作業的安全性為獨立的。 用於存取項目和作業的權限是透過安全性原則所授與，這些原則會將使用者或群組帳戶對應至權限等級 (相對於項目)。 為了簡化維護大量原則的複雜性與成本，容器 (例如資料夾) 上的使用權限會由容器中的項目繼承。 例如，如果使用者對某一資料夾具有特定的 [檢視報表] 權限，那麼該使用者對於資料夾中的項目也具有 [檢視報表] 權限。  
@@ -81,7 +82,7 @@ ms.locfileid: "74190101"
  如需詳細資訊，請參閱 [報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
   
-##  <a name="Data"></a> 了解報表資料與外部資料來源的安全性  
+##  <a name="understanding-security-for-report-data-and-external-data-sources"></a><a name="Data"></a> 了解報表資料與外部資料來源的安全性  
  若要存取報表中每一個外部資料來源的資料，您可以建立內嵌資料來源或是將加入報表中共用資料來源或共用資料集的參考。  
   
  針對每一個外部資料來源，您必須提供存取該來源及其底層資料的適當認證。 資料來源擁有者會指定提供存取的認證類型。  
@@ -96,13 +97,13 @@ ms.locfileid: "74190101"
  如需資料來源的詳細資訊，請參閱[建立資料連接字串 - 報表產生器 & SSRS](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
   
-##  <a name="Models"></a> 了解模型與安全性篩選  
+##  <a name="understanding-models-and-security-filters"></a><a name="Models"></a> 了解模型與安全性篩選  
  當資料擷取自以外部資料為基礎的報表模型時，您可以在模型中套用安全性篩選。這是維護資料安全的好方法，因為如此一來，每一位執行報表的使用者都只能看到他們有權限讀取的內容。  
   
  報表參數不能用於資料列層級安全性，也無法防止使用者或使用者群組查看特定的資料列。 若要為報表內所顯示的資料套用安全性，您需要使用安全性篩選或模型項目安全性。  
   
   
-##  <a name="Interactive"></a> 了解撰寫具有互動式功能之報表的安全性  
+##  <a name="understanding-security-for-report-authoring-for-interactive-features"></a><a name="Interactive"></a> 了解撰寫具有互動式功能之報表的安全性  
  報表經常會使用參數，讓使用者可以互動式地自訂他們的報表檢視。 請採用下列秘訣協助設計出遵循優良作法的報表：  
   
 -   除非您會提供有效的值，否則請不要使用依據查詢參數以及屬於 **[文字]** 類型的參數。 可用的值清單有助於使用者只選擇有效的值。 如果沒有有效的值清單，則您將無法限制使用者可以輸入的值。  

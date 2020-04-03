@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 68ad6f8f3c56b094b5d14d369452d78237b6dcee
+ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288552"
+ms.locfileid: "80402663"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Linux 上 SQL Server 2019 的版本及支援功能
 
@@ -227,6 +227,7 @@ Linux 上的 SQL Server 2019 不支援下列功能和服務。 這些功能的�
 | **SQL Server Agent** |  子系統：CmdExec、PowerShell、佇列讀取器、SSIS、SSAS、SSRS |
 | &nbsp; | 警示 |
 | &nbsp; | 受控備份 |
+| &nbsp; | 使用 MSX/TSX 的多伺服器管理 |
 | **高可用性** | 資料庫鏡像  |
 | **安全性** | 可延伸金鑰管理 |
 | &nbsp; | 適用於連結伺服器的 AD 驗證 | 

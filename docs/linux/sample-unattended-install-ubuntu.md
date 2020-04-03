@@ -8,12 +8,12 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b71bad98aa6e9172b69efa67ce8708f1479fa691
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 427aff5fe9911fde59f3f37077fc9c2306d2bd42
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67910487"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487596"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>範例：於 Ubuntu 自動安裝 SQL Server 指令碼
 
@@ -31,6 +31,9 @@ ms.locfileid: "67910487"
 - 如需其他系統需求，請參閱 [SQL Server 在 Linux 上的系統需求](sql-server-linux-setup.md#system)。
 
 ## <a name="sample-script"></a>範例指令碼
+
+> [!NOTE]
+> 如果 SQL Server 的啟動速度緩慢，則指令碼可能會失敗。 這是因為指令碼會以非零的狀態結束。 移除第一行的 `-e` 參數可解決此問題。
 
 ```bash
 #!/bin/bash -e

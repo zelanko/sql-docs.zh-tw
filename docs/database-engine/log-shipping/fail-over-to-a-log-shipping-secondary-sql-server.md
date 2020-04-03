@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 90e200cba5cf2b8c367dfdb97b5ae5e192773e44
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 29b2fcad38e2971f39f63b400d307a2f64459eea
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74822421"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79510009"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>容錯移轉至記錄傳送次要 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "74822421"
   
 2.  依序將任何未套用的交易記錄備份套用到每個次要資料庫。 如需詳細資訊，請參閱[套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)。  
   
-3.  如果可存取主要資料庫，則請備份使用中交易記錄，並將記錄備份套用到次要資料庫。  
+3.  如果可存取主要資料庫，則請備份使用中交易記錄，並將記錄備份套用到次要資料庫。 您可能需要在發出還原命令之前，將資料庫設定為[單一使用者模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)以取得獨佔存取權，再於還原完成之後，將其切換回多使用者模式。  
   
      如果原始主要伺服器執行個體未損毀，請使用 WITH NORECOVERY 來備份主要資料庫的交易記錄結尾。 這樣會讓資料庫維持在還原中的狀態，所以無法提供給使用者使用。 最後，您將可從取代主要資料庫套用交易記錄備份，以向前復原這個資料庫。  
   
-     如需詳細資訊，請參閱[套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
+     如需詳細資訊，請參閱[套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。   
   
 4.  在同步處理次要伺服器後，您就可以透過復原次要資料庫並將用戶端重新導向至該伺服器執行個體，藉以容錯移轉至偏好的伺服器。 復原會讓資料庫進入一致狀態，並使其連線。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74822421"
   
      如果沒有其他次要資料庫可用，請參閱[設定記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相關工作  
   
 -   [變更主要與次要記錄傳送伺服器間的角色 &#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)  
   

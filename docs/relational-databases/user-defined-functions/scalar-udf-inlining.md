@@ -1,8 +1,8 @@
 ---
-title: Microsoft SQL 資料庫中的純量 UDF 內嵌 | Microsoft Docs
-description: 純量 UDF 內嵌功能可針對在 SQL Server (從 SQL Server 2019 開始) 及 Azure SQL Database 中叫用純量 UDF 的查詢改善其效能。
+title: Microsoft SQL Server 中的純量 UDF 內嵌 | Microsoft Docs
+description: 純量 UDF 內嵌功能可針對在 SQL Server (從 SQL Server 2019 開始) 中叫用純量 UDF 的查詢來改善其效能。
 ms.custom: ''
-ms.date: 01/09/2020
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 79608c96e56a7f70d10aaa4b897db837bdf03acc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79287402"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79486554"
 ---
 # <a name="scalar-udf-inlining"></a>純量 UDF 內嵌
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文介紹純量 UDF 內嵌，這是[智慧型查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能套件下的一項功能。 此功能可針對在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 開始) 及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中叫用 UDF 的查詢改善其效能。
+本文介紹純量 UDF 內嵌，這是[智慧型查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能套件下的一項功能。 此功能可針對在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 開始) 中叫用純量 UDF 的查詢來改善其效能。
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>T-SQL 純量使用者定義函式
 以 [!INCLUDE[tsql](../../includes/tsql-md.md)] 實作並傳回單一資料值的使用者定義函式 (UDF)，就是所謂的 T-SQL 純量使用者定義函式。 T-SQL UDF 是一種在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢之間達成程式碼重複使用和模組化的優雅方式。 某些計算 (例如複雜的商務規則) 更容易以命令式 UDF 格式表達。 UDF 有助於建置複雜的邏輯，而不需要撰寫複雜 SQL 查詢的專業知識。

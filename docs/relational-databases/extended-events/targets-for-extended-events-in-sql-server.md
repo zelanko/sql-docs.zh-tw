@@ -1,5 +1,6 @@
 ---
 title: SQL Server 中的擴充事件目標
+description: 本文說明用於 SQL Server 中擴充事件的 package0 目標。 了解目標在收集和報告資料方面的能力及目標參數。
 ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 942f69fc92fa06b5131cee2dba9145f4faaae0cc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ba516e2e58a19ffdd5d225f3bc0a8c495c0432bd
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75501982"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487516"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server 中的擴充事件目標
 
@@ -37,7 +38,7 @@ ms.locfileid: "75501982"
 ### <a name="prerequisites"></a>Prerequisites
 
 
-- 請熟悉擴充事件基本概念 (如 [快速入門︰SQL Server 中的擴充事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)中所述)。
+- 請熟悉擴充事件的基本概念 (相關說明請見[快速入門︰SQL Server 中的延伸事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)。
 
 
 - 已安裝最新版本的經常更新公用程式 SQL Server Management Studio (SSMS.exe)。 如需詳細資料，請參閱：

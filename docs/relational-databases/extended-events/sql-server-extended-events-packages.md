@@ -1,5 +1,6 @@
 ---
 title: SQL Server 擴充事件封裝
+description: 套件是 SQL Server 擴充事件物件的容器。 本文描述套件可包含的物件。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37c4b2c9972dbd8e236f8a8e64f312a15a3353ac
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ad638233ef9af4edfeb0fbedad1f0e1a01c5dc01
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75242934"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79487656"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 擴充事件封裝
 

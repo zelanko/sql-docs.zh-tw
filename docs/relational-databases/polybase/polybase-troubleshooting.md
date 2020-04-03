@@ -1,5 +1,6 @@
 ---
 title: 監視 PolyBase 並進行疑難排解 | Microsoft Docs
+description: 若要針對 PolyBase 進行疑難排解，請使用這些檢視和 DMV。 查看 PolyBase 查詢計劃、監視 PolyBase 群組中的節點，以及設定 Hadoop 名稱節點高可用性。
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -14,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: edd716b36e8dc7339ab9661a2213afae5ac35379
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 171527b02674a5a02420f5cb002fddd7e7f31ac6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909628"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216048"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>監視 PolyBase 並進行疑難排解
 
@@ -205,7 +206,7 @@ PolyBase 查詢會分成 sys.dm_exec_distributed_request_steps 內的一系列�
 
 ## <a name="to-monitor-nodes-in-a-polybase-group"></a>監視 PolyBase 群組中的節點  
 
-設定 PolyBase 相應放大群組中的電腦之後，即可監視這些電腦的狀態。 如需建立相應放大群組的詳細資料，請參閱 [PolyBase 相應放大群組](../../relational-databases/polybase/polybase-scale-out-groups.md)。
+設定 PolyBase 擴增群組中的電腦之後，即可監視這些電腦的狀態。 如需建立擴增群組的詳細資料，請參閱 [PolyBase 擴增群組](../../relational-databases/polybase/polybase-scale-out-groups.md)。
 
 1. 連接到群組前端節點上的 SQL Server。
 

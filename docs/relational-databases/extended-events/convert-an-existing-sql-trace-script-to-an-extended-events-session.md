@@ -1,5 +1,6 @@
 ---
 title: 將 SQL 追蹤指令碼轉換為擴充事件工作階段
+description: 使用這些程序來建立擴充事件工作階段，該擴充事件工作階段相當於所要轉換的現有 SQL 追蹤指令碼。
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b41947e50cd2cdd283af77a8d3ee4168f208f57e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7a516a5cbfe8a225d228b4a1722da2ac51ceb99c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75255749"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79433975"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段
 

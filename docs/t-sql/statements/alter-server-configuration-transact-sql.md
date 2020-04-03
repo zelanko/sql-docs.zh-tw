@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.openlocfilehash: 39273f66a62f713e7aa95c3ce20d9ed3204776e8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79288292"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80380809"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -177,8 +177,10 @@ VERBOSE LOGGING = { 'logging_detail' | DEFAULT }
   
 -   2 - 錯誤和警告  
   
+在資源容錯移轉案例中，SQL Server 資源 DLL 可在執行容錯移轉前取得傾印檔案。 這同時適用於 FCI 和可用性群組技術。 當 SQL Server 資源 DLL 判斷 SQL Server 資源失敗時，SQL Server 資源 DLL 會使用 Sqldumper.exe 公用程式取得 SQL Server 流程的傾印檔案。 為確保 Sqldumper.exe 公用程式在資源容錯移轉時成功產生傾印檔案，您必須將下列三個屬性設為必要條件：SqlDumperDumpTimeOut、SqlDumperDumpPath、SqlDumperDumpFlags。
+
 SQLDUMPEREDUMPFLAGS  
-決定 SQL Server SQLDumper 公用程式所產生的傾印檔案類型。 預設設定為 0。 如需詳細資訊，請參閱 [SQL Server 傾印工具公用程式知識庫文章](https://go.microsoft.com/fwlink/?LinkId=206173)。  
+決定 SQL Server SQLDumper 公用程式所產生的傾印檔案類型。 預設設定為 0。 此設定使用十進位值，不使用十六進位值。 迷你傾印請使用 288，具有間接記憶體的迷你傾印請使用 296，已篩選的傾印請使用 33024。 如需詳細資訊，請參閱 [SQL Server 傾印工具公用程式知識庫文章](https://go.microsoft.com/fwlink/?LinkId=206173)。  
   
 SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
 SQLDumper 公用程式儲存傾印檔案的位置。 如需詳細資訊，請參閱 [SQL Server 傾印工具公用程式知識庫文章](https://go.microsoft.com/fwlink/?LinkId=206173)。  
@@ -304,7 +306,7 @@ HYBRID_BUFFER_POOL = ON | OFF <br>
 |[設定記憶體內部資料庫選項](#MemoryOptimized)|MEMORY_OPTIMIZED|
 
   
-###  <a name="Affinity"></a> 設定處理序相似性  
+###  <a name="setting-process-affinity"></a><a name="Affinity"></a> 設定處理序相似性  
 本節的範例示範如何將處理序相似性設定為 CPU 和 NUMA 節點。 範例假設伺服器包含 256 個 CPU，而這些 CPU 排列成四個群組，總計有 16 個 NUMA 節點。 執行緒不會指派給任何 NUMA 節點或 CPU。  
   
 -   群組 0：NUMA 節點 0 到 3，CPU 0 到 63  
@@ -351,7 +353,7 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  
   
-###  <a name="Diagnostic"></a> Setting diagnostic log options  
+###  <a name="setting-diagnostic-log-options"></a><a name="Diagnostic"></a> Setting diagnostic log options  
   
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 起)。    
   
@@ -387,7 +389,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-###  <a name="Failover"></a> 設定容錯移轉叢集屬性  
+###  <a name="setting-failover-cluster-properties"></a><a name="Failover"></a> 設定容錯移轉叢集屬性  
   
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 起)。   
   
@@ -401,7 +403,7 @@ ALTER SERVER CONFIGURATION
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
   
-###  <a name="ChangeClusterContextExample"></a> B. 變更可用性複本的叢集內容  
+###  <a name="b-changing-the-cluster-context-of-an-availability-replica"></a><a name="ChangeClusterContextExample"></a> B. 變更可用性複本的叢集內容  
 下列範例會變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 HADR 叢集內容。 為了指定目的地 WSFC 叢集 `clus01`，此範例會指定完整叢集物件名稱 `clus01.xyz.com`。  
   
 ```sql  
@@ -410,7 +412,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
   
 ### <a name="setting-buffer-pool-extension-options"></a>設定緩衝集區延伸模組選項  
   
-####  <a name="BufferPoolExtension"></a> A. 設定緩衝集區延伸模組選項  
+####  <a name="a-setting-the-buffer-pool-extension-option"></a><a name="BufferPoolExtension"></a> A. 設定緩衝集區延伸模組選項  
   
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 起)。    
   
@@ -439,7 +441,7 @@ SET BUFFER POOL EXTENSION ON
 GO   
 ```  
 
-### <a name="MemoryOptimized"></a> 設定記憶體內部資料庫選項
+### <a name="setting-in-memory-database-options"></a><a name="MemoryOptimized"></a> 設定記憶體內部資料庫選項
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起)。
 

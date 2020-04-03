@@ -1,5 +1,6 @@
 ---
 title: 識別執行狀態 | Microsoft Docs
+description: 了解如何使用 Reporting Services 來識別執行狀態，以供可透過數種方式來與報表互動。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b9e33f7c4d1b3ed953882175cd430df2b1e6ce1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0977cc384dac80f28d6b7c5b7a0149ba200f1794
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "62991599"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215597"
 ---
 # <a name="identifying-execution-state"></a>識別執行狀態
   超文字傳輸協定 (HTTP) 是一種無連接且沒有狀態 (Stateless) 的通訊協定，也就是說它不會自動指出不同的要求是否全都來自相同的用戶端，也不會自動指出某個特定瀏覽器執行個體是否仍在主動檢視網頁或網站。 工作階段會建立邏輯連接以透過 HTTP 維護伺服器與用戶端之間的狀態。 與特定工作階段相關的使用者特定資訊又稱為工作階段狀態。  

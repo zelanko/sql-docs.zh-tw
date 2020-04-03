@@ -24,12 +24,12 @@ ms.assetid: ae598d9f-9baa-49b8-b1c1-042854206de4
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9b0e4e37eef574fd50d28e02c4f92ee1805c953
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 63eb298fab5e2c62ac9403325368b008efa95dab
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68117624"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79526743"
 ---
 # <a name="suser_name-transact-sql"></a>SUSER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -47,7 +47,7 @@ SUSER_NAME ( [ server_user_id ] )
   
 ## <a name="arguments"></a>引數  
 _server\_user\_id_  
-這是使用者的登入識別碼。 _server\_user\_id_ (選擇性) 為 **int**. _server\_user\_id_ 可以是有權連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的任何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 登入或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 使用者或群組。 未指定 _server\_user\_id_ 時，就會傳回目前使用者的登入識別名稱。 如果參數包含 NULL 一詞，就會傳回 NULL。  
+這是使用者的登入識別碼。 _server\_user\_id_ (選擇性) 為 **int**. _server\_user\_id_ 可以是有權連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者或群組。 未指定 _server\_user\_id_ 時，就會傳回目前使用者的登入識別名稱。 如果參數包含 NULL 一詞，就會傳回 NULL。  
   
 ## <a name="return-types"></a>傳回型別  
 **nvarchar(128)**  
@@ -58,6 +58,9 @@ _server\_user\_id_
 SUSER_NAME 只會傳回在 **syslogins** 系統資料表中有項目之登入的登入名稱。  
   
 SUSER_NAME 可用於選取清單、WHERE 子句及任何允許使用運算式的位置。 請在 SUSER_NAME 之後使用括弧，即使未指定任何參數也一樣。  
+
+> [!NOTE]
+> 雖然 Azure SQL Database 支援 SUSER_NAME 函式，但 Azure SQL Database 不支援使用 SUSER_NAME 的「執行身分」  。 
   
 ## <a name="examples"></a>範例  
 下列範例會傳回登入識別碼是 `1` 之使用者的登入識別名稱。  

@@ -1,5 +1,6 @@
 ---
 title: 發行資料來源與報表 | Microsoft Docs
+description: 了解如何發行資料來源與報表，讓具備報表伺服器或 SharePoint 網站權限的人員可以執行報表。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5a043efe7e80805a9d2c1c18dc86a425f01be7f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 93e0c70d19d4f64278603c062e4f59aedd97070b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190464"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510069"
 ---
 # <a name="publishing-data-sources-and-reports"></a>發行資料來源與報表
   發行報表前，您應該預覽報表以查看報表執行時的外觀。 您可以持續精簡設計，直到您滿意其結果為止。  

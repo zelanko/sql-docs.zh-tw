@@ -1,7 +1,7 @@
 ---
 title: 搭配使用 Always Encrypted 與 JDBC 驅動程式 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 41c91f87a62e9f4d912c7e8bbdebe86574ceebe6
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 37057985b6c552091d2989d56a13c52b0b0cf5ac
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004608"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80271324"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>搭配使用 Always Encrypted 與 JDBC 驅動程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -58,6 +58,8 @@ Microsoft JDBC Driver for SQL Server 隨附下列內建的資料行主要金鑰�
 
 ### <a name="using-azure-key-vault-provider"></a>使用 Azure 金鑰保存庫提供者
 Azure Key Vault 是存放和管理 Always Encrypted 資料行主要金鑰的方便選項 (尤其是當應用程式裝載在 Azure 時)。 針對在 Azure Key Vault 中儲存金鑰的應用程式，Microsoft JDBC Driver for SQL Server 包含內建提供者 SQLServerColumnEncryptionAzureKeyVaultProvider。 此提供者的名稱為 AZURE_KEY_VAULT。 若要使用 Azure Key Vault 存放區提供者，應用程式開發人員必須在 Azure Key Vault 中建立存放區和金鑰，然後在 Azure Active Directory 中建立應用程式註冊。 必須在針對搭配 Always Encrypted 使用所建立的金鑰保存庫的已定義存取原則中，為註冊的應用程式授與 [取得]、[解密]、[加密]、[將金鑰解除包裝]、[包裝金鑰] 及 [驗證] 權限。 如需如何設定金鑰保存庫及建立資料行主要金鑰的詳細資訊，請參閱 [Azure Key Vault - 逐步執行](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) \(英文\) 及[在 Azure 金鑰保存庫中建立資料行主要金鑰](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)。
+
+使用 Azure Key Vault 提供者時，JDBC 驅動程式會根據信任的端點清單來驗證資料行主要金鑰路徑。 從驅動程式 8.2.2 版開始，這份清單即為可設定的：在應用程式的工作目錄中建立 "mssql-jdbc.properties" 檔案，將 `AKVTrustedEndpoints` 屬性設為以分號分隔的清單。 如果值以分號開頭，則會延伸預設清單；否則會取代預設清單。
 
 針對本頁面上的範例，如果您已使用 SQL Server Management Studio 建立以 Azure Key Vault 為基礎的資料行主要金鑰及資料行加密金鑰，用來加以重新建立的 T-SQL 指令碼看起來可能會和此範例類似，但會具有其特定的 **KEY_PATH** 和 **ENCRYPTED_VALUE**：
 

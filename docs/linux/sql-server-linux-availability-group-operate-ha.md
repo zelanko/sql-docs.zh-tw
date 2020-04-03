@@ -1,6 +1,6 @@
 ---
 title: 在 Linux 上的 SQL Server 操作可用性群組
-description: ''
+description: 本文描述如何對 Linux 上具有可用性群組的 SQL Server 執行個體執行輪流升級。 升級之前，請檢閱最佳做法。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 24a9d3d9ee0fd65b08e30f40a0597eadf47c6b76
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 59e2f6c4321b1ccd90a66dd8e7466a3e0ccb490e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67916044"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216801"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>在 Linux 上操作 Always On 可用性群組
 

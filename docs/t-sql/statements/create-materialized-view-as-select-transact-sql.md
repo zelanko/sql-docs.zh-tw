@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: f0f244c15f4183f3214ae28efc2bf3300c571f0e
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.openlocfilehash: 8575a966dba903b17a6c5dcb015eb4471faf28a8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335756"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80290751"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -104,7 +104,7 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
   GROUP BY i.i_item_sk, i.i_item_id, i.i_category_id
   ```
 
-- 當參考的基底資料表中發生 UPDATE 或 DELETE 時，將停用具體化檢視。  此限制不適用於 INSERT。  若要重新啟用具體化檢視，請搭配 REBUILD 執行 ALTER MATERIALIZED。
+- 當參考的基底資料表中發生 UPDATE 或 DELETE 時，將停用具體化檢視。  此限制不適用於 INSERT。  若要重新啟用具體化檢視，請搭配 REBUILD 執行 ALTER MATERIALIZED VIEW。
   
 ## <a name="remarks"></a>備註
 
@@ -125,9 +125,9 @@ Azure 資料倉儲中具體化檢視類似 SQL Server 中的索引檢視表。�
 |狀況|新資料行必須新增到具體化檢視|註解|  
 |-----------------|---------------|-----------------|
 |在具體化檢視定義的 SELECT 清單中，遺漏 COUNT_BIG()| COUNT_BIG (*) |已由具體化檢視建立自動新增。  使用者不必採取任何動作。|
-|SUM(a) 是由使用者在具體化檢視定義的 SELECT 清單中所指定，且 ‘a’ 是可為 Null 的運算式 |COUNT_BIG (a) |使用者必須手動在具體化檢視定義中新增運算式 ‘a’。|
-|AVG(a) 是由使用者在具體化檢視定義的 SELECT 清單中所指定，其中 ‘a’ 是運算式。|SUM(a)、COUNT_BIG(a)|已由具體化檢視建立自動新增。  使用者不必採取任何動作。|
-|STDEV(a) 是由使用者在具體化檢視定義的 SELECT 清單中所指定，其中 ‘a’ 是運算式。|SUM(a)、COUNT_BIG(a)、SUM(square(a))|已由具體化檢視建立自動新增。  使用者不必採取任何動作。 |
+|SUM(a) 是由使用者在具體化檢視定義的 SELECT 清單中所指定，且 'a' 是可為 Null 的運算式 |COUNT_BIG (a) |使用者必須手動在具體化檢視定義中新增運算式 'a'。|
+|AVG(a) 是由使用者在具體化檢視定義的 SELECT 清單中所指定，其中 'a' 是運算式。|SUM(a)、COUNT_BIG(a)|已由具體化檢視建立自動新增。  使用者不必採取任何動作。|
+|STDEV(a) 是由使用者在具體化檢視定義的 SELECT 清單中所指定，其中 'a' 是運算式。|SUM(a)、COUNT_BIG(a)、SUM(square(a))|已由具體化檢視建立自動新增。  使用者不必採取任何動作。 |
 | | | |
 
 一旦建立，具體化檢視在 SQL Server Management Studio 內 Azure SQL 資料倉儲執行個體的檢視資料夾下就是可見的。

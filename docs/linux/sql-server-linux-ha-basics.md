@@ -1,6 +1,6 @@
 ---
 title: Linux 部署的 SQL Server 高可用性基本概念
-description: 了解 Linux 上的 SQL Server 可用的不同高可用性選項，例如 Always On 可用性群組、容錯移轉叢集執行個體 (FCI) 和記錄傳送。
+description: 了解 Linux 上 SQL Server 的高可用性選項，例如 Always On 可用性群組、容錯移轉叢集執行個體 (FCI) 和記錄傳送。
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 474533a69d74512e3e305f44d96f90009aa64e00
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c999228cdcd78ca2996ee134266a36543e97d913
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75656606"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216678"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>適用於 Linux 部署的 SQL Server 可用性基本概念
 
@@ -22,7 +22,7 @@ ms.locfileid: "75656606"
 
 從 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 開始，Linux 和 Windows 上均支援 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]。 如同 Windows 型 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 資料庫和執行個體必須在 Linux 下具有高可用性。 此文章涵蓋規劃和部署高可用性 Linux 型 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 資料庫和執行個體的技術層面，以及一些與 Windows 型安裝的差異。 因為 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 對 Linux 專業人員而言可能是新的，而 Linux 對 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 專業人員而言可能是新的，所以，此文章有時會介紹一些某些人可能很熟悉但其他人並不熟悉的概念。
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>適用於 Linux 部署的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 可用性選項
+## <a name="ssnoversion-md-availability-options-for-linux-deployments"></a>適用於 Linux 部署的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 可用性選項
 除了備份和還原之外，Linux 上提供了三個與 Windows 型部署所使用的相同可用性功能：
 -   Always On 可用性群組 (AG)
 -   Always On 容錯移轉叢集執行個體 (FCI)
@@ -51,7 +51,7 @@ ms.locfileid: "75656606"
 -   `systemctl`：啟動、停止或啟用服務
 -   文字編輯器命令。 在 Linux 上，有各種文字編輯器選項，例如 vi 和 emacs。
 
-## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>Linux 上適用於 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 可用性設定的通用工作
+## <a name="common-tasks-for-availability-configurations-of-ssnoversion-md-on-linux"></a>Linux 上適用於 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 可用性設定的通用工作
 本節涵蓋所有 Linux 型 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署通用的工作。
 
 ### <a name="ensure-that-files-can-be-copied"></a>確保可以複製檔案
@@ -120,7 +120,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 -   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
-### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>安裝 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 套件以取得可用性
+### <a name="install-ssnoversion-md-packages-for-availability"></a>安裝 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 套件以取得可用性
 在 Windows 型 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 安裝上，即使是在基本的引擎安裝中還是會安裝某些元件，其他的則不會安裝。 在 Linux 底下，只會在安裝過程中安裝 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 引擎。 其他所有項目都是選擇性的。 針對 Linux 底下高可用性的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 執行個體，應該使用 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 來安裝兩個套件：[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent (*mssql-server-agent*) 和高可用性 (HA) 套件 (*mssql-server-ha*)。 雖然 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent 在技術上是選擇性的，但它是 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的作業排程器，而且是記錄傳送所需的，因此建議安裝。 在 Windows 型安裝上，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent 不是選擇性的。
 
 >[!NOTE]
@@ -204,10 +204,10 @@ Pacemaker 叢集的記錄檔位置會因發行版本而有所不同。
 
 若要變更預設的記錄檔位置，請修改 `corosync.conf`。
 
-## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>規劃適用於 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 Pacemaker 叢集
+## <a name="plan-pacemaker-clusters-for-ssnoversion-md"></a>規劃適用於 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 Pacemaker 叢集
 本節將討論適用於 Pacemaker 叢集的重要規劃點。
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>針對 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 將 Linux 型 Pacemaker 叢集虛擬化
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-ssnoversion-md"></a>針對 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 將 Linux 型 Pacemaker 叢集虛擬化
 使用虛擬機器來為 AG 和 FCI 部署 Linux 型[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署，會由與其 Windows 型對應項目相同的規則所涵蓋。 在 [Microsoft 支援服務 KB 956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment) \(機器翻譯\) 中，有一組基本規則適用於 Microsoft 所提供之虛擬化 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署的支援能力。 由於平台本身的差異，不同的 Hypervisor (例如 Microsoft 的 Hyper-V 和 VMware 的 ESXi) 可能會有不同的差異。
 
 當它進入虛擬化的 AG 和 FCI 時，請確定已針對指定 Pacemaker 叢集的節點設定反親和性。 在 AG 或 FCI 設定中設定以取得高可用性時，裝載 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 VM 應該永遠不會在相同的 Hypervisor 主機上執行。 例如，如果已部署兩個節點的 FCI，則「至少」  必須有三部 Hypervisor 主機，以便在某部主機發生故障時，讓其中一部裝載節點的 VM 能夠在某處執行，特別是使用「即時移轉」或 vMotion 之類的功能時。

@@ -1,7 +1,7 @@
 ---
 title: 將 Linux 上的 SQL Server 加入 Active Directory
 titleSuffix: SQL Server
-description: ''
+description: 本文提供將 SQL Server Linux 主機電腦加入 AD 網域的指引。 您可使用內建的 SSSD 套件，或使用協力廠商 AD 提供者。
 author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5999a50e793cb29ea67075d0fa36454cdb58a67d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: c787409d4e8772d89fc748d39c605506f5dcb520
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76761872"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216187"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>將 Linux 主機上的 SQL Server 加入 Active Directory 網域
 
@@ -129,7 +129,7 @@ ping contoso.com
 - [選項 1：使用 SSSD 套件](#option1)
 - [選項 2：使用協力廠商 OpenLDAP 提供者的公用程式](#option2)
 
-### <a id="option1"></a> 選項 1：使用 SSSD 套件來加入 AD 網域
+### <a name="option-1-use-sssd-package-to-join-ad-domain"></a><a id="option1"></a> 選項 1：使用 SSSD 套件來加入 AD 網域
 
 此方法會使用 **realmd** 和 **sssd** 套件，將 SQL Server 主機加入 AD 網域。
 
@@ -203,7 +203,7 @@ ping contoso.com
 
 如需詳細資訊，請參閱 Red Hat 文件的 [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html) (探索及加入識別身分網域)。
 
-### <a id="option2"></a> 選項 2：使用協力廠商 OpenLDAP 提供者的公用程式
+### <a name="option-2-use-third-party-openldap-provider-utilities"></a><a id="option2"></a> 選項 2：使用協力廠商 OpenLDAP 提供者的公用程式
 
 您可以使用協力廠商公用程式，例如 [PBIS](https://www.beyondtrust.com/)、[VAS](https://www.oneidentity.com/products/authentication-services/) 或 [Centrify](https://www.centrify.com/)。 本文未涵蓋每個個別公用程式的步驟。 您必須先使用其中一個公用程式，將 SQL Server 的 Linux 主機加入網域，再繼續進行。  
 
