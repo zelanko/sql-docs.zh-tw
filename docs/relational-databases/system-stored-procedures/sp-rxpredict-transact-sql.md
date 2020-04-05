@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>= sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 86b9cd8a9327eb8afaf9945ca09629362062011f
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: 45afb5e861aee7b8cf253f6c241a884b54ff9451
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517447"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662843"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "80517447"
 
 近乎即時地在 R 和 Python 機器學習模型上提供評分。 `sp_rxPredict``rxPredict`是作為[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)和[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)中的 R 函數的包裝提供的儲存過程,以及 rx_predict [Python](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict)函數在[revoscaley](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)和[Microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)中提供。 它寫於C++,專為評分操作進行了優化。
 
-儘管必須使用 R 或 Python 創建模型,但一旦模型序列化並儲存在目標資料庫引擎實例上,即使未安裝 R 或 Python 整合,也可以從該資料庫引擎實例使用該模型。 有關詳細資訊,請參閱使用[sp_rxPredict 的即時評分](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)。
+儘管必須使用 R 或 Python 創建模型,但一旦模型序列化並儲存在目標資料庫引擎實例上,即使未安裝 R 或 Python 整合,也可以從該資料庫引擎實例使用該模型。 有關詳細資訊,請參閱使用[sp_rxPredict 的即時評分](https://docs.microsoft.com/sql/machine-learning/real-time-scoring)。
 
 ## <a name="syntax"></a>語法
 
@@ -64,7 +64,7 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="supported-algorithms"></a>支援的演算法
 
-要建立和訓練模型,請使用[SQL Server 2 電腦學習服務 (R 或 Python)、SQL](https://docs.microsoft.com/sql/advanced-analytics/what-is-sql-server-machine-learning) [Server 2016 R 服務](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services)[、SQL Server 機器學習伺服器(獨立)(R 或 Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone)或[SQL Server 2016 R 伺服器(獨立)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016)提供的 R 或 Python 支援的演演演算法之一。
+要建立和訓練模型,請使用[SQL Server 2 電腦學習服務 (R 或 Python)、SQL](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning) [Server 2016 R 服務](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services)[、SQL Server 機器學習伺服器(獨立)(R 或 Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)或[SQL Server 2016 R 伺服器(獨立)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)提供的 R 或 Python 支援的演演演算法之一。
 
 #### <a name="r-revoscaler-models"></a>R: RevoScaleR 模型
 

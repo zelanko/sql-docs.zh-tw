@@ -1,5 +1,5 @@
 ---
-title: sys. dm_external_script_requests |Microsoft Docs
+title: 系統.dm_external_script_requests |微軟文件
 ms.custom: ''
 ms.date: 10/28/2018
 ms.prod: sql
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 33a7b546b9479add67a05f9bb7537f953fa2e9f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 67e24b9c5c4ccd5f6ab2159ed5924474ff77bc84
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68476280"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664284"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "68476280"
   
 > [!NOTE] 
 >  
-> 只有當您已安裝並啟用支援外部腳本執行的功能時，才可以使用此動態管理檢視（DMV）。 如需詳細資訊，請參閱[SQL Server 2017 和更新版本中 SQL Server 2016 和 Machine Learning 服務（R、Python）](../../advanced-analytics/what-is-sql-server-machine-learning.md)[中的 R Services](../../advanced-analytics/r/sql-server-r-services.md) 。  
+> 此動態管理檢視 (DMV) 僅在安裝並啟用支援外部文本執行的功能時才可用。 有關詳細資訊,請參閱[SQL Server 2016 中的 R 服務和](../../machine-learning/r/sql-server-r-services.md)SQL Server [2017 及更高版本中的機器學習服務 (R、Python)。](../../machine-learning/what-is-sql-server-machine-learning.md)  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**唯一識別碼**|傳送外部指令碼要求的處理序識別碼。 這會對應至所接收的處理序識別碼。[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**唯一識別碼**|傳送外部指令碼要求的處理序識別碼。 這對應於收到的程序 ID[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |語言|**nvarchar**|代表支援的指令碼語言的關鍵字。 |  
 |degree_of_parallelism|**int**|指出已建立之平行處理序數目的數字。 這個值可能與已要求的平行處理序數目不同。|  
 |external_user_name|**nvarchar**|用來執行指令碼的 Windows 背景工作帳戶。|  
@@ -52,10 +52,9 @@ ms.locfileid: "68476280"
 
 此檢視可使用指令碼語言識別碼進行篩選。
 
-此檢視也會傳回正在執行指令碼的背景工作帳戶。 如需外部腳本所使用之背景工作帳戶的相關資訊，請參閱 SQL Server Machine Learning 服務中擴充性[架構的安全性總覽](../../advanced-analytics/concepts/security.md#sqlrusergroup)一節中所使用的身分識別（SQLRUserGroup）一節。
+此檢視也會傳回正在執行指令碼的背景工作帳戶。 有關外部文本使用的工作帳戶的資訊,請參閱[SQL Server 機器學習服務 中「安全概述」中](../../machine-learning/concepts/security.md#sqlrusergroup)用於處理 (SQLRUserGroup) 的標識部分。
 
-
-  **external_script_request_id** 欄位中所傳回的 GUID 也代表暫存檔案儲存所在之安全目錄的檔案名稱。 每個背景工作帳戶 (例如 MSSQLSERVER01) 都代表單一 SQL 登入或 Windows 使用者，並且可能會用來執行多個指令碼要求。 根據預設，完成要求的指令碼之後，即會清除這些暫存檔案。
+**external_script_request_id** 欄位中所傳回的 GUID 也代表暫存檔案儲存所在之安全目錄的檔案名稱。 每個背景工作帳戶 (例如 MSSQLSERVER01) 都代表單一 SQL 登入或 Windows 使用者，並且可能會用來執行多個指令碼要求。 根據預設，完成要求的指令碼之後，即會清除這些暫存檔案。
  
 此 DMV 只會監視使用中處理序，而無法回報已完成的指令碼。 如果您需要追蹤指令碼的持續時間，建議您將計時資訊加入您的指令碼，然後當做指令碼執行的一部分來擷取該資訊。
 
@@ -82,9 +81,9 @@ external_script_request_id  |語言  |degree_of_parallelism  |external_user_name
 
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [執行相關的動態管理檢視和函數 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-[dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
-[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
+ [動態管理檢視和函數&#40;處理-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [執行相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+[系統dm_external_script_execution_statssp_execute_external_script](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 
+ [ ](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   
 
