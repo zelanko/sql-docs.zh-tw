@@ -11,12 +11,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 48188e98d992f45ca282c3687bf56e255d15a40a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55ed24599e3bed15a0478ce12ac316edb623f0cf
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79190628"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662879"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ SQL Server 開發人員現在能夠存取廣大的 Python ML 及 AI 程式庫，
 - **效能改進** - 預存程序 `sp_execute_external_script` 已最佳化，可支援資料行存放區的批次模式執行。
 
 
-如需詳細資訊，請參閱 [SQL Server Machine Learning 服務的新功能](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)。
+如需詳細資訊，請參閱 [SQL Server Machine Learning 服務的新功能](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md)。
 
 ## <a name="next-steps"></a>後續步驟
 - 請參閱 [SQL Server 2017 版本資訊](sql-server-2017-release-notes.md)。

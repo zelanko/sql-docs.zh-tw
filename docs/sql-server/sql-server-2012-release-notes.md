@@ -12,12 +12,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 3a6592781464bb148bf31fdaa135d17a159b5e13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 907fc65dc781ed3308e2f6752ab09702c5d7c16a
+ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68136525"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80625497"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 版本資訊
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
   
 **因應措施** ：若要將語意語言統計資料庫設定為語意索引的必要元件，請執行下列工作：  
   
-1.  在 SQL Server 安裝媒體上，找到並執行名稱為 SemanticLanguageDatabase.msi 的 Windows Installer 套件，以擷取資料庫。 若為 SQL Server 2012 Express，請從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=35582) (https://www.microsoft.com/download/details.aspx?id=35582) 下載語意語言統計資料庫，然後執行 Windows Installer 套件。  
+1.  在 SQL Server 安裝媒體上，找到並執行名稱為 SemanticLanguageDatabase.msi 的 Windows Installer 套件，以擷取資料庫。 若為 SQL Server 2012 Express，請從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=52681) (https://www.microsoft.com/download/details.aspx?id=52681) 下載語意語言統計資料庫，然後執行 Windows Installer 套件。  
   
 2.  將資料庫移至適當的資料夾。 若將資料庫保留在預設位置，則必須要變更權限，才能順利地進行附加。  
   

@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55d59d140d8b833cb4b2ea6b11360043710de60d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eb85d1867461ba25bb4fc572634fba443dd14282
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79218048"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665357"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
 
@@ -231,7 +231,7 @@ ms.locfileid: "79218048"
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|
-|分割區型模型 | 您可以使用新增至 `sp_execute_external_script` 的參數，來處理您資料每個資料區的外部指令碼。 此功能支援訓練許多小型模型 (每個資料的資料分割一個模型)，而不是一個大型模型。 請參閱[建立資料分割模型](../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md)。|
+|分割區型模型 | 您可以使用新增至 `sp_execute_external_script` 的參數，來處理您資料每個資料區的外部指令碼。 此功能支援訓練許多小型模型 (每個資料的資料分割一個模型)，而不是一個大型模型。 請參閱[建立資料分割模型](../machine-learning/tutorials/r-tutorial-create-models-per-partition.md)。|
 |Windows Server 容錯移轉叢集| 您可以在 Windows Server 容錯移轉叢集上設定機器學習服務的高可用性。|
 | &nbsp; | &nbsp; |
 

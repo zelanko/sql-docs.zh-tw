@@ -8,18 +8,18 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
-ms.openlocfilehash: e16304765e5f4a51feed4d3d59e790505baa740d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd8e1b948d259b4c233aebcb3614dea5b3e72129
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252028"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664135"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>對安裝有機器學習服務的 SQL Server 巨量資料叢集執行 Python 與 R 指令碼
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-您可以對安裝有[機器學習服務](../advanced-analytics/index.yml)的 [SQL Server 巨量資料叢集](big-data-cluster-overview.md)主要執行個體，執行 Python 與 R 指令碼。
+您可以對安裝有[機器學習服務](../machine-learning/index.yml)的 [SQL Server 巨量資料叢集](big-data-cluster-overview.md)主要執行個體，執行 Python 與 R 指令碼。
 
 > [!NOTE]
 > 您也可以對 [SQL Server 語言延伸模組](../language-extensions/language-extensions-overview.md)的主要執行個體，執行 JAVA 程式碼。 執行下列步驟也能啟用語言延伸模組。
@@ -82,7 +82,7 @@ GO
 
 ## <a name="next-steps"></a>後續步驟
 
-+ [快速入門：使用 SQL Server 機器學習服務，建立及執行簡單的 Python 指令碼](../advanced-analytics/tutorials/quickstart-python-create-script.md)
-+ [快速入門：使用 SQL Server 機器學習服務在 Python 中建立預測模型並計算其分數](../advanced-analytics/tutorials/quickstart-python-train-score-model.md)
-+ [快速入門：使用 SQL Server 機器學習服務建立及執行簡單的 R 指令碼](../advanced-analytics/tutorials/quickstart-r-create-script.md)
-+ [快速入門：使用 SQL Server 機器學習服務在 R 中建立預測模型並計算其分數](../advanced-analytics/tutorials/quickstart-r-train-score-model.md)
++ [快速入門：使用 SQL Server 機器學習服務，建立及執行簡單的 Python 指令碼](../machine-learning/tutorials/quickstart-python-create-script.md)
++ [快速入門：使用 SQL Server 機器學習服務在 Python 中建立預測模型並計算其分數](../machine-learning/tutorials/quickstart-python-train-score-model.md)
++ [快速入門：使用 SQL Server 機器學習服務建立及執行簡單的 R 指令碼](../machine-learning/tutorials/quickstart-r-create-script.md)
++ [快速入門：使用 SQL Server 機器學習服務在 R 中建立預測模型並計算其分數](../machine-learning/tutorials/quickstart-r-train-score-model.md)

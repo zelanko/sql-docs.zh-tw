@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 02c3e6e217ea2918ab36829d6f0cceb4a6269e81
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 11bc21819760bebabd12018030c352bd98f79adb
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190394"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531091"
 ---
 # <a name="get-started-with-big-data-clusters-2019"></a>開始使用 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -55,7 +55,7 @@ ms.locfileid: "74190394"
 
 巨量資料叢集會被部署為一系列相互關聯的容器，這些容器是在 [Kubernetes](https://kubernetes.io/docs/home) \(英文\) 中加以管理。 您可以透過數種不同方式裝載 Kubernetes。 即使您已經具有現有的 Kubernetes 環境，您還是應該檢閱適用於巨量資料叢集的相關需求。
 
-- **Azure Kubernetes Service (AKS)** ：AKS 可讓您在 Azure 中部署受控 Kubernetes 叢集。 您只需要管理及維護代理程式節點。 透過 AKS，您不需要自行為叢集佈建硬體。 它也可讓您輕鬆使用 [python 指令碼](quickstart-big-data-cluster-deploy.md)或[部署筆記本](deploy-notebooks.md)，以單一步驟建立 AKS 叢集並部署巨量資料叢集。 如需如何為巨量資料叢集部署設定 AKS 的詳細資訊，請參閱[設定適用於 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 部署的 Azure Kubernetes Service](deploy-on-aks.md)。
+- **Azure Kubernetes Service (AKS)** ：AKS 可讓您在 Azure 中部署受控 Kubernetes 叢集。 您只需要管理及維護代理程式節點。 透過 AKS，您不需要自行為叢集佈建硬體。 它也可讓您輕鬆使用 [python 指令碼](quickstart-big-data-cluster-deploy.md)或[部署筆記本](notebooks-deploy.md)，以單一步驟建立 AKS 叢集並部署巨量資料叢集。 如需如何為巨量資料叢集部署設定 AKS 的詳細資訊，請參閱[設定適用於 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 部署的 Azure Kubernetes Service](deploy-on-aks.md)。
 
 - **多部電腦**：您也可以將 Kubernetes 部署至多部 Linux 電腦，其可為實體伺服器或虛擬機器。 [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) \(英文\) 工具可以用來建立 Kubernetes 叢集。 您可以使用 [bash 指令碼](deployment-script-single-node-kubeadm.md)來將此類型的部署自動化。 此方法很適合用於您已經具有要用於巨量資料叢集之現有基礎結構的情況。 如需如何在巨量資料叢集中使用 **kubeadm**部署的詳細資訊，請參閱[為 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 部署在多部電腦上設定 Kubernetes](deploy-with-kubeadm.md)。
 
@@ -83,7 +83,7 @@ ms.locfileid: "74190394"
 
 您也可以透過執行 Azure Data Studio 筆記本來部署巨量資料叢集。 如需如何在 AKS 上使用筆記本進行部署的詳細資訊，請參閱下列文章：
 
-- [使用 Azure Data Studio 筆記本部署 SQL Server 巨量資料叢集](deploy-notebooks.md)。
+- [使用 Azure Data Studio 筆記本部署 SQL Server 巨量資料叢集](notebooks-deploy.md)。
 
 ## <a name="next-steps"></a>後續步驟
 

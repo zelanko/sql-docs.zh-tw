@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e4f3a84e5001d7485ab590a66ee497522042824
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0d85376a8ebcd946950062ead62387897c47b537
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658840"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664415"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>在 Windows 上安裝 SQL Server 語言延伸模組
 
@@ -39,7 +39,7 @@ ms.locfileid: "73658840"
 
 + 請勿在網域控制站上安裝 SQL Server 語言延伸模組。 安裝程式的語言延伸模組部分將會失敗。
 
-+ 根據預設，系統會在 SQL Server 巨量資料叢集上安裝語言延伸模組與[機器學習服務](../../advanced-analytics/index.yml)。 如果您使用的是巨量資料叢集，就不需要依照此文章中的步驟進行。 如需詳細資訊，請參閱[在巨量資料叢集上使用機器學習服務 (Python 和 R)](../../big-data-cluster/machine-learning-services.md)。
++ 根據預設，系統會在 SQL Server 巨量資料叢集上安裝語言延伸模組與[機器學習服務](../../machine-learning/index.yml)。 如果您使用的是巨量資料叢集，就不需要依照此文章中的步驟進行。 如需詳細資訊，請參閱[在巨量資料叢集上使用機器學習服務 (Python 和 R)](../../big-data-cluster/machine-learning-services.md)。
 
 > [!IMPORTANT]
 > 安裝完成之後，請務必完成此文章中所述的設定後步驟。 這些步驟包括讓 SQL Server 使用外部程式碼，以及新增 SQL Server 代表您執行 Java 程式碼所需的帳戶。 設定變更通常需要重新啟動執行個體，或重新啟動啟動控制板服務。
@@ -87,7 +87,7 @@ ms.locfileid: "73658840"
 
         - 如果您想要使用自己的 Java Runtime，請選取 [機器學習服務和語言延伸模組]  。 請勿選取 Java。
 
-        如果您要使用 R 與 Python，請參閱[在 Windows 上安裝 SQL Server 機器學習服務](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install) \(部分機器翻譯\)。
+        如果您要使用 R 與 Python，請參閱[在 Windows 上安裝 SQL Server 機器學習服務](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install) \(部分機器翻譯\)。
 
     ![語言延伸模組的功能選項](../media/sql-install-feature-selection.png)
 
@@ -227,17 +227,17 @@ GO
 
 在執行個體層級，其他設定可能包括：
 
-* [SQL Server 機器學習服務的防火牆設定](../../advanced-analytics/security/firewall-configuration.md)
+* [SQL Server 機器學習服務的防火牆設定](../../machine-learning/security/firewall-configuration.md)
 * [啟用其他網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [啟用遠端連線](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
-* [為 SQLRUserGroup 建立登入](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
+* [為 SQLRUserGroup 建立登入](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
 
 在資料庫上，您可能需要下列設定更新：
 
-* [授與使用者 SQL Server 機器學習服務的權限](../../advanced-analytics/security/user-permission.md)
+* [授與使用者 SQL Server 機器學習服務的權限](../../machine-learning/security/user-permission.md)
 * [授與使用者執行特定語言的權限](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql#permissions)
 
 > [!NOTE]

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b0b4a72519a0fa20d0c4a7472760a8f06a9ced32
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbf5f8534b19e93d956531df3c43a04776afe1c5
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79190616"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665372"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -55,7 +55,7 @@ ms.locfileid: "79190616"
 
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services 針對以「1200 (含) 相容性層級」  為基礎的表格式模型資料庫，能提供更佳的效能、撰寫功能、資料庫管理、篩選、處理及其他優化。
-- **[SQL Server R 服務](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** 能將用於統計分析的 R 程式設計語言整合到 SQL Server 中。 
+- **[SQL Server R 服務](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md)** 能將用於統計分析的 R 程式設計語言整合到 SQL Server 中。 
 - 新的「資料庫一致性檢查程式 (DBCC)」  會在內部執行，以偵測可能的資料損毀問題。
 - 可即時查詢外部資料而不需事先匯入的「直接查詢」  功能，現已支援更多資料來源，包括 Azure SQL、Oracle 和 Teradata。 
 - 許多新的「DAX (資料存取運算式) 函式」  。
