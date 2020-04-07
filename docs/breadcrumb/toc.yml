@@ -10,8 +10,8 @@
           tocHref: /sql/analytics-platform-system/
           topicHref: /sql/analytics-platform-system/index
         - name: ML
-          tocHref: /sql/advanced-analytics/
-          topicHref: /sql/advanced-analytics/
+          tocHref: /sql/machine-learning/
+          topicHref: /sql/machine-learning/
         - name: 連線
           tocHref: /sql/connect/
           topicHref: /sql/connect/sql-server-drivers
