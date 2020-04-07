@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: b83ceb3dd5079f82a13e8f1e2aba37fcf5ca5835
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 79ee8bba588f7d429cf0a6fd279ec4b8d0271262
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271424"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742329"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的版本資訊
 
@@ -45,9 +45,9 @@ GeneMi , 2019/03/22.
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
 
-## <a name="1594nbsp-ssdt-for-vs-2017"></a>15.9.4，&nbsp;適用於 VS 2017 的 SSDT
+## <a name="1594nbsp-ssdt-for-vs-2017"></a>15.9.4，適用於 VS 2017 的 SSDT
 
-發行日期：  &nbsp;2020 年 3 月 26 日  
+發行日期：  2020 年 3 月 26 日  
 組建編號：  14.0.16214.0  
 適用於 Visual Studio 2017 的 SSDT。 
 
@@ -106,13 +106,12 @@ P.S.  There is no need to keep this large HTML comment indefinitely.
 | 已知問題 | 詳細資料 |
 | :---------- | :------ |
 | 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 | 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。 |
-| SSDT for Visual Studio 2017 (15.8 以上版本) 不支援設計包含 Teradata 來源/目的地的套件。 | 使用適用於 Visual Studio 2017 (15.8) 的 SSDT。 |
 | 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援 OData v4。 | &nbsp; |
 | 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援使用 ODBC 連接到 Oracle。 | &nbsp; |
 | Power Query 來源未當地語系化 | &nbsp; |
 | &nbsp; | &nbsp; |
 
-## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2，&nbsp;適用於 VS 2017 的 SSDT
+## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2，適用於 VS 2017 的 SSDT
 
 發行日期：  &nbsp; 2019 年 7 月 17 日  
 組建編號：  &nbsp; 14.0.16194.0  
@@ -134,7 +133,6 @@ P.S.  There is no need to keep this large HTML comment indefinitely.
 | 已知問題 | 詳細資料 |
 | :---------- | :------ |
 | 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 | 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。 |
-| SSDT for Visual Studio 2017 (15.8 以上版本) 不支援設計包含 Teradata 來源/目的地的套件。 | 使用適用於 Visual Studio 2017 (15.8) 的 SSDT。 |
 | 無法在套件部署模型中建立或編輯資料來源。 | 無法開啟 [資料來源精靈]。 |
 | 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援 OData v4。 | &nbsp; |
 | 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援使用 ODBC 連接到 Oracle。 | &nbsp; |
@@ -164,7 +162,6 @@ P.S.  There is no need to keep this large HTML comment indefinitely.
 | 已知問題 | 詳細資料 |
 | :---------- | :------ |
 | 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 | 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。 |
-| SSDT for Visual Studio 2017 (15.8 以上版本) 不支援設計包含 Teradata 來源/目的地的套件。 | 使用適用於 Visual Studio 2017 (15.8) 的 SSDT。 |
 | 無法在套件部署模型中建立或編輯資料來源。 | 無法開啟 [資料來源精靈]。 |
 | 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援 OData v4。 | &nbsp; |
 | 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援使用 ODBC 連接到 Oracle。 | &nbsp; |
@@ -198,7 +195,6 @@ P.S.  There is no need to keep this large HTML comment indefinitely.
 | 已知問題 | 詳細資料 |
 | :---------- | :------ |
 | 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 | 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。 |
-| SSDT for Visual Studio 2017 (15.8 以上版本) 不支援設計包含 Teradata 來源/目的地的套件。 | 使用適用於 Visual Studio 2017 (15.8) 的 SSDT。 |
 | 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援 OData v4。 | &nbsp; |
 | 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援使用 ODBC 連接到 Oracle。 | &nbsp; |
 | Power Query 來源未當地語系化。 | &nbsp; |
@@ -218,7 +214,6 @@ P.S.  There is no need to keep this large HTML comment indefinitely.
 ### <a name="known-issues"></a>已知問題：
 
 - 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
-- 適用於 Visual Studio 2017 (15.8.2) 的 SSDT 不支援設計包含 Oracle/Teradata 來源或目的地的套件。 使用適用於 Visual Studio 2017 (15.8) 的 SSDT。
 
 ## <a name="1581nbsp-ssdt-for-vs-2017"></a>15.8.1，&nbsp;適用於 VS 2017 的 SSDT
 
@@ -237,7 +232,6 @@ P.S.  There is no need to keep this large HTML comment indefinitely.
 
 - 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
 - 將套件包含指令碼工作/一般檔案目的地的 SSIS 專案部署至 Azure SSIS，會導致套件無法在 Azure-SSIS 中執行。
-- 適用於 Visual Studio 2017 (15.8.1) 的 SSDT 不支援設計包含 Oracle/Teradata 來源或目的地的套件。 使用適用於 Visual Studio 2017 (15.8) 的 SSDT。
 
 
 ## <a name="158nbsp-ssdt-for-vs-2017"></a>15.8，&nbsp;適用於 VS 2017 的 SSDT
