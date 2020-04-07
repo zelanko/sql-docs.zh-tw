@@ -8,11 +8,11 @@ ms.topic: include
 ms.date: 03/26/2018
 ms.author: maggies
 ms.custom: include file
-ms.openlocfilehash: 71028f45ef89786501af3b625d306587a81c2c05
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 272e8c6df1e8d1f2e3af4b37f4737c5e57ce8694
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74320252"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80501885"
 ---
- ![是](media/yes.png)SQL Server Reporting Services (2017)
+ ![是](media/yes-icon.png)SQL Server Reporting Services (2017)

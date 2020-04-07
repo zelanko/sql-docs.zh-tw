@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/03/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 685397689b390175bd15f6241fc7036004e1e97a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a6298057dbc5d4dcb4dc71cedb166186a95cbddf
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198525"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80530815"
 ---
 # <a name="ssms-query-editor"></a>SSMS 查詢編輯器
 
@@ -272,4 +272,4 @@ Microsoft Database Engine Tuning Advisor (DTA) 會分析資料庫，並提出可
 
 - [自訂功能表與快速鍵](../customize-menus-and-shortcut-keys.md)
 
-- [SQL Server Management Studio 替代項目](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)
+- [SQL Server Management Studio 鍵盤快速鍵](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)
