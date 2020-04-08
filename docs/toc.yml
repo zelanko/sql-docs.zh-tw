@@ -78,6 +78,8 @@
           items:
             - name: 部署指導
               href: big-data-cluster/deployment-guidance.md
+            - name: 部署的資源
+              href: big-data-cluster/concept-architecture-pods.md
             - name: 升級為新版本
               href: big-data-cluster/deployment-upgrade.md
             - name: 自訂部署
@@ -107,7 +109,7 @@
                 - name: 單一節點 kubeadm 指令碼
                   href: big-data-cluster/deployment-script-single-node-kubeadm.md
                 - name: 使用筆記本部署
-                  href: big-data-cluster/deploy-notebooks.md
+                  href: big-data-cluster/notebooks-deploy.md
     - name: 概念
       items:
         - name: 應用程式部署
@@ -190,26 +192,18 @@
               href: big-data-cluster/connect-to-big-data-cluster.md
             - name: 檢視叢集狀態
               href: big-data-cluster/view-cluster-status.md
-            - name: Kubernetes 疑難排解
-              href: big-data-cluster/cluster-troubleshooting-commands.md
-            - name: 使用筆記本管理
-              href: big-data-cluster/manage-notebooks.md
             - name: 使用控制器儀表板來管理
               href: big-data-cluster/manage-with-controller-dashboard.md
+            - name: 管理現有筆記本
+              href: big-data-cluster/notebooks-manage-bdc.md
+            - name: 使用 Spark 執行筆記本
+              href: big-data-cluster/notebooks-tutorial-spark.md
             - name: 安全性
               items:
                 - name: 更新 AZDATA_PASSWORD
                   href: big-data-cluster/change-azdata-password.md
                 - name: 管理使用者的存取
                   href: big-data-cluster/manage-user-access.md
-        - name: Notebooks
-          items:
-            - name: 筆記本概觀
-              href: big-data-cluster/notebooks-guidance.md
-            - name: Notebook 教學課程
-              href: big-data-cluster/tutorial-notebook-spark.md
-            - name: 管理現有筆記本
-              href: big-data-cluster/notebooks-how-to-manage.md
         - name: Spark 作業
           items:
             - name: 在 Azure Data Studio 中提交 Spark 作業
@@ -222,7 +216,9 @@
               href: big-data-cluster/spark-history-server.md
         - name: 疑難排解
           items:
-            - name: Active Directory 部署
+            - name: 針對 Kubernetes 進行疑難排解
+              href: big-data-cluster/cluster-troubleshooting-commands.md
+            - name: Active Directory 群組範圍
               href: big-data-cluster/troubleshoot-active-directory.md
     - name: 參考
       items:
@@ -2555,7 +2551,11 @@
             - name: Java 至 SQL 資料類型
               href: language-extensions/how-to/java-to-sql-data-types.md
             - name: 建立 Java jar 檔案
-              href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
+              href: language-extensions/how-to/call-java-from-sql.md
+        - name: 參考
+          items:
+            - name: 擴充性架構 API
+              href: language-extensions/reference/extensibility-framework-api.md
     - name: SQL Server Native Client
       href: relational-databases/native-client/sql-server-native-client.md
       items:
@@ -7017,8 +7017,8 @@
           href: relational-databases/synonyms/create-synonyms.md
 - name: 報告與分析
   items:
-    - name: 進階分析與機器學習 >
-      href: advanced-analytics/
+    - name: 機器學習服務 >
+      href: machine-learning/
     - name: Analytics Platform System >
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
@@ -7791,8 +7791,6 @@
               href: azure-data-studio/keyboard-shortcuts.md
             - name: 探索 Azure SQL 資源
               href: azure-data-studio/azure-resource-explorer.md
-            - name: SQL Notebook
-              href: azure-data-studio/sql-notebooks.md
             - name: 伺服器群組
               href: azure-data-studio/server-groups.md
             - name: 原始檔控制
@@ -7801,6 +7799,14 @@
               href: azure-data-studio/settings.md
             - name: Windows 驗證 (Kerberos)
               href: azure-data-studio/enable-kerberos.md
+            - name: Notebooks
+              items:
+                - name: 筆記本概觀
+                  href: azure-data-studio/notebooks-guidance.md
+                - name: 如何使用 SQL 核心
+                  href: azure-data-studio/notebooks-tutorial-sql-kernel.md
+                - name: 如何管理筆記本
+                  href: azure-data-studio/notebooks-manage-sql-server.md
             - name: 使用量資料收集
               href: azure-data-studio/usage-data-collection.md
         - name: 延伸模組
