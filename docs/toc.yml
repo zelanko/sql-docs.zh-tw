@@ -8529,6 +8529,14 @@
                   href: ssms/register-servers/registered-servers-f1-help.md
             - name: 使用 SSMS 撰寫指令碼
               items:
+                - name: 產生指令碼
+                  items:
+                    - name: 產生指令碼
+                      href: ssms/scripting/generate-scripts-sql-server-management-studio.md
+                    - name: 產生與發行指令碼精靈
+                      href: ssms/scripting/generate-and-publish-scripts-wizard.md
+                    - name: 指令碼產生精靈支援的物件
+                      href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
                 - name: 查詢與文字編輯器
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
@@ -8650,14 +8658,6 @@
                       items:
                         - name: 空間結果視窗
                           href: ssms/scripting/spatial-results-window.md
-                        - name: 產生指令碼
-                          href: ssms/scripting/generate-scripts-sql-server-management-studio.md
-                          items:
-                            - name: 產生與發行指令碼精靈
-                              href: ssms/scripting/generate-and-publish-scripts-wizard.md
-                              items:
-                                - name: 指令碼產生精靈支援的物件
-                                  href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
         - name: 操作方式
           items:
             - name: 安裝非英文版 SSMS
