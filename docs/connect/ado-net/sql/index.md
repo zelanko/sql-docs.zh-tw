@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: e953d15c46459e0bd076cc85e9bc7bc65cae9d7c
-ms.sourcegitcommit: 700c07312d1ffc034e7a684cbf4265afc7c84993
+ms.openlocfilehash: bacd59fc2fd6cd12476b02c6ea7cc52a9b289bb0
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "78896718"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924342"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server 和 ADO.NET
 
