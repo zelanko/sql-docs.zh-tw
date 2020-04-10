@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2ecacca4-f7bc-4f5d-886a-da7747fdccae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d1598bca994ae41ccee56ca68e12e74e8d18fd0c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: aa52d0bec78b1ca085da043ef526e50a0cb41caa
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67955793"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923693"
 ---
 # <a name="cancelrowupdates-method-sqlserverresultset"></a>cancelRowUpdates 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

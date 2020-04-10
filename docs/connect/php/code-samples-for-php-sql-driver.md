@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3a5d218a-1490-4c61-a20c-4d71f6600c97
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 74f0d10186831675ecccce1d417ea4fd1b88b213
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a15baef89609d6bf3cbe080ba3f7fb5a293cea98
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015147"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80913544"
 ---
 # <a name="code-samples-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的程式碼範例
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

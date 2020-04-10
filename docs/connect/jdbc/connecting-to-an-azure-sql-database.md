@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 58a0b6f11fa28dca0e8aae98cb1794b12e3fc227
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f7ecc575fc444a7f834cd8ed84ee340902199b09
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70155104"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922470"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>連接到 Azure SQL Database
 

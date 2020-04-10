@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 36db9ff7-5819-4827-9803-4a81c99069b3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0d8a81004e846986e7352eabb880404ae3cc8c51
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b622295bb532155988e703816764f9a1ff836b3e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67955596"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923632"
 ---
 # <a name="close-method-sqlserverpreparedstatement"></a>close 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

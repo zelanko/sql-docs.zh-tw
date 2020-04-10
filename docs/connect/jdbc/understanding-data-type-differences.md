@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 906a4abf0768fcad2e5ac31a0ee93345dcc8b30c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 623a665e0292e67d9f38b3fbc7203427a0cad544
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027386"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921218"
 ---
 # <a name="understanding-data-type-differences"></a>了解資料類型差異
 

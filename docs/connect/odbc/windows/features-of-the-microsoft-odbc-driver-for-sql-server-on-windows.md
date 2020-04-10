@@ -9,13 +9,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: v-makouz
-ms.author: genemi
-ms.openlocfilehash: 6e3f7929c17b161d3534474d3d9ad99e559714d2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.author: v-daenge
+ms.openlocfilehash: 2143be3396e16eb61fd36ac5956c11626363bcf5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69653800"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928263"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows 的功能
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

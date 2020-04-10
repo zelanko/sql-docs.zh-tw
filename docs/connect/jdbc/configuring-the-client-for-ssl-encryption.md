@@ -8,14 +8,14 @@ ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 123e847e01c07ab04bf5be97593af838abfdc4bd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0327a4321b141f0433cd9c6c9554c5a48f7381fb
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71713282"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922483"
 ---
 # <a name="configuring-the-client-for-encryption"></a>為用戶端設定加密
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

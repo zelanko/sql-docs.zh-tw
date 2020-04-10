@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 54741cfd-32ac-46c5-8b09-fd60fd8833d7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ae22b0f4149536977dd3ee7c9cc21758e7dcc980
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0aba88276e92db310a64a1f179d97205c3325dbb
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67969609"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80913118"
 ---
 # <a name="supportsconvert-method-int-int"></a>supportsConvert 方法 (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

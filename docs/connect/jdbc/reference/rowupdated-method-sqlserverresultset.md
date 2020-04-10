@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 29303550-294e-4d43-b892-312b42e21271
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9eb0f1bf73f719550ce0a00b3b7f96fab9c2af38
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c75169c8ea36ff4008e8a0237ffeaf9f9a9d0c5e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67975658"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924508"
 ---
 # <a name="rowupdated-method-sqlserverresultset"></a>rowUpdated 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

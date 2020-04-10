@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e609b336-d40e-4d89-9130-6db7e6853541
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61a6eeb405018c2b9eebc01039b0b49a14e6d910
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2263369ab0ac002f2bb9f437e69db93f34127fd3
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67953589"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920498"
 ---
 # <a name="getblob-method-sqlservercallablestatement"></a>getBlob 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

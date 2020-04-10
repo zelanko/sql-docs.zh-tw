@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7740d17d-282f-4f1d-91f9-c68a873b069a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba6c81bb3ce7760427388032cf9a8b216ce06d6e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 322249da1311410f3220d0d782893c6ee09a2efa
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67998601"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919685"
 ---
 # <a name="updateref-method-javalangstring-javasqlref"></a>updateRef 方法 (java.lang.String, java.sql.Ref)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: a59cfe98-c0f4-46ad-9243-62aa56855f1a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d745712e5a8c4b59ea85c1a9b19c2e247c166be3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7248ea77c69d351b02ba59c27a182db8cbcffd65
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67982299"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923312"
 ---
 # <a name="getmaxcolumnsingroupby-method-sqlserverdatabasemetadata"></a>getMaxColumnsInGroupBy 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

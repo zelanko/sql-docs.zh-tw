@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c465ff91-ab96-41de-8917-96c4974c2624
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a0c0d06a4e4d9f6b83ba938dad9abfbf9c58b7fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d781afd23abb13e398ee1f2f99c1428066b6ca60
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67982761"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921471"
 ---
 # <a name="getint-method-int-sqlserverresultset"></a>getInt 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

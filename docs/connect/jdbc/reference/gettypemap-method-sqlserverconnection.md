@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c81bcf9a-2e24-4dfc-8c04-d612e9b7baca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9733494af58ef9fe12655281224be5081c72e205
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3d42a24db0e1e0aad38adbdf1b2ca0ca686a76de
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67978507"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80911034"
 ---
 # <a name="gettypemap-method-sqlserverconnection"></a>getTypeMap 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

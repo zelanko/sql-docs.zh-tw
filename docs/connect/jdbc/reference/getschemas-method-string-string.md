@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 672171ac-976f-4605-9bee-2a5e141d92cb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c5f380123f0fc3f2b23a82b72871622e98c0f185
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b0c96bed6c22706a03983849387662e811584b2c
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67980097"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921717"
 ---
 # <a name="getschemas-method-string-string"></a>getSchemas 方法 (String, String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

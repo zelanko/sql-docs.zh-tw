@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8418167e-cbd2-464d-b118-73cdd76080ed
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 463106c14a63feddb68998affff8131933e81dfa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b08c9c3ed17f63382757dd4b54af59237065b3da
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67954892"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922052"
 ---
 # <a name="executebatch-method-sqlserverpreparedstatement"></a>executeBatch 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

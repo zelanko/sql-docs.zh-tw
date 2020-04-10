@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: fd6be063-08eb-40cf-9201-5a9f62387726
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0265f06d589ea89b38f995f8a9616fd22bcf92ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dd6cece317466ce937a6a5a1d51a60265fa9e90a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67975269"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921233"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream-int"></a>setBinaryStream 方法 (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 18a5732f-a246-4483-bcfb-169f25917467
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3a1b656beb8586e9d35fd5ce9b5b22c50ec21992
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 985050da0eb54a06948e1398055d742b43eaf6e8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67954476"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924199"
 ---
 # <a name="free-method-sqlserverblob"></a>free 方法 (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

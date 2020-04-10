@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6ea23386-201f-41af-8232-225de3476765
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f4ebed9ebad158ea445e726e8d0dbe0b60f57930
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b494e8745e1634ad313cb2da18367550e24b852e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67975506"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920132"
 ---
 # <a name="setasciistream-method--javalangstring-javaioinputstream-int"></a>setAsciiStream 方法 (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

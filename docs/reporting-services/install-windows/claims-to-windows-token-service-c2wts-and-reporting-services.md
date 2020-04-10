@@ -6,12 +6,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 2ed9c2a5070a1034970f2f34f5e7bf88a77e8533
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 49a42d5b84217e5fd2b49cd9de0092336d7933b2
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265005"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002663"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>對 Windows Token 服務 (C2WTS) 和 Reporting Services 的宣告
 
@@ -49,7 +49,7 @@ C2WTS 建立的權杖只能與限制委派 (僅限於特定服務) 及設定選�
 
     **最佳做法：C2WTS 應以自己的網域識別身分執行。**
 
-    * 建立 Active Directory 帳戶，並在 SharePoint 伺服器中，將此帳戶註冊為受控帳戶。 若要深入了解受控帳戶，請參閱 [Managed Accounts in Sharepoint](https://blog.wbaer.net/2010/04/11/managed-accounts-in-sharepoint-2010/) (Sharepoint 中的受控帳戶)
+    * 建立 Active Directory 帳戶，並在 SharePoint 伺服器中，將此帳戶註冊為受控帳戶。
    
     * 將 C2WTS 服務設定為必須透過 SharePoint 管理中心 > 安全性 > 設定服務帳戶 > Windows 服務 - 對 Windows Token 服務宣告，才能使用受控帳戶
 

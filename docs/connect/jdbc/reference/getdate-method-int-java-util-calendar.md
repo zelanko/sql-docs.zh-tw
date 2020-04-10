@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 38ce7b75-2623-4eff-bc18-8cf7193adec8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2ff7567d85800969eeb5c450bbe0a59753491e2f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 826c41b4355bc939d115a2b132639f0b390ae4cb
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67984055"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922723"
 ---
 # <a name="getdate-method-int-javautilcalendar"></a>getDate 方法 (int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3b0a8bbf-9369-4456-9ab8-1434ccacdd7e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3915690475e5ce9321af7fc15498c2bde018c640
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 379d71b2100115bc1192a6f8f744b5afe92e5aed
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67977135"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921091"
 ---
 # <a name="isvalid-method-sqlserverconnection"></a>isValid 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

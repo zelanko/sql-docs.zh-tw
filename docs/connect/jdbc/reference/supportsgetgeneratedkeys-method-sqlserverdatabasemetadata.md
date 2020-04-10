@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4f0e4659-14e7-4743-aed8-1768ee2b29dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a212f6e8c320140edfb8092a9c15649bf9b792db
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a5eb5728ff3e1e30a094487469e3e7401f0f8d10
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67969409"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924363"
 ---
 # <a name="supportsgetgeneratedkeys-method-sqlserverdatabasemetadata"></a>supportsGetGeneratedKeys 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

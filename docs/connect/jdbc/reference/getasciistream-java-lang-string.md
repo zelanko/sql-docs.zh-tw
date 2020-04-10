@@ -13,14 +13,14 @@ apilocation:
 - SQLServerCallableStatement.getAsciiStream(String paramName)
 apitype: Assembly
 ms.assetid: 630b659f-eb36-4277-b04e-9a2e6134f795
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b31fe466494bdcbca279a5229a3ff083ce20dd51
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9b03ac1fd1ebf0ee5efa7084f401b09077b2d4f2
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67954226"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925448"
 ---
 # <a name="getasciistream-javalangstring"></a>getAsciiStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

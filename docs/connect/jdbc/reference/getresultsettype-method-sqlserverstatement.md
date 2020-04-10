@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 260da35f-ddf6-4111-8519-69956ea3072e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7a0293a48a354bba911a11ecf91a17211a9f8a12
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7303524c0e94fb317fb04271cbf5c748856f8731
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67980306"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921821"
 ---
 # <a name="getresultsettype-method-sqlserverstatement"></a>getResultSetType 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

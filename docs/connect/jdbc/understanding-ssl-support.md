@@ -8,14 +8,14 @@ ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5ec3ad142e3dc5e2945afebeb2c9a6c97350672c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 256dcb7a3636d5f7c92ba67d9f950cb6a32b71cc
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71713303"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920293"
 ---
 # <a name="understanding-encryption-support"></a>了解加密支援
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 048a6d8f-7fc4-449e-8161-19268c68f41d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3099d6e5d69d9b16e87c4d2eb14ed7706cf4d5f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 22bcf3a007fdf5828adf544cec400daeda325bd4
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67992956"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925272"
 ---
 # <a name="pdostatementnextrowset"></a>PDOStatement::nextRowset
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

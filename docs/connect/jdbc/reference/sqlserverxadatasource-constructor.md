@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 03649d56-3319-4867-bef1-559dfd221b8b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b76d6e6f88580585f00148d8b01be586e3937b96
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0b3b53d832aa29a36d5574ae7bef5d36dbb53b04
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67970205"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926915"
 ---
 # <a name="sqlserverxadatasource-constructor-"></a>SQLServerXADataSource 建構函式 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

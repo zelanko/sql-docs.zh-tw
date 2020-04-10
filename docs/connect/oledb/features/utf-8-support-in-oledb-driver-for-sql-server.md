@@ -8,14 +8,14 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: reference
 ms.reviewer: v-kaywon
-ms.author: jroth
-author: rothja
-ms.openlocfilehash: 340c1bdd7ab3ff54ffab52aebe08eeab258c7b41
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.author: v-daenge
+author: David-Engel
+ms.openlocfilehash: c18870d1d252ba849e11ce0bd040bbce89bd5855
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257689"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928280"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server 中的 UTF-8 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

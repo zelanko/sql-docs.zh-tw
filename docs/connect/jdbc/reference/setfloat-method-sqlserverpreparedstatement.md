@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 870d0031-6871-4dc0-b03a-fb0a9ff6ab98
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 83221ed88b354eb7b00ae151755129d1a7dc020c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 024f45564495e9d99a2dc60c3fa156723a354491
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67974232"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922283"
 ---
 # <a name="setfloat-method-sqlserverpreparedstatement"></a>setFloat 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

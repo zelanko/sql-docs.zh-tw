@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b50a920c-3839-40f0-9411-c60bbc2a9f34
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32a541ae426a450c23af98cf47fba3f3fff85f1b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 327a455a8763d44173d56591ed0a89871b353f74
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67975248"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924459"
 ---
 # <a name="setbigdecimal-method-sqlservercallablestatement"></a>setBigDecimal 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

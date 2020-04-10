@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 093f6c3b-49a6-4043-9993-bd0482de04dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 42045bee1dca5d2a9c5fc748f5d7a1c5ebbca9de
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 748828e4d58afa1fd9c5ee637e702a2403400b7a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67956018"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923013"
 ---
 # <a name="addbatch-method-javalangstring"></a>addBatch 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

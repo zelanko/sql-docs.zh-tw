@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ed7bbcb8-660b-4e9b-8241-e216c42826f9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9a1700cc8bb2bfb54dd9ddee52da54899f764650
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dc1fd6ebd8c526762bca61b97f6fbb01f4ee93ff
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67982099"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80906927"
 ---
 # <a name="getmaxfieldsize-method-sqlserverstatement"></a>getMaxFieldSize 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

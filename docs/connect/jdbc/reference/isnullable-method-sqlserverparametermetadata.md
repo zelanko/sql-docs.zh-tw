@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: d7e07cff-6fc4-4c9c-8e8f-838c77734bc5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f340a182da1cd232aab70e61c268ba6ec58633db
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bd918413f730cc2fb3cf251b31d8e8555e029fb6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67977528"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925828"
 ---
 # <a name="isnullable-method-sqlserverparametermetadata"></a>isNullable 方法 (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

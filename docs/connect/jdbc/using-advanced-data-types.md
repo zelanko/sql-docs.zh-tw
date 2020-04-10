@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a50bc3e4fae8fe45004374d3dd019a0f65fe544f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 066a56a3c9556ff6e89478a9deeda3716b7d2aac
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027013"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924078"
 ---
 # <a name="using-advanced-data-types"></a>使用進階資料類型
 

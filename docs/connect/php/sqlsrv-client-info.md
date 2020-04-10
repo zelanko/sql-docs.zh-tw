@@ -14,14 +14,14 @@ helpviewer_keywords:
 - API Reference, sqlsrv_client_info
 - sqlsrv_client_info
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 861e686d4a64b1030224b8ec35551fade4188ca5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d17d3a49a241ee1ff042fceb3602b1d84f2cca9b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67992835"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920114"
 ---
 # <a name="sqlsrv_client_info"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

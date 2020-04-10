@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7650e89a-dc8e-43ca-8eb2-f962f1a4b4ae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 49ca65fc7fd2c7768db81460e331d960bad1c5ea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 28b64f5cbc9de40057a9015c19eef96c21f93260
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67977644"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923597"
 ---
 # <a name="isdefinitelywritable-method-sqlserverresultsetmetadata"></a>isDefinitelyWritable 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

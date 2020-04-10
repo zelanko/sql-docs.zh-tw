@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5b42f036-4cb0-449b-8036-b48e0a14609f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 327a22c8e661b35c00d6086d09f2f2a3a83ab8b5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 80ce2ab500e91e3e637cd98002cb8c7bb03b37af
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976336"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80914054"
 ---
 # <a name="position-method-sqlservernclob"></a>position 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

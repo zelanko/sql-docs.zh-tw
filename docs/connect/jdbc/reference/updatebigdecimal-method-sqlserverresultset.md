@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 35445fe4-3b8e-4ec5-a138-067524236dc6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6231368cd83ffdbff9732c8b7886a7dc4af571e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a8cc6f8c7a96b2d4e09b6d8bb80792544e264228
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67985401"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925600"
 ---
 # <a name="updatebigdecimal-method-sqlserverresultset"></a>updateBigDecimal 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

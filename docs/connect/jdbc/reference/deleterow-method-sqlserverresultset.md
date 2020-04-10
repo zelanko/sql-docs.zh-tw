@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: aa04a644-c7c2-4738-8b6e-7fea566d2c16
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc02d31a1d13a3d32f581da6fb3367473cb88bbb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5c6f5cc2d3b58f553f74288c2c86e7b6d9d32d72
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67955131"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922168"
 ---
 # <a name="deleterow-method-sqlserverresultset"></a>deleteRow 方法 (SQLServerResultSet)
 

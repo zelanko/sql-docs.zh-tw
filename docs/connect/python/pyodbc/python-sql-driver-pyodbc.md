@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8e0deaed158a77126033b27c7a407cb25c6e9c6e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 79b66d33252144cd1cf0ee502a98e3c27e33c402
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78866626"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926789"
 ---
 # <a name="python-sql-driver---pyodbc"></a>Python SQL 驅動程式 - pyodbc
 

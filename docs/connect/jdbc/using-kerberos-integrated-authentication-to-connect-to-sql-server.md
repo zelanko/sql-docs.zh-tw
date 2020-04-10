@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cfa4c91dc0d4d40f8cf903301acb2433dcaf6f7a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cf1372f11b278e555b7f8110e4517fd5fc616683
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77004631"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924006"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>使用 Kerberos 整合式驗證連接到 SQL Server
 

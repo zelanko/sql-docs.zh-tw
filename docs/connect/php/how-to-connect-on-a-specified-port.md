@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connecting to the server, specifying a port
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: af055a73904bb8feec92fb2afe93df064a09ab23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 44df1e9c8809fed016a5c041d34f0f46cae83654
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015047"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80916494"
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>如何：在指定的連接埠上連線
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

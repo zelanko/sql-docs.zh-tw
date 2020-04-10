@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 807c4d315341bba288036ad9d7f8425458d64a37
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ce99312dac0fa05af904f1c6a8c5e78c398d70fe
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550154"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924575"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>下載 ODBC Driver for SQL Server
 

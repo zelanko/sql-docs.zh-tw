@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6d83138d-aa45-4d94-9da6-fdfe7ed28edc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5eaaa98b2d79dc29558d32a254d338c9891372f4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 655c660eaf0465c4789d97d869762667b70aeb3a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67954541"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921118"
 ---
 # <a name="forget-method-sqlserverxaresource"></a>forget 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

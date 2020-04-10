@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6dc1273c-bb42-414f-8e11-bb4673e7423a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f8e01c04e8d64ea73a9c89783781c54f40f2d517
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: db38d2767acff9a4405b05b297bb29b788780265
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67971260"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80913484"
 ---
 # <a name="sqlserverdriver-constructor-"></a>SQLServerDriver 建構函式 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

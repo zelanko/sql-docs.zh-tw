@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 21c25443-bd2b-4b60-9798-4efe2c158952
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3de927351c2474c60af8ba1e168b0d7e76f98260
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 60ed53f51ff9fe828944ecfdbadab647501eac5c
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67952962"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923421"
 ---
 # <a name="getcolumndisplaysize-method-sqlserverresultsetmetadata"></a>getColumnDisplaySize 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 69afb3a9-ed56-4191-88b8-bc46c03b817b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a88b6645445b9b9a4c644444ad3996377436112f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f52a740e0dde82b6e9d245c0dfae1c233ae10180
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68001600"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919493"
 ---
 # <a name="useslocalfiles-method-sqlserverdatabasemetadata"></a>usesLocalFiles 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

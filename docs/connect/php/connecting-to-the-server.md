@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c251a239-e0bd-4f45-9207-b76651072dd0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 789fec0bd9299f4d436c664306d380bb9a7da153
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 669a80ce744306cd12379af134951bde7936798e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015141"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920268"
 ---
 # <a name="connecting-to-the-server"></a>連接到伺服器
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

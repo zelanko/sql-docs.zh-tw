@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 552eebd0-4c38-43f0-961f-35244f99109b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fe53c38e1b3f1633be27f4c82a9c2edfe9820495
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9250d30222ce537013959e1433d45f6cb2245a39
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68213664"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922271"
 ---
 # <a name="setholdability-method-sqlserverconnection"></a>setHoldability 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

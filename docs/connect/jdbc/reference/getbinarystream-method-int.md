@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: de22a6c4-1ba3-4ed0-91a2-bf235c2ceec3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e0add171861f2ea9e021b9f9342968baf1601557
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4c68917aefc39cce459a2de12f09ac75a35cf04b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67953704"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920532"
 ---
 # <a name="getbinarystream-method-int"></a>getBinaryStream 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

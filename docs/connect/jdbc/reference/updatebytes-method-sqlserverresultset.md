@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3050c836-fbb3-4475-99e5-05637a48a932
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0d395e016ad6d84edb17fc826f39036be95b6815
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b7213ea48692d42bf3c038d4c2ffd288b7252ccd
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67996853"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923169"
 ---
 # <a name="updatebytes-method-sqlserverresultset"></a>updateBytes 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

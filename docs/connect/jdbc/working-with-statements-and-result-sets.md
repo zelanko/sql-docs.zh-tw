@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a57ffc5c9314f8e84c077b6c15ab88ed5411f028
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 57ecb70e98b4b0a82d18c2ca9e9ac417a53addca
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69025362"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923868"
 ---
 # <a name="working-with-statements-and-result-sets"></a>使用陳述式與結果集
 

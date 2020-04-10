@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8fe6969d51834d0798a530b9cc9926af1b27fec2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f1aa775d7b9d2b4778cfded5be1f5ffe16aca736
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028232"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922518"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>設定 java.sql.Time 值如何傳送給伺服器
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

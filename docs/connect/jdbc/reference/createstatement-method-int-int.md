@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 90dbf639-c3d8-4519-9300-5447c79aec17
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 84afda93fa79d226eec21cb92c16ff5ebbc55fa5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7e260135aa251012edfa98a08d4db3c358c17c51
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67955318"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927662"
 ---
 # <a name="createstatement-method-int-int"></a>createStatement 方法 (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

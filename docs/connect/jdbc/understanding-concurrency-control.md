@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3cbc805ece4cc28a646d93d6607bcc45d65cd563
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 520abf20b52f15458ac36d7a2e617a04970eb66a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027640"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925337"
 ---
 # <a name="understanding-concurrency-control"></a>了解並行控制
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

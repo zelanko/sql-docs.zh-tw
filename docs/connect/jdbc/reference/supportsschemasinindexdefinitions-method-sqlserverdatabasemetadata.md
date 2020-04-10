@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 55ce9e4f-6e3f-482a-93a5-b9ae1b91d7a3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b472c7df1b0bade87dad979421636cb8a386c3bd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3e66e619cbae08a8f9f40e182edfac0a62785897
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67968906"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921722"
 ---
 # <a name="supportsschemasinindexdefinitions-method-sqlserverdatabasemetadata"></a>supportsSchemasInIndexDefinitions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

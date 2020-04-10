@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - security considerations
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1fecf1add70a7b3bd96484cbd3634db2cfda01cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 03b887ef511a4d030a5bb49be6cd4cfef2c9297d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67992895"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922681"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的安全性考量
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
