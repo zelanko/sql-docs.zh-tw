@@ -7,14 +7,14 @@ ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d2f56ed8036602357f8128b0426fbb90c0bab801
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3d9e43b5804c8ec238df28535de68c3588a63e84
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028276"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922541"
 ---
 # <a name="spatial-data-types-sample"></a>空間資料類型範例
 

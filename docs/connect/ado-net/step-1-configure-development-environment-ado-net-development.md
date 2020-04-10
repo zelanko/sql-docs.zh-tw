@@ -8,15 +8,15 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 6ef7c4e9a1040783f535f58e595b0c9840e94cec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b6d1328c7bbdebe90a2e30118f67123214008989
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78895841"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80918213"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>步驟 1︰設定 ADO.NET 開發的開發環境
 

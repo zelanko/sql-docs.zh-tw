@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f56b192a-3255-4215-b552-8e494fbca083
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 125584fd3ad858a4242f6d85e755b3ec04e50ab1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 474e50964628d7361f40ec9d5d296f8b410d7e52
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67979638"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920442"
 ---
 # <a name="getsqlxml-method-javalangstring"></a>getSQLXML 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4fb5a2d3-5db6-4e62-8000-d0f486c7cf46
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 75167fbaf5bf3f24b133c1a7d1a3eb7ca4896c6b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4b45779c744d0524ec9a6bad0482759265cc90a8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67953916"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921135"
 ---
 # <a name="getbinarystream-method-sqlserverblob"></a>getBinaryStream 方法 (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

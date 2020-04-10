@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f89ce642-9eac-4d5b-b1ba-45aa3031ab3b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d9cde443dc067e21ff0385e988a312095a04da0c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6975e9ae9b23c1330407ad2d6a0b3afd2502439e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67983503"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80917164"
 ---
 # <a name="getdouble-method-sqlservercallablestatement"></a>getDouble 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

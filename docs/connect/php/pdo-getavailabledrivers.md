@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: eab561e6-1229-401a-9482-008c23f9a4e6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 632663b813db9a8b9a5b425c717613c24fa58ad5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0a9b24f4f8d0481ebf127a1619968b2c88c9e1d0
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993265"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919282"
 ---
 # <a name="pdogetavailabledrivers"></a>PDO::getAvailableDrivers
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

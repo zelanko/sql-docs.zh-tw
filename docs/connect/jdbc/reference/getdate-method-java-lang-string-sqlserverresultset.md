@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 821058ae-cbe3-4a14-aa02-d55e45491437
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c534c043de11d9123beaaa36f38c4bbd009012c9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: eac14323f765ff23a913ecf4f68d8a277ee66cee
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67983907"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922684"
 ---
 # <a name="getdate-method-javalangstring-sqlserverresultset"></a>getDate 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 58833726-3a7e-46be-ac0e-4c602d865262
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c5f71c162b4be606be1aedcc56a0c3f9edcd29db
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8ba0d7f189d4b2d8fc482ce9df5e479b633cedcb
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67974197"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922276"
 ---
 # <a name="setinstancename-method-sqlserverdatasource"></a>setInstanceName 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

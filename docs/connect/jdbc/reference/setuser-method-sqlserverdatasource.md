@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: d2ea7906-2d10-438d-aa51-f576eea923c7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 945033f96b5c8c36ea7b3d4c75aafa382a057164
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8ebf738906cbc717284a1b109f53de69e9af4eb8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67972069"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80901684"
 ---
 # <a name="setuser-method-sqlserverdatasource"></a>setUser 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

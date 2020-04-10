@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4959a0a9-ae55-4c4e-80a8-21119aaceb92
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 91e006cbf64d28e7cb62c1957b46fc7e1ce7b1aa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f43ee81a59907b8e90be3b08656b327f5b1a2327
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67997210"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922911"
 ---
 # <a name="updateasciistream-method-sqlserverresultset"></a>updateAsciiStream 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

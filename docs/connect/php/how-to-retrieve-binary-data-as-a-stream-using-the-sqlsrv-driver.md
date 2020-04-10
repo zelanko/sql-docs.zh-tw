@@ -11,14 +11,14 @@ helpviewer_keywords:
 - retrieving data, as a binary stream
 - streaming data
 ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3f77439f2369d7fbf4e27603bcbf8c8a2f8d8399
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 631983a89549913863a5bd284e951b518831bc76
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993484"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80916154"
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式以資料流形式擷取二進位資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

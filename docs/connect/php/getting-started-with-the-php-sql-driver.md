@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 66b042c6-479f-4a89-92c8-8c5dce67643f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f10888f25413a7e8637498466e80a0864a7de95c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a375ea8b331a7584917e648633ab59094b4857ac
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993582"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80916650"
 ---
 # <a name="getting-started-with-the-microsoft-drivers-for-php-for-sql-server"></a>開始使用 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

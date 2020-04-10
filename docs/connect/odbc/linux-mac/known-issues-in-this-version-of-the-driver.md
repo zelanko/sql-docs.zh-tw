@@ -7,14 +7,14 @@ ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - known issues
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 9746456a4a38f2a19e485d1e17786073b97b243e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0486cea609f0ab6bcc1261d6cad26f47f123476f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286432"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80912494"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Linux 和 macOS 上的 ODBC 驅動程式已知問題
 

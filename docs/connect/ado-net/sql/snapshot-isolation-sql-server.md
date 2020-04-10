@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 35b19b89a0539d9cc07bca0b1f09efda71cd5624
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 95f76cd9e4009292ec071a5faa2751b7afafc716
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896618"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920003"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server 中的快照集隔離
 

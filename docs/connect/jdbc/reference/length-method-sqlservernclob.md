@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: dd1fb351-b4f2-4ebe-80a0-8bafb0637906
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e32b559d43e44e75d4f87ecf99cfd871727c9934
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: eedd18dba38a2dbb868ecb0218624b733e038a48
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976857"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80914884"
 ---
 # <a name="length-method-sqlservernclob"></a>length 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8c2973e6-d57f-4f64-b812-350ce4098ce6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 848400e46992369d10c57170a1aeccbeac402f84
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d0f3328c5fcb8d9afd2040317dfa377b5668e23b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67953396"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921608"
 ---
 # <a name="getbytes-method-int"></a>getBytes 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

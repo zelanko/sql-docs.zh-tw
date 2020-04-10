@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4508d90f-c3c4-4eac-8001-fb0b93b66734
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 57bf0cfc206319bf6afcb09435e8787499266c0c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7734312880139695fd7f13bec9e85f39fa86ae2f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67982921"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921481"
 ---
 # <a name="getholdability-method-sqlserverresultset"></a>getHoldability 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d6a21d01-6d8e-4449-9fdf-ddb09bd4fdb8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9ccaa98c30f3e50de8fe3858246d274f59a83462
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c6b7f624d62bdd9cc0d1e565f63dc50b37299106
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67998780"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80903089"
 ---
 # <a name="updatencharacterstream-method-sqlserverresultset"></a>updateNCharacterStream 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

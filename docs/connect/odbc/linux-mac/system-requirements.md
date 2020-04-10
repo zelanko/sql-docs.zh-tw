@@ -12,14 +12,14 @@ helpviewer_keywords:
 - system requirements
 - requirements
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4a6dd622a3926c66dbb6f357663c05e40afc9e47
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2459a9f57f3591db1107994d0b18770690f22724
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79526763"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921172"
 ---
 # <a name="system-requirements"></a>系統需求
 

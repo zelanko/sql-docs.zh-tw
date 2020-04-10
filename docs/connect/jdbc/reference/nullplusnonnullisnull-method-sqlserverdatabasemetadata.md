@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c594736f-3a9b-463f-bbd8-eaf9221230ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 314c3bd05db19d795ce203308b9a9ab87a10e338
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1ca1f9e68e381789ab4bd32792188207a611a569
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976735"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80914694"
 ---
 # <a name="nullplusnonnullisnull-method-sqlserverdatabasemetadata"></a>nullPlusNonNullIsNull 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

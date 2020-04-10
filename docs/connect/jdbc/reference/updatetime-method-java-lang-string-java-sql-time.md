@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: fbbcef68-b903-4cfd-911c-a7e239d17c74
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2d0c97f49c4d865b5f0aa99b602e5524a0a97b1e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cad6f8b61c1f519b74141a05bb26819966ae5ec8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67998183"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919562"
 ---
 # <a name="updatetime-method-javalangstring-javasqltime"></a>updateTime 方法 (java.lang.String, java.sql.Time)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

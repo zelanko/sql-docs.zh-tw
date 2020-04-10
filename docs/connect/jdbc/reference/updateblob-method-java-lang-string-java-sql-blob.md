@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: fdd47885-c7ec-4599-a645-ad0e082586f4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 945595e147825b0c9c026166fa14b2bbda90a20c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 94b1e3d9c008dab1f4092a953a8f749af120ffcc
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67997089"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80903224"
 ---
 # <a name="updateblob-method-javalangstring-javasqlblob"></a>updateBlob 方法 (java.lang.String, java.sql.Blob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

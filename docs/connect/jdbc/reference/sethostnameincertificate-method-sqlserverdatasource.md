@@ -13,14 +13,14 @@ apilocation:
 - setHostNameInCertificate Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: 2bcf4f2e-a103-4374-abc4-ffad4ce8e3c0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: deeab57c573311db36eabdbad60c3cb2fbda9a47
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 19e31723533c7e26e3afcbca4f8298141747fe82
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67974221"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922304"
 ---
 # <a name="sethostnameincertificate-method-sqlserverdatasource"></a>setHostNameInCertificate 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
