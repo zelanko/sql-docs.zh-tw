@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: be01ce56-8f13-437b-8de6-246cda5f7830
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cbe655691ed898dfbb8eac5da5bb28d4d6cde686
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2639808aab1a16b36e50c9bbb7cdf831711212d5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67981501"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80905584"
 ---
 # <a name="getnclob-method-javalangstring"></a>getNClob 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

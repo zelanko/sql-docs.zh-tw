@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2cd2bed9-adf4-4bcd-ae5a-d0e3428bc709
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 53c47f912711a486ea60cf0181411e7ed68029ab
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 548fcee8a4ea2af139fd379fa455fec3571acf87
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67982146"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80906876"
 ---
 # <a name="getmaxcursornamelength-method-sqlserverdatabasemetadata"></a>getMaxCursorNameLength 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

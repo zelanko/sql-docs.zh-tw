@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5ed91f1b38f68715cd174a96cb2f0364fc060482
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d27c53199a549c05c1b0fce65ab0d538022f48ea
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027478"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80902394"
 ---
 # <a name="understanding-data-type-conversions"></a>了解資料類型轉換
 

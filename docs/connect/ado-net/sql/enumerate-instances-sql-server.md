@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: bd0dbbedcb2fa33af80e0a1a1d593bf7df27edb6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d3dcb896975d33e4d2e59e438cf03dfe41a77860
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896952"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80907154"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>列舉 SQL Server 的執行個體 (ADO.NET)
 

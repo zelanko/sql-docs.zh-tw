@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 93d9d7e6-54b6-4d86-8f8c-386c6057e85e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4245dc4314d955aefc3538a38dcd2192403fed9a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d129913a4946d5887a100bd4a295c344a951c2f0
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67975720"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80903775"
 ---
 # <a name="rollback-method-sqlserverxaresource"></a>rollback 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

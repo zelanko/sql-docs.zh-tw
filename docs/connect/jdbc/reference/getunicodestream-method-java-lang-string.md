@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e8ea50a3-804a-4752-96e5-eb3d521f93c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: be721dad48fae3f83aa720516d0979d9f8ff26df
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9a2c9105a14ec76f6f51ecfc7d9236c4be8c2b33
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67978415"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80910919"
 ---
 # <a name="getunicodestream-method-javalangstring"></a>getUnicodeStream 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

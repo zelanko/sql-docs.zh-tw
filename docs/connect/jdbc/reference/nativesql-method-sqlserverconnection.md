@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2188a6e1-792f-47bd-b207-1d01741231b2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b4e5d97f3b4b47e111da7c4a9efd9edeb87f168c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8b277bd02624ea22030cb36c54588476ffe8d058
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976797"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80914754"
 ---
 # <a name="nativesql-method-sqlserverconnection"></a>nativeSQL 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

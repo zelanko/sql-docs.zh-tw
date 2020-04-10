@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b6b625ea-c7ce-4a32-a9e0-6d2b4321bfd8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 406e7f7cbf2cd7656fe50531027c8566cb6c3243
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cd402193bf666ca7bacadafb44a177ddda71777b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67975767"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80904060"
 ---
 # <a name="releasesavepoint-method-sqlserverconnection"></a>releaseSavepoint 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 5c51218f-c6e8-49f4-ad09-292e849ca43a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aebb22867f2efb3b31d235f1df9ae73c85bab5e8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7b87be0576b3ce5175c91ac3b84cc037febda81f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67981965"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80906444"
 ---
 # <a name="getmaxtablenamelength-method-sqlserverdatabasemetadata"></a>getMaxTableNameLength 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

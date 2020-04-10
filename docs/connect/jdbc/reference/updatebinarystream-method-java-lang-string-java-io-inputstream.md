@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 56883144-26a0-4f45-ad36-4f616369af3e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc247cd3f97aeebeb6f52e1b4f3f36d8d97f6548
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 66063c90e3a2f161589a5a70b22d6185fea5b2b8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67997156"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80903654"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream"></a>updateBinaryStream 方法 (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

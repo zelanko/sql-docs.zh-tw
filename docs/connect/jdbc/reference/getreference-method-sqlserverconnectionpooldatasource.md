@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8c48de91-de55-4f25-a5f1-36a8e8c4629e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: afb317bfcca6ccea14c9a25c98e1c0bfbe29e19f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 55df93254976bcef4d7346267f4f4da0884e1cdc
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67980496"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925103"
 ---
 # <a name="getreference-method-sqlserverconnectionpooldatasource"></a>getReference 方法 (SQLServerConnectionPoolDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

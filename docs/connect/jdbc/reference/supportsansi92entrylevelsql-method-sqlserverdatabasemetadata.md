@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: a3fffc08-7254-4af7-bbae-8ff591fbd5ec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85e7f1781fe6b42cdd8057978ed22456fe60382b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a67def3f71e0298f00382f13bb0c7925adf61ba6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67969848"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80915524"
 ---
 # <a name="supportsansi92entrylevelsql-method-sqlserverdatabasemetadata"></a>supportsANSI92EntryLevelSQL 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

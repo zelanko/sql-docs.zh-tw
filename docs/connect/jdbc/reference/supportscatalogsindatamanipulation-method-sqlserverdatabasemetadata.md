@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ee1af47a-4c04-4391-83a5-54ced80218c8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bed23d0a0781de7c384e61cb09903e2ab2136268
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: acb73920966dec17b610ece14e3a6ed572913c43
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67969738"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80915195"
 ---
 # <a name="supportscatalogsindatamanipulation-method-sqlserverdatabasemetadata"></a>supportsCatalogsInDataManipulation 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

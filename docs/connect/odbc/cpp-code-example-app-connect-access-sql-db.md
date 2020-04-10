@@ -7,14 +7,14 @@ ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 541757a8a6919577cfe54c7dd6efa461ae0f1449
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d4f3df5ecdefffc8c9d5ae1cc43ba9210f458c41
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67690552"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80907656"
 ---
 # <a name="c-odbc-example-application-accesses-a-sql-database"></a>C++ ODBC 範例應用程式會存取 SQL 資料庫
 

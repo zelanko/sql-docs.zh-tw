@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f5291217-2a0c-4daa-9e39-9f348fc911f7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d125e9dad6d5c6f82ff177abdaced9d784295c11
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7c69570a365d27728e2cbaaac729b1bd824ba096
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67981919"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80906374"
 ---
 # <a name="getmaxtablesinselect-method-sqlserverdatabasemetadata"></a>getMaxTablesInSelect 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

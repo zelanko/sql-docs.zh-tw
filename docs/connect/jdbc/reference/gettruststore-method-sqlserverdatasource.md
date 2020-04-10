@@ -13,14 +13,14 @@ apilocation:
 - getTrustStore Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: 8f5850e4-8627-49a8-ba0e-b1f4014322a5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f35a71cc741411f3aad3408d366f3f70218fecdf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 43b537a20cf39d64e06baf6f0cae78ed46526915
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67978518"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80911155"
 ---
 # <a name="gettruststore-method-sqlserverdatasource"></a>getTrustStore 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

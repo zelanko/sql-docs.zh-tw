@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e0e2bd28-6949-47dc-b9dd-145ffb337069
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ffe17993b3a03563ec20e8f509e6eae2f6ed47cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5ab4b8639502f24f3bbe8946f19e5f5f2f197828
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67977796"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80909744"
 ---
 # <a name="isbeforefirst-method-sqlserverresultset"></a>isBeforeFirst 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

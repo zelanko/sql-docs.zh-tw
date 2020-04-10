@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: fd19fbb8-a878-4d98-a584-e4969d649844
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 34eb40d6c36f5c1586ac690de5e9fc354c8fd1f3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 198bdc0fa291dd0c1786919ecaf2b6bb55aa36b1
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67973867"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80901224"
 ---
 # <a name="setncharacterstream-method-javalangstring-javaioreader"></a>setNCharacterStream 方法 (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

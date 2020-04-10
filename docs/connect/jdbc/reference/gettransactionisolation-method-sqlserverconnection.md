@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 179772e9-6572-4ce5-83c5-ab2b196cee67
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4b9a8b537e110f220203c0cda7d3ea27e8a6385e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 96b7636b1987a6b210af06436dee4b7a9ad788f2
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67978677"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80911403"
 ---
 # <a name="gettransactionisolation-method-sqlserverconnection"></a>getTransactionIsolation 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

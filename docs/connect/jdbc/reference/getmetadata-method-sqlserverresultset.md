@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9dcdbf69-1d47-422c-842e-0bed5afdcb93
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 91cc095971d4cf4b613d1a9447ee10b6c8a65d75
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6437f792e9fd8c7d9c9c4f355a27d79b9404431b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67981873"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80906336"
 ---
 # <a name="getmetadata-method-sqlserverresultset"></a>getMetaData 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

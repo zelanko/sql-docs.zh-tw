@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: bbac1370-fbf6-4450-8599-4ed3b4db3fc6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c7df5113dfe83d715408d6ccdcede00482df1438
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 88c3cf32648145f5673e2d353fead82cbe691258
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67969863"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80915634"
 ---
 # <a name="supportsaltertablewithaddcolumn-method-sqlserverdatabasemetadata"></a>supportsAlterTableWithAddColumn 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

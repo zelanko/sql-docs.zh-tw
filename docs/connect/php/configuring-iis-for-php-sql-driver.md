@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - configuring, Internet Information Services
 ms.assetid: d2dc75d3-9bf7-481c-85f2-8b6310b21461
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 150addd664870e5441c888b6bc357f8fb4d92b20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 31d46254f153742ff3923aa2484872aedb7cf077
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015165"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80907334"
 ---
 # <a name="configuring-iis-for-the-microsoft-drivers-for-php-for-sql-server"></a>為 Microsoft Drivers for PHP for SQL Server 設定 IIS
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: cb1d53c9-27f1-4880-8f1d-c32df0d2fb27
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ce11a1918846d028fd0dd3d9dc10e588dbe3f31
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2d8bfa530d37e40c71d4516a07b0d1f676ebc84e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67977959"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80910151"
 ---
 # <a name="getxaconnection-method-sqlserverxadatasource"></a>getXAConnection 方法 (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

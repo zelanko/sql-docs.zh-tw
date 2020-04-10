@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 1bb909f1-4a96-4be1-adea-36c8d9703112
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 90aa44eda2af60ffdc73a65e01b3ae12b949d79f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e85bffd557a54df44f787716c2660d6e22664796
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67998802"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80902865"
 ---
 # <a name="updatenstring-method-int-javalangstring"></a>updateNString 方法 (int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - multiple active result sets, disabling
 - MARS, disabling
 ms.assetid: 1912ad05-d0a4-40ff-8888-0d85bb36a807
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c5edf63a654b21d080e48f93c71553b8909ce8fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2fb65eee416fd82ae36b020049d318a2c5d2333d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993565"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80916324"
 ---
 # <a name="how-to-disable-multiple-active-resultsets-mars"></a>如何：停用 Multiple Active Resultsets (MARS)。
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

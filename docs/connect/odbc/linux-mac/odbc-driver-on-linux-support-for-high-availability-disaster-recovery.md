@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 08fb8cc6e54fff4b315a0a98ace046a49b2673a3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b738bac760211ff8b24ef1e5fdbc027fd966f166
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68008776"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80912434"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux 和 macOS 上的 ODBC 驅動程式 - 高可用性和災害復原的支援
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

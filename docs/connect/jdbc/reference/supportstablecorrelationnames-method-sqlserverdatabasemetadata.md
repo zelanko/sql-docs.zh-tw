@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 85d4eb84-6d0a-4671-b6e5-a7085e086fcf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4afcc9c8f4554375f2c87ccc0c70302c84aaa2f0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5d55b8407614d45e0231bf16576cdd85a4241496
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67968681"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80908754"
 ---
 # <a name="supportstablecorrelationnames-method-sqlserverdatabasemetadata"></a>supportsTableCorrelationNames 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
