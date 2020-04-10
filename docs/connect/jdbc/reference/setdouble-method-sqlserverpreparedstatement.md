@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 295c16b7-1532-40e1-93ef-64462a2c0ab6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 03db1f238aba30ab28d8277afc180fdaf432fd13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 789a9b3319638b2cb8d9f3f7ba03aee896ee3497
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67974323"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919972"
 ---
 # <a name="setdouble-method-sqlserverpreparedstatement"></a>setDouble 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

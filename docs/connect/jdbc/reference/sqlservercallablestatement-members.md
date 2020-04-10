@@ -9,14 +9,14 @@ ms.technology: connectivity
 ms.topic: conceptual
 apitype: Assembly
 ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69a12437e3b1e611cf9e48d60c9fd77cd02f63bc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c964e08ab62e67764197cd9f1ebc64e6ad735dee
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67971872"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920414"
 ---
 # <a name="sqlservercallablestatement-members"></a>SQLServerCallableStatement 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

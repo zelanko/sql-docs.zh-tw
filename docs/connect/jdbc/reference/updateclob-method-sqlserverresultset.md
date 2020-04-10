@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e841f9a6-e94f-4552-a0e2-aefe3d84faf0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5f5f5c65d8ce86ac0f48c3a2a459e0cffec3096b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a1b41a6573478439589eb554b48b125a13c6a533
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67999254"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919868"
 ---
 # <a name="updateclob-method-sqlserverresultset"></a>updateClob 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

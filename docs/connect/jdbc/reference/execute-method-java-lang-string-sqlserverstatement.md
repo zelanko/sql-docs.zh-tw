@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 64ac78b8-d5b3-4134-9b72-d2b0c52168a2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c305ccf63e1bb8b1253eb8fb0219278d8720cb5b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 98adf628c3cc84442d34d6f1f07431a3c5918a31
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67954966"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922082"
 ---
 # <a name="execute-method-javalangstring-sqlserverstatement"></a>execute 方法 (java.lang.String) (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

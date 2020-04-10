@@ -10,15 +10,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 609ff3f20be4ecfdadb399df0b68504a22367514
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: db1258fec30ad326babdf7268dff3c17c212efed
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78895910"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80918258"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>SqlClient 驅動程式支援生命週期
 

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2ccec113-ae1b-45b8-a334-13eae04941f3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a87f82805cad4ce781345ace8b97f4539aa675ad
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 15549c3f238aaa1855c24f05555964686dfb2a00
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67983430"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80917102"
 ---
 # <a name="getdrivername-method-sqlserverdatabasemetadata"></a>getDriverName 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

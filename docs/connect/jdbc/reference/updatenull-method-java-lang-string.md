@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: fb3e5cde-30e1-4c95-adf0-d5b6c1f0da95
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 98ae88f84e31f6120767520046d442f998024732
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 20e12781b8b8d19874bb2abeca8fcc2a331d515e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67998508"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919773"
 ---
 # <a name="updatenull-method-javalangstring"></a>updateNull 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
