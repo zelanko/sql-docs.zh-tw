@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7f83b514-6e76-4f37-baf3-a10db2010e7c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b736ed84e0fed6794b036d22af84912f240539fb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ec01618ffa24c980733642ca66df5af0f234d172
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67977345"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924740"
 ---
 # <a name="isqlserverstatement-interface"></a>ISQLServerStatement 介面
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -7,15 +7,14 @@ ms.prod_service: connectivity
 ms.reviewer: genemi
 ms.technology: connectivity
 ms.topic: conceptual
-author: MikeRayMSFT
-ms.author: mikeray
-manager: kenvh
-ms.openlocfilehash: 63681ee474d4993e248bf02dcabd9065317ffa39
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: efa536024021e1182ad565fe534d3e706f4e7eff
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028060"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80917953"
 ---
 # <a name="fips-mode"></a>FIPS 模式
 

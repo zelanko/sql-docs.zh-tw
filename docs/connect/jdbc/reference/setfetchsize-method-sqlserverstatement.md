@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 760e555e-9667-4b40-b0ba-778026ff2923
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 58af3c6d8b9d0967ff370047e49a377bf52ec985
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9fa7be5cc2f0e3f39e3d89881d38fb91a525b545
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67974235"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922312"
 ---
 # <a name="setfetchsize-method-sqlserverstatement"></a>setFetchSize 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d38cb92fbbf83f9b8a110d2e17f60af70c177ab4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f29e7e101a0a295266ee5cfa96fbaa84f515e776
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69025443"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923892"
 ---
 # <a name="working-with-result-sets"></a>使用結果集
 

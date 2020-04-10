@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ec24963c-8b51-4838-91e9-1fbfa2347451
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 89547655fd734ca9e6e340d94832dea5816f2733
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c749554d3f95ca873c9bee61b8f6c748ccbf7906
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67970373"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926998"
 ---
 # <a name="sqlserverstatement-class"></a>SQLServerStatement 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

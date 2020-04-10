@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9dfa7781-d72f-407a-a8d4-1c78c9446d09
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fc093dbd271a03f2efe4641986ced16ae1471f31
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e095e139cb4f37fe44c3107d4f3a8f30f038bf06
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67975527"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920172"
 ---
 # <a name="setasciistream-method-int-javaioinputstream-long"></a>setAsciiStream 方法 (int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

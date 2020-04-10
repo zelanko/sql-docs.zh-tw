@@ -14,14 +14,14 @@ helpviewer_keywords:
 - sqlsrv_close
 - API Reference, sqlsrv_close
 ms.assetid: 6ac6209c-a134-4f8f-b88b-8eefaa1cbc7f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b4610cfd971c7de8f729902bc09237b47e19dad
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e0ebeee9f527d5f47aa75ef992ef309d58fa9286
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67935819"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927923"
 ---
 # <a name="sqlsrv_close"></a>sqlsrv_close
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

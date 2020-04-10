@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6d390ec5-9ee2-49c4-b661-a93b55691dd1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 08df5c1c52712e8180d18dbe930cea271ca03e64
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0a8a914765c9a9a10cc483aecd9a6af28e6ec9f2
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67979274"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926142"
 ---
 # <a name="getsystemfunctions-method-sqlserverdatabasemetadata"></a>getSystemFunctions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

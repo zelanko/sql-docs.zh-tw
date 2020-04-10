@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 11378d51cb6d88858ebba069dba161dbbb494f27
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f96b7f96b64452e37804ceeabb05699a33f63588
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028398"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922562"
 ---
 # <a name="connecting-and-retrieving-data"></a>連線及擷取資料
 

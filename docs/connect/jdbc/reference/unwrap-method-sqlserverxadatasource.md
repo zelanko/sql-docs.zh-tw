@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d97c99b3-2224-4abb-8b32-40aff49fe759
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3f7406bce05278cad83b28b14f95a241b3eff026
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6b1ef2e7b05361ece8e54847b3c4d0d1df5ace08
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67986053"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926074"
 ---
 # <a name="unwrap-method-sqlserverxadatasource"></a>unwrap 方法 (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

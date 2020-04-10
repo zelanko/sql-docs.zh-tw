@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: dc73d1c3-e756-43af-b1fc-ac438cbd0965
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6e96e0c9c957522db6a766b3491d394b7337d7b6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7195d5c5bf4efb593e53dea6e5404cc8adb70830
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67954986"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922122"
 ---
 # <a name="execute-method-javalangstring-int"></a>execute 方法 (java.lang.String, int[])
 

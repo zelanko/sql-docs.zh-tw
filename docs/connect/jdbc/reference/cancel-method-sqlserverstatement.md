@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 276bd9c1-9329-4fc9-9622-ed673c83a12d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 04f3461743801e69248362710197ce2d4c31384f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b19ff8669843e93dc7c220e3e6b48cbd5bab7d06
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67955786"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923719"
 ---
 # <a name="cancel-method-sqlserverstatement"></a>cancel 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 66eb4e10-c375-4b31-ac46-3ba1d9dbf6a0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e1f13c3fedc3cfaa0645eec5a769ed482b339563
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0a2a8ed081f89e5acd9d09f96fada5f5bc718057
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976007"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80913804"
 ---
 # <a name="previous-method-sqlserverresultset"></a>previous 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

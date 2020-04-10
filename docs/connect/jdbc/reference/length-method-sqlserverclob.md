@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 18bea01e-7d3d-40aa-961f-2318513fab1c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 634e38cf6dabea5ffb65ebb3d8c442fc0b844f6a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d5f00c55bf8d1faa2ecfcd15dfebf7f392ead122
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976872"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80914904"
 ---
 # <a name="length-method-sqlserverclob"></a>length 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

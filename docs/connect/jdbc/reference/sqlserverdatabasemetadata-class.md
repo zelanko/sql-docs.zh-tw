@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8b8049d0-8c6d-4476-866b-098709f37eec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4e30b8c3a841816e386b0cb05fd8522cfb09958c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 844cb04ca70671459146962456f364d9eabff475
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67971576"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921935"
 ---
 # <a name="sqlserverdatabasemetadata-class"></a>SQLServerDatabaseMetaData 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

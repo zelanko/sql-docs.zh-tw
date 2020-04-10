@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc81bae599bcd9e401aad7e610a7c43ed1a0dcec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 09257402146c8e2354d54a04d202f2daf697bb3d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027879"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928228"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server
 

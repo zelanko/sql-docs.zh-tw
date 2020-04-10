@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a245c0c3-d4a2-4fc6-8adc-0c91091716eb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a43abea56433bf5f73bac2daa00b0abc748b6bc7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ad4a2026355d71e6d046ee4882134f6523de766a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67970366"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927020"
 ---
 # <a name="sqlserversavepoint-methods"></a>SQLServerSavepoint 方法
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

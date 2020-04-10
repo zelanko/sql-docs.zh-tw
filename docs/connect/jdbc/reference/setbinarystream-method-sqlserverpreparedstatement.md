@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 2adb2b88-96d6-4645-86d0-0388c8186691
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d74bcdd1e3e50ce09451a6fc401d329d07751c6e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 82247317859792c9509e4f851ac195a43fb2e8c3
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67975086"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923551"
 ---
 # <a name="setbinarystream-method-sqlserverpreparedstatement"></a>setBinaryStream 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

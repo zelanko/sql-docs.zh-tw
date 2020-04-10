@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connecting to the server, SQL Server Authentication
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e7d894b48fc6ec82450c42599f13725f0cd8ee1a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 10028beb86526f553a959376804d855513f0336c
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993555"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80916444"
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>How to: Connect Using SQL Server Authentication
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

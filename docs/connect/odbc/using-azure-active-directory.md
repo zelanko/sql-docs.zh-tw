@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: af611e9c59e34030d594ecf6bcd8031fb5b253cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f572479921eef0f8957bba6890d0d92415b7c44b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79526813"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928341"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>搭配 ODBC 驅動程式使用 Azure Active Directory
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

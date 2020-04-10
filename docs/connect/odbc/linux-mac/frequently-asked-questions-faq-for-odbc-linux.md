@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 65bfd6d2-c83d-4528-a5e1-a85b125a4f4a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cab35e67c7c93ce0634a2bf1cd5a8c3c5677179d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b266913d6e8e1a073c8831880ddcd4938b2b9dc9
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79058784"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921922"
 ---
 # <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>ODBC Linux 和 macOS 的常見問題集 (FAQ)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ff1d47e4-572a-4169-a631-ac261f7642b3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22177442dcec9fb873d4a824b73845ce6fc9bfdf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 969b254344cd1351d7a146c4dd05788cde713219
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67954123"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925391"
 ---
 # <a name="getasciistream-method-sqlservernclob"></a>getAsciiStream 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

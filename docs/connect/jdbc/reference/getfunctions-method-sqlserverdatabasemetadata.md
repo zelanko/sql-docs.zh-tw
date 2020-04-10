@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b799fb56207294041c52fe455ad2acceff508d3a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cafef140d505197bfe1993f65ef17d4cb53e19f5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67982951"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920324"
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>getFunctions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

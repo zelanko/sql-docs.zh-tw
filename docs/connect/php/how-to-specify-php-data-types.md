@@ -11,14 +11,14 @@ helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ae00c01e962da05015a5132608915fc9d70258f4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8453b2cd2db36ed2c69b8ada941bcde0050a0759
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67936390"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80915794"
 ---
 # <a name="how-to-specify-php-data-types"></a>如何：指定 PHP 資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

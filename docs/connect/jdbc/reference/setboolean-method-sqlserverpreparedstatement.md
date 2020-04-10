@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 63397a19-03a2-44bb-b661-7d62c95b6e4e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 62c639c73b629559c36300886781146f3cd14057
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9742112df6732618eeef07c477af98ff033368fc
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67975018"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928803"
 ---
 # <a name="setboolean-method-sqlserverpreparedstatement"></a>setBoolean 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

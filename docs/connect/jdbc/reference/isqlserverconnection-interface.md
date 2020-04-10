@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 031c01e2-2c65-4fe4-9700-fdbcc7a39f30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2fbe3b6c1721720720b06bdcf4122a289589e639
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4d2f63e094fa4ea4598163d419e221ad5a41b288
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67977457"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920691"
 ---
 # <a name="isqlserverconnection-interface"></a>ISQLServerConnection 介面
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

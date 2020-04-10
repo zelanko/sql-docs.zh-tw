@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e164c8ac-a0ae-4638-affb-ed454e7c0708
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 14e7341e2245a5fcdd6fa8a314e2845236e45d99
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8823b4a5adf39c962f0e8e20c1fd50867e445f9f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67975577"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920203"
 ---
 # <a name="setapplicationintent-method-sqlserverdatasource"></a>setApplicationIntent 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

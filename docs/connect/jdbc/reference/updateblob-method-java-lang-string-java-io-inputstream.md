@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 018cd71b-4b58-49a7-990e-d28dbb12da70
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 23eaa798e05ae9653695cc33753e14cb57b72c61
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4371d10398ee70f337662f51416dcb13305b6c83
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67997106"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922802"
 ---
 # <a name="updateblob-method-javalangstring-javaioinputstream"></a>updateBlob 方法 (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

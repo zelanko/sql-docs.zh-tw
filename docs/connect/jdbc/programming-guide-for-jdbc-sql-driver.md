@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 99f0db69-ce1a-49cf-9c24-0b9abfa4e0c3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0a2ee49a7df1eca698c4a711527fd5ce7f21eb3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bb39448beac608280fc7bbaadc2def6679d30a64
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027827"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923732"
 ---
 # <a name="programming-guide-for-jdbc-sql-driver"></a>JDBC SQL 驅動程式程式設計指南
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

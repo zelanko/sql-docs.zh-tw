@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 55c51fff-119d-445f-8732-c1569966e559
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d256f65c191ff0f9ed8623a9ecf345eb707d6032
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5ab208859cd0eb560ca72a37db05cd2ff547abad
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68008497"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928301"
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>非同步執行 (通知方法) 範例
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

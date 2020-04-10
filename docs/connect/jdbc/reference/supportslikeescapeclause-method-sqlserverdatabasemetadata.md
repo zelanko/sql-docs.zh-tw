@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: cfb43430-88bf-4386-847a-10ea1e5ce7db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e012626a968605627e8cbec94679d94b1dcaf1c8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f2c062f1bf2235441be182d29af6bd3e83717fc1
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67969310"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80912942"
 ---
 # <a name="supportslikeescapeclause-method-sqlserverdatabasemetadata"></a>supportsLikeEscapeClause 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

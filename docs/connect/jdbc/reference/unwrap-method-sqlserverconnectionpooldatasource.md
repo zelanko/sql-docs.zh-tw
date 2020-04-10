@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f5c9b734-2096-4ae4-a284-6b4d1b4a00d4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ab408e917a1e6c22cdbe320eb19f5c9995c6e216
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 08bdf5c8096686713c0859ea5305ecde4ea8dff8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67985614"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926121"
 ---
 # <a name="unwrap-method-sqlserverconnectionpooldatasource"></a>unwrap 方法 (SQLServerConnectionPoolDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

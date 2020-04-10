@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ca0a3b29-30d1-4d20-bc8d-d3d9ed19ff50
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fba716696627f29127d64c07843e6d9dcf2b3ce0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 560a3621c4c8752e4f42552b13cd35df5f276ced
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67978971"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927411"
 ---
 # <a name="gettime-method-javalangstring"></a>getTime 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

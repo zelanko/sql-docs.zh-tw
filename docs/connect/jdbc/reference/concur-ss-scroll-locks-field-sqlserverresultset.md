@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0fd5d34a-c323-4e9c-a1ef-6288c4a0b4ca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 820982dbb2a984a3aaa92fba0e32d86c1315ca0a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 76d7999e810ade7e663ec0da6413daa50775e7b7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67955380"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927738"
 ---
 # <a name="concur_ss_scroll_locks-field-sqlserverresultset"></a>CONCUR_SS_SCROLL_LOCKS 欄位 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

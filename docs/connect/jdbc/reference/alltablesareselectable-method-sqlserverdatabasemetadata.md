@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: eb340450-45a7-49c8-84bc-1b9dd5ee842f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f2fa61d7239858cb3479e7eeaa730e4197bf6bc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4fbd5a1d132bdb1e0d661e05968709ed604006d9
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67955865"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922912"
 ---
 # <a name="alltablesareselectable-method-sqlserverdatabasemetadata"></a>allTablesAreSelectable 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

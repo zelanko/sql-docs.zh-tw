@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ac363670-78ae-49f1-aeda-4fba3329a258
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b902ddf8e9e05900e55492116ee9e22a3dbbccc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 788efd1f35643e3bcefd929f455b2c21677f7723
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67977227"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927282"
 ---
 # <a name="issparsecolumnset-method-sqlserverresultsetmetadata"></a>isSparseColumnSet 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

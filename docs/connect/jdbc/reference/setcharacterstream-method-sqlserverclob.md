@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c02778f2-6681-4a84-a58b-2bcfac4233e4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da842fbc6240b072c7fe907aaa344d8d2ff1c6e7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4b4edd69c4712c1842163bcb48797edc154cc5cf
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67974649"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80929028"
 ---
 # <a name="setcharacterstream-method-sqlserverclob"></a>setCharacterStream 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

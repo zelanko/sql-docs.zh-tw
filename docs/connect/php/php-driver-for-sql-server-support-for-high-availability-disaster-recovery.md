@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9f67a0cc7f564683ed11ce7d7de9da5200128434
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 19c042e784185e2dbbc3415732f3ab05be04e097
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76929183"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927234"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>高可用性與災害復原的支援
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

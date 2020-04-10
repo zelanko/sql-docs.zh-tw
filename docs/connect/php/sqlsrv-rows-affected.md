@@ -14,14 +14,14 @@ helpviewer_keywords:
 - sqlsrv_rows_affected
 - API Reference, sqlsrv_rows_affected
 ms.assetid: 6f43fbfc-fc92-449b-82d0-33fa780e8f09
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 93c7ec396d3388a2de6c0d6518fc516de7156f35
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 06c661c0ab5075082df0c1753f7fcc17942e9ffa
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68014945"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928542"
 ---
 # <a name="sqlsrv_rows_affected"></a>sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

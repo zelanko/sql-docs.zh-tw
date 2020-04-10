@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b91e728eb9ea3403db0f0b40c5d32ce16f542408
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9f753fde186e056b5c7222c2c801303661e1fd79
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271374"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924668"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 驅動程式常見問題集 (FAQ)
 

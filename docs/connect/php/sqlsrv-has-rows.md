@@ -11,14 +11,14 @@ helpviewer_keywords:
 - API Reference, sqlsrv_has_rows
 - sqlsrv_has_rows
 ms.assetid: 4da7f640-cf12-409f-9e00-95b30a8d5e17
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85b04a8b693e5ea2283ce215973c8149080d0036
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f264a77b3fc96a4544b086f1b5b7cbe564b9487f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67992679"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928209"
 ---
 # <a name="sqlsrv_has_rows"></a>sqlsrv_has_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

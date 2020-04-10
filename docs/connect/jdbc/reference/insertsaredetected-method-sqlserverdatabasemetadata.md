@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f296cc42-9d26-48c3-a360-bcf51c31f7fb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4d2889af814e7c7122c9784f5ac9a70421731c09
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ba9fb6ef4a1a7166709620cad1bbaa36cd0ed257
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67977870"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80910004"
 ---
 # <a name="insertsaredetected-method-sqlserverdatabasemetadata"></a>insertsAreDetected 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

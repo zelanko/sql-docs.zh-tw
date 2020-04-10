@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: cd193265-3a65-4b1e-86ec-7818c3c0c1e2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 00bc342081260af4740f20e6ec88c02061623b28
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: baa203771d86fe75bbafd56916d770fc678994ee
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67974901"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80929124"
 ---
 # <a name="setbytes-method-sqlserverblob"></a>setBytes 方法 (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

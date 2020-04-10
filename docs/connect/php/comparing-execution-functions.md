@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - executing queries
 ms.assetid: 130fc0fd-87dd-46b2-918f-de9dc572c769
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f2b4d6c85c399589aae4eedbaade4bbdc4f70609
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 68575f3a0227c6400ed5d927ff603b66bd6f440d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993738"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925862"
 ---
 # <a name="comparing-execution-functions"></a>比較執行函數
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

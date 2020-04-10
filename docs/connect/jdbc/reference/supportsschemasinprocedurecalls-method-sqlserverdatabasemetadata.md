@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8955457a-b176-4674-9366-39a1942164a5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb938a2a63afa6f52fe241fcb50a209fea4557a3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 23cd1bc0069650c799ee03ddc6629b79225ef8c3
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67968888"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928511"
 ---
 # <a name="supportsschemasinprocedurecalls-method-sqlserverdatabasemetadata"></a>supportsSchemasInProcedureCalls 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

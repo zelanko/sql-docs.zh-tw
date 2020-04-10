@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: cb1d0f36-d2de-4685-b97a-626608e50e5c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: de9b950923f1b4729f44ddeac0d812bd1c6102c7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 84cf1569d865f8e7aad5b407ea993576dbe8b456
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67955762"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927963"
 ---
 # <a name="clearparameters-method-sqlserverpreparedstatement"></a>clearParameters 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

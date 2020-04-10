@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 76ed05f39cba61ea7f26deaef6cd38552b11f199
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e686e404ab4c948811b217291d1a9a7d2adc9feb
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78897086"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928961"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server 中的應用程式安全性案例
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c075c7adcc7eeae3ae7a83676256e72b4b86d187
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 31688509bb7c7592da29ef51535029e1251ffd44
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989434"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921103"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 上適用於 SQL Server 的 Microsoft ODBC 驅動程式
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

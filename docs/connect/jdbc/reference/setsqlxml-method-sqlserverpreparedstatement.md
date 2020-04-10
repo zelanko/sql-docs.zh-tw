@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 70bbdde0-75f7-4169-88c5-dbbe2c4bcd03
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2a1af43238d2f0da19c65535f3c6f84fa0e434f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 945608bd7088046db0f7023e5fbae21d55f33142
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67972806"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924894"
 ---
 # <a name="setsqlxml-method-sqlserverpreparedstatement"></a>setSQLXML 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

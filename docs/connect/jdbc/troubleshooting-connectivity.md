@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d6a64589b44de50328aa3384a51e29e0c2cc9a6e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0ef0a0e1a261996c71b3b75add30ee2f28899484
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027623"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928121"
 ---
 # <a name="troubleshooting-connectivity"></a>連線能力疑難排解
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

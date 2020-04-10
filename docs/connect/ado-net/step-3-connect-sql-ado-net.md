@@ -8,15 +8,15 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: e3e062aa9c0418bb76209e5e8f45c973b7a0f816
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e78ba27912452562199a3d0c4d0d995b17371a56
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78895977"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80918182"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>步驟 3：使用 ADO.NET 連線到 SQL 的概念證明
 

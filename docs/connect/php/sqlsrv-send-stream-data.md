@@ -15,14 +15,14 @@ helpviewer_keywords:
 - API Reference, sqlsrv_send_stream_data
 - streaming data
 ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 76d3841e637a101361fd72ccef5263a802a176b6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fe3207810e44929b392a385f481dbb52da57ae6a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68014952"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927228"
 ---
 # <a name="sqlsrv_send_stream_data"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

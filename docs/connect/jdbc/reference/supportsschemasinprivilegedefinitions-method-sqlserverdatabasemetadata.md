@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2957af1d-62d6-4375-b214-bbba9aafcc2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e02efacfad43c840550d6638dde4f46a59b399f5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cd4fdada1e23e846560f3831b14b0d4157ee4eb8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67968890"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928751"
 ---
 # <a name="supportsschemasinprivilegedefinitions-method-sqlserverdatabasemetadata"></a>supportsSchemasInPrivilegeDefinitions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

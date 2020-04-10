@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 71156863-3588-453e-b5a5-0573b2c1bebf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b1a572d3ab2dfba9d0aa0b8284fc770f3422782
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2d023d42019b01c75d4f4552a4d840c3a7787263
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67977107"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926128"
 ---
 # <a name="iswrapperfor-method-sqlservercallablestatement"></a>isWrapperFor 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

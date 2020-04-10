@@ -11,14 +11,14 @@ helpviewer_keywords:
 - API Reference, sqlsrv_num_rows
 - sqlsrv_num_rows
 ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e26c0e06ea9a71bdb6b9e39126e646d22ad40ea2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3478580ae0670036e64ae6774f420485aec30ef3
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68014983"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926412"
 ---
 # <a name="sqlsrv_num_rows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

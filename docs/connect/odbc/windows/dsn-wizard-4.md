@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 177888dd1034bb1edcb870db38b00bbc418cb261
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e35eae2e827b1fb0885eeaf5c953f64bddc7c3d9
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989462"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927948"
 ---
 # <a name="data-source-wizard-screen-4"></a>資料來源精靈畫面 4
 

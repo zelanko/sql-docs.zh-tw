@@ -10,15 +10,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: ca06e65c1794416cbc6a33fee1b7508a44c289a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a8498b9df32e7833e49b11f498faf0b07679d669
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78897138"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928990"
 ---
 # <a name="download-microsoft-sqlclient-data-provider-for-sql-server"></a>下載適用於 SQL Server 的 Microsoft SqlClient Data Provider
 

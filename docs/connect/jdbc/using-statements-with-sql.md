@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 553c0e742b34406b23a68f1403c372dcc7080088
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 17e6253d0ff1f4fa9a26d97772fb9f7ff2890221
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69025833"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923981"
 ---
 # <a name="using-statements-with-sql"></a>使用 SQL 陳述式
 

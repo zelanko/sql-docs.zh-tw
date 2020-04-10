@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - stored procedure support
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: db1216f513f353a6c703805c7aabe7b8dd468115
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fe3ac42280791083d5443b1bf004908a301971e5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993396"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80916014"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式擷取輸出參數
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

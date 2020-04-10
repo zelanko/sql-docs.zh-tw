@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 88bd8623-889d-4b5d-99ff-c85b32f3ff5c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 98880980d11775b3c906b6e51a2d9deef50316bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a914c90a417acd3c636fe34575a076cb503abbe6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67972025"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80901474"
 ---
 # <a name="sqlserverblob-class"></a>SQLServerBlob 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

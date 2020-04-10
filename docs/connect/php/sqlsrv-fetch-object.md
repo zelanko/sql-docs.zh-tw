@@ -15,14 +15,14 @@ helpviewer_keywords:
 - API Reference, sqlsrv_fetch_object
 - retrieving data, as an object
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 36c0ae99e38da83e3d534423b8a09ba9e198ce3e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a457fbc0f87f9ba83170f8235e7ae144f4e86648
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67992745"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922801"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

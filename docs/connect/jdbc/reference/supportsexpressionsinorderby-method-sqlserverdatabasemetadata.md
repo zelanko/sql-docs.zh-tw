@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 858f3c02-4531-4775-97e9-a03b316bdaba
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 01c9bfaadfee95369fb0101140c03d35fc777420
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8cc9dd143d684e0366000f16a2662495f47e82bb
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67969438"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924401"
 ---
 # <a name="supportsexpressionsinorderby-method-sqlserverdatabasemetadata"></a>supportsExpressionsInOrderBy 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

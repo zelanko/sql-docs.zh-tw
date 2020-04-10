@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: af1f67f4-f568-4e58-abcc-5c809a89b547
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cbd009f2052c911c469b842e2cd5353276d5d2c8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7d9e5545e0b7ed2953ba89b2351c09ae0fd3700a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67954048"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920922"
 ---
 # <a name="getautocommit-method-sqlserverconnection"></a>getAutoCommit 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

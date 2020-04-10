@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f3363d05-07fc-4bf8-ae5e-2a7a968808ad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0b3093b87557917655fcbfd6cf7c2ec37151ca44
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bdc9c8ba6efc024b8cbe6846daa91f07d548da3e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027730"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80909504"
 ---
 # <a name="setting-the-data-source-properties"></a>設定資料來源屬性
 

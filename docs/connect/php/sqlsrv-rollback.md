@@ -15,14 +15,14 @@ helpviewer_keywords:
 - API Reference, sqlsrv_rollback
 - sqlsrv_rollback
 ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8475944b4167184a6a2ef4a71d8751b2cd320fe1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d8253ad826b8537768aaf01331a60ceacb65edbe
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68014958"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928570"
 ---
 # <a name="sqlsrv_rollback"></a>sqlsrv_rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

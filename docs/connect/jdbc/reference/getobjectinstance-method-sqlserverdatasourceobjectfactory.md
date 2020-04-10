@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0a1503e2-e991-4d70-a223-087fc63baf73
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: de25e608c9fbdbdf6ff91d08e7a6502765bb590e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dac2ff8e4b88d9d8c2517cde92e7fbaaae0e2077
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67981056"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925248"
 ---
 # <a name="getobjectinstance-method-sqlserverdatasourceobjectfactory"></a>getObjectInstance 方法 (SQLServerDataSourceObjectFactory)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

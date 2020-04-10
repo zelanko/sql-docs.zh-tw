@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6b82f300-f906-4d11-b810-525bda4a88ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 73cbbaf8d1a3b3e6bc5e5ba7cd4b43df01c0f7f1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6bc18cd7c49a2dae98c20e28f1e0789f260ea59f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67969590"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928132"
 ---
 # <a name="supportscoresqlgrammar-method-sqlserverdatabasemetadata"></a>supportsCoreSQLGrammar 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

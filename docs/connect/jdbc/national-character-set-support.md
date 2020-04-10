@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ae20e40723822da0004b82dd7c89961fa0448e10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3ceb2d12ba3d062b3ba592eb6baa93fe93223907
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027868"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80912214"
 ---
 # <a name="national-character-set-support"></a>國家字元集支援
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

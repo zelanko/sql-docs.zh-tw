@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: df5b0233168c52b4f79cdc6d2d03cd7b72e16046
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 68070543e8fee326f0b5a02c73f0c0e4aaef6fbe
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68008483"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928288"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>使用透明網路 IP 解析
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

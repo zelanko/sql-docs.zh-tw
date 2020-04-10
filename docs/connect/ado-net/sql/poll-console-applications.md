@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 89bcaa6d6e92ccde2d1c151b493c26fe1279d89f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8d067dc5f72bb1534ec75e248fd9df34c2452f77
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896641"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924279"
 ---
 # <a name="polling-in-console-applications"></a>在主控台應用程式中輪詢
 

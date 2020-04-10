@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-author: MightyPen
+author: David-Engel
 ms.author: v-jizho2
-ms.openlocfilehash: fcfde122b978fa1e77baa690a1f3e09417dab1c0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 35a9c6b6c254d6ed7c3283aedba15e65b6114579
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989418"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920131"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>SQL Server 登入對話方塊 (ODBC)
 

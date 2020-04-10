@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 108f0e2c-7dc5-4195-8248-0758a75a314e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f98d3bdb5e893d1c120be059e1ad1de446dc8d6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e32de87add3f02736e877c99ed64c565dc1f6430
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67982256"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921271"
 ---
 # <a name="getmaxcolumnsinindex-method-sqlserverdatabasemetadata"></a>getMaxColumnsInIndex 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

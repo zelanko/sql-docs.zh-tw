@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f6a701de-a8fa-4668-9310-99a8c6e32c88
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 98cde4953d60f13d1768b06dbfab9ada6ea8af55
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2848ed26d2ce9df960170d3f7a1d3e4c49b630ab
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67978054"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80910145"
 ---
 # <a name="getworkstationid-method-sqlserverdatasource"></a>getWorkstationID 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

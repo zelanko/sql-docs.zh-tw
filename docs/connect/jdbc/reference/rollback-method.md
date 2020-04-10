@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7adb6772-4047-4d8e-931d-b3d20eec44b5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e3b4575251cb4eb55f9af37bb81ed2c4bedbf564
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 08eaa304a861ab697c8b9cc83446610740d13d11
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67975708"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80903730"
 ---
 # <a name="rollback-method-"></a>rollback 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

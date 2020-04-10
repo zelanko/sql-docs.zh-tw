@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8bddc557-4526-4843-9804-05dc83c8832d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 134fcc223486971bb8249f1313c84ce969308626
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cb0a97e0b9ee1ef33897d98580a67794fbc8e2bb
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67975937"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80904274"
 ---
 # <a name="registeroutparameter-method-javalangstring-int-int"></a>registerOutParameter 方法 (java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

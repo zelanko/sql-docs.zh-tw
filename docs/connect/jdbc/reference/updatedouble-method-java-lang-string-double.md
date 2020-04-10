@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f70971d5-34cc-4f70-8a91-5d46356b24ae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 15617e1d5dda6315547228e07853c373f9eb1a37
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9650d575a93af87bdcabb0b12e0878ebef692ece
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67999038"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927888"
 ---
 # <a name="updatedouble-method-javalangstring-double"></a>updateDouble 方法 (java.lang.String, double)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

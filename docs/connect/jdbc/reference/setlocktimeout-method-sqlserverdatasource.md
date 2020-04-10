@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 10dca5aa-1851-4326-9ae9-7a8430d12d11
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 95dc93b8695f9bfe464545ab5f1aa6096a4476be
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8143233de52f1272cf63a31f79ed280cf5124a9a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67974107"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925763"
 ---
 # <a name="setlocktimeout-method-sqlserverdatasource"></a>setLockTimeout 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

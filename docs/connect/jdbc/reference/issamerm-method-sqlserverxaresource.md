@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: bfa24c46-b7cf-470a-afa1-52301847a448
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: acd1beaa07ab9d1867fe99e519d3969f4efec3ce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b4628f760dadc6619e2ebc3fca5437bc15bf7681
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67977307"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925068"
 ---
 # <a name="issamerm-method-sqlserverxaresource"></a>isSameRM 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

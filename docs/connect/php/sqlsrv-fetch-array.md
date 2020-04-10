@@ -15,14 +15,14 @@ helpviewer_keywords:
 - retrieving data, as an array
 - API Reference, sqlsrv_fetch_array
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 02b4311348ebbd52e5e8382048449072c84d2e46
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d0055ed89d217a664d201d93d2c13c8e078d2a38
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015030"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927809"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

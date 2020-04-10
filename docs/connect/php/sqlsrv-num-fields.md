@@ -14,14 +14,14 @@ helpviewer_keywords:
 - sqlsrv_num_fields
 - API Reference, sqlsrv_num_fields
 ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b5c095b74f8f299a1d5f2b15daaf95e3d5086ebd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a1155a01de68a9c4d45fc2c7e4e6660c581c3bb7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67992672"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926422"
 ---
 # <a name="sqlsrv_num_fields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

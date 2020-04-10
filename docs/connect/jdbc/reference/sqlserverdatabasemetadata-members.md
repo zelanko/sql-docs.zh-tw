@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a250cac94cdba3c4f71ce359b964ed5ef50e895f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 78f1eb2d2e395566cc01161c46737923e56e21fd
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67971555"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928654"
 ---
 # <a name="sqlserverdatabasemetadata-members"></a>SQLServerDatabaseMetaData 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

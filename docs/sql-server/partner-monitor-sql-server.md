@@ -8,12 +8,12 @@ ms.date: 11/02/2017
 ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 8012c6a4fecf4155615460da8bd568eb4007aa48
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: acecd9a5ef362f591d71eee15550ee7daa96dfc4
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75656913"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002815"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 監視夥伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "75656913"
 <!--Website links -->
 
 [idera_website]:https://www.idera.com/productssolutions/sqlserver/sqldiagnosticmanager
-[sentryone_website]:https://www.sentryone.com 
+[sentryone_website]:https://www.sentryone.com
 [quest_website]:https://www.quest.com/products/spotlight-on-sql-server-enterprise
 [redgate_website]:https://www.red-gate.com/products/dba/sql-monitor/
 [solarwinds_website]:https://www.solarwinds.com/database-performance-analyzer

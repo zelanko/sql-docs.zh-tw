@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0db06631-5e68-488c-a9f1-6e5052c0759d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54459377a27406044a9323c36b78417b144661de
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c8338bf88ae4787ef6cf6b2a6783525da5a10504
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67973246"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920772"
 ---
 # <a name="setpassword-method-sqlserverdatasource"></a>setPassword 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

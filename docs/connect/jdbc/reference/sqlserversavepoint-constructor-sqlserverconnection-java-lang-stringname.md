@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: fb77db6b-ebf8-4b12-8153-2c4bdb8d72f7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c5a27f7be74b8b4bf471095cacd97b246df12608
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2d7ab6862ce9eefbdecb8534649f679229132531
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67970433"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927042"
 ---
 # <a name="sqlserversavepoint-constructor-sqlserverconnection-javalangstringname"></a>SQLServerSavepoint 建構函式 (SQLServerConnection, java.lang.StringName)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

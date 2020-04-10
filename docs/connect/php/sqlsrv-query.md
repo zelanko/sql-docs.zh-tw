@@ -15,14 +15,14 @@ helpviewer_keywords:
 - executing queries
 - API Reference, sqlsrv_query
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ce7a12b3964e3e0c2407521978df03af9d88f63
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ab8c3912c33280738c8bebc012686490d7c55926
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68014967"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928555"
 ---
 # <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

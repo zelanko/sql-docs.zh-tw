@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 40f5d727-1ce7-414d-867d-589ead7b2a29
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 970f2989b771fc319b77081693bd1dd7809b203d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f8264270a9021af6a509bc0a75f3477d37985994
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67969294"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80912924"
 ---
 # <a name="supportsminimumsqlgrammar-method-sqlserverdatabasemetadata"></a>supportsMinimumSQLGrammar 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

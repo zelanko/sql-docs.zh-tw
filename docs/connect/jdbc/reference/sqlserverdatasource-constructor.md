@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 23c8012f-9642-42c4-be76-c1c6563e8912
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 251b02067ebad70c17904196fd7f2530407b7609
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ca1910778ef7b9fa5cfaf8a16d3fcca23deb0c5a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67971504"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928632"
 ---
 # <a name="sqlserverdatasource-constructor-"></a>SQLServerDataSource 建構函式 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 0b6b65a1-8e62-4cd5-ab28-6231c3e20d81
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 068e9d4b633a7d958224e99c64001e880f847b2f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6bc098ee125cef48adae3529bc7c241d07a9fa51
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67998534"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919793"
 ---
 # <a name="updatenstring-method-sqlserverresultset"></a>updateNString 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

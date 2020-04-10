@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 30bc8882-04b4-4efd-95e4-7d3a2a8c1d47
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5cc12f9e7ed7a83363766355fa5d340a459a332b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 70ad7dfb297e1ec1b3d34f657f48a67f16debab5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67953653"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921695"
 ---
 # <a name="getbinarystream-method-long-long"></a>getBinaryStream 方法 (long, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

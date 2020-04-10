@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4bc3e82b-a7e7-43a5-8938-6f29c7570163
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 88a989e51a67a8364d2c61660e6146a5945a36c6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e75d7c7f3d74d2070980a9596cea38227c365db5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67969147"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928524"
 ---
 # <a name="supportsopencursorsacrossrollback-method-sqlserverdatabasemetadata"></a>supportsOpenCursorsAcrossRollback 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

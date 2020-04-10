@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: de6fdf6b-8345-4490-b35e-7115b61e782e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5c263a94b8df0337d05cc8f3ee41df4e2f30fc72
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c4367bd0df42400d2fd9352ae86dc43e4e98b801
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67977928"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80910114"
 ---
 # <a name="getxopenstates-method-sqlserverdatasource"></a>getXopenStates 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

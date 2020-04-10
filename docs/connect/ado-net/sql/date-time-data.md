@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 75d8b98726a758e0533053dbdf8d2e03b3bfdf0d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 43a7f03a4e8a9a3c67a3263f792f2f921eef7a78
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896995"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928861"
 ---
 # <a name="date-and-time-data"></a>日期和時間資料
 

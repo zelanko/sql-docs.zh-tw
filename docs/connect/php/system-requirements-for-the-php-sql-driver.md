@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - requirements
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
-author: MightyPen
+author: David-Engel
 ms.reviewer: carlrab
-ms.author: genemi
-ms.openlocfilehash: f384e121d3b4ce0aa7ebcb380ebe5eaaa0ee3d45
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.author: v-daenge
+ms.openlocfilehash: 2e48fcb222575095fab4c313102de8abc4e3efa0
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76917816"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926862"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的系統需求
 
