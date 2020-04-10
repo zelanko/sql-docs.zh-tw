@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 630a93b0-6e3c-4255-a007-1097ce0ee243
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3d70c72b860044a7e61b4a6dc5474c465fb60e89
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fee6b9fd1143991d6b18a3eb4d84a534c103163d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67955390"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927714"
 ---
 # <a name="createblob-method-sqlserverconnection"></a>createBlob 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ef181e04-003a-442a-9b7e-0c508a7cc873
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3195b0eafb5eb48f7ec6b159fef05036d6efd7df
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ddcb67b6a679cadaa33775d11987d90a735ca799
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67968494"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80908436"
 ---
 # <a name="truncate-method-sqlserverblob"></a>truncate 方法 (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

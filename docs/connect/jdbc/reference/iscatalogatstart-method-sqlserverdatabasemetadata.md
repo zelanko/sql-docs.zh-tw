@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 665173d2-14c7-4ce1-954e-4adb53fb9b39
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9dabb3084bf42ed60a408e6158f70f2b9ae20e23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ee035ae51b99fc325acbbd545d98555416bf6a02
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67977751"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928683"
 ---
 # <a name="iscatalogatstart-method-sqlserverdatabasemetadata"></a>isCatalogAtStart 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

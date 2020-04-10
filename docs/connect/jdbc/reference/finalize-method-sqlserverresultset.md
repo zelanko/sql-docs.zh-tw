@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 49bc879d-822b-42da-bc20-2394865f1f0f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7afb8728b92ac7460173950bf42e38f968e056af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 01b93d90406a579a71188b8269c520cf521bb62a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67954575"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924224"
 ---
 # <a name="finalize-method-sqlserverresultset"></a>finalize 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

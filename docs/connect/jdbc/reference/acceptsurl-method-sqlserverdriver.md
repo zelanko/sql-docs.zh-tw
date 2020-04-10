@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: fc744566-7191-4b15-9f76-b4b8087fb14a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7c51da69e7218f91630543fe7bee5ec0d7fd6b0e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 68e12a39cb4a27f170b7f12705f17791bb40b649
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67956021"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923709"
 ---
 # <a name="acceptsurl-method-sqlserverdriver"></a>acceptsURL 方法 (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

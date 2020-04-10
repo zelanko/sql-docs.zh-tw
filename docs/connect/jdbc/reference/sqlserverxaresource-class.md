@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: df957b79-536f-4db7-b6ac-3d59343559fc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 282201b7ff3f5b2ebfe4d8a1224d4d1b39285c53
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 048b9a2a69b33bccc60b35ab70bd954751237605
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67970089"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925693"
 ---
 # <a name="sqlserverxaresource-class"></a>SQLServerXAResource 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

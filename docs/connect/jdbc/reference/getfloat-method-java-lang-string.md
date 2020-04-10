@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b6492341-fdc2-449c-9d03-95a5dadf1bb0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ab60742b06054f5583cc438a68ddb5ed634740f5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae411181007b573eb1b38681872b7d4bff36be24
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67983030"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924781"
 ---
 # <a name="getfloat-method-javalangstring"></a>getFloat 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

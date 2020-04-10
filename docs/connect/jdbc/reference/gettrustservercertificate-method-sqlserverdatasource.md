@@ -13,14 +13,14 @@ apilocation:
 - getTrustServerCertificate Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: e4f443cc-b5d7-4859-81df-836a8642ed07
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 81d07743dfefe0b0305b1a094a9ae4632d4effd9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0b84a323e3dd8bac95309f0462b48e322ba422c9
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67978586"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80911304"
 ---
 # <a name="gettrustservercertificate-method-sqlserverdatasource"></a>getTrustServerCertificate 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

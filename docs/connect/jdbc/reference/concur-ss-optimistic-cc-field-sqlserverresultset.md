@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4d5cecb8-b29b-49c0-a4b1-9472b8709ddf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8e208f64f0f981b5d2fd6838d0a5d492b8679241
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 81f77080ca9622a339bc091c4f0240a2b6f3d48a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67955436"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927772"
 ---
 # <a name="concur_ss_optimistic_cc-field-sqlserverresultset"></a>CONCUR_SS_OPTIMISTIC_CC 欄位 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

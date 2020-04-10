@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 77905630-0135-46ad-a419-215e648996e2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cdefec49aebd2c5042d9fb8f99486a0ee8d3811e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: aa68d7f6a4709594f65c0ff19d004a67ce209290
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67973861"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80909664"
 ---
 # <a name="setncharacterstream-method-sqlservercallablestatement"></a>setNCharacterStream 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

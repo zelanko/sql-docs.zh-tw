@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 14d9226b-33df-43d3-a174-1b11ba43ab2e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5099a6e0a9c87e767837a793d219a0c98a105ef6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 66e510fae6910f653b374123582a940d300ed51f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67970629"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925900"
 ---
 # <a name="sqlserverresource-methods"></a>SQLServerResource 方法
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

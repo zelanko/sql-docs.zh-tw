@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: af5ef257-7cf6-4db3-b1ee-07d22d82bef1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 40474f747022c34994dba9f34dbed15f1791c2af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b2ed370fdb002563203ffbc403bda54acef688af
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67971153"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925323"
 ---
 # <a name="sqlserverexception-class"></a>SQLServerException 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -8,15 +8,15 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 39e83bab2e5a159d97b3b5bdd0ef5feaa69f43c5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 194c4501ae353212202d7f58ad9de4472d7d34cd
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78897097"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80929004"
 ---
 # <a name="getting-started-with-the-sqlclient-driver"></a>開始使用 SqlClient 驅動程式
 

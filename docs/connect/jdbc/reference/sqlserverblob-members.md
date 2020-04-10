@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 90e48555-ea83-4a90-80a3-51bc685015ec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 81ce2d655214de3d31eb233deb4de2b1c3ae49f4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 17f51e9b0ebe03da7772bd07de4ad0d525826050
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67971950"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927257"
 ---
 # <a name="sqlserverblob-members"></a>SQLServerBlob 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

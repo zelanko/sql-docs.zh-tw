@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 16370bc2-6ec1-402d-83f6-213a6831d2ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d17b3bdeb0c08c3e4a5e631b6122af04f110690
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 93a7398e3c22d676eeb6816cbb45bd273a1ce26a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989496"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80908104"
 ---
 # <a name="type_ss_server_cursor_forward_only-field-sqlserverresultset"></a>TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 欄位 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

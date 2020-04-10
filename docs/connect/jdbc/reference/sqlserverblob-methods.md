@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 0d57940a-90bc-4f1b-a20f-5a97d7d20b61
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c5bd30473fc9e87dbd2cb21dcf3b13864ba1ac33
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e602bcd33bf3566f978a461492f60bb824e98b72
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67971937"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927105"
 ---
 # <a name="sqlserverblob-methods"></a>SQLServerBlob 方法
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

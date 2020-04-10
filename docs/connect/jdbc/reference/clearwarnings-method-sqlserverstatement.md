@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b1d3a50c-3d05-44b3-b1ba-404a013fd627
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f355974fb2d3710f50f052dc5a800c48e60a3b35
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f8b59c968e80193c58b32f419b74644a92cce6e0
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67955689"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923653"
 ---
 # <a name="clearwarnings-method-sqlserverstatement"></a>clearWarnings 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

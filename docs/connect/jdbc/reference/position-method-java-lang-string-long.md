@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 86fad8ed-375a-42e1-b40e-1fa085957a2c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ed0a62940fc29e2d909678dabec784a906c02515
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 432ee4fccc21a57130e1bccad9c43b50e2b992ba
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976438"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80914374"
 ---
 # <a name="position-method-javalangstring-long"></a>position 方法 (java.lang.String, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

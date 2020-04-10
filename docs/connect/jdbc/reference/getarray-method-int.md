@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 5b839d3f-5a4e-43da-b93c-dc9e0f6d4b3b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 27e9502c707f35ae0406b3cf99843a3e22ea1008
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8d1c6e2f5cac93ab188ecae0f798722541b62e69
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67954371"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923447"
 ---
 # <a name="getarray-method-int"></a>getArray 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

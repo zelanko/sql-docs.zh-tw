@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7a77d8ef-2211-4bf8-af35-020fc896c073
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1adddf442f9d2b6ff84f955cf4e448a31e6741da
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c4f6e80a84c24ac8666c9cd02ec1df42625c3add
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67974076"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925748"
 ---
 # <a name="setlogwriter-method-sqlserverdatasource"></a>setLogWriter 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,15 +10,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 39723f61eaa5bf2fc18e950bbd3432837ee8620a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 185c8648af5a55f53a25839a40008a203239957f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78897114"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80929021"
 ---
 # <a name="finding-additional-sqlclient-driver-information"></a>尋找其他 SqlClient 驅動程式資訊
 

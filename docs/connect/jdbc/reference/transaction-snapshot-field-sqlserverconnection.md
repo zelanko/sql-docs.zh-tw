@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 21c55c0b-76f0-411d-aa13-f606d3524b0e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 05727dfbf345af478afd2c23771c0c8a3f26dc23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 806d65f9c45e3868297e2b5638ce8c75804515aa
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67968509"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80908494"
 ---
 # <a name="transaction_snapshot-field-sqlserverconnection"></a>TRANSACTION_SNAPSHOT 欄位 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

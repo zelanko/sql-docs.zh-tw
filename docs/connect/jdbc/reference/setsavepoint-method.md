@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 11013055-4fd3-45a9-b2da-28b2908dad52
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f6f26909a0ad7c5f33bdf997c48f88c6e7b300a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c661df4fc5b60d52056c14bb9be1787a9a346fc0
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67973010"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924968"
 ---
 # <a name="setsavepoint-method-"></a>setSavepoint 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: aea8e0ecbb542645f0553e8bf34172381f37929b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f6e842b38291fb704828b9b5a70d0652cfda51e0
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896638"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920984"
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>ADO.NET 中的 SQL Server 資料作業
 

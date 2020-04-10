@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 455fe02e-3877-409b-8281-8e0491acd3e8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0c9ae064a25dc8386b38b11f79ab9ffb5b78a9ae
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 752cb296b58c0528ad419e8507ea304eca6bd340
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67969339"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924698"
 ---
 # <a name="supportsgroupbyunrelated-method-sqlserverdatabasemetadata"></a>supportsGroupByUnrelated 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

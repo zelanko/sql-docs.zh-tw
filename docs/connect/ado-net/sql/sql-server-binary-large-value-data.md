@@ -7,15 +7,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 4ed8ccbadb27008fb15d9d117d55b5a4d332a8f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 17a38bd45a467625be467f5fb01f0e733f7546bc
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896623"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920978"
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>SQL Server 二進位和大型數值資料
 

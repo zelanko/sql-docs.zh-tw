@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e0de521e6ef913d27a020cc76f1dc6de00d0f409
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9eaec8e30d96e2b4360b42eeafc21ae2e405a72b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69026429"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924048"
 ---
 # <a name="using-database-mirroring-jdbc"></a>使用資料庫鏡像 (JDBC)
 
