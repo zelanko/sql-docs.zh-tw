@@ -1,5 +1,5 @@
 ---
-title: 監視及疑難排解
+title: 針對 Kubernetes 進行疑難排解
 titleSuffix: SQL Server big data clusters
 description: 本文提供用來監視 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]及針對其進行疑難排解的實用命令。
 author: mihaelablendea
@@ -9,21 +9,21 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9ab57972b9ba0d758ff692887fa8d93d7f731d0a
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70153636"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664179"
 ---
-# <a name="monitoring-and-troubleshoot-big-data-clusters-2019"></a>監視 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]及針對其進行疑難排解
+# <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>針對 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes 進行疑難排解
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文說明數個實用的 Kubernetes 命令，可讓您用來監視 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]及針對其進行疑難排解。 它會示範如何檢視位於巨量資料叢集中的 Pod 或其他 Kubernetes 成品的深入詳細資料。 此文章也涵蓋一般工作，例如，將檔案複製到執行其中一項 SQL Server 巨量資料叢集服務的容器，或從其中複製檔案。
 
 > [!TIP]
-> 若要監視巨量資料叢集元件的狀態，您可以使用 [**azdata bdc status**](deployment-guidance.md#status) 命令，或是 Azure Data Studio 隨附的內建[疑難排解筆記本](manage-notebooks.md)。
+> 若要監視巨量資料叢集元件的狀態，您可以使用 [**azdata bdc status**](deployment-guidance.md#status) 命令，或是 Azure Data Studio 隨附的內建[疑難排解筆記本](notebooks-manage-bdc.md)。
 
 > [!TIP]
 > 在 Windows (cmd or PS) 或 Linux (bash) 用戶端電腦上執行下列 **kubectl** 命令。 它們需要叢集中先前的驗證，以及要執行的目標叢集內容。 例如，針對先前建立的 AKS 叢集，您可以執行 `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` 來下載 Kubernetes 叢集組態檔並設定叢集內容。

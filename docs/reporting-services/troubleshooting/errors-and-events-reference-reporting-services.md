@@ -1,5 +1,6 @@
 ---
-title: 錯誤和事件參考 (Reporting Services) | Microsoft Docs
+title: 錯誤和事件參考 (Reporting Services)
+description: 檢視不同報表伺服器事件的識別碼、類型、類別、來源和描述。 這些事件包括錯誤、警告和資訊類型。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: d2d1a8c853bd4ad577dd1c0ced9aed47b15a2ee7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9bfaa996eb0a0bf02440268c68a8a543470fd022
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68258539"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664402"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>錯誤和事件參考 (Reporting Services)
 
@@ -31,11 +32,11 @@ ms.locfileid: "68258539"
 |事件識別碼|類型|類別|來源|描述|  
 |--------------|----------|--------------|------------|-----------------|  
 |106|錯誤|排程|報表伺服器|當您定義排程作業時 (例如，報表訂閱和傳遞)，必須執行 SQL Server Agent。|  
-|[107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|錯誤|啟動/關閉|報表伺服器<br /><br /> 排程與傳遞處理器|*來源>\<* 無法連線到報表伺服器資料庫。 如需詳細資訊，請參閱[報表伺服器 Windows 服務 &#40;MSSQLServer&#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)。|  
-|108|錯誤|分機|報表伺服器<br /><br /> 入口網站|*來源>\<* 無法上傳傳遞、資料處理或轉譯延伸模組。<br /><br /> 最可能的情況是因為延伸模組的部署不完整或遭移除所造成的結果。 如需詳細資訊，請參閱 [部署資料處理延伸模組](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md) 和 [部署傳遞延伸模組](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)。|  
+|[107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|錯誤|啟動/關閉|報表伺服器<br /><br /> 排程與傳遞處理器|\<來源>  無法連線到報表伺服器資料庫。 如需詳細資訊，請參閱[報表伺服器 Windows 服務 &#40;MSSQLServer&#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)。|  
+|108|錯誤|分機|報表伺服器<br /><br /> 入口網站|\<來源>  無法上傳傳遞、資料處理或轉譯延伸模組。<br /><br /> 最可能的情況是因為延伸模組的部署不完整或遭移除所造成的結果。 如需詳細資訊，請參閱 [部署資料處理延伸模組](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md) 和 [部署傳遞延伸模組](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)。|  
 |109|資訊|管理性|報表伺服器<br /><br /> 入口網站|組態檔已經修改。 如需詳細資訊，請參閱 [Reporting Services 組態檔案](../../reporting-services/report-server/reporting-services-configuration-files.md)。|  
 |110|警告|管理性|報表伺服器<br /><br /> 入口網站|組態檔其中之一的設定已經修改，因此不再有效。 會改用預設值。 如需詳細資訊，請參閱 [Reporting Services 組態檔案](../../reporting-services/report-server/reporting-services-configuration-files.md)。|  
-|111|錯誤|記錄|報表伺服器<br /><br /> 入口網站|*來源>\<* 無法建立追蹤記錄。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。|  
+|111|錯誤|記錄|報表伺服器<br /><br /> 入口網站|\<來源>  無法建立追蹤記錄。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。|  
 |112|警告|安全性|報表伺服器|報表伺服器偵測到可能的阻斷服務攻擊。 如需詳細資訊，請參閱 [Reporting Services 安全性與保護](../../reporting-services/security/reporting-services-security-and-protection.md)。|  
 |113|錯誤|記錄|報表伺服器|報表伺服器無法建立效能計數器。|  
 |114|錯誤|啟動/關閉|入口網站|入口網站無法連線到「報表伺服器」服務。|  
@@ -43,7 +44,7 @@ ms.locfileid: "68258539"
 |116|錯誤|內部|報表伺服器<br /><br /> 入口網站<br /><br /> 排程與傳遞處理器|發生內部錯誤。|  
 |117|錯誤|啟動/關閉|報表伺服器|報表伺服器資料庫是無效的版本。|  
 |118|警告|記錄|報表伺服器<br /><br /> 入口網站|追蹤記錄不在預期的目錄位置；將在預設目錄建立新的追蹤記錄。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。|  
-|119|錯誤|啟用|報表伺服器<br /><br /> 排程與傳遞處理器|*來源>\<* 沒有被授權存取報表伺服器資料庫的內容。|  
+|119|錯誤|啟用|報表伺服器<br /><br /> 排程與傳遞處理器|\<來源>  沒有被授權存取報表伺服器資料庫的內容。|  
 |120|錯誤|啟用|報表伺服器|對稱金鑰無法解密。 最可能的情況是因為，執行服務所使用的帳戶已變更。 如需詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  
 |121|錯誤|啟動/關閉|報表伺服器|遠端程序呼叫 (RPC) 服務啟動失敗。|  
 |122|警告|遞送|排程與傳遞處理器|「排程與傳遞處理器」無法連接到作為電子郵件傳遞的 SMTP 伺服器。 如需 SMTP 伺服器連線的詳細資訊，請參閱[電子郵件設定 - Reporting Services 原生模式 (組態管理員)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。|  
@@ -54,7 +55,7 @@ ms.locfileid: "68258539"
 |127|資訊|啟用|報表伺服器|加密內容已經成功從報表伺服器資料庫移除。 如需刪除無法復原之加密資料的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  
 |128|錯誤|啟用|報表伺服器|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不同版本的元件無法一起使用。|  
 |129|錯誤|管理性|報表伺服器<br /><br /> 排程與傳遞處理器|加密的組態檔設定無法解密。|  
-|130|錯誤|管理性|報表伺服器<br /><br /> 排程與傳遞處理器|*來源>\<* 找不到設定檔。 報表伺服器需要組態檔。|  
+|130|錯誤|管理性|報表伺服器<br /><br /> 排程與傳遞處理器|\<來源>  找不到設定檔。 報表伺服器需要組態檔。|  
 |131|錯誤|安全性|報表伺服器<br /><br /> 排程與傳遞處理器|加密的使用者資料值無法解密。|  
 |132|錯誤|安全性|報表伺服器|加密使用者資料期間發生失敗。 無法儲存值。|  
 |133|錯誤|管理性|報表伺服器<br /><br /> 入口網站<br /><br /> 排程與傳遞處理器|組態檔上傳失敗。 如果 XML 無效就可能會發生此錯誤。|  

@@ -1,5 +1,6 @@
 ---
 title: 建立及管理 SharePoint 模式報表伺服器的訂用帳戶 | Microsoft Docs
+description: 了解如何建立 Reporting Services 訂閱，以便從與 SharePoint 模式報表伺服器整合的 SharePoint Web 應用程式傳遞報表。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d4ffc3930003a4035211a4a63a54bc4f8196948
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5275678180b785b1d41705d4f2debdada8fd5a78
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578342"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742254"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>建立及管理 SharePoint 模式報表伺服器的訂閱
   您可以建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱，傳遞以 SharePoint 模式報表伺服器整合的 SharePoint Web 應用程式報表。 訂閱可以將報表傳遞至文件庫、檔案資料夾，或以電子郵件傳送。 本主題摘要說明建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱的需求與步驟。  
@@ -28,11 +29,11 @@ ms.locfileid: "65578342"
   
  建立訂閱時，有三種方式可以指定其傳遞：  
   
--   **文件庫**：您可以建立訂閱，以便將以原始報表為基礎的文件傳遞至與原始報表位於相同 SharePoint 網站中的程式庫。 您無法將文件傳遞至相同網站集合中另一部伺服器或另一個網站上的程式庫。 若要傳遞文件，您必須在報表要傳遞至其中的程式庫上擁有「新增項目」權限。  
+-   **文件庫**：您可建立訂閱，以便將以原始報表為基礎的文件傳遞至與原始報表位於相同 SharePoint 網站中文件庫。 您無法將文件傳遞至相同網站集合中另一部伺服器或另一個網站上的程式庫。 若要傳遞文件，您必須在報表要傳遞至其中的程式庫上擁有「新增項目」權限。  
   
--   **檔案資料夾：** 您可以將以原始報表為基礎的文件傳遞至檔案系統上的共用資料夾。 您必須選取可透過網路連接存取的現有資料夾。  
+-   **檔案資料夾：** 您可將以原始報表為基礎的文件傳遞至檔案系統上共用資料夾。 您必須選取可透過網路連接存取的現有資料夾。  
   
--   **電子郵件：** 如果報表伺服器設定為使用報表伺服器電子郵件傳遞延伸模組，您就可以建立將報表或已匯出報表檔案 (以輸出格式儲存) 傳送至收件匣的訂閱。 若只要接收通知，但不接收報表或報表 URL，請清除 **[包含這個報表的連結]** 和 **[在訊息內顯示報表]** 核取方塊。  
+-   **電子郵件：** 如果報表伺服器設定為使用報表伺服器電子郵件傳遞延伸模組，即可建立將報表或已匯出報表檔案 (以輸出格式儲存) 傳送至收件匣的訂閱。 若只要接收通知，但不接收報表或報表 URL，請清除 **[包含這個報表的連結]** 和 **[在訊息內顯示報表]** 核取方塊。  
   
  **本主題內容：**  
   

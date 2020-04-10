@@ -1,6 +1,6 @@
 ---
 title: 下載 ODBC Driver for SQL Server
-ms.date: 03/10/2020
+ms.date: 04/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0646ac7388edfefcf598556753225a182a4aa13e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 807c4d315341bba288036ad9d7f8425458d64a37
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79090390"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550154"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>下載 ODBC Driver for SQL Server
 
@@ -67,6 +67,10 @@ Microsoft ODBC Driver 17.5.2 for SQL Server (x86)：
 
 > [!Note]
 > 名為 `msodbcsql17-*` 的套件為最新版本。 名為 `msodbcsql-*` 的套件為驅動程式其 13 版。
+
+### <a name="alpine"></a>Alpine
+
+- [Alpine 套件](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.apk) ([PGP 簽章](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.sig))
 
 ### <a name="debian"></a>Debian
 

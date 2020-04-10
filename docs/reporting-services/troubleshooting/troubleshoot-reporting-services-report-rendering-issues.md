@@ -1,5 +1,6 @@
 ---
-title: 針對 Reporting Services 報表轉譯問題進行疑難排解 | Microsoft Docs
+title: Reporting Services 報表轉譯問題疑難排解
+description: 在本文中，您會診斷並修正將編譯報表和配置資料傳送到 SQL Server Reporting Services 中報表轉譯器時的顯示問題。
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f8c5029d66a068d43ebc659592697fd2914fd2b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3a834ee415fd725c26314b95d507b86ff5280f78
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574689"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662786"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Reporting Services 報表轉譯問題疑難排解
 結合報表資料與配置資訊之後，編譯完的報表會傳送到報表轉譯器。 例如，當您在本機預覽報表時，您會使用 HTML 轉譯器來檢視已編譯的報表。 您可以使用本主題來協助疑難排解有關報表轉譯的問題。   
@@ -58,9 +59,9 @@ ms.locfileid: "65574689"
 `Query execution failed for dataset 'DataSet1'.`   
 `The request failed with HTTP status 401: Unauthorized.`  
   
-**若要解決此問題** ：修改資料來源以使用預存認證，而非 Windows 認證。  
+**若要解決此問題：** 修改資料來源以使用預存認證，而非 Windows 認證。  
   
-**此問題適用於** ：瀏覽器設定為提示認證時。  
+**此問題適用於：** 瀏覽器設定為提示認證時。  
   
 ## <a name="see-also"></a>另請參閱  
 [錯誤和事件 (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

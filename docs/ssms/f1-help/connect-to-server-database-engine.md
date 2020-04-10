@@ -1,7 +1,7 @@
 ---
 title: 連接到伺服器 (Database Engine)
 ms.custom: seo-lt-2019
-ms.date: 03/27/2020
+ms.date: 08/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9fdaf17118649543fe95ba60c7f6c0148d52d0e5
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 396d9c1094d496289540804baa07c959fe5c3eef
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402540"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531200"
 ---
 # <a name="connect-to-server-database-engine"></a>連接到伺服器 (Database Engine)
 
@@ -56,20 +56,17 @@ SSMS 目前的版本提供五種驗證模式，可在連線至 [!INCLUDE[ssDE](.
 > **SQL Server 驗證**  
 > 當使用者從非信任連接以指定的登入名稱與密碼進行連接時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會查看是否已設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入帳戶，以及指定的密碼是否符合先前記錄的密碼，自行執行驗證。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 沒有登入帳戶集，驗證將失敗，而使用者會收到錯誤訊息。 可能的話，請使用 Windows 驗證或 Active Directory 密碼驗證。  
 > 
-> **Active Directory - 與 MFA 支援通用**  
+> **Azure Active Directory - MFA 通用支援**  
 > [Active Directory - 與 MFA 通用] 是支援 Azure Multi-Factor Authentication (MFA) 的互動式工作流程。 Azure MFA 有助於保護資料和應用程式的存取，同時又滿足使用者對簡單登入程序的需求。 它提供增強式驗證與一系列簡單的驗證選項 - 電話、簡訊、智慧卡與 PIN，或行動應用程式通知，讓使用者選擇他們喜好的方法。 當使用者帳戶進行 MFA 設定時，互動式驗證工作流程會透過快顯對話方塊、使用智慧卡等，要求額外的使用者互動。當使用者帳戶進行 MFA 設定時，使用者必須選取 Azure 通用驗證才能連接。 如果使用者帳戶不需要 MFA，使用者仍然可以使用其他兩個 Azure Active Directory 驗證選項。 如需詳細資訊，請參閱 [適用於與 SQL Database 和 SQL 資料倉儲搭配使用之 Azure AD MFA 的 SSMS 支援](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。 如有必要，您可以按一下 [選項]  ，選取 [連線內容]  索引標籤，然後完成 [AD 網域或租用戶識別碼]  方塊，來變更驗證登入的網域。  
 > 
-> **Active Directory - 密碼**  
+> **Azure Active Directory - 密碼**  
 > Azure Active Directory 驗證機制使用 Azure Active Directory (Azure AD) 中的身分識別連接至 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。  如果您用來登入 Windows 的認證來自未與 Azure 同盟的網域，或是使用 Azure AD 根據初始或用戶端網域來使用 Azure AD 驗證時，請使用此方法連線至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 如需詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。  
 > 
 > **Active Directory - 整合式**  
-> Azure Active Directory 驗證機制使用 Azure Active Directory (Azure AD) 中的身分識別連接至 [!INCLUDE[msCoName](../../includes/msconame_md.md)]  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 如果您用來登入 Windows 的 Azure Active Directory 認證來自同盟網域，或是來自設定為以傳遞驗證和密碼雜湊驗證無縫單一登入的受控網域，請使用此方法連線到 SQL Database、受控執行個體或 Azure Synapse Analytics。 如需詳細資訊，請參閱 [Azure Active Directory 無縫單一登入](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)及[使用 Azure Active Directory 驗證連線到 SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。
->
-  > [!NOTE]
-  > 以傳遞驗證與密碼雜湊驗證無縫單一登入不支援整合式 Windows 驗證的 [MSAL.NET (Microsoft.Identity.Client)](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki#roadmap)。  
+> Azure Active Directory 驗證機制使用 Azure Active Directory (Azure AD) 中的身分識別連接至 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。 如果您使用來自同盟網域的 Azure Active Directory 認證登入 Windows，請使用此方法連線至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 如需詳細資訊，請參閱[使用 Azure Active Directory 驗證連線到 SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。  
   
 **使用者名稱**  
-要用來連接的 Windows 使用者名稱。 這個選項只有在您選取了使用  **Active Directory 密碼驗證**時，使用此對話方塊來檢視或指定選項。 當您選取 [Windows 驗證]  或 [Active Directory - 整合式]  驗證時，其為唯讀狀態。  
+要用來連接的 Windows 使用者名稱。 只有在已選擇使用 [Active Directory - 密碼]  驗證進行連線時，才可以使用此選項。 當選取 [Windows 驗證]  或 [Azure Active Directory - 整合式]  驗證時，其為唯讀狀態。  
   
 **登入**  
 輸入要用來連接的登入。 這個選項只有在您選取了使用 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證] 或 [Active Directory 密碼驗證] 連線時才可以使用。  

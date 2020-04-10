@@ -1,5 +1,6 @@
 ---
 title: Reporting Services 中的電子郵件傳遞 | Microsoft Docs
+description: 在本文中，您會了解如何使用電子郵件傳遞延伸模組，這可供透過電子郵件傳送報表給個別使用者或群組。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 70127c0f3064dfce46a6c4fea101b0199900fcbe
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72305042"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742082"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的電子郵件傳遞
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含了電子郵件傳遞延伸模組，可讓您透過電子郵件傳送報表給個別使用者或群組。 若要透過電子郵件散發報表，您可以 1) 設定報表伺服器的電子郵件傳遞以及 2) 定義標準訂閱或資料驅動訂閱。 單一訂閱無法在單一電子郵件訊息中傳遞多個報表。 不過，您可以建立多個訂閱。  

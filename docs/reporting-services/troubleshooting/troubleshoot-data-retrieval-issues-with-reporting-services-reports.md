@@ -1,5 +1,6 @@
 ---
-title: 針對 Reporting Services 報表的資料擷取問題進行疑難排解 | Microsoft Docs
+title: 搭配 Reporting Services 報表為資料擷取問題疑難排解
+description: 在本文中，您會診斷並修正當在本機預覽報表或在報表伺服器上執行報表來擷取報表資料時所發生的問題。
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 86f1b8bda63cf8e6436e0dd3d5823fdada53a9f3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d62cff71d6967203ab3980624b1f7b192fb89906
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574431"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664453"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>搭配 Reporting Services 報表為資料擷取問題疑難排解
 在報表處理期間，第一個步驟是執行資料集查詢以擷取各資料集的報表資料。 在本機預覽報表時，您的資料來源連接和認證必須使用足夠的權限，才能將資料擷取到電腦上。 在報表伺服器上執行報表時，資料來源連接和認證也必須使用足夠的權限，才能將資料擷取到報表伺服器上。 您可以使用本主題來協助疑難排解有關報表資料擷取的問題。   
   
 ## <a name="i-cannot-create-a-connection-to-a-data-source"></a>無法與資料來源建立連接  
-如果您在建立資料來源時執行資料集查詢或預覽報表，可能會收到下列訊息：無法與資料來源 `<data source name>`建立連接。   
+如果在建立資料來源時執行資料集查詢或預覽報表，可能會收到下列訊息：無法與資料來源 `<data source name>` 建立連接。   
     
 ### <a name="data-source-is-not-available"></a>資料來源無法使用。  
 資料來源已離線，或者因其他原因而無法使用。   
@@ -57,7 +58,7 @@ ms.locfileid: "65574431"
 若要擴展資料集欄位集合，請執行下列動作：  
 * 請確定您擁有從資料庫中擷取欄位資訊的權限。 針對某些資料來源，您可能擁有存取資料來源的權限，但是沒有存取資料表或資料行的權限。 您可能擁有存取檢視的權限，但對於建立檢視的預存程序，卻沒有執行權限。 若要驗證您對資料庫中特定資料表或資料行的存取權，請使用您用於報表的相同權限，在 SQL Server Management Studio 等個別應用程式中確認查詢結果。 如果您無法看到想要的查詢結果，請與系統管理員一起調整您對資料的權限。   
 * 在 [資料集屬性]  對話方塊的 [查詢] 窗格中執行查詢。 如需詳細資訊，請參閱 [報表資料集 (報表產生器 3.0 及 SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)。  
-* 手動加入欄位。 如需詳細資訊，請參閱 [如何：加入、編輯、重新整理報表資料窗格中的欄位 (報表產生器 3.0 及 SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。   
+* 手動加入欄位。 如需詳細資訊，請參閱[如何：新增、編輯、重新整理報表資料窗格中的欄位 (報表產生器 3.0 及 SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。   
   
 ## <a name="see-also"></a>另請參閱  
 [錯誤和事件 (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

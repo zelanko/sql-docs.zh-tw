@@ -1,5 +1,6 @@
 ---
 title: 變更預設 Reporting Services 傳遞延伸模組 | Microsoft Docs
+description: 了解如何進行 Reporting Services 設定來重新排序 [傳遞者] 清單中所顯示的傳遞延伸模組，以及設定預設傳遞延伸模組。
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 007427739f91a12ea6603bbf58450821d2c999ea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 83c2c0c6bb3c2a457182e8dcf56c5caa68397184
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66500396"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742310"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>變更預設 Reporting Services 傳遞延伸模組
   您可以修改 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態設定，以變更訂閱定義頁面的 **[傳遞者]** 清單中所顯示的預設傳遞延伸模組。 例如，您可以修改組態，使得在使用者建立新的訂閱時依預設會選取檔案共用傳遞，而不是電子郵件傳遞。 您也可以變更傳遞延伸模組在使用者介面中列出的順序。  
@@ -85,7 +86,7 @@ ms.locfileid: "66500396"
   
      **事件識別碼：** 109  
   
-     **來源** ：報表伺服器 Windows 服務 (執行個體名稱)  
+     **來源：** 報表伺服器 Windows 服務 (執行個體名稱)  
   
      已修改 RSReportServer.config 檔  
   

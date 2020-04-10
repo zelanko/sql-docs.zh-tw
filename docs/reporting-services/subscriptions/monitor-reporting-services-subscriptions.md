@@ -1,5 +1,6 @@
 ---
 title: 監視 Reporting Services 訂閱 | Microsoft Docs
+description: 了解如何使用 UI、PowerShell 或記錄檔來追蹤 Reporting Services 訂閱。 監視選項取決於正在執行的報表伺服器模式。
 ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d1cfa2c5face12eab1677d4a1386511d005aa5dd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5c5b4965489544cfd1f6ee5ccfb1ce4170381bf
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67285037"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742043"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>監視 Reporting Services 訂閱
   您可以透過使用者介面、Windows PowerShell 或記錄檔來監視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱。 您可以使用的監視選項取決於正在執行的報表伺服器模式。  
@@ -76,7 +77,7 @@ ms.locfileid: "67285037"
   
  下列是與訂閱相關的追蹤記錄檔範例錯誤訊息：  
   
--   library!WindowsService_7!b60!05/20/2019-22:34:36 i i INFO: 將 EnableExecutionLogging 初始化至 'True' ，如同 Server 系統所示 properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERROR: **傳送電子郵件時發生錯誤**。 例外狀況：System.Net.Mail.SmtpException: SMTP 伺服器需要安全的連線或是用戶端未經認證。 伺服器回應為：5.7.1 用戶端未經認證   於 System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36 i 資訊:將 EnableExecutionLogging 初始化至 'True'，如同伺服器系統所示 properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 錯誤:**傳送電子郵件時發生錯誤**。 例外狀況：System.Net.Mail.SmtpException:SMTP 伺服器需要安全連線，或用戶端未經驗證。 伺服器回應為:5.7.1 用戶端未經認證   於 System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  記錄檔不包括有關報表是否開啟或實際上是否成功傳遞的資訊。 成功傳遞是指排程與傳遞處理器未產生錯誤，且報表伺服器已連接到郵件伺服器。 如果電子郵件在使用者信箱產生無法傳遞訊息錯誤，該資訊將不會包含在記錄檔中。 如需記錄檔的詳細資訊，請參閱 [Reporting Services 記錄檔和來源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
   
@@ -97,7 +98,7 @@ ms.locfileid: "67285037"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |Date|Process|區域|類別|層級|Correlation|訊息|  
-|2019/5/21 14:34:06:15|應用程式集區：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|報表伺服器電子郵件延伸模組|未預期|(空白)|**Error sending email.** 例外狀況：System.net.mail.smtpexception: 信箱無法使用。 伺服器回應為：5.7.1 用戶端不具權限，無法以此寄件者傳送  於 System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  於 System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  於 System.Net.Mail.SmtpClient.Send(MailMessage message)  於 Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|2019/5/21 14:34:06:15|應用程式集區：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|報表伺服器電子郵件延伸模組|未預期|(空白)|**Error sending email.** 例外狀況：System.Net.Mail.SmtpException:無法使用信箱。 伺服器回應為:5.7.1 用戶端沒有權限，無法以這個寄件人身分傳送  於 System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  於 SSystem.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  於 System.Net.Mail.SmtpClient.Send(MailMessage message)  於 Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> 使用 PowerShell 監視訂閱  
  例如，您可以使用 PowerShell 指令碼查看原生模式或 SharePoint 模式訂閱的狀態，請參閱[管理訂閱擁有者及執行訂閱 - PowerShell](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)。  

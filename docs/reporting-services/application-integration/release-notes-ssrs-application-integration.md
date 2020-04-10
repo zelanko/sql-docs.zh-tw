@@ -11,18 +11,25 @@ ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
 ms.reviewer: maggies
 author: RhysSchmidtke
 ms.author: rhys
-ms.openlocfilehash: 5ee9bd80519e9dc9d75bb78a98b548b2a60ef247
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1ed8d92f77a360d195c893c38ee08e642ee0b24a
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76259376"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80752878"
 ---
 # <a name="release-notes-for-report-viewer-controls-for-webforms-and-winforms-of-ssrs"></a>SSRS WebForms 和 WinForms 的報表檢視器控制項版本資訊
 
 這些是 WebForms 和 WinForms 的報表檢視器控制項版本資訊，與 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 相關。
 
 如需 SSRS 的版本資訊，請參閱 [SQL Server Reporting Services (SSRS) 2017 和更新版本的版本資訊](../release-notes-reporting-services.md)。
+
+## <a name="15014040"></a>150.1404.0
+| 變更描述 | 詳細資料 |
+| :----------------- | :------ |
+| 錯誤修正 | 已修正 WebForms 中工具列索引標籤順序的問題。 |
+|           | 已改善資料表的 HTML 轉譯協助工具。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="15014000"></a>150.1400.0
 | 變更描述 | 詳細資料 |

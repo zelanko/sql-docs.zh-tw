@@ -1,5 +1,6 @@
 ---
-title: 針對 Reporting Services 訂用帳戶和傳遞進行疑難排解 | Microsoft Docs
+title: 為 Reporting Services 訂閱與傳遞疑難排解
+description: 在本文中，您會診斷並修正在 SQL Server Reporting Services 中使用報表訂閱、排程與傳遞時所發現的問題。
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 84ca5db4b8979b1b49ffc25b809638defc40fe1e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 577ca01b2764df923c0208934c597e17e8412ff2
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572121"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662747"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>為 Reporting Services 訂閱與傳遞疑難排解
   
@@ -24,7 +25,7 @@ ms.locfileid: "65572121"
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中的 [訂閱] 頁面包含訂閱的狀態，但如果訂閱發生問題， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 記錄中會有詳細資訊。 
 ![ssrs_tutorial_datadriven_subscription_status_ReportManager](../../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png)
 
-**追蹤記錄** ︰追蹤記錄是寫入下列位置的文字檔： `\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`
+**追蹤記錄檔：** 追蹤記錄檔是寫入下列位置的文字檔：`\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`
 
 以下是範例記錄項目：
 
@@ -52,7 +53,7 @@ ms.locfileid: "65572121"
   
 如需有關將本機 SMTP 服務用於報表之電子郵件傳遞的詳細資訊，請參閱＜設定報表伺服器的電子郵件傳遞＞。  
   
-## <a name="failure-sending-mail-the-server-rejected-the-sender-address-the-server-response-was-454-573-client-does-not-have-permission-to-submit-mail-to-this-server"></a>傳送郵件失敗：伺服器拒絕寄件者地址。 伺服器回應為：454 5.7.3 用戶端沒有提交郵件到此伺服器的權限  
+## <a name="failure-sending-mail-the-server-rejected-the-sender-address-the-server-response-was-454-573-client-does-not-have-permission-to-submit-mail-to-this-server"></a>傳送郵件失敗:伺服器拒絕寄件者地址。 伺服器回應為:454 5.7.3 用戶端沒有提交郵件到此伺服器的權限  
 當 SMTP 伺服器上的安全性原則設定只允許已驗證的使用者提交郵件以進行後續的傳遞時，會發生此錯誤。 如果 SMTP 伺服器不接受匿名使用者的電子郵件提交，請向系統管理員洽詢有關取得伺服器使用權限的事宜。  
 > 當您指定 Exchange 伺服器名稱做為 SMTPServer 時，會發生此錯誤。 若要使用 Exchange 伺服器傳遞電子郵件，必須指定為 Exchange 伺服器設定的 SMTP 閘道名稱。 請向您的 Exchange 管理員洽詢此資訊。  
   

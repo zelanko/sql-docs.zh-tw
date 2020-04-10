@@ -1,5 +1,6 @@
 ---
-title: 針對 Reporting Services 的報表設計問題進行疑難排解 | Microsoft Docs
+title: 疑難排解 Reporting Services 的報表設計問題
+description: 在本文中，您會診斷並修正當在報表撰寫應用程式中，以 [設計] 檢視建立報表配置時可能發生的報表設計問題。
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3eb298bc6b359b0df92566f9add8d7011cdc907
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd38603a00c01187c131c2f515c2a4c6c1cb858e
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573846"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662808"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>疑難排解 Reporting Services 的報表設計問題
 當您在報表撰寫應用程式中，以 [設計] 檢視建立報表配置時，可能會發生報表設計問題。 您可以使用本主題來協助疑難排解這些問題。   
@@ -41,7 +42,7 @@ PageNumber 和 TotalPages 只在頁首和頁尾有效。
 若要將 [&PageNumber] 或 [&TotalPages] 加入至報表，您必須先新增頁首或頁尾。 如需相關資訊，請參閱 [新增或移除頁面標頭](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
-> 在頁首或頁尾中包含 [&TotalPages]，會對報表處理產生一些影響。 如需詳細資訊，請參閱「報表疑難排解：將報表匯出為特定檔案格式」。  
+> 在頁首或頁尾中包含 [&TotalPages]，會對報表處理產生一些影響。 如需詳細資訊，請參閱＜報表疑難排解：將報表匯出為特定檔案格式＞。  
 [疑難排解 Reporting Services 報表的處理](../../reporting-services/troubleshooting/troubleshoot-processing-of-reporting-services-reports.md)。  
   
 ## <a name="how-do-i-design-two-tables-or-a-chart-and-a-table-to-display-side-by-side"></a>如何設計兩個資料表，或是一個圖表和一個資料表，讓它們並排顯示？  

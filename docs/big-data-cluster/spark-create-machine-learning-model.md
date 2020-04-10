@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 717093278790c90486b424678d332f73e056e86e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9d51cc4164cbb40ff647cad337240e689696b449
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255906"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531119"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上建立、匯出及評分 Spark 機器學習模型
 
@@ -52,7 +52,7 @@ ms.locfileid: "75255906"
 
    此筆記本包含具有此範例區段之必要命令的儲存格。
 
-1. 在 Azure Data Studio 中開啟筆記本，並執行每個程式碼區塊。 如需使用筆記本的詳細資訊，請參閱[如何在 SQL Server 中使用筆記本](notebooks-guidance.md)。
+1. 在 Azure Data Studio 中開啟筆記本，並執行每個程式碼區塊。 如需使用筆記本的詳細資訊，請參閱[如何搭配 SQL Server 使用筆記本](../azure-data-studio/notebooks-guidance.md)。
 
 資料會先讀入 Spark 並分割成定型和測試資料集。 然後程式碼會使用定型資料將管線模型定型。 最後，它會將模型匯出至 MLeap 組合。
 
@@ -61,7 +61,7 @@ ms.locfileid: "75255906"
 
 ## <a name="model-scoring-with-sql-server"></a>使用 SQL Server 進行模型評分
 
-現在 Spark ML 管線模型已經是通用序列化 [MLeap 組合](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) 格式，因此您可以在沒有 Spark 的情況下使用 JAVA 為模型評分。 
+現在 Spark ML 管線模型已經是通用序列化 [MLeap 組合](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) 格式，因此您可以在沒有 Spark 的情況下使用 JAVA 為模型評分。
 
 此範例使用 SQL Server 中的 [JAVA 語言延伸模組](../language-extensions/language-extensions-overview.md)。 若要為 SQL Server 中的模型評分，您需要先建置可將模型載入到 JAVA 並加以評分的 JAVA 應用程式。 您可以在 [mssql-mleap-app folder](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mssql-mleap-app) 中找到此 JAVA 應用程式的範例程式碼。
 
