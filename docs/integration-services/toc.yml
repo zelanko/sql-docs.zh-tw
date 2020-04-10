@@ -63,6 +63,8 @@
       href: ../integration-services/lift-shift/ssis-azure-schedule-packages.md
     - name: 在 Azure 中以 SSMS 排程套件
       href: ../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md
+    - name: 移轉至 Azure 的流程與工具
+      href: ../integration-services/lift-shift/ssis-migration-to-Azure.md
 - name: 安裝 Integration Services
   href: ../integration-services/install-windows/install-integration-services.md
 - name: 並存安裝 Integration Services 版本
@@ -446,7 +448,7 @@
         - name: 資料流目的地
           href: ../integration-services/data-flow/data-streaming-destination.md
           items:
-            - name: 逐步解說︰發行 SSIS 封裝做為 SQL 檢視
+            - name: 逐步解說：發行 SSIS 封裝做為 SQL 檢視
               href: ../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md
         - name: DataReader 目的地
           href: ../integration-services/data-flow/datareader-destination.md
@@ -821,7 +823,7 @@
           href: ../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md
         - name: <= (小於或等於) (SSIS 運算式)
           href: ../integration-services/expressions/less-than-or-equal-to-ssis-expression.md
-        - name: '? : (條件) (SSIS 運算式)'
+        - name: '? 所解碼的字元：(條件) (SSIS 運算式)'
           href: ../integration-services/expressions/conditional-ssis-expression.md
     - name: 函數 (SSIS 運算式)
       href: ../integration-services/expressions/functions-ssis-expression.md
@@ -933,7 +935,7 @@
       href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
     - name: 在單一電腦上開始使用 SSIS Scale Out
       href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
-    - name: 逐步解說：設定 Integration Services 擴增
+    - name: 逐步解說：設定整合服務 Scale Out
       href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
     - name: 在擴增中執行套件
       href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
@@ -1175,7 +1177,7 @@
       href: ../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md
     - name: catalog.revoke_permission
       href: ../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md
-    - name: Set
+    - name: 設定
       items:
         - name: catalog.set_customized_logging_level_description
           href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-description.md
@@ -1730,7 +1732,7 @@
     - name: 建立套件
       href: ../integration-services/ssis-how-to-create-an-etl-package.md
       items:
-        - name: 課程 1：建立專案和基本套件
+        - name: 第 1 課：建立專案和基本套件
           href: ../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md
           items:
             - name: 課程 1-1 - 建立新的 Integration Services 專案
@@ -1751,7 +1753,7 @@
               href: ../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
             - name: 課程 1-9 - 測試第 1課 的教學課程套件
               href: ../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md
-        - name: 課程 2：新增迴圈
+        - name: 第 2 課：新增迴圈
           href: ../integration-services/lesson-2-adding-looping-with-ssis.md
           items:
             - name: 課程 2-1 - 複製第 1 課套件
@@ -1762,7 +1764,7 @@
               href: ../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md
             - name: 課程 2-4 - 測試第 2 課的教學課程封裝
               href: ../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md
-        - name: 課程 3：新增記錄
+        - name: 第 3 課：新增記錄
           href: ../integration-services/lesson-3-add-logging-with-ssis.md
           items:
             - name: 課程 3-1 - 複製第 2 課的封裝
@@ -1771,7 +1773,7 @@
               href: ../integration-services/lesson-3-2-adding-and-configuring-logging.md
             - name: 課程 3-3 - 測試第 3 課教學課程套件
               href: ../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md
-        - name: 課程 4：新增錯誤流程重新導向
+        - name: 第 4 課：新增錯誤流程重新導向
           href: ../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md
           items:
             - name: 課程 4-1 - 複製第 3 課的封裝
@@ -1784,7 +1786,7 @@
               href: ../integration-services/lesson-4-4-adding-a-flat-file-destination.md
             - name: 第 4-5 課 - 測試課程 4 的教學課程封裝
               href: ../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md
-        - name: 課程 5：新增套件部署模型的套件組態
+        - name: 第 5 課：新增套件部署模型的套件設定
           href: ../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
           items:
             - name: 課程 5-1 - 複製第 4 課套件
@@ -1809,7 +1811,7 @@
     - name: 部署套件
       href: ../integration-services/deploy-packages-with-ssis.md
       items:
-        - name: 第 1 課：準備建立部署配套
+        - name: 第 1 課：準備建立部署套件組合
           href: ../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md
           items:
             - name: 課程 1-1 - 建立工作資料夾與環境變數
@@ -1822,14 +1824,14 @@
               href: ../integration-services/lesson-1-4-adding-package-configurations.md
             - name: 課程 1-5 - 測試更新的封裝
               href: ../integration-services/lesson-1-5-testing-the-updated-packages.md
-        - name: 課程 2：建立部署套件組合
+        - name: 第 2 課：建立部署套件組合
           href: ../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md
           items:
             - name: 第 2-1 課：建置部署公用程式
               href: ../integration-services/lesson-2-1-building-the-deployment-utility.md
             - name: 課程 2-2 - 確認部署配套
               href: ../integration-services/lesson-2-2-verifying-the-deployment-bundle.md
-        - name: 課程 3：安裝套件
+        - name: 第 3 課：安裝套件
           href: ../integration-services/lesson-3-install-ssis-packages.md
           items:
             - name: 課程 3-1 - 複製部署配套
